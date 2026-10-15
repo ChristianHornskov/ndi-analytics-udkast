@@ -19,26 +19,27 @@
     const meta = await loadFundMeta();
     const p = meta?.funds?.pmindi?.priip;
     const a = meta?.funds?.pmindiakk?.priip;
+    const RISK_LABEL = { aktiemarkedsrisiko: 'Aktiemarkedsrisiko', vækst_og_sektorrisiko: 'Vækst- og sektorrisiko', valutarisiko: 'Valutarisiko', ingen_markedsbeskyttelse: 'Ingen markedsbeskyttelse', muligt_tab_af_hele_investeringen: 'Muligt tab af hele investeringen' };
+    const klasse = (x) => x ? `${x.key_risks ? `<ul style="color:var(--muted);line-height:1.55;padding-left:1.2rem;margin-bottom:12px">${Object.entries(x.key_risks).filter(([,v])=>v).map(([k])=>`<li>${RISK_LABEL[k]||k}</li>`).join('')}</ul>` : ''}<p style="color:var(--muted);line-height:1.6">Risikoklasse <strong style="color:var(--text)">${x.risk_class} / ${x.risk_scale_max}</strong> (${x.risk_label}). Anbefalet investeringsperiode ifølge KID: ${x.recommended_holding_years} år. KID pr. ${fmtDate(x.production_date)}.</p>
+        <p><a href="${x.url}">Læs KID (Fundmarket PDF) ↗</a></p>` : '<p style="color:var(--muted)">KID-data mangler i snapshot.</p>';
     document.getElementById('main').innerHTML = `
       <p class="eyebrow">RISIKO · KID</p>
       <h1>Risici ved fonden</h1>
-      <p class="lede">Kort oversigt baseret på Central Information Dokument (KID). Generel information — ikke rådgivning.</p>
+      <p class="lede">Kort oversigt over risici baseret på fondens dokument med central information (KID). Generel information — ikke rådgivning. KID’et er det gældende dokument.</p>
       <section class="panel">
-        <h2 style="font-size:16px;margin-bottom:8px">PMINDI</h2>
-        ${p ? `${p.key_risks ? `<ul style="color:var(--muted);line-height:1.55;padding-left:1.2rem;margin-bottom:12px">${Object.entries(p.key_risks).filter(([,v])=>v).map(([k])=>`<li>${({aktiemarkedsrisiko:'Aktiemarkedsrisiko',vækst_og_sektorrisiko:'Vækst- og sektorrisiko',valutarisiko:'Valutarisiko',ingen_markedsbeskyttelse:'Ingen markedsbeskyttelse',muligt_tab_af_hele_investeringen:'Muligt tab af hele investeringen'}[k]||k)}</li>`).join('')}</ul>` : ''}<p style="color:var(--muted);line-height:1.6">Risikoklasse <strong style="color:var(--text)">${p.risk_class} / ${p.risk_scale_max}</strong> (${p.risk_label}). Anbefalet ejertid ${p.recommended_holding_years} år. KID pr. ${fmtDate(p.production_date)}.</p>
-        <p><a href="${p.url}">Læs KID (Fundmarket PDF) ↗</a></p>` : '<p style="color:var(--muted)">KID-data mangler i snapshot.</p>'}
+        <h2 style="font-size:16px;margin-bottom:8px">PMINDI (udloddende)</h2>
+        ${klasse(p)}
       </section>
       <section class="panel">
-        <h2 style="font-size:16px;margin-bottom:8px">PMINDIAKK</h2>
-        ${a ? `<p style="color:var(--muted);line-height:1.6">Risikoklasse <strong style="color:var(--text)">${a.risk_class} / ${a.risk_scale_max}</strong> (${a.risk_label}). Anbefalet ejertid ${a.recommended_holding_years} år. KID pr. ${fmtDate(a.production_date)}.</p>
-        <p><a href="${a.url}">Læs KID (Fundmarket PDF) ↗</a></p>` : '<p style="color:var(--muted)">KID-data mangler i snapshot.</p>'}
+        <h2 style="font-size:16px;margin-bottom:8px">PMINDIAKK (akkumulerende)</h2>
+        ${klasse(a)}
       </section>
       <section class="panel">
         <h2 style="font-size:16px;margin-bottom:8px">Vigtigt at vide</h2>
         <ul style="color:var(--muted);line-height:1.6;padding-left:1.2rem;display:grid;gap:8px">
           <li>Du kan tabe en del af eller hele din investering.</li>
-          <li>Teknologiporteføljer har store kursudsving som grundvilkår.</li>
-          <li>Typisk USD-eksponering og koncentration i tech.</li>
+          <li>Teknologiaktier svinger typisk meget i kurs, og fald kan vare i flere år.</li>
+          <li>Porteføljen er koncentreret i teknologi og har typisk stor eksponering mod USD, så valutakursen påvirker afkastet.</li>
           <li>Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast.</li>
         </ul>
       </section>
