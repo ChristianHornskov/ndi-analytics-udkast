@@ -17,15 +17,32 @@
  <style>
   .cost-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px}
   .cost-card{background:linear-gradient(180deg,#16303a 0%,#11252c 60%);border:1px solid #345860;border-radius:16px;padding:18px 18px 16px;min-width:0}
-  .cost-card h2{font-size:18px;letter-spacing:-.3px;margin:0 0 4px}
+  .cost-card h2{font-size:18px;letter-spacing:-.3px;margin:0 0 8px}
   .kicker{color:var(--brand);font-size:11px;font-weight:700;letter-spacing:1.4px;margin-bottom:6px}
-  .cost-row{margin:12px 0 0}
-  .cost-row .top{display:flex;justify-content:space-between;gap:10px;font-size:13px;color:var(--muted)}
-  .cost-row .top b{font-variant-numeric:tabular-nums;color:var(--cyan);font-weight:500}
-  .cost-bar{height:8px;border-radius:99px;background:#0b171d;border:1px solid #2a424a;overflow:hidden;margin-top:6px}
+  .cmp{display:grid;gap:18px;margin-top:4px}
+  .cmp-row{display:grid;gap:8px}
+  .cmp-row.is-diff{border-left:3px solid var(--yellow);padding-left:12px}
+  .cmp-h{display:flex;justify-content:space-between;gap:10px;align-items:baseline;font-size:14px}
+  .cmp-flag{font-size:11px;letter-spacing:.8px;text-transform:uppercase;color:var(--faint)}
+  .cmp-row.is-diff .cmp-flag{color:#f5ee9e}
+  .cmp-line{display:grid;grid-template-columns:88px minmax(0,1fr) auto;gap:10px;align-items:center}
+  .cmp-name{font-size:12px;color:var(--muted)}
+  .cmp-line b{font-variant-numeric:tabular-nums;color:var(--cyan);font-weight:500;min-width:72px;text-align:right}
+  .cost-bar{height:8px;border-radius:99px;background:#0b171d;border:1px solid #2a424a;overflow:hidden}
   .cost-bar i{display:block;height:100%;background:linear-gradient(90deg,#89aeb4,#9ecfd6);border-radius:99px}
-  .scale-note{font-size:11px;color:var(--faint);margin-top:12px;line-height:1.45}
-  @media(max-width:800px){.cost-grid{grid-template-columns:1fr}}
+  .scale-note{font-size:12px;color:var(--faint);margin-top:14px;line-height:1.5}
+  .receipts{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .receipt{background:#0b171d;border:1px solid #345860;border-radius:16px;padding:16px 16px 14px;min-width:0}
+  .receipt h3{font-size:16px;letter-spacing:-.2px;margin:0 0 4px}
+  .receipt ol{list-style:none;padding:0;margin:12px 0 0;display:grid;gap:0}
+  .receipt li{display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:8px 0;border-bottom:1px solid #2a424a;font-size:14px}
+  .receipt li span{color:var(--muted)}
+  .receipt .formula{display:block;font-size:11px;color:var(--faint);margin-top:2px}
+  .receipt li b{font-variant-numeric:tabular-nums;color:var(--text);font-weight:600;white-space:nowrap}
+  @media(max-width:800px){
+    .cost-grid,.receipts{grid-template-columns:1fr}
+    .cmp-line{grid-template-columns:72px minmax(0,1fr) auto}
+  }
  </style>
 </head>
 <body>
@@ -42,7 +59,7 @@
  const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
  const main = document.getElementById('main');
  const pct = (n) => {
- if (n == null || n === '') return 'ikke oplyst';
+ if (n == null || n === '' || Number.isNaN(Number(n))) return 'ikke oplyst';
  const [a, b = ''] = String(n).split('.');
  return a + (b ? ',' + b : '') + ' %';
  };
@@ -50,19 +67,26 @@
  const [a, b = ''] = String(n).split('.');
  return a + (b ? ',' + b : '') + ' procentpoint';
  };
+ const krOf = (rate) => Math.round(100000 * Number(rate) / 100);
  const kr = (rate) => {
- const v = Math.round(100000 * Number(rate) / 100);
+ const v = krOf(rate);
  const s = String(Math.abs(v)).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
  return (v < 0 ? '-' : '') + s + ' kr.';
  };
  const SCALE = 2;
- const bar = (n, label) => {
+ const bar = (n) => {
  const w = Math.max(0, Math.min(100, (Number(n) / SCALE) * 100));
- return `<div class="cost-row">
- <div class="top"><span>${esc(label)}</span><b>${pct(n)}</b></div>
- <div class="cost-bar" role="img" aria-label="${esc(label)} ${pct(n)} på en skala til ${pct(SCALE)}"><i style="width:${w}%"></i></div>
+ return `<div class="cost-bar" role="presentation"><i style="width:${w}%"></i></div>`;
+ };
+ const pair = (label, av, bv) => {
+ const differ = Number(av) !== Number(bv);
+ return `<div class="cmp-row${differ ? ' is-diff' : ''}">
+ <div class="cmp-h"><span>${esc(label)}</span><span class="cmp-flag">${differ ? 'Forskel' : 'Ens'}</span></div>
+ <div class="cmp-line"><span class="cmp-name">PMINDI</span>${bar(av)}<b>${pct(av)}</b></div>
+ <div class="cmp-line"><span class="cmp-name">PMINDIAKK</span>${bar(bv)}<b>${pct(bv)}</b></div>
  </div>`;
  };
+ const line = (label, rate) => `<li><span>${esc(label)}<span class="formula">${pct(rate)} × 100.000 kr.</span></span><b>${kr(rate)}</b></li>`;
  let facts;
  try {
  const r = await fetch('data/fund-facts.json');
@@ -77,34 +101,42 @@
  const a = A.costs;
  const b = B.costs;
  const feeNo = !a.performanceFee && !b.performanceFee;
+ const feeSame = a.performanceFee === b.performanceFee && a.performanceFeeText === b.performanceFeeText;
  const dTx = Number((Number(b.portfolioTransaction) - Number(a.portfolioTransaction)).toFixed(2));
- const sameEntry = a.entry === b.entry && a.exit === b.exit;
- const block = (cl) => {
+ const sameEntry = Number(a.entry) === Number(b.entry) && Number(a.exit) === Number(b.exit);
+ const sameOngoing = Number(a.otherOngoing) === Number(b.otherOngoing);
+ const onlyTx = dTx !== 0 && sameOngoing && sameEntry && feeNo;
+ const krGap = Math.abs(krOf(b.portfolioTransaction) - krOf(a.portfolioTransaction));
+ const krGapTxt = String(krGap).replace(/\B(?=(\d{3})+(?!\d))/g, '.') + ' kr.';
+ const spoken = onlyTx
+ ? `Porteføljetransaktion er den eneste af satserne, der ikke er ens: ${pct(a.portfolioTransaction)} i PMINDI og ${pct(b.portfolioTransaction)} i PMINDIAKK. Forskellen er ${pp(Math.abs(dTx))}. På 100.000 kr. er det ${krGapTxt} i regneeksemplet. Det er ikke et ÅOP.`
+ : dTx === 0
+ ? 'Porteføljetransaktion er ens i de to klasser i Fundmarket-tallene.'
+ : `Porteføljetransaktion er ${pct(a.portfolioTransaction)} i PMINDI og ${pct(b.portfolioTransaction)} i PMINDIAKK. Forskellen er ${pp(Math.abs(dTx))}.`;
+ const sameLine = sameOngoing
+ ? `Øvrige løbende er ${pct(a.otherOngoing)} i begge klasser.`
+ : `Øvrige løbende er ${pct(a.otherOngoing)} i PMINDI og ${pct(b.otherOngoing)} i PMINDIAKK.`;
+ const entryLine = sameEntry
+ ? `Emission og indløsning er angivet som maks. ${pct(a.entry)} og ${pct(a.exit)} for begge klasser.`
+ : `PMINDI: emission ${pct(a.entry)}, indløsning ${pct(a.exit)}. PMINDIAKK: emission ${pct(b.entry)}, indløsning ${pct(b.exit)}.`;
+ const feeLine = feeNo
+ ? 'Ingen af klasserne betaler resultathonorar, ifølge Fundmarket.'
+ : feeSame
+ ? esc(a.performanceFeeText)
+ : `${esc(a.performanceFeeText)} ${esc(b.performanceFeeText)}`;
+ const card = (cl) => {
  const c = cl.costs;
  return `<article class="cost-card">
  <p class="kicker">${esc(cl.isin)}</p>
  <h2>${esc(cl.label)}</h2>
- ${bar(c.otherOngoing, 'Øvrige løbende')}
- ${bar(c.portfolioTransaction, 'Porteføljetransaktion')}
- ${bar(c.entry, 'Emission, maks.')}
- ${bar(c.exit, 'Indløsning, maks.')}
- <p class="scale-note">Søjlen bruger en fælles skala fra 0 til ${pct(SCALE)}, så en lav sats ikke tegnes lige så bred som en høj. ${esc(c.note)}</p>
- <p style="margin-top:12px;color:var(--muted);font-size:14px;line-height:1.5">Resultathonorar: <strong style="color:var(--text)">${c.performanceFee ? 'Ja' : 'Nej'}</strong>. ${esc(c.performanceFeeText)}</p>
+ <p style="color:var(--muted);font-size:14px;line-height:1.5">${cl.distributing ? 'Udloddende' : 'Akkumulerende'} klasse. Resultathonorar: <strong style="color:var(--text)">${c.performanceFee ? 'Ja' : 'Nej'}</strong>. ${esc(c.performanceFeeText)}</p>
+ <p class="src">${esc(c.note)}</p>
  <p class="link-row" style="margin-top:12px">
  <a class="outline-btn small" href="${esc(c.source)}" rel="noopener noreferrer" target="_blank">Fundmarket ↗</a>
  <a class="outline-btn small" href="${esc(cl.kidUrl)}" rel="noopener noreferrer" target="_blank">KID PDF ↗</a>
  </p>
  </article>`;
  };
- const diff = dTx === 0
- ? 'De to klasser har samme forventede porteføljetransaktionsomkostning i Fundmarket-tallene.'
- : `PMINDIAKK ligger på ${pct(b.portfolioTransaction)} i porteføljetransaktion. PMINDI ligger på ${pct(a.portfolioTransaction)}. Forskellen er ${pp(Math.abs(dTx))} i Fundmarket-tallene.`;
- const entryLine = sameEntry
- ? `Emission og indløsning er angivet som maks. ${pct(a.entry)} / ${pct(a.exit)} for begge klasser.`
- : `PMINDI: emission ${pct(a.entry)}, indløsning ${pct(a.exit)}. PMINDIAKK: emission ${pct(b.entry)}, indløsning ${pct(b.exit)}.`;
- const feeLine = feeNo
- ? 'Ingen af klasserne betaler resultathonorar, ifølge Fundmarket.'
- : `${esc(a.performanceFeeText)} ${esc(b.performanceFeeText)}`;
 
  main.innerHTML = `
  <p class="eyebrow">OMKOSTNINGER · FUNDMARKET</p>
@@ -112,18 +144,22 @@
  <p class="lede">Forventede omkostninger i indeværende regnskabsår, som de står på Fundmarket. Det er ikke et beregnet ÅOP. Kurtage og depot hos din bank kommer oveni.</p>
  <p class="band">${esc(facts.asOfNote)}</p>
  <div class="metrics">
- <div class="metric"><div class="label">Øvrige løbende${a.otherOngoing === b.otherOngoing ? ', begge klasser' : ', PMINDI / AKK'}</div><strong>${a.otherOngoing === b.otherOngoing ? pct(a.otherOngoing) : pct(a.otherOngoing) + ' / ' + pct(b.otherOngoing)}</strong><small>Forventet · Fundmarket</small></div>
+ <div class="metric"><div class="label">Øvrige løbende${sameOngoing ? ', begge klasser' : ', PMINDI / AKK'}</div><strong>${sameOngoing ? pct(a.otherOngoing) : pct(a.otherOngoing) + ' / ' + pct(b.otherOngoing)}</strong><small>Forventet · Fundmarket</small></div>
  <div class="metric"><div class="label">Porteføljetransaktion, PMINDI</div><strong>${pct(a.portfolioTransaction)}</strong><small>Forventet</small></div>
  <div class="metric"><div class="label">Porteføljetransaktion, PMINDIAKK</div><strong>${pct(b.portfolioTransaction)}</strong><small>Forventet</small></div>
  <div class="metric"><div class="label">Resultathonorar</div><strong>${feeNo ? 'Nej' : 'Se klasser'}</strong><small>${feeNo ? 'Begge klasser · Fundmarket' : 'Se teksten på klassekortet'}</small></div>
  </div>
- <div class="cost-grid">
- ${block(A)}
- ${block(B)}
- </div>
+ <p class="band">${spoken} ${sameLine} ${entryLine} ${feeLine}</p>
 
  <section class="panel">
  <h2 class="panel-h">Sammenligning</h2>
+ <div class="cmp">
+ ${pair('Øvrige løbende', a.otherOngoing, b.otherOngoing)}
+ ${pair('Porteføljetransaktion', a.portfolioTransaction, b.portfolioTransaction)}
+ ${pair('Emission, maks.', a.entry, b.entry)}
+ ${pair('Indløsning, maks.', a.exit, b.exit)}
+ </div>
+ <p class="scale-note">Søjlerne deler skalaen 0 til ${pct(SCALE)}. En lav sats tegnes smal. Forskellen mellem ${pct(a.portfolioTransaction)} og ${pct(b.portfolioTransaction)} er bevidst lille på figuren. 1,49 % er Fundmarkets tal for øvrige løbende omkostninger. Noten på kilden kalder dem forventede samlede omkostninger i regnskabsåret. Siden lægger ikke satserne sammen og kalder det ikke et ÅOP.</p>
  <div class="table-wrap"><table class="data" style="min-width:0">
  <thead><tr><th></th><th>PMINDI</th><th>PMINDIAKK</th></tr></thead>
  <tbody>
@@ -134,23 +170,40 @@
  <tr><td>Resultathonorar</td><td>${a.performanceFee ? 'Ja' : 'Nej'}</td><td>${b.performanceFee ? 'Ja' : 'Nej'}</td></tr>
  </tbody>
  </table></div>
- <p class="src" style="margin-top:10px">${diff} ${entryLine} ${feeLine}</p>
  </section>
 
  <section class="panel">
  <h2 class="panel-h">Regneeksempel på 100.000 kr.</h2>
- <p class="lede" style="margin-bottom:12px">Satsen ganget med 100.000 kr. Det er ikke et ÅOP, og det er ikke det beløb, du ender med at betale. Kurtage, depot og skat er ikke med.</p>
- <div class="table-wrap"><table class="data" style="min-width:0">
- <thead><tr><th></th><th>Sats</th><th>PMINDI</th><th>PMINDIAKK</th></tr></thead>
- <tbody>
- <tr><td>Øvrige løbende</td><td>${pct(a.otherOngoing)}${a.otherOngoing === b.otherOngoing ? '' : ' / ' + pct(b.otherOngoing)}</td><td>${kr(a.otherOngoing)}</td><td>${kr(b.otherOngoing)}</td></tr>
- <tr><td>Porteføljetransaktion</td><td>${pct(a.portfolioTransaction)} / ${pct(b.portfolioTransaction)}</td><td>${kr(a.portfolioTransaction)}</td><td>${kr(b.portfolioTransaction)}</td></tr>
- <tr><td>Emission, maks.</td><td>${pct(a.entry)} / ${pct(b.entry)}</td><td>${kr(a.entry)}</td><td>${kr(b.entry)}</td></tr>
- <tr><td>Indløsning, maks.</td><td>${pct(a.exit)} / ${pct(b.exit)}</td><td>${kr(a.exit)}</td><td>${kr(b.exit)}</td></tr>
- </tbody>
- </table></div>
+ <p class="lede" style="margin-bottom:12px">Hver linje er satsen ganget med 100.000 kr. og afrundet til hele kroner. Linjerne er ikke lagt sammen. Summen er ikke et ÅOP. Kurtage, depot og skat er ikke med.</p>
+ <div class="receipts">
+ <article class="receipt">
+ <p class="kicker">${esc(A.isin)}</p>
+ <h3>PMINDI</h3>
+ <ol>
+ ${line('Øvrige løbende', a.otherOngoing)}
+ ${line('Porteføljetransaktion', a.portfolioTransaction)}
+ ${line('Emission, maks.', a.entry)}
+ ${line('Indløsning, maks.', a.exit)}
+ </ol>
+ </article>
+ <article class="receipt">
+ <p class="kicker">${esc(B.isin)}</p>
+ <h3>PMINDIAKK</h3>
+ <ol>
+ ${line('Øvrige løbende', b.otherOngoing)}
+ ${line('Porteføljetransaktion', b.portfolioTransaction)}
+ ${line('Emission, maks.', b.entry)}
+ ${line('Indløsning, maks.', b.exit)}
+ </ol>
+ </article>
+ </div>
  <p class="src" style="margin-top:10px">Resultathonorar indgår ikke i eksemplet. ${feeLine}</p>
  </section>
+
+ <div class="cost-grid">
+ ${card(A)}
+ ${card(B)}
+ </div>
 
  <p class="warn">Afkasttal på NDI Analytics er efter fondens løbende omkostninger, før din egen kurtage og dit depot. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast.</p>
  <p class="link-row">
