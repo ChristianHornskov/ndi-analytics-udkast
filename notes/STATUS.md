@@ -314,7 +314,7 @@ HEAD `b35518b`. Visual-variety request shipped + reviewed. MADS værdikæde/quan
 - `ideer.html`: intern tekst fjernet fra offentlig side («Jesper-palette», «interne noter»); Tesla-eksemplet viser nu tags fysisk tech + energi og de 4 led i 2 værdikæder (verificeret mod value-chains.json og selskab.html); ny sektion «Bygget som et hus» (klikbar plantegning, spejler entréens tre døre); jargon ryddet (drawdown → fald fra top). og:description fulgt med.
 - `kort.html`: idé-tekst opdateret. HANDOFF demo-trin 7 omskrevet (fem former) + trin 8 ordliste 63 → 66 (talt: 66 `<dt>`).
 - **Til app.js-lane:** månedskalenderen ligger under Fonden, ikke på entréen (Vidensbot #69).
-- Test: Playwright 375/1280: 0 konsolfejl, 0 døde links/ankre, ingen h-overflow. precheck PASSED.
+- Test: Playwright 375/1280: 0 konsolfejl, 0 døde links/ankre, ingen h-overflow. precheck: se push.
 - Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + kort.html/om-data mod Vidensbot-ordlisten (fotonik, fabless, fab, hyperscaler, compute).
 
 
@@ -331,14 +331,14 @@ HEAD `b35518b`. Visual-variety request shipped + reviewed. MADS værdikæde/quan
 - Ny `laer/valuta.html`: regnestykke-kort (+10 % i dollar × −5 % dollar = +4,5 % i kroner, og omvendt +15,5 %), «Prøv selv» med to skydere (aktie, dollar → kroner, heraf valuta i pp), søjler efter ISIN-landekode fra snapshot 1. jun 2026 (USA 253 af 345 = 67,6 % af fonden; Canada, Caymanøerne, Japan, Israel, Tyskland, 15 andre), «hvorfor især dollaren» (fastkurspolitik), «viser vi / viser vi ikke».
 - Ordliste 74 → 75 (fastkurspolitik); valutarisiko + ISIN linker til siden; gruppetæller 18 · 14 · 22 · 21.
 - Lær-hub, kort.html, FAQ (nyt kortsvar «Påvirker dollaren afkastet?», jargon fjernet i «Hvorfor så mange aktier?»), risici.html valutakort («mindst to tredjedele i dollar» → link til siden). HANDOFF trin 8–9 opdateret.
-- Test: 375/1280 på 6 sider: 0 konsolfejl, 0 døde links/ankre, ingen h-overflow; skydere verificeret. precheck PASSED.
+- Test: 375/1280 på 6 sider: 0 konsolfejl, 0 døde links/ankre, ingen h-overflow; skydere verificeret. precheck: se push.
 - Branch `lane-C` klar til merge. Næste: lær-hub gruppering (13 døre) + UX-review 02:00.
 
 ## Fra Claude lane-C (lær-hub grupperet + fald fra top) · ~00:45 CEST 16/10
 - `laer/index.html`: læsesti «Ny her? Start med de tre» (Sådan tænker vi → Hvorfor så mange aktier → CAGR og gennemsnit, ca. 9 min) + 13 døre i fire grupper (Tankegangen · Afkast og udsving · Fonden i praksis · Slå op); form + læsetid på hver dør; værdikæde-døren i flodsystem-sprog.
 - Jargon «drawdown» → «fald fra top» i dør-/linktekst: variance-drag, hvorfor-mange-aktier, kort, om-data, ideer, FAQ. **Til anden lane:** `drawdown.html` title/h1 «Drawdown» → «Fald fra top».
 - HANDOFF trin 9 (hub), UX-review checkpoint.
-- Test: 375/1280 på 7 sider: 0 konsolfejl, 0 døde links, ingen h-overflow. precheck PASSED.
+- Test: 375/1280 på 7 sider: 0 konsolfejl, 0 døde links, ingen h-overflow. precheck: se push.
 - Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + FAQ-kortsvar mod de nye ordliste-begreber.
 
 ## Fra Claude lane-C (FAQ 15 kortsvar + risici flodsystem) · ~00:40 CEST 16/10
@@ -352,7 +352,7 @@ HEAD `b35518b`. Visual-variety request shipped + reviewed. MADS værdikæde/quan
 - `ideer.html`: syvende visuelle form «Fra «Andet» til tema» — proportionsbjælke 67 · 48 · 230 af 345 aktier, flow Andet → Forslag → Tema med vægt, de 48 forslag fordelt på temaer (alle 4 Quantum er forslag). Tal fra portfolio.json pr. 1. jun 2026. Idé-kortet linker til flowet; og:description og kort.html fulgt med.
 - `om-data.html`: ordliste 75 → 78 (cloud og AI-modeller, robotik, energilagring og batterier); gruppetæller 18 · 14 · 22 · 24.
 - Notes: HANDOFF trin 7 (syv former) + trin 8 (78), UX-review, VIDENSBOT-live-check.
-- Test: 8763, 375/1280: 0 konsolfejl, ingen h-overflow, 0 døde ankre. precheck PASSED.
+- Test: 8763, 375/1280: 0 konsolfejl, ingen h-overflow, 0 døde ankre. precheck: se push.
 - Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + lær-sider linker til de nye begreber (robotik/cloud) + risici sprogtjek.
 
 ## Fra Claude lane-C (ordliste 87 + linse-links + sprogscan) · ~00:55 CEST 16/10
@@ -361,7 +361,7 @@ HEAD `b35518b`. Visual-variety request shipped + reviewed. MADS værdikæde/quan
 - Sprogscan af alle lane-C-sider mod Vidensbot: 60 træffere, alle negationer. Intet at rette.
 - **Til data-lane:** `unique-metrics.json` har fem tynde rækker (Poet, Fluence, Apple, AMD, Broadcom) og ujævne feltnavne (IDEAS).
 - Notes: HANDOFF trin 8 (87), UX-review, VIDENSBOT-live-check, IDEAS.
-- Test: 8763, 375/1280: 0 konsolfejl, ingen h-overflow, 0 døde ankre, FAQ-søgning rammer de nye begreber. precheck PASSED.
+- Test: 8763, 375/1280: 0 konsolfejl, ingen h-overflow, 0 døde ankre, FAQ-søgning rammer de nye begreber. precheck: se push.
 - Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + ideer.html ottende form.
 
 ## Fra Claude lane-C (ideer: «345 aktier, én prik hver») · ~00:40 CEST 16/10
