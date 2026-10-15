@@ -194,33 +194,17 @@ b, strong { font-weight: 700; }
   white-space: nowrap;
 }
 
-.control.active, .control:hover { background: #203e47; }
-.control.active { border-color: #a7cbd0; }
+.control:hover { background: #203e47; }
+.control.active {
+  background: #264951;
+  border-color: #c5e3e8;
+  color: #fff;
+  font-weight: 700;
+}
 .control:active { background: #294c55; }
 
 .periods { flex: 1; }
 .periods .control { flex: 1; padding: 0 10px; }
-
-.nasdaq-toggle {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  min-height: 44px;
-  padding: 0 12px;
-  border: 1.5px solid var(--border);
-  border-radius: 8px;
-  color: var(--muted);
-  font-size: 13px;
-  white-space: nowrap;
-  opacity: .55;
-}
-
-.nasdaq-toggle .swatch {
-  width: 18px;
-  height: 0;
-  border-top: 2px dashed var(--yellow);
-  flex: none;
-}
 
 .chart-legends {
   display: flex;
@@ -258,7 +242,15 @@ b, strong { font-weight: 700; }
   text-decoration: line-through;
   text-decoration-thickness: 1px;
 }
-.benchmark-legend { opacity: .42; }
+button.legend {
+  font: inherit;
+  color: inherit;
+}
+.nasdaq-toggle:disabled {
+  opacity: .42;
+  cursor: default;
+}
+.nasdaq-toggle:disabled:hover { color: inherit; }
 
 .nasdaq-note {
   color: var(--muted);
@@ -542,12 +534,6 @@ b, strong { font-weight: 700; }
     flex: 1 1 auto;
     min-width: calc(33% - 4px);
     padding: 0 7px;
-    font-size: 12px;
-    min-height: 40px;
-  }
-
-  .nasdaq-toggle {
-    width: 100%;
     font-size: 12px;
     min-height: 40px;
   }

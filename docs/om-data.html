@@ -28,12 +28,15 @@
     <section class="panel">
       <h2 style="font-size:16px;margin-bottom:10px">Ordliste</h2>
       <dl style="color:var(--muted);display:grid;gap:12px">
-        <div><dt style="color:var(--text)">CAGR</dt><dd>Gennemsnitligt årligt afkast (geometrisk) over perioden.</dd></div>
-        <div><dt style="color:var(--text)">Totalafkast</dt><dd>Afkast inkl. geninvesteret udbytte, efter fondens løbende omkostninger, i DKK.</dd></div>
-        <div><dt style="color:var(--text)">Drawdown / fald fra top</dt><dd>Fald fra et tidligere højdepunkt. Beskrivende – ikke en købsanbefaling.</dd></div>
-        <div><dt style="color:var(--text)">P/S</dt><dd>Price/Sales. Vises ikke for præ-revenue (udefineret/meningsløst).</dd></div>
-        <div><dt style="color:var(--text)">P/E</dt><dd>Price/Earnings. Visés kun for value i NDI-udkastet.</dd></div>
-        <div><dt style="color:var(--text)">GARP</dt><dd>Growth at a Reasonable Price – en modenheds-/værdiansættelsesklasse.</dd></div>
+        <div id="g-cagr"><dt style="color:var(--text)">CAGR</dt><dd>Gennemsnitligt årligt afkast (geometrisk) over perioden.</dd></div>
+        <div id="g-total"><dt style="color:var(--text)">Totalafkast</dt><dd>Afkast inkl. geninvesteret udbytte, efter fondens løbende omkostninger, i DKK.</dd></div>
+        <div id="g-ytd"><dt style="color:var(--text)">År til dato (ÅTD)</dt><dd>Afkast fra sidste handelsdag i forrige kalenderår til seneste dato.</dd></div>
+        <div id="g-drawdown"><dt style="color:var(--text)">Drawdown / fald fra top</dt><dd>Fald fra et tidligere højdepunkt. «Fald fra 52-ugers top» måler fra det højeste niveau de seneste 52 uger (i udkastet tilnærmet). Beskrivende – ikke en opfordring til at handle.</dd></div>
+        <div id="g-ps"><dt style="color:var(--text)">P/S</dt><dd>Price/Sales: markedsværdi delt med omsætning. Vises som «– (præ-revenue)» for selskaber uden omsætning og sorteres sidst.</dd></div>
+        <div id="g-pe"><dt style="color:var(--text)">P/E</dt><dd>Price/Earnings: markedsværdi delt med overskud. Vises kun for value-selskaber i NDI-udkastet.</dd></div>
+        <div id="g-modenhed"><dt style="color:var(--text)">Modenhed</dt><dd>NDI-udkastets inddeling efter livscyklus: præ-revenue → præ-profit → high growth → GARP → value. Udkast-klassifikation, ikke en officiel rating.</dd></div>
+        <div id="g-garp"><dt style="color:var(--text)">GARP</dt><dd>Growth at a Reasonable Price – en modenheds-/værdiansættelsesklasse.</dd></div>
+        <div id="g-sri"><dt style="color:var(--text)">Risikoindikator (SRI)</dt><dd>Fondens samlede risikoklasse på en skala fra 1 til 7 ifølge KID (Central Information Dokument). Gælder fonden som helhed, ikke de enkelte selskaber.</dd></div>
         <div><dt style="color:var(--text)">Fabless / fab</dt><dd>Chipdesign uden egen fabrik / selve produktionsfabrikken.</dd></div>
         <div><dt style="color:var(--text)">Eksponering</dt><dd>Hvad porteføljen er følsom over for – ikke det samme som en anbefaling.</dd></div>
       </dl>

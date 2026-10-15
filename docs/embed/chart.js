@@ -1,11 +1,8 @@
 (() => {
   const FUNDS = { PMINDI: 'pmindi', PMINDIAKK: 'pmindiakk' };
   const PERIODS = {
-    '1m': '1 md',
-    '3m': '3 md',
-    ytd: 'År til dato',
-    '1y': '1 år',
-    all: 'Hele perioden'
+            ytd: 'År til dato',
+        all: 'Hele perioden'
   };
   const PERIOD_MONTHS = { '1m': 1, '3m': 3, '1y': 12 };
 
@@ -46,18 +43,21 @@
   let heightFrame = 0;
   let resizeFrame = 0;
 
+  function publishHeight() {
+    const height = Math.ceil(Math.max(
+      document.documentElement.scrollHeight,
+      document.body ? document.body.scrollHeight : 0,
+      document.documentElement.offsetHeight
+    ));
+    if (!Number.isFinite(height) || height < 80 || height === lastHeight) return;
+    lastHeight = height;
+    parent.postMessage({ type: 'ndi-embed-height', height }, '*');
+  }
+
   function sendHeight() {
+    publishHeight();
     cancelAnimationFrame(heightFrame);
-    heightFrame = requestAnimationFrame(() => {
-      const height = Math.ceil(Math.max(
-        document.documentElement.scrollHeight,
-        document.body ? document.body.scrollHeight : 0,
-        document.documentElement.offsetHeight
-      ));
-      if (height === lastHeight || height < 80) return;
-      lastHeight = height;
-      parent.postMessage({ type: 'ndi-embed-height', height }, '*');
-    });
+    heightFrame = requestAnimationFrame(publishHeight);
   }
 
   function syncURL() {
@@ -149,6 +149,20 @@
   }
 
   function updateMetrics() {
+    const fundId = (document.querySelector('[data-fund][aria-checked="true], .class-card.selected')?.getAttribute('data-fund') || state?.fund || '').toUpperCase();
+    if (fundId.includes('AKK')) {
+      const set = (id, text) => { const el = document.getElementById(id); if (el) el.textContent = text; };
+      set('fund-return', 'Vises efter 12 måneder');
+      set('metric-total', '—');
+      set('metric-cagr', '—');
+      set('metric-ytd', '—');
+      const note = document.getElementById('metric-total-note');
+      if (note) note.textContent = 'Afkast vises efter 12 måneder';
+      const pointee = document.getElementById('chart-pointe');
+      if (pointee) pointee.textContent = 'PMINDIAKK: afkast vises efter 12 måneders historik. Seneste NAV vises ikke som afkast.';
+      return;
+    }
+
     const fund = fundRecord();
     const points = fund.data;
     const first = points[0];
@@ -448,4 +462,21 @@
   }
 
   start();
+})();
+
+// Compliance patch: PMINDIAKK — no returns until 12 months
+(function(){
+  const orig = window.__ndiEmbedPaint;
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-fund]');
+    if (!btn) return;
+    setTimeout(() => {
+      if ((btn.getAttribute('data-fund')||'').toUpperCase().includes('AKK')) {
+        const fr = document.getElementById('fund-return');
+        if (fr) fr.textContent = 'Vises efter 12 måneder';
+        const metrics = document.querySelectorAll('.metrics strong, #fund-return');
+        metrics.forEach(el => { if (el.id==='fund-return' || /%/.test(el.textContent)) {/* keep */} });
+      }
+    }, 50);
+  }, true);
 })();

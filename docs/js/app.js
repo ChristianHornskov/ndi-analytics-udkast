@@ -1,14 +1,14 @@
 import {
-  loadAll, fundById, slicePeriod, cagr, periodReturn, ytdReturn, last12mReturn,
-  monthlyReturns, maxDrawdown, fmtPct, fmtDate, daTheme, daMat, WARN_HIST,
-  MATURITY_LABELS, THEME_LABELS,
+  loadAll, fundById, slicePeriod, cagr, periodReturn, ytdReturn,
+  monthlyReturns, fmtPct, fmtDate, daTheme, daMat, WARN_HIST,
+  MATURITY_LABELS, THEME_LABELS, calendarYearReturns, lastNav, publicTags,
 } from './data.js';
 import { renderChart } from './chart.js';
 
 const state = {
   fund: 'pmindi',
   view: 'entre', // entre | fonden | portefolje | udforsk
-  period: 'all',
+  period: 'all', // kun all|ytd|year:YYYY
   tags: [],
   maturity: [],
   sort: 'weight',
@@ -27,7 +27,8 @@ function readUrl() {
   state.fund = u.searchParams.get('fund') || 'pmindi';
   state.view = u.searchParams.get('view') || 'entre';
   state.period = u.searchParams.get('periode') || 'all';
-  state.tags = (u.searchParams.get('tags') || '').split(',').filter(Boolean);
+  // Interne tags (legacy/Trump) må aldrig ende i chips eller URL – UX §0.2, INTERNAL-TAGS.md
+  state.tags = publicTags((u.searchParams.get('tags') || '').split(',').filter(Boolean));
   state.maturity = (u.searchParams.get('mat') || '').split(',').filter(Boolean);
   state.sort = u.searchParams.get('sort') || 'weight';
   state.dir = u.searchParams.get('dir') || 'desc';
@@ -87,6 +88,15 @@ function openDialog(id) {
   });
 }
 
+/** Ordliste-link ved metriklabel (UX I6/F10): virker ved klik og fokus, ikke kun hover. */
+const GLOSS = {
+  total: 'Totalafkast', cagr: 'CAGR', ytd: 'År til dato', drawdown: 'Fald fra top',
+  ps: 'P/S', pe: 'P/E', modenhed: 'Modenhed', sri: 'Risikoindikator (SRI)',
+};
+function gl(key) {
+  return `<a class="info-btn" href="om-data.html#g-${key}" title="Hvad betyder ${GLOSS[key]}? Se ordlisten" aria-label="Hvad betyder ${GLOSS[key]}? Se ordlisten">?</a>`;
+}
+
 function warnHtml() {
   return `<p class="warn" role="note">${WARN_HIST}</p>`;
 }
@@ -100,7 +110,7 @@ function renderEntre(root) {
     <div class="doors" role="navigation" aria-label="Vælg område">
       <a class="door" href="?view=fonden&fund=${state.fund}" data-nav="fonden">
         <strong>Fonden</strong>
-        <span>Performance, afkastkalender, fald fra top og hvordan du finder ISIN.</span>
+        <span>Performance, afkastkalender og hvordan du finder ISIN.</span>
         <span class="go">Åbn fonden →</span>
       </a>
       <a class="door" href="?view=portefolje&fund=${state.fund}" data-nav="portefolje">
@@ -118,7 +128,7 @@ function renderEntre(root) {
       <h2 style="font-size:18px;margin-bottom:10px">Hurtige genveje</h2>
       <p style="color:var(--muted);font-size:13px;margin-bottom:12px">Data opdateret pr. ${fmtDate(DATA.portfolio.asOf)} · Snapshot (ikke live pipeline).</p>
       <div class="seg">
-        <a class="outline-btn small" href="selskab.html?isin=JP3436100006&fund=${state.fund}">Eksempel: SoftBank Group</a>
+        <a class="outline-btn small" href="selskab.html?isin=JP3436100006&fund=${state.fund}">Eksempel: selskabsside (SoftBank)</a>
         <a class="outline-btn small" href="om-data.html">Om data & begreber</a>
         <a class="outline-btn small" href="embed/chart.html">Embed-graf (forside-komponent)</a>
         <a class="outline-btn small" href="vaerdikaede.html">AI-værdikæde (light)</a>
@@ -145,75 +155,125 @@ function renderEntre(root) {
 function renderFonden(root) {
   const fund = fundById(DATA.portfolio, state.fund);
   const rows = fund.data;
-  const sliced = slicePeriod(rows, state.period);
+  const isAkk = fund.id === 'pmindiakk' || (fund.short || '').includes('AKK');
+  const asOfPerf = rows[rows.length - 1]?.d || DATA.portfolio.performanceAsOf || DATA.portfolio.asOf;
+  const posAsOf = fund.positionsAsOf || DATA.portfolio.asOf;
+  const nav = lastNav(rows);
+
+  // PMINDIAKK: ingen afkast før 12 mdr. historik
+  if (isAkk) {
+    root.innerHTML = `
+      <a class="back" href="?view=entre&fund=${state.fund}" data-nav="entre">← Entré</a>
+      <p class="eyebrow">FONDEN</p>
+      <h1>${fund.short}</h1>
+      <p class="lede">Akkumulerende andelsklasse · ISIN ${fund.isin}</p>
+      <div class="toolbar">
+        <div class="seg" role="tablist" aria-label="Andelsklasse">
+          ${DATA.portfolio.funds.map((f) => `<button type="button" class="control ${f.id===state.fund?'active':''}" data-fund="${f.id}" role="tab" aria-selected="${f.id===state.fund}">${f.short}</button>`).join('')}
+        </div>
+      </div>
+      <section class="panel">
+        <div class="metrics">
+          <div class="metric"><div class="label">Seneste NAV</div><strong>${nav ? nav.price.toFixed(2).replace('.', ',') : '–'}</strong><small>Pr. ${fmtDate(nav?.d)} · DKK</small></div>
+          <div class="metric"><div class="label">Afkast</div><strong style="font-size:18px">Vises efter 12 måneder</strong><small>Klassen har endnu ikke 12 måneders historik</small></div>
+        </div>
+        <p class="band">Afkasthistorik for PMINDIAKK vises, når klassen har 12 måneders historik (fra december 2026). Klassen følger samme overordnede strategi som PMINDI.</p>
+        ${warnHtml()}
+        <p class="note-fundmarket">Fonden har intet benchmark.</p>
+      </section>
+      <section class="panel">
+        <h2 style="font-size:18px;margin-bottom:8px">Risiko (kort)</h2>
+        <p style="color:var(--muted);font-size:13px;line-height:1.55">Risikoindikator <strong style="color:var(--text)">5</strong> på en skala fra 1 til 7 (KID). Anbefalet ejertid 5 år. Du kan tabe en del af eller hele din investering. Se KID-links i footeren.</p>
+        <p style="margin-top:12px"><button type="button" class="outline-btn small" data-open="dlg-invest">Sådan investerer du · Kopiér ISIN</button></p>
+      </section>`;
+    return;
+  }
+
+  // PMINDI: kun siden start, YTD, afsluttede kalenderår — ingen 1 md / 3 md
+  const years = calendarYearReturns(rows);
   const totAll = periodReturn(rows);
   const c = cagr(rows);
   const ytd = ytdReturn(rows);
-  const y1 = last12mReturn(rows);
-  const dd = maxDrawdown(rows);
-  const asOf = rows[rows.length - 1]?.d || DATA.portfolio.asOf;
+  const periodKey = state.period;
+  let sliced = rows;
+  let periodLabel = 'Siden start';
+  if (periodKey === 'ytd') {
+    sliced = slicePeriod(rows, 'ytd');
+    periodLabel = 'År til dato';
+  } else if (String(periodKey).startsWith('year:')) {
+    const y = periodKey.slice(5);
+    const yr = years.find((x) => x.year === y);
+    if (yr) {
+      sliced = rows.filter((r) => r.d >= yr.from && r.d <= yr.to);
+      periodLabel = y + (yr.partial ? ' (delår fra start)' : '');
+    }
+  } else {
+    state.period = 'all';
+  }
+
+  const yearBtns = years.map((y) =>
+    `<button type="button" class="control ${state.period===('year:'+y.year)?'active':''}" data-period="year:${y.year}" role="tab" aria-selected="${state.period===('year:'+y.year)}">${y.year}${y.partial?'*':''}</button>`
+  ).join('');
+
+  const yearTable = years.map((y) =>
+    `<tr><td>${y.year}${y.partial ? ' <span class="badge">delår</span>' : ''}</td><td>${fmtPct(y.ret)}</td><td style="color:var(--muted);font-size:12px">${fmtDate(y.from)} – ${fmtDate(y.to)}</td></tr>`
+  ).join('');
 
   root.innerHTML = `
     <a class="back" href="?view=entre&fund=${state.fund}" data-nav="entre">← Entré</a>
     <p class="eyebrow">FONDEN</p>
     <h1>${fund.short || fund.id.toUpperCase()}</h1>
-    <p class="lede">${fund.kind || ''} · Totalafkast i DKK efter fondens løbende omkostninger, før skat og egne handelsomkostninger. Pr. ${fmtDate(asOf)}.</p>
+    <p class="lede">Udloddende andelsklasse. Totalafkast i DKK efter fondens løbende omkostninger, før skat og egne handelsomkostninger. Afkast pr. ${fmtDate(asOfPerf)}. Beholdning nedenfor er forsinket (pr. ${fmtDate(posAsOf)}).</p>
     <div class="toolbar">
       <div class="seg" role="tablist" aria-label="Andelsklasse">
         ${DATA.portfolio.funds.map((f) => `<button type="button" class="control ${f.id===state.fund?'active':''}" data-fund="${f.id}" role="tab" aria-selected="${f.id===state.fund}">${f.short}</button>`).join('')}
       </div>
       <div class="seg" role="tablist" aria-label="Periode">
-        ${[['1m','1 md.'],['3m','3 mdr.'],['ytd','ÅTD'],['1y','1 år'],['all','Siden start']].map(([k,l]) =>
-          `<button type="button" class="control ${state.period===k?'active':''}" data-period="${k}" role="tab" aria-selected="${state.period===k}">${l}</button>`).join('')}
+        <button type="button" class="control ${state.period==='all'?'active':''}" data-period="all" role="tab" aria-selected="${state.period==='all'}">Siden start</button>
+        <button type="button" class="control ${state.period==='ytd'?'active':''}" data-period="ytd" role="tab" aria-selected="${state.period==='ytd'}">ÅTD</button>
+        ${yearBtns}
       </div>
     </div>
     <section class="panel">
       <div class="metrics">
         <div class="metric"><div class="label">Totalafkast siden start</div><strong>${fmtPct(totAll)}</strong><small>Fra ${fmtDate(rows[0]?.d)} · DKK</small></div>
         <div class="metric"><div class="label">Gns. årligt afkast (CAGR)</div><strong>${fmtPct(c)}</strong><small>Efter løbende omkostninger</small></div>
-        <div class="metric"><div class="label">År til dato</div><strong>${fmtPct(ytd)}</strong><small>Pr. ${fmtDate(asOf)}</small></div>
-        <div class="metric"><div class="label">Seneste 12 måneder</div><strong>${fmtPct(y1)}</strong><small>Rullende</small></div>
+        <div class="metric"><div class="label">År til dato</div><strong>${fmtPct(ytd)}</strong><small>Pr. ${fmtDate(asOfPerf)}</small></div>
+        <div class="metric"><div class="label">Risikoindikator (KID)</div><strong>5 / 7</strong><small>Anbefalet ejertid 5 år</small></div>
       </div>
       ${warnHtml()}
-      <p class="note-fundmarket">Nasdaq-sammenligning er ikke aktiveret i udkastet – kræver Fundmarkets godkendelse. Fonden har ikke et fast benchmark.</p>
+      <p class="note-fundmarket">Fonden har intet benchmark.</p>
+      <p style="font-size:13px;color:var(--muted);margin:8px 0">Graf: ${periodLabel}</p>
       <div class="chart-wrap" id="perf-chart"></div>
-      <p style="font-size:12px;color:var(--muted)">Gule prikker = illustrative toppe · mørkere prikker = illustrative dyk (begge sider – ingen cherry-picking). Redaktionel gennemgang mangler.</p>
+      <p style="font-size:12px;color:var(--muted)">PMINDI: andelskursen falder med udbyttet på ex-dato. Totalafkastet viser værdien, hvis udbyttet var geninvesteret.</p>
+    </section>
+    <section class="panel">
+      <h2 style="font-size:18px;margin-bottom:6px">Afkast pr. kalenderår</h2>
+      <p style="font-size:12px;color:var(--muted);margin-bottom:8px">Afsluttede år + delår fra start (*). Ingen 1- eller 3-måneders fremhævning.</p>
+      ${warnHtml()}
+      <div class="table-wrap"><table class="data" style="min-width:0"><thead><tr><th>År</th><th>Afkast</th><th>Periode</th></tr></thead><tbody>${yearTable}</tbody></table></div>
     </section>
     <section class="panel">
       <h2 style="font-size:18px;margin-bottom:6px">Månedlige afkast</h2>
-      <p style="font-size:12px;color:var(--muted);margin-bottom:8px">${state.calFull ? 'Hele historikken' : 'Seneste op til 36 måneder'} · rolige farver · røde måneder er synlige med vilje</p>
+      <p style="font-size:12px;color:var(--muted);margin-bottom:8px">${state.calFull ? 'Hele historikken' : 'Seneste op til 36 måneder'} · røde måneder er synlige med vilje</p>
       ${warnHtml()}
       <div id="calendar"></div>
       <p style="margin-top:12px"><button type="button" class="outline-btn" id="cal-toggle">${state.calFull ? 'Vis seneste 3 år' : 'Se hele historikken (ét klik)'}</button>
-      <span style="display:block;margin-top:8px;font-size:12px;color:var(--muted)">Forsidens 3-års-teaser skjuler ikke dårlige perioder – fuld historik er altid ét klik væk her.</span></p>
-    </section>
-    <section class="panel">
-      <h2 style="font-size:18px;margin-bottom:6px">Fald fra 52-ugers top</h2>
-      ${dd ? `<p style="font-size:15px">Største fald i serien: <strong style="color:var(--cyan)">${fmtPct(dd.dd)}</strong> fra ${fmtDate(dd.peakD)} til ${fmtDate(dd.troughD)}.</p>` : '<p>–</p>'}
-      ${warnHtml()}
-      <p class="band">Visningen er beskrivende. Den er ikke en opfordring til at handle.</p>
-    </section>
-    <section class="panel">
-      <h2 style="font-size:18px;margin-bottom:6px">Det skete i porteføljen</h2>
-      <p style="font-size:12px;color:var(--muted)">Største daglige kursbevægelser blandt beholdningerne · kun fakta, ingen forklaring af dispositioner</p>
-      <p class="datestamp" data-asof="${asOf}"><time datetime="${asOf}">Datostempel: ${fmtDate(asOf)}</time> · opdateres med snapshot · bliver markeret «ældre» når datoen ikke er seneste handelsdag</p>
-      <div id="movers" class="movers" style="margin-top:12px"></div>
+      <span style="display:block;margin-top:8px;font-size:12px;color:var(--muted)">Fuld historik er altid ét klik væk.</span></p>
     </section>
     <section class="panel">
       <h2 style="font-size:18px;margin-bottom:8px">Risiko (kort)</h2>
       <ul style="color:var(--muted);font-size:13px;line-height:1.55;padding-left:18px;display:grid;gap:6px">
+        <li>Risikoindikator 5 på en skala fra 1 til 7 (KID, 14. august 2026). Anbefalet ejertid 5 år.</li>
         <li>Du kan tabe en del af eller hele din investering.</li>
-        <li>Porteføljen er koncentreret i teknologi og typisk i USD-noterede papirer – det øger valutakurs- og sektorrisiko.</li>
-        <li>Se gældende Central Information Dokument (KID) før du investerer.</li>
+        <li>Store kursudsving er et grundvilkår for teknologiaktier. Du skal kunne holde investeringen i mindst 5 år og tåle store fald undervejs.</li>
+        <li>Porteføljen er koncentreret i teknologi og typisk i USD-noterede papirer.</li>
       </ul>
       <p style="margin-top:12px"><button type="button" class="outline-btn small" data-open="dlg-invest">Sådan investerer du · Kopiér ISIN</button></p>
     </section>`;
 
-  const chartEl = $('#perf-chart', root);
-  renderChart(chartEl, sliced, DATA.context.events || [], { label: 'Totalafkast' });
-  // remove duplicate readout if chart.js inserted after container's next – ensure one
+  renderChart($('#perf-chart', root), sliced, [], { label: 'Totalafkast' });
   renderCalendar($('#calendar', root), rows);
-  renderMovers($('#movers', root), fund);
   $('#cal-toggle', root)?.addEventListener('click', () => {
     state.calFull = !state.calFull;
     writeUrl();
@@ -246,24 +306,6 @@ function renderCalendar(el, rows) {
   el.innerHTML = `<div class="cal">${head}${body}</div>`;
 }
 
-function renderMovers(el, fund) {
-  const pos = [...fund.positions].filter((p) => typeof p.d1 === 'number');
-  const up = [...pos].sort((a, b) => b.d1 - a.d1).slice(0, 5);
-  const down = [...pos].sort((a, b) => a.d1 - b.d1).slice(0, 5);
-  const asOf = fund.positionsAsOf || DATA.portfolio.asOf;
-  const item = (p) => `<li><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${state.fund}">${p.name}</a><span class="${p.d1>=0?'up':'down'}">${fmtPct(p.d1)}</span></li>`;
-  el.innerHTML = `
-    <div><h3 style="font-size:13px;color:var(--muted);margin-bottom:8px">Største stigninger · <time datetime="${asOf}">${fmtDate(asOf)}</time></h3><ul class="mover-list">${up.map(item).join('')}</ul></div>
-    <div><h3 style="font-size:13px;color:var(--muted);margin-bottom:8px">Største fald · <time datetime="${asOf}">${fmtDate(asOf)}</time></h3><ul class="mover-list">${down.map(item).join('')}</ul></div>`;
-  // Age marker on parent datestamp
-  const stamp = document.querySelector('.datestamp[data-asof]');
-  if (stamp) {
-    const today = new Date().toISOString().slice(0, 10);
-    if (asOf && asOf < today) {
-      stamp.innerHTML += ' <span class="tag accent">ældre</span>';
-    }
-  }
-}
 
 function filterPositions(fund) {
   let list = [...fund.positions];
@@ -279,12 +321,16 @@ function filterPositions(fund) {
     );
   }
   const dir = state.dir === 'asc' ? 1 : -1;
+  const psOf = (p) => (p.maturity === 'prerevenue' ? null : p.ps ?? null);
   list.sort((a, b) => {
     const key = state.sort;
+    if (key === 'ps') {
+      const av = psOf(a), bv = psOf(b);
+      if (av == null || bv == null) return (av == null) - (bv == null);
+      return dir * (av - bv);
+    }
     let av = a[key], bv = b[key];
     if (key === 'name') return dir * (a.name || '').localeCompare(b.name || '', 'da');
-    if (key === 'drawdown52Approx') { av = a.drawdown52Approx ?? 0; bv = b.drawdown52Approx ?? 0; }
-    if (key === 'ps') { av = a.ps ?? -999; bv = b.ps ?? -999; }
     if (av == null) av = 0; if (bv == null) bv = 0;
     return dir * (av - bv);
   });
@@ -294,21 +340,14 @@ function filterPositions(fund) {
 function renderPortefolje(root) {
   const fund = fundById(DATA.portfolio, state.fund);
   const list = filterPositions(fund).slice(0, 80);
-  const counts = {};
-  for (const p of fund.positions) counts[p.maturity] = (counts[p.maturity]||0)+1;
-  const life = ['prerevenue','preprofit','highgrowth','garp','value']
-    .map(m => `<div style="flex:1;min-width:70px;text-align:center;padding:10px 6px;background:#0b171d;border-radius:8px;border:1px solid var(--border)"><div style="font-size:11px;color:var(--muted)">${daMat(m)}</div><strong style="color:var(--cyan);font-size:20px">${counts[m]||0}</strong></div>`)
-    .join('');
   root.innerHTML = `
     <a class="back" href="?view=entre&fund=${state.fund}" data-nav="entre">← Entré</a>
     <p class="eyebrow">PORTEFØLJEN</p>
     <h1>Beholdninger · ${fund.short}</h1>
-    <p class="lede">Beholdning pr. ${fmtDate(fund.positionsAsOf || DATA.portfolio.asOf)}. Vægte summerer til ca. 100 %. Klassifikationer er udkast.</p>
+    <p class="lede">Forsinket offentlig beholdning pr. ${fmtDate(fund.positionsAsOf || DATA.portfolio.asOf)} (Fundmarket månedsrapport) — ikke dagsaktuel. Vægte summerer til ca. 100 %.</p>
     <p class="band">Segmenter viser eksponering, ikke en anbefaling.</p>
-    <div style="display:flex;flex-wrap:wrap;gap:8px;margin:14px 0">${life}</div>
-    <p style="font-size:11px;color:var(--muted);margin-bottom:10px">Livscyklus-strip (antal selskaber) — udkast-klassifikation, ikke officiel rating.</p>
     ${fundToolbar()}
-    <p class="band" style="font-size:11px">Udkast-klassifikation (modenhed/P/S) — ikke officiel NDI-rating. P/E kun for value. P/S = n/a for præ-revenue.</p>
+    <p class="band" style="font-size:11px">Ingen P/S, P/E eller kursafkast pr. aktie i denne version. Tema-tags er udkast.</p>
     ${positionsTable(list, fund)}
     <p style="font-size:12px;color:var(--muted);margin-top:10px">Viser ${list.length} af ${fund.positions.length} (top efter nuværende sortering). Åbn Udforsk for filtre.</p>`;
 }
@@ -323,17 +362,13 @@ function positionsTable(list, fund) {
   const th = (key, label) =>
     `<th><button type="button" data-sort="${key}" aria-sort="${state.sort===key?(state.dir==='asc'?'ascending':'descending'):'none'}">${label}${state.sort===key?(state.dir==='asc'?' ↑':' ↓'):''}</button></th>`;
   return `<div class="table-wrap"><table class="data"><thead><tr>
-    ${th('name','Navn')}${th('weight','Vægt %')}<th>Tema</th><th>Modenhed</th>${th('ps','P/S')}<th>P/E</th>${th('drawdown52Approx','Fald fra 52-ugers top')}
+    ${th('name','Navn')}${th('weight','Vægt %')}<th>Tema</th>
   </tr></thead><tbody>${list.map((p) => `<tr>
     <td><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}">${p.name}</a><br><small style="color:var(--muted)">${p.isin}</small></td>
     <td>${(p.weight ?? 0).toFixed(2).replace('.', ',')}</td>
     <td><span class="tag">${daTheme(p.theme)}</span></td>
-    <td><span class="badge">${daMat(p.maturity)}</span></td>
-    <td>${p.maturity==='prerevenue' || p.ps == null ? (p.maturity==='prerevenue' ? 'n/a' : '–') : String(p.ps).replace('.', ',')}</td>
-    <td>${p.pe == null ? '–' : String(p.pe).replace('.', ',')}</td>
-    <td>${fmtPct(p.drawdown52Approx)}</td>
   </tr>`).join('')}</tbody></table></div>
-  <p style="font-size:11px;color:var(--muted);margin-top:8px">Tilnærmet i udkastet ud fra YTD/1År – ikke en officiel 52-ugers serie. Neutral beskrivelse, ikke en handelsidé.</p>`;
+  <p style="font-size:11px;color:var(--muted);margin-top:8px">Kun vægt og tema. Ingen kursafkast pr. aktie i v1 (under verifikation). Beholdning er forsinket.</p>`;
 }
 
 function renderUdforsk(root) {
@@ -356,10 +391,7 @@ function renderUdforsk(root) {
     <div class="filters" aria-label="Temaer">
       ${themes.map((t) => `<button type="button" class="control ${state.tags.includes(t)?'active':''}" data-tag="${t}">${daTheme(t)}</button>`).join('')}
     </div>
-    <div class="filters" aria-label="Modenhed">
-      ${Object.entries(MATURITY_LABELS).map(([k,l]) =>
-        `<button type="button" class="control ${state.maturity.includes(k)?'active':''}" data-mat="${k}">${l}</button>`).join('')}
-    </div>
+    <!-- Modenhedsfiltre skjult indtil manuel klassifikation -->
     <div class="chips" id="chips"></div>
     <p style="font-size:12px;color:var(--muted)">${list.length} resultater · udkast-klassifikation</p>
     ${list.length ? positionsTable(list, fund) : '<p class="band">Ingen selskaber matcher – fjern et filter.</p>'}
@@ -388,14 +420,17 @@ function paint() {
 }
 
 function onClick(e) {
-  const t = e.target.closest('[data-nav],[data-fund],[data-period],[data-sort],[data-tag],[data-mat],[data-open],[data-x],#reset-filters');
+  const t = e.target.closest('[data-nav],[data-fund],[data-period],[data-sort],[data-tag],[data-mat],[data-open],[data-x],#reset-filters,#copy-link');
   if (!t) return;
   if (t.matches('[data-open]')) { openDialog(t.getAttribute('data-open')); return; }
   if (t.id === 'reset-filters') {
     state.tags = []; state.maturity = []; state.q = ''; writeUrl(); paint(); return;
   }
   if (t.id === 'copy-link') {
-    navigator.clipboard.writeText(location.href).then(()=>toast('Link kopieret')).catch(()=>toast('Kunne ikke kopiere link'));
+    // U1: URL'en bærer hele visningen (fund, tags, mat, sort, q)
+    navigator.clipboard.writeText(location.href)
+      .then(() => toast('Link til denne liste er kopieret'))
+      .catch(() => toast('Kunne ikke kopiere – kopiér adressen fra adresselinjen'));
     return;
   }
   if (t.matches('[data-x]')) {
@@ -449,7 +484,7 @@ async function main() {
   document.addEventListener('click', onClick);
   document.addEventListener('input', onInput);
   window.addEventListener('popstate', () => { readUrl(); paint(); });
-  $all('[data-open]').forEach((b) => b.addEventListener('click', () => openDialog(b.getAttribute('data-open'))));
+  // [data-open] håndteres af onClick-delegering (tidligere dobbelt listener → to dialoger)
   paint();
 }
 

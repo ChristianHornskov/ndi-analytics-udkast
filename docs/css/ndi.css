@@ -3,12 +3,15 @@
   --bg:#050a0f;--panel:#11252c;--panel-2:#14272e;--panel-3:#18303a;--selected:#213e46;
   --border:#2b3e45;--line:#30474f;--text:#e6e8ed;--muted:#aac0c7;--faint:#7f979e;
   --brand:#89aeb4;--cyan:#9ecfd6;--yellow:#f5ee9e;--focus:#f5ee9e;
-  --up:#5f9ea6;--down:#c98a94;--up-ink:#9fd3da;--down-ink:#e5b3ba;
-  --radius:15px;--surface:#313a4a;--maxw:1180px;
-  --font:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  /* Jesper-tokens (vendor/jesper-mockup via docs/b): --pos/--neg er kanoniske, --up/--down er aliaser for app.js */
+  --pos:#5f9ea6;--neg:#c98a94;--pos-ink:#9fd3da;--neg-ink:#e5b3ba;
+  --up:var(--pos);--down:var(--neg);--up-ink:var(--pos-ink);--down-ink:var(--neg-ink);
+  --slate:#313a4a;--surface:var(--slate);
+  --radius:15px;--maxw:1180px;
+  --font:"NDI",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--text);font:400 15px/1.45 var(--font);-webkit-font-smoothing:antialiased}
 button,a,input,select{font:inherit;color:inherit}
 button{cursor:pointer;border:0;background:none}
@@ -145,3 +148,53 @@ table.data a:hover{color:var(--cyan);text-decoration:underline}
 .metric strong{font-variant-numeric:tabular-nums}
 .cal .cell{font-variant-numeric:tabular-nums}
 .nav-text{background:none;padding:6px 0;font-weight:300;color:var(--muted);font-size:13px}.nav-text:hover{color:var(--text)}
+
+/* ---- Merge fra docs/b/css (Jesper-mockup), 2026-10-15 · Claude ----
+   Kun tilføjelser/overstyringer; eksisterende klassenavne (.panel .door .control .cal .metrics .outline-btn …) bevaret. */
+:focus-visible{outline:2px solid var(--focus);outline-offset:3px;border-radius:4px}
+.muted{color:var(--muted)}
+.tnum{font-variant-numeric:tabular-nums}
+.ext::after{content:" ↗";color:var(--brand)}
+button:disabled{cursor:not-allowed;opacity:.5}
+
+/* Segmenterede kontroller: Jespers aktive tilstand (aria-selected/pressed + .active) */
+.control{white-space:nowrap;transition:background .18s,border-color .18s}
+.control.active,.control[aria-selected=true],.control[aria-pressed=true]{background:var(--selected);border-color:#a7cbd0;color:#fff}
+.outline-btn{transition:background .18s,border-color .18s}
+
+/* Compliance-komponenter: Jespers warn-hist-look på eksisterende .warn/.band */
+.warn{display:flex;gap:10px;align-items:flex-start;color:#d9d4a6;border-left-color:#f5ee9e99;background:#f5ee9e08;border-radius:0 7px 7px 0;font-size:12.5px}
+.warn::before{content:"!";flex:none;display:grid;place-items:center;width:17px;height:17px;border-radius:50%;border:1px solid #f5ee9e99;font-size:11px;font-weight:700;margin-top:1px}
+.band{border-color:#89aeb488;background:#89aeb40a}
+.band strong{color:var(--text);font-weight:600}
+
+/* Ordliste-knap ved metriklabels (UX I6/F10) */
+.info-btn{display:inline-grid;place-items:center;width:20px;height:20px;margin-left:4px;vertical-align:middle;border-radius:50%;border:1px solid var(--brand);font-size:11px;line-height:1;color:var(--brand);text-decoration:none}
+.info-btn:hover{background:var(--selected);color:#fff}
+[id^="g-"]:target{background:var(--selected);border-radius:8px;padding:8px 10px;margin:-8px -10px}
+
+/* Tabel + tags (Jesper): højere kontrast, tabulære tal, hover */
+table.data td{font-variant-numeric:tabular-nums}
+table.data tbody tr:hover,table.data tbody tr:hover td:first-child{background:#163038}
+.tag{border-color:#89aeb455;color:#c2dbe0;font-size:11px}
+a.tag:hover,button.tag:hover{border-color:var(--brand);background:var(--selected)}
+.chip{border-color:#a7cbd0;font-size:12px}
+.chip button{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;color:var(--muted);opacity:1}
+.chip button:hover{background:#2c5560;color:#fff}
+.mover-list a{text-decoration:none}
+.mover-list a:hover{text-decoration:underline}
+
+/* Risikoindikator (SRI) – selskabsside */
+.sri{display:flex;gap:4px;margin:10px 0}
+.sri span{width:34px;height:30px;display:grid;place-items:center;border:1px solid var(--line);border-radius:5px;font-size:13px;color:var(--muted)}
+.sri span.on{background:var(--selected);border-color:var(--yellow);color:var(--text);font-weight:700}
+
+.skeleton{background:linear-gradient(90deg,#0f2026 25%,#14292f 50%,#0f2026 75%);background-size:200% 100%;animation:sk 1.4s infinite;border-radius:10px}
+@keyframes sk{to{background-position:-200% 0}}
+
+@media print{
+  body{background:#fff;color:#000}
+  .site-header,.toolbar,.filters,.dialog-backdrop,.toast,.skip{display:none!important}
+  .panel{background:#fff;border-color:#999;color:#000}
+  .lede,.band,.warn{color:#000;background:#fff}
+}

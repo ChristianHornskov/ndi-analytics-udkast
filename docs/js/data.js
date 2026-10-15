@@ -150,3 +150,40 @@ export const BANNED_PUBLIC_TAGS = new Set([
 export function publicTags(tags) {
   return (tags || []).filter((t) => !BANNED_PUBLIC_TAGS.has(String(t).toLowerCase()));
 }
+
+
+/** Afsluttede kalenderårsafkast fra total-serien (1. jan → 31. dec / sidste punkt i året). */
+export function calendarYearReturns(rows) {
+  if (!rows?.length) return [];
+  const byYear = new Map();
+  for (const r of rows) {
+    const y = r.d.slice(0, 4);
+    if (!byYear.has(y)) byYear.set(y, { first: r, last: r });
+    else byYear.get(y).last = r;
+  }
+  // For each year use last point of previous year as base when available
+  const years = [...byYear.keys()].sort();
+  const out = [];
+  for (let i = 0; i < years.length; i++) {
+    const y = years[i];
+    const cur = byYear.get(y).last;
+    let base;
+    if (i === 0) base = byYear.get(y).first;
+    else base = byYear.get(years[i - 1]).last;
+    const partial = byYear.get(y).first.d.slice(5) !== '01-01' && i === 0;
+    out.push({
+      year: y,
+      ret: ((cur.total / base.total) - 1) * 100,
+      from: base.d,
+      to: cur.d,
+      partial: i === 0, // first year from inception is delår
+    });
+  }
+  return out;
+}
+
+export function lastNav(rows) {
+  if (!rows?.length) return null;
+  const r = rows[rows.length - 1];
+  return { d: r.d, price: r.price, total: r.total };
+}

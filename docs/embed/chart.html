@@ -40,10 +40,6 @@
           <button class="control" type="button" role="tab" data-period="1y" aria-selected="false" tabindex="-1" aria-controls="chart-container">1 år</button>
           <button class="control active" type="button" role="tab" data-period="all" aria-selected="true" tabindex="0" aria-controls="chart-container">Hele perioden</button>
         </div>
-        <button class="nasdaq-toggle" type="button" disabled aria-pressed="false" title="Nasdaq-sammenligning kræver Fundmarkets godkendelse">
-          <span class="swatch" aria-hidden="true"></span>
-          Nasdaq-100
-        </button>
       </div>
 
       <div class="chart-legends">
@@ -51,10 +47,10 @@
           <span id="legend-fund">PMINDI</span>
           <strong id="fund-return" aria-describedby="historisk-advarsel">—</strong>
         </div>
-        <div class="legend benchmark-legend" aria-disabled="true">
+        <button class="legend benchmark-legend nasdaq-toggle" type="button" disabled aria-pressed="false" title="Nasdaq-sammenligning kræver Fundmarkets godkendelse">
           <span>Nasdaq-100</span>
           <strong>—</strong>
-        </div>
+        </button>
       </div>
       <p class="nasdaq-note">Nasdaq-sammenligning kræver Fundmarkets godkendelse. Fonden har intet fast benchmark.</p>
 

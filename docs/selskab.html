@@ -25,20 +25,30 @@
     const fundId = u.searchParams.get('fund') || 'pmindi';
     const main = document.getElementById('main');
     const data = await loadAll();
+    const meta = await fetch('data/fund-meta.json').then(r => r.ok ? r.json() : null).catch(() => null);
+    const priip = meta?.funds?.[fundId]?.priip;
+    // U3: kom man fra screeneren, går Tilbage til samme filtre/sortering
+    let backHref = `index.html?view=udforsk&fund=${fundId}`;
+    try {
+      const ref = new URL(document.referrer);
+      if (ref.origin === location.origin && ref.pathname.replace(/index\.html$/, '') === location.pathname.replace(/selskab\.html$/, '')) backHref = ref.href;
+    } catch {}
+    const gl = (key, name) => `<a class="info-btn" href="om-data.html#g-${key}" title="Hvad betyder ${name}? Se ordlisten" aria-label="Hvad betyder ${name}? Se ordlisten">?</a>`;
     const fund = fundById(data.portfolio, fundId);
     const p = fund.positions.find(x => x.isin === isin);
     if (!p) {
-      main.innerHTML = `<p class="warn">Selskabet blev ikke fundet i ${fund.short}. <a href="index.html?view=udforsk&fund=${fundId}">Tilbage til screener</a></p>`;
+      main.innerHTML = `<p class="warn">Selskabet blev ikke fundet i ${fund.short}. <a href="${backHref}">Tilbage til screener</a></p>`;
     } else {
       document.title = `${p.name} · NDI Analytics`;
       main.innerHTML = `
-        <a class="back" href="index.html?view=udforsk&fund=${fundId}">← Tilbage til screener</a>
+        <a class="back" href="${backHref}">← Tilbage</a>
         <p class="eyebrow">SELSKAB · I PORTEFØLJEN</p>
         <h1>${p.name}</h1>
         <p style="color:var(--muted);font-size:13px;margin:6px 0 16px">${p.symbol || ''} · ${p.isin} · vægt ${(p.weight||0).toFixed(2).replace('.',',')} % · pr. ${fmtDate(fund.positionsAsOf||data.portfolio.asOf)}</p>
         <section class="panel">
           <h2 style="font-size:16px;margin-bottom:8px;color:var(--brand)">Hvilket problem løser det?</h2>
           <p style="font-size:15px;line-height:1.55">${p.summary || 'Beskrivelse mangler i udkastet.'}</p>
+          <p class="band" style="margin-top:10px">Beskrivelse kan være AI-assisteret. Generel information — ikke en anbefaling.</p>
         </section>
         <section class="panel">
           <h2 style="font-size:16px;margin-bottom:8px;color:var(--brand)">Rolle i værdikæden</h2>
@@ -47,17 +57,21 @@
           <p style="margin-top:6px;color:var(--muted);font-size:13px"><strong style="color:var(--text)">Kunder:</strong> ${p.customers || '–'}</p>
         </section>
         <section class="panel">
-          <h2 style="font-size:16px;margin-bottom:8px">NDI-klassifikation (udkast)</h2>
-          <p><span class="tag accent">${daTheme(p.theme)}</span> <span class="badge">${daMat(p.maturity)}</span></p>
-          <p class="band">Udkast-klassifikation — ikke officiel NDI-rating. Segmenter viser eksponering, ikke en anbefaling.</p>
+          <h2 style="font-size:16px;margin-bottom:8px">NDI-tema (udkast)</h2>
+          <p><span class="tag accent">${daTheme(p.theme)}</span></p>
+          <p class="band">Segmenter viser eksponering, ikke en anbefaling. Kursafkast, P/S og P/E pr. aktie vises ikke i v1 (under verifikation – mulige split-/valutafejl).</p>
           <div class="metrics" style="margin-top:14px">
-            <div class="metric"><div class="label">P/S</div><strong>${p.maturity==='prerevenue'?'n/a':(p.ps==null?'–':String(p.ps).replace('.',','))}</strong><small>${p.maturity==='prerevenue'?'Præ-revenue · P/S ikke meningsfuld':''}</small></div>
-            <div class="metric"><div class="label">P/E</div><strong>${p.pe==null?'–':String(p.pe).replace('.',',')}</strong><small>${p.maturity==='value'?'Kun for value':'Skjult (ikke value)'}</small></div>
-            <div class="metric"><div class="label">YTD</div><strong>${fmtPct(p.ytd)}</strong><small>Pr. ${fmtDate(data.portfolio.asOf)}</small></div>
-            <div class="metric"><div class="label">1 år</div><strong>${fmtPct(p.y1)}</strong><small>Kursbevægelser · ikke råd</small></div>
+            <div class="metric"><div class="label">Vægt i fonden</div><strong>${(p.weight||0).toFixed(2).replace('.',',')} %</strong><small>Beholdning pr. ${fmtDate(fund.positionsAsOf||data.portfolio.asOf)} (forsinket)</small></div>
+            <div class="metric"><div class="label">ISIN</div><strong style="font-size:15px">${p.isin}</strong><small>${p.symbol||''}</small></div>
           </div>
           <p class="warn">${WARN_HIST}</p>
         </section>
+        ${priip ? `<section class="panel">
+          <h2 style="font-size:16px;margin-bottom:8px">Fondens risikoindikator ${gl('sri','risikoindikator (SRI)')}</h2>
+          <div class="sri" role="img" aria-label="Risikoklasse ${priip.risk_class} af ${priip.risk_scale_max}">${Array.from({length: priip.risk_scale_max}, (_, i) => `<span class="${i + 1 === priip.risk_class ? 'on' : ''}">${i + 1}</span>`).join('')}</div>
+          <p style="color:var(--muted);font-size:13px">${fund.short} har risikoklasse ${priip.risk_class} af ${priip.risk_scale_max} (${priip.risk_label}) og en anbefalet investeringshorisont på ${priip.recommended_holding_years} år, ifølge KID pr. ${fmtDate(priip.production_date)}. Indikatoren gælder <strong style="color:var(--text)">fonden som helhed</strong> – ikke ${p.name} alene.</p>
+          <p style="margin-top:8px;font-size:13px"><a href="${priip.url}">Læs KID (Fundmarket, ekstern PDF) <span class="ext-mark">↗</span></a></p>
+        </section>` : ''}
         <section class="panel">
           <h2 style="font-size:16px;margin-bottom:8px">Hold øje med</h2>
           <p style="color:var(--muted)">${p.watch || '–'}</p>
