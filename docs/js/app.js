@@ -465,6 +465,7 @@ function renderLivscyklus(fund) {
     <div class="life-scroll"><svg class="life-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="Livscykluskurve. ${summary}. ${unknown} ikke klassificeret.">
       <path class="life-curve" d="${path}"/>${nodes}
     </svg></div>
+    <ol class="life-legend" aria-hidden="true">${stages.map((st) => `<li><strong>${st.label}</strong><span>${byStage[st.id].length || '–'}</span></li>`).join('')}</ol>
     <p class="life-note">${classified
       ? `${classified} af ${fund.positions.length} selskaber er placeret (manuel klassifikation). ${unknown} mangler.`
       : `Ingen af fondens ${fund.positions.length} selskaber er klassificeret endnu, så kurven viser kun faserne. Prikker for selskaber kommer, når porteføljeholdet har klassificeret dem manuelt.`}

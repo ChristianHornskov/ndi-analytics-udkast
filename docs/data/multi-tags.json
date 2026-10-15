@@ -101,6 +101,21 @@
         "compute"
       ],
       "why": "GPU-cloud med tung power-profil — compute + energi-eksponering i NDI-linse."
+    },
+    "CA73044W3021": {
+      "name": "Poet Technologies Inc",
+      "tags": [
+        "chips",
+        "connect"
+      ],
+      "why": "Optik/photonics til chips — chips + optik/netværk."
+    },
+    "KYG393871085": {
+      "name": "GlobalFoundries",
+      "tags": [
+        "chips"
+      ],
+      "why": "Foundry — chips-produktion."
     }
   }
 }
