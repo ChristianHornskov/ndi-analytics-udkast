@@ -100,6 +100,19 @@ for (const width of [1280, 375]) {
   const og = await page.locator('meta[property="og:image"]').getAttribute('content');
   check('og:image absolut ' + W, /^https:\/\/.+og-card\.png$/.test(og || ''), og);
 
+  // Værdikæde: temaknap sætter aria-pressed (kun én trykket) og fremhæver led
+  await page.goto(BASE + '/vaerdikaede.html', { waitUntil: 'networkidle' });
+  const tBtns = page.locator('#theme-btns button');
+  await tBtns.first().waitFor();
+  const pressed = () => page.locator('#theme-btns button[aria-pressed="true"]');
+  check('værdikæde "Alle led" trykket ' + W, (await pressed().count()) === 1 && (await pressed().getAttribute('data-k')) === '');
+  const tBtn = page.locator('#theme-btns button[data-k="chips"]');
+  await tBtn.click();
+  check('værdikæde temaknap aria-pressed ' + W, (await tBtn.getAttribute('aria-pressed')) === 'true' && (await pressed().count()) === 1);
+  check('værdikæde led fremhævet ' + W, (await page.locator('.node.hit').count()) >= 1 && page.url().includes('tema=chips'), page.url());
+  await tBtns.first().click();
+  check('værdikæde nulstil ' + W, (await page.locator('.node.hit').count()) === 0 && (await tBtns.first().getAttribute('aria-pressed')) === 'true');
+
   // Ingen vandret scroll på 375 (bortset fra bevidste scroll-containere)
   if (width === 375) {
     for (const path of ['/', '/?view=fonden', '/?view=portefolje', '/?view=udforsk', '/laer/faq.html']) {
