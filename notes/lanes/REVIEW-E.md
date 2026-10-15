@@ -143,3 +143,7 @@ White Mesa Mill nævnes med uran, sjældne jordarter og vanadium. Oxider af sjæ
 ## USA Rare Earth · 2026-10-16 01:01 CEST
 
 Serra Verde-overskriften er 4. september 2026, efter beholdningen. Brødteksten gav 403, så beløb og prisgulve er udeladt. Texas er ikke en mine i drift. Frankrig er planlagt. AI-udkast uden gennemgangsdato. Kæde og arkiv har datoen. Chromium ved 375 og 1280 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Generac · 2026-10-16 01:03 CEST
+
+Bærbare generatorer, sol, batterilagring og ladere står i sætninger på siden. Menupunktet alene er ikke brugt. Most trusted og kundecitater er ikke kopieret. Stadig ikke et elselskab. AI-udkast uden gennemgangsdato. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.

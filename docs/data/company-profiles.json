@@ -1605,15 +1605,15 @@
   "US3687361044": {
    "name": "Generac",
    "theme": "physical",
-   "summary": "Fremstiller reservegeneratorer til hjem og virksomheder.",
+   "summary": "Fremstiller reservegeneratorer til hjem og virksomheder. Selskabet skriver også, at det har bærbare generatorer, sol og batterilagring og ladere til elbiler. Det er ikke et elselskab.",
    "watch": "Efterspørgsel efter reservestrøm og forsyning af motorer.",
    "source": "https://www.generac.com/",
-   "products": "Generatorer og tilhørende udstyr.",
+   "products": "Reservegeneratorer, bærbare generatorer, sol, batterilagring og ladere til elbiler.",
    "customers": "Husholdninger, installatører og virksomheder.",
    "role": "Lokal reservestrøm, ikke et elnet.",
    "narrative": [
-    "Generac fremstiller reservegeneratorer til hjem og virksomheder.",
-    "De laver strøm, når nettet svigter. Selskabet er ikke et elselskab og ikke en mine."
+    "Generac skriver, at en hjemmegenerator giver strøm under et udfald, og at selskabet har bærbare generatorer. Siden nævner også sol, batterilagring og ladere til elbiler.",
+    "Det er udstyr hos kunden. Selskabet er ikke et elselskab og ikke en mine."
    ],
    "narrativeSources": [
     {

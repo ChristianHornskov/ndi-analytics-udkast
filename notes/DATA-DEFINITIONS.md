@@ -113,6 +113,8 @@ Energy Fuels skriver, at det fremstiller oxider af sjældne jordarter på et anl
 
 USA Rare Earth skriver, at aktiviteterne spænder over USA, Storbritannien og Brasilien, og at et anlæg i Frankrig er planlagt. Selskabet vil udvinde og forarbejde i Texas og i Brasilien. Magneter nævnes i Oklahoma, og South Carolina står som planlagt. En overskrift dateret 4. september 2026 siger, at sammenlægningen med Serra Verde Group er gennemført. Datoen ligger efter beholdningen pr. 2026-06-01. Meddelelsens brødtekst gav 403. Beløb, prisgulve og en påstand om et forbud i 2027 er ikke taget med. Texas er ikke beskrevet som en mine i drift.
 
+Generac skriver, at en hjemmegenerator giver strøm under et udfald, og at selskabet har bærbare generatorer, sol, batterilagring og ladere til elbiler. Det er udstyr hos kunden, ikke et elselskab og ikke en mine. Ordene most trusted og kundecitater er ikke taget med.
+
 ## År til dato på periodesiden
 
 `ytdReturn` i `data.js` bruger sidste punkt i året før som udgangspunkt, ikke 1. januar. For PMINDI pr. 2026-10-14 er det 2025-12-31, ikke 2026-01-02. `periode.html` viser den samme dato i "Fra → til". Kalenderår bruger samme base (`calendarYearReturns`).

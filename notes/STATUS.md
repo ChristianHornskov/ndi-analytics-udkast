@@ -589,3 +589,13 @@ Forsiden skriver, at aktiviteterne spænder over USA, Storbritannien og Brasilie
 Tjekket i Chromium. Selskabssiden ved 375 px viser AI-udkast, Texas, Brasilien og Serra Verde. "tjekket mod kilden" er ikke med. Ingen beløb. Kæden og arkivet siger datoen. Ingen konsolfejl. Ingen vandret scroll ved 375 eller 1280 px.
 
 **Push:** `lane-E` @ `3511830` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:03 CEST. Generac skriver, at det også har bærbare generatorer, sol, batterier og ladere. Ikke færdig.**
+
+Forsiden skriver, at en hjemmegenerator giver strøm under et udfald, og at selskabet har bærbare generatorer, sol, batterilagring og ladere til elbiler. Det er udstyr hos kunden, ikke et elselskab og ikke en mine. Ord om at være mest betroet og citater fra kunder er ikke taget med. Ingen `reviewedAt`. Blurben under elproduktion siger det samme. Rollen i JSON er ikke vist på kædesiden.
+
+Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Bærbare generatorer og ladere står. Kæden viser sætningen. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `529103c` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
