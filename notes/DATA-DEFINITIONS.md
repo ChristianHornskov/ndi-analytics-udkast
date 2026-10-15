@@ -127,6 +127,8 @@ Critical Metals skrev 5. oktober 2026, at Grønlands regering har godkendt minep
 
 Karman skriver, at selskabet beskytter nyttelast og har udstyr til at skille den fra fartøjet, og at det laver aerodynamiske mellemtrin og raketmotorer. Affyringsudstyr på siden er dele, ikke en orbital opsendelse. Selskabet sender ikke selv satellitter op. NioCorp og Lynas svarede 16. oktober 2026 stadig med tomme sider.
 
+Sigma Lithium nævner Jequitinhonha-dalen i Brasilien. Selskabet skrev 17. april 2023, at produktionen af lithium var gået i gang. Datoen ligger før beholdningen pr. 2026-06-01. Det er råstof til batterier, ikke et batteriselskab. Ordet only og løftet om fem nulpunkter er ikke taget med.
+
 ## År til dato på periodesiden
 
 `ytdReturn` i `data.js` bruger sidste punkt i året før som udgangspunkt, ikke 1. januar. For PMINDI pr. 2026-10-14 er det 2025-12-31, ikke 2026-01-02. `periode.html` viser den samme dato i "Fra → til". Kalenderår bruger samme base (`calendarYearReturns`).

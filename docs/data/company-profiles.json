@@ -763,12 +763,12 @@
   "CA8265991023": {
    "name": "Sigma Lithium",
    "theme": "energy-resources",
-   "summary": "Arbejder med produktion af lithiumkoncentrat i Brasilien. Lithium bruges i batterier.",
+   "summary": "Producerer lithiumkoncentrat i Brasilien. Selskabet nævner Jequitinhonha-dalen. Det er råstof til batterier, ikke et batteriselskab.",
    "watch": "Drift af anlægget, lithiumpriser og kvaliteten af koncentratet.",
    "source": "https://sigmalithiumcorp.com/",
    "narrative": [
-    "Sigma Lithium producerer lithiumkoncentrat i Brasilien. Selskabet skriver, at det bruges i batterier.",
-    "Det er råstof til batterier, ikke et batteriselskab og ikke et kraftværk."
+    "Sigma Lithium producerer lithiumkoncentrat i Brasilien. Selskabet nævner Jequitinhonha-dalen, og det skrev 17. april 2023, at produktionen var gået i gang.",
+    "Datoen ligger før beholdningen pr. 1. juni 2026. Det er råstof til batterier, ikke et batteriselskab og ikke et kraftværk."
    ],
    "narrativeSources": [
     {

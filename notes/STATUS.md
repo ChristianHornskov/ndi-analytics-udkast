@@ -659,3 +659,13 @@ Forsiden skriver, at selskabet beskytter nyttelast, har udstyr til at skille den
 Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Nyttelast og raketmotorer står. Kæden og arkivet viser sætningen. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `edf8e7e` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:12 CEST. Sigma Lithium nævner Jequitinhonha-dalen, og produktionen startede i 2023. Ikke færdig.**
+
+Forsiden nævner Jequitinhonha-dalen. Selskabet skrev 17. april 2023, at produktionen af lithium var gået i gang. Datoen ligger før beholdningen pr. 1. juni 2026. Det er råstof til batterier, ikke et batteriselskab og ikke et kraftværk. Ordet only og de fem nul-løfter er ikke taget med. Ingen `reviewedAt`. Rollen i JSON nævner dalen. Den vises ikke på kædesiden.
+
+Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Jequitinhonha står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `ee131c0` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
