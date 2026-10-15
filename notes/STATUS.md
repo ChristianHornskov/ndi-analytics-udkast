@@ -1,22 +1,25 @@
 # STATUS – NDI Analytics overnight build
 
-**2026-10-15 20:29 CEST — Cycle 2: multi-tag, vægt-over-tid, recovery, mobile, temaer hub**
+**2026-10-15 20:31 CEST — Cycle 3b: livscyklus, CSV, sparklines (vægt), FAQ, sidekort**
 
 ## Live
-https://christianhornskov.github.io/ndi-analytics-udkast/
+https://christianhornskov.github.io/ndi-analytics-udkast/  
+notes/STATUS.md → **404** (korrekt). tema.html live 200.
 
-## Compliance (locked)
-- Notes ONLY `/notes`. `docs/notes/` stub only.
-- Holdings ≤ 2026-06-01. No daily movers. AKK no returns. PMINDI no 1m/3m. No Nasdaq. No fake stock figures.
-- Context: documented udbytte only.
+## Compliance locked
+Notes kun `/notes`. Holdings ≤2026-06-01. AKK no returns. PMINDI no 1m/3m. No Nasdaq. No fake stock figures. Context = udbytte only.
 
-## Cycle 1+2 shipped
-- Theme deep + temaer hub, lær (5), drawdown+recovery, periode, sammenlign, invester, nyhedsarkiv, selskaber A–Z
-- Company: related + weight-over-time bars from company-months.json
-- Multi-tag overlay (`multi-tags.json`): Tesla physical+energy, Nvidia compute+chips, Broadcom, TSMC, Meta, SoftBank, Palantir
-- Entré 6 doors, glossary expanded, embed CTA, 1m/3m hidden, mobile CSS polish, værdikæde→tema links
-- Playwright smoke green
+## Shipped tonight (cycles 1–3)
+- Entré 6 døre + sidekort
+- Tema hub + dybsider, lær (5+FAQ), drawdown+recovery, periode, sammenlign, invester, nyhedsarkiv, selskaber A–Z
+- Multi-tag (Tesla m.fl.), vægt-over-tid, weight-sparklines (ikke kurs), CSV-eksport, tastatur Esc/pile, livscyklus-strip
+- Glossary, embed CTA, mobile polish, værdikæde→tema
+- Playwright smoke 40/40 local
 
-## Next
-- Livscyklus-strip polish, CSV export stub, sparklines, keyboard-first filters, richer FAQ, UX-review at 22/00/02/04/06
+## Next (keep going)
+- UX-review.md @ 22:00
+- Richer period narratives (uden opfundede facts)
+- More multi-tags where justified
+- Keyboard APG polish, focus traps on dialogs
+- Claude/Grok cross-review still running
 - Never report done

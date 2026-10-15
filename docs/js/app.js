@@ -18,6 +18,25 @@ const state = {
 };
 
 let DATA = null;
+let MONTHS = null;
+
+function weightSpark(isin, fundId) {
+  if (!MONTHS?.funds?.[fundId]) return '';
+  const series = MONTHS.funds[fundId]
+    .map((row) => row.weights?.[isin])
+    .filter((w) => w != null);
+  if (series.length < 2) return '';
+  const max = Math.max(...series, 0.01);
+  const min = Math.min(...series);
+  const w = 56, h = 18;
+  const pts = series.map((v, i) => {
+    const x = (i / (series.length - 1)) * w;
+    const y = h - ((v - min) / (max - min || 1)) * (h - 2) - 1;
+    return `${x.toFixed(1)},${y.toFixed(1)}`;
+  }).join(' ');
+  return `<svg class="spark" width="${w}" height="${h}" aria-hidden="true"><polyline fill="none" stroke="var(--cyan)" stroke-width="1.4" points="${pts}"/></svg>`;
+}
+
 
 function $(sel, root = document) { return root.querySelector(sel); }
 function $all(sel, root = document) { return [...root.querySelectorAll(sel)]; }
@@ -262,7 +281,8 @@ function renderFonden(root) {
       <div class="table-wrap"><table class="data" style="min-width:0"><thead><tr><th>År</th><th>Afkast</th><th>Periode</th><th></th></tr></thead><tbody>${yearTableDeep}</tbody></table></div>
       <p style="margin-top:12px"><a class="outline-btn small" href="drawdown.html?fund=${state.fund}">Åbn drawdown-side →</a>
       <a class="outline-btn small" href="periode.html?fund=${state.fund}&year=YTD" style="margin-left:8px">YTD dyb side →</a>
-      <a class="outline-btn small" href="sammenlign.html" style="margin-left:8px">Vs PMINDIAKK →</a></p>
+      <a class="outline-btn small" href="sammenlign.html" style="margin-left:8px">Vs PMINDIAKK →</a>
+      <button type="button" class="outline-btn small" style="margin-left:8px" onclick="window.print()">Print / PDF</button></p>
     </section>
     <section class="panel">
       <h2 style="font-size:18px;margin-bottom:6px">Månedlige afkast</h2>
@@ -408,7 +428,7 @@ function positionsTable(list, fund) {
   return `<div class="table-wrap"><table class="data"><thead><tr>
     ${th('name','Navn')}${th('weight','Vægt %')}<th>Tema</th>
   </tr></thead><tbody>${list.map((p) => `<tr>
-    <td><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}">${p.name}</a><br><small style="color:var(--muted)">${p.isin}</small></td>
+    <td><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}">${p.name}</a> ${weightSpark(p.isin, fund.id)}<br><small style="color:var(--muted)">${p.isin}</small></td>
     <td>${(p.weight ?? 0).toFixed(2).replace('.', ',')}</td>
     <td>${tagsFor(p, DATA.multiTags).map((t) => `<a class="tag" href="tema.html?slug=${encodeURIComponent(t)}&fund=${fund.id}">${daTheme(t)}</a>`).join(' ')}</td>
   </tr>`).join('')}</tbody></table></div>
@@ -440,7 +460,7 @@ function renderUdforsk(root) {
     <!-- Modenhedsfiltre skjult indtil manuel klassifikation -->
     <div class="chips" id="chips"></div>
     <p style="font-size:12px;color:var(--muted)">${list.length} resultater · udkast-klassifikation</p>
-    ${list.length ? positionsTable(list, fund) : '<p class="band">Ingen selskaber matcher – fjern et filter.</p>'}
+    ${list.length ? positionsTable(list, fund) : `<section class="panel"><p style="color:var(--muted)">Ingen selskaber matcher filtrene.</p><p style="margin-top:10px"><button type="button" class="outline-btn small" id="reset-filters">Nulstil filtre</button> <a class="outline-btn small" href="temaer.html">Se alle temaer</a></p></section>`}
     ${warnHtml()}`;
 
   const chips = $('#chips', root);
@@ -567,6 +587,7 @@ async function main() {
   if ((new URL(location.href).searchParams.get('tags') || '') !== state.tags.join(',')) writeUrl(true);
   try {
     DATA = await loadAll();
+    MONTHS = await fetch('data/company-months.json').then((r) => (r.ok ? r.json() : null)).catch(() => null);
   } catch (err) {
     $('#app').innerHTML = `<p class="warn">Data kunne ikke hentes (${err.message}). Genindlæs siden.</p>`;
     return;
