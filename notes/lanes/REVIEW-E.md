@@ -53,3 +53,7 @@ Sigma: `sigmalithium.com` viste den 16. oktober 2026 et foretagende om metallisk
 ## Blurbs · 2026-10-16 ~00:35 CEST
 
 SMR, råstoffer og opsendelse er rettet i JSON, så teksten på siden skelner komponenter, miner i drift og raketter, der ikke er fløjet. Taseko hedder som i beholdningen. Chromium viste teksterne. AI-compute er stadig den gamle topvægtsliste med Coreweave. Bevidst.
+
+## Nyhedsarkiv · 2026-10-16 ~00:40 CEST
+
+De to konceptkort siger det samme som kæden: gas er brændsel, SMR er ikke drift, råstoffer er både projekter og miner, Neutron og Eclipse er ikke fløjet, rum og compute er ikke et datacenter. Linket til værdikædesiden virker. Ingen konsolfejl. Ingen vandret scroll ved 375 px.

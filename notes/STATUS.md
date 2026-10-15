@@ -347,3 +347,13 @@ SMR-teksten siger, at ingen af navnene er et anlæg i kommerciel drift. BWX Tech
 Tjekket i Chromium på energi- og rumfanen. Teksterne står i kæden. Ingen konsolfejl. Ingen vandret scroll ved 375 px på rumfanen.
 
 **Push:** `lane-E` @ `b1070f2` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 ~00:40 CEST. Konceptkortene i nyhedsarkivet følger kædens grænser. Ikke færdig.**
+
+`nyhedsarkiv.html`. To konceptkort, ikke ugebreve. Energikortet siger, at gas står som brændsel, at små reaktorer ikke er beskrevet som værker i drift, og at nogle råstoffer er projekter, mens andre er miner. Rumkortet siger, at Neutron og Eclipse ikke er fløjet i beskrivelserne, og at ingen af eksemplerne under rum og compute er et datacenter i kredsløb. SpaceX er stadig ikke i beholdningen. Musk-citatet er stadig kun citat.
+
+Tjekket i Chromium. Teksterne står på siden. Linket til værdikædesiden åbner `vaerdikaeder.html`. Ingen konsolfejl. Ingen vandret scroll ved 375 px.
+
+**Push:** `lane-E` @ `ea822fe` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
