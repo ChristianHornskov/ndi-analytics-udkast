@@ -159,7 +159,9 @@ button:disabled{cursor:not-allowed;opacity:.5}
 
 /* Segmenterede kontroller: Jespers aktive tilstand (aria-selected/pressed + .active) */
 .control{white-space:nowrap;transition:background .18s,border-color .18s}
-.control.active,.control[aria-selected=true],.control[aria-pressed=true]{background:var(--selected);border-color:#a7cbd0;color:#fff}
+.control.active,.control[aria-selected=true],.control[aria-pressed=true],.control[aria-checked=true]{background:var(--selected);border-color:#a7cbd0;color:#fff}
+/* Valgt tilstand må ikke kun bæres af farve (WCAG 1.4.1) */
+.control.active,.control[aria-checked=true],.control[aria-pressed=true]{font-weight:600;box-shadow:inset 0 -2px 0 var(--brand)}
 .outline-btn{transition:background .18s,border-color .18s}
 
 /* Compliance-komponenter: Jespers warn-hist-look på eksisterende .warn/.band */
