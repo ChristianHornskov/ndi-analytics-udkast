@@ -131,3 +131,7 @@ Cerro Verde, El Abra og Grasberg står på siden. Lone Star er kun en gammel web
 ## Southern Copper · 2026-10-16 00:55 CEST
 
 Forsiden nævner kobber, molybdæn, sølv og zink og Grupo México. Minenavne stod ikke på siden og er udeladt. Advarslen om falske profiler er ikke kopieret. AI-udkast uden gennemgangsdato. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Ivanhoe Electric · 2026-10-16 00:58 CEST
+
+Santa Cruz og Tintic er projekter. Studiet er 23. september 2026, efter beholdningen. High-grade, low-cost, NPV og EXIM-beløb er ikke kopieret. 2029-prognosen er ikke skrevet ind. AI-udkast uden gennemgangsdato. Kæde og arkiv siger det samme. Chromium ved 375 og 1280 px. Ingen konsolfejl. Ingen vandret scroll.

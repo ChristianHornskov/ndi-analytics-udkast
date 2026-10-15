@@ -943,20 +943,24 @@
   "US46578C1080": {
    "name": "Ivanhoe Electric",
    "theme": "energy-resources",
-   "summary": "Udvikler et kobberprojekt i Arizona. Denne tekst beskriver ikke en mine i drift.",
+   "summary": "Udvikler projekter i USA. Selskabet skriver, at Santa Cruz er et kobberprojekt i Arizona, og at Tintic er et kobber- og guldprojekt i Utah. Teksten beskriver ikke en mine i drift.",
    "watch": "Undersøgelser, tilladelser og om minen bliver bygget.",
    "source": "https://www.ivanhoeelectric.com/",
-   "products": "Et kobberprojekt.",
+   "products": "Kobberprojekt i Arizona og kobber- og guldprojekt i Utah.",
    "customers": "Ingen driftkunder i denne beskrivelse.",
    "role": "Råstofprojekt til elnet og elektronik.",
    "narrative": [
-    "Ivanhoe Electric udvikler kobberprojektet Santa Cruz i Arizona.",
-    "Denne tekst beskriver ikke en mine i drift."
+    "Ivanhoe Electric skriver, at Santa Cruz er et kobberprojekt i Arizona, og at Tintic er et kobber- og guldprojekt i Utah. Selskabet bruger målesystemet Typhoon til efterforskning.",
+    "Selskabet udgav 23. september 2026 et studie af Santa Cruz. Datoen ligger efter beholdningen pr. 1. juni 2026. Studiet er ikke en mine i drift."
    ],
    "narrativeSources": [
     {
      "label": "Selskabets side",
      "url": "https://www.ivanhoeelectric.com/"
+    },
+    {
+     "label": "Studie af Santa Cruz",
+     "url": "https://ivanhoeelectric.com/news/2026-preliminary-feasibility-study-for-the-santa-cruz-copper-project-in-arizona-confirms-high-grade-low-cost-project-with/"
     }
    ]
   },

@@ -107,6 +107,8 @@ Freeports side nævner Cerro Verde og El Abra under Sydamerika og Grasberg under
 
 Southern Copper skriver, at de vigtigste produkter er kobber, molybdæn, sølv og zink, og at selskabet er en del af Grupo México. Peru og Mexico stod i profilen i forvejen. Toquepala, Cuajone, Buenavista og Ilo stod ikke på den hentede forside og er ikke tilføjet. En advarsel om falske profiler er ikke kopieret.
 
+Ivanhoe Electric skriver, at Santa Cruz er et kobberprojekt i Arizona, og at Tintic er et kobber- og guldprojekt i Utah. Typhoon er selskabets målesystem til efterforskning. Studiet af Santa Cruz er dateret 23. september 2026 og ligger efter beholdningen pr. 2026-06-01. Det er ikke en mine i drift. Nutidsværdi, afkastkrav, kobberpris og ordene high-grade og low-cost er ikke taget med. Hog Heaven er ikke beskrevet her, fordi projektsiden ikke er læst.
+
 ## År til dato på periodesiden
 
 `ytdReturn` i `data.js` bruger sidste punkt i året før som udgangspunkt, ikke 1. januar. For PMINDI pr. 2026-10-14 er det 2025-12-31, ikke 2026-01-02. `periode.html` viser den samme dato i "Fra → til". Kalenderår bruger samme base (`calendarYearReturns`).

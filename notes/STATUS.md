@@ -559,3 +559,13 @@ Forsiden skriver "Productos Principales: Cobre, Molibdeno, Plata y Zinc" og at s
 Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Molybdæn og Grupo México står i det første afsnit. "Ikke et kraftværk" står efter "Læs hele forklaringen". Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `4e60350` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 00:58 CEST. Ivanhoe Electric skriver, at Tintic er et projekt i Utah, og at studiet af Santa Cruz er efter beholdningen. Ikke færdig.**
+
+Forsiden nævner Santa Cruz som kobberprojekt i Arizona og Tintic som kobber- og guldprojekt i Utah. Selskabet bruger målesystemet Typhoon til efterforskning. Nyheden om studiet er dateret 23. september 2026, efter beholdningen pr. 1. juni 2026. Studiet er ikke en mine i drift. Ord om høj lødighed, lave omkostninger og nutidsværdi er ikke taget med. Ingen `reviewedAt`. Rollen i JSON nævner begge projekter. Den vises ikke på kædesiden. Blurben og arkivkortet siger det samme.
+
+Tjekket i Chromium. Selskabssiden ved 375 px viser AI-udkast, Tintic og Typhoon. "tjekket mod kilden" er ikke med. Datoen står efter "Læs hele forklaringen". Kæden viser sætningen under Kritiske råstoffer. Arkivet har et nyt kort afsnit. Ingen konsolfejl. Ingen vandret scroll ved 375 eller 1280 px.
+
+**Push:** `lane-E` @ `9a62de0` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
