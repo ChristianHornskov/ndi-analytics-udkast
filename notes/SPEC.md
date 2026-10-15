@@ -163,11 +163,11 @@
 | `docs/js/chart.js` | Chart rendering |
 | `docs/js/data.js` | Loader for portfolio.json |
 | `docs/data/*.json` | Snapshot |
-| `docs/notes/SPEC.md` | denne fil |
-| `docs/notes/STATUS.md` | Leo-log |
-| `docs/notes/IDEAS.md` | ekstra |
-| `docs/notes/VIDENSBOT-krav.md` | 82 krav |
-| `docs/notes/UX-krav.md` | UX MUST/SHOULD |
+| `notes/SPEC.md` (ikke Pages) | denne fil |
+| `notes/STATUS.md` | Leo-log |
+| `notes/IDEAS.md` | ekstra |
+| `notes/VIDENSBOT-krav.md` | 82 krav |
+| `notes/UX-krav.md` | UX MUST/SHOULD |
 
 ---
 

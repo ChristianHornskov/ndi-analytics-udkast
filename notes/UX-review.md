@@ -28,3 +28,4 @@ Pass checklist for 22:00:
 - [ ] Selskab SoftBank: profile + KID
 - [ ] Notes 404
 - [ ] No console errors on smoke
+- 2026-10-15 20:36 CEST (Claude, Cycle 3): smoke 40/40 + cycle3 58/58 grønne @1280+375, 0 konsolfejl. 375: entré-døre læsbare, livscyklus fuldt synlig uden scroll, FAQ-træf læsbare, ingen sidescroll på entré/fonden/portefølje/udforsk/faq. Tastatur: pile+Home/End bevarer fokus; Escape lukker dialog og returnerer fokus. Compliance: data.json fjernet fra Pages, company-months ≤ 2026-06-01, ingen daglige movers-løfte. Åbent: tabeller på 375 kræver stadig vandret scroll (bevidst, med hint).
