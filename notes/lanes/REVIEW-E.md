@@ -61,3 +61,7 @@ De to konceptkort siger det samme som kæden: gas er brændsel, SMR er ikke drif
 ## Indledning og klik · 2026-10-16 ~00:45 CEST
 
 `why` på energi og rum siger grænsen, før man åbner et led. Merlin i energikædens udeladte liste er luftfart, ikke et rum-led. Klik til NextEra og Rocket Lab lander på AI-udkast uden gennemgangsdato. ÅTD er stadig 31. dec. 2025 og +4,0 %. `forslag` matcher beholdningen på alle navne i de to kæder.
+
+## Periode · 2026-10-16 ~00:50 CEST
+
+2023 delår, 2024, 2025, 2026 og år til dato er tjekket. 2026 og år til dato er samme interval og samme +4,0 %. Siden siger det. 2026 er ikke mærket delår, fordi `partial` kun er første år. Datoen viser, at året ikke er slut. Ingen konsolfejl. Ingen vandret scroll ved 375 px.

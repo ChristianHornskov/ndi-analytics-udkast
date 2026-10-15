@@ -78,3 +78,5 @@ Indledningen på energikæden siger det samme: gas på elproduktion er brændsel
 ## År til dato på periodesiden
 
 `ytdReturn` i `data.js` bruger sidste punkt i året før som udgangspunkt, ikke 1. januar. For PMINDI pr. 2026-10-14 er det 2025-12-31, ikke 2026-01-02. `periode.html` viser den samme dato i "Fra → til". Kalenderår bruger samme base (`calendarYearReturns`).
+
+Kalenderåret 2026 og år til dato ender på samme punkt, 14. okt. 2026, og har samme udgangspunkt. Siden siger derfor, at de to tal er ens, indtil serien får et punkt i 2027. `partial` i `calendarYearReturns` er kun første år fra første NAV. 2026 er ikke mærket delår. Datoen viser, at året ikke er slut.

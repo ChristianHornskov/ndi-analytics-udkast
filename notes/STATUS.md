@@ -369,3 +369,13 @@ Tjekket i Chromium ved 375 px. Indledningerne står. Klik fra elproduktion til N
 `forslag` på energi- og rum-leddene matcher `themeStatus` i beholdningen. Ingen afvigelser.
 
 **Push:** `lane-E` @ `9127b17` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 ~00:50 CEST. Periodesiden siger, at 2026 og år til dato er ens. Ikke færdig.**
+
+`periode.html`. Kalenderåret 2026 og år til dato bruger begge 31. dec. 2025 som udgangspunkt og 14. okt. 2026 som sidste punkt. Begge viser +4,0 %. Siden siger det i kontekstafsnittet. 2023 er stadig delår, 22. sep. 2023 til 31. dec. 2023. 2024 er 31. dec. 2023 til 31. dec. 2024. 2025 er 31. dec. 2024 til 31. dec. 2025. Siden første NAV er 22. sep. 2023 til 14. okt. 2026 og +104,8 %.
+
+Tjekket i Chromium ved 1280 og 375. Sætningen står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `392c712` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
