@@ -35,7 +35,7 @@
  <p><a href="om-data.html">Om data &amp; begreber</a> · <a href="laer/index.html">Lær</a></p>
  </footer>
  <script type="module">
- import { loadAll, fundById, fmtDate, daTheme, WARN_HIST, loadFundMeta, loadProfiles, kidFooterHtml, tagsFor } from './js/data.js';
+ import { loadAll, fundById, fmtDate, daTheme, daMat, MATURITY_LABELS, WARN_HIST, loadFundMeta, loadProfiles, kidFooterHtml, tagsFor } from './js/data.js';
  const u = new URL(location.href);
  const isin = u.searchParams.get('isin');
  let fundId = u.searchParams.get('fund') || 'pmindi';
@@ -96,6 +96,13 @@
  const sameTheme = fund.positions.filter((x) => x.theme === p.theme && x.isin !== p.isin).sort((a, b) => (b.weight || 0) - (a.weight || 0));
  const priip = meta?.funds?.[fundId]?.priip;
  const temaHref = `tema.html?slug=${encodeURIComponent(p.theme)}&fund=${fundId}`;
+ // Modenhed kommer kun fra portfolio.json (manuel klassifikation). Linse-feltet "Livscyklus" overskrives herfra,
+ // så siden aldrig siger to forskellige ting. Tom/ukendt = "Ikke klassificeret" - vi gætter ikke.
+ const matSet = p.maturity in MATURITY_LABELS;
+ const matValue = matSet ? daMat(p.maturity) : 'Ikke klassificeret';
+ const matHint = matSet ? 'Manuel klassifikation i udkastet. Pædagogisk fase, ikke en rating.' : 'NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.';
+ const lensMetrics = (uniquePack?.byIsin?.[p.isin]?.metrics || []).map((m) =>
+ m.label === 'Livscyklus' ? { ...m, value: matValue, hint: matHint } : m);
  document.title = `${p.name} · NDI Analytics`;
 
  main.innerHTML = `
@@ -140,12 +147,13 @@
  <div class="metrics" style="margin-top:14px">
  <div class="metric"><div class="label">Vægt i ${esc(fund.short)}</div><strong>${w(p.weight)} %</strong><small>Beholdning pr. ${posAsOf} (forsinket)</small></div>
  <div class="metric"><div class="label">ISIN</div><strong style="font-size:15px">${esc(p.isin)}</strong><small>${esc(p.symbol || '')}</small></div>
+ <div class="metric"><div class="label">Modenhed</div><strong style="font-size:15px">${esc(matValue)}</strong><small>${esc(matHint)} <a href="laer/livscyklus.html">Om livscyklus →</a></small></div>
  </div>
  </section>
 
- ${uniquePack?.byIsin?.[p.isin]?.metrics?.length ? `<section class="panel">
+ ${lensMetrics.length ? `<section class="panel">
  <h2 class="panel-h">NDI-linsen (udkast)</h2>
- <div class="kpi-grid">${uniquePack.byIsin[p.isin].metrics.map(m => `<div class="kpi"><span class="label">${esc(m.label)}${m.ai ? ` ${AI_BADGE}` : ''}</span><strong style="font-size:16px">${esc(m.value)}</strong><span class="sub">${esc(m.hint||'')}${m.href ? ` <a href="${esc(lensHref(m.href))}">${lensLinkLabel(m.href)} →</a>` : ''}</span></div>`).join('')}</div>
+ <div class="kpi-grid">${lensMetrics.map(m => `<div class="kpi"><span class="label">${esc(m.label)}${m.ai ? ` ${AI_BADGE}` : ''}</span><strong style="font-size:16px">${esc(m.value)}</strong><span class="sub">${esc(m.hint||'')}${m.href ? ` <a href="${esc(lensHref(m.href))}">${lensLinkLabel(m.href)} →</a>` : ''}</span></div>`).join('')}</div>
  <p class="band">Kvalitativ linse: tema, rolle og forhold at holde øje med. Ingen kurser, afkast eller nøgletal. Felter med AI-udkast er sammenfattet fra selskabsprofilen. Eksponering, ikke anbefaling. <a href="ndi-perspektiv.html">Alle selskaber med NDI-linse →</a></p>
  </section>` : ''}
  ${(() => {

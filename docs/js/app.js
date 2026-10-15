@@ -26,6 +26,22 @@ let MONTHS = null;
 const SORTS = { weight: 'vægt', name: 'navn', theme: 'tema' };
 const STATUSES = { forslag: 'kun temaforslag', fast: 'uden temaforslag' };
 
+// Modenhed (livscyklus) vises kun, når porteføljeholdet faktisk har klassificeret selskaber manuelt.
+// Data er tom i dag ('ikke-klassificeret' for alle), så filter og chips findes ikke - vi gætter ikke.
+function maturityCounts(fund) {
+  const n = Object.fromEntries(Object.keys(MATURITY_LABELS).map((m) => [m, 0]));
+  for (const p of fund.positions || []) if (p.maturity in n) n[p.maturity]++;
+  return n;
+}
+// Gamle/delte links med ?mat= må ikke give en tavs tom liste: behold kun faser, som findes i data.
+function sanitizeMaturity() {
+  const known = new Set(DATA.portfolio.funds.flatMap((f) =>
+    Object.entries(maturityCounts(f)).filter(([, n]) => n).map(([m]) => m)));
+  const before = state.maturity.join(',');
+  state.maturity = state.maturity.filter((m) => known.has(m));
+  return before !== state.maturity.join(',');
+}
+
 function weightSpark(isin, fundId) {
   // Kun fondens vægt pr. kvartalssnapshot (≤ cutoff) - aldrig aktiekurs. Søjler fra nul pr. række,
   // så det ikke ligner en kurslinje (UX 22:00 MUST 3).
@@ -221,10 +237,11 @@ function markHscroll(root) {
 function renderEntre(root) {
   // Samme klasse som temaer.html?fund= (hub'en tæller fra den valgte klasses beholdning), så tallet matcher siden bag døren
   const prop = themeProposals(fundById(DATA.portfolio, state.fund));
+  const nMat = Object.values(maturityCounts(fundById(DATA.portfolio, state.fund))).reduce((x, y) => x + y, 0);
   root.innerHTML = `
     <p class="eyebrow">NDI ANALYTICS · UDKAST</p>
     <h1>Gå på opdagelse i NewDeal Invest</h1>
-    <p class="lede">Et sted hvor du kan se fondens udvikling, forstå porteføljen gennem NDI's egne temaer og modenhedsgrader - og finde selskaberne uden de klassiske 11 sektorkasser. Dette er et klikbart udkast (ikke den live hjemmeside).</p>
+    <p class="lede">Et sted hvor du kan se fondens udvikling, forstå porteføljen gennem NDI's egne temaer - og finde selskaberne uden de klassiske 11 sektorkasser. Dette er et klikbart udkast (ikke den live hjemmeside).</p>
     <p class="updated-stamp"><strong>Senest opdateret</strong>
       <span>Afkast-snapshot: <time datetime="${DATA.portfolio.performanceAsOf || DATA.portfolio.asOf}">${fmtDate(DATA.portfolio.performanceAsOf || DATA.portfolio.asOf)}</time></span>
       <span>Beholdning (forsinket snapshot): <time datetime="${DATA.portfolio.asOf}">${fmtDate(DATA.portfolio.asOf)}</time></span></p>
@@ -240,7 +257,7 @@ function renderEntre(root) {
       <a class="door" href="?view=portefolje&fund=${state.fund}" data-nav="portefolje">
         <span class="door-q">2 · Hvad ejer fonden?</span>
         <strong>Porteføljen</strong>
-        <span>Forsinket snapshot fordelt på NDI-temaer og modenhed.</span>
+        <span>Forsinket snapshot fordelt på NDI-temaer.${nMat ? ` Modenhed: ${nMat} selskaber klassificeret (udkast).` : ' Modenhed er ikke klassificeret endnu.'}</span>
         <span class="go">Se beholdninger →</span>
       </a>
       <a class="door" href="?view=udforsk&fund=${state.fund}" data-nav="udforsk">
@@ -642,15 +659,16 @@ function emptyScreener(fund) {
   const active = [
     state.q && `søgning “${esc(state.q)}”`,
     state.tags.length && `tema ${state.tags.map(daTheme).join(' / ')}`,
+    state.maturity.length && `modenhed ${state.maturity.map(daMat).join(' / ')}`,
     state.status && STATUSES[state.status],
   ].filter(Boolean).join(' og ');
   // Hjælp: hvis søgningen alene giver hits, men kombinationen ikke gør, så sig det.
-  const qOnly = state.q && (state.tags.length || state.status)
+  const qOnly = state.q && (state.tags.length || state.status || state.maturity.length)
     ? fund.positions.filter((p) => [p.name, p.symbol, p.isin, daTheme(p.theme)].some((x) => (x || '').toLowerCase().includes(state.q.toLowerCase()))).length
     : 0;
   return `<div class="empty-state" role="status">
     <strong>Ingen af fondens ${fund.positions.length} selskaber matcher ${active || 'filtrene'}</strong>
-    ${qOnly ? `<span>Søgningen alene giver ${qOnly} ${qOnly === 1 ? 'selskab' : 'selskaber'} - prøv at fjerne tema- eller statusfilteret.</span>` : ''}
+    ${qOnly ? `<span>Søgningen alene giver ${qOnly} ${qOnly === 1 ? 'selskab' : 'selskaber'} - prøv at fjerne tema-, status- eller modenhedsfilteret.</span>` : ''}
     <span>Level 1 viser kun selskaber, fonden ejede pr. ${fmtDate(fund.positionsAsOf || DATA.portfolio.asOf)}. Et selskab, der ikke er med, er ikke et signal - se <a href="laer/faq-mangler-aktie.html">Hvorfor mangler aktie X?</a></span>
     <div class="row">
       ${state.q ? '<button type="button" class="outline-btn small" data-clear-q>Ryd søgning</button>' : ''}
@@ -671,6 +689,21 @@ function statusFilterHtml(fund) {
       ${btn('fast', 'Uden temaforslag', fund.positions.length - nForslag)}
       ${btn('forslag', 'Kun temaforslag', nForslag)}
       <small style="color:var(--muted);align-self:center"><span class="badge badge-draft">forslag</span> = tema foreslået i udkastet, afventer NDI-gennemgang.</small>
+    </div>`;
+}
+
+// Vises først, når mindst ét selskab i klassen har manuel modenhed. Indtil da: én ærlig linje, ingen knapper.
+function maturityFilterHtml(fund) {
+  const n = maturityCounts(fund);
+  const total = Object.values(n).reduce((a, b) => a + b, 0);
+  if (!total) {
+    return `<p class="mat-pending" style="font-size:12px;color:var(--muted);margin:6px 0">Modenhed (præ-revenue → value): <strong style="color:var(--text)">ikke klassificeret endnu</strong> for nogen af fondens ${fund.positions.length} selskaber, så der er intet modenhedsfilter. Vi gætter ikke. <a href="laer/livscyklus.html">Om livscyklus →</a></p>`;
+  }
+  const btns = Object.entries(MATURITY_LABELS).filter(([m]) => n[m]).map(([m, label]) =>
+    `<button type="button" class="control ${state.maturity.includes(m) ? 'active' : ''}" data-mat="${m}" aria-pressed="${state.maturity.includes(m)}">${label} <small>(${n[m]})</small></button>`).join('');
+  return `<div class="filters" role="group" aria-label="Filtrér på modenhed">
+      ${btns}
+      <small style="color:var(--muted);align-self:center">Modenhed: ${total} af ${fund.positions.length} klassificeret manuelt (udkast, ikke en rating). ${fund.positions.length - total} uden.</small>
     </div>`;
 }
 
@@ -697,7 +730,7 @@ function renderUdforsk(root) {
     </div>
     <p style="font-size:12px;color:var(--muted);margin:8px 0">Tema-dybsider: ${themes.map((t) => `<a href="tema.html?slug=${encodeURIComponent(t)}&fund=${state.fund}">${daTheme(t)}</a>`).join(' · ')} · <a href="selskaber.html?fund=${state.fund}">A-Z liste</a></p>
     ${statusFilterHtml(fund)}
-    <!-- Modenhedsfiltre skjult indtil manuel klassifikation -->
+    ${maturityFilterHtml(fund)}
     <div class="chips" id="chips"></div>
     <p style="font-size:12px;color:var(--muted)" id="filter-status">${list.length} ${list.length === 1 ? 'resultat' : 'resultater'} · udkast-klassifikation</p>
     ${list.length ? positionsTable(list, fund) : emptyScreener(fund)}
@@ -776,7 +809,7 @@ function onClick(e) {
     const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
     const a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
-    const filt = [...state.tags, state.status, state.q && 'soeg'].filter(Boolean).join('-');
+    const filt = [...state.tags, ...state.maturity, state.status, state.q && 'soeg'].filter(Boolean).join('-');
     a.download = `ndi-${state.fund}-${asOf}${filt ? '-' + filt.replace(/[^a-z0-9-]/gi, '') : ''}.csv`;
     document.body.append(a);
     a.click();
@@ -902,11 +935,12 @@ async function main() {
     $('#app').innerHTML = `<p class="warn">Data kunne ikke hentes (${err.message}). Genindlæs siden.</p>`;
     return;
   }
+  if (sanitizeMaturity()) writeUrl(true);
   fillKidFooter();
   document.addEventListener('click', onClick);
   document.addEventListener('input', onInput);
   wireKeyboard();
-  window.addEventListener('popstate', () => { readUrl(); paint(); });
+  window.addEventListener('popstate', () => { readUrl(); if (sanitizeMaturity()) writeUrl(true); paint(); });
   window.addEventListener('resize', () => markHscroll($('#app')));
   // [data-open] håndteres af onClick-delegering (tidligere dobbelt listener → to dialoger)
   paint();
