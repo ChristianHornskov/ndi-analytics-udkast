@@ -25,6 +25,10 @@
   .kv .k{display:block;font-size:11px;color:var(--muted);margin-bottom:3px}
   .kv .v{font-size:14px;color:var(--text);line-height:1.4}
   .kv .is-diff .v{color:#f5ee9e}
+  .ens-strip{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:baseline;margin:0 0 10px;padding:10px 14px;border:1px solid var(--line);border-radius:12px;background:#0b171d;color:var(--muted);font-size:13px}
+  .ens-strip .k{color:var(--brand);font-size:11px;font-weight:700;letter-spacing:1.2px}
+  .ens-strip b{color:var(--text);font-weight:600;margin-right:4px}
+  .ens-strip a{margin-left:auto;white-space:nowrap}
   .glance-board{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:0 0 8px}
   .glance-board.is-three{grid-template-columns:repeat(3,minmax(0,1fr))}
   main .lede{margin-bottom:12px}
@@ -48,8 +52,8 @@
   .glance-kr{display:block;margin:6px 0 2px;color:#f5ee9e;font-size:20px;font-weight:600;letter-spacing:-.4px;font-variant-numeric:tabular-nums;line-height:1.1}
   .glance-tile p{color:var(--muted);font-size:12px;line-height:1.4;margin-top:6px;overflow-wrap:anywhere}
   .kv .is-diff{grid-column:1 / -1}
-  .dd-dates{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
-  .dd-dates article{background:#0b171d;border:1px solid #2a424a;border-radius:12px;padding:10px 12px;min-width:0}
+  .dd-dates{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px}
+  .dd-dates article{background:#0b171d;border:1px solid #2a424a;border-radius:12px;padding:8px 12px;min-width:0}
   .dd-dates article.is-odd{border-style:dashed;border-color:#f5ee9e66}
   .dd-dates .k{display:block;font-size:11px;color:var(--muted);margin-bottom:4px}
   .dd-dates strong{display:block;font-size:15px;font-weight:600;letter-spacing:-.2px}
@@ -193,6 +197,9 @@
  ].join('');
  const txTile = tile('PORTEFØLJETRANSAKTION', dTx === 0 ? pct(A.costs.portfolioTransaction) : pair(pct(A.costs.portfolioTransaction), pct(B.costs.portfolioTransaction)), dTx === 0, dTx === 0 ? 'Begge klasser.' : `PMINDI · PMINDIAKK · ${String(Math.abs(dTx)).replace('.', ',')} procentpoint. ${krGapTxt} på 100.000 kr. Ikke et ÅOP.`);
  const glanceBoard = dTx === 0 ? sameTiles + txTile : sameTiles;
+ const ensStrip = onlyFour
+ ? `<p class="ens-strip" id="blik"><span class="k">Ens i begge</span><span><b>SRI</b> ${A.sri} af ${A.sriMax}</span><span><b>Horisont</b> ${A.horizonYears} år</span><span><b>Øvrige løbende</b> ${pct(A.costs.otherOngoing)}</span><a href="omkostninger.html#forskel">Se søjlerne →</a></p>`
+ : '';
  const ppTxt = String(Math.abs(dTx)).replace('.', ',') + ' procentpoint';
  const poster = dTx === 0 ? '' : `<section class="fact-delta" id="forskel-kort">
  <p class="kicker">DEN ENE FORSKEL · PORTEFØLJETRANSAKTION</p>
@@ -263,9 +270,9 @@
  <p class="lede">Stamdata for de to andelsklasser, hentet fra Fundmarket og newdealinvest.dk. Siden er generel information. Den er ikke rådgivning, og den er ikke foreningens officielle faktaark.</p>
  <p class="band">${esc(facts.asOfNote)}</p>
  ${poster}
- <div class="glance-board${dTx === 0 ? '' : ' is-three'}" id="blik">${glanceBoard}</div>
+ ${ensStrip || `<div class="glance-board${dTx === 0 ? '' : ' is-three'}" id="blik">${glanceBoard}</div>`}
  <p class="sr-only">${glance}</p>
- <p class="band glance">${onlyFour ? 'Ikke et ÅOP.' : glanceVisible} <a href="omkostninger.html${dTx !== 0 ? '#forskel' : ''}" style="white-space:nowrap">Se søjlerne →</a></p>
+ ${onlyFour ? '' : `<p class="band glance">${glanceVisible} <a href="omkostninger.html${dTx !== 0 ? '#forskel' : ''}" style="white-space:nowrap">Se søjlerne →</a></p>`}
  ${riskBlock}
  <div class="fact-grid" id="klasser">
  ${klasse(A, dTx !== 0)}

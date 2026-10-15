@@ -617,5 +617,5 @@
       "source": "X (udvalgt offentligt opslag — ikke NDI’s holdning)"
     }
   ],
-  "callCountNote": "Hentet via x MCP get_users_by_usernames + get_users_posts (4 konti). Limits: 30/min, 1000/day. Lane X 2026-10-15: ét søgekald efter SoftBank hos konti fra mads_following (BullTheoryio). Lane X 2026-10-16: ingen nye kald. Andet poleringspas samme dag: stadig ingen nye kald. Tredje poleringspas samme dag: stadig ingen nye kald. Fjerde poleringspas samme dag: stadig ingen nye kald. Femte poleringspas samme dag: stadig ingen nye kald. 21 opslag uændret. Browseren kalder ikke X."
+  "callCountNote": "Hentet via x MCP get_users_by_usernames + get_users_posts (4 konti). Limits: 30/min, 1000/day. Lane X 2026-10-15: ét søgekald efter SoftBank hos konti fra mads_following (BullTheoryio). Lane X 2026-10-16: ingen nye kald. Andet poleringspas samme dag: stadig ingen nye kald. Tredje poleringspas samme dag: stadig ingen nye kald. Fjerde poleringspas samme dag: stadig ingen nye kald. Femte poleringspas samme dag: stadig ingen nye kald. Sjette poleringspas samme dag: stadig ingen nye kald. 21 opslag uændret. Browseren kalder ikke X."
 }

@@ -43,9 +43,6 @@
  const posts = [...pack.posts].sort((a, b) => (b.created_at || '').localeCompare(a.created_at || ''));
  const house = (pack.accounts || []).map((a) => '@' + a.username).join(' · ');
  const curatedN = posts.filter((p) => p.curatedFrom === 'mads_following').length;
- const nSoft = posts.filter((p) => postMatchesQuery(p, 'SoftBank')).length;
- const nNv = posts.filter((p) => postMatchesQuery(p, 'NVDA')).length;
- const nChips = posts.filter((p) => postInFilter(p, 'chips')).length;
  const softPost = posts.find((p) => postMatchesQuery(p, 'SoftBank'));
  const nvPost = posts.find((p) => postMatchesQuery(p, 'NVDA'));
  const chipsPosts = posts.filter((p) => postInFilter(p, 'chips'));
@@ -57,9 +54,31 @@
  const sp = cut.lastIndexOf(' ');
  return (sp > 90 ? cut.slice(0, sp) : cut).trim() + '…';
  };
- const door = (spot, href, jump, v, kicker, title, n, post, byKind, kind) => `<a class="x-door is-${kind}" href="${href}" data-jump="${jump}" data-v="${esc(v)}" data-spot="${spot}">
+ const splitOf = (list, kindOf) => {
+ let direct = 0;
+ let theme = 0;
+ for (const p of list) {
+ const k = kindOf(p);
+ if (k === 'direct') direct += 1;
+ else if (k === 'theme') theme += 1;
+ }
+ return { direct, theme };
+ };
+ const scoreOf = (split, total) => {
+ const cell = (n, label, theme) => `<span><b${theme ? ' class="is-theme"' : ''}>${n}</b><i>${label}</i></span>`;
+ if (split.direct && split.theme) return `<span class="x-door-score">${cell(split.direct, 'direkte')}${cell(split.theme, 'tema', true)}</span>`;
+ if (split.direct) return `<span class="x-door-score">${cell(split.direct, 'direkte')}</span>`;
+ if (split.theme) return `<span class="x-door-score">${cell(split.theme, 'tema', true)}</span>`;
+ return `<span class="x-door-score">${cell(total, 'opslag')}</span>`;
+ };
+ const softList = posts.filter((p) => postMatchesQuery(p, 'SoftBank'));
+ const nvList = posts.filter((p) => postMatchesQuery(p, 'NVDA'));
+ const softScore = scoreOf(splitOf(softList, (p) => feedHitKind(p, { q: 'SoftBank' })), softList.length);
+ const nvScore = scoreOf(splitOf(nvList, (p) => feedHitKind(p, { q: 'NVDA' })), nvList.length);
+ const chipsScore = scoreOf(splitOf(chipsPosts, (p) => feedHitKind(p, { f: 'chips' })), chipsPosts.length);
+ const door = (spot, href, jump, v, kicker, title, score, post, byKind, kind) => `<a class="x-door is-${kind}" href="${href}" data-jump="${jump}" data-v="${esc(v)}" data-spot="${spot}">
  <span class="k">${kicker}</span>
- <span class="x-door-top"><strong>${title}</strong><span class="x-door-n">${n} opslag</span></span>
+ <span class="x-door-top"><strong>${title}</strong>${score}</span>
  ${post ? `<span class="x-door-q">${highlightHtml(excerpt(post), v === 'chips' ? 'chips' : v)}</span><span class="x-door-by">${byKind} · @${esc(post.username)} · ${esc(fmtXDate(post.created_at))}</span>` : '<span class="x-door-q">Ingen opslag i snapshotet.</span>'}
  </a>`;
 
@@ -95,15 +114,15 @@
  <p class="band x-snap">Snapshot ${esc(fmtXDate(pack.snapshotAt))}. NDI-konti: ${esc(house)}.${curatedN ? ` ${curatedN} opslag er fra konti, som Mads følger.` : ''}</p>
 
  <div class="x-spot" id="spor" aria-label="Genveje til demo">
- ${door('soft', 'ndi-paa-x.html?q=SoftBank', 'q', 'SoftBank', 'SELSKAB · DIREKTE', 'SoftBank', nSoft, softPost, 'Seneste', 'direct')}
- ${door('nv', 'ndi-paa-x.html?q=NVDA', 'q', 'NVDA', 'SELSKAB · DIREKTE', 'Nvidia', nNv, nvPost, 'Seneste', 'direct')}
- ${door('chips', 'ndi-paa-x.html?f=chips', 'f', 'chips', 'TEMA', 'Chips / AI', nChips, chipsPost, 'Eksempel', 'theme')}
+ ${door('soft', 'ndi-paa-x.html?q=SoftBank', 'q', 'SoftBank', 'SELSKAB · DIREKTE', 'SoftBank', softScore, softPost, 'Seneste', 'direct')}
+ ${door('nv', 'ndi-paa-x.html?q=NVDA', 'q', 'NVDA', 'SELSKAB · DIREKTE', 'Nvidia', nvScore, nvPost, 'Seneste', 'direct')}
+ ${door('chips', 'ndi-paa-x.html?f=chips', 'f', 'chips', 'TEMA', 'Chips / AI', chipsScore, chipsPost, 'Eksempel', 'theme')}
  </div>
  <p class="link-row x-jumps" style="margin-top:-2px">
- <a class="outline-btn small" href="selskab.html?isin=JP3436100006&fund=pmindi">SoftBank på selskabssiden →</a>
- <a class="outline-btn small" href="selskab.html?isin=US67066G1040&fund=pmindi">Nvidia på selskabssiden →</a>
- <a class="outline-btn small" href="tema.html?slug=chips&fund=pmindi">Tema: chips →</a>
- <a class="outline-btn small" href="tema.html?slug=platforms&fund=pmindi">Tema: platforme →</a>
+ <a class="outline-btn small" href="selskab.html?isin=JP3436100006&fund=pmindi#hvad-siger-x">SoftBank på selskabssiden →</a>
+ <a class="outline-btn small" href="selskab.html?isin=US67066G1040&fund=pmindi#hvad-siger-x">Nvidia på selskabssiden →</a>
+ <a class="outline-btn small" href="tema.html?slug=chips&fund=pmindi#hvad-siger-x">Tema: chips →</a>
+ <a class="outline-btn small" href="tema.html?slug=platforms&fund=pmindi#hvad-siger-x">Tema: platforme →</a>
  </p>
 
  <div class="x-tools" id="x-tools">

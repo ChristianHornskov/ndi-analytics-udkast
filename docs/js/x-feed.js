@@ -100,6 +100,11 @@ article.x-card.is-quote .x-foot{margin-top:10px}
 .x-door-top{display:flex;justify-content:space-between;gap:8px;align-items:baseline}
 .x-door-top strong{font-size:22px;letter-spacing:-.4px}
 .x-door-n{color:var(--muted);font-size:12px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.x-door-score{display:flex;gap:10px;margin-left:auto;flex:none;align-items:flex-end}
+.x-door-score span{display:flex;flex-direction:column;align-items:flex-end;min-width:0}
+.x-door-score b{font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-size:34px;font-weight:500;line-height:.8;letter-spacing:-1px;color:#f5ee9e;font-variant-numeric:tabular-nums}
+.x-door-score i{font-style:normal;margin-top:4px;font-size:9px;letter-spacing:.7px;text-transform:uppercase;color:var(--faint)}
+.x-door-score b.is-theme{color:var(--muted);font-size:28px}
 .x-door-q{color:var(--text);font-size:14px;line-height:1.45;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;min-height:calc(1.45em * 3)}
 .x-door-q::before{content:"„";color:#f5ee9e;font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-size:22px;line-height:0;margin-right:5px}
 .x-door-by{margin-top:auto;color:var(--faint);font-size:12px}
@@ -128,6 +133,7 @@ article.x-card.is-quote .x-foot{margin-top:10px}
 .x-empty p{color:var(--muted);line-height:1.5}
 .x-empty .k{color:var(--text);font-weight:600;font-size:16px;margin-bottom:6px}
 .x-suggest{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:14px}
+section.panel.x-says{background:transparent;border:0;border-top:1px solid #24383f;border-radius:0;padding:22px 0 4px;scroll-margin-top:76px}
 .x-says-h{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:8px}
 .x-says-h .panel-h{margin:0}
 .x-says-n{color:var(--muted);font-size:12px;font-variant-numeric:tabular-nums;white-space:nowrap}
@@ -187,7 +193,7 @@ body.x-focused .x-label{margin:0 0 8px}
   .x-door-q{min-height:0}
   body.x-focused .x-spot{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));overflow:visible;gap:8px}
   body.x-focused .x-door{flex:none;min-width:0;padding:8px 8px 7px}
-  body.x-focused .x-door .k,body.x-focused .x-door-n{display:none}
+  body.x-focused .x-door .k,body.x-focused .x-door-n,body.x-focused .x-door-score{display:none}
   body.x-focused .x-door-top strong{font-size:13px;letter-spacing:-.2px}
   body.x-focused .x-tools{position:static;background:transparent;border-bottom:0;backdrop-filter:none}
   body.x-focused #x-grid{scroll-margin-top:0}
@@ -207,6 +213,10 @@ body.x-focused .x-label{margin:0 0 8px}
 @media(prefers-reduced-motion:reduce){
   .x-door{transition:none}
 }
+body.x-focused .x-door-score{gap:8px;align-items:baseline}
+body.x-focused .x-door-score span{flex-direction:row;gap:4px;align-items:baseline}
+body.x-focused .x-door-score b,.body.x-focused .x-door-score b.is-theme{font-family:inherit;font-size:13px;font-weight:600;letter-spacing:0;line-height:1;color:var(--muted)}
+body.x-focused .x-door-score i{margin-top:0;font-size:11px;letter-spacing:0;text-transform:none}
 @media(min-width:900px){
   body.x-focused .x-spot{margin-bottom:4px}
   body.x-focused .x-door{padding:8px 12px 7px}
@@ -236,6 +246,28 @@ body.x-focused .x-label{margin:0 0 8px}
 }
 
 if (typeof document !== 'undefined') ensureXStyles();
+
+/** Company and theme pages insert the panel after fetch. Honour #hvad-siger-x. */
+function followPanelHash() {
+  if (typeof location === 'undefined' || location.hash !== '#hvad-siger-x') return;
+  const go = () => {
+    const el = document.getElementById('hvad-siger-x');
+    if (!el) return false;
+    requestAnimationFrame(() => el.scrollIntoView({ block: 'start' }));
+    return true;
+  };
+  const watch = () => {
+    if (go()) return;
+    const root = document.body;
+    if (!root) return;
+    const obs = new MutationObserver(() => { if (go()) obs.disconnect(); });
+    obs.observe(root, { childList: true, subtree: true });
+    setTimeout(() => obs.disconnect(), 10000);
+  };
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', watch);
+  else watch();
+}
+followPanelHash();
 
 export async function loadXPosts() {
   ensureXStyles();
@@ -597,7 +629,7 @@ export function xSaysPanel(pack, { tickers = [], themes = [], limit = 4, title =
   const score = xScoreHtml(scoreItems);
   if (!shown) {
     if (!showEmpty) return '';
-    return `<section class="panel x-says">
+    return `<section class="panel x-says" id="hvad-siger-x">
   <div class="x-says-h"><h2 class="panel-h">${esc(title)}</h2>${xScoreHtml([{ n: 0, label: 'direkte', mod: 'is-direct' }, { n: 0, label: 'tema', mod: 'is-theme' }])}</div>
   <p class="band">${esc(X_LABEL)}. Snapshot ${snap}.</p>
   <div class="x-empty">
@@ -646,7 +678,7 @@ export function xSaysPanel(pack, { tickers = [], themes = [], limit = 4, title =
     : !view.direct.length
       ? `<p class="x-miss">Ingen opslag i udsnittet nævner selskabet eller tickeren. ${restTheme.length ? 'Kortene er tema.' : 'Kortet er tema.'}</p>`
       : '';
-  return `<section class="panel x-says">
+  return `<section class="panel x-says" id="hvad-siger-x">
   <div class="x-says-h"><h2 class="panel-h">${esc(title)}</h2>${score}</div>
   <p class="sr-only">${esc(nLabel)}</p>
   <p class="band">${esc(X_LABEL)}. Snapshot ${snap}.</p>
