@@ -335,3 +335,11 @@ En tynd gul streg markerer 2. jun. 2026, med ordet "top". Det er toppen, den åb
 På sammenlign stod "fra 5. dec. 2026" delt, så "dec. 2026)" hang alene på 320. Datoen står nu på sin egen linje under "Vises efter 12 måneder". Ingen afkastprocent på AKK-kortet. Ét panel. Ingen sidescroll ved 320, 375 og 1280. Ingen konsolfejl.
 
 `lane-D` er klar til merge. Ikke main. Ikke færdig.
+
+## Fra Grok lane-D
+
+**2026-10-16 00:31 CEST. Sluttallet på embed kan læses på mobil. Ikke færdig.**
+
+Tallet ved grafens ende var 9 px. Det er nu 12 px. "+104,8 %" står inden for svg'en ved 375 og 320, uden at ramme aksetallene. Højre margen på mobil er gjort lidt bredere, så tallet ikke står helt ude i kanten. Hele perioden er stadig +104,8 %. PMINDIAKK har stadig tom svg. Ingen sidescroll, ingen konsolfejl.
+
+`lane-D` er klar til merge. Ikke main. Ikke færdig.
