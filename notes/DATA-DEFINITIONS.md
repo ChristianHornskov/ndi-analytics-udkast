@@ -93,6 +93,8 @@ Opsendelses-blurb siger, at Intuitive Machines leverer til Månen og ikke er en 
 
 Taseko skrev 9. oktober 2026, at Florence Copper er gået i kommerciel produktion. Datoen på siden stod som 10.09.2026, og en anden post samme liste er 10.13.2026, så formatet er måned.dag. Meddelelsen er efter beholdningen pr. 2026-06-01. Yellowhead var i en godkendelsesproces i august 2026. Aley står som projekt. New Prosperity står ikke som mine. Gibraltar er en mine. Kurser og formuleringen om den første nye amerikanske kobberkilde er ikke taget med. Vistra-tallene 2.600 MW, 2.176 MW og 433 MW har nu kilden fra 9. januar 2026. 433 MW er øget effekt, ikke en ny reaktor. Ordet largest er ikke taget med.
 
+SMR-leddet siger, at NuScale skriver, at et program sammen med TVA kan blive op til 6 GW, og at det er udvikling, ikke et værk i drift. Kilden er programsiden, som taler om at udvikle og idriftsætte kapacitet, ikke om et værk, der allerede kører. Ordene historic, largest og proven er ikke taget med. De øvrige SMR-navne er stadig ikke beskrevet som kommerciel drift.
+
 ## År til dato på periodesiden
 
 `ytdReturn` i `data.js` bruger sidste punkt i året før som udgangspunkt, ikke 1. januar. For PMINDI pr. 2026-10-14 er det 2025-12-31, ikke 2026-01-02. `periode.html` viser den samme dato i "Fra → til". Kalenderår bruger samme base (`calendarYearReturns`).

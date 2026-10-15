@@ -1525,12 +1525,16 @@
    "role": "Udvikling af SMR.",
    "narrative": [
     "NuScale udvikler en lille reaktor, som selskabet kalder NuScale Power Module. Selskabet skriver, at det amerikanske nukleare tilsyn, NRC, har godkendt designet, og angiver en effekt på 77 MW pr. modul.",
-    "Godkendelsen er ikke et værk i kommerciel drift. Denne tekst siger ikke, at et anlæg leverer strøm."
+    "Godkendelsen er ikke et værk i kommerciel drift. Denne tekst siger ikke, at et anlæg leverer strøm. Selskabet omtaler et program sammen med TVA på op til 6 GW. Det er udvikling, ikke et værk i drift."
    ],
    "narrativeSources": [
     {
      "label": "NuScale Power Module",
      "url": "https://www.nuscalepower.com/products/nuscale-power-module"
+    },
+    {
+     "label": "Program med TVA",
+     "url": "https://interactive.nuscalepower.com/tva-program"
     }
    ]
   },

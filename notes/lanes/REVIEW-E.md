@@ -103,3 +103,7 @@ Opsendelse siger, at Intuitive Machines ikke er en billedsatellit. Rum og comput
 ## Florence Copper · 2026-10-16 00:45 CEST
 
 Taseko skriver 9. oktober 2026, at Florence Copper er i kommerciel produktion. Det er efter beholdningen. Yellowhead, Aley og New Prosperity er ikke miner i drift. Kurser og "first new US copper source" er ikke kopieret. Vistras 433 MW er stadig øget effekt, med kilde fra 9. januar 2026. AI-udkast uden gennemgangsdato. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## NuScale 6 GW · 2026-10-16 00:46 CEST
+
+Forsiden siger "to Power" et program på op til 6 GW. Teksten kalder det udvikling, ikke et værk i drift. "Largest" og "proven" er ikke kopieret. Oklo og Nano Nuclear beskriver stadig projekter. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.

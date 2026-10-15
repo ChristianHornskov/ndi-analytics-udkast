@@ -483,3 +483,15 @@ Vistra har fået kilden til aftalen med Meta af 9. januar 2026. Tallene er de sa
 Tjekket i Chromium ved 375 px på råstof-leddet og på Taseko-siden. AI-udkast er med. "tjekket mod kilden" er ikke med. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `7b42c4a` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 00:46 CEST. NuScales 6 GW er et program, ikke et værk i drift. Ikke færdig.**
+
+På energikæden siger SMR-leddet, at NuScale skriver, at et program sammen med TVA kan blive op til 6 GW, og at det er udvikling, ikke et værk i drift. Ingen af navnene er stadig beskrevet som kommerciel drift. Formuleringerne historic, largest og proven er ikke kopieret. Profilen har kilden til programsiden. Ingen `reviewedAt`.
+
+Oklo, Nano Nuclear og Terrestrial er tjekket samme nat. Forsiderne beskriver projekter og udvikling, ikke et værk i drift. Rolls-Royce-adressen for SMR landede på koncernsiden, så der er ingen ny sætning derfra.
+
+Tjekket i Chromium ved 375 px på SMR-leddet og på NuScale-siden. AI-udkast er med. "tjekket mod kilden" er ikke med. 77 MW står stadig. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `10f22ce` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
