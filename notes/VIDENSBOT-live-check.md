@@ -186,3 +186,8 @@ Sider: ideer, kort, om-data, invester, risici, ndi-perspektiv, laer/*.
 - Kun tænkte tal (fond på 100 mio. kr., 1 mio. andele). Ingen af fondens NAV-niveauer, ingen afkast, intet handelsprog. Datoer (første NAV 22. sep 2023 / 5. dec 2025) som andre steder på siden.
 - «Udstedelse og indløsning» beskrevet generelt: «sker til den indre værdi … Vilkårene står i prospektet». **Bed Vidensbot tjekke:** har fonden emissionstillæg/indløsningsfradrag, der bør nævnes som ord (ikke satser)? Siden nævner bevidst ikke tillæg, kun kurtage og spread.
 - «Indre værdi» i ordlisten har nu to betydninger (fond / investeringskoncern). SoftBank-betydningen er uændret i ordlyd.
+
+## 01:55 CEST 16/10 lane-C · laer/laes-grafen.html
+- Afsnit 5 «Sådan læser du grafen» (andelsklasser, udbytte, CAGR, maksimalt fald, hvorfor korte perioder misleder): **dækket** af ny side.
+- Compliancepunkt 1 (hele perioder, ingen gunstig startdag) og 7 (udbytte/andelskurs): forklaret med tænkt kurve, mærket «ikke fondens tal og ingen prognose». Advarsel + «Generel information» nederst.
+- Ingen handelsord, ingen fondstal på siden (kun tænkte tal), ingen semikolon/tankestreg i synlig tekst.

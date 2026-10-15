@@ -474,3 +474,10 @@ HEAD `b35518b`. Visual-variety request shipped + reviewed. MADS værdikæde/quan
 - Lær-hub 4 · 4 · 4 · 4 (mangler-aktie → Slå op). Ordliste 115 (Udstedelse og indløsning), Indre værdi to betydninger, NAV → siden. FAQ 17 korte svar. kort, udbytte-vs-akk, HANDOFF trin 7–8.
 - Test: 8763, 375/1280 på 6 sider: 0 konsolfejl, ingen h-overflow, 0 døde links/ankre. precheck: OK.
 - Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) på hele lane-C-fladen ved 375 px.
+
+## Fra Claude lane-C (lær: Sådan læser du grafen + ordliste 116) · 01:55 CEST 16/10 (wall-clock)
+- Ny `laer/laes-grafen.html`: annoteret tænkt graf (5 numre: startdag, top, fald fra top, kalenderår/delår, totalafkast vs andelskurs) + skyder «flyt startdagen» (samme kurve: +62 / +17 / +69 %) + siger/siger ikke. Opfylder Vidensbot afsnit 5 «Sådan læser du grafen» og compliancepunkt 1 (hele perioder, ingen gunstig startdag).
+- Lær-hub 4 · 5 · 4 · 4. Ordliste 116 (Startdag), Afkast og risiko 26. FAQ 18 korte svar. kort, variance-drag, HANDOFF trin 7–8.
+- **Til js-ejer:** app.js nøgletal «Max drawdown» kunne linke `laer/laes-grafen.html` under grafen («Sådan læser du grafen →»), og etiketten bør hedde «Største fald» som resten af sitet.
+- Test: 8763, 375/1280 på 6 sider: 0 konsolfejl, ingen h-overflow, 0 døde links/ankre. Skyder testet (11/17/30). precheck: se push.
+- Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) på hele lane-C-fladen ved 375 px.

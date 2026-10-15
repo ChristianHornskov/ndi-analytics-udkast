@@ -310,3 +310,9 @@ Ingen nye.
 - Ordliste 115: ny «Udstedelse og indløsning» (Fonden 22). «Indre værdi» skrevet om til to betydninger. NAV linker til siden. FAQ: nyt kort svar «Hvad er en andel værd (NAV)?» (nu 17). kort.html, udbytte-vs-akk linker.
 - 375 px: kæden lodret med operatorer imellem, skydere under hinanden, bjælken under navn og tal. Prikket udgangslinje var usynlig på den gule bjælke. Rettet (mørk streg).
 - Test: 8763, 375/1280 på 6 sider: 0 konsolfejl, ingen h-overflow, 0 døde links/ankre. Skyder-regnestykket tjekket: +10 %, 50 mio., 5 kr. → 110 → 105 kr., 1,45 mio. andele.
+
+## 01:55 CEST lane-C checkpoint (Claude) · lær «Sådan læser du grafen» + ordliste 116
+- Ny side ved 375 px: graf (SVG) skalerer ned, fem numre læses som liste under; skyder fylder bredden; siger/siger-ikke stables. Ingen h-overflow. Akse-etiketter (År 1–3) er små på 375, men læsbare.
+- Mini-grafen i skyderen: resten af kurven vises dæmpet, den valgte del gul, så man ser hvor man «kom ind».
+- Lær-hub: «Afkast og udsving» har 5 døre; den sidste (P/E) spænder hele rækken på desktop. Overvej at flytte P/E til «Tankegangen», hvis gruppen skal være 4.
+- Til js-ejer: Fonden-siden mangler et link til forklaringen tæt på grafen.

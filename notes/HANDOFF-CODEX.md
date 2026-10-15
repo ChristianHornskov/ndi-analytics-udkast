@@ -84,8 +84,8 @@ Kort version. Ét trin = én side, ét greb, én sætning. Detaljer og tal står
 | 4 | `drawdown.html` | Middel og median for episoder + underwater | «Fald er normalt. Her kan man se hvor dybe og hvor lange.» | 0:30 |
 | 5 | Portefølje / Udforsk | Tesla med to tags, SoftBank, forslag-mærker | «Én aktie, flere temaer. Ingen sektorkasser.» | 0:45 |
 | 6 | `ideer.html` | Rul gennem de fjorten former, stop ved «Tre ure på samme side». Spørger nogen til temaer: «Lag på lag» (`#h-stk`). Spørger nogen til spredning: «Hvor mange selskaber er halvdelen?» (`#h-kv`, 76 af 345) | «Hver slags tal har sin egen dato, og forsinkelsen er med vilje.» / «Hvert lag bygger på laget under.» / «Bred, men ikke flad.» | 1:00 |
-| 7 | `risici.html` → `om-data.html` | Klasse 5 af 7, KID-risici som links → ordlisten (115 begreber, 4 grupper) | «Hvert fagord kan slås op.» | 0:45 |
-| 8 | `laer/index.html` | «Ny her? Start med de tre», så én side: P/E *eller* Risikoklasse (skyder). Spørger nogen «hvad er kursen?»: Indre værdi (tre skydere) | «P/E straffer investeringen, derfor viser vi fase og eksponering først.» | 0:45 |
+| 7 | `risici.html` → `om-data.html` | Klasse 5 af 7, KID-risici som links → ordlisten (116 begreber, 4 grupper) | «Hvert fagord kan slås op.» | 0:45 |
+| 8 | `laer/index.html` | «Ny her? Start med de tre», så én side: P/E *eller* Risikoklasse (skyder). Spørger nogen «hvad er kursen?»: Indre værdi (tre skydere). Spørger nogen «hvorfor ingen 3 måneder?»: Sådan læser du grafen (flyt startdagen: +17 % fra toppen, +69 % fra bunden, samme kurve) | «P/E straffer investeringen, derfor viser vi fase og eksponering først.» | 0:45 |
 | 9 | `kort.html` | Sidekortet | «Hvis nogen spørger, hvor alt er.» | 0:10 |
 
 Tjek før demo (2 min): seneste NAV-dato på Fonden, at `#g-…`-links på risici.html folder ordlisten ud på mobil, at FAQ-søgning på «dæmning» skifter til alle typer.
@@ -115,3 +115,8 @@ Undgå at sige: «køb», «sælg», «kursmål», «billig», «god aktie», «
 Sidekort (kort.html) er nu grupperet i 6 sektioner med alle lær-sider — brug den som «hvor er alt» hvis nogen spørger.
 
 Åbne spørgsmål: market cap/produkt/modenhed (ingen data), forslag-gennemgang, privat repo vs Pages, Fundmarket på ÅTD/100k.
+
+### Tilføjet 16/10 ~01:55 (lane-C): Sådan læser du grafen
+- Ny `laer/laes-grafen.html` (Vidensbot afsnit 5: «Sådan læser du grafen»). Annoteret tænkt graf med fem gule numre (startdag/første NAV, top, rødt fald fra top, kalenderår/delår, blå totalafkast vs stiplet andelskurs på ex-dato) + skyder «flyt startdagen» på samme kurve (fra start +62 %, fra toppen +17 %, fra bunden +69 %; under 12 måneder regnes ikke om til pr. år) + «hvad tallene siger / ikke siger».
+- Lær-hub «Afkast og udsving» har nu 5 døre (ny først, P/E spænder hele rækken). Ordliste 116 (Startdag), Totalafkast-posten nævner den blå streg. FAQ 18 korte svar (ny: «Hvorfor viser I ikke afkast for de seneste 3 måneder?»). kort.html + variance-drag linker.
+- Sig: «En kort periode kan vise næsten hvad som helst. Derfor kun siden start, år til dato og hele år.»
