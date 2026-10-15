@@ -327,3 +327,11 @@ Teksten "Dybeste fald" står over 2025-søjlen. De fire søjler ender på samme 
 En tynd gul streg markerer 2. jun. 2026, med ordet "top". Det er toppen, den åbne episode startede fra. Stregen rammer ikke "nu −23 %" og ikke årstallene, ved 1280 og 375. Gul prik på −36 % bliver stående. Ingen konsolfejl.
 
 `lane-D` er klar til merge. Ikke main. Ikke færdig.
+
+## Fra Grok lane-D
+
+**2026-10-16 00:29 CEST. AKK-datoen brækker ikke længere. Ikke færdig.**
+
+På sammenlign stod "fra 5. dec. 2026" delt, så "dec. 2026)" hang alene på 320. Datoen står nu på sin egen linje under "Vises efter 12 måneder". Ingen afkastprocent på AKK-kortet. Ét panel. Ingen sidescroll ved 320, 375 og 1280. Ingen konsolfejl.
+
+`lane-D` er klar til merge. Ikke main. Ikke færdig.

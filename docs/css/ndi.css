@@ -577,6 +577,7 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
 .cmp-card dt{color:var(--muted)}
 .cmp-card dd{margin:0;text-align:right;color:var(--text)}
 .cmp-card dd small{color:var(--faint)}
+.cmp-card .cmp-from{display:block}
 .tl{list-style:none;padding:0;margin:4px 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;position:relative}
 .tl li{position:relative;padding-top:18px;font-size:13px;color:var(--muted);line-height:1.45}
 .tl li::before{content:"";position:absolute;top:4px;left:0;width:10px;height:10px;border-radius:50%;background:var(--brand)}
