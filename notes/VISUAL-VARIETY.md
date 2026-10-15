@@ -59,7 +59,7 @@ Siden må ikke være fire ens kort plus to mørke kasser. Formerne skifter ned a
 | Hero-tal | Det ene dybeste fald, med datoer og genopretning | ✅ `.hero-stat` |
 | Rolige tal | Middel og median som to linjer, ikke kort | ✅ `.quiet-stats` |
 | Gul annotation | Hvor serien ligger under vand i dag | ✅ `.anno` |
-| Underwater | Tid. Gul prik = dybeste bund. Ring = seneste dag. Tynd gul streg = toppen i den åbne episode. Slider vælger en dag, cyan prik på kurven | ✅ `.figure` + `.uw-scrub` |
+| Underwater | Tid. Gul prik = dybeste bund. Ring = seneste dag. Tynd gul streg = toppen i den åbne episode. Søjler mellem kurve og årstal = episoder dybere end 10 %. Ordet tilbage = dagen det dybeste fald nåede toppen igen. Slider vælger en dag, cyan prik på kurven | ✅ `.figure` + `.uw-scrub` + `.uw-span` |
 | Prikfordeling | Hvorfor middel ligger dybere end median. Navnene står under aksen | ✅ `.figure.plain` |
 | Episodeliste | De fire fald dybere end 10 %, med varighed. Klik hopper til bunden på kurven | ✅ `.ep-ledger` |
 | Årssøjler | Kalenderafkast som small multiples, link til periode. Året med det dybeste fald har gul kant. Søjlerne deler bundlinje | ✅ `.year-rail` |
@@ -116,3 +116,20 @@ Widgetten er ét panel. Call-to-action står udenfor, med link til største fald
 ## lane-A · 2026-10-16 ~01:45 CEST
 - Energi-strømvej: hver station har nu en stiplet "↻ Det ændrer sig"-linje i cyan under pres-mærket, så kortet læses i tre lag (hvad, pres, skift). Kun sidens egen CSS (`.ef-s`).
 - Kvante-ordbog med ⚛ i cyan som ord-ikon (rum bruger ◇, energi ⚡, robotik ⚙), så hver kædes ordbog har sit eget mærke.
+
+## lane-A · 2026-10-16 ~00:55 CEST · rum: hvordan tjener kæden penge
+- Ny form på rum-fanen (`#sp-money`): **tre betalingsspor side om side** (én gang, løbende, endnu tidligt). Hvert spor har sin egen farve i topkanten (brand, cyan, stiplet grå), et rundt ikon (🧾 🔁 ⏳) og en lille SVG-skitse af betalinger over tid: én høj søjle, en række små søjler og stiplede tomme søjler med "?". Under står led-knapper som piller med ikon og antal, og de åbner leddet. Det er en stiplet gul "⇄"-boks, der binder sporene sammen og linker til satellit-rejsen.
+- Skitserne er mærket "en skitse, ikke tal" i noten.
+- vaerdikaede.html: kæde-kortene har fået en tredje, dæmpet linje "◇ Ordbog: N ord →".
+- Kun sidens egen CSS (`.mn-*`, `.oc-gl`).
+
+## lane-A · 2026-10-16 ~00:45 CEST · rum: usikkerheder og læse-rute
+- **Usikkerheds-kort med kæde-strimmel** (`#sp-risk`): gul venstrekant på hele sektionen, ikon i en let drejet gul firkant (ikke rund som penge-sporene), og under teksten en strimmel med de syv led som små cirkler, hvor de ramte led lyser gult med glød. Det er en ny form: man ser *hvor* i kæden noget rammer uden at læse.
+- **Læse-rute** (`#sp-route`): vandret række af nummererede stop med ikon og undertekst, der ruller vandret på mobil.
+- Kvante-horisont: stiplet cyan "⤳"-boks med hop til AI-floden.
+- Kun sidens egen CSS (`.sp-route`, `.risk`, `.rk-*`, `.q-river`).
+
+## lane-A · 2026-10-16 ~00:51 CEST · energi: usikkerheder
+- Energi-usikkerheder genbruger rummets gule kort, men strimlen er en **strømvej**: afrundede firkanter i stedet for cirkler, "›" som forbindelse i stedet for streg og et dæmpet "→ datacenter" i enden. Så kan man se forskel på rumkæden (op i højden) og energikæden (frem mod datacentret).
+- vaerdikaede.html: kæde-kortene har fået en "⚠"-linje ved siden af ordbogens "◇".
+- Kun sidens egen CSS (`.rk-strip.flow`, `.e-pane .risk h3`).

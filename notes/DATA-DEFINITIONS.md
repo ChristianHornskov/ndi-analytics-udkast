@@ -83,6 +83,28 @@ Råstof-leddet siger også, at The Metals Company skriver, at prøvekørsel vent
 
 Elnet-blurb skelner byggerne fra dem, der leverer strøm. Quanta, Primoris og MYR Group bygger nettet og producerer ikke strømmen. GE Vernova leverer udstyr og driver ikke værkerne. Solaris leverer strøm tæt på store forbrugere. Solaris' forside omtaler 16. oktober 2026 købet af Omega med dato 6. juli 2026 i adressen `ir.solaris-energy.com/news/2026/07-06-2026-120016135`. Købet er efter beholdningen pr. 2026-06-01 og står ikke i kædeteksten. Vægtene er uændrede.
 
+Elproduktions-blurb navngiver forskellen. Comstock, Antero, EQT og Expand er gas som brændsel. T1 Energy laver solcellemoduler, efter den gennemgåede profil, og profilen er ikke ændret. Cummins og Generac er motorer og reservegeneratorer, ikke elselskaber. Babcock & Wilcox leverer kedler og service. GE Vernova leverer udstyr og driver ikke værkerne. Bloom er brændselsceller hos kunden. Plug er brændselsceller og brintudstyr. Teksten siger ikke, at hvert anlæg kører. Bloom og Plug gav 403 den 16. oktober 2026, så der er ingen nye produktnavne derfra.
+
+Batteri-blurb siger, at Fluence er batterisystemer og software, ikke et kraftværk, og at teksten ikke påstår, at selskabet selv laver cellerne. Fluence gav 403 samme nat. Eos er zinkbatterier, ikke en mine. Selskabets egne ord om at være ledende og om et offentligt lån er ikke taget med. Satellit-blurb siger, at Redwire leverer dele og ikke selv sender op, at York bygger platforme, og at MDA omtaler Chorus, før konstellationen er sendt op. MDA's forside havde den formulering 16. oktober 2026. Vægtene er uændrede.
+
+Råstof-leddet siger også, at Standard Lithium skriver, at et demonstrationsanlæg i Arkansas behandler saltvand, og at det ikke er de store projekter. Kurser på forsiden er ikke taget med. Almonty skrev 23. september 2026, at Sangdong har produceret wolfram for første gang siden 1993. Valtreixal er et projekt. Meddelelsen er efter beholdningen pr. 2026-06-01, og teksten siger det. Kilden er `https://almonty.com/almonty-marks-first-tungsten-production-at-sangdong-since-1993/`. Panasqueira og Los Santos står stadig som miner.
+
+Opsendelses-blurb siger, at Intuitive Machines leverer til Månen og ikke er en billedsatellit om Jorden. Siden `intuitivemachines.com` svarede med en omdirigering i ring den 16. oktober 2026, så sætningen er profilens eksisterende grænse og ikke et nyt produktnavn. Rum og compute siger, at Starlab hos Voyager er et stationsprojekt og ikke en station i drift. Voyager gav 403 samme nat. Vægtene er uændrede.
+
+Taseko skrev 9. oktober 2026, at Florence Copper er gået i kommerciel produktion. Datoen på siden stod som 10.09.2026, og en anden post samme liste er 10.13.2026, så formatet er måned.dag. Meddelelsen er efter beholdningen pr. 2026-06-01. Yellowhead var i en godkendelsesproces i august 2026. Aley står som projekt. New Prosperity står ikke som mine. Gibraltar er en mine. Kurser og formuleringen om den første nye amerikanske kobberkilde er ikke taget med. Vistra-tallene 2.600 MW, 2.176 MW og 433 MW har nu kilden fra 9. januar 2026. 433 MW er øget effekt, ikke en ny reaktor. Ordet largest er ikke taget med.
+
+SMR-leddet siger, at NuScale skriver, at et program sammen med TVA kan blive op til 6 GW, og at det er udvikling, ikke et værk i drift. Kilden er programsiden, som taler om at udvikle og idriftsætte kapacitet, ikke om et værk, der allerede kører. Ordene historic, largest og proven er ikke taget med. De øvrige SMR-navne er stadig ikke beskrevet som kommerciel drift.
+
+Konceptkortene i nyhedsarkivet er delt i korte afsnit, så grænserne kan læses hver for sig. Energikortet har fem afsnit. Rumkortet har tre. Indholdet er det samme som på kæden. Neutron-siden sagde 16. oktober 2026 stadig, at første flyvning ligger foran. Sætningen om, at Neutron ikke er fløjet, er ikke ændret.
+
+MP Materials skriver, at magneter fremstilles på anlægget Independence i Texas, og at udvindingen er ved Mountain Pass. Ordene om verdens rigeste forekomst og verdens stærkeste magnet er ikke taget med. Firefly gav 403 samme nat. Eclipse er derfor ikke omskrevet.
+
+United States Antimony skriver, at selskabet udvinder og forarbejder antimon og zeolit. Det er ikke et kraftværk. Markedsformuleringen om hele kæden fra malm til metal er ikke taget med. Kobolt og wolfram stod i en menu, men teksten om to materialer nævner antimon og zeolit, så de to andre er ikke skrevet ind som produktion.
+
+Capstone skriver, at produktionen i 2025 var 225 k tonnes kobber. I teksten står det som 225.000 ton. Siden nævner Mantos Blancos, Cozamin, Pinto Valley og Mantoverde. Santo Domingo er på samme side beskrevet som et projekt, ikke som en mine i drift. Ord om verdens behov og om at være den eneste er ikke taget med.
+
+Freeports side nævner Cerro Verde og El Abra under Sydamerika og Grasberg under Indonesien. Teksten kalder dem miner, ikke et elselskab. Lone Star stod kun i en ældre webcast-titel og er ikke skrevet ind som drift.
+
 ## År til dato på periodesiden
 
 `ytdReturn` i `data.js` bruger sidste punkt i året før som udgangspunkt, ikke 1. januar. For PMINDI pr. 2026-10-14 er det 2025-12-31, ikke 2026-01-02. `periode.html` viser den samme dato i "Fra → til". Kalenderår bruger samme base (`calendarYearReturns`).

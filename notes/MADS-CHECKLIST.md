@@ -33,6 +33,7 @@ Kilder: slack_ny_graf_2026-10-15.md, vision.txt, mads_tankemodel.md, investering
 - [x] Quantum-tag — 4 selskaber (forslag); Quantumscape uændret (batteri)
 - [ ] Legacy-mistænkt / Trump-tags — deferred (UX skjult)
 - [ ] Sortering: 52u-drawdown, optrend, vol, insider — deferred (compliance på per-aktie)
+- [x] Temaforslag runde 2 (lane-B c9): 32 Andet-navne med klar kædeplads → foreslået tema (sol/brint/batterier → Energi, satellit → SpaceTech, maskiner/autonom kørsel → Fysisk tech, TSMC → Chips, Lumen → Optik, kernebrændsel/batterigenanvendelse → Energiressourcer); PMINDI Andet 67 → 35; selskab.html viser forslag-mærke + 'før'
 - [x] Tema-hub polish (lane-B c2): korrekt forslag-banner (fra Andet vs. omtagget Compute→Quantum via `themeFrom`), fund-switch, Andet sidst, små temaer (Quantum/SpaceTech) fremhævet m. egen kæde, kæde-link pr. tema
 - [x] Compliance-sikker sortering (lane-B): whitelist navn/vægt/tema i screener + A-Z; temastatus-filter (forslag/uden); tomme tilstande med hjælp
 - [x] NDI-linse (unique-metrics) for kernenavne (lane-B c3+c5+c6+c7+c8): c8 → 217 (+67: TSMC, chipudstyr AMAT/Lam/KLA/TEL/ASM, EDA Synopsys/Cadence, analog/effekt, sikkerhedssoftware, datacenter-omstillere, sol/lagring i Andet, rum, platforme); c7 → 150 (+49 kerne-AI: ASML, Micron/hukommelse/lagring, servere, netværk, optik, SMR/el, rum, platforme) + "Andre med NDI-linse i samme led" på selskab.html; c6 → 101 (+33 i tynde temaer: SpaceTech 1→6, Fysisk tech, Chips, Energiressourcer, Optik); linse på tema-sider (dæknings-kort, badge, 'hvad ejer man?'-kolonne, filter `linse=1`) og pr. tema-kort på temaer.html. c5 → 68 selskaber (+33, Arm opgraderet), linse-badge + filter "Kun med NDI-linse" i screeneren. c3: 35 selskaber med 5 kvalitative felter (tag, hvad ejer man, plads i 13-led-kæden, hold øje med, livscyklus = ikke klassificeret); A-Z-filter "Kun med NDI-linse"
@@ -55,6 +56,9 @@ Kilder: slack_ny_graf_2026-10-15.md, vision.txt, mads_tankemodel.md, investering
 - [x] AI-fane: flodkort over de 13 led i Mads' rækkefølge med NDI-pres-mærke og kilde pr. led (dæmning, begyndende, del af halvlederne, ingen tydelig flaskehals, efterspørgsel); samme mærker på vaerdikaede.html (lane-A)
 - [x] Rum: "Følg én satellit fra fabrik til tjeneste" (6 trin med SVG-scene, trinknapper og tastatur; antal og eksempelnavne pr. led pr. 1. juni 2026; baggrund) + AI-flodkort: sidespor til kvante; robotik-komponenter uden ordet eksponering (lane-A)
 - [x] Energi-strømvej: "Det ændrer sig" pr. station (4 med NDI-kilde, elnet mærket baggrund); kvante-ordbog med 10 ord (baggrund) + deep-link `?kaede=quantum#q-gl` (lane-A)
+- [x] Rum: "Hvordan tjener rumkæden penge?" (én gang / løbende / endnu tidligt, med antal pr. led og NDI-linjen om Starlink som løbende tjeneste; baggrund) + vaerdikaede.html: ordbogs-link pr. kæde (lane-A)
+- [x] Rum: "Hvad kan gå galt?" (6 usikkerheder med kæde-strimmel over ramte led; 2 NDI-linjer med kilde, resten baggrund) + læse-rute "Rum i syv stop"; kvante-horisont med hop til AI-floden (lane-A)
+- [x] Energi: "Hvad kan gå galt i energikæden?" (6 usikkerheder med strømvej-strimmel; 4 NDI-linjer med kilde, resten baggrund) + energi-ledkort uden aktiesprog, råstoffer inkl. gas og uran; vaerdikaede.html: usikkerheds-link pr. kæde (lane-A)
 
 ## Formidling / filosofi
 - [x] Variance drag / CAGR ≠ gennemsnit (lær)
@@ -82,3 +86,4 @@ Kilder: slack_ny_graf_2026-10-15.md, vision.txt, mads_tankemodel.md, investering
 | lane-B c6 | NDI-linse 68 → 101 (+33 i tynde temaer, ærlige tag-noter); tema.html: linse-dækning, badge, 'Rolle / hvad ejer man?', filter `linse=1`; temaer.html: linse-antal pr. tema | lane-B |
 | lane-B c7 | NDI-linse 101 → 150 (+49 kerne-AI-stak m.fl.); selskab.html: 'Andre med NDI-linse i samme led' (nabolag ud fra linsens placering) | lane-B |
 | lane-B c8 | NDI-linse 150 → 217 (+67: foundry/udstyr/EDA/analog/sikkerhed/datacentre/sol/rum/platforme; ærlige tag-noter) | lane-B |
+| lane-B c9 | Temaforslag runde 2: 32 Andet → tema ud fra kædeplads (themeFrom/forslag), themes.json genberegnet, linse-tags opdateret; selskab.html forslag-mærke | lane-B |

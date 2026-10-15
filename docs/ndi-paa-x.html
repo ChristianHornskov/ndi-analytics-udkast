@@ -27,7 +27,7 @@
  </footer>
  <noscript><p style="max-width:1180px;margin:0 auto;padding:0 20px 24px;color:#aac0c7">Siden læser kun den statiske fil. Slå JavaScript til for at se kortene. Browseren kalder ikke X.</p></noscript>
  <script type="module">
- import { loadXPosts, xCard, fmtXDate, X_LABEL, X_FILTERS, postInFilter, postMatchesQuery, postWho } from './js/x-feed.js';
+ import { loadXPosts, xCard, fmtXDate, X_LABEL, X_FILTERS, postInFilter, postMatchesQuery, postWho, feedHitKind } from './js/x-feed.js';
  const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
  const main = document.getElementById('main');
  const pack = await loadXPosts();
@@ -57,7 +57,7 @@
  const sp = cut.lastIndexOf(' ');
  return (sp > 90 ? cut.slice(0, sp) : cut).trim() + '…';
  };
- const door = (spot, href, jump, v, kicker, title, n, post, byKind) => `<a class="x-door" href="${href}" data-jump="${jump}" data-v="${esc(v)}" data-spot="${spot}">
+ const door = (spot, href, jump, v, kicker, title, n, post, byKind, kind) => `<a class="x-door is-${kind}" href="${href}" data-jump="${jump}" data-v="${esc(v)}" data-spot="${spot}">
  <span class="k">${kicker}</span>
  <span class="x-door-top"><strong>${title}</strong><span class="x-door-n">${n} opslag</span></span>
  ${post ? `<span class="x-door-q">${esc(excerpt(post))}</span><span class="x-door-by">${byKind} · @${esc(post.username)} · ${esc(fmtXDate(post.created_at))}</span>` : '<span class="x-door-q">Ingen opslag i snapshotet.</span>'}
@@ -85,10 +85,10 @@
  <p class="warn">${esc(X_LABEL)}.</p>
  <p class="band">Snapshot ${esc(fmtXDate(pack.snapshotAt))}. NDI-konti: ${esc(house)}.${curatedN ? ` ${curatedN} opslag er fra konti, som Mads følger.` : ''}</p>
 
- <div class="x-spot" aria-label="Genveje til demo">
- ${door('soft', 'ndi-paa-x.html?q=SoftBank', 'q', 'SoftBank', 'SELSKAB', 'SoftBank', nSoft, softPost, 'Seneste')}
- ${door('nv', 'ndi-paa-x.html?q=NVDA', 'q', 'NVDA', 'SELSKAB', 'Nvidia', nNv, nvPost, 'Seneste')}
- ${door('chips', 'ndi-paa-x.html?f=chips', 'f', 'chips', 'TEMA', 'Chips / AI', nChips, chipsPost, 'Eksempel')}
+ <div class="x-spot" id="spor" aria-label="Genveje til demo">
+ ${door('soft', 'ndi-paa-x.html?q=SoftBank', 'q', 'SoftBank', 'SELSKAB · DIREKTE', 'SoftBank', nSoft, softPost, 'Seneste', 'direct')}
+ ${door('nv', 'ndi-paa-x.html?q=NVDA', 'q', 'NVDA', 'SELSKAB · DIREKTE', 'Nvidia', nNv, nvPost, 'Seneste', 'direct')}
+ ${door('chips', 'ndi-paa-x.html?f=chips', 'f', 'chips', 'TEMA', 'Chips / AI', nChips, chipsPost, 'Eksempel', 'theme')}
  </div>
  <p class="link-row" style="margin-top:-2px">
  <a class="outline-btn small" href="selskab.html?isin=JP3436100006&fund=pmindi">SoftBank på selskabssiden →</a>
@@ -167,11 +167,35 @@
  ? `${list.length} af ${posts.length} opslag${focused}`
  : `Ingen opslag${focused}`;
  const leadOn = Boolean(state.q.trim() || state.f !== 'all');
- grid.innerHTML = list.length
- ? list.map((p, i) => xCard(p, { query: state.q, lead: leadOn && i === 0 })).join('')
- : `<div class="x-empty" style="grid-column:1/-1">
+ document.body.classList.toggle('x-focused', leadOn);
+ const laneOf = (kind, cards, lead) => {
+ if (!cards.length) return '';
+ const q = state.q.trim();
+ let hint = kind === 'direct' ? 'Nævner navnet eller tickeren.' : 'Rammer temaet. Ikke en ticker fra udsnittet.';
+ if (!q && state.f === 'chips' && kind === 'direct') hint = 'Ticker NVDA i opslaget.';
+ if (!q && state.f === 'chips' && kind === 'theme') hint = 'Chips eller AI, uden NVDA-ticker.';
+ const kicker = kind === 'direct' ? 'Direkte træf' : 'Tema';
+ const body = cards.map((p, i) => xCard(p, {
+ query: state.q,
+ lead: lead && i === 0,
+ hitKind: kind,
+ })).join('');
+ return `<div class="x-lane ${kind === 'direct' ? 'is-direct' : 'is-theme'}">
+ <p class="x-lane-h"><span class="x-lane-k">${kicker}</span><span>${hint} · ${cards.length}</span></p>
+ <div class="x-grid">${body}</div>
+ </div>`;
+ };
+ const picked = [];
+ if (state.q.trim()) picked.push('søgning «' + state.q.trim() + '»');
+ if (state.f !== 'all' && fLabel) picked.push(fLabel.label);
+ if (state.who === 'house') picked.push('NDI-konti');
+ if (state.who === 'curated') picked.push('konti Mads følger');
+ const pickedLine = picked.length ? ` Aktivt: ${picked.join(' · ')}.` : '';
+ if (!list.length) {
+ grid.innerHTML = `<div class="x-empty" style="grid-column:1/-1">
+ <p class="x-zero" aria-hidden="true">0</p>
  <p class="k">Ingen opslag i filteret</p>
- <p>Prøv et af sporene, eller nulstil. Feedet viser kun det kuraterede snapshot.</p>
+ <p>Ingen af de ${posts.length} opslag i snapshotet rammer det valgte.${pickedLine} Prøv et spor, eller nulstil.</p>
  <div class="x-suggest">
  <button type="button" class="outline-btn small" data-jump="q" data-v="SoftBank" data-clear-who>SoftBank</button>
  <button type="button" class="outline-btn small" data-jump="q" data-v="NVDA" data-clear-who>Nvidia</button>
@@ -179,8 +203,38 @@
  <button type="button" class="outline-btn small" data-jump="reset">Nulstil</button>
  </div>
  </div>`;
+ } else if (!leadOn) {
+ grid.innerHTML = list.map((p) => xCard(p, { query: state.q })).join('');
+ } else {
+ const direct = [];
+ const theme = [];
+ const rest = [];
+ for (const p of list) {
+ const k = feedHitKind(p, { q: state.q, f: state.f });
+ if (k === 'direct') direct.push(p);
+ else if (k === 'theme') theme.push(p);
+ else rest.push(p);
+ }
+ if (!direct.length && !theme.length) {
+ grid.innerHTML = list.map((p, i) => xCard(p, { query: state.q, lead: i === 0 })).join('');
+ } else {
+ grid.innerHTML = laneOf('direct', direct, true)
+ + laneOf('theme', theme, !direct.length)
+ + (rest.length ? `<div class="x-grid" style="grid-column:1/-1">${rest.map((p) => xCard(p, { query: state.q })).join('')}</div>` : '');
+ }
+ }
  };
 
+ const revealHits = (smooth) => {
+ const lead = document.querySelector('#x-grid .x-text, #x-grid .x-empty');
+ if (!lead) return;
+ const r = lead.getBoundingClientRect();
+ if (r.top >= 72 && r.bottom <= window.innerHeight - 12) return;
+ const behavior = smooth && !reduceMotion ? 'smooth' : 'auto';
+ const narrow = window.matchMedia('(max-width: 700px)').matches;
+ const target = narrow ? document.getElementById('x-grid') : document.getElementById('spor');
+ target?.scrollIntoView({ behavior, block: 'start' });
+ };
  const applyJump = (el, scroll) => {
  const mode = el.getAttribute('data-jump');
  const v = el.getAttribute('data-v') || '';
@@ -192,7 +246,7 @@
  write(state);
  render();
  if (mode === 'reset') qInput.focus();
- else if (scroll) document.getElementById('x-grid')?.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+ else if (scroll) revealHits(true);
  };
 
  main.addEventListener('click', (e) => {
@@ -232,6 +286,7 @@
  render();
  });
  render();
+ if (state.q.trim() || state.f !== 'all') revealHits(false);
  }
  </script>
 </body>

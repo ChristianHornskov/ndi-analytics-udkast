@@ -569,6 +569,10 @@
     {
      "label": "Selskabets side",
      "url": "https://www.vistracorp.com/"
+    },
+    {
+     "label": "Aftale med Meta 9. januar 2026",
+     "url": "https://investor.vistracorp.com/2026-01-09-Vistra-and-Meta-Announce-Agreements-to-Support-Nuclear-Plants-in-PJM-and-Add-New-Nuclear-Generation-to-the-Grid"
     }
    ]
   },
@@ -655,15 +659,15 @@
   "US9115491030": {
    "name": "United States Antimony",
    "theme": "energy-resources",
-   "summary": "Udvinder og forarbejder antimon. Metallet bruges blandt andet i flammehæmmere, legeringer og visse energianvendelser.",
+   "summary": "Selskabet skriver, at det udvinder og forarbejder antimon og zeolit. Det er ikke et kraftværk.",
    "watch": "Miner, forarbejdning og efterspørgsel efter antimon.",
    "source": "https://www.usantimony.com/",
-   "products": "Antimon og forarbejdede produkter.",
+   "products": "Antimon og zeolit.",
    "customers": "Industrikunder.",
    "role": "Råstof, ikke elproduktion.",
    "narrative": [
-    "United States Antimony udvinder og forarbejder antimon i USA.",
-    "Metallet bruges blandt andet i legeringer. Selskabet er ikke et kraftværk."
+    "United States Antimony skriver, at selskabet udvinder og forarbejder to materialer, antimon og zeolit.",
+    "Det er råstoffer, ikke et kraftværk."
    ],
    "narrativeSources": [
     {
@@ -782,8 +786,8 @@
    "customers": "Industri, der bruger sjældne jordarter i magneter og elektronik.",
    "role": "Råstof til elektronik, motorer og forsvar. Ikke et chipværk.",
    "narrative": [
-    "MP Materials udvinder sjældne jordarter ved Mountain Pass i Californien og arbejder med magneter.",
-    "Det er en mine med videre forarbejdning i denne beskrivelse, ikke et projekt uden drift."
+    "MP Materials udvinder sjældne jordarter ved Mountain Pass i Californien. Selskabet skriver, at magneter fremstilles på anlægget Independence i Texas.",
+    "Det er en mine med videre forarbejdning i denne beskrivelse, ikke et projekt uden drift og ikke et chipværk."
    ],
    "narrativeSources": [
     {
@@ -922,13 +926,17 @@
    "customers": "Industrikunder.",
    "role": "Råstof til industri, ikke elproduktion.",
    "narrative": [
-    "Almonty arbejder med wolfram. Selskabet nævner minerne Panasqueira og Los Santos og projekter ved siden af, blandt andet Valtreixal.",
-    "Wolfram er et metal til hårde legeringer. Selskabet er ikke et kraftværk."
+    "Almonty arbejder med wolfram. Selskabet nævner minerne Panasqueira og Los Santos. Valtreixal er et projekt.",
+    "Selskabet skrev 23. september 2026, at Sangdong i Sydkorea har produceret wolfram for første gang siden 1993. Meddelelsen ligger efter beholdningen pr. 1. juni 2026. Selskabet er ikke et kraftværk."
    ],
    "narrativeSources": [
     {
      "label": "Selskabets side",
      "url": "https://almonty.com/"
+    },
+    {
+     "label": "Meddelelse 23. september 2026",
+     "url": "https://almonty.com/almonty-marks-first-tungsten-production-at-sangdong-since-1993/"
     }
    ]
   },
@@ -962,13 +970,17 @@
    "customers": "Ingen stor kommerciel kundebase i denne beskrivelse.",
    "role": "Råstof til batterier.",
    "narrative": [
-    "Standard Lithium henter lithium ud af saltvand i Smackover-formationen. Selskabet skriver, at et demonstrationsanlæg kører.",
+    "Standard Lithium skriver, at et demonstrationsanlæg ved El Dorado i Arkansas behandler saltvand.",
     "Projekterne i Arkansas og i Texas er ikke beskrevet som en stor mine i drift."
    ],
    "narrativeSources": [
     {
      "label": "Selskabets side",
      "url": "https://www.standardlithium.com/"
+    },
+    {
+     "label": "Demonstrationsanlæg",
+     "url": "https://www.standardlithium.com/technology/demonstration-plant/"
     }
    ]
   },
@@ -1003,27 +1015,31 @@
    "role": "Råstof til elnet og elektronik.",
    "narrative": [
     "Taseko driver kobberminen Gibraltar i Canada. Forsiden bruger også navnet Trekor Metals.",
-    "Gibraltar er kaldt en mine på siden. De andre navne på listen er ikke kaldt miner i denne tekst."
+    "Selskabet skrev 9. oktober 2026, at Florence Copper er gået i kommerciel produktion. Meddelelsen ligger efter beholdningen pr. 1. juni 2026. Yellowhead er i en godkendelsesproces. Aley står som projekt. New Prosperity står ikke som mine på siden."
    ],
    "narrativeSources": [
     {
      "label": "Selskabets side",
      "url": "https://www.tasekomines.com/"
+    },
+    {
+     "label": "Florence Copper 9. oktober 2026",
+     "url": "https://www.tasekomines.com/trekor-talks/florence-copper-begins-commercial-production-the-first-new-us-copper-source-in-nearly-two-decades"
     }
    ]
   },
   "CA14071L1085": {
    "name": "Capstone Copper",
    "theme": "energy-resources",
-   "summary": "Driver kobberminedrift.",
+   "summary": "Driver kobberminedrift. Selskabet skriver, at produktionen i 2025 var 225.000 ton kobber. Santo Domingo er et projekt, ikke en mine i drift.",
    "watch": "Drift af minerne og kobberpriser.",
    "source": "https://capstonecopper.com/",
    "products": "Kobber.",
    "customers": "Smelteværker og industrikunder.",
    "role": "Råstof.",
    "narrative": [
-    "Capstone driver kobberminedrift.",
-    "Det er en mine i denne beskrivelse, ikke et kraftværk."
+    "Capstone skriver, at selskabet producerede 225.000 ton kobber i 2025. Siden nævner Mantos Blancos, Cozamin, Pinto Valley og Mantoverde.",
+    "Santo Domingo er beskrevet som et projekt, ikke som en mine i drift. Selskabet er ikke et kraftværk."
    ],
    "narrativeSources": [
     {
@@ -1035,15 +1051,15 @@
   "US35671D8570": {
    "name": "Freeport-McMoRan",
    "theme": "energy-resources",
-   "summary": "Driver kobberminedrift, blandt andet i Amerika og Indonesien.",
+   "summary": "Driver kobberminedrift. Siden nævner Cerro Verde, El Abra og Grasberg. Det er ikke et elselskab.",
    "watch": "Drift af minerne, kobberpriser og lokale tilladelser.",
    "source": "https://www.fcx.com/",
    "products": "Kobber og andre metaller fra samme miner.",
    "customers": "Industrikunder.",
    "role": "Råstof til elnet, elektronik og byggeri.",
    "narrative": [
-    "Freeport-McMoRan udvinder kobber, blandt andet i Amerika og Indonesien.",
-    "Det er en mine i drift i denne beskrivelse. Kobberet bruges blandt andet i elnettet. Selskabet er ikke et elselskab."
+    "Freeport-McMoRan udvinder kobber. Siden nævner Cerro Verde og El Abra i Sydamerika og Grasberg i Indonesien.",
+    "Det er miner i denne beskrivelse, ikke et elselskab."
    ],
    "narrativeSources": [
     {
@@ -1509,12 +1525,16 @@
    "role": "Udvikling af SMR.",
    "narrative": [
     "NuScale udvikler en lille reaktor, som selskabet kalder NuScale Power Module. Selskabet skriver, at det amerikanske nukleare tilsyn, NRC, har godkendt designet, og angiver en effekt på 77 MW pr. modul.",
-    "Godkendelsen er ikke et værk i kommerciel drift. Denne tekst siger ikke, at et anlæg leverer strøm."
+    "Godkendelsen er ikke et værk i kommerciel drift. Denne tekst siger ikke, at et anlæg leverer strøm. Selskabet omtaler et program sammen med TVA på op til 6 GW. Det er udvikling, ikke et værk i drift."
    ],
    "narrativeSources": [
     {
      "label": "NuScale Power Module",
      "url": "https://www.nuscalepower.com/products/nuscale-power-module"
+    },
+    {
+     "label": "Program med TVA",
+     "url": "https://interactive.nuscalepower.com/tva-program"
     }
    ]
   },

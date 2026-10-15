@@ -11,7 +11,7 @@
   <meta property="og:site_name" content="NDI Analytics (udkast)">
   <meta property="og:locale" content="da_DK">
   <meta property="og:title" content="Idéer · NDI Analytics">
-  <meta property="og:description" content="Hvorfor NDI Analytics: flodsystemet, tags i stedet for sektorkasser, fra forslag til tema, forsinket beholdning og siderne som et hus.">
+  <meta property="og:description" content="Hvorfor NDI Analytics: flodsystemet, tags i stedet for sektorkasser, 345 selskaber sorteret efter sektor og tema, fra forslag til tema, 345 aktier som prikker, forsinket beholdning og siderne som et hus.">
   <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/ideer.html">
   <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
   <!-- og:end -->
@@ -102,6 +102,43 @@
     .tf-split li.qn{color:var(--text)}
     .tf-split em{font-style:normal;text-align:right;color:var(--text)}
     .tf figcaption{font-size:12px;color:var(--faint);margin-top:10px;line-height:1.5}
+    .pr{background:#0b171d;border:1px solid var(--line);border-radius:14px;padding:14px;margin:0}
+    .pr-key{font-size:12px;color:var(--muted);margin:0 0 10px}
+    .pr-key .sw{display:inline-block;width:8px;height:8px;border-radius:2px;background:var(--cyan)}
+    .pr-key .sw.an{background:var(--faint)}
+    .pr-rows{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+    .pr-rows li{display:grid;grid-template-columns:130px 1fr 92px;align-items:start;gap:8px;font-size:13px;color:var(--muted)}
+    @media(max-width:559px){.pr-rows li{grid-template-columns:1fr auto}.pr-rows .sq{grid-column:1/-1;grid-row:2}}
+    .pr-rows a{color:var(--text)}
+    .pr-rows em{font-style:normal;text-align:right;color:var(--text);white-space:nowrap}
+    .pr-rows .sq{display:flex;flex-wrap:wrap;gap:2px;padding-top:3px}
+    .pr-rows .sq i{width:8px;height:8px;border-radius:2px;background:var(--cyan)}
+    .pr-rows li.an .sq i{background:var(--faint)}
+    .pr-hist li.ew{color:var(--text)}
+    .pr-hist i{background:var(--cyan)}
+    .pr-hist li.ew i{outline:2px solid var(--yellow);outline-offset:1px}
+    .pr-keys{display:grid;gap:10px;margin:14px 0 0;grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
+    .pr-keys div{border-left:3px solid var(--cyan);padding:2px 0 2px 10px}
+    .pr-keys dt{font-size:14px;color:var(--text);font-weight:600}
+    .pr-keys dd{margin:2px 0 0;font-size:13px;color:var(--muted);line-height:1.45}
+    .pr figcaption{font-size:12px;color:var(--faint);margin-top:10px;line-height:1.5}
+    .mx{background:#0b171d;border:1px solid var(--line);border-radius:14px;padding:14px;margin:0}
+    .mx-wrap{overflow-x:auto}
+    .mx table{border-collapse:separate;border-spacing:2px;font-size:12px;min-width:330px;margin:0 auto}
+    .mx thead th{font-weight:600;color:var(--muted);vertical-align:bottom;padding:0 0 4px;height:104px}
+    .mx thead th span{writing-mode:vertical-rl;transform:rotate(180deg);white-space:nowrap;display:inline-block}
+    .mx tbody th{text-align:left;font-weight:400;padding:0 8px 0 0;white-space:nowrap}
+    .mx tbody th a{color:var(--text)}
+    .mx td{width:30px;height:24px;text-align:center;border-radius:3px;color:var(--text);background:color-mix(in srgb,var(--cyan) calc(var(--a,0)*100%),#0f2a32)}
+    .mx thead td{background:transparent}
+    @media(max-width:420px){.mx{padding:12px 8px}.mx table{min-width:0}.mx td{width:25px}.mx tbody th{padding-right:4px}.mx td.sum{padding-left:2px}}
+    .mx td.hi{color:#0b171d;font-weight:700}
+    .mx td.z{background:transparent;color:var(--faint)}
+    .mx td.sum{background:transparent;color:var(--cyan);font-weight:600;padding-left:6px}
+    .mx tr.an th a{color:var(--muted)}
+    .mx tr.tot th,.mx tr.tot td{background:transparent;color:var(--muted);border-top:1px solid var(--line);padding-top:4px}
+    .mx tr.tot td.sum{color:var(--cyan)}
+    .mx figcaption{font-size:12px;color:var(--faint);margin-top:10px;line-height:1.5}
     .hus{background:#0b171d;border:1px solid var(--line);border-radius:14px;padding:14px;margin:0}
     .hus-plan{display:grid;gap:8px;grid-template-columns:repeat(2,1fr);border:3px solid var(--brand);border-radius:6px;padding:8px;position:relative}
     @media(min-width:720px){.hus-plan{grid-template-columns:repeat(4,1fr)}}
@@ -128,24 +165,24 @@
     <h1>Hvorfor NDI Analytics?</h1>
     <div class="idea-hero">
       <p class="lede" style="margin-bottom:0">Korte, ikke-fortrolige idéer bag udkastet. Generel information. Ikke rådgivning.</p>
-      <aside class="idea-callout"><strong>Udgangspunkt:</strong> Vi kan ikke pege på den ene vinder. Derfor viser siden, hvilke teknologier fonden giver eksponering mod — ikke hvilke aktier man bør købe.</aside>
+      <aside class="idea-callout"><strong>Udgangspunkt:</strong> Vi kan ikke pege på den ene vinder. Derfor viser siden, hvilke teknologier fonden giver eksponering mod. Den viser ikke, hvilke aktier man bør købe.</aside>
     </div>
 
     <div class="idea-strip" aria-label="Idé-kort">
       <div class="sm"><div class="lab">PROBLEM</div><div class="num">Tech i sektorkasser</div></div>
       <div class="sm"><div class="lab">SVAR</div><div class="num">NDI-temaer + kæder</div></div>
-      <div class="sm"><div class="lab">DATA</div><div class="num">Forsinket snapshot</div></div>
+      <div class="sm"><div class="lab">DATA</div><div class="num">Forsinket beholdning</div></div>
       <div class="sm"><div class="lab">TONE</div><div class="num">Eksponering, ikke tip</div></div>
     </div>
 
     <div class="idea-tl">
       <div class="it">
         <h3>Multi-tag i stedet for ét GICS-label</h3>
-        <p>Tesla står i sektorlisterne som bilproducent. Hos os har Tesla to tags, fysisk tech og energi, og optræder i fire led på to værdikæder. <a href="#h-vs">Se eksemplet ↓</a></p>
+        <p>Tesla står i sektorlisterne som bilproducent. Hos os har Tesla to tags, fysisk tech og energi, og optræder i fire led på to værdikæder. <a href="#h-vs">Se eksemplet ↓</a> · <a href="#h-mx">Hele fonden sorteret begge veje ↓</a></p>
       </div>
       <div class="it">
         <h3>Flere teknologiske kæder</h3>
-        <p>AI-compute (13 led), robotik, energi, rum og quantum — plus treemap/sunburst og flaskehalse. <a href="vaerdikaeder.html">Åbn værdikæder →</a></p>
+        <p>AI-regnekraft (13 led), robotik, energi, rum og kvantecomputere. Med kort over vægt og flaskehalse. <a href="vaerdikaeder.html">Åbn værdikæder →</a></p>
       </div>
       <div class="it">
         <h3>Temaer foreslås, før de bliver endelige</h3>
@@ -153,10 +190,10 @@
       </div>
       <div class="it">
         <h3>Fald fra top som episoder</h3>
-        <p>Hvor meget og hvor længe fonden har ligget under sin tidligere top — største, typiske og alle fald. Kun på fondsniveau. <a href="#h-uw">Se tegningen ↓</a> · <a href="drawdown.html">Fald fra top →</a></p>
+        <p>Hvor meget og hvor længe fonden har ligget under sin tidligere top. Største, typiske og alle fald. Kun på fondsniveau. <a href="#h-uw">Se tegningen ↓</a> · <a href="drawdown.html">Fald fra top →</a></p>
       </div>
       <div class="it">
-        <h3>Forsinket snapshot som feature</h3>
+        <h3>Forsinket beholdning som en styrke</h3>
         <p>Beholdningen er fra en offentlig, forsinket rapport (pr. 1. juni 2026), så siden aldrig afslører fondens aktuelle handler. Det er et bevidst valg. <a href="laer/forsinket-beholdning.html">Hvorfor? →</a></p>
       </div>
     </div>
@@ -164,7 +201,7 @@
 
     <section class="idea-sec" aria-labelledby="h-flod">
       <h2 id="h-flod">Flodsystemet på ét billede</h2>
-      <p class="sub">«Vi ser AI-værdikæden som et flodsystem med en række dæmninger. Vandet repræsenterer efterspørgslen, og dæmningerne repræsenterer flaskehalse.» — NDI ugebrev, 30. marts 2026.</p>
+      <p class="sub">«Vi ser AI-værdikæden som et flodsystem med en række dæmninger. Vandet repræsenterer efterspørgslen, og dæmningerne repræsenterer flaskehalse.» NDI ugebrev, 30. marts 2026.</p>
       <figure class="flod" style="margin:0">
         <svg class="flod-h" viewBox="0 0 680 160" role="img" aria-labelledby="flod-t flod-d">
           <title id="flod-t">Flodsystemet: efterspørgsel som vand, flaskehalse som dæmninger</title>
@@ -239,7 +276,7 @@
 
     <section class="idea-sec" aria-labelledby="h-vs">
       <h2 id="h-vs">Én kasse eller flere tags</h2>
-      <p class="sub">Samme selskab, to måder at sortere på. Eksempel fra den forsinkede beholdning pr. 1. juni 2026. Sektoren må gerne stå der — den er bare ikke hovedinddelingen.</p>
+      <p class="sub">Samme selskab, to måder at sortere på. Eksempel fra den forsinkede beholdning pr. 1. juni 2026. Sektoren må gerne stå der. Den er bare ikke hovedinddelingen.</p>
       <div class="vs">
         <div class="col">
           <div class="lab">KLASSISK SEKTOR (GICS)</div>
@@ -256,14 +293,47 @@
             <li><b>Robotik &amp; fysisk AI</b> · Komponenter</li>
             <li><b>Robotik &amp; fysisk AI</b> · Robotter, autonome køretøjer og droner</li>
           </ul>
-          <p>To tags, fire led. Så kan man se, hvor i kæderne selskabet hører hjemme. Det beskriver eksponering — ikke et syn på aktien. <a href="selskab.html?isin=US88160R1014">Tesla →</a> · <a href="vaerdikaeder.html">Værdikæder →</a></p>
+          <p>To tags, fire led. Så kan man se, hvor i kæderne selskabet hører hjemme. Det beskriver eksponering, ikke et syn på aktien. <a href="selskab.html?isin=US88160R1014">Tesla →</a> · <a href="vaerdikaeder.html">Værdikæder →</a></p>
         </div>
       </div>
     </section>
 
+    <section class="idea-sec" aria-labelledby="h-mx">
+      <h2 id="h-mx">Samme 345 selskaber, to sorteringer</h2>
+      <p class="sub">Tesla-eksemplet ovenfor, gjort for hele fonden. Hver række er et NDI-tema, hver kolonne en klassisk sektor. Tallet er antal selskaber. Jo stærkere farve, jo flere.</p>
+      <figure class="mx">
+        <div class="mx-wrap">
+          <table>
+            <caption class="sr-only">Antal selskaber pr. NDI-tema og klassisk sektor i den forsinkede beholdning pr. 1. juni 2026</caption>
+            <thead><tr><td></td><th scope="col"><span>Teknologi</span></th><th scope="col"><span>Industri</span></th><th scope="col"><span>Råvarer</span></th><th scope="col"><span>Forbrugsgoder</span></th><th scope="col"><span>Finans</span></th><th scope="col"><span>Kommunikation</span></th><th scope="col"><span>Forsyning og energi</span></th><th scope="col"><span>Øvrige</span></th><th scope="col"><span>I alt</span></th></tr></thead>
+            <tbody>
+            <tr><th scope="row"><a href="tema.html?slug=chips">Chips</a></th><td class="hi" style="--a:1">52</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td style="--a:0.17">1</td><td class="sum">53</td></tr>
+            <tr><th scope="row"><a href="tema.html?slug=software">Software</a></th><td class="hi" style="--a:.89">45</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td style="--a:0.2">3</td><td style="--a:0.18">2</td><td class="z">·</td><td style="--a:0.17">1</td><td class="sum">51</td></tr>
+            <tr><th scope="row"><a href="tema.html?slug=platforms">Platforme</a></th><td class="z">·</td><td class="z">·</td><td class="z">·</td><td style="--a:0.35">12</td><td style="--a:0.44">18</td><td style="--a:0.26">7</td><td class="z">·</td><td style="--a:0.2">3</td><td class="sum">40</td></tr>
+            <tr><th scope="row"><a href="tema.html?slug=optik-netvaerk">Optik &amp; netværk</a></th><td style="--a:0.53">23</td><td class="z">·</td><td style="--a:0.26">7</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="sum">30</td></tr>
+            <tr><th scope="row"><a href="tema.html?slug=energiressourcer">Energiressourcer</a></th><td class="z">·</td><td class="z">·</td><td style="--a:0.44">18</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td style="--a:0.25">6</td><td style="--a:0.17">1</td><td class="sum">25</td></tr>
+            <tr><th scope="row"><a href="tema.html?slug=fysisk-tech">Fysisk tech</a></th><td class="z">·</td><td style="--a:0.46">19</td><td class="z">·</td><td style="--a:0.23">5</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="sum">24</td></tr>
+            <tr><th scope="row"><a href="tema.html?slug=compute">Compute</a></th><td style="--a:0.43">17</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td style="--a:0.17">1</td><td class="sum">18</td></tr>
+            <tr><th scope="row"><a href="tema.html?slug=spacetech">SpaceTech</a></th><td class="z">·</td><td style="--a:0.44">18</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="sum">18</td></tr>
+            <tr><th scope="row"><a href="tema.html?slug=energi">Energi</a></th><td style="--a:0.17">1</td><td style="--a:0.18">2</td><td class="z">·</td><td class="z">·</td><td style="--a:0.17">1</td><td style="--a:0.17">1</td><td style="--a:0.31">10</td><td class="z">·</td><td class="sum">15</td></tr>
+            <tr><th scope="row"><a href="tema.html?slug=quantum">Quantum</a></th><td style="--a:0.22">4</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="sum">4</td></tr>
+            <tr class="an"><th scope="row"><a href="tema.html?slug=andet">Andet</a></th><td style="--a:0.3">9</td><td style="--a:0.44">18</td><td style="--a:0.28">8</td><td style="--a:0.25">6</td><td style="--a:0.17">1</td><td style="--a:0.2">3</td><td class="z">·</td><td style="--a:0.51">22</td><td class="sum">67</td></tr>
+            <tr class="tot"><th scope="row">I alt</th><td>151</td><td>57</td><td>33</td><td>23</td><td>23</td><td>13</td><td>16</td><td>29</td><td class="sum">345</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <dl class="pr-keys">
+          <div><dt>151 i én kasse</dt><dd>Sektoren teknologi rummer 151 af de 345 selskaber. Hos os fordeler de sig på seks temaer, fra chips og compute til optik og software.</dd></div>
+          <div><dt>Platforme</dt><dd>Temaet samler selskaber, der i sektorlisterne står under finans, forbrugsgoder og kommunikation. Det fælles er den digitale platform, ikke sektoren.</dd></div>
+          <div><dt>SpaceTech og fysisk tech</dt><dd>Næsten alle står i sektorlisterne under industri. Hos os er det to forskellige led i to forskellige kæder.</dd></div>
+        </dl>
+        <figcaption>Antal selskaber i PMINDI pr. 1. juni 2026. Sektoren er den branchekategori, der står i offentlige opslag på selskabet. «Øvrige» er sundhed, ejendomme, dagligvarer og 14 selskaber uden sektor i opslaget. Viser eksponering, ikke en anbefaling. <a href="temaer.html">Temaer →</a> · <a href="om-data.html#g-tema">Ordliste: tema</a> · <a href="om-data.html#g-gics">sektorer</a></figcaption>
+      </figure>
+    </section>
+
     <section class="idea-sec" aria-labelledby="h-wk">
       <h2 id="h-wk">Vægt er ikke kurs</h2>
-      <p class="sub">To linjer, der kan ligne hinanden — men måler noget helt forskelligt.</p>
+      <p class="sub">To linjer, der kan ligne hinanden, men som måler noget helt forskelligt.</p>
       <div class="wk">
         <div class="col">
           <h3>Vægt i fonden</h3>
@@ -273,7 +343,7 @@
         <div class="col">
           <h3>Aktiekurs</h3>
           <svg viewBox="0 0 200 50" preserveAspectRatio="none" aria-hidden="true"><path d="M4 30 L28 18 L52 36 L76 12 L100 40 L124 22 L148 8 L172 34 L196 20" fill="none" stroke="var(--faint)" stroke-width="2" stroke-dasharray="4 4"/><line x1="4" y1="44" x2="196" y2="44" stroke="var(--line)"/></svg>
-          <p>Prisen på én aktie på børsen. Vises <strong>ikke</strong> her — siden handler om fonden, ikke om enkeltaktier. <a href="om-data.html#g-vaegt">Ordliste: vægt →</a></p>
+          <p>Prisen på én aktie på børsen. Vises <strong>ikke</strong> her. Siden handler om fonden, ikke om enkeltaktier. <a href="om-data.html#g-vaegt">Ordliste: vægt →</a></p>
         </div>
       </div>
     </section>
@@ -302,6 +372,42 @@
           <li><span>Chips</span><i style="width:10%"></i><em>1</em></li>
         </ul>
         <figcaption>Antal selskaber og vægt i den forsinkede beholdning (PMINDI). De 345 aktier vejer tilsammen ca. 92 % i rapporten. Et tema viser eksponering, ikke en anbefaling. <a href="temaer.html">Temaer →</a> · <a href="tema.html?slug=quantum">Quantum →</a> · <a href="om-data.html#g-temaforslag">Ordliste: temaforslag</a></figcaption>
+      </figure>
+    </section>
+
+    <section class="idea-sec" aria-labelledby="h-pr">
+      <h2 id="h-pr">345 aktier, én prik hver</h2>
+      <p class="sub">Hver firkant er ét selskab i den forsinkede beholdning pr. 1. juni 2026. Ingen af dem fylder meget. Det er meningen: Vi kan ikke pege på den ene vinder, så fonden ejer mange af dem, der er med til at bygge teknologien.</p>
+      <figure class="pr">
+        <p class="pr-key"><span class="sw"></span> = ét selskab · <span class="sw an"></span> = intet NDI-tema endnu · tallet til højre: antal · vægt i fonden</p>
+        <ul class="pr-rows" aria-label="Antal selskaber og vægt pr. NDI-tema">
+          <li><a href="tema.html?slug=chips">Chips</a><span class="sq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><em>53 · 13,2 %</em></li>
+          <li><a href="tema.html?slug=software">Software</a><span class="sq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><em>51 · 12,4 %</em></li>
+          <li><a href="tema.html?slug=platforms">Platforme</a><span class="sq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><em>40 · 16,0 %</em></li>
+          <li><a href="tema.html?slug=optik-netvaerk">Optik &amp; netværk</a><span class="sq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><em>30 · 8,2 %</em></li>
+          <li><a href="tema.html?slug=energiressourcer">Energiressourcer</a><span class="sq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><em>25 · 5,6 %</em></li>
+          <li><a href="tema.html?slug=fysisk-tech">Fysisk tech</a><span class="sq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><em>24 · 7,3 %</em></li>
+          <li><a href="tema.html?slug=compute">Compute</a><span class="sq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><em>18 · 6,0 %</em></li>
+          <li><a href="tema.html?slug=spacetech">SpaceTech</a><span class="sq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><em>18 · 4,4 %</em></li>
+          <li><a href="tema.html?slug=energi">Energi</a><span class="sq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><em>15 · 6,3 %</em></li>
+          <li><a href="tema.html?slug=quantum">Quantum</a><span class="sq" aria-hidden="true"><i></i><i></i><i></i><i></i></span><em>4 · 0,9 %</em></li>
+          <li class="an"><a href="tema.html?slug=andet">Andet</a><span class="sq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><em>67 · 11,6 %</em></li>
+        </ul>
+        <p class="sub" style="margin:16px 0 6px">Hvor store er positionerne? Antal selskaber efter vægt i fonden.</p>
+        <ul class="tf-split pr-hist" aria-label="Antal selskaber pr. vægtinterval">
+          <li><span>under 0,1 %</span><i style="width:50%"></i><em>55</em></li>
+          <li><span>0,1–0,2 %</span><i style="width:100%"></i><em>110</em></li>
+          <li class="ew"><span>0,2–0,3 %</span><i style="width:72%"></i><em>79</em></li>
+          <li><span>0,3–0,5 %</span><i style="width:53%"></i><em>58</em></li>
+          <li><span>0,5–1 %</span><i style="width:35%"></i><em>38</em></li>
+          <li><span>1 % og over</span><i style="width:5%"></i><em>5</em></li>
+        </ul>
+        <dl class="pr-keys">
+          <div><dt>ca. 0,27 %</dt><dd>Hvis alle 345 vejede lige meget. Den markerede række er det interval, hvor ligevægten ligger.</dd></div>
+          <div><dt>ca. 0,2 %</dt><dd>Den typiske position (medianen). Halvdelen vejer mindre, halvdelen mere.</dd></div>
+          <div><dt>ca. 11,9 %</dt><dd>De ti største positioner tilsammen. Den største vejer ca. 2,1 %.</dd></div>
+        </dl>
+        <figcaption>Antal selskaber og vægt i PMINDI pr. 1. juni 2026. Temaets vægt er summen af selskabernes vægt. De 345 aktier vejer tilsammen ca. 92 % i rapporten. Viser eksponering, ikke en anbefaling. <a href="laer/hvorfor-mange-aktier.html">Hvorfor så mange aktier? →</a> · <a href="om-data.html#g-vaegt">Ordliste: vægt</a></figcaption>
       </figure>
     </section>
 
@@ -345,8 +451,8 @@
           <a class="entre" href="index.html"><b>Entré · tre spørgsmål, tre døre</b><span>Hvordan har fonden klaret sig? Hvad ejer den? Hvilke selskaber er det?</span></a>
           <a href="index.html?view=fonden"><b>Fonden</b><span>Udvikling siden start, kalenderår, måned for måned og fald fra top.</span></a>
           <a href="index.html?view=portefolje"><b>Porteføljen</b><span>Forsinket beholdning fordelt på temaer og modenhed.</span></a>
-          <a class="kok" href="index.html?view=udforsk"><b>Køkkenet · udforsk selskaberne</b><span>Søg på navn, tema eller ISIN — uden de klassiske sektorkasser.</span></a>
-          <a href="vaerdikaeder.html"><b>Værdikæder</b><span>Fra strøm til apps — led for led.</span></a>
+          <a class="kok" href="index.html?view=udforsk"><b>Køkkenet · udforsk selskaberne</b><span>Søg på navn, tema eller ISIN uden de klassiske sektorkasser.</span></a>
+          <a href="vaerdikaeder.html"><b>Værdikæder</b><span>Fra strøm til apps, led for led.</span></a>
           <a href="temaer.html"><b>Temaer</b><span>Eksponering samlet i NDI-temaer.</span></a>
           <a href="laer/index.html"><b>Lær</b><span>Sådan tænker vi, P/E, livscyklus.</span></a>
           <a href="risici.html"><b>Risici</b><span>Risikoindikator og hvad du kan tabe.</span></a>
@@ -365,7 +471,7 @@
     </section>
 
     <div class="doors" style="margin-top:20px">
-      <a class="door" href="vaerdikaeder.html"><strong>Teknologiske værdikæder</strong><span>Treemap, sunburst, tidslinje, flaskehalse.</span><span class="go">Åbn →</span></a>
+      <a class="door" href="vaerdikaeder.html"><strong>Teknologiske værdikæder</strong><span>Fladekort, ringdiagram, tidslinje, flaskehalse.</span><span class="go">Åbn →</span></a>
       <a class="door" href="laer/saadan-taenker-vi.html"><strong>Sådan tænker vi</strong><span>Udvikling frem for vinder.</span><span class="go">Åbn →</span></a>
       <a class="door" href="om-data.html"><strong>Ordliste &amp; data</strong><span>CAGR, fald fra top, temaforslag.</span><span class="go">Åbn →</span></a>
     </div>

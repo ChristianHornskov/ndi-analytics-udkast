@@ -121,3 +121,14 @@ Sider: ideer, kort, om-data, invester, risici, ndi-perspektiv, laer/*.
 - Sprogscan (købsmulighed, kursmål, timing, billig/dyr, undervurderet, vinder, boble, trading, anbefal*) på alle lane-C-sider: 60 træffere, alle negationer eller ansvarsfraskrivelser («ikke en opfordring til at købe eller sælge», «ikke automatisk billig», «ikke at finde den ene vinder»). Intet at rette.
 - Nye begreber er beskrivende: «Hold øje med» = «hvad man kan følge, ikke en prognose». «Eksportregler»: «ikke en vurdering af, hvordan reglerne ændrer sig». «Indre værdi»: forskel til børsværdi «kan være stor i begge retninger» — ingen rabat/præmie-påstand om SoftBank.
 - «Neocloud» nævner CoreWeave som eksempel (findes i snapshot 1. jun 2026, og NDI-blogindlæg «The economy of a neocloud» er kilde i company-profiles). Ingen vurdering af selskabet.
+
+## Lane-C opfølgning 00:41 CEST 16/10 (Claude)
+- Punkt 10 (stil): tankestreger/semikolon i synlig tekst fjernet på lane-C-sider (ideer, om-data, kort, invester, risici, ndi-perspektiv, lær). Engelske ord reduceret (snapshot, feature, treemap/sunburst, pipeline, v1).
+- Blokering 2: om-data omtalte ikke længere 1. juni 2026 som «kvartalsslut». Selve datavalget (kvartal 31/3 eller 30/6) er stadig Leos beslutning og data-lanes opgave.
+
+## lane-C · ~01:10 16/10 · lær/rebalancering
+- Kilder: BOG s. 124, 139, 140, 149, 150 (gevinst ved høj optimisme, hellere lægge til i pessimisme, højst ca. 1 %), TM linje 78 (Mads foretrækker «rebalancering» frem for «trading»). Forskellen bog/fond som Christian beskrev 15. okt 2026 (privat: kurtage, ingen systemer, panik).
+- **Bevidst udeladt:** strategiudkastets tærskler (udsving ≥5 %, 5–15 % af positionen, daglig frekvens, reankring) og handelsomfang (17.990 handler). Interne dokumenter, ikke offentlige. Siden siger kun «løbende».
+- **Bevidst ikke citeret:** Mads' formulering fra visionsmødet (15:44) om at «gevinsten tages og flyttes» er gengivet uden navn, fordi mødet er internt.
+- Ingen påstand om at rebalancering giver merafkast (ingen «volatility harvesting»). Siden siger tværtimod, at den ikke fjerner risiko, ikke er en forudsigelse og ikke er gratis.
+- Fondstal kun vægte fra portfolio.json pr. 1. jun 2026 (345, største 2,13 %, 5 over 1 %, ligevægt 91,94/345 ≈ 0,27 % som i ideer.html). Ingen navne.
