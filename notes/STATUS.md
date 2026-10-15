@@ -369,3 +369,47 @@ Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html, v
 5. De sidste to tankestreger på vaerdikaeder er fjernet.
 Tjek: Playwright på 1280 og 375 med 0 konsolfejl og ingen sidescroll. Bro-klik fører fra robotik til `energy#lk-storage` (åbent), og kvante-cloud fører til `ai-compute#lk-cloud`. smoke.mjs 52/52 fail 0, precheck PASSED og grep efter handelssprog giver 0 hits.
 Næste: rum-fanen kan få en "hvad koster det at komme op"-forklaring (kun med kilde) og robotik en lille ordbog (fx aktuator, lidar og simulering), som rum-ordbogen. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-15 ~23:55 CEST. Energi- og rumeksempler efter forretning. Ikke færdig.**
+
+Beholdning pr. 1. juni 2026. Ingen nye kurser, afkast, P/E eller P/S. HTML på værdikædesiden er ikke rørt.
+
+1. `value-chains.json`: energikædens fem led og rumkædens tre led lister selskaber efter forretning. Før stod de samme topvægte på hvert led, så CoreWeave også stod under atomkraft. Nu: elproduktion 16 selskaber (5,41 %), SMR 7 (1,43 %), elnet 5 (1,39 %), batterier 4 (1,95 %), råstoffer 21 (3,81 %). Rum: opsendelse 6 (1,74 %), satellitter 7 (1,31 %), rum og compute 4 (0,85 %). `weightSum` er summen af eksemplerne, ikke temaets samlede vægt.
+2. Udeladt med vilje og skrevet i teksten: CoreWeave, Nebius og IREN (datacentre), ProPetro (boreservice), Merlin, Archer og Airo (luftfart i SpaceTech-temaet). SpaceX er ikke i snapshottet. Rum og compute siger, at ingen af eksemplerne er et datacenter i kredsløb. Musk-citatet er stadig kun citat.
+3. `company-profiles.json`: 65 nye profiler for tomme rum- og energinavne, plus de fysiske og uklassificerede navne, kæden linker til. Ingen `reviewedAt`, så AI-udkast-badget bliver, uden dato for gennemgang. Kilde er selskabets egen side.
+4. `periode.html`: "Siden start" hedder "Siden første NAV", med datoen fra seriens første punkt. `nyhedsarkiv.html`: to konceptkort om energi og rum. Arkivet indeholder stadig ikke ugebrevene.
+5. Tjekket i Chromium ved 1280 og 375: energifanen viser Fluence, Oklo og Quanta og linker ikke CoreWeave. Rumfanen linker Rocket Lab og Planet og linker ikke Archer. Fluence og Oklo har AI-udkast. Periode 2025 og siden første NAV renderer. Ingen konsolfejl. Ingen vandret scroll på energikæden ved 375.
+
+AI-compute-leddet "Energi og strømfordeling" er ikke rettet, så det ikke støder sammen med lane A.
+
+**Push:** `lane-E` @ `8082b22` er pushet efter precheck. Branchen kan merges.
+
+**Samme bane, næste punkt:** ÅTD på `periode.html` viste 1. januar, mens tallet regnes fra sidste punkt året før. For PMINDI er det 31. dec. 2025 → 14. okt. 2026 og +4,0 %. Kalenderåret 2025 viser 31. dec. 2024 → 31. dec. 2025. Tjekket i Chromium ved 1280 og 375. Ingen konsolfejl. Ingen vandret scroll. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 ~00:05 CEST. Kort fortalt på fem usikre navne. Ikke færdig.**
+
+`company-profiles.json` har nu `narrative` og `narrativeSources` på Starfighters Space, Oklo, Northern Dynasty (Pebble), Terra Innovatum (SOLO) og The Metals Company. Ingen `reviewedAt`. Siden siger derfor stadig AI-udkast, uden "tjekket mod kilden".
+
+Teksten siger, hvad selskabet laver, og hvad der ikke er i drift: orbital opsendelse er ikke en rutetjeneste, Oklo og SOLO har ikke et kommercielt værk i drift, Pebble er ikke en mine, nodulerne er ikke i produktion. Kilden er selskabets egen side. Ingen kurser, afkast, P/E eller P/S i de nye afsnit.
+
+Tjekket i Chromium på `selskab.html` for de fem ISIN. "Kort fortalt" viser første afsnit. "Læs hele forklaringen" åbner resten. AI-udkast er med. Ingen konsolfejl. Ingen vandret scroll ved 375 px på Starfighters-siden. P/E i sidefoden er den faste disclaimer om, at tallene ikke vises.
+
+**Push:** forrige tip på `lane-E` er `0907706`. Dette commit kan merges, når det er pushet. Branchen er `lane-E`. Ikke main.
+
+## Fra Grok lane-E
+
+**2026-10-16 ~00:15 CEST. Kort fortalt på syv navne i kæden. Ikke færdig.**
+
+`company-profiles.json` har `narrative` uden `reviewedAt` på Fluence, NextEra, Rocket Lab, Planet, NuScale, Quanta og GE Vernova. AI-udkast bliver. Ingen "tjekket mod kilden".
+
+Grænser i teksten: Fluence er ikke et kraftværk. NextEra har atomkraft i drift og er ikke en SMR-udvikler. Forsiden skriver, at NextEra og Dominion skal lægges sammen, og teksten siger ikke, at det er sket. Rocket Lab flyver Electron. Neutron er ikke fløjet i beskrivelsen. Planet sælger billeder og opsender ikke selv. NuScale gengiver selskabets tal på 77 MW pr. modul, og godkendelsen er ikke et værk i drift. Quanta bygger nettet og ejer ikke strømmen. GE Vernova leverer udstyr og driver ikke værkerne. NextEra og Quanta står som temaforslag i snapshottet.
+
+Fluence-siden svarede 403 til opslaget. Der er ikke lagt nye produktnavne ind. De andre tekster er holdt til selskabets egen side den 16. oktober 2026.
+
+Tjekket i Chromium på de syv `selskab.html`. "Kort fortalt" og AI-udkast er med. Ingen konsolfejl. Ingen vandret scroll ved 375 px.
+
+**Push:** `lane-E` @ `acbac20` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

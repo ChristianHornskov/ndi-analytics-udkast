@@ -37,3 +37,30 @@ Begrundelse: Level-1-modellen er pædagogisk og forenklet; fysisk hardware (rack
 - **Episoder:** hver tur under en løbende all-time peak indtil ny peak (eller åben serie).
 - **Middel / median:** over episode-dybder (ikke over alle dage under vand).
 - **Fix 2026-10-15:** `maxDrawdown` sammenlignede først fraction med senere procent og underdrev max (viste ca. −21 % i stedet for ca. −35,8 % på PMINDI). Rettet til konsistente enheder.
+
+## Energi- og rumkæde: eksempler efter forretning (lane E, 2026-10-15)
+
+Gælder `docs/data/value-chains.json`, kæderne `energy` og `space`.
+
+Eksemplerne er valgt efter selskabets forretning i den forsinkede beholdning pr. 2026-06-01 (PMINDI). De er ikke de seks største vægte i temaet. `weightSum` og `count` på leddet er summen af de navngivne eksempler. Temaets samlede tal står i `themes.json` og i `treemap`.
+
+Samme selskab kan stå på to led. GE Vernova står på elproduktion og elnet. Rocket Lab står på opsendelse og satellitter. Solaris står på elproduktion og elnet.
+
+Udeladt med vilje, også når temaet hedder noget andet:
+
+- CoreWeave, Nebius og IREN ligger i energitemaet som datacentre. De er ikke kraftværker.
+- ProPetro er boreservice.
+- Merlin, Archer og Airo Group ligger i SpaceTech og er luftfart.
+- SpaceX har en profil, men indgår ikke i beholdningen pr. 2026-06-01.
+
+AI-compute-kædens første led er ikke rettet her, så det ikke støder sammen med lane A. Det led viser stadig de største vægte i energitemaet.
+
+Nye selskabsprofiler i `company-profiles.json` har ingen `reviewedAt`. Siden skal derfor blive ved med at sige AI-udkast, uden en dato for gennemgang. Kilden er selskabets egen side. Ingen kurser, afkast, P/E eller P/S.
+
+`narrative` er valgfri og vises som "Kort fortalt". Uden `reviewedAt` bliver badget stående. Fem profiler har feltet fra 2026-10-16: Starfighters Space, Oklo, Northern Dynasty, Terra Innovatum og The Metals Company. Teksten beskriver forretningen og siger, hvor der ikke er drift. Den er ikke en gennemgang fra NDI.
+
+Samme felt, samme dag, på Fluence, NextEra, Rocket Lab, Planet, NuScale, Quanta og GE Vernova. NextEra og Quanta har `themeStatus` forslag i snapshottet, og teksten siger det. NuScale-teksten gengiver selskabets eget tal, 77 MW pr. modul, og siger at en designgodkendelse ikke er et værk i drift. Neutron er ikke fløjet i beskrivelsen. NextEra-forsiden omtaler en sammenlægning med Dominion Energy. Teksten siger ikke, at den er gennemført.
+
+## År til dato på periodesiden
+
+`ytdReturn` i `data.js` bruger sidste punkt i året før som udgangspunkt, ikke 1. januar. For PMINDI pr. 2026-10-14 er det 2025-12-31, ikke 2026-01-02. `periode.html` viser den samme dato i "Fra → til". Kalenderår bruger samme base (`calendarYearReturns`).
