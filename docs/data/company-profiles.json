@@ -1241,12 +1241,22 @@
   "US5901061003": {
    "name": "Merlin",
    "theme": "space",
-   "summary": "Udvikler software og systemer, så eksisterende fly kan flyve med mindre besætning og på sigt uden pilot. Det er luftfart, ikke opsendelse af satellitter. Snapshottet har selskabet under SpaceTech.",
-   "watch": "Godkendelse af systemet til rigtige fly og kontrakter med forsvar og fragtfly.",
+   "summary": "Udvikler software til eksisterende fly. Selskabet skriver, at produktet hedder Merlin Pilot, og at et samarbejde om C-130J har autonomi som mål. Det er luftfart, ikke satellitter, og ikke Satellogics satellit af samme navn.",
+   "watch": "Om samarbejdet om C-130J bliver til drift. Selskabet står ikke som satellitoperatør.",
    "source": "https://merlinlabs.com/",
-   "products": "Autonomi til fly.",
-   "customers": "Forsvar og luftfart.",
-   "role": "Luftfart. Står ikke som eksempel på opsendelse eller satellitter."
+   "products": "Software til autonom flyvning, herunder Merlin Pilot.",
+   "customers": "Den amerikanske specialoperationskommando er nævnt som samarbejdspartner.",
+   "role": "Luftfart. Står ikke som eksempel på opsendelse eller satellitter.",
+   "narrative": [
+    "Merlin skriver, at Merlin Pilot er software til autonom flyvning, lavet så den kan tilpasses fly, der allerede er i drift. Selskabet skriver, at det samarbejder med den amerikanske specialoperationskommando om C-130J. Målet er længere rækkevidde på ruter, der flyves ofte. Det er et mål, ikke en flåde, der allerede flyver med softwaren.",
+    "Det er luftfart. Selskabet står ikke som eksempel på opsendelse eller satellitter. Navnet Merlin er også en satellit hos Satellogic. Det er et andet selskab. Snapshottet har selskabet under SpaceTech."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://merlinlabs.com/"
+    }
+   ]
   },
   "US05605H1005": {
    "name": "BWX Technologies",

@@ -95,7 +95,7 @@ Taseko skrev 9. oktober 2026, at Florence Copper er gået i kommerciel produktio
 
 SMR-leddet siger, at NuScale skriver, at et program sammen med TVA kan blive op til 6 GW, og at det er udvikling, ikke et værk i drift. Kilden er programsiden, som taler om at udvikle og idriftsætte kapacitet, ikke om et værk, der allerede kører. Ordene historic, largest og proven er ikke taget med. De øvrige SMR-navne er stadig ikke beskrevet som kommerciel drift.
 
-Konceptkortene i nyhedsarkivet er delt i korte afsnit, så grænserne kan læses hver for sig. Energikortet har sytten afsnit. Rumkortet har ti. Indholdet er det samme som på kæden. Neutron-siden sagde 16. oktober 2026 stadig, at første flyvning ligger foran. Sætningen om, at Neutron ikke er fløjet, er ikke ændret.
+Konceptkortene i nyhedsarkivet er delt i korte afsnit, så grænserne kan læses hver for sig. Energikortet har sytten afsnit. Rumkortet har elleve. Indholdet er det samme som på kæden. Neutron-siden sagde 16. oktober 2026 stadig, at første flyvning ligger foran. Sætningen om, at Neutron ikke er fløjet, er ikke ændret.
 
 MP Materials skriver, at magneter fremstilles på anlægget Independence i Texas, og at udvindingen er ved Mountain Pass. Ordene om verdens rigeste forekomst og verdens stærkeste magnet er ikke taget med. Firefly gav 403 samme nat. Eclipse er derfor ikke omskrevet.
 
@@ -160,6 +160,8 @@ Terra Innovatum skriver, at konceptet til mikroreaktoren SOLO er fra 2018. Det e
 Airo skriver, at selskabet leverer til militære, offentlige og kommercielle kunder. Siden nævner platformene RQ-35 Heidrun, RQ-70, JC250 og JX250. Navnene står under platforme. Teksten kalder dem ikke en flåde i drift og ikke satellitter. Selskabet står ikke som eksempel på opsendelse. Ordene smarter og responsive er ikke taget med. Vægtene er uændrede.
 
 United States Antimony skriver, at zeolit kommer fra minen og anlægget i Preston i Idaho, og at smelteværket for antimonoxid ligger i Thompson Falls i Montana. Siden skriver, at en ny tilladelse til minen ved Thompson Falls var usikker, og at udvindingen derfor blev lagt tilbage til Mexico. Det første gravearbejde i Alaska skal samle stibnit og er ikke skrevet som en mine i drift. Areal-tal på siden er ikke ens, og de er ikke taget med. Ordene only, sold out og one of the best er ikke taget med. En billedtekst om en sten gravet op i Montana i 2026 er ikke brugt som bevis for en mine i drift. Vægtene er uændrede.
+
+Selskabet Merlin skriver, at Merlin Pilot er software til fly, der allerede er i drift, og at et samarbejde med den amerikanske specialoperationskommando om C-130J har længere rækkevidde som mål. Det er ikke en flåde, der allerede flyver med softwaren. Navnet Merlin er også en satellit hos Satellogic. Det er et andet selskab. Beløbet 105 millioner dollars, tallet om hundredvis af timer og formuleringen om de næste 100 år er ikke taget med. Selskabet står ikke som eksempel på opsendelse. Vægtene er uændrede.
 
 ## År til dato på periodesiden
 

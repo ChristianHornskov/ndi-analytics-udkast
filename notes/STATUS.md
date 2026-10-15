@@ -829,3 +829,13 @@ Smelteværket for antimonoxid ligger i Thompson Falls i Montana. Siden skriver, 
 Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Preston står. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `d602d78` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:55 CEST. Merlin skriver, at Merlin Pilot er software til eksisterende fly. Ikke færdig.**
+
+Samarbejdet om C-130J har længere rækkevidde som mål. Det er ikke en flåde, der allerede flyver med softwaren. Navnet er ikke Satellogics satellit. Beløb og timetal på forsiden er ikke taget med. Ingen `reviewedAt`. NDI-blikket under opsendelse og arkivet siger grænsen. Selskabet står ikke i selskabslisten.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Merlin Pilot står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `114d9a6` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
