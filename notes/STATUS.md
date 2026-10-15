@@ -360,3 +360,12 @@ Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html, v
 3. **vaerdikaede.html:** Rum- og energikortet har fået linket "⚠ Hvad kan gå galt? 6 usikkerheder →".
 Tjek: Playwright på 1280 og 375 med 0 konsolfejl og ingen sidescroll. 6 kort og 16 ramte led. Deep-link, toplink og linket fra vaerdikaede lander på `#e-risk`, og strimmel-klik åbner `#lk-gen` og `#lk-materials`. Rum har stadig 6 kort. smoke.mjs 52/52 fail 0. Precheck PASSED. Grep efter handelssprog og tankestreger i diff giver 0 hits.
 Næste: rum "hvem bygger hvad" pr. højdebånd (antal pr. led), og kvante-fanen kan få et hop fra broerne til energi (kryostater og strøm). Ikke færdig.
+
+
+## Fra Claude lane-A · 2026-10-16 ~01:40 CEST (rum: højdebånd og tjek dig selv)
+Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html, vaerdikaede.html, value-chains.json og notes.
+1. **Rum: "Hvem arbejder hvor højt?"** Ny sektion ved højdeskalaen (`#sp-bands`) med fem bånd: på jorden, lavt kredsløb, mellemhøjt kredsløb, geostationær bane og Månen. Hvert bånd har en kort forklaring og led-knapper med antal selskaber pr. 1. juni 2026, der åbner leddet. Hover eller fokus på et bånd fremhæver LEO, MEO eller GEO på skalaen. Alt er mærket baggrund, og noten siger, at et led og et selskab kan høre til flere højder, og at det ikke er en rangering eller en anbefaling. Data ligger i `space.bands`.
+2. **Rum: "Tjek dig selv".** Fem spørgsmål (`#sp-quiz`) om genbrug af raketter, løbende betaling, signaltid, NDI's tal om 90 % af opsendelserne (BLOG 23. juni 2024) og rum og compute. Hvert svar giver "Rigtigt." eller "Ikke helt.", en kort forklaring og et link til det sted på siden, hvor det står. Musk nævnes kun som hans påstand og ikke som NDI's forventning. Intet gemmes. Data ligger i `space.quiz`. Læse-ruten hedder nu "Rum i otte stop", og der er et link fra rum-fanens fire trin.
+3. **vaerdikaede.html:** Rum-kortet har fået linket "✓ Tjek dig selv: 5 spørgsmål →".
+Tjek: Playwright på 1280 og 375 med 0 konsolfejl og ingen sidescroll. 5 bånd, 9 led-knapper og 8 stop. Pointtallet stemmer (2 af 5 i testen), svaret "Se leddet" åbner `#lk-space-compute`, og linket fra vaerdikaede lander på `#sp-quiz`. smoke.mjs 52/52 fail 0 (egen server på 8817). Precheck PASSED. Grep efter handelssprog og tankestreger i diff giver 0 hits.
+Næste: energi-ledkortenes blurbs kan få samme "tjek dig selv"-form (3 spørgsmål), og kvante-fanens korte side kan få krydslinks fra ordbogen til energi (kryostater og strøm). Ikke færdig.
