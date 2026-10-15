@@ -539,3 +539,13 @@ Profilen siger, at selskabet skriver, at produktionen i 2025 var 225.000 ton kob
 Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. 225.000 ton står i det første afsnit. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `53f64d1` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 00:51 CEST. Freeport nævner Cerro Verde, El Abra og Grasberg. Ikke færdig.**
+
+Profilen siger, at siden nævner Cerro Verde og El Abra i Sydamerika og Grasberg i Indonesien. Det er miner, ikke et elselskab. En ældre webcast-titel om Lone Star er ikke brugt som bevis på drift. Ingen `reviewedAt`.
+
+Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Grasberg står i det første afsnit. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `b22dc26` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

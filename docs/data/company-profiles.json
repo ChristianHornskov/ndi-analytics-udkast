@@ -1051,15 +1051,15 @@
   "US35671D8570": {
    "name": "Freeport-McMoRan",
    "theme": "energy-resources",
-   "summary": "Driver kobberminedrift, blandt andet i Amerika og Indonesien.",
+   "summary": "Driver kobberminedrift. Siden nævner Cerro Verde, El Abra og Grasberg. Det er ikke et elselskab.",
    "watch": "Drift af minerne, kobberpriser og lokale tilladelser.",
    "source": "https://www.fcx.com/",
    "products": "Kobber og andre metaller fra samme miner.",
    "customers": "Industrikunder.",
    "role": "Råstof til elnet, elektronik og byggeri.",
    "narrative": [
-    "Freeport-McMoRan udvinder kobber, blandt andet i Amerika og Indonesien.",
-    "Det er en mine i drift i denne beskrivelse. Kobberet bruges blandt andet i elnettet. Selskabet er ikke et elselskab."
+    "Freeport-McMoRan udvinder kobber. Siden nævner Cerro Verde og El Abra i Sydamerika og Grasberg i Indonesien.",
+    "Det er miner i denne beskrivelse, ikke et elselskab."
    ],
    "narrativeSources": [
     {

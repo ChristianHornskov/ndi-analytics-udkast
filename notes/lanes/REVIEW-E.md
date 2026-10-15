@@ -123,3 +123,7 @@ United States Antimony skriver selv, at de to materialer er antimon og zeolit. K
 ## Capstone · 2026-10-16 00:51 CEST
 
 225.000 ton kobber i 2025 er selskabets tal, skrevet om fra 225 k tonnes. Santo Domingo er et projekt. De fire andre navne står på siden ved produktionen. "World's" og "only" er ikke kopieret. AI-udkast uden gennemgangsdato. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Freeport · 2026-10-16 00:51 CEST
+
+Cerro Verde, El Abra og Grasberg står på siden. Lone Star er kun en gammel webcast-titel og er udeladt. AI-udkast uden gennemgangsdato. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.

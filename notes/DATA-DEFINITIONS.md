@@ -103,6 +103,8 @@ United States Antimony skriver, at selskabet udvinder og forarbejder antimon og 
 
 Capstone skriver, at produktionen i 2025 var 225 k tonnes kobber. I teksten står det som 225.000 ton. Siden nævner Mantos Blancos, Cozamin, Pinto Valley og Mantoverde. Santo Domingo er på samme side beskrevet som et projekt, ikke som en mine i drift. Ord om verdens behov og om at være den eneste er ikke taget med.
 
+Freeports side nævner Cerro Verde og El Abra under Sydamerika og Grasberg under Indonesien. Teksten kalder dem miner, ikke et elselskab. Lone Star stod kun i en ældre webcast-titel og er ikke skrevet ind som drift.
+
 ## År til dato på periodesiden
 
 `ytdReturn` i `data.js` bruger sidste punkt i året før som udgangspunkt, ikke 1. januar. For PMINDI pr. 2026-10-14 er det 2025-12-31, ikke 2026-01-02. `periode.html` viser den samme dato i "Fra → til". Kalenderår bruger samme base (`calendarYearReturns`).
