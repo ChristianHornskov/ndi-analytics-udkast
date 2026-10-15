@@ -117,6 +117,8 @@ Generac skriver, at en hjemmegenerator giver strøm under et udfald, og at selsk
 
 EQT skriver, at købet af Equitrans Midstream blev gennemført 22. juli 2024. Datoen ligger før beholdningen pr. 2026-06-01. Equitrans er beskrevet som midstream-aktiver. EQT producerer naturgas i Appalachia, og gassen står som brændsel. Ordet only, en breakeven-pris og synergibeløb er ikke taget med. Et joint venture på 3,5 milliarder er ikke taget med.
 
+Satellogic skriver, at satellitterne hedder NewSat. Forsiden sætter fuld drift af Merlin til andet halvår 2027. Datoen ligger efter beholdningen pr. 2026-06-01. Merlin er ikke beskrevet som en tjeneste i fuld drift. Produktsidens nutid om daglige skanninger er ikke brugt som bevis på fuld drift. Ord om bedste opløsning er ikke taget med. Selskabet opsender ikke selv raketterne.
+
 ## År til dato på periodesiden
 
 `ytdReturn` i `data.js` bruger sidste punkt i året før som udgangspunkt, ikke 1. januar. For PMINDI pr. 2026-10-14 er det 2025-12-31, ikke 2026-01-02. `periode.html` viser den samme dato i "Fra → til". Kalenderår bruger samme base (`calendarYearReturns`).

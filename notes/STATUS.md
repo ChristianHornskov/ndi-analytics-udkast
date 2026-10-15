@@ -609,3 +609,13 @@ Meddelelsen er dateret 22. juli 2024, før beholdningen pr. 1. juni 2026. Equitr
 Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. 22. juli 2024 står. Ingen beløb. Kæden viser sætningen. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `20f9d68` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:06 CEST. Satellogic sætter fuld drift af Merlin til andet halvår 2027. Ikke færdig.**
+
+Satellitterne hedder NewSat. Forsiden sætter fuld drift af Merlin til andet halvår 2027, efter beholdningen pr. 1. juni 2026. Merlin er ikke beskrevet som en tjeneste i fuld drift. Selskabet opsender ikke selv raketterne. Ord om bedste opløsning og realtid er ikke taget med. Ingen `reviewedAt`. Blurben under satellitkommunikation og arkivkortet siger det samme.
+
+Tjekket i Chromium. Selskabssiden ved 375 px viser AI-udkast, NewSat og Merlin. "tjekket mod kilden" er ikke med. Kæden og arkivet viser 2027. Ingen konsolfejl. Ingen vandret scroll ved 375 eller 1280 px.
+
+**Push:** `lane-E` @ `ad828d7` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

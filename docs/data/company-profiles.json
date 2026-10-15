@@ -1365,15 +1365,15 @@
   "US80401C1009": {
    "name": "Satellogic",
    "theme": "space",
-   "summary": "Driver satellitter, der tager billeder af Jorden.",
+   "summary": "Driver satellitter, der tager billeder af Jorden. Satellitterne hedder NewSat. Forsiden sætter fuld drift af Merlin til andet halvår 2027.",
    "watch": "Satellitternes drift og kundernes brug af billederne.",
    "source": "https://satellogic.com/",
-   "products": "Billeder og data fra satellitter.",
+   "products": "Billeder fra satellitterne NewSat. Merlin er ikke i fuld drift i denne tekst.",
    "customers": "Offentlige og private kunder, der skal se Jorden ovenfra.",
    "role": "Satellittjeneste, ikke en raket.",
    "narrative": [
-    "Satellogic driver satellitter, der tager billeder af Jorden. Satellitterne hedder NewSat.",
-    "Selskabet opsender ikke selv raketterne i denne beskrivelse. Det står på satellitter."
+    "Satellogic driver satellitter, der tager billeder af Jorden. Satellitterne hedder NewSat. Forsiden sætter fuld drift af Merlin til andet halvår 2027.",
+    "Andet halvår 2027 ligger efter beholdningen pr. 1. juni 2026. Merlin er ikke beskrevet som en tjeneste i fuld drift. Selskabet opsender ikke selv raketterne i denne beskrivelse."
    ],
    "narrativeSources": [
     {
