@@ -506,3 +506,30 @@ Ikke juridisk rådgivning. Pages = `3103bf8`. Jeg har grep'et renderet tekst på
 
 ### OK ✅
 - Beholdning pr. 1. jun. 2026 overalt (top-10: "Eksponering, ikke anbefaling"). Ingen 1m/3m på PMINDI. Intet benchmark-claim. PMINDIAKK: "Afkast vises først med 12 måneders historik" på udbytte-vs-akk ✅. AI-udkast er mærket. Drawdown har "Historisk afkast …" og "kan tabe" ✅.
+
+## 2026-10-16 01:35 CEST · cyklus 20 (main `a664f4f`, delta)
+
+Ikke juridisk rådgivning. Pages = `75a87c2`. Jeg har grep'et renderet tekst på 21 live-sider ×2 og 3 selskabssider. Det eneste docs-delta er `docs/selskab.html` (summary-empty-state).
+
+### MUST (åbne, uændrede tal)
+1. Ingen "markedsføring"-mærkning (0 hits som mærkning; ndi-perspektiv har 1 hit i brødtekst).
+2. "MADS FØLGER": ndi-paa-x ×10, SoftBank ×3, TSMC ×2. Gør mærket neutralt eller fjern det.
+3. "kan tabe" er stadig 0 på **ndi-paa-x, omkostninger og nyhedsarkiv**. ndi-paa-x har også 0 "Historisk afkast".
+4. PMINDIAKK NAV 98,40 på sammenlign før 12 mdr. NDI skal afklare.
+5. ÅTD / +104,8 % ved siden af "afventer Fundmarket-godkendelse".
+6. SRI 5 mod vol 32,46 % (risici og fakta) mod laer/risikoklasse "20–30 %".
+7. `chartMarkers` @MadsC007 i afkastgrafen.
+
+### Nyt i denne cyklus
+- **Selskab-empty-state:** "Beskrivelse mangler" er erstattet med en neutral tekst ✅, og "Generel information. Ikke en anbefaling." står der stadig ✅. **Men AI-mærkningen er nu forkert den anden vej:** "AI-udkast" og "kort beskrivelse genereret med AI" vises over et felt *uden* AI-tekst (TSMC, Lumentum). Mærkningen skal følge indholdet. SHOULD+, fordi det undergraver troværdigheden af AI-mærkningen, som er et krav.
+- Hvis linsens "Hvad ejer man?"-tekst bruges som fallback (se UX), skal den beholde sit eget AI-udkast-mærke og sin kilde.
+
+### SHOULD (uændret)
+- Intet samlet KID-omkostningstal (persona/FO-MUST, når NDI har tallet). Omkostninger siger ærligt "ikke et ÅOP" ✅.
+- KID-link mangler i renderet tekst (0 hits) på drawdown, værdikæder, temaer, nyhedsarkiv, selskaber, ndi-perspektiv og periode. "BREAKING:" ×2 på ndi-paa-x og SoftBank. Det gamle @CHornskov-opslag ("Begge er også i $PMINDI") bør dateres. Idéer «To klasser» udelader omkostningsforskellen.
+
+### Rådgivningsord ✅
+- Garanter, "køb nu", "øger eksponering", "bedste tip" og "sikker gevinst": 0. "anbefal…" står kun i negationer ("ikke en anbefaling") på invester og om-data. "overvægt" står kun i negationer (værdikæder ×2, temaer, risici).
+
+### OK ✅
+- Beholdning pr. 1. jun. 2026 (forsinket) på selskab og top-10. Ingen 1m/3m på PMINDI. Intet benchmark-claim. Drawdown og fakta har "Historisk afkast …" + "kan tabe". AI-udkast er mærket (se dog ovenfor).

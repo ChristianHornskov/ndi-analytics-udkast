@@ -441,3 +441,29 @@ Pages er bygget fra `3103bf8` (last-modified 23:27 UTC). Jeg har kørt Playwrigh
 
 ### OK
 - Entréen er uændret (2.804 tegn). Om-data folder sig sammen på 375 (1.245 tegn). Top-10 på portefølje: "pr. 1. jun. 2026 · forsinket snapshot. Eksponering, ikke anbefaling" ✅.
+
+## 2026-10-16 01:35 CEST · cyklus 20 (main `a664f4f`, delta: `75a87c2` selskab-empty-state)
+
+Pages er bygget fra `75a87c2` (last-modified 23:28 UTC). Jeg har kørt Playwright på 21 live-sider ved 375 og 1280 med scroll, plus 3 selskabssider (SoftBank, TSMC, Lumentum) via `?isin=`. Resultat: 0 konsolfejl, 0 h-overflow og én h1 overalt. Tegntallene er de samme som i cyklus 19, så kun selskab er ændret.
+
+### Rettet ✅ (delvist)
+- **"Beskrivelse mangler i udkastet" er væk** (0 hits). Det nye empty-state lyder "Profiltekst mangler endnu for dette selskab (NDI-linse kan stadig findes nedenfor)." Det er ærligt og peger videre. Linsen findes også nedenfor på TSMC ✅.
+
+### MUST
+- **Empty-state er stadig mærket som AI.** På TSMC og Lumentum står "AI-udkast"-badget på overskriften "Hvilket problem løser det?", og under den står "Udkast: kort beskrivelse genereret med AI og ikke gennemgået af NDI". Men der er ingen beskrivelse. Det mærker tomrum som AI-indhold, og det forvirrer. Vis `AI_BADGE` og `AI_NOTE` kun, når `f('summary')` findes.
+- **Stubs findes stadig længere nede:** "Rolle i værdikæden – / Produkter – / Kunder –" på TSMC og Lumentum. 252 af 347 ISIN'er i portfolio.json har ingen profil. Skjul felter med "–", eller fold dem ind i én linje: "Profil kommer".
+- **Fallback findes allerede i data:** TSMC's linse har "Hvad ejer man? Kontraktfremstilling af chips · Verdens største chipfabrik på kontrakt …". Den tekst kan bruges som kort beskrivelse (med "fra NDI-linsen"), så siden ikke åbner med et tomt felt. Lille ændring, stor effekt for TSMC/Nvidia-klassen.
+- SRI 5 mod vol 32,46 % er uændret (se compliance).
+
+### SHOULD
+- TSMC: h1 er stadig "Taiwan Semi Sp ADR", mens unique-metrics siger "Taiwan Semiconductor (TSMC)". Brug det pæne navn i h1 og behold ticker/ADR som undertitel.
+- TSMC: "Foundry : chips-produktion." har et mellemrum før kolon (fra multi-tags.json).
+- Uændret fra cyklus 19: idéer «To klasser» (345/320 selskaber, omkostningsforskel, "intet tema"). ndi-perspektiv er ca. 192.000 tegn med 53 × "afventer". ndi-paa-x har "MADS FØLGER" ×10 og "BREAKING" ×2 (SoftBank: 3 / 2). Drawdown-formuleringen, nyhedsarkivets "Placeholder" og idéernes indholdsfortegnelse er også uændrede.
+
+### Persona-linser
+- **Privat:** det nye empty-state er venligere end "mangler i udkastet", men når en investor klikker på TSMC (et kendt navn), skal der stå *noget* øverst. Brug linse-fallback.
+- **Familiekontor:** et AI-mærke på tomt indhold svækker tilliden til mærkningen generelt. Ret det før demo.
+- **Visuel variation:** uændret, ingen ny træthed.
+
+### OK
+- Entré 2.804 tegn. Om-data folder sig sammen på 375 (1.245 tegn). Top-10: "pr. 1. jun. 2026 · forsinket snapshot" ✅. SoftBank-profilen har kilde + "tjekket mod kilden 12. okt. 2026" ✅.
