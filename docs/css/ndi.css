@@ -703,3 +703,24 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
   .year-rail .yr-mark{color:#333}
   .year-rail a.yr-deep{border-top-color:#111}
 }
+
+/* UX-inspiration top5: tabular nums + calm motion + as-of */
+.metric strong, table.data td, table.data th, .chart-readout, .chart-takeaway, .kpi strong {
+  font-variant-numeric: tabular-nums;
+}
+.control, .outline-btn, .cta, .tag, .door, .filters .control, .chips .chip {
+  transition: background-color 180ms ease-out, border-color 180ms ease-out, color 180ms ease-out, opacity 180ms ease-out;
+}
+.panel, .chart-wrap, .table-wrap {
+  transition: opacity 200ms ease-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .control, .outline-btn, .cta, .tag, .door, .filters .control, .chips .chip,
+  .panel, .chart-wrap, .table-wrap { transition: none !important; }
+}
+.src, .asof { color: var(--muted); font-size: 12px; line-height: 1.45; }
+.empty-state, .stale-state {
+  border: 1px dashed color-mix(in srgb, var(--muted) 50%, transparent);
+  background: color-mix(in srgb, var(--panel, #121820) 80%, transparent);
+  padding: 14px 16px; border-radius: 10px; color: var(--muted); line-height: 1.5;
+}

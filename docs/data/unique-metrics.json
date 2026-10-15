@@ -19,7 +19,7 @@
           "label": "Plads i værdikæden",
           "value": "Energi led 4 + robotik led 3",
           "hint": "Energilagring (Energi-kæden, led 4) og køretøjer/robotik (Robotik-kæden, led 3). Placeringen er pædagogisk; Tesla bygger ikke datacentre.",
-          "href": "vaerdikaede.html?isin=US88160R1014#kap-kaeder"
+          "href": "vaerdikaede.html?isin=US88160R1014"
         },
         {
           "label": "Hold øje med",
@@ -53,7 +53,7 @@
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 3: chipdesign",
           "hint": "Designer chips og systemer til store, parallelle beregninger.",
-          "href": "vaerdikaede.html?isin=US67066G1040#kap-kaeder"
+          "href": "vaerdikaede.html?isin=US67066G1040"
         },
         {
           "label": "Hold øje med",
@@ -121,7 +121,7 @@
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 9 og led 12",
           "hint": "Udvikler AI-modeller (led 9) og driver forbrugerplatforme (led 12). Bruger selv omfattende datacenterinfrastruktur.",
-          "href": "vaerdikaede.html?isin=US30303M1027#kap-kaeder"
+          "href": "vaerdikaede.html?isin=US30303M1027"
         },
         {
           "label": "Hold øje med",
@@ -155,7 +155,7 @@
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 7: optik og netværk",
           "hint": "Mellem chips og optik: forbindelser, der flytter data som lys. Placeringen er pædagogisk.",
-          "href": "vaerdikaede.html?isin=CA73044W3021#kap-kaeder"
+          "href": "vaerdikaede.html?isin=CA73044W3021"
         },
         {
           "label": "Hold øje med",
@@ -189,7 +189,7 @@
           "label": "Plads i værdikæden",
           "value": "Energi-kæden · led 4: lagring",
           "hint": "Lagring gør sol og vind mere brugbart og kan aflaste elnettet. Placeringen er pædagogisk.",
-          "href": "vaerdikaede.html?isin=US34379V1035#kap-kaeder"
+          "href": "vaerdikaede.html?isin=US34379V1035"
         },
         {
           "label": "Hold øje med",
@@ -223,7 +223,7 @@
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 12: forbrugerenheder",
           "hint": "Der hvor AI møder brugeren på enheden. Apple designer også egne chips (led 3). Placeringen er pædagogisk.",
-          "href": "vaerdikaede.html?isin=US0378331005#kap-kaeder"
+          "href": "vaerdikaede.html?isin=US0378331005"
         },
         {
           "label": "Hold øje med",
@@ -257,7 +257,7 @@
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 3: chipdesign",
           "hint": "Designer chips og får dem produceret hos eksterne fabrikker. Placeringen er pædagogisk.",
-          "href": "vaerdikaede.html?isin=US0079031078#kap-kaeder"
+          "href": "vaerdikaede.html?isin=US0079031078"
         },
         {
           "label": "Hold øje med",
@@ -291,7 +291,7 @@
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 7: optik og netværk",
           "hint": "Forbinder chips i datacentre. Kundetilpassede chips placerer den også i led 3. Placeringen er pædagogisk.",
-          "href": "vaerdikaede.html?isin=US11135F1012#kap-kaeder"
+          "href": "vaerdikaede.html?isin=US11135F1012"
         },
         {
           "label": "Hold øje med",
@@ -461,7 +461,7 @@
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 3: chipdesign",
           "hint": "Arkitekturen under mange CPU’er i telefoner, servere og biler. Placeringen er pædagogisk.",
-          "href": "vaerdikaeder.html?isin=US0420682058#kap-kaeder"
+          "href": "vaerdikaede.html?isin=US0420682058"
         },
         {
           "label": "Hold øje med",
@@ -495,7 +495,7 @@
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 12: forbrugerapps",
           "hint": "Der hvor digitale tjenester møder forbrugeren. Sea bygger ikke selv compute-infrastruktur. Placeringen er pædagogisk.",
-          "href": "vaerdikaede.html?isin=US81141R1005#kap-kaeder"
+          "href": "vaerdikaede.html?isin=US81141R1005"
         },
         {
           "label": "Hold øje med",
@@ -563,7 +563,7 @@
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 7: optik og netværk",
           "hint": "Data skal flyttes hurtigt mellem mange chips. Optik er en af de fysiske flaskehalse. Placeringen er pædagogisk.",
-          "href": "vaerdikaede.html?isin=US55024U1097#kap-kaeder"
+          "href": "vaerdikaede.html?isin=US55024U1097"
         },
         {
           "label": "Hold øje med",
@@ -597,7 +597,7 @@
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 3: chipdesign",
           "hint": "En lille, men nødvendig komponent i servere, netværk, biler og forbrugerelektronik. Placeringen er pædagogisk.",
-          "href": "vaerdikaede.html?isin=US82982T1060#kap-kaeder"
+          "href": "vaerdikaede.html?isin=US82982T1060"
         },
         {
           "label": "Hold øje med",
@@ -631,7 +631,7 @@
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 11: software",
           "hint": "Software, som AI både kan styrke (værktøjer) og udfordre (nye måder at bygge sider på). Placeringen er pædagogisk.",
-          "href": "vaerdikaede.html?isin=IL0011301780#kap-kaeder"
+          "href": "vaerdikaede.html?isin=IL0011301780"
         },
         {
           "label": "Hold øje med",
@@ -665,7 +665,7 @@
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 7: optik og netværk",
           "hint": "Data skal flyttes både trådløst og gennem fibre; Sivers leverer komponenter til begge. Placeringen er pædagogisk.",
-          "href": "vaerdikaede.html?isin=SE0003917798#kap-kaeder"
+          "href": "vaerdikaede.html?isin=SE0003917798"
         },
         {
           "label": "Hold øje med",
@@ -699,7 +699,7 @@
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 12: forbrugerapps",
           "hint": "Der hvor digitale tjenester møder forbrugeren. Placeringen er pædagogisk.",
-          "href": "vaerdikaede.html?isin=US58733R1023#kap-kaeder"
+          "href": "vaerdikaede.html?isin=US58733R1023"
         },
         {
           "label": "Hold øje med",
@@ -733,7 +733,7 @@
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 9: cloud",
           "hint": "Lejer compute ud. Afhænger af strøm og datacentre længere oppe i kæden; derfor også energi-tag. Placeringen er pædagogisk.",
-          "href": "vaerdikaede.html?isin=US21873S1087#kap-kaeder"
+          "href": "vaerdikaede.html?isin=US21873S1087"
         },
         {
           "label": "Hold øje med",
@@ -801,7 +801,7 @@
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 4: udstyr og materialer",
           "hint": "Materialelaget før chipfabrikken. Substratets egenskaber påvirker den færdige chip. Placeringen er pædagogisk.",
-          "href": "vaerdikaede.html?isin=FR0013227113#kap-kaeder"
+          "href": "vaerdikaede.html?isin=FR0013227113"
         },
         {
           "label": "Hold øje med",
@@ -835,7 +835,7 @@
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 2: datacentre",
           "hint": "Strøm og bygninger, der kan blive til compute. Temaet er Software, men rollen er fysisk infrastruktur. Placeringen er pædagogisk.",
-          "href": "vaerdikaede.html?isin=US17253J1060#kap-kaeder"
+          "href": "vaerdikaede.html?isin=US17253J1060"
         },
         {
           "label": "Hold øje med",
@@ -869,7 +869,7 @@
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 11: software",
           "hint": "Der hvor AI-modeller bliver til arbejdsgange i virksomheder og offentlige organisationer. Placeringen er pædagogisk.",
-          "href": "vaerdikaede.html?isin=US69608A1088#kap-kaeder"
+          "href": "vaerdikaede.html?isin=US69608A1088"
         },
         {
           "label": "Hold øje med",
@@ -903,7 +903,7 @@
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 6: hukommelse",
           "hint": "AI-chips skal have data tæt på. Hukommelse er blevet en af flaskehalsene. Placeringen er pædagogisk.",
-          "href": "vaerdikaede.html?isin=US78392B1070#kap-kaeder"
+          "href": "vaerdikaede.html?isin=US78392B1070"
         },
         {
           "label": "Hold øje med",
@@ -937,7 +937,7 @@
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 5 og led 6",
           "hint": "Både foundry (led 5) og hukommelse (led 6). Koncernen sælger også telefoner og skærme. Placeringen er pædagogisk.",
-          "href": "vaerdikaede.html?isin=US7960508882#kap-kaeder"
+          "href": "vaerdikaede.html?isin=US7960508882"
         },
         {
           "label": "Hold øje med",
@@ -971,7 +971,7 @@
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 4: udstyr",
           "hint": "Produktionsudstyr. Indpakning af chips er ét af flere anvendelsesområder. Placeringen er pædagogisk.",
-          "href": "vaerdikaede.html?isin=DE0006450000#kap-kaeder"
+          "href": "vaerdikaede.html?isin=DE0006450000"
         },
         {
           "label": "Hold øje med",
@@ -1005,7 +1005,7 @@
           "label": "Plads i værdikæden",
           "value": "Energi-kæden · led 1: elproduktion",
           "hint": "Den fysiske energiinfrastruktur, som datacentre og industri afhænger af. Placeringen er pædagogisk.",
-          "href": "vaerdikaede.html?isin=US05614L2097#kap-kaeder"
+          "href": "vaerdikaede.html?isin=US05614L2097"
         },
         {
           "label": "Hold øje med",
@@ -1039,7 +1039,7 @@
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 10: data",
           "hint": "Menneskeskabt indhold er også data, som AI-modeller kan trænes på. Placeringen er pædagogisk.",
-          "href": "vaerdikaede.html?isin=US75734B1008#kap-kaeder"
+          "href": "vaerdikaede.html?isin=US75734B1008"
         },
         {
           "label": "Hold øje med",
@@ -1107,7 +1107,7 @@
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 5: foundry",
           "hint": "Fabrikken, der omsætter kunders chipdesign til fysiske chips. Placeringen er pædagogisk.",
-          "href": "vaerdikaede.html?isin=KYG393871085#kap-kaeder"
+          "href": "vaerdikaede.html?isin=KYG393871085"
         },
         {
           "label": "Hold øje med",
@@ -1141,7 +1141,7 @@
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 5: foundry",
           "hint": "Fabrikken bag andres design. Blandt andet chips til optiske forbindelser. Placeringen er pædagogisk.",
-          "href": "vaerdikaede.html?isin=IL0010823792#kap-kaeder"
+          "href": "vaerdikaede.html?isin=IL0010823792"
         },
         {
           "label": "Hold øje med",
@@ -1175,7 +1175,7 @@
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 11: software",
           "hint": "Algoritmer og data bruges til at matche annoncer og målgrupper. Placeringen er pædagogisk.",
-          "href": "vaerdikaede.html?isin=US03831W1080#kap-kaeder"
+          "href": "vaerdikaede.html?isin=US03831W1080"
         },
         {
           "label": "Hold øje med",
@@ -1277,7 +1277,7 @@
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 12: forbrugerapps",
           "hint": "En forbrugerapp i toppen af stakken, hvor brugerne møder teknologien. Placeringen er pædagogisk.",
-          "href": "vaerdikaeder.html?isin=US12047B1052#kap-kaeder"
+          "href": "vaerdikaede.html?isin=US12047B1052"
         },
         {
           "label": "Hold øje med",
@@ -1311,7 +1311,7 @@
           "label": "Plads i værdikæden",
           "value": "Robotik-kæden · led 1: komponenter",
           "hint": "Sensorer og lyskilder er komponenter i biler, maskiner og robotter. Placeringen er pædagogisk.",
-          "href": "vaerdikaeder.html?isin=AT0000A3EPA4#kap-kaeder"
+          "href": "vaerdikaede.html?isin=AT0000A3EPA4"
         },
         {
           "label": "Hold øje med",
@@ -1345,7 +1345,7 @@
           "label": "Plads i værdikæden",
           "value": "Energi-kæden · led 1: elproduktion",
           "hint": "Solceller omdanner sollys til strøm. Placeringen er pædagogisk.",
-          "href": "vaerdikaeder.html?isin=US35834F1049#kap-kaeder"
+          "href": "vaerdikaede.html?isin=US35834F1049"
         },
         {
           "label": "Hold øje med",
@@ -1379,7 +1379,7 @@
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 9: cloud",
           "hint": "Infrastrukturlaget mellem AI-modellerne og de computere, der kører dem. Placeringen er pædagogisk.",
-          "href": "vaerdikaeder.html?isin=NL0009805522#kap-kaeder"
+          "href": "vaerdikaede.html?isin=NL0009805522"
         },
         {
           "label": "Hold øje med",
@@ -1413,7 +1413,7 @@
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 2: datacentre",
           "hint": "Kombinerer elektricitet, datacentre og computere som fysisk beregningsinfrastruktur. Placeringen er pædagogisk.",
-          "href": "vaerdikaeder.html?isin=AU0000185993#kap-kaeder"
+          "href": "vaerdikaede.html?isin=AU0000185993"
         },
         {
           "label": "Hold øje med",
@@ -1447,7 +1447,7 @@
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 7: optik og netværk",
           "hint": "Data skal flyttes hurtigt mellem mange chips. Optik er en af de fysiske flaskehalse. Placeringen er pædagogisk.",
-          "href": "vaerdikaeder.html?isin=US03823U1025#kap-kaeder"
+          "href": "vaerdikaede.html?isin=US03823U1025"
         },
         {
           "label": "Hold øje med",
@@ -1481,7 +1481,7 @@
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 3: chipdesign",
           "hint": "En alternativ computerarkitektur til store AI-beregninger, ved siden af GPU’er. Placeringen er pædagogisk.",
-          "href": "vaerdikaeder.html?isin=US15675D1037#kap-kaeder"
+          "href": "vaerdikaede.html?isin=US15675D1037"
         },
         {
           "label": "Hold øje med",
@@ -1515,7 +1515,7 @@
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 12: forbrugerapps",
           "hint": "En forbrugerplatform i toppen af stakken. Placeringen er pædagogisk.",
-          "href": "vaerdikaeder.html?isin=US7710491033#kap-kaeder"
+          "href": "vaerdikaede.html?isin=US7710491033"
         },
         {
           "label": "Hold øje med",
@@ -1549,7 +1549,7 @@
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 4: udstyr",
           "hint": "Avanceret pakning er en flaskehals for AI-chips med meget hukommelse. Placeringen er pædagogisk.",
-          "href": "vaerdikaeder.html?isin=DE000A1K0235#kap-kaeder"
+          "href": "vaerdikaede.html?isin=DE000A1K0235"
         },
         {
           "label": "Hold øje med",
@@ -1617,7 +1617,7 @@
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 7: optik og netværk",
           "hint": "Fysiske forbindelser mellem udstyr i datacentre og net. Placeringen er pædagogisk.",
-          "href": "vaerdikaeder.html?isin=CH0030380734#kap-kaeder"
+          "href": "vaerdikaede.html?isin=CH0030380734"
         },
         {
           "label": "Hold øje med",
@@ -1651,7 +1651,7 @@
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 4: udstyr",
           "hint": "Test er et led i chipproduktionen, før chips pakkes og sendes videre. Placeringen er pædagogisk.",
-          "href": "vaerdikaeder.html?isin=US3463751087#kap-kaeder"
+          "href": "vaerdikaede.html?isin=US3463751087"
         },
         {
           "label": "Hold øje med",
@@ -1685,7 +1685,7 @@
           "label": "Plads i værdikæden",
           "value": "Energi-kæden · led 2: atomkraft og SMR",
           "hint": "Brændsel til atomkraft; ligger mellem råstofferne (led 5) og reaktorerne (led 2). Placeringen er pædagogisk.",
-          "href": "vaerdikaeder.html?isin=US15643U1043#kap-kaeder"
+          "href": "vaerdikaede.html?isin=US15643U1043"
         },
         {
           "label": "Hold øje med",
@@ -1719,7 +1719,7 @@
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 7: optik og netværk",
           "hint": "Fiber og kabler er den fysiske vej, data rejser ad. Placeringen er pædagogisk.",
-          "href": "vaerdikaeder.html?isin=US2193501051#kap-kaeder"
+          "href": "vaerdikaede.html?isin=US2193501051"
         },
         {
           "label": "Hold øje med",
@@ -1753,7 +1753,7 @@
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 4: udstyr og materialer",
           "hint": "Materialer, som chip- og laserproducenter bygger videre på. Placeringen er pædagogisk.",
-          "href": "vaerdikaeder.html?isin=GB0009619924#kap-kaeder"
+          "href": "vaerdikaede.html?isin=GB0009619924"
         },
         {
           "label": "Hold øje med",
@@ -1787,7 +1787,7 @@
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 12: forbrugerapps",
           "hint": "En forbrugerapp i toppen af stakken; samarbejder om robotaxier kobler den til fysisk AI (led 13). Placeringen er pædagogisk.",
-          "href": "vaerdikaeder.html?isin=US90353T1007#kap-kaeder"
+          "href": "vaerdikaede.html?isin=US90353T1007"
         },
         {
           "label": "Hold øje med",
@@ -1821,7 +1821,7 @@
           "label": "Plads i værdikæden",
           "value": "Energi-kæden · led 1: elproduktion",
           "hint": "Strøm er den første flaskehals for datacentre og elektrificering. Placeringen er pædagogisk.",
-          "href": "vaerdikaeder.html?isin=US65339F1012#kap-kaeder"
+          "href": "vaerdikaede.html?isin=US65339F1012"
         },
         {
           "label": "Hold øje med",
@@ -1855,7 +1855,7 @@
           "label": "Plads i værdikæden",
           "value": "Energi-kæden · led 2: atomkraft og SMR",
           "hint": "Kernen er nuklear teknologi; rumprojekterne er grunden til SpaceTech-tagget. Placeringen er pædagogisk.",
-          "href": "vaerdikaeder.html?isin=US05605H1005#kap-kaeder"
+          "href": "vaerdikaede.html?isin=US05605H1005"
         },
         {
           "label": "Hold øje med",
@@ -1889,7 +1889,7 @@
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 7: optik og netværk",
           "hint": "Chips, der driver de optiske forbindelser mellem servere. Placeringen er pædagogisk.",
-          "href": "vaerdikaeder.html?isin=US8168501018#kap-kaeder"
+          "href": "vaerdikaede.html?isin=US8168501018"
         },
         {
           "label": "Hold øje med",
@@ -1923,7 +1923,7 @@
           "label": "Plads i værdikæden",
           "value": "Robotik-kæden · led 3: køretøjer",
           "hint": "Køretøjer er den fysiske platform for autonomi; Ford placeres her som bilproducent, ikke som robotselskab. Placeringen er pædagogisk.",
-          "href": "vaerdikaeder.html?isin=US3453708600#kap-kaeder"
+          "href": "vaerdikaede.html?isin=US3453708600"
         },
         {
           "label": "Hold øje med",
@@ -1957,7 +1957,7 @@
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 7: optik og netværk",
           "hint": "Et materialebud på hurtigere og mere energieffektive optiske forbindelser. Placeringen er pædagogisk.",
-          "href": "vaerdikaeder.html?isin=US5322751042#kap-kaeder"
+          "href": "vaerdikaede.html?isin=US5322751042"
         },
         {
           "label": "Hold øje med",
@@ -1991,7 +1991,7 @@
           "label": "Plads i værdikæden",
           "value": "Energi-kæden · led 1: elproduktion",
           "hint": "Naturgas er brændsel til gaskraftværker, som leverer strøm til blandt andet datacentre. Selskabet producerer gassen, ikke strømmen. Placeringen er pædagogisk.",
-          "href": "vaerdikaeder.html?isin=US2057683029#kap-kaeder"
+          "href": "vaerdikaede.html?isin=US2057683029"
         },
         {
           "label": "Hold øje med",
@@ -2025,7 +2025,7 @@
           "label": "Plads i værdikæden",
           "value": "Energi-kæden · led 1: elproduktion",
           "hint": "Naturgas er brændsel til gaskraftværker, som leverer strøm til blandt andet datacentre. Selskabet producerer gassen, ikke strømmen. Placeringen er pædagogisk.",
-          "href": "vaerdikaeder.html?isin=US26884L1098#kap-kaeder"
+          "href": "vaerdikaede.html?isin=US26884L1098"
         },
         {
           "label": "Hold øje med",
@@ -2059,7 +2059,7 @@
           "label": "Plads i værdikæden",
           "value": "Energi-kæden · led 1: elproduktion",
           "hint": "Naturgas er brændsel til gaskraftværker, som leverer strøm til blandt andet datacentre. Selskabet producerer gassen, ikke strømmen. Placeringen er pædagogisk.",
-          "href": "vaerdikaeder.html?isin=US03674X1063#kap-kaeder"
+          "href": "vaerdikaede.html?isin=US03674X1063"
         },
         {
           "label": "Hold øje med",
@@ -2093,7 +2093,7 @@
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 2: datacentre",
           "hint": "Projekterer anlæg som datacentre og fabrikker; ejer ikke selv anlæggene. Placeringen er pædagogisk.",
-          "href": "vaerdikaeder.html?isin=US46982L1089#kap-kaeder"
+          "href": "vaerdikaede.html?isin=US46982L1089"
         },
         {
           "label": "Hold øje med",
@@ -2195,7 +2195,7 @@
           "label": "Plads i værdikæden",
           "value": "Energi-kæden · led 5: kritiske råstoffer",
           "hint": "Råstoffer, som elektrificering og forsvar afhænger af, og hvor forsyningen er koncentreret få steder. Placeringen er pædagogisk.",
-          "href": "vaerdikaeder.html?isin=US9115491030#kap-kaeder"
+          "href": "vaerdikaede.html?isin=US9115491030"
         },
         {
           "label": "Hold øje med",

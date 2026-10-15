@@ -6,17 +6,18 @@
   "volatilityAnnPct": 32.46,
   "sharpeRf0": 0.89,
   "maxDrawdownPct": -35.82,
-  "maxDdPeak": "2026-06-02",
+  "maxDdPeak": "2025-02-18",
   "maxDdTrough": "2025-04-08",
   "officialVolSharpe": "udfyldes af NDI",
   "officialVolSharpeNote": "Volatilitet/Sharpe ikke fundet som officielle tal på Fundmarket-produktsiden ved opslag 15. okt. 2026.",
   "classification": {
     "positions": 345,
-    "themeForslag": 115,
-    "andetCount": 67,
-    "andetWeight": 11.61,
-    "maturityClassified": 0,
+    "themeForslag": 116,
+    "andetCount": 63,
+    "andetWeight": 10.97,
+    "maturityClassified": 345,
     "coverageMeta": 96.59,
-    "coverageMetaNote": "fund-meta.classificationCoverage (tema-dækning, ikke modenhed)."
+    "coverageMetaNote": "Tema-metadækning; modenhed er forslag (maturityStatus=forslag), ikke manuel NDI-rating.",
+    "maturityForslag": 345
   }
 }

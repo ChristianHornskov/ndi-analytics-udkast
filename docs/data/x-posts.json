@@ -56,7 +56,7 @@
       "id": "2072602813142630625",
       "username": "InvestNewdeal",
       "name": "NewDeal Invest",
-      "text": "Performance opdatering efter Q2 2026 — fonde NewDeal Invest rådgiver (totalafkast).",
+      "text": "Performance-opdatering efter Q2 2026 — offentlige totalafkasttal for NewDeal Invest-fondene (Fundmarket).",
       "created_at": "2026-07-02T08:46:32.000Z",
       "url": "https://x.com/InvestNewdeal/status/2072602813142630625",
       "tags": [
@@ -65,7 +65,8 @@
       "tickers": [
         "PMINDI"
       ],
-      "label": "Udvalgte offentlige opslag — ikke NDI's holdning"
+      "label": "Udvalgte offentlige opslag — ikke NDI's holdning",
+      "complianceNote": "Omskrevet i snapshot: undgår \"rådgiver\"-formulering på grafmarkør."
     },
     {
       "id": "2028884313425506598",
@@ -499,7 +500,7 @@
     {
       "d": "2026-10-15",
       "title": "X · @FundaAI",
-      "text": "$ORCL and $CRWV face a repricing of credit risk, along with SoftBank in Japan. Higher credit risk premiums → potentially higher costs on new",
+      "text": "$ORCL and $CRWV face a repricing of credit risk, along with SoftBank in Japan. Higher credit risk premiums → potentially",
       "url": "https://x.com/FundaAI/status/2110628812753158432",
       "kind": "x",
       "source": "X (udvalgt offentligt opslag — ikke NDI’s holdning)"
@@ -507,7 +508,7 @@
     {
       "d": "2026-10-14",
       "title": "X · @MadsC007",
-      "text": "Believing that we can compete by simply using AI, without producing the chips ourselves… is incredibly naive. Europe needs to make the full…",
+      "text": "Believing that we can compete by simply using AI, without producing the chips ourselves… is incredibly naive. Europe nee",
       "url": "https://x.com/MadsC007/status/2110388749947261403",
       "kind": "x",
       "source": "X (udvalgt offentligt opslag — ikke NDI’s holdning)"
@@ -523,7 +524,7 @@
     {
       "d": "2026-10-12",
       "title": "X · @jesper_baek",
-      "text": "Teslas succes er bevis… Det lykkedes ikke at gøre elbilen til allemandseje, fordi den var grøn - men fordi de lavede den bedste bil.",
+      "text": "Teslas succes er bevis… Det lykkedes ikke at gøre elbilen til allemandseje, fordi den var grøn - men fordi de lavede den",
       "url": "https://x.com/jesper_baek/status/2109729412589523271",
       "kind": "x",
       "source": "X (udvalgt offentligt opslag — ikke NDI’s holdning)"
@@ -531,7 +532,7 @@
     {
       "d": "2026-10-11",
       "title": "X · @MilkRoadAI",
-      "text": "Jensen Huang committed $1B to put AI in the hands of America’s scientists (Genesis Mission). Nvidia gave the most at $1B among 11 companies ",
+      "text": "Jensen Huang committed $1B to put AI in the hands of America’s scientists (Genesis Mission). Nvidia gave the most at $1B",
       "url": "https://x.com/MilkRoadAI/status/2109335734767571448",
       "kind": "x",
       "source": "X (udvalgt offentligt opslag — ikke NDI’s holdning)"
@@ -539,7 +540,7 @@
     {
       "d": "2026-10-10",
       "title": "X · @BullTheoryio",
-      "text": "SoftBank is seeking to raise up to $100 billion from Gulf investors to expand its AI investments. SoftBank has already invested $64.6 billion in OpenAI.",
+      "text": "BREAKING: SoftBank is seeking to raise up to $100 billion from Gulf investors to expand its AI investments. SoftBank has",
       "url": "https://x.com/BullTheoryio/status/2108845669687640090",
       "kind": "x",
       "source": "X (udvalgt offentligt opslag — ikke NDI’s holdning)"
@@ -555,7 +556,7 @@
     {
       "d": "2026-09-28",
       "title": "X · @BullTheoryio",
-      "text": "Nvidia launches AI safety tools that can stop AI agents from carrying out cyberattacks. Jensen Huang says this is an engineering…",
+      "text": "Nvidia launches AI safety tools that can stop AI agents from carrying out cyberattacks. Jensen Huang says this is an eng",
       "url": "https://x.com/BullTheoryio/status/2104529180071461332",
       "kind": "x",
       "source": "X (udvalgt offentligt opslag — ikke NDI’s holdning)"
@@ -563,7 +564,7 @@
     {
       "d": "2026-09-16",
       "title": "X · @MilkRoadAI",
-      "text": "Jensen Huang just mapped out the chain of companies needed to power the AI revolution. AI is becoming a new industrial system that requires ",
+      "text": "Jensen Huang just mapped out the chain of companies needed to power the AI revolution. AI is becoming a new industrial s",
       "url": "https://x.com/MilkRoadAI/status/2100358110254952615",
       "kind": "x",
       "source": "X (udvalgt offentligt opslag — ikke NDI’s holdning)"
@@ -577,9 +578,17 @@
       "source": "X (udvalgt offentligt opslag — ikke NDI’s holdning)"
     },
     {
+      "d": "2026-07-27",
+      "title": "X · @BullTheoryio",
+      "text": "BREAKING: Nvidia is in talks to backstop $250 BILLION in financing for OpenAI. The guarantee would let OpenAI lease a 10",
+      "url": "https://x.com/BullTheoryio/status/2081548645808402539",
+      "kind": "x",
+      "source": "X (udvalgt offentligt opslag — ikke NDI’s holdning)"
+    },
+    {
       "d": "2026-07-02",
       "title": "X · @InvestNewdeal",
-      "text": "Performance opdatering efter Q2 2026 — fonde NewDeal Invest rådgiver (totalafkast).",
+      "text": "Performance-opdatering efter Q2 2026 — offentlige totalafkasttal for NewDeal Invest-fondene (Fundmarket).",
       "url": "https://x.com/InvestNewdeal/status/2072602813142630625",
       "kind": "x",
       "source": "X (udvalgt offentligt opslag — ikke NDI’s holdning)"
@@ -597,22 +606,6 @@
       "title": "X · @InvestNewdeal",
       "text": "NewDeal Invests akkumulerende fond PMINDIAKK er nu børsnoteret hos Nasdaq Copenhagen",
       "url": "https://x.com/InvestNewdeal/status/2016558534171738574",
-      "kind": "x",
-      "source": "X (udvalgt offentligt opslag — ikke NDI’s holdning)"
-    },
-    {
-      "d": "2026-01-19",
-      "title": "X · @InvestNewdeal",
-      "text": "$PMINDI betaler udbytte 38,00 kr./andel.",
-      "url": "https://x.com/InvestNewdeal/status/2013306008832008498",
-      "kind": "x",
-      "source": "X (udvalgt offentligt opslag — ikke NDI’s holdning)"
-    },
-    {
-      "d": "2025-05-08",
-      "title": "X · @CHornskov",
-      "text": "kvantecomputere er andet og mere end kun $IonQ… Begge er også i $PMINDI.",
-      "url": "https://x.com/CHornskov/status/1920549372925808643",
       "kind": "x",
       "source": "X (udvalgt offentligt opslag — ikke NDI’s holdning)"
     }

@@ -29,8 +29,7 @@ const hasLens = (p) => !!LENS[p.isin]?.metrics?.length;
 const SORTS = { weight: 'vægt', name: 'navn', theme: 'tema' };
 const STATUSES = { forslag: 'kun temaforslag', fast: 'uden temaforslag' };
 
-// Modenhed (livscyklus) vises kun, når porteføljeholdet faktisk har klassificeret selskaber manuelt.
-// Data er tom i dag ('ikke-klassificeret' for alle), så filter og chips findes ikke - vi gætter ikke.
+// Modenhed (livscyklus): værdier med maturityStatus=forslag er heuristik fra offentlige industrier — ikke NDI's endelige rating.
 function maturityCounts(fund) {
   const n = Object.fromEntries(Object.keys(MATURITY_LABELS).map((m) => [m, 0]));
   for (const p of fund.positions || []) if (p.maturity in n) n[p.maturity]++;
@@ -406,6 +405,8 @@ function renderFonden(root) {
       <p class="note-fundmarket">Fonden har intet fast benchmark.</p>
       <p style="font-size:13px;color:var(--muted);margin:8px 0">Graf: ${periodLabel}</p>
       <div class="chart-wrap" id="perf-chart"></div>
+      <p class="chart-takeaway" id="chart-takeaway" style="font-size:14px;color:var(--text);margin:8px 0 4px;line-height:1.45"></p>
+      <p class="src" style="margin:0 0 8px">Kilde: Fundmarket-baseret totalafkast-snapshot · pr. ${fmtDate(asOfPerf)}. Udvalgte X-markører er offentlige opslag — ikke NDI's holdning.</p>
       <p style="font-size:12px;color:var(--muted)">PMINDI: andelskursen falder med udbyttet på ex-dato. Totalafkastet viser værdien, hvis udbyttet var geninvesteret.</p>
     </section>
     <section class="panel">
@@ -479,6 +480,13 @@ function renderFonden(root) {
   }
   const evts = [...ctxEvts, ...ddEvts, ...xMarks];
   renderChart($('#perf-chart', root), sliced, evts, { label: 'Totalafkast' });
+  const take = $('#chart-takeaway', root);
+  if (take && sliced.length >= 2) {
+    const first = sliced[0], last = sliced[sliced.length - 1];
+    const ret = ((last.total / first.total) - 1) * 100;
+    const dir = ret >= 0 ? 'steg' : 'faldt';
+    take.textContent = `Fonden ${dir} ${fmtPct(ret)} i den valgte periode (${fmtDate(first.d)} → ${fmtDate(last.d)}, pr. ${fmtDate(last.d)}).`;
+  }
   if (ctxEvts.length || xMarks.length) {
     const box = document.createElement('section');
     box.className = 'panel';
@@ -612,9 +620,10 @@ function renderLivscyklus(fund) {
     </svg></div>
     <ol class="life-legend" aria-hidden="true">${stages.map((st) => `<li><strong>${st.label}</strong><span>${byStage[st.id].length || '-'}</span></li>`).join('')}</ol>
   </div>`;
+  const nForslag = (fund.positions || []).filter((p) => p.maturityStatus === 'forslag' && byStage[p.maturity]).length;
   const foot = empty
-    ? `Ingen af fondens ${fund.positions.length} selskaber er klassificeret endnu. Prikker kommer, når porteføljeholdet har klassificeret dem manuelt.`
-    : `${classified} af ${fund.positions.length} selskaber er placeret (manuel klassifikation). ${unknown} mangler.`;
+    ? `Ingen af fondens ${fund.positions.length} selskaber er klassificeret endnu.`
+    : `${classified} af ${fund.positions.length} selskaber er placeret${nForslag ? ` (<span class="badge badge-draft">forslag</span> fra offentlig industri/tema — afventer NDI)` : ' (manuel klassifikation)'}. ${unknown ? unknown + ' mangler.' : ''}`;
   return `<section class="panel life-strip${empty ? ' is-empty' : ''}">
     <div class="life-head"><h2>Livscyklus</h2><span class="badge badge-draft">UDKAST</span></div>
     ${curve}
@@ -624,7 +633,9 @@ function renderLivscyklus(fund) {
 
 function renderPortefolje(root) {
   const fund = fundById(DATA.portfolio, state.fund);
-  const list = filterPositions(fund).slice(0, 80);
+  const all = filterPositions(fund);
+  const top10 = all.slice(0, 10);
+  const more = all.slice(10, 80);
   root.innerHTML = `
     <a class="back" href="?view=entre&fund=${state.fund}" data-nav="entre">← Entré</a>
     <p class="eyebrow">PORTEFØLJEN</p>
@@ -634,9 +645,17 @@ function renderPortefolje(root) {
     <p class="band">Segmenter viser eksponering, ikke en anbefaling. <a href="temaer.html?fund=${state.fund}">Se tema-oversigt →</a> Temaer mærket <span class="badge badge-draft">forslag</span> afventer NDI-gennemgang.</p>
     ${fundToolbar()}
     ${renderLivscyklus(fund)}
-    <p class="band" style="font-size:11px">Ingen P/S, P/E eller kursafkast pr. aktie i denne version. Tema-tags er udkast.</p>
-    ${positionsTable(list, fund)}
-    <p style="font-size:12px;color:var(--muted);margin-top:10px">Viser ${list.length} af ${fund.positions.length} (top efter nuværende sortering). Åbn Udforsk for filtre.</p>`;
+    <section class="panel">
+      <h2 style="font-size:16px;margin-bottom:6px">Top 10 efter vægt</h2>
+      <p class="src" style="margin-bottom:10px">pr. ${fmtDate(fund.positionsAsOf || DATA.portfolio.asOf)} · forsinket snapshot. Eksponering, ikke anbefaling.</p>
+      ${positionsTable(top10, fund)}
+    </section>
+    <details class="panel" style="padding:12px 16px">
+      <summary style="cursor:pointer;font-weight:600">Vis flere beholdninger (${more.length} mere, op til 80 i alt)</summary>
+      <div style="margin-top:12px">${more.length ? positionsTable(more, fund) : '<p class="empty-state">Ingen flere i denne sortering.</p>'}</div>
+    </details>
+    <p class="src" style="margin-top:10px">Kilde: Fundmarket-beholdning (forsinket). Åbn <a href="?view=udforsk&fund=${state.fund}">Udforsk</a> for søgning og filtre. Tomme/ældre felter er markeret — ikke skjult.</p>
+    <p class="band" style="font-size:11px">Ingen P/S, P/E eller kursafkast pr. aktie i denne version. Tema-tags er udkast.</p>`;
 }
 
 // Kvalitativ beskrivelse af vægtfordelingen i det forsinkede snapshot. Afrundet, ingen falsk præcision.
@@ -728,13 +747,14 @@ function maturityFilterHtml(fund) {
   const n = maturityCounts(fund);
   const total = Object.values(n).reduce((a, b) => a + b, 0);
   if (!total) {
-    return `<p class="mat-pending" style="font-size:12px;color:var(--muted);margin:6px 0">Modenhed (præ-revenue → value): <strong style="color:var(--text)">ikke klassificeret endnu</strong> for nogen af fondens ${fund.positions.length} selskaber, så der er intet modenhedsfilter. Vi gætter ikke. <a href="laer/livscyklus.html">Om livscyklus →</a></p>`;
+    return `<p class="mat-pending" style="font-size:12px;color:var(--muted);margin:6px 0">Modenhed (præ-revenue → value): <strong style="color:var(--text)">ikke klassificeret endnu</strong> for nogen af fondens ${fund.positions.length} selskaber, så der er intet modenhedsfilter. <a href="laer/livscyklus.html">Om livscyklus →</a></p>`;
   }
+  const nForslag = (fund.positions || []).filter((p) => p.maturityStatus === 'forslag' && p.maturity in MATURITY_LABELS).length;
   const btns = Object.entries(MATURITY_LABELS).filter(([m]) => n[m]).map(([m, label]) =>
     `<button type="button" class="control ${state.maturity.includes(m) ? 'active' : ''}" data-mat="${m}" aria-pressed="${state.maturity.includes(m)}">${label} <small>(${n[m]})</small></button>`).join('');
   return `<div class="filters" role="group" aria-label="Filtrér på modenhed">
       ${btns}
-      <small style="color:var(--muted);align-self:center">Modenhed: ${total} af ${fund.positions.length} klassificeret manuelt (udkast, ikke en rating). ${fund.positions.length - total} uden.</small>
+      <small style="color:var(--muted);align-self:center">Modenhed: ${total} af ${fund.positions.length} <span class="badge badge-draft">forslag</span> (heuristik fra offentlig industri/tema — afventer NDI). ${nForslag ? '' : ''}<a href="laer/livscyklus.html">Om livscyklus →</a></small>
     </div>`;
 }
 

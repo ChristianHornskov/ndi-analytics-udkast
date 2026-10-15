@@ -140,3 +140,8 @@ portfolio.json før `8c355a9`). PMINDI: 44 andet→NDI-tema + 4 compute→quantu
 Forslag der stadig står i `andet` har intet `themeFrom` (ingen flytning). Kun kvalitativ metadata, ingen tal pr. aktie.
 Bruges af temaer.html-banneret ("44 lå før i Andet. Desuden er 4 flyttet fra Compute til det nye tema Quantum")
 og som "før: X" i forslag-badges. Ved godkendelse: slet `themeStatus` + `themeFrom` sammen.
+
+## 2026-10-16 ~00:35 CEST · MUST-rettelser (koordinator)
+- **Cipher Mining (CIFR)** software → **compute** (forslag). Offentlig SEC/10-Q: HPC/AI-datacentre + bitcoin-mining-arv (Cipher Digital). Multi-tag compute+energy.
+- **Opendoor (+ warrants)** andet → **platforms** (forslag). Offentlig 10-K: digital iBuyer/proptech-platform.
+- **Modenhed:** alle 345 sat til maturityStatus=forslag via GICS-industry→fase-heuristik (prerevenue/preprofit/highgrowth/garp/value). Afventer NDI-gennemgang.
