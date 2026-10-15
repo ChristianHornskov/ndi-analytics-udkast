@@ -271,3 +271,22 @@ Main er gået fra `1bc0d43` til `fb68cd0` (30 docs-filer ændret). Live er lig m
 - Visuel variation: drawdown, tema og fonden har hver sit tydelige mønster. Træthed opstår kun på de lange liste-sider (ndi-perspektiv, værdikæder).
 
 **Rettelse 00:45:** tema.html-fejlen var ikke Pages-cache. Det var en reel dobbelt `data`-binding efter lane-B-merge, og den er rettet i main `25b8b30`. Min genkørsel ramte den rettede deploy. Ingen handling nødvendig.
+
+## 2026-10-16 00:55 CEST · cyklus 12 (main `822db42`, delta)
+
+Siden cyklus 11 er main kun ændret af `25b8b30` (rettelsen af tema.html) og `822db42` (notes). Jeg har kørt Playwright på de samme 25 live-sider ved 375 og 1280 px. Alle svarer 200, og der er **0 konsolfejl**. tema.html renderer nu stabilt: 4.453 tegn på 375 og 5.758 på 1280. Der er 0 sider med vandret scroll og 0 billeder uden alt-tekst, og hver side har én h1. Pages er lig med main.
+
+### MUST (uændret)
+- **ndi-perspektiv:** ca. 95.500 tegn, 303 "AI-udkast"-mærker og 355 trykflader under 24 px på 375. Siden er stadig ikke brugbar på mobil (se cyklus 11).
+- **"MADS FØLGER"-mærket spreder sig.** Udover SoftBank (×3) og ndi-paa-x står det nu på **tema.html?slug=chips (×4)**. Det sidder på X-kort med ticker-chips (NVDA, CRWV, NBIS). Kilden er den samme: `js/x-feed.js:339`. Når den linje rettes, lukker det på alle sider.
+- "afventer"/"udfyldes" er stadig synligt på fonden (ÅTD), fakta, risici, omkostninger, portefølje, udforsk, SoftBank, temaer og tema.
+
+### SHOULD (uændret)
+- Udbytte står stadig som "38.9 kr." og "38.0 kr." (punktum) på fonden og periode.
+- X-kort klippes stadig midt i ord ("this is an engineering…"), og der står "BREAKING:" på fonden, SoftBank og ndi-paa-x.
+- Omkostninger er stadig ikke i primær-nav på 375.
+- Små trykflader: udforsk 778, selskaber 637, portefølje 225 og tema 114 på 375.
+- nyhedsarkiv har stadig "Placeholder:", og værdikæder er stadig ca. 18.000 tegn.
+
+### Nice
+- tema.html er stabil efter rettelsen, og "Kun med NDI-linse" virker.

@@ -319,3 +319,25 @@ Ikke juridisk rådgivning. Tjekket med Playwright på renderet tekst fra live-si
 - Beholdningerne er forsinkede (pr. 1. jun. 2026) på portefølje, tema og udforsk. Der er ingen live trades.
 - PMINDIAKK viser intet afkast før 12 mdr. ("Vises efter 12 måneder"). Der er ingen 1m/3m ("Ingen 1- eller 3-måneders fremhævning"). "Fonden har intet fast benchmark".
 - AI-mærkning er til stede (ndi-perspektiv 303, tema-linse "(linse, udkast)").
+
+## 2026-10-16 00:55 CEST · cyklus 12 (main `822db42`, delta)
+
+Ikke juridisk rådgivning. Tjekket med Playwright på 25 live-sider (375 og 1280) og grep på renderet tekst. Siden cyklus 11 er der kun ændret i docs: `docs/tema.html` (rettelse af JS-binding). Der er ingen ændringer i indhold eller data.
+
+### MUST (åbne, uændret)
+1. **Ingen markedsføringsmærkning.** "markedsføring" står på 0 af 25 renderede sider.
+2. **"Mads følger" + tickers.** Det står nu også på **tema.html?slug=chips**, med 4 X-kort med "MADS FØLGER" og NVDA/CRWV/NBIS. Det svarer til fonden: tredjepartsopslag med tickers dateret efter snapshottet 1. jun. kan læses som en indikation af aktuelle positioner. Kilden er `js/x-feed.js:339`.
+3. **ndi-paa-x mangler en tabsadvarsel.** Der er 0 hits på "kan tabe". ndi-paa-x er sammen med nyhedsarkiv de eneste af de 25 sider uden "kan tabe".
+4. **PMINDIAKK-NAV før 12 mdr.** Sammenlign viser stadig "Seneste NAV".
+5. **ÅTD "afventer Fundmarket-godkendelse"** vises stadig sammen med tallene, og graf-takeaway'en ("Fonden steg +104,8 % …") er stadig uden gate.
+
+### SHOULD (uændret)
+- KID-link mangler stadig i renderet tekst på værdikæder, vaerdikaede, drawdown, temaer, idéer, ndi-perspektiv, selskaber, periode, ndi-paa-x, nyhedsarkiv og lær/valuta (kid:0 i crawl).
+- Omkostninger mangler stadig "Du kan tabe …".
+- "BREAKING:"-opslag fra tredjepart står ved siden af fonden og et tema.
+
+### Rådgivningsord ✅
+- "anbefal" og "overvægt" står kun i negationer ("ikke en anbefaling eller en bevidst overvægt") og i KID-terminologi ("anbefalet investeringshorisont på 5 år"). Der er 0 hits på garanteret, "øger eksponering" og "køb nu".
+
+### OK ✅
+- Beholdningerne er forsinkede (pr. 1. jun. 2026). PMINDIAKK har en 12m-gate på periode/embed, og der er ingen 1m/3m. Der er intet benchmark-claim. AI-mærkning er til stede. Omkostningssiden siger ærligt "ikke et beregnet ÅOP".
