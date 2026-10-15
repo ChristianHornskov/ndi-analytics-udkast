@@ -269,3 +269,5 @@ Main er gået fra `1bc0d43` til `fb68cd0` (30 docs-filer ændret). Live er lig m
 ### Nice
 - tema.html har nu "Kun med NDI-linse (27)" og teksten "Et selskab uden linse er ikke vurderet dårligere". Det er godt formuleret.
 - Visuel variation: drawdown, tema og fonden har hver sit tydelige mønster. Træthed opstår kun på de lange liste-sider (ndi-perspektiv, værdikæder).
+
+**Rettelse 00:45:** tema.html-fejlen var ikke Pages-cache. Det var en reel dobbelt `data`-binding efter lane-B-merge, og den er rettet i main `25b8b30`. Min genkørsel ramte den rettede deploy. Ingen handling nødvendig.
