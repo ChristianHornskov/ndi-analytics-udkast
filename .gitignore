@@ -5,3 +5,4 @@ logs/claude-prompt-*.md
 .DS_Store
 node_modules/
 logs/*.png
+node_modules/

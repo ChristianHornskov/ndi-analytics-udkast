@@ -1,4 +1,4 @@
-/** NDI Analytics – static data loader (no live pipeline). */
+/** NDI Analytics - static data loader (no live pipeline). */
 export const WARN_HIST =
   'Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.';
 
@@ -129,7 +129,7 @@ export function maxDrawdown(rows) {
 }
 
 export function fmtPct(n, digits = 1) {
-  if (n == null || Number.isNaN(n)) return '–';
+  if (n == null || Number.isNaN(n)) return '-';
   const sign = n > 0 ? '+' : '';
   return sign + n.toFixed(digits).replace('.', ',') + ' %';
 }

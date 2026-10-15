@@ -1,117 +1,113 @@
 <!doctype html>
 <html lang="da">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex, nofollow">
-  <title>NewDeal Invest – totalafkast</title>
-  <link rel="stylesheet" href="chart.css">
-  <!-- og:start -->
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="NDI Analytics (udkast)">
-  <meta property="og:locale" content="da_DK">
-  <meta property="og:title" content="NewDeal Invest – totalafkast">
-  <meta property="og:description" content="NDI Analytics – klikbart udkast. Fonden, porteføljen og tech-temaer set gennem NDI&#x27;s linse. Generel information, ikke rådgivning.">
-  <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/embed/chart.html">
-  <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="NDI Analytics – udkast. Gå på opdagelse i porteføljen.">
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- og:end -->
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="robots" content="noindex, nofollow">
+ <title>NewDeal Invest - totalafkast</title>
+ <link rel="stylesheet" href="chart.css">
+ <!-- og:start -->
+ <meta property="og:type" content="website">
+ <meta property="og:site_name" content="NDI Analytics (udkast)">
+ <meta property="og:locale" content="da_DK">
+ <meta property="og:title" content="NewDeal Invest - totalafkast">
+ <meta property="og:description" content="NDI Analytics - klikbart udkast. Fonden, porteføljen og tech-temaer set gennem NDI&#x27;s linse. Generel information, ikke rådgivning.">
+ <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/embed/chart.html">
+ <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
+ <meta property="og:image:width" content="1200">
+ <meta property="og:image:height" content="630">
+ <meta property="og:image:alt" content="NDI Analytics - udkast. Gå på opdagelse i porteføljen.">
+ <meta name="twitter:card" content="summary_large_image">
+ <!-- og:end -->
 </head>
 <body>
-  <a class="skip" href="#chart-title">Gå til graf</a>
-  <main class="embed">
-    <section class="panel" aria-labelledby="chart-title">
-      <header class="chart-heading">
-        <div>
-          <p class="eyebrow">NEWDEAL INVEST</p>
-          <h1 id="chart-title">Totalafkast</h1>
-        </div>
-        <div class="chart-meta">
-          <div id="updated">Henter kursdato…</div>
-          <div class="data-source"><span class="status-dot" aria-hidden="true"></span><span id="source-label">Henter data…</span></div>
-        </div>
-      </header>
+ <a class="skip" href="#chart-title">Gå til graf</a>
+ <main class="embed">
+ <section class="panel" aria-labelledby="chart-title">
+ <header class="chart-heading">
+ <div>
+ <p class="eyebrow">NEWDEAL INVEST</p>
+ <h1 id="chart-title">Totalafkast</h1>
+ </div>
+ <div class="chart-meta">
+ <div id="updated">Henter kursdato…</div>
+ <div class="data-source"><span class="status-dot" aria-hidden="true"></span><span id="source-label">Henter data…</span></div>
+ </div>
+ </header>
 
-      <div class="class-options" role="radiogroup" aria-label="Andelsklasse">
-        <button class="class-card selected" type="button" role="radio" data-fund="PMINDI" aria-checked="true">
-          <span class="class-title"><span class="checkmark" aria-hidden="true">✓</span>PMINDI</span>
-          <span class="class-subtitle">Udbyttebetalende. Udbytte udbetales til dig.</span>
-        </button>
-        <button class="class-card" type="button" role="radio" data-fund="PMINDIAKK" aria-checked="false">
-          <span class="class-title"><span class="checkmark" aria-hidden="true">✓</span>PMINDIAKK</span>
-          <span class="class-subtitle">Akkumulerende. Afkastet bliver i fonden.</span>
-        </button>
-      </div>
+ <div class="class-options" role="radiogroup" aria-label="Andelsklasse">
+ <button class="class-card selected" type="button" role="radio" data-fund="PMINDI" aria-checked="true">
+ <span class="class-title"><span class="checkmark" aria-hidden="true">✓</span>PMINDI</span>
+ <span class="class-subtitle">Udbyttebetalende. Udbytte udbetales til dig.</span>
+ </button>
+ <button class="class-card" type="button" role="radio" data-fund="PMINDIAKK" aria-checked="false">
+ <span class="class-title"><span class="checkmark" aria-hidden="true">✓</span>PMINDIAKK</span>
+ <span class="class-subtitle">Akkumulerende. Afkastet bliver i fonden.</span>
+ </button>
+ </div>
 
-      <div class="chart-toolbar">
-        <div class="segmented periods" role="tablist" aria-label="Periode">
-          <button class="control" type="button" role="tab" data-period="ytd" aria-selected="false" tabindex="-1" aria-controls="chart-container">År til dato</button>
-          <button class="control active" type="button" role="tab" data-period="all" aria-selected="true" tabindex="0" aria-controls="chart-container">Hele perioden</button>
-        </div>
-      </div>
+ <div class="chart-toolbar">
+ <div class="segmented periods" role="tablist" aria-label="Periode">
+ <button class="control" type="button" role="tab" data-period="ytd" aria-selected="false" tabindex="-1" aria-controls="chart-container">År til dato</button>
+ <button class="control active" type="button" role="tab" data-period="all" aria-selected="true" tabindex="0" aria-controls="chart-container">Hele perioden</button>
+ </div>
+ </div>
 
-      <div class="chart-legends">
-        <div class="legend">
-          <span id="legend-fund">PMINDI</span>
-          <strong id="fund-return" aria-describedby="historisk-advarsel">—</strong>
-        </div>
-        <button class="legend benchmark-legend nasdaq-toggle" type="button" disabled aria-pressed="false" title="Nasdaq-sammenligning kræver Fundmarkets godkendelse">
-          <span>Nasdaq-100</span>
-          <strong>—</strong>
-        </button>
-      </div>
-      <p class="nasdaq-note">Nasdaq-sammenligning kræver Fundmarkets godkendelse. Fonden har intet fast benchmark.</p>
+ <div class="chart-legends">
+ <div class="legend">
+ <span id="legend-fund">PMINDI</span>
+ <strong id="fund-return" aria-describedby="historisk-advarsel">-</strong>
+ </div>
+</div>
+ <p class="nasdaq-note">Fonden har intet fast benchmark.</p>
 
-      <div class="chart-container" id="chart-container">
-        <svg id="performance-chart" role="img" tabindex="0" aria-labelledby="svg-title svg-description"></svg>
-        <div class="chart-tooltip" id="chart-tooltip" hidden></div>
-        <div class="chart-loading" id="chart-loading">Henter data…</div>
-        <label class="sr-only" for="chart-slider">Datopunkt i grafen</label>
-        <input class="chart-slider" id="chart-slider" type="range" min="0" max="1" value="0" aria-valuetext="">
-      </div>
+ <div class="chart-container" id="chart-container">
+ <svg id="performance-chart" role="img" tabindex="0" aria-labelledby="svg-title svg-description"></svg>
+ <div class="chart-tooltip" id="chart-tooltip" hidden></div>
+ <div class="chart-loading" id="chart-loading">Henter data…</div>
+ <label class="sr-only" for="chart-slider">Datopunkt i grafen</label>
+ <input class="chart-slider" id="chart-slider" type="range" min="0" max="1" value="0" aria-valuetext="">
+ </div>
 
-      <p class="chart-readout" id="chart-readout" aria-live="polite"></p>
-      <p class="chart-context" id="chart-context" hidden></p>
-      <p class="chart-pointe" id="chart-pointe"></p>
+ <p class="chart-readout" id="chart-readout" aria-live="polite"></p>
+ <p class="chart-context" id="chart-context" hidden></p>
+ <p class="chart-pointe" id="chart-pointe"></p>
 
-      <div class="metrics-row">
-        <div class="metrics-grid">
-          <div class="metric">
-            <span class="metric-label">Totalafkast</span>
-            <strong class="accent" id="metric-total" aria-describedby="historisk-advarsel">—</strong>
-            <small id="metric-total-note">Siden start · efter omkostninger</small>
-          </div>
-          <div class="metric">
-            <span class="metric-label">Gns. årligt afkast (CAGR)</span>
-            <strong id="metric-cagr" aria-describedby="historisk-advarsel">—</strong>
-            <small id="metric-cagr-note">CAGR · siden start</small>
-          </div>
-          <div class="metric">
-            <span class="metric-label">År til dato</span>
-            <strong id="metric-ytd" aria-describedby="historisk-advarsel">—</strong>
-            <small id="metric-ytd-note">Fra årets start</small>
-          </div>
-        </div>
-        <aside class="warn" role="note" id="historisk-advarsel">
-          Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.
-        </aside>
-      </div>
+ <div class="metrics-row">
+ <div class="metrics-grid">
+ <div class="metric">
+ <span class="metric-label">Totalafkast</span>
+ <strong class="accent" id="metric-total" aria-describedby="historisk-advarsel">-</strong>
+ <small id="metric-total-note">Siden start · efter omkostninger</small>
+ </div>
+ <div class="metric">
+ <span class="metric-label">Gns. årligt afkast (CAGR)</span>
+ <strong id="metric-cagr" aria-describedby="historisk-advarsel">-</strong>
+ <small id="metric-cagr-note">CAGR · siden start</small>
+ </div>
+ <div class="metric">
+ <span class="metric-label">År til dato</span>
+ <strong id="metric-ytd" aria-describedby="historisk-advarsel">-</strong>
+ <small id="metric-ytd-note">Fra årets start</small>
+ </div>
+ </div>
+ <aside class="warn" role="note" id="historisk-advarsel">
+ Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.
+ </aside>
+ </div>
 
-      <p class="foot">Afkastet er i danske kroner og efter fondens løbende omkostninger, før skat og egne handelsomkostninger. Totalafkast forudsætter geninvesteret udbytte. Kilde: Fundmarket.</p>
-    </section>
-  
-    <div class="embed-cta" style="margin-top:18px;padding:14px 0;border-top:1px solid #2b3e45;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between">
-      <p style="margin:0;font-size:13px;color:#aac0c7">Vil du forstå beholdningen og temaerne?</p>
-      <a href="../index.html?view=udforsk" style="display:inline-flex;padding:8px 14px;border:1.5px solid #89aeb4;border-radius:7px;color:#e6e8ed;text-decoration:none;font-size:13px">Undersøg porteføljen mere →</a>
-    </div>
+ <p class="foot">Afkastet er i danske kroner og efter fondens løbende omkostninger, før skat og egne handelsomkostninger. Totalafkast forudsætter geninvesteret udbytte. Kilde: Fundmarket.</p>
+ </section>
+ 
+ <div class="embed-cta" style="margin-top:18px;padding:14px 0;border-top:1px solid #2b3e45;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between">
+ <p style="margin:0;font-size:13px;color:#aac0c7">Vil du forstå beholdningen og temaerne?</p>
+ <a href="../index.html?view=udforsk" style="display:inline-flex;padding:8px 14px;border:1.5px solid #89aeb4;border-radius:7px;color:#e6e8ed;text-decoration:none;font-size:13px">Undersøg porteføljen mere →</a>
+ </div>
 
-  </main>
-  <noscript>
-    <p class="noscript-note">Grafen kræver JavaScript. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast.</p>
-  </noscript>
-  <script src="chart.js"></script>
+ </main>
+ <noscript>
+ <p class="noscript-note">Grafen kræver JavaScript. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast.</p>
+ </noscript>
+ <script src="chart.js"></script>
 </body>
 </html>

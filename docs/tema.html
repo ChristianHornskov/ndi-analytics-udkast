@@ -1,125 +1,125 @@
 <!doctype html>
 <html lang="da">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex,nofollow">
-  <title>Tema · NDI Analytics</title>
-  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="css/ndi.css">
-  <!-- og:start -->
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="NDI Analytics (udkast)">
-  <meta property="og:locale" content="da_DK">
-  <meta property="og:title" content="Tema · NDI Analytics">
-  <meta property="og:description" content="Vælg et tema herunder.">
-  <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/tema.html">
-  <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="NDI Analytics – udkast. Gå på opdagelse i porteføljen.">
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- og:end -->
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="robots" content="noindex,nofollow">
+ <title>Tema · NDI Analytics</title>
+ <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+ <link rel="stylesheet" href="css/ndi.css">
+ <!-- og:start -->
+ <meta property="og:type" content="website">
+ <meta property="og:site_name" content="NDI Analytics (udkast)">
+ <meta property="og:locale" content="da_DK">
+ <meta property="og:title" content="Tema · NDI Analytics">
+ <meta property="og:description" content="Vælg et tema herunder.">
+ <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/tema.html">
+ <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
+ <meta property="og:image:width" content="1200">
+ <meta property="og:image:height" content="630">
+ <meta property="og:image:alt" content="NDI Analytics - udkast. Gå på opdagelse i porteføljen.">
+ <meta name="twitter:card" content="summary_large_image">
+ <!-- og:end -->
 </head>
 <body>
-  <a class="skip" href="#main">Gå til indhold</a>
-  <header class="site-header">
-    <a class="brand" href="index.html"><img src="assets/mark.svg" width="34" height="27" alt=""><span>NewDeal Invest</span></a>
-    <nav class="nav"><a href="index.html?view=udforsk">← Udforsk</a><a class="hide-sm" href="temaer.html">Alle temaer</a><a class="hide-sm" href="vaerdikaede.html">Værdikæde</a></nav>
-  </header>
-  <main id="main"><p style="color:var(--muted)">Henter tema…</p></main>
-  <footer class="site-footer">
-    <p>Udkast / noindex. Segmenter viser eksponering, ikke en anbefaling. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast.</p>
-    <p data-kid-footer></p>
-  </footer>
-  <script type="module">
-    import { loadAll, fundById, fmtDate, daTheme, WARN_HIST, findTheme, tagsFor, fillKidFooter } from './js/data.js';
-    const u = new URL(location.href);
-    const key = u.searchParams.get('slug') || 'chips';
-    const fundId = u.searchParams.get('fund') || 'pmindi';
-    const [data, td] = await Promise.all([loadAll(), fetch('data/themes.json').then((r) => r.json())]);
-    fillKidFooter();
-    const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-    const w = (x) => (x || 0).toFixed(2).replace('.', ',');
-    const main = document.getElementById('main');
-    const theme = findTheme(td.themes, key);
+ <a class="skip" href="#main">Gå til indhold</a>
+ <header class="site-header">
+ <a class="brand" href="index.html"><img src="assets/mark.svg" width="34" height="27" alt=""><span>NewDeal Invest</span></a>
+ <nav class="nav"><a href="index.html?view=udforsk">← Udforsk</a><a class="hide-sm" href="temaer.html">Alle temaer</a><a class="hide-sm" href="vaerdikaede.html">Værdikæde</a></nav>
+ </header>
+ <main id="main"><p style="color:var(--muted)">Henter tema…</p></main>
+ <footer class="site-footer">
+ <p>Udkast / noindex. Segmenter viser eksponering, ikke en anbefaling. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast.</p>
+ <p data-kid-footer></p>
+ </footer>
+ <script type="module">
+ import { loadAll, fundById, fmtDate, daTheme, WARN_HIST, findTheme, tagsFor, fillKidFooter } from './js/data.js';
+ const u = new URL(location.href);
+ const key = u.searchParams.get('slug') || 'chips';
+ const fundId = u.searchParams.get('fund') || 'pmindi';
+ const [data, td] = await Promise.all([loadAll(), fetch('data/themes.json').then((r) => r.json())]);
+ fillKidFooter();
+ const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+ const w = (x) => (x || 0).toFixed(2).replace('.', ',');
+ const main = document.getElementById('main');
+ const theme = findTheme(td.themes, key);
 
-    if (!theme) {
-      main.innerHTML = `<a class="back" href="temaer.html">← Alle temaer</a>
-        <h1>Temaet findes ikke</h1><p class="lede">Vælg et tema herunder.</p>
-        <p class="link-row">${td.themes.map((t) => `<a class="tag" href="tema.html?slug=${t.slug}&fund=${fundId}">${esc(t.title)}</a>`).join(' ')}</p>`;
-    } else {
-      // Selskaber beregnes fra den forsinkede beholdning (primært tema + manuelle multi-tags), ikke themes.json-udsnittet
-      const fund = fundById(data.portfolio, fundId);
-      const tk = theme.themeKey;
-      const list = fund.positions
-        .filter((p) => tagsFor(p, data.multiTags).includes(tk))
-        .sort((a, b) => (b.weight || 0) - (a.weight || 0));
-      const sum = list.reduce((s, p) => s + (p.weight || 0), 0);
-      const posAsOf = fmtDate(fund.positionsAsOf || td.positionsAsOf);
-      const keyToSlug = Object.fromEntries(td.themes.map((t) => [t.title.toLowerCase(), t.slug]));
-      const chain = (theme.chain || []).map((c) => {
-        const slug = keyToSlug[c.toLowerCase()] || (td.themes.find((t) => t.title.toLowerCase().startsWith(c.toLowerCase())) || {}).slug;
-        const cur = c.toLowerCase() === theme.title.toLowerCase() || slug === theme.slug;
-        return slug && !cur ? `<a class="tag" href="tema.html?slug=${slug}&fund=${fundId}">${esc(c)}</a>` : `<span class="tag ${cur ? 'accent' : ''}">${esc(c)}</span>`;
-      }).join(' <span aria-hidden="true">→</span> ');
-      const others = td.themes.filter((t) => t.slug !== theme.slug);
-      const rows = list.map((p) => {
-        const multi = p.theme !== tk;
-        return `<tr>
-          <td><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}">${esc(p.name)}</a>${multi ? ` <span class="tag" title="Primært tema: ${esc(daTheme(p.theme))}">også ${esc(daTheme(p.theme))}</span>` : ''}</td>
-          <td class="hide-sm-cell">${esc(p.role || '')}</td>
-          <td>${w(p.weight)}</td>
-        </tr>`;
-      }).join('');
-      document.title = `${theme.title} · NDI Analytics`;
-      main.innerHTML = `
-        <a class="back" href="index.html?view=udforsk&fund=${fund.id}&tags=${encodeURIComponent(tk)}">← Screener: ${esc(theme.title)}</a>
-        <p class="eyebrow">NDI-TEMA</p>
-        <h1>${esc(theme.title)}</h1>
-        <p class="lede">${esc(theme.problem)}</p>
-        <div class="fund-switch" role="group" aria-label="Andelsklasse">
-          ${data.portfolio.funds.map((f) => `<a class="control ${f.id === fund.id ? 'active' : ''}" ${f.id === fund.id ? 'aria-current="true"' : ''} href="tema.html?slug=${theme.slug}&fund=${f.id}">${esc(f.short)}</a>`).join('')}
-        </div>
-        <div class="metrics" style="margin-top:14px">
-          <div class="metric"><div class="label">Selskaber i temaet</div><strong>${list.length}</strong><small>${esc(fund.short)} · beholdning pr. ${posAsOf} (forsinket)</small></div>
-          <div class="metric"><div class="label">Samlet vægt</div><strong>ca. ${w(sum)} %</strong><small>Inkl. selskaber med flere temaer</small></div>
-        </div>
-        <p class="band">Temaet viser <strong>eksponering</strong> i fondens forsinkede beholdning — ikke en anbefaling eller en bevidst overvægt.</p>
+ if (!theme) {
+ main.innerHTML = `<a class="back" href="temaer.html">← Alle temaer</a>
+ <h1>Temaet findes ikke</h1><p class="lede">Vælg et tema herunder.</p>
+ <p class="link-row">${td.themes.map((t) => `<a class="tag" href="tema.html?slug=${t.slug}&fund=${fundId}">${esc(t.title)}</a>`).join(' ')}</p>`;
+ } else {
+ // Selskaber beregnes fra den forsinkede beholdning (primært tema + manuelle multi-tags), ikke themes.json-udsnittet
+ const fund = fundById(data.portfolio, fundId);
+ const tk = theme.themeKey;
+ const list = fund.positions
+ .filter((p) => tagsFor(p, data.multiTags).includes(tk))
+ .sort((a, b) => (b.weight || 0) - (a.weight || 0));
+ const sum = list.reduce((s, p) => s + (p.weight || 0), 0);
+ const posAsOf = fmtDate(fund.positionsAsOf || td.positionsAsOf);
+ const keyToSlug = Object.fromEntries(td.themes.map((t) => [t.title.toLowerCase(), t.slug]));
+ const chain = (theme.chain || []).map((c) => {
+ const slug = keyToSlug[c.toLowerCase()] || (td.themes.find((t) => t.title.toLowerCase().startsWith(c.toLowerCase())) || {}).slug;
+ const cur = c.toLowerCase() === theme.title.toLowerCase() || slug === theme.slug;
+ return slug && !cur ? `<a class="tag" href="tema.html?slug=${slug}&fund=${fundId}">${esc(c)}</a>` : `<span class="tag ${cur ? 'accent' : ''}">${esc(c)}</span>`;
+ }).join(' <span aria-hidden="true">→</span> ');
+ const others = td.themes.filter((t) => t.slug !== theme.slug);
+ const rows = list.map((p) => {
+ const multi = p.theme !== tk;
+ return `<tr>
+ <td><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}">${esc(p.name)}</a>${multi ? ` <span class="tag" title="Primært tema: ${esc(daTheme(p.theme))}">også ${esc(daTheme(p.theme))}</span>` : ''}</td>
+ <td class="hide-sm-cell">${esc(p.role || '')}</td>
+ <td>${w(p.weight)}</td>
+ </tr>`;
+ }).join('');
+ document.title = `${theme.title} · NDI Analytics`;
+ main.innerHTML = `
+ <a class="back" href="index.html?view=udforsk&fund=${fund.id}&tags=${encodeURIComponent(tk)}">← Screener: ${esc(theme.title)}</a>
+ <p class="eyebrow">NDI-TEMA</p>
+ <h1>${esc(theme.title)}</h1>
+ <p class="lede">${esc(theme.problem)}</p>
+ <div class="fund-switch" role="group" aria-label="Andelsklasse">
+ ${data.portfolio.funds.map((f) => `<a class="control ${f.id === fund.id ? 'active' : ''}" ${f.id === fund.id ? 'aria-current="true"' : ''} href="tema.html?slug=${theme.slug}&fund=${f.id}">${esc(f.short)}</a>`).join('')}
+ </div>
+ <div class="metrics" style="margin-top:14px">
+ <div class="metric"><div class="label">Selskaber i temaet</div><strong>${list.length}</strong><small>${esc(fund.short)} · beholdning pr. ${posAsOf} (forsinket)</small></div>
+ <div class="metric"><div class="label">Samlet vægt</div><strong>ca. ${w(sum)} %</strong><small>Inkl. selskaber med flere temaer</small></div>
+ </div>
+ <p class="band">Temaet viser <strong>eksponering</strong> i fondens forsinkede beholdning. Ikke en anbefaling eller en bevidst overvægt.</p>
 
-        ${theme.chain?.length ? `<section class="panel">
-          <h2 class="panel-h brand">Plads i værdikæden</h2>
-          <p class="chain-row">${chain}</p>
-          <p class="link-row" style="margin-top:12px"><a class="outline-btn small" href="vaerdikaede.html">Se hele AI-værdikæden →</a></p>
-        </section>` : ''}
+ ${theme.chain?.length ? `<section class="panel">
+ <h2 class="panel-h brand">Plads i værdikæden</h2>
+ <p class="chain-row">${chain}</p>
+ <p class="link-row" style="margin-top:12px"><a class="outline-btn small" href="vaerdikaede.html">Se hele AI-værdikæden →</a></p>
+ </section>` : ''}
 
-        <section class="panel">
-          <h2 class="panel-h">Selskaber i forsinket beholdning</h2>
-          ${list.length ? `<div class="table-wrap"><table class="data" style="min-width:0"><thead><tr><th>Navn</th><th class="hide-sm-cell">Rolle</th><th>Vægt %</th></tr></thead><tbody>${rows}</tbody></table></div>`
-            : `<p class="band">Ingen selskaber i ${esc(fund.short)} med dette tema pr. ${posAsOf}.</p>`}
-          <p class="src">Sorteret efter vægt. Ingen kursafkast pr. aktie i udkastet.</p>
-          <p class="link-row" style="margin-top:10px"><a class="outline-btn small" href="index.html?view=udforsk&fund=${fund.id}&tags=${encodeURIComponent(tk)}">Åbn i screeneren →</a>
-            <button type="button" class="outline-btn small" id="copy-tema">Kopiér link til tema</button>
-            <span class="sr-only" id="copy-tema-status" role="status" aria-live="polite"></span></p>
-        </section>
+ <section class="panel">
+ <h2 class="panel-h">Selskaber i forsinket beholdning</h2>
+ ${list.length ? `<div class="table-wrap"><table class="data" style="min-width:0"><thead><tr><th>Navn</th><th class="hide-sm-cell">Rolle</th><th>Vægt %</th></tr></thead><tbody>${rows}</tbody></table></div>`
+ : `<p class="band">Ingen selskaber i ${esc(fund.short)} med dette tema pr. ${posAsOf}.</p>`}
+ <p class="src">Sorteret efter vægt. Ingen kursafkast pr. aktie i udkastet.</p>
+ <p class="link-row" style="margin-top:10px"><a class="outline-btn small" href="index.html?view=udforsk&fund=${fund.id}&tags=${encodeURIComponent(tk)}">Åbn i screeneren →</a>
+ <button type="button" class="outline-btn small" id="copy-tema">Kopiér link til tema</button>
+ <span class="sr-only" id="copy-tema-status" role="status" aria-live="polite"></span></p>
+ </section>
 
-        <section class="panel">
-          <h2 class="panel-h">Andre temaer</h2>
-          <p class="link-row">${others.map((t) => `<a class="tag" href="tema.html?slug=${t.slug}&fund=${fund.id}">${esc(t.title)}</a>`).join(' ')}</p>
-          <p class="link-row" style="margin-top:10px"><a href="temaer.html">Alle temaer →</a> · <a href="laer/saadan-taenker-vi.html">Sådan tænker vi →</a></p>
-        </section>
-        <p class="warn">${WARN_HIST}</p>`;
-    }
-    // Kopiér link (U1): URL'en bærer tema + andelsklasse
-    const copyBtn = main.querySelector('#copy-tema');
-    copyBtn?.addEventListener('click', async () => {
-      const status = main.querySelector('#copy-tema-status');
-      let msg;
-      try { await navigator.clipboard.writeText(location.href); msg = 'Link kopieret'; copyBtn.textContent = 'Kopieret ✓'; }
-      catch { msg = 'Kunne ikke kopiere – kopiér adressen fra adresselinjen'; copyBtn.textContent = 'Kopiér fra adresselinjen'; }
-      if (status) status.textContent = msg;
-      setTimeout(() => { copyBtn.textContent = 'Kopiér link til tema'; }, 2500);
-    });
-  </script>
+ <section class="panel">
+ <h2 class="panel-h">Andre temaer</h2>
+ <p class="link-row">${others.map((t) => `<a class="tag" href="tema.html?slug=${t.slug}&fund=${fund.id}">${esc(t.title)}</a>`).join(' ')}</p>
+ <p class="link-row" style="margin-top:10px"><a href="temaer.html">Alle temaer →</a> · <a href="laer/saadan-taenker-vi.html">Sådan tænker vi →</a></p>
+ </section>
+ <p class="warn">${WARN_HIST}</p>`;
+ }
+ // Kopiér link (U1): URL'en bærer tema + andelsklasse
+ const copyBtn = main.querySelector('#copy-tema');
+ copyBtn?.addEventListener('click', async () => {
+ const status = main.querySelector('#copy-tema-status');
+ let msg;
+ try { await navigator.clipboard.writeText(location.href); msg = 'Link kopieret'; copyBtn.textContent = 'Kopieret ✓'; }
+ catch { msg = 'Kunne ikke kopiere - kopiér adressen fra adresselinjen'; copyBtn.textContent = 'Kopiér fra adresselinjen'; }
+ if (status) status.textContent = msg;
+ setTimeout(() => { copyBtn.textContent = 'Kopiér link til tema'; }, 2500);
+ });
+ </script>
 </body>
 </html>

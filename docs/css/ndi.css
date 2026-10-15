@@ -186,7 +186,7 @@ a.tag:hover,button.tag:hover{border-color:var(--brand);background:var(--selected
 .mover-list a{text-decoration:none}
 .mover-list a:hover{text-decoration:underline}
 
-/* Risikoindikator (SRI) – selskabsside */
+/* Risikoindikator (SRI) - selskabsside */
 .sri{display:flex;gap:4px;margin:10px 0}
 .sri span{width:34px;height:30px;display:grid;place-items:center;border:1px solid var(--line);border-radius:5px;font-size:13px;color:var(--muted)}
 .sri span.on{background:var(--selected);border-color:var(--yellow);color:var(--text);font-weight:700}

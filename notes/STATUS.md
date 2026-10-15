@@ -127,3 +127,13 @@ Tjekket i Chromium ved 1280, 375 og 320. Ingen konsolfejl på de målte sider. S
 4. PMINDIAKK-afkastserie fjernes fra docs/data/portfolio.json (kun NAV).
 5. ÅTD + 100k-eksempel bliver i udkastet med advarsel (markeres "afventer Fundmarket-godkendelse" i en lille note).
 6. Fjern tankestreger (–/—) og semikolon i UI-tekst.
+
+## Lead 22:08 CEST — Leo-beslutninger 22:00 gennemført
+1. Repo forbliver offentligt. Ingen historikomskrivning. Ingen ny fortrolig tekst tilføjet i notes/.
+2. company-months.json trimmet til kvartalsslut (mar/jun/sep/dec), cutoff 2026-06-01. UI: "forsinket snapshot, pr. <dato>".
+3. Nasdaq-knap fjernet. Copy: "Fonden har intet fast benchmark." (embed + om-data + fonden).
+4. PMINDIAKK: `total` fjernet fra portfolio.json data (kun NAV/price). Gate uændret.
+5. ÅTD + 100k beholdt med note "afventer Fundmarket-godkendelse".
+6. Tankestreger (–/—) erstattet i UI-tekst. Semikolon i HTML-prosa erstattet med punktum (JS-kode urørt).
+Smokes: quality 108/108, cycle3 66/66. Precheck OK.
+NEXT: Claude↔Grok til 06:30. Læs UX-review + VIDENSBOT-live-check hver cyklus. Checkpoint mindst hver 30 min. Aldrig "done".

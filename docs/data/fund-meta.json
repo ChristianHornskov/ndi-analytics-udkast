@@ -1,105 +1,105 @@
 {
- "asOf": "2026-10-15",
- "returnMethod": "Afsluttede årsafkast fra Fundmarkets årsrapport kædet med rapporteret YTD. Total og CAGR er beregnede.",
- "inceptionNote": "legalInception = juridisk/stiftelsesdato. Afkast/siden start bruger portfolio.funds[].inception (første NAV). Se notes/DATA-DEFINITIONS.md.",
- "funds": {
-  "pmindi": {
-   "priip": {
-    "url": "https://node-api.fundmarket.dk/funds/documents/priip_ipm140b",
-    "product": "NewDeal Invest, kl n",
-    "isin": "DK0062499810",
-    "production_date": "2026-08-14",
-    "risk_class": 5,
-    "risk_scale_max": 7,
-    "risk_label": "middel-høj",
-    "recommended_holding_years": 5,
-    "key_risks": {
-     "aktiemarkedsrisiko": true,
-     "vækst_og_sektorrisiko": true,
-     "valutarisiko": true,
-     "ingen_markedsbeskyttelse": true,
-     "muligt_tab_af_hele_investeringen": true
+  "asOf": "2026-10-15",
+  "returnMethod": "Afsluttede årsafkast fra Fundmarkets årsrapport kædet med rapporteret YTD. Total og CAGR er beregnede.",
+  "inceptionNote": "legalInception = juridisk/stiftelsesdato. Afkast/siden start bruger portfolio.funds[].inception (første NAV).",
+  "funds": {
+    "pmindi": {
+      "priip": {
+        "url": "https://node-api.fundmarket.dk/funds/documents/priip_ipm140b",
+        "product": "NewDeal Invest, kl n",
+        "isin": "DK0062499810",
+        "production_date": "2026-08-14",
+        "risk_class": 5,
+        "risk_scale_max": 7,
+        "risk_label": "middel-høj",
+        "recommended_holding_years": 5,
+        "key_risks": {
+          "aktiemarkedsrisiko": true,
+          "vækst_og_sektorrisiko": true,
+          "valutarisiko": true,
+          "ingen_markedsbeskyttelse": true,
+          "muligt_tab_af_hele_investeringen": true
+        },
+        "sha256": "231b916b94a8bc19b0009354e732086f618ef1cacf9673547f7fff143050bad0",
+        "bytes": 426750
+      },
+      "legalInception": "2023-09-25",
+      "performanceAsOf": "2026-10-14",
+      "reportDate": "2026-10-15",
+      "classificationCoverage": 96.59,
+      "evidence": {
+        "source": "Fundmarket",
+        "url": "https://fundmarket.dk/newdeal-invest-kl-n/",
+        "method": "official-nav-prior-nav-distribution-adjustment-v1",
+        "methodDescription": "NAV multiplied by cumulative pre-ex-date NAV/(pre-ex-date NAV minus gross distribution). Independently reconciled against Fundmarket annual returns and same-response indicative YTD; not a directly supplied Fundmarket total-return series.",
+        "navMatches": 690,
+        "annualChecks": [
+          {
+            "year": "2023",
+            "calculated": 16.74,
+            "annualReport": 16.74,
+            "website": 16.7,
+            "websiteMatchesAtDisplayedDecimals": 1
+          },
+          {
+            "year": "2024",
+            "calculated": 46.37656330306665,
+            "annualReport": 46.37,
+            "website": 46.37,
+            "websiteMatchesAtDisplayedDecimals": 1
+          },
+          {
+            "year": "2025",
+            "calculated": 15.214571021716615,
+            "annualReport": 15.21,
+            "website": 15.21,
+            "websiteMatchesAtDisplayedDecimals": 1
+          }
+        ],
+        "checkedAt": "2026-10-15T10:06:54.031131+02:00"
+      }
     },
-    "sha256": "231b916b94a8bc19b0009354e732086f618ef1cacf9673547f7fff143050bad0",
-    "bytes": 426750
-   },
-   "legalInception": "2023-09-25",
-   "performanceAsOf": "2026-10-14",
-   "reportDate": "2026-10-15",
-   "classificationCoverage": 96.59,
-   "evidence": {
-    "source": "Fundmarket",
-    "url": "https://fundmarket.dk/newdeal-invest-kl-n/",
-    "method": "official-nav-prior-nav-distribution-adjustment-v1",
-    "methodDescription": "NAV multiplied by cumulative pre-ex-date NAV/(pre-ex-date NAV minus gross distribution). Independently reconciled against Fundmarket annual returns and same-response indicative YTD; not a directly supplied Fundmarket total-return series.",
-    "navMatches": 690,
-    "annualChecks": [
-     {
-      "year": "2023",
-      "calculated": 16.74,
-      "annualReport": 16.74,
-      "website": 16.7,
-      "websiteMatchesAtDisplayedDecimals": 1
-     },
-     {
-      "year": "2024",
-      "calculated": 46.37656330306665,
-      "annualReport": 46.37,
-      "website": 46.37,
-      "websiteMatchesAtDisplayedDecimals": 1
-     },
-     {
-      "year": "2025",
-      "calculated": 15.214571021716615,
-      "annualReport": 15.21,
-      "website": 15.21,
-      "websiteMatchesAtDisplayedDecimals": 1
-     }
-    ],
-    "checkedAt": "2026-10-15T10:06:54.031131+02:00"
-   }
-  },
-  "pmindiakk": {
-   "priip": {
-    "url": "https://node-api.fundmarket.dk/funds/documents/priip_ipm145b",
-    "product": "NewDeal Invest Akk., kl n",
-    "isin": "DK0064642623",
-    "production_date": "2026-08-14",
-    "risk_class": 5,
-    "risk_scale_max": 7,
-    "risk_label": "middel-høj",
-    "recommended_holding_years": 5,
-    "key_risks": {
-     "aktiemarkedsrisiko": true,
-     "vækst_og_sektorrisiko": true,
-     "valutarisiko": true,
-     "ingen_markedsbeskyttelse": true,
-     "muligt_tab_af_hele_investeringen": true
-    },
-    "sha256": "1a98f61b066f671df314ff725d4ddede500bae1178f8aee335ed660e33d8087a",
-    "bytes": 428332
-   },
-   "legalInception": "2025-12-02",
-   "performanceAsOf": "2026-10-14",
-   "reportDate": "2026-10-15",
-   "classificationCoverage": 96.88,
-   "evidence": {
-    "source": "Fundmarket",
-    "url": "https://fundmarket.dk/newdeal-invest-akk-kl-n/",
-    "method": "official-nav-prior-nav-distribution-adjustment-v1",
-    "methodDescription": "NAV multiplied by cumulative pre-ex-date NAV/(pre-ex-date NAV minus gross distribution). Independently reconciled against Fundmarket annual returns and same-response indicative YTD; not a directly supplied Fundmarket total-return series.",
-    "navMatches": 206,
-    "annualChecks": [
-     {
-      "year": "2025",
-      "calculated": -5.610000000000004,
-      "annualReport": -5.61,
-      "website": -5.61,
-      "websiteMatchesAtDisplayedDecimals": 1
-     }
-    ],
-    "checkedAt": "2026-10-15T10:06:54.031131+02:00"
-   }
+    "pmindiakk": {
+      "priip": {
+        "url": "https://node-api.fundmarket.dk/funds/documents/priip_ipm145b",
+        "product": "NewDeal Invest Akk., kl n",
+        "isin": "DK0064642623",
+        "production_date": "2026-08-14",
+        "risk_class": 5,
+        "risk_scale_max": 7,
+        "risk_label": "middel-høj",
+        "recommended_holding_years": 5,
+        "key_risks": {
+          "aktiemarkedsrisiko": true,
+          "vækst_og_sektorrisiko": true,
+          "valutarisiko": true,
+          "ingen_markedsbeskyttelse": true,
+          "muligt_tab_af_hele_investeringen": true
+        },
+        "sha256": "1a98f61b066f671df314ff725d4ddede500bae1178f8aee335ed660e33d8087a",
+        "bytes": 428332
+      },
+      "legalInception": "2025-12-02",
+      "performanceAsOf": "2026-10-14",
+      "reportDate": "2026-10-15",
+      "classificationCoverage": 96.88,
+      "evidence": {
+        "source": "Fundmarket",
+        "url": "https://fundmarket.dk/newdeal-invest-akk-kl-n/",
+        "method": "official-nav-prior-nav-distribution-adjustment-v1",
+        "methodDescription": "NAV multiplied by cumulative pre-ex-date NAV/(pre-ex-date NAV minus gross distribution). Independently reconciled against Fundmarket annual returns and same-response indicative YTD; not a directly supplied Fundmarket total-return series.",
+        "navMatches": 206,
+        "annualChecks": [
+          {
+            "year": "2025",
+            "calculated": -5.610000000000004,
+            "annualReport": -5.61,
+            "website": -5.61,
+            "websiteMatchesAtDisplayedDecimals": 1
+          }
+        ],
+        "checkedAt": "2026-10-15T10:06:54.031131+02:00"
+      }
+    }
   }
- }
 }

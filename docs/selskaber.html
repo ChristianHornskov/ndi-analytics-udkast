@@ -1,58 +1,58 @@
 <!doctype html>
 <html lang="da">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="robots" content="noindex,nofollow">
-  <title>Selskaber · NDI Analytics</title>
-  <link rel="stylesheet" href="css/ndi.css">
-  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
-  <!-- og:start -->
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="NDI Analytics (udkast)">
-  <meta property="og:locale" content="da_DK">
-  <meta property="og:title" content="Selskaber · NDI Analytics">
-  <meta property="og:description" content="NDI Analytics – klikbart udkast. Fonden, porteføljen og tech-temaer set gennem NDI&#x27;s linse. Generel information, ikke rådgivning.">
-  <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/selskaber.html">
-  <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="NDI Analytics – udkast. Gå på opdagelse i porteføljen.">
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- og:end -->
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+ <meta name="robots" content="noindex,nofollow">
+ <title>Selskaber · NDI Analytics</title>
+ <link rel="stylesheet" href="css/ndi.css">
+ <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+ <!-- og:start -->
+ <meta property="og:type" content="website">
+ <meta property="og:site_name" content="NDI Analytics (udkast)">
+ <meta property="og:locale" content="da_DK">
+ <meta property="og:title" content="Selskaber · NDI Analytics">
+ <meta property="og:description" content="NDI Analytics - klikbart udkast. Fonden, porteføljen og tech-temaer set gennem NDI&#x27;s linse. Generel information, ikke rådgivning.">
+ <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/selskaber.html">
+ <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
+ <meta property="og:image:width" content="1200">
+ <meta property="og:image:height" content="630">
+ <meta property="og:image:alt" content="NDI Analytics - udkast. Gå på opdagelse i porteføljen.">
+ <meta name="twitter:card" content="summary_large_image">
+ <!-- og:end -->
 </head>
 <body>
-  <a class="skip" href="#main">Gå til indhold</a>
-  <header class="site-header">
-    <a class="brand" href="index.html"><img src="assets/mark.svg" width="34" height="27" alt=""><span>NewDeal Invest</span></a>
-    <nav class="nav"><a href="index.html?view=udforsk">← Udforsk</a></nav>
-  </header>
-  <main id="main"><p style="color:var(--muted)">Henter…</p></main>
-  <script type="module">
-    import { loadAll, fundById, daTheme, WARN_HIST, fmtDate } from './js/data.js';
-    const { portfolio } = await loadAll();
-    const fundId = new URL(location.href).searchParams.get('fund') || 'pmindi';
-    const fund = fundById(portfolio, fundId);
-    const q = (new URL(location.href).searchParams.get('q')||'').toLowerCase();
-    let pos = [...(fund.positions||[])].sort((a,b)=>(b.weight||0)-(a.weight||0));
-    if (q) pos = pos.filter(p => (p.name||'').toLowerCase().includes(q) || (p.isin||'').toLowerCase().includes(q) || (p.symbol||'').toLowerCase().includes(q));
-    const rows = pos.map(p => `
-      <tr>
-        <td><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fundId}">${p.name}</a></td>
-        <td>${p.isin}</td>
-        <td>${daTheme(p.theme)}</td>
-        <td>${(p.weight||0).toFixed(2).replace('.',',')}</td>
-      </tr>`).join('');
-    document.getElementById('main').innerHTML = `
-      <p class="eyebrow">ALLE SELSKABER · FORSINKET BEHOLDNING</p>
-      <h1>${fund.short}</h1>
-      <p class="lede">${pos.length} positioner pr. ${fmtDate(fund.positionsAsOf||portfolio.asOf)}. Eksponering, ikke anbefaling.</p>
-      <form method="get" style="margin-bottom:16px;display:flex;gap:8px;flex-wrap:wrap">
-        <input type="hidden" name="fund" value="${fundId}">
-        <input name="q" value="${q.replace(/"/g,'')}" placeholder="Søg navn, ticker eller ISIN…" style="flex:1;min-width:200px;padding:10px 12px;border-radius:8px;border:1px solid var(--line);background:var(--panel);color:var(--text)">
-        <button class="cta" type="submit">Søg</button>
-      </form>
-      <div class="table-wrap"><table class="data"><thead><tr><th>Navn</th><th>ISIN</th><th>Tema</th><th>Vægt %</th></tr></thead><tbody>${rows||'<tr><td colspan="4">Ingen match</td></tr>'}</tbody></table></div>
-      <p class="warn">${WARN_HIST}</p>`;
-  </script>
+ <a class="skip" href="#main">Gå til indhold</a>
+ <header class="site-header">
+ <a class="brand" href="index.html"><img src="assets/mark.svg" width="34" height="27" alt=""><span>NewDeal Invest</span></a>
+ <nav class="nav"><a href="index.html?view=udforsk">← Udforsk</a></nav>
+ </header>
+ <main id="main"><p style="color:var(--muted)">Henter…</p></main>
+ <script type="module">
+ import { loadAll, fundById, daTheme, WARN_HIST, fmtDate } from './js/data.js';
+ const { portfolio } = await loadAll();
+ const fundId = new URL(location.href).searchParams.get('fund') || 'pmindi';
+ const fund = fundById(portfolio, fundId);
+ const q = (new URL(location.href).searchParams.get('q')||'').toLowerCase();
+ let pos = [...(fund.positions||[])].sort((a,b)=>(b.weight||0)-(a.weight||0));
+ if (q) pos = pos.filter(p => (p.name||'').toLowerCase().includes(q) || (p.isin||'').toLowerCase().includes(q) || (p.symbol||'').toLowerCase().includes(q));
+ const rows = pos.map(p => `
+ <tr>
+ <td><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fundId}">${p.name}</a></td>
+ <td>${p.isin}</td>
+ <td>${daTheme(p.theme)}</td>
+ <td>${(p.weight||0).toFixed(2).replace('.',',')}</td>
+ </tr>`).join('');
+ document.getElementById('main').innerHTML = `
+ <p class="eyebrow">ALLE SELSKABER · FORSINKET BEHOLDNING</p>
+ <h1>${fund.short}</h1>
+ <p class="lede">${pos.length} positioner pr. ${fmtDate(fund.positionsAsOf||portfolio.asOf)}. Eksponering, ikke anbefaling.</p>
+ <form method="get" style="margin-bottom:16px;display:flex;gap:8px;flex-wrap:wrap">
+ <input type="hidden" name="fund" value="${fundId}">
+ <input name="q" value="${q.replace(/"/g,'')}" placeholder="Søg navn, ticker eller ISIN…" style="flex:1;min-width:200px;padding:10px 12px;border-radius:8px;border:1px solid var(--line);background:var(--panel);color:var(--text)">
+ <button class="cta" type="submit">Søg</button>
+ </form>
+ <div class="table-wrap"><table class="data"><thead><tr><th>Navn</th><th>ISIN</th><th>Tema</th><th>Vægt %</th></tr></thead><tbody>${rows||'<tr><td colspan="4">Ingen match</td></tr>'}</tbody></table></div>
+ <p class="warn">${WARN_HIST}</p>`;
+ </script>
 </body>
 </html>

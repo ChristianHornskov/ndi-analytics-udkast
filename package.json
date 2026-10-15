@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/ChristianHornskov/ndi-analytics-udkast/issues"
   },
-  "homepage": "https://github.com/ChristianHornskov/ndi-analytics-udkast#readme"
+  "homepage": "https://github.com/ChristianHornskov/ndi-analytics-udkast#readme",
+  "devDependencies": {
+    "playwright": "^1.48.0"
+  }
 }

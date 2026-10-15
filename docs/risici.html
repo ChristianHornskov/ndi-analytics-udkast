@@ -1,65 +1,65 @@
 <!doctype html>
 <html lang="da">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="robots" content="noindex,nofollow">
-  <title>Risici · NDI Analytics</title>
-  <link rel="stylesheet" href="css/ndi.css">
-  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
-  <!-- og:start -->
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="NDI Analytics (udkast)">
-  <meta property="og:locale" content="da_DK">
-  <meta property="og:title" content="Risici · NDI Analytics">
-  <meta property="og:description" content="Kort oversigt over risici baseret på fondens dokument med central information (KID). Generel information — ikke rådgivning. KID’et er det gældende dokument.">
-  <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/risici.html">
-  <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="NDI Analytics – udkast. Gå på opdagelse i porteføljen.">
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- og:end -->
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+ <meta name="robots" content="noindex,nofollow">
+ <title>Risici · NDI Analytics</title>
+ <link rel="stylesheet" href="css/ndi.css">
+ <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+ <!-- og:start -->
+ <meta property="og:type" content="website">
+ <meta property="og:site_name" content="NDI Analytics (udkast)">
+ <meta property="og:locale" content="da_DK">
+ <meta property="og:title" content="Risici · NDI Analytics">
+ <meta property="og:description" content="Kort oversigt over risici baseret på fondens dokument med central information (KID). Generel information. Ikke rådgivning. KID’et er det gældende dokument.">
+ <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/risici.html">
+ <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
+ <meta property="og:image:width" content="1200">
+ <meta property="og:image:height" content="630">
+ <meta property="og:image:alt" content="NDI Analytics - udkast. Gå på opdagelse i porteføljen.">
+ <meta name="twitter:card" content="summary_large_image">
+ <!-- og:end -->
 </head>
 <body>
-  <a class="skip" href="#main">Gå til indhold</a>
-  <header class="site-header">
-    <a class="brand" href="index.html"><img src="assets/mark.svg" width="34" height="27" alt=""><span>NewDeal Invest</span></a>
-    <nav class="nav"><a href="index.html?view=fonden">← Fonden</a><a href="invester.html">Sådan investerer du</a></nav>
-  </header>
-  <main id="main"><p style="color:var(--muted)">Henter…</p></main>
-  <script type="module">
-    import { loadFundMeta, WARN_HIST, fmtDate } from './js/data.js';
-    const meta = await loadFundMeta();
-    const p = meta?.funds?.pmindi?.priip;
-    const a = meta?.funds?.pmindiakk?.priip;
-    const RISK_LABEL = { aktiemarkedsrisiko: 'Aktiemarkedsrisiko', vækst_og_sektorrisiko: 'Vækst- og sektorrisiko', valutarisiko: 'Valutarisiko', ingen_markedsbeskyttelse: 'Ingen markedsbeskyttelse', muligt_tab_af_hele_investeringen: 'Muligt tab af hele investeringen' };
-    const klasse = (x) => x ? `${x.key_risks ? `<ul style="color:var(--muted);line-height:1.55;padding-left:1.2rem;margin-bottom:12px">${Object.entries(x.key_risks).filter(([,v])=>v).map(([k])=>`<li>${RISK_LABEL[k]||k}</li>`).join('')}</ul>` : ''}<p style="color:var(--muted);line-height:1.6">Risikoklasse <strong style="color:var(--text)">${x.risk_class} / ${x.risk_scale_max}</strong> (${x.risk_label}). Anbefalet investeringsperiode ifølge KID: ${x.recommended_holding_years} år. KID pr. ${fmtDate(x.production_date)}.</p>
-        <p><a href="${x.url}">Læs KID (Fundmarket PDF) ↗</a></p>` : '<p style="color:var(--muted)">KID-data mangler i snapshot.</p>';
-    document.getElementById('main').innerHTML = `
-      <p class="eyebrow">RISIKO · KID</p>
-      <h1>Risici ved fonden</h1>
-      <p class="lede">Kort oversigt over risici baseret på fondens dokument med central information (KID). Generel information — ikke rådgivning. KID’et er det gældende dokument.</p>
-      <section class="panel">
-        <h2 style="font-size:16px;margin-bottom:8px">PMINDI (udloddende)</h2>
-        ${klasse(p)}
-      </section>
-      <section class="panel">
-        <h2 style="font-size:16px;margin-bottom:8px">PMINDIAKK (akkumulerende)</h2>
-        ${klasse(a)}
-      </section>
-      <section class="panel">
-        <h2 style="font-size:16px;margin-bottom:8px">Vigtigt at vide</h2>
-        <ul style="color:var(--muted);line-height:1.6;padding-left:1.2rem;display:grid;gap:8px">
-          <li>Du kan tabe en del af eller hele din investering.</li>
-          <li>Teknologiaktier svinger typisk meget i kurs, og fald kan vare i flere år.</li>
-          <li>Porteføljen er koncentreret i teknologi og har typisk stor eksponering mod USD, så valutakursen påvirker afkastet.</li>
-          <li>Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast.</li>
-        </ul>
-      </section>
-      <p class="warn">${WARN_HIST}</p>
-      <p><a class="cta" href="invester.html">Sådan investerer du →</a>
-      <a class="outline-btn" style="margin-left:8px" href="om-data.html#g-sri">Ordliste: SRI →</a>
-      <a class="outline-btn" style="margin-left:8px" href="kort.html">Sidekort →</a></p>`;
-  </script>
+ <a class="skip" href="#main">Gå til indhold</a>
+ <header class="site-header">
+ <a class="brand" href="index.html"><img src="assets/mark.svg" width="34" height="27" alt=""><span>NewDeal Invest</span></a>
+ <nav class="nav"><a href="index.html?view=fonden">← Fonden</a><a href="invester.html">Sådan investerer du</a></nav>
+ </header>
+ <main id="main"><p style="color:var(--muted)">Henter…</p></main>
+ <script type="module">
+ import { loadFundMeta, WARN_HIST, fmtDate } from './js/data.js';
+ const meta = await loadFundMeta();
+ const p = meta?.funds?.pmindi?.priip;
+ const a = meta?.funds?.pmindiakk?.priip;
+ const RISK_LABEL = { aktiemarkedsrisiko: 'Aktiemarkedsrisiko', vækst_og_sektorrisiko: 'Vækst- og sektorrisiko', valutarisiko: 'Valutarisiko', ingen_markedsbeskyttelse: 'Ingen markedsbeskyttelse', muligt_tab_af_hele_investeringen: 'Muligt tab af hele investeringen' };
+ const klasse = (x) => x ? `${x.key_risks ? `<ul style="color:var(--muted);line-height:1.55;padding-left:1.2rem;margin-bottom:12px">${Object.entries(x.key_risks).filter(([,v])=>v).map(([k])=>`<li>${RISK_LABEL[k]||k}</li>`).join('')}</ul>` : ''}<p style="color:var(--muted);line-height:1.6">Risikoklasse <strong style="color:var(--text)">${x.risk_class} / ${x.risk_scale_max}</strong> (${x.risk_label}). Anbefalet investeringsperiode ifølge KID: ${x.recommended_holding_years} år. KID pr. ${fmtDate(x.production_date)}.</p>
+ <p><a href="${x.url}">Læs KID (Fundmarket PDF) ↗</a></p>` : '<p style="color:var(--muted)">KID-data mangler i snapshot.</p>';
+ document.getElementById('main').innerHTML = `
+ <p class="eyebrow">RISIKO · KID</p>
+ <h1>Risici ved fonden</h1>
+ <p class="lede">Kort oversigt over risici baseret på fondens dokument med central information (KID). Generel information. Ikke rådgivning. KID’et er det gældende dokument.</p>
+ <section class="panel">
+ <h2 style="font-size:16px;margin-bottom:8px">PMINDI (udloddende)</h2>
+ ${klasse(p)}
+ </section>
+ <section class="panel">
+ <h2 style="font-size:16px;margin-bottom:8px">PMINDIAKK (akkumulerende)</h2>
+ ${klasse(a)}
+ </section>
+ <section class="panel">
+ <h2 style="font-size:16px;margin-bottom:8px">Vigtigt at vide</h2>
+ <ul style="color:var(--muted);line-height:1.6;padding-left:1.2rem;display:grid;gap:8px">
+ <li>Du kan tabe en del af eller hele din investering.</li>
+ <li>Teknologiaktier svinger typisk meget i kurs, og fald kan vare i flere år.</li>
+ <li>Porteføljen er koncentreret i teknologi og har typisk stor eksponering mod USD, så valutakursen påvirker afkastet.</li>
+ <li>Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast.</li>
+ </ul>
+ </section>
+ <p class="warn">${WARN_HIST}</p>
+ <p><a class="cta" href="invester.html">Sådan investerer du →</a>
+ <a class="outline-btn" style="margin-left:8px" href="om-data.html#g-sri">Ordliste: SRI →</a>
+ <a class="outline-btn" style="margin-left:8px" href="kort.html">Sidekort →</a></p>`;
+ </script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-/** SVG performance chart – Jesper-inspired */
+/** SVG performance chart - Jesper-inspired */
 import { toPercentSeries, fmtPct, fmtDate } from './data.js';
 
 export function renderChart(container, rows, events = [], opts = {}) {

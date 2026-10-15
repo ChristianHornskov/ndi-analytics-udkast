@@ -1,6 +1,11 @@
 (() => {
   const FUNDS = { PMINDI: 'pmindi', PMINDIAKK: 'pmindiakk' };
-  // Compliance: kun ÅTD og hele perioden — aldrig 1 md / 3 md (ukendte ?periode= falder tilbage til 'all')
+  function lacksReturns(fund) {
+    const pts = fund?.data || [];
+    return !pts.length || pts[0].total == null || fund.returnsDeferred;
+  }
+
+  // Compliance: kun ÅTD og hele perioden. Aldrig 1 md / 3 md (ukendte ?periode= falder tilbage til 'all')
   const PERIODS = {
     ytd: 'År til dato',
     all: 'Hele perioden'
@@ -15,7 +20,7 @@
   const timestamp = d => Date.parse(d + 'T12:00:00Z');
   const fmtDate = d => dateFormat.format(new Date(timestamp(d)));
   const pct = (n, sign = false) => {
-    if (n == null || Number.isNaN(n)) return '—';
+    if (n == null || Number.isNaN(n)) return '-';
     const value = Math.abs(n) < 0.05 ? 0 : n;
     return `${sign && value > 0 ? '+' : ''}${number.format(value)} %`;
   };
@@ -81,7 +86,7 @@
   }
 
   // PMINDIAKK: ingen afkasttal, graf eller tooltip før klassen har 12 måneders historik
-  const isAkk = () => state.fund === 'PMINDIAKK';
+  const isAkk = () => state.fund === 'PMINDIAKK' || lacksReturns(fundRecord());
 
   function periodSlice(points, period) {
     const cutoff = cutoffDate(period, points.at(-1).d);
@@ -97,6 +102,7 @@
 
   function indexSeries(points) {
     const start = points[0].total;
+    if (start == null) return;
     return points.map(p => ({
       date: p.d,
       value: start ? (p.total / start - 1) * 100 : 0,
@@ -148,9 +154,9 @@
     if (isAkk()) {
       const set = (id, text) => { const el = document.getElementById(id); if (el) el.textContent = text; };
       set('fund-return', 'Vises efter 12 måneder');
-      set('metric-total', '—');
-      set('metric-cagr', '—');
-      set('metric-ytd', '—');
+      set('metric-total', '-');
+      set('metric-cagr', '-');
+      set('metric-ytd', '-');
       const note = document.getElementById('metric-total-note');
       if (note) note.textContent = 'Afkast vises efter 12 måneder';
       set('metric-cagr-note', 'Vises efter 12 måneder');
