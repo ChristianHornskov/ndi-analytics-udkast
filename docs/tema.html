@@ -34,10 +34,11 @@
  </footer>
  <script type="module">
  import { loadAll, fundById, fmtDate, daTheme, WARN_HIST, findTheme, tagsFor, fillKidFooter } from './js/data.js';
+ import { loadXPosts, xSaysPanel } from './js/x-feed.js';
  const u = new URL(location.href);
  const key = u.searchParams.get('slug') || 'chips';
  const fundId = u.searchParams.get('fund') || 'pmindi';
- const [data, td] = await Promise.all([loadAll(), fetch('data/themes.json').then((r) => r.json())]);
+ const [data, td, xPack] = await Promise.all([loadAll(), fetch('data/themes.json').then((r) => r.json()), loadXPosts()]);
  fillKidFooter();
  const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
  const w = (x) => (x || 0).toFixed(2).replace('.', ',');
@@ -103,6 +104,8 @@
  <button type="button" class="outline-btn small" id="copy-tema">Kopiér link til tema</button>
  <span class="sr-only" id="copy-tema-status" role="status" aria-live="polite"></span></p>
  </section>
+
+ ${xSaysPanel(xPack, { themes: [tk, theme.slug, ...(theme.aliases||[])], tickers: list.slice(0,8).map(p=>p.symbol).filter(Boolean), limit: 4, title: 'Hvad siger X' })}
 
  <section class="panel">
  <h2 class="panel-h">Andre temaer</h2>

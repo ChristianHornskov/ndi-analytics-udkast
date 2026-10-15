@@ -24,7 +24,7 @@
  <a class="skip" href="#main">Gå til indhold</a>
  <header class="site-header">
  <a class="brand" href="index.html"><img src="assets/mark.svg" width="34" height="27" alt=""><span>NewDeal Invest</span></a>
- <nav class="nav"><a href="index.html?view=fonden">← Fonden</a><a href="invester.html">Sådan investerer du</a></nav>
+ <nav class="nav"><a href="index.html?view=fonden">← Fonden</a><a href="fakta.html">Fakta</a><a href="omkostninger.html">Omkostninger</a><a href="invester.html">Sådan investerer du</a></nav>
  </header>
  <main id="main"><p style="color:var(--muted)">Henter…</p></main>
  <script type="module">
@@ -47,6 +47,14 @@
  <h2 style="font-size:16px;margin-bottom:8px">PMINDIAKK (akkumulerende)</h2>
  ${klasse(a)}
  </section>
+ <section class="panel" id="tal">
+ <h2 style="font-size:16px;margin-bottom:8px">Risikotal (beregnet i udkastet)</h2>
+ <div id="risk-stats"><p style="color:var(--muted)">Henter…</p></div>
+ </section>
+ <section class="panel">
+ <h2 style="font-size:16px;margin-bottom:8px">Klassifikation (forsinket beholdning)</h2>
+ <div id="risk-class"><p style="color:var(--muted)">Henter…</p></div>
+ </section>
  <section class="panel">
  <h2 style="font-size:16px;margin-bottom:8px">Vigtigt at vide</h2>
  <ul style="color:var(--muted);line-height:1.6;padding-left:1.2rem;display:grid;gap:8px">
@@ -60,6 +68,33 @@
  <p><a class="cta" href="invester.html">Sådan investerer du →</a>
  <a class="outline-btn" style="margin-left:8px" href="om-data.html#g-sri">Ordliste: SRI →</a>
  <a class="outline-btn" style="margin-left:8px" href="kort.html">Sidekort →</a></p>`;
+
+ const rs = await fetch('data/risk-stats.json').then(r => r.ok ? r.json() : null).catch(() => null);
+ const pct = (n) => n == null ? '—' : String(n).replace('.', ',') + ' %';
+ if (rs) {
+   document.getElementById('risk-stats').innerHTML = `
+   <div class="metrics">
+     <div class="metric"><div class="label">Volatilitet (ann.)</div><strong>${pct(rs.volatilityAnnPct)}</strong><small>Beregnet · rf-uafhængig</small></div>
+     <div class="metric"><div class="label">Sharpe (rf=0)</div><strong>${String(rs.sharpeRf0).replace('.', ',')}</strong><small>Beregnet i udkastet</small></div>
+     <div class="metric"><div class="label">Max drawdown</div><strong class="neg">${pct(rs.maxDrawdownPct)}</strong><small>${fmtDate(rs.maxDdPeak)} → ${fmtDate(rs.maxDdTrough)}</small></div>
+   </div>
+   <p class="band" style="margin-top:12px">Officielt Fundmarket-tal for vol/Sharpe: <em>${rs.officialVolSharpe}</em>. ${rs.officialVolSharpeNote || ''}</p>
+   <p class="src">${rs.method} <a href="drawdown.html">Drawdown-side →</a> · <a href="fakta.html">Fakta →</a> · <a href="omkostninger.html">Omkostninger →</a></p>`;
+   const c = rs.classification || {};
+   document.getElementById('risk-class').innerHTML = `
+   <ul style="color:var(--muted);line-height:1.55;padding-left:1.2rem;display:grid;gap:6px">
+     <li>Positioner i snapshot: <strong style="color:var(--text)">${c.positions ?? '—'}</strong></li>
+     <li>Temaforslag (afventer gennemgang): <strong style="color:var(--text)">${c.themeForslag ?? '—'}</strong></li>
+     <li>«Andet»: <strong style="color:var(--text)">${c.andetCount ?? '—'}</strong> selskaber · ca. ${String(c.andetWeight ?? '').replace('.', ',')} % vægt</li>
+     <li>Modenhed klassificeret: <strong style="color:var(--text)">${c.maturityClassified ?? 0}</strong> (udkast — ofte 0 indtil NDI udfylder)</li>
+     <li>Tema-metadækning: <strong style="color:var(--text)">${String(c.coverageMeta ?? '').replace('.', ',')} %</strong> — ${c.coverageMetaNote || ''}</li>
+   </ul>
+   <p class="src" style="margin-top:10px">Beholdning pr. ${fmtDate(rs.holdingsAsOf)}. <a href="om-data.html#g-temaforslag">Om temaforslag →</a></p>`;
+ } else {
+   document.getElementById('risk-stats').innerHTML = '<p style="color:var(--muted)">Risk-stats mangler.</p>';
+   document.getElementById('risk-class').innerHTML = '<p style="color:var(--muted)">—</p>';
+ }
+
  </script>
 </body>
 </html>

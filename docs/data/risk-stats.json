@@ -1,0 +1,22 @@
+{
+  "asOf": "2026-10-14",
+  "holdingsAsOf": "2026-06-01",
+  "method": "Beregnet i udkastet fra den offentlige totalafkast-serie i portfolio.json (Fundmarket-baseret snapshot). Ikke et officielt Fundmarket-faktaark-tal. rf=0 for Sharpe.",
+  "sourceSeries": "docs/data/portfolio.json · PMINDI",
+  "volatilityAnnPct": 32.46,
+  "sharpeRf0": 0.89,
+  "maxDrawdownPct": -35.82,
+  "maxDdPeak": "2026-06-02",
+  "maxDdTrough": "2025-04-08",
+  "officialVolSharpe": "udfyldes af NDI",
+  "officialVolSharpeNote": "Volatilitet/Sharpe ikke fundet som officielle tal på Fundmarket-produktsiden ved opslag 15. okt. 2026.",
+  "classification": {
+    "positions": 345,
+    "themeForslag": 115,
+    "andetCount": 67,
+    "andetWeight": 11.61,
+    "maturityClassified": 0,
+    "coverageMeta": 96.59,
+    "coverageMetaNote": "fund-meta.classificationCoverage (tema-dækning, ikke modenhed)."
+  }
+}

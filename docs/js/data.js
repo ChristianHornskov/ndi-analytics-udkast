@@ -28,7 +28,7 @@ let cache = null;
 
 export async function loadAll() {
   if (cache) return cache;
-  const [portfolio, latest, context, multiTags] = await Promise.all([
+  const [portfolio, latest, context, multiTags, xPosts] = await Promise.all([
     fetch('data/portfolio.json').then((r) => {
       if (!r.ok) throw new Error('portfolio.json');
       return r.json();
@@ -36,8 +36,9 @@ export async function loadAll() {
     fetch('data/latest.json').then((r) => (r.ok ? r.json() : null)).catch(() => null),
     fetch('data/context-events.json').then((r) => (r.ok ? r.json() : { events: [] })).catch(() => ({ events: [] })),
     fetch('data/multi-tags.json').then((r) => (r.ok ? r.json() : { byIsin: {} })).catch(() => ({ byIsin: {} })),
+    fetch('data/x-posts.json').then((r) => (r.ok ? r.json() : null)).catch(() => null),
   ]);
-  cache = { portfolio, latest, context, multiTags };
+  cache = { portfolio, latest, context, multiTags, xPosts };
   return cache;
 }
 
