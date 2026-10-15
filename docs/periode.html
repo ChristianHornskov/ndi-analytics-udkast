@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Periode · NDI Analytics</title>
+  <link rel="stylesheet" href="css/ndi.css">
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><img src="assets/mark.svg" width="34" height="27" alt=""><span>NewDeal Invest</span></a>
+    <nav class="nav"><a href="index.html?view=fonden">← Fonden</a><a href="drawdown.html">Drawdown</a></nav>
+  </header>
+  <main id="main"><p style="color:var(--muted)">Henter…</p></main>
+  <script type="module">
+    import { loadAll, fundById, calendarYearReturns, ytdReturn, periodReturn, cagr, WARN_HIST, fmtPct, fmtDate } from './js/data.js';
+    const { portfolio } = await loadAll();
+    const fundId = new URL(location.href).searchParams.get('fund') || 'pmindi';
+    const year = new URL(location.href).searchParams.get('year') || 'YTD';
+    const fund = fundById(portfolio, fundId);
+    if (fund.id === 'pmindiakk') {
+      document.getElementById('main').innerHTML = `<p class="eyebrow">PERIODE</p><h1>${fund.short}</h1><section class="panel"><p style="color:var(--muted)">Afkast vises efter 12 måneder.</p></section><p class="warn">${WARN_HIST}</p>`;
+    } else {
+      const years = calendarYearReturns(fund.data);
+      const ytd = ytdReturn(fund.data);
+      let label = year, pct = null, from = '', to = '';
+      if (year === 'YTD' || year === 'ytd') {
+        label = 'År til dato'; pct = ytd;
+        const end = fund.data[fund.data.length-1];
+        from = end.d.slice(0,4)+'-01-01'; to = end.d;
+      } else if (year === 'all' || year === 'start') {
+        label = 'Siden start'; pct = periodReturn(fund.data);
+        from = fund.data[0].d; to = fund.data[fund.data.length-1].d;
+      } else {
+        const row = years.find(c => String(c.year) === String(year));
+        if (row) { label = row.year + (row.partial?' (delår)':''); pct = row.ret; from = row.from; to = row.to; }
+      }
+      const chips = [
+        `<a class="tag" href="periode.html?fund=${fundId}&year=all">Siden start: ${fmtPct(periodReturn(fund.data))}</a>`,
+        `<a class="tag" href="periode.html?fund=${fundId}&year=YTD">YTD: ${fmtPct(ytd)}</a>`,
+        ...years.map(c => `<a class="tag" href="periode.html?fund=${fundId}&year=${c.year}">${c.year}: ${fmtPct(c.ret)}</a>`)
+      ].join(' ');
+      document.title = `${label} · ${fund.short} · NDI`;
+      document.getElementById('main').innerHTML = `
+        <a class="back" href="index.html?view=fonden&fund=${fundId}&periode=${year==='YTD'?'ytd':year==='all'?'all':'year:'+year}">← Fonden</a>
+        <p class="eyebrow">PERIODE · DYB SIDE</p>
+        <h1>${fund.short} — ${label}</h1>
+        <div class="kpi-grid">
+          <div class="kpi"><span class="label">Afkast</span><strong class="${(pct||0)>=0?'pos':'neg'}">${fmtPct(pct)}</strong></div>
+          <div class="kpi"><span class="label">Fra → til</span><strong style="font-size:16px">${fmtDate(from)} → ${fmtDate(to)}</strong></div>
+          <div class="kpi"><span class="label">CAGR (hele serien)</span><strong>${fmtPct(cagr(fund.data))}</strong></div>
+        </div>
+        <section class="panel">
+          <h2 style="font-size:16px;margin-bottom:8px">Kontekst</h2>
+          <p style="color:var(--muted);line-height:1.6">Tal fra fondens totalafkast-serie. Ingen Nasdaq-benchmark i v1. Se <a href="drawdown.html?fund=${fundId}">drawdown</a> og dokumenterede udbytter i kontekstgrafen på fondssiden.</p>
+        </section>
+        <section class="panel">
+          <h2 style="font-size:16px;margin-bottom:10px">Alle perioder</h2>
+          <div style="display:flex;flex-wrap:wrap;gap:8px">${chips}</div>
+        </section>
+        <p class="warn">${WARN_HIST}</p>`;
+    }
+  </script>
+</body>
+</html>

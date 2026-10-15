@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Drawdown · NDI Analytics</title>
+  <link rel="stylesheet" href="css/ndi.css">
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><img src="assets/mark.svg" width="34" height="27" alt=""><span>NewDeal Invest</span></a>
+    <nav class="nav"><a href="index.html?view=fonden">← Fonden</a><a href="om-data.html#g-drawdown">Ordliste</a></nav>
+  </header>
+  <main id="main"><p style="color:var(--muted)">Henter…</p></main>
+  <footer class="site-footer"><p>Udkast / noindex. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast.</p></footer>
+  <script type="module">
+    import { loadAll, fundById, maxDrawdown, calendarYearReturns, WARN_HIST, fmtDate, fmtPct } from './js/data.js';
+    const { portfolio } = await loadAll();
+    const fundId = new URL(location.href).searchParams.get('fund') || 'pmindi';
+    const fund = fundById(portfolio, fundId);
+    const isAkk = fund.id === 'pmindiakk';
+    if (isAkk) {
+      document.getElementById('main').innerHTML = `
+        <a class="back" href="index.html?view=fonden&fund=pmindiakk">← Fonden</a>
+        <p class="eyebrow">FONDAFKAST · DRAWDOWN</p>
+        <h1>Drawdown — ${fund.short}</h1>
+        <section class="panel"><p style="color:var(--muted);line-height:1.6">Afkast og drawdown for PMINDIAKK vises efter 12 måneders historik. Klassen følger samme overordnede strategi som PMINDI.</p></section>
+        <p class="warn">${WARN_HIST}</p>`;
+    } else {
+      const dd = maxDrawdown(fund.data);
+      const years = calendarYearReturns(fund.data);
+      const yearRows = years.map(y => `<tr><td>${y.year}${y.partial?' (delår)':''}</td><td class="${y.ret>=0?'pos':'neg'}">${fmtPct(y.ret)}</td><td>${fmtDate(y.from)} → ${fmtDate(y.to)}</td></tr>`).join('');
+      document.getElementById('main').innerHTML = `
+        <a class="back" href="index.html?view=fonden&fund=${fundId}">← Fonden</a>
+        <p class="eyebrow">FONDAFKAST · DRAWDOWN</p>
+        <h1>Drawdown — ${fund.short}</h1>
+        <p class="lede">Største fald fra top i fondens totalafkast-serie (NAV total). Fondniveau — ikke enkeltaktier.</p>
+        <div class="kpi-grid">
+          <div class="kpi"><span class="label">Max drawdown</span><strong class="neg">${dd ? fmtPct(dd.dd) : '–'}</strong></div>
+          <div class="kpi"><span class="label">Top</span><strong>${dd ? fmtDate(dd.peakD) : '–'}</strong></div>
+          <div class="kpi"><span class="label">Bund</span><strong>${dd ? fmtDate(dd.troughD) : '–'}</strong></div>
+        </div>
+        <section class="panel">
+          <h2 style="font-size:16px;margin-bottom:10px">Kalenderår (til kontekst)</h2>
+          <div class="table-wrap"><table class="data" style="min-width:0"><thead><tr><th>År</th><th>Afkast</th><th>Periode</th></tr></thead><tbody>${yearRows}</tbody></table></div>
+          <p style="font-size:11px;color:var(--muted);margin-top:8px">Klik et år for dyb side: ${years.map(y=>`<a href="periode.html?fund=${fundId}&year=${y.year}">${y.year}</a>`).join(' · ')} · <a href="periode.html?fund=${fundId}&year=YTD">YTD</a></p>
+        </section>
+        <p class="warn">${WARN_HIST}</p>`;
+    }
+  </script>
+</body>
+</html>

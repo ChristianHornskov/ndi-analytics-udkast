@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Tema · NDI Analytics</title>
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/ndi.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><img src="assets/mark.svg" width="34" height="27" alt=""><span>NewDeal Invest</span></a>
+    <nav class="nav"><a href="index.html?view=udforsk">← Udforsk</a><a href="vaerdikaede.html">Værdikæde</a></nav>
+  </header>
+  <main id="main"><p style="color:var(--muted)">Henter tema…</p></main>
+  <footer class="site-footer">
+    <p>Udkast / noindex. Segmenter viser eksponering, ikke en anbefaling. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast.</p>
+  </footer>
+  <script type="module">
+    import { fmtDate, WARN_HIST } from './js/data.js';
+    const slug = new URL(location.href).searchParams.get('slug') || 'chips';
+    const fund = new URL(location.href).searchParams.get('fund') || 'pmindi';
+    const data = await fetch('data/themes.json').then(r => r.json());
+    const theme = data.themes.find(t => t.slug === slug) || data.themes[0];
+    document.title = `${theme.title} · NDI Analytics`;
+    const chain = (theme.chain||[]).map(c => `<span class="tag">${c}</span>`).join(' → ') || '–';
+    const rows = (theme.companies||[]).map(c => `
+      <tr>
+        <td><a href="selskab.html?isin=${encodeURIComponent(c.isin)}&fund=${fund}">${c.name}</a><br><small style="color:var(--muted)">${c.isin}</small></td>
+        <td>${c.weight.toFixed(2).replace('.',',')}</td>
+      </tr>`).join('');
+    document.getElementById('main').innerHTML = `
+      <a class="back" href="index.html?view=udforsk&fund=${fund}&tags=${encodeURIComponent(theme.themeKey)}">← Screener filtreret</a>
+      <p class="eyebrow">TEMA · DYB SIDE</p>
+      <h1>${theme.title}</h1>
+      <p class="lede">${theme.problem}</p>
+      <p class="band">Eksponering, ikke anbefaling. Beholdning forsinket pr. ${fmtDate(data.positionsAsOf)} · ${theme.count} selskaber · ca. ${String(theme.weightSum).replace('.',',')} % af ${data.fund.toUpperCase()} (udsnit).</p>
+      <section class="panel">
+        <h2 style="font-size:16px;margin-bottom:8px;color:var(--brand)">Plads i værdikæden</h2>
+        <p style="margin-bottom:10px">${chain}</p>
+        <p><a class="outline-btn small" href="vaerdikaede.html">Se hele AI-værdikæden →</a></p>
+      </section>
+      <section class="panel">
+        <h2 style="font-size:16px;margin-bottom:8px">Selskaber i forsinket beholdning</h2>
+        <div class="table-wrap"><table class="data" style="min-width:0"><thead><tr><th>Navn</th><th>Vægt %</th></tr></thead><tbody>${rows || '<tr><td colspan="2">Ingen i udsnit</td></tr>'}</tbody></table></div>
+        <p style="font-size:11px;color:var(--muted);margin-top:8px">Top op til 40 efter vægt. Ingen kursafkast pr. aktie i v1.</p>
+      </section>
+      <p class="warn">${WARN_HIST}</p>`;
+  </script>
+</body>
+</html>

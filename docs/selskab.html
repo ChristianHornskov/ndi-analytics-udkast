@@ -58,7 +58,9 @@
         </section>
         <section class="panel">
           <h2 style="font-size:16px;margin-bottom:8px">NDI-tema (udkast)</h2>
-          <p><span class="tag accent">${daTheme(p.theme)}</span></p>
+          <p><a class="tag accent" href="tema.html?slug=${encodeURIComponent(p.theme)}&fund=${fundId}">${daTheme(p.theme)}</a>
+          <a class="outline-btn small" style="margin-left:8px" href="tema.html?slug=${encodeURIComponent(p.theme)}&fund=${fundId}">Tema-dyb side →</a>
+          <a class="outline-btn small" style="margin-left:8px" href="vaerdikaede.html">Værdikæde →</a></p>
           <p class="band">Segmenter viser eksponering, ikke en anbefaling. Kursafkast, P/S og P/E pr. aktie vises ikke i v1 (under verifikation – mulige split-/valutafejl).</p>
           <div class="metrics" style="margin-top:14px">
             <div class="metric"><div class="label">Vægt i fonden</div><strong>${(p.weight||0).toFixed(2).replace('.',',')} %</strong><small>Beholdning pr. ${fmtDate(fund.positionsAsOf||data.portfolio.asOf)} (forsinket)</small></div>
@@ -76,6 +78,15 @@
           <h2 style="font-size:16px;margin-bottom:8px">Hold øje med</h2>
           <p style="color:var(--muted)">${p.watch || '–'}</p>
           <p class="band" style="margin-top:12px">Automatiske nyhedsresuméer (AI) er ikke aktive i udkastet. Når de kommer, mærkes de som AI og som generel information – ikke NDI's vurdering. Kun forsinkede offentlige beholdningsdata.</p>
+        </section>
+        <section class="panel">
+          <h2 style="font-size:16px;margin-bottom:8px">Andre i samme tema (forsinket beholdning)</h2>
+          <div class="table-wrap"><table class="data" style="min-width:0"><thead><tr><th>Navn</th><th>Vægt %</th></tr></thead><tbody>
+          ${fund.positions.filter(x => x.theme === p.theme && x.isin !== p.isin).sort((a,b)=>(b.weight||0)-(a.weight||0)).slice(0,8).map(x =>
+            `<tr><td><a href="selskab.html?isin=${encodeURIComponent(x.isin)}&fund=${fundId}">${x.name}</a></td><td>${(x.weight||0).toFixed(2).replace('.',',')}</td></tr>`
+          ).join('') || '<tr><td colspan="2">–</td></tr>'}
+          </tbody></table></div>
+          <p style="margin-top:10px"><a href="selskaber.html?fund=${fundId}">Alle selskaber →</a> · <a href="laer/index.html">Lær →</a> · <a href="invester.html">Sådan investerer du →</a></p>
         </section>`;
     }
     document.getElementById('btn-invest').onclick = () => location.href = 'index.html?view=fonden&fund=' + fundId;

@@ -110,28 +110,50 @@ function renderEntre(root) {
     <div class="doors" role="navigation" aria-label="Vælg område">
       <a class="door" href="?view=fonden&fund=${state.fund}" data-nav="fonden">
         <strong>Fonden</strong>
-        <span>Performance, afkastkalender og hvordan du finder ISIN.</span>
+        <span>Performance, afkastkalender, drawdown og dokumenterede udbytter.</span>
         <span class="go">Åbn fonden →</span>
       </a>
       <a class="door" href="?view=portefolje&fund=${state.fund}" data-nav="portefolje">
         <strong>Porteføljen</strong>
-        <span>Beholdninger fordelt på NDI-temaer og modenhed. Data pr. dato.</span>
+        <span>Forsinket beholdning fordelt på NDI-temaer. Eksponering, ikke anbefaling.</span>
         <span class="go">Se beholdninger →</span>
       </a>
       <a class="door" href="?view=udforsk&fund=${state.fund}" data-nav="udforsk">
         <strong>Udforsk tech</strong>
-        <span>Screener med NDI-tags, sortering og søgning – kun porteføljens selskaber i level 1.</span>
+        <span>Screener med NDI-tags, tema-dybsider og søgning — kun porteføljens selskaber.</span>
         <span class="go">Åbn screener →</span>
+      </a>
+      <a class="door" href="laer/index.html">
+        <strong>Lær</strong>
+        <span>Sådan tænker vi, varians, P/E, livscyklus og FAQ.</span>
+        <span class="go">Åbn lær →</span>
+      </a>
+      <a class="door" href="invester.html">
+        <strong>Sådan investerer du</strong>
+        <span>Fra produktforståelse til ISIN og platform — generel info.</span>
+        <span class="go">Se flow →</span>
+      </a>
+      <a class="door" href="sammenlign.html">
+        <strong>Sammenlign</strong>
+        <span>PMINDI vs PMINDIAKK: udbytte vs akkumulering.</span>
+        <span class="go">Sammenlign →</span>
       </a>
     </div>
     <section class="panel">
       <h2 style="font-size:18px;margin-bottom:10px">Hurtige genveje</h2>
-      <p style="color:var(--muted);font-size:13px;margin-bottom:12px">Data opdateret pr. ${fmtDate(DATA.portfolio.asOf)} · Snapshot (ikke live pipeline).</p>
+      <p style="color:var(--muted);font-size:13px;margin-bottom:12px">Beholdning pr. ${fmtDate(DATA.portfolio.asOf)} · Afkast-snapshot (ikke live pipeline).</p>
       <div class="seg">
-        <a class="outline-btn small" href="selskab.html?isin=JP3436100006&fund=${state.fund}">Eksempel: selskabsside (SoftBank)</a>
-        <a class="outline-btn small" href="om-data.html">Om data & begreber</a>
-        <a class="outline-btn small" href="embed/chart.html">Embed-graf (forside-komponent)</a>
-        <a class="outline-btn small" href="vaerdikaede.html">AI-værdikæde (light)</a>
+        <a class="outline-btn small" href="tema.html?slug=chips&fund=${state.fund}">Tema: Chips</a>
+        <a class="outline-btn small" href="laer/index.html">Lær</a>
+        <a class="outline-btn small" href="drawdown.html?fund=${state.fund}">Drawdown</a>
+        <a class="outline-btn small" href="sammenlign.html">PMINDI vs AKK</a>
+        <a class="outline-btn small" href="invester.html">Sådan investerer du</a>
+        <a class="outline-btn small" href="selskaber.html?fund=${state.fund}">Alle selskaber</a>
+        <a class="outline-btn small" href="nyhedsarkiv.html">Nyhedsarkiv</a>
+        <a class="outline-btn small" href="om-data.html">Ordliste & data</a>
+        <a class="outline-btn small" href="vaerdikaede.html">AI-værdikæde</a>
+        <a class="outline-btn small" href="embed/chart.html">Embed-graf</a>
+        <a class="outline-btn small" href="selskab.html?isin=JP3436100006&fund=${state.fund}">Eksempel: SoftBank</a>
         <button type="button" class="outline-btn small" data-open="dlg-follow">Følg med (stub)</button>
       </div>
     </section>
@@ -218,6 +240,9 @@ function renderFonden(root) {
   const yearTable = years.map((y) =>
     `<tr><td>${y.year}${y.partial ? ' <span class="badge">delår</span>' : ''}</td><td>${fmtPct(y.ret)}</td><td style="color:var(--muted);font-size:12px">${fmtDate(y.from)} – ${fmtDate(y.to)}</td></tr>`
   ).join('');
+  const yearTableDeep = years.map((y) =>
+    `<tr><td>${y.year}${y.partial ? ' <span class="badge">delår</span>' : ''}</td><td>${fmtPct(y.ret)}</td><td style="color:var(--muted);font-size:12px">${fmtDate(y.from)} – ${fmtDate(y.to)}</td><td><a href="periode.html?fund=${state.fund}&year=${y.year}">Dyb →</a></td></tr>`
+  ).join('');
 
   root.innerHTML = `
     <a class="back" href="?view=entre&fund=${state.fund}" data-nav="entre">← Entré</a>
@@ -236,10 +261,10 @@ function renderFonden(root) {
     </div>
     <section class="panel">
       <div class="metrics">
-        <div class="metric"><div class="label">Totalafkast siden start</div><strong>${fmtPct(totAll)}</strong><small>Fra ${fmtDate(rows[0]?.d)} · DKK</small></div>
-        <div class="metric"><div class="label">Gns. årligt afkast (CAGR)</div><strong>${fmtPct(c)}</strong><small>Efter løbende omkostninger</small></div>
-        <div class="metric"><div class="label">År til dato</div><strong>${fmtPct(ytd)}</strong><small>Pr. ${fmtDate(asOfPerf)}</small></div>
-        <div class="metric"><div class="label">Risikoindikator (KID)</div><strong>5 / 7</strong><small>Anbefalet ejertid 5 år</small></div>
+        <div class="metric"><div class="label">Totalafkast siden start ${gl('total')}</div><strong>${fmtPct(totAll)}</strong><small>Fra ${fmtDate(rows[0]?.d)} · DKK</small></div>
+        <div class="metric"><div class="label">Gns. årligt afkast (CAGR) ${gl('cagr')}</div><strong>${fmtPct(c)}</strong><small>Efter løbende omkostninger</small></div>
+        <div class="metric"><div class="label">År til dato ${gl('ytd')}</div><strong>${fmtPct(ytd)}</strong><small>Pr. ${fmtDate(asOfPerf)}</small></div>
+        <div class="metric"><div class="label">Risikoindikator (KID) ${gl('sri')}</div><strong>5 / 7</strong><small>Anbefalet ejertid 5 år</small></div>
       </div>
       ${warnHtml()}
       <p class="note-fundmarket">Fonden har intet benchmark.</p>
@@ -251,7 +276,10 @@ function renderFonden(root) {
       <h2 style="font-size:18px;margin-bottom:6px">Afkast pr. kalenderår</h2>
       <p style="font-size:12px;color:var(--muted);margin-bottom:8px">Afsluttede år + delår fra start (*). Ingen 1- eller 3-måneders fremhævning.</p>
       ${warnHtml()}
-      <div class="table-wrap"><table class="data" style="min-width:0"><thead><tr><th>År</th><th>Afkast</th><th>Periode</th></tr></thead><tbody>${yearTable}</tbody></table></div>
+      <div class="table-wrap"><table class="data" style="min-width:0"><thead><tr><th>År</th><th>Afkast</th><th>Periode</th><th></th></tr></thead><tbody>${yearTableDeep}</tbody></table></div>
+      <p style="margin-top:12px"><a class="outline-btn small" href="drawdown.html?fund=${state.fund}">Åbn drawdown-side →</a>
+      <a class="outline-btn small" href="periode.html?fund=${state.fund}&year=YTD" style="margin-left:8px">YTD dyb side →</a>
+      <a class="outline-btn small" href="sammenlign.html" style="margin-left:8px">Vs PMINDIAKK →</a></p>
     </section>
     <section class="panel">
       <h2 style="font-size:18px;margin-bottom:6px">Månedlige afkast</h2>
@@ -366,7 +394,7 @@ function positionsTable(list, fund) {
   </tr></thead><tbody>${list.map((p) => `<tr>
     <td><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}">${p.name}</a><br><small style="color:var(--muted)">${p.isin}</small></td>
     <td>${(p.weight ?? 0).toFixed(2).replace('.', ',')}</td>
-    <td><span class="tag">${daTheme(p.theme)}</span></td>
+    <td><a class="tag" href="tema.html?slug=${encodeURIComponent(p.theme)}&fund=${fund.id}">${daTheme(p.theme)}</a></td>
   </tr>`).join('')}</tbody></table></div>
   <p style="font-size:11px;color:var(--muted);margin-top:8px">Kun vægt og tema. Ingen kursafkast pr. aktie i v1 (under verifikation). Beholdning er forsinket.</p>`;
 }
@@ -391,6 +419,7 @@ function renderUdforsk(root) {
     <div class="filters" aria-label="Temaer">
       ${themes.map((t) => `<button type="button" class="control ${state.tags.includes(t)?'active':''}" data-tag="${t}">${daTheme(t)}</button>`).join('')}
     </div>
+    <p style="font-size:12px;color:var(--muted);margin:8px 0">Tema-dybsider: ${themes.map((t) => `<a href="tema.html?slug=${encodeURIComponent(t)}&fund=${state.fund}">${daTheme(t)}</a>`).join(' · ')} · <a href="selskaber.html?fund=${state.fund}">A–Z liste</a></p>
     <!-- Modenhedsfiltre skjult indtil manuel klassifikation -->
     <div class="chips" id="chips"></div>
     <p style="font-size:12px;color:var(--muted)">${list.length} resultater · udkast-klassifikation</p>
@@ -475,6 +504,8 @@ function onInput(e) {
 
 async function main() {
   readUrl();
+  // Strippede interne tags fjernes også fra adresselinjen, så de ikke deles via "Kopiér link"
+  if ((new URL(location.href).searchParams.get('tags') || '') !== state.tags.join(',')) writeUrl(true);
   try {
     DATA = await loadAll();
   } catch (err) {
