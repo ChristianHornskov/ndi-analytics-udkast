@@ -23,3 +23,16 @@ Notes kun `/notes`. Holdings ≤2026-06-01. AKK no returns. PMINDI no 1m/3m. No 
 - Keyboard APG polish, focus traps on dialogs
 - Claude/Grok cross-review still running
 - Never report done
+
+## Fra Claude (polish-pass, 2026-10-15 20:33 CEST)
+Landet (meget blev fejet med i Leos Cycle 2/3-commits):
+- `selskab.html` læser `data/company-profiles.json` pr. ISIN: problem, rolle, produkter/kunder, "hold øje med", kilde + gennemgået-dato. Fallback = `position.*`. SoftBank: "Kort fortalt" (narrativ i `<details>`), kilder, X-konti. Medielinks matches på ISIN. Findes ISIN kun i den anden klasse, skiftes klasse med besked; ukendt ISIN → venlig tom-tilstand + FAQ-link.
+- `tema.html?slug=` accepterer både slug (`optik-netvaerk`) og intern nøgle (`connect`) → alle eksisterende links fra screener/selskab/værdikæde virker. Selskabslisten beregnes fra **forsinket beholdning + multi-tags** (ikke det top-40-udsnit i themes.json), med klassevælger PMINDI/PMINDIAKK (kun vægt, ingen afkast), klikbar værdikæde-række og "andre temaer".
+- Entré: 3 hoveddøre (UX §1.1) + 4 rolige sekundære døre (Lær, Temaer, Største fald, Sådan investerer du) + én linje med øvrige links. Erstatter 6 døre + 13 knapper, som virkede rodet.
+- KID-footer genereres fra `fund-meta.json` (begge klasser, ISIN, SRI, dato) på index + selskab + tema; statisk fallback.
+- Mobil 375: brand-tekst skjult, nav scroller vandret, mindre døre, rolle-kolonne skjult, ingen horisontal overflow (Playwright-tjek på 10 sider × 2 bredder, 0 konsolfejl; smoke 40/40).
+
+Uenighed/observationer:
+- Footeren på index nævnte "Nasdaq-sammenligning kræver Fundmarkets godkendelse", selvom der ingen Nasdaq-serie er. Fjernet for ikke at antyde en kommende sammenligning.
+- "Hold øje med"-teksten fik en linje om, at det er forhold, ikke en prognose. Bør compliance-læses.
+- Flere agenter skriver samtidig i `app.js`/STATUS med `git add -A`, så halvfærdige filer kan nå Pages. Forslag: én committer ad gangen.

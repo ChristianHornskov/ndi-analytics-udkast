@@ -22,12 +22,16 @@
     <p><a href="om-data.html">Om data &amp; begreber</a> · <a href="laer/index.html">Lær</a></p>
   </footer>
   <script type="module">
-    import { loadAll, fundById, fmtDate, daTheme, WARN_HIST, loadFundMeta, loadProfiles, kidFooterHtml } from './js/data.js';
+    import { loadAll, fundById, fmtDate, daTheme, WARN_HIST, loadFundMeta, loadProfiles, kidFooterHtml, tagsFor } from './js/data.js';
     const u = new URL(location.href);
     const isin = u.searchParams.get('isin');
     let fundId = u.searchParams.get('fund') || 'pmindi';
     const main = document.getElementById('main');
-    const [data, meta, prof] = await Promise.all([loadAll(), loadFundMeta(), loadProfiles()]);
+    const [data, meta, prof, uniquePack, monthsPack] = await Promise.all([
+      loadAll(), loadFundMeta(), loadProfiles(),
+      fetch('data/unique-metrics.json').then(r => r.ok ? r.json() : null).catch(() => null),
+      fetch('data/company-months.json').then(r => r.ok ? r.json() : null).catch(() => null),
+    ]);
     const kid = kidFooterHtml(meta);
     if (kid) document.querySelector('[data-kid-footer]').innerHTML = kid;
 
@@ -107,9 +111,10 @@
 
         <section class="panel">
           <h2 class="panel-h">NDI-tema og plads i fonden</h2>
-          <p class="link-row"><a class="tag accent" href="${temaHref}">${esc(daTheme(p.theme))}</a>
+          <p class="link-row">${tagsFor(p, data.multiTags).map(t => `<a class="tag accent" href="tema.html?slug=${encodeURIComponent(t)}&fund=${fundId}">${esc(daTheme(t))}</a>`).join(' ')}
             <a class="outline-btn small" href="${temaHref}">Temaside →</a>
             <a class="outline-btn small" href="index.html?view=udforsk&fund=${fundId}&tags=${encodeURIComponent(p.theme)}">Screener: ${esc(daTheme(p.theme))} →</a></p>
+          ${data.multiTags?.byIsin?.[p.isin]?.why ? `<p class="src">${esc(data.multiTags.byIsin[p.isin].why)}</p>` : ''}
           <p class="band">Segmenter viser eksponering, ikke en anbefaling. Kursafkast, P/S og P/E pr. aktie vises ikke i udkastet (tallene er under verifikation).</p>
           <div class="metrics" style="margin-top:14px">
             <div class="metric"><div class="label">Vægt i ${esc(fund.short)}</div><strong>${w(p.weight)} %</strong><small>Beholdning pr. ${posAsOf} (forsinket)</small></div>
@@ -117,6 +122,26 @@
           </div>
         </section>
 
+        ${uniquePack?.byIsin?.[p.isin]?.metrics?.length ? `<section class="panel">
+          <h2 class="panel-h">NDI-perspektiv (udkast)</h2>
+          <div class="kpi-grid">${uniquePack.byIsin[p.isin].metrics.map(m => `<div class="kpi"><span class="label">${esc(m.label)}</span><strong style="font-size:16px">${esc(m.value)}</strong><span class="sub">${esc(m.hint||'')}</span></div>`).join('')}</div>
+          <p class="band">Placeholders — ikke live særmetrikker. Eksponering, ikke anbefaling.</p>
+        </section>` : ''}
+        ${(() => {
+          const series = (monthsPack?.funds?.[fundId] || []).map(row => ({ d: row.date, w: row.weights?.[p.isin] })).filter(x => x.w != null);
+          if (series.length < 2) return '';
+          const maxW = Math.max(...series.map(x => x.w), 0.01);
+          const bars = series.map(x => {
+            const h = Math.max(4, Math.round((x.w / maxW) * 72));
+            return `<div style="display:flex;flex-direction:column;align-items:center;gap:4px;flex:1;min-width:18px" title="${x.d}: ${x.w.toFixed(2)} %"><div style="height:72px;display:flex;align-items:flex-end;width:100%"><div style="width:100%;height:${h}px;background:var(--brand);border-radius:3px 3px 0 0;opacity:.85"></div></div><span style="font-size:9px;color:var(--faint)">${x.d.slice(2,7)}</span></div>`;
+          }).join('');
+          const first = series[0], last = series[series.length-1];
+          return `<section class="panel">
+            <h2 class="panel-h">Vægt over tid (månedsrapporter)</h2>
+            <p class="src">${first.w.toFixed(2).replace('.',',')} % (${fmtDate(first.d)}) → ${last.w.toFixed(2).replace('.',',')} % (${fmtDate(last.d)}). Kun måneder hvor ISIN indgår.</p>
+            <div style="display:flex;align-items:flex-end;gap:3px;overflow-x:auto;padding-bottom:4px">${bars}</div>
+          </section>`;
+        })()}
         <section class="panel">
           <h2 class="panel-h">Hold øje med</h2>
           <p class="prose muted">${esc(f('watch') || '–')}</p>

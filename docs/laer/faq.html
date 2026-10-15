@@ -14,14 +14,16 @@
   <main>
     <p class="eyebrow">LÆR · FAQ</p>
     <h1>Ofte stillede spørgsmål</h1>
-    <p class="lede">Søg i korte svar. Generel information — ikke rådgivning.</p>
-    <input id="faq-q" type="search" placeholder="Søg i FAQ…" aria-label="Søg FAQ"
-      style="width:100%;max-width:480px;padding:12px 14px;border-radius:8px;border:1px solid var(--line);background:var(--panel);color:var(--text);margin-bottom:18px">
-    <div id="faq-list" class="doors" style="grid-template-columns:1fr"></div>
+    <p class="lede">Søg på tværs af korte svar, alle lær-artikler og ordlisten. Søgningen sker i din browser. Generel information — ikke rådgivning.</p>
+    <label for="faq-q" class="sr-only">Søg i FAQ, lær-artikler og ordliste</label>
+    <input id="faq-q" class="faq-input" type="search" placeholder="Søg fx “udbytte”, “spredning”, “P/E”…" autocomplete="off">
+    <p id="faq-count" class="faq-count" aria-live="polite"></p>
+    <div id="faq-list" class="faq-list"></div>
     <p class="warn">Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.</p>
   </main>
-  <script>
-    const items = [
+  <script type="module">
+    import { initFaq } from '../js/faq-search.js';
+    const curated = [
       { q: 'Hvorfor så mange aktier?', a: 'Høj idiosynkratisk varians i tech — bred spredning reducerer afhængighed af enkelte udfald.', href: 'hvorfor-mange-aktier.html' },
       { q: 'Hvorfor mangler aktie X?', a: 'Typisk størrelse, likviditet eller spredning. Fravær er ikke en anbefaling.', href: 'faq-mangler-aktie.html' },
       { q: 'Hvad betyder P/E?', a: 'Markedets forventning — ikke en facitliste for vækstvirksomheder.', href: 'pe-forklaring.html' },
@@ -32,16 +34,12 @@
       { q: 'Hvad er drawdown?', a: 'Fald fra top i fondens totalafkast-serie. Se drawdown-siden.', href: '../drawdown.html' },
       { q: 'Sådan tænker NDI', a: 'Fem principper: retning kan skimtes, vindere kan ikke udpeges sikkert, bred spredning, lang horisont.', href: 'saadan-taenker-vi.html' },
     ];
-    const list = document.getElementById('faq-list');
-    const input = document.getElementById('faq-q');
-    function paint() {
-      const q = (input.value || '').toLowerCase().trim();
-      const shown = items.filter(i => !q || (i.q + ' ' + i.a).toLowerCase().includes(q));
-      list.innerHTML = shown.map(i => `<a class="door" href="${i.href}"><strong>${i.q}</strong><span>${i.a}</span><span class="go">Læs mere →</span></a>`).join('')
-        || '<p class="band">Ingen match — prøv et andet ord.</p>';
-    }
-    input.addEventListener('input', paint);
-    paint();
+    initFaq({
+      input: document.getElementById('faq-q'),
+      list: document.getElementById('faq-list'),
+      count: document.getElementById('faq-count'),
+      curated,
+    });
   </script>
 </body>
 </html>

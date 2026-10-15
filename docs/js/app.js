@@ -85,12 +85,25 @@ function toast(msg) {
 function openDialog(id) {
   const tpl = document.getElementById(id);
   if (!tpl) return;
+  const prevFocus = document.activeElement;
   const backdrop = document.createElement('div');
   backdrop.className = 'dialog-backdrop';
   backdrop.innerHTML = tpl.innerHTML;
-  backdrop.addEventListener('click', (e) => { if (e.target === backdrop) backdrop.remove(); });
-  backdrop.querySelector('[data-close]')?.addEventListener('click', () => backdrop.remove());
+  const close = () => { backdrop.remove(); if (prevFocus && prevFocus.focus) prevFocus.focus(); };
+  backdrop.addEventListener('click', (e) => { if (e.target === backdrop) close(); });
+  backdrop.querySelector('[data-close]')?.addEventListener('click', close);
+  // focus trap
+  const focusables = () => [...backdrop.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])')].filter(el => !el.disabled);
+  backdrop.addEventListener('keydown', (e) => {
+    if (e.key !== 'Tab') return;
+    const list = focusables();
+    if (!list.length) return;
+    const first = list[0], last = list[list.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  });
   document.body.append(backdrop);
+  setTimeout(() => focusables()[0]?.focus(), 0);
   backdrop.querySelectorAll('[data-copy]').forEach((btn) => {
     btn.addEventListener('click', async () => {
       try {
@@ -157,6 +170,7 @@ function renderEntre(root) {
       <a href="nyhedsarkiv.html">Nyhedsarkiv</a> ·
       <a href="om-data.html">Ordliste &amp; data</a> ·
       <a href="embed/chart.html">Embed-graf</a> ·
+      <a href="kort.html">Sidekort</a> ·
       <button type="button" class="link-btn" data-open="dlg-follow">Følg med</button></p>
     <p class="asof-note">Beholdning pr. ${fmtDate(fundById(DATA.portfolio, state.fund).positionsAsOf || DATA.portfolio.asOf)} (forsinket) · afkast-snapshot pr. ${fmtDate(DATA.portfolio.performanceAsOf || DATA.portfolio.asOf)}.</p>
     <section class="panel" style="margin-top:18px">
@@ -291,6 +305,19 @@ function renderFonden(root) {
       <div id="calendar"></div>
       <p style="margin-top:12px"><button type="button" class="outline-btn" id="cal-toggle">${state.calFull ? 'Vis seneste 3 år' : 'Se hele historikken (ét klik)'}</button>
       <span style="display:block;margin-top:8px;font-size:12px;color:var(--muted)">Fuld historik er altid ét klik væk.</span></p>
+    </section>
+
+    <section class="panel">
+      <h2 style="font-size:18px;margin-bottom:8px">Eksempel: 100.000 kr. siden start</h2>
+      <p style="font-size:13px;color:var(--muted);line-height:1.55;margin-bottom:10px">Hvis du havde investeret 100.000 kr. ved fondens start (${fmtDate(rows[0]?.d)}) og geninvesteret udbytte, ville beløbet pr. ${fmtDate(asOfPerf)} være ca. <strong style="color:var(--text)">${totAll!=null ? (100000 * (1 + totAll/100)).toLocaleString('da-DK',{maximumFractionDigits:0}) : '–'} kr.</strong> (totalafkast ${fmtPct(totAll)}). Efter fondens løbende omkostninger, før skat og egne handelsomkostninger.</p>
+      <p class="band">Eksemplet starter ved fondens start — ikke et gunstigt valg af dato midt i en stigning. Det er et regneeksempel, ikke en prognose.</p>
+      ${warnHtml()}
+    </section>
+    <section class="panel">
+      <h2 style="font-size:18px;margin-bottom:8px">Omkostninger (kort)</h2>
+      <p style="font-size:13px;color:var(--muted);line-height:1.55">Afkasttal er efter fondens løbende omkostninger. Egne kurtage-/platformgebyrer og skat er ikke med. Se KID for officielle omkostningsoplysninger — vi laver ikke nye ÅOP-beregninger i dette udkast.</p>
+      <p style="margin-top:10px"><button type="button" class="outline-btn small" data-open="dlg-invest">ISIN &amp; investeringsflow</button>
+      <a class="outline-btn small" style="margin-left:8px" href="om-data.html">Om data →</a></p>
     </section>
     <section class="panel">
       <h2 style="font-size:18px;margin-bottom:8px">Risiko (kort)</h2>
@@ -566,7 +593,8 @@ function onInput(e) {
 function wireKeyboard() {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-      document.querySelector('.dialog-backdrop')?.remove();
+      const bd = document.querySelector('.dialog-backdrop');
+      if (bd) { bd.querySelector('[data-close]')?.click() || bd.remove(); }
       return;
     }
     const seg = e.target.closest?.('.seg');

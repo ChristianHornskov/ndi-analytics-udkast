@@ -40,11 +40,11 @@
 | B6 | Historisk-afkast-advarsel **ved hvert** afkasttal/graf/kalender | VB compliance #1, UX R1, Leo | building | komponent `warn-historisk` |
 | B7 | Tal efter omkostninger; valuta DKK; fuld periode siden start | VB compliance #1 | building | metrics + note |
 | B8 | Drawdown / største fald + genopretning | VB#72–73, UX F5 | building | Fonden |
-| B9 | Eksempel 100.000 kr. – med periode, omkostninger, advarsel, ikke gunstigt startpunkt | VB compliance #8 | stub | Fonden (valgfri) |
+| B9 | Eksempel 100.000 kr. – med periode, omkostninger, advarsel, ikke gunstigt startpunkt | VB compliance #8 | done | Fonden |
 | B10 | Vis totalafkast inkl. udbytte (eller forklar forskel) – undgå "uden udbytte" som default | VB compliance #7 | building | default = total |
 | B11 | KID/prospekt-links begge klasser | VB compliance #6 | building | footer + Sådan investerer du |
 | B12 | Risikoboks (SRI/KID, tech/USD-koncentration, tab) lige så synlig som afkast | VB compliance #5 | building | Fonden + footer |
-| B13 | Omkostningsboks – bevar eksisterende tilgang, ingen nye ÅOP-beregninger | UX R9 | stub | Fonden note |
+| B13 | Omkostningsboks – bevar eksisterende tilgang, ingen nye ÅOP-beregninger | UX R9 | done | Fonden |
 
 ---
 
@@ -56,7 +56,7 @@
 | C2 | Ikke GICS som hovedinddeling; tags (Tesla = flere) | VB#5,#43 2:48/27:36 | building | themes i portfolio.json |
 | C3 | GICS må vises sekundært | VB#42 27:17 | building | detalje |
 | C4 | Modenhed: præ-revenue / præ-profit / highgrowth / GARP / value | VB#44, Slack Mads 17:01 | building | badges (heuristik + note) |
-| C5 | Livscyklus fra bogen | VB#45 29:18 | stub | strip SHOULD |
+| C5 | Livscyklus fra bogen | VB#45 29:18 | done | strip på portefølje (udkast) |
 | C6 | Vis også modne selskaber med formål i porteføljen | VB#47 29:53 | building | value-badge |
 | C7 | Segment/tema-klik → selskaber; **eksponering, ikke anbefaling** | VB#37, Leo, VB §3 spænding | building | Udforsk + bånd |
 | C8 | Level 1 = kun porteføljeaktier | VB#39,#41, UX | building | data filter |
@@ -74,11 +74,11 @@
 | ID | Krav | Kilde | Status | Placering |
 |---|---|---|---|---|
 | D1 | Opslag pr. aktie uden klassisk PE/EBIT-fokus; NDI-vinkel først | VB#29 17:57 | building | `selskab.html` |
-| D2 | Unikke NDI-nøgletal pr. selskab (ikke alle) | VB#8–9 | stub | 3–5 placeholders |
+| D2 | Unikke NDI-nøgletal pr. selskab (ikke alle) | VB#8–9 | stub | placeholders på Tesla/Nvidia/SoftBank |
 | D3 | SoftBank som demo-ISIN | UX C6 | building | link fra entré |
 | D4 | Ingen kursmål/prognoser/"take" | UX C5/R2–R3 | building | copy review |
 | D5 | X/nyheder: AI-mærket "Automatisk resumé, ikke NDI's vurdering" | UX R6, VB#19 | stub | sektion |
-| D6 | PDF/print af visning | VB#80 59:18 | stub | print CSS |
+| D6 | PDF/print af visning | VB#80 59:18 | done | print CSS + knap |
 
 ---
 

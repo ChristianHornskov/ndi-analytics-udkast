@@ -1,0 +1,23 @@
+{
+  "note": "Placeholders for NDI-særmetrikker (à la Waymo-miles). Kun illustrativt i udkast — ikke verificerede live-feeds.",
+  "byIsin": {
+    "US88160R1014": {
+      "name": "Tesla",
+      "metrics": [
+        { "label": "Energi + fysisk tech", "value": "Multi-tag", "hint": "Se tema-tags: physical + energy" }
+      ]
+    },
+    "US67066G1040": {
+      "name": "Nvidia",
+      "metrics": [
+        { "label": "Plads i stakken", "value": "Compute + chips", "hint": "NDI-linse — ikke en rating" }
+      ]
+    },
+    "JP3436100006": {
+      "name": "SoftBank Group",
+      "metrics": [
+        { "label": "Rolle", "value": "Platforme / holding", "hint": "Se selskabsside for problem/rolle" }
+      ]
+    }
+  }
+}
