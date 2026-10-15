@@ -239,7 +239,7 @@ HEAD `b35518b`. Visual-variety request shipped + reviewed. MADS værdikæde/quan
 - `value-chains.json` genopbygget fra `notes/VIDENSBOT-vaerdikaeder.md`: AI-compute 13 led (Mads-rækkefølge), robotik, energi, **rum**, quantum.
 - Flodsystem + 5 dæmninger; compliance-band; Musk/SpaceX kun som citat m. kilde.
 - Ingen handelsprog (øger eksponering / overvægt i / sikkert køb). Snapshot 2026-06-01.
-- Playwright: 5 tabs, 13 AI-led, 3 space-led, 0 konsolfejl. precheck exit 0. Branch `lane-B` klar til merge-review. Næste: linser for resterende kendte navne (Andet/Platforme) eller screener-paritet.
+- Playwright: 5 tabs, 13 AI-led, 3 space-led, 0 konsolfejl.
 - lær/saadan-taenker-vi: flodsystem-afsnit. Fintech = tema-note, ikke kæde.
 
 
