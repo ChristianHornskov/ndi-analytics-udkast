@@ -191,3 +191,7 @@ Pelican, Tanager og Owl er tilføjet ved siden af SuperDove og SkySat. Owl er n�
 ## Redwire · 2026-10-16 01:20 CEST
 
 Artiklen 1. april 2026 siger will launch. Forsidens "launched" er ikke brugt som gennemført flyvning. 11 kameraer. Ikke en opsender. Historic og ordrebeløb er ikke kopieret. AI-udkast uden gennemgangsdato. Kæde og arkiv har grænsen. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## MYR · 2026-10-16 01:21 CEST
+
+Transmission, industri og vedvarende energi står i sætningen. Leader, largest og 130 år er ikke kopieret. Selskabet ejer ikke strømmen. AI-udkast uden gennemgangsdato. Kæde og arkiv siger det. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.

@@ -1609,14 +1609,14 @@
   "US55405W1045": {
    "name": "MYR Group",
    "theme": "physical",
-   "summary": "Bygger elektriske anlæg, herunder ledninger og transformerstationer.",
+   "summary": "Bygger elektriske anlæg i USA og Canada. Selskabet skriver, at arbejdet dækker transmission, kommercielle og industrielle anlæg og vedvarende energi. Selskabet ejer ikke strømmen.",
    "watch": "Ordrer fra elselskaber og mandskab.",
    "source": "https://www.myrgroup.com/",
-   "products": "El-entrepriser.",
+   "products": "El-entrepriser, herunder transmission og vedvarende energi.",
    "customers": "Elselskaber og store elforbrugere.",
    "role": "Bygger nettet.",
    "narrative": [
-    "MYR Group bygger ledninger og transformerstationer i USA og Canada.",
+    "MYR Group bygger elektriske anlæg i USA og Canada. Selskabet skriver, at arbejdet dækker transmission, kommercielle og industrielle anlæg og vedvarende energi.",
     "Selskabet ejer ikke strømmen. I kæden står det på elnet."
    ],
    "narrativeSources": [

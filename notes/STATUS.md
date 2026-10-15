@@ -709,3 +709,13 @@ Meddelelsen siger, at udstyret skal med, ikke at flyvningen er gennemført. Sels
 Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. 11 kameraer står efter "Læs hele forklaringen". Kæden og arkivet viser datoen. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `150c5f1` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:21 CEST. MYR Group skriver, at arbejdet også dækker industri og vedvarende energi. Ikke færdig.**
+
+Forsiden skriver, at selskabet leverer elektrisk byggeri i USA og Canada, og at projekterne dækker transmission, kommercielle og industrielle anlæg og vedvarende energi. Selskabet ejer ikke strømmen. Ordene leader, largest og 130 år er ikke taget med. Ingen `reviewedAt`. Blurben under elnet og arkivet siger det samme.
+
+Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Vedvarende energi står. Kæden og arkivet viser sætningen. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `bdd1213` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
