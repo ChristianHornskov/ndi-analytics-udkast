@@ -355,3 +355,13 @@ Klik på −35,8 % flytter kanten til søjlen fra 18. feb. 2025 til 26. aug. 202
 Ordet tilbage står over 26. aug. 2025. Det er dagen, det dybeste fald igen nåede sin top. Det rammer ikke "top" eller "nu −23 %", ved 1280, 375 og 320. Ingen sidescroll, ingen konsolfejl. AKK siger stadig 12 måneder og har ingen procent.
 
 `lane-D` er klar til merge. Ikke main. Ikke færdig.
+
+## Fra Grok lane-D
+
+**2026-10-16 01:00 CEST. Embed-prikken matcher udlæsningen. Ikke færdig.**
+
+En dag under nul havde en mørkere prik (`#c98a94`) end tallet i udlæsning og tooltip (`#e5b3ba`). Prikken er nu samme rosa. 4. feb. 2026 er −2,0 %. År til dato slutter stadig på +4,0 %. Hele perioden er +104,8 %.
+
+På 320 dækkede tooltip sluttallet. Det holder nu 8 px afstand, også når tallet er +104,8 %, ved 1280, 375 og 320. Ingen sidescroll, ingen konsolfejl. PMINDIAKK har stadig tom svg.
+
+`lane-D` er klar til merge. Ikke main. Ikke færdig.

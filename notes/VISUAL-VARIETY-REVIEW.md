@@ -68,6 +68,12 @@ De fire episoder dybere end 10 % står som søjler mellem kurven og årstallene.
 
 Ordet "tilbage" står over 26. aug. 2025. Det er dagen, det dybeste fald igen nåede sin top. "top" og "nu −23 %" rammer det ikke, ved 1280, 375 og 320. Ingen tekst uden for svg'en. Ingen sidescroll. Ingen konsolfejl. AKK siger stadig 12 måneder og har ingen procent.
 
+### Update · embed-prik · 2026-10-16 ~01:00 CEST
+
+Prikken på en dag under nul var `#c98a94` (`--neg`), mens udlæsning og tooltip var `#e5b3ba` (`--neg-ink`). Prikken er nu samme rosa. 4. feb. 2026 er −2,0 %. Sluttallet på år til dato er stadig +4,0 % i cyan. Hele perioden er +104,8 % i cyan.
+
+På 320 dækkede tooltip sluttallet. Det stopper nu 8 px før tallet, på år til dato og på hele perioden, ved 1280, 375 og 320. Ingen sidescroll. Ingen konsolfejl. PMINDIAKK har stadig tom svg og ingen procent.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.

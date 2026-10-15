@@ -324,7 +324,7 @@
     $('#crosshair').setAttribute('x2', x(p));
     $('#fund-dot').setAttribute('cx', x(p));
     $('#fund-dot').setAttribute('cy', y(p.value));
-    $('#fund-dot').setAttribute('fill', toneOf(p.value) === 'neg' ? 'var(--neg)' : 'var(--cyan)');
+    $('#fund-dot').setAttribute('fill', toneOf(p.value) === 'neg' ? 'var(--neg-ink)' : 'var(--cyan)');
     $('#chart-slider').value = String(index);
     const value = pct(p.value, true);
     const tone = toneOf(p.value);
@@ -335,8 +335,23 @@
     if (showTooltip) {
       tooltip.innerHTML = `<b>${fmtDate(p.date)}</b><div class="tooltip-row ${tone}"><span>${state.fund}</span><strong>${value}</strong></div>`;
       const tooltipWidth = tooltip.offsetWidth || 180;
-      tooltip.style.left = Math.min(Math.max(0, x(p) + 14), width - tooltipWidth) + 'px';
+      const end = $('.end-label');
+      const gutter = end ? Math.max(0, end.getBBox().x - 8) : width;
+      let left = x(p) + 14;
+      if (left + tooltipWidth > gutter) left = gutter - tooltipWidth;
+      if (left < 0) left = Math.max(0, x(p) - tooltipWidth - 14);
+      left = Math.min(Math.max(0, left), Math.max(0, width - tooltipWidth));
+      tooltip.style.left = left + 'px';
       tooltip.style.top = Math.max(5, Math.min(y(p.value) - 72, height - 90)) + 'px';
+      if (end) {
+        const tipBox = tooltip.getBoundingClientRect();
+        const endBox = end.getBoundingClientRect();
+        const overlapX = tipBox.right - endBox.left;
+        const overlapY = Math.min(tipBox.bottom, endBox.bottom) - Math.max(tipBox.top, endBox.top);
+        if (overlapX > -8 && overlapY > 0) {
+          tooltip.style.left = Math.max(0, left - overlapX - 8) + 'px';
+        }
+      }
     }
   }
 
