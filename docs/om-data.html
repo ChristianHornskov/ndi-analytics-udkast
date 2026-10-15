@@ -55,12 +55,13 @@
  <p style="color:var(--muted);margin:0 0 4px">Spring til: <a href="#o-afkast">Afkast og risiko</a> · <a href="#o-fonden">Fonden og andelsklasser</a> · <a href="#o-portefolje">Portefølje, temaer og modenhed</a> · <a href="#o-kaeder">Værdikæder og flodsystemet</a>. Søg også i <a href="laer/faq.html">FAQ</a>. <button type="button" class="gl-toggle" id="gl-all" hidden>Fold alle ud</button></p>
  </section>
  <section class="panel" id="o-afkast">
- <details class="gl-group" open><summary><h2 style="font-size:16px;margin:0">Afkast og risiko</h2><span class="gl-n">24 begreber</span></summary>
+ <details class="gl-group" open><summary><h2 style="font-size:16px;margin:0">Afkast og risiko</h2><span class="gl-n">25 begreber</span></summary>
  <dl style="color:var(--muted);display:grid;gap:12px">
  <div id="g-total"><dt style="color:var(--text)">Totalafkast</dt><dd>Afkast inkl. geninvesteret udbytte, efter fondens løbende omkostninger, i DKK.</dd></div>
  <div id="g-cagr"><dt style="color:var(--text)">CAGR</dt><dd>Gennemsnitligt årligt afkast (geometrisk) over perioden. Ligger under et simpelt gennemsnit af årsafkast, når afkastet svinger. Se <a href="laer/variance-drag.html">CAGR og gennemsnit</a>.</dd></div>
  <div id="g-ytd"><dt style="color:var(--text)">År til dato (ÅTD)</dt><dd>Afkast fra sidste handelsdag i forrige kalenderår til seneste dato.</dd></div>
  <div id="g-maaned"><dt style="color:var(--text)">Månedsafkast (kalender)</dt><dd>Fondens afkast måned for måned. Viser, at gode og dårlige måneder skiftes, og at et enkelt fald sjældent er hele historien.</dd></div>
+ <div id="g-delaar"><dt style="color:var(--text)">Delår</dt><dd>Et kalenderår, som afkastserien ikke dækker helt. For PMINDI er 2023 et delår, fordi serien starter ved <a href="#g-foerste-nav">første NAV</a> 22. september 2023. Afkastet for et delår er ikke omregnet til et helt år og kan derfor ikke sammenlignes direkte med de hele år ved siden af.</dd></div>
  <div id="g-foerste-nav"><dt style="color:var(--text)">Første NAV</dt><dd>Datoen for første indre værdi i afkastserien. Alle "siden start"-tal og 100.000-kr.-eksemplet er beregnet herfra. Ikke nødvendigvis samme dato som juridisk stiftelse.</dd></div>
  <div id="g-100k"><dt style="color:var(--text)">100.000 kr.-eksemplet</dt><dd>Hvad 100.000 kr. investeret ved første NAV ville være vokset eller faldet til, efter løbende omkostninger. Et regneeksempel på historik, ikke en forventning. Handelsomkostninger og skat er ikke medregnet.</dd></div>
  <div id="g-benchmark"><dt style="color:var(--text)">Benchmark</dt><dd>Et indeks, et afkast måles op mod. Fonden har intet fast benchmark, så udkastet sammenligner ikke med et indeks.</dd></div>
@@ -156,7 +157,7 @@
  </details>
  </section>
  <section class="panel" id="o-kaeder">
- <details class="gl-group" open><summary><h2 style="font-size:16px;margin:0">Værdikæder og flodsystemet</h2><span class="gl-n">27 begreber</span></summary>
+ <details class="gl-group" open><summary><h2 style="font-size:16px;margin:0">Værdikæder og flodsystemet</h2><span class="gl-n">30 begreber</span></summary>
  <dl style="color:var(--muted);display:grid;gap:12px">
  <div id="g-vaerdikaede"><dt style="color:var(--text)">Værdikæde</dt><dd>Rækken af led fra råvare og energi til det færdige produkt. AI-compute-kæden har 13 led: energi, datacentre, chipdesign, udstyr, foundry, hukommelse, optik, servere, cloud og modeller, data, software, apps og fysisk AI. Pædagogisk model, ikke en investeringsanbefaling. Se <a href="vaerdikaeder.html">værdikæderne</a>.</dd></div>
  <div id="g-led"><dt style="color:var(--text)">Led</dt><dd>Ét trin i en værdikæde, fx "Optik og netværk". Et selskab kan stå i flere led.</dd></div>
@@ -167,7 +168,9 @@
  <div id="g-gpu"><dt style="color:var(--text)">GPU, XPU og CPU</dt><dd>Processortyper. CPU er computerens almindelige hovedprocessor. GPU (grafikprocessor) regner mange små opgaver på én gang og er derfor velegnet til AI. XPU er en samlebetegnelse for specialiserede AI-chips, herunder GPU'er og de store cloudselskabers egne chips.</dd></div>
  <div id="g-hbm"><dt style="color:var(--text)">Hukommelse (HBM)</dt><dd>AI-modeller skal have data tæt på processoren. Højbåndbreddehukommelse (HBM) er hukommelseschips stablet oven på hinanden. Hukommelse har historisk været en meget cyklisk branche med store prisudsving.</dd></div>
  <div id="g-datacenter"><dt style="color:var(--text)">Datacenter og køling</dt><dd>Bygningen, hvor strøm bliver til compute: servere, strømfordeling og køling. Moderne AI-racks bruger så meget strøm, at luftkøling ikke slår til, og væskekøling bliver mere udbredt. NDI kalder datacentre den anden flaskehals.</dd></div>
+ <div id="g-servere"><dt style="color:var(--text)">Serverinfrastruktur</dt><dd>Servere, racks og strømforsyninger, der samler chips, hukommelse og netværk til færdige AI-systemer. Leddet ligger mellem chipsene og <a href="#g-datacenter">datacentret</a> og hører under halvlederflaskehalsen i NDI's billede. Se <a href="vaerdikaeder.html">værdikæderne</a>.</dd></div>
  <div id="g-elnet"><dt style="color:var(--text)">Elnet og transformere</dt><dd>Strømmen skal fra kraftværk til datacenter. Det kræver ledninger, transformerstationer (der ændrer spændingen) og styring. Del af energileddet, som NDI kalder den første flaskehals.</dd></div>
+ <div id="g-elproduktion"><dt style="color:var(--text)">Elproduktion</dt><dd>Kraftværker og udstyr, der laver strømmen: gas og gasturbiner, sol, vind og <a href="#g-smr">atomkraft</a>, ofte placeret tæt på datacentre. Sammen med <a href="#g-elnet">elnettet</a> er det energileddet, som NDI kalder den første <a href="#g-daemning">dæmning</a>.</dd></div>
  <div id="g-raastoffer"><dt style="color:var(--text)">Kritiske råstoffer</dt><dd>Kobber, sølv, sjældne jordarter og uran, som chips, elnet, batterier og robotter ikke kan laves uden. Udbuddet er ofte samlet i få lande, så geopolitik hører med.</dd></div>
  <div id="g-compute"><dt style="color:var(--text)">Compute</dt><dd>Regnekraft: den kapacitet, der skal til for at træne og køre AI-modeller.</dd></div>
  <div id="g-hyperscaler"><dt style="color:var(--text)">Hyperscaler</dt><dd>De største cloud-udbydere, som bygger datacentre i meget stor skala og står for en stor del af efterspørgslen efter compute.</dd></div>
@@ -182,6 +185,7 @@
  <div id="g-agentisk"><dt style="color:var(--text)">Agentisk AI</dt><dd>AI-systemer, der selv udfører opgaver i flere trin, ikke kun svarer på spørgsmål.</dd></div>
  <div id="g-fysisk-ai"><dt style="color:var(--text)">Fysisk AI</dt><dd>AI i den fysiske verden: robotter, selvkørende køretøjer og droner. NDI ser det som en kommende kilde til efterspørgsel efter compute.</dd></div>
  <div id="g-robotik"><dt style="color:var(--text)">Robotik</dt><dd>Robotter forstået bredt: industrirobotter, droner, selvkørende køretøjer og automatiserede fabrikker, plus sensorer, motorer og software, der styrer dem. NDI kalder det fase 3: automatisering og robotisering. Se <a href="#g-fysisk-ai">fysisk AI</a>.</dd></div>
+ <div id="g-simulering"><dt style="color:var(--text)">Simulering og software</dt><dd>Software, der træner og afprøver robotter og maskiner i en digital kopi af virkeligheden, før de sættes i drift, og som styrer dem bagefter. Et led i robotkæden under <a href="#g-fysisk-ai">fysisk AI</a>. Leddet viser eksponering, ikke en anbefaling.</dd></div>
  <div id="g-smr"><dt style="color:var(--text)">SMR</dt><dd>Små, modulære atomreaktorer (på engelsk small modular reactor). Indgår i energikæden.</dd></div>
  <div id="g-lagring"><dt style="color:var(--text)">Energilagring og batterier</dt><dd>Batterier og anden lagring, der glatter forskellen mellem, hvornår strømmen bliver produceret, og hvornår den bliver brugt. Hører til energikæden og nævnes under energiflaskehalsen.</dd></div>
  <div id="g-spacetech"><dt style="color:var(--text)">SpaceTech / rumkæden</dt><dd>Opsendelse, satellitkommunikation og compute i rummet. Udsagn fra fx Elon Musk gengives kun som citat med kilde, aldrig som NDI-prognose.</dd></div>

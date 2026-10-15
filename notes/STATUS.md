@@ -461,3 +461,10 @@ HEAD `b35518b`. Visual-variety request shipped + reviewed. MADS værdikæde/quan
 - Notes: HANDOFF trin 6 (fjorten former, `#h-kv`), trin 7 (110), UX-review, VIDENSBOT-live-check.
 - Test: 8763, 375/1280 på 4 sider: 0 konsolfejl, ingen h-overflow, 0 døde links/ankre. precheck: OK.
 - Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) på hele lane-C-fladen ved 375 px.
+
+## Fra Claude lane-C (ordliste 114: led + delår) · 01:32 CEST 16/10 (wall-clock)
+- `om-data.html`: ordliste 110 → 114 (Delår, Serverinfrastruktur, Elproduktion, Simulering og software). Tællere 25 · 21 · 38 · 30. Alle led i value-chains.json har nu en ordlistepost eller dækkes af en.
+- `ideer.html` «Tre ure»: 2023 som delår, link til ordlisten. `kort.html` 114. HANDOFF trin 7: 114.
+- **Til js-/værdikæde-ejer:** links til nye poster + tankestreger i value-chains.json (IDEAS).
+- Test: 8793, 375/1280 på 3 sider: 0 konsolfejl, ingen h-overflow, 0 døde ankre. precheck: se push.
+- Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) på hele lane-C-fladen ved 375 px.

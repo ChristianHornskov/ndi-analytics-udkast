@@ -177,3 +177,7 @@ Sider: ideer, kort, om-data, invester, risici, ndi-perspektiv, laer/*.
 - Kun aggregater af de offentlige vægte pr. 1. jun 2026 (ingen navne, kurser eller afkast). Tal regnet efter i portfolio.json: PMINDI 345 positioner, sum 91,94 %; kumuleret 26 → 25,3 %, 76 → 50,3 %, 160 → 75,2 % af aktievægten. 76 største = 46,3 % af fonden. PMINDIAKK: 88 af 320 til halvdelen.
 - Formuleret som spredning/koncentration («bred, men ikke flad»), ingen vurdering af, om fordelingen er god eller dårlig. «Viser koncentration og spredning, ikke en anbefaling.»
 - Fundmarket-posten beskriver kun, hvad der ligger der, og at de officielle dokumenter åbnes der. Ingen omtale af handel via Fundmarket. **Til review:** er «platform» det rigtige ord for Fundmarket i NDI's egen sprogbrug?
+
+## lane-C note 01:32 CEST 16/10 (Claude)
+- Ordliste 114: nye poster Delår, Serverinfrastruktur, Elproduktion, Simulering og software. Ingen afkast- eller handelssprog; «Leddet viser eksponering, ikke en anbefaling».
+- Åbent (ikke lane-C-fil): tankestreger i value-chains.json «ndi»-felter. Sendt til ejer via IDEAS.

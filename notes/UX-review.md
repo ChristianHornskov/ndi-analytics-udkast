@@ -296,3 +296,10 @@ Ingen nye.
 - 375 px: kurve og tre nøgletal under hinanden. ≥860 px: nøgletal i kolonne til højre for kurven, så der ikke står tom plads. Etiketten «lige vægt» lå først oven på linjen og ud over kanten. Rettet før commit.
 - Ordliste 110: «Fundmarket» (brugt på 6 sider uden forklaring). Prospekt og Forsinket beholdning linker dertil. Koncentrationsrisiko → `ideer.html#h-kv`. `lær/hvorfor-mange-aktier` → `#h-kv`.
 - Test: 8763, 375/1280 på ideer, om-data, kort, lær/hvorfor-mange-aktier: 0 konsolfejl, ingen h-overflow, 0 døde links/ankre.
+
+## 01:32 CEST lane-C checkpoint (Claude) · ordliste 114 (led fra værdikæderne + delår)
+- Tjek: alle led-navne i `value-chains.json` mod ordlisten. Manglede: Serverinfrastruktur, Elproduktion, Simulering og software. Nu poster (`#g-servere`, `#g-elproduktion`, `#g-simulering`) med samme ordlyd som led-teksten.
+- «delår» står i app.js, periode og drawdown uden forklaring. Ny post `#g-delaar` (2023 er delår, starter ved første NAV 22. sep 2023, ikke omregnet til helt år). Linket fra Idéer «Tre ure».
+- Tællere: 25 · 21 · 38 · 30 = 114. kort.html og HANDOFF trin 7 fulgt med.
+- **Til js-ejer:** delår-badge i app.js (linje ~347/350) kan linke `om-data.html#g-delaar`. **Til værdikæde-ejer:** led-kort kan linke til `#g-servere`, `#g-elproduktion`, `#g-simulering`; flere «ndi»-tekster i value-chains.json bruger stadig tankestreg (—), jf. Vidensbot punkt 10.
+- Test: 8793, 375/1280 på om-data, ideer, kort: 0 konsolfejl, ingen h-overflow. 0 døde ankre på alle sider.
