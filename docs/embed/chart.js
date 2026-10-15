@@ -201,7 +201,7 @@
     $('#legend-fund').textContent = state.fund;
     $('#fund-return').textContent = 'Vises efter 12 måneder';
     $('#updated').textContent = `Seneste kursdato: ${fmtDate(fund.data.at(-1).d)}`;
-    $('#source-label').textContent = `${fund.short} · start ${fmtDate(fund.inception || fund.data[0].d)}`;
+    $('#source-label').textContent = `${fund.short} · første NAV ${fmtDate(fund.inception || fund.data[0].d)}`;
     $('#chart-context').hidden = true;
     $('#chart-pointe').textContent = 'PMINDIAKK: afkast og graf vises, når klassen har 12 måneders historik. Klassen følger samme overordnede strategi som PMINDI.';
     $('#chart-loading').hidden = true;

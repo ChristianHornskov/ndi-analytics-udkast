@@ -1,6 +1,6 @@
 # STATUS – NDI Analytics overnight build
 
-**2026-10-15 20:54 CEST — Sole lead. Precheck HARD. NOT DONE / NOT BLOCKED.**
+**2026-10-15 21:00 CEST — Sole lead. Precheck HARD. NOT DONE / NOT BLOCKED.**
 
 ## HARD RULE (every push)
 ```bash
@@ -16,28 +16,18 @@ Fails on: notes in docs/ (except stub warning+index), raw data.json, holdings >2
 https://christianhornskov.github.io/ndi-analytics-udkast/ · notes → 404
 
 ## HEAD
-67da54f
+(see git log — updated on push)
 
-## Quality shipped this hour
-- precheck/push/test-precheck + local pre-push hook
-- Grok CSS polish committed first
-- Dropped leftover P/S sort
-- Embed: YTD+all only; hard AKK gate
-- a11y: skip-links, radiogroup, dialog focus (96/96 smoke-quality)
-- Calendar aria fix; copy/caveats polish
-
-## Quality2 (Claude, ~20:55)
-- Copy sweep docs/: no advice wording; all "anbefal…" hits are disclaimers or KID "anbefalet ejertid"
-- "kl. n" only in portfolio.json `label`/`legalName` (not rendered; matches Fundmarket per VIDENSBOT-review) — left as-is
-- Invest-dialog (shipped in 67da54f): "Ingen minimumsinvestering i de danske andelsklasser" → scoped to the two shown classes + source + "vilkår kan variere hos bank/platform" (VIDENSBOT-review: kl. f exists)
-- Smoke after calendar aria fix + copy change: quality 96/96, base 50/50, cycle3 58/58, 0 console errors
-- UX-review 22:00 section: not yet present → nothing addressed. VIDENSBOT-live-check.md: absent
+## Quality this hour
+- Start-date default (VIDENSBOT #5): **første NAV** = `portfolio.funds[].inception` for all afkast/"siden start"/100k/embed. Documented in `notes/DATA-DEFINITIONS.md`. UI copy says "første NAV". `fund-meta.legalInception` = juridisk only.
+- Unique-metrics: 9 ISINs, qualitative NDI-linse only; note scrubbed of advice words (smoke 96/96).
+- om-data: første-NAV glossary + datakilde bullet; fixed duplicate main id.
+- Grok quality2 (375px doors/metrics/sticky): still running — merge when it lands.
 
 ## Agents
-Claude + Grok quality2 running with precheck in prompts.
+Grok visual polish cycle 2 still alive. Claude quality2 finished earlier.
 
 ## NEXT
-- UX-review.md @ 22:00 CEST
+- UX-review.md @ 22:00 CEST (MUST items only)
 - VIDENSBOT-live-check.md when it arrives (blockers first)
-- Open from VIDENSBOT-review #5: start dates differ portfolio.json vs fund-meta.json — needs Christian to pick a definition; do not guess
-- Keep cycling; quality > speed; never report done
+- Keep Claude↔Grok cycles; quality > speed; never report done

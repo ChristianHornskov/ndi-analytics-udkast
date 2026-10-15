@@ -1,6 +1,7 @@
 {
  "asOf": "2026-10-15",
  "returnMethod": "Afsluttede årsafkast fra Fundmarkets årsrapport kædet med rapporteret YTD. Total og CAGR er beregnede.",
+ "inceptionNote": "legalInception = juridisk/stiftelsesdato. Afkast/siden start bruger portfolio.funds[].inception (første NAV). Se notes/DATA-DEFINITIONS.md.",
  "funds": {
   "pmindi": {
    "priip": {

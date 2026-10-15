@@ -317,7 +317,7 @@ function renderFonden(root) {
     </div>
     <section class="panel">
       <div class="metrics">
-        <div class="metric"><div class="label">Totalafkast siden start ${gl('total')}</div><strong>${fmtPct(totAll)}</strong><small>Fra ${fmtDate(rows[0]?.d)} · DKK</small></div>
+        <div class="metric"><div class="label">Totalafkast siden start ${gl('total')}</div><strong>${fmtPct(totAll)}</strong><small>Fra første NAV ${fmtDate(rows[0]?.d)} · DKK</small></div>
         <div class="metric"><div class="label">Gns. årligt afkast (CAGR) ${gl('cagr')}</div><strong>${fmtPct(c)}</strong><small>Efter løbende omkostninger</small></div>
         <div class="metric"><div class="label">År til dato ${gl('ytd')}</div><strong>${fmtPct(ytd)}</strong><small>Pr. ${fmtDate(asOfPerf)}</small></div>
         <div class="metric"><div class="label">Risikoindikator (KID) ${gl('sri')}</div><strong>5 / 7</strong><small>Anbefalet ejertid 5 år</small></div>
@@ -349,8 +349,8 @@ function renderFonden(root) {
 
     <section class="panel">
       <h2 style="font-size:18px;margin-bottom:8px">Eksempel: 100.000 kr. siden start</h2>
-      <p style="font-size:13px;color:var(--muted);line-height:1.55;margin-bottom:10px">Hvis du havde investeret 100.000 kr. ved fondens start (${fmtDate(rows[0]?.d)}) og geninvesteret udbytte, ville beløbet pr. ${fmtDate(asOfPerf)} være ca. <strong style="color:var(--text)">${totAll!=null ? (100000 * (1 + totAll/100)).toLocaleString('da-DK',{maximumFractionDigits:0}) : '–'} kr.</strong> (totalafkast ${fmtPct(totAll)}). Efter fondens løbende omkostninger, før skat og egne handelsomkostninger.</p>
-      <p class="band">Eksemplet starter ved fondens start — ikke et gunstigt valg af dato midt i en stigning. Det er et regneeksempel, ikke en prognose.</p>
+      <p style="font-size:13px;color:var(--muted);line-height:1.55;margin-bottom:10px">Hvis du havde investeret 100.000 kr. ved første NAV (${fmtDate(rows[0]?.d)}) og geninvesteret udbytte, ville beløbet pr. ${fmtDate(asOfPerf)} være ca. <strong style="color:var(--text)">${totAll!=null ? (100000 * (1 + totAll/100)).toLocaleString('da-DK',{maximumFractionDigits:0}) : '–'} kr.</strong> (totalafkast ${fmtPct(totAll)}). Efter fondens løbende omkostninger, før skat og egne handelsomkostninger.</p>
+      <p class="band">Eksemplet starter ved første NAV (ikke stiftelsesdato) — ikke et gunstigt valg af dato midt i en stigning. Det er et regneeksempel, ikke en prognose.</p>
       ${warnHtml()}
     </section>
     <section class="panel">

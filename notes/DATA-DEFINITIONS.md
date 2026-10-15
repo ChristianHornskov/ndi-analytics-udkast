@@ -1,0 +1,26 @@
+# Data definitions (overnight defaults)
+
+Leo: when stuck on a question for Christian, pick a sensible default and document it here.
+
+## Fund start dates (VIDENSBOT-review #5)
+
+**Default for all afkast / "siden start" / 100k-eksempel / embed:**
+`portfolio.json` → `funds[].inception` = **første NAV** (matches `funds[].data[0].d`).
+
+| Fond | Første NAV (performance) | legalInception (fund-meta, stiftelse/juridisk) |
+|------|--------------------------|-----------------------------------------------|
+| PMINDI | 2023-09-22 | 2023-09-25 |
+| PMINDIAKK | 2025-12-05 | 2025-12-02 |
+
+Prospektet nævner også første handelsdag 9. okt. 2023 (kl. n) og Akk stiftet 21. nov. 2025 — det er **ikke** performance-seriens start.
+
+**UI-regel:** Vis altid formuleringen **"første NAV"** (eller "ved første NAV"), aldrig bare "stiftet" for afkasttal. `legalInception` må kun bruges i juridisk/meta-kontekst, ikke som afkast-anker.
+
+**Copy-eksempel:** "Beregnet fra første NAV 22. september 2023."
+
+## As-of stamps
+
+- `performanceAsOf` / sidste punkt i `data[]` → afkast-snapshot (pt. 2026-10-14)
+- `asOf` / `positionsAsOf` → forsinket beholdning (pt. 2026-06-01, cutoff for precheck)
+
+Skriv dem adskilt: "Afkast pr. … · Beholdning (forsinket) pr. …"

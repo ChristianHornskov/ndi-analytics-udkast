@@ -138,7 +138,7 @@
         ${uniquePack?.byIsin?.[p.isin]?.metrics?.length ? `<section class="panel">
           <h2 class="panel-h">NDI-perspektiv (udkast)</h2>
           <div class="kpi-grid">${uniquePack.byIsin[p.isin].metrics.map(m => `<div class="kpi"><span class="label">${esc(m.label)}</span><strong style="font-size:16px">${esc(m.value)}</strong><span class="sub">${esc(m.hint||'')}</span></div>`).join('')}</div>
-          <p class="band">Placeholders — ikke live særmetrikker. Eksponering, ikke anbefaling.</p>
+          <p class="band">Udkast-placeholders (NDI-linse/rolle) — ikke live særmetrikker, ikke performance. Eksponering, ikke anbefaling.</p>
         </section>` : ''}
         ${(() => {
           const series = (monthsPack?.funds?.[fundId] || []).map(row => ({ d: row.date, w: row.weights?.[p.isin] })).filter(x => x.w != null);

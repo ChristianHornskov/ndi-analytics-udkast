@@ -26,7 +26,7 @@
     <a class="brand" href="index.html"><img src="assets/mark.svg" width="34" height="27" alt=""><span>NewDeal Invest</span></a>
     <nav class="nav"><a href="index.html">← Entré</a></nav>
   </header>
-  <main id="main" id="main">
+  <main id="main">
     <p class="eyebrow">DOKUMENTATION</p>
     <h1>Om data & begreber</h1>
     <p class="lede">Kort ordliste og datakilder til udkastet.</p>
@@ -36,12 +36,14 @@
         <li>Fondens afkastdata: snapshot fra den offentlige graf-pipeline (Fundmarket-baseret), gemt lokalt i <code>data/</code>.</li>
         <li>Beholdninger: offentlige positionsdata med dato (i v1 senest <strong>1. juni 2026</strong>). Ingen live Azure-kald fra udkastet. Nyere end cutoff må ikke lægges i <code>docs/</code> (se precheck).</li>
         <li>Modenhed: heuristik/udkast hvor vist – ikke officiel NDI-rating. P/S og P/E pr. aktie vises ikke i v1.</li>
+        <li>Startdato for afkast: <strong>første NAV</strong> (PMINDI 22. sep. 2023, PMINDIAKK 5. dec. 2025). Juridisk stiftelsesdato kan afvige — se ordlisten.</li>
         <li>Nasdaq-sammenligning: deaktiveret indtil Fundmarkets godkendelse.</li>
       </ul>
     </section>
     <section class="panel">
       <h2 style="font-size:16px;margin-bottom:10px">Ordliste</h2>
       <dl style="color:var(--muted);display:grid;gap:12px">
+                <div id="g-foerste-nav"><dt style="color:var(--text)">Første NAV</dt><dd>Datoen for første indre værdi i afkastserien. Alle "siden start"-tal og 100.000-kr.-eksemplet er beregnet herfra. Ikke nødvendigvis samme dato som juridisk stiftelse.</dd></div>
         <div id="g-cagr"><dt style="color:var(--text)">CAGR</dt><dd>Gennemsnitligt årligt afkast (geometrisk) over perioden.</dd></div>
         <div id="g-total"><dt style="color:var(--text)">Totalafkast</dt><dd>Afkast inkl. geninvesteret udbytte, efter fondens løbende omkostninger, i DKK.</dd></div>
         <div id="g-ytd"><dt style="color:var(--text)">År til dato (ÅTD)</dt><dd>Afkast fra sidste handelsdag i forrige kalenderår til seneste dato.</dd></div>
