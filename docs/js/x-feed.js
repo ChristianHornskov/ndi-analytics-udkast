@@ -87,6 +87,7 @@ article.x-card.is-quote .x-foot{margin-top:10px}
 .x-hit.theme{color:var(--muted);border-color:#617d84}
 .x-because{font-size:12px;color:var(--cyan)}
 .x-foot{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:auto}
+.x-foot a.tag.is-hit{border-color:#f5ee9eaa;color:#f5ee9e;background:#f5ee9e14}
 .x-curated{font-size:10px;letter-spacing:.6px;text-transform:uppercase;color:#f5ee9e;border:1px solid #f5ee9e66;border-radius:999px;padding:3px 8px}
 .x-house{font-size:10px;letter-spacing:.6px;text-transform:uppercase;color:var(--cyan);border:1px solid #9ecfd666;border-radius:999px;padding:3px 8px}
 .x-mark{background:#f5ee9e;color:#1c1604;border-radius:4px;padding:0 4px;font-weight:650}
@@ -94,6 +95,7 @@ article.x-card.is-quote .x-foot{margin-top:10px}
 .x-door{text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:8px;min-height:208px;padding:16px 16px 14px;border-radius:16px;border:1px solid #345860;background:radial-gradient(90% 80% at 100% 0%,rgba(158,207,214,.13),transparent 52%),#0d1c22}
 .x-door:hover{border-color:var(--cyan);background:#132a32}
 .x-door.is-on{border-color:var(--cyan);box-shadow:inset 0 -2px 0 var(--yellow)}
+.x-door.is-on .x-door-n{color:#f5ee9e}
 .x-door .k{font-size:11px;letter-spacing:1.4px;color:var(--brand);font-weight:700}
 .x-door-top{display:flex;justify-content:space-between;gap:8px;align-items:baseline}
 .x-door-top strong{font-size:22px;letter-spacing:-.4px}
@@ -115,8 +117,9 @@ article.x-card.is-quote .x-foot{margin-top:10px}
 .x-score-n{min-width:44px}
 .x-score-n b{display:block;font-size:clamp(28px,4vw,42px);line-height:.85;font-weight:600;letter-spacing:-1.2px;color:var(--cyan);font-variant-numeric:tabular-nums}
 .x-score-n span{display:block;margin-top:4px;font-size:10px;letter-spacing:.8px;text-transform:uppercase;color:var(--faint)}
-.x-score-n.is-direct:not(.is-zero) b{color:#f5ee9e}
+.x-score-n.is-direct:not(.is-zero) b{color:#f5ee9e;font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-weight:500}
 .x-score-n.is-zero b{color:var(--faint);font-weight:500}
+.x-says-h .x-score-n.is-out b,.x-says-h .x-score-n.is-all b{color:var(--faint);font-size:22px;font-family:inherit;font-weight:500}
 .x-asof{color:var(--faint);font-size:12px;line-height:1.35;padding-bottom:2px;max-width:42ch}
 .x-says-h .x-score-n b{font-size:clamp(26px,3vw,34px)}
 .x-active{margin-top:8px}
@@ -203,6 +206,30 @@ body.x-focused .x-label{margin:0 0 8px}
 }
 @media(prefers-reduced-motion:reduce){
   .x-door{transition:none}
+}
+@media(min-width:900px){
+  body.x-focused .x-spot{margin-bottom:4px}
+  body.x-focused .x-door{padding:8px 12px 7px}
+  body.x-focused .x-tools{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) auto;
+    column-gap:12px;
+    row-gap:6px;
+    align-items:center;
+    padding-top:2px;
+    padding-bottom:4px;
+  }
+  body.x-focused .x-tools .filters{grid-column:1;grid-row:1;margin:0;min-width:0}
+  body.x-focused .x-tools .filters input[type=search]{width:100%;min-width:0}
+  body.x-focused #x-who{grid-column:2;grid-row:1;margin:0;flex-wrap:nowrap}
+  body.x-focused #x-f{grid-column:1 / -1;grid-row:2;margin:0}
+  body.x-focused #x-live{grid-column:1 / -1;margin:0}
+  body.x-focused #x-active{grid-column:1 / -1;margin-top:0}
+  body.x-focused #x-live.is-echo{
+    position:absolute;top:0;left:0;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
+    clip:rect(0,0,0,0);white-space:nowrap;border:0;pointer-events:none;
+  }
+  body.x-focused #x-active.is-echo{display:none}
 }
 `;
   document.head.appendChild(s);
@@ -470,9 +497,11 @@ function highlight(text, q) {
 export function xCard(p, opt = {}) {
   ensureXStyles();
   const reasons = opt.reasons || [];
+  const hitTerms = highlightTerms(opt.query).map((t) => t.toLowerCase());
+  const tagCls = (label) => (hitTerms.includes(String(label).toLowerCase()) ? ' tag is-hit' : ' tag');
   const tags = [
-    ...(p.tickers || []).slice(0, 4).map((t) => `<a class="tag" href="${esc(tickerHref(t))}">${esc(t)}</a>`),
-    ...(p.tags || []).slice(0, 3).map((t) => `<a class="tag" href="${esc(tagHref(t))}">${esc(t)}</a>`),
+    ...(p.tickers || []).slice(0, 4).map((t) => `<a class="${tagCls(t).trim()}" href="${esc(tickerHref(t))}">${esc(t)}</a>`),
+    ...(p.tags || []).slice(0, 3).map((t) => `<a class="${tagCls(t).trim()}" href="${esc(tagHref(t))}">${esc(t)}</a>`),
   ].join('');
   const curated = p.curatedFrom === 'mads_following' ? '<span class="x-curated">Mads følger</span>' : '';
   const house = isHouse(p) ? '<span class="x-house">NDI-konto</span>' : '';

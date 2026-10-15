@@ -66,11 +66,19 @@
   .delta-key i.b{background:#f5ee9e}
   .delta-zoom{margin-top:12px;padding-top:12px;border-top:1px dashed #345860}
   .delta-zoom .k{font-size:11px;letter-spacing:1.2px;font-weight:700;color:var(--brand);margin:0 0 8px}
+  .receipt-bridge{display:none}
+  @media(min-width:801px){
+    .receipts:has(.receipt-bridge){grid-template-columns:minmax(0,1fr) 104px minmax(0,1fr);align-items:center}
+    .receipt-bridge{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-align:center;min-width:0}
+    .receipt-bridge b{color:#f5ee9e;font-size:28px;font-weight:600;letter-spacing:-.8px;font-variant-numeric:tabular-nums;line-height:1}
+    .receipt-bridge span{color:var(--faint);font-size:11px;letter-spacing:.8px;text-transform:uppercase;white-space:nowrap}
+  }
   @media(max-width:800px){
     .cost-grid,.receipts{grid-template-columns:1fr}
     .cmp-line{grid-template-columns:72px minmax(0,1fr) auto}
     .delta-nums{grid-template-columns:1fr;gap:12px}
-    .delta-mid{text-align:left;padding:0}
+    .delta-mid{order:-1;text-align:left;padding:0}
+    .delta-nums .delta-mid small{margin-left:0;max-width:none}
   }
  </style>
 </head>
@@ -267,6 +275,7 @@
  ${line('Indløsning, maks.', a.exit)}
  </ol>
  </article>
+ ${dTx === 0 ? '' : `<p class="receipt-bridge" aria-hidden="true"><b>${krGapTxt}</b><span>Forskel</span></p>`}
  <article class="receipt">
  <p class="kicker">${esc(B.isin)}</p>
  <h3>PMINDIAKK</h3>

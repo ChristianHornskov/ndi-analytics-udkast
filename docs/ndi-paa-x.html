@@ -27,7 +27,7 @@
  </footer>
  <noscript><p style="max-width:1180px;margin:0 auto;padding:0 20px 24px;color:#aac0c7">Siden læser kun den statiske fil. Slå JavaScript til for at se kortene. Browseren kalder ikke X.</p></noscript>
  <script type="module">
- import { loadXPosts, xCard, fmtXDate, highlightHtml, X_LABEL, X_FILTERS, postInFilter, postMatchesQuery, postWho, feedHitKind, xScoreHtml } from './js/x-feed.js';
+ import { loadXPosts, xCard, fmtXDate, highlightHtml, X_LABEL, X_FILTERS, postInFilter, postMatchesQuery, postWho, feedHitKind, xScoreHtml, matchPosts } from './js/x-feed.js';
  const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
  const main = document.getElementById('main');
  const pack = await loadXPosts();
@@ -76,6 +76,15 @@
  };
  let state = read();
  const apply = (list) => list.filter((p) => postInFilter(p, state.f) && postWho(p, state.who) && postMatchesQuery(p, state.q));
+ const reasonsFor = (p) => {
+ const q = state.q.trim();
+ const themes = !q && state.f && state.f !== 'all' && state.f !== 'ndi'
+ ? (state.f === 'chips' ? ['chips', 'ai'] : [state.f])
+ : [];
+ const tickers = q ? [q] : (state.f === 'chips' ? ['NVDA'] : []);
+ if (!tickers.length && !themes.length) return [];
+ return matchPosts({ posts: [p] }, { tickers, themes })[0]?.reasons || [];
+ };
  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
  main.innerHTML = `
@@ -192,7 +201,7 @@
  if (!q && state.f === 'chips' && kind === 'theme') hint = 'Chips eller AI, uden NVDA-ticker.';
  const quotedTheme = !direct.length;
  const kicker = kind === 'direct' ? 'Øvrige direkte træf' : (quotedTheme ? 'Øvrige tema' : 'Tema');
- const body = cards.map((p) => xCard(p, { query: markQ, hitKind: kind })).join('');
+ const body = cards.map((p) => xCard(p, { query: markQ, hitKind: kind, reasons: reasonsFor(p) })).join('');
  return `<div class="x-lane ${kind === 'direct' ? 'is-direct' : 'is-theme'}">
  <p class="x-lane-h"><span class="x-lane-k">${kicker}</span><span>${hint} · ${cards.length}</span></p>
  <div class="x-grid">${body}</div>
@@ -224,6 +233,8 @@
  const scoreBar = scoreItems.length
  ? `<div class="x-score-bar">${xScoreHtml(scoreItems)}<span class="x-asof">Snapshot ${esc(fmtXDate(pack.snapshotAt))}</span></div>`
  : '';
+ live.classList.toggle('is-echo', scoreItems.length > 0);
+ active.classList.toggle('is-echo', leadOn);
  if (!list.length) {
  grid.innerHTML = `<div class="x-empty x-stage">
  <p class="x-zero" aria-hidden="true">0</p>
@@ -246,14 +257,14 @@
  + homeLane('is-rest', other, 'Andre opslag', 'Hverken en NDI-konto eller mærket fra listen Mads følger');
  } else if (!direct.length && !theme.length) {
  const [first, ...tail] = list;
- grid.innerHTML = scoreBar + `<div class="x-stage">${xCard(first, { query: markQ, lead: true })}</div>`
+ grid.innerHTML = scoreBar + `<div class="x-stage">${xCard(first, { query: markQ, lead: true, reasons: reasonsFor(first) })}</div>`
  + (tail.length ? `<div class="x-grid" style="grid-column:1/-1">${tail.map((p) => xCard(p, { query: markQ })).join('')}</div>` : '');
  } else {
  const leadPost = direct[0] || theme[0];
  const leadKind = direct.length ? 'direct' : 'theme';
  const restDirect = direct.length ? direct.slice(1) : [];
  const restTheme = direct.length ? theme : theme.slice(1);
- grid.innerHTML = scoreBar + `<div class="x-stage">${xCard(leadPost, { query: markQ, lead: true, hitKind: leadKind })}</div>`
+ grid.innerHTML = scoreBar + `<div class="x-stage">${xCard(leadPost, { query: markQ, lead: true, hitKind: leadKind, reasons: reasonsFor(leadPost) })}</div>`
  + laneOf('direct', restDirect)
  + laneOf('theme', restTheme)
  + (restHits.length ? `<div class="x-grid" style="grid-column:1/-1">${restHits.map((p) => xCard(p, { query: state.q })).join('')}</div>` : '');
@@ -311,11 +322,13 @@
  const f = e.target.closest('[data-f]');
  const w = e.target.closest('[data-who]');
  if (f) {
- state = { ...state, f: f.getAttribute('data-f') };
+ const id = f.getAttribute('data-f');
+ state = { ...state, f: state.f === id && id !== 'all' ? 'all' : id };
  write(state);
  render();
  } else if (w) {
- state = { ...state, who: w.getAttribute('data-who') };
+ const id = w.getAttribute('data-who');
+ state = { ...state, who: state.who === id && id !== 'all' ? 'all' : id };
  write(state);
  render();
  }

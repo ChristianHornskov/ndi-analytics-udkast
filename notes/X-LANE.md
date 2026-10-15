@@ -4,6 +4,15 @@
 **Branch:** lane-X  
 **Deadline:** keep until 08:30, polish, report 08:45, demo 09:00.
 
+## Denne nat (2026-10-16) · femte pas
+
+Ingen nye X-kald. `callCountNote` beholder 30/min og 1000/day, noten om ét søgekald 2026-10-15, og at der ikke er kaldt 2026-10-16. Tilføjet: femte poleringspas, stadig ingen kald. 21 opslag uændret. Browseren kalder ikke X. Ingen embed. Ingen secrets. NewDeal Invest i ét ord. Tal kun fra `fund-facts.json` og `risk-stats.json`. 80 kr. er 720 − 640 på 100.000 kr., samme afrunding som omkostningssiden.
+
+- `docs/js/x-feed.js` og `docs/ndi-paa-x.html`: et aktivt spor på desktop lægger søgning og afsender på én linje og skjuler det gentagne filter-chip, så citatet får pladsen. På 1280×800 er FundaAI-kortet helt i første skærm: citat med SoftBank markeret, afsender (byline 576–631), «Direkte træf · Vist fordi: SoftBank», «Åbn på X» og «Mads følger». Foden slutter ved 727. Nvidia-kortet og chips-kortet slutter samme sted. På 900×800 slutter chips-foden ved 754. På 390 er afsenderen stadig 528–583, og foden 647–713. SoftBank-søgning er 3 direkte. Nvidia-søgning er 6 direkte. Chips / AI er 6 direkte og 5 tema. Tom tilstand siger 0, «Aktivt: Quantum · konti Mads følger» og «Udvalgte offentlige opslag — ikke NDI's holdning». Et tryk på det aktive filter eller den aktive afsender slår valget fra. Spor-logikken er uændret: direkte før tema, temakurv reserverer ét tema-kort, selskabssider reserverer ikke.
+- Panelet på selskab og tema: SoftBank er 3 direkte, 0 tema, 3 udeladt. Nvidia er 3 direkte, 0 tema, 2 udeladt. Chips er 3 direkte, 1 tema, 1 udeladt. Platforme er 3 direkte, 1 tema, 6 i alt. Compute er 4 direkte, 0 tema, 7 i alt. Quantum er 1 direkte og 0 tema. Space er 0 direkte og 1 tema, med noten om at ingen opslag nævner tickeren. Båndet læser stadig «…holdning. Snapshot 15. okt. 2026.» Det udeladte tal er sat ned, så det direkte træf står først. SoftBank er markeret i teksten.
+- `docs/fakta.html`: uændret i dette pas. Heroen er 80 kr., med 0,64 % og 0,72 %. På 1280×800 er 32,46 %, 0,89 og −35,82 % i første skærm. På 390 står 80 kr. øverst i blikket (398–438). «Ikke et ÅOP.» Bund 8. apr. 2025. Topfeltet 2. jun. 2026 er stadig stiplet.
+- `docs/omkostninger.html`: på mobil står 80 kr. øverst i forskelskortet, før 0,64 % og 0,72 %. Legendens tekst er «PMINDI 0,64 %» og «PMINDIAKK 0,72 %». Skalaen 0–2 % og udsnittet 0,48–0,88 % er uændret. Kvitteringerne er 1.490 kr., 640 kr. / 720 kr., 250 kr. Mellem de to kvitteringer står 80 kr. som forskel. Ingen sum.
+
 ## Denne nat (2026-10-16) · fjerde pas
 
 Ingen nye X-kald. `callCountNote` beholder 30/min og 1000/day, noten om ét søgekald 2026-10-15, og at der ikke er kaldt 2026-10-16. Tilføjet: fjerde poleringspas, stadig ingen kald. 21 opslag uændret. Browseren kalder ikke X. Ingen embed. Ingen secrets. NewDeal Invest i ét ord. Tal kun fra `fund-facts.json` og `risk-stats.json`. 80 kr. er 720 − 640 på 100.000 kr., samme afrunding som omkostningssiden.
@@ -43,6 +52,8 @@ Ingen nye X-kald. `callCountNote` beholder 30/min og 1000/day, noten om ét søg
 «Udvalgte offentlige opslag — ikke NDI's holdning»
 
 ## Verifikation
+
+Femte pas, headless Chrome mod denne worktree (port 8899): overflow 0 på NDI på X (forside, SoftBank, Nvidia, Chips / AI, tom tilstand) ved 1280×800 og på SoftBank ved 900×800 og 390×844. Fakta og omkostninger overflow 0 ved 1280×800 og 390×844. SoftBank-søgning: hele kortet i første skærm (foden 695–727), ordet SoftBank markeret i citatet og på tagget, tallet 3 direkte, label med punktum. Chips: 6 og 5, «Vist fordi: NVDA · chips», foden 727. Mobil SoftBank uændret (byline 528–583). Fakta: 80 kr. og 32,46 % i første skærm. Omkostninger mobil: 80 kr. før 0,64 %. Kvitteringer: 1.490 / 640 / 720 / 250 og 80 kr. mellem kortene. Paneler uændrede i tælling. Ingen X-embed. Ingen sidefejl.
 
 Fjerde pas, headless Chrome mod denne worktree (port 8899), 1280×800 og 390×844: overflow 0 på NDI på X, SoftBank-søgning, Nvidia-søgning, Chips / AI, tom tilstand, forsiden, fakta, omkostninger, SoftBank, Nvidia og temaerne chips, platforme, compute, quantum og space. SoftBank-søgning: afsenderen er i første skærm (1280×800 byline 730–785, 390 byline 528–583), ordet SoftBank er markeret, tallet er 3 direkte. Fakta: 80 kr. og 32,46 % er i første skærm ved 1280×800 (risikotallets bund 779). På 390 er 80 kr. i første skærm (398–438). Omkostninger: 80 kr. i første skærm, og legendens tekst er «PMINDI 0,64 %» og «PMINDIAKK 0,72 %». Ingen X-embed.
 
