@@ -81,6 +81,8 @@ Opsendelses-blurb siger, at Starfighters skriver, at STARLAUNCH 1 er et suborbit
 
 Råstof-leddet siger også, at The Metals Company skriver, at prøvekørsel ventes i fjerde kvartal 2027, og at aftalen og ansøgningen ikke er produktion. Kilden er selskabets meddelelse i maj 2026 om Allseas og NOAA's offentliggørelse af ansøgningen i august 2026. Et navneplade-tal for kapacitet og formuleringen om verdens største ressource er ikke taget med. Northern Dynasty skriver, at Pebble er i føderal tilladelsesbehandling. Lithium Americas skriver, at Thacker Pass bygges, med mål om industriel skala sent i 2027. Ingen af de to er i fuld drift. Mountain Pass og Gibraltar er stadig miner i teksten.
 
+Elnet-blurb skelner byggerne fra dem, der leverer strøm. Quanta, Primoris og MYR Group bygger nettet og producerer ikke strømmen. GE Vernova leverer udstyr og driver ikke værkerne. Solaris leverer strøm tæt på store forbrugere. Solaris' forside omtaler 16. oktober 2026 købet af Omega med dato 6. juli 2026 i adressen `ir.solaris-energy.com/news/2026/07-06-2026-120016135`. Købet er efter beholdningen pr. 2026-06-01 og står ikke i kædeteksten. Vægtene er uændrede.
+
 ## År til dato på periodesiden
 
 `ytdReturn` i `data.js` bruger sidste punkt i året før som udgangspunkt, ikke 1. januar. For PMINDI pr. 2026-10-14 er det 2025-12-31, ikke 2026-01-02. `periode.html` viser den samme dato i "Fra → til". Kalenderår bruger samme base (`calendarYearReturns`).

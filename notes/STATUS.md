@@ -413,3 +413,15 @@ Profilen på The Metals Company gengiver meddelelsen fra maj 2026 om Allseas og 
 Tjekket i Chromium på energifanen, nyhedsarkivet og selskabssiden. AI-udkast er med. "tjekket mod kilden" er ikke med. Andet afsnit ligger bag "Læs hele forklaringen". Ingen konsolfejl. Ingen vandret scroll ved 375 px.
 
 **Push:** `lane-E` @ `454278f` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 00:36 CEST. Elnet siger, hvem der bygger, og hvem der leverer strøm. Ikke færdig.**
+
+På energikæden siger elnet-leddet, at Quanta, Primoris og MYR Group bygger nettet og ikke producerer strømmen. GE Vernova leverer udstyr og driver ikke værkerne. Solaris leverer strøm tæt på store forbrugere. Vægtene er ikke ændret.
+
+Solaris' forside omtaler 16. oktober 2026 købet af Omega, dateret 6. juli 2026. Det ligger efter beholdningen pr. 1. juni 2026 og er ikke skrevet ind. Quanta-siden siger, at selskabet bygger og vedligeholder nettet. Formuleringen om den største arbejdsstyrke er ikke kopieret. MYR Group kalder sig entreprenør.
+
+Tjekket i Chromium ved 375 px på energifanen og i nyhedsarkivet. Sætningerne står. Omega står ikke. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `c37e9c0` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

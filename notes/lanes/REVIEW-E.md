@@ -77,3 +77,7 @@ Opsendelse nævner nu det tungeste navn. Starfighters er luftopsendelse under ud
 ## Noduler, Pebble og Thacker Pass · 2026-10-16 00:34 CEST
 
 Råstof-leddet skelner nu de tre navne, der lettest læses som drift. The Metals Company har en aftale og en ansøgning, og selskabet selv venter prøvekørsel i fjerde kvartal 2027. Det er ikke produktion. Pebble er i føderal tilladelsesbehandling. Thacker Pass bygges, med mål sent i 2027. Kapacitetstal og "world's largest" er ikke kopieret. AI-udkast uden gennemgangsdato. Chromium på kæde, nyhedsarkiv og selskabsside. Ingen konsolfejl. Ingen vandret scroll ved 375 px.
+
+## Elnet, bygherrer og Solaris · 2026-10-16 00:36 CEST
+
+Elnet-leddet siger, at Quanta, Primoris og MYR Group bygger og ikke producerer strømmen, at GE Vernova leverer udstyr, og at Solaris leverer strøm tæt på store forbrugere. Omega-købet 6. juli 2026 er efter snapshottet og er udeladt. "Largest workforce" hos Quanta er ikke kopieret. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.

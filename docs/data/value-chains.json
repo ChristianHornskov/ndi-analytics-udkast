@@ -1308,7 +1308,7 @@
           "id": "grid",
           "icon": "⌒",
           "label": "Elnet, transformere og transmission",
-          "blurb": "Strømmen skal fra kraftværk til datacenter. Det kræver ledninger, transformerstationer og selskaber, der bygger og udstyrer nettet.",
+          "blurb": "Strømmen skal fra kraftværk til datacenter. Det kræver ledninger, transformerstationer og selskaber, der bygger og udstyrer nettet. Quanta, Primoris og MYR Group bygger nettet. De producerer ikke strømmen. GE Vernova leverer udstyr og driver ikke værkerne. Solaris leverer strøm tæt på store forbrugere.",
           "ndi": "NDI har skrevet om mangel på transformere, køling og transmissionskapacitet (ugebrev 10. august 2026). Køling hører med i flaskehalsen. Selskaber, der alene laver ventilation, står ikke på dette led.",
           "themes": [
             "energy",
