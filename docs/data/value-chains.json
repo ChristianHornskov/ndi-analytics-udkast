@@ -1364,7 +1364,7 @@
           "id": "storage",
           "icon": "🔋",
           "label": "Energilagring og batterier",
-          "blurb": "Batterier og andre lagre, der kan gemme strøm og aflevere den senere. Lithium til batterierne står under råstoffer. QuantumScape er et batteridesign til køretøjer og er ikke masseproduktion.",
+          "blurb": "Batterier og andre lagre, der kan gemme strøm og aflevere den senere. Lithium til batterierne står under råstoffer. QuantumScape er et batteridesign til køretøjer og er ikke masseproduktion. Fluence leverer batterisystemer og software til nettet. Det er ikke et kraftværk, og teksten siger ikke, at selskabet selv laver cellerne. Eos laver zinkbatterier. Det er ikke en mine.",
           "ndi": "NDI nævner batterier som del af energiflaskehalsen (ugebrev 30. marts 2026). Tesla er med, fordi koncernen også laver batterilagring.",
           "themes": [
             "energy",
@@ -1690,7 +1690,7 @@
           "id": "satcom",
           "icon": "📡",
           "label": "Satellitkommunikation",
-          "blurb": "Satellitter i drift eller under bygning: kommunikation, billeder af Jorden, radiosignaler og de platforme, satellitterne bygges på.",
+          "blurb": "Satellitter i drift eller under bygning: kommunikation, billeder af Jorden, radiosignaler og de platforme, satellitterne bygges på. Redwire leverer dele og sender ikke selv op. York bygger platforme til kunden. MDA omtaler Chorus, før konstellationen er sendt op.",
           "ndi": "Starlink er i en AI-selskabsprofil beskrevet som en løbende tjeneste, ikke kun en opsendelse. Det er et udkast, ikke NDI's færdige tekst. SpaceX indgår ikke i beholdningen pr. 1. juni 2026.",
           "themes": [
             "space"

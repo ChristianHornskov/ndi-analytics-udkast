@@ -85,6 +85,8 @@ Elnet-blurb skelner byggerne fra dem, der leverer strøm. Quanta, Primoris og MY
 
 Elproduktions-blurb navngiver forskellen. Comstock, Antero, EQT og Expand er gas som brændsel. T1 Energy laver solcellemoduler, efter den gennemgåede profil, og profilen er ikke ændret. Cummins og Generac er motorer og reservegeneratorer, ikke elselskaber. Babcock & Wilcox leverer kedler og service. GE Vernova leverer udstyr og driver ikke værkerne. Bloom er brændselsceller hos kunden. Plug er brændselsceller og brintudstyr. Teksten siger ikke, at hvert anlæg kører. Bloom og Plug gav 403 den 16. oktober 2026, så der er ingen nye produktnavne derfra.
 
+Batteri-blurb siger, at Fluence er batterisystemer og software, ikke et kraftværk, og at teksten ikke påstår, at selskabet selv laver cellerne. Fluence gav 403 samme nat. Eos er zinkbatterier, ikke en mine. Selskabets egne ord om at være ledende og om et offentligt lån er ikke taget med. Satellit-blurb siger, at Redwire leverer dele og ikke selv sender op, at York bygger platforme, og at MDA omtaler Chorus, før konstellationen er sendt op. MDA's forside havde den formulering 16. oktober 2026. Vægtene er uændrede.
+
 ## År til dato på periodesiden
 
 `ytdReturn` i `data.js` bruger sidste punkt i året før som udgangspunkt, ikke 1. januar. For PMINDI pr. 2026-10-14 er det 2025-12-31, ikke 2026-01-02. `periode.html` viser den samme dato i "Fra → til". Kalenderår bruger samme base (`calendarYearReturns`).

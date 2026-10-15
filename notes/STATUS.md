@@ -439,3 +439,15 @@ Bloom og Plug gav 403 i nat. Sætningerne er derfor de grænser, profilerne alle
 Tjekket i Chromium ved 375 px på energifanen og i nyhedsarkivet. Sætningerne står. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `1efc064` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 00:39 CEST. Batterier og satellitter siger, hvad Fluence, Eos, Redwire og Chorus ikke er. Ikke færdig.**
+
+På energikæden siger batteri-leddet, at Fluence leverer batterisystemer og software til nettet, ikke et kraftværk, og at teksten ikke siger, at selskabet selv laver cellerne. Eos laver zinkbatterier og er ikke en mine. QuantumScape er stadig ikke masseproduktion.
+
+På rumkæden siger satellit-leddet, at Redwire leverer dele og ikke selv sender op, at York bygger platforme til kunden, og at MDA omtaler Chorus, før konstellationen er sendt op. MDA's forside sagde det samme 16. oktober 2026. Fluence gav 403, så der er ingen nye produktnavne. Eos-siden kalder selskabet en leder og nævner et lån. Det er ikke kopieret. Vægtene er ikke ændret.
+
+Tjekket i Chromium ved 375 px på begge faner og i nyhedsarkivet. Sætningerne står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `7896363` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

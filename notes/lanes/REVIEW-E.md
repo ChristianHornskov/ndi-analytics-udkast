@@ -87,3 +87,7 @@ Elnet-leddet siger, at Quanta, Primoris og MYR Group bygger og ikke producerer s
 Elproduktions-leddet siger, hvem der leverer gas, hvem der laver solcellemoduler, og hvem der laver udstyr. Bloom og Plug er brændselsceller. Teksten siger ikke, at hvert anlæg kører. Bloom og Plug gav 403, så der er ingen nye produktnavne. T1 og Babcock er ikke ændret i profilen. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
 
 `1efc064` har elnet-teksten. Emnelinjen gentog råstof-committen, fordi beskedfilen var gammel. Indholdet er rigtigt. Ingen force-push.
+
+## Fluence, Eos og Chorus · 2026-10-16 00:39 CEST
+
+Batteri-leddet siger, at Fluence ikke er et kraftværk, og at cellerne ikke er beskrevet som selskabets egne. Eos er zinkbatterier, ikke en mine. Satellit-leddet siger, at Redwire ikke sender op, at York bygger platforme, og at Chorus ikke er sendt op. "Leader" og lånet hos Eos er ikke kopieret. Fluence gav 403. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
