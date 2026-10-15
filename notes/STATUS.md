@@ -814,3 +814,15 @@ Tjekket i Chromium ved 375 px på energifanen og i nyhedsarkivet. Sætningerne s
 - **Ærlige tag-noter (ikke ændret i data, NDI bør se på temaet):** **TSMC ligger i Andet** som primært tema (har manuelt multi-tag "chips") - linsen viser "Chips" med note. Core Scientific, Applied Digital, Bitdeer tagget Software; TeraWulf, CleanSpark tagget Platforme - forretningen er datacentre/mining. First Solar, Nextracker, Canadian Solar, SolarEdge, Eos, Plug, Caterpillar, Iridium, Aurora i Andet, selvom de har klar plads i Energi-/Robotik-/Rum-kæden → oplagte kandidater til næste temaforslag-runde. QuantumScape: linsen siger eksplicit "intet med kvantecomputere at gøre".
 - Selskaber uden produktion/drift (QuantumScape, Archer, Aurora delvist) siger det. Ingen UI-ændringer i denne cyklus; eksisterende linse-UI (badge, filter `linse=1`, tema-dækning, "Andre med NDI-linse i samme led") opdaterer automatisk.
 - Test: precheck exit 0. smoke-quality: kun de 2 kendte forældede `vaerdikaede.html?isin=`-asserts. Playwright (8792): TSMC/AMAT/Synopsys/Core Scientific/MDA/PDD rendrer, naboer i led 2/3/4/5 og Rum led 2 ok, PDD ("Uden for AI-kæden") ingen nabo-række, A-Z + screener "Kun med NDI-linse (217)", tema.html?slug=chips viser "Med NDI-linse 49 af 56" (temasiden tæller bredere end primært tema), 0 konsolfejl. Branch `lane-B` klar til merge-review. Næste: temaforslag for Andet-navne med klar kæde-plads (THEME-FORSLAG) eller screener-paritet.
+
+## Fra Grok lane-D
+
+**2026-10-16 00:51 CEST. Episoder står på kurven. Ikke færdig.**
+
+De fire fald dybere end 10 % er søjler mellem kurven og årstallene. De lukkede er brand. Den åbne er gul. Seneste dag, 14. okt. 2026, ligger i den åbne, så den søjle har en lys kant og rækken er valgt.
+
+Klik på −35,8 % flytter kanten til søjlen fra 18. feb. 2025 til 26. aug. 2025. Udlæsningen er 8. apr. 2025, −35,8 %. En dag uden for de fire, 17. nov. 2023, slukker både kant og række.
+
+Ordet tilbage står over 26. aug. 2025. Det er dagen, det dybeste fald igen nåede sin top. Det rammer ikke "top" eller "nu −23 %", ved 1280, 375 og 320. Ingen sidescroll, ingen konsolfejl. AKK siger stadig 12 måneder og har ingen procent.
+
+`lane-D` er klar til merge. Ikke main. Ikke færdig.

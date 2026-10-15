@@ -59,7 +59,7 @@ Siden må ikke være fire ens kort plus to mørke kasser. Formerne skifter ned a
 | Hero-tal | Det ene dybeste fald, med datoer og genopretning | ✅ `.hero-stat` |
 | Rolige tal | Middel og median som to linjer, ikke kort | ✅ `.quiet-stats` |
 | Gul annotation | Hvor serien ligger under vand i dag | ✅ `.anno` |
-| Underwater | Tid. Gul prik = dybeste bund. Ring = seneste dag. Tynd gul streg = toppen i den åbne episode. Slider vælger en dag, cyan prik på kurven | ✅ `.figure` + `.uw-scrub` |
+| Underwater | Tid. Gul prik = dybeste bund. Ring = seneste dag. Tynd gul streg = toppen i den åbne episode. Søjler mellem kurve og årstal = episoder dybere end 10 %. Ordet tilbage = dagen det dybeste fald nåede toppen igen. Slider vælger en dag, cyan prik på kurven | ✅ `.figure` + `.uw-scrub` + `.uw-span` |
 | Prikfordeling | Hvorfor middel ligger dybere end median. Navnene står under aksen | ✅ `.figure.plain` |
 | Episodeliste | De fire fald dybere end 10 %, med varighed. Klik hopper til bunden på kurven | ✅ `.ep-ledger` |
 | Årssøjler | Kalenderafkast som small multiples, link til periode. Året med det dybeste fald har gul kant. Søjlerne deler bundlinje | ✅ `.year-rail` |
