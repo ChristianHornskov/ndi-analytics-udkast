@@ -451,3 +451,8 @@ table.data tbody tr:hover td:first-child{background:#163038}
 .updated-stamp time{color:var(--text)}
 /* Sparklines er statiske i dag; sikr at fremtidige transitions/animationer respekterer brugerens valg */
 @media(prefers-reduced-motion:reduce){.spark,.spark *{animation:none!important;transition:none!important}}
+
+@media (prefers-reduced-motion: reduce) {
+  .control,.outline-btn,.cta,.door{transition:none!important}
+  .dialog-backdrop{animation:none!important}
+}

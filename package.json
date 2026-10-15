@@ -9,7 +9,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "precheck": "bash scripts/precheck.sh",
-    "push": "bash scripts/push.sh"
+    "push": "bash scripts/push.sh",
+    "smoke": "node scripts/smoke.mjs",
+    "smoke:quality": "node scripts/smoke-quality.mjs",
+    "test:precheck": "bash scripts/test-precheck.sh"
   },
   "repository": {
     "type": "git",
