@@ -93,3 +93,9 @@ Se `notes/VISUAL-VARIETY-REVIEW.md`.
 - Skitserne er mærket "en skitse, ikke tal" i noten.
 - vaerdikaede.html: kæde-kortene har fået en tredje, dæmpet linje "◇ Ordbog: N ord →".
 - Kun sidens egen CSS (`.mn-*`, `.oc-gl`).
+
+## lane-A · 2026-10-16 ~00:45 CEST · rum: usikkerheder og læse-rute
+- **Usikkerheds-kort med kæde-strimmel** (`#sp-risk`): gul venstrekant på hele sektionen, ikon i en let drejet gul firkant (ikke rund som penge-sporene), og under teksten en strimmel med de syv led som små cirkler, hvor de ramte led lyser gult med glød. Det er en ny form: man ser *hvor* i kæden noget rammer uden at læse.
+- **Læse-rute** (`#sp-route`): vandret række af nummererede stop med ikon og undertekst, der ruller vandret på mobil.
+- Kvante-horisont: stiplet cyan "⤳"-boks med hop til AI-floden.
+- Kun sidens egen CSS (`.sp-route`, `.risk`, `.rk-*`, `.q-river`).

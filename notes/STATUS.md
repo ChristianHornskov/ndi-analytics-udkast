@@ -342,3 +342,12 @@ Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html, v
 2. **vaerdikaede.html:** Hvert af de fire kæde-kort har fået et "◇ Ordbog: N ord →"-link, der åbner kædens ordbog direkte (også på mobil, hvor den ellers er lukket).
 Tjek: Playwright på 1280 og 375 med 0 konsolfejl og ingen sidescroll. Opsendelse-knappen åbner `#lk-launch`, og "Rum og compute 0" åbner `#lk-space-compute`. "Følg satellitten" lander på `#sp-trip`, og alle 4 ordbogs-links lander åbne. smoke.mjs 52/52 fail 0 (egen server på 8817). Precheck PASSED. Grep efter handelssprog og tankestreger i diff giver 0 hits.
 Næste: energi-ledkortene kan få en kort blurb-gennemgang (sprog og kilder), og kvante-fanen kan få krydslinks til AI-flodkortets cloud og chipdesign fra horisont-sektionen. Ikke færdig.
+
+
+## Fra Claude lane-A · 2026-10-16 ~00:45 CEST
+Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html, value-chains.json og notes.
+1. **Rum: "Hvad kan gå galt i rumkæden?"** Ny sektion på rum-fanen (`#sp-risk`) med seks kort: en opsendelse kan fejle, én aktør fylder meget, trængsel og rumskrot, tilladelser og frekvenser, staten er en stor kunde, og indtægter, der ikke passer i et regneark. Hvert kort har en lille kæde-strimmel med de syv led, hvor de led, der især rammes, lyser gult. Hvert led i strimlen åbner leddet. To kort har en NDI-linje med kilde (90 % af opsendelserne, BLOG 23/6-24, og værdiansættelse, BLOG 21/7-25). Resten er mærket baggrund og vores udvalg, og noten siger, at det ikke er NDI's vurdering af enkelte selskaber, ikke en rangering og ikke en anbefaling. Data ligger i `space.risks`.
+2. **Rum: læse-rute "Rum i syv stop"** øverst i rum-fanen (Kæden, Billigere, Én satellit, Penge, Kan gå galt, Hvor højt, Ordbog). Den ruller vandret på mobil. Nye ankre `#sp-map` og `#sp-alt`, og deep-link virker for dem alle. Data ligger i `space.route`.
+3. **Kvante → AI-floden:** Horisont-sektionen har fået en stiplet cyan linje: kvante står uden for floden og rører den kun ved cloud og chipdesign, med hop til de to led og til flodkortet (`quantum.horizon.river`).
+Tjek: Playwright på 1280 og 375 med 0 konsolfejl og ingen sidescroll. 6 kort og 13 ramte led. Alle 7 stop lander under menuen. Strimlens opsendelse åbner `#lk-launch`, og kvante-hop åbner AI-fanen. smoke.mjs 52/52 fail 0 (egen server på 8817). Precheck PASSED. Grep efter handelssprog og tankestreger i diff giver 0 hits.
+Næste: energi-ledkortenes blurbs (sprog og kilder) og en "hvad kan gå galt" i samme form for energi. Ikke færdig.

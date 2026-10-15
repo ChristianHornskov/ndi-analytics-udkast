@@ -3764,6 +3764,124 @@
     "bridge": "Den samme satellit kan høre til begge spor. Den sælges én gang og leverer derefter en tjeneste, der betales løbende. Når den efter nogle år skal udskiftes, kommer der igen ordrer på dele, samling og opsendelse.",
     "bridgeLink": "sp-trip",
     "note": "Opdelingen er vores forenkling og generel baggrund, ikke NDI's klassifikation. Et selskab kan tjene penge på flere måder. Søjlerne er en skitse, ikke tal. Antal er selskaber i den forsinkede beholdning pr. 1. juni 2026, som er tilordnet leddet. Det er ikke en rangering eller en anbefaling."
+   },
+   "route": {
+    "label": "Rum i syv stop",
+    "lede": "Rum-fanen er lang. Vælg et stop, eller læs oppefra.",
+    "stops": [
+     {
+      "id": "sp-map",
+      "icon": "🧭",
+      "k": "Kæden",
+      "t": "fra jorden og op"
+     },
+     {
+      "id": "sp-cost",
+      "icon": "💸",
+      "k": "Billigere",
+      "t": "hvorfor prisen faldt"
+     },
+     {
+      "id": "sp-trip",
+      "icon": "🛰",
+      "k": "Én satellit",
+      "t": "seks trin"
+     },
+     {
+      "id": "sp-money",
+      "icon": "🔁",
+      "k": "Penge",
+      "t": "én gang eller løbende"
+     },
+     {
+      "id": "sp-risk",
+      "icon": "⚠",
+      "k": "Kan gå galt",
+      "t": "seks usikkerheder"
+     },
+     {
+      "id": "sp-alt",
+      "icon": "📏",
+      "k": "Hvor højt",
+      "t": "fra 400 km til Månen"
+     },
+     {
+      "id": "gloss-wrap",
+      "icon": "◇",
+      "k": "Ordbog",
+      "t": "10 ord"
+     }
+    ]
+   },
+   "risks": {
+    "title": "Hvad kan gå galt i rumkæden?",
+    "lede": "Rumkæden har sine egne usikkerheder, og de sidder forskellige steder. Den lille kæde på hvert kort viser, hvilke led der især rammes. Klik et led for at åbne det.",
+    "items": [
+     {
+      "icon": "💥",
+      "k": "En opsendelse kan fejle",
+      "t": "En raket kan eksplodere eller sætte satellitten i en forkert bane. Så er både raket og last tabt, og de næste opsendelser kan blive udskudt, mens fejlen undersøges.",
+      "links": [
+       "launch",
+       "sats"
+      ]
+     },
+     {
+      "icon": "🎯",
+      "k": "Én aktør fylder meget",
+      "t": "Når ét selskab står for de fleste opsendelser, afhænger resten af kæden af dets kapacitet og priser. Konkurrenterne er stadig små.",
+      "links": [
+       "launch"
+      ],
+      "ndi": {
+       "t": "SpaceX stod for 90 % af årets satellitopsendelser i NDI's gennemgang fra 2024.",
+       "src": "BLOG 23. juni 2024"
+      }
+     },
+     {
+      "icon": "🧩",
+      "k": "Trængsel og rumskrot",
+      "t": "Jo flere satellitter i lavt kredsløb, jo større er risikoen for kollisioner. Selv små stykker skrot kan ødelægge en satellit, og reglerne for at fjerne udtjente satellitter er stadig under udvikling.",
+      "links": [
+       "sats",
+       "satcom",
+       "eo"
+      ]
+     },
+     {
+      "icon": "📶",
+      "k": "Tilladelser og frekvenser",
+      "t": "En satellit må kun sende på frekvenser, den har fået tilladelse til, og en tjeneste skal ofte godkendes land for land. Det kan forsinke en tjeneste, selv om satellitterne allerede er oppe.",
+      "links": [
+       "satcom",
+       "eo"
+      ]
+     },
+     {
+      "icon": "🏛",
+      "k": "Staten er en stor kunde",
+      "t": "Mange rumselskaber sælger til rumagenturer og forsvar. Kontrakter kan give ro, men budgetter og politiske prioriteter kan ændre sig fra år til år.",
+      "links": [
+       "parts",
+       "eo",
+       "orbit"
+      ]
+     },
+     {
+      "icon": "🧮",
+      "k": "Indtægter, der ikke passer i et regneark",
+      "t": "Jo længere ude i kæden, jo mere bygger forventningerne på markeder, der ikke findes endnu. Det gør det svært at sætte tal på.",
+      "links": [
+       "orbit",
+       "space-compute"
+      ],
+      "ndi": {
+       "t": "SpaceTech får efter NDI's opfattelse ikke altid den værdiansættelse, det måske burde, fordi indtægterne er usikre og ikke passer i et regneark.",
+       "src": "BLOG 21. juli 2025"
+      }
+     }
+    ],
+    "note": "Usikkerhederne er generel baggrundsviden og vores udvalg. De er ikke NDI's vurdering af enkelte selskaber. De to linjer med NDI-mærke er NDI's egne og har kilde. Kortene er ikke en rangering og ikke en anbefaling."
    }
   },
   {
@@ -3874,7 +3992,23 @@
      "t": "Mads nævner kvantecomputere som et accelererende segment med politisk medvind og høj volatilitet.",
      "src": "BLOG 2. juni og 7. juli 2025"
     },
-    "note": "Udsagnet er NVIDIA-direktørens, ikke Mads' og ikke NDI's prognose. Tidslinjen er usikker. Netop derfor bruger Mads kvante som eksempel på indtægter, der ikke passer i et regneark (BLOG 21. juli 2025)."
+    "note": "Udsagnet er NVIDIA-direktørens, ikke Mads' og ikke NDI's prognose. Tidslinjen er usikker. Netop derfor bruger Mads kvante som eksempel på indtægter, der ikke passer i et regneark (BLOG 21. juli 2025).",
+    "river": {
+     "t": "Kvante står uden for AI-floden og rører den kun to steder: cloud og chipdesign.",
+     "links": [
+      {
+       "chain": "ai-compute",
+       "id": "cloud",
+       "k": "Cloud"
+      },
+      {
+       "chain": "ai-compute",
+       "id": "chipdesign",
+       "k": "Chipdesign"
+      }
+     ],
+     "map": "Se AI-flodkortet"
+    }
    },
    "glossary": [
     {
