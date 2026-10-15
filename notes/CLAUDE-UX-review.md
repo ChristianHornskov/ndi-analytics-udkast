@@ -491,3 +491,24 @@ main er uændret siden cyklus 20, og Pages = `75a87c2` (docs er identiske). Jeg 
 
 ### OK
 - Mobil 375: ingen h-overflow på 24 sider. Topbaren har "Sådan investerer du" som primær CTA ✅. Top-10/portefølje: "pr. 1. jun. 2026" ×4 ✅.
+
+## 2026-10-16 01:43 CEST · cyklus 22 (main `a664f4f`, intet docs-delta)
+
+main er uændret siden cyklus 20, og Pages = `75a87c2`. Persona- og krav-filerne er uændrede siden 23:42. Jeg har kørt Playwright live ved 375 med scroll på 17 sider (entré, fonden, portefølje, udforsk, vaerdikaeder, drawdown, risici, SoftBank, temaer, invester, om-data, omkostninger, fakta, sammenlign, ndi-paa-x, idéer og nyhedsarkiv). Resultat: 0 pageerrors, 0 h-overflow, én h1 overalt og 0 billeder uden alt. Tegntallene er identiske med cyklus 21 (entré 2.804, fonden 7.075, udforsk 22.510), så der er ingen regression.
+
+### MUST (uændret, re-verificeret)
+- Invester har tre "trin 4" (merge-rest). Behold én.
+- Selskab: "AI-udkast" står over et tomt felt, og der er stubs med "–". Brug linsens fallback.
+- SRI 5 mod vol 32,46 % (se compliance).
+
+### SHOULD (nyt)
+- **Lille tekst på vaerdikaeder ved 375:** 14 tekstelementer er under 11 px. Det er især flaskehals-tags ("Begyndende flaskehals", "Ingen tydelig flaskehals" i 10 px) og "Det ændrer sig · baggrund" (10,5 px). For privatpersonaen (55+) er det for småt. Hæv til mindst 12 px på mobil. Fonden og fakta har 3 elementer hver, risici og omkostninger 2.
+- **Omkostninger i læseflowet:** ordet "omkostning" optræder slet ikke i renderet tekst på portefølje, udforsk, vaerdikaeder, drawdown, temaer, sammenlign og nyhedsarkiv. På fonden kommer det tidligt (tegn 266) ✅. For familiekontor-personaen bør sammenlign i det mindste have en linje: "Løbende omkostninger: se KID".
+
+### SHOULD (uændret)
+- "Central Information Dokument" i fodnoten. TSMC's h1 "Taiwan Semi Sp ADR". "Foundry :". Idéer «To klasser» (345/320). ndi-perspektiv bør foldes sammen. "BREAKING:" ×2 på fonden, ndi-paa-x og SoftBank. "MADS FØLGER" ×7 på ndi-paa-x og ×3 på SoftBank. Nyhedsarkiv har "Placeholder".
+
+### Persona-linser
+- **Privat:** ingen ændring. Lille tekst på vaerdikaeder er den nye mobil-irritation.
+- **Familiekontor:** intet samlet KID-omkostningstal, og sammenlign nævner ikke omkostninger.
+- **Visuel variation:** uændret.

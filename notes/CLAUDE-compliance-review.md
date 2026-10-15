@@ -560,3 +560,27 @@ Ikke juridisk rådgivning. Pages = `75a87c2` (docs er identiske med main). Jeg h
 
 ### OK ✅
 - Beholdning pr. 1. jun. 2026 er tydelig i topbaren på fonden ("forsinket snapshot"). Ingen live trades. Ingen 1m/3m. "Fonden har intet fast benchmark" står på fonden og fakta. Invester har "Ikke rådgivning", "kan tabe" og "Historisk afkast …" og KID-tabel for begge klasser ✅.
+
+## 2026-10-16 01:43 CEST · cyklus 22 (main `a664f4f`, intet docs-delta)
+
+Ikke juridisk rådgivning. Pages = `75a87c2`. Jeg har grep'et renderet tekst live på 17 sider ved 375 efter scroll. Alle tal er identiske med cyklus 21.
+
+### MUST (åbne, re-verificeret)
+1. Ingen "markedsføring"-mærkning (0 på alle 17 sider).
+2. "MADS FØLGER": ndi-paa-x ×7 og SoftBank ×3.
+3. "kan tabe" er 0 på **ndi-paa-x, omkostninger og nyhedsarkiv**. ndi-paa-x har også 0 "Historisk afkast".
+4. PMINDIAKK NAV 98,40 står på sammenlign og fonden-toggle før 12 mdr. NDI skal afklare.
+5. ÅTD og +104,8 % står ved siden af "afventer Fundmarket-godkendelse".
+6. SRI 5 mod vol 32,46 % mod laer/risikoklasse "20–30 %".
+7. `chartMarkers` @MadsC007 i afkastgrafen.
+
+### Nyt tjek i denne cyklus
+- **Fremadskuende udsagn:** jeg har søgt efter "vil stige/vokse/give", "forventer afkast", "potentiale for", "kursmål" og "upside" på 17 sider: 0 hits ✅.
+- **"anbefal…/overvægt" i kontekst:** temaer siger "Ikke anbefalinger eller bevidste overvægte", risici "ikke bevidste overvægte og ikke anbefalinger" og vaerdikaeder "ikke bevidste overvægte". SoftBank har "anbefalet investeringshorisont på 5 år ifølge KID". Alt er negationer eller KID-citat ✅.
+- **KID-link i renderet tekst** er stadig 0 på vaerdikaeder, drawdown, temaer og nyhedsarkiv (SHOULD).
+
+### SHOULD (uændret)
+- Intet samlet KID-omkostningstal (persona/FO-MUST, når NDI har tallet). Omkostninger siger "ikke et ÅOP" ✅. Invester har tre "trin 4" (to af dem "Køb og omkostninger"). Fodnoten skal bruge den officielle KID-titel. "BREAKING:" ×2. @CHornskov-opslaget "Begge er også i $PMINDI" skal dateres. Idéer «To klasser» udelader omkostningsforskellen. "AI-udkast" står over et tomt felt på selskab.
+
+### OK ✅
+- Beholdning pr. 1. jun. 2026, ingen live trades, ingen 1m/3m på PMINDI og intet benchmark-claim. "kan tabe" og "Historisk afkast" står på entré, fonden, invester, fakta, drawdown, risici og sammenlign. AI-udkast er mærket på selskab (×10 på SoftBank).
