@@ -74,7 +74,7 @@
  const t0 = Date.parse(rows[0].d + 'T12:00:00Z');
  const t1 = Date.parse(rows[rows.length - 1].d + 'T12:00:00Z');
 
- const W = 360, H = 260, padL = 28, padR = 12, padT = 32, padB = 96;
+ const W = 360, H = 240, padL = 28, padR = 12, padT = 32, padB = 76;
  const xOf = d => padL + ((Date.parse(d + 'T12:00:00Z') - t0) / Math.max(1, t1 - t0)) * (W - padL - padR);
  const yOf = v => padT + ((-Math.min(0, v)) / yMax) * (H - padT - padB);
  let deep = eps.filter(e => e.dd <= -10).sort((a, b) => a.peakD.localeCompare(b.peakD));

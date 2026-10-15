@@ -116,6 +116,10 @@ Den gule streg for toppen gik gennem "nu -23 %". Streken ned til bunden gik genn
 
 0 %-linjen i embed var en tynd stiplet streg i samme familie som gitteret. Den er nu brand, 2 px, og tallet 0 % har samme farve. De andre gitterlinjer er uændrede. Hele perioden er stadig +104,8 %, CAGR +26,4 %, år til dato +4,0 %. Sætningen siger slutdatoen én gang. 5. feb. 2026 er −6,9 %. Prik, udlæsning og tooltip er rosa, og tooltip rammer ikke sluttallet. PMINDIAKK har tom svg, ingen procent, og linket siger at drawdown vises efter 12 måneder. Ingen tekst uden for svg'en. Ingen sidescroll ved 1100, 375 og 320. Ingen konsolfejl.
 
+### Update · årstal tæt på søjlerne · 2026-10-16 ~01:53 CEST
+
+Der var et tomt bånd mellem søjlerne og årstallene. Årstallene står nu 12 enheder under den højeste søjle. Kurven, søjlerne og tallene har samme sted som før. "-36 %" og "nu -23 %" er uændrede. Et klik på søjlen for 8. apr. 2025 sætter udlæsningen til −35,8 %. Ingen tekst uden for svg'en. Ingen sidescroll ved 1280, 375 og 320. Ingen konsolfejl. AKK siger stadig 12 måneder og har ingen procent.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.
