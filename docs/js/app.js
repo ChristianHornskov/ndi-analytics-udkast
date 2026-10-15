@@ -417,10 +417,10 @@ function renderCalendar(el, rows) {
     .map((h, i) => `<div class="${i ? 'mh' : 'yh'}">${h}</div>`).join('');
   const body = years.map((y) => {
     const arr = byYear.get(y);
-    return `<div class="yh">${y}</div>` + arr.map((v) => {
+    return `<div class="yh">${y}</div>` + arr.map((v, mi) => {
       if (v == null) return '<div class="cell muted">–</div>';
       const cls = v >= 0 ? 'up' : 'down';
-      return `<div class="cell ${cls}" title="${fmtPct(v)}">${v.toFixed(1).replace('.', ',')}</div>`;
+      return `<div class="cell ${cls}" title="${fmtPct(v)}" aria-label="${y} måned ${mi + 1}: ${fmtPct(v)}">${v.toFixed(1).replace('.', ',')}</div>`;
     }).join('');
   }).join('');
   el.innerHTML = `<div class="cal">${head}${body}</div>`;
