@@ -112,3 +112,7 @@ Sider: ideer, kort, om-data, invester, risici, ndi-perspektiv, laer/*.
 - Flodsystem-svaret i FAQ bruger [M]-formuleringen fra VIDENSBOT-vaerdikaeder (vand = efterspørgsel, dæmninger = flaskehalse, presset flytter; BLOG 30. marts 2026). Ingen «øge eksponeringen»/købsmulighed.
 - **Bevidst udeladt:** et FAQ-svar «Er AI en boble?» med Mads' «vi står i det modsatte af en boble» (BLOG 4. maj 2026). Det er en markedsvurdering, ikke en forklaring — kræver Mads/compliance-ja før det kommer på siden. Lagt i IDEAS.
 - Omkostningssvaret nævner ingen satser; peger på KID (gældende dokument).
+
+## ~00:35 CEST lane-C (Claude)
+- Ordliste «Cloud og AI-modeller» bruger value-chains.json-formuleringen «sværere at investere i lige nu» som NDI-vurdering — ingen anbefaling. «Robotik» = Vidensbot fase 3 (automatisering og robotisering), robotter forstået bredt.
+- Sprogscan af lane-C-sider (købsmulighed, kursmål, timing, billig/dyr, undervurderet, trading): ingen træffere ud over negationer («ikke automatisk billig», «ikke en anbefaling»).

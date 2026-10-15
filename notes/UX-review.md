@@ -182,3 +182,10 @@ Ingen nye.
 - **Stikord-svar skrevet om til sætninger:** P/E («Markedets forventning. Ikke en facitliste…» → hvad tallet er, og hvorfor investering trækker det ned), tema («Segmenter viser eksponering» → hvad et tema viser), invester («Generelt flow: … ordre» — anglicisme, og passede ikke til siden). Første udkast skrev «fire trin»; invester.html har «Tre spørgsmål før du investerer» → svaret følger nu siden (tid/5 år, fald, bred tech-fond).
 - **risici.html:** flaskehalskortet nævnte fire dæmninger («cloud og apps»). Nu de fem fra Vidensbot (energi, datacentre, halvledere, cloud og modeller, applikationer og fysisk AI), «presset flytter videre», link direkte til `#kap-flod` + ordliste.
 - Test (8763): 375/1280 FAQ 15 kort uden søgning, «flodsystem» → kortsvar, ordliste, artikel øverst; «kurtage» → ordliste-anker; risici-link findes; 0 konsolfejl, ingen h-overflow.
+
+## ~00:35 CEST lane-C checkpoint (Claude) — ideer.html «Fra Andet til tema» + ordliste 78
+- **Ny form (7. på ideer.html):** proportionsbjælke + tre-trins flow (Andet → Forslag → Tema) + små søjler for de 48 forslag pr. tema. Rigtige tal fra portfolio.json (PMINDI, 1. jun 2026): 67 / 48 / 230 af 345; vægt ca. 11,6 / 13,6 / 66,8 % (de 345 aktier vejer ca. 92 % i rapporten — står i figurteksten, så ingen undrer sig over at det ikke summer til 100).
+- Ærlighed: «Tema»-trinnet siger eksplicit, at også ældre temaer gennemgås før de er endelige (matcher ordlistens g-temaforslag). Intet «endeligt» påstået.
+- Fundet og rettet: klassen `.q` kolliderede med citatkortene (Quantum-rækken fik panel-baggrund) → `.qn`. Søjlerne strakte sig over 1100 px på desktop → max-width 560.
+- Ordliste 75 → 78: cloud og AI-modeller, robotik, energilagring og batterier (de hyppigste værdikæde-ord uden opslag: robot ×37, cloud ×12, batteri ×8). Wafer dækkes af litografi.
+- Test 375/1280: 0 konsolfejl, ingen h-overflow, #g-robotik/#g-cloud åbner rigtig gruppe på mobil.

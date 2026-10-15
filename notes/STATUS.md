@@ -347,3 +347,10 @@ HEAD `b35518b`. Visual-variety request shipped + reviewed. MADS værdikæde/quan
 - Notes: HANDOFF trin 8 (15 svar), UX-review, VIDENSBOT-live-check («boble»-svar bevidst udeladt), IDEAS (til beslutning).
 - Test: 8763, 375/1280: 0 konsolfejl, ingen h-overflow, søgning «flodsystem»/«kurtage» rammer de nye svar. precheck PASSED.
 - Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + ndi-perspektiv.html sprogtjek mod Vidensbot.
+
+## Fra Claude lane-C (ideer: fra forslag til tema + ordliste 78) · ~00:35 CEST 16/10
+- `ideer.html`: syvende visuelle form «Fra «Andet» til tema» — proportionsbjælke 67 · 48 · 230 af 345 aktier, flow Andet → Forslag → Tema med vægt, de 48 forslag fordelt på temaer (alle 4 Quantum er forslag). Tal fra portfolio.json pr. 1. jun 2026. Idé-kortet linker til flowet; og:description og kort.html fulgt med.
+- `om-data.html`: ordliste 75 → 78 (cloud og AI-modeller, robotik, energilagring og batterier); gruppetæller 18 · 14 · 22 · 24.
+- Notes: HANDOFF trin 7 (syv former) + trin 8 (78), UX-review, VIDENSBOT-live-check.
+- Test: 8763, 375/1280: 0 konsolfejl, ingen h-overflow, 0 døde ankre. precheck: se push.
+- Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + lær-sider linker til de nye begreber (robotik/cloud) + risici sprogtjek.

@@ -11,7 +11,7 @@
   <meta property="og:site_name" content="NDI Analytics (udkast)">
   <meta property="og:locale" content="da_DK">
   <meta property="og:title" content="Idéer · NDI Analytics">
-  <meta property="og:description" content="Hvorfor NDI Analytics: flodsystemet, tags i stedet for sektorkasser, forsinket beholdning og siderne som et hus.">
+  <meta property="og:description" content="Hvorfor NDI Analytics: flodsystemet, tags i stedet for sektorkasser, fra forslag til tema, forsinket beholdning og siderne som et hus.">
   <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/ideer.html">
   <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
   <!-- og:end -->
@@ -80,6 +80,28 @@
     .uw-keys div{border-left:3px solid var(--neg);padding:2px 0 2px 10px}
     .uw-keys dt{font-size:14px;color:var(--text);font-weight:600}
     .uw-keys dd{margin:2px 0 0;font-size:13px;color:var(--muted);line-height:1.45}
+    .tf{background:#0b171d;border:1px solid var(--line);border-radius:14px;padding:14px;margin:0}
+    .tf-bar{display:flex;height:30px;border-radius:6px;overflow:hidden;gap:2px}
+    .tf-bar span{display:flex;align-items:center;justify-content:center;font:600 12px var(--font);color:#0b171d;min-width:0}
+    .tf-bar .a{background:var(--faint)}
+    .tf-bar .f{background:var(--yellow)}
+    .tf-bar .t{background:var(--cyan)}
+    .tf-flow{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:22px}
+    @media(min-width:720px){.tf-flow{grid-template-columns:repeat(3,1fr);gap:28px}}
+    .tf-flow li{position:relative;border-top:3px solid var(--faint);padding:10px 0 0;font-size:13px;color:var(--muted);line-height:1.5}
+    .tf-flow li.f{border-color:var(--yellow)}
+    .tf-flow li.t{border-color:var(--cyan)}
+    .tf-flow li:not(:last-child)::after{content:"↓";position:absolute;left:50%;bottom:-20px;color:var(--yellow);font-size:15px}
+    @media(min-width:720px){.tf-flow li:not(:last-child)::after{content:"→";left:auto;right:-22px;bottom:auto;top:-13px}}
+    .tf-flow b{display:block;font-size:15px;color:var(--text)}
+    .tf-flow .n{display:block;color:var(--cyan);font-weight:600;margin:2px 0 4px}
+    .tf-split{max-width:560px;margin:16px 0 0;padding:0;list-style:none;display:grid;gap:5px}
+    .tf-split li{display:grid;grid-template-columns:130px 1fr 22px;align-items:center;gap:8px;font-size:13px;color:var(--muted)}
+    .tf-split i{display:block;height:10px;border-radius:3px;background:var(--yellow);opacity:.75}
+    .tf-split li.qn i{opacity:1}
+    .tf-split li.qn{color:var(--text)}
+    .tf-split em{font-style:normal;text-align:right;color:var(--text)}
+    .tf figcaption{font-size:12px;color:var(--faint);margin-top:10px;line-height:1.5}
     .hus{background:#0b171d;border:1px solid var(--line);border-radius:14px;padding:14px;margin:0}
     .hus-plan{display:grid;gap:8px;grid-template-columns:repeat(2,1fr);border:3px solid var(--brand);border-radius:6px;padding:8px;position:relative}
     @media(min-width:720px){.hus-plan{grid-template-columns:repeat(4,1fr)}}
@@ -127,7 +149,7 @@
       </div>
       <div class="it">
         <h3>Temaer foreslås, før de bliver endelige</h3>
-        <p>Nogle selskaber har kun et foreslået tema, og det står der tydeligt. Kvantecomputere er et nyt forslag. <a href="temaer.html">Temaer →</a> · <a href="tema.html?slug=quantum">Kvantecomputere →</a></p>
+        <p>Nogle selskaber har kun et foreslået tema, og det står der tydeligt. Kvantecomputere er et nyt forslag. <a href="#h-tf">Se flowet ↓</a> · <a href="temaer.html">Temaer →</a> · <a href="tema.html?slug=quantum">Kvantecomputere →</a></p>
       </div>
       <div class="it">
         <h3>Fald fra top som episoder</h3>
@@ -254,6 +276,33 @@
           <p>Prisen på én aktie på børsen. Vises <strong>ikke</strong> her — siden handler om fonden, ikke om enkeltaktier. <a href="om-data.html#g-vaegt">Ordliste: vægt →</a></p>
         </div>
       </div>
+    </section>
+
+    <section class="idea-sec" aria-labelledby="h-tf">
+      <h2 id="h-tf">Fra «Andet» til tema</h2>
+      <p class="sub">Et NDI-tema bliver ikke sat i ét hug. Selskaber uden tema står i «Andet». Derfra får de et forslag, og porteføljeholdet gennemgår forslagene. Tallene er fra den forsinkede beholdning pr. 1. juni 2026: 345 aktier.</p>
+      <figure class="tf">
+        <div class="tf-bar" role="img" aria-label="Af 345 aktier står 67 i Andet, 48 har et temaforslag, og 230 har et tema.">
+          <span class="a" style="flex:67">67</span><span class="f" style="flex:48">48</span><span class="t" style="flex:230">230</span>
+        </div>
+        <ol class="tf-flow">
+          <li class="a"><b>Andet</b><span class="n">67 selskaber · ca. 11,6 % af fonden</span>Endnu intet NDI-tema. Puljen bliver mindre, efterhånden som forslagene bliver gennemgået.</li>
+          <li class="f"><b>Forslag</b><span class="n">48 selskaber · ca. 13,6 % af fonden</span>Et tema foreslået ud fra offentlige ISIN-opslag og selskabets branche. Står med mærket <span class="badge badge-draft">forslag</span> på temasiderne.</li>
+          <li class="t"><b>Tema</b><span class="n">230 selskaber · ca. 66,8 % af fonden</span>Har et NDI-tema. Porteføljeholdet gennemgår også de ældre temaer, før de er endelige.</li>
+        </ol>
+        <p class="sub" style="margin:18px 0 0">De 48 forslag fordelt på temaer. Alle fire selskaber i Quantum er forslag, fordi temaet er nyt.</p>
+        <ul class="tf-split" aria-label="Temaforslag pr. tema">
+          <li><span>Platforme</span><i style="width:100%"></i><em>10</em></li>
+          <li><span>Fysisk tech</span><i style="width:80%"></i><em>8</em></li>
+          <li><span>Energiressourcer</span><i style="width:70%"></i><em>7</em></li>
+          <li><span>Optik &amp; netværk</span><i style="width:70%"></i><em>7</em></li>
+          <li><span>Energi</span><i style="width:60%"></i><em>6</em></li>
+          <li><span>Software</span><i style="width:50%"></i><em>5</em></li>
+          <li class="qn"><span>Quantum</span><i style="width:40%"></i><em>4</em></li>
+          <li><span>Chips</span><i style="width:10%"></i><em>1</em></li>
+        </ul>
+        <figcaption>Antal selskaber og vægt i den forsinkede beholdning (PMINDI). De 345 aktier vejer tilsammen ca. 92 % i rapporten. Et tema viser eksponering, ikke en anbefaling. <a href="temaer.html">Temaer →</a> · <a href="tema.html?slug=quantum">Quantum →</a> · <a href="om-data.html#g-temaforslag">Ordliste: temaforslag</a></figcaption>
+      </figure>
     </section>
 
     <section class="idea-sec" aria-labelledby="h-uw">
