@@ -430,7 +430,7 @@ table.data tbody tr:hover td:first-child{background:#163038}
     white-space:normal;
     min-width:9rem;
     max-width:12rem;
-    box-shadow:8px 0 8px -8px #000c;
+    box-shadow:inset -2px 0 0 #89aeb4, 8px 0 10px -6px #000e;
   }
   table.data th button{min-height:32px;padding:4px 0}
   .metric .label{min-height:0;margin-bottom:6px}
@@ -468,3 +468,27 @@ table.data tbody tr:hover td:first-child{background:#163038}
   .metrics:has(.metric-wide) .metric{border-left:0;padding-left:0;padding-right:0}
   .metrics:has(.metric-wide) .metric+.metric{border-top:1px solid #829da033;margin-top:14px;padding-top:14px}
 }
+
+/* Vandret scroll: cellerne er dækkende, så en inset-skygge på feltet ses ikke.
+   Faden ligger oven på den synlige højrekant og følger ikke indholdet. */
+.hscroll{min-width:0}
+.hscroll-clip{position:relative;min-width:0}
+.hscroll-hint{margin:0 0 8px;font-size:12px;line-height:1.4;color:var(--cyan)}
+.hscroll.is-hscroll .hscroll-clip::after{
+  content:"";
+  position:absolute;
+  top:1px;right:1px;bottom:1px;
+  width:36px;
+  pointer-events:none;
+  z-index:6;
+  border-radius:0 9px 9px 0;
+  background:linear-gradient(90deg,rgba(158,207,214,0),rgba(158,207,214,.62));
+}
+
+/* .brand er logoets flex-række. På en overskrift må klassen kun give farve,
+   så AI-udkast-badget bliver i linjen og ikke knækker titlen. */
+h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:unset;gap:0;line-height:1.35}
+.panel-h .badge,.kpi .label .badge{white-space:nowrap;margin-left:6px;vertical-align:middle}
+.kpi{min-width:0}
+.kpi .label{overflow-wrap:break-word}
+.kpi strong{overflow-wrap:anywhere}

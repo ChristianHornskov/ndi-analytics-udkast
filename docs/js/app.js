@@ -172,6 +172,42 @@ function warnHtml() {
   return `<p class="warn" role="note">${WARN_HIST}</p>`;
 }
 
+/** Vandret scroll. Hint og fade vises kun, når indholdet er bredere end feltet. */
+function hscroll(inner, hint) {
+  return `<div class="hscroll" data-hscroll><p class="hscroll-hint" hidden>${hint}</p><div class="hscroll-clip">${inner}</div></div>`;
+}
+
+function syncHscroll(box) {
+  const scroller = box.querySelector('.hscroll-clip > .table-wrap, .hscroll-clip > #calendar');
+  const hint = box.querySelector('.hscroll-hint');
+  if (!scroller || !hint) return;
+  const overflow = scroller.scrollWidth > scroller.clientWidth + 2;
+  const atEnd = scroller.scrollLeft + scroller.clientWidth >= scroller.scrollWidth - 2;
+  hint.hidden = !overflow;
+  box.classList.toggle('is-hscroll', overflow && !atEnd);
+  if (overflow) {
+    scroller.tabIndex = 0;
+    scroller.setAttribute('role', 'region');
+    scroller.setAttribute('aria-label', hint.textContent.trim());
+  } else {
+    scroller.removeAttribute('tabindex');
+    if (scroller.getAttribute('role') === 'region') scroller.removeAttribute('role');
+    scroller.removeAttribute('aria-label');
+  }
+}
+
+function markHscroll(root) {
+  const scope = root || document;
+  scope.querySelectorAll('[data-hscroll]').forEach((box) => {
+    const scroller = box.querySelector('.hscroll-clip > .table-wrap, .hscroll-clip > #calendar');
+    if (scroller && !scroller.dataset.hscrollBound) {
+      scroller.dataset.hscrollBound = '1';
+      scroller.addEventListener('scroll', () => syncHscroll(box), { passive: true });
+    }
+    syncHscroll(box);
+  });
+}
+
 function renderEntre(root) {
   root.innerHTML = `
     <p class="eyebrow">NDI ANALYTICS · UDKAST</p>
@@ -332,7 +368,7 @@ function renderFonden(root) {
       <h2 style="font-size:18px;margin-bottom:6px">Afkast pr. kalenderår</h2>
       <p style="font-size:12px;color:var(--muted);margin-bottom:8px">Afsluttede år + delår fra start (*). Ingen 1- eller 3-måneders fremhævning.</p>
       ${warnHtml()}
-      <div class="table-wrap"><table class="data" style="min-width:0"><thead><tr><th>År</th><th>Afkast</th><th>Periode</th><th></th></tr></thead><tbody>${yearTableDeep}</tbody></table></div>
+      ${hscroll(`<div class="table-wrap"><table class="data" style="min-width:0"><thead><tr><th>År</th><th>Afkast</th><th>Periode</th><th></th></tr></thead><tbody>${yearTableDeep}</tbody></table></div>`, 'Rul til siden for flere kolonner.')}
       <p style="margin-top:12px"><a class="outline-btn small" href="drawdown.html?fund=${state.fund}">Åbn drawdown-side →</a>
       <a class="outline-btn small" href="periode.html?fund=${state.fund}&year=YTD" style="margin-left:8px">YTD dyb side →</a>
       <a class="outline-btn small" href="sammenlign.html" style="margin-left:8px">Vs PMINDIAKK →</a>
@@ -342,7 +378,7 @@ function renderFonden(root) {
       <h2 style="font-size:18px;margin-bottom:6px">Månedlige afkast</h2>
       <p style="font-size:12px;color:var(--muted);margin-bottom:8px">${state.calFull ? 'Hele historikken' : 'Seneste op til 36 måneder'} · røde måneder er synlige med vilje</p>
       ${warnHtml()}
-      <div id="calendar"></div>
+      ${hscroll('<div id="calendar"></div>', 'Rul til siden for alle måneder.')}
       <p style="margin-top:12px"><button type="button" class="outline-btn" id="cal-toggle">${state.calFull ? 'Vis seneste 3 år' : 'Se hele historikken (ét klik)'}</button>
       <span style="display:block;margin-top:8px;font-size:12px;color:var(--muted)">Fuld historik er altid ét klik væk.</span></p>
     </section>
@@ -530,14 +566,14 @@ function fundToolbar() {
 function positionsTable(list, fund) {
   const th = (key, label) =>
     `<th><button type="button" data-sort="${key}" aria-sort="${state.sort===key?(state.dir==='asc'?'ascending':'descending'):'none'}">${label}${state.sort===key?(state.dir==='asc'?' ↑':' ↓'):''}</button></th>`;
-  return `<div class="table-wrap"><table class="data"><thead><tr>
+  return hscroll(`<div class="table-wrap"><table class="data"><thead><tr>
     ${th('name','Navn')}${th('weight','Vægt %')}<th>Tema</th>
   </tr></thead><tbody>${list.map((p) => `<tr>
     <td><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}">${p.name}</a> ${weightSpark(p.isin, fund.id)}<br><small style="color:var(--muted)">${p.isin}</small></td>
     <td>${(p.weight ?? 0).toFixed(2).replace('.', ',')}</td>
     <td>${tagsFor(p, DATA.multiTags).map((t) => `<a class="tag" href="tema.html?slug=${encodeURIComponent(t)}&fund=${fund.id}">${daTheme(t)}</a>`).join(' ')}</td>
-  </tr>`).join('')}</tbody></table></div>
-  <p style="font-size:11px;color:var(--muted);margin-top:8px">Kun vægt og tema. Den lille linje ved navnet er selskabets <strong style="color:var(--text)">vægt i fonden</strong> pr. månedsrapport frem til ${fmtDate(MONTHS?.cutoff || fund.positionsAsOf)} – ikke aktiekurs. Ingen kursafkast pr. aktie i v1. Beholdning er forsinket.</p>`;
+  </tr>`).join('')}</tbody></table></div>`, 'Rul til siden for flere kolonner.') +
+  `<p style="font-size:11px;color:var(--muted);margin-top:8px">Kun vægt og tema. Den lille linje ved navnet er selskabets <strong style="color:var(--text)">vægt i fonden</strong> pr. månedsrapport frem til ${fmtDate(MONTHS?.cutoff || fund.positionsAsOf)} – ikke aktiekurs. Ingen kursafkast pr. aktie i v1. Beholdning er forsinket.</p>`;
 }
 
 function emptyScreener(fund) {
@@ -606,6 +642,7 @@ function paint() {
   else renderEntre(root);
   $('#asof-global') && ($('#asof-global').textContent = `Afkast pr. ${fmtDate(DATA.portfolio.performanceAsOf || DATA.portfolio.asOf)} · Beholdning pr. ${fmtDate(DATA.portfolio.asOf)} (forsinket)`);
   announceFilters();
+  markHscroll(root);
 }
 
 /** Skærmlæser: læs resultatet af filter-/sorterings-/fondsskift op via #sr-status (vedvarende region). */
@@ -756,6 +793,7 @@ async function main() {
   document.addEventListener('input', onInput);
   wireKeyboard();
   window.addEventListener('popstate', () => { readUrl(); paint(); });
+  window.addEventListener('resize', () => markHscroll($('#app')));
   // [data-open] håndteres af onClick-delegering (tidligere dobbelt listener → to dialoger)
   paint();
 }
