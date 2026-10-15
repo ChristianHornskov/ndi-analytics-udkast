@@ -167,7 +167,7 @@
     .mn-bridge::before{content:"⇄ ";color:var(--yellow);font-weight:700}
     .a-pane{display:none;margin:4px 0 18px;border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:linear-gradient(180deg,#0e2027,#0b171d)}
     .a-pane.on{display:block}
-    #a-pane,#e-pane,#p-pane,#sp-map,#sp-cost,#sp-trip,#sp-money,#sp-risk,#e-risk,#sp-bands,#sp-quiz,#e-quiz,#sp-alt,#q-hz,#q-cold,#q-quiz,#q-br,#q-gl,#gloss-wrap,#p-gloss-wrap,#e-gloss-wrap,#phases,#p-loop,#p-risk,#p-quiz{scroll-margin-top:110px}
+    #a-pane,#e-pane,#p-pane,#sp-map,#sp-cost,#sp-trip,#sp-money,#sp-risk,#e-risk,#sp-bands,#sp-quiz,#e-quiz,#sp-alt,#q-hz,#q-cold,#q-quiz,#q-br,#q-gl,#gloss-wrap,#p-gloss-wrap,#e-gloss-wrap,#phases,#p-loop,#p-risk,#p-quiz,#a-risk,#a-quiz,#a-gloss-wrap{scroll-margin-top:110px}
     /* Robotik: sanse-tænke-handle-løkke (kun denne side) */
     .p-links{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px;padding:0;list-style:none}
     .p-links a{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;text-decoration:none;color:var(--text);border:1px solid var(--line);border-radius:999px;padding:4px 11px;background:#0b171d}
@@ -251,6 +251,13 @@
     .rk-strip.flow li+li::before{content:"›";width:auto;height:auto;background:none;color:#4a6a74;font-size:15px;line-height:1;padding:0 3px}
     .rk-strip.flow a{border-radius:7px}
     .rk-strip.flow::after{content:"→ datacenter";margin-left:6px;font-size:11px;color:#4a6a74;white-space:nowrap}
+    /* AI-floden: 13 led i strimlen, så prikkerne er mindre og floden bølger */
+    .rk-strip.river{flex-wrap:nowrap;padding-bottom:2px}
+    .rk-strip.river li+li::before{width:3px;height:2px;background:#5f8f98}
+    .rk-strip.river a{width:16px;height:16px;font-size:9px}
+    .rk-strip.river li:nth-child(odd) a{transform:translateY(2px)}
+    @media(min-width:520px){.rk-strip.river a{width:19px;height:19px;font-size:10px}.rk-strip.river li+li::before{width:4px}}
+    .a-pane .risk h3{color:var(--yellow)}
     .rk-ndi .tag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.4px;color:#0b171d;background:var(--cyan);border-radius:4px;padding:0 5px;margin-right:6px}
     .q-cold{margin-top:12px;border:1px solid var(--line);border-left:3px solid var(--cyan);border-radius:12px;padding:12px 14px;background:linear-gradient(180deg,#0e2027,#0b171d)}
     .q-cold h3{font-size:15px;color:var(--cyan);margin:0 0 4px}
@@ -629,12 +636,31 @@
       </div>
 
       <div class="a-pane" id="a-pane" aria-labelledby="rv-h">
+        <ul class="p-links" id="a-links" aria-label="Spring til" hidden></ul>
         <h3 id="rv-h"></h3>
         <p class="src" id="rv-lede"></p>
         <div class="rv-host" id="rv-host"></div>
         <ul class="rv-legend" id="rv-legend"></ul>
         <p class="src" id="rv-note" style="margin-top:6px"></p>
         <p class="rv-side"><span class="rv-side-i" aria-hidden="true">⏳</span><span><b>Sidespor: kvante.</b> Kvantecomputere står uden for floden. De lejes i dag mest over skyen og styres af almindelige chips ved siden af, så de rører cloud og chipdesign (baggrund). NDI har ikke beskrevet dem som et led i AI-kæden. <a href="?kaede=quantum#q-br" data-sec="quantum:q-br">Se hvor kvante møder kæden →</a></span></p>
+        <section class="risk" id="a-risk" aria-labelledby="ark-h" hidden>
+          <h3 id="ark-h"></h3>
+          <p class="src" id="ark-lede"></p>
+          <div class="rk-grid" id="ark-grid"></div>
+          <p class="src" id="ark-note" style="margin-top:8px"></p>
+        </section>
+        <section class="quiz" id="a-quiz" aria-labelledby="aqz-h" hidden>
+          <h3 id="aqz-h"></h3>
+          <p class="src" id="aqz-lede"></p>
+          <ol class="qz-list" id="aqz-list"></ol>
+          <p class="qz-score" id="aqz-score" aria-live="polite"></p>
+          <p class="src" id="aqz-note" style="margin-top:6px"></p>
+        </section>
+        <details class="gloss-wrap" id="a-gloss-wrap">
+          <summary><h3>AI-ordbog</h3><span class="src" id="a-gloss-count">Ord, der gør kæden lettere at læse</span></summary>
+          <dl class="gloss" id="a-gloss"></dl>
+          <p class="src" id="a-gloss-note" style="margin-top:8px"></p>
+        </details>
       </div>
 
       <div class="e-pane" id="e-pane" aria-label="Energi forklaret">
@@ -1122,7 +1148,7 @@
     function renderRisks(r, links, ids, o = {}) {
       if (!r?.items?.length) return false;
       const chain = r.order ? r.order.map(id => links.find(l => l.id === id)).filter(Boolean) : links.filter(l => !l.neighbour);
-      const strip = (ids) => `<ol class="rk-strip${o.flow ? ' flow' : ''}" aria-label="${esc(o.aria || 'Kæden fra jorden og op')}">` + chain.map(l => {
+      const strip = (ids) => `<ol class="rk-strip${o.flow ? ' flow' : ''}${o.cls ? ' ' + o.cls : ''}" aria-label="${esc(o.aria || 'Kæden fra jorden og op')}">` + chain.map(l => {
         const hit = ids.includes(l.id);
         return `<li><a href="#lk-${esc(l.id)}" data-open="${esc(l.id)}" class="${hit ? 'hit' : ''}" title="${esc(l.short || l.label)}${hit ? ' (rammes)' : ''}" aria-label="${esc(l.short || l.label)}${hit ? ', rammes' : ''}. Åbn leddet"><span aria-hidden="true">${l.icon}</span></a></li>`;
       }).join('') + `</ol>`;
@@ -1466,6 +1492,18 @@
       renderRiver();
       matchMedia('(min-width: 760px)').addEventListener('change', renderRiver);
     }
+    // AI-floden: hvad kan gå galt (strimlen følger floden fra energi til fysisk AI), tjek dig selv og ordbog
+    if (aiCh) renderRisks(aiCh.risks, rvLinks, ['ark-h', 'ark-lede', 'ark-grid', 'ark-note', 'a-risk'], { cls: 'river', aria: 'AI-floden fra energi til fysisk AI' });
+    renderQuiz(aiCh?.quiz, 'ai-compute', 'aqz', 'a-quiz');
+    renderGloss(aiCh, ['a-gloss', 'a-gloss-note', 'a-gloss-count', 'a-gloss-wrap']);
+    (function renderALinks() {
+      const items = [['a-pane', '🌊', 'Flodkortet'], ['a-risk', '⚠', 'Hvad kan gå galt?'], ['a-quiz', '✓', 'Tjek dig selv'], ['a-gloss-wrap', '📖', 'AI-ordbog']]
+        .filter(([id]) => { const el = document.getElementById(id); return el && !el.hidden && (id !== 'a-gloss-wrap' || aiCh?.glossary?.length); });
+      const ul = document.getElementById('a-links');
+      if (items.length < 2) return;
+      ul.innerHTML = items.map(([id, ic, k]) => `<li><a href="?kaede=ai-compute#${id}" data-sec="ai-compute:${id}"><span aria-hidden="true">${ic}</span>${esc(k)}</a></li>`).join('');
+      ul.hidden = false;
+    })();
 
     function renderBridges(ch) {
       const where = {};

@@ -1803,7 +1803,224 @@
      "source": "Her starter efterspørgslen ifølge NDI"
     },
     "note": "Mærkerne gengiver, hvad NDI har skrevet (BLOG 30. marts 2026), og hvor det er vores tolkning, står det. De er ikke en prognose, ikke en rangering af selskaber og ikke en anbefaling. Ifølge Mads flytter presset til næste led, når en flaskehals løses."
-   }
+   },
+   "risks": {
+    "title": "Hvad kan gå galt i AI-floden?",
+    "lede": "Floden har 13 led, og usikkerhederne sidder forskellige steder. Den lille flod på hvert kort går fra energi til fysisk AI og viser, hvilke led der især rammes. Klik et led for at åbne det.",
+    "items": [
+     {
+      "icon": "⚡",
+      "k": "Strømmen slår ikke til",
+      "t": "Et datacenter kan ikke regne uden strøm. Tager det år at bygge kraftværker og elnet, kan chips og bygninger stå klar, før der er strøm nok til dem.",
+      "links": [
+       "energi",
+       "datacenter"
+      ],
+      "ndi": {
+       "t": "Ét års chipproduktion kan potentielt kræve strøm svarende til omkring to tredjedele af USA's installerede kapacitet.",
+       "src": "BLOG 10. august 2026"
+      }
+     },
+     {
+      "icon": "🌍",
+      "k": "Chips laves få steder",
+      "t": "Den mest avancerede chipproduktion ligger især i Taiwan, og én leverandør dominerer de mest avancerede litografimaskiner. Uro ét sted kan mærkes i hele kæden.",
+      "links": [
+       "equipment",
+       "foundry",
+       "chipdesign"
+      ],
+      "ndi": {
+       "t": "\"Vi skal bygge kraftværker, elnet, datacentre, chipfabrikker, robotfabrikker, forsvarsindustri og rum-infrastruktur.\"",
+       "src": "BLOG 24. august 2026"
+      }
+     },
+     {
+      "icon": "🔄",
+      "k": "Nogle led går i cykler",
+      "t": "Hukommelse har historisk haft store prisudsving, og udstyr afhænger af, hvor meget chipfabrikkerne investerer. Gode og dårlige år kan derfor skifte hurtigt.",
+      "links": [
+       "memory",
+       "equipment"
+      ]
+     },
+     {
+      "icon": "🌊",
+      "k": "Presset flytter sig",
+      "t": "En flaskehals varer ikke for evigt. Når der kommer mere kapacitet i ét led, kan presset flytte til det næste. Det, der er knapt i dag, er ikke nødvendigvis knapt om nogle år.",
+      "links": [
+       "energi",
+       "datacenter",
+       "chipdesign",
+       "memory",
+       "optics"
+      ],
+      "ndi": {
+       "t": "Når en dæmning letter, flytter presset til næste led i flodsystemet.",
+       "src": "BLOG 30. marts 2026"
+      }
+     },
+     {
+      "icon": "🧩",
+      "k": "AI kan ændre forretningsmodeller",
+      "t": "AI kan både styrke og true software og tjenester, der findes i dag. Hvis modellerne ligner hinanden mere og mere, kan det blive svært at tage betaling for selve modellen.",
+      "links": [
+       "cloud",
+       "data",
+       "software"
+      ],
+      "ndi": {
+       "t": "\"Kunden køber løsningen på opgaven, ikke modellen bag.\" Chips, energi og datacentre kan ifølge NDI fortsat være differentierede.",
+       "src": "BLOG 27. juli 2026"
+      }
+     },
+     {
+      "icon": "⏳",
+      "k": "Efterspørgslen kan komme senere",
+      "t": "Agenter og robotter skal først virke godt nok i hverdagen, før de bruger meget regnekraft. Det kan tage længere tid, end mange regner med.",
+      "links": [
+       "agents",
+       "physical-ai"
+      ],
+      "ndi": {
+       "t": "Efterspørgslen kommer i stigende grad fra agentisk AI og snart fra fysisk AI. Der står ingen årstal.",
+       "src": "BLOG 30. marts 2026"
+      }
+     }
+    ],
+    "note": "Usikkerhederne er generel baggrundsviden og vores udvalg. De er ikke NDI's vurdering af enkelte selskaber. Linjerne med NDI-mærke er NDI's egne og har kilde. Kortene er ikke en rangering og ikke en anbefaling."
+   },
+   "quiz": {
+    "title": "Tjek dig selv: fem spørgsmål om AI-floden",
+    "lede": "Vælg et svar. Du får en kort forklaring og et link til det sted på siden, hvor det står. Intet gemmes.",
+    "done": "Du har svaret på alle fem.",
+    "items": [
+     {
+      "q": "Hvad er vandet i Mads' flodsystem?",
+      "a": [
+       "Strømmen til datacentrene",
+       "Efterspørgslen",
+       "Pengene, der investeres"
+      ],
+      "ok": 1,
+      "why": "Vandet er efterspørgslen, og dæmningerne er flaskehalse (NDI, BLOG 30. marts 2026).",
+      "sec": "a-pane",
+      "more": "Se flodkortet"
+     },
+     {
+      "q": "Hvilket led kalder NDI den første flaskehals i AI-udbygningen?",
+      "a": [
+       "Software",
+       "Data",
+       "Energi"
+      ],
+      "ok": 2,
+      "why": "Mads kalder energi den første flaskehals, datacentre den anden og halvledere den tredje (BLOG 30. marts 2026).",
+      "sec": "lk-energi",
+      "more": "Se leddet energi"
+     },
+     {
+      "q": "Hvor kommer efterspørgslen i stigende grad fra ifølge NDI?",
+      "a": [
+       "Fra bunden af kæden: agentisk AI og snart fysisk AI",
+       "Fra chipfabrikkerne",
+       "Fra elnettet"
+      ],
+      "ok": 0,
+      "why": "\"Først fra agentic AI og snart fra fysisk AI\" (BLOG 30. marts 2026). Der står ingen årstal.",
+      "sec": "lk-agents",
+      "more": "Se leddet agenter"
+     },
+     {
+      "q": "I hvilke to led så NDI allerede begyndende flaskehalse i marts 2026?",
+      "a": [
+       "Cloud og data",
+       "Hukommelse og optik",
+       "Software og agenter"
+      ],
+      "ok": 1,
+      "why": "\"Særligt hukommelse og optisk connectivity er områder, hvor vi allerede ser begyndende flaskehalse\" (BLOG 30. marts 2026).",
+      "sec": "lk-memory",
+      "more": "Se leddet hukommelse"
+     },
+     {
+      "q": "Hvad sker der ifølge Mads, når en flaskehals bliver løst?",
+      "a": [
+       "Presset flytter til næste led",
+       "Hele floden stopper",
+       "Alle led bliver lige store"
+      ],
+      "ok": 0,
+      "why": "Floden løber videre, og presset flytter til næste dæmning (BLOG 30. marts 2026). Derfor ser NDI på hele kæden og ikke kun ét led.",
+      "sec": "a-risk",
+      "more": "Hvad kan gå galt?"
+     }
+    ],
+    "note": "Spørgsmålene er vores egne og skal gøre siden lettere at læse. Svarene gengiver, hvad NDI har skrevet, med kilde. De tester ikke viden om enkelte selskaber og er ikke en anbefaling."
+   },
+   "glossary": [
+    {
+     "term": "Compute · regnekraft",
+     "t": "Den mængde beregninger, computere kan udføre. AI-modeller skal bruge meget af det, både når de trænes, og når de bruges.",
+     "link": "datacenter"
+    },
+    {
+     "term": "Flaskehals",
+     "t": "Det led, der begrænser resten af kæden, fordi der ikke er nok af det. I Mads' billede er det en dæmning i floden.",
+     "link": "energi"
+    },
+    {
+     "term": "GPU, XPU og CPU",
+     "t": "Processorer. En CPU er computerens almindelige hjerne. En GPU regner mange små ting på én gang og egner sig til AI. XPU er en samlebetegnelse for specialiserede AI-chips, også dem, de store cloudselskaber laver selv.",
+     "link": "chipdesign"
+    },
+    {
+     "term": "Fabless",
+     "t": "Et chipselskab, der designer chips, men ikke ejer en fabrik. Produktionen sker hos en foundry.",
+     "link": "chipdesign"
+    },
+    {
+     "term": "Foundry",
+     "t": "En chipfabrik, der producerer chips for andre. Det tager år og meget store investeringer at bygge en.",
+     "link": "foundry"
+    },
+    {
+     "term": "EUV-litografi",
+     "t": "Den mest avancerede måde at \"printe\" kredsløb på en siliciumskive med ekstremt ultraviolet lys. Én leverandør dominerer maskinerne.",
+     "link": "equipment"
+    },
+    {
+     "term": "HBM · højbåndbreddehukommelse",
+     "t": "Hukommelseschips, der er stablet oven på hinanden og sidder tæt på processoren, så data kan komme hurtigt frem og tilbage.",
+     "link": "memory"
+    },
+    {
+     "term": "Optisk forbindelse",
+     "t": "Data sendt som lys i glasfiber i stedet for strøm i kobber. Det er hurtigere over længere afstande og kan bruge mindre strøm.",
+     "link": "optics"
+    },
+    {
+     "term": "Væskekøling",
+     "t": "Køling med væske tæt på chippen. Moderne AI-racks bruger så meget strøm, at luft ikke kan fjerne varmen.",
+     "link": "datacenter"
+    },
+    {
+     "term": "Træning og inferens",
+     "t": "Træning er, når en model lærer af store mængder data. Inferens er, når modellen bruges til at svare. Begge dele kræver regnekraft.",
+     "link": "cloud"
+    },
+    {
+     "term": "Open weights",
+     "t": "En AI-model, hvor de lærte tal (vægtene) er frit tilgængelige, så andre kan køre den selv. NDI kalder det \"en accelerator for hele AI-økonomien\" (BLOG 27. juli 2026).",
+     "link": "cloud"
+    },
+    {
+     "term": "Agent",
+     "t": "Et AI-program, der selv udfører en opgave i flere trin, fx at finde oplysninger, udfylde en formular og sende den.",
+     "link": "agents"
+    }
+   ],
+   "glossaryNote": "Ordbogen er generel baggrundsviden og ikke NDI's synspunkter, bortset fra linjen om open weights, der har kilde. Den forklarer ord, der går igen i AI-floden."
   },
   {
    "id": "physical",
