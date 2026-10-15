@@ -377,3 +377,9 @@ HEAD `b35518b`. Visual-variety request shipped + reviewed. MADS værdikæde/quan
 - Notes: UX-review, VIDENSBOT-live-check, IDEAS («tags» → «mærker»?).
 - Test: 375/1280 på 9 sider: 0 konsolfejl, ingen h-overflow, 0 døde links/ankre. precheck: se push.
 - Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + ideer.html niende form.
+
+## Fra Claude lane-C (ideer: sektor × tema-matrix) · ~01:00 CEST 16/10
+- `ideer.html`: niende visuelle form «Samme 345 selskaber, to sorteringer»: varmekort (tabel) 11 NDI-temaer × 8 klassiske sektorer, antal selskaber fra portfolio.json PMINDI pr. 1. jun 2026. Teknologi 151 → seks temaer, Platforme fra finans/forbrug/kommunikation, SpaceTech/fysisk tech fra industri. Intro-tidslinjen linker dertil.
+- `om-data.html` (GICS-sektorer → matrix), `kort.html`, og:description fulgt med. HANDOFF trin 7 (ni former), UX-review checkpoint.
+- Test: 8763, 375/1280 på ideer/om-data/kort: 0 konsolfejl, ingen h-overflow, 0 døde links/ankre; screenshots gennemset. precheck PASSED.
+- Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + ndi-perspektiv/invester sprogtjek mod Vidensbot.

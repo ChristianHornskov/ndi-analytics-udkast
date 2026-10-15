@@ -213,3 +213,10 @@ Ingen nye.
 - **Faktuel rettelse:** om-data kaldte 1. juni 2026 «kvartalsslut». Det er det ikke (Vidensbot blokering 2). Nu: «første tilgængelige Fundmarket-rapport i juni. Datoen er ikke et kvartalsskifte.»
 - invester.html: trin 3–5 omskrevet uden skråstreger og intern jargon («Afkastfanen, kontekstgrafen», «UCITS», «v1»). ISIN'erne står nu med klassenavn.
 - Bevidst beholdt: «compute», «growth/GARP/value», «tags». Det er fagord med ordlisteopslag. Til beslutning (IDEAS): skal «tags» hedde «mærker»?
+
+## ~01:00 CEST lane-C checkpoint (Claude) — ideer.html niende form «Samme 345 selskaber, to sorteringer»
+- Nyt varmekort som rigtig `<table>` (skjult caption, `th scope`): rækker = 11 NDI-temaer, kolonner = 8 klassiske sektorer (teknologi, industri, råvarer, forbrugsgoder, finans, kommunikation, forsyning og energi, øvrige). Celle = antal selskaber, farvestyrke ∝ antal (én farve, cyan). Nuller vises som en svag prik, så mønstret står frem.
+- Placeret lige efter Tesla-eksemplet: «gjort for hele fonden». Tre nøglepointer: teknologi 151 → seks temaer; Platforme samler finans/forbrug/kommunikation; SpaceTech og fysisk tech står næsten alle under industri.
+- Sektor = `sector`-feltet i portfolio.json (offentlige opslag). Bevidst **ikke** kaldt GICS, da feltnavnene er af Yahoo/Morningstar-typen. 14 selskaber uden sektor ligger i «Øvrige» (nævnt i figurteksten).
+- Mobil 375: lodrette kolonneoverskrifter, celler 25 px, ingen rul i tabellen (329/329), ingen h-overflow. 1280: centreret, nøglepointer i tre kolonner.
+- Ordliste «GICS-sektorer» linker nu til matrixen; kort.html og og:description fulgt med.

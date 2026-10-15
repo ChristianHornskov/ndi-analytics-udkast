@@ -11,7 +11,7 @@
   <meta property="og:site_name" content="NDI Analytics (udkast)">
   <meta property="og:locale" content="da_DK">
   <meta property="og:title" content="Idéer · NDI Analytics">
-  <meta property="og:description" content="Hvorfor NDI Analytics: flodsystemet, tags i stedet for sektorkasser, fra forslag til tema, 345 aktier som prikker, forsinket beholdning og siderne som et hus.">
+  <meta property="og:description" content="Hvorfor NDI Analytics: flodsystemet, tags i stedet for sektorkasser, 345 selskaber sorteret efter sektor og tema, fra forslag til tema, 345 aktier som prikker, forsinket beholdning og siderne som et hus.">
   <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/ideer.html">
   <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
   <!-- og:end -->
@@ -122,6 +122,23 @@
     .pr-keys dt{font-size:14px;color:var(--text);font-weight:600}
     .pr-keys dd{margin:2px 0 0;font-size:13px;color:var(--muted);line-height:1.45}
     .pr figcaption{font-size:12px;color:var(--faint);margin-top:10px;line-height:1.5}
+    .mx{background:#0b171d;border:1px solid var(--line);border-radius:14px;padding:14px;margin:0}
+    .mx-wrap{overflow-x:auto}
+    .mx table{border-collapse:separate;border-spacing:2px;font-size:12px;min-width:330px;margin:0 auto}
+    .mx thead th{font-weight:600;color:var(--muted);vertical-align:bottom;padding:0 0 4px;height:104px}
+    .mx thead th span{writing-mode:vertical-rl;transform:rotate(180deg);white-space:nowrap;display:inline-block}
+    .mx tbody th{text-align:left;font-weight:400;padding:0 8px 0 0;white-space:nowrap}
+    .mx tbody th a{color:var(--text)}
+    .mx td{width:30px;height:24px;text-align:center;border-radius:3px;color:var(--text);background:color-mix(in srgb,var(--cyan) calc(var(--a,0)*100%),#0f2a32)}
+    .mx thead td{background:transparent}
+    @media(max-width:420px){.mx{padding:12px 8px}.mx table{min-width:0}.mx td{width:25px}.mx tbody th{padding-right:4px}.mx td.sum{padding-left:2px}}
+    .mx td.hi{color:#0b171d;font-weight:700}
+    .mx td.z{background:transparent;color:var(--faint)}
+    .mx td.sum{background:transparent;color:var(--cyan);font-weight:600;padding-left:6px}
+    .mx tr.an th a{color:var(--muted)}
+    .mx tr.tot th,.mx tr.tot td{background:transparent;color:var(--muted);border-top:1px solid var(--line);padding-top:4px}
+    .mx tr.tot td.sum{color:var(--cyan)}
+    .mx figcaption{font-size:12px;color:var(--faint);margin-top:10px;line-height:1.5}
     .hus{background:#0b171d;border:1px solid var(--line);border-radius:14px;padding:14px;margin:0}
     .hus-plan{display:grid;gap:8px;grid-template-columns:repeat(2,1fr);border:3px solid var(--brand);border-radius:6px;padding:8px;position:relative}
     @media(min-width:720px){.hus-plan{grid-template-columns:repeat(4,1fr)}}
@@ -161,7 +178,7 @@
     <div class="idea-tl">
       <div class="it">
         <h3>Multi-tag i stedet for ét GICS-label</h3>
-        <p>Tesla står i sektorlisterne som bilproducent. Hos os har Tesla to tags, fysisk tech og energi, og optræder i fire led på to værdikæder. <a href="#h-vs">Se eksemplet ↓</a></p>
+        <p>Tesla står i sektorlisterne som bilproducent. Hos os har Tesla to tags, fysisk tech og energi, og optræder i fire led på to værdikæder. <a href="#h-vs">Se eksemplet ↓</a> · <a href="#h-mx">Hele fonden sorteret begge veje ↓</a></p>
       </div>
       <div class="it">
         <h3>Flere teknologiske kæder</h3>
@@ -279,6 +296,39 @@
           <p>To tags, fire led. Så kan man se, hvor i kæderne selskabet hører hjemme. Det beskriver eksponering, ikke et syn på aktien. <a href="selskab.html?isin=US88160R1014">Tesla →</a> · <a href="vaerdikaeder.html">Værdikæder →</a></p>
         </div>
       </div>
+    </section>
+
+    <section class="idea-sec" aria-labelledby="h-mx">
+      <h2 id="h-mx">Samme 345 selskaber, to sorteringer</h2>
+      <p class="sub">Tesla-eksemplet ovenfor, gjort for hele fonden. Hver række er et NDI-tema, hver kolonne en klassisk sektor. Tallet er antal selskaber. Jo stærkere farve, jo flere.</p>
+      <figure class="mx">
+        <div class="mx-wrap">
+          <table>
+            <caption class="sr-only">Antal selskaber pr. NDI-tema og klassisk sektor i den forsinkede beholdning pr. 1. juni 2026</caption>
+            <thead><tr><td></td><th scope="col"><span>Teknologi</span></th><th scope="col"><span>Industri</span></th><th scope="col"><span>Råvarer</span></th><th scope="col"><span>Forbrugsgoder</span></th><th scope="col"><span>Finans</span></th><th scope="col"><span>Kommunikation</span></th><th scope="col"><span>Forsyning og energi</span></th><th scope="col"><span>Øvrige</span></th><th scope="col"><span>I alt</span></th></tr></thead>
+            <tbody>
+            <tr><th scope="row"><a href="tema.html?slug=chips">Chips</a></th><td class="hi" style="--a:1">52</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td style="--a:0.17">1</td><td class="sum">53</td></tr>
+            <tr><th scope="row"><a href="tema.html?slug=software">Software</a></th><td class="hi" style="--a:.89">45</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td style="--a:0.2">3</td><td style="--a:0.18">2</td><td class="z">·</td><td style="--a:0.17">1</td><td class="sum">51</td></tr>
+            <tr><th scope="row"><a href="tema.html?slug=platforms">Platforme</a></th><td class="z">·</td><td class="z">·</td><td class="z">·</td><td style="--a:0.35">12</td><td style="--a:0.44">18</td><td style="--a:0.26">7</td><td class="z">·</td><td style="--a:0.2">3</td><td class="sum">40</td></tr>
+            <tr><th scope="row"><a href="tema.html?slug=optik-netvaerk">Optik &amp; netværk</a></th><td style="--a:0.53">23</td><td class="z">·</td><td style="--a:0.26">7</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="sum">30</td></tr>
+            <tr><th scope="row"><a href="tema.html?slug=energiressourcer">Energiressourcer</a></th><td class="z">·</td><td class="z">·</td><td style="--a:0.44">18</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td style="--a:0.25">6</td><td style="--a:0.17">1</td><td class="sum">25</td></tr>
+            <tr><th scope="row"><a href="tema.html?slug=fysisk-tech">Fysisk tech</a></th><td class="z">·</td><td style="--a:0.46">19</td><td class="z">·</td><td style="--a:0.23">5</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="sum">24</td></tr>
+            <tr><th scope="row"><a href="tema.html?slug=compute">Compute</a></th><td style="--a:0.43">17</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td style="--a:0.17">1</td><td class="sum">18</td></tr>
+            <tr><th scope="row"><a href="tema.html?slug=spacetech">SpaceTech</a></th><td class="z">·</td><td style="--a:0.44">18</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="sum">18</td></tr>
+            <tr><th scope="row"><a href="tema.html?slug=energi">Energi</a></th><td style="--a:0.17">1</td><td style="--a:0.18">2</td><td class="z">·</td><td class="z">·</td><td style="--a:0.17">1</td><td style="--a:0.17">1</td><td style="--a:0.31">10</td><td class="z">·</td><td class="sum">15</td></tr>
+            <tr><th scope="row"><a href="tema.html?slug=quantum">Quantum</a></th><td style="--a:0.22">4</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="z">·</td><td class="sum">4</td></tr>
+            <tr class="an"><th scope="row"><a href="tema.html?slug=andet">Andet</a></th><td style="--a:0.3">9</td><td style="--a:0.44">18</td><td style="--a:0.28">8</td><td style="--a:0.25">6</td><td style="--a:0.17">1</td><td style="--a:0.2">3</td><td class="z">·</td><td style="--a:0.51">22</td><td class="sum">67</td></tr>
+            <tr class="tot"><th scope="row">I alt</th><td>151</td><td>57</td><td>33</td><td>23</td><td>23</td><td>13</td><td>16</td><td>29</td><td class="sum">345</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <dl class="pr-keys">
+          <div><dt>151 i én kasse</dt><dd>Sektoren teknologi rummer 151 af de 345 selskaber. Hos os fordeler de sig på seks temaer, fra chips og compute til optik og software.</dd></div>
+          <div><dt>Platforme</dt><dd>Temaet samler selskaber, der i sektorlisterne står under finans, forbrugsgoder og kommunikation. Det fælles er den digitale platform, ikke sektoren.</dd></div>
+          <div><dt>SpaceTech og fysisk tech</dt><dd>Næsten alle står i sektorlisterne under industri. Hos os er det to forskellige led i to forskellige kæder.</dd></div>
+        </dl>
+        <figcaption>Antal selskaber i PMINDI pr. 1. juni 2026. Sektoren er den branchekategori, der står i offentlige opslag på selskabet. «Øvrige» er sundhed, ejendomme, dagligvarer og 14 selskaber uden sektor i opslaget. Viser eksponering, ikke en anbefaling. <a href="temaer.html">Temaer →</a> · <a href="om-data.html#g-tema">Ordliste: tema</a> · <a href="om-data.html#g-gics">sektorer</a></figcaption>
+      </figure>
     </section>
 
     <section class="idea-sec" aria-labelledby="h-wk">
