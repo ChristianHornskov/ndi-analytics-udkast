@@ -54,6 +54,7 @@ Ship. Visual-variety pass er i planen (`VISUAL-VARIETY.md`). Næste builder: SHO
 1. ~~Underwater kan ikke skrubbes.~~ Lukket 23:59. Slideren står synlig under grafen. Home hopper til første dag. Klik og træk flytter en lodret streg. Udlæsningen er altid i teksten.
 2. På 375 er prikbunken tæt. Den bærer pointen, og listen under har de fire dybe tal.
 3. De to sammenlign-kort ligner stadig hinanden. Det er parret. De må ikke få en tredje ens kasse ved siden af.
+4. ~~Episodelisten var løsrevet fra kurven.~~ Lukket 00:01. Et klik eller Enter hopper slideren til bunddatoen og markerer rækken.
 
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."

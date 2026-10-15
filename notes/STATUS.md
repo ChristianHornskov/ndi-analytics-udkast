@@ -269,3 +269,11 @@ Tjekket i Chromium ved 1280, 375 og 320. Ingen sidescroll, ingen konsolfejl. AKK
 Slideren under grafen er synlig. Den starter på seneste dag: 14. okt. 2026, −23,4 % under den løbende top. Home går til 22. sep. 2023 (0,0 %). Et klik i venstre side af kurven sætter 22. dec. 2023. Udlæsningen står i teksten og i `aria-valuetext`. En lys lodret streg følger dagen. Gul prik og gul ring bliver stående som bund og seneste dag.
 
 Tjekket i Chromium ved 1280 og 375. Ingen sidescroll, ingen konsolfejl. `lane-D` er klar til merge. Ikke main. Ikke færdig.
+
+## Fra Grok lane-D
+
+**2026-10-16 00:01 CEST. Episode hopper til bunden på kurven. Ikke færdig.**
+
+De fire dybe episoder er knapper. Klik på −35,8 % sætter udlæsningen til 8. apr. 2025, −35,8 % under den løbende top. Enter gør det samme. Én række er markeret. På 375 står tallet over teksten, og den åbne episode er stadig den gule bjælke. Ingen sidescroll, ingen konsolfejl.
+
+`lane-D` (`671eb03` og dette commit) er klar til merge. Ikke main. Ikke færdig.

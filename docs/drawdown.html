@@ -161,7 +161,7 @@
  ? `${days} dage siden toppen. Stadig åben. Seneste dag ${fmtPct(nowU)}.`
  : `Tilbage på toppen ${fmtDate(e.recoveredD)}. ${days} dage fra top til genopretning.`;
  const w = Math.max(8, Math.round((days / maxSpan) * 100));
- return `<li class="${openRow ? 'open' : ''}"><div class="depth">${fmtPct(e.dd)}</div><div class="meta"><strong>${fmtDate(e.peakD)}</strong> til bund <strong>${fmtDate(e.troughD)}</strong>. ${tail}<span class="dur" aria-hidden="true"><span style="width:${w}%"></span></span></div></li>`;
+ return `<li class="${openRow ? 'open' : ''}"><button type="button" class="ep-jump" data-date="${e.troughD}" aria-pressed="false"><span class="depth">${fmtPct(e.dd)}</span><span class="meta"><strong>${fmtDate(e.peakD)}</strong> til bund <strong>${fmtDate(e.troughD)}</strong>. ${tail}<span class="dur" aria-hidden="true"><span style="width:${w}%"></span></span></span></button></li>`;
  }).join('');
 
  const maxRet = Math.max(...years.map(y => Math.abs(y.ret)), 1);
@@ -204,7 +204,7 @@
  <h2 class="h-section">Hvor dybe er faldene?</h2>
  <figure class="figure plain">${depthPlot()}<figcaption>${depthCap}</figcaption></figure>
  <h2 class="h-section">De dybe episoder</h2>
- <p class="src" style="margin-top:0">Episoder dybere end 10 %. De øvrige ${eps.length - deep.length} er med i middel, median og prikkerne.</p>
+ <p class="src" style="margin-top:0">Episoder dybere end 10 %. De øvrige ${eps.length - deep.length} er med i middel, median og prikkerne. Vælg en episode for at se bunden på kurven.</p>
  <ol class="ep-ledger">${ledger}</ol>
  <h2 class="h-section">Kalenderår</h2>
  <div class="year-rail">${yearCells}</div>
@@ -255,6 +255,16 @@
  });
  svg.addEventListener('pointermove', (ev) => {
  if (ev.pointerType === 'mouse' || ev.buttons) fromClient(ev);
+ });
+ const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ document.querySelectorAll('.ep-jump').forEach((btn) => {
+ btn.addEventListener('click', () => {
+ const d = btn.dataset.date;
+ const hit = uw.findIndex((u) => u.d === d);
+ show(hit >= 0 ? hit : nearest(Date.parse(d + 'T12:00:00Z')));
+ document.querySelectorAll('.ep-jump').forEach((b) => b.setAttribute('aria-pressed', String(b === btn)));
+ svg.scrollIntoView({ block: 'nearest', behavior: reduce ? 'auto' : 'smooth' });
+ });
  });
  }
  </script>
