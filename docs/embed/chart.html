@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>NDI embed-graf</title>
+  <link rel="stylesheet" href="../css/ndi.css">
+  <style>body{padding:12px} main{max-width:900px;padding:0}</style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">EMBED · FORENKLET GRAF</p>
+    <h1 style="font-size:24px;margin-bottom:8px">Totalafkast</h1>
+    <div class="toolbar" id="tb"></div>
+    <div class="panel">
+      <div class="metrics" id="metrics"></div>
+      <p class="warn">Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.</p>
+      <p class="note-fundmarket">Nasdaq-sammenligning kræver Fundmarkets godkendelse (deaktiveret).</p>
+      <button type="button" class="control" disabled>Nasdaq-100 (afventer godkendelse)</button>
+      <div class="chart-wrap" id="c" style="margin-top:12px"></div>
+    </div>
+  </main>
+  <script type="module">
+    import { loadAll, fundById, slicePeriod, periodReturn, cagr, ytdReturn, fmtPct, fmtDate, WARN_HIST } from '../js/data.js';
+    import { renderChart } from '../js/chart.js';
+    // patch fetch paths for embed subfolder
+    const origFetch = window.fetch;
+    window.fetch = (url, opts) => {
+      if (typeof url === 'string' && url.startsWith('data/')) url = '../' + url;
+      return origFetch(url, opts);
+    };
+    let fundId = new URL(location.href).searchParams.get('fund') || 'pmindi';
+    let period = new URL(location.href).searchParams.get('periode') || 'all';
+    const data = await loadAll();
+    function paint() {
+      const fund = fundById(data.portfolio, fundId);
+      const rows = slicePeriod(fund.data, period);
+      document.getElementById('tb').innerHTML = `
+        <div class="seg">${data.portfolio.funds.map(f=>`<button type="button" class="control ${f.id===fundId?'active':''}" data-f="${f.id}">${f.short}</button>`).join('')}</div>
+        <div class="seg">${[['1m','1 md.'],['3m','3 mdr.'],['ytd','ÅTD'],['1y','1 år'],['all','Siden start']].map(([k,l])=>`<button type="button" class="control ${period===k?'active':''}" data-p="${k}">${l}</button>`).join('')}</div>`;
+      const all = fund.data;
+      document.getElementById('metrics').innerHTML = `
+        <div class="metric"><div class="label">Periode</div><strong>${fmtPct(periodReturn(rows))}</strong><small>Indekseret</small></div>
+        <div class="metric"><div class="label">CAGR (siden start)</div><strong>${fmtPct(cagr(all))}</strong><small>DKK efter omk.</small></div>
+        <div class="metric"><div class="label">ÅTD</div><strong>${fmtPct(ytdReturn(all))}</strong><small>Pr. ${fmtDate(all.at(-1)?.d)}</small></div>
+        <div class="metric"><div class="label">Klasse</div><strong style="font-size:18px">${fund.short}</strong><small>${fund.isin}</small></div>`;
+      renderChart(document.getElementById('c'), rows, [], { label: 'Embed afkast' });
+      const h = Math.ceil(document.documentElement.scrollHeight);
+      parent.postMessage({ type: 'ndi-embed-height', height: h }, '*');
+    }
+    document.addEventListener('click', (e) => {
+      const f = e.target.closest('[data-f]'); const p = e.target.closest('[data-p]');
+      if (f) { fundId = f.getAttribute('data-f'); paint(); }
+      if (p) { period = p.getAttribute('data-p'); paint(); }
+    });
+    paint();
+    addEventListener('resize', () => parent.postMessage({ type: 'ndi-embed-height', height: Math.ceil(document.documentElement.scrollHeight) }, '*'));
+  </script>
+</body>
+</html>

@@ -14,7 +14,7 @@
 
 | ID | Krav | Kilde | Status | Placering |
 |---|---|---|---|---|
-| A1 | Forenklet graf som embed + fuld Analytics-side | VB#1 0:26 JB | building | `docs/embed/` + `docs/index.html` |
+| A1 | Forenklet graf som embed + fuld Analytics-side | VB#1 0:26 JB | done | `docs/embed/` + `docs/index.html` |
 | A2 | Start småt underside; app senere | VB#2 0:26 JB | done (princip) | dette udkast = level 1 |
 | A3 | Selvstændig side (ikke kun forside-køkken) | VB#51 33:32 MC | building | Pages-site |
 | A4 | Forenkl forside; go big på underside; link "Undersøg porteføljen mere" | VB#52–53 34:05/35:05 | stub | CTA på entré; V1-forside røres ikke |
@@ -172,4 +172,5 @@
 ---
 
 ## Opdateringslog SPEC
+- 2026-10-15 20:14 CEST: v1 klikbar site live (entré/fonden/portefølje/udforsk/selskab/embed). Playwright OK.
 - 2026-10-15 20:08 CEST: Første SPEC. Indarbejdet alle 82 VB-punkter + 12 compliance + UX MUST + Leo-styring (Nasdaq Fundmarket-note, AI-mærkning, eksponering≠anbefaling, historisk advarsel overalt).

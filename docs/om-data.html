@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Om data & begreber · NDI Analytics</title>
+  <link rel="stylesheet" href="css/ndi.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><img src="assets/mark.svg" width="34" height="27" alt=""><span>NewDeal Invest</span></a>
+    <nav class="nav"><a href="index.html">← Entré</a></nav>
+  </header>
+  <main>
+    <p class="eyebrow">DOKUMENTATION</p>
+    <h1>Om data & begreber</h1>
+    <p class="lede">Kort ordliste og datakilder til udkastet.</p>
+    <section class="panel">
+      <h2 style="font-size:16px;margin-bottom:10px">Datakilder</h2>
+      <ul style="color:var(--muted);line-height:1.55;padding-left:18px">
+        <li>Fondens afkastdata: snapshot fra den offentlige graf-pipeline (Fundmarket-baseret), gemt lokalt i <code>data/</code>.</li>
+        <li>Beholdninger: offentlige positionsdata med dato. Ingen live Azure-kald fra udkastet.</li>
+        <li>Modenhed/P/S: heuristik i udkastet – ikke officiel NDI-rating.</li>
+        <li>Nasdaq-sammenligning: deaktiveret indtil Fundmarkets godkendelse.</li>
+      </ul>
+    </section>
+    <section class="panel">
+      <h2 style="font-size:16px;margin-bottom:10px">Ordliste</h2>
+      <dl style="color:var(--muted);display:grid;gap:12px">
+        <div><dt style="color:var(--text)">CAGR</dt><dd>Gennemsnitligt årligt afkast (geometrisk) over perioden.</dd></div>
+        <div><dt style="color:var(--text)">Totalafkast</dt><dd>Afkast inkl. geninvesteret udbytte, efter fondens løbende omkostninger, i DKK.</dd></div>
+        <div><dt style="color:var(--text)">Drawdown / fald fra top</dt><dd>Fald fra et tidligere højdepunkt. Beskrivende – ikke en købsanbefaling.</dd></div>
+        <div><dt style="color:var(--text)">P/S</dt><dd>Price/Sales. Vises ikke for præ-revenue (udefineret/meningsløst).</dd></div>
+        <div><dt style="color:var(--text)">P/E</dt><dd>Price/Earnings. Visés kun for value i NDI-udkastet.</dd></div>
+        <div><dt style="color:var(--text)">GARP</dt><dd>Growth at a Reasonable Price – en modenheds-/værdiansættelsesklasse.</dd></div>
+        <div><dt style="color:var(--text)">Fabless / fab</dt><dd>Chipdesign uden egen fabrik / selve produktionsfabrikken.</dd></div>
+        <div><dt style="color:var(--text)">Eksponering</dt><dd>Hvad porteføljen er følsom over for – ikke det samme som en anbefaling.</dd></div>
+      </dl>
+    </section>
+    <p class="warn">Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.</p>
+  </main>
+</body>
+</html>

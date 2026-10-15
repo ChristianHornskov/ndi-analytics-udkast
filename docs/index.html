@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="NDI Analytics – klikbart udkast. Portefølje, performance og tech-udforskning hos NewDeal Invest.">
+  <title>NDI Analytics · NewDeal Invest (udkast)</title>
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/ndi.css">
+</head>
+<body>
+  <a class="skip" href="#app">Gå til indhold</a>
+  <header class="site-header">
+    <a class="brand" href="?view=entre"><img src="assets/mark.svg" width="34" height="27" alt=""><span>NewDeal Invest</span></a>
+    <nav class="nav" aria-label="Hovednavigation">
+      <a href="?view=entre" data-nav="entre">Entré</a>
+      <a class="hide-sm" href="?view=fonden" data-nav="fonden">Fonden</a>
+      <a class="hide-sm" href="?view=portefolje" data-nav="portefolje">Porteføljen</a>
+      <a class="hide-sm" href="?view=udforsk" data-nav="udforsk">Udforsk</a>
+      <button type="button" class="outline-btn small" data-open="dlg-invest">Sådan investerer du</button>
+    </nav>
+  </header>
+  <main>
+    <p id="asof-global" style="font-size:12px;color:var(--muted);margin-bottom:8px"></p>
+    <div id="app"><p style="color:var(--muted)">Henter data…</p></div>
+  </main>
+  <footer class="site-footer">
+    <p><strong>Udkast / noindex.</strong> Ikke den officielle live-side. Ingen investeringsrådgivning. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.</p>
+    <p>KID og prospekt: søg fondene hos din platform, eller se <a href="https://newdealinvest.dk/">newdealinvest.dk</a>. Nasdaq-sammenligning kræver Fundmarkets godkendelse.</p>
+    <p>PMINDI ISIN DK0062499810 · PMINDIAKK ISIN DK0064642623 · <a href="om-data.html">Om data & begreber</a> · <a href="notes/STATUS.md">STATUS</a></p>
+  </footer>
+
+  <template id="dlg-invest">
+    <div class="dialog" role="dialog" aria-labelledby="inv-title">
+      <header><h2 id="inv-title">Sådan investerer du</h2><button type="button" data-close aria-label="Luk">✕</button></header>
+      <div class="body">
+        <p>Find fonden dér, hvor du investerer (bank, depotbank eller handelsplatform). Søg på navn eller ISIN. Ingen minimumsinvestering i de danske andelsklasser.</p>
+        <p><strong style="color:var(--text)">PMINDI</strong> – udloddende. Typisk frie midler / aktiesparekonto.</p>
+        <div class="copy-row"><div><span>ISIN</span><b>DK0062499810</b></div><button type="button" class="outline-btn small" data-copy="DK0062499810">Kopiér ISIN</button></div>
+        <p><strong style="color:var(--text)">PMINDIAKK</strong> – akkumulerende. Typisk pension / VSO / når du vil have afkastet i fonden.</p>
+        <div class="copy-row"><div><span>ISIN</span><b>DK0064642623</b></div><button type="button" class="outline-btn small" data-copy="DK0064642623">Kopiér ISIN</button></div>
+        <p class="warn">Dette er generel information – ikke rådgivning om, hvad du bør vælge.</p>
+      </div>
+    </div>
+  </template>
+
+  <template id="dlg-follow">
+    <div class="dialog" role="dialog" aria-labelledby="fol-title">
+      <header><h2 id="fol-title">Følg med (udkast)</h2><button type="button" data-close aria-label="Luk">✕</button></header>
+      <div class="body">
+        <p>Senere: daglig/ugentlig mail om valgte selskaber eller temaer (Mailchimp-tags). Ingen login.</p>
+        <label class="field-label" style="display:block;margin:12px 0 6px;color:var(--text)">E-mail</label>
+        <input type="email" placeholder="dig@example.com" style="width:100%;padding:10px;border-radius:8px;border:1px solid var(--line);background:#0b171d;color:var(--text)">
+        <p style="font-size:12px;margin-top:10px">Ved at skrive dig op accepterer du, at vi må sende dig information om NDI Analytics. Du kan afmelde når som helst. Vi minimierer data (GDPR). <em>Tilmelding er ikke aktiv i dette udkast.</em></p>
+        <p style="margin-top:14px"><button type="button" class="outline-btn" data-subscribe>Skriv mig op</button></p>
+        <p class="warn">Eventuelle AI-resuméer vil blive mærket tydeligt som AI og som generel information – ikke NDI's holdning.</p>
+      </div>
+    </div>
+  </template>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
