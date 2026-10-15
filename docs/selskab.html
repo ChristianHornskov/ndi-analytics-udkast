@@ -51,7 +51,7 @@
           <p><span class="tag accent">${daTheme(p.theme)}</span> <span class="badge">${daMat(p.maturity)}</span></p>
           <p class="band">Udkast-klassifikation — ikke officiel NDI-rating. Segmenter viser eksponering, ikke en anbefaling.</p>
           <div class="metrics" style="margin-top:14px">
-            <div class="metric"><div class="label">P/S</div><strong>${p.ps==null?'–':String(p.ps).replace('.',',')}</strong><small>${p.maturity==='prerevenue'?'Præ-revenue':''}</small></div>
+            <div class="metric"><div class="label">P/S</div><strong>${p.maturity==='prerevenue'?'n/a':(p.ps==null?'–':String(p.ps).replace('.',','))}</strong><small>${p.maturity==='prerevenue'?'Præ-revenue · P/S ikke meningsfuld':''}</small></div>
             <div class="metric"><div class="label">P/E</div><strong>${p.pe==null?'–':String(p.pe).replace('.',',')}</strong><small>${p.maturity==='value'?'Kun for value':'Skjult (ikke value)'}</small></div>
             <div class="metric"><div class="label">YTD</div><strong>${fmtPct(p.ytd)}</strong><small>Pr. ${fmtDate(data.portfolio.asOf)}</small></div>
             <div class="metric"><div class="label">1 år</div><strong>${fmtPct(p.y1)}</strong><small>Kursbevægelser · ikke råd</small></div>

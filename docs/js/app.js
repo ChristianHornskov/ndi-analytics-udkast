@@ -100,7 +100,7 @@ function renderEntre(root) {
     <div class="doors" role="navigation" aria-label="Vælg område">
       <a class="door" href="?view=fonden&fund=${state.fund}" data-nav="fonden">
         <strong>Fonden</strong>
-        <span>Performance, afkastkalender, drawdowns og hvordan du finder ISIN.</span>
+        <span>Performance, afkastkalender, fald fra top og hvordan du finder ISIN.</span>
         <span class="go">Åbn fonden →</span>
       </a>
       <a class="door" href="?view=portefolje&fund=${state.fund}" data-nav="portefolje">
@@ -184,17 +184,19 @@ function renderFonden(root) {
       <p style="font-size:12px;color:var(--muted);margin-bottom:8px">${state.calFull ? 'Hele historikken' : 'Seneste op til 36 måneder'} · rolige farver · røde måneder er synlige med vilje</p>
       ${warnHtml()}
       <div id="calendar"></div>
-      <p style="margin-top:12px"><button type="button" class="outline-btn small" id="cal-toggle">${state.calFull ? 'Vis seneste 3 år' : 'Se hele historikken'}</button></p>
+      <p style="margin-top:12px"><button type="button" class="outline-btn" id="cal-toggle">${state.calFull ? 'Vis seneste 3 år' : 'Se hele historikken (ét klik)'}</button>
+      <span style="display:block;margin-top:8px;font-size:12px;color:var(--muted)">Forsidens 3-års-teaser skjuler ikke dårlige perioder – fuld historik er altid ét klik væk her.</span></p>
     </section>
     <section class="panel">
-      <h2 style="font-size:18px;margin-bottom:6px">Største fald fra top (drawdown)</h2>
+      <h2 style="font-size:18px;margin-bottom:6px">Fald fra 52-ugers top</h2>
       ${dd ? `<p style="font-size:15px">Største fald i serien: <strong style="color:var(--cyan)">${fmtPct(dd.dd)}</strong> fra ${fmtDate(dd.peakD)} til ${fmtDate(dd.troughD)}.</p>` : '<p>–</p>'}
       ${warnHtml()}
       <p class="band">Visningen er beskrivende. Den er ikke en opfordring til at handle.</p>
     </section>
     <section class="panel">
       <h2 style="font-size:18px;margin-bottom:6px">Det skete i porteføljen</h2>
-      <p style="font-size:12px;color:var(--muted)">Største daglige kursbevægelser blandt beholdningerne · pr. ${fmtDate(asOf)} · kun fakta, ingen forklaring af dispositioner</p>
+      <p style="font-size:12px;color:var(--muted)">Største daglige kursbevægelser blandt beholdningerne · kun fakta, ingen forklaring af dispositioner</p>
+      <p class="datestamp" data-asof="${asOf}"><time datetime="${asOf}">Datostempel: ${fmtDate(asOf)}</time> · opdateres med snapshot · bliver markeret «ældre» når datoen ikke er seneste handelsdag</p>
       <div id="movers" class="movers" style="margin-top:12px"></div>
     </section>
     <section class="panel">
@@ -248,10 +250,19 @@ function renderMovers(el, fund) {
   const pos = [...fund.positions].filter((p) => typeof p.d1 === 'number');
   const up = [...pos].sort((a, b) => b.d1 - a.d1).slice(0, 5);
   const down = [...pos].sort((a, b) => a.d1 - b.d1).slice(0, 5);
+  const asOf = fund.positionsAsOf || DATA.portfolio.asOf;
   const item = (p) => `<li><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${state.fund}">${p.name}</a><span class="${p.d1>=0?'up':'down'}">${fmtPct(p.d1)}</span></li>`;
   el.innerHTML = `
-    <div><h3 style="font-size:13px;color:var(--muted);margin-bottom:8px">Største stigninger (dagen)</h3><ul class="mover-list">${up.map(item).join('')}</ul></div>
-    <div><h3 style="font-size:13px;color:var(--muted);margin-bottom:8px">Største fald (dagen)</h3><ul class="mover-list">${down.map(item).join('')}</ul></div>`;
+    <div><h3 style="font-size:13px;color:var(--muted);margin-bottom:8px">Største stigninger · <time datetime="${asOf}">${fmtDate(asOf)}</time></h3><ul class="mover-list">${up.map(item).join('')}</ul></div>
+    <div><h3 style="font-size:13px;color:var(--muted);margin-bottom:8px">Største fald · <time datetime="${asOf}">${fmtDate(asOf)}</time></h3><ul class="mover-list">${down.map(item).join('')}</ul></div>`;
+  // Age marker on parent datestamp
+  const stamp = document.querySelector('.datestamp[data-asof]');
+  if (stamp) {
+    const today = new Date().toISOString().slice(0, 10);
+    if (asOf && asOf < today) {
+      stamp.innerHTML += ' <span class="tag accent">ældre</span>';
+    }
+  }
 }
 
 function filterPositions(fund) {
@@ -297,7 +308,7 @@ function renderPortefolje(root) {
     <div style="display:flex;flex-wrap:wrap;gap:8px;margin:14px 0">${life}</div>
     <p style="font-size:11px;color:var(--muted);margin-bottom:10px">Livscyklus-strip (antal selskaber) — udkast-klassifikation, ikke officiel rating.</p>
     ${fundToolbar()}
-    <p class="band" style="font-size:11px">Udkast-klassifikation (modenhed/P/S) — ikke officiel NDI-rating. P/E kun for value. P/S vises ikke for præ-revenue.</p>
+    <p class="band" style="font-size:11px">Udkast-klassifikation (modenhed/P/S) — ikke officiel NDI-rating. P/E kun for value. P/S = n/a for præ-revenue.</p>
     ${positionsTable(list, fund)}
     <p style="font-size:12px;color:var(--muted);margin-top:10px">Viser ${list.length} af ${fund.positions.length} (top efter nuværende sortering). Åbn Udforsk for filtre.</p>`;
 }
@@ -312,17 +323,17 @@ function positionsTable(list, fund) {
   const th = (key, label) =>
     `<th><button type="button" data-sort="${key}" aria-sort="${state.sort===key?(state.dir==='asc'?'ascending':'descending'):'none'}">${label}${state.sort===key?(state.dir==='asc'?' ↑':' ↓'):''}</button></th>`;
   return `<div class="table-wrap"><table class="data"><thead><tr>
-    ${th('name','Navn')}${th('weight','Vægt %')}<th>Tema</th><th>Modenhed</th>${th('ps','P/S')}<th>P/E</th>${th('drawdown52Approx','Fald fra top*')}
+    ${th('name','Navn')}${th('weight','Vægt %')}<th>Tema</th><th>Modenhed</th>${th('ps','P/S')}<th>P/E</th>${th('drawdown52Approx','Fald fra 52-ugers top')}
   </tr></thead><tbody>${list.map((p) => `<tr>
     <td><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}">${p.name}</a><br><small style="color:var(--muted)">${p.isin}</small></td>
     <td>${(p.weight ?? 0).toFixed(2).replace('.', ',')}</td>
     <td><span class="tag">${daTheme(p.theme)}</span></td>
     <td><span class="badge">${daMat(p.maturity)}</span></td>
-    <td>${p.ps == null ? '–' : String(p.ps).replace('.', ',')}</td>
+    <td>${p.maturity==='prerevenue' || p.ps == null ? (p.maturity==='prerevenue' ? 'n/a' : '–') : String(p.ps).replace('.', ',')}</td>
     <td>${p.pe == null ? '–' : String(p.pe).replace('.', ',')}</td>
     <td>${fmtPct(p.drawdown52Approx)}</td>
   </tr>`).join('')}</tbody></table></div>
-  <p style="font-size:11px;color:var(--muted);margin-top:8px">* Fald fra top er tilnærmet i udkastet (YTD/1År) – ikke officiel 52-ugers drawdown.</p>`;
+  <p style="font-size:11px;color:var(--muted);margin-top:8px">Tilnærmet i udkastet ud fra YTD/1År – ikke en officiel 52-ugers serie. Neutral beskrivelse, ikke en handelsidé.</p>`;
 }
 
 function renderUdforsk(root) {
@@ -339,6 +350,7 @@ function renderUdforsk(root) {
     <div class="filters">
       <input type="search" id="q" placeholder="Søg navn, ticker, ISIN, tema…" value="${state.q.replace(/"/g,'&quot;')}" aria-label="Søg">
       <button type="button" class="outline-btn small" id="reset-filters">Nulstil</button>
+      <button type="button" class="outline-btn small" id="copy-link">Kopiér link til denne liste</button>
       <button type="button" class="outline-btn small" data-open="dlg-follow">Følg tema (stub)</button>
     </div>
     <div class="filters" aria-label="Temaer">
@@ -381,6 +393,10 @@ function onClick(e) {
   if (t.matches('[data-open]')) { openDialog(t.getAttribute('data-open')); return; }
   if (t.id === 'reset-filters') {
     state.tags = []; state.maturity = []; state.q = ''; writeUrl(); paint(); return;
+  }
+  if (t.id === 'copy-link') {
+    navigator.clipboard.writeText(location.href).then(()=>toast('Link kopieret')).catch(()=>toast('Kunne ikke kopiere link'));
+    return;
   }
   if (t.matches('[data-x]')) {
     const [k, v] = t.getAttribute('data-x').split(':');

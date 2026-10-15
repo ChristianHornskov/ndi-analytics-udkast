@@ -140,3 +140,13 @@ export function fmtDate(iso) {
 
 export function daTheme(t) { return THEME_LABELS[t] || t; }
 export function daMat(m) { return MATURITY_LABELS[m] || m; }
+
+
+/** Tags der ikke må vises offentligt før compliance-review (UX §0.2). */
+export const BANNED_PUBLIC_TAGS = new Set([
+  'legacy', 'mistænkt-legacy', 'trump-vinder', 'trump-taber', 'trump-winner', 'trump-loser',
+]);
+
+export function publicTags(tags) {
+  return (tags || []).filter((t) => !BANNED_PUBLIC_TAGS.has(String(t).toLowerCase()));
+}

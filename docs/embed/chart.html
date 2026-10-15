@@ -3,59 +3,102 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex,nofollow">
-  <title>NDI embed-graf</title>
-  <link rel="stylesheet" href="../css/ndi.css">
-  <style>body{padding:12px} main{max-width:900px;padding:0}</style>
+  <meta name="robots" content="noindex, nofollow">
+  <title>NewDeal Invest – totalafkast</title>
+  <link rel="stylesheet" href="chart.css">
 </head>
 <body>
-  <main>
-    <p class="eyebrow">EMBED · FORENKLET GRAF</p>
-    <h1 style="font-size:24px;margin-bottom:8px">Totalafkast</h1>
-    <div class="toolbar" id="tb"></div>
-    <div class="panel">
-      <div class="metrics" id="metrics"></div>
-      <p class="warn">Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.</p>
-      <p class="note-fundmarket">Nasdaq-sammenligning kræver Fundmarkets godkendelse (deaktiveret).</p>
-      <button type="button" class="control" disabled>Nasdaq-100 (afventer godkendelse)</button>
-      <div class="chart-wrap" id="c" style="margin-top:12px"></div>
-    </div>
+  <main class="embed">
+    <section class="panel" aria-labelledby="chart-title">
+      <header class="chart-heading">
+        <div>
+          <p class="eyebrow">NEWDEAL INVEST</p>
+          <h1 id="chart-title">Totalafkast</h1>
+        </div>
+        <div class="chart-meta">
+          <div id="updated">Henter kursdato…</div>
+          <div class="data-source"><span class="status-dot" aria-hidden="true"></span><span id="source-label">Henter data…</span></div>
+        </div>
+      </header>
+
+      <div class="class-options" role="radiogroup" aria-label="Andelsklasse">
+        <button class="class-card selected" type="button" role="radio" data-fund="PMINDI" aria-checked="true">
+          <span class="class-title"><span class="checkmark" aria-hidden="true">✓</span>PMINDI</span>
+          <span class="class-subtitle">Udbyttebetalende. Udbytte udbetales til dig.</span>
+        </button>
+        <button class="class-card" type="button" role="radio" data-fund="PMINDIAKK" aria-checked="false">
+          <span class="class-title"><span class="checkmark" aria-hidden="true">✓</span>PMINDIAKK</span>
+          <span class="class-subtitle">Akkumulerende. Afkastet bliver i fonden.</span>
+        </button>
+      </div>
+
+      <div class="chart-toolbar">
+        <div class="segmented periods" role="tablist" aria-label="Periode">
+          <button class="control" type="button" role="tab" data-period="1m" aria-selected="false" tabindex="-1" aria-controls="chart-container">1 md</button>
+          <button class="control" type="button" role="tab" data-period="3m" aria-selected="false" tabindex="-1" aria-controls="chart-container">3 md</button>
+          <button class="control" type="button" role="tab" data-period="ytd" aria-selected="false" tabindex="-1" aria-controls="chart-container">År til dato</button>
+          <button class="control" type="button" role="tab" data-period="1y" aria-selected="false" tabindex="-1" aria-controls="chart-container">1 år</button>
+          <button class="control active" type="button" role="tab" data-period="all" aria-selected="true" tabindex="0" aria-controls="chart-container">Hele perioden</button>
+        </div>
+        <button class="nasdaq-toggle" type="button" disabled aria-pressed="false" title="Nasdaq-sammenligning kræver Fundmarkets godkendelse">
+          <span class="swatch" aria-hidden="true"></span>
+          Nasdaq-100
+        </button>
+      </div>
+
+      <div class="chart-legends">
+        <div class="legend">
+          <span id="legend-fund">PMINDI</span>
+          <strong id="fund-return" aria-describedby="historisk-advarsel">—</strong>
+        </div>
+        <div class="legend benchmark-legend" aria-disabled="true">
+          <span>Nasdaq-100</span>
+          <strong>—</strong>
+        </div>
+      </div>
+      <p class="nasdaq-note">Nasdaq-sammenligning kræver Fundmarkets godkendelse. Fonden har intet fast benchmark.</p>
+
+      <div class="chart-container" id="chart-container">
+        <svg id="performance-chart" role="img" tabindex="0" aria-labelledby="svg-title svg-description"></svg>
+        <div class="chart-tooltip" id="chart-tooltip" hidden></div>
+        <div class="chart-loading" id="chart-loading">Henter data…</div>
+        <label class="sr-only" for="chart-slider">Datopunkt i grafen</label>
+        <input class="chart-slider" id="chart-slider" type="range" min="0" max="1" value="0" aria-valuetext="">
+      </div>
+
+      <p class="chart-readout" id="chart-readout" aria-live="polite"></p>
+      <p class="chart-context" id="chart-context" hidden></p>
+      <p class="chart-pointe" id="chart-pointe"></p>
+
+      <div class="metrics-row">
+        <div class="metrics-grid">
+          <div class="metric">
+            <span class="metric-label">Totalafkast</span>
+            <strong class="accent" id="metric-total" aria-describedby="historisk-advarsel">—</strong>
+            <small id="metric-total-note">Siden start · efter omkostninger</small>
+          </div>
+          <div class="metric">
+            <span class="metric-label">Gns. årligt afkast (CAGR)</span>
+            <strong id="metric-cagr" aria-describedby="historisk-advarsel">—</strong>
+            <small id="metric-cagr-note">CAGR · siden start</small>
+          </div>
+          <div class="metric">
+            <span class="metric-label">År til dato</span>
+            <strong id="metric-ytd" aria-describedby="historisk-advarsel">—</strong>
+            <small id="metric-ytd-note">Fra årets start</small>
+          </div>
+        </div>
+        <aside class="warn" role="note" id="historisk-advarsel">
+          Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.
+        </aside>
+      </div>
+
+      <p class="foot">Afkastet er i danske kroner og efter fondens løbende omkostninger, før skat og egne handelsomkostninger. Totalafkast forudsætter geninvesteret udbytte. Kilde: Fundmarket.</p>
+    </section>
   </main>
-  <script type="module">
-    import { loadAll, fundById, slicePeriod, periodReturn, cagr, ytdReturn, fmtPct, fmtDate, WARN_HIST } from '../js/data.js';
-    import { renderChart } from '../js/chart.js';
-    // patch fetch paths for embed subfolder
-    const origFetch = window.fetch;
-    window.fetch = (url, opts) => {
-      if (typeof url === 'string' && url.startsWith('data/')) url = '../' + url;
-      return origFetch(url, opts);
-    };
-    let fundId = new URL(location.href).searchParams.get('fund') || 'pmindi';
-    let period = new URL(location.href).searchParams.get('periode') || 'all';
-    const data = await loadAll();
-    function paint() {
-      const fund = fundById(data.portfolio, fundId);
-      const rows = slicePeriod(fund.data, period);
-      document.getElementById('tb').innerHTML = `
-        <div class="seg">${data.portfolio.funds.map(f=>`<button type="button" class="control ${f.id===fundId?'active':''}" data-f="${f.id}">${f.short}</button>`).join('')}</div>
-        <div class="seg">${[['1m','1 md.'],['3m','3 mdr.'],['ytd','ÅTD'],['1y','1 år'],['all','Siden start']].map(([k,l])=>`<button type="button" class="control ${period===k?'active':''}" data-p="${k}">${l}</button>`).join('')}</div>`;
-      const all = fund.data;
-      document.getElementById('metrics').innerHTML = `
-        <div class="metric"><div class="label">Periode</div><strong>${fmtPct(periodReturn(rows))}</strong><small>Indekseret</small></div>
-        <div class="metric"><div class="label">CAGR (siden start)</div><strong>${fmtPct(cagr(all))}</strong><small>DKK efter omk.</small></div>
-        <div class="metric"><div class="label">ÅTD</div><strong>${fmtPct(ytdReturn(all))}</strong><small>Pr. ${fmtDate(all.at(-1)?.d)}</small></div>
-        <div class="metric"><div class="label">Klasse</div><strong style="font-size:18px">${fund.short}</strong><small>${fund.isin}</small></div>`;
-      renderChart(document.getElementById('c'), rows, [], { label: 'Embed afkast' });
-      const h = Math.ceil(document.documentElement.scrollHeight);
-      parent.postMessage({ type: 'ndi-embed-height', height: h }, '*');
-    }
-    document.addEventListener('click', (e) => {
-      const f = e.target.closest('[data-f]'); const p = e.target.closest('[data-p]');
-      if (f) { fundId = f.getAttribute('data-f'); paint(); }
-      if (p) { period = p.getAttribute('data-p'); paint(); }
-    });
-    paint();
-    addEventListener('resize', () => parent.postMessage({ type: 'ndi-embed-height', height: Math.ceil(document.documentElement.scrollHeight) }, '*'));
-  </script>
+  <noscript>
+    <p class="noscript-note">Grafen kræver JavaScript. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast.</p>
+  </noscript>
+  <script src="chart.js"></script>
 </body>
 </html>

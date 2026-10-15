@@ -1,51 +1,49 @@
-**PAGES LIVE (HTTP 200):** https://christianhornskov.github.io/ndi-analytics-udkast/  · 2026-10-15 ~20:15 CEST
-
 # STATUS – NDI Analytics overnight build
 
-**Build lead:** Grok Bot (executor) · **Rapporterer til:** Leo · **Christian sover.**
+**Build lead:** Grok Bot · **Leo** · Christian sover.
 
 ## Seneste opdatering
-**2026-10-15 20:16 CEST** — v1.1: AI-værdikæde light, team-teaser, kind-label fix. Pages status: building.
+**2026-10-15 20:18 CEST** — UX §0-uenigheder foldet ind. Grok embed-polish landet (`docs/embed/chart.css|js|html`). Cross-review Claude+Grok kører. Pages live.
 
-**2026-10-15 20:14 CEST** — Første klikbare version er live lokalt + pushet. Playwright 1280/375: 0 console errors.
+**PAGES LIVE:** https://christianhornskov.github.io/ndi-analytics-udkast/
 
-## Live URL
-https://christianhornskov.github.io/ndi-analytics-udkast/
-(GitHub Pages: main:/docs — kan tage 1–2 min at opdatere)
+## UX §0 (reviewer top-uenigheder) – status
+| Punkt | Status |
+|---|---|
+| P/S = n/a for præ-revenue | done (tabel + selskab) |
+| Legacy / Trump-tags kun interne | done (ikke i data; BANNED_PUBLIC_TAGS + INTERNAL-TAGS.md) |
+| Fuld afkasthistorik ét klik væk | done (kalender-CTA “Se hele historikken (ét klik)”) |
+| Neutral drawdown-label | done (“Fald fra 52-ugers top”) |
+| Ingen interne target=_blank | done (0 i served docs; check-script) |
+| Datostempel på dagligt indhold | done (`.datestamp` + time på movers; «ældre» når asOf < i dag) |
 
-## Feature-summary (v1)
-- **Entré** med 3 døre (Fonden / Porteføljen / Udforsk) + “Sådan tænker vi” + porteføljehold-teaser + eksponering≠anbefaling-bånd
-- **Fonden:** klassevalg, perioder, SVG-graf, CAGR/YTD/12m/total, månedskalender (3 år + fuld historik), drawdown, “Det skete i porteføljen”, kontekstprikker (toppe+dyk), historisk-afkast-advarsel ved tal, Nasdaq deaktiveret med Fundmarket-note
-- **Porteføljen / Udforsk:** NDI-temaer, modenhed, P/S (– for præ-revenue), P/E kun value, sortering (inkl. fald fra top), søgning, chips, URL-state
-- **Selskabsside:** SoftBank-demo, problem-first, AI-stub-mærkning
-- **Embed-graf** `docs/embed/chart.html` til forside-integration
-- **Om data**, Kopiér ISIN-dialog, mail-stub (GDPR-tekst)
-- **Compliance:** noindex, danske advarsler, delayed snapshot-data, ingen dispositionsforklaringer
-- **Vidensbot + UX-krav** indarbejdet i SPEC
+## IA vs Jesper-mockup
+Mockup: produkter → klassevælger → chart-panel → metrics → dialogs (invest/risk/follow).
+Vores Analytics: Entré (3 døre) → Fonden/Portefølje/Udforsk (hus). Embed spejler Jespers chart-panel.
+Header nu med Følg med / Risici / Sådan investerer du (som mockup). Sticky header + brand tokens aligned.
 
-## Done
-- [x] Kilder + Vidensbot 82 + UX-krav læst
-- [x] SPEC / IDEAS / STATUS
-- [x] Data snapshot portfolio.json
-- [x] Site v1 (HTML/CSS/JS)
-- [x] GitHub Pages konfigureret
-- [x] Playwright smoke + extended (desktop+mobile)
-- [x] Push til main
+## Merge docs/b/
+- `company-profiles.json` + `fund-meta.json` → `docs/data/` (KID/SRI i footer)
+- Claude CSS tokens delvist adopteret (pos/neg, sticky, faint)
+- `docs/b/` arkiveret (README-ARCHIVE); ikke linked
 
-## In progress / next
-- [ ] Claude Code (#2) og Grok Build (embed polish) kører stadig – merge forbedringer når de lander
-- [ ] Livscyklus-strip, værdikæde-kort (SHOULD)
-- [ ] Kryds-review Claude↔Grok
-- [ ] Flere kontekst-events med redaktionel kvalitet
-- [ ] Team-billeder når footage findes (Jesper)
-- [ ] Iteration ud fra Leo / UX-reviewer / Vidensbot feedback
+## SHOULD landed
+- Kopiér link til denne liste (Udforsk)
+- AI-værdikæde light
+- Livscyklus-strip
+- KID-links fra fund-meta
+- Risici-dialog
 
-## Fra Claude
-(venter – proces kører, stdout bufferet)
+## Agents
+- Claude #3: polish + CROSS-REVIEW-CLAUDE.md (kører)
+- Grok review: CROSS-REVIEW-GROK.md + visual polish (kører)
+- Grok embed: færdig (chart.css/js)
 
-## Fra Grok
-(venter på embed-polish)
+## Next
+1. Læs agent cross-reviews når de lander; merge “better not different”
+2. Flere SHOULD: ordliste-inline, drawdown-tabel detalje, print-CSS
+3. UX-review.md kl. 22:00 — læs og fold ind
+4. Push often
 
 ## Spørgsmål til Christian
-Se tidligere liste i STATUS (defaults valgt). Nye:
-- Skal SoftBank’s 1-års tal (−77,8 % i snapshot) fremhæves med ekstra kontekst, eller er advarslen nok?
+Uændrede defaults (se tidligere). Ingen nye blokeringer.

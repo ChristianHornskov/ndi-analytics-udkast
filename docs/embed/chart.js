@@ -1,0 +1,451 @@
+(() => {
+  const FUNDS = { PMINDI: 'pmindi', PMINDIAKK: 'pmindiakk' };
+  const PERIODS = {
+    '1m': '1 md',
+    '3m': '3 md',
+    ytd: 'År til dato',
+    '1y': '1 år',
+    all: 'Hele perioden'
+  };
+  const PERIOD_MONTHS = { '1m': 1, '3m': 3, '1y': 12 };
+
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  const number = new Intl.NumberFormat('da-DK', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+  const dateFormat = new Intl.DateTimeFormat('da-DK', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' });
+  const axisFormat = new Intl.DateTimeFormat('da-DK', { month: 'short', year: 'numeric', timeZone: 'UTC' });
+  const shortDate = new Intl.DateTimeFormat('da-DK', { day: 'numeric', month: 'short', timeZone: 'UTC' });
+
+  const timestamp = d => Date.parse(d + 'T12:00:00Z');
+  const fmtDate = d => dateFormat.format(new Date(timestamp(d)));
+  const pct = (n, sign = false) => {
+    if (n == null || Number.isNaN(n)) return '—';
+    const value = Math.abs(n) < 0.05 ? 0 : n;
+    return `${sign && value > 0 ? '+' : ''}${number.format(value)} %`;
+  };
+  const escape = s => String(s).replace(/[&<>"']/g, c => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  }[c]));
+
+  const params = new URLSearchParams(location.search);
+  const requestedFund = (params.get('klasse') || params.get('fund') || 'PMINDI').toUpperCase();
+  const requestedPeriod = (params.get('periode') || params.get('period') || 'all').toLowerCase();
+
+  const state = {
+    fund: FUNDS[requestedFund] ? requestedFund : 'PMINDI',
+    period: PERIODS[requestedPeriod] ? requestedPeriod : 'all',
+    ready: false,
+    series: [],
+    geometry: null,
+    selectedDate: null,
+    truncated: false
+  };
+
+  let payload = null;
+  let lastHeight = 0;
+  let heightFrame = 0;
+  let resizeFrame = 0;
+
+  function sendHeight() {
+    cancelAnimationFrame(heightFrame);
+    heightFrame = requestAnimationFrame(() => {
+      const height = Math.ceil(Math.max(
+        document.documentElement.scrollHeight,
+        document.body ? document.body.scrollHeight : 0,
+        document.documentElement.offsetHeight
+      ));
+      if (height === lastHeight || height < 80) return;
+      lastHeight = height;
+      parent.postMessage({ type: 'ndi-embed-height', height }, '*');
+    });
+  }
+
+  function syncURL() {
+    try {
+      const url = new URL(location.href);
+      url.searchParams.set('klasse', state.fund);
+      url.searchParams.set('periode', state.period);
+      url.searchParams.delete('fund');
+      url.searchParams.delete('period');
+      history.replaceState(null, '', url);
+    } catch { /* iframe sandbox or file URL */ }
+  }
+
+  function fundRecord() {
+    const id = FUNDS[state.fund];
+    return payload.funds.find(f => f.id === id || f.short === state.fund);
+  }
+
+  function cutoffDate(period, lastDate) {
+    if (period === 'all') return null;
+    const end = new Date(lastDate + 'T12:00:00Z');
+    if (period === 'ytd') return `${end.getUTCFullYear() - 1}-12-31`;
+    const months = PERIOD_MONTHS[period];
+    const b = new Date(Date.UTC(end.getUTCFullYear(), end.getUTCMonth() - months, 1, 12));
+    const lastDay = new Date(Date.UTC(b.getUTCFullYear(), b.getUTCMonth() + 1, 0)).getUTCDate();
+    b.setUTCDate(Math.min(end.getUTCDate(), lastDay));
+    return b.toISOString().slice(0, 10);
+  }
+
+  function periodSlice(points, period) {
+    const cutoff = cutoffDate(period, points.at(-1).d);
+    if (!cutoff) return { points, truncated: false };
+    let base = null;
+    for (const p of points) {
+      if (p.d <= cutoff) base = p;
+      else break;
+    }
+    if (!base) return { points, truncated: true };
+    return { points: points.filter(p => p.d >= base.d), truncated: false };
+  }
+
+  function indexSeries(points) {
+    const start = points[0].total;
+    return points.map(p => ({
+      date: p.d,
+      value: start ? (p.total / start - 1) * 100 : 0,
+      total: p.total
+    }));
+  }
+
+  function yearsBetween(a, b) {
+    return (timestamp(b) - timestamp(a)) / (365.25 * 86400000);
+  }
+
+  function cagr(first, last) {
+    const years = yearsBetween(first.d, last.d);
+    if (years < 1 || !(first.total > 0) || !(last.total > 0)) return null;
+    return ((last.total / first.total) ** (1 / years) - 1) * 100;
+  }
+
+  function nearest(series, target) {
+    const t = typeof target === 'number' ? target : timestamp(target);
+    let best = 0;
+    for (let i = 1; i < series.length; i++) {
+      if (Math.abs(timestamp(series[i].date) - t) < Math.abs(timestamp(series[best].date) - t)) best = i;
+    }
+    return best;
+  }
+
+  function verbFor(value) {
+    if (value > 0.05) return 'steget';
+    if (value < -0.05) return 'faldet';
+    return 'uændret';
+  }
+
+  function updateChrome() {
+    $$('[data-fund]').forEach(el => {
+      const active = el.dataset.fund === state.fund;
+      el.classList.toggle('selected', active);
+      el.setAttribute('aria-checked', String(active));
+      el.tabIndex = active ? 0 : -1;
+    });
+    $$('[data-period]').forEach(el => {
+      const active = el.dataset.period === state.period;
+      el.classList.toggle('active', active);
+      el.setAttribute('aria-selected', String(active));
+      el.tabIndex = active ? 0 : -1;
+    });
+  }
+
+  function updateMetrics() {
+    const fund = fundRecord();
+    const points = fund.data;
+    const first = points[0];
+    const last = points.at(-1);
+    const total = (last.total / first.total - 1) * 100;
+    const annual = cagr(first, last);
+    const ytd = indexSeries(periodSlice(points, 'ytd').points).at(-1)?.value ?? null;
+    const years = yearsBetween(first.d, last.d);
+
+    $('#metric-total').textContent = pct(total, true);
+    $('#metric-cagr').textContent = annual == null ? 'Under 1 år' : pct(annual, true);
+    $('#metric-ytd').textContent = pct(ytd, true);
+    $('#metric-total-note').textContent = `Siden ${fmtDate(first.d)} · efter løbende omkostninger`;
+    $('#metric-cagr-note').textContent = annual == null
+      ? `Historik ${number.format(years)} år · vises efter ét års data`
+      : `CAGR · ${number.format(years)} år siden start`;
+    $('#metric-ytd-note').textContent = `Fra 1. jan. ${last.d.slice(0, 4)} til ${fmtDate(last.d)}`;
+    $('#metric-cagr').classList.toggle('smaller', annual == null);
+  }
+
+  function niceScale(values) {
+    let lower = Math.min(...values);
+    let upper = Math.max(...values);
+    const span = Math.max(upper - lower, 4);
+    const rough = span / 4;
+    const power = 10 ** Math.floor(Math.log10(rough));
+    const step = [1, 2, 2.5, 5, 10].map(n => n * power).find(n => n >= rough) || power * 10;
+    lower = Math.floor((lower - span * 0.06) / step) * step;
+    upper = Math.ceil((upper + span * 0.08) / step) * step;
+    if (lower === upper) upper = lower + step;
+    return { lower, upper, step };
+  }
+
+  function renderChart() {
+    if (!state.ready) return;
+    const fund = fundRecord();
+    const sliced = periodSlice(fund.data, state.period);
+    state.truncated = sliced.truncated || (state.period !== 'all' && sliced.points.length === fund.data.length);
+    state.series = indexSeries(sliced.points);
+    const series = state.series;
+    const first = series[0];
+    const last = series.at(-1);
+    const periodReturn = last.value;
+
+    $('#legend-fund').textContent = state.fund;
+    $('#fund-return').textContent = pct(periodReturn, true);
+    $('#updated').textContent = `Seneste kursdato: ${fmtDate(fund.data.at(-1).d)}`;
+    $('#source-label').textContent = `Totalafkast i DKK · ${fund.short}`;
+
+    const context = [];
+    if (fund.id === 'pmindiakk') {
+      context.push(`PMINDIAKK har kortere historik (start ${fmtDate(fund.inception)}) end PMINDI. Afkast siden start kan ikke sammenlignes direkte.`);
+    }
+    if (state.truncated) context.push('Viser den tilgængelige historik i den valgte periode.');
+    $('#chart-context').textContent = context.join(' ');
+    $('#chart-context').hidden = !context.length;
+
+    const direction = verbFor(periodReturn);
+    const pointe = periodReturn === 0 || Math.abs(periodReturn) < 0.05
+      ? `${state.fund} er ${direction} fra ${fmtDate(first.date)} til ${fmtDate(last.date)}, pr. ${fmtDate(last.date)}.`
+      : `${state.fund} er ${direction} ${pct(Math.abs(periodReturn))} fra ${fmtDate(first.date)} til ${fmtDate(last.date)}, pr. ${fmtDate(last.date)}.`;
+    $('#chart-pointe').textContent = pointe;
+
+    const svg = $('#performance-chart');
+    const box = $('#chart-container');
+    const width = Math.max(300, box.clientWidth || 1000);
+    const height = Math.max(220, box.clientHeight || 380);
+    const mobile = width < 500;
+    const left = mobile ? 40 : width * 0.072;
+    const right = mobile ? 58 : width * 0.09;
+    const top = 14;
+    const bottom = 36;
+    const plotWidth = width - left - right;
+    const plotHeight = height - top - bottom;
+    const { lower, upper, step } = niceScale(series.map(p => p.value));
+    const t0 = timestamp(first.date);
+    const t1 = timestamp(last.date);
+    const x = p => left + (timestamp(p.date) - t0) / Math.max(1, t1 - t0) * plotWidth;
+    const y = v => top + (upper - v) / (upper - lower) * plotHeight;
+
+    svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+    const parts = [
+      `<title id="svg-title">Totalafkast for ${state.fund}</title>`,
+      `<desc id="svg-description">Totalafkast i DKK, indekseret til 0 % den ${fmtDate(first.date)}. Seneste punkt ${fmtDate(last.date)}: ${pct(periodReturn, true)}. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast.</desc>`,
+      `<defs><linearGradient id="fund-fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9ecfd6" stop-opacity=".18"/><stop offset="100%" stop-color="#9ecfd6" stop-opacity="0"/></linearGradient></defs>`
+    ];
+
+    for (let tick = lower; tick <= upper + step / 2; tick += step) {
+      const pos = y(tick);
+      const text = Number.isInteger(tick) ? String(tick) : number.format(tick);
+      const zero = Math.abs(tick) < 0.001 ? ' zero-line' : '';
+      parts.push(`<line class="axis-grid${zero}" x1="${left}" x2="${width - right}" y1="${pos}" y2="${pos}"/>`);
+      parts.push(`<text x="${left - 10}" y="${pos + 4}" text-anchor="end" style="font-size:${mobile ? 10 : Math.max(10, width / 78)}px">${text} %</text>`);
+    }
+
+    const tickCount = mobile ? 3 : 5;
+    for (let i = 0; i < tickCount; i++) {
+      const index = Math.round(i * (series.length - 1) / (tickCount - 1));
+      const point = series[index];
+      const label = state.period === '1m' || state.period === '3m'
+        ? shortDate.format(new Date(timestamp(point.date)))
+        : axisFormat.format(new Date(timestamp(point.date)));
+      const anchor = i === 0 ? 'start' : i === tickCount - 1 ? 'end' : 'middle';
+      parts.push(`<text x="${x(point)}" y="${height - 8}" text-anchor="${anchor}" style="font-size:${mobile ? 10 : Math.max(10, width / 80)}px">${escape(label)}</text>`);
+    }
+
+    const line = series.map((p, i) => `${i ? 'L' : 'M'}${x(p).toFixed(2)},${y(p.value).toFixed(2)}`).join(' ');
+    const plotBottom = height - bottom;
+    const area = `${line} L${x(last).toFixed(2)},${plotBottom} L${x(first).toFixed(2)},${plotBottom} Z`;
+    parts.push(`<path class="fund-area" d="${area}" fill="url(#fund-fill)"/>`);
+    parts.push(`<path class="fund-path" d="${line}"/>`);
+    parts.push(`<text class="end-label" x="${width - right + 8}" y="${y(last.value) + 4}" style="fill:var(--cyan);font-size:${mobile ? 9 : Math.max(10, width / 83)}px">${pct(periodReturn, true)}</text>`);
+    parts.push(`<g id="crosshair-group"><line id="crosshair" class="crosshair" y1="${top}" y2="${height - bottom}"/><circle id="fund-dot" r="3.4" fill="var(--cyan)" stroke="var(--panel)" stroke-width="1.5"/></g>`);
+    parts.push(`<rect id="plot-hit" x="${left}" y="0" width="${plotWidth}" height="${height - bottom + 10}" fill="transparent" style="cursor:crosshair"/>`);
+    svg.innerHTML = parts.join('');
+
+    state.geometry = { x, y, left, plotWidth, width, height, t0, t1 };
+    $('#chart-slider').max = String(series.length - 1);
+    const index = state.selectedDate ? nearest(series, state.selectedDate) : series.length - 1;
+    setPoint(index, false);
+    $('#chart-loading').hidden = true;
+    sendHeight();
+  }
+
+  function setPoint(index, showTooltip) {
+    const p = state.series[index];
+    if (!p || !state.geometry) return;
+    const { x, y, width, height } = state.geometry;
+    $('#crosshair').setAttribute('x1', x(p));
+    $('#crosshair').setAttribute('x2', x(p));
+    $('#fund-dot').setAttribute('cx', x(p));
+    $('#fund-dot').setAttribute('cy', y(p.value));
+    $('#chart-slider').value = String(index);
+    const value = pct(p.value, true);
+    $('#chart-readout').innerHTML = `<span class="date">${fmtDate(p.date)}</span> · ${state.fund}: ${value}`;
+    $('#chart-slider').setAttribute('aria-valuetext', `${fmtDate(p.date)}, ${state.fund}: ${value}`);
+    const tooltip = $('#chart-tooltip');
+    tooltip.hidden = !showTooltip;
+    if (showTooltip) {
+      tooltip.innerHTML = `<b>${fmtDate(p.date)}</b><div class="tooltip-row"><span>${state.fund}</span><strong>${value}</strong></div>`;
+      const tooltipWidth = tooltip.offsetWidth || 180;
+      tooltip.style.left = Math.min(Math.max(0, x(p) + 14), width - tooltipWidth) + 'px';
+      tooltip.style.top = Math.max(5, Math.min(y(p.value) - 72, height - 90)) + 'px';
+    }
+  }
+
+  function pointFromPointer(event) {
+    if (!state.ready || !state.geometry) return;
+    const rect = event.currentTarget.getBoundingClientRect();
+    const { width, left, plotWidth, t0, t1 } = state.geometry;
+    const cx = (event.clientX - rect.left) / rect.width * width;
+    const fraction = Math.max(0, Math.min(1, (cx - left) / plotWidth));
+    return nearest(state.series, t0 + fraction * (t1 - t0));
+  }
+
+  function update() {
+    updateChrome();
+    if (!state.ready) {
+      sendHeight();
+      return;
+    }
+    syncURL();
+    updateMetrics();
+    renderChart();
+  }
+
+  function selectFund(fund) {
+    if (!FUNDS[fund] || fund === state.fund) return;
+    state.fund = fund;
+    state.selectedDate = null;
+    update();
+  }
+
+  function selectPeriod(period) {
+    if (!PERIODS[period] || period === state.period) return;
+    state.period = period;
+    state.selectedDate = null;
+    update();
+  }
+
+  function showError(message) {
+    const el = $('#chart-loading');
+    el.hidden = false;
+    el.classList.add('error');
+    el.innerHTML = `<div><p>${escape(message)}</p><button type="button" class="outline-button" id="retry-chart" style="margin-top:14px">Prøv igen</button></div>`;
+    $('#retry-chart').addEventListener('click', () => {
+      el.classList.remove('error');
+      el.textContent = 'Henter data…';
+      start();
+    });
+    sendHeight();
+  }
+
+  $('#performance-chart').addEventListener('pointermove', event => {
+    const index = pointFromPointer(event);
+    if (index !== undefined) setPoint(index, true);
+  });
+  $('#performance-chart').addEventListener('pointerdown', event => {
+    const index = pointFromPointer(event);
+    if (index === undefined) return;
+    state.selectedDate = state.series[index].date;
+    setPoint(index, true);
+  });
+  $('#performance-chart').addEventListener('pointerleave', () => {
+    if (state.ready) setPoint(state.selectedDate ? nearest(state.series, state.selectedDate) : state.series.length - 1, false);
+  });
+  $('#performance-chart').addEventListener('keydown', event => {
+    if (!state.ready || !state.series.length) return;
+    const keys = { ArrowLeft: -1, ArrowRight: 1, Home: 'start', End: 'end' };
+    if (!(event.key in keys)) return;
+    event.preventDefault();
+    const current = state.selectedDate ? nearest(state.series, state.selectedDate) : state.series.length - 1;
+    const next = event.key === 'Home' ? 0 : event.key === 'End' ? state.series.length - 1 : current + keys[event.key];
+    const index = Math.max(0, Math.min(state.series.length - 1, next));
+    state.selectedDate = state.series[index].date;
+    setPoint(index, true);
+  });
+
+  $('#chart-slider').addEventListener('input', event => {
+    const i = Number(event.target.value);
+    state.selectedDate = state.series[i].date;
+    setPoint(i, true);
+  });
+  $('#chart-slider').addEventListener('blur', () => { $('#chart-tooltip').hidden = true; });
+
+  document.addEventListener('click', event => {
+    const fund = event.target.closest('[data-fund]');
+    const period = event.target.closest('[data-period]');
+    if (fund) selectFund(fund.dataset.fund);
+    if (period) selectPeriod(period.dataset.period);
+  });
+
+  document.addEventListener('keydown', event => {
+    const tab = event.target.closest('[data-period]');
+    if (tab && ['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) {
+      event.preventDefault();
+      const keys = Object.keys(PERIODS);
+      let i = keys.indexOf(state.period);
+      i = event.key === 'Home' ? 0 : event.key === 'End' ? keys.length - 1 : (i + (event.key === 'ArrowRight' ? 1 : -1) + keys.length) % keys.length;
+      selectPeriod(keys[i]);
+      $(`[data-period="${keys[i]}"]`).focus();
+      return;
+    }
+    const radio = event.target.closest('[data-fund]');
+    if (radio && ['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'].includes(event.key)) {
+      event.preventDefault();
+      const next = state.fund === 'PMINDI' ? 'PMINDIAKK' : 'PMINDI';
+      selectFund(next);
+      $(`[data-fund="${next}"]`).focus();
+    }
+  });
+
+  window.addEventListener('popstate', () => {
+    const p = new URLSearchParams(location.search);
+    const fund = (p.get('klasse') || 'PMINDI').toUpperCase();
+    const period = (p.get('periode') || 'all').toLowerCase();
+    state.fund = FUNDS[fund] ? fund : 'PMINDI';
+    state.period = PERIODS[period] ? period : 'all';
+    state.selectedDate = null;
+    update();
+  });
+
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(() => {
+      cancelAnimationFrame(resizeFrame);
+      resizeFrame = requestAnimationFrame(() => {
+        renderChart();
+        sendHeight();
+      });
+    }).observe($('#chart-container'));
+    new ResizeObserver(sendHeight).observe(document.body);
+  } else {
+    window.addEventListener('resize', () => { renderChart(); sendHeight(); });
+  }
+
+  window.addEventListener('message', event => {
+    if (event.data?.type === 'ndi-embed-measure') sendHeight();
+  });
+
+  async function start() {
+    updateChrome();
+    sendHeight();
+    try {
+      const response = await fetch(new URL('../data/portfolio.json', location.href), { cache: 'no-store' });
+      if (!response.ok) throw new Error('Grafdata kunne ikke indlæses.');
+      payload = await response.json();
+      if (!payload?.funds?.length) throw new Error('Datasættet er tomt.');
+      for (const fund of payload.funds) {
+        if (!Array.isArray(fund.data) || fund.data.length < 2) throw new Error('Afkastserien er ufuldstændig.');
+      }
+      state.ready = true;
+      update();
+      if (document.fonts?.ready) document.fonts.ready.then(() => { renderChart(); sendHeight(); });
+    } catch (error) {
+      showError(error.message || 'Grafdata kunne ikke indlæses.');
+    }
+  }
+
+  start();
+})();
