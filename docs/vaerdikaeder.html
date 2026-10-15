@@ -148,7 +148,7 @@
     .cost-ndi .tag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.4px;color:#0b171d;background:var(--cyan);border-radius:4px;padding:0 5px;margin-right:6px}
     .a-pane{display:none;margin:4px 0 18px;border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:linear-gradient(180deg,#0e2027,#0b171d)}
     .a-pane.on{display:block}
-    #a-pane,#e-pane,#p-pane,#sp-cost,#sp-trip,#q-hz,#q-br{scroll-margin-top:110px}
+    #a-pane,#e-pane,#p-pane,#sp-cost,#sp-trip,#q-hz,#q-br,#q-gl{scroll-margin-top:110px}
     .trip{margin-top:16px;border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:linear-gradient(180deg,#0b171d,#0e2027)}
     .trip h3{font-size:15px;color:var(--cyan);margin:0 0 4px}
     .trip-grid{display:grid;gap:12px;margin-top:10px}
@@ -216,6 +216,10 @@
     .eflow .ef-p.soft .tag{background:#5a7f88;color:var(--text)}
     .eflow .ef-p .src{display:block;font-size:11px;margin-top:2px}
     .eflow a{font-size:12px}
+    .eflow .ef-s{margin:8px 0 0;padding:6px 0 0;border-top:1px dashed var(--line);font-size:12px;line-height:1.4;color:var(--text)}
+    .eflow .ef-s b{display:block;font-size:10.5px;letter-spacing:.4px;text-transform:uppercase;color:var(--cyan);margin-bottom:1px}
+    .eflow .ef-s b::before{content:"↻ "}
+    .eflow .ef-s .src{display:block;font-size:11px;margin-top:2px}
     .e-fact{margin:12px 0 0;font-size:13.5px;line-height:1.5;color:var(--text);border-left:3px solid var(--brand);padding:4px 0 4px 10px}
     .e-fact .tag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.4px;color:#0b171d;background:var(--cyan);border-radius:4px;padding:0 5px;margin-right:6px}
     .e-pane .gloss-wrap{margin-top:14px}
@@ -226,6 +230,8 @@
     .q-hz .said{font-size:13.5px;line-height:1.5;color:var(--text);margin:0}
     .q-hz .said .who{color:var(--yellow);font-weight:700}
     .p-pane .gloss-wrap{margin-top:14px}
+    .q-pane .gloss-wrap{margin-top:12px}
+    .q-pane .gloss dt::before{content:"⚛ ";color:var(--cyan)}
     .p-pane .gloss dt::before{content:"⚙ "}
     .p-pane{display:none;margin:4px 0 18px}
     .p-pane.on{display:block}
@@ -398,7 +404,7 @@
         <aside class="vc-callout">
           <strong>Kort kæde med vilje.</strong>
           NDI har ikke skrevet en egentlig analyse af kvantekæden, så siden holdes kort. Mads nævner kvantecomputere som et segment med politisk medvind og høj volatilitet og som eksempel på teknologier, hvis indtægter ikke passer i et regneark (BLOG 2. juni og 21. juli 2025).
-          <p class="link-row" style="margin:10px 0 0"><a href="tema.html?slug=quantum&amp;fund=pmindi">Quantum-temaet i beholdningen →</a> · <a href="laer/saadan-taenker-vi.html">Hvorfor usikre indtægter ikke passer i et regneark →</a></p>
+          <p class="link-row" style="margin:10px 0 0"><a href="tema.html?slug=quantum&amp;fund=pmindi">Quantum-temaet i beholdningen →</a> · <a href="laer/saadan-taenker-vi.html">Hvorfor usikre indtægter ikke passer i et regneark →</a> · <a href="?kaede=quantum#q-gl" data-sec="quantum:q-gl">⚛ Kvante-ordbog (10 ord) →</a></p>
         </aside>
         <section class="q-hz" id="q-hz" aria-labelledby="q-hz-h" hidden>
           <h3 id="q-hz-h"></h3>
@@ -412,6 +418,11 @@
           <div class="br-grid" id="q-bridges"></div>
           <p class="src" id="q-bridges-note" style="margin-top:6px"></p>
         </div>
+        <details class="gloss-wrap" id="q-gl">
+          <summary><h3>Kvante-ordbog</h3><span class="src" id="q-gloss-count">Ord, der gør kæden lettere at læse</span></summary>
+          <dl class="gloss" id="q-gloss"></dl>
+          <p class="src" id="q-gloss-note" style="margin-top:8px"></p>
+        </details>
       </div>
 
       <div class="p-pane" id="p-pane" aria-label="Robotik forklaret">
@@ -864,12 +875,14 @@
     const qc = pack.chains.find(c => c.id === 'quantum');
     document.getElementById('q-bridges').innerHTML = (qc?.bridges || []).map(brCard).join('');
     document.getElementById('q-bridges-note').textContent = qc?.bridgesNote || '';
+    renderGloss(qc, ['q-gloss', 'q-gloss-note', 'q-gloss-count', 'q-gl']);
     // Energi: strømmens vej med NDI-mærker for pres (kilde pr. mærke)
     const en = pack.chains.find(c => c.id === 'energy');
     (function renderFlow(f) {
       if (!f) return;
       document.getElementById('ef-title').textContent = f.title;
       document.getElementById('ef-lede').textContent = f.lede;
+      const shift = (m) => m ? `<p class="ef-s"><b>Det ændrer sig${m.kind === 'baggrund' ? ' · baggrund' : ''}</b>${esc(m.t)}${m.src ? `<span class="src">Kilde: ${esc(m.src)}</span>` : ''}</p>` : '';
       const mark = (m, soft) => m ? `<p class="ef-p${soft ? ' soft' : ''}"><span class="tag">${soft ? 'NDI · nævnt' : 'NDI · pres'}</span>${esc(m.t)}<span class="src">Kilde: ${esc(m.src)}</span></p>` : '';
       document.getElementById('eflow').innerHTML = (f.steps || []).map(st => {
         const [cid, lid] = st.hop ? st.hop.split(':') : ['energy', st.link];
@@ -882,10 +895,10 @@
           : `<a href="#lk-${esc(lid)}" data-open="${esc(lid)}">Se leddet →</a>`;
         const altA = alt ? ` · <a href="#lk-${esc(alt.id)}" data-open="${esc(alt.id)}">${esc(alt.label)} (${alt.count}) →</a>` : '';
         return `<li class="${st.press ? 'press' : ''}"><div class="ef-top"><span class="ef-i" aria-hidden="true">${l.icon || '◆'}</span><span class="ef-k">${esc(l.short || l.label)}<small>${esc(st.verb)}</small></span></div>`
-          + `<p class="ef-n"><b>${l.count}</b> selskaber${other ? ` · ${esc(other.title)}` : ''}</p>${mark(st.press, false)}${mark(st.note, true)}<p style="margin:6px 0 0">${open}${altA}</p></li>`;
+          + `<p class="ef-n"><b>${l.count}</b> selskaber${other ? ` · ${esc(other.title)}` : ''}</p>${mark(st.press, false)}${mark(st.note, true)}${shift(st.shift)}<p style="margin:6px 0 0">${open}${altA}</p></li>`;
       }).join('');
       document.getElementById('ef-fact').innerHTML = f.fact ? `<span class="tag">NDI</span>${esc(f.fact.t)} <span class="src">Kilde: ${esc(f.fact.src)}</span>` : '';
-      document.getElementById('ef-note').textContent = f.note || '';
+      document.getElementById('ef-note').textContent = [f.note, f.shiftNote].filter(Boolean).join(' ');
     })(en?.flow);
     renderGloss(en, ['e-gloss', 'e-gloss-note', 'e-gloss-count', 'e-gloss-wrap']);
 
@@ -1224,7 +1237,7 @@
       const hp = e.target.closest('[data-hop]');
       if (hp) { e.preventDefault(); const [c, l] = hp.dataset.hop.split(':'); if (linkOf(c, l)) go(c, l); return; }
       const sc = e.target.closest('[data-sec]');
-      if (sc) { e.preventDefault(); const [c, sec] = sc.dataset.sec.split(':'); render(c); document.getElementById(sec)?.scrollIntoView({ block: 'start' }); return; }
+      if (sc) { e.preventDefault(); const [c, sec] = sc.dataset.sec.split(':'); render(c); const el = document.getElementById(sec); if (el?.tagName === 'DETAILS') el.open = true; el?.scrollIntoView({ block: 'start' }); return; }
       const dm = e.target.closest('[data-dam]');
       if (dm) { e.preventDefault(); go('ai-compute', dm.dataset.dam); return; }
       const o = e.target.closest('[data-open]');
@@ -1251,6 +1264,7 @@
     if (startLink && document.getElementById(`lk-${startLink}`)) go(startChain, startLink);
     // Deep link til en forklaring i en fane, fx ?kaede=energy#e-pane eller ?kaede=space#sp-cost
     const startSec = !startLink && /^#[a-z][\w-]*$/.test(location.hash) ? document.querySelector(`#kap-kaeder ${location.hash}`) : null;
+    if (startSec?.tagName === 'DETAILS') startSec.open = true;
     if (startSec && startSec.offsetParent !== null) requestAnimationFrame(() => startSec.scrollIntoView({ block: 'start' }));
   </script>
 </body>

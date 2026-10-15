@@ -83,3 +83,7 @@ Se `notes/VISUAL-VARIETY-REVIEW.md`.
 - Ny form på vaerdikaeder (rum-fanen): **trinvis fortælling med scene**. En SVG viser seks stationer fra jorden op i lavt kredsløb og en gul markør, der glider mellem trinene. Under scenen er der runde ikon-knapper (tablist med piletaster og Home/End), et kort pr. trin og knapperne Forrige/Næste (sidste trin: ↺ Forfra). En stiplet gul pil fra "udskiftes" tilbage til "samles" viser, at kæden er en løkke.
 - AI-flodkortet har fået et stiplet "sidespor"-kort med ikon (⏳) til kvante. Det er en anden form end bro-kortene.
 - Alt er page-local CSS (trip-*, rv-side). ndi.css er ikke rørt.
+
+## lane-A · 2026-10-16 ~01:45 CEST
+- Energi-strømvej: hver station har nu en stiplet "↻ Det ændrer sig"-linje i cyan under pres-mærket, så kortet læses i tre lag (hvad, pres, skift). Kun sidens egen CSS (`.ef-s`).
+- Kvante-ordbog med ⚛ i cyan som ord-ikon (rum bruger ◇, energi ⚡, robotik ⚙), så hver kædes ordbog har sit eget mærke.
