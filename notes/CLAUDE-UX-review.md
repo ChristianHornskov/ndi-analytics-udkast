@@ -182,3 +182,40 @@ Tidsstemplet er vægurstid. Cyklus 6's "00:25" lå lidt foran. Grundlag: `origin
 - Ingen nye.
 
 Watchdog: main har ikke bevæget sig i to cyklusser. Næste fulde review først ved ny commit på main.
+
+## 2026-10-16 00:45 CEST · cyklus 8 (main `1bc0d43`, fuld runde)
+
+Main har bevæget sig siden `60cebcc`: lane-A/B/C/D/E/X er merget (flodkort, NDI-linse 68, lær/valuta, drawdown-markeringer, omkostninger med kvitteringer). Live-sitet har de nye sider (valuta 200, omkostninger med `receipt`), så Pages er ikke bagud. Testet lokalt med Playwright på 16 sider ved 375 og 1280: ingen vandret scroll og ingen konsolfejl.
+
+### MUST
+- **"MADS FØLGER"-badge står stadig på selskabssiden** (SoftBank `JP3436100006` viser det 3 gange) og som filteret "Konti Mads følger" på ndi-paa-x. For en privatinvestor ser det ud, som om fonden går ind for tredjeparts opslag. Kilde: `js/x-feed.js:339` og `ndi-paa-x.html:86/109/163`. Badget skal omdøbes til noget neutralt, fx "Udvalgt offentligt opslag", eller fjernes.
+- **Fakta viser stadig toppunktet 2. jun. 2026 efter bunden 8. apr. 2025.** Siden siger det nu selv ("står som 2. jun. 2026, altså efter bunden, og er ikke tegnet"). Det er ærligt, men det er en rå datafejl, som brugeren kan se. `risk-stats.json:maxDdPeak` skal rettes i data, ikke forklares i teksten.
+- **Der står stadig "udfyldes"/"afventer" i UI'et:** på fonden ("afventer Fundmarket-godkendelse"), fakta (3×), omkostninger ("Tomme felter = udfyldes") og risici ("vol/Sharpe: udfyldes", "afventer gennemgang: 115"). FO-personaen læser det som et ufærdigt produkt.
+
+### SHOULD
+- **Omkostninger er blevet klart bedre.** Sammenligningen har nu mærker for Forskel/Ens, og kvitteringerne regner i kr. pr. 100.000 kr. med en sætning som "80 kr. i regneeksemplet. Det er ikke et ÅOP". Det dækker personaens krav om at kunne se omkostninger i kroner. Der mangler stadig én samlet linje "løbende omkostninger i alt (OCF) fra KID", så FO ikke selv skal lægge satserne sammen.
+- **Lær/valuta er god formidling.** Eksemplet 1,10 × 0,95 og skyderne er pædagogiske. Siden mangler dog en "næste side"-dør tilbage til fonden.
+- **Værdikæder er tung på 375** (ca. 17.800 tegn tekst). Flodkort, energi-strømvej, rum-før/nu og robot-ordbog ligger nu på samme side, og der er stor risiko for, at variationen trætter. Fanerne bør åbne lukket på mobil, ligesom om-data gør med `details` under 700 px.
+- **NDI-linse** ("hvad man kan holde øje med") er fint kvalitativ. Hold øje med, at formuleringen ikke glider over i "hvad man bør gøre".
+
+### Nice
+- Drawdown: prikken på valgt dag og markeringen "Dybeste fald" virker godt. AKK-teksten om 12 måneder står stadig.
+- Om-data folder ordlisten sammen på mobil, så den er ca. 1.150 tegn over folden. Det er godt.
+
+## 2026-10-16 00:31 CEST · cyklus 9 (main `1bc0d43` uændret, delta)
+
+Main er ikke flyttet siden cyklus 8. Live-sitet er byte-identisk med `docs/` for 13 af 13 tjekkede filer, så Pages er ikke bagud. Jeg har kørt Playwright mod live-sitet på 18 sider (entré, fonden, portefølje, udforsk, værdikæder, drawdown, risici, SoftBank, temaer, invester, om-data, omkostninger, fakta, ndi-paa-x, nyhedsarkiv, sammenlign, idéer, lær/valuta) ved 375 og 1280 px. Der er 0 sider med vandret scroll og 0 konsolfejl.
+
+### MUST (uændret fra cyklus 8)
+- "Mads følger" vises stadig: renderet på SoftBank-siden og ndi-paa-x (`js/x-feed.js:339`, `ndi-paa-x.html:86,109,163`).
+- Toppunktet for drawdown ligger efter bunden (`data/risk-stats.json:9` `maxDdPeak 2026-06-02`).
+- Der står stadig "afventer"/"udfyldes" i UI'et: fonden 1 sted ("ÅTD og 100.000 kr.-eksemplet afventer Fundmarket-godkendelse"), fakta 3, risici 2, selskab 2, temaer 1 ("FORSLAG AFVENTER GENNEMGANG"), omkostninger 1.
+
+### SHOULD
+- **Den tomme livscyklus-boks står øverst på porteføljen.** Der står "Ingen af fondens 345 selskaber er klassificeret endnu" lige efter overskriften. Det er det første, en ny bruger møder efter vægtteksten. Boksen bør skjules, indtil der er mindst én klassificering, eller flyttes under tabellen.
+- **Porteføljen har stadig ingen eksplicit top-10.** Tabellen er sorteret efter vægt (Sea 2,13, SoftBank 1,51, Carvana 1,28 …), men der er ingen overskrift eller kort opsummering som "De 10 største udgør X %". FO-personaen vil have det tal i ét blik.
+- **Nyhedsarkiv** har 8 synlige "Placeholder:"-tekster og bliver linket fra nav/app.js, kort og ndi-paa-x. Fjern linket, indtil siden har indhold, eller skriv "Kommer" i stedet for "Placeholder".
+- Værdikæder er uændret ca. 17.800 tegn på 375 (se cyklus 8).
+
+### Nice
+- Drawdown, sammenlign og lær/valuta er rene: korte sider med risikolinje og ingen stubs.
