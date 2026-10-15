@@ -24,7 +24,7 @@
       <p class="lede">Kort oversigt baseret på Central Information Dokument (KID). Generel information — ikke rådgivning.</p>
       <section class="panel">
         <h2 style="font-size:16px;margin-bottom:8px">PMINDI</h2>
-        ${p ? `<p style="color:var(--muted);line-height:1.6">Risikoklasse <strong style="color:var(--text)">${p.risk_class} / ${p.risk_scale_max}</strong> (${p.risk_label}). Anbefalet ejertid ${p.recommended_holding_years} år. KID pr. ${fmtDate(p.production_date)}.</p>
+        ${p ? `${p.key_risks ? `<ul style="color:var(--muted);line-height:1.55;padding-left:1.2rem;margin-bottom:12px">${Object.entries(p.key_risks).filter(([,v])=>v).map(([k])=>`<li>${({aktiemarkedsrisiko:'Aktiemarkedsrisiko',vækst_og_sektorrisiko:'Vækst- og sektorrisiko',valutarisiko:'Valutarisiko',ingen_markedsbeskyttelse:'Ingen markedsbeskyttelse',muligt_tab_af_hele_investeringen:'Muligt tab af hele investeringen'}[k]||k)}</li>`).join('')}</ul>` : ''}<p style="color:var(--muted);line-height:1.6">Risikoklasse <strong style="color:var(--text)">${p.risk_class} / ${p.risk_scale_max}</strong> (${p.risk_label}). Anbefalet ejertid ${p.recommended_holding_years} år. KID pr. ${fmtDate(p.production_date)}.</p>
         <p><a href="${p.url}">Læs KID (Fundmarket PDF) ↗</a></p>` : '<p style="color:var(--muted)">KID-data mangler i snapshot.</p>'}
       </section>
       <section class="panel">
