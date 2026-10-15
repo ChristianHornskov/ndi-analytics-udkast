@@ -148,7 +148,32 @@
     .cost-ndi .tag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.4px;color:#0b171d;background:var(--cyan);border-radius:4px;padding:0 5px;margin-right:6px}
     .a-pane{display:none;margin:4px 0 18px;border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:linear-gradient(180deg,#0e2027,#0b171d)}
     .a-pane.on{display:block}
-    #a-pane,#e-pane,#p-pane,#sp-cost,#q-hz{scroll-margin-top:110px}
+    #a-pane,#e-pane,#p-pane,#sp-cost,#sp-trip,#q-hz,#q-br{scroll-margin-top:110px}
+    .trip{margin-top:16px;border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:linear-gradient(180deg,#0b171d,#0e2027)}
+    .trip h3{font-size:15px;color:var(--cyan);margin:0 0 4px}
+    .trip-grid{display:grid;gap:12px;margin-top:10px}
+    @media(min-width:760px){.trip-grid{grid-template-columns:.9fr 1.1fr;align-items:center}}
+    .trip-scene svg{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:10px;background:radial-gradient(ellipse at 50% 130%,#173640 0%,#0b171d 60%,#070f13 100%)}
+    .trip-scene text{font-family:inherit}
+    .trip-scene .st{cursor:pointer}
+    .trip-scene .st circle{fill:#0b171d;stroke:#3a5a63;stroke-width:1.5;transition:stroke .2s}
+    .trip-scene .st.on circle{stroke:var(--yellow);stroke-width:2.5}
+    .trip-scene .st.done circle{stroke:var(--brand)}
+    .trip-scene .st:focus-visible circle{stroke:var(--text);stroke-width:3}
+    .trip-mk{transition:transform .5s ease}
+    @media (prefers-reduced-motion:reduce){.trip-mk{transition:none}}
+    .trip-dots{display:flex;flex-wrap:wrap;gap:6px}
+    .trip-dots button{width:34px;height:34px;border-radius:50%;border:1.5px solid var(--line);background:#0b171d;color:var(--text);font-size:15px;cursor:pointer;display:grid;place-items:center;padding:0}
+    .trip-dots button[aria-selected="true"]{border-color:var(--yellow);box-shadow:0 0 0 2px #0b171d,0 0 0 4px var(--yellow)}
+    .trip-dots button.done{border-color:var(--brand)}
+    .trip-card{margin-top:10px;border:1px solid var(--line);border-left:3px solid var(--yellow);border-radius:10px;padding:10px 12px;background:#0b171d;min-height:150px}
+    .trip-card .n{font-size:11px;letter-spacing:.5px;text-transform:uppercase;color:var(--yellow);font-weight:700}
+    .trip-card h4{font-size:15px;margin:3px 0 4px;color:var(--text)}
+    .trip-card p{font-size:13px;line-height:1.5;margin:0;color:var(--muted)}
+    .trip-card .who{margin-top:8px;font-size:12.5px;color:var(--text)}
+    .trip-card .who b{color:var(--cyan)}
+    .trip-card .loop{margin-top:8px;font-size:12.5px;color:var(--yellow)}
+    .trip-nav{display:flex;gap:8px;margin-top:10px}
     .a-pane h3{font-size:15px;color:var(--cyan);margin:0 0 4px}
     .rv-host svg{display:block;width:100%;height:auto;margin:10px 0 4px}
     .rv-host a:focus-visible circle{stroke:var(--text);stroke-width:3}
@@ -162,6 +187,9 @@
     .rv-legend .lv-open i{border-color:#829da0;border-style:dashed}
     .rv-legend .lv-source i{background:var(--cyan);border-color:var(--cyan)}
     .rv-legend b{color:var(--text);font-weight:700}
+    .rv-side{display:flex;gap:10px;align-items:flex-start;margin:10px 0 0;padding:8px 10px;border:1px dashed #3a5a63;border-radius:10px;font-size:12.5px;line-height:1.5;color:var(--muted)}
+    .rv-side b{color:var(--text)}
+    .rv-side-i{flex:none;display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:#16323b;color:var(--yellow);font-size:13px}
     .vc-press{margin:6px 0 0;font-size:12.5px;line-height:1.45;color:var(--text)}
     .vc-press .tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.4px;border-radius:4px;padding:0 5px;margin-right:6px;background:#2a4650;color:var(--text)}
     .vc-press.lv-dam .tag{background:var(--yellow);color:#0b171d}
@@ -321,6 +349,7 @@
               <li><b>Tjenester, der løber.</b> Internet, telefoni og jorddata sælges som abonnement år efter år.</li>
               <li><b>Måske compute.</b> Idéen om datacentre i kredsløb er tidlig og usikker. Se citatet nedenfor.</li>
             </ol>
+            <p class="src" style="margin-top:8px"><a href="?kaede=space#sp-trip" data-sec="space:sp-trip">🛰 Følg én satellit fra fabrik til tjeneste, trin for trin →</a></p>
           </div>
         </div>
         <section class="cost" id="sp-cost" aria-labelledby="sp-cost-h" hidden>
@@ -333,6 +362,22 @@
           <ol class="levers" id="cost-levers" aria-label="Fra billig opsendelse til tjenester"></ol>
           <p class="cost-ndi" id="cost-ndi"></p>
           <p class="src" id="cost-note" style="margin-top:6px"></p>
+        </section>
+        <section class="trip" id="sp-trip" aria-labelledby="trip-h" hidden>
+          <h3 id="trip-h"></h3>
+          <p class="src" id="trip-lede"></p>
+          <div class="trip-grid">
+            <div class="trip-scene" id="trip-scene"></div>
+            <div>
+              <div class="trip-dots" id="trip-dots" role="tablist" aria-label="Trin på rejsen"></div>
+              <div class="trip-card" id="trip-card" role="tabpanel" aria-live="polite"></div>
+              <div class="trip-nav">
+                <button type="button" class="control" id="trip-prev">← Forrige</button>
+                <button type="button" class="control" id="trip-next">Næste →</button>
+              </div>
+            </div>
+          </div>
+          <p class="src" id="trip-note" style="margin-top:8px"></p>
         </section>
         <div class="sp-learn">
           <figure style="margin:0">
@@ -362,7 +407,7 @@
           <p class="cost-ndi" id="q-hz-ndi"></p>
           <p class="src" id="q-hz-note" style="margin-top:6px"></p>
         </section>
-        <div class="bridges" style="margin-top:12px">
+        <div class="bridges" id="q-br" style="margin-top:12px">
           <h3>Hvor kvante møder resten af kæden</h3>
           <div class="br-grid" id="q-bridges"></div>
           <p class="src" id="q-bridges-note" style="margin-top:6px"></p>
@@ -386,6 +431,7 @@
         <div class="rv-host" id="rv-host"></div>
         <ul class="rv-legend" id="rv-legend"></ul>
         <p class="src" id="rv-note" style="margin-top:6px"></p>
+        <p class="rv-side"><span class="rv-side-i" aria-hidden="true">⏳</span><span><b>Sidespor: kvante.</b> Kvantecomputere står uden for floden. De lejes i dag mest over skyen og styres af almindelige chips ved siden af, så de rører cloud og chipdesign (baggrund). NDI har ikke beskrevet dem som et led i AI-kæden. <a href="?kaede=quantum#q-br" data-sec="quantum:q-br">Se hvor kvante møder kæden →</a></span></p>
       </div>
 
       <div class="e-pane" id="e-pane" aria-label="Energi forklaret">
@@ -690,6 +736,73 @@
       document.getElementById('cost-note').textContent = c.note || '';
       document.getElementById('sp-cost').hidden = false;
     })(sp?.costStory);
+    // Følg én satellit: seks trin gennem rumkæden (baggrund; antal og navne fra beholdningen)
+    (function renderTrip(t) {
+      if (!t?.steps?.length) return;
+      const steps = t.steps;
+      const W = 320, H = 236, ex = 160, ey = 252, rx = 200, ry = 190;
+      const ring = (x) => ey - ry * Math.sqrt(1 - ((x - ex) / rx) ** 2);
+      const P = [[46, 192], [108, 192], [166, 128], [214, ring(214)], [270, ring(270)], [298, 168]];
+      const pts = P.slice(0, steps.length);
+      const linkIn = (id) => sp.links.find(l => l.id === id);
+      let html = `<path d="M-20 ${H + 40} Q ${W / 2} ${H - 90} ${W + 20} ${H + 40}" fill="#1a3a44" stroke="var(--brand)" stroke-width="1.5"/>`
+        + `<ellipse cx="${ex}" cy="${ey}" rx="${rx}" ry="${ry}" fill="none" stroke="#89aeb4" stroke-opacity=".35" stroke-dasharray="2 5"/>`
+        + `<text x="${ex - 40}" y="${ring(ex - 40) - 7}" fill="var(--muted)" font-size="9" text-anchor="middle">lavt kredsløb ≈ 550 km</text>`;
+      // Spor: jorden → op → kredsløb; sidste stykke = ned og brænder op
+      const tr = pts.slice(0, 5);
+      html += `<path d="M${tr.map(q => q.join(' ')).join(' L')}" fill="none" stroke="var(--brand)" stroke-width="1.5" stroke-opacity=".7"/>`;
+      if (pts[5]) html += `<path d="M${pts[4].join(' ')} Q ${pts[5][0] + 10} ${pts[4][1] + 30} ${pts[5].join(' ')}" fill="none" stroke="#d98a7a" stroke-width="1.5" stroke-dasharray="3 3"/>`
+        + `<path d="M${pts[5][0]} ${pts[5][1] + 18} Q 214 ${H - 18} ${pts[1][0] + 18} ${pts[1][1] + 6}" fill="none" stroke="var(--yellow)" stroke-width="1.2" stroke-dasharray="4 4" marker-end="url(#trip-ah)"/>`
+        + `<text x="${W / 2 + 30}" y="${H - 8}" fill="var(--yellow)" font-size="9" text-anchor="middle">↺ nye satellitter: kæden starter forfra</text>`
+        + `<defs><marker id="trip-ah" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="var(--yellow)"/></marker></defs>`;
+      // Signaler ned fra tjeneste-trinnet
+      if (pts[4]) html += [-34, -12, 8].map(dx => `<line x1="${pts[4][0]}" y1="${pts[4][1] + 14}" x2="${pts[4][0] + dx}" y2="${H - 42}" stroke="var(--cyan)" stroke-opacity=".35" stroke-dasharray="2 4"/>`).join('');
+      html += `<g class="trip-mk" id="trip-mk"><circle r="20" fill="none" stroke="var(--yellow)" stroke-width="1.5" stroke-dasharray="4 3"/></g>`;
+      html += pts.map((q, i) => `<g class="st" data-st="${i}" tabindex="-1" role="button" aria-label="Trin ${i + 1}: ${esc(steps[i].k)}" transform="translate(${q[0]} ${q[1]})"><circle r="15"/><text y="5.5" text-anchor="middle" font-size="15">${steps[i].icon}</text><text y="-20" text-anchor="middle" fill="var(--muted)" font-size="9.5" font-weight="700">${i + 1}</text></g>`).join('');
+      const scene = document.getElementById('trip-scene');
+      scene.innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="En satellits rejse i ${steps.length} trin: ${steps.map((x, i) => `${i + 1}. ${x.k}`).join(', ')}">${html}</svg>`;
+      const dots = document.getElementById('trip-dots');
+      dots.innerHTML = steps.map((x, i) => `<button type="button" role="tab" id="trip-t${i}" aria-controls="trip-card" aria-label="Trin ${i + 1}: ${esc(x.k)}" title="${esc(x.k)}"><span aria-hidden="true">${x.icon}</span></button>`).join('');
+      const card = document.getElementById('trip-card');
+      const asOf = fmtDate(pack.asOf);
+      const who = (l) => {
+        if (!l) return '';
+        if (!l.count) return `<p class="who">${esc(l.short || l.label)}: ingen selskaber i beholdningen er tilordnet leddet.</p>`;
+        const names = l.companies.slice(0, 3).map(c => `<a href="selskab.html?isin=${encodeURIComponent(c.isin)}&fund=${fund}">${esc(c.name)}</a>`).join(', ');
+        return `<p class="who">Led: <b>${esc(l.short || l.label)}</b> · ${l.count} selskaber pr. ${asOf}, fx ${names}. <a href="#lk-${esc(l.id)}" data-open="${esc(l.id)}">Se leddet →</a></p>`;
+      };
+      let cur = 0;
+      const show = (i, focus) => {
+        cur = Math.max(0, Math.min(steps.length - 1, i));
+        const x = steps[cur];
+        card.setAttribute('aria-labelledby', `trip-t${cur}`);
+        card.innerHTML = `<div class="n">Trin ${cur + 1} af ${steps.length}</div><h4><span aria-hidden="true">${x.icon}</span> ${esc(x.k)}</h4><p>${esc(x.t)}</p>${who(linkIn(x.link))}${x.also ? who(linkIn(x.also)) : ''}${x.loop ? '<p class="loop">↺ Udskiftningen er grunden til, at opsendelse er en løbende forretning og ikke en engangsopgave (baggrund).</p>' : ''}`;
+        dots.querySelectorAll('button').forEach((b, j) => {
+          b.setAttribute('aria-selected', String(j === cur));
+          b.tabIndex = j === cur ? 0 : -1;
+          b.classList.toggle('done', j < cur);
+        });
+        scene.querySelectorAll('.st').forEach((g, j) => { g.classList.toggle('on', j === cur); g.classList.toggle('done', j < cur); });
+        document.getElementById('trip-mk').style.transform = `translate(${pts[cur][0]}px, ${pts[cur][1]}px)`;
+        document.getElementById('trip-prev').disabled = cur === 0;
+        document.getElementById('trip-next').textContent = cur === steps.length - 1 ? '↺ Forfra' : 'Næste →';
+        if (focus) dots.querySelectorAll('button')[cur].focus();
+      };
+      dots.addEventListener('click', (e) => { const b = e.target.closest('button'); if (b) show([...dots.children].indexOf(b)); });
+      dots.addEventListener('keydown', (e) => {
+        const d = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 }[e.key];
+        if (e.key === 'Home' || e.key === 'End') { e.preventDefault(); show(e.key === 'Home' ? 0 : steps.length - 1, true); }
+        else if (d) { e.preventDefault(); show(cur + d, true); }
+      });
+      scene.addEventListener('click', (e) => { const g = e.target.closest('.st'); if (g) show(+g.dataset.st); });
+      document.getElementById('trip-prev').addEventListener('click', () => show(cur - 1));
+      document.getElementById('trip-next').addEventListener('click', () => show(cur === steps.length - 1 ? 0 : cur + 1));
+      document.getElementById('trip-h').textContent = t.title;
+      document.getElementById('trip-lede').textContent = t.lede;
+      document.getElementById('trip-note').textContent = t.note || '';
+      show(0);
+      document.getElementById('sp-trip').hidden = false;
+    })(sp?.trip);
     document.getElementById('sp-latency').textContent = sp?.latency || '';
     (function renderAltitudes(items) {
       if (!items?.length) return;

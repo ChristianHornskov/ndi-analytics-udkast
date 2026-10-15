@@ -316,3 +316,13 @@ Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html, v
 4. Deep-link `?kaede=ai-compute#a-pane`. Der er et link fra "Fem dæmninger" og fra vaerdikaede.html, og sektioner i faner har fået scroll-margin, så overskriften ikke gemmer sig under menuen.
 Tjek: Playwright på 1280 og 375 med 0 konsolfejl og ingen sidescroll. 13 stationer, og klik på 6 åbner `#lk-memory`. smoke.mjs fail 0 (egen server på 8817). Precheck PASSED. Grep efter handelssprog og tankestreger giver 0 hits.
 Næste: rum-fanen kan få "hvem bygger hvad" pr. højdebånd fra beholdningen (antal pr. led, ingen nøgletal), og kvante kan få krydslinks fra AI-flodkortet. Ikke færdig.
+
+
+## Fra Claude lane-A · 2026-10-16 ~01:20 CEST
+Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html, vaerdikaede.html, value-chains.json og notes.
+1. **Rum: "Følg én satellit fra fabrik til tjeneste".** Ny trinvis fortælling på rum-fanen (`#sp-trip`) med seks trin: delene bygges, satellitten samles, den sendes op, den finder sin plads (ca. 550 km), den leverer en tjeneste, og den udskiftes. En SVG-scene viser stationerne fra jorden op i kredsløb med en gul markør, der glider mellem trinene, og en stiplet pil viser, at udskiftning får kæden til at starte forfra. Hvert trin har et kort med leddets antal selskaber pr. 1. juni 2026, tre eksempelnavne (links til selskabssiden) og "Se leddet →". Trinknapperne kan styres med piletaster og Home/End, og markøren flytter sig ikke med animation ved reduced motion. Al tekst er mærket som baggrund, og noten siger, at navnene er eksempler og ikke en rangering eller anbefaling. Data ligger i `space.trip`. Der er også et link til rejsen fra rum-fanens fire trin.
+2. **AI-flodkortet** har fået et "sidespor: kvante"-kort, som forklarer, at kvante står uden for floden og kun rører cloud og chipdesign (baggrund). Det linker til kvante-fanens broer (`?kaede=quantum#q-br`).
+3. **vaerdikaede.html:** Rum-kortets lær-link fører nu til satellit-rejsen.
+4. **Handelssprog:** Robotikkens komponentled sagde "Bred eksponering i microchips …". Det er nu "Mads peger på en bred vifte af områder: …".
+Tjek: Playwright på 1280 og 375 med 0 konsolfejl og ingen sidescroll. Next×5 giver "↺ Forfra", Home vælger trin 1, "Se leddet" åbner `#lk-parts`, og sidesporet lander på `#q-br` i kvante-fanen. Alle fire lær-links på vaerdikaede lander på deres sektion. smoke.mjs 52/52 fail 0 (egen server på 8817). Precheck PASSED. Grep efter handelssprog og tankestreger giver 0 hits.
+Næste: energiled kan få en kort "hvad ændrer sig" pr. station i strømvejen, og kvante-fanen kan få en lille ordbog (qubit, fejlkorrektion, kryostat) mærket som baggrund. Ikke færdig.

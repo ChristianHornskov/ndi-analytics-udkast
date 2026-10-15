@@ -1816,7 +1816,7 @@
      "icon": "⚙",
      "label": "Komponenter",
      "blurb": "Sensorer, motorer, effektelektronik og batterier til robotter og autonome systemer.",
-     "ndi": "Bred eksponering i microchips, software, simulering, automatisering og robotisering.",
+     "ndi": "Mads peger på en bred vifte af områder: microchips, software, simulering, automatisering og robotisering.",
      "themes": [
       "chips",
       "physical",
@@ -3641,6 +3641,57 @@
      "src": "BLOG 23. juni 2024"
     },
     "note": "Forklaringen er generel baggrundsviden og ikke NDI's synspunkter. Vi viser ikke priser pr. kilo, fordi NDI ikke har opgjort dem. Tallet om 90 % er NDI's."
+   },
+   "trip": {
+    "title": "Følg én satellit fra fabrik til tjeneste",
+    "lede": "Kæden er lettere at forstå, når man følger én internetsatellit hele vejen. Hvert trin er et led i kæden. Under trinnet står, hvor mange selskaber i den forsinkede beholdning der er tilordnet leddet.",
+    "steps": [
+     {
+      "icon": "🔩",
+      "k": "Delene bygges",
+      "t": "Solpaneler, batterier, motorer til at styre satellitten og computeren om bord bygges på fabrikker på jorden. Mange af dem bruges også i fly og forsvar.",
+      "link": "parts",
+      "alt": 0
+     },
+     {
+      "icon": "🛰",
+      "k": "Satellitten samles",
+      "t": "Delene samles til en satellit. Nye internetsatellitter bygges i serie, lidt som biler på et samlebånd, i stedet for én ad gangen.",
+      "link": "sats",
+      "alt": 0
+     },
+     {
+      "icon": "🚀",
+      "k": "Den sendes op",
+      "t": "En raket tager mange satellitter med på én tur. Det første trin lander igen og kan genbruges, så hver tur bliver billigere.",
+      "link": "launch",
+      "alt": 1
+     },
+     {
+      "icon": "🧭",
+      "k": "Den finder sin plads",
+      "t": "Satellitten bruger sin egen lille motor til at komme på plads i lavt kredsløb, omkring 550 km oppe. Her tager en tur rundt om jorden cirka halvanden time.",
+      "link": "sats",
+      "alt": 2
+     },
+     {
+      "icon": "📡",
+      "k": "Den leverer en tjeneste",
+      "t": "Nu tjener satellitten penge hver måned: internet til skibe, fly, landområder og efterhånden almindelige mobiltelefoner. Andre satellitter fotograferer jorden og sælger data.",
+      "link": "satcom",
+      "alt": 3,
+      "also": "eo"
+     },
+     {
+      "icon": "♻",
+      "k": "Den udskiftes",
+      "t": "Satellitter i lavt kredsløb holder typisk kun nogle år. Til sidst styres de ned og brænder op i atmosfæren. Derfor skal der hele tiden bygges og sendes nye op, og kæden starter forfra.",
+      "link": "launch",
+      "alt": 4,
+      "loop": true
+     }
+    ],
+    "note": "Rejsen er generel baggrundsviden, ikke NDI's synspunkter, og tiderne er omtrentlige. Antal og navne er fra den forsinkede beholdning pr. 1. juni 2026. Navnene er eksempler på, hvem der er tilordnet leddet. De er ikke en rangering og ikke en anbefaling."
    }
   },
   {
