@@ -529,3 +529,13 @@ Profilen sagde kun antimon. Forsiden siger, at selskabet udvinder og forarbejder
 Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Zeolit står. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `a5c1301` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 00:51 CEST. Capstone nævner minerne, og Santo Domingo er et projekt. Ikke færdig.**
+
+Profilen siger, at selskabet skriver, at produktionen i 2025 var 225.000 ton kobber. Siden nævner Mantos Blancos, Cozamin, Pinto Valley og Mantoverde. Santo Domingo er beskrevet som et projekt, ikke som en mine i drift. Tallet på siden stod som 225 k tonnes. Formuleringerne om verdens behov og om at være den eneste er ikke kopieret. Ingen `reviewedAt`.
+
+Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. 225.000 ton står i det første afsnit. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `53f64d1` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

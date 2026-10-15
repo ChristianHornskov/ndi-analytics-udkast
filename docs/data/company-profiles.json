@@ -1031,15 +1031,15 @@
   "CA14071L1085": {
    "name": "Capstone Copper",
    "theme": "energy-resources",
-   "summary": "Driver kobberminedrift.",
+   "summary": "Driver kobberminedrift. Selskabet skriver, at produktionen i 2025 var 225.000 ton kobber. Santo Domingo er et projekt, ikke en mine i drift.",
    "watch": "Drift af minerne og kobberpriser.",
    "source": "https://capstonecopper.com/",
    "products": "Kobber.",
    "customers": "Smelteværker og industrikunder.",
    "role": "Råstof.",
    "narrative": [
-    "Capstone driver kobberminedrift.",
-    "Det er en mine i denne beskrivelse, ikke et kraftværk."
+    "Capstone skriver, at selskabet producerede 225.000 ton kobber i 2025. Siden nævner Mantos Blancos, Cozamin, Pinto Valley og Mantoverde.",
+    "Santo Domingo er beskrevet som et projekt, ikke som en mine i drift. Selskabet er ikke et kraftværk."
    ],
    "narrativeSources": [
     {

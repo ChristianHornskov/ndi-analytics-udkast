@@ -119,3 +119,7 @@ MP Materials skriver, at magneterne laves i Independence i Texas. Mountain Pass 
 ## Zeolit · 2026-10-16 00:50 CEST
 
 United States Antimony skriver selv, at de to materialer er antimon og zeolit. Kobolt og wolfram i menuen er ikke skrevet ind som produktion. "Entire arc" er ikke kopieret. AI-udkast uden gennemgangsdato. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Capstone · 2026-10-16 00:51 CEST
+
+225.000 ton kobber i 2025 er selskabets tal, skrevet om fra 225 k tonnes. Santo Domingo er et projekt. De fire andre navne står på siden ved produktionen. "World's" og "only" er ikke kopieret. AI-udkast uden gennemgangsdato. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
