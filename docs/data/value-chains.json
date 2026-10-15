@@ -131,8 +131,8 @@
       "andet",
       "physical"
      ],
-     "weightSum": 5.83,
-     "count": 20,
+     "weightSum": 6.6,
+     "count": 21,
      "companies": [
       {
        "isin": "US34379V1035",
@@ -140,6 +140,14 @@
        "w": 0.81,
        "sym": "FLNC",
        "theme": "energy",
+       "forslag": false
+      },
+      {
+       "isin": "US88160R1014",
+       "name": "Tesla",
+       "w": 0.77,
+       "sym": "TSLA",
+       "theme": "physical",
        "forslag": false
       },
       {
@@ -2041,7 +2049,7 @@
   {
    "id": "energy",
    "title": "Energi & elektrificering",
-   "why": "AI, robotter og elbiler kræver meget mere strøm. NDI ser energi som den første flaskehals i AI-udbygningen.",
+   "why": "AI, robotter og elbiler kræver meget mere strøm. NDI ser energi som den første flaskehals i AI-udbygningen og som en del af Vestens kapløb med Kina, en kamp der \"udover teknologi også kræver masser af elektroner (strøm)\".",
    "source": "BLOG 30. marts 2026 · 7. juli 2025",
    "links": [
     {
@@ -2049,7 +2057,7 @@
      "icon": "⚡",
      "label": "Elproduktion",
      "blurb": "Gas, sol, vind, gasturbiner og producenter tæt på datacentre.",
-     "ndi": "Gasproducenter, gasturbiner, energiproducenter tæt på datacentre samt sol og vind nævnes alle i NDI's beskrivelse af energiflaskehalsen.",
+     "ndi": "Gasproducenter, gasturbiner, energiproducenter tæt på datacentre samt sol og vind nævnes alle i NDI's beskrivelse af energiflaskehalsen. NDI har også skrevet om energiudbygning via LNG, olie, atomkraft og fission.",
      "themes": [
       "energy",
       "physical",
@@ -2252,8 +2260,8 @@
       }
      ],
      "seeChain": null,
-     "src": "BLOG 30. marts 2026 · 1. september 2025",
-     "shift": "Mads kritiserer, at Tyskland omlagde til sol og vind og samtidig lukkede kul og atomkraft (BLOG 12. maj 2025). Vesten skal bruge \"masser af elektroner\".",
+     "src": "BLOG 30. marts 2026 · 1. september 2025 · 12. maj 2025",
+     "shift": "I USA får datacentre i stigende grad lov til at bygge deres egen strøm (BLOG 30. marts 2026). Mads har kritiseret, at Tyskland udbyggede sol og vind og samtidig lukkede kul og atomkraft (BLOG 12. maj 2025).",
      "kind": "ndi"
     },
     {
@@ -2415,7 +2423,7 @@
      ],
      "seeChain": null,
      "src": "BLOG 30. marts 2026 · 10. august 2026 · 16. februar 2026",
-     "shift": "Leveringstiden på store transformere er flere år (baggrund). Mads har beskrevet prispres i el-infrastruktur.",
+     "shift": "Leveringstiden på store transformere er flere år (baggrund). Mads har beskrevet prispres i el-infrastruktur (BLOG 16. februar 2026). Ét års chipproduktion kan ifølge NDI potentielt kræve strøm svarende til omkring to tredjedele af USA's installerede kapacitet (BLOG 10. august 2026).",
      "kind": "ndi"
     },
     {
@@ -2531,7 +2539,7 @@
      ],
      "seeChain": null,
      "src": "BLOG 21. juli 2025 · 30. marts 2026",
-     "shift": "Lagring glatter forskellen mellem, hvornår strømmen produceres, og hvornår datacentre og elnet bruger den (baggrund).",
+     "shift": "Ny amerikansk told på kinesiske batterikomponenter var anledningen til, at NDI skrev om batteriværdikæden (BLOG 21. juli 2025). Lagring glatter forskellen mellem, hvornår strømmen produceres, og hvornår datacentre og elnet bruger den (baggrund).",
      "kind": "ndi"
     },
     {
@@ -2806,8 +2814,8 @@
       }
      ],
      "seeChain": null,
-     "src": "BLOG 16. februar 2026 · 1. september 2025 · 21. september 2026",
-     "shift": "Råstoffer er rykket \"i første række\" i amerikansk udenrigspolitik (BLOG 5. januar 2026).",
+     "src": "BLOG 16. februar 2026 · 1. september 2025 · 5. januar 2026 · 21. september 2026",
+     "shift": "Råstoffer er rykket \"i første række\" i amerikansk udenrigspolitik (BLOG 5. januar 2026). Mads skriver, at en råstofanalyse i dag også skal tage højde for geopolitik og ikke kun udbud og efterspørgsel (BLOG 21. september 2026).",
      "kind": "ndi"
     }
    ]

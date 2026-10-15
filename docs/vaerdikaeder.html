@@ -656,7 +656,11 @@
     layV.addEventListener('click', () => setLay('v'));
     layH.addEventListener('click', () => setLay('h'));
     const startId = new URLSearchParams(location.search).get('kaede');
-    render(pack.chains.some(c => c.id === startId) ? startId : pack.chains[0].id, { push: false });
+    const startChain = pack.chains.some(c => c.id === startId) ? startId : pack.chains[0].id;
+    render(startChain, { push: false });
+    // Deep link til ét led (fx fra vaerdikaede.html): ?kaede=ai-compute#lk-memory
+    const startLink = location.hash.startsWith('#lk-') ? decodeURIComponent(location.hash.slice(4)) : '';
+    if (startLink && document.getElementById(`lk-${startLink}`)) go(startChain, startLink);
   </script>
 </body>
 </html>

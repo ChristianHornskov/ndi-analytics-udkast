@@ -42,3 +42,11 @@ Se `notes/VISUAL-VARIETY-REVIEW.md`.
 | Stiplet nabo-led | Luftfart i SpaceTech-temaet vist som nabo, ikke som rumled | ✅ |
 | Klikbare dæmninger | Flod-dæmning → åbner AI-led | ✅ |
 | Selskabs-chips | Stiplet chip = selskab fra et andet tema end kædens | ✅ |
+
+## Fra Claude lane-A · 2026-10-15 ~23:55 CEST (vaerdikaede.html)
+| Form | Brug | Status |
+|---|---|---|
+| Lodret flod-gradient | Venstre "flod" fra gul (fysisk) til cyan (digital) langs de 13 led | ✅ vaerdikaede.html |
+| Dæmnings-mærker | 13 led grupperet under de 5 dæmninger med gul markør og kort hint | ✅ |
+| Ikon-badge med nummer | Ikon pr. led med gult nummer-badge (1 til 13) | ✅ |
+| Dæmpet ikke-træf | Ved filter dæmpes led uden træf, træf får gul kant | ✅ |
