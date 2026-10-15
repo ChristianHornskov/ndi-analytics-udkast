@@ -132,3 +132,9 @@ Sider: ideer, kort, om-data, invester, risici, ndi-perspektiv, laer/*.
 - **Bevidst ikke citeret:** Mads' formulering fra visionsmødet (15:44) om at «gevinsten tages og flyttes» er gengivet uden navn, fordi mødet er internt.
 - Ingen påstand om at rebalancering giver merafkast (ingen «volatility harvesting»). Siden siger tværtimod, at den ikke fjerner risiko, ikke er en forudsigelse og ikke er gratis.
 - Fondstal kun vægte fra portfolio.json pr. 1. jun 2026 (345, største 2,13 %, 5 over 1 %, ligevægt 91,94/345 ≈ 0,27 % som i ideer.html). Ingen navne.
+
+## lane-C · ~01:30 16/10 · lær/risikoklasse
+- Kilde for intervallerne: PRIIPs delegeret forordning (EU) 2017/653, bilag II (markedsrisiko-klasser efter VaR-ækvivalent volatilitet: <0,5 · 0,5–5 · 5–12 · 12–20 · 20–30 · 30–80 · >80 %). Siden siger «forenklet her» og «KID er det, der gælder». **Til review:** bekræft, at ordene i tredje kolonne (laveste … højeste) svarer til fondens danske KID-formuleringer. «middel-høj» er taget direkte fra fund-meta.json.
+- Ingen påstand om fondens egen volatilitet eller beregning. Skyderen er tænkte tal («viser reglen, ikke fondens egen beregning»). Klasse 5 → «20–30 %» er en regelgengivelse, ikke en måling.
+- «Hvad klassen ikke siger»: ikke garanti, siger ikke hvor dybt det kan gå (→ Fald fra top), fanger ikke koncentration/valuta (→ risici, ordliste), klasse 1 ≠ risikofri. Ingen egnethedsvurdering: «siger ikke noget om, hvorvidt fonden passer til dig. Læs KID».
+- Rettelse før commit (~01:05 wall-clock): klasse 6 hedder nu «næsthøjeste» (PRIIPs-standardteksten: «the second-highest risk class»), ikke «høj». Kolonnen hedder «Beskrivelse i KID», og noten siger «følger standardteksten i KID, forenklet». Den uverificerede sætning «Fondens KID siger middel-høj» er fjernet. «Mindst 5 år» er nu bekræftet mod fund-meta.json (`recommended_holding_years: 5`).

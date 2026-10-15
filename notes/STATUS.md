@@ -391,3 +391,12 @@ HEAD `b35518b`. Visual-variety request shipped + reviewed. MADS værdikæde/quan
 - Notes: HANDOFF trin 9, UX-review, VIDENSBOT-live-check.
 - Test: 8763, 375/1280: 0 konsolfejl, ingen h-overflow, 0 døde links/ankre. Mobil-fejl i flowpilen fundet og rettet. precheck PASSED.
 - Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + overveje P/E-dørens placering i lær-hub.
+
+## Fra Claude lane-C (lær/risikoklasse + hub 4·4·4·3) · ~01:30 CEST 16/10
+- Ny lær-side `laer/risikoklasse.html`: fra udsving til klasse (kæde), skyder udsving pr. år → klasse 1–7, tabel med de syv PRIIPs-intervaller (klasse 5 = 20–30 %), «Hvad klassen ikke siger». Ingen fondsberegning påstået.
+- Lær-hub regrupperet: 15 døre, 4 · 4 · 4 · 3 (P/E → Afkast og udsving, Risici → Fonden i praksis). Ingen enlige døre.
+- Koblet på: risici.html (link under hver klasse), om-data (g-sri ↔ g-udsving → siden), FAQ (16 korte svar), kort.html.
+- **Til script-ejer:** `scripts/smoke.mjs` kender hverken `/laer/rebalancering.html` eller `/laer/risikoklasse.html`.
+- Notes: HANDOFF trin 8/9, UX-review, VIDENSBOT-live-check (bed om bekræftelse af KID-ordene for klasse 1–7).
+- Test: 8763, 375/1280 på 6 sider: 0 konsolfejl, ingen h-overflow, 0 døde links/ankre; screenshots gennemset. precheck: se push.
+- Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + invester/ndi-perspektiv sprogtjek.

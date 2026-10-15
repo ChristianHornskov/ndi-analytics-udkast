@@ -226,3 +226,11 @@ Ingen nye.
 - Fundet og rettet under test: på 375 px roterede pilen i flowet en hel boks 90° og dækkede teksten. Nu skiftes → til ↓ med to spans.
 - Lær-hub: Tankegangen har nu 5 døre i et 2-kolonne gitter, så «Hvad P/E fortæller» står alene i fuld bredde på desktop. Acceptabelt, men Leo kan overveje at flytte P/E til «Afkast og udsving» (så 4 + 4).
 - 375/1280: 0 konsolfejl, ingen h-overflow på rebalancering, lær/index, FAQ. Skyder ved 900 % giver 52,6 % / 81 kr. (regnet efter).
+
+## ~01:30 CEST lane-C checkpoint (Claude) — lær/risikoklasse + hub 4 · 4 · 4 · 3
+- **Hul lukket:** risici.html viste «5 / 7 (middel-høj)» uden forklaring af, hvor tallet kommer fra. Ny side `laer/risikoklasse.html`: kæde i fire trin, skyder (udsving pr. år → klasse på skalaen, fondens klasse med blå kant), tabel med de syv intervaller og bjælke for intervallets bredde (klasse 6 = 50 point, klasse 7 stiplet = ingen loft), og «Hvad klassen ikke siger».
+- Risici: link «Hvad klassen betyder →» lige under hver klasse (ikke en fjerde knap i bunden, den rækkede allerede tre).
+- **Lær-hub:** P/E-døren stod alene i fuld bredde. Nu Tankegangen 4 (2×2) · Afkast og udsving 4 (CAGR, Risikoklasse, Valuta, P/E) · Fonden i praksis 4 (Risici flyttet hertil, ny tekst) · Slå op 3. Ingen enlige døre på desktop.
+- Ordliste: SRI og Udsving linker til hinanden og til siden. FAQ 16 korte svar.
+- Test (8763) 375/1280 på 6 sider: 0 konsolfejl, ingen h-overflow, 0 døde links/ankre. Skyder kontrolleret ved 0/3/15/20/25/30/40/80/100 (grænser 20 → 5, 30 → 6, 80 → 7).
+- Obs: tabellens fjerde kolonne (bjælker) skjules under 640 px. Tre kolonner er nok på mobil.
