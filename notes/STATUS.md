@@ -726,3 +726,59 @@ Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html, v
 2. **Kvante-ordbog** med 10 ord (qubit, superposition, sammenfiltring, dekohærens, kryostat, fejlkorrektion, logisk qubit, kvanteudglødning, kvantefordel og kvante i skyen), mærket som generel baggrund. Fejlkorrektion hopper til chipdesign og kvante i skyen til cloud i AI-kæden. Der er et link fra kvante-callouten, og deep-link `?kaede=quantum#q-gl` åbner ordbogen (også på mobil, hvor den ellers er lukket). Data ligger i `quantum.glossary`.
 Tjek: Playwright på 1280 og 375 med 0 konsolfejl og ingen sidescroll. Deep-link lander på ordbogen og åbner den, og 5 af 5 stationer viser skiftet. smoke.mjs 52/52 fail 0 (egen server på 8817). Precheck PASSED. Grep efter handelssprog og tankestreger i diff giver 0 hits.
 Næste: vaerdikaede.html kan få en kort linje "Det ændrer sig" på energi-kortet og et ordbogs-link pr. kæde, og rum-fanen kan få "hvem bygger hvad" pr. højdebånd (antal pr. led, ingen nøgletal). Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 ~00:50 CEST. Periodesiden siger, at 2026 og år til dato er ens. Ikke færdig.**
+
+`periode.html`. Kalenderåret 2026 og år til dato bruger begge 31. dec. 2025 som udgangspunkt og 14. okt. 2026 som sidste punkt. Begge viser +4,0 %. Siden siger det i kontekstafsnittet. 2023 er stadig delår, 22. sep. 2023 til 31. dec. 2023. 2024 er 31. dec. 2023 til 31. dec. 2024. 2025 er 31. dec. 2024 til 31. dec. 2025. Siden første NAV er 22. sep. 2023 til 14. okt. 2026 og +104,8 %.
+
+Tjekket i Chromium ved 1280 og 375. Sætningen står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `392c712` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 ~00:55 CEST. Råstoffer og batterier siger, hvad Centrus og QuantumScape ikke er. Ikke færdig.**
+
+På energikæden siger råstof-leddet, at Centrus beriger uran til brændsel og ikke er et kraftværk. Batteri-leddet siger, at QuantumScape er et batteridesign til køretøjer og ikke masseproduktion. Vægtene er ikke ændret.
+
+Tjekket i Chromium ved 375 px på energifanen. Begge sætninger står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `341d09d` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 ~00:32 CEST. Opsendelse siger, at Starfighters ikke er en orbital rute. Ikke færdig.**
+
+På rumkæden siger opsendelses-leddet, at Starfighters skriver, at STARLAUNCH 1 er et suborbitalt udviklingsfartøj og ikke en orbital rute. Howmet leverer metaldele og sender ikke selv op. Profilen på Starfighters gengiver selskabets meddelelse af 13. oktober 2026: den planlagte flyvning i december er med raketten under vingen, og den er ikke gennemført. Ingen `reviewedAt`. Markedsformuleringen om at være det eneste selskab er ikke kopieret. Kurser fra investorksiden er ikke kopieret.
+
+Vægte og antal på de otte energi- og rum-led matcher stadig listen. Hver listet vægt matcher PMINDI pr. 1. juni 2026. Porteføljens leverandørnavne er ikke byttet ind som visningsnavne.
+
+Tjekket i Chromium. Rumfanen viser begge sætninger. Nyhedsarkivets rumkort siger det samme. Selskabssiden har AI-udkast, ikke "tjekket mod kilden". Andet afsnit ligger bag "Læs hele forklaringen". Ingen konsolfejl. Ingen vandret scroll ved 375 px.
+
+**Push:** `lane-E` @ `cd57b51` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 00:34 CEST. Råstoffer siger, at noduler, Pebble og Thacker Pass ikke er drift. Ikke færdig.**
+
+På energikæden siger råstof-leddet, at The Metals Company skriver, at prøvekørsel ventes at begynde i fjerde kvartal 2027, og at aftalen og ansøgningen ikke er produktion. Northern Dynasty skriver, at Pebble er i føderal tilladelsesbehandling. Lithium Americas skriver, at Thacker Pass bygges, med mål om industriel skala sent i 2027. Ingen af de to er i fuld drift. Mountain Pass og Gibraltar står stadig som miner. Vægtene er ikke ændret.
+
+Profilen på The Metals Company gengiver meddelelsen fra maj 2026 om Allseas og offentliggørelsen i august 2026. Ansøgningen er ikke en tilladelse. Kapacitetstal og formuleringer om verdens største ressource er ikke kopieret. Ingen `reviewedAt`.
+
+Tjekket i Chromium på energifanen, nyhedsarkivet og selskabssiden. AI-udkast er med. "tjekket mod kilden" er ikke med. Andet afsnit ligger bag "Læs hele forklaringen". Ingen konsolfejl. Ingen vandret scroll ved 375 px.
+
+**Push:** `lane-E` @ `454278f` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 00:36 CEST. Elnet siger, hvem der bygger, og hvem der leverer strøm. Ikke færdig.**
+
+På energikæden siger elnet-leddet, at Quanta, Primoris og MYR Group bygger nettet og ikke producerer strømmen. GE Vernova leverer udstyr og driver ikke værkerne. Solaris leverer strøm tæt på store forbrugere. Vægtene er ikke ændret.
+
+Solaris' forside omtaler 16. oktober 2026 købet af Omega, dateret 6. juli 2026. Det ligger efter beholdningen pr. 1. juni 2026 og er ikke skrevet ind. Quanta-siden siger, at selskabet bygger og vedligeholder nettet. Formuleringen om den største arbejdsstyrke er ikke kopieret. MYR Group kalder sig entreprenør.
+
+Tjekket i Chromium ved 375 px på energifanen og i nyhedsarkivet. Sætningerne står. Omega står ikke. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `c37e9c0` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

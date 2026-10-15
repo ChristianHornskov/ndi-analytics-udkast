@@ -61,3 +61,23 @@ De to konceptkort siger det samme som kæden: gas er brændsel, SMR er ikke drif
 ## Indledning og klik · 2026-10-16 ~00:45 CEST
 
 `why` på energi og rum siger grænsen, før man åbner et led. Merlin i energikædens udeladte liste er luftfart, ikke et rum-led. Klik til NextEra og Rocket Lab lander på AI-udkast uden gennemgangsdato. ÅTD er stadig 31. dec. 2025 og +4,0 %. `forslag` matcher beholdningen på alle navne i de to kæder.
+
+## Periode · 2026-10-16 ~00:50 CEST
+
+2023 delår, 2024, 2025, 2026 og år til dato er tjekket. 2026 og år til dato er samme interval og samme +4,0 %. Siden siger det. 2026 er ikke mærket delår, fordi `partial` kun er første år. Datoen viser, at året ikke er slut. Ingen konsolfejl. Ingen vandret scroll ved 375 px.
+
+## Centrus og QuantumScape · 2026-10-16 ~00:55 CEST
+
+Blurbs på råstoffer og batterier siger grænsen, så man ikke læser Centrus som et kraftværk eller QuantumScape som et lager i masseproduktion. Vægte urørt. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Starfighters og Howmet · 2026-10-16 ~00:32 CEST
+
+Opsendelse nævner nu det tungeste navn. Starfighters er luftopsendelse under udvikling, ikke en orbital rute. Howmet er metaldele. Kilden er selskabets meddelelse 13. oktober 2026 om en planlagt flyvning med raketten under vingen. "Only" og kurser er ikke kopieret. AI-udkast uden gennemgangsdato. Vægte uændrede og stadig lig beholdningen. Chromium på kæde, nyhedsarkiv og selskabsside. Ingen konsolfejl. Ingen vandret scroll ved 375 px.
+
+## Noduler, Pebble og Thacker Pass · 2026-10-16 00:34 CEST
+
+Råstof-leddet skelner nu de tre navne, der lettest læses som drift. The Metals Company har en aftale og en ansøgning, og selskabet selv venter prøvekørsel i fjerde kvartal 2027. Det er ikke produktion. Pebble er i føderal tilladelsesbehandling. Thacker Pass bygges, med mål sent i 2027. Kapacitetstal og "world's largest" er ikke kopieret. AI-udkast uden gennemgangsdato. Chromium på kæde, nyhedsarkiv og selskabsside. Ingen konsolfejl. Ingen vandret scroll ved 375 px.
+
+## Elnet, bygherrer og Solaris · 2026-10-16 00:36 CEST
+
+Elnet-leddet siger, at Quanta, Primoris og MYR Group bygger og ikke producerer strømmen, at GE Vernova leverer udstyr, og at Solaris leverer strøm tæt på store forbrugere. Omega-købet 6. juli 2026 er efter snapshottet og er udeladt. "Largest workforce" hos Quanta er ikke kopieret. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
