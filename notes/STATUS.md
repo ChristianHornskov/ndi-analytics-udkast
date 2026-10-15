@@ -988,3 +988,31 @@ Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke me
 - **selskab.html:** "NDI-tema og plads i fonden" viser nu et `forslag`-mærke med "Primært tema X er et forslag fra udkastet (før: Y)" eller, for Andet, "har endnu intet primært NDI-tema", plus link til om-data#g-temaforslag. Før stod forslag kun på lister, ikke på selve selskabssiden.
 - Test: smoke fail 0 (8792). smoke-quality: kun de 2 kendte forældede `vaerdikaede.html?isin=`-asserts. Playwright: First Solar viser forslag + "Energi (forslag)" i linsen, Opendoor viser Andet-teksten, Sea (fast tema) ingen forslag-mærke, tema Andet 35 rækker, Energi 40 rækker (inkl. multi-tags) / 28 forslag, AKK Energi 40, screener "Kun temaforslag (115)", 0 konsolfejl. precheck exit 0. Branch `lane-B` klar til merge-review. Næste: linser for de nye Energi-navne uden linse (Enphase, Sunrun, Array, Shoals, Ballard, batterier) / screener-paritet.
 - **Til ejere uden for lane-B:** vaerdikaeder.html-treemap/sunburst (hvis den læser `theme`) vil vise Energi større og Andet mindre - forventet. ndi-perspektiv.html viser NDI-tag-feltet fra JSON og er derfor opdateret automatisk.
+
+## Fra Claude lane-C (ideer: «345 aktier, én prik hver») · ~00:40 CEST 16/10
+- `ideer.html`: ottende visuelle form — enhedsgraf med én firkant pr. selskab grupperet pr. tema (antal · vægt), og antal selskaber pr. vægtinterval med ligevægten 0,27 % markeret; median 0,2 %, top 10 11,9 %, største 2,1 %. Kun vægt fra portfolio.json pr. 1. jun 2026, ingen navne/kurser. og:description + kort.html fulgt med.
+- Notes: HANDOFF trin 7 (otte former), UX-review checkpoint.
+- Test: 8763, 375/1280: 0 konsolfejl, ingen h-overflow, screenshot gennemset. precheck PASSED.
+- Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + ndi-perspektiv/invester sprogtjek mod Vidensbot.
+
+## Fra Claude lane-C (stilscan + kvartals-fejl rettet) · ~00:41 CEST 16/10
+- Vidensbot punkt 10: 17 tankestreger/semikolon i synlig tekst rettet; «snapshot», «feature», «treemap/sunburst», «graf-pipeline», «v1», «Azure-kald», «cutoff/precheck» ud af offentlig tekst (ideer, om-data, kort, invester, risici, ndi-perspektiv, lær/forsinket-beholdning, lær/hvorfor-mange-aktier, FAQ).
+- **Fejl rettet:** om-data kaldte 1. juni 2026 «kvartalsslut» (to steder). HANDOFF linje 39 fulgt med.
+- invester.html trin 3–5 omskrevet til almindeligt dansk.
+- Notes: UX-review, VIDENSBOT-live-check, IDEAS («tags» → «mærker»?).
+- Test: 375/1280 på 9 sider: 0 konsolfejl, ingen h-overflow, 0 døde links/ankre. precheck: se push.
+- Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + ideer.html niende form.
+
+## Fra Claude lane-C (ideer: sektor × tema-matrix) · ~01:00 CEST 16/10
+- `ideer.html`: niende visuelle form «Samme 345 selskaber, to sorteringer»: varmekort (tabel) 11 NDI-temaer × 8 klassiske sektorer, antal selskaber fra portfolio.json PMINDI pr. 1. jun 2026. Teknologi 151 → seks temaer, Platforme fra finans/forbrug/kommunikation, SpaceTech/fysisk tech fra industri. Intro-tidslinjen linker dertil.
+- `om-data.html` (GICS-sektorer → matrix), `kort.html`, og:description fulgt med. HANDOFF trin 7 (ni former), UX-review checkpoint.
+- Test: 8763, 375/1280 på ideer/om-data/kort: 0 konsolfejl, ingen h-overflow, 0 døde links/ankre; screenshots gennemset. precheck PASSED.
+- Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + ndi-perspektiv/invester sprogtjek mod Vidensbot.
+
+## Fra Claude lane-C (lær/rebalancering) · ~01:10 CEST 16/10
+- Ny lær-side `laer/rebalancering.html`: skyder med ti tænkte selskaber (A stiger X %, vægten vokser fra 10 % til fx 30,8 %), flow «fylder mere → fylder mindre», fondens vægtfakta pr. 1. jun 2026 (345 · 2,1 % · 5 over 1 %), bog vs fond, og «hvad rebalancering ikke kan». Ingen strategiudkast-tærskler, ingen handelstal.
+- Koblet på: lær-hub (dør i Tankegangen, 14 døre), FAQ (nyt svar + semikolon fjernet i PMINDI/AKK-svaret), om-data#g-rebalancering, kort.html, saadan-taenker-vi.
+- **Til script-ejer:** `scripts/smoke.mjs` kender ikke `/laer/rebalancering.html` endnu (ikke lane-C-fil).
+- Notes: HANDOFF trin 9, UX-review, VIDENSBOT-live-check.
+- Test: 8763, 375/1280: 0 konsolfejl, ingen h-overflow, 0 døde links/ankre. Mobil-fejl i flowpilen fundet og rettet. precheck PASSED.
+- Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + overveje P/E-dørens placering i lær-hub.

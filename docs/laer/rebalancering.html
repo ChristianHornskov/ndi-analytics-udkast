@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="da">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+ <meta name="robots" content="noindex,nofollow">
+ <title>Rebalancering: når en vinder kommer til at fylde for meget · NDI Analytics</title>
+ <link rel="stylesheet" href="../css/ndi.css">
+ <!-- og:start -->
+ <meta property="og:type" content="website">
+ <meta property="og:site_name" content="NDI Analytics (udkast)">
+ <meta property="og:locale" content="da_DK">
+ <meta property="og:title" content="Rebalancering: når en vinder kommer til at fylde for meget · NDI Analytics">
+ <meta property="og:description" content="Ti selskaber à 10 %. Ét stiger 300 %, og nu fylder det 31 %. Sådan holder rebalancering spredningen intakt, og hvad den ikke kan.">
+ <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/laer/rebalancering.html">
+ <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
+ <meta property="og:image:width" content="1200">
+ <meta property="og:image:height" content="630">
+ <meta property="og:image:alt" content="NDI Analytics - udkast. Gå på opdagelse i porteføljen.">
+ <meta name="twitter:card" content="summary_large_image">
+ <!-- og:end -->
+ <style>
+  .sp h2{font-size:18px;margin:0 0 8px}
+  .sp p{color:var(--muted);line-height:1.6;margin:0 0 10px}
+  .sp p strong{color:var(--text)}
+  .sp .src{font-size:13px;color:var(--faint);margin:8px 0 0}
+  .try{display:grid;gap:10px;margin-top:8px}
+  .try label{color:var(--text);font-weight:600}
+  .try input[type=range]{width:100%;accent-color:var(--yellow)}
+  .wb{display:grid;grid-template-columns:repeat(10,1fr);gap:6px;align-items:end;height:180px;margin:14px 0 4px;position:relative;border-bottom:1px solid var(--line)}
+  .wb span{display:block;background:var(--cyan);border-radius:4px 4px 0 0;min-height:2px;transition:height .2s}
+  .wb span.a{background:var(--yellow)}
+  .wb .eq{position:absolute;left:0;right:0;border-top:2px dashed var(--faint);pointer-events:none}
+  .wb .eq b{position:absolute;right:0;top:-18px;font-size:12px;font-weight:400;color:var(--faint)}
+  .wl{display:grid;grid-template-columns:repeat(10,1fr);gap:6px;font-size:12px;color:var(--faint);text-align:center;margin:0 0 6px}
+  .out{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .out > div{background:var(--panel-2);border-radius:10px;padding:10px 12px;color:var(--muted);font-size:13px;line-height:1.4}
+  .out b{display:block;color:var(--text);font-size:20px;font-variant-numeric:tabular-nums}
+  .flow{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center;margin:12px 0 6px}
+  .flow > div{background:var(--panel-2);border-radius:10px;padding:12px;font-size:14px;line-height:1.45;color:var(--muted)}
+  .flow > div strong{display:block;color:var(--text);margin-bottom:2px}
+  .flow .up{border-left:3px solid var(--yellow)}
+  .flow .dn{border-left:3px solid var(--cyan)}
+  .flow > .ar{background:none;padding:0;color:var(--faint);font-size:22px;text-align:center}
+  .flow .ar .v{display:none}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:6px}
+  .two > div{background:var(--panel-2);border-radius:10px;padding:12px 14px}
+  .two h3{font-size:15px;margin:0 0 6px}
+  .two ul{margin:0;padding-left:18px;color:var(--muted);font-size:14px;line-height:1.55}
+  .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:10px 0 4px}
+  .facts > div{border-top:3px solid var(--yellow);background:var(--panel-2);border-radius:10px;padding:10px 12px;color:var(--muted);font-size:13px;line-height:1.4}
+  .facts b{display:block;color:var(--text);font-size:22px;font-variant-numeric:tabular-nums}
+  .not{margin:6px 0 0;padding-left:18px;color:var(--muted);line-height:1.6}
+  @media (max-width:640px){
+   .out,.facts{grid-template-columns:1fr 1fr}.out > div:last-child,.facts > div:last-child{grid-column:1/-1}
+   .flow{grid-template-columns:1fr;gap:6px}.flow .ar .h{display:none}.flow .ar .v{display:inline}
+   .two{grid-template-columns:1fr}
+   .wb{height:150px;gap:4px}.wl{gap:4px}
+  }
+ </style>
+</head>
+<body>
+ <a class="skip" href="#main">Gå til indhold</a>
+ <header class="site-header">
+ <a class="brand" href="../index.html"><img src="../assets/mark.svg" width="34" height="27" alt=""><span>NewDeal Invest</span></a>
+ <nav class="nav"><a href="index.html">← Lær</a></nav>
+ </header>
+ <main id="main">
+ <p class="eyebrow">LÆR</p>
+ <h1>Rebalancering: når en vinder kommer til at fylde for meget</h1>
+ <p class="lede">En bred portefølje bliver ikke ved med at være bred af sig selv. De selskaber, der stiger, kommer til at fylde mere, og dem, der falder, fylder mindre. Rebalancering betyder at flytte vægtene tilbage, så spredningen holder.</p>
+
+ <section class="panel sp" aria-labelledby="rb-try">
+  <h2 id="rb-try">Prøv selv: ti selskaber, ét stiger</h2>
+  <p>Et tænkt eksempel. Du ejer ti selskaber for 10&nbsp;kr. hver, altså 10&nbsp;% i hvert. De ni står stille. Træk i skyderen og se, hvad der sker med vægten, når det første stiger.</p>
+  <div class="try">
+   <label for="rb-x">Selskab A stiger <span id="rb-xv">300</span>&nbsp;%</label>
+   <input id="rb-x" type="range" min="0" max="900" step="50" value="300">
+   <div class="wb" id="rb-bars" role="img" aria-labelledby="rb-desc">
+    <span class="a" style="height:77%"></span><span style="height:17%"></span><span style="height:17%"></span><span style="height:17%"></span><span style="height:17%"></span><span style="height:17%"></span><span style="height:17%"></span><span style="height:17%"></span><span style="height:17%"></span><span style="height:17%"></span>
+    <i class="eq" id="rb-eq" style="bottom:25%"><b>10&nbsp;% hver ved start</b></i>
+   </div>
+   <div class="wl" aria-hidden="true"><span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span><span>G</span><span>H</span><span>I</span><span>J</span></div>
+   <p class="src" id="rb-desc" aria-live="polite">A fylder nu 30,8&nbsp;% af porteføljen. Hvert af de ni andre fylder 6,9&nbsp;%.</p>
+   <div class="out" aria-live="polite">
+    <div>A’s vægt nu<b id="rb-w">30,8&nbsp;%</b></div>
+    <div>Porteføljen i alt<b id="rb-tot">130&nbsp;kr.</b></div>
+    <div>Flyttes for at nå 10&nbsp;% igen<b id="rb-mv">27&nbsp;kr.</b></div>
+   </div>
+  </div>
+  <p class="src">Uden JavaScript: +100&nbsp;% giver A en vægt på 18,2&nbsp;%, +300&nbsp;% giver 30,8&nbsp;%, +900&nbsp;% giver 52,6&nbsp;%. Tænkt eksempel. Handler ikke om fonden og ikke om et bestemt selskab.</p>
+  <p style="margin-top:10px">Det er godt, at A er steget. Men nu afhænger hele porteføljen i høj grad af ét selskab. Tag +300&nbsp;%: falder A bagefter med 50&nbsp;%, taber porteføljen ca. 15&nbsp;% på det ene selskab. Ved start ville samme fald have kostet 5&nbsp;%. Spredningen er forsvundet, uden at nogen har valgt det.</p>
+ </section>
+
+ <section class="panel sp" aria-labelledby="rb-flow" style="margin-top:14px">
+  <h2 id="rb-flow">Hvad rebalancering gør</h2>
+  <p>Rebalancering flytter en del af det, der er steget, over til det, der er faldet eller står stille. Kort sagt: en del af gevinsten tages hjem og flyttes til det, markedet ikke kan lide lige nu.</p>
+  <div class="flow" role="img" aria-label="Det, der er steget og fylder mere end tiltænkt, afgiver en del. Den del flyttes til det, der er faldet og fylder mindre end tiltænkt.">
+   <div class="up"><strong>Fylder mere end tiltænkt</strong>Selskaber, der er steget. En del af gevinsten tages hjem.</div>
+   <div class="ar" aria-hidden="true"><span class="h">→</span><span class="v">↓</span></div>
+   <div class="dn"><strong>Fylder mindre end tiltænkt</strong>Selskaber, der er faldet. De får lidt mere.</div>
+  </div>
+  <p class="src">Bogen siger det samme for privatinvestorer: tag løbende lidt gevinst, når optimismen er høj (s. 150), og læg hellere til end tag fra, når stemningen er dårlig (s. 124 og 149). Kilde: Mads Christiansen og Jesper Bæk, «Den lille guide til investering i teknologiaktier» (2025).</p>
+  <p style="margin-top:10px">Det er en regel om vægte, ikke et gæt på kurser. Man behøver ikke vide, om A stiger videre. Man ved bare, at ét selskab ikke skal kunne afgøre hele porteføljens skæbne.</p>
+ </section>
+
+ <section class="panel sp" aria-labelledby="rb-fund" style="margin-top:14px">
+  <h2 id="rb-fund">Sådan ser det ud i fonden</h2>
+  <p>PMINDI har mange små positioner. Fordelt helt ligeligt på 345 selskaber ville hver fylde ca. 0,27&nbsp;% af fonden. I virkeligheden er nogle større og andre mindre, men ingen fylder mere end ca. 2&nbsp;%.</p>
+  <div class="facts">
+   <div>Positioner<b>345</b></div>
+   <div>Største position<b>2,1&nbsp;%</b></div>
+   <div>Over 1&nbsp;%<b>5</b></div>
+  </div>
+  <p class="src">Fra den offentliggjorte beholdning for PMINDI pr. 1. juni 2026. Beholdningen vises med forsinkelse, se <a href="forsinket-beholdning.html">Forsinket beholdning</a>. Se alle vægte under <a href="../selskaber.html">Selskaber</a> og fordelingen i <a href="../ideer.html">Idéer</a>.</p>
+  <p style="margin-top:10px">Uden løbende rebalancering ville de selskaber, der er steget mest siden købet, efterhånden komme til at dominere. Bogens tommelfingerregel er højst ca. 1&nbsp;% pr. teknologiselskab (s. 140). Rebalancering er det værktøj, der holder porteføljen tæt på den idé.</p>
+ </section>
+
+ <section class="panel sp" aria-labelledby="rb-two" style="margin-top:14px">
+  <h2 id="rb-two">Bogen og fonden siger ikke det samme. Med vilje</h2>
+  <p>Bogen råder privatinvestorer til at lade være med at reagere på udsving og holde mindst fem år (s. 139). Fonden rebalancerer løbende. Det lyder som en modsigelse, men de to er skrevet til forskellige situationer.</p>
+  <div class="two">
+   <div><h3>Dig som privatinvestor (bogen)</h3><ul><li>Betaler kurtage hver gang</li><li>Har ikke systemer til at følge hundredvis af aktier</li><li>Risikerer at handle i panik</li><li>Derfor: få handler, lang horisont, lidt gevinst ved høj optimisme</li></ul></div>
+   <div><h3>Fonden (PMINDI)</h3><ul><li>Et professionelt handelsapparat</li><li>Hundredvis af små positioner at holde i balance</li><li>Samme kerne som bogen: bred spredning og respekt for, hvad udsving koster</li><li>Derfor: løbende rebalancering</li></ul></div>
+  </div>
+  <p class="src">Bogens kerne om udsving og spredning står i kapitlet om varians (s. 133 til 143). Se også <a href="variance-drag.html">CAGR og gennemsnit</a> og <a href="saadan-taenker-vi.html">Sådan tænker vi</a>.</p>
+ </section>
+
+ <section class="panel sp" aria-labelledby="rb-not" style="margin-top:14px">
+  <h2 id="rb-not">Hvad rebalancering ikke kan</h2>
+  <ul class="not">
+   <li><strong>Den fjerner ikke risikoen.</strong> Når hele markedet for teknologiaktier falder, falder en bred portefølje også. Se <a href="../drawdown.html">Fald fra top</a> og <a href="../risici.html">Risici ved fonden</a>.</li>
+   <li><strong>Den er ikke en forudsigelse.</strong> At flytte fra A til B betyder ikke, at nogen tror, B stiger mere end A.</li>
+   <li><strong>Den er ikke gratis.</strong> Hver flytning koster lidt i transaktionsomkostninger. Fondens omkostninger står i KID, se <a href="../invester.html">Sådan investerer du</a>.</li>
+  </ul>
+  <p style="margin-top:10px">Siden forklarer et begreb. Den siger ikke noget om, hvordan du selv skal investere, og den beskriver ikke fondens konkrete handler. Se også <a href="../om-data.html#g-rebalancering">rebalancering</a> og <a href="../om-data.html#g-spredning">spredning</a> i ordlisten.</p>
+ </section>
+ <script>
+ (function(){
+  var x=document.getElementById('rb-x'); if(!x) return;
+  var bars=document.querySelectorAll('#rb-bars span'), eq=document.getElementById('rb-eq');
+  var f=function(n,d){return n.toLocaleString('da-DK',{minimumFractionDigits:d,maximumFractionDigits:d})};
+  function upd(){
+   var g=+x.value/100, a=10*(1+g), tot=90+a, wa=a/tot*100, wo=10/tot*100, max=Math.max(wa,40);
+   document.getElementById('rb-xv').textContent=f(+x.value,0);
+   bars.forEach(function(b,i){b.style.height=((i?wo:wa)/max*100)+'%'});
+   eq.style.bottom=(10/max*100)+'%';
+   document.getElementById('rb-w').textContent=f(wa,1)+' %';
+   document.getElementById('rb-tot').textContent=f(tot,0)+' kr.';
+   document.getElementById('rb-mv').textContent=f(a-tot*0.1,0)+' kr.';
+   document.getElementById('rb-desc').textContent='A fylder nu '+f(wa,1)+' % af porteføljen. Hvert af de ni andre fylder '+f(wo,1)+' %.';
+  }
+  x.addEventListener('input',upd); upd();
+ })();
+ </script>
+ <p class="warn">Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.</p>
+ <p class="band">Generel information. Ikke investeringsrådgivning.</p>
+ </main>
+</body>
+</html>
