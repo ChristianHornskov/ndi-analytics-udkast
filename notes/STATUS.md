@@ -258,4 +258,8 @@ Beholdning pr. 1. juni 2026. Ingen nye kurser, afkast, P/E eller P/S. HTML på v
 4. `periode.html`: "Siden start" hedder "Siden første NAV", med datoen fra seriens første punkt. `nyhedsarkiv.html`: to konceptkort om energi og rum. Arkivet indeholder stadig ikke ugebrevene.
 5. Tjekket i Chromium ved 1280 og 375: energifanen viser Fluence, Oklo og Quanta og linker ikke CoreWeave. Rumfanen linker Rocket Lab og Planet og linker ikke Archer. Fluence og Oklo har AI-udkast. Periode 2025 og siden første NAV renderer. Ingen konsolfejl. Ingen vandret scroll på energikæden ved 375.
 
-AI-compute-leddet "Energi og strømfordeling" er ikke rettet, så det ikke støder sammen med lane A. Lane-E er ikke klar til merge, før precheck og push er kørt i samme cyklus. Ikke færdig.
+AI-compute-leddet "Energi og strømfordeling" er ikke rettet, så det ikke støder sammen med lane A.
+
+**Push:** `lane-E` @ `8082b22` er pushet efter precheck. Branchen kan merges.
+
+**Samme bane, næste punkt:** ÅTD på `periode.html` viste 1. januar, mens tallet regnes fra sidste punkt året før. For PMINDI er det 31. dec. 2025 → 14. okt. 2026 og +4,0 %. Kalenderåret 2025 viser 31. dec. 2024 → 31. dec. 2025. Tjekket i Chromium ved 1280 og 375. Ingen konsolfejl. Ingen vandret scroll. Ikke færdig.
