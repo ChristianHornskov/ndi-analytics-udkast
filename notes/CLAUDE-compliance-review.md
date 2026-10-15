@@ -205,3 +205,25 @@ Grundlag: `origin/main` `60cebcc`, uændret. Pages = main (22:11 UTC, md5 drawdo
 2/4/5/7/8 uændret fra cyklus 5.
 
 **Blocker-rækkefølge (uændret):** 1 markedsføringsmærkning → 3 "Mads følger" → 6 DD-datoer → 5 AKK → 2/4 X-konti.
+
+## 2026-10-16 00:45 CEST · cyklus 8 (main `1bc0d43`, fuld runde)
+
+Ikke juridisk rådgivning. Tjekket med Playwright på renderet tekst (16 sider ved 375 og 1280) og med grep i `docs/`.
+
+### MUST (blokerer før offentlig brug)
+1. **Ingen markedsføringsmærkning.** 0 hits på "markedsføringsmateriale/-meddelelse" i nogen HTML-fil. Det er stadig åbent siden cyklus 1.
+2. **"Mads følger" på tredjeparts X-opslag** (`js/x-feed.js:339`, `ndi-paa-x.html:86,109,163`, selskabssider). Det kan læses som en anbefaling fra en medarbejder. Samtidig kalder ndi-paa-x NDI's egne konti for "ikke NDI's holdning", hvilket er selvmodsigende for opslag fra NDI selv.
+3. **Toppunktet for drawdown ligger efter bunden** (`risk-stats.json:9 maxDdPeak 2026-06-02`). Fakta viser datoen, og forkerte risikotal er et problem for, om informationen er retvisende.
+4. **ndi-paa-x mangler en tabsadvarsel** (renderet tekst indeholder hverken "tab"/"tabe" eller "historisk afkast"). Siden viser Nasdaq-noteringsopslaget og performanceopslag ("Performance opdatering efter Q2 2026"). Siden skal have den samme risikolinje som de øvrige sider.
+
+### SHOULD
+- **Omkostninger:** OCF/løbende omkostninger vises, og siden siger tydeligt, at det "ikke er et beregnet ÅOP". Det er ærligt. Siden har dog ingen tabsadvarsel (renderet tekst indeholder ikke "tab"). Den bør have standard-risikolinjen og et link til KID'et for den samlede omkostning.
+- **"udfyldes"/"afventer Fundmarket-godkendelse"** står synligt på fonden, fakta, omkostninger og risici. Det skal ikke stå på et offentligt site.
+- **Nasdaq:** de eneste hits er "børsnoteret hos Nasdaq Copenhagen" (en noteringsfakta), og Nasdaq bruges ikke som benchmark ✅.
+- **Rådgivningsagtige ord:** gennemgang af nye tekster (værdikæder, idéer, valuta, NDI-linse) viser kun negationer ("ikke som købsanbefaling", "ikke en prognose eller en anbefaling", "ikke bevidste overvægte") ✅. Der er ikke fundet "øger eksponering" eller "overvægt" som handelssprog. `laer/hvorfor-mange-aktier.html:99` bruger "overvægt" generisk og pædagogisk, så det er OK.
+- **AI-mærkning:** "AI-udkast" er mærket pr. sektion på selskab ✅, og risici og om-data forklarer mærket ✅.
+
+### OK (uændret ✅)
+- Ikke-rådgivning, risikoindikator og KID-link på entré, fonden, portefølje, udforsk, risici, invester og fakta.
+- Beholdningerne er forsinkede: der står "pr. 1. jun. 2026" på selskab, temaer, valuta og idéer, og der står ikke noget om løbende handler.
+- PMINDIAKK: embed og drawdown viser teksten om 12 måneder uden procenter ✅. 1m/3m er ikke eksponeret ✅.
