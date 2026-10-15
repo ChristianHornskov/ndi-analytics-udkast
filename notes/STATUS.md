@@ -401,3 +401,15 @@ Vægte og antal på de otte energi- og rum-led matcher stadig listen. Hver liste
 Tjekket i Chromium. Rumfanen viser begge sætninger. Nyhedsarkivets rumkort siger det samme. Selskabssiden har AI-udkast, ikke "tjekket mod kilden". Andet afsnit ligger bag "Læs hele forklaringen". Ingen konsolfejl. Ingen vandret scroll ved 375 px.
 
 **Push:** `lane-E` @ `cd57b51` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 00:34 CEST. Råstoffer siger, at noduler, Pebble og Thacker Pass ikke er drift. Ikke færdig.**
+
+På energikæden siger råstof-leddet, at The Metals Company skriver, at prøvekørsel ventes at begynde i fjerde kvartal 2027, og at aftalen og ansøgningen ikke er produktion. Northern Dynasty skriver, at Pebble er i føderal tilladelsesbehandling. Lithium Americas skriver, at Thacker Pass bygges, med mål om industriel skala sent i 2027. Ingen af de to er i fuld drift. Mountain Pass og Gibraltar står stadig som miner. Vægtene er ikke ændret.
+
+Profilen på The Metals Company gengiver meddelelsen fra maj 2026 om Allseas og offentliggørelsen i august 2026. Ansøgningen er ikke en tilladelse. Kapacitetstal og formuleringer om verdens største ressource er ikke kopieret. Ingen `reviewedAt`.
+
+Tjekket i Chromium på energifanen, nyhedsarkivet og selskabssiden. AI-udkast er med. "tjekket mod kilden" er ikke med. Andet afsnit ligger bag "Læs hele forklaringen". Ingen konsolfejl. Ingen vandret scroll ved 375 px.
+
+**Push:** `lane-E` @ `454278f` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

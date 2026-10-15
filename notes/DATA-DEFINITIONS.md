@@ -79,6 +79,8 @@ Råstof-blurb siger, at Centrus beriger uran og ikke er et kraftværk. Batteri-b
 
 Opsendelses-blurb siger, at Starfighters skriver, at STARLAUNCH 1 er et suborbitalt udviklingsfartøj og ikke en orbital rute, og at Howmet leverer metaldele og ikke selv sender op. Profilen citerer selskabets meddelelse af 13. oktober 2026: planlagt flyvning med raketten under vingen, ikke en gennemført orbital opsendelse. Selskabets formulering om at være det eneste er ikke taget med. Konceptkortet i nyhedsarkivet gentager grænsen. Vægtene er uændrede. Et tjek samme nat: sum og antal på de otte led passer, og hver vægt matcher PMINDI pr. 2026-06-01.
 
+Råstof-leddet siger også, at The Metals Company skriver, at prøvekørsel ventes i fjerde kvartal 2027, og at aftalen og ansøgningen ikke er produktion. Kilden er selskabets meddelelse i maj 2026 om Allseas og NOAA's offentliggørelse af ansøgningen i august 2026. Et navneplade-tal for kapacitet og formuleringen om verdens største ressource er ikke taget med. Northern Dynasty skriver, at Pebble er i føderal tilladelsesbehandling. Lithium Americas skriver, at Thacker Pass bygges, med mål om industriel skala sent i 2027. Ingen af de to er i fuld drift. Mountain Pass og Gibraltar er stadig miner i teksten.
+
 ## År til dato på periodesiden
 
 `ytdReturn` i `data.js` bruger sidste punkt i året før som udgangspunkt, ikke 1. januar. For PMINDI pr. 2026-10-14 er det 2025-12-31, ikke 2026-01-02. `periode.html` viser den samme dato i "Fra → til". Kalenderår bruger samme base (`calendarYearReturns`).

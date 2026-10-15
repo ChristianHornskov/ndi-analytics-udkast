@@ -73,3 +73,7 @@ Blurbs på råstoffer og batterier siger grænsen, så man ikke læser Centrus s
 ## Starfighters og Howmet · 2026-10-16 ~00:32 CEST
 
 Opsendelse nævner nu det tungeste navn. Starfighters er luftopsendelse under udvikling, ikke en orbital rute. Howmet er metaldele. Kilden er selskabets meddelelse 13. oktober 2026 om en planlagt flyvning med raketten under vingen. "Only" og kurser er ikke kopieret. AI-udkast uden gennemgangsdato. Vægte uændrede og stadig lig beholdningen. Chromium på kæde, nyhedsarkiv og selskabsside. Ingen konsolfejl. Ingen vandret scroll ved 375 px.
+
+## Noduler, Pebble og Thacker Pass · 2026-10-16 00:34 CEST
+
+Råstof-leddet skelner nu de tre navne, der lettest læses som drift. The Metals Company har en aftale og en ansøgning, og selskabet selv venter prøvekørsel i fjerde kvartal 2027. Det er ikke produktion. Pebble er i føderal tilladelsesbehandling. Thacker Pass bygges, med mål sent i 2027. Kapacitetstal og "world's largest" er ikke kopieret. AI-udkast uden gennemgangsdato. Chromium på kæde, nyhedsarkiv og selskabsside. Ingen konsolfejl. Ingen vandret scroll ved 375 px.

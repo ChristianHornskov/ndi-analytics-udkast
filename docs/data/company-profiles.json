@@ -1063,12 +1063,20 @@
    "role": "Muligt råstof til batterier. Ikke drift.",
    "narrative": [
     "The Metals Company undersøger metalnoduler på havbunden. Nodulerne indeholder blandt andet nikkel, kobber og kobolt.",
-    "Der er ingen produktion i denne beskrivelse. Om indsamling i kommerciel skala bliver tilladt, er ikke afgjort."
+    "Selskabet skrev i maj 2026, at Allseas skal gøre et opsamlingssystem færdigt, og at prøvekørsel ventes at begynde i fjerde kvartal 2027. I august 2026 lagde NOAA en ansøgning frem. Ansøgningen er ikke en tilladelse, og der er ingen produktion i denne beskrivelse."
    ],
    "narrativeSources": [
     {
      "label": "Selskabets side",
      "url": "https://metals.co/"
+    },
+    {
+     "label": "Aftale med Allseas, maj 2026",
+     "url": "https://metals.co/tmc-and-allseas-sign-commercial-agreement-first-offshore-nodule/"
+    },
+    {
+     "label": "Ansøgning offentliggjort, august 2026",
+     "url": "https://metals.co/noaa-publishes-tmc-usas-consolidated-application-exploration/"
     }
    ]
   },
