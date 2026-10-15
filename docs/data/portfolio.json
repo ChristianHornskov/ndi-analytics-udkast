@@ -6280,7 +6280,7 @@
           "name": "Infleqtion Inc",
           "symbol": "INFQ",
           "weight": 0.24,
-          "theme": "software",
+          "theme": "quantum",
           "logoDomain": null,
           "sector": "Technology",
           "industry": "Software—Infrastructure",
@@ -6289,7 +6289,10 @@
           "products": null,
           "watch": null,
           "customers": null,
-          "maturity": "ikke-klassificeret"
+          "maturity": "ikke-klassificeret",
+          "themeStatus": "forslag",
+          "themeFrom": "software",
+          "themeNote": "forslag, afventer gennemgang — quantum computing og kvantesensorer (runde 3: kerneprodukt)"
         },
         {
           "isin": "US50202M1027",
@@ -7236,7 +7239,7 @@
           "name": "Neo Performance Materials In",
           "symbol": "NEO.TO",
           "weight": 0.17,
-          "theme": "connect",
+          "theme": "energy-resources",
           "logoDomain": null,
           "sector": "Basic Materials",
           "industry": "Specialty Chemicals",
@@ -7248,7 +7251,7 @@
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
           "themeFrom": "andet",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 3: sjældne jordarter/magneter som USA Rare Earth; før foreslået Optik)"
         },
         {
           "isin": "JP3571400005",
@@ -8993,7 +8996,7 @@
           "name": "Asp Isotopes Inc",
           "symbol": "ASPI",
           "weight": 0.08,
-          "theme": "connect",
+          "theme": "energy-resources",
           "logoDomain": null,
           "sector": "Basic Materials",
           "industry": "Specialty Chemicals",
@@ -9005,7 +9008,7 @@
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
           "themeFrom": "andet",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 3: isotoper/kernebrændsel som Centrus; før foreslået Optik)"
         },
         {
           "isin": "US0094221068",
@@ -13012,7 +13015,7 @@
           "name": "Neo Performance Materials In",
           "symbol": "NEO.TO",
           "weight": 0.24,
-          "theme": "connect",
+          "theme": "energy-resources",
           "logoDomain": null,
           "sector": "Basic Materials",
           "industry": "Specialty Chemicals",
@@ -13024,7 +13027,7 @@
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
           "themeFrom": "andet",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 3: sjældne jordarter/magneter som USA Rare Earth; før foreslået Optik)"
         },
         {
           "isin": "DE0006231004",
@@ -13569,7 +13572,7 @@
           "name": "Infleqtion Inc",
           "symbol": "INFQ",
           "weight": 0.22,
-          "theme": "software",
+          "theme": "quantum",
           "logoDomain": null,
           "sector": "Technology",
           "industry": "Software—Infrastructure",
@@ -13578,7 +13581,10 @@
           "products": null,
           "watch": null,
           "customers": null,
-          "maturity": "ikke-klassificeret"
+          "maturity": "ikke-klassificeret",
+          "themeStatus": "forslag",
+          "themeFrom": "software",
+          "themeNote": "forslag, afventer gennemgang — quantum computing og kvantesensorer (runde 3: kerneprodukt)"
         },
         {
           "isin": "US55405W1045",
@@ -15211,7 +15217,7 @@
           "name": "Asp Isotopes Inc",
           "symbol": "ASPI",
           "weight": 0.13,
-          "theme": "connect",
+          "theme": "energy-resources",
           "logoDomain": null,
           "sector": "Basic Materials",
           "industry": "Specialty Chemicals",
@@ -15223,7 +15229,7 @@
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
           "themeFrom": "andet",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 3: isotoper/kernebrændsel som Centrus; før foreslået Optik)"
         },
         {
           "isin": "US0231931058",

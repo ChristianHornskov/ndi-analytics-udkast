@@ -183,3 +183,14 @@ Princip: maskiner følger Cummins/Generac (Fysisk tech); batteri-/lagringsselska
 | US2935941078 | Enovix Corp | 0.05 | andet | energy | battericeller (Energi led 4) |
 | CA28617B6061 | Electrovaya Inc | 0.05 | andet | energy | batterisystemer (Energi led 4) |
 | US82489W1071 | Shoals Technologies Group  | 0.04 | andet | energy | el-komponenter til solparker (Energi led 1) |
+
+## Runde 3: tre skæve forslag rettet (lane-B c11, 2026-10-16)
+Kun `theme`/`themeStatus`/`themeFrom`/`themeNote` i portfolio.json, begge klasser. themes.json (PMINDI) genberegnet.
+
+| ISIN | Navn | Før | Nyt forslag | Grund |
+|---|---|---|---|---|
+| US45676K1034 | Infleqtion | software (fast) | quantum (themeFrom: software) | kvantecomputere (neutrale atomer) + kvantesensorer - som IonQ/Rigetti/D-Wave/QCI. Quantum 4 → 5 |
+| US00218A1051 | ASP Isotopes | connect (forslag fra Andet) | energy-resources | isotop-berigning til medicin og kernebrændsel; ingen optik. Som Centrus/Lightbridge |
+| CA64046G1063 | Neo Performance Materials | connect (forslag fra Andet) | energy-resources | sjældne jordarter og permanente magneter; som USA Rare Earth (Energi led 5) |
+
+**Stadig tvivlsomme forslag (ikke ændret, nævnt i linsen):** Chemours, Arkema, Solstice Advanced Materials (kemi/materialer → Optik er usikkert; Andet eller "materialer" ville være mere ærligt). Ategrity er et forsikringsselskab foreslået som Software (som Lemonade/Root). Afventer NDI.
