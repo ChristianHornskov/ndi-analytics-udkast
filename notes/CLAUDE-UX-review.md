@@ -535,3 +535,28 @@ main er uændret i docs/ siden `75a87c2`, og Pages er stadig samme build (last-m
 
 ### OK ✅
 - Alle 5 eksterne KID-/prospekt-links svarer 200 (2 KID-PDF'er, 2 Fundmarket-sider, fællesprospekt 24.10.2025). SRI 5/7 og 5 års anbefalet periode på siden stemmer med KID.
+
+## 2026-10-16 02:00 CEST · cyklus 24 (main `90e7de8`, intet docs-delta)
+
+main er uændret i docs/ siden `75a87c2`. Pages er genbygget kl. 23:49 GMT, men kun på grund af note-commits. lane-R indeholder allerede origin/main, og jeg har ikke lavet `reset --hard`, fordi det ville kassere cyklus 23, som allerede er pushet. Persona- og krav-filerne er uændrede siden 23:43. Denne gang har jeg kigget på de sider, der sjældent bliver tjekket: embed, de 5 laer-sider, periode, kort, selskaber, tema, vaerdikaede og ndi-perspektiv. Jeg har kørt dem ved **320 px** med Playwright live (20 sider) og tjekket alle interne links. Resultat: **1.007 unikke interne links svarer alle 200** ✅. Der er 0 pageerrors, én h1 og et skip-link på alle sider.
+
+### MUST (uændret)
+- Invester har tre "trin 4". Selskab viser "AI-udkast" over et tomt felt og stubs med "–". Omkostninger mangler KID-tallet 2,79 %/2,85 % (se cyklus 23). SRI 5 mod vol 32,46 %.
+
+### SHOULD (nyt)
+- **Periode-siden har intern jargon.** Eyebrow'en hedder "PERIODE · DYB SIDE" (`periode.html:65`), og knappen på fonden hedder "YTD dyb side →" (`app.js:418`). Kort skriver "År / ÅTD dyb side". "Dyb side" er bygge-sprog. Skriv "Afkast for 2025" og "Se år til dato →". Brug også ÅTD eller "år til dato" konsekvent, ikke "YTD" (periode viser "YTD: +4,0 %").
+- **Periode har to "← Fonden"-links** i headeren ved 320, og der er ingen "Lær"/"Invester" i navigationen.
+- **Decimalpunktum i udbytte:** "Udbytte PMINDI (ex-dato) 38.9 kr." og "38.0 kr." står på periode. Det skal være "38,90 kr." med dansk format.
+- **2023 står som et helt år** ("2023: +16,7 %"), selv om serien først starter 22. sep. 2023. Skriv "2023 (fra 22. sep.)" eller fjern tallet (se compliance #10).
+- **Tema chips overflower ved 320:** `span.x-says-n` "Viser 3 direkte og 1 tema · 8 i alt" har `white-space:nowrap` (`x-feed.js:121`), og scrollWidth er 327. Tillad ombrydning. Det er ikke et problem ved 375.
+- **Overskriftsspring på vaerdikaede.html** (h2→h4 eller lignende, 1 spring). Det er en lille tilgængelighedsfejl.
+
+### Nice
+- **Ingen `meta description`** på 19 af 20 undersider. Kun entréen har en. Delte links (LinkedIn/Slack) viser derfor kun og:title. Giv i det mindste invester, omkostninger, fonden og drawdown en beskrivelse.
+- Embed-grafen ignorerer `?periode=1m` og viser "Hele perioden" ✅ (godt for compliance). Men den har ingen links til KID, omkostninger eller fonden, kun "Undersøg porteføljen" og "Se største fald" (se compliance #11).
+- ndi-perspektiv er på 191.763 tegn renderet tekst. Det er tungt på mobil og bekræfter forslaget om at folde den sammen.
+
+### Persona-linser
+- **Privat (55+):** periode-siden er nyttig ("hvad gav fonden i 2025?"), men "dyb side", "YTD" og "38.9 kr." virker uprofessionelt. Laer-siderne (FAQ, udbytte-vs-akk og forsinket beholdning) er rolige og klare ✅.
+- **Familiekontor:** ville bruge embed og periode til intern rapportering. Begge mangler en kilde til omkostninger og et link til KID. Kalenderårstabellen bør vise 12-måneders perioder.
+- **Visuel variation:** laer og periode er enkle tekstsider, som giver en god pause efter fonden og udforsk. Ingen træthed.

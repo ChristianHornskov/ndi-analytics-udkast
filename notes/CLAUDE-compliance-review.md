@@ -609,3 +609,30 @@ Ikke juridisk rådgivning. Pages er samme build som i cyklus 22. Nyt i denne cyk
 - KID-links: begge PRIIP-PDF'er svarer 200 (application/pdf). Det gør de to Fundmarket-produktsider og fællesprospektet (opdateret 24.10.2025) også. KID-ISIN DK0062499810/DK0064642623 stemmer med siden.
 - KID'ets scenarie-afkast (fx "25,42 % før omkostninger") gengives ikke på siden ✅. Det skal blive sådan.
 - Ingen fremadskuende udsagn og ingen rådgivningsord, som i cyklus 22.
+
+## 2026-10-16 02:00 CEST · cyklus 24 (main `90e7de8`, intet docs-delta)
+
+Ikke juridisk rådgivning. Docs er samme build som i cyklus 22–23. Nyt i denne cyklus: embed, periode, laer (5 sider), kort, selskaber, tema og vaerdikaede ved 320 px live. Alle 1.007 interne links svarer 200.
+
+### MUST (nyt)
+10. **Afkast for perioder under 12 måneder vises som kalenderår.** Periode viser "2023: +16,7 %", men serien starter 22. sep. 2023, så tallet dækker 3 måneder. "2026: +4,0 %" og "YTD: +4,0 %" er heller ikke hele år. Embed og fonden viser også "År til dato +4,0 %". ESMA's retningslinjer om markedsføringsmateriale (ESMA34-45-1272, afsnit om tidligere resultater) henviser til MiFID-delegeret forordning 2017/565 art. 44(4). Ifølge den skal historiske resultater vises for **komplette 12-månedersperioder**. Mit forslag er at fjerne 2023 som selvstændigt år (eller mærke det "delperiode, 22.9.–31.12.2023, ikke et helt år") og at fjerne ÅTD fra embed og periode. Det skærper MUST 5 (ÅTD ved "afventer Fundmarket-godkendelse"). Jurist/NDI skal bekræfte, om ÅTD kan beholdes som "seneste kurs"-information.
+11. **Embed-grafen er materiale, der kan stå alene, men den mangler KID-reference.** `embed/chart.html` linkes fra footeren ("Embed-graf") og fra kort. Den viser +104,8 %, CAGR +26,4 % og ÅTD med "Historisk afkast …" og "kan tabe" ✅. Men den har **0 KID-links, ingen SRI, ingen henvisning til prospekt og ingen "markedsføringsmateriale"-mærkning**. Hvis den embeddes andre steder, er den en selvstændig markedsføringsmeddelelse. Tilføj en linje med "SRI 5/7 · KID · Prospekt · Markedsføringsmateriale" under grafen, eller fjern embed-linket fra footeren, indtil det er på plads.
+
+### SHOULD (nyt)
+- **CAGR +26,4 % ved siden af "3,1 år siden start"** (embed og periode). CAGR over en kort periode med stærk start (2024 +46,4 %) giver let et for gunstigt indtryk. Vis kalenderårs-tabellen først og CAGR sekundært, eller skriv "Gns. pr. år i perioden 22.9.2023–14.10.2026 · ikke en forventning".
+- **Laer/udbytte-vs-akk og laer/forsinket-beholdning har 0 KID-links**, men har risikolinjen ✅.
+
+### MUST (åbne, uændrede)
+1. Ingen "markedsføring"-mærkning (generelt, nu også #11).
+2. "MADS FØLGER" står på ndi-paa-x ×7 og SoftBank ×3.
+3. "kan tabe" er 0 på omkostninger (re-verificeret i denne cyklus), ndi-paa-x og nyhedsarkiv.
+4. PMINDIAKK NAV 98,40 står før 12 mdr.
+5. ÅTD og +104,8 % står ved siden af "afventer Fundmarket-godkendelse" (se #10).
+6. SRI 5 mod laer-teksten "20–30 %" og vol 32,46 %.
+7. `chartMarkers` @MadsC007.
+8. Repoet er offentligt, så noterne er offentlige. Christian skal tage beslutningen.
+9. KID'ets omkostningstal 2,79 %/2,85 % gengives ikke.
+
+### OK ✅
+- Embed ignorerer `?periode=1m`, så der vises ingen 1m på PMINDI ✅. Periode viser "Fonden har intet fast benchmark" ✅. Beholdning pr. 1. jun. 2026 er uændret ✅. AI-mærkning er uændret (selskab, tema, vaerdikaede).
+- Risikolinjen "Historisk afkast … kan tabe" står på alle 5 laer-sider, periode, kort, selskaber, tema, embed og invester.
