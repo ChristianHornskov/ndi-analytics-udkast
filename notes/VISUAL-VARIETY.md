@@ -50,7 +50,7 @@ Et plus-år kan rumme det dybeste fald. 2025 er eksemplet i copy, regnet fra ser
 
 ## Sammenlign
 
-Kortpar (to klasser), tidslinje uden panel, stort tal for overlap, ét panel med parvise temasøjler. Ikke tre `.panel` i træk. Krydslink til drawdown overlever, når siden er hentet. Datoen for AKK-gaten står på sin egen linje.
+Kortpar (to klasser), tidslinje uden panel, stort tal for overlap, ét panel med parvise temasøjler. Ikke tre `.panel` i træk. Rækken med den største forskel har en gul kant, og teksten nævner temaet. Krydslink til drawdown overlever, når siden er hentet. Datoen for AKK-gaten står på sin egen linje.
 
 ## Embed
 

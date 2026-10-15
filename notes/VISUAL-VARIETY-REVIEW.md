@@ -74,6 +74,10 @@ Prikken på en dag under nul var `#c98a94` (`--neg`), mens udlæsning og tooltip
 
 På 320 dækkede tooltip sluttallet. Det stopper nu 8 px før tallet, på år til dato og på hele perioden, ved 1280, 375 og 320. Ingen sidescroll. Ingen konsolfejl. PMINDIAKK har stadig tom svg og ingen procent.
 
+### Update · største forskel · 2026-10-16 ~01:02 CEST
+
+Sammenlign sagde "største forskel" uden at vise hvilken række. Det er Andet / uklassificeret, ca. 1,5 procentpoint (11,6 % og 13,2 %). Rækken har en gul kant. Ét panel. Ingen afkastprocent på AKK-kortet. Datoen står på sin egen linje. Krydslink til drawdown er der. Ingen sidescroll ved 1280, 375 og 320. Ingen konsolfejl.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.
