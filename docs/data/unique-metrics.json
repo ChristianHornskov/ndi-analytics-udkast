@@ -4,19 +4,61 @@
     "US88160R1014": {
       "name": "Tesla",
       "metrics": [
-        { "label": "Energi + fysisk tech", "value": "Multi-tag", "hint": "Se tema-tags: physical + energy" }
+        {
+          "label": "Energi + fysisk tech",
+          "value": "Multi-tag",
+          "hint": "Se tema-tags: physical + energy"
+        }
       ]
     },
     "US67066G1040": {
       "name": "Nvidia",
       "metrics": [
-        { "label": "Plads i stakken", "value": "Compute + chips", "hint": "NDI-linse — ikke en rating" }
+        {
+          "label": "Plads i stakken",
+          "value": "Compute + chips",
+          "hint": "NDI-linse — ikke en rating"
+        }
       ]
     },
     "JP3436100006": {
       "name": "SoftBank Group",
       "metrics": [
-        { "label": "Rolle", "value": "Platforme / holding", "hint": "Se selskabsside for problem/rolle" }
+        {
+          "label": "Rolle",
+          "value": "Platforme / holding",
+          "hint": "Se selskabsside for problem/rolle"
+        }
+      ]
+    },
+    "US30303M1027": {
+      "name": "Meta Platforms Inc",
+      "metrics": [
+        {
+          "label": "NDI-linse",
+          "value": "Platforme + software",
+          "hint": "Multi-tag overlay — eksponering, ikke rating"
+        }
+      ]
+    },
+    "CA73044W3021": {
+      "name": "Poet Technologies Inc",
+      "metrics": [
+        {
+          "label": "Plads i kæden",
+          "value": "Chips ↔ optik",
+          "hint": "Photonics / interconnect til AI-stakken"
+        }
+      ]
+    },
+    "US34379V1035": {
+      "name": "Fluence Energy Inc",
+      "metrics": [
+        {
+          "label": "NDI-linse",
+          "value": "Energi + fysisk",
+          "hint": "Batterilagring i værdikæden"
+        }
       ]
     }
   }

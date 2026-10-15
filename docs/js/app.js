@@ -142,6 +142,9 @@ function renderEntre(root) {
     <p class="eyebrow">NDI ANALYTICS · UDKAST</p>
     <h1>Gå på opdagelse i NewDeal Invest</h1>
     <p class="lede">Et sted hvor du kan se fondens udvikling, forstå porteføljen gennem NDI's egne temaer og modenhedsgrader – og finde selskaberne uden de klassiske 11 sektorkasser. Dette er et klikbart udkast (ikke den live hjemmeside).</p>
+    <p class="updated-stamp"><strong>Senest opdateret</strong>
+      <span>Afkast-snapshot: <time datetime="${DATA.portfolio.performanceAsOf || DATA.portfolio.asOf}">${fmtDate(DATA.portfolio.performanceAsOf || DATA.portfolio.asOf)}</time></span>
+      <span>Beholdning (forsinket): <time datetime="${DATA.portfolio.asOf}">${fmtDate(DATA.portfolio.asOf)}</time></span></p>
     <p class="band">Segmenter og temaer viser <strong>eksponering</strong>, ikke en anbefaling. Indholdet er generel information.</p>
     <div class="doors" role="navigation" aria-label="Vælg område">
       <a class="door" href="?view=fonden&fund=${state.fund}" data-nav="fonden">
@@ -186,9 +189,9 @@ function renderEntre(root) {
       <ol style="color:var(--muted);font-size:14px;line-height:1.55;padding-left:20px;display:grid;gap:8px">
         <li>Teknologi er drivkraften – retningen kan skimtes, vinderne kan ikke udpeges sikkert.</li>
         <li>Derfor bred spredning på tværs af værdikæden, ikke én “vinderaktie”.</li>
-        <li>Store kursudsving er et grundvilkår – ikke det samme som langsigtet risiko.</li>
-        <li>Vi bruger ikke P/E som hovedværktøj til vækstvirksomheder, der investerer tungt i fremtiden.</li>
-        <li>Lang horisont. Historisk afkast siger ikke, hvad der sker fremover.</li>
+        <li>Store kursudsving er et grundvilkår i tech. Fald kan være store og vare længe.</li>
+        <li>P/E er ikke vores hovedværktøj for vækstvirksomheder, der investerer tungt i fremtiden.</li>
+        <li>Fonden er tænkt med lang horisont. Historisk afkast siger ikke, hvad der sker fremover.</li>
       </ol>
       ${warnHtml()}
     </section>`;
@@ -336,7 +339,7 @@ function renderFonden(root) {
       <ul style="color:var(--muted);font-size:13px;line-height:1.55;padding-left:18px;display:grid;gap:6px">
         <li>Risikoindikator 5 på en skala fra 1 til 7 (KID, 14. august 2026). Anbefalet ejertid 5 år.</li>
         <li>Du kan tabe en del af eller hele din investering.</li>
-        <li>Store kursudsving er et grundvilkår for teknologiaktier. Du skal kunne holde investeringen i mindst 5 år og tåle store fald undervejs.</li>
+        <li>Store kursudsving er et grundvilkår for teknologiaktier. KID angiver en anbefalet investeringshorisont på 5 år, og der kan komme store fald undervejs.</li>
         <li>Porteføljen er koncentreret i teknologi og typisk i USD-noterede papirer.</li>
       </ul>
       <p style="margin-top:12px"><button type="button" class="outline-btn small" data-open="dlg-invest">Sådan investerer du · Kopiér ISIN</button></p>
@@ -549,7 +552,7 @@ function renderUdforsk(root) {
     <p style="font-size:12px;color:var(--muted);margin:8px 0">Tema-dybsider: ${themes.map((t) => `<a href="tema.html?slug=${encodeURIComponent(t)}&fund=${state.fund}">${daTheme(t)}</a>`).join(' · ')} · <a href="selskaber.html?fund=${state.fund}">A–Z liste</a></p>
     <!-- Modenhedsfiltre skjult indtil manuel klassifikation -->
     <div class="chips" id="chips"></div>
-    <p style="font-size:12px;color:var(--muted)" id="filter-status" aria-live="polite">${list.length} resultater · udkast-klassifikation</p>
+    <p style="font-size:12px;color:var(--muted)" id="filter-status">${list.length} resultater · udkast-klassifikation</p>
     ${list.length ? positionsTable(list, fund) : emptyScreener(fund)}
     ${warnHtml()}`;
 
@@ -573,6 +576,26 @@ function paint() {
   else if (state.view === 'udforsk') renderUdforsk(root);
   else renderEntre(root);
   $('#asof-global') && ($('#asof-global').textContent = `Data pr. ${fmtDate(DATA.portfolio.asOf)}`);
+  announceFilters();
+}
+
+/** Skærmlæser: læs resultatet af filter-/sorterings-/fondsskift op via #sr-status (vedvarende region). */
+let lastAnnounce = null;
+function announceFilters() {
+  const live = $('#sr-status');
+  if (!live) return;
+  if (state.view !== 'udforsk' && state.view !== 'portefolje') { lastAnnounce = null; return; }
+  const fund = fundById(DATA.portfolio, state.fund);
+  const n = filterPositions(fund).length;
+  const parts = [`${fund.short}: ${n} af ${fund.positions.length} selskaber`];
+  if (state.tags.length) parts.push(`tema ${state.tags.map(daTheme).join(', ')}`);
+  if (state.q) parts.push(`søgning ${state.q}`);
+  const SORT = { weight: 'vægt', name: 'navn', ps: 'P/S' };
+  parts.push(`sorteret efter ${SORT[state.sort] || state.sort}, ${state.dir === 'asc' ? 'stigende' : 'faldende'}`);
+  const msg = parts.join(' · ');
+  // Første visning af en side annonceres ikke (overskriften læses allerede); kun ændringer.
+  if (lastAnnounce !== null && msg !== lastAnnounce) live.textContent = msg;
+  lastAnnounce = msg;
 }
 
 function onClick(e) {

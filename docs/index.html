@@ -39,6 +39,8 @@
   <main>
     <p id="asof-global" style="font-size:12px;color:var(--muted);margin-bottom:8px"></p>
     <div id="app"><p style="color:var(--muted)">Henter data…</p></div>
+    <!-- Vedvarende live-region uden for #app: paint() udskifter #app, og nyindsatte regioner læses ofte ikke op -->
+    <div id="sr-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
   </main>
   <footer class="site-footer">
     <p><strong>Udkast / noindex.</strong> Ikke den officielle live-side. Ingen investeringsrådgivning. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.</p>

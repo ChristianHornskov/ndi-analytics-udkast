@@ -19,3 +19,12 @@
 - Notes Pages 404: verified earlier
 - Focus trap on dialogs: added
 - Mobile CSS: touch 44px, table scroll hint
+
+## Pre-22:00 working notes (20:35)
+Pass checklist for 22:00:
+- [ ] Entré doors readable 375
+- [ ] Fonden: context markers + 100k + warn
+- [ ] Udforsk: Tesla shows Energi+Fysisk when filtered energy
+- [ ] Selskab SoftBank: profile + KID
+- [ ] Notes 404
+- [ ] No console errors on smoke
