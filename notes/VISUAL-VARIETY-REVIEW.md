@@ -96,6 +96,10 @@ De to sammenlign-kort er stadig et par, med samme felter. Forskellen er tegnet: 
 
 Forklaringen under underwater var ét afsnit. Den er nu en linje, en nøgle og en kort sætning. Nøglen har dybeste bund, seneste dag, valgt dag, stregen ved 10 % under nul, og de to søjler (højde er dybde, gul er åben). Svg-beskrivelsen har stadig den fulde tekst. Et klik på −35,8 % sætter udlæsningen til 8. apr. 2025. Ingen sidescroll ved 1280, 375 og 320. Ingen konsolfejl.
 
+### Update · embed-kort og sætning · 2026-10-16 ~01:34 CEST
+
+Klasse-kortene i embed havde tom plads til højre. PMINDI har nu pilen ud. PMINDIAKK har loopet tilbage. Teksten rammer ikke mærket, ved 1280, 375 og 320. Sætningen under grafen sagde slutdatoen to gange ("til 14. okt. 2026, pr. 14. okt. 2026"). Den siger den én gang. Hele perioden er stadig +104,8 %. År til dato er +4,0 %. PMINDIAKK har tom svg, ingen procent, og linket siger at drawdown vises efter 12 måneder. Ingen sidescroll. Ingen konsolfejl.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.

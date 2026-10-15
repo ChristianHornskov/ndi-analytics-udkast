@@ -251,8 +251,8 @@
 
     const direction = verbFor(periodReturn);
     const pointe = periodReturn === 0 || Math.abs(periodReturn) < 0.05
-      ? `${state.fund} er ${direction} fra ${fmtDate(first.date)} til ${fmtDate(last.date)}, pr. ${fmtDate(last.date)}.`
-      : `${state.fund} er ${direction} ${pct(Math.abs(periodReturn))} fra ${fmtDate(first.date)} til ${fmtDate(last.date)}, pr. ${fmtDate(last.date)}.`;
+      ? `${state.fund} er ${direction} fra ${fmtDate(first.date)} til ${fmtDate(last.date)}.`
+      : `${state.fund} er ${direction} ${pct(Math.abs(periodReturn))} fra ${fmtDate(first.date)} til ${fmtDate(last.date)}.`;
     $('#chart-pointe').textContent = pointe;
 
     const svg = $('#performance-chart');

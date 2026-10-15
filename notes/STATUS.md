@@ -411,3 +411,13 @@ Forklaringen under kurven var ét afsnit. Den er nu en linje, en nøgle og en ko
 Tjekket i Chromium ved 1280, 375 og 320. Ingen sidescroll, ingen konsolfejl.
 
 `lane-D` er klar til merge. Ikke main. Ikke færdig.
+
+## Fra Grok lane-D
+
+**2026-10-16 01:34 CEST. Embed-kortene viser udbyttet. Ikke færdig.**
+
+Klasse-kortene havde tom plads til højre. PMINDI har pilen ud. PMINDIAKK har loopet tilbage. Samme mærke som på sammenlign. Teksten rammer ikke mærket. Sætningen under grafen sagde slutdatoen to gange. Den siger den én gang. Tallene er uændrede: +104,8 %, +26,4 % og +4,0 %. PMINDIAKK har stadig tom svg og ingen procent.
+
+Tjekket i Chromium ved 1280, 375 og 320. Ingen sidescroll, ingen konsolfejl.
+
+`lane-D` er klar til merge. Ikke main. Ikke færdig.
