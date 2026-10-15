@@ -318,3 +318,33 @@ export function chainForTheme(chains, key) {
 
 // Anker på vaerdikaeder.html: Rum har eget kapitel; øvrige kæder vælges i fanerne i #kap-kaeder.
 export const chainHref = (key) => (key === 'space' ? 'vaerdikaeder.html#kap-rum' : 'vaerdikaeder.html#kap-kaeder');
+
+// Fælles søgning for screener (app.js) og A-Z (selskaber.html). Rækkefølge: navn/ticker/ISIN → alle
+// tema-tags (inkl. multi-tag) → NDI-linsens kvalitative tekst (værdi + hint; ikke Livscyklus/NDI-tag, min. 3 tegn).
+// Returnerer null eller { via: 'navn' | 'tema' | 'linse', label?, value? } - linse-hits viser,
+// hvilket felt der matchede, så et hit som "kvante" på QuantumScape kan læses i kontekst.
+const fold = (s) => String(s ?? '').toLocaleLowerCase('da');
+export function searchPosition(p, q, multiTags, lensByIsin) {
+  const needle = fold(q).trim();
+  if (!needle) return { via: 'alle' };
+  if ([p.name, p.symbol, p.isin].some((x) => fold(x).includes(needle))) return { via: 'navn' };
+  const tags = tagsFor(p, multiTags);
+  const tagHit = tags.find((t) => fold(daTheme(t)).includes(needle) || fold(t).includes(needle));
+  if (tagHit) return { via: 'tema', value: daTheme(tagHit) };
+  if (needle.length < 3) return null; // 1-2 tegn rammer næsten al fritekst
+  for (const m of lensByIsin?.[p.isin]?.metrics || []) {
+    // Livscyklus: samme tekst for alle. NDI-tag: dækket af tema-tags ovenfor ("før: Andet" ville forvirre).
+    if (m.label === 'Livscyklus' || m.label.startsWith('NDI-tag')) continue;
+    if (fold(m.value).includes(needle)) return { via: 'linse', label: m.label, value: m.value };
+    const at = fold(m.hint).indexOf(needle);
+    if (at >= 0) {
+      // Match kun i hint-teksten: vis et uddrag omkring ordet i stedet for feltets overskrift
+      const from = Math.max(0, m.hint.lastIndexOf(' ', Math.max(0, at - 30)) + 1);
+      const end = m.hint.indexOf(' ', Math.min(m.hint.length, at + needle.length + 30));
+      const cut = end < 0 ? m.hint.length : end;
+      const snip = (from > 0 ? '…' : '') + m.hint.slice(from, cut).replace(/[.,;:]$/, '') + (cut < m.hint.length ? '…' : '');
+      return { via: 'linse', label: m.label, value: snip };
+    }
+  }
+  return null;
+}
