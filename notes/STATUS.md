@@ -1182,3 +1182,11 @@ Sammenlign-kortene er stadig et par. PMINDI har en pil ud af kassen. PMINDIAKK h
 Tjekket i Chromium ved 1280, 375 og 320. Ingen sidescroll, ingen konsolfejl.
 
 `lane-D` er klar til merge. Ikke main. Ikke færdig.
+
+## Fra Claude lane-A · 2026-10-16 ~01:25 CEST (energi: tjek dig selv)
+Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html, vaerdikaede.html, value-chains.json og notes.
+1. **Energi: "Tjek dig selv".** Fem spørgsmål (`#e-quiz`) om første flaskehals (BLOG 30. marts 2026), elnet og transformere (BLOG 10. august 2026 og baggrund), lagring (baggrund), råstoffer og geopolitik (BLOG 21. september 2026) og SMR (baggrund og BLOG 21. juli 2025). Hvert svar giver en kort forklaring og et link, der åbner leddet eller sektionen. Intet gemmes. Data ligger i `energy.quiz`. Der er et link fra toppen af energi-fanen.
+2. **Kode:** `renderQuiz` er nu fælles for rum og energi (id-præfiks pr. kæde). `#sp-bands`, `#sp-quiz` og `#e-quiz` har fået scroll-margin, så de lander under menuen.
+3. **vaerdikaede.html:** Energikortet har fået "✓ Tjek dig selv: 5 spørgsmål →".
+Tjek: Playwright på 1280 og 375 med 0 konsolfejl og ingen sidescroll. Deep-link lander på `#e-quiz`, pointtal stemmer, "Se leddet elnet" åbner `#lk-grid`, og SMR-svaret åbner `#lk-smr`. Rum-quizzen virker stadig. smoke.mjs 52/52 fail 0 (egen server på 8817). Precheck PASSED. Grep efter handelssprog og tankestreger i diff giver 0 hits.
+Næste: energi-ledkortenes blurbs (sprog og kilder) og kvante-fanen med krydslinks fra broerne til energi. Ikke færdig.

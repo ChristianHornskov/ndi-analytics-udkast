@@ -2055,6 +2055,74 @@
      }
     ],
     "note": "Usikkerhederne er generel baggrundsviden og vores udvalg. De er ikke NDI's vurdering af enkelte selskaber. Linjerne med NDI-mærke er NDI's egne og har kilde. Kortene er ikke en rangering og ikke en anbefaling."
+   },
+   "quiz": {
+    "title": "Tjek dig selv: fem spørgsmål om energikæden",
+    "lede": "Vælg et svar. Du får en kort forklaring og et link til det sted på siden, hvor det står. Intet gemmes.",
+    "items": [
+     {
+      "q": "Hvad kalder NDI den første flaskehals i AI-udbygningen?",
+      "a": [
+       "Software",
+       "Energi",
+       "Smartphones"
+      ],
+      "ok": 1,
+      "why": "NDI beskriver energi som den første flaskehals og datacentre som den anden (BLOG 30. marts 2026).",
+      "sec": "e-pane",
+      "more": "Fra råstof til regnekraft"
+     },
+     {
+      "q": "Hvorfor kan et datacenter mangle strøm, selv om strømmen findes?",
+      "a": [
+       "Elnettet og transformerne kan ikke følge med",
+       "Strømmen er for billig",
+       "Datacentre må kun bruge strøm om natten"
+      ],
+      "ok": 0,
+      "why": "Store transformere bygges på bestilling, og leveringstiden kan være flere år (baggrund). NDI beskriver mangel på transformere og transmissionskapacitet (BLOG 10. august 2026).",
+      "sec": "lk-grid",
+      "more": "Se leddet elnet"
+     },
+     {
+      "q": "Hvad gør batterier i energikæden?",
+      "a": [
+       "De laver ny strøm",
+       "De gemmer strøm, fra den produceres, til den bruges",
+       "De sender strøm over lange afstande"
+      ],
+      "ok": 1,
+      "why": "Lagring glatter forskellen mellem, hvornår strømmen produceres, og hvornår den bruges. Det gør sol og vind mere brugbare (baggrund).",
+      "sec": "lk-storage",
+      "more": "Se leddet lagring"
+     },
+     {
+      "q": "Hvad skal en råstofanalyse ifølge Mads i dag også tage højde for?",
+      "a": [
+       "Kun udbud og efterspørgsel",
+       "Geopolitik",
+       "Vejret i næste uge"
+      ],
+      "ok": 1,
+      "why": "Råstoffer er rykket op i amerikansk udenrigspolitik, og Mads skriver, at analysen derfor også skal tage geopolitik med (BLOG 21. september 2026).",
+      "sec": "e-risk",
+      "more": "Hvad kan gå galt?"
+     },
+     {
+      "q": "Hvorfor ligger indtægterne fra små modulære reaktorer (SMR) mest ude i fremtiden?",
+      "a": [
+       "De fleste projekter har endnu intet kommercielt anlæg i drift",
+       "De er allerede lukket ned",
+       "Strømmen fra dem bliver givet væk"
+      ],
+      "ok": 0,
+      "why": "Tidsplanen afhænger af godkendelser (baggrund). NDI skriver, at atomenergi ikke altid får den værdiansættelse, den måske burde, fordi indtægterne er usikre (BLOG 21. juli 2025).",
+      "sec": "lk-smr",
+      "more": "Se leddet atomkraft"
+     }
+    ],
+    "done": "Du har svaret på alle fem.",
+    "note": "Spørgsmålene er vores egne og skal gøre siden lettere at læse. De tester ikke viden om enkelte selskaber og er ikke en anbefaling."
    }
   },
   {

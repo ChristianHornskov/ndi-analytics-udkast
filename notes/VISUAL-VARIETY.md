@@ -137,3 +137,6 @@ Widgetten er ét panel. Call-to-action står udenfor, med link til største fald
 ### lane-A · 2026-10-16 · rum: højdebånd og tjek dig selv
 - **Højdebånd** (`#sp-bands`): lodret tidslinje-agtig liste med runde ikon-nåle på en brand-farvet akse, vist fra Månen øverst til jorden nederst (`column-reverse`, så DOM-rækkefølgen stadig går nedefra og op). Hover eller fokus på et bånd tænder LEO, MEO eller GEO på højdeskalaen ved siden af. Ny form i forhold til kortgitre og strimler.
 - **Tjek dig selv** (`#sp-quiz`): spørgsmålskort med svarknapper, ✓ i cyan og ✗ med stiplet kant, og en gul forklaringslinje med link. Første interaktive element på siden, der giver feedback. Kun lokal CSS i vaerdikaeder.html.
+
+### lane-A · 2026-10-16 · energi: tjek dig selv
+- **Tjek dig selv** (`#e-quiz`) på energi-fanen genbruger rum-quizzens form (svarknapper, ✓/✗, gul forklaringslinje), så læseren genkender mønstret på tværs af kæder. Svar-linket åbner leddet direkte (elnet, lagring, atomkraft). Ingen ny CSS ud over scroll-margin for de nye ankre.
