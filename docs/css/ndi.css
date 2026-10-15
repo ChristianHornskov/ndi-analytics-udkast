@@ -384,10 +384,12 @@ details.more[open] summary{margin-bottom:8px}
   .doors.doors-stack{grid-template-columns:1fr}
   .doors.doors-stack .door{grid-column:auto}
 }
-.metrics{grid-template-columns:repeat(4,minmax(0,1fr))}
 .metric{min-width:0}
 .metric .label{display:flex;flex-wrap:wrap;align-items:center;gap:4px;line-height:1.35;min-height:2.6em}
-.metric strong{font-weight:400;font-size:clamp(22px,2.4vw,29px);letter-spacing:-.45px;line-height:1.12;overflow-wrap:anywhere}
+.metric strong{font-weight:400;font-size:clamp(22px,2.4vw,29px);letter-spacing:-.45px;line-height:1.12}
+@media (min-width:801px){
+  .metrics{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
 #calendar{overflow-x:auto;max-width:100%;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:var(--brand) #0d1a20}
 .cal .yh{position:sticky;left:0;z-index:1;background:var(--panel)}
 table.data{border-collapse:separate;border-spacing:0}
@@ -399,6 +401,7 @@ table.data tbody tr:hover td:first-child{background:#163038}
 .table-wrap::after{content:none;display:none}
 
 @media (max-width:800px){
+  .metrics{grid-template-columns:1fr 1fr;row-gap:18px}
   .metric:nth-child(odd){border-left:0;padding-left:0}
   .metric:nth-child(even){border-left:1px solid #829da033;padding-left:12px}
   .cal{overflow:visible}
@@ -422,7 +425,7 @@ table.data tbody tr:hover td:first-child{background:#163038}
   table.data th:first-child,table.data td:first-child{
     white-space:normal;
     min-width:9rem;
-    max-width:60vw;
+    max-width:12rem;
     box-shadow:8px 0 8px -8px #000c;
   }
   table.data th button{min-height:32px;padding:4px 0}

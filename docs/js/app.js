@@ -412,14 +412,10 @@ function filterPositions(fund) {
     );
   }
   const dir = state.dir === 'asc' ? 1 : -1;
-  const psOf = (p) => (p.maturity === 'prerevenue' ? null : p.ps ?? null);
+  // Compliance: no per-stock P/S, P/E, YTD, drawdown sorts in v1
+  if (state.sort === 'ps' || state.sort === 'pe' || state.sort === 'drawdown52Approx') state.sort = 'weight';
   list.sort((a, b) => {
     const key = state.sort;
-    if (key === 'ps') {
-      const av = psOf(a), bv = psOf(b);
-      if (av == null || bv == null) return (av == null) - (bv == null);
-      return dir * (av - bv);
-    }
     let av = a[key], bv = b[key];
     if (key === 'name') return dir * (a.name || '').localeCompare(b.name || '', 'da');
     if (av == null) av = 0; if (bv == null) bv = 0;

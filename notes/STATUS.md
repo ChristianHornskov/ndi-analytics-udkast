@@ -1,28 +1,19 @@
 # STATUS – NDI Analytics overnight build
 
-**2026-10-15 20:38 CEST — NOT DONE / NOT BLOCKED. HEAD 0fed155. Continue.**
+**2026-10-15 20:44 CEST — Sole build lead. HARD precheck rule live. NOT DONE.**
 
 ## Live
 https://christianhornskov.github.io/ndi-analytics-udkast/  
-notes/STATUS.md → **404** ✓ · home/tema/faq/kort → **200**
+notes on Pages → must stay **404**
+
+## HARD RULE
+`bash scripts/precheck.sh` before every push. Fails on: notes in docs/, raw data.json, holdings >2026-06-01, d1/per-stock returns, JS reading those fields. See `notes/PRECHECK-RULE.md`.
 
 ## Compliance
-Notes only `/notes` · holdings ≤2026-06-01 · no daily movers · AKK gate · PMINDI no 1m/3m · no Nasdaq · no fake stock figures · udbytte-only context
+Delayed holdings ≤2026-06-01 · no daily movers · AKK no returns · PMINDI no 1m/3m · no Nasdaq · no fake stock figures · context = udbytte only · notes only `/notes`
 
-## Shipped (cycles 1–10)
-~25 public HTML pages + embed · multi-tag · weight sparklines/history · CSV · livscyklus · 100k · kontekstgraf · tema-vægtbars · risici/KID · lær (8+FAQ) · SoftBank profiles · NDI-perspektiv · sidekort · Playwright **46/46** green · robots Disallow + sitemap
-
-## Agents
-Claude still running (cycle 3 remnant + cycle 6). Merge their commits as they land.
-
-## NEXT for whoever continues
-1. UX-review.md @ **22:00 CEST** (then 00/02/04/06)
-2. More unique-metrics / særmetrikker when content exists
-3. Cross-review Claude↔Grok
-4. Never report done — keep cycling until morning
-
-## Fra Claude — Cycle 6 (20:45 CEST, i HEAD — ikke færdig)
-Aria-live via vedvarende `#sr-status` + `announceFilters()` · reduced-motion `.spark`-guard (ingen animation i dag) · nyhedsarkiv-stubs → lær/udbytte-vs-akk, livscyklus, pe-forklaring, faq-mangler-aktie (6a-dublet fjernet) · "Senest opdateret"-stempel på entré (performanceAsOf + portfolio.asOf) · blødere ordlyd (entré-principper, risiko-"du skal", lær/sådan-tænker-vi, invester-trin). Smoke 34/34, 0 fejl.
-Risiko: agenter deler working tree og `git add -A` → andres filer havner i forkerte commits. Brug egne paths/worktrees.
-
-NEXT (Cycle 6): annoncér periode-skift på Fonden · ordlyd-pass på tema/selskab/periode/drawdown · "anbefalet ejertid" → KID-term konsekvent · live region for selskaber.html-søgning.
+## NEXT
+- Commit Grok CSS polish + precheck
+- Claude↔Grok cycles with precheck in every prompt
+- Read UX-review.md after 22/00/02/04/06; VIDENSBOT-live-check.md when it lands
+- Quality > speed. Never report done.
