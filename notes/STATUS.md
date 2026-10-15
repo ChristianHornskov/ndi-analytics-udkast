@@ -26,6 +26,13 @@ https://christianhornskov.github.io/ndi-analytics-udkast/ · notes → 404
 - a11y: skip-links, radiogroup, dialog focus (96/96 smoke-quality)
 - Calendar aria fix; copy/caveats polish
 
+## Quality2 (Claude, ~20:55)
+- Copy sweep docs/: no advice wording; all "anbefal…" hits are disclaimers or KID "anbefalet ejertid"
+- "kl. n" only in portfolio.json `label`/`legalName` (not rendered; matches Fundmarket per VIDENSBOT-review) — left as-is
+- Invest-dialog: "Ingen minimumsinvestering i de danske andelsklasser" → scoped to the two shown classes + source + "vilkår kan variere hos bank/platform" (VIDENSBOT-review: kl. f exists)
+- Smoke: quality 96/96, base 50/50, cycle3 58/58, 0 console errors
+- UX-review 22:00 section: not yet present → nothing addressed. VIDENSBOT-live-check.md: absent
+
 ## Agents
 Claude + Grok quality2 running with precheck in prompts.
 
