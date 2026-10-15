@@ -223,3 +223,7 @@ Smedede hjul og chassis til lastbiler og busser er tilføjet ved siden af flyskr
 ## Cummins · 2026-10-16 01:40 CEST
 
 Fem dele: komponenter, motorer, distribution, kraftsystemer og Accelera. Distribution er ikke et elnet. Columbus, Indiana, 1919. Ikke et elselskab. Leader og 52-ugers-feltet er ikke kopieret. AI-udkast uden gennemgangsdato. Elproduktions-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll. Et P/E i sidens menu er den fælles navigation, ikke teksten om Cummins.
+
+## ProPetro · 2026-10-16 01:42 CEST
+
+Trykpumpning i Permian-bassinet. Service, ikke et kraftværk og ikke en mine. Står ikke på elproduktionslisten. Leading, premier og largest er ikke kopieret. AI-udkast uden gennemgangsdato. NDI-blikket og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.

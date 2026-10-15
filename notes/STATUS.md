@@ -789,3 +789,13 @@ De fem dele er komponenter, motorer, distribution, kraftsystemer og Accelera. Di
 Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Accelera står. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `4359117` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:42 CEST. ProPetro skriver, at arbejdet er trykpumpning i Permian-bassinet. Ikke færdig.**
+
+Det er service til selskaber, der leder efter og udvinder olie og gas. Det er ikke et kraftværk og ikke en mine. Selskabet står ikke på elproduktion. Leading, premier og largest er ikke taget med. Ingen `reviewedAt`. NDI-blikket under elproduktion og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Permian står. Selskabet står ikke i selskabslisten. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `02c86a0` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

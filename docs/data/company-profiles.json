@@ -489,12 +489,22 @@
   "US74347M1080": {
    "name": "ProPetro",
    "theme": "energy",
-   "summary": "Leverer service til olie- og gasboringer i USA, blandt andet trykpumpning. Det er ikke et kraftværk. I snapshottet ligger selskabet under energitemaet.",
-   "watch": "Aktivitet i skiferfelter, udnyttelse af udstyret og kundernes boreprogrammer.",
+   "summary": "Leverer trykpumpning til olie- og gasboringer i Permian-bassinet. Det er service, ikke et kraftværk og ikke en mine.",
+   "watch": "Aktivitet i Permian-bassinet. Selskabet driver ikke et kraftværk.",
    "source": "https://www.propetroservices.com/",
-   "products": "Trykpumpning og anden service på boresteder.",
+   "products": "Trykpumpning og tilknyttet service på boresteder.",
    "customers": "Selskaber, der udvinder olie og gas.",
-   "role": "Serviceled i gas- og olieforsyningen, ikke elproduktion."
+   "role": "Serviceled i gas- og olieforsyningen, ikke elproduktion.",
+   "narrative": [
+    "ProPetro skriver, at selskabet laver trykpumpning og tilknyttet service i Permian-bassinet for selskaber, der leder efter og udvinder olie og gas.",
+    "Det er service på boresteder. Selskabet driver ikke et kraftværk og ikke en mine. I kæden står det ikke på elproduktion."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.propetroservices.com/"
+    }
+   ]
   },
   "US65339F1012": {
    "name": "NextEra Energy",
