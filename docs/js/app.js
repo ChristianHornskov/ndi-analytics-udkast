@@ -47,7 +47,7 @@ function $all(sel, root = document) { return [...root.querySelectorAll(sel)]; }
 
 function readUrl() {
   const u = new URL(location.href);
-  state.fund = u.searchParams.get('fund') || 'pmindi';
+  state.fund = (u.searchParams.get('fund') || 'pmindi').toLowerCase();
   state.view = u.searchParams.get('view') || 'entre';
   state.period = u.searchParams.get('periode') || 'all';
   // Interne tags (legacy/Trump) må aldrig ende i chips eller URL – UX §0.2, INTERNAL-TAGS.md

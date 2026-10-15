@@ -48,11 +48,6 @@
       main.innerHTML = `<a class="back" href="temaer.html">← Alle temaer</a>
         <h1>Temaet findes ikke</h1><p class="lede">Vælg et tema herunder.</p>
         <p class="link-row">${td.themes.map((t) => `<a class="tag" href="tema.html?slug=${t.slug}&fund=${fundId}">${esc(t.title)}</a>`).join(' ')}</p>`;
-      main.querySelector('#copy-tema')?.addEventListener('click', async () => {
-        const btn = main.querySelector('#copy-tema');
-        try { await navigator.clipboard.writeText(location.href); if (btn) btn.textContent = 'Kopieret ✓'; }
-        catch { if (btn) btn.textContent = 'Kopiér fra adresselinjen'; }
-      });
     } else {
       // Selskaber beregnes fra den forsinkede beholdning (primært tema + manuelle multi-tags), ikke themes.json-udsnittet
       const fund = fundById(data.portfolio, fundId);
@@ -95,7 +90,7 @@
         ${theme.chain?.length ? `<section class="panel">
           <h2 class="panel-h brand">Plads i værdikæden</h2>
           <p class="chain-row">${chain}</p>
-          <p class="link-row" style="margin-top:12px"><a class="outline-btn small" href="vaerdikaede.html">Se hele AI-værdikæden →</a> <button type="button" class="outline-btn small" id="copy-tema">Kopiér link til tema</button></p>
+          <p class="link-row" style="margin-top:12px"><a class="outline-btn small" href="vaerdikaede.html">Se hele AI-værdikæden →</a></p>
         </section>` : ''}
 
         <section class="panel">
@@ -103,7 +98,9 @@
           ${list.length ? `<div class="table-wrap"><table class="data" style="min-width:0"><thead><tr><th>Navn</th><th class="hide-sm-cell">Rolle</th><th>Vægt %</th></tr></thead><tbody>${rows}</tbody></table></div>`
             : `<p class="band">Ingen selskaber i ${esc(fund.short)} med dette tema pr. ${posAsOf}.</p>`}
           <p class="src">Sorteret efter vægt. Ingen kursafkast pr. aktie i udkastet.</p>
-          <p class="link-row" style="margin-top:10px"><a class="outline-btn small" href="index.html?view=udforsk&fund=${fund.id}&tags=${encodeURIComponent(tk)}">Åbn i screeneren →</a></p>
+          <p class="link-row" style="margin-top:10px"><a class="outline-btn small" href="index.html?view=udforsk&fund=${fund.id}&tags=${encodeURIComponent(tk)}">Åbn i screeneren →</a>
+            <button type="button" class="outline-btn small" id="copy-tema">Kopiér link til tema</button>
+            <span class="sr-only" id="copy-tema-status" role="status" aria-live="polite"></span></p>
         </section>
 
         <section class="panel">
@@ -113,6 +110,16 @@
         </section>
         <p class="warn">${WARN_HIST}</p>`;
     }
+    // Kopiér link (U1): URL'en bærer tema + andelsklasse
+    const copyBtn = main.querySelector('#copy-tema');
+    copyBtn?.addEventListener('click', async () => {
+      const status = main.querySelector('#copy-tema-status');
+      let msg;
+      try { await navigator.clipboard.writeText(location.href); msg = 'Link kopieret'; copyBtn.textContent = 'Kopieret ✓'; }
+      catch { msg = 'Kunne ikke kopiere – kopiér adressen fra adresselinjen'; copyBtn.textContent = 'Kopiér fra adresselinjen'; }
+      if (status) status.textContent = msg;
+      setTimeout(() => { copyBtn.textContent = 'Kopiér link til tema'; }, 2500);
+    });
   </script>
 </body>
 </html>

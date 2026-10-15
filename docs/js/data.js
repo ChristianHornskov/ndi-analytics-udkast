@@ -41,7 +41,8 @@ export async function loadAll() {
 }
 
 export function fundById(portfolio, id) {
-  return portfolio.funds.find((f) => f.id === id) || portfolio.funds[0];
+  const key = String(id || '').toLowerCase();
+  return portfolio.funds.find((f) => f.id === key) || portfolio.funds[0];
 }
 
 /** Slice series by period key; returns {d, total}[] */
