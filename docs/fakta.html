@@ -62,6 +62,8 @@
   .tax-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
   .tax-grid h3{font-size:14px;margin-bottom:6px}
   .tax-grid p{color:var(--muted);line-height:1.55;font-size:14px}
+  .risk-stage{margin:0 0 14px;scroll-margin-top:84px}
+  .risk-stage .risk-metrics strong{font-size:32px;letter-spacing:-.7px;font-weight:500}
   .risk-split{display:grid;grid-template-columns:1.45fr .8fr;gap:14px;align-items:start}
   .risk-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:4px 0 12px}
   .risk-metrics .metric{padding:4px 12px;border-left:1px solid #829da02a}
@@ -194,7 +196,7 @@
  ? Math.max(0, Math.min(100, Math.abs(Number(risk.maxDrawdownPct))))
  : 0;
  const peakAfterTrough = risk && risk.maxDdPeak && risk.maxDdTrough && String(risk.maxDdPeak) > String(risk.maxDdTrough);
- const riskBlock = risk ? `<section class="panel" id="risiko">
+ const riskBlock = risk ? `<section class="panel risk-stage" id="risiko">
  <h2 class="panel-h">Risikotal beregnet i udkastet</h2>
  <p class="src" style="margin-bottom:8px">Pr. ${daDate(risk.asOf)}. ${esc(risk.method)}</p>
  <div class="risk-split">
@@ -226,6 +228,7 @@
  <div class="glance-board" id="blik">${glanceBoard}</div>
  <p class="sr-only">${glance}</p>
  <p class="band glance">${glanceVisible} <a href="omkostninger.html${dTx !== 0 ? '#forskel' : ''}" style="white-space:nowrap">Se søjlerne →</a></p>
+ ${riskBlock}
  <div class="fact-grid" id="klasser">
  ${klasse(A, dTx !== 0)}
  ${klasse(B, dTx !== 0)}
@@ -259,8 +262,6 @@
  </div>
  <p class="src" style="margin-top:10px"><a href="${esc(facts.tax.source)}" rel="noopener noreferrer" target="_blank">${esc(facts.tax.sourceLabel)} ↗</a></p>
  </section>
-
- ${riskBlock}
 
  <p class="warn">Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.</p>
  <p class="sr-only" id="copy-status" role="status" aria-live="polite"></p>

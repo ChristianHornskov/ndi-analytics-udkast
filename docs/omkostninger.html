@@ -48,10 +48,16 @@
   .delta-nums small{display:block;margin-top:4px;font-size:12px;color:var(--faint)}
   .delta-mid{text-align:center;padding:0 6px 2px}
   .delta-mid b{color:#f5ee9e;font-size:22px}
+  main .lede{margin-bottom:14px}
+  .band{margin:8px 0}
+  .delta-stage{margin:4px 0 14px}
   .delta-track{position:relative;height:12px;margin:18px 8px 6px;border-radius:99px;background:#0b171d;border:1px solid #2a424a}
-  .delta-track i{position:absolute;top:50%;width:14px;height:14px;border-radius:50%;transform:translate(-50%,-50%);background:#9ecfd6;border:2px solid #0c1c22}
+  .delta-track .gap{position:absolute;top:50%;height:4px;transform:translateY(-50%);background:#f5ee9e99;border-radius:99px;z-index:0;display:block;overflow:hidden;padding:0;margin:0;font-size:0;line-height:0}
+  .delta-track i{position:absolute;top:50%;width:14px;height:14px;border-radius:50%;transform:translate(-50%,-50%);background:#9ecfd6;border:2px solid #0c1c22;z-index:1}
   .delta-track i.b{background:#f5ee9e}
   .delta-ends{display:flex;justify-content:space-between;font-size:11px;color:var(--faint);margin-top:4px}
+  .delta-zoom{margin-top:12px;padding-top:12px;border-top:1px dashed #345860}
+  .delta-zoom .k{font-size:11px;letter-spacing:1.2px;font-weight:700;color:var(--brand);margin:0 0 8px}
   @media(max-width:800px){
     .cost-grid,.receipts{grid-template-columns:1fr}
     .cmp-line{grid-template-columns:72px minmax(0,1fr) auto}
@@ -81,6 +87,10 @@
  const pp = (n) => {
  const [a, b = ''] = String(n).split('.');
  return a + (b ? ',' + b : '') + ' procentpoint';
+ };
+ const pct2 = (n) => {
+ const [a, b] = Math.abs(Number(n)).toFixed(2).split('.');
+ return (Number(n) < 0 ? '-' : '') + a + ',' + b + ' %';
  };
  const krOf = (rate) => Math.round(100000 * Number(rate) / 100);
  const kr = (rate) => {
@@ -124,6 +134,37 @@
  const krGap = Math.abs(krOf(b.portfolioTransaction) - krOf(a.portfolioTransaction));
  const krGapTxt = String(krGap).replace(/\B(?=(\d{3})+(?!\d))/g, '.') + ' kr.';
  const mark = (n) => Math.max(0, Math.min(100, (Number(n) / SCALE) * 100));
+ const zoomOf = (lo, hi) => {
+ const gap = hi - lo;
+ const span = Math.max(gap / 0.2, 0.16);
+ let z0 = lo - (span - gap) / 2;
+ let z1 = z0 + span;
+ if (z0 < 0) { z1 -= z0; z0 = 0; }
+ z0 = Math.floor(z0 * 100) / 100;
+ z1 = Math.ceil((z1) * 100) / 100;
+ if (z1 <= z0) z1 = Number((z0 + 0.01).toFixed(2));
+ return { z0, z1 };
+ };
+ const zMark = (n, z0, z1) => {
+ const span = z1 - z0;
+ if (!(span > 0)) return 0;
+ return Math.max(0, Math.min(100, ((Number(n) - z0) / span) * 100));
+ };
+ const gapBar = (left, width) => `<b class="gap" style="left:${left}%;width:${Math.max(width, 0)}%"></b>`;
+ const loTx = Math.min(Number(a.portfolioTransaction), Number(b.portfolioTransaction));
+ const hiTx = Math.max(Number(a.portfolioTransaction), Number(b.portfolioTransaction));
+ const zoom = dTx === 0 ? null : zoomOf(loTx, hiTx);
+ const zoomBlock = zoom ? (() => {
+ const left = zMark(loTx, zoom.z0, zoom.z1);
+ const right = zMark(hiTx, zoom.z0, zoom.z1);
+ return `<div class="delta-zoom">
+ <p class="k">Udsnit, forstørret · ${pct2(zoom.z0)} til ${pct2(zoom.z1)}</p>
+ <div class="delta-track" role="img" aria-label="Forstørret udsnit fra ${pct2(zoom.z0)} til ${pct2(zoom.z1)}. PMINDI ${pct(a.portfolioTransaction)} og PMINDIAKK ${pct(b.portfolioTransaction)}. Afstanden på figuren er større end på skalaen 0 til ${pct(SCALE)}. Forskellen er stadig ${pp(Math.abs(dTx))}.">${gapBar(left, right - left)}<i class="a" style="left:${zMark(a.portfolioTransaction, zoom.z0, zoom.z1)}%"></i><i class="b" style="left:${zMark(b.portfolioTransaction, zoom.z0, zoom.z1)}%"></i></div>
+ <div class="delta-ends" aria-hidden="true"><span>${pct2(zoom.z0)}</span><span>${pct2(zoom.z1)}</span></div>
+ </div>`;
+ })() : '';
+ const fullLeft = mark(loTx);
+ const fullWidth = mark(hiTx) - fullLeft;
  const deltaStage = dTx === 0 ? '' : `<section class="delta-stage" id="forskel">
  <p class="kicker">${onlyTx ? 'DEN ENE FORSKEL' : 'PORTEFØLJETRANSAKTION'}</p>
  <h2>${onlyTx ? 'Porteføljetransaktion skiller klasserne' : 'Porteføljetransaktion'}</h2>
@@ -132,9 +173,10 @@
  <div class="delta-mid"><span>${pp(Math.abs(dTx))}</span><b>${krGapTxt}</b><small>kun denne linje · ikke et ÅOP</small></div>
  <div><span>PMINDIAKK</span><b>${pct(b.portfolioTransaction)}</b><small>${kr(b.portfolioTransaction)} på 100.000 kr.</small></div>
  </div>
- <div class="delta-track" role="img" aria-label="PMINDI ${pct(a.portfolioTransaction)} og PMINDIAKK ${pct(b.portfolioTransaction)} på en skala fra 0 til ${pct(SCALE)}"><i class="a" style="left:${mark(a.portfolioTransaction)}%"></i><i class="b" style="left:${mark(b.portfolioTransaction)}%"></i></div>
+ <div class="delta-track" role="img" aria-label="PMINDI ${pct(a.portfolioTransaction)} og PMINDIAKK ${pct(b.portfolioTransaction)} på en skala fra 0 til ${pct(SCALE)}">${gapBar(fullLeft, fullWidth)}<i class="a" style="left:${mark(a.portfolioTransaction)}%"></i><i class="b" style="left:${mark(b.portfolioTransaction)}%"></i></div>
  <div class="delta-ends" aria-hidden="true"><span>0 %</span><span>${pct(SCALE)}</span></div>
- <p class="scale-note">Markørerne deler skalaen 0 til ${pct(SCALE)}. Afstanden er lille, fordi forskellen er ${pp(Math.abs(dTx))}. ${krGapTxt} er forskellen på 100.000 kr., ikke en sum af satserne.</p>
+ ${zoomBlock}
+ <p class="scale-note">Den øverste linje er skalaen 0 til ${pct(SCALE)}. Afstanden er lille, fordi forskellen er ${pp(Math.abs(dTx))}. Den nederste linje er et udsnit, så markørerne kan skelnes. Udsnittet er forstørret. Forskellen er stadig ${pp(Math.abs(dTx))}, ${krGapTxt} på 100.000 kr. Det er ikke en sum af satserne og ikke et ÅOP.</p>
  </section>`;
  const spoken = onlyTx
  ? `Porteføljetransaktion er den eneste af satserne, der ikke er ens: ${pct(a.portfolioTransaction)} i PMINDI og ${pct(b.portfolioTransaction)} i PMINDIAKK. Forskellen er ${pp(Math.abs(dTx))}. På 100.000 kr. er det ${krGapTxt} i regneeksemplet. Det er ikke et ÅOP.`
@@ -177,7 +219,7 @@
  <div class="metric"><div class="label">Porteføljetransaktion, PMINDIAKK</div><strong>${pct(b.portfolioTransaction)}</strong><small>Forventet</small></div>
  <div class="metric"><div class="label">Resultathonorar</div><strong>${feeNo ? 'Nej' : 'Se klasser'}</strong><small>${feeNo ? 'Begge klasser · Fundmarket' : 'Se teksten på klassekortet'}</small></div>
  </div>
- <p class="band">${spoken} ${sameLine} ${entryLine} ${feeLine}</p>
+ <p class="band">${onlyTx ? `Kun porteføljetransaktion skiller klasserne. ${sameLine} ${entryLine} ${feeLine} Ikke et ÅOP.` : `${spoken} ${sameLine} ${entryLine} ${feeLine}`}</p>
  ${deltaStage}
 
  <section class="panel">

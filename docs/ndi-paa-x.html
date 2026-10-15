@@ -167,6 +167,7 @@
  ? `${list.length} af ${posts.length} opslag${focused}`
  : `Ingen opslag${focused}`;
  const leadOn = Boolean(state.q.trim() || state.f !== 'all');
+ document.body.classList.toggle('x-focused', leadOn);
  const laneOf = (kind, cards, lead) => {
  if (!cards.length) return '';
  const q = state.q.trim();
@@ -184,12 +185,17 @@
  <div class="x-grid">${body}</div>
  </div>`;
  };
- const whoLine = state.who === 'curated' ? ' Kun konti, som Mads følger.' : state.who === 'house' ? ' Kun NDI-konti.' : '';
+ const picked = [];
+ if (state.q.trim()) picked.push('søgning «' + state.q.trim() + '»');
+ if (state.f !== 'all' && fLabel) picked.push(fLabel.label);
+ if (state.who === 'house') picked.push('NDI-konti');
+ if (state.who === 'curated') picked.push('konti Mads følger');
+ const pickedLine = picked.length ? ` Aktivt: ${picked.join(' · ')}.` : '';
  if (!list.length) {
  grid.innerHTML = `<div class="x-empty" style="grid-column:1/-1">
  <p class="x-zero" aria-hidden="true">0</p>
  <p class="k">Ingen opslag i filteret</p>
- <p>Ingen af de ${posts.length} opslag i snapshotet rammer det valgte.${whoLine} Prøv et spor, eller nulstil.</p>
+ <p>Ingen af de ${posts.length} opslag i snapshotet rammer det valgte.${pickedLine} Prøv et spor, eller nulstil.</p>
  <div class="x-suggest">
  <button type="button" class="outline-btn small" data-jump="q" data-v="SoftBank" data-clear-who>SoftBank</button>
  <button type="button" class="outline-btn small" data-jump="q" data-v="NVDA" data-clear-who>Nvidia</button>
@@ -219,6 +225,16 @@
  }
  };
 
+ const revealHits = (smooth) => {
+ const lead = document.querySelector('#x-grid .x-text, #x-grid .x-empty');
+ if (!lead) return;
+ const r = lead.getBoundingClientRect();
+ if (r.top >= 72 && r.bottom <= window.innerHeight - 12) return;
+ const behavior = smooth && !reduceMotion ? 'smooth' : 'auto';
+ const narrow = window.matchMedia('(max-width: 700px)').matches;
+ const target = narrow ? document.getElementById('x-grid') : document.getElementById('spor');
+ target?.scrollIntoView({ behavior, block: 'start' });
+ };
  const applyJump = (el, scroll) => {
  const mode = el.getAttribute('data-jump');
  const v = el.getAttribute('data-v') || '';
@@ -230,7 +246,7 @@
  write(state);
  render();
  if (mode === 'reset') qInput.focus();
- else if (scroll) document.getElementById('x-grid')?.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+ else if (scroll) revealHits(true);
  };
 
  main.addEventListener('click', (e) => {
@@ -270,6 +286,7 @@
  render();
  });
  render();
+ if (state.q.trim() || state.f !== 'all') revealHits(false);
  }
  </script>
 </body>
