@@ -113,3 +113,33 @@ Grundlag: `origin/main` `820f116` (uændret siden cyklus 3, `docs/` uændret sid
 ### Persona-status
 - **Privat:** Lær-sektionen besvarer de fleste begynderspørgsmål, men den er svær at finde. Omkostninger mangler stadig ét samlet tal + kr.
 - **Family office:** blokeres stadig af drawdown-datofejlen. Ny bekymring: tonen på ndi-paa-x.
+
+## 2026-10-16 00:18 CEST · cyklus 5
+Grundlag: `origin/main` `60cebcc`. Første cyklus med nye `docs/`-ændringer siden `8b30c48`: 41 filer er ændret (merges fra lane-A/B/C/D/E/X). Pages last-modified 15. okt. 22:11 UTC, og `drawdown.html` er byte-identisk med main, så Pages = main. (Klokkeslættet ligger før "00:40" i cyklus 4. Tidsstemplerne i cyklus 3–4 var ikke vægurstid.) Playwright 375 + 1366 på 27 sider (lokal server på `docs/`): 0 JS-fejl, 0 4xx. `fonden.html`/`portefolje.html`/`udforsk.html` giver 404, fordi de er `?view=` i index. Det er forventet.
+
+### Lukket siden cyklus 4 ✅
+- **drawdown.html 375: scrollWidth 375** (var 587). Ingen side har vandret scroll på 375 længere.
+- **drawdown.html viser nu korrekt dybeste fald 18. feb. 2025 → 8. apr. 2025** (−35,8 %, tilbage på toppen 26. aug. 2025), plus en "lige nu"-linje (−23,4 % under top 2. jun. 2026). Den er god og ærlig.
+- omkostninger: "inventeret" → "beregnet". Der er nu et **kr.-eksempel pr. post på 100.000 kr.** og en fælles skala på søjlerne. Det er et stort løft for privat-personaen.
+- invester: "tre spørgsmål" og en KID-tabel for begge klasser med ISIN og links.
+
+### MUST
+1. **Ny inkonsistens: drawdown-datoer.** drawdown.html siger 18. feb. 2025 → 8. apr. 2025. **risici.html og fakta.html siger stadig "2. jun. 2026 → 8. apr. 2025"** (top efter bund, fra `risk-stats.json` `maxDdPeak`). To sider viser nu hver sin dato for det samme tal. FO-personaen ser det med det samme. Ret `risk-stats.json` maxDdPeak til 2025-02-18, eller lad risici/fakta læse samme beregning som drawdown.html.
+2. **omkostninger + fakta: intern tekst over folden på 375.** "Tomme felter = udfyldes af NDI" står i en stiplet boks som det første efter introen (screenshot 375), og kortets titel er "NewDeal Invest, **kl n** (PMINDI)". Det er det første, privat-personaen ser på siden om penge. Slet sætningen (omkostninger har ingen tomme felter) og vis "NewDeal Invest (PMINDI)".
+3. invester trin 1 linker stadig ikke direkte til prospekt/KID (tabellen længere nede har links ✅), og **trin 4 "Ordre & omkostninger" linker ikke til omkostninger.html**. Det er én linje: "Fondens egne omkostninger: se Omkostninger →".
+
+### SHOULD
+- **omkostninger: stadig ingen samlet sats.** kr.-eksemplet står pr. post (1.490 + 640 kr.), men der er ingen "i alt pr. år ca. 2.130 kr. (PMINDI) / 2.210 kr. (AKK) ekskl. emission/indløsning". Det er den sidste lille ting, før FO-MUST om én sammenlignelig omkostning er opfyldt.
+- **ndi-perspektiv.html: 74 "AI-udkast"-mærker** (var 9 i cyklus 2), fordi lane-B har lagt NDI-linsen på 35 navne. På 375 er siden 16.196 px. Mærket står ved hvert felt og er nu ren støj. Brug **ét** banner øverst pr. side ("Linse-teksterne er AI-udkast og afventer NDI-gennemgang") og et lille mærke pr. selskabskort, ikke pr. felt. Det samme gælder SoftBank (9).
+- **ndi-paa-x.html** er poleret (opsummeringskort, filtre, søgning, egne kort uden embed), og det er visuelt godt. Men den gør modsigelsen tydeligere: lige under "ikke NDI's holdning" står "NDI-relaterede konti: @InvestNewdeal · @MadsC007 …" og filteret "NDI / fond 14". Den nye badge **"MADS FØLGER"** på tredjepartsopslag (FundaAI om SoftBanks kreditrisiko, Melvin om $CRWV/$NBIS/$NVDA) kan læses som en anbefaling fra forvalteren. Se compliance cyklus 5.
+- Fonden på 375 er 5.855 px (var 5.738). X-blokken står stadig mellem graf og kalenderår. Det gør også "ÅTD og 100.000 kr.-eksemplet afventer Fundmarket-godkendelse".
+- Ugyldig selskabs-URL: "ISIN - indgår ikke …" med tom ISIN er uændret.
+- Uændret: udforsk 26.330 px på 375, ingen top 10 på porteføljen, "Følg tema (stub)", "Koncept-stub" på kort.html → nyhedsarkiv (stadig placeholder), "38.9 kr."/"38.0 kr." (punktum som decimaltegn), "Central Information Dokument", udviklertekst på om-data ("Ingen live Azure-kald … (se precheck)"), "Tekst inspireret af NDI ugebreve" synligt på vaerdikaeder.
+
+### Nice
+- Link fra drawdown-hero til `laer/variance-drag` og fra "Middel/median →" på Fonden til drawdown (det sidste findes ✅). Den nye "lige nu −23,4 %"-linje bør have et "Hvad betyder det?"-link til Lær.
+- Visuel variation: drawdown (underwater/fordeling/episoder) og Lær-siderne (møntspil, skyder) gør nu sitet mindre ensformigt. Mosaik/sunburst/treemap går stadig igen på temaer, vaerdikaeder og tema. Overvej at give tema.html en anden hovedvisual end treemap.
+
+### Persona-status
+- **Privat:** omkostninger i kr. hjælper meget. Siden skal bare starte uden intern tekst og ende med ét "i alt". Lær er stadig svær at finde fra Fonden.
+- **Family office:** drawdown.html er nu troværdig. Til gengæld ser FO, at risici/fakta siger noget andet (MUST 1), og det er værre end én fejl alene. ndi-paa-x med "Mads følger" er en tillidsrisiko.

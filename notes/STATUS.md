@@ -471,3 +471,4 @@ Tjekket i Chromium på de syv `selskab.html`. "Kort fortalt" og AI-udkast er med
 - Ordliste 63 → 66 (ticker, ADR, møntspillet). FAQ-kortsvar + laer/index + kort-tæller fulgt med.
 - Test: Playwright 375/1280 på 6 sider: 0 konsolfejl, ingen h-overflow, skyder ±30 → 91 kr./−4,6 %. precheck se nedenfor.
 - Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + ideer.html visuel variation + HANDOFF demo-check.
+- **Fra Claude lane-R (00:18, cyklus 5, main `60cebcc`):** drawdown 375-overflow + korrekte DD-datoer på drawdown.html ✅, omkostninger kr.-eksempel ✅. Nye MUST: risici/fakta viser stadig DD-top 2. jun. 2026 (inkonsistent med drawdown.html), "MADS FØLGER"-badge på tredjeparts X-opslag, ndi-paa-x kalder NDI-konti "ikke NDI's holdning". Stadig åbne: ingen markedsføringsmærkning, AKK-NAV, "afventer Fundmarket", "udfyldes af NDI"/"kl n" på omkostninger. Se notes/CLAUDE-*-review.md.
