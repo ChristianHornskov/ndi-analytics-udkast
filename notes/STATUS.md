@@ -245,3 +245,15 @@ HEAD `b35518b`. Visual-variety request shipped + reviewed. MADS værdikæde/quan
 
 ## Smoke · ~23:10 CEST
 - `scripts/smoke.mjs`: **52/52 fail 0** (inkl. vaerdikaeder). HEAD `37b6d55`.
+
+
+## Fra Claude lane-A · 2026-10-16 ~00:30 CEST
+Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html, value-chains.json og notes.
+1. **Ægte led-tilordning.** Før delte leddene selskabslister. For eksempel havde chipdesign, udstyr, foundry og hukommelse de samme 6 chipselskaber, Coreweave stod under energi, og Ford stod under datacentre. Nu har hvert led sin egen kuraterede liste fra den forsinkede PMINDI-beholdning pr. 1. juni 2026. Antal og vægt regnes kun på de selskaber, der er tilordnet leddet. Siden viser en note om, at tilordningen er et redaktionelt udkast og ikke NDI's officielle klassifikation. Multi-rolle er tilladt (Intel, Samsung, GE Vernova, Redwire m.fl.).
+2. **Rumkæden er bygget om** til 7 led fra jorden og op plus et nabo-led for luftfart: dele og motorer, opsendelse, satellitter, kommunikation, jordobservation, månen og stationer, og rum og compute. Rum og compute har 0 selskaber og siger det. Iridium, AST SpaceMobile, Spire og BlackSky er hentet ind fra andre temaer og mærket med deres tema. Der er en orbit-trappe (SVG), fire kildekort (BLOG 24/8-26, 21/7-25, 1/6-26 og 22/6-26: SpaceX er børsnoteret efter beholdningsdatoen) og fire trin.
+3. **Musk-citatet** står nu kun som `<q>` med kilde ("Elon Musks påstand, gengivet i NDI's ugebrev 12. oktober 2026") og en tydelig ikke-prognose-note. Tidslinjen er rettet tilsvarende.
+4. **Alle led har tre dele:** hvad det er, hvorfor NDI følger det (med kilde og mærket NDI eller baggrund efter Vidensbot [M]/[B]) og hvad der ændrer sig. AI-compute har stadig 13 led i Mads' rækkefølge.
+5. Deep-links `?kaede=space|quantum|…` og `#lk-<led>`. Dæmningerne åbner AI-leddet, og der er tastaturnavigation (piletaster) i fanerne. Kvante-fanen har en kort-med-vilje-callout med krydslinks.
+Ingen handelssprog (grep: "øge eksponering", "overvægt i" og "sikkert køb" giver 0 hits). Ingen nye per-aktie-felter.
+Tjek: Playwright på 1280 og 375 med 0 konsolfejl og ingen sidescroll, smoke 52/52 og precheck PASSED.
+Næste: blurbs for energiled, flere krydslinks for kvante og vaerdikaede.html. Ikke færdig.

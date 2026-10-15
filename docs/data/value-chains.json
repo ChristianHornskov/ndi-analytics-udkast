@@ -1,1632 +1,3301 @@
 {
-  "asOf": "2026-06-01",
-  "note": "Forsinket beholdning. Vægte = eksponering, ikke anbefaling eller bevidst overvægt. Tekst inspireret af NDI ugebreve / Vidensbot (okt 2026).",
-  "philosophy": {
-    "lede": "NDI ser teknologi som værdikæder, ikke som de klassiske 11 sektorer. Et selskab kan høre til flere led. Vi kan ikke forudsige, hvilket selskab der vinder, men vi kan følge, hvor i kæden efterspørgslen presser på. Derfor ejer fonden mange selskaber på tværs af hele kæden.",
-    "flod": "Vi ser AI-værdikæden som et flodsystem med en række dæmninger. Vandet repræsenterer efterspørgslen, og dæmningerne repræsenterer flaskehalse.",
-    "flodSource": "NDI ugebrev, 30. marts 2026",
-    "dams": [
-      {
-        "id": "energi",
-        "label": "Energi",
-        "hint": "Første flaskehals"
-      },
-      {
-        "id": "dc",
-        "label": "Datacentre",
-        "hint": "Anden flaskehals"
-      },
-      {
-        "id": "semi",
-        "label": "Halvledere",
-        "hint": "Tredje flaskehals"
-      },
-      {
-        "id": "cloud",
-        "label": "Cloud & modeller",
-        "hint": "Sværere flaskehals at spotte"
-      },
-      {
-        "id": "apps",
-        "label": "Apps & fysisk AI",
-        "hint": "Efterspørgsel fra bunden"
-      }
-    ]
+ "asOf": "2026-06-01",
+ "note": "Forsinket beholdning. Vægte = eksponering, ikke anbefaling eller bevidst overvægt. Tekst inspireret af NDI ugebreve / Vidensbot (okt 2026).",
+ "philosophy": {
+  "lede": "NDI ser teknologi som værdikæder, ikke som de klassiske 11 sektorer. Et selskab kan høre til flere led. Vi kan ikke forudsige, hvilket selskab der vinder, men vi kan følge, hvor i kæden efterspørgslen presser på. Derfor ejer fonden mange selskaber på tværs af hele kæden.",
+  "flod": "Vi ser AI-værdikæden som et flodsystem med en række dæmninger. Vandet repræsenterer efterspørgslen, og dæmningerne repræsenterer flaskehalse.",
+  "flodSource": "NDI ugebrev, 30. marts 2026",
+  "dams": [
+   {
+    "id": "energi",
+    "label": "Energi",
+    "hint": "Første flaskehals"
+   },
+   {
+    "id": "dc",
+    "label": "Datacentre",
+    "hint": "Anden flaskehals"
+   },
+   {
+    "id": "semi",
+    "label": "Halvledere",
+    "hint": "Tredje flaskehals"
+   },
+   {
+    "id": "cloud",
+    "label": "Cloud & modeller",
+    "hint": "Sværere flaskehals at spotte"
+   },
+   {
+    "id": "apps",
+    "label": "Apps & fysisk AI",
+    "hint": "Efterspørgsel fra bunden"
+   }
+  ]
+ },
+ "compliance": "Generel information, ikke en anbefaling eller investeringsrådgivning. Værdikæder og temaer viser, hvad porteføljen er eksponeret mod. De er ikke bevidste overvægte. Fonden er bredt spredt på flere hundrede selskaber med små vægte, tæt på ligevægt. Beholdningen vises med forsinkelse. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.",
+ "timeline": [
+  {
+   "y": "2000–2020",
+   "t": "Fase 1 · Modning",
+   "d": "EDB-revolutionen modnes. NDI's vurdering: grundlaget for senere AI-lag."
   },
-  "compliance": "Generel information, ikke en anbefaling eller investeringsrådgivning. Værdikæder og temaer viser, hvad porteføljen er eksponeret mod. De er ikke bevidste overvægte. Fonden er bredt spredt på flere hundrede selskaber med små vægte, tæt på ligevægt. Beholdningen vises med forsinkelse. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.",
-  "timeline": [
+  {
+   "y": "2023–25",
+   "t": "Fase 2 · Copilots",
+   "d": "Mads forventer copilots og assistenter som bro til bredere automatisering."
+  },
+  {
+   "y": "2026→",
+   "t": "Fase 3 · Robotisering",
+   "d": "NDI's vurdering: fysisk AI og automatisering driver næste bølge af compute-efterspørgsel."
+  },
+  {
+   "y": "Knaphed",
+   "t": "Energi, wafers, optik",
+   "d": "Fysisk mangel på halvledere, datacentre, transformere, køling, transmission — og frem for alt energi."
+  },
+  {
+   "y": "Citat",
+   "t": "SpaceX og compute i rummet",
+   "d": "Elon Musks påstand, gengivet i NDI's ugebrev 12. oktober 2026. Se rum-kæden. Ikke en NDI-prognose."
+  }
+ ],
+ "treemap": [
+  {
+   "key": "platforms",
+   "w": 16.01,
+   "n": 40
+  },
+  {
+   "key": "chips",
+   "w": 13.19,
+   "n": 53
+  },
+  {
+   "key": "software",
+   "w": 12.38,
+   "n": 51
+  },
+  {
+   "key": "connect",
+   "w": 8.21,
+   "n": 30
+  },
+  {
+   "key": "physical",
+   "w": 7.34,
+   "n": 24
+  },
+  {
+   "key": "energy",
+   "w": 6.31,
+   "n": 15
+  },
+  {
+   "key": "compute",
+   "w": 6.05,
+   "n": 18
+  },
+  {
+   "key": "energy-resources",
+   "w": 5.58,
+   "n": 25
+  },
+  {
+   "key": "space",
+   "w": 4.38,
+   "n": 18
+  },
+  {
+   "key": "quantum",
+   "w": 0.88,
+   "n": 4
+  }
+ ],
+ "chains": [
+  {
+   "id": "ai-compute",
+   "title": "AI-compute",
+   "why": "Mads beskriver AI-værdikæden som et flodsystem: når én dæmning (flaskehals) letter, flytter presset. Efterspørgslen kommer i stigende grad fra bunden — først agentisk AI, snart fysisk AI.",
+   "source": "BLOG 30. marts 2026",
+   "links": [
     {
-      "y": "2000–2020",
-      "t": "Fase 1 · Modning",
-      "d": "EDB-revolutionen modnes. NDI's vurdering: grundlaget for senere AI-lag."
+     "id": "energi",
+     "icon": "⚡",
+     "label": "Energi og strømfordeling",
+     "blurb": "Datacentre bruger enorme mængder strøm. Uden ny elproduktion og stærkere elnet kan der ikke bygges mere compute. Gas, atomkraft, gasturbiner, sol, vind, batterier og modernisering af elnettet hører med.",
+     "ndi": "NDI ser dette led som en mulig flaskehals — \"første flaskehals: energi\".",
+     "themes": [
+      "energy",
+      "andet",
+      "physical"
+     ],
+     "weightSum": 5.83,
+     "count": 20,
+     "companies": [
+      {
+       "isin": "US34379V1035",
+       "name": "Fluence Energy Inc",
+       "w": 0.81,
+       "sym": "FLNC",
+       "theme": "energy",
+       "forslag": false
+      },
+      {
+       "isin": "US05614L2097",
+       "name": "Babcock & Wilcox",
+       "w": 0.6,
+       "sym": "BW",
+       "theme": "energy",
+       "forslag": false
+      },
+      {
+       "isin": "US35834F1049",
+       "name": "T1 Energy Inc",
+       "w": 0.58,
+       "sym": "TE",
+       "theme": "energy",
+       "forslag": false
+      },
+      {
+       "isin": "US83418M1036",
+       "name": "Solaris Energy Infrastructur",
+       "w": 0.54,
+       "sym": "SEI",
+       "theme": "energy",
+       "forslag": true
+      },
+      {
+       "isin": "US74347M1080",
+       "name": "Propetro Holding Corp",
+       "w": 0.51,
+       "sym": "PUMP",
+       "theme": "energy",
+       "forslag": true
+      },
+      {
+       "isin": "US65339F1012",
+       "name": "NextEra Energy",
+       "w": 0.39,
+       "sym": "NEE",
+       "theme": "energy",
+       "forslag": true
+      },
+      {
+       "isin": "NL0015002Q12",
+       "name": "Terra Innovatum Global Nv",
+       "w": 0.28,
+       "sym": "NKLR",
+       "theme": "energy",
+       "forslag": true
+      },
+      {
+       "isin": "US8425871071",
+       "name": "Southern Co/The",
+       "w": 0.28,
+       "sym": "SO",
+       "theme": "energy",
+       "forslag": true
+      },
+      {
+       "isin": "US0937121079",
+       "name": "Bloom Energy Corp- A",
+       "w": 0.25,
+       "sym": "BE",
+       "theme": "andet",
+       "forslag": true
+      },
+      {
+       "isin": "US67079K1007",
+       "name": "Nuscale Power Corp",
+       "w": 0.22,
+       "sym": "SMR",
+       "theme": "physical",
+       "forslag": false
+      },
+      {
+       "isin": "US74762E1029",
+       "name": "Quanta Services",
+       "w": 0.22,
+       "sym": "PWR",
+       "theme": "physical",
+       "forslag": true
+      },
+      {
+       "isin": "US36828A1016",
+       "name": "Ge Vernova Inc",
+       "w": 0.19,
+       "sym": "GEV",
+       "theme": "physical",
+       "forslag": false
+      },
+      {
+       "isin": "US29415C1018",
+       "name": "Eos Energy Enterprises Inc",
+       "w": 0.17,
+       "sym": "EOSE",
+       "theme": "andet",
+       "forslag": true
+      },
+      {
+       "isin": "US55405W1045",
+       "name": "Myr Group Inc/Delaware",
+       "w": 0.16,
+       "sym": "MYRG",
+       "theme": "physical",
+       "forslag": true
+      },
+      {
+       "isin": "US3687361044",
+       "name": "Generac Holdings Inc",
+       "w": 0.15,
+       "sym": "GNRC",
+       "theme": "physical",
+       "forslag": false
+      },
+      {
+       "isin": "US92840M1027",
+       "name": "Vistra Corp",
+       "w": 0.14,
+       "sym": "VST",
+       "theme": "energy",
+       "forslag": false
+      },
+      {
+       "isin": "US02156V1098",
+       "name": "Oklo Inc",
+       "w": 0.12,
+       "sym": "OKLO",
+       "theme": "energy",
+       "forslag": false
+      },
+      {
+       "isin": "US87422Q1094",
+       "name": "Talen Energy Corp",
+       "w": 0.12,
+       "sym": "TLN",
+       "theme": "energy",
+       "forslag": false
+      },
+      {
+       "isin": "US8814541020",
+       "name": "Terrestrial Energy Inc",
+       "w": 0.05,
+       "sym": "IMSR",
+       "theme": "energy",
+       "forslag": true
+      },
+      {
+       "isin": "US63010H1086",
+       "name": "Nano Nuclear Energy Inc",
+       "w": 0.05,
+       "sym": "NNE",
+       "theme": "physical",
+       "forslag": false
+      }
+     ],
+     "seeChain": null,
+     "src": "BLOG 30. marts 2026 · 10. august 2026",
+     "shift": "I USA får datacentre i stigende grad lov til at bygge egen strøm. Mads har beskrevet, at ét års chipproduktion potentielt kan kræve strøm svarende til omkring to tredjedele af USA's installerede kapacitet.",
+     "kind": "ndi"
     },
     {
-      "y": "2023–25",
-      "t": "Fase 2 · Copilots",
-      "d": "Mads forventer copilots og assistenter som bro til bredere automatisering."
+     "id": "datacenter",
+     "icon": "▣",
+     "label": "Datacentre og køling",
+     "blurb": "Datacentret er fabrikken, hvor strøm bliver til compute. Det kræver byggeri, strømfordeling, køling, jord og tilladelser.",
+     "ndi": "NDI ser dette led som en mulig flaskehals: \"anden flaskehals: datacentre\". Mange faktorer kan skabe flaskehalse her, fra byggeri til tilladelser.",
+     "themes": [
+      "software",
+      "physical",
+      "energy",
+      "andet",
+      "platforms"
+     ],
+     "weightSum": 4.53,
+     "count": 15,
+     "companies": [
+      {
+       "isin": "US17253J1060",
+       "name": "Cipher Mining Inc",
+       "w": 0.78,
+       "sym": "CIFR",
+       "theme": "software",
+       "forslag": false
+      },
+      {
+       "isin": "US73933G2021",
+       "name": "Power Solutions Internationa",
+       "w": 0.55,
+       "sym": "PSIX",
+       "theme": "physical",
+       "forslag": false
+      },
+      {
+       "isin": "AU0000185993",
+       "name": "Iris Energy",
+       "w": 0.49,
+       "sym": "IREN",
+       "theme": "energy",
+       "forslag": false
+      },
+      {
+       "isin": "US46982L1089",
+       "name": "Jacobs Solutions",
+       "w": 0.43,
+       "sym": "J",
+       "theme": "physical",
+       "forslag": true
+      },
+      {
+       "isin": "US3434121022",
+       "name": "Fluor Corp",
+       "w": 0.35,
+       "sym": "FLR",
+       "theme": "physical",
+       "forslag": true
+      },
+      {
+       "isin": "US3149111086",
+       "name": "Fermi Inc",
+       "w": 0.31,
+       "sym": "FRMI",
+       "theme": "andet",
+       "forslag": true
+      },
+      {
+       "isin": "US1999081045",
+       "name": "Comfort Systems Usa Inc",
+       "w": 0.3,
+       "sym": "FIX",
+       "theme": "physical",
+       "forslag": true
+      },
+      {
+       "isin": "US2310211063",
+       "name": "Cummins",
+       "w": 0.29,
+       "sym": "CMI",
+       "theme": "physical",
+       "forslag": false
+      },
+      {
+       "isin": "US74164F1030",
+       "name": "Primoris Services Corp",
+       "w": 0.28,
+       "sym": "PRIM",
+       "theme": "physical",
+       "forslag": true
+      },
+      {
+       "isin": "US87288V1017",
+       "name": "Tss Inc",
+       "w": 0.19,
+       "sym": "TSSI",
+       "theme": "software",
+       "forslag": false
+      },
+      {
+       "isin": "US88080T1043",
+       "name": "Terawulf Inc",
+       "w": 0.13,
+       "sym": "WULF",
+       "theme": "platforms",
+       "forslag": false
+      },
+      {
+       "isin": "KYG961151035",
+       "name": "Whitefiber Inc",
+       "w": 0.13,
+       "sym": "WYFI",
+       "theme": "software",
+       "forslag": false
+      },
+      {
+       "isin": "US8592411016",
+       "name": "Sterling Infrastructure Inc",
+       "w": 0.13,
+       "sym": "STRL",
+       "theme": "physical",
+       "forslag": true
+      },
+      {
+       "isin": "US21874A1060",
+       "name": "Core Scientific",
+       "w": 0.1,
+       "sym": "CORZ",
+       "theme": "software",
+       "forslag": false
+      },
+      {
+       "isin": "US0381692070",
+       "name": "Applied Digital Corp",
+       "w": 0.07,
+       "sym": "APLD",
+       "theme": "software",
+       "forslag": false
+      }
+     ],
+     "seeChain": null,
+     "src": "BLOG 30. marts 2026 · 27. juli 2026",
+     "shift": "Moderne AI-racks bruger så meget strøm, at luftkøling ikke slår til, og væskekøling bliver standard (baggrund). Mads: hvis datacentret er fremtidens fabrik, bliver det strategisk, om intelligensen produceres i Vesten eller i Kina.",
+     "kind": "ndi"
     },
     {
-      "y": "2026→",
-      "t": "Fase 3 · Robotisering",
-      "d": "NDI's vurdering: fysisk AI og automatisering driver næste bølge af compute-efterspørgsel."
+     "id": "chipdesign",
+     "icon": "◇",
+     "label": "Chipdesign (GPU, XPU og CPU)",
+     "blurb": "Her designes de processorer, der regner AI-modellerne. Mange designere ejer ingen fabrik (fabless) og får chips produceret hos andre.",
+     "ndi": "Halvledere er \"tredje flaskehals\". Fokus på AI XPU'er og CPU'er.",
+     "themes": [
+      "chips",
+      "compute",
+      "software"
+     ],
+     "weightSum": 7.21,
+     "count": 27,
+     "companies": [
+      {
+       "isin": "US82982T1060",
+       "name": "Sitime Corp",
+       "w": 1.15,
+       "sym": "SITM",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "US67066G1040",
+       "name": "Nvidia",
+       "w": 0.75,
+       "sym": "NVDA",
+       "theme": "compute",
+       "forslag": false
+      },
+      {
+       "isin": "AT0000A3EPA4",
+       "name": "Ams-Osram Ag",
+       "w": 0.58,
+       "sym": "AMS.SW",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "US15675D1037",
+       "name": "Cerebras Systems",
+       "w": 0.48,
+       "sym": "CBRS",
+       "theme": "compute",
+       "forslag": false
+      },
+      {
+       "isin": "US8168501018",
+       "name": "Semtech Corp",
+       "w": 0.41,
+       "sym": "SMTC",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "US7509171069",
+       "name": "Rambus",
+       "w": 0.37,
+       "sym": "RMBS",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "US4581401001",
+       "name": "Intel",
+       "w": 0.33,
+       "sym": "INTC",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "KYG037AX1015",
+       "name": "Ambarella Inc",
+       "w": 0.31,
+       "sym": "AMBA",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "JP3164720009",
+       "name": "Renesas Electro",
+       "w": 0.29,
+       "sym": "6723.T",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "US43289P1066",
+       "name": "Himax Tech Sp ADR",
+       "w": 0.23,
+       "sym": "HIMX",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "BMG6331P1041",
+       "name": "Alpha and Omega Semiconductor Ltd",
+       "w": 0.22,
+       "sym": "AOSL",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "US6098391054",
+       "name": "Monolithic Power",
+       "w": 0.21,
+       "sym": "MPWR",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "US0929151076",
+       "name": "Blaize Holdings Inc",
+       "w": 0.18,
+       "sym": "BZAI",
+       "theme": "software",
+       "forslag": false
+      },
+      {
+       "isin": "US57776J1007",
+       "name": "Maxlinear Inc",
+       "w": 0.18,
+       "sym": "MXL",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "US82706C1080",
+       "name": "Silicon Mot Sp ADR",
+       "w": 0.18,
+       "sym": "SIMO",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "US5184151042",
+       "name": "Lattice Semicond",
+       "w": 0.16,
+       "sym": "LSCC",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "US0326541051",
+       "name": "Analog Devices Inc",
+       "w": 0.14,
+       "sym": "ADI",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "US8825081040",
+       "name": "Texas Instrument",
+       "w": 0.14,
+       "sym": "TXN",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "US8716071076",
+       "name": "Synopsys",
+       "w": 0.14,
+       "sym": "SNPS",
+       "theme": "software",
+       "forslag": false
+      },
+      {
+       "isin": "DE0006231004",
+       "name": "Infineon Technolo N",
+       "w": 0.13,
+       "sym": "IFX.DE",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "US63942X1063",
+       "name": "Navitas Semicond",
+       "w": 0.12,
+       "sym": "NVTS",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "US5950171042",
+       "name": "Microchip Technology Inc",
+       "w": 0.12,
+       "sym": "MCHP",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "US0231931058",
+       "name": "Ambiq Micro Inc",
+       "w": 0.1,
+       "sym": "AMBQ",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "US6821891057",
+       "name": "ON Semiconductor",
+       "w": 0.09,
+       "sym": "ON",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "US1273871087",
+       "name": "Cadence Design",
+       "w": 0.09,
+       "sym": "CDNS",
+       "theme": "software",
+       "forslag": false
+      },
+      {
+       "isin": "NO0003055501",
+       "name": "Nordic Semicondu",
+       "w": 0.08,
+       "sym": "NOD.OL",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "US0079031078",
+       "name": "Advanced Micro D",
+       "w": 0.03,
+       "sym": "AMD",
+       "theme": "compute",
+       "forslag": false
+      }
+     ],
+     "seeChain": null,
+     "src": "BLOG 30. marts 2026 · BOG s. 75–76",
+     "shift": "XPU er en samlebetegnelse for specialiserede AI-chips, også cloudselskabernes egne (baggrund). Bogen bruger NVIDIA til at vise, at selv de største tech-aktier har haft fald på 50 til 90 %.",
+     "kind": "ndi"
     },
     {
-      "y": "Knaphed",
-      "t": "Energi, wafers, optik",
-      "d": "Fysisk mangel på halvledere, datacentre, transformere, køling, transmission — og frem for alt energi."
+     "id": "equipment",
+     "icon": "◎",
+     "label": "Udstyr og litografi",
+     "blurb": "Maskiner, der bruges til at fremstille chips. Det mest avancerede er litografi, hvor kredsløb \"printes\" på siliciumskiver med ekstremt ultraviolet lys.",
+     "ndi": "ASML har været et fast eksempel i NDI's formidling — som caseforståelse, ikke som købsanbefaling.",
+     "themes": [
+      "compute",
+      "physical",
+      "chips",
+      "connect"
+     ],
+     "weightSum": 7.05,
+     "count": 29,
+     "companies": [
+      {
+       "isin": "FR0013227113",
+       "name": "Soitec",
+       "w": 0.85,
+       "sym": "SOI.PA",
+       "theme": "compute",
+       "forslag": false
+      },
+      {
+       "isin": "DE0006450000",
+       "name": "Lpkf Laser & Electronics Se",
+       "w": 0.62,
+       "sym": "LPK.DE",
+       "theme": "physical",
+       "forslag": false
+      },
+      {
+       "isin": "DE000A1K0235",
+       "name": "SUESS MicroTec N",
+       "w": 0.5,
+       "sym": "SMHN.DE",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "US3463751087",
+       "name": "Formfactor Inc",
+       "w": 0.44,
+       "sym": "FORM",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "GB0009619924",
+       "name": "Iqe Plc",
+       "w": 0.42,
+       "sym": "IQE.L",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "US00246W1036",
+       "name": "Axt Inc",
+       "w": 0.36,
+       "sym": "AXTI",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "DE000A0WMPJ6",
+       "name": "Aixtron N",
+       "w": 0.32,
+       "sym": "AIXA.DE",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "JP3122400009",
+       "name": "Advantest Corp",
+       "w": 0.31,
+       "sym": "6857.T",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "KYG0535Q1331",
+       "name": "Asmpt Ltd",
+       "w": 0.29,
+       "sym": "0522.HK",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "JP3293330001",
+       "name": "Kokusai Electric Corp",
+       "w": 0.28,
+       "sym": "6525.T",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "US00760J1088",
+       "name": "Aehr Test System",
+       "w": 0.26,
+       "sym": "AEHR",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "JP3979200007",
+       "name": "Lasertec",
+       "w": 0.24,
+       "sym": "6920.T",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "USN070592100",
+       "name": "ASML Hold NY Reg",
+       "w": 0.22,
+       "sym": "ASML",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "US6833441057",
+       "name": "Onto Innovation",
+       "w": 0.21,
+       "sym": "ONTO",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "IL0010952641",
+       "name": "Camtek Ltd",
+       "w": 0.2,
+       "sym": "CAMT",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "NL0000334118",
+       "name": "Asm Int",
+       "w": 0.19,
+       "sym": "ASM.AS",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "NL0012866412",
+       "name": "Besi Br",
+       "w": 0.19,
+       "sym": "BESI.AS",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "US5012421013",
+       "name": "Kulicke & Soffa Industries",
+       "w": 0.18,
+       "sym": "KLIC",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "JP3571400005",
+       "name": "Tokyo Electron",
+       "w": 0.17,
+       "sym": "8035.T",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "US1925761066",
+       "name": "Cohu",
+       "w": 0.15,
+       "sym": "COHU",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "IL0010845571",
+       "name": "Nova Ltd",
+       "w": 0.13,
+       "sym": "NVMI",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "US0545402085",
+       "name": "Axcelis Technologies Inc",
+       "w": 0.1,
+       "sym": "ACLS",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "US4824801009",
+       "name": "Kla",
+       "w": 0.09,
+       "sym": "KLAC",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "US29362U1043",
+       "name": "Entegris Inc",
+       "w": 0.09,
+       "sym": "ENTG",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "US55306N1046",
+       "name": "Mks Instruments Inc",
+       "w": 0.07,
+       "sym": "MKSI",
+       "theme": "connect",
+       "forslag": false
+      },
+      {
+       "isin": "US8807701029",
+       "name": "Teradyne",
+       "w": 0.06,
+       "sym": "TER",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "US0382221051",
+       "name": "Applied Material",
+       "w": 0.04,
+       "sym": "AMAT",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "US00108J1097",
+       "name": "ACM Research",
+       "w": 0.04,
+       "sym": "ACMR",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "US5128073062",
+       "name": "Lam Research Corp",
+       "w": 0.03,
+       "sym": "LRCX",
+       "theme": "chips",
+       "forslag": false
+      }
+     ],
+     "seeChain": null,
+     "src": "BLOG 21. oktober 2024 · 8. juni 2025",
+     "shift": "Én leverandør dominerer EUV-litografi. Udstyrsselskaber afhænger af chipproducenternes investeringsbudgetter og svinger derfor meget (baggrund).",
+     "kind": "ndi"
     },
     {
-      "y": "Citat",
-      "t": "SpaceX / compute",
-      "d": "Musk-udsagn gengivet af NDI: se rum-kæden. Aldrig som NDI-prognose."
+     "id": "foundry",
+     "icon": "🏭",
+     "label": "Foundry (chipfabrikker)",
+     "blurb": "Fabrikker, der producerer chips for andre. Det kræver meget store investeringer og år at bygge.",
+     "ndi": "TSMC's regnskaber bruges som indikator for styrken i den teknologiske udvikling.",
+     "themes": [
+      "compute",
+      "chips",
+      "andet"
+     ],
+     "weightSum": 2.67,
+     "count": 7,
+     "companies": [
+      {
+       "isin": "US7960508882",
+       "name": "Samsung Electronics",
+       "w": 0.61,
+       "sym": "SMSN.IL",
+       "theme": "compute",
+       "forslag": false
+      },
+      {
+       "isin": "KYG393871085",
+       "name": "GlobalFoundries",
+       "w": 0.57,
+       "sym": "GFS",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "IL0010823792",
+       "name": "Tower Semicon In",
+       "w": 0.55,
+       "sym": "TSEM",
+       "theme": "compute",
+       "forslag": false
+      },
+      {
+       "isin": "US4581401001",
+       "name": "Intel",
+       "w": 0.33,
+       "sym": "INTC",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "US9108734057",
+       "name": "United Microelectron-Sp Adr",
+       "w": 0.3,
+       "sym": "UMC",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "US0316521006",
+       "name": "Amkor Technology",
+       "w": 0.18,
+       "sym": "AMKR",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "US8740391003",
+       "name": "Taiwan Semi Sp ADR",
+       "w": 0.13,
+       "sym": "TSM",
+       "theme": "andet",
+       "forslag": true
+      }
+     ],
+     "seeChain": null,
+     "src": "BLOG 19. maj 2024 · 24. august 2026",
+     "shift": "Den mest avancerede produktion er koncentreret i Taiwan, hvilket giver geopolitisk risiko (baggrund). Mads skriver, at Vesten skal bygge chipfabrikker sammen med kraftværker, elnet og datacentre.",
+     "kind": "ndi"
+    },
+    {
+     "id": "memory",
+     "icon": "▤",
+     "label": "Hukommelse",
+     "blurb": "AI-modeller skal have data tæt på processoren. Højbåndbreddehukommelse (HBM) er blevet en af de mest efterspurgte komponenter.",
+     "ndi": "NDI ser begyndende flaskehalse i hukommelse og optisk connectivity.",
+     "themes": [
+      "compute"
+     ],
+     "weightSum": 2.64,
+     "count": 7,
+     "companies": [
+      {
+       "isin": "US78392B1070",
+       "name": "SK Hynix",
+       "w": 0.65,
+       "sym": "HY9H.F",
+       "theme": "compute",
+       "forslag": false
+      },
+      {
+       "isin": "US7960508882",
+       "name": "Samsung Electronics",
+       "w": 0.61,
+       "sym": "SMSN.IL",
+       "theme": "compute",
+       "forslag": false
+      },
+      {
+       "isin": "US5951121038",
+       "name": "Micron Technology",
+       "w": 0.31,
+       "sym": "MU",
+       "theme": "compute",
+       "forslag": false
+      },
+      {
+       "isin": "JP3236330001",
+       "name": "Kioxia Holdings",
+       "w": 0.28,
+       "sym": "285A.T",
+       "theme": "compute",
+       "forslag": false
+      },
+      {
+       "isin": "US80004C2008",
+       "name": "Sandisk Corp",
+       "w": 0.28,
+       "sym": "SNDK",
+       "theme": "compute",
+       "forslag": false
+      },
+      {
+       "isin": "US9581021055",
+       "name": "Western Digital",
+       "w": 0.26,
+       "sym": "WDC",
+       "theme": "compute",
+       "forslag": false
+      },
+      {
+       "isin": "IE00BKVD2N49",
+       "name": "Seagate Hldgs",
+       "w": 0.25,
+       "sym": "STX",
+       "theme": "compute",
+       "forslag": false
+      }
+     ],
+     "seeChain": null,
+     "src": "BLOG 16. december 2024 · 30. marts 2026",
+     "shift": "Hukommelse har historisk været en meget cyklisk branche med store prisudsving (baggrund). Mads har siden 2024 set HBM som et led, hvor knapheden kan vise sig.",
+     "kind": "ndi"
+    },
+    {
+     "id": "optics",
+     "icon": "◑",
+     "label": "Optik og netværk",
+     "blurb": "Data skal flyttes hurtigt mellem tusindvis af chips. Det sker med switches, lasere og glasfiber, og i stigende grad med lys i stedet for kobber.",
+     "ndi": "Et af de vigtigste fokusområder i 2026 med begyndende flaskehalse.",
+     "themes": [
+      "connect",
+      "chips",
+      "compute"
+     ],
+     "weightSum": 6.76,
+     "count": 17,
+     "companies": [
+      {
+       "isin": "US55024U1097",
+       "name": "Lumentum Hldngs",
+       "w": 1.17,
+       "sym": "LITE",
+       "theme": "connect",
+       "forslag": false
+      },
+      {
+       "isin": "CA73044W3021",
+       "name": "Poet Technologies Inc",
+       "w": 0.96,
+       "sym": "POET",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "SE0003917798",
+       "name": "Sivers Semiconductors",
+       "w": 0.94,
+       "sym": "SIVE.ST",
+       "theme": "connect",
+       "forslag": false
+      },
+      {
+       "isin": "US03823U1025",
+       "name": "Applied Optoelectronics Inc",
+       "w": 0.49,
+       "sym": "AAOI",
+       "theme": "connect",
+       "forslag": false
+      },
+      {
+       "isin": "CH0030380734",
+       "name": "Huber + Suhner Ag-Reg",
+       "w": 0.46,
+       "sym": "HUBN.SW",
+       "theme": "connect",
+       "forslag": false
+      },
+      {
+       "isin": "US2193501051",
+       "name": "Corning Inc",
+       "w": 0.43,
+       "sym": "GLW",
+       "theme": "connect",
+       "forslag": false
+      },
+      {
+       "isin": "US5322751042",
+       "name": "Lightwave Logic Inc",
+       "w": 0.41,
+       "sym": "LWLG",
+       "theme": "connect",
+       "forslag": true
+      },
+      {
+       "isin": "US49338L1035",
+       "name": "Keysight Technologies In",
+       "w": 0.34,
+       "sym": "KEYS",
+       "theme": "connect",
+       "forslag": false
+      },
+      {
+       "isin": "US55405Y1001",
+       "name": "Macom Technology Solutions H",
+       "w": 0.29,
+       "sym": "MTSI",
+       "theme": "connect",
+       "forslag": false
+      },
+      {
+       "isin": "US11135F1012",
+       "name": "Broadcom",
+       "w": 0.26,
+       "sym": "AVGO",
+       "theme": "connect",
+       "forslag": false
+      },
+      {
+       "isin": "KYG3323L1005",
+       "name": "Fabrinet",
+       "w": 0.23,
+       "sym": "FN",
+       "theme": "connect",
+       "forslag": false
+      },
+      {
+       "isin": "US1717793095",
+       "name": "Ciena Corp",
+       "w": 0.2,
+       "sym": "CIEN",
+       "theme": "connect",
+       "forslag": false
+      },
+      {
+       "isin": "US19247G1076",
+       "name": "Coherent",
+       "w": 0.17,
+       "sym": "COHR",
+       "theme": "connect",
+       "forslag": false
+      },
+      {
+       "isin": "KYG254571055",
+       "name": "Crdo",
+       "w": 0.13,
+       "sym": "CRDO",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "US0404132054",
+       "name": "Arista Networks Inc",
+       "w": 0.1,
+       "sym": "ANET",
+       "theme": "compute",
+       "forslag": false
+      },
+      {
+       "isin": "US0320951017",
+       "name": "Amphenol",
+       "w": 0.1,
+       "sym": "APH",
+       "theme": "connect",
+       "forslag": false
+      },
+      {
+       "isin": "US17275R1023",
+       "name": "Cisco Systems",
+       "w": 0.08,
+       "sym": "CSCO",
+       "theme": "connect",
+       "forslag": false
+      }
+     ],
+     "seeChain": null,
+     "src": "BLOG 30. marts 2026 · 29. juni 2026",
+     "shift": "Co-packaged optics, hvor optikken sidder direkte ved chippen, er en af teknologierne, der skal reducere strømforbruget (baggrund).",
+     "kind": "ndi"
+    },
+    {
+     "id": "servers",
+     "icon": "▤",
+     "label": "Serverinfrastruktur",
+     "blurb": "Servere, racks og strømforsyninger, der samler chips, hukommelse og netværk til færdige AI-systemer.",
+     "ndi": "Nævnt som en del af halvlederflaskehalsen. NDI har ikke beskrevet leddet nærmere.",
+     "themes": [
+      "compute",
+      "connect"
+     ],
+     "weightSum": 0.98,
+     "count": 7,
+     "companies": [
+      {
+       "isin": "US86800U3023",
+       "name": "Super Micro Computer Inc",
+       "w": 0.22,
+       "sym": "SMCI",
+       "theme": "compute",
+       "forslag": false
+      },
+      {
+       "isin": "CA15101Q2071",
+       "name": "Celestica",
+       "w": 0.22,
+       "sym": "CLS.TO",
+       "theme": "connect",
+       "forslag": false
+      },
+      {
+       "isin": "US4663131039",
+       "name": "Jabil Inc",
+       "w": 0.14,
+       "sym": "JBL",
+       "theme": "connect",
+       "forslag": false
+      },
+      {
+       "isin": "US68247W1099",
+       "name": "One Stop Systems Inc",
+       "w": 0.14,
+       "sym": "OSS",
+       "theme": "compute",
+       "forslag": false
+      },
+      {
+       "isin": "US24703L2025",
+       "name": "Dell Tech",
+       "w": 0.1,
+       "sym": "DELL",
+       "theme": "compute",
+       "forslag": false
+      },
+      {
+       "isin": "US8010561020",
+       "name": "Sanmina Corp",
+       "w": 0.1,
+       "sym": "SANM",
+       "theme": "connect",
+       "forslag": false
+      },
+      {
+       "isin": "SG9999000020",
+       "name": "Flex Ltd",
+       "w": 0.06,
+       "sym": "FLEX",
+       "theme": "connect",
+       "forslag": false
+      }
+     ],
+     "seeChain": null,
+     "src": "BLOG 30. marts 2026",
+     "shift": "Leddet samler chips, hukommelse og netværk til færdige systemer, så det mærker presset fra flere led på én gang (tolkning).",
+     "kind": "ndi"
+    },
+    {
+     "id": "cloud",
+     "icon": "☁",
+     "label": "Cloud, AI-modeller og adgang",
+     "blurb": "Selskaber, der udlejer computerkraft og udvikler de store AI-modeller.",
+     "ndi": "Cloud og modeller er sværere at investere i lige nu: længere ude i kæden er det mere et spørgsmål om, hvem der klarer sig — uden tydelige flaskehalse.",
+     "themes": [
+      "platforms",
+      "energy",
+      "software"
+     ],
+     "weightSum": 3.55,
+     "count": 7,
+     "companies": [
+      {
+       "isin": "JP3436100006",
+       "name": "SoftBank Group",
+       "w": 1.51,
+       "sym": "9984.T",
+       "theme": "platforms",
+       "forslag": false
+      },
+      {
+       "isin": "US21873S1087",
+       "name": "Coreweave Inc-Cl A",
+       "w": 0.9,
+       "sym": "CRWV",
+       "theme": "energy",
+       "forslag": false
+      },
+      {
+       "isin": "NL0009805522",
+       "name": "Nebius Group Nv",
+       "w": 0.5,
+       "sym": "NBIS",
+       "theme": "energy",
+       "forslag": false
+      },
+      {
+       "isin": "US68389X1054",
+       "name": "Oracle",
+       "w": 0.33,
+       "sym": "ORCL",
+       "theme": "software",
+       "forslag": false
+      },
+      {
+       "isin": "US30303M1027",
+       "name": "Meta Platforms Inc",
+       "w": 0.16,
+       "sym": "META",
+       "theme": "platforms",
+       "forslag": false
+      },
+      {
+       "isin": "US18915M1071",
+       "name": "Cloudflare",
+       "w": 0.08,
+       "sym": "NET",
+       "theme": "software",
+       "forslag": false
+      },
+      {
+       "isin": "US01609W1027",
+       "name": "Alibaba Grp Sp ADS",
+       "w": 0.07,
+       "sym": "BABA",
+       "theme": "platforms",
+       "forslag": false
+      }
+     ],
+     "seeChain": null,
+     "src": "BLOG 30. marts 2026 · 27. juli 2026",
+     "shift": "Mads skriver, at intelligens bliver en råvare, og at AI-økonomien er begyndt at finansiere sig selv (BLOG 12. oktober 2026). Open weights kalder han \"en accelerator for hele AI-økonomien\".",
+     "kind": "ndi"
+    },
+    {
+     "id": "data",
+     "icon": "▦",
+     "label": "Data",
+     "blurb": "Selskaber, der samler, renser og sælger data til at træne og drive AI.",
+     "ndi": "Data er interessant, men stadig en ret uafklaret forretningsmodel.",
+     "themes": [
+      "software",
+      "andet"
+     ],
+     "weightSum": 1.47,
+     "count": 5,
+     "companies": [
+      {
+       "isin": "US69608A1088",
+       "name": "Palantir Tchnl",
+       "w": 0.78,
+       "sym": "PLTR",
+       "theme": "software",
+       "forslag": false
+      },
+      {
+       "isin": "US88023B1035",
+       "name": "Tempus AI",
+       "w": 0.25,
+       "sym": "TEM",
+       "theme": "andet",
+       "forslag": true
+      },
+      {
+       "isin": "US4576422053",
+       "name": "Innodata Inc",
+       "w": 0.2,
+       "sym": "INOD",
+       "theme": "software",
+       "forslag": false
+      },
+      {
+       "isin": "US8334451098",
+       "name": "Snowflake",
+       "w": 0.16,
+       "sym": "SNOW",
+       "theme": "software",
+       "forslag": false
+      },
+      {
+       "isin": "US7811541090",
+       "name": "Rubrik",
+       "w": 0.08,
+       "sym": "RBRK",
+       "theme": "software",
+       "forslag": false
+      }
+     ],
+     "seeChain": null,
+     "src": "BLOG 30. marts 2026",
+     "shift": "Forretningsmodellen er ikke afklaret endnu. NDI har ikke beskrevet, hvordan den kan udvikle sig.",
+     "kind": "ndi"
+    },
+    {
+     "id": "software",
+     "icon": "⌘",
+     "label": "Software",
+     "blurb": "Programmer og abonnementstjenester, som virksomheder og forbrugere bruger. AI kan både styrke og true de eksisterende forretningsmodeller.",
+     "ndi": "NDI har været skeptisk over for software: svært at identificere langsigtede selskaber, og feltet er relativt højt prissat.",
+     "themes": [
+      "software"
+     ],
+     "weightSum": 2.18,
+     "count": 10,
+     "companies": [
+      {
+       "isin": "IL0011301780",
+       "name": "Wix.Com Ltd",
+       "w": 0.96,
+       "sym": "WIX",
+       "theme": "software",
+       "forslag": false
+      },
+      {
+       "isin": "US55318A1088",
+       "name": "Mntn Inc",
+       "w": 0.27,
+       "sym": "MNTN",
+       "theme": "software",
+       "forslag": false
+      },
+      {
+       "isin": "US91332U1016",
+       "name": "Unity Software",
+       "w": 0.16,
+       "sym": "U",
+       "theme": "software",
+       "forslag": false
+      },
+      {
+       "isin": "US3168411052",
+       "name": "Figma Inc-Cl A",
+       "w": 0.15,
+       "sym": "FIG",
+       "theme": "software",
+       "forslag": false
+      },
+      {
+       "isin": "US98956A1051",
+       "name": "Zeta Global Holdings Corp",
+       "w": 0.15,
+       "sym": "ZETA",
+       "theme": "software",
+       "forslag": false
+      },
+      {
+       "isin": "US79589L1061",
+       "name": "Samsara",
+       "w": 0.14,
+       "sym": "IOT",
+       "theme": "software",
+       "forslag": false
+      },
+      {
+       "isin": "US78781J1097",
+       "name": "Sailpoint Inc",
+       "w": 0.12,
+       "sym": "SAIL",
+       "theme": "software",
+       "forslag": false
+      },
+      {
+       "isin": "US64119N6085",
+       "name": "Netskope Inc-Cl A",
+       "w": 0.08,
+       "sym": "NTSK",
+       "theme": "software",
+       "forslag": false
+      },
+      {
+       "isin": "US6974351057",
+       "name": "Palo Alto Net",
+       "w": 0.08,
+       "sym": "PANW",
+       "theme": "software",
+       "forslag": false
+      },
+      {
+       "isin": "US6391931010",
+       "name": "Navan Inc-Cl A",
+       "w": 0.07,
+       "sym": "NAVN",
+       "theme": "software",
+       "forslag": false
+      }
+     ],
+     "seeChain": null,
+     "src": "BLOG 2. juni 2024 · 13. april 2026",
+     "shift": "Holdningen har ændret sig: i 2024 handlede skepsisen om høje værdiansættelser, i 2026 om tvivl på selve forretningsmodellen, fordi AI kan forstyrre den.",
+     "kind": "ndi"
+    },
+    {
+     "id": "agents",
+     "icon": "◎",
+     "label": "Forbrugerapplikationer og agentisk AI",
+     "blurb": "AI-assistenter og agenter, der selv udfører opgaver for mennesker og virksomheder.",
+     "ndi": "Efterspørgslen efter compute kommer i stigende grad herfra. NDI forventer, at dette led over tid fylder mere i porteføljen. Fase 2: copilots.",
+     "themes": [
+      "platforms",
+      "software"
+     ],
+     "weightSum": 2.85,
+     "count": 7,
+     "companies": [
+      {
+       "isin": "US75734B1008",
+       "name": "Reddit",
+       "w": 0.6,
+       "sym": "RDDT",
+       "theme": "platforms",
+       "forslag": false
+      },
+      {
+       "isin": "US03831W1080",
+       "name": "AppLovin",
+       "w": 0.54,
+       "sym": "APP",
+       "theme": "software",
+       "forslag": false
+      },
+      {
+       "isin": "US7710491033",
+       "name": "Roblox",
+       "w": 0.51,
+       "sym": "RBLX",
+       "theme": "software",
+       "forslag": true
+      },
+      {
+       "isin": "US52567D1072",
+       "name": "Lemonade",
+       "w": 0.43,
+       "sym": "LMND",
+       "theme": "software",
+       "forslag": true
+      },
+      {
+       "isin": "US90353T1007",
+       "name": "Uber Tech",
+       "w": 0.41,
+       "sym": "UBER",
+       "theme": "software",
+       "forslag": false
+      },
+      {
+       "isin": "US8361001071",
+       "name": "SoundHound AI",
+       "w": 0.23,
+       "sym": "SOUN",
+       "theme": "software",
+       "forslag": false
+      },
+      {
+       "isin": "LU1778762911",
+       "name": "Spotify Tech",
+       "w": 0.13,
+       "sym": "SPOT",
+       "theme": "platforms",
+       "forslag": true
+      }
+     ],
+     "seeChain": null,
+     "src": "BLOG 30. marts 2026 · 7. oktober 2024",
+     "shift": "Fra chatbots, der svarer, til agenter, der handler. Det er her, efterspørgslen begynder i Mads' flodbillede.",
+     "kind": "ndi"
+    },
+    {
+     "id": "physical-ai",
+     "icon": "🤖",
+     "label": "Fysisk AI",
+     "blurb": "Når AI får krop, bliver det til robotter, selvkørende biler, droner og automatiserede fabrikker. Se robotik-kæden.",
+     "ndi": "NDI ser det som næste store fase efter chatbots og copilots.",
+     "themes": [
+      "physical",
+      "software",
+      "andet"
+     ],
+     "weightSum": 2.37,
+     "count": 8,
+     "companies": [
+      {
+       "isin": "US88160R1014",
+       "name": "Tesla",
+       "w": 0.77,
+       "sym": "TSLA",
+       "theme": "physical",
+       "forslag": false
+      },
+      {
+       "isin": "US87151X1019",
+       "name": "Symbotic",
+       "w": 0.34,
+       "sym": "SYM",
+       "theme": "physical",
+       "forslag": false
+      },
+      {
+       "isin": "US81758H1068",
+       "name": "Serve Robotics",
+       "w": 0.31,
+       "sym": "SERV",
+       "theme": "physical",
+       "forslag": true
+      },
+      {
+       "isin": "US7329081084",
+       "name": "Pony Ai Inc",
+       "w": 0.27,
+       "sym": "PONY",
+       "theme": "software",
+       "forslag": false
+      },
+      {
+       "isin": "US5000811043",
+       "name": "Kodiak Ai Inc",
+       "w": 0.23,
+       "sym": "KDK",
+       "theme": "software",
+       "forslag": false
+      },
+      {
+       "isin": "US0517741072",
+       "name": "Aurora Innovtn",
+       "w": 0.2,
+       "sym": "AUR",
+       "theme": "andet",
+       "forslag": true
+      },
+      {
+       "isin": "US9509151083",
+       "name": "Weride Inc-Adr",
+       "w": 0.15,
+       "sym": "WRD",
+       "theme": "software",
+       "forslag": false
+      },
+      {
+       "isin": "KYG4602S1057",
+       "name": "Horizon Robotics Inc",
+       "w": 0.1,
+       "sym": "9660.HK",
+       "theme": "software",
+       "forslag": false
+      }
+     ],
+     "seeChain": "physical",
+     "src": "BLOG 30. marts 2026 · 7. oktober 2024",
+     "shift": "Mads forventer, at fysisk AI \"snart\" driver compute-efterspørgslen efter agentisk AI. Der er ingen præcise årstal.",
+     "kind": "ndi"
     }
-  ],
-  "treemap": [
+   ]
+  },
+  {
+   "id": "physical",
+   "title": "Robotik & fysisk AI",
+   "why": "Når AI får krop, bliver det til robotter, selvkørende biler, droner og automatiserede fabrikker. NDI ser det som næste store fase efter chatbots og copilots.",
+   "source": "BLOG 7. okt 2024 · BOG s. 40–43",
+   "links": [
     {
-      "key": "platforms",
-      "w": 16.01,
-      "n": 40
+     "id": "components",
+     "icon": "⚙",
+     "label": "Komponenter",
+     "blurb": "Sensorer, motorer, effektelektronik og batterier til robotter og autonome systemer.",
+     "ndi": "Bred eksponering i microchips, software, simulering, automatisering og robotisering.",
+     "themes": [
+      "chips",
+      "physical",
+      "andet",
+      "compute"
+     ],
+     "weightSum": 2.28,
+     "count": 14,
+     "companies": [
+      {
+       "isin": "KYG037AX1015",
+       "name": "Ambarella Inc",
+       "w": 0.31,
+       "sym": "AMBA",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "JP3164720009",
+       "name": "Renesas Electro",
+       "w": 0.29,
+       "sym": "6723.T",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "US45073V1089",
+       "name": "Itt Inc",
+       "w": 0.24,
+       "sym": "ITT",
+       "theme": "physical",
+       "forslag": false
+      },
+      {
+       "isin": "US03214Q1085",
+       "name": "Amprius Technologies Inc",
+       "w": 0.21,
+       "sym": "AMPX",
+       "theme": "andet",
+       "forslag": true
+      },
+      {
+       "isin": "US83422N1054",
+       "name": "Solid Power Inc",
+       "w": 0.21,
+       "sym": "SLDP",
+       "theme": "andet",
+       "forslag": true
+      },
+      {
+       "isin": "US74767V1098",
+       "name": "Quantumscape Corp",
+       "w": 0.2,
+       "sym": "QS",
+       "theme": "andet",
+       "forslag": true
+      },
+      {
+       "isin": "US91532F1021",
+       "name": "Unusual Machines Inc /Us",
+       "w": 0.18,
+       "sym": "UMAC",
+       "theme": "compute",
+       "forslag": false
+      },
+      {
+       "isin": "DE0006231004",
+       "name": "Infineon Technolo N",
+       "w": 0.13,
+       "sym": "IFX.DE",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "US63942X1063",
+       "name": "Navitas Semicond",
+       "w": 0.12,
+       "sym": "NVTS",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "US78397Q1094",
+       "name": "Ses Ai Corp",
+       "w": 0.1,
+       "sym": "SES",
+       "theme": "andet",
+       "forslag": true
+      },
+      {
+       "isin": "US59516C1062",
+       "name": "Microvast Holdings Inc",
+       "w": 0.1,
+       "sym": "MVST",
+       "theme": "andet",
+       "forslag": true
+      },
+      {
+       "isin": "US6821891057",
+       "name": "ON Semiconductor",
+       "w": 0.09,
+       "sym": "ON",
+       "theme": "chips",
+       "forslag": false
+      },
+      {
+       "isin": "US2935941078",
+       "name": "Enovix Corp",
+       "w": 0.05,
+       "sym": "ENVX",
+       "theme": "andet",
+       "forslag": true
+      },
+      {
+       "isin": "CA28617B6061",
+       "name": "Electrovaya Inc",
+       "w": 0.05,
+       "sym": "ELVA",
+       "theme": "andet",
+       "forslag": true
+      }
+     ],
+     "seeChain": null,
+     "src": "BLOG 10. juni 2024",
+     "shift": "NDI har ikke lavet en detaljeret analyse af komponenterne. Leddet viser, hvor bredt fysisk AI trækker på chips, batterier og motorer (tolkning).",
+     "kind": "ndi"
     },
     {
-      "key": "chips",
-      "w": 13.19,
-      "n": 53
+     "id": "sim",
+     "icon": "◫",
+     "label": "Simulering og software",
+     "blurb": "Software og simulering, der træner og styrer robotter før og under drift.",
+     "ndi": "Simulering nævnes som del af feltet i NDI's formidling.",
+     "themes": [
+      "software"
+     ],
+     "weightSum": 0.63,
+     "count": 5,
+     "companies": [
+      {
+       "isin": "US91332U1016",
+       "name": "Unity Software",
+       "w": 0.16,
+       "sym": "U",
+       "theme": "software",
+       "forslag": false
+      },
+      {
+       "isin": "US8716071076",
+       "name": "Synopsys",
+       "w": 0.14,
+       "sym": "SNPS",
+       "theme": "software",
+       "forslag": false
+      },
+      {
+       "isin": "US79589L1061",
+       "name": "Samsara",
+       "w": 0.14,
+       "sym": "IOT",
+       "theme": "software",
+       "forslag": false
+      },
+      {
+       "isin": "KYG4602S1057",
+       "name": "Horizon Robotics Inc",
+       "w": 0.1,
+       "sym": "9660.HK",
+       "theme": "software",
+       "forslag": false
+      },
+      {
+       "isin": "US1273871087",
+       "name": "Cadence Design",
+       "w": 0.09,
+       "sym": "CDNS",
+       "theme": "software",
+       "forslag": false
+      }
+     ],
+     "seeChain": null,
+     "src": "BLOG 10. juni 2024 · 23. juni 2025",
+     "shift": "Robotter trænes i stigende grad i simulerede verdener, før de kommer ud i den fysiske (baggrund).",
+     "kind": "ndi"
     },
     {
-      "key": "software",
-      "w": 12.38,
-      "n": 51
-    },
-    {
-      "key": "connect",
-      "w": 8.21,
-      "n": 30
-    },
-    {
-      "key": "physical",
-      "w": 7.34,
-      "n": 24
-    },
-    {
-      "key": "energy",
-      "w": 6.31,
-      "n": 15
-    },
-    {
-      "key": "compute",
-      "w": 6.05,
-      "n": 18
-    },
-    {
-      "key": "energy-resources",
-      "w": 5.58,
-      "n": 25
-    },
-    {
-      "key": "space",
-      "w": 4.38,
-      "n": 18
-    },
-    {
-      "key": "quantum",
-      "w": 0.88,
-      "n": 4
+     "id": "robots",
+     "icon": "🤖",
+     "label": "Robotter, autonome køretøjer og droner",
+     "blurb": "Når AI får krop: robotter, selvkørende biler, droner og automatiserede fabrikker.",
+     "ndi": "NDI's vurdering: fase 3 er automatisering og robotisering. Robotter forstås bredt som \"droner, fly, soldater, missiler og andre autonome systemer\".",
+     "themes": [
+      "physical",
+      "software",
+      "connect",
+      "andet"
+     ],
+     "weightSum": 3.85,
+     "count": 14,
+     "companies": [
+      {
+       "isin": "US88160R1014",
+       "name": "Tesla",
+       "w": 0.77,
+       "sym": "TSLA",
+       "theme": "physical",
+       "forslag": false
+      },
+      {
+       "isin": "US3453708600",
+       "name": "Ford Motor",
+       "w": 0.41,
+       "sym": "F",
+       "theme": "physical",
+       "forslag": false
+      },
+      {
+       "isin": "US87151X1019",
+       "name": "Symbotic",
+       "w": 0.34,
+       "sym": "SYM",
+       "theme": "physical",
+       "forslag": false
+      },
+      {
+       "isin": "US81758H1068",
+       "name": "Serve Robotics",
+       "w": 0.31,
+       "sym": "SERV",
+       "theme": "physical",
+       "forslag": true
+      },
+      {
+       "isin": "US7329081084",
+       "name": "Pony Ai Inc",
+       "w": 0.27,
+       "sym": "PONY",
+       "theme": "software",
+       "forslag": false
+      },
+      {
+       "isin": "US37045V1008",
+       "name": "General Motors Co",
+       "w": 0.25,
+       "sym": "GM",
+       "theme": "physical",
+       "forslag": false
+      },
+      {
+       "isin": "US50202M1027",
+       "name": "Li Auto Sp ADS",
+       "w": 0.24,
+       "sym": "LI",
+       "theme": "physical",
+       "forslag": false
+      },
+      {
+       "isin": "US5000811043",
+       "name": "Kodiak Ai Inc",
+       "w": 0.23,
+       "sym": "KDK",
+       "theme": "software",
+       "forslag": false
+      },
+      {
+       "isin": "US76954A1034",
+       "name": "Rivian Automotive Inc",
+       "w": 0.21,
+       "sym": "RIVN",
+       "theme": "physical",
+       "forslag": false
+      },
+      {
+       "isin": "CA50077N1024",
+       "name": "Kraken Robotics Inc",
+       "w": 0.21,
+       "sym": "PNG.V",
+       "theme": "connect",
+       "forslag": false
+      },
+      {
+       "isin": "US0517741072",
+       "name": "Aurora Innovtn",
+       "w": 0.2,
+       "sym": "AUR",
+       "theme": "andet",
+       "forslag": true
+      },
+      {
+       "isin": "US9509151083",
+       "name": "Weride Inc-Adr",
+       "w": 0.15,
+       "sym": "WRD",
+       "theme": "software",
+       "forslag": false
+      },
+      {
+       "isin": "US68236H2040",
+       "name": "Ondas Holdings Inc",
+       "w": 0.15,
+       "sym": "ONDS",
+       "theme": "connect",
+       "forslag": false
+      },
+      {
+       "isin": "US86989Y1091",
+       "name": "Swarmer Inc",
+       "w": 0.11,
+       "sym": "SWMR",
+       "theme": "software",
+       "forslag": false
+      }
+     ],
+     "seeChain": null,
+     "src": "BLOG 7. oktober 2024 · 17. marts 2025 · BOG s. 40–43",
+     "shift": "Mads beskriver et kapløb, hvor Vesten skal indhente Kinas forspring i robotproduktion.",
+     "kind": "ndi"
     }
-  ],
-  "chains": [
+   ]
+  },
+  {
+   "id": "energy",
+   "title": "Energi & elektrificering",
+   "why": "AI, robotter og elbiler kræver meget mere strøm. NDI ser energi som den første flaskehals i AI-udbygningen.",
+   "source": "BLOG 30. marts 2026 · 7. juli 2025",
+   "links": [
     {
-      "id": "ai-compute",
-      "title": "AI-compute",
-      "why": "Mads beskriver AI-værdikæden som et flodsystem: når én dæmning (flaskehals) letter, flytter presset. Efterspørgslen kommer i stigende grad fra bunden — først agentisk AI, snart fysisk AI.",
-      "source": "BLOG 30. marts 2026",
-      "links": [
-        {
-          "id": "energi",
-          "icon": "⚡",
-          "label": "Energi og strømfordeling",
-          "blurb": "Datacentre bruger enorme mængder strøm. Uden ny elproduktion og stærkere elnet kan der ikke bygges mere compute. Her hører gas, atomkraft, gasturbiner, sol, vind, batterier og modernisering af elnettet til.",
-          "ndi": "NDI ser dette led som en mulig flaskehals — \"første flaskehals: energi\".",
-          "themes": [
-            "energy",
-            "energy-resources"
-          ],
-          "weightSum": 11.89,
-          "count": 40,
-          "companies": [
-            {
-              "isin": "US21873S1087",
-              "name": "Coreweave Inc-Cl A",
-              "w": 0.9,
-              "sym": "CRWV",
-              "forslag": false
-            },
-            {
-              "isin": "US34379V1035",
-              "name": "Fluence Energy Inc",
-              "w": 0.81,
-              "sym": "FLNC",
-              "forslag": false
-            },
-            {
-              "isin": "US05614L2097",
-              "name": "Babcock & Wilcox",
-              "w": 0.6,
-              "sym": "BW",
-              "forslag": false
-            },
-            {
-              "isin": "US35834F1049",
-              "name": "T1 Energy Inc",
-              "w": 0.58,
-              "sym": "TE",
-              "forslag": false
-            },
-            {
-              "isin": "US83418M1036",
-              "name": "Solaris Energy Infrastructur",
-              "w": 0.54,
-              "sym": "SEI",
-              "forslag": true
-            },
-            {
-              "isin": "US74347M1080",
-              "name": "Propetro Holding Corp",
-              "w": 0.51,
-              "sym": "PUMP",
-              "forslag": true
-            }
-          ],
-          "seeChain": null
-        },
-        {
-          "id": "datacenter",
-          "icon": "▣",
-          "label": "Datacentre og køling",
-          "blurb": "Datacentret er fabrikken, hvor strøm bliver til compute. Det kræver byggeri, strømfordeling, køling, jord og tilladelser.",
-          "ndi": "NDI ser dette led som en mulig flaskehals — \"anden flaskehals: datacentre\".",
-          "themes": [
-            "physical",
-            "compute"
-          ],
-          "weightSum": 13.39,
-          "count": 42,
-          "companies": [
-            {
-              "isin": "US88160R1014",
-              "name": "Tesla",
-              "w": 0.77,
-              "sym": "TSLA",
-              "forslag": false
-            },
-            {
-              "isin": "DE0006450000",
-              "name": "Lpkf Laser & Electronics Se",
-              "w": 0.62,
-              "sym": "LPK.DE",
-              "forslag": false
-            },
-            {
-              "isin": "US73933G2021",
-              "name": "Power Solutions Internationa",
-              "w": 0.55,
-              "sym": "PSIX",
-              "forslag": false
-            },
-            {
-              "isin": "US46982L1089",
-              "name": "Jacobs Solutions",
-              "w": 0.43,
-              "sym": "J",
-              "forslag": true
-            },
-            {
-              "isin": "US3453708600",
-              "name": "Ford Motor",
-              "w": 0.41,
-              "sym": "F",
-              "forslag": false
-            },
-            {
-              "isin": "US60471A1016",
-              "name": "Mirion Technologies Inc",
-              "w": 0.37,
-              "sym": "MIR",
-              "forslag": false
-            }
-          ],
-          "seeChain": null
-        },
-        {
-          "id": "chipdesign",
-          "icon": "◇",
-          "label": "Chipdesign (GPU, XPU og CPU)",
-          "blurb": "Her designes de processorer, der regner AI-modellerne. Mange designere ejer ingen fabrik (fabless) og får chips produceret hos andre.",
-          "ndi": "Halvledere er \"tredje flaskehals\". Fokus på AI XPU'er og CPU'er.",
-          "themes": [
-            "chips"
-          ],
-          "weightSum": 13.19,
-          "count": 53,
-          "companies": [
-            {
-              "isin": "US82982T1060",
-              "name": "Sitime Corp",
-              "w": 1.15,
-              "sym": "SITM",
-              "forslag": false
-            },
-            {
-              "isin": "CA73044W3021",
-              "name": "Poet Technologies Inc",
-              "w": 0.96,
-              "sym": "POET",
-              "forslag": false
-            },
-            {
-              "isin": "AT0000A3EPA4",
-              "name": "Ams-Osram Ag",
-              "w": 0.58,
-              "sym": "AMS.SW",
-              "forslag": false
-            },
-            {
-              "isin": "KYG393871085",
-              "name": "GlobalFoundries",
-              "w": 0.57,
-              "sym": "GFS",
-              "forslag": false
-            },
-            {
-              "isin": "DE000A1K0235",
-              "name": "SUESS MicroTec N",
-              "w": 0.5,
-              "sym": "SMHN.DE",
-              "forslag": false
-            },
-            {
-              "isin": "US3463751087",
-              "name": "Formfactor Inc",
-              "w": 0.44,
-              "sym": "FORM",
-              "forslag": false
-            }
-          ],
-          "seeChain": null
-        },
-        {
-          "id": "equipment",
-          "icon": "◎",
-          "label": "Udstyr og litografi",
-          "blurb": "Maskiner, der bruges til at fremstille chips. Det mest avancerede er litografi, hvor kredsløb \"printes\" på siliciumskiver med ekstremt ultraviolet lys.",
-          "ndi": "ASML har været et fast eksempel i NDI's formidling — som caseforståelse, ikke som købsanbefaling.",
-          "themes": [
-            "chips"
-          ],
-          "weightSum": 13.19,
-          "count": 53,
-          "companies": [
-            {
-              "isin": "US82982T1060",
-              "name": "Sitime Corp",
-              "w": 1.15,
-              "sym": "SITM",
-              "forslag": false
-            },
-            {
-              "isin": "CA73044W3021",
-              "name": "Poet Technologies Inc",
-              "w": 0.96,
-              "sym": "POET",
-              "forslag": false
-            },
-            {
-              "isin": "AT0000A3EPA4",
-              "name": "Ams-Osram Ag",
-              "w": 0.58,
-              "sym": "AMS.SW",
-              "forslag": false
-            },
-            {
-              "isin": "KYG393871085",
-              "name": "GlobalFoundries",
-              "w": 0.57,
-              "sym": "GFS",
-              "forslag": false
-            },
-            {
-              "isin": "DE000A1K0235",
-              "name": "SUESS MicroTec N",
-              "w": 0.5,
-              "sym": "SMHN.DE",
-              "forslag": false
-            },
-            {
-              "isin": "US3463751087",
-              "name": "Formfactor Inc",
-              "w": 0.44,
-              "sym": "FORM",
-              "forslag": false
-            }
-          ],
-          "seeChain": null
-        },
-        {
-          "id": "foundry",
-          "icon": "🏭",
-          "label": "Foundry (chipfabrikker)",
-          "blurb": "Fabrikker, der producerer chips for andre. Det kræver meget store investeringer og år at bygge.",
-          "ndi": "TSMC's regnskaber bruges som indikator for styrken i den teknologiske udvikling.",
-          "themes": [
-            "chips"
-          ],
-          "weightSum": 13.19,
-          "count": 53,
-          "companies": [
-            {
-              "isin": "US82982T1060",
-              "name": "Sitime Corp",
-              "w": 1.15,
-              "sym": "SITM",
-              "forslag": false
-            },
-            {
-              "isin": "CA73044W3021",
-              "name": "Poet Technologies Inc",
-              "w": 0.96,
-              "sym": "POET",
-              "forslag": false
-            },
-            {
-              "isin": "AT0000A3EPA4",
-              "name": "Ams-Osram Ag",
-              "w": 0.58,
-              "sym": "AMS.SW",
-              "forslag": false
-            },
-            {
-              "isin": "KYG393871085",
-              "name": "GlobalFoundries",
-              "w": 0.57,
-              "sym": "GFS",
-              "forslag": false
-            },
-            {
-              "isin": "DE000A1K0235",
-              "name": "SUESS MicroTec N",
-              "w": 0.5,
-              "sym": "SMHN.DE",
-              "forslag": false
-            },
-            {
-              "isin": "US3463751087",
-              "name": "Formfactor Inc",
-              "w": 0.44,
-              "sym": "FORM",
-              "forslag": false
-            }
-          ],
-          "seeChain": null
-        },
-        {
-          "id": "memory",
-          "icon": "▤",
-          "label": "Hukommelse",
-          "blurb": "AI-modeller skal have data tæt på processoren. Højbåndbreddehukommelse (HBM) er blevet en af de mest efterspurgte komponenter.",
-          "ndi": "NDI ser begyndende flaskehalse i hukommelse og optisk connectivity.",
-          "themes": [
-            "chips"
-          ],
-          "weightSum": 13.19,
-          "count": 53,
-          "companies": [
-            {
-              "isin": "US82982T1060",
-              "name": "Sitime Corp",
-              "w": 1.15,
-              "sym": "SITM",
-              "forslag": false
-            },
-            {
-              "isin": "CA73044W3021",
-              "name": "Poet Technologies Inc",
-              "w": 0.96,
-              "sym": "POET",
-              "forslag": false
-            },
-            {
-              "isin": "AT0000A3EPA4",
-              "name": "Ams-Osram Ag",
-              "w": 0.58,
-              "sym": "AMS.SW",
-              "forslag": false
-            },
-            {
-              "isin": "KYG393871085",
-              "name": "GlobalFoundries",
-              "w": 0.57,
-              "sym": "GFS",
-              "forslag": false
-            },
-            {
-              "isin": "DE000A1K0235",
-              "name": "SUESS MicroTec N",
-              "w": 0.5,
-              "sym": "SMHN.DE",
-              "forslag": false
-            },
-            {
-              "isin": "US3463751087",
-              "name": "Formfactor Inc",
-              "w": 0.44,
-              "sym": "FORM",
-              "forslag": false
-            }
-          ],
-          "seeChain": null
-        },
-        {
-          "id": "optics",
-          "icon": "◑",
-          "label": "Optik og netværk",
-          "blurb": "Data skal flyttes hurtigt mellem tusindvis af chips. Det sker med switches, lasere og glasfiber, og i stigende grad med lys i stedet for kobber.",
-          "ndi": "Et af de vigtigste fokusområder i 2026 med begyndende flaskehalse.",
-          "themes": [
-            "connect"
-          ],
-          "weightSum": 8.21,
-          "count": 30,
-          "companies": [
-            {
-              "isin": "US55024U1097",
-              "name": "Lumentum Hldngs",
-              "w": 1.17,
-              "sym": "LITE",
-              "forslag": false
-            },
-            {
-              "isin": "SE0003917798",
-              "name": "Sivers Semiconductors",
-              "w": 0.94,
-              "sym": "SIVE.ST",
-              "forslag": false
-            },
-            {
-              "isin": "US03823U1025",
-              "name": "Applied Optoelectronics Inc",
-              "w": 0.49,
-              "sym": "AAOI",
-              "forslag": false
-            },
-            {
-              "isin": "CH0030380734",
-              "name": "Huber + Suhner Ag-Reg",
-              "w": 0.46,
-              "sym": "HUBN.SW",
-              "forslag": false
-            },
-            {
-              "isin": "US2193501051",
-              "name": "Corning Inc",
-              "w": 0.43,
-              "sym": "GLW",
-              "forslag": false
-            },
-            {
-              "isin": "US5322751042",
-              "name": "Lightwave Logic Inc",
-              "w": 0.41,
-              "sym": "LWLG",
-              "forslag": true
-            }
-          ],
-          "seeChain": null
-        },
-        {
-          "id": "servers",
-          "icon": "▤",
-          "label": "Serverinfrastruktur",
-          "blurb": "Servere, racks og strømforsyninger, der samler chips, hukommelse og netværk til færdige AI-systemer.",
-          "ndi": "Nævnt som del af halvlederflaskehalsen.",
-          "themes": [
-            "compute",
-            "physical"
-          ],
-          "weightSum": 13.39,
-          "count": 42,
-          "companies": [
-            {
-              "isin": "FR0013227113",
-              "name": "Soitec",
-              "w": 0.85,
-              "sym": "SOI.PA",
-              "forslag": false
-            },
-            {
-              "isin": "US67066G1040",
-              "name": "Nvidia",
-              "w": 0.75,
-              "sym": "NVDA",
-              "forslag": false
-            },
-            {
-              "isin": "US78392B1070",
-              "name": "SK Hynix",
-              "w": 0.65,
-              "sym": "HY9H.F",
-              "forslag": false
-            },
-            {
-              "isin": "US7960508882",
-              "name": "Samsung Electronics",
-              "w": 0.61,
-              "sym": "SMSN.IL",
-              "forslag": false
-            },
-            {
-              "isin": "IL0010823792",
-              "name": "Tower Semicon In",
-              "w": 0.55,
-              "sym": "TSEM",
-              "forslag": false
-            },
-            {
-              "isin": "US15675D1037",
-              "name": "Cerebras Systems",
-              "w": 0.48,
-              "sym": "CBRS",
-              "forslag": false
-            }
-          ],
-          "seeChain": null
-        },
-        {
-          "id": "cloud",
-          "icon": "☁",
-          "label": "Cloud, AI-modeller og adgang",
-          "blurb": "Selskaber, der udlejer computerkraft og udvikler de store AI-modeller.",
-          "ndi": "Cloud og modeller er sværere at investere i lige nu: længere ude i kæden er det mere et spørgsmål om, hvem der klarer sig — uden tydelige flaskehalse.",
-          "themes": [
-            "compute",
-            "platforms"
-          ],
-          "weightSum": 22.06,
-          "count": 58,
-          "companies": [
-            {
-              "isin": "FR0013227113",
-              "name": "Soitec",
-              "w": 0.85,
-              "sym": "SOI.PA",
-              "forslag": false
-            },
-            {
-              "isin": "US67066G1040",
-              "name": "Nvidia",
-              "w": 0.75,
-              "sym": "NVDA",
-              "forslag": false
-            },
-            {
-              "isin": "US78392B1070",
-              "name": "SK Hynix",
-              "w": 0.65,
-              "sym": "HY9H.F",
-              "forslag": false
-            },
-            {
-              "isin": "US7960508882",
-              "name": "Samsung Electronics",
-              "w": 0.61,
-              "sym": "SMSN.IL",
-              "forslag": false
-            },
-            {
-              "isin": "IL0010823792",
-              "name": "Tower Semicon In",
-              "w": 0.55,
-              "sym": "TSEM",
-              "forslag": false
-            },
-            {
-              "isin": "US15675D1037",
-              "name": "Cerebras Systems",
-              "w": 0.48,
-              "sym": "CBRS",
-              "forslag": false
-            }
-          ],
-          "seeChain": null
-        },
-        {
-          "id": "data",
-          "icon": "▦",
-          "label": "Data",
-          "blurb": "Selskaber, der samler, renser og sælger data til at træne og drive AI.",
-          "ndi": "Data er interessant, men stadig en ret uafklaret forretningsmodel.",
-          "themes": [
-            "software",
-            "platforms"
-          ],
-          "weightSum": 28.39,
-          "count": 91,
-          "companies": [
-            {
-              "isin": "IL0011301780",
-              "name": "Wix.Com Ltd",
-              "w": 0.96,
-              "sym": "WIX",
-              "forslag": false
-            },
-            {
-              "isin": "US17253J1060",
-              "name": "Cipher Mining Inc",
-              "w": 0.78,
-              "sym": "CIFR",
-              "forslag": false
-            },
-            {
-              "isin": "US69608A1088",
-              "name": "Palantir Tchnl",
-              "w": 0.78,
-              "sym": "PLTR",
-              "forslag": false
-            },
-            {
-              "isin": "US77664L2079",
-              "name": "Root",
-              "w": 0.6,
-              "sym": "ROOT",
-              "forslag": true
-            },
-            {
-              "isin": "US03831W1080",
-              "name": "AppLovin",
-              "w": 0.54,
-              "sym": "APP",
-              "forslag": false
-            },
-            {
-              "isin": "KYG4124C1096",
-              "name": "Ghl",
-              "w": 0.51,
-              "sym": "GRAB",
-              "forslag": false
-            }
-          ],
-          "seeChain": null
-        },
-        {
-          "id": "software",
-          "icon": "⌘",
-          "label": "Software",
-          "blurb": "Programmer og abonnementstjenester, som virksomheder og forbrugere bruger. AI kan både styrke og true de eksisterende forretningsmodeller.",
-          "ndi": "NDI har været skeptisk over for software: svært at identificere langsigtede selskaber, og feltet er relativt højt prissat.",
-          "themes": [
-            "software"
-          ],
-          "weightSum": 12.38,
-          "count": 51,
-          "companies": [
-            {
-              "isin": "IL0011301780",
-              "name": "Wix.Com Ltd",
-              "w": 0.96,
-              "sym": "WIX",
-              "forslag": false
-            },
-            {
-              "isin": "US17253J1060",
-              "name": "Cipher Mining Inc",
-              "w": 0.78,
-              "sym": "CIFR",
-              "forslag": false
-            },
-            {
-              "isin": "US69608A1088",
-              "name": "Palantir Tchnl",
-              "w": 0.78,
-              "sym": "PLTR",
-              "forslag": false
-            },
-            {
-              "isin": "US77664L2079",
-              "name": "Root",
-              "w": 0.6,
-              "sym": "ROOT",
-              "forslag": true
-            },
-            {
-              "isin": "US03831W1080",
-              "name": "AppLovin",
-              "w": 0.54,
-              "sym": "APP",
-              "forslag": false
-            },
-            {
-              "isin": "KYG4124C1096",
-              "name": "Ghl",
-              "w": 0.51,
-              "sym": "GRAB",
-              "forslag": false
-            }
-          ],
-          "seeChain": null
-        },
-        {
-          "id": "agents",
-          "icon": "◎",
-          "label": "Forbrugerapplikationer og agentisk AI",
-          "blurb": "AI-assistenter og agenter, der selv udfører opgaver for mennesker og virksomheder.",
-          "ndi": "Efterspørgslen efter compute kommer i stigende grad herfra. Fase 2: copilots.",
-          "themes": [
-            "software",
-            "platforms"
-          ],
-          "weightSum": 28.39,
-          "count": 91,
-          "companies": [
-            {
-              "isin": "IL0011301780",
-              "name": "Wix.Com Ltd",
-              "w": 0.96,
-              "sym": "WIX",
-              "forslag": false
-            },
-            {
-              "isin": "US17253J1060",
-              "name": "Cipher Mining Inc",
-              "w": 0.78,
-              "sym": "CIFR",
-              "forslag": false
-            },
-            {
-              "isin": "US69608A1088",
-              "name": "Palantir Tchnl",
-              "w": 0.78,
-              "sym": "PLTR",
-              "forslag": false
-            },
-            {
-              "isin": "US77664L2079",
-              "name": "Root",
-              "w": 0.6,
-              "sym": "ROOT",
-              "forslag": true
-            },
-            {
-              "isin": "US03831W1080",
-              "name": "AppLovin",
-              "w": 0.54,
-              "sym": "APP",
-              "forslag": false
-            },
-            {
-              "isin": "KYG4124C1096",
-              "name": "Ghl",
-              "w": 0.51,
-              "sym": "GRAB",
-              "forslag": false
-            }
-          ],
-          "seeChain": null
-        },
-        {
-          "id": "physical-ai",
-          "icon": "🤖",
-          "label": "Fysisk AI",
-          "blurb": "Når AI får krop, bliver det til robotter, selvkørende biler, droner og automatiserede fabrikker. Se robotik-kæden.",
-          "ndi": "NDI ser det som næste store fase efter chatbots og copilots.",
-          "themes": [
-            "physical"
-          ],
-          "weightSum": 7.34,
-          "count": 24,
-          "companies": [
-            {
-              "isin": "US88160R1014",
-              "name": "Tesla",
-              "w": 0.77,
-              "sym": "TSLA",
-              "forslag": false
-            },
-            {
-              "isin": "DE0006450000",
-              "name": "Lpkf Laser & Electronics Se",
-              "w": 0.62,
-              "sym": "LPK.DE",
-              "forslag": false
-            },
-            {
-              "isin": "US73933G2021",
-              "name": "Power Solutions Internationa",
-              "w": 0.55,
-              "sym": "PSIX",
-              "forslag": false
-            },
-            {
-              "isin": "US46982L1089",
-              "name": "Jacobs Solutions",
-              "w": 0.43,
-              "sym": "J",
-              "forslag": true
-            },
-            {
-              "isin": "US3453708600",
-              "name": "Ford Motor",
-              "w": 0.41,
-              "sym": "F",
-              "forslag": false
-            },
-            {
-              "isin": "US60471A1016",
-              "name": "Mirion Technologies Inc",
-              "w": 0.37,
-              "sym": "MIR",
-              "forslag": false
-            }
-          ],
-          "seeChain": "physical"
-        }
-      ]
+     "id": "gen",
+     "icon": "⚡",
+     "label": "Elproduktion",
+     "blurb": "Gas, sol, vind, gasturbiner og producenter tæt på datacentre.",
+     "ndi": "Gasproducenter, gasturbiner, energiproducenter tæt på datacentre samt sol og vind nævnes alle i NDI's beskrivelse af energiflaskehalsen.",
+     "themes": [
+      "energy",
+      "physical",
+      "andet"
+     ],
+     "weightSum": 5.87,
+     "count": 24,
+     "companies": [
+      {
+       "isin": "US05614L2097",
+       "name": "Babcock & Wilcox",
+       "w": 0.6,
+       "sym": "BW",
+       "theme": "energy",
+       "forslag": false
+      },
+      {
+       "isin": "US35834F1049",
+       "name": "T1 Energy Inc",
+       "w": 0.58,
+       "sym": "TE",
+       "theme": "energy",
+       "forslag": false
+      },
+      {
+       "isin": "US73933G2021",
+       "name": "Power Solutions Internationa",
+       "w": 0.55,
+       "sym": "PSIX",
+       "theme": "physical",
+       "forslag": false
+      },
+      {
+       "isin": "US83418M1036",
+       "name": "Solaris Energy Infrastructur",
+       "w": 0.54,
+       "sym": "SEI",
+       "theme": "energy",
+       "forslag": true
+      },
+      {
+       "isin": "US74347M1080",
+       "name": "Propetro Holding Corp",
+       "w": 0.51,
+       "sym": "PUMP",
+       "theme": "energy",
+       "forslag": true
+      },
+      {
+       "isin": "US65339F1012",
+       "name": "NextEra Energy",
+       "w": 0.39,
+       "sym": "NEE",
+       "theme": "energy",
+       "forslag": true
+      },
+      {
+       "isin": "US2310211063",
+       "name": "Cummins",
+       "w": 0.29,
+       "sym": "CMI",
+       "theme": "physical",
+       "forslag": false
+      },
+      {
+       "isin": "US8425871071",
+       "name": "Southern Co/The",
+       "w": 0.28,
+       "sym": "SO",
+       "theme": "energy",
+       "forslag": true
+      },
+      {
+       "isin": "US0937121079",
+       "name": "Bloom Energy Corp- A",
+       "w": 0.25,
+       "sym": "BE",
+       "theme": "andet",
+       "forslag": true
+      },
+      {
+       "isin": "US36828A1016",
+       "name": "Ge Vernova Inc",
+       "w": 0.19,
+       "sym": "GEV",
+       "theme": "physical",
+       "forslag": false
+      },
+      {
+       "isin": "CA1366351098",
+       "name": "Canadian Solar Inc",
+       "w": 0.19,
+       "sym": "CSIQ",
+       "theme": "andet",
+       "forslag": true
+      },
+      {
+       "isin": "US83417M1045",
+       "name": "Solaredge Technologies Inc",
+       "w": 0.18,
+       "sym": "SEDG",
+       "theme": "andet",
+       "forslag": true
+      },
+      {
+       "isin": "US88675P1030",
+       "name": "Tigo Energy Inc",
+       "w": 0.15,
+       "sym": "TYGO",
+       "theme": "andet",
+       "forslag": true
+      },
+      {
+       "isin": "US3687361044",
+       "name": "Generac Holdings Inc",
+       "w": 0.15,
+       "sym": "GNRC",
+       "theme": "physical",
+       "forslag": false
+      },
+      {
+       "isin": "US92840M1027",
+       "name": "Vistra Corp",
+       "w": 0.14,
+       "sym": "VST",
+       "theme": "energy",
+       "forslag": false
+      },
+      {
+       "isin": "US65290E1010",
+       "name": "Nextracker Inc-Cl A",
+       "w": 0.14,
+       "sym": "NXT",
+       "theme": "andet",
+       "forslag": true
+      },
+      {
+       "isin": "US87422Q1094",
+       "name": "Talen Energy Corp",
+       "w": 0.12,
+       "sym": "TLN",
+       "theme": "energy",
+       "forslag": false
+      },
+      {
+       "isin": "US3364331070",
+       "name": "First Solar",
+       "w": 0.12,
+       "sym": "FSLR",
+       "theme": "andet",
+       "forslag": true
+      },
+      {
+       "isin": "US72919P2020",
+       "name": "Plug Power Inc",
+       "w": 0.11,
+       "sym": "PLUG",
+       "theme": "andet",
+       "forslag": true
+      },
+      {
+       "isin": "US04271T1007",
+       "name": "Array Technologies Inc",
+       "w": 0.1,
+       "sym": "ARRY",
+       "theme": "andet",
+       "forslag": true
+      },
+      {
+       "isin": "US86771W1053",
+       "name": "Sunrun Inc",
+       "w": 0.1,
+       "sym": "RUN",
+       "theme": "andet",
+       "forslag": true
+      },
+      {
+       "isin": "US29355A1079",
+       "name": "Enphase Energy",
+       "w": 0.09,
+       "sym": "ENPH",
+       "theme": "andet",
+       "forslag": true
+      },
+      {
+       "isin": "CA0585861085",
+       "name": "Ballard Power Systems Inc",
+       "w": 0.06,
+       "sym": "BLDP",
+       "theme": "andet",
+       "forslag": true
+      },
+      {
+       "isin": "US82489W1071",
+       "name": "Shoals Technologies Group",
+       "w": 0.04,
+       "sym": "SHLS",
+       "theme": "andet",
+       "forslag": true
+      }
+     ],
+     "seeChain": null,
+     "src": "BLOG 30. marts 2026 · 1. september 2025",
+     "shift": "Mads kritiserer, at Tyskland omlagde til sol og vind og samtidig lukkede kul og atomkraft (BLOG 12. maj 2025). Vesten skal bruge \"masser af elektroner\".",
+     "kind": "ndi"
     },
     {
-      "id": "physical",
-      "title": "Robotik & fysisk AI",
-      "why": "Når AI får krop, bliver det til robotter, selvkørende biler, droner og automatiserede fabrikker. NDI ser det som næste store fase efter chatbots og copilots.",
-      "source": "BLOG 7. okt 2024 · BOG s. 40–43",
-      "links": [
-        {
-          "id": "components",
-          "icon": "⚙",
-          "label": "Komponenter",
-          "blurb": "Sensorer, motorer, effektelektronik og batterier til robotter og autonome systemer.",
-          "ndi": "Bred eksponering i microchips, software, simulering, automatisering og robotisering.",
-          "themes": [
-            "physical",
-            "chips",
-            "energy"
-          ],
-          "weightSum": 26.84,
-          "count": 92,
-          "companies": [
-            {
-              "isin": "US88160R1014",
-              "name": "Tesla",
-              "w": 0.77,
-              "sym": "TSLA",
-              "forslag": false
-            },
-            {
-              "isin": "DE0006450000",
-              "name": "Lpkf Laser & Electronics Se",
-              "w": 0.62,
-              "sym": "LPK.DE",
-              "forslag": false
-            },
-            {
-              "isin": "US73933G2021",
-              "name": "Power Solutions Internationa",
-              "w": 0.55,
-              "sym": "PSIX",
-              "forslag": false
-            },
-            {
-              "isin": "US46982L1089",
-              "name": "Jacobs Solutions",
-              "w": 0.43,
-              "sym": "J",
-              "forslag": true
-            },
-            {
-              "isin": "US3453708600",
-              "name": "Ford Motor",
-              "w": 0.41,
-              "sym": "F",
-              "forslag": false
-            },
-            {
-              "isin": "US60471A1016",
-              "name": "Mirion Technologies Inc",
-              "w": 0.37,
-              "sym": "MIR",
-              "forslag": false
-            }
-          ],
-          "seeChain": null
-        },
-        {
-          "id": "sim",
-          "icon": "◫",
-          "label": "Simulering og software",
-          "blurb": "Software og simulering, der træner og styrer robotter før og under drift.",
-          "ndi": "Simulering nævnes som del af feltet i NDI's formidling.",
-          "themes": [
-            "software",
-            "physical"
-          ],
-          "weightSum": 19.72,
-          "count": 75,
-          "companies": [
-            {
-              "isin": "IL0011301780",
-              "name": "Wix.Com Ltd",
-              "w": 0.96,
-              "sym": "WIX",
-              "forslag": false
-            },
-            {
-              "isin": "US17253J1060",
-              "name": "Cipher Mining Inc",
-              "w": 0.78,
-              "sym": "CIFR",
-              "forslag": false
-            },
-            {
-              "isin": "US69608A1088",
-              "name": "Palantir Tchnl",
-              "w": 0.78,
-              "sym": "PLTR",
-              "forslag": false
-            },
-            {
-              "isin": "US77664L2079",
-              "name": "Root",
-              "w": 0.6,
-              "sym": "ROOT",
-              "forslag": true
-            },
-            {
-              "isin": "US03831W1080",
-              "name": "AppLovin",
-              "w": 0.54,
-              "sym": "APP",
-              "forslag": false
-            },
-            {
-              "isin": "KYG4124C1096",
-              "name": "Ghl",
-              "w": 0.51,
-              "sym": "GRAB",
-              "forslag": false
-            }
-          ],
-          "seeChain": null
-        },
-        {
-          "id": "robots",
-          "icon": "🤖",
-          "label": "Robotter, autonome køretøjer og droner",
-          "blurb": "Når AI får krop: robotter, selvkørende biler, droner og automatiserede fabrikker.",
-          "ndi": "NDI's vurdering: fase 3 — automatisering og robotisering. Robotter forstås bredt (droner, autonome systemer m.m.).",
-          "themes": [
-            "physical"
-          ],
-          "weightSum": 7.34,
-          "count": 24,
-          "companies": [
-            {
-              "isin": "US88160R1014",
-              "name": "Tesla",
-              "w": 0.77,
-              "sym": "TSLA",
-              "forslag": false
-            },
-            {
-              "isin": "DE0006450000",
-              "name": "Lpkf Laser & Electronics Se",
-              "w": 0.62,
-              "sym": "LPK.DE",
-              "forslag": false
-            },
-            {
-              "isin": "US73933G2021",
-              "name": "Power Solutions Internationa",
-              "w": 0.55,
-              "sym": "PSIX",
-              "forslag": false
-            },
-            {
-              "isin": "US46982L1089",
-              "name": "Jacobs Solutions",
-              "w": 0.43,
-              "sym": "J",
-              "forslag": true
-            },
-            {
-              "isin": "US3453708600",
-              "name": "Ford Motor",
-              "w": 0.41,
-              "sym": "F",
-              "forslag": false
-            },
-            {
-              "isin": "US60471A1016",
-              "name": "Mirion Technologies Inc",
-              "w": 0.37,
-              "sym": "MIR",
-              "forslag": false
-            }
-          ],
-          "seeChain": null
-        }
-      ]
+     "id": "smr",
+     "icon": "◉",
+     "label": "Atomkraft og SMR",
+     "blurb": "Små modulære reaktorer (SMR) er mindre atomkraftværker, der kan bygges i serie og placeres tæt på forbrug som datacentre.",
+     "ndi": "NDI har løbende skrevet om behovet for energiudbygning via atomkraft. Mads forventede, at USA ville rykke hurtigt på SMR, og at atomkraft har politisk medvind.",
+     "themes": [
+      "energy-resources",
+      "space",
+      "physical",
+      "energy",
+      "andet",
+      "connect"
+     ],
+     "weightSum": 2.25,
+     "count": 10,
+     "companies": [
+      {
+       "isin": "US15643U1043",
+       "name": "Centrus Energy Corp-Class A",
+       "w": 0.43,
+       "sym": "LEU",
+       "theme": "energy-resources",
+       "forslag": true
+      },
+      {
+       "isin": "US05605H1005",
+       "name": "Bwx Technologies Inc",
+       "w": 0.39,
+       "sym": "BWXT",
+       "theme": "space",
+       "forslag": false
+      },
+      {
+       "isin": "US60471A1016",
+       "name": "Mirion Technologies Inc",
+       "w": 0.37,
+       "sym": "MIR",
+       "theme": "physical",
+       "forslag": false
+      },
+      {
+       "isin": "NL0015002Q12",
+       "name": "Terra Innovatum Global Nv",
+       "w": 0.28,
+       "sym": "NKLR",
+       "theme": "energy",
+       "forslag": true
+      },
+      {
+       "isin": "US53224K3023",
+       "name": "Lightbridge Corp",
+       "w": 0.26,
+       "sym": "LTBR",
+       "theme": "andet",
+       "forslag": true
+      },
+      {
+       "isin": "US67079K1007",
+       "name": "Nuscale Power Corp",
+       "w": 0.22,
+       "sym": "SMR",
+       "theme": "physical",
+       "forslag": false
+      },
+      {
+       "isin": "US02156V1098",
+       "name": "Oklo Inc",
+       "w": 0.12,
+       "sym": "OKLO",
+       "theme": "energy",
+       "forslag": false
+      },
+      {
+       "isin": "US00218A1051",
+       "name": "Asp Isotopes Inc",
+       "w": 0.08,
+       "sym": "ASPI",
+       "theme": "connect",
+       "forslag": true
+      },
+      {
+       "isin": "US63010H1086",
+       "name": "Nano Nuclear Energy Inc",
+       "w": 0.05,
+       "sym": "NNE",
+       "theme": "physical",
+       "forslag": false
+      },
+      {
+       "isin": "US8814541020",
+       "name": "Terrestrial Energy Inc",
+       "w": 0.05,
+       "sym": "IMSR",
+       "theme": "energy",
+       "forslag": true
+      }
+     ],
+     "seeChain": null,
+     "src": "BLOG 27. januar 2025 · 23. juni 2025 · 21. juli 2025",
+     "shift": "De fleste SMR-projekter har endnu ingen kommercielle anlæg i drift i Vesten. Tidslinjer afhænger af godkendelser (baggrund). Indtægterne er usikre, og aktierne svinger meget.",
+     "kind": "ndi"
     },
     {
-      "id": "energy",
-      "title": "Energi & elektrificering",
-      "why": "AI, robotter og elbiler kræver meget mere strøm. NDI ser energi som den første flaskehals i AI-udbygningen.",
-      "source": "BLOG 30. marts 2026 · 7. juli 2025",
-      "links": [
-        {
-          "id": "gen",
-          "icon": "⚡",
-          "label": "Elproduktion",
-          "blurb": "Gas, sol, vind, gasturbiner og producenter tæt på datacentre.",
-          "ndi": "NDI ser energi som den første flaskehals i AI-udbygningen og som del af et strategisk kapløb om elektroner.",
-          "themes": [
-            "energy"
-          ],
-          "weightSum": 6.31,
-          "count": 15,
-          "companies": [
-            {
-              "isin": "US21873S1087",
-              "name": "Coreweave Inc-Cl A",
-              "w": 0.9,
-              "sym": "CRWV",
-              "forslag": false
-            },
-            {
-              "isin": "US34379V1035",
-              "name": "Fluence Energy Inc",
-              "w": 0.81,
-              "sym": "FLNC",
-              "forslag": false
-            },
-            {
-              "isin": "US05614L2097",
-              "name": "Babcock & Wilcox",
-              "w": 0.6,
-              "sym": "BW",
-              "forslag": false
-            },
-            {
-              "isin": "US35834F1049",
-              "name": "T1 Energy Inc",
-              "w": 0.58,
-              "sym": "TE",
-              "forslag": false
-            },
-            {
-              "isin": "US83418M1036",
-              "name": "Solaris Energy Infrastructur",
-              "w": 0.54,
-              "sym": "SEI",
-              "forslag": true
-            },
-            {
-              "isin": "US74347M1080",
-              "name": "Propetro Holding Corp",
-              "w": 0.51,
-              "sym": "PUMP",
-              "forslag": true
-            }
-          ],
-          "seeChain": null
-        },
-        {
-          "id": "smr",
-          "icon": "◉",
-          "label": "Atomkraft og SMR",
-          "blurb": "Små modulære reaktorer (SMR) er mindre atomkraftværker, der kan bygges i serie og placeres tæt på forbrug som datacentre.",
-          "ndi": "NDI har løbende skrevet om behovet for energiudbygning via atomkraft. Tidslinjer er usikre.",
-          "themes": [
-            "energy",
-            "energy-resources"
-          ],
-          "weightSum": 11.89,
-          "count": 40,
-          "companies": [
-            {
-              "isin": "US21873S1087",
-              "name": "Coreweave Inc-Cl A",
-              "w": 0.9,
-              "sym": "CRWV",
-              "forslag": false
-            },
-            {
-              "isin": "US34379V1035",
-              "name": "Fluence Energy Inc",
-              "w": 0.81,
-              "sym": "FLNC",
-              "forslag": false
-            },
-            {
-              "isin": "US05614L2097",
-              "name": "Babcock & Wilcox",
-              "w": 0.6,
-              "sym": "BW",
-              "forslag": false
-            },
-            {
-              "isin": "US35834F1049",
-              "name": "T1 Energy Inc",
-              "w": 0.58,
-              "sym": "TE",
-              "forslag": false
-            },
-            {
-              "isin": "US83418M1036",
-              "name": "Solaris Energy Infrastructur",
-              "w": 0.54,
-              "sym": "SEI",
-              "forslag": true
-            },
-            {
-              "isin": "US74347M1080",
-              "name": "Propetro Holding Corp",
-              "w": 0.51,
-              "sym": "PUMP",
-              "forslag": true
-            }
-          ],
-          "seeChain": null
-        },
-        {
-          "id": "grid",
-          "icon": "⌒",
-          "label": "Elnet, transformere og transmission",
-          "blurb": "Strømmen skal fra kraftværk til datacenter. Det kræver nye ledninger, transformerstationer og styring.",
-          "ndi": "Mangel på transformere, køling, transmissionskapacitet — og frem for alt energi.",
-          "themes": [
-            "energy"
-          ],
-          "weightSum": 6.31,
-          "count": 15,
-          "companies": [
-            {
-              "isin": "US21873S1087",
-              "name": "Coreweave Inc-Cl A",
-              "w": 0.9,
-              "sym": "CRWV",
-              "forslag": false
-            },
-            {
-              "isin": "US34379V1035",
-              "name": "Fluence Energy Inc",
-              "w": 0.81,
-              "sym": "FLNC",
-              "forslag": false
-            },
-            {
-              "isin": "US05614L2097",
-              "name": "Babcock & Wilcox",
-              "w": 0.6,
-              "sym": "BW",
-              "forslag": false
-            },
-            {
-              "isin": "US35834F1049",
-              "name": "T1 Energy Inc",
-              "w": 0.58,
-              "sym": "TE",
-              "forslag": false
-            },
-            {
-              "isin": "US83418M1036",
-              "name": "Solaris Energy Infrastructur",
-              "w": 0.54,
-              "sym": "SEI",
-              "forslag": true
-            },
-            {
-              "isin": "US74347M1080",
-              "name": "Propetro Holding Corp",
-              "w": 0.51,
-              "sym": "PUMP",
-              "forslag": true
-            }
-          ],
-          "seeChain": null
-        },
-        {
-          "id": "storage",
-          "icon": "🔋",
-          "label": "Energilagring og batterier",
-          "blurb": "Batterier og lagring, der glatter produktion og forbrug.",
-          "ndi": "Batterier nævnes under energiflaskehalsen.",
-          "themes": [
-            "energy",
-            "physical"
-          ],
-          "weightSum": 13.65,
-          "count": 39,
-          "companies": [
-            {
-              "isin": "US21873S1087",
-              "name": "Coreweave Inc-Cl A",
-              "w": 0.9,
-              "sym": "CRWV",
-              "forslag": false
-            },
-            {
-              "isin": "US34379V1035",
-              "name": "Fluence Energy Inc",
-              "w": 0.81,
-              "sym": "FLNC",
-              "forslag": false
-            },
-            {
-              "isin": "US05614L2097",
-              "name": "Babcock & Wilcox",
-              "w": 0.6,
-              "sym": "BW",
-              "forslag": false
-            },
-            {
-              "isin": "US35834F1049",
-              "name": "T1 Energy Inc",
-              "w": 0.58,
-              "sym": "TE",
-              "forslag": false
-            },
-            {
-              "isin": "US83418M1036",
-              "name": "Solaris Energy Infrastructur",
-              "w": 0.54,
-              "sym": "SEI",
-              "forslag": true
-            },
-            {
-              "isin": "US74347M1080",
-              "name": "Propetro Holding Corp",
-              "w": 0.51,
-              "sym": "PUMP",
-              "forslag": true
-            }
-          ],
-          "seeChain": null
-        },
-        {
-          "id": "materials",
-          "icon": "🪨",
-          "label": "Kritiske råstoffer",
-          "blurb": "Kobber, sølv, sjældne jordarter og uran er nødvendige for chips, elnet, batterier og robotter.",
-          "ndi": "Råstoffer hører med i tech-kæden. En råstofanalyse skal også tage geopolitik med.",
-          "themes": [
-            "energy-resources"
-          ],
-          "weightSum": 5.58,
-          "count": 25,
-          "companies": [
-            {
-              "isin": "US2057683029",
-              "name": "Comstock Resources Inc",
-              "w": 0.58,
-              "sym": "CRK",
-              "forslag": true
-            },
-            {
-              "isin": "US9115491030",
-              "name": "United States Antimony Corp",
-              "w": 0.44,
-              "sym": "UAMY",
-              "forslag": false
-            },
-            {
-              "isin": "US15643U1043",
-              "name": "Centrus Energy Corp-Class A",
-              "w": 0.43,
-              "sym": "LEU",
-              "forslag": true
-            },
-            {
-              "isin": "US03674X1063",
-              "name": "Antero Resources Corp",
-              "w": 0.41,
-              "sym": "AR",
-              "forslag": true
-            },
-            {
-              "isin": "US26884L1098",
-              "name": "Eqt",
-              "w": 0.41,
-              "sym": "EQT",
-              "forslag": true
-            },
-            {
-              "isin": "US1651677353",
-              "name": "Expand Energy Corp",
-              "w": 0.37,
-              "sym": "EXE",
-              "forslag": true
-            }
-          ],
-          "seeChain": null
-        }
-      ]
+     "id": "grid",
+     "icon": "⌒",
+     "label": "Elnet, transformere og transmission",
+     "blurb": "Strømmen skal fra kraftværk til datacenter. Det kræver nye ledninger, transformerstationer og styring.",
+     "ndi": "NDI nævner virksomheder, der moderniserer elnettet, og mangel på \"transformere, køling, transmissionskapacitet og frem for alt energi\".",
+     "themes": [
+      "physical",
+      "andet"
+     ],
+     "weightSum": 1.01,
+     "count": 5,
+     "companies": [
+      {
+       "isin": "US74164F1030",
+       "name": "Primoris Services Corp",
+       "w": 0.28,
+       "sym": "PRIM",
+       "theme": "physical",
+       "forslag": true
+      },
+      {
+       "isin": "US74762E1029",
+       "name": "Quanta Services",
+       "w": 0.22,
+       "sym": "PWR",
+       "theme": "physical",
+       "forslag": true
+      },
+      {
+       "isin": "US36828A1016",
+       "name": "Ge Vernova Inc",
+       "w": 0.19,
+       "sym": "GEV",
+       "theme": "physical",
+       "forslag": false
+      },
+      {
+       "isin": "US55405W1045",
+       "name": "Myr Group Inc/Delaware",
+       "w": 0.16,
+       "sym": "MYRG",
+       "theme": "physical",
+       "forslag": true
+      },
+      {
+       "isin": "CA87601F1062",
+       "name": "Tantalus Systems Holding Inc",
+       "w": 0.16,
+       "sym": "GRID.TO",
+       "theme": "andet",
+       "forslag": true
+      }
+     ],
+     "seeChain": null,
+     "src": "BLOG 30. marts 2026 · 10. august 2026 · 16. februar 2026",
+     "shift": "Leveringstiden på store transformere er flere år (baggrund). Mads har beskrevet prispres i el-infrastruktur.",
+     "kind": "ndi"
     },
     {
-      "id": "space",
-      "title": "Rumfart & satellitter",
-      "why": "Opsendelser, satellitter og kommunikation fra rummet. Prisen på at komme i kredsløb er faldet kraftigt, og det åbner nye markeder som satellitinternet og på sigt compute i rummet.",
-      "source": "BLOG 23. juni 2024 · 12. okt 2026",
-      "links": [
-        {
-          "id": "launch",
-          "icon": "🚀",
-          "label": "Opsendelse",
-          "blurb": "Kapacitet til at sende satellitter og last i kredsløb. Prisen på opsendelse er faldet kraftigt.",
-          "ndi": "SpaceX har været omdrejningspunkt i NDI's formidling om opsendelser — som illustration af skiftet, ikke som anbefaling.",
-          "themes": [
-            "space"
-          ],
-          "weightSum": 4.38,
-          "count": 18,
-          "companies": [
-            {
-              "isin": "US85529M1045",
-              "name": "Starfighters Space Inc",
-              "w": 0.52,
-              "sym": "FJET",
-              "forslag": false
-            },
-            {
-              "isin": "US5901061003",
-              "name": "Merlin Inc",
-              "w": 0.44,
-              "sym": "MRLN",
-              "forslag": false
-            },
-            {
-              "isin": "US05605H1005",
-              "name": "Bwx Technologies Inc",
-              "w": 0.39,
-              "sym": "BWXT",
-              "forslag": false
-            },
-            {
-              "isin": "US4859241048",
-              "name": "Karman Holdings Inc",
-              "w": 0.33,
-              "sym": "KRMN",
-              "forslag": false
-            },
-            {
-              "isin": "GB00B63H8491",
-              "name": "Rolls-Royce Hldg",
-              "w": 0.32,
-              "sym": "RR.L",
-              "forslag": false
-            },
-            {
-              "isin": "US31816X1063",
-              "name": "Firefly Aerospace Inc",
-              "w": 0.3,
-              "sym": "FLY",
-              "forslag": false
-            },
-            {
-              "isin": "US75776W1036",
-              "name": "Redwire Corp",
-              "w": 0.27,
-              "sym": "RDW",
-              "forslag": false
-            },
-            {
-              "isin": "US9870841007",
-              "name": "York Space Systems Inc",
-              "w": 0.25,
-              "sym": "YSS",
-              "forslag": false
-            }
-          ],
-          "seeChain": null
-        },
-        {
-          "id": "satcom",
-          "icon": "📡",
-          "label": "Satellitkommunikation",
-          "blurb": "Løbende tjenester fra rummet: internet, observation og kommunikation.",
-          "ndi": "Starlink beskrives som løbende tjeneste, ikke blot en opsendelse (selskabsprofil, AI-udkast).",
-          "themes": [
-            "space"
-          ],
-          "weightSum": 4.38,
-          "count": 18,
-          "companies": [
-            {
-              "isin": "US85529M1045",
-              "name": "Starfighters Space Inc",
-              "w": 0.52,
-              "sym": "FJET",
-              "forslag": false
-            },
-            {
-              "isin": "US5901061003",
-              "name": "Merlin Inc",
-              "w": 0.44,
-              "sym": "MRLN",
-              "forslag": false
-            },
-            {
-              "isin": "US05605H1005",
-              "name": "Bwx Technologies Inc",
-              "w": 0.39,
-              "sym": "BWXT",
-              "forslag": false
-            },
-            {
-              "isin": "US4859241048",
-              "name": "Karman Holdings Inc",
-              "w": 0.33,
-              "sym": "KRMN",
-              "forslag": false
-            },
-            {
-              "isin": "GB00B63H8491",
-              "name": "Rolls-Royce Hldg",
-              "w": 0.32,
-              "sym": "RR.L",
-              "forslag": false
-            },
-            {
-              "isin": "US31816X1063",
-              "name": "Firefly Aerospace Inc",
-              "w": 0.3,
-              "sym": "FLY",
-              "forslag": false
-            },
-            {
-              "isin": "US75776W1036",
-              "name": "Redwire Corp",
-              "w": 0.27,
-              "sym": "RDW",
-              "forslag": false
-            },
-            {
-              "isin": "US9870841007",
-              "name": "York Space Systems Inc",
-              "w": 0.25,
-              "sym": "YSS",
-              "forslag": false
-            }
-          ],
-          "seeChain": null
-        },
-        {
-          "id": "space-compute",
-          "icon": "✦",
-          "label": "Rum og compute",
-          "blurb": "På sigt: compute og infrastruktur i rummet. Tidligt og usikkert.",
-          "ndi": "SpaceTech får ofte ikke den værdiansættelse, nogle forventer. Se citat nedenfor — kun som citat.",
-          "themes": [
-            "space"
-          ],
-          "weightSum": 4.38,
-          "count": 18,
-          "companies": [
-            {
-              "isin": "US85529M1045",
-              "name": "Starfighters Space Inc",
-              "w": 0.52,
-              "sym": "FJET",
-              "forslag": false
-            },
-            {
-              "isin": "US5901061003",
-              "name": "Merlin Inc",
-              "w": 0.44,
-              "sym": "MRLN",
-              "forslag": false
-            },
-            {
-              "isin": "US05605H1005",
-              "name": "Bwx Technologies Inc",
-              "w": 0.39,
-              "sym": "BWXT",
-              "forslag": false
-            },
-            {
-              "isin": "US4859241048",
-              "name": "Karman Holdings Inc",
-              "w": 0.33,
-              "sym": "KRMN",
-              "forslag": false
-            },
-            {
-              "isin": "GB00B63H8491",
-              "name": "Rolls-Royce Hldg",
-              "w": 0.32,
-              "sym": "RR.L",
-              "forslag": false
-            },
-            {
-              "isin": "US31816X1063",
-              "name": "Firefly Aerospace Inc",
-              "w": 0.3,
-              "sym": "FLY",
-              "forslag": false
-            },
-            {
-              "isin": "US75776W1036",
-              "name": "Redwire Corp",
-              "w": 0.27,
-              "sym": "RDW",
-              "forslag": false
-            },
-            {
-              "isin": "US9870841007",
-              "name": "York Space Systems Inc",
-              "w": 0.25,
-              "sym": "YSS",
-              "forslag": false
-            }
-          ],
-          "seeChain": null
-        }
-      ]
+     "id": "storage",
+     "icon": "🔋",
+     "label": "Energilagring og batterier",
+     "blurb": "Batterier og lagring, der glatter produktion og forbrug.",
+     "ndi": "Batterier nævnes under energiflaskehalsen. NDI har beskrevet batteriværdikæden i forbindelse med ny amerikansk told på kinesiske batterikomponenter.",
+     "themes": [
+      "energy",
+      "physical",
+      "andet"
+     ],
+     "weightSum": 3.04,
+     "count": 12,
+     "companies": [
+      {
+       "isin": "US34379V1035",
+       "name": "Fluence Energy Inc",
+       "w": 0.81,
+       "sym": "FLNC",
+       "theme": "energy",
+       "forslag": false
+      },
+      {
+       "isin": "US88160R1014",
+       "name": "Tesla",
+       "w": 0.77,
+       "sym": "TSLA",
+       "theme": "physical",
+       "forslag": false
+      },
+      {
+       "isin": "US6406551068",
+       "name": "Neovolta Inc",
+       "w": 0.22,
+       "sym": "NEOV",
+       "theme": "andet",
+       "forslag": true
+      },
+      {
+       "isin": "US03214Q1085",
+       "name": "Amprius Technologies Inc",
+       "w": 0.21,
+       "sym": "AMPX",
+       "theme": "andet",
+       "forslag": true
+      },
+      {
+       "isin": "US83422N1054",
+       "name": "Solid Power Inc",
+       "w": 0.21,
+       "sym": "SLDP",
+       "theme": "andet",
+       "forslag": true
+      },
+      {
+       "isin": "US74767V1098",
+       "name": "Quantumscape Corp",
+       "w": 0.2,
+       "sym": "QS",
+       "theme": "andet",
+       "forslag": true
+      },
+      {
+       "isin": "US29415C1018",
+       "name": "Eos Energy Enterprises Inc",
+       "w": 0.17,
+       "sym": "EOSE",
+       "theme": "andet",
+       "forslag": true
+      },
+      {
+       "isin": "US02451V3096",
+       "name": "American Battery Technology",
+       "w": 0.15,
+       "sym": "ABAT",
+       "theme": "andet",
+       "forslag": true
+      },
+      {
+       "isin": "US78397Q1094",
+       "name": "Ses Ai Corp",
+       "w": 0.1,
+       "sym": "SES",
+       "theme": "andet",
+       "forslag": true
+      },
+      {
+       "isin": "US59516C1062",
+       "name": "Microvast Holdings Inc",
+       "w": 0.1,
+       "sym": "MVST",
+       "theme": "andet",
+       "forslag": true
+      },
+      {
+       "isin": "US2935941078",
+       "name": "Enovix Corp",
+       "w": 0.05,
+       "sym": "ENVX",
+       "theme": "andet",
+       "forslag": true
+      },
+      {
+       "isin": "CA28617B6061",
+       "name": "Electrovaya Inc",
+       "w": 0.05,
+       "sym": "ELVA",
+       "theme": "andet",
+       "forslag": true
+      }
+     ],
+     "seeChain": null,
+     "src": "BLOG 21. juli 2025 · 30. marts 2026",
+     "shift": "Lagring glatter forskellen mellem, hvornår strømmen produceres, og hvornår datacentre og elnet bruger den (baggrund).",
+     "kind": "ndi"
     },
     {
-      "id": "quantum",
-      "title": "Kvantecomputere",
-      "why": "Computere, der bruger kvantefysik til bestemte problemtyper. Teknologien er stadig tidlig. NDI har ikke skrevet en egentlig analyse af kvantekæden — siden holdes kort.",
-      "source": "BLOG 2. juni 2025 · 21. juli 2025",
-      "links": [
-        {
-          "id": "q-core",
-          "icon": "⚛",
-          "label": "Kvantecomputing",
-          "blurb": "Computere, der bruger kvantefysik til at løse bestemte typer problemer langt hurtigere. Teknologien er stadig tidlig.",
-          "ndi": "Nævnt som accelererende segment med politisk medvind og høj volatilitet — og som eksempel på teknologier med usikre indtægter.",
-          "themes": [
-            "quantum"
-          ],
-          "weightSum": 0.88,
-          "count": 4,
-          "companies": [
-            {
-              "isin": "US74766W1080",
-              "name": "Quantum Computing Inc",
-              "w": 0.3,
-              "sym": "QUBT",
-              "forslag": true
-            },
-            {
-              "isin": "US26740W1099",
-              "name": "D-Wave Quantum Inc",
-              "w": 0.29,
-              "sym": "QBTS",
-              "forslag": true
-            },
-            {
-              "isin": "US76655K1034",
-              "name": "Rigetti Computing Inc",
-              "w": 0.25,
-              "sym": "RGTI",
-              "forslag": true
-            },
-            {
-              "isin": "US46222L1089",
-              "name": "IonQ",
-              "w": 0.04,
-              "sym": "IONQ",
-              "forslag": true
-            }
-          ],
-          "seeChain": null
-        }
-      ]
+     "id": "materials",
+     "icon": "🪨",
+     "label": "Kritiske råstoffer",
+     "blurb": "Kobber, sølv, sjældne jordarter og uran er nødvendige for chips, elnet, batterier og robotter.",
+     "ndi": "Råstoffer hører med i tech-kæden. Mads beskriver prispres i kobber og sølv og fokus på sjældne jordarter. En råstofanalyse skal i dag også tage geopolitik med.",
+     "themes": [
+      "energy-resources",
+      "andet",
+      "connect"
+     ],
+     "weightSum": 7.04,
+     "count": 32,
+     "companies": [
+      {
+       "isin": "US2057683029",
+       "name": "Comstock Resources Inc",
+       "w": 0.58,
+       "sym": "CRK",
+       "theme": "energy-resources",
+       "forslag": true
+      },
+      {
+       "isin": "US9115491030",
+       "name": "United States Antimony Corp",
+       "w": 0.44,
+       "sym": "UAMY",
+       "theme": "energy-resources",
+       "forslag": false
+      },
+      {
+       "isin": "US15643U1043",
+       "name": "Centrus Energy Corp-Class A",
+       "w": 0.43,
+       "sym": "LEU",
+       "theme": "energy-resources",
+       "forslag": true
+      },
+      {
+       "isin": "US03674X1063",
+       "name": "Antero Resources Corp",
+       "w": 0.41,
+       "sym": "AR",
+       "theme": "energy-resources",
+       "forslag": true
+      },
+      {
+       "isin": "US26884L1098",
+       "name": "Eqt",
+       "w": 0.41,
+       "sym": "EQT",
+       "theme": "energy-resources",
+       "forslag": true
+      },
+      {
+       "isin": "US1651677353",
+       "name": "Expand Energy Corp",
+       "w": 0.37,
+       "sym": "EXE",
+       "theme": "energy-resources",
+       "forslag": true
+      },
+      {
+       "isin": "CA8265991023",
+       "name": "Sigma Lithium Corp",
+       "w": 0.32,
+       "sym": "SGML",
+       "theme": "energy-resources",
+       "forslag": false
+      },
+      {
+       "isin": "CA6979001089",
+       "name": "Pan American Silver Corp",
+       "w": 0.27,
+       "sym": "PAAS.TO",
+       "theme": "andet",
+       "forslag": true
+      },
+      {
+       "isin": "US5533681012",
+       "name": "Mp Materials Corp",
+       "w": 0.26,
+       "sym": "MP",
+       "theme": "energy-resources",
+       "forslag": false
+      },
+      {
+       "isin": "US0126531013",
+       "name": "Albemarle",
+       "w": 0.24,
+       "sym": "ALB",
+       "theme": "connect",
+       "forslag": true
+      },
+      {
+       "isin": "CA6544846091",
+       "name": "Niocorp Developments Ltd",
+       "w": 0.23,
+       "sym": "NB",
+       "theme": "energy-resources",
+       "forslag": false
+      },
+      {
+       "isin": "CA32076V1031",
+       "name": "First Majestic Silver Corp",
+       "w": 0.23,
+       "sym": "AG",
+       "theme": "andet",
+       "forslag": true
+      },
+      {
+       "isin": "US4227041062",
+       "name": "Hecla Mining Co",
+       "w": 0.23,
+       "sym": "HL",
+       "theme": "andet",
+       "forslag": true
+      },
+      {
+       "isin": "US1921085049",
+       "name": "Coeur Mining Inc",
+       "w": 0.22,
+       "sym": "CDE",
+       "theme": "andet",
+       "forslag": true
+      },
+      {
+       "isin": "AU000000LYC6",
+       "name": "Lynas Rare",
+       "w": 0.2,
+       "sym": "LYC.AX",
+       "theme": "energy-resources",
+       "forslag": false
+      },
+      {
+       "isin": "VGG2662B1031",
+       "name": "Critical Metals Corp",
+       "w": 0.2,
+       "sym": "CRML",
+       "theme": "energy-resources",
+       "forslag": false
+      },
+      {
+       "isin": "CA53681J1030",
+       "name": "Lithium Americas Corp",
+       "w": 0.18,
+       "sym": "LAC",
+       "theme": "energy-resources",
+       "forslag": false
+      },
+      {
+       "isin": "US91733P1075",
+       "name": "Usa Rare Earth Inc",
+       "w": 0.18,
+       "sym": "USAR",
+       "theme": "energy-resources",
+       "forslag": false
+      },
+      {
+       "isin": "CA2926717083",
+       "name": "Energy Fuels Inc",
+       "w": 0.17,
+       "sym": "EFR.TO",
+       "theme": "energy-resources",
+       "forslag": true
+      },
+      {
+       "isin": "CA64046G1063",
+       "name": "Neo Performance Materials In",
+       "w": 0.17,
+       "sym": "NEO.TO",
+       "theme": "connect",
+       "forslag": true
+      },
+      {
+       "isin": "CA0203987072",
+       "name": "Almonty Industries Inc",
+       "w": 0.15,
+       "sym": "ALM",
+       "theme": "energy-resources",
+       "forslag": false
+      },
+      {
+       "isin": "CA8536061010",
+       "name": "Standard Lithium Ltd",
+       "w": 0.13,
+       "sym": "SLI",
+       "theme": "energy-resources",
+       "forslag": false
+      },
+      {
+       "isin": "CA89621C1059",
+       "name": "Trilogy Metals Inc",
+       "w": 0.13,
+       "sym": "TMQ",
+       "theme": "energy-resources",
+       "forslag": false
+      },
+      {
+       "isin": "US46578C1080",
+       "name": "Ivanhoe Electric Inc / Us",
+       "w": 0.13,
+       "sym": "IE",
+       "theme": "energy-resources",
+       "forslag": false
+      },
+      {
+       "isin": "CA8765111064",
+       "name": "Taseko Mines (Trekor Metals)",
+       "w": 0.12,
+       "sym": "TGB",
+       "theme": "energy-resources",
+       "forslag": true
+      },
+      {
+       "isin": "CA14071L1085",
+       "name": "Capstone Copper Corp",
+       "w": 0.11,
+       "sym": "CS.TO",
+       "theme": "energy-resources",
+       "forslag": false
+      },
+      {
+       "isin": "US35671D8570",
+       "name": "Freeport McMoRan",
+       "w": 0.11,
+       "sym": "FCX",
+       "theme": "energy-resources",
+       "forslag": false
+      },
+      {
+       "isin": "CA87261Y1060",
+       "name": "Tmc The Metals Co Inc",
+       "w": 0.1,
+       "sym": "TMC",
+       "theme": "energy-resources",
+       "forslag": false
+      },
+      {
+       "isin": "CA7142661031",
+       "name": "Perpetua Resources Corp",
+       "w": 0.1,
+       "sym": "PPTA",
+       "theme": "andet",
+       "forslag": true
+      },
+      {
+       "isin": "CA66510M2040",
+       "name": "Northern Dynasty Minerals",
+       "w": 0.08,
+       "sym": "NAK",
+       "theme": "energy-resources",
+       "forslag": false
+      },
+      {
+       "isin": "US84265V1052",
+       "name": "Southern Copper Corp",
+       "w": 0.08,
+       "sym": "SCCO",
+       "theme": "energy-resources",
+       "forslag": false
+      },
+      {
+       "isin": "CA2960061091",
+       "name": "Ero Copper Corp",
+       "w": 0.06,
+       "sym": "ERO",
+       "theme": "energy-resources",
+       "forslag": false
+      }
+     ],
+     "seeChain": null,
+     "src": "BLOG 16. februar 2026 · 1. september 2025 · 21. september 2026",
+     "shift": "Råstoffer er rykket \"i første række\" i amerikansk udenrigspolitik (BLOG 5. januar 2026).",
+     "kind": "ndi"
     }
-  ],
-  "themeNote": "Fintech/digitale betalinger behandles som tema (platforme), ikke som egen kæde — kilderne beskriver ingen fintech-værdikæde.",
-  "quotes": [
+   ]
+  },
+  {
+   "id": "space",
+   "title": "Rumfart & satellitter",
+   "why": "Rumfart er en værdikæde fra jorden og op: dele og motorer, opsendelse, satellitter og de tjenester, de leverer. Prisen på at komme i kredsløb er faldet kraftigt. Det åbner nye markeder som satellitinternet og jordobservation, og på sigt muligvis compute i rummet. Det sidste er tidligt og usikkert.",
+   "source": "BLOG 23. juni 2024 · 21. juli 2025 · 1. juni 2026 · 24. august 2026 · 12. oktober 2026",
+   "links": [
     {
-      "text": "SpaceX: større end hele jordens økonomi",
-      "attribution": "Elon Musk, gengivet i NDI ugebrev 12. oktober 2026",
-      "note": "Påstand fra Musk, ikke NDI's forventning. Kun som citat.",
-      "chain": "space"
+     "id": "parts",
+     "icon": "⚙",
+     "label": "Dele, motorer og fremdrift",
+     "alt": 0,
+     "blurb": "Strukturer, motorer, strømforsyning og undersystemer, som raketter og satellitter er bygget af. Mange af selskaberne leverer også til luftfart og forsvar.",
+     "ndi": "NDI har ikke beskrevet dette led særskilt. Det står her, fordi resten af kæden afhænger af det (tolkning).",
+     "kind": "baggrund",
+     "src": "Baggrund",
+     "shift": "Når der sendes flere raketter op, stiger efterspørgslen efter dele, der kan masseproduceres frem for håndbygges (baggrund).",
+     "short": "Dele og motorer",
+     "companies": [
+      {
+       "isin": "US05605H1005",
+       "name": "Bwx Technologies Inc",
+       "w": 0.39,
+       "sym": "BWXT",
+       "theme": "space",
+       "forslag": false
+      },
+      {
+       "isin": "US4859241048",
+       "name": "Karman Holdings Inc",
+       "w": 0.33,
+       "sym": "KRMN",
+       "theme": "space",
+       "forslag": false
+      },
+      {
+       "isin": "GB00B63H8491",
+       "name": "Rolls-Royce Hldg",
+       "w": 0.32,
+       "sym": "RR.L",
+       "theme": "space",
+       "forslag": false
+      },
+      {
+       "isin": "US75776W1036",
+       "name": "Redwire Corp",
+       "w": 0.27,
+       "sym": "RDW",
+       "theme": "space",
+       "forslag": false
+      },
+      {
+       "isin": "US4432011082",
+       "name": "Howmet Aerspc",
+       "w": 0.23,
+       "sym": "HWM",
+       "theme": "space",
+       "forslag": false
+      }
+     ],
+     "count": 5,
+     "weightSum": 1.54,
+     "themes": [
+      "space"
+     ]
+    },
+    {
+     "id": "launch",
+     "icon": "🚀",
+     "label": "Opsendelse",
+     "alt": 1,
+     "blurb": "Raketter, der sender satellitter og last i kredsløb. Genbrugelige raketter har gjort opsendelse meget billigere.",
+     "ndi": "SpaceX stod for 90 % af årets satellitopsendelser i NDI's gennemgang fra 2024. Det bruges som illustration af skiftet, ikke som anbefaling.",
+     "src": "BLOG 23. juni 2024",
+     "shift": "Billigere opsendelse er det skift, der gør resten af kæden mulig. Konkurrencen fra mindre raketselskaber er stadig ung (baggrund).",
+     "kind": "ndi",
+     "short": "Opsendelse",
+     "companies": [
+      {
+       "isin": "US85529M1045",
+       "name": "Starfighters Space Inc",
+       "w": 0.52,
+       "sym": "FJET",
+       "theme": "space",
+       "forslag": false
+      },
+      {
+       "isin": "US31816X1063",
+       "name": "Firefly Aerospace Inc",
+       "w": 0.3,
+       "sym": "FLY",
+       "theme": "space",
+       "forslag": false
+      },
+      {
+       "isin": "US7731211089",
+       "name": "Rocket Lab Corp",
+       "w": 0.21,
+       "sym": "RKLB",
+       "theme": "space",
+       "forslag": false
+      }
+     ],
+     "count": 3,
+     "weightSum": 1.03,
+     "themes": [
+      "space"
+     ]
+    },
+    {
+     "id": "sats",
+     "icon": "🛰",
+     "label": "Satellitter",
+     "alt": 2,
+     "blurb": "Selskaber, der designer og bygger satellitter og deres \"bus\", altså platformen med strøm, styring og kommunikation.",
+     "ndi": "NDI har ikke beskrevet dette led særskilt (tolkning).",
+     "kind": "baggrund",
+     "src": "Baggrund",
+     "shift": "Satellitterne bliver mindre, billigere og sendes op i store konstellationer i stedet for én ad gangen (baggrund).",
+     "short": "Satellitter",
+     "companies": [
+      {
+       "isin": "US75776W1036",
+       "name": "Redwire Corp",
+       "w": 0.27,
+       "sym": "RDW",
+       "theme": "space",
+       "forslag": false
+      },
+      {
+       "isin": "US9870841007",
+       "name": "York Space Systems Inc",
+       "w": 0.25,
+       "sym": "YSS",
+       "theme": "space",
+       "forslag": false
+      },
+      {
+       "isin": "US7731211089",
+       "name": "Rocket Lab Corp",
+       "w": 0.21,
+       "sym": "RKLB",
+       "theme": "space",
+       "forslag": false
+      },
+      {
+       "isin": "CA55293N1096",
+       "name": "Mda Space Ltd",
+       "w": 0.16,
+       "sym": "MDA.TO",
+       "theme": "space",
+       "forslag": false
+      }
+     ],
+     "count": 4,
+     "weightSum": 0.89,
+     "themes": [
+      "space"
+     ]
+    },
+    {
+     "id": "satcom",
+     "icon": "📡",
+     "label": "Kommunikation fra rummet",
+     "alt": 3,
+     "blurb": "Internet, telefoni og dataforbindelser via satellit, også direkte til almindelige mobiltelefoner.",
+     "ndi": "NDI's selskabsprofil beskriver Starlink som en løbende tjeneste, ikke blot en opsendelse (AI-udkast).",
+     "src": "Selskabsprofil (AI-udkast)",
+     "shift": "Værdien flytter fra den enkelte opsendelse til abonnementer, der løber år efter år (tolkning).",
+     "kind": "ndi",
+     "short": "Kommunikation",
+     "companies": [
+      {
+       "isin": "US00217D1000",
+       "name": "AST SpaceMobile",
+       "w": 0.25,
+       "sym": "ASTS",
+       "theme": "connect",
+       "forslag": false
+      },
+      {
+       "isin": "CA55293N1096",
+       "name": "Mda Space Ltd",
+       "w": 0.16,
+       "sym": "MDA.TO",
+       "theme": "space",
+       "forslag": false
+      },
+      {
+       "isin": "US46269C1027",
+       "name": "Iridium Communications Inc",
+       "w": 0.14,
+       "sym": "IRDM",
+       "theme": "andet",
+       "forslag": true
+      }
+     ],
+     "count": 3,
+     "weightSum": 0.55,
+     "themes": [
+      "connect",
+      "space",
+      "andet"
+     ]
+    },
+    {
+     "id": "eo",
+     "icon": "🌍",
+     "label": "Jordobservation og rumdata",
+     "alt": 3,
+     "blurb": "Satellitter, der fotograferer jorden eller opfanger radiosignaler. Data sælges til landbrug, forsikring, klima og forsvar.",
+     "ndi": "NDI har ikke beskrevet dette led særskilt (tolkning).",
+     "kind": "baggrund",
+     "src": "Baggrund",
+     "shift": "AI gør det billigere at analysere store mængder billeder, så data kan blive vigtigere end selve satellitten (baggrund).",
+     "short": "Jordobservation",
+     "companies": [
+      {
+       "isin": "US8485603067",
+       "name": "Spire Global",
+       "w": 0.27,
+       "sym": "SPIR",
+       "theme": "andet",
+       "forslag": true
+      },
+      {
+       "isin": "US80401C1009",
+       "name": "Satellogic Inc",
+       "w": 0.17,
+       "sym": "SATL",
+       "theme": "space",
+       "forslag": false
+      },
+      {
+       "isin": "US4202011056",
+       "name": "Hawkeye 360 Inc",
+       "w": 0.16,
+       "sym": "HAWK",
+       "theme": "space",
+       "forslag": false
+      },
+      {
+       "isin": "US72703X1063",
+       "name": "Planet Labs",
+       "w": 0.09,
+       "sym": "PL",
+       "theme": "space",
+       "forslag": false
+      },
+      {
+       "isin": "US09263B2079",
+       "name": "Blacksky Technology Inc",
+       "w": 0.08,
+       "sym": "BKSY",
+       "theme": "andet",
+       "forslag": true
+      }
+     ],
+     "count": 5,
+     "weightSum": 0.77,
+     "themes": [
+      "andet",
+      "space"
+     ]
+    },
+    {
+     "id": "orbit",
+     "icon": "🌙",
+     "label": "Månen og stationer i kredsløb",
+     "alt": 4,
+     "blurb": "Månelandere, kommercielle rumstationer og infrastruktur, der skal bruges længere ude.",
+     "ndi": "NDI har ikke beskrevet dette led særskilt (tolkning).",
+     "kind": "baggrund",
+     "src": "Baggrund",
+     "shift": "Den Internationale Rumstation skal efter planen udfases, og private stationer skal overtage dele af opgaven (baggrund). Tidslinjen er usikker.",
+     "short": "Måne og stationer",
+     "companies": [
+      {
+       "isin": "US31816X1063",
+       "name": "Firefly Aerospace Inc",
+       "w": 0.3,
+       "sym": "FLY",
+       "theme": "space",
+       "forslag": false
+      },
+      {
+       "isin": "US75776W1036",
+       "name": "Redwire Corp",
+       "w": 0.27,
+       "sym": "RDW",
+       "theme": "space",
+       "forslag": false
+      },
+      {
+       "isin": "US92892B1035",
+       "name": "Voyager Technologies Inc",
+       "w": 0.17,
+       "sym": "VOYG",
+       "theme": "space",
+       "forslag": false
+      },
+      {
+       "isin": "US46125A1007",
+       "name": "Intuitive Machines Inc",
+       "w": 0.15,
+       "sym": "LUNR",
+       "theme": "space",
+       "forslag": false
+      }
+     ],
+     "count": 4,
+     "weightSum": 0.89,
+     "themes": [
+      "space"
+     ]
+    },
+    {
+     "id": "space-compute",
+     "icon": "✦",
+     "label": "Rum og compute",
+     "alt": 4,
+     "blurb": "Idéen om at placere computerkraft i kredsløb, hvor der er sol og kulde. Det er tidligt og usikkert.",
+     "ndi": "Mads har gengivet Elon Musks påstand om SpaceX og compute i rummet. Se citatet nedenfor. Det er Musks udsagn, ikke NDI's forventning.",
+     "src": "BLOG 12. oktober 2026",
+     "shift": "Ingen selskaber i den forsinkede beholdning er tilordnet dette led. Det er en idé, ikke et marked endnu (tolkning).",
+     "kind": "ndi",
+     "short": "Rum og compute",
+     "companies": [],
+     "count": 0,
+     "weightSum": 0,
+     "themes": []
+    },
+    {
+     "id": "air",
+     "icon": "✈",
+     "label": "Nabo: luftfart og autonom flyvning",
+     "alt": -1,
+     "neighbour": true,
+     "blurb": "Flytaxaer, autonome fly og droner. De ligger i temaet SpaceTech, men er luftfart, ikke rumfart.",
+     "ndi": "NDI har ikke beskrevet dette led særskilt. Det vises for at forklare, hvad temaet rummer (tolkning).",
+     "kind": "baggrund",
+     "src": "Baggrund",
+     "shift": "Elektriske flytaxaer venter på godkendelser fra luftfartsmyndighederne (baggrund).",
+     "companies": [
+      {
+       "isin": "US5901061003",
+       "name": "Merlin Inc",
+       "w": 0.44,
+       "sym": "MRLN",
+       "theme": "space",
+       "forslag": false
+      },
+      {
+       "isin": "KYG651631007",
+       "name": "Joby Aviation Inc",
+       "w": 0.26,
+       "sym": "JOBY",
+       "theme": "andet",
+       "forslag": true
+      },
+      {
+       "isin": "US03945R1023",
+       "name": "Archer Aviation Inc",
+       "w": 0.14,
+       "sym": "ACHR",
+       "theme": "space",
+       "forslag": false
+      },
+      {
+       "isin": "US0094221068",
+       "name": "Airo Group Holdings Inc",
+       "w": 0.08,
+       "sym": "AIRO",
+       "theme": "space",
+       "forslag": false
+      }
+     ],
+     "count": 4,
+     "weightSum": 0.92,
+     "themes": [
+      "space",
+      "andet"
+     ]
     }
-  ],
-  "countsNote": "Forsinket beholdning pr. 2026-06-01 (PMINDI, antal selskaber pr. tema): platforme 40, chips 53, software 51, andet / uklassificeret 67, optik & netværk 30, fysisk tech 24, compute 18, quantum 4, energi 15, energiressourcer 25, spacetech 18. Brug antal i brødtekst, ikke vægte, når du citerer oversigten."
+   ],
+   "intro": [
+    {
+     "k": "Hvorfor rum hører til tech",
+     "t": "Mads nævner rum-infrastruktur på listen over det, Vesten skal bygge: \"kraftværker, elnet, datacentre, chipfabrikker, robotfabrikker, forsvarsindustri og rum-infrastruktur\".",
+     "src": "BLOG 24. august 2026"
+    },
+    {
+     "k": "Værdiansættelse",
+     "t": "SpaceTech får efter NDI's opfattelse ikke altid den værdiansættelse, det måske burde, fordi indtægterne er usikre og ikke passer i et regneark.",
+     "src": "BLOG 21. juli 2025"
+    },
+    {
+     "k": "Metode",
+     "t": "Mads skriver, at klassiske value-metoder giver et \"korrekt nej\" til SpaceX, men at metoden bliver til dogme, hvis man ikke ser på, hvad selskabet bygger.",
+     "src": "BLOG 1. juni 2026"
+    },
+    {
+     "k": "Beholdningsdato",
+     "t": "SpaceX blev børsnoteret efter beholdningsdatoen 1. juni 2026 og indgår derfor ikke i den viste forsinkede beholdning.",
+     "src": "BLOG 22. juni 2026"
+    }
+   ]
+  },
+  {
+   "id": "quantum",
+   "title": "Kvantecomputere",
+   "why": "Computere, der bruger kvantefysik til bestemte problemtyper. Teknologien er stadig tidlig. NDI har ikke skrevet en egentlig analyse af kvantekæden — siden holdes kort.",
+   "source": "BLOG 2. juni 2025 · 21. juli 2025",
+   "links": [
+    {
+     "id": "q-core",
+     "icon": "⚛",
+     "label": "Kvantecomputing",
+     "blurb": "Computere, der bruger kvantefysik til at løse bestemte typer problemer langt hurtigere. Teknologien er stadig tidlig.",
+     "ndi": "Nævnt som accelererende segment med politisk medvind og høj volatilitet — og som eksempel på teknologier med usikre indtægter.",
+     "themes": [
+      "quantum",
+      "software"
+     ],
+     "weightSum": 1.12,
+     "count": 5,
+     "companies": [
+      {
+       "isin": "US74766W1080",
+       "name": "Quantum Computing Inc",
+       "w": 0.3,
+       "sym": "QUBT",
+       "theme": "quantum",
+       "forslag": true
+      },
+      {
+       "isin": "US26740W1099",
+       "name": "D-Wave Quantum Inc",
+       "w": 0.29,
+       "sym": "QBTS",
+       "theme": "quantum",
+       "forslag": true
+      },
+      {
+       "isin": "US76655K1034",
+       "name": "Rigetti Computing Inc",
+       "w": 0.25,
+       "sym": "RGTI",
+       "theme": "quantum",
+       "forslag": true
+      },
+      {
+       "isin": "US45676K1034",
+       "name": "Infleqtion Inc",
+       "w": 0.24,
+       "sym": "INFQ",
+       "theme": "software",
+       "forslag": false
+      },
+      {
+       "isin": "US46222L1089",
+       "name": "IonQ",
+       "w": 0.04,
+       "sym": "IONQ",
+       "theme": "quantum",
+       "forslag": true
+      }
+     ],
+     "seeChain": null,
+     "kind": "ndi",
+     "src": "BLOG 2. juni 2025 · 7. juli 2025 · 21. juli 2025",
+     "shift": "NVIDIA's direktør sagde i januar 2025, at nyttige kvantecomputere sandsynligvis ligger 20 år ude (gengivet i BLOG 13. januar 2025). Det er hans udsagn, ikke Mads'."
+    }
+   ]
+  }
+ ],
+ "themeNote": "Fintech/digitale betalinger behandles som tema (platforme), ikke som egen kæde — kilderne beskriver ingen fintech-værdikæde.",
+ "quotes": [
+  {
+   "text": "SpaceX: større end hele jordens økonomi",
+   "attribution": "Elon Musks påstand, gengivet i NDI's ugebrev 12. oktober 2026",
+   "note": "Musk henviser til selskabets fremtidige compute i rummet. Det er hans påstand. Det er ikke NDI's forventning eller en prognose.",
+   "chain": "space"
+  }
+ ],
+ "countsNote": "Forsinket beholdning pr. 2026-06-01 (PMINDI, antal selskaber pr. tema): platforme 40, chips 53, software 51, andet / uklassificeret 67, optik & netværk 30, fysisk tech 24, compute 18, quantum 4, energi 15, energiressourcer 25, spacetech 18. Brug antal i brødtekst, ikke vægte, når du citerer oversigten.",
+ "mappingNote": "Hvilke selskaber der står under hvert led, er et redaktionelt udkast ud fra selskabets forretning. Det er ikke NDI's officielle klassifikation og kan indeholde fejl. Et selskab kan stå i flere led. Vægte er fra den forsinkede beholdning pr. 1. juni 2026 (PMINDI)."
 }

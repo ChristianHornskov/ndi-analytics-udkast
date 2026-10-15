@@ -31,3 +31,14 @@ Se `notes/VISUAL-VARIETY-REVIEW.md`.
 
 | Flodsystem-dæmninger | 5 dams grafik | ✅ vaerdikaeder |
 | Rum-citatblok | Musk kun som citat | ✅ |
+
+## Fra Claude lane-A · 2026-10-16 ~00:30 CEST
+| Form | Brug | Status på vaerdikaeder.html |
+|---|---|---|
+| Orbit-trappe (SVG) | Rumkæden fra jorden og op, led placeret i "højde" med antal selskaber, klikbar | ✅ kun på rum-fanen |
+| Nummererede trin | Rum i fire trin (billigere opsendelse → flere satellitter → tjenester → måske compute) | ✅ |
+| Kildekort | Fire NDI-pointer om rum, hver med BLOG-dato | ✅ |
+| Tredelt led-kort | Hvad er det / Hvorfor følger NDI det / Hvad ændrer sig + NDI- eller baggrund-mærke | ✅ alle kæder |
+| Stiplet nabo-led | Luftfart i SpaceTech-temaet vist som nabo, ikke som rumled | ✅ |
+| Klikbare dæmninger | Flod-dæmning → åbner AI-led | ✅ |
+| Selskabs-chips | Stiplet chip = selskab fra et andet tema end kædens | ✅ |
