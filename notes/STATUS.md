@@ -709,3 +709,20 @@ På sammenlign stod "fra 5. dec. 2026" delt, så "dec. 2026)" hang alene på 320
 Tallet ved grafens ende var 9 px. Det er nu 12 px. "+104,8 %" står inden for svg'en ved 375 og 320, uden at ramme aksetallene. Højre margen på mobil er gjort lidt bredere, så tallet ikke står helt ude i kanten. Hele perioden er stadig +104,8 %. PMINDIAKK har stadig tom svg. Ingen sidescroll, ingen konsolfejl.
 
 `lane-D` er klar til merge. Ikke main. Ikke færdig.
+
+## Fra Claude lane-A · 2026-10-16 ~01:20 CEST
+Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html, vaerdikaede.html, value-chains.json og notes.
+1. **Rum: "Følg én satellit fra fabrik til tjeneste".** Ny trinvis fortælling på rum-fanen (`#sp-trip`) med seks trin: delene bygges, satellitten samles, den sendes op, den finder sin plads (ca. 550 km), den leverer en tjeneste, og den udskiftes. En SVG-scene viser stationerne fra jorden op i kredsløb med en gul markør, der glider mellem trinene, og en stiplet pil viser, at udskiftning får kæden til at starte forfra. Hvert trin har et kort med leddets antal selskaber pr. 1. juni 2026, tre eksempelnavne (links til selskabssiden) og "Se leddet →". Trinknapperne kan styres med piletaster og Home/End, og markøren flytter sig ikke med animation ved reduced motion. Al tekst er mærket som baggrund, og noten siger, at navnene er eksempler og ikke en rangering eller anbefaling. Data ligger i `space.trip`. Der er også et link til rejsen fra rum-fanens fire trin.
+2. **AI-flodkortet** har fået et "sidespor: kvante"-kort, som forklarer, at kvante står uden for floden og kun rører cloud og chipdesign (baggrund). Det linker til kvante-fanens broer (`?kaede=quantum#q-br`).
+3. **vaerdikaede.html:** Rum-kortets lær-link fører nu til satellit-rejsen.
+4. **Handelssprog:** Robotikkens komponentled sagde "Bred eksponering i microchips …". Det er nu "Mads peger på en bred vifte af områder: …".
+Tjek: Playwright på 1280 og 375 med 0 konsolfejl og ingen sidescroll. Next×5 giver "↺ Forfra", Home vælger trin 1, "Se leddet" åbner `#lk-parts`, og sidesporet lander på `#q-br` i kvante-fanen. Alle fire lær-links på vaerdikaede lander på deres sektion. smoke.mjs 52/52 fail 0 (egen server på 8817). Precheck PASSED. Grep efter handelssprog og tankestreger giver 0 hits.
+Næste: energiled kan få en kort "hvad ændrer sig" pr. station i strømvejen, og kvante-fanen kan få en lille ordbog (qubit, fejlkorrektion, kryostat) mærket som baggrund. Ikke færdig.
+
+
+## Fra Claude lane-A · 2026-10-16 ~01:45 CEST
+Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html, value-chains.json og notes.
+1. **Energi-strømvejen: "Det ændrer sig" pr. station.** Hver af de fem stationer har fået en kort linje om, hvad der flytter sig. Råstoffer: geopolitik i råstofanalysen (BLOG 5/1 og 21/9-26). Elproduktion: datacentre må bygge egen strøm (BLOG 30/3-26). Lagring: amerikansk told på kinesiske batterikomponenter (BLOG 21/7-25, uden ordet positioner). Datacentre: "fremtidens fabrik", Vesten eller Kina (BLOG 27/7-26). Elnet er mærket baggrund (leveringstid på transformere), fordi NDI ikke har skrevet det. Data ligger i `energy.flow.steps[].shift`.
+2. **Kvante-ordbog** med 10 ord (qubit, superposition, sammenfiltring, dekohærens, kryostat, fejlkorrektion, logisk qubit, kvanteudglødning, kvantefordel og kvante i skyen), mærket som generel baggrund. Fejlkorrektion hopper til chipdesign og kvante i skyen til cloud i AI-kæden. Der er et link fra kvante-callouten, og deep-link `?kaede=quantum#q-gl` åbner ordbogen (også på mobil, hvor den ellers er lukket). Data ligger i `quantum.glossary`.
+Tjek: Playwright på 1280 og 375 med 0 konsolfejl og ingen sidescroll. Deep-link lander på ordbogen og åbner den, og 5 af 5 stationer viser skiftet. smoke.mjs 52/52 fail 0 (egen server på 8817). Precheck PASSED. Grep efter handelssprog og tankestreger i diff giver 0 hits.
+Næste: vaerdikaede.html kan få en kort linje "Det ændrer sig" på energi-kortet og et ordbogs-link pr. kæde, og rum-fanen kan få "hvem bygger hvad" pr. højdebånd (antal pr. led, ingen nøgletal). Ikke færdig.

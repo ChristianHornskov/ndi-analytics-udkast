@@ -1026,7 +1026,7 @@
      "icon": "⚙",
      "label": "Komponenter",
      "blurb": "Sensorer, motorer, effektelektronik og batterier til robotter og autonome systemer.",
-     "ndi": "Bred eksponering i microchips, software, simulering, automatisering og robotisering.",
+     "ndi": "Mads peger på en bred vifte af områder: microchips, software, simulering, automatisering og robotisering.",
      "themes": [
       "chips",
       "physical",
@@ -1828,6 +1828,11 @@
       "press": {
        "t": "Prispres i metaller som kobber og sølv",
        "src": "BLOG 16. februar 2026"
+      },
+      "shift": {
+       "t": "Råstoffer er rykket op i amerikansk udenrigspolitik, så en råstofanalyse skal i dag også tage højde for geopolitik og ikke kun udbud og efterspørgsel.",
+       "src": "BLOG 5. januar og 21. september 2026",
+       "kind": "ndi"
       }
      },
      {
@@ -1837,6 +1842,11 @@
       "press": {
        "t": "Første flaskehals: energi",
        "src": "BLOG 30. marts 2026"
+      },
+      "shift": {
+       "t": "I USA får datacentre i stigende grad lov til at bygge deres egen strøm tæt på anlægget.",
+       "src": "BLOG 30. marts 2026",
+       "kind": "ndi"
       }
      },
      {
@@ -1845,6 +1855,10 @@
       "press": {
        "t": "Mangel på transformere og transmissionskapacitet",
        "src": "BLOG 10. august 2026"
+      },
+      "shift": {
+       "t": "Store transformere bygges på bestilling, og leveringstiden kan være flere år. Derfor kan elnettet halte efter, selv når strømmen findes.",
+       "kind": "baggrund"
       }
      },
      {
@@ -1853,6 +1867,11 @@
       "note": {
        "t": "Batterier nævnt under energiflaskehalsen",
        "src": "BLOG 30. marts 2026"
+      },
+      "shift": {
+       "t": "Ny amerikansk told på kinesiske batterikomponenter flytter, hvor batterikæden bygges.",
+       "src": "BLOG 21. juli 2025",
+       "kind": "ndi"
       }
      },
      {
@@ -1861,6 +1880,11 @@
       "press": {
        "t": "Anden flaskehals: datacentre",
        "src": "BLOG 30. marts 2026"
+      },
+      "shift": {
+       "t": "Hvis datacentret er fremtidens fabrik, bliver det strategisk afgørende, om intelligensen produceres i Vesten eller i Kina.",
+       "src": "BLOG 27. juli 2026",
+       "kind": "ndi"
       }
      }
     ],
@@ -1868,7 +1892,8 @@
      "t": "Ét års chipproduktion kan potentielt kræve strøm svarende til omkring to tredjedele af USA's installerede kapacitet.",
      "src": "BLOG 10. august 2026"
     },
-    "note": "Mærkerne viser, hvor NDI har beskrevet pres. De er ikke en prognose og ikke en anbefaling, og et led uden mærke er ikke uden betydning."
+    "note": "Mærkerne viser, hvor NDI har beskrevet pres. De er ikke en prognose og ikke en anbefaling, og et led uden mærke er ikke uden betydning.",
+    "shiftNote": "\"Det ændrer sig\" er NDI's beskrivelse med kilde, undtagen hvor der står baggrund."
    },
    "glossary": [
     {
@@ -2562,6 +2587,57 @@
      "src": "BLOG 23. juni 2024"
     },
     "note": "Forklaringen er generel baggrundsviden og ikke NDI's synspunkter. Vi viser ikke priser pr. kilo, fordi NDI ikke har opgjort dem. Tallet om 90 % er NDI's."
+   },
+   "trip": {
+    "title": "Følg én satellit fra fabrik til tjeneste",
+    "lede": "Kæden er lettere at forstå, når man følger én internetsatellit hele vejen. Hvert trin er et led i kæden. Under trinnet står, hvor mange selskaber i den forsinkede beholdning der er tilordnet leddet.",
+    "steps": [
+     {
+      "icon": "🔩",
+      "k": "Delene bygges",
+      "t": "Solpaneler, batterier, motorer til at styre satellitten og computeren om bord bygges på fabrikker på jorden. Mange af dem bruges også i fly og forsvar.",
+      "link": "parts",
+      "alt": 0
+     },
+     {
+      "icon": "🛰",
+      "k": "Satellitten samles",
+      "t": "Delene samles til en satellit. Nye internetsatellitter bygges i serie, lidt som biler på et samlebånd, i stedet for én ad gangen.",
+      "link": "sats",
+      "alt": 0
+     },
+     {
+      "icon": "🚀",
+      "k": "Den sendes op",
+      "t": "En raket tager mange satellitter med på én tur. Det første trin lander igen og kan genbruges, så hver tur bliver billigere.",
+      "link": "launch",
+      "alt": 1
+     },
+     {
+      "icon": "🧭",
+      "k": "Den finder sin plads",
+      "t": "Satellitten bruger sin egen lille motor til at komme på plads i lavt kredsløb, omkring 550 km oppe. Her tager en tur rundt om jorden cirka halvanden time.",
+      "link": "sats",
+      "alt": 2
+     },
+     {
+      "icon": "📡",
+      "k": "Den leverer en tjeneste",
+      "t": "Nu tjener satellitten penge hver måned: internet til skibe, fly, landområder og efterhånden almindelige mobiltelefoner. Andre satellitter fotograferer jorden og sælger data.",
+      "link": "satcom",
+      "alt": 3,
+      "also": "eo"
+     },
+     {
+      "icon": "♻",
+      "k": "Den udskiftes",
+      "t": "Satellitter i lavt kredsløb holder typisk kun nogle år. Til sidst styres de ned og brænder op i atmosfæren. Derfor skal der hele tiden bygges og sendes nye op, og kæden starter forfra.",
+      "link": "launch",
+      "alt": 4,
+      "loop": true
+     }
+    ],
+    "note": "Rejsen er generel baggrundsviden, ikke NDI's synspunkter, og tiderne er omtrentlige. Antal og navne er fra den forsinkede beholdning pr. 1. juni 2026. Navnene er eksempler på, hvem der er tilordnet leddet. De er ikke en rangering og ikke en anbefaling."
    }
   },
   {
@@ -2661,7 +2737,60 @@
      "src": "BLOG 2. juni og 7. juli 2025"
     },
     "note": "Udsagnet er NVIDIA-direktørens, ikke Mads' og ikke NDI's prognose. Tidslinjen er usikker. Netop derfor bruger Mads kvante som eksempel på indtægter, der ikke passer i et regneark (BLOG 21. juli 2025)."
-   }
+   },
+   "glossary": [
+    {
+     "term": "Qubit",
+     "t": "Kvantecomputerens grundenhed. En almindelig bit er enten 0 eller 1. En qubit kan være i en blanding af begge, indtil den bliver målt.",
+     "link": "q-core"
+    },
+    {
+     "term": "Superposition",
+     "t": "Den blanding af 0 og 1, som en qubit kan være i. Det er en af grundene til, at nogle opgaver kan regnes på en ny måde.",
+     "link": "q-core"
+    },
+    {
+     "term": "Sammenfiltring",
+     "t": "Qubits kan kobles, så en måling på den ene siger noget om de andre. Sammen med superposition giver det kvantecomputeren dens særlige regnemåde.",
+     "link": "q-core"
+    },
+    {
+     "term": "Dekohærens",
+     "t": "Qubits mister deres kvantetilstand ved den mindste forstyrrelse, fx varme eller elektrisk støj. Det er hovedgrunden til, at de er svære at bygge.",
+     "link": "q-core"
+    },
+    {
+     "term": "Kryostat",
+     "t": "En stor fryser, der køler kvantechips ned tæt på det absolutte nulpunkt (minus 273 grader). Mange typer qubits virker kun så koldt.",
+     "link": "q-core"
+    },
+    {
+     "term": "Fejlkorrektion",
+     "t": "Mange fysiske qubits arbejder sammen om at holde én pålidelig qubit. Almindelige chips ved siden af holder øje og retter fejlene.",
+     "hop": "ai-compute:chipdesign"
+    },
+    {
+     "term": "Logisk qubit",
+     "t": "Én pålidelig qubit bygget af mange fysiske. Antallet af logiske qubits siger mere om fremskridt end det samlede antal qubits.",
+     "link": "q-core"
+    },
+    {
+     "term": "Kvanteudglødning",
+     "t": "En særlig slags kvantemaskine, der kun løser optimeringsopgaver, fx at finde den bedste rute. Den er ikke en fuld kvantecomputer.",
+     "link": "q-core"
+    },
+    {
+     "term": "Kvantefordel",
+     "t": "Når en kvantecomputer løser en nyttig opgave hurtigere eller billigere end den bedste almindelige computer. Det er det, tidshorisonten ovenfor handler om.",
+     "link": "q-core"
+    },
+    {
+     "term": "Kvante i skyen",
+     "t": "De fleste kvantecomputere bruges over internettet. Man lejer tid på maskinen hos en cloududbyder i stedet for at eje den.",
+     "hop": "ai-compute:cloud"
+    }
+   ],
+   "glossaryNote": "Ordbogen er generel baggrundsviden og ikke NDI's synspunkter. NDI har ikke skrevet en egentlig analyse af kvantekæden."
   }
  ],
  "themeNote": "Fintech/digitale betalinger behandles som tema (platforme), ikke som egen kæde. Kilderne beskriver ingen fintech-værdikæde.",

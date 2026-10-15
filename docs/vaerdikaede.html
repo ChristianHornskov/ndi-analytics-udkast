@@ -135,7 +135,7 @@
  const firstSentence = (t) => (String(t || '').match(/^[^.]*\./) || [t])[0];
  // Én forklaring pr. kæde (samme indhold som på vaerdikaeder.html)
  const LEARN = {
- space: (c) => c.costStory && ['sp-cost', '🚀', c.costStory.title],
+ space: (c) => c.trip ? ['sp-trip', '🛰', c.trip.title] : c.costStory && ['sp-cost', '🚀', c.costStory.title],
  energy: (c) => c.flow && ['e-pane', '⚡', c.flow.title],
  physical: (c) => c.phases?.length && ['p-pane', '⚙', "Mads' tre faser: fra modning til robotter"],
  quantum: (c) => c.horizon && ['q-hz', '⏳', c.horizon.title],

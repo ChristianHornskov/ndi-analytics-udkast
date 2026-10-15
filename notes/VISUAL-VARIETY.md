@@ -107,3 +107,12 @@ Widgetten er ét panel. Call-to-action står udenfor, med link til største fald
 |---|---|---|
 | Flodkort (inline SVG, to retninger) | AI-fanen: de 13 led som nummererede stationer på en bugtet flod (gul ved energi, cyan ved efterspørgslen). Dæmninger som gule bjælker med "1./2./3. flaskehals", halvlederne i en stiplet boks, åbne led med stiplet ring og kilde-led i cyan. Hvid stiplet strøm flyder fra agenter mod energi (slås fra ved reduced motion). Vandret på desktop, lodret med undertekst på mobil (skifter ved 760 px). Hver station åbner sit led | ✅ vaerdikaeder.html, AI-fanen |
 | Pres-mærke på led-kort | Alle 13 AI-led har en lille mærkelinje (gul, gul kontur, dæmpet eller cyan) med NDI-kilde eller "(vores tolkning)". Samme mærke på vaerdikaede.html | ✅ begge sider |
+
+## lane-A · 2026-10-16 ~01:20 CEST · rum: satellittens rejse
+- Ny form på vaerdikaeder (rum-fanen): **trinvis fortælling med scene**. En SVG viser seks stationer fra jorden op i lavt kredsløb og en gul markør, der glider mellem trinene. Under scenen er der runde ikon-knapper (tablist med piletaster og Home/End), et kort pr. trin og knapperne Forrige/Næste (sidste trin: ↺ Forfra). En stiplet gul pil fra "udskiftes" tilbage til "samles" viser, at kæden er en løkke.
+- AI-flodkortet har fået et stiplet "sidespor"-kort med ikon (⏳) til kvante. Det er en anden form end bro-kortene.
+- Alt er page-local CSS (trip-*, rv-side). ndi.css er ikke rørt.
+
+## lane-A · 2026-10-16 ~01:45 CEST
+- Energi-strømvej: hver station har nu en stiplet "↻ Det ændrer sig"-linje i cyan under pres-mærket, så kortet læses i tre lag (hvad, pres, skift). Kun sidens egen CSS (`.ef-s`).
+- Kvante-ordbog med ⚛ i cyan som ord-ikon (rum bruger ◇, energi ⚡, robotik ⚙), så hver kædes ordbog har sit eget mærke.
