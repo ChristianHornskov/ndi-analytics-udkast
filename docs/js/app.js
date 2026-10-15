@@ -604,7 +604,7 @@ function paint() {
   else if (state.view === 'portefolje') renderPortefolje(root);
   else if (state.view === 'udforsk') renderUdforsk(root);
   else renderEntre(root);
-  $('#asof-global') && ($('#asof-global').textContent = `Data pr. ${fmtDate(DATA.portfolio.asOf)}`);
+  $('#asof-global') && ($('#asof-global').textContent = `Afkast pr. ${fmtDate(DATA.portfolio.performanceAsOf || DATA.portfolio.asOf)} · Beholdning pr. ${fmtDate(DATA.portfolio.asOf)} (forsinket)`);
   announceFilters();
 }
 

@@ -85,6 +85,11 @@
       const posAsOf = fmtDate(fund.positionsAsOf || data.portfolio.asOf);
       const media = (prof.media || []).filter((m) => (m.isins || []).includes(isin));
       const narrative = pr?.narrative || [];
+      // VIDENSBOT #13: profiltekster er AI-genererede udkast og skal mærkes som det
+      const AI_BADGE = '<span class="badge" title="Tekst genereret med AI – udkast">AI-udkast</span>';
+      const AI_NOTE = pr
+        ? `Udkast: beskrivelserne på siden er genereret med AI${pr.reviewedAt ? ` og tjekket mod kilden ${fmtDate(pr.reviewedAt)}` : ''}. Afventer NDI's endelige gennemgang.`
+        : 'Udkast: kort beskrivelse genereret med AI og ikke gennemgået af NDI.';
       const sameTheme = fund.positions.filter((x) => x.theme === p.theme && x.isin !== p.isin).sort((a, b) => (b.weight || 0) - (a.weight || 0));
       const priip = meta?.funds?.[fundId]?.priip;
       const temaHref = `tema.html?slug=${encodeURIComponent(p.theme)}&fund=${fundId}`;
@@ -98,14 +103,14 @@
         ${switched ? `<p class="band">Selskabet indgår ikke i den valgte klasse, så siden viser ${esc(fund.short)}.</p>` : ''}
 
         <section class="panel">
-          <h2 class="panel-h brand">Hvilket problem løser det?</h2>
+          <h2 class="panel-h brand">Hvilket problem løser det? ${AI_BADGE}</h2>
           <p class="prose">${esc(f('summary') || 'Beskrivelse mangler i udkastet.')}</p>
-          ${pr?.source ? `<p class="src">Kilde: ${ext(pr.source, host(pr.source))}${pr.reviewedAt ? ` · gennemgået ${fmtDate(pr.reviewedAt)}` : ''}</p>` : ''}
-          <p class="src">${pr ? 'Redigeret NDI-profil.' : 'Kort udkast-beskrivelse (kan være AI-assisteret).'} Generel information — ikke en anbefaling.</p>
+          ${pr?.source ? `<p class="src">Kilde: ${ext(pr.source, host(pr.source))}${pr.reviewedAt ? ` · tjekket mod kilden ${fmtDate(pr.reviewedAt)}` : ''}</p>` : ''}
+          <p class="src">${AI_NOTE} Generel information — ikke en anbefaling.</p>
         </section>
 
         ${narrative.length ? `<section class="panel">
-          <h2 class="panel-h">Kort fortalt</h2>
+          <h2 class="panel-h">Kort fortalt ${AI_BADGE}</h2>
           <p class="prose">${esc(narrative[0])}</p>
           ${narrative.length > 1 ? `<details class="more"><summary>Læs hele forklaringen</summary>
             ${narrative.slice(1).map((t) => `<p class="prose">${esc(t)}</p>`).join('')}
@@ -114,7 +119,7 @@
         </section>` : ''}
 
         <section class="panel">
-          <h2 class="panel-h brand">Rolle i værdikæden</h2>
+          <h2 class="panel-h brand">Rolle i værdikæden ${AI_BADGE}</h2>
           <p class="prose muted">${esc(f('role') || '–')}</p>
           <dl class="facts">
             <dt>Produkter</dt><dd>${esc(f('products') || '–')}</dd>
@@ -156,7 +161,7 @@
           </section>`;
         })()}
         <section class="panel">
-          <h2 class="panel-h">Hold øje med</h2>
+          <h2 class="panel-h">Hold øje med ${AI_BADGE}</h2>
           <p class="prose muted">${esc(f('watch') || '–')}</p>
           <p class="src">Forhold der kan påvirke selskabet — ikke en prognose eller vurdering af aktien.</p>
         </section>
