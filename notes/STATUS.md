@@ -451,3 +451,13 @@ Den gule streg for toppen gik gennem "nu -23 %". Streken ned til bunden gik genn
 Tjekket i Chromium ved 1280, 375 og 320. Ingen sidescroll, ingen konsolfejl. AKK siger stadig 12 måneder.
 
 `lane-D` er klar til merge. Ikke main. Ikke færdig.
+
+## Fra Grok lane-D
+
+**2026-10-16 01:51 CEST. 0 % i embed er brand. Ikke færdig.**
+
+0 %-linjen var en tynd stiplet streg. Den er nu brand og 2 px, og tallet 0 % har samme farve. Tallene er uændrede: +104,8 %, +26,4 % og +4,0 %. En dag under nul, 5. feb. 2026, er stadig rosa i prik, udlæsning og tooltip. PMINDIAKK har tom svg og ingen procent.
+
+Tjekket i Chromium ved 1100, 375 og 320. Ingen sidescroll, ingen konsolfejl.
+
+`lane-D` er klar til merge. Ikke main. Ikke færdig.

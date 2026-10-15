@@ -54,7 +54,7 @@ Kortpar (to klasser), tidslinje uden panel, stort tal for overlap, ét panel med
 
 ## Embed
 
-Widgetten er ét panel. Call-to-action står udenfor, med link til største fald (AKK-teksten siger, at drawdown vises efter 12 måneder). Sætningen "Fonden har intet fast benchmark." er en rolig linje. Nasdaq-klasser er fjernet fra embed-CSS. Fyldet går til 0 %-linjen: cyan over, dæmpet rosa under. En dag under nul er rosa (`#e5b3ba`) i prik, udlæsning og tooltip. Samme farve i alle tre. Tooltip holder sig fri af sluttallet. Sluttallet følger periodens fortegn og er 12 px på smal skærm. Totalafkast i rækken under grafen er det store tal. CAGR og år til dato er mindre. Klasse-kortene bruger samme mærke som sammenlign: pil ud på PMINDI, loop på PMINDIAKK. Sætningen under grafen siger slutdatoen én gang.
+Widgetten er ét panel. Call-to-action står udenfor, med link til største fald (AKK-teksten siger, at drawdown vises efter 12 måneder). Sætningen "Fonden har intet fast benchmark." er en rolig linje. Nasdaq-klasser er fjernet fra embed-CSS. Fyldet går til 0 %-linjen: cyan over, dæmpet rosa under. 0 %-linjen er brand og tydeligere end gitteret. Tallet 0 % har samme farve. En dag under nul er rosa (`#e5b3ba`) i prik, udlæsning og tooltip. Samme farve i alle tre. Tooltip holder sig fri af sluttallet. Sluttallet følger periodens fortegn og er 12 px på smal skærm. Totalafkast i rækken under grafen er det store tal. CAGR og år til dato er mindre. Klasse-kortene bruger samme mærke som sammenlign: pil ud på PMINDI, loop på PMINDIAKK. Sætningen under grafen siger slutdatoen én gang.
 
 ## Fælles tokens i `ndi.css` (sparsomt)
 

@@ -288,10 +288,15 @@ button.legend {
 }
 
 .chart-container .zero-line {
-  stroke: #78949b;
-  stroke-width: .8;
-  stroke-dasharray: 4 4;
-  opacity: .65;
+  stroke: var(--brand);
+  stroke-width: 2;
+  opacity: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+.chart-container text.zero-tick {
+  fill: var(--brand);
+  font-weight: 700;
 }
 
 .chart-container .fund-path {

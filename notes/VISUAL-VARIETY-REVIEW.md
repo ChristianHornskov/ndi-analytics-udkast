@@ -112,6 +112,10 @@ Prikfordelingen havde ingen grænse. En brand-streg står nu ved 10 % under nul,
 
 Den gule streg for toppen gik gennem "nu -23 %". Streken ned til bunden gik gennem "-36 %". Begge tal står nu på en plade i samme farve som baggrunden. Stregerne stopper bag tallet og fortsætter over og under. Tallene er de samme. Ringen og den gule prik er fri af pladen. Et klik på søjlen for 8. apr. 2025 sætter udlæsningen til −35,8 %. En dag uden for de fire, 20. okt. 2023, slukker kant og række. Ingen tekst uden for svg'en. Ingen sidescroll ved 1280, 375 og 320. Ingen konsolfejl. AKK siger stadig 12 måneder og har ingen procent.
 
+### Update · 0 % er brand · 2026-10-16 ~01:51 CEST
+
+0 %-linjen i embed var en tynd stiplet streg i samme familie som gitteret. Den er nu brand, 2 px, og tallet 0 % har samme farve. De andre gitterlinjer er uændrede. Hele perioden er stadig +104,8 %, CAGR +26,4 %, år til dato +4,0 %. Sætningen siger slutdatoen én gang. 5. feb. 2026 er −6,9 %. Prik, udlæsning og tooltip er rosa, og tooltip rammer ikke sluttallet. PMINDIAKK har tom svg, ingen procent, og linket siger at drawdown vises efter 12 måneder. Ingen tekst uden for svg'en. Ingen sidescroll ved 1100, 375 og 320. Ingen konsolfejl.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.
