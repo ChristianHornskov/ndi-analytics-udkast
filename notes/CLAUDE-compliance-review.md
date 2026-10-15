@@ -533,3 +533,30 @@ Ikke juridisk rådgivning. Pages = `75a87c2`. Jeg har grep'et renderet tekst på
 
 ### OK ✅
 - Beholdning pr. 1. jun. 2026 (forsinket) på selskab og top-10. Ingen 1m/3m på PMINDI. Intet benchmark-claim. Drawdown og fakta har "Historisk afkast …" + "kan tabe". AI-udkast er mærket (se dog ovenfor).
+
+## 2026-10-16 01:40 CEST · cyklus 21 (main `a664f4f`, intet docs-delta)
+
+Ikke juridisk rådgivning. Pages = `75a87c2` (docs er identiske med main). Jeg har grep'et renderet tekst live på 24 sider ×2 (375/1280), inkl. `?view=fonden` med PMINDIAKK-toggle.
+
+### MUST (åbne, re-verificeret)
+1. Ingen "markedsføring"-mærkning (0 hits som mærkning; 1 hit i brødtekst på ndi-perspektiv).
+2. "MADS FØLGER": ndi-paa-x ×7 (roterer, var 10) og SoftBank ×3. Gør mærket neutralt.
+3. "kan tabe" er 0 på **ndi-paa-x, omkostninger og nyhedsarkiv**. ndi-paa-x har også 0 "Historisk afkast".
+4. **PMINDIAKK NAV 98,40 står nu to steder:** sammenlign og fonden (PMINDIAKK-toggle, som stort KPI-tal "Seneste NAV 98,40"). Toggle-teksten "Afkast vises efter 12 måneder" er korrekt ✅. Men NAV-tallet sammen med "første NAV 5. dec. 2025" gør et afkast før 12 mdr. let at regne ud. NDI skal afklare, om NAV må stå.
+5. ÅTD (+4,0 % som KPI) og +104,8 % står ved siden af "ÅTD og 100.000 kr.-eksemplet afventer Fundmarket-godkendelse". Enten er det godkendt, og så skal teksten væk, eller også skal tallene skjules.
+6. SRI 5 mod vol 32,46 % mod laer/risikoklasse "20–30 %".
+7. `chartMarkers` @MadsC007 i afkastgrafen.
+
+### SHOULD (nyt)
+- **Invester har tre "trin 4"** (merge-rest, se UX). To af dem siger "Køb og omkostninger". Det er ikke en opfordring (procestekst), men gentagelsen af "Køb" lige over KID-tabellen ser presset ud. Behold én.
+- **"Central Information Dokument"** i fodnoten (index ×2, data.js) er ikke PRIIP-forordningens danske titel ("Dokument med central information"). Brug den officielle titel, så linket svarer til dokumentet.
+
+### SHOULD (uændret)
+- Intet samlet KID-omkostningstal (persona/FO-MUST, når NDI har tallet). Invester trin 4 linker til "officielle omkostningstal" ✅. Omkostninger siger "ikke et ÅOP" ✅.
+- KID-link mangler (0 i renderet tekst) på vaerdikaeder, drawdown, temaer, nyhedsarkiv, ndi-perspektiv, periode og selskaber. "BREAKING:" ×2 på fonden og ndi-paa-x. @CHornskov-opslaget "Begge er også i $PMINDI" skal dateres. Idéer «To klasser» udelader omkostningsforskellen. "AI-udkast" står over et tomt felt på selskab.
+
+### Rådgivningsord ✅
+- "garanter…", "køb nu", "øger eksponering" og "bedste tip": 0. "anbefal…" står kun i negationer/KID-citat ("KID'et anbefaler mindst 5 års investeringsperiode", "ikke en anbefaling"). "overvægt" står kun i negationer. "Nasdaq" står kun som "børsnoteret hos Nasdaq Copenhagen" (handelssted), ikke som benchmark ✅.
+
+### OK ✅
+- Beholdning pr. 1. jun. 2026 er tydelig i topbaren på fonden ("forsinket snapshot"). Ingen live trades. Ingen 1m/3m. "Fonden har intet fast benchmark" står på fonden og fakta. Invester har "Ikke rådgivning", "kan tabe" og "Historisk afkast …" og KID-tabel for begge klasser ✅.

@@ -467,3 +467,27 @@ Pages er bygget fra `75a87c2` (last-modified 23:28 UTC). Jeg har kørt Playwrigh
 
 ### OK
 - Entré 2.804 tegn. Om-data folder sig sammen på 375 (1.245 tegn). Top-10: "pr. 1. jun. 2026 · forsinket snapshot" ✅. SoftBank-profilen har kilde + "tjekket mod kilden 12. okt. 2026" ✅.
+
+## 2026-10-16 01:40 CEST · cyklus 21 (main `a664f4f`, intet docs-delta)
+
+main er uændret siden cyklus 20, og Pages = `75a87c2` (docs er identiske). Jeg har kørt Playwright live på 24 sider ved 375 og 1280 med scroll, inkl. `?view=fonden/portefolje/udforsk`, laer/risikoklasse, periode og selskaber. Resultat: 0 pageerrors, 0 h-overflow og én h1 overalt. Tegntal: entré 2.804, fonden 7.075, udforsk 22.510 og ndi-perspektiv ca. 192.000 (uændret).
+
+### MUST (nyt fund)
+- **Invester har tre "trin 4"** (`docs/invester.html:47/50/53`): "4. Ordre & omkostninger", "4. Køb og omkostninger" og "4. Køb og omkostninger" igen, med næsten samme tekst. Det er en merge-rest fra `299e7a2` (lane-C). Det er den side, privatpersonaen lander på fra knappen "Sådan investerer du" i topbaren, så den er synlig. Behold én version: den sidste (med "efter løbende omkostninger, før skat") plus linket "officielle omkostningstal" fra den første.
+
+### MUST (uændret)
+- Selskab: "AI-udkast" står over et tomt summary-felt (TSMC, Lumentum). Stubs med "–" (Rolle/Produkter/Kunder). Brug linsens "Hvad ejer man?" som fallback.
+- SRI 5 mod vol 32,46 % (se compliance).
+
+### SHOULD
+- **Footer-term:** "Central Information Dokument" (`index.html` ×2, `js/data.js`) er hverken KID-forordningens danske navn eller god dansk. Skriv "Dokument med central information (KID)", ligesom invester trin 1 gør.
+- **Fonden/PMINDIAKK-toggle** er pæn: "Afkast vises efter 12 måneder … fra december 2026" ✅. Men "Seneste NAV 98,40" står som stort tal (se compliance #4).
+- Uændret: TSMC's h1 "Taiwan Semi Sp ADR". "Foundry :" har et mellemrum før kolon. Idéer «To klasser» skal forklare 345/320 selskaber. ndi-perspektiv bør foldes sammen. "BREAKING:" står ×2 på fonden og ndi-paa-x. "MADS FØLGER" står ×7 på ndi-paa-x (var 10; feedet roterer) og ×3 på SoftBank. Nyhedsarkiv har "Placeholder" ×8. Drawdown-formuleringen og idéernes indholdsfortegnelse er også uændrede.
+
+### Persona-linser
+- **Privat:** flowet entré → "Sådan investerer du" → trin 1–5 er godt, og "Tre spørgsmål før du investerer" er stærkt og ikke-rådgivende ✅. Tre ens trin 4 får siden til at se ufærdig ud lige før KID-tabellen. Ret det før demo.
+- **Familiekontor:** stadig intet samlet KID-omkostningstal på invester eller omkostninger. Ved 375 viser fonden KPI-gitteret (afkast +104,8 %, CAGR +26,4 %) før nogen omkostningslinje, ud over "efter løbende omkostninger" i ingressen.
+- **Visuel variation:** ingen ændring, ingen ny træthed.
+
+### OK
+- Mobil 375: ingen h-overflow på 24 sider. Topbaren har "Sådan investerer du" som primær CTA ✅. Top-10/portefølje: "pr. 1. jun. 2026" ×4 ✅.
