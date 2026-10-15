@@ -450,7 +450,17 @@
    "source": "https://fluenceenergy.com/",
    "products": "Batterisystemer til elnettet og tilhørende software.",
    "customers": "Elselskaber, projektudviklere og store elforbrugere.",
-   "role": "Lagring mellem elproduktion og forbrug."
+   "role": "Lagring mellem elproduktion og forbrug.",
+   "narrative": [
+    "Fluence leverer batterisystemer og software til elnettet. Systemerne lagrer strøm og sender den ud igen.",
+    "Fluence er ikke et kraftværk. Denne beskrivelse siger heller ikke, at selskabet selv fremstiller battericellerne. I kæden står selskabet på batterier."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://fluenceenergy.com/"
+    }
+   ]
   },
   "US83418M1036": {
    "name": "Solaris Energy Infrastructure",
@@ -480,7 +490,17 @@
    "source": "https://www.nexteraenergy.com/",
    "products": "El til kunder i regulerede områder og strøm fra egne anlæg.",
    "customers": "Husholdninger, virksomheder og aftagere af strøm.",
-   "role": "Elproduktion og distribution i den klassiske energikæde."
+   "role": "Elproduktion og distribution i den klassiske energikæde.",
+   "narrative": [
+    "NextEra Energy ejer Florida Power & Light, som leverer el i Florida. Selskabet skriver, at Florida Power & Light har mere end 6 millioner tilslutninger.",
+    "Koncernen producerer også selv strøm fra sol, vind, gas og atomkraft i drift. Derfor står den på elproduktion og ikke som udvikler af små reaktorer. Temaet i snapshottet er et forslag. Forsiden skriver, at NextEra og Dominion Energy skal lægges sammen. Teksten siger ikke, at sammenlægningen er gennemført."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.nexteraenergy.com/"
+    }
+   ]
   },
   "US8425871071": {
    "name": "Southern Company",
@@ -940,7 +960,21 @@
    "source": "https://rocketlabcorp.com/",
    "products": "Opsendelse og rumfartøjer.",
    "customers": "Kunder med små satellitter og kunder, der køber rumfartøjer.",
-   "role": "Både opsendelse og satellitplatforme."
+   "role": "Både opsendelse og satellitplatforme.",
+   "narrative": [
+    "Rocket Lab sender små satellitter op med raketten Electron og bygger rumfartøjer og dele til dem.",
+    "En større raket, Neutron, er under udvikling. Den første flyvning med Neutron er ikke gennemført i denne beskrivelse. I kæden står selskabet både på opsendelse og på satellitter."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://rocketlabcorp.com/"
+    },
+    {
+     "label": "Neutron",
+     "url": "https://rocketlabcorp.com/launch/neutron/"
+    }
+   ]
   },
   "US80401C1009": {
    "name": "Satellogic",
@@ -1010,7 +1044,17 @@
    "source": "https://www.planet.com/",
    "products": "Satellitbilleder og data.",
    "customers": "Offentlige myndigheder, virksomheder inden for landbrug, kortlægning og forsikring.",
-   "role": "Satellittjeneste."
+   "role": "Satellittjeneste.",
+   "narrative": [
+    "Planet driver satellitter, der tager billeder af Jorden. Selskabet sælger billederne og analyser af dem. Flåden omfatter blandt andet SuperDove og SkySat.",
+    "Planet opsender ikke selv raketterne i denne beskrivelse. Selskabet står på satellitter."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.planet.com/"
+    }
+   ]
   },
   "US0094221068": {
    "name": "Airo Group",
@@ -1040,7 +1084,17 @@
    "source": "https://www.nuscalepower.com/",
    "products": "Et reaktordesign og tilhørende tjenester.",
    "customers": "Forsyningsselskaber og store forbrugere, hvis et værk bliver bygget.",
-   "role": "Udvikling af SMR."
+   "role": "Udvikling af SMR.",
+   "narrative": [
+    "NuScale udvikler en lille reaktor, som selskabet kalder NuScale Power Module. Selskabet skriver, at det amerikanske nukleare tilsyn, NRC, har godkendt designet, og angiver en effekt på 77 MW pr. modul.",
+    "Godkendelsen er ikke et værk i kommerciel drift. Denne tekst siger ikke, at et anlæg leverer strøm."
+   ],
+   "narrativeSources": [
+    {
+     "label": "NuScale Power Module",
+     "url": "https://www.nuscalepower.com/products/nuscale-power-module"
+    }
+   ]
   },
   "US74762E1029": {
    "name": "Quanta Services",
@@ -1050,7 +1104,17 @@
    "source": "https://www.quantaservices.com/",
    "products": "Anlægsarbejde på elnet og energiinfrastruktur.",
    "customers": "Elselskaber og andre ejere af net.",
-   "role": "Bygger nettet. Producerer ikke strømmen."
+   "role": "Bygger nettet. Producerer ikke strømmen.",
+   "narrative": [
+    "Quanta Services bygger og vedligeholder elnet. Arbejdet dækker ledninger, transformerstationer og distributionsnet. Selskabet arbejder også på kraftværker.",
+    "Quanta ejer ikke strømmen. I kæden står selskabet på elnet. Temaet i snapshottet er et forslag."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Elnet",
+     "url": "https://www.quantaservices.com/capabilities/electric-power/"
+    }
+   ]
   },
   "US36828A1016": {
    "name": "GE Vernova",
@@ -1060,7 +1124,17 @@
    "source": "https://www.gevernova.com/",
    "products": "Kraftværksudstyr og netudstyr.",
    "customers": "Elselskaber og industri.",
-   "role": "Udstyr til både produktion og net."
+   "role": "Udstyr til både produktion og net.",
+   "narrative": [
+    "GE Vernova leverer udstyr til elproduktion og til elnettet. Det er blandt andet gasturbiner, vindmøller og udstyr til atomkraft og til nettet.",
+    "Selskabet driver ikke de værker, udstyret står i. I kæden står selskabet derfor både på elproduktion og på elnet."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.gevernova.com/"
+    }
+   ]
   },
   "US55405W1045": {
    "name": "MYR Group",

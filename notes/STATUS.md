@@ -275,3 +275,17 @@ Teksten siger, hvad selskabet laver, og hvad der ikke er i drift: orbital opsend
 Tjekket i Chromium på `selskab.html` for de fem ISIN. "Kort fortalt" viser første afsnit. "Læs hele forklaringen" åbner resten. AI-udkast er med. Ingen konsolfejl. Ingen vandret scroll ved 375 px på Starfighters-siden. P/E i sidefoden er den faste disclaimer om, at tallene ikke vises.
 
 **Push:** forrige tip på `lane-E` er `0907706`. Dette commit kan merges, når det er pushet. Branchen er `lane-E`. Ikke main.
+
+## Fra Grok lane-E
+
+**2026-10-16 ~00:15 CEST. Kort fortalt på syv navne i kæden. Ikke færdig.**
+
+`company-profiles.json` har `narrative` uden `reviewedAt` på Fluence, NextEra, Rocket Lab, Planet, NuScale, Quanta og GE Vernova. AI-udkast bliver. Ingen "tjekket mod kilden".
+
+Grænser i teksten: Fluence er ikke et kraftværk. NextEra har atomkraft i drift og er ikke en SMR-udvikler. Forsiden skriver, at NextEra og Dominion skal lægges sammen, og teksten siger ikke, at det er sket. Rocket Lab flyver Electron. Neutron er ikke fløjet i beskrivelsen. Planet sælger billeder og opsender ikke selv. NuScale gengiver selskabets tal på 77 MW pr. modul, og godkendelsen er ikke et værk i drift. Quanta bygger nettet og ejer ikke strømmen. GE Vernova leverer udstyr og driver ikke værkerne. NextEra og Quanta står som temaforslag i snapshottet.
+
+Fluence-siden svarede 403 til opslaget. Der er ikke lagt nye produktnavne ind. De andre tekster er holdt til selskabets egen side den 16. oktober 2026.
+
+Tjekket i Chromium på de syv `selskab.html`. "Kort fortalt" og AI-udkast er med. Ingen konsolfejl. Ingen vandret scroll ved 375 px.
+
+**Push:** `lane-E` @ `acbac20` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

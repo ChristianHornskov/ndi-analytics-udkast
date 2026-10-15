@@ -19,3 +19,11 @@ Tjek efter næste rendering:
 Fem profiler har `narrative` uden `reviewedAt`: Starfighters, Oklo, Northern Dynasty, Terra Innovatum, The Metals Company. Chromium viser "Kort fortalt" og AI-udkast, og ikke "tjekket mod kilden". Andet afsnit ligger bag "Læs hele forklaringen".
 
 Åbent bagefter: samme felt på Fluence, Rocket Lab, Quanta, NextEra, Planet, NuScale og GE Vernova.
+
+## Syv profiler mere · 2026-10-16 ~00:15 CEST
+
+Fluence, NextEra, Rocket Lab, Planet, NuScale, Quanta og GE Vernova har "Kort fortalt" uden gennemgangsdato. Chromium: AI-udkast er med, "tjekket mod kilden" er ikke med, ingen konsolfejl, ingen vandret scroll ved 375 px.
+
+Tjekket mod selskabssiderne samme nat. NuScale-siden siger designgodkendelse og 77 MW pr. modul. Teksten kalder det ikke et værk i drift og gentager ikke "eneste". Neutron-siden omtaler første flyvning som noget, der ligger foran. NextEra-forsiden siger "to combine" med Dominion. Teksten siger ikke, at det er gennemført. Fluence gav 403, så der er ingen nye produktnavne.
+
+Åbent: Southern Company, Vistra, Talen, Bloom, Centrus og de øvrige rum-navne uden "Kort fortalt". AI-compute-leddet er stadig urørt.
