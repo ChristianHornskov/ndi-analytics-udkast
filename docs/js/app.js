@@ -21,24 +21,24 @@ let DATA = null;
 let MONTHS = null;
 
 function weightSpark(isin, fundId) {
-  // Kun fondens vægt pr. kvartalssnapshot (≤ cutoff) - aldrig aktiekurs. Skala pr. række (form, ikke niveau).
+  // Kun fondens vægt pr. kvartalssnapshot (≤ cutoff) - aldrig aktiekurs. Søjler fra nul pr. række,
+  // så det ikke ligner en kurslinje (UX 22:00 MUST 3).
   const rows = MONTHS?.funds?.[fundId];
   if (!rows) return '';
   const pts0 = rows.map((row) => ({ d: row.date, w: row.weights?.[isin] })).filter((p) => p.w != null);
   if (pts0.length < 2) return '';
   const series = pts0.map((p) => p.w);
   const max = Math.max(...series, 0.01);
-  const min = Math.min(...series);
-  const w = 56, h = 18;
-  const pts = series.map((v, i) => {
-    const x = (i / (series.length - 1)) * w;
-    const y = h - ((v - min) / (max - min || 1)) * (h - 2) - 1;
-    return `${x.toFixed(1)},${y.toFixed(1)}`;
-  }).join(' ');
+  const h = 16, bw = 4, gap = 2;
+  const w = series.length * (bw + gap) - gap;
+  const bars = series.map((v, i) => {
+    const bh = Math.max(1, (v / max) * h);
+    return `<rect x="${i * (bw + gap)}" y="${(h - bh).toFixed(1)}" width="${bw}" height="${bh.toFixed(1)}" rx="1"/>`;
+  }).join('');
   const pct = (v) => v.toFixed(2).replace('.', ',') + ' %';
   const first = pts0[0], last = pts0[pts0.length - 1];
   const label = `Vægt i fonden: ${pct(first.w)} (${fmtDate(first.d)}) → ${pct(last.w)} (${fmtDate(last.d)}), ${pts0.length} kvartalsrapporter. Ikke aktiekurs.`;
-  return `<svg class="spark" width="${w}" height="${h}" role="img" aria-label="${label}"><title>${label}</title><polyline fill="none" stroke="var(--cyan)" stroke-width="1.4" points="${pts}"/></svg>`;
+  return `<svg class="spark spark-bars" width="${w}" height="${h}" role="img" aria-label="${label}"><title>${label}</title><g fill="var(--cyan)">${bars}</g></svg>`;
 }
 
 
@@ -580,14 +580,15 @@ function fundToolbar() {
 function positionsTable(list, fund) {
   const th = (key, label) =>
     `<th><button type="button" data-sort="${key}" aria-sort="${state.sort===key?(state.dir==='asc'?'ascending':'descending'):'none'}">${label}${state.sort===key?(state.dir==='asc'?' ↑':' ↓'):''}</button></th>`;
-  return hscroll(`<div class="table-wrap"><table class="data"><thead><tr>
+  return `<p class="spark-legend"><svg class="spark-key" width="16" height="12" aria-hidden="true"><g fill="var(--cyan)"><rect x="0" y="6" width="4" height="6" rx="1"/><rect x="6" y="3" width="4" height="9" rx="1"/><rect x="12" y="0" width="4" height="12" rx="1"/></g></svg><span>Søjlerne ved navnet viser <strong>vægt i fonden pr. kvartal</strong>. Ikke aktiekurs.</span></p>` +
+  hscroll(`<div class="table-wrap"><table class="data"><thead><tr>
     ${th('name','Navn')}${th('weight','Vægt %')}<th>Tema</th>
   </tr></thead><tbody>${list.map((p) => `<tr>
     <td><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}">${p.name}</a> ${weightSpark(p.isin, fund.id)}<br><small style="color:var(--muted)">${p.isin}</small></td>
     <td>${(p.weight ?? 0).toFixed(2).replace('.', ',')}</td>
     <td>${tagsFor(p, DATA.multiTags).map((t) => `<a class="tag" href="tema.html?slug=${encodeURIComponent(t)}&fund=${fund.id}">${daTheme(t)}</a>`).join(' ')}</td>
   </tr>`).join('')}</tbody></table></div>`, 'Rul til siden for flere kolonner.') +
-  `<p style="font-size:11px;color:var(--muted);margin-top:8px">Kun vægt og tema. Den lille linje ved navnet er selskabets <strong style="color:var(--text)">vægt i fonden</strong> pr. forsinket snapshot frem til ${fmtDate(MONTHS?.cutoff || fund.positionsAsOf)} - ikke aktiekurs. Ingen kursafkast pr. aktie i v1. Beholdning er forsinket.</p>`;
+  `<p style="font-size:11px;color:var(--muted);margin-top:8px">Kun vægt og tema. De små søjler ved navnet er selskabets <strong style="color:var(--text)">vægt i fonden</strong> pr. kvartalssnapshot frem til ${fmtDate(MONTHS?.cutoff || fund.positionsAsOf)}. Ikke aktiekurs. Ingen kursafkast pr. aktie i v1. Beholdning er forsinket.</p>`;
 }
 
 function emptyScreener(fund) {
@@ -615,7 +616,7 @@ function renderUdforsk(root) {
     <a class="back" href="?view=entre&fund=${state.fund}" data-nav="entre">← Entré</a>
     <p class="eyebrow">UDFORSK TECH</p>
     <h1>Screener · NDI-linse</h1>
-    <p class="lede">Level 1: kun selskaber i porteføljen. Tags er mange-til-mange i ambitionen. her ét primært tema pr. selskab i udkastet.</p>
+    <p class="lede">Level 1: kun selskaber i porteføljen. Tags er mange-til-mange i ambitionen. Her ét primært tema pr. selskab i udkastet.</p>
     <p class="band">Informationen er generel - ikke en personlig anbefaling. Segmenter = eksponering.</p>
     ${fundToolbar()}
     <div class="filters">
@@ -631,7 +632,7 @@ function renderUdforsk(root) {
     <p style="font-size:12px;color:var(--muted);margin:8px 0">Tema-dybsider: ${themes.map((t) => `<a href="tema.html?slug=${encodeURIComponent(t)}&fund=${state.fund}">${daTheme(t)}</a>`).join(' · ')} · <a href="selskaber.html?fund=${state.fund}">A-Z liste</a></p>
     <!-- Modenhedsfiltre skjult indtil manuel klassifikation -->
     <div class="chips" id="chips"></div>
-    <p style="font-size:12px;color:var(--muted)" id="filter-status">${list.length} resultater · udkast-klassifikation</p>
+    <p style="font-size:12px;color:var(--muted)" id="filter-status">${list.length} ${list.length === 1 ? 'resultat' : 'resultater'} · udkast-klassifikation</p>
     ${list.length ? positionsTable(list, fund) : emptyScreener(fund)}
     ${warnHtml()}`;
 
@@ -688,6 +689,7 @@ function onClick(e) {
   }
 
   if (t.id === 'csv-export') {
+    flushSearch();
     // Dansk Excel: UTF-8 BOM, semikolon, decimalkomma. Kun felter der også vises i UI (navn, ISIN, vægt, tema).
     const fund = fundById(DATA.portfolio, state.fund);
     const list = filterPositions(fund);
@@ -716,6 +718,7 @@ function onClick(e) {
     return;
   }
   if (t.id === 'copy-link') {
+    flushSearch();
     // U1: URL'en bærer hele visningen (fund, tags, mat, sort, q)
     navigator.clipboard.writeText(location.href)
       .then(() => toast('Link til denne liste er kopieret'))
@@ -756,10 +759,27 @@ function onClick(e) {
 function onInput(e) {
   if (e.target.id !== 'q') return;
   state.q = e.target.value;
-  writeUrl(true);
-  // debounced repaint of table only - full paint ok for draft
+  // URL og liste opdateres i samme tik, så et kopieret link altid matcher den viste liste (UX 22:00 MUST 2).
   clearTimeout(onInput._t);
-  onInput._t = setTimeout(paint, 150);
+  onInput._t = setTimeout(commitSearch, 150);
+}
+
+function commitSearch() {
+  clearTimeout(onInput._t);
+  onInput._t = null;
+  // paint() genskaber søgefeltet. Fokus og markør skal blive stående, ellers mister man tegn midt i tastningen.
+  const el = $('#q');
+  const had = el && document.activeElement === el;
+  const [a, z] = had ? [el.selectionStart, el.selectionEnd] : [0, 0];
+  writeUrl(true);
+  paint();
+  const nu = $('#q');
+  if (had && nu) { nu.focus({ preventScroll: true }); nu.setSelectionRange(a, z); }
+}
+
+// Kopiér/CSV lige efter tastning må ikke ramme en liste eller URL, der halter efter søgefeltet.
+function flushSearch() {
+  if (onInput._t) commitSearch();
 }
 
 

@@ -17,6 +17,14 @@ check('company-months ≤ 2026-06-01', lastDates.every((d) => d <= '2026-06-01')
 const notesDir = (await import('node:fs')).readdirSync(ROOT + 'notes').sort().join(',');
 check('docs/notes kun stub', notesDir === 'DO_NOT_ADD_NOTES_HERE.txt,index.html', notesDir);
 
+// Tekst-scrub må ikke efterlade ødelagte entiteter eller " . " midt i sætninger (Build N1)
+const { readdirSync, statSync } = await import('node:fs');
+const walk = (d) => readdirSync(d).flatMap((f) => statSync(d + f).isDirectory() ? walk(d + f + '/') : [d + f]);
+const textFiles = walk(ROOT).filter((f) => /\.(html|js)$/.test(f) && !f.includes('/notes/'));
+const scrubHits = textFiles.filter((f) => /&amp\.|\S \. [a-zæøå]/.test(readFileSync(f, 'utf8')));
+check('ingen "&amp." eller " . " i docs', scrubHits.length === 0, scrubHits.join(','));
+check('ingen sitemap.xml i udkast', !existsSync(ROOT + 'sitemap.xml'));
+
 const browser = await chromium.launch({ headless: true });
 for (const width of [1280, 375]) {
   const ctx = await browser.newContext({ viewport: { width, height: width === 1280 ? 800 : 812 }, acceptDownloads: true });
@@ -112,6 +120,26 @@ for (const width of [1280, 375]) {
   check('værdikæde led fremhævet ' + W, (await page.locator('.node.hit').count()) >= 1 && page.url().includes('tema=chips'), page.url());
   await tBtns.first().click();
   check('værdikæde nulstil ' + W, (await page.locator('.node.hit').count()) === 0 && (await tBtns.first().getAttribute('aria-pressed')) === 'true');
+
+  // UX 22:00 MUST 1: Fonden, Porteføljen og Udforsk synlige i hovednav på alle bredder
+  await page.goto(BASE + '/?view=fonden', { waitUntil: 'networkidle' });
+  for (const v of ['fonden', 'portefolje', 'udforsk']) {
+    check(`hovednav ${v} synlig ${W}`, await page.locator(`.nav [data-nav="${v}"]`).isVisible());
+  }
+
+  // UX 22:00 MUST 2: søgning med pauser mister ikke tegn, og kopieret URL matcher listen
+  await page.goto(BASE + '/?view=udforsk', { waitUntil: 'networkidle' });
+  await page.click('#q');
+  await page.keyboard.type('nv', { delay: 250 });
+  await page.keyboard.type('id', { delay: 20 });
+  check('søgefelt beholder fokus og tegn ' + W, (await page.inputValue('#q')) === 'nvid' && (await page.evaluate(() => document.activeElement?.id)) === 'q');
+  await page.evaluate(() => document.getElementById('copy-link').click());
+  check('URL og liste enige efter søgning ' + W, page.url().includes('q=nvid') && /^1 resultat\b/.test(await page.textContent('#filter-status')), page.url());
+
+  // UX 22:00 MUST 3: vægt vises som søjler med synlig forklaring, ikke som kurslinje
+  await page.goto(BASE + '/?view=portefolje', { waitUntil: 'networkidle' });
+  check('vægt-søjler, ingen polyline ' + W, (await page.locator('svg.spark polyline').count()) === 0 && (await page.locator('svg.spark-bars rect').count()) > 0);
+  check('søjle-forklaring synlig ' + W, /vægt i fonden pr\. kvartal/.test(await page.locator('.spark-legend').innerText()));
 
   // Ingen vandret scroll på 375 (bortset fra bevidste scroll-containere)
   if (width === 375) {
