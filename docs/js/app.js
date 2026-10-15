@@ -514,7 +514,7 @@ function renderPortefolje(root) {
     <p class="eyebrow">PORTEFØLJEN</p>
     <h1>Beholdninger · ${fund.short}</h1>
     <p class="lede">Forsinket offentlig beholdning pr. ${fmtDate(fund.positionsAsOf || DATA.portfolio.asOf)} (Fundmarket månedsrapport) — ikke dagsaktuel. Vægte summerer til ca. 100 %.</p>
-    <p class="band">Segmenter viser eksponering, ikke en anbefaling.</p>
+    <p class="band">Segmenter viser eksponering, ikke en anbefaling. <a href="temaer.html?fund=${state.fund}">Se tema-oversigt →</a></p>
     ${fundToolbar()}
     ${renderLivscyklus(fund)}
     <p class="band" style="font-size:11px">Ingen P/S, P/E eller kursafkast pr. aktie i denne version. Tema-tags er udkast.</p>
