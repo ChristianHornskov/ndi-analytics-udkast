@@ -27,3 +27,37 @@ Fluence, NextEra, Rocket Lab, Planet, NuScale, Quanta og GE Vernova har "Kort fo
 Tjekket mod selskabssiderne samme nat. NuScale-siden siger designgodkendelse og 77 MW pr. modul. Teksten kalder det ikke et værk i drift og gentager ikke "eneste". Neutron-siden omtaler første flyvning som noget, der ligger foran. NextEra-forsiden siger "to combine" med Dominion. Teksten siger ikke, at det er gennemført. Fluence gav 403, så der er ingen nye produktnavne.
 
 Åbent: Southern Company, Vistra, Talen, Bloom, Centrus og de øvrige rum-navne uden "Kort fortalt". AI-compute-leddet er stadig urørt.
+
+## Tolv profiler · 2026-10-16 ~00:20 CEST
+
+Southern, Vistra, Talen, Bloom, Centrus, BWX Technologies, Rolls-Royce, Firefly, Voyager, Karman, Plug Power og Nano Nuclear har "Kort fortalt" uden gennemgangsdato. Chromium på alle tolv: AI-udkast med, ingen gennemgangsdato, ingen konsolfejl, ingen vandret scroll ved 375 px.
+
+Vistra-tallene er forsiden den 16. oktober 2026, ikke et NDI-regnestykke. 433 MW er øget effekt, ikke en ny reaktor. Rolls-Royce SMR i Sverige er et valg, ikke drift. Fireflys Eclipse er ikke fløjet i teksten. Seks sider gav 403, og de tekster holder sig til den gamle profil.
+
+Åbent: råstoffer, der ikke er miner i drift, og de rum-navne der mangler: Redwire, York, MDA, Satellogic, Hawkeye 360, Intuitive Machines, Howmet. AI-compute-leddet er urørt.
+
+## Atten profiler · 2026-10-16 ~00:25 CEST
+
+Projekter og rum-navne har "Kort fortalt" uden gennemgangsdato. Chromium på alle atten. Thacker Pass er opførelse med selskabets mål sent i 2027, ikke fuld drift. Standard Lithium har et demonstrationsanlæg, ikke en stor mine. Chorus er ikke sendt op i teksten. QSE-5 er ikke masseproduktion. Kurser fra Standard Lithiums side er udeladt. Tesla og T1 er urørt, fordi de har `reviewedAt`.
+
+Åbent: gasproducenterne, udstyrsnavnene Babcock, Cummins, Generac, Primoris og MYR, og de miner, der faktisk producerer. AI-compute-leddet er urørt.
+
+## Gas, net og miner · 2026-10-16 ~00:30 CEST
+
+Nitten "Kort fortalt" uden gennemgangsdato. Chromium ved 375 px, ingen vandret scroll, ingen konsolfejl. Kurser fra forsiderne er ikke skrevet ind.
+
+Sigma: `sigmalithium.com` viste den 16. oktober 2026 et foretagende om metalliske anoder. Det passer ikke med profilens lithiumkoncentrat i Brasilien. Kilden er flyttet til `https://sigmalithiumcorp.com/`, som er Sigma Lithium Corp. Babcock, T1 og Tesla er urørt på grund af `reviewedAt`.
+
+Åbent: gennemlæs blurbs i energi- og rumkæden mod de nye grænser. AI-compute-leddet er urørt.
+
+## Blurbs · 2026-10-16 ~00:35 CEST
+
+SMR, råstoffer og opsendelse er rettet i JSON, så teksten på siden skelner komponenter, miner i drift og raketter, der ikke er fløjet. Taseko hedder som i beholdningen. Chromium viste teksterne. AI-compute er stadig den gamle topvægtsliste med Coreweave. Bevidst.
+
+## Nyhedsarkiv · 2026-10-16 ~00:40 CEST
+
+De to konceptkort siger det samme som kæden: gas er brændsel, SMR er ikke drift, råstoffer er både projekter og miner, Neutron og Eclipse er ikke fløjet, rum og compute er ikke et datacenter. Linket til værdikædesiden virker. Ingen konsolfejl. Ingen vandret scroll ved 375 px.
+
+## Indledning og klik · 2026-10-16 ~00:45 CEST
+
+`why` på energi og rum siger grænsen, før man åbner et led. Merlin i energikædens udeladte liste er luftfart, ikke et rum-led. Klik til NextEra og Rocket Lab lander på AI-udkast uden gennemgangsdato. ÅTD er stadig 31. dec. 2025 og +4,0 %. `forslag` matcher beholdningen på alle navne i de to kæder.

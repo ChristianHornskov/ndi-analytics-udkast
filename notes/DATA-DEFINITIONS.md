@@ -61,6 +61,20 @@ Nye selskabsprofiler i `company-profiles.json` har ingen `reviewedAt`. Siden ska
 
 Samme felt, samme dag, på Fluence, NextEra, Rocket Lab, Planet, NuScale, Quanta og GE Vernova. NextEra og Quanta har `themeStatus` forslag i snapshottet, og teksten siger det. NuScale-teksten gengiver selskabets eget tal, 77 MW pr. modul, og siger at en designgodkendelse ikke er et værk i drift. Neutron er ikke fløjet i beskrivelsen. NextEra-forsiden omtaler en sammenlægning med Dominion Energy. Teksten siger ikke, at den er gennemført.
 
+Samme nat også på Southern Company, Vistra, Talen, Bloom, Centrus, BWX Technologies, Rolls-Royce, Firefly, Voyager, Karman, Plug Power og Nano Nuclear. Tal fra selskabssider gengives som selskabets egne: Vogtle og mere end 1 million hjem i Georgia, Vistra mere end 2.600 MW hvoraf 2.176 MW er drift og 433 MW er øget effekt, NuScale 77 MW. En udvælgelse, en designgodkendelse eller en forberedende dialog er ikke et værk i drift. HALEU hos Centrus er brændsel, ikke et kraftværk. Eclipse hos Firefly er ikke fløjet i beskrivelsen. Starlab er ikke en station i drift og ikke et datacenter.
+
+Senere samme nat: Terrestrial Energy, NioCorp, Critical Metals, Lithium Americas, USA Rare Earth, Standard Lithium, Trilogy, Ivanhoe Electric, Intuitive Machines, Howmet, Redwire, York, MDA, Satellogic, Hawkeye 360, QuantumScape, Eos og Solaris. Thacker Pass er under opførelse efter selskabets egen tekst, med mål om industriel skala sent i 2027, og er ikke fuld drift. Standard Lithium har et demonstrationsanlæg i drift efter selskabets tekst, ikke en stor mine. Chorus hos MDA er omtalt før opsendelse. QSE-5 hos QuantumScape er ikke masseproduktion. Tesla og T1 Energy har `reviewedAt` og er ikke rørt.
+
+Gasproducenterne Comstock, Antero, EQT og Expand Energy står på elproduktion, fordi gassen er brændsel, ikke fordi de er metalminer. Cummins og Generac står der som motorer og generatorer, ikke som elselskaber. Primoris og MYR Group står på elnet, fordi de bygger det. MP Materials, Gibraltar hos Taseko, Freeport, Ero og de andre kobbernavne er miner i beskrivelsen, hvor siden selv skelner mellem drift og projekt. Almonty nævner Panasqueira og Los Santos som miner og Valtreixal som projekt.
+
+Sigma Lithiums kilde er rettet fra `sigmalithium.com` til `https://sigmalithiumcorp.com/`. Den første side beskrev den 16. oktober 2026 et andet foretagende om metalliske lithiumanoder. Den nye side er Sigma Lithium Corp og lithiumkoncentrat i Brasilien. Babcock & Wilcox, T1 Energy og Tesla har `reviewedAt` og er ikke ændret.
+
+Blurbs, der vises på værdikædesiden: SMR-leddet siger, at ingen af navnene er et anlæg i kommerciel drift, at BWX Technologies leverer komponenter, og at Rolls-Royce er en motorkoncern med et reaktorprogram ved siden af. Råstof-leddet siger, at nogle navne er projekter, og at andre driver miner, blandt andet Mountain Pass og Gibraltar. Opsendelse siger, at Neutron og Eclipse ikke er fløjet i beskrivelserne, og at Firefly skriver, at Blue Ghost er landet. Taseko vises som i beholdningen: Taseko Mines (Trekor Metals). AI-compute-leddet er ikke ændret.
+
+Konceptkortene i `nyhedsarkiv.html` gentager de samme grænser. De er ikke ugebreve.
+
+Indledningen på energikæden siger det samme: gas på elproduktion er brændsel, ikke en metalmine, og navnene under atomkraft og SMR er ikke værker i kommerciel drift. Indledningen på rumkæden siger, at leddet rum og compute er infrastruktur, ikke et datacenter i kredsløb. Merlin står i energikædens udeladte liste som luftfart, ikke som et rum-led. Feltet `omitted` vises ikke på siden.
+
 ## År til dato på periodesiden
 
 `ytdReturn` i `data.js` bruger sidste punkt i året før som udgangspunkt, ikke 1. januar. For PMINDI pr. 2026-10-14 er det 2025-12-31, ikke 2026-01-02. `periode.html` viser den samme dato i "Fra → til". Kalenderår bruger samme base (`calendarYearReturns`).

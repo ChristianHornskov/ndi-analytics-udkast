@@ -532,3 +532,83 @@ Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html, v
 4. Deep-link `?kaede=ai-compute#a-pane`. Der er et link fra "Fem dæmninger" og fra vaerdikaede.html, og sektioner i faner har fået scroll-margin, så overskriften ikke gemmer sig under menuen.
 Tjek: Playwright på 1280 og 375 med 0 konsolfejl og ingen sidescroll. 13 stationer, og klik på 6 åbner `#lk-memory`. smoke.mjs fail 0 (egen server på 8817). Precheck PASSED. Grep efter handelssprog og tankestreger giver 0 hits.
 Næste: rum-fanen kan få "hvem bygger hvad" pr. højdebånd fra beholdningen (antal pr. led, ingen nøgletal), og kvante kan få krydslinks fra AI-flodkortet. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 ~00:20 CEST. Kort fortalt på tolv navne, med grænse for hvad der er i drift. Ikke færdig.**
+
+`narrative` uden `reviewedAt` på Southern Company, Vistra, Talen, Bloom, Centrus, BWX Technologies, Rolls-Royce, Firefly, Voyager, Karman, Plug Power og Nano Nuclear. AI-udkast bliver.
+
+Tjekket mod sider, der svarede: Southern skriver, at Vogtle leverer strøm til mere end 1 million hjem og virksomheder i Georgia. Vistra skriver om 20-årige aftaler med Meta. Mere end 2.600 MW, heraf 2.176 MW i drift og 433 MW som øget effekt. Ikke en ny reaktor. Centrus udvider berigning, herunder HALEU, og er ikke et kraftværk. Rolls-Royce skrev i juni 2026, at SMR-programmet er valgt til et projekt i Sverige. Valget er ikke et værk i drift. Flymotorer er stadig hovedforretningen. Firefly skriver, at Blue Ghost er landet på Månen. Eclipse er ikke fløjet i teksten. Nano Nuclear omtaler en forberedende dialog om byggetilladelse til KRONOS. Dialogen er ikke en tilladelse.
+
+Siderne for Talen, Bloom, BWX Technologies, Voyager, Karman og Plug Power svarede 403. Der er ikke lagt nye tal eller produktnavne ind. Teksten gentager den profil, der allerede stod, og grænsen for drift.
+
+Tjekket i Chromium på de tolv sider. AI-udkast er med. "Tjekket mod kilden" er ikke med. Ingen konsolfejl. Ingen vandret scroll ved 375 px.
+
+**Push:** `lane-E` @ `c4d39e0` er pushet efter precheck. Første forsøg blev afvist, andet gik igennem. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 ~00:25 CEST. Kort fortalt på projekter, der ikke er miner, og på rum-navne, der ikke er datacentre. Ikke færdig.**
+
+Atten profiler fik `narrative` uden `reviewedAt`. AI-udkast bliver.
+
+Nye grænser fra sider, der svarede: Lithium Americas skriver, at Thacker Pass er under opførelse, med mål sent i 2027. Ikke fuld drift. Standard Lithium skriver, at et demonstrationsanlæg kører. Projekterne i Arkansas og Texas er ikke en stor mine. Trilogy kalder Arctic og Bornite efterforskning og udvikling. Ivanhoe Electric udvikler Santa Cruz. Eos skriver, at zinkbatterierne fremstilles i USA. De er lagring, ikke en mine. Satellogic kalder satellitterne NewSat og opsender ikke selv. MDA omtaler Chorus, før det er sendt op. QuantumScape omtaler QSE-5 og ikke masseproduktion.
+
+NioCorp, Critical Metals, USA Rare Earth og Hawkeye 360 gav ikke en læsbar side. Intuitive Machines omdirigerer i ring. De tekster holder sig til den profil, der allerede stod. Tesla og T1 Energy har gennemgangsdato og er ikke ændret. Kursen på Standard Lithiums side er ikke taget med.
+
+Tjekket i Chromium på de atten sider. AI-udkast er med. Ingen gennemgangsdato. Ingen konsolfejl. Ingen vandret scroll ved 375 px.
+
+**Push:** `lane-E` @ `d4c8d57` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 ~00:30 CEST. Gas, netbyggere og miner i drift har Kort fortalt. Ikke færdig.**
+
+Nitten profiler uden `reviewedAt`. AI-udkast bliver.
+
+Gas: Comstock i Haynesville, Antero med Marcellus, EQT og Expand Energy. De står på elproduktion som brændsel, ikke som metalminer. Cummins og Generac laver motorer og generatorer og er ikke elselskaber. Primoris og MYR Group bygger nettet og ejer ikke strømmen.
+
+Miner: MP Materials ved Mountain Pass, United States Antimony, Energy Fuels (uran, ikke et kraftværk), Almonty (Panasqueira og Los Santos som miner, Valtreixal som projekt), Taseko/Gibraltar, siden bruger også navnet Trekor Metals, Freeport, Ero med Caraíba og Tucumã som kobber og Furnas som projekt. Lynas, Capstone og Southern Copper holdt sig til den gamle profil, fordi siden ikke gav en læsbar tekst. Kurser på Expand Energy og Taseko er ikke taget med.
+
+Sigma Lithium: `sigmalithium.com` beskrev anoder, ikke koncentrat i Brasilien. Kilden er nu `https://sigmalithiumcorp.com/`. Teksten siger lithiumkoncentrat, ikke et batteriselskab.
+
+Babcock & Wilcox, T1 Energy og Tesla har gennemgangsdato og er urørt. Af de unikke navne i energi- og rumkæden mangler kun de tre en "Kort fortalt".
+
+Tjekket i Chromium ved 375 px på de nitten sider, Sigma med. AI-udkast er med. Ingen gennemgangsdato. Ingen konsolfejl. Ingen vandret scroll. Ingen kurstegn i de nye afsnit.
+
+**Push:** `lane-E` @ `23415ee` er pushet efter precheck. Første forsøg blev afvist, andet gik igennem. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 ~00:35 CEST. Blurbs på kæden skelner drift fra projekt. Ikke færdig.**
+
+`value-chains.json`, kun energi og rum. HTML er ikke rørt. AI-compute-leddet er ikke rørt. Det hedder stadig Coreweave øverst på "Energi og strømfordeling".
+
+SMR-teksten siger, at ingen af navnene er et anlæg i kommerciel drift. BWX Technologies leverer komponenter. Rolls-Royce er en motorkoncern med et reaktorprogram ved siden af. Råstoffer siger, at nogle navne er projekter, og at andre driver miner, blandt andet Mountain Pass og Gibraltar. Opsendelse siger, at Neutron og Eclipse ikke er fløjet i beskrivelserne, og at Firefly skriver, at Blue Ghost er landet. Taseko vises som i beholdningen, Taseko Mines (Trekor Metals).
+
+Tjekket i Chromium på energi- og rumfanen. Teksterne står i kæden. Ingen konsolfejl. Ingen vandret scroll ved 375 px på rumfanen.
+
+**Push:** `lane-E` @ `b1070f2` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 ~00:40 CEST. Konceptkortene i nyhedsarkivet følger kædens grænser. Ikke færdig.**
+
+`nyhedsarkiv.html`. To konceptkort, ikke ugebreve. Energikortet siger, at gas står som brændsel, at små reaktorer ikke er beskrevet som værker i drift, og at nogle råstoffer er projekter, mens andre er miner. Rumkortet siger, at Neutron og Eclipse ikke er fløjet i beskrivelserne, og at ingen af eksemplerne under rum og compute er et datacenter i kredsløb. SpaceX er stadig ikke i beholdningen. Musk-citatet er stadig kun citat.
+
+Tjekket i Chromium. Teksterne står på siden. Linket til værdikædesiden åbner `vaerdikaeder.html`. Ingen konsolfejl. Ingen vandret scroll ved 375 px.
+
+**Push:** `lane-E` @ `ea822fe` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 ~00:45 CEST. Indledningen på kæderne siger grænsen, før leddene. Ikke færdig.**
+
+Energikædens `why` siger, at gas på elproduktion er brændsel, ikke en metalmine, og at navnene under atomkraft og SMR ikke er værker i kommerciel drift. Rumkædens `why` siger, at rum og compute er infrastruktur, ikke et datacenter i kredsløb. Merlin i den udeladte liste er rettet til luftfart. Listen vises ikke på siden.
+
+Tjekket i Chromium ved 375 px. Indledningerne står. Klik fra elproduktion til NextEra og fra opsendelse til Rocket Lab åbner selskabssiden med AI-udkast og uden gennemgangsdato. NextEras afsnit om Dominion ligger bag "Læs hele forklaringen". Periodesiden viser stadig 31. dec. 2025 og +4,0 %, og chippen "Siden første NAV". Ingen konsolfejl. Ingen vandret scroll ved 375 px på periodesiden.
+
+`forslag` på energi- og rum-leddene matcher `themeStatus` i beholdningen. Ingen afvigelser.
+
+**Push:** `lane-E` @ `9127b17` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
