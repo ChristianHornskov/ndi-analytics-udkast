@@ -310,3 +310,25 @@ Siden cyklus 12 er der kun ændret i `docs/data/unique-metrics.json` (lane-B: +6
 ### Nice / OK
 - Naborækken virker på de nye led: TSMC → 6 i led 5 (Samsung, GlobalFoundries, Tower, Intel, UMC, Amkor). QuantumScape → Energi led 4. Spotify → led 12. Affirm ("Uden for AI-kæden") viser ingen række, som det skal.
 - Linseteksterne er korte, konkrete og ærlige ("Navnet har intet med kvantecomputere at gøre", "sælger ikke selv chips").
+
+## 2026-10-16 01:05 CEST · cyklus 14 (main `6592e79`, delta siden `883e616`)
+
+Pages er lig med main (deploy 00:54 CEST, `laer/rebalancering.html` er live). Jeg har kørt Playwright på 28 live-sider ved 375 og 1280 og taget skærmbilleder af omkostninger, drawdown, rebalancering og ndi-paa-x ved 375. Ændret: omkostninger/fakta (lane-X: "den ene forskel"), ndi-paa-x (lane-X: direkte/tema-spor), drawdown (episoder som søjler), ny lær-side Rebalancering, idéer (+2 former), værdikæder (energi/rum "Hvad kan gå galt?"), selskab (forslag-mærke på tema), invester trin 3–5.
+
+### MUST
+- **ndi-paa-x.html er tom (regression, live og main).** Siden viser kun "Henter X-snapshot…". Konsol: `SyntaxError: The requested module './js/x-feed.js' does not provide an export named 'feedHitKind'`. Merge `6592e79` tog `ndi-paa-x.html` fra lane-X `591f500`, men ikke `docs/js/x-feed.js` (`feedHitKind` findes kun på `origin/lane-X`, linje 320). Ret: merge lane-X's `x-feed.js` (eller fjern importen). 0 h1 og 173 tegn på siden ved begge bredder. Det er demo-siden til morgen, så det er den vigtigste fejl i denne cyklus.
+- Uændret: tomme stubs ("Beskrivelse mangler" / "–") over en udfyldt NDI-linse på de fleste linse-selskaber. ndi-perspektiv er stadig ca. 133.000 tegn på 375. "afventer"/"udfyldes" er synligt på 12 af 28 sider (ndi-perspektiv 18, nyhedsarkiv 8).
+
+### SHOULD
+- **Omkostninger, "den ene forskel" (375):** god idé, og det er ærligt ("ikke et ÅOP" står 8 gange). Men 0,08 procentpoint fylder nu en hel skærm med to skalaer og en forklaring på 60 ord, før man ser 1,49 %, som er det store tal. Den private persona spørger "hvad koster det i alt?" og får det mindste tal mest fremhævet. Overvej at fremhæve 1,49 % først og lade forskels-boksen være foldet sammen. "Ikke et ÅOP" kan stå én gang øverst og én gang ved tabellen.
+- **Fakta gentager det samme 3 gange:** KPI-kort, sætningen "Begge klasser har SRI 5 af 7 …" og "Porteføljetransaktion er den eneste forskel …" står lige efter hinanden. Behold én.
+- **Rebalancering:** siden er pædagogisk stærk (skyder og eksempel uden JS). Men "Bogens tommelfingerregel er højst ca. 1 % pr. teknologiselskab" står lige under "Over 1 %: 5" for fonden. Det ligner en selvmodsigelse, selvom afsnittet "Bogen og fonden siger ikke det samme" forklarer det længere nede. Flyt 1 %-sætningen ned i det afsnit. "ingen fylder mere end ca. 2 %" ved siden af "Største position 2,1 %" er ok, men skriv "ca. 2,1 %".
+- **Drawdown, 375:** søjlerne/episoderne er en god variation. Banneret "Lige nu … −23,4 % under toppen fra 2. jun. 2026" er gult og står over grafen. Det er korrekt, men det er den første farvede sætning, en privat læser ser. Tilføj "Historisk, ikke en prognose" i samme linje.
+- Uændret: udbytte med punktum ("38.9 kr."), X-kort klippes midt i ord, "BREAKING:", omkostninger er ikke i primær-nav på 375, små trykflader (udforsk 852, selskaber 635, ndi-perspektiv 505, portefølje 225 ved 375), "Placeholder:" i nyhedsarkiv.
+- Omkostninger ved 375: når man scroller, er der et tomt sort bånd på ca. 60 px over logoet i den sticky header.
+
+### Nice / OK
+- 0 h-overflow på 28×2 sider. 0 konsolfejl undtagen ndi-paa-x. Alle sider undtagen ndi-paa-x har én h1.
+- Invester trin 3–5 er nu almindeligt dansk ("Depot hos bank eller handelsplatform", "Køb og omkostninger" nævner kurtage).
+- Selskab: forslag-mærket ("Primært tema … er et forslag fra udkastet (før: Andet) og afventer NDI-gennemgang") løser cyklus 13's TSMC/Andet-forvirring på en ærlig måde.
+- Visuel variation: drawdown-søjler, omkostnings-skala med zoom, rebalancerings-skyder og idéer-varmekort er fire forskellige former. Ingen kort-træthed på de nye sider.
