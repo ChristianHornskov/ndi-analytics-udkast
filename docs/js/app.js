@@ -230,7 +230,8 @@ function renderFonden(root) {
       <section class="panel">
         <h2 style="font-size:18px;margin-bottom:8px">Risiko (kort)</h2>
         <p style="color:var(--muted);font-size:13px;line-height:1.55">Risikoindikator <strong style="color:var(--text)">5</strong> på en skala fra 1 til 7 (KID). Anbefalet ejertid 5 år. Du kan tabe en del af eller hele din investering. Se KID-links i footeren.</p>
-        <p style="margin-top:12px"><button type="button" class="outline-btn small" data-open="dlg-invest">Sådan investerer du · Kopiér ISIN</button></p>
+        <p style="margin-top:12px"><button type="button" class="outline-btn small" data-open="dlg-invest">Sådan investerer du · Kopiér ISIN</button>
+      <a class="outline-btn small" style="margin-left:8px" href="risici.html">Risici / KID →</a></p>
       </section>`;
     return;
   }
@@ -343,7 +344,8 @@ function renderFonden(root) {
         <li>Store kursudsving er et grundvilkår for teknologiaktier. KID angiver en anbefalet investeringshorisont på 5 år, og der kan komme store fald undervejs.</li>
         <li>Porteføljen er koncentreret i teknologi og typisk i USD-noterede papirer.</li>
       </ul>
-      <p style="margin-top:12px"><button type="button" class="outline-btn small" data-open="dlg-invest">Sådan investerer du · Kopiér ISIN</button></p>
+      <p style="margin-top:12px"><button type="button" class="outline-btn small" data-open="dlg-invest">Sådan investerer du · Kopiér ISIN</button>
+      <a class="outline-btn small" style="margin-left:8px" href="risici.html">Risici / KID →</a></p>
     </section>`;
 
   const evts = (DATA.context?.events || []).filter((e) => {

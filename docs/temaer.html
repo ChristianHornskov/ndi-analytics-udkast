@@ -40,6 +40,19 @@
       <h1>NDI-linsen</h1>
       <p class="lede">Temaer viser eksponering i den forsinkede beholdning (pr. ${fmtDate(data.positionsAsOf)}) — ikke anbefalinger eller bevidste overvægte.</p>
       <p class="band">Segmenter viser eksponering, ikke en anbefaling.</p>
+      <section class="panel" style="margin-bottom:18px">
+        <h2 style="font-size:16px;margin-bottom:10px">Tema-vægte i forsinket beholdning</h2>
+        <div style="display:grid;gap:8px">${(data.themes||[]).map(t=>{
+          const max=Math.max(...data.themes.map(x=>x.weightSum||0),0.01);
+          const pct=Math.round((t.weightSum/max)*100);
+          return `<div style="display:grid;grid-template-columns:120px 1fr 64px;gap:10px;align-items:center;font-size:12px">
+            <a href="tema.html?slug=${encodeURIComponent(t.slug)}">${t.title}</a>
+            <div style="background:#0b171d;border-radius:6px;height:10px;overflow:hidden;border:1px solid var(--line)"><div style="width:${pct}%;height:100%;background:var(--brand)"></div></div>
+            <span style="color:var(--muted);text-align:right">${String(t.weightSum).replace('.',',')} %</span>
+          </div>`;
+        }).join('')}</div>
+        <p style="font-size:11px;color:var(--muted);margin-top:10px">Relative søjler (største tema = 100 % bredde). Eksponering, ikke anbefaling. Pr. ${fmtDate(data.positionsAsOf)}.</p>
+      </section>
       <div class="doors">${cards}</div>
       <p class="warn">Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.</p>`;
   </script>
