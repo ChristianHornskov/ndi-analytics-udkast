@@ -30,6 +30,44 @@
     .idea-tl .it::before{content:"";position:absolute;left:-21px;top:4px;width:10px;height:10px;border-radius:50%;background:var(--yellow);box-shadow:0 0 0 3px #0b171d}
     .idea-tl h3{font-size:15px;margin:0 0 4px;color:var(--cyan)}
     .idea-tl p{font-size:13px;color:var(--muted);margin:0;line-height:1.5}
+    .idea-sec{margin:32px 0 8px}
+    .idea-sec h2{font-size:18px;margin:0 0 6px}
+    .idea-sec .sub{font-size:13px;color:var(--muted);margin:0 0 12px;line-height:1.5}
+    .flod{background:#0b171d;border:1px solid var(--line);border-radius:14px;padding:14px;overflow-x:auto}
+    .flod svg{display:block;min-width:620px;width:100%;max-width:760px;height:auto;margin:0 auto}
+    .flod figcaption{font-size:12px;color:var(--faint);margin-top:8px;line-height:1.5}
+    .flod .lbl{font:600 12px var(--font);fill:var(--text)}
+    .flod .hint{font:11px var(--font);fill:var(--muted)}
+    .flod .cap{font:11px var(--font);fill:var(--faint);letter-spacing:.4px}
+    .vs{display:grid;gap:12px}
+    @media(min-width:720px){.vs{grid-template-columns:1fr auto 1fr;align-items:stretch}}
+    .vs .col{border:1px solid var(--line);border-radius:12px;padding:14px;background:#0b171d}
+    .vs .col.ndi{border-color:var(--brand)}
+    .vs .lab{font-size:11px;color:var(--muted);letter-spacing:.4px;margin-bottom:8px}
+    .vs .arrow{align-self:center;justify-self:center;color:var(--yellow);font-size:22px;transform:rotate(90deg)}
+    @media(min-width:720px){.vs .arrow{transform:none}}
+    .flod .flod-v{display:none}
+    @media(max-width:659px){.flod{overflow-x:visible}.flod .flod-h{display:none}.flod svg.flod-v{display:block;min-width:0;max-width:340px}}
+    .box1{border:1px dashed var(--faint);border-radius:8px;padding:10px;font-size:14px;color:var(--muted)}
+    .chips{display:flex;flex-wrap:wrap;gap:6px}
+    .chips span{border:1px solid var(--brand);border-radius:999px;padding:3px 10px;font-size:13px;color:var(--cyan)}
+    .vs p{font-size:13px;color:var(--muted);margin:10px 0 0;line-height:1.5}
+    .wk{display:grid;gap:12px}
+    @media(min-width:720px){.wk{grid-template-columns:1fr 1fr}}
+    .wk .col{border:1px solid var(--line);border-radius:12px;padding:14px;background:#0b171d}
+    .wk svg{display:block;width:100%;height:56px;margin:8px 0}
+    .wk svg path,.wk svg line{vector-effect:non-scaling-stroke}
+    .wk h3{font-size:14px;margin:0;color:var(--text)}
+    .wk p{font-size:13px;color:var(--muted);margin:6px 0 0;line-height:1.5}
+    .qgrid{display:grid;gap:12px}
+    @media(min-width:720px){.qgrid{grid-template-columns:repeat(3,1fr)}}
+    .q{margin:0;padding:14px 14px 12px;border-radius:12px;background:var(--panel);border-top:3px solid var(--cyan)}
+    .q p{margin:0;font-size:15px;line-height:1.45;color:var(--text)}
+    .q p::before{content:"«";color:var(--yellow)}
+    .q p::after{content:"»";color:var(--yellow)}
+    .q cite{display:block;margin-top:8px;font-size:12px;font-style:normal;color:var(--faint)}
+    @media (prefers-reduced-motion:no-preference){.flod .water{animation:flow 6s linear infinite}}
+    @keyframes flow{to{stroke-dashoffset:-48}}
   </style>
 </head>
 <body>
@@ -75,6 +113,126 @@
         <p>Den offentlige, forsinkede rapport — så siden aldrig afslører aktuelle handler. Bevidst.</p>
       </div>
     </div>
+
+
+    <section class="idea-sec" aria-labelledby="h-flod">
+      <h2 id="h-flod">Flodsystemet på ét billede</h2>
+      <p class="sub">«Vi ser AI-værdikæden som et flodsystem med en række dæmninger. Vandet repræsenterer efterspørgslen, og dæmningerne repræsenterer flaskehalse.» — NDI ugebrev, 30. marts 2026.</p>
+      <figure class="flod" style="margin:0">
+        <svg class="flod-h" viewBox="0 0 680 160" role="img" aria-labelledby="flod-t flod-d">
+          <title id="flod-t">Flodsystemet: efterspørgsel som vand, flaskehalse som dæmninger</title>
+          <desc id="flod-d">En flod løber fra venstre mod højre gennem fem dæmninger: energi, datacentre, halvledere, cloud og modeller samt apps og fysisk AI. De tre første er markeret som de flaskehalse, NDI selv har nummereret.</desc>
+          <text class="cap" x="8" y="22">EFTERSPØRGSEL (VAND)</text>
+          <text class="cap" x="672" y="22" text-anchor="end">NÅR EN DÆMNING LETTER, FLYTTER PRESSET →</text>
+          <path d="M8 80 C 120 60, 200 100, 330 80 S 540 60, 672 80" fill="none" stroke="#1d4a55" stroke-width="22" stroke-linecap="round"/>
+          <path class="water" d="M8 80 C 120 60, 200 100, 330 80 S 540 60, 672 80" fill="none" stroke="var(--cyan)" stroke-width="2" stroke-dasharray="10 14" opacity=".8"/>
+        <g>
+          <rect x="74" y="58" width="12" height="44" rx="3" fill="var(--yellow)"/>
+          <text class="lbl" x="80" y="128" text-anchor="middle">Energi</text>
+          <text class="hint" x="80" y="144" text-anchor="middle">1. flaskehals</text>
+        </g>
+        <g>
+          <rect x="204" y="58" width="12" height="44" rx="3" fill="var(--yellow)"/>
+          <text class="lbl" x="210" y="128" text-anchor="middle">Datacentre</text>
+          <text class="hint" x="210" y="144" text-anchor="middle">2. flaskehals</text>
+        </g>
+        <g>
+          <rect x="334" y="58" width="12" height="44" rx="3" fill="var(--yellow)"/>
+          <text class="lbl" x="340" y="128" text-anchor="middle">Halvledere</text>
+          <text class="hint" x="340" y="144" text-anchor="middle">3. flaskehals</text>
+        </g>
+        <g>
+          <rect x="464" y="58" width="12" height="44" rx="3" fill="var(--brand)" opacity=".55"/>
+          <text class="lbl" x="470" y="128" text-anchor="middle">Cloud &amp; modeller</text>
+          <text class="hint" x="470" y="144" text-anchor="middle">Svær at spotte</text>
+        </g>
+        <g>
+          <rect x="594" y="58" width="12" height="44" rx="3" fill="var(--brand)" opacity=".55"/>
+          <text class="lbl" x="600" y="128" text-anchor="middle">Apps &amp; fysisk AI</text>
+          <text class="hint" x="600" y="144" text-anchor="middle">Efterspørgsel fra bunden</text>
+        </g>
+        </svg>
+        <svg class="flod-v" viewBox="0 0 320 520" role="img" aria-labelledby="flodv-t flodv-d">
+          <title id="flodv-t">Flodsystemet: efterspørgsel som vand, flaskehalse som dæmninger</title>
+          <desc id="flodv-d">En flod løber oppefra og ned gennem fem dæmninger: energi, datacentre, halvledere, cloud og modeller samt apps og fysisk AI. De tre første er markeret som de flaskehalse, NDI selv har nummereret.</desc>
+          <text class="cap" x="8" y="22">EFTERSPØRGSEL (VAND) ↓</text>
+          <path d="M62 40 C 42 130, 82 200, 62 270 S 42 420, 62 500" fill="none" stroke="#1d4a55" stroke-width="22" stroke-linecap="round"/>
+          <path class="water" d="M62 40 C 42 130, 82 200, 62 270 S 42 420, 62 500" fill="none" stroke="var(--cyan)" stroke-width="2" stroke-dasharray="10 14" opacity=".8"/>
+        <g>
+          <rect x="38" y="90" width="48" height="12" rx="3" fill="var(--yellow)"/>
+          <text class="lbl" x="110" y="94">Energi</text>
+          <text class="hint" x="110" y="110">1. flaskehals</text>
+        </g>
+        <g>
+          <rect x="38" y="174" width="48" height="12" rx="3" fill="var(--yellow)"/>
+          <text class="lbl" x="110" y="178">Datacentre</text>
+          <text class="hint" x="110" y="194">2. flaskehals</text>
+        </g>
+        <g>
+          <rect x="38" y="258" width="48" height="12" rx="3" fill="var(--yellow)"/>
+          <text class="lbl" x="110" y="262">Halvledere</text>
+          <text class="hint" x="110" y="278">3. flaskehals</text>
+        </g>
+        <g>
+          <rect x="38" y="342" width="48" height="12" rx="3" fill="var(--brand)" opacity=".55"/>
+          <text class="lbl" x="110" y="346">Cloud &amp; modeller</text>
+          <text class="hint" x="110" y="362">Svær at spotte</text>
+        </g>
+        <g>
+          <rect x="38" y="426" width="48" height="12" rx="3" fill="var(--brand)" opacity=".55"/>
+          <text class="lbl" x="110" y="430">Apps &amp; fysisk AI</text>
+          <text class="hint" x="110" y="446">Efterspørgsel fra bunden</text>
+        </g>
+          <text class="cap" x="110" y="494">NÅR EN DÆMNING LETTER,</text>
+          <text class="cap" x="110" y="509">FLYTTER PRESSET ↓</text>
+        </svg>
+        <figcaption>Gul = de tre flaskehalse, NDI har nummereret (energi, datacentre, halvledere). Illustration af en tankegang, ikke en prognose eller en anbefaling. <a href="vaerdikaeder.html#kap-flaskehalse">Se flaskehalse på værdikæder →</a></figcaption>
+      </figure>
+    </section>
+
+    <section class="idea-sec" aria-labelledby="h-vs">
+      <h2 id="h-vs">Én kasse eller flere tags</h2>
+      <p class="sub">Samme selskab, to måder at sortere på. Eksempel fra den forsinkede beholdning pr. 1. juni 2026.</p>
+      <div class="vs">
+        <div class="col">
+          <div class="lab">KLASSISK SEKTOR (GICS)</div>
+          <div class="box1">Tesla → <strong>Forbrugsgoder</strong> (bilproducent)</div>
+          <p>Én kasse. Energilagring og robotter forsvinder ud af billedet.</p>
+        </div>
+        <div class="arrow" aria-hidden="true">→</div>
+        <div class="col ndi">
+          <div class="lab">NDI-TEMAER (MULTI-TAG)</div>
+          <div class="chips"><span>Fysisk tech</span><span>Energi</span></div>
+          <p>Flere tags samtidig, så eksponeringen mod flere led er synlig. Tags beskriver eksponering — ikke et syn på aktien.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="idea-sec" aria-labelledby="h-wk">
+      <h2 id="h-wk">Vægt er ikke kurs</h2>
+      <p class="sub">To linjer, der kan ligne hinanden — men måler noget helt forskelligt.</p>
+      <div class="wk">
+        <div class="col">
+          <h3>Vægt i fonden</h3>
+          <svg viewBox="0 0 200 50" preserveAspectRatio="none" aria-hidden="true"><path d="M4 34 L40 32 L76 30 L112 31 L148 29 L196 30" fill="none" stroke="var(--brand)" stroke-width="2"/><line x1="4" y1="44" x2="196" y2="44" stroke="var(--line)"/></svg>
+          <p>Hvor stor en andel af fonden selskabet udgør. Flad og lav, fordi fonden er bredt spredt på flere hundrede selskaber tæt på ligevægt. Det er det, siden viser.</p>
+        </div>
+        <div class="col">
+          <h3>Aktiekurs</h3>
+          <svg viewBox="0 0 200 50" preserveAspectRatio="none" aria-hidden="true"><path d="M4 30 L28 18 L52 36 L76 12 L100 40 L124 22 L148 8 L172 34 L196 20" fill="none" stroke="var(--faint)" stroke-width="2" stroke-dasharray="4 4"/><line x1="4" y1="44" x2="196" y2="44" stroke="var(--line)"/></svg>
+          <p>Prisen på én aktie på børsen. Vises <strong>ikke</strong> her — siden handler om fonden, ikke om enkeltaktier. <a href="om-data.html#g-vaegt">Ordliste: vægt →</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="idea-sec" aria-labelledby="h-q">
+      <h2 id="h-q">Tre sætninger, siden bygger på</h2>
+      <div class="qgrid">
+        <figure class="q"><p>Vores mål er ikke at finde den ene vinder</p><cite>NDI ugebrev, 13. juli 2026</cite></figure>
+        <figure class="q"><p>Compute-mangel: vi står i det modsatte af en boble</p><cite>NDI ugebrev, 4. maj 2026 · NDI's vurdering, ikke en prognose</cite></figure>
+        <figure class="q"><p>Kunden køber løsningen på opgaven, ikke modellen bag</p><cite>NDI ugebrev, 27. juli 2026</cite></figure>
+      </div>
+    </section>
 
     <div class="doors" style="margin-top:20px">
       <a class="door" href="vaerdikaeder.html"><strong>Teknologiske værdikæder</strong><span>Treemap, sunburst, tidslinje, flaskehalse.</span><span class="go">Åbn →</span></a>

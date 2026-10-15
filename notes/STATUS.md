@@ -275,3 +275,27 @@ Næste: blurbs for energiled, flere krydslinks for kvante og vaerdikaede.html. I
 - **selskaber.html:** nu reel A-Z (før vægt-sorteret trods navnet): sortér Navn/Vægt/Tema, bogstav-/tema-hop, gruppe-rækker, multi-tags + forslag-badge, søgning i tema, HTML-escaping af `q` (XSS), tom tilstand m. FAQ-link.
 - Test: smoke.mjs fail 0. **Præ-eksisterende** stale asserts (ikke lane-B-filer): smoke-quality "NDI-linsen → værdikæde" og smoke-cycle3 "entré: linser" forventer `vaerdikaede.html`, men links peger nu på `vaerdikaeder.html` → testen skal opdateres af ejeren af scripts/.
 - precheck exit 0. Branch `lane-B` klar til merge-review. Næste: temaer-hub polish (quantum/space-synlighed, forslag-banner).
+
+## Fra Claude lane-C (ordliste) · ~23:40 CEST
+- `docs/om-data.html`: ordliste 26 → **55 begreber**, grupperet i 4 paneler (Afkast og risiko · Fonden og andelsklasser · Portefølje, temaer og modenhed · Værdikæder og flodsystemet) + «Spring til»-links. Alle eksisterende `#g-*`-ankre bevaret.
+- Nye: månedsafkast, 100k-eksempel, benchmark, udsving, variance drag, underwater, andelsklasse, løbende omkostninger, vægt («ikke kurs» → adresserer UX MUST 3 i tekst), spredning, multi-tag (Tesla, verificeret mod multi-tags.json), Andet, AI-udkast, GICS, præ-revenue/præ-profit, value, markedsværdi, led, dæmning/flaskehals (5 dæmninger fra value-chains.json), NDI-blik, compute, hyperscaler, foundry, litografi, optik/fotonik, agentisk AI, fysisk AI, SMR, SpaceTech (Musk kun citat).
+- AI-værdikæde-definitionen rettet til 13-leds-kæden (var 5 led). P/E-definition har nu Mads' «høj = forventning / lav = bekymring».
+- `laer/faq.html`: «Sådan tænker NDI»-svar nævnte 4 af 5 principper → alle 5.
+- Test: Playwright 375 px, 55 dt / 6 paneler, 0 konsolfejl; FAQ-søg «dæmning» rammer ordlisten. precheck PASSED.
+- Branch `lane-C` klar til merge. Næste: UX-review 00:00 + ideer.html visual variety.
+
+
+## Fra Claude lane-C (idéer + sidekort) · ~23:45 CEST
+- `docs/ideer.html`: +4 visuelle former — flodsystem-SVG (5 dæmninger, 3 nummererede i gult, citat 30. mar 2026), «Én kasse eller flere tags» (Tesla GICS vs multi-tag), «Vægt er ikke kurs» (to mini-linjer), 3 citatkort med ugebrevsdato. Reduced-motion respekteret.
+- `docs/kort.html`: dør-gitter var brudt af løse links; nu 6 grupper + alle 10 lær-sider.
+- Notes: UX-review lane-C checkpoint, VIDENSBOT-live-check (ordscan ren), HANDOFF demo-trin 7 opdateret.
+- Test: Playwright 375/1280, 0 konsolfejl, 0 døde interne links, ingen h-overflow. precheck PASSED.
+- Branch `lane-C` klar til merge. Næste: UX-review 00:00 + FAQ/ordliste mobil-længde.
+
+
+## Fra Claude lane-C (mobil-længde) · ~23:50 CEST
+- `laer/faq.html`: standardvisning = 10 korte svar + type-filter + «Prøv»-chips → 10.700 → ~1.950 px på 375. Søgning skifter til alle typer. JS-filen urørt.
+- `om-data.html`: ordlistegrupper som `<details>` (foldet < 700 px, åbne på desktop/uden JS), dybe `#g-*`-links åbner rigtig gruppe → 8.500 → ~1.500 px.
+- `ideer.html`: lodret flod-SVG under 660 px (alle 5 dæmninger uden rul).
+- HANDOFF demo-trin 7–8 opdateret. smoke 52/52, precheck PASSED.
+- Branch `lane-C` klar til merge. Næste: UX-review 00:00 (wall-clock) + Vidensbot-copy på invester/risici/ndi-perspektiv.

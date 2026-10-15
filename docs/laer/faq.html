@@ -18,6 +18,16 @@
  <meta property="og:image:alt" content="NDI Analytics - udkast. Gå på opdagelse i porteføljen.">
  <meta name="twitter:card" content="summary_large_image">
  <!-- og:end -->
+ <style>
+  .faq-tools{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 6px}
+  .faq-quick{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0 2px;font-size:12px;color:var(--faint)}
+  .faq-quick button{font-size:12px;min-height:32px;padding:0 10px}
+  .faq-note{font-size:12px;color:var(--faint);margin:-6px 0 12px}
+  .faq-note button{background:none;border:0;padding:0;color:var(--brand);text-decoration:underline;font-size:12px;cursor:pointer}
+  #faq-list[data-filter="Spørgsmål"] .faq-hit:not([data-kind="Spørgsmål"]),
+  #faq-list[data-filter="Artikel"] .faq-hit:not([data-kind="Artikel"]),
+  #faq-list[data-filter="Ordliste"] .faq-hit:not([data-kind="Ordliste"]){display:none}
+ </style>
 </head>
 <body>
  <a class="skip" href="#main">Gå til indhold</a>
@@ -31,8 +41,22 @@
  <p class="lede">Søg på tværs af korte svar, alle lær-artikler og ordlisten. Søgningen sker i din browser. Generel information. Ikke rådgivning.</p>
  <label for="faq-q" class="sr-only">Søg i FAQ, lær-artikler og ordliste</label>
  <input id="faq-q" class="faq-input" type="search" placeholder="Søg fx “udbytte”, “spredning”, “P/E”…" autocomplete="off">
+ <div class="faq-quick" id="faq-quick"><span>Prøv:</span>
+  <button type="button" class="control" data-q="udbytte">udbytte</button>
+  <button type="button" class="control" data-q="spredning">spredning</button>
+  <button type="button" class="control" data-q="dæmning">dæmning</button>
+  <button type="button" class="control" data-q="drawdown">drawdown</button>
+  <button type="button" class="control" data-q="vægt">vægt</button>
+ </div>
  <p id="faq-count" class="faq-count" aria-live="polite"></p>
- <div id="faq-list" class="faq-list"></div>
+ <div class="faq-tools" role="group" aria-label="Vis typer af træf">
+  <button type="button" class="control" data-f="Spørgsmål" aria-pressed="true">Korte svar</button>
+  <button type="button" class="control" data-f="Artikel" aria-pressed="false">Artikler</button>
+  <button type="button" class="control" data-f="Ordliste" aria-pressed="false">Ordliste</button>
+  <button type="button" class="control" data-f="" aria-pressed="false">Alle</button>
+ </div>
+ <p id="faq-note" class="faq-note"></p>
+ <div id="faq-list" class="faq-list" data-filter="Spørgsmål"></div>
  <p class="warn">Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.</p>
  </main>
  <script type="module">
@@ -47,7 +71,7 @@
  { q: 'Hvor aktuelle er beholdningerne?', a: 'Forsinket snapshot (i udkastet pr. 1. juni 2026). Ikke dagsaktuel.', href: 'forsinket-beholdning.html' },
  { q: 'Hvorfor er CAGR lavere end gennemsnittet?', a: 'Udsving trækker det geometriske årlige afkast under et simpelt gennemsnit. Tænkt eksempel på siden.', href: 'variance-drag.html' },
  { q: 'Hvad er drawdown?', a: 'Fald fra top i fondens totalafkast-serie. Se drawdown-siden.', href: '../drawdown.html' },
- { q: 'Sådan tænker NDI', a: 'Fem principper: retning kan skimtes, vindere kan ikke udpeges sikkert, bred spredning, lang horisont.', href: 'saadan-taenker-vi.html' },
+ { q: 'Sådan tænker NDI', a: 'Fem principper: teknologi er drivkraften, udviklingen frem for den enkelte vinder (bred spredning), høj variation er et grundvilkår, P/E siger mindre om selskaber, der investerer tungt, og lang horisont.', href: 'saadan-taenker-vi.html' },
  ];
  initFaq({
  input: document.getElementById('faq-q'),
@@ -55,6 +79,42 @@
  count: document.getElementById('faq-count'),
  curated,
  });
+
+ // Sidelokal visning: uden søgeord vises kun de korte svar (ellers ~75 kort ≈ 10.000 px på mobil).
+ // Når der søges, vises alle typer, medmindre læseren selv har valgt en type.
+ const input = document.getElementById('faq-q');
+ const list = document.getElementById('faq-list');
+ const note = document.getElementById('faq-note');
+ const btns = [...document.querySelectorAll('.faq-tools [data-f]')];
+ const LABEL = { 'Spørgsmål': 'korte svar', 'Artikel': 'artikler', 'Ordliste': 'ordlisteopslag' };
+ let chosen = false;
+ const setFilter = (f) => {
+  list.dataset.filter = f;
+  btns.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.f === f)));
+  refresh();
+ };
+ function refresh() {
+  const hits = [...list.querySelectorAll('.faq-hit')];
+  hits.forEach((h) => { h.dataset.kind = h.querySelector('.faq-kind')?.textContent.trim() || ''; });
+  const f = list.dataset.filter;
+  if (!f || !hits.length) { note.textContent = ''; return; }
+  const shown = hits.filter((h) => h.dataset.kind === f).length;
+  const of = `${hits.length} ${input.value.trim() ? 'træf' : 'opslag i alt'}`;
+  note.innerHTML = shown
+   ? `Viser ${shown} ${LABEL[f]} af ${of}. <button type="button" data-all>Vis alle</button>`
+   : `Ingen ${LABEL[f]} blandt ${of}. <button type="button" data-all>Vis alle</button>`;
+ }
+ new MutationObserver(refresh).observe(list, { childList: true });
+ btns.forEach((b) => b.addEventListener('click', () => { chosen = true; setFilter(b.dataset.f); }));
+ note.addEventListener('click', (e) => { if (e.target.closest('[data-all]')) { chosen = true; setFilter(''); } });
+ input.addEventListener('input', () => { if (!chosen) setFilter(input.value.trim() ? '' : 'Spørgsmål'); });
+ document.getElementById('faq-quick').addEventListener('click', (e) => {
+  const b = e.target.closest('[data-q]');
+  if (!b) return;
+  input.value = b.dataset.q;
+  input.dispatchEvent(new Event('input'));
+ });
+ if (new URLSearchParams(location.search).get('q')) setFilter('');
  </script>
 </body>
 </html>

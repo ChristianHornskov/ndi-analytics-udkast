@@ -65,3 +65,11 @@ Indhold fra `VIDENSBOT-vaerdikaeder.md` landet i `vaerdikaeder.html` + `value-ch
 - Musk/SpaceX kun som citat med kilde (BLOG 12. okt 2026).
 - Holdings-eksempler bundet til asOf 2026-06-01 (recheck ved snapshot-skift).
 - Fintech = tema-note, ikke kæde.
+
+
+## 2026-10-15 ~23:45 — lane-C indholdssider (Claude)
+Sider: ideer, kort, om-data, invester, risici, ndi-perspektiv, laer/*.
+- Ordscan (`øge eksponering|overvægt|sikkert køb|vinder|bedste|købsmulighed|kursmål|vil stige|anbefal`): alle træf er negationer eller lovpligtig tekst («vinderne kan ikke udpeges», «ikke bevidste temaovervægte», «anbefalet investeringsperiode ifølge KID»). Ingen handelsprog.
+- `ideer.html` nye citater er ordrette fra Vidensbot-filen med ugebrevsdato (13. jul, 4. maj, 27. jul, 30. mar 2026). «Modsatte af en boble» står med «NDI's vurdering, ikke en prognose».
+- Flodsystem-SVG nummererer kun de tre flaskehalse, NDI selv nummererer (energi, datacentre, halvledere); cloud/apps vist neutralt.
+- Tesla-eksempel: GICS forbrugsgoder vs. tags fysisk tech + energi (multi-tags.json, 1. jun 2026). Teksten siger «tags beskriver eksponering — ikke et syn på aktien».
