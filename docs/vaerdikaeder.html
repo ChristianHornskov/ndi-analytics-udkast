@@ -175,6 +175,42 @@
     .sp-route a:hover,.sp-route a:focus-visible{border-color:var(--yellow)}
     .sp-route .no{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:#16323b;font-size:12px}
     .sp-route small{display:block;color:var(--muted);font-size:11px}
+    .bands{margin:0}
+    .sp-learn>.gloss-wrap{grid-column:1/-1}
+    .bands h3{font-size:15px;color:var(--cyan);margin:0 0 4px}
+    .bd-list{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column-reverse;gap:0;border-left:2px solid var(--brand);margin-left:12px}
+    .bd-list>li{position:relative;padding:8px 10px 8px 22px;font-size:13px;line-height:1.45;color:var(--muted)}
+    .bd-list>li+li{border-bottom:1px dashed #2a4650}
+    .bd-list .pin{position:absolute;left:-14px;top:8px;display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:#16323b;border:1px solid var(--line);font-size:13px}
+    .bd-list>li.on .pin,.bd-list>li:focus-within .pin{border-color:var(--yellow)}
+    .bd-list h4{margin:0;font-size:13.5px;color:var(--text)}
+    .bd-list h4 small{font-weight:400;color:var(--yellow);margin-left:6px;font-size:11.5px}
+    .bd-list p{margin:2px 0 0}
+    .bd-list .mn-chips{margin-top:6px}
+    .alt-svg .zone{transition:fill-opacity .2s,stroke-width .2s}
+    .alt-svg rect.zone.on{fill-opacity:.85}
+    .alt-svg line.zone.on{stroke-width:6}
+    @media(prefers-reduced-motion:reduce){.alt-svg .zone{transition:none}}
+    .quiz{margin-top:16px;border:1px solid var(--line);border-left:3px solid var(--cyan);border-radius:12px;padding:12px 14px;background:linear-gradient(180deg,#0e2027,#0b171d)}
+    .quiz h3{font-size:15px;color:var(--cyan);margin:0 0 4px}
+    .qz-list{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:10px;counter-reset:qz}
+    @media(min-width:760px){.qz-list{grid-template-columns:1fr 1fr}}
+    .qz-list>li{counter-increment:qz;border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:#0b171d;font-size:13px;line-height:1.45}
+    .qz-list fieldset{border:0;margin:0;padding:0;min-width:0}
+    .qz-list legend{padding:0;font-weight:700;color:var(--text);font-size:13.5px;margin-bottom:6px}
+    .qz-list legend::before{content:counter(qz) ". ";color:var(--cyan)}
+    .qz-opts{display:flex;flex-direction:column;gap:5px}
+    .qz-opts button{text-align:left;font:inherit;font-size:13px;color:var(--text);background:#10232a;border:1px solid var(--line);border-radius:8px;padding:6px 10px;cursor:pointer;min-height:34px}
+    .qz-opts button:hover:not([disabled]),.qz-opts button:focus-visible{border-color:var(--yellow)}
+    .qz-opts button[disabled]{cursor:default;opacity:.55}
+    .qz-opts button.ok{opacity:1;border-color:var(--cyan);background:#0f2e33}
+    .qz-opts button.ok::after{content:" ✓";color:var(--cyan);font-weight:700}
+    .qz-opts button.no{opacity:1;border-color:#829da0;border-style:dashed}
+    .qz-opts button.no::after{content:" ✗";color:#829da0}
+    .qz-why{margin:8px 0 0;color:var(--muted);border-left:3px solid var(--yellow);padding:2px 0 2px 8px}
+    .qz-why b{color:var(--text)}
+    .qz-score{margin:10px 0 0;font-size:13px;color:var(--text)}
+    .qz-score:empty{display:none}
     .risk{margin-top:16px;border:1px solid var(--line);border-left:3px solid var(--yellow);border-radius:12px;padding:12px 14px;background:linear-gradient(180deg,#14201f,#0b171d)}
     .risk h3{font-size:15px;color:var(--yellow);margin:0 0 4px}
     .rk-grid{display:grid;gap:10px;margin-top:10px}
@@ -410,6 +446,7 @@
             <p class="src" style="margin-top:8px"><a href="?kaede=space#sp-trip" data-sec="space:sp-trip">🛰 Følg én satellit fra fabrik til tjeneste, trin for trin →</a></p>
             <p class="src" style="margin-top:4px"><a href="?kaede=space#sp-money" data-sec="space:sp-money">🔁 Hvordan tjener rumkæden penge? Én gang eller løbende →</a></p>
             <p class="src" style="margin-top:4px"><a href="?kaede=space#sp-risk" data-sec="space:sp-risk">⚠ Hvad kan gå galt? Seks usikkerheder og hvor de rammer →</a></p>
+            <p class="src" style="margin-top:4px"><a href="?kaede=space#sp-quiz" data-sec="space:sp-quiz">✓ Tjek dig selv: fem spørgsmål om rumkæden →</a></p>
           </div>
         </div>
         <section class="cost" id="sp-cost" aria-labelledby="sp-cost-h" hidden>
@@ -459,12 +496,25 @@
             <figcaption class="src" style="margin-top:6px">Logaritmisk skala: hvert trin op er ti gange længere væk. Klik et navn for at åbne leddet.</figcaption>
             <p class="sp-lat" id="sp-latency"></p>
           </figure>
+          <section class="bands" id="sp-bands" aria-labelledby="bd-h" hidden>
+            <h3 id="bd-h"></h3>
+            <p class="src" id="bd-lede"></p>
+            <ol class="bd-list" id="bd-list"></ol>
+            <p class="src" id="bd-note" style="margin-top:6px"></p>
+          </section>
           <details class="gloss-wrap" id="gloss-wrap">
             <summary><h3>Rum-ordbog</h3><span class="src" id="gloss-count">Ord, der gør kæden lettere at læse</span></summary>
             <dl class="gloss" id="space-gloss"></dl>
             <p class="src" id="gloss-note" style="margin-top:8px"></p>
           </details>
         </div>
+        <section class="quiz" id="sp-quiz" aria-labelledby="qz-h" hidden>
+          <h3 id="qz-h"></h3>
+          <p class="src" id="qz-lede"></p>
+          <ol class="qz-list" id="qz-list"></ol>
+          <p class="qz-score" id="qz-score" aria-live="polite"></p>
+          <p class="src" id="qz-note" style="margin-top:6px"></p>
+        </section>
       </div>
 
       <div class="q-pane" id="q-pane">
@@ -919,6 +969,62 @@
       document.getElementById('mn-note').textContent = m.note || '';
       document.getElementById('sp-money').hidden = false;
     })(sp?.money);
+    // Rum: hvem arbejder hvor højt (baggrund; antal pr. led)
+    (function renderBands(b) {
+      if (!b?.items?.length) return;
+      const asOf = fmtDate(pack.asOf);
+      const chip = (id) => {
+        const l = sp.links.find(x => x.id === id);
+        return l ? `<li><a href="#lk-${esc(l.id)}" data-open="${esc(l.id)}" aria-label="${esc(l.short || l.label)}: ${l.count || 0} selskaber pr. ${asOf}. Åbn leddet"><span aria-hidden="true">${l.icon}</span>${esc(l.short || l.label)} <b>${l.count || 0}</b></a></li>` : '';
+      };
+      document.getElementById('bd-h').textContent = b.title;
+      document.getElementById('bd-lede').textContent = b.lede;
+      const list = document.getElementById('bd-list');
+      list.innerHTML = b.items.map(x =>
+        `<li data-band="${esc(x.key)}"><span class="pin" aria-hidden="true">${x.icon}</span><h4>${esc(x.k)}<small>${esc(x.km)}</small></h4><p>${esc(x.t)}</p>`
+        + `<ul class="mn-chips" aria-label="Led i ${esc(x.k.toLowerCase())}">${x.links.map(chip).join('')}</ul></li>`).join('');
+      // Fremhæv det tilsvarende bånd på højdeskalaen
+      const zone = (k, on) => document.querySelectorAll(`#alt-host [data-zone="${k}"]`).forEach(z => z.classList.toggle('on', on));
+      list.querySelectorAll('li[data-band]').forEach(li => {
+        const k = li.dataset.band;
+        ['mouseenter', 'focusin'].forEach(e => li.addEventListener(e, () => { li.classList.add('on'); zone(k, true); }));
+        ['mouseleave', 'focusout'].forEach(e => li.addEventListener(e, () => { li.classList.remove('on'); zone(k, false); }));
+      });
+      document.getElementById('bd-note').textContent = b.note || '';
+      document.getElementById('sp-bands').hidden = false;
+    })(sp?.bands);
+    // Rum: tjek dig selv (vores egne spørgsmål; intet gemmes)
+    (function renderQuiz(z) {
+      if (!z?.items?.length) return;
+      const list = document.getElementById('qz-list');
+      const score = document.getElementById('qz-score');
+      let answered = 0, right = 0;
+      document.getElementById('qz-h').textContent = z.title;
+      document.getElementById('qz-lede').textContent = z.lede;
+      list.innerHTML = z.items.map((x, i) => {
+        const href = x.sec.startsWith('lk-') ? `#${esc(x.sec)}" data-open="${esc(x.sec.slice(3))}` : `?kaede=space#${esc(x.sec)}" data-sec="space:${esc(x.sec)}`;
+        return `<li><fieldset><legend>${esc(x.q)}</legend><div class="qz-opts">`
+          + x.a.map((a, j) => `<button type="button" data-q="${i}" data-a="${j}">${esc(a)}</button>`).join('')
+          + `</div></fieldset><p class="qz-why" id="qz-why-${i}" aria-live="polite" hidden><b></b> ${esc(x.why)} <a href="${href}">${esc(x.more)} →</a></p></li>`;
+      }).join('');
+      list.addEventListener('click', (e) => {
+        const btn = e.target.closest('button[data-q]');
+        if (!btn || btn.disabled) return;
+        const i = +btn.dataset.q, j = +btn.dataset.a, x = z.items[i];
+        btn.closest('.qz-opts').querySelectorAll('button').forEach(b => {
+          b.disabled = true;
+          if (+b.dataset.a === x.ok) b.classList.add('ok');
+          else if (b === btn) b.classList.add('no');
+        });
+        const why = document.getElementById(`qz-why-${i}`);
+        why.querySelector('b').textContent = j === x.ok ? 'Rigtigt.' : 'Ikke helt.';
+        why.hidden = false;
+        answered++; if (j === x.ok) right++;
+        score.textContent = answered === z.items.length ? `${z.done} ${right} af ${z.items.length} rigtige.` : `${answered} af ${z.items.length} besvaret.`;
+      });
+      document.getElementById('qz-note').textContent = z.note || '';
+      document.getElementById('sp-quiz').hidden = false;
+    })(sp?.quiz);
     // Rum: læse-rute øverst i fanen
     (function renderRoute(r) {
       if (!r?.stops?.length) return;
@@ -970,9 +1076,9 @@
       // Zoner: LEO og MEO som bånd på aksen
       [['LEO', 160, 2000, '#89aeb4'], ['MEO', 2000, 35786, '#5a7f88']].forEach(([lab, a, b, c]) => {
         const ya = Y(a), yb = Y(b), ym = (ya + yb) / 2;
-        html += `<rect x="${ax - 2}" y="${yb}" width="18" height="${ya - yb}" rx="3" fill="${c}" fill-opacity=".35"/><text x="${ax + 11}" y="${ym}" fill="var(--text)" font-size="9.5" font-weight="700" text-anchor="middle" transform="rotate(-90 ${ax + 11} ${ym})">${lab}</text>`;
+        html += `<rect class="zone" data-zone="${lab.toLowerCase()}" x="${ax - 2}" y="${yb}" width="18" height="${ya - yb}" rx="3" fill="${c}" fill-opacity=".35"/><text x="${ax + 11}" y="${ym}" fill="var(--text)" font-size="9.5" font-weight="700" text-anchor="middle" transform="rotate(-90 ${ax + 11} ${ym})">${lab}</text>`;
       });
-      html += `<line x1="${ax - 2}" y1="${Y(35786)}" x2="${ax + 16}" y2="${Y(35786)}" stroke="var(--yellow)" stroke-width="2"/>`;
+      html += `<line class="zone" data-zone="geo" x1="${ax - 2}" y1="${Y(35786)}" x2="${ax + 16}" y2="${Y(35786)}" stroke="var(--yellow)" stroke-width="2"/>`;
       html += `<line x1="${ax}" y1="${y0}" x2="${W - 16}" y2="${y0}" stroke="var(--yellow)" stroke-opacity=".5" stroke-dasharray="3 4"/><text x="${W - 16}" y="${y0 + 14}" text-anchor="end" fill="var(--yellow)" font-size="10">rummets grænse ≈ 100 km</text>`;
       svg.innerHTML = html;
       // Etiketter til højre, skubbet fra hinanden så de ikke overlapper

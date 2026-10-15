@@ -133,3 +133,7 @@ Widgetten er ét panel. Call-to-action står udenfor, med link til største fald
 - Energi-usikkerheder genbruger rummets gule kort, men strimlen er en **strømvej**: afrundede firkanter i stedet for cirkler, "›" som forbindelse i stedet for streg og et dæmpet "→ datacenter" i enden. Så kan man se forskel på rumkæden (op i højden) og energikæden (frem mod datacentret).
 - vaerdikaede.html: kæde-kortene har fået en "⚠"-linje ved siden af ordbogens "◇".
 - Kun sidens egen CSS (`.rk-strip.flow`, `.e-pane .risk h3`).
+
+### lane-A · 2026-10-16 · rum: højdebånd og tjek dig selv
+- **Højdebånd** (`#sp-bands`): lodret tidslinje-agtig liste med runde ikon-nåle på en brand-farvet akse, vist fra Månen øverst til jorden nederst (`column-reverse`, så DOM-rækkefølgen stadig går nedefra og op). Hover eller fokus på et bånd tænder LEO, MEO eller GEO på højdeskalaen ved siden af. Ny form i forhold til kortgitre og strimler.
+- **Tjek dig selv** (`#sp-quiz`): spørgsmålskort med svarknapper, ✓ i cyan og ✗ med stiplet kant, og en gul forklaringslinje med link. Første interaktive element på siden, der giver feedback. Kun lokal CSS i vaerdikaeder.html.

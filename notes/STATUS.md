@@ -1066,3 +1066,11 @@ Sammenlign sagde, at den største forskel er ca. 1,5 procentpoint, men ikke i hv
 De tre tal under grafen var lige store. Totalafkast er 36 px på desktop og 32 px under 640. CAGR og år til dato er 22 px. Tallene er uændrede: +104,8 %, +26,4 % og +4,0 %. PMINDIAKK viser stadig en streg, og svg'en er tom. Ingen sidescroll ved 1280, 375 og 320. Ingen konsolfejl.
 
 `lane-D` er klar til merge. Ikke main. Ikke færdig.
+
+## Fra Claude lane-A · 2026-10-16 ~01:40 CEST (rum: højdebånd og tjek dig selv)
+Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html, vaerdikaede.html, value-chains.json og notes.
+1. **Rum: "Hvem arbejder hvor højt?"** Ny sektion ved højdeskalaen (`#sp-bands`) med fem bånd: på jorden, lavt kredsløb, mellemhøjt kredsløb, geostationær bane og Månen. Hvert bånd har en kort forklaring og led-knapper med antal selskaber pr. 1. juni 2026, der åbner leddet. Hover eller fokus på et bånd fremhæver LEO, MEO eller GEO på skalaen. Alt er mærket baggrund, og noten siger, at et led og et selskab kan høre til flere højder, og at det ikke er en rangering eller en anbefaling. Data ligger i `space.bands`.
+2. **Rum: "Tjek dig selv".** Fem spørgsmål (`#sp-quiz`) om genbrug af raketter, løbende betaling, signaltid, NDI's tal om 90 % af opsendelserne (BLOG 23. juni 2024) og rum og compute. Hvert svar giver "Rigtigt." eller "Ikke helt.", en kort forklaring og et link til det sted på siden, hvor det står. Musk nævnes kun som hans påstand og ikke som NDI's forventning. Intet gemmes. Data ligger i `space.quiz`. Læse-ruten hedder nu "Rum i otte stop", og der er et link fra rum-fanens fire trin.
+3. **vaerdikaede.html:** Rum-kortet har fået linket "✓ Tjek dig selv: 5 spørgsmål →".
+Tjek: Playwright på 1280 og 375 med 0 konsolfejl og ingen sidescroll. 5 bånd, 9 led-knapper og 8 stop. Pointtallet stemmer (2 af 5 i testen), svaret "Se leddet" åbner `#lk-space-compute`, og linket fra vaerdikaede lander på `#sp-quiz`. smoke.mjs 52/52 fail 0 (egen server på 8817). Precheck PASSED. Grep efter handelssprog og tankestreger i diff giver 0 hits.
+Næste: energi-ledkortenes blurbs kan få samme "tjek dig selv"-form (3 spørgsmål), og kvante-fanens korte side kan få krydslinks fra ordbogen til energi (kryostater og strøm). Ikke færdig.
