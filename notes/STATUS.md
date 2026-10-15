@@ -495,3 +495,15 @@ Oklo, Nano Nuclear og Terrestrial er tjekket samme nat. Forsiderne beskriver pro
 Tjekket i Chromium ved 375 px på SMR-leddet og på NuScale-siden. AI-udkast er med. "tjekket mod kilden" er ikke med. 77 MW står stadig. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `10f22ce` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 00:48 CEST. Nyhedsarkivets konceptkort er delt i korte afsnit. Ikke færdig.**
+
+Energikortet er fem afsnit. Rumkortet er tre. Ordene er de samme som i kæden. Linket til værdikædesiden er der.
+
+Tjekket i Chromium ved 375 og 1280 px. Sætningerne står. Ingen konsolfejl. Ingen vandret scroll.
+
+Neutron-siden sagde samme nat stadig, at første flyvning ligger foran. Teksten om, at Neutron ikke er fløjet, er derfor ikke ændret.
+
+**Push:** `lane-E` @ `42f5f27` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

@@ -107,3 +107,7 @@ Taseko skriver 9. oktober 2026, at Florence Copper er i kommerciel produktion. D
 ## NuScale 6 GW · 2026-10-16 00:46 CEST
 
 Forsiden siger "to Power" et program på op til 6 GW. Teksten kalder det udvikling, ikke et værk i drift. "Largest" og "proven" er ikke kopieret. Oklo og Nano Nuclear beskriver stadig projekter. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Korte afsnit i arkivet · 2026-10-16 00:48 CEST
+
+Energikortet er fem afsnit og rumkortet tre. Ingen nye påstande. Chromium ved 375 og 1280 px. Ingen konsolfejl. Ingen vandret scroll.
