@@ -1,0 +1,56 @@
+<!doctype html><html lang="da"><head><base href="https://ndigrafdatab5174313.blob.core.windows.net/graph/"><meta charset="utf-8"><meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NewDeal Invest – graf v2 · test</title><style>body{margin:0;background:#0b151b;color:#eaf1f2;font:16px system-ui}iframe{width:100%;height:1500px;border:0;display:block}#status{padding:24px;margin:16px;border:1px solid #36515a;border-radius:12px;background:#152930;min-height:150px;line-height:1.6}#status:after{content:"";display:block;margin-top:20px;height:52px;border-radius:6px;background:linear-gradient(90deg,#203b44 30%,#284951 55%,#203b44 85%)}</style></head><body><p id="status" role="status">Henter seneste kontrollerede graf …</p><script>
+let patch=/*__GRAPH_JSON__*/;
+const f=document.createElement('iframe');f.title='NewDeal Invest – afkast, positioner og analyser';f.style.opacity='0';f.inert=true;document.body.append(f);let release='',checks=0;
+// Offline builds carry null data; deployed files carry the values that must exist before rendering.
+const missingData=()=>/^(window\.NDI_NASDAQ=null;|const (v2DistanceHistory|v2Extra)=null;$)/m.test(patch);
+async function refreshNasdaq(){
+ checks++;
+ const url='https://ndigrafdatab5174313.blob.core.windows.net/graph/preview-module-20260930.html';
+ try{
+  const response=await fetch(url,{cache:'no-store',signal:AbortSignal.timeout(20000)});
+  if(!response.ok)throw Error('Nasdaq-kilde HTTP '+response.status);
+  const text=await response.text(),start=text.indexOf('const patch=');
+  if(start<0)throw Error('Ukendt Nasdaq-leverance');
+  const raw=text.slice(start+12),match=raw.match(/^"(?:[^"\\]|\\.)*"/s);
+  if(!match)throw Error('Ugyldig Nasdaq-leverance');
+  const source=JSON.parse(match[0]),prefix='window.NDI_NASDAQ=',end=source.indexOf(';\n');
+  if(!source.startsWith(prefix)||end<0)throw Error('Mangler Nasdaq-snapshot');
+  const snapshot=JSON.parse(source.slice(prefix.length,end));
+  if(snapshot.validated!==true||!snapshot.rows?.length||snapshot.asOf!==snapshot.rows.at(-1).d)throw Error('Nasdaq ikke valideret');
+  const oldEnd=patch.indexOf(';\n');
+  if(!patch.startsWith(prefix)||oldEnd<0)throw Error('Testkopi mangler snapshot');
+  const next=prefix+JSON.stringify(snapshot)+patch.slice(oldEnd);
+  if(next!==patch){patch=next;release='';}
+  // Read only the two JSON analysis assignments from this isolated v2 file.
+  // Never execute fetched source and never change the production wrapper.
+  // This page was just loaded with no-store, so its own values are current on the first check;
+  // re-read the ~450 KB file only for the periodic refresh or an offline build without data.
+  if(checks>1||missingData()){
+  const own=await fetch("https://ndigrafdatab5174313.blob.core.windows.net/graph/v2-test/preview-module-20260930.html",{cache:'no-store',signal:AbortSignal.timeout(20000)});
+  if(!own.ok)throw Error('V2-analyse HTTP '+own.status);
+  const ownText=await own.text(),ownStart=ownText.indexOf('let patch=');
+  const ownMatch=ownText.slice(ownStart+10).match(/^"(?:[^"\\]|\\.)*"/s);
+  if(ownStart<0||!ownMatch)throw Error('V2-analyse mangler');
+  const ownPatch=JSON.parse(ownMatch[0]);
+  for(const name of ['v2DistanceHistory','v2Extra']){
+   const pattern=new RegExp('^const '+name+'=(.*);$','m'),match=ownPatch.match(pattern);
+   if(!match)throw Error('V2-analyseformat');
+   const value=JSON.parse(match[1]);
+   if(name==='v2Extra'&&(!/^\d{4}-\d{2}-\d{2}$/.test(value.asOf)||!value.positions))throw Error('Ugyldig analysedato');
+   const updated=patch.replace(pattern,()=>match[0]);
+   if(updated!==patch){patch=updated;release='';}
+  }
+  }
+  document.getElementById('v2-source-alert')?.remove();
+ }catch(error){
+  let banner=document.getElementById('v2-source-alert');
+  if(!banner){banner=document.createElement('p');banner.id='v2-source-alert';banner.setAttribute('role','alert');banner.style.cssText='padding:16px;background:#672e2e;color:white;border:2px solid #eea49a';document.body.prepend(banner)}
+  banner.textContent='DATAADVARSEL: Aktuel Nasdaq-leverance kunne ikke kontrolleres. Genindlæs siden; brug ikke testvisningen som dagsaktuel. '+error.message;
+  // Keep showing the deployed, validated snapshot under the warning; only an empty build must stop.
+  if(missingData())throw error;
+ }
+}
+
+async function refresh(){try{const [,r]=await Promise.all([refreshNasdaq(),fetch('./latest.json',{cache:'no-store',signal:AbortSignal.timeout(20000)})]);if(!r.ok)throw Error('pointer');const p=await r.json();if(p.validated!==true||p.schemaVersion!==1||!/^[a-f0-9]{64}$/.test(p.release))throw Error('validation');if(p.release===release)return;const base=new URL('./releases/'+p.release+'/',document.baseURI).href;const response=await fetch(base+'simple-embed.html',{signal:AbortSignal.timeout(20000)});if(!response.ok)throw Error('html');let html=await response.text();html=html.replace('<head>','<head><base href="'+base+'">').replace('</body>',()=>'<script>'+patch.replace(/<\/script/gi,'<\\/script')+'<\/script></body>');f.srcdoc=html;release=p.release}catch(e){const s=document.getElementById('status');if(s)s.textContent='Grafen kunne ikke hentes. Prøv at genindlæse siden.';console.error(e)}}
+addEventListener('message',e=>{if(e.source!==f.contentWindow||e.origin!==location.origin)return;if(e.data?.type==='ndi-preview-scroll'){const top=Number(e.data.top),height=Number(e.data.height);if(Number.isFinite(top)&&top>=0&&top<=100000&&Number.isFinite(height)&&height>=100&&height<=100000){f.style.height=Math.ceil(height)+'px';if(parent===window)window.scrollTo({top:top+f.getBoundingClientRect().top+scrollY,behavior:'smooth'});else parent.postMessage({type:'ndi-preview-scroll',top:top+f.getBoundingClientRect().top+scrollY,height:Math.ceil(height)},'*')}return}if(e.data?.type==='ndi-preview-ready'){f.style.opacity='1';f.inert=false;document.getElementById('status')?.remove();parent.postMessage(e.data,'*')}if(['newdeal-performance-height','newdeal:resize'].includes(e.data?.type)){const h=Number(e.data.height);if(Number.isFinite(h)&&h>=100&&h<=100000){f.style.height=Math.ceil(h)+'px';parent.postMessage({type:'newdeal-performance-height',height:Math.ceil(h)},'*')}}});addEventListener('message',e=>{if(e.source===parent&&e.data?.type==='ndi-v2-measure'){parent.postMessage({type:'ndi-v2-height',height:Math.ceil(document.documentElement.scrollHeight)},'*');return}if(e.source!==f.contentWindow||e.origin!==location.origin)return;const height=Number(e.data?.height);if(!Number.isFinite(height)||height<100||height>100000)return;if(['newdeal-performance-height','newdeal:resize'].includes(e.data.type))parent.postMessage({type:'ndi-v2-height',height:Math.ceil(height+f.offsetTop)},'*');if(e.data.type==='ndi-preview-scroll'){const top=Number(e.data.top);if(Number.isFinite(top)&&top>=0&&top<=height)parent.postMessage({type:'ndi-v2-scroll',top:top+f.offsetTop,height:Math.ceil(height+f.offsetTop)},'*')}});setTimeout(()=>{const status=document.getElementById('status');if(status){status.textContent='Grafen tager længere tid end normalt at indlæse. Du kan prøve igen eller åbne grafen direkte.';const retry=document.createElement('button');retry.textContent='Prøv igen';retry.style.cssText='display:block;padding:12px;margin-top:16px';retry.onclick=()=>location.reload();const link=document.createElement('a');link.textContent='Åbn grafen direkte';link.href='https://ndigrafdatab5174313.blob.core.windows.net/graph/v2-test/preview-module-20260930.html';link.target='_blank';link.rel='noopener';link.style.color='#b9e4dd';status.append(retry,link)}},25000);refresh();setInterval(refresh,300000);
+</script></body></html>

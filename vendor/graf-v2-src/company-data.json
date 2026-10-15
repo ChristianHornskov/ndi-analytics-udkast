@@ -1,0 +1,675 @@
+{
+  "profiles": {
+    "US7960508882": {
+      "name": "Samsung Electronics",
+      "theme": "compute",
+      "summary": "Udvikler og producerer blandt andet hukommelseschips, processorer og forbrugerelektronik. Halvlederforretningen omfatter både egne chipdesign og produktion for andre.",
+      "watch": "Hukommelsespriser, kapacitetsudnyttelse og produktmix.",
+      "source": "https://semiconductor.samsung.com/about-us/business-area/",
+      "products": "DRAM- og NAND-hukommelse, mobile processorer og chipproduktion for andre selskaber. Koncernen sælger også telefoner, skærme og anden forbrugerelektronik.",
+      "customers": "Både forbrugere og producenter af elektronik. Halvlederdelen leverer til blandt andet servere, mobile enheder og biler.",
+      "role": "Hukommelse og chipproduktion er byggesten i de systemer, der behandler og lagrer data.",
+      "reviewedAt": "2026-10-08"
+    },
+    "JP3436100006": {
+      "name": "SoftBank Group",
+      "theme": "platforms",
+      "summary": "Investeringskoncern med teknologiinvesteringer gennem egne selskaber og Vision Funds. Koncernen omfatter blandt andet Arm og har også eksponering mod telekommunikation.",
+      "watch": "Værdiansættelse af investeringerne, gæld og koncentration i store ejerandele.",
+      "source": "https://group.softbank/en/ir/financials/segments",
+      "products": "Ejerskab og investeringer i teknologivirksomheder, blandt andet gennem Arm og Vision Funds. Det er en investeringskoncern, ikke én enkelt software- eller chipproducent.",
+      "customers": "De underliggende selskaber betjener forskellige markeder. Investorens eksponering ligger i koncernens ejerandele og finansiering.",
+      "role": "Forbinder kapital med blandt andet chipdesign, digitale platforme og telekommunikation.",
+      "reviewedAt": "2026-10-12",
+      "narrative": [
+        "SoftBank Group er en japansk investeringskoncern, grundlagt af Masayoshi Son. Når man køber aktien, bliver man derfor ikke medejer af ét bestemt produkt, men får indirekte eksponering mod en række teknologivirksomheder.",
+        "Koncernen investerer både direkte og gennem Vision Funds. Nogle selskaber er børsnoterede, mens andre er private og derfor ikke har en aktiekurs, man kan følge fra dag til dag. Arm, der udvikler teknologi til chipdesign, er en central del af koncernen.",
+        "SoftBank Group skal skelnes fra SoftBank Corp., som driver blandt andet japansk telekommunikation. Telekomforretningen indgår i koncernens ejerinteresser, men beskriver ikke hele den aktie, fonden ejer.",
+        "For at forstå SoftBank er det nyttigt at se på værdien af ejerandelene sammen med gælden, der finansierer dem. Koncernens indre værdi er ikke det samme som dens børsværdi. Store ejerandele, ændrede værdiansættelser og finansiering kan derfor få stor betydning for aktien. Det gør SoftBank til en anden type teknologieksponering end en virksomhed, der primært sælger sine egne produkter."
+      ],
+      "narrativeSources": [
+        {
+          "label": "Koncernens forretningsmodel",
+          "url": "https://group.softbank/en/ir/financials/annual_reports/2026/who_we_are"
+        },
+        {
+          "label": "Koncernselskaber",
+          "url": "https://group.softbank/en/about/group"
+        },
+        {
+          "label": "Selskabets risikofaktorer",
+          "url": "https://group.softbank/en/ir/investors/management_policy/risk_factor"
+        }
+      ],
+      "xAccounts": [
+        {
+          "handle": "SoftBank_Group",
+          "label": "SoftBank Group på X",
+          "role": "company",
+          "source": "https://group.softbank/news/info/20220427"
+        },
+        {
+          "handle": "masason",
+          "label": "Masayoshi Son på X",
+          "role": "executive",
+          "source": "https://group.softbank/do"
+        }
+      ]
+    },
+    "US88160R1014": {
+      "name": "Tesla",
+      "theme": "physical",
+      "summary": "Producerer elbiler, batterilagring og energiprodukter. Software og automatisering er integreret i selskabets produkter og produktion.",
+      "watch": "Bilmarkedets konkurrence, indtjening pr. bil og kapitalbehov.",
+      "source": "https://www.tesla.com/about",
+      "products": "Elbiler, batterilagring og energiløsninger med tilhørende software og service.",
+      "customers": "Bilister, virksomheder og kunder med behov for lagring af elektricitet.",
+      "role": "Kombinerer batterier, effektelektronik, software og fysisk produktion.",
+      "reviewedAt": "2026-10-08"
+    },
+    "US84615Q1031": {
+      "name": "SpaceX",
+      "theme": "space",
+      "summary": "Arbejder med raketopsendelser, rumfartøjer og satellitkommunikation gennem Starlink. Aktiviteterne forbinder fysisk ruminfrastruktur med kommunikation på jorden.",
+      "watch": "Teknisk gennemførelse, kapitalbehov og myndighedstilladelser.",
+      "source": "https://www.spacex.com/",
+      "products": "Raketopsendelser og rumfartøjer samt satellitbaseret internet gennem Starlink.",
+      "customers": "Private og offentlige kunder med behov for opsendelser; husholdninger, virksomheder og andre brugere af satellitkommunikation.",
+      "role": "Infrastruktur til at bringe materiel i kredsløb og sende data mellem satellitter og jorden.",
+      "reviewedAt": "2026-10-08"
+    },
+    "SE0003917798": {
+      "name": "Sivers Semiconductors",
+      "theme": "connect",
+      "summary": "Leverer trådløse halvlederløsninger og fotonik. Produkterne omfatter radiokredse og lasere til blandt andet satellitkommunikation og optiske forbindelser i datacentre.",
+      "watch": "Kundekoncentration, produktkvalificering og skalering af produktionen.",
+      "source": "https://www.sivers-semiconductors.com/about-us/",
+      "products": "Radiokredse og antenneløsninger til højfrekvent kommunikation samt lasere og fotonik til optiske forbindelser.",
+      "customers": "Producenter af kommunikationsudstyr og systemer til blandt andet datacentre og satellitkommunikation.",
+      "role": "Forbinder beregningskraften: data skal flyttes både trådløst og gennem optiske fibre.",
+      "reviewedAt": "2026-10-08"
+    },
+    "US1468691027": {
+      "name": "Carvana",
+      "theme": "platforms",
+      "summary": "Driver en digital platform til køb og salg af brugte biler i USA. Den digitale kunderejse er knyttet til fysisk bilhåndtering, logistik og finansiering.",
+      "watch": "Brugtbilspriser, finansieringsvilkår og omkostninger til lager og logistik.",
+      "source": "https://investors.carvana.com/",
+      "products": "Digital handel med brugte biler, understøttet af inspektion, klargøring, transport og finansieringsløsninger.",
+      "customers": "Amerikanske forbrugere, som køber eller sælger brugte biler.",
+      "role": "En digital handelsplatform koblet til en fysisk og kapitalbindende forsyningskæde.",
+      "reviewedAt": "2026-10-08"
+    },
+    "US81141R1005": {
+      "name": "Sea",
+      "theme": "platforms",
+      "summary": "Driver tre digitale forretninger: Shopee inden for e-handel, Garena inden for spil og Monee inden for betalinger og finansielle tjenester.",
+      "watch": "Konkurrence i e-handel, kreditrisiko og indtjeningen i de enkelte forretninger.",
+      "source": "https://www.sea.com/investor/home",
+      "products": "Shopee inden for e-handel, Garena inden for digitale spil og Monee inden for digitale finansielle tjenester.",
+      "customers": "Forbrugere, forhandlere, spillere og brugere af betalings- og kreditløsninger.",
+      "role": "Digitale platforme, hvor handel, underholdning og finansielle tjenester mødes.",
+      "reviewedAt": "2026-10-08"
+    },
+    "US03831W1080": {
+      "name": "AppLovin",
+      "theme": "software",
+      "summary": "Leverer teknologi til digital annoncering. Platformen forbinder annoncører med brugere af apps og spil og hjælper udgivere med at tjene penge på deres indhold.",
+      "watch": "Annoncebudgetter, platformregler, persondata og konkurrerende annonceløsninger.",
+      "source": "https://www.applovin.com/en",
+      "products": "Software til digital annoncering og til at skabe annonceindtægter i apps og spil.",
+      "customers": "Annoncører samt udgivere af apps og spil.",
+      "role": "Data og algoritmer bruges til at forbinde annoncer med målgrupper og måle resultaterne.",
+      "reviewedAt": "2026-10-08"
+    },
+    "US15675D1037": {
+      "name": "Cerebras",
+      "theme": "compute",
+      "summary": "Udvikler chips og computersystemer til kunstig intelligens. Selskabet leverer også adgang til beregninger til brug af AI-modeller.",
+      "watch": "Kundekoncentration, konkurrence mellem chiparkitekturer og kapitalbehov.",
+      "source": "https://www.cerebras.ai/",
+      "products": "Wafer-scale-chips, computersystemer og adgang til AI-beregninger til træning og anvendelse af modeller.",
+      "customers": "Virksomheder og organisationer, der udvikler eller bruger AI-modeller.",
+      "role": "En specialiseret computerarkitektur til store AI-beregninger.",
+      "reviewedAt": "2026-10-08"
+    },
+    "JP3452000007": {
+      "name": "Taiyo Yuden",
+      "theme": "connect",
+      "summary": "Producerer elektroniske komponenter, herunder kondensatorer og induktorer. Komponenterne indgår i blandt andet biler, kommunikationsudstyr og forbrugerelektronik.",
+      "watch": "Elektronikbranchens lagercyklus, prispresset på komponenter og produktmix.",
+      "source": "https://www.yuden.co.jp/en/product/",
+      "products": "Kondensatorer, induktorer og andre elektroniske komponenter.",
+      "customers": "Producenter af blandt andet kommunikationsudstyr, biler og forbrugerelektronik.",
+      "role": "Små komponenter, der blandt andet lagrer elektrisk energi og stabiliserer strøm og signaler i elektronik.",
+      "reviewedAt": "2026-10-08"
+    },
+    "US78392B1070": {
+      "name": "SK Hynix",
+      "theme": "compute",
+      "summary": "Producerer hukommelseschips, herunder DRAM og NAND. Hukommelse bruges både i almindelig elektronik og i servere og AI-systemer.",
+      "watch": "Hukommelsespriser, store produktionsinvesteringer og kundernes lagerbeholdninger.",
+      "source": "https://news.skhynix.com/en/",
+      "products": "DRAM, herunder høj-båndbredde-hukommelse, samt NAND-baseret lagring.",
+      "customers": "Producenter af servere, computere, mobile enheder og andre elektroniske systemer.",
+      "role": "Hukommelsen forsyner processorer med data; lagringen bevarer data mellem beregningerne.",
+      "reviewedAt": "2026-10-08"
+    },
+    "US05614L2097": {
+      "name": "Babcock & Wilcox",
+      "theme": "energy",
+      "summary": "Leverer teknologi og service til energiproduktion og industrielle anlæg. Forretningen omfatter blandt andet kedler, forbrændingssystemer og emissionsbehandling.",
+      "watch": "Projektgennemførelse, finansiering og efterspørgsel fra energi- og industrikunder.",
+      "source": "https://www.babcock.com/",
+      "products": "Udstyr og service til energiproduktion og industri, blandt andet kedler og systemer til emissionsbehandling.",
+      "customers": "Energi- og industrivirksomheder.",
+      "role": "Den fysiske energi- og anlægsinfrastruktur, som blandt andet databehandling er afhængig af.",
+      "reviewedAt": "2026-10-08"
+    },
+    "DE0006450000": {
+      "name": "LPKF Laser",
+      "theme": "physical",
+      "summary": "Leverer laserbaserede produktionsprocesser til blandt andet printplader, halvlederindpakning, plastsvejsning og solcellemoduler.",
+      "watch": "Kundernes investeringscyklus, ordrevariation og teknologiens anvendelse i produktion.",
+      "source": "https://www.lpkf.com/en/",
+      "products": "Laserbaserede produktionssystemer til printplader, halvlederindpakning, plastsvejsning og solcellemoduler.",
+      "customers": "Elektronikproducenter og andre industrielle producenter.",
+      "role": "Præcisionsbearbejdning af materialer, der indgår i elektroniske og industrielle produkter.",
+      "reviewedAt": "2026-10-08"
+    },
+    "JP3236330001": {
+      "name": "Kioxia",
+      "theme": "compute",
+      "summary": "Producerer NAND-flashhukommelse og SSD-lagring. Produkterne anvendes i blandt andet datacentre, computere og mobile enheder.",
+      "watch": "Priser på flashhukommelse, produktionskapacitet og kapitalkrævende fabriksdrift.",
+      "source": "https://www.kioxia.com/en-jp/about.html",
+      "products": "NAND-flashhukommelse og SSD-lagring.",
+      "customers": "Datacentre og producenter af computere, mobile enheder og anden elektronik.",
+      "role": "Permanent datalagring, i modsætning til arbejdshukommelsen tæt på en processor.",
+      "reviewedAt": "2026-10-08"
+    },
+    "US8361001071": {
+      "name": "SoundHound AI",
+      "theme": "software",
+      "summary": "Leverer AI-baserede samtale- og stemmeløsninger til virksomheder. Anvendelserne omfatter blandt andet kundeservice, restauranter og biler.",
+      "watch": "Kommercialisering, kundernes anvendelse og konkurrence inden for AI-software.",
+      "source": "https://www.soundhound.com/",
+      "products": "AI-baserede tale-, samtale- og assistentløsninger til virksomheder.",
+      "customers": "Blandt andet restauranter, bilproducenter og virksomheder med kundeservice.",
+      "role": "Softwarelaget mellem menneskers tale og virksomheders digitale systemer.",
+      "reviewedAt": "2026-10-08"
+    },
+    "US35834F1049": {
+      "name": "T1 Energy",
+      "theme": "energy",
+      "summary": "Arbejder med amerikansk produktion af solenergiudstyr. Selskabets aktiviteter omfatter produktion af solcellemoduler og opbygning af forsyningskæder.",
+      "watch": "Kapitalbehov, industripolitik, told og priser på solenergiudstyr.",
+      "source": "https://t1energy.com/manufacturing/",
+      "products": "Solcellemoduler og aktiviteter inden for den amerikanske forsyningskæde til solenergi.",
+      "customers": "Kunder i markedet for solenergianlæg.",
+      "role": "Industriel produktion af udstyr, der omdanner sollys til elektricitet.",
+      "reviewedAt": "2026-10-08"
+    },
+    "IL0010823792": {
+      "name": "Tower Semiconductor",
+      "theme": "compute",
+      "summary": "Producerer halvledere for andre selskaber med fokus på specialiserede analoge teknologier. Produkterne bruges blandt andet i kommunikation, sensorer og strømstyring.",
+      "watch": "Fabrikkernes kapacitetsudnyttelse, kundernes efterspørgsel og produktionsinvesteringer.",
+      "source": "https://towersemi.com/",
+      "products": "Produktion af specialiserede analoge halvledere for andre selskaber, herunder teknologier til sensorer, kommunikation og strømstyring.",
+      "customers": "Chipdesignere og elektronikvirksomheder, der har brug for ekstern produktion.",
+      "role": "En foundry: kundens chipdesign omsættes til fysiske chips i en fabrik.",
+      "reviewedAt": "2026-10-08"
+    },
+    "AU0000185993": {
+      "name": "IREN",
+      "theme": "energy",
+      "summary": "Driver datacenteraktiviteter inden for blandt andet AI-cloud og bitcoin-mining. Strømforsyning og fysisk datacenterkapacitet er centrale dele af forretningen.",
+      "watch": "Energipriser, kapitalbehov, kundekoncentration og eksponering mod bitcoin-mining.",
+      "source": "https://iren.com/resources",
+      "products": "Datacenterkapacitet til AI-cloud og bitcoin-mining.",
+      "customers": "Kunder med behov for beregningskapacitet; bitcoin-mining er en særskilt aktivitet med en anden indtjeningsmodel.",
+      "role": "Kombinerer elektricitet, datacentre og computere som fysisk beregningsinfrastruktur.",
+      "reviewedAt": "2026-10-08"
+    },
+    "VGG320891077": {
+      "name": "eToro Group",
+      "theme": "platforms",
+      "summary": "Driver en digital investerings- og handelsplatform. Denne profil vedrører fondens aktieposition i selskabet — ikke et tilbud om et andet investeringsprodukt.",
+      "watch": "Handelsaktivitet, regulering, konkurrence og drifts- og cybersikkerhed.",
+      "source": "https://www.etoro.com/about/vision/",
+      "products": "En digital platform til investering og handel med finansielle aktiver.",
+      "customers": "Private investorer og handlende på de markeder, hvor platformen opererer.",
+      "role": "Digital distribution af finansielle tjenester. Denne side beskriver selskabsaktien, ikke et alternativt fondsprodukt.",
+      "reviewedAt": "2026-10-08"
+    },
+    "US03823U1025": {
+      "name": "Applied Optoelectronics",
+      "theme": "connect",
+      "summary": "Udvikler og producerer lasere, optiske transceivere og netværksudstyr. Produkterne bruges til at sende data gennem optiske forbindelser og bredbåndsnet.",
+      "watch": "Kundekoncentration, produktionsudbytte og skift mellem produktgenerationer.",
+      "source": "https://ao-inc.com/",
+      "products": "Lasere, optiske transceivere og netværksudstyr til optiske forbindelser og bredbåndsnet.",
+      "customers": "Datacenter-, telekommunikations- og bredbåndskunder.",
+      "role": "Omsætter elektriske signaler til lys og tilbage igen, så data kan transporteres gennem fibre.",
+      "reviewedAt": "2026-10-08"
+    },
+    "FR0013227113": {
+      "name": "Soitec",
+      "theme": "compute",
+      "summary": "Producerer specialiserede halvledermaterialer. Materialerne bruges som grundlag for chips til blandt andet kommunikation, biler og andre elektroniske systemer.",
+      "watch": "Kundernes lagre, chipbranchens cyklus og udnyttelse af produktionskapaciteten.",
+      "source": "https://www.soitec.com/en/",
+      "products": "Specialiserede halvledersubstrater, blandt andet silicon-on-insulator-materialer.",
+      "customers": "Halvlederproducenter, som fremstiller chips på disse materialer.",
+      "role": "Materialelaget under chippen: substratets egenskaber har betydning for den færdige komponents funktion.",
+      "reviewedAt": "2026-10-08"
+    },
+    "US67066G1040": {
+      "name": "NVIDIA",
+      "theme": "compute",
+      "summary": "Udvikler GPU'er, netværksteknologi og software til accelereret databehandling. Produkterne bruges blandt andet til AI, grafik og videnskabelige beregninger.",
+      "products": "GPU'er, computersystemer, netværk og softwareværktøjer som CUDA.",
+      "customers": "Cloududbydere, virksomheder, forskningsmiljøer og producenter og brugere af computere.",
+      "role": "Et sammenhængende hardware- og softwarelag til at udføre store beregninger parallelt.",
+      "watch": "Kundekoncentration, eksportregler, produktionsafhængighed og konkurrence mellem chiparkitekturer.",
+      "source": "https://www.nvidia.com/en-us/about-nvidia/",
+      "reviewedAt": "2026-10-08"
+    },
+    "US11135F1012": {
+      "name": "Broadcom",
+      "theme": "connect",
+      "summary": "Leverer halvledere og infrastruktursoftware. Chipforretningen omfatter blandt andet netværk, forbindelser og kundetilpassede løsninger.",
+      "products": "Netværks- og kommunikationschips, kundetilpassede chips samt software til virksomheders IT-infrastruktur.",
+      "customers": "Store teknologi- og industrikunder samt virksomheder med kompleks IT-drift.",
+      "role": "Forbinder og understøtter databehandling på tværs af chips, netværk og software.",
+      "watch": "Koncentration hos store kunder, kundernes investeringscyklus og integration af opkøb.",
+      "source": "https://investors.broadcom.com/",
+      "reviewedAt": "2026-10-08"
+    },
+    "US5951121038": {
+      "name": "Micron Technology",
+      "theme": "compute",
+      "summary": "Producerer hukommelse og datalagring baseret på blandt andet DRAM og NAND.",
+      "products": "Hukommelseschips og lagringsprodukter til datacentre, computere, mobile enheder, biler og industri.",
+      "customers": "Producenter og operatører af elektroniske systemer.",
+      "role": "Leverer både hurtig adgang til data under beregninger og lagring af data.",
+      "watch": "Hukommelsespriser, lagercyklusser, kapitalbehov og produktionskapacitet.",
+      "source": "https://www.micron.com/about",
+      "reviewedAt": "2026-10-08"
+    },
+    "US55405Y1001": {
+      "name": "MACOM",
+      "theme": "connect",
+      "summary": "Leverer halvlederprodukter til blandt andet radiofrekvenser, mikrobølger og optiske forbindelser.",
+      "products": "Analoge og blandede signalchips samt optiske halvlederløsninger.",
+      "customers": "Kunder inden for telekommunikation, datacentre, industri og forsvar.",
+      "role": "Bearbejder og flytter signaler i kommunikationssystemer.",
+      "watch": "Kundernes investeringscyklus, produktkvalificering, ordrefordeling og teknologiudvikling.",
+      "source": "https://ir.macom.com/",
+      "reviewedAt": "2026-10-08"
+    },
+    "US8610121027": {
+      "name": "STMicroelectronics",
+      "theme": "compute",
+      "summary": "Producerer halvledere til blandt andet industri, biler og personlig elektronik.",
+      "products": "Mikrocontrollere, sensorer, analoge chips og effekthalvledere.",
+      "customers": "Bilindustrien, industrivirksomheder og producenter af elektronik.",
+      "role": "Chips til at registrere, styre og omsætte signaler og elektrisk effekt i fysiske produkter.",
+      "watch": "Bil- og industrikonjunkturer, kundernes lagre og udnyttelsen af fabrikkerne.",
+      "source": "https://www.st.com/content/st_com/en/about/who-we-are.html",
+      "reviewedAt": "2026-10-08"
+    },
+    "US19247G1076": {
+      "name": "Coherent",
+      "theme": "connect",
+      "summary": "Leverer fotonik, lasere, optiske komponenter og materialer til kommunikation og industri.",
+      "products": "Optiske transceivere, lasere, optik og specialmaterialer.",
+      "customers": "Datacenter- og kommunikationskunder samt industrielle producenter.",
+      "role": "Lys bruges både til at transportere data og til at bearbejde og måle materialer.",
+      "watch": "Produktmix, kundekoncentration, investeringscyklus og gennemførelse af produktionsændringer.",
+      "source": "https://www.coherent.com/company",
+      "reviewedAt": "2026-10-08"
+    },
+    "US21873S1087": {
+      "name": "CoreWeave",
+      "theme": "energy",
+      "summary": "Driver en cloudplatform med specialiseret infrastruktur til AI-beregninger.",
+      "products": "GPU-beregning, lagring, netværk og software til at drive AI-arbejdsopgaver.",
+      "customers": "Virksomheder og organisationer, som træner eller anvender AI-modeller.",
+      "role": "Giver kunder adgang til beregningsinfrastruktur uden selv at eje hele datacenterløsningen.",
+      "watch": "Kapitalbehov, gæld, kundekoncentration og udnyttelse af computerkapaciteten.",
+      "source": "https://www.coreweave.com/",
+      "reviewedAt": "2026-10-08"
+    },
+    "NL0009805522": {
+      "name": "Nebius",
+      "theme": "energy",
+      "summary": "Leverer cloudinfrastruktur og værktøjer til udvikling og brug af AI-modeller.",
+      "products": "GPU-beregning, datacenterinfrastruktur og tilknyttede cloudtjenester.",
+      "customers": "AI-udviklere og virksomheder med behov for beregningskapacitet.",
+      "role": "Infrastrukturlaget mellem AI-modeller og de computere, der kører dem.",
+      "watch": "Store investeringer, kapacitetsudnyttelse, energiforsyning og konkurrence mellem cloududbydere.",
+      "source": "https://nebius.com/",
+      "reviewedAt": "2026-10-08"
+    },
+    "US0079031078": {
+      "name": "AMD",
+      "theme": "compute",
+      "summary": "Udvikler processorer, GPU'er og tilpasningsbare chips til blandt andet datacentre og personlige computere.",
+      "products": "CPU'er, GPU'er og tilpasningsbare systemchips med tilhørende software.",
+      "customers": "Cloududbydere, computerproducenter og kunder inden for indlejrede systemer.",
+      "role": "Beregningschips til både generelle programmer og specialiserede arbejdsopgaver.",
+      "watch": "Konkurrence, produktgenerationer, eksterne produktionspartnere og kundernes efterspørgsel.",
+      "source": "https://www.amd.com/en/corporate.html",
+      "reviewedAt": "2026-10-08"
+    },
+    "US69608A1088": {
+      "name": "Palantir",
+      "theme": "software",
+      "summary": "Udvikler softwareplatforme til at samle data og understøtte beslutninger og arbejdsgange i organisationer.",
+      "products": "Dataplatforme og værktøjer til at anvende data og AI i organisationers drift.",
+      "customers": "Offentlige organisationer og private virksomheder.",
+      "role": "Software mellem organisationens data og de personer og processer, som bruger dem.",
+      "watch": "Store kontrakter, offentlige budgetter, konkurrence samt krav til datasikkerhed og ansvarlig anvendelse.",
+      "source": "https://www.palantir.com/platforms/",
+      "reviewedAt": "2026-10-08"
+    },
+    "US30303M1027": {
+      "name": "Meta Platforms",
+      "theme": "platforms",
+      "summary": "Driver blandt andet Facebook, Instagram, Messenger og WhatsApp. Koncernen arbejder også med enheder og software til virtuelle og udvidede oplevelser.",
+      "products": "Sociale og kommunikative platforme samt digitale annoncer og teknologi til virtuelle oplevelser.",
+      "customers": "Brugere af platformene og annoncører, der køber adgang til målgrupper.",
+      "role": "Digitale platforme med omfattende software-, AI- og datacenterinfrastruktur.",
+      "watch": "Annonceefterspørgsel, konkurrence om opmærksomhed, persondataregler og store infrastrukturinvesteringer.",
+      "source": "https://investor.atmeta.com/",
+      "reviewedAt": "2026-10-08"
+    },
+    "US75734B1008": {
+      "name": "Reddit",
+      "theme": "platforms",
+      "summary": "Driver en platform med brugeroprettede fællesskaber, samtaler og indhold.",
+      "products": "Digitale fællesskaber, annoncering og adgang til platformens indhold gennem aftaler og tjenester.",
+      "customers": "Brugere og annoncører samt virksomheder med aftaler om adgang til indhold.",
+      "role": "Organiserer menneskeskabt indhold og diskussioner i emnebaserede fællesskaber.",
+      "watch": "Brugeraktivitet, moderation, annonceindtægter, datalicenser og afhængighed af søgetrafik.",
+      "source": "https://investor.redditinc.com/",
+      "reviewedAt": "2026-10-08"
+    }
+  },
+  "media": [
+    {
+      "url": "https://www.youtube.com/watch?v=__Z9zkNXKmc",
+      "kind": "Video",
+      "language": "Dansk",
+      "isins": [
+        "US84615Q1031"
+      ],
+      "context": "En kort introduktion til SpaceX som mere end et raketselskab.",
+      "title": "SpaceX - mere end bare et raketselskab",
+      "date": "2026-10-08",
+      "author": "NewDeal Invest",
+      "seconds": 423,
+      "publisher": "YouTube",
+      "sourceHash": "e6eaf57078e9b7c7bbeadf800b351e353612440dbbcd1b125c285da69fe048ab",
+      "checkedAt": "2026-10-08T10:21:16.288209+00:00"
+    },
+    {
+      "url": "https://newdealinvest.substack.com/p/soitec-the-base-substrate-that-silicon",
+      "kind": "Analyse",
+      "language": "Engelsk",
+      "isins": [
+        "FR0013227113"
+      ],
+      "context": "Om Soitecs materialer under chips til optisk datakommunikation.",
+      "title": "Soitec - the base substrate that silicon photonics chips are built on",
+      "date": "2026-10-07",
+      "author": "Convequity",
+      "publisher": "Substack",
+      "sourceHash": "0f346e3cd86eecb082239e35e9fa27a2d821a4aa37ec80c0f399ec477656bc79",
+      "checkedAt": "2026-10-08T10:18:32.597482+00:00"
+    },
+    {
+      "url": "https://newdealinvest.substack.com/p/nvda-vs-avgo-the-optical-edge",
+      "kind": "Analyse",
+      "language": "Engelsk",
+      "isins": [
+        "US67066G1040",
+        "US11135F1012"
+      ],
+      "context": "NVIDIA og Broadcom set gennem netværk og optiske forbindelser.",
+      "title": "NVDA vs AVGO: The Optical Edge",
+      "date": "2026-10-07",
+      "author": "Convequity",
+      "publisher": "Substack",
+      "sourceHash": "a2a28ccb65f0d21f8d6c3cbfdd51ff3b508dfdd428667f064c362b48c184bf4a",
+      "checkedAt": "2026-10-08T10:18:32.139051+00:00"
+    },
+    {
+      "url": "https://newdealinvest.substack.com/p/optical-circuit-switching-and-the",
+      "kind": "Analyse",
+      "language": "Engelsk",
+      "isins": [
+        "US67066G1040"
+      ],
+      "context": "Teknologisk baggrund om optiske forbindelser mellem AI-computere; ikke en fuld selskabsanalyse.",
+      "title": "Optical Circuit Switching and the Economics of AI Clusters",
+      "date": "2026-10-02",
+      "author": "Convequity",
+      "publisher": "Substack",
+      "sourceHash": "4a2ab0888d0b13eaaddcd8bd910016bdf063177b4d62d1a0c7611dae3404bee3",
+      "checkedAt": "2026-10-08T10:18:32.468382+00:00"
+    },
+    {
+      "url": "https://newdealinvest.substack.com/p/the-economy-of-a-neocloud-simplified",
+      "kind": "Temabaggrund",
+      "language": "Engelsk",
+      "isins": [
+        "US21873S1087",
+        "NL0009805522",
+        "AU0000185993"
+      ],
+      "context": "Forklarer økonomien i AI-cloud med et illustrativt eksempel. Ikke nøgletal eller analyse af dette selskab.",
+      "title": "The Economy of a Neocloud, Simplified",
+      "date": "2026-09-25",
+      "author": "Mads Christiansen",
+      "publisher": "Substack",
+      "sourceHash": "79ccbae7bfcacf4955ef0954ac6c60e2a5cbcc78e59c035edff53edce0c62f8a",
+      "checkedAt": "2026-10-08T10:18:32.965355+00:00"
+    },
+    {
+      "url": "https://www.newdealinvest.dk/post/uge-36-vælg-udviklingen-ikke-vinderen",
+      "kind": "Ugebrev",
+      "language": "Dansk",
+      "isins": [
+        "US67066G1040",
+        "US11135F1012"
+      ],
+      "context": "NVIDIA og Broadcom i en forklaring af forskellige roller i AI-værdikæden.",
+      "title": "Uge 36 - Vælg udviklingen, ikke vinderen",
+      "date": "2026-09-07",
+      "author": "Mads Christiansen",
+      "publisher": "NewDeal Invest",
+      "sourceHash": "2e4778836fd3f2781f3989198b0ebd7fe860dc4d88c48d0e95c6ad77aa122d13",
+      "checkedAt": "2026-10-08T10:18:48.579406+00:00"
+    },
+    {
+      "url": "https://newdealinvest.substack.com/p/teslas-cybercab-is-here-the-potential",
+      "kind": "Analyse",
+      "language": "Engelsk",
+      "isins": [
+        "US88160R1014"
+      ],
+      "context": "En dateret gennemgang af Teslas Cybercab og de oplysninger, der forelå ved udgivelsen.",
+      "title": "Tesla’s Cybercab Is Here. The Potential Is Clearer Than the Details",
+      "date": "2026-09-04",
+      "author": "Jesper Bæk",
+      "publisher": "Substack",
+      "sourceHash": "b5ee499b987869b36945465e15ce5305b5328632abc6a442cd33b3a14865a5be",
+      "checkedAt": "2026-10-08T10:18:32.796240+00:00"
+    },
+    {
+      "url": "https://www.newdealinvest.dk/post/uge-33",
+      "kind": "Ugebrev",
+      "language": "Dansk",
+      "isins": [
+        "US81141R1005"
+      ],
+      "context": "Sea som eksempel på forskellen mellem koncernens tal og de underliggende forretninger.",
+      "title": "Uge 33 - Samme tal, modsatte konklusioner",
+      "date": "2026-08-17",
+      "author": "Mads Christiansen",
+      "publisher": "NewDeal Invest",
+      "sourceHash": "63ea418c37964fce61f60fbacbfa32a632332d70343c2f03b3f6f43e91176a66",
+      "checkedAt": "2026-10-08T10:18:47.485684+00:00"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=CAkUyUTsVG0",
+      "kind": "Video",
+      "language": "Dansk",
+      "isins": [
+        "US81141R1005",
+        "US67066G1040"
+      ],
+      "context": "Mads gennemgår blandt andet Seas Q2-regnskab og NVIDIA-nyheder. Videoen omtaler flere selskaber.",
+      "title": "Q2 Regnskaber fra Hims & Hers, Sea LTD og kæmpe NVIDIA nyheder - Mads giver sit take",
+      "date": "2026-08-13",
+      "author": "NewDeal Invest",
+      "seconds": 2971,
+      "publisher": "YouTube",
+      "sourceHash": "28cd5d07d7baf3bd97ad8176bbf8dd20a5e2d60579d03f690d9c646104a12af3",
+      "checkedAt": "2026-10-08T10:21:17.899512+00:00"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=iGCNmCq7YE4",
+      "kind": "Short",
+      "language": "Dansk",
+      "isins": [
+        "US30303M1027"
+      ],
+      "context": "Et kort klip om Meta og beregningsinfrastruktur.",
+      "title": "Meta Compute?",
+      "date": "2026-07-13",
+      "author": "NewDeal Invest",
+      "seconds": 57,
+      "publisher": "YouTube",
+      "sourceHash": "9d57b388aca9d1b90b38f83acb534624db0d194cc3b9d815e764936da0525503",
+      "checkedAt": "2026-10-08T10:21:17.304190+00:00"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=5DwuBgbnzNw",
+      "kind": "Short",
+      "language": "Dansk",
+      "isins": [
+        "US69608A1088",
+        "US67066G1040"
+      ],
+      "context": "Et kort klip, der sætter Palantir og NVIDIA i relation til AI-modeludviklerne.",
+      "title": "Anthropic og OpenAI vs Palantir og NVIDIA",
+      "date": "2026-07-12",
+      "author": "NewDeal Invest",
+      "seconds": 88,
+      "publisher": "YouTube",
+      "sourceHash": "675079d2c59cb190df9d2980ebc79b44cbc1e6a046d24d5960a9f101a50fb20d",
+      "checkedAt": "2026-10-08T10:21:17.076745+00:00"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=j9BV3f4IEGA",
+      "kind": "Short",
+      "language": "Dansk",
+      "isins": [
+        "US15675D1037"
+      ],
+      "context": "Et kort klip om Cerebras og afvejningen mellem hastighed og omkostninger.",
+      "title": "Cerebras - hurtigt men dyrt",
+      "date": "2026-07-06",
+      "author": "NewDeal Invest",
+      "seconds": 94,
+      "publisher": "YouTube",
+      "sourceHash": "ddc1ea2d2f9e0bcfea6a6e49a19776c31e37d283d4434e72564e4f21a64df880",
+      "checkedAt": "2026-10-08T10:21:16.671785+00:00"
+    },
+    {
+      "url": "https://www.newdealinvest.dk/post/spacex-powering-ai-from-orbit",
+      "kind": "Analyse",
+      "language": "Engelsk",
+      "isins": [
+        "US84615Q1031"
+      ],
+      "context": "Om SpaceX, satellitkommunikation og infrastruktur i kredsløb.",
+      "title": "SpaceX - Powering AI from Orbit",
+      "date": "2026-07-03",
+      "author": "Jordan Lambert &amp; Simon He",
+      "publisher": "NewDeal Invest",
+      "sourceHash": "526a6a6a30c116aa11b5adb50b36587f1cacbc8038559b2de35ccf4bc4a1dffd",
+      "checkedAt": "2026-10-08T10:18:39.272641+00:00"
+    },
+    {
+      "url": "https://www.newdealinvest.dk/post/tower-semiconductor-powering-ai-from-orbit-pt-5",
+      "kind": "Analyse",
+      "language": "Engelsk",
+      "isins": [
+        "IL0010823792"
+      ],
+      "context": "Om Towers rolle som producent af specialiserede chips og optiske teknologier.",
+      "title": "Tower Semiconductor - Powering AI From Orbit (Pt.5)",
+      "date": "2026-06-25",
+      "author": "Jordan Lambert &amp; Simon He",
+      "publisher": "NewDeal Invest",
+      "sourceHash": "b5563254dbaa562f6d58c75d72d563f52c2ed99dc5358cc90af8850b98ef5e3f",
+      "checkedAt": "2026-10-08T10:18:40.465414+00:00"
+    },
+    {
+      "url": "https://www.newdealinvest.dk/post/powering-ai-from-orbit-macom-coherent-stm-hamamatsu-pt-4",
+      "kind": "Analyse",
+      "language": "Engelsk",
+      "isins": [
+        "US55405Y1001",
+        "US19247G1076",
+        "US8610121027"
+      ],
+      "context": "Om MACOM, Coherent, STMicroelectronics og Hamamatsu i fotonik- og komponentkæden.",
+      "title": "Powering AI From Orbit: MACOM, Coherent, STM, Hamamatsu (Pt.4)",
+      "date": "2026-06-25",
+      "author": "Jordan Lambert &amp; Simon He",
+      "publisher": "NewDeal Invest",
+      "sourceHash": "3feead1c872623780aa40f3010b992472b763986e5b654a34e08016c85fcd04a",
+      "checkedAt": "2026-10-08T10:18:40.268434+00:00"
+    },
+    {
+      "url": "https://www.newdealinvest.dk/post/uge-40-om-at-se-anderledes-på-tech-og-markeder",
+      "kind": "Ugebrev",
+      "language": "Dansk",
+      "isins": [
+        "US7960508882",
+        "US78392B1070",
+        "US5951121038"
+      ],
+      "context": "Et historisk ugebrev med omtale af Samsung, SK Hynix og markedet for hukommelseschips.",
+      "title": "Uge 40 - Om at se anderledes på tech og markeder",
+      "date": "2025-10-06",
+      "author": "Mads Christiansen",
+      "publisher": "NewDeal Invest",
+      "sourceHash": "b75d21aedebe9baaa3eb441fbbbdc6096f3a8d080993d2872042040ba009bf2d",
+      "checkedAt": "2026-10-08T10:18:50.199204+00:00"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=_6tVz0Bu1XM",
+      "kind": "Short",
+      "language": "Dansk",
+      "isins": [
+        "US75734B1008"
+      ],
+      "context": "Et klip om Reddit fra et tidligere webinar. Udgivelsesdatoen er klippets dato.",
+      "title": "Reddit-aktien (RDDT) - Klip fra NewDeal Invest webinar",
+      "date": "2025-01-30",
+      "author": "NewDeal Invest",
+      "seconds": 23,
+      "publisher": "YouTube",
+      "sourceHash": "81c791fa3b4c84672e11d3b013c2047613b804fffe40ed524f1c8da2be14b939",
+      "checkedAt": "2026-10-08T10:21:17.695132+00:00"
+    }
+  ],
+  "history": {}
+}

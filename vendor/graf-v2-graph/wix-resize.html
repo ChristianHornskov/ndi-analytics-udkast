@@ -1,0 +1,66 @@
+<style>
+/* /graf-v2 only (scoped by Wix page setting and the section id). The Wix Studio HTML element is
+   never server-rendered: until its client bundle mounts (1-13 s on slow mobiles) the section is an
+   empty, 0 px <div>. Reserve space and say what is happening instead of showing nothing. */
+#comp-muzfx98n{min-height:1400px!important}
+#comp-muzfx98n [data-testid="internal-container-content"]:not(:has(iframe))::before{content:"Indlæser grafen …";display:block;padding:48px 24px;text-align:center;font:16px/1.5 system-ui,sans-serif;color:#555}
+</style>
+<script>
+(()=>{
+ if(!/^\/graf-v2\/?$/.test(location.pathname))return;
+ document.documentElement.style.setProperty('overflow-anchor','none');
+ const title='NewDeal Invest – graf v2';
+ const src='https://ndigrafdatab5174313.blob.core.windows.net/graph/v2-test/preview-module-20260930.html';
+ const origin=new URL(src).origin;
+ // If Wix has not created its iframe by then, create our own in the same section. Re-checked on
+ // every DOM change, so a late section render or a React re-render that drops it is recovered.
+ const FALLBACK_MS=10000;
+ let navigation=0,fallbackDue=false;
+ for(const type of ['wheel','touchstart','pointerdown','keydown'])addEventListener(type,()=>navigation++,{passive:true});
+ const frames=()=>[...document.querySelectorAll('iframe')].filter(f=>f.title===title&&f.src.startsWith(origin));
+ // Studio's wrapper class may change; the component's own id/class carries the editor height.
+ const box='.html-component,#comp-muzg6uls,.comp-muzg6uls';
+ const own=()=>document.querySelector('iframe[data-ndi-fallback]');
+ function ensureFrame(){
+  const fallback=own();
+  for(const f of frames()){
+   if(f===fallback||!fallback)continue;
+   // Wix mounted late: keep the graph the reader already sees and silence the duplicate.
+   f.src='about:blank';
+   f.closest(box)?.style.setProperty('display','none','important');
+  }
+ }
+ function createFallback(){
+  if(frames().length||own())return;
+  const host=document.querySelector('#comp-muzfx98n [data-testid="internal-container-content"]');
+  if(!host)return;
+  const f=document.createElement('iframe');
+  f.title=title;f.src=src;f.dataset.ndiFallback='';f.setAttribute('scrolling','no');
+  f.style.cssText='display:block;width:100%;height:1400px;border:0;pointer-events:auto';
+  host.append(f);
+  console.warn('NDI graf v2: Wix-elementet blev ikke oprettet; bruger reserve-iframe.');
+ }
+ addEventListener('message',event=>{
+  if(event.origin!==origin||!['ndi-v2-height','ndi-v2-scroll'].includes(event.data?.type))return;
+  const frame=frames().find(f=>f.contentWindow===event.source);if(!frame)return;
+  const height=Number(event.data.height);if(!Number.isFinite(height)||height<100||height>100000)return;
+  const nextHeight=Math.ceil(height)+'px';
+  const target=frame.closest(box)||frame;
+  if(target.style.height!==nextHeight)target.style.setProperty('height',nextHeight,'important');
+  frame.setAttribute('scrolling','no');
+  if(event.data.type==='ndi-v2-scroll'){
+   const top=Number(event.data.top);if(!Number.isFinite(top)||top<0||top>height)return;const token=++navigation;
+   const position=()=>{if(token!==navigation||!frame.isConnected)return;const header=document.querySelector('#SITE_HEADER,header,[role="banner"]');const headerHeight=header?Math.min(160,Math.max(0,header.getBoundingClientRect().bottom)):0;window.scrollTo({top:frame.getBoundingClientRect().top+scrollY+top-headerHeight-20,behavior:'instant'})};
+   requestAnimationFrame(()=>requestAnimationFrame(position));for(const delay of [150,400,900,1500])setTimeout(position,delay);
+  }
+ });
+ function measure(){for(const f of frames())f.contentWindow?.postMessage({type:'ndi-v2-measure'},origin)}
+ // Wix mutates its DOM constantly; coalesce observer callbacks into one check per frame.
+ let queued=false;
+ function check(){if(queued)return;queued=true;requestAnimationFrame(()=>{queued=false;if(fallbackDue)createFallback();ensureFrame();measure()})}
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',check,{once:true});else check();
+ new MutationObserver(check).observe(document.documentElement,{childList:true,subtree:true});
+ setInterval(measure,5000);
+ setTimeout(()=>{fallbackDue=true;check()},FALLBACK_MS);
+})();
+</script>

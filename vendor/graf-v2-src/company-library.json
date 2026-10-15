@@ -1,0 +1,446 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-13",
+  "profiles": {
+    "JP3436100006": {
+      "reviewedAt": "2026-10-12",
+      "narrative": [
+        "SoftBank Group er en japansk investeringskoncern, grundlagt af Masayoshi Son. Når man køber aktien, bliver man derfor ikke medejer af ét bestemt produkt, men får indirekte eksponering mod en række teknologivirksomheder.",
+        "Koncernen investerer både direkte og gennem Vision Funds. Nogle selskaber er børsnoterede, mens andre er private og derfor ikke har en aktiekurs, man kan følge fra dag til dag. Arm, der udvikler teknologi til chipdesign, er en central del af koncernen.",
+        "SoftBank Group skal skelnes fra SoftBank Corp., som driver blandt andet japansk telekommunikation. Telekomforretningen indgår i koncernens ejerinteresser, men beskriver ikke hele den aktie, fonden ejer.",
+        "For at forstå SoftBank er det nyttigt at se på værdien af ejerandelene sammen med gælden, der finansierer dem. Koncernens indre værdi er ikke det samme som dens børsværdi. Store ejerandele, ændrede værdiansættelser og finansiering kan derfor få stor betydning for aktien. Det gør SoftBank til en anden type teknologieksponering end en virksomhed, der primært sælger sine egne produkter."
+      ],
+      "narrativeSources": [
+        {
+          "label": "Koncernens forretningsmodel",
+          "url": "https://group.softbank/en/ir/financials/annual_reports/2026/who_we_are"
+        },
+        {
+          "label": "Koncernselskaber",
+          "url": "https://group.softbank/en/about/group"
+        },
+        {
+          "label": "Selskabets risikofaktorer",
+          "url": "https://group.softbank/en/ir/investors/management_policy/risk_factor"
+        }
+      ],
+      "xAccounts": [
+        {
+          "handle": "SoftBank_Group",
+          "label": "SoftBank Group på X",
+          "role": "company",
+          "source": "https://group.softbank/news/info/20220427"
+        },
+        {
+          "handle": "masason",
+          "label": "Masayoshi Son på X",
+          "role": "executive",
+          "source": "https://group.softbank/do"
+        }
+      ]
+    },
+    "US84615Q1031": {
+      "xAccounts": [
+        {
+          "handle": "SpaceX",
+          "label": "SpaceX · officiel konto",
+          "role": "company",
+          "source": "https://www.spacex.com/"
+        },
+        {
+          "handle": "elonmusk",
+          "label": "Elon Musk · direktør",
+          "role": "executive",
+          "source": "https://www.sec.gov/Archives/edgar/data/1318605/000156459022017214/tsla-8k_20220502.htm"
+        }
+      ],
+      "reviewedAt": "2026-10-13",
+      "narrative": [
+        "SpaceX arbejder med to tæt forbundne forretninger: transport til rummet og kommunikation via satellitter. Raketter og rumfartøjer bruges til at sende satellitter, last og mennesker i kredsløb. Kunderne omfatter både virksomheder og offentlige rumprogrammer.",
+        "Starlink er selskabets satellitbaserede internetforretning. Den leverer forbindelse til private og virksomheder, blandt andet på steder, hvor forbindelser på jorden er begrænsede. Her sælger SpaceX en løbende tjeneste — ikke blot en enkelt opsendelse.",
+        "Sammenhængen mellem forretningerne er vigtig: SpaceX kan sende sine egne satellitter op med sine egne raketter. Genbrug af raketdele og kontrol over flere led i produktionen er centrale elementer i den måde, selskabet arbejder på. Det gør SpaceX til mere end et traditionelt raketselskab.",
+        "Som investor er det nyttigt at skelne mellem opsendelsesaktivitet, satellitnetværk og nye udviklingsprojekter. De har forskellige kunder, indtægter og kapitalbehov. Teknisk drift, store investeringer, konkurrence og myndighedstilladelser er væsentlige forhold at holde øje med. Materialet nedenfor giver flere perspektiver; daterede analyser er ikke det samme som aktuelle selskabsoplysninger."
+      ],
+      "narrativeSources": [
+        {
+          "label": "SpaceX · Falcon 9",
+          "url": "https://www.spacex.com/vehicles/falcon-9/"
+        },
+        {
+          "label": "Starlink · teknologi",
+          "url": "https://www.starlink.com/technology"
+        }
+      ]
+    },
+    "US88160R1014": {
+      "xAccounts": [
+        {
+          "handle": "Tesla",
+          "label": "Tesla · officiel konto",
+          "role": "company",
+          "source": "https://www.sec.gov/Archives/edgar/data/1318605/000156459022017214/tsla-8k_20220502.htm"
+        },
+        {
+          "handle": "elonmusk",
+          "label": "Elon Musk · direktør",
+          "role": "executive",
+          "source": "https://www.sec.gov/Archives/edgar/data/1318605/000156459022017214/tsla-8k_20220502.htm"
+        }
+      ]
+    }
+  },
+  "media": [
+    {
+      "url": "https://www.youtube.com/watch?v=__Z9zkNXKmc",
+      "kind": "Video",
+      "language": "Dansk",
+      "isins": [
+        "US84615Q1031"
+      ],
+      "context": "En kort introduktion til SpaceX som mere end et raketselskab.",
+      "title": "SpaceX - mere end bare et raketselskab",
+      "date": "2026-10-08",
+      "author": "NewDeal Invest",
+      "seconds": 423,
+      "publisher": "YouTube",
+      "sourceHash": "e6eaf57078e9b7c7bbeadf800b351e353612440dbbcd1b125c285da69fe048ab",
+      "checkedAt": "2026-10-08T10:21:16.288209+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/__Z9zkNXKmc/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH8CYAC0AWKAgwIABABGEEgWihyMA8=&rs=AOn4CLC80azcG7thp1HG0VOGhaeO8bKqdg"
+    },
+    {
+      "url": "https://newdealinvest.substack.com/p/nvda-vs-avgo-the-optical-edge",
+      "kind": "Analyse",
+      "language": "Engelsk",
+      "isins": [
+        "US67066G1040",
+        "US11135F1012"
+      ],
+      "context": "NVIDIA og Broadcom set gennem netværk og optiske forbindelser.",
+      "title": "NVDA vs AVGO: The Optical Edge",
+      "date": "2026-10-07",
+      "author": "Convequity",
+      "publisher": "Substack",
+      "sourceHash": "a2a28ccb65f0d21f8d6c3cbfdd51ff3b508dfdd428667f064c362b48c184bf4a",
+      "checkedAt": "2026-10-08T10:18:32.139051+00:00",
+      "thumbnail": "https://substackcdn.com/image/fetch/$s_!-TuO!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7434ecfa-621b-46b3-a66c-c3a6a7d8c693_1672x941.png"
+    },
+    {
+      "url": "https://newdealinvest.substack.com/p/soitec-the-base-substrate-that-silicon",
+      "kind": "Analyse",
+      "language": "Engelsk",
+      "isins": [
+        "FR0013227113"
+      ],
+      "context": "Om Soitecs materialer under chips til optisk datakommunikation.",
+      "title": "Soitec - the base substrate that silicon photonics chips are built on",
+      "date": "2026-10-07",
+      "author": "Convequity",
+      "publisher": "Substack",
+      "sourceHash": "0f346e3cd86eecb082239e35e9fa27a2d821a4aa37ec80c0f399ec477656bc79",
+      "checkedAt": "2026-10-08T10:18:32.597482+00:00",
+      "thumbnail": "https://substackcdn.com/image/fetch/$s_!e_oc!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd32f46e6-3466-43a0-b9eb-85c811635f9c_1672x941.png"
+    },
+    {
+      "url": "https://newdealinvest.substack.com/p/optical-circuit-switching-and-the",
+      "kind": "Analyse",
+      "language": "Engelsk",
+      "isins": [
+        "US67066G1040"
+      ],
+      "context": "Teknologisk baggrund om optiske forbindelser mellem AI-computere; ikke en fuld selskabsanalyse.",
+      "title": "Optical Circuit Switching and the Economics of AI Clusters",
+      "date": "2026-10-02",
+      "author": "Convequity",
+      "publisher": "Substack",
+      "sourceHash": "4a2ab0888d0b13eaaddcd8bd910016bdf063177b4d62d1a0c7611dae3404bee3",
+      "checkedAt": "2026-10-08T10:18:32.468382+00:00",
+      "thumbnail": "https://substackcdn.com/image/fetch/$s_!fByN!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe3fc2705-a582-4f8a-9a9d-40f17bda8c19_1536x1024.jpeg"
+    },
+    {
+      "url": "https://newdealinvest.substack.com/p/the-economy-of-a-neocloud-simplified",
+      "kind": "Temabaggrund",
+      "language": "Engelsk",
+      "isins": [
+        "US21873S1087",
+        "NL0009805522",
+        "AU0000185993"
+      ],
+      "context": "Forklarer økonomien i AI-cloud med et illustrativt eksempel. Ikke nøgletal eller analyse af dette selskab.",
+      "title": "The Economy of a Neocloud, Simplified",
+      "date": "2026-09-25",
+      "author": "Mads Christiansen",
+      "publisher": "Substack",
+      "sourceHash": "79ccbae7bfcacf4955ef0954ac6c60e2a5cbcc78e59c035edff53edce0c62f8a",
+      "checkedAt": "2026-10-08T10:18:32.965355+00:00",
+      "thumbnail": "https://substackcdn.com/image/fetch/$s_!HfS7!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa4f635f4-e785-47ad-9306-2a77df223d38_482x321.png"
+    },
+    {
+      "url": "https://www.newdealinvest.dk/post/uge-36-vælg-udviklingen-ikke-vinderen",
+      "kind": "Ugebrev",
+      "language": "Dansk",
+      "isins": [
+        "US67066G1040",
+        "US11135F1012"
+      ],
+      "context": "NVIDIA og Broadcom i en forklaring af forskellige roller i AI-værdikæden.",
+      "title": "Uge 36 - Vælg udviklingen, ikke vinderen",
+      "date": "2026-09-07",
+      "author": "Mads Christiansen",
+      "publisher": "NewDeal Invest",
+      "sourceHash": "2e4778836fd3f2781f3989198b0ebd7fe860dc4d88c48d0e95c6ad77aa122d13",
+      "checkedAt": "2026-10-08T10:18:48.579406+00:00",
+      "thumbnail": "https://static.wixstatic.com/media/00d966_087c7b466fee400fb2a45838e41c3468~mv2.png/v1/fill/w_964,h_644,al_c,q_90/00d966_087c7b466fee400fb2a45838e41c3468~mv2.png"
+    },
+    {
+      "url": "https://newdealinvest.substack.com/p/teslas-cybercab-is-here-the-potential",
+      "kind": "Analyse",
+      "language": "Engelsk",
+      "isins": [
+        "US88160R1014"
+      ],
+      "context": "En dateret gennemgang af Teslas Cybercab og de oplysninger, der forelå ved udgivelsen.",
+      "title": "Tesla’s Cybercab Is Here. The Potential Is Clearer Than the Details",
+      "date": "2026-09-04",
+      "author": "Jesper Bæk",
+      "publisher": "Substack",
+      "sourceHash": "b5ee499b987869b36945465e15ce5305b5328632abc6a442cd33b3a14865a5be",
+      "checkedAt": "2026-10-08T10:18:32.796240+00:00",
+      "thumbnail": "https://substackcdn.com/image/fetch/$s_!zWkI!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd06caecc-8f86-4326-80a6-dd7fafb566f9_1280x720.webp"
+    },
+    {
+      "url": "https://newdealinvest.substack.com/p/spacex-powering-ai-from-orbit-space",
+      "kind": "Analyse",
+      "language": "Engelsk",
+      "context": "Del 1: energiforbrug og infrastrukturen bag analysens idé om databehandling i kredsløb.",
+      "isins": [
+        "US84615Q1031"
+      ],
+      "title": "SpaceX - Powering AI from Orbit, Space Solar, and the Musk Stack (Pt.1)",
+      "date": "2026-08-20",
+      "author": "Convequity",
+      "publisher": "Substack",
+      "sourceHash": "944c262138a44656e6dfce075e2b55783c8cd2bc7f43554d68cad4c3a4eb39e4",
+      "checkedAt": "2026-10-13T12:19:17.599446+00:00",
+      "thumbnail": "https://substackcdn.com/image/fetch/$s_!Ib74!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe3dc2918-6196-41da-8f3a-bd8ef54db62d_776x532.png"
+    },
+    {
+      "url": "https://newdealinvest.substack.com/p/spacex-powering-ai-from-orbit-space-90a",
+      "kind": "Analyse",
+      "language": "Engelsk",
+      "context": "Del 2: teknologien og energisystemerne i analysens scenarie.",
+      "isins": [
+        "US84615Q1031"
+      ],
+      "title": "SpaceX - Powering AI from Orbit, Space Solar, and the Musk Stack (Pt.2)",
+      "date": "2026-08-20",
+      "author": "Convequity",
+      "publisher": "Substack",
+      "sourceHash": "8f04a9d5775ba8d80918be1f1e0838078d998bfc7d27ddb3ecd45be78669e4ae",
+      "checkedAt": "2026-10-13T12:19:17.615968+00:00",
+      "thumbnail": "https://substackcdn.com/image/fetch/$s_!4Oon!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F08bad761-1246-4be7-ac3e-b2c6f8ce5de0_1168x784.png"
+    },
+    {
+      "url": "https://newdealinvest.substack.com/p/spacex-powering-ai-from-orbit-space-687",
+      "kind": "Analyse",
+      "language": "Engelsk",
+      "context": "Del 3: optiske forbindelser og den tilhørende leverandørkæde.",
+      "isins": [
+        "US84615Q1031"
+      ],
+      "title": "SpaceX - Powering AI from Orbit, Space Solar, and the Musk Stack (Pt.3)",
+      "date": "2026-08-20",
+      "author": "Convequity",
+      "publisher": "Substack",
+      "sourceHash": "d1f55fa8c4875e14b8546c5bc954b3eb7b9ca0271c4f2e4adaad43ed1e9d3d27",
+      "checkedAt": "2026-10-13T12:19:17.996668+00:00",
+      "thumbnail": "https://substackcdn.com/image/fetch/$s_!uiIy!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd46548ef-e7ef-4c7f-9909-e69e570cb382_1168x784.png"
+    },
+    {
+      "url": "https://www.newdealinvest.dk/post/uge-33",
+      "kind": "Ugebrev",
+      "language": "Dansk",
+      "isins": [
+        "US81141R1005"
+      ],
+      "context": "Sea som eksempel på forskellen mellem koncernens tal og de underliggende forretninger.",
+      "title": "Uge 33 - Samme tal, modsatte konklusioner",
+      "date": "2026-08-17",
+      "author": "Mads Christiansen",
+      "publisher": "NewDeal Invest",
+      "sourceHash": "63ea418c37964fce61f60fbacbfa32a632332d70343c2f03b3f6f43e91176a66",
+      "checkedAt": "2026-10-08T10:18:47.485684+00:00",
+      "thumbnail": "https://static.wixstatic.com/media/00d966_d860d0eefffe4fd49f1de83c61b20a3f~mv2.png/v1/fill/w_964,h_596,al_c,q_90/00d966_d860d0eefffe4fd49f1de83c61b20a3f~mv2.png"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=CAkUyUTsVG0",
+      "kind": "Video",
+      "language": "Dansk",
+      "isins": [
+        "US81141R1005",
+        "US67066G1040"
+      ],
+      "context": "Mads gennemgår blandt andet Seas Q2-regnskab og NVIDIA-nyheder. Videoen omtaler flere selskaber.",
+      "title": "Q2 Regnskaber fra Hims & Hers, Sea LTD og kæmpe NVIDIA nyheder - Mads giver sit take",
+      "date": "2026-08-13",
+      "author": "NewDeal Invest",
+      "seconds": 2971,
+      "publisher": "YouTube",
+      "sourceHash": "28cd5d07d7baf3bd97ad8176bbf8dd20a5e2d60579d03f690d9c646104a12af3",
+      "checkedAt": "2026-10-08T10:21:17.899512+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/CAkUyUTsVG0/maxresdefault.jpg"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=iGCNmCq7YE4",
+      "kind": "Short",
+      "language": "Dansk",
+      "isins": [
+        "US30303M1027"
+      ],
+      "context": "Et kort klip om Meta og beregningsinfrastruktur.",
+      "title": "Meta Compute?",
+      "date": "2026-07-13",
+      "author": "NewDeal Invest",
+      "seconds": 57,
+      "publisher": "YouTube",
+      "sourceHash": "9d57b388aca9d1b90b38f83acb534624db0d194cc3b9d815e764936da0525503",
+      "checkedAt": "2026-10-08T10:21:17.304190+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/iGCNmCq7YE4/maxres2.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYTSBlKGIwDw==&rs=AOn4CLAriGXGwOsH8-z3_8MPFn12MbHOuA"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=5DwuBgbnzNw",
+      "kind": "Short",
+      "language": "Dansk",
+      "isins": [
+        "US69608A1088",
+        "US67066G1040"
+      ],
+      "context": "Et kort klip, der sætter Palantir og NVIDIA i relation til AI-modeludviklerne.",
+      "title": "Anthropic og OpenAI vs Palantir og NVIDIA",
+      "date": "2026-07-12",
+      "author": "NewDeal Invest",
+      "seconds": 88,
+      "publisher": "YouTube",
+      "sourceHash": "675079d2c59cb190df9d2980ebc79b44cbc1e6a046d24d5960a9f101a50fb20d",
+      "checkedAt": "2026-10-08T10:21:17.076745+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/5DwuBgbnzNw/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AG2CIACgA-KAgwIABABGE4gZSheMA8=&rs=AOn4CLDzjCdte4eOe46PPP2z9z9U3meE2A"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=j9BV3f4IEGA",
+      "kind": "Short",
+      "language": "Dansk",
+      "isins": [
+        "US15675D1037"
+      ],
+      "context": "Et kort klip om Cerebras og afvejningen mellem hastighed og omkostninger.",
+      "title": "Cerebras - hurtigt men dyrt",
+      "date": "2026-07-06",
+      "author": "NewDeal Invest",
+      "seconds": 94,
+      "publisher": "YouTube",
+      "sourceHash": "ddc1ea2d2f9e0bcfea6a6e49a19776c31e37d283d4434e72564e4f21a64df880",
+      "checkedAt": "2026-10-08T10:21:16.671785+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/j9BV3f4IEGA/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AG2CIACgA-KAgwIABABGHIgRChDMA8=&rs=AOn4CLCFl5CFCVu0fCy5XNKPzSx3ns0UIA"
+    },
+    {
+      "url": "https://www.newdealinvest.dk/post/spacex-powering-ai-from-orbit",
+      "kind": "Analyse",
+      "language": "Engelsk",
+      "isins": [
+        "US84615Q1031"
+      ],
+      "context": "Om SpaceX, satellitkommunikation og infrastruktur i kredsløb.",
+      "title": "SpaceX - Powering AI from Orbit",
+      "date": "2026-07-03",
+      "author": "Jordan Lambert &amp; Simon He",
+      "publisher": "NewDeal Invest",
+      "sourceHash": "526a6a6a30c116aa11b5adb50b36587f1cacbc8038559b2de35ccf4bc4a1dffd",
+      "checkedAt": "2026-10-08T10:18:39.272641+00:00",
+      "thumbnail": "https://static.wixstatic.com/media/00d966_94c47b30902842ca80e8358f9ed9638c~mv2.jpg/v1/fill/w_1000,h_671,al_c,q_85,usm_0.66_1.00_0.01/00d966_94c47b30902842ca80e8358f9ed9638c~mv2.jpg"
+    },
+    {
+      "url": "https://www.newdealinvest.dk/post/powering-ai-from-orbit-macom-coherent-stm-hamamatsu-pt-4",
+      "kind": "Analyse",
+      "language": "Engelsk",
+      "isins": [
+        "US55405Y1001",
+        "US19247G1076",
+        "US8610121027"
+      ],
+      "context": "Om MACOM, Coherent, STMicroelectronics og Hamamatsu i fotonik- og komponentkæden.",
+      "title": "Powering AI From Orbit: MACOM, Coherent, STM, Hamamatsu (Pt.4)",
+      "date": "2026-06-25",
+      "author": "Jordan Lambert &amp; Simon He",
+      "publisher": "NewDeal Invest",
+      "sourceHash": "3feead1c872623780aa40f3010b992472b763986e5b654a34e08016c85fcd04a",
+      "checkedAt": "2026-10-08T10:18:40.268434+00:00",
+      "thumbnail": "https://static.wixstatic.com/media/00d966_d10ba1a9768d4bfb872ee8b50d7c15be~mv2.jpg/v1/fill/w_1000,h_671,al_c,q_85,usm_0.66_1.00_0.01/00d966_d10ba1a9768d4bfb872ee8b50d7c15be~mv2.jpg"
+    },
+    {
+      "url": "https://www.newdealinvest.dk/post/tower-semiconductor-powering-ai-from-orbit-pt-5",
+      "kind": "Analyse",
+      "language": "Engelsk",
+      "isins": [
+        "IL0010823792"
+      ],
+      "context": "Om Towers rolle som producent af specialiserede chips og optiske teknologier.",
+      "title": "Tower Semiconductor - Powering AI From Orbit (Pt.5)",
+      "date": "2026-06-25",
+      "author": "Jordan Lambert &amp; Simon He",
+      "publisher": "NewDeal Invest",
+      "sourceHash": "b5563254dbaa562f6d58c75d72d563f52c2ed99dc5358cc90af8850b98ef5e3f",
+      "checkedAt": "2026-10-08T10:18:40.465414+00:00",
+      "thumbnail": "https://static.wixstatic.com/media/00d966_b165bd30057a4a089858051e095e96bd~mv2.jpg/v1/fill/w_1000,h_667,al_c,q_85,usm_0.66_1.00_0.01/00d966_b165bd30057a4a089858051e095e96bd~mv2.jpg"
+    },
+    {
+      "url": "https://www.newdealinvest.dk/post/uge-24-spacex-deler-vandene",
+      "kind": "Ugebrev",
+      "language": "Dansk",
+      "context": "Debatten om SpaceX og forskellige tilgange til at analysere teknologiselskaber.",
+      "isins": [
+        "US84615Q1031"
+      ],
+      "title": "Uge 24 - SpaceX deler vandene",
+      "date": "2026-06-15",
+      "author": "Mads Christiansen",
+      "publisher": "NewDeal Invest",
+      "sourceHash": "3e03b51d4dd3ce0da0097fca2b5f9c844e94f93bb3914fe6b784483acef0691e",
+      "checkedAt": "2026-10-13T12:19:21.394611+00:00",
+      "thumbnail": "https://static.wixstatic.com/media/499d54_42c0e435f62c48358f9571eb6bd4d3ea~mv2.png/v1/fit/w_1000,h_1000,q_90,usm_0.66_1.00_0.01/499d54_42c0e435f62c48358f9571eb6bd4d3ea~mv2.png"
+    },
+    {
+      "url": "https://www.newdealinvest.dk/post/uge-40-om-at-se-anderledes-på-tech-og-markeder",
+      "kind": "Ugebrev",
+      "language": "Dansk",
+      "isins": [
+        "US7960508882",
+        "US78392B1070",
+        "US5951121038"
+      ],
+      "context": "Et historisk ugebrev med omtale af Samsung, SK Hynix og markedet for hukommelseschips.",
+      "title": "Uge 40 - Om at se anderledes på tech og markeder",
+      "date": "2025-10-06",
+      "author": "Mads Christiansen",
+      "publisher": "NewDeal Invest",
+      "sourceHash": "b75d21aedebe9baaa3eb441fbbbdc6096f3a8d080993d2872042040ba009bf2d",
+      "checkedAt": "2026-10-08T10:18:50.199204+00:00",
+      "thumbnail": null
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=_6tVz0Bu1XM",
+      "kind": "Short",
+      "language": "Dansk",
+      "isins": [
+        "US75734B1008"
+      ],
+      "context": "Et klip om Reddit fra et tidligere webinar. Udgivelsesdatoen er klippets dato.",
+      "title": "Reddit-aktien (RDDT) - Klip fra NewDeal Invest webinar",
+      "date": "2025-01-30",
+      "author": "NewDeal Invest",
+      "seconds": 23,
+      "publisher": "YouTube",
+      "sourceHash": "81c791fa3b4c84672e11d3b013c2047613b804fffe40ed524f1c8da2be14b939",
+      "checkedAt": "2026-10-08T10:21:17.695132+00:00",
+      "thumbnail": "https://i.ytimg.com/vi/_6tVz0Bu1XM/maxres2.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgAKAD4oCDAgAEAEYECBjKGUwDw==&rs=AOn4CLCjyEFiGbYbZsA6-fLj4lRzIAZOeQ"
+    }
+  ]
+}

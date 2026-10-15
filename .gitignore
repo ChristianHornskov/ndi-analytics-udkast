@@ -1,1 +1,6 @@
-vision.docx
+logs/*.out
+logs/*.pid
+logs/claude-prompt-*.md
+*.log
+.DS_Store
+node_modules/
