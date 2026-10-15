@@ -93,11 +93,20 @@ function toast(msg) {
 function openDialog(id) {
   const tpl = document.getElementById(id);
   if (!tpl) return;
+  // Kun én dialog ad gangen
+  document.querySelector('.dialog-backdrop [data-close]')?.click();
   const prevFocus = document.activeElement;
   const backdrop = document.createElement('div');
   backdrop.className = 'dialog-backdrop';
   backdrop.innerHTML = tpl.innerHTML;
-  const close = () => { backdrop.remove(); if (prevFocus && prevFocus.focus) prevFocus.focus(); };
+  // Modal: baggrunden er inert (ingen fokus/skærmlæser), toast forbliver læsbar
+  const behind = [...document.body.children].filter((el) => el.matches('header, main, footer, .skip'));
+  behind.forEach((el) => { el.inert = true; });
+  const close = () => {
+    behind.forEach((el) => { el.inert = false; });
+    backdrop.remove();
+    if (prevFocus?.isConnected && prevFocus.focus) prevFocus.focus();
+  };
   backdrop.addEventListener('click', (e) => { if (e.target === backdrop) close(); });
   backdrop.querySelector('[data-close]')?.addEventListener('click', close);
   // focus trap
@@ -135,6 +144,16 @@ const GLOSS = {
 };
 function gl(key) {
   return `<a class="info-btn" href="om-data.html#g-${key}" title="Hvad betyder ${GLOSS[key]}? Se ordlisten" aria-label="Hvad betyder ${GLOSS[key]}? Se ordlisten">?</a>`;
+}
+
+/** Segmenteret vælger (vælg én af N) = APG radiogroup: roving tabindex, pile/Home/End i wireKeyboard. */
+function segHtml(label, items) {
+  return `<div class="seg" role="radiogroup" aria-label="${label}">${items.map((it) =>
+    `<button type="button" class="control ${it.on ? 'active' : ''}" ${it.attr} role="radio" aria-checked="${it.on}" tabindex="${it.on ? 0 : -1}"${it.title ? ` title="${it.title}"` : ''}>${it.label}</button>`).join('')}</div>`;
+}
+function fundSeg() {
+  return segHtml('Andelsklasse', DATA.portfolio.funds.map((f) =>
+    ({ attr: `data-fund="${f.id}"`, on: f.id === state.fund, label: f.short })));
 }
 
 function warnHtml() {
@@ -217,9 +236,7 @@ function renderFonden(root) {
       <h1>${fund.short}</h1>
       <p class="lede">Akkumulerende andelsklasse · ISIN ${fund.isin}</p>
       <div class="toolbar">
-        <div class="seg" role="tablist" aria-label="Andelsklasse">
-          ${DATA.portfolio.funds.map((f) => `<button type="button" class="control ${f.id===state.fund?'active':''}" data-fund="${f.id}" role="tab" aria-selected="${f.id===state.fund}">${f.short}</button>`).join('')}
-        </div>
+        ${fundSeg()}
       </div>
       <section class="panel">
         <div class="metrics">
@@ -261,9 +278,14 @@ function renderFonden(root) {
     state.period = 'all';
   }
 
-  const yearBtns = years.map((y) =>
-    `<button type="button" class="control ${state.period===('year:'+y.year)?'active':''}" data-period="year:${y.year}" role="tab" aria-selected="${state.period===('year:'+y.year)}">${y.year}${y.partial?'*':''}</button>`
-  ).join('');
+  const periodSeg = segHtml('Periode', [
+    { attr: 'data-period="all"', on: state.period === 'all', label: 'Siden start' },
+    { attr: 'data-period="ytd"', on: state.period === 'ytd', label: 'ÅTD', title: 'År til dato' },
+    ...years.map((y) => ({
+      attr: `data-period="year:${y.year}"`, on: state.period === 'year:' + y.year,
+      label: y.year + (y.partial ? '*' : ''), title: y.partial ? 'Delår fra start' : '',
+    })),
+  ]);
 
   const yearTable = years.map((y) =>
     `<tr><td>${y.year}${y.partial ? ' <span class="badge">delår</span>' : ''}</td><td>${fmtPct(y.ret)}</td><td style="color:var(--muted);font-size:12px">${fmtDate(y.from)} – ${fmtDate(y.to)}</td></tr>`
@@ -278,14 +300,8 @@ function renderFonden(root) {
     <h1>${fund.short || fund.id.toUpperCase()}</h1>
     <p class="lede">Udloddende andelsklasse. Totalafkast i DKK efter fondens løbende omkostninger, før skat og egne handelsomkostninger. Afkast pr. ${fmtDate(asOfPerf)}. Beholdning nedenfor er forsinket (pr. ${fmtDate(posAsOf)}).</p>
     <div class="toolbar">
-      <div class="seg" role="tablist" aria-label="Andelsklasse">
-        ${DATA.portfolio.funds.map((f) => `<button type="button" class="control ${f.id===state.fund?'active':''}" data-fund="${f.id}" role="tab" aria-selected="${f.id===state.fund}">${f.short}</button>`).join('')}
-      </div>
-      <div class="seg" role="tablist" aria-label="Periode">
-        <button type="button" class="control ${state.period==='all'?'active':''}" data-period="all" role="tab" aria-selected="${state.period==='all'}">Siden start</button>
-        <button type="button" class="control ${state.period==='ytd'?'active':''}" data-period="ytd" role="tab" aria-selected="${state.period==='ytd'}">ÅTD</button>
-        ${yearBtns}
-      </div>
+      ${fundSeg()}
+      ${periodSeg}
     </div>
     <section class="panel">
       <div class="metrics">
@@ -495,8 +511,7 @@ function renderPortefolje(root) {
 }
 
 function fundToolbar() {
-  return `<div class="toolbar"><div class="seg">${DATA.portfolio.funds.map((f) =>
-    `<button type="button" class="control ${f.id===state.fund?'active':''}" data-fund="${f.id}">${f.short}</button>`).join('')}</div>
+  return `<div class="toolbar">${fundSeg()}
     <a class="outline-btn small" href="?view=udforsk&fund=${state.fund}">Åbn screener</a></div>`;
 }
 
@@ -548,8 +563,8 @@ function renderUdforsk(root) {
       <button type="button" class="outline-btn small" id="csv-export">Download CSV (filtreret)</button>
       <button type="button" class="outline-btn small" data-open="dlg-follow">Følg tema (stub)</button>
     </div>
-    <div class="filters" aria-label="Temaer">
-      ${themes.map((t) => `<button type="button" class="control ${state.tags.includes(t)?'active':''}" data-tag="${t}">${daTheme(t)}</button>`).join('')}
+    <div class="filters" role="group" aria-label="Filtrér på tema">
+      ${themes.map((t) => `<button type="button" class="control ${state.tags.includes(t)?'active':''}" data-tag="${t}" aria-pressed="${state.tags.includes(t)}">${daTheme(t)}</button>`).join('')}
     </div>
     <p style="font-size:12px;color:var(--muted);margin:8px 0">Tema-dybsider: ${themes.map((t) => `<a href="tema.html?slug=${encodeURIComponent(t)}&fund=${state.fund}">${daTheme(t)}</a>`).join(' · ')} · <a href="selskaber.html?fund=${state.fund}">A–Z liste</a></p>
     <!-- Modenhedsfiltre skjult indtil manuel klassifikation -->
@@ -564,7 +579,7 @@ function renderUdforsk(root) {
     ...state.maturity.map((m) => ({ k: 'mat', v: m, label: daMat(m) })),
   ];
   chips.innerHTML = parts.map((p) =>
-    `<span class="chip">${p.label}<button type="button" data-x="${p.k}:${p.v}" aria-label="Fjern">×</button></span>`).join('');
+    `<span class="chip">${p.label}<button type="button" data-x="${p.k}:${p.v}" aria-label="Fjern filter ${p.label}">×</button></span>`).join('');
 }
 
 function paint() {
@@ -694,14 +709,15 @@ function wireKeyboard() {
       return;
     }
     const seg = e.target.closest?.('.seg');
-    if (!seg || !['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(e.key)) return;
+    if (!seg || !['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', 'Home', 'End'].includes(e.key)) return;
     const controls = [...seg.querySelectorAll('.control:not(:disabled)')];
     const i = controls.indexOf(document.activeElement);
     if (i < 0) return;
     e.preventDefault();
     const n = controls.length;
+    const fwd = e.key === 'ArrowRight' || e.key === 'ArrowDown';
     const next = e.key === 'Home' ? 0 : e.key === 'End' ? n - 1
-      : e.key === 'ArrowRight' ? (i + 1) % n : (i - 1 + n) % n;
+      : fwd ? (i + 1) % n : (i - 1 + n) % n;
     const target = controls[next];
     // click() → paint() gentegner visningen; find samme kontrol igen og giv den fokus (APG tabs)
     const key = ['data-fund', 'data-period', 'data-tag'].find((k) => target.hasAttribute(k));
