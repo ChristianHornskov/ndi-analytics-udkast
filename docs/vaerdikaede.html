@@ -146,7 +146,7 @@
  const GLOSS = { space: 'gloss-wrap', energy: 'e-gloss-wrap', physical: 'p-gloss-wrap', quantum: 'q-gl' };
  const glossA = (c) => c.glossary?.length && GLOSS[c.id] ? `<a class="oc-gl" href="vaerdikaeder.html?kaede=${esc(c.id)}#${GLOSS[c.id]}"><span aria-hidden="true">◇</span> Ordbog: ${c.glossary.length} ord →</a>` : '';
  // Usikkerheder pr. kæde (kun hvor siden har sektionen)
- const RISK = { space: 'sp-risk', energy: 'e-risk', physical: 'p-risk' };
+ const RISK = { space: 'sp-risk', energy: 'e-risk', physical: 'p-risk', quantum: 'q-risk' };
  const riskA = (c) => c.risks?.items?.length && RISK[c.id] ? `<a class="oc-gl" href="vaerdikaeder.html?kaede=${esc(c.id)}#${RISK[c.id]}"><span aria-hidden="true">⚠</span> Hvad kan gå galt? ${c.risks.items.length} usikkerheder →</a>` : '';
  // Tjek dig selv (kun hvor siden har sektionen)
  const QUIZ = { space: 'sp-quiz', energy: 'e-quiz', quantum: 'q-quiz', physical: 'p-quiz' };

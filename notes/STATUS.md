@@ -419,3 +419,13 @@ Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html, v
 3. **Genveje i energi-fanen** (`#e-links`): Strømmens vej, Hvad kan gå galt? (6), Tjek dig selv (5) og Energi-ordbog. De erstatter de to løse links. Ordbogen åbner, når man hopper til den.
 Tjek: Playwright på 1280 og 375 med 0 konsolfejl og ingen sidescroll. 5 strimler med 5 trin, klik på Elnet i atomkraft-kortet åbner `#lk-grid`, og datacenter-hop giver `?kaede=ai-compute#lk-datacenter`. Genvejen til quizzen lander på 194 og 222 px som de andre faner. smoke.mjs 52/52 fail 0 (egen server på 8817). Precheck PASSED. Grep efter handelssprog og tankestreger i diff giver 0 hits.
 Næste: kvante-fanen kan få genveje og et "Hvad kan gå galt?", og rum-fanens læse-rute kan få et stop til AI-floden. Ikke færdig.
+
+## Fra Claude lane-A · 2026-10-16 ~01:50 CEST (kvante: trappe, usikkerheder og genveje)
+Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html, vaerdikaede.html, value-chains.json og notes.
+1. **Kvante: "Hvor langt er kvante nået?"** Ny sektion (`#q-lad`) med en trappe i fem trin: fysikken virker, små og støjende maskiner, adgang over skyen, fejlrettede qubits og nyttige maskiner. Trin 2 og 3 er markeret som "her er feltet i dag". Hvert trin har et link til ordbogen, kulden, cloud i AI-floden eller tidshorisonten. NVIDIA-udsagnet står kun som gengivet udsagn med kilde (BLOG 13. januar 2025) og noten "ikke Mads' og ikke NDI's prognose". Det hele er mærket baggrund, og data ligger i `quantum.ladder`.
+2. **Kvante: "Hvad kan gå galt i kvantekæden?"** (`#q-risk`). Der er seks kort: tiden, fejlene, hvilken type der vinder, medvinden, få store kunder og kulden. Strimlen viser, hvor kvante rører kæderne (Kvante, Cloud, Chipdesign, Udstyr og Elnet), og prikker i andre kæder har stiplet kant og hopper dertil. To kort har en NDI-linje med kilde (BLOG 21. juli 2025 og 2. juni og 7. juli 2025). `renderRisks` kan nu tage led med `hop`.
+3. **Genveje i kvante-fanen** (`#q-links`): 7 genveje. De dobbelte links i callout-boksen er fjernet.
+4. **Quiz:** Der er et 5. spørgsmål om, hvor kvante står i dag, og svaret linker til trappen.
+5. **vaerdikaede.html:** Kvantekortet har fået "⚠ Hvad kan gå galt? 6 usikkerheder →".
+Tjek: Playwright på 1280 og 375 med 0 konsolfejl og ingen sidescroll. Der er 5 trin, 6 kort, 30 prikker (24 i andre kæder og 11 ramte) og 5 spørgsmål. Deep-link og genveje lander på 194 og 222 px, og Cloud-prikken giver `?kaede=ai-compute#lk-cloud`. smoke.mjs 52/52 fail 0 (egen server på 8817). Precheck PASSED. Grep efter handelssprog og tankestreger i diff giver kun "ikke en anbefaling".
+Næste: rum-fanens læse-rute kan få et stop til AI-floden via rum og compute. Ikke færdig.

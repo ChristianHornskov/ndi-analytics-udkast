@@ -4828,7 +4828,7 @@
     "note": "Alt i boksen er generel baggrundsviden og ikke NDI's synspunkter. Temperaturerne er afrundede. Det er ikke en vurdering af enkelte selskaber og ikke en anbefaling."
    },
    "quiz": {
-    "title": "Tjek dig selv: fire spørgsmål om kvante",
+    "title": "Tjek dig selv: fem spørgsmål om kvante",
     "lede": "Vælg et svar. Du får en kort forklaring og et link til det sted på siden, hvor det står. Intet gemmes.",
     "items": [
      {
@@ -4856,6 +4856,18 @@
       "more": "Se tidshorisonten"
      },
      {
+      "q": "Hvor står de fleste kvantecomputere i dag?",
+      "a": [
+       "De løser allerede vigtige opgaver bedre end almindelige computere",
+       "Små, støjende maskiner, som man lejer tid på til forsøg",
+       "De er kun en idé på papiret"
+      ],
+      "ok": 1,
+      "why": "Maskinerne findes, men laver mange fejl. Pålidelige, fejlrettede qubits er vist i forsøg, men ikke i stor skala endnu (baggrund).",
+      "sec": "q-lad",
+      "more": "Se trappen"
+     },
+     {
       "q": "Hvordan bruges de fleste kvantecomputere i dag?",
       "a": [
        "Man lejer tid på dem over skyen",
@@ -4880,8 +4892,152 @@
       "more": "Se leddet kvantecomputing"
      }
     ],
-    "done": "Du har svaret på alle fire.",
+    "done": "Du har svaret på alle fem.",
     "note": "Spørgsmålene er vores egne og skal gøre siden lettere at læse. De tester ikke viden om enkelte selskaber og er ikke en anbefaling."
+   },
+   "ladder": {
+    "title": "Hvor langt er kvante nået?",
+    "lede": "Kvantecomputere bygges trin for trin. Trappen viser groft, hvor feltet står. Den gule markering er der, hvor de fleste maskiner er i dag. Hvert trin har et link til mere.",
+    "steps": [
+     {
+      "icon": "🔬",
+      "k": "Fysikken virker",
+      "t": "I laboratoriet er det vist, at qubits kan bygges og styres. Det er grundlaget for resten.",
+      "state": "done",
+      "more": {
+       "sec": "q-gl",
+       "k": "Qubit i ordbogen"
+      }
+     },
+     {
+      "icon": "🧪",
+      "k": "Små, støjende maskiner",
+      "t": "Der findes maskiner med mange fysiske qubits, men de laver mange fejl og kan kun regne kort tid ad gangen.",
+      "state": "now",
+      "more": {
+       "sec": "q-cold",
+       "k": "Hvorfor fejlene kommer"
+      }
+     },
+     {
+      "icon": "☁",
+      "k": "Adgang over skyen",
+      "t": "Forskere og virksomheder lejer tid på maskinerne over internettet og prøver, hvad de kan bruges til.",
+      "state": "now",
+      "more": {
+       "hop": "ai-compute:cloud",
+       "k": "Cloud i AI-floden"
+      }
+     },
+     {
+      "icon": "🛡",
+      "k": "Fejlrettede qubits",
+      "t": "Mange fysiske qubits skal arbejde sammen om én pålidelig, logisk qubit. Det er vist i forsøg, men endnu ikke i stor skala.",
+      "state": "next",
+      "more": {
+       "sec": "q-gl",
+       "k": "Logisk qubit i ordbogen"
+      }
+     },
+     {
+      "icon": "🎯",
+      "k": "Nyttige maskiner",
+      "t": "Maskiner, der løser vigtige opgaver bedre end almindelige computere. Ingen ved, hvornår det sker.",
+      "state": "open",
+      "more": {
+       "sec": "q-hz",
+       "k": "Se tidshorisonten"
+      }
+     }
+    ],
+    "said": {
+     "who": "NVIDIA's direktør",
+     "t": "sagde i januar 2025, at nyttige kvantecomputere sandsynligvis ligger omkring 20 år ude.",
+     "src": "gengivet i BLOG 13. januar 2025",
+     "note": "Det er hans udsagn, ikke Mads' og ikke NDI's prognose."
+    },
+    "legend": {
+     "done": "Vist",
+     "now": "Her er feltet i dag",
+     "next": "Undervejs",
+     "open": "Ukendt hvornår"
+    },
+    "note": "Trappen er generel baggrundsviden og en forenkling. Forskellige typer qubits er nået forskellige steder. Den er ikke NDI's analyse, ikke en vurdering af enkelte selskaber og ikke en anbefaling."
+   },
+   "risks": {
+    "title": "Hvad kan gå galt i kvantekæden?",
+    "lede": "Kvante er tidligt, og usikkerhederne er store. Den lille kæde på hvert kort viser, hvor kvante rører resten af kæderne, og hvilke steder der især rammes. Prikkerne med stiplet kant ligger i en anden kæde.",
+    "touch": [
+     "quantum:q-core",
+     "ai-compute:cloud",
+     "ai-compute:chipdesign",
+     "ai-compute:equipment",
+     "energy:grid"
+    ],
+    "items": [
+     {
+      "icon": "⏳",
+      "k": "Det kan tage meget længere",
+      "t": "Ingen ved, hvornår kvantecomputere bliver nyttige. Hvis det tager årtier, kan penge og tålmodighed slippe op undervejs.",
+      "links": [
+       "q-core"
+      ],
+      "ndi": {
+       "t": "Mads bruger kvante som eksempel på teknologier, hvis indtægter er for usikre til at passe i et regneark.",
+       "src": "BLOG 21. juli 2025"
+      }
+     },
+     {
+      "icon": "🌡",
+      "k": "Fejlene er svære at tæmme",
+      "t": "Qubits mister deres tilstand ved den mindste forstyrrelse. Fejlkorrektion kræver mange fysiske qubits pr. pålidelig qubit og almindelige chips ved siden af, der holder øje.",
+      "links": [
+       "q-core",
+       "chipdesign"
+      ]
+     },
+     {
+      "icon": "🧩",
+      "k": "Ingen ved, hvilken type vinder",
+      "t": "Qubits bygges på flere måder, fx med superledere, ioner, lys eller atomer. Nogle typer kan vise sig at være blindgyder, og så er arbejdet med dem spildt.",
+      "links": [
+       "q-core",
+       "equipment"
+      ]
+     },
+     {
+      "icon": "🏛",
+      "k": "Medvinden kan vende",
+      "t": "Meget af pengene kommer fra stater og forskningsprogrammer. Hvis politikken skifter, kan støtten blive mindre. Eksportregler kan også begrænse, hvem der må købe hvad.",
+      "links": [
+       "q-core"
+      ],
+      "ndi": {
+       "t": "Mads nævner kvantecomputere som et segment med politisk medvind og høj volatilitet.",
+       "src": "BLOG 2. juni og 7. juli 2025"
+      }
+     },
+     {
+      "icon": "☁",
+      "k": "Få store kunder",
+      "t": "Mange maskiner bruges via nogle få store cloududbydere. De samme selskaber bygger også deres egne kvantechips, så de kan både være kunde og konkurrent.",
+      "links": [
+       "cloud",
+       "q-core"
+      ]
+     },
+     {
+      "icon": "❄",
+      "k": "Kulden er dyr og besværlig",
+      "t": "Kryostater er store, dyre og har lang leveringstid. Mere strøm og mere udstyr skal til, når maskinerne vokser.",
+      "links": [
+       "q-core",
+       "equipment",
+       "grid"
+      ]
+     }
+    ],
+    "note": "Kortene er vores udvalg af generel baggrundsviden. Kun linjerne mærket NDI er Mads' synspunkt, med kilde. Kortene er ikke NDI's vurdering af enkelte selskaber, ikke en rangering og ikke en anbefaling."
    }
   }
  ],
