@@ -36,3 +36,80 @@ Grundlag: live Pages (last-modified 21:50 UTC ≈ `a341c99`) + lokal `docs/` eft
 - `?periode=1m/3m` i embed ignoreres korrekt (viser siden start).
 - SoftBank-siden: "Hvilket problem løser det?", kilder med tjekdato, AI-udkast-mærker pr. felt, Group ≠ Corp. Stærk.
 - Fakta-siden med IFS/depotbank/rådgiver/CVR lukker en stor del af FO MUST 1.
+
+## 2026-10-16 00:00 CEST · cyklus 2
+Grundlag: `origin/main` `8b30c48` (lane-A: 13-leds vaerdikaede + deep-link). Pages: tekstdump af 17 sider er **identisk** med lokal main, så Pages er à jour. Playwright 1366 + 375, 26 URL'er, 0 JS-fejl, 0 4xx. Kort cyklus: kun få commits siden cyklus 1.
+
+### MUST (åbne fra cyklus 1, ingen ændring)
+1. **Drawdown-datoer** står stadig som "2. jun. 2026 → 8. apr. 2025" (risici) og "2026-06-02 → 2025-04-08" (fakta). `risk-stats.json` er uændret.
+2. **drawdown.html på 375 har stadig overflow**: scrollWidth 587. Det er den eneste side med vandret scroll.
+3. **Omkostningslink fra invester.html trin 4** mangler stadig.
+
+### SHOULD (nyt i denne cyklus)
+- **vaerdikaede.html (ny, 13 led) er god.** Den har dæmning-grupper, flod-gradient, "forsinket" pr. led og top 5 i `<details>`. Mindre punkter:
+  - **Lednumrene modsiger NDI-linsen.** `unique-metrics.json` siger "Led 1 og led 2: Energi og fysisk tech" (Tesla), "Led 3: chips" (Nvidia) og "Led 5: platforme" (Meta). Det følger den gamle 6-leds model. Linkene peger nu på 13-leds siden, hvor led 2 er Datacentre og led 5 er Foundry. FO ser modsigelsen med det samme. Brug ledets navn i stedet for nummer, eller opdatér til de 13 led.
+  - **Temaknapperne** (Energi / Fysisk tech / Software / Platforme / Chips / Compute / Optik) er en anden taksonomi end de 13 led og ligger lige over dem. Privat-personaen forstår ikke forskellen. Giv dem overskriften "Filtrér på tema".
+  - **"NDI"-mærket** på alle 13 led (title: "NDI har skrevet om leddet") kan ikke ses på mobil, fordi det kun står i en tooltip. Når mærket står på alle led, skiller det ikke noget fra. Fjern det, eller vis det kun, hvor det betyder noget.
+  - **Vægtsummen over leddene er ca. 50,9 %**, og selskaber kan stå i flere led. Der står "Vægt er summen af de tilordnede selskabers vægt" (godt), men tilføj "et selskab kan tælle i flere led", så ingen lægger tallene sammen.
+  - "BLOG 30. marts 2026" ser ud som en intern kildekode. Skriv "NDI-blog, 30. marts 2026" og link til indlægget.
+- **Udforsk på 375 er 26.300 px høj** (751 tekstlinjer). Det er den længste side. Indsæt fold eller "vis flere" efter de første sektioner (visual fatigue, begge personas).
+- **Porteføljen viser nu "80 af 345"**. Det er bedre end 345 rækker, men en tydelig **top 10** med temasøjler øverst mangler stadig.
+- Tomme stubs er uændrede: "Følg tema (stub)", "udfyldes af NDI" ×3 og "AFVENTER GENNEMGANG".
+- Uændret: "38.9 kr." og "Central Information Dokument" ×7 i footer.
+
+### Nice
+- Deep-link `vaerdikaeder.html?kaede=ai-compute#lk-memory` virker på 1366 og 375. Behold det.
+- Tesla `vaerdikaede.html?isin=` markerer 2 led. Godt til "hvor sidder mit selskab".
+
+### Godt / behold
+- Gaten for PMINDIAKK-afkast ("Vises efter 12 måneder … fra december 2026") er tydelig (se dog compliance om NAV).
+- AI-udkast-mærker på ndi-perspektiv (9) og SoftBank (13).
+
+## 2026-10-16 00:20 CEST · cyklus 3
+Grundlag: `origin/main` `820f116`. Ingen ændringer i `docs/` siden `8b30c48` (kun notes/watchdog). Pages last-modified 15. okt. 21:57 UTC, svarer til main. Playwright 1366 + 375, 20 sider + SoftBank/SpaceX-selskabsside, 0 JS-fejl, 0 4xx. Cyklussen gentjekker de åbne punkter og kigger på nye vinkler (selskabssiden i dybden, invester, AKK-view).
+
+### MUST (stadig åbne, uændret)
+1. Drawdown-datoer 2. jun. 2026 → 8. apr. 2025 (risici, fakta).
+2. drawdown.html 375: scrollWidth **587**. Stadig den eneste side med vandret scroll.
+3. invester.html trin 4 "Ordre & omkostninger" linker ikke til omkostninger.html og nævner kun bank/kurtage. **Nyt:** trin 1 siger "Læs prospekt, central investorinformation og risici", men linker hverken til prospektet eller KID. Linkene findes (fakta/footer). Sæt dem direkte ind i trinnet.
+
+### SHOULD (nyt i denne cyklus)
+- **Selskabsside (SoftBank) på 375 er 5.354 px og har 9 "AI-udkast"-mærker.** "Hold øje med" står to gange (i NDI-linsen og som egen sektion med samme tekst). Mærket bliver støj og mister sin effekt. Brug ét banner øverst ("Teksterne er AI-udkast, tjekket mod kilden 12. okt. 2026"), behold mærket kun på felter, der afviger, og fjern dublet-sektionen.
+- **AKK-view:** "Klassen følger samme overordnede strategi som PMINDI" står uden kontekst. Privat-personaen hopper til PMINDI's +104,8 % og tror, at det er AKK's afkast. Tilføj "Afkastet for PMINDI kan ikke overføres til PMINDIAKK" eller fjern sætningen (se compliance).
+- **Ugyldig selskabs-URL** (`selskab.html?id=…`) viser "ISIN - indgår ikke …" med tom ISIN. Skriv "Ukendt selskab" og link til A-Z.
+- **"SpaceX: større end hele jordens økonomi"** er en mellemrubrik på vaerdikaeder.html. Den er sensationel i tonen, og FO-personaen mister tilliden. Gør citatet til brødtekst under en neutral rubrik (fx "Rum og compute: Musks påstand"). Se compliance.
+- Fonden på 375 er 5.738 px. X-blokken (13 opslag) fylder stadig mellem graf og kalenderår (uændret fra cyklus 1).
+- Uændret: udforsk 26.330 px på 375, ingen top 10 på porteføljen, "udfyldes af NDI" ×6 i crawlet tekst, "Følg tema (stub)", "38.9 kr." / "38.0 kr.", "Central Information Dokument" i footer, lednumre i NDI-linsen vs 13 led.
+
+### Nice
+- Fonden-hero har 5 KPI-kort med samme visuelle vægt (afkast, CAGR, ÅTD, drawdown, SRI). Giv SRI og drawdown samme plads som afkast (balance; FO-persona). Det løser også compliance-SHOULD om fremhævning.
+- Print/PDF-knappen findes på Fonden. Tjek om printvisningen tager footer-disclaimer + KID-links med (FO tager PDF med til investeringskomité).
+
+### Persona-status (kort)
+- **Privat:** forstår Entré og Fonden. Bliver væk i udforsk/værdikæder (længde). Mangler stadig kr.-eksempel på omkostninger og navne på holdet på Entré.
+- **Family office:** fakta og omkostninger dækker det meste. Blokeres af drawdown-datofejlen og mangler et faktaark i én blok og download (CSV/PDF).
+
+## 2026-10-16 00:40 CEST · cyklus 4
+Grundlag: `origin/main` `820f116` (uændret siden cyklus 3, `docs/` uændret siden `8b30c48`). Pages last-modified 15. okt. 21:57 UTC = main. Playwright 375 + 1366 på 24 sider. Fokus denne gang: sider, der ikke var dækket før (`laer/*` ×10, tema, temaer, ndi-paa-x, nyhedsarkiv, om-data, omkostninger, ideer, embed). 0 JS-fejl, 0 4xx.
+
+### MUST (stadig åbne, uændret)
+1. Drawdown-datoer peak > trough (risici, fakta).
+2. drawdown.html 375: scrollWidth **587** (gentjekket). Stadig den eneste side med vandret scroll af de 24.
+3. invester trin 1 + 4 mangler direkte links til prospekt/KID og omkostninger.html.
+
+### SHOULD (nyt)
+- **omkostninger.html giver ingen samlet årlig sats.** Kortene viser "Øvrige løbende 1,49 %" og "Porteføljetransaktion 0,64 %" hver for sig. Privat-personaen lægger ikke selv tallene sammen, og FO vil have ét tal, der kan sammenlignes på tværs af fonde. Tilføj en linje "I alt pr. år ca. 2,13 % (PMINDI) / 2,21 % (AKK), ekskl. emission/indløsning". Tilføj også et kr.-eksempel ("100.000 kr. → ca. 2.130 kr./år"), som KID'ets omkostningstabel gør det. Tjek tallene mod KID.
+- **omkostninger: tastefejl og intern tekst.** "ikke et **inventeret** ÅOP" (skal formentlig være "beregnet"). "Tomme felter = udfyldes af NDI" står offentligt, men der er ingen tomme felter på siden. Slet sætningen. "NewDeal Invest, kl n" er Fundmarkets interne navn. Brug "NewDeal Invest (PMINDI)".
+- **om-data.html har udviklertekst:** "Ingen live Azure-kald. Nyere end cutoff må ikke lægges i `docs/` (se precheck)." Det er jargon, som en investor ikke forstår, og det afslører pipelinen. Skriv i stedet "Beholdningen opdateres kun, når et nyt forsinket snapshot er offentliggjort".
+- **nyhedsarkiv.html er en tom stub** ("Indhold er placeholder i dette udkast", 2× "Placeholder:"). Den linkes fra ndi-paa-x ("← Entré · Nyhedsarkiv"). Skjul linket, til der er indhold, eller fyld siden med de 7 @InvestNewdeal-opslag, som allerede findes i x-posts.json (webinar, udbytte, børsnotering AKK).
+- **ndi-paa-x.html, tone:** Mads' "Listening to Bloomberg about AI is like asking a BWM sales rep…" (inkl. tastefejlen "BWM") og "de lavede den bedste bil" om Tesla. For FO-personaen virker det som et fan-forum, ikke en kapitalforvalter. Se compliance cyklus 4 MUST 1.
+- **tema.html (Chips):** "Taiwan Semi Sp ADR **også Andet / uklassificeret**". TSMC er det mest oplagte chip-selskab, så sekundærtemaet "uklassificeret" ser ud som en fejl. Fjern sekundærtemaet. "Aixtron N" er et afkortet navn (kildens suffiks). Brug et pænt navn.
+- Samme X-blok (FundaAI, MilkRoadAI m.fl.) står nu også på tema.html. X-opslag optræder på Fonden, selskab, tema og ndi-paa-x. Det er visuel gentagelse og trætter brugeren: de samme 3–4 opslag ses på hver side.
+
+### Positivt (laer/*)
+- De 10 Lær-sider er korte (≤ 1.300 px på 375), uden overflow og i et klart sprog. variance-drag har et godt regneeksempel. udbytte-vs-akk forklarer AKK's 12-måneders-regel tydeligt. faq-mangler-aktie siger "Fravær er ikke en anbefaling". Det er den bedste del af sitet til privat-personaen. **Forslag:** link til Lær fra Fonden-hero ("Hvad betyder CAGR?" → variance-drag) og fra drawdown.
+- om-data på 375 folder grupperne sammen (1.514 px mod 4.621 px på desktop). Det er godt.
+
+### Persona-status
+- **Privat:** Lær-sektionen besvarer de fleste begynderspørgsmål, men den er svær at finde. Omkostninger mangler stadig ét samlet tal + kr.
+- **Family office:** blokeres stadig af drawdown-datofejlen. Ny bekymring: tonen på ndi-paa-x.
