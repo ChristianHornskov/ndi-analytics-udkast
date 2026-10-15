@@ -349,3 +349,23 @@ De fire dybe episoder er knapper. Klik på −35,8 % sætter udlæsningen til 8.
 Grafens areal slutter ved 0 %. Over linjen er cyan. Under linjen er dæmpet rosa (`#c98a94`), samme tone som de negative tal. År til dato viser dykket i starten af 2026 som rosa. Hele perioden er stadig +104,8 %. PMINDIAKK viser fortsat "Vises efter 12 måneder", og svg'en er tom. Ingen konsolfejl.
 
 `lane-D` er klar til merge. Ikke main. Ikke færdig.
+
+## Fra Claude lane-A · 2026-10-15 ~23:58 CEST
+Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html, value-chains.json og notes.
+1. **Rum-pædagogik på rum-fanen.** Der er en ny lodret, logaritmisk højdeskala (SVG) fra "rummets grænse ≈ 100 km" til Månen (384.400 km). Den viser ISS (400), Starlink (550), Iridium (780), GPS (20.200) og geostationær (35.786) samt LEO- og MEO-bånd. Hvert navn åbner det relevante led. Der er også en latens-note om, hvorfor satellitinternet er rykket ned i lavt kredsløb, og en rum-ordbog med 10 ord (LEO/MEO/GEO, konstellation, nyttelast, genbrugelig raket, satellitbus, direkte til mobilen og SAR), hvor hvert ord linker til et led. Alt er mærket som baggrundsviden og ikke NDI's synspunkter. Data ligger i `value-chains.json` (`space.glossary`, `altitudes`, `latency`).
+2. **Orbit-trappen** er rettet til "LEO, op til ca. 2.000 km". Den gamle tekst sagde "500–2.000 km".
+3. **Energiled:** nye "hvad er det"-blurbs for elproduktion, lagring og råstoffer, som før var stikordslister.
+4. **Tankestreger er fjernet** fra 8 brødtekster i value-chains.json (ingen "—" tilbage).
+Tjek: Playwright på 1280 og 375 med 0 konsolfejl og ingen sidescroll. Et klik på Månen i skalaen åbner `#lk-orbit`. smoke.mjs fail 0, precheck PASSED og grep efter handelssprog giver 0 hits.
+Næste: krydslinks for kvante (q-pane til AI-led og energi), "hvad ændrer sig" for robotikled og ét led pr. kæde i vaerdikaede.html. Ikke færdig.
+
+
+## Fra Claude lane-A · 2026-10-16 ~00:05 CEST
+Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html, vaerdikaede.html, value-chains.json og notes.
+1. **Broer mellem kæder (ny, beregnet).** Under hver fane på vaerdikaeder står nu "Broer til andre kæder" med op til 6 led-par, hvor kæden deler selskaber med andre kæder. Kortet viser antal og 3 navne, og et klik åbner leddet i den anden kæde (`data-hop`). Et eksempel: AI-kædens energiled deler 11 selskaber med energikædens elproduktion, og robotikkens komponenter deler 7 med lagring. Alt beregnes fra value-chains.json (1. juni 2026), så der er ingen nye felter.
+2. **Robotik-fanen** har nu Mads' tre faser (modning, copilots og automatisering/robotisering) som trin, citatet fra BLOG 7. oktober 2024 med kilde og "ingen præcise årstal". Robotleddet nævner nu forsvar (hører under robotik, BLOG 17. marts 2025) og Tesla-eksemplet (BOG s. 118–119). "Hvad ændrer sig" er skrevet om for komponenter og robotter.
+3. **Kvante-fanen:** Det vage link "Hvor kvante møder AI-compute" er fjernet. I stedet er der 4 faglige bro-kort: cloud, chipdesign og udstyr (mærket baggrund) og Sådan tænker vi (NDI, BLOG 21. juli 2025). Det fremgår, at ingen kvanteselskaber står i andre kæder.
+4. **vaerdikaede.html** har fået "Fire andre kæder" med ikon, første sætning af "hvorfor", antal led og selskaber og et "Start ved første led"-deep-link.
+5. De sidste to tankestreger på vaerdikaeder er fjernet.
+Tjek: Playwright på 1280 og 375 med 0 konsolfejl og ingen sidescroll. Bro-klik fører fra robotik til `energy#lk-storage` (åbent), og kvante-cloud fører til `ai-compute#lk-cloud`. smoke.mjs 52/52 fail 0, precheck PASSED og grep efter handelssprog giver 0 hits.
+Næste: rum-fanen kan få en "hvad koster det at komme op"-forklaring (kun med kilde) og robotik en lille ordbog (fx aktuator, lidar og simulering), som rum-ordbogen. Ikke færdig.

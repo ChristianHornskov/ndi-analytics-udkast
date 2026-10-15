@@ -42,6 +42,15 @@
  .legend i.r{width:4px;height:14px;background:linear-gradient(180deg,var(--yellow),var(--cyan));vertical-align:-2px}
  .side{border:1px solid var(--line);border-left:4px solid var(--yellow);border-radius:12px;padding:14px 16px;background:#0b171d;max-width:720px;margin-top:22px;font-size:13px;line-height:1.55;color:var(--muted)}
  .side strong{color:var(--yellow)}
+ .others{max-width:720px;margin-top:22px}
+ .others h2{font-size:18px;margin:0 0 4px}
+ .oc-grid{display:grid;gap:8px;grid-template-columns:repeat(auto-fill,minmax(165px,1fr));margin-top:10px}
+ .oc{border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:#0b171d;display:grid;gap:4px;align-content:start}
+ .oc .oc-ico{font-size:20px;line-height:1}
+ .oc h3{font-size:14px;margin:2px 0 0;color:var(--cyan)}
+ .oc p{font-size:12.5px;line-height:1.45;margin:0;color:var(--muted)}
+ .oc .oc-n{font-size:12px;color:var(--yellow)}
+ .oc a{font-size:12.5px}
  @media(max-width:600px){.river{padding-left:18px}.dam-head::before{left:-18px;width:12px}.node{grid-template-columns:36px 1fr;padding:12px;gap:10px}.ico{width:36px;height:36px;font-size:15px}}
  </style>
  <!-- og:start -->
@@ -88,6 +97,11 @@
  <strong>Flodsystemet.</strong> <span id="flod"></span>
  <p class="link-row" style="margin:10px 0 0"><a href="vaerdikaeder.html#kap-flod">Dæmningerne forklaret →</a> · <a href="vaerdikaeder.html?kaede=energy#kap-kaeder">Energikæden →</a> · <a href="vaerdikaeder.html?kaede=physical#kap-kaeder">Robotik →</a> · <a href="vaerdikaeder.html?kaede=space#kap-kaeder">Rumkæden →</a> · <a href="vaerdikaeder.html?kaede=quantum#kap-kaeder">Kvante (kort) →</a></p>
  </aside>
+ <section class="others" aria-labelledby="oc-h">
+ <h2 id="oc-h">Fire andre kæder</h2>
+ <p class="src">AI-kæden står ikke alene. Hver kæde nedenfor har sin egen side med led, kilder og selskaber. Start ved det første led.</p>
+ <div class="oc-grid" id="other-chains"></div>
+ </section>
  <p class="src" id="mapping-note" style="max-width:720px;margin-top:14px"></p>
  <p class="warn" style="margin-top:20px">Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.</p>
  </main>
@@ -109,6 +123,15 @@
  `Antal og vægte viser PMINDI's beholdning pr. ${fmtDate(pack.asOf)} (forsinket). Vægt er summen af de tilordnede selskabers vægt i fonden. Ingen kurser, afkast eller nøgletal pr. aktie. Temaer er eksponering, ikke anbefaling.`;
  document.getElementById('flod').textContent = pack.philosophy?.flod || ai.why;
  document.getElementById('mapping-note').textContent = pack.mappingNote || '';
+
+ // Andre kæder: ét indgangsled pr. kæde
+ const firstSentence = (t) => (String(t || '').match(/^[^.]*\./) || [t])[0];
+ document.getElementById('other-chains').innerHTML = pack.chains.filter(c => c.id !== 'ai-compute').map(c => {
+ const ls = c.links.filter(l => !l.neighbour);
+ const first = ls[0];
+ const cos = new Set(ls.flatMap(l => l.companies.map(x => x.isin))).size;
+ return `<article class="oc"><span class="oc-ico" aria-hidden="true">${c.icon || first?.icon || '◆'}</span><h3>${esc(c.title)}</h3><p>${esc(firstSentence(c.why))}</p><span class="oc-n">${ls.length} led · ${cos} selskaber pr. ${fmtDate(pack.asOf)}</span>${first ? `<a href="vaerdikaeder.html?kaede=${esc(c.id)}#lk-${esc(first.id)}">Start ved ${esc(first.short || first.label)} →</a>` : ''}</article>`;
+ }).join('');
 
  // Fem dæmninger → grupper af led (samme dæmninger som på vaerdikaeder.html)
  const GROUPS = [
