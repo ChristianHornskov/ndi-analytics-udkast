@@ -387,3 +387,22 @@ Ikke juridisk rådgivning. Jeg har crawlet 28 live-sider (375/1280) og grep'et r
 
 ### OK ✅
 - Beholdning pr. 1. jun. 2026 er tydelig (også i risici, der nu skriver "beholdning pr." i stedet for "snapshot"). Ingen live trades. Ingen 1m/3m. Intet benchmark-claim (fakta: "Benchmark: Nej"). AI-mærkning er til stede. Temaforslag er mærket "forslag … afventer NDI-gennemgang".
+
+## 2026-10-16 01:08 CEST · cyklus 15 (main `6592e79`, re-verifikation)
+
+Ikke juridisk rådgivning. Main og Pages er uændrede siden cyklus 14. Jeg har grep'et renderet tekst på 22 live-sider plus SoftBank- og NVIDIA-selskabssiden (efter scroll).
+
+### MUST (alle åbne, re-verificeret)
+1. **Ingen markedsføringsmærkning.** "markedsføring" står på 0 af 24 sider.
+2. **"Mads følger" + tickers:** 3 på SoftBank (`JP3436100006`), 3 på NVIDIA (`US67066G1040`) og 4 på tema chips. Eksempel på NVIDIA: Milk Road AI, 11. okt. 2026, "$CRWV and $NBIS … especially $NVDA" + "MADS FØLGER". På fonden ved 1280 var der 0 i denne crawl (stadig "BREAKING" ×2). **Kommende risiko:** lane-X's `x-feed.js:419` har stadig `<span class="x-curated">Mads følger</span>`. Når filen merges for at reparere ndi-paa-x (se UX MUST), kommer mærket med. Fjern det eller omdøb det til en neutral kildeangivelse ("udvalgt af NDI's redaktion" eller ingen personnavn) i samme commit.
+3. **"kan tabe" mangler** på omkostninger (0), nyhedsarkiv (0) og ndi-paa-x (siden er tom).
+4. PMINDIAKK "Seneste NAV" på sammenlign. NDI bør afklare, om det er OK før 12 mdr.
+5. ÅTD/"Fonden steg +104,8 %" står ved siden af "afventer Fundmarket-godkendelse". Uændret.
+
+### SHOULD (uændret)
+- KID-link: 0 i renderet tekst på værdikæder, drawdown, temaer, nyhedsarkiv, periode, idéer og ndi-perspektiv.
+- Omkostninger: der er intet ÅOP/samlede omkostninger fra KID. Siden er ærlig ("ikke et ÅOP" ×7), men det er stadig et FO/persona-MUST, når tallet findes.
+- "Bogen råder privatinvestorer" (rebalancering) bør skrives om til "bogen skriver" og have en linje om, at det ikke er rådgivning.
+
+### OK ✅
+- Beholdning pr. 1. jun. 2026. Ingen live trades. Ingen 1m/3m. Intet benchmark-claim. AI-mærkning er til stede (ndi-perspektiv, værdikæder, temaer). "Historisk afkast …" står på alle sider undtagen ndi-paa-x.

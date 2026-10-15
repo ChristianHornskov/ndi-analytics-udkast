@@ -332,3 +332,18 @@ Pages er lig med main (deploy 00:54 CEST, `laer/rebalancering.html` er live). Je
 - Invester trin 3–5 er nu almindeligt dansk ("Depot hos bank eller handelsplatform", "Køb og omkostninger" nævner kurtage).
 - Selskab: forslag-mærket ("Primært tema … er et forslag fra udkastet (før: Andet) og afventer NDI-gennemgang") løser cyklus 13's TSMC/Andet-forvirring på en ærlig måde.
 - Visuel variation: drawdown-søjler, omkostnings-skala med zoom, rebalancerings-skyder og idéer-varmekort er fire forskellige former. Ingen kort-træthed på de nye sider.
+
+## 2026-10-16 01:08 CEST · cyklus 15 (main `6592e79`, ingen ændring siden cyklus 14)
+
+Main og Pages er uændrede siden cyklus 14. Det her er en re-verifikation: Playwright på 22 live-sider ved 375 og 1280 plus SoftBank- og NVIDIA-selskabssiden, scrollet til bunden.
+
+### MUST (stadig åben)
+- **ndi-paa-x.html er stadig tom live**, ved 375 og 1280: 173 tegn, 0 h1 og `SyntaxError … x-feed.js does not provide an export named 'feedHitKind'`. `feedHitKind` findes kun på `origin/lane-X` (`2baf5cb`). lane-X er langt bagud i forhold til main (44 filer, −20k linjer i diff), så **merge ikke hele lane-X**. Tag kun `docs/js/x-feed.js` (cherry-pick/checkout af den ene fil) og tjek derefter, at selskab/tema/fonden stadig renderer X-kort. Det er den vigtigste rettelse før morgen-demoen.
+- Uændret: tomme stubs på linse-selskaber. ndi-perspektiv er 133.542 tegn ved 375 med 18 × "afventer".
+
+### SHOULD (uændret fra cyklus 14)
+- Omkostninger: 1,49 % bør stå før "den ene forskel"-boksen. Fakta gentager SRI/forskel tre gange. Rebalancering: 1 %-reglen står lige under "Over 1 %: 5". Drawdown-banneret mangler "Historisk, ikke en prognose".
+- Selskabssider (SoftBank/NVIDIA): X-kortene viser nu "DIREKTE TRÆF · Vist fordi: …". Det er god gennemsigtighed, men kortene klippes stadig midt i ord, og der står "BREAKING" 2 gange på SoftBank.
+
+### OK
+- 0 h-overflow og én h1 på alle sider undtagen ndi-paa-x. Ingen andre konsolfejl.
