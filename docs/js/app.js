@@ -283,12 +283,19 @@ function filterPositions(fund) {
 function renderPortefolje(root) {
   const fund = fundById(DATA.portfolio, state.fund);
   const list = filterPositions(fund).slice(0, 80);
+  const counts = {};
+  for (const p of fund.positions) counts[p.maturity] = (counts[p.maturity]||0)+1;
+  const life = ['prerevenue','preprofit','highgrowth','garp','value']
+    .map(m => `<div style="flex:1;min-width:70px;text-align:center;padding:10px 6px;background:#0b171d;border-radius:8px;border:1px solid var(--border)"><div style="font-size:11px;color:var(--muted)">${daMat(m)}</div><strong style="color:var(--cyan);font-size:20px">${counts[m]||0}</strong></div>`)
+    .join('');
   root.innerHTML = `
     <a class="back" href="?view=entre&fund=${state.fund}" data-nav="entre">← Entré</a>
     <p class="eyebrow">PORTEFØLJEN</p>
     <h1>Beholdninger · ${fund.short}</h1>
     <p class="lede">Beholdning pr. ${fmtDate(fund.positionsAsOf || DATA.portfolio.asOf)}. Vægte summerer til ca. 100 %. Klassifikationer er udkast.</p>
     <p class="band">Segmenter viser eksponering, ikke en anbefaling.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;margin:14px 0">${life}</div>
+    <p style="font-size:11px;color:var(--muted);margin-bottom:10px">Livscyklus-strip (antal selskaber) — udkast-klassifikation, ikke officiel rating.</p>
     ${fundToolbar()}
     <p class="band" style="font-size:11px">Udkast-klassifikation (modenhed/P/S) — ikke officiel NDI-rating. P/E kun for value. P/S vises ikke for præ-revenue.</p>
     ${positionsTable(list, fund)}

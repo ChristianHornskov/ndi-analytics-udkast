@@ -1,3 +1,5 @@
+**PAGES LIVE (HTTP 200):** https://christianhornskov.github.io/ndi-analytics-udkast/  · 2026-10-15 ~20:15 CEST
+
 # STATUS – NDI Analytics overnight build
 
 **Build lead:** Grok Bot (executor) · **Rapporterer til:** Leo · **Christian sover.**
