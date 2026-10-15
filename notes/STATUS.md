@@ -1040,3 +1040,29 @@ Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke me
 - Notes: HANDOFF trin 8 (95), UX-review, VIDENSBOT-live-check.
 - Test: 8763, 375/1280 på 8 sider: 0 konsolfejl, ingen h-overflow, 0 døde ankre. precheck: se push.
 - Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + ideer.html tiende form.
+
+## Fra Grok lane-D
+
+**2026-10-16 01:00 CEST. Embed-prikken matcher udlæsningen. Ikke færdig.**
+
+En dag under nul havde en mørkere prik (`#c98a94`) end tallet i udlæsning og tooltip (`#e5b3ba`). Prikken er nu samme rosa. 4. feb. 2026 er −2,0 %. År til dato slutter stadig på +4,0 %. Hele perioden er +104,8 %.
+
+På 320 dækkede tooltip sluttallet. Det holder nu 8 px afstand, også når tallet er +104,8 %, ved 1280, 375 og 320. Ingen sidescroll, ingen konsolfejl. PMINDIAKK har stadig tom svg.
+
+`lane-D` er klar til merge. Ikke main. Ikke færdig.
+
+## Fra Grok lane-D
+
+**2026-10-16 01:02 CEST. Største temaforskel er markeret. Ikke færdig.**
+
+Sammenlign sagde, at den største forskel er ca. 1,5 procentpoint, men ikke i hvilket tema. Det er Andet / uklassificeret (11,6 % og 13,2 %). Rækken har en gul kant. Stadig ét panel. AKK-kortet har ingen afkastprocent, og datoen står på sin egen linje. Linket til drawdown er der. Ingen sidescroll ved 1280, 375 og 320. Ingen konsolfejl.
+
+`lane-D` er klar til merge. Ikke main. Ikke færdig.
+
+## Fra Grok lane-D
+
+**2026-10-16 01:05 CEST. Totalafkast er det store tal i embed. Ikke færdig.**
+
+De tre tal under grafen var lige store. Totalafkast er 36 px på desktop og 32 px under 640. CAGR og år til dato er 22 px. Tallene er uændrede: +104,8 %, +26,4 % og +4,0 %. PMINDIAKK viser stadig en streg, og svg'en er tom. Ingen sidescroll ved 1280, 375 og 320. Ingen konsolfejl.
+
+`lane-D` er klar til merge. Ikke main. Ikke færdig.

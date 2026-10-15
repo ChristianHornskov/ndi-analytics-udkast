@@ -68,11 +68,11 @@ Et plus-år kan rumme det dybeste fald. 2025 er eksemplet i copy, regnet fra ser
 
 ## Sammenlign
 
-Kortpar (to klasser), tidslinje uden panel, stort tal for overlap, ét panel med parvise temasøjler. Ikke tre `.panel` i træk. Krydslink til drawdown overlever, når siden er hentet. Datoen for AKK-gaten står på sin egen linje.
+Kortpar (to klasser), tidslinje uden panel, stort tal for overlap, ét panel med parvise temasøjler. Ikke tre `.panel` i træk. Rækken med den største forskel har en gul kant, og teksten nævner temaet. Krydslink til drawdown overlever, når siden er hentet. Datoen for AKK-gaten står på sin egen linje.
 
 ## Embed
 
-Widgetten er ét panel. Call-to-action står udenfor, med link til største fald (AKK-teksten siger, at drawdown vises efter 12 måneder). Sætningen "Fonden har intet fast benchmark." er en rolig linje. Nasdaq-klasser er fjernet fra embed-CSS. Fyldet går til 0 %-linjen: cyan over, dæmpet rosa under. En dag under nul er rosa i prik, udlæsning og tooltip. Sluttallet følger periodens fortegn og er 12 px på smal skærm.
+Widgetten er ét panel. Call-to-action står udenfor, med link til største fald (AKK-teksten siger, at drawdown vises efter 12 måneder). Sætningen "Fonden har intet fast benchmark." er en rolig linje. Nasdaq-klasser er fjernet fra embed-CSS. Fyldet går til 0 %-linjen: cyan over, dæmpet rosa under. En dag under nul er rosa (`#e5b3ba`) i prik, udlæsning og tooltip. Samme farve i alle tre. Tooltip holder sig fri af sluttallet. Sluttallet følger periodens fortegn og er 12 px på smal skærm. Totalafkast i rækken under grafen er det store tal. CAGR og år til dato er mindre.
 
 ## Fælles tokens i `ndi.css` (sparsomt)
 
