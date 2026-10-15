@@ -415,3 +415,10 @@ HEAD `b35518b`. Visual-variety request shipped + reviewed. MADS værdikæde/quan
 - Notes: HANDOFF trin 8 (95), UX-review, VIDENSBOT-live-check.
 - Test: 8763, 375/1280 på 8 sider: 0 konsolfejl, ingen h-overflow, 0 døde ankre. precheck: se push.
 - Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + ideer.html tiende form.
+
+## Fra Claude lane-C (ideer: tre ure + ordliste 97) · ~01:10 CEST 16/10
+- `ideer.html`: tiende form «Tre ure på samme side» (tidslinje med fire spor: PMINDI, PMINDIAKK, beholdning, risikoklasse; datoer fra portfolio.json/fund-meta.json). Intro-tidslinjen linker dertil, og:description fulgt med.
+- `om-data.html`: ordliste 97 (omsætning, indtjening), tællere 21 · 17 · 32 · 27; «» i datostempler. P/E og livscyklus linker til de nye poster. `kort.html` 97 + ideer-beskrivelse.
+- **Til index-ejer:** «ÅOP-beregninger bygges ikke i aften» på index.html er internt sprog (se UX-review).
+- Test: 8763, 375/1280: 0 konsolfejl, ingen h-overflow, 0 døde ankre. precheck: se push.
+- Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + sprogtjek ndi-perspektiv mod Vidensbot.

@@ -11,7 +11,7 @@
   <meta property="og:site_name" content="NDI Analytics (udkast)">
   <meta property="og:locale" content="da_DK">
   <meta property="og:title" content="Idéer · NDI Analytics">
-  <meta property="og:description" content="Hvorfor NDI Analytics: flodsystemet, tags i stedet for sektorkasser, 345 selskaber sorteret efter sektor og tema, fra forslag til tema, 345 aktier som prikker, forsinket beholdning og siderne som et hus.">
+  <meta property="og:description" content="Hvorfor NDI Analytics: flodsystemet, tags i stedet for sektorkasser, 345 selskaber sorteret efter sektor og tema, fra forslag til tema, 345 aktier som prikker, tre datoer på én tidslinje, forsinket beholdning og siderne som et hus.">
   <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/ideer.html">
   <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
   <!-- og:end -->
@@ -150,6 +150,29 @@
     .hus-plan .entre b{color:var(--yellow)}
     .hus-plan .kok{grid-column:span 2}
     .hus figcaption{font-size:12px;color:var(--faint);margin-top:8px;line-height:1.5}
+    .ur{background:#0b171d;border:1px solid var(--line);border-radius:14px;padding:14px;margin:0}
+    .ur-rows{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+    .ur-rows li{display:grid;gap:4px 12px;font-size:13px;color:var(--muted);line-height:1.45}
+    @media(min-width:720px){.ur-rows li{grid-template-columns:150px 1fr}.ur-rows .note{grid-column:2}}
+    .ur-rows b{color:var(--text);font-weight:600;font-size:14px}
+    .ur-track{position:relative;height:18px;border-radius:4px;--g:linear-gradient(var(--line),var(--line));background:var(--g) 10% 0/1px 100% no-repeat,var(--g) 40.1% 0/1px 100% no-repeat,var(--g) 70% 0/1px 100% no-repeat,#0f2a32}
+    .ur-track span{position:absolute;top:3px;bottom:3px;border-radius:3px}
+    .ur-track .run{background:var(--cyan)}
+    .ur-track .nav{background:transparent;border:1px dashed var(--cyan)}
+    .ur-track .gap{background:repeating-linear-gradient(135deg,var(--yellow) 0 3px,transparent 3px 7px);opacity:.7}
+    .ur-track .pt{width:12px;height:12px;margin-left:-6px;top:3px;bottom:auto;border-radius:50%;background:var(--yellow)}
+    .ur-track .gate{width:0;border-left:2px dotted var(--text);top:-2px;bottom:-2px;border-radius:0}
+    .ur-track .now{width:0;border-left:2px solid var(--yellow);top:-4px;bottom:-4px;border-radius:0}
+    .ur-axis{position:relative;height:16px;font-size:11px;color:var(--faint);margin:6px 0 0}
+    @media(min-width:720px){.ur-axis{margin-left:162px}}
+    .ur-axis span{position:absolute;transform:translateX(-50%)}
+    .ur-key{font-size:12px;color:var(--muted);margin:0 0 12px;display:flex;flex-wrap:wrap;gap:4px 14px}
+    .ur-key i{display:inline-block;width:18px;height:9px;border-radius:2px;vertical-align:0;margin-right:5px}
+    .ur-key .k1{background:var(--cyan)}
+    .ur-key .k2{border:1px dashed var(--cyan)}
+    .ur-key .k3{background:repeating-linear-gradient(135deg,var(--yellow) 0 3px,transparent 3px 7px)}
+    .ur-key .k4{width:0;height:12px;border-left:2px solid var(--yellow);margin-right:7px}
+    .ur figcaption{font-size:12px;color:var(--faint);margin-top:12px;line-height:1.5}
     @media (prefers-reduced-motion:no-preference){.flod .water{animation:flow 6s linear infinite}}
     @keyframes flow{to{stroke-dashoffset:-48}}
   </style>
@@ -194,7 +217,7 @@
       </div>
       <div class="it">
         <h3>Forsinket beholdning som en styrke</h3>
-        <p>Beholdningen er fra en offentlig, forsinket rapport (pr. 1. juni 2026), så siden aldrig afslører fondens aktuelle handler. Det er et bevidst valg. <a href="laer/forsinket-beholdning.html">Hvorfor? →</a></p>
+        <p>Beholdningen er fra en offentlig, forsinket rapport (pr. 1. juni 2026), så siden aldrig afslører fondens aktuelle handler. Det er et bevidst valg. <a href="#h-ur">Se de tre ure ↓</a> · <a href="laer/forsinket-beholdning.html">Hvorfor? →</a></p>
       </div>
     </div>
 
@@ -441,6 +464,22 @@
         <div><dt>Hyppighed</dt><dd>Hvor mange episoder der har været. Det viser, at fald er en normal del af at eje tech.</dd></div>
       </dl>
       <p class="sub" style="margin-top:12px">Det er samme tanke som <a href="laer/variance-drag.html">variance drag</a>: et fald på 24 % kræver en stigning på godt 31 % for at komme tilbage. Ordliste: <a href="om-data.html#g-drawdown">fald fra top</a> · <a href="om-data.html#g-underwater">underwater-graf</a>.</p>
+    </section>
+
+    <section class="idea-sec" aria-labelledby="h-ur">
+      <h2 id="h-ur">Tre ure på samme side</h2>
+      <p class="sub">Kurserne er fra midten af oktober, beholdningen er fra juni, og risikoklassen er fra august. Det er ikke rod. Hver slags tal har sin egen dato, og siden skriver datoen ved tallet. Her er de lagt på samme tidslinje.</p>
+      <figure class="ur">
+        <p class="ur-key"><span><i class="k1"></i>afkast vises</span><span><i class="k2"></i>kun seneste kurs (NAV)</span><span><i class="k3"></i>bevidst forsinkelse</span><span><i class="k4"></i>seneste NAV, 14. okt 2026</span></p>
+        <ul class="ur-rows">
+          <li><b>PMINDI</b><span class="ur-track" aria-hidden="true"><span class="run" style="left:1.7%;width:91.8%"></span><span class="now" style="left:93.5%"></span></span><span class="note">Kurs hver handelsdag fra første NAV 22. sep 2023. Afkast vises siden start, år til dato og pr. afsluttet kalenderår.</span></li>
+          <li><b>PMINDIAKK</b><span class="ur-track" aria-hidden="true"><span class="nav" style="left:67.8%;width:25.7%"></span><span class="gate" style="left:97.8%"></span><span class="now" style="left:93.5%"></span></span><span class="note">Første NAV 5. dec 2025. Indtil klassen har 12 måneders historik, viser siden kun seneste kurs og intet afkast. Den prikkede streg er dagen, hvor de 12 måneder er gået.</span></li>
+          <li><b>Beholdning</b><span class="ur-track" aria-hidden="true"><span class="gap" style="left:82.4%;width:11.1%"></span><span class="pt" style="left:82.4%"></span><span class="now" style="left:93.5%"></span></span><span class="note">Selskaber, vægte, temaer og værdikæder er fra den offentlige rapport pr. 1. jun 2026. Afstanden frem til seneste NAV er med vilje, så siden aldrig viser fondens aktuelle handler. <a href="laer/forsinket-beholdning.html">Hvorfor? →</a></span></li>
+          <li><b>Risikoklasse</b><span class="ur-track" aria-hidden="true"><span class="pt" style="left:88.5%"></span><span class="now" style="left:93.5%"></span></span><span class="note">Klasse 5 af 7 står i KID (dokument med central information) dateret 14. aug 2026. Den følger KID, ikke dagens kurs. <a href="laer/risikoklasse.html">Hvad klassen betyder →</a></span></li>
+        </ul>
+        <div class="ur-axis" aria-hidden="true"><span style="left:10%">2024</span><span style="left:40.1%">2025</span><span style="left:70%">2026</span><span style="left:100%;transform:translateX(-100%)">2027</span></div>
+        <figcaption>Datoer fra portfolio.json og fund-meta.json pr. 14. okt 2026. Kurser fra Fundmarket. Når der kommer en ny offentlig beholdning eller et nyt KID, flytter prikkerne sig. <a href="om-data.html#g-datostempler">Ordliste: datostempler</a> · <a href="om-data.html#g-forsinket">forsinket beholdning</a></figcaption>
+      </figure>
     </section>
 
     <section class="idea-sec" aria-labelledby="h-hus">

@@ -247,3 +247,10 @@ Ingen nye.
 - Lær-sider uden ordlistelinks har fået dem: hvorfor-mange-aktier (3 nye + «Se også»), saadan-taenker-vi (flodsystem, dæmning, prospekt, KID, udgangspunkter), udbytte-vs-akk («I ordlisten»-linje + NAV), faq-mangler-aktie (likviditet, ticker), risikoklasse (PRIIPs). ideer.html: «medianen» → ordliste.
 - Obs til js/css-ejer: på mobil er ordlistegrupperne foldet sammen, når man åbner om-data.html uden hash. Links med #g-… folder den rigtige gruppe ud og fremhæver posten. Virker (testet #g-markedsrisiko på 375).
 - Test 375/1280 på 8 sider: 0 konsolfejl, ingen h-overflow, 0 døde ankre (den eneste træffer er skabelonen `g-${key}` i selskab.html).
+
+## ~01:10 CEST lane-C checkpoint (Claude) — ideer: tre ure + ordliste 97
+- **Hul lukket:** en ny læser ser tre datoer (NAV 14. okt, beholdning 1. jun, KID 14. aug) og kan tro, at siden er rodet eller forældet. Ny tiende form på `ideer.html` «Tre ure på samme side»: fire spor på én tidslinje 2024–2027 (fyldt bjælke = afkast vises, stiplet = kun NAV, skravering = bevidst forsinkelse, gul streg = seneste NAV). PMINDIAKK-sporet viser den prikkede 12-måneders-grænse, uden at love en dato i tekst.
+- Første version: prikkerne blev ovale (højden fulgte sporet), og «2027» stod forskudt. Rettet. «Kursen er fra i går» fjernet (passer ikke, når siden læses senere).
+- Ordliste 95 → 97: omsætning og indtjening. P/E- og livscyklus-siden bruger begge ord bærende. Linket fra «præ-revenue» (skråstreg erstattet af «eller»), P/E- og livscyklus-sidens «Se også». «Afkast pr.»/«Beholdning pr.» har nu danske anførselstegn.
+- Obs til index-ejer: `index.html` linje ~91 siger «ÅOP-beregninger bygges ikke i aften». Intern arbejdssprog på forsiden. Forslag: «ÅOP vises ikke i udkastet. Se KID.»
+- Test 375/1280 på ideer, om-data, pe-forklaring, livscyklus, kort: 0 konsolfejl, ingen h-overflow, 0 døde ankre; alle `om-data.html#g-…`-links på tværs af docs/ findes.

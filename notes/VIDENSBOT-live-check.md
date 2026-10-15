@@ -147,3 +147,7 @@ Sider: ideer, kort, om-data, invester, risici, ndi-perspektiv, laer/*.
 - Markedsrisiko/selskabsspecifik risiko er formuleret som forklaring af spredning («forsvinder ikke» / «bliver mindre, jo flere selskaber»). Samme ordvalg som hvorfor-mange-aktier.html, ingen påstand om fondens egne tal.
 - Median-posten nævner kun den typiske vægt ca. 0,2 % pr. 1. jun 2026 (samme tal som hvorfor-mange-aktier og ideer). Ingen kurser, ingen selskabsnavne.
 - PRIIPs: «EU-reglerne bag KID», ingen gengivelse af fondens KID-tekst.
+
+## 2026-10-16 ~01:10 — ideer «Tre ure» (Claude lane-C)
+- Ny form forklarer datoerne: PMINDIAKK viser kun NAV indtil 12 måneders historik (ingen afkast, ingen dato lovet i teksten; grænsen er kun tegnet). Beholdning pr. 1. jun 2026 beskrevet som bevidst forsinket. Risikoklasse 5 af 7 henført til KID 14. aug 2026.
+- Ingen afkasttal, ingen korte perioder, intet handelsprog. Ordliste: omsætning og indtjening er neutrale definitioner.
