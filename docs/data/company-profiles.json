@@ -899,15 +899,15 @@
   "CA2926717083": {
    "name": "Energy Fuels",
    "theme": "energy-resources",
-   "summary": "Producerer og forarbejder uran i USA og arbejder også med sjældne jordarter. Det er ikke et kraftværk.",
+   "summary": "Selskabet skriver, at det fremstiller oxider af sjældne jordarter på et anlæg i USA. Siden nævner White Mesa Mill med uran, sjældne jordarter og vanadium. Det er ikke et kraftværk.",
    "watch": "Uranpriser, møllens drift og mængden af materiale, der bliver forarbejdet.",
    "source": "https://www.energyfuels.com/",
-   "products": "Urankoncentrat og forarbejdning af andre mineraler.",
+   "products": "Uran, sjældne jordarter og vanadium.",
    "customers": "Selskaber, der laver reaktorbrændsel, og industrikunder.",
    "role": "Råstof til atomkraft.",
    "narrative": [
-    "Energy Fuels producerer og forarbejder uran i USA og arbejder også med sjældne jordarter.",
-    "Det er brændsel og råstof, ikke et kraftværk."
+    "Energy Fuels skriver, at det fremstiller oxider af sjældne jordarter på et anlæg i USA. Siden nævner White Mesa Mill med uran, sjældne jordarter og vanadium.",
+    "Selskabet skriver, at titan, zirkonmineraler og medicinske isotoper er produkter, det er i gang med at tilføje. Det er ikke et kraftværk."
    ],
    "narrativeSources": [
     {

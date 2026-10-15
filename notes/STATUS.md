@@ -569,3 +569,13 @@ Forsiden nævner Santa Cruz som kobberprojekt i Arizona og Tintic som kobber- og
 Tjekket i Chromium. Selskabssiden ved 375 px viser AI-udkast, Tintic og Typhoon. "tjekket mod kilden" er ikke med. Datoen står efter "Læs hele forklaringen". Kæden viser sætningen under Kritiske råstoffer. Arkivet har et nyt kort afsnit. Ingen konsolfejl. Ingen vandret scroll ved 375 eller 1280 px.
 
 **Push:** `lane-E` @ `9a62de0` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:00 CEST. Energy Fuels nævner White Mesa Mill og siger, at isotoper først er på vej. Ikke færdig.**
+
+Forsiden skriver, at selskabet fremstiller oxider af sjældne jordarter på et anlæg i USA, og at White Mesa Mill producerer uran, sjældne jordarter og vanadium. Titan, zirkonmineraler og medicinske isotoper står som produkter, selskabet er i gang med at tilføje. Ordene largest, leading og "10 of the 50" er ikke taget med. En bundtekst om miner i Colorado, Utah og Wyoming er ikke brugt. Ingen `reviewedAt`. Rollen i JSON nævner White Mesa. Den vises ikke på kædesiden.
+
+Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. White Mesa står i det første afsnit. Isotoper står efter "Læs hele forklaringen". Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `7d0a138` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

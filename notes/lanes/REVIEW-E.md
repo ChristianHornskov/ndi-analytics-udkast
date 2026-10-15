@@ -135,3 +135,7 @@ Forsiden nævner kobber, molybdæn, sølv og zink og Grupo México. Minenavne st
 ## Ivanhoe Electric · 2026-10-16 00:58 CEST
 
 Santa Cruz og Tintic er projekter. Studiet er 23. september 2026, efter beholdningen. High-grade, low-cost, NPV og EXIM-beløb er ikke kopieret. 2029-prognosen er ikke skrevet ind. AI-udkast uden gennemgangsdato. Kæde og arkiv siger det samme. Chromium ved 375 og 1280 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Energy Fuels · 2026-10-16 01:00 CEST
+
+White Mesa Mill nævnes med uran, sjældne jordarter og vanadium. Oxider af sjældne jordarter laves på et anlæg i USA. Titan, zirkon og medicinske isotoper er under tilføjelse, ikke skrevet som drift. Largest, leading og 10 af 50 er ikke kopieret. Bundteksten om tre delstater er udeladt. AI-udkast uden gennemgangsdato. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.

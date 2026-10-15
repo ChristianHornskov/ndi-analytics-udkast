@@ -109,6 +109,8 @@ Southern Copper skriver, at de vigtigste produkter er kobber, molybdæn, sølv o
 
 Ivanhoe Electric skriver, at Santa Cruz er et kobberprojekt i Arizona, og at Tintic er et kobber- og guldprojekt i Utah. Typhoon er selskabets målesystem til efterforskning. Studiet af Santa Cruz er dateret 23. september 2026 og ligger efter beholdningen pr. 2026-06-01. Det er ikke en mine i drift. Nutidsværdi, afkastkrav, kobberpris og ordene high-grade og low-cost er ikke taget med. Hog Heaven er ikke beskrevet her, fordi projektsiden ikke er læst.
 
+Energy Fuels skriver, at det fremstiller oxider af sjældne jordarter på et anlæg i USA. White Mesa Mill nævnes med uran, sjældne jordarter og vanadium. Titan, zirkonmineraler og medicinske isotoper er produkter, selskabet er i gang med at tilføje, og de er ikke skrevet som igangværende produktion. Ordene largest og leading og tallet 10 af 50 er ikke taget med. En bundtekst om miner i tre delstater er ikke brugt.
+
 ## År til dato på periodesiden
 
 `ytdReturn` i `data.js` bruger sidste punkt i året før som udgangspunkt, ikke 1. januar. For PMINDI pr. 2026-10-14 er det 2025-12-31, ikke 2026-01-02. `periode.html` viser den samme dato i "Fra → til". Kalenderår bruger samme base (`calendarYearReturns`).
