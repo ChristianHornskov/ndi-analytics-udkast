@@ -11,7 +11,7 @@
   <meta property="og:site_name" content="NDI Analytics (udkast)">
   <meta property="og:locale" content="da_DK">
   <meta property="og:title" content="Idéer · NDI Analytics">
-  <meta property="og:description" content="Hvorfor NDI Analytics: flodsystemet, tags i stedet for sektorkasser, 345 selskaber sorteret efter sektor og tema, fra forslag til tema, 345 aktier som prikker, tre datoer på én tidslinje, hvad et afkasttal indeholder, forsinket beholdning og siderne som et hus.">
+  <meta property="og:description" content="Hvorfor NDI Analytics: flodsystemet, tags i stedet for sektorkasser, 345 selskaber sorteret efter sektor og tema, fra forslag til tema, 345 aktier som prikker, tre datoer på én tidslinje, hvad et afkasttal indeholder, to andelsklasser side om side, forsinket beholdning og siderne som et hus.">
   <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/ideer.html">
   <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
   <!-- og:end -->
@@ -189,6 +189,29 @@
     .lag-sum.mit{border-style:dashed;border-color:var(--faint)}
     .lag-sum.mit .sg{color:var(--faint)}
     .lag figcaption{font-size:12px;color:var(--faint);margin-top:12px;line-height:1.5}
+    .kl{background:#0b171d;border:1px solid var(--line);border-radius:14px;padding:14px;margin:0}
+    .kl-key{font-size:12px;color:var(--muted);margin:0 0 12px;display:flex;flex-wrap:wrap;gap:4px 14px}
+    .kl-key i{display:inline-block;width:10px;height:10px;border-radius:50%;vertical-align:-1px;margin-right:5px}
+    .kl-key .k1{background:var(--cyan)}
+    .kl-key .k2{border:2px solid var(--yellow);box-sizing:border-box}
+    .kl-rows{list-style:none;margin:0;padding:0;display:grid;gap:8px;max-width:620px}
+    .kl-rows li{display:grid;grid-template-columns:130px 1fr 86px;align-items:center;gap:8px;font-size:13px;color:var(--muted)}
+    @media(max-width:559px){.kl-rows li{grid-template-columns:1fr auto}.kl-rows .kl-tr{grid-column:1/-1;grid-row:2}}
+    .kl-rows a{color:var(--text)}
+    .kl-rows li.an a{color:var(--muted)}
+    .kl-rows em{font-style:normal;text-align:right;color:var(--text);white-space:nowrap}
+    .kl-rows li.kl-h{font-size:11px;letter-spacing:.4px;color:var(--faint)}
+    .kl-rows li.kl-h em{color:var(--faint)}
+    .kl-tr{position:relative;height:14px;background:linear-gradient(var(--line),var(--line)) 0 50%/100% 1px no-repeat}
+    .kl-tr span{position:absolute;top:50%}
+    .kl-tr .ln{height:4px;margin-top:-2px;background:var(--faint);border-radius:2px}
+    .kl-tr .d1,.kl-tr .d2{width:10px;height:10px;margin:-5px 0 0 -5px;border-radius:50%}
+    .kl-tr .d1{background:var(--cyan)}
+    .kl-tr .d2{border:2px solid var(--yellow);box-sizing:border-box}
+    .kl-axis{position:relative;height:16px;font-size:11px;color:var(--faint);margin:6px 0 0;max-width:620px}
+    @media(min-width:560px){.kl-axis{margin-left:138px;max-width:388px}}
+    .kl-axis span{position:absolute;transform:translateX(-50%);white-space:nowrap}
+    .kl figcaption{font-size:12px;color:var(--faint);margin-top:12px;line-height:1.5}
     @media (prefers-reduced-motion:no-preference){.flod .water{animation:flow 6s linear infinite}}
     @keyframes flow{to{stroke-dashoffset:-48}}
   </style>
@@ -518,6 +541,30 @@
         </ol>
         <p class="lag-sum mit"><span class="sg" aria-hidden="true">=</span><span><b>Dit eget afkast.</b> Det kan siden ikke vise, fordi det kun findes i dit depot.</span></p>
         <figcaption>Skitse uden tal. Den viser rækkefølgen, ikke størrelsen på lagene. Officielle omkostningstal står i <a href="risici.html">KID</a>. Ikke rådgivning.</figcaption>
+      </figure>
+    </section>
+
+    <section class="idea-sec" aria-labelledby="h-kl">
+      <h2 id="h-kl">To klasser, samme temaer</h2>
+      <p class="sub">PMINDI og PMINDIAKK er to andelsklasser med samme tankegang. Den ene udbetaler udbytte, den anden lader det blive i fonden. Lægger man temaerne side om side, ligger prikkerne tæt: ingen tema skiller sig mere end 1,5 procentpoint ud. Forskellen mellem klasserne ligger derfor især i udbyttet, ikke i hvilke teknologier de giver eksponering mod.</p>
+      <figure class="kl">
+        <p class="kl-key"><span><i class="k1"></i>PMINDI (udloddende), 345 selskaber</span><span><i class="k2"></i>PMINDIAKK (akkumulerende), 320 selskaber</span></p>
+        <ul class="kl-rows">
+          <li class="kl-h"><span>TEMA</span><span aria-hidden="true"></span><em>PMINDI · AKK</em></li>
+          <li><a href="tema.html?slug=platforms">Platforme</a><span class="kl-tr" aria-hidden="true"><span class="ln" style="left:81.7%;width:7.2%"></span><span class="d1" style="left:88.9%"></span><span class="d2" style="left:81.7%"></span></span><em>16,0 · 14,7</em></li>
+          <li><a href="tema.html?slug=chips">Chips</a><span class="kl-tr" aria-hidden="true"><span class="ln" style="left:66.1%;width:7.2%"></span><span class="d1" style="left:73.3%"></span><span class="d2" style="left:66.1%"></span></span><em>13,2 · 11,9</em></li>
+          <li><a href="tema.html?slug=software">Software</a><span class="kl-tr" aria-hidden="true"><span class="ln" style="left:67.7%;width:1.1%"></span><span class="d1" style="left:68.8%"></span><span class="d2" style="left:67.7%"></span></span><em>12,4 · 12,2</em></li>
+          <li class="an"><a href="tema.html?slug=andet">Andet</a><span class="kl-tr" aria-hidden="true"><span class="ln" style="left:64.5%;width:8.6%"></span><span class="d1" style="left:64.5%"></span><span class="d2" style="left:73.1%"></span></span><em>11,6 · 13,2</em></li>
+          <li><a href="tema.html?slug=optik-netvaerk">Optik &amp; netværk</a><span class="kl-tr" aria-hidden="true"><span class="ln" style="left:43.3%;width:2.3%"></span><span class="d1" style="left:45.6%"></span><span class="d2" style="left:43.3%"></span></span><em>8,2 · 7,8</em></li>
+          <li><a href="tema.html?slug=fysisk-tech">Fysisk tech</a><span class="kl-tr" aria-hidden="true"><span class="ln" style="left:40.8%;width:3.9%"></span><span class="d1" style="left:40.8%"></span><span class="d2" style="left:44.7%"></span></span><em>7,3 · 8,0</em></li>
+          <li><a href="tema.html?slug=energi">Energi</a><span class="kl-tr" aria-hidden="true"><span class="ln" style="left:28.3%;width:6.8%"></span><span class="d1" style="left:35.1%"></span><span class="d2" style="left:28.3%"></span></span><em>6,3 · 5,1</em></li>
+          <li><a href="tema.html?slug=compute">Compute</a><span class="kl-tr" aria-hidden="true"><span class="ln" style="left:28.3%;width:5.3%"></span><span class="d1" style="left:33.6%"></span><span class="d2" style="left:28.3%"></span></span><em>6,0 · 5,1</em></li>
+          <li><a href="tema.html?slug=energiressourcer">Energiressourcer</a><span class="kl-tr" aria-hidden="true"><span class="ln" style="left:31.0%;width:7.1%"></span><span class="d1" style="left:31.0%"></span><span class="d2" style="left:38.1%"></span></span><em>5,6 · 6,9</em></li>
+          <li><a href="tema.html?slug=spacetech">SpaceTech</a><span class="kl-tr" aria-hidden="true"><span class="ln" style="left:24.1%;width:0.3%"></span><span class="d1" style="left:24.3%"></span><span class="d2" style="left:24.1%"></span></span><em>4,4 · 4,3</em></li>
+          <li><a href="tema.html?slug=quantum">Quantum</a><span class="kl-tr" aria-hidden="true"><span class="ln" style="left:4.4%;width:0.4%"></span><span class="d1" style="left:4.9%"></span><span class="d2" style="left:4.4%"></span></span><em>0,9 · 0,8</em></li>
+        </ul>
+        <div class="kl-axis" aria-hidden="true"><span style="left:0;transform:none">0 %</span><span style="left:33.3%">6 %</span><span style="left:66.7%">12 %</span><span style="left:100%;transform:translateX(-100%)">18 %</span></div>
+        <figcaption>Vægt i procent af fonden pr. 1. jun 2026 fra den offentlige, forsinkede beholdning, lagt sammen pr. NDI-tema. Alle 320 selskaber i PMINDIAKK findes også i PMINDI. Det primære tema tæller én gang pr. selskab. Temaerne summer til 91,9 % og 90,0 %, som vægtene står i rapporten. Viser eksponering, ikke en anbefaling og ikke dagens fordeling. <a href="laer/udbytte-vs-akk.html">Udbytte eller akkumulerende →</a> · <a href="om-data.html#g-andelsklasse">Ordliste: andelsklasse</a></figcaption>
       </figure>
     </section>
 

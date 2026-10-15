@@ -162,3 +162,8 @@ Sider: ideer, kort, om-data, invester, risici, ndi-perspektiv, laer/*.
 - Ordliste 103: «ÅOP» (NDI Analytics regner ikke ÅOP ud, officielle tal i KID) og «Før skat» (beskatning afhænger af din situation og konto, «Siden giver ikke skatterådgivning»). Ingen satser, ingen skatteregler nævnt.
 - ideer.html ny form: lagene i et afkasttal (kurser ± valuta ± udbytte + omkostninger − = fondens afkast; derefter kurtage, skat, købstidspunkt = dit eget afkast). Ingen tal, «Skitse uden tal … Ikke rådgivning». Ingen handelsprog.
 - Bed Vidensbot tjekke: må «Spørg din bank eller rådgiver» stå i ordlisten, eller skal det være mere neutralt («Se Skattestyrelsen eller din rådgiver»)?
+
+## lane-C · 01:25 16/10 · ideer «To klasser, samme temaer» + Energi/High growth
+- Temavægte er aggregater pr. tema (ingen enkeltaktier, ingen kurser, ingen afkast), fra den offentlige beholdning pr. 1. jun 2026. Vægt i % af fonden, som i rapporten (summer 91,9 % / 90,0 %). Teksten forklarer ikke, hvad resten er, fordi det ikke står i datafilen. **Til review:** skal resten (kontanter m.m.) nævnes?
+- «Forskellen mellem klasserne ligger derfor især i udbyttet» er en beskrivelse af eksponering, ikke en anbefaling af en klasse. udbytte-vs-akk siger fortsat «afhænger af din situation».
+- Energi (tema): NDI kalder energi den første dæmning (samme som elnet-posten og ugebrevets flodsystem). «Temaet viser eksponering, ikke en anbefaling.» Ingen udsigter.
