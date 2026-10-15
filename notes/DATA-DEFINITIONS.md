@@ -135,6 +135,8 @@ Expand Energy skrev 16. september 2026, at handlen med Twin Eagle er gennemført
 
 Planet nævner satellitterne SuperDove, SkySat, Pelican, Tanager og Owl. Owl er omtalt som næste generation. Teksten kalder ikke Owl en særskilt flåde i drift. Selskabet opsender ikke selv raketterne. Et opløsningstal og formuleringen om at sprænge grænser er ikke taget med.
 
+Redwire skrev 1. april 2026, at kameraer og solsensorer skal med på Artemis II, og at systemet har 11 kameraer. Selskabet skriver, at det fremstiller og tester kamerasystemet til Orion på Artemis I til V. Datoen ligger før beholdningen pr. 2026-06-01. Artiklen siger "will launch". Et kort på forsiden siger "launched". Teksten følger artiklen og kalder ikke flyvningen gennemført. Selskabet sender ikke selv raketten op. Ordet historic og et ordrebeløb er ikke taget med.
+
 ## År til dato på periodesiden
 
 `ytdReturn` i `data.js` bruger sidste punkt i året før som udgangspunkt, ikke 1. januar. For PMINDI pr. 2026-10-14 er det 2025-12-31, ikke 2026-01-02. `periode.html` viser den samme dato i "Fra → til". Kalenderår bruger samme base (`calendarYearReturns`).

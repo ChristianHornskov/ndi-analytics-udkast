@@ -699,3 +699,13 @@ Forsiden nævner satellitterne SuperDove, SkySat, Pelican, Tanager og Owl. Owl e
 Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Owl og Pelican står. Kæden og arkivet viser navnene. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `9b635f4` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:20 CEST. Redwire skrev 1. april 2026, at kameraer skal med på Artemis II. Ikke færdig.**
+
+Meddelelsen siger, at udstyret skal med, ikke at flyvningen er gennemført. Selskabet skriver, at det fremstiller og tester kamerasystemet til Orion på Artemis I til V, og at Artemis II har 11 kameraer. Datoen ligger før beholdningen pr. 1. juni 2026. Et kort på forsiden siger "launched", men artiklen siger "will launch", så flyvningen ikke er skrevet som gennemført. Selskabet sender ikke selv raketten op og driver ikke et datacenter. Ord om historic og et ordrebeløb er ikke taget med. Ingen `reviewedAt`. Blurben og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. 11 kameraer står efter "Læs hele forklaringen". Kæden og arkivet viser datoen. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `150c5f1` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

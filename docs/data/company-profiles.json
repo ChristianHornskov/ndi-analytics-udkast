@@ -1293,20 +1293,24 @@
   "US75776W1036": {
    "name": "Redwire",
    "theme": "space",
-   "summary": "Leverer komponenter og systemer til satellitter og rumfartøjer, blandt andet solpaneler, sensorer og strukturer. Selskabet arbejder også med fremstilling i rummet. Det er ikke et datacenter i kredsløb.",
+   "summary": "Leverer dele til satellitter og rumfartøjer. Selskabet skrev 1. april 2026, at kameraer og solsensorer skal med på Artemis II. Meddelelsen siger ikke, at flyvningen er gennemført. Det er ikke et datacenter og ikke en opsender.",
    "watch": "Ordrer til satellitprogrammer og om aktiviteterne i rummet bliver til en forretning.",
    "source": "https://redwirespace.com/",
-   "products": "Dele til satellitter og udstyr til arbejde i rummet.",
+   "products": "Dele til satellitter, kameraer og solsensorer.",
    "customers": "Satellitbyggere og rumprogrammer.",
    "role": "Infrastruktur til satellitter. Ikke en opsender og ikke et orbitalt datacenter.",
    "narrative": [
-    "Redwire leverer dele til satellitter og rumfartøjer, blandt andet solpaneler og strukturer.",
-    "Selskabet arbejder også med forsøg i rummet. Det er ikke et datacenter i kredsløb og ikke en opsender."
+    "Redwire skriver, at selskabet fremstiller og tester kamerasystemet til Orion på Artemis I til V. Selskabet skrev 1. april 2026, at systemet til Artemis II har 11 kameraer, og at udstyret skal med på flyvningen.",
+    "Datoen ligger før beholdningen pr. 1. juni 2026. Meddelelsen beskriver ikke flyvningen som gennemført. Selskabet sender ikke selv raketten op og driver ikke et datacenter i kredsløb."
    ],
    "narrativeSources": [
     {
      "label": "Selskabets side",
      "url": "https://redwirespace.com/"
+    },
+    {
+     "label": "Artemis II, 1. april 2026",
+     "url": "https://rdw.com/newsroom/redwires-advanced-imaging-and-navigation-technology-will-enable-nasas-historic-artemis-ii-mission/"
     }
    ]
   },

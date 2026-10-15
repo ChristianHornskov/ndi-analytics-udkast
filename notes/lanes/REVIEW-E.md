@@ -187,3 +187,7 @@ Handlen er 16. september 2026, efter beholdningen. Twin Eagle er et marketingsel
 ## Planet · 2026-10-16 01:18 CEST
 
 Pelican, Tanager og Owl er tilføjet ved siden af SuperDove og SkySat. Owl er næste generation, ikke skrevet som en særskilt flåde i drift. Opløsningstal er ikke kopieret. AI-udkast uden gennemgangsdato. Kæde og arkiv har navnene. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Redwire · 2026-10-16 01:20 CEST
+
+Artiklen 1. april 2026 siger will launch. Forsidens "launched" er ikke brugt som gennemført flyvning. 11 kameraer. Ikke en opsender. Historic og ordrebeløb er ikke kopieret. AI-udkast uden gennemgangsdato. Kæde og arkiv har grænsen. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.

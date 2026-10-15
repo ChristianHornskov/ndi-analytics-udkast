@@ -1690,7 +1690,7 @@
           "id": "satcom",
           "icon": "📡",
           "label": "Satellitkommunikation",
-          "blurb": "Satellitter i drift eller under bygning: kommunikation, billeder af Jorden, radiosignaler og de platforme, satellitterne bygges på. Redwire leverer dele og sender ikke selv op. York bygger platforme til kunden og skriver, at det koordinerer opsendelseslogistik. Det er ikke det samme som selv at sende raketten op. MDA omtaler Chorus, før konstellationen er sendt op. MDA præsenterede 10. september 2026 Aurora Black. Det er efter beholdningen og ikke en konstellation i drift. Satellogic sætter fuld drift af Merlin til andet halvår 2027. Det er ikke en tjeneste i fuld drift. Planet nævner SuperDove, SkySat, Pelican, Tanager og Owl. Owl er omtalt som næste generation.",
+          "blurb": "Satellitter i drift eller under bygning: kommunikation, billeder af Jorden, radiosignaler og de platforme, satellitterne bygges på. Redwire leverer dele og sender ikke selv op. Selskabet skrev 1. april 2026, at kameraer skal med på Artemis II. Meddelelsen siger ikke, at flyvningen er gennemført. York bygger platforme til kunden og skriver, at det koordinerer opsendelseslogistik. Det er ikke det samme som selv at sende raketten op. MDA omtaler Chorus, før konstellationen er sendt op. MDA præsenterede 10. september 2026 Aurora Black. Det er efter beholdningen og ikke en konstellation i drift. Satellogic sætter fuld drift af Merlin til andet halvår 2027. Det er ikke en tjeneste i fuld drift. Planet nævner SuperDove, SkySat, Pelican, Tanager og Owl. Owl er omtalt som næste generation.",
           "ndi": "Starlink er i en AI-selskabsprofil beskrevet som en løbende tjeneste, ikke kun en opsendelse. Det er et udkast, ikke NDI's færdige tekst. SpaceX indgår ikke i beholdningen pr. 1. juni 2026.",
           "themes": [
             "space"
@@ -1704,7 +1704,7 @@
               "w": 0.27,
               "sym": "RDW",
               "forslag": false,
-              "role": "Komponenter til satellitter, blandt andet solpaneler og sensorer"
+              "role": "Kameraer og dele. Artemis II-meddelelsen 1. april 2026 siger ikke, at flyvningen er gennemført."
             },
             {
               "isin": "US9870841007",
