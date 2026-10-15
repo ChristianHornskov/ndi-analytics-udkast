@@ -608,8 +608,8 @@
         "Platforme"
       ],
       "themeKey": "software",
-      "count": 51,
-      "weightSum": 12.38,
+      "count": 50,
+      "weightSum": 12.14,
       "companies": [
         {
           "isin": "IL0011301780",
@@ -712,12 +712,6 @@
           "name": "Microstrategy",
           "weight": 0.25,
           "symbol": "MSTR"
-        },
-        {
-          "isin": "US45676K1034",
-          "name": "Infleqtion Inc",
-          "weight": 0.24,
-          "symbol": "INFQ"
         },
         {
           "isin": "US5000811043",
@@ -1150,8 +1144,8 @@
         "Chips"
       ],
       "themeKey": "connect",
-      "count": 31,
-      "weightSum": 8.29,
+      "count": 29,
+      "weightSum": 8.04,
       "companies": [
         {
           "isin": "US55024U1097",
@@ -1268,12 +1262,6 @@
           "symbol": "COHR"
         },
         {
-          "isin": "CA64046G1063",
-          "name": "Neo Performance Materials In",
-          "weight": 0.17,
-          "symbol": "NEO.TO"
-        },
-        {
           "isin": "US68236H2040",
           "name": "Ondas Holdings Inc",
           "weight": 0.15,
@@ -1308,12 +1296,6 @@
           "name": "Raspberry PI",
           "weight": 0.09,
           "symbol": "RPI.L"
-        },
-        {
-          "isin": "US00218A1051",
-          "name": "Asp Isotopes Inc",
-          "weight": 0.08,
-          "symbol": "ASPI"
         },
         {
           "isin": "US17275R1023",
@@ -1650,8 +1632,8 @@
         "Quantum"
       ],
       "themeKey": "quantum",
-      "count": 4,
-      "weightSum": 0.88,
+      "count": 5,
+      "weightSum": 1.12,
       "companies": [
         {
           "isin": "US74766W1080",
@@ -1670,6 +1652,12 @@
           "name": "Rigetti Computing Inc",
           "weight": 0.25,
           "symbol": "RGTI"
+        },
+        {
+          "isin": "US45676K1034",
+          "name": "Infleqtion Inc",
+          "weight": 0.24,
+          "symbol": "INFQ"
         },
         {
           "isin": "US46222L1089",
@@ -1926,8 +1914,8 @@
         "Chips"
       ],
       "themeKey": "energy-resources",
-      "count": 27,
-      "weightSum": 5.99,
+      "count": 29,
+      "weightSum": 6.24,
       "companies": [
         {
           "isin": "US2057683029",
@@ -2020,6 +2008,12 @@
           "symbol": "EFR.TO"
         },
         {
+          "isin": "CA64046G1063",
+          "name": "Neo Performance Materials In",
+          "weight": 0.17,
+          "symbol": "NEO.TO"
+        },
+        {
           "isin": "CA0203987072",
           "name": "Almonty Industries Inc",
           "weight": 0.15,
@@ -2084,6 +2078,12 @@
           "name": "Southern Copper Corp",
           "weight": 0.08,
           "symbol": "SCCO"
+        },
+        {
+          "isin": "US00218A1051",
+          "name": "Asp Isotopes Inc",
+          "weight": 0.08,
+          "symbol": "ASPI"
         },
         {
           "isin": "CA2960061091",
