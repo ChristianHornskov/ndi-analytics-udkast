@@ -124,7 +124,7 @@
  };
 
  const depthPlot = () => {
- const W = 360, H = 118, padL = 10, padR = 8, axisY = 78;
+ const W = 360, H = 164, padL = 10, padR = 8, axisY = 100;
  const plotW = W - padL - padR;
  const xOf = v => padL + (Math.min(yMax, -v) / yMax) * plotW;
  const lanes = [-26, -16, -6, 4, 14];
@@ -132,14 +132,22 @@
  const isMax = Math.abs(e.dd - sum.max) < 0.001;
  const isOpen = !e.recoveredD;
  const cls = isMax ? 'dot max' : isOpen ? 'dot open' : 'dot';
- const cy = 46 + lanes[i % lanes.length];
+ const cy = 64 + lanes[i % lanes.length];
  return `<circle class="${cls}" cx="${xOf(e.dd).toFixed(1)}" cy="${cy}" r="${isMax || isOpen ? 4 : 3.1}"><title>${fmtDate(e.peakD)} til ${fmtDate(e.troughD)}: ${fmtPct(e.dd)}</title></circle>`;
  });
+ const medX = xOf(sum.median).toFixed(1);
+ const meanX = xOf(sum.mean).toFixed(1);
  const parts = [
  ...dots,
- `<line class="mark-med" x1="${xOf(sum.median).toFixed(1)}" x2="${xOf(sum.median).toFixed(1)}" y1="18" y2="${axisY}"/>`,
- `<line class="mark-mean" x1="${xOf(sum.mean).toFixed(1)}" x2="${xOf(sum.mean).toFixed(1)}" y1="18" y2="${axisY}"/>`,
- `<line class="axis" x1="${padL}" x2="${W - padR}" y1="${axisY}" y2="${axisY}"/>`
+ `<line class="mark-halo" x1="${medX}" x2="${medX}" y1="8" y2="${axisY}"/>`,
+ `<line class="mark-halo" x1="${meanX}" x2="${meanX}" y1="8" y2="${axisY}"/>`,
+ `<line class="mark-med" x1="${medX}" x2="${medX}" y1="8" y2="${axisY}"/>`,
+ `<line class="mark-mean" x1="${meanX}" x2="${meanX}" y1="8" y2="${axisY}"/>`,
+ `<line class="axis" x1="${padL}" x2="${W - padR}" y1="${axisY}" y2="${axisY}"/>`,
+ `<line class="mark-med" x1="${padL}" x2="${padL + 16}" y1="${axisY + 48}" y2="${axisY + 48}"/>`,
+ `<text class="tick mark-key" x="${padL + 20}" y="${axisY + 51}" text-anchor="start">median ${fmtPct(sum.median)}</text>`,
+ `<line class="mark-mean" x1="168" x2="184" y1="${axisY + 48}" y2="${axisY + 48}"/>`,
+ `<text class="tick mark-key" x="188" y="${axisY + 51}" text-anchor="start">middel ${fmtPct(sum.mean)}</text>`
  ];
  for (let g = 0; g <= yMax; g += 10) {
  const xx = (padL + (g / yMax) * plotW).toFixed(1);
@@ -165,21 +173,22 @@
  }).join('');
 
  const maxRet = Math.max(...years.map(y => Math.abs(y.ret)), 1);
+ const deepYear = dd ? dd.troughD.slice(0, 4) : '';
  const yearCells = years.map(y => {
  const note = y.partial ? 'delår' : (y.to.slice(5) === '12-31' ? 'helår' : 'til dato');
  const h = Math.max(8, Math.round((Math.abs(y.ret) / maxRet) * 64));
  const neg = y.ret < 0;
- return `<a href="periode.html?fund=${fundId}&year=${y.year}"><span class="yr-bar${neg ? ' neg' : ''}" style="height:${h}px"></span><span class="yr-y">${y.year}</span><span class="yr-r ${neg ? 'neg' : 'pos'}">${fmtPct(y.ret)}</span><span class="yr-note">${note}</span></a>`;
+ const deep = y.year === deepYear;
+ return `<a href="periode.html?fund=${fundId}&year=${y.year}"${deep ? ' class="yr-deep"' : ''}><span class="yr-bar${neg ? ' neg' : ''}" style="height:${h}px"></span><span class="yr-y">${y.year}</span><span class="yr-r ${neg ? 'neg' : 'pos'}">${fmtPct(y.ret)}</span><span class="yr-note">${note}</span>${deep ? '<span class="yr-deepnote">Dybeste fald</span>' : ''}</a>`;
  }).join('');
- const maxYear = dd.troughD.slice(0, 4);
- const yearOfMax = years.find(y => y.year === maxYear);
+ const yearOfMax = years.find(y => y.year === deepYear);
  const yearLine = yearOfMax && yearOfMax.ret > 0
- ? `${maxYear} sluttede i plus (${fmtPct(yearOfMax.ret)}) og rummede alligevel det dybeste fald.`
+ ? `${yearOfMax.year} sluttede i plus (${fmtPct(yearOfMax.ret)}) og rummede alligevel det dybeste fald.`
  : 'Søjlen er årets afkast. Faldet fra top står i grafen ovenfor.';
  const anno = open
  ? `Lige nu, pr. ${fmtDate(rows[rows.length - 1].d)}, ligger serien ${fmtPct(nowU)} under toppen fra ${fmtDate(open.peakD)}. Bund i den episode var ${fmtPct(open.dd)} den ${fmtDate(open.troughD)}.`
  : '';
- const depthCap = `Hver prik er ét fald fra top til bund. ${eps.length} i alt. Den stiplede streg er median (${fmtPct(sum.median)}). Den fuldt optrukne lyse streg er middel (${fmtPct(sum.mean)}). Gul prik er det dybeste fald.${open ? ' Hul gul prik er den åbne episode.' : ''}`;
+ const depthCap = `Hver prik er ét fald fra top til bund. ${eps.length} i alt. Gul prik er det dybeste fald.${open ? ' Hul gul prik er den åbne episode.' : ''} Median og middel står under aksen.`;
 
  main.innerHTML = `
  <a class="back" href="index.html?view=fonden&fund=${fundId}">← Fonden</a>

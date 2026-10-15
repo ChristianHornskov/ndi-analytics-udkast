@@ -42,9 +42,9 @@ Siden må ikke være fire ens kort plus to mørke kasser. Formerne skifter ned a
 | Rolige tal | Middel og median som to linjer, ikke kort | ✅ `.quiet-stats` |
 | Gul annotation | Hvor serien ligger under vand i dag | ✅ `.anno` |
 | Underwater | Tid. Gul prik = dybeste bund. Ring = seneste dag. Slider vælger en dag | ✅ `.figure` + `.uw-scrub` |
-| Prikfordeling | Hvorfor middel ligger dybere end median | ✅ `.figure.plain` |
+| Prikfordeling | Hvorfor middel ligger dybere end median. Navnene står under aksen | ✅ `.figure.plain` |
 | Episodeliste | De fire fald dybere end 10 %, med varighed. Klik hopper til bunden på kurven | ✅ `.ep-ledger` |
-| Årssøjler | Kalenderafkast som small multiples, link til periode | ✅ `.year-rail` |
+| Årssøjler | Kalenderafkast som small multiples, link til periode. Året med det dybeste fald har gul kant | ✅ `.year-rail` |
 
 Et plus-år kan rumme det dybeste fald. 2025 er eksemplet i copy, regnet fra serien.
 

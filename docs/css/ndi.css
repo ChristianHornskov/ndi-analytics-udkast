@@ -634,8 +634,10 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
 .figure .uw-now{fill:var(--ink);stroke:var(--yellow);stroke-width:1.6;vector-effect:non-scaling-stroke}
 .figure .uw-label{fill:var(--yellow)}
 .figure .axis{stroke:var(--line);stroke-width:1;vector-effect:non-scaling-stroke}
-.figure .mark-mean{stroke:var(--text);stroke-width:1.6;vector-effect:non-scaling-stroke}
-.figure .mark-med{stroke:var(--text);stroke-width:1.4;stroke-dasharray:2 3;opacity:.75;vector-effect:non-scaling-stroke}
+.figure .mark-halo{stroke:var(--bg);stroke-width:5;vector-effect:non-scaling-stroke}
+.figure .mark-mean{stroke:var(--text);stroke-width:1.75;vector-effect:non-scaling-stroke}
+.figure .mark-med{stroke:var(--text);stroke-width:1.5;stroke-dasharray:4 3;vector-effect:non-scaling-stroke}
+.figure .mark-key{fill:var(--muted)}
 .figure .dot{fill:var(--brand);fill-opacity:.9}
 .figure .dot.max{fill:var(--yellow)}
 .figure .dot.open{fill:var(--ink);stroke:var(--yellow);stroke-width:1.6;vector-effect:non-scaling-stroke}
@@ -664,6 +666,9 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
 .year-rail{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:8px 0 8px;align-items:stretch}
 .year-rail a{display:flex;flex-direction:column;justify-content:flex-end;gap:3px;min-height:128px;text-decoration:none;color:var(--text);padding:8px 8px 10px;border-top:1px solid var(--line)}
 .year-rail a:hover{border-top-color:var(--cyan);background:var(--selected)}
+.year-rail a.yr-deep{border-top-color:var(--yellow)}
+.year-rail a.yr-deep:hover{border-top-color:var(--yellow)}
+.year-rail .yr-deepnote{font-size:11px;color:var(--yellow)}
 .year-rail .yr-bar{display:block;width:100%;max-width:36px;border-radius:4px 4px 0 0;background:var(--brand);margin-bottom:6px}
 .year-rail .yr-bar.neg{background:var(--neg)}
 .year-rail .yr-y{font-size:12px;color:var(--muted)}
@@ -687,4 +692,6 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
   .hero-stat .num,.ep-ledger .depth{color:#6d3038}
   .ep-ledger li.open .depth{color:#111}
   .figure text,.figure .tick,.figure .uw-label{fill:#333}
+  .year-rail .yr-deepnote{color:#333}
+  .year-rail a.yr-deep{border-top-color:#111}
 }
