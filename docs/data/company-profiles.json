@@ -569,6 +569,10 @@
     {
      "label": "Selskabets side",
      "url": "https://www.vistracorp.com/"
+    },
+    {
+     "label": "Aftale med Meta 9. januar 2026",
+     "url": "https://investor.vistracorp.com/2026-01-09-Vistra-and-Meta-Announce-Agreements-to-Support-Nuclear-Plants-in-PJM-and-Add-New-Nuclear-Generation-to-the-Grid"
     }
    ]
   },
@@ -1011,12 +1015,16 @@
    "role": "Råstof til elnet og elektronik.",
    "narrative": [
     "Taseko driver kobberminen Gibraltar i Canada. Forsiden bruger også navnet Trekor Metals.",
-    "Gibraltar er kaldt en mine på siden. De andre navne på listen er ikke kaldt miner i denne tekst."
+    "Selskabet skrev 9. oktober 2026, at Florence Copper er gået i kommerciel produktion. Meddelelsen ligger efter beholdningen pr. 1. juni 2026. Yellowhead er i en godkendelsesproces. Aley står som projekt. New Prosperity står ikke som mine på siden."
    ],
    "narrativeSources": [
     {
      "label": "Selskabets side",
      "url": "https://www.tasekomines.com/"
+    },
+    {
+     "label": "Florence Copper 9. oktober 2026",
+     "url": "https://www.tasekomines.com/trekor-talks/florence-copper-begins-commercial-production-the-first-new-us-copper-source-in-nearly-two-decades"
     }
    ]
   },

@@ -99,3 +99,7 @@ Almontys meddelelse 23. september 2026 siger, at Sangdong igen har produceret wo
 ## Månelander og Starlab · 2026-10-16 00:43 CEST
 
 Opsendelse siger, at Intuitive Machines ikke er en billedsatellit. Rum og compute siger, at Starlab ikke er en station i drift. Siderne gav omdirigering i ring og 403, så der er ingen nye produktnavne. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Florence Copper · 2026-10-16 00:45 CEST
+
+Taseko skriver 9. oktober 2026, at Florence Copper er i kommerciel produktion. Det er efter beholdningen. Yellowhead, Aley og New Prosperity er ikke miner i drift. Kurser og "first new US copper source" er ikke kopieret. Vistras 433 MW er stadig øget effekt, med kilde fra 9. januar 2026. AI-udkast uden gennemgangsdato. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.

@@ -91,6 +91,8 @@ Råstof-leddet siger også, at Standard Lithium skriver, at et demonstrationsanl
 
 Opsendelses-blurb siger, at Intuitive Machines leverer til Månen og ikke er en billedsatellit om Jorden. Siden `intuitivemachines.com` svarede med en omdirigering i ring den 16. oktober 2026, så sætningen er profilens eksisterende grænse og ikke et nyt produktnavn. Rum og compute siger, at Starlab hos Voyager er et stationsprojekt og ikke en station i drift. Voyager gav 403 samme nat. Vægtene er uændrede.
 
+Taseko skrev 9. oktober 2026, at Florence Copper er gået i kommerciel produktion. Datoen på siden stod som 10.09.2026, og en anden post samme liste er 10.13.2026, så formatet er måned.dag. Meddelelsen er efter beholdningen pr. 2026-06-01. Yellowhead var i en godkendelsesproces i august 2026. Aley står som projekt. New Prosperity står ikke som mine. Gibraltar er en mine. Kurser og formuleringen om den første nye amerikanske kobberkilde er ikke taget med. Vistra-tallene 2.600 MW, 2.176 MW og 433 MW har nu kilden fra 9. januar 2026. 433 MW er øget effekt, ikke en ny reaktor. Ordet largest er ikke taget med.
+
 ## År til dato på periodesiden
 
 `ytdReturn` i `data.js` bruger sidste punkt i året før som udgangspunkt, ikke 1. januar. For PMINDI pr. 2026-10-14 er det 2025-12-31, ikke 2026-01-02. `periode.html` viser den samme dato i "Fra → til". Kalenderår bruger samme base (`calendarYearReturns`).

@@ -471,3 +471,15 @@ På rumkæden siger opsendelses-leddet, at Intuitive Machines leverer til Månen
 Tjekket i Chromium ved 375 px på rumfanen og i nyhedsarkivet. Sætningerne står. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `8b6b48c` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 00:45 CEST. Florence Copper er kommerciel produktion efter beholdningen. Ikke færdig.**
+
+På energikæden siger råstof-leddet, at Taseko skrev 9. oktober 2026, at Florence Copper er gået i kommerciel produktion, og at meddelelsen ligger efter beholdningen pr. 1. juni 2026. Yellowhead, Aley og New Prosperity er ikke miner i drift i teksten. Gibraltar er stadig en mine. Kurser på Tasekos side er ikke kopieret. Formuleringen om at være den første nye amerikanske kobberkilde er ikke kopieret. Ingen `reviewedAt`.
+
+Vistra har fået kilden til aftalen med Meta af 9. januar 2026. Tallene er de samme: mere end 2.600 MW, heraf 2.176 MW i drift og 433 MW øget effekt. Det er ikke en ny reaktor. "Largest" er ikke kopieret.
+
+Tjekket i Chromium ved 375 px på råstof-leddet og på Taseko-siden. AI-udkast er med. "tjekket mod kilden" er ikke med. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `7b42c4a` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
