@@ -1,17 +1,16 @@
 (() => {
   const FUNDS = { PMINDI: 'pmindi', PMINDIAKK: 'pmindiakk' };
+  // Compliance: kun ÅTD og hele perioden — aldrig 1 md / 3 md (ukendte ?periode= falder tilbage til 'all')
   const PERIODS = {
-            ytd: 'År til dato',
-        all: 'Hele perioden'
+    ytd: 'År til dato',
+    all: 'Hele perioden'
   };
-  const PERIOD_MONTHS = {}; // embed: only ytd + all (no 1m/3m/1y)
 
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const number = new Intl.NumberFormat('da-DK', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
   const dateFormat = new Intl.DateTimeFormat('da-DK', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' });
   const axisFormat = new Intl.DateTimeFormat('da-DK', { month: 'short', year: 'numeric', timeZone: 'UTC' });
-  const shortDate = new Intl.DateTimeFormat('da-DK', { day: 'numeric', month: 'short', timeZone: 'UTC' });
 
   const timestamp = d => Date.parse(d + 'T12:00:00Z');
   const fmtDate = d => dateFormat.format(new Date(timestamp(d)));
@@ -77,15 +76,12 @@
   }
 
   function cutoffDate(period, lastDate) {
-    if (period === 'all') return null;
-    const end = new Date(lastDate + 'T12:00:00Z');
-    if (period === 'ytd') return `${end.getUTCFullYear() - 1}-12-31`;
-    const months = PERIOD_MONTHS[period];
-    const b = new Date(Date.UTC(end.getUTCFullYear(), end.getUTCMonth() - months, 1, 12));
-    const lastDay = new Date(Date.UTC(b.getUTCFullYear(), b.getUTCMonth() + 1, 0)).getUTCDate();
-    b.setUTCDate(Math.min(end.getUTCDate(), lastDay));
-    return b.toISOString().slice(0, 10);
+    if (period !== 'ytd') return null;
+    return `${Number(lastDate.slice(0, 4)) - 1}-12-31`;
   }
+
+  // PMINDIAKK: ingen afkasttal, graf eller tooltip før klassen har 12 måneders historik
+  const isAkk = () => state.fund === 'PMINDIAKK';
 
   function periodSlice(points, period) {
     const cutoff = cutoffDate(period, points.at(-1).d);
@@ -149,8 +145,7 @@
   }
 
   function updateMetrics() {
-    const fundId = (document.querySelector('[data-fund][aria-checked="true], .class-card.selected')?.getAttribute('data-fund') || state?.fund || '').toUpperCase();
-    if (fundId.includes('AKK')) {
+    if (isAkk()) {
       const set = (id, text) => { const el = document.getElementById(id); if (el) el.textContent = text; };
       set('fund-return', 'Vises efter 12 måneder');
       set('metric-total', '—');
@@ -158,8 +153,8 @@
       set('metric-ytd', '—');
       const note = document.getElementById('metric-total-note');
       if (note) note.textContent = 'Afkast vises efter 12 måneder';
-      const pointee = document.getElementById('chart-pointe');
-      if (pointee) pointee.textContent = 'PMINDIAKK: afkast vises efter 12 måneders historik. Seneste NAV vises ikke som afkast.';
+      set('metric-cagr-note', 'Vises efter 12 måneder');
+      set('metric-ytd-note', 'Vises efter 12 måneder');
       return;
     }
 
@@ -196,8 +191,30 @@
     return { lower, upper, step };
   }
 
+  function renderAkkGate() {
+    const fund = fundRecord();
+    $('.chart-toolbar').hidden = true;
+    $('#chart-container').hidden = true;
+    $('#chart-tooltip').hidden = true;
+    $('#performance-chart').innerHTML = '';
+    $('#chart-readout').textContent = '';
+    $('#legend-fund').textContent = state.fund;
+    $('#fund-return').textContent = 'Vises efter 12 måneder';
+    $('#updated').textContent = `Seneste kursdato: ${fmtDate(fund.data.at(-1).d)}`;
+    $('#source-label').textContent = `${fund.short} · start ${fmtDate(fund.inception || fund.data[0].d)}`;
+    $('#chart-context').hidden = true;
+    $('#chart-pointe').textContent = 'PMINDIAKK: afkast og graf vises, når klassen har 12 måneders historik. Klassen følger samme overordnede strategi som PMINDI.';
+    $('#chart-loading').hidden = true;
+    state.series = [];
+    state.geometry = null;
+    sendHeight();
+  }
+
   function renderChart() {
     if (!state.ready) return;
+    if (isAkk()) { renderAkkGate(); return; }
+    $('.chart-toolbar').hidden = false;
+    $('#chart-container').hidden = false;
     const fund = fundRecord();
     const sliced = periodSlice(fund.data, state.period);
     state.truncated = sliced.truncated || (state.period !== 'all' && sliced.points.length === fund.data.length);
@@ -213,9 +230,6 @@
     $('#source-label').textContent = `Totalafkast i DKK · ${fund.short}`;
 
     const context = [];
-    if (fund.id === 'pmindiakk') {
-      context.push(`PMINDIAKK har kortere historik (start ${fmtDate(fund.inception)}) end PMINDI. Afkast siden start kan ikke sammenlignes direkte.`);
-    }
     if (state.truncated) context.push('Viser den tilgængelige historik i den valgte periode.');
     $('#chart-context').textContent = context.join(' ');
     $('#chart-context').hidden = !context.length;
@@ -460,21 +474,4 @@
   }
 
   start();
-})();
-
-// Compliance patch: PMINDIAKK — no returns until 12 months
-(function(){
-  const orig = window.__ndiEmbedPaint;
-  document.addEventListener('click', (e) => {
-    const btn = e.target.closest('[data-fund]');
-    if (!btn) return;
-    setTimeout(() => {
-      if ((btn.getAttribute('data-fund')||'').toUpperCase().includes('AKK')) {
-        const fr = document.getElementById('fund-return');
-        if (fr) fr.textContent = 'Vises efter 12 måneder';
-        const metrics = document.querySelectorAll('.metrics strong, #fund-return');
-        metrics.forEach(el => { if (el.id==='fund-return' || /%/.test(el.textContent)) {/* keep */} });
-      }
-    }, 50);
-  }, true);
 })();
