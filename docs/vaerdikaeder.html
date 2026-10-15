@@ -107,6 +107,24 @@
     .steps li{counter-increment:st;position:relative;padding:8px 10px 8px 40px;border:1px solid var(--line);border-radius:10px;background:#0b171d;font-size:13px;line-height:1.45;color:var(--muted)}
     .steps li::before{content:counter(st);position:absolute;left:10px;top:8px;width:20px;height:20px;border-radius:50%;background:var(--yellow);color:#0b171d;font-weight:700;font-size:12px;display:grid;place-items:center}
     .steps li b{color:var(--text)}
+    .sp-learn{display:grid;gap:14px;margin-top:16px}
+    @media(min-width:900px){.sp-learn{grid-template-columns:.8fr 1.2fr;align-items:start}}
+    .sp-learn h3{font-size:15px;color:var(--cyan);margin:0 0 6px}
+    .alt-svg{width:100%;max-width:420px;height:auto;display:block;background:linear-gradient(0deg,#173640 0%,#0b171d 30%,#070f13 100%);border:1px solid var(--line);border-radius:12px}
+    .alt-svg text{font-family:inherit}
+    .alt-svg a:hover text,.alt-svg a:focus text{fill:var(--yellow)}
+    .sp-lat{font-size:13px;line-height:1.5;color:var(--muted);border-left:3px solid var(--yellow);padding:4px 0 4px 10px;margin:10px 0 0}
+    .gloss-wrap summary{cursor:pointer;list-style:none;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;margin-bottom:8px}
+    .gloss-wrap summary::-webkit-details-marker{display:none}
+    .gloss-wrap summary h3{display:inline;margin:0}
+    .gloss-wrap summary h3::after{content:" ▸";color:var(--yellow)}
+    .gloss-wrap[open] summary h3::after{content:" ▾"}
+    .gloss{display:grid;gap:8px;margin:0;grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+    .gloss>div{border:1px solid var(--line);border-radius:10px;padding:9px 11px;background:#0b171d}
+    .gloss dt{font-size:13px;font-weight:700;color:var(--text)}
+    .gloss dt::before{content:"◇ ";color:var(--yellow)}
+    .gloss dd{margin:3px 0 0;font-size:12.5px;line-height:1.45;color:var(--muted)}
+    .gloss dd a{font-size:12px;white-space:nowrap}
     .q-pane{display:none;margin:4px 0 18px}
     .q-pane.on{display:block}
     @media(min-width:960px){
@@ -206,6 +224,19 @@
               <li><b>Måske compute.</b> Idéen om datacentre i kredsløb er tidlig og usikker. Se citatet nedenfor.</li>
             </ol>
           </div>
+        </div>
+        <div class="sp-learn">
+          <figure style="margin:0">
+            <h3>Hvor højt er højt?</h3>
+            <div id="alt-host"></div>
+            <figcaption class="src" style="margin-top:6px">Logaritmisk skala: hvert trin op er ti gange længere væk. Klik et navn for at åbne leddet.</figcaption>
+            <p class="sp-lat" id="sp-latency"></p>
+          </figure>
+          <details class="gloss-wrap" id="gloss-wrap">
+            <summary><h3>Rum-ordbog</h3><span class="src" id="gloss-count">Ord, der gør kæden lettere at læse</span></summary>
+            <dl class="gloss" id="space-gloss"></dl>
+            <p class="src" id="gloss-note" style="margin-top:8px"></p>
+          </details>
         </div>
       </div>
 
@@ -461,6 +492,53 @@
     document.getElementById('space-facts').innerHTML = (sp?.intro || []).map(x =>
       `<div class="sp-fact"><div class="k">${esc(x.k)}</div><p>${esc(x.t)}</p><div class="src">Kilde: ${esc(x.src)}</div></div>`).join('');
 
+    // Ordbog + højdeskala (baggrund, ikke NDI-synspunkter)
+    document.getElementById('space-gloss').innerHTML = (sp?.glossary || []).map(g =>
+      `<div><dt>${esc(g.term)}</dt><dd>${esc(g.t)}${g.link ? ` <a href="#lk-${esc(g.link)}" data-open="${esc(g.link)}">Se leddet →</a>` : ''}</dd></div>`).join('');
+    document.getElementById('gloss-note').textContent = sp?.glossaryNote || '';
+    if (matchMedia('(min-width: 900px)').matches) document.getElementById('gloss-wrap').open = true;
+    if (sp?.glossary?.length) document.getElementById('gloss-count').textContent = `${sp.glossary.length} ord, der gør kæden lettere at læse`;
+    document.getElementById('sp-latency').textContent = sp?.latency || '';
+    (function renderAltitudes(items) {
+      if (!items?.length) return;
+      const NS = 'http://www.w3.org/2000/svg';
+      const W = 360, H = 440, ax = 92, y0 = 400, dec = 90;
+      const Y = (km) => y0 - (Math.log10(km) - 2) * dec;
+      const kmTxt = (km) => km.toLocaleString('da-DK') + ' km';
+      const svg = document.createElementNS(NS, 'svg');
+      svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+      svg.setAttribute('class', 'alt-svg');
+      svg.setAttribute('role', 'img');
+      svg.setAttribute('aria-label', 'Højder over jorden på logaritmisk skala: ' + items.map(a => `${a.name} ${kmTxt(a.km)}`).join(', '));
+      let html = `<path d="M-20 ${H + 30} Q ${W / 2} ${H - 50} ${W + 20} ${H + 30}" fill="#1a3a44" stroke="var(--brand)" stroke-width="1.5"/>`
+        + `<text x="${W / 2}" y="${H - 8}" text-anchor="middle" fill="var(--muted)" font-size="10" letter-spacing=".5">JORDEN</text>`;
+      [100, 1000, 10000, 100000, 1000000].forEach(km => {
+        html += `<line x1="${ax - 6}" y1="${Y(km)}" x2="${ax}" y2="${Y(km)}" stroke="#829da0"/><text x="${ax - 10}" y="${Y(km) + 3.5}" text-anchor="end" fill="var(--muted)" font-size="10">${km === 1e6 ? '1 mio. km' : kmTxt(km)}</text>`;
+      });
+      html += `<line x1="${ax}" y1="${y0}" x2="${ax}" y2="${Y(1e6)}" stroke="var(--brand)" stroke-width="1.5"/>`;
+      // Zoner: LEO og MEO som bånd på aksen
+      [['LEO', 160, 2000, '#89aeb4'], ['MEO', 2000, 35786, '#5a7f88']].forEach(([lab, a, b, c]) => {
+        const ya = Y(a), yb = Y(b), ym = (ya + yb) / 2;
+        html += `<rect x="${ax - 2}" y="${yb}" width="18" height="${ya - yb}" rx="3" fill="${c}" fill-opacity=".35"/><text x="${ax + 11}" y="${ym}" fill="var(--text)" font-size="9.5" font-weight="700" text-anchor="middle" transform="rotate(-90 ${ax + 11} ${ym})">${lab}</text>`;
+      });
+      html += `<line x1="${ax - 2}" y1="${Y(35786)}" x2="${ax + 16}" y2="${Y(35786)}" stroke="var(--yellow)" stroke-width="2"/>`;
+      html += `<line x1="${ax}" y1="${y0}" x2="${W - 16}" y2="${y0}" stroke="var(--yellow)" stroke-opacity=".5" stroke-dasharray="3 4"/><text x="${W - 16}" y="${y0 + 14}" text-anchor="end" fill="var(--yellow)" font-size="10">rummets grænse ≈ 100 km</text>`;
+      svg.innerHTML = html;
+      // Etiketter til højre, skubbet fra hinanden så de ikke overlapper
+      let last = Infinity;
+      [...items].sort((a, b) => a.km - b.km).forEach(a => {
+        const py = Y(a.km);
+        const ly = Math.min(py, last - 18); last = ly;
+        const g = document.createElementNS(NS, 'a');
+        g.setAttribute('href', `#lk-${a.link}`);
+        g.setAttribute('data-open', a.link);
+        g.innerHTML = `<circle cx="${ax}" cy="${py}" r="4" fill="var(--yellow)"/><path d="M${ax + 18} ${py} L${ax + 30} ${py} L${ax + 40} ${ly} L${ax + 44} ${ly}" fill="none" stroke="#829da0" stroke-opacity=".7"/>`
+          + `<text x="${ax + 48}" y="${ly + 4}" font-size="11.5"><tspan fill="var(--cyan)" font-weight="700">${esc(a.name)}</tspan><tspan fill="var(--muted)"> · ${kmTxt(a.km)}</tspan></text>`;
+        svg.appendChild(g);
+      });
+      document.getElementById('alt-host').appendChild(svg);
+    })(sp?.altitudes);
+
     // Orbit ladder: jord → kredsløb → måne (ikke i skala)
     function renderOrbit(ch) {
       const host = document.getElementById('orbit-host');
@@ -469,9 +547,9 @@
       const bands = [
         { y: 352, lab: 'Jorden', sub: 'fabrikker og dele' },
         { y: 288, lab: 'Affyring', sub: 'raketter' },
-        { y: 210, lab: 'Lavt kredsløb', sub: '≈ 500–2.000 km' },
+        { y: 210, lab: 'Lavt kredsløb', sub: 'LEO, op til ca. 2.000 km' },
         { y: 136, lab: 'Tjenester', sub: 'data og forbindelser' },
-        { y: 62, lab: 'Længere ude', sub: 'måne, stationer, compute?' },
+        { y: 62, lab: 'Længere ude', sub: 'stationer, måne, compute?' },
       ];
       const svg = document.createElementNS(NS, 'svg');
       svg.setAttribute('viewBox', `0 0 ${W} ${H}`);

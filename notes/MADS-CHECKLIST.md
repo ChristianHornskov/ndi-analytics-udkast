@@ -44,6 +44,7 @@ Kilder: slack_ny_graf_2026-10-15.md, vision.txt, mads_tankemodel.md, investering
 - [x] Tidslinje over teknologiske skift
 - [x] Hvorfor NDI sidder hvor den gør (callout + filosofi-kapitel; led-blurbs)
 - [x] SVG-treemap + sunburst tema-eksponering; visual-variety pass + Grok review
+- [x] Rumkæde-pædagogik: rum-ordbog (10 ord) + logaritmisk højdeskala (ISS → Månen) på rum-fanen (lane-A)
 
 ## Formidling / filosofi
 - [x] Variance drag / CAGR ≠ gennemsnit (lær)

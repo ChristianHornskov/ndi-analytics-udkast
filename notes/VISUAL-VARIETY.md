@@ -50,3 +50,10 @@ Se `notes/VISUAL-VARIETY-REVIEW.md`.
 | Dæmnings-mærker | 13 led grupperet under de 5 dæmninger med gul markør og kort hint | ✅ |
 | Ikon-badge med nummer | Ikon pr. led med gult nummer-badge (1 til 13) | ✅ |
 | Dæmpet ikke-træf | Ved filter dæmpes led uden træf, træf får gul kant | ✅ |
+
+## Fra Claude lane-A · 2026-10-15 ~23:58 CEST (rum-pædagogik)
+| Form | Brug | Status |
+|---|---|---|
+| Logaritmisk højdeskala (lodret SVG) | ISS, Starlink, Iridium, GPS, geostationær og Månen på én akse, LEO- og MEO-bånd, "rummets grænse ≈ 100 km". Etiketterne skubbes fra hinanden og er klikbare til leddet | ✅ rum-fanen |
+| Ordbogs-kort (`<dl>` i `<details>`) | 10 rumbegreber med ◇-markør og "Se leddet"-link. Åben på desktop, foldet på mobil | ✅ rum-fanen |
+| Gul citatlinje | Latens-forklaring (GEO ca. ½ sekund og LEO få hundrededele) som venstrekant-note | ✅ |

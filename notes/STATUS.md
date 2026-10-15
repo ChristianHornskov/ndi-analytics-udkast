@@ -267,3 +267,13 @@ Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaede.html, va
 4. **Energikæden:** "hvad ændrer sig" er skrevet om for elproduktion (datacentre bygger egen strøm), elnet (2/3 af USA's kapacitet, BLOG 10/8-26), lagring (told-anledningen, BLOG 21/7-25) og råstoffer (geopolitik, BLOG 21/9-26). Kædens "hvorfor" har fået "masser af elektroner"-citatet med kilde.
 Tjek: Playwright på 1280 og 375 med 0 konsolfejl og ingen sidescroll. Tesla `?isin` giver 2 led, chips-filter 4 led, og deep-link `#lk-memory` åbner leddet. Precheck PASSED. smoke-cycle3 111/113: de 2 fejl ("entré: linser … værdikæde") skyldes, at `app.js` linker til vaerdikaeder.html, mens testen forventer vaerdikaede.html. Det er ikke lane-A-fil og var allerede rødt før. smoke-quality 104/106: de 2 fejl ("NDI-linsen → værdikæde") skyldes, at selskab.html ikke har noget `vaerdikaede.html?isin=`-link. Det er heller ikke lane-A-fil og var allerede rødt før. `vaerdikaede.html?isin=` virker selv. Handelssprog: grep giver 0 hits.
 Næste: rum-pædagogik (ordliste/kredsløbshøjder), krydslinks for kvante og ét led pr. kæde i vaerdikaede.html. Ikke færdig.
+
+
+## Fra Claude lane-A · 2026-10-15 ~23:58 CEST
+Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html, value-chains.json og notes.
+1. **Rum-pædagogik på rum-fanen.** Der er en ny lodret, logaritmisk højdeskala (SVG) fra "rummets grænse ≈ 100 km" til Månen (384.400 km). Den viser ISS (400), Starlink (550), Iridium (780), GPS (20.200) og geostationær (35.786) samt LEO- og MEO-bånd. Hvert navn åbner det relevante led. Der er også en latens-note om, hvorfor satellitinternet er rykket ned i lavt kredsløb, og en rum-ordbog med 10 ord (LEO/MEO/GEO, konstellation, nyttelast, genbrugelig raket, satellitbus, direkte til mobilen og SAR), hvor hvert ord linker til et led. Alt er mærket som baggrundsviden og ikke NDI's synspunkter. Data ligger i `value-chains.json` (`space.glossary`, `altitudes`, `latency`).
+2. **Orbit-trappen** er rettet til "LEO, op til ca. 2.000 km". Den gamle tekst sagde "500–2.000 km".
+3. **Energiled:** nye "hvad er det"-blurbs for elproduktion, lagring og råstoffer, som før var stikordslister.
+4. **Tankestreger er fjernet** fra 8 brødtekster i value-chains.json (ingen "—" tilbage).
+Tjek: Playwright på 1280 og 375 med 0 konsolfejl og ingen sidescroll. Et klik på Månen i skalaen åbner `#lk-orbit`. smoke.mjs fail 0, precheck PASSED og grep efter handelssprog giver 0 hits.
+Næste: krydslinks for kvante (q-pane til AI-led og energi), "hvad ændrer sig" for robotikled og ét led pr. kæde i vaerdikaede.html. Ikke færdig.
