@@ -1235,7 +1235,7 @@
           "id": "smr",
           "icon": "◉",
           "label": "Atomkraft og SMR",
-          "blurb": "Små modulære reaktorer er mindre atomkraftværker, der kan bygges mere ens og placeres tættere på forbruget, for eksempel et datacenter. Ingen af eksemplerne beskrives her som et anlæg i kommerciel drift.",
+          "blurb": "Nogle navne udvikler små reaktorer, der kan placeres tættere på forbruget. Ingen af dem beskrives her som et anlæg i kommerciel drift. BWX Technologies leverer komponenter. Rolls-Royce er en motorkoncern med et reaktorprogram ved siden af.",
           "ndi": "NDI har skrevet om energiudbygning via atomkraft, og om at tidslinjer og indtægter er usikre (ugebreve 27. januar 2025, 23. juni 2025 og 21. juli 2025). Store elselskaber med eksisterende atomkraft står under elproduktion.",
           "themes": [
             "space",
@@ -1414,7 +1414,7 @@
           "icon": "🪨",
           "label": "Kritiske råstoffer",
           "blurb": "Kobber, lithium, sjældne jordarter, uran, antimon og wolfram indgår i chips, elnet, batterier og reaktorer. Gasproducenter står under elproduktion.",
-          "ndi": "NDI regner råstoffer med i teknologien, og en råstofanalyse skal også tage geopolitik med (ugebreve 1. september 2025 og 21. september 2026). Flere navne er projekter uden minedrift. Det står i selskabsprofilen.",
+          "ndi": "NDI regner råstoffer med i teknologien, og en råstofanalyse skal også tage geopolitik med (ugebreve 1. september 2025 og 21. september 2026). Flere navne er projekter uden minedrift. Andre driver miner, blandt andet Mountain Pass og Gibraltar. Profilen siger, hvad der er drift, og hvad der er projekt.",
           "themes": [
             "energy-resources"
           ],
@@ -1535,7 +1535,7 @@
             },
             {
               "isin": "CA8765111064",
-              "name": "Taseko Mines",
+              "name": "Taseko Mines (Trekor Metals)",
               "w": 0.12,
               "sym": "TGB",
               "forslag": true,
@@ -1628,7 +1628,7 @@
           "icon": "🚀",
           "label": "Opsendelse",
           "blurb": "Kapacitet til at sende satellitter og andet udstyr væk fra jorden, og selskaber der leverer dele til fartøjerne. Nogle programmer er i drift. Andre er stadig under udvikling.",
-          "ndi": "SpaceX er brugt som illustration i NDI's formidling om opsendelser (ugebrev 23. juni 2024). Selskabet indgår ikke i beholdningen pr. 1. juni 2026. Merlin, Archer og Airo Group er luftfart i SpaceTech-temaet og står ikke her. BWX Technologies og Rolls-Royce står under atomkraft.",
+          "ndi": "SpaceX er brugt som illustration i NDI's formidling om opsendelser (ugebrev 23. juni 2024). Selskabet indgår ikke i beholdningen pr. 1. juni 2026. Merlin, Archer og Airo Group er luftfart i SpaceTech-temaet og står ikke her. BWX Technologies og Rolls-Royce står under atomkraft. Neutron hos Rocket Lab og Eclipse hos Firefly er ikke fløjet i beskrivelserne. Firefly skriver, at Blue Ghost er landet på Månen.",
           "themes": [
             "space"
           ],

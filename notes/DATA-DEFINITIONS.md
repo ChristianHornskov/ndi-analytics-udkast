@@ -69,6 +69,8 @@ Gasproducenterne Comstock, Antero, EQT og Expand Energy står på elproduktion, 
 
 Sigma Lithiums kilde er rettet fra `sigmalithium.com` til `https://sigmalithiumcorp.com/`. Den første side beskrev den 16. oktober 2026 et andet foretagende om metalliske lithiumanoder. Den nye side er Sigma Lithium Corp og lithiumkoncentrat i Brasilien. Babcock & Wilcox, T1 Energy og Tesla har `reviewedAt` og er ikke ændret.
 
+Blurbs, der vises på værdikædesiden: SMR-leddet siger, at ingen af navnene er et anlæg i kommerciel drift, at BWX Technologies leverer komponenter, og at Rolls-Royce er en motorkoncern med et reaktorprogram ved siden af. Råstof-leddet siger, at nogle navne er projekter, og at andre driver miner, blandt andet Mountain Pass og Gibraltar. Opsendelse siger, at Neutron og Eclipse ikke er fløjet i beskrivelserne, og at Firefly skriver, at Blue Ghost er landet. Taseko vises som i beholdningen: Taseko Mines (Trekor Metals). AI-compute-leddet er ikke ændret.
+
 ## År til dato på periodesiden
 
 `ytdReturn` i `data.js` bruger sidste punkt i året før som udgangspunkt, ikke 1. januar. For PMINDI pr. 2026-10-14 er det 2025-12-31, ikke 2026-01-02. `periode.html` viser den samme dato i "Fra → til". Kalenderår bruger samme base (`calendarYearReturns`).

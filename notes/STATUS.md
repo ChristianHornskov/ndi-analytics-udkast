@@ -335,3 +335,15 @@ Babcock & Wilcox, T1 Energy og Tesla har gennemgangsdato og er urørt. Af de uni
 Tjekket i Chromium ved 375 px på de nitten sider, Sigma med. AI-udkast er med. Ingen gennemgangsdato. Ingen konsolfejl. Ingen vandret scroll. Ingen kurstegn i de nye afsnit.
 
 **Push:** `lane-E` @ `23415ee` er pushet efter precheck. Første forsøg blev afvist, andet gik igennem. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 ~00:35 CEST. Blurbs på kæden skelner drift fra projekt. Ikke færdig.**
+
+`value-chains.json`, kun energi og rum. HTML er ikke rørt. AI-compute-leddet er ikke rørt. Det hedder stadig Coreweave øverst på "Energi og strømfordeling".
+
+SMR-teksten siger, at ingen af navnene er et anlæg i kommerciel drift. BWX Technologies leverer komponenter. Rolls-Royce er en motorkoncern med et reaktorprogram ved siden af. Råstoffer siger, at nogle navne er projekter, og at andre driver miner, blandt andet Mountain Pass og Gibraltar. Opsendelse siger, at Neutron og Eclipse ikke er fløjet i beskrivelserne, og at Firefly skriver, at Blue Ghost er landet. Taseko vises som i beholdningen, Taseko Mines (Trekor Metals).
+
+Tjekket i Chromium på energi- og rumfanen. Teksterne står i kæden. Ingen konsolfejl. Ingen vandret scroll ved 375 px på rumfanen.
+
+**Push:** `lane-E` @ `b1070f2` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

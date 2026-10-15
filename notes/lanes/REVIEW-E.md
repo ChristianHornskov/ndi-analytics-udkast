@@ -49,3 +49,7 @@ Nitten "Kort fortalt" uden gennemgangsdato. Chromium ved 375 px, ingen vandret s
 Sigma: `sigmalithium.com` viste den 16. oktober 2026 et foretagende om metalliske anoder. Det passer ikke med profilens lithiumkoncentrat i Brasilien. Kilden er flyttet til `https://sigmalithiumcorp.com/`, som er Sigma Lithium Corp. Babcock, T1 og Tesla er urørt på grund af `reviewedAt`.
 
 Åbent: gennemlæs blurbs i energi- og rumkæden mod de nye grænser. AI-compute-leddet er urørt.
+
+## Blurbs · 2026-10-16 ~00:35 CEST
+
+SMR, råstoffer og opsendelse er rettet i JSON, så teksten på siden skelner komponenter, miner i drift og raketter, der ikke er fløjet. Taseko hedder som i beholdningen. Chromium viste teksterne. AI-compute er stadig den gamle topvægtsliste med Coreweave. Bevidst.
