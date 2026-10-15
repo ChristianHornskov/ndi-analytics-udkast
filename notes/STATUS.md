@@ -599,3 +599,13 @@ Forsiden skriver, at en hjemmegenerator giver strøm under et udfald, og at sels
 Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Bærbare generatorer og ladere står. Kæden viser sætningen. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `529103c` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:04 CEST. EQT skriver, at købet af Equitrans blev gennemført 22. juli 2024. Ikke færdig.**
+
+Meddelelsen er dateret 22. juli 2024, før beholdningen pr. 1. juni 2026. Equitrans er beskrevet som midstream-aktiver. EQT producerer naturgas i Appalachia. Gassen står som brændsel, ikke som en metalmine. Ordet only, breakeven-pris og synergibeløb er ikke taget med. Ingen `reviewedAt`. Blurben under elproduktion siger datoen.
+
+Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. 22. juli 2024 står. Ingen beløb. Kæden viser sætningen. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `20f9d68` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

@@ -719,20 +719,24 @@
   "US26884L1098": {
    "name": "EQT",
    "theme": "energy-resources",
-   "summary": "Producerer naturgas i Appalachia i USA.",
+   "summary": "Producerer naturgas i Appalachia i USA. Selskabet skriver, at købet af Equitrans Midstream blev gennemført 22. juli 2024.",
    "watch": "Gaspriser og produktion fra felterne.",
    "source": "https://www.eqt.com/",
-   "products": "Naturgas.",
+   "products": "Naturgas. Også midstream-aktiver efter købet af Equitrans.",
    "customers": "Købere af gas.",
    "role": "Brændsel til elproduktion.",
    "narrative": [
-    "EQT producerer naturgas i Appalachia i USA.",
-    "I kæden står selskabet på elproduktion, fordi gassen er brændsel. Det er ikke en metalmine."
+    "EQT producerer naturgas i Appalachia i USA. Selskabet skriver, at købet af Equitrans Midstream blev gennemført 22. juli 2024.",
+    "Equitrans er beskrevet som midstream-aktiver. I kæden står gassen som brændsel. Det er ikke en metalmine."
    ],
    "narrativeSources": [
     {
      "label": "Selskabets side",
      "url": "https://www.eqt.com/"
+    },
+    {
+     "label": "Meddelelse 22. juli 2024",
+     "url": "https://www.eqt.com/thought-leadership/eqt-completes-acquisition-of-equitrans-midstream"
     }
    ]
   },

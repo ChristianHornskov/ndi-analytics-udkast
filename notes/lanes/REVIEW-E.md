@@ -147,3 +147,7 @@ Serra Verde-overskriften er 4. september 2026, efter beholdningen. Brødteksten 
 ## Generac · 2026-10-16 01:03 CEST
 
 Bærbare generatorer, sol, batterilagring og ladere står i sætninger på siden. Menupunktet alene er ikke brugt. Most trusted og kundecitater er ikke kopieret. Stadig ikke et elselskab. AI-udkast uden gennemgangsdato. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## EQT · 2026-10-16 01:04 CEST
+
+Købet af Equitrans er 22. juli 2024, før beholdningen. Only, breakeven og synergibeløb er ikke kopieret. Gassen er brændsel, ikke en metalmine. AI-udkast uden gennemgangsdato. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
