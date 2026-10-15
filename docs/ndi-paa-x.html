@@ -14,63 +14,159 @@
  <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/ndi-paa-x.html">
  <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
  <meta name="twitter:card" content="summary_large_image">
- <style>
-  .x-filters { display:flex; flex-wrap:wrap; gap:8px; margin:12px 0 16px; }
-  .x-filters button { font:inherit; cursor:pointer; }
-  .x-grid { display:grid; gap:14px; }
-  @media (min-width:900px){ .x-grid { grid-template-columns:1fr 1fr; } }
- </style>
 </head>
 <body>
  <a class="skip" href="#main">Gå til indhold</a>
  <header class="site-header">
  <a class="brand" href="index.html"><img src="assets/mark.svg" width="34" height="27" alt=""><span>NewDeal Invest</span></a>
- <nav class="nav"><a href="index.html">← Entré</a><a href="nyhedsarkiv.html">Nyhedsarkiv</a></nav>
+ <nav class="nav"><a href="index.html">← Entré</a><a href="fakta.html">Fakta</a><a href="nyhedsarkiv.html">Nyhedsarkiv</a></nav>
  </header>
  <main id="main"><p style="color:var(--muted)">Henter X-snapshot…</p></main>
+ <footer class="site-footer">
+ <p>Udkast / noindex. Udvalgte offentlige opslag — ikke NDI's holdning. Ikke investeringsrådgivning.</p>
+ </footer>
  <script type="module">
- import { loadXPosts, xCard, fmtXDate } from './js/x-feed.js';
- const pack = await loadXPosts();
+ import { loadXPosts, xCard, fmtXDate, X_LABEL, X_FILTERS, postInFilter, postMatchesQuery, postWho } from './js/x-feed.js';
  const main = document.getElementById('main');
+ const pack = await loadXPosts();
+ const missing = `<p class="eyebrow">X · SNAPSHOT</p>
+ <h1>NDI på X</h1>
+ <div class="x-empty">
+ <p class="k">Snapshot mangler</p>
+ <p>Feedet læser kun den statiske fil data/x-posts.json. Browseren kalder ikke X.</p>
+ </div>`;
  if (!pack?.posts?.length) {
-   main.innerHTML = `<p class="eyebrow">X · SNAPSHOT</p><h1>NDI på X</h1><p class="lede">Snapshot mangler endnu.</p>`;
+ main.innerHTML = missing;
  } else {
-   const accounts = (pack.accounts || []).map(a => `@${a.username}`).join(' · ');
-   main.innerHTML = `
-   <p class="eyebrow">X · STATISK SNAPSHOT</p>
-   <h1>NDI på X</h1>
-   <p class="lede">Udvalgte offentlige opslag fra NDI-relaterede konti og kuraterede tech-stemmer. <strong>Ikke NDI's holdning.</strong> Egne kort — ingen X-embed-script.</p>
-   <p class="band">Snapshot ${fmtXDate(pack.snapshotAt)} · kilder: ${accounts}${pack.note ? ` · ${pack.note}` : ''}</p>
-   <div class="x-filters" role="toolbar" aria-label="Filtrer opslag">
-     <button type="button" class="control active" data-f="all">Alle</button>
-     <button type="button" class="control" data-f="ndi">NDI / fond</button>
-     <button type="button" class="control" data-f="chips">Chips / AI</button>
-     <button type="button" class="control" data-f="platforms">Platforme</button>
-     <button type="button" class="control" data-f="quantum">Quantum</button>
-     <button type="button" class="control" data-f="space">Space</button>
-     <button type="button" class="control" data-f="physical">Fysisk tech</button>
-   </div>
-   <div class="x-grid" id="x-grid"></div>
-   <p class="warn" style="margin-top:20px">Offentlige opslag kan være forældede, ufuldstændige eller subjektive. De er ikke investeringsrådgivning og erstatter ikke KID/prospekt.</p>
-   <p><a class="outline-btn" href="fakta.html">Fakta →</a>
-   <a class="outline-btn" style="margin-left:8px" href="nyhedsarkiv.html">Nyhedsarkiv →</a>
-   <a class="outline-btn" style="margin-left:8px" href="kort.html">Sidekort →</a></p>`;
+ const posts = [...pack.posts].sort((a, b) => (b.created_at || '').localeCompare(a.created_at || ''));
+ const house = (pack.accounts || []).map((a) => '@' + a.username).join(' · ');
+ const curatedN = posts.filter((p) => p.curatedFrom === 'mads_following').length;
+ const nSoft = posts.filter((p) => postMatchesQuery(p, 'SoftBank')).length;
+ const nNv = posts.filter((p) => postMatchesQuery(p, 'NVDA')).length;
+ const nChips = posts.filter((p) => postInFilter(p, 'chips')).length;
 
-   const grid = document.getElementById('x-grid');
-   const posts = [...pack.posts].sort((a,b) => (b.created_at||'').localeCompare(a.created_at||''));
-   const render = (f) => {
-     const list = posts.filter(p => {
-       if (f === 'all') return true;
-       if (f === 'ndi') return (p.tags||[]).includes('ndi') || (p.tickers||[]).some(t => /PMINDI/.test(t)) || /InvestNewdeal|CHornskov|MadsC007|jesper_baek/.test(p.username);
-       return (p.tags||[]).includes(f) || (f==='chips' && (p.tags||[]).includes('ai'));
-     });
-     grid.innerHTML = list.length ? list.map(xCard).join('') : '<p class="band">Ingen opslag i dette filter.</p>';
-   };
-   render('all');
-   main.querySelectorAll('[data-f]').forEach(btn => btn.addEventListener('click', () => {
-     main.querySelectorAll('[data-f]').forEach(b => b.classList.toggle('active', b === btn));
-     render(btn.getAttribute('data-f'));
-   }));
+ const read = () => {
+ const u = new URL(location.href);
+ return { f: u.searchParams.get('f') || 'all', q: u.searchParams.get('q') || '', who: u.searchParams.get('who') || 'all' };
+ };
+ const write = (st) => {
+ const u = new URL(location.href);
+ if (st.f && st.f !== 'all') u.searchParams.set('f', st.f); else u.searchParams.delete('f');
+ if (st.q) u.searchParams.set('q', st.q); else u.searchParams.delete('q');
+ if (st.who && st.who !== 'all') u.searchParams.set('who', st.who); else u.searchParams.delete('who');
+ history.replaceState(null, '', u);
+ };
+ let state = read();
+
+ const apply = (list) => list.filter((p) => postInFilter(p, state.f) && postWho(p, state.who) && postMatchesQuery(p, state.q));
+
+ main.innerHTML = `
+ <p class="eyebrow">X · STATISK SNAPSHOT</p>
+ <h1>NDI på X</h1>
+ <p class="lede">${posts.length} udvalgte offentlige opslag. ${X_LABEL}. Egne kort, ingen X-embed.</p>
+ <p class="band">Snapshot ${fmtXDate(pack.snapshotAt)}. NDI-relaterede konti: ${house}.${curatedN ? ` ${curatedN} opslag er fra konti, som Mads følger.` : ''}</p>
+
+ <div class="x-spot" aria-label="Genveje til demo">
+ <a href="ndi-paa-x.html?q=SoftBank">
+ <span class="k">SELSKAB</span>
+ <strong>SoftBank</strong>
+ <span>${nSoft} opslag i snapshotet.</span>
+ </a>
+ <a href="ndi-paa-x.html?q=NVDA">
+ <span class="k">SELSKAB</span>
+ <strong>Nvidia</strong>
+ <span>${nNv} opslag nævner NVDA.</span>
+ </a>
+ <a href="ndi-paa-x.html?f=chips">
+ <span class="k">TEMA</span>
+ <strong>Chips / AI</strong>
+ <span>${nChips} opslag. Platforme, quantum og space ligger i filtrene.</span>
+ </a>
+ </div>
+ <p class="link-row" style="margin-top:-6px">
+ <a class="outline-btn small" href="selskab.html?isin=JP3436100006&fund=pmindi">SoftBank på selskabssiden →</a>
+ <a class="outline-btn small" href="selskab.html?isin=US67066G1040&fund=pmindi">Nvidia på selskabssiden →</a>
+ <a class="outline-btn small" href="tema.html?slug=chips&fund=pmindi">Tema: chips →</a>
+ <a class="outline-btn small" href="tema.html?slug=platforms&fund=pmindi">Tema: platforme →</a>
+ </p>
+
+ <div class="filters">
+ <label class="sr-only" for="x-q">Søg i opslag, konti og tickers</label>
+ <input id="x-q" type="search" placeholder="Søg, fx SoftBank, NVDA, PMINDI" autocomplete="off" value="">
+ </div>
+ <div class="x-filters" id="x-f" role="toolbar" aria-label="Filtrer på tema"></div>
+ <div class="x-filters" id="x-who" role="toolbar" aria-label="Filtrer på afsender">
+ <button type="button" class="control" data-who="all">Alle afsendere</button>
+ <button type="button" class="control" data-who="house">NDI-konti</button>
+ <button type="button" class="control" data-who="curated">Konti Mads følger</button>
+ </div>
+ <p class="x-live" id="x-live" role="status" aria-live="polite"></p>
+ <div class="x-grid" id="x-grid"></div>
+ <p class="warn" style="margin-top:20px">Opslagene kan være forældede, ufuldstændige eller subjektive. De er ikke investeringsrådgivning og erstatter ikke KID eller prospekt.</p>
+ <p class="link-row">
+ <a class="outline-btn" href="fakta.html">Fakta →</a>
+ <a class="outline-btn" href="omkostninger.html">Omkostninger →</a>
+ <a class="outline-btn" href="nyhedsarkiv.html">Nyhedsarkiv →</a>
+ </p>`;
+
+ const grid = document.getElementById('x-grid');
+ const live = document.getElementById('x-live');
+ const qInput = document.getElementById('x-q');
+ qInput.value = state.q;
+
+ const paintFilters = () => {
+ const bar = document.getElementById('x-f');
+ bar.innerHTML = X_FILTERS.map((f) => {
+ const n = posts.filter((p) => postInFilter(p, f.id) && postWho(p, state.who) && postMatchesQuery(p, state.q)).length;
+ const on = state.f === f.id;
+ return `<button type="button" class="control${on ? ' active' : ''}" data-f="${f.id}" aria-pressed="${on}">${f.label}<span class="x-count">${n}</span></button>`;
+ }).join('');
+ document.querySelectorAll('[data-who]').forEach((b) => {
+ const on = b.getAttribute('data-who') === state.who;
+ b.classList.toggle('active', on);
+ b.setAttribute('aria-pressed', on ? 'true' : 'false');
+ });
+ };
+
+ const render = () => {
+ paintFilters();
+ const list = apply(posts);
+ const word = list.length === 1 ? 'opslag' : 'opslag';
+ live.textContent = list.length ? `${list.length} ${word}` : 'Ingen opslag';
+ grid.innerHTML = list.length
+ ? list.map((p) => xCard(p, { query: state.q })).join('')
+ : `<div class="x-empty" style="grid-column:1/-1">
+ <p class="k">Ingen opslag i filteret</p>
+ <p>Prøv et andet tema, eller nulstil søgningen. Feedet viser kun det kuraterede snapshot.</p>
+ <button type="button" class="outline-btn" id="x-reset">Nulstil filter</button>
+ </div>`;
+ document.getElementById('x-reset')?.addEventListener('click', () => {
+ state = { f: 'all', q: '', who: 'all' };
+ qInput.value = '';
+ write(state);
+ render();
+ });
+ };
+
+ main.addEventListener('click', (e) => {
+ const f = e.target.closest('[data-f]');
+ const w = e.target.closest('[data-who]');
+ if (f) {
+ state = { ...state, f: f.getAttribute('data-f') };
+ write(state);
+ render();
+ } else if (w) {
+ state = { ...state, who: w.getAttribute('data-who') };
+ write(state);
+ render();
+ }
+ });
+ qInput.addEventListener('input', () => {
+ state = { ...state, q: qInput.value };
+ write(state);
+ render();
+ });
+ render();
  }
  </script>
 </body>

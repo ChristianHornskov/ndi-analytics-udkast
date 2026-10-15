@@ -14,6 +14,19 @@
  <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/omkostninger.html">
  <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
  <meta name="twitter:card" content="summary_large_image">
+ <style>
+  .cost-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px}
+  .cost-card{background:linear-gradient(180deg,#16303a 0%,#11252c 60%);border:1px solid #345860;border-radius:16px;padding:18px 18px 16px;min-width:0}
+  .cost-card h2{font-size:18px;letter-spacing:-.3px;margin:0 0 4px}
+  .kicker{color:var(--brand);font-size:11px;font-weight:700;letter-spacing:1.4px;margin-bottom:6px}
+  .cost-row{margin:12px 0 0}
+  .cost-row .top{display:flex;justify-content:space-between;gap:10px;font-size:13px;color:var(--muted)}
+  .cost-row .top b{font-variant-numeric:tabular-nums;color:var(--cyan);font-weight:500}
+  .cost-bar{height:8px;border-radius:99px;background:#0b171d;border:1px solid #2a424a;overflow:hidden;margin-top:6px}
+  .cost-bar i{display:block;height:100%;background:linear-gradient(90deg,#89aeb4,#9ecfd6);border-radius:99px}
+  .scale-note{font-size:11px;color:var(--faint);margin-top:12px;line-height:1.45}
+  @media(max-width:800px){.cost-grid{grid-template-columns:1fr}}
+ </style>
 </head>
 <body>
  <a class="skip" href="#main">Gå til indhold</a>
@@ -22,52 +35,130 @@
  <nav class="nav"><a href="index.html?view=fonden">← Fonden</a><a href="fakta.html">Fakta</a><a href="risici.html">Risici</a></nav>
  </header>
  <main id="main"><p style="color:var(--muted)">Henter…</p></main>
+ <footer class="site-footer">
+ <p>Udkast / noindex. Forventede satser fra Fundmarket. Ikke et ÅOP. Ikke rådgivning.</p>
+ </footer>
  <script type="module">
  const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
- const pct = (n) => (n == null ? '—' : String(n).replace('.', ',') + ' %');
- const facts = await fetch('data/fund-facts.json').then(r => r.json());
+ const main = document.getElementById('main');
+ const pct = (n) => {
+ if (n == null || n === '') return 'ikke oplyst';
+ const [a, b = ''] = String(n).split('.');
+ return a + (b ? ',' + b : '') + ' %';
+ };
+ const pp = (n) => {
+ const [a, b = ''] = String(n).split('.');
+ return a + (b ? ',' + b : '') + ' procentpoint';
+ };
+ const kr = (rate) => {
+ const v = Math.round(100000 * Number(rate) / 100);
+ const s = String(Math.abs(v)).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+ return (v < 0 ? '-' : '') + s + ' kr.';
+ };
+ const SCALE = 2;
+ const bar = (n, label) => {
+ const w = Math.max(0, Math.min(100, (Number(n) / SCALE) * 100));
+ return `<div class="cost-row">
+ <div class="top"><span>${esc(label)}</span><b>${pct(n)}</b></div>
+ <div class="cost-bar" role="img" aria-label="${esc(label)} ${pct(n)} på en skala til ${pct(SCALE)}"><i style="width:${w}%"></i></div>
+ </div>`;
+ };
+ let facts;
+ try {
+ const r = await fetch('data/fund-facts.json');
+ if (!r.ok) throw new Error('facts');
+ facts = await r.json();
+ } catch {
+ main.innerHTML = `<p class="eyebrow">OMKOSTNINGER</p><h1>Hvad koster fonden?</h1><p class="band">data/fund-facts.json kunne ikke læses. Der vises ingen omkostningstal.</p>`;
+ }
+ if (facts) {
+ const A = facts.classes.pmindi;
+ const B = facts.classes.pmindiakk;
+ const a = A.costs;
+ const b = B.costs;
+ const feeNo = !a.performanceFee && !b.performanceFee;
+ const dTx = Number((Number(b.portfolioTransaction) - Number(a.portfolioTransaction)).toFixed(2));
+ const sameEntry = a.entry === b.entry && a.exit === b.exit;
  const block = (cl) => {
  const c = cl.costs;
- return `
- <section class="panel">
- <h2 style="font-size:16px;margin-bottom:8px">${esc(cl.label)}</h2>
- <p class="src" style="margin-bottom:12px">ISIN <code>${esc(cl.isin)}</code></p>
- <div class="metrics">
- <div class="metric"><div class="label">Øvrige løbende</div><strong>${pct(c.otherOngoing)}</strong><small>Forventet</small></div>
- <div class="metric"><div class="label">Porteføljetransaktion</div><strong>${pct(c.portfolioTransaction)}</strong><small>Forventet</small></div>
- <div class="metric"><div class="label">Emission / indløsning</div><strong>${pct(c.entry)} / ${pct(c.exit)}</strong><small>Maks. ifølge Fundmarket</small></div>
- </div>
- <ul style="color:var(--muted);line-height:1.55;padding-left:1.2rem;margin-top:14px;display:grid;gap:6px">
- <li>Resultathonorar: <strong style="color:var(--text)">${c.performanceFee ? 'Ja' : 'Nej'}</strong> — ${esc(c.performanceFeeText)}</li>
- <li>${esc(c.note)}</li>
- </ul>
- <p class="src" style="margin-top:10px">Kilde: <a href="${esc(c.source)}" rel="noopener" target="_blank">Fundmarket ↗</a> · <a href="${esc(cl.kidUrl)}" rel="noopener" target="_blank">KID PDF ↗</a></p>
- </section>`;
+ return `<article class="cost-card">
+ <p class="kicker">${esc(cl.isin)}</p>
+ <h2>${esc(cl.label)}</h2>
+ ${bar(c.otherOngoing, 'Øvrige løbende')}
+ ${bar(c.portfolioTransaction, 'Porteføljetransaktion')}
+ ${bar(c.entry, 'Emission, maks.')}
+ ${bar(c.exit, 'Indløsning, maks.')}
+ <p class="scale-note">Søjlen bruger en fælles skala fra 0 til ${pct(SCALE)}, så en lav sats ikke tegnes lige så bred som en høj. ${esc(c.note)}</p>
+ <p style="margin-top:12px;color:var(--muted);font-size:14px;line-height:1.5">Resultathonorar: <strong style="color:var(--text)">${c.performanceFee ? 'Ja' : 'Nej'}</strong>. ${esc(c.performanceFeeText)}</p>
+ <p class="link-row" style="margin-top:12px">
+ <a class="outline-btn small" href="${esc(c.source)}" rel="noopener noreferrer" target="_blank">Fundmarket ↗</a>
+ <a class="outline-btn small" href="${esc(cl.kidUrl)}" rel="noopener noreferrer" target="_blank">KID PDF ↗</a>
+ </p>
+ </article>`;
  };
- document.getElementById('main').innerHTML = `
+ const diff = dTx === 0
+ ? 'De to klasser har samme forventede porteføljetransaktionsomkostning i Fundmarket-tallene.'
+ : `PMINDIAKK ligger på ${pct(b.portfolioTransaction)} i porteføljetransaktion. PMINDI ligger på ${pct(a.portfolioTransaction)}. Forskellen er ${pp(Math.abs(dTx))} i Fundmarket-tallene.`;
+ const entryLine = sameEntry
+ ? `Emission og indløsning er angivet som maks. ${pct(a.entry)} / ${pct(a.exit)} for begge klasser.`
+ : `PMINDI: emission ${pct(a.entry)}, indløsning ${pct(a.exit)}. PMINDIAKK: emission ${pct(b.entry)}, indløsning ${pct(b.exit)}.`;
+ const feeLine = feeNo
+ ? 'Ingen af klasserne betaler resultathonorar, ifølge Fundmarket.'
+ : `${esc(a.performanceFeeText)} ${esc(b.performanceFeeText)}`;
+
+ main.innerHTML = `
  <p class="eyebrow">OMKOSTNINGER · FUNDMARKET</p>
  <h1>Hvad koster fonden?</h1>
- <p class="lede">Forventede samlede omkostninger i indeværende regnskabsår ifølge Fundmarket. Tallene er offentlige produktside-tal — ikke et inventeret ÅOP. Platformkurtage og depotgebyrer er ekstra.</p>
+ <p class="lede">Forventede omkostninger i indeværende regnskabsår, som de står på Fundmarket. Det er ikke et beregnet ÅOP. Kurtage og depot hos din bank kommer oveni.</p>
  <p class="band">${esc(facts.asOfNote)}</p>
- ${block(facts.classes.pmindi)}
- ${block(facts.classes.pmindiakk)}
+ <div class="metrics">
+ <div class="metric"><div class="label">Øvrige løbende${a.otherOngoing === b.otherOngoing ? ', begge klasser' : ', PMINDI / AKK'}</div><strong>${a.otherOngoing === b.otherOngoing ? pct(a.otherOngoing) : pct(a.otherOngoing) + ' / ' + pct(b.otherOngoing)}</strong><small>Forventet · Fundmarket</small></div>
+ <div class="metric"><div class="label">Porteføljetransaktion, PMINDI</div><strong>${pct(a.portfolioTransaction)}</strong><small>Forventet</small></div>
+ <div class="metric"><div class="label">Porteføljetransaktion, PMINDIAKK</div><strong>${pct(b.portfolioTransaction)}</strong><small>Forventet</small></div>
+ <div class="metric"><div class="label">Resultathonorar</div><strong>${feeNo ? 'Nej' : 'Se klasser'}</strong><small>${feeNo ? 'Begge klasser · Fundmarket' : 'Se teksten på klassekortet'}</small></div>
+ </div>
+ <div class="cost-grid">
+ ${block(A)}
+ ${block(B)}
+ </div>
+
  <section class="panel">
- <h2 style="font-size:16px;margin-bottom:8px">Sammenligning</h2>
+ <h2 class="panel-h">Sammenligning</h2>
  <div class="table-wrap"><table class="data" style="min-width:0">
  <thead><tr><th></th><th>PMINDI</th><th>PMINDIAKK</th></tr></thead>
  <tbody>
- <tr><td>Øvrige løbende</td><td>${pct(facts.classes.pmindi.costs.otherOngoing)}</td><td>${pct(facts.classes.pmindiakk.costs.otherOngoing)}</td></tr>
- <tr><td>Porteføljetransaktion</td><td>${pct(facts.classes.pmindi.costs.portfolioTransaction)}</td><td>${pct(facts.classes.pmindiakk.costs.portfolioTransaction)}</td></tr>
- <tr><td>Emission / indløsning</td><td>${pct(facts.classes.pmindi.costs.entry)} / ${pct(facts.classes.pmindi.costs.exit)}</td><td>${pct(facts.classes.pmindiakk.costs.entry)} / ${pct(facts.classes.pmindiakk.costs.exit)}</td></tr>
- <tr><td>Resultathonorar</td><td>Nej</td><td>Nej</td></tr>
+ <tr><td>Øvrige løbende</td><td>${pct(a.otherOngoing)}</td><td>${pct(b.otherOngoing)}</td></tr>
+ <tr><td>Porteføljetransaktion</td><td>${pct(a.portfolioTransaction)}</td><td>${pct(b.portfolioTransaction)}</td></tr>
+ <tr><td>Emission, maks.</td><td>${pct(a.entry)}</td><td>${pct(b.entry)}</td></tr>
+ <tr><td>Indløsning, maks.</td><td>${pct(a.exit)}</td><td>${pct(b.exit)}</td></tr>
+ <tr><td>Resultathonorar</td><td>${a.performanceFee ? 'Ja' : 'Nej'}</td><td>${b.performanceFee ? 'Ja' : 'Nej'}</td></tr>
  </tbody>
  </table></div>
- <p class="src" style="margin-top:10px">AKK har lidt højere forventet porteføljetransaktionsomkostning i Fundmarket-tallene (0,72 % vs 0,64 %). Begge klasser: ingen resultathonorar.</p>
+ <p class="src" style="margin-top:10px">${diff} ${entryLine} ${feeLine}</p>
  </section>
- <p class="warn">Afkasttal på NDI Analytics er efter fondens løbende omkostninger, før din egen kurtage/depot. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast.</p>
- <p><a class="cta" href="fakta.html">Fakta →</a>
- <a class="outline-btn" style="margin-left:8px" href="risici.html">Risici / KID →</a>
- <a class="outline-btn" style="margin-left:8px" href="sammenlign.html">Sammenlign klasser →</a></p>`;
+
+ <section class="panel">
+ <h2 class="panel-h">Regneeksempel på 100.000 kr.</h2>
+ <p class="lede" style="margin-bottom:12px">Satsen ganget med 100.000 kr. Det er ikke et ÅOP, og det er ikke det beløb, du ender med at betale. Kurtage, depot og skat er ikke med.</p>
+ <div class="table-wrap"><table class="data" style="min-width:0">
+ <thead><tr><th></th><th>Sats</th><th>PMINDI</th><th>PMINDIAKK</th></tr></thead>
+ <tbody>
+ <tr><td>Øvrige løbende</td><td>${pct(a.otherOngoing)}${a.otherOngoing === b.otherOngoing ? '' : ' / ' + pct(b.otherOngoing)}</td><td>${kr(a.otherOngoing)}</td><td>${kr(b.otherOngoing)}</td></tr>
+ <tr><td>Porteføljetransaktion</td><td>${pct(a.portfolioTransaction)} / ${pct(b.portfolioTransaction)}</td><td>${kr(a.portfolioTransaction)}</td><td>${kr(b.portfolioTransaction)}</td></tr>
+ <tr><td>Emission, maks.</td><td>${pct(a.entry)} / ${pct(b.entry)}</td><td>${kr(a.entry)}</td><td>${kr(b.entry)}</td></tr>
+ <tr><td>Indløsning, maks.</td><td>${pct(a.exit)} / ${pct(b.exit)}</td><td>${kr(a.exit)}</td><td>${kr(b.exit)}</td></tr>
+ </tbody>
+ </table></div>
+ <p class="src" style="margin-top:10px">Resultathonorar indgår ikke i eksemplet. ${feeLine}</p>
+ </section>
+
+ <p class="warn">Afkasttal på NDI Analytics er efter fondens løbende omkostninger, før din egen kurtage og dit depot. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast.</p>
+ <p class="link-row">
+ <a class="cta" href="fakta.html">Fakta →</a>
+ <a class="outline-btn" href="risici.html">Risici / KID →</a>
+ <a class="outline-btn" href="sammenlign.html">Sammenlign klasser →</a>
+ </p>`;
+ }
  </script>
 </body>
 </html>
