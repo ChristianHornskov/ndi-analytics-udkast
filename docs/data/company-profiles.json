@@ -1709,20 +1709,24 @@
   "US63010H1086": {
    "name": "Nano Nuclear Energy",
    "theme": "physical",
-   "summary": "Udvikler meget små atomreaktorer. Denne tekst beskriver ikke et anlæg i drift.",
-   "watch": "Om designet bliver godkendt og bygget.",
+   "summary": "Udvikler meget små atomreaktorer. University of Illinois indsendte 31. marts 2026 en ansøgning om byggetilladelse til KRONOS. Den er til behandling og ikke givet. Det er ikke et anlæg i drift.",
+   "watch": "Om behandlingen fører til en tilladelse. Byggeriet er ikke gået i gang.",
    "source": "https://nanonuclearenergy.com/",
-   "products": "Reaktordesign under udvikling.",
+   "products": "KRONOS, ZEUS og LOKI. Design under udvikling.",
    "customers": "Ingen driftkunder i denne beskrivelse.",
-   "role": "Tidlig reaktorudvikling.",
+   "role": "Ansøgning om byggetilladelse er til behandling. Ikke et værk i drift.",
    "narrative": [
-    "Nano Nuclear udvikler meget små reaktorer, blandt andet KRONOS. Selskabet skriver, at KRONOS er i en forberedende dialog med det amerikanske nukleare tilsyn om en byggetilladelse.",
-    "Dialogen er ikke en tilladelse, og den er ikke et anlæg i drift."
+    "Nano Nuclear skriver, at University of Illinois indsendte ansøgningen om KRONOS 31. marts 2026, at tilsynet tog den til behandling 18. maj 2026, og at den formelle behandling begyndte 23. juni 2026. De to første datoer ligger før beholdningen. Den 23. juni ligger efter.",
+    "Ansøgningen er ikke en byggetilladelse, og byggeriet er ikke gået i gang. Selskabet skriver, at en offentlig tidsplan peger på en endelig sikkerhedsvurdering i september 2027, og at selskabet derfor ser en mulighed for at begynde byggeri i andet halvår 2027. Det er en forventning, ikke et værk i drift. ZEUS og LOKI er nævnt som design under udvikling."
    ],
    "narrativeSources": [
     {
      "label": "Selskabets side",
      "url": "https://nanonuclearenergy.com/"
+    },
+    {
+     "label": "KRONOS, 13. oktober 2026",
+     "url": "https://nanonuclearenergy.com/nano-nuclears-kronos-mmr-program-advancing-through-us-nrc-review-with-the-university-of-illinois-urbana-champaign/"
     }
    ]
   },

@@ -759,3 +759,13 @@ Susquehanna er atomkraftværket. Siden nævner også kul, naturgas og olie. Sels
 Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Brandon Shores og Amazon står. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `ea2595e` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:37 CEST. Nano Nuclear skriver, at KRONOS-ansøgningen er til behandling og ikke givet. Ikke færdig.**
+
+University of Illinois indsendte ansøgningen 31. marts 2026. Tilsynet tog den til behandling 18. maj 2026. Formel behandling begyndte 23. juni 2026, efter beholdningen. De to første datoer ligger før. Ansøgningen er ikke en byggetilladelse, og byggeriet er ikke gået i gang. En offentlig tidsplan peger på september 2027. Selskabet ser en mulighed for byggeri i andet halvår 2027. Det er en forventning. Forsiden siger stadig forberedende dialog. Meddelelsen af 13. oktober 2026 er mere præcis, og teksten følger meddelelsen. ZEUS og LOKI er design. Ingen `reviewedAt`. Blurben under atomkraft og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. 23. juni 2026 og "ikke givet" står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `bc2e228` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
