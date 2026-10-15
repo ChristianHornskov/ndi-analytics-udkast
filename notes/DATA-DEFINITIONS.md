@@ -77,6 +77,8 @@ Indledningen på energikæden siger det samme: gas på elproduktion er brændsel
 
 Råstof-blurb siger, at Centrus beriger uran og ikke er et kraftværk. Batteri-blurb siger, at QuantumScape ikke er masseproduktion. `weightSum` er uændret.
 
+Opsendelses-blurb siger, at Starfighters skriver, at STARLAUNCH 1 er et suborbitalt udviklingsfartøj og ikke en orbital rute, og at Howmet leverer metaldele og ikke selv sender op. Profilen citerer selskabets meddelelse af 13. oktober 2026: planlagt flyvning med raketten under vingen, ikke en gennemført orbital opsendelse. Selskabets formulering om at være det eneste er ikke taget med. Konceptkortet i nyhedsarkivet gentager grænsen. Vægtene er uændrede. Et tjek samme nat: sum og antal på de otte led passer, og hver vægt matcher PMINDI pr. 2026-06-01.
+
 ## År til dato på periodesiden
 
 `ytdReturn` i `data.js` bruger sidste punkt i året før som udgangspunkt, ikke 1. januar. For PMINDI pr. 2026-10-14 er det 2025-12-31, ikke 2026-01-02. `periode.html` viser den samme dato i "Fra → til". Kalenderår bruger samme base (`calendarYearReturns`).

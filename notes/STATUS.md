@@ -389,3 +389,15 @@ På energikæden siger råstof-leddet, at Centrus beriger uran til brændsel og 
 Tjekket i Chromium ved 375 px på energifanen. Begge sætninger står. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `341d09d` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 ~00:32 CEST. Opsendelse siger, at Starfighters ikke er en orbital rute. Ikke færdig.**
+
+På rumkæden siger opsendelses-leddet, at Starfighters skriver, at STARLAUNCH 1 er et suborbitalt udviklingsfartøj og ikke en orbital rute. Howmet leverer metaldele og sender ikke selv op. Profilen på Starfighters gengiver selskabets meddelelse af 13. oktober 2026: den planlagte flyvning i december er med raketten under vingen, og den er ikke gennemført. Ingen `reviewedAt`. Markedsformuleringen om at være det eneste selskab er ikke kopieret. Kurser fra investorksiden er ikke kopieret.
+
+Vægte og antal på de otte energi- og rum-led matcher stadig listen. Hver listet vægt matcher PMINDI pr. 1. juni 2026. Porteføljens leverandørnavne er ikke byttet ind som visningsnavne.
+
+Tjekket i Chromium. Rumfanen viser begge sætninger. Nyhedsarkivets rumkort siger det samme. Selskabssiden har AI-udkast, ikke "tjekket mod kilden". Andet afsnit ligger bag "Læs hele forklaringen". Ingen konsolfejl. Ingen vandret scroll ved 375 px.
+
+**Push:** `lane-E` @ `cd57b51` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

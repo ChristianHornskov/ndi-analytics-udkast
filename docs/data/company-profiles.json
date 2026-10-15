@@ -1142,13 +1142,17 @@
    "customers": "Kunder til testflyvning og, hvis programmet lykkes, til opsendelse.",
    "role": "Tidligt opsendelsesled. Ikke en satellitoperatør.",
    "narrative": [
-    "Starfighters Space flyver supersoniske F-104-fly fra Kennedy Space Center. Selskabet udvikler et program, hvor flyet skal løfte en raket, før raketten selv flyver videre.",
-    "Orbital opsendelse er ikke en rutetjeneste i denne beskrivelse. Vægten i beholdningen pr. 1. juni 2026 siger ikke, hvor langt programmet er."
+    "Starfighters Space skriver, at selskabet flyver supersoniske F-104-fly fra Kennedy Space Center. Flyene kan bruges som første trin til luftopsendelse.",
+    "Selskabet skrev 13. oktober 2026, at STARLAUNCH 1 er et suborbitalt udviklingsfartøj. Den planlagte flyvning i december er med raketten under vingen. Det er ikke en orbital rute, og det er ikke en gennemført opsendelse."
    ],
    "narrativeSources": [
     {
      "label": "Selskabets investorkside",
      "url": "https://ir.starfightersspace.com/"
+    },
+    {
+     "label": "Meddelelse 13. oktober 2026",
+     "url": "https://ir.starfightersspace.com/news-events/press-releases/detail/122/starfighters-space-advances-starlaunch-1-toward-planned-december-flight"
     }
    ]
   },

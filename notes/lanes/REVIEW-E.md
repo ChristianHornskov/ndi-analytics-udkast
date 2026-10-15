@@ -69,3 +69,7 @@ De to konceptkort siger det samme som kæden: gas er brændsel, SMR er ikke drif
 ## Centrus og QuantumScape · 2026-10-16 ~00:55 CEST
 
 Blurbs på råstoffer og batterier siger grænsen, så man ikke læser Centrus som et kraftværk eller QuantumScape som et lager i masseproduktion. Vægte urørt. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Starfighters og Howmet · 2026-10-16 ~00:32 CEST
+
+Opsendelse nævner nu det tungeste navn. Starfighters er luftopsendelse under udvikling, ikke en orbital rute. Howmet er metaldele. Kilden er selskabets meddelelse 13. oktober 2026 om en planlagt flyvning med raketten under vingen. "Only" og kurser er ikke kopieret. AI-udkast uden gennemgangsdato. Vægte uændrede og stadig lig beholdningen. Chromium på kæde, nyhedsarkiv og selskabsside. Ingen konsolfejl. Ingen vandret scroll ved 375 px.
