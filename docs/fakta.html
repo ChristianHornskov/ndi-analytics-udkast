@@ -14,6 +14,34 @@
  <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/fakta.html">
  <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
  <meta name="twitter:card" content="summary_large_image">
+ <style>
+  .fact-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:8px 0 18px}
+  .fact-card{background:linear-gradient(180deg,#16303a 0%,#11252c 55%);border:1px solid #345860;border-radius:16px;padding:18px 18px 16px;min-width:0}
+  .fact-card h2{font-size:18px;letter-spacing:-.3px;margin:0 0 2px}
+  .kicker{color:var(--brand);font-size:11px;font-weight:700;letter-spacing:1.4px;margin-bottom:6px}
+  .isin-row{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:#08171d;margin:12px 0}
+  .isin-row code{color:var(--cyan);font-size:13px;letter-spacing:.3px}
+  .kv{display:grid;grid-template-columns:1fr 1fr;gap:12px 14px;margin-top:4px}
+  .kv .k{display:block;font-size:11px;color:var(--muted);margin-bottom:3px}
+  .kv .v{font-size:14px;color:var(--text);line-height:1.4}
+  .org{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .org article{background:#0b171d;border:1px solid var(--line);border-radius:12px;padding:12px 14px;min-width:0}
+  .org article.span-2{grid-column:1/-1}
+  .org .k{display:block;font-size:11px;color:var(--brand);letter-spacing:.4px;margin-bottom:4px}
+  .org strong{display:block;font-weight:600;margin-bottom:4px}
+  .org p{color:var(--muted);font-size:13px;line-height:1.45;margin:0}
+  .team{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .person{background:#0b171d;border-radius:12px;padding:12px 14px;border:1px solid var(--line);min-width:0}
+  .person strong{display:block;margin-bottom:4px}
+  .person span{color:var(--muted);font-size:13px;line-height:1.45}
+  .gap-pill{display:inline-block;border:1px dashed #f5ee9e88;color:#f5ee9e;border-radius:999px;padding:2px 8px;font-size:12px;letter-spacing:.2px}
+  .tax-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .tax-grid h3{font-size:14px;margin-bottom:6px}
+  .tax-grid p{color:var(--muted);line-height:1.55;font-size:14px}
+  @media(max-width:800px){
+    .fact-grid,.org,.team,.tax-grid,.kv{grid-template-columns:1fr}
+  }
+ </style>
 </head>
 <body>
  <a class="skip" href="#main">Gå til indhold</a>
@@ -22,79 +50,149 @@
  <nav class="nav"><a href="index.html?view=fonden">← Fonden</a><a href="omkostninger.html">Omkostninger</a><a href="risici.html">Risici</a></nav>
  </header>
  <main id="main"><p style="color:var(--muted)">Henter…</p></main>
+ <footer class="site-footer">
+ <p>Udkast / noindex. Generel information fra offentlige kilder. Ikke rådgivning. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast.</p>
+ </footer>
  <script type="module">
  const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
- const facts = await fetch('data/fund-facts.json').then(r => r.json());
- const risk = await fetch('data/risk-stats.json').then(r => r.ok ? r.json() : null).catch(() => null);
+ const main = document.getElementById('main');
+ const isGap = (s) => String(s || '').trim().toLowerCase() === 'udfyldes af ndi';
+ const show = (s) => isGap(s) ? '<span class="gap-pill">udfyldes af NDI</span>' : esc(s);
+ const num = (n) => {
+ if (n == null || Number.isNaN(Number(n))) return 'ikke oplyst';
+ const neg = Number(n) < 0;
+ const [a, b = ''] = String(Math.abs(Number(n))).split('.');
+ return (neg ? '-' : '') + a + (b ? ',' + b : '');
+ };
+ const pct = (n) => n == null ? 'ikke oplyst' : num(n) + ' %';
+ const daDate = (iso) => {
+ if (!iso) return '';
+ const d = new Date(String(iso).length === 10 ? iso + 'T12:00:00' : iso);
+ if (Number.isNaN(d.getTime())) return esc(iso);
+ return d.toLocaleDateString('da-DK', { year: 'numeric', month: 'short', day: 'numeric' });
+ };
+ let facts, risk;
+ try {
+ const r = await fetch('data/fund-facts.json');
+ if (!r.ok) throw new Error('facts');
+ facts = await r.json();
+ const rr = await fetch('data/risk-stats.json');
+ risk = rr.ok ? await rr.json() : null;
+ } catch {
+ main.innerHTML = `<p class="eyebrow">FAKTA</p><h1>Fakta om fonden</h1><div class="x-empty"><p class="k">Data mangler</p><p>Siden læser kun data/fund-facts.json og data/risk-stats.json.</p></div>`;
+ }
+ if (!facts) { /* empty state already set */ }
+ else {
  const c = facts.classes;
- const row = (k,v) => `<tr><th style="text-align:left;color:var(--muted);font-weight:500;padding:6px 10px 6px 0;vertical-align:top;white-space:nowrap">${esc(k)}</th><td style="padding:6px 0;color:var(--text)">${v}</td></tr>`;
- const klasse = (key, cl) => `
- <section class="panel">
- <h2 style="font-size:16px;margin-bottom:10px">${esc(cl.label)}</h2>
- <table style="width:100%;border-collapse:collapse;font-size:14px;line-height:1.45">
- ${row('ISIN', `<code>${esc(cl.isin)}</code>`)}
- ${row('Type', esc(cl.productType) + (cl.distributing ? ' · udloddende' : ' · akkumulerende'))}
- ${row('Børsnoteret', cl.listed ? 'Ja' : 'Nej')}
- ${row('Juridisk start', esc(cl.legalInception))}
- ${row('ESG', esc(cl.esg))}
- ${row('Benchmark', esc(cl.benchmark))}
- ${row('Anbefalet horisont', esc(cl.horizonYears) + ' år (KID)')}
- ${row('SRI', `<strong>${cl.sri} / ${cl.sriMax}</strong>`)}
- ${row('KID', `<a href="${esc(cl.kidUrl)}" rel="noopener" target="_blank">Fundmarket PDF ↗</a>`)}
- ${row('Produktside', `<a href="${esc(cl.fundmarketUrl)}" rel="noopener" target="_blank">Fundmarket ↗</a>`)}
- </table>
- </section>`;
- document.getElementById('main').innerHTML = `
- <p class="eyebrow">FAKTA · OFFENTLIGE KILDER</p>
- <h1>Fakta om fonden</h1>
- <p class="lede">Stamdata fra Fundmarket og newdealinvest.dk. Tomme felter er mærket «udfyldes af NDI». Generel information — ikke rådgivning.</p>
- <p class="band">${esc(facts.asOfNote)}</p>
-
- <section class="panel">
- <h2 style="font-size:16px;margin-bottom:10px">Organisation</h2>
- <table style="width:100%;border-collapse:collapse;font-size:14px;line-height:1.45">
- ${row('Investeringsforening', esc(facts.association.name))}
- ${row('IFS (forvalter)', `${esc(facts.ifs.name)} · CVR ${esc(facts.ifs.cvr)} · FT ${esc(facts.ifs.ft)}`)}
- ${row('Adresse IFS', esc(facts.ifs.address))}
- ${row('Investeringsrådgiver', `${esc(facts.advisor.name)} · CVR ${esc(facts.advisor.cvr)}`)}
- ${row('Depotbank', esc(facts.depositary.name))}
- ${row('Revision', `<em style="color:var(--muted)">${esc(facts.auditor.name)}</em>${facts.auditor.note ? ` — ${esc(facts.auditor.note)}` : ''}`)}
- </table>
- <p class="src" style="margin-top:10px">Kilder: <a href="${esc(facts.association.source)}">${esc(facts.association.sourceLabel)}</a> · <a href="${esc(facts.prospectusUrl)}">Fællesprospekt ↗</a></p>
- </section>
-
- <section class="panel">
- <h2 style="font-size:16px;margin-bottom:10px">Porteføljehold (newdealinvest.dk)</h2>
- <ul style="color:var(--muted);line-height:1.55;padding-left:1.2rem;display:grid;gap:6px">
- ${facts.team.map(t => `<li><strong style="color:var(--text)">${esc(t.name)}</strong> — ${esc(t.role)}</li>`).join('')}
- </ul>
- </section>
-
- ${klasse('pmindi', c.pmindi)}
- ${klasse('pmindiakk', c.pmindiakk)}
-
- <section class="panel">
- <h2 style="font-size:16px;margin-bottom:10px">Skat (kort)</h2>
- <p style="color:var(--muted);line-height:1.55;margin-bottom:8px"><strong style="color:var(--text)">PMINDI:</strong> ${esc(facts.tax.pmindi)}</p>
- <p style="color:var(--muted);line-height:1.55"><strong style="color:var(--text)">PMINDIAKK:</strong> ${esc(facts.tax.pmindiakk)}</p>
- <p class="src" style="margin-top:10px"><a href="${esc(facts.tax.source)}">${esc(facts.tax.sourceLabel)} ↗</a></p>
- </section>
-
- ${risk ? `<section class="panel">
- <h2 style="font-size:16px;margin-bottom:10px">Risikotal (beregnet i udkastet)</h2>
- <div class="metrics">
- <div class="metric"><div class="label">Volatilitet (ann.)</div><strong>${String(risk.volatilityAnnPct).replace('.',',')} %</strong><small>Beregnet · se note</small></div>
- <div class="metric"><div class="label">Sharpe (rf=0)</div><strong>${String(risk.sharpeRf0).replace('.',',')}</strong><small>Beregnet · se note</small></div>
- <div class="metric"><div class="label">Max drawdown</div><strong class="neg">${String(risk.maxDrawdownPct).replace('.',',')} %</strong><small>${esc(risk.maxDdPeak)} → ${esc(risk.maxDdTrough)}</small></div>
+ const klasse = (cl) => `
+ <article class="fact-card">
+ <p class="kicker">${cl.distributing ? 'UDLODDENDE' : 'AKKUMULERENDE'} · ${esc(cl.productType)}</p>
+ <h2>${esc(cl.label)}</h2>
+ <div class="isin-row">
+ <div><span class="k" style="display:block;font-size:11px;color:var(--muted);margin-bottom:3px">ISIN</span><code>${esc(cl.isin)}</code></div>
+ <button type="button" class="outline-btn small" data-copy="${esc(cl.isin)}">Kopiér ISIN</button>
  </div>
- <p class="band" style="margin-top:12px">Officielt Fundmarket-tal for vol/Sharpe: <em>${esc(risk.officialVolSharpe)}</em>. ${esc(risk.officialVolSharpeNote)}</p>
- <p class="src">${esc(risk.method)}</p>
- </section>` : ''}
+ <div class="sri" role="img" aria-label="Risikoindikator ${cl.sri} af ${cl.sriMax}">${Array.from({ length: cl.sriMax }, (_, i) => `<span class="${i + 1 === cl.sri ? 'on' : ''}">${i + 1}</span>`).join('')}</div>
+ <p class="src" style="margin:0 0 10px">SRI ${cl.sri} / ${cl.sriMax} · anbefalet horisont ${esc(cl.horizonYears)} år (KID)</p>
+ <div class="kv">
+ <div><span class="k">Juridisk start</span><span class="v">${daDate(cl.legalInception)}</span></div>
+ <div><span class="k">Børsnoteret</span><span class="v">${cl.listed ? 'Ja' : 'Nej'}</span></div>
+ <div><span class="k">ESG</span><span class="v">${esc(cl.esg)}</span></div>
+ <div><span class="k">Benchmark</span><span class="v">${esc(cl.benchmark)}</span></div>
+ </div>
+ <p class="link-row" style="margin-top:14px">
+ <a class="outline-btn small" href="${esc(cl.kidUrl)}" rel="noopener noreferrer" target="_blank">KID PDF ↗</a>
+ <a class="outline-btn small" href="${esc(cl.fundmarketUrl)}" rel="noopener noreferrer" target="_blank">Fundmarket ↗</a>
+ </p>
+ </article>`;
+ const org = (k, title, body) => `<article><span class="k">${esc(k)}</span><strong>${title}</strong>${body ? `<p>${body}</p>` : ''}</article>`;
+ const riskBlock = risk ? `<section class="panel" id="risiko">
+ <h2 class="panel-h">Risikotal beregnet i udkastet</h2>
+ <p class="src" style="margin-bottom:8px">Pr. ${daDate(risk.asOf)}. ${esc(risk.method)}</p>
+ <div class="metrics">
+ <div class="metric"><div class="label">Volatilitet (ann.)</div><strong>${pct(risk.volatilityAnnPct)}</strong><small>Beregnet · ikke Fundmarket</small></div>
+ <div class="metric"><div class="label">Sharpe (rf = 0)</div><strong>${num(risk.sharpeRf0)}</strong><small>Beregnet · ikke Fundmarket</small></div>
+ <div class="metric"><div class="label">Max drawdown</div><strong class="neg">${pct(risk.maxDrawdownPct)}</strong><small>Top ${daDate(risk.maxDdPeak)} · bund ${daDate(risk.maxDdTrough)}</small></div>
+ <div class="metric"><div class="label">Officielt vol/Sharpe</div><strong style="font-size:16px">${show(risk.officialVolSharpe)}</strong><small>${esc(risk.officialVolSharpeNote || '')}</small></div>
+ </div>
+ </section>` : `<section class="panel"><h2 class="panel-h">Risikotal</h2><p class="band">risk-stats.json kunne ikke læses. Der vises ingen beregnede tal.</p></section>`;
+
+ main.innerHTML = `
+ <p class="eyebrow">FAKTAARK · OFFENTLIGE KILDER</p>
+ <h1>Fakta om fonden</h1>
+ <p class="lede">Stamdata for de to andelsklasser, hentet fra Fundmarket og newdealinvest.dk. Siden er generel information. Den er ikke rådgivning, og den er ikke foreningens officielle faktaark.</p>
+ <p class="band">${esc(facts.asOfNote)}</p>
+ <div class="fact-grid" id="klasser">
+ ${klasse(c.pmindi)}
+ ${klasse(c.pmindiakk)}
+ </div>
+ <p class="link-row"><a class="cta" href="omkostninger.html">Omkostninger med tal →</a></p>
+
+ <section class="panel" id="organisation">
+ <h2 class="panel-h">Organisation</h2>
+ <div class="org">
+ ${org('Investeringsforening', show(facts.association.name), '')}
+ ${org('IFS (forvalter)', show(facts.ifs.name), `CVR ${esc(facts.ifs.cvr)} · FT ${esc(facts.ifs.ft)}<br>${esc(facts.ifs.address)}`)}
+ ${org('Investeringsrådgiver', show(facts.advisor.name), `CVR ${esc(facts.advisor.cvr)}<br>${esc(facts.advisor.address)}`)}
+ ${org('Depotbank', show(facts.depositary.name), esc(facts.depositary.role || ''))}
+ <article class="span-2"><span class="k">Revision</span><strong>${show(facts.auditor.name)}</strong><p>${esc(facts.auditor.note || '')}</p></article>
+ </div>
+ <p class="src" style="margin-top:12px">Kilder: <a href="${esc(facts.association.source)}" rel="noopener noreferrer" target="_blank">${esc(facts.association.sourceLabel)} ↗</a> · <a href="${esc(facts.prospectusUrl)}" rel="noopener noreferrer" target="_blank">Fællesprospekt ↗</a></p>
+ </section>
+
+ <section class="panel" id="hold">
+ <h2 class="panel-h">Porteføljehold</h2>
+ <div class="team">
+ ${facts.team.map((t) => `<article class="person"><strong>${esc(t.name)}</strong><span>${esc(t.role)}</span></article>`).join('')}
+ </div>
+ <p class="src" style="margin-top:10px">Kilde: <a href="${esc(facts.team[0]?.source || 'https://www.newdealinvest.dk/')}" rel="noopener noreferrer" target="_blank">newdealinvest.dk ↗</a></p>
+ </section>
+
+ <section class="panel" id="skat">
+ <h2 class="panel-h">Skat, kort</h2>
+ <div class="tax-grid">
+ <div><h3>PMINDI</h3><p>${esc(facts.tax.pmindi)}</p></div>
+ <div><h3>PMINDIAKK</h3><p>${esc(facts.tax.pmindiakk)}</p></div>
+ </div>
+ <p class="src" style="margin-top:10px"><a href="${esc(facts.tax.source)}" rel="noopener noreferrer" target="_blank">${esc(facts.tax.sourceLabel)} ↗</a></p>
+ </section>
+
+ ${riskBlock}
 
  <p class="warn">Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.</p>
- <p><a class="cta" href="omkostninger.html">Omkostninger →</a>
- <a class="outline-btn" style="margin-left:8px" href="risici.html">Risici / KID →</a>
- <a class="outline-btn" style="margin-left:8px" href="invester.html">Sådan investerer du →</a></p>`;
+ <p class="link-row">
+ <a class="cta" href="omkostninger.html">Omkostninger →</a>
+ <a class="outline-btn" href="risici.html">Risici / KID →</a>
+ <a class="outline-btn" href="invester.html">Sådan investerer du →</a>
+ <a class="outline-btn" href="ndi-paa-x.html">NDI på X →</a>
+ </p>`;
+
+ main.addEventListener('click', async (e) => {
+ const btn = e.target.closest('[data-copy]');
+ if (!btn) return;
+ const v = btn.getAttribute('data-copy');
+ const old = btn.textContent;
+ let copied = false;
+ try {
+ await navigator.clipboard.writeText(v);
+ copied = true;
+ } catch {
+ try {
+ const ta = document.createElement('textarea');
+ ta.value = v;
+ ta.setAttribute('readonly', '');
+ ta.style.position = 'fixed';
+ ta.style.left = '-9999px';
+ document.body.appendChild(ta);
+ ta.select();
+ copied = document.execCommand('copy');
+ ta.remove();
+ } catch { copied = false; }
+ }
+ btn.textContent = copied ? 'Kopieret' : 'Kopiér ISIN';
+ setTimeout(() => { btn.textContent = old; }, 2000);
+ });
+ }
  </script>
 </body>
 </html>

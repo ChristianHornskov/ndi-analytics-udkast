@@ -325,6 +325,46 @@
       ],
       "label": "Udvalgte offentlige opslag — ikke NDI's holdning",
       "curatedFrom": "mads_following"
+    },
+    {
+      "id": "2108845669687640090",
+      "username": "BullTheoryio",
+      "name": "Bull Theory",
+      "text": "BREAKING: SoftBank is seeking to raise up to $100 billion from Gulf investors to expand its AI investments. SoftBank has already invested $64.6 billion in OpenAI. At a $2 trillion valuation, its stake would be worth $260 billion.",
+      "created_at": "2026-10-10T09:02:42.000Z",
+      "url": "https://x.com/BullTheoryio/status/2108845669687640090",
+      "tags": [
+        "platforms",
+        "ai"
+      ],
+      "tickers": [
+        "SoftBank",
+        "9984.T",
+        "9984"
+      ],
+      "label": "Udvalgte offentlige opslag — ikke NDI's holdning",
+      "curatedFrom": "mads_following"
+    },
+    {
+      "id": "2081548645808402539",
+      "username": "BullTheoryio",
+      "name": "Bull Theory",
+      "text": "BREAKING: Nvidia is in talks to backstop $250 BILLION in financing for OpenAI. The guarantee would let OpenAI lease a 10-gigawatt data center in southern Ohio, built by SoftBank. … Nvidia is also separately weighing another $350 BILLION to fund OpenAI's chip purchases.",
+      "created_at": "2026-07-27T01:14:05.000Z",
+      "url": "https://x.com/BullTheoryio/status/2081548645808402539",
+      "tags": [
+        "chips",
+        "ai",
+        "platforms"
+      ],
+      "tickers": [
+        "NVDA",
+        "SoftBank",
+        "9984.T",
+        "9984"
+      ],
+      "label": "Udvalgte offentlige opslag — ikke NDI's holdning",
+      "curatedFrom": "mads_following"
     }
   ],
   "byTheme": {
@@ -340,7 +380,9 @@
       "2109979767407509867",
       "2100358110254952615",
       "2109335734767571448",
-      "2104529180071461332"
+      "2104529180071461332",
+      "2108845669687640090",
+      "2081548645808402539"
     ],
     "chips": [
       "2087874479141589021",
@@ -349,13 +391,16 @@
       "2100358110254952615",
       "2109335734767571448",
       "2110381882529718623",
-      "2104529180071461332"
+      "2104529180071461332",
+      "2081548645808402539"
     ],
     "platforms": [
       "2087874479141589021",
       "2028884313425506598",
       "1918304252847440315",
-      "2110628812753158432"
+      "2110628812753158432",
+      "2108845669687640090",
+      "2081548645808402539"
     ],
     "europe": [
       "2110388749947261403"
@@ -385,12 +430,18 @@
     ]
   },
   "byTicker": {
+    "9984": [
+      "2110628812753158432",
+      "2108845669687640090",
+      "2081548645808402539"
+    ],
     "NVDA": [
       "2087874479141589021",
       "2100358110254952615",
       "2109335734767571448",
       "2110381882529718623",
-      "2104529180071461332"
+      "2104529180071461332",
+      "2081548645808402539"
     ],
     "SE": [
       "2087874479141589021",
@@ -431,13 +482,14 @@
       "2110381882529718623"
     ],
     "SoftBank": [
-      "2110628812753158432"
+      "2110628812753158432",
+      "2108845669687640090",
+      "2081548645808402539"
     ],
     "9984.T": [
-      "2110628812753158432"
-    ],
-    "9984": [
-      "2110628812753158432"
+      "2110628812753158432",
+      "2108845669687640090",
+      "2081548645808402539"
     ],
     "NBIS": [
       "2110381882529718623"
@@ -481,6 +533,14 @@
       "title": "X · @MilkRoadAI",
       "text": "Jensen Huang committed $1B to put AI in the hands of America’s scientists (Genesis Mission). Nvidia gave the most at $1B among 11 companies ",
       "url": "https://x.com/MilkRoadAI/status/2109335734767571448",
+      "kind": "x",
+      "source": "X (udvalgt offentligt opslag — ikke NDI’s holdning)"
+    },
+    {
+      "d": "2026-10-10",
+      "title": "X · @BullTheoryio",
+      "text": "SoftBank is seeking to raise up to $100 billion from Gulf investors to expand its AI investments. SoftBank has already invested $64.6 billion in OpenAI.",
+      "url": "https://x.com/BullTheoryio/status/2108845669687640090",
       "kind": "x",
       "source": "X (udvalgt offentligt opslag — ikke NDI’s holdning)"
     },
@@ -557,5 +617,5 @@
       "source": "X (udvalgt offentligt opslag — ikke NDI’s holdning)"
     }
   ],
-  "callCountNote": "Hentet via x MCP get_users_by_usernames + get_users_posts (4 konti). Limits: 30/min, 1000/day."
+  "callCountNote": "Hentet via x MCP get_users_by_usernames + get_users_posts (4 konti). Limits: 30/min, 1000/day. Lane X 2026-10-15: ét søgekald efter SoftBank hos konti fra mads_following (BullTheoryio). Browseren kalder ikke X."
 }
