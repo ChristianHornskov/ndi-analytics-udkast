@@ -141,9 +141,35 @@ for (const width of [1280, 375]) {
   check('vægt-søjler, ingen polyline ' + W, (await page.locator('svg.spark polyline').count()) === 0 && (await page.locator('svg.spark-bars rect').count()) > 0);
   check('søjle-forklaring synlig ' + W, /vægt i fonden pr\. kvartal/.test(await page.locator('.spark-legend').innerText()));
 
+  // Build N2: Entré-historie (3 spørgsmål + 3 linser + hvorfor), temaforslag, udforsk uden dobbelt screener, sammenlign
+  await page.goto(BASE + '/', { waitUntil: 'networkidle' });
+  check('entré: 3 primære døre ' + W, (await page.locator('.doors .door').count()) === 3);
+  check('entré: linser temaer+værdikæde+lær ' + W, (await page.locator('.doors-sub-3 a[href^="temaer.html"], .doors-sub-3 a[href="vaerdikaede.html"], .doors-sub-3 a[href="laer/index.html"]').count()) === 3);
+  check('entré: dør til ideer.html ' + W, await page.locator('a.why-card[href="ideer.html"]').isVisible());
+  check('entré: forslag-badge på Temaer ' + W, /\d+ forslag/.test(await page.locator('.doors-sub-3 a[href^="temaer.html"]').innerText()));
+  await page.goto(BASE + '/?view=udforsk', { waitUntil: 'networkidle' });
+  check('udforsk: ingen "Åbn screener" i DOM ' + W, (await page.locator('.toolbar a[href*="view=udforsk"]').count()) === 0);
+  await page.goto(BASE + '/?view=portefolje', { waitUntil: 'networkidle' });
+  check('porteføljen: "Åbn screener" bevaret ' + W, (await page.locator('.toolbar a[href*="view=udforsk"]').count()) === 1);
+  await page.goto(BASE + '/temaer.html', { waitUntil: 'networkidle' });
+  const rv = await page.locator('.review-banner').innerText().catch(() => '');
+  check('temaer: forslag-banner med antal ' + W, /\d+ selskaber har fået et forslag/.test(rv) && /afventer gennemgang/i.test(rv), rv.slice(0, 120));
+  check('temaer: banner linker til offentlig note ' + W, (await page.locator('.review-banner a[href="om-data.html#g-temaforslag"]').count()) === 1);
+  await page.goto(BASE + '/om-data.html#g-temaforslag', { waitUntil: 'networkidle' });
+  check('om-data: temaforslag-note ' + W, /afventer gennemgang/.test(await page.locator('#g-temaforslag').innerText()));
+  await page.goto(BASE + '/tema.html?slug=energi', { waitUntil: 'networkidle' });
+  check('tema: forslag-mærke på rækker ' + W, (await page.locator('table.data .badge-draft').count()) > 0);
+  await page.goto(BASE + '/sammenlign.html', { waitUntil: 'networkidle' });
+  const cmp = await page.locator('main').innerText();
+  check('sammenlign: AKK-gate tekst ' + W, /Vises efter 12 måneder/.test(cmp) && /12 måneders historik/.test(cmp));
+  const akkCard = await page.locator('.cmp-card.b').innerText();
+  check('sammenlign: intet afkast-% for AKK ' + W, !/\d+,\d\s?%/.test(akkCard), akkCard.slice(0, 120));
+  check('sammenlign: overlap hele beholdningen ' + W, /\d+ af \d+ selskaber i PMINDIAKK findes også i PMINDI/.test(cmp));
+  check('sammenlign: tema-linse begge klasser ' + W, (await page.locator('.cmp-themes li').count()) >= 5 && (await page.locator('.cmp-line.b').count()) >= 5);
+
   // Ingen vandret scroll på 375 (bortset fra bevidste scroll-containere)
   if (width === 375) {
-    for (const path of ['/', '/?view=fonden', '/?view=portefolje', '/?view=udforsk', '/laer/faq.html']) {
+    for (const path of ['/', '/?view=fonden', '/?view=portefolje', '/?view=udforsk', '/laer/faq.html', '/temaer.html', '/sammenlign.html', '/ideer.html']) {
       await page.goto(BASE + path, { waitUntil: 'networkidle' });
       const over = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
       check(`ingen sidescroll 375 ${path}`, over <= 1, over);

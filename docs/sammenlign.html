@@ -11,7 +11,7 @@
  <meta property="og:site_name" content="NDI Analytics (udkast)">
  <meta property="og:locale" content="da_DK">
  <meta property="og:title" content="Sammenlign · NDI Analytics">
- <meta property="og:description" content="Samme teknologiperspektiv. Forskellen er udbyttepolitik. Ikke investeringsuniverset.">
+ <meta property="og:description" content="Én portefølje, to måder at få udbyttet på: PMINDI udbetaler, PMINDIAKK geninvesterer.">
  <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/sammenlign.html">
  <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
  <meta property="og:image:width" content="1200">
@@ -27,41 +27,91 @@
  <nav class="nav"><a href="index.html">← Entré</a><a href="invester.html">Sådan investerer du</a></nav>
  </header>
  <main id="main"><p style="color:var(--muted)">Henter…</p></main>
- <footer class="site-footer"><p>Udkast / noindex. Eksponering, ikke anbefaling.</p></footer>
+ <footer class="site-footer"><p>Udkast / noindex. Eksponering, ikke anbefaling.</p><p data-kid-footer></p></footer>
  <script type="module">
- import { loadAll, fundById, lastNav, WARN_HIST, fmtDate } from './js/data.js';
+ import { loadAll, fundById, lastNav, WARN_HIST, fmtDate, daTheme, fillKidFooter } from './js/data.js';
  const { portfolio } = await loadAll();
+ fillKidFooter();
  const a = fundById(portfolio, 'pmindi');
  const b = fundById(portfolio, 'pmindiakk');
- const posA = [...(a.positions||[])].sort((x,y)=>(y.weight||0)-(x.weight||0)).slice(0,20);
- const posB = [...(b.positions||[])].sort((x,y)=>(y.weight||0)-(x.weight||0)).slice(0,20);
- const isinA = new Set(posA.map(p=>p.isin));
- const overlap = posB.filter(p=>isinA.has(p.isin));
+ const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+ const n2 = (x) => (x || 0).toFixed(2).replace('.', ',');
+ const n1 = (x) => (x || 0).toFixed(1).replace('.', ',');
+ // Overlap over hele den forsinkede beholdning (ikke kun top-20): samme univers, ikke to strategier
+ const isinA = new Set((a.positions || []).map((p) => p.isin));
+ const shared = (b.positions || []).filter((p) => isinA.has(p.isin)).length;
+ const onlyB = (b.positions || []).length - shared;
+ // Tema-eksponering pr. klasse (primært tema, vægt i % af klassen). Eksponering, ikke afkast.
+ const byTheme = (f) => (f.positions || []).reduce((m, p) => (m[p.theme] = (m[p.theme] || 0) + (p.weight || 0), m), {});
+ const ta = byTheme(a), tb = byTheme(b);
+ const keys = [...new Set([...Object.keys(ta), ...Object.keys(tb)])].sort((x, y) => (ta[y] || 0) - (ta[x] || 0));
+ const max = Math.max(...keys.flatMap((k) => [ta[k] || 0, tb[k] || 0]), 0.01);
+ const maxDiff = Math.max(...keys.map((k) => Math.abs((ta[k] || 0) - (tb[k] || 0))));
+ const bar = (v, cls, label) => `<span class="cmp-line ${cls}"><span class="sr-only">${label}: </span><span class="cmp-bar" aria-hidden="true"><span style="width:${Math.round((v / max) * 100)}%"></span></span><span class="cmp-v">${n1(v)} %</span></span>`;
+ const themeRows = keys.map((k) => `<li><span class="cmp-name">${esc(daTheme(k))}</span>
+ <span class="cmp-pair">${bar(ta[k], 'a', 'PMINDI')}${bar(tb[k], 'b', 'PMINDIAKK')}</span></li>`).join('');
  const navA = lastNav(a.data), navB = lastNav(b.data);
+ const firstA = a.data?.[0]?.d || a.inception, firstB = b.data?.[0]?.d || b.inception;
+ // AKK-gate: afkast først efter 12 måneders historik fra første NAV
+ const gate = new Date(firstB); gate.setFullYear(gate.getFullYear() + 1);
+ const gateIso = gate.toISOString().slice(0, 10);
+ const posAsOf = fmtDate(a.positionsAsOf || portfolio.asOf);
  document.getElementById('main').innerHTML = `
- <p class="eyebrow">SAMMENLIGN FONDE</p>
- <h1>PMINDI vs PMINDIAKK</h1>
- <p class="lede">Samme teknologiperspektiv. Forskellen er udbyttepolitik. Ikke investeringsuniverset.</p>
- <div class="kpi-grid">
- <div class="kpi"><span class="label">PMINDI</span><strong>Udbyttebetalende</strong><span class="sub">${a.isin} · NAV ${navA?navA.price.toFixed(2).replace('.',','):'-'} (${fmtDate(navA?.d)})</span></div>
- <div class="kpi"><span class="label">PMINDIAKK</span><strong>Akkumulerende</strong><span class="sub">${b.isin} · NAV ${navB?navB.price.toFixed(2).replace('.',','):'-'} (${fmtDate(navB?.d)})</span></div>
- <div class="kpi"><span class="label">Overlap top-20</span><strong>${overlap.length} selskaber</strong></div>
+ <p class="eyebrow">SAMMENLIGN ANDELSKLASSER</p>
+ <h1>Én portefølje, to måder at få udbyttet på</h1>
+ <p class="lede">PMINDI og PMINDIAKK investerer efter samme strategi i de samme selskaber. Forskellen er, hvad der sker med udbyttet: det udbetales til dig, eller det bliver i fonden.</p>
+
+ <div class="cmp-cards">
+ <section class="cmp-card a" aria-labelledby="c-a">
+ <p class="cmp-tag">Udloddende</p>
+ <h2 id="c-a">PMINDI</h2>
+ <p class="cmp-flow">Udbytte <span aria-hidden="true">→</span> <strong>udbetales til dig</strong></p>
+ <dl>
+ <div><dt>ISIN</dt><dd>${esc(a.isin)}</dd></div>
+ <div><dt>Første NAV</dt><dd>${fmtDate(firstA)}</dd></div>
+ <div><dt>Seneste NAV</dt><dd>${navA ? n2(navA.price) : '-'} <small>(${fmtDate(navA?.d)})</small></dd></div>
+ <div><dt>Afkast</dt><dd>Vises på Fonden</dd></div>
+ </dl>
+ <a class="outline-btn" href="index.html?view=fonden&fund=pmindi">Se PMINDI →</a>
+ </section>
+ <section class="cmp-card b" aria-labelledby="c-b">
+ <p class="cmp-tag">Akkumulerende</p>
+ <h2 id="c-b">PMINDIAKK</h2>
+ <p class="cmp-flow">Udbytte <span aria-hidden="true">→</span> <strong>geninvesteres i fonden</strong></p>
+ <dl>
+ <div><dt>ISIN</dt><dd>${esc(b.isin)}</dd></div>
+ <div><dt>Første NAV</dt><dd>${fmtDate(firstB)}</dd></div>
+ <div><dt>Seneste NAV</dt><dd>${navB ? n2(navB.price) : '-'} <small>(${fmtDate(navB?.d)})</small></dd></div>
+ <div><dt>Afkast</dt><dd><strong>Vises efter 12 måneder</strong> <small>(fra ${fmtDate(gateIso)})</small></dd></div>
+ </dl>
+ <a class="outline-btn" href="index.html?view=fonden&fund=pmindiakk">Se PMINDIAKK →</a>
+ </section>
  </div>
- <section class="panel">
- <h2 style="font-size:16px;margin-bottom:8px">Hvad er forskellen?</h2>
- <ul style="color:var(--muted);line-height:1.6;padding-left:1.2rem;display:grid;gap:8px">
- <li><strong style="color:var(--text)">PMINDI</strong> udbetaler udbytte (dokumenterede udbyttedatoer i kontekstgrafen).</li>
- <li><strong style="color:var(--text)">PMINDIAKK</strong> geninvesterer. Afkast vises først efter 12 måneder.</li>
- <li>Beholdning forsinket pr. ${fmtDate(a.positionsAsOf||portfolio.asOf)}. Samme tema-tags anvendes på begge.</li>
- </ul>
+
+ <section class="panel cmp-timeline" aria-labelledby="tl-h">
+ <h2 class="panel-h" id="tl-h">Tidslinje</h2>
+ <ol class="tl">
+ <li><time datetime="${firstA}">${fmtDate(firstA)}</time><span>PMINDI: første NAV. Herfra regnes "siden start".</span></li>
+ <li><time datetime="${firstB}">${fmtDate(firstB)}</time><span>PMINDIAKK: første NAV. Samme portefølje, udbyttet bliver i fonden.</span></li>
+ <li class="future"><time datetime="${gateIso}">${fmtDate(gateIso)}</time><span>PMINDIAKK har 12 måneders historik. Først da vises klassens afkast.</span></li>
+ </ol>
  </section>
- <section class="panel">
- <h2 style="font-size:16px;margin-bottom:8px">Fælles i top-20 (udsnit)</h2>
- <div class="table-wrap"><table class="data" style="min-width:0"><thead><tr><th>Navn</th><th>ISIN</th></tr></thead>
- <tbody>${overlap.map(p=>`<tr><td><a href="selskab.html?isin=${p.isin}">${p.name}</a></td><td>${p.isin}</td></tr>`).join('')||'<tr><td colspan="2">-</td></tr>'}</tbody></table></div>
+
+ <section class="panel" aria-labelledby="ov-h">
+ <h2 class="panel-h" id="ov-h">Samme selskaber</h2>
+ <p class="cmp-big"><strong>${shared}</strong> af ${(b.positions || []).length} selskaber i PMINDIAKK findes også i PMINDI${onlyB ? `. ${onlyB} findes kun i PMINDIAKK` : ''}.</p>
+ <p class="src">Forsinket beholdning pr. ${posAsOf}. PMINDI har ${(a.positions || []).length} positioner. Små forskelle i antal og vægt skyldes, at klasserne har forskellig størrelse og pengestrømme. Det er ikke to forskellige strategier.</p>
  </section>
- <p><a class="cta" href="index.html?view=fonden&fund=pmindi">Se PMINDI →</a>
- <a class="outline-btn" href="index.html?view=fonden&fund=pmindiakk" style="margin-left:8px">PMINDIAKK →</a></p>
+
+ <section class="panel" aria-labelledby="th-h">
+ <h2 class="panel-h" id="th-h">Samme NDI-linse</h2>
+ <p class="src" style="margin-bottom:10px">Vægt pr. tema i hver klasse (primært tema). Største forskel: ca. ${n1(maxDiff)} procentpoint. Eksponering, ikke anbefaling.</p>
+ <p class="cmp-legend"><span><span class="cmp-key a" aria-hidden="true"></span>PMINDI</span><span><span class="cmp-key b" aria-hidden="true"></span>PMINDIAKK</span></p>
+ <ul class="cmp-themes">${themeRows}</ul>
+ <p class="link-row" style="margin-top:10px"><a href="temaer.html">Alle temaer →</a> · <a href="om-data.html#g-akk">Hvad betyder akkumulerende?</a></p>
+ </section>
+
+ <p class="band">Hvilken klasse der passer, afhænger af din egen situation, fx skat og om du vil have udbytte udbetalt. Siden giver ikke rådgivning. Læs KID for begge klasser under <a href="risici.html">Risici / KID</a>.</p>
  <p class="warn">${WARN_HIST}</p>`;
  </script>
 </body>

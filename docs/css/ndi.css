@@ -519,9 +519,6 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
 .spark-legend strong{color:var(--text);font-weight:500}
 .spark-legend .spark-key{margin:3px 0 0;flex:0 0 auto}
 
-/* UX 22:00 SHOULD 1: «Åbn screener» på selve Udforsk er den side, man allerede er på. */
-#app:has(#q) .toolbar a[href*="view=udforsk"]{display:none}
-
 /* UX 22:00 SHOULD 2: tom kurve (ingen klassificerede prikker) fylder ikke skærmen.
    Noderne bliver i DOM, så smoke kan tælle faserne. Kurven kommer tilbage, når nogen er klassificeret. */
 .life-strip.is-empty .life-body{display:none}
@@ -539,4 +536,73 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
     overflow-y:hidden;
     overscroll-behavior-x:contain;
   }
+}
+
+/* Build N2: temaforslag afventer gennemgang (temaer + entré). Gul kun i badgen (gul kant er forbeholdt advarsler). */
+.review-banner{margin:14px 0 18px;padding:14px 16px;border:1px solid var(--line);border-left:3px solid var(--brand);border-radius:10px;background:#0b171d}
+.review-banner h2{font-size:17px;line-height:1.3;margin:6px 0 6px}
+.review-banner p{font-size:13px;color:var(--muted);line-height:1.55;margin:0 0 8px}
+.review-banner .rv-kicker{display:flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.06em;text-transform:uppercase;margin:0}
+.review-banner .link-row{display:flex;flex-wrap:wrap;gap:6px 16px;margin:0}
+.review-banner .link-row a{color:var(--cyan)}
+.door strong .badge{margin-left:6px;vertical-align:middle;font-size:9.5px;letter-spacing:.06em}
+/* Build N2: Entré som historie. Tre spørgsmål (primære døre), tre linser, én "hvorfor". */
+.doors-h{display:flex;align-items:baseline;gap:10px;margin:22px 0 -14px;font-size:13px;color:var(--muted)}
+.doors-h .doors-step{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--brand);font-weight:700}
+.door .door-q{font-size:11.5px;letter-spacing:.02em;color:var(--brand);font-weight:600}
+.doors-h + .doors-sub{margin-top:24px}
+.doors-sub.doors-sub-3{grid-template-columns:repeat(3,1fr)}
+.why-card{display:grid;grid-template-columns:1fr auto;column-gap:12px;align-items:center;margin:0 0 14px;padding:12px 14px;border:1px dashed var(--line);border-radius:10px;text-decoration:none;color:var(--text)}
+.why-card strong{font-size:14px;font-weight:500}
+.why-card span:not(.go){grid-column:1;font-size:12px;color:var(--muted);line-height:1.4}
+.why-card .go{grid-column:2;grid-row:1 / span 2;color:var(--cyan)}
+.why-card:hover{border-color:var(--brand);background:var(--selected)}
+.why-card:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+@media (max-width:560px){
+  .doors-h{margin:16px 0 -8px}
+  .doors-h + .doors-sub{margin-top:14px}
+  .doors-sub.doors-sub-3{grid-template-columns:1fr}
+  .doors-sub.doors-sub-3 a{flex-direction:row;flex-wrap:wrap;align-items:baseline;column-gap:10px}
+}
+/* Build N2: sammenlign PMINDI vs PMINDIAKK */
+.cmp-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0}
+.cmp-card{background:var(--panel);border:1px solid var(--border);border-top:3px solid var(--brand);border-radius:12px;padding:18px}
+.cmp-card.b{border-top-color:var(--cyan)}
+.cmp-card h2{font-size:22px;margin:2px 0 6px}
+.cmp-tag{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0}
+.cmp-flow{font-size:14px;color:var(--muted);margin:0 0 12px}
+.cmp-flow strong{color:var(--text);font-weight:600}
+.cmp-card dl{display:grid;gap:6px;margin:0 0 14px;font-size:13px}
+.cmp-card dl div{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);padding-bottom:6px}
+.cmp-card dt{color:var(--muted)}
+.cmp-card dd{margin:0;text-align:right;color:var(--text)}
+.cmp-card dd small{color:var(--faint)}
+.tl{list-style:none;padding:0;margin:4px 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;position:relative}
+.tl li{position:relative;padding-top:18px;font-size:13px;color:var(--muted);line-height:1.45}
+.tl li::before{content:"";position:absolute;top:4px;left:0;width:10px;height:10px;border-radius:50%;background:var(--brand)}
+.tl li::after{content:"";position:absolute;top:8px;left:14px;right:-12px;height:2px;background:var(--line)}
+.tl li:last-child::after{display:none}
+.tl li.future::before{background:transparent;border:2px dashed var(--cyan)}
+.tl time{display:block;color:var(--text);font-weight:600;margin-bottom:2px}
+.cmp-big{font-size:15px;color:var(--muted);margin:0 0 6px}
+.cmp-big strong{font-size:28px;color:var(--cyan);font-weight:500;margin-right:4px}
+.cmp-legend{display:flex;gap:16px;font-size:12px;color:var(--muted);margin:0 0 8px}
+.cmp-themes{list-style:none;margin:0;padding:0}
+.cmp-themes li{display:grid;grid-template-columns:minmax(120px,200px) 1fr;gap:12px;align-items:center;padding:8px 0;border-top:1px solid var(--line);font-size:13px}
+.cmp-name{color:var(--text)}
+.cmp-pair{display:grid;gap:4px;max-width:560px}
+.cmp-line{display:grid;grid-template-columns:1fr 52px;gap:8px;align-items:center}
+.cmp-bar{display:block;height:8px;border-radius:4px;background:#0b171d;border:1px solid var(--line);overflow:hidden}
+.cmp-bar span{display:block;height:100%}
+.cmp-line.a .cmp-bar span,.cmp-key.a{background:var(--brand)}
+.cmp-line.b .cmp-bar span,.cmp-key.b{background:var(--cyan)}
+.cmp-key{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:6px;vertical-align:middle}
+.cmp-v{text-align:right;color:var(--muted);font-size:12px}
+@media (max-width:560px){
+  .cmp-cards{grid-template-columns:1fr}
+  .tl{grid-template-columns:1fr;gap:10px}
+  .tl li{padding:0 0 0 20px}
+  .tl li::before{top:5px}
+  .tl li::after{top:17px;left:4px;right:auto;width:2px;height:calc(100% - 4px)}
+  .cmp-themes li{grid-template-columns:1fr;gap:6px}
 }

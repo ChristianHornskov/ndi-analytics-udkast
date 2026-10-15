@@ -234,3 +234,13 @@ export function tagsFor(position, multiTags) {
   const set = new Set([...primary, ...extra].filter(Boolean));
   return publicTags([...set]);
 }
+
+// Overnight temaforslag (themeStatus: 'forslag'): kun antal, ingen nye tal pr. aktie.
+// moved = fik et NDI-tema i stedet for "andet"; open = står stadig i "andet".
+export function themeProposals(fund) {
+  const props = (fund?.positions || []).filter((p) => p.themeStatus === 'forslag');
+  const byTheme = {};
+  for (const p of props) if (p.theme !== 'andet') byTheme[p.theme] = (byTheme[p.theme] || 0) + 1;
+  const moved = props.filter((p) => p.theme !== 'andet').length;
+  return { total: props.length, moved, open: props.length - moved, byTheme };
+}

@@ -56,6 +56,7 @@
  .filter((p) => tagsFor(p, data.multiTags).includes(tk))
  .sort((a, b) => (b.weight || 0) - (a.weight || 0));
  const sum = list.reduce((s, p) => s + (p.weight || 0), 0);
+ const nProp = tk === 'andet' ? 0 : list.filter((p) => p.theme === tk && p.themeStatus === 'forslag').length;
  const posAsOf = fmtDate(fund.positionsAsOf || td.positionsAsOf);
  const keyToSlug = Object.fromEntries(td.themes.map((t) => [t.title.toLowerCase(), t.slug]));
  const chain = (theme.chain || []).map((c) => {
@@ -67,7 +68,7 @@
  const rows = list.map((p) => {
  const multi = p.theme !== tk;
  return `<tr>
- <td><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}">${esc(p.name)}</a>${multi ? ` <span class="tag" title="Primært tema: ${esc(daTheme(p.theme))}">også ${esc(daTheme(p.theme))}</span>` : ''}</td>
+ <td><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}">${esc(p.name)}</a>${multi ? ` <span class="tag" title="Primært tema: ${esc(daTheme(p.theme))}">også ${esc(daTheme(p.theme))}</span>` : ''}${!multi && p.themeStatus === 'forslag' && tk !== 'andet' ? ' <span class="badge badge-draft" title="forslag, afventer gennemgang">forslag</span>' : ''}</td>
  <td class="hide-sm-cell">${esc(p.role || '')}</td>
  <td>${w(p.weight)}</td>
  </tr>`;
@@ -97,7 +98,7 @@
  <h2 class="panel-h">Selskaber i forsinket beholdning</h2>
  ${list.length ? `<div class="table-wrap"><table class="data" style="min-width:0"><thead><tr><th>Navn</th><th class="hide-sm-cell">Rolle</th><th>Vægt %</th></tr></thead><tbody>${rows}</tbody></table></div>`
  : `<p class="band">Ingen selskaber i ${esc(fund.short)} med dette tema pr. ${posAsOf}.</p>`}
- <p class="src">Sorteret efter vægt. Ingen kursafkast pr. aktie i udkastet.</p>
+ <p class="src">Sorteret efter vægt. Ingen kursafkast pr. aktie i udkastet.${nProp ? ` ${nProp} ${nProp === 1 ? 'selskab er' : 'selskaber er'} mærket <span class="badge badge-draft">forslag</span>: temaet er foreslået og afventer gennemgang (<a href="om-data.html#g-temaforslag">hvorfor</a>).` : ''}</p>
  <p class="link-row" style="margin-top:10px"><a class="outline-btn small" href="index.html?view=udforsk&fund=${fund.id}&tags=${encodeURIComponent(tk)}">Åbn i screeneren →</a>
  <button type="button" class="outline-btn small" id="copy-tema">Kopiér link til tema</button>
  <span class="sr-only" id="copy-tema-status" role="status" aria-live="polite"></span></p>

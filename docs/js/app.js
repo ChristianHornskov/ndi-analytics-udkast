@@ -1,7 +1,7 @@
 import {
   loadAll, fundById, slicePeriod, cagr, periodReturn, ytdReturn,
   monthlyReturns, fmtPct, fmtDate, daTheme, daMat, WARN_HIST,
-  MATURITY_LABELS, THEME_LABELS, calendarYearReturns, lastNav, publicTags, tagsFor, fillKidFooter,
+  MATURITY_LABELS, THEME_LABELS, calendarYearReturns, lastNav, publicTags, tagsFor, fillKidFooter, themeProposals,
 } from './data.js';
 import { renderChart } from './chart.js';
 
@@ -209,6 +209,8 @@ function markHscroll(root) {
 }
 
 function renderEntre(root) {
+  // Samme klasse som temaer.html (themes.json er bygget på PMINDI), så tallet matcher siden bag døren
+  const prop = themeProposals(fundById(DATA.portfolio, 'pmindi'));
   root.innerHTML = `
     <p class="eyebrow">NDI ANALYTICS · UDKAST</p>
     <h1>Gå på opdagelse i NewDeal Invest</h1>
@@ -217,34 +219,40 @@ function renderEntre(root) {
       <span>Afkast-snapshot: <time datetime="${DATA.portfolio.performanceAsOf || DATA.portfolio.asOf}">${fmtDate(DATA.portfolio.performanceAsOf || DATA.portfolio.asOf)}</time></span>
       <span>Beholdning (forsinket snapshot): <time datetime="${DATA.portfolio.asOf}">${fmtDate(DATA.portfolio.asOf)}</time></span></p>
     <p class="band">Segmenter og temaer viser <strong>eksponering</strong>, ikke en anbefaling. Indholdet er generel information.</p>
+    <p class="doors-h"><span class="doors-step">Start her</span> Tre spørgsmål, tre døre</p>
     <div class="doors" role="navigation" aria-label="Vælg område">
       <a class="door" href="?view=fonden&fund=${state.fund}" data-nav="fonden">
+        <span class="door-q">1 · Hvordan har fonden klaret sig?</span>
         <strong>Fonden</strong>
         <span>Udvikling siden start, kalenderår, største fald og dokumenterede udbytter.</span>
         <span class="go">Åbn fonden →</span>
       </a>
       <a class="door" href="?view=portefolje&fund=${state.fund}" data-nav="portefolje">
+        <span class="door-q">2 · Hvad ejer fonden?</span>
         <strong>Porteføljen</strong>
         <span>Forsinket snapshot fordelt på NDI-temaer og modenhed.</span>
         <span class="go">Se beholdninger →</span>
       </a>
       <a class="door" href="?view=udforsk&fund=${state.fund}" data-nav="udforsk">
+        <span class="door-q">3 · Hvilke selskaber er det?</span>
         <strong>Udforsk tech</strong>
         <span>Find porteføljens selskaber efter tema, navn eller ISIN - uden de klassiske sektorkasser.</span>
         <span class="go">Åbn screener →</span>
       </a>
     </div>
-    <nav class="doors-sub" aria-label="Flere indgange">
+    <p class="doors-h"><span class="doors-step">Forstå linsen</span> Hvordan NDI ser tech</p>
+    <nav class="doors-sub doors-sub-3" aria-label="Forstå linsen">
+      <a href="temaer.html?fund=${state.fund}"><strong>Temaer${prop.moved ? ` <span class="badge badge-draft" title="Forslag, afventer gennemgang">${prop.moved} forslag</span>` : ''}</strong><span>Fra chips til software - hvad hvert tema dækker</span></a>
+      <a href="vaerdikaede.html"><strong>AI-værdikæden</strong><span>Fra strøm og datacentre til chips, optik og software</span></a>
       <a href="laer/index.html"><strong>Lær</strong><span>Sådan tænker vi, livscyklus, P/E og FAQ</span></a>
-      <a href="temaer.html?fund=${state.fund}"><strong>Temaer</strong><span>Fra chips til software - hvad hvert tema dækker</span></a>
-      <a href="drawdown.html?fund=${state.fund}"><strong>Største fald</strong><span>Fondens fald fra top og genopretning</span></a>
-      <a href="invester.html"><strong>Sådan investerer du</strong><span>ISIN, klasser og KID - trin for trin</span></a>
     </nav>
+    <a class="why-card" href="ideer.html"><strong>Hvorfor NDI Analytics?</strong><span>Idéerne bag udkastet: multi-tag, værdikæden og forsinket beholdning som et bevidst valg.</span><span class="go" aria-hidden="true">→</span></a>
     <p class="more-links">Også i udkastet:
+      <a href="drawdown.html?fund=${state.fund}">Største fald</a> ·
+      <a href="sammenlign.html">PMINDI vs PMINDIAKK</a> ·
+      <a href="invester.html">Sådan investerer du</a> ·
       <a href="selskab.html?isin=JP3436100006&fund=${state.fund}">Eksempel: SoftBank</a> ·
       <a href="selskaber.html?fund=${state.fund}">Selskaber A-Z</a> ·
-      <a href="vaerdikaede.html">AI-værdikæden</a> ·
-      <a href="sammenlign.html">PMINDI vs PMINDIAKK</a> ·
       <a href="nyhedsarkiv.html">Nyhedsarkiv</a> ·
       <a href="om-data.html">Ordliste &amp; data</a> ·
       <a href="risici.html">Risici / KID</a> ·
@@ -576,9 +584,10 @@ function weightProfileNote(fund) {
   return `<p class="note-weights" style="font-size:13px;color:var(--muted);line-height:1.55">${spread}Aktievægtene i snapshottet summerer til ca. ${Math.round(sum)} %. <a href="laer/hvorfor-mange-aktier.html">Hvorfor så mange aktier?</a></p>`;
 }
 
-function fundToolbar() {
-  return `<div class="toolbar">${fundSeg()}
-    <a class="outline-btn small" href="?view=udforsk&fund=${state.fund}">Åbn screener</a></div>`;
+// UX 22:00 SHOULD 1: på Udforsk er man allerede i screeneren, så knappen udelades dér
+function fundToolbar({ screener = true } = {}) {
+  return `<div class="toolbar">${fundSeg()}${screener ? `
+    <a class="outline-btn small" href="?view=udforsk&fund=${state.fund}">Åbn screener</a>` : ''}</div>`;
 }
 
 function positionsTable(list, fund) {
@@ -622,7 +631,7 @@ function renderUdforsk(root) {
     <h1>Screener · NDI-linse</h1>
     <p class="lede">Level 1: kun selskaber i porteføljen. Tags er mange-til-mange i ambitionen. Her ét primært tema pr. selskab i udkastet.</p>
     <p class="band">Informationen er generel - ikke en personlig anbefaling. Segmenter = eksponering.</p>
-    ${fundToolbar()}
+    ${fundToolbar({ screener: false })}
     <div class="filters">
       <input type="search" id="q" placeholder="Søg navn, ticker, ISIN, tema…" value="${state.q.replace(/"/g,'&quot;')}" aria-label="Søg">
       <button type="button" class="outline-btn small" id="reset-filters">Nulstil</button>
