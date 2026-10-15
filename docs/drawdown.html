@@ -180,7 +180,7 @@
  const h = Math.max(8, Math.round((Math.abs(y.ret) / maxRet) * 64));
  const neg = y.ret < 0;
  const deep = y.year === deepYear;
- return `<a href="periode.html?fund=${fundId}&year=${y.year}"${deep ? ' class="yr-deep"' : ''}><span class="yr-bar${neg ? ' neg' : ''}" style="height:${h}px"></span><span class="yr-y">${y.year}</span><span class="yr-r ${neg ? 'neg' : 'pos'}">${fmtPct(y.ret)}</span><span class="yr-note">${note}</span>${deep ? '<span class="yr-deepnote">Dybeste fald</span>' : ''}</a>`;
+ return `<a href="periode.html?fund=${fundId}&year=${y.year}"${deep ? ' class="yr-deep"' : ''}><span class="yr-mark">${deep ? 'Dybeste fald' : ''}</span><span class="yr-bar${neg ? ' neg' : ''}" style="height:${h}px"></span><span class="yr-y">${y.year}</span><span class="yr-r ${neg ? 'neg' : 'pos'}">${fmtPct(y.ret)}</span><span class="yr-note">${note}</span></a>`;
  }).join('');
  const yearOfMax = years.find(y => y.year === deepYear);
  const yearLine = yearOfMax && yearOfMax.ret > 0

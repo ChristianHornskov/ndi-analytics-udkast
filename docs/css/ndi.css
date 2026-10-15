@@ -669,7 +669,7 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
 .year-rail a:hover{border-top-color:var(--cyan);background:var(--selected)}
 .year-rail a.yr-deep{border-top-color:var(--yellow)}
 .year-rail a.yr-deep:hover{border-top-color:var(--yellow)}
-.year-rail .yr-deepnote{font-size:11px;color:var(--yellow)}
+.year-rail .yr-mark{min-height:1.2em;font-size:11px;line-height:1.2;color:var(--yellow)}
 .year-rail .yr-bar{display:block;width:100%;max-width:36px;border-radius:4px 4px 0 0;background:var(--brand);margin-bottom:6px}
 .year-rail .yr-bar.neg{background:var(--neg)}
 .year-rail .yr-y{font-size:12px;color:var(--muted)}
@@ -693,6 +693,6 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
   .hero-stat .num,.ep-ledger .depth{color:#6d3038}
   .ep-ledger li.open .depth{color:#111}
   .figure text,.figure .tick,.figure .uw-label{fill:#333}
-  .year-rail .yr-deepnote{color:#333}
+  .year-rail .yr-mark{color:#333}
   .year-rail a.yr-deep{border-top-color:#111}
 }

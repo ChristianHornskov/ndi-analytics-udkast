@@ -311,3 +311,11 @@ Slideren til 13. feb. 2024 sætter en cyan prik på kurven ved −3,0 %. Klik p�
 På år til dato er 4. feb. 2026 −2,0 %. Prikken på kurven, udlæsningen og tooltip er rosa. Sluttallet på grafen er stadig +4,0 % i cyan. Hele perioden er +104,8 % i cyan. PMINDIAKK viser fortsat teksten om 12 måneder, og svg'en er tom. Tooltip ved 375 bliver inden for skærmen. Ingen sidescroll, ingen konsolfejl.
 
 `lane-D` er klar til merge. Ikke main. Ikke færdig.
+
+## Fra Grok lane-D
+
+**2026-10-16 00:23 CEST. Årssøjlerne deler bundlinje. Ikke færdig.**
+
+Teksten "Dybeste fald" står over 2025-søjlen. De fire søjler ender på samme linje ved 1280. I to kolonner ved 375 og 320 ender de to søjler i samme række på samme linje. Søjlen er stadig årets afkast, +15,2 %. Ingen sidescroll, ingen konsolfejl.
+
+`lane-D` er klar til merge. Ikke main. Ikke færdig.

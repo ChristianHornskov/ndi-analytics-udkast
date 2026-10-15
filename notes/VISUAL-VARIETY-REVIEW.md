@@ -55,7 +55,7 @@ Ship. Visual-variety pass er i planen (`VISUAL-VARIETY.md`). Næste builder: SHO
 2. På 375 er prikbunken tæt. Delvist lukket 00:17. Median og middel har navn under aksen, og stregerne har en mørk kant, så de kan ses i bunken. Bunken er stadig tæt. Det er pointen. Listen under har de fire dybe tal.
 3. De to sammenlign-kort ligner stadig hinanden. Det er parret. De må ikke få en tredje ens kasse ved siden af.
 4. ~~Episodelisten var løsrevet fra kurven.~~ Lukket 00:01. Et klik eller Enter hopper slideren til bunddatoen og markerer rækken.
-5. ~~Året med det dybeste fald var umarkeret i søjlerne.~~ Lukket 00:17. 2025 har gul overkant og teksten "Dybeste fald". Søjlen er stadig årets afkast.
+5. ~~Året med det dybeste fald var umarkeret i søjlerne.~~ Lukket 00:17. 2025 har gul overkant og teksten "Dybeste fald" over søjlen. Søjlerne deler bundlinje. Søjlen er stadig årets afkast.
 6. ~~Valgt dag var kun en lodret streg.~~ Lukket 00:20. En cyan prik sættes på kurven. Den skjules, når dagen allerede er den gule bund eller den gule ring, så de to mærker ikke dækkes.
 7. ~~Embed farvede en dag under nul med cyan.~~ Lukket 00:22. Prik, udlæsning og tooltip er rosa (`#e5b3ba`), når tallet er under nul. Hele perioden er stadig +104,8 % i cyan. År til dato slutter på +4,0 %.
 
