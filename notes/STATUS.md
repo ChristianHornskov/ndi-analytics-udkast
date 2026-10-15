@@ -468,3 +468,9 @@ HEAD `b35518b`. Visual-variety request shipped + reviewed. MADS værdikæde/quan
 - **Til js-/værdikæde-ejer:** links til nye poster + tankestreger i value-chains.json (IDEAS).
 - Test: 8793, 375/1280 på 3 sider: 0 konsolfejl, ingen h-overflow, 0 døde ankre. precheck: se push.
 - Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) på hele lane-C-fladen ved 375 px.
+
+## Fra Claude lane-C (lær: Indre værdi + ordliste 115) · 01:36 CEST 16/10 (wall-clock)
+- Ny `laer/indre-vaerdi.html` (kæde + tre skydere + bjælker, tænkte tal): formue ÷ andele, nye penge flytter ikke andelen, udbytte flytter penge ikke værdi, to betydninger af «indre værdi».
+- Lær-hub 4 · 4 · 4 · 4 (mangler-aktie → Slå op). Ordliste 115 (Udstedelse og indløsning), Indre værdi to betydninger, NAV → siden. FAQ 17 korte svar. kort, udbytte-vs-akk, HANDOFF trin 7–8.
+- Test: 8763, 375/1280 på 6 sider: 0 konsolfejl, ingen h-overflow, 0 døde links/ankre. precheck: OK.
+- Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) på hele lane-C-fladen ved 375 px.

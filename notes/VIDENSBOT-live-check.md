@@ -181,3 +181,8 @@ Sider: ideer, kort, om-data, invester, risici, ndi-perspektiv, laer/*.
 ## lane-C note 01:32 CEST 16/10 (Claude)
 - Ordliste 114: nye poster Delår, Serverinfrastruktur, Elproduktion, Simulering og software. Ingen afkast- eller handelssprog; «Leddet viser eksponering, ikke en anbefaling».
 - Åbent (ikke lane-C-fil): tankestreger i value-chains.json «ndi»-felter. Sendt til ejer via IDEAS.
+
+## lane-C · 01:36 16/10 · lær «Indre værdi: hvad en andel er værd»
+- Kun tænkte tal (fond på 100 mio. kr., 1 mio. andele). Ingen af fondens NAV-niveauer, ingen afkast, intet handelsprog. Datoer (første NAV 22. sep 2023 / 5. dec 2025) som andre steder på siden.
+- «Udstedelse og indløsning» beskrevet generelt: «sker til den indre værdi … Vilkårene står i prospektet». **Bed Vidensbot tjekke:** har fonden emissionstillæg/indløsningsfradrag, der bør nævnes som ord (ikke satser)? Siden nævner bevidst ikke tillæg, kun kurtage og spread.
+- «Indre værdi» i ordlisten har nu to betydninger (fond / investeringskoncern). SoftBank-betydningen er uændret i ordlyd.

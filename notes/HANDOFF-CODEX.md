@@ -84,8 +84,8 @@ Kort version. Ét trin = én side, ét greb, én sætning. Detaljer og tal står
 | 4 | `drawdown.html` | Middel og median for episoder + underwater | «Fald er normalt. Her kan man se hvor dybe og hvor lange.» | 0:30 |
 | 5 | Portefølje / Udforsk | Tesla med to tags, SoftBank, forslag-mærker | «Én aktie, flere temaer. Ingen sektorkasser.» | 0:45 |
 | 6 | `ideer.html` | Rul gennem de fjorten former, stop ved «Tre ure på samme side». Spørger nogen til temaer: «Lag på lag» (`#h-stk`). Spørger nogen til spredning: «Hvor mange selskaber er halvdelen?» (`#h-kv`, 76 af 345) | «Hver slags tal har sin egen dato, og forsinkelsen er med vilje.» / «Hvert lag bygger på laget under.» / «Bred, men ikke flad.» | 1:00 |
-| 7 | `risici.html` → `om-data.html` | Klasse 5 af 7, KID-risici som links → ordlisten (114 begreber, 4 grupper) | «Hvert fagord kan slås op.» | 0:45 |
-| 8 | `laer/index.html` | «Ny her? Start med de tre», så én side: P/E *eller* Risikoklasse (skyder) | «P/E straffer investeringen, derfor viser vi fase og eksponering først.» | 0:45 |
+| 7 | `risici.html` → `om-data.html` | Klasse 5 af 7, KID-risici som links → ordlisten (115 begreber, 4 grupper) | «Hvert fagord kan slås op.» | 0:45 |
+| 8 | `laer/index.html` | «Ny her? Start med de tre», så én side: P/E *eller* Risikoklasse (skyder). Spørger nogen «hvad er kursen?»: Indre værdi (tre skydere) | «P/E straffer investeringen, derfor viser vi fase og eksponering først.» | 0:45 |
 | 9 | `kort.html` | Sidekortet | «Hvis nogen spørger, hvor alt er.» | 0:10 |
 
 Tjek før demo (2 min): seneste NAV-dato på Fonden, at `#g-…`-links på risici.html folder ordlisten ud på mobil, at FAQ-søgning på «dæmning» skifter til alle typer.

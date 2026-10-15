@@ -303,3 +303,10 @@ Ingen nye.
 - Tællere: 25 · 21 · 38 · 30 = 114. kort.html og HANDOFF trin 7 fulgt med.
 - **Til js-ejer:** delår-badge i app.js (linje ~347/350) kan linke `om-data.html#g-delaar`. **Til værdikæde-ejer:** led-kort kan linke til `#g-servere`, `#g-elproduktion`, `#g-simulering`; flere «ndi»-tekster i value-chains.json bruger stadig tankestreg (—), jf. Vidensbot punkt 10.
 - Test: 8793, 375/1280 på om-data, ideer, kort: 0 konsolfejl, ingen h-overflow. 0 døde ankre på alle sider.
+
+## 01:36 CEST lane-C checkpoint (Claude) · lær «Indre værdi» + ordliste 115
+- Hul: «NAV»/andelskurs stod på Fonden, udbytte-siden og ordlisten, men ingen side forklarede, hvad tallet er, eller hvorfor nye investorer ikke flytter det. Ny `laer/indre-vaerdi.html`: regnestykke-kæde (aktier og kontanter − gæld ÷ andele = indre værdi), tre skydere (kurs ±50 %, nye penge 0–100 mio., udbytte 0–10 kr.) med tre bjælker (formue, antal andele, værdi pr. andel) mod en prikket udgangslinje, «Tre ting at tage med», «Samme ord, to betydninger» (fond vs. SoftBank-betydningen fra NDI-linsen), «Hvor du ser den på siden».
+- Lær-hub: grupperne er nu 4 · 4 · 4 · 4. «Indre værdi» i Fonden i praksis, «Hvorfor mangler aktie X?» flyttet til Slå op (det er en søgning).
+- Ordliste 115: ny «Udstedelse og indløsning» (Fonden 22). «Indre værdi» skrevet om til to betydninger. NAV linker til siden. FAQ: nyt kort svar «Hvad er en andel værd (NAV)?» (nu 17). kort.html, udbytte-vs-akk linker.
+- 375 px: kæden lodret med operatorer imellem, skydere under hinanden, bjælken under navn og tal. Prikket udgangslinje var usynlig på den gule bjælke. Rettet (mørk streg).
+- Test: 8763, 375/1280 på 6 sider: 0 konsolfejl, ingen h-overflow, 0 døde links/ankre. Skyder-regnestykket tjekket: +10 %, 50 mio., 5 kr. → 110 → 105 kr., 1,45 mio. andele.
