@@ -95,7 +95,7 @@ Taseko skrev 9. oktober 2026, at Florence Copper er gået i kommerciel produktio
 
 SMR-leddet siger, at NuScale skriver, at et program sammen med TVA kan blive op til 6 GW, og at det er udvikling, ikke et værk i drift. Kilden er programsiden, som taler om at udvikle og idriftsætte kapacitet, ikke om et værk, der allerede kører. Ordene historic, largest og proven er ikke taget med. De øvrige SMR-navne er stadig ikke beskrevet som kommerciel drift.
 
-Konceptkortene i nyhedsarkivet er delt i korte afsnit, så grænserne kan læses hver for sig. Energikortet har seksten afsnit. Rumkortet har ni. Indholdet er det samme som på kæden. Neutron-siden sagde 16. oktober 2026 stadig, at første flyvning ligger foran. Sætningen om, at Neutron ikke er fløjet, er ikke ændret.
+Konceptkortene i nyhedsarkivet er delt i korte afsnit, så grænserne kan læses hver for sig. Energikortet har seksten afsnit. Rumkortet har ti. Indholdet er det samme som på kæden. Neutron-siden sagde 16. oktober 2026 stadig, at første flyvning ligger foran. Sætningen om, at Neutron ikke er fløjet, er ikke ændret.
 
 MP Materials skriver, at magneter fremstilles på anlægget Independence i Texas, og at udvindingen er ved Mountain Pass. Ordene om verdens rigeste forekomst og verdens stærkeste magnet er ikke taget med. Firefly gav 403 samme nat. Eclipse er derfor ikke omskrevet.
 
@@ -156,6 +156,8 @@ Cummins skriver, at forretningen har fem dele: komponenter, motorer, distributio
 ProPetro skriver, at selskabet laver trykpumpning og tilknyttet service i Permian-bassinet for selskaber, der leder efter og udvinder olie og gas. Det er service på boresteder, ikke et kraftværk og ikke en mine. Selskabet står ikke på elproduktion. Ordene leading, premier og largest er ikke taget med. Vægtene er uændrede.
 
 Terra Innovatum skriver, at konceptet til mikroreaktoren SOLO er fra 2018. Det er ikke et værk i drift. Forsiden viser to forskellige tal for effekt, 1 MWe til 5 MWt og 1 MWe til 4 MWt. Ingen af dem er taget med. Ordene leader og capital-efficient er ikke taget med. Vægtene er uændrede.
+
+Airo skriver, at selskabet leverer til militære, offentlige og kommercielle kunder. Siden nævner platformene RQ-35 Heidrun, RQ-70, JC250 og JX250. Navnene står under platforme. Teksten kalder dem ikke en flåde i drift og ikke satellitter. Selskabet står ikke som eksempel på opsendelse. Ordene smarter og responsive er ikke taget med. Vægtene er uændrede.
 
 ## År til dato på periodesiden
 

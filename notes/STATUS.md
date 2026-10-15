@@ -809,3 +809,13 @@ Det er en mikroreaktor under udvikling. Teksten beskriver ikke et værk i drift.
 Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. 2018 står. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `6a491f2` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:46 CEST. Airo nævner RQ-35 Heidrun, RQ-70, JC250 og JX250. Ikke færdig.**
+
+Selskabet skriver, at kunderne er militære, offentlige og kommercielle. Platformene står på siden. Teksten kalder dem ikke en flåde i drift og ikke satellitter. Selskabet står ikke som eksempel på opsendelse. Ingen `reviewedAt`. NDI-blikket under opsendelse og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. RQ-35 står. Selskabet står ikke i selskabslisten. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `27dccea` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

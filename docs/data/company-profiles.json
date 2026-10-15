@@ -1569,12 +1569,22 @@
   "US0094221068": {
    "name": "Airo Group",
    "theme": "space",
-   "summary": "Udvikler droner, avionik, træning og elektrisk luftfart til forsvar og civile kunder. Det er luftfart, ikke satellitter. Snapshottet har selskabet under SpaceTech.",
-   "watch": "Ordrer på droner og om de elektriske fartøjer bliver godkendt.",
+   "summary": "Udvikler droner og avionik. Siden nævner RQ-35 Heidrun, RQ-70, JC250 og JX250. Det er luftfart, ikke satellitter.",
+   "watch": "Om platformene bliver leveret. Selskabet står ikke som satellitoperatør.",
    "source": "https://www.theairogroup.com/",
-   "products": "Droner, avionik, træning og elektriske fly under udvikling.",
-   "customers": "Forsvar og luftfart.",
-   "role": "Luftfart. Står ikke som eksempel på opsendelse eller satellitter."
+   "products": "Droner, herunder RQ-35 Heidrun, RQ-70, JC250 og JX250, plus avionik og træning.",
+   "customers": "Militære, offentlige og kommercielle kunder.",
+   "role": "Luftfart. Står ikke som eksempel på opsendelse eller satellitter.",
+   "narrative": [
+    "Airo skriver, at selskabet leverer til militære, offentlige og kommercielle kunder. Siden nævner platformene RQ-35 Heidrun, RQ-70, JC250 og JX250.",
+    "Det er luftfart. Selskabet står ikke som eksempel på opsendelse eller satellitter. Snapshottet har selskabet under SpaceTech."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.theairogroup.com/"
+    }
+   ]
   },
   "US2310211063": {
    "name": "Cummins",

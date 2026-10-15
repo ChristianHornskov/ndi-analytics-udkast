@@ -231,3 +231,7 @@ Trykpumpning i Permian-bassinet. Service, ikke et kraftværk og ikke en mine. St
 ## Terra Innovatum · 2026-10-16 01:43 CEST
 
 SOLO er et koncept fra 2018, ikke et værk i drift. To forskellige effekt-tal på forsiden er ikke kopieret. Leader og capital-efficient er ikke kopieret. Ikke blandet sammen med Terrestrial Energy. AI-udkast uden gennemgangsdato. Atomkraft-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Airo · 2026-10-16 01:46 CEST
+
+RQ-35 Heidrun, RQ-70, JC250 og JX250 står under platforme. Kunderne er militære, offentlige og kommercielle. Ikke skrevet som en flåde i drift. Ikke satellitter. Står ikke på opsendelseslisten. AI-udkast uden gennemgangsdato. NDI-blikket og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
