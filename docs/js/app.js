@@ -1,7 +1,7 @@
 import {
   loadAll, fundById, slicePeriod, cagr, periodReturn, ytdReturn,
   monthlyReturns, fmtPct, fmtDate, daTheme, daMat, WARN_HIST,
-  MATURITY_LABELS, THEME_LABELS, calendarYearReturns, lastNav, publicTags,
+  MATURITY_LABELS, THEME_LABELS, calendarYearReturns, lastNav, publicTags, tagsFor,
 } from './data.js';
 import { renderChart } from './chart.js';
 
@@ -338,7 +338,10 @@ function renderCalendar(el, rows) {
 
 function filterPositions(fund) {
   let list = [...fund.positions];
-  if (state.tags.length) list = list.filter((p) => state.tags.includes(p.theme));
+  if (state.tags.length) list = list.filter((p) => {
+    const t = tagsFor(p, DATA.multiTags);
+    return state.tags.some((x) => t.includes(x));
+  });
   if (state.maturity.length) list = list.filter((p) => state.maturity.includes(p.maturity));
   if (state.q) {
     const q = state.q.toLowerCase();
@@ -395,7 +398,7 @@ function positionsTable(list, fund) {
   </tr></thead><tbody>${list.map((p) => `<tr>
     <td><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}">${p.name}</a><br><small style="color:var(--muted)">${p.isin}</small></td>
     <td>${(p.weight ?? 0).toFixed(2).replace('.', ',')}</td>
-    <td><a class="tag" href="tema.html?slug=${encodeURIComponent(p.theme)}&fund=${fund.id}">${daTheme(p.theme)}</a></td>
+    <td>${tagsFor(p, DATA.multiTags).map((t) => `<a class="tag" href="tema.html?slug=${encodeURIComponent(t)}&fund=${fund.id}">${daTheme(t)}</a>`).join(' ')}</td>
   </tr>`).join('')}</tbody></table></div>
   <p style="font-size:11px;color:var(--muted);margin-top:8px">Kun vægt og tema. Ingen kursafkast pr. aktie i v1 (under verifikation). Beholdning er forsinket.</p>`;
 }
@@ -403,7 +406,7 @@ function positionsTable(list, fund) {
 function renderUdforsk(root) {
   const fund = fundById(DATA.portfolio, state.fund);
   const list = filterPositions(fund);
-  const themes = [...new Set(fund.positions.map((p) => p.theme))].sort();
+  const themes = [...new Set(fund.positions.flatMap((p) => tagsFor(p, DATA.multiTags)))].sort();
   root.innerHTML = `
     <a class="back" href="?view=entre&fund=${state.fund}" data-nav="entre">← Entré</a>
     <p class="eyebrow">UDFORSK TECH</p>

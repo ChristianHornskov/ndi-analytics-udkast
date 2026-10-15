@@ -27,15 +27,16 @@ let cache = null;
 
 export async function loadAll() {
   if (cache) return cache;
-  const [portfolio, latest, context] = await Promise.all([
+  const [portfolio, latest, context, multiTags] = await Promise.all([
     fetch('data/portfolio.json').then((r) => {
       if (!r.ok) throw new Error('portfolio.json');
       return r.json();
     }),
     fetch('data/latest.json').then((r) => (r.ok ? r.json() : null)).catch(() => null),
     fetch('data/context-events.json').then((r) => (r.ok ? r.json() : { events: [] })).catch(() => ({ events: [] })),
+    fetch('data/multi-tags.json').then((r) => (r.ok ? r.json() : { byIsin: {} })).catch(() => ({ byIsin: {} })),
   ]);
-  cache = { portfolio, latest, context };
+  cache = { portfolio, latest, context, multiTags };
   return cache;
 }
 
@@ -182,8 +183,53 @@ export function calendarYearReturns(rows) {
   return out;
 }
 
+/** fund-meta.json (KID/PRIIP pr. klasse). Null hvis filen mangler. */
+export async function loadFundMeta() {
+  return fetch('data/fund-meta.json').then((r) => (r.ok ? r.json() : null)).catch(() => null);
+}
+
+/** company-profiles.json: { profiles: {ISIN: …}, media: [...] }. Tom ved fejl. */
+export async function loadProfiles() {
+  return fetch('data/company-profiles.json')
+    .then((r) => (r.ok ? r.json() : null))
+    .catch(() => null)
+    .then((d) => d || { profiles: {}, media: [] });
+}
+
+/** Footer-linje med KID-links for begge klasser, bygget fra fund-meta (H6/B11). */
+export function kidFooterHtml(meta) {
+  const labels = { pmindi: 'PMINDI', pmindiakk: 'PMINDIAKK' };
+  const links = Object.entries(meta?.funds || {})
+    .filter(([, f]) => f.priip?.url)
+    .map(([id, f]) => `<a href="${f.priip.url}">KID ${labels[id] || id} <span class="ext-mark">↗</span></a> <span class="kid-meta">(ISIN ${f.priip.isin} · SRI ${f.priip.risk_class}/${f.priip.risk_scale_max} · pr. ${fmtDate(f.priip.production_date)})</span>`);
+  if (!links.length) return '';
+  return `Central Information Dokument (Fundmarket, ekstern PDF): ${links.join(' · ')}`;
+}
+
+/** Udfyld [data-kid-footer] fra fund-meta; statisk fallback-tekst bevares ved fejl. */
+export async function fillKidFooter() {
+  const el = document.querySelector('[data-kid-footer]');
+  if (!el) return;
+  const html = kidFooterHtml(await loadFundMeta());
+  if (html) el.innerHTML = html;
+}
+
+/** Find tema via slug ("optik-netvaerk") eller intern nøgle ("connect"). */
+export function findTheme(themes, key) {
+  return themes.find((t) => t.slug === key) || themes.find((t) => t.themeKey === key) || null;
+}
+
 export function lastNav(rows) {
   if (!rows?.length) return null;
   const r = rows[rows.length - 1];
   return { d: r.d, price: r.price, total: r.total };
+}
+
+
+/** Public theme tags for a position: multi-tag overlay ∪ primary theme. */
+export function tagsFor(position, multiTags) {
+  const primary = position?.theme ? [position.theme] : [];
+  const extra = multiTags?.byIsin?.[position?.isin]?.tags || [];
+  const set = new Set([...primary, ...extra].filter(Boolean));
+  return publicTags([...set]);
 }

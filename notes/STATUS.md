@@ -1,30 +1,22 @@
 # STATUS – NDI Analytics overnight build
 
-**2026-10-15 20:27 CEST — Cycle 1 push (theme/edu/drawdown/compare/invest/archive/period/company index)**
+**2026-10-15 20:29 CEST — Cycle 2: multi-tag, vægt-over-tid, recovery, mobile, temaer hub**
 
 ## Live
 https://christianhornskov.github.io/ndi-analytics-udkast/
 
 ## Compliance (locked)
-- Notes ONLY in `/notes` (repo root). `docs/notes/` = stub warning only. STATUS must 404 on Pages.
-- Holdings delayed ≤ 2026-06-01. No daily movers.
-- PMINDIAKK: no returns until 12m. PMINDI: no 1m/3m. No Nasdaq. No unverified per-stock YTD/P/S/P/E/52w.
-- Context events: documented udbytte only.
+- Notes ONLY `/notes`. `docs/notes/` stub only.
+- Holdings ≤ 2026-06-01. No daily movers. AKK no returns. PMINDI no 1m/3m. No Nasdaq. No fake stock figures.
+- Context: documented udbytte only.
 
-## Shipped this cycle
-- `tema.html?slug=` deep theme pages (from themes.json)
-- `laer/` education hub + 5 articles
-- `drawdown.html` fund-level max drawdown from NAV total
-- `periode.html?year=` period deep pages
-- `sammenlign.html` PMINDI vs AKK
-- `invester.html` Sådan investerer du flow
-- `nyhedsarkiv.html` newsletter archive concept
-- `selskaber.html` A–Z + search
-- Entré: 6 doors + expanded shortcuts; theme links from screener/table/company
-- Glossary expanded (`om-data.html`)
-- Embed: CTA + 1m/3m hidden
-- Company page: theme deep link + related same-theme
-- Playwright smoke 1280+375: all 200, no advice language, no notes leak
+## Cycle 1+2 shipped
+- Theme deep + temaer hub, lær (5), drawdown+recovery, periode, sammenlign, invester, nyhedsarkiv, selskaber A–Z
+- Company: related + weight-over-time bars from company-months.json
+- Multi-tag overlay (`multi-tags.json`): Tesla physical+energy, Nvidia compute+chips, Broadcom, TSMC, Meta, SoftBank, Palantir
+- Entré 6 doors, glossary expanded, embed CTA, 1m/3m hidden, mobile CSS polish, værdikæde→tema links
+- Playwright smoke green
 
-## Next cycles
-See OVERNIGHT-BACKLOG.md — multi-tag, mobile polish, more IDEAS, richer narratives, print polish, UX-review.md checkpoints.
+## Next
+- Livscyklus-strip polish, CSV export stub, sparklines, keyboard-first filters, richer FAQ, UX-review at 22/00/02/04/06
+- Never report done

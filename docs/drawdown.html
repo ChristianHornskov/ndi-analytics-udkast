@@ -30,16 +30,27 @@
     } else {
       const dd = maxDrawdown(fund.data);
       const years = calendarYearReturns(fund.data);
+      let recovery = null;
+      if (dd) {
+        const troughIdx = fund.data.findIndex(r => r.d === dd.troughD);
+        const peakVal = fund.data.find(r => r.d === dd.peakD)?.total;
+        if (troughIdx >= 0 && peakVal) {
+          for (let i = troughIdx; i < fund.data.length; i++) {
+            if (fund.data[i].total >= peakVal) { recovery = fund.data[i].d; break; }
+          }
+        }
+      }
       const yearRows = years.map(y => `<tr><td>${y.year}${y.partial?' (delår)':''}</td><td class="${y.ret>=0?'pos':'neg'}">${fmtPct(y.ret)}</td><td>${fmtDate(y.from)} → ${fmtDate(y.to)}</td></tr>`).join('');
       document.getElementById('main').innerHTML = `
         <a class="back" href="index.html?view=fonden&fund=${fundId}">← Fonden</a>
         <p class="eyebrow">FONDAFKAST · DRAWDOWN</p>
         <h1>Drawdown — ${fund.short}</h1>
         <p class="lede">Største fald fra top i fondens totalafkast-serie (NAV total). Fondniveau — ikke enkeltaktier.</p>
-        <div class="kpi-grid">
+        <div class="kpi-grid" style="grid-template-columns:repeat(2,1fr)">
           <div class="kpi"><span class="label">Max drawdown</span><strong class="neg">${dd ? fmtPct(dd.dd) : '–'}</strong></div>
           <div class="kpi"><span class="label">Top</span><strong>${dd ? fmtDate(dd.peakD) : '–'}</strong></div>
           <div class="kpi"><span class="label">Bund</span><strong>${dd ? fmtDate(dd.troughD) : '–'}</strong></div>
+          <div class="kpi"><span class="label">Genopretning til top</span><strong>${recovery ? fmtDate(recovery) : (dd ? 'Ikke endnu / i serien' : '–')}</strong></div>
         </div>
         <section class="panel">
           <h2 style="font-size:16px;margin-bottom:10px">Kalenderår (til kontekst)</h2>

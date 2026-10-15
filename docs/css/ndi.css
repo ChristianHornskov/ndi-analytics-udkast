@@ -232,3 +232,18 @@ a.tag:hover{border-color:var(--brand);color:var(--text)}
   .warn{border-left:3px solid #333;background:#f5f5f5;color:#333}
 }
 
+
+/* Mobile polish */
+@media (max-width:560px){
+  .site-header{padding:10px 14px;gap:10px}
+  .nav{gap:10px;font-size:12px}
+  main{padding:8px 14px 72px}
+  .metrics{grid-template-columns:1fr 1fr}
+  .metric strong{font-size:20px}
+  .control{min-height:44px;padding:0 10px}
+  .outline-btn,.cta{min-height:44px}
+  .table-wrap{margin:0 -14px;padding:0 14px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .table-wrap::after{content:"← scroll →";display:block;text-align:center;font-size:10px;color:var(--faint);padding:4px 0}
+  .cal{grid-template-columns:48px repeat(12,minmax(28px,1fr));font-size:10px;overflow-x:auto}
+  .door{min-height:120px;padding:16px}
+}
