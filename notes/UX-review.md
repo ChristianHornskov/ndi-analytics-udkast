@@ -162,3 +162,10 @@ Ingen nye.
 - Dybe links `#g-kurtage`, `#g-koncentration`, `#g-hbm`, `#g-raastoffer` testet på 375 med foldede grupper: gruppen åbner, begrebet lander under headeren (112 px). Obs. for testere: `scroll-behavior:smooth` betyder, at man skal vente ~1 s før man måler position — ellers ser det forkert ud.
 - **ideer.html: sjette form «Fald fra top som episoder»** — tænkt kurve med hidtidig top (stiplet) og tre røde episoder under nul-linjen (−16/−24/−8 %), gul klamme for varighed, tre nøgleord (dybde/varighed/hyppighed) og koblingen til variance drag (−24 % kræver +31,5 %). Mærket «tænkt eksempel, ikke fondens tal». Tidslinjekortet linker ned til tegningen.
 - Testfælde fundet: port 8765 er hovedcheckoutens server, ikke lane-C's (8763). Første testrunde ramte de forkerte filer — kørt igen mod 8763.
+
+## ~00:25 CEST lane-C checkpoint (Claude) — lær/valuta
+- Ny side `laer/valuta.html`. 375: 3.309 px (efter fix, fra 3.820), 1280: 2.276 px. 0 konsolfejl, 0 døde links/ankre, ingen vandret overflow. Skærmbilleder: `ux-screens/0025-valuta-{375,1280}.png`.
+- Fundet og rettet: regnestykke-kortene (aktie × valuta = kroner) stablede lodret på mobil, så de to eksempler fyldte ~1.000 px. Nu én række med tre kort, beskrivelseslinjerne skjult under 640 px.
+- Skydere testet: 0/−10 → 900 kr., +10/+5 → 1.155 kr., −30/+20 → 840 kr. Fallbacktekst uden JS står under.
+- FAQ: «valuta» finder artiklen (hub-scan i faq-search.js tager den automatisk med) og ordlisteopslaget.
+- Obs til næste review: lær-hubben har nu 13 døre. Overvej gruppering (Afkast · Fonden · Porteføljen) ved 02:00.

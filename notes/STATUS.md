@@ -325,3 +325,11 @@ HEAD `b35518b`. Visual-variety request shipped + reviewed. MADS værdikæde/quan
 - Notes: HANDOFF trin 7 (seks former) + trin 8 (74 begreber), UX-review, VIDENSBOT-live-check (HBM-«købsmulighed» og IA/PA-tal bevidst udeladt).
 - Test: lane-C-server 8763 (obs: 8765 er hovedcheckouten). 375/1280: 0 konsolfejl, 0 døde links/ankre, ingen h-overflow; dybe ordliste-links åbner rigtig gruppe på mobil. smoke 52/52 fail 0. precheck PASSED.
 - Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + lær/index og faq mod ny ordliste (links til de 8 nye begreber).
+
+
+## Fra Claude lane-C (lær/valuta + ordliste 75) · ~00:25 CEST 16/10
+- Ny `laer/valuta.html`: regnestykke-kort (+10 % i dollar × −5 % dollar = +4,5 % i kroner, og omvendt +15,5 %), «Prøv selv» med to skydere (aktie, dollar → kroner, heraf valuta i pp), søjler efter ISIN-landekode fra snapshot 1. jun 2026 (USA 253 af 345 = 67,6 % af fonden; Canada, Caymanøerne, Japan, Israel, Tyskland, 15 andre), «hvorfor især dollaren» (fastkurspolitik), «viser vi / viser vi ikke».
+- Ordliste 74 → 75 (fastkurspolitik); valutarisiko + ISIN linker til siden; gruppetæller 18 · 14 · 22 · 21.
+- Lær-hub, kort.html, FAQ (nyt kortsvar «Påvirker dollaren afkastet?», jargon fjernet i «Hvorfor så mange aktier?»), risici.html valutakort («mindst to tredjedele i dollar» → link til siden). HANDOFF trin 8–9 opdateret.
+- Test: 375/1280 på 6 sider: 0 konsolfejl, 0 døde links/ankre, ingen h-overflow; skydere verificeret. precheck: se push.
+- Branch `lane-C` klar til merge. Næste: lær-hub gruppering (13 døre) + UX-review 02:00.

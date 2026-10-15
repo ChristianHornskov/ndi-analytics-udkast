@@ -100,3 +100,10 @@ Sider: ideer, kort, om-data, invester, risici, ndi-perspektiv, laer/*.
 - Bevidst udeladt: HBM-«købsmulighed» (BLOG 16. dec 2024) og «overvægt i datacenterinfrastruktur» ([A], må ikke på siden).
 - Koncentrationsrisiko uden IA/PA-tal (28,07 % / 79,54 % er interne rapporter) — kun «næsten alle i tech og mange noteret i USD».
 - Ordscan (køb/sælg/anbefal/kursmål/undervurder/gevinst) på ideer, om-data, risici, invester: træf er negationer, KID-ordlyd og «køb- og salgskurs» i kurtage-forklaringen. Ingen handelssprog.
+
+## lane-C · ~00:25 16/10 · lær/valuta
+- Alle tal på siden er enten opdigtede (mærket «tænkt eksempel») eller talt fra `portfolio.json` (PMINDI 1. jun 2026: 345 positioner, 253 med US-ISIN = 67,57 % af fonden, sum af viste vægte 91,94 %).
+- Bevidst forsigtigt: ISIN-landekode ≠ handelsvaluta. Siden siger «mindst to tredjedele i dollar», ikke et præcist dollartal.
+- Afdækning: ingen kilde i notes/data om valutaafdækning → siden nævner det ikke. Kun KID-flaget `valutarisiko: true`.
+- Intet om hvor dollaren går hen. «Det viser vi ikke: gæt på, hvor dollaren går hen.» Ingen handelssprog.
+- FAQ-kortsvar «Hvorfor så mange aktier?» havde jargon («idiosynkratisk varians») → omskrevet til almindeligt dansk.
