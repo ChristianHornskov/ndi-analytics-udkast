@@ -631,3 +631,27 @@ Tjekket i Chromium ved 375 px. Indledningerne står. Klik fra elproduktion til N
 - **Screener (app.js):** siden hed "Screener · NDI-linse", men viste ingen linse. Nu: `NDI-linse`-badge pr. række (linker til `selskab.html#ndi-linse`), filter "Kun med NDI-linse (68/64 pr. klasse)" med `linse=1` (samme param som A-Z), chip, skærmlæser-annoncering, CSV-filnavn, tom tilstand ("et selskab uden linse er ikke vurderet dårligere" + "Vis også uden NDI-linse"). Fokus bliver på knappen efter toggle.
 - **selskab.html:** linse-sektionen har `id="ndi-linse"`; band-teksten siger nu ærligt "sammenfattet fra selskabsprofilen eller offentligt kendte forretningsbeskrivelser og afventer NDI-gennemgang".
 - Test: smoke fail 0 (kørt mod lane-B på 8792 via kopi med node_modules-symlink). Playwright: 68 badges, filter/URL/chip/fokus ok, tom tilstand ok, AKK 64, Corning/Arm-linser rendrer, A-Z "Kun med NDI-linse (68)", ndi-perspektiv viser nye navne, 0 konsolfejl. precheck exit 0. Branch `lane-B` klar til merge-review. Næste: om nødvendigt flere linser / A-Z+screener paritet.
+
+## Fra Claude lane-C (ideer.html mod data + husets plantegning) · ~00:20 CEST 16/10
+- `ideer.html`: intern tekst fjernet fra offentlig side («Jesper-palette», «interne noter»); Tesla-eksemplet viser nu tags fysisk tech + energi og de 4 led i 2 værdikæder (verificeret mod value-chains.json og selskab.html); ny sektion «Bygget som et hus» (klikbar plantegning, spejler entréens tre døre); jargon ryddet (drawdown → fald fra top). og:description fulgt med.
+- `kort.html`: idé-tekst opdateret. HANDOFF demo-trin 7 omskrevet (fem former) + trin 8 ordliste 63 → 66 (talt: 66 `<dt>`).
+- **Til app.js-lane:** månedskalenderen ligger under Fonden, ikke på entréen (Vidensbot #69).
+- Test: Playwright 375/1280: 0 konsolfejl, 0 døde links/ankre, ingen h-overflow. precheck: se push.
+- Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + kort.html/om-data mod Vidensbot-ordlisten (fotonik, fabless, fab, hyperscaler, compute).
+
+
+## Fra Claude lane-C (ordliste 74 + fald fra top) · ~00:40 CEST 16/10
+- `om-data.html`: ordliste 66 → 74 ud fra ordscan af siderne + value-chains.json (koncentrationsrisiko, kurtage og spread, halvleder, GPU/XPU/CPU, hukommelse (HBM), datacenter og køling, elnet og transformere, kritiske råstoffer). Gruppetællerne var forkerte før (15/11/20/15) → talt fra DOM: 17 · 14 · 22 · 21.
+- `risici.html` (koncentrationskort) og `invester.html` (kurtage) linker til de nye begreber. `kort.html`-tæller 74.
+- `ideer.html`: sjette visuelle form «Fald fra top som episoder» — tænkt kurve + tre episoder under nul-linjen, varighedsklamme, dybde/varighed/hyppighed, kobling til variance drag. Mærket «tænkt eksempel, ikke fondens tal».
+- Notes: HANDOFF trin 7 (seks former) + trin 8 (74 begreber), UX-review, VIDENSBOT-live-check (HBM-«købsmulighed» og IA/PA-tal bevidst udeladt).
+- Test: lane-C-server 8763 (obs: 8765 er hovedcheckouten). 375/1280: 0 konsolfejl, 0 døde links/ankre, ingen h-overflow; dybe ordliste-links åbner rigtig gruppe på mobil. smoke 52/52 fail 0. precheck PASSED.
+- Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + lær/index og faq mod ny ordliste (links til de 8 nye begreber).
+
+
+## Fra Claude lane-C (lær/valuta + ordliste 75) · ~00:25 CEST 16/10
+- Ny `laer/valuta.html`: regnestykke-kort (+10 % i dollar × −5 % dollar = +4,5 % i kroner, og omvendt +15,5 %), «Prøv selv» med to skydere (aktie, dollar → kroner, heraf valuta i pp), søjler efter ISIN-landekode fra snapshot 1. jun 2026 (USA 253 af 345 = 67,6 % af fonden; Canada, Caymanøerne, Japan, Israel, Tyskland, 15 andre), «hvorfor især dollaren» (fastkurspolitik), «viser vi / viser vi ikke».
+- Ordliste 74 → 75 (fastkurspolitik); valutarisiko + ISIN linker til siden; gruppetæller 18 · 14 · 22 · 21.
+- Lær-hub, kort.html, FAQ (nyt kortsvar «Påvirker dollaren afkastet?», jargon fjernet i «Hvorfor så mange aktier?»), risici.html valutakort («mindst to tredjedele i dollar» → link til siden). HANDOFF trin 8–9 opdateret.
+- Test: 375/1280 på 6 sider: 0 konsolfejl, 0 døde links/ankre, ingen h-overflow; skydere verificeret. precheck: se push.
+- Branch `lane-C` klar til merge. Næste: lær-hub gruppering (13 døre) + UX-review 02:00.

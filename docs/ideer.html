@@ -11,7 +11,7 @@
   <meta property="og:site_name" content="NDI Analytics (udkast)">
   <meta property="og:locale" content="da_DK">
   <meta property="og:title" content="Idéer · NDI Analytics">
-  <meta property="og:description" content="Hvorfor NDI Analytics: flodsystem, multi-tag, forsinket snapshot.">
+  <meta property="og:description" content="Hvorfor NDI Analytics: flodsystemet, tags i stedet for sektorkasser, forsinket beholdning og siderne som et hus.">
   <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/ideer.html">
   <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
   <!-- og:end -->
@@ -66,6 +66,31 @@
     .q p::before{content:"«";color:var(--yellow)}
     .q p::after{content:"»";color:var(--yellow)}
     .q cite{display:block;margin-top:8px;font-size:12px;font-style:normal;color:var(--faint)}
+    .fan{list-style:none;margin:10px 0 0;padding:0 0 0 14px;border-left:2px solid var(--brand)}
+    .fan li{position:relative;font-size:13px;color:var(--muted);margin:0 0 6px;line-height:1.4}
+    .fan li::before{content:"";position:absolute;left:-15px;top:8px;width:10px;border-top:2px solid var(--brand)}
+    .fan b{color:var(--cyan);font-weight:600}
+    .uw{background:#0b171d;border:1px solid var(--line);border-radius:14px;padding:14px;margin:0}
+    .uw svg{display:block;width:100%;max-width:560px;height:auto;margin:0 auto}
+    .uw .cap{font:11px var(--font);fill:var(--faint);letter-spacing:.4px}
+    .uw .t{font:600 11px var(--font);fill:var(--text)}
+    .uw .m{font:11px var(--font);fill:var(--muted)}
+    .uw figcaption{font-size:12px;color:var(--faint);margin-top:8px;line-height:1.5}
+    .uw-keys{display:grid;gap:10px;margin:12px 0 0;grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
+    .uw-keys div{border-left:3px solid var(--neg);padding:2px 0 2px 10px}
+    .uw-keys dt{font-size:14px;color:var(--text);font-weight:600}
+    .uw-keys dd{margin:2px 0 0;font-size:13px;color:var(--muted);line-height:1.45}
+    .hus{background:#0b171d;border:1px solid var(--line);border-radius:14px;padding:14px;margin:0}
+    .hus-plan{display:grid;gap:8px;grid-template-columns:repeat(2,1fr);border:3px solid var(--brand);border-radius:6px;padding:8px;position:relative}
+    @media(min-width:720px){.hus-plan{grid-template-columns:repeat(4,1fr)}}
+    .hus-plan a{display:block;border:1px solid var(--line);border-radius:4px;padding:10px;text-decoration:none;color:var(--text);background:var(--panel);min-height:74px}
+    .hus-plan a:hover,.hus-plan a:focus-visible{border-color:var(--yellow)}
+    .hus-plan a b{display:block;font-size:14px;color:var(--cyan)}
+    .hus-plan a span{display:block;font-size:12px;color:var(--muted);margin-top:4px;line-height:1.4}
+    .hus-plan .entre{grid-column:1/-1;border:2px dashed var(--yellow);text-align:center;min-height:0}
+    .hus-plan .entre b{color:var(--yellow)}
+    .hus-plan .kok{grid-column:span 2}
+    .hus figcaption{font-size:12px;color:var(--faint);margin-top:8px;line-height:1.5}
     @media (prefers-reduced-motion:no-preference){.flod .water{animation:flow 6s linear infinite}}
     @keyframes flow{to{stroke-dashoffset:-48}}
   </style>
@@ -81,7 +106,7 @@
     <h1>Hvorfor NDI Analytics?</h1>
     <div class="idea-hero">
       <p class="lede" style="margin-bottom:0">Korte, ikke-fortrolige idéer bag udkastet. Generel information. Ikke rådgivning.</p>
-      <aside class="idea-callout"><strong>Designvalg:</strong> hellere flere visuelle former (kæder, treemap, tidslinje, underwater) end endnu et panel-gitter. Jesper-palette, uden at blive monoton.</aside>
+      <aside class="idea-callout"><strong>Udgangspunkt:</strong> Vi kan ikke pege på den ene vinder. Derfor viser siden, hvilke teknologier fonden giver eksponering mod — ikke hvilke aktier man bør købe.</aside>
     </div>
 
     <div class="idea-strip" aria-label="Idé-kort">
@@ -94,7 +119,7 @@
     <div class="idea-tl">
       <div class="it">
         <h3>Multi-tag i stedet for ét GICS-label</h3>
-        <p>Tesla er både energi og fysisk tech. Screeneren og værdikæderne viser flere tags, så eksponering ikke skjules.</p>
+        <p>Tesla står i sektorlisterne som bilproducent. Hos os har Tesla to tags, fysisk tech og energi, og optræder i fire led på to værdikæder. <a href="#h-vs">Se eksemplet ↓</a></p>
       </div>
       <div class="it">
         <h3>Flere teknologiske kæder</h3>
@@ -102,15 +127,15 @@
       </div>
       <div class="it">
         <h3>Temaer foreslås, før de bliver endelige</h3>
-        <p>Andet er krympet med forslag (mærket). Quantum er et nyt forslag-tema. <a href="temaer.html">Temaer →</a> · <a href="tema.html?slug=quantum">Quantum →</a></p>
+        <p>Nogle selskaber har kun et foreslået tema, og det står der tydeligt. Kvantecomputere er et nyt forslag. <a href="temaer.html">Temaer →</a> · <a href="tema.html?slug=quantum">Kvantecomputere →</a></p>
       </div>
       <div class="it">
-        <h3>Drawdown som episoder</h3>
-        <p>Max, middel og median over peak→bund — plus underwater-graf. Fondniveau. <a href="drawdown.html">Drawdown →</a></p>
+        <h3>Fald fra top som episoder</h3>
+        <p>Hvor meget og hvor længe fonden har ligget under sin tidligere top — største, typiske og alle fald. Kun på fondsniveau. <a href="#h-uw">Se tegningen ↓</a> · <a href="drawdown.html">Fald fra top →</a></p>
       </div>
       <div class="it">
         <h3>Forsinket snapshot som feature</h3>
-        <p>Den offentlige, forsinkede rapport — så siden aldrig afslører aktuelle handler. Bevidst.</p>
+        <p>Beholdningen er fra en offentlig, forsinket rapport (pr. 1. juni 2026), så siden aldrig afslører fondens aktuelle handler. Det er et bevidst valg. <a href="laer/forsinket-beholdning.html">Hvorfor? →</a></p>
       </div>
     </div>
 
@@ -192,18 +217,24 @@
 
     <section class="idea-sec" aria-labelledby="h-vs">
       <h2 id="h-vs">Én kasse eller flere tags</h2>
-      <p class="sub">Samme selskab, to måder at sortere på. Eksempel fra den forsinkede beholdning pr. 1. juni 2026.</p>
+      <p class="sub">Samme selskab, to måder at sortere på. Eksempel fra den forsinkede beholdning pr. 1. juni 2026. Sektoren må gerne stå der — den er bare ikke hovedinddelingen.</p>
       <div class="vs">
         <div class="col">
           <div class="lab">KLASSISK SEKTOR (GICS)</div>
           <div class="box1">Tesla → <strong>Forbrugsgoder</strong> (bilproducent)</div>
-          <p>Én kasse. Energilagring og robotter forsvinder ud af billedet.</p>
+          <p>Én kasse. Batterilagring, robotter og fysisk AI forsvinder ud af billedet.</p>
         </div>
         <div class="arrow" aria-hidden="true">→</div>
         <div class="col ndi">
-          <div class="lab">NDI-TEMAER (MULTI-TAG)</div>
+          <div class="lab">NDI: TAGS + LED I VÆRDIKÆDER</div>
           <div class="chips"><span>Fysisk tech</span><span>Energi</span></div>
-          <p>Flere tags samtidig, så eksponeringen mod flere led er synlig. Tags beskriver eksponering — ikke et syn på aktien.</p>
+          <ul class="fan" aria-label="Led, hvor Tesla optræder">
+            <li><b>AI-compute</b> · Datacentre og køling</li>
+            <li><b>AI-compute</b> · Fysisk AI</li>
+            <li><b>Robotik &amp; fysisk AI</b> · Komponenter</li>
+            <li><b>Robotik &amp; fysisk AI</b> · Robotter, autonome køretøjer og droner</li>
+          </ul>
+          <p>To tags, fire led. Så kan man se, hvor i kæderne selskabet hører hjemme. Det beskriver eksponering — ikke et syn på aktien. <a href="selskab.html?isin=US88160R1014">Tesla →</a> · <a href="vaerdikaeder.html">Værdikæder →</a></p>
         </div>
       </div>
     </section>
@@ -225,6 +256,56 @@
       </div>
     </section>
 
+    <section class="idea-sec" aria-labelledby="h-uw">
+      <h2 id="h-uw">Fald fra top som episoder</h2>
+      <p class="sub">Et samlet tal for «største fald» siger ikke, hvor ofte det sker, eller hvor længe det varer. Derfor deler vi fondens fald op i episoder: fra en top, ned til bunden og tilbage til en ny top.</p>
+      <figure class="uw">
+        <svg viewBox="0 0 360 256" role="img" aria-labelledby="uw-t uw-d">
+          <title id="uw-t">Tænkt kurve med tre fald fra top</title>
+          <desc id="uw-d">Øverst en værdikurve, der stiger over tid med tre tilbageslag. Den stiplede linje er den hidtidige top. Nederst vises hvert tilbageslag som en episode under nul-linjen: episode 1 falder 16 procent, episode 2 falder 24 procent og varer længst, episode 3 falder 8 procent. Tænkt eksempel, ikke fondens tal.</desc>
+          <text class="cap" x="14" y="11">VÆRDI · TÆNKT KURVE</text>
+          <path d="M14.0 89.6 L24.4 82.7 L34.8 75.9 L45.1 69.1 L55.5 69.1 L65.9 69.1 L76.2 69.1 L86.6 69.1 L97.0 69.1 L107.4 67.4 L117.8 60.6 L128.1 53.8 L138.5 53.8 L148.9 53.8 L159.2 53.8 L169.6 53.8 L180.0 53.8 L190.4 53.8 L200.8 53.8 L211.1 53.8 L221.5 53.8 L231.9 52.1 L242.2 45.3 L252.6 38.4 L263.0 38.4 L273.4 38.4 L283.8 38.4 L294.1 38.4 L304.5 38.4 L314.9 36.7 L325.2 31.6 L335.6 26.5 L346.0 21.4" fill="none" stroke="var(--faint)" stroke-width="1.2" stroke-dasharray="3 3"/>
+          <path d="M14.0 89.6 L24.4 82.7 L34.8 75.9 L45.1 69.1 L55.5 79.3 L65.9 93.0 L76.2 99.8 L86.6 91.3 L97.0 81.0 L107.4 67.4 L117.8 60.6 L128.1 53.8 L138.5 62.3 L148.9 72.5 L159.2 82.7 L169.6 94.7 L180.0 103.2 L190.4 98.1 L200.8 87.9 L211.1 75.9 L221.5 64.0 L231.9 52.1 L242.2 45.3 L252.6 38.4 L263.0 43.6 L273.4 50.4 L283.8 55.5 L294.1 48.7 L304.5 41.9 L314.9 36.7 L325.2 31.6 L335.6 26.5 L346.0 21.4" fill="none" stroke="var(--cyan)" stroke-width="2" stroke-linejoin="round"/>
+          <text class="m" x="134" y="47">hidtidig top</text>
+          <text class="cap" x="14" y="138">UNDER TOPPEN</text>
+          <line x1="14" y1="150" x2="346" y2="150" stroke="var(--line)"/>
+          <path d="M14 150 L45.1 150 L55.5 162.9 L65.9 180.0 L76.2 188.6 L86.6 177.9 L97.0 165.0 L107.4 150 L128.1 150 L138.5 159.9 L148.9 171.8 L159.2 183.7 L169.6 197.6 L180.0 207.5 L190.4 201.6 L200.8 189.7 L211.1 175.8 L221.5 161.9 L231.9 150 L252.6 150 L263.0 155.5 L273.4 162.9 L283.8 168.5 L294.1 161.1 L304.5 153.7 L314.9 150 L346 150 Z" fill="var(--neg)" fill-opacity=".35" stroke="var(--neg)" stroke-width="1.2"/>
+          <g class="t" text-anchor="middle">
+            <text x="76.2" y="202">1 · −16 %</text>
+            <text x="180" y="221">2 · −24 %</text>
+            <text x="283.8" y="182">3 · −8 %</text>
+          </g>
+          <path d="M128.1 230 v6 H231.9 v-6" fill="none" stroke="var(--yellow)" stroke-width="1.2"/>
+          <text class="m" x="180" y="248" text-anchor="middle">varighed: fra top til ny top</text>
+        </svg>
+        <figcaption>Tænkt eksempel, ikke fondens tal. Fondens egne episoder står på siden <a href="drawdown.html">Fald fra top</a>.</figcaption>
+      </figure>
+      <dl class="uw-keys">
+        <div><dt>Dybde</dt><dd>Hvor langt der var fra toppen til bunden. Episode 2 er den dybeste.</dd></div>
+        <div><dt>Varighed</dt><dd>Hvor længe det tog at nå en ny top. Et lille fald kan godt vare længe.</dd></div>
+        <div><dt>Hyppighed</dt><dd>Hvor mange episoder der har været. Det viser, at fald er en normal del af at eje tech.</dd></div>
+      </dl>
+      <p class="sub" style="margin-top:12px">Det er samme tanke som <a href="laer/variance-drag.html">variance drag</a>: et fald på 24 % kræver en stigning på godt 31 % for at komme tilbage. Ordliste: <a href="om-data.html#g-drawdown">fald fra top</a> · <a href="om-data.html#g-underwater">underwater-graf</a>.</p>
+    </section>
+
+    <section class="idea-sec" aria-labelledby="h-hus">
+      <h2 id="h-hus">Bygget som et hus</h2>
+      <p class="sub">Man kommer ind ad entréen og vælger selv, hvilket rum man vil ind i. Ingen behøver at gå i alle rum. Har du kun et minut, så tag den første dør: fondens afkast for den andelsklasse, du ejer.</p>
+      <figure class="hus">
+        <nav class="hus-plan" aria-label="Siderne som rum i et hus">
+          <a class="entre" href="index.html"><b>Entré · tre spørgsmål, tre døre</b><span>Hvordan har fonden klaret sig? Hvad ejer den? Hvilke selskaber er det?</span></a>
+          <a href="index.html?view=fonden"><b>Fonden</b><span>Udvikling siden start, kalenderår, måned for måned og fald fra top.</span></a>
+          <a href="index.html?view=portefolje"><b>Porteføljen</b><span>Forsinket beholdning fordelt på temaer og modenhed.</span></a>
+          <a class="kok" href="index.html?view=udforsk"><b>Køkkenet · udforsk selskaberne</b><span>Søg på navn, tema eller ISIN — uden de klassiske sektorkasser.</span></a>
+          <a href="vaerdikaeder.html"><b>Værdikæder</b><span>Fra strøm til apps — led for led.</span></a>
+          <a href="temaer.html"><b>Temaer</b><span>Eksponering samlet i NDI-temaer.</span></a>
+          <a href="laer/index.html"><b>Lær</b><span>Sådan tænker vi, P/E, livscyklus.</span></a>
+          <a href="risici.html"><b>Risici</b><span>Risikoindikator og hvad du kan tabe.</span></a>
+        </nav>
+        <figcaption>Hvert rum er et link. Den stiplede gule ramme er entréen. <a href="kort.html">Hele sidekortet →</a></figcaption>
+      </figure>
+    </section>
+
     <section class="idea-sec" aria-labelledby="h-q">
       <h2 id="h-q">Tre sætninger, siden bygger på</h2>
       <div class="qgrid">
@@ -241,7 +322,7 @@
     </div>
 
     <p class="warn">Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.</p>
-    <p class="band">Flere interne noter ligger uden for Pages. Dette er kun den offentlige overflade.</p>
+    <p class="band">Generel information om fonden og vores måde at tænke på. Ikke personlig investeringsrådgivning. <a href="risici.html">Læs om risici →</a></p>
   </main>
 </body>
 </html>

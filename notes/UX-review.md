@@ -179,3 +179,26 @@ Ingen nye.
 1. Datakvalitet: Cipher=Software, Opendoor=Andet, 345 uden modenhed, Andet ~11,6 %.
 2. X-tekst med «rådgiver» ved performance — ret eller skjul.
 3. Udforsk live-søgning (URL vs. liste) stadig uverificeret.
+
+## ~00:15 CEST lane-C checkpoint (Claude) — ideer.html
+- **Intern tekst på offentlig side fjernet:** callout'en sagde «Designvalg … Jesper-palette», og bunden sagde «Flere interne noter ligger uden for Pages». Begge erstattet med tekst til brugeren (udgangspunkt: vi kan ikke pege på vinderen · generel information + link til risici).
+- **Tesla-eksemplet tjekket mod data:** portfolio.json har kun `theme: physical`, men selskabssiden viser tags «Fysisk tech + Energi», og value-chains.json har Tesla i 4 led (AI-compute: datacentre og køling, fysisk AI · Robotik: komponenter, robotter). Idésiden viser nu begge tags + en forgrening til de 4 led og linker til Tesla-siden. Første forsøg skrev «ét tema» — det ville have modsagt selskabssiden; rettet før commit.
+- **Ny form: «Bygget som et hus»** — plantegning (CSS-gitter, ingen JS), entré med de tre døre øverst i gul stiplet ramme, rummene er links. Spejler den faktiske entré (`renderEntre`: Fonden / Porteføljen / Udforsk), ikke en tænkt struktur. Til 60+-brugeren: «tag den første dør».
+- Jargon ryddet: «Drawdown som episoder / Max, middel og median over peak→bund» → «Fald fra top som episoder». «Andet er krympet med forslag (mærket)» → almindeligt dansk.
+- Observation (ikke min fil): månedskalenderen ligger under Fonden (`?view=fonden`), ikke på entréen. Vidensbot #69 (MC 51:30) ønsker den på forsiden — til den lane, der ejer app.js.
+- Test: Playwright 375/1280: 0 konsolfejl, 0 døde links, 0 døde ankre, ingen h-overflow.
+
+## ~00:40 CEST lane-C checkpoint (Claude) — ordliste + fald fra top
+- **Ordliste 66 → 74**, ud fra et ordscan af siderne og value-chains.json: begreber, som siderne bruger uden at forklare. Nye: koncentrationsrisiko, kurtage og spread, halvleder, GPU/XPU/CPU, hukommelse (HBM), datacenter og køling, elnet og transformere, kritiske råstoffer. Ordlyd fra VIDENSBOT-vaerdikaeder «Til siden»/[B]-linjer; ingen [M]-citater om købsmuligheder (fx HBM 2024) taget med.
+- **Gruppetællerne var forkerte** allerede før (stod 15/11/20/15, var 16/13/22/15). Nu talt fra DOM: 17 · 14 · 22 · 21.
+- Risici-kortet «Koncentreret i teknologi» og invester-teksten om kurtage linker nu til ordlisten.
+- Dybe links `#g-kurtage`, `#g-koncentration`, `#g-hbm`, `#g-raastoffer` testet på 375 med foldede grupper: gruppen åbner, begrebet lander under headeren (112 px). Obs. for testere: `scroll-behavior:smooth` betyder, at man skal vente ~1 s før man måler position — ellers ser det forkert ud.
+- **ideer.html: sjette form «Fald fra top som episoder»** — tænkt kurve med hidtidig top (stiplet) og tre røde episoder under nul-linjen (−16/−24/−8 %), gul klamme for varighed, tre nøgleord (dybde/varighed/hyppighed) og koblingen til variance drag (−24 % kræver +31,5 %). Mærket «tænkt eksempel, ikke fondens tal». Tidslinjekortet linker ned til tegningen.
+- Testfælde fundet: port 8765 er hovedcheckoutens server, ikke lane-C's (8763). Første testrunde ramte de forkerte filer — kørt igen mod 8763.
+
+## ~00:25 CEST lane-C checkpoint (Claude) — lær/valuta
+- Ny side `laer/valuta.html`. 375: 3.309 px (efter fix, fra 3.820), 1280: 2.276 px. 0 konsolfejl, 0 døde links/ankre, ingen vandret overflow. Skærmbilleder: `ux-screens/0025-valuta-{375,1280}.png`.
+- Fundet og rettet: regnestykke-kortene (aktie × valuta = kroner) stablede lodret på mobil, så de to eksempler fyldte ~1.000 px. Nu én række med tre kort, beskrivelseslinjerne skjult under 640 px.
+- Skydere testet: 0/−10 → 900 kr., +10/+5 → 1.155 kr., −30/+20 → 840 kr. Fallbacktekst uden JS står under.
+- FAQ: «valuta» finder artiklen (hub-scan i faq-search.js tager den automatisk med) og ordlisteopslaget.
+- Obs til næste review: lær-hubben har nu 13 døre. Overvej gruppering (Afkast · Fonden · Porteføljen) ved 02:00.
