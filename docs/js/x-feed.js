@@ -110,6 +110,15 @@ article.x-card.is-quote .x-foot{margin-top:10px}
 .x-filters .control.is-zero{opacity:.5}
 .x-filters .control[aria-pressed="true"]{background:#203e47;color:#fff;border-color:#9ecfd6;box-shadow:inset 0 -2px 0 #f5ee9e;font-weight:600}
 .x-live{font-size:13px;color:var(--muted);margin:8px 0 0;font-variant-numeric:tabular-nums}
+.x-score-bar{display:flex;flex-wrap:wrap;gap:8px 22px;align-items:flex-end;justify-content:space-between;margin:2px 0 10px;min-width:0}
+.x-score{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:flex-end;min-width:0}
+.x-score-n{min-width:44px}
+.x-score-n b{display:block;font-size:clamp(28px,4vw,42px);line-height:.85;font-weight:600;letter-spacing:-1.2px;color:var(--cyan);font-variant-numeric:tabular-nums}
+.x-score-n span{display:block;margin-top:4px;font-size:10px;letter-spacing:.8px;text-transform:uppercase;color:var(--faint)}
+.x-score-n.is-direct:not(.is-zero) b{color:#f5ee9e}
+.x-score-n.is-zero b{color:var(--faint);font-weight:500}
+.x-asof{color:var(--faint);font-size:12px;line-height:1.35;padding-bottom:2px;max-width:42ch}
+.x-says-h .x-score-n b{font-size:clamp(26px,3vw,34px)}
 .x-active{margin-top:8px}
 .x-active:empty{display:none}
 .x-empty{border:1px dashed #89aeb488;border-radius:16px;padding:28px 18px;text-align:center;background:#89aeb40a}
@@ -162,16 +171,35 @@ body.x-focused .x-tools{padding-top:4px;padding-bottom:6px}
 @media(min-width:900px){
   body.x-focused #x-grid{scroll-margin-top:120px}
 }
+#x-grid > .x-score-bar{grid-column:1 / -1}
+body.x-focused .x-intro,body.x-focused .x-snap,body.x-focused .x-jumps{display:none}
+body.x-focused h1{font-size:28px;margin:0 0 6px}
+body.x-focused .eyebrow{margin-bottom:2px}
+body.x-focused .x-label{margin:0 0 8px}
 @media(max-width:700px){
   .x-spot{grid-template-columns:1fr}
   .x-grid{grid-template-columns:1fr}
   .x-card time{white-space:normal}
   .x-door{min-height:0}
   .x-door-q{min-height:0}
-  body.x-focused .x-spot{display:flex;grid-template-columns:none;overflow-x:auto;gap:8px}
-  body.x-focused .x-door{flex:0 0 78%}
+  body.x-focused .x-spot{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));overflow:visible;gap:8px}
+  body.x-focused .x-door{flex:none;min-width:0;padding:8px 8px 7px}
+  body.x-focused .x-door .k,body.x-focused .x-door-n{display:none}
+  body.x-focused .x-door-top strong{font-size:13px;letter-spacing:-.2px}
   body.x-focused .x-tools{position:static;background:transparent;border-bottom:0;backdrop-filter:none}
   body.x-focused #x-grid{scroll-margin-top:0}
+  body.x-focused main{display:flex;flex-direction:column}
+  body.x-focused .eyebrow{order:1}
+  body.x-focused h1{order:2;font-size:22px}
+  body.x-focused .x-intro{order:3}
+  body.x-focused .x-label{order:4}
+  body.x-focused .x-snap{order:5}
+  body.x-focused .x-spot{order:6}
+  body.x-focused .x-jumps{order:7}
+  body.x-focused #x-grid{order:8}
+  body.x-focused .x-tools{order:9}
+  body.x-focused .x-footwarn{order:10}
+  body.x-focused .x-footlinks{order:11}
 }
 @media(prefers-reduced-motion:reduce){
   .x-door{transition:none}
@@ -372,6 +400,16 @@ function markTerm(hit) {
   return (hit.reasons || []).find((r) => /^(SoftBank|NVDA)$/i.test(String(r))) || '';
 }
 
+export function xScoreHtml(items) {
+  const cells = (items || []).map((it) => {
+    const n = Number(it.n) || 0;
+    const zero = n === 0 ? ' is-zero' : '';
+    const mod = it.mod ? ` ${it.mod}` : '';
+    return `<div class="x-score-n${mod}${zero}"><b>${n}</b><span>${esc(it.label)}</span></div>`;
+  }).join('');
+  return `<div class="x-score">${cells}</div>`;
+}
+
 export function postWho(p, who) {
   if (!who || who === 'all') return true;
   if (who === 'curated') return p.curatedFrom === 'mads_following';
@@ -517,10 +555,21 @@ export function xSaysPanel(pack, { tickers = [], themes = [], limit = 4, title =
   const shown = view.direct.length + view.theme.length;
   const snap = esc(fmtXDate(pack.snapshotAt) || String(pack.snapshotAt || '').slice(0, 10));
   const more = feedHref({ tickers, themes });
+  const directAll = ranked.filter((h) => h.score >= 2).length;
+  const themeAll = ranked.filter((h) => h.score < 2).length;
+  const themeLeft = themeAll - view.theme.length;
+  const directLeft = directAll - view.direct.length;
+  const scoreItems = [
+    { n: view.direct.length, label: 'direkte', mod: 'is-direct' },
+    { n: view.theme.length, label: 'tema', mod: 'is-theme' },
+  ];
+  if (themeLeft > 0) scoreItems.push({ n: themeLeft, label: 'udeladt', mod: 'is-out' });
+  else if (directLeft > 0) scoreItems.push({ n: ranked.length, label: 'i alt', mod: 'is-all' });
+  const score = xScoreHtml(scoreItems);
   if (!shown) {
     if (!showEmpty) return '';
     return `<section class="panel x-says">
-  <div class="x-says-h"><h2 class="panel-h">${esc(title)}</h2></div>
+  <div class="x-says-h"><h2 class="panel-h">${esc(title)}</h2>${xScoreHtml([{ n: 0, label: 'direkte', mod: 'is-direct' }, { n: 0, label: 'tema', mod: 'is-theme' }])}</div>
   <p class="band">${esc(X_LABEL)}. Snapshot ${snap}.</p>
   <div class="x-empty">
     <p class="x-zero" aria-hidden="true">0</p>
@@ -563,14 +612,14 @@ export function xSaysPanel(pack, { tickers = [], themes = [], limit = 4, title =
   <div class="x-grid">${cards}</div>
 </div>`;
   };
-  const themeLeft = ranked.filter((h) => h.score < 2).length - view.theme.length;
   const miss = view.direct.length && !view.theme.length && themeLeft > 0
     ? '<p class="x-miss">Kun direkte træf i dette udsnit. Opslag, der bare deler tema, er udeladt, så navnet står først.</p>'
     : !view.direct.length
       ? `<p class="x-miss">Ingen opslag i udsnittet nævner selskabet eller tickeren. ${restTheme.length ? 'Kortene er tema.' : 'Kortet er tema.'}</p>`
       : '';
   return `<section class="panel x-says">
-  <div class="x-says-h"><h2 class="panel-h">${esc(title)}</h2><span class="x-says-n">${esc(nLabel)}</span></div>
+  <div class="x-says-h"><h2 class="panel-h">${esc(title)}</h2>${score}</div>
+  <p class="sr-only">${esc(nLabel)}</p>
   <p class="band">${esc(X_LABEL)}. Snapshot ${snap}.</p>
   ${quote}
   ${lane('direct', restDirect)}

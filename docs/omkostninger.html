@@ -60,6 +60,10 @@
   .delta-track i{position:absolute;top:50%;width:14px;height:14px;border-radius:50%;transform:translate(-50%,-50%);background:#9ecfd6;border:2px solid #0c1c22;z-index:1}
   .delta-track i.b{background:#f5ee9e}
   .delta-ends{display:flex;justify-content:space-between;font-size:11px;color:var(--faint);margin-top:4px}
+  .delta-key{display:flex;flex-wrap:wrap;gap:8px 18px;margin:8px 0 0;font-size:12px;color:var(--muted)}
+  .delta-key i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+  .delta-key i.a{background:#9ecfd6}
+  .delta-key i.b{background:#f5ee9e}
   .delta-zoom{margin-top:12px;padding-top:12px;border-top:1px dashed #345860}
   .delta-zoom .k{font-size:11px;letter-spacing:1.2px;font-weight:700;color:var(--brand);margin:0 0 8px}
   @media(max-width:800px){
@@ -179,6 +183,7 @@
  </div>
  <div class="delta-track" role="img" aria-label="PMINDI ${pct(a.portfolioTransaction)} og PMINDIAKK ${pct(b.portfolioTransaction)} på en skala fra 0 til ${pct(SCALE)}">${gapBar(fullLeft, fullWidth)}<i class="a" style="left:${mark(a.portfolioTransaction)}%"></i><i class="b" style="left:${mark(b.portfolioTransaction)}%"></i></div>
  <div class="delta-ends" aria-hidden="true"><span>0 %</span><span>${pct(SCALE)}</span></div>
+ <p class="delta-key"><span><i class="a"></i>PMINDI ${pct(a.portfolioTransaction)}</span><span><i class="b"></i>PMINDIAKK ${pct(b.portfolioTransaction)}</span></p>
  ${zoomBlock}
  <p class="scale-note">Den øverste linje er skalaen 0 til ${pct(SCALE)}. Afstanden er lille, fordi forskellen er ${pp(Math.abs(dTx))}. Den nederste linje er et udsnit, så markørerne kan skelnes. Udsnittet er forstørret. Forskellen er stadig ${pp(Math.abs(dTx))}, ${krGapTxt} på 100.000 kr. Det er ikke en sum af satserne og ikke et ÅOP.</p>
  </section>`;

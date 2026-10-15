@@ -4,6 +4,15 @@
 **Branch:** lane-X  
 **Deadline:** keep until 08:30, polish, report 08:45, demo 09:00.
 
+## Denne nat (2026-10-16) · fjerde pas
+
+Ingen nye X-kald. `callCountNote` beholder 30/min og 1000/day, noten om ét søgekald 2026-10-15, og at der ikke er kaldt 2026-10-16. Tilføjet: fjerde poleringspas, stadig ingen kald. 21 opslag uændret. Browseren kalder ikke X. Ingen embed. Ingen secrets. NewDeal Invest i ét ord. Tal kun fra `fund-facts.json` og `risk-stats.json`. 80 kr. er 720 − 640 på 100.000 kr., samme afrunding som omkostningssiden.
+
+- `docs/js/x-feed.js` og `docs/ndi-paa-x.html`: et aktivt spor viser træffet som tal. SoftBank-søgning er 3 direkte. Nvidia-søgning er 6 direkte. Chips / AI i feedet er 6 direkte og 5 tema. På mobil (390) ligger citatet under tre døre, og afsenderen er i første skærm. På desktop 1280×800 er FundaAI-afsenderen i første skærm. Tom tilstand er uændret: 0, de aktive filtre og «Udvalgte offentlige opslag — ikke NDI's holdning». Spor-logikken er uændret: direkte før tema, temakurv reserverer ét tema-kort, selskabssider reserverer ikke.
+- Panelet på selskab og tema: SoftBank er 3 direkte, 0 tema, 3 udeladt. Nvidia er 3 direkte, 0 tema, 2 udeladt. Chips er 3 direkte, 1 tema, 1 udeladt. Platforme er 3 direkte, 1 tema, 6 i alt. Compute er 4 direkte, 0 tema, 7 i alt. Quantum er 1 direkte og 0 tema. Space er 0 direkte og 1 tema, med noten om at ingen opslag nævner tickeren. Båndet læser stadig «…holdning. Snapshot 15. okt. 2026.» SoftBank er markeret i teksten.
+- `docs/fakta.html`: heroen er 80 kr., med 0,64 % og 0,72 % ved siden af. De tre ens tal står under. På 1280×800 er 32,46 %, 0,89 og −35,82 % i første skærm. Dato-kortene starter under folden ved 800 px. På 390 står 80 kr. øverst i blikket, og de tre ens tal stables. «Ikke et ÅOP.» Risikoblokken står før andelsklasserne. Bund 8. apr. 2025. Topfeltet 2. jun. 2026 er stadig stiplet.
+- `docs/omkostninger.html`: heroen er stadig 80 kr. og står før de fire satser. Markørerne har navn: PMINDI 0,64 % og PMINDIAKK 0,72 %. Skalaen 0–2 % er uændret. Udsnittet 0,48–0,88 % er stadig mærket forstørret. Kvitteringerne er uændrede: 1.490 kr., 640 kr. / 720 kr., 250 kr. Ingen sum.
+
 ## Denne nat (2026-10-16) · tredje pas
 
 Ingen nye X-kald. `callCountNote` beholder 30/min og 1000/day, noten om ét søgekald 2026-10-15, og at der ikke er kaldt 2026-10-16. Tilføjet: tredje poleringspas, stadig ingen kald. 21 opslag uændret. Browseren kalder ikke X. Ingen embed. Ingen secrets. NewDeal Invest i ét ord. Tal kun fra `fund-facts.json` og `risk-stats.json`. 80 kr. er 720 − 640 på 100.000 kr., samme afrunding som omkostningssiden.
@@ -35,7 +44,9 @@ Ingen nye X-kald. `callCountNote` beholder 30/min og 1000/day, noten om ét søg
 
 ## Verifikation
 
-Headless Chrome mod denne worktree (port 8899), 1280 og 390: overflow 0 på NDI på X, SoftBank-søgning, Nvidia-søgning, Chips / AI, tom tilstand (quantum + konti Mads følger), fakta, omkostninger, SoftBank, Nvidia og temaerne chips, platforme, compute, quantum og space. SoftBank-panelet: «Viser 3 direkte · 6 i alt», lead i fuld bredde, «Direkte træf», SoftBank markeret. Chips: «3 direkte og 1 tema». Space: «1 tema» og noten om, at ingen opslag nævner tickeren. Fakta viser 32,46 / 0,89 / −35,82, bund 8. apr. 2025 og topfelt 2. jun. 2026, og blokken står før ISIN. Omkostninger viser 1,49 %, 0,64 %, 0,72 %, 80 kr. og udsnittet 0,48–0,88 % med markører 40 % / 60 %. Panelbåndet læser «…holdning. Snapshot 15. okt. 2026.» SoftBank-søgning: lead-citatet er i første skærm på 1280 og på 390, og ordet SoftBank er markeret.
+Fjerde pas, headless Chrome mod denne worktree (port 8899), 1280×800 og 390×844: overflow 0 på NDI på X, SoftBank-søgning, Nvidia-søgning, Chips / AI, tom tilstand, forsiden, fakta, omkostninger, SoftBank, Nvidia og temaerne chips, platforme, compute, quantum og space. SoftBank-søgning: afsenderen er i første skærm (1280×800 byline 730–785, 390 byline 528–583), ordet SoftBank er markeret, tallet er 3 direkte. Fakta: 80 kr. og 32,46 % er i første skærm ved 1280×800 (risikotallets bund 779). På 390 er 80 kr. i første skærm (398–438). Omkostninger: 80 kr. i første skærm, og legendens tekst er «PMINDI 0,64 %» og «PMINDIAKK 0,72 %». Ingen X-embed.
+
+Tredje pas, headless Chrome, 1280 og 390: overflow 0 på NDI på X, SoftBank-søgning, Nvidia-søgning, Chips / AI, tom tilstand (quantum + konti Mads følger), fakta, omkostninger, SoftBank, Nvidia og temaerne chips, platforme, compute, quantum og space. SoftBank-panelet: «Viser 3 direkte · 6 i alt», lead i fuld bredde, «Direkte træf», SoftBank markeret. Chips: «3 direkte og 1 tema». Space: «1 tema» og noten om, at ingen opslag nævner tickeren. Fakta viser 32,46 / 0,89 / −35,82, bund 8. apr. 2025 og topfelt 2. jun. 2026, og blokken står før ISIN. Omkostninger viser 1,49 %, 0,64 %, 0,72 %, 80 kr. og udsnittet 0,48–0,88 % med markører 40 % / 60 %. Panelbåndet læser «…holdning. Snapshot 15. okt. 2026.» SoftBank-søgning: lead-citatet er i første skærm på 1280 og på 390, og ordet SoftBank er markeret.
 
 ## Limits
 
@@ -47,3 +58,4 @@ x MCP: 30/min, 1000/day. Browser does not call X. Ingen nye kald i denne cyklus.
 - Confirm calculated vol/Sharpe vs any internal factsheet. Siden viser kun `risk-stats.json` (32,46 / 0,89 / −35,82 pr. 2026-10-14) og siger, at det ikke er et officielt Fundmarket-tal.
 - `maxDdPeak` i `risk-stats.json` er 2026-06-02, efter `maxDdTrough` 2025-04-08. Et tjek af PMINDI-totalserien i `portfolio.json` giver samme −35,82 % med top 2025-02-18 og bund 2025-04-08. Siden finder ikke på 2025-02-18. `risk-stats.json` ejes ikke af lane X.
 - Which X accounts/themes to pin permanently.
+- Konti på listen Mads følger, som ikke er i snapshotet: JensenHuang, dwarkesh_sp, a16z. Lane X har ikke opdigtet opslag. Forælder kan hente via MCP.
