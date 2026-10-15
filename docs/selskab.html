@@ -151,10 +151,10 @@
  </div>
  </section>
 
- ${lensMetrics.length ? `<section class="panel">
+ ${lensMetrics.length ? `<section class="panel" id="ndi-linse">
  <h2 class="panel-h">NDI-linsen (udkast)</h2>
  <div class="kpi-grid">${lensMetrics.map(m => `<div class="kpi"><span class="label">${esc(m.label)}${m.ai ? ` ${AI_BADGE}` : ''}</span><strong style="font-size:16px">${esc(m.value)}</strong><span class="sub">${esc(m.hint||'')}${m.href ? ` <a href="${esc(lensHref(m.href))}">${lensLinkLabel(m.href)} →</a>` : ''}</span></div>`).join('')}</div>
- <p class="band">Kvalitativ linse: tema, rolle og forhold at holde øje med. Ingen kurser, afkast eller nøgletal. Felter med AI-udkast er sammenfattet fra selskabsprofilen. Eksponering, ikke anbefaling. <a href="ndi-perspektiv.html">Alle selskaber med NDI-linse →</a></p>
+ <p class="band">Kvalitativ linse: tema, rolle og forhold at holde øje med. Ingen kurser, afkast eller nøgletal. Felter med AI-udkast er sammenfattet fra selskabsprofilen eller offentligt kendte forretningsbeskrivelser og afventer NDI-gennemgang. Eksponering, ikke anbefaling. <a href="ndi-perspektiv.html">Alle selskaber med NDI-linse →</a></p>
  </section>` : ''}
  ${(() => {
  const series = (monthsPack?.funds?.[fundId] || []).map(row => ({ d: row.date, w: row.weights?.[p.isin] })).filter(x => x.w != null);
