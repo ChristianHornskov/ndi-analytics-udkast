@@ -152,9 +152,9 @@
  parts.push(`<line class="uw-drop" x1="${tx.toFixed(1)}" x2="${tx.toFixed(1)}" y1="${y0.toFixed(1)}" y2="${ty.toFixed(1)}"/>`);
  parts.push(`<circle class="uw-max" cx="${tx.toFixed(1)}" cy="${ty.toFixed(1)}" r="3.2"/>`);
  const lx = Math.min(W - padR - 4, Math.max(padL + 28, tx));
- parts.push(`<text class="uw-label" x="${lx.toFixed(1)}" y="${Math.max(12, ty - 7)}" text-anchor="middle">${fmtPct(trough.u, 0)}</text>`);
+ parts.push(`<text class="uw-label uw-max-label" x="${lx.toFixed(1)}" y="${Math.max(12, ty - 7)}" text-anchor="middle">${fmtPct(trough.u, 0)}</text>`);
  parts.push(`<circle class="uw-now" cx="${nx.toFixed(1)}" cy="${ny.toFixed(1)}" r="3.4"/>`);
- parts.push(`<text class="uw-label" x="${(nx - 6).toFixed(1)}" y="${Math.max(12, ny - 6)}" text-anchor="end">nu ${fmtPct(last.u, 0)}</text>`);
+ parts.push(`<text class="uw-label uw-now-label" x="${(nx - 6).toFixed(1)}" y="${Math.max(12, ny - 6)}" text-anchor="end">nu ${fmtPct(last.u, 0)}</text>`);
  const barSay = usedGate
  ? `${deep.length} søjler mellem kurven og årstallene er episoder dybere end 10 %. Højden er dybden, bredden er tiden. Stregen ved 10 % under nul er grænsen for de søjler.`
  : `${deep.length} søjler mellem kurven og årstallene er de dybeste episoder. Højden er dybden, bredden er tiden.`;
@@ -265,6 +265,25 @@
  <p class="src">Middel og median er over episoder fra top til bund. De er ikke et gennemsnit af hver dag under vand. Max er det samme tal som største fald på Fonden.</p>
  <p class="warn">${WARN_HIST}</p>`;
  const svg = document.getElementById('uw-svg');
+ const plateLabels = () => {
+ svg.querySelectorAll('.uw-plate').forEach((n) => n.remove());
+ for (const sel of ['.uw-max-label', '.uw-now-label']) {
+ const el = svg.querySelector(sel);
+ if (!el) continue;
+ const b = el.getBBox();
+ if (b.width < 1) continue;
+ const plate = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+ plate.setAttribute('class', 'uw-plate');
+ plate.setAttribute('x', (b.x - 2).toFixed(1));
+ plate.setAttribute('y', (b.y - 1.5).toFixed(1));
+ plate.setAttribute('width', (b.width + 4).toFixed(1));
+ plate.setAttribute('height', (b.height + 1.5).toFixed(1));
+ plate.setAttribute('rx', '2');
+ el.before(plate);
+ }
+ };
+ if (document.fonts?.ready) document.fonts.ready.then(plateLabels);
+ else plateLabels();
  const slider = document.getElementById('uw-slider');
  const read = document.getElementById('uw-read');
  const cursor = document.getElementById('uw-cursor');

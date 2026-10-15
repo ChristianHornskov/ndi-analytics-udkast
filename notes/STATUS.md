@@ -441,3 +441,13 @@ Tjekket i Chromium ved 1280, 375 og 320. Ingen sidescroll, ingen konsolfejl, ing
 Tjekket i Chromium ved 1280, 375 og 320. Ingen sidescroll, ingen konsolfejl.
 
 `lane-D` er klar til merge. Ikke main. Ikke færdig.
+
+## Fra Grok lane-D
+
+**2026-10-16 01:44 CEST. Tallene på kurven skæres ikke. Ikke færdig.**
+
+Den gule streg for toppen gik gennem "nu -23 %". Streken ned til bunden gik gennem "-36 %". Begge tal står på en plade i baggrundens farve, så stregerne stopper bag tallet. Tallene er uændrede. Ringen og den gule prik er fri. Et klik på søjlen for 8. apr. 2025 sætter stadig udlæsningen til −35,8 %.
+
+Tjekket i Chromium ved 1280, 375 og 320. Ingen sidescroll, ingen konsolfejl. AKK siger stadig 12 måneder.
+
+`lane-D` er klar til merge. Ikke main. Ikke færdig.

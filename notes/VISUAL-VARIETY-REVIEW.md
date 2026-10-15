@@ -108,6 +108,10 @@ Prikfordelingen havde ingen grænse. En brand-streg står nu ved 10 % under nul,
 
 2026 i årssøjlerne sagde kun "til dato" og +4,0 %. Serien ligger stadig under vand i det år. Søjlen har nu cyan kant og teksten "Under vand". 2025 har stadig gul kant og "Dybeste fald", og søjlen er stadig +15,2 %. Søjlerne i samme række deler bundlinje ved 1280, 375 og 320. Teksten siger, at 2026 er året serien stadig ligger under vand, og at søjlen er årets afkast. Ingen sidescroll. Ingen konsolfejl.
 
+### Update · tallene skæres ikke · 2026-10-16 ~01:44 CEST
+
+Den gule streg for toppen gik gennem "nu -23 %". Streken ned til bunden gik gennem "-36 %". Begge tal står nu på en plade i samme farve som baggrunden. Stregerne stopper bag tallet og fortsætter over og under. Tallene er de samme. Ringen og den gule prik er fri af pladen. Et klik på søjlen for 8. apr. 2025 sætter udlæsningen til −35,8 %. En dag uden for de fire, 20. okt. 2023, slukker kant og række. Ingen tekst uden for svg'en. Ingen sidescroll ved 1280, 375 og 320. Ingen konsolfejl. AKK siger stadig 12 måneder og har ingen procent.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.
