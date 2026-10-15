@@ -133,3 +133,75 @@ Grundlag: `origin/main` `820f116` (uændret). `docs/` er uændret siden `8b30c48
 | Lær-sider | ✅ |
 | Omkostninger | ⚠️ delposter ✅, samlet/RIY mangler |
 | Øvrige MUST cyklus 3 (2–6) | ❌ uændret |
+
+## 2026-10-16 00:18 CEST · cyklus 5
+Grundlag: `origin/main` `60cebcc` (41 `docs/`-filer er ændret siden `820f116`). Pages = main (22:11 UTC). Ikke juridisk rådgivning. Endelig vurdering: Fundmarket (IFS) compliance. Henvisninger er orienterende.
+
+### MUST (status)
+1. **Ikke mærket som markedsføringsmateriale (cyklus 3 MUST 1):** ❌ uændret. "markedsføringsmateriale" giver 0 hits i `docs/`. Footer og embed mangler "Markedsføringsmateriale. Læs prospekt og KID før en endelig investeringsbeslutning".
+2. **"Ikke NDI's holdning" på NDI's egne konti (cyklus 4 MUST 1):** ❌ **skærpet.** ndi-paa-x skriver nu direkte "NDI-relaterede konti: @InvestNewdeal · @MadsC007 · @jesper_baek · @CHornskov" og har filteret "NDI / fond (14)", i samme afsnit som "ikke NDI's holdning". Alle 21 opslag i `x-posts.json` har stadig label "ikke NDI's holdning". Teksten modsiger nu sig selv på siden.
+3. **Ny: "MADS FØLGER"-badge på tredjepartsopslag.** 7 opslag fra konti, som forvalteren følger, har badgen, bl.a. @FundaAI ("$ORCL and $CRWV face a repricing of credit risk, along with SoftBank") og @MelvinInvests ("People are forgetting how important companies like $CRWV and $NBIS are … $NVDA"). Badgen knytter forvalteren til tredjeparts udsagn om navngivne aktier (SoftBank og NVDA er i beholdningen) dateret oktober 2026, efter cutoff. Det kan læses som en indirekte anbefaling eller et aktuelt porteføljesignal, og forbeholdet "ikke NDI's holdning" afbøder det ikke, når NDI selv fremhæver forbindelsen. Fjern badgen og ticker-chips på tredjepartsopslag, eller fjern tredjepartsopslag fra sitet.
+4. **Forvalterens opslag om beholdningsselskaber (cyklus 4 MUST 2):** ❌ uændret. Mads "BWM sales rep … Tesla" og jesper_baek "den bedste bil" med TSLA-chip vises på ndi-paa-x og på Fonden.
+5. **PMINDIAKK "Seneste NAV" før 12 mdr.:** ❌ uændret på Fonden-AKK (`js/app.js:312`) og sammenlign. "Klassen følger samme overordnede strategi som PMINDI" står nu **også på drawdown.html** (AKK-tilstand), ikke kun på Fonden-AKK. Tilføj "PMINDI's afkast kan ikke overføres til PMINDIAKK" eller fjern sætningen begge steder.
+6. **Drawdown-datoer:** ⚠️ delvist lukket. drawdown.html beregner nu korrekt 18. feb. 2025 → 8. apr. 2025. `risk-stats.json` (risici, fakta) viser stadig peak 2. jun. 2026 → trough 8. apr. 2025. To sider viser nu hver sin dato for samme nøgletal, og det er ikke "fair, clear and not misleading". Ret datakilden.
+7. **"ÅTD og 100.000 kr.-eksemplet afventer Fundmarket-godkendelse"** står stadig offentligt (`js/app.js:411`). ❌ uændret.
+8. **"SpaceX: større end hele jordens økonomi"** står stadig som rubrik (`value-chains.json:2358`), og SpaceX-profilen (`US84615Q1031`, 7 forekomster) er stadig i `company-profiles.json`. ❌ uændret.
+
+### SHOULD
+- **Omkostninger:** ✅ forbedret. kr.-eksempel pr. post, "ikke et beregnet ÅOP", "Kurtage og depot kommer oveni", "Afkasttal … efter løbende omkostninger" og KID-link pr. klasse. Stadig mangler en samlet løbende omkostning og KID'ets "omkostningernes virkning over tid" (RIY), som privat- og FO-personaen begge kræver. Gengiv KID-tallet med kilde og dato. Hvis "Øvrige løbende 1,49 %" ikke svarer til KID'ets "løbende omkostninger" i alt, skal det stå tydeligt.
+- **Intern tekst på offentlige sider:** "Tomme felter = udfyldes af NDI" (omkostninger, fakta), "udfyldes af NDI" som pille ved revision og officiel vol/Sharpe (fakta, risici), "kl n" (fondsnavn), om-data "Ingen live Azure-kald … (se precheck)". Det gør det tydeligt, at materialet ikke er færdigt og ikke er godkendt. Det er OK for et udkast, men det skal ryddes, før siden vises til investorer.
+- **Revisor "udfyldes af NDI":** fakta.html viser revisor som manglende. Revisor står i prospekt og årsrapport. Udfyld det, før FO-personaen ser siden.
+- **Handelssprog:** ✅ 0 hits på "øger eksponering", kursmål og køb/sælg-opfordringer i egen copy. "Overvægt" forekommer kun i negationer ("ikke bevidste overvægte"). "købsanbefaling" forekommer kun i "ikke som købsanbefaling" (ASML).
+- **AI-mærkning:** ✅ ndi-perspektiv 74 mærker + "afventer NDI-gennemgang". Mærkningen er tilstrækkelig, og UX foreslår færre mærker uden at fjerne den.
+- **Ugebrev-kilde** i `value-chains.json` note, synlig på vaerdikaeder ("Tekst inspireret af NDI ugebreve / Vidensbot"): uændret. Gentaget fra cyklus 1.
+- Uændret: Sharpe rf=0, "Central Information Dokument" (brug "Central information (KID)" / "Dokument med central information"), PMINDI-delår og månedsgitter (afventer Fundmarket), investorrettigheder/klage, SFDR-klassifikation på fakta, rollebetegnelser forvalter (Fundmarket/IFS) vs rådgiver (NDIIR ApS, korrekt på fakta ✅) vs "Fund manager Mads".
+
+### Tjekliste (delta mod cyklus 4)
+| Punkt | Status |
+|---|---|
+| Ikke-rådgivning / generel info | ✅ (Fonden: "Ingen anbefaling om at købe eller sælge") |
+| Mærket som markedsføring + prospekt/KID | ❌ uændret |
+| Tab af kapital / historisk ≠ fremtid | ✅ alle 27 crawlede sider |
+| KID/SRI | ✅ SRI 5/7 i Fonden-hero, KID-links på invester/omkostninger/footer |
+| Rådgivende ordlyd | ✅ egen copy. ❌ X: "Mads følger" (ny MUST 3) |
+| Handelssprog | ✅ |
+| asOf ≤ 2026-06-01 | ✅ beholdning. ⚠️ X-opslag oktober 2026 om beholdningsnavne, SpaceX-profil |
+| PMINDIAKK < 12 mdr. | ❌ NAV + "samme strategi" (nu også drawdown) |
+| 1m/3m PMINDI | ⚠️ uændret (ÅTD/delår/gitter afventer Fundmarket) |
+| Nasdaq som benchmark | ✅ "Fonden har intet fast benchmark" |
+| AI-mærkning | ✅ |
+| Omkostninger | ⚠️ kr. pr. post ✅, samlet/RIY mangler |
+| Konsistens af nøgletal | ❌ **ny**: max-drawdown-datoer er forskellige på drawdown og risici/fakta |
+
+## 2026-10-16 00:25 CEST · cyklus 6 (delta)
+Grundlag: `origin/main` `60cebcc`, uændret siden cyklus 5. Pages = main (22:11 UTC). Ikke juridisk rådgivning. Endelig vurdering: Fundmarket (IFS).
+
+### Genverificeret (grep i `docs/`)
+- "markedsføringsmateriale": **0 hits**. MUST 1 er stadig åben (blocker).
+- `js/x-feed.js:279` renderer stadig "Mads følger" for `curatedFrom === 'mads_following'`. MUST 3 er åben. Nyeste X-opslag har `created_at` 2026-10-15 og ligger altså efter holdings-cutoff 2026-06-01. Tredjeparts ticker-udsagn om beholdningsnavne + forvalter-badge = mulig indirekte anbefaling.
+- `risk-stats.json` maxDdPeak 2026-06-02 / trough 2025-04-08: MUST 6 er åben (vildledende nøgletal på tværs af sider).
+- Rådgivende ordlyd: ✅ alle hits er negationer ("uden anbefaling", "ikke … anbefaling") eller KID-termen "anbefalet investeringsperiode/ejertid". Det er OK.
+- Handelssprog ("øger eksponering", "overvægt", kursmål): ✅ 0 hits i egen copy.
+- Omkostninger: ÅOP/løbende omkostninger nævnes på index, omkostninger, om-data og embed. Samlet sats og RIY mangler stadig (SHOULD, FO-MUST).
+
+### Uændret fra cyklus 5
+MUST 2 (NDI-konti "ikke NDI's holdning"), 4 (forvalter-opslag om TSLA), 5 (AKK NAV + "samme strategi"), 7 ("afventer Fundmarket-godkendelse" offentligt), 8 (SpaceX-rubrik/profil). SHOULD-listen er uændret.
+
+**Blocker-rækkefølge foreslået:** 1 markedsføringsmærkning → 3 "Mads følger" → 6 DD-datoer → 5 AKK → 2/4 X-konti.
+
+## 2026-10-16 00:23 CEST · cyklus 7 (delta)
+Grundlag: `origin/main` `60cebcc`, uændret. Pages = main (22:11 UTC, md5 drawdown identisk). Ikke juridisk rådgivning. Endelig vurdering: Fundmarket (IFS).
+
+### Nyt verificeret i denne cyklus
+- **1m/3m på PMINDI:** ✅ ingen UI-eksponering. `slicePeriod()` i `js/data.js:56-59` kan stadig beregne '1m'/'3m', men ingen knap eller kald bruger dem. Fonden-segmentet er kun "Siden start / ÅTD / kalenderår" (`js/app.js:350-356`), og embed kun "ÅTD / Hele perioden". Det er død kode, men en latent risiko: fjern grenene, så ingen senere lane genaktiverer dem ved et uheld.
+- **PMINDIAKK < 12 mdr. i embed:** ✅ `embed/chart.js:167-171` viser "-" og "Vises efter 12 måneder". (MUST 5 om AKK-NAV/"samme strategi" på andre sider er stadig åben.)
+- **Nasdaq som benchmark:** ✅ 0 hits på "nasdaq" i html/js.
+- **Garanti/"sikker"/"bedste"-ordlyd:** ✅ 0 hits.
+
+### Genbekræftet åbne MUST
+1. Markedsføringsmærkning: "markedsføringsmateriale" 0 hits (blocker).
+3. "Mads følger"-badge: `js/x-feed.js` (1 forekomst).
+6. DD-datoer: `risk-stats.json` maxDdPeak 2026-06-02.
+2/4/5/7/8 uændret fra cyklus 5.
+
+**Blocker-rækkefølge (uændret):** 1 markedsføringsmærkning → 3 "Mads følger" → 6 DD-datoer → 5 AKK → 2/4 X-konti.
