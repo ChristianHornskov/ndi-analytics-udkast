@@ -769,3 +769,13 @@ University of Illinois indsendte ansøgningen 31. marts 2026. Tilsynet tog den t
 Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. 23. juni 2026 og "ikke givet" står. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `bc2e228` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:39 CEST. Howmet skriver, at det også laver smedede hjul til lastbiler og busser. Ikke færdig.**
+
+Selskabet skriver, at det laver dele til flyskrog og flymotorer og også smedede hjul og chassis til lastbiler og busser. Det sender ikke raketter op. Formuleringerne om de mest avancerede fly og om Model T er ikke taget med. Udbytte og kvartalsregnskab er ikke taget med. Ingen `reviewedAt`. Blurben under opsendelse og arkivet siger grænsen. Overskriften på selskabssiden er beholdningens afkortede navn. Profilnavnet er det fulde.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Smedede hjul står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `8366cb6` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

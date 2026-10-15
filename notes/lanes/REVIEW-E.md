@@ -215,3 +215,7 @@ Flåden er atomkraft, kul, naturgas og olie. Susquehanna er atomkraftværket. Am
 ## Nano · 2026-10-16 01:37 CEST
 
 Meddelelsen 13. oktober 2026 siger, at ansøgningen er til behandling. Forsidens "pre-application" er ikke brugt. Indsendt 31. marts 2026, taget til behandling 18. maj 2026, formel behandling 23. juni 2026 efter beholdningen. Ikke en tilladelse. Ikke et værk. Byggeri i andet halvår 2027 er en forventning. ZEUS og LOKI er design. World-class og largest er ikke kopieret. AI-udkast uden gennemgangsdato. Atomkraft-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Howmet · 2026-10-16 01:39 CEST
+
+Smedede hjul og chassis til lastbiler og busser er tilføjet ved siden af flyskrog og flymotorer. Ikke en opsendelse. Mest avancerede, Model T og udbytte er ikke kopieret. AI-udkast uden gennemgangsdato. Opsendelses-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll. Overskriften er beholdningens afkortede navn.

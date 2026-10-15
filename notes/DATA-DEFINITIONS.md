@@ -149,6 +149,8 @@ Talen skriver, at flåden omfatter atomkraftværket Susquehanna og også værker
 
 Nano Nuclear skriver, at University of Illinois indsendte ansøgningen om byggetilladelse til KRONOS 31. marts 2026, at tilsynet tog den til behandling 18. maj 2026, og at den formelle behandling begyndte 23. juni 2026. De to første datoer ligger før beholdningen pr. 2026-06-01. Den 23. juni ligger efter. Ansøgningen er ikke en tilladelse, og byggeriet er ikke gået i gang. En offentlig tidsplan peger på en endelig sikkerhedsvurdering i september 2027. Selskabet ser en mulighed for byggeri i andet halvår 2027. Det er en forventning. Forsiden siger stadig "construction permit pre-application". Meddelelsen af 13. oktober 2026 er mere præcis, og teksten følger meddelelsen. ZEUS og LOKI er design under udvikling. Ordene world-class og largest er ikke taget med. Vægtene er uændrede.
 
+Howmet skriver, at det laver dele til flyskrog og flymotorer, og at det også laver smedede hjul og chassis til lastbiler og busser. Det sender ikke raketter op. Formuleringerne om de mest avancerede fly, om at være med på alt der flyver, og om Model T er ikke taget med. Et udbytte og et kvartalsregnskab på siden er ikke taget med. Beholdningens navn på selskabssiden er afkortet til "Howmet Aerspc". Profilnavnet og navnet i rumkæden er Howmet Aerospace. Vægtene er uændrede.
+
 ## År til dato på periodesiden
 
 `ytdReturn` i `data.js` bruger sidste punkt i året før som udgangspunkt, ikke 1. januar. For PMINDI pr. 2026-10-14 er det 2025-12-31, ikke 2026-01-02. `periode.html` viser den samme dato i "Fra → til". Kalenderår bruger samme base (`calendarYearReturns`).

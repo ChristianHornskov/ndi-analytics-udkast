@@ -1377,20 +1377,24 @@
   "US4432011082": {
    "name": "Howmet Aerospace",
    "theme": "space",
-   "summary": "Laver metaldele til flymotorer og flyskrog, herunder befæstelse. Det er en leverandør til luft- og rumfart, ikke et selskab der sender raketter op. Snapshottet har aktien under SpaceTech.",
-   "watch": "Produktion til flyindustrien og efterspørgsel efter nye fly.",
+   "summary": "Laver metaldele til flymotorer og flyskrog. Selskabet skriver, at det også laver smedede hjul til lastbiler og busser. Det sender ikke raketter op.",
+   "watch": "Produktion til fly og til lastbiler. Selskabet sender ikke op.",
    "source": "https://www.howmet.com/",
-   "products": "Metalkomponenter til fly og rumfart.",
-   "customers": "Fly- og motorproducenter.",
-   "role": "Dele, ikke opsendelse.",
+   "products": "Dele til flyskrog og flymotorer. Smedede hjul og chassis til lastbiler og busser.",
+   "customers": "Fly- og motorproducenter og producenter af lastbiler og busser.",
+   "role": "Dele til fly, rumfart og tung transport. Ikke en opsendelse.",
    "narrative": [
-    "Howmet laver metaldele til fly og til rumfart, blandt andet til motorer og skrog.",
-    "Selskabet sender ikke raketter op. Snapshottet har aktien under SpaceTech."
+    "Howmet skriver, at det laver dele til flyskrog og flymotorer, og at det også laver smedede hjul og chassis til lastbiler og busser.",
+    "Det er dele. Selskabet sender ikke raketter op. Snapshottet har aktien under SpaceTech."
    ],
    "narrativeSources": [
     {
      "label": "Selskabets side",
      "url": "https://www.howmet.com/"
+    },
+    {
+     "label": "Markeder",
+     "url": "https://www.howmet.com/markets-and-product-lines/"
     }
    ]
   },
