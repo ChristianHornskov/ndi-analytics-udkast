@@ -2072,7 +2072,55 @@
     "q": "Det, som vil ændre måden vi lever på, er den automatisering og robotisering, som vil skabe fase 3",
     "src": "BLOG 7. oktober 2024"
    },
-   "icon": "🤖"
+   "icon": "🤖",
+   "glossary": [
+    {
+     "term": "Aktuator",
+     "t": "Den del, der får robotten til at bevæge sig, fx en elmotor i et led eller et hydraulisk stempel. Det er robottens muskler.",
+     "link": "components"
+    },
+    {
+     "term": "Sensor",
+     "t": "Robottens sanser: kameraer, mikrofoner, tryk- og kraftsensorer. Uden dem ved robotten ikke, hvor den er, eller hvad den rører ved.",
+     "link": "components"
+    },
+    {
+     "term": "Lidar",
+     "t": "En laser, der måler afstande mange gange i sekundet og giver et 3D-billede af omgivelserne. Bruges i mange selvkørende biler og robotter.",
+     "link": "components"
+    },
+    {
+     "term": "Effektelektronik",
+     "t": "Elektronik, der styrer strømmen fra batteriet til motorerne. Bruges også i elbiler, solceller og elnet.",
+     "link": "components"
+    },
+    {
+     "term": "Simulering",
+     "t": "En virtuel verden, hvor robotten kan øve millioner af gange, før den prøver i virkeligheden. Det er billigere og mere sikkert end at øve med en rigtig robot.",
+     "link": "sim"
+    },
+    {
+     "term": "Digital tvilling",
+     "t": "En digital kopi af en fabrik, maskine eller by, som opdateres med data fra virkeligheden. Man kan afprøve ændringer i kopien først.",
+     "link": "sim"
+    },
+    {
+     "term": "Humanoid",
+     "t": "En robot bygget i menneskeform med arme, ben og hænder, så den kan bruge de samme værktøjer og rum, som mennesker bruger.",
+     "link": "robots"
+    },
+    {
+     "term": "Autonomi",
+     "t": "Hvor meget en maskine kan selv uden et menneske. Det går fra hjælp til føreren til at køre helt selv i bestemte områder.",
+     "link": "robots"
+    },
+    {
+     "term": "Edge-AI",
+     "t": "AI, der kører på en chip i selve robotten eller bilen i stedet for i et datacenter. Det giver hurtigere reaktion og virker uden netforbindelse.",
+     "hop": "ai-compute:physical-ai"
+    }
+   ],
+   "glossaryNote": "Ordbogen er generel baggrundsviden, ikke NDI's synspunkter. Ordene er valgt, fordi de går igen i robotkædens tre led."
   },
   {
    "id": "energy",
@@ -3341,7 +3389,49 @@
     }
    ],
    "latency": "Højden betyder noget for brugeren. Et signal til en geostationær satellit og tilbage tager omkring et halvt sekund. Via lavt kredsløb tager det få hundrededele af et sekund. Det er en af grundene til, at satellitinternet er rykket ned i lavt kredsløb (baggrund).",
-   "icon": "🚀"
+   "icon": "🚀",
+   "costStory": {
+    "title": "Hvorfor er det blevet billigere at komme op?",
+    "before": {
+     "k": "Før",
+     "t": "De fleste raketter blev brugt én gang. De faldt i havet eller brændte op efter turen, så hver opsendelse krævede en ny raket."
+    },
+    "after": {
+     "k": "Nu",
+     "t": "Det store første trin lander igen og kan flyve flere ture. Prisen for selve raketten fordeles over mange opsendelser."
+    },
+    "levers": [
+     {
+      "icon": "♻",
+      "k": "Genbrug",
+      "t": "Når raketten kan genbruges, er det især brændstof, klargøring og service, der koster pr. tur.",
+      "link": "launch"
+     },
+     {
+      "icon": "⇡",
+      "k": "Flere ture",
+      "t": "Billigere ture betyder, at de bliver flere. Hyppige opsendelser gør det nemmere at planlægge store projekter.",
+      "link": "launch"
+     },
+     {
+      "icon": "▦",
+      "k": "Satellitter i serie",
+      "t": "Når det er billigt at sende op, kan satellitterne bygges i serie på samlebånd i stedet for at blive håndbygget én ad gangen.",
+      "link": "sats"
+     },
+     {
+      "icon": "⟳",
+      "k": "Tjenester",
+      "t": "Med mange satellitter i lavt kredsløb kan der sælges internet og jorddata som abonnement.",
+      "link": "satcom"
+     }
+    ],
+    "ndi": {
+     "t": "SpaceX stod for 90 % af årets satellitopsendelser i NDI's gennemgang fra 2024. Det viser, hvor meget én aktør med genbrugelige raketter kom til at fylde.",
+     "src": "BLOG 23. juni 2024"
+    },
+    "note": "Forklaringen er generel baggrundsviden og ikke NDI's synspunkter. Vi viser ikke priser pr. kilo, fordi NDI ikke har opgjort dem. Tallet om 90 % er NDI's."
+   }
   },
   {
    "id": "quantum",

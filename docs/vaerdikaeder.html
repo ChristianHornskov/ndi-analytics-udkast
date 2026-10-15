@@ -127,6 +127,27 @@
     .gloss dd a{font-size:12px;white-space:nowrap}
     .q-pane{display:none;margin:4px 0 18px}
     .q-pane.on{display:block}
+    .cost{margin-top:16px;border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:linear-gradient(180deg,#0e2027,#0b171d)}
+    .cost h3{font-size:15px;color:var(--cyan);margin:0 0 10px}
+    .cost-ba{display:grid;gap:8px;grid-template-columns:1fr;align-items:stretch}
+    @media(min-width:640px){.cost-ba{grid-template-columns:1fr auto 1fr}}
+    .cost-ba .ba{border:1px solid var(--line);border-radius:10px;padding:9px 11px;background:#0b171d;font-size:13px;line-height:1.45;color:var(--muted)}
+    .cost-ba .ba svg{display:block;width:100%;max-width:200px;height:auto;margin:0 0 6px}
+    .cost-ba .ba b{display:block;font-size:11px;letter-spacing:.5px;text-transform:uppercase;color:var(--yellow);margin-bottom:2px}
+    .cost-ba .ba.now{border-color:var(--brand)}
+    .cost-ba .arr{align-self:center;justify-self:center;color:var(--yellow);font-size:22px;line-height:1}
+    @media(max-width:639px){.cost-ba .arr{transform:rotate(90deg)}}
+    .levers{display:grid;gap:8px;margin:10px 0 0;padding:0;list-style:none;grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
+    .levers li{position:relative;border:1px dashed #3a5a63;border-radius:10px;padding:9px 11px;font-size:12.5px;line-height:1.45;color:var(--muted)}
+    .levers li .lv-i{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#16323b;color:var(--yellow);font-size:13px;margin-right:6px;vertical-align:middle}
+    .levers li b{color:var(--text);font-size:13px}
+    .levers li p{margin:5px 0 4px}
+    .levers li a{font-size:12px}
+    @media(min-width:760px){.levers li:not(:last-child)::after{content:"→";position:absolute;right:-9px;top:50%;transform:translateY(-50%);color:var(--yellow);font-size:13px;background:#0d1d23;padding:0 1px}}
+    .cost-ndi{margin:10px 0 0;font-size:13px;line-height:1.5;color:var(--text);border-left:3px solid var(--brand);padding:4px 0 4px 10px}
+    .cost-ndi .tag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.4px;color:#0b171d;background:var(--cyan);border-radius:4px;padding:0 5px;margin-right:6px}
+    .p-pane .gloss-wrap{margin-top:14px}
+    .p-pane .gloss dt::before{content:"⚙ "}
     .p-pane{display:none;margin:4px 0 18px}
     .p-pane.on{display:block}
     .phases{display:grid;gap:10px;margin:0;padding:0;list-style:none}
@@ -250,6 +271,17 @@
             </ol>
           </div>
         </div>
+        <section class="cost" id="sp-cost" aria-labelledby="sp-cost-h" hidden>
+          <h3 id="sp-cost-h"></h3>
+          <div class="cost-ba">
+            <div class="ba" id="cost-before"></div>
+            <span class="arr" aria-hidden="true">→</span>
+            <div class="ba now" id="cost-after"></div>
+          </div>
+          <ol class="levers" id="cost-levers" aria-label="Fra billig opsendelse til tjenester"></ol>
+          <p class="cost-ndi" id="cost-ndi"></p>
+          <p class="src" id="cost-note" style="margin-top:6px"></p>
+        </section>
         <div class="sp-learn">
           <figure style="margin:0">
             <h3>Hvor højt er højt?</h3>
@@ -282,6 +314,11 @@
         <ol class="phases" id="phases" aria-label="Mads' tre faser"></ol>
         <blockquote class="ph-quote" id="ph-quote"></blockquote>
         <p class="src" id="ph-src" style="margin-top:6px"></p>
+        <details class="gloss-wrap" id="p-gloss-wrap">
+          <summary><h3>Robot-ordbog</h3><span class="src" id="p-gloss-count">Ord, der gør kæden lettere at læse</span></summary>
+          <dl class="gloss" id="p-gloss"></dl>
+          <p class="src" id="p-gloss-note" style="margin-top:8px"></p>
+        </details>
       </div>
 
       <p class="anno" id="chain-tip">Klik et led for selskaber. Hvert led har tre dele: hvad det er, hvorfor NDI følger det, og hvad der ændrer sig.</p>
@@ -532,11 +569,46 @@
       `<div class="sp-fact"><div class="k">${esc(x.k)}</div><p>${esc(x.t)}</p><div class="src">Kilde: ${esc(x.src)}</div></div>`).join('');
 
     // Ordbog + højdeskala (baggrund, ikke NDI-synspunkter)
-    document.getElementById('space-gloss').innerHTML = (sp?.glossary || []).map(g =>
-      `<div><dt>${esc(g.term)}</dt><dd>${esc(g.t)}${g.link ? ` <a href="#lk-${esc(g.link)}" data-open="${esc(g.link)}">Se leddet →</a>` : ''}</dd></div>`).join('');
-    document.getElementById('gloss-note').textContent = sp?.glossaryNote || '';
-    if (matchMedia('(min-width: 900px)').matches) document.getElementById('gloss-wrap').open = true;
-    if (sp?.glossary?.length) document.getElementById('gloss-count').textContent = `${sp.glossary.length} ord, der gør kæden lettere at læse`;
+    const glossLink = (g) => {
+      if (g.hop) {
+        const [cid, lid] = g.hop.split(':');
+        const t = pack.chains.find(c => c.id === cid);
+        return ` <a href="?kaede=${esc(cid)}#lk-${esc(lid)}" data-hop="${esc(g.hop)}">Se leddet i ${esc(t?.title || cid)} →</a>`;
+      }
+      return g.link ? ` <a href="#lk-${esc(g.link)}" data-open="${esc(g.link)}">Se leddet →</a>` : '';
+    };
+    function renderGloss(ch, ids) {
+      const [listId, noteId, countId, wrapId] = ids;
+      document.getElementById(listId).innerHTML = (ch?.glossary || []).map(g =>
+        `<div><dt>${esc(g.term)}</dt><dd>${esc(g.t)}${glossLink(g)}</dd></div>`).join('');
+      document.getElementById(noteId).textContent = ch?.glossaryNote || '';
+      if (ch?.glossary?.length) document.getElementById(countId).textContent = `${ch.glossary.length} ord, der gør kæden lettere at læse`;
+      if (matchMedia('(min-width: 900px)').matches) document.getElementById(wrapId).open = true;
+    }
+    renderGloss(sp, ['space-gloss', 'gloss-note', 'gloss-count', 'gloss-wrap']);
+
+    // Hvorfor billigere at komme op (baggrund + ét NDI-tal med kilde)
+    (function renderCost(c) {
+      if (!c) return;
+      const rocket = (reuse) => `<svg viewBox="0 0 200 64" aria-hidden="true">`
+        + `<line x1="0" y1="58" x2="200" y2="58" stroke="#3a5a63"/>`
+        + `<g transform="translate(26 6)"><rect x="0" y="16" width="14" height="34" rx="3" fill="#89aeb4"/><path d="M0 16 L7 2 L14 16Z" fill="#cfe3e6"/></g>`
+        + (reuse
+          ? `<path d="M48 26 C 88 14, 132 14, 168 30" fill="none" stroke="var(--yellow)" stroke-dasharray="3 3"/><path d="M168 30 L162 24 M168 30 L160 31" stroke="var(--yellow)"/>`
+            + `<g transform="translate(160 30)"><rect x="0" y="0" width="12" height="26" rx="3" fill="#89aeb4"/><path d="M-3 26 L2 20 M15 26 L10 20" stroke="#cfe3e6"/></g>`
+            + `<text x="100" y="10" text-anchor="middle" fill="var(--muted)" font-size="9.5">lander og flyver igen</text>`
+          : `<path d="M48 26 C 90 14, 130 18, 160 52" fill="none" stroke="#829da0" stroke-dasharray="3 3"/><text x="168" y="54" fill="#d98a7a" font-size="14">✕</text>`
+            + `<text x="100" y="10" text-anchor="middle" fill="var(--muted)" font-size="9.5">brugt én gang</text>`)
+        + `</svg>`;
+      document.getElementById('sp-cost-h').textContent = c.title;
+      document.getElementById('cost-before').innerHTML = rocket(false) + `<b>${esc(c.before.k)}</b>${esc(c.before.t)}`;
+      document.getElementById('cost-after').innerHTML = rocket(true) + `<b>${esc(c.after.k)}</b>${esc(c.after.t)}`;
+      document.getElementById('cost-levers').innerHTML = (c.levers || []).map(l =>
+        `<li><span class="lv-i" aria-hidden="true">${esc(l.icon)}</span><b>${esc(l.k)}</b><p>${esc(l.t)}</p>${l.link ? `<a href="#lk-${esc(l.link)}" data-open="${esc(l.link)}">Se leddet →</a>` : ''}</li>`).join('');
+      document.getElementById('cost-ndi').innerHTML = c.ndi ? `<span class="tag">NDI</span>${esc(c.ndi.t)} <span class="src">Kilde: ${esc(c.ndi.src)}</span>` : '';
+      document.getElementById('cost-note').textContent = c.note || '';
+      document.getElementById('sp-cost').hidden = false;
+    })(sp?.costStory);
     document.getElementById('sp-latency').textContent = sp?.latency || '';
     (function renderAltitudes(items) {
       if (!items?.length) return;
@@ -584,6 +656,7 @@
       `<li class="phase${i === all.length - 2 ? ' now' : ''}${i === all.length - 1 ? ' next' : ''}"><div class="ph-n">${esc(f.n)} · ${esc(f.when)}</div><h3>${esc(f.label)}</h3><p>${esc(f.t)}</p>${f.link ? `<p style="margin-top:6px"><a href="#lk-${esc(f.link)}" data-open="${esc(f.link)}">Se leddet →</a></p>` : ''}</li>`).join('');
     if (phys?.phasesQuote) document.getElementById('ph-quote').innerHTML = `<q>${esc(phys.phasesQuote.q)}</q><cite>Mads Christiansen, ${esc(phys.phasesQuote.src)}</cite>`;
     document.getElementById('ph-src').textContent = phys?.phasesSrc ? `Kilde: ${phys.phasesSrc}` : '';
+    renderGloss(phys, ['p-gloss', 'p-gloss-note', 'p-gloss-count', 'p-gloss-wrap']);
 
     // Broer: led i andre kæder, der deler selskaber med den valgte kæde
     const linkOf = (cid, lid) => pack.chains.find(c => c.id === cid)?.links.find(l => l.id === lid);

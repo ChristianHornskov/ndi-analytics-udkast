@@ -65,3 +65,6 @@ Se `notes/VISUAL-VARIETY-REVIEW.md`.
 | Fase-trin med pil | Robotik-fanen: Mads' fase 1 → 2 → 3 som tre kort. Fase 3 har gul topkant, og citatet har gul venstrekant | ✅ robotik-fanen |
 | Faglige bro-kort | Kvante-fanen: 4 kort (cloud, chipdesign, udstyr og Sådan tænker vi) mærket baggrund eller NDI | ✅ kvante-fanen |
 | Kæde-indgangskort med ikon | vaerdikaede.html: "Fire andre kæder" med 🤖⚡🚀⚛, antal led og selskaber og "Start ved første led" | ✅ vaerdikaede.html |
+| Før/nu-tegning (inline SVG) | Rum-fanen: to små raket-tegninger, "brugt én gang" (✕) og "lander og flyver igen" (stiplet bue), med pil imellem. Pilen drejer 90° på mobil | ✅ rum-fanen |
+| Årsagskæde med stiplede kort | Rum-fanen: Genbrug → Flere ture → Satellitter i serie → Tjenester. Ikon i rund plet, gul pil mellem kortene på desktop, og hvert kort åbner sit led. NDI-tallet står i en separat linje med cyan NDI-mærke | ✅ rum-fanen |
+| Robot-ordbog (⚙) | Robotik-fanen: 9 ord i samme gitter som rum-ordbogen, men med tandhjul i stedet for ◇. "Edge-AI" hopper til AI-kædens led for fysisk AI | ✅ robotik-fanen |

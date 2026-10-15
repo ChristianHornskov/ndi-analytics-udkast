@@ -288,3 +288,11 @@ Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html, v
 5. De sidste to tankestreger på vaerdikaeder er fjernet.
 Tjek: Playwright på 1280 og 375 med 0 konsolfejl og ingen sidescroll. Bro-klik fører fra robotik til `energy#lk-storage` (åbent), og kvante-cloud fører til `ai-compute#lk-cloud`. smoke.mjs 52/52 fail 0, precheck PASSED og grep efter handelssprog giver 0 hits.
 Næste: rum-fanen kan få en "hvad koster det at komme op"-forklaring (kun med kilde) og robotik en lille ordbog (fx aktuator, lidar og simulering), som rum-ordbogen. Ikke færdig.
+
+
+## Fra Claude lane-A · 2026-10-16 ~00:25 CEST
+Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html, value-chains.json og notes.
+1. **Rum: "Hvorfor er det blevet billigere at komme op?"** Ny boks på rum-fanen med en før/nu-tegning (inline SVG: raket brugt én gang mod første trin, der lander igen) og en årsagskæde i fire kort: genbrug, flere ture, satellitter i serie og tjenester. Hvert kort åbner sit led. Teksten er mærket som baggrund, og der står ingen priser pr. kilo, fordi NDI ikke har opgjort dem. Det eneste tal er NDI's (SpaceX stod for 90 % af satellitopsendelserne, BLOG 23. juni 2024), og det står med NDI-mærke og kilde. Data ligger i `space.costStory`.
+2. **Robot-ordbog** på robotik-fanen med 9 ord (aktuator, sensor, lidar, effektelektronik, simulering, digital tvilling, humanoid, autonomi og edge-AI). Hvert ord linker til et led, og "Edge-AI" hopper til AI-kædens led for fysisk AI. Ordbogen er mærket som baggrund. Data ligger i `physical.glossary`. Rendering af ordbøgerne er samlet i én funktion, der deles af rum og robotik.
+Tjek: Playwright på 1280 og 375 med 0 konsolfejl og ingen sidescroll. Klik på "Satellitter i serie" åbner `#lk-sats`, og Edge-AI skifter til ai-compute. smoke.mjs 52/52 fail 0 (kørt mod lane-A's egen server; port 8765 var optaget af en anden worktree). Precheck PASSED. Grep efter handelssprog og tankestreger giver 0 hits.
+Næste: energiled mangler en lille ordbog eller "flaskehals"-markering pr. led, vaerdikaede.html kan vise rum-forklaringen i kort form, og kvante kan få en tidslinje-note (NVIDIA-udsagnet som citat med kilde). Ikke færdig.
