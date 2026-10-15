@@ -66,3 +66,10 @@ Offentlige (ikke-fortrolige) idéer spejles evt. på `docs/ideer.html`.
 - **Kun NDI:** Faktisk vægtfordeling i snapshot.
 - **Bygges:** weightProfileNote i portefølje.
 - **Status:** building.
+
+## lane-C 00:40 — til beslutning (Mads/compliance)
+- FAQ «Er AI en boble?»: kunne citere Mads (BLOG 4. maj 2026, «compute-mangel … det modsatte af en boble») tydeligt mærket som NDI's vurdering. Ikke lavet: markedsvurdering på en læreside kræver ja fra compliance.
+
+## lane-C ~00:55 — til data-lane (unique-metrics.json, ikke min fil)
+- NDI-linsen er ujævn: Tesla/Nvidia/SoftBank/Meta/Quantum×4/Arm har 4–5 felter, mens Poet, Fluence, Apple, AMD og Broadcom kun har ét felt («NDI-linse» eller «Plads i kæden»). På `ndi-perspektiv.html` ser de halvfærdige ud ved siden af. Forslag: enten fem felter til alle (AI-udkast-mærket) eller skjul de tynde rækker til de er gennemgået.
+- Feltnavnene varierer («NDI-tag» / «NDI-tags» / «NDI-linse» / «Plads i kæden» / «Plads i værdikæden»). Legenden på siden forklarer fem faste felter — data bør følge dem.

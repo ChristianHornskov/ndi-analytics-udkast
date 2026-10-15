@@ -107,3 +107,17 @@ Sider: ideer, kort, om-data, invester, risici, ndi-perspektiv, laer/*.
 - Afdækning: ingen kilde i notes/data om valutaafdækning → siden nævner det ikke. Kun KID-flaget `valutarisiko: true`.
 - Intet om hvor dollaren går hen. «Det viser vi ikke: gæt på, hvor dollaren går hen.» Ingen handelssprog.
 - FAQ-kortsvar «Hvorfor så mange aktier?» havde jargon («idiosynkratisk varians») → omskrevet til almindeligt dansk.
+
+## ~00:40 CEST lane-C (Claude) — FAQ + risici
+- Flodsystem-svaret i FAQ bruger [M]-formuleringen fra VIDENSBOT-vaerdikaeder (vand = efterspørgsel, dæmninger = flaskehalse, presset flytter; BLOG 30. marts 2026). Ingen «øge eksponeringen»/købsmulighed.
+- **Bevidst udeladt:** et FAQ-svar «Er AI en boble?» med Mads' «vi står i det modsatte af en boble» (BLOG 4. maj 2026). Det er en markedsvurdering, ikke en forklaring — kræver Mads/compliance-ja før det kommer på siden. Lagt i IDEAS.
+- Omkostningssvaret nævner ingen satser; peger på KID (gældende dokument).
+
+## ~00:35 CEST lane-C (Claude)
+- Ordliste «Cloud og AI-modeller» bruger value-chains.json-formuleringen «sværere at investere i lige nu» som NDI-vurdering — ingen anbefaling. «Robotik» = Vidensbot fase 3 (automatisering og robotisering), robotter forstået bredt.
+- Sprogscan af lane-C-sider (købsmulighed, kursmål, timing, billig/dyr, undervurderet, trading): ingen træffere ud over negationer («ikke automatisk billig», «ikke en anbefaling»).
+
+## ~00:55 CEST lane-C (Claude) — ordliste 87 + sprogscan
+- Sprogscan (købsmulighed, kursmål, timing, billig/dyr, undervurderet, vinder, boble, trading, anbefal*) på alle lane-C-sider: 60 træffere, alle negationer eller ansvarsfraskrivelser («ikke en opfordring til at købe eller sælge», «ikke automatisk billig», «ikke at finde den ene vinder»). Intet at rette.
+- Nye begreber er beskrivende: «Hold øje med» = «hvad man kan følge, ikke en prognose». «Eksportregler»: «ikke en vurdering af, hvordan reglerne ændrer sig». «Indre værdi»: forskel til børsværdi «kan være stor i begge retninger» — ingen rabat/præmie-påstand om SoftBank.
+- «Neocloud» nævner CoreWeave som eksempel (findes i snapshot 1. jun 2026, og NDI-blogindlæg «The economy of a neocloud» er kilde i company-profiles). Ingen vurdering af selskabet.

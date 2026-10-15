@@ -655,3 +655,33 @@ Tjekket i Chromium ved 375 px. Indledningerne står. Klik fra elproduktion til N
 - Lær-hub, kort.html, FAQ (nyt kortsvar «Påvirker dollaren afkastet?», jargon fjernet i «Hvorfor så mange aktier?»), risici.html valutakort («mindst to tredjedele i dollar» → link til siden). HANDOFF trin 8–9 opdateret.
 - Test: 375/1280 på 6 sider: 0 konsolfejl, 0 døde links/ankre, ingen h-overflow; skydere verificeret. precheck: se push.
 - Branch `lane-C` klar til merge. Næste: lær-hub gruppering (13 døre) + UX-review 02:00.
+
+## Fra Claude lane-C (lær-hub grupperet + fald fra top) · ~00:45 CEST 16/10
+- `laer/index.html`: læsesti «Ny her? Start med de tre» (Sådan tænker vi → Hvorfor så mange aktier → CAGR og gennemsnit, ca. 9 min) + 13 døre i fire grupper (Tankegangen · Afkast og udsving · Fonden i praksis · Slå op); form + læsetid på hver dør; værdikæde-døren i flodsystem-sprog.
+- Jargon «drawdown» → «fald fra top» i dør-/linktekst: variance-drag, hvorfor-mange-aktier, kort, om-data, ideer, FAQ. **Til anden lane:** `drawdown.html` title/h1 «Drawdown» → «Fald fra top».
+- HANDOFF trin 9 (hub), UX-review checkpoint.
+- Test: 375/1280 på 7 sider: 0 konsolfejl, 0 døde links, ingen h-overflow. precheck: se push.
+- Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + FAQ-kortsvar mod de nye ordliste-begreber.
+
+## Fra Claude lane-C (FAQ 15 kortsvar + risici flodsystem) · ~00:40 CEST 16/10
+- `laer/faq.html`: 11 → 15 korte svar (flodsystem, koncentration, omkostninger/kurtage, Tesla multi-tag); P/E-, tema- og invester-svar omskrevet fra stikord til sætninger, invester-svaret matcher nu «Tre spørgsmål» på invester.html.
+- `risici.html`: flaskehalskortet har nu de fem dæmninger fra Vidensbot + link til `vaerdikaeder.html#kap-flod`.
+- Notes: HANDOFF trin 8 (15 svar), UX-review, VIDENSBOT-live-check («boble»-svar bevidst udeladt), IDEAS (til beslutning).
+- Test: 8763, 375/1280: 0 konsolfejl, ingen h-overflow, søgning «flodsystem»/«kurtage» rammer de nye svar. precheck PASSED.
+- Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + ndi-perspektiv.html sprogtjek mod Vidensbot.
+
+## Fra Claude lane-C (ideer: fra forslag til tema + ordliste 78) · ~00:35 CEST 16/10
+- `ideer.html`: syvende visuelle form «Fra «Andet» til tema» — proportionsbjælke 67 · 48 · 230 af 345 aktier, flow Andet → Forslag → Tema med vægt, de 48 forslag fordelt på temaer (alle 4 Quantum er forslag). Tal fra portfolio.json pr. 1. jun 2026. Idé-kortet linker til flowet; og:description og kort.html fulgt med.
+- `om-data.html`: ordliste 75 → 78 (cloud og AI-modeller, robotik, energilagring og batterier); gruppetæller 18 · 14 · 22 · 24.
+- Notes: HANDOFF trin 7 (syv former) + trin 8 (78), UX-review, VIDENSBOT-live-check.
+- Test: 8763, 375/1280: 0 konsolfejl, ingen h-overflow, 0 døde ankre. precheck: se push.
+- Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + lær-sider linker til de nye begreber (robotik/cloud) + risici sprogtjek.
+
+## Fra Claude lane-C (ordliste 87 + linse-links + sprogscan) · ~00:55 CEST 16/10
+- `om-data.html`: ordliste 78 → 87 (rebalancering, hold øje med, kundekoncentration, kapitalbehov, indre værdi, qubit og fejlretning, neocloud, wafer, eksportregler). Gruppetæller 18 · 15 · 27 · 27.
+- `ndi-perspektiv.html`: legenden linker til de nye begreber. `laer/saadan-taenker-vi.html`: rebalancering → ordliste. `kort.html`: tæller 87.
+- Sprogscan af alle lane-C-sider mod Vidensbot: 60 træffere, alle negationer. Intet at rette.
+- **Til data-lane:** `unique-metrics.json` har fem tynde rækker (Poet, Fluence, Apple, AMD, Broadcom) og ujævne feltnavne (IDEAS).
+- Notes: HANDOFF trin 8 (87), UX-review, VIDENSBOT-live-check, IDEAS.
+- Test: 8763, 375/1280: 0 konsolfejl, ingen h-overflow, 0 døde ankre, FAQ-søgning rammer de nye begreber. precheck: se push.
+- Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + ideer.html ottende form.

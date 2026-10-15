@@ -202,3 +202,33 @@ Ingen nye.
 - Skydere testet: 0/−10 → 900 kr., +10/+5 → 1.155 kr., −30/+20 → 840 kr. Fallbacktekst uden JS står under.
 - FAQ: «valuta» finder artiklen (hub-scan i faq-search.js tager den automatisk med) og ordlisteopslaget.
 - Obs til næste review: lær-hubben har nu 13 døre. Overvej gruppering (Afkast · Fonden · Porteføljen) ved 02:00.
+
+## ~00:45 CEST lane-C checkpoint (Claude) — lær-hub grupperet
+- **Før:** 13 ens døre i ét gitter; ingen indgang for nye, ingen forskel på «læs en tanke» og «slå et ord op». Ordliste-døren sagde «drawdown» (jargon).
+- **Nu:** «Ny her? Start med de tre» (nummereret læsesti, gul top, pile → / ↓ på mobil), derefter fire grupper med farveprik og én linje: Tankegangen (2×2) · Afkast og udsving · Fonden i praksis · Slå op. Hver dør viser form + læsetid (ordtælling ÷ ~220 ord/min, rundet).
+- **Jargon:** «drawdown» → «fald fra top» i link-/dørtekster på lane-C-sider (variance-drag, hvorfor-mange-aktier, kort, om-data lede, ideer, FAQ-chip + spørgsmål). **Ikke min fil:** `drawdown.html` hedder stadig «Drawdown · …» i title/h1 — til den lane, der ejer den.
+- **Mobil:** hub 3.409 px (375). Læsestien dublerer 3 døre bevidst; kan skæres, hvis Mads synes den er lang.
+- Test: 375/1280 på 7 sider: 0 konsolfejl, 0 døde links, ingen h-overflow.
+
+## ~00:40 CEST lane-C checkpoint (Claude) — FAQ-kortsvar + risici-flodsystem
+- **FAQ 11 → 15 korte svar.** Nye: *Hvad er flodsystemet?* (→ vaerdikaeder#kap-flod), *Er det ikke meget teknologi i én fond?* (→ ordliste koncentrationsrisiko), *Hvad koster det at købe andele?* (løbende omkostninger vs. kurtage/spread, ingen satser — «står i KID»), *Hvorfor står Tesla ikke bare som bilselskab?* (→ ideer#h-vs).
+- **Stikord-svar skrevet om til sætninger:** P/E («Markedets forventning. Ikke en facitliste…» → hvad tallet er, og hvorfor investering trækker det ned), tema («Segmenter viser eksponering» → hvad et tema viser), invester («Generelt flow: … ordre» — anglicisme, og passede ikke til siden). Første udkast skrev «fire trin»; invester.html har «Tre spørgsmål før du investerer» → svaret følger nu siden (tid/5 år, fald, bred tech-fond).
+- **risici.html:** flaskehalskortet nævnte fire dæmninger («cloud og apps»). Nu de fem fra Vidensbot (energi, datacentre, halvledere, cloud og modeller, applikationer og fysisk AI), «presset flytter videre», link direkte til `#kap-flod` + ordliste.
+- Test (8763): 375/1280 FAQ 15 kort uden søgning, «flodsystem» → kortsvar, ordliste, artikel øverst; «kurtage» → ordliste-anker; risici-link findes; 0 konsolfejl, ingen h-overflow.
+
+## ~00:35 CEST lane-C checkpoint (Claude) — ideer.html «Fra Andet til tema» + ordliste 78
+- **Ny form (7. på ideer.html):** proportionsbjælke + tre-trins flow (Andet → Forslag → Tema) + små søjler for de 48 forslag pr. tema. Rigtige tal fra portfolio.json (PMINDI, 1. jun 2026): 67 / 48 / 230 af 345; vægt ca. 11,6 / 13,6 / 66,8 % (de 345 aktier vejer ca. 92 % i rapporten — står i figurteksten, så ingen undrer sig over at det ikke summer til 100).
+- Ærlighed: «Tema»-trinnet siger eksplicit, at også ældre temaer gennemgås før de er endelige (matcher ordlistens g-temaforslag). Intet «endeligt» påstået.
+- Fundet og rettet: klassen `.q` kolliderede med citatkortene (Quantum-rækken fik panel-baggrund) → `.qn`. Søjlerne strakte sig over 1100 px på desktop → max-width 560.
+- Ordliste 75 → 78: cloud og AI-modeller, robotik, energilagring og batterier (de hyppigste værdikæde-ord uden opslag: robot ×37, cloud ×12, batteri ×8). Wafer dækkes af litografi.
+- Test 375/1280: 0 konsolfejl, ingen h-overflow, #g-robotik/#g-cloud åbner rigtig gruppe på mobil.
+
+## ~00:55 CEST lane-C checkpoint (Claude) — ordliste 87 + linse-links
+### Løst
+- Ordliste 78 → 87: rebalancering (Fonden); hold øje med, kundekoncentration, kapitalbehov, indre værdi, qubit og fejlretning (Portefølje); neocloud, wafer, eksportregler (Værdikæder). Valgt ud fra ord, der står på siderne (NDI-linsen, value-chains.json, Quantum-temaet), men ikke var forklaret. Gruppetællere talt fra DOM: 18 · 15 · 27 · 27.
+- `ndi-perspektiv.html`: legenden linker «Hold øje med» og «Hvad ejer man?» til de nye begreber. `saadan-taenker-vi.html`: «rebalancering» linker til ordlisten.
+- FAQ-søgning finder de nye begreber (neocloud, qubit, rebalancering, indre værdi).
+### SHOULD (anden lane)
+- `unique-metrics.json`: fem selskaber har kun ét linse-felt, og feltnavnene varierer. Se IDEAS.
+### Test
+- 8763, 375/1280 på 5 sider: 0 konsolfejl, ingen h-overflow, 0 døde ankre (alle `om-data.html#…` fra FAQ og linse findes). Dybt link `#g-neocloud` åbner den rigtige gruppe på mobil.
