@@ -6,86 +6,81 @@
   <meta name="robots" content="noindex,nofollow">
   <title>Teknologiske værdikæder · NDI Analytics</title>
   <link rel="stylesheet" href="css/ndi.css">
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
   <!-- og:start -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="NDI Analytics (udkast)">
   <meta property="og:locale" content="da_DK">
   <meta property="og:title" content="Teknologiske værdikæder · NDI Analytics">
-  <meta property="og:description" content="AI-compute, fysisk tech og energi som interaktive kæder. Treemap, tidslinje og filosofi. Eksponering, ikke anbefaling.">
+  <meta property="og:description" content="AI-compute, robotik, energi, rum og quantum som flodsystem med flaskehalse. Eksponering, ikke anbefaling.">
   <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/vaerdikaeder.html">
   <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
   <!-- og:end -->
-
   <style>
-    .vc-hero{display:grid;gap:18px;margin:12px 0 28px}
-    @media(min-width:900px){.vc-hero{grid-template-columns:1.2fr .8fr;align-items:end}}
+    .vc-hero{display:grid;gap:18px;margin:12px 0 20px}
+    @media(min-width:900px){.vc-hero{grid-template-columns:1.15fr .85fr;align-items:start}}
     .vc-callout{background:linear-gradient(135deg,#0f2a32 0%,#0b171d 60%);border:1px solid var(--line);border-left:4px solid var(--yellow);border-radius:12px;padding:16px 18px;font-size:14px;line-height:1.55;color:var(--muted)}
     .vc-callout strong{color:var(--yellow)}
-    .vc-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 20px}
+    .chapter-nav{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 20px;position:sticky;top:64px;z-index:20;padding:8px 0;background:linear-gradient(#0b171df2,#0b171dcc 70%,transparent);backdrop-filter:blur(4px)}
+    .chapter-nav a{font-size:12px;color:var(--brand);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:6px 10px;background:#0b171d}
+    .chapter-nav a:hover{border-color:var(--cyan);color:var(--cyan)}
+    @media (prefers-reduced-motion:reduce){.chapter-nav{position:static}}
+    .dams{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0;align-items:center}
+    .dam{border:1.5px solid var(--brand);border-radius:10px;padding:10px 12px;background:#0b171d;min-width:110px;flex:1}
+    .dam .lab{font-size:13px;color:var(--cyan);font-weight:700}
+    .dam .hint{font-size:11px;color:var(--muted);margin-top:4px}
+    .dam-arrow{color:var(--brand);font-size:18px;flex:0}
+    .vc-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 12px}
     .vc-tabs .control{min-height:44px}
+    .layout-toggle{display:flex;gap:8px;margin:8px 0 12px;flex-wrap:wrap}
     .vc-chain{display:grid;gap:0;margin:8px 0 28px}
     .vc-link{display:grid;grid-template-columns:56px 1fr;gap:12px;padding:16px;border:1.5px solid var(--brand);border-radius:12px;background:#0b171d;margin:0;transition:border-color .15s,box-shadow .15s}
-    .vc-link+ .vc-arrow{text-align:center;color:var(--brand);font-size:18px;padding:4px 0;opacity:.85}
+    .vc-link+.vc-arrow{text-align:center;color:var(--brand);font-size:18px;padding:4px 0;opacity:.85}
     .vc-link:hover,.vc-link.is-open{border-color:var(--yellow);box-shadow:inset 3px 0 0 var(--yellow)}
     @media (prefers-reduced-motion:reduce){.vc-link{transition:none}}
     .vc-ico{width:56px;height:56px;border-radius:12px;background:#132a32;border:1px solid var(--line);display:grid;place-items:center;font-size:22px;color:var(--cyan)}
     .vc-link h3{font-size:16px;margin:0 0 4px;color:var(--cyan)}
     .vc-meta{font-size:12px;color:var(--muted)}
+    .vc-ndi{font-size:13px;color:var(--text);line-height:1.45;margin-top:8px}
     .vc-bar{height:6px;background:#1a3038;border-radius:99px;margin:10px 0 6px;overflow:hidden}
     .vc-bar>i{display:block;height:100%;background:linear-gradient(90deg,var(--brand),var(--cyan));border-radius:99px}
     .vc-cos{display:none;margin-top:10px;padding-top:10px;border-top:1px solid #829da033}
     .vc-link.is-open .vc-cos{display:block}
     .vc-cos a{display:inline-block;margin:3px 6px 3px 0;font-size:12px}
-    .vc-why{font-size:13px;color:var(--muted);line-height:1.5;margin-top:8px}
-    /* Treemap / sunburst */
+    .vc-why{font-size:14px;color:var(--muted);line-height:1.55;max-width:68ch}
+    .anno{font-size:12px;color:var(--yellow);margin-top:4px}
     .viz-toggle{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 12px}
     .tm-svg,.sb-svg{width:100%;height:auto;display:block;margin:8px 0 4px;background:#0b171d;border:1px solid var(--line);border-radius:12px}
     .tm-svg text,.sb-svg text{pointer-events:none;font-family:inherit}
-    .tm-leaf{cursor:pointer;stroke:#0b171d;stroke-width:2}
-    .tm-leaf:hover{stroke:var(--yellow);stroke-width:2.5}
-    .sb-arc{cursor:pointer;stroke:#0b171d;stroke-width:1.5}
-    .sb-arc:hover{stroke:var(--yellow);stroke-width:2}
+    .tm-leaf,.sb-arc{cursor:pointer;stroke:#0b171d;stroke-width:1.5}
+    .tm-leaf:hover,.sb-arc:hover{stroke:var(--yellow);stroke-width:2.5}
     .viz-legend{display:flex;flex-wrap:wrap;gap:8px 14px;margin:8px 0 4px;font-size:12px;color:var(--muted)}
     .viz-legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:middle}
-    /* Timeline */
     .tl{position:relative;margin:24px 0 12px;padding-left:22px;border-left:2px solid var(--brand)}
     .tl-item{position:relative;padding:0 0 22px 8px}
     .tl-item::before{content:"";position:absolute;left:-27px;top:4px;width:12px;height:12px;border-radius:50%;background:var(--yellow);box-shadow:0 0 0 3px #0b171d}
     .tl-y{font-size:12px;color:var(--yellow);letter-spacing:.5px;font-weight:700}
     .tl-t{font-size:16px;margin:2px 0 4px}
     .tl-d{font-size:13px;color:var(--muted);line-height:1.5;max-width:62ch}
-    /* Small multiples exposure */
     .sm{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:16px 0}
     .sm-card{background:#0b171d;border:1px solid var(--line);border-radius:12px;padding:14px}
     .sm-card .lab{font-size:12px;color:var(--muted)}
-    .sm-card .num{font-size:26px;font-weight:700;color:var(--cyan);letter-spacing:-.6px;margin:6px 0 2px}
-    .scroll-chapters{display:grid;gap:28px;margin:32px 0}
-    .chapter{scroll-margin-top:80px}
-    .chapter h2{font-size:22px;letter-spacing:-.4px;margin-bottom:8px}
-
-    /* Desktop: horizontal scroll-telling strip for chain */
-    @media(min-width:960px){
-      .vc-chain.horiz{display:flex;align-items:stretch;gap:0;overflow-x:auto;padding-bottom:8px;scroll-snap-type:x mandatory}
-      .vc-chain.horiz .vc-arrow{writing-mode:horizontal-tb;padding:0 6px;align-self:center;flex:0 0 auto}
-      .vc-chain.horiz .vc-arrow{transform:rotate(-90deg)}
-      .vc-chain.horiz .vc-link{flex:0 0 280px;scroll-snap-align:start;min-height:220px}
-    }
-    .layout-toggle{display:flex;gap:8px;margin:8px 0 12px;flex-wrap:wrap}
-    .anno{font-size:12px;color:var(--yellow);margin-top:4px}
-
-
+    .sm-card .num{font-size:22px;font-weight:700;color:var(--cyan);letter-spacing:-.5px;margin:6px 0 2px}
     .scarce-grid{display:grid;gap:12px;margin:16px 0}
     @media(min-width:800px){.scarce-grid{grid-template-columns:1fr 1fr}}
     .scarce{border:1.5px solid var(--brand);border-radius:12px;padding:16px;background:#0b171d;border-left:4px solid var(--yellow)}
     .scarce h3{font-size:15px;color:var(--cyan);margin:0 0 6px}
     .scarce p{font-size:13px;color:var(--muted);line-height:1.55;margin:0}
     .scarce .tagline{font-size:11px;color:var(--yellow);letter-spacing:.4px;margin-bottom:6px;font-weight:700}
-
-    .chapter-nav{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 20px;position:sticky;top:64px;z-index:20;padding:8px 0;background:linear-gradient(#0b171df2,#0b171dcc 70%,transparent);backdrop-filter:blur(4px)}
-    .chapter-nav a{font-size:12px;color:var(--brand);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:6px 10px;background:#0b171d}
-    .chapter-nav a:hover{border-color:var(--cyan);color:var(--cyan)}
-    @media (prefers-reduced-motion:reduce){.chapter-nav{position:static}}
-
+    .quote{border:1px solid var(--line);border-radius:12px;padding:16px 18px;background:#0b171d;margin:12px 0;font-size:14px;line-height:1.55}
+    .quote q{color:var(--cyan);font-style:normal;font-weight:600}
+    .quote .src{margin-top:8px;font-size:12px;color:var(--muted)}
+    .chapter{scroll-margin-top:88px}
+    @media(min-width:960px){
+      .vc-chain.horiz{display:flex;align-items:stretch;gap:0;overflow-x:auto;padding-bottom:8px;scroll-snap-type:x mandatory}
+      .vc-chain.horiz .vc-arrow{padding:0 6px;align-self:center;flex:0 0 auto;transform:rotate(-90deg)}
+      .vc-chain.horiz .vc-link{flex:0 0 300px;scroll-snap-align:start;min-height:240px}
+    }
   </style>
 </head>
 <body>
@@ -100,26 +95,40 @@
     </nav>
   </header>
   <main id="main">
-    <p class="eyebrow">TECH · VÆRDIKÆDER</p>
+    <p class="eyebrow">TECH · VÆRDIKÆDER · FLODSYSTEM</p>
     <h1>Hvor sidder fonden i teknologien?</h1>
-        <nav class="chapter-nav" aria-label="Afsnit">
+
+    <nav class="chapter-nav" aria-label="Afsnit">
+      <a href="#kap-flod">Flodsystem</a>
       <a href="#kap-treemap">Treemap</a>
       <a href="#kap-kaeder">Kæder</a>
       <a href="#kap-timeline">Tidslinje</a>
       <a href="#kap-flaskehalse">Flaskehalse</a>
+      <a href="#kap-rum">Rum-citat</a>
       <a href="#kap-filosofi">Filosofi</a>
     </nav>
 
     <div class="vc-hero">
-      <p class="lede">Interaktive kæder for AI-compute, fysisk tech og energi. Hvert led viser forsinket eksponering fra snapshotet. Temaer mærket forslag afventer gennemgang.</p>
-      <aside class="vc-callout" id="phil-callout">
-        <strong>Hvorfor hele kæden?</strong>
-        <span id="phil-text"> Indlæser…</span>
+      <div>
+        <p class="lede" id="phil-lede">Indlæser…</p>
+        <p class="band" id="compliance-band"></p>
+      </div>
+      <aside class="vc-callout">
+        <strong>Flodsystemet</strong>
+        <span id="phil-flod"></span>
+        <p class="src" id="phil-flod-src" style="margin-top:8px"></p>
       </aside>
     </div>
 
+    <section class="chapter panel" id="kap-flod">
+      <h2>Fem dæmninger i AI-kæden</h2>
+      <p class="lede" style="font-size:14px;margin-bottom:8px">Når én flaskehals letter, flytter presset. Ikke en prognose — en ramme.</p>
+      <div class="dams" id="dams" role="list"></div>
+      <p class="src" id="counts-note"></p>
+    </section>
+
     <section class="chapter panel" id="kap-treemap">
-      <h2>Tema-eksponering (treemap)</h2>
+      <h2>Tema-eksponering</h2>
       <p class="src" id="tm-asof"></p>
       <div class="viz-toggle" role="group" aria-label="Tema-visualisering">
         <button type="button" class="control active" id="viz-tm" aria-pressed="true">Treemap</button>
@@ -133,77 +142,106 @@
     <section class="chapter" id="kap-kaeder">
       <h2 style="font-size:22px;margin-bottom:8px">Vælg en kæde</h2>
       <div class="vc-tabs" id="chain-tabs" role="tablist" aria-label="Værdikæder"></div>
+      <div class="layout-toggle" role="group" aria-label="Visning">
+        <button type="button" class="control active" id="lay-vert" aria-pressed="true">Lodret</button>
+        <button type="button" class="control" id="lay-horiz" aria-pressed="false">Vandret (desktop)</button>
+      </div>
       <p class="vc-why" id="chain-why"></p>
-      <p class="anno" id="chain-anno">Tip: klik et led for selskaber. Gul kant = åbent led. Vægte er forsinket eksponering.</p>
+      <p class="src" id="chain-src"></p>
+      <p class="anno">Tip: klik et led for selskaber og NDI-blik. Gul kant = åbent. Vægte er forsinket eksponering.</p>
       <div class="sm" id="chain-sm"></div>
       <div class="vc-chain" id="chain-view"></div>
+      <p class="band" id="theme-note"></p>
     </section>
 
     <section class="chapter panel" id="kap-timeline">
       <h2>Tidslinje: teknologiske skift</h2>
-      <p class="lede" style="font-size:14px;margin-bottom:8px">Ikke en prognose. En ramme for, hvorfor knaphed og flaskehalse flytter sig.</p>
+      <p class="lede" style="font-size:14px;margin-bottom:8px">Mads' forventninger og NDI's vurderinger — ikke fondens prognoser.</p>
       <div class="tl" id="timeline"></div>
     </section>
 
-
     <section class="chapter panel" id="kap-flaskehalse">
-      <h2>Fysiske flaskehalse (scroll-telling)</h2>
-      <p class="lede" style="font-size:14px">NDI ser AI-værdikæden som et flodsystem med dæmninger. Når én flaskehals letter, flytter presset. Ikke en prognose — en ramme for, hvorfor fonden ejer hele kæden.</p>
+      <h2>Fysiske flaskehalse</h2>
+      <p class="lede" style="font-size:14px">NDI ser AI-værdikæden som et flodsystem med dæmninger. Når én flaskehals letter, flytter presset.</p>
       <div class="scarce-grid">
-        <article class="scarce">
-          <div class="tagline">FLASKEHALS · ENERGI</div>
-          <h3>Strøm før flere chips</h3>
-          <p>Uden ny elproduktion og stærkere net kan der ikke bygges mere compute. Gasturbiner, kernekraft, sol/vind, batterier og transmission hører med i tech-kæden — ikke kun chipdesign.</p>
-        </article>
-        <article class="scarce">
-          <div class="tagline">FLASKEHALS · WAFERS &amp; PACKAGING</div>
-          <h3>Silicium og avanceret pakning</h3>
-          <p>Efterspørgslen presser halvleder-kæden: design, foundry, udstyr og HBM/optik-pakning. Knaphed flytter mellem led, når kapacitet åbner et andet sted.</p>
-        </article>
-        <article class="scarce">
-          <div class="tagline">FLASKEHALS · DATACENTER</div>
-          <h3>Racks, køling, transformere</h3>
-          <p>Byggetid, køling og strømfordeling i datacentret er fysiske begrænsninger. Softwaren venter på mursten, kobber og kWh.</p>
-        </article>
-        <article class="scarce">
-          <div class="tagline">FLASKEHALS · OPTIK &amp; FOLK</div>
-          <h3>Forbindelser og kompetencer</h3>
-          <p>Optiske connects mellem knuder, og folk der kan bygge og drive systemerne, er også knaphed. Fonden spreder sig, fordi vi ikke ved, hvilken dæmning der næste gang holder vandet tilbage.</p>
-        </article>
+        <article class="scarce"><div class="tagline">FLASKEHALS · ENERGI</div><h3>Strøm før flere chips</h3><p>Uden ny elproduktion og stærkere net kan der ikke bygges mere compute. Gasturbiner, kernekraft, sol/vind, batterier og transmission hører med i tech-kæden.</p></article>
+        <article class="scarce"><div class="tagline">FLASKEHALS · DATACENTRE</div><h3>Racks, køling, tilladelser</h3><p>Byggetid, køling og strømfordeling er fysiske begrænsninger. Softwaren venter på mursten, kobber og kWh.</p></article>
+        <article class="scarce"><div class="tagline">FLASKEHALS · HALVLEDERE</div><h3>Design, fab, HBM, optik</h3><p>Efterspørgslen presser chipdesign, foundry, hukommelse og optiske connects. Knaphed flytter mellem led.</p></article>
+        <article class="scarce"><div class="tagline">FLASKEHALS · FYSISK AI</div><h3>Robotter og automation</h3><p>Når AI får krop, flytter presset til komponenter, simulering og autonome systemer. Se robotik-kæden.</p></article>
       </div>
-      <p class="band">Formuleringer inspireret af NDI's offentlige formidling. Generel information — ikke anbefaling. Se også <a href="laer/saadan-taenker-vi.html">Sådan tænker vi</a>.</p>
+    </section>
+
+    <section class="chapter panel" id="kap-rum">
+      <h2>Rum: citat med kilde</h2>
+      <div id="quotes"></div>
+      <p class="band">Citatet er Elon Musks påstand gengivet af NDI — aldrig NDI's egen forventning.</p>
     </section>
 
     <section class="chapter panel" id="kap-filosofi">
       <h2>NDI-blikket (kort)</h2>
       <div class="sm">
-        <div class="sm-card"><div class="lab">Princip</div><div class="num" style="font-size:16px;line-height:1.35;color:var(--text)">Udvikling &gt; vinder</div><p class="src">Hellere AI-kæden end én chip.</p></div>
-        <div class="sm-card"><div class="lab">Princip</div><div class="num" style="font-size:16px;line-height:1.35;color:var(--text)">Variansdrag</div><p class="src">Bredde som matematisk fordel.</p></div>
+        <div class="sm-card"><div class="lab">Princip</div><div class="num" style="font-size:16px;line-height:1.35;color:var(--text)">Udvikling &gt; vinder</div><p class="src">Retning kan diskuteres. Ikke den ene aktie.</p></div>
+        <div class="sm-card"><div class="lab">Princip</div><div class="num" style="font-size:16px;line-height:1.35;color:var(--text)">Hele kæden</div><p class="src">Råstoffer, energi og infrastruktur tæller med.</p></div>
         <div class="sm-card"><div class="lab">Princip</div><div class="num" style="font-size:16px;line-height:1.35;color:var(--text)">Knaphed</div><p class="src">El, wafers, optik, folk.</p></div>
         <div class="sm-card"><div class="lab">Princip</div><div class="num" style="font-size:16px;line-height:1.35;color:var(--text)">Forsinket sandhed</div><p class="src">Offentligt snapshot, ikke live handler.</p></div>
       </div>
       <aside class="vc-callout" style="margin-top:14px">
         <strong>Eksempel på multi-rolle:</strong>
-        Tesla tæller primært som fysisk tech, men multi-tagges også energi (lagring/sol). Ét selskab kan sidde i flere led — derfor multi-tag og flere kæder, ikke én silo.
+        Tesla tæller primært som fysisk tech, men multi-tagges også energi (lagring/sol). Ét selskab kan sidde i flere led.
       </aside>
-      <p class="band">Formuleringer er inspireret af NDI's offentlige formidling og Vidensbots filosofinoter. Generel information.</p>
     </section>
 
-    <p class="warn">Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.</p>
-    <p class="link-row"><a href="vaerdikaede.html">Klassisk AI-kæde →</a> · <a href="temaer.html">Temaer →</a> · <a href="index.html?view=udforsk">Udforsk →</a> · <a href="laer/saadan-taenker-vi.html">Sådan tænker vi →</a></p>
+    <p class="warn" id="warn-hist">Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.</p>
+    <p class="link-row"><a href="vaerdikaede.html">Klassisk AI-kæde →</a> · <a href="temaer.html">Temaer →</a> · <a href="tema.html?slug=quantum">Quantum →</a> · <a href="tema.html?slug=space">SpaceTech →</a> · <a href="laer/saadan-taenker-vi.html">Sådan tænker vi →</a></p>
   </main>
   <script type="module">
     import { daTheme, fmtDate } from './js/data.js';
     const esc = (s) => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
     const pack = await fetch('data/value-chains.json').then(r => r.json());
     const fund = 'pmindi';
-    document.getElementById('phil-text').textContent =
-      ' NDI spreder sig i kæden, fordi knaphed flytter sig. Tesen er, at udviklingen vinder. Ikke at ét selskab gør.';
-    document.getElementById('tm-asof').textContent =
-      `Forsinket snapshot, pr. ${fmtDate(pack.asOf)}. ${pack.note}`;
 
-    // Squarified treemap + sunburst (Jesper palette)
-    const PAL = ['#89aeb4','#9ecfd6','#6d949c','#b8d4d8','#5a7f88','#c5ddd0','#4a6a72','#d4e0a8','#3d5c64','#a7cbd0'];
+    document.getElementById('phil-lede').textContent = pack.philosophy?.lede || '';
+    document.getElementById('phil-flod').textContent = ' ' + (pack.philosophy?.flod || '');
+    document.getElementById('phil-flod-src').textContent = pack.philosophy?.flodSource || '';
+    document.getElementById('compliance-band').textContent = pack.compliance || '';
+    document.getElementById('counts-note').textContent = pack.countsNote || '';
+    document.getElementById('tm-asof').textContent = `Forsinket snapshot, pr. ${fmtDate(pack.asOf)}. ${pack.note || ''}`;
+    document.getElementById('theme-note').textContent = pack.themeNote || '';
+
+    // Dams
+    const dams = document.getElementById('dams');
+    (pack.philosophy?.dams || []).forEach((d, i) => {
+      if (i) {
+        const ar = document.createElement('span');
+        ar.className = 'dam-arrow'; ar.textContent = '→'; ar.setAttribute('aria-hidden', 'true');
+        dams.appendChild(ar);
+      }
+      const el = document.createElement('div');
+      el.className = 'dam'; el.setAttribute('role', 'listitem');
+      el.innerHTML = `<div class="lab">${esc(d.label)}</div><div class="hint">${esc(d.hint)}</div>`;
+      dams.appendChild(el);
+    });
+
+    // Quotes
+    const qh = document.getElementById('quotes');
+    (pack.quotes || []).forEach(q => {
+      const d = document.createElement('blockquote');
+      d.className = 'quote';
+      d.innerHTML = `<q>${esc(q.text)}</q><div class="src">${esc(q.attribution)}. ${esc(q.note)}</div>`;
+      qh.appendChild(d);
+    });
+
+    // Timeline
+    const tl = document.getElementById('timeline');
+    (pack.timeline || []).forEach(x => {
+      const d = document.createElement('div');
+      d.className = 'tl-item';
+      d.innerHTML = `<div class="tl-y">${esc(x.y)}</div><div class="tl-t">${esc(x.t)}</div><div class="tl-d">${esc(x.d)}</div>`;
+      tl.appendChild(d);
+    });
+
+    // Viz
+    const PAL = ['#89aeb4','#9ecfd6','#6d949c','#b8d4d8','#5a7f88','#c5ddd0','#4a6a72','#d4e0a8','#3d5c64','#a7cbd0','#7aa8b0'];
     function squarify(items, x, y, w, h) {
       const total = items.reduce((s, i) => s + i.w, 0) || 1;
       const out = [];
@@ -256,7 +294,7 @@
         r.setAttribute('x', c.x); r.setAttribute('y', c.y);
         r.setAttribute('width', Math.max(0, c.w)); r.setAttribute('height', Math.max(0, c.h));
         r.setAttribute('rx', 6); r.setAttribute('fill', PAL[i % PAL.length]);
-        r.setAttribute('fill-opacity', String(0.55 + 0.35 * (c.w / items[0].w)));
+        r.setAttribute('fill-opacity', String(0.55 + 0.35 * (c.w / (items[0]?.w || 1))));
         a.appendChild(r);
         if (c.w > 70 && c.h > 36) {
           const t1 = document.createElementNS('http://www.w3.org/2000/svg', 'text');
@@ -295,12 +333,9 @@
         const a = document.createElementNS('http://www.w3.org/2000/svg', 'a');
         a.setAttribute('href', `tema.html?slug=${encodeURIComponent(c.key)}&fund=${fund}`);
         const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-        path.setAttribute('d', d);
-        path.setAttribute('class', 'sb-arc');
-        path.setAttribute('fill', PAL[i % PAL.length]);
-        path.setAttribute('fill-opacity', '0.75');
-        a.appendChild(path);
-        svg.appendChild(a);
+        path.setAttribute('d', d); path.setAttribute('class', 'sb-arc');
+        path.setAttribute('fill', PAL[i % PAL.length]); path.setAttribute('fill-opacity', '0.75');
+        a.appendChild(path); svg.appendChild(a);
       });
       const hub = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
       hub.setAttribute('cx', cx); hub.setAttribute('cy', cy); hub.setAttribute('r', r0 - 4);
@@ -336,18 +371,11 @@
     vizSb.addEventListener('click', () => paintViz('sb'));
     paintViz('tm');
 
-    // Timeline
-    const tl = document.getElementById('timeline');
-    pack.timeline.forEach(x => {
-      const d = document.createElement('div');
-      d.className = 'tl-item';
-      d.innerHTML = `<div class="tl-y">${esc(x.y)}</div><div class="tl-t">${esc(x.t)}</div><div class="tl-d">${esc(x.d)}</div>`;
-      tl.appendChild(d);
-    });
-
+    // Chains
     const tabs = document.getElementById('chain-tabs');
     const view = document.getElementById('chain-view');
     const why = document.getElementById('chain-why');
+    const src = document.getElementById('chain-src');
     const sm = document.getElementById('chain-sm');
     let active = pack.chains[0].id;
 
@@ -360,9 +388,10 @@
         b.setAttribute('aria-selected', String(on));
       });
       why.textContent = ch.why;
+      src.textContent = ch.source ? `Kilde: ${ch.source}` : '';
       const total = ch.links.reduce((s, l) => s + (l.weightSum || 0), 0) || 1;
       sm.innerHTML = ch.links.slice(0, 4).map(l =>
-        `<div class="sm-card"><div class="lab">${esc(l.label)}</div><div class="num">${String(l.weightSum).replace('.', ',')} %</div><div class="lab">${l.count} selskaber</div></div>`
+        `<div class="sm-card"><div class="lab">${esc(l.label)}</div><div class="num">${String(l.weightSum).replace('.', ',')} %</div><div class="lab">${l.count} selskaber · tema-overlap muligt</div></div>`
       ).join('');
       view.innerHTML = '';
       ch.links.forEach((l, i) => {
@@ -375,19 +404,27 @@
         el.className = 'vc-link';
         el.tabIndex = 0;
         const pct = Math.min(100, (l.weightSum / total) * 100);
+        const see = l.seeChain ? `<p class="src"><a href="#" data-see="${esc(l.seeChain)}">Åbn ${esc(l.seeChain)}-kæden →</a></p>` : '';
         el.innerHTML = `
           <div class="vc-ico" aria-hidden="true">${l.icon || '◆'}</div>
           <div>
             <h3>${esc(l.label)}</h3>
-            <div class="vc-meta">${esc(l.blurb)} · ca. ${String(l.weightSum).replace('.', ',')} % · ${l.count} selskaber</div>
+            <div class="vc-meta">${esc(l.blurb)}</div>
+            <p class="vc-ndi"><strong style="color:var(--yellow)">NDI-blik:</strong> ${esc(l.ndi || '')}</p>
+            <div class="vc-meta" style="margin-top:6px">ca. ${String(l.weightSum).replace('.', ',')} % · ${l.count} selskaber (tema-overlap)</div>
             <div class="vc-bar" aria-hidden="true"><i style="width:${pct.toFixed(1)}%"></i></div>
             <div class="vc-cos">
-              ${l.companies.map(c => `<a href="selskab.html?isin=${encodeURIComponent(c.isin)}&fund=${fund}">${esc(c.name)}${c.forslag ? ' · forslag' : ''} · ${String(c.w).replace('.', ',')} %</a>`).join('')}
-              <p class="src" style="margin-top:8px">Temaer: ${l.themes.map(daTheme).map(esc).join(', ')}. Klik leddet for at folde ud.</p>
+              ${(l.companies||[]).map(c => `<a href="selskab.html?isin=${encodeURIComponent(c.isin)}&fund=${fund}">${esc(c.name)}${c.forslag ? ' · forslag' : ''} · ${String(c.w).replace('.', ',')} %</a>`).join('')}
+              <p class="src" style="margin-top:8px">Temaer: ${(l.themes||[]).map(daTheme).map(esc).join(', ')}. Beholdning pr. ${fmtDate(pack.asOf)}.</p>
+              ${see}
             </div>
           </div>`;
         const toggle = () => el.classList.toggle('is-open');
-        el.addEventListener('click', toggle);
+        el.addEventListener('click', (e) => {
+          const a = e.target.closest('[data-see]');
+          if (a) { e.preventDefault(); e.stopPropagation(); render(a.dataset.see); view.scrollIntoView({behavior:'smooth',block:'start'}); return; }
+          toggle();
+        });
         el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } });
         view.appendChild(el);
       });
@@ -404,6 +441,18 @@
       b.addEventListener('click', () => render(c.id));
       tabs.appendChild(b);
     });
+
+    const layV = document.getElementById('lay-vert');
+    const layH = document.getElementById('lay-horiz');
+    function setLay(mode) {
+      view.classList.toggle('horiz', mode === 'h');
+      layV.classList.toggle('active', mode === 'v');
+      layH.classList.toggle('active', mode === 'h');
+      layV.setAttribute('aria-pressed', String(mode === 'v'));
+      layH.setAttribute('aria-pressed', String(mode === 'h'));
+    }
+    layV.addEventListener('click', () => setLay('v'));
+    layH.addEventListener('click', () => setLay('h'));
     render(active);
   </script>
 </body>

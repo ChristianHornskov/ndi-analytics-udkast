@@ -84,3 +84,12 @@ Se notes/STATUS.md. Forvent: smoke-quality ~108, smoke-cycle3 ~82+, precheck PAS
 8. **Risici / Om data** — compliance tone.
 
 Åbne spørgsmål til Christian: MUST 4 rester (68 Andet stadig), modenhed, privat repo vs Pages, Fundmarket på ÅTD/100k.
+
+## 2026-10-15/16 overnight (Grok) — værdikæder
+- Primær side: `docs/vaerdikaeder.html` + `docs/data/value-chains.json` (Vidensbot-indhold).
+- Kæder: ai-compute (13), physical, energy, **space**, quantum. Fintech = tema, ikke kæde.
+- Compliance: ingen handelsprog; Musk-citat kun med kilde; holdings asOf 2026-06-01.
+- Klassisk `vaerdikaede.html` bevares som enkel AI-kæde.
+- Visual variety: treemap/sunburst, timeline, flaskehalse, chapter-nav.
+- Drawdown: middel/median + maxDD-fix (~−35,8 % PMINDI).
+- Åbne MADS uden data: market cap, produktkategori, modenhed.

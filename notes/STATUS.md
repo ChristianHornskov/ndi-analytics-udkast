@@ -233,3 +233,11 @@ Ikke taget: MUST 4-rest (68 i Andet, modenhed), SHOULD 3, 5 og 7, COULD. notes/H
 
 ## Checkpoint ~23:04 CEST (Grok sole lead)
 HEAD `b35518b`. Visual-variety request shipped + reviewed. MADS værdikæde/quantum/flaskehalse/drawdown/Tesla [x]. Blokeret uden data: market cap, produktkategori, modenhed. Fortsætter til 06:30 — ikke done.
+
+
+## Fra Grok (Vidensbot værdikæder) · ~23:07 CEST
+- `value-chains.json` genopbygget fra `notes/VIDENSBOT-vaerdikaeder.md`: AI-compute 13 led (Mads-rækkefølge), robotik, energi, **rum**, quantum.
+- Flodsystem + 5 dæmninger; compliance-band; Musk/SpaceX kun som citat m. kilde.
+- Ingen handelsprog (øger eksponering / overvægt i / sikkert køb). Snapshot 2026-06-01.
+- Playwright: 5 tabs, 13 AI-led, 3 space-led, 0 konsolfejl.
+- lær/saadan-taenker-vi: flodsystem-afsnit. Fintech = tema-note, ikke kæde.
