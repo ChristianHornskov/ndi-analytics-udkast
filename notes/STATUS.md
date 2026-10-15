@@ -749,3 +749,13 @@ Fabrikken i Lynchburg fremstiller reaktorer til ubåde og hangarskibe. Siden næ
 Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Lynchburg, Pele og 3. august 2026 står. Beløbet står ikke. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `772de94` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:34 CEST. Talen skriver, at flåden også har kul, naturgas og olie, og at Brandon Shores kører videre. Ikke færdig.**
+
+Susquehanna er atomkraftværket. Siden nævner også kul, naturgas og olie. Selskabet skriver, at det leverer strøm til Amazon ved Susquehanna. Brandon Shores var planlagt lukket 1. juni 2025 og kører videre til 31. maj 2031 efter en pålidelighedsaftale. Brunner Island kan bruge både kul og naturgas. Kul skal stoppe inden udgangen af 2028, og det er ikke sket i teksten. Det er ikke en udvikler af små reaktorer. Leading, sixth largest og megawatt er ikke taget med. Ingen `reviewedAt`. Blurben under elproduktion og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Brandon Shores og Amazon står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `ea2595e` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

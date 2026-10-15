@@ -603,20 +603,24 @@
   "US87422Q1094": {
    "name": "Talen Energy",
    "theme": "energy",
-   "summary": "Producerer strøm i USA. Atomkraftværket Susquehanna er en central del af forretningen.",
-   "watch": "Drift af værket, brændsel og aftaler om at levere strøm til store forbrugere.",
+   "summary": "Producerer strøm i USA fra atomkraft, kul, naturgas og olie. Susquehanna er atomkraftværket. Siden skriver, at Brandon Shores kører videre efter en planlagt lukning. Det er ikke en udvikler af små reaktorer.",
+   "watch": "Drift af værkerne og aftalen om Brandon Shores.",
    "source": "https://www.talenenergy.com/",
    "products": "El fra egne kraftværker.",
-   "customers": "Aftagere af strøm, herunder store forbrugere.",
-   "role": "Eksisterende elproduktion med atomkraft. Ikke en udvikler af små reaktorer.",
+   "customers": "Aftagere af strøm. Selskabet skriver, at det leverer til Amazon ved Susquehanna.",
+   "role": "Værker i drift, herunder atomkraft, kul, naturgas og olie. Ikke en udvikler af små reaktorer.",
    "narrative": [
-    "Talen Energy producerer strøm i USA. Atomkraftværket Susquehanna er en central del af forretningen.",
-    "Det er et værk i drift, ikke en udvikler af små reaktorer. I kæden står selskabet på elproduktion."
+    "Talen skriver, at flåden omfatter atomkraftværket Susquehanna i Pennsylvania og også værker på kul, naturgas og olie. Selskabet skriver, at det leverer strøm til Amazon ved Susquehanna.",
+    "Siden skriver, at Brandon Shores var planlagt lukket 1. juni 2025, og at værket kører videre til 31. maj 2031 efter en pålidelighedsaftale. Brunner Island kan bruge både kul og naturgas. Selskabet skriver, at kul på Brunner Island skal stoppe inden udgangen af 2028. Det er ikke sket i denne tekst. Talen driver værker. Det er ikke en udvikler af små reaktorer."
    ],
    "narrativeSources": [
     {
      "label": "Selskabets side",
      "url": "https://www.talenenergy.com/"
+    },
+    {
+     "label": "Porteføljen",
+     "url": "https://www.talenenergy.com/our-portfolio/"
     }
    ]
   },

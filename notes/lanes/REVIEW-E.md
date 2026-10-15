@@ -207,3 +207,7 @@ Xavantina er en guldmine i Mato Grosso. Tucumã er kobber, med kommerciel produk
 ## BWXT · 2026-10-16 01:33 CEST
 
 Lynchburg fremstiller reaktorer til flåden. Columbia er under bygning, ikke i tjeneste. TRISO er brændsel. Project Pele er et design, ikke et værk i drift. Aftalen 3. august 2026 om medicinforretningen er ikke gennemført og ligger efter beholdningen. Beløbet og leading er ikke kopieret. AI-udkast uden gennemgangsdato. Atomkraft-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Talen · 2026-10-16 01:34 CEST
+
+Flåden er atomkraft, kul, naturgas og olie. Susquehanna er atomkraftværket. Amazon står som aftager ved Susquehanna. Brandon Shores var planlagt lukket 1. juni 2025 og kører videre til 31. maj 2031. Brunner Island har kul til udgangen af 2028, ikke stoppet. Leading, sixth largest og megawatt er ikke kopieret. AI-udkast uden gennemgangsdato. Elproduktions-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
