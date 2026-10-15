@@ -64,7 +64,10 @@ ensure_loops() {
 merge_ready() {
   cd "$ROOT"
   git fetch origin --prune -q || true
+  SKIP=""
+  [ -f notes/lanes/SKIP-MERGE.txt ] && SKIP=$(tr -d "\r" < notes/lanes/SKIP-MERGE.txt | tr "\n" " ")
   for L in D A E B C X R; do
+    if echo " $SKIP " | grep -q " $L "; then echo "skip lane-$L"; continue; fi
     if git rev-parse origin/lane-$L >/dev/null 2>&1; then
       n=$(git rev-list --count origin/main..origin/lane-$L 2>/dev/null || echo 0)
       if [ "$n" -gt 0 ]; then
