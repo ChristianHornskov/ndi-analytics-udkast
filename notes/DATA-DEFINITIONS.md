@@ -89,6 +89,8 @@ Batteri-blurb siger, at Fluence er batterisystemer og software, ikke et kraftvæ
 
 Råstof-leddet siger også, at Standard Lithium skriver, at et demonstrationsanlæg i Arkansas behandler saltvand, og at det ikke er de store projekter. Kurser på forsiden er ikke taget med. Almonty skrev 23. september 2026, at Sangdong har produceret wolfram for første gang siden 1993. Valtreixal er et projekt. Meddelelsen er efter beholdningen pr. 2026-06-01, og teksten siger det. Kilden er `https://almonty.com/almonty-marks-first-tungsten-production-at-sangdong-since-1993/`. Panasqueira og Los Santos står stadig som miner.
 
+Opsendelses-blurb siger, at Intuitive Machines leverer til Månen og ikke er en billedsatellit om Jorden. Siden `intuitivemachines.com` svarede med en omdirigering i ring den 16. oktober 2026, så sætningen er profilens eksisterende grænse og ikke et nyt produktnavn. Rum og compute siger, at Starlab hos Voyager er et stationsprojekt og ikke en station i drift. Voyager gav 403 samme nat. Vægtene er uændrede.
+
 ## År til dato på periodesiden
 
 `ytdReturn` i `data.js` bruger sidste punkt i året før som udgangspunkt, ikke 1. januar. For PMINDI pr. 2026-10-14 er det 2025-12-31, ikke 2026-01-02. `periode.html` viser den samme dato i "Fra → til". Kalenderår bruger samme base (`calendarYearReturns`).

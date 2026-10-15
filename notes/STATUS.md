@@ -461,3 +461,13 @@ På energikæden siger råstof-leddet, at Standard Lithium skriver, at et demons
 Tjekket i Chromium ved 375 px på råstof-leddet, i nyhedsarkivet og på de to selskabssider. AI-udkast er med. "tjekket mod kilden" er ikke med. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `760d781` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 00:43 CEST. Opsendelse siger månelander, og rum-compute siger Starlab ikke er i drift. Ikke færdig.**
+
+På rumkæden siger opsendelses-leddet, at Intuitive Machines leverer til Månen og ikke er en satellit, der tager billeder af Jorden. Rum og compute siger, at Voyager omtaler Starlab som et stationsprojekt, og at det ikke er en station i drift. Sætningerne er de grænser, profilerne allerede havde. Intuitive Machines' side sendte i ring. Voyager gav 403. Der er ingen nye produktnavne derfra. Vægtene er ikke ændret.
+
+Tjekket i Chromium ved 375 px på rumfanen og i nyhedsarkivet. Sætningerne står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `8b6b48c` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

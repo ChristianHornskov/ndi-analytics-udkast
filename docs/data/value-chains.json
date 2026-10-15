@@ -1627,7 +1627,7 @@
           "id": "launch",
           "icon": "🚀",
           "label": "Opsendelse",
-          "blurb": "Kapacitet til at sende satellitter og andet udstyr væk fra jorden, og selskaber der leverer dele til fartøjerne. Nogle programmer er i drift. Andre er stadig under udvikling. Starfighters skriver, at STARLAUNCH 1 er et suborbitalt udviklingsfartøj og ikke en orbital rute. Howmet leverer metaldele og sender ikke selv op.",
+          "blurb": "Kapacitet til at sende satellitter og andet udstyr væk fra jorden, og selskaber der leverer dele til fartøjerne. Nogle programmer er i drift. Andre er stadig under udvikling. Starfighters skriver, at STARLAUNCH 1 er et suborbitalt udviklingsfartøj og ikke en orbital rute. Howmet leverer metaldele og sender ikke selv op. Intuitive Machines leverer til Månen. Det er ikke en satellit, der tager billeder af Jorden.",
           "ndi": "SpaceX er brugt som illustration i NDI's formidling om opsendelser (ugebrev 23. juni 2024). Selskabet indgår ikke i beholdningen pr. 1. juni 2026. Merlin, Archer og Airo Group er luftfart i SpaceTech-temaet og står ikke her. BWX Technologies og Rolls-Royce står under atomkraft. Neutron hos Rocket Lab og Eclipse hos Firefly er ikke fløjet i beskrivelserne. Firefly skriver, at Blue Ghost er landet på Månen.",
           "themes": [
             "space"
@@ -1761,7 +1761,7 @@
           "id": "space-compute",
           "icon": "✦",
           "label": "Rum og compute",
-          "blurb": "På sigt kan beregning ligge i rummet. I beholdningen pr. 1. juni 2026 er eksemplerne infrastruktur, robotik og satellitplatforme. Ingen af dem er et datacenter i kredsløb.",
+          "blurb": "På sigt kan beregning ligge i rummet. I beholdningen pr. 1. juni 2026 er eksemplerne infrastruktur, robotik og satellitplatforme. Ingen af dem er et datacenter i kredsløb. Voyager omtaler Starlab som et stationsprojekt. Det er ikke en station i drift.",
           "ndi": "Udsagnet om SpaceX og størrelsen af økonomien er Elon Musks og står kun som citat. Det er ikke NDI's forventning (ugebrev 12. oktober 2026).",
           "themes": [
             "space"
