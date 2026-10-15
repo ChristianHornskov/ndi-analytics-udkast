@@ -8,3 +8,4 @@ Checkpoint every ≤30 min.
 - 22:23 — Claude N1 done (9cb3eb6 + 1af4a2d): variance-drag, weight note, sitemap gone, UX MUST 1–3. Committing UX-review 22:00 log. Next: Grok review cycle (MUST 5 / SHOULD + smoke). One builder at a time.
 - 22:36 — Grok R1 still measuring (~12+ min). No parallel Claude. Waiting.
 - 22:45 — Christian direction: THEME-FORSLAG, SPEC§M, IDEAS, HANDOFF-CODEX, ideer.html. Andet ~12%. Launch Claude N2.
+- 22:46 — Pushed 8c355a9 (classification+handoff). Claude N2 sole builder for morning wow.
