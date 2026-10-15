@@ -1,19 +1,28 @@
 # STATUS – NDI Analytics overnight build
 
-**2026-10-15 20:44 CEST — Sole build lead. HARD precheck rule live. NOT DONE.**
+**2026-10-15 20:47 CEST — Sole lead. Precheck HARD rule live. NOT DONE.**
 
 ## Live
-https://christianhornskov.github.io/ndi-analytics-udkast/  
-notes on Pages → must stay **404**
+https://christianhornskov.github.io/ndi-analytics-udkast/
 
 ## HARD RULE
-`bash scripts/precheck.sh` before every push. Fails on: notes in docs/, raw data.json, holdings >2026-06-01, d1/per-stock returns, JS reading those fields. See `notes/PRECHECK-RULE.md`.
+`bash scripts/precheck.sh` before every push (`scripts/push.sh`). See `notes/PRECHECK-RULE.md`.  
+Regression: `bash scripts/test-precheck.sh`.
 
-## Compliance
-Delayed holdings ≤2026-06-01 · no daily movers · AKK no returns · PMINDI no 1m/3m · no Nasdaq · no fake stock figures · context = udbytte only · notes only `/notes`
+## Shipped since sole-lead handoff
+- precheck.sh + push.sh + test-precheck.sh
+- Grok CSS polish committed
+- Removed leftover P/S sort
+- Embed: only YTD + hele perioden (1m/3m/1y hidden; URL fallback)
+- Skip-links all pages
+- a11y radiogroup / dialog inert
+- om-data P/S wording
+
+## Agents
+Claude + Grok quality1 running with precheck in prompts.
 
 ## NEXT
-- Commit Grok CSS polish + precheck
-- Claude↔Grok cycles with precheck in every prompt
-- Read UX-review.md after 22/00/02/04/06; VIDENSBOT-live-check.md when it lands
+- Merge further Claude/Grok polish after review
+- UX-review.md @ 22:00 CEST
+- VIDENSBOT-live-check.md when it arrives
 - Quality > speed. Never report done.
