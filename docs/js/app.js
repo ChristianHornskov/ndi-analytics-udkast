@@ -121,6 +121,7 @@ function renderEntre(root) {
         <a class="outline-btn small" href="selskab.html?isin=JP3436100006&fund=${state.fund}">Eksempel: SoftBank Group</a>
         <a class="outline-btn small" href="om-data.html">Om data & begreber</a>
         <a class="outline-btn small" href="embed/chart.html">Embed-graf (forside-komponent)</a>
+        <a class="outline-btn small" href="vaerdikaede.html">AI-værdikæde (light)</a>
         <button type="button" class="outline-btn small" data-open="dlg-follow">Følg med (stub)</button>
       </div>
     </section>
@@ -156,7 +157,7 @@ function renderFonden(root) {
     <a class="back" href="?view=entre&fund=${state.fund}" data-nav="entre">← Entré</a>
     <p class="eyebrow">FONDEN</p>
     <h1>${fund.short || fund.id.toUpperCase()}</h1>
-    <p class="lede">${fund.publicLabel || fund.label || ''} · Totalafkast i DKK efter fondens løbende omkostninger, før skat og egne handelsomkostninger. Pr. ${fmtDate(asOf)}.</p>
+    <p class="lede">${fund.kind || ''} · Totalafkast i DKK efter fondens løbende omkostninger, før skat og egne handelsomkostninger. Pr. ${fmtDate(asOf)}.</p>
     <div class="toolbar">
       <div class="seg" role="tablist" aria-label="Andelsklasse">
         ${DATA.portfolio.funds.map((f) => `<button type="button" class="control ${f.id===state.fund?'active':''}" data-fund="${f.id}" role="tab" aria-selected="${f.id===state.fund}">${f.short}</button>`).join('')}

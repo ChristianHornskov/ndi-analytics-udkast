@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>AI-værdikæde · NDI Analytics</title>
+  <link rel="stylesheet" href="css/ndi.css">
+  <style>
+    .chain{display:grid;gap:10px;margin-top:16px}
+    .node{padding:16px;border:1.5px solid var(--brand);border-radius:12px;background:#0b171d}
+    .node h3{font-size:16px;margin-bottom:6px;color:var(--cyan)}
+    .node p{font-size:13px;color:var(--muted);line-height:1.45}
+    .arrow{text-align:center;color:var(--brand);font-size:18px}
+    @media(min-width:800px){
+      .chain{grid-template-columns:1fr;max-width:640px}
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><img src="assets/mark.svg" width="34" height="27" alt=""><span>NewDeal Invest</span></a>
+    <nav class="nav"><a href="index.html?view=udforsk">← Udforsk</a></nav>
+  </header>
+  <main>
+    <p class="eyebrow">TEMA · LIGHT</p>
+    <h1>AI-udbygningen som værdikæde</h1>
+    <p class="lede">En forenklet model: fra energi til software. Tags er eksponering – ikke anbefaling. Level 1 linker til porteføljeselskaber i screeneren.</p>
+    <p class="band">Segmenter viser eksponering, ikke en anbefaling.</p>
+    <div class="chain">
+      <div class="node"><h3>1. Energi &amp; power</h3><p>Strøm, transformere, gasturbiner – fysiske flaskehalse for compute.</p><p><a href="index.html?view=udforsk&tags=energy">Se energirelaterede i porteføljen →</a></p></div>
+      <div class="arrow">↓</div>
+      <div class="node"><h3>2. Datacenter &amp; racks</h3><p>Byggeri, køling, strømfordeling – der hvor GPU’erne står.</p><p><a href="index.html?view=udforsk&tags=physical">Se fysisk tech →</a></p></div>
+      <div class="arrow">↓</div>
+      <div class="node"><h3>3. Chips (design &amp; fab)</h3><p>Fabless-designere, foundries og udstyr. Gorillaer og best-of-breed i halvledere.</p><p><a href="index.html?view=udforsk&tags=chips">Se chips →</a></p></div>
+      <div class="arrow">↓</div>
+      <div class="node"><h3>4. Optik &amp; netværk</h3><p>Laser, glasfiber, switches – data skal flyttes mellem og inde i datacentre.</p><p><a href="index.html?view=udforsk&tags=connect">Se optik &amp; netværk →</a></p></div>
+      <div class="arrow">↓</div>
+      <div class="node"><h3>5. Software &amp; platforme</h3><p>Modeller, orkestrering, applikationer – der hvor compute bliver til produkter.</p><p><a href="index.html?view=udforsk&tags=software">Se software →</a> · <a href="index.html?view=udforsk&tags=platforms">Platforme →</a></p></div>
+      <div class="arrow">↓</div>
+      <div class="node"><h3>6. Space &amp; anden infrastruktur</h3><p>Satellitter og opsendelser som del af den bredere tech-infrastruktur.</p><p><a href="index.html?view=udforsk&tags=space">Se SpaceTech →</a></p></div>
+    </div>
+    <p class="warn" style="margin-top:20px">Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.</p>
+  </main>
+</body>
+</html>

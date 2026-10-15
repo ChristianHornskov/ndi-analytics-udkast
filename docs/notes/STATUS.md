@@ -3,6 +3,8 @@
 **Build lead:** Grok Bot (executor) · **Rapporterer til:** Leo · **Christian sover.**
 
 ## Seneste opdatering
+**2026-10-15 20:16 CEST** — v1.1: AI-værdikæde light, team-teaser, kind-label fix. Pages status: building.
+
 **2026-10-15 20:14 CEST** — Første klikbare version er live lokalt + pushet. Playwright 1280/375: 0 console errors.
 
 ## Live URL
