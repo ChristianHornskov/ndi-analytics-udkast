@@ -14,17 +14,36 @@ const state = {
   sort: 'weight',
   dir: 'desc',
   status: '', // '' | 'forslag' | 'fast' - temastatus, ikke et tal pr. aktie
+  linse: false, // kun selskaber med kvalitativ NDI-linse (unique-metrics.json); samme URL som A-Z: linse=1
   q: '',
   calFull: false,
 };
 
 let DATA = null;
 let MONTHS = null;
+let LENS = {}; // isin → NDI-linse (kun kvalitativ tekst)
+const hasLens = (p) => !!LENS[p.isin]?.metrics?.length;
 
 // Compliance: kun disse sorteringer findes (whitelist). Ingen kurs-, P/S-, P/E-, 52u-, vol- eller
 // insider-sortering pr. aktie i v1 - se notes/MADS-CHECKLIST.md (deferred).
 const SORTS = { weight: 'vægt', name: 'navn', theme: 'tema' };
 const STATUSES = { forslag: 'kun temaforslag', fast: 'uden temaforslag' };
+
+// Modenhed (livscyklus) vises kun, når porteføljeholdet faktisk har klassificeret selskaber manuelt.
+// Data er tom i dag ('ikke-klassificeret' for alle), så filter og chips findes ikke - vi gætter ikke.
+function maturityCounts(fund) {
+  const n = Object.fromEntries(Object.keys(MATURITY_LABELS).map((m) => [m, 0]));
+  for (const p of fund.positions || []) if (p.maturity in n) n[p.maturity]++;
+  return n;
+}
+// Gamle/delte links med ?mat= må ikke give en tavs tom liste: behold kun faser, som findes i data.
+function sanitizeMaturity() {
+  const known = new Set(DATA.portfolio.funds.flatMap((f) =>
+    Object.entries(maturityCounts(f)).filter(([, n]) => n).map(([m]) => m)));
+  const before = state.maturity.join(',');
+  state.maturity = state.maturity.filter((m) => known.has(m));
+  return before !== state.maturity.join(',');
+}
 
 function weightSpark(isin, fundId) {
   // Kun fondens vægt pr. kvartalssnapshot (≤ cutoff) - aldrig aktiekurs. Søjler fra nul pr. række,
@@ -65,6 +84,7 @@ function readUrl() {
   const status = u.searchParams.get('status');
   state.status = STATUSES[status] ? status : '';
   state.q = u.searchParams.get('q') || '';
+  state.linse = u.searchParams.get('linse') === '1';
   state.calFull = u.searchParams.get('cal') === 'all';
 }
 
@@ -83,6 +103,7 @@ function writeUrl(replace = false) {
   set('dir', state.dir, state.sort === 'weight' ? 'desc' : 'asc');
   set('status', state.status, '');
   set('q', state.q, '');
+  set('linse', state.linse ? '1' : '', '');
   set('cal', state.calFull ? 'all' : '', '');
   history[replace ? 'replaceState' : 'pushState'](null, '', u);
 }
@@ -221,10 +242,11 @@ function markHscroll(root) {
 function renderEntre(root) {
   // Samme klasse som temaer.html?fund= (hub'en tæller fra den valgte klasses beholdning), så tallet matcher siden bag døren
   const prop = themeProposals(fundById(DATA.portfolio, state.fund));
+  const nMat = Object.values(maturityCounts(fundById(DATA.portfolio, state.fund))).reduce((x, y) => x + y, 0);
   root.innerHTML = `
     <p class="eyebrow">NDI ANALYTICS · UDKAST</p>
     <h1>Gå på opdagelse i NewDeal Invest</h1>
-    <p class="lede">Et sted hvor du kan se fondens udvikling, forstå porteføljen gennem NDI's egne temaer og modenhedsgrader - og finde selskaberne uden de klassiske 11 sektorkasser. Dette er et klikbart udkast (ikke den live hjemmeside).</p>
+    <p class="lede">Et sted hvor du kan se fondens udvikling, forstå porteføljen gennem NDI's egne temaer - og finde selskaberne uden de klassiske 11 sektorkasser. Dette er et klikbart udkast (ikke den live hjemmeside).</p>
     <p class="updated-stamp"><strong>Senest opdateret</strong>
       <span>Afkast-snapshot: <time datetime="${DATA.portfolio.performanceAsOf || DATA.portfolio.asOf}">${fmtDate(DATA.portfolio.performanceAsOf || DATA.portfolio.asOf)}</time></span>
       <span>Beholdning (forsinket snapshot): <time datetime="${DATA.portfolio.asOf}">${fmtDate(DATA.portfolio.asOf)}</time></span></p>
@@ -240,7 +262,7 @@ function renderEntre(root) {
       <a class="door" href="?view=portefolje&fund=${state.fund}" data-nav="portefolje">
         <span class="door-q">2 · Hvad ejer fonden?</span>
         <strong>Porteføljen</strong>
-        <span>Forsinket snapshot fordelt på NDI-temaer og modenhed.</span>
+        <span>Forsinket snapshot fordelt på NDI-temaer.${nMat ? ` Modenhed: ${nMat} selskaber klassificeret (udkast).` : ' Modenhed er ikke klassificeret endnu.'}</span>
         <span class="go">Se beholdninger →</span>
       </a>
       <a class="door" href="?view=udforsk&fund=${state.fund}" data-nav="udforsk">
@@ -518,6 +540,7 @@ function filterPositions(fund) {
   if (state.maturity.length) list = list.filter((p) => state.maturity.includes(p.maturity));
   if (state.status === 'forslag') list = list.filter((p) => p.themeStatus === 'forslag');
   if (state.status === 'fast') list = list.filter((p) => p.themeStatus !== 'forslag');
+  if (state.linse) list = list.filter(hasLens);
   if (state.q) {
     const q = state.q.toLowerCase();
     list = list.filter((p) =>
@@ -642,7 +665,7 @@ function positionsTable(list, fund) {
   hscroll(`<div class="table-wrap"><table class="data"><thead><tr>
     ${th('name','Navn')}${th('weight','Vægt %')}${th('theme','Tema')}
   </tr></thead><tbody>${list.map((p) => `<tr>
-    <td><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}">${p.name}</a> ${weightSpark(p.isin, fund.id)}<br><small style="color:var(--muted)">${p.isin}</small></td>
+    <td><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}">${p.name}</a>${hasLens(p) ? ` <a class="badge" href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}#ndi-linse" title="Kvalitativ NDI-linse: rolle, plads i værdikæden og forhold at holde øje med (udkast)" aria-label="NDI-linse for ${p.name}">NDI-linse</a>` : ''} ${weightSpark(p.isin, fund.id)}<br><small style="color:var(--muted)">${p.isin}</small></td>
     <td>${(p.weight ?? 0).toFixed(2).replace('.', ',')}</td>
     <td>${tagsFor(p, DATA.multiTags).map((t) => `<a class="tag" href="tema.html?slug=${encodeURIComponent(t)}&fund=${fund.id}">${daTheme(t)}</a>`).join(' ')}${p.themeStatus==='forslag'?` <span class="badge badge-draft" title="Temaet er et forslag fra udkastet og afventer NDI-gennemgang · før: ${p.themeFrom ? daTheme(p.themeFrom) : 'Andet'}">forslag</span>`:''}</td>
   </tr>`).join('')}</tbody></table></div>`, 'Rul til siden for flere kolonner.') +
@@ -654,18 +677,22 @@ function emptyScreener(fund) {
   const active = [
     state.q && `søgning “${esc(state.q)}”`,
     state.tags.length && `tema ${state.tags.map(daTheme).join(' / ')}`,
+    state.maturity.length && `modenhed ${state.maturity.map(daMat).join(' / ')}`,
     state.status && STATUSES[state.status],
+    state.linse && 'kun med NDI-linse',
   ].filter(Boolean).join(' og ');
   // Hjælp: hvis søgningen alene giver hits, men kombinationen ikke gør, så sig det.
-  const qOnly = state.q && (state.tags.length || state.status)
+  const qOnly = state.q && (state.tags.length || state.status || state.maturity.length || state.linse)
     ? fund.positions.filter((p) => [p.name, p.symbol, p.isin, daTheme(p.theme)].some((x) => (x || '').toLowerCase().includes(state.q.toLowerCase()))).length
     : 0;
   return `<div class="empty-state" role="status">
     <strong>Ingen af fondens ${fund.positions.length} selskaber matcher ${active || 'filtrene'}</strong>
-    ${qOnly ? `<span>Søgningen alene giver ${qOnly} ${qOnly === 1 ? 'selskab' : 'selskaber'} - prøv at fjerne tema- eller statusfilteret.</span>` : ''}
+    ${qOnly ? `<span>Søgningen alene giver ${qOnly} ${qOnly === 1 ? 'selskab' : 'selskaber'} - prøv at fjerne tema-, status-, modenheds- eller linsefilteret.</span>` : ''}
+    ${state.linse ? `<span>NDI-linsen findes for ${fund.positions.filter(hasLens).length} af fondens ${fund.positions.length} selskaber. Et selskab uden linse er ikke vurderet dårligere - vi har bare ikke skrevet den endnu.</span>` : ''}
     <span>Level 1 viser kun selskaber, fonden ejede pr. ${fmtDate(fund.positionsAsOf || DATA.portfolio.asOf)}. Et selskab, der ikke er med, er ikke et signal - se <a href="laer/faq-mangler-aktie.html">Hvorfor mangler aktie X?</a></span>
     <div class="row">
       ${state.q ? '<button type="button" class="outline-btn small" data-clear-q>Ryd søgning</button>' : ''}
+      ${state.linse ? '<button type="button" class="outline-btn small" data-linse>Vis også uden NDI-linse</button>' : ''}
       <button type="button" class="outline-btn small" id="reset-filters">Nulstil alle filtre</button>
       <a class="outline-btn small" href="selskaber.html?fund=${state.fund}">Se A-Z-listen</a>
     </div>
@@ -683,6 +710,31 @@ function statusFilterHtml(fund) {
       ${btn('fast', 'Uden temaforslag', fund.positions.length - nForslag)}
       ${btn('forslag', 'Kun temaforslag', nForslag)}
       <small style="color:var(--muted);align-self:center"><span class="badge badge-draft">forslag</span> = tema foreslået i udkastet, afventer NDI-gennemgang.</small>
+    </div>`;
+}
+
+// NDI-linse-filter: kvalitative beskrivelser (rolle, værdikæde, hold øje med). Antal = selskaber, ingen tal pr. aktie.
+function lensFilterHtml(fund) {
+  const n = fund.positions.filter(hasLens).length;
+  if (!n) return '';
+  return `<div class="filters" role="group" aria-label="Filtrér på NDI-linse">
+      <button type="button" class="control ${state.linse ? 'active' : ''}" data-linse aria-pressed="${state.linse}">Kun med NDI-linse <small>(${n})</small></button>
+      <small style="color:var(--muted);align-self:center"><span class="badge">NDI-linse</span> = kvalitativ beskrivelse af ${n} af ${fund.positions.length} selskaber (udkast, ikke en rating). <a href="ndi-perspektiv.html">Om linsen →</a></small>
+    </div>`;
+}
+
+// Vises først, når mindst ét selskab i klassen har manuel modenhed. Indtil da: én ærlig linje, ingen knapper.
+function maturityFilterHtml(fund) {
+  const n = maturityCounts(fund);
+  const total = Object.values(n).reduce((a, b) => a + b, 0);
+  if (!total) {
+    return `<p class="mat-pending" style="font-size:12px;color:var(--muted);margin:6px 0">Modenhed (præ-revenue → value): <strong style="color:var(--text)">ikke klassificeret endnu</strong> for nogen af fondens ${fund.positions.length} selskaber, så der er intet modenhedsfilter. Vi gætter ikke. <a href="laer/livscyklus.html">Om livscyklus →</a></p>`;
+  }
+  const btns = Object.entries(MATURITY_LABELS).filter(([m]) => n[m]).map(([m, label]) =>
+    `<button type="button" class="control ${state.maturity.includes(m) ? 'active' : ''}" data-mat="${m}" aria-pressed="${state.maturity.includes(m)}">${label} <small>(${n[m]})</small></button>`).join('');
+  return `<div class="filters" role="group" aria-label="Filtrér på modenhed">
+      ${btns}
+      <small style="color:var(--muted);align-self:center">Modenhed: ${total} af ${fund.positions.length} klassificeret manuelt (udkast, ikke en rating). ${fund.positions.length - total} uden.</small>
     </div>`;
 }
 
@@ -709,7 +761,8 @@ function renderUdforsk(root) {
     </div>
     <p style="font-size:12px;color:var(--muted);margin:8px 0">Tema-dybsider: ${themes.map((t) => `<a href="tema.html?slug=${encodeURIComponent(t)}&fund=${state.fund}">${daTheme(t)}</a>`).join(' · ')} · <a href="selskaber.html?fund=${state.fund}">A-Z liste</a></p>
     ${statusFilterHtml(fund)}
-    <!-- Modenhedsfiltre skjult indtil manuel klassifikation -->
+    ${lensFilterHtml(fund)}
+    ${maturityFilterHtml(fund)}
     <div class="chips" id="chips"></div>
     <p style="font-size:12px;color:var(--muted)" id="filter-status">${list.length} ${list.length === 1 ? 'resultat' : 'resultater'} · udkast-klassifikation</p>
     ${list.length ? positionsTable(list, fund) : emptyScreener(fund)}
@@ -720,6 +773,7 @@ function renderUdforsk(root) {
     ...state.tags.map((t) => ({ k: 'tag', v: t, label: daTheme(t) })),
     ...state.maturity.map((m) => ({ k: 'mat', v: m, label: daMat(m) })),
     ...(state.status ? [{ k: 'status', v: state.status, label: STATUSES[state.status] }] : []),
+    ...(state.linse ? [{ k: 'linse', v: '1', label: 'Kun med NDI-linse' }] : []),
   ];
   chips.innerHTML = parts.map((p) =>
     `<span class="chip">${p.label}<button type="button" data-x="${p.k}:${p.v}" aria-label="Fjern filter ${p.label}">×</button></span>`).join('');
@@ -752,6 +806,7 @@ function announceFilters() {
   if (state.tags.length) parts.push(`tema ${state.tags.map(daTheme).join(', ')}`);
   if (state.q) parts.push(`søgning ${state.q}`);
   if (state.status) parts.push(STATUSES[state.status]);
+  if (state.linse) parts.push('kun med NDI-linse');
   parts.push(`sorteret efter ${SORTS[state.sort]}, ${state.dir === 'asc' ? 'stigende' : 'faldende'}`);
   const msg = parts.join(' · ');
   // Første visning af en side annonceres ikke (overskriften læses allerede); kun ændringer.
@@ -760,12 +815,12 @@ function announceFilters() {
 }
 
 function onClick(e) {
-  const t = e.target.closest('[data-nav],[data-fund],[data-period],[data-sort],[data-tag],[data-mat],[data-status],[data-open],[data-x],#reset-filters,#copy-link,#csv-export,[data-clear-q]');
+  const t = e.target.closest('[data-nav],[data-fund],[data-period],[data-sort],[data-tag],[data-mat],[data-status],[data-linse],[data-open],[data-x],#reset-filters,#copy-link,#csv-export,[data-clear-q]');
   if (!t) return;
   if (t.matches('[data-open]')) { openDialog(t.getAttribute('data-open')); return; }
   if (t.matches('[data-clear-q]')) { state.q = ''; writeUrl(); paint(); $('#q')?.focus(); return; }
   if (t.id === 'reset-filters') {
-    state.tags = []; state.maturity = []; state.q = ''; state.status = ''; writeUrl(); paint(); return;
+    state.tags = []; state.maturity = []; state.q = ''; state.status = ''; state.linse = false; writeUrl(); paint(); return;
   }
 
   if (t.id === 'csv-export') {
@@ -788,7 +843,7 @@ function onClick(e) {
     const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
     const a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
-    const filt = [...state.tags, state.status, state.q && 'soeg'].filter(Boolean).join('-');
+    const filt = [...state.tags, ...state.maturity, state.status, state.linse && 'linse', state.q && 'soeg'].filter(Boolean).join('-');
     a.download = `ndi-${state.fund}-${asOf}${filt ? '-' + filt.replace(/[^a-z0-9-]/gi, '') : ''}.csv`;
     document.body.append(a);
     a.click();
@@ -810,6 +865,7 @@ function onClick(e) {
     if (k === 'tag') state.tags = state.tags.filter((x) => x !== v);
     if (k === 'mat') state.maturity = state.maturity.filter((x) => x !== v);
     if (k === 'status') state.status = '';
+    if (k === 'linse') state.linse = false;
     writeUrl(); paint(); return;
   }
   if (t.matches('[data-nav]')) {
@@ -833,6 +889,12 @@ function onClick(e) {
     const v = t.getAttribute('data-status');
     state.status = state.status === v || !STATUSES[v] ? '' : v;
     writeUrl(); paint(); return;
+  }
+  if (t.matches('[data-linse]')) {
+    state.linse = !state.linse;
+    writeUrl(); paint();
+    $('.filters [data-linse]')?.focus();
+    return;
   }
   if (t.matches('[data-tag]')) {
     const v = t.getAttribute('data-tag');
@@ -909,16 +971,20 @@ async function main() {
   if ((u0.get('tags') || '') !== state.tags.join(',') || (u0.get('sort') || 'weight') !== state.sort || (u0.has('status') && !state.status)) writeUrl(true);
   try {
     DATA = await loadAll();
-    MONTHS = await fetch('data/company-months.json').then((r) => (r.ok ? r.json() : null)).catch(() => null);
+    [MONTHS, LENS] = await Promise.all([
+      fetch('data/company-months.json').then((r) => (r.ok ? r.json() : null)).catch(() => null),
+      fetch('data/unique-metrics.json').then((r) => (r.ok ? r.json() : null)).then((j) => j?.byIsin || {}).catch(() => ({})),
+    ]);
   } catch (err) {
     $('#app').innerHTML = `<p class="warn">Data kunne ikke hentes (${err.message}). Genindlæs siden.</p>`;
     return;
   }
+  if (sanitizeMaturity()) writeUrl(true);
   fillKidFooter();
   document.addEventListener('click', onClick);
   document.addEventListener('input', onInput);
   wireKeyboard();
-  window.addEventListener('popstate', () => { readUrl(); paint(); });
+  window.addEventListener('popstate', () => { readUrl(); if (sanitizeMaturity()) writeUrl(true); paint(); });
   window.addEventListener('resize', () => markHscroll($('#app')));
   // [data-open] håndteres af onClick-delegering (tidligere dobbelt listener → to dialoger)
   paint();
