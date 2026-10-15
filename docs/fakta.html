@@ -34,6 +34,8 @@
   .glance-pair b{font-weight:500;font-size:20px}
   .glance-flag{display:inline-block;margin-top:8px;font-size:10px;letter-spacing:.8px;text-transform:uppercase;color:var(--faint)}
   .glance-tile.is-diff .glance-flag{color:#f5ee9e}
+  .glance-tile.is-diff{background:linear-gradient(165deg,rgba(245,238,158,.12),transparent 58%),#0b171d}
+  .glance-kr{display:block;margin:6px 0 2px;color:#f5ee9e;font-size:20px;font-weight:600;letter-spacing:-.4px;font-variant-numeric:tabular-nums;line-height:1.1}
   .glance-tile p{color:var(--muted);font-size:12px;line-height:1.4;margin-top:6px;overflow-wrap:anywhere}
   .kv .is-diff{grid-column:1 / -1}
   .dd-dates{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
@@ -76,9 +78,11 @@
   @media(max-width:800px){
     .fact-grid,.org,.team,.tax-grid,.kv,.risk-split,.risk-metrics,.glance-board,.dd-dates{grid-template-columns:1fr}
     .risk-metrics .metric{border-left:0;padding-left:0;margin-bottom:12px}
+    .glance-tile.is-diff{order:-1}
   }
   @media(max-width:800px) and (min-width:560px){
     .glance-board{grid-template-columns:1fr 1fr}
+    .glance-tile.is-diff{grid-column:1 / -1}
   }
  </style>
 </head>
@@ -104,6 +108,12 @@
  return (neg ? '-' : '') + a + (b ? ',' + b : '');
  };
  const pct = (n) => n == null || n === '' ? 'ikke oplyst' : num(n) + ' %';
+ const krOf = (rate) => Math.round(100000 * Number(rate) / 100);
+ const krTxt = (n) => {
+ const v = Math.round(Number(n));
+ const s = String(Math.abs(v)).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+ return (v < 0 ? '-' : '') + s + ' kr.';
+ };
  const daDate = (iso) => {
  if (!iso) return '';
  const d = new Date(String(iso).length === 10 ? iso + 'T12:00:00' : iso);
@@ -140,17 +150,21 @@
  const sameHorizon = A.horizonYears === B.horizonYears;
  const sameOngoing = A.costs.otherOngoing === B.costs.otherOngoing;
  const dTx = Number((Number(B.costs.portfolioTransaction) - Number(A.costs.portfolioTransaction)).toFixed(2));
+ const krA = krOf(A.costs.portfolioTransaction);
+ const krB = krOf(B.costs.portfolioTransaction);
+ const krGapTxt = krTxt(Math.abs(krB - krA));
+ const txSentence = dTx === 0
+ ? `Porteføljetransaktion er ${pct(A.costs.portfolioTransaction)} i begge.`
+ : `Porteføljetransaktion er ${pct(A.costs.portfolioTransaction)} i PMINDI og ${pct(B.costs.portfolioTransaction)} i PMINDIAKK. På 100.000 kr. er det ${krTxt(krA)} og ${krTxt(krB)}. Forskellen er ${krGapTxt}. Det er ikke et ÅOP.`;
  const glance = [
  sameSri ? `Begge klasser har SRI ${A.sri} af ${A.sriMax}.` : `SRI er ${A.sri} af ${A.sriMax} for PMINDI og ${B.sri} af ${B.sriMax} for PMINDIAKK.`,
  sameHorizon ? `Anbefalet horisont er ${A.horizonYears} år.` : `Horisonten er ${A.horizonYears} år for PMINDI og ${B.horizonYears} år for PMINDIAKK.`,
  sameOngoing ? `Øvrige løbende omkostninger er ${pct(A.costs.otherOngoing)} i begge.` : `Øvrige løbende er ${pct(A.costs.otherOngoing)} og ${pct(B.costs.otherOngoing)}.`,
- dTx === 0
- ? `Porteføljetransaktion er ${pct(A.costs.portfolioTransaction)} i begge.`
- : `Porteføljetransaktion er ${pct(A.costs.portfolioTransaction)} i PMINDI og ${pct(B.costs.portfolioTransaction)} i PMINDIAKK.`,
+ txSentence,
  ].join(' ');
  const onlyFour = sameSri && sameHorizon && sameOngoing && dTx !== 0;
  const glanceVisible = onlyFour
- ? `Porteføljetransaktion er den eneste forskel i de fire tal: ${pct(A.costs.portfolioTransaction)} i PMINDI og ${pct(B.costs.portfolioTransaction)} i PMINDIAKK.`
+ ? `Porteføljetransaktion er den eneste forskel i de fire tal: ${pct(A.costs.portfolioTransaction)} i PMINDI og ${pct(B.costs.portfolioTransaction)} i PMINDIAKK. På 100.000 kr. er forskellen ${krGapTxt}. Det er ikke et ÅOP.`
  : glance;
  const tile = (kicker, valueHtml, same, detail) => `<article class="glance-tile${same ? '' : ' is-diff'}">
  <p class="k">${kicker}</p>
@@ -163,7 +177,7 @@
  tile('SRI', sameSri ? `${A.sri} af ${A.sriMax}` : pair(`${A.sri} af ${A.sriMax}`, `${B.sri} af ${B.sriMax}`), sameSri, sameSri ? 'Begge klasser.' : 'PMINDI · PMINDIAKK.'),
  tile('HORISONT', sameHorizon ? `${A.horizonYears} år` : pair(`${A.horizonYears} år`, `${B.horizonYears} år`), sameHorizon, sameHorizon ? 'Begge klasser.' : 'PMINDI · PMINDIAKK.'),
  tile('ØVRIGE LØBENDE', sameOngoing ? pct(A.costs.otherOngoing) : pair(pct(A.costs.otherOngoing), pct(B.costs.otherOngoing)), sameOngoing, sameOngoing ? 'Begge klasser. Fundmarket.' : 'PMINDI · PMINDIAKK.'),
- tile('PORTEFØLJETRANSAKTION', dTx === 0 ? pct(A.costs.portfolioTransaction) : pair(pct(A.costs.portfolioTransaction), pct(B.costs.portfolioTransaction)), dTx === 0, dTx === 0 ? 'Begge klasser.' : `PMINDI · PMINDIAKK · ${String(Math.abs(dTx)).replace('.', ',')} procentpoint.`),
+ tile('PORTEFØLJETRANSAKTION', dTx === 0 ? pct(A.costs.portfolioTransaction) : pair(pct(A.costs.portfolioTransaction), pct(B.costs.portfolioTransaction)), dTx === 0, dTx === 0 ? 'Begge klasser.' : `PMINDI · PMINDIAKK · ${String(Math.abs(dTx)).replace('.', ',')} procentpoint.<span class="glance-kr">${krGapTxt}</span>på 100.000 kr. Ikke et ÅOP.`),
  ].join('');
  const klasse = (cl, txDiff) => `
  <article class="fact-card">

@@ -67,6 +67,14 @@ article.x-card.is-direct{box-shadow:inset 3px 0 0 #9ecfd6,0 14px 34px rgba(0,0,0
 article.x-card.is-lead{border-color:#f5ee9e66;padding:18px 18px 16px;background:radial-gradient(90% 80% at 100% 0%,rgba(245,238,158,.14),transparent 46%),linear-gradient(180deg,#16303a 0%,#102228 100%)}
 article.x-card.is-lead .x-text{font-size:clamp(18px,2vw,22px);line-height:1.45;letter-spacing:-.3px;max-width:68ch}
 article.x-card.is-lead .x-because{color:#f5ee9e;font-size:13px}
+article.x-card.is-quote{position:relative;border-color:#f5ee9e66;box-shadow:inset 3px 0 0 #f5ee9e,0 14px 34px rgba(0,0,0,.22);background:radial-gradient(90% 80% at 100% 0%,rgba(245,238,158,.14),transparent 46%),linear-gradient(180deg,#16303a 0%,#102228 100%)}
+article.x-card.is-quote .x-quote{position:relative;margin:0;padding:2px 0 0 34px}
+article.x-card.is-quote .x-qmark{position:absolute;left:0;top:-8px;font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-size:46px;line-height:1;color:#f5ee9e;font-weight:500}
+article.x-card.is-quote .x-text{font-size:clamp(18px,1.7vw,23px);line-height:1.4;letter-spacing:-.3px;max-width:68ch}
+article.x-card.is-quote .x-by{display:flex;gap:10px;align-items:center;margin-top:14px;padding-top:12px;border-top:1px solid #345860}
+article.x-card.is-quote .x-by time{margin-left:auto}
+article.x-card.is-quote .x-why{margin-top:8px}
+article.x-card.is-quote .x-foot{margin-top:10px}
 .x-top{display:flex;gap:10px;align-items:flex-start}
 .x-ava{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:13px;color:#050a0f;flex:none;letter-spacing:.2px;box-shadow:0 0 0 2px #0c1c22,0 0 0 3px #89aeb466}
 .x-who{min-width:0;flex:1}
@@ -91,6 +99,7 @@ article.x-card.is-lead .x-because{color:#f5ee9e;font-size:13px}
 .x-door-top strong{font-size:22px;letter-spacing:-.4px}
 .x-door-n{color:var(--muted);font-size:12px;font-variant-numeric:tabular-nums;white-space:nowrap}
 .x-door-q{color:var(--text);font-size:14px;line-height:1.45;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;min-height:calc(1.45em * 3)}
+.x-door-q::before{content:"„";color:#f5ee9e;font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-size:22px;line-height:0;margin-right:5px}
 .x-door-by{margin-top:auto;color:var(--faint);font-size:12px}
 .x-tools{margin-top:4px}
 @media(min-width:900px){
@@ -126,6 +135,13 @@ article.x-card.is-lead .x-because{color:#f5ee9e;font-size:13px}
 .x-lane-h{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:baseline;margin:0 0 8px}
 .x-lane-k{font-size:11px;letter-spacing:1.3px;font-weight:700;color:var(--cyan)}
 .x-lane.is-theme .x-lane-k{color:var(--muted)}
+.x-lane.is-curated{border-left-color:#f5ee9e}
+.x-lane.is-house{border-left-color:#9ecfd6}
+.x-lane.is-curated .x-lane-k{color:#f5ee9e}
+.x-lane.is-house .x-lane-k{color:var(--cyan)}
+.x-stage{min-width:0}
+#x-grid > .x-stage{grid-column:1 / -1}
+.x-empty .x-zero{font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;color:#f5ee9e;font-weight:500}
 .x-lane-h span:last-child{color:var(--faint);font-size:12px}
 .x-lane .x-grid{margin-top:0}
 .x-lane.is-theme .x-card{background:linear-gradient(180deg,#12262c 0%,#0e1c21 100%);box-shadow:none}
@@ -397,6 +413,10 @@ function highlightTerms(q) {
   return terms.sort((a, b) => b.length - a.length);
 }
 
+export function highlightHtml(text, q) {
+  return highlight(text, q);
+}
+
 function highlight(text, q) {
   const safe = esc(text);
   const terms = highlightTerms(q);
@@ -425,7 +445,32 @@ export function xCard(p, opt = {}) {
       : '';
   const because = reasons.length ? `<span class="x-because">Vist fordi: ${reasons.map((r) => esc(r)).join(' · ')}</span>` : '';
   const why = (hit || because) ? `<p class="x-why">${hit}${because}</p>` : '';
-  const cls = ['x-card', 'panel', opt.lead ? 'is-lead' : '', opt.hitKind === 'direct' ? 'is-direct' : ''].filter(Boolean).join(' ');
+  const cls = ['x-card', 'panel', opt.lead ? 'is-lead is-quote' : '', opt.hitKind === 'direct' ? 'is-direct' : ''].filter(Boolean).join(' ');
+  const foot = `<p class="x-foot">
+    <a class="outline-btn small" href="${esc(p.url)}" rel="noopener noreferrer" target="_blank">Åbn på X ↗</a>
+    ${house}
+    ${curated}
+    ${tags}
+  </p>`;
+  const text = `<p class="x-text">${highlight(p.text, opt.query)}</p>`;
+  if (opt.lead) {
+    return `<article class="${cls}">
+  <blockquote class="x-quote">
+    <span class="x-qmark" aria-hidden="true">„</span>
+    ${text}
+  </blockquote>
+  <div class="x-by">
+    <span class="x-ava" style="background:${avatarColor(p.username)}" aria-hidden="true">${esc(initials(p))}</span>
+    <div class="x-who">
+      <strong>${esc(p.name || p.username)}</strong>
+      <span>@${esc(p.username)}</span>
+    </div>
+    <time datetime="${esc(p.created_at)}">${esc(fmtXDate(p.created_at))}</time>
+  </div>
+  ${why}
+  ${foot}
+</article>`;
+  }
   return `<article class="${cls}">
   <header class="x-top">
     <span class="x-ava" style="background:${avatarColor(p.username)}" aria-hidden="true">${esc(initials(p))}</span>
@@ -436,13 +481,8 @@ export function xCard(p, opt = {}) {
     <time datetime="${esc(p.created_at)}">${esc(fmtXDate(p.created_at))}</time>
   </header>
   ${why}
-  <p class="x-text">${highlight(p.text, opt.query)}</p>
-  <p class="x-foot">
-    <a class="outline-btn small" href="${esc(p.url)}" rel="noopener noreferrer" target="_blank">Åbn på X ↗</a>
-    ${house}
-    ${curated}
-    ${tags}
-  </p>
+  ${text}
+  ${foot}
 </article>`;
 }
 
@@ -496,16 +536,26 @@ export function xSaysPanel(pack, { tickers = [], themes = [], limit = 4, title =
   const nLabel = ranked.length > shown
     ? `Viser ${bits.join(' og ')} · ${ranked.length} i alt`
     : bits.join(' og ');
-  const lane = (kind, hits, leadLane) => {
+  const leadHit = view.direct[0] || view.theme[0];
+  const leadKind = view.direct.length ? 'direct' : 'theme';
+  const restDirect = view.direct.length ? view.direct.slice(1) : [];
+  const restTheme = view.direct.length ? view.theme : view.theme.slice(1);
+  const quote = `<div class="x-stage">${xCard(leadHit.post, {
+    reasons: leadHit.reasons,
+    lead: true,
+    hitKind: leadKind,
+    query: markTerm(leadHit),
+  })}</div>`;
+  const lane = (kind, hits) => {
     if (!hits.length) return '';
-    const kicker = kind === 'direct' ? 'Direkte træf' : 'Tema';
+    const quotedTheme = !view.direct.length;
+    const kicker = kind === 'direct' ? 'Øvrige direkte træf' : (quotedTheme ? 'Øvrige tema' : 'Tema');
     const hint = kind === 'direct'
       ? 'Nævner selskab eller ticker.'
       : 'Rammer temaet. Ikke en ticker fra udsnittet.';
-    const cards = hits.map((h, i) => xCard(h.post, {
+    const cards = hits.map((h) => xCard(h.post, {
       reasons: h.reasons,
-      lead: leadLane && i === 0,
-      hitKind: kind === 'direct' ? 'direct' : 'theme',
+      hitKind: kind,
       query: markTerm(h),
     })).join('');
     return `<div class="x-lane ${kind === 'direct' ? 'is-direct' : 'is-theme'}">
@@ -517,13 +567,14 @@ export function xSaysPanel(pack, { tickers = [], themes = [], limit = 4, title =
   const miss = view.direct.length && !view.theme.length && themeLeft > 0
     ? '<p class="x-miss">Kun direkte træf i dette udsnit. Opslag, der bare deler tema, er udeladt, så navnet står først.</p>'
     : !view.direct.length
-      ? '<p class="x-miss">Ingen opslag i udsnittet nævner selskabet eller tickeren. Kortene er tema.</p>'
+      ? `<p class="x-miss">Ingen opslag i udsnittet nævner selskabet eller tickeren. ${restTheme.length ? 'Kortene er tema.' : 'Kortet er tema.'}</p>`
       : '';
   return `<section class="panel x-says">
   <div class="x-says-h"><h2 class="panel-h">${esc(title)}</h2><span class="x-says-n">${esc(nLabel)}</span></div>
   <p class="band">${esc(X_LABEL)}. Snapshot ${snap}.</p>
-  ${lane('direct', view.direct, true)}
-  ${lane('theme', view.theme, !view.direct.length)}
+  ${quote}
+  ${lane('direct', restDirect)}
+  ${lane('theme', restTheme)}
   ${miss}
   <p class="link-row" style="margin-top:12px"><a class="outline-btn small" href="${more}">Flere opslag i feedet →</a></p>
 </section>`;

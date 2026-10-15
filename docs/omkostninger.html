@@ -46,8 +46,12 @@
   .delta-nums span{display:block;font-size:12px;color:var(--muted);margin-bottom:4px}
   .delta-nums b{display:block;font-size:28px;font-weight:500;letter-spacing:-.6px;color:var(--cyan);font-variant-numeric:tabular-nums;line-height:1.1}
   .delta-nums small{display:block;margin-top:4px;font-size:12px;color:var(--faint)}
-  .delta-mid{text-align:center;padding:0 6px 2px}
-  .delta-mid b{color:#f5ee9e;font-size:22px}
+  .delta-mid{text-align:center;padding:0 8px 2px;align-self:center}
+  .delta-nums .delta-mid b{color:#f5ee9e;font-size:clamp(48px,6.2vw,72px);font-weight:600;letter-spacing:-2.2px;line-height:.9}
+  .delta-mid small{display:block;max-width:18ch;margin:6px auto 0;line-height:1.35}
+  .receipt-gap{margin:12px 0 0;padding:12px 14px;border-left:3px solid var(--yellow);background:#0b171d;border-radius:0 12px 12px 0;color:var(--muted);font-size:14px;line-height:1.45}
+  .receipt-gap b{color:var(--text);font-variant-numeric:tabular-nums;font-weight:600}
+  .receipt-gap b.is-gap{color:#f5ee9e;font-size:18px}
   main .lede{margin-bottom:14px}
   .band{margin:8px 0}
   .delta-stage{margin:4px 0 14px}
@@ -170,7 +174,7 @@
  <h2>${onlyTx ? 'Porteføljetransaktion skiller klasserne' : 'Porteføljetransaktion'}</h2>
  <div class="delta-nums">
  <div><span>PMINDI</span><b>${pct(a.portfolioTransaction)}</b><small>${kr(a.portfolioTransaction)} på 100.000 kr.</small></div>
- <div class="delta-mid"><span>${pp(Math.abs(dTx))}</span><b>${krGapTxt}</b><small>kun denne linje · ikke et ÅOP</small></div>
+ <div class="delta-mid"><span>på 100.000 kr.</span><b>${krGapTxt}</b><small>${pp(Math.abs(dTx))} · kun denne linje · ikke et ÅOP</small></div>
  <div><span>PMINDIAKK</span><b>${pct(b.portfolioTransaction)}</b><small>${kr(b.portfolioTransaction)} på 100.000 kr.</small></div>
  </div>
  <div class="delta-track" role="img" aria-label="PMINDI ${pct(a.portfolioTransaction)} og PMINDIAKK ${pct(b.portfolioTransaction)} på en skala fra 0 til ${pct(SCALE)}">${gapBar(fullLeft, fullWidth)}<i class="a" style="left:${mark(a.portfolioTransaction)}%"></i><i class="b" style="left:${mark(b.portfolioTransaction)}%"></i></div>
@@ -178,6 +182,7 @@
  ${zoomBlock}
  <p class="scale-note">Den øverste linje er skalaen 0 til ${pct(SCALE)}. Afstanden er lille, fordi forskellen er ${pp(Math.abs(dTx))}. Den nederste linje er et udsnit, så markørerne kan skelnes. Udsnittet er forstørret. Forskellen er stadig ${pp(Math.abs(dTx))}, ${krGapTxt} på 100.000 kr. Det er ikke en sum af satserne og ikke et ÅOP.</p>
  </section>`;
+ const receiptGap = dTx === 0 ? '' : `<p class="receipt-gap">Porteføljetransaktion på 100.000 kr. er ${kr(a.portfolioTransaction)} i PMINDI og ${kr(b.portfolioTransaction)} i PMINDIAKK. Forskellen er <b class="is-gap">${krGapTxt}</b>. ${onlyTx ? 'De andre linjer er ens. ' : ''}Ingen linje er lagt sammen. Ikke et ÅOP.</p>`;
  const spoken = onlyTx
  ? `Porteføljetransaktion er den eneste af satserne, der ikke er ens: ${pct(a.portfolioTransaction)} i PMINDI og ${pct(b.portfolioTransaction)} i PMINDIAKK. Forskellen er ${pp(Math.abs(dTx))}. På 100.000 kr. er det ${krGapTxt} i regneeksemplet. Det er ikke et ÅOP.`
  : dTx === 0
@@ -213,6 +218,7 @@
  <h1>Hvad koster fonden?</h1>
  <p class="lede">Forventede omkostninger i indeværende regnskabsår, som de står på Fundmarket. Det er ikke et beregnet ÅOP. Kurtage og depot hos din bank kommer oveni.</p>
  <p class="band">${esc(facts.asOfNote)}</p>
+ ${deltaStage}
  <div class="metrics">
  <div class="metric"><div class="label">Øvrige løbende${sameOngoing ? ', begge klasser' : ', PMINDI / AKK'}</div><strong>${sameOngoing ? pct(a.otherOngoing) : pct(a.otherOngoing) + ' / ' + pct(b.otherOngoing)}</strong><small>Forventet · Fundmarket</small></div>
  <div class="metric"><div class="label">Porteføljetransaktion, PMINDI</div><strong>${pct(a.portfolioTransaction)}</strong><small>Forventet</small></div>
@@ -220,7 +226,6 @@
  <div class="metric"><div class="label">Resultathonorar</div><strong>${feeNo ? 'Nej' : 'Se klasser'}</strong><small>${feeNo ? 'Begge klasser · Fundmarket' : 'Se teksten på klassekortet'}</small></div>
  </div>
  <p class="band">${onlyTx ? `Kun porteføljetransaktion skiller klasserne. ${sameLine} ${entryLine} ${feeLine} Ikke et ÅOP.` : `${spoken} ${sameLine} ${entryLine} ${feeLine}`}</p>
- ${deltaStage}
 
  <section class="panel">
  <h2 class="panel-h">Sammenligning</h2>
@@ -268,6 +273,7 @@
  </ol>
  </article>
  </div>
+ ${receiptGap}
  <p class="src" style="margin-top:10px">Resultathonorar indgår ikke i eksemplet. ${feeLine}</p>
  </section>
 

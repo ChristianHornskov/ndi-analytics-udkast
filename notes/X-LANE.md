@@ -4,6 +4,14 @@
 **Branch:** lane-X  
 **Deadline:** keep until 08:30, polish, report 08:45, demo 09:00.
 
+## Denne nat (2026-10-16) · tredje pas
+
+Ingen nye X-kald. `callCountNote` beholder 30/min og 1000/day, noten om ét søgekald 2026-10-15, og at der ikke er kaldt 2026-10-16. Tilføjet: tredje poleringspas, stadig ingen kald. 21 opslag uændret. Browseren kalder ikke X. Ingen embed. Ingen secrets. NewDeal Invest i ét ord. Tal kun fra `fund-facts.json` og `risk-stats.json`. 80 kr. er 720 − 640 på 100.000 kr., samme afrunding som omkostningssiden.
+
+- `docs/js/x-feed.js` og `docs/ndi-paa-x.html`: træffet står som citat, med navnet i gul og afsenderen under teksten. Øvrige kort ligger i sporet under citatet. Åben side deler arkivet i «Konti Mads følger» og «NDI-konti». Dørene citerer uddraget og markerer SoftBank, NVDA eller chips. Tom tilstand siger 0 og gentager «Udvalgte offentlige opslag — ikke NDI's holdning». Spor-logikken er uændret: direkte før tema, temakurv reserverer ét tema-kort, selskabssider reserverer ikke.
+- `docs/fakta.html`: porteføljetransaktion viser stadig 0,64 % og 0,72 %. Under tallene står 80 kr. på 100.000 kr. og «Ikke et ÅOP». På mobil står det kort øverst i blikket. På desktop står det som det fjerde kort, ved siden af de tre ens tal. Risikotallet er uændret og står stadig før andelsklasserne: 32,46 %, Sharpe 0,89, max drawdown −35,82 %. Bund 8. apr. 2025. Topfeltet 2. jun. 2026 er stadig stiplet.
+- `docs/omkostninger.html`: heroen er 80 kr. og står før de fire satser, så den rammer første skærm. Satserne 0,64 % og 0,72 % står ved siden af tallet. Skalaen 0–2 % er uændret og lille med vilje. Udsnittet 0,48–0,88 % er stadig mærket forstørret. Kvitteringerne er uændret: 1.490 kr., 640 kr. / 720 kr., 250 kr. En linje under dem siger, at forskellen er 80 kr., og at linjerne ikke er lagt sammen.
+
 ## Denne nat (2026-10-16) · andet pas
 
 Ingen nye X-kald. `callCountNote` beholder 30/min og 1000/day, noten om ét søgekald 2026-10-15, og at der ikke er kaldt 2026-10-16. Tilføjet: andet poleringspas, stadig ingen kald. 21 opslag uændret. Browseren kalder ikke X. Ingen embed. Ingen secrets. NewDeal Invest i ét ord. Tal kun fra `fund-facts.json` og `risk-stats.json`.
