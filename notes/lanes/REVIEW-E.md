@@ -35,3 +35,9 @@ Southern, Vistra, Talen, Bloom, Centrus, BWX Technologies, Rolls-Royce, Firefly,
 Vistra-tallene er forsiden den 16. oktober 2026, ikke et NDI-regnestykke. 433 MW er øget effekt, ikke en ny reaktor. Rolls-Royce SMR i Sverige er et valg, ikke drift. Fireflys Eclipse er ikke fløjet i teksten. Seks sider gav 403, og de tekster holder sig til den gamle profil.
 
 Åbent: råstoffer, der ikke er miner i drift, og de rum-navne der mangler: Redwire, York, MDA, Satellogic, Hawkeye 360, Intuitive Machines, Howmet. AI-compute-leddet er urørt.
+
+## Atten profiler · 2026-10-16 ~00:25 CEST
+
+Projekter og rum-navne har "Kort fortalt" uden gennemgangsdato. Chromium på alle atten. Thacker Pass er opførelse med selskabets mål sent i 2027, ikke fuld drift. Standard Lithium har et demonstrationsanlæg, ikke en stor mine. Chorus er ikke sendt op i teksten. QSE-5 er ikke masseproduktion. Kurser fra Standard Lithiums side er udeladt. Tesla og T1 er urørt, fordi de har `reviewedAt`.
+
+Åbent: gasproducenterne, udstyrsnavnene Babcock, Cummins, Generac, Primoris og MYR, og de miner, der faktisk producerer. AI-compute-leddet er urørt.

@@ -470,7 +470,17 @@
    "source": "https://www.solaris-energy.com/",
    "products": "Anlæg, der producerer og fordeler strøm tæt på forbrugeren, plus service.",
    "customers": "Datacentre, industri og energikunder.",
-   "role": "Strøm ved siden af store forbrugere, ikke et klassisk elselskab alene."
+   "role": "Strøm ved siden af store forbrugere, ikke et klassisk elselskab alene.",
+   "narrative": [
+    "Solaris leverer produktion og fordeling af strøm tæt på store forbrugere.",
+    "Selskabet kommer fra udstyr til olieindustrien. I kæden står det både på elproduktion og på elnet."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.solaris-energy.com/"
+    }
+   ]
   },
   "US74347M1080": {
    "name": "ProPetro",
@@ -610,7 +620,17 @@
    "source": "https://www.terrestrialenergy.com/",
    "products": "En reaktortype under udvikling.",
    "customers": "Ingen driftkunder i denne beskrivelse.",
-   "role": "Udvikling af en anden type lille reaktor."
+   "role": "Udvikling af en anden type lille reaktor.",
+   "narrative": [
+    "Terrestrial Energy udvikler reaktoren IMSR. Den bruger smeltet salt.",
+    "Denne beskrivelse omfatter ikke et anlæg i drift."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.terrestrialenergy.com/"
+    }
+   ]
   },
   "US2057683029": {
    "name": "Comstock Resources",
@@ -710,7 +730,17 @@
    "source": "https://www.niocorp.com/",
    "products": "Et mineprojekt, ikke en igangværende produktion.",
    "customers": "Ingen driftkunder i denne beskrivelse.",
-   "role": "Råstofprojekt."
+   "role": "Råstofprojekt.",
+   "narrative": [
+    "NioCorp udvikler et projekt i Nebraska med blandt andet niobium.",
+    "Denne tekst beskriver ikke en mine i drift."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.niocorp.com/"
+    }
+   ]
   },
   "VGG2662B1031": {
    "name": "Critical Metals",
@@ -720,7 +750,17 @@
    "source": "https://www.criticalmetalscorp.com/",
    "products": "Et råstofprojekt.",
    "customers": "Ingen driftkunder i denne beskrivelse.",
-   "role": "Råstofprojekt, ikke produktion."
+   "role": "Råstofprojekt, ikke produktion.",
+   "narrative": [
+    "Critical Metals arbejder med projektet Tanbreez i Grønland. Det gælder sjældne jordarter.",
+    "Denne tekst beskriver ikke en mine i drift."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.criticalmetalscorp.com/"
+    }
+   ]
   },
   "AU000000LYC6": {
    "name": "Lynas Rare Earths",
@@ -740,7 +780,17 @@
    "source": "https://www.lithiumamericas.com/",
    "products": "Et lithiumprojekt.",
    "customers": "Videreforarbejdning, hvis produktionen kommer i gang.",
-   "role": "Råstof til batterier."
+   "role": "Råstof til batterier.",
+   "narrative": [
+    "Lithium Americas udvikler Thacker Pass i Nevada. Selskabet skriver, at byggeriet er i gang, og at målet er industriel skala sent i 2027.",
+    "Denne tekst beskriver ikke en mine i fuld drift."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.lithiumamericas.com/"
+    }
+   ]
   },
   "US91733P1075": {
    "name": "USA Rare Earth",
@@ -750,7 +800,17 @@
    "source": "https://www.usare.com/",
    "products": "Et råstofprojekt og planer om videre forarbejdning.",
    "customers": "Ingen driftkunder i denne beskrivelse.",
-   "role": "Råstofprojekt."
+   "role": "Råstofprojekt.",
+   "narrative": [
+    "USA Rare Earth arbejder med et projekt for sjældne jordarter i Texas og med planer om magneter.",
+    "Denne tekst beskriver ikke en mine i drift."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.usare.com/"
+    }
+   ]
   },
   "CA2926717083": {
    "name": "Energy Fuels",
@@ -780,7 +840,17 @@
    "source": "https://www.ivanhoeelectric.com/",
    "products": "Et kobberprojekt.",
    "customers": "Ingen driftkunder i denne beskrivelse.",
-   "role": "Råstofprojekt til elnet og elektronik."
+   "role": "Råstofprojekt til elnet og elektronik.",
+   "narrative": [
+    "Ivanhoe Electric udvikler kobberprojektet Santa Cruz i Arizona.",
+    "Denne tekst beskriver ikke en mine i drift."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.ivanhoeelectric.com/"
+    }
+   ]
   },
   "CA8536061010": {
    "name": "Standard Lithium",
@@ -790,7 +860,17 @@
    "source": "https://www.standardlithium.com/",
    "products": "Lithiumprojekter.",
    "customers": "Ingen stor kommerciel kundebase i denne beskrivelse.",
-   "role": "Råstof til batterier."
+   "role": "Råstof til batterier.",
+   "narrative": [
+    "Standard Lithium henter lithium ud af saltvand i Smackover-formationen. Selskabet skriver, at et demonstrationsanlæg kører.",
+    "Projekterne i Arkansas og i Texas er ikke beskrevet som en stor mine i drift."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.standardlithium.com/"
+    }
+   ]
   },
   "CA89621C1059": {
    "name": "Trilogy Metals",
@@ -800,7 +880,17 @@
    "source": "https://trilogymetals.com/",
    "products": "Kobberprojekter.",
    "customers": "Ingen driftkunder i denne beskrivelse.",
-   "role": "Råstofprojekt."
+   "role": "Råstofprojekt.",
+   "narrative": [
+    "Trilogy Metals arbejder med efterforskning og udvikling af Arctic og Bornite i Alaska. Det er kobberprojekter.",
+    "Selskabet kalder arbejdet efterforskning og udvikling. Denne tekst beskriver ikke en mine i drift."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://trilogymetals.com/"
+    }
+   ]
   },
   "CA8765111064": {
    "name": "Taseko Mines",
@@ -1010,7 +1100,17 @@
    "source": "https://redwirespace.com/",
    "products": "Dele til satellitter og udstyr til arbejde i rummet.",
    "customers": "Satellitbyggere og rumprogrammer.",
-   "role": "Infrastruktur til satellitter. Ikke en opsender og ikke et orbitalt datacenter."
+   "role": "Infrastruktur til satellitter. Ikke en opsender og ikke et orbitalt datacenter.",
+   "narrative": [
+    "Redwire leverer dele til satellitter og rumfartøjer, blandt andet solpaneler og strukturer.",
+    "Selskabet arbejder også med forsøg i rummet. Det er ikke et datacenter i kredsløb og ikke en opsender."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://redwirespace.com/"
+    }
+   ]
   },
   "US9870841007": {
    "name": "York Space Systems",
@@ -1020,7 +1120,17 @@
    "source": "https://www.yorkspacesystems.com/",
    "products": "Satellitplatforme.",
    "customers": "Offentlige og private kunder, der skal bruge en satellit.",
-   "role": "Bygger satellitten. Driver den ikke som en forbrugertjeneste."
+   "role": "Bygger satellitten. Driver den ikke som en forbrugertjeneste.",
+   "narrative": [
+    "York bygger satellitplatforme til kunder. Platformen bærer kundens udstyr.",
+    "Selskabet driver ikke et datacenter i rummet."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.yorkspacesystems.com/"
+    }
+   ]
   },
   "US4432011082": {
    "name": "Howmet Aerospace",
@@ -1030,7 +1140,17 @@
    "source": "https://www.howmet.com/",
    "products": "Metalkomponenter til fly og rumfart.",
    "customers": "Fly- og motorproducenter.",
-   "role": "Dele, ikke opsendelse."
+   "role": "Dele, ikke opsendelse.",
+   "narrative": [
+    "Howmet laver metaldele til fly og til rumfart, blandt andet til motorer og skrog.",
+    "Selskabet sender ikke raketter op. Snapshottet har aktien under SpaceTech."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.howmet.com/"
+    }
+   ]
   },
   "US7731211089": {
    "name": "Rocket Lab",
@@ -1064,7 +1184,17 @@
    "source": "https://satellogic.com/",
    "products": "Billeder og data fra satellitter.",
    "customers": "Offentlige og private kunder, der skal se Jorden ovenfra.",
-   "role": "Satellittjeneste, ikke en raket."
+   "role": "Satellittjeneste, ikke en raket.",
+   "narrative": [
+    "Satellogic driver satellitter, der tager billeder af Jorden. Satellitterne hedder NewSat.",
+    "Selskabet opsender ikke selv raketterne i denne beskrivelse. Det står på satellitter."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://satellogic.com/"
+    }
+   ]
   },
   "US92892B1035": {
    "name": "Voyager Technologies",
@@ -1094,7 +1224,17 @@
    "source": "https://www.he360.com/",
    "products": "Radiosignaldata fra rummet.",
    "customers": "Offentlige og private kunder med brug for stedbestemmelse af radiosignaler.",
-   "role": "Satellittjeneste."
+   "role": "Satellittjeneste.",
+   "narrative": [
+    "Hawkeye 360 driver satellitter, der opfanger radiosignaler, og bruger dem til at stedbestemme kilden.",
+    "Det er en satellittjeneste, ikke en raket."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.he360.com/"
+    }
+   ]
   },
   "CA55293N1096": {
    "name": "MDA Space",
@@ -1104,7 +1244,17 @@
    "source": "https://mda.space/",
    "products": "Satellitter, robotarme og geodata.",
    "customers": "Rumagenturer, satellitoperatører og forsvar.",
-   "role": "Satellitter og robotik."
+   "role": "Satellitter og robotik.",
+   "narrative": [
+    "MDA bygger satellitter og rumrobotik og arbejder med geodata.",
+    "Selskabet omtaler satellitprogrammet Chorus, før det er sendt op. Robotikken er udstyr. Det er ikke et datacenter."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://mda.space/"
+    }
+   ]
   },
   "US46125A1007": {
    "name": "Intuitive Machines",
@@ -1114,7 +1264,17 @@
    "source": "https://www.intuitivemachines.com/",
    "products": "Månelandere og rumfartøjer.",
    "customers": "Kunder, der skal have udstyr til Månen, herunder offentlige programmer.",
-   "role": "Transport til Månen, ikke en satellit i kredsløb om Jorden."
+   "role": "Transport til Månen, ikke en satellit i kredsløb om Jorden.",
+   "narrative": [
+    "Intuitive Machines bygger månelandere og rumfartøjer og leverer udstyr til Månen.",
+    "Selskabet står på opsendelse som transport væk fra Jorden. Det er ikke en satellit, der tager billeder af Jorden."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.intuitivemachines.com/"
+    }
+   ]
   },
   "US03945R1023": {
    "name": "Archer Aviation",
@@ -1324,7 +1484,17 @@
    "source": "https://www.eose.com/",
    "products": "Batterisystemer til elnettet.",
    "customers": "Elselskaber og projektudviklere.",
-   "role": "Lagring, ikke råstof."
+   "role": "Lagring, ikke råstof.",
+   "narrative": [
+    "Eos laver zinkbaserede batterier til lagring på elnettet. Selskabet skriver, at systemerne fremstilles i USA.",
+    "Det er lagring, ikke en mine og ikke et kraftværk. Snapshottet har selskabet under Andet, med et temaforslag."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.eose.com/"
+    }
+   ]
   },
   "US74767V1098": {
    "name": "QuantumScape",
@@ -1334,7 +1504,17 @@
    "source": "https://www.quantumscape.com/",
    "products": "Et batteridesign under udvikling.",
    "customers": "Bilproducenter, hvis produktionen kommer i gang.",
-   "role": "Batteriteknologi, ikke et lagersystem i drift på elnettet."
+   "role": "Batteriteknologi, ikke et lagersystem i drift på elnettet.",
+   "narrative": [
+    "QuantumScape udvikler faststof-batterier til køretøjer. Selskabet omtaler batteriet QSE-5.",
+    "Denne tekst beskriver ikke masseproduktion og ikke et lager på elnettet. Snapshottet har selskabet under Andet, med et temaforslag."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.quantumscape.com/"
+    }
+   ]
   }
  },
  "media": [

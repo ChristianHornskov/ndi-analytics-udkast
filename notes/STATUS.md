@@ -303,3 +303,17 @@ Siderne for Talen, Bloom, BWX Technologies, Voyager, Karman og Plug Power svared
 Tjekket i Chromium på de tolv sider. AI-udkast er med. "Tjekket mod kilden" er ikke med. Ingen konsolfejl. Ingen vandret scroll ved 375 px.
 
 **Push:** `lane-E` @ `c4d39e0` er pushet efter precheck. Første forsøg blev afvist, andet gik igennem. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 ~00:25 CEST. Kort fortalt på projekter, der ikke er miner, og på rum-navne, der ikke er datacentre. Ikke færdig.**
+
+Atten profiler fik `narrative` uden `reviewedAt`. AI-udkast bliver.
+
+Nye grænser fra sider, der svarede: Lithium Americas skriver, at Thacker Pass er under opførelse, med mål sent i 2027. Ikke fuld drift. Standard Lithium skriver, at et demonstrationsanlæg kører. Projekterne i Arkansas og Texas er ikke en stor mine. Trilogy kalder Arctic og Bornite efterforskning og udvikling. Ivanhoe Electric udvikler Santa Cruz. Eos skriver, at zinkbatterierne fremstilles i USA. De er lagring, ikke en mine. Satellogic kalder satellitterne NewSat og opsender ikke selv. MDA omtaler Chorus, før det er sendt op. QuantumScape omtaler QSE-5 og ikke masseproduktion.
+
+NioCorp, Critical Metals, USA Rare Earth og Hawkeye 360 gav ikke en læsbar side. Intuitive Machines omdirigerer i ring. De tekster holder sig til den profil, der allerede stod. Tesla og T1 Energy har gennemgangsdato og er ikke ændret. Kursen på Standard Lithiums side er ikke taget med.
+
+Tjekket i Chromium på de atten sider. AI-udkast er med. Ingen gennemgangsdato. Ingen konsolfejl. Ingen vandret scroll ved 375 px.
+
+**Push:** `lane-E` @ `d4c8d57` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
