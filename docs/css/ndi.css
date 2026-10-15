@@ -272,6 +272,8 @@ a.tag:hover{border-color:var(--brand);color:var(--text)}
 .company-meta{color:var(--muted);font-size:13px;margin:6px 0 16px;overflow-wrap:anywhere}
 .panel-h{font-size:16px;margin-bottom:8px}
 .panel-h.brand{color:var(--brand)}
+/* .brand er logo-rækken (flex, min-height 36px på mobil). På en overskrift må klassen kun give farve, så AI-udkast-badget bliver i linjen. */
+h2.panel-h.brand{display:block;gap:0;align-items:unset;text-decoration:none;min-height:0;flex:none}
 .prose{font-size:15px;line-height:1.6;max-width:68ch}
 .prose+.prose{margin-top:10px}
 .prose.muted{color:var(--muted)}

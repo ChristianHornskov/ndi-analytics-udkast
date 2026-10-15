@@ -12,9 +12,9 @@
     .node h3{font-size:16px;margin-bottom:6px;color:var(--cyan)}
     .node p{font-size:13px;color:var(--muted);line-height:1.45}
     .arrow{text-align:center;color:var(--brand);font-size:18px}
-    .node{transition:opacity .15s,border-color .15s}
-    .chain.filtering .node{opacity:.38}
-    .chain.filtering .node.hit{opacity:1;border-color:var(--yellow)}
+    .node{transition:border-color .15s,box-shadow .15s}
+    .chain.filtering .node.hit{border-color:var(--yellow);box-shadow:inset 3px 0 0 var(--yellow)}
+    @media (prefers-reduced-motion:reduce){.node{transition:none}}
     .node .hit-why{display:none;font-size:12px;color:var(--yellow);margin-top:6px}
     .node.hit .hit-why{display:block}
     .node details{margin-top:8px;font-size:13px}
@@ -169,7 +169,7 @@
           (outside.length ? ` · også ${outside.map(daTheme).map(esc).join(', ')}` : '') +
           (co.why ? `. ${esc(co.why)}` : '.') + ' Eksponering, ikke anbefaling.';
       } else {
-        status.textContent = `${label}: ${n} led fremhævet. Åbn listen i leddet for de største positioner.`;
+        status.textContent = `${label}: ${n} led fremhævet. De største positioner er foldet ud.`;
       }
     }
 
@@ -189,22 +189,29 @@
       setUrl('tema', k);
     });
 
-    function findCo(q) {
+    function matches(q) {
       const s = q.trim().toLowerCase();
-      if (!s) return null;
-      return list.find(c => c.name.toLowerCase() === s) || list.find(c => c.name.toLowerCase().startsWith(s)) || null;
+      if (!s) return [];
+      const exact = list.filter(c => c.name.toLowerCase() === s);
+      if (exact.length) return exact;
+      return list.filter(c => c.name.toLowerCase().startsWith(s));
     }
     input.addEventListener('input', () => {
       const q = input.value.trim();
       if (!q) { apply([], ''); setUrl(); return; }
-      const co = findCo(q);
-      if (!co) {
-        apply([], '');
-        status.innerHTML = q.length >= 2 ? `Intet selskab i den viste beholdning matcher "${esc(q)}". <a href="laer/faq-mangler-aktie.html">Hvorfor mangler en aktie?</a>` : '';
+      const found = matches(q);
+      if (found.length === 1) {
+        const co = found[0];
+        apply([...co.tags], co.name, co);
+        setUrl('isin', co.isin);
         return;
       }
-      apply([...co.tags], co.name, co);
-      setUrl('isin', co.isin);
+      apply([], '');
+      setUrl();
+      if (q.length < 2) { status.textContent = ''; return; }
+      status.innerHTML = found.length
+        ? `${found.length} selskaber starter med "${esc(q)}". Skriv det fulde navn.`
+        : `Intet selskab i den viste beholdning matcher "${esc(q)}". <a href="laer/faq-mangler-aktie.html">Hvorfor mangler en aktie?</a>`;
     });
 
     // Deep link: ?tema=chips eller ?isin=...
