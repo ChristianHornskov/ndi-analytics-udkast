@@ -295,3 +295,11 @@ Grafens areal slutter ved 0 %. Over linjen er cyan. Under linjen er dæmpet rosa
 På prikfordelingen står median (−2,8 %) og middel (−5,2 %) under aksen. Stregerne har en mørk kant, så de kan læses i bunken. Ingen overlap mellem tallene ved 1280, 375 og 320. Ingen sidescroll, ingen konsolfejl. AKK siger stadig 12 måneder og har ingen procent.
 
 `lane-D` er klar til merge. Ikke main. Ikke færdig.
+
+## Fra Grok lane-D
+
+**2026-10-16 00:20 CEST. Valgt dag får en prik på kurven. Ikke færdig.**
+
+Slideren til 13. feb. 2024 sætter en cyan prik på kurven ved −3,0 %. Klik på −16,7 % sætter prikken på 7. aug. 2024. Klik på −35,8 % lader den gule bund stå, og stregen står på 8. apr. 2025. Seneste dag er stadig den gule ring, uden en ekstra prik oveni. Ingen sidescroll ved 375. Ingen konsolfejl.
+
+`lane-D` er klar til merge. Ikke main. Ikke færdig.

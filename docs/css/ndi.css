@@ -622,6 +622,7 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
 .figure .uw-grid{stroke:var(--line);stroke-width:1;vector-effect:non-scaling-stroke}
 .figure .uw-drop{stroke:var(--yellow);stroke-width:1;vector-effect:non-scaling-stroke;opacity:.85}
 .figure .uw-cursor{stroke:var(--text);stroke-width:1;opacity:.75;vector-effect:non-scaling-stroke}
+.figure .uw-pick{fill:var(--cyan);stroke:var(--bg);stroke-width:1.5;vector-effect:non-scaling-stroke}
 .figure svg.uw{cursor:crosshair;touch-action:pan-y}
 .uw-scrub{margin-top:8px}
 .uw-scrub p{margin:0 0 4px;font-size:13px;color:var(--text);font-variant-numeric:tabular-nums;min-height:1.3em}

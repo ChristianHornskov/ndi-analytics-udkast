@@ -110,16 +110,17 @@
  parts.push(`<path class="uw-line" d="${line}"/>`);
  const trough = uw.find(u => u.d === dd.troughD) || uw.reduce((a, b) => a.u < b.u ? a : b);
  const tx = xOf(trough.d), ty = yOf(trough.u);
+ const last = uw[uw.length - 1];
+ const nx = xOf(last.d), ny = yOf(last.u);
+ parts.push(`<line id="uw-cursor" class="uw-cursor" x1="${nx.toFixed(1)}" x2="${nx.toFixed(1)}" y1="${y0.toFixed(1)}" y2="${(H - padB).toFixed(1)}"/>`);
+ parts.push(`<circle id="uw-pick" class="uw-pick" data-hide="${trough.d}|${last.d}" cx="${nx.toFixed(1)}" cy="${ny.toFixed(1)}" r="3.1" opacity="0"/>`);
  parts.push(`<line class="uw-drop" x1="${tx.toFixed(1)}" x2="${tx.toFixed(1)}" y1="${y0.toFixed(1)}" y2="${ty.toFixed(1)}"/>`);
  parts.push(`<circle class="uw-max" cx="${tx.toFixed(1)}" cy="${ty.toFixed(1)}" r="3.2"/>`);
  const lx = Math.min(W - padR - 4, Math.max(padL + 28, tx));
  parts.push(`<text class="uw-label" x="${lx.toFixed(1)}" y="${Math.max(12, ty - 7)}" text-anchor="middle">${fmtPct(trough.u, 0)}</text>`);
- const last = uw[uw.length - 1];
- const nx = xOf(last.d), ny = yOf(last.u);
  parts.push(`<circle class="uw-now" cx="${nx.toFixed(1)}" cy="${ny.toFixed(1)}" r="3.4"/>`);
  parts.push(`<text class="uw-label" x="${(nx - 6).toFixed(1)}" y="${Math.max(12, ny - 6)}" text-anchor="end">nu ${fmtPct(last.u, 0)}</text>`);
- parts.push(`<line id="uw-cursor" class="uw-cursor" x1="${nx.toFixed(1)}" x2="${nx.toFixed(1)}" y1="${y0.toFixed(1)}" y2="${(H - padB).toFixed(1)}"/>`);
- const desc = `Daglig afstand til løbende top fra ${fmtDate(rows[0].d)} til ${fmtDate(rows[rows.length - 1].d)}. Dybeste bund ${fmtPct(trough.u)} den ${fmtDate(trough.d)}. Seneste dag ${fmtPct(last.u)}. Slideren under grafen vælger en dag.`;
+ const desc = `Daglig afstand til løbende top fra ${fmtDate(rows[0].d)} til ${fmtDate(rows[rows.length - 1].d)}. Dybeste bund ${fmtPct(trough.u)} den ${fmtDate(trough.d)}. Seneste dag ${fmtPct(last.u)}. Slideren vælger en dag. En cyan prik sættes på kurven, medmindre dagen allerede er den gule prik eller den gule ring.`;
  return `<svg id="uw-svg" class="uw" viewBox="0 0 ${W} ${H}" role="img" aria-labelledby="uw-title uw-desc"><title id="uw-title">Under vand</title><desc id="uw-desc">${desc}</desc>${parts.join('')}</svg>`;
  };
 
@@ -209,7 +210,7 @@
  </div>
  ${anno ? `<p class="anno">${anno}</p>` : ''}
  <h2 class="h-section">Under vand</h2>
- <figure class="figure">${underwater()}<figcaption>0 % er på toppen. Kurven er afstanden til den løbende top, dag for dag. Gul prik er den dybeste bund. Gul ring er seneste dag.</figcaption><div class="uw-scrub"><p id="uw-read" aria-live="polite">${fmtDate(uw[uw.length - 1].d)}: ${fmtPct(uw[uw.length - 1].u)} under den løbende top.</p><label class="sr-only" for="uw-slider">Vælg dag i serien</label><input id="uw-slider" type="range" min="0" max="${uw.length - 1}" value="${uw.length - 1}" aria-valuemin="0" aria-valuemax="${uw.length - 1}" aria-valuetext="${fmtDate(uw[uw.length - 1].d)}: ${fmtPct(uw[uw.length - 1].u)} under den løbende top."></div></figure>
+ <figure class="figure">${underwater()}<figcaption>0 % er på toppen. Kurven er afstanden til den løbende top, dag for dag. Gul prik er den dybeste bund. Gul ring er seneste dag. Cyan prik er den valgte dag.</figcaption><div class="uw-scrub"><p id="uw-read" aria-live="polite">${fmtDate(uw[uw.length - 1].d)}: ${fmtPct(uw[uw.length - 1].u)} under den løbende top.</p><label class="sr-only" for="uw-slider">Vælg dag i serien</label><input id="uw-slider" type="range" min="0" max="${uw.length - 1}" value="${uw.length - 1}" aria-valuemin="0" aria-valuemax="${uw.length - 1}" aria-valuetext="${fmtDate(uw[uw.length - 1].d)}: ${fmtPct(uw[uw.length - 1].u)} under den løbende top."></div></figure>
  <h2 class="h-section">Hvor dybe er faldene?</h2>
  <figure class="figure plain">${depthPlot()}<figcaption>${depthCap}</figcaption></figure>
  <h2 class="h-section">De dybe episoder</h2>
@@ -225,6 +226,8 @@
  const slider = document.getElementById('uw-slider');
  const read = document.getElementById('uw-read');
  const cursor = document.getElementById('uw-cursor');
+ const pick = document.getElementById('uw-pick');
+ const hidePick = new Set((pick?.dataset.hide || '').split('|'));
  const nearest = (t) => {
  let lo = 0, hi = uw.length - 1;
  while (lo < hi) {
@@ -249,6 +252,11 @@
  const x = xOf(u.d).toFixed(1);
  cursor.setAttribute('x1', x);
  cursor.setAttribute('x2', x);
+ if (pick) {
+ pick.setAttribute('cx', x);
+ pick.setAttribute('cy', yOf(u.u).toFixed(1));
+ pick.setAttribute('opacity', hidePick.has(u.d) ? '0' : '1');
+ }
  };
  const fromClient = (ev) => {
  const rect = svg.getBoundingClientRect();
