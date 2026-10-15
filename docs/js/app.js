@@ -424,18 +424,33 @@ function renderFonden(root) {
       <a class="outline-btn small" style="margin-left:8px" href="risici.html">Risici / KID →</a></p>
     </section>`;
 
-  const evts = (DATA.context?.events || []).filter((e) => {
+  const ctxEvts = (DATA.context?.events || []).filter((e) => {
     if (!sliced.length) return false;
     return e.d >= sliced[0].d && e.d <= sliced[sliced.length - 1].d;
   });
+  const ddMark = maxDrawdown(sliced);
+  const ddEvts = [];
+  if (ddMark?.peakD && sliced.some((r) => r.d === ddMark.peakD)) {
+    ddEvts.push({ d: ddMark.peakD, kind: 'peak', title: 'Top før største fald', chartOnly: true });
+  }
+  if (ddMark?.troughD && sliced.some((r) => r.d === ddMark.troughD)) {
+    ddEvts.push({ d: ddMark.troughD, kind: 'dip', title: `Bund (max drawdown ${fmtPct(ddMark.dd)})`, chartOnly: true });
+  }
+  const evts = [...ctxEvts, ...ddEvts];
   renderChart($('#perf-chart', root), sliced, evts, { label: 'Totalafkast' });
-  if (evts.length) {
+  if (ctxEvts.length) {
     const box = document.createElement('section');
     box.className = 'panel';
     box.innerHTML = `<h2 style="font-size:16px;margin-bottom:8px">Dokumenterede begivenheder i perioden</h2>
-      <ul style="color:var(--muted);line-height:1.55;padding-left:18px">${evts.map((e) => `<li><strong style="color:var(--text)">${fmtDate(e.d)}</strong>. ${e.title}${e.source ? ` <span style="font-size:11px">(${e.source})</span>` : ''}<br><span style="font-size:12px">${e.text || ''}</span></li>`).join('')}</ul>
-      <p style="font-size:11px;color:var(--muted);margin-top:8px">Kun dokumenterede fondsbegivenheder (udbytte). Ingen illustrative narrativer.</p>`;
+      <ul style="color:var(--muted);line-height:1.55;padding-left:18px">${ctxEvts.map((e) => `<li><strong style="color:var(--text)">${fmtDate(e.d)}</strong>. ${e.title}${e.source ? ` <span style="font-size:11px">(${e.source})</span>` : ''}<br><span style="font-size:12px">${e.text || ''}</span></li>`).join('')}</ul>
+      <p style="font-size:11px;color:var(--muted);margin-top:8px">Kun dokumenterede fondsbegivenheder (udbytte). Grafen markerer også top/bund for max drawdown i perioden.</p>`;
     $('#perf-chart', root)?.closest('section')?.after(box);
+  } else if (ddEvts.length) {
+    const note = document.createElement('p');
+    note.className = 'src';
+    note.style.marginTop = '6px';
+    note.innerHTML = `Grafmarkering: top/bund for max drawdown i perioden (${fmtPct(ddMark.dd)}). <a href="drawdown.html?fund=${state.fund}">Drawdown-side →</a>`;
+    $('#perf-chart', root)?.closest('section')?.appendChild(note);
   }
 
   renderCalendar($('#calendar', root), rows);
