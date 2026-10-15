@@ -227,3 +227,7 @@ Fem dele: komponenter, motorer, distribution, kraftsystemer og Accelera. Distrib
 ## ProPetro · 2026-10-16 01:42 CEST
 
 Trykpumpning i Permian-bassinet. Service, ikke et kraftværk og ikke en mine. Står ikke på elproduktionslisten. Leading, premier og largest er ikke kopieret. AI-udkast uden gennemgangsdato. NDI-blikket og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Terra Innovatum · 2026-10-16 01:43 CEST
+
+SOLO er et koncept fra 2018, ikke et værk i drift. To forskellige effekt-tal på forsiden er ikke kopieret. Leader og capital-efficient er ikke kopieret. Ikke blandet sammen med Terrestrial Energy. AI-udkast uden gennemgangsdato. Atomkraft-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.

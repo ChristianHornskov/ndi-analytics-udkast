@@ -799,3 +799,13 @@ Det er service til selskaber, der leder efter og udvinder olie og gas. Det er ik
 Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Permian står. Selskabet står ikke i selskabslisten. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `02c86a0` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:43 CEST. Terra Innovatum skriver, at konceptet SOLO er fra 2018. Ikke færdig.**
+
+Det er en mikroreaktor under udvikling. Teksten beskriver ikke et værk i drift. Forsiden viser to forskellige tal for effekt. Ingen af dem er taget med. Leader og capital-efficient er ikke taget med. Ingen `reviewedAt`. Blurben under atomkraft og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. 2018 står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `6a491f2` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

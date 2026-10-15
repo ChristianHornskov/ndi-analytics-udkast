@@ -549,15 +549,15 @@
   "NL0015002Q12": {
    "name": "Terra Innovatum",
    "theme": "energy",
-   "summary": "Udvikler mikroreaktoren SOLO. Selskabet beskriver et anlæg under udvikling. Denne tekst beskriver ikke et værk i drift.",
-   "watch": "Godkendelser, fremstilling af den første enhed og om anlægget nogensinde kommer i drift.",
+   "summary": "Udvikler mikroreaktoren SOLO. Selskabet skriver, at konceptet er fra 2018. Denne tekst beskriver ikke et værk i drift.",
+   "watch": "Om designet bliver godkendt og bygget. Teksten beskriver ikke et værk i drift.",
    "source": "https://www.terrainnovatum.com/",
    "products": "En mikroreaktor, der er tiltænkt strøm og varme tæt på forbrugeren.",
    "customers": "Industri, datacentre og andre store forbrugere, hvis anlægget bliver bygget.",
    "role": "Udvikling af små reaktorer. Ikke elproduktion i drift.",
    "narrative": [
-    "Terra Innovatum udvikler mikroreaktoren SOLO. Selskabet beskriver et anlæg, der endnu ikke er i drift.",
-    "Reaktoren er tiltænkt strøm tæt på forbrugeren, for eksempel industri eller et datacenter, hvis den bliver bygget og godkendt."
+    "Terra Innovatum skriver, at konceptet til mikroreaktoren SOLO er fra 2018. Siden beskriver et anlæg under udvikling.",
+    "Det er ikke et værk i drift. Reaktoren er tiltænkt strøm tæt på forbrugeren, hvis den bliver bygget og godkendt."
    ],
    "narrativeSources": [
     {
