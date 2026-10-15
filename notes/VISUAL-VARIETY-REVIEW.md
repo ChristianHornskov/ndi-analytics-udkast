@@ -82,6 +82,16 @@ Sammenlign sagde "største forskel" uden at vise hvilken række. Det er Andet / 
 
 De tre tal under grafen var lige store. Totalafkast er nu 36 px (32 px under 640). CAGR og år til dato er 22 px. Tallene er de samme: +104,8 %, +26,4 % og +4,0 %. På PMINDIAKK står der stadig en streg, og svg'en er tom. Ingen sidescroll ved 1280, 375 og 320. Ingen konsolfejl.
 
+### Update · søjlehøjde er dybden · 2026-10-16 ~01:15 CEST
+
+Søjlerne under kurven var lige høje. Højden er nu dybden, bredden er stadig tiden. −16,7 % er den lave søjle. −35,8 % er den høje. −26,6 % og −26,8 % er næsten lige høje, fordi faldene er det. De deler overkant. Stregen ved −10 er brand og tykkere end de andre gitterlinjer. Tallet −10 er samme farve. Et klik på søjlen for 8. apr. 2025 sætter udlæsningen til −35,8 % og markerer rækken. En dag uden for de fire, 3. nov. 2023, slukker kant og række.
+
+"tilbage", "top" og "nu −23 %" rammer ikke søjlerne eller hinanden, ved 1280, 375 og 320. Ingen tekst uden for svg'en. Ingen sidescroll. Ingen konsolfejl. AKK siger stadig 12 måneder og har ingen procent.
+
+### Update · udbytte-mærke · 2026-10-16 ~01:22 CEST
+
+De to sammenlign-kort er stadig et par, med samme felter. Forskellen er tegnet: PMINDI har en pil ud af kassen. PMINDIAKK har et loop, der vender tilbage i kassen. Ingen tredje kasse. Ét panel. AKK-kortet har ingen afkastprocent. "fra 5. dec. 2026" står på sin egen linje. Gul kant på Andet. Link til drawdown er der. Ingen sidescroll ved 1280, 375 og 320. Ingen konsolfejl.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.

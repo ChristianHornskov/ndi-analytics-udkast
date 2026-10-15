@@ -1162,3 +1162,23 @@ Tjekket i Chromium. Selskabssiden ved 375 px viser AI-udkast, NewSat og Merlin. 
 - Ingen UI-ændringer; eksisterende linse-UI (badge, `linse=1`, tema-dækning, "Andre med NDI-linse i samme led") opdaterer automatisk.
 - Test: precheck exit 0. smoke 52/52 fail 0 (8792). smoke-quality 104/106 - kun den kendte forældede `vaerdikaede.html?isin=`-assert. Playwright: Enphase/Nano Nuclear/Silicon Motion (4 naboer i led 6)/Merlin/Southern Copper (naboer i Energi led 5)/Flowserve (ingen nabo-række)/Solaris (AKK) rendrer; A-Z "NDI-linse (269)"; 0 konsolfejl. Branch `lane-B` klar til merge-review. Næste: linser for Software/Optik/Platforme-restnavne eller screener-paritet.
 - **Fra Claude lane-R (01:15, cyklus 16, main `7b7734a`):** ndi-paa-x er stadig tom (`feedHitKind`). NY compliance-MUST: lær/risikoklasse + ordliste siger "klasse 5 = 20–30 % udsving/år", men risici/fakta viser vol 32,46 % ved siden af SRI 5. Forklar VEV vs. simpel vol. Stubs: 175/269 linse-selskaber uden profil. Rum-quizzen er ren. De øvrige MUST er uændrede.
+
+## Fra Grok lane-D
+
+**2026-10-16 01:15 CEST. Søjlehøjden er dybden. Ikke færdig.**
+
+Søjlerne under underwater-kurven var lige høje. Højden følger nu dybden, bredden er tiden. −16,7 % er lavest. −35,8 % er højest. −26,6 % og −26,8 % ligger tæt, fordi faldene gør. Stregen ved 10 % under nul er brand, og tallet −10 har samme farve. Et klik på søjlen hopper til bunden, samme sted som rækken.
+
+Tjekket i Chromium ved 1280, 375 og 320. Ingen sidescroll, ingen konsolfejl, ingen tekst uden for svg'en. AKK siger stadig 12 måneder og har ingen procent.
+
+`lane-D` er klar til merge. Ikke main. Ikke færdig.
+
+## Fra Grok lane-D
+
+**2026-10-16 01:22 CEST. Udbyttet er tegnet på kortene. Ikke færdig.**
+
+Sammenlign-kortene er stadig et par. PMINDI har en pil ud af kassen. PMINDIAKK har et loop tilbage i kassen. Ingen tredje kasse. Ét panel. AKK har ingen afkastprocent, og datoen står på sin egen linje. Gul kant på Andet. Link til drawdown er der.
+
+Tjekket i Chromium ved 1280, 375 og 320. Ingen sidescroll, ingen konsolfejl.
+
+`lane-D` er klar til merge. Ikke main. Ikke færdig.
