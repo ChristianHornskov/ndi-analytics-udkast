@@ -67,10 +67,16 @@
     if (!data?.themes) throw 0;
     const by = Object.fromEntries(data.themes.map(t => [t.themeKey || t.slug, t]));
     document.querySelectorAll('[data-theme-key]').forEach(el => {
-      const t = by[el.getAttribute('data-theme-key')];
+      const key = el.getAttribute('data-theme-key');
+      const t = by[key];
       if (!t) return;
       const tip = el.querySelector('[data-weight]');
-      if (tip) tip.textContent = `ca. ${String(t.weightSum).replace('.',',')} % · ${t.count} selskaber (forsinket)`;
+      if (!tip) return;
+      let text = `ca. ${String(t.weightSum).replace('.',',')} % · ${t.count} selskaber (forsinket)`;
+      if (key === 'software' && by.platforms) {
+        text += ` · platforme ca. ${String(by.platforms.weightSum).replace('.',',')} %`;
+      }
+      tip.textContent = text;
     });
   </script>
 

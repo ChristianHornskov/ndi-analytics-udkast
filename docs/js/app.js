@@ -180,7 +180,6 @@ function renderEntre(root) {
       <a href="embed/chart.html">Embed-graf</a> ·
       <a href="kort.html">Sidekort</a> ·
       <button type="button" class="link-btn" data-open="dlg-follow">Følg med</button></p>
-    <p class="asof-note">Beholdning pr. ${fmtDate(fundById(DATA.portfolio, state.fund).positionsAsOf || DATA.portfolio.asOf)} (forsinket) · afkast-snapshot pr. ${fmtDate(DATA.portfolio.performanceAsOf || DATA.portfolio.asOf)}.</p>
     <section class="panel" style="margin-top:18px">
       <h2 style="font-size:18px;margin-bottom:8px">Porteføljeholdet</h2>
       <p style="color:var(--muted);font-size:14px;line-height:1.5">NewDeal Invest forvaltes af et porteføljehold med fokus på teknologi og bred spredning. Læs mere om holdet på <a href="https://newdealinvest.dk/">newdealinvest.dk</a>.</p>
