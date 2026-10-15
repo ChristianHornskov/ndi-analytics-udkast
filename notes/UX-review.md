@@ -123,3 +123,26 @@ Playwright 375/1280: 0 konsolfejl, ingen vandret overflow. smoke 52/52 fail 0. p
 
 ### Åbne (lane-C)
 - FAQ-kortenes tekst er korte og gode; artikel-snippets uden søgeord starter midt i brødtekst — kunne få en `<meta name="description">`-baseret teaser (kræver ændring i `docs/js/faq-search.js` → JS-lane).
+
+
+## 00:00 CEST checkpoint (lane-C, Claude) — skrevet ~23:55
+**Perspektiv:** fondsinvestor over 60, der klikker «Risici» fra Fonden og vil vide «hvad kan gå galt?» på 45 sekunder. 375 + 1280, Playwright lokalt.
+
+### Løst i denne cyklus
+- **Risici** (`risici.html`): før var der kun KID-punkter + 4 linjer. Nu: **SRI-skala 1–7** pr. andelsklasse med klasse 5 markeret (role=img + aria-label), seks risikokort i NDI-sprog (udsving, koncentration i tech trods spredning, flaskehalse der flytter sig, valuta, tidlige selskaber, variance drag), hvert med link til den side der forklarer det. Fast boks «Sådan bruges NDI Analytics» (ikke rådgivning, forsinket beholdning, AI-udkast-mærke, efter omkostninger, KID gælder) jf. VIDENSBOT-krav §5 «fast risikoboks».
+- **Invester** (`invester.html`): «Tre spørgsmål før du investerer» (tid ≥ 5 år jf. KID, kan du holde til fald, passer en bred fond) + tabel med ISIN og KID-link for **begge** klasser (compliancefælde 6). Ulukket `<p>` rettet. Løser SHOULD 5 fra 22:00 («Invester-trinkort med meget tom højde») delvist — siden har nu substans under trinene.
+- **NDI-perspektiv**: **tabellen var ulæselig på mobil** (arvede `white-space:nowrap` + højrestilling fra `table.data` → anden kolonne løb ud af skærmen). Sidelokal fix: ombrydning, venstrestillet, kort-layout < 700 px. Hints fra `unique-metrics.json` vises nu under hver værdi; `href`-felter er links. Ny forklaring «Hvad linsen spørger om» (flodsystem + 5 felter, «Hold øje med» = ikke prognose).
+- **Ordliste** 55 → **61**: valutarisiko, glidende gennemsnit (52 uger, «vises ikke for enkeltaktier i v1»), prospekt, UCITS, likviditet, stokastisk proces. KID-navn rettet til «dokument med central information».
+
+### SHOULD (andre lanes)
+1. `index.html` (ikke lane-C) skriver stadig «Central Information Dokument» to steder — officielt dansk navn er «Dokument med central information».
+2. `unique-metrics.json`: Tesla-hint siger «Led 1 og led 2 i den forenklede kæde», mens værdikæder nu har 13 led. Bør pege på energi-/robotik-kæden i stedet.
+3. NDI-perspektiv på 375 er nu ~5.300 px (14 selskaber × 5 felter). Overvej fold-ud pr. selskab, hvis listen vokser.
+
+### MUST
+Ingen nye.
+
+### Lane-C checkpoint ~00:45 (tynde lær-sider)
+- Tre lær-sider var én tekstblok hver. Nu har hver en visuel form, der matcher indholdet: søjler (spredning), før/efter-stabler (ex-dato), tidslinje (datoer).
+- Mobil 375: hvorfor-mange-aktier ~3.000 px, udbytte ~2.560 px, forsinket ~1.900 px. Tabellen på udbytte-siden bliver til kort < 640 px.
+- Åbent: `sammenlign.html` «Samme portefølje» (ikke lane-C).

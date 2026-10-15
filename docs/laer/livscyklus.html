@@ -5,6 +5,27 @@
  <meta name="robots" content="noindex,nofollow">
  <title>Virksomheders livscyklus · NDI Analytics</title>
  <link rel="stylesheet" href="../css/ndi.css">
+ <style>
+  .lc svg{display:block;width:100%;height:auto}
+  .lc .ax{stroke:var(--line);stroke-width:1}
+  .lc .rev{fill:none;stroke:var(--cyan);stroke-width:3;stroke-linecap:round}
+  .lc .mar{fill:none;stroke:var(--yellow);stroke-width:2;stroke-dasharray:6 5}
+  .lc .ph{font:600 12px var(--font);fill:var(--text)}
+  .lc .sm{font:11px var(--font);fill:var(--faint)}
+  .lc .sep{stroke:var(--line);stroke-dasharray:2 4}
+  .lc .band rect{rx:6}
+  .lc .band text{font:600 11px var(--font);fill:#111}
+  .lc-key{display:flex;flex-wrap:wrap;gap:6px 16px;margin:8px 0 0;font-size:13px;color:var(--muted)}
+  .lc-key i{display:inline-block;width:18px;height:0;border-top:3px solid var(--cyan);vertical-align:middle;margin-right:6px}
+  .lc-key i.d{border-top:2px dashed var(--yellow)}
+  .lc .lc-v{display:none}
+  .lc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+  .lc-grid > div{background:var(--panel-2);border-radius:12px;padding:12px 14px;color:var(--muted);line-height:1.5;font-size:14px}
+  .lc-grid h3{margin:0 0 4px;font-size:15px;color:var(--text)}
+  .lc-tool{display:grid;grid-template-columns:auto 1fr;gap:10px 14px;align-items:center;color:var(--muted);line-height:1.5}
+  .lc-tool b{font-size:26px;line-height:1}
+  @media (max-width:660px){.lc .lc-h{display:none}.lc .lc-v{display:block;max-width:360px}.lc-grid{grid-template-columns:1fr}}
+ </style>
  <!-- og:start -->
  <meta property="og:type" content="website">
  <meta property="og:site_name" content="NDI Analytics (udkast)">
@@ -28,12 +49,74 @@
  <main id="main">
  <p class="eyebrow">LÆR</p>
  <h1>Virksomheders livscyklus</h1>
- 
-<p class="lede">Fra idé og præ-revenue til skalering, overskud og value. Tech flytter sig langs kurven.</p>
+
+<p class="lede">Fra idé og præ-revenue til skalering, overskud og value. Tech flytter sig langs kurven, og fasen siger mere om et selskab end en enkelt nøgletalsværdi.</p>
+
+<section class="panel lc" aria-labelledby="lc-h2">
+ <h2 id="lc-h2" style="font-size:18px;margin-bottom:10px">Kurven</h2>
+ <svg class="lc-h" viewBox="0 0 640 270" role="img" aria-labelledby="lc-t lc-d">
+  <title id="lc-t">Virksomheders livscyklus</title>
+  <desc id="lc-d">Omsætningen vokser langsomt i idé- og udviklingsfasen, hurtigt under skalering, flader ud i modenhed og falder i nedgang. Overskudsgraden er lav eller negativ i de tidlige faser og højest i modenhed. Under kurven er sidens fem modenhedsgrupper placeret: præ-revenue, præ-profit, high growth, GARP og value.</desc>
+  <line class="ax" x1="20" y1="190" x2="620" y2="190"/>
+  <line class="sep" x1="120" y1="30" x2="120" y2="190"/><line class="sep" x1="230" y1="30" x2="230" y2="190"/><line class="sep" x1="400" y1="30" x2="400" y2="190"/><line class="sep" x1="540" y1="30" x2="540" y2="190"/>
+  <text class="ph" x="70" y="24" text-anchor="middle">Idé</text>
+  <text class="ph" x="175" y="24" text-anchor="middle">Udvikling</text>
+  <text class="ph" x="315" y="24" text-anchor="middle">Skalering</text>
+  <text class="ph" x="470" y="24" text-anchor="middle">Modenhed</text>
+  <text class="ph" x="580" y="24" text-anchor="middle">Nedgang</text>
+  <path class="rev" d="M20 186 C 90 186, 160 182, 230 160 S 360 70, 400 58 S 500 42, 540 46 S 600 70, 620 84"/>
+  <path class="mar" d="M20 186 C 80 200, 160 214, 230 196 S 360 140, 400 118 S 500 92, 540 96 S 600 120, 620 140"/>
+  <text class="sm" x="236" y="214">overskud under nul</text>
+  <g class="band" transform="translate(0,226)">
+   <rect x="20" y="0" width="208" height="20" fill="var(--slate)"/><text x="124" y="14" text-anchor="middle" fill="var(--text)" style="fill:var(--text)">Præ-revenue · præ-profit</text>
+   <rect x="232" y="0" width="166" height="20" fill="var(--cyan)"/><text x="315" y="14" text-anchor="middle">High growth</text>
+   <rect x="402" y="0" width="70" height="20" fill="var(--yellow)"/><text x="437" y="14" text-anchor="middle">GARP</text>
+   <rect x="476" y="0" width="144" height="20" fill="var(--pos)"/><text x="548" y="14" text-anchor="middle">Value</text>
+  </g>
+  <text class="sm" x="20" y="264">Pædagogisk skitse. Ikke målt på rigtige selskaber.</text>
+ </svg>
+ <svg class="lc-v" viewBox="0 0 320 400" role="img" aria-labelledby="lc-tv lc-dv">
+  <title id="lc-tv">Virksomheders livscyklus (lodret)</title>
+  <desc id="lc-dv">Fem faser oppefra og ned: idé, udvikling, skalering, modenhed og nedgang, med sidens modenhedsgrupper ud for hver fase.</desc>
+  <line class="ax" x1="40" y1="20" x2="40" y2="380"/>
+  <g>
+   <circle cx="40" cy="40" r="7" fill="var(--slate)"/><text class="ph" x="58" y="38">Idé</text><text class="sm" x="58" y="54">ingen omsætning endnu · præ-revenue</text>
+   <circle cx="40" cy="110" r="7" fill="var(--slate)"/><text class="ph" x="58" y="108">Udvikling</text><text class="sm" x="58" y="124">første salg, store tab · præ-profit</text>
+   <circle cx="40" cy="180" r="9" fill="var(--cyan)"/><text class="ph" x="58" y="178">Skalering</text><text class="sm" x="58" y="194">høj vækst, lav margin · high growth</text>
+   <circle cx="40" cy="250" r="9" fill="var(--yellow)"/><text class="ph" x="58" y="248">Sen skalering</text><text class="sm" x="58" y="264">vækst og overskud · GARP</text>
+   <circle cx="40" cy="320" r="9" fill="var(--pos)"/><text class="ph" x="58" y="318">Modenhed</text><text class="sm" x="58" y="334">høj margin, lav vækst · value</text>
+   <circle cx="40" cy="375" r="6" fill="none" stroke="var(--faint)"/><text class="ph" x="58" y="373" style="fill:var(--muted)">Nedgang</text><text class="sm" x="58" y="389">ikke en gruppe på siden</text>
+  </g>
+ </svg>
+ <p class="lc-key"><span><i></i>Omsætning</span><span><i class="d"></i>Overskudsgrad</span></p>
+ <p style="color:var(--muted);line-height:1.55;margin-top:10px">Bogen beskriver fem faser: idé, udvikling, skalering, modenhed og nedgang. En teknologivirksomhed kendes typisk på «lav overskudsgrad kombineret med høj vækst», fordi pengene går til at bygge det næste. Value-selskaber er i den forstand tidligere tech, der ikke længere investerer aggressivt.</p>
+ <p class="src">Kilde: <i>Den lille guide til investering i teknologiaktier</i> (2025), s. 22–24.</p>
+</section>
+
+<section class="panel" aria-labelledby="lc-grp">
+ <h2 id="lc-grp" style="font-size:18px;margin-bottom:10px">De fem grupper på siden</h2>
+ <div class="lc-grid">
+  <div><h3>Præ-revenue</h3>Ingen eller næsten ingen omsætning endnu. Udfaldet er meget usikkert, og selskabet lever af kapital udefra.</div>
+  <div><h3>Præ-profit</h3>Har omsætning, men investerer mere, end det tjener. Underskuddet er ofte et valg, ikke kun et problem.</div>
+  <div><h3>High growth</h3>Hurtig vækst i omsætningen. Overskuddet er lavt i forhold til størrelsen, fordi meget geninvesteres.</div>
+  <div><h3>GARP</h3>Growth at a reasonable price: stadig vækst, men nu også et tydeligt overskud.</div>
+  <div style="grid-column:1 / -1"><h3>Value</h3>Modent selskab med høj indtjening og lavere vækst. Kan stadig have et formål i en teknologiportefølje, fx som infrastruktur eller platform, som andre bygger ovenpå.</div>
+ </div>
+ <p style="color:var(--muted);line-height:1.55;margin-top:12px">Inddelingen er en pædagogisk model, ikke en officiel rating. Se også <a href="../om-data.html#g-modenhed">modenhed</a>, <a href="../om-data.html#g-praerevenue">præ-revenue/præ-profit</a>, <a href="../om-data.html#g-garp">GARP</a> og <a href="../om-data.html#g-value">value</a> i ordlisten.</p>
+</section>
+
+<section class="panel" aria-labelledby="lc-tool">
+ <h2 id="lc-tool" style="font-size:18px;margin-bottom:10px">Rigtigt værktøj til rigtig fase</h2>
+ <div class="lc-tool">
+  <b aria-hidden="true" style="color:var(--yellow)">≠</b><span>At bruge en value-tilgang på et selskab i skaleringsfasen er ifølge bogen som at hamre en skrue i. Nøgletal som P/E er bygget til selskaber, der allerede tjener stabilt. <a href="pe-forklaring.html">Hvad P/E fortæller</a></span>
+  <b aria-hidden="true" style="color:var(--cyan)">↻</b><span>Alder er ikke det samme som fase. Bogens eksempel er Amazon: en gammel virksomhed, der stadig opfører sig som tech, fordi den bliver ved med at geninvestere.</span>
+ </div>
+ <p class="src">Kilde: samme bog, s. 24–27. Eksemplet forklarer begrebet og er ikke et syn på aktien.</p>
+</section>
+
 <section class="panel" style="color:var(--muted);line-height:1.6;display:grid;gap:12px">
-<p>En grov inddeling: præ-revenue → præ-profit → high growth → GARP → value. Det er en pædagogisk model, ikke en officiel rating.</p>
-<p>Modne selskaber kan stadig have et formål i en teknologiportefølje (infrastruktur, geninvestering, platforme). Omvendt er unge selskaber mere usikre i udfald.</p>
-<p>På <a href="../index.html?view=portefolje">Portefølje</a> placeres kun selskaber, som porteføljeholdet har klassificeret manuelt. Selskaber uden klassifikation vises ikke på kurven. Vi gætter ikke.</p>
+ <p><strong style="color:var(--text)">Sådan bruges kurven i NDI Analytics.</strong> På <a href="../index.html?view=portefolje">Portefølje</a> placeres kun selskaber, som porteføljeholdet har klassificeret manuelt. Selskaber uden klassifikation vises ikke på kurven. Vi gætter ikke.</p>
+ <p>Porteføljen rummer selskaber i alle faser. Det skyldes bredden: når man ejer hele værdikæden, får man både de unge selskaber i udviklingsfasen og de modne, der leverer infrastrukturen. Fasen beskriver selskabet. Den er ikke en anbefaling.</p>
 </section>
  <p class="warn">Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.</p>
  <p class="band">Generel information. Ikke investeringsrådgivning.</p>

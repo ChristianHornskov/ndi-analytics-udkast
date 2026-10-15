@@ -19,6 +19,22 @@
  <meta property="og:image:alt" content="NDI Analytics - udkast. Gå på opdagelse i porteføljen.">
  <meta name="twitter:card" content="summary_large_image">
  <!-- og:end -->
+<style>
+ .lens-m{margin-bottom:6px}
+ table.lens-table{min-width:0}
+ table.lens-table td,table.lens-table th{white-space:normal;text-align:left;vertical-align:top;line-height:1.5}
+ table.lens-table td:first-child{width:24%;font-weight:600}
+ @media(max-width:700px){
+  table.lens-table thead{display:none}
+  table.lens-table tr{display:block;border-bottom:1px solid var(--line);padding:6px 0}
+  table.lens-table td{display:block;width:auto!important;border:0;padding:6px 12px;position:static}
+  table.lens-table td:first-child{font-size:15px}
+ }
+ .lens-hint{display:block;color:var(--muted);font-size:13px;line-height:1.45;margin:2px 0 6px}
+ .lens-legend dl{display:grid;gap:8px;color:var(--muted);font-size:14px;line-height:1.5}
+ @media(min-width:760px){.lens-legend dl{grid-template-columns:1fr 1fr}}
+ .lens-legend dt{color:var(--text);font-weight:600}
+</style>
 </head>
 <body>
  <a class="skip" href="#main">Gå til indhold</a>
@@ -34,14 +50,25 @@
  const rows = Object.entries(pack.byIsin||{}).map(([isin,v]) => `
  <tr>
  <td><a href="selskab.html?isin=${encodeURIComponent(isin)}">${esc(v.name)}</a></td>
- <td>${(v.metrics||[]).map(m => `<strong>${esc(m.label)}:</strong> ${esc(m.value)}${m.ai ? ` ${AI_BADGE}` : ''}`).join('<br>')}</td>
+ <td>${(v.metrics||[]).map(m => `<div class="lens-m"><strong>${esc(m.label)}:</strong> ${m.href ? `<a href="${esc(m.href)}">${esc(m.value)}</a>` : esc(m.value)}${m.ai ? ` ${AI_BADGE}` : ''}${m.hint ? `<span class="lens-hint">${esc(m.hint)}</span>` : ''}</div>`).join('')}</td>
  </tr>`).join('');
  document.getElementById('main').innerHTML = `
  <p class="eyebrow">NDI-PERSPEKTIV · UDKAST</p>
  <h1>NDI-linsen på udvalgte selskaber</h1>
  <p class="lede">${esc(pack.note || 'Kvalitativ linse, udkast. Ingen kurser, afkast eller nøgletal.')}</p>
  <p class="band">Eksponering og pædagogik, ikke anbefaling. Åbn et selskab for forklaringer og links til <a href="vaerdikaede.html">værdikæden</a> og <a href="temaer.html">temaerne</a>.</p>
- <div class="table-wrap"><table class="data"><thead><tr><th>Selskab</th><th>NDI-linse</th></tr></thead><tbody>${rows}</tbody></table></div>
+ <section class="panel lens-legend">
+ <h2 style="font-size:16px;margin-bottom:6px">Hvad linsen spørger om</h2>
+ <p style="color:var(--muted);line-height:1.55;margin-bottom:8px">NDI ser ikke først på P/E. Det første spørgsmål er, hvilken teknologi og hvilket led i værdikæden et selskab giver eksponering mod. Vi ser AI-værdikæden som et flodsystem, hvor efterspørgslen presser på en række dæmninger: energi, datacentre, halvledere, cloud og apps.</p>
+ <dl>
+ <div><dt>NDI-tags</dt><dd>Temaer selskabet hører til. Et selskab kan have flere tags (fx Tesla).</dd></div>
+ <div><dt>Hvad ejer man?</dt><dd>Hvad aktionæren reelt får andel i: produkter, platforme eller ejerandele.</dd></div>
+ <div><dt>Plads i værdikæden</dt><dd>Hvilket led (dæmning) selskabet ligger ved. Klik for at se kæden.</dd></div>
+ <div><dt>Hold øje med</dt><dd>Forhold, der kan ændre billedet. Ikke en prognose og ikke en anbefaling.</dd></div>
+ <div><dt>Livscyklus</dt><dd>Modenhed fra før omsætning til value. Står der «Ikke klassificeret», har NDI ikke sat den endnu.</dd></div>
+ </dl>
+ </section>
+ <div class="table-wrap"><table class="data lens-table"><thead><tr><th>Selskab</th><th>NDI-linse</th></tr></thead><tbody>${rows}</tbody></table></div>
  <p class="warn">Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.</p>`;
  </script>
 </body>

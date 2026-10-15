@@ -434,3 +434,40 @@ Tjekket i Chromium på de syv `selskab.html`. "Kort fortalt" og AI-udkast er med
 - **selskaber.html (A-Z):** "NDI-linse"-badge pr. række, filter "Kun med NDI-linse (35)" (URL `linse=1`, bevares i søgning), tom tilstand ("X matcher søgningen, men har ingen NDI-linse endnu" + "Vis alle selskaber"), forklaring i fodnoten.
 - **Til ejere uden for lane-B:** (1) vaerdikaeder.html læser ikke `?isin=` - linse-links lander på #kap-kaeder; en deep-link/highlight af selskabets led ville gøre dem skarpere. (2) ndi-perspektiv.html linker stadig til `vaerdikaede.html` (gammel) og lister i JSON-rækkefølge - overvej sortering/gruppering efter tema nu hvor der er 35.
 - Test: smoke fail 0 (kørt mod lane-B på 8792); Playwright: 35 badges, filter/tom tilstand ok, 0 konsolfejl på selskaber/selskab/ndi-perspektiv. precheck exit 0. Branch `lane-B` klar til merge-review. Næste: modenhed-UI ærlighed (item 4) / flere linser.
+
+## Fra Claude lane-C (risici · invester · NDI-perspektiv · ordliste) · ~23:58 CEST
+- `risici.html`: SRI-skala 1–7 pr. klasse, 6 risikokort i Vidensbot-sprog (flodsystem som risiko, ikke som købsargument), fast «Sådan bruges NDI Analytics»-boks.
+- `invester.html`: «Tre spørgsmål før du investerer» + ISIN/KID-tabel for begge klasser; ulukket `<p>` rettet.
+- `ndi-perspektiv.html`: tabellen var ulæselig på mobil (arvet nowrap) → sidelokal fix + kort-layout < 700 px; hints/links fra unique-metrics vises; «Hvad linsen spørger om».
+- `om-data.html`: ordliste 55 → 61 (valutarisiko, glidende gennemsnit, prospekt, UCITS, likviditet, stokastisk proces); KID-navn rettet. kort.html-tæller opdateret.
+- Notes: UX-review 00:00, VIDENSBOT-live-check, HANDOFF demo-trin 8.
+- Test: Playwright 375/1280 på 5 sider: 0 konsolfejl, 0 døde links, ingen h-overflow. smoke 52/52 fail 0. precheck PASSED.
+- Branch `lane-C` klar til merge. Næste: lær-sider copy-gennemgang mod Vidensbot (saadan-taenker-vi, livscyklus, pe-forklaring) + UX-review 02:00.
+
+
+## Fra Claude lane-C (lær-sider mod Vidensbot) · ~00:20 CEST 16/10
+- `laer/saadan-taenker-vi.html`: tre udgangspunkter som kæde (BOG s. 27–28), fem principper hver med «Derfor:» + link, citat «Vores mål er ikke at finde den ene vinder» (ugebrev 13. jul 2026), «Markedet har som udgangspunkt ret», flodsystem uddybet, boks «Bogen og fonden er to forskellige ting» (TM §0).
+- `laer/livscyklus.html`: SVG-kurve (omsætning + overskudsgrad, 5 faser) med sidens 5 modenhedsgrupper; lodret variant < 660 px. Gruppekort, «rigtigt værktøj» (skrue/hammer, Amazon reinvesterer), ordlistelinks.
+- `laer/pe-forklaring.html`: hvad P/E er, høj/lav som forventning/bekymring, «Samme selskab, to valg» (opdigtet A/B: P/E 100 vs 25), P/E finder ikke bobler. Ingen P/E-tal pr. aktie.
+- `om-data.html`: ordliste 61 → 63 (tre udgangspunkter, livscyklus). kort.html-tæller + laer/index-tekst opdateret.
+- Fundet og rettet under test: lodret SVG blev også vist på desktop (CSS-specificitet); P/E-siden mistede sin media query.
+- Test: Playwright 375/1280: 0 konsolfejl, 0 døde links, ingen h-overflow. smoke 52/52 fail 0. precheck PASSED.
+- Branch `lane-C` klar til merge. Næste: forsinket-beholdning / udbytte-vs-akk / hvorfor-mange-aktier mod Vidensbot + UX-review 02:00.
+
+
+## Fra Claude lane-C (tynde lær-sider mod Vidensbot) · ~00:45 CEST 16/10
+- `laer/hvorfor-mange-aktier.html`: «vi kan ikke pege på vinderen» + citat (ugebrev 13. jul 2026); stablede søjler for variance drag ved 1/10/30/100/300 aktier (tænkt eksempel, markedsdel vs selskabsspecifik); vægtfordeling fra snapshot 1. jun 2026 (PMINDI 345 pos.: 55 / 247 / 38 / 5; top 10 = 11,9 %); «gør / gør ikke»-kort; bog≠fond-link til `saadan-taenker-vi.html#tv-bog`.
+- `laer/udbytte-vs-akk.html`: ex-dato-visual (opdigtet 100 kr → 90 + 10), «Derfor viser vi totalafkast», sammenligningstabel (kort-layout < 640 px). Titel → «Udbytte eller akkumulerende?» (index, kort, FAQ-svar fulgt med).
+- `laer/forsinket-beholdning.html`: tidslinje «to datoer, to formål», hvorfor-sektion, «viser vi / viser vi ikke».
+- Faktarettelse: ordliste «Andelsklasse» sagde «samme portefølje». Snapshot: PMINDI 345, PMINDIAKK 320 (alle 320 også i PMINDI) → «samme strategi, beholdninger ligner meget, ikke identiske». **Ikke min fil:** `sammenlign.html:96` siger stadig «Samme portefølje» — til den lane, der ejer den.
+- Test: Playwright 375/1280 på 7 sider: 0 konsolfejl, 0 døde links, ingen h-overflow. precheck PASSED.
+- Branch `lane-C` klar til merge. Næste: variance-drag + faq-mangler-aktie visuelt + UX-review 02:00.
+
+
+## Fra Claude lane-C (variance drag + mangler aktie X) · ~00:10 CEST 16/10
+- `laer/variance-drag.html`: Møntspillet fra bogen (s. 133–136, +50/−40 → 10.000 kr. bliver til 5.905 mod 16.289) som SVG over 10 år; skyder «Prøv selv» (±udsving → slutbeløb, CAGR, σ²/2) med fallback uden JS; søjler «et fald kræver en større stigning»; NDI-afsnit (vi viser CAGR, derfor spreder fonden bredt).
+- `laer/faq-mangler-aktie.html`: søgeformular → `selskaber.html?q=` (testet: «tsm» giver 1 træf); tre tjek (navn/ticker, dato 1. jun 2026, andelsklasse); tragt marked → portefølje (345); fire grundkort; «fravær er ikke en vurdering». Eksemplet var Alphabet, men Alphabet er **ikke** i snapshottet → skiftet til Meta/TSMC (verificeret i portfolio.json).
+- Bevidst ingen fast markedsværdigrænse: tese 2023 (gældende) siger ≥1 mia. USD, udkast 2.0 siger intet minimum. Siden siger kun «for lille eller handles for lidt» (MC, VB 24:50).
+- Ordliste 63 → 66 (ticker, ADR, møntspillet). FAQ-kortsvar + laer/index + kort-tæller fulgt med.
+- Test: Playwright 375/1280 på 6 sider: 0 konsolfejl, ingen h-overflow, skyder ±30 → 91 kr./−4,6 %. precheck se nedenfor.
+- Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + ideer.html visuel variation + HANDOFF demo-check.

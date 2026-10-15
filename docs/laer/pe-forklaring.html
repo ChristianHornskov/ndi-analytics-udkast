@@ -5,6 +5,28 @@
  <meta name="robots" content="noindex,nofollow">
  <title>Hvad P/E fortæller (og ikke fortæller) · NDI Analytics</title>
  <link rel="stylesheet" href="../css/ndi.css">
+ <style>
+  .pe-dial{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .pe-dial > div{border-radius:12px;padding:14px;background:var(--panel-2);line-height:1.5;color:var(--muted);font-size:14px}
+  .pe-dial .hi{border-top:3px solid var(--cyan)}
+  .pe-dial .lo{border-top:3px solid var(--yellow)}
+  .pe-dial h3{margin:0 0 4px;font-size:15px;color:var(--text)}
+  .pe-dial .not{display:block;margin-top:6px;color:var(--faint);font-size:13px}
+  .pe-ex{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .pe-ex figure{margin:0;background:var(--panel-2);border-radius:12px;padding:12px 14px}
+  .pe-ex figcaption{font-weight:600;color:var(--text);margin-bottom:8px;font-size:15px}
+  .pe-bar{display:flex;height:26px;border-radius:6px;overflow:hidden;font:600 11px var(--font)}
+  .pe-bar span{display:grid;place-items:center;color:#111;white-space:nowrap}
+  .pe-bar .c{background:var(--slate);color:var(--text)}
+  .pe-bar .i{background:var(--cyan)}
+  .pe-bar .p{background:var(--yellow)}
+  .pe-ex dl{display:grid;grid-template-columns:auto 1fr;gap:2px 10px;margin:10px 0 0;font-size:14px;color:var(--muted)}
+  .pe-ex dt{color:var(--muted)}
+  .pe-ex dd{margin:0;text-align:right;color:var(--text);font-variant-numeric:tabular-nums}
+  .pe-key{display:flex;flex-wrap:wrap;gap:6px 14px;margin:10px 0 0;font-size:13px;color:var(--muted)}
+  .pe-key i{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-1px;margin-right:6px}
+  @media (max-width:640px){.pe-dial,.pe-ex{grid-template-columns:1fr}}
+ </style>
  <!-- og:start -->
  <meta property="og:type" content="website">
  <meta property="og:site_name" content="NDI Analytics (udkast)">
@@ -28,12 +50,53 @@
  <main id="main">
  <p class="eyebrow">LÆR</p>
  <h1>Hvad P/E fortæller (og ikke fortæller)</h1>
- 
-<p class="lede">P/E siger mere om markedets forventninger end om en “rigtig” værdi for mange tech-selskaber.</p>
+
+<p class="lede">P/E siger mere om markedets forventninger end om en «rigtig» værdi for mange tech-selskaber. Derfor læser NDI tallet som et spørgsmål til markedet, ikke som en dom over aktien.</p>
+
+<section class="panel" aria-labelledby="pe-what">
+ <h2 id="pe-what" style="font-size:18px;margin-bottom:8px">Hvad er P/E?</h2>
+ <p style="color:var(--muted);line-height:1.55">Kurs delt med indtjening pr. aktie, eller samlet markedsværdi delt med årets overskud. En P/E på 20 betyder, at markedet betaler 20 kr. for hver krone, selskabet tjener i dag. Tallet bruger altså nutidens overskud til at sige noget om en pris, der afhænger af fremtiden.</p>
+</section>
+
+<section class="panel" aria-labelledby="pe-read">
+ <h2 id="pe-read" style="font-size:18px;margin-bottom:10px">Sådan læser vi høj og lav</h2>
+ <div class="pe-dial">
+  <div class="hi"><h3>Høj P/E</h3>Markedet <strong style="color:var(--text)">forventer</strong> noget: stærk fremtidig indtjening, eller at et stort underskud vender.<span class="not">Ikke nødvendigvis «dyr» for et selskab i investeringsfasen.</span></div>
+  <div class="lo"><h3>Lav P/E</h3>Markedet er <strong style="color:var(--text)">bekymret</strong> for noget: vækst, margin, konkurrence eller risiko.<span class="not">Ikke automatisk «billig». Bogen minder om, at brugte varer ofte er billige af en grund.</span></div>
+ </div>
+ <p style="color:var(--muted);line-height:1.55;margin-top:12px">Det nyttige spørgsmål er derfor: <em>hvad forventer eller frygter markedet, og bliver fremtiden bedre eller dårligere end det?</em> For de største selskaber kan man ifølge bogen antage, at de «nok er prissat rigtigt nu». Det er afvigelsen fra forventningen, der betyder noget.</p>
+ <p class="src">Kilde: <i>Den lille guide til investering i teknologiaktier</i> (2025), s. 25 og 71.</p>
+</section>
+
+<section class="panel" aria-labelledby="pe-ex-h">
+ <h2 id="pe-ex-h" style="font-size:18px;margin-bottom:6px">Samme selskab, to valg</h2>
+ <p style="color:var(--muted);line-height:1.55;margin-bottom:12px">Et tænkt selskab omsætter for 100 og har 60 i driftsomkostninger. Det kan bruge 30 af de resterende 40 på at udvikle næste produkt, eller lade være. Vi antager samme markedsværdi på 1.000 i begge tilfælde for at vise, hvad P/E-tallet gør.</p>
+ <div class="pe-ex">
+  <figure>
+   <figcaption>A · investerer</figcaption>
+   <div class="pe-bar" role="img" aria-label="Omsætning 100: drift 60, investering 30, overskud 10"><span class="c" style="width:60%">drift 60</span><span class="i" style="width:30%">invest. 30</span><span class="p" style="width:10%">10</span></div>
+   <dl><dt>Overskud</dt><dd>10</dd><dt>P/E</dt><dd>100</dd></dl>
+  </figure>
+  <figure>
+   <figcaption>B · investerer ikke</figcaption>
+   <div class="pe-bar" role="img" aria-label="Omsætning 100: drift 60, overskud 40"><span class="c" style="width:60%">drift 60</span><span class="p" style="width:40%">overskud 40</span></div>
+   <dl><dt>Overskud</dt><dd>40</dd><dt>P/E</dt><dd>25</dd></dl>
+  </figure>
+ </div>
+ <p class="pe-key"><span><i style="background:var(--slate)"></i>Drift</span><span><i style="background:var(--cyan)"></i>Investering i fremtiden</span><span><i style="background:var(--yellow)"></i>Overskud</span></p>
+ <p style="color:var(--muted);line-height:1.55;margin-top:12px">Målt på P/E ser A fire gange dyrere ud end B, selv om A er det selskab, der bygger næste produkt. P/E straffer investeringen, fordi den går gennem driften som en udgift. Det er det, NDI mener med, at «fremtidens vindere vil se dårlige ud i regnearket». Bogen sammenligner et tech-selskab med et ejendomsprojekt på tegnebrættet: man kan ikke prissætte det på huslejen i dag.</p>
+ <p class="src">Tallene er opdigtede og handler ikke om et rigtigt selskab. Citat: NDI ugebrev, 16. februar 2026. Tegnebrættet: bogen s. 70.</p>
+</section>
+
+<section class="panel" aria-labelledby="pe-bub">
+ <h2 id="pe-bub" style="font-size:18px;margin-bottom:8px">P/E finder heller ikke bobler</h2>
+ <p style="color:var(--muted);line-height:1.55">En høj P/E på tværs af markedet bliver ofte brugt som tegn på en boble. NDI har flere gange skrevet, at P/E ikke kan identificere bobler, fordi tallet ikke siger, om efterspørgslen bag forventningen er reel. Det er NDI’s vurdering, ikke en prognose. Se <a href="../ideer.html">Idéer</a> for, hvordan NDI ser på AI-udbygningen.</p>
+ <p class="src">NDI ugebreve august–november 2025.</p>
+</section>
+
 <section class="panel" style="color:var(--muted);line-height:1.6;display:grid;gap:12px">
-<p><strong style="color:var(--text)">Høj P/E</strong> kan betyde, at markedet forventer stærk fremtidig indtjening. Ikke nødvendigvis at aktien er “dyr” i en meningsfuld forstand for et selskab i investeringsfasen.</p>
-<p><strong style="color:var(--text)">Lav P/E</strong> kan betyde, at markedet er bekymret for vækst, margin eller risiko. Ikke automatisk at noget er “billigt”.</p>
-<p>I NDI Analytics viser vi derfor ikke P/E som hovednøgletal for vækstvirksomheder. Hvor P/E nævnes, skal det læses som markedets forventning. Ikke som en vurdering af aktien.</p>
+ <p><strong style="color:var(--text)">I NDI Analytics</strong> viser vi derfor ikke P/E som hovednøgletal, og udkastet viser ingen P/E-tal for de enkelte aktier. Det første, man ser om et selskab, er hvilken teknologi, værdikæde og <a href="livscyklus.html">fase</a> det giver eksponering mod. Hvor P/E nævnes, skal det læses som markedets forventning. Ikke som en vurdering af aktien.</p>
+ <p>Se også <a href="../om-data.html#g-pe">P/E</a> og <a href="../om-data.html#g-ps">P/S</a> i ordlisten.</p>
 </section>
  <p class="warn">Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.</p>
  <p class="band">Generel information. Ikke investeringsrådgivning.</p>
