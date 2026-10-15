@@ -11,14 +11,28 @@
  <meta property="og:site_name" content="NDI Analytics (udkast)">
  <meta property="og:locale" content="da_DK">
  <meta property="og:title" content="Drawdown · NDI Analytics">
- <meta property="og:description" content="Største fald fra top i fondens totalafkast-serie (NAV total). Fondniveau. Ikke enkeltaktier.">
+ <meta property="og:description" content="Største, middel og median fald fra top i fondens totalafkast-serie. Fondniveau. Ikke enkeltaktier.">
  <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/drawdown.html">
  <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
  <meta property="og:image:width" content="1200">
  <meta property="og:image:height" content="630">
- <meta property="og:image:alt" content="NDI Analytics - udkast. Gå på opdagelse i porteføljen.">
+ <meta property="og:image:alt" content="NDI Analytics - udkast.">
  <meta name="twitter:card" content="summary_large_image">
  <!-- og:end -->
+ <style>
+  .uw{width:100%;height:120px;background:#0b171d;border:1px solid var(--line);border-radius:12px;margin:12px 0 8px}
+  .ep-bars{display:flex;align-items:flex-end;gap:6px;height:100px;margin:12px 0;padding:8px 4px;background:#0b171d;border:1px solid var(--line);border-radius:12px}
+  .ep-bars .b{flex:1;min-width:8px;background:linear-gradient(180deg,#5a3030,var(--brand));border-radius:4px 4px 0 0;position:relative}
+  .ep-bars .b.max{background:linear-gradient(180deg,#8a4040,var(--yellow))}
+  .ep-bars .b span{position:absolute;bottom:100%;left:50%;transform:translateX(-50%);font-size:9px;color:var(--muted);white-space:nowrap;display:none}
+  .ep-bars .b:hover span,.ep-bars .b.max span{display:block;color:var(--yellow)}
+  .anno{font-size:12px;color:var(--yellow);margin:4px 0 12px}
+  .sm{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:12px 0}
+  .sm-card{background:#0b171d;border:1px solid var(--line);border-radius:12px;padding:14px}
+  .sm-card .lab{font-size:12px;color:var(--muted)}
+  .sm-card .num{font-size:24px;font-weight:700;letter-spacing:-.5px;margin:6px 0 2px}
+  .sm-card .num.neg{color:#e8a0a0}
+ </style>
 </head>
 <body>
  <a class="skip" href="#main">Gå til indhold</a>
@@ -29,7 +43,7 @@
  <main id="main"><p style="color:var(--muted)">Henter…</p></main>
  <footer class="site-footer"><p>Udkast / noindex. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast.</p></footer>
  <script type="module">
- import { loadAll, fundById, maxDrawdown, calendarYearReturns, WARN_HIST, fmtDate, fmtPct } from './js/data.js';
+ import { loadAll, fundById, maxDrawdown, drawdownSummary, calendarYearReturns, WARN_HIST, fmtDate, fmtPct } from './js/data.js';
  const { portfolio } = await loadAll();
  const fundId = new URL(location.href).searchParams.get('fund') || 'pmindi';
  const fund = fundById(portfolio, fundId);
@@ -43,6 +57,7 @@
  <p class="warn">${WARN_HIST}</p>`;
  } else {
  const dd = maxDrawdown(fund.data);
+ const sum = drawdownSummary(fund.data);
  const years = calendarYearReturns(fund.data);
  let recovery = null;
  if (dd) {
@@ -54,22 +69,53 @@
  }
  }
  }
+ // Underwater SVG (daily dd from running peak)
+ const rows = fund.data;
+ let peak = rows[0].total;
+ const uw = rows.map(r => {
+ if (r.total >= peak) peak = r.total;
+ return { d: r.d, u: ((r.total / peak) - 1) * 100 };
+ });
+ const W=640,H=110,pad=8;
+ const x=i=>pad+(i/(uw.length-1))*(W-2*pad);
+ const y=v=>pad+((-Math.min(v,0))/Math.max(0.01,-Math.min(...uw.map(u=>u.u))))*(H-2*pad);
+ const line=uw.map((u,i)=>`${i?'L':'M'}${x(i).toFixed(1)},${y(u.u).toFixed(1)}`).join(' ');
+ const area=line+` L${x(uw.length-1).toFixed(1)},${H-pad} L${pad},${H-pad} Z`;
+ const maxAbs=Math.max(0.01,-Math.min(...uw.map(u=>u.u)));
+ // Episode bars (depth)
+ const eps = [...sum.episodes].sort((a,b)=>a.peakD.localeCompare(b.peakD));
+ const minDd = Math.min(...eps.map(e=>e.dd), -0.01);
+ const bars = eps.map(e => {
+ const h = Math.max(4, (e.dd / minDd) * 84);
+ const isMax = e.dd === sum.max;
+ return `<div class="b${isMax?' max':''}" style="height:${h}px" title="${e.peakD} → ${e.troughD}: ${fmtPct(e.dd)}"><span>${fmtPct(e.dd,0)}</span></div>`;
+ }).join('');
  const yearRows = years.map(y => `<tr><td>${y.year}${y.partial?' (delår)':''}</td><td class="${y.ret>=0?'pos':'neg'}">${fmtPct(y.ret)}</td><td>${fmtDate(y.from)} → ${fmtDate(y.to)}</td></tr>`).join('');
  document.getElementById('main').innerHTML = `
  <a class="back" href="index.html?view=fonden&fund=${fundId}">← Fonden</a>
  <p class="eyebrow">FONDAFKAST · DRAWDOWN</p>
  <h1>Drawdown · ${fund.short}</h1>
- <p class="lede">Største fald fra top i fondens totalafkast-serie (NAV total). Fondniveau. Ikke enkeltaktier.</p>
- <div class="kpi-grid" style="grid-template-columns:repeat(2,1fr)">
- <div class="kpi"><span class="label">Max drawdown</span><strong class="neg">${dd ? fmtPct(dd.dd) : '-'}</strong></div>
- <div class="kpi"><span class="label">Top</span><strong>${dd ? fmtDate(dd.peakD) : '-'}</strong></div>
- <div class="kpi"><span class="label">Bund</span><strong>${dd ? fmtDate(dd.troughD) : '-'}</strong></div>
- <div class="kpi"><span class="label">Genopretning til top</span><strong>${recovery ? fmtDate(recovery) : (dd ? 'Ikke endnu / i serien' : '-')}</strong></div>
+ <p class="lede">Fald fra top i fondens totalafkast-serie (NAV total). Fondniveau. Ikke enkeltaktier.</p>
+ <div class="sm">
+ <div class="sm-card"><div class="lab">Max (dybeste)</div><div class="num neg">${sum.max!=null?fmtPct(sum.max):'-'}</div><div class="lab">${dd?fmtDate(dd.peakD)+' → '+fmtDate(dd.troughD):''}</div></div>
+ <div class="sm-card"><div class="lab">Middel (episoder)</div><div class="num neg">${sum.mean!=null?fmtPct(sum.mean):'-'}</div><div class="lab">${eps.length} episoder peak→bund</div></div>
+ <div class="sm-card"><div class="lab">Median (episoder)</div><div class="num neg">${sum.median!=null?fmtPct(sum.median):'-'}</div><div class="lab">Halvdelen er dybere</div></div>
+ <div class="sm-card"><div class="lab">Genopretning (max)</div><div class="num" style="font-size:16px;color:var(--cyan)">${recovery?fmtDate(recovery):(dd?'Ikke endnu / i serien':'-')}</div><div class="lab">Tilbage til forrige top</div></div>
  </div>
- <section class="panel">
+ <p class="anno">Under vand: daglig afstand til løbende top. Gul søjle = dybeste episode.</p>
+ <svg class="uw" viewBox="0 0 ${W} ${H}" role="img" aria-label="Underwater drawdown">
+  <path d="${area}" fill="rgba(137,174,180,.22)" stroke="none"/>
+  <path d="${line}" fill="none" stroke="var(--cyan)" stroke-width="1.6"/>
+  <text x="${pad}" y="14" fill="var(--muted)" font-size="10">0 %</text>
+  <text x="${pad}" y="${H-4}" fill="var(--yellow)" font-size="10">${fmtPct(-maxAbs,0)}</text>
+ </svg>
+ <h2 style="font-size:16px;margin:16px 0 4px">Episoder (dybde)</h2>
+ <div class="ep-bars" role="img" aria-label="Drawdown-episoder">${bars}</div>
+ <p class="src">Middel og median er over afsluttede og åbne peak→bund-episoder, ikke over alle dage under vand. Max matcher «største fald».</p>
+ <section class="panel" style="margin-top:18px">
  <h2 style="font-size:16px;margin-bottom:10px">Kalenderår (til kontekst)</h2>
  <div class="table-wrap"><table class="data" style="min-width:0"><thead><tr><th>År</th><th>Afkast</th><th>Periode</th></tr></thead><tbody>${yearRows}</tbody></table></div>
- <p style="font-size:11px;color:var(--muted);margin-top:8px">Klik et år for dyb side: ${years.map(y=>`<a href="periode.html?fund=${fundId}&year=${y.year}">${y.year}</a>`).join(' · ')} · <a href="periode.html?fund=${fundId}&year=YTD">YTD</a></p>
+ <p style="font-size:11px;color:var(--muted);margin-top:8px">Klik et år: ${years.map(y=>`<a href="periode.html?fund=${fundId}&year=${y.year}">${y.year}</a>`).join(' · ')} · <a href="periode.html?fund=${fundId}&year=YTD">YTD</a></p>
  </section>
  <p class="warn">${WARN_HIST}</p>`;
  }

@@ -31,3 +31,9 @@ Skriv dem adskilt: "Afkast pr. … · Beholdning (forsinket) pr. …"
 **Default overnight:** temaet `physical` (Fysisk tech) forbliver koblet til led 2 "Datacenter & racks" i `docs/vaerdikaede.html`.
 
 Begrundelse: Level-1-modellen er pædagogisk og forenklet; fysisk hardware (racks, robotik, elbil-platforme) samles under det fysiske led, indtil Christian/Mads eventuelt splitter led 2. Tesla kan derfor fremhæves dér via multi-tag — det er eksponering, ikke en anbefaling.
+
+## Drawdown (fondniveau)
+- **Max:** dybeste peak→trough i totalafkast-serien (ratio), i procent.
+- **Episoder:** hver tur under en løbende all-time peak indtil ny peak (eller åben serie).
+- **Middel / median:** over episode-dybder (ikke over alle dage under vand).
+- **Fix 2026-10-15:** `maxDrawdown` sammenlignede først fraction med senere procent og underdrev max (viste ca. −21 % i stedet for ca. −35,8 % på PMINDI). Rettet til konsistente enheder.

@@ -18,7 +18,7 @@ Kilder: slack_ny_graf_2026-10-15.md, vision.txt, mads_tankemodel.md, investering
 - [x] Drawdown / største fald (fondniveau)
 - [x] 100.000 kr.-eksempel (med advarsel + Fundmarket-note)
 - [x] Ingen Nasdaq i udkast (Leo) — Mads bad oprindeligt om vs Nasdaq til video
-- [ ] Drawdown middel/median som tal (video-ønske 28/9) — åben
+- [x] Drawdown middel/median som tal (episoder peak→bund) + underwater SVG
 - [x] Ingen daglige dispositioner / "det skete i går"
 
 ## Klassifikation (Mads 14/10 + møde)
@@ -57,3 +57,4 @@ Kilder: slack_ny_graf_2026-10-15.md, vision.txt, mads_tankemodel.md, investering
 |---|---|---|
 | 22:56 | Byg: multi-kæde + timeline + treemap + filosofi-callouts | (denne) |
 | 22:58 | Visual-variety pass + Grok review; ship vaerdikaeder.html | (denne) |
+| 23:00 | Drawdown middel/median + underwater + episode bars | (denne) |

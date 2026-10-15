@@ -116,16 +116,58 @@ export function monthlyReturns(rows) {
   return out;
 }
 
+
+/** All peak→trough drawdown episodes (pct). Mean/median of episode depths (not daily underwater). */
+export function drawdownEpisodes(rows) {
+  if (!rows?.length) return [];
+  const eps = [];
+  let peak = rows[0].total, peakD = rows[0].d;
+  let trough = rows[0].total, troughD = rows[0].d;
+  let inDd = false;
+  for (const r of rows) {
+    if (r.total >= peak) {
+      if (inDd && trough < peak) {
+        eps.push({
+          dd: ((trough / peak) - 1) * 100,
+          peakD, troughD,
+          recoveredD: r.d,
+        });
+      }
+      peak = r.total; peakD = r.d;
+      trough = r.total; troughD = r.d;
+      inDd = false;
+    } else {
+      inDd = true;
+      if (r.total < trough) { trough = r.total; troughD = r.d; }
+    }
+  }
+  if (inDd && trough < peak) {
+    eps.push({ dd: ((trough / peak) - 1) * 100, peakD, troughD, recoveredD: null });
+  }
+  return eps;
+}
+
+export function drawdownSummary(rows) {
+  const eps = drawdownEpisodes(rows);
+  if (!eps.length) return { episodes: [], max: null, mean: null, median: null };
+  const depths = eps.map(e => e.dd).sort((a, b) => a - b); // more negative first
+  const max = depths[0];
+  const mean = depths.reduce((s, x) => s + x, 0) / depths.length;
+  const mid = Math.floor(depths.length / 2);
+  const median = depths.length % 2 ? depths[mid] : (depths[mid - 1] + depths[mid]) / 2;
+  return { episodes: eps, max, mean, median };
+}
+
 export function maxDrawdown(rows) {
   if (!rows?.length) return null;
-  let peak = rows[0].total, maxDd = 0, peakD = rows[0].d, troughD = rows[0].d, startPeak = rows[0].d;
-  let best = { dd: 0, peakD: rows[0].d, troughD: rows[0].d };
+  let peak = rows[0].total, peakD = rows[0].d;
+  let best = { dd: 0, peakD: rows[0].d, troughD: rows[0].d }; // dd as fraction until return
   for (const r of rows) {
     if (r.total >= peak) { peak = r.total; peakD = r.d; }
-    const dd = (r.total / peak) - 1;
-    if (dd < best.dd) best = { dd: dd * 100, peakD, troughD: r.d };
+    const dd = (r.total / peak) - 1; // fraction
+    if (dd < best.dd) best = { dd, peakD, troughD: r.d };
   }
-  return best;
+  return { dd: best.dd * 100, peakD: best.peakD, troughD: best.troughD };
 }
 
 export function fmtPct(n, digits = 1) {
