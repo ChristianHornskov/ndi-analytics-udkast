@@ -677,20 +677,24 @@
   "US9115491030": {
    "name": "United States Antimony",
    "theme": "energy-resources",
-   "summary": "Selskabet skriver, at det udvinder og forarbejder antimon og zeolit. Det er ikke et kraftværk.",
-   "watch": "Miner, forarbejdning og efterspørgsel efter antimon.",
+   "summary": "Selskabet skriver, at det udvinder og forarbejder antimon og zeolit. Zeolitten kommer fra minen i Preston i Idaho, og smelteværket ligger i Thompson Falls i Montana. Alaska er ikke skrevet som en mine i drift.",
+   "watch": "Drift i Preston og på smelteværket i Montana. Alaska er ikke en mine i drift i denne tekst.",
    "source": "https://www.usantimony.com/",
    "products": "Antimon og zeolit.",
    "customers": "Industrikunder.",
-   "role": "Råstof, ikke elproduktion.",
+   "role": "Antimon og zeolit. Preston er en mine. Alaska er ikke skrevet som en mine i drift.",
    "narrative": [
-    "United States Antimony skriver, at selskabet udvinder og forarbejder to materialer, antimon og zeolit.",
-    "Det er råstoffer, ikke et kraftværk."
+    "United States Antimony skriver, at zeolit kommer fra minen og anlægget i Preston i Idaho, og at smelteværket for antimonoxid ligger i Thompson Falls i Montana.",
+    "Siden skriver, at tiden og usikkerheden ved en ny tilladelse til minen ved Thompson Falls fik selskabet til at lægge udvindingen tilbage til Mexico. Det første gravearbejde i Alaska skal samle stibnit og er ikke skrevet som en mine i drift. Materialet skal behandles på Fox Logistics Center i Fairbanks og raffineres i Montana. Smelteværket Madero er med i antimonforretningen. Flotationsmøllen i Puerto Blanco kører ikke, og minen Los Juarez er ikke aktiv. Det er råstoffer, ikke et kraftværk."
    ],
    "narrativeSources": [
     {
      "label": "Selskabets side",
      "url": "https://www.usantimony.com/"
+    },
+    {
+     "label": "Driften",
+     "url": "https://usantimony.com/operations/"
     }
    ]
   },

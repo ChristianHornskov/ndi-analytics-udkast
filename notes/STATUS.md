@@ -819,3 +819,13 @@ Selskabet skriver, at kunderne er militære, offentlige og kommercielle. Platfor
 Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. RQ-35 står. Selskabet står ikke i selskabslisten. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `27dccea` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:55 CEST. United States Antimony skriver, at zeolit kommer fra Preston. Ikke færdig.**
+
+Smelteværket for antimonoxid ligger i Thompson Falls i Montana. Siden skriver, at en ny tilladelse til minen dér var usikker, og at udvindingen blev lagt tilbage til Mexico. Det første gravearbejde i Alaska er ikke skrevet som en mine i drift. Areal-tal på siden er ikke ens og er ikke taget med. Ingen `reviewedAt`. Blurben under råstoffer og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Preston står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `d602d78` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

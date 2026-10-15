@@ -235,3 +235,7 @@ SOLO er et koncept fra 2018, ikke et værk i drift. To forskellige effekt-tal p�
 ## Airo · 2026-10-16 01:46 CEST
 
 RQ-35 Heidrun, RQ-70, JC250 og JX250 står under platforme. Kunderne er militære, offentlige og kommercielle. Ikke skrevet som en flåde i drift. Ikke satellitter. Står ikke på opsendelseslisten. AI-udkast uden gennemgangsdato. NDI-blikket og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## United States Antimony · 2026-10-16 01:55 CEST
+
+Zeolit fra minen og anlægget i Preston i Idaho. Smelteværk for antimonoxid i Thompson Falls i Montana. Siden siger, at minen dér ikke fik en ny tilladelse, og at udvindingen blev lagt tilbage til Mexico. Alaska er første gravearbejde, ikke en mine i drift. Madero er med. Puerto Blanco kører ikke. Los Juarez er ikke aktiv. Areal-talene på siden er ikke ens og er ikke kopieret. Only, sold out og one of the best er ikke kopieret. Billedteksten om en sten i Montana i 2026 er ikke brugt som drift. AI-udkast uden gennemgangsdato. Råstof-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
