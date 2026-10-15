@@ -379,3 +379,13 @@ Tjekket i Chromium ved 375 px. Indledningerne står. Klik fra elproduktion til N
 Tjekket i Chromium ved 1280 og 375. Sætningen står. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `392c712` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 ~00:55 CEST. Råstoffer og batterier siger, hvad Centrus og QuantumScape ikke er. Ikke færdig.**
+
+På energikæden siger råstof-leddet, at Centrus beriger uran til brændsel og ikke er et kraftværk. Batteri-leddet siger, at QuantumScape er et batteridesign til køretøjer og ikke masseproduktion. Vægtene er ikke ændret.
+
+Tjekket i Chromium ved 375 px på energifanen. Begge sætninger står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `341d09d` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

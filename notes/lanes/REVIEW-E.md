@@ -65,3 +65,7 @@ De to konceptkort siger det samme som kæden: gas er brændsel, SMR er ikke drif
 ## Periode · 2026-10-16 ~00:50 CEST
 
 2023 delår, 2024, 2025, 2026 og år til dato er tjekket. 2026 og år til dato er samme interval og samme +4,0 %. Siden siger det. 2026 er ikke mærket delår, fordi `partial` kun er første år. Datoen viser, at året ikke er slut. Ingen konsolfejl. Ingen vandret scroll ved 375 px.
+
+## Centrus og QuantumScape · 2026-10-16 ~00:55 CEST
+
+Blurbs på råstoffer og batterier siger grænsen, så man ikke læser Centrus som et kraftværk eller QuantumScape som et lager i masseproduktion. Vægte urørt. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.

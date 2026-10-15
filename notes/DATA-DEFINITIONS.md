@@ -75,6 +75,8 @@ Konceptkortene i `nyhedsarkiv.html` gentager de samme grænser. De er ikke ugebr
 
 Indledningen på energikæden siger det samme: gas på elproduktion er brændsel, ikke en metalmine, og navnene under atomkraft og SMR er ikke værker i kommerciel drift. Indledningen på rumkæden siger, at leddet rum og compute er infrastruktur, ikke et datacenter i kredsløb. Merlin står i energikædens udeladte liste som luftfart, ikke som et rum-led. Feltet `omitted` vises ikke på siden.
 
+Råstof-blurb siger, at Centrus beriger uran og ikke er et kraftværk. Batteri-blurb siger, at QuantumScape ikke er masseproduktion. `weightSum` er uændret.
+
 ## År til dato på periodesiden
 
 `ytdReturn` i `data.js` bruger sidste punkt i året før som udgangspunkt, ikke 1. januar. For PMINDI pr. 2026-10-14 er det 2025-12-31, ikke 2026-01-02. `periode.html` viser den samme dato i "Fra → til". Kalenderår bruger samme base (`calendarYearReturns`).
