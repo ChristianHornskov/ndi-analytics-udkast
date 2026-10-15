@@ -454,3 +454,10 @@ HEAD `b35518b`. Visual-variety request shipped + reviewed. MADS værdikæde/quan
 - **Til tema-ejer:** temaer/tema kan linke temanavn → ordlistepost (liste i UX-review).
 - Test: 8763, 375/1280 på 3 sider: 0 konsolfejl, ingen h-overflow, 0 døde ankre. precheck: se push.
 - Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) på hele lane-C-fladen ved 375 px.
+
+## Fra Claude lane-C (ideer: hvor mange selskaber er halvdelen? + ordliste 110) · 01:30 CEST 16/10 (wall-clock)
+- `ideer.html`: fjortende form «Hvor mange selskaber er halvdelen?» (`#h-kv`): kumuleret vægtkurve for PMINDI pr. 1. jun 2026 mod ligevægt. 26 / 76 / 160 selskaber = ¼ / ½ / ¾ af aktievægten (ligevægt: 173). PMINDIAKK: 88 af 320. og:description fulgt med.
+- `om-data.html`: ordliste 110 (Fundmarket), «Fonden og andelsklasser» 21. Koncentrationsrisiko → `#h-kv`. `lær/hvorfor-mange-aktier` → `#h-kv`. `kort.html` 110 + ideer-beskrivelse.
+- Notes: HANDOFF trin 6 (fjorten former, `#h-kv`), trin 7 (110), UX-review, VIDENSBOT-live-check.
+- Test: 8763, 375/1280 på 4 sider: 0 konsolfejl, ingen h-overflow, 0 døde links/ankre. precheck: OK.
+- Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) på hele lane-C-fladen ved 375 px.

@@ -172,3 +172,8 @@ Sider: ideer, kort, om-data, invester, risici, ndi-perspektiv, laer/*.
 - Stakken er formuleret som «en skitse af en tankegang, ikke en officiel model», og knyttet til flodsystemet med ugebrevets egen pointe (datacenter ↔ strøm). Kun aggregater pr. tema (antal, vægt), ingen enkeltaktier, kurser eller afkast. «Viser eksponering, ikke en anbefaling eller dagens fordeling.»
 - Chips-posten: «det tema med flest selskaber, når «Andet» ikke tælles med». Ingen vurdering af temaets udsigter.
 - **Til review:** er rækkefølgen energiressourcer → energi → chips → compute → optik → software → platforme i tråd med NDI's eget billede, eller skal optik ligge under compute? Datacentre (NDI's 2. flaskehals) har intet eget tema, hvilket figurteksten siger.
+
+## lane-C · 01:30 16/10 · ideer «Hvor mange selskaber er halvdelen?» + Fundmarket
+- Kun aggregater af de offentlige vægte pr. 1. jun 2026 (ingen navne, kurser eller afkast). Tal regnet efter i portfolio.json: PMINDI 345 positioner, sum 91,94 %; kumuleret 26 → 25,3 %, 76 → 50,3 %, 160 → 75,2 % af aktievægten. 76 største = 46,3 % af fonden. PMINDIAKK: 88 af 320 til halvdelen.
+- Formuleret som spredning/koncentration («bred, men ikke flad»), ingen vurdering af, om fordelingen er god eller dårlig. «Viser koncentration og spredning, ikke en anbefaling.»
+- Fundmarket-posten beskriver kun, hvad der ligger der, og at de officielle dokumenter åbnes der. Ingen omtale af handel via Fundmarket. **Til review:** er «platform» det rigtige ord for Fundmarket i NDI's egen sprogbrug?

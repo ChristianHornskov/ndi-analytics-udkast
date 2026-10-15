@@ -289,3 +289,10 @@ Ingen nye.
 - `temaer.html`/`tema.html` kunne linke temaets navn til dets ordlistepost (`#g-chips-tema`, `#g-compute-tema`, `#g-optik-tema`, `#g-fysisk-tech`, `#g-energi`, `#g-platforme`, `#g-software-tema`, `#g-energiressourcer`, `#g-quantum`, `#g-spacetech`, `#g-andet`). Ikke min fil.
 ### Test
 - 8763, 375/1280 på ideer, om-data, kort: 0 konsolfejl, ingen h-overflow, 0 døde ankre; dybt link `om-data.html#g-chips-tema` lander i synsfeltet på mobil. Screenshot af formen gennemset på begge bredder.
+
+## 01:30 CEST lane-C checkpoint (Claude) · ideer «Hvor mange selskaber er halvdelen?» + ordliste 110
+- Fjortende form på `ideer.html` (`#h-kv`), placeret lige efter «345 aktier, én prik hver»: kumuleret vægtkurve (SVG, 345 punkter), største position først, stiplet ligevægtslinje. Tre gule punkter: 26 / 76 / 160 selskaber = ¼ / ½ / ¾ af aktiernes samlede vægt. Ligevægt ville kræve 173 til halvdelen.
+- Ny visuel type på siden (linjekurve med referencelinje). De andre former er bjælker, prikker, flow, tidslinje, stak, hus.
+- 375 px: kurve og tre nøgletal under hinanden. ≥860 px: nøgletal i kolonne til højre for kurven, så der ikke står tom plads. Etiketten «lige vægt» lå først oven på linjen og ud over kanten. Rettet før commit.
+- Ordliste 110: «Fundmarket» (brugt på 6 sider uden forklaring). Prospekt og Forsinket beholdning linker dertil. Koncentrationsrisiko → `ideer.html#h-kv`. `lær/hvorfor-mange-aktier` → `#h-kv`.
+- Test: 8763, 375/1280 på ideer, om-data, kort, lær/hvorfor-mange-aktier: 0 konsolfejl, ingen h-overflow, 0 døde links/ankre.
