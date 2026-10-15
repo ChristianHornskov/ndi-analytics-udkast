@@ -6,40 +6,72 @@
   <meta name="robots" content="noindex,nofollow">
   <title>Idéer · NDI Analytics</title>
   <link rel="stylesheet" href="css/ndi.css">
+  <style>
+    .idea-hero{display:grid;gap:16px;margin-bottom:24px}
+    @media(min-width:860px){.idea-hero{grid-template-columns:1.2fr .8fr}}
+    .idea-callout{background:linear-gradient(135deg,#0f2a32,#0b171d);border:1px solid var(--line);border-left:4px solid var(--yellow);border-radius:12px;padding:16px;font-size:14px;color:var(--muted);line-height:1.55}
+    .idea-callout strong{color:var(--yellow)}
+    .idea-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin:18px 0}
+    .idea-strip .sm{background:#0b171d;border:1px solid var(--line);border-radius:12px;padding:14px}
+    .idea-strip .lab{font-size:11px;color:var(--muted);letter-spacing:.4px}
+    .idea-strip .num{font-size:15px;color:var(--cyan);font-weight:700;margin-top:6px;line-height:1.35}
+    .idea-tl{border-left:2px solid var(--brand);margin:18px 0;padding-left:16px}
+    .idea-tl .it{margin:0 0 16px;position:relative}
+    .idea-tl .it::before{content:"";position:absolute;left:-21px;top:4px;width:10px;height:10px;border-radius:50%;background:var(--yellow);box-shadow:0 0 0 3px #0b171d}
+    .idea-tl h3{font-size:15px;margin:0 0 4px;color:var(--cyan)}
+    .idea-tl p{font-size:13px;color:var(--muted);margin:0;line-height:1.5}
+  </style>
 </head>
 <body>
   <a class="skip" href="#main">Gå til indhold</a>
   <header class="site-header">
     <a class="brand" href="index.html"><img src="assets/mark.svg" width="34" height="27" alt=""><span>NewDeal Invest</span></a>
-    <nav class="nav"><a href="index.html">← Entré</a><a href="kort.html">Sidekort</a></nav>
+    <nav class="nav"><a href="index.html">← Entré</a><a href="vaerdikaeder.html">Værdikæder</a><a href="kort.html">Sidekort</a></nav>
   </header>
   <main id="main">
     <p class="eyebrow">UDKAST · OFFENTLIGT</p>
     <h1>Hvorfor NDI Analytics?</h1>
-    <p class="lede">Korte, ikke-fortrolige idéer bag udkastet. Generel information. Ikke rådgivning.</p>
-    <section class="panel">
-      <h2 class="panel-h">Stedet man researcher tech-aktier i Danmark</h2>
-      <p class="prose">Problem: tech-porteføljen bliver ofte presset ind i klassiske sektorkasser. NDI Analytics samler fondens egne temaer, forsinket beholdning og læringsstof ét sted.</p>
-      <p class="src">Ambition fra NDI. Udkast-status: under opbygning.</p>
-    </section>
-    <section class="panel">
-      <h2 class="panel-h">Multi-tag i stedet for ét GICS-label</h2>
-      <p class="prose">Tesla er både energi og fysisk tech. Screeneren og værdikæden viser flere tags, så eksponering ikke skjules.</p>
-    </section>
-    <section class="panel">
-      <h2 class="panel-h">AI-værdikæden</h2>
-      <p class="prose">Fra energi og racks til chips, optik og software. Hvert led linker til temaer og selskaber i den forsinkede beholdning.</p>
-      <p><a class="outline-btn small" href="vaerdikaede.html">Åbn værdikæden →</a></p>
-    </section>
-    <section class="panel">
-      <h2 class="panel-h">Temaer bliver foreslået, før de bliver endelige</h2>
-      <p class="prose">Selskaber uden et oplagt NDI-tema lå i "Andet". En del af dem har nu et forslag til tema ud fra offentlige ISIN-opslag og selskabets branche. Forslagene er mærket og afventer, at porteføljeholdet gennemgår dem.</p>
-      <p><a class="outline-btn small" href="temaer.html">Se temaerne →</a> <a class="outline-btn small" href="om-data.html#g-temaforslag">Sådan sættes temaerne →</a></p>
-    </section>
-    <section class="panel">
-      <h2 class="panel-h">Forsinket snapshot som feature</h2>
-      <p class="prose">Vi viser den offentlige, forsinkede rapport, så siden aldrig afslører aktuelle handler. Det er bevidst.</p>
-    </section>
+    <div class="idea-hero">
+      <p class="lede" style="margin-bottom:0">Korte, ikke-fortrolige idéer bag udkastet. Generel information. Ikke rådgivning.</p>
+      <aside class="idea-callout"><strong>Designvalg:</strong> hellere flere visuelle former (kæder, treemap, tidslinje, underwater) end endnu et panel-gitter. Jesper-palette, uden at blive monoton.</aside>
+    </div>
+
+    <div class="idea-strip" aria-label="Idé-kort">
+      <div class="sm"><div class="lab">PROBLEM</div><div class="num">Tech i sektorkasser</div></div>
+      <div class="sm"><div class="lab">SVAR</div><div class="num">NDI-temaer + kæder</div></div>
+      <div class="sm"><div class="lab">DATA</div><div class="num">Forsinket snapshot</div></div>
+      <div class="sm"><div class="lab">TONE</div><div class="num">Eksponering, ikke tip</div></div>
+    </div>
+
+    <div class="idea-tl">
+      <div class="it">
+        <h3>Multi-tag i stedet for ét GICS-label</h3>
+        <p>Tesla er både energi og fysisk tech. Screeneren og værdikæderne viser flere tags, så eksponering ikke skjules.</p>
+      </div>
+      <div class="it">
+        <h3>Flere teknologiske kæder</h3>
+        <p>AI-compute, fysisk tech og energi — plus treemap/sunburst og flaskehalse. <a href="vaerdikaeder.html">Åbn værdikæder →</a></p>
+      </div>
+      <div class="it">
+        <h3>Temaer foreslås, før de bliver endelige</h3>
+        <p>Andet er krympet med forslag (mærket). Quantum er et nyt forslag-tema. <a href="temaer.html">Temaer →</a> · <a href="tema.html?slug=quantum">Quantum →</a></p>
+      </div>
+      <div class="it">
+        <h3>Drawdown som episoder</h3>
+        <p>Max, middel og median over peak→bund — plus underwater-graf. Fondniveau. <a href="drawdown.html">Drawdown →</a></p>
+      </div>
+      <div class="it">
+        <h3>Forsinket snapshot som feature</h3>
+        <p>Den offentlige, forsinkede rapport — så siden aldrig afslører aktuelle handler. Bevidst.</p>
+      </div>
+    </div>
+
+    <div class="doors" style="margin-top:20px">
+      <a class="door" href="vaerdikaeder.html"><strong>Teknologiske værdikæder</strong><span>Treemap, sunburst, tidslinje, flaskehalse.</span><span class="go">Åbn →</span></a>
+      <a class="door" href="laer/saadan-taenker-vi.html"><strong>Sådan tænker vi</strong><span>Udvikling frem for vinder.</span><span class="go">Åbn →</span></a>
+      <a class="door" href="om-data.html"><strong>Ordliste &amp; data</strong><span>CAGR, drawdown, temaforslag.</span><span class="go">Åbn →</span></a>
+    </div>
+
     <p class="warn">Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.</p>
     <p class="band">Flere interne noter ligger uden for Pages. Dette er kun den offentlige overflade.</p>
   </main>
