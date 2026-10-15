@@ -269,8 +269,8 @@
         "Software"
       ],
       "themeKey": "chips",
-      "count": 53,
-      "weightSum": 13.19,
+      "count": 54,
+      "weightSum": 13.32,
       "companies": [
         {
           "isin": "US82982T1060",
@@ -511,6 +511,12 @@
           "name": "Nova Ltd",
           "weight": 0.13,
           "symbol": "NVMI"
+        },
+        {
+          "isin": "US8740391003",
+          "name": "Taiwan Semi Sp ADR",
+          "weight": 0.13,
+          "symbol": "TSM"
         },
         {
           "isin": "US5950171042",
@@ -919,8 +925,8 @@
       "problem": "Selskaber der endnu ikke har fået et primært NDI-tema i udkastet. Eksponering, ikke anbefaling.",
       "chain": [],
       "themeKey": "andet",
-      "count": 67,
-      "weightSum": 11.61,
+      "count": 35,
+      "weightSum": 6.91,
       "companies": [
         {
           "isin": "US6837121036",
@@ -977,12 +983,6 @@
           "symbol": "PAAS.TO"
         },
         {
-          "isin": "US8485603067",
-          "name": "Spire Global",
-          "weight": 0.27,
-          "symbol": "SPIR"
-        },
-        {
           "isin": "US35953D4016",
           "name": "Fubotv Inc -Class A",
           "weight": 0.26,
@@ -993,18 +993,6 @@
           "name": "Joby Aviation Inc",
           "weight": 0.26,
           "symbol": "JOBY"
-        },
-        {
-          "isin": "US53224K3023",
-          "name": "Lightbridge Corp",
-          "weight": 0.26,
-          "symbol": "LTBR"
-        },
-        {
-          "isin": "US0937121079",
-          "name": "Bloom Energy Corp- A",
-          "weight": 0.25,
-          "symbol": "BE"
         },
         {
           "isin": "US88023B1035",
@@ -1043,76 +1031,10 @@
           "symbol": "CDE"
         },
         {
-          "isin": "US6406551068",
-          "name": "Neovolta Inc",
-          "weight": 0.22,
-          "symbol": "NEOV"
-        },
-        {
-          "isin": "US03214Q1085",
-          "name": "Amprius Technologies Inc",
-          "weight": 0.21,
-          "symbol": "AMPX"
-        },
-        {
-          "isin": "US1491231015",
-          "name": "Caterpillar",
-          "weight": 0.21,
-          "symbol": "CAT"
-        },
-        {
-          "isin": "US83422N1054",
-          "name": "Solid Power Inc",
-          "weight": 0.21,
-          "symbol": "SLDP"
-        },
-        {
-          "isin": "US0517741072",
-          "name": "Aurora Innovtn",
-          "weight": 0.2,
-          "symbol": "AUR"
-        },
-        {
-          "isin": "US74767V1098",
-          "name": "Quantumscape Corp",
-          "weight": 0.2,
-          "symbol": "QS"
-        },
-        {
-          "isin": "CA1366351098",
-          "name": "Canadian Solar Inc",
-          "weight": 0.19,
-          "symbol": "CSIQ"
-        },
-        {
-          "isin": "US83417M1045",
-          "name": "Solaredge Technologies Inc",
-          "weight": 0.18,
-          "symbol": "SEDG"
-        },
-        {
-          "isin": "US8807791038",
-          "name": "Terex Corp",
-          "weight": 0.18,
-          "symbol": "TEX"
-        },
-        {
           "isin": "US22266M1045",
           "name": "Coursera",
           "weight": 0.17,
           "symbol": "COUR"
-        },
-        {
-          "isin": "US29415C1018",
-          "name": "Eos Energy Enterprises Inc",
-          "weight": 0.17,
-          "symbol": "EOSE"
-        },
-        {
-          "isin": "CA87601F1062",
-          "name": "Tantalus Systems Holding Inc",
-          "weight": 0.16,
-          "symbol": "GRID.TO"
         },
         {
           "isin": "DE000A2LQ884",
@@ -1121,22 +1043,10 @@
           "symbol": "AG1.DE"
         },
         {
-          "isin": "US02451V3096",
-          "name": "American Battery Technology",
-          "weight": 0.15,
-          "symbol": "ABAT"
-        },
-        {
           "isin": "US6458272050",
           "name": "Idaho Strategic Resources In",
           "weight": 0.15,
           "symbol": "IDR"
-        },
-        {
-          "isin": "US88675P1030",
-          "name": "Tigo Energy Inc",
-          "weight": 0.15,
-          "symbol": "TYGO"
         },
         {
           "isin": "JE00BYVQYS01",
@@ -1145,40 +1055,16 @@
           "symbol": "IWG.L"
         },
         {
-          "isin": "US46269C1027",
-          "name": "Iridium Communications Inc",
-          "weight": 0.14,
-          "symbol": "IRDM"
-        },
-        {
           "isin": "US53216B1044",
           "name": "Lifemd Inc",
           "weight": 0.14,
           "symbol": "LFMD"
         },
         {
-          "isin": "US65290E1010",
-          "name": "Nextracker Inc-Cl A",
-          "weight": 0.14,
-          "symbol": "NXT"
-        },
-        {
           "isin": "CH1176493729",
           "name": "Bachem Holding Ag",
           "weight": 0.13,
           "symbol": "BANB.SW"
-        },
-        {
-          "isin": "US8740391003",
-          "name": "Taiwan Semi Sp ADR",
-          "weight": 0.13,
-          "symbol": "TSM"
-        },
-        {
-          "isin": "US3364331070",
-          "name": "First Solar",
-          "weight": 0.12,
-          "symbol": "FSLR"
         },
         {
           "isin": "US68170A1088",
@@ -1193,46 +1079,10 @@
           "symbol": "CRSP"
         },
         {
-          "isin": "US72919P2020",
-          "name": "Plug Power Inc",
-          "weight": 0.11,
-          "symbol": "PLUG"
-        },
-        {
-          "isin": "US04271T1007",
-          "name": "Array Technologies Inc",
-          "weight": 0.1,
-          "symbol": "ARRY"
-        },
-        {
-          "isin": "US59516C1062",
-          "name": "Microvast Holdings Inc",
-          "weight": 0.1,
-          "symbol": "MVST"
-        },
-        {
           "isin": "CA7142661031",
           "name": "Perpetua Resources Corp",
           "weight": 0.1,
           "symbol": "PPTA"
-        },
-        {
-          "isin": "US78397Q1094",
-          "name": "Ses Ai Corp",
-          "weight": 0.1,
-          "symbol": "SES"
-        },
-        {
-          "isin": "US86771W1053",
-          "name": "Sunrun Inc",
-          "weight": 0.1,
-          "symbol": "RUN"
-        },
-        {
-          "isin": "US29355A1079",
-          "name": "Enphase Energy",
-          "weight": 0.09,
-          "symbol": "ENPH"
         },
         {
           "isin": "US4333131039",
@@ -1247,46 +1097,10 @@
           "symbol": "NTLA"
         },
         {
-          "isin": "US09263B2079",
-          "name": "Blacksky Technology Inc",
-          "weight": 0.08,
-          "symbol": "BKSY"
-        },
-        {
           "isin": "KYG2584S1012",
           "name": "Cslm Digital Asset Acqu - A",
           "weight": 0.08,
           "symbol": "KOYN"
-        },
-        {
-          "isin": "US5502411037",
-          "name": "Lumen Tech",
-          "weight": 0.08,
-          "symbol": "LUMN"
-        },
-        {
-          "isin": "CA0585861085",
-          "name": "Ballard Power Systems Inc",
-          "weight": 0.06,
-          "symbol": "BLDP"
-        },
-        {
-          "isin": "CA28617B6061",
-          "name": "Electrovaya Inc",
-          "weight": 0.05,
-          "symbol": "ELVA"
-        },
-        {
-          "isin": "US2935941078",
-          "name": "Enovix Corp",
-          "weight": 0.05,
-          "symbol": "ENVX"
-        },
-        {
-          "isin": "US82489W1071",
-          "name": "Shoals Technologies Group ",
-          "weight": 0.04,
-          "symbol": "SHLS"
         },
         {
           "isin": "LU2380748603",
@@ -1336,8 +1150,8 @@
         "Chips"
       ],
       "themeKey": "connect",
-      "count": 30,
-      "weightSum": 8.21,
+      "count": 31,
+      "weightSum": 8.29,
       "companies": [
         {
           "isin": "US55024U1097",
@@ -1508,6 +1322,12 @@
           "symbol": "CSCO"
         },
         {
+          "isin": "US5502411037",
+          "name": "Lumen Tech",
+          "weight": 0.08,
+          "symbol": "LUMN"
+        },
+        {
           "isin": "US55306N1046",
           "name": "Mks Instruments Inc",
           "weight": 0.07,
@@ -1531,8 +1351,8 @@
         "Software"
       ],
       "themeKey": "physical",
-      "count": 24,
-      "weightSum": 7.34,
+      "count": 27,
+      "weightSum": 7.93,
       "companies": [
         {
           "isin": "US88160R1014",
@@ -1649,10 +1469,28 @@
           "symbol": "RIVN"
         },
         {
+          "isin": "US1491231015",
+          "name": "Caterpillar",
+          "weight": 0.21,
+          "symbol": "CAT"
+        },
+        {
+          "isin": "US0517741072",
+          "name": "Aurora Innovtn",
+          "weight": 0.2,
+          "symbol": "AUR"
+        },
+        {
           "isin": "US36828A1016",
           "name": "Ge Vernova Inc",
           "weight": 0.19,
           "symbol": "GEV"
+        },
+        {
+          "isin": "US8807791038",
+          "name": "Terex Corp",
+          "weight": 0.18,
+          "symbol": "TEX"
         },
         {
           "isin": "US55405W1045",
@@ -1851,8 +1689,8 @@
         "Compute"
       ],
       "themeKey": "energy",
-      "count": 15,
-      "weightSum": 6.31,
+      "count": 37,
+      "weightSum": 9.31,
       "companies": [
         {
           "isin": "US21873S1087",
@@ -1921,10 +1759,76 @@
           "symbol": "NKLR"
         },
         {
+          "isin": "US0937121079",
+          "name": "Bloom Energy Corp- A",
+          "weight": 0.25,
+          "symbol": "BE"
+        },
+        {
+          "isin": "US6406551068",
+          "name": "Neovolta Inc",
+          "weight": 0.22,
+          "symbol": "NEOV"
+        },
+        {
+          "isin": "US03214Q1085",
+          "name": "Amprius Technologies Inc",
+          "weight": 0.21,
+          "symbol": "AMPX"
+        },
+        {
+          "isin": "US83422N1054",
+          "name": "Solid Power Inc",
+          "weight": 0.21,
+          "symbol": "SLDP"
+        },
+        {
+          "isin": "US74767V1098",
+          "name": "Quantumscape Corp",
+          "weight": 0.2,
+          "symbol": "QS"
+        },
+        {
+          "isin": "CA1366351098",
+          "name": "Canadian Solar Inc",
+          "weight": 0.19,
+          "symbol": "CSIQ"
+        },
+        {
+          "isin": "US83417M1045",
+          "name": "Solaredge Technologies Inc",
+          "weight": 0.18,
+          "symbol": "SEDG"
+        },
+        {
+          "isin": "US29415C1018",
+          "name": "Eos Energy Enterprises Inc",
+          "weight": 0.17,
+          "symbol": "EOSE"
+        },
+        {
+          "isin": "CA87601F1062",
+          "name": "Tantalus Systems Holding Inc",
+          "weight": 0.16,
+          "symbol": "GRID.TO"
+        },
+        {
+          "isin": "US88675P1030",
+          "name": "Tigo Energy Inc",
+          "weight": 0.15,
+          "symbol": "TYGO"
+        },
+        {
           "isin": "US92840M1027",
           "name": "Vistra Corp",
           "weight": 0.14,
           "symbol": "VST"
+        },
+        {
+          "isin": "US65290E1010",
+          "name": "Nextracker Inc-Cl A",
+          "weight": 0.14,
+          "symbol": "NXT"
         },
         {
           "isin": "US02156V1098",
@@ -1939,10 +1843,76 @@
           "symbol": "TLN"
         },
         {
+          "isin": "US3364331070",
+          "name": "First Solar",
+          "weight": 0.12,
+          "symbol": "FSLR"
+        },
+        {
+          "isin": "US72919P2020",
+          "name": "Plug Power Inc",
+          "weight": 0.11,
+          "symbol": "PLUG"
+        },
+        {
+          "isin": "US04271T1007",
+          "name": "Array Technologies Inc",
+          "weight": 0.1,
+          "symbol": "ARRY"
+        },
+        {
+          "isin": "US59516C1062",
+          "name": "Microvast Holdings Inc",
+          "weight": 0.1,
+          "symbol": "MVST"
+        },
+        {
+          "isin": "US78397Q1094",
+          "name": "Ses Ai Corp",
+          "weight": 0.1,
+          "symbol": "SES"
+        },
+        {
+          "isin": "US86771W1053",
+          "name": "Sunrun Inc",
+          "weight": 0.1,
+          "symbol": "RUN"
+        },
+        {
+          "isin": "US29355A1079",
+          "name": "Enphase Energy",
+          "weight": 0.09,
+          "symbol": "ENPH"
+        },
+        {
+          "isin": "CA0585861085",
+          "name": "Ballard Power Systems Inc",
+          "weight": 0.06,
+          "symbol": "BLDP"
+        },
+        {
           "isin": "US8814541020",
           "name": "Terrestrial Energy Inc",
           "weight": 0.05,
           "symbol": "IMSR"
+        },
+        {
+          "isin": "CA28617B6061",
+          "name": "Electrovaya Inc",
+          "weight": 0.05,
+          "symbol": "ELVA"
+        },
+        {
+          "isin": "US2935941078",
+          "name": "Enovix Corp",
+          "weight": 0.05,
+          "symbol": "ENVX"
+        },
+        {
+          "isin": "US82489W1071",
+          "name": "Shoals Technologies Group ",
+          "weight": 0.04,
+          "symbol": "SHLS"
         }
       ]
     },
@@ -1956,8 +1926,8 @@
         "Chips"
       ],
       "themeKey": "energy-resources",
-      "count": 25,
-      "weightSum": 5.58,
+      "count": 27,
+      "weightSum": 5.99,
       "companies": [
         {
           "isin": "US2057683029",
@@ -2008,6 +1978,12 @@
           "symbol": "MP"
         },
         {
+          "isin": "US53224K3023",
+          "name": "Lightbridge Corp",
+          "weight": 0.26,
+          "symbol": "LTBR"
+        },
+        {
           "isin": "CA6544846091",
           "name": "Niocorp Developments Ltd",
           "weight": 0.23,
@@ -2048,6 +2024,12 @@
           "name": "Almonty Industries Inc",
           "weight": 0.15,
           "symbol": "ALM"
+        },
+        {
+          "isin": "US02451V3096",
+          "name": "American Battery Technology",
+          "weight": 0.15,
+          "symbol": "ABAT"
         },
         {
           "isin": "US46578C1080",
@@ -2121,8 +2103,8 @@
         "Compute"
       ],
       "themeKey": "space",
-      "count": 18,
-      "weightSum": 4.38,
+      "count": 21,
+      "weightSum": 4.87,
       "companies": [
         {
           "isin": "US85529M1045",
@@ -2165,6 +2147,12 @@
           "name": "Redwire Corp",
           "weight": 0.27,
           "symbol": "RDW"
+        },
+        {
+          "isin": "US8485603067",
+          "name": "Spire Global",
+          "weight": 0.27,
+          "symbol": "SPIR"
         },
         {
           "isin": "US9870841007",
@@ -2221,6 +2209,12 @@
           "symbol": "ACHR"
         },
         {
+          "isin": "US46269C1027",
+          "name": "Iridium Communications Inc",
+          "weight": 0.14,
+          "symbol": "IRDM"
+        },
+        {
           "isin": "US72703X1063",
           "name": "Planet Labs",
           "weight": 0.09,
@@ -2231,6 +2225,12 @@
           "name": "Airo Group Holdings Inc",
           "weight": 0.08,
           "symbol": "AIRO"
+        },
+        {
+          "isin": "US09263B2079",
+          "name": "Blacksky Technology Inc",
+          "weight": 0.08,
+          "symbol": "BKSY"
         }
       ]
     }

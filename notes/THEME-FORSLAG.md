@@ -4,7 +4,7 @@ Statusfelt i data: `themeStatus: "forslag"` + `themeNote: "forslag, afventer gen
 Kilder til ISIN-navne: offentlige ISIN-/borsdatabaser (ayondo, investor FAQs, OTC Markets, CSSF).
 Heuristik: GICS sector/industry → nærmeste NDI-tema (chips/compute/software/platforms/connect/space/energy/energy-resources/physical). Usikre forbliver `andet`.
 
-## Antal forslag: 111
+## Antal forslag: 111 (runde 1) + 32 flyttet i runde 2 (se nederst)
 
 | ISIN | Navn | Vægt % | Fra | Til | Begrundelse |
 |---|---|---:|---|---|---|
@@ -140,3 +140,46 @@ portfolio.json før `8c355a9`). PMINDI: 44 andet→NDI-tema + 4 compute→quantu
 Forslag der stadig står i `andet` har intet `themeFrom` (ingen flytning). Kun kvalitativ metadata, ingen tal pr. aktie.
 Bruges af temaer.html-banneret ("44 lå før i Andet. Desuden er 4 flyttet fra Compute til det nye tema Quantum")
 og som "før: X" i forslag-badges. Ved godkendelse: slet `themeStatus` + `themeFrom` sammen.
+
+
+## Runde 2: Andet → tema ud fra plads i værdikæden (lane-B c9, 2026-10-16)
+32 positioner i Andet med en klar plads i en af værdikæderne (de fleste allerede placeret af NDI-linsen) har fået et foreslået primært tema.
+Data: `theme` = forslaget, `themeFrom: "andet"`, `themeStatus: "forslag"`, `themeNote: "forslag, afventer gennemgang (runde 2: plads i værdikæden)"`. Samme ISIN i begge klasser (alle 32 findes også i PMINDIAKK undtagen TSMC).
+PMINDI: Andet 67 → 35. Energi 15 → 37, Fysisk tech 24 → 27, SpaceTech 18 → 21, Energiressourcer 25 → 27, Chips 53 → 54, Optik & netværk 30 → 31. themes.json (PMINDI) genberegnet.
+Princip: maskiner følger Cummins/Generac (Fysisk tech); batteri-/lagringsselskaber følger Fluence (Energi), også dem der primært laver celler til køretøjer - NDI bør overveje Fysisk tech for Solid Power/SES AI/Microvast/QuantumScape. Caterpillar: linsen placerer den i Energi led 1 (generatorer), men temaforslaget er Fysisk tech.
+**Bevidst ikke flyttet (forbliver Andet):** guld/sølv-minedrift (Newmont, Pan American, First Majestic, Hecla, Coeur, Idaho Strategic, Perpetua) - ingen NDI-kæde; sundhed (Hims & Hers, Oscar, Tempus AI, LifeMD, Omada, Hinge, Bachem, CRISPR, Intellia, AbCellera); boliger/forbrug (Opendoor + warrants, IWG, HelloFresh, Marley Spoon, AUTO1, Fubo, Coursera); Joby (luftfart), Upstart, Celanese, Fermi, American Resources, Shelly, CSLM, Sony Financial. Tempus AI har linse i AI-compute led 10 (data), men forretningen er sundhed → NDI's valg.
+
+| ISIN | Navn | Vægt % | Fra | Til | Begrundelse |
+|---|---|---:|---|---|---|
+| US8485603067 | Spire Global | 0.27 | andet | space | satellitdata (Rum led 2) |
+| US53224K3023 | Lightbridge Corp | 0.26 | andet | energy-resources | kernebrændsel under udvikling (som Centrus) |
+| US0937121079 | Bloom Energy Corp- A | 0.25 | andet | energy | brændselsceller til strøm på stedet (Energi led 1); multi-tag energi + fysisk tech fandtes allerede |
+| US6406551068 | Neovolta Inc | 0.22 | andet | energy | batterilagring til boliger (Energi led 4) |
+| US83422N1054 | Solid Power Inc | 0.21 | andet | energy | battericeller under udvikling (Energi led 4) |
+| US03214Q1085 | Amprius Technologies Inc | 0.21 | andet | energy | battericeller (Energi led 4) |
+| US1491231015 | Caterpillar | 0.21 | andet | physical | maskiner og generatorer (som Cummins/Generac i Fysisk tech) |
+| US74767V1098 | Quantumscape Corp | 0.20 | andet | energy | battericeller under udvikling (Energi led 4) - intet med kvantecomputere at gøre |
+| US0517741072 | Aurora Innovtn | 0.20 | andet | physical | selvkørende lastbiler (Robotik led 3) |
+| CA1366351098 | Canadian Solar Inc | 0.19 | andet | energy | solcellemoduler og lagring - elproduktion (Energi led 1) |
+| US83417M1045 | Solaredge Technologies Inc | 0.18 | andet | energy | invertere/effektelektronik til sol (Energi led 1) |
+| US8807791038 | Terex Corp | 0.18 | andet | physical | maskiner og udstyr (fysisk infrastruktur) |
+| US29415C1018 | Eos Energy Enterprises Inc | 0.17 | andet | energy | stationær energilagring (Energi led 4) |
+| CA87601F1062 | Tantalus Systems Holding Inc | 0.16 | andet | energy | smart grid-teknologi til elnettet (Energi led 3) |
+| US88675P1030 | Tigo Energy Inc | 0.15 | andet | energy | effektelektronik til sol (Energi led 1) |
+| US02451V3096 | American Battery Technology | 0.15 | andet | energy-resources | genanvendelse af batterimetaller (råstoffer) |
+| US65290E1010 | Nextracker Inc-Cl A | 0.14 | andet | energy | solar trackers - solparker (Energi led 1) |
+| US46269C1027 | Iridium Communications Inc | 0.14 | andet | space | satellitkommunikation (Rum led 2) |
+| US8740391003 | Taiwan Semi Sp ADR | 0.13 | andet | chips | foundry - producerer chips for designhusene (AI-compute led 5) (kun PMINDI) |
+| US3364331070 | First Solar | 0.12 | andet | energy | solcellemoduler - elproduktion (Energi led 1) |
+| US72919P2020 | Plug Power Inc | 0.11 | andet | energy | brint og brændselsceller (Energi led 1) |
+| US04271T1007 | Array Technologies Inc | 0.10 | andet | energy | solar trackers - solparker (Energi led 1) |
+| US86771W1053 | Sunrun Inc | 0.10 | andet | energy | solcelleanlæg til boliger (Energi led 1) |
+| US78397Q1094 | Ses Ai Corp | 0.10 | andet | energy | battericeller (Energi led 4) |
+| US59516C1062 | Microvast Holdings Inc | 0.10 | andet | energy | batterisystemer (Energi led 4) |
+| US29355A1079 | Enphase Energy | 0.09 | andet | energy | mikroinvertere til sol (Energi led 1) |
+| US09263B2079 | Blacksky Technology Inc | 0.08 | andet | space | jordobservation fra satellitter (Rum led 2) |
+| US5502411037 | Lumen Tech | 0.08 | andet | connect | fibernet mellem datacentre (AI-compute led 7) |
+| CA0585861085 | Ballard Power Systems Inc | 0.06 | andet | energy | brændselsceller (Energi led 1) |
+| US2935941078 | Enovix Corp | 0.05 | andet | energy | battericeller (Energi led 4) |
+| CA28617B6061 | Electrovaya Inc | 0.05 | andet | energy | batterisystemer (Energi led 4) |
+| US82489W1071 | Shoals Technologies Group  | 0.04 | andet | energy | el-komponenter til solparker (Energi led 1) |

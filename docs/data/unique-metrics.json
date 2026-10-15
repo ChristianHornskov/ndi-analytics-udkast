@@ -4427,7 +4427,7 @@
         {
           "label": "NDI-tags",
           "value": "Energi + fysisk tech",
-          "hint": "Multi-tag: energi og fysisk tech. Primært tema i data: Andet / uklassificeret. Eksponering, ikke rating."
+          "hint": "Multi-tag: energi og fysisk tech. Primært tema er forslag: Energi (før: Andet / uklassificeret). Afventer NDI-gennemgang. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -5106,8 +5106,8 @@
       "metrics": [
         {
           "label": "NDI-tag",
-          "value": "Chips",
-          "hint": "Manuelt tag: chips (foundry). Primært tema i data: Andet / uklassificeret. Eksponering, ikke rating."
+          "value": "Chips (forslag)",
+          "hint": "Temaforslag: Chips (før: Andet / uklassificeret); manuelt tag chips (foundry) fandtes allerede. Afventer NDI-gennemgang. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -6602,8 +6602,8 @@
       "metrics": [
         {
           "label": "NDI-tag",
-          "value": "Andet / uklassificeret",
-          "hint": "Primært tema: Andet / uklassificeret. Eksponering, ikke rating."
+          "value": "Energi (forslag)",
+          "hint": "Temaforslag: Energi (før: Andet / uklassificeret), ud fra pladsen i værdikæden. Afventer NDI-gennemgang. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -6636,8 +6636,8 @@
       "metrics": [
         {
           "label": "NDI-tag",
-          "value": "Andet / uklassificeret",
-          "hint": "Primært tema: Andet / uklassificeret. Eksponering, ikke rating."
+          "value": "Energi (forslag)",
+          "hint": "Temaforslag: Energi (før: Andet / uklassificeret), ud fra pladsen i værdikæden. Afventer NDI-gennemgang. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -6670,8 +6670,8 @@
       "metrics": [
         {
           "label": "NDI-tag",
-          "value": "Andet / uklassificeret",
-          "hint": "Primært tema: Andet / uklassificeret. Eksponering, ikke rating."
+          "value": "Energi (forslag)",
+          "hint": "Temaforslag: Energi (før: Andet / uklassificeret), ud fra pladsen i værdikæden. Afventer NDI-gennemgang. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -6704,8 +6704,8 @@
       "metrics": [
         {
           "label": "NDI-tag",
-          "value": "Andet / uklassificeret",
-          "hint": "Primært tema: Andet / uklassificeret. Eksponering, ikke rating."
+          "value": "Energi (forslag)",
+          "hint": "Temaforslag: Energi (før: Andet / uklassificeret), ud fra pladsen i værdikæden. Afventer NDI-gennemgang. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -6738,8 +6738,8 @@
       "metrics": [
         {
           "label": "NDI-tag",
-          "value": "Andet / uklassificeret",
-          "hint": "Primært tema: Andet / uklassificeret. Eksponering, ikke rating."
+          "value": "Energi (forslag)",
+          "hint": "Temaforslag: Energi (før: Andet / uklassificeret), ud fra pladsen i værdikæden. Afventer NDI-gennemgang. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -6772,8 +6772,8 @@
       "metrics": [
         {
           "label": "NDI-tag",
-          "value": "Andet / uklassificeret",
-          "hint": "Primært tema: Andet / uklassificeret. Eksponering, ikke rating."
+          "value": "Energi (forslag)",
+          "hint": "Temaforslag: Energi (før: Andet / uklassificeret), ud fra pladsen i værdikæden. Afventer NDI-gennemgang. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -6806,8 +6806,8 @@
       "metrics": [
         {
           "label": "NDI-tag",
-          "value": "Andet / uklassificeret",
-          "hint": "Primært tema: Andet / uklassificeret. Navnet har intet med kvantecomputere at gøre. Eksponering, ikke rating."
+          "value": "Energi (forslag)",
+          "hint": "Temaforslag: Energi (før: Andet / uklassificeret), ud fra pladsen i værdikæden. Afventer NDI-gennemgang. Navnet har intet med kvantecomputere at gøre. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -6942,8 +6942,8 @@
       "metrics": [
         {
           "label": "NDI-tag",
-          "value": "Andet / uklassificeret",
-          "hint": "Primært tema: Andet / uklassificeret. Eksponering, ikke rating."
+          "value": "Fysisk tech (forslag)",
+          "hint": "Temaforslag: Fysisk tech (før: Andet / uklassificeret), ud fra pladsen i værdikæden. Afventer NDI-gennemgang. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -6954,7 +6954,7 @@
         {
           "label": "Plads i værdikæden",
           "value": "Energi-kæden · led 1: elproduktion",
-          "hint": "Generatorer og gasmotorer leverer strøm på stedet. Placeringen er pædagogisk.",
+          "hint": "Generatorer og gasmotorer leverer strøm på stedet. Temaforslaget er Fysisk tech (maskiner, som Cummins og Generac). Placeringen er pædagogisk.",
           "href": "vaerdikaeder.html?isin=US1491231015#kap-kaeder"
         },
         {
@@ -6976,8 +6976,8 @@
       "metrics": [
         {
           "label": "NDI-tag",
-          "value": "Andet / uklassificeret",
-          "hint": "Primært tema: Andet / uklassificeret. Eksponering, ikke rating."
+          "value": "Fysisk tech (forslag)",
+          "hint": "Temaforslag: Fysisk tech (før: Andet / uklassificeret), ud fra pladsen i værdikæden. Afventer NDI-gennemgang. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -7044,8 +7044,8 @@
       "metrics": [
         {
           "label": "NDI-tag",
-          "value": "Andet / uklassificeret",
-          "hint": "Primært tema: Andet / uklassificeret. Eksponering, ikke rating."
+          "value": "SpaceTech (forslag)",
+          "hint": "Temaforslag: SpaceTech (før: Andet / uklassificeret), ud fra pladsen i værdikæden. Afventer NDI-gennemgang. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",

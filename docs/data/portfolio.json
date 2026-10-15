@@ -5886,7 +5886,8 @@
           "name": "Spire Global",
           "symbol": "SPIR",
           "weight": 0.27,
-          "theme": "andet",
+          "theme": "space",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Industrials",
           "industry": "Specialty Business Services",
@@ -5897,7 +5898,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "KYG651631007",
@@ -6004,7 +6005,8 @@
           "name": "Lightbridge Corp",
           "symbol": "LTBR",
           "weight": 0.26,
-          "theme": "andet",
+          "theme": "energy-resources",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Industrials",
           "industry": "Electrical Equipment & Parts",
@@ -6015,7 +6017,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US5533681012",
@@ -6086,7 +6088,8 @@
           "name": "Bloom Energy Corp- A",
           "symbol": "BE",
           "weight": 0.25,
-          "theme": "andet",
+          "theme": "energy",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Industrials",
           "industry": "Electrical Equipment & Parts",
@@ -6097,7 +6100,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US37045V1008",
@@ -6509,7 +6512,8 @@
           "name": "Neovolta Inc",
           "symbol": "NEOV",
           "weight": 0.22,
-          "theme": "andet",
+          "theme": "energy",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Industrials",
           "industry": "Electrical Equipment & Parts",
@@ -6520,7 +6524,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US67079K1007",
@@ -6626,7 +6630,8 @@
           "name": "Amprius Technologies Inc",
           "symbol": "AMPX",
           "weight": 0.21,
-          "theme": "andet",
+          "theme": "energy",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Industrials",
           "industry": "Electrical Equipment & Parts",
@@ -6637,14 +6642,15 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US1491231015",
           "name": "Caterpillar",
           "symbol": "CAT",
           "weight": 0.21,
-          "theme": "andet",
+          "theme": "physical",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Industrials",
           "industry": "Farm & Heavy Construction Machinery",
@@ -6655,7 +6661,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US6098391054",
@@ -6726,7 +6732,8 @@
           "name": "Solid Power Inc",
           "symbol": "SLDP",
           "weight": 0.21,
-          "theme": "andet",
+          "theme": "energy",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Consumer Cyclical",
           "industry": "Auto Parts",
@@ -6737,7 +6744,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "AU000000LYC6",
@@ -6792,7 +6799,8 @@
           "name": "Aurora Innovtn",
           "symbol": "AUR",
           "weight": 0.2,
-          "theme": "andet",
+          "theme": "physical",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Consumer Cyclical",
           "industry": "Auto Parts",
@@ -6803,7 +6811,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US16679L1098",
@@ -6874,7 +6882,8 @@
           "name": "Quantumscape Corp",
           "symbol": "QS",
           "weight": 0.2,
-          "theme": "andet",
+          "theme": "energy",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Consumer Cyclical",
           "industry": "Auto Parts",
@@ -6885,7 +6894,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "VGG2662B1031",
@@ -6908,7 +6917,8 @@
           "name": "Canadian Solar Inc",
           "symbol": "CSIQ",
           "weight": 0.19,
-          "theme": "andet",
+          "theme": "energy",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Technology",
           "industry": "Solar",
@@ -6919,7 +6929,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "NL0000334118",
@@ -7102,7 +7112,8 @@
           "name": "Solaredge Technologies Inc",
           "symbol": "SEDG",
           "weight": 0.18,
-          "theme": "andet",
+          "theme": "energy",
+          "themeFrom": "andet",
           "logoDomain": "solaredge.com",
           "sector": "Technology",
           "industry": "Solar",
@@ -7113,7 +7124,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US83443Q1031",
@@ -7139,7 +7150,8 @@
           "name": "Terex Corp",
           "symbol": "TEX",
           "weight": 0.18,
-          "theme": "andet",
+          "theme": "physical",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Industrials",
           "industry": "Farm & Heavy Construction Machinery",
@@ -7150,7 +7162,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US91532F1021",
@@ -7309,7 +7321,8 @@
           "name": "Eos Energy Enterprises Inc",
           "symbol": "EOSE",
           "weight": 0.17,
-          "theme": "andet",
+          "theme": "energy",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Industrials",
           "industry": "Electrical Equipment & Parts",
@@ -7320,7 +7333,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US80401C1009",
@@ -7375,7 +7388,8 @@
           "name": "Tantalus Systems Holding Inc",
           "symbol": "GRID.TO",
           "weight": 0.16,
-          "theme": "andet",
+          "theme": "energy",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Industrials",
           "industry": "Electrical Equipment & Parts",
@@ -7386,7 +7400,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US30303M1027",
@@ -7558,7 +7572,8 @@
           "name": "American Battery Technology",
           "symbol": "ABAT",
           "weight": 0.15,
-          "theme": "andet",
+          "theme": "energy-resources",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Industrials",
           "industry": "Waste Management",
@@ -7569,7 +7584,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US04681Y1038",
@@ -7728,7 +7743,8 @@
           "name": "Tigo Energy Inc",
           "symbol": "TYGO",
           "weight": 0.15,
-          "theme": "andet",
+          "theme": "energy",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Technology",
           "industry": "Solar",
@@ -7739,7 +7755,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US9509151083",
@@ -7828,7 +7844,8 @@
           "name": "Iridium Communications Inc",
           "symbol": "IRDM",
           "weight": 0.14,
-          "theme": "andet",
+          "theme": "space",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Communication Services",
           "industry": "Telecom Services",
@@ -7839,7 +7856,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US4663131039",
@@ -7880,7 +7897,8 @@
           "name": "Nextracker Inc-Cl A",
           "symbol": "NXT",
           "weight": 0.14,
-          "theme": "andet",
+          "theme": "energy",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Technology",
           "industry": "Solar",
@@ -7891,7 +7909,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US68247W1099",
@@ -8162,7 +8180,8 @@
           "name": "Taiwan Semi Sp ADR",
           "symbol": "TSM",
           "weight": 0.13,
-          "theme": "andet",
+          "theme": "chips",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": null,
           "industry": null,
@@ -8173,7 +8192,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US88080T1043",
@@ -8263,7 +8282,8 @@
           "name": "First Solar",
           "symbol": "FSLR",
           "weight": 0.12,
-          "theme": "andet",
+          "theme": "energy",
+          "themeFrom": "andet",
           "logoDomain": "firstsolar.com",
           "sector": "Technology",
           "industry": "Solar",
@@ -8274,7 +8294,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US5950171042",
@@ -8467,7 +8487,8 @@
           "name": "Plug Power Inc",
           "symbol": "PLUG",
           "weight": 0.11,
-          "theme": "andet",
+          "theme": "energy",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Industrials",
           "industry": "Electrical Equipment & Parts",
@@ -8478,7 +8499,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US86989Y1091",
@@ -8615,7 +8636,8 @@
           "name": "Array Technologies Inc",
           "symbol": "ARRY",
           "weight": 0.1,
-          "theme": "andet",
+          "theme": "energy",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Technology",
           "industry": "Solar",
@@ -8626,7 +8648,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US0545402085",
@@ -8681,7 +8703,8 @@
           "name": "Microvast Holdings Inc",
           "symbol": "MVST",
           "weight": 0.1,
-          "theme": "andet",
+          "theme": "energy",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Consumer Cyclical",
           "industry": "Auto Parts",
@@ -8692,14 +8715,15 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US78397Q1094",
           "name": "Ses Ai Corp",
           "symbol": "SES",
           "weight": 0.1,
-          "theme": "andet",
+          "theme": "energy",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Consumer Cyclical",
           "industry": "Auto Parts",
@@ -8710,7 +8734,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US8010561020",
@@ -8733,7 +8757,8 @@
           "name": "Sunrun Inc",
           "symbol": "RUN",
           "weight": 0.1,
-          "theme": "andet",
+          "theme": "energy",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Technology",
           "industry": "Solar",
@@ -8744,7 +8769,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "GB00BS3DYQ52",
@@ -8783,7 +8808,8 @@
           "name": "Enphase Energy",
           "symbol": "ENPH",
           "weight": 0.09,
-          "theme": "andet",
+          "theme": "energy",
+          "themeFrom": "andet",
           "logoDomain": "enphase.com",
           "sector": "Technology",
           "industry": "Solar",
@@ -8794,7 +8820,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US29362U1043",
@@ -9002,7 +9028,8 @@
           "name": "Blacksky Technology Inc",
           "symbol": "BKSY",
           "weight": 0.08,
-          "theme": "andet",
+          "theme": "space",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Industrials",
           "industry": "Specialty Business Services",
@@ -9013,7 +9040,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US17275R1023",
@@ -9052,7 +9079,8 @@
           "name": "Lumen Tech",
           "symbol": "LUMN",
           "weight": 0.08,
-          "theme": "andet",
+          "theme": "connect",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Communication Services",
           "industry": "Telecom Services",
@@ -9063,7 +9091,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US64119N6085",
@@ -9230,7 +9258,8 @@
           "name": "Ballard Power Systems Inc",
           "symbol": "BLDP",
           "weight": 0.06,
-          "theme": "andet",
+          "theme": "energy",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Industrials",
           "industry": "Electrical Equipment & Parts",
@@ -9241,7 +9270,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "CA2960061091",
@@ -9296,7 +9325,8 @@
           "name": "Electrovaya Inc",
           "symbol": "ELVA",
           "weight": 0.05,
-          "theme": "andet",
+          "theme": "energy",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Industrials",
           "industry": "Electrical Equipment & Parts",
@@ -9307,14 +9337,15 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US2935941078",
           "name": "Enovix Corp",
           "symbol": "ENVX",
           "weight": 0.05,
-          "theme": "andet",
+          "theme": "energy",
+          "themeFrom": "andet",
           "logoDomain": "enovix.com",
           "sector": "Industrials",
           "industry": "Electrical Equipment & Parts",
@@ -9325,7 +9356,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US63010H1086",
@@ -9418,7 +9449,8 @@
           "name": "Shoals Technologies Group ",
           "symbol": "SHLS",
           "weight": 0.04,
-          "theme": "andet",
+          "theme": "energy",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Technology",
           "industry": "Solar",
@@ -9429,7 +9461,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US0079031078",
@@ -11940,7 +11972,8 @@
           "name": "Lightbridge Corp",
           "symbol": "LTBR",
           "weight": 0.33,
-          "theme": "andet",
+          "theme": "energy-resources",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Industrials",
           "industry": "Electrical Equipment & Parts",
@@ -11951,7 +11984,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US7707001027",
@@ -11993,7 +12026,8 @@
           "name": "Tigo Energy Inc",
           "symbol": "TYGO",
           "weight": 0.33,
-          "theme": "andet",
+          "theme": "energy",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Technology",
           "industry": "Solar",
@@ -12004,7 +12038,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "DE000A1K0235",
@@ -12110,7 +12144,8 @@
           "name": "Solid Power Inc",
           "symbol": "SLDP",
           "weight": 0.32,
-          "theme": "andet",
+          "theme": "energy",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Consumer Cyclical",
           "industry": "Auto Parts",
@@ -12121,7 +12156,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "CA15101Q2071",
@@ -12538,7 +12573,8 @@
           "name": "Neovolta Inc",
           "symbol": "NEOV",
           "weight": 0.27,
-          "theme": "andet",
+          "theme": "energy",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Industrials",
           "industry": "Electrical Equipment & Parts",
@@ -12549,14 +12585,15 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US8485603067",
           "name": "Spire Global",
           "symbol": "SPIR",
           "weight": 0.27,
-          "theme": "andet",
+          "theme": "space",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Industrials",
           "industry": "Specialty Business Services",
@@ -12567,14 +12604,15 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US8807791038",
           "name": "Terex Corp",
           "symbol": "TEX",
           "weight": 0.27,
-          "theme": "andet",
+          "theme": "physical",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Industrials",
           "industry": "Farm & Heavy Construction Machinery",
@@ -12585,7 +12623,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "AU0000185993",
@@ -12813,7 +12851,8 @@
           "name": "Ballard Power Systems Inc",
           "symbol": "BLDP",
           "weight": 0.25,
-          "theme": "andet",
+          "theme": "energy",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Industrials",
           "industry": "Electrical Equipment & Parts",
@@ -12824,7 +12863,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US4576422053",
@@ -12898,7 +12937,8 @@
           "name": "Ses Ai Corp",
           "symbol": "SES",
           "weight": 0.25,
-          "theme": "andet",
+          "theme": "energy",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Consumer Cyclical",
           "industry": "Auto Parts",
@@ -12909,7 +12949,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US8425871071",
@@ -13439,7 +13479,8 @@
           "name": "Array Technologies Inc",
           "symbol": "ARRY",
           "weight": 0.22,
-          "theme": "andet",
+          "theme": "energy",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Technology",
           "industry": "Solar",
@@ -13450,14 +13491,15 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US0517741072",
           "name": "Aurora Innovtn",
           "symbol": "AUR",
           "weight": 0.22,
-          "theme": "andet",
+          "theme": "physical",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Consumer Cyclical",
           "industry": "Auto Parts",
@@ -13468,7 +13510,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US1717793095",
@@ -13857,7 +13899,8 @@
           "name": "Shoals Technologies Group ",
           "symbol": "SHLS",
           "weight": 0.21,
-          "theme": "andet",
+          "theme": "energy",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Technology",
           "industry": "Solar",
@@ -13868,7 +13911,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US87422Q1094",
@@ -14055,7 +14098,8 @@
           "name": "Amprius Technologies Inc",
           "symbol": "AMPX",
           "weight": 0.19,
-          "theme": "andet",
+          "theme": "energy",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Industrials",
           "industry": "Electrical Equipment & Parts",
@@ -14066,14 +14110,15 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US0937121079",
           "name": "Bloom Energy Corp- A",
           "symbol": "BE",
           "weight": 0.19,
-          "theme": "andet",
+          "theme": "energy",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Industrials",
           "industry": "Electrical Equipment & Parts",
@@ -14084,7 +14129,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US34354P1057",
@@ -14139,7 +14184,8 @@
           "name": "Microvast Holdings Inc",
           "symbol": "MVST",
           "weight": 0.19,
-          "theme": "andet",
+          "theme": "energy",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Consumer Cyclical",
           "industry": "Auto Parts",
@@ -14150,7 +14196,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US83443Q1031",
@@ -14176,7 +14222,8 @@
           "name": "Sunrun Inc",
           "symbol": "RUN",
           "weight": 0.19,
-          "theme": "andet",
+          "theme": "energy",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Technology",
           "industry": "Solar",
@@ -14187,7 +14234,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US91532F1021",
@@ -14308,7 +14355,8 @@
           "name": "Eos Energy Enterprises Inc",
           "symbol": "EOSE",
           "weight": 0.18,
-          "theme": "andet",
+          "theme": "energy",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Industrials",
           "industry": "Electrical Equipment & Parts",
@@ -14319,7 +14367,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US35953D4016",
@@ -14445,7 +14493,8 @@
           "name": "Tantalus Systems Holding Inc",
           "symbol": "GRID.TO",
           "weight": 0.17,
-          "theme": "andet",
+          "theme": "energy",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Industrials",
           "industry": "Electrical Equipment & Parts",
@@ -14456,7 +14505,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "KYG0535Q1331",
@@ -14511,7 +14560,8 @@
           "name": "Enovix Corp",
           "symbol": "ENVX",
           "weight": 0.17,
-          "theme": "andet",
+          "theme": "energy",
+          "themeFrom": "andet",
           "logoDomain": "enovix.com",
           "sector": "Industrials",
           "industry": "Electrical Equipment & Parts",
@@ -14522,7 +14572,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US39959A2050",
@@ -14564,7 +14614,8 @@
           "name": "Plug Power Inc",
           "symbol": "PLUG",
           "weight": 0.17,
-          "theme": "andet",
+          "theme": "energy",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Industrials",
           "industry": "Electrical Equipment & Parts",
@@ -14575,7 +14626,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US8010561020",
@@ -14742,7 +14793,8 @@
           "name": "Caterpillar",
           "symbol": "CAT",
           "weight": 0.16,
-          "theme": "andet",
+          "theme": "physical",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Industrials",
           "industry": "Farm & Heavy Construction Machinery",
@@ -14753,7 +14805,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US3168411052",
@@ -14811,7 +14863,8 @@
           "name": "Lumen Tech",
           "symbol": "LUMN",
           "weight": 0.16,
-          "theme": "andet",
+          "theme": "connect",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Communication Services",
           "industry": "Telecom Services",
@@ -14822,7 +14875,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US6391931010",
@@ -14845,7 +14898,8 @@
           "name": "Quantumscape Corp",
           "symbol": "QS",
           "weight": 0.16,
-          "theme": "andet",
+          "theme": "energy",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Consumer Cyclical",
           "industry": "Auto Parts",
@@ -14856,7 +14910,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US84265V1052",
@@ -14898,7 +14952,8 @@
           "name": "Canadian Solar Inc",
           "symbol": "CSIQ",
           "weight": 0.15,
-          "theme": "andet",
+          "theme": "energy",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Technology",
           "industry": "Solar",
@@ -14909,7 +14964,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US18452B2097",
@@ -15087,7 +15142,8 @@
           "name": "Solaredge Technologies Inc",
           "symbol": "SEDG",
           "weight": 0.14,
-          "theme": "andet",
+          "theme": "energy",
+          "themeFrom": "andet",
           "logoDomain": "solaredge.com",
           "sector": "Technology",
           "industry": "Solar",
@@ -15098,7 +15154,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "CA00288U1066",
@@ -15222,7 +15278,8 @@
           "name": "First Solar",
           "symbol": "FSLR",
           "weight": 0.13,
-          "theme": "andet",
+          "theme": "energy",
+          "themeFrom": "andet",
           "logoDomain": "firstsolar.com",
           "sector": "Technology",
           "industry": "Solar",
@@ -15233,14 +15290,15 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US46269C1027",
           "name": "Iridium Communications Inc",
           "symbol": "IRDM",
           "weight": 0.13,
-          "theme": "andet",
+          "theme": "space",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Communication Services",
           "industry": "Telecom Services",
@@ -15251,7 +15309,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US63010H1086",
@@ -15322,7 +15380,8 @@
           "name": "Enphase Energy",
           "symbol": "ENPH",
           "weight": 0.12,
-          "theme": "andet",
+          "theme": "energy",
+          "themeFrom": "andet",
           "logoDomain": "enphase.com",
           "sector": "Technology",
           "industry": "Solar",
@@ -15333,7 +15392,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US7811541090",
@@ -15585,7 +15644,8 @@
           "name": "American Battery Technology",
           "symbol": "ABAT",
           "weight": 0.1,
-          "theme": "andet",
+          "theme": "energy-resources",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Industrials",
           "industry": "Waste Management",
@@ -15596,7 +15656,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US0929151076",
@@ -15683,7 +15743,8 @@
           "name": "Nextracker Inc-Cl A",
           "symbol": "NXT",
           "weight": 0.1,
-          "theme": "andet",
+          "theme": "energy",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Technology",
           "industry": "Solar",
@@ -15694,7 +15755,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US82452J1097",
@@ -15749,7 +15810,8 @@
           "name": "Blacksky Technology Inc",
           "symbol": "BKSY",
           "weight": 0.07,
-          "theme": "andet",
+          "theme": "space",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Industrials",
           "industry": "Specialty Business Services",
@@ -15760,7 +15822,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US0382221051",
@@ -15799,7 +15861,8 @@
           "name": "Electrovaya Inc",
           "symbol": "ELVA",
           "weight": 0.01,
-          "theme": "andet",
+          "theme": "energy",
+          "themeFrom": "andet",
           "logoDomain": null,
           "sector": "Industrials",
           "industry": "Electrical Equipment & Parts",
@@ -15810,7 +15873,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag, afventer gennemgang (runde 2: plads i værdikæden)"
         },
         {
           "isin": "US00108J1097",
