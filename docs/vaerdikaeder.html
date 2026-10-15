@@ -127,6 +127,31 @@
     .gloss dd a{font-size:12px;white-space:nowrap}
     .q-pane{display:none;margin:4px 0 18px}
     .q-pane.on{display:block}
+    .p-pane{display:none;margin:4px 0 18px}
+    .p-pane.on{display:block}
+    .phases{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+    @media(min-width:760px){.phases{grid-template-columns:repeat(3,1fr)}}
+    .phase{position:relative;border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:#0b171d}
+    .phase.now{border-color:var(--cyan)}
+    .phase.next{border-color:var(--yellow);box-shadow:inset 0 3px 0 var(--yellow)}
+    .phase .ph-n{font-size:11px;letter-spacing:.5px;text-transform:uppercase;color:var(--muted);font-weight:700}
+    .phase.next .ph-n{color:var(--yellow)}
+    .phase h3{font-size:15px;margin:3px 0 4px;color:var(--text)}
+    .phase p{font-size:13px;line-height:1.5;margin:0;color:var(--muted)}
+    .phase a{font-size:12px}
+    @media(min-width:760px){.phase:not(:last-child)::after{content:"→";position:absolute;right:-12px;top:42%;color:var(--yellow);font-weight:700;z-index:1}}
+    .ph-quote{margin:12px 0 0;font-size:14px;line-height:1.5;color:var(--text);border-left:3px solid var(--yellow);padding:4px 0 4px 12px}
+    .ph-quote cite{display:block;font-style:normal;font-size:12px;color:var(--muted);margin-top:3px}
+    .bridges{margin:18px 0 6px}
+    .bridges h3{font-size:15px;color:var(--cyan);margin:0 0 4px}
+    .br-grid{display:grid;gap:8px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));margin-top:8px}
+    .br{display:grid;grid-template-columns:auto 1fr;gap:4px 10px;align-items:start;border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:#0b171d;color:var(--text);text-decoration:none}
+    a.br:hover,a.br:focus-visible{border-color:var(--yellow)}
+    .br .br-ico{font-size:18px;line-height:1.2;grid-row:span 2}
+    .br .br-t{font-size:13px;font-weight:700}
+    .br .br-t small{font-weight:400;color:var(--muted)}
+    .br .br-d{font-size:12.5px;line-height:1.45;color:var(--muted)}
+    .br .br-n{color:var(--yellow);font-weight:700}
     @media(min-width:960px){
       .vc-chain.horiz{display:flex;align-items:stretch;gap:0;overflow-x:auto;padding-bottom:8px;scroll-snap-type:x mandatory}
       .vc-chain.horiz .vc-arrow{padding:0 6px;align-self:center;flex:0 0 auto;transform:rotate(-90deg)}
@@ -182,7 +207,7 @@
 
     <section class="chapter panel" id="kap-flod">
       <h2>Fem dæmninger i AI-kæden</h2>
-      <p class="lede" style="font-size:14px;margin-bottom:8px">Når én flaskehals letter, flytter presset. Ikke en prognose — en ramme.</p>
+      <p class="lede" style="font-size:14px;margin-bottom:8px">Når én flaskehals letter, flytter presset. Det er en ramme, ikke en prognose.</p>
       <div class="dams" id="dams" role="list"></div>
       <p class="src" id="counts-note"></p>
     </section>
@@ -244,20 +269,32 @@
         <aside class="vc-callout">
           <strong>Kort kæde med vilje.</strong>
           NDI har ikke skrevet en egentlig analyse af kvantekæden, så siden holdes kort. Mads nævner kvantecomputere som et segment med politisk medvind og høj volatilitet og som eksempel på teknologier, hvis indtægter ikke passer i et regneark (BLOG 2. juni og 21. juli 2025).
-          <p class="link-row" style="margin:10px 0 0"><a href="tema.html?slug=quantum&amp;fund=pmindi">Quantum-temaet i beholdningen →</a> · <a href="#" data-goto="ai-compute">Hvor kvante møder AI-compute →</a> · <a href="laer/saadan-taenker-vi.html">Hvorfor usikre indtægter ikke passer i et regneark →</a></p>
+          <p class="link-row" style="margin:10px 0 0"><a href="tema.html?slug=quantum&amp;fund=pmindi">Quantum-temaet i beholdningen →</a> · <a href="laer/saadan-taenker-vi.html">Hvorfor usikre indtægter ikke passer i et regneark →</a></p>
         </aside>
+        <div class="bridges" style="margin-top:12px">
+          <h3>Hvor kvante møder resten af kæden</h3>
+          <div class="br-grid" id="q-bridges"></div>
+          <p class="src" id="q-bridges-note" style="margin-top:6px"></p>
+        </div>
+      </div>
+
+      <div class="p-pane" id="p-pane" aria-label="Robotik forklaret">
+        <ol class="phases" id="phases" aria-label="Mads' tre faser"></ol>
+        <blockquote class="ph-quote" id="ph-quote"></blockquote>
+        <p class="src" id="ph-src" style="margin-top:6px"></p>
       </div>
 
       <p class="anno" id="chain-tip">Klik et led for selskaber. Hvert led har tre dele: hvad det er, hvorfor NDI følger det, og hvad der ændrer sig.</p>
       <div class="sm" id="chain-sm" aria-label="Største led i den forsinkede beholdning"></div>
       <div class="vc-chain" id="chain-view" role="tabpanel" aria-labelledby="chain-tabs"></div>
+      <div class="bridges" id="chain-bridges" aria-live="polite"></div>
       <p class="src" id="mapping-note"></p>
       <p class="band" id="theme-note"></p>
     </section>
 
     <section class="chapter panel" id="kap-timeline">
       <h2>Tidslinje: teknologiske skift</h2>
-      <p class="lede" style="font-size:14px;margin-bottom:8px">Mads' forventninger og NDI's vurderinger — ikke fondens prognoser.</p>
+      <p class="lede" style="font-size:14px;margin-bottom:8px">Mads' forventninger og NDI's vurderinger. Ikke fondens prognoser.</p>
       <div class="tl" id="timeline"></div>
     </section>
 
@@ -482,6 +519,8 @@
     const sm = document.getElementById('chain-sm');
     const spacePane = document.getElementById('space-pane');
     const qPane = document.getElementById('q-pane');
+    const pPane = document.getElementById('p-pane');
+    const bridgesEl = document.getElementById('chain-bridges');
     document.getElementById('mapping-note').textContent = pack.mappingNote || '';
     const pct = (x) => String(x).replace('.', ',') + ' %';
     const chainTheme = { 'ai-compute': null, physical: 'physical', energy: 'energy', space: 'space', quantum: 'quantum' };
@@ -538,6 +577,51 @@
       });
       document.getElementById('alt-host').appendChild(svg);
     })(sp?.altitudes);
+
+    // Robotik: Mads' tre faser (BLOG 7. okt 2024)
+    const phys = pack.chains.find(c => c.id === 'physical');
+    document.getElementById('phases').innerHTML = (phys?.phases || []).map((f, i, all) =>
+      `<li class="phase${i === all.length - 2 ? ' now' : ''}${i === all.length - 1 ? ' next' : ''}"><div class="ph-n">${esc(f.n)} · ${esc(f.when)}</div><h3>${esc(f.label)}</h3><p>${esc(f.t)}</p>${f.link ? `<p style="margin-top:6px"><a href="#lk-${esc(f.link)}" data-open="${esc(f.link)}">Se leddet →</a></p>` : ''}</li>`).join('');
+    if (phys?.phasesQuote) document.getElementById('ph-quote').innerHTML = `<q>${esc(phys.phasesQuote.q)}</q><cite>Mads Christiansen, ${esc(phys.phasesQuote.src)}</cite>`;
+    document.getElementById('ph-src').textContent = phys?.phasesSrc ? `Kilde: ${phys.phasesSrc}` : '';
+
+    // Broer: led i andre kæder, der deler selskaber med den valgte kæde
+    const linkOf = (cid, lid) => pack.chains.find(c => c.id === cid)?.links.find(l => l.id === lid);
+    const kindTxt = (k) => k === 'baggrund' ? 'baggrund' : 'NDI';
+    const brCard = (b) => {
+      const [cid, lid] = (b.to || '').split(':');
+      const ch = pack.chains.find(c => c.id === cid);
+      const href = b.href || `?kaede=${esc(cid)}#lk-${esc(lid)}`;
+      return `<a class="br" href="${href}"${b.to ? ` data-hop="${esc(b.to)}"` : ''}><span class="br-ico" aria-hidden="true">${b.icon || '◆'}</span><span class="br-t">${esc(b.label)}${ch ? ` <small>· ${esc(ch.title)}</small>` : ''} <small>· ${kindTxt(b.kind)}</small></span><span class="br-d">${esc(b.t)}</span></a>`;
+    };
+    const qc = pack.chains.find(c => c.id === 'quantum');
+    document.getElementById('q-bridges').innerHTML = (qc?.bridges || []).map(brCard).join('');
+    document.getElementById('q-bridges-note').textContent = qc?.bridgesNote || '';
+    function renderBridges(ch) {
+      const where = {};
+      pack.chains.filter(c => c.id !== ch.id).forEach(c => c.links.forEach(l => l.companies.forEach(co => {
+        (where[co.isin] ||= []).push([c, l]);
+      })));
+      const pairs = new Map();
+      ch.links.forEach(src => src.companies.forEach(co => (where[co.isin] || []).forEach(([c, l]) => {
+        const k = `${src.id}|${c.id}:${l.id}`;
+        if (!pairs.has(k)) pairs.set(k, { src, c, l, names: [] });
+        const p = pairs.get(k);
+        if (!p.names.includes(co.name)) p.names.push(co.name);
+      })));
+      const list = [...pairs.values()].sort((a, b) => b.names.length - a.names.length).slice(0, 6);
+      if (!list.length) {
+        bridgesEl.innerHTML = ch.id === 'quantum' ? '' : `<h3>Broer til andre kæder</h3><p class="src">Ingen af kædens selskaber står i andre kæder i den forsinkede beholdning.</p>`;
+        return;
+      }
+      const shown = new Set(list.flatMap(p => p.names)).size;
+      bridgesEl.innerHTML = `<h3>Broer til andre kæder</h3><p class="src">Ét selskab kan sidde i flere kæder. Her er de led, hvor ${esc(ch.title)} deler flest selskaber med andre kæder (${shown} selskaber i alt i de viste broer).</p>`
+        + `<div class="br-grid">${list.map(p => {
+          const n = p.names.length;
+          const more = n > 3 ? ` og ${n - 3} til` : '';
+          return `<a class="br" href="?kaede=${esc(p.c.id)}#lk-${esc(p.l.id)}" data-hop="${esc(p.c.id)}:${esc(p.l.id)}"><span class="br-ico" aria-hidden="true">${p.src.icon || '◆'}</span><span class="br-t">${esc(p.src.short || p.src.label)} ⇄ ${esc(p.l.short || p.l.label)} <small>· ${esc(p.c.title)}</small></span><span class="br-d"><span class="br-n">${n}</span> fælles: ${esc(p.names.slice(0, 3).join(', '))}${more}</span></a>`;
+        }).join('')}</div><p class="src" style="margin-top:6px">${esc(pack.bridgesNote || '')}</p>`;
+    }
 
     // Orbit ladder: jord → kredsløb → måne (ikke i skala)
     function renderOrbit(ch) {
@@ -610,6 +694,8 @@
       src.textContent = ch.source ? `Kilde: ${ch.source}` : '';
       spacePane.classList.toggle('on', id === 'space');
       qPane.classList.toggle('on', id === 'quantum');
+      pPane.classList.toggle('on', id === 'physical');
+      renderBridges(ch);
       if (id === 'space') renderOrbit(ch);
       const max = Math.max(...ch.links.map(l => l.weightSum || 0), 0.01);
       const top = [...ch.links].filter(l => l.count && !l.neighbour).sort((a, b) => b.weightSum - a.weightSum).slice(0, 4);
@@ -715,6 +801,8 @@
         if (g.dataset.goto === 'space' && g.getAttribute('href') === '#kap-rum') { render('space'); document.getElementById('kap-rum').scrollIntoView({ block: 'start' }); return; }
         go(g.dataset.goto); return;
       }
+      const hp = e.target.closest('[data-hop]');
+      if (hp) { e.preventDefault(); const [c, l] = hp.dataset.hop.split(':'); if (linkOf(c, l)) go(c, l); return; }
       const dm = e.target.closest('[data-dam]');
       if (dm) { e.preventDefault(); go('ai-compute', dm.dataset.dam); return; }
       const o = e.target.closest('[data-open]');

@@ -57,3 +57,11 @@ Se `notes/VISUAL-VARIETY-REVIEW.md`.
 | Logaritmisk højdeskala (lodret SVG) | ISS, Starlink, Iridium, GPS, geostationær og Månen på én akse, LEO- og MEO-bånd, "rummets grænse ≈ 100 km". Etiketterne skubbes fra hinanden og er klikbare til leddet | ✅ rum-fanen |
 | Ordbogs-kort (`<dl>` i `<details>`) | 10 rumbegreber med ◇-markør og "Se leddet"-link. Åben på desktop, foldet på mobil | ✅ rum-fanen |
 | Gul citatlinje | Latens-forklaring (GEO ca. ½ sekund og LEO få hundrededele) som venstrekant-note | ✅ |
+
+## Fra Claude lane-A · 2026-10-16 ~00:05 CEST (broer, faser, kvante)
+| Form | Brug | Status |
+|---|---|---|
+| Bro-kort (⇄) beregnet fra data | Under hver kæde: op til 6 led-par, hvor kæden deler selskaber med andre kæder. Gult tal = antal fælles, 3 navne. Klik hopper til leddet i den anden kæde | ✅ vaerdikaeder.html, alle faner |
+| Fase-trin med pil | Robotik-fanen: Mads' fase 1 → 2 → 3 som tre kort. Fase 3 har gul topkant, og citatet har gul venstrekant | ✅ robotik-fanen |
+| Faglige bro-kort | Kvante-fanen: 4 kort (cloud, chipdesign, udstyr og Sådan tænker vi) mærket baggrund eller NDI | ✅ kvante-fanen |
+| Kæde-indgangskort med ikon | vaerdikaede.html: "Fire andre kæder" med 🤖⚡🚀⚛, antal led og selskaber og "Start ved første led" | ✅ vaerdikaede.html |

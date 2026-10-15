@@ -277,3 +277,14 @@ Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html, v
 4. **Tankestreger er fjernet** fra 8 brødtekster i value-chains.json (ingen "—" tilbage).
 Tjek: Playwright på 1280 og 375 med 0 konsolfejl og ingen sidescroll. Et klik på Månen i skalaen åbner `#lk-orbit`. smoke.mjs fail 0, precheck PASSED og grep efter handelssprog giver 0 hits.
 Næste: krydslinks for kvante (q-pane til AI-led og energi), "hvad ændrer sig" for robotikled og ét led pr. kæde i vaerdikaede.html. Ikke færdig.
+
+
+## Fra Claude lane-A · 2026-10-16 ~00:05 CEST
+Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html, vaerdikaede.html, value-chains.json og notes.
+1. **Broer mellem kæder (ny, beregnet).** Under hver fane på vaerdikaeder står nu "Broer til andre kæder" med op til 6 led-par, hvor kæden deler selskaber med andre kæder. Kortet viser antal og 3 navne, og et klik åbner leddet i den anden kæde (`data-hop`). Et eksempel: AI-kædens energiled deler 11 selskaber med energikædens elproduktion, og robotikkens komponenter deler 7 med lagring. Alt beregnes fra value-chains.json (1. juni 2026), så der er ingen nye felter.
+2. **Robotik-fanen** har nu Mads' tre faser (modning, copilots og automatisering/robotisering) som trin, citatet fra BLOG 7. oktober 2024 med kilde og "ingen præcise årstal". Robotleddet nævner nu forsvar (hører under robotik, BLOG 17. marts 2025) og Tesla-eksemplet (BOG s. 118–119). "Hvad ændrer sig" er skrevet om for komponenter og robotter.
+3. **Kvante-fanen:** Det vage link "Hvor kvante møder AI-compute" er fjernet. I stedet er der 4 faglige bro-kort: cloud, chipdesign og udstyr (mærket baggrund) og Sådan tænker vi (NDI, BLOG 21. juli 2025). Det fremgår, at ingen kvanteselskaber står i andre kæder.
+4. **vaerdikaede.html** har fået "Fire andre kæder" med ikon, første sætning af "hvorfor", antal led og selskaber og et "Start ved første led"-deep-link.
+5. De sidste to tankestreger på vaerdikaeder er fjernet.
+Tjek: Playwright på 1280 og 375 med 0 konsolfejl og ingen sidescroll. Bro-klik fører fra robotik til `energy#lk-storage` (åbent), og kvante-cloud fører til `ai-compute#lk-cloud`. smoke.mjs 52/52 fail 0, precheck PASSED og grep efter handelssprog giver 0 hits.
+Næste: rum-fanen kan få en "hvad koster det at komme op"-forklaring (kun med kilde) og robotik en lille ordbog (fx aktuator, lidar og simulering), som rum-ordbogen. Ikke færdig.

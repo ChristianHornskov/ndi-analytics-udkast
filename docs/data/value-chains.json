@@ -1712,7 +1712,8 @@
      "shift": "Mads forventer, at fysisk AI \"snart\" driver compute-efterspørgslen efter agentisk AI. Der er ingen præcise årstal.",
      "kind": "ndi"
     }
-   ]
+   ],
+   "icon": "🧠"
   },
   {
    "id": "physical",
@@ -1850,7 +1851,7 @@
      ],
      "seeChain": null,
      "src": "BLOG 10. juni 2024",
-     "shift": "NDI har ikke lavet en detaljeret analyse af komponenterne. Leddet viser, hvor bredt fysisk AI trækker på chips, batterier og motorer (tolkning).",
+     "shift": "Mange af leddets selskaber laver batterier eller effektchips og står derfor også i energikædens lagringsled eller i AI-kædens chipdesign. Robotter, elbiler og elnet trækker på de samme dele (tolkning, se broerne under kæden).",
      "kind": "ndi"
     },
     {
@@ -1916,7 +1917,7 @@
      "icon": "🤖",
      "label": "Robotter, autonome køretøjer og droner",
      "blurb": "Når AI får krop: robotter, selvkørende biler, droner og automatiserede fabrikker.",
-     "ndi": "NDI's vurdering: fase 3 er automatisering og robotisering. Robotter forstås bredt som \"droner, fly, soldater, missiler og andre autonome systemer\".",
+     "ndi": "NDI's vurdering: fase 3 er automatisering og robotisering. Robotter forstås bredt som \"droner, fly, soldater, missiler og andre autonome systemer\". Forsvar hører med her og ikke som egen kæde. Teslas robotter er bogens eksempel på, at kvantitative modeller overser langsigtede effekter.",
      "themes": [
       "physical",
       "software",
@@ -2040,11 +2041,38 @@
       }
      ],
      "seeChain": null,
-     "src": "BLOG 7. oktober 2024 · 17. marts 2025 · BOG s. 40–43",
-     "shift": "Mads beskriver et kapløb, hvor Vesten skal indhente Kinas forspring i robotproduktion.",
+     "src": "BLOG 7. oktober 2024 · 17. marts 2025 · BOG s. 40–43 og 118–119",
+     "shift": "Mads beskriver et kapløb, hvor Vesten skal indhente Kinas forspring i robotproduktion. Ifølge Mads kommer efterspørgslen efter compute snart fra fysisk AI, efter agentisk AI (BLOG 30. marts 2026). Han giver ingen præcise årstal.",
      "kind": "ndi"
     }
-   ]
+   ],
+   "phases": [
+    {
+     "n": "Fase 1",
+     "when": "2000 til 2020",
+     "label": "Modning",
+     "t": "Internet, mobil og cloud bliver hverdag. Computere hjælper mennesker med at finde og gemme information."
+    },
+    {
+     "n": "Fase 2",
+     "when": "Efter 2020",
+     "label": "Copilots",
+     "t": "AI skriver, opsummerer og koder sammen med mennesker. Efterspørgslen trækker på chips, datacentre og strøm."
+    },
+    {
+     "n": "Fase 3",
+     "when": "Næste skridt",
+     "label": "Automatisering og robotisering",
+     "t": "AI får krop og handler selv i den fysiske verden: robotter, selvkørende biler, droner og automatiserede fabrikker.",
+     "link": "robots"
+    }
+   ],
+   "phasesSrc": "BLOG 7. oktober 2024 · BOG s. 39–43. Faserne er Mads' inddeling. Der er ingen præcise årstal for fase 3.",
+   "phasesQuote": {
+    "q": "Det, som vil ændre måden vi lever på, er den automatisering og robotisering, som vil skabe fase 3",
+    "src": "BLOG 7. oktober 2024"
+   },
+   "icon": "🤖"
   },
   {
    "id": "energy",
@@ -2818,7 +2846,8 @@
      "shift": "Råstoffer er rykket \"i første række\" i amerikansk udenrigspolitik (BLOG 5. januar 2026). Mads skriver, at en råstofanalyse i dag også skal tage højde for geopolitik og ikke kun udbud og efterspørgsel (BLOG 21. september 2026).",
      "kind": "ndi"
     }
-   ]
+   ],
+   "icon": "⚡"
   },
   {
    "id": "space",
@@ -3311,7 +3340,8 @@
      "link": "orbit"
     }
    ],
-   "latency": "Højden betyder noget for brugeren. Et signal til en geostationær satellit og tilbage tager omkring et halvt sekund. Via lavt kredsløb tager det få hundrededele af et sekund. Det er en af grundene til, at satellitinternet er rykket ned i lavt kredsløb (baggrund)."
+   "latency": "Højden betyder noget for brugeren. Et signal til en geostationær satellit og tilbage tager omkring et halvt sekund. Via lavt kredsløb tager det få hundrededele af et sekund. Det er en af grundene til, at satellitinternet er rykket ned i lavt kredsløb (baggrund).",
+   "icon": "🚀"
   },
   {
    "id": "quantum",
@@ -3378,7 +3408,39 @@
      "src": "BLOG 2. juni 2025 · 7. juli 2025 · 21. juli 2025",
      "shift": "NVIDIA's direktør sagde i januar 2025, at nyttige kvantecomputere sandsynligvis ligger 20 år ude (gengivet i BLOG 13. januar 2025). Det er hans udsagn, ikke Mads'."
     }
-   ]
+   ],
+   "bridges": [
+    {
+     "icon": "☁",
+     "to": "ai-compute:cloud",
+     "label": "Cloud og modeller",
+     "t": "De fleste kvantecomputere bruges i dag over skyen. Man lejer tid på maskinen i stedet for at eje den.",
+     "kind": "baggrund"
+    },
+    {
+     "icon": "◇",
+     "to": "ai-compute:chipdesign",
+     "label": "Chipdesign",
+     "t": "En kvantecomputer har brug for almindelige chips og computere ved siden af til at styre den og rette fejl.",
+     "kind": "baggrund"
+    },
+    {
+     "icon": "⚙",
+     "to": "ai-compute:equipment",
+     "label": "Udstyr til chipfabrikker",
+     "t": "Mange kvantechips bygges med teknikker fra chipindustrien, men skal køles ned tæt på det absolutte nulpunkt.",
+     "kind": "baggrund"
+    },
+    {
+     "icon": "∑",
+     "href": "laer/saadan-taenker-vi.html",
+     "label": "Sådan tænker vi",
+     "t": "Mads bruger kvante som eksempel på teknologi, hvis indtægter er for usikre til et regneark (BLOG 21. juli 2025).",
+     "kind": "ndi"
+    }
+   ],
+   "bridgesNote": "Broerne er faglige sammenhænge. Ingen af kvanteleddets selskaber står i andre kæder i den forsinkede beholdning.",
+   "icon": "⚛"
   }
  ],
  "themeNote": "Fintech/digitale betalinger behandles som tema (platforme), ikke som egen kæde. Kilderne beskriver ingen fintech-værdikæde.",
@@ -3391,5 +3453,6 @@
   }
  ],
  "countsNote": "Forsinket beholdning pr. 2026-06-01 (PMINDI, antal selskaber pr. tema): platforme 40, chips 53, software 51, andet / uklassificeret 67, optik & netværk 30, fysisk tech 24, compute 18, quantum 4, energi 15, energiressourcer 25, spacetech 18. Brug antal i brødtekst, ikke vægte, når du citerer oversigten.",
- "mappingNote": "Hvilke selskaber der står under hvert led, er et redaktionelt udkast ud fra selskabets forretning. Det er ikke NDI's officielle klassifikation og kan indeholde fejl. Et selskab kan stå i flere led. Vægte er fra den forsinkede beholdning pr. 1. juni 2026 (PMINDI)."
+ "mappingNote": "Hvilke selskaber der står under hvert led, er et redaktionelt udkast ud fra selskabets forretning. Det er ikke NDI's officielle klassifikation og kan indeholde fejl. Et selskab kan stå i flere led. Vægte er fra den forsinkede beholdning pr. 1. juni 2026 (PMINDI).",
+ "bridgesNote": "Broer viser led i andre kæder, som deler selskaber med denne kæde i den forsinkede beholdning pr. 1. juni 2026. Ét selskab kan have flere roller. Tilordningen er et redaktionelt udkast."
 }
