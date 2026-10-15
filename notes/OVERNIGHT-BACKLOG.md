@@ -1,3 +1,5 @@
+Compliance locks: **bash scripts/precheck.sh before every push** (notes/PRECHECK-RULE.md).
+
 # Overnight backlog (Christian: v1 too thin — non-stop until morning)
 
 Compliance locks: notes only `/notes`; holdings ≤2026-06-01; no daily movers; AKK no returns; PMINDI no 1m/3m; no unverified stock figures; no Nasdaq; context = udbytte only.
