@@ -111,3 +111,5 @@ Se `notes/VISUAL-VARIETY-REVIEW.md`.
 
 ### lane-A · 2026-10-16 · energi: tjek dig selv
 - **Tjek dig selv** (`#e-quiz`) på energi-fanen genbruger rum-quizzens form (svarknapper, ✓/✗, gul forklaringslinje), så læseren genkender mønstret på tværs af kæder. Svar-linket åbner leddet direkte (elnet, lagring, atomkraft). Ingen ny CSS ud over scroll-margin for de nye ankre.
+
+- Kvante-fanen (lane-A, 2026-10-16): lodret termometer-SVG på logaritmisk skala med boble i bunden og varm-til-kold-gradient. Etiketter skubbes fra hinanden med skrå hjælpelinjer, så helium og det tomme rum kan læses selvom de ligger tæt. Ved siden af står en nummereret årsagskæde i cirkler og en stiplet gul strøm-boks. Formen er ny på siden, og den er kun lavet med lokal CSS i vaerdikaeder.html.

@@ -57,6 +57,7 @@ Kilder: slack_ny_graf_2026-10-15.md, vision.txt, mads_tankemodel.md, investering
 - [x] Energi: "Hvad kan gå galt i energikæden?" (6 usikkerheder med strømvej-strimmel; 4 NDI-linjer med kilde, resten baggrund) + energi-ledkort uden aktiesprog, råstoffer inkl. gas og uran; vaerdikaede.html: usikkerheds-link pr. kæde (lane-A)
 - [x] Rum: "Hvem arbejder hvor højt?" (5 højdebånd fra jorden til Månen med led og antal pr. 1. juni 2026, fremhæver båndet på højdeskalaen; baggrund) + "Tjek dig selv" med 5 spørgsmål og link til forklaringen; læse-rute nu 8 stop; vaerdikaede.html: link til spørgsmålene (lane-A)
 - [x] Energi: "Tjek dig selv" med 5 spørgsmål (første flaskehals, elnet, lagring, råstoffer og geopolitik, SMR); 3 med NDI-kilde, resten baggrund; svar-link åbner leddet; quiz-koden er fælles for rum og energi; vaerdikaede.html: quiz-link på energikortet (lane-A)
+- [x] Kvante: "Hvorfor skal en kvantechip være så kold?" (termometer på logaritmisk skala fra stuetemperatur til kryostat ca. 0,01 K, årsagskæde med ordbogs-link, bro til energi via elnet; baggrund) + "Tjek dig selv" med 4 spørgsmål (NVIDIA-udsagnet som hans, ikke NDI's); vaerdikaede.html: quiz-link på kvantekortet; adressen følger hop og afsnit (lane-A)
 
 ## Formidling / filosofi
 - [x] Variance drag / CAGR ≠ gennemsnit (lær)

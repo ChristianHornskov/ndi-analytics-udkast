@@ -149,7 +149,7 @@
  const RISK = { space: 'sp-risk', energy: 'e-risk' };
  const riskA = (c) => c.risks?.items?.length && RISK[c.id] ? `<a class="oc-gl" href="vaerdikaeder.html?kaede=${esc(c.id)}#${RISK[c.id]}"><span aria-hidden="true">⚠</span> Hvad kan gå galt? ${c.risks.items.length} usikkerheder →</a>` : '';
  // Tjek dig selv (kun hvor siden har sektionen)
- const QUIZ = { space: 'sp-quiz', energy: 'e-quiz' };
+ const QUIZ = { space: 'sp-quiz', energy: 'e-quiz', quantum: 'q-quiz' };
  const quizA = (c) => c.quiz?.items?.length && QUIZ[c.id] ? `<a class="oc-gl" href="vaerdikaeder.html?kaede=${esc(c.id)}#${QUIZ[c.id]}"><span aria-hidden="true">✓</span> Tjek dig selv: ${c.quiz.items.length} spørgsmål →</a>` : '';
  document.getElementById('other-chains').innerHTML = pack.chains.filter(c => c.id !== 'ai-compute').map(c => {
  const ls = c.links.filter(l => !l.neighbour);

@@ -378,3 +378,14 @@ Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html, v
 3. **vaerdikaede.html:** Energikortet har fået "✓ Tjek dig selv: 5 spørgsmål →".
 Tjek: Playwright på 1280 og 375 med 0 konsolfejl og ingen sidescroll. Deep-link lander på `#e-quiz`, pointtal stemmer, "Se leddet elnet" åbner `#lk-grid`, og SMR-svaret åbner `#lk-smr`. Rum-quizzen virker stadig. smoke.mjs 52/52 fail 0 (egen server på 8817). Precheck PASSED. Grep efter handelssprog og tankestreger i diff giver 0 hits.
 Næste: energi-ledkortenes blurbs (sprog og kilder) og kvante-fanen med krydslinks fra broerne til energi. Ikke færdig.
+
+
+## Fra Claude lane-A · 2026-10-16 ~02:10 CEST (kvante: kulde, energi-bro og tjek dig selv)
+Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html, vaerdikaede.html, value-chains.json og notes.
+1. **Kvante: "Hvorfor skal en kvantechip være så kold?"** Ny sektion (`#q-cold`) med et lodret termometer på logaritmisk skala: stuetemperatur, Antarktis, flydende kvælstof, flydende helium, det tomme rum og en kryostat på ca. 0,01 K. Ved siden af står en årsagskæde i fire trin (varme, dekohærens, fejl, kulde og fejlkorrektion) med links til ordbogen, og en note om, at ikke alle typer qubits skal være så kolde. En strøm-boks hopper til energi (elnet) og chipdesign. Alt er mærket baggrund og "ikke en vurdering af enkelte selskaber og ikke en anbefaling". Data ligger i `quantum.cold`.
+2. **Kvante-broer:** Der er en ny bro "⚡ Elnet · Energi & elektrificering" (baggrund), så kvante nu peger på energikæden og ikke kun på AI.
+3. **Kvante: "Tjek dig selv".** Fire spørgsmål (`#q-quiz`) om kulde, NVIDIA-udsagnet (det er hans udsagn, ikke Mads' og ikke NDI's prognose, BLOG 13. januar 2025), cloud og usikre indtægter (BLOG 21. juli 2025). Quizzen bruger den fælles `renderQuiz`, og intet gemmes. Kvante-callout har fået links til "Hvorfor så koldt?" og "Tjek dig selv".
+4. **Adresselinjen:** Hop mellem led og afsnit opdaterer nu adressen (`#lk-…` eller `#sektion`). Før stod der fx `?kaede=ai-compute#q-hz` efter et hop, og et delt link pegede derfor forkert.
+5. **vaerdikaede.html:** Kvantekortet har fået "✓ Tjek dig selv: 4 spørgsmål →".
+Tjek: Playwright på 1280 og 375 med 0 konsolfejl og ingen sidescroll. Der er 6 temperaturpunkter, 5 broer og 4 spørgsmål. Deep-link til `#q-hz`, `#q-cold`, `#q-br` og `#q-quiz` lander under menuen. Svaret "Se leddet" åbner `#lk-q-core`, og Elnet-hop giver `?kaede=energy#lk-grid`. smoke.mjs 52/52 fail 0 (egen server på 8817). Precheck PASSED. Grep efter handelssprog og tankestreger i diff giver 0 reelle hits.
+Næste: energi-ledkortenes blurbs kan få en "hvor i strømvejen"-mini-strimmel, og robotik-fanen kan få "Tjek dig selv". Ikke færdig.
