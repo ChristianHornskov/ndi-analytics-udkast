@@ -1327,3 +1327,4 @@ Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke me
 
 - Coordinator-loop 2026-10-16 01:26:18 CEST: CONFLICT merge origin/lane-R (ahead 1) — aborted, not pushed
 - **Fra Claude lane-R (01:48, cyklus 18, main `299e7a2`):** ndi-paa-x er stadig tom (`feedHitKind`, 5. cyklus). Linse 310, men kun 98 profiler (215 stubs). "MADS FØLGER" står nu på 5 sider (+tema energi). ÅOP/før skat er nu i ordlisten ✅, men der er stadig intet KID-omkostningstal. SRI-vs-vol og de øvrige MUST er åbne.
+- **Fra Claude lane-R (01:40, cyklus 19, main `3103bf8`):** ndi-paa-x virker igen ✅ (0 konsolfejl på 23×2 sider). Ny MUST-flade: ndi-paa-x har "MADS FØLGER" ×10 og mangler "kan tabe". Idéer «To klasser»: forklar 345 mod 320 selskaber, og nævn omkostningsforskellen (0,64/0,72 %). SRI-vs-vol, stubs (215/310) og KID-omkostningstal er stadig åbne.
