@@ -81,7 +81,7 @@ Se notes/STATUS.md. Forvent: smoke-quality ~108, smoke-cycle3 ~82+, precheck PAS
 5. **Portefølje / Udforsk** — Tesla multi-tag, SoftBank, forslag-badges.
 6. **Temaer** — Quantum-forslag, SpaceTech, Andet krympet.
 7. **Ideer** — visual variety strip/timeline.
-8. **Risici / Om data** — flodsystem + fintech-tema i ordliste.
+8. **Risici / Om data** — ordlisten er nu 55 begreber i 4 grupper (Afkast og risiko · Fonden · Portefølje/temaer/modenhed · Værdikæder og flodsystemet) med spring-links. Vis *Dæmning / flaskehals* og *Vægt* («linjen er vægt, ikke kurs»). FAQ-søgning (lær/faq) finder ordlisten, fx søg «dæmning».
 
 Åbne spørgsmål: market cap/produkt/modenhed (ingen data), forslag-gennemgang, privat repo vs Pages, Fundmarket på ÅTD/100k.
 

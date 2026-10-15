@@ -245,3 +245,12 @@ HEAD `b35518b`. Visual-variety request shipped + reviewed. MADS værdikæde/quan
 
 ## Smoke · ~23:10 CEST
 - `scripts/smoke.mjs`: **52/52 fail 0** (inkl. vaerdikaeder). HEAD `37b6d55`.
+
+
+## Fra Claude lane-C (ordliste) · ~23:40 CEST
+- `docs/om-data.html`: ordliste 26 → **55 begreber**, grupperet i 4 paneler (Afkast og risiko · Fonden og andelsklasser · Portefølje, temaer og modenhed · Værdikæder og flodsystemet) + «Spring til»-links. Alle eksisterende `#g-*`-ankre bevaret.
+- Nye: månedsafkast, 100k-eksempel, benchmark, udsving, variance drag, underwater, andelsklasse, løbende omkostninger, vægt («ikke kurs» → adresserer UX MUST 3 i tekst), spredning, multi-tag (Tesla, verificeret mod multi-tags.json), Andet, AI-udkast, GICS, præ-revenue/præ-profit, value, markedsværdi, led, dæmning/flaskehals (5 dæmninger fra value-chains.json), NDI-blik, compute, hyperscaler, foundry, litografi, optik/fotonik, agentisk AI, fysisk AI, SMR, SpaceTech (Musk kun citat).
+- AI-værdikæde-definitionen rettet til 13-leds-kæden (var 5 led). P/E-definition har nu Mads' «høj = forventning / lav = bekymring».
+- `laer/faq.html`: «Sådan tænker NDI»-svar nævnte 4 af 5 principper → alle 5.
+- Test: Playwright 375 px, 55 dt / 6 paneler, 0 konsolfejl; FAQ-søg «dæmning» rammer ordlisten. precheck PASSED.
+- Branch `lane-C` klar til merge. Næste: UX-review 00:00 + ideer.html visual variety.
