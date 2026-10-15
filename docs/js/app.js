@@ -176,6 +176,7 @@ function renderEntre(root) {
       <a href="sammenlign.html">PMINDI vs PMINDIAKK</a> ·
       <a href="nyhedsarkiv.html">Nyhedsarkiv</a> ·
       <a href="om-data.html">Ordliste &amp; data</a> ·
+      <a href="risici.html">Risici / KID</a> ·
       <a href="embed/chart.html">Embed-graf</a> ·
       <a href="kort.html">Sidekort</a> ·
       <button type="button" class="link-btn" data-open="dlg-follow">Følg med</button></p>
@@ -330,7 +331,7 @@ function renderFonden(root) {
     <section class="panel">
       <h2 style="font-size:18px;margin-bottom:8px">Det skete i porteføljen</h2>
       <p style="font-size:13px;color:var(--muted);line-height:1.55">Daglige top-bevægelser pr. aktie vises <strong style="color:var(--text)">ikke</strong> i denne version. Beholdningen er forsinket (månedsrapport), og kursafkast pr. aktie er under verifikation.</p>
-      <p class="band">Når funktionen kommer tilbage, bliver det kun fakta + dato — ingen anbefaling om at købe eller sælge.</p>
+      <p class="band">Beholdninger vises kun med forsinkelse (seneste offentlige månedsrapport), så siden aldrig afslører fondens aktuelle handler. Ingen anbefaling om at købe eller sælge.</p>
       <p style="margin-top:10px"><a class="outline-btn small" href="selskaber.html?fund=${state.fund}">Se forsinket beholdning →</a>
       <a class="outline-btn small" style="margin-left:8px" href="temaer.html">Temaer →</a></p>
     </section>

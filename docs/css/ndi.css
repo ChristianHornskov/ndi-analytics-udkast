@@ -376,7 +376,8 @@ details.more[open] summary{margin-bottom:8px}
 .doors{grid-template-columns:repeat(3,minmax(0,1fr))}
 .doors.doors-pair{grid-template-columns:1fr 1fr}
 .doors.doors-stack{grid-template-columns:1fr}
-.doors .door:last-child:nth-child(odd){grid-column:auto}
+.doors.doors-pair .door:last-child:nth-child(odd){grid-column:1 / -1}
+#calendar,.panel,.table-wrap{min-width:0}
 @media (max-width:900px){
   .doors{grid-template-columns:1fr 1fr}
   .doors .door:last-child:nth-child(odd){grid-column:1 / -1}
@@ -409,7 +410,7 @@ table.data tbody tr:hover td:first-child{background:#163038}
   .brand{flex:1 1 auto;min-height:36px}
   .nav{flex:1 1 100%;justify-content:flex-start;gap:8px 12px}
   .doors,.doors.doors-pair{grid-template-columns:1fr}
-  .doors .door,.doors.doors-pair .door{grid-column:auto;min-height:0;padding:16px 14px}
+  .doors .door,.doors.doors-pair .door,.doors.doors-pair .door:last-child:nth-child(odd){grid-column:auto;min-height:0;padding:16px 14px}
   .doors-sub a strong,.doors-sub a span,.door span{overflow-wrap:anywhere}
   .info-btn{width:24px;height:24px}
   #calendar{box-shadow:inset -14px 0 12px -12px #000a}
@@ -420,7 +421,7 @@ table.data tbody tr:hover td:first-child{background:#163038}
   table.data th,table.data td{padding:10px 8px}
   table.data th:first-child,table.data td:first-child{
     white-space:normal;
-    min-width:42vw;
+    min-width:9rem;
     max-width:60vw;
     box-shadow:8px 0 8px -8px #000c;
   }
@@ -438,3 +439,10 @@ table.data tbody tr:hover td:first-child{background:#163038}
   .life-legend strong{font-weight:500;color:var(--text)}
   .life-legend span{color:var(--faint)}
 }
+
+/* Cycle 6: "Senest opdateret"-stempel på entré */
+.updated-stamp{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:baseline;font-size:12px;color:var(--muted);margin:0 0 12px;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:#0b171d;width:fit-content;max-width:100%}
+.updated-stamp strong{color:var(--brand);font-weight:600;letter-spacing:.02em}
+.updated-stamp time{color:var(--text)}
+/* Sparklines er statiske i dag; sikr at fremtidige transitions/animationer respekterer brugerens valg */
+@media(prefers-reduced-motion:reduce){.spark,.spark *{animation:none!important;transition:none!important}}
