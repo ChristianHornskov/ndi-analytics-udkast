@@ -21,11 +21,12 @@ let DATA = null;
 let MONTHS = null;
 
 function weightSpark(isin, fundId) {
-  if (!MONTHS?.funds?.[fundId]) return '';
-  const series = MONTHS.funds[fundId]
-    .map((row) => row.weights?.[isin])
-    .filter((w) => w != null);
-  if (series.length < 2) return '';
+  // Kun fondens vægt pr. månedsrapport (≤ cutoff) – aldrig aktiekurs. Skala pr. række (form, ikke niveau).
+  const rows = MONTHS?.funds?.[fundId];
+  if (!rows) return '';
+  const pts0 = rows.map((row) => ({ d: row.date, w: row.weights?.[isin] })).filter((p) => p.w != null);
+  if (pts0.length < 2) return '';
+  const series = pts0.map((p) => p.w);
   const max = Math.max(...series, 0.01);
   const min = Math.min(...series);
   const w = 56, h = 18;
@@ -34,7 +35,10 @@ function weightSpark(isin, fundId) {
     const y = h - ((v - min) / (max - min || 1)) * (h - 2) - 1;
     return `${x.toFixed(1)},${y.toFixed(1)}`;
   }).join(' ');
-  return `<svg class="spark" width="${w}" height="${h}" aria-hidden="true"><polyline fill="none" stroke="var(--cyan)" stroke-width="1.4" points="${pts}"/></svg>`;
+  const pct = (v) => v.toFixed(2).replace('.', ',') + ' %';
+  const first = pts0[0], last = pts0[pts0.length - 1];
+  const label = `Vægt i fonden: ${pct(first.w)} (${fmtDate(first.d)}) → ${pct(last.w)} (${fmtDate(last.d)}), ${pts0.length} månedsrapporter. Ikke aktiekurs.`;
+  return `<svg class="spark" width="${w}" height="${h}" role="img" aria-label="${label}"><title>${label}</title><polyline fill="none" stroke="var(--cyan)" stroke-width="1.4" points="${pts}"/></svg>`;
 }
 
 
@@ -330,7 +334,20 @@ function renderFonden(root) {
       <p style="margin-top:12px"><button type="button" class="outline-btn small" data-open="dlg-invest">Sådan investerer du · Kopiér ISIN</button></p>
     </section>`;
 
-  renderChart($('#perf-chart', root), sliced, [], { label: 'Totalafkast' });
+  const evts = (DATA.context?.events || []).filter((e) => {
+    if (!sliced.length) return false;
+    return e.d >= sliced[0].d && e.d <= sliced[sliced.length - 1].d;
+  });
+  renderChart($('#perf-chart', root), sliced, evts, { label: 'Totalafkast' });
+  if (evts.length) {
+    const box = document.createElement('section');
+    box.className = 'panel';
+    box.innerHTML = `<h2 style="font-size:16px;margin-bottom:8px">Dokumenterede begivenheder i perioden</h2>
+      <ul style="color:var(--muted);line-height:1.55;padding-left:18px">${evts.map((e) => `<li><strong style="color:var(--text)">${fmtDate(e.d)}</strong> — ${e.title}${e.source ? ` <span style="font-size:11px">(${e.source})</span>` : ''}<br><span style="font-size:12px">${e.text || ''}</span></li>`).join('')}</ul>
+      <p style="font-size:11px;color:var(--muted);margin-top:8px">Kun dokumenterede fondsbegivenheder (udbytte). Ingen illustrative narrativer.</p>`;
+    $('#perf-chart', root)?.closest('section')?.after(box);
+  }
+
   renderCalendar($('#calendar', root), rows);
   $('#cal-toggle', root)?.addEventListener('click', () => {
     state.calFull = !state.calFull;
@@ -400,30 +417,50 @@ function filterPositions(fund) {
 
 
 function renderLivscyklus(fund) {
-  // Pedagogical strip only — maturity is draft/heuristic; many are ikke-klassificeret
+  // Pædagogisk kurve (bogen: præ-revenue → value). Prikker = selskaber MED manuel modenhed;
+  // uklassificerede placeres ikke – vi gætter ikke i UI (lær/livscyklus.html).
   const stages = [
-    { id: 'prerevenue', label: 'Præ-revenue' },
-    { id: 'preprofit', label: 'Præ-profit' },
-    { id: 'highgrowth', label: 'High growth' },
-    { id: 'garp', label: 'GARP' },
-    { id: 'value', label: 'Value' },
+    { id: 'prerevenue', label: 'Præ-revenue', t: 0.07 },
+    { id: 'preprofit', label: 'Præ-profit', t: 0.29 },
+    { id: 'highgrowth', label: 'High growth', t: 0.5 },
+    { id: 'garp', label: 'GARP', t: 0.71 },
+    { id: 'value', label: 'Value', t: 0.93 },
   ];
-  const counts = Object.fromEntries(stages.map((st) => [st.id, 0]));
+  const W = 720, H = 190, L = 24, R = 24, TOP = 26, BOT = 54;
+  const px = (t) => L + t * (W - L - R);
+  const py = (t) => H - BOT - (H - BOT - TOP) / (1 + Math.exp(-9 * (t - 0.5)));
+  const path = Array.from({ length: 61 }, (_, i) => i / 60)
+    .map((t, i) => `${i ? 'L' : 'M'}${px(t).toFixed(1)},${py(t).toFixed(1)}`).join(' ');
+  const byStage = Object.fromEntries(stages.map((st) => [st.id, []]));
   let unknown = 0;
   for (const pos of fund.positions || []) {
-    if (counts[pos.maturity] != null) counts[pos.maturity]++;
+    if (byStage[pos.maturity]) byStage[pos.maturity].push(pos);
     else unknown++;
   }
-  const max = Math.max(...Object.values(counts), 1);
-  const cells = stages.map((st) => {
-    const n = counts[st.id];
-    const h = Math.max(6, Math.round((n / max) * 48));
-    return `<div class="life-stage" title="${st.label}: ${n}"><div class="life-bar" style="height:${h}px"></div><span>${st.label}</span><strong>${n}</strong></div>`;
+  const classified = (fund.positions || []).length - unknown;
+  const nodes = stages.map((st) => {
+    const list = byStage[st.id];
+    // Selskabsprikker spredes langs kurven omkring fasen; radius ~ √vægt
+    const dots = list.map((p, i) => {
+      const t = Math.min(0.99, Math.max(0.01, st.t + ((i % 9) - 4) * 0.012));
+      const r = Math.max(2.5, Math.sqrt(p.weight || 0) * 2.4);
+      return `<circle class="life-co" cx="${px(t).toFixed(1)}" cy="${(py(t) - 10 - Math.floor(i / 9) * 7).toFixed(1)}" r="${r.toFixed(1)}"><title>${p.name} · ${(p.weight ?? 0).toFixed(2).replace('.', ',')} %</title></circle>`;
+    }).join('');
+    return `${dots}<circle class="life-node" cx="${px(st.t)}" cy="${py(st.t).toFixed(1)}" r="7"/>
+      <text class="life-lbl" x="${px(st.t)}" y="${H - 26}" text-anchor="middle">${st.label}</text>
+      <text class="life-n" x="${px(st.t)}" y="${H - 8}" text-anchor="middle">${list.length ? `${list.length} selskaber` : '–'}</text>`;
   }).join('');
+  const summary = stages.map((st) => `${st.label}: ${byStage[st.id].length}`).join(', ');
   return `<section class="panel life-strip">
-    <h2 style="font-size:16px;margin-bottom:6px">Livscyklus (udkast)</h2>
-    <p style="font-size:12px;color:var(--muted);margin-bottom:12px">Pædagogisk fordeling efter heuristisk modenhed — <strong style="color:var(--text)">ikke officiel NDI-rating</strong>. ${unknown} selskaber er ikke klassificeret endnu.</p>
-    <div class="life-row">${cells}</div>
+    <div class="life-head"><h2>Livscyklus</h2><span class="badge badge-draft">UDKAST</span></div>
+    <p class="life-intro">Pædagogisk model fra bogen: selskaber bevæger sig typisk fra præ-revenue mod value. Det er <strong>ikke en officiel NDI-rating</strong> og ikke en anbefaling.</p>
+    <div class="life-scroll"><svg class="life-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="Livscykluskurve. ${summary}. ${unknown} ikke klassificeret.">
+      <path class="life-curve" d="${path}"/>${nodes}
+    </svg></div>
+    <p class="life-note">${classified
+      ? `${classified} af ${fund.positions.length} selskaber er placeret (manuel klassifikation). ${unknown} mangler.`
+      : `Ingen af fondens ${fund.positions.length} selskaber er klassificeret endnu, så kurven viser kun faserne. Prikker for selskaber kommer, når porteføljeholdet har klassificeret dem manuelt.`}
+      <a href="laer/livscyklus.html">Læs om livscyklus →</a></p>
   </section>`;
 }
 
@@ -459,7 +496,7 @@ function positionsTable(list, fund) {
     <td>${(p.weight ?? 0).toFixed(2).replace('.', ',')}</td>
     <td>${tagsFor(p, DATA.multiTags).map((t) => `<a class="tag" href="tema.html?slug=${encodeURIComponent(t)}&fund=${fund.id}">${daTheme(t)}</a>`).join(' ')}</td>
   </tr>`).join('')}</tbody></table></div>
-  <p style="font-size:11px;color:var(--muted);margin-top:8px">Kun vægt og tema. Ingen kursafkast pr. aktie i v1 (under verifikation). Beholdning er forsinket.</p>`;
+  <p style="font-size:11px;color:var(--muted);margin-top:8px">Kun vægt og tema. Den lille linje ved navnet er selskabets <strong style="color:var(--text)">vægt i fonden</strong> pr. månedsrapport frem til ${fmtDate(MONTHS?.cutoff || fund.positionsAsOf)} – ikke aktiekurs. Ingen kursafkast pr. aktie i v1. Beholdning er forsinket.</p>`;
 }
 
 function renderUdforsk(root) {
@@ -521,24 +558,31 @@ function onClick(e) {
   }
 
   if (t.id === 'csv-export') {
+    // Dansk Excel: UTF-8 BOM, semikolon, decimalkomma. Kun felter der også vises i UI (navn, ISIN, vægt, tema).
     const fund = fundById(DATA.portfolio, state.fund);
     const list = filterPositions(fund);
-    const rows = [['name','isin','symbol','weight_pct','themes']].concat(
+    const asOf = fund.positionsAsOf || DATA.portfolio.asOf;
+    const rows = [['Navn', 'ISIN', 'Ticker', 'Vægt %', 'Temaer', 'Beholdning pr.']].concat(
       list.map((p) => [
         p.name || '', p.isin || '', p.symbol || '',
-        String(p.weight ?? ''),
-        tagsFor(p, DATA.multiTags).join('|'),
+        p.weight == null ? '' : p.weight.toFixed(2).replace('.', ','),
+        tagsFor(p, DATA.multiTags).map(daTheme).join(' | '),
+        asOf,
       ])
     );
     const esc = (c) => `"${String(c).replace(/"/g, '""')}"`;
-    const csv = rows.map((r) => r.map(esc).join(',')).join('\n');
+    const note = `"${fund.short} · forsinket beholdning pr. ${asOf} · generel information, ikke rådgivning · NDI Analytics udkast"`;
+    const csv = '\ufeff' + [note, ...rows.map((r) => r.map(esc).join(';'))].join('\r\n');
     const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
     const a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
-    a.download = `ndi-${state.fund}-screener.csv`;
+    const filt = [...state.tags, state.q && 'soeg'].filter(Boolean).join('-');
+    a.download = `ndi-${state.fund}-${asOf}${filt ? '-' + filt.replace(/[^a-z0-9-]/gi, '') : ''}.csv`;
+    document.body.append(a);
     a.click();
-    URL.revokeObjectURL(a.href);
-    toast(`CSV downloadet (${list.length} rækker)`);
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+    toast(`CSV hentet (${list.length} selskaber)`);
     return;
   }
   if (t.id === 'copy-link') {

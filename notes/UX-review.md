@@ -10,3 +10,12 @@
 
 ## Log
 - 20:28 Cycle 1–2 smoke: 34/34 green local. Multi-tag + mobile CSS + recovery shipped pending push.
+
+## 20:33 CEST (pre-22 checkpoint)
+- Entré 6 døre + sidekort: OK
+- Fonden: 100k-eksempel, omkostninger, kontekst-udbytte markers (2), advarsel: OK
+- AKK-gate / no 1m3m: locked
+- Multi-tag Tesla + sparklines + CSV: OK
+- Notes Pages 404: verified earlier
+- Focus trap on dialogs: added
+- Mobile CSS: touch 44px, table scroll hint

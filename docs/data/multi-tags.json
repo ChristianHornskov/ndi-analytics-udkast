@@ -54,6 +54,53 @@
         "software"
       ],
       "why": "Analytisk software."
+    },
+    "US34379V1035": {
+      "name": "Fluence Energy Inc",
+      "tags": [
+        "energy",
+        "physical"
+      ],
+      "why": "Batterilagring — energi + fysisk infrastruktur."
+    },
+    "US15643U1043": {
+      "name": "Centrus Energy Corp-Class A",
+      "tags": [
+        "energy-resources",
+        "energy"
+      ],
+      "why": "Uran/brændsel til kernekraft — energiressourcer."
+    },
+    "US65339F1012": {
+      "name": "NextEra Energy",
+      "tags": [
+        "energy"
+      ],
+      "why": "Reguleret el + renewables — energi."
+    },
+    "US0937121079": {
+      "name": "Bloom Energy Corp- A",
+      "tags": [
+        "energy",
+        "physical"
+      ],
+      "why": "Brændselsceller / power — energi + fysisk tech."
+    },
+    "US67079K1007": {
+      "name": "Nuscale Power Corp",
+      "tags": [
+        "energy",
+        "physical"
+      ],
+      "why": "SMR-kernekraft — energi + fysisk tech."
+    },
+    "US21873S1087": {
+      "name": "Coreweave Inc-Cl A",
+      "tags": [
+        "energy",
+        "compute"
+      ],
+      "why": "GPU-cloud med tung power-profil — compute + energi-eksponering i NDI-linse."
     }
   }
 }
