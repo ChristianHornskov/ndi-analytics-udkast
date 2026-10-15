@@ -500,7 +500,17 @@
    "source": "https://www.terrainnovatum.com/",
    "products": "En mikroreaktor, der er tiltænkt strøm og varme tæt på forbrugeren.",
    "customers": "Industri, datacentre og andre store forbrugere, hvis anlægget bliver bygget.",
-   "role": "Udvikling af små reaktorer. Ikke elproduktion i drift."
+   "role": "Udvikling af små reaktorer. Ikke elproduktion i drift.",
+   "narrative": [
+    "Terra Innovatum udvikler mikroreaktoren SOLO. Selskabet beskriver et anlæg, der endnu ikke er i drift.",
+    "Reaktoren er tiltænkt strøm tæt på forbrugeren, for eksempel industri eller et datacenter, hvis den bliver bygget og godkendt."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.terrainnovatum.com/"
+    }
+   ]
   },
   "US92840M1027": {
    "name": "Vistra",
@@ -520,7 +530,17 @@
    "source": "https://oklo.com/",
    "products": "Små atomkraftanlæg under udvikling.",
    "customers": "Store elforbrugere, hvis anlæggene bliver bygget.",
-   "role": "Udvikling af små reaktorer."
+   "role": "Udvikling af små reaktorer.",
+   "narrative": [
+    "Oklo udvikler små atomkraftanlæg. Denne beskrivelse omfatter ikke et kommercielt værk i drift.",
+    "Om anlægget bliver bygget, afhænger af godkendelser. NDI har skrevet, at tidslinjer for den slags anlæg er usikre. Teksten her er en beskrivelse af selskabet, ikke en vurdering af aktien."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://oklo.com/"
+    }
+   ]
   },
   "US87422Q1094": {
    "name": "Talen Energy",
@@ -760,7 +780,17 @@
    "source": "https://metals.co/",
    "products": "Et havbundsprojekt, ikke en mine i drift.",
    "customers": "Ingen produktion at sælge i denne beskrivelse.",
-   "role": "Muligt råstof til batterier. Ikke drift."
+   "role": "Muligt råstof til batterier. Ikke drift.",
+   "narrative": [
+    "The Metals Company undersøger metalnoduler på havbunden. Nodulerne indeholder blandt andet nikkel, kobber og kobolt.",
+    "Der er ingen produktion i denne beskrivelse. Om indsamling i kommerciel skala bliver tilladt, er ikke afgjort."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://metals.co/"
+    }
+   ]
   },
   "CA66510M2040": {
    "name": "Northern Dynasty Minerals",
@@ -770,7 +800,17 @@
    "source": "https://northerndynastyminerals.com/",
    "products": "Et mineprojekt.",
    "customers": "Ingen driftkunder i denne beskrivelse.",
-   "role": "Råstofprojekt uden drift."
+   "role": "Råstofprojekt uden drift.",
+   "narrative": [
+    "Northern Dynasty ejer Pebble-projektet i Alaska. Det er et kobber- og guldprojekt, og der er ingen mine i drift.",
+    "Projektet har i årevis manglet de tilladelser, en mine kræver. Profilen beskriver projektet."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://northerndynastyminerals.com/"
+    }
+   ]
   },
   "US84265V1052": {
    "name": "Southern Copper",
@@ -800,7 +840,17 @@
    "source": "https://ir.starfightersspace.com/",
    "products": "Flyvning med supersoniske fly og et luftopsendelsesprogram.",
    "customers": "Kunder til testflyvning og, hvis programmet lykkes, til opsendelse.",
-   "role": "Tidligt opsendelsesled. Ikke en satellitoperatør."
+   "role": "Tidligt opsendelsesled. Ikke en satellitoperatør.",
+   "narrative": [
+    "Starfighters Space flyver supersoniske F-104-fly fra Kennedy Space Center. Selskabet udvikler et program, hvor flyet skal løfte en raket, før raketten selv flyver videre.",
+    "Orbital opsendelse er ikke en rutetjeneste i denne beskrivelse. Vægten i beholdningen pr. 1. juni 2026 siger ikke, hvor langt programmet er."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets investorkside",
+     "url": "https://ir.starfightersspace.com/"
+    }
+   ]
   },
   "US5901061003": {
    "name": "Merlin",

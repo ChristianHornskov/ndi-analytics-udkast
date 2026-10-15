@@ -13,3 +13,9 @@ Tjek efter næste rendering:
 - Nye profiler har AI-udkast uden gennemgangsdato.
 
 Åbent: AI-compute-leddet "Energi og strømfordeling" har stadig de gamle topvægte. Bevidst, så lane A ikke får en konflikt i de 13 led.
+
+## Kort fortalt · 2026-10-16 ~00:05 CEST
+
+Fem profiler har `narrative` uden `reviewedAt`: Starfighters, Oklo, Northern Dynasty, Terra Innovatum, The Metals Company. Chromium viser "Kort fortalt" og AI-udkast, og ikke "tjekket mod kilden". Andet afsnit ligger bag "Læs hele forklaringen".
+
+Åbent bagefter: samme felt på Fluence, Rocket Lab, Quanta, NextEra, Planet, NuScale og GE Vernova.

@@ -57,6 +57,8 @@ AI-compute-kædens første led er ikke rettet her, så det ikke støder sammen m
 
 Nye selskabsprofiler i `company-profiles.json` har ingen `reviewedAt`. Siden skal derfor blive ved med at sige AI-udkast, uden en dato for gennemgang. Kilden er selskabets egen side. Ingen kurser, afkast, P/E eller P/S.
 
+`narrative` er valgfri og vises som "Kort fortalt". Uden `reviewedAt` bliver badget stående. Fem profiler har feltet fra 2026-10-16: Starfighters Space, Oklo, Northern Dynasty, Terra Innovatum og The Metals Company. Teksten beskriver forretningen og siger, hvor der ikke er drift. Den er ikke en gennemgang fra NDI.
+
 ## År til dato på periodesiden
 
 `ytdReturn` i `data.js` bruger sidste punkt i året før som udgangspunkt, ikke 1. januar. For PMINDI pr. 2026-10-14 er det 2025-12-31, ikke 2026-01-02. `periode.html` viser den samme dato i "Fra → til". Kalenderår bruger samme base (`calendarYearReturns`).

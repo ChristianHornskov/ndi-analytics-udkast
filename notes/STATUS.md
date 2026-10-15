@@ -263,3 +263,15 @@ AI-compute-leddet "Energi og strømfordeling" er ikke rettet, så det ikke stød
 **Push:** `lane-E` @ `8082b22` er pushet efter precheck. Branchen kan merges.
 
 **Samme bane, næste punkt:** ÅTD på `periode.html` viste 1. januar, mens tallet regnes fra sidste punkt året før. For PMINDI er det 31. dec. 2025 → 14. okt. 2026 og +4,0 %. Kalenderåret 2025 viser 31. dec. 2024 → 31. dec. 2025. Tjekket i Chromium ved 1280 og 375. Ingen konsolfejl. Ingen vandret scroll. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 ~00:05 CEST. Kort fortalt på fem usikre navne. Ikke færdig.**
+
+`company-profiles.json` har nu `narrative` og `narrativeSources` på Starfighters Space, Oklo, Northern Dynasty (Pebble), Terra Innovatum (SOLO) og The Metals Company. Ingen `reviewedAt`. Siden siger derfor stadig AI-udkast, uden "tjekket mod kilden".
+
+Teksten siger, hvad selskabet laver, og hvad der ikke er i drift: orbital opsendelse er ikke en rutetjeneste, Oklo og SOLO har ikke et kommercielt værk i drift, Pebble er ikke en mine, nodulerne er ikke i produktion. Kilden er selskabets egen side. Ingen kurser, afkast, P/E eller P/S i de nye afsnit.
+
+Tjekket i Chromium på `selskab.html` for de fem ISIN. "Kort fortalt" viser første afsnit. "Læs hele forklaringen" åbner resten. AI-udkast er med. Ingen konsolfejl. Ingen vandret scroll ved 375 px på Starfighters-siden. P/E i sidefoden er den faste disclaimer om, at tallene ikke vises.
+
+**Push:** forrige tip på `lane-E` er `0907706`. Dette commit kan merges, når det er pushet. Branchen er `lane-E`. Ikke main.
