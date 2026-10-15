@@ -125,6 +125,8 @@ York skriver, at selskabet designer og fremstiller satellitplatforme, og at det 
 
 Critical Metals skrev 5. oktober 2026, at Grønlands regering har godkendt mineplanen og lukningsplanen for Tanbreez, og at planerne rækker til september 2050. Selskabet skriver, at de sidste driftstilladelser mangler, før byggeriet kan gå i gang. Datoen ligger efter beholdningen pr. 2026-06-01. Det er ikke en mine i drift. Wolfsberg er et lithiumprojekt i Kärnten i Østrig. Et studie, en aftale med BMW og et planlagt raffinaderi i Saudi-Arabien er ikke drift. Kursen på siden og formuleringen om verdens største forekomst er ikke taget med.
 
+Karman skriver, at selskabet beskytter nyttelast og har udstyr til at skille den fra fartøjet, og at det laver aerodynamiske mellemtrin og raketmotorer. Affyringsudstyr på siden er dele, ikke en orbital opsendelse. Selskabet sender ikke selv satellitter op. NioCorp og Lynas svarede 16. oktober 2026 stadig med tomme sider.
+
 ## År til dato på periodesiden
 
 `ytdReturn` i `data.js` bruger sidste punkt i året før som udgangspunkt, ikke 1. januar. For PMINDI pr. 2026-10-14 er det 2025-12-31, ikke 2026-01-02. `periode.html` viser den samme dato i "Fra → til". Kalenderår bruger samme base (`calendarYearReturns`).

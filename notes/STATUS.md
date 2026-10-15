@@ -649,3 +649,13 @@ Meddelelsen er dateret 5. oktober 2026, efter beholdningen pr. 1. juni 2026. Gr�
 Tjekket i Chromium. Selskabssiden ved 375 px viser AI-udkast, Tanbreez og Wolfsberg. "tjekket mod kilden" er ikke med. Ingen kurs. Kæden og arkivet viser datoen. Ingen konsolfejl. Ingen vandret scroll ved 375 eller 1280 px.
 
 **Push:** `lane-E` @ `d433eca` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:11 CEST. Karman beskytter nyttelast og sender ikke selv satellitter op. Ikke færdig.**
+
+Forsiden skriver, at selskabet beskytter nyttelast, har udstyr til at skille den fra fartøjet, laver aerodynamiske mellemtrin og samler raketmotorer. Siden nævner også affyringsudstyr. Det er dele. Selskabet sender ikke selv satellitter op. Ord om at sprænge grænsen og om overlegenhed er ikke taget med. Ingen `reviewedAt`. NioCorp og Lynas gav stadig tomme svar. Blurben under opsendelse og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Nyttelast og raketmotorer står. Kæden og arkivet viser sætningen. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `edf8e7e` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

@@ -1229,15 +1229,15 @@
   "US4859241048": {
    "name": "Karman Space & Defense",
    "theme": "space",
-   "summary": "Laver dele og systemer til løfteraketter, missiler og anden rum- og forsvarsteknik. Selskabet sender ikke selv satellitter op.",
+   "summary": "Laver dele til løfteraketter og missiler. Selskabet skriver, at det beskytter nyttelast, laver mellemtrin og samler raketmotorer. Det sender ikke selv satellitter op.",
    "watch": "Ordrer fra de store programmer og evnen til at levere dele til tiden.",
    "source": "https://www.karman-sd.com/",
-   "products": "Beskyttelse af nyttelast, mellemtrin og fremdriftssystemer.",
+   "products": "Beskyttelse af nyttelast, mellemtrin og raketmotorer.",
    "customers": "Forsvars- og rumprogrammer.",
    "role": "Komponenter til opsendelse.",
    "narrative": [
-    "Karman laver dele til løfteraketter, missiler og rum- og forsvarsteknik.",
-    "Selskabet sender ikke selv satellitter op. I kæden står det som leverandør af dele til opsendelse."
+    "Karman skriver, at selskabet beskytter nyttelast og har udstyr til at skille den fra fartøjet. Siden nævner også aerodynamiske mellemtrin, raketmotorer og affyringsudstyr.",
+    "Det er dele og udstyr. Selskabet sender ikke selv satellitter op. I kæden står det som leverandør af dele til opsendelse."
    ],
    "narrativeSources": [
     {

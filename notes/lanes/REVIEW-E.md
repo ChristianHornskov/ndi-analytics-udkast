@@ -167,3 +167,7 @@ Opsendelseslogistik er med. Det er ikke en raket, York selv sender op. Tusindvis
 ## Tanbreez · 2026-10-16 01:10 CEST
 
 Godkendelsen er 5. oktober 2026, efter beholdningen. Driftstilladelser mangler før byggeri. Wolfsberg er et projekt. Kurs og "world's largest" er ikke kopieret. AI-udkast uden gennemgangsdato. Kæde og arkiv siger grænsen. Chromium ved 375 og 1280 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Karman · 2026-10-16 01:11 CEST
+
+Nyttelast, mellemtrin og raketmotorer står i sætninger. Affyringsudstyr er ikke en orbital opsendelse. NioCorp og Lynas var tomme. AI-udkast uden gennemgangsdato. Kæde og arkiv siger grænsen. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
