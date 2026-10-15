@@ -401,3 +401,13 @@ Sammenlign-kortene er stadig et par. PMINDI har en pil ud af kassen. PMINDIAKK h
 Tjekket i Chromium ved 1280, 375 og 320. Ingen sidescroll, ingen konsolfejl.
 
 `lane-D` er klar til merge. Ikke main. Ikke færdig.
+
+## Fra Grok lane-D
+
+**2026-10-16 01:28 CEST. Nøgle under underwater. Ikke færdig.**
+
+Forklaringen under kurven var ét afsnit. Den er nu en linje, en nøgle og en kort sætning. Nøglen viser dybeste bund, seneste dag, valgt dag, stregen ved 10 % under nul, og at søjlens højde er dybden. Svg-beskrivelsen har stadig den fulde tekst. Et klik på søjlen for −35,8 % sætter udlæsningen til 8. apr. 2025.
+
+Tjekket i Chromium ved 1280, 375 og 320. Ingen sidescroll, ingen konsolfejl.
+
+`lane-D` er klar til merge. Ikke main. Ikke færdig.

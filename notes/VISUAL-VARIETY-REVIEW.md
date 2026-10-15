@@ -92,6 +92,10 @@ Søjlerne under kurven var lige høje. Højden er nu dybden, bredden er stadig t
 
 De to sammenlign-kort er stadig et par, med samme felter. Forskellen er tegnet: PMINDI har en pil ud af kassen. PMINDIAKK har et loop, der vender tilbage i kassen. Ingen tredje kasse. Ét panel. AKK-kortet har ingen afkastprocent. "fra 5. dec. 2026" står på sin egen linje. Gul kant på Andet. Link til drawdown er der. Ingen sidescroll ved 1280, 375 og 320. Ingen konsolfejl.
 
+### Update · nøgle under kurven · 2026-10-16 ~01:28 CEST
+
+Forklaringen under underwater var ét afsnit. Den er nu en linje, en nøgle og en kort sætning. Nøglen har dybeste bund, seneste dag, valgt dag, stregen ved 10 % under nul, og de to søjler (højde er dybde, gul er åben). Svg-beskrivelsen har stadig den fulde tekst. Et klik på −35,8 % sætter udlæsningen til 8. apr. 2025. Ingen sidescroll ved 1280, 375 og 320. Ingen konsolfejl.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.
