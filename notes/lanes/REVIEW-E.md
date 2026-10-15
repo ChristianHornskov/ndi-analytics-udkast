@@ -203,3 +203,7 @@ Meddelelsen 6. juli 2026 handler om GESA, ikke Omega. Banneret på forsiden sige
 ## Ero · 2026-10-16 01:30 CEST
 
 Xavantina er en guldmine i Mato Grosso. Tucumã er kobber, med kommerciel produktion 1. juli 2025, før beholdningen. Furnas ejes af Vale Base Metals. Ero har en ret til at optjene 60 %, ikke et ejerskab endnu. Forstudiet fra februar 2026 er foreløbigt og ikke en reserve. High-grade, ounces og omkostninger er ikke kopieret. AI-udkast uden gennemgangsdato. Råstof-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## BWXT · 2026-10-16 01:33 CEST
+
+Lynchburg fremstiller reaktorer til flåden. Columbia er under bygning, ikke i tjeneste. TRISO er brændsel. Project Pele er et design, ikke et værk i drift. Aftalen 3. august 2026 om medicinforretningen er ikke gennemført og ligger efter beholdningen. Beløbet og leading er ikke kopieret. AI-udkast uden gennemgangsdato. Atomkraft-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.

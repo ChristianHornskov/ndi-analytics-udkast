@@ -739,3 +739,13 @@ Caraíba i Bahia er et kobberkompleks. Tucumã i Pará er en kobbermine, og komm
 Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Guldminen, 60 % og forstudiet står. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `962c850` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:33 CEST. BWX Technologies skriver, at Lynchburg fremstiller flådereaktorer, og at salget af medicinforretningen ikke er gennemført. Ikke færdig.**
+
+Fabrikken i Lynchburg fremstiller reaktorer til ubåde og hangarskibe. Siden nævner Ohio, Virginia, Seawolf, Los Angeles, Nimitz og Ford. Columbia-klassen er under bygning. Teksten siger komponenter, ikke at båden er i tjeneste. TRISO er brændsel, ikke et kraftværk. Project Pele er et design, ikke et værk i drift. Selskabet skrev 3. august 2026, at det har aftalt at sælge medicinforretningen til Nordic Capital. Aftalen afventer myndighedsgodkendelse og ventes afsluttet inden udgangen af 2026. Datoen ligger efter beholdningen. Salget er ikke gennemført. Beløbet i overskriften og ordet leading er ikke taget med. Ingen `reviewedAt`. Blurben under atomkraft og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Lynchburg, Pele og 3. august 2026 står. Beløbet står ikke. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `772de94` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

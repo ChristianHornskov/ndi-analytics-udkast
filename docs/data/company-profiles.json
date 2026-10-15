@@ -1233,20 +1233,36 @@
   "US05605H1005": {
    "name": "BWX Technologies",
    "theme": "space",
-   "summary": "Fremstiller nukleare komponenter og leverer nukleare tjenester, blandt andet til flådereaktorer. Snapshottet har selskabet under SpaceTech. Forretningen hører til atomkraft.",
-   "watch": "Offentlige programmer, komponentordrer og drift af de nukleare anlæg, selskabet servicerer.",
+   "summary": "Fremstiller reaktorer til flåden i Lynchburg. Project Pele er et design, ikke et værk i drift. Selskabet skrev 3. august 2026, at det har aftalt at sælge medicinforretningen. Aftalen er ikke gennemført. Datoen ligger efter beholdningen.",
+   "watch": "Om salgsaftalen bliver gennemført, og om Project Pele forbliver et design.",
    "source": "https://www.bwxt.com/",
-   "products": "Nukleare komponenter og tjenester.",
-   "customers": "Offentlige kunder og civile nukleare kunder.",
-   "role": "Leverandør til atomkraft, ikke et opsendelsesselskab.",
+   "products": "Flådereaktorer, komponenter og TRISO-brændsel.",
+   "customers": "Den amerikanske flåde og udviklere af reaktorer.",
+   "role": "Leverandør til atomkraft. Ikke et civilt værk og ikke en opsendelse.",
    "narrative": [
-    "BWX Technologies fremstiller nukleare komponenter og leverer tjenester, blandt andet til flådereaktorer.",
-    "Snapshottet har selskabet under SpaceTech. Forretningen er atomkraft, ikke opsendelse af satellitter."
+    "BWX Technologies skriver, at fabrikken i Lynchburg i Virginia fremstiller reaktorer til ubåde og hangarskibe. Siden skriver, at reaktorerne bruges i ubådsklasserne Ohio, Virginia, Seawolf og Los Angeles og i hangarskibsklasserne Nimitz og Ford. Columbia-klassen er under bygning. Teksten siger, at selskabet har leveret komponenter, ikke at båden er i tjeneste.",
+    "Selskabet skriver, at det fremstiller TRISO-brændsel til avancerede reaktorer. Det er brændsel, ikke et kraftværk i drift. Project Pele er et transportabelt system, som selskabet har designet. Det er ikke et værk i kommerciel drift. Selskabet skrev 3. august 2026, at det har indgået en endelig aftale om at sælge medicinforretningen til Nordic Capital. Aftalen afventer myndighedsgodkendelse og ventes afsluttet inden udgangen af 2026. Datoen ligger efter beholdningen pr. 1. juni 2026. Salget er ikke gennemført. Snapshottet har selskabet under SpaceTech. Forretningen er atomkraft, ikke opsendelse af satellitter."
    ],
    "narrativeSources": [
     {
      "label": "Selskabets side",
      "url": "https://www.bwxt.com/"
+    },
+    {
+     "label": "Flåden",
+     "url": "https://www.bwxt.com/sectors/defense-space/sea/naval-nuclear-propulsion/"
+    },
+    {
+     "label": "TRISO",
+     "url": "https://www.bwxt.com/sectors/nuclear-fuel/triso/"
+    },
+    {
+     "label": "Project Pele",
+     "url": "https://www.bwxt.com/sectors/defense-space/land/project-pele/"
+    },
+    {
+     "label": "Medicinforretningen, 3. august 2026",
+     "url": "https://www.bwxtmedical.com/bwxt-selling-medical-business-to-nordic-capital-in-transaction-valued-at-up-to-800-million/"
     }
    ]
   },
