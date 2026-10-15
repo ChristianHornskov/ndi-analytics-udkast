@@ -155,3 +155,7 @@ Købet af Equitrans er 22. juli 2024, før beholdningen. Only, breakeven og syne
 ## Satellogic · 2026-10-16 01:06 CEST
 
 Merlin er sat til fuld drift i andet halvår 2027, efter beholdningen. Daglige skanninger på produktsiden er ikke brugt som drift. NewSat står. Best-in-class er ikke kopieret. AI-udkast uden gennemgangsdato. Kæde og arkiv siger 2027. Chromium ved 375 og 1280 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## MDA Aurora Black · 2026-10-16 01:07 CEST
+
+Præsentationen er 10. september 2026, efter beholdningen. Ikke en konstellation i drift. Chorus er urørt som før opsendelse. Høj volumen og tickere er ikke kopieret. AI-udkast uden gennemgangsdato. Kæde og arkiv har datoen. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.

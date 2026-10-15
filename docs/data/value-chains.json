@@ -1690,7 +1690,7 @@
           "id": "satcom",
           "icon": "📡",
           "label": "Satellitkommunikation",
-          "blurb": "Satellitter i drift eller under bygning: kommunikation, billeder af Jorden, radiosignaler og de platforme, satellitterne bygges på. Redwire leverer dele og sender ikke selv op. York bygger platforme til kunden. MDA omtaler Chorus, før konstellationen er sendt op. Satellogic sætter fuld drift af Merlin til andet halvår 2027. Det er ikke en tjeneste i fuld drift.",
+          "blurb": "Satellitter i drift eller under bygning: kommunikation, billeder af Jorden, radiosignaler og de platforme, satellitterne bygges på. Redwire leverer dele og sender ikke selv op. York bygger platforme til kunden. MDA omtaler Chorus, før konstellationen er sendt op. MDA præsenterede 10. september 2026 Aurora Black. Det er efter beholdningen og ikke en konstellation i drift. Satellogic sætter fuld drift af Merlin til andet halvår 2027. Det er ikke en tjeneste i fuld drift.",
           "ndi": "Starlink er i en AI-selskabsprofil beskrevet som en løbende tjeneste, ikke kun en opsendelse. Det er et udkast, ikke NDI's færdige tekst. SpaceX indgår ikke i beholdningen pr. 1. juni 2026.",
           "themes": [
             "space"
@@ -1744,7 +1744,7 @@
               "w": 0.16,
               "sym": "MDA.TO",
               "forslag": false,
-              "role": "Satellitter, rumrobotik og geodata"
+              "role": "Satellitter og rumrobotik. Aurora Black er præsenteret 10. september 2026, ikke en konstellation i drift."
             },
             {
               "isin": "US72703X1063",

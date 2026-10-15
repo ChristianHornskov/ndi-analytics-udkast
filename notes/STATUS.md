@@ -619,3 +619,13 @@ Satellitterne hedder NewSat. Forsiden sætter fuld drift af Merlin til andet hal
 Tjekket i Chromium. Selskabssiden ved 375 px viser AI-udkast, NewSat og Merlin. "tjekket mod kilden" er ikke med. Kæden og arkivet viser 2027. Ingen konsolfejl. Ingen vandret scroll ved 375 eller 1280 px.
 
 **Push:** `lane-E` @ `ad828d7` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:07 CEST. MDA præsenterede Aurora Black 10. september 2026. Ikke færdig.**
+
+Meddelelsen er dateret 10. september 2026, efter beholdningen pr. 1. juni 2026. Aurora Black er en softwaredefineret satellit til forsvarskommunikation. Præsentationen er ikke en konstellation i drift. Chorus er stadig omtalt, før den er sendt op. Det er ikke et datacenter. Ord om høj volumen og tickerkurser er ikke taget med. Ingen `reviewedAt`. Blurben og arkivet siger det samme.
+
+Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Aurora Black står. Kæden og arkivet viser datoen. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `a4aff5e` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

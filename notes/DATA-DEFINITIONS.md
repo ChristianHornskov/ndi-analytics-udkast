@@ -119,6 +119,8 @@ EQT skriver, at købet af Equitrans Midstream blev gennemført 22. juli 2024. Da
 
 Satellogic skriver, at satellitterne hedder NewSat. Forsiden sætter fuld drift af Merlin til andet halvår 2027. Datoen ligger efter beholdningen pr. 2026-06-01. Merlin er ikke beskrevet som en tjeneste i fuld drift. Produktsidens nutid om daglige skanninger er ikke brugt som bevis på fuld drift. Ord om bedste opløsning er ikke taget med. Selskabet opsender ikke selv raketterne.
 
+MDA skrev 10. september 2026, at selskabet præsenterede Aurora Black, en softwaredefineret satellit til forsvarskommunikation. Datoen ligger efter beholdningen pr. 2026-06-01. Præsentationen er ikke en konstellation i drift. Chorus er stadig omtalt, før konstellationen er sendt op. Sætningen om høj volumen i produktionen er ikke taget med. Det er ikke et datacenter.
+
 ## År til dato på periodesiden
 
 `ytdReturn` i `data.js` bruger sidste punkt i året før som udgangspunkt, ikke 1. januar. For PMINDI pr. 2026-10-14 er det 2025-12-31, ikke 2026-01-02. `periode.html` viser den samme dato i "Fra → til". Kalenderår bruger samme base (`calendarYearReturns`).
