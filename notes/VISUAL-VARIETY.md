@@ -99,3 +99,8 @@ Se `notes/VISUAL-VARIETY-REVIEW.md`.
 - **Læse-rute** (`#sp-route`): vandret række af nummererede stop med ikon og undertekst, der ruller vandret på mobil.
 - Kvante-horisont: stiplet cyan "⤳"-boks med hop til AI-floden.
 - Kun sidens egen CSS (`.sp-route`, `.risk`, `.rk-*`, `.q-river`).
+
+## lane-A · 2026-10-16 ~00:51 CEST · energi: usikkerheder
+- Energi-usikkerheder genbruger rummets gule kort, men strimlen er en **strømvej**: afrundede firkanter i stedet for cirkler, "›" som forbindelse i stedet for streg og et dæmpet "→ datacenter" i enden. Så kan man se forskel på rumkæden (op i højden) og energikæden (frem mod datacentret).
+- vaerdikaede.html: kæde-kortene har fået en "⚠"-linje ved siden af ordbogens "◇".
+- Kun sidens egen CSS (`.rk-strip.flow`, `.e-pane .risk h3`).

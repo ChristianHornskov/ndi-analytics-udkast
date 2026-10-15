@@ -54,6 +54,7 @@ Kilder: slack_ny_graf_2026-10-15.md, vision.txt, mads_tankemodel.md, investering
 - [x] Energi-strømvej: "Det ændrer sig" pr. station (4 med NDI-kilde, elnet mærket baggrund); kvante-ordbog med 10 ord (baggrund) + deep-link `?kaede=quantum#q-gl` (lane-A)
 - [x] Rum: "Hvordan tjener rumkæden penge?" (én gang / løbende / endnu tidligt, med antal pr. led og NDI-linjen om Starlink som løbende tjeneste; baggrund) + vaerdikaede.html: ordbogs-link pr. kæde (lane-A)
 - [x] Rum: "Hvad kan gå galt?" (6 usikkerheder med kæde-strimmel over ramte led; 2 NDI-linjer med kilde, resten baggrund) + læse-rute "Rum i syv stop"; kvante-horisont med hop til AI-floden (lane-A)
+- [x] Energi: "Hvad kan gå galt i energikæden?" (6 usikkerheder med strømvej-strimmel; 4 NDI-linjer med kilde, resten baggrund) + energi-ledkort uden aktiesprog, råstoffer inkl. gas og uran; vaerdikaede.html: usikkerheds-link pr. kæde (lane-A)
 
 ## Formidling / filosofi
 - [x] Variance drag / CAGR ≠ gennemsnit (lær)
