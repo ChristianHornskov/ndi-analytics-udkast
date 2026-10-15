@@ -105,3 +105,31 @@ Grundlag: `origin/main` `820f116`. `docs/` er uændret siden `8b30c48`, og Pages
 | Nasdaq som benchmark | ✅ |
 | AI-mærkning | ✅ (UX: for mange mærker pr. side) |
 | Omkostninger | ⚠️ tal findes, "efter løbende omkostninger" er angivet ved afkast ✅. KID-omkostningseffekt og invester-link mangler |
+
+## 2026-10-16 00:40 CEST · cyklus 4
+Grundlag: `origin/main` `820f116` (uændret). `docs/` er uændret siden `8b30c48`, og Pages = main. Ikke juridisk rådgivning. Endelig vurdering: Fundmarket (IFS) compliance. Alle MUST fra cyklus 3 (1–6) står **uændret åbne**, fordi der ikke er nye docs-commits. Denne cyklus gennemgår de sider, der ikke var dækket før: `laer/*`, tema, temaer, ndi-paa-x, nyhedsarkiv, om-data, omkostninger, ideer og embed.
+
+### MUST (nyt)
+1. **ndi-paa-x.html: forbeholdet "Ikke NDI's holdning" bruges på NDI's egne konti.** Introen siger "Udvalgte offentlige opslag fra NDI-relaterede konti … Ikke NDI's holdning". Listen indeholder **@InvestNewdeal** (7 opslag, selskabets egen konto, bl.a. "Performance opdatering efter Q2 2026" og "$PMINDI betaler udbytte") og **@MadsC007** (5 opslag, fondens forvalter ifølge @InvestNewdeal: "Fund manager Mads Christiansen"). I `x-posts.json` har 19 opslag `label: "Udvalgte offentlige opslag — ikke NDI's holdning"`. Det er vildledende: selskabets og forvalterens egne udsagn er markedsføring fra NDI og kan ikke frasiges med et forbehold (ESMA34-45-1272 afsnit 4.2–4.3, fair/klar/ikke vildledende). Del siden i "Fra NDI" (@InvestNewdeal, @MadsC007, @CHornskov), som er omfattet af markedsføringsreglerne og skal godkendes, og "Tredjepart", hvor forbeholdet er OK. Ellers fjern NDI-konti. Det forstærker cyklus 1 MUST 1 (X-opslag), som nu også gælder **tema.html**.
+2. **Forvalterens opslag om enkeltaktier og hype i fondsmarkedsføring.** Mads: "Listening to Bloomberg about AI is like asking a BWM sales rep for facts about Tesla cars" (ticker TSLA, som er i beholdningen). jesper_baek: "…fordi de lavede den bedste bil" (TSLA). @InvestNewdeal: "$NVDA $SE $HIMS". Opslagene er dateret 13.–15. okt. 2026, efter beholdnings-cutoff 1. jun. 2026. Det er ikke handelssprog, men forvalterens aktuelle syn på navngivne beholdningsselskaber, vist ved siden af fonden. Det kan læses som et aktuelt signal om porteføljen (jf. reglen om forsinkede beholdninger) og som ubalanceret fremhævning. Fjern ticker-chips på NDI-konti-opslag, eller begræns ndi-paa-x til opslag uden enkeltaktier.
+
+### SHOULD (nyt)
+- **omkostninger.html: ingen samlet sats og ingen RIY/"omkostningernes virkning over tid".** Delposterne står (løbende 1,49 %, transaktion 0,64/0,72 %, emission/indløsning 0,25 %, intet resultathonorar ✅). Men PRIIP-KID'ets totalomkostning og kr.-tabel (fx 10.000 kr. over 1 år / anbefalet periode) gengives ikke. ÅOP er bevidst ikke vist ("ikke et inventeret ÅOP", stavefejl). Det er OK, hvis der henvises til KID, og det gør siden ✅. FO-MUST om én sammenlignelig omkostning er stadig ikke opfyldt. Gengiv KID'ets "samlede omkostninger" og "årlig omkostningseffekt" med kilde og dato.
+- **"Tomme felter = udfyldes af NDI"** (omkostninger) og udviklerteksten på om-data ("Ingen live Azure-kald … (se precheck)") er intern tekst på offentlige sider. Det er ikke et compliance-brud, men det undergraver indtrykket af et godkendt materiale.
+- **nyhedsarkiv.html** er offentlig, men indeholder kun placeholder. Det er ikke et problem i sig selv. Når siden fyldes, gælder MUST 1 (NDI-kommunikation = markedsføring).
+- **@InvestNewdeal "fonde NewDeal Invest rådgiver"**: rollen som rådgiver (ikke forvalter) står korrekt her. Men @InvestNewdeal kalder Mads "Fund manager". Rollebetegnelsen bør være den samme overalt og stemme med prospektet (forvalter = Fundmarket/IFS? rådgiver = NDI). Leo bør bekræfte.
+
+### Positivt
+- Alle 10 `laer/*`-sider har standardforbeholdet "Historisk afkast … Du kan tabe en del af eller hele din investering". Der er 0 rådgivende formuleringer: "Fravær er ikke en anbefaling", "Ikke bevidste temaovervægte eller anbefalinger" og "Afkast for PMINDIAKK vises først, når klassen har 12 måneders historik" ✅. Ordet "overvægt" optræder kun i negationer ("ikke en bevidst overvægt"). Det er acceptabelt, men "ikke en anbefaling" alene er renere.
+- embed/chart.html: korrekt udbytte/akk-tekst pr. klasse, forbehold, "efter løbende omkostninger, før skat", "intet fast benchmark" ✅. Embed mangler stadig mærkningen "markedsføringsmateriale" + prospekt/KID-henvisning (cyklus 3 MUST 1).
+- om-data: "100.000 kr.-eksemplet … et regneeksempel på historik, ikke en forventning. Handelsomkostninger og skat er ikke medregnet" ✅. "Fonden har intet fast benchmark" ✅.
+
+### Tjekliste (delta mod cyklus 3)
+| Punkt | Status |
+|---|---|
+| Mærket som markedsføring + prospekt/KID | ❌ uændret (cyklus 3 MUST 1) |
+| Forbehold "ikke NDI's holdning" | ❌ **ny MUST 1**: dækker NDI's egne konti |
+| Enkeltaktier / aktuelle syn efter cutoff | ❌ **ny MUST 2**: forvalter-opslag okt. 2026 med tickers |
+| Lær-sider | ✅ |
+| Omkostninger | ⚠️ delposter ✅, samlet/RIY mangler |
+| Øvrige MUST cyklus 3 (2–6) | ❌ uændret |

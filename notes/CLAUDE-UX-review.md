@@ -88,3 +88,28 @@ Grundlag: `origin/main` `820f116`. Ingen ændringer i `docs/` siden `8b30c48` (k
 ### Persona-status (kort)
 - **Privat:** forstår Entré og Fonden. Bliver væk i udforsk/værdikæder (længde). Mangler stadig kr.-eksempel på omkostninger og navne på holdet på Entré.
 - **Family office:** fakta og omkostninger dækker det meste. Blokeres af drawdown-datofejlen og mangler et faktaark i én blok og download (CSV/PDF).
+
+## 2026-10-16 00:40 CEST · cyklus 4
+Grundlag: `origin/main` `820f116` (uændret siden cyklus 3, `docs/` uændret siden `8b30c48`). Pages last-modified 15. okt. 21:57 UTC = main. Playwright 375 + 1366 på 24 sider. Fokus denne gang: sider, der ikke var dækket før (`laer/*` ×10, tema, temaer, ndi-paa-x, nyhedsarkiv, om-data, omkostninger, ideer, embed). 0 JS-fejl, 0 4xx.
+
+### MUST (stadig åbne, uændret)
+1. Drawdown-datoer peak > trough (risici, fakta).
+2. drawdown.html 375: scrollWidth **587** (gentjekket). Stadig den eneste side med vandret scroll af de 24.
+3. invester trin 1 + 4 mangler direkte links til prospekt/KID og omkostninger.html.
+
+### SHOULD (nyt)
+- **omkostninger.html giver ingen samlet årlig sats.** Kortene viser "Øvrige løbende 1,49 %" og "Porteføljetransaktion 0,64 %" hver for sig. Privat-personaen lægger ikke selv tallene sammen, og FO vil have ét tal, der kan sammenlignes på tværs af fonde. Tilføj en linje "I alt pr. år ca. 2,13 % (PMINDI) / 2,21 % (AKK), ekskl. emission/indløsning". Tilføj også et kr.-eksempel ("100.000 kr. → ca. 2.130 kr./år"), som KID'ets omkostningstabel gør det. Tjek tallene mod KID.
+- **omkostninger: tastefejl og intern tekst.** "ikke et **inventeret** ÅOP" (skal formentlig være "beregnet"). "Tomme felter = udfyldes af NDI" står offentligt, men der er ingen tomme felter på siden. Slet sætningen. "NewDeal Invest, kl n" er Fundmarkets interne navn. Brug "NewDeal Invest (PMINDI)".
+- **om-data.html har udviklertekst:** "Ingen live Azure-kald. Nyere end cutoff må ikke lægges i `docs/` (se precheck)." Det er jargon, som en investor ikke forstår, og det afslører pipelinen. Skriv i stedet "Beholdningen opdateres kun, når et nyt forsinket snapshot er offentliggjort".
+- **nyhedsarkiv.html er en tom stub** ("Indhold er placeholder i dette udkast", 2× "Placeholder:"). Den linkes fra ndi-paa-x ("← Entré · Nyhedsarkiv"). Skjul linket, til der er indhold, eller fyld siden med de 7 @InvestNewdeal-opslag, som allerede findes i x-posts.json (webinar, udbytte, børsnotering AKK).
+- **ndi-paa-x.html, tone:** Mads' "Listening to Bloomberg about AI is like asking a BWM sales rep…" (inkl. tastefejlen "BWM") og "de lavede den bedste bil" om Tesla. For FO-personaen virker det som et fan-forum, ikke en kapitalforvalter. Se compliance cyklus 4 MUST 1.
+- **tema.html (Chips):** "Taiwan Semi Sp ADR **også Andet / uklassificeret**". TSMC er det mest oplagte chip-selskab, så sekundærtemaet "uklassificeret" ser ud som en fejl. Fjern sekundærtemaet. "Aixtron N" er et afkortet navn (kildens suffiks). Brug et pænt navn.
+- Samme X-blok (FundaAI, MilkRoadAI m.fl.) står nu også på tema.html. X-opslag optræder på Fonden, selskab, tema og ndi-paa-x. Det er visuel gentagelse og trætter brugeren: de samme 3–4 opslag ses på hver side.
+
+### Positivt (laer/*)
+- De 10 Lær-sider er korte (≤ 1.300 px på 375), uden overflow og i et klart sprog. variance-drag har et godt regneeksempel. udbytte-vs-akk forklarer AKK's 12-måneders-regel tydeligt. faq-mangler-aktie siger "Fravær er ikke en anbefaling". Det er den bedste del af sitet til privat-personaen. **Forslag:** link til Lær fra Fonden-hero ("Hvad betyder CAGR?" → variance-drag) og fra drawdown.
+- om-data på 375 folder grupperne sammen (1.514 px mod 4.621 px på desktop). Det er godt.
+
+### Persona-status
+- **Privat:** Lær-sektionen besvarer de fleste begynderspørgsmål, men den er svær at finde. Omkostninger mangler stadig ét samlet tal + kr.
+- **Family office:** blokeres stadig af drawdown-datofejlen. Ny bekymring: tonen på ndi-paa-x.
