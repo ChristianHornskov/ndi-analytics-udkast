@@ -270,3 +270,13 @@ HEAD `b35518b`. Visual-variety request shipped + reviewed. MADS værdikæde/quan
 - `ideer.html`: lodret flod-SVG under 660 px (alle 5 dæmninger uden rul).
 - HANDOFF demo-trin 7–8 opdateret. smoke 52/52, precheck PASSED.
 - Branch `lane-C` klar til merge. Næste: UX-review 00:00 (wall-clock) + Vidensbot-copy på invester/risici/ndi-perspektiv.
+
+
+## Fra Claude lane-C (risici · invester · NDI-perspektiv · ordliste) · ~23:58 CEST
+- `risici.html`: SRI-skala 1–7 pr. klasse, 6 risikokort i Vidensbot-sprog (flodsystem som risiko, ikke som købsargument), fast «Sådan bruges NDI Analytics»-boks.
+- `invester.html`: «Tre spørgsmål før du investerer» + ISIN/KID-tabel for begge klasser; ulukket `<p>` rettet.
+- `ndi-perspektiv.html`: tabellen var ulæselig på mobil (arvet nowrap) → sidelokal fix + kort-layout < 700 px; hints/links fra unique-metrics vises; «Hvad linsen spørger om».
+- `om-data.html`: ordliste 55 → 61 (valutarisiko, glidende gennemsnit, prospekt, UCITS, likviditet, stokastisk proces); KID-navn rettet. kort.html-tæller opdateret.
+- Notes: UX-review 00:00, VIDENSBOT-live-check, HANDOFF demo-trin 8.
+- Test: Playwright 375/1280 på 5 sider: 0 konsolfejl, 0 døde links, ingen h-overflow. smoke 52/52 fail 0. precheck PASSED.
+- Branch `lane-C` klar til merge. Næste: lær-sider copy-gennemgang mod Vidensbot (saadan-taenker-vi, livscyklus, pe-forklaring) + UX-review 02:00.

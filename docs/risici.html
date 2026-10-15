@@ -19,6 +19,19 @@
  <meta property="og:image:alt" content="NDI Analytics - udkast. Gå på opdagelse i porteføljen.">
  <meta name="twitter:card" content="summary_large_image">
  <!-- og:end -->
+<style>
+ .sri{display:flex;gap:4px;margin:4px 0 6px;max-width:340px}
+ .sri span{flex:1;text-align:center;padding:6px 0;border-radius:6px;border:1px solid var(--line);color:var(--muted);font-size:13px;font-variant-numeric:tabular-nums}
+ .sri span.on{background:var(--yellow);border-color:var(--yellow);color:#0b171d;font-weight:700}
+ .sri-legend{display:flex;justify-content:space-between;max-width:340px;font-size:12px;color:var(--muted);margin-bottom:12px}
+ .risk-grid{display:grid;gap:12px;margin:12px 0}
+ @media(min-width:760px){.risk-grid{grid-template-columns:1fr 1fr}}
+ .risk-card{border:1px solid var(--line);border-radius:12px;padding:14px 16px;color:var(--muted);line-height:1.55;font-size:14px}
+ .risk-card strong{display:block;color:var(--text);font-size:15px;margin-bottom:4px}
+ .risk-card a{white-space:nowrap}
+ .how-use{border-left:4px solid var(--yellow)}
+ .how-use ul{color:var(--muted);line-height:1.6;padding-left:1.2rem;display:grid;gap:6px}
+</style>
 </head>
 <body>
  <a class="skip" href="#main">Gå til indhold</a>
@@ -33,7 +46,8 @@
  const p = meta?.funds?.pmindi?.priip;
  const a = meta?.funds?.pmindiakk?.priip;
  const RISK_LABEL = { aktiemarkedsrisiko: 'Aktiemarkedsrisiko', vækst_og_sektorrisiko: 'Vækst- og sektorrisiko', valutarisiko: 'Valutarisiko', ingen_markedsbeskyttelse: 'Ingen markedsbeskyttelse', muligt_tab_af_hele_investeringen: 'Muligt tab af hele investeringen' };
- const klasse = (x) => x ? `${x.key_risks ? `<ul style="color:var(--muted);line-height:1.55;padding-left:1.2rem;margin-bottom:12px">${Object.entries(x.key_risks).filter(([,v])=>v).map(([k])=>`<li>${RISK_LABEL[k]||k}</li>`).join('')}</ul>` : ''}<p style="color:var(--muted);line-height:1.6">Risikoklasse <strong style="color:var(--text)">${x.risk_class} / ${x.risk_scale_max}</strong> (${x.risk_label}). Anbefalet investeringsperiode ifølge KID: ${x.recommended_holding_years} år. KID pr. ${fmtDate(x.production_date)}.</p>
+ const sri = (x) => `<div class="sri" role="img" aria-label="Risikoklasse ${x.risk_class} på en skala fra 1 til ${x.risk_scale_max}">${Array.from({length:x.risk_scale_max},(_,i)=>`<span class="${i+1===x.risk_class?'on':''}">${i+1}</span>`).join('')}</div><div class="sri-legend" aria-hidden="true"><span>Lavere risiko</span><span>Højere risiko</span></div>`;
+ const klasse = (x) => x ? `${sri(x)}${x.key_risks ? `<ul style="color:var(--muted);line-height:1.55;padding-left:1.2rem;margin-bottom:12px">${Object.entries(x.key_risks).filter(([,v])=>v).map(([k])=>`<li>${RISK_LABEL[k]||k}</li>`).join('')}</ul>` : ''}<p style="color:var(--muted);line-height:1.6">Risikoklasse <strong style="color:var(--text)">${x.risk_class} / ${x.risk_scale_max}</strong> (${x.risk_label}). Anbefalet investeringsperiode ifølge KID: ${x.recommended_holding_years} år. KID pr. ${fmtDate(x.production_date)}.</p>
  <p><a href="${x.url}">Læs KID (Fundmarket PDF) ↗</a></p>` : '<p style="color:var(--muted)">KID-data mangler i snapshot.</p>';
  document.getElementById('main').innerHTML = `
  <p class="eyebrow">RISIKO · KID</p>
@@ -46,6 +60,29 @@
  <section class="panel">
  <h2 style="font-size:16px;margin-bottom:8px">PMINDIAKK (akkumulerende)</h2>
  ${klasse(a)}
+ </section>
+ <section class="panel">
+ <h2 style="font-size:16px;margin-bottom:4px">Risiko set gennem NDI's måde at tænke på</h2>
+ <p style="color:var(--muted);line-height:1.55;margin-bottom:4px">KID'et giver ét tal for hele fonden. Her er de samme risici forklaret med de begreber, resten af siden bruger. Beskrivende, ikke en vurdering af, hvad du bør gøre.</p>
+ <div class="risk-grid">
+ <div class="risk-card"><strong>Store udsving er et grundvilkår</strong>Fonden investerer i teknologi, hvor nyheder hurtigt flytter kurserne. Fald på flere titals procent er sket før og kan ske igen, og de kan vare i flere år. <a href="drawdown.html">Se fald fra top →</a></div>
+ <div class="risk-card"><strong>Koncentreret i teknologi</strong>Fonden ejer flere hundrede selskaber med små vægte, tæt på ligevægt. Men de hører næsten alle til samme overordnede område, så spredningen beskytter ikke mod et fald i hele teknologisektoren. <a href="laer/hvorfor-mange-aktier.html">Hvorfor så mange aktier? →</a></div>
+ <div class="risk-card"><strong>Flaskehalse kan flytte sig</strong>NDI ser AI-værdikæden som et flodsystem, hvor efterspørgslen presser på en række dæmninger (energi, datacentre, halvledere, cloud og apps). Når en flaskehals løsner sig, kan selskaberne i det led falde samtidig. <a href="vaerdikaeder.html">Se værdikæderne →</a></div>
+ <div class="risk-card"><strong>Valuta</strong>En stor del af selskaberne er noteret i udenlandsk valuta, især USD. Fonden opgøres i kroner, så valutakursen påvirker afkastet i begge retninger. <a href="om-data.html#g-valuta">Ordliste →</a></div>
+ <div class="risk-card"><strong>Tidlige selskaber</strong>En del af porteføljen er selskaber før omsætning eller før overskud. De kan vokse meget, men kan også mislykkes helt. <a href="laer/livscyklus.html">Selskabers livscyklus →</a></div>
+ <div class="risk-card"><strong>Udsving trækker afkastet ned</strong>Et fald på 50 % kræver en stigning på 100 % for at komme tilbage. Derfor er det årlige afkast (CAGR) lavere end et simpelt gennemsnit, når kurserne svinger meget. <a href="laer/variance-drag.html">CAGR og gennemsnit →</a></div>
+ </div>
+ <p style="color:var(--muted);line-height:1.55;font-size:14px">Værdikæder, temaer og vægte viser, hvad porteføljen er eksponeret mod. De er ikke bevidste overvægte og ikke anbefalinger.</p>
+ </section>
+ <section class="panel how-use">
+ <h2 style="font-size:16px;margin-bottom:8px">Sådan bruges NDI Analytics</h2>
+ <ul>
+ <li>Generel information om fonden og dens portefølje. Ikke personlig investeringsrådgivning og ikke en opfordring til at købe eller sælge.</li>
+ <li>Beholdningen vises med forsinkelse. <a href="laer/forsinket-beholdning.html">Hvorfor?</a></li>
+ <li>Tekst markeret <span class="badge">AI-udkast</span> er sammenfattet med AI og er ikke NDI's holdning, før den er gennemgået.</li>
+ <li>Afkast er efter omkostninger og opgjort pr. andelsklasse. Tal kommer fra Fundmarket. <a href="om-data.html">Data og ordliste →</a></li>
+ <li>KID og prospekt er de gældende dokumenter. Ved forskel gælder de.</li>
+ </ul>
  </section>
  <section class="panel">
  <h2 style="font-size:16px;margin-bottom:8px">Vigtigt at vide</h2>

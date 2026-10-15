@@ -73,3 +73,10 @@ Sider: ideer, kort, om-data, invester, risici, ndi-perspektiv, laer/*.
 - `ideer.html` nye citater er ordrette fra Vidensbot-filen med ugebrevsdato (13. jul, 4. maj, 27. jul, 30. mar 2026). «Modsatte af en boble» står med «NDI's vurdering, ikke en prognose».
 - Flodsystem-SVG nummererer kun de tre flaskehalse, NDI selv nummererer (energi, datacentre, halvledere); cloud/apps vist neutralt.
 - Tesla-eksempel: GICS forbrugsgoder vs. tags fysisk tech + energi (multi-tags.json, 1. jun 2026). Teksten siger «tags beskriver eksponering — ikke et syn på aktien».
+
+
+## 2026-10-15 ~23:55 — risici / invester / ndi-perspektiv (Claude lane-C)
+- Ny copy bruger flodsystem/dæmninger som **risikoforklaring** («når en flaskehals løsner sig, kan selskaberne i det led falde samtidig»), ikke som købsargument.
+- «Værdikæder, temaer og vægte viser eksponering … ikke bevidste overvægte og ikke anbefalinger» står nu også på risici (VIDENSBOT-krav §3 spænding).
+- Stokastisk proces / odds mod pris i ordlisten (TM afsnit 10), formuleret som NDI's beskrivelse, ikke som garanti.
+- Ordscan på de 4 sider: alle træf er negationer, KID-ordlyd («anbefaler mindst 5 års») eller falske positiver («kommunikation»). Ingen tal fra interne IA/PA-rapporter er sat på siden.
