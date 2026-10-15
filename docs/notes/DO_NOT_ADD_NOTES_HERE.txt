@@ -1,2 +1,5 @@
-COMPLIANCE: Do not place STATUS, SPEC, VIDENSBOT, UX-krav or any internal notes under docs/.
-Canonical path: /notes at the repository root (not published by GitHub Pages).
+DO NOT ADD INTERNAL NOTES UNDER docs/notes/
+Internal docs live only in /notes (repo root).
+GitHub Pages would publish anything here.
+Allowed files in this folder: this warning + stub index.html only.
+Enforced by scripts/precheck.sh before every push.
