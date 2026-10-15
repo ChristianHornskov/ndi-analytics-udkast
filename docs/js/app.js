@@ -93,12 +93,18 @@ function toast(msg) {
 function openDialog(id) {
   const tpl = document.getElementById(id);
   if (!tpl) return;
-  // Kun én dialog ad gangen
-  document.querySelector('.dialog-backdrop [data-close]')?.click();
+  // Kun én dialog ad gangen (synkront, uden at stjæle fokus-retur fra den nye)
+  document.querySelectorAll('.dialog-backdrop').forEach((el) => el.remove());
+  document.querySelectorAll('header[inert], main[inert], footer[inert], .skip[inert]').forEach((el) => { el.inert = false; });
   const prevFocus = document.activeElement;
   const backdrop = document.createElement('div');
   backdrop.className = 'dialog-backdrop';
   backdrop.innerHTML = tpl.innerHTML;
+  const dialog = backdrop.querySelector('.dialog');
+  if (dialog) {
+    dialog.setAttribute('role', 'dialog');
+    dialog.setAttribute('aria-modal', 'true');
+  }
   // Modal: baggrunden er inert (ingen fokus/skærmlæser), toast forbliver læsbar
   const behind = [...document.body.children].filter((el) => el.matches('header, main, footer, .skip'));
   behind.forEach((el) => { el.inert = true; });
@@ -110,7 +116,7 @@ function openDialog(id) {
   backdrop.addEventListener('click', (e) => { if (e.target === backdrop) close(); });
   backdrop.querySelector('[data-close]')?.addEventListener('click', close);
   // focus trap
-  const focusables = () => [...backdrop.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])')].filter(el => !el.disabled);
+  const focusables = () => [...backdrop.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])')].filter((el) => !el.disabled && el.getAttribute('aria-hidden') !== 'true');
   backdrop.addEventListener('keydown', (e) => {
     if (e.key !== 'Tab') return;
     const list = focusables();
@@ -120,7 +126,13 @@ function openDialog(id) {
     else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
   });
   document.body.append(backdrop);
-  setTimeout(() => focusables()[0]?.focus(), 0);
+  // Dobbelt rAF: sikr at fokus flyttes ind i dialogen efter paint (Playwright/desktop)
+  const focusFirst = () => {
+    const list = focusables();
+    (list.find((el) => el.matches('[data-close]')) || list[0])?.focus();
+  };
+  focusFirst();
+  requestAnimationFrame(focusFirst);
   backdrop.querySelectorAll('[data-copy]').forEach((btn) => {
     btn.addEventListener('click', async () => {
       try {
