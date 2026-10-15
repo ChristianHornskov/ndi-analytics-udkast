@@ -243,7 +243,7 @@ function renderEntre(root) {
     <p class="doors-h"><span class="doors-step">Forstå linsen</span> Hvordan NDI ser tech</p>
     <nav class="doors-sub doors-sub-3" aria-label="Forstå linsen">
       <a href="temaer.html?fund=${state.fund}"><strong>Temaer${prop.moved ? ` <span class="badge badge-draft" title="Forslag, afventer gennemgang">${prop.moved} forslag</span>` : ''}</strong><span>Fra chips til software - hvad hvert tema dækker</span></a>
-      <a href="vaerdikaede.html"><strong>AI-værdikæden</strong><span>Fra strøm og datacentre til chips, optik og software</span></a>
+      <a href="vaerdikaeder.html"><strong>Teknologiske værdikæder</strong><span>AI-compute, fysisk tech og energi · treemap + tidslinje</span></a>
       <a href="laer/index.html"><strong>Lær</strong><span>Sådan tænker vi, livscyklus, P/E og FAQ</span></a>
     </nav>
     <a class="why-card" href="ideer.html"><strong>Hvorfor NDI Analytics?</strong><span>Idéerne bag udkastet: multi-tag, værdikæden og forsinket beholdning som et bevidst valg.</span><span class="go" aria-hidden="true">→</span></a>

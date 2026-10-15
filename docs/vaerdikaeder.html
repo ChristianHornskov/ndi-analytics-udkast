@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Teknologiske værdikæder · NDI Analytics</title>
+  <link rel="stylesheet" href="css/ndi.css">
+  <!-- og:start -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="NDI Analytics (udkast)">
+  <meta property="og:locale" content="da_DK">
+  <meta property="og:title" content="Teknologiske værdikæder · NDI Analytics">
+  <meta property="og:description" content="AI-compute, fysisk tech og energi som interaktive kæder. Treemap, tidslinje og filosofi. Eksponering, ikke anbefaling.">
+  <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/vaerdikaeder.html">
+  <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
+  <!-- og:end -->
+
+  <style>
+    .vc-hero{display:grid;gap:18px;margin:12px 0 28px}
+    @media(min-width:900px){.vc-hero{grid-template-columns:1.2fr .8fr;align-items:end}}
+    .vc-callout{background:linear-gradient(135deg,#0f2a32 0%,#0b171d 60%);border:1px solid var(--line);border-left:4px solid var(--yellow);border-radius:12px;padding:16px 18px;font-size:14px;line-height:1.55;color:var(--muted)}
+    .vc-callout strong{color:var(--yellow)}
+    .vc-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 20px}
+    .vc-tabs .control{min-height:44px}
+    .vc-chain{display:grid;gap:0;margin:8px 0 28px}
+    .vc-link{display:grid;grid-template-columns:56px 1fr;gap:12px;padding:16px;border:1.5px solid var(--brand);border-radius:12px;background:#0b171d;margin:0;transition:border-color .15s,box-shadow .15s}
+    .vc-link+ .vc-arrow{text-align:center;color:var(--brand);font-size:18px;padding:4px 0;opacity:.85}
+    .vc-link:hover,.vc-link.is-open{border-color:var(--yellow);box-shadow:inset 3px 0 0 var(--yellow)}
+    @media (prefers-reduced-motion:reduce){.vc-link{transition:none}}
+    .vc-ico{width:56px;height:56px;border-radius:12px;background:#132a32;border:1px solid var(--line);display:grid;place-items:center;font-size:22px;color:var(--cyan)}
+    .vc-link h3{font-size:16px;margin:0 0 4px;color:var(--cyan)}
+    .vc-meta{font-size:12px;color:var(--muted)}
+    .vc-bar{height:6px;background:#1a3038;border-radius:99px;margin:10px 0 6px;overflow:hidden}
+    .vc-bar>i{display:block;height:100%;background:linear-gradient(90deg,var(--brand),var(--cyan));border-radius:99px}
+    .vc-cos{display:none;margin-top:10px;padding-top:10px;border-top:1px solid #829da033}
+    .vc-link.is-open .vc-cos{display:block}
+    .vc-cos a{display:inline-block;margin:3px 6px 3px 0;font-size:12px}
+    .vc-why{font-size:13px;color:var(--muted);line-height:1.5;margin-top:8px}
+    /* Treemap */
+    .tm{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:minmax(54px,auto);gap:6px;margin:16px 0}
+    .tm-cell{border-radius:10px;padding:10px 12px;background:#123038;border:1px solid var(--line);display:flex;flex-direction:column;justify-content:flex-end;min-height:54px;text-decoration:none}
+    .tm-cell:hover{border-color:var(--cyan);background:#183840}
+    .tm-cell .k{font-size:11px;color:var(--muted)}
+    .tm-cell .v{font-size:18px;font-weight:700;color:var(--cyan);letter-spacing:-.3px}
+    .tm-cell.span2{grid-column:span 2}.tm-cell.span3{grid-column:span 3}
+    .tm-cell.span4{grid-column:span 4}.tm-cell.row2{grid-row:span 2;min-height:120px}
+    @media(max-width:700px){.tm{grid-template-columns:repeat(2,1fr)}.tm-cell.span2,.tm-cell.span3,.tm-cell.span4{grid-column:span 1}}
+    /* Timeline */
+    .tl{position:relative;margin:24px 0 12px;padding-left:22px;border-left:2px solid var(--brand)}
+    .tl-item{position:relative;padding:0 0 22px 8px}
+    .tl-item::before{content:"";position:absolute;left:-27px;top:4px;width:12px;height:12px;border-radius:50%;background:var(--yellow);box-shadow:0 0 0 3px #0b171d}
+    .tl-y{font-size:12px;color:var(--yellow);letter-spacing:.5px;font-weight:700}
+    .tl-t{font-size:16px;margin:2px 0 4px}
+    .tl-d{font-size:13px;color:var(--muted);line-height:1.5;max-width:62ch}
+    /* Small multiples exposure */
+    .sm{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:16px 0}
+    .sm-card{background:#0b171d;border:1px solid var(--line);border-radius:12px;padding:14px}
+    .sm-card .lab{font-size:12px;color:var(--muted)}
+    .sm-card .num{font-size:26px;font-weight:700;color:var(--cyan);letter-spacing:-.6px;margin:6px 0 2px}
+    .scroll-chapters{display:grid;gap:28px;margin:32px 0}
+    .chapter{scroll-margin-top:80px}
+    .chapter h2{font-size:22px;letter-spacing:-.4px;margin-bottom:8px}
+
+    /* Desktop: horizontal scroll-telling strip for chain */
+    @media(min-width:960px){
+      .vc-chain.horiz{display:flex;align-items:stretch;gap:0;overflow-x:auto;padding-bottom:8px;scroll-snap-type:x mandatory}
+      .vc-chain.horiz .vc-arrow{writing-mode:horizontal-tb;padding:0 6px;align-self:center;flex:0 0 auto}
+      .vc-chain.horiz .vc-arrow{transform:rotate(-90deg)}
+      .vc-chain.horiz .vc-link{flex:0 0 280px;scroll-snap-align:start;min-height:220px}
+    }
+    .layout-toggle{display:flex;gap:8px;margin:8px 0 12px;flex-wrap:wrap}
+    .anno{font-size:12px;color:var(--yellow);margin-top:4px}
+
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Gå til indhold</a>
+  <header class="site-header">
+    <a class="brand" href="index.html"><img src="assets/mark.svg" width="34" height="27" alt=""><span>NewDeal Invest</span></a>
+    <nav class="nav">
+      <a href="index.html">Entré</a>
+      <a href="vaerdikaede.html">Enkel kæde</a>
+      <a href="temaer.html">Temaer</a>
+      <a href="ideer.html">Idéer</a>
+    </nav>
+  </header>
+  <main id="main">
+    <p class="eyebrow">TECH · VÆRDIKÆDER</p>
+    <h1>Hvor sidder fonden i teknologien?</h1>
+    <div class="vc-hero">
+      <p class="lede">Interaktive kæder for AI-compute, fysisk tech og energi. Hvert led viser forsinket eksponering fra snapshotet. Temaer mærket forslag afventer gennemgang.</p>
+      <aside class="vc-callout" id="phil-callout">
+        <strong>Hvorfor hele kæden?</strong>
+        <span id="phil-text"> Indlæser…</span>
+      </aside>
+    </div>
+
+    <section class="chapter panel" id="kap-treemap">
+      <h2>Tema-eksponering (treemap)</h2>
+      <p class="src" id="tm-asof"></p>
+      <div class="tm" id="treemap" role="list"></div>
+      <p class="band">Areal ≈ vægt i forsinket snapshot. Eksponering, ikke anbefaling.</p>
+    </section>
+
+    <section class="chapter" id="kap-kaeder">
+      <h2 style="font-size:22px;margin-bottom:8px">Vælg en kæde</h2>
+      <div class="vc-tabs" id="chain-tabs" role="tablist" aria-label="Værdikæder"></div>
+      <p class="vc-why" id="chain-why"></p>
+      <p class="anno" id="chain-anno">Tip: klik et led for selskaber. Gul kant = åbent led. Vægte er forsinket eksponering.</p>
+      <div class="sm" id="chain-sm"></div>
+      <div class="vc-chain" id="chain-view"></div>
+    </section>
+
+    <section class="chapter panel" id="kap-timeline">
+      <h2>Tidslinje: teknologiske skift</h2>
+      <p class="lede" style="font-size:14px;margin-bottom:8px">Ikke en prognose. En ramme for, hvorfor knaphed og flaskehalse flytter sig.</p>
+      <div class="tl" id="timeline"></div>
+    </section>
+
+    <section class="chapter panel" id="kap-filosofi">
+      <h2>NDI-blikket (kort)</h2>
+      <div class="sm">
+        <div class="sm-card"><div class="lab">Princip</div><div class="num" style="font-size:16px;line-height:1.35;color:var(--text)">Udvikling &gt; vinder</div><p class="src">Hellere AI-kæden end én chip.</p></div>
+        <div class="sm-card"><div class="lab">Princip</div><div class="num" style="font-size:16px;line-height:1.35;color:var(--text)">Variansdrag</div><p class="src">Bredde som matematisk fordel.</p></div>
+        <div class="sm-card"><div class="lab">Princip</div><div class="num" style="font-size:16px;line-height:1.35;color:var(--text)">Knaphed</div><p class="src">El, wafers, optik, folk.</p></div>
+        <div class="sm-card"><div class="lab">Princip</div><div class="num" style="font-size:16px;line-height:1.35;color:var(--text)">Forsinket sandhed</div><p class="src">Offentligt snapshot, ikke live handler.</p></div>
+      </div>
+      <p class="band">Formuleringer er inspireret af NDI's offentlige formidling og Vidensbots filosofinoter. Generel information.</p>
+    </section>
+
+    <p class="warn">Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.</p>
+    <p class="link-row"><a href="vaerdikaede.html">Klassisk AI-kæde →</a> · <a href="temaer.html">Temaer →</a> · <a href="index.html?view=udforsk">Udforsk →</a> · <a href="laer/saadan-taenker-vi.html">Sådan tænker vi →</a></p>
+  </main>
+  <script type="module">
+    import { daTheme, fmtDate } from './js/data.js';
+    const esc = (s) => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    const pack = await fetch('data/value-chains.json').then(r => r.json());
+    const fund = 'pmindi';
+    document.getElementById('phil-text').textContent =
+      ' NDI spreder sig i kæden, fordi knaphed flytter sig. Tesen er, at udviklingen vinder. Ikke at ét selskab gør.';
+    document.getElementById('tm-asof').textContent =
+      `Forsinket snapshot, pr. ${fmtDate(pack.asOf)}. ${pack.note}`;
+
+    // Treemap-ish mosaic (varied spans by weight rank)
+    const tm = document.getElementById('treemap');
+    const maxW = Math.max(...pack.treemap.map(t => t.w), 0.01);
+    pack.treemap.forEach((t, i) => {
+      const a = document.createElement('a');
+      a.href = `tema.html?slug=${encodeURIComponent(t.key)}&fund=${fund}`;
+      a.className = 'tm-cell';
+      a.setAttribute('role', 'listitem');
+      if (i === 0) a.classList.add('span3', 'row2');
+      else if (i === 1) a.classList.add('span2', 'row2');
+      else if (i < 4) a.classList.add('span2');
+      const heat = 0.35 + 0.65 * (t.w / maxW);
+      a.style.background = `rgba(137,174,180,${(0.08 + heat * 0.22).toFixed(2)})`;
+      a.innerHTML = `<span class="k">${esc(daTheme(t.key))} · ${t.n} selskaber</span><span class="v">${String(t.w).replace('.', ',')} %</span>`;
+      tm.appendChild(a);
+    });
+
+    // Timeline
+    const tl = document.getElementById('timeline');
+    pack.timeline.forEach(x => {
+      const d = document.createElement('div');
+      d.className = 'tl-item';
+      d.innerHTML = `<div class="tl-y">${esc(x.y)}</div><div class="tl-t">${esc(x.t)}</div><div class="tl-d">${esc(x.d)}</div>`;
+      tl.appendChild(d);
+    });
+
+    const tabs = document.getElementById('chain-tabs');
+    const view = document.getElementById('chain-view');
+    const why = document.getElementById('chain-why');
+    const sm = document.getElementById('chain-sm');
+    let active = pack.chains[0].id;
+
+    function render(id) {
+      active = id;
+      const ch = pack.chains.find(c => c.id === id);
+      tabs.querySelectorAll('button').forEach(b => {
+        const on = b.dataset.id === id;
+        b.classList.toggle('active', on);
+        b.setAttribute('aria-selected', String(on));
+      });
+      why.textContent = ch.why;
+      const total = ch.links.reduce((s, l) => s + (l.weightSum || 0), 0) || 1;
+      sm.innerHTML = ch.links.slice(0, 4).map(l =>
+        `<div class="sm-card"><div class="lab">${esc(l.label)}</div><div class="num">${String(l.weightSum).replace('.', ',')} %</div><div class="lab">${l.count} selskaber</div></div>`
+      ).join('');
+      view.innerHTML = '';
+      ch.links.forEach((l, i) => {
+        if (i) {
+          const ar = document.createElement('div');
+          ar.className = 'vc-arrow'; ar.textContent = '↓';
+          view.appendChild(ar);
+        }
+        const el = document.createElement('article');
+        el.className = 'vc-link';
+        el.tabIndex = 0;
+        const pct = Math.min(100, (l.weightSum / total) * 100);
+        el.innerHTML = `
+          <div class="vc-ico" aria-hidden="true">${l.icon || '◆'}</div>
+          <div>
+            <h3>${esc(l.label)}</h3>
+            <div class="vc-meta">${esc(l.blurb)} · ca. ${String(l.weightSum).replace('.', ',')} % · ${l.count} selskaber</div>
+            <div class="vc-bar" aria-hidden="true"><i style="width:${pct.toFixed(1)}%"></i></div>
+            <div class="vc-cos">
+              ${l.companies.map(c => `<a href="selskab.html?isin=${encodeURIComponent(c.isin)}&fund=${fund}">${esc(c.name)}${c.forslag ? ' · forslag' : ''} · ${String(c.w).replace('.', ',')} %</a>`).join('')}
+              <p class="src" style="margin-top:8px">Temaer: ${l.themes.map(daTheme).map(esc).join(', ')}. Klik leddet for at folde ud.</p>
+            </div>
+          </div>`;
+        const toggle = () => el.classList.toggle('is-open');
+        el.addEventListener('click', toggle);
+        el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } });
+        view.appendChild(el);
+      });
+    }
+
+    pack.chains.forEach((c, i) => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'control' + (i === 0 ? ' active' : '');
+      b.dataset.id = c.id;
+      b.setAttribute('role', 'tab');
+      b.setAttribute('aria-selected', String(i === 0));
+      b.textContent = c.title;
+      b.addEventListener('click', () => render(c.id));
+      tabs.appendChild(b);
+    });
+    render(active);
+  </script>
+</body>
+</html>
