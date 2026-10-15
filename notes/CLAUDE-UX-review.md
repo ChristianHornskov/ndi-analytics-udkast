@@ -201,3 +201,21 @@ Main har bevæget sig siden `60cebcc`: lane-A/B/C/D/E/X er merget (flodkort, NDI
 ### Nice
 - Drawdown: prikken på valgt dag og markeringen "Dybeste fald" virker godt. AKK-teksten om 12 måneder står stadig.
 - Om-data folder ordlisten sammen på mobil, så den er ca. 1.150 tegn over folden. Det er godt.
+
+## 2026-10-16 00:31 CEST · cyklus 9 (main `1bc0d43` uændret, delta)
+
+Main er ikke flyttet siden cyklus 8. Live-sitet er byte-identisk med `docs/` for 13 af 13 tjekkede filer, så Pages er ikke bagud. Jeg har kørt Playwright mod live-sitet på 18 sider (entré, fonden, portefølje, udforsk, værdikæder, drawdown, risici, SoftBank, temaer, invester, om-data, omkostninger, fakta, ndi-paa-x, nyhedsarkiv, sammenlign, idéer, lær/valuta) ved 375 og 1280 px. Der er 0 sider med vandret scroll og 0 konsolfejl.
+
+### MUST (uændret fra cyklus 8)
+- "Mads følger" vises stadig: renderet på SoftBank-siden og ndi-paa-x (`js/x-feed.js:339`, `ndi-paa-x.html:86,109,163`).
+- Toppunktet for drawdown ligger efter bunden (`data/risk-stats.json:9` `maxDdPeak 2026-06-02`).
+- Der står stadig "afventer"/"udfyldes" i UI'et: fonden 1 sted ("ÅTD og 100.000 kr.-eksemplet afventer Fundmarket-godkendelse"), fakta 3, risici 2, selskab 2, temaer 1 ("FORSLAG AFVENTER GENNEMGANG"), omkostninger 1.
+
+### SHOULD
+- **Den tomme livscyklus-boks står øverst på porteføljen.** Der står "Ingen af fondens 345 selskaber er klassificeret endnu" lige efter overskriften. Det er det første, en ny bruger møder efter vægtteksten. Boksen bør skjules, indtil der er mindst én klassificering, eller flyttes under tabellen.
+- **Porteføljen har stadig ingen eksplicit top-10.** Tabellen er sorteret efter vægt (Sea 2,13, SoftBank 1,51, Carvana 1,28 …), men der er ingen overskrift eller kort opsummering som "De 10 største udgør X %". FO-personaen vil have det tal i ét blik.
+- **Nyhedsarkiv** har 8 synlige "Placeholder:"-tekster og bliver linket fra nav/app.js, kort og ndi-paa-x. Fjern linket, indtil siden har indhold, eller skriv "Kommer" i stedet for "Placeholder".
+- Værdikæder er uændret ca. 17.800 tegn på 375 (se cyklus 8).
+
+### Nice
+- Drawdown, sammenlign og lær/valuta er rene: korte sider med risikolinje og ingen stubs.

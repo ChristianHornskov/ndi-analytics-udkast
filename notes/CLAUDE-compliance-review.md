@@ -227,3 +227,31 @@ Ikke juridisk rådgivning. Tjekket med Playwright på renderet tekst (16 sider v
 - Ikke-rådgivning, risikoindikator og KID-link på entré, fonden, portefølje, udforsk, risici, invester og fakta.
 - Beholdningerne er forsinkede: der står "pr. 1. jun. 2026" på selskab, temaer, valuta og idéer, og der står ikke noget om løbende handler.
 - PMINDIAKK: embed og drawdown viser teksten om 12 måneder uden procenter ✅. 1m/3m er ikke eksponeret ✅.
+
+## 2026-10-16 00:31 CEST · cyklus 9 (main `1bc0d43` uændret, delta)
+
+Ikke juridisk rådgivning. Tjekket med Playwright på renderet tekst fra live-sitet (18 sider ved 375 og 1280) og med grep i `docs/`. Pages er lig med main.
+
+### MUST (alle åbne, uændret)
+1. **Ingen markedsføringsmærkning.** Renderet tekst indeholder "markedsføring" på 0 af 18 sider. Ordet findes kun i `data/fund-facts.json`.
+2. **"Mads følger"** renderes på selskab (SoftBank) og ndi-paa-x.
+3. **DD-top efter bund** (`risk-stats.json:9`).
+4. **ndi-paa-x mangler en risikolinje.** Der er hverken "tab" eller "historisk afkast" i renderet tekst.
+
+### SHOULD
+- **Omkostninger mangler stadig en tabsadvarsel.** Siden har "historisk afkast …", men ikke "du kan tabe".
+- **Nyhedsarkiv (nyt i denne runde)** har hverken tab-linje eller KID-link, men har "historisk afkast". Det er OK, så længe siden kun er placeholder. Siden skal dog have standard-risikolinjen, før der kommer indhold om tema-eksponering.
+- **KID-link mangler i renderet tekst** på værdikæder, drawdown, temaer og idéer. Risikolinjen står der. Footer-KID-linket bør med på alle sider, der viser fondsvægte.
+- **"afventer Fundmarket-godkendelse"** er synligt på fonden.
+
+### Rådgivningsord (gennemgået i kontekst) ✅
+- Værdikæder: "overvægt" bruges kun i negationer ("ikke bevidste overvægte", "ikke anbefaling eller bevidst overvægt").
+- Invester: "KID'et anbefaler mindst 5 års investeringsperiode" er KID-terminologi og OK.
+- Fakta/risici: "Anbefalet horisont/investeringsperiode ifølge KID" er OK.
+- Der er 0 hits på køb nu/sælg nu/garanteret/sikker investering/øger eksponering.
+
+### OK (uændret ✅)
+- Beholdningerne er forsinkede: der står "pr. 1. jun. 2026 … Ikke dagsaktuel" på porteføljen.
+- PMINDIAKK 12m-gate holder. 1m/3m er ikke eksponeret. Nasdaq er kun nævnt som noteringsfakta.
+- AI-mærkningen er der på udforsk, værdikæder, selskab, temaer og idéer.
+- Risikoindikator 5/7 og KID står på entré, fonden, portefølje, udforsk, risici, invester og fakta.
