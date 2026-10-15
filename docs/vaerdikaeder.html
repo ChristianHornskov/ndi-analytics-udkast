@@ -167,7 +167,25 @@
     .mn-bridge::before{content:"⇄ ";color:var(--yellow);font-weight:700}
     .a-pane{display:none;margin:4px 0 18px;border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:linear-gradient(180deg,#0e2027,#0b171d)}
     .a-pane.on{display:block}
-    #a-pane,#e-pane,#p-pane,#sp-map,#sp-cost,#sp-trip,#sp-money,#sp-risk,#e-risk,#sp-bands,#sp-quiz,#e-quiz,#sp-alt,#q-hz,#q-cold,#q-quiz,#q-br,#q-gl,#gloss-wrap,#p-gloss-wrap,#e-gloss-wrap{scroll-margin-top:110px}
+    #a-pane,#e-pane,#p-pane,#sp-map,#sp-cost,#sp-trip,#sp-money,#sp-risk,#e-risk,#sp-bands,#sp-quiz,#e-quiz,#sp-alt,#q-hz,#q-cold,#q-quiz,#q-br,#q-gl,#gloss-wrap,#p-gloss-wrap,#e-gloss-wrap,#phases,#p-loop,#p-risk,#p-quiz{scroll-margin-top:110px}
+    /* Robotik: sanse-tænke-handle-løkke (kun denne side) */
+    .p-links{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px;padding:0;list-style:none}
+    .p-links a{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;text-decoration:none;color:var(--text);border:1px solid var(--line);border-radius:999px;padding:4px 11px;background:#0b171d}
+    .p-links a:hover,.p-links a:focus-visible{border-color:var(--yellow)}
+    .p-loop{margin-top:16px;border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:radial-gradient(circle at 20% 0,#142b33,#0b171d 70%)}
+    .p-loop h3{font-size:15px;color:var(--cyan);margin:0 0 4px}
+    .pl-grid{display:grid;gap:14px;margin-top:10px;align-items:center}
+    @media(min-width:760px){.pl-grid{grid-template-columns:minmax(220px,300px) 1fr}}
+    .pl-svg{width:100%;max-width:300px;height:auto;display:block;margin:0 auto}
+    .pl-svg a:focus-visible circle.nd,.pl-svg a:hover circle.nd,.pl-svg g.on circle.nd{stroke:var(--yellow);stroke-width:2.5}
+    .pl-list{list-style:none;margin:0;padding:0;display:grid;gap:8px;counter-reset:pl}
+    @media(min-width:520px){.pl-list{grid-template-columns:1fr 1fr}}
+    .pl-list>li{counter-increment:pl;border:1px solid var(--line);border-radius:10px;padding:8px 10px;background:#0b171d;font-size:13px;line-height:1.45;color:var(--muted)}
+    .pl-list>li.on,.pl-list>li:focus-within{border-color:var(--yellow)}
+    .pl-list h4{margin:0 0 2px;font-size:13.5px;color:var(--text);display:flex;align-items:center;gap:7px}
+    .pl-list h4::before{content:counter(pl);display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:#16323b;color:var(--cyan);font-size:11px}
+    .pl-list p{margin:0}
+    .pl-list .lk{margin-top:4px;font-size:12.5px}
     /* Rum: læse-rute og "Hvad kan gå galt?" (kun denne side) */
     .sp-route{display:flex;gap:6px;overflow-x:auto;padding:2px 2px 8px;margin:0 0 12px;scrollbar-width:thin}
     .sp-route .lbl{flex:0 0 auto;align-self:center;font-size:11px;letter-spacing:.6px;text-transform:uppercase;color:var(--muted);margin-right:4px}
@@ -577,9 +595,32 @@
       </div>
 
       <div class="p-pane" id="p-pane" aria-label="Robotik forklaret">
+        <ul class="p-links" id="p-links" aria-label="Spring til" hidden></ul>
         <ol class="phases" id="phases" aria-label="Mads' tre faser"></ol>
         <blockquote class="ph-quote" id="ph-quote"></blockquote>
         <p class="src" id="ph-src" style="margin-top:6px"></p>
+        <section class="p-loop" id="p-loop" aria-labelledby="pl-h" hidden>
+          <h3 id="pl-h"></h3>
+          <p class="src" id="pl-lede"></p>
+          <div class="pl-grid">
+            <div id="pl-svg"></div>
+            <ol class="pl-list" id="pl-list"></ol>
+          </div>
+          <p class="src" id="pl-note" style="margin-top:8px"></p>
+        </section>
+        <section class="risk" id="p-risk" aria-labelledby="prk-h" hidden>
+          <h3 id="prk-h"></h3>
+          <p class="src" id="prk-lede"></p>
+          <div class="rk-grid" id="prk-grid"></div>
+          <p class="src" id="prk-note" style="margin-top:8px"></p>
+        </section>
+        <section class="quiz" id="p-quiz" aria-labelledby="pqz-h" hidden>
+          <h3 id="pqz-h"></h3>
+          <p class="src" id="pqz-lede"></p>
+          <ol class="qz-list" id="pqz-list"></ol>
+          <p class="qz-score" id="pqz-score" aria-live="polite"></p>
+          <p class="src" id="pqz-note" style="margin-top:6px"></p>
+        </section>
         <details class="gloss-wrap" id="p-gloss-wrap">
           <summary><h3>Robot-ordbog</h3><span class="src" id="p-gloss-count">Ord, der gør kæden lettere at læse</span></summary>
           <dl class="gloss" id="p-gloss"></dl>
@@ -1140,6 +1181,8 @@
       document.getElementById('alt-host').appendChild(svg);
     })(sp?.altitudes);
 
+    // Slå et led op i en vilkårlig kæde
+    const linkOf = (cid, lid) => pack.chains.find(c => c.id === cid)?.links.find(l => l.id === lid);
     // Robotik: Mads' tre faser (BLOG 7. okt 2024)
     const phys = pack.chains.find(c => c.id === 'physical');
     document.getElementById('phases').innerHTML = (phys?.phases || []).map((f, i, all) =>
@@ -1147,9 +1190,73 @@
     if (phys?.phasesQuote) document.getElementById('ph-quote').innerHTML = `<q>${esc(phys.phasesQuote.q)}</q><cite>Mads Christiansen, ${esc(phys.phasesQuote.src)}</cite>`;
     document.getElementById('ph-src').textContent = phys?.phasesSrc ? `Kilde: ${phys.phasesSrc}` : '';
     renderGloss(phys, ['p-gloss', 'p-gloss-note', 'p-gloss-count', 'p-gloss-wrap']);
+    // Robotik: sanse, tænke, handle, lære (baggrund). Hvert trin åbner sit led, og "Tænke" hopper til fysisk AI
+    (function renderLoop(lp) {
+      if (!lp?.steps?.length) return;
+      const NS = 'http://www.w3.org/2000/svg';
+      const W = 300, cx = 150, cy = 150, R = 100, n = lp.steps.length;
+      const pos = (i) => { const a = -Math.PI / 2 + i * 2 * Math.PI / n; return [cx + R * Math.cos(a), cy + R * Math.sin(a)]; };
+      const target = (st) => {
+        const [c, l] = st.hop ? st.hop.split(':') : ['physical', st.link];
+        const ln = linkOf(c, l);
+        if (!ln) return null;
+        return st.hop
+          ? { href: `?kaede=${c}#lk-${l}`, k: 'data-hop', v: st.hop, label: `${ln.short || ln.label} i ${pack.chains.find(x => x.id === c)?.title || c}` }
+          : { href: `#lk-${l}`, k: 'data-open', v: l, label: ln.short || ln.label };
+      };
+      const svg = document.createElementNS(NS, 'svg');
+      svg.setAttribute('viewBox', `0 0 ${W} ${W}`);
+      svg.setAttribute('class', 'pl-svg');
+      svg.setAttribute('role', 'group');
+      svg.setAttribute('aria-label', 'En løkke i ' + n + ' trin: ' + lp.steps.map(s => s.k).join(', ') + ', og så forfra.');
+      let html = `<defs><marker id="pl-ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--yellow)"/></marker></defs>`
+        + `<circle cx="${cx}" cy="${cy}" r="${R}" fill="none" stroke="#2a4650" stroke-width="10"/>`;
+      // Pile mellem trinene langs cirklen
+      lp.steps.forEach((_, i) => {
+        const a0 = -Math.PI / 2 + i * 2 * Math.PI / n + 0.38, a1 = -Math.PI / 2 + (i + 1) * 2 * Math.PI / n - 0.38;
+        html += `<path d="M${cx + R * Math.cos(a0)} ${cy + R * Math.sin(a0)} A${R} ${R} 0 0 1 ${cx + R * Math.cos(a1)} ${cy + R * Math.sin(a1)}" fill="none" stroke="var(--yellow)" stroke-width="2" marker-end="url(#pl-ar)"/>`;
+      });
+      const mid = linkOf('physical', lp.center);
+      html += `<circle cx="${cx}" cy="${cy}" r="44" fill="#10232a" stroke="var(--brand)"/><text x="${cx}" y="${cy - 2}" text-anchor="middle" font-size="26">${mid?.icon || '🤖'}</text><text x="${cx}" y="${cy + 20}" text-anchor="middle" fill="var(--muted)" font-size="10">${esc(mid ? 'Robotten' : '')}</text>`;
+      svg.innerHTML = html;
+      lp.steps.forEach((st, i) => {
+        const [x, y] = pos(i), t = target(st);
+        const g = document.createElementNS(NS, t ? 'a' : 'g');
+        if (t) { g.setAttribute('href', t.href); g.setAttribute(t.k, t.v); g.setAttribute('aria-label', `${st.k}. Åbn ${t.label}`); }
+        g.setAttribute('data-step', i);
+        g.innerHTML = `<circle class="nd" cx="${x}" cy="${y}" r="30" fill="#16323b" stroke="var(--line)" stroke-width="1.5"/><text x="${x}" y="${y + 1}" text-anchor="middle" font-size="19" aria-hidden="true">${st.icon}</text><text x="${x}" y="${y + 18}" text-anchor="middle" fill="var(--text)" font-size="10" font-weight="700">${esc(st.k)}</text>`;
+        svg.appendChild(g);
+      });
+      document.getElementById('pl-svg').appendChild(svg);
+      document.getElementById('pl-h').textContent = lp.title;
+      document.getElementById('pl-lede').textContent = lp.lede;
+      const list = document.getElementById('pl-list');
+      list.innerHTML = lp.steps.map((st, i) => {
+        const t = target(st);
+        return `<li data-step="${i}"><h4><span aria-hidden="true">${st.icon}</span>${esc(st.k)}</h4><p>${esc(st.t)}</p>`
+          + `<p class="lk">${t ? `<a href="${esc(t.href)}" ${t.k}="${esc(t.v)}">${esc(t.label)} →</a>` : ''}${st.term ? ` · <a href="?kaede=physical#p-gloss-wrap" data-sec="physical:p-gloss-wrap">${esc(st.term)} i ordbogen</a>` : ''}</p></li>`;
+      }).join('');
+      // Hover eller fokus på et trin fremhæver det samme trin i løkken
+      const mark = (i, on) => { svg.querySelector(`[data-step="${i}"]`)?.classList.toggle('on', on); list.querySelector(`[data-step="${i}"]`)?.classList.toggle('on', on); };
+      [list, svg].forEach(host => {
+        ['mouseover', 'focusin'].forEach(e => host.addEventListener(e, (ev) => { const el = ev.target.closest('[data-step]'); if (el) mark(el.dataset.step, true); }));
+        ['mouseout', 'focusout'].forEach(e => host.addEventListener(e, (ev) => { const el = ev.target.closest('[data-step]'); if (el) mark(el.dataset.step, false); }));
+      });
+      document.getElementById('pl-note').textContent = lp.note || '';
+      document.getElementById('p-loop').hidden = false;
+    })(phys?.loop);
+    if (phys) renderRisks(phys.risks, phys.links, ['prk-h', 'prk-lede', 'prk-grid', 'prk-note', 'p-risk'], { aria: 'Robotkæden fra komponenter til færdige robotter' });
+    renderQuiz(phys?.quiz, 'physical', 'pqz', 'p-quiz');
+    // Robotik: genveje øverst i fanen (kun til sektioner, der faktisk vises)
+    (function renderPLinks() {
+      const items = [['phases', '🧭', 'De tre faser'], ['p-loop', '🔁', 'Sanse, tænke, handle'], ['p-risk', '⚠', 'Hvad kan gå galt?'], ['p-quiz', '✓', 'Tjek dig selv'], ['p-gloss-wrap', '📖', 'Robot-ordbog']]
+        .filter(([id]) => { const el = document.getElementById(id); return el && !el.hidden && (id !== 'phases' || el.children.length); });
+      const ul = document.getElementById('p-links');
+      ul.innerHTML = items.map(([id, ic, k]) => `<li><a href="?kaede=physical#${id}" data-sec="physical:${id}"><span aria-hidden="true">${ic}</span>${esc(k)}</a></li>`).join('');
+      ul.hidden = !items.length;
+    })();
 
     // Broer: led i andre kæder, der deler selskaber med den valgte kæde
-    const linkOf = (cid, lid) => pack.chains.find(c => c.id === cid)?.links.find(l => l.id === lid);
     const kindTxt = (k) => k === 'baggrund' ? 'baggrund' : 'NDI';
     const brCard = (b) => {
       const [cid, lid] = (b.to || '').split(':');

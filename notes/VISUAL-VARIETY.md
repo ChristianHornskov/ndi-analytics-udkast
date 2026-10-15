@@ -113,3 +113,5 @@ Se `notes/VISUAL-VARIETY-REVIEW.md`.
 - **Tjek dig selv** (`#e-quiz`) på energi-fanen genbruger rum-quizzens form (svarknapper, ✓/✗, gul forklaringslinje), så læseren genkender mønstret på tværs af kæder. Svar-linket åbner leddet direkte (elnet, lagring, atomkraft). Ingen ny CSS ud over scroll-margin for de nye ankre.
 
 - Kvante-fanen (lane-A, 2026-10-16): lodret termometer-SVG på logaritmisk skala med boble i bunden og varm-til-kold-gradient. Etiketter skubbes fra hinanden med skrå hjælpelinjer, så helium og det tomme rum kan læses selvom de ligger tæt. Ved siden af står en nummereret årsagskæde i cirkler og en stiplet gul strøm-boks. Formen er ny på siden, og den er kun lavet med lokal CSS i vaerdikaeder.html.
+
+- Robotik-fanen (lane-A, 2026-10-16): cirkulær løkke-SVG "Sanse, tænke, handle, lære" med fire klikbare knuder rundt om en robot i midten og gule pile langs ringen. Det er den første cirkelform på siden (de andre er strimler, skalaer og lister). Hover eller fokus på et kort fremhæver samme knude i løkken og omvendt. Genvejs-piller øverst i fanen og "Hvad kan gå galt?"/"Tjek dig selv" genbruger rum- og energiformen. Kun lokal CSS i vaerdikaeder.html.

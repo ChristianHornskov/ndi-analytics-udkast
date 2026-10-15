@@ -389,3 +389,14 @@ Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html, v
 5. **vaerdikaede.html:** Kvantekortet har fået "✓ Tjek dig selv: 4 spørgsmål →".
 Tjek: Playwright på 1280 og 375 med 0 konsolfejl og ingen sidescroll. Der er 6 temperaturpunkter, 5 broer og 4 spørgsmål. Deep-link til `#q-hz`, `#q-cold`, `#q-br` og `#q-quiz` lander under menuen. Svaret "Se leddet" åbner `#lk-q-core`, og Elnet-hop giver `?kaede=energy#lk-grid`. smoke.mjs 52/52 fail 0 (egen server på 8817). Precheck PASSED. Grep efter handelssprog og tankestreger i diff giver 0 reelle hits.
 Næste: energi-ledkortenes blurbs kan få en "hvor i strømvejen"-mini-strimmel, og robotik-fanen kan få "Tjek dig selv". Ikke færdig.
+
+
+## Fra Claude lane-A · 2026-10-16 ~01:30 CEST (robotik: løkke, usikkerheder og tjek dig selv)
+Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html, vaerdikaede.html, value-chains.json og notes.
+1. **Robotik: "Sanse, tænke, handle".** Ny sektion (`#p-loop`) med en cirkulær løkke i fire trin: sanse (komponenter), tænke (hop til fysisk AI i AI-compute), handle (komponenter) og lære (simulering). Hvert trin har et kort med link til leddet og til ordet i robot-ordbogen. Hover eller fokus fremhæver trinnet i både løkke og liste. Alt er mærket baggrund og "ikke NDI's analyse, ikke en vurdering af enkelte selskaber og ikke en anbefaling". Data ligger i `physical.loop`.
+2. **Robotik: "Hvad kan gå galt i robotkæden?"** (`#p-risk`). Seks kort: simulation mod virkelighed, Kinas forspring i produktionen, regler og ansvar, batteriet, prisen og tiden. To har en NDI-linje med kilde (BLOG 17. marts 2025 og 30. marts 2026, sidstnævnte med "der står ingen årstal"). Resten er mærket baggrund og vores udvalg. Bruger den fælles `renderRisks`.
+3. **Robotik: "Tjek dig selv"** (`#p-quiz`). Fire spørgsmål: fase 3 (BLOG 7. oktober 2024), hvad NDI tæller som robotter (BLOG 17. marts 2025), simulering og edge-AI (baggrund). Bruger den fælles `renderQuiz`, og intet gemmes.
+4. **Genveje** øverst i robotik-fanen (faser, løkke, usikkerheder, tjek dig selv, ordbog), og de vises kun, hvis sektionen findes. Robotleddene har fået korte navne (Komponenter, Simulering, Robotter).
+5. **vaerdikaede.html:** Robotkortet har fået "⚠ Hvad kan gå galt? 6 usikkerheder →" og "✓ Tjek dig selv: 4 spørgsmål →".
+Tjek: Playwright på 1280 og 375 med 0 konsolfejl og ingen sidescroll. 4 knuder, 6 kort, 11 ramte led og 4 spørgsmål. Deep-link til `#p-risk`, `#p-quiz`, `#p-loop` og `#phases` lander under menuen, quiz-svaret "Se de tre faser" lander også der, "Tænke" giver `?kaede=ai-compute#lk-physical-ai`, og "Lære" i løkken åbner `#lk-sim`. smoke.mjs 52/52 fail 0 (egen server på 8817). Precheck PASSED. Grep efter handelssprog og tankestreger i diff giver 0 hits.
+Næste: energi-ledkortene kan få en lille "hvor i strømvejen"-strimmel, og vaerdikaede.html's læringslink for robotik kan pege på løkken. Ikke færdig.

@@ -1942,7 +1942,8 @@
      "seeChain": null,
      "src": "BLOG 10. juni 2024",
      "shift": "Mange af leddets selskaber laver batterier eller effektchips og står derfor også i energikædens lagringsled eller i AI-kædens chipdesign. Robotter, elbiler og elnet trækker på de samme dele (tolkning, se broerne under kæden).",
-     "kind": "ndi"
+     "kind": "ndi",
+     "short": "Komponenter"
     },
     {
      "id": "sim",
@@ -2000,7 +2001,8 @@
      "seeChain": null,
      "src": "BLOG 10. juni 2024 · 23. juni 2025",
      "shift": "Robotter trænes i stigende grad i simulerede verdener, før de kommer ud i den fysiske (baggrund).",
-     "kind": "ndi"
+     "kind": "ndi",
+     "short": "Simulering"
     },
     {
      "id": "robots",
@@ -2133,7 +2135,8 @@
      "seeChain": null,
      "src": "BLOG 7. oktober 2024 · 17. marts 2025 · BOG s. 40–43 og 118–119",
      "shift": "Mads beskriver et kapløb, hvor Vesten skal indhente Kinas forspring i robotproduktion. Ifølge Mads kommer efterspørgslen efter compute snart fra fysisk AI, efter agentisk AI (BLOG 30. marts 2026). Han giver ingen præcise årstal.",
-     "kind": "ndi"
+     "kind": "ndi",
+     "short": "Robotter"
     }
    ],
    "phases": [
@@ -2210,7 +2213,167 @@
      "hop": "ai-compute:physical-ai"
     }
    ],
-   "glossaryNote": "Ordbogen er generel baggrundsviden, ikke NDI's synspunkter. Ordene er valgt, fordi de går igen i robotkædens tre led."
+   "glossaryNote": "Ordbogen er generel baggrundsviden, ikke NDI's synspunkter. Ordene er valgt, fordi de går igen i robotkædens tre led.",
+   "loop": {
+    "title": "Sanse, tænke, handle: sådan arbejder en robot",
+    "lede": "En robot gør det samme igen og igen, mange gange i sekundet. Den mærker verden, beslutter hvad den skal gøre, og bevæger sig. Bagefter bliver den bedre af det, den har lært. Hvert trin hører til et led i kæden. Klik et trin for at åbne leddet.",
+    "steps": [
+     {
+      "k": "Sanse",
+      "icon": "👁",
+      "t": "Kameraer, lidar og kraftsensorer fortæller robotten, hvor den er, og hvad den rører ved.",
+      "link": "components",
+      "term": "Sensor"
+     },
+     {
+      "k": "Tænke",
+      "icon": "🧠",
+      "t": "En AI-chip i selve robotten tolker data og vælger næste bevægelse. Det kaldes edge-AI.",
+      "hop": "ai-compute:physical-ai",
+      "term": "Edge-AI"
+     },
+     {
+      "k": "Handle",
+      "icon": "🦾",
+      "t": "Motorer og effektelektronik flytter arme, hjul eller propeller. Batteriet leverer strømmen.",
+      "link": "components",
+      "term": "Aktuator"
+     },
+     {
+      "k": "Lære",
+      "icon": "🔁",
+      "t": "Data fra driften går tilbage til simuleringen, hvor næste version øver millioner af gange, før den kommer ud.",
+      "link": "sim",
+      "term": "Simulering"
+     }
+    ],
+    "center": "robots",
+    "note": "Løkken er generel baggrundsviden og en forenkling. Den er ikke NDI's analyse, ikke en vurdering af enkelte selskaber og ikke en anbefaling."
+   },
+   "risks": {
+    "title": "Hvad kan gå galt i robotkæden?",
+    "lede": "Robotkæden er tidlig, og usikkerhederne sidder forskellige steder. Den lille kæde på hvert kort viser, hvilke led der især rammes. Klik et led for at åbne det.",
+    "items": [
+     {
+      "icon": "🧪",
+      "k": "Virkeligheden er sværere end simulationen",
+      "t": "En robot, der klarer sig fint i en virtuel verden, kan fejle i en rigtig lagerhal med dårligt lys, glatte gulve og mennesker, der går i vejen. Afstanden mellem øvelse og virkelighed kan tage år at lukke.",
+      "links": [
+       "sim",
+       "robots"
+      ]
+     },
+     {
+      "icon": "🌏",
+      "k": "Kina har et forspring i produktionen",
+      "t": "Mange motorer, batterier og færdige robotter bygges i Kina. Told eller eksportstop kan gøre delene dyrere eller sværere at få fat i.",
+      "links": [
+       "components",
+       "robots"
+      ],
+      "ndi": {
+       "t": "Mads skriver, at Vesten skal indhente Kinas forspring i robotproduktion.",
+       "src": "BLOG 17. marts 2025"
+      }
+     },
+     {
+      "icon": "⚖",
+      "k": "Regler og ansvar",
+      "t": "Selvkørende biler og droner skal have tilladelse til at køre eller flyve, og reglerne er forskellige fra land til land. En enkelt ulykke kan bremse et helt område.",
+      "links": [
+       "robots"
+      ]
+     },
+     {
+      "icon": "🔋",
+      "k": "Batteriet sætter grænsen",
+      "t": "En robot eller drone kan kun arbejde, så længe batteriet holder. Nye batterityper lover mere strøm pr. kilo, men mange er endnu ikke i stor produktion.",
+      "links": [
+       "components",
+       "robots"
+      ]
+     },
+     {
+      "icon": "💰",
+      "k": "Prisen skal ned",
+      "t": "En robot skal være billigere end det arbejde, den overtager, inklusive service og nedetid. Indtil prisen falder, bliver den mest brugt, hvor arbejdet er farligt, ensformigt eller svært at bemande.",
+      "links": [
+       "components",
+       "robots"
+      ]
+     },
+     {
+      "icon": "⏳",
+      "k": "Tiden kan blive længere",
+      "t": "Ingen ved præcis, hvornår robotter bliver hverdag. Fase 3 har ingen årstal, og udviklingen kan gå både hurtigere og langsommere end ventet.",
+      "links": [
+       "sim",
+       "robots"
+      ],
+      "ndi": {
+       "t": "NDI skriver, at efterspørgslen efter compute først kommer fra agentisk AI og \"snart fra fysisk AI\". Der står ingen årstal.",
+       "src": "BLOG 30. marts 2026"
+      }
+     }
+    ],
+    "note": "Kort uden NDI-linje er generel baggrundsviden og vores udvalg. Kortene er ikke en vurdering af enkelte selskaber og ikke en anbefaling."
+   },
+   "quiz": {
+    "title": "Tjek dig selv: fire spørgsmål om robotkæden",
+    "lede": "Vælg et svar. Du får en kort forklaring og et link til det sted på siden, hvor det står. Intet gemmes.",
+    "items": [
+     {
+      "q": "Hvad kalder Mads fase 3 i den teknologiske udvikling?",
+      "a": [
+       "Copilots",
+       "Automatisering og robotisering",
+       "Internet og mobil"
+      ],
+      "ok": 1,
+      "why": "Fase 1 er modning, fase 2 er copilots, og fase 3 er automatisering og robotisering, hvor AI får krop (BLOG 7. oktober 2024).",
+      "sec": "phases",
+      "more": "Se de tre faser"
+     },
+     {
+      "q": "Hvad tæller NDI med, når der står robotter?",
+      "a": [
+       "Kun robotter i menneskeform",
+       "Kun industrirobotter på fabrikker",
+       "Også droner, fly og andre autonome systemer"
+      ],
+      "ok": 2,
+      "why": "NDI forstår robotter bredt som \"droner, fly, soldater, missiler og andre autonome systemer\" (BLOG 17. marts 2025).",
+      "sec": "lk-robots",
+      "more": "Se leddet robotter"
+     },
+     {
+      "q": "Hvorfor øver robotter i en simulering først?",
+      "a": [
+       "Det er billigere og mere sikkert end at øve med en rigtig robot",
+       "Fordi rigtige robotter ikke kan lære",
+       "Fordi det er et krav i loven"
+      ],
+      "ok": 0,
+      "why": "I en virtuel verden kan robotten prøve millioner af gange uden at gå i stykker eller gøre skade (baggrund).",
+      "sec": "lk-sim",
+      "more": "Se leddet simulering"
+     },
+     {
+      "q": "Hvad betyder edge-AI?",
+      "a": [
+       "AI, der kun kører i et stort datacenter",
+       "AI, der kører på en chip i selve robotten eller bilen",
+       "AI, der kun findes i en simulering"
+      ],
+      "ok": 1,
+      "why": "Når AI kører i robotten, reagerer den hurtigere og virker også uden netforbindelse (baggrund).",
+      "sec": "p-loop",
+      "more": "Sanse, tænke, handle"
+     }
+    ],
+    "done": "Du har svaret på alle fire.",
+    "note": "Spørgsmålene er vores egne og skal gøre siden lettere at læse. De tester ikke viden om enkelte selskaber og er ikke en anbefaling."
+   }
   },
   {
    "id": "energy",
