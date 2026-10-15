@@ -24,8 +24,8 @@ Kilder: slack_ny_graf_2026-10-15.md, vision.txt, mads_tankemodel.md, investering
 ## Klassifikation (Mads 14/10 + møde)
 - [x] Tema-tags (ikke GICS som hoved) + multi-tag
 - [~] Modenhedsgrader (UI klar, data tom — manuel klassifikation mangler)
-- [ ] Market cap-lag — åben
-- [ ] Produktkategori-lag — åben
+- [ ] Market cap-lag — blokeret natten over (ingen mcap i portfolio.json; kræver kilde)
+- [ ] Produktkategori-lag — blokeret natten over (ingen produktkatalog-data)
 - [ ] Tema: reindustrialisering USA — åben (skjult/legacy-tags deferred)
 - [x] Energiforsyning / -transmission / -ressourcer (temaer energy + energy-resources)
 - [x] Optiske connects (tema connect)
@@ -35,7 +35,7 @@ Kilder: slack_ny_graf_2026-10-15.md, vision.txt, mads_tankemodel.md, investering
 - [ ] Sortering: 52u-drawdown, optrend, vol, insider — deferred (compliance på per-aktie)
 - [x] Ingen P/E i v1 (skjult); P/S skjult
 - [x] "Hvilket problem løser det?" på selskab
-- [~] Teslas multi-rolle (energi+fysisk) — multi-tag OK; værdikæde-led pædagogisk
+- [x] Teslas multi-rolle (energi+fysisk) — multi-tag + pædagogisk callout på vaerdikaeder
 
 ## Værdikæde & tech-udvikling (HØJ PRIORITET Christian 22:55)
 - [x] Interaktiv AI-udbygning (multi-kæde hub vaerdikaeder.html) + klassisk vaerdikaede.html
@@ -60,3 +60,4 @@ Kilder: slack_ny_graf_2026-10-15.md, vision.txt, mads_tankemodel.md, investering
 | 23:00 | Drawdown middel/median + underwater + episode bars | (denne) |
 | 23:02 | SVG treemap + sunburst toggle på vaerdikaeder | (denne) |
 | 23:05 | Quantum-tag (forslag) + flaskehalse scroll-telling | (denne) |
+| 23:08 | Tesla multi-rolle callout + temaer→treemap CTA | (denne) |

@@ -72,3 +72,22 @@ Pass checklist for 22:00:
 1. Mobil-nav mangler Fonden / Porteføljen / Udforsk.
 2. Udforsk-søgning: liste kan halte efter URL.
 3. Vægt-sparkline forveksles med kurs — tydelig label.
+
+
+## 23:00 CEST checkpoint (Grok sole lead) — 2026-10-15
+**Perspektiv:** privatinvestor der scroller værdikæder + drawdown før sengetid.
+
+### MUST
+Ingen nye MUST. Live Pages kan halte 1–2 min bag HEAD `ba33bbe`+.
+
+### SHOULD
+1. På mobil: vandret kæde-toggle er skjult nok (desktop-first) — OK.
+2. temaer-søjler vs treemap: samme data, to former — godt for variation; hold copy synket.
+3. Drawdown max er nu ca. −35,8 % (bugfix). Tjek at ingen gammel screenshot/video siger −21 %.
+
+### Nice
+- Sunburst legend på smalle skærme kan wrappes (allerede flex-wrap).
+- Market cap-lag mangler data — ikke et UX-hul at fikse i nat uden kilde.
+
+### Visual variety (eget lens-review)
+vaerdikaeder + drawdown leverer formskift (treemap/sunburst/kæde/timeline/flaskehalse/underwater). Entré stadig dør-gitter — acceptabelt som hub.

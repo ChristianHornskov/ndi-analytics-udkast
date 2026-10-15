@@ -4,6 +4,7 @@ End target: 2026-10-16 06:30 CEST
 Checkpoint every ≤30 min.
 
 ## Checkpoints
+- 23:08 — Tesla callout + temaer treemap-CTA + UX 23:00 checkpoint. Market cap/produkt blokeret uden data.
 - 23:05 — Quantum-tag (forslag, 4 stk) + flaskehalse scroll-telling. themes/treemap rebuilt.
 - 23:00 — SVG treemap + sunburst på vaerdikaeder (Playwright OK). Next: næste MADS-item uden manglende data.
 - 23:00 — Drawdown middel/median + underwater + episode bars; fixed maxDrawdown unit bug (−35,8 % PMINDI). Next checklist item.
