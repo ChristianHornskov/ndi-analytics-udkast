@@ -123,6 +123,8 @@ MDA skrev 10. september 2026, at selskabet præsenterede Aurora Black, en softwa
 
 York skriver, at selskabet designer og fremstiller satellitplatforme, og at det koordinerer opsendelseslogistik fra design til levering. Logistikken er ikke det samme som selv at sende raketten op. Selskabet driver ikke et datacenter i rummet. Formuleringen om tusindvis af satellitter i kredsløb er ikke taget med, fordi siden ikke siger, at York ejer dem. Et opdelt tæller-tal på forsiden er ikke læst som en kapacitet.
 
+Critical Metals skrev 5. oktober 2026, at Grønlands regering har godkendt mineplanen og lukningsplanen for Tanbreez, og at planerne rækker til september 2050. Selskabet skriver, at de sidste driftstilladelser mangler, før byggeriet kan gå i gang. Datoen ligger efter beholdningen pr. 2026-06-01. Det er ikke en mine i drift. Wolfsberg er et lithiumprojekt i Kärnten i Østrig. Et studie, en aftale med BMW og et planlagt raffinaderi i Saudi-Arabien er ikke drift. Kursen på siden og formuleringen om verdens største forekomst er ikke taget med.
+
 ## År til dato på periodesiden
 
 `ytdReturn` i `data.js` bruger sidste punkt i året før som udgangspunkt, ikke 1. januar. For PMINDI pr. 2026-10-14 er det 2025-12-31, ikke 2026-01-02. `periode.html` viser den samme dato i "Fra → til". Kalenderår bruger samme base (`calendarYearReturns`).

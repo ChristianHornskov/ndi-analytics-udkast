@@ -823,20 +823,28 @@
   "VGG2662B1031": {
    "name": "Critical Metals",
    "theme": "energy-resources",
-   "summary": "Arbejder med et projekt for sjældne jordarter i Grønland (Tanbreez). Denne tekst beskriver ikke en mine i drift.",
-   "watch": "Tilladelser i Grønland og om projektet bliver til en mine.",
+   "summary": "Arbejder med Tanbreez i Grønland og med Wolfsberg i Kärnten i Østrig. Selskabet skrev 5. oktober 2026, at Grønland har godkendt mine- og lukningsplaner. De sidste driftstilladelser mangler før byggeri. Det er ikke en mine i drift.",
+   "watch": "Tilladelser før byggeri i Grønland, og om Wolfsberg bliver til en mine.",
    "source": "https://www.criticalmetalscorp.com/",
-   "products": "Et råstofprojekt.",
+   "products": "Projekter i sjældne jordarter og lithium. Ikke miner i drift.",
    "customers": "Ingen driftkunder i denne beskrivelse.",
    "role": "Råstofprojekt, ikke produktion.",
    "narrative": [
-    "Critical Metals arbejder med projektet Tanbreez i Grønland. Det gælder sjældne jordarter.",
-    "Denne tekst beskriver ikke en mine i drift."
+    "Critical Metals arbejder med sjældne jordarter i projektet Tanbreez i Grønland. Selskabet skrev 5. oktober 2026, at Grønlands regering har godkendt mineplanen og lukningsplanen, og at planerne rækker til september 2050. Selskabet skriver, at de sidste driftstilladelser mangler, før byggeriet kan gå i gang. Datoen ligger efter beholdningen pr. 1. juni 2026.",
+    "Siden nævner også lithiumprojektet Wolfsberg i Kärnten i Østrig. Et studie af projektet er ikke en mine i drift. En aftale med BMW og et planlagt raffinaderi i Saudi-Arabien er heller ikke drift."
    ],
    "narrativeSources": [
     {
      "label": "Selskabets side",
      "url": "https://www.criticalmetalscorp.com/"
+    },
+    {
+     "label": "Tanbreez, 5. oktober 2026",
+     "url": "https://www.criticalmetalscorp.com/critical-metals-corp-nasdaq-crml-announces-receipt-of-formal-greenland-government-mining-approvals-for-the-tanbreez-mine-valid-through-the-year-2050/"
+    },
+    {
+     "label": "Wolfsberg",
+     "url": "https://criticalmetalscorp.com/projects/wolfsberg-lithium-project/"
     }
    ]
   },

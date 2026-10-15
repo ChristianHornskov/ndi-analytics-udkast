@@ -639,3 +639,13 @@ Forsiden skriver, at selskabet designer og fremstiller satellitplatforme, og at 
 Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Opsendelseslogistik står. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `dbf15e9` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:10 CEST. Critical Metals: planer for Tanbreez er godkendt, og byggeriet er ikke gået i gang. Ikke færdig.**
+
+Meddelelsen er dateret 5. oktober 2026, efter beholdningen pr. 1. juni 2026. Grønland har godkendt mineplanen og lukningsplanen frem til september 2050. Selskabet skriver, at de sidste driftstilladelser mangler, før byggeriet kan gå i gang. Det er ikke en mine i drift. Wolfsberg i Kärnten er et lithiumprojekt. Et studie, en aftale med BMW og et planlagt raffinaderi i Saudi-Arabien er ikke drift. Kursen på siden og ordene om verdens største er ikke taget med. Ingen `reviewedAt`. Blurben og arkivet siger grænsen.
+
+Tjekket i Chromium. Selskabssiden ved 375 px viser AI-udkast, Tanbreez og Wolfsberg. "tjekket mod kilden" er ikke med. Ingen kurs. Kæden og arkivet viser datoen. Ingen konsolfejl. Ingen vandret scroll ved 375 eller 1280 px.
+
+**Push:** `lane-E` @ `d433eca` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
