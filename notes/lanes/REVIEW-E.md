@@ -243,3 +243,7 @@ Zeolit fra minen og anlægget i Preston i Idaho. Smelteværk for antimonoxid i T
 ## Merlin · 2026-10-16 01:55 CEST
 
 Merlin Pilot er software til fly, der allerede er i drift. Samarbejde med den amerikanske specialoperationskommando om C-130J er et mål om længere rækkevidde, ikke en flåde der allerede flyver med softwaren. Ikke Satellogics satellit af samme navn. Ikke på opsendelseslisten. 105 millioner dollars, hundredvis af timer og de næste 100 år er ikke kopieret. AI-udkast uden gennemgangsdato. NDI-blikket og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Lithium Americas · 2026-10-16 01:57 CEST
+
+Thacker Pass i det nordlige Nevada. Byggeriet begyndte i begyndelsen af 2023, før beholdningen. Målet sent i 2027 er ikke fuld drift. Reno-centret er et laboratorium og et pilotanlæg, ikke minen. World's largest, unmatched, børsnavne og ISO er ikke kopieret som en mine. AI-udkast uden gennemgangsdato. NDI-blikket og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.

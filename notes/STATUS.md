@@ -839,3 +839,13 @@ Samarbejdet om C-130J har længere rækkevidde som mål. Det er ikke en flåde, 
 Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Merlin Pilot står. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `114d9a6` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:57 CEST. Lithium Americas skriver, at centret i Reno er et laboratorium. Ikke færdig.**
+
+Byggeriet på Thacker Pass begyndte i begyndelsen af 2023, før beholdningen. Målet sent i 2027 er ikke en mine i fuld drift. Centret afprøver processen og er ikke minen. World's largest er ikke taget med. Ingen `reviewedAt`. NDI-blikket under råstoffer og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Reno står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `af67076` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

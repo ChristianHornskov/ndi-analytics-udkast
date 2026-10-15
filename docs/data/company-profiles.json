@@ -897,15 +897,15 @@
   "CA53681J1030": {
    "name": "Lithium Americas",
    "theme": "energy-resources",
-   "summary": "Udvikler lithiumprojektet Thacker Pass i Nevada. Denne tekst beskriver ikke en mine i fuld drift.",
-   "watch": "Byggeri, tilladelser og om anlægget kommer i produktion.",
+   "summary": "Udvikler lithiumprojektet Thacker Pass i det nordlige Nevada. Selskabet skriver, at byggeriet begyndte i begyndelsen af 2023, og at centret i Reno er et laboratorium. Denne tekst beskriver ikke en mine i fuld drift.",
+   "watch": "Byggeriet på Thacker Pass og om målet i 2027 bliver til drift. Centret i Reno er ikke minen.",
    "source": "https://www.lithiumamericas.com/",
-   "products": "Et lithiumprojekt.",
+   "products": "Lithiumprojektet Thacker Pass. Laboratoriet i Reno er ikke minen.",
    "customers": "Videreforarbejdning, hvis produktionen kommer i gang.",
-   "role": "Råstof til batterier.",
+   "role": "Thacker Pass er under byggeri. Centret i Reno er et laboratorium, ikke minen.",
    "narrative": [
-    "Lithium Americas udvikler Thacker Pass i Nevada. Selskabet skriver, at byggeriet er i gang, og at målet er industriel skala sent i 2027.",
-    "Denne tekst beskriver ikke en mine i fuld drift."
+    "Lithium Americas skriver, at byggeriet på Thacker Pass i det nordlige Nevada begyndte i begyndelsen af 2023. Datoen ligger før beholdningen. Målet er stadig industriel skala sent i 2027. Det er byggeri og et mål, ikke en mine i fuld drift.",
+    "Selskabet skriver, at Lithium Technical Development Center i Reno er et laboratorium og et pilotanlæg, som afprøver processen fra malmen. Det er ikke minen."
    ],
    "narrativeSources": [
     {
