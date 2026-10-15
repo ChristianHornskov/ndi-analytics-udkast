@@ -58,13 +58,23 @@ function ensureXStyles() {
   s.textContent = `
 .x-grid{display:grid;gap:12px;margin-top:12px}
 #x-grid{scroll-margin-top:88px}
+#spor{scroll-margin-top:76px}
 @media(min-width:900px){#x-grid{scroll-margin-top:240px}}
 @media(min-width:980px){.x-grid{grid-template-columns:1fr 1fr}}
 .x-grid .x-card.panel{margin:0}
 article.x-card{display:flex;flex-direction:column;gap:12px;min-width:0;padding:16px 16px 14px;background:radial-gradient(120% 90% at 0% 0%,rgba(158,207,214,.09),transparent 46%),linear-gradient(180deg,#16303a 0%,#102228 100%);border:1px solid #345860;border-radius:16px;box-shadow:0 14px 34px rgba(0,0,0,.22)}
 article.x-card.is-direct{box-shadow:inset 3px 0 0 #9ecfd6,0 14px 34px rgba(0,0,0,.22)}
-article.x-card.is-lead{border-color:#4e7380;padding:18px 18px 16px}
-article.x-card.is-lead .x-text{font-size:18px;line-height:1.5;max-width:68ch}
+article.x-card.is-lead{border-color:#f5ee9e66;padding:18px 18px 16px;background:radial-gradient(90% 80% at 100% 0%,rgba(245,238,158,.14),transparent 46%),linear-gradient(180deg,#16303a 0%,#102228 100%)}
+article.x-card.is-lead .x-text{font-size:clamp(18px,2vw,22px);line-height:1.45;letter-spacing:-.3px;max-width:68ch}
+article.x-card.is-lead .x-because{color:#f5ee9e;font-size:13px}
+article.x-card.is-quote{position:relative;border-color:#f5ee9e66;box-shadow:inset 3px 0 0 #f5ee9e,0 14px 34px rgba(0,0,0,.22);background:radial-gradient(90% 80% at 100% 0%,rgba(245,238,158,.14),transparent 46%),linear-gradient(180deg,#16303a 0%,#102228 100%)}
+article.x-card.is-quote .x-quote{position:relative;margin:0;padding:2px 0 0 34px}
+article.x-card.is-quote .x-qmark{position:absolute;left:0;top:-8px;font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-size:46px;line-height:1;color:#f5ee9e;font-weight:500}
+article.x-card.is-quote .x-text{font-size:clamp(18px,1.7vw,23px);line-height:1.4;letter-spacing:-.3px;max-width:68ch}
+article.x-card.is-quote .x-by{display:flex;gap:10px;align-items:center;margin-top:14px;padding-top:12px;border-top:1px solid #345860}
+article.x-card.is-quote .x-by time{margin-left:auto}
+article.x-card.is-quote .x-why{margin-top:8px}
+article.x-card.is-quote .x-foot{margin-top:10px}
 .x-top{display:flex;gap:10px;align-items:flex-start}
 .x-ava{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:13px;color:#050a0f;flex:none;letter-spacing:.2px;box-shadow:0 0 0 2px #0c1c22,0 0 0 3px #89aeb466}
 .x-who{min-width:0;flex:1}
@@ -79,7 +89,7 @@ article.x-card.is-lead .x-text{font-size:18px;line-height:1.5;max-width:68ch}
 .x-foot{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:auto}
 .x-curated{font-size:10px;letter-spacing:.6px;text-transform:uppercase;color:#f5ee9e;border:1px solid #f5ee9e66;border-radius:999px;padding:3px 8px}
 .x-house{font-size:10px;letter-spacing:.6px;text-transform:uppercase;color:var(--cyan);border:1px solid #9ecfd666;border-radius:999px;padding:3px 8px}
-.x-mark{background:#f5ee9e33;color:inherit;border-radius:3px;padding:0 2px}
+.x-mark{background:#f5ee9e;color:#1c1604;border-radius:4px;padding:0 4px;font-weight:650}
 .x-spot{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:4px 0 16px}
 .x-door{text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:8px;min-height:208px;padding:16px 16px 14px;border-radius:16px;border:1px solid #345860;background:radial-gradient(90% 80% at 100% 0%,rgba(158,207,214,.13),transparent 52%),#0d1c22}
 .x-door:hover{border-color:var(--cyan);background:#132a32}
@@ -89,6 +99,7 @@ article.x-card.is-lead .x-text{font-size:18px;line-height:1.5;max-width:68ch}
 .x-door-top strong{font-size:22px;letter-spacing:-.4px}
 .x-door-n{color:var(--muted);font-size:12px;font-variant-numeric:tabular-nums;white-space:nowrap}
 .x-door-q{color:var(--text);font-size:14px;line-height:1.45;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;min-height:calc(1.45em * 3)}
+.x-door-q::before{content:"„";color:#f5ee9e;font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-size:22px;line-height:0;margin-right:5px}
 .x-door-by{margin-top:auto;color:var(--faint);font-size:12px}
 .x-tools{margin-top:4px}
 @media(min-width:900px){
@@ -114,12 +125,53 @@ article.x-card.is-lead .x-text{font-size:18px;line-height:1.5;max-width:68ch}
   .x-says .x-card.is-lead,#x-grid .x-card.is-lead{grid-column:1 / -1}
 }
 .x-says .x-card:not(.is-lead) .x-text{display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.x-door.is-direct{box-shadow:inset 3px 0 0 #9ecfd6}
+.x-door.is-theme{box-shadow:inset 3px 0 0 #617d84}
+.x-door.is-direct.is-on{box-shadow:inset 3px 0 0 #9ecfd6,inset 0 -2px 0 var(--yellow)}
+.x-door.is-theme.is-on{box-shadow:inset 3px 0 0 #617d84,inset 0 -2px 0 var(--yellow)}
+.x-lane{margin-top:16px;min-width:0;border-left:3px solid transparent;padding-left:12px}
+.x-lane.is-direct{border-left-color:#9ecfd6}
+.x-lane.is-theme{border-left-color:#617d84}
+.x-lane-h{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:baseline;margin:0 0 8px}
+.x-lane-k{font-size:11px;letter-spacing:1.3px;font-weight:700;color:var(--cyan)}
+.x-lane.is-theme .x-lane-k{color:var(--muted)}
+.x-lane.is-curated{border-left-color:#f5ee9e}
+.x-lane.is-house{border-left-color:#9ecfd6}
+.x-lane.is-curated .x-lane-k{color:#f5ee9e}
+.x-lane.is-house .x-lane-k{color:var(--cyan)}
+.x-stage{min-width:0}
+#x-grid > .x-stage{grid-column:1 / -1}
+.x-empty .x-zero{font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;color:#f5ee9e;font-weight:500}
+.x-lane-h span:last-child{color:var(--faint);font-size:12px}
+.x-lane .x-grid{margin-top:0}
+.x-lane.is-theme .x-card{background:linear-gradient(180deg,#12262c 0%,#0e1c21 100%);box-shadow:none}
+.x-lane.is-theme .x-card.is-lead{background:radial-gradient(90% 80% at 100% 0%,rgba(245,238,158,.12),transparent 46%),linear-gradient(180deg,#12262c 0%,#0e1c21 100%)}
+.x-lane .x-grid .x-card:only-child{grid-column:1 / -1}
+#x-grid > .x-lane{grid-column:1 / -1}
+@media(min-width:980px){
+  #x-grid:not(:has(.is-lead)) > .x-card:last-child:nth-child(odd){grid-column:1 / -1}
+}
+.x-miss{font-size:12px;color:var(--faint);line-height:1.45;margin:10px 0 0}
+.x-zero{font-size:40px;line-height:1;font-weight:600;letter-spacing:-1px;color:var(--cyan);margin:0 0 6px;font-variant-numeric:tabular-nums}
+body.x-focused .x-door{min-height:0;padding:12px 14px 10px;gap:4px}
+body.x-focused .x-door-q,body.x-focused .x-door-by{display:none}
+body.x-focused .x-spot{margin-bottom:8px}
+body.x-focused .x-filters{margin:4px 0}
+body.x-focused .x-filters .control.is-zero:not(.active){display:none}
+body.x-focused .x-tools{padding-top:4px;padding-bottom:6px}
+@media(min-width:900px){
+  body.x-focused #x-grid{scroll-margin-top:120px}
+}
 @media(max-width:700px){
   .x-spot{grid-template-columns:1fr}
   .x-grid{grid-template-columns:1fr}
   .x-card time{white-space:normal}
   .x-door{min-height:0}
   .x-door-q{min-height:0}
+  body.x-focused .x-spot{display:flex;grid-template-columns:none;overflow-x:auto;gap:8px}
+  body.x-focused .x-door{flex:0 0 78%}
+  body.x-focused .x-tools{position:static;background:transparent;border-bottom:0;backdrop-filter:none}
+  body.x-focused #x-grid{scroll-margin-top:0}
 }
 @media(prefers-reduced-motion:reduce){
   .x-door{transition:none}
@@ -276,6 +328,50 @@ export function postMatchesQuery(p, q) {
   return [...extra].some((a) => blob.includes(String(a).toLowerCase()));
 }
 
+/**
+ * Keep ranking (score, then date). On a theme basket, keep one slot for a
+ * theme-only hit so NVDA/SoftBank do not hide the tema-lane.
+ * Company pages pass one ticker plus a name (length ≤ 2) and do not reserve.
+ */
+export function arrangeHits(ranked, limit, { reserveTheme = false } = {}) {
+  const cap = Math.max(0, Number(limit) || 0);
+  const direct = ranked.filter((h) => h.score >= 2);
+  const theme = ranked.filter((h) => h.score < 2);
+  if (reserveTheme && direct.length && theme.length && cap >= 2) {
+    const directTake = direct.slice(0, Math.min(direct.length, cap - 1));
+    const themeTake = theme.slice(0, cap - directTake.length);
+    return { direct: directTake, theme: themeTake, total: ranked.length };
+  }
+  const slice = ranked.slice(0, cap);
+  return {
+    direct: slice.filter((h) => h.score >= 2),
+    theme: slice.filter((h) => h.score < 2),
+    total: ranked.length,
+  };
+}
+
+/** Feed badge. Query uses the same ticker match as the company panel. */
+export function feedHitKind(p, { q = '', f = 'all' } = {}) {
+  const query = String(q || '').trim();
+  if (query) {
+    const hit = matchPosts({ posts: [p] }, { tickers: [query] })[0];
+    if (hit?.score >= 2) return 'direct';
+    if (hit) return 'theme';
+    return '';
+  }
+  if (!f || f === 'all' || f === 'ndi') return '';
+  const themes = f === 'chips' ? ['chips', 'ai'] : [f];
+  const tickers = f === 'chips' ? ['NVDA'] : [];
+  const hit = matchPosts({ posts: [p] }, { tickers, themes })[0];
+  if (!hit) return '';
+  return hit.score >= 2 ? 'direct' : 'theme';
+}
+
+function markTerm(hit) {
+  if (!hit || hit.score < 2) return '';
+  return (hit.reasons || []).find((r) => /^(SoftBank|NVDA)$/i.test(String(r))) || '';
+}
+
 export function postWho(p, who) {
   if (!who || who === 'all') return true;
   if (who === 'curated') return p.curatedFrom === 'mads_following';
@@ -317,6 +413,10 @@ function highlightTerms(q) {
   return terms.sort((a, b) => b.length - a.length);
 }
 
+export function highlightHtml(text, q) {
+  return highlight(text, q);
+}
+
 function highlight(text, q) {
   const safe = esc(text);
   const terms = highlightTerms(q);
@@ -345,7 +445,32 @@ export function xCard(p, opt = {}) {
       : '';
   const because = reasons.length ? `<span class="x-because">Vist fordi: ${reasons.map((r) => esc(r)).join(' · ')}</span>` : '';
   const why = (hit || because) ? `<p class="x-why">${hit}${because}</p>` : '';
-  const cls = ['x-card', 'panel', opt.lead ? 'is-lead' : '', opt.hitKind === 'direct' ? 'is-direct' : ''].filter(Boolean).join(' ');
+  const cls = ['x-card', 'panel', opt.lead ? 'is-lead is-quote' : '', opt.hitKind === 'direct' ? 'is-direct' : ''].filter(Boolean).join(' ');
+  const foot = `<p class="x-foot">
+    <a class="outline-btn small" href="${esc(p.url)}" rel="noopener noreferrer" target="_blank">Åbn på X ↗</a>
+    ${house}
+    ${curated}
+    ${tags}
+  </p>`;
+  const text = `<p class="x-text">${highlight(p.text, opt.query)}</p>`;
+  if (opt.lead) {
+    return `<article class="${cls}">
+  <blockquote class="x-quote">
+    <span class="x-qmark" aria-hidden="true">„</span>
+    ${text}
+  </blockquote>
+  <div class="x-by">
+    <span class="x-ava" style="background:${avatarColor(p.username)}" aria-hidden="true">${esc(initials(p))}</span>
+    <div class="x-who">
+      <strong>${esc(p.name || p.username)}</strong>
+      <span>@${esc(p.username)}</span>
+    </div>
+    <time datetime="${esc(p.created_at)}">${esc(fmtXDate(p.created_at))}</time>
+  </div>
+  ${why}
+  ${foot}
+</article>`;
+  }
   return `<article class="${cls}">
   <header class="x-top">
     <span class="x-ava" style="background:${avatarColor(p.username)}" aria-hidden="true">${esc(initials(p))}</span>
@@ -356,13 +481,8 @@ export function xCard(p, opt = {}) {
     <time datetime="${esc(p.created_at)}">${esc(fmtXDate(p.created_at))}</time>
   </header>
   ${why}
-  <p class="x-text">${highlight(p.text, opt.query)}</p>
-  <p class="x-foot">
-    <a class="outline-btn small" href="${esc(p.url)}" rel="noopener noreferrer" target="_blank">Åbn på X ↗</a>
-    ${house}
-    ${curated}
-    ${tags}
-  </p>
+  ${text}
+  ${foot}
 </article>`;
 }
 
@@ -392,33 +512,70 @@ export function xSaysPanel(pack, { tickers = [], themes = [], limit = 4, title =
   ensureXStyles();
   if (!pack?.posts?.length) return '';
   const ranked = matchPosts(pack, { tickers, themes });
-  const hits = ranked.slice(0, limit);
+  const reserveTheme = (tickers || []).filter(Boolean).length > 2;
+  const view = arrangeHits(ranked, limit, { reserveTheme });
+  const shown = view.direct.length + view.theme.length;
   const snap = esc(fmtXDate(pack.snapshotAt) || String(pack.snapshotAt || '').slice(0, 10));
   const more = feedHref({ tickers, themes });
-  if (!hits.length) {
+  if (!shown) {
     if (!showEmpty) return '';
     return `<section class="panel x-says">
   <div class="x-says-h"><h2 class="panel-h">${esc(title)}</h2></div>
   <p class="band">${esc(X_LABEL)}. Snapshot ${snap}.</p>
   <div class="x-empty">
+    <p class="x-zero" aria-hidden="true">0</p>
     <p class="k">Ingen opslag i udsnittet</p>
     <p>Der er ikke et udvalgt opslag, der matcher dette selskab eller tema.</p>
     <p><a href="ndi-paa-x.html">Se hele feedet</a></p>
   </div>
 </section>`;
   }
-  const nLabel = ranked.length > hits.length
-    ? `Viser ${hits.length} af ${ranked.length} opslag`
-    : `${hits.length} opslag`;
-  const cards = hits.map((h, i) => xCard(h.post, {
-    reasons: h.reasons,
-    lead: i === 0,
-    hitKind: h.score >= 2 ? 'direct' : 'theme',
-  })).join('');
-  return `<section class="panel x-says">
-  <div class="x-says-h"><h2 class="panel-h">${esc(title)}</h2><span class="x-says-n">${nLabel}</span></div>
-  <p class="band">${esc(X_LABEL)}. Snapshot ${snap}.</p>
+  const bits = [];
+  if (view.direct.length) bits.push(`${view.direct.length} direkte`);
+  if (view.theme.length) bits.push(`${view.theme.length} tema`);
+  const nLabel = ranked.length > shown
+    ? `Viser ${bits.join(' og ')} · ${ranked.length} i alt`
+    : bits.join(' og ');
+  const leadHit = view.direct[0] || view.theme[0];
+  const leadKind = view.direct.length ? 'direct' : 'theme';
+  const restDirect = view.direct.length ? view.direct.slice(1) : [];
+  const restTheme = view.direct.length ? view.theme : view.theme.slice(1);
+  const quote = `<div class="x-stage">${xCard(leadHit.post, {
+    reasons: leadHit.reasons,
+    lead: true,
+    hitKind: leadKind,
+    query: markTerm(leadHit),
+  })}</div>`;
+  const lane = (kind, hits) => {
+    if (!hits.length) return '';
+    const quotedTheme = !view.direct.length;
+    const kicker = kind === 'direct' ? 'Øvrige direkte træf' : (quotedTheme ? 'Øvrige tema' : 'Tema');
+    const hint = kind === 'direct'
+      ? 'Nævner selskab eller ticker.'
+      : 'Rammer temaet. Ikke en ticker fra udsnittet.';
+    const cards = hits.map((h) => xCard(h.post, {
+      reasons: h.reasons,
+      hitKind: kind,
+      query: markTerm(h),
+    })).join('');
+    return `<div class="x-lane ${kind === 'direct' ? 'is-direct' : 'is-theme'}">
+  <p class="x-lane-h"><span class="x-lane-k">${kicker}</span><span>${hint}</span></p>
   <div class="x-grid">${cards}</div>
+</div>`;
+  };
+  const themeLeft = ranked.filter((h) => h.score < 2).length - view.theme.length;
+  const miss = view.direct.length && !view.theme.length && themeLeft > 0
+    ? '<p class="x-miss">Kun direkte træf i dette udsnit. Opslag, der bare deler tema, er udeladt, så navnet står først.</p>'
+    : !view.direct.length
+      ? `<p class="x-miss">Ingen opslag i udsnittet nævner selskabet eller tickeren. ${restTheme.length ? 'Kortene er tema.' : 'Kortet er tema.'}</p>`
+      : '';
+  return `<section class="panel x-says">
+  <div class="x-says-h"><h2 class="panel-h">${esc(title)}</h2><span class="x-says-n">${esc(nLabel)}</span></div>
+  <p class="band">${esc(X_LABEL)}. Snapshot ${snap}.</p>
+  ${quote}
+  ${lane('direct', restDirect)}
+  ${lane('theme', restTheme)}
+  ${miss}
   <p class="link-row" style="margin-top:12px"><a class="outline-btn small" href="${more}">Flere opslag i feedet →</a></p>
 </section>`;
 }
