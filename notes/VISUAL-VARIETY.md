@@ -31,3 +31,33 @@ Se `notes/VISUAL-VARIETY-REVIEW.md`.
 
 | Flodsystem-dæmninger | 5 dams grafik | ✅ vaerdikaeder |
 | Rum-citatblok | Musk kun som citat | ✅ |
+
+## Drawdown (lane D)
+
+Siden må ikke være fire ens kort plus to mørke kasser. Formerne skifter ned ad siden.
+
+| Form | Hvad den viser | Status |
+|---|---|---|
+| Hero-tal | Det ene dybeste fald, med datoer og genopretning | ✅ `.hero-stat` |
+| Rolige tal | Middel og median som to linjer, ikke kort | ✅ `.quiet-stats` |
+| Gul annotation | Hvor serien ligger under vand i dag | ✅ `.anno` |
+| Underwater | Tid. Gul prik = dybeste bund. Ring = seneste dag | ✅ `.figure` |
+| Prikfordeling | Hvorfor middel ligger dybere end median | ✅ `.figure.plain` |
+| Episodeliste | De fire fald dybere end 10 %, med varighed | ✅ `.ep-ledger` |
+| Årssøjler | Kalenderafkast som small multiples, link til periode | ✅ `.year-rail` |
+
+Et plus-år kan rumme det dybeste fald. 2025 er eksemplet i copy, regnet fra serien.
+
+## Sammenlign
+
+Kortpar (to klasser), tidslinje uden panel, stort tal for overlap, ét panel med parvise temasøjler. Ikke tre `.panel` i træk. Krydslink til drawdown overlever, når siden er hentet.
+
+## Embed
+
+Widgetten er ét panel. Call-to-action står udenfor, med link til største fald (AKK-teksten siger, at drawdown vises efter 12 måneder). Sætningen "Fonden har intet fast benchmark." er en rolig linje. Nasdaq-klasser er fjernet fra embed-CSS.
+
+## Fælles tokens i `ndi.css` (sparsomt)
+
+`--ink`, `.figure`, `.figure.plain`, `.anno`, `.hero-stat`, `.quiet-stats`, `.ep-ledger`, `.year-rail`, `.h-section`.
+
+`.scarce` og `.tm-svg` bliver page-local på vaerdikaeder. De er ikke løftet ud.

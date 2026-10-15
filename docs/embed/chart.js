@@ -148,6 +148,14 @@
       el.setAttribute('aria-selected', String(active));
       el.tabIndex = active ? 0 : -1;
     });
+    const dd = document.getElementById('drawdown-link');
+    if (dd) {
+      const id = FUNDS[state.fund] || 'pmindi';
+      dd.href = `../drawdown.html?fund=${id}`;
+      dd.textContent = state.fund === 'PMINDIAKK'
+        ? 'Drawdown vises efter 12 måneder →'
+        : 'Se største fald →';
+    }
   }
 
   function updateMetrics() {
@@ -365,7 +373,7 @@
     const el = $('#chart-loading');
     el.hidden = false;
     el.classList.add('error');
-    el.innerHTML = `<div><p>${escape(message)}</p><button type="button" class="outline-button" id="retry-chart" style="margin-top:14px">Prøv igen</button></div>`;
+    el.innerHTML = `<div><p>${escape(message)}</p><button type="button" class="outline-button" id="retry-chart">Prøv igen</button></div>`;
     $('#retry-chart').addEventListener('click', () => {
       el.classList.remove('error');
       el.textContent = 'Henter data…';

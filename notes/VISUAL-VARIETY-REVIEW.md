@@ -35,3 +35,27 @@ Ship. Visual-variety pass er i planen (`VISUAL-VARIETY.md`). Næste builder: SHO
 
 ## Update ~23:02 CEST
 - **SVG-treemap + sunburst shipped** på vaerdikaeder (toggle). SHOULD 1 lukket. Legend + klik til tema.
+
+## Review · drawdown, sammenlign, embed · ~23:55 CEST
+
+**Sider:** `docs/drawdown.html`, `docs/sammenlign.html`, `docs/embed/chart.html` + `ndi.css`.  
+**Set i Chromium** ved 1280, 375 og 320. Ingen sidescroll. Ingen konsolfejl. AKK-gate holder (ingen procent på AKK-kortet, drawdown-siden siger 12 måneder).
+
+### Dom
+**Godkendt med SHOULD.** Drawdown skifter form: hero-tal, annotation, underwater, prikker, liste, årssøjler. Gul bruges til "lige nu" og til den dybeste bund. Sammenlign har ét panel tilbage (temasøjler). Embed er stadig ét widget-panel, med handlingen udenfor.
+
+### Stærkt
+1. Underwater viser både bunden i april 2025 (ca. −36 %) og at serien stadig er under vand (ca. −23 % pr. 14. okt. 2026).
+2. Prikfordelingen gør middel (−5,2 %) og median (−2,8 %) forståelige: de fleste fald ligger tæt på nul.
+3. De fire dybe episoder kan læses uden hover. Den åbne episode er den gule bjælke.
+4. 2025 i plus og alligevel det dybeste fald. Søjlen er afkast, ikke drawdown.
+
+### SHOULD
+1. Underwater kan ikke skrubbes. Datoen på en vilkårlig dag står ikke ved kurven. Næste cyklus: tastatur og pointer, uden at hover er den eneste måde at læse tallet.
+2. På 375 er prikbunken tæt. Den bærer pointen, og listen under har de fire dybe tal.
+3. De to sammenlign-kort ligner stadig hinanden. Det er parret. De må ikke få en tredje ens kasse ved siden af.
+
+### Pas på
+- Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
+- Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.
+- `.scarce` og `.tm-svg` er ikke globale.

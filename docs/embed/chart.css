@@ -236,23 +236,15 @@ b, strong { font-weight: 700; }
   font-variant-numeric: tabular-nums;
 }
 
-.benchmark-legend { border-color: var(--yellow); }
-.benchmark-legend strong {
-  color: var(--yellow);
-  text-decoration: line-through;
-  text-decoration-thickness: 1px;
-}
 button.legend {
   font: inherit;
   color: inherit;
 }
-.nasdaq-toggle:disabled {
-  opacity: .42;
-  cursor: default;
-}
-.nasdaq-toggle:disabled:hover { color: inherit; }
 
-.nasdaq-note {
+.bench-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   color: var(--muted);
   font-size: 12px;
   line-height: 1.55;
@@ -497,6 +489,41 @@ button.legend {
   font-size: 14px;
 }
 
+.embed-cta {
+  margin-top: 18px;
+  padding: 14px 0 4px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.embed-cta p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.45;
+  max-width: 42ch;
+}
+
+.embed-cta-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.embed-cta .outline-button {
+  font-size: 13px;
+  padding: 8px 14px;
+  min-height: 44px;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.chart-loading .outline-button { margin-top: 14px; }
+
 @media (max-width: 800px) {
   .panel { padding: 22px 18px 16px; }
   .control { font-size: 13px; min-height: 42px; padding: 0 10px; }
@@ -551,7 +578,8 @@ button.legend {
 
   .chart-readout { font-size: 12px; min-height: 32px; }
   .chart-pointe { font-size: 13px; line-height: 1.6; }
-  .nasdaq-note { font-size: 11px; }
+  .bench-note { font-size: 11px; }
+  .embed-cta { align-items: flex-start; }
 
   .metrics-row { grid-template-columns: 1fr; gap: 14px; }
   .metrics-grid {

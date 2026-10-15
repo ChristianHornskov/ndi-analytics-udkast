@@ -245,3 +245,17 @@ HEAD `b35518b`. Visual-variety request shipped + reviewed. MADS værdikæde/quan
 
 ## Smoke · ~23:10 CEST
 - `scripts/smoke.mjs`: **52/52 fail 0** (inkl. vaerdikaeder). HEAD `37b6d55`.
+
+## Fra Grok lane-D
+
+**2026-10-15 23:56 CEST. Drawdown-former, sammenlign, embed. Ikke færdig.**
+
+Drawdown er ikke længere fire ens kort og to mørke kasser. Hero-tal for det dybeste fald (−35,8 %, 18. feb. 2025 til 8. apr. 2025, tilbage 26. aug. 2025). Gul linje om at serien pr. 14. okt. 2026 stadig ligger −23,4 % under toppen fra 2. jun. 2026. Underwater-figur, prikfordeling (middel −5,2 %, median −2,8 %, 41 episoder), liste over de fire fald dybere end 10 %, årssøjler med link til periode. 2025 sluttede i plus og rummede alligevel det dybeste fald.
+
+Sammenlign: tidslinje og overlap står uden panel. Temasøjlerne er det ene panel. Krydslinks til drawdown, værdikæder og udbytte-siden bliver stående efter load.
+
+Embed: CTA i CSS, link til største fald (AKK siger at drawdown vises efter 12 måneder). "Fonden har intet fast benchmark." Nasdaq-klasser er væk fra embed-CSS.
+
+Fælles tokens, sparsomt: `--ink`, `.figure`, `.anno`, `.hero-stat`, `.ep-ledger`, `.year-rail`. `.scarce` og `.tm-svg` er stadig page-local.
+
+Tjekket i Chromium ved 1280, 375 og 320. Ingen sidescroll, ingen konsolfejl. AKK-kortet har ingen afkastprocent. Review i `notes/VISUAL-VARIETY-REVIEW.md`. Næste: skrub på underwater, så en dag kan læses uden hover som eneste vej. Ikke færdig.
