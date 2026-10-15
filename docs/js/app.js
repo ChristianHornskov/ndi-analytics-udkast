@@ -548,7 +548,7 @@ function renderUdforsk(root) {
     <p style="font-size:12px;color:var(--muted);margin:8px 0">Tema-dybsider: ${themes.map((t) => `<a href="tema.html?slug=${encodeURIComponent(t)}&fund=${state.fund}">${daTheme(t)}</a>`).join(' · ')} · <a href="selskaber.html?fund=${state.fund}">A–Z liste</a></p>
     <!-- Modenhedsfiltre skjult indtil manuel klassifikation -->
     <div class="chips" id="chips"></div>
-    <p style="font-size:12px;color:var(--muted)">${list.length} resultater · udkast-klassifikation</p>
+    <p style="font-size:12px;color:var(--muted)" id="filter-status" aria-live="polite">${list.length} resultater · udkast-klassifikation</p>
     ${list.length ? positionsTable(list, fund) : emptyScreener(fund)}
     ${warnHtml()}`;
 
