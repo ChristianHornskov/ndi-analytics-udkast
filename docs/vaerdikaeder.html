@@ -146,9 +146,28 @@
     @media(min-width:760px){.levers li:not(:last-child)::after{content:"→";position:absolute;right:-9px;top:50%;transform:translateY(-50%);color:var(--yellow);font-size:13px;background:#0d1d23;padding:0 1px}}
     .cost-ndi{margin:10px 0 0;font-size:13px;line-height:1.5;color:var(--text);border-left:3px solid var(--brand);padding:4px 0 4px 10px}
     .cost-ndi .tag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.4px;color:#0b171d;background:var(--cyan);border-radius:4px;padding:0 5px;margin-right:6px}
+    .money{margin-top:16px;border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:linear-gradient(180deg,#0e2027,#0b171d)}
+    .money h3{font-size:15px;color:var(--cyan);margin:0 0 4px}
+    .mn-lanes{display:grid;gap:10px;margin-top:10px}
+    @media(min-width:760px){.mn-lanes{grid-template-columns:1fr 1fr 1fr}}
+    .mn-lane{border:1px solid var(--line);border-top:3px solid var(--brand);border-radius:10px;padding:10px 12px;background:#0b171d;font-size:13px;line-height:1.45;color:var(--muted)}
+    .mn-lane.run{border-top-color:var(--cyan)}
+    .mn-lane.early{border-top-style:dashed;border-top-color:#829da0}
+    .mn-lane h4{font-size:14px;margin:0 0 4px;color:var(--text);display:flex;align-items:center;gap:8px}
+    .mn-lane h4 .ic{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:#16323b;font-size:14px}
+    .mn-lane svg{display:block;width:100%;height:auto;margin:6px 0}
+    .mn-lane p{margin:0}
+    .mn-chips{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0;padding:0;list-style:none}
+    .mn-chips a{display:inline-flex;gap:5px;align-items:center;font-size:12px;border:1px solid var(--line);border-radius:999px;padding:3px 9px;text-decoration:none;color:var(--text);background:#10232a}
+    .mn-chips a:hover,.mn-chips a:focus{border-color:var(--yellow)}
+    .mn-chips b{color:var(--cyan);font-weight:700}
+    .mn-ndi{margin:8px 0 0;font-size:12.5px;color:var(--text);border-left:3px solid var(--cyan);padding:2px 0 2px 8px}
+    .mn-ndi .tag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.4px;color:#0b171d;background:var(--cyan);border-radius:4px;padding:0 5px;margin-right:6px}
+    .mn-bridge{margin:10px 0 0;font-size:13px;line-height:1.5;color:var(--text);border:1px dashed var(--yellow);border-radius:10px;padding:8px 10px}
+    .mn-bridge::before{content:"⇄ ";color:var(--yellow);font-weight:700}
     .a-pane{display:none;margin:4px 0 18px;border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:linear-gradient(180deg,#0e2027,#0b171d)}
     .a-pane.on{display:block}
-    #a-pane,#e-pane,#p-pane,#sp-cost,#sp-trip,#q-hz,#q-br,#q-gl{scroll-margin-top:110px}
+    #a-pane,#e-pane,#p-pane,#sp-cost,#sp-trip,#sp-money,#q-hz,#q-br,#q-gl,#gloss-wrap,#p-gloss-wrap,#e-gloss-wrap{scroll-margin-top:110px}
     .trip{margin-top:16px;border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:linear-gradient(180deg,#0b171d,#0e2027)}
     .trip h3{font-size:15px;color:var(--cyan);margin:0 0 4px}
     .trip-grid{display:grid;gap:12px;margin-top:10px}
@@ -356,6 +375,7 @@
               <li><b>Måske compute.</b> Idéen om datacentre i kredsløb er tidlig og usikker. Se citatet nedenfor.</li>
             </ol>
             <p class="src" style="margin-top:8px"><a href="?kaede=space#sp-trip" data-sec="space:sp-trip">🛰 Følg én satellit fra fabrik til tjeneste, trin for trin →</a></p>
+            <p class="src" style="margin-top:4px"><a href="?kaede=space#sp-money" data-sec="space:sp-money">🔁 Hvordan tjener rumkæden penge? Én gang eller løbende →</a></p>
           </div>
         </div>
         <section class="cost" id="sp-cost" aria-labelledby="sp-cost-h" hidden>
@@ -384,6 +404,13 @@
             </div>
           </div>
           <p class="src" id="trip-note" style="margin-top:8px"></p>
+        </section>
+        <section class="money" id="sp-money" aria-labelledby="mn-h" hidden>
+          <h3 id="mn-h"></h3>
+          <p class="src" id="mn-lede"></p>
+          <div class="mn-lanes" id="mn-lanes"></div>
+          <p class="mn-bridge" id="mn-bridge"></p>
+          <p class="src" id="mn-note" style="margin-top:6px"></p>
         </section>
         <div class="sp-learn">
           <figure style="margin:0">
@@ -814,6 +841,36 @@
       show(0);
       document.getElementById('sp-trip').hidden = false;
     })(sp?.trip);
+    // Hvordan tjener kæden penge: én gang, løbende, endnu tidligt (vores forenkling; antal fra beholdningen)
+    (function renderMoney(m) {
+      if (!m?.lanes?.length) return;
+      const asOf = fmtDate(pack.asOf);
+      // Skitse af betalinger over tid, ikke tal
+      const sketch = (kind) => {
+        const W = 200, H = 50, base = 36;
+        let bars = '';
+        if (kind === 'once') bars = `<rect x="18" y="8" width="14" height="${base - 8}" rx="2" fill="var(--brand)"/>`;
+        else if (kind === 'run') bars = Array.from({ length: 11 }, (_, i) => `<rect x="${18 + i * 16}" y="${base - 12}" width="9" height="12" rx="2" fill="var(--cyan)" fill-opacity=".85"/>`).join('');
+        else bars = [0, 1, 2].map(i => `<rect x="${60 + i * 34}" y="${base - 10}" width="12" height="10" rx="2" fill="none" stroke="#829da0" stroke-dasharray="2 2"/>`).join('') + `<text x="170" y="${base - 2}" fill="#829da0" font-size="13">?</text>`;
+        return `<svg viewBox="0 0 ${W} ${H}" aria-hidden="true"><line x1="10" y1="${base}" x2="${W - 6}" y2="${base}" stroke="#3a5a63"/><text x="${W - 6}" y="${H - 2}" fill="var(--muted)" font-size="8.5" text-anchor="end">tid →</text>${bars}</svg>`;
+      };
+      const chip = (id) => {
+        const l = sp.links.find(x => x.id === id);
+        if (!l) return '';
+        const n = l.count ? `<b>${l.count}</b>` : '<b>0</b>';
+        return `<li><a href="#lk-${esc(l.id)}" data-open="${esc(l.id)}" aria-label="${esc(l.short || l.label)}: ${l.count} selskaber pr. ${asOf}. Åbn leddet"><span aria-hidden="true">${l.icon}</span>${esc(l.short || l.label)} ${n}</a></li>`;
+      };
+      document.getElementById('mn-h').textContent = m.title;
+      document.getElementById('mn-lede').textContent = m.lede;
+      document.getElementById('mn-lanes').innerHTML = m.lanes.map(x =>
+        `<div class="mn-lane ${esc(x.key)}"><h4><span class="ic" aria-hidden="true">${x.icon}</span>${esc(x.k)}</h4>${sketch(x.pulse)}<p>${esc(x.t)}</p>`
+        + `<ul class="mn-chips" aria-label="Led i sporet">${x.links.map(chip).join('')}</ul>`
+        + (x.ndi ? `<p class="mn-ndi"><span class="tag">NDI</span>${esc(x.ndi.t)} <span class="src">Kilde: ${esc(x.ndi.src)}</span></p>` : '')
+        + `</div>`).join('');
+      document.getElementById('mn-bridge').innerHTML = esc(m.bridge) + (m.bridgeLink ? ` <a href="?kaede=space#${esc(m.bridgeLink)}" data-sec="space:${esc(m.bridgeLink)}">Følg satellitten →</a>` : '');
+      document.getElementById('mn-note').textContent = m.note || '';
+      document.getElementById('sp-money').hidden = false;
+    })(sp?.money);
     document.getElementById('sp-latency').textContent = sp?.latency || '';
     (function renderAltitudes(items) {
       if (!items?.length) return;

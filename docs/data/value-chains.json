@@ -3717,6 +3717,53 @@
      }
     ],
     "note": "Rejsen er generel baggrundsviden, ikke NDI's synspunkter, og tiderne er omtrentlige. Antal og navne er fra den forsinkede beholdning pr. 1. juni 2026. Navnene er eksempler på, hvem der er tilordnet leddet. De er ikke en rangering og ikke en anbefaling."
+   },
+   "money": {
+    "title": "Hvordan tjener rumkæden penge?",
+    "lede": "Nogle led får betaling én gang, når noget er bygget eller sendt op. Andre led får betaling hver måned, så længe tjenesten kører. Forskellen forklarer, hvorfor kæden ser anderledes ud end for ti år siden.",
+    "lanes": [
+     {
+      "key": "once",
+      "icon": "🧾",
+      "k": "Betales én gang",
+      "t": "Kunden betaler for en ting eller en tur: en motor, en opsendelse eller en satellit. Når leverancen er sket, skal der findes en ny ordre.",
+      "links": [
+       "parts",
+       "launch",
+       "sats"
+      ],
+      "pulse": "once"
+     },
+     {
+      "key": "run",
+      "icon": "🔁",
+      "k": "Betales løbende",
+      "t": "Kunden betaler abonnement for forbindelse eller data, så længe satellitterne leverer. Det er her, værdien flytter hen, når opsendelse bliver billig.",
+      "links": [
+       "satcom",
+       "eo"
+      ],
+      "pulse": "run",
+      "ndi": {
+       "t": "NDI's selskabsprofil beskriver Starlink som en løbende tjeneste, ikke blot en opsendelse.",
+       "src": "Selskabsprofil (AI-udkast)"
+      }
+     },
+     {
+      "key": "early",
+      "icon": "⏳",
+      "k": "Endnu tidligt",
+      "t": "Private rumstationer, månelandere og compute i rummet har få eller ingen faste kunder endnu. Meget afhænger af kontrakter med rumagenturer, og af om idéerne bliver til markeder.",
+      "links": [
+       "orbit",
+       "space-compute"
+      ],
+      "pulse": "early"
+     }
+    ],
+    "bridge": "Den samme satellit kan høre til begge spor. Den sælges én gang og leverer derefter en tjeneste, der betales løbende. Når den efter nogle år skal udskiftes, kommer der igen ordrer på dele, samling og opsendelse.",
+    "bridgeLink": "sp-trip",
+    "note": "Opdelingen er vores forenkling og generel baggrund, ikke NDI's klassifikation. Et selskab kan tjene penge på flere måder. Søjlerne er en skitse, ikke tal. Antal er selskaber i den forsinkede beholdning pr. 1. juni 2026, som er tilordnet leddet. Det er ikke en rangering eller en anbefaling."
    }
   },
   {

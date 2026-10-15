@@ -57,6 +57,8 @@
  .oc p{font-size:12.5px;line-height:1.45;margin:0;color:var(--muted)}
  .oc .oc-n{font-size:12px;color:var(--yellow)}
  .oc a{font-size:12.5px}
+ .oc a.oc-gl{font-size:12px;color:var(--muted)}
+ .oc a.oc-gl span{color:var(--yellow)}
  .oc a.oc-learn{border-top:1px dashed var(--line);padding-top:6px;margin-top:2px;color:var(--text)}
  @media(max-width:600px){.river{padding-left:18px}.dam-head::before{left:-18px;width:12px}.node{grid-template-columns:36px 1fr;padding:12px;gap:10px}.ico{width:36px;height:36px;font-size:15px}}
  </style>
@@ -140,12 +142,15 @@
  physical: (c) => c.phases?.length && ['p-pane', '⚙', "Mads' tre faser: fra modning til robotter"],
  quantum: (c) => c.horizon && ['q-hz', '⏳', c.horizon.title],
  };
+ // Ordbog pr. kæde (deep-link åbner den lukkede ordbog på mobil)
+ const GLOSS = { space: 'gloss-wrap', energy: 'e-gloss-wrap', physical: 'p-gloss-wrap', quantum: 'q-gl' };
+ const glossA = (c) => c.glossary?.length && GLOSS[c.id] ? `<a class="oc-gl" href="vaerdikaeder.html?kaede=${esc(c.id)}#${GLOSS[c.id]}"><span aria-hidden="true">◇</span> Ordbog: ${c.glossary.length} ord →</a>` : '';
  document.getElementById('other-chains').innerHTML = pack.chains.filter(c => c.id !== 'ai-compute').map(c => {
  const ls = c.links.filter(l => !l.neighbour);
  const first = ls[0];
  const cos = new Set(ls.flatMap(l => l.companies.map(x => x.isin))).size;
  const lr = LEARN[c.id]?.(c);
- return `<article class="oc"><span class="oc-ico" aria-hidden="true">${c.icon || first?.icon || '◆'}</span><h3>${esc(c.title)}</h3><p>${esc(firstSentence(c.why))}</p><span class="oc-n">${ls.length} led · ${cos} selskaber pr. ${fmtDate(pack.asOf)}</span>${first ? `<a href="vaerdikaeder.html?kaede=${esc(c.id)}#lk-${esc(first.id)}">Start ved ${esc(first.short || first.label)} →</a>` : ''}${lr ? `<a class="oc-learn" href="vaerdikaeder.html?kaede=${esc(c.id)}#${lr[0]}"><span aria-hidden="true">${lr[1]}</span> ${esc(lr[2])} →</a>` : ''}</article>`;
+ return `<article class="oc"><span class="oc-ico" aria-hidden="true">${c.icon || first?.icon || '◆'}</span><h3>${esc(c.title)}</h3><p>${esc(firstSentence(c.why))}</p><span class="oc-n">${ls.length} led · ${cos} selskaber pr. ${fmtDate(pack.asOf)}</span>${first ? `<a href="vaerdikaeder.html?kaede=${esc(c.id)}#lk-${esc(first.id)}">Start ved ${esc(first.short || first.label)} →</a>` : ''}${lr ? `<a class="oc-learn" href="vaerdikaeder.html?kaede=${esc(c.id)}#${lr[0]}"><span aria-hidden="true">${lr[1]}</span> ${esc(lr[2])} →</a>` : ''}${glossA(c)}</article>`;
  }).join('');
 
  // Fem dæmninger → grupper af led (samme dæmninger som på vaerdikaeder.html)

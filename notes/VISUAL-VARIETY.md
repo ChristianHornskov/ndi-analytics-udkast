@@ -87,3 +87,9 @@ Se `notes/VISUAL-VARIETY-REVIEW.md`.
 ## lane-A · 2026-10-16 ~01:45 CEST
 - Energi-strømvej: hver station har nu en stiplet "↻ Det ændrer sig"-linje i cyan under pres-mærket, så kortet læses i tre lag (hvad, pres, skift). Kun sidens egen CSS (`.ef-s`).
 - Kvante-ordbog med ⚛ i cyan som ord-ikon (rum bruger ◇, energi ⚡, robotik ⚙), så hver kædes ordbog har sit eget mærke.
+
+## lane-A · 2026-10-16 ~00:55 CEST · rum: hvordan tjener kæden penge
+- Ny form på rum-fanen (`#sp-money`): **tre betalingsspor side om side** (én gang, løbende, endnu tidligt). Hvert spor har sin egen farve i topkanten (brand, cyan, stiplet grå), et rundt ikon (🧾 🔁 ⏳) og en lille SVG-skitse af betalinger over tid: én høj søjle, en række små søjler og stiplede tomme søjler med "?". Under står led-knapper som piller med ikon og antal, og de åbner leddet. Det er en stiplet gul "⇄"-boks, der binder sporene sammen og linker til satellit-rejsen.
+- Skitserne er mærket "en skitse, ikke tal" i noten.
+- vaerdikaede.html: kæde-kortene har fået en tredje, dæmpet linje "◇ Ordbog: N ord →".
+- Kun sidens egen CSS (`.mn-*`, `.oc-gl`).
