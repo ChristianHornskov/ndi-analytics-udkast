@@ -1190,3 +1190,93 @@ Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html, v
 3. **vaerdikaede.html:** Energikortet har fået "✓ Tjek dig selv: 5 spørgsmål →".
 Tjek: Playwright på 1280 og 375 med 0 konsolfejl og ingen sidescroll. Deep-link lander på `#e-quiz`, pointtal stemmer, "Se leddet elnet" åbner `#lk-grid`, og SMR-svaret åbner `#lk-smr`. Rum-quizzen virker stadig. smoke.mjs 52/52 fail 0 (egen server på 8817). Precheck PASSED. Grep efter handelssprog og tankestreger i diff giver 0 hits.
 Næste: energi-ledkortenes blurbs (sprog og kilder) og kvante-fanen med krydslinks fra broerne til energi. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:07 CEST. MDA præsenterede Aurora Black 10. september 2026. Ikke færdig.**
+
+Meddelelsen er dateret 10. september 2026, efter beholdningen pr. 1. juni 2026. Aurora Black er en softwaredefineret satellit til forsvarskommunikation. Præsentationen er ikke en konstellation i drift. Chorus er stadig omtalt, før den er sendt op. Det er ikke et datacenter. Ord om høj volumen og tickerkurser er ikke taget med. Ingen `reviewedAt`. Blurben og arkivet siger det samme.
+
+Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Aurora Black står. Kæden og arkivet viser datoen. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `a4aff5e` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:08 CEST. York koordinerer opsendelseslogistik og sender ikke selv raketten op. Ikke færdig.**
+
+Forsiden skriver, at selskabet designer og fremstiller satellitplatforme, og at det koordinerer opsendelseslogistik fra design til levering. Det er ikke det samme som selv at sende raketten op. Selskabet driver ikke et datacenter i rummet. Et tal om tusindvis af satellitter i kredsløb er ikke taget med, fordi siden ikke siger, at York ejer dem. Et tæller-tal for kapacitet er heller ikke taget med. Ingen `reviewedAt`. Blurben og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Opsendelseslogistik står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `dbf15e9` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:10 CEST. Critical Metals: planer for Tanbreez er godkendt, og byggeriet er ikke gået i gang. Ikke færdig.**
+
+Meddelelsen er dateret 5. oktober 2026, efter beholdningen pr. 1. juni 2026. Grønland har godkendt mineplanen og lukningsplanen frem til september 2050. Selskabet skriver, at de sidste driftstilladelser mangler, før byggeriet kan gå i gang. Det er ikke en mine i drift. Wolfsberg i Kärnten er et lithiumprojekt. Et studie, en aftale med BMW og et planlagt raffinaderi i Saudi-Arabien er ikke drift. Kursen på siden og ordene om verdens største er ikke taget med. Ingen `reviewedAt`. Blurben og arkivet siger grænsen.
+
+Tjekket i Chromium. Selskabssiden ved 375 px viser AI-udkast, Tanbreez og Wolfsberg. "tjekket mod kilden" er ikke med. Ingen kurs. Kæden og arkivet viser datoen. Ingen konsolfejl. Ingen vandret scroll ved 375 eller 1280 px.
+
+**Push:** `lane-E` @ `d433eca` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:11 CEST. Karman beskytter nyttelast og sender ikke selv satellitter op. Ikke færdig.**
+
+Forsiden skriver, at selskabet beskytter nyttelast, har udstyr til at skille den fra fartøjet, laver aerodynamiske mellemtrin og samler raketmotorer. Siden nævner også affyringsudstyr. Det er dele. Selskabet sender ikke selv satellitter op. Ord om at sprænge grænsen og om overlegenhed er ikke taget med. Ingen `reviewedAt`. NioCorp og Lynas gav stadig tomme svar. Blurben under opsendelse og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Nyttelast og raketmotorer står. Kæden og arkivet viser sætningen. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `edf8e7e` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:12 CEST. Sigma Lithium nævner Jequitinhonha-dalen, og produktionen startede i 2023. Ikke færdig.**
+
+Forsiden nævner Jequitinhonha-dalen. Selskabet skrev 17. april 2023, at produktionen af lithium var gået i gang. Datoen ligger før beholdningen pr. 1. juni 2026. Det er råstof til batterier, ikke et batteriselskab og ikke et kraftværk. Ordet only og de fem nul-løfter er ikke taget med. Ingen `reviewedAt`. Rollen i JSON nævner dalen. Den vises ikke på kædesiden.
+
+Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Jequitinhonha står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `ee131c0` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:13 CEST. Antero skriver, at det leverer naturgas og LPG til eksport. Ikke færdig.**
+
+Forsiden siger, at selskabet er et gasselskab i Appalachia, og at det leverer naturgas og LPG til eksport. Marcellus stod i forvejen. Gassen er brændsel, ikke en metalmine. Formuleringen om at være blandt de største er ikke taget med. Ingen `reviewedAt`. Blurben under elproduktion siger eksporten.
+
+Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. LPG og eksport står. Kæden viser sætningen. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `a234654` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:14 CEST. Expand Energy gennemførte handlen med Twin Eagle 16. september 2026. Ikke færdig.**
+
+Meddelelsen er dateret 16. september 2026, efter beholdningen pr. 1. juni 2026. Twin Eagle bliver et datterselskab og er beskrevet som et marketingselskab. Expand er stadig dannet af Chesapeake og Southwestern. Gassen er brændsel, ikke en metalmine. Kursen på siden, mængder i Bcf og ordene leading og largest er ikke taget med. Ingen `reviewedAt`. Blurben og arkivet siger datoen.
+
+Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Twin Eagle står. Ingen kurs. Kæden og arkivet viser datoen. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `1a8a43f` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:18 CEST. Planet nævner også Pelican, Tanager og Owl. Ikke færdig.**
+
+Forsiden nævner satellitterne SuperDove, SkySat, Pelican, Tanager og Owl. Owl er omtalt som næste generation. Teksten kalder den ikke en særskilt flåde i drift. Selskabet opsender ikke selv raketterne. Opløsningstal og ord om at sprænge grænser er ikke taget med. Ingen `reviewedAt`. Blurben og arkivet siger navnene.
+
+Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Owl og Pelican står. Kæden og arkivet viser navnene. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `9b635f4` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:20 CEST. Redwire skrev 1. april 2026, at kameraer skal med på Artemis II. Ikke færdig.**
+
+Meddelelsen siger, at udstyret skal med, ikke at flyvningen er gennemført. Selskabet skriver, at det fremstiller og tester kamerasystemet til Orion på Artemis I til V, og at Artemis II har 11 kameraer. Datoen ligger før beholdningen pr. 1. juni 2026. Et kort på forsiden siger "launched", men artiklen siger "will launch", så flyvningen ikke er skrevet som gennemført. Selskabet sender ikke selv raketten op og driver ikke et datacenter. Ord om historic og et ordrebeløb er ikke taget med. Ingen `reviewedAt`. Blurben og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. 11 kameraer står efter "Læs hele forklaringen". Kæden og arkivet viser datoen. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `150c5f1` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
