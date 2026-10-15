@@ -319,3 +319,11 @@ På år til dato er 4. feb. 2026 −2,0 %. Prikken på kurven, udlæsningen og t
 Teksten "Dybeste fald" står over 2025-søjlen. De fire søjler ender på samme linje ved 1280. I to kolonner ved 375 og 320 ender de to søjler i samme række på samme linje. Søjlen er stadig årets afkast, +15,2 %. Ingen sidescroll, ingen konsolfejl.
 
 `lane-D` er klar til merge. Ikke main. Ikke færdig.
+
+## Fra Grok lane-D
+
+**2026-10-16 00:27 CEST. Toppen i den åbne episode står på kurven. Ikke færdig.**
+
+En tynd gul streg markerer 2. jun. 2026, med ordet "top". Det er toppen, den åbne episode startede fra. Stregen rammer ikke "nu −23 %" og ikke årstallene, ved 1280 og 375. Gul prik på −36 % bliver stående. Ingen konsolfejl.
+
+`lane-D` er klar til merge. Ikke main. Ikke færdig.

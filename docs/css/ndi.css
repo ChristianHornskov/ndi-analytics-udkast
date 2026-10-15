@@ -621,6 +621,7 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
 .figure .uw-water{stroke:var(--faint);stroke-width:1;stroke-dasharray:4 4;vector-effect:non-scaling-stroke}
 .figure .uw-grid{stroke:var(--line);stroke-width:1;vector-effect:non-scaling-stroke}
 .figure .uw-drop{stroke:var(--yellow);stroke-width:1;vector-effect:non-scaling-stroke;opacity:.85}
+.figure .uw-open{stroke:var(--yellow);stroke-width:1.25;vector-effect:non-scaling-stroke;opacity:.9}
 .figure .uw-cursor{stroke:var(--text);stroke-width:1;opacity:.75;vector-effect:non-scaling-stroke}
 .figure .uw-pick{fill:var(--cyan);stroke:var(--bg);stroke-width:1.5;vector-effect:non-scaling-stroke}
 .figure svg.uw{cursor:crosshair;touch-action:pan-y}
@@ -693,6 +694,7 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
   .hero-stat .num,.ep-ledger .depth{color:#6d3038}
   .ep-ledger li.open .depth{color:#111}
   .figure text,.figure .tick,.figure .uw-label{fill:#333}
+  .figure .uw-open{stroke:#333;opacity:1}
   .year-rail .yr-mark{color:#333}
   .year-rail a.yr-deep{border-top-color:#111}
 }
