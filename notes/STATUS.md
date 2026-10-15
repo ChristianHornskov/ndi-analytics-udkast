@@ -308,3 +308,11 @@ HEAD `b35518b`. Visual-variety request shipped + reviewed. MADS værdikæde/quan
 - Ordliste 63 → 66 (ticker, ADR, møntspillet). FAQ-kortsvar + laer/index + kort-tæller fulgt med.
 - Test: Playwright 375/1280 på 6 sider: 0 konsolfejl, ingen h-overflow, skyder ±30 → 91 kr./−4,6 %. precheck se nedenfor.
 - Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + ideer.html visuel variation + HANDOFF demo-check.
+
+
+## Fra Claude lane-C (ideer.html mod data + husets plantegning) · ~00:20 CEST 16/10
+- `ideer.html`: intern tekst fjernet fra offentlig side («Jesper-palette», «interne noter»); Tesla-eksemplet viser nu tags fysisk tech + energi og de 4 led i 2 værdikæder (verificeret mod value-chains.json og selskab.html); ny sektion «Bygget som et hus» (klikbar plantegning, spejler entréens tre døre); jargon ryddet (drawdown → fald fra top). og:description fulgt med.
+- `kort.html`: idé-tekst opdateret. HANDOFF demo-trin 7 omskrevet (fem former) + trin 8 ordliste 63 → 66 (talt: 66 `<dt>`).
+- **Til app.js-lane:** månedskalenderen ligger under Fonden, ikke på entréen (Vidensbot #69).
+- Test: Playwright 375/1280: 0 konsolfejl, 0 døde links/ankre, ingen h-overflow. precheck: se push.
+- Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + kort.html/om-data mod Vidensbot-ordlisten (fotonik, fabless, fab, hyperscaler, compute).

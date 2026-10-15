@@ -11,7 +11,7 @@
   <meta property="og:site_name" content="NDI Analytics (udkast)">
   <meta property="og:locale" content="da_DK">
   <meta property="og:title" content="Idéer · NDI Analytics">
-  <meta property="og:description" content="Hvorfor NDI Analytics: flodsystem, multi-tag, forsinket snapshot.">
+  <meta property="og:description" content="Hvorfor NDI Analytics: flodsystemet, tags i stedet for sektorkasser, forsinket beholdning og siderne som et hus.">
   <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/ideer.html">
   <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
   <!-- og:end -->
@@ -66,6 +66,21 @@
     .q p::before{content:"«";color:var(--yellow)}
     .q p::after{content:"»";color:var(--yellow)}
     .q cite{display:block;margin-top:8px;font-size:12px;font-style:normal;color:var(--faint)}
+    .fan{list-style:none;margin:10px 0 0;padding:0 0 0 14px;border-left:2px solid var(--brand)}
+    .fan li{position:relative;font-size:13px;color:var(--muted);margin:0 0 6px;line-height:1.4}
+    .fan li::before{content:"";position:absolute;left:-15px;top:8px;width:10px;border-top:2px solid var(--brand)}
+    .fan b{color:var(--cyan);font-weight:600}
+    .hus{background:#0b171d;border:1px solid var(--line);border-radius:14px;padding:14px;margin:0}
+    .hus-plan{display:grid;gap:8px;grid-template-columns:repeat(2,1fr);border:3px solid var(--brand);border-radius:6px;padding:8px;position:relative}
+    @media(min-width:720px){.hus-plan{grid-template-columns:repeat(4,1fr)}}
+    .hus-plan a{display:block;border:1px solid var(--line);border-radius:4px;padding:10px;text-decoration:none;color:var(--text);background:var(--panel);min-height:74px}
+    .hus-plan a:hover,.hus-plan a:focus-visible{border-color:var(--yellow)}
+    .hus-plan a b{display:block;font-size:14px;color:var(--cyan)}
+    .hus-plan a span{display:block;font-size:12px;color:var(--muted);margin-top:4px;line-height:1.4}
+    .hus-plan .entre{grid-column:1/-1;border:2px dashed var(--yellow);text-align:center;min-height:0}
+    .hus-plan .entre b{color:var(--yellow)}
+    .hus-plan .kok{grid-column:span 2}
+    .hus figcaption{font-size:12px;color:var(--faint);margin-top:8px;line-height:1.5}
     @media (prefers-reduced-motion:no-preference){.flod .water{animation:flow 6s linear infinite}}
     @keyframes flow{to{stroke-dashoffset:-48}}
   </style>
@@ -81,7 +96,7 @@
     <h1>Hvorfor NDI Analytics?</h1>
     <div class="idea-hero">
       <p class="lede" style="margin-bottom:0">Korte, ikke-fortrolige idéer bag udkastet. Generel information. Ikke rådgivning.</p>
-      <aside class="idea-callout"><strong>Designvalg:</strong> hellere flere visuelle former (kæder, treemap, tidslinje, underwater) end endnu et panel-gitter. Jesper-palette, uden at blive monoton.</aside>
+      <aside class="idea-callout"><strong>Udgangspunkt:</strong> Vi kan ikke pege på den ene vinder. Derfor viser siden, hvilke teknologier fonden giver eksponering mod — ikke hvilke aktier man bør købe.</aside>
     </div>
 
     <div class="idea-strip" aria-label="Idé-kort">
@@ -94,7 +109,7 @@
     <div class="idea-tl">
       <div class="it">
         <h3>Multi-tag i stedet for ét GICS-label</h3>
-        <p>Tesla er både energi og fysisk tech. Screeneren og værdikæderne viser flere tags, så eksponering ikke skjules.</p>
+        <p>Tesla står i sektorlisterne som bilproducent. Hos os har Tesla to tags, fysisk tech og energi, og optræder i fire led på to værdikæder. <a href="#h-vs">Se eksemplet ↓</a></p>
       </div>
       <div class="it">
         <h3>Flere teknologiske kæder</h3>
@@ -102,15 +117,15 @@
       </div>
       <div class="it">
         <h3>Temaer foreslås, før de bliver endelige</h3>
-        <p>Andet er krympet med forslag (mærket). Quantum er et nyt forslag-tema. <a href="temaer.html">Temaer →</a> · <a href="tema.html?slug=quantum">Quantum →</a></p>
+        <p>Nogle selskaber har kun et foreslået tema, og det står der tydeligt. Kvantecomputere er et nyt forslag. <a href="temaer.html">Temaer →</a> · <a href="tema.html?slug=quantum">Kvantecomputere →</a></p>
       </div>
       <div class="it">
-        <h3>Drawdown som episoder</h3>
-        <p>Max, middel og median over peak→bund — plus underwater-graf. Fondniveau. <a href="drawdown.html">Drawdown →</a></p>
+        <h3>Fald fra top som episoder</h3>
+        <p>Hvor meget og hvor længe fonden har ligget under sin tidligere top — største, typiske og alle fald. Kun på fondsniveau. <a href="drawdown.html">Fald fra top →</a></p>
       </div>
       <div class="it">
         <h3>Forsinket snapshot som feature</h3>
-        <p>Den offentlige, forsinkede rapport — så siden aldrig afslører aktuelle handler. Bevidst.</p>
+        <p>Beholdningen er fra en offentlig, forsinket rapport (pr. 1. juni 2026), så siden aldrig afslører fondens aktuelle handler. Det er et bevidst valg. <a href="laer/forsinket-beholdning.html">Hvorfor? →</a></p>
       </div>
     </div>
 
@@ -192,18 +207,24 @@
 
     <section class="idea-sec" aria-labelledby="h-vs">
       <h2 id="h-vs">Én kasse eller flere tags</h2>
-      <p class="sub">Samme selskab, to måder at sortere på. Eksempel fra den forsinkede beholdning pr. 1. juni 2026.</p>
+      <p class="sub">Samme selskab, to måder at sortere på. Eksempel fra den forsinkede beholdning pr. 1. juni 2026. Sektoren må gerne stå der — den er bare ikke hovedinddelingen.</p>
       <div class="vs">
         <div class="col">
           <div class="lab">KLASSISK SEKTOR (GICS)</div>
           <div class="box1">Tesla → <strong>Forbrugsgoder</strong> (bilproducent)</div>
-          <p>Én kasse. Energilagring og robotter forsvinder ud af billedet.</p>
+          <p>Én kasse. Batterilagring, robotter og fysisk AI forsvinder ud af billedet.</p>
         </div>
         <div class="arrow" aria-hidden="true">→</div>
         <div class="col ndi">
-          <div class="lab">NDI-TEMAER (MULTI-TAG)</div>
+          <div class="lab">NDI: TAGS + LED I VÆRDIKÆDER</div>
           <div class="chips"><span>Fysisk tech</span><span>Energi</span></div>
-          <p>Flere tags samtidig, så eksponeringen mod flere led er synlig. Tags beskriver eksponering — ikke et syn på aktien.</p>
+          <ul class="fan" aria-label="Led, hvor Tesla optræder">
+            <li><b>AI-compute</b> · Datacentre og køling</li>
+            <li><b>AI-compute</b> · Fysisk AI</li>
+            <li><b>Robotik &amp; fysisk AI</b> · Komponenter</li>
+            <li><b>Robotik &amp; fysisk AI</b> · Robotter, autonome køretøjer og droner</li>
+          </ul>
+          <p>To tags, fire led. Så kan man se, hvor i kæderne selskabet hører hjemme. Det beskriver eksponering — ikke et syn på aktien. <a href="selskab.html?isin=US88160R1014">Tesla →</a> · <a href="vaerdikaeder.html">Værdikæder →</a></p>
         </div>
       </div>
     </section>
@@ -225,6 +246,24 @@
       </div>
     </section>
 
+    <section class="idea-sec" aria-labelledby="h-hus">
+      <h2 id="h-hus">Bygget som et hus</h2>
+      <p class="sub">Man kommer ind ad entréen og vælger selv, hvilket rum man vil ind i. Ingen behøver at gå i alle rum. Har du kun et minut, så tag den første dør: fondens afkast for den andelsklasse, du ejer.</p>
+      <figure class="hus">
+        <nav class="hus-plan" aria-label="Siderne som rum i et hus">
+          <a class="entre" href="index.html"><b>Entré · tre spørgsmål, tre døre</b><span>Hvordan har fonden klaret sig? Hvad ejer den? Hvilke selskaber er det?</span></a>
+          <a href="index.html?view=fonden"><b>Fonden</b><span>Udvikling siden start, kalenderår, måned for måned og fald fra top.</span></a>
+          <a href="index.html?view=portefolje"><b>Porteføljen</b><span>Forsinket beholdning fordelt på temaer og modenhed.</span></a>
+          <a class="kok" href="index.html?view=udforsk"><b>Køkkenet · udforsk selskaberne</b><span>Søg på navn, tema eller ISIN — uden de klassiske sektorkasser.</span></a>
+          <a href="vaerdikaeder.html"><b>Værdikæder</b><span>Fra strøm til apps — led for led.</span></a>
+          <a href="temaer.html"><b>Temaer</b><span>Eksponering samlet i NDI-temaer.</span></a>
+          <a href="laer/index.html"><b>Lær</b><span>Sådan tænker vi, P/E, livscyklus.</span></a>
+          <a href="risici.html"><b>Risici</b><span>Risikoindikator og hvad du kan tabe.</span></a>
+        </nav>
+        <figcaption>Hvert rum er et link. Den stiplede gule ramme er entréen. <a href="kort.html">Hele sidekortet →</a></figcaption>
+      </figure>
+    </section>
+
     <section class="idea-sec" aria-labelledby="h-q">
       <h2 id="h-q">Tre sætninger, siden bygger på</h2>
       <div class="qgrid">
@@ -241,7 +280,7 @@
     </div>
 
     <p class="warn">Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.</p>
-    <p class="band">Flere interne noter ligger uden for Pages. Dette er kun den offentlige overflade.</p>
+    <p class="band">Generel information om fonden og vores måde at tænke på. Ikke personlig investeringsrådgivning. <a href="risici.html">Læs om risici →</a></p>
   </main>
 </body>
 </html>

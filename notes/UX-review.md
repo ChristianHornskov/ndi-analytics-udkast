@@ -146,3 +146,11 @@ Ingen nye.
 - Tre lær-sider var én tekstblok hver. Nu har hver en visuel form, der matcher indholdet: søjler (spredning), før/efter-stabler (ex-dato), tidslinje (datoer).
 - Mobil 375: hvorfor-mange-aktier ~3.000 px, udbytte ~2.560 px, forsinket ~1.900 px. Tabellen på udbytte-siden bliver til kort < 640 px.
 - Åbent: `sammenlign.html` «Samme portefølje» (ikke lane-C).
+
+## ~00:15 CEST lane-C checkpoint (Claude) — ideer.html
+- **Intern tekst på offentlig side fjernet:** callout'en sagde «Designvalg … Jesper-palette», og bunden sagde «Flere interne noter ligger uden for Pages». Begge erstattet med tekst til brugeren (udgangspunkt: vi kan ikke pege på vinderen · generel information + link til risici).
+- **Tesla-eksemplet tjekket mod data:** portfolio.json har kun `theme: physical`, men selskabssiden viser tags «Fysisk tech + Energi», og value-chains.json har Tesla i 4 led (AI-compute: datacentre og køling, fysisk AI · Robotik: komponenter, robotter). Idésiden viser nu begge tags + en forgrening til de 4 led og linker til Tesla-siden. Første forsøg skrev «ét tema» — det ville have modsagt selskabssiden; rettet før commit.
+- **Ny form: «Bygget som et hus»** — plantegning (CSS-gitter, ingen JS), entré med de tre døre øverst i gul stiplet ramme, rummene er links. Spejler den faktiske entré (`renderEntre`: Fonden / Porteføljen / Udforsk), ikke en tænkt struktur. Til 60+-brugeren: «tag den første dør».
+- Jargon ryddet: «Drawdown som episoder / Max, middel og median over peak→bund» → «Fald fra top som episoder». «Andet er krympet med forslag (mærket)» → almindeligt dansk.
+- Observation (ikke min fil): månedskalenderen ligger under Fonden (`?view=fonden`), ikke på entréen. Vidensbot #69 (MC 51:30) ønsker den på forsiden — til den lane, der ejer app.js.
+- Test: Playwright 375/1280: 0 konsolfejl, 0 døde links, 0 døde ankre, ingen h-overflow.
