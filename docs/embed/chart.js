@@ -4,7 +4,7 @@
             ytd: 'År til dato',
         all: 'Hele perioden'
   };
-  const PERIOD_MONTHS = { '1m': 1, '3m': 3, '1y': 12 };
+  const PERIOD_MONTHS = {}; // embed: only ytd + all (no 1m/3m/1y)
 
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
@@ -30,7 +30,7 @@
 
   const state = {
     fund: FUNDS[requestedFund] ? requestedFund : 'PMINDI',
-    period: PERIODS[requestedPeriod] ? requestedPeriod : 'all',
+    period: PERIODS[requestedPeriod] ? requestedPeriod : 'all', // unknown/1m/3m/1y → all
     ready: false,
     series: [],
     geometry: null,
@@ -262,9 +262,7 @@
     for (let i = 0; i < tickCount; i++) {
       const index = Math.round(i * (series.length - 1) / (tickCount - 1));
       const point = series[index];
-      const label = state.period === '1m' || state.period === '3m'
-        ? shortDate.format(new Date(timestamp(point.date)))
-        : axisFormat.format(new Date(timestamp(point.date)));
+      const label = axisFormat.format(new Date(timestamp(point.date)));
       const anchor = i === 0 ? 'start' : i === tickCount - 1 ? 'end' : 'middle';
       parts.push(`<text x="${x(point)}" y="${height - 8}" text-anchor="${anchor}" style="font-size:${mobile ? 10 : Math.max(10, width / 80)}px">${escape(label)}</text>`);
     }
