@@ -199,3 +199,7 @@ Transmission, industri og vedvarende energi står i sætningen. Leader, largest 
 ## Solaris · 2026-10-16 01:26 CEST
 
 Meddelelsen 6. juli 2026 handler om GESA, ikke Omega. Banneret på forsiden siger Omega og peger på samme adresse. Teksten følger meddelelsen. Service, efter beholdningen, ikke et kraftværk. Leading og unmatched er ikke kopieret. AI-udkast uden gennemgangsdato. Elproduktion, elnet og arkiv siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll. Overskriften er beholdningens afkortede navn.
+
+## Ero · 2026-10-16 01:30 CEST
+
+Xavantina er en guldmine i Mato Grosso. Tucumã er kobber, med kommerciel produktion 1. juli 2025, før beholdningen. Furnas ejes af Vale Base Metals. Ero har en ret til at optjene 60 %, ikke et ejerskab endnu. Forstudiet fra februar 2026 er foreløbigt og ikke en reserve. High-grade, ounces og omkostninger er ikke kopieret. AI-udkast uden gennemgangsdato. Råstof-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.

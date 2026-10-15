@@ -1163,20 +1163,36 @@
   "CA2960061091": {
    "name": "Ero Copper",
    "theme": "energy-resources",
-   "summary": "Driver kobberminedrift i Brasilien.",
-   "watch": "Drift af minerne og kobberpriser.",
+   "summary": "Driver kobberminer i Brasilien og guldminen Xavantina. Selskabet skriver, at Vale Base Metals ejer Furnas, og at Ero har en ret til at optjene en andel. Det er ikke en mine i drift.",
+   "watch": "Drift på Caraíba, Tucumã og Xavantina. Furnas er et projekt.",
    "source": "https://www.ero.com/",
-   "products": "Kobber.",
-   "customers": "Industrikunder.",
-   "role": "Råstof.",
+   "products": "Kobberkoncentrat og guld.",
+   "customers": "Smelteværker og raffinaderier.",
+   "role": "Kobber og guld i Brasilien. Furnas er ikke en mine i drift.",
    "narrative": [
-    "Ero driver minedrift i Brasilien. Siden nævner driften Caraíba, Tucumã og Xavantina og projektet Furnas.",
-    "Caraíba og Tucumã er kobber. Furnas er ikke beskrevet som en mine i drift."
+    "Ero skriver, at Caraíba i Bahia er et kobberkompleks, og at Tucumã i Pará er en kobbermine. Selskabet skriver, at kommerciel produktion på Tucumã blev nået 1. juli 2025. Datoen ligger før beholdningen.",
+    "Xavantina i Mato Grosso er beskrevet som en underjordisk guldmine med eget anlæg. Furnas er et kobber- og guldprojekt. Siden skriver, at Vale Base Metals ejer det, og at Ero har en ret til at optjene en andel på 60 % efter en aftale fra juli 2024. Det er ikke en mine i drift. Et forstudie fra februar 2026 ligger før beholdningen og er foreløbigt. Siden kalder det ikke en reserve."
    ],
    "narrativeSources": [
     {
      "label": "Selskabets side",
      "url": "https://www.ero.com/"
+    },
+    {
+     "label": "Caraíba",
+     "url": "https://www.ero.com/what-we-do/caraiba-operations/"
+    },
+    {
+     "label": "Tucumã",
+     "url": "https://www.ero.com/what-we-do/tucuma-operation/"
+    },
+    {
+     "label": "Xavantina",
+     "url": "https://www.ero.com/what-we-do/xavantina-operations/"
+    },
+    {
+     "label": "Furnas",
+     "url": "https://www.ero.com/what-we-do/furnas-project/"
     }
    ]
   },

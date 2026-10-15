@@ -729,3 +729,13 @@ Meddelelsen siger, at Solaris har købt Global Energy Services Alliance, GESA. G
 Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. GESA, Baseload og Pro-Per står. Omega står ikke. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `afc0b25` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:30 CEST. Ero skriver, at Xavantina er en guldmine, og at Vale ejer Furnas. Ikke færdig.**
+
+Caraíba i Bahia er et kobberkompleks. Tucumã i Pará er en kobbermine, og kommerciel produktion blev nået 1. juli 2025, før beholdningen. Xavantina i Mato Grosso er en underjordisk guldmine med eget anlæg. Furnas er et kobber- og guldprojekt. Siden skriver, at Vale Base Metals ejer det, og at Ero har en ret til at optjene en andel på 60 % efter en aftale fra juli 2024. Det er ikke en mine i drift. Et forstudie fra februar 2026 ligger før beholdningen og er foreløbigt. Siden kalder det ikke en reserve. High-grade, ounces og dollar pr. ounce er ikke taget med. Ingen `reviewedAt`. Blurben under råstoffer og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Guldminen, 60 % og forstudiet står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `962c850` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

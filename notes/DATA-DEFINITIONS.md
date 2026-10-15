@@ -95,7 +95,7 @@ Taseko skrev 9. oktober 2026, at Florence Copper er gået i kommerciel produktio
 
 SMR-leddet siger, at NuScale skriver, at et program sammen med TVA kan blive op til 6 GW, og at det er udvikling, ikke et værk i drift. Kilden er programsiden, som taler om at udvikle og idriftsætte kapacitet, ikke om et værk, der allerede kører. Ordene historic, largest og proven er ikke taget med. De øvrige SMR-navne er stadig ikke beskrevet som kommerciel drift.
 
-Konceptkortene i nyhedsarkivet er delt i korte afsnit, så grænserne kan læses hver for sig. Energikortet har ti afsnit. Rumkortet har ni. Indholdet er det samme som på kæden. Neutron-siden sagde 16. oktober 2026 stadig, at første flyvning ligger foran. Sætningen om, at Neutron ikke er fløjet, er ikke ændret.
+Konceptkortene i nyhedsarkivet er delt i korte afsnit, så grænserne kan læses hver for sig. Energikortet har elleve afsnit. Rumkortet har ni. Indholdet er det samme som på kæden. Neutron-siden sagde 16. oktober 2026 stadig, at første flyvning ligger foran. Sætningen om, at Neutron ikke er fløjet, er ikke ændret.
 
 MP Materials skriver, at magneter fremstilles på anlægget Independence i Texas, og at udvindingen er ved Mountain Pass. Ordene om verdens rigeste forekomst og verdens stærkeste magnet er ikke taget med. Firefly gav 403 samme nat. Eclipse er derfor ikke omskrevet.
 
@@ -140,6 +140,8 @@ Redwire skrev 1. april 2026, at kameraer og solsensorer skal med på Artemis II,
 MYR Group skriver, at det bygger elektriske anlæg i USA og Canada, og at arbejdet dækker transmission, kommercielle og industrielle anlæg og vedvarende energi. Selskabet ejer ikke strømmen. Ordene leader og largest og tallet 130 år er ikke taget med.
 
 Solaris skrev 6. juli 2026, at det har købt Global Energy Services Alliance, GESA. GESA er beskrevet som service til kraftværker, sammensat af Baseload Power og Pro-Per Energy Services. Datoen ligger efter beholdningen pr. 2026-06-01. Det er ikke et kraftværk i drift. Forsidens banner siger Omega og peger på samme adresse, `https://ir.solaris-energy.com/news/2026/07-06-2026-120016135`. Meddelelsen nævner ikke Omega. Teksten følger meddelelsen. Selskabet skriver, at det er stiftet i 2014, og at det leverer strøm til datacentre, energi, erhverv og industri. Ordene leading og unmatched er ikke taget med. Beholdningens navn på selskabssiden er afkortet til "Solaris Energy Infrastructur". Profilnavnet og navnene på energikæden er det fulde navn. AI-compute-listen er ikke ændret. Vægtene er uændrede.
+
+Ero skriver, at Caraíba i Bahia er et kobberkompleks, og at Tucumã i Pará er en kobbermine. Kommerciel produktion på Tucumã blev nået 1. juli 2025, før beholdningen pr. 2026-06-01. Xavantina i Mato Grosso er beskrevet som en underjordisk guldmine med eget anlæg. Furnas er et kobber- og guldprojekt. Siden skriver, at Vale Base Metals ejer det, og at Ero har en ret til at optjene en andel på 60 % efter en aftale fra juli 2024. Det er ikke en mine i drift. Et forstudie fra februar 2026 ligger før beholdningen og er foreløbigt. Siden kalder det ikke en reserve. Ordene high-grade, flagship og world-class er ikke taget med. Ounces, dollar pr. ounce, tonnage og afkast i forstudiet er ikke taget med. Vægtene er uændrede.
 
 ## År til dato på periodesiden
 
