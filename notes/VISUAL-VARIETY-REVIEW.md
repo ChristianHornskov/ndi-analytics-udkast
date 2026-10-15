@@ -100,6 +100,10 @@ Forklaringen under underwater var ét afsnit. Den er nu en linje, en nøgle og e
 
 Klasse-kortene i embed havde tom plads til højre. PMINDI har nu pilen ud. PMINDIAKK har loopet tilbage. Teksten rammer ikke mærket, ved 1280, 375 og 320. Sætningen under grafen sagde slutdatoen to gange ("til 14. okt. 2026, pr. 14. okt. 2026"). Den siger den én gang. Hele perioden er stadig +104,8 %. År til dato er +4,0 %. PMINDIAKK har tom svg, ingen procent, og linket siger at drawdown vises efter 12 måneder. Ingen sidescroll. Ingen konsolfejl.
 
+### Update · grænse i prikkerne · 2026-10-16 ~01:40 CEST
+
+Prikfordelingen havde ingen grænse. En brand-streg står nu ved 10 % under nul, samme grænse som på kurven. Tallet −10 har samme farve. 4 af 41 prikker ligger til højre for stregen. Den gule prik er blandt dem. De øvrige ligger i bunken til venstre. Median og middel er uændrede, −2,8 % og −5,2 %. Ingen tekst uden for svg'en. Ingen sidescroll ved 1280, 375 og 320. Ingen konsolfejl.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.

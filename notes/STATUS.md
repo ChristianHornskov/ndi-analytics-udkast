@@ -421,3 +421,13 @@ Klasse-kortene havde tom plads til højre. PMINDI har pilen ud. PMINDIAKK har lo
 Tjekket i Chromium ved 1280, 375 og 320. Ingen sidescroll, ingen konsolfejl.
 
 `lane-D` er klar til merge. Ikke main. Ikke færdig.
+
+## Fra Grok lane-D
+
+**2026-10-16 01:40 CEST. Samme grænse i prikkerne. Ikke færdig.**
+
+Prikfordelingen havde ingen grænse. En brand-streg står nu ved 10 % under nul, samme grænse som på kurven. Tallet −10 har samme farve. 4 af 41 prikker ligger til højre. Den gule prik er blandt dem. Median og middel er uændrede.
+
+Tjekket i Chromium ved 1280, 375 og 320. Ingen sidescroll, ingen konsolfejl, ingen tekst uden for svg'en.
+
+`lane-D` er klar til merge. Ikke main. Ikke færdig.

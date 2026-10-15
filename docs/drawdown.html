@@ -176,7 +176,9 @@
  });
  const medX = xOf(sum.median).toFixed(1);
  const meanX = xOf(sum.mean).toFixed(1);
+ const gateX = usedGate && yMax >= 10 ? xOf(-10).toFixed(1) : null;
  const parts = [
+ ...(gateX ? [`<line class="uw-gate" x1="${gateX}" x2="${gateX}" y1="28" y2="${axisY}"/>`] : []),
  ...dots,
  `<line class="mark-halo" x1="${medX}" x2="${medX}" y1="8" y2="${axisY}"/>`,
  `<line class="mark-halo" x1="${meanX}" x2="${meanX}" y1="8" y2="${axisY}"/>`,
@@ -190,9 +192,10 @@
  ];
  for (let g = 0; g <= yMax; g += 10) {
  const xx = (padL + (g / yMax) * plotW).toFixed(1);
- parts.push(`<text class="tick" x="${xx}" y="${axisY + 16}" text-anchor="middle">${g === 0 ? '0' : '-' + g}</text>`);
+ const gate = gateX && g === 10;
+ parts.push(`<text class="tick${gate ? ' uw-gate' : ''}" x="${xx}" y="${axisY + 16}" text-anchor="middle">${g === 0 ? '0' : '-' + g}</text>`);
  }
- const desc = `${eps.length} episoder. Median ${fmtPct(sum.median)}. Middel ${fmtPct(sum.mean)}. Dybest ${fmtPct(sum.max)}.`;
+ const desc = `${eps.length} episoder. Median ${fmtPct(sum.median)}. Middel ${fmtPct(sum.mean)}. Dybest ${fmtPct(sum.max)}.${gateX ? ' Stregen ved 10 % under nul er den samme grænse som på kurven. Prikker til højre for den står i listen.' : ''}`;
  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-labelledby="dp-title dp-desc"><title id="dp-title">Fordeling af fald</title><desc id="dp-desc">${desc}</desc>${parts.join('')}</svg>`;
  };
 
@@ -224,7 +227,7 @@
  const anno = open
  ? `Lige nu, pr. ${fmtDate(rows[rows.length - 1].d)}, ligger serien ${fmtPct(nowU)} under toppen fra ${fmtDate(open.peakD)}. Bund i den episode var ${fmtPct(open.dd)} den ${fmtDate(open.troughD)}.`
  : '';
- const depthCap = `Hver prik er ét fald fra top til bund. ${eps.length} i alt. Gul prik er det dybeste fald.${open ? ' Hul gul prik er den åbne episode.' : ''} Median og middel står under aksen.`;
+ const depthCap = `Hver prik er ét fald fra top til bund. ${eps.length} i alt. Gul prik er det dybeste fald.${open ? ' Hul gul prik er den åbne episode.' : ''} Median og middel står under aksen.${usedGate ? ' Stregen ved 10 % under nul er den samme grænse som på kurven. Prikker til højre for den står i listen.' : ''}`;
 
  main.innerHTML = `
  <a class="back" href="index.html?view=fonden&fund=${fundId}">← Fonden</a>

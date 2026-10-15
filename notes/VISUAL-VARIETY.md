@@ -42,7 +42,7 @@ Siden må ikke være fire ens kort plus to mørke kasser. Formerne skifter ned a
 | Rolige tal | Middel og median som to linjer, ikke kort | ✅ `.quiet-stats` |
 | Gul annotation | Hvor serien ligger under vand i dag | ✅ `.anno` |
 | Underwater | Tid. Gul prik = dybeste bund. Ring = seneste dag. Tynd gul streg = toppen i den åbne episode. Søjler mellem kurve og årstal = episoder dybere end 10 %. Højden er dybden, bredden er tiden. Streg ved 10 % under nul er grænsen. Klik på søjlen hopper til bunden. Ordet tilbage = dagen det dybeste fald nåede toppen igen. Slider vælger en dag, cyan prik på kurven. Nøgle under grafen, ikke et afsnit | ✅ `.figure` + `.uw-scrub` + `.uw-span` + `.uw-gate` + `.uw-key` |
-| Prikfordeling | Hvorfor middel ligger dybere end median. Navnene står under aksen | ✅ `.figure.plain` |
+| Prikfordeling | Hvorfor middel ligger dybere end median. Navnene står under aksen. Streg ved 10 % under nul er den samme grænse som på kurven. Prikker til højre står i listen | ✅ `.figure.plain` + `.uw-gate` |
 | Episodeliste | De fire fald dybere end 10 %, med varighed. Klik hopper til bunden på kurven | ✅ `.ep-ledger` |
 | Årssøjler | Kalenderafkast som small multiples, link til periode. Året med det dybeste fald har gul kant. Søjlerne deler bundlinje | ✅ `.year-rail` |
 
