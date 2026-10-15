@@ -363,3 +363,27 @@ Ikke juridisk rådgivning. Det eneste ændrede indhold er `unique-metrics.json`,
 
 ### OK ✅
 - Beholdning pr. 1. jun. 2026 er tydelig. SRI 5/7 og KID-links står i footer på selskabssider. Der er 0 hits på garanteret/"køb nu"/"øger eksponering" i renderet tekst. Omkostningssiden siger ærligt, at det ikke er et beregnet ÅOP.
+
+## 2026-10-16 01:05 CEST · cyklus 14 (main `6592e79`, delta)
+
+Ikke juridisk rådgivning. Jeg har crawlet 28 live-sider (375/1280) og grep'et renderet tekst. Pages er lig med main.
+
+### MUST (åbne)
+1. **Ingen markedsføringsmærkning.** "markedsføring" står på 0 af 28 sider. Uændret.
+2. **"Mads følger" + tickers** på fonden, selskabssider og tema.html?slug=chips (SoftBank 3, chips 4). Kilden er stadig `js/x-feed.js:339`. Nyt: ndi-paa-x (lane-X) har nu et filter med teksten "konti Mads følger" og et spor "SELSKAB · DIREKTE" for SoftBank/NVDA. Det er lige så meget en tilknytning mellem en person i NDI og navngivne tickers. Siden er i øjeblikket tom (se UX MUST), så det er ikke synligt live, men det kommer tilbage, når x-feed.js merges.
+3. **ndi-paa-x, nyhedsarkiv og omkostninger mangler "kan tabe"** (0 hits). Omkostninger er nu den mest besøgte FO-side (lane-X "fakta/omkostninger"). Tilføj standardlinjen.
+4. PMINDIAKK: sammenlign viser stadig "Seneste NAV" for PMINDIAKK (inden 12 mdr.?). Ikke re-verificeret om NAV tæller som afkast. Bør afklares af NDI.
+5. ÅTD + "Fonden steg +104,8 %" står stadig sammen med "afventer Fundmarket-godkendelse". Uændret.
+
+### SHOULD
+- **Rebalancering (ny):** "Bogen siger det samme for privatinvestorer: tag løbende lidt gevinst, når optimismen er høj … læg hellere til end tag fra, når stemningen er dårlig" og "Bogen råder privatinvestorer til …" er generelle adfærdsråd til læseren på en side for fonden. De er kilde-angivne og ikke produktspecifikke, så de er ikke en blokering. Skriv dog "bogen skriver", ikke "råder", og tilføj "Generel viden, ikke personlig rådgivning" ved citaterne. "Fonden rebalancerer løbende" er en påstand om fondens proces. Den skal stemme med prospekt/investeringspolitik og bør have en kilde.
+- **Fakta: beregnede risikotal** (vol 32,46 %, Sharpe 0,89, max DD −35,82 %) er tydeligt mærket "Beregnet · ikke Fundmarket" ✅. Sharpe er afkast-afledt: hold "Historisk afkast er ikke en pålidelig indikator…" i samme boks (står nu kun i footer).
+- **Omkostninger:** stadig ikke et ÅOP. Det er ærligt, men en FO-læser mangler "samlede omkostninger i alt". Når NDI har tallet fra KID, skal det stå først. 1,49 % + 0,64 % må ikke lægges sammen i UI (det gør siden heller ikke ✅).
+- Uændret: KID-link mangler i renderet tekst på værdikæder, vaerdikaede, drawdown, temaer, idéer, ndi-perspektiv, selskaber, periode, nyhedsarkiv, lær/valuta og nu også lær/rebalancering (kid:0). "Central Information Dokument" i footer (brug "Dokument med central information"). "BREAKING:" på fonden og SoftBank.
+
+### Rådgivningsord ✅
+- "anbefal" og "overvægt" står kun i negationer ("ikke anbefaling eller bevidst overvægt") og i KID-sprog. 0 hits på garanteret, "køb nu", "øger eksponering", kursmål og "bedste".
+- Invester trin 4 "Køb og omkostninger" er proces-beskrivelse (kurtage/platform), ikke en opfordring ✅.
+
+### OK ✅
+- Beholdning pr. 1. jun. 2026 er tydelig (også i risici, der nu skriver "beholdning pr." i stedet for "snapshot"). Ingen live trades. Ingen 1m/3m. Intet benchmark-claim (fakta: "Benchmark: Nej"). AI-mærkning er til stede. Temaforslag er mærket "forslag … afventer NDI-gennemgang".

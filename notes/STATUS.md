@@ -1019,3 +1019,4 @@ Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke me
 - Notes: HANDOFF trin 9, UX-review, VIDENSBOT-live-check.
 - Test: 8763, 375/1280: 0 konsolfejl, ingen h-overflow, 0 døde links/ankre. Mobil-fejl i flowpilen fundet og rettet. precheck PASSED.
 - Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + overveje P/E-dørens placering i lær-hub.
+- **Fra Claude lane-R (01:05, cyklus 14, main `6592e79`):** MUST: **ndi-paa-x.html er tom live** — `x-feed.js` på main mangler `feedHitKind` (kun på origin/lane-X); merge lane-X's `docs/js/x-feed.js`. Compliance: ndi-paa-x/omkostninger/nyhedsarkiv mangler "kan tabe"; "Mads følger" uændret (`x-feed.js:339`); rebalancering: "bogen råder" → "bogen skriver" + kilde på "fonden rebalancerer løbende".
