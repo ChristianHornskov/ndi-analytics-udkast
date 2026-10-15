@@ -107,3 +107,8 @@ Sider: ideer, kort, om-data, invester, risici, ndi-perspektiv, laer/*.
 - Afdækning: ingen kilde i notes/data om valutaafdækning → siden nævner det ikke. Kun KID-flaget `valutarisiko: true`.
 - Intet om hvor dollaren går hen. «Det viser vi ikke: gæt på, hvor dollaren går hen.» Ingen handelssprog.
 - FAQ-kortsvar «Hvorfor så mange aktier?» havde jargon («idiosynkratisk varians») → omskrevet til almindeligt dansk.
+
+## ~00:40 CEST lane-C (Claude) — FAQ + risici
+- Flodsystem-svaret i FAQ bruger [M]-formuleringen fra VIDENSBOT-vaerdikaeder (vand = efterspørgsel, dæmninger = flaskehalse, presset flytter; BLOG 30. marts 2026). Ingen «øge eksponeringen»/købsmulighed.
+- **Bevidst udeladt:** et FAQ-svar «Er AI en boble?» med Mads' «vi står i det modsatte af en boble» (BLOG 4. maj 2026). Det er en markedsvurdering, ikke en forklaring — kræver Mads/compliance-ja før det kommer på siden. Lagt i IDEAS.
+- Omkostningssvaret nævner ingen satser; peger på KID (gældende dokument).

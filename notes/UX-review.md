@@ -176,3 +176,9 @@ Ingen nye.
 - **Jargon:** «drawdown» → «fald fra top» i link-/dørtekster på lane-C-sider (variance-drag, hvorfor-mange-aktier, kort, om-data lede, ideer, FAQ-chip + spørgsmål). **Ikke min fil:** `drawdown.html` hedder stadig «Drawdown · …» i title/h1 — til den lane, der ejer den.
 - **Mobil:** hub 3.409 px (375). Læsestien dublerer 3 døre bevidst; kan skæres, hvis Mads synes den er lang.
 - Test: 375/1280 på 7 sider: 0 konsolfejl, 0 døde links, ingen h-overflow.
+
+## ~00:40 CEST lane-C checkpoint (Claude) — FAQ-kortsvar + risici-flodsystem
+- **FAQ 11 → 15 korte svar.** Nye: *Hvad er flodsystemet?* (→ vaerdikaeder#kap-flod), *Er det ikke meget teknologi i én fond?* (→ ordliste koncentrationsrisiko), *Hvad koster det at købe andele?* (løbende omkostninger vs. kurtage/spread, ingen satser — «står i KID»), *Hvorfor står Tesla ikke bare som bilselskab?* (→ ideer#h-vs).
+- **Stikord-svar skrevet om til sætninger:** P/E («Markedets forventning. Ikke en facitliste…» → hvad tallet er, og hvorfor investering trækker det ned), tema («Segmenter viser eksponering» → hvad et tema viser), invester («Generelt flow: … ordre» — anglicisme, og passede ikke til siden). Første udkast skrev «fire trin»; invester.html har «Tre spørgsmål før du investerer» → svaret følger nu siden (tid/5 år, fald, bred tech-fond).
+- **risici.html:** flaskehalskortet nævnte fire dæmninger («cloud og apps»). Nu de fem fra Vidensbot (energi, datacentre, halvledere, cloud og modeller, applikationer og fysisk AI), «presset flytter videre», link direkte til `#kap-flod` + ordliste.
+- Test (8763): 375/1280 FAQ 15 kort uden søgning, «flodsystem» → kortsvar, ordliste, artikel øverst; «kurtage» → ordliste-anker; risici-link findes; 0 konsolfejl, ingen h-overflow.

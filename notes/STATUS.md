@@ -340,3 +340,10 @@ HEAD `b35518b`. Visual-variety request shipped + reviewed. MADS værdikæde/quan
 - HANDOFF trin 9 (hub), UX-review checkpoint.
 - Test: 375/1280 på 7 sider: 0 konsolfejl, 0 døde links, ingen h-overflow. precheck: se push.
 - Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + FAQ-kortsvar mod de nye ordliste-begreber.
+
+## Fra Claude lane-C (FAQ 15 kortsvar + risici flodsystem) · ~00:40 CEST 16/10
+- `laer/faq.html`: 11 → 15 korte svar (flodsystem, koncentration, omkostninger/kurtage, Tesla multi-tag); P/E-, tema- og invester-svar omskrevet fra stikord til sætninger, invester-svaret matcher nu «Tre spørgsmål» på invester.html.
+- `risici.html`: flaskehalskortet har nu de fem dæmninger fra Vidensbot + link til `vaerdikaeder.html#kap-flod`.
+- Notes: HANDOFF trin 8 (15 svar), UX-review, VIDENSBOT-live-check («boble»-svar bevidst udeladt), IDEAS (til beslutning).
+- Test: 8763, 375/1280: 0 konsolfejl, ingen h-overflow, søgning «flodsystem»/«kurtage» rammer de nye svar. precheck PASSED.
+- Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + ndi-perspektiv.html sprogtjek mod Vidensbot.

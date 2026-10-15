@@ -66,3 +66,6 @@ Offentlige (ikke-fortrolige) idéer spejles evt. på `docs/ideer.html`.
 - **Kun NDI:** Faktisk vægtfordeling i snapshot.
 - **Bygges:** weightProfileNote i portefølje.
 - **Status:** building.
+
+## lane-C 00:40 — til beslutning (Mads/compliance)
+- FAQ «Er AI en boble?»: kunne citere Mads (BLOG 4. maj 2026, «compute-mangel … det modsatte af en boble») tydeligt mærket som NDI's vurdering. Ikke lavet: markedsvurdering på en læreside kræver ja fra compliance.
