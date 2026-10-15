@@ -167,7 +167,7 @@
     .mn-bridge::before{content:"⇄ ";color:var(--yellow);font-weight:700}
     .a-pane{display:none;margin:4px 0 18px;border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:linear-gradient(180deg,#0e2027,#0b171d)}
     .a-pane.on{display:block}
-    #a-pane,#e-pane,#p-pane,#sp-map,#sp-cost,#sp-trip,#sp-money,#sp-risk,#e-risk,#sp-alt,#q-hz,#q-br,#q-gl,#gloss-wrap,#p-gloss-wrap,#e-gloss-wrap{scroll-margin-top:110px}
+    #a-pane,#e-pane,#p-pane,#sp-map,#sp-cost,#sp-trip,#sp-money,#sp-risk,#e-risk,#sp-bands,#sp-quiz,#e-quiz,#sp-alt,#q-hz,#q-br,#q-gl,#gloss-wrap,#p-gloss-wrap,#e-gloss-wrap{scroll-margin-top:110px}
     /* Rum: læse-rute og "Hvad kan gå galt?" (kun denne side) */
     .sp-route{display:flex;gap:6px;overflow-x:auto;padding:2px 2px 8px;margin:0 0 12px;scrollbar-width:thin}
     .sp-route .lbl{flex:0 0 auto;align-self:center;font-size:11px;letter-spacing:.6px;text-transform:uppercase;color:var(--muted);margin-right:4px}
@@ -567,6 +567,7 @@
         <h3 id="ef-title"></h3>
         <p class="src" id="ef-lede"></p>
         <p class="src" id="ef-risk-a" style="margin-top:4px" hidden><a href="?kaede=energy#e-risk" data-sec="energy:e-risk"></a></p>
+        <p class="src" id="ef-quiz-a" style="margin-top:4px" hidden><a href="?kaede=energy#e-quiz" data-sec="energy:e-quiz"></a></p>
         <ol class="eflow" id="eflow" aria-label="Strømmens vej fra råstof til datacenter"></ol>
         <p class="e-fact" id="ef-fact"></p>
         <p class="src" id="ef-note" style="margin-top:6px"></p>
@@ -575,6 +576,13 @@
           <p class="src" id="erk-lede"></p>
           <div class="rk-grid" id="erk-grid"></div>
           <p class="src" id="erk-note" style="margin-top:8px"></p>
+        </section>
+        <section class="quiz" id="e-quiz" aria-labelledby="eqz-h" hidden>
+          <h3 id="eqz-h"></h3>
+          <p class="src" id="eqz-lede"></p>
+          <ol class="qz-list" id="eqz-list"></ol>
+          <p class="qz-score" id="eqz-score" aria-live="polite"></p>
+          <p class="src" id="eqz-note" style="margin-top:6px"></p>
         </section>
         <details class="gloss-wrap" id="e-gloss-wrap">
           <summary><h3>Energi-ordbog</h3><span class="src" id="e-gloss-count">Ord, der gør kæden lettere at læse</span></summary>
@@ -993,19 +1001,20 @@
       document.getElementById('bd-note').textContent = b.note || '';
       document.getElementById('sp-bands').hidden = false;
     })(sp?.bands);
-    // Rum: tjek dig selv (vores egne spørgsmål; intet gemmes)
-    (function renderQuiz(z) {
-      if (!z?.items?.length) return;
-      const list = document.getElementById('qz-list');
-      const score = document.getElementById('qz-score');
+    // Tjek dig selv (vores egne spørgsmål; intet gemmes). p = id-præfiks, c = kæde
+    function renderQuiz(z, c, p, host) {
+      if (!z?.items?.length) return false;
+      const $ = (k) => document.getElementById(`${p}-${k}`);
+      const list = $('list');
+      const score = $('score');
       let answered = 0, right = 0;
-      document.getElementById('qz-h').textContent = z.title;
-      document.getElementById('qz-lede').textContent = z.lede;
+      $('h').textContent = z.title;
+      $('lede').textContent = z.lede;
       list.innerHTML = z.items.map((x, i) => {
-        const href = x.sec.startsWith('lk-') ? `#${esc(x.sec)}" data-open="${esc(x.sec.slice(3))}` : `?kaede=space#${esc(x.sec)}" data-sec="space:${esc(x.sec)}`;
+        const href = x.sec.startsWith('lk-') ? `#${esc(x.sec)}" data-open="${esc(x.sec.slice(3))}` : `?kaede=${c}#${esc(x.sec)}" data-sec="${c}:${esc(x.sec)}`;
         return `<li><fieldset><legend>${esc(x.q)}</legend><div class="qz-opts">`
           + x.a.map((a, j) => `<button type="button" data-q="${i}" data-a="${j}">${esc(a)}</button>`).join('')
-          + `</div></fieldset><p class="qz-why" id="qz-why-${i}" aria-live="polite" hidden><b></b> ${esc(x.why)} <a href="${href}">${esc(x.more)} →</a></p></li>`;
+          + `</div></fieldset><p class="qz-why" id="${p}-why-${i}" aria-live="polite" hidden><b></b> ${esc(x.why)} <a href="${href}">${esc(x.more)} →</a></p></li>`;
       }).join('');
       list.addEventListener('click', (e) => {
         const btn = e.target.closest('button[data-q]');
@@ -1016,15 +1025,17 @@
           if (+b.dataset.a === x.ok) b.classList.add('ok');
           else if (b === btn) b.classList.add('no');
         });
-        const why = document.getElementById(`qz-why-${i}`);
+        const why = $(`why-${i}`);
         why.querySelector('b').textContent = j === x.ok ? 'Rigtigt.' : 'Ikke helt.';
         why.hidden = false;
         answered++; if (j === x.ok) right++;
         score.textContent = answered === z.items.length ? `${z.done} ${right} af ${z.items.length} rigtige.` : `${answered} af ${z.items.length} besvaret.`;
       });
-      document.getElementById('qz-note').textContent = z.note || '';
-      document.getElementById('sp-quiz').hidden = false;
-    })(sp?.quiz);
+      $('note').textContent = z.note || '';
+      document.getElementById(host).hidden = false;
+      return true;
+    }
+    renderQuiz(sp?.quiz, 'space', 'qz', 'sp-quiz');
     // Rum: læse-rute øverst i fanen
     (function renderRoute(r) {
       if (!r?.stops?.length) return;
@@ -1147,6 +1158,11 @@
       const a = document.querySelector('#ef-risk-a a');
       const n = en.risks.items.length;
       a.textContent = `⚠ ${en.risks.title} ${['', 'Én', 'To', 'Tre', 'Fire', 'Fem', 'Seks', 'Syv', 'Otte'][n] || n} usikkerheder og hvor de rammer →`;
+      a.parentElement.hidden = false;
+    }
+    if (renderQuiz(en?.quiz, 'energy', 'eqz', 'e-quiz')) {
+      const a = document.querySelector('#ef-quiz-a a');
+      a.textContent = `✓ ${en.quiz.title} →`;
       a.parentElement.hidden = false;
     }
 
