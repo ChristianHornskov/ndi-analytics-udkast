@@ -18,3 +18,11 @@ bash scripts/precheck.sh   # must exit 0
 Internal docs live only in `/notes` (repo root), never on GitHub Pages.
 
 Include this rule in every Claude and Grok overnight prompt.
+
+## Optional local git hook
+
+```bash
+cp scripts/git-hooks/pre-push .git/hooks/pre-push && chmod +x .git/hooks/pre-push
+```
+
+Installed on the overnight build machine.
