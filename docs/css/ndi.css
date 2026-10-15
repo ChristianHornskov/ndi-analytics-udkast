@@ -247,3 +247,66 @@ a.tag:hover{border-color:var(--brand);color:var(--text)}
   .cal{grid-template-columns:48px repeat(12,minmax(28px,1fr));font-size:10px;overflow-x:auto}
   .door{min-height:120px;padding:16px}
 }
+
+.life-strip .life-row{display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap}
+.life-stage{display:flex;flex-direction:column;align-items:center;gap:6px;flex:1;min-width:72px}
+.life-bar{width:100%;max-width:48px;background:var(--brand);border-radius:6px 6px 0 0;opacity:.85}
+.life-stage span{font-size:10px;color:var(--muted);text-align:center}
+.life-stage strong{font-size:13px;color:var(--cyan);font-weight:500}
+
+/* Polish pass (Claude): entré-sekundære døre, selskab/tema-typografi, mobil 375 */
+.doors-sub{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:-8px 0 14px}
+.doors-sub a{display:flex;flex-direction:column;gap:3px;padding:12px 14px;border:1px solid var(--line);border-radius:10px;text-decoration:none;color:var(--text);background:#0b171d80}
+.doors-sub a:hover{border-color:var(--brand);background:var(--selected)}
+.doors-sub a:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.doors-sub strong{font-size:14px;font-weight:500}
+.doors-sub span{font-size:12px;color:var(--muted);line-height:1.4}
+.more-links{font-size:12.5px;color:var(--faint);line-height:1.9;margin:4px 0 6px}
+.more-links a{color:var(--muted)}
+.more-links a:hover{color:var(--text)}
+.link-btn{background:none;border:0;padding:0;font:inherit;color:var(--muted);text-decoration:underline;cursor:pointer}
+.link-btn:hover{color:var(--text)}
+.asof-note{font-size:12px;color:var(--faint);margin:0 0 18px}
+.company-meta{color:var(--muted);font-size:13px;margin:6px 0 16px;overflow-wrap:anywhere}
+.panel-h{font-size:16px;margin-bottom:8px}
+.panel-h.brand{color:var(--brand)}
+.prose{font-size:15px;line-height:1.6;max-width:68ch}
+.prose+.prose{margin-top:10px}
+.prose.muted{color:var(--muted)}
+.src{font-size:12px;color:var(--faint);margin-top:10px;line-height:1.5}
+.src a{color:var(--muted)}
+.facts{display:grid;grid-template-columns:max-content 1fr;gap:6px 14px;margin-top:12px;font-size:13px}
+.facts dt{color:var(--text);font-weight:500}
+.facts dd{margin:0;color:var(--muted);line-height:1.5}
+details.more{margin-top:10px}
+details.more summary{cursor:pointer;color:var(--brand);font-size:13px;min-height:24px;padding:4px 0}
+details.more[open] summary{margin-bottom:8px}
+.media-list{list-style:none;padding:0;display:grid;gap:12px}
+.media-list li{display:flex;flex-direction:column;gap:3px;padding-left:12px;border-left:2px solid var(--line)}
+.media-list li span{font-size:12px;color:var(--muted)}
+.link-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.chain-row{display:flex;flex-wrap:wrap;align-items:center;gap:6px;color:var(--faint)}
+.chain-row .tag{font-size:12px;padding:4px 10px}
+.fund-switch{display:flex;gap:6px;margin:14px 0 4px}
+.fund-switch .control{text-decoration:none;display:inline-flex;align-items:center}
+.kid-meta{color:var(--faint)}
+.site-footer p+p{margin-top:8px}
+@media (max-width:900px){.doors-sub{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){
+  .site-header{flex-wrap:nowrap}
+  .site-header .brand span{display:none}
+  .nav{gap:8px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .nav::-webkit-scrollbar{display:none}
+  .nav a,.nav button{white-space:nowrap;min-height:32px;display:inline-flex;align-items:center}
+  .doors{gap:10px;margin:18px 0}
+  .door{min-height:0;gap:6px}
+  .door strong{font-size:17px}
+  .doors-sub{grid-template-columns:1fr 1fr;gap:8px}
+  .doors-sub a{padding:10px 12px}
+  .hide-sm-cell{display:none}
+  .facts{grid-template-columns:1fr;gap:2px}
+  .facts dd{margin-bottom:8px}
+  .prose{font-size:14.5px}
+  table.data{font-size:13px}
+  h1{overflow-wrap:anywhere}
+}

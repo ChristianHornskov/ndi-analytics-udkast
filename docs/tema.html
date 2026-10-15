@@ -9,44 +9,92 @@
   <link rel="stylesheet" href="css/ndi.css">
 </head>
 <body>
+  <a class="skip" href="#main">Gå til indhold</a>
   <header class="site-header">
     <a class="brand" href="index.html"><img src="assets/mark.svg" width="34" height="27" alt=""><span>NewDeal Invest</span></a>
-    <nav class="nav"><a href="index.html?view=udforsk">← Udforsk</a><a href="vaerdikaede.html">Værdikæde</a></nav>
+    <nav class="nav"><a href="index.html?view=udforsk">← Udforsk</a><a class="hide-sm" href="temaer.html">Alle temaer</a><a class="hide-sm" href="vaerdikaede.html">Værdikæde</a></nav>
   </header>
   <main id="main"><p style="color:var(--muted)">Henter tema…</p></main>
   <footer class="site-footer">
     <p>Udkast / noindex. Segmenter viser eksponering, ikke en anbefaling. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast.</p>
+    <p data-kid-footer></p>
   </footer>
   <script type="module">
-    import { fmtDate, WARN_HIST } from './js/data.js';
-    const slug = new URL(location.href).searchParams.get('slug') || 'chips';
-    const fund = new URL(location.href).searchParams.get('fund') || 'pmindi';
-    const data = await fetch('data/themes.json').then(r => r.json());
-    const theme = data.themes.find(t => t.slug === slug) || data.themes[0];
-    document.title = `${theme.title} · NDI Analytics`;
-    const chain = (theme.chain||[]).map(c => `<span class="tag">${c}</span>`).join(' → ') || '–';
-    const rows = (theme.companies||[]).map(c => `
-      <tr>
-        <td><a href="selskab.html?isin=${encodeURIComponent(c.isin)}&fund=${fund}">${c.name}</a><br><small style="color:var(--muted)">${c.isin}</small></td>
-        <td>${c.weight.toFixed(2).replace('.',',')}</td>
-      </tr>`).join('');
-    document.getElementById('main').innerHTML = `
-      <a class="back" href="index.html?view=udforsk&fund=${fund}&tags=${encodeURIComponent(theme.themeKey)}">← Screener filtreret</a>
-      <p class="eyebrow">TEMA · DYB SIDE</p>
-      <h1>${theme.title}</h1>
-      <p class="lede">${theme.problem}</p>
-      <p class="band">Eksponering, ikke anbefaling. Beholdning forsinket pr. ${fmtDate(data.positionsAsOf)} · ${theme.count} selskaber · ca. ${String(theme.weightSum).replace('.',',')} % af ${data.fund.toUpperCase()} (udsnit).</p>
-      <section class="panel">
-        <h2 style="font-size:16px;margin-bottom:8px;color:var(--brand)">Plads i værdikæden</h2>
-        <p style="margin-bottom:10px">${chain}</p>
-        <p><a class="outline-btn small" href="vaerdikaede.html">Se hele AI-værdikæden →</a></p>
-      </section>
-      <section class="panel">
-        <h2 style="font-size:16px;margin-bottom:8px">Selskaber i forsinket beholdning</h2>
-        <div class="table-wrap"><table class="data" style="min-width:0"><thead><tr><th>Navn</th><th>Vægt %</th></tr></thead><tbody>${rows || '<tr><td colspan="2">Ingen i udsnit</td></tr>'}</tbody></table></div>
-        <p style="font-size:11px;color:var(--muted);margin-top:8px">Top op til 40 efter vægt. Ingen kursafkast pr. aktie i v1.</p>
-      </section>
-      <p class="warn">${WARN_HIST}</p>`;
+    import { loadAll, fundById, fmtDate, daTheme, WARN_HIST, findTheme, tagsFor, fillKidFooter } from './js/data.js';
+    const u = new URL(location.href);
+    const key = u.searchParams.get('slug') || 'chips';
+    const fundId = u.searchParams.get('fund') || 'pmindi';
+    const [data, td] = await Promise.all([loadAll(), fetch('data/themes.json').then((r) => r.json())]);
+    fillKidFooter();
+    const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+    const w = (x) => (x || 0).toFixed(2).replace('.', ',');
+    const main = document.getElementById('main');
+    const theme = findTheme(td.themes, key);
+
+    if (!theme) {
+      main.innerHTML = `<a class="back" href="temaer.html">← Alle temaer</a>
+        <h1>Temaet findes ikke</h1><p class="lede">Vælg et tema herunder.</p>
+        <p class="link-row">${td.themes.map((t) => `<a class="tag" href="tema.html?slug=${t.slug}&fund=${fundId}">${esc(t.title)}</a>`).join(' ')}</p>`;
+    } else {
+      // Selskaber beregnes fra den forsinkede beholdning (primært tema + manuelle multi-tags), ikke themes.json-udsnittet
+      const fund = fundById(data.portfolio, fundId);
+      const tk = theme.themeKey;
+      const list = fund.positions
+        .filter((p) => tagsFor(p, data.multiTags).includes(tk))
+        .sort((a, b) => (b.weight || 0) - (a.weight || 0));
+      const sum = list.reduce((s, p) => s + (p.weight || 0), 0);
+      const posAsOf = fmtDate(fund.positionsAsOf || td.positionsAsOf);
+      const keyToSlug = Object.fromEntries(td.themes.map((t) => [t.title.toLowerCase(), t.slug]));
+      const chain = (theme.chain || []).map((c) => {
+        const slug = keyToSlug[c.toLowerCase()] || (td.themes.find((t) => t.title.toLowerCase().startsWith(c.toLowerCase())) || {}).slug;
+        const cur = c.toLowerCase() === theme.title.toLowerCase() || slug === theme.slug;
+        return slug && !cur ? `<a class="tag" href="tema.html?slug=${slug}&fund=${fundId}">${esc(c)}</a>` : `<span class="tag ${cur ? 'accent' : ''}">${esc(c)}</span>`;
+      }).join(' <span aria-hidden="true">→</span> ');
+      const others = td.themes.filter((t) => t.slug !== theme.slug);
+      const rows = list.map((p) => {
+        const multi = p.theme !== tk;
+        return `<tr>
+          <td><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}">${esc(p.name)}</a>${multi ? ` <span class="tag" title="Primært tema: ${esc(daTheme(p.theme))}">også ${esc(daTheme(p.theme))}</span>` : ''}</td>
+          <td class="hide-sm-cell">${esc(p.role || '')}</td>
+          <td>${w(p.weight)}</td>
+        </tr>`;
+      }).join('');
+      document.title = `${theme.title} · NDI Analytics`;
+      main.innerHTML = `
+        <a class="back" href="index.html?view=udforsk&fund=${fund.id}&tags=${encodeURIComponent(tk)}">← Screener: ${esc(theme.title)}</a>
+        <p class="eyebrow">NDI-TEMA</p>
+        <h1>${esc(theme.title)}</h1>
+        <p class="lede">${esc(theme.problem)}</p>
+        <div class="fund-switch" role="group" aria-label="Andelsklasse">
+          ${data.portfolio.funds.map((f) => `<a class="control ${f.id === fund.id ? 'active' : ''}" ${f.id === fund.id ? 'aria-current="true"' : ''} href="tema.html?slug=${theme.slug}&fund=${f.id}">${esc(f.short)}</a>`).join('')}
+        </div>
+        <div class="metrics" style="margin-top:14px">
+          <div class="metric"><div class="label">Selskaber i temaet</div><strong>${list.length}</strong><small>${esc(fund.short)} · beholdning pr. ${posAsOf} (forsinket)</small></div>
+          <div class="metric"><div class="label">Samlet vægt</div><strong>ca. ${w(sum)} %</strong><small>Inkl. selskaber med flere temaer</small></div>
+        </div>
+        <p class="band">Temaet viser <strong>eksponering</strong> i fondens forsinkede beholdning — ikke en anbefaling eller en bevidst overvægt.</p>
+
+        ${theme.chain?.length ? `<section class="panel">
+          <h2 class="panel-h brand">Plads i værdikæden</h2>
+          <p class="chain-row">${chain}</p>
+          <p class="link-row" style="margin-top:12px"><a class="outline-btn small" href="vaerdikaede.html">Se hele AI-værdikæden →</a></p>
+        </section>` : ''}
+
+        <section class="panel">
+          <h2 class="panel-h">Selskaber i forsinket beholdning</h2>
+          ${list.length ? `<div class="table-wrap"><table class="data" style="min-width:0"><thead><tr><th>Navn</th><th class="hide-sm-cell">Rolle</th><th>Vægt %</th></tr></thead><tbody>${rows}</tbody></table></div>`
+            : `<p class="band">Ingen selskaber i ${esc(fund.short)} med dette tema pr. ${posAsOf}.</p>`}
+          <p class="src">Sorteret efter vægt. Ingen kursafkast pr. aktie i udkastet.</p>
+          <p class="link-row" style="margin-top:10px"><a class="outline-btn small" href="index.html?view=udforsk&fund=${fund.id}&tags=${encodeURIComponent(tk)}">Åbn i screeneren →</a></p>
+        </section>
+
+        <section class="panel">
+          <h2 class="panel-h">Andre temaer</h2>
+          <p class="link-row">${others.map((t) => `<a class="tag" href="tema.html?slug=${t.slug}&fund=${fund.id}">${esc(t.title)}</a>`).join(' ')}</p>
+          <p class="link-row" style="margin-top:10px"><a href="temaer.html">Alle temaer →</a> · <a href="laer/saadan-taenker-vi.html">Sådan tænker vi →</a></p>
+        </section>
+        <p class="warn">${WARN_HIST}</p>`;
+    }
   </script>
 </body>
 </html>

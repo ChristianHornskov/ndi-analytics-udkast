@@ -18,6 +18,9 @@ const pages = [
   '/om-data.html',
   '/embed/chart.html',
   '/vaerdikaede.html',
+  '/selskab.html?isin=US88160R1014',
+  '/laer/faq.html',
+  '/temaer.html',
 ];
 const results = [];
 const browser = await chromium.launch({ headless: true });

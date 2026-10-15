@@ -1,7 +1,7 @@
 import {
   loadAll, fundById, slicePeriod, cagr, periodReturn, ytdReturn,
   monthlyReturns, fmtPct, fmtDate, daTheme, daMat, WARN_HIST,
-  MATURITY_LABELS, THEME_LABELS, calendarYearReturns, lastNav, publicTags, tagsFor,
+  MATURITY_LABELS, THEME_LABELS, calendarYearReturns, lastNav, publicTags, tagsFor, fillKidFooter,
 } from './data.js';
 import { renderChart } from './chart.js';
 
@@ -110,54 +110,36 @@ function renderEntre(root) {
     <div class="doors" role="navigation" aria-label="Vælg område">
       <a class="door" href="?view=fonden&fund=${state.fund}" data-nav="fonden">
         <strong>Fonden</strong>
-        <span>Performance, afkastkalender, drawdown og dokumenterede udbytter.</span>
+        <span>Udvikling siden start, kalenderår, største fald og dokumenterede udbytter.</span>
         <span class="go">Åbn fonden →</span>
       </a>
       <a class="door" href="?view=portefolje&fund=${state.fund}" data-nav="portefolje">
         <strong>Porteføljen</strong>
-        <span>Forsinket beholdning fordelt på NDI-temaer. Eksponering, ikke anbefaling.</span>
+        <span>Forsinket beholdning fordelt på NDI-temaer og modenhed.</span>
         <span class="go">Se beholdninger →</span>
       </a>
       <a class="door" href="?view=udforsk&fund=${state.fund}" data-nav="udforsk">
         <strong>Udforsk tech</strong>
-        <span>Screener med NDI-tags, tema-dybsider og søgning — kun porteføljens selskaber.</span>
+        <span>Find porteføljens selskaber efter tema, navn eller ISIN – uden de klassiske sektorkasser.</span>
         <span class="go">Åbn screener →</span>
       </a>
-      <a class="door" href="laer/index.html">
-        <strong>Lær</strong>
-        <span>Sådan tænker vi, varians, P/E, livscyklus og FAQ.</span>
-        <span class="go">Åbn lær →</span>
-      </a>
-      <a class="door" href="invester.html">
-        <strong>Sådan investerer du</strong>
-        <span>Fra produktforståelse til ISIN og platform — generel info.</span>
-        <span class="go">Se flow →</span>
-      </a>
-      <a class="door" href="sammenlign.html">
-        <strong>Sammenlign</strong>
-        <span>PMINDI vs PMINDIAKK: udbytte vs akkumulering.</span>
-        <span class="go">Sammenlign →</span>
-      </a>
     </div>
-    <section class="panel">
-      <h2 style="font-size:18px;margin-bottom:10px">Hurtige genveje</h2>
-      <p style="color:var(--muted);font-size:13px;margin-bottom:12px">Beholdning pr. ${fmtDate(DATA.portfolio.asOf)} · Afkast-snapshot (ikke live pipeline).</p>
-      <div class="seg">
-        <a class="outline-btn small" href="temaer.html">Alle temaer</a>
-        <a class="outline-btn small" href="tema.html?slug=chips&fund=${state.fund}">Tema: Chips</a>
-        <a class="outline-btn small" href="laer/index.html">Lær</a>
-        <a class="outline-btn small" href="drawdown.html?fund=${state.fund}">Drawdown</a>
-        <a class="outline-btn small" href="sammenlign.html">PMINDI vs AKK</a>
-        <a class="outline-btn small" href="invester.html">Sådan investerer du</a>
-        <a class="outline-btn small" href="selskaber.html?fund=${state.fund}">Alle selskaber</a>
-        <a class="outline-btn small" href="nyhedsarkiv.html">Nyhedsarkiv</a>
-        <a class="outline-btn small" href="om-data.html">Ordliste & data</a>
-        <a class="outline-btn small" href="vaerdikaede.html">AI-værdikæde</a>
-        <a class="outline-btn small" href="embed/chart.html">Embed-graf</a>
-        <a class="outline-btn small" href="selskab.html?isin=JP3436100006&fund=${state.fund}">Eksempel: SoftBank</a>
-        <button type="button" class="outline-btn small" data-open="dlg-follow">Følg med (stub)</button>
-      </div>
-    </section>
+    <nav class="doors-sub" aria-label="Flere indgange">
+      <a href="laer/index.html"><strong>Lær</strong><span>Sådan tænker vi, livscyklus, P/E og FAQ</span></a>
+      <a href="temaer.html?fund=${state.fund}"><strong>Temaer</strong><span>Fra chips til software – hvad hvert tema dækker</span></a>
+      <a href="drawdown.html?fund=${state.fund}"><strong>Største fald</strong><span>Fondens fald fra top og genopretning</span></a>
+      <a href="invester.html"><strong>Sådan investerer du</strong><span>ISIN, klasser og KID – trin for trin</span></a>
+    </nav>
+    <p class="more-links">Også i udkastet:
+      <a href="selskab.html?isin=JP3436100006&fund=${state.fund}">Eksempel: SoftBank</a> ·
+      <a href="selskaber.html?fund=${state.fund}">Selskaber A–Z</a> ·
+      <a href="vaerdikaede.html">AI-værdikæden</a> ·
+      <a href="sammenlign.html">PMINDI vs PMINDIAKK</a> ·
+      <a href="nyhedsarkiv.html">Nyhedsarkiv</a> ·
+      <a href="om-data.html">Ordliste &amp; data</a> ·
+      <a href="embed/chart.html">Embed-graf</a> ·
+      <button type="button" class="link-btn" data-open="dlg-follow">Følg med</button></p>
+    <p class="asof-note">Beholdning pr. ${fmtDate(fundById(DATA.portfolio, state.fund).positionsAsOf || DATA.portfolio.asOf)} (forsinket) · afkast-snapshot pr. ${fmtDate(DATA.portfolio.performanceAsOf || DATA.portfolio.asOf)}.</p>
     <section class="panel" style="margin-top:18px">
       <h2 style="font-size:18px;margin-bottom:8px">Porteføljeholdet</h2>
       <p style="color:var(--muted);font-size:14px;line-height:1.5">NewDeal Invest forvaltes af et porteføljehold med fokus på teknologi og bred spredning. Læs mere om holdet på <a href="https://newdealinvest.dk/">newdealinvest.dk</a>.</p>
@@ -369,6 +351,35 @@ function filterPositions(fund) {
   return list;
 }
 
+
+function renderLivscyklus(fund) {
+  // Pedagogical strip only — maturity is draft/heuristic; many are ikke-klassificeret
+  const stages = [
+    { id: 'prerevenue', label: 'Præ-revenue' },
+    { id: 'preprofit', label: 'Præ-profit' },
+    { id: 'highgrowth', label: 'High growth' },
+    { id: 'garp', label: 'GARP' },
+    { id: 'value', label: 'Value' },
+  ];
+  const counts = Object.fromEntries(stages.map((st) => [st.id, 0]));
+  let unknown = 0;
+  for (const pos of fund.positions || []) {
+    if (counts[pos.maturity] != null) counts[pos.maturity]++;
+    else unknown++;
+  }
+  const max = Math.max(...Object.values(counts), 1);
+  const cells = stages.map((st) => {
+    const n = counts[st.id];
+    const h = Math.max(6, Math.round((n / max) * 48));
+    return `<div class="life-stage" title="${st.label}: ${n}"><div class="life-bar" style="height:${h}px"></div><span>${st.label}</span><strong>${n}</strong></div>`;
+  }).join('');
+  return `<section class="panel life-strip">
+    <h2 style="font-size:16px;margin-bottom:6px">Livscyklus (udkast)</h2>
+    <p style="font-size:12px;color:var(--muted);margin-bottom:12px">Pædagogisk fordeling efter heuristisk modenhed — <strong style="color:var(--text)">ikke officiel NDI-rating</strong>. ${unknown} selskaber er ikke klassificeret endnu.</p>
+    <div class="life-row">${cells}</div>
+  </section>`;
+}
+
 function renderPortefolje(root) {
   const fund = fundById(DATA.portfolio, state.fund);
   const list = filterPositions(fund).slice(0, 80);
@@ -379,6 +390,7 @@ function renderPortefolje(root) {
     <p class="lede">Forsinket offentlig beholdning pr. ${fmtDate(fund.positionsAsOf || DATA.portfolio.asOf)} (Fundmarket månedsrapport) — ikke dagsaktuel. Vægte summerer til ca. 100 %.</p>
     <p class="band">Segmenter viser eksponering, ikke en anbefaling.</p>
     ${fundToolbar()}
+    ${renderLivscyklus(fund)}
     <p class="band" style="font-size:11px">Ingen P/S, P/E eller kursafkast pr. aktie i denne version. Tema-tags er udkast.</p>
     ${positionsTable(list, fund)}
     <p style="font-size:12px;color:var(--muted);margin-top:10px">Viser ${list.length} af ${fund.positions.length} (top efter nuværende sortering). Åbn Udforsk for filtre.</p>`;
@@ -418,6 +430,7 @@ function renderUdforsk(root) {
       <input type="search" id="q" placeholder="Søg navn, ticker, ISIN, tema…" value="${state.q.replace(/"/g,'&quot;')}" aria-label="Søg">
       <button type="button" class="outline-btn small" id="reset-filters">Nulstil</button>
       <button type="button" class="outline-btn small" id="copy-link">Kopiér link til denne liste</button>
+      <button type="button" class="outline-btn small" id="csv-export">Download CSV (filtreret)</button>
       <button type="button" class="outline-btn small" data-open="dlg-follow">Følg tema (stub)</button>
     </div>
     <div class="filters" aria-label="Temaer">
@@ -453,11 +466,33 @@ function paint() {
 }
 
 function onClick(e) {
-  const t = e.target.closest('[data-nav],[data-fund],[data-period],[data-sort],[data-tag],[data-mat],[data-open],[data-x],#reset-filters,#copy-link');
+  const t = e.target.closest('[data-nav],[data-fund],[data-period],[data-sort],[data-tag],[data-mat],[data-open],[data-x],#reset-filters,#copy-link,#csv-export');
   if (!t) return;
   if (t.matches('[data-open]')) { openDialog(t.getAttribute('data-open')); return; }
   if (t.id === 'reset-filters') {
     state.tags = []; state.maturity = []; state.q = ''; writeUrl(); paint(); return;
+  }
+
+  if (t.id === 'csv-export') {
+    const fund = fundById(DATA.portfolio, state.fund);
+    const list = filterPositions(fund);
+    const rows = [['name','isin','symbol','weight_pct','themes']].concat(
+      list.map((p) => [
+        p.name || '', p.isin || '', p.symbol || '',
+        String(p.weight ?? ''),
+        tagsFor(p, DATA.multiTags).join('|'),
+      ])
+    );
+    const esc = (c) => `"${String(c).replace(/"/g, '""')}"`;
+    const csv = rows.map((r) => r.map(esc).join(',')).join('\n');
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = `ndi-${state.fund}-screener.csv`;
+    a.click();
+    URL.revokeObjectURL(a.href);
+    toast(`CSV downloadet (${list.length} rækker)`);
+    return;
   }
   if (t.id === 'copy-link') {
     // U1: URL'en bærer hele visningen (fund, tags, mat, sort, q)
@@ -506,6 +541,26 @@ function onInput(e) {
   onInput._t = setTimeout(paint, 150);
 }
 
+
+/* ndi-keyboard */
+function wireKeyboard() {
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      document.querySelector('.dialog-backdrop')?.remove();
+      return;
+    }
+    const seg = e.target.closest?.('.seg');
+    if (!seg || !['ArrowLeft', 'ArrowRight'].includes(e.key)) return;
+    const controls = [...seg.querySelectorAll('.control:not(:disabled)')];
+    const i = controls.indexOf(document.activeElement);
+    if (i < 0) return;
+    e.preventDefault();
+    const next = e.key === 'ArrowRight' ? (i + 1) % controls.length : (i - 1 + controls.length) % controls.length;
+    controls[next].focus();
+    controls[next].click();
+  });
+}
+
 async function main() {
   readUrl();
   // Strippede interne tags fjernes også fra adresselinjen, så de ikke deles via "Kopiér link"
@@ -516,8 +571,10 @@ async function main() {
     $('#app').innerHTML = `<p class="warn">Data kunne ikke hentes (${err.message}). Genindlæs siden.</p>`;
     return;
   }
+  fillKidFooter();
   document.addEventListener('click', onClick);
   document.addEventListener('input', onInput);
+  wireKeyboard();
   window.addEventListener('popstate', () => { readUrl(); paint(); });
   // [data-open] håndteres af onClick-delegering (tidligere dobbelt listener → to dialoger)
   paint();
