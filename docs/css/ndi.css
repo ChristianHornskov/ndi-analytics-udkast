@@ -623,6 +623,11 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
 .figure .uw-grid{stroke:var(--line);stroke-width:1;vector-effect:non-scaling-stroke}
 .figure .uw-drop{stroke:var(--yellow);stroke-width:1;vector-effect:non-scaling-stroke;opacity:.85}
 .figure .uw-open{stroke:var(--yellow);stroke-width:1.25;vector-effect:non-scaling-stroke;opacity:.9}
+.figure .uw-span{fill:var(--brand);opacity:.92}
+.figure .uw-span.open{fill:var(--yellow);opacity:1}
+.figure .uw-span.on{stroke:var(--text);stroke-width:1.25;vector-effect:non-scaling-stroke}
+.figure .uw-up-tick{stroke:var(--brand);stroke-width:1.25;vector-effect:non-scaling-stroke}
+.figure text.uw-up{fill:var(--brand);font-size:10px}
 .figure .uw-cursor{stroke:var(--text);stroke-width:1;opacity:.75;vector-effect:non-scaling-stroke}
 .figure .uw-pick{fill:var(--cyan);stroke:var(--bg);stroke-width:1.5;vector-effect:non-scaling-stroke}
 .figure svg.uw{cursor:crosshair;touch-action:pan-y}
@@ -696,6 +701,10 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
   .ep-ledger li.open .depth{color:#111}
   .figure text,.figure .tick,.figure .uw-label{fill:#333}
   .figure .uw-open{stroke:#333;opacity:1}
+  .figure .uw-span{fill:#1d4e56;opacity:1}
+  .figure .uw-span.open{fill:#111}
+  .figure .uw-span.on{stroke:#111}
+  .figure text.uw-up{fill:#1d4e56}
   .year-rail .yr-mark{color:#333}
   .year-rail a.yr-deep{border-top-color:#111}
 }

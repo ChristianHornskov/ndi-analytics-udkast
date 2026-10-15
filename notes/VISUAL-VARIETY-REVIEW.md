@@ -62,6 +62,12 @@ Ship. Visual-variety pass er i planen (`VISUAL-VARIETY.md`). Næste builder: SHO
 9. ~~AKK-datoen brækkede midt i måneden på 320.~~ Lukket 00:29. "fra 5. dec. 2026" står på sin egen linje. Ingen afkastprocent på kortet.
 10. ~~Sluttallet på embed var 9 px på mobil.~~ Lukket 00:31. Det er 12 px og står inden for svg'en ved 375 og 320. Hele perioden er stadig +104,8 %.
 
+### Update · episoder på kurven · 2026-10-16 ~00:50 CEST
+
+De fire episoder dybere end 10 % står som søjler mellem kurven og årstallene. Brand for de lukkede. Gul for den åbne. Den valgte har en lys kant. Seneste dag ligger i den åbne, så den er valgt ved start. Klik på −35,8 % flytter kanten til søjlen for 18. feb. 2025 til 26. aug. 2025 og sætter udlæsningen på 8. apr. 2025. En dag uden for de fire, 17. nov. 2023, slukker kanten og rækken.
+
+Ordet "tilbage" står over 26. aug. 2025. Det er dagen, det dybeste fald igen nåede sin top. "top" og "nu −23 %" rammer det ikke, ved 1280, 375 og 320. Ingen tekst uden for svg'en. Ingen sidescroll. Ingen konsolfejl. AKK siger stadig 12 måneder og har ingen procent.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.

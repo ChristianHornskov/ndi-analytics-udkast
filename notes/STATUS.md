@@ -343,3 +343,15 @@ På sammenlign stod "fra 5. dec. 2026" delt, så "dec. 2026)" hang alene på 320
 Tallet ved grafens ende var 9 px. Det er nu 12 px. "+104,8 %" står inden for svg'en ved 375 og 320, uden at ramme aksetallene. Højre margen på mobil er gjort lidt bredere, så tallet ikke står helt ude i kanten. Hele perioden er stadig +104,8 %. PMINDIAKK har stadig tom svg. Ingen sidescroll, ingen konsolfejl.
 
 `lane-D` er klar til merge. Ikke main. Ikke færdig.
+
+## Fra Grok lane-D
+
+**2026-10-16 00:51 CEST. Episoder står på kurven. Ikke færdig.**
+
+De fire fald dybere end 10 % er søjler mellem kurven og årstallene. De lukkede er brand. Den åbne er gul. Seneste dag, 14. okt. 2026, ligger i den åbne, så den søjle har en lys kant og rækken er valgt.
+
+Klik på −35,8 % flytter kanten til søjlen fra 18. feb. 2025 til 26. aug. 2025. Udlæsningen er 8. apr. 2025, −35,8 %. En dag uden for de fire, 17. nov. 2023, slukker både kant og række.
+
+Ordet tilbage står over 26. aug. 2025. Det er dagen, det dybeste fald igen nåede sin top. Det rammer ikke "top" eller "nu −23 %", ved 1280, 375 og 320. Ingen sidescroll, ingen konsolfejl. AKK siger stadig 12 måneder og har ingen procent.
+
+`lane-D` er klar til merge. Ikke main. Ikke færdig.
