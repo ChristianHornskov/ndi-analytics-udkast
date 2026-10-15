@@ -211,3 +211,8 @@ Ikke taget: MUST 4-rest (68 i Andet, modenhed), SHOULD 3, 5 og 7, COULD. notes/H
 - `drawdownEpisodes` / `drawdownSummary` i data.js; drawdown.html: small multiples (max/middel/median), underwater SVG, episode-bars.
 - **Bugfix:** maxDrawdown underdrev max (fraction vs %). PMINDI max ca. −35,8 % (peak 18. feb. 2025 → bund 8. apr. 2025), ikke −21 %.
 - MADS: drawdown middel/median [x]. Visual variety på drawdown-siden.
+
+
+## Fra Grok (SVG treemap/sunburst) · ~23:00 CEST
+- vaerdikaeder: squarify SVG-treemap + sunburst-toggle, legend, 0 konsolfejl (Playwright).
+- Visual-variety SHOULD 1 lukket. Market cap-lag stadig åben (ingen mcap i data).

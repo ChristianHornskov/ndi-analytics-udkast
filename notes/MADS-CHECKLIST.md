@@ -43,7 +43,7 @@ Kilder: slack_ny_graf_2026-10-15.md, vision.txt, mads_tankemodel.md, investering
 - [x] Energi-kæde (chain energy)
 - [x] Tidslinje over teknologiske skift
 - [x] Hvorfor NDI sidder hvor den gør (callout + filosofi-kapitel; led-blurbs)
-- [x] Treemap-mosaik tema-eksponering (sunburst = SHOULD næste); visual-variety pass + Grok review
+- [x] SVG-treemap + sunburst tema-eksponering; visual-variety pass + Grok review
 
 ## Formidling / filosofi
 - [x] Variance drag / CAGR ≠ gennemsnit (lær)
@@ -58,3 +58,4 @@ Kilder: slack_ny_graf_2026-10-15.md, vision.txt, mads_tankemodel.md, investering
 | 22:56 | Byg: multi-kæde + timeline + treemap + filosofi-callouts | (denne) |
 | 22:58 | Visual-variety pass + Grok review; ship vaerdikaeder.html | (denne) |
 | 23:00 | Drawdown middel/median + underwater + episode bars | (denne) |
+| 23:02 | SVG treemap + sunburst toggle på vaerdikaeder | (denne) |

@@ -31,3 +31,7 @@ Ingen blockers for push. Data er forsinket snapshot; advarsel findes.
 
 ## Konklusion
 Ship. Visual-variety pass er i planen (`VISUAL-VARIETY.md`). Næste builder: SHOULD 1–3 eller næste Mads-item (drawdown middel/median / market cap-lag).
+
+
+## Update ~23:02 CEST
+- **SVG-treemap + sunburst shipped** på vaerdikaeder (toggle). SHOULD 1 lukket. Legend + klik til tema.

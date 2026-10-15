@@ -37,15 +37,16 @@
     .vc-link.is-open .vc-cos{display:block}
     .vc-cos a{display:inline-block;margin:3px 6px 3px 0;font-size:12px}
     .vc-why{font-size:13px;color:var(--muted);line-height:1.5;margin-top:8px}
-    /* Treemap */
-    .tm{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:minmax(54px,auto);gap:6px;margin:16px 0}
-    .tm-cell{border-radius:10px;padding:10px 12px;background:#123038;border:1px solid var(--line);display:flex;flex-direction:column;justify-content:flex-end;min-height:54px;text-decoration:none}
-    .tm-cell:hover{border-color:var(--cyan);background:#183840}
-    .tm-cell .k{font-size:11px;color:var(--muted)}
-    .tm-cell .v{font-size:18px;font-weight:700;color:var(--cyan);letter-spacing:-.3px}
-    .tm-cell.span2{grid-column:span 2}.tm-cell.span3{grid-column:span 3}
-    .tm-cell.span4{grid-column:span 4}.tm-cell.row2{grid-row:span 2;min-height:120px}
-    @media(max-width:700px){.tm{grid-template-columns:repeat(2,1fr)}.tm-cell.span2,.tm-cell.span3,.tm-cell.span4{grid-column:span 1}}
+    /* Treemap / sunburst */
+    .viz-toggle{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 12px}
+    .tm-svg,.sb-svg{width:100%;height:auto;display:block;margin:8px 0 4px;background:#0b171d;border:1px solid var(--line);border-radius:12px}
+    .tm-svg text,.sb-svg text{pointer-events:none;font-family:inherit}
+    .tm-leaf{cursor:pointer;stroke:#0b171d;stroke-width:2}
+    .tm-leaf:hover{stroke:var(--yellow);stroke-width:2.5}
+    .sb-arc{cursor:pointer;stroke:#0b171d;stroke-width:1.5}
+    .sb-arc:hover{stroke:var(--yellow);stroke-width:2}
+    .viz-legend{display:flex;flex-wrap:wrap;gap:8px 14px;margin:8px 0 4px;font-size:12px;color:var(--muted)}
+    .viz-legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:middle}
     /* Timeline */
     .tl{position:relative;margin:24px 0 12px;padding-left:22px;border-left:2px solid var(--brand)}
     .tl-item{position:relative;padding:0 0 22px 8px}
@@ -99,8 +100,13 @@
     <section class="chapter panel" id="kap-treemap">
       <h2>Tema-eksponering (treemap)</h2>
       <p class="src" id="tm-asof"></p>
-      <div class="tm" id="treemap" role="list"></div>
-      <p class="band">Areal ≈ vægt i forsinket snapshot. Eksponering, ikke anbefaling.</p>
+      <div class="viz-toggle" role="group" aria-label="Tema-visualisering">
+        <button type="button" class="control active" id="viz-tm" aria-pressed="true">Treemap</button>
+        <button type="button" class="control" id="viz-sb" aria-pressed="false">Sunburst</button>
+      </div>
+      <div id="viz-host"></div>
+      <div class="viz-legend" id="viz-legend"></div>
+      <p class="band">Areal / bue ≈ vægt i forsinket snapshot. Eksponering, ikke anbefaling. Klik et tema.</p>
     </section>
 
     <section class="chapter" id="kap-kaeder">
@@ -142,22 +148,139 @@
     document.getElementById('tm-asof').textContent =
       `Forsinket snapshot, pr. ${fmtDate(pack.asOf)}. ${pack.note}`;
 
-    // Treemap-ish mosaic (varied spans by weight rank)
-    const tm = document.getElementById('treemap');
-    const maxW = Math.max(...pack.treemap.map(t => t.w), 0.01);
-    pack.treemap.forEach((t, i) => {
-      const a = document.createElement('a');
-      a.href = `tema.html?slug=${encodeURIComponent(t.key)}&fund=${fund}`;
-      a.className = 'tm-cell';
-      a.setAttribute('role', 'listitem');
-      if (i === 0) a.classList.add('span3', 'row2');
-      else if (i === 1) a.classList.add('span2', 'row2');
-      else if (i < 4) a.classList.add('span2');
-      const heat = 0.35 + 0.65 * (t.w / maxW);
-      a.style.background = `rgba(137,174,180,${(0.08 + heat * 0.22).toFixed(2)})`;
-      a.innerHTML = `<span class="k">${esc(daTheme(t.key))} · ${t.n} selskaber</span><span class="v">${String(t.w).replace('.', ',')} %</span>`;
-      tm.appendChild(a);
+    // Squarified treemap + sunburst (Jesper palette)
+    const PAL = ['#89aeb4','#9ecfd6','#6d949c','#b8d4d8','#5a7f88','#c5ddd0','#4a6a72','#d4e0a8','#3d5c64','#a7cbd0'];
+    function squarify(items, x, y, w, h) {
+      const total = items.reduce((s, i) => s + i.w, 0) || 1;
+      const out = [];
+      let i = 0;
+      const nodes = items.map(it => ({ ...it, area: (it.w / total) * w * h }));
+      let rx = x, ry = y, rw = w, rh = h;
+      while (i < nodes.length) {
+        const vertical = rw >= rh;
+        let j = i, rowArea = 0, bestWorst = Infinity;
+        while (j < nodes.length) {
+          rowArea += nodes[j].area;
+          const side = vertical ? rh : rw;
+          const rowSide = rowArea / side;
+          let worst = 0;
+          for (let k = i; k <= j; k++) {
+            const s = nodes[k].area / rowSide;
+            worst = Math.max(worst, Math.max(rowSide / s, s / rowSide));
+          }
+          if (worst <= bestWorst || j === i) { bestWorst = worst; j++; }
+          else { rowArea -= nodes[j].area; break; }
+        }
+        const side = vertical ? rh : rw;
+        const rowSide = rowArea / side;
+        let offset = 0;
+        for (let k = i; k < j; k++) {
+          const s = nodes[k].area / rowSide;
+          if (vertical) out.push({ ...nodes[k], x: rx, y: ry + offset, w: rowSide, h: s });
+          else out.push({ ...nodes[k], x: rx + offset, y: ry, w: s, h: rowSide });
+          offset += s;
+        }
+        if (vertical) { rx += rowSide; rw -= rowSide; }
+        else { ry += rowSide; rh -= rowSide; }
+        i = j;
+      }
+      return out;
+    }
+    function renderTreemap(host, items) {
+      const W = 720, H = 320, pad = 4;
+      const layout = squarify([...items].sort((a,b)=>b.w-a.w), pad, pad, W-2*pad, H-2*pad);
+      const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+      svg.setAttribute('class', 'tm-svg');
+      svg.setAttribute('role', 'img');
+      svg.setAttribute('aria-label', 'Tema-treemap');
+      layout.forEach((c, i) => {
+        const a = document.createElementNS('http://www.w3.org/2000/svg', 'a');
+        a.setAttribute('href', `tema.html?slug=${encodeURIComponent(c.key)}&fund=${fund}`);
+        const r = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+        r.setAttribute('class', 'tm-leaf');
+        r.setAttribute('x', c.x); r.setAttribute('y', c.y);
+        r.setAttribute('width', Math.max(0, c.w)); r.setAttribute('height', Math.max(0, c.h));
+        r.setAttribute('rx', 6); r.setAttribute('fill', PAL[i % PAL.length]);
+        r.setAttribute('fill-opacity', String(0.55 + 0.35 * (c.w / items[0].w)));
+        a.appendChild(r);
+        if (c.w > 70 && c.h > 36) {
+          const t1 = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+          t1.setAttribute('x', c.x + 8); t1.setAttribute('y', c.y + 18);
+          t1.setAttribute('fill', '#e8f2f4'); t1.setAttribute('font-size', '12');
+          t1.textContent = daTheme(c.key);
+          a.appendChild(t1);
+          const t2 = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+          t2.setAttribute('x', c.x + 8); t2.setAttribute('y', c.y + 36);
+          t2.setAttribute('fill', 'var(--yellow)'); t2.setAttribute('font-size', '14');
+          t2.setAttribute('font-weight', '700');
+          t2.textContent = String(c.w).replace('.', ',') + ' %';
+          a.appendChild(t2);
+        }
+        svg.appendChild(a);
+      });
+      host.appendChild(svg);
+    }
+    function renderSunburst(host, items) {
+      const W = 420, H = 420, cx = W/2, cy = H/2, r0 = 54, r1 = 175;
+      const total = items.reduce((s,i)=>s+i.w,0) || 1;
+      const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+      svg.setAttribute('class', 'sb-svg');
+      svg.setAttribute('role', 'img');
+      svg.setAttribute('aria-label', 'Tema-sunburst');
+      let ang = -Math.PI/2;
+      const polar = (a, r) => [cx + Math.cos(a)*r, cy + Math.sin(a)*r];
+      items.forEach((c, i) => {
+        const sweep = (c.w / total) * Math.PI * 2;
+        const a0 = ang, a1 = ang + sweep; ang = a1;
+        const large = sweep > Math.PI ? 1 : 0;
+        const [x0,y0] = polar(a0, r1), [x1,y1] = polar(a1, r1);
+        const [x2,y2] = polar(a1, r0), [x3,y3] = polar(a0, r0);
+        const d = `M${x0},${y0} A${r1},${r1} 0 ${large} 1 ${x1},${y1} L${x2},${y2} A${r0},${r0} 0 ${large} 0 ${x3},${y3} Z`;
+        const a = document.createElementNS('http://www.w3.org/2000/svg', 'a');
+        a.setAttribute('href', `tema.html?slug=${encodeURIComponent(c.key)}&fund=${fund}`);
+        const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        path.setAttribute('d', d);
+        path.setAttribute('class', 'sb-arc');
+        path.setAttribute('fill', PAL[i % PAL.length]);
+        path.setAttribute('fill-opacity', '0.75');
+        a.appendChild(path);
+        svg.appendChild(a);
+      });
+      const hub = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+      hub.setAttribute('cx', cx); hub.setAttribute('cy', cy); hub.setAttribute('r', r0 - 4);
+      hub.setAttribute('fill', '#0b171d'); hub.setAttribute('stroke', 'var(--brand)');
+      svg.appendChild(hub);
+      const ht = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      ht.setAttribute('x', cx); ht.setAttribute('y', cy + 4);
+      ht.setAttribute('text-anchor', 'middle'); ht.setAttribute('fill', 'var(--cyan)');
+      ht.setAttribute('font-size', '13'); ht.setAttribute('font-weight', '700');
+      ht.textContent = 'Temaer';
+      svg.appendChild(ht);
+      host.appendChild(svg);
+    }
+    const host = document.getElementById('viz-host');
+    const leg = document.getElementById('viz-legend');
+    const vizTm = document.getElementById('viz-tm');
+    const vizSb = document.getElementById('viz-sb');
+    function paintViz(mode) {
+      host.innerHTML = '';
+      if (mode === 'tm') renderTreemap(host, pack.treemap);
+      else renderSunburst(host, pack.treemap);
+      vizTm.classList.toggle('active', mode === 'tm');
+      vizSb.classList.toggle('active', mode === 'sb');
+      vizTm.setAttribute('aria-pressed', String(mode === 'tm'));
+      vizSb.setAttribute('aria-pressed', String(mode === 'sb'));
+    }
+    pack.treemap.forEach((c, i) => {
+      const span = document.createElement('span');
+      span.innerHTML = `<i style="background:${PAL[i % PAL.length]}"></i>${esc(daTheme(c.key))} ${String(c.w).replace('.', ',')} %`;
+      leg.appendChild(span);
     });
+    vizTm.addEventListener('click', () => paintViz('tm'));
+    vizSb.addEventListener('click', () => paintViz('sb'));
+    paintViz('tm');
 
     // Timeline
     const tl = document.getElementById('timeline');

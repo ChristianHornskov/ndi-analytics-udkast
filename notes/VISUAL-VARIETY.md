@@ -8,14 +8,14 @@
 |---|---|---|
 | Værdikæde-diagram (lodret) | Led → led med ikon + vægtbjælke | ✅ |
 | Værdikæde vandret (desktop) | Scroll-snap strip, samme data | ✅ toggle |
-| Treemap-mosaik | Tema-eksponering (areal ≈ vægt) | ✅ |
+| SVG-treemap (squarify) | Tema-eksponering (areal ≈ vægt) | ✅ |
 | Tidslinje | Teknologiske skift | ✅ |
 | Small multiples | Top-led KPI pr. kæde | ✅ |
 | Filosofi-callout / 4-kort | NDI-blik | ✅ |
 | Annoterede chart-elementer | Gul annotation / heat på celler | ✅ heat |
 | Ikoner pr. led | Unicode i kæde | ✅ |
 | Scroll-telling chapters | #kap-treemap / kæder / timeline / filosofi | ✅ |
-| Sunburst | Alternativ til treemap | ⏳ næste cyklus hvis plads |
+| Sunburst | Alternativ til treemap | ✅ toggle på vaerdikaeder |
 | Annoteret fondsgraf | Peak/trough labels (fond-view) | findes allerede i app |
 
 ## Anti-monotoni-regler
