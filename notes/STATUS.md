@@ -109,3 +109,21 @@ Kontrast på entré, fonden og udforsk holder. Headeren er sticky i fuld bredde.
 3. AI-udkast-badges på SoftBank og Tesla står i overskriftslinjen ved 375 og 1280. Badget holdes som ét ord. Overskriften er en almindelig blok, også når klassen brand sidder på den. NDI-linsens felter med badge holder sig inden for kortet. Ingen nye tal.
 
 Tjekket i Chromium ved 1280, 375 og 320. Ingen konsolfejl på de målte sider. Smoke 50/50, cycle3 66/66, quality 108/108.
+
+## Lead 21:56 CEST (automation resume)
+- HEAD still c3b8507; no claude/grok/executor running — stalled after quality6/Grok quality4. Redispatching sole lead.
+- VIDENSBOT-live-check.md arrived 21:53. Leo decisions (do not wake Christian overnight):
+  1. Repo stays **public**, no history rewrite (Christian 15/10). Notes stay in `/notes` only; never under `docs/`.
+  2. Trim `company-months.json` to **quarter-end snapshots only** (drop intra-quarter months); keep holdings asOf ≤ 2026-06-01.
+  3. Remove Nasdaq button/copy from embed + om-data ("Fonden har intet benchmark.").
+  4. Keep ÅTD + 100k overnight; morning note only if Fundmarket process needs a call.
+  5. Non-blockers (sitemap/robots, "Andet" size, empty maturity) = backlog polish.
+- NEXT: quality7 (deeper NDI-linse) + Vidensbot fixes above + UX ## 22:00 MUST when filled. Never claim done.
+
+## Leo-beslutninger 22:00 (efter VIDENSBOT-live-check) – byggelederen SKAL gennemføre
+1. Repo forbliver offentligt, ingen historikomskrivning (Christians beslutning 15/10). Ingen ny fortrolig tekst i notes/ – skriv neutralt.
+2. Beholdningssnapshot: brug sidste data ≤ 30/6 men mærk det "forsinket snapshot, pr. <dato>". company-months.json trimmes til kvartalsslut (mar/jun/sep/dec) og maks. til 30/6-2026.
+3. Nasdaq-knap og "kræver Fundmarkets godkendelse" fjernes overalt (embed, om-data) → "Fonden har intet fast benchmark."
+4. PMINDIAKK-afkastserie fjernes fra docs/data/portfolio.json (kun NAV).
+5. ÅTD + 100k-eksempel bliver i udkastet med advarsel (markeres "afventer Fundmarket-godkendelse" i en lille note).
+6. Fjern tankestreger (–/—) og semikolon i UI-tekst.
