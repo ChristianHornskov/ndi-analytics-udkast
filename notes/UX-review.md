@@ -91,3 +91,20 @@ Ingen nye MUST. Live Pages kan halte 1–2 min bag HEAD `ba33bbe`+.
 
 ### Visual variety (eget lens-review)
 vaerdikaeder + drawdown leverer formskift (treemap/sunburst/kæde/timeline/flaskehalse/underwater). Entré stadig dør-gitter — acceptabelt som hub.
+
+
+## ~23:45 CEST lane-C checkpoint (Claude) — indholdssider
+**Perspektiv:** ny besøgende, der kommer ind via Sidekort eller Idéer. 375 + 1280, Playwright lokalt.
+
+### Løst i denne cyklus
+- **Sidekort** (`kort.html`): løse tekstlinks («· Idéer · Værdikæder») lå som tekstnoder inde i dør-gitteret → gitteret blev skævt. Nu 6 grupper (Fonden · Porteføljen og temaer · Værdikæder · Investér og risiko · Lær · Andet), og **alle 10 lær-sider** er listet (før kun index + FAQ).
+- **Idéer**: fire nye visuelle former (flod-SVG, før/efter-sammenligning, to mini-linjer vægt vs kurs, citatkort). Ingen vandret overflow på 375; flod-SVG ruller vandret i sin egen boks med hint «Rul vandret…». Animation kun ved `prefers-reduced-motion: no-preference`.
+- 0 konsolfejl og 0 døde interne links på kort, invester, risici, ndi-perspektiv, laer/index, saadan-taenker-vi, faq, om-data (375).
+
+### SHOULD (lane-C, næste cyklusser)
+1. FAQ er 10.700 px høj på 375 — overvej fold-ud pr. gruppe eller «spring til»-links som i ordlisten.
+2. Ordlisten er 8.500 px på 375 — spring-links findes; overvej `<details>` pr. panel på mobil.
+3. Idéer-flod: på 375 ses kun 3 af 5 dæmninger før rul. Alternativ: lodret variant under 660 px.
+
+### MUST
+Ingen nye fra lane-C-sider.

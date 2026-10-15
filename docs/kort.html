@@ -19,6 +19,12 @@
  <meta property="og:image:alt" content="NDI Analytics - udkast. Gå på opdagelse i porteføljen.">
  <meta name="twitter:card" content="summary_large_image">
  <!-- og:end -->
+ <style>
+  .km-h{font-size:16px;margin:28px 0 0;color:var(--cyan)}
+  .doors.km{margin:12px 0 0}
+  .km-list{columns:2 260px;column-gap:24px;margin:12px 0 0;padding-left:18px;line-height:1.9}
+  .km-list a{color:var(--text)}
+ </style>
 </head>
 <body>
  <a class="skip" href="#main">Gå til indhold</a>
@@ -30,23 +36,48 @@
  <p class="eyebrow">OVERSIGT</p>
  <h1>Sidekort</h1>
  <p class="lede">Alle klikbare områder i udkastet. Generel information. Ikke rådgivning.</p>
- <div class="doors">
+ <h2 class="km-h">Fonden</h2>
+ <div class="doors km">
  <a class="door" href="index.html?view=fonden"><strong>Fonden</strong><span>Afkast, kalender, kontekst.</span><span class="go">Åbn →</span></a>
+ <a class="door" href="drawdown.html"><strong>Drawdown</strong><span>Episoder, middel/median, underwater.</span><span class="go">Åbn →</span></a>
+ <a class="door" href="periode.html?year=YTD"><strong>Periode</strong><span>År / ÅTD dyb side.</span><span class="go">Åbn →</span></a>
+ <a class="door" href="sammenlign.html"><strong>Sammenlign</strong><span>PMINDI vs AKK.</span><span class="go">Åbn →</span></a>
+ </div>
+ <h2 class="km-h">Porteføljen og temaer</h2>
+ <div class="doors km">
  <a class="door" href="index.html?view=portefolje"><strong>Porteføljen</strong><span>Forsinket beholdning + livscyklus.</span><span class="go">Åbn →</span></a>
  <a class="door" href="index.html?view=udforsk"><strong>Udforsk</strong><span>Screener, multi-tag, CSV.</span><span class="go">Åbn →</span></a>
- <a class="door" href="temaer.html"><strong>Temaer</strong><span>Alle NDI-temaer.</span><span class="go">Åbn →</span></a>
- <a class="door" href="vaerdikaeder.html"><strong>Teknologiske værdikæder</strong><span>AI, robotik, energi, rum, quantum.</span><span class="go">Åbn →</span></a>
- <a class="door" href="vaerdikaede.html"><strong>Enkel AI-kæde</strong><span>Klassisk model.</span><span class="go">Åbn →</span></a>
+ <a class="door" href="temaer.html"><strong>Temaer</strong><span>Alle NDI-temaer, inkl. forslag.</span><span class="go">Åbn →</span></a>
  <a class="door" href="selskaber.html"><strong>Selskaber A-Z</strong><span>Søg i beholdning.</span><span class="go">Åbn →</span></a>
- <a class="door" href="drawdown.html"><strong>Drawdown</strong><span>Fondniveau + genopretning.</span><span class="go">Åbn →</span></a>
- <a class="door" href="periode.html?year=YTD"><strong>Periode</strong><span>År / YTD dyb side.</span><span class="go">Åbn →</span></a>
- <a class="door" href="sammenlign.html"><strong>Sammenlign</strong><span>PMINDI vs AKK.</span><span class="go">Åbn →</span></a>
- <a class="door" href="invester.html"><strong>Sådan investerer du</strong><span>Flow + ISIN.</span><span class="go">Åbn →</span></a>
- <a class="door" href="laer/index.html"><strong>Lær</strong><span>Artikler + FAQ.</span><span class="go">Åbn →</span></a>
- <a class="door" href="laer/faq.html"><strong>FAQ</strong><span>Søgbare svar.</span><span class="go">Åbn →</span></a>
  <a class="door" href="ndi-perspektiv.html"><strong>NDI-perspektiv</strong><span>Kvalitativ linse på udvalgte selskaber: rolle, værdikæde, hvad man holder øje med.</span><span class="go">Åbn →</span></a>
+ </div>
+ <h2 class="km-h">Værdikæder</h2>
+ <div class="doors km">
+ <a class="door" href="vaerdikaeder.html"><strong>Teknologiske værdikæder</strong><span>Flodsystem, AI, robotik, energi, rum, quantum.</span><span class="go">Åbn →</span></a>
+ <a class="door" href="vaerdikaede.html"><strong>Enkel AI-kæde</strong><span>Klassisk model.</span><span class="go">Åbn →</span></a>
+ <a class="door" href="ideer.html"><strong>Idéer</strong><span>Flodsystem, multi-tag og vægt ≠ kurs på ét blik.</span><span class="go">Åbn →</span></a>
+ </div>
+ <h2 class="km-h">Investér og forstå risiko</h2>
+ <div class="doors km">
+ <a class="door" href="invester.html"><strong>Sådan investerer du</strong><span>Flow + ISIN.</span><span class="go">Åbn →</span></a>
  <a class="door" href="risici.html"><strong>Risici / KID</strong><span>SRI og centrale advarsler.</span><span class="go">Åbn →</span></a>
- <a class="door" href="om-data.html"><strong>Ordliste &amp; data</strong><span>CAGR, NAV, SRI…</span><span class="go">Åbn →</span></a> · <a href="ideer.html">Idéer</a> · <a href="vaerdikaeder.html">Værdikæder</a>
+ <a class="door" href="om-data.html"><strong>Ordliste &amp; data</strong><span>55 begreber: afkast, fonden, temaer, flodsystem.</span><span class="go">Åbn →</span></a>
+ </div>
+ <h2 class="km-h">Lær</h2>
+ <ul class="km-list">
+  <li><a href="laer/index.html">Lær — oversigt</a></li>
+  <li><a href="laer/faq.html">FAQ (søgbar)</a></li>
+  <li><a href="laer/saadan-taenker-vi.html">Sådan tænker vi</a></li>
+  <li><a href="laer/hvorfor-mange-aktier.html">Hvorfor så mange aktier?</a></li>
+  <li><a href="laer/variance-drag.html">Hvorfor CAGR er lavere end gennemsnittet</a></li>
+  <li><a href="laer/livscyklus.html">Virksomheders livscyklus</a></li>
+  <li><a href="laer/pe-forklaring.html">Hvad P/E fortæller (og ikke fortæller)</a></li>
+  <li><a href="laer/udbytte-vs-akk.html">Udbytte vs akkumulering</a></li>
+  <li><a href="laer/forsinket-beholdning.html">Forsinket beholdning</a></li>
+  <li><a href="laer/faq-mangler-aktie.html">Hvorfor mangler aktie X?</a></li>
+ </ul>
+ <h2 class="km-h">Andet</h2>
+ <div class="doors km">
  <a class="door" href="nyhedsarkiv.html"><strong>Nyhedsarkiv</strong><span>Koncept-stub.</span><span class="go">Åbn →</span></a>
  <a class="door" href="embed/chart.html"><strong>Embed-graf</strong><span>Forside-komponent.</span><span class="go">Åbn →</span></a>
  </div>

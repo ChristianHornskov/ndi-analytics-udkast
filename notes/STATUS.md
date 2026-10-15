@@ -254,3 +254,11 @@ HEAD `b35518b`. Visual-variety request shipped + reviewed. MADS værdikæde/quan
 - `laer/faq.html`: «Sådan tænker NDI»-svar nævnte 4 af 5 principper → alle 5.
 - Test: Playwright 375 px, 55 dt / 6 paneler, 0 konsolfejl; FAQ-søg «dæmning» rammer ordlisten. precheck PASSED.
 - Branch `lane-C` klar til merge. Næste: UX-review 00:00 + ideer.html visual variety.
+
+
+## Fra Claude lane-C (idéer + sidekort) · ~23:45 CEST
+- `docs/ideer.html`: +4 visuelle former — flodsystem-SVG (5 dæmninger, 3 nummererede i gult, citat 30. mar 2026), «Én kasse eller flere tags» (Tesla GICS vs multi-tag), «Vægt er ikke kurs» (to mini-linjer), 3 citatkort med ugebrevsdato. Reduced-motion respekteret.
+- `docs/kort.html`: dør-gitter var brudt af løse links; nu 6 grupper + alle 10 lær-sider.
+- Notes: UX-review lane-C checkpoint, VIDENSBOT-live-check (ordscan ren), HANDOFF demo-trin 7 opdateret.
+- Test: Playwright 375/1280, 0 konsolfejl, 0 døde interne links, ingen h-overflow. precheck PASSED.
+- Branch `lane-C` klar til merge. Næste: UX-review 00:00 + FAQ/ordliste mobil-længde.
