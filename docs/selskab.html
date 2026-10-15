@@ -138,7 +138,7 @@
 
  <section class="panel">
  <h2 class="panel-h brand">Hvilket problem løser det? ${AI_BADGE}</h2>
- <p class="prose">${esc(f('summary') || 'Beskrivelse mangler i udkastet.')}</p>
+ ${f('summary') ? `<p class="prose">${esc(f('summary'))}</p>` : `<p class="empty-state">Profiltekst mangler endnu for dette selskab (NDI-linse kan stadig findes nedenfor).</p>`}
  ${pr?.source ? `<p class="src">Kilde: ${ext(pr.source, host(pr.source))}${pr.reviewedAt ? ` · tjekket mod kilden ${fmtDate(pr.reviewedAt)}` : ''}</p>` : ''}
  <p class="src">${AI_NOTE} Generel information. Ikke en anbefaling.</p>
  </section>
