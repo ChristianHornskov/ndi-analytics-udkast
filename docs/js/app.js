@@ -507,6 +507,23 @@ function positionsTable(list, fund) {
   <p style="font-size:11px;color:var(--muted);margin-top:8px">Kun vægt og tema. Den lille linje ved navnet er selskabets <strong style="color:var(--text)">vægt i fonden</strong> pr. månedsrapport frem til ${fmtDate(MONTHS?.cutoff || fund.positionsAsOf)} – ikke aktiekurs. Ingen kursafkast pr. aktie i v1. Beholdning er forsinket.</p>`;
 }
 
+function emptyScreener(fund) {
+  const esc = (x) => String(x).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const active = [
+    state.q && `søgning “${esc(state.q)}”`,
+    state.tags.length && `tema ${state.tags.map(daTheme).join(' / ')}`,
+  ].filter(Boolean).join(' og ');
+  return `<div class="empty-state" role="status">
+    <strong>Ingen af fondens ${fund.positions.length} selskaber matcher ${active || 'filtrene'}</strong>
+    <span>Level 1 viser kun selskaber, fonden ejede pr. ${fmtDate(fund.positionsAsOf || DATA.portfolio.asOf)}. Et selskab, der ikke er med, er ikke et signal – se <a href="laer/faq-mangler-aktie.html">Hvorfor mangler aktie X?</a></span>
+    <div class="row">
+      ${state.q ? '<button type="button" class="outline-btn small" data-clear-q>Ryd søgning</button>' : ''}
+      <button type="button" class="outline-btn small" id="reset-filters">Nulstil alle filtre</button>
+      <a class="outline-btn small" href="selskaber.html?fund=${state.fund}">Se A–Z-listen</a>
+    </div>
+  </div>`;
+}
+
 function renderUdforsk(root) {
   const fund = fundById(DATA.portfolio, state.fund);
   const list = filterPositions(fund);
@@ -532,7 +549,7 @@ function renderUdforsk(root) {
     <!-- Modenhedsfiltre skjult indtil manuel klassifikation -->
     <div class="chips" id="chips"></div>
     <p style="font-size:12px;color:var(--muted)">${list.length} resultater · udkast-klassifikation</p>
-    ${list.length ? positionsTable(list, fund) : `<section class="panel"><p style="color:var(--muted)">Ingen selskaber matcher filtrene.</p><p style="margin-top:10px"><button type="button" class="outline-btn small" id="reset-filters">Nulstil filtre</button> <a class="outline-btn small" href="temaer.html">Se alle temaer</a></p></section>`}
+    ${list.length ? positionsTable(list, fund) : emptyScreener(fund)}
     ${warnHtml()}`;
 
   const chips = $('#chips', root);
@@ -558,9 +575,10 @@ function paint() {
 }
 
 function onClick(e) {
-  const t = e.target.closest('[data-nav],[data-fund],[data-period],[data-sort],[data-tag],[data-mat],[data-open],[data-x],#reset-filters,#copy-link,#csv-export');
+  const t = e.target.closest('[data-nav],[data-fund],[data-period],[data-sort],[data-tag],[data-mat],[data-open],[data-x],#reset-filters,#copy-link,#csv-export,[data-clear-q]');
   if (!t) return;
   if (t.matches('[data-open]')) { openDialog(t.getAttribute('data-open')); return; }
+  if (t.matches('[data-clear-q]')) { state.q = ''; writeUrl(); paint(); $('#q')?.focus(); return; }
   if (t.id === 'reset-filters') {
     state.tags = []; state.maturity = []; state.q = ''; writeUrl(); paint(); return;
   }

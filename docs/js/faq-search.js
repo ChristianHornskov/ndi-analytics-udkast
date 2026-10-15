@@ -2,13 +2,9 @@
  *  Indekset bygges ved at hente de statiske lær-sider og læse <main>-teksten.
  *  Advarsels-/båndtekster udelades af indekset, så de ikke giver støjtræf. */
 
-const ARTICLES = [
-  'saadan-taenker-vi.html',
-  'hvorfor-mange-aktier.html',
-  'pe-forklaring.html',
-  'livscyklus.html',
-  'faq-mangler-aktie.html',
-];
+// Artikellisten læses fra lær-indekset, så nye artikler automatisk kommer med i søgningen
+const HUB = 'index.html';
+const FALLBACK_ARTICLES = ['saadan-taenker-vi.html', 'hvorfor-mange-aktier.html', 'pe-forklaring.html', 'livscyklus.html', 'faq-mangler-aktie.html'];
 const GLOSSARY_URL = '../om-data.html';
 
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -23,7 +19,14 @@ async function fetchDoc(url) {
 async function buildIndex(curated) {
   const docs = [];
   for (const c of curated) docs.push({ kind: 'Spørgsmål', title: c.q, text: c.a, href: c.href });
-  const settled = await Promise.allSettled(ARTICLES.map(async (href) => {
+  let articles = FALLBACK_ARTICLES;
+  try {
+    const hub = await fetchDoc(HUB);
+    const found = [...hub.querySelectorAll('main a[href]')].map((a) => a.getAttribute('href'))
+      .filter((h) => /^[a-z0-9-]+\.html$/.test(h) && h !== 'faq.html' && h !== HUB);
+    if (found.length) articles = [...new Set(found)];
+  } catch { /* fallback-listen bruges */ }
+  const settled = await Promise.allSettled(articles.map(async (href) => {
     const d = await fetchDoc(href);
     const main = d.querySelector('main');
     main.querySelectorAll('.warn,.band,.eyebrow,script').forEach((n) => n.remove());
