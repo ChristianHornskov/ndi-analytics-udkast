@@ -608,3 +608,9 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
   .tl li::after{top:17px;left:4px;right:auto;width:2px;height:calc(100% - 4px)}
   .cmp-themes li{grid-template-columns:1fr;gap:6px}
 }
+
+/* NDI på X — own cards, no embed */
+.x-card{border:1px solid color-mix(in srgb, var(--cyan) 28%, transparent);background:linear-gradient(160deg,color-mix(in srgb,var(--cyan) 8%,transparent),transparent 55%);box-shadow:0 10px 28px rgba(0,0,0,.18)}
+.x-card header strong{letter-spacing:.02em}
+.x-says .band{border-left:3px solid var(--cyan)}
+.x-filters .control.active{background:var(--cyan);color:#042028;border-color:var(--cyan)}
