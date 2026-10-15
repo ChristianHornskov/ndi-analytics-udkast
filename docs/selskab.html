@@ -167,6 +167,9 @@
  <a class="outline-btn small" href="${temaHref}">Temaside →</a>
  <a class="outline-btn small" href="index.html?view=udforsk&fund=${fundId}&tags=${encodeURIComponent(p.theme)}">Screener: ${esc(daTheme(p.theme))} →</a></p>
  ${data.multiTags?.byIsin?.[p.isin]?.why ? `<p class="src">${esc(data.multiTags.byIsin[p.isin].why)}</p>` : ''}
+ ${p.themeStatus === 'forslag' ? `<p class="src"><span class="badge badge-draft">forslag</span> ${p.theme === 'andet'
+ ? 'Selskabet har endnu intet primært NDI-tema (Andet / uklassificeret) og afventer NDI-gennemgang.'
+ : `Primært tema ${esc(daTheme(p.theme))} er et forslag fra udkastet (før: ${esc(p.themeFrom && p.themeFrom !== 'andet' ? daTheme(p.themeFrom) : 'Andet')}) og afventer NDI-gennemgang.`} <a href="om-data.html#g-temaforslag">Sådan sættes temaerne →</a></p>` : ''}
  <p class="band">Segmenter viser eksponering, ikke en anbefaling. Kursafkast, P/S og P/E pr. aktie vises ikke i udkastet (tallene er under verifikation).</p>
  <div class="metrics" style="margin-top:14px">
  <div class="metric"><div class="label">Vægt i ${esc(fund.short)}</div><strong>${w(p.weight)} %</strong><small>Beholdning pr. ${posAsOf} (forsinket)</small></div>
