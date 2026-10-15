@@ -1074,3 +1074,73 @@ Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html, v
 3. **vaerdikaede.html:** Rum-kortet har fået linket "✓ Tjek dig selv: 5 spørgsmål →".
 Tjek: Playwright på 1280 og 375 med 0 konsolfejl og ingen sidescroll. 5 bånd, 9 led-knapper og 8 stop. Pointtallet stemmer (2 af 5 i testen), svaret "Se leddet" åbner `#lk-space-compute`, og linket fra vaerdikaede lander på `#sp-quiz`. smoke.mjs 52/52 fail 0 (egen server på 8817). Precheck PASSED. Grep efter handelssprog og tankestreger i diff giver 0 hits.
 Næste: energi-ledkortenes blurbs kan få samme "tjek dig selv"-form (3 spørgsmål), og kvante-fanens korte side kan få krydslinks fra ordbogen til energi (kryostater og strøm). Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 00:55 CEST. Southern Copper skriver, at produkterne er kobber, molybdæn, sølv og zink. Ikke færdig.**
+
+Forsiden skriver "Productos Principales: Cobre, Molibdeno, Plata y Zinc" og at selskabet er en del af Grupo México. Profilen siger det. Peru og Mexico stod i forvejen. Navngivne miner stod ikke på den hentede side og er ikke tilføjet. En advarsel om falske profiler er ikke kopieret. Ingen `reviewedAt`. Rollen i JSON nævner de fire produkter. Den vises ikke på kædesiden.
+
+Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Molybdæn og Grupo México står i det første afsnit. "Ikke et kraftværk" står efter "Læs hele forklaringen". Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `4e60350` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 00:58 CEST. Ivanhoe Electric skriver, at Tintic er et projekt i Utah, og at studiet af Santa Cruz er efter beholdningen. Ikke færdig.**
+
+Forsiden nævner Santa Cruz som kobberprojekt i Arizona og Tintic som kobber- og guldprojekt i Utah. Selskabet bruger målesystemet Typhoon til efterforskning. Nyheden om studiet er dateret 23. september 2026, efter beholdningen pr. 1. juni 2026. Studiet er ikke en mine i drift. Ord om høj lødighed, lave omkostninger og nutidsværdi er ikke taget med. Ingen `reviewedAt`. Rollen i JSON nævner begge projekter. Den vises ikke på kædesiden. Blurben og arkivkortet siger det samme.
+
+Tjekket i Chromium. Selskabssiden ved 375 px viser AI-udkast, Tintic og Typhoon. "tjekket mod kilden" er ikke med. Datoen står efter "Læs hele forklaringen". Kæden viser sætningen under Kritiske råstoffer. Arkivet har et nyt kort afsnit. Ingen konsolfejl. Ingen vandret scroll ved 375 eller 1280 px.
+
+**Push:** `lane-E` @ `9a62de0` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:00 CEST. Energy Fuels nævner White Mesa Mill og siger, at isotoper først er på vej. Ikke færdig.**
+
+Forsiden skriver, at selskabet fremstiller oxider af sjældne jordarter på et anlæg i USA, og at White Mesa Mill producerer uran, sjældne jordarter og vanadium. Titan, zirkonmineraler og medicinske isotoper står som produkter, selskabet er i gang med at tilføje. Ordene largest, leading og "10 of the 50" er ikke taget med. En bundtekst om miner i Colorado, Utah og Wyoming er ikke brugt. Ingen `reviewedAt`. Rollen i JSON nævner White Mesa. Den vises ikke på kædesiden.
+
+Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. White Mesa står i det første afsnit. Isotoper står efter "Læs hele forklaringen". Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `7d0a138` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:01 CEST. USA Rare Earth daterer Serra Verde til 4. september 2026, efter beholdningen. Ikke færdig.**
+
+Forsiden skriver, at aktiviteterne spænder over USA, Storbritannien og Brasilien, og at et anlæg i Frankrig er planlagt. Selskabet vil udvinde og forarbejde i Texas og i Brasilien. Magneter nævnes i Oklahoma. South Carolina står som planlagt. Overskriften om en gennemført sammenlægning med Serra Verde Group er dateret 4. september 2026, efter beholdningen pr. 1. juni 2026. Selve meddelelsen gav 403, så beløb og prisgulve er ikke taget med. Texas er ikke beskrevet som en mine i drift. Ingen `reviewedAt`.
+
+Tjekket i Chromium. Selskabssiden ved 375 px viser AI-udkast, Texas, Brasilien og Serra Verde. "tjekket mod kilden" er ikke med. Ingen beløb. Kæden og arkivet siger datoen. Ingen konsolfejl. Ingen vandret scroll ved 375 eller 1280 px.
+
+**Push:** `lane-E` @ `3511830` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:03 CEST. Generac skriver, at det også har bærbare generatorer, sol, batterier og ladere. Ikke færdig.**
+
+Forsiden skriver, at en hjemmegenerator giver strøm under et udfald, og at selskabet har bærbare generatorer, sol, batterilagring og ladere til elbiler. Det er udstyr hos kunden, ikke et elselskab og ikke en mine. Ord om at være mest betroet og citater fra kunder er ikke taget med. Ingen `reviewedAt`. Blurben under elproduktion siger det samme. Rollen i JSON er ikke vist på kædesiden.
+
+Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Bærbare generatorer og ladere står. Kæden viser sætningen. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `529103c` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:04 CEST. EQT skriver, at købet af Equitrans blev gennemført 22. juli 2024. Ikke færdig.**
+
+Meddelelsen er dateret 22. juli 2024, før beholdningen pr. 1. juni 2026. Equitrans er beskrevet som midstream-aktiver. EQT producerer naturgas i Appalachia. Gassen står som brændsel, ikke som en metalmine. Ordet only, breakeven-pris og synergibeløb er ikke taget med. Ingen `reviewedAt`. Blurben under elproduktion siger datoen.
+
+Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. 22. juli 2024 står. Ingen beløb. Kæden viser sætningen. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `20f9d68` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:06 CEST. Satellogic sætter fuld drift af Merlin til andet halvår 2027. Ikke færdig.**
+
+Satellitterne hedder NewSat. Forsiden sætter fuld drift af Merlin til andet halvår 2027, efter beholdningen pr. 1. juni 2026. Merlin er ikke beskrevet som en tjeneste i fuld drift. Selskabet opsender ikke selv raketterne. Ord om bedste opløsning og realtid er ikke taget med. Ingen `reviewedAt`. Blurben under satellitkommunikation og arkivkortet siger det samme.
+
+Tjekket i Chromium. Selskabssiden ved 375 px viser AI-udkast, NewSat og Merlin. "tjekket mod kilden" er ikke med. Kæden og arkivet viser 2027. Ingen konsolfejl. Ingen vandret scroll ved 375 eller 1280 px.
+
+**Push:** `lane-E` @ `ad828d7` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
