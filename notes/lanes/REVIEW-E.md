@@ -91,3 +91,7 @@ Elproduktions-leddet siger, hvem der leverer gas, hvem der laver solcellemoduler
 ## Fluence, Eos og Chorus · 2026-10-16 00:39 CEST
 
 Batteri-leddet siger, at Fluence ikke er et kraftværk, og at cellerne ikke er beskrevet som selskabets egne. Eos er zinkbatterier, ikke en mine. Satellit-leddet siger, at Redwire ikke sender op, at York bygger platforme, og at Chorus ikke er sendt op. "Leader" og lånet hos Eos er ikke kopieret. Fluence gav 403. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Sangdong og demonstrationsanlæg · 2026-10-16 00:42 CEST
+
+Almontys meddelelse 23. september 2026 siger, at Sangdong igen har produceret wolfram. Teksten daterer det efter beholdningen 1. juni 2026. Valtreixal er et projekt. Standard Lithium behandler saltvand i et demonstrationsanlæg. Kurserne på forsiden er ikke kopieret. AI-udkast uden gennemgangsdato. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.

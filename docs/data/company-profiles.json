@@ -922,13 +922,17 @@
    "customers": "Industrikunder.",
    "role": "Råstof til industri, ikke elproduktion.",
    "narrative": [
-    "Almonty arbejder med wolfram. Selskabet nævner minerne Panasqueira og Los Santos og projekter ved siden af, blandt andet Valtreixal.",
-    "Wolfram er et metal til hårde legeringer. Selskabet er ikke et kraftværk."
+    "Almonty arbejder med wolfram. Selskabet nævner minerne Panasqueira og Los Santos. Valtreixal er et projekt.",
+    "Selskabet skrev 23. september 2026, at Sangdong i Sydkorea har produceret wolfram for første gang siden 1993. Meddelelsen ligger efter beholdningen pr. 1. juni 2026. Selskabet er ikke et kraftværk."
    ],
    "narrativeSources": [
     {
      "label": "Selskabets side",
      "url": "https://almonty.com/"
+    },
+    {
+     "label": "Meddelelse 23. september 2026",
+     "url": "https://almonty.com/almonty-marks-first-tungsten-production-at-sangdong-since-1993/"
     }
    ]
   },
@@ -962,13 +966,17 @@
    "customers": "Ingen stor kommerciel kundebase i denne beskrivelse.",
    "role": "Råstof til batterier.",
    "narrative": [
-    "Standard Lithium henter lithium ud af saltvand i Smackover-formationen. Selskabet skriver, at et demonstrationsanlæg kører.",
+    "Standard Lithium skriver, at et demonstrationsanlæg ved El Dorado i Arkansas behandler saltvand.",
     "Projekterne i Arkansas og i Texas er ikke beskrevet som en stor mine i drift."
    ],
    "narrativeSources": [
     {
      "label": "Selskabets side",
      "url": "https://www.standardlithium.com/"
+    },
+    {
+     "label": "Demonstrationsanlæg",
+     "url": "https://www.standardlithium.com/technology/demonstration-plant/"
     }
    ]
   },

@@ -87,6 +87,8 @@ Elproduktions-blurb navngiver forskellen. Comstock, Antero, EQT og Expand er gas
 
 Batteri-blurb siger, at Fluence er batterisystemer og software, ikke et kraftværk, og at teksten ikke påstår, at selskabet selv laver cellerne. Fluence gav 403 samme nat. Eos er zinkbatterier, ikke en mine. Selskabets egne ord om at være ledende og om et offentligt lån er ikke taget med. Satellit-blurb siger, at Redwire leverer dele og ikke selv sender op, at York bygger platforme, og at MDA omtaler Chorus, før konstellationen er sendt op. MDA's forside havde den formulering 16. oktober 2026. Vægtene er uændrede.
 
+Råstof-leddet siger også, at Standard Lithium skriver, at et demonstrationsanlæg i Arkansas behandler saltvand, og at det ikke er de store projekter. Kurser på forsiden er ikke taget med. Almonty skrev 23. september 2026, at Sangdong har produceret wolfram for første gang siden 1993. Valtreixal er et projekt. Meddelelsen er efter beholdningen pr. 2026-06-01, og teksten siger det. Kilden er `https://almonty.com/almonty-marks-first-tungsten-production-at-sangdong-since-1993/`. Panasqueira og Los Santos står stadig som miner.
+
 ## År til dato på periodesiden
 
 `ytdReturn` i `data.js` bruger sidste punkt i året før som udgangspunkt, ikke 1. januar. For PMINDI pr. 2026-10-14 er det 2025-12-31, ikke 2026-01-02. `periode.html` viser den samme dato i "Fra → til". Kalenderår bruger samme base (`calendarYearReturns`).

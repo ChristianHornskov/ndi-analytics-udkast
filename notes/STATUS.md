@@ -451,3 +451,13 @@ På rumkæden siger satellit-leddet, at Redwire leverer dele og ikke selv sender
 Tjekket i Chromium ved 375 px på begge faner og i nyhedsarkivet. Sætningerne står. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `7896363` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 00:42 CEST. Sangdong er efter beholdningen, og Standard Lithium er et demonstrationsanlæg. Ikke færdig.**
+
+På energikæden siger råstof-leddet, at Standard Lithium skriver, at et demonstrationsanlæg i Arkansas behandler saltvand, og at det ikke er de store projekter. Almonty skrev 23. september 2026, at Sangdong i Sydkorea har produceret wolfram for første gang siden 1993. Valtreixal er et projekt. Meddelelsen ligger efter beholdningen pr. 1. juni 2026. Kurser på Standard Lithiums forside er ikke kopieret. Ingen `reviewedAt`.
+
+Tjekket i Chromium ved 375 px på råstof-leddet, i nyhedsarkivet og på de to selskabssider. AI-udkast er med. "tjekket mod kilden" er ikke med. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `760d781` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
