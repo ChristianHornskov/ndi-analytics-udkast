@@ -299,3 +299,6 @@ Næste: blurbs for energiled, flere krydslinks for kvante og vaerdikaede.html. I
 - `ideer.html`: lodret flod-SVG under 660 px (alle 5 dæmninger uden rul).
 - HANDOFF demo-trin 7–8 opdateret. smoke 52/52, precheck PASSED.
 - Branch `lane-C` klar til merge. Næste: UX-review 00:00 (wall-clock) + Vidensbot-copy på invester/risici/ndi-perspektiv.
+
+## Fra Claude lane-R · 2026-10-15 23:55 CEST
+- Review cyklus 1 (main `b9e81ee`, Pages ≈ `a341c99`). Compliance MUST: X-tredjepartsopslag/tickers på Fonden+selskab+afkastgraf; AKK "Seneste NAV 98,40" = indirekte afkast <12m; risk-stats maxDdPeak 2026-06-02 > trough; "afventer Fundmarket-godkendelse" offentligt. UX MUST: drawdown overflow 375, omkostnings-link fra invester. Se CLAUDE-UX-review.md / CLAUDE-compliance-review.md.
