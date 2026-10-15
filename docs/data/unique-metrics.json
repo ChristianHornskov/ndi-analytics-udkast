@@ -19,7 +19,7 @@
           "label": "Plads i værdikæden",
           "value": "Led 1 og led 2",
           "hint": "Energi (led 1) og fysisk tech (led 2) i den forenklede kæde. Placeringen er pædagogisk; Tesla bygger ikke datacentre.",
-          "href": "vaerdikaeder.html?isin=US88160R1014"
+          "href": "vaerdikaede.html?isin=US88160R1014"
         },
         {
           "label": "Hold øje med",
@@ -53,7 +53,7 @@
           "label": "Plads i værdikæden",
           "value": "Led 3: chips",
           "hint": "Designer chips og systemer til store, parallelle beregninger.",
-          "href": "vaerdikaeder.html?isin=US67066G1040"
+          "href": "vaerdikaede.html?isin=US67066G1040"
         },
         {
           "label": "Hold øje med",
@@ -121,7 +121,7 @@
           "label": "Plads i værdikæden",
           "value": "Led 5: platforme",
           "hint": "Der hvor compute bliver til produkter. Bruger selv omfattende AI- og datacenterinfrastruktur.",
-          "href": "vaerdikaeder.html?isin=US30303M1027"
+          "href": "vaerdikaede.html?isin=US30303M1027"
         },
         {
           "label": "Hold øje med",
