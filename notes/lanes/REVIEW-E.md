@@ -219,3 +219,7 @@ Meddelelsen 13. oktober 2026 siger, at ansøgningen er til behandling. Forsidens
 ## Howmet · 2026-10-16 01:39 CEST
 
 Smedede hjul og chassis til lastbiler og busser er tilføjet ved siden af flyskrog og flymotorer. Ikke en opsendelse. Mest avancerede, Model T og udbytte er ikke kopieret. AI-udkast uden gennemgangsdato. Opsendelses-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll. Overskriften er beholdningens afkortede navn.
+
+## Cummins · 2026-10-16 01:40 CEST
+
+Fem dele: komponenter, motorer, distribution, kraftsystemer og Accelera. Distribution er ikke et elnet. Columbus, Indiana, 1919. Ikke et elselskab. Leader og 52-ugers-feltet er ikke kopieret. AI-udkast uden gennemgangsdato. Elproduktions-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll. Et P/E i sidens menu er den fælles navigation, ikke teksten om Cummins.

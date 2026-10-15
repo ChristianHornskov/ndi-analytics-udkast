@@ -151,6 +151,8 @@ Nano Nuclear skriver, at University of Illinois indsendte ansøgningen om bygget
 
 Howmet skriver, at det laver dele til flyskrog og flymotorer, og at det også laver smedede hjul og chassis til lastbiler og busser. Det sender ikke raketter op. Formuleringerne om de mest avancerede fly, om at være med på alt der flyver, og om Model T er ikke taget med. Et udbytte og et kvartalsregnskab på siden er ikke taget med. Beholdningens navn på selskabssiden er afkortet til "Howmet Aerspc". Profilnavnet og navnet i rumkæden er Howmet Aerospace. Vægtene er uændrede.
 
+Cummins skriver, at forretningen har fem dele: komponenter, motorer, distribution, kraftsystemer og Accelera. Distribution er selskabets egen del, ikke et elnet. Selskabet har hovedsæde i Columbus i Indiana og er stiftet i 1919. Generatorerne kan lave strøm. Det er ikke et elselskab. Ordet leader og et 52-ugers-felt i investorskabelonen er ikke taget med. Vægtene er uændrede.
+
 ## År til dato på periodesiden
 
 `ytdReturn` i `data.js` bruger sidste punkt i året før som udgangspunkt, ikke 1. januar. For PMINDI pr. 2026-10-14 er det 2025-12-31, ikke 2026-01-02. `periode.html` viser den samme dato i "Fra → til". Kalenderår bruger samme base (`calendarYearReturns`).

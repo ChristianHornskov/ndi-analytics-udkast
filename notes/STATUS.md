@@ -779,3 +779,13 @@ Selskabet skriver, at det laver dele til flyskrog og flymotorer og også smedede
 Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Smedede hjul står. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `8366cb6` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:40 CEST. Cummins skriver, at forretningen har fem dele, og at det ikke er et elselskab. Ikke færdig.**
+
+De fem dele er komponenter, motorer, distribution, kraftsystemer og Accelera. Distribution er selskabets egen del, ikke et elnet. Hovedsædet ligger i Columbus i Indiana. Selskabet er stiftet i 1919. Generatorerne kan lave strøm. Det er ikke et elselskab. Ordet leader og et 52-ugers-felt på investorskabelonen er ikke taget med. Ingen `reviewedAt`. Blurben under elproduktion og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Accelera står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `4359117` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

@@ -1569,15 +1569,15 @@
   "US2310211063": {
    "name": "Cummins",
    "theme": "physical",
-   "summary": "Fremstiller motorer og generatorer til køretøjer, industri og strøm.",
-   "watch": "Efterspørgsel efter motorer og generatorer, og om nye drivlinjer tager plads fra diesel.",
+   "summary": "Fremstiller motorer og generatorer. Selskabet skriver, at forretningen er delt i komponenter, motorer, distribution, kraftsystemer og Accelera. Det er ikke et elselskab.",
+   "watch": "Efterspørgsel efter motorer og generatorer. Selskabet er ikke et elselskab.",
    "source": "https://investor.cummins.com/",
-   "products": "Motorer, generatorer og komponenter.",
+   "products": "Motorer, generatorer, komponenter, kraftsystemer og Accelera.",
    "customers": "Lastbilproducenter, industri og kunder, der skal bruge strøm på stedet.",
    "role": "Udstyr til elproduktion i lille skala, ikke et elselskab.",
    "narrative": [
-    "Cummins fremstiller motorer og generatoranlæg til køretøjer, industri og strøm.",
-    "I kæden står selskabet på elproduktion, fordi generatorerne kan lave strøm. Det er ikke et elselskab."
+    "Cummins skriver, at forretningen har fem dele: komponenter, motorer, distribution, kraftsystemer og Accelera. Distribution er selskabets egen del, ikke et elnet.",
+    "Selskabet skriver, at det har hovedsæde i Columbus i Indiana, og at det er stiftet i 1919. I kæden står det på elproduktion, fordi generatorerne kan lave strøm. Det er ikke et elselskab."
    ],
    "narrativeSources": [
     {

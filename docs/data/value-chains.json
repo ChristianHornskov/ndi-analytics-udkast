@@ -1089,7 +1089,7 @@
           "id": "gen",
           "icon": "⚡",
           "label": "Elproduktion",
-          "blurb": "Gas, sol, vind, gasturbiner og kraftværker, også anlæg tæt på datacentre. Listen er selskaber, der producerer strøm, leverer brændsel til produktionen eller laver udstyret. Comstock, Antero, EQT og Expand leverer gas som brændsel. Antero skriver, at det leverer naturgas og LPG til eksport. EQT skriver, at købet af Equitrans Midstream blev gennemført 22. juli 2024. Expand Energy skrev 16. september 2026, at handlen med Twin Eagle er gennemført. Det er efter beholdningen. Twin Eagle er et marketingselskab, ikke en mine. T1 Energy laver solcellemoduler. Cummins laver motorer. Generac skriver, at det laver reservegeneratorer til hjemmet, bærbare generatorer, sol og batterilagring og ladere til elbiler. Ingen af dem er elselskaber. Babcock & Wilcox leverer kedler og service. GE Vernova leverer udstyr og driver ikke værkerne. Bloom leverer brændselsceller hos kunden. Plug leverer brændselsceller og brintudstyr. Teksten siger ikke, at hvert anlæg kører. Solaris skrev 6. juli 2026, at det har købt GESA. Det er efter beholdningen og er service, ikke et kraftværk i drift. Talen skriver, at flåden også har kul, naturgas og olie. Brandon Shores var planlagt lukket 1. juni 2025 og kører videre efter en pålidelighedsaftale. Det er ikke en lille reaktor under udvikling.",
+          "blurb": "Gas, sol, vind, gasturbiner og kraftværker, også anlæg tæt på datacentre. Listen er selskaber, der producerer strøm, leverer brændsel til produktionen eller laver udstyret. Comstock, Antero, EQT og Expand leverer gas som brændsel. Antero skriver, at det leverer naturgas og LPG til eksport. EQT skriver, at købet af Equitrans Midstream blev gennemført 22. juli 2024. Expand Energy skrev 16. september 2026, at handlen med Twin Eagle er gennemført. Det er efter beholdningen. Twin Eagle er et marketingselskab, ikke en mine. T1 Energy laver solcellemoduler. Cummins skriver, at forretningen er delt i komponenter, motorer, distribution, kraftsystemer og Accelera. Det er ikke et elselskab. Generac skriver, at det laver reservegeneratorer til hjemmet, bærbare generatorer, sol og batterilagring og ladere til elbiler. Ingen af dem er elselskaber. Babcock & Wilcox leverer kedler og service. GE Vernova leverer udstyr og driver ikke værkerne. Bloom leverer brændselsceller hos kunden. Plug leverer brændselsceller og brintudstyr. Teksten siger ikke, at hvert anlæg kører. Solaris skrev 6. juli 2026, at det har købt GESA. Det er efter beholdningen og er service, ikke et kraftværk i drift. Talen skriver, at flåden også har kul, naturgas og olie. Brandon Shores var planlagt lukket 1. juni 2025 og kører videre efter en pålidelighedsaftale. Det er ikke en lille reaktor under udvikling.",
           "ndi": "NDI har skrevet om gas, gasturbiner, sol, vind og producenter tæt på datacentre (ugebrev 30. marts 2026). CoreWeave, Nebius og IREN er med i energitemaet som datacentre. De står ikke her. ProPetro laver service til boringer og står ikke her.",
           "themes": [
             "energy",
@@ -1170,7 +1170,7 @@
               "w": 0.29,
               "sym": "CMI",
               "forslag": false,
-              "role": "Motorer og generatorer"
+              "role": "Fem dele: komponenter, motorer, distribution, kraftsystemer og Accelera. Ikke et elselskab."
             },
             {
               "isin": "US8425871071",
