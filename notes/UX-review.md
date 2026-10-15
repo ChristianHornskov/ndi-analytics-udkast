@@ -154,3 +154,11 @@ Ingen nye.
 - Jargon ryddet: «Drawdown som episoder / Max, middel og median over peak→bund» → «Fald fra top som episoder». «Andet er krympet med forslag (mærket)» → almindeligt dansk.
 - Observation (ikke min fil): månedskalenderen ligger under Fonden (`?view=fonden`), ikke på entréen. Vidensbot #69 (MC 51:30) ønsker den på forsiden — til den lane, der ejer app.js.
 - Test: Playwright 375/1280: 0 konsolfejl, 0 døde links, 0 døde ankre, ingen h-overflow.
+
+## ~00:40 CEST lane-C checkpoint (Claude) — ordliste + fald fra top
+- **Ordliste 66 → 74**, ud fra et ordscan af siderne og value-chains.json: begreber, som siderne bruger uden at forklare. Nye: koncentrationsrisiko, kurtage og spread, halvleder, GPU/XPU/CPU, hukommelse (HBM), datacenter og køling, elnet og transformere, kritiske råstoffer. Ordlyd fra VIDENSBOT-vaerdikaeder «Til siden»/[B]-linjer; ingen [M]-citater om købsmuligheder (fx HBM 2024) taget med.
+- **Gruppetællerne var forkerte** allerede før (stod 15/11/20/15, var 16/13/22/15). Nu talt fra DOM: 17 · 14 · 22 · 21.
+- Risici-kortet «Koncentreret i teknologi» og invester-teksten om kurtage linker nu til ordlisten.
+- Dybe links `#g-kurtage`, `#g-koncentration`, `#g-hbm`, `#g-raastoffer` testet på 375 med foldede grupper: gruppen åbner, begrebet lander under headeren (112 px). Obs. for testere: `scroll-behavior:smooth` betyder, at man skal vente ~1 s før man måler position — ellers ser det forkert ud.
+- **ideer.html: sjette form «Fald fra top som episoder»** — tænkt kurve med hidtidig top (stiplet) og tre røde episoder under nul-linjen (−16/−24/−8 %), gul klamme for varighed, tre nøgleord (dybde/varighed/hyppighed) og koblingen til variance drag (−24 % kræver +31,5 %). Mærket «tænkt eksempel, ikke fondens tal». Tidslinjekortet linker ned til tegningen.
+- Testfælde fundet: port 8765 er hovedcheckoutens server, ikke lane-C's (8763). Første testrunde ramte de forkerte filer — kørt igen mod 8763.

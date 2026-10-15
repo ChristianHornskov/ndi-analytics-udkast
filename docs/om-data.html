@@ -55,7 +55,7 @@
  <p style="color:var(--muted);margin:0 0 4px">Spring til: <a href="#o-afkast">Afkast og risiko</a> · <a href="#o-fonden">Fonden og andelsklasser</a> · <a href="#o-portefolje">Portefølje, temaer og modenhed</a> · <a href="#o-kaeder">Værdikæder og flodsystemet</a>. Søg også i <a href="laer/faq.html">FAQ</a>. <button type="button" class="gl-toggle" id="gl-all" hidden>Fold alle ud</button></p>
  </section>
  <section class="panel" id="o-afkast">
- <details class="gl-group" open><summary><h2 style="font-size:16px;margin:0">Afkast og risiko</h2><span class="gl-n">15 begreber</span></summary>
+ <details class="gl-group" open><summary><h2 style="font-size:16px;margin:0">Afkast og risiko</h2><span class="gl-n">17 begreber</span></summary>
  <dl style="color:var(--muted);display:grid;gap:12px">
  <div id="g-total"><dt style="color:var(--text)">Totalafkast</dt><dd>Afkast inkl. geninvesteret udbytte, efter fondens løbende omkostninger, i DKK.</dd></div>
  <div id="g-cagr"><dt style="color:var(--text)">CAGR</dt><dd>Gennemsnitligt årligt afkast (geometrisk) over perioden. Ligger under et simpelt gennemsnit af årsafkast, når afkastet svinger. Se <a href="laer/variance-drag.html">CAGR og gennemsnit</a>.</dd></div>
@@ -71,14 +71,16 @@
  <div id="g-dd-episoder"><dt style="color:var(--text)">Drawdown middel / median</dt><dd>Over peak→bund-episoder i fondens totalafkast-serie (ikke over alle dage under vand). Max er den dybeste episode. Se <a href="drawdown.html">drawdown-siden</a>.</dd></div>
  <div id="g-underwater"><dt style="color:var(--text)">Underwater-graf</dt><dd>Viser, hvor langt fonden til hver tid lå under sit hidtidige højdepunkt. Nul betyder ny top. Gør det synligt, hvor længe et fald varede.</dd></div>
  <div id="g-glidende"><dt style="color:var(--text)">Glidende gennemsnit (52 uger)</dt><dd>Gennemsnittet af kursen over det seneste år, beregnet dag for dag. Bruges til at beskrive, om en kurs ligger over eller under sit eget niveau det seneste år. Vises ikke for enkeltaktier i v1. Beskrivende, ikke et købs- eller salgssignal.</dd></div>
+ <div id="g-koncentration"><dt style="color:var(--text)">Koncentrationsrisiko</dt><dd>Risikoen ved, at mange beholdninger påvirkes af det samme. Fonden ejer flere hundrede selskaber, men næsten alle i tech og mange noteret i USD. Mange aktier fjerner risikoen i det enkelte selskab, ikke et fald i hele området. Se <a href="risici.html">Risici</a>.</dd></div>
  <div id="g-sri"><dt style="color:var(--text)">Risikoindikator (SRI)</dt><dd>Fondens samlede risikoklasse på en skala fra 1 til 7 ifølge KID (dokument med central information). Gælder fonden som helhed, ikke de enkelte selskaber.</dd></div>
  <div id="g-valuta"><dt style="color:var(--text)">Valutarisiko</dt><dd>Fonden opgøres i kroner, men en stor del af selskaberne er noteret i udenlandsk valuta, især USD. Når valutakursen ændrer sig, påvirker det afkastet i kroner, både op og ned. Se <a href="risici.html">Risici</a>.</dd></div>
  </dl>
  </details>
  </section>
  <section class="panel" id="o-fonden">
- <details class="gl-group" open><summary><h2 style="font-size:16px;margin:0">Fonden og andelsklasser</h2><span class="gl-n">11 begreber</span></summary>
+ <details class="gl-group" open><summary><h2 style="font-size:16px;margin:0">Fonden og andelsklasser</h2><span class="gl-n">14 begreber</span></summary>
  <dl style="color:var(--muted);display:grid;gap:12px">
+ <div id="g-kurtage"><dt style="color:var(--text)">Kurtage og spread</dt><dd>Det, din bank eller platform tager for at handle, og forskellen mellem køb- og salgskurs. Kommer oven i fondens løbende omkostninger og afhænger af, hvor du handler. NDI Analytics viser ikke live kurser.</dd></div>
  <div id="g-andelsklasse"><dt style="color:var(--text)">Andelsklasse</dt><dd>Samme strategi, forskellige vilkår. PMINDI udlodder udbytte, PMINDIAKK geninvesterer det. Beholdningerne ligner hinanden meget, men er ikke identiske. Kursen før udbytte kan derfor se forskellig ud; sammenlign på totalafkast.</dd></div>
  <div id="g-akk"><dt style="color:var(--text)">Akkumulerende (AKK)</dt><dd>Andelsklasse der geninvesterer udbytte i stedet for at udbetale det. PMINDIAKK viser afkast efter 12 måneders historik.</dd></div>
  <div id="g-udbytte"><dt style="color:var(--text)">Udbytte / ex-dato</dt><dd>På ex-dato falder andelskursen med udbyttet. Totalafkastet viser værdien, hvis udbyttet var geninvesteret. Se <a href="laer/udbytte-vs-akk.html">Udbytte eller akkumulerende</a>.</dd></div>
@@ -96,7 +98,7 @@
  </details>
  </section>
  <section class="panel" id="o-portefolje">
- <details class="gl-group" open><summary><h2 style="font-size:16px;margin:0">Portefølje, temaer og modenhed</h2><span class="gl-n">20 begreber</span></summary>
+ <details class="gl-group" open><summary><h2 style="font-size:16px;margin:0">Portefølje, temaer og modenhed</h2><span class="gl-n">22 begreber</span></summary>
  <dl style="color:var(--muted);display:grid;gap:12px">
  <div id="g-vaegt"><dt style="color:var(--text)">Vægt</dt><dd>Et selskabs andel af fondens formue på beholdningsdatoen. Den lille linje ved selskabsnavnet viser vægten over tid i fonden - ikke aktiekursen.</dd></div>
  <div id="g-spredning"><dt style="color:var(--text)">Spredning / tæt på ligevægt</dt><dd>Fonden ejer flere hundrede selskaber med små vægte, tæt på ligevægt. Ingen enkelt aktie afgør resultatet. Se <a href="laer/hvorfor-mange-aktier.html">Hvorfor så mange aktier?</a></dd></div>
@@ -124,13 +126,19 @@
  </details>
  </section>
  <section class="panel" id="o-kaeder">
- <details class="gl-group" open><summary><h2 style="font-size:16px;margin:0">Værdikæder og flodsystemet</h2><span class="gl-n">15 begreber</span></summary>
+ <details class="gl-group" open><summary><h2 style="font-size:16px;margin:0">Værdikæder og flodsystemet</h2><span class="gl-n">21 begreber</span></summary>
  <dl style="color:var(--muted);display:grid;gap:12px">
  <div id="g-vaerdikaede"><dt style="color:var(--text)">Værdikæde</dt><dd>Rækken af led fra råvare og energi til det færdige produkt. AI-compute-kæden har 13 led: energi, datacentre, chipdesign, udstyr, foundry, hukommelse, optik, servere, cloud og modeller, data, software, apps og fysisk AI. Pædagogisk model, ikke en investeringsanbefaling. Se <a href="vaerdikaeder.html">værdikæderne</a>.</dd></div>
  <div id="g-led"><dt style="color:var(--text)">Led</dt><dd>Ét trin i en værdikæde, fx "Optik og netværk". Et selskab kan stå i flere led.</dd></div>
  <div id="g-flodsystem"><dt style="color:var(--text)">Flodsystemet</dt><dd>NDI's billede af AI-værdikæden: efterspørgsel som vand, flaskehalse som dæmninger (NDI ugebrev 30. marts 2026). Se <a href="vaerdikaeder.html">værdikæder-siden</a>.</dd></div>
  <div id="g-daemning"><dt style="color:var(--text)">Dæmning / flaskehals</dt><dd>Et led, hvor efterspørgslen hober sig op, fordi kapaciteten ikke kan følge med. Flodsystemet har fem: energi, datacentre, halvledere, cloud &amp; modeller samt apps &amp; fysisk AI. Når én dæmning letter, flytter presset videre.</dd></div>
  <div id="g-ndi-blik"><dt style="color:var(--text)">NDI-blik</dt><dd>Kort forklaring på, hvordan NDI ser et led. Et perspektiv på kæden - ikke en anbefaling af bestemte selskaber.</dd></div>
+ <div id="g-halvleder"><dt style="color:var(--text)">Halvleder</dt><dd>Materiale (typisk silicium), som chips er lavet af. Bruges også som samlebetegnelse for hele chipbranchen: design, udstyr, fabrikker og hukommelse. NDI kalder halvledere den tredje flaskehals i <a href="#g-flodsystem">flodsystemet</a>.</dd></div>
+ <div id="g-gpu"><dt style="color:var(--text)">GPU, XPU og CPU</dt><dd>Processortyper. CPU er computerens almindelige hovedprocessor. GPU (grafikprocessor) regner mange små opgaver på én gang og er derfor velegnet til AI. XPU er en samlebetegnelse for specialiserede AI-chips, herunder GPU'er og de store cloudselskabers egne chips.</dd></div>
+ <div id="g-hbm"><dt style="color:var(--text)">Hukommelse (HBM)</dt><dd>AI-modeller skal have data tæt på processoren. Højbåndbreddehukommelse (HBM) er hukommelseschips stablet oven på hinanden. Hukommelse har historisk været en meget cyklisk branche med store prisudsving.</dd></div>
+ <div id="g-datacenter"><dt style="color:var(--text)">Datacenter og køling</dt><dd>Bygningen, hvor strøm bliver til compute: servere, strømfordeling og køling. Moderne AI-racks bruger så meget strøm, at luftkøling ikke slår til, og væskekøling bliver mere udbredt. NDI kalder datacentre den anden flaskehals.</dd></div>
+ <div id="g-elnet"><dt style="color:var(--text)">Elnet og transformere</dt><dd>Strømmen skal fra kraftværk til datacenter. Det kræver ledninger, transformerstationer (der ændrer spændingen) og styring. Del af energileddet, som NDI kalder den første flaskehals.</dd></div>
+ <div id="g-raastoffer"><dt style="color:var(--text)">Kritiske råstoffer</dt><dd>Kobber, sølv, sjældne jordarter og uran, som chips, elnet, batterier og robotter ikke kan laves uden. Udbuddet er ofte samlet i få lande, så geopolitik hører med.</dd></div>
  <div id="g-compute"><dt style="color:var(--text)">Compute</dt><dd>Regnekraft - den kapacitet, der skal til for at træne og køre AI-modeller.</dd></div>
  <div id="g-hyperscaler"><dt style="color:var(--text)">Hyperscaler</dt><dd>De største cloud-udbydere, som bygger datacentre i meget stor skala og står for en stor del af efterspørgslen efter compute.</dd></div>
  <div id="g-fabless"><dt style="color:var(--text)">Fabless / fab</dt><dd>Chipdesign uden egen fabrik / selve produktionsfabrikken.</dd></div>

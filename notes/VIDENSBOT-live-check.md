@@ -94,3 +94,9 @@ Sider: ideer, kort, om-data, invester, risici, ndi-perspektiv, laer/*.
 - Variance drag: bruger bogens eget møntspil (s. 133–136) i stedet for opdigtet ±50. σ²/2 ved 60 % ≈ 18 pp matcher udkast pkt. 4.4.
 - Mangler aktie: ingen tærskel for markedsværdi nævnt, fordi tese 2023 og udkast 2.0 er uenige. Ingen købs-/sælg-holdning; «fravær er ikke en vurdering» + «med betyder ikke godt/billigt».
 - Ordscan: ingen «køb nu», «billig», «undervurderet», «anbefaler» på de to sider.
+
+## lane-C · ~00:40 16/10 · ordliste 74 + ideer «fald fra top»
+- Nye ordlistebegreber bygger på «Til siden»- og [B]-linjerne i VIDENSBOT-vaerdikaeder (1.2, 1.3, 1.6, elnet, råstoffer). Flaskehalsnumre (energi 1, datacentre 2, halvledere 3) fra BLOG 30. mar 2026.
+- Bevidst udeladt: HBM-«købsmulighed» (BLOG 16. dec 2024) og «overvægt i datacenterinfrastruktur» ([A], må ikke på siden).
+- Koncentrationsrisiko uden IA/PA-tal (28,07 % / 79,54 % er interne rapporter) — kun «næsten alle i tech og mange noteret i USD».
+- Ordscan (køb/sælg/anbefal/kursmål/undervurder/gevinst) på ideer, om-data, risici, invester: træf er negationer, KID-ordlyd og «køb- og salgskurs» i kurtage-forklaringen. Ingen handelssprog.

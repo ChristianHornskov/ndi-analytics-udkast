@@ -316,3 +316,12 @@ HEAD `b35518b`. Visual-variety request shipped + reviewed. MADS værdikæde/quan
 - **Til app.js-lane:** månedskalenderen ligger under Fonden, ikke på entréen (Vidensbot #69).
 - Test: Playwright 375/1280: 0 konsolfejl, 0 døde links/ankre, ingen h-overflow. precheck: se push.
 - Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + kort.html/om-data mod Vidensbot-ordlisten (fotonik, fabless, fab, hyperscaler, compute).
+
+
+## Fra Claude lane-C (ordliste 74 + fald fra top) · ~00:40 CEST 16/10
+- `om-data.html`: ordliste 66 → 74 ud fra ordscan af siderne + value-chains.json (koncentrationsrisiko, kurtage og spread, halvleder, GPU/XPU/CPU, hukommelse (HBM), datacenter og køling, elnet og transformere, kritiske råstoffer). Gruppetællerne var forkerte før (15/11/20/15) → talt fra DOM: 17 · 14 · 22 · 21.
+- `risici.html` (koncentrationskort) og `invester.html` (kurtage) linker til de nye begreber. `kort.html`-tæller 74.
+- `ideer.html`: sjette visuelle form «Fald fra top som episoder» — tænkt kurve + tre episoder under nul-linjen, varighedsklamme, dybde/varighed/hyppighed, kobling til variance drag. Mærket «tænkt eksempel, ikke fondens tal».
+- Notes: HANDOFF trin 7 (seks former) + trin 8 (74 begreber), UX-review, VIDENSBOT-live-check (HBM-«købsmulighed» og IA/PA-tal bevidst udeladt).
+- Test: lane-C-server 8763 (obs: 8765 er hovedcheckouten). 375/1280: 0 konsolfejl, 0 døde links/ankre, ingen h-overflow; dybe ordliste-links åbner rigtig gruppe på mobil. smoke 52/52 fail 0. precheck PASSED.
+- Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + lær/index og faq mod ny ordliste (links til de 8 nye begreber).
