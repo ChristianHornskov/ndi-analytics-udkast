@@ -119,6 +119,24 @@ EQT skriver, at købet af Equitrans Midstream blev gennemført 22. juli 2024. Da
 
 Satellogic skriver, at satellitterne hedder NewSat. Forsiden sætter fuld drift af Merlin til andet halvår 2027. Datoen ligger efter beholdningen pr. 2026-06-01. Merlin er ikke beskrevet som en tjeneste i fuld drift. Produktsidens nutid om daglige skanninger er ikke brugt som bevis på fuld drift. Ord om bedste opløsning er ikke taget med. Selskabet opsender ikke selv raketterne.
 
+MDA skrev 10. september 2026, at selskabet præsenterede Aurora Black, en softwaredefineret satellit til forsvarskommunikation. Datoen ligger efter beholdningen pr. 2026-06-01. Præsentationen er ikke en konstellation i drift. Chorus er stadig omtalt, før konstellationen er sendt op. Sætningen om høj volumen i produktionen er ikke taget med. Det er ikke et datacenter.
+
+York skriver, at selskabet designer og fremstiller satellitplatforme, og at det koordinerer opsendelseslogistik fra design til levering. Logistikken er ikke det samme som selv at sende raketten op. Selskabet driver ikke et datacenter i rummet. Formuleringen om tusindvis af satellitter i kredsløb er ikke taget med, fordi siden ikke siger, at York ejer dem. Et opdelt tæller-tal på forsiden er ikke læst som en kapacitet.
+
+Critical Metals skrev 5. oktober 2026, at Grønlands regering har godkendt mineplanen og lukningsplanen for Tanbreez, og at planerne rækker til september 2050. Selskabet skriver, at de sidste driftstilladelser mangler, før byggeriet kan gå i gang. Datoen ligger efter beholdningen pr. 2026-06-01. Det er ikke en mine i drift. Wolfsberg er et lithiumprojekt i Kärnten i Østrig. Et studie, en aftale med BMW og et planlagt raffinaderi i Saudi-Arabien er ikke drift. Kursen på siden og formuleringen om verdens største forekomst er ikke taget med.
+
+Karman skriver, at selskabet beskytter nyttelast og har udstyr til at skille den fra fartøjet, og at det laver aerodynamiske mellemtrin og raketmotorer. Affyringsudstyr på siden er dele, ikke en orbital opsendelse. Selskabet sender ikke selv satellitter op. NioCorp og Lynas svarede 16. oktober 2026 stadig med tomme sider.
+
+Sigma Lithium nævner Jequitinhonha-dalen i Brasilien. Selskabet skrev 17. april 2023, at produktionen af lithium var gået i gang. Datoen ligger før beholdningen pr. 2026-06-01. Det er råstof til batterier, ikke et batteriselskab. Ordet only og løftet om fem nulpunkter er ikke taget med.
+
+Antero skriver, at det leverer naturgas og LPG til eksport fra Appalachia. Marcellus stod i forvejen. Gassen er brændsel, ikke en metalmine. Formuleringen om at være blandt de største amerikanske leverandører er ikke taget med.
+
+Expand Energy skrev 16. september 2026, at handlen med Twin Eagle er gennemført, og at Twin Eagle bliver et datterselskab. Twin Eagle er beskrevet som et marketingselskab. Datoen ligger efter beholdningen pr. 2026-06-01. Expand er dannet af Chesapeake og Southwestern. Gassen er brændsel, ikke en metalmine. Kursen på siden, tal i Bcf og ordene leading og largest er ikke taget med.
+
+Planet nævner satellitterne SuperDove, SkySat, Pelican, Tanager og Owl. Owl er omtalt som næste generation. Teksten kalder ikke Owl en særskilt flåde i drift. Selskabet opsender ikke selv raketterne. Et opløsningstal og formuleringen om at sprænge grænser er ikke taget med.
+
+Redwire skrev 1. april 2026, at kameraer og solsensorer skal med på Artemis II, og at systemet har 11 kameraer. Selskabet skriver, at det fremstiller og tester kamerasystemet til Orion på Artemis I til V. Datoen ligger før beholdningen pr. 2026-06-01. Artiklen siger "will launch". Et kort på forsiden siger "launched". Teksten følger artiklen og kalder ikke flyvningen gennemført. Selskabet sender ikke selv raketten op. Ordet historic og et ordrebeløb er ikke taget med.
+
 ## År til dato på periodesiden
 
 `ytdReturn` i `data.js` bruger sidste punkt i året før som udgangspunkt, ikke 1. januar. For PMINDI pr. 2026-10-14 er det 2025-12-31, ikke 2026-01-02. `periode.html` viser den samme dato i "Fra → til". Kalenderår bruger samme base (`calendarYearReturns`).

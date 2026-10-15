@@ -280,3 +280,25 @@ Ingen nye.
 - Lær-sider uden ordlistelinks har fået dem: hvorfor-mange-aktier (3 nye + «Se også»), saadan-taenker-vi (flodsystem, dæmning, prospekt, KID, udgangspunkter), udbytte-vs-akk («I ordlisten»-linje + NAV), faq-mangler-aktie (likviditet, ticker), risikoklasse (PRIIPs). ideer.html: «medianen» → ordliste.
 - Obs til js/css-ejer: på mobil er ordlistegrupperne foldet sammen, når man åbner om-data.html uden hash. Links med #g-… folder den rigtige gruppe ud og fremhæver posten. Virker (testet #g-markedsrisiko på 375).
 - Test 375/1280 på 8 sider: 0 konsolfejl, ingen h-overflow, 0 døde ankre (den eneste træffer er skabelonen `g-${key}` i selskab.html).
+
+## ~01:10 CEST lane-C checkpoint (Claude) — ideer: tre ure + ordliste 97
+- **Hul lukket:** en ny læser ser tre datoer (NAV 14. okt, beholdning 1. jun, KID 14. aug) og kan tro, at siden er rodet eller forældet. Ny tiende form på `ideer.html` «Tre ure på samme side»: fire spor på én tidslinje 2024–2027 (fyldt bjælke = afkast vises, stiplet = kun NAV, skravering = bevidst forsinkelse, gul streg = seneste NAV). PMINDIAKK-sporet viser den prikkede 12-måneders-grænse, uden at love en dato i tekst.
+- Første version: prikkerne blev ovale (højden fulgte sporet), og «2027» stod forskudt. Rettet. «Kursen er fra i går» fjernet (passer ikke, når siden læses senere).
+- Ordliste 95 → 97: omsætning og indtjening. P/E- og livscyklus-siden bruger begge ord bærende. Linket fra «præ-revenue» (skråstreg erstattet af «eller»), P/E- og livscyklus-sidens «Se også». «Afkast pr.»/«Beholdning pr.» har nu danske anførselstegn.
+- Obs til index-ejer: `index.html` linje ~91 siger «ÅOP-beregninger bygges ikke i aften». Intern arbejdssprog på forsiden. Forslag: «ÅOP vises ikke i udkastet. Se KID.»
+- Test 375/1280 på ideer, om-data, pe-forklaring, livscyklus, kort: 0 konsolfejl, ingen h-overflow, 0 døde ankre; alle `om-data.html#g-…`-links på tværs af docs/ findes.
+
+## ~01:40 CEST lane-C checkpoint (Claude) — KID-risikolisten forklaret, ordliste 101
+- **Hul lukket:** risici.html viste KID's fem nøglerisici som en tom liste af fagord («Vækst- og sektorrisiko», «Ingen markedsbeskyttelse»). Ingen af dem kunne slås op. Nu er hvert punkt et link til ordlisten (aktiemarkedsrisiko → markedsrisiko, valutarisiko → valuta, de to tab-punkter → ingen markedsbeskyttelse).
+- Ordliste 97 → 101: vækst- og sektorrisiko, ingen markedsbeskyttelse, boble (bruges på P/E-siden og i et ugebrevscitat på ideer), anbefalet investeringsperiode (risici, invester, risikoklasse, FAQ). Tællere 24 · 18 · 32 · 27 passer. Teksterne citerer ikke KID ordret, de siger «står blandt de vigtigste risici på Risici, som bygger på KID».
+- Linket ind: risici (risikoliste + «investeringsperiode»), invester («Har du tid?»), lær/risikoklasse, lær/pe-forklaring («boble»), kort.html 101.
+- FAQ-søgning rammer «boble», «markedsbeskyttelse», «investeringsperiode».
+- Obs til js-ejer: `js/faq-search.js` linje 93/96 skriver «træf for “boble”» med engelske anførselstegn. Resten af siden bruger «».
+- Test 375/1280 på 7 sider: 0 konsolfejl, ingen h-overflow, 0 døde links/ankre. Dybe links #g-kapitalbeskyttelse og #g-investeringsperiode åbner den foldede gruppe og fremhæver posten på 375.
+
+## 01:20 CEST lane-C checkpoint (Claude) — hvad står der i tallet? + ÅOP/før skat + kort demo
+- **Hul lukket:** siden sagde mange steder «efter løbende omkostninger, før skat», men forklarede aldrig, hvad det betyder for læserens eget afkast. Ny ellevte form på `ideer.html` «Hvad står der i tallet?»: to grupper lag (fyldt cyan = med i fondens afkast, stiplet = kommer bagefter og afhænger af dig) med en gul «= Fondens afkast» og en stiplet «= Dit eget afkast». Hvert lag linker til ordlisten eller en lær-side. Ingen tal.
+- Ordliste 101 → 103: ÅOP (stod på forsiden og i Fonden uden forklaring) og «Før skat». Fonden-gruppen 20. Linket fra invester (trin 4), FAQ «Hvad koster det?» (+ «Afkasttallene er før skat.», stadig 16 korte svar), udbytte-siden.
+- HANDOFF: morgendemoen er nu en tabel med 9 trin (side · vis · sig · tid ≈ 6 min) + tjekliste + ord at undgå. Den lange tekst ligger urørt som «Demo-detaljer» nederst.
+- Obs: Fonden-nøgletallet hedder «Største fald», men graftekster i app.js siger «max drawdown i perioden» (IDEAS, js-ejer).
+- Test 375/1280 på ideer, om-data#g-skat, invester, FAQ, udbytte-vs-akk, kort: 0 konsolfejl, ingen h-overflow, 0 døde links/ankre. Screenshot af formen gennemset på begge bredder.

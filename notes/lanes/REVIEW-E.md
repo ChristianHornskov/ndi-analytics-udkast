@@ -155,3 +155,39 @@ Købet af Equitrans er 22. juli 2024, før beholdningen. Only, breakeven og syne
 ## Satellogic · 2026-10-16 01:06 CEST
 
 Merlin er sat til fuld drift i andet halvår 2027, efter beholdningen. Daglige skanninger på produktsiden er ikke brugt som drift. NewSat står. Best-in-class er ikke kopieret. AI-udkast uden gennemgangsdato. Kæde og arkiv siger 2027. Chromium ved 375 og 1280 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## MDA Aurora Black · 2026-10-16 01:07 CEST
+
+Præsentationen er 10. september 2026, efter beholdningen. Ikke en konstellation i drift. Chorus er urørt som før opsendelse. Høj volumen og tickere er ikke kopieret. AI-udkast uden gennemgangsdato. Kæde og arkiv har datoen. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## York · 2026-10-16 01:08 CEST
+
+Opsendelseslogistik er med. Det er ikke en raket, York selv sender op. Tusindvis af satellitter og tæller-tallet er udeladt. Ikke et datacenter. AI-udkast uden gennemgangsdato. Kæde og arkiv siger grænsen. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Tanbreez · 2026-10-16 01:10 CEST
+
+Godkendelsen er 5. oktober 2026, efter beholdningen. Driftstilladelser mangler før byggeri. Wolfsberg er et projekt. Kurs og "world's largest" er ikke kopieret. AI-udkast uden gennemgangsdato. Kæde og arkiv siger grænsen. Chromium ved 375 og 1280 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Karman · 2026-10-16 01:11 CEST
+
+Nyttelast, mellemtrin og raketmotorer står i sætninger. Affyringsudstyr er ikke en orbital opsendelse. NioCorp og Lynas var tomme. AI-udkast uden gennemgangsdato. Kæde og arkiv siger grænsen. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Sigma · 2026-10-16 01:12 CEST
+
+Jequitinhonha-dalen står. Produktionen startede 17. april 2023, før beholdningen. Only og de fem nul-løfter er ikke kopieret. AI-udkast uden gennemgangsdato. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Antero · 2026-10-16 01:13 CEST
+
+Eksport af naturgas og LPG er med. "One of the largest" er ikke kopieret. Stadig brændsel, ikke en metalmine. AI-udkast uden gennemgangsdato. Kæden viser sætningen. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Twin Eagle · 2026-10-16 01:14 CEST
+
+Handlen er 16. september 2026, efter beholdningen. Twin Eagle er et marketingselskab og et datterselskab. Kurs, Bcf og leading/largest er ikke kopieret. AI-udkast uden gennemgangsdato. Kæde og arkiv har datoen. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Planet · 2026-10-16 01:18 CEST
+
+Pelican, Tanager og Owl er tilføjet ved siden af SuperDove og SkySat. Owl er næste generation, ikke skrevet som en særskilt flåde i drift. Opløsningstal er ikke kopieret. AI-udkast uden gennemgangsdato. Kæde og arkiv har navnene. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Redwire · 2026-10-16 01:20 CEST
+
+Artiklen 1. april 2026 siger will launch. Forsidens "launched" er ikke brugt som gennemført flyvning. 11 kameraer. Ikke en opsender. Historic og ordrebeløb er ikke kopieret. AI-udkast uden gennemgangsdato. Kæde og arkiv har grænsen. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.

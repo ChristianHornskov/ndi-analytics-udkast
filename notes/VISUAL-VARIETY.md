@@ -59,7 +59,7 @@ Siden må ikke være fire ens kort plus to mørke kasser. Formerne skifter ned a
 | Hero-tal | Det ene dybeste fald, med datoer og genopretning | ✅ `.hero-stat` |
 | Rolige tal | Middel og median som to linjer, ikke kort | ✅ `.quiet-stats` |
 | Gul annotation | Hvor serien ligger under vand i dag | ✅ `.anno` |
-| Underwater | Tid. Gul prik = dybeste bund. Ring = seneste dag. Tynd gul streg = toppen i den åbne episode. Søjler mellem kurve og årstal = episoder dybere end 10 %. Ordet tilbage = dagen det dybeste fald nåede toppen igen. Slider vælger en dag, cyan prik på kurven | ✅ `.figure` + `.uw-scrub` + `.uw-span` |
+| Underwater | Tid. Gul prik = dybeste bund. Ring = seneste dag. Tynd gul streg = toppen i den åbne episode. Søjler mellem kurve og årstal = episoder dybere end 10 %. Højden er dybden, bredden er tiden. Streg ved 10 % under nul er grænsen. Klik på søjlen hopper til bunden. Ordet tilbage = dagen det dybeste fald nåede toppen igen. Slider vælger en dag, cyan prik på kurven | ✅ `.figure` + `.uw-scrub` + `.uw-span` + `.uw-gate` |
 | Prikfordeling | Hvorfor middel ligger dybere end median. Navnene står under aksen | ✅ `.figure.plain` |
 | Episodeliste | De fire fald dybere end 10 %, med varighed. Klik hopper til bunden på kurven | ✅ `.ep-ledger` |
 | Årssøjler | Kalenderafkast som small multiples, link til periode. Året med det dybeste fald har gul kant. Søjlerne deler bundlinje | ✅ `.year-rail` |
@@ -68,7 +68,7 @@ Et plus-år kan rumme det dybeste fald. 2025 er eksemplet i copy, regnet fra ser
 
 ## Sammenlign
 
-Kortpar (to klasser), tidslinje uden panel, stort tal for overlap, ét panel med parvise temasøjler. Ikke tre `.panel` i træk. Rækken med den største forskel har en gul kant, og teksten nævner temaet. Krydslink til drawdown overlever, når siden er hentet. Datoen for AKK-gaten står på sin egen linje.
+Kortpar (to klasser), tidslinje uden panel, stort tal for overlap, ét panel med parvise temasøjler. Ikke tre `.panel` i træk. Kortene er et par med samme opbygning. PMINDI har en pil ud af kassen. PMINDIAKK har et loop tilbage i kassen. Rækken med den største forskel har en gul kant, og teksten nævner temaet. Krydslink til drawdown overlever, når siden er hentet. Datoen for AKK-gaten står på sin egen linje.
 
 ## Embed
 
@@ -137,3 +137,6 @@ Widgetten er ét panel. Call-to-action står udenfor, med link til største fald
 ### lane-A · 2026-10-16 · rum: højdebånd og tjek dig selv
 - **Højdebånd** (`#sp-bands`): lodret tidslinje-agtig liste med runde ikon-nåle på en brand-farvet akse, vist fra Månen øverst til jorden nederst (`column-reverse`, så DOM-rækkefølgen stadig går nedefra og op). Hover eller fokus på et bånd tænder LEO, MEO eller GEO på højdeskalaen ved siden af. Ny form i forhold til kortgitre og strimler.
 - **Tjek dig selv** (`#sp-quiz`): spørgsmålskort med svarknapper, ✓ i cyan og ✗ med stiplet kant, og en gul forklaringslinje med link. Første interaktive element på siden, der giver feedback. Kun lokal CSS i vaerdikaeder.html.
+
+### lane-A · 2026-10-16 · energi: tjek dig selv
+- **Tjek dig selv** (`#e-quiz`) på energi-fanen genbruger rum-quizzens form (svarknapper, ✓/✗, gul forklaringslinje), så læseren genkender mønstret på tværs af kæder. Svar-linket åbner leddet direkte (elnet, lagring, atomkraft). Ingen ny CSS ud over scroll-margin for de nye ankre.

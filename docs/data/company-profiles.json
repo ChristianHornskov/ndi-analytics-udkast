@@ -699,14 +699,14 @@
   "US03674X1063": {
    "name": "Antero Resources",
    "theme": "energy-resources",
-   "summary": "Producerer naturgas og flydende gasprodukter i Appalachia i USA.",
+   "summary": "Producerer naturgas og flydende gasprodukter i Appalachia i USA. Selskabet skriver, at det leverer naturgas og LPG til eksport.",
    "watch": "Gaspriser og produktion fra felterne.",
    "source": "https://www.anteroresources.com/",
-   "products": "Naturgas og tilknyttede produkter.",
+   "products": "Naturgas, flydende gasprodukter og LPG til eksport.",
    "customers": "Købere af gas.",
    "role": "Brændsel til elproduktion.",
    "narrative": [
-    "Antero Resources producerer naturgas og flydende gasprodukter i Appalachia. Selskabet nævner Marcellus.",
+    "Antero Resources producerer naturgas og flydende gasprodukter i Appalachia. Selskabet nævner Marcellus og skriver, at det leverer naturgas og LPG til eksport.",
     "I kæden står selskabet på elproduktion, fordi gassen er brændsel. Det er ikke en metalmine."
    ],
    "narrativeSources": [
@@ -743,32 +743,36 @@
   "US1651677353": {
    "name": "Expand Energy",
    "theme": "energy-resources",
-   "summary": "Producerer naturgas i USA. Selskabet er dannet ved en sammenlægning af Chesapeake og Southwestern.",
+   "summary": "Producerer naturgas i USA. Selskabet er dannet ved en sammenlægning af Chesapeake og Southwestern. Det skrev 16. september 2026, at handlen med Twin Eagle er gennemført. Datoen ligger efter beholdningen.",
    "watch": "Gaspriser og samlingen af de to forretninger.",
    "source": "https://www.expandenergy.com/",
-   "products": "Naturgas.",
+   "products": "Naturgas. Twin Eagle er et marketingselskab.",
    "customers": "Købere af gas.",
    "role": "Brændsel til elproduktion.",
    "narrative": [
-    "Expand Energy producerer naturgas i USA. Selskabet er dannet ved en sammenlægning af Chesapeake og Southwestern.",
-    "I kæden står selskabet på elproduktion, fordi gassen er brændsel. Det er ikke en metalmine."
+    "Expand Energy producerer naturgas i USA. Selskabet er dannet ved en sammenlægning af Chesapeake og Southwestern. Det skrev 16. september 2026, at handlen med Twin Eagle er gennemført, og at Twin Eagle bliver et datterselskab.",
+    "Datoen ligger efter beholdningen pr. 1. juni 2026. Twin Eagle er beskrevet som et marketingselskab. I kæden står gassen som brændsel. Det er ikke en metalmine."
    ],
    "narrativeSources": [
     {
      "label": "Selskabets side",
      "url": "https://www.expandenergy.com/"
+    },
+    {
+     "label": "Twin Eagle, 16. september 2026",
+     "url": "https://www.expandenergy.com/2026/09/16/expand-energy-and-twin-eagle-transaction-closes-combined-organization-creates-north-americas-leading-integrated-natural-gas-company/"
     }
    ]
   },
   "CA8265991023": {
    "name": "Sigma Lithium",
    "theme": "energy-resources",
-   "summary": "Arbejder med produktion af lithiumkoncentrat i Brasilien. Lithium bruges i batterier.",
+   "summary": "Producerer lithiumkoncentrat i Brasilien. Selskabet nævner Jequitinhonha-dalen. Det er råstof til batterier, ikke et batteriselskab.",
    "watch": "Drift af anlægget, lithiumpriser og kvaliteten af koncentratet.",
    "source": "https://sigmalithiumcorp.com/",
    "narrative": [
-    "Sigma Lithium producerer lithiumkoncentrat i Brasilien. Selskabet skriver, at det bruges i batterier.",
-    "Det er råstof til batterier, ikke et batteriselskab og ikke et kraftværk."
+    "Sigma Lithium producerer lithiumkoncentrat i Brasilien. Selskabet nævner Jequitinhonha-dalen, og det skrev 17. april 2023, at produktionen var gået i gang.",
+    "Datoen ligger før beholdningen pr. 1. juni 2026. Det er råstof til batterier, ikke et batteriselskab og ikke et kraftværk."
    ],
    "narrativeSources": [
     {
@@ -823,20 +827,28 @@
   "VGG2662B1031": {
    "name": "Critical Metals",
    "theme": "energy-resources",
-   "summary": "Arbejder med et projekt for sjældne jordarter i Grønland (Tanbreez). Denne tekst beskriver ikke en mine i drift.",
-   "watch": "Tilladelser i Grønland og om projektet bliver til en mine.",
+   "summary": "Arbejder med Tanbreez i Grønland og med Wolfsberg i Kärnten i Østrig. Selskabet skrev 5. oktober 2026, at Grønland har godkendt mine- og lukningsplaner. De sidste driftstilladelser mangler før byggeri. Det er ikke en mine i drift.",
+   "watch": "Tilladelser før byggeri i Grønland, og om Wolfsberg bliver til en mine.",
    "source": "https://www.criticalmetalscorp.com/",
-   "products": "Et råstofprojekt.",
+   "products": "Projekter i sjældne jordarter og lithium. Ikke miner i drift.",
    "customers": "Ingen driftkunder i denne beskrivelse.",
    "role": "Råstofprojekt, ikke produktion.",
    "narrative": [
-    "Critical Metals arbejder med projektet Tanbreez i Grønland. Det gælder sjældne jordarter.",
-    "Denne tekst beskriver ikke en mine i drift."
+    "Critical Metals arbejder med sjældne jordarter i projektet Tanbreez i Grønland. Selskabet skrev 5. oktober 2026, at Grønlands regering har godkendt mineplanen og lukningsplanen, og at planerne rækker til september 2050. Selskabet skriver, at de sidste driftstilladelser mangler, før byggeriet kan gå i gang. Datoen ligger efter beholdningen pr. 1. juni 2026.",
+    "Siden nævner også lithiumprojektet Wolfsberg i Kärnten i Østrig. Et studie af projektet er ikke en mine i drift. En aftale med BMW og et planlagt raffinaderi i Saudi-Arabien er heller ikke drift."
    ],
    "narrativeSources": [
     {
      "label": "Selskabets side",
      "url": "https://www.criticalmetalscorp.com/"
+    },
+    {
+     "label": "Tanbreez, 5. oktober 2026",
+     "url": "https://www.criticalmetalscorp.com/critical-metals-corp-nasdaq-crml-announces-receipt-of-formal-greenland-government-mining-approvals-for-the-tanbreez-mine-valid-through-the-year-2050/"
+    },
+    {
+     "label": "Wolfsberg",
+     "url": "https://criticalmetalscorp.com/projects/wolfsberg-lithium-project/"
     }
    ]
   },
@@ -1221,15 +1233,15 @@
   "US4859241048": {
    "name": "Karman Space & Defense",
    "theme": "space",
-   "summary": "Laver dele og systemer til løfteraketter, missiler og anden rum- og forsvarsteknik. Selskabet sender ikke selv satellitter op.",
+   "summary": "Laver dele til løfteraketter og missiler. Selskabet skriver, at det beskytter nyttelast, laver mellemtrin og samler raketmotorer. Det sender ikke selv satellitter op.",
    "watch": "Ordrer fra de store programmer og evnen til at levere dele til tiden.",
    "source": "https://www.karman-sd.com/",
-   "products": "Beskyttelse af nyttelast, mellemtrin og fremdriftssystemer.",
+   "products": "Beskyttelse af nyttelast, mellemtrin og raketmotorer.",
    "customers": "Forsvars- og rumprogrammer.",
    "role": "Komponenter til opsendelse.",
    "narrative": [
-    "Karman laver dele til løfteraketter, missiler og rum- og forsvarsteknik.",
-    "Selskabet sender ikke selv satellitter op. I kæden står det som leverandør af dele til opsendelse."
+    "Karman skriver, at selskabet beskytter nyttelast og har udstyr til at skille den fra fartøjet. Siden nævner også aerodynamiske mellemtrin, raketmotorer og affyringsudstyr.",
+    "Det er dele og udstyr. Selskabet sender ikke selv satellitter op. I kæden står det som leverandør af dele til opsendelse."
    ],
    "narrativeSources": [
     {
@@ -1281,35 +1293,39 @@
   "US75776W1036": {
    "name": "Redwire",
    "theme": "space",
-   "summary": "Leverer komponenter og systemer til satellitter og rumfartøjer, blandt andet solpaneler, sensorer og strukturer. Selskabet arbejder også med fremstilling i rummet. Det er ikke et datacenter i kredsløb.",
+   "summary": "Leverer dele til satellitter og rumfartøjer. Selskabet skrev 1. april 2026, at kameraer og solsensorer skal med på Artemis II. Meddelelsen siger ikke, at flyvningen er gennemført. Det er ikke et datacenter og ikke en opsender.",
    "watch": "Ordrer til satellitprogrammer og om aktiviteterne i rummet bliver til en forretning.",
    "source": "https://redwirespace.com/",
-   "products": "Dele til satellitter og udstyr til arbejde i rummet.",
+   "products": "Dele til satellitter, kameraer og solsensorer.",
    "customers": "Satellitbyggere og rumprogrammer.",
    "role": "Infrastruktur til satellitter. Ikke en opsender og ikke et orbitalt datacenter.",
    "narrative": [
-    "Redwire leverer dele til satellitter og rumfartøjer, blandt andet solpaneler og strukturer.",
-    "Selskabet arbejder også med forsøg i rummet. Det er ikke et datacenter i kredsløb og ikke en opsender."
+    "Redwire skriver, at selskabet fremstiller og tester kamerasystemet til Orion på Artemis I til V. Selskabet skrev 1. april 2026, at systemet til Artemis II har 11 kameraer, og at udstyret skal med på flyvningen.",
+    "Datoen ligger før beholdningen pr. 1. juni 2026. Meddelelsen beskriver ikke flyvningen som gennemført. Selskabet sender ikke selv raketten op og driver ikke et datacenter i kredsløb."
    ],
    "narrativeSources": [
     {
      "label": "Selskabets side",
      "url": "https://redwirespace.com/"
+    },
+    {
+     "label": "Artemis II, 1. april 2026",
+     "url": "https://rdw.com/newsroom/redwires-advanced-imaging-and-navigation-technology-will-enable-nasas-historic-artemis-ii-mission/"
     }
    ]
   },
   "US9870841007": {
    "name": "York Space Systems",
    "theme": "space",
-   "summary": "Bygger satellitplatforme til offentlige og private kunder. Platformen bærer kundens udstyr. Selskabet driver ikke et datacenter i rummet.",
+   "summary": "Bygger satellitplatforme til offentlige og private kunder. Selskabet skriver, at det også koordinerer opsendelseslogistik. Det er ikke det samme som selv at sende raketten op, og selskabet driver ikke et datacenter i rummet.",
    "watch": "Levering af satellitter og kundernes programmer.",
    "source": "https://www.yorkspacesystems.com/",
-   "products": "Satellitplatforme.",
+   "products": "Satellitplatforme og opsendelseslogistik.",
    "customers": "Offentlige og private kunder, der skal bruge en satellit.",
    "role": "Bygger satellitten. Driver den ikke som en forbrugertjeneste.",
    "narrative": [
-    "York bygger satellitplatforme til kunder. Platformen bærer kundens udstyr.",
-    "Selskabet driver ikke et datacenter i rummet."
+    "York skriver, at selskabet designer og fremstiller satellitplatforme, og at platformen bærer kundens udstyr. Siden siger også, at selskabet koordinerer opsendelseslogistik fra design til levering.",
+    "Logistikken er ikke det samme som selv at sende raketten op. Selskabet driver ikke et datacenter i rummet."
    ],
    "narrativeSources": [
     {
@@ -1425,20 +1441,24 @@
   "CA55293N1096": {
    "name": "MDA Space",
    "theme": "space",
-   "summary": "Bygger satellitter, rumrobotik og systemer til geodata. Rumrobotikken er udstyr, der arbejder ved en station eller et fartøj. Det er ikke et datacenter.",
+   "summary": "Bygger satellitter, rumrobotik og systemer til geodata. Selskabet præsenterede 10. september 2026 satellitten Aurora Black. Det er ikke en konstellation i drift og ikke et datacenter.",
    "watch": "Satellitordrer og robotprogrammer.",
    "source": "https://mda.space/",
    "products": "Satellitter, robotarme og geodata.",
    "customers": "Rumagenturer, satellitoperatører og forsvar.",
    "role": "Satellitter og robotik.",
    "narrative": [
-    "MDA bygger satellitter og rumrobotik og arbejder med geodata.",
-    "Selskabet omtaler satellitprogrammet Chorus, før det er sendt op. Robotikken er udstyr. Det er ikke et datacenter."
+    "MDA bygger satellitter og rumrobotik og arbejder med geodata. Selskabet skrev 10. september 2026, at det præsenterede Aurora Black, en softwaredefineret satellit til forsvarskommunikation.",
+    "Datoen ligger efter beholdningen pr. 1. juni 2026. Præsentationen er ikke en konstellation i drift. Chorus er stadig omtalt, før konstellationen er sendt op. Det er ikke et datacenter."
    ],
    "narrativeSources": [
     {
      "label": "Selskabets side",
      "url": "https://mda.space/"
+    },
+    {
+     "label": "Aurora Black, 10. september 2026",
+     "url": "https://mda.space/article/mda-space-unveils-mda-aurora-black-a-defence-focused-software-defined-satellite"
     }
    ]
   },
@@ -1475,15 +1495,15 @@
   "US72703X1063": {
    "name": "Planet Labs",
    "theme": "space",
-   "summary": "Driver en flåde af satellitter, der tager billeder af Jorden, og sælger billederne og analyserne.",
+   "summary": "Driver satellitter, der tager billeder af Jorden. Siden nævner SuperDove, SkySat, Pelican, Tanager og Owl. Owl er omtalt som næste generation. Selskabet opsender ikke selv raketterne.",
    "watch": "Satellitternes drift og kundernes abonnementer på billeder.",
    "source": "https://www.planet.com/",
    "products": "Satellitbilleder og data.",
    "customers": "Offentlige myndigheder, virksomheder inden for landbrug, kortlægning og forsikring.",
    "role": "Satellittjeneste.",
    "narrative": [
-    "Planet driver satellitter, der tager billeder af Jorden. Selskabet sælger billederne og analyser af dem. Flåden omfatter blandt andet SuperDove og SkySat.",
-    "Planet opsender ikke selv raketterne i denne beskrivelse. Selskabet står på satellitter."
+    "Planet driver satellitter, der tager billeder af Jorden. Selskabet sælger billederne og analyser af dem. Siden nævner SuperDove, SkySat, Pelican, Tanager og Owl. Owl er omtalt som næste generation.",
+    "Teksten kalder ikke Owl en særskilt flåde i drift. Planet opsender ikke selv raketterne i denne beskrivelse."
    ],
    "narrativeSources": [
     {
