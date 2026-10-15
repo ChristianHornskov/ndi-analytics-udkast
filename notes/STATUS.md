@@ -391,3 +391,13 @@ Søjlerne under underwater-kurven var lige høje. Højden følger nu dybden, bre
 Tjekket i Chromium ved 1280, 375 og 320. Ingen sidescroll, ingen konsolfejl, ingen tekst uden for svg'en. AKK siger stadig 12 måneder og har ingen procent.
 
 `lane-D` er klar til merge. Ikke main. Ikke færdig.
+
+## Fra Grok lane-D
+
+**2026-10-16 01:22 CEST. Udbyttet er tegnet på kortene. Ikke færdig.**
+
+Sammenlign-kortene er stadig et par. PMINDI har en pil ud af kassen. PMINDIAKK har et loop tilbage i kassen. Ingen tredje kasse. Ét panel. AKK har ingen afkastprocent, og datoen står på sin egen linje. Gul kant på Andet. Link til drawdown er der.
+
+Tjekket i Chromium ved 1280, 375 og 320. Ingen sidescroll, ingen konsolfejl.
+
+`lane-D` er klar til merge. Ikke main. Ikke færdig.

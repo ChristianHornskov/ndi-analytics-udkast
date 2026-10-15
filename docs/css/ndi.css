@@ -570,6 +570,10 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
 .cmp-card.b{border-top-color:var(--cyan)}
 .cmp-card h2{font-size:22px;margin:2px 0 6px}
 .cmp-tag{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0}
+.cmp-mark{display:block;width:132px;max-width:100%;height:auto;margin:2px 0 8px}
+.cmp-card.a .cmp-mark{color:var(--brand)}
+.cmp-card.b .cmp-mark{color:var(--cyan)}
+.cmp-mark rect,.cmp-mark path{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}
 .cmp-flow{font-size:14px;color:var(--muted);margin:0 0 12px}
 .cmp-flow strong{color:var(--text);font-weight:600}
 .cmp-card dl{display:grid;gap:6px;margin:0 0 14px;font-size:13px}

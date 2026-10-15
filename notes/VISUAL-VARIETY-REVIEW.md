@@ -88,6 +88,10 @@ Søjlerne under kurven var lige høje. Højden er nu dybden, bredden er stadig t
 
 "tilbage", "top" og "nu −23 %" rammer ikke søjlerne eller hinanden, ved 1280, 375 og 320. Ingen tekst uden for svg'en. Ingen sidescroll. Ingen konsolfejl. AKK siger stadig 12 måneder og har ingen procent.
 
+### Update · udbytte-mærke · 2026-10-16 ~01:22 CEST
+
+De to sammenlign-kort er stadig et par, med samme felter. Forskellen er tegnet: PMINDI har en pil ud af kassen. PMINDIAKK har et loop, der vender tilbage i kassen. Ingen tredje kasse. Ét panel. AKK-kortet har ingen afkastprocent. "fra 5. dec. 2026" står på sin egen linje. Gul kant på Andet. Link til drawdown er der. Ingen sidescroll ved 1280, 375 og 320. Ingen konsolfejl.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.
