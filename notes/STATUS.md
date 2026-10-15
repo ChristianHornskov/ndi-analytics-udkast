@@ -1323,3 +1323,5 @@ Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke me
 - `om-data.html`: ordliste 105 (Energi (tema), High growth), tællere 24 · 20 · 34 · 27. `ndi-perspektiv.html` linker flodsystem/dæmning/energi/modenhed til ordlisten. `kort.html` 105 + ideer-beskrivelse. HANDOFF trin 7: 105.
 - Test: 8763, 375/1280 på 5 sider: 0 konsolfejl, ingen h-overflow, 0 døde ankre. precheck: se push.
 - Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) på hele lane-C-fladen ved 375 px.
+
+- Coordinator-loop 2026-10-16 01:26:18 CEST: CONFLICT merge origin/lane-R (ahead 1) — aborted, not pushed

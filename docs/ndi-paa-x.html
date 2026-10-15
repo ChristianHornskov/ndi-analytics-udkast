@@ -27,7 +27,7 @@
  </footer>
  <noscript><p style="max-width:1180px;margin:0 auto;padding:0 20px 24px;color:#aac0c7">Siden læser kun den statiske fil. Slå JavaScript til for at se kortene. Browseren kalder ikke X.</p></noscript>
  <script type="module">
- import { loadXPosts, xCard, fmtXDate, X_LABEL, X_FILTERS, postInFilter, postMatchesQuery, postWho, feedHitKind } from './js/x-feed.js';
+ import { loadXPosts, xCard, fmtXDate, highlightHtml, X_LABEL, X_FILTERS, postInFilter, postMatchesQuery, postWho, feedHitKind } from './js/x-feed.js';
  const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
  const main = document.getElementById('main');
  const pack = await loadXPosts();
@@ -60,7 +60,7 @@
  const door = (spot, href, jump, v, kicker, title, n, post, byKind, kind) => `<a class="x-door is-${kind}" href="${href}" data-jump="${jump}" data-v="${esc(v)}" data-spot="${spot}">
  <span class="k">${kicker}</span>
  <span class="x-door-top"><strong>${title}</strong><span class="x-door-n">${n} opslag</span></span>
- ${post ? `<span class="x-door-q">${esc(excerpt(post))}</span><span class="x-door-by">${byKind} · @${esc(post.username)} · ${esc(fmtXDate(post.created_at))}</span>` : '<span class="x-door-q">Ingen opslag i snapshotet.</span>'}
+ ${post ? `<span class="x-door-q">${highlightHtml(excerpt(post), v === 'chips' ? 'chips' : v)}</span><span class="x-door-by">${byKind} · @${esc(post.username)} · ${esc(fmtXDate(post.created_at))}</span>` : '<span class="x-door-q">Ingen opslag i snapshotet.</span>'}
  </a>`;
 
  const read = () => {
@@ -163,26 +163,46 @@
  if (state.who === 'curated') bits.push(chip('Konti Mads følger', 'who'));
  active.innerHTML = bits.join('');
  const focused = bits.length ? ` · ${bits.length === 1 ? 'ét filter' : bits.length + ' filtre'}` : '';
- live.textContent = list.length
- ? `${list.length} af ${posts.length} opslag${focused}`
- : `Ingen opslag${focused}`;
  const leadOn = Boolean(state.q.trim() || state.f !== 'all');
  document.body.classList.toggle('x-focused', leadOn);
- const laneOf = (kind, cards, lead) => {
+ const direct = [];
+ const theme = [];
+ const restHits = [];
+ if (leadOn) {
+ for (const p of list) {
+ const k = feedHitKind(p, { q: state.q, f: state.f });
+ if (k === 'direct') direct.push(p);
+ else if (k === 'theme') theme.push(p);
+ else restHits.push(p);
+ }
+ }
+ const splitBits = [];
+ if (direct.length) splitBits.push(`${direct.length} direkte`);
+ if (theme.length) splitBits.push(`${theme.length} tema`);
+ const split = splitBits.length ? ` · ${splitBits.join(' · ')}` : '';
+ live.textContent = list.length
+ ? `${list.length} af ${posts.length} opslag${split}${focused}`
+ : `Ingen opslag${focused}`;
+ const markQ = state.q.trim() || (state.f === 'chips' ? 'NVDA' : '');
+ const laneOf = (kind, cards) => {
  if (!cards.length) return '';
  const q = state.q.trim();
  let hint = kind === 'direct' ? 'Nævner navnet eller tickeren.' : 'Rammer temaet. Ikke en ticker fra udsnittet.';
  if (!q && state.f === 'chips' && kind === 'direct') hint = 'Ticker NVDA i opslaget.';
  if (!q && state.f === 'chips' && kind === 'theme') hint = 'Chips eller AI, uden NVDA-ticker.';
- const kicker = kind === 'direct' ? 'Direkte træf' : 'Tema';
- const body = cards.map((p, i) => xCard(p, {
- query: state.q,
- lead: lead && i === 0,
- hitKind: kind,
- })).join('');
+ const quotedTheme = !direct.length;
+ const kicker = kind === 'direct' ? 'Øvrige direkte træf' : (quotedTheme ? 'Øvrige tema' : 'Tema');
+ const body = cards.map((p) => xCard(p, { query: markQ, hitKind: kind })).join('');
  return `<div class="x-lane ${kind === 'direct' ? 'is-direct' : 'is-theme'}">
  <p class="x-lane-h"><span class="x-lane-k">${kicker}</span><span>${hint} · ${cards.length}</span></p>
  <div class="x-grid">${body}</div>
+ </div>`;
+ };
+ const homeLane = (mod, cards, kicker, hint) => {
+ if (!cards.length) return '';
+ return `<div class="x-lane ${mod}">
+ <p class="x-lane-h"><span class="x-lane-k">${kicker}</span><span>${hint} · ${cards.length}</span></p>
+ <div class="x-grid">${cards.map((p) => xCard(p, { query: state.q })).join('')}</div>
  </div>`;
  };
  const picked = [];
@@ -192,10 +212,11 @@
  if (state.who === 'curated') picked.push('konti Mads følger');
  const pickedLine = picked.length ? ` Aktivt: ${picked.join(' · ')}.` : '';
  if (!list.length) {
- grid.innerHTML = `<div class="x-empty" style="grid-column:1/-1">
+ grid.innerHTML = `<div class="x-empty x-stage">
  <p class="x-zero" aria-hidden="true">0</p>
  <p class="k">Ingen opslag i filteret</p>
  <p>Ingen af de ${posts.length} opslag i snapshotet rammer det valgte.${pickedLine} Prøv et spor, eller nulstil.</p>
+ <p>${esc(X_LABEL)}.</p>
  <div class="x-suggest">
  <button type="button" class="outline-btn small" data-jump="q" data-v="SoftBank" data-clear-who>SoftBank</button>
  <button type="button" class="outline-btn small" data-jump="q" data-v="NVDA" data-clear-who>Nvidia</button>
@@ -204,32 +225,33 @@
  </div>
  </div>`;
  } else if (!leadOn) {
- grid.innerHTML = list.map((p) => xCard(p, { query: state.q })).join('');
+ const house = list.filter((p) => postWho(p, 'house'));
+ const curated = list.filter((p) => postWho(p, 'curated'));
+ const other = list.filter((p) => !postWho(p, 'house') && !postWho(p, 'curated'));
+ grid.innerHTML = homeLane('is-curated', curated, 'Konti Mads følger', "Udvalgte offentlige opslag — ikke NDI's holdning")
+ + homeLane('is-house', house, 'NDI-konti', 'InvestNewdeal, Mads, Jesper og Christian')
+ + homeLane('is-rest', other, 'Andre opslag', 'Hverken en NDI-konto eller mærket fra listen Mads følger');
+ } else if (!direct.length && !theme.length) {
+ const [first, ...tail] = list;
+ grid.innerHTML = `<div class="x-stage">${xCard(first, { query: markQ, lead: true })}</div>`
+ + (tail.length ? `<div class="x-grid" style="grid-column:1/-1">${tail.map((p) => xCard(p, { query: markQ })).join('')}</div>` : '');
  } else {
- const direct = [];
- const theme = [];
- const rest = [];
- for (const p of list) {
- const k = feedHitKind(p, { q: state.q, f: state.f });
- if (k === 'direct') direct.push(p);
- else if (k === 'theme') theme.push(p);
- else rest.push(p);
- }
- if (!direct.length && !theme.length) {
- grid.innerHTML = list.map((p, i) => xCard(p, { query: state.q, lead: i === 0 })).join('');
- } else {
- grid.innerHTML = laneOf('direct', direct, true)
- + laneOf('theme', theme, !direct.length)
- + (rest.length ? `<div class="x-grid" style="grid-column:1/-1">${rest.map((p) => xCard(p, { query: state.q })).join('')}</div>` : '');
- }
+ const leadPost = direct[0] || theme[0];
+ const leadKind = direct.length ? 'direct' : 'theme';
+ const restDirect = direct.length ? direct.slice(1) : [];
+ const restTheme = direct.length ? theme : theme.slice(1);
+ grid.innerHTML = `<div class="x-stage">${xCard(leadPost, { query: markQ, lead: true, hitKind: leadKind })}</div>`
+ + laneOf('direct', restDirect)
+ + laneOf('theme', restTheme)
+ + (restHits.length ? `<div class="x-grid" style="grid-column:1/-1">${restHits.map((p) => xCard(p, { query: state.q })).join('')}</div>` : '');
  }
  };
 
  const revealHits = (smooth) => {
- const lead = document.querySelector('#x-grid .x-text, #x-grid .x-empty');
+ const lead = document.querySelector('#x-grid .is-quote .x-by') || document.querySelector('#x-grid .x-empty .k, #x-grid .x-text');
  if (!lead) return;
  const r = lead.getBoundingClientRect();
- if (r.top >= 72 && r.bottom <= window.innerHeight - 12) return;
+ if (r.top >= 64 && r.bottom <= window.innerHeight - 8) return;
  const behavior = smooth && !reduceMotion ? 'smooth' : 'auto';
  const narrow = window.matchMedia('(max-width: 700px)').matches;
  const target = narrow ? document.getElementById('x-grid') : document.getElementById('spor');

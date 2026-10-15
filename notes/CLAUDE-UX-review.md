@@ -370,3 +370,45 @@ Pages er lig med main (build `7b7734a`, 23:08 UTC). Jeg har kørt Playwright på
 - 0 h-overflow på 34×2 sider. 0 konsolfejl undtagen ndi-paa-x. Én h1 på alle sider undtagen ndi-paa-x.
 - Visuel variation: højdebånd, quiz og risiko-skyder er tre nye former og ikke flere kort. Ingen kort-træthed.
 - Sammenlign: "Afkast vises efter 12 måneder fra 5. dec. 2026" med tidslinje er tydeligt for privatpersonaen.
+
+## 2026-10-16 01:25 CEST · cyklus 17 (main `7b7734a`, ingen ændring siden cyklus 16)
+
+Main er uændret, og Pages er stadig build `7b7734a` (last-modified 23:08 UTC). Dette er en re-verifikation: Playwright på 23 live-sider ved 375 og 1280, scrollet til bunden.
+
+### MUST (stadig åbne)
+- **ndi-paa-x.html er stadig tom live** (4. cyklus): 173 tegn, 0 h1, `SyntaxError … x-feed.js does not provide an export named 'feedHitKind'`. Rettelsen er den samme: tag kun `docs/js/x-feed.js` fra lane-X, ikke hele lane-X. Det er den eneste side med konsolfejl.
+- Risikoklasse-siden modsiger stadig risici/fakta: "klasse 5 = 20–30 %" mod "Vol 32,46 %". Se compliance MUST 6.
+- TSMC viser stadig "Beskrivelse mangler i udkastet" (1×). 175/269 linse-selskaber har stadig ingen profil.
+- ndi-perspektiv er ca. 165.500 tegn ved 375 og har 42 × "afventer/udfyldes". Uændret.
+
+### SHOULD (uændret fra cyklus 16)
+- Omkostninger: sæt 1,49 % før "den ene forskel", og læg omkostninger i primær-nav på 375. Drawdown-banneret mangler "Historisk, ikke en prognose". "BREAKING" ×2 på fonden og SoftBank. Rum-quizzen mangler `scroll-margin-top`. TSMC's h1 er "Taiwan Semi Sp ADR".
+
+### OK
+- 0 h-overflow og én h1 på 22 af 23 sider ved begge bredder. Om-data folder sig stadig sammen på 375 (1.245 tegn) ✅.
+
+## 2026-10-16 01:48 CEST · cyklus 18 (main `299e7a2`, 48 nye commits)
+
+Pages er bygget fra `299e7a2` (last-modified 23:21 UTC, `g-aaop` er live). Jeg har kørt Playwright på 26 live-sider ved 375 og 1280 og scrollet til bunden. Main er merget ind i lane-R. Jeg har ikke brugt `reset --hard`, fordi lane-R har note-commits, som ellers kræver force-push.
+
+### MUST
+- **ndi-paa-x.html er stadig tom live** (5. cyklus): 173 tegn, 0 h1 og `x-feed.js does not provide an export named 'feedHitKind'`. Ingen af de 48 commits rører filen. Rettelsen er stadig at tage kun `docs/js/x-feed.js` fra lane-X. Det er den eneste side med konsolfejl.
+- **Stubs vokser hurtigere end profiler:** NDI-linsen er gået fra 269 til 310 selskaber (lane-B), men profilerne er stadig 98. Nu har **215 af 310** linse-selskaber ingen profil (før 175/269). TSMC viser stadig "Beskrivelse mangler i udkastet". Sæt en pause på linse-udvidelsen, til profilerne følger med, eller skjul beskrivelsesfeltet, når der ikke er nogen profil.
+- Risikoklasse siger "klasse 5 dækker udsving fra 20 til 30 % pr. år", men risici og fakta viser "Volatilitet (ann.) 32,46 %". Uændret. Se compliance MUST 6.
+
+### SHOULD
+- **ndi-perspektiv er nu ca. 192.000 tegn ved 375** (var 165.500), og "afventer/udfyldes" står 53 gange. Siden vokser med hver linse-runde. Fold temagrupperne sammen som standard, ligesom om-data gør på mobil.
+- Drawdown: søjlehøjden følger nu dybden ✅, og median/middel har en forklaring ✅. Men banneret mangler stadig "Historisk, ikke en prognose" (0 hits på siden). "Halvdelen er dybere" under medianen er korrekt, men kan læses som "halvdelen af tiden". Skriv "halvdelen af faldene var dybere".
+- Uændret: "BREAKING" ×2 på fonden og SoftBank, "Placeholder" ×7 i nyhedsarkiv og TSMC's h1 "Taiwan Semi Sp ADR". "MADS FØLGER" står nu også på tema energi (se compliance).
+
+### Rettet siden cyklus 17 ✅
+- Omkostninger: 1,49 % står nu øverst før forskellen. Rum- og energi-quiz har `scroll-margin-top:110px`.
+- Ordlisten: ÅOP, Før skat, Anbefalet investeringsperiode, Vækst- og sektorrisiko, Ingen markedsbeskyttelse, Boble, Omsætning og Indtjening (103 begreber). Risici linker KID-nøglerisici til ordlisten. Det er godt for privatpersonaen.
+
+### Persona-linser
+- **Privat:** Idéer «Hvad står der i tallet?» (aktiekurs ± valuta + udbytte − løbende omkostninger = fondens afkast, derefter kurtage, skat og købsdato = dit afkast) er den bedste forklaring på siden af, hvorfor "+104,8 %" ikke er brugerens eget tal. Lav et link til den fra fondens afkastkort og fra omkostninger.
+- **Familiekontor:** «Tre ure på samme side» (NAV 14. okt., beholdning 1. jun., KID 14. aug.) svarer direkte på FO-spørgsmålet "hvor gamle er tallene?". Link den fra fakta/om-data datakilder. Der mangler stadig et samlet omkostningstal fra KID (se compliance).
+- **Visuel variation:** tidslinje med tre spor, lagstak med ±-tegn og pil kontra loop på sammenlign er tre nye former, ikke flere kort ✅. Idéer har nu 11 former. Overvej en indholdsfortegnelse øverst, så siden ikke bliver én lang scroll på 375.
+
+### OK
+- 0 h-overflow på 26×2 sider. Én h1 på 25 af 26 sider. Om-data folder sig sammen på 375 ✅. Entréen er uændret og rolig (2.804 tegn).
