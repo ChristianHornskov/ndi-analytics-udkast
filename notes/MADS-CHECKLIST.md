@@ -60,6 +60,7 @@ Kilder: slack_ny_graf_2026-10-15.md, vision.txt, mads_tankemodel.md, investering
 - [x] Kvante: "Hvorfor skal en kvantechip være så kold?" (termometer på logaritmisk skala fra stuetemperatur til kryostat ca. 0,01 K, årsagskæde med ordbogs-link, bro til energi via elnet; baggrund) + "Tjek dig selv" med 4 spørgsmål (NVIDIA-udsagnet som hans, ikke NDI's); vaerdikaede.html: quiz-link på kvantekortet; adressen følger hop og afsnit (lane-A)
 - [x] Robotik: "Sanse, tænke, handle" (cirkulær løkke i 4 trin, hvert trin åbner sit led, "Tænke" hopper til fysisk AI; baggrund) + "Hvad kan gå galt i robotkæden?" (6 usikkerheder, 2 NDI-linjer med kilde) + "Tjek dig selv" med 4 spørgsmål + genveje øverst i fanen; korte navne på robotled; vaerdikaede.html: usikkerheds- og quiz-link på robotkortet (lane-A)
 - [x] AI-flod: "Hvad kan gå galt i AI-floden?" (6 usikkerheder med en mini-flod over alle 13 led i Mads' rækkefølge; 5 NDI-linjer med kilde, resten baggrund) + "Tjek dig selv" med 5 spørgsmål, alle med NDI-kilde + AI-ordbog med 12 ord + genveje øverst i flodkortet; vaerdikaede.html: links til usikkerheder, spørgsmål og ordbog (lane-A)
+- [x] Energi: "Hvor i strømvejen" på hvert ledkort (5 trin fra råstof til datacenter, leddet fremhævet, hop til AI-floden; baggrund) + led i strømmens rækkefølge + genveje i energi-fanen (lane-A)
 
 ## Formidling / filosofi
 - [x] Variance drag / CAGR ≠ gennemsnit (lær)

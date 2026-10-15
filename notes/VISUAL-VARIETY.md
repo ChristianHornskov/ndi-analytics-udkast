@@ -116,3 +116,4 @@ Se `notes/VISUAL-VARIETY-REVIEW.md`.
 
 - Robotik-fanen (lane-A, 2026-10-16): cirkulær løkke-SVG "Sanse, tænke, handle, lære" med fire klikbare knuder rundt om en robot i midten og gule pile langs ringen. Det er den første cirkelform på siden (de andre er strimler, skalaer og lister). Hover eller fokus på et kort fremhæver samme knude i løkken og omvendt. Genvejs-piller øverst i fanen og "Hvad kan gå galt?"/"Tjek dig selv" genbruger rum- og energiformen. Kun lokal CSS i vaerdikaeder.html.
 - 2026-10-16 lane-A: AI-floden fik mini-flod over 13 led i usikkerhedskortene (mindre prikker og bølge via nth-child, ingen ændring i delt CSS).
+- 2026-10-16 lane-A: energi-ledkortene fik en "Hvor i strømvejen"-strimmel med fem afrundede firkanter, hvor leddet selv står som en større gul firkant uden link og de andre trin er dæmpede links. Det giver hvert ledkort en placering i helheden, som ellers kun findes i oversigten. Kun lokal CSS i vaerdikaeder.html.

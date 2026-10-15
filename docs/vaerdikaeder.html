@@ -167,7 +167,7 @@
     .mn-bridge::before{content:"⇄ ";color:var(--yellow);font-weight:700}
     .a-pane{display:none;margin:4px 0 18px;border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:linear-gradient(180deg,#0e2027,#0b171d)}
     .a-pane.on{display:block}
-    #a-pane,#e-pane,#p-pane,#sp-map,#sp-cost,#sp-trip,#sp-money,#sp-risk,#e-risk,#sp-bands,#sp-quiz,#e-quiz,#sp-alt,#q-hz,#q-cold,#q-quiz,#q-br,#q-gl,#gloss-wrap,#p-gloss-wrap,#e-gloss-wrap,#phases,#p-loop,#p-risk,#p-quiz,#a-risk,#a-quiz,#a-gloss-wrap{scroll-margin-top:110px}
+    #a-pane,#e-pane,#p-pane,#sp-map,#sp-cost,#sp-trip,#sp-money,#sp-risk,#e-risk,#sp-bands,#sp-quiz,#e-quiz,#sp-alt,#q-hz,#q-cold,#q-quiz,#q-br,#eflow,#q-gl,#gloss-wrap,#p-gloss-wrap,#e-gloss-wrap,#phases,#p-loop,#p-risk,#p-quiz,#a-risk,#a-quiz,#a-gloss-wrap{scroll-margin-top:110px}
     /* Robotik: sanse-tænke-handle-løkke (kun denne side) */
     .p-links{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px;padding:0;list-style:none}
     .p-links a{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;text-decoration:none;color:var(--text);border:1px solid var(--line);border-radius:999px;padding:4px 11px;background:#0b171d}
@@ -250,6 +250,11 @@
     .e-pane .risk h3{color:var(--yellow)}
     .rk-strip.flow li+li::before{content:"›";width:auto;height:auto;background:none;color:#4a6a74;font-size:15px;line-height:1;padding:0 3px}
     .rk-strip.flow a{border-radius:7px}
+    .e-where .rk-strip{margin:4px 0 6px}
+    .e-where .rk-strip.flow::after{content:none}
+    .e-where .rk-strip .cur{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:8px;font-size:14px;border:2px solid var(--yellow);background:#2a2a14;box-shadow:0 0 0 3px rgba(255,214,0,.12)}
+    .ew-t{margin:0;font-size:12.5px;color:var(--muted)}
+    .ew-t b{color:var(--yellow);font-weight:600}
     .rk-strip.flow::after{content:"→ datacenter";margin-left:6px;font-size:11px;color:#4a6a74;white-space:nowrap}
     /* AI-floden: 13 led i strimlen, så prikkerne er mindre og floden bølger */
     .rk-strip.river{flex-wrap:nowrap;padding-bottom:2px}
@@ -666,8 +671,7 @@
       <div class="e-pane" id="e-pane" aria-label="Energi forklaret">
         <h3 id="ef-title"></h3>
         <p class="src" id="ef-lede"></p>
-        <p class="src" id="ef-risk-a" style="margin-top:4px" hidden><a href="?kaede=energy#e-risk" data-sec="energy:e-risk"></a></p>
-        <p class="src" id="ef-quiz-a" style="margin-top:4px" hidden><a href="?kaede=energy#e-quiz" data-sec="energy:e-quiz"></a></p>
+        <ul class="p-links" id="e-links" aria-label="Spring til" hidden></ul>
         <ol class="eflow" id="eflow" aria-label="Strømmens vej fra råstof til datacenter"></ol>
         <p class="e-fact" id="ef-fact"></p>
         <p class="src" id="ef-note" style="margin-top:6px"></p>
@@ -1320,16 +1324,44 @@
     })(en?.flow);
     renderGloss(en, ['e-gloss', 'e-gloss-note', 'e-gloss-count', 'e-gloss-wrap']);
     // Energi: hvad kan gå galt, strimlen følger strømmens vej (råstof → lagring → datacenter)
-    if (en && renderRisks(en.risks, en.links, ['erk-h', 'erk-lede', 'erk-grid', 'erk-note', 'e-risk'], { flow: true, aria: 'Strømmens vej fra råstof til lagring' })) {
-      const a = document.querySelector('#ef-risk-a a');
-      const n = en.risks.items.length;
-      a.textContent = `⚠ ${en.risks.title} ${['', 'Én', 'To', 'Tre', 'Fire', 'Fem', 'Seks', 'Syv', 'Otte'][n] || n} usikkerheder og hvor de rammer →`;
-      a.parentElement.hidden = false;
-    }
-    if (renderQuiz(en?.quiz, 'energy', 'eqz', 'e-quiz')) {
-      const a = document.querySelector('#ef-quiz-a a');
-      a.textContent = `✓ ${en.quiz.title} →`;
-      a.parentElement.hidden = false;
+    if (en) renderRisks(en.risks, en.links, ['erk-h', 'erk-lede', 'erk-grid', 'erk-note', 'e-risk'], { flow: true, aria: 'Strømmens vej fra råstof til lagring' });
+    renderQuiz(en?.quiz, 'energy', 'eqz', 'e-quiz');
+    // Energi: genveje under indledningen (kun til sektioner, der faktisk vises)
+    (function renderELinks() {
+      const n = (k) => en?.[k]?.items?.length ? ` (${en[k].items.length})` : '';
+      const items = [['eflow', '🔌', 'Strømmens vej'], ['e-risk', '⚠', 'Hvad kan gå galt?' + n('risks')], ['e-quiz', '✓', 'Tjek dig selv' + n('quiz')], ['e-gloss-wrap', '📖', 'Energi-ordbog']]
+        .filter(([id]) => { const el = document.getElementById(id); return el && !el.hidden && el.children.length; });
+      const ul = document.getElementById('e-links');
+      if (items.length < 2) return;
+      ul.innerHTML = items.map(([id, ic, k]) => `<li><a href="?kaede=energy#${id}" data-sec="energy:${id}"><span aria-hidden="true">${ic}</span>${esc(k)}</a></li>`).join('');
+      ul.hidden = false;
+    })();
+    // Energi: hvor i strømvejen ligger et led (bruges på ledkortene)
+    function whereLine(l) {
+      const steps = en?.flow?.steps || [];
+      const pos = steps.findIndex(st => st.link === l.id || st.alt === l.id);
+      if (pos < 0) return '';
+      const st = steps[pos];
+      const items = steps.map((x, i) => {
+        const [cid, lid] = x.hop ? x.hop.split(':') : ['energy', x.link];
+        const k = linkOf(cid, lid);
+        if (!k) return '';
+        const me = i === pos;
+        const ic = me && st.alt === l.id ? l.icon : k.icon;
+        const nm = me ? (l.short || l.label) : (k.short || k.label);
+        const attr = x.hop ? `data-hop="${esc(x.hop)}"` : `data-open="${esc(lid)}"`;
+        const href = x.hop ? `?kaede=${esc(cid)}#lk-${esc(lid)}` : `#lk-${esc(lid)}`;
+        const lab = `Trin ${i + 1}, ${esc(nm)}: ${esc(x.verb)}`;
+        return me
+          ? `<li><span class="cur" role="img" aria-current="step" title="${esc(nm)}: ${esc(x.verb)}" aria-label="${lab} (dette led)">${ic}</span></li>`
+          : `<li><a href="${href}" ${attr} title="${esc(nm)}: ${esc(x.verb)}" aria-label="${lab}. Åbn leddet"><span aria-hidden="true">${ic}</span></a></li>`;
+      }).join('');
+      const also = st.alt === l.id ? ` Atomkraft står på samme trin som ${esc(linkOf('energy', st.link)?.short || '')}.` : '';
+      const hop = steps.find(x => x.hop);
+      const next = pos + 1 < steps.length && steps[pos + 1] === hop ? ' Næste trin er datacentret i AI-floden.' : '';
+      return `<div class="vc-sec e-where"><h4>Hvor i strømvejen <span class="vc-kind" title="Generel baggrundsviden, ikke Mads' synspunkt">baggrund</span></h4>`
+        + `<ol class="rk-strip flow" aria-label="Strømmens vej fra råstof til datacenter">${items}</ol>`
+        + `<p class="ew-t">Trin <b>${pos + 1}</b> af ${steps.length}. ${esc(st.where || '')}${also}${next} <a href="?kaede=energy#eflow" data-sec="energy:eflow">Se hele vejen →</a></p></div>`;
     }
 
     // Kvante: tidshorisont som gengivet udsagn med kilde (ikke NDI-prognose)
@@ -1648,6 +1680,7 @@
             <div class="vc-sec"><h4>Hvad er det</h4><p>${esc(l.blurb)}</p></div>
             <div class="vc-sec"><h4>Hvorfor følger NDI det ${kindTag}</h4><p>${esc(l.ndi || '')}</p>${l.src ? `<div class="vc-srcline">Kilde: ${esc(l.src)}</div>` : ''}${pressLine(l)}</div>
             ${l.shift ? `<div class="vc-sec"><h4>Hvad ændrer sig</h4><p>${esc(l.shift)}</p></div>` : ''}
+            ${id === 'energy' ? whereLine(l) : ''}
             <div class="vc-num"><b>${l.count}</b> selskaber · ca. <b>${pct(l.weightSum)}</b> af PMINDI pr. ${fmtDate(pack.asOf)}</div>
             <div class="vc-bar" aria-hidden="true"><i style="width:${Math.min(100, (l.weightSum / max) * 100).toFixed(1)}%"></i></div>
             <div class="vc-hint">${l.count ? 'Klik for at se selskaberne' : ''}</div>
