@@ -239,7 +239,7 @@ HEAD `b35518b`. Visual-variety request shipped + reviewed. MADS værdikæde/quan
 - `value-chains.json` genopbygget fra `notes/VIDENSBOT-vaerdikaeder.md`: AI-compute 13 led (Mads-rækkefølge), robotik, energi, **rum**, quantum.
 - Flodsystem + 5 dæmninger; compliance-band; Musk/SpaceX kun som citat m. kilde.
 - Ingen handelsprog (øger eksponering / overvægt i / sikkert køb). Snapshot 2026-06-01.
-- Playwright: 5 tabs, 13 AI-led, 3 space-led, 0 konsolfejl.
+- Playwright: 5 tabs, 13 AI-led, 3 space-led, 0 konsolfejl. precheck exit 0. Branch `lane-B` klar til merge-review. Næste: linser for resterende kendte navne (Andet/Platforme) eller screener-paritet.
 - lær/saadan-taenker-vi: flodsystem-afsnit. Fintech = tema-note, ikke kæde.
 
 
@@ -307,3 +307,12 @@ HEAD `b35518b`. Visual-variety request shipped + reviewed. MADS værdikæde/quan
 - **temaer.html:** hvert tema-kort viser "NDI-linse: X af N selskaber" (primært tema, som kortets øvrige tal) med link til temaets linse-filter.
 - Test: smoke fail 0 (52/52, 8792); smoke-quality 104/106 - de 2 fejl er den kendte forældede assert `vaerdikaede.html?isin=` (linsen linker til `vaerdikaeder.html`), ikke ny. Playwright: SpaceTech 6/18 linser, filter/URL/fund-switch bevarer `linse=1`, Andet+linse = 3 rækker, Quantum 4/4, temaer-kort viser linse-antal, Firefly-linse rendrer, A-Z + screener "Kun med NDI-linse (101)", 0 konsolfejl. precheck exit 0. Branch `lane-B` klar til merge-review. Næste: linser for resten af Platforme/Software + Andet-navne med kendt forretning.
 - **Til ejere uden for lane-B:** ndi-perspektiv.html lister nu 101 linser i JSON-rækkefølge - gruppering/søgning efter tema anbefales. vaerdikaeder.html læser stadig ikke `?isin=`.
+
+
+## Fra Claude lane-B (NDI-linse kerne-AI + nabolag i led, cyklus 7)
+- **unique-metrics.json: 101 → 150 selskaber** (+49), samme 5 kvalitative felter; ingen tal/kurser/prognoser/handelssprog. Prioriteret efter iøjnefaldende huller i AI-stakken: **udstyr** (ASML, Lasertec, Besi, Camtek, Onto, Kokusai, Aehr), **hukommelse/lagring** (Micron, Sandisk, Kioxia, Western Digital, Seagate), **servere/netværk** (Super Micro, Dell, Arista, Celestica, Jabil), **optik** (Ciena, Coherent, Amphenol), **chips** (Renesas → Robotik led 1, Monolithic Power), **energi** (Vistra, Talen, Oklo, Southern, GE Vernova, Quanta, NuScale, Bloom, Generac), **råstoffer** (Freeport, Energy Fuels), **rum** (Rocket Lab, Planet, Intuitive Machines, Howmet), **platforme** (Netflix, DoorDash, Nu, Prosus, Klarna), **software** (Strategy, SoundHound), **køretøjer** (Rivian, GM), **Andet** (Tempus AI → led 10 data, Joby, Newmont).
+- Multi-tag fra multi-tags.json bruges automatisk (Bloom, NuScale → "Energi + fysisk tech"; Bloom-hint siger "Primært tema i data: Andet").
+- **Ærlige tag-noter (ikke ændret i data):** GE Vernova tagget Fysisk tech, men hører også til Energi. Howmet tagget SpaceTech, men kernen er luftfart ("Uden for rum-kædens led"). Strategy (MicroStrategy) tagget Software, men kernen er en bitcoin-beholdning. Oklo/NuScale/Joby siger eksplicit "ingen i drift / afventer godkendelse".
+- **selskab.html:** ny række i NDI-linsen "Andre med NDI-linse i <kæde> · led N" - udledt af linsens "Plads i værdikæden" (håndterer "led 9 og led 12" og "Energi led 4 + robotik led 3"), kun selskaber i valgt klasse, maks 10 + "+ N flere", mærket "nabolag, ikke en sammenligning eller rangering". Ingen vægte vises. Uden-for-kæden-linser får ingen række.
+- Test: smoke fail 0 (8792); smoke-quality 104/106 - kun den kendte forældede `vaerdikaede.html?isin=`-assert. Klarna-teksten "køb nu, betal senere" udløste rådgivningsord-vagten → omformuleret til "udskudt betaling". Playwright: ASML → 10 led-4-naboer (AKK: +5 flere), Micron → 7 i led 6, Tesla → Energi led 4 + Robotik led 3, Netflix → ingen række, A-Z + screener "Kun med NDI-linse (150)", 0 konsolfejl. precheck exit 0. Branch `lane-B` klar til merge-review. Næste: linser for resterende kendte navne (Andet/Platforme) eller screener-paritet.
+- **Til ejere uden for lane-B:** ndi-perspektiv.html lister nu 150 linser i JSON-rækkefølge - gruppering efter tema/led er nu reelt nødvendig. vaerdikaeder.html læser stadig ikke `?isin=` (linse-links lander på #kap-kaeder).

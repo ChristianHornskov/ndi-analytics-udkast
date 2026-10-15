@@ -103,6 +103,28 @@
  const matHint = matSet ? 'Manuel klassifikation i udkastet. Pædagogisk fase, ikke en rating.' : 'NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.';
  const lensMetrics = (uniquePack?.byIsin?.[p.isin]?.metrics || []).map((m) =>
  m.label === 'Livscyklus' ? { ...m, value: matValue, hint: matHint } : m);
+ // Andre i samme led: udledt af linsens "Plads i værdikæden" (fx "AI-compute · led 4", "Energi led 4 + robotik led 3").
+ // Kun selskaber med linse i den valgte klasse; pædagogisk nabolag, ikke en sammenligning eller rangering.
+ const CHAIN_NAMES = [['ai', /^ai-compute/i, 'AI-compute'], ['energy', /^energi/i, 'Energi'], ['physical', /^robotik/i, 'Robotik'], ['space', /^rum/i, 'Rum']];
+ const ledKeys = (isin) => {
+ const v = (uniquePack?.byIsin?.[isin]?.metrics || []).find((m) => m.label === 'Plads i værdikæden')?.value || '';
+ const keys = [];
+ for (const part of v.split('+')) {
+ const c = CHAIN_NAMES.find(([, re]) => re.test(part.trim()));
+ if (!c) continue;
+ for (const m of part.matchAll(/led (\d+)/g)) keys.push(`${c[0]}:${m[1]}`);
+ }
+ return keys;
+ };
+ const ledLabel = (k) => { const [c, n] = k.split(':'); return `${CHAIN_NAMES.find((x) => x[0] === c)[2]} · led ${n}`; };
+ const myLeds = ledKeys(p.isin);
+ const ledPeers = myLeds.map((k) => ({
+ k,
+ peers: fund.positions.filter((x) => x.isin !== p.isin && ledKeys(x.isin).includes(k))
+ .sort((a, b) => (b.weight || 0) - (a.weight || 0) || a.name.localeCompare(b.name, 'da')),
+ })).filter((g) => g.peers.length);
+ const PEER_MAX = 10;
+ const ledPeersHtml = ledPeers.length ? `<div class="lens-peers" style="margin-top:14px">${ledPeers.map((g) => `<p class="link-row"><span class="muted" style="font-size:12px">Andre med NDI-linse i ${esc(ledLabel(g.k))}:</span> ${g.peers.slice(0, PEER_MAX).map((x) => `<a class="tag" href="selskab.html?isin=${encodeURIComponent(x.isin)}&fund=${fundId}">${esc(x.name)}</a>`).join(' ')}${g.peers.length > PEER_MAX ? ` <span class="muted">+ ${g.peers.length - PEER_MAX} flere</span>` : ''}</p>`).join('')}<p class="src">Nabolag i værdikæden ud fra linsens placering - ikke en sammenligning eller rangering. Kun selskaber med NDI-linse i ${esc(fund.short)}.</p></div>` : '';
  document.title = `${p.name} · NDI Analytics`;
 
  main.innerHTML = `
@@ -154,6 +176,7 @@
  ${lensMetrics.length ? `<section class="panel" id="ndi-linse">
  <h2 class="panel-h">NDI-linsen (udkast)</h2>
  <div class="kpi-grid">${lensMetrics.map(m => `<div class="kpi"><span class="label">${esc(m.label)}${m.ai ? ` ${AI_BADGE}` : ''}</span><strong style="font-size:16px">${esc(m.value)}</strong><span class="sub">${esc(m.hint||'')}${m.href ? ` <a href="${esc(lensHref(m.href))}">${lensLinkLabel(m.href)} →</a>` : ''}</span></div>`).join('')}</div>
+ ${ledPeersHtml}
  <p class="band">Kvalitativ linse: tema, rolle og forhold at holde øje med. Ingen kurser, afkast eller nøgletal. Felter med AI-udkast er sammenfattet fra selskabsprofilen eller offentligt kendte forretningsbeskrivelser og afventer NDI-gennemgang. Eksponering, ikke anbefaling. <a href="ndi-perspektiv.html">Alle selskaber med NDI-linse →</a></p>
  </section>` : ''}
  ${(() => {
