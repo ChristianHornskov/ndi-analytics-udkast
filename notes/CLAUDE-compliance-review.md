@@ -478,3 +478,31 @@ Ikke juridisk rådgivning. Pages = `299e7a2`. Jeg har grep'et renderet tekst på
 
 ### OK ✅
 - Beholdning pr. 1. jun. 2026 (også i «Tre ure»). Ingen live trades. Ingen 1m/3m. "Fonden har intet fast benchmark". AI-mærkning er til stede. "Historisk afkast …" står på alle sider undtagen ndi-paa-x.
+
+## 2026-10-16 01:40 CEST · cyklus 19 (main `3103bf8`, delta)
+
+Ikke juridisk rådgivning. Pages = `3103bf8`. Jeg har grep'et renderet tekst på 23 live-sider ved 375 og 1280 (efter scroll) og gennemgået `299e7a2..3103bf8` under docs/ (ideer, kort, laer/udbytte-vs-akk, ndi-paa-x, ndi-perspektiv, om-data).
+
+### MUST (åbne)
+1. **Ingen markedsføringsmærkning:** "markedsføring" står 0 gange som mærkning. Uændret.
+2. **"MADS FØLGER" + tickers:** nu **ndi-paa-x ×10** (siden virker igen), SoftBank 3, TSMC 2 og tema energi 2. Fx "MADS FØLGER · @FundaAI … $CRWV and $NBIS … especially $NVDA". Tredjepartsopslag om porteføljeselskaber med forvalterens navn ved siden af kan læses som forvalterens synspunkt. Gør mærket neutralt ("Fulgt konto"), eller fjern det.
+3. **"kan tabe" mangler** stadig på **ndi-paa-x**, omkostninger og nyhedsarkiv (0 hits). ndi-paa-x har heller ikke "Historisk afkast …". Siden har "Ikke investeringsrådgivning" og "ikke NDI's holdning" ✅, men den nævner $PMINDI og udbytte 38,00 kr. Tilføj den faste risikolinje.
+4. PMINDIAKK "Seneste NAV 98,40" på sammenlign før 12 mdr. Uændret. NDI skal afklare.
+5. ÅTD og "+104,8 %" ved siden af "afventer Fundmarket-godkendelse". Uændret.
+6. **SRI 5 kontra vol 32,46 %:** uændret. Tallet står stadig på risici og fakta, mens laer/risikoklasse siger "klasse 5 dækker udsving fra 20 til 30 % pr. år".
+7. `chartMarkers` med @MadsC007 i fondens afkastgraf, og label "ikke NDI's holdning" på forvalterens egne opslag. Uændret.
+
+### Nyt i denne cyklus
+- **ndi-paa-x er live igen:** "Udvalgte offentlige opslag — ikke NDI's holdning" øverst og nederst, og "erstatter ikke KID eller prospekt" ✅. Men @CHornskov-opslaget fra 8. maj 2025 ("Begge er også i $PMINDI", IONQ/QBTS) viser beholdning uden for den forsinkede beholdningsramme. Det er offentligt og gammelt, men datér det tydeligt ("opslag fra maj 2025, ikke nuværende beholdning"), så det ikke undergraver "beholdning pr. 1. jun. 2026". SHOULD.
+- **Idéer «To klasser, samme temaer»:** "Viser eksponering, ikke en anbefaling og ikke dagens fordeling" og "pr. 1. jun 2026" ✅. Der er intet afkast for PMINDIAKK ✅. Men "Forskellen mellem klasserne ligger derfor især i udbyttet" udelader forskellen i porteføljetransaktionsomkostninger (0,64 % mod 0,72 % på omkostninger). Det er en omkostningsudeladelse i en sammenligning af produkter. Skriv "udbyttet og en lille forskel i omkostninger". SHOULD+. 345 mod 320 selskaber skal forklares (se UX).
+- Ordliste 105 (Energi, High growth): neutral, ingen rådgivningsord ✅.
+
+### SHOULD (uændret)
+- Intet samlet omkostningstal fra KID (persona/FO-MUST, når NDI har tallet). Omkostninger siger ærligt "ikke et ÅOP" ✅.
+- KID-link mangler i renderet tekst på nyhedsarkiv (KID 0), værdikæder, drawdown, temaer, ndi-perspektiv og selskaber. "BREAKING:" ×2 på fonden, SoftBank og ndi-paa-x. "Bogen råder" på rebalancering.
+
+### Rådgivningsord ✅
+- Garanter, "køb nu", "øger eksponering" og "bedste tip": 0 hits. "overvægt" står kun i negationer ("ikke … bevidst overvægt") på værdikæder, temaer, tema energi og risici. "køb" ×2 på invester er proces ("køb via din bank"), ikke en opfordring.
+
+### OK ✅
+- Beholdning pr. 1. jun. 2026 overalt (top-10: "Eksponering, ikke anbefaling"). Ingen 1m/3m på PMINDI. Intet benchmark-claim. PMINDIAKK: "Afkast vises først med 12 måneders historik" på udbytte-vs-akk ✅. AI-udkast er mærket. Drawdown har "Historisk afkast …" og "kan tabe" ✅.

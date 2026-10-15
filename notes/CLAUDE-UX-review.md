@@ -412,3 +412,32 @@ Pages er bygget fra `299e7a2` (last-modified 23:21 UTC, `g-aaop` er live). Jeg h
 
 ### OK
 - 0 h-overflow på 26×2 sider. Én h1 på 25 af 26 sider. Om-data folder sig sammen på 375 ✅. Entréen er uændret og rolig (2.804 tegn).
+
+## 2026-10-16 01:40 CEST · cyklus 19 (main `3103bf8`, 4 nye commits)
+
+Pages er bygget fra `3103bf8` (last-modified 23:27 UTC). Jeg har kørt Playwright på 23 live-sider ved 375 og 1280 og scrollet til bunden. Main er merget ind i lane-R (ingen reset/force-push). NB: tidsstemplet på cyklus 18 (01:48) var et skøn. Dette er wall-clock.
+
+### Rettet ✅
+- **ndi-paa-x virker igen** (`0e653d9`, x-feed.js fra lane-X). 5.989 tegn, én h1, 0 konsolfejl ved 375 og 1280. Dørene (SoftBank, Nvidia, Chips/AI) med citat og "Seneste · @konto · dato" er en god form. Fodnoten "kan være forældede, ufuldstændige eller subjektive … erstatter ikke KID" er klar.
+- 0 konsolfejl og 0 h-overflow på alle 23×2 sider. Én h1 overalt.
+
+### MUST
+- **Stubs:** uændret. 215 af 310 linse-selskaber mangler profil, og TSMC viser stadig "Beskrivelse mangler i udkastet". Samme forslag: brug linsen som fallback, eller skjul de tomme felter.
+- **SRI 5 kontra vol 32,46 %** står stadig på risici og fakta (1 hit hver), mens risikoklasse siger "klasse 5 dækker 20 til 30 % pr. år". Se compliance MUST 6.
+
+### SHOULD
+- **Idéer «To klasser, samme temaer» (ny, 12. form):** prikdiagrammet er roligt og letlæst ved 375. Men teksten skaber to spørgsmål, som en FO-læser vil stille:
+  1. "PMINDI 345 selskaber / PMINDIAKK 320 selskaber" og forskellige vægte. To *andelsklasser* i samme afdeling har normalt én fælles portefølje. Hvis de er to porteføljer, så sig hvorfor (fx forskellig startdato eller størrelse). Ellers ligner det en datafejl.
+  2. "Forskellen mellem klasserne ligger derfor især i udbyttet" passer ikke helt med omkostninger, der viser porteføljetransaktion 0,64 % mod 0,72 %. Tilføj "og en lille forskel i transaktionsomkostninger →" med link.
+  - Sprog: "ingen tema skiller sig" → "intet tema skiller sig".
+- **ndi-perspektiv** er ca. 192.000 tegn ved 375, med 53 × "afventer" og 623 AI-udkast-mærker. Uændret. Fold temagrupperne sammen som standard.
+- **ndi-paa-x:** "MADS FØLGER" står 10 gange, og "BREAKING" 2 gange (også 2 gange på fonden og SoftBank). Mærket fylder mere end indholdet. Skriv "Fulgt konto" i små bogstaver én gang pr. kort, og fjern "BREAKING:" fra citat-uddraget.
+- Uændret: drawdown "Halvdelen er dybere" → "halvdelen af faldene var dybere". Nyhedsarkiv har "Placeholder" ×8. TSMC's h1 er "Taiwan Semi Sp ADR". Idéer mangler en indholdsfortegnelse (12 former nu).
+
+### Persona-linser
+- **Privat:** «To klasser, samme temaer» svarer godt på "hvilken klasse skal jeg vælge?" uden at anbefale ✅. Link fra laer/udbytte-vs-akk er der ✅.
+- **Familiekontor:** 345/320 uden forklaring svækker tilliden til datalaget. Det skal forklares, før siden vises. Omkostninger: stadig intet samlet KID-tal (se compliance).
+- **Visuel variation:** prikdiagram (håndvægt) er en ny form ✅. Ingen kort-træthed.
+
+### OK
+- Entréen er uændret (2.804 tegn). Om-data folder sig sammen på 375 (1.245 tegn). Top-10 på portefølje: "pr. 1. jun. 2026 · forsinket snapshot. Eksponering, ikke anbefaling" ✅.

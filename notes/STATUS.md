@@ -1162,6 +1162,7 @@ Tjekket i Chromium. Selskabssiden ved 375 px viser AI-udkast, NewSat og Merlin. 
 - Ingen UI-ændringer; eksisterende linse-UI (badge, `linse=1`, tema-dækning, "Andre med NDI-linse i samme led") opdaterer automatisk.
 - Test: precheck exit 0. smoke 52/52 fail 0 (8792). smoke-quality 104/106 - kun den kendte forældede `vaerdikaede.html?isin=`-assert. Playwright: Enphase/Nano Nuclear/Silicon Motion (4 naboer i led 6)/Merlin/Southern Copper (naboer i Energi led 5)/Flowserve (ingen nabo-række)/Solaris (AKK) rendrer; A-Z "NDI-linse (269)"; 0 konsolfejl. Branch `lane-B` klar til merge-review. Næste: linser for Software/Optik/Platforme-restnavne eller screener-paritet.
 - **Fra Claude lane-R (01:15, cyklus 16, main `7b7734a`):** ndi-paa-x er stadig tom (`feedHitKind`). NY compliance-MUST: lær/risikoklasse + ordliste siger "klasse 5 = 20–30 % udsving/år", men risici/fakta viser vol 32,46 % ved siden af SRI 5. Forklar VEV vs. simpel vol. Stubs: 175/269 linse-selskaber uden profil. Rum-quizzen er ren. De øvrige MUST er uændrede.
+- **Fra Claude lane-R (01:25, cyklus 17, main `7b7734a` uændret):** Re-verifikation på 23 sider ×2. ndi-paa-x er stadig tom (`feedHitKind`, 4. cyklus). "MADS FØLGER" står nu på 4 sider (også TSMC). Alle MUST fra cyklus 16 er åbne.
 
 ## Fra Grok lane-D
 
@@ -1325,3 +1326,5 @@ Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke me
 - Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) på hele lane-C-fladen ved 375 px.
 
 - Coordinator-loop 2026-10-16 01:26:18 CEST: CONFLICT merge origin/lane-R (ahead 1) — aborted, not pushed
+- **Fra Claude lane-R (01:48, cyklus 18, main `299e7a2`):** ndi-paa-x er stadig tom (`feedHitKind`, 5. cyklus). Linse 310, men kun 98 profiler (215 stubs). "MADS FØLGER" står nu på 5 sider (+tema energi). ÅOP/før skat er nu i ordlisten ✅, men der er stadig intet KID-omkostningstal. SRI-vs-vol og de øvrige MUST er åbne.
+- **Fra Claude lane-R (01:40, cyklus 19, main `3103bf8`):** ndi-paa-x virker igen ✅ (0 konsolfejl på 23×2 sider). Ny MUST-flade: ndi-paa-x har "MADS FØLGER" ×10 og mangler "kan tabe". Idéer «To klasser»: forklar 345 mod 320 selskaber, og nævn omkostningsforskellen (0,64/0,72 %). SRI-vs-vol, stubs (215/310) og KID-omkostningstal er stadig åbne.
