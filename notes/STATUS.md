@@ -265,3 +265,15 @@ HEAD `b35518b`. Visual-variety request shipped + reviewed. MADS værdikæde/quan
 - Screener + A-Z: forslag-badge-titel viser "før: X". Entré-badge følger valgt klasse.
 - **Til ejere uden for lane-B:** (1) om-data.html#g-temaforslag siger stadig kun "lå i Andet" - bør nævne Compute→Quantum. (2) vaerdikaeder.html mangler deep-link til fane (`?chain=quantum`); vi linker til #kap-kaeder. (3) smoke-quality/cycle3 stale asserts (vaerdikaede vs vaerdikaeder) uændret. (4) Port 8765 bruges af anden worktree - smoke kørt mod lane-B på 8792.
 - Test: smoke fail 0; 0 konsolfejl på temaer/tema (begge klasser). precheck exit 0. Branch `lane-B` klar til merge-review. Næste: unique-metrics for flere kernenavne (kvalitativt).
+
+
+## Fra Claude lane-B (NDI-linse / unique-metrics, cyklus 3)
+- **unique-metrics.json: 14 → 35 selskaber**, alle med samme 5 felter: NDI-tag(s) · Hvad ejer man? (AI-udkast) · Plads i værdikæden · Hold øje med (AI-udkast) · Livscyklus = "Ikke klassificeret" (vi gætter ikke modenhed). Kun kvalitativ tekst - ingen kurser, afkast, nøgletal, prognoser eller handelssprog.
+- **+21 kernenavne** (de største vægte uden linse): Sea, Carvana, Lumentum, SiTime, Wix, Sivers, MercadoLibre, CoreWeave, SoFi, Soitec, Cipher Mining, Palantir, SK Hynix, Samsung, LPKF, Babcock & Wilcox, Reddit, Robinhood, GlobalFoundries, Tower, AppLovin. Hvor portfolio.json har en profil, er teksten sammenfattet derfra; ellers kun velkendte forretningsbeskrivelser. **Starfighters Space bevidst udeladt** (for usikker viden - ikke opfundet).
+- **5 tynde (1-felt) opgraderet:** Poet, Fluence, Apple, AMD, Broadcom.
+- **Forældede led-numre rettet** fra den gamle 5-leds-kæde: Meta "Led 5: platforme" → "AI-compute · led 9 og led 12"; Tesla "Led 1 og led 2" → "Energi led 4 + robotik led 3". Led refererer nu til value-chains.json (13 AI-led, energi 5, robotik 3).
+- Fintech-/handelsplatforme uden kæde-led (Carvana, SoFi, Robinhood) siger ærligt "Uden for AI-kæden" og linker til Platforme-temaet.
+- **selskab.html:** linse-links fik forkert label - tema-links stod som "Om livscyklus". Nu "Se i værdikæden" / "Se temaet" / "Om livscyklus"; tema-links bærer `fund=`.
+- **selskaber.html (A-Z):** "NDI-linse"-badge pr. række, filter "Kun med NDI-linse (35)" (URL `linse=1`, bevares i søgning), tom tilstand ("X matcher søgningen, men har ingen NDI-linse endnu" + "Vis alle selskaber"), forklaring i fodnoten.
+- **Til ejere uden for lane-B:** (1) vaerdikaeder.html læser ikke `?isin=` - linse-links lander på #kap-kaeder; en deep-link/highlight af selskabets led ville gøre dem skarpere. (2) ndi-perspektiv.html linker stadig til `vaerdikaede.html` (gammel) og lister i JSON-rækkefølge - overvej sortering/gruppering efter tema nu hvor der er 35.
+- Test: smoke fail 0 (kørt mod lane-B på 8792); Playwright: 35 badges, filter/tom tilstand ok, 0 konsolfejl på selskaber/selskab/ndi-perspektiv. precheck exit 0. Branch `lane-B` klar til merge-review. Næste: modenhed-UI ærlighed (item 4) / flere linser.
