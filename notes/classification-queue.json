@@ -1,0 +1,1001 @@
+[
+  {
+    "isin": "US19260Q1076",
+    "name": "Coinbase Glb",
+    "symbol": "COIN",
+    "weight": 0.81,
+    "theme": "andet",
+    "sector": "Financial Services",
+    "industry": "Financial Data & Stock Exchanges"
+  },
+  {
+    "isin": "US6837121036",
+    "name": "Opendoor Tech",
+    "symbol": "OPEN",
+    "weight": 0.64,
+    "theme": "andet",
+    "sector": "Real Estate",
+    "industry": "Real Estate Services"
+  },
+  {
+    "isin": "US12047B1052",
+    "name": "US12047B1052",
+    "symbol": null,
+    "weight": 0.61,
+    "theme": "andet",
+    "sector": null,
+    "industry": null
+  },
+  {
+    "isin": "US77664L2079",
+    "name": "Root",
+    "symbol": "ROOT",
+    "weight": 0.6,
+    "theme": "andet",
+    "sector": "Financial Services",
+    "industry": "Insurance—Property & Casualty"
+  },
+  {
+    "isin": "US2057683029",
+    "name": "Comstock Resources Inc",
+    "symbol": "CRK",
+    "weight": 0.58,
+    "theme": "andet",
+    "sector": "Energy",
+    "industry": "Oil & Gas E&P"
+  },
+  {
+    "isin": "US4330001060",
+    "name": "Hims Hers Health Inc",
+    "symbol": "HIMS",
+    "weight": 0.56,
+    "theme": "andet",
+    "sector": "Healthcare",
+    "industry": "Drug Manufacturers—Specialty & Generic"
+  },
+  {
+    "isin": "US83418M1036",
+    "name": "Solaris Energy Infrastructur",
+    "symbol": "SEI",
+    "weight": 0.54,
+    "theme": "andet",
+    "sector": "Energy",
+    "industry": "Oil & Gas Equipment & Services"
+  },
+  {
+    "isin": "US74347M1080",
+    "name": "Propetro Holding Corp",
+    "symbol": "PUMP",
+    "weight": 0.51,
+    "theme": "andet",
+    "sector": "Energy",
+    "industry": "Oil & Gas Equipment & Services"
+  },
+  {
+    "isin": "US7710491033",
+    "name": "Roblox",
+    "symbol": "RBLX",
+    "weight": 0.51,
+    "theme": "andet",
+    "sector": "Communication Services",
+    "industry": "Electronic Gaming & Multimedia"
+  },
+  {
+    "isin": "US91680M1071",
+    "name": "Upstart Hldgs",
+    "symbol": "UPST",
+    "weight": 0.49,
+    "theme": "andet",
+    "sector": null,
+    "industry": null
+  },
+  {
+    "isin": "US15643U1043",
+    "name": "Centrus Energy Corp-Class A",
+    "symbol": "LEU",
+    "weight": 0.43,
+    "theme": "andet",
+    "sector": "Energy",
+    "industry": "Uranium"
+  },
+  {
+    "isin": "US46982L1089",
+    "name": "Jacobs Solutions",
+    "symbol": "J",
+    "weight": 0.43,
+    "theme": "andet",
+    "sector": "Industrials",
+    "industry": "Engineering & Construction"
+  },
+  {
+    "isin": "US52567D1072",
+    "name": "Lemonade",
+    "symbol": "LMND",
+    "weight": 0.43,
+    "theme": "andet",
+    "sector": "Financial Services",
+    "industry": "Insurance—Property & Casualty"
+  },
+  {
+    "isin": "US03674X1063",
+    "name": "Antero Resources Corp",
+    "symbol": "AR",
+    "weight": 0.41,
+    "theme": "andet",
+    "sector": "Energy",
+    "industry": "Oil & Gas E&P"
+  },
+  {
+    "isin": "US26884L1098",
+    "name": "Eqt",
+    "symbol": "EQT",
+    "weight": 0.41,
+    "theme": "andet",
+    "sector": "Energy",
+    "industry": "Oil & Gas E&P"
+  },
+  {
+    "isin": "US5322751042",
+    "name": "Lightwave Logic Inc",
+    "symbol": "LWLG",
+    "weight": 0.41,
+    "theme": "andet",
+    "sector": "Basic Materials",
+    "industry": "Specialty Chemicals"
+  },
+  {
+    "isin": "US65339F1012",
+    "name": "NextEra Energy",
+    "symbol": "NEE",
+    "weight": 0.39,
+    "theme": "andet",
+    "sector": "Utilities",
+    "industry": "Utilities—Regulated Electric"
+  },
+  {
+    "isin": "KYG6683N1034",
+    "name": "Nu",
+    "symbol": "NU",
+    "weight": 0.37,
+    "theme": "andet",
+    "sector": "Financial Services",
+    "industry": "Banks—Regional"
+  },
+  {
+    "isin": "US1651677353",
+    "name": "Expand Energy Corp",
+    "symbol": "EXE",
+    "weight": 0.37,
+    "theme": "andet",
+    "sector": "Energy",
+    "industry": "Oil & Gas E&P"
+  },
+  {
+    "isin": "US47100L3015",
+    "name": "Defi Development Corp",
+    "symbol": "DFDV",
+    "weight": 0.37,
+    "theme": "andet",
+    "sector": "Financial Services",
+    "industry": "Asset Management"
+  },
+  {
+    "isin": "US1508701034",
+    "name": "Celanese Corp",
+    "symbol": "CE",
+    "weight": 0.35,
+    "theme": "andet",
+    "sector": "Basic Materials",
+    "industry": "Chemicals"
+  },
+  {
+    "isin": "US3434121022",
+    "name": "Fluor Corp",
+    "symbol": "FLR",
+    "weight": 0.35,
+    "theme": "andet",
+    "sector": "Industrials",
+    "industry": "Engineering & Construction"
+  },
+  {
+    "isin": "US3149111086",
+    "name": "Fermi Inc",
+    "symbol": "FRMI",
+    "weight": 0.31,
+    "theme": "andet",
+    "sector": "Real Estate",
+    "industry": "REIT—Specialty"
+  },
+  {
+    "isin": "US6516391066",
+    "name": "Newmont",
+    "symbol": "NEM",
+    "weight": 0.31,
+    "theme": "andet",
+    "sector": "Basic Materials",
+    "industry": "Gold"
+  },
+  {
+    "isin": "US81758H1068",
+    "name": "Serve Robotics",
+    "symbol": "SERV",
+    "weight": 0.31,
+    "theme": "andet",
+    "sector": "Industrials",
+    "industry": "Integrated Freight & Logistics"
+  },
+  {
+    "isin": "US1999081045",
+    "name": "Comfort Systems Usa Inc",
+    "symbol": "FIX",
+    "weight": 0.3,
+    "theme": "andet",
+    "sector": "Industrials",
+    "industry": "Engineering & Construction"
+  },
+  {
+    "isin": "US6877931096",
+    "name": "Oscar Health",
+    "symbol": "OSCR",
+    "weight": 0.3,
+    "theme": "andet",
+    "sector": "Healthcare",
+    "industry": "Healthcare Plans"
+  },
+  {
+    "isin": "NL0015002Q12",
+    "name": "Terra Innovatum Global Nv",
+    "symbol": "NKLR",
+    "weight": 0.28,
+    "theme": "andet",
+    "sector": "Utilities",
+    "industry": "Utilities—Regulated Electric"
+  },
+  {
+    "isin": "US74164F1030",
+    "name": "Primoris Services Corp",
+    "symbol": "PRIM",
+    "weight": 0.28,
+    "theme": "andet",
+    "sector": "Industrials",
+    "industry": "Engineering & Construction"
+  },
+  {
+    "isin": "US8425871071",
+    "name": "Southern Co/The",
+    "symbol": "SO",
+    "weight": 0.28,
+    "theme": "andet",
+    "sector": "Utilities",
+    "industry": "Utilities—Regulated Electric"
+  },
+  {
+    "isin": "CA6979001089",
+    "name": "Pan American Silver Corp",
+    "symbol": "PAAS.TO",
+    "weight": 0.27,
+    "theme": "andet",
+    "sector": "Basic Materials",
+    "industry": "Gold"
+  },
+  {
+    "isin": "US02927U2087",
+    "name": "American Resources Corp",
+    "symbol": "AREC",
+    "weight": 0.27,
+    "theme": "andet",
+    "sector": "Industrials",
+    "industry": "Waste Management"
+  },
+  {
+    "isin": "US64110L1061",
+    "name": "Netflix",
+    "symbol": "NFLX",
+    "weight": 0.27,
+    "theme": "andet",
+    "sector": "Communication Services",
+    "industry": "Entertainment"
+  },
+  {
+    "isin": "US8485603067",
+    "name": "Spire Global",
+    "symbol": "SPIR",
+    "weight": 0.27,
+    "theme": "andet",
+    "sector": "Industrials",
+    "industry": "Specialty Business Services"
+  },
+  {
+    "isin": "KYG651631007",
+    "name": "Joby Aviation Inc",
+    "symbol": "JOBY",
+    "weight": 0.26,
+    "theme": "andet",
+    "sector": "Industrials",
+    "industry": "Airports & Air Services"
+  },
+  {
+    "isin": "US35953D4016",
+    "name": "Fubotv Inc -Class A",
+    "symbol": "FUBO",
+    "weight": 0.26,
+    "theme": "andet",
+    "sector": "Communication Services",
+    "industry": "Broadcasting"
+  },
+  {
+    "isin": "US53224K3023",
+    "name": "Lightbridge Corp",
+    "symbol": "LTBR",
+    "weight": 0.26,
+    "theme": "andet",
+    "sector": "Industrials",
+    "industry": "Electrical Equipment & Parts"
+  },
+  {
+    "isin": "US0937121079",
+    "name": "Bloom Energy Corp- A",
+    "symbol": "BE",
+    "weight": 0.25,
+    "theme": "andet",
+    "sector": "Industrials",
+    "industry": "Electrical Equipment & Parts"
+  },
+  {
+    "isin": "US88023B1035",
+    "name": "Tempus AI",
+    "symbol": "TEM",
+    "weight": 0.25,
+    "theme": "andet",
+    "sector": "Healthcare",
+    "industry": "Health Information Services"
+  },
+  {
+    "isin": "DE000A161408",
+    "name": "HelloFresh Br",
+    "symbol": "HFG.F",
+    "weight": 0.24,
+    "theme": "andet",
+    "sector": "Consumer Defensive",
+    "industry": "Grocery Stores"
+  },
+  {
+    "isin": "US0126531013",
+    "name": "Albemarle",
+    "symbol": "ALB",
+    "weight": 0.24,
+    "theme": "andet",
+    "sector": "Basic Materials",
+    "industry": "Specialty Chemicals"
+  },
+  {
+    "isin": "US1638511089",
+    "name": "Chemours Co/The",
+    "symbol": "CC",
+    "weight": 0.24,
+    "theme": "andet",
+    "sector": "Basic Materials",
+    "industry": "Specialty Chemicals"
+  },
+  {
+    "isin": "BG1100003166",
+    "name": "Shelly",
+    "symbol": "SLYG.DE",
+    "weight": 0.23,
+    "theme": "andet",
+    "sector": "Industrials",
+    "industry": "Conglomerates"
+  },
+  {
+    "isin": "CA32076V1031",
+    "name": "First Majestic Silver Corp",
+    "symbol": "AG",
+    "weight": 0.23,
+    "theme": "andet",
+    "sector": "Basic Materials",
+    "industry": "Silver"
+  },
+  {
+    "isin": "US4227041062",
+    "name": "Hecla Mining Co",
+    "symbol": "HL",
+    "weight": 0.23,
+    "theme": "andet",
+    "sector": "Basic Materials",
+    "industry": "Other Precious Metals & Mining"
+  },
+  {
+    "isin": "US1921085049",
+    "name": "Coeur Mining Inc",
+    "symbol": "CDE",
+    "weight": 0.22,
+    "theme": "andet",
+    "sector": "Basic Materials",
+    "industry": "Gold"
+  },
+  {
+    "isin": "US6406551068",
+    "name": "Neovolta Inc",
+    "symbol": "NEOV",
+    "weight": 0.22,
+    "theme": "andet",
+    "sector": "Industrials",
+    "industry": "Electrical Equipment & Parts"
+  },
+  {
+    "isin": "US74762E1029",
+    "name": "Quanta Services",
+    "symbol": "PWR",
+    "weight": 0.22,
+    "theme": "andet",
+    "sector": "Industrials",
+    "industry": "Engineering & Construction"
+  },
+  {
+    "isin": "US03214Q1085",
+    "name": "Amprius Technologies Inc",
+    "symbol": "AMPX",
+    "weight": 0.21,
+    "theme": "andet",
+    "sector": "Industrials",
+    "industry": "Electrical Equipment & Parts"
+  },
+  {
+    "isin": "US1491231015",
+    "name": "Caterpillar",
+    "symbol": "CAT",
+    "weight": 0.21,
+    "theme": "andet",
+    "sector": "Industrials",
+    "industry": "Farm & Heavy Construction Machinery"
+  },
+  {
+    "isin": "US83422N1054",
+    "name": "Solid Power Inc",
+    "symbol": "SLDP",
+    "weight": 0.21,
+    "theme": "andet",
+    "sector": "Consumer Cyclical",
+    "industry": "Auto Parts"
+  },
+  {
+    "isin": "US0517741072",
+    "name": "Aurora Innovtn",
+    "symbol": "AUR",
+    "weight": 0.2,
+    "theme": "andet",
+    "sector": "Consumer Cyclical",
+    "industry": "Auto Parts"
+  },
+  {
+    "isin": "US74767V1098",
+    "name": "Quantumscape Corp",
+    "symbol": "QS",
+    "weight": 0.2,
+    "theme": "andet",
+    "sector": "Consumer Cyclical",
+    "industry": "Auto Parts"
+  },
+  {
+    "isin": "CA1366351098",
+    "name": "Canadian Solar Inc",
+    "symbol": "CSIQ",
+    "weight": 0.19,
+    "theme": "andet",
+    "sector": "Technology",
+    "industry": "Solar"
+  },
+  {
+    "isin": "US83417M1045",
+    "name": "Solaredge Technologies Inc",
+    "symbol": "SEDG",
+    "weight": 0.18,
+    "theme": "andet",
+    "sector": "Technology",
+    "industry": "Solar"
+  },
+  {
+    "isin": "US83443Q1031",
+    "name": "Solstice Adv Materials Inc",
+    "symbol": "SOLS",
+    "weight": 0.18,
+    "theme": "andet",
+    "sector": "Basic Materials",
+    "industry": "Specialty Chemicals"
+  },
+  {
+    "isin": "US8807791038",
+    "name": "Terex Corp",
+    "symbol": "TEX",
+    "weight": 0.18,
+    "theme": "andet",
+    "sector": "Industrials",
+    "industry": "Farm & Heavy Construction Machinery"
+  },
+  {
+    "isin": "CA2926717083",
+    "name": "Energy Fuels Inc",
+    "symbol": "EFR.TO",
+    "weight": 0.17,
+    "theme": "andet",
+    "sector": "Energy",
+    "industry": "Uranium"
+  },
+  {
+    "isin": "CA64046G1063",
+    "name": "Neo Performance Materials In",
+    "symbol": "NEO.TO",
+    "weight": 0.17,
+    "theme": "andet",
+    "sector": "Basic Materials",
+    "industry": "Specialty Chemicals"
+  },
+  {
+    "isin": "US22266M1045",
+    "name": "Coursera",
+    "symbol": "COUR",
+    "weight": 0.17,
+    "theme": "andet",
+    "sector": "Consumer Defensive",
+    "industry": "Education & Training Services"
+  },
+  {
+    "isin": "US29415C1018",
+    "name": "Eos Energy Enterprises Inc",
+    "symbol": "EOSE",
+    "weight": 0.17,
+    "theme": "andet",
+    "sector": "Industrials",
+    "industry": "Electrical Equipment & Parts"
+  },
+  {
+    "isin": "CA87601F1062",
+    "name": "Tantalus Systems Holding Inc",
+    "symbol": "GRID.TO",
+    "weight": 0.16,
+    "theme": "andet",
+    "sector": "Industrials",
+    "industry": "Electrical Equipment & Parts"
+  },
+  {
+    "isin": "US55405W1045",
+    "name": "Myr Group Inc/Delaware",
+    "symbol": "MYRG",
+    "weight": 0.16,
+    "theme": "andet",
+    "sector": "Industrials",
+    "industry": "Engineering & Construction"
+  },
+  {
+    "isin": "DE000A2LQ884",
+    "name": "AUTO1 Group Br",
+    "symbol": "AG1.DE",
+    "weight": 0.15,
+    "theme": "andet",
+    "sector": "Consumer Cyclical",
+    "industry": "Auto & Truck Dealerships"
+  },
+  {
+    "isin": "US02451V3096",
+    "name": "American Battery Technology",
+    "symbol": "ABAT",
+    "weight": 0.15,
+    "theme": "andet",
+    "sector": "Industrials",
+    "industry": "Waste Management"
+  },
+  {
+    "isin": "US04681Y1038",
+    "name": "Ategrity Specialty Holdings",
+    "symbol": "ASIC",
+    "weight": 0.15,
+    "theme": "andet",
+    "sector": "Financial Services",
+    "industry": "Insurance—Property & Casualty"
+  },
+  {
+    "isin": "US39959A2050",
+    "name": "Upexi Inc",
+    "symbol": "UPXI",
+    "weight": 0.15,
+    "theme": "andet",
+    "sector": "Communication Services",
+    "industry": "Internet Content & Information"
+  },
+  {
+    "isin": "US6458272050",
+    "name": "Idaho Strategic Resources In",
+    "symbol": "IDR",
+    "weight": 0.15,
+    "theme": "andet",
+    "sector": "Basic Materials",
+    "industry": "Gold"
+  },
+  {
+    "isin": "US88675P1030",
+    "name": "Tigo Energy Inc",
+    "symbol": "TYGO",
+    "weight": 0.15,
+    "theme": "andet",
+    "sector": "Technology",
+    "industry": "Solar"
+  },
+  {
+    "isin": "JE00BYVQYS01",
+    "name": "International Workplace Grou",
+    "symbol": "IWG.L",
+    "weight": 0.14,
+    "theme": "andet",
+    "sector": "Real Estate",
+    "industry": "Real Estate Services"
+  },
+  {
+    "isin": "US46269C1027",
+    "name": "Iridium Communications Inc",
+    "symbol": "IRDM",
+    "weight": 0.14,
+    "theme": "andet",
+    "sector": "Communication Services",
+    "industry": "Telecom Services"
+  },
+  {
+    "isin": "US53216B1044",
+    "name": "Lifemd Inc",
+    "symbol": "LFMD",
+    "weight": 0.14,
+    "theme": "andet",
+    "sector": "Healthcare",
+    "industry": "Health Information Services"
+  },
+  {
+    "isin": "US65290E1010",
+    "name": "Nextracker Inc-Cl A",
+    "symbol": "NXT",
+    "weight": 0.14,
+    "theme": "andet",
+    "sector": "Technology",
+    "industry": "Solar"
+  },
+  {
+    "isin": "CH1176493729",
+    "name": "Bachem Holding Ag",
+    "symbol": "BANB.SW",
+    "weight": 0.13,
+    "theme": "andet",
+    "sector": "Healthcare",
+    "industry": "Biotechnology"
+  },
+  {
+    "isin": "LU1778762911",
+    "name": "Spotify Tech",
+    "symbol": "SPOT",
+    "weight": 0.13,
+    "theme": "andet",
+    "sector": "Communication Services",
+    "industry": "Internet Content & Information"
+  },
+  {
+    "isin": "US8592411016",
+    "name": "Sterling Infrastructure Inc",
+    "symbol": "STRL",
+    "weight": 0.13,
+    "theme": "andet",
+    "sector": "Industrials",
+    "industry": "Engineering & Construction"
+  },
+  {
+    "isin": "US8740391003",
+    "name": "Taiwan Semi Sp ADR",
+    "symbol": "TSM",
+    "weight": 0.13,
+    "theme": "andet",
+    "sector": null,
+    "industry": null
+  },
+  {
+    "isin": "CA8765111064",
+    "name": "CA8765111064",
+    "symbol": null,
+    "weight": 0.12,
+    "theme": "andet",
+    "sector": null,
+    "industry": null
+  },
+  {
+    "isin": "US3364331070",
+    "name": "First Solar",
+    "symbol": "FSLR",
+    "weight": 0.12,
+    "theme": "andet",
+    "sector": "Technology",
+    "industry": "Solar"
+  },
+  {
+    "isin": "US68170A1088",
+    "name": "Omada Health Inc",
+    "symbol": "OMDA",
+    "weight": 0.12,
+    "theme": "andet",
+    "sector": "Healthcare",
+    "industry": "Health Information Services"
+  },
+  {
+    "isin": "US94845U1051",
+    "name": "WEBTOON Entr",
+    "symbol": "WBTN",
+    "weight": 0.12,
+    "theme": "andet",
+    "sector": "Communication Services",
+    "industry": "Internet Content & Information"
+  },
+  {
+    "isin": "CH0334081137",
+    "name": "Crispr Therapeutics Ag",
+    "symbol": "CRSP",
+    "weight": 0.11,
+    "theme": "andet",
+    "sector": "Healthcare",
+    "industry": "Biotechnology"
+  },
+  {
+    "isin": "FR0010313833",
+    "name": "Arkema",
+    "symbol": "AKE.PA",
+    "weight": 0.11,
+    "theme": "andet",
+    "sector": "Basic Materials",
+    "industry": "Specialty Chemicals"
+  },
+  {
+    "isin": "US72919P2020",
+    "name": "Plug Power Inc",
+    "symbol": "PLUG",
+    "weight": 0.11,
+    "theme": "andet",
+    "sector": "Industrials",
+    "industry": "Electrical Equipment & Parts"
+  },
+  {
+    "isin": "CA7142661031",
+    "name": "Perpetua Resources Corp",
+    "symbol": "PPTA",
+    "weight": 0.1,
+    "theme": "andet",
+    "sector": "Basic Materials",
+    "industry": "Other Precious Metals & Mining"
+  },
+  {
+    "isin": "US04271T1007",
+    "name": "Array Technologies Inc",
+    "symbol": "ARRY",
+    "weight": 0.1,
+    "theme": "andet",
+    "sector": "Technology",
+    "industry": "Solar"
+  },
+  {
+    "isin": "US59516C1062",
+    "name": "Microvast Holdings Inc",
+    "symbol": "MVST",
+    "weight": 0.1,
+    "theme": "andet",
+    "sector": "Consumer Cyclical",
+    "industry": "Auto Parts"
+  },
+  {
+    "isin": "US78397Q1094",
+    "name": "Ses Ai Corp",
+    "symbol": "SES",
+    "weight": 0.1,
+    "theme": "andet",
+    "sector": "Consumer Cyclical",
+    "industry": "Auto Parts"
+  },
+  {
+    "isin": "US86771W1053",
+    "name": "Sunrun Inc",
+    "symbol": "RUN",
+    "weight": 0.1,
+    "theme": "andet",
+    "sector": "Technology",
+    "industry": "Solar"
+  },
+  {
+    "isin": "US29355A1079",
+    "name": "Enphase Energy",
+    "symbol": "ENPH",
+    "weight": 0.09,
+    "theme": "andet",
+    "sector": "Technology",
+    "industry": "Solar"
+  },
+  {
+    "isin": "US4333131039",
+    "name": "Hinge Health Inc",
+    "symbol": "HNGE",
+    "weight": 0.09,
+    "theme": "andet",
+    "sector": "Healthcare",
+    "industry": "Health Information Services"
+  },
+  {
+    "isin": "US45826J1051",
+    "name": "Intellia Therapeutics Inc",
+    "symbol": "NTLA",
+    "weight": 0.09,
+    "theme": "andet",
+    "sector": "Healthcare",
+    "industry": "Biotechnology"
+  },
+  {
+    "isin": "KYG2584S1012",
+    "name": "Cslm Digital Asset Acqu - A",
+    "symbol": "KOYN",
+    "weight": 0.08,
+    "theme": "andet",
+    "sector": "Financial Services",
+    "industry": "Shell Companies"
+  },
+  {
+    "isin": "US00218A1051",
+    "name": "Asp Isotopes Inc",
+    "symbol": "ASPI",
+    "weight": 0.08,
+    "theme": "andet",
+    "sector": "Basic Materials",
+    "industry": "Specialty Chemicals"
+  },
+  {
+    "isin": "US09263B2079",
+    "name": "Blacksky Technology Inc",
+    "symbol": "BKSY",
+    "weight": 0.08,
+    "theme": "andet",
+    "sector": "Industrials",
+    "industry": "Specialty Business Services"
+  },
+  {
+    "isin": "US5502411037",
+    "name": "Lumen Tech",
+    "symbol": "LUMN",
+    "weight": 0.08,
+    "theme": "andet",
+    "sector": "Communication Services",
+    "industry": "Telecom Services"
+  },
+  {
+    "isin": "CA0585861085",
+    "name": "Ballard Power Systems Inc",
+    "symbol": "BLDP",
+    "weight": 0.06,
+    "theme": "andet",
+    "sector": "Industrials",
+    "industry": "Electrical Equipment & Parts"
+  },
+  {
+    "isin": "CA28617B6061",
+    "name": "Electrovaya Inc",
+    "symbol": "ELVA",
+    "weight": 0.05,
+    "theme": "andet",
+    "sector": "Industrials",
+    "industry": "Electrical Equipment & Parts"
+  },
+  {
+    "isin": "US2935941078",
+    "name": "Enovix Corp",
+    "symbol": "ENVX",
+    "weight": 0.05,
+    "theme": "andet",
+    "sector": "Industrials",
+    "industry": "Electrical Equipment & Parts"
+  },
+  {
+    "isin": "US8814541020",
+    "name": "Terrestrial Energy Inc",
+    "symbol": "IMSR",
+    "weight": 0.05,
+    "theme": "andet",
+    "sector": "Utilities",
+    "industry": "Utilities—Regulated Electric"
+  },
+  {
+    "isin": "US82489W1071",
+    "name": "Shoals Technologies Group ",
+    "symbol": "SHLS",
+    "weight": 0.04,
+    "theme": "andet",
+    "sector": "Technology",
+    "industry": "Solar"
+  },
+  {
+    "isin": "LU2380748603",
+    "name": "LU2380748603",
+    "symbol": null,
+    "weight": 0.02,
+    "theme": "andet",
+    "sector": null,
+    "industry": null
+  },
+  {
+    "isin": "CA00288U1066",
+    "name": "Abcellera Biologics Inc",
+    "symbol": "ABCL",
+    "weight": 0.0,
+    "theme": "andet",
+    "sector": "Healthcare",
+    "industry": "Biotechnology"
+  },
+  {
+    "isin": "KY30744W1070",
+    "name": "KY30744W1070",
+    "symbol": null,
+    "weight": 0.0,
+    "theme": "andet",
+    "sector": null,
+    "industry": null
+  },
+  {
+    "isin": "US0420682058",
+    "name": "US0420682058",
+    "symbol": null,
+    "weight": 0.0,
+    "theme": "andet",
+    "sector": null,
+    "industry": null
+  },
+  {
+    "isin": "US34959E1091",
+    "name": "US34959E1091",
+    "symbol": null,
+    "weight": 0.0,
+    "theme": "andet",
+    "sector": null,
+    "industry": null
+  },
+  {
+    "isin": "US47100L1118",
+    "name": "US47100L1118",
+    "symbol": null,
+    "weight": 0.0,
+    "theme": "andet",
+    "sector": null,
+    "industry": null
+  },
+  {
+    "isin": "US6837121291",
+    "name": "US6837121291",
+    "symbol": null,
+    "weight": 0.0,
+    "theme": "andet",
+    "sector": null,
+    "industry": null
+  },
+  {
+    "isin": "US6837121374",
+    "name": "US6837121374",
+    "symbol": null,
+    "weight": 0.0,
+    "theme": "andet",
+    "sector": null,
+    "industry": null
+  },
+  {
+    "isin": "US6837121457",
+    "name": "US6837121457",
+    "symbol": null,
+    "weight": 0.0,
+    "theme": "andet",
+    "sector": null,
+    "industry": null
+  },
+  {
+    "isin": "US83571B1008",
+    "name": "US83571B1008",
+    "symbol": null,
+    "weight": 0.0,
+    "theme": "andet",
+    "sector": null,
+    "industry": null
+  }
+]

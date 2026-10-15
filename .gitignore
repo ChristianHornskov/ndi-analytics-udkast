@@ -6,3 +6,7 @@ logs/claude-prompt-*.md
 node_modules/
 logs/*.png
 node_modules/
+
+# overnight agent scratch
+logs/
+!logs/.gitkeep
