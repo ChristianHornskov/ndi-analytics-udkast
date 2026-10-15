@@ -245,3 +245,13 @@ HEAD `b35518b`. Visual-variety request shipped + reviewed. MADS værdikæde/quan
 
 ## Smoke · ~23:10 CEST
 - `scripts/smoke.mjs`: **52/52 fail 0** (inkl. vaerdikaeder). HEAD `37b6d55`.
+
+
+## Parallel lanes · ~23:39 CEST (Grok coordinator)
+Worktrees: `/workspace/ndi-wt-{A..E}` branches `lane-A`…`lane-E`.
+- **Claude A** (wt-A): vaerdikaeder / value-chains / space polish
+- **Claude B** (wt-B): MADS screener/themes/unique-metrics
+- **Claude C** (wt-C): ideer / lær / HANDOFF / UX checkpoints
+- **Grok D** (wt-D): visual variety + css + drawdown/embed
+- **Grok E** (wt-E): space/energy JSON + profiles
+Continuous wrappers in `logs/lane-*-{claude,grok}.{out,pid}`. Merge→precheck→smoke→push via coordinator only to main.
