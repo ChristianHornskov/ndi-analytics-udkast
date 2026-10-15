@@ -33,6 +33,16 @@
    .tv-chain,.tv-two{grid-template-columns:1fr}
    .tv-chain li:not(:last-child)::after{content:"↓";right:auto;left:50%;top:auto;bottom:-14px;transform:translateX(-50%)}
   }
+  .tv-coin{display:flex;align-items:flex-end;gap:10px;height:170px;margin:6px 0 4px;padding:0;list-style:none}
+  .tv-coin li{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:6px;height:100%;font-size:13px;color:var(--muted);text-align:center}
+  .tv-coin .b{width:100%;max-width:90px;border-radius:8px 8px 0 0;background:var(--panel-2);border-top:3px solid var(--cyan)}
+  .tv-coin .up{border-top-color:var(--yellow)}
+  .tv-coin strong{color:var(--text);font-size:16px}
+  .tv-coin .arrow{flex:0 0 auto;align-self:center;color:var(--faint)}
+  .tv-lens{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin:8px 0 0;padding:0;list-style:none}
+  .tv-lens li{background:var(--panel-2);border-radius:12px;padding:12px 14px;color:var(--muted);font-size:14px;line-height:1.45}
+  .tv-lens strong{display:block;color:var(--text);margin-bottom:4px}
+  .tv-lens em{display:block;margin-top:6px;font-style:normal;font-size:13px;color:var(--faint)}
  </style>
  <!-- og:start -->
  <meta property="og:type" content="website">
@@ -80,6 +90,33 @@
   <li><strong>P/E siger mindre om virksomheder, der investerer tungt i fremtiden.</strong><span>Jo mere et selskab investerer i dag, jo dårligere kan det se ud i regnearket.</span><span class="so">NDI Analytics viser eksponering og modenhed først, ikke P/E. <a href="pe-forklaring.html">Hvad P/E fortæller</a></span></li>
   <li><strong>Tænkt med lang horisont.</strong><span>Historisk afkast siger ikke, hvad der sker fremover.</span><span class="so">afkast vises over hele perioden og år for år. KID’et angiver en anbefalet investeringsperiode, se <a href="../risici.html">Risici ved fonden</a>.</span></li>
  </ol>
+</section>
+
+<section class="panel" aria-labelledby="tv-vu">
+ <h2 id="tv-vu" style="font-size:18px;margin-bottom:8px">Vi vælger udviklingen, ikke vinderen</h2>
+ <p style="color:var(--muted);line-height:1.55">Et lille møntspil viser, hvorfor udsving koster. Du sætter 100 kr. ind. Første år stiger de 50 %. Andet år falder de 40 %. Gennemsnittet af +50 og −40 er +5 % om året, men du står med færre penge, end du startede med.</p>
+ <ol class="tv-coin" aria-label="Møntspil: 100 kroner bliver til 150 kroner efter plus 50 procent og derefter til 90 kroner efter minus 40 procent.">
+  <li><strong>100 kr.</strong><span class="b" style="height:66px"></span>Start</li>
+  <li class="arrow" aria-hidden="true">→</li>
+  <li><strong>150 kr.</strong><span class="b up" style="height:100px"></span>+50 %</li>
+  <li class="arrow" aria-hidden="true">→</li>
+  <li><strong>90 kr.</strong><span class="b" style="height:60px"></span>−40 %</li>
+ </ol>
+ <p class="tv-so">Faldet rammer et større beløb, end stigningen startede fra: 1,5 × 0,6 = 0,9. Jo mere ét selskab svinger, jo mere æder udsvingene. Mange selskaber, der svinger hver for sig, udligner en del af de enkelte udsving. Derfor ejer fonden udviklingen bredt i stedet for at satse på, hvem der vinder. Det dæmper ikke udsvingene i hele teknologimarkedet, og du kan tabe penge. <a href="variance-drag.html">Regn selv: CAGR og gennemsnit →</a> · <a href="hvorfor-mange-aktier.html">Hvorfor så mange aktier? →</a></p>
+ <p class="src">Regneeksemplet er et tænkt eksempel og viser ikke fondens afkast. Bogen bruger samme type eksempel: Mads Christiansen og Jesper Bæk, <i>Den lille guide til investering i teknologiaktier</i> (2025). Se <a href="../om-data.html#g-cagr">CAGR</a> i ordlisten.</p>
+</section>
+
+<section class="panel" aria-labelledby="tv-hv">
+ <h2 id="tv-hv" style="font-size:18px;margin-bottom:8px">Hvorfor ejer vi den?</h2>
+ <p style="color:var(--muted);line-height:1.55">Når fonden ejer et selskab, er spørgsmålet ikke «bliver det her vinderen?», men «hvilken del af udviklingen giver det os?». På selskabssiderne svarer vi med fem faste spørgsmål. Vi kalder dem NDI-linsen.</p>
+ <ol class="tv-lens">
+  <li><strong>Hvilket tema?</strong>Den del af teknologien, selskabet hører til, fx chips eller energi. Et selskab kan have flere.<em>Tesla: fysisk tech og energi</em></li>
+  <li><strong>Hvad ejer man?</strong>Det, man helt konkret får del i: produkter, fabrikker, netværk eller software.<em>Tesla: produkter og produktion</em></li>
+  <li><strong>Hvor i kæden?</strong>Hvilket led i en værdikæde selskabet står i, fra råvarer og strøm til det, brugeren ser.<em>Tesla: energilagring og køretøjer</em></li>
+  <li><strong>Hvor modent?</strong>Om selskabet endnu ikke sælger noget, vokser hurtigt eller er modent. Er det ikke sat, gætter vi ikke.<em>Tesla: ikke klassificeret</em></li>
+  <li><strong>Hold øje med</strong>Forhold, der kan ændre billedet. Det er ikke en prognose.<em>Tesla: konkurrence og kapitalbehov</em></li>
+ </ol>
+ <p class="tv-so">Linsen forklarer, hvorfor et selskab passer ind i porteføljen. Den er ikke en karakter, et kursmål eller en anbefaling. Flere af teksterne er AI-udkast og er mærket sådan på siden. Ikke alle selskaber har en linse endnu, og et selskab uden linse er ikke vurderet dårligere. <a href="../selskaber.html">Find et selskab →</a> · <a href="../om-data.html#g-ndi-linse">Ordliste: NDI-linse</a></p>
 </section>
 
 <figure class="tv-q" style="margin-bottom:16px">

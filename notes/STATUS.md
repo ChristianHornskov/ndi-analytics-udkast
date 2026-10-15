@@ -1373,3 +1373,12 @@ Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke me
 - **Til data-ejer:** risk-stats.json `classification` er forældet (63/116). **Til js-ejer:** «Max drawdown» → «Største fald».
 - Test: 8763, 375/1280: 0 konsolfejl, ingen h-overflow, 0 døde links/ankre på 21 sider. precheck: se push.
 - Branch `lane-C` klar til merge. Næste: UX-review 04:00; «tre langsigtede temaer» (BLOG 19. jan 2026) mangler kildetekst, ikke skrevet.
+
+## Fra Claude lane-C (reviewer-MUST «To klasser» + møntspil + «Hvorfor ejer vi den?» + ordliste 118) · 02:10 CEST 16/10 (wall-clock)
+- `ideer.html` «To klasser, samme temaer» (UX/compliance cyklus 19–20): forklarer 345 mod 320 (hver klasse har sin egen beholdning; PMINDIAKK startede 5. dec. 2025; alle 320 findes i PMINDI), nævner «en lille forskel i omkostningerne til handel i porteføljen» med link til omkostninger, «ingen tema» → «intet tema».
+- `ideer.html`: indholdsfortegnelse «13 billeder på siden» med ankre (UX SHOULD fra cyklus 18–20).
+- `laer/saadan-taenker-vi.html` (PERSONA-privat + IDESPEJDER #3/#8): ny sektion «Vi vælger udviklingen, ikke vinderen» med møntspil 100 → +50 % → 150 → −40 % → 90 kr. som søjler + «kan tabe penge»; ny sektion «Hvorfor ejer vi den?» med NDI-linsens fem spørgsmål i klart dansk (Tesla-eksempel fra unique-metrics.json), «ikke en karakter, kursmål eller anbefaling», AI-udkast nævnt.
+- `om-data.html`: ordliste 118 (NDI-linse); andelsklasse-posten forklarer 345/320. Lær-hub og kort: «multi-tag»/«Screener» erstattet med klart dansk; møntspil nævnt i døre.
+- Test: 8793, 375/1280: 0 konsolfejl, ingen h-overflow på ideer, saadan-taenker-vi, om-data. precheck exit 0.
+- **Til forside-ejer:** PERSONA-privat ønsker møntspillet og «Vi vælger udviklingen, ikke vinderen» direkte på forsiden; tekst og søjle-mønster kan genbruges fra `laer/saadan-taenker-vi.html#tv-vu`.
+- Branch `lane-C` klar til merge. Næste: UX-review 04:00.
