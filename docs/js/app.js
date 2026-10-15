@@ -253,7 +253,7 @@ function renderFonden(root) {
       <section class="panel">
         <div class="metrics">
           <div class="metric"><div class="label">Seneste NAV</div><strong>${nav ? nav.price.toFixed(2).replace('.', ',') : '–'}</strong><small>Pr. ${fmtDate(nav?.d)} · DKK</small></div>
-          <div class="metric"><div class="label">Afkast</div><strong style="font-size:18px">Vises efter 12 måneder</strong><small>Klassen har endnu ikke 12 måneders historik</small></div>
+          <div class="metric metric-wide"><div class="label">Afkast</div><strong>Vises efter 12 måneder</strong><small>Klassen har endnu ikke 12 måneders historik</small></div>
         </div>
         <p class="band">Afkasthistorik for PMINDIAKK vises, når klassen har 12 måneders historik (fra december 2026). Klassen følger samme overordnede strategi som PMINDI.</p>
         ${warnHtml()}

@@ -456,3 +456,13 @@ table.data tbody tr:hover td:first-child{background:#163038}
   .control,.outline-btn,.cta,.door{transition:none!important}
   .dialog-backdrop{animation:none!important}
 }
+
+/* 375px metrics: "?" må ikke stå alene under labelen, og tallene i en række skal starte lige.
+   Sætningen på PMINDIAKK er ikke et nøgletal og må ikke klemmes ned i en halv kolonne. */
+.metric.metric-wide strong{font-size:17px;line-height:1.35;letter-spacing:-.15px;font-weight:500}
+@media (max-width:800px){
+  .metric .label{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;column-gap:6px;min-height:2.8em;margin-bottom:8px}
+  .metrics:has(.metric-wide){grid-template-columns:1fr;row-gap:0}
+  .metrics:has(.metric-wide) .metric{border-left:0;padding-left:0;padding-right:0}
+  .metrics:has(.metric-wide) .metric+.metric{border-top:1px solid #829da033;margin-top:14px;padding-top:14px}
+}
