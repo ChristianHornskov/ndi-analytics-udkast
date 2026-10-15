@@ -34,7 +34,7 @@ def main():
         if not desc:
             lede = re.search(r'<p class="lede">(.*?)</p>', src, re.S)
             desc = text(lede.group(1)) if lede else DEFAULT_DESC
-        if NUM.search(desc):  # aldrig procenttal i preview (kan ikke bære advarslen)
+        if NUM.search(desc) or '${' in desc:  # aldrig procenttal; JS-skabelon-lede er ikke statisk tekst
             desc = DEFAULT_DESC
         desc = re.sub(r'\s+', ' ', desc)[:200]
         url = BASE + ('' if rel == 'index.html' else rel)

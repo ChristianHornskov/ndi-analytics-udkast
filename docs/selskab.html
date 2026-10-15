@@ -12,7 +12,7 @@
   <meta property="og:site_name" content="NDI Analytics (udkast)">
   <meta property="og:locale" content="da_DK">
   <meta property="og:title" content="Selskab · NDI Analytics">
-  <meta property="og:description" content="ISIN ${esc(isin || &#x27;–&#x27;)} indgår ikke i den forsinkede beholdning pr. ${fmtDate(fund.positionsAsOf || data.portfolio.asOf)}.">
+  <meta property="og:description" content="NDI Analytics – klikbart udkast. Fonden, porteføljen og tech-temaer set gennem NDI&#x27;s linse. Generel information, ikke rådgivning.">
   <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/selskab.html">
   <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
   <meta property="og:image:width" content="1200">
@@ -141,9 +141,9 @@
         </section>
 
         ${uniquePack?.byIsin?.[p.isin]?.metrics?.length ? `<section class="panel">
-          <h2 class="panel-h">NDI-perspektiv (udkast)</h2>
-          <div class="kpi-grid">${uniquePack.byIsin[p.isin].metrics.map(m => `<div class="kpi"><span class="label">${esc(m.label)}</span><strong style="font-size:16px">${esc(m.value)}</strong><span class="sub">${esc(m.hint||'')}</span></div>`).join('')}</div>
-          <p class="band">Udkast-placeholders (NDI-linse/rolle) — ikke live særmetrikker, ikke performance. Eksponering, ikke anbefaling.</p>
+          <h2 class="panel-h">NDI-linsen (udkast)</h2>
+          <div class="kpi-grid">${uniquePack.byIsin[p.isin].metrics.map(m => `<div class="kpi"><span class="label">${esc(m.label)}${m.ai ? ` ${AI_BADGE}` : ''}</span><strong style="font-size:16px">${esc(m.value)}</strong><span class="sub">${esc(m.hint||'')}${m.href ? ` <a href="${esc(m.href)}">${m.href.startsWith('vaerdikaede') ? 'Se i værdikæden' : 'Om livscyklus'} →</a>` : ''}</span></div>`).join('')}</div>
+          <p class="band">Kvalitativ linse: tema, rolle og forhold at holde øje med. Ingen kurser, afkast eller nøgletal. Felter med AI-udkast er sammenfattet fra selskabsprofilen. Eksponering, ikke anbefaling. <a href="ndi-perspektiv.html">Alle selskaber med NDI-linse →</a></p>
         </section>` : ''}
         ${(() => {
           const series = (monthsPack?.funds?.[fundId] || []).map(row => ({ d: row.date, w: row.weights?.[p.isin] })).filter(x => x.w != null);

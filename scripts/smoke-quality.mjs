@@ -36,12 +36,27 @@ for (const width of [1280, 375]) {
   body = await text();
   const rows = await page.locator('table.data tbody tr').count();
   check('ndi-perspektiv: rækker ' + W, rows >= 3, rows);
-  check('ndi-perspektiv: mærket udkast/placeholder ' + W, /UDKAST/i.test(body) && /placeholder|illustrativ/i.test(body));
+  check('ndi-perspektiv: mærket udkast/AI-udkast ' + W, /UDKAST/i.test(body) && /AI-udkast|placeholder|illustrativ/i.test(body));
+  check('ndi-perspektiv: ingen opfundet livscyklus ' + W, !/High growth/i.test(await page.locator('table.data').innerText()));
   check('ndi-perspektiv: eksponering ≠ anbefaling ' + W, /ikke anbefaling/i.test(body));
   check('ndi-perspektiv: ingen procenttal pr. aktie ' + W, !/[+-]?\d+[,.]\d+\s?%/.test(await page.locator('table.data').innerText()));
   const firstHref = await page.locator('table.data tbody a').first().getAttribute('href');
   check('ndi-perspektiv: link til selskab ' + W, /^selskab\.html\?isin=/.test(firstHref || ''), firstHref);
   check('ndi-perspektiv: ingen rådgivningsord ' + W, !ADVICE.test(body));
+
+  // Selskab: NDI-linsen (kvalitativ, AI-udkast-mærket, link til værdikæden)
+  await page.goto(BASE + '/selskab.html?isin=US88160R1014&fund=pmindi', { waitUntil: 'networkidle' });
+  const lens = page.locator('section.panel', { has: page.locator('h2', { hasText: 'NDI-linsen' }) });
+  check('selskab: NDI-linsen panel ' + W, (await lens.count()) === 1);
+  const lensText = (await lens.count()) ? await lens.innerText() : '';
+  check('selskab: NDI-linsen AI-udkast-mærket ' + W, (await lens.locator('.badge').count()) >= 1);
+  check('selskab: NDI-linsen ingen tal/afkast ' + W, !/\d+[,.]\d+\s?%|P\/E|P\/S|High growth/i.test(lensText), lensText.slice(0, 120));
+  const chainHref = (await lens.count()) ? await lens.locator('a[href^="vaerdikaede.html?isin="]').first().getAttribute('href').catch(() => null) : null;
+  check('selskab: NDI-linsen → værdikæde ' + W, chainHref === 'vaerdikaede.html?isin=US88160R1014', chainHref);
+  if (chainHref) {
+    await page.goto(BASE + '/' + chainHref, { waitUntil: 'networkidle' });
+    check('værdikæde ?isin Tesla: 2 led ' + W, (await page.locator('.chain .node.hit').count()) === 2);
+  }
 
   // Tema: kopiér-link-knap virker på en rigtig temaside
   await page.goto(BASE + '/tema.html?slug=chips&fund=pmindi', { waitUntil: 'networkidle' });

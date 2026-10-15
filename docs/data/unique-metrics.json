@@ -1,5 +1,5 @@
 {
-  "note": "NDI-linse-placeholders (udkast). Ingen live-feeds, ingen prisprognoser, ingen verificerede drifts-KPI'er. Værdi-felter er klassifikation/rolle i porteføljen — ikke performance.",
+  "note": "NDI-linsen er kvalitativ: tema, plads i værdikæden, hvad man ejer som aktionær, og hvad man kan holde øje med. Ingen kurser, afkast, nøgletal eller prognoser. Felter markeret AI-udkast er sammenfattet fra selskabsprofilen (company-profiles.json) og afventer NDI's endelige gennemgang.",
   "byIsin": {
     "US88160R1014": {
       "name": "Tesla",
@@ -7,12 +7,31 @@
         {
           "label": "NDI-tags",
           "value": "Fysisk tech + energi",
-          "hint": "Multi-tag: physical + energy — eksponering, ikke rating"
+          "hint": "To temaer: køretøjer/robotik og energilagring/sol. Eksponering, ikke rating."
         },
         {
-          "label": "Livscyklus (udkast)",
-          "value": "High growth",
-          "hint": "Heuristik i udkastet; ikke officiel NDI-rating"
+          "label": "Hvad ejer man?",
+          "value": "Produkter og produktion",
+          "hint": "Batterier, effektelektronik, software og fysisk produktion samlet i ét selskab.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Led 1 og led 2",
+          "hint": "Energi (led 1) og fysisk tech (led 2) i den forenklede kæde. Placeringen er pædagogisk; Tesla bygger ikke datacentre.",
+          "href": "vaerdikaede.html?isin=US88160R1014"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Konkurrence og kapitalbehov",
+          "hint": "Bilmarkedets konkurrence, indtjening pr. bil og kapitalbehov. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
         }
       ]
     },
@@ -20,14 +39,33 @@
       "name": "Nvidia",
       "metrics": [
         {
-          "label": "Plads i stakken",
-          "value": "Compute / chips",
-          "hint": "NDI-værdikæde — ikke en anbefaling"
+          "label": "NDI-tags",
+          "value": "Compute + chips",
+          "hint": "GPU-compute og chipdesign i AI-stakken. Eksponering, ikke rating."
         },
         {
-          "label": "Livscyklus (udkast)",
-          "value": "High growth",
-          "hint": "Heuristik; verificeres senere"
+          "label": "Hvad ejer man?",
+          "value": "Hardware og software som ét lag",
+          "hint": "GPU'er, computersystemer, netværk og softwareværktøjer som CUDA.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Led 3: chips",
+          "hint": "Designer chips og systemer til store, parallelle beregninger.",
+          "href": "vaerdikaede.html?isin=US67066G1040"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Kunder, eksportregler, produktion",
+          "hint": "Kundekoncentration, eksportregler, produktionsafhængighed og konkurrence mellem chiparkitekturer. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
         }
       ]
     },
@@ -35,14 +73,33 @@
       "name": "SoftBank Group",
       "metrics": [
         {
-          "label": "Rolle",
-          "value": "Platforme / holding",
-          "hint": "Se selskabsside: problem og rolle"
+          "label": "NDI-tag",
+          "value": "Platforme",
+          "hint": "Primært tema: Platforme. Investeringskoncern, ikke én produktvirksomhed."
         },
         {
-          "label": "Demo",
-          "value": "SoftBank-ISIN",
-          "hint": "UX-demo for selskabsside i Level 1"
+          "label": "Hvad ejer man?",
+          "value": "Ejerandele, ikke ét produkt",
+          "hint": "Indirekte eksponering mod blandt andet Arm, Vision Funds og telekommunikation.",
+          "ai": true
+        },
+        {
+          "label": "NDI-linse",
+          "value": "Indre værdi og gæld",
+          "hint": "Værdien af ejerandelene skal ses sammen med gælden, der finansierer dem. Indre værdi er ikke det samme som børsværdi.",
+          "ai": true
+        },
+        {
+          "label": "Undgå forveksling",
+          "value": "Group ≠ SoftBank Corp.",
+          "hint": "Fonden ejer koncernen SoftBank Group, ikke det japanske telekomselskab SoftBank Corp.",
+          "ai": true
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Værdiansættelser og gæld",
+          "hint": "Værdiansættelse af investeringerne, gæld og koncentration i store ejerandele. Forhold, ikke en prognose.",
+          "ai": true
         }
       ]
     },
@@ -50,9 +107,27 @@
       "name": "Meta Platforms Inc",
       "metrics": [
         {
-          "label": "NDI-linse",
+          "label": "NDI-tags",
           "value": "Platforme + software",
-          "hint": "Multi-tag overlay — eksponering, ikke rating"
+          "hint": "Multi-tag. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Platforme og annoncer",
+          "hint": "Facebook, Instagram, Messenger og WhatsApp. Annoncører køber adgang til målgrupper.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Led 5: platforme",
+          "hint": "Der hvor compute bliver til produkter. Bruger selv omfattende AI- og datacenterinfrastruktur.",
+          "href": "vaerdikaede.html?isin=US30303M1027"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Annoncer, persondata, investeringer",
+          "hint": "Annonceefterspørgsel, konkurrence om opmærksomhed, persondataregler og store infrastrukturinvesteringer. Forhold, ikke en prognose.",
+          "ai": true
         }
       ]
     },
@@ -62,7 +137,7 @@
         {
           "label": "Plads i kæden",
           "value": "Chips ↔ optik",
-          "hint": "Photonics / interconnect i AI-stakken (udkast)"
+          "hint": "Photonics og interconnect i AI-stakken (udkast)."
         }
       ]
     },
@@ -72,7 +147,7 @@
         {
           "label": "NDI-linse",
           "value": "Energi + fysisk",
-          "hint": "Batterilagring i værdikæden (udkast)"
+          "hint": "Batterilagring i værdikæden (udkast)."
         }
       ]
     },
@@ -82,7 +157,7 @@
         {
           "label": "NDI-linse",
           "value": "Platforme / devices",
-          "hint": "Konsument-hardware + services — eksponering, ikke rating"
+          "hint": "Forbrugerhardware og services. Eksponering, ikke rating."
         }
       ]
     },
@@ -92,7 +167,7 @@
         {
           "label": "NDI-linse",
           "value": "Compute / chips",
-          "hint": "NDI-stak — ingen kursafkast i v1"
+          "hint": "Beregningschips til generelle og specialiserede opgaver. Eksponering, ikke rating."
         }
       ]
     },
@@ -102,7 +177,7 @@
         {
           "label": "NDI-linse",
           "value": "Chips / infrastruktur",
-          "hint": "Connectivity i stakken — udkast"
+          "hint": "Forbinder databehandling på tværs af chips, netværk og software (udkast)."
         }
       ]
     }
