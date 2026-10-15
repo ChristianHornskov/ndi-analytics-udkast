@@ -131,6 +131,8 @@ Sigma Lithium nævner Jequitinhonha-dalen i Brasilien. Selskabet skrev 17. april
 
 Antero skriver, at det leverer naturgas og LPG til eksport fra Appalachia. Marcellus stod i forvejen. Gassen er brændsel, ikke en metalmine. Formuleringen om at være blandt de største amerikanske leverandører er ikke taget med.
 
+Expand Energy skrev 16. september 2026, at handlen med Twin Eagle er gennemført, og at Twin Eagle bliver et datterselskab. Twin Eagle er beskrevet som et marketingselskab. Datoen ligger efter beholdningen pr. 2026-06-01. Expand er dannet af Chesapeake og Southwestern. Gassen er brændsel, ikke en metalmine. Kursen på siden, tal i Bcf og ordene leading og largest er ikke taget med.
+
 ## År til dato på periodesiden
 
 `ytdReturn` i `data.js` bruger sidste punkt i året før som udgangspunkt, ikke 1. januar. For PMINDI pr. 2026-10-14 er det 2025-12-31, ikke 2026-01-02. `periode.html` viser den samme dato i "Fra → til". Kalenderår bruger samme base (`calendarYearReturns`).

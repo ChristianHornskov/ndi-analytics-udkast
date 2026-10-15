@@ -179,3 +179,7 @@ Jequitinhonha-dalen står. Produktionen startede 17. april 2023, før beholdning
 ## Antero · 2026-10-16 01:13 CEST
 
 Eksport af naturgas og LPG er med. "One of the largest" er ikke kopieret. Stadig brændsel, ikke en metalmine. AI-udkast uden gennemgangsdato. Kæden viser sætningen. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Twin Eagle · 2026-10-16 01:14 CEST
+
+Handlen er 16. september 2026, efter beholdningen. Twin Eagle er et marketingselskab og et datterselskab. Kurs, Bcf og leading/largest er ikke kopieret. AI-udkast uden gennemgangsdato. Kæde og arkiv har datoen. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.

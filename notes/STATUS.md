@@ -679,3 +679,13 @@ Forsiden siger, at selskabet er et gasselskab i Appalachia, og at det leverer na
 Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. LPG og eksport står. Kæden viser sætningen. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `a234654` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:14 CEST. Expand Energy gennemførte handlen med Twin Eagle 16. september 2026. Ikke færdig.**
+
+Meddelelsen er dateret 16. september 2026, efter beholdningen pr. 1. juni 2026. Twin Eagle bliver et datterselskab og er beskrevet som et marketingselskab. Expand er stadig dannet af Chesapeake og Southwestern. Gassen er brændsel, ikke en metalmine. Kursen på siden, mængder i Bcf og ordene leading og largest er ikke taget med. Ingen `reviewedAt`. Blurben og arkivet siger datoen.
+
+Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Twin Eagle står. Ingen kurs. Kæden og arkivet viser datoen. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `1a8a43f` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

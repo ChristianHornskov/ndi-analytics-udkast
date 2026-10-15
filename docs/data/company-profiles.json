@@ -743,20 +743,24 @@
   "US1651677353": {
    "name": "Expand Energy",
    "theme": "energy-resources",
-   "summary": "Producerer naturgas i USA. Selskabet er dannet ved en sammenlægning af Chesapeake og Southwestern.",
+   "summary": "Producerer naturgas i USA. Selskabet er dannet ved en sammenlægning af Chesapeake og Southwestern. Det skrev 16. september 2026, at handlen med Twin Eagle er gennemført. Datoen ligger efter beholdningen.",
    "watch": "Gaspriser og samlingen af de to forretninger.",
    "source": "https://www.expandenergy.com/",
-   "products": "Naturgas.",
+   "products": "Naturgas. Twin Eagle er et marketingselskab.",
    "customers": "Købere af gas.",
    "role": "Brændsel til elproduktion.",
    "narrative": [
-    "Expand Energy producerer naturgas i USA. Selskabet er dannet ved en sammenlægning af Chesapeake og Southwestern.",
-    "I kæden står selskabet på elproduktion, fordi gassen er brændsel. Det er ikke en metalmine."
+    "Expand Energy producerer naturgas i USA. Selskabet er dannet ved en sammenlægning af Chesapeake og Southwestern. Det skrev 16. september 2026, at handlen med Twin Eagle er gennemført, og at Twin Eagle bliver et datterselskab.",
+    "Datoen ligger efter beholdningen pr. 1. juni 2026. Twin Eagle er beskrevet som et marketingselskab. I kæden står gassen som brændsel. Det er ikke en metalmine."
    ],
    "narrativeSources": [
     {
      "label": "Selskabets side",
      "url": "https://www.expandenergy.com/"
+    },
+    {
+     "label": "Twin Eagle, 16. september 2026",
+     "url": "https://www.expandenergy.com/2026/09/16/expand-energy-and-twin-eagle-transaction-closes-combined-organization-creates-north-americas-leading-integrated-natural-gas-company/"
     }
    ]
   },
