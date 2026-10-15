@@ -1491,15 +1491,15 @@
   "US72703X1063": {
    "name": "Planet Labs",
    "theme": "space",
-   "summary": "Driver en flåde af satellitter, der tager billeder af Jorden, og sælger billederne og analyserne.",
+   "summary": "Driver satellitter, der tager billeder af Jorden. Siden nævner SuperDove, SkySat, Pelican, Tanager og Owl. Owl er omtalt som næste generation. Selskabet opsender ikke selv raketterne.",
    "watch": "Satellitternes drift og kundernes abonnementer på billeder.",
    "source": "https://www.planet.com/",
    "products": "Satellitbilleder og data.",
    "customers": "Offentlige myndigheder, virksomheder inden for landbrug, kortlægning og forsikring.",
    "role": "Satellittjeneste.",
    "narrative": [
-    "Planet driver satellitter, der tager billeder af Jorden. Selskabet sælger billederne og analyser af dem. Flåden omfatter blandt andet SuperDove og SkySat.",
-    "Planet opsender ikke selv raketterne i denne beskrivelse. Selskabet står på satellitter."
+    "Planet driver satellitter, der tager billeder af Jorden. Selskabet sælger billederne og analyser af dem. Siden nævner SuperDove, SkySat, Pelican, Tanager og Owl. Owl er omtalt som næste generation.",
+    "Teksten kalder ikke Owl en særskilt flåde i drift. Planet opsender ikke selv raketterne i denne beskrivelse."
    ],
    "narrativeSources": [
     {

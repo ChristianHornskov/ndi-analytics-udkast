@@ -689,3 +689,13 @@ Meddelelsen er dateret 16. september 2026, efter beholdningen pr. 1. juni 2026. 
 Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Twin Eagle står. Ingen kurs. Kæden og arkivet viser datoen. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `1a8a43f` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:18 CEST. Planet nævner også Pelican, Tanager og Owl. Ikke færdig.**
+
+Forsiden nævner satellitterne SuperDove, SkySat, Pelican, Tanager og Owl. Owl er omtalt som næste generation. Teksten kalder den ikke en særskilt flåde i drift. Selskabet opsender ikke selv raketterne. Opløsningstal og ord om at sprænge grænser er ikke taget med. Ingen `reviewedAt`. Blurben og arkivet siger navnene.
+
+Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Owl og Pelican står. Kæden og arkivet viser navnene. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `9b635f4` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

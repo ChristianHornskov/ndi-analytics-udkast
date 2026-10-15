@@ -183,3 +183,7 @@ Eksport af naturgas og LPG er med. "One of the largest" er ikke kopieret. Stadig
 ## Twin Eagle · 2026-10-16 01:14 CEST
 
 Handlen er 16. september 2026, efter beholdningen. Twin Eagle er et marketingselskab og et datterselskab. Kurs, Bcf og leading/largest er ikke kopieret. AI-udkast uden gennemgangsdato. Kæde og arkiv har datoen. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Planet · 2026-10-16 01:18 CEST
+
+Pelican, Tanager og Owl er tilføjet ved siden af SuperDove og SkySat. Owl er næste generation, ikke skrevet som en særskilt flåde i drift. Opløsningstal er ikke kopieret. AI-udkast uden gennemgangsdato. Kæde og arkiv har navnene. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
