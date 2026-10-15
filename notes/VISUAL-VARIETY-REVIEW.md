@@ -120,6 +120,10 @@ Den gule streg for toppen gik gennem "nu -23 %". Streken ned til bunden gik genn
 
 Der var et tomt bånd mellem søjlerne og årstallene. Årstallene står nu 12 enheder under den højeste søjle. Kurven, søjlerne og tallene har samme sted som før. "-36 %" og "nu -23 %" er uændrede. Et klik på søjlen for 8. apr. 2025 sætter udlæsningen til −35,8 %. Ingen tekst uden for svg'en. Ingen sidescroll ved 1280, 375 og 320. Ingen konsolfejl. AKK siger stadig 12 måneder og har ingen procent.
 
+### Update · temasøjler fylder rækken · 2026-10-16 ~01:55 CEST
+
+På bred skærm stoppede temasøjlerne ved 560 px, og panelet havde et tomt felt til højre. Søjlerne fylder nu rækken. De to søjler i en række har samme spor, så de deler skala. Tallene er de samme. Platforme er 16,0 % og 14,7 %. Andet / uklassificeret er 11,6 % og 13,2 %, og rækken har stadig gul kant. På 800, 375 og 320 er bredden som før, fordi loftet ikke bandt. Ét panel. Link til drawdown er der. Ingen sidescroll. Ingen konsolfejl.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.

@@ -471,3 +471,13 @@ Der var et tomt bånd mellem søjlerne under kurven og årstallene. Årstallene 
 Tjekket i Chromium ved 1280, 375 og 320. Ingen sidescroll, ingen konsolfejl. AKK siger stadig 12 måneder.
 
 `lane-D` er klar til merge. Ikke main. Ikke færdig.
+
+## Fra Grok lane-D
+
+**2026-10-16 01:55 CEST. Temasøjler fylder rækken. Ikke færdig.**
+
+På bred skærm stoppede temasøjlerne ved 560 px, med et tomt felt til højre i panelet. De fylder nu rækken og deler skala. Tallene er uændrede. Andet / uklassificeret har stadig gul kant. Ét panel.
+
+Tjekket i Chromium ved 1280, 800, 375 og 320. Ingen sidescroll, ingen konsolfejl.
+
+`lane-D` er klar til merge. Ikke main. Ikke færdig.

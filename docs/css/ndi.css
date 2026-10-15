@@ -596,7 +596,7 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
 .cmp-themes li{display:grid;grid-template-columns:minmax(120px,200px) 1fr;gap:12px;align-items:center;padding:8px 0 8px 8px;border-top:1px solid var(--line);font-size:13px}
 .cmp-themes li.cmp-gap{box-shadow:inset 3px 0 0 var(--yellow)}
 .cmp-name{color:var(--text)}
-.cmp-pair{display:grid;gap:4px;max-width:560px}
+.cmp-pair{display:grid;gap:4px;min-width:0}
 .cmp-line{display:grid;grid-template-columns:1fr 52px;gap:8px;align-items:center}
 .cmp-bar{display:block;height:8px;border-radius:4px;background:#0b171d;border:1px solid var(--line);overflow:hidden}
 .cmp-bar span{display:block;height:100%}
