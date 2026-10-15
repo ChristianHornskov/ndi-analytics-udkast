@@ -306,7 +306,13 @@
      "seeChain": null,
      "src": "BLOG 30. marts 2026 · 10. august 2026",
      "shift": "I USA får datacentre i stigende grad lov til at bygge egen strøm. Mads har beskrevet, at ét års chipproduktion potentielt kan kræve strøm svarende til omkring to tredjedele af USA's installerede kapacitet.",
-     "kind": "ndi"
+     "kind": "ndi",
+     "short": "Energi",
+     "press": {
+      "level": "dam",
+      "t": "Mads' første flaskehals i AI-udbygningen",
+      "src": "BLOG 30. marts 2026"
+     }
     },
     {
      "id": "datacenter",
@@ -448,7 +454,13 @@
      "seeChain": null,
      "src": "BLOG 30. marts 2026 · 27. juli 2026",
      "shift": "Moderne AI-racks bruger så meget strøm, at luftkøling ikke slår til, og væskekøling bliver standard (baggrund). Mads: hvis datacentret er fremtidens fabrik, bliver det strategisk, om intelligensen produceres i Vesten eller i Kina.",
-     "kind": "ndi"
+     "kind": "ndi",
+     "short": "Datacentre",
+     "press": {
+      "level": "dam",
+      "t": "Mange faktorer kan skabe flaskehalse her, fra byggeri til tilladelser",
+      "src": "BLOG 30. marts 2026"
+     }
     },
     {
      "id": "chipdesign",
@@ -684,7 +696,13 @@
      "seeChain": null,
      "src": "BLOG 30. marts 2026 · BOG s. 75–76",
      "shift": "XPU er en samlebetegnelse for specialiserede AI-chips, også cloudselskabernes egne (baggrund). Bogen bruger NVIDIA til at vise, at selv de største tech-aktier har haft fald på 50 til 90 %.",
-     "kind": "ndi"
+     "kind": "ndi",
+     "short": "Chipdesign",
+     "press": {
+      "level": "dam",
+      "t": "Halvledere er tredje flaskehals, med fokus på XPU'er og CPU'er",
+      "src": "BLOG 30. marts 2026"
+     }
     },
     {
      "id": "equipment",
@@ -937,7 +955,13 @@
      "seeChain": null,
      "src": "BLOG 21. oktober 2024 · 8. juni 2025",
      "shift": "Én leverandør dominerer EUV-litografi. Udstyrsselskaber afhænger af chipproducenternes investeringsbudgetter og svinger derfor meget (baggrund).",
-     "kind": "ndi"
+     "kind": "ndi",
+     "short": "Udstyr",
+     "press": {
+      "level": "group",
+      "t": "Hører til halvlederne. NDI har ikke skrevet om pres i netop dette led",
+      "src": "tolkning"
+     }
     },
     {
      "id": "foundry",
@@ -1013,7 +1037,13 @@
      "seeChain": null,
      "src": "BLOG 19. maj 2024 · 24. august 2026",
      "shift": "Den mest avancerede produktion er koncentreret i Taiwan, hvilket giver geopolitisk risiko (baggrund). Mads skriver, at Vesten skal bygge chipfabrikker sammen med kraftværker, elnet og datacentre.",
-     "kind": "ndi"
+     "kind": "ndi",
+     "short": "Foundry",
+     "press": {
+      "level": "group",
+      "t": "Hører til halvlederne. NDI har ikke skrevet om pres i netop dette led",
+      "src": "tolkning"
+     }
     },
     {
      "id": "memory",
@@ -1087,7 +1117,13 @@
      "seeChain": null,
      "src": "BLOG 16. december 2024 · 30. marts 2026",
      "shift": "Hukommelse har historisk været en meget cyklisk branche med store prisudsving (baggrund). Mads har siden 2024 set HBM som et led, hvor knapheden kan vise sig.",
-     "kind": "ndi"
+     "kind": "ndi",
+     "short": "Hukommelse",
+     "press": {
+      "level": "early",
+      "t": "Et af de led, hvor NDI allerede ser pres, sammen med optik",
+      "src": "BLOG 30. marts 2026"
+     }
     },
     {
      "id": "optics",
@@ -1243,7 +1279,13 @@
      "seeChain": null,
      "src": "BLOG 30. marts 2026 · 29. juni 2026",
      "shift": "Co-packaged optics, hvor optikken sidder direkte ved chippen, er en af teknologierne, der skal reducere strømforbruget (baggrund).",
-     "kind": "ndi"
+     "kind": "ndi",
+     "short": "Optik",
+     "press": {
+      "level": "early",
+      "t": "Et af de led, hvor NDI allerede ser pres, sammen med hukommelse",
+      "src": "BLOG 30. marts 2026"
+     }
     },
     {
      "id": "servers",
@@ -1318,7 +1360,13 @@
      "seeChain": null,
      "src": "BLOG 30. marts 2026",
      "shift": "Leddet samler chips, hukommelse og netværk til færdige systemer, så det mærker presset fra flere led på én gang (tolkning).",
-     "kind": "ndi"
+     "kind": "ndi",
+     "short": "Servere",
+     "press": {
+      "level": "group",
+      "t": "Nævnt som en del af halvlederflaskehalsen",
+      "src": "BLOG 30. marts 2026"
+     }
     },
     {
      "id": "cloud",
@@ -1394,7 +1442,13 @@
      "seeChain": null,
      "src": "BLOG 30. marts 2026 · 27. juli 2026",
      "shift": "Mads skriver, at intelligens bliver en råvare, og at AI-økonomien er begyndt at finansiere sig selv (BLOG 12. oktober 2026). Open weights kalder han \"en accelerator for hele AI-økonomien\".",
-     "kind": "ndi"
+     "kind": "ndi",
+     "short": "Cloud",
+     "press": {
+      "level": "open",
+      "t": "Endnu ingen tydelige flaskehalse. Mere et spørgsmål om, hvem der klarer sig",
+      "src": "BLOG 30. marts 2026"
+     }
     },
     {
      "id": "data",
@@ -1453,7 +1507,13 @@
      "seeChain": null,
      "src": "BLOG 30. marts 2026",
      "shift": "Forretningsmodellen er ikke afklaret endnu. NDI har ikke beskrevet, hvordan den kan udvikle sig.",
-     "kind": "ndi"
+     "kind": "ndi",
+     "short": "Data",
+     "press": {
+      "level": "open",
+      "t": "Interessant, men stadig en ret uafklaret forretningsmodel",
+      "src": "BLOG 30. marts 2026"
+     }
     },
     {
      "id": "software",
@@ -1551,14 +1611,20 @@
      "seeChain": null,
      "src": "BLOG 2. juni 2024 · 13. april 2026",
      "shift": "Holdningen har ændret sig: i 2024 handlede skepsisen om høje værdiansættelser, i 2026 om tvivl på selve forretningsmodellen, fordi AI kan forstyrre den.",
-     "kind": "ndi"
+     "kind": "ndi",
+     "short": "Software",
+     "press": {
+      "level": "open",
+      "t": "Svært at identificere de langsigtede selskaber, og feltet er relativt højt prissat",
+      "src": "BLOG 30. marts 2026"
+     }
     },
     {
      "id": "agents",
      "icon": "◎",
      "label": "Forbrugerapplikationer og agentisk AI",
      "blurb": "AI-assistenter og agenter, der selv udfører opgaver for mennesker og virksomheder.",
-     "ndi": "Efterspørgslen efter compute kommer i stigende grad herfra. NDI forventer, at dette led over tid fylder mere i porteføljen. Fase 2: copilots.",
+     "ndi": "Efterspørgslen efter compute kommer i stigende grad herfra. Mads kalder fase 2 for copilots: AI, der hjælper mennesker med opgaverne.",
      "themes": [
       "platforms",
       "software"
@@ -1626,7 +1692,13 @@
      "seeChain": null,
      "src": "BLOG 30. marts 2026 · 7. oktober 2024",
      "shift": "Fra chatbots, der svarer, til agenter, der handler. Det er her, efterspørgslen begynder i Mads' flodbillede.",
-     "kind": "ndi"
+     "kind": "ndi",
+     "short": "Agenter",
+     "press": {
+      "level": "source",
+      "t": "Efterspørgslen kommer i stigende grad herfra: først fra agentisk AI",
+      "src": "BLOG 30. marts 2026"
+     }
     },
     {
      "id": "physical-ai",
@@ -1710,10 +1782,28 @@
      "seeChain": "physical",
      "src": "BLOG 30. marts 2026 · 7. oktober 2024",
      "shift": "Mads forventer, at fysisk AI \"snart\" driver compute-efterspørgslen efter agentisk AI. Der er ingen præcise årstal.",
-     "kind": "ndi"
+     "kind": "ndi",
+     "short": "Fysisk AI",
+     "press": {
+      "level": "source",
+      "t": "… og snart fra fysisk AI",
+      "src": "BLOG 30. marts 2026"
+     }
     }
    ],
-   "icon": "🧠"
+   "icon": "🧠",
+   "riverMap": {
+    "title": "Floden gennem 13 led",
+    "lede": "Mads ser AI-kæden som et flodsystem. Vandet er efterspørgslen, og den starter nederst i kæden hos agenter og fysisk AI. Dæmningerne er de led, hvor NDI har skrevet om flaskehalse. Klik et led for at åbne det.",
+    "levels": {
+     "dam": "Dæmning: NDI kalder leddet en flaskehals",
+     "early": "Begyndende flaskehals ifølge NDI",
+     "group": "Hører til halvlederne (tredje flaskehals)",
+     "open": "Ingen tydelig flaskehals ifølge NDI",
+     "source": "Her starter efterspørgslen ifølge NDI"
+    },
+    "note": "Mærkerne gengiver, hvad NDI har skrevet (BLOG 30. marts 2026), og hvor det er vores tolkning, står det. De er ikke en prognose, ikke en rangering af selskaber og ikke en anbefaling. Ifølge Mads flytter presset til næste led, når en flaskehals løses."
+   }
   },
   {
    "id": "physical",

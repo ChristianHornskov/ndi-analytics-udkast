@@ -49,6 +49,7 @@ Kilder: slack_ny_graf_2026-10-15.md, vision.txt, mads_tankemodel.md, investering
 - [x] vaerdikaede.html: indgangskort til de fire andre kæder (lane-A)
 - [x] Rum: "Hvorfor er det blevet billigere at komme op?" (før/nu + årsagskæde, baggrund; kun NDI-tallet 90 % med kilde) og robot-ordbog med 9 ord (lane-A)
 - [x] Energi-fane: "Fra råstof til regnekraft" (strømmens vej med NDI-mærker for pres og kilde pr. mærke) + energi-ordbog 13 ord; kvante: tidshorisont som gengivet NVIDIA-udsagn med kilde; vaerdikaede.html: én forklaring pr. kæde (lane-A)
+- [x] AI-fane: flodkort over de 13 led i Mads' rækkefølge med NDI-pres-mærke og kilde pr. led (dæmning, begyndende, del af halvlederne, ingen tydelig flaskehals, efterspørgsel); samme mærker på vaerdikaede.html (lane-A)
 
 ## Formidling / filosofi
 - [x] Variance drag / CAGR ≠ gennemsnit (lær)

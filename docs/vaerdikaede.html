@@ -32,6 +32,12 @@
  .node details ol{margin:4px 0 0 20px;color:var(--muted);line-height:1.6}
  .node .more{font-size:12px;margin-top:4px}
  .node .tag{display:inline-block;font-size:10px;letter-spacing:.4px;border:1px solid var(--line);border-radius:999px;padding:1px 7px;margin-left:6px;vertical-align:2px;color:var(--muted)}
+ .node .press{font-size:12px;line-height:1.4;margin-top:6px;color:var(--text)}
+ .node .press .pt{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.4px;border-radius:4px;padding:0 5px;margin-right:6px;background:#2a4650;color:var(--text)}
+ .node .press.lv-dam .pt{background:var(--yellow);color:#0b171d}
+ .node .press.lv-early .pt{background:transparent;color:var(--yellow);box-shadow:inset 0 0 0 1px var(--yellow)}
+ .node .press.lv-source .pt{background:var(--cyan);color:#0b171d}
+ .node .press .src{margin-left:4px;font-size:11px}
  .chain-tools{display:grid;gap:10px;max-width:720px;margin-top:16px}
  .chain-tools .row{display:flex;flex-wrap:wrap;gap:6px}
  .chain-tools input{width:100%;background:#0b171d;border:1px solid var(--line);border-radius:8px;padding:10px 12px;color:var(--text);min-height:44px;font:inherit}
@@ -90,13 +96,13 @@
  </div>
  <p id="chain-status" role="status" aria-live="polite"></p>
  </div>
- <div class="legend" aria-hidden="true"><span><i class="r"></i>Floden: fra fysisk (gul) til digital (cyan)</span><span><i></i>Dæmning: et sted, hvor NDI ser flaskehalse</span></div>
+ <div class="legend" aria-hidden="true"><span><i class="r"></i>Floden: fra fysisk (gul) til digital (cyan)</span><span><i></i>Gruppe: de fem dæmninger i flodbilledet</span><span>Mærke på leddet: hvad NDI har skrevet om pres, med kilde</span></div>
 
  <div class="river" id="river"><p class="src">Indlæser kæden…</p></div>
 
  <aside class="side">
  <strong>Flodsystemet.</strong> <span id="flod"></span>
- <p class="link-row" style="margin:10px 0 0"><a href="vaerdikaeder.html#kap-flod">Dæmningerne forklaret →</a> · <a href="vaerdikaeder.html?kaede=energy#kap-kaeder">Energikæden →</a> · <a href="vaerdikaeder.html?kaede=physical#kap-kaeder">Robotik →</a> · <a href="vaerdikaeder.html?kaede=space#kap-kaeder">Rumkæden →</a> · <a href="vaerdikaeder.html?kaede=quantum#kap-kaeder">Kvante (kort) →</a></p>
+ <p class="link-row" style="margin:10px 0 0"><a href="vaerdikaeder.html#kap-flod">Dæmningerne forklaret →</a> · <a href="vaerdikaeder.html?kaede=ai-compute#a-pane">Flodkortet →</a> · <a href="vaerdikaeder.html?kaede=energy#kap-kaeder">Energikæden →</a> · <a href="vaerdikaeder.html?kaede=physical#kap-kaeder">Robotik →</a> · <a href="vaerdikaeder.html?kaede=space#kap-kaeder">Rumkæden →</a> · <a href="vaerdikaeder.html?kaede=quantum#kap-kaeder">Kvante (kort) →</a></p>
  </aside>
  <section class="others" aria-labelledby="oc-h">
  <h2 id="oc-h">Fire andre kæder</h2>
@@ -147,7 +153,7 @@
  { label: 'Dæmning 1 · Energi', hint: 'Første flaskehals', ids: ['energi'] },
  { label: 'Dæmning 2 · Datacentre', hint: 'Fabrikken for compute', ids: ['datacenter'] },
  { label: 'Dæmning 3 · Halvledere', hint: 'Design, fab, hukommelse, optik og servere', ids: ['chipdesign', 'equipment', 'foundry', 'memory', 'optics', 'servers'] },
- { label: 'Dæmning 4 · Cloud og modeller', hint: 'Adgang til compute og data', ids: ['cloud', 'data'] },
+ { label: 'Dæmning 4 · Cloud og modeller', hint: 'Ifølge NDI endnu ingen tydelig flaskehals', ids: ['cloud', 'data'] },
  { label: 'Dæmning 5 · Anvendelse', hint: 'Her opstår efterspørgslen', ids: ['software', 'agents', 'physical-ai'] },
  ];
  const placed = new Set(GROUPS.flatMap(g => g.ids));
@@ -156,6 +162,18 @@
  const byId = Object.fromEntries(links.map(l => [l.id, l]));
  const num = Object.fromEntries(links.map((l, i) => [l.id, i + 1]));
 
+ // Pres-mærke pr. led (samme som flodkortet på vaerdikaeder.html)
+ const PT = { early: 'Begyndende flaskehals', group: 'Del af halvlederne', open: 'Ingen tydelig flaskehals', source: 'Efterspørgslen starter her' };
+ const damNo = {};
+ links.filter(l => l.press?.level === 'dam').forEach((l, i) => { damNo[l.id] = i + 1; });
+ const pressLine = (l) => {
+ const p = l.press;
+ if (!p) return '';
+ const tag = p.level === 'dam' ? `${damNo[l.id]}. flaskehals` : PT[p.level];
+ if (!tag) return '';
+ const s = p.src === 'tolkning' ? '<span class="src">(vores tolkning)</span>' : `<span class="src">Kilde: ${esc(p.src)}</span>`;
+ return `<p class="press lv-${esc(p.level)}"><span class="pt">${esc(tag)}</span>${esc(p.t)}${s}</p>`;
+ };
  const river = document.getElementById('river');
  river.innerHTML = GROUPS.map(g => {
  const ls = g.ids.map(id => byId[id]).filter(Boolean);
@@ -168,6 +186,7 @@
  <div>
  <h3>${num[l.id]}. ${esc(l.label)}${l.kind === 'ndi' ? '<span class="tag" title="NDI har skrevet om leddet">NDI</span>' : ''}</h3>
  <p>${esc(l.blurb)}</p>
+ ${pressLine(l)}
  <p class="meta"><b>${l.count}</b> selskaber · ca. ${pct(l.weightSum.toFixed(1))} % af fonden (forsinket)</p>
  <p class="hit-why"></p>
  ${top.length ? `<details><summary>Største positioner i leddet (${top.length} af ${l.count})</summary><ol>${top.map(c => `<li><a href="selskab.html?isin=${encodeURIComponent(c.isin)}&fund=${fundId}">${esc(c.name)}</a> · vægt ${pct(c.w)} %</li>`).join('')}</ol></details>` : ''}

@@ -306,3 +306,13 @@ Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html, v
 4. **vaerdikaede.html:** Hvert af de fire kæde-kort har fået et lær-link (🚀 ⚡ ⚙ ⏳), der åbner fanens forklaring direkte. vaerdikaeder.html understøtter nu deep-link til en sektion i en fane (`?kaede=energy#e-pane`, `#sp-cost`, `#p-pane`, `#q-hz`).
 Tjek: Playwright på 1280 og 375 med 0 konsolfejl og ingen sidescroll. Energi-hop fra datacenter-stationen åbner `ai-compute#lk-datacenter`, og alle 4 lær-links lander på sektionen. smoke.mjs 52/52 fail 0 (egen server på 8817). Precheck PASSED. Grep efter handelssprog og tankestreger giver 0 hits.
 Næste: AI-kædens 13 led kan få pres-mærker på samme måde (kun med NDI-kilde), og rum-fanen kan få en lille "hvem bygger hvad"-oversigt pr. højdebånd fra beholdningen. Ikke færdig.
+
+
+## Fra Claude lane-A · 2026-10-16 ~00:23 CEST
+Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html, vaerdikaede.html, value-chains.json og notes.
+1. **AI-fanen: "Floden gennem 13 led".** Nyt flodkort (inline SVG) med de 13 led i Mads' rækkefølge som stationer på en flod. Energi, datacentre og chipdesign har gule dæmninger ("1./2./3. flaskehals"), hukommelse og optik er mærket "begyndende flaskehals", og halvlederne står i en fælles boks. Cloud, data og software har stiplet ring ("ingen tydelig flaskehals"), og agenter og fysisk AI er cyan ("efterspørgslen starter her"). Alle mærker har kilden BLOG 30. marts 2026. Udstyr og foundry er mærket "(vores tolkning)", fordi NDI ikke har skrevet om pres netop dér. Kortet er vandret på desktop og lodret på mobil, og hver station åbner sit led. Data ligger i `press`, `short` og `riverMap` på ai-compute.
+2. **Pres-mærke på hvert AI-led-kort** (vaerdikaeder) og på hver node i vaerdikaede.html. Legenden på vaerdikaede.html siger ikke længere, at alle fem grupper er flaskehalse, og dæmning 4 står nu som "ifølge NDI endnu ingen tydelig flaskehals".
+3. **Handelssprog fjernet:** Agentisk AI sagde "NDI forventer, at dette led over tid fylder mere i porteføljen". Det er skrevet om til efterspørgsel og copilots.
+4. Deep-link `?kaede=ai-compute#a-pane`. Der er et link fra "Fem dæmninger" og fra vaerdikaede.html, og sektioner i faner har fået scroll-margin, så overskriften ikke gemmer sig under menuen.
+Tjek: Playwright på 1280 og 375 med 0 konsolfejl og ingen sidescroll. 13 stationer, og klik på 6 åbner `#lk-memory`. smoke.mjs fail 0 (egen server på 8817). Precheck PASSED. Grep efter handelssprog og tankestreger giver 0 hits.
+Næste: rum-fanen kan få "hvem bygger hvad" pr. højdebånd fra beholdningen (antal pr. led, ingen nøgletal), og kvante kan få krydslinks fra AI-flodkortet. Ikke færdig.

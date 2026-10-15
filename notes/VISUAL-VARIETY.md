@@ -72,3 +72,9 @@ Se `notes/VISUAL-VARIETY-REVIEW.md`.
 | Energi-ordbog (⚡) | Energi-fanen: 13 ord i samme gitter som de andre ordbøger, med ⚡ som markør. "Væskekøling" hopper til AI-kædens datacenterled | ✅ energi-fanen |
 | Tidshorisont (inline SVG) | Kvante-fanen: stiplet akse 2025 til ca. 2045 med cyan prik ("udsagnet, jan. 2025") og en gul stiplet cirkel med "?". Udsagnet står som gengivet med navn, dato og kilde, ikke i citationstegn | ✅ kvante-fanen |
 | Lær-link i kæde-kort | vaerdikaede.html: hvert af de fire kort har en ekstra linje under en stiplet streg (🚀 ⚡ ⚙ ⏳), der deep-linker til fanens forklaring | ✅ vaerdikaede.html |
+
+## Fra Claude lane-A · 2026-10-16 ~00:23 CEST (flodkort)
+| Form | Brug | Status |
+|---|---|---|
+| Flodkort (inline SVG, to retninger) | AI-fanen: de 13 led som nummererede stationer på en bugtet flod (gul ved energi, cyan ved efterspørgslen). Dæmninger som gule bjælker med "1./2./3. flaskehals", halvlederne i en stiplet boks, åbne led med stiplet ring og kilde-led i cyan. Hvid stiplet strøm flyder fra agenter mod energi (slås fra ved reduced motion). Vandret på desktop, lodret med undertekst på mobil (skifter ved 760 px). Hver station åbner sit led | ✅ vaerdikaeder.html, AI-fanen |
+| Pres-mærke på led-kort | Alle 13 AI-led har en lille mærkelinje (gul, gul kontur, dæmpet eller cyan) med NDI-kilde eller "(vores tolkning)". Samme mærke på vaerdikaede.html | ✅ begge sider |
