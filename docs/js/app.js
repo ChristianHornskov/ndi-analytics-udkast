@@ -79,7 +79,11 @@ function writeUrl(replace = false) {
 
 function toast(msg) {
   let t = $('.toast');
-  if (!t) { t = document.createElement('div'); t.className = 'toast'; document.body.append(t); }
+  if (!t) {
+    t = document.createElement('div'); t.className = 'toast';
+    t.setAttribute('role', 'status'); t.setAttribute('aria-live', 'polite');
+    document.body.append(t);
+  }
   t.textContent = msg;
   t.hidden = false;
   clearTimeout(toast._id);

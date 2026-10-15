@@ -49,26 +49,26 @@
   </footer>
 
   <template id="dlg-invest">
-    <div class="dialog" role="dialog" aria-labelledby="inv-title">
+    <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="inv-title">
       <header><h2 id="inv-title">Sådan investerer du</h2><button type="button" data-close aria-label="Luk">✕</button></header>
       <div class="body">
         <p>Find fonden dér, hvor du investerer (bank, depotbank eller handelsplatform). Søg på navn eller ISIN. Ingen minimumsinvestering i de danske andelsklasser.</p>
-        <p><strong style="color:var(--text)">PMINDI</strong> – udloddende (udbytte udbetales). ISIN for kl. n.</p>
+        <p><strong style="color:var(--text)">PMINDI</strong> – udloddende (udbytte udbetales).</p>
         <div class="copy-row"><div><span>ISIN</span><b>DK0062499810</b></div><button type="button" class="outline-btn small" data-copy="DK0062499810">Kopiér ISIN</button></div>
-        <p><strong style="color:var(--text)">PMINDIAKK</strong> – akkumulerende (afkastet geninvesteres i fonden). ISIN for kl. n.</p>
+        <p><strong style="color:var(--text)">PMINDIAKK</strong> – akkumulerende (afkastet geninvesteres i fonden).</p>
         <div class="copy-row"><div><span>ISIN</span><b>DK0064642623</b></div><button type="button" class="outline-btn small" data-copy="DK0064642623">Kopiér ISIN</button></div>
-        <p class="warn">PMINDI udbetaler udbytte. PMINDIAKK geninvesterer afkastet. Hvilken der passer til dig, afhænger af din situation. Søg rådgivning ved tvivl. Dette er generel information — ikke personlig rådgivning.</p>
+        <p class="warn">PMINDI udbetaler udbytte. PMINDIAKK geninvesterer afkastet. Valget mellem de to klasser afhænger af den enkeltes forhold. Er du i tvivl, kan du tale med din egen rådgiver. Dette er generel information — ikke personlig rådgivning.</p>
       </div>
     </div>
   </template>
 
   <template id="dlg-follow">
-    <div class="dialog" role="dialog" aria-labelledby="fol-title">
+    <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="fol-title">
       <header><h2 id="fol-title">Følg med (udkast)</h2><button type="button" data-close aria-label="Luk">✕</button></header>
       <div class="body">
         <p>Senere: daglig/ugentlig mail om valgte selskaber eller temaer (Mailchimp-tags). Ingen login.</p>
-        <label class="field-label" style="display:block;margin:12px 0 6px;color:var(--text)">E-mail</label>
-        <input type="email" placeholder="dig@example.com" style="width:100%;padding:10px;border-radius:8px;border:1px solid var(--line);background:#0b171d;color:var(--text)">
+        <label class="field-label" for="follow-email" style="display:block;margin:12px 0 6px;color:var(--text)">E-mail</label>
+        <input type="email" id="follow-email" autocomplete="email" placeholder="dig@example.com" style="width:100%;padding:10px;border-radius:8px;border:1px solid var(--line);background:#0b171d;color:var(--text)">
         <p style="font-size:12px;margin-top:10px">Ved at skrive dig op accepterer du, at vi må sende dig information om NDI Analytics. Du kan afmelde når som helst. Vi minimierer data (GDPR). <em>Tilmelding er ikke aktiv i dette udkast.</em></p>
         <p style="margin-top:14px"><button type="button" class="outline-btn" data-subscribe>Skriv mig op</button></p>
         <p class="warn">Eventuelle AI-resuméer vil blive mærket tydeligt som AI og som generel information – ikke NDI's holdning.</p>
@@ -78,7 +78,7 @@
 
   
   <template id="dlg-risk">
-    <div class="dialog" role="dialog" aria-labelledby="risk-title">
+    <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="risk-title">
       <header><h2 id="risk-title">Risici</h2><button type="button" data-close aria-label="Luk">✕</button></header>
       <div class="body">
         <ul class="risk-list" style="padding-left:0;list-style:none;display:grid;gap:10px">
