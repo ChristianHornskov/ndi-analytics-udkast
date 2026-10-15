@@ -46,8 +46,8 @@
     .vs .lab{font-size:11px;color:var(--muted);letter-spacing:.4px;margin-bottom:8px}
     .vs .arrow{align-self:center;justify-self:center;color:var(--yellow);font-size:22px;transform:rotate(90deg)}
     @media(min-width:720px){.vs .arrow{transform:none}}
-    .flod .scroll-hint{display:none;font-size:11px;color:var(--faint);margin:0 0 6px}
-    @media(max-width:659px){.flod .scroll-hint{display:block}}
+    .flod .flod-v{display:none}
+    @media(max-width:659px){.flod{overflow-x:visible}.flod .flod-h{display:none}.flod svg.flod-v{display:block;min-width:0;max-width:340px}}
     .box1{border:1px dashed var(--faint);border-radius:8px;padding:10px;font-size:14px;color:var(--muted)}
     .chips{display:flex;flex-wrap:wrap;gap:6px}
     .chips span{border:1px solid var(--brand);border-radius:999px;padding:3px 10px;font-size:13px;color:var(--cyan)}
@@ -119,8 +119,7 @@
       <h2 id="h-flod">Flodsystemet på ét billede</h2>
       <p class="sub">«Vi ser AI-værdikæden som et flodsystem med en række dæmninger. Vandet repræsenterer efterspørgslen, og dæmningerne repræsenterer flaskehalse.» — NDI ugebrev, 30. marts 2026.</p>
       <figure class="flod" style="margin:0">
-        <p class="scroll-hint" aria-hidden="true">Rul vandret for alle fem dæmninger →</p>
-        <svg viewBox="0 0 680 160" role="img" aria-labelledby="flod-t flod-d">
+        <svg class="flod-h" viewBox="0 0 680 160" role="img" aria-labelledby="flod-t flod-d">
           <title id="flod-t">Flodsystemet: efterspørgsel som vand, flaskehalse som dæmninger</title>
           <desc id="flod-d">En flod løber fra venstre mod højre gennem fem dæmninger: energi, datacentre, halvledere, cloud og modeller samt apps og fysisk AI. De tre første er markeret som de flaskehalse, NDI selv har nummereret.</desc>
           <text class="cap" x="8" y="22">EFTERSPØRGSEL (VAND)</text>
@@ -152,6 +151,40 @@
           <text class="lbl" x="600" y="128" text-anchor="middle">Apps &amp; fysisk AI</text>
           <text class="hint" x="600" y="144" text-anchor="middle">Efterspørgsel fra bunden</text>
         </g>
+        </svg>
+        <svg class="flod-v" viewBox="0 0 320 520" role="img" aria-labelledby="flodv-t flodv-d">
+          <title id="flodv-t">Flodsystemet: efterspørgsel som vand, flaskehalse som dæmninger</title>
+          <desc id="flodv-d">En flod løber oppefra og ned gennem fem dæmninger: energi, datacentre, halvledere, cloud og modeller samt apps og fysisk AI. De tre første er markeret som de flaskehalse, NDI selv har nummereret.</desc>
+          <text class="cap" x="8" y="22">EFTERSPØRGSEL (VAND) ↓</text>
+          <path d="M62 40 C 42 130, 82 200, 62 270 S 42 420, 62 500" fill="none" stroke="#1d4a55" stroke-width="22" stroke-linecap="round"/>
+          <path class="water" d="M62 40 C 42 130, 82 200, 62 270 S 42 420, 62 500" fill="none" stroke="var(--cyan)" stroke-width="2" stroke-dasharray="10 14" opacity=".8"/>
+        <g>
+          <rect x="38" y="90" width="48" height="12" rx="3" fill="var(--yellow)"/>
+          <text class="lbl" x="110" y="94">Energi</text>
+          <text class="hint" x="110" y="110">1. flaskehals</text>
+        </g>
+        <g>
+          <rect x="38" y="174" width="48" height="12" rx="3" fill="var(--yellow)"/>
+          <text class="lbl" x="110" y="178">Datacentre</text>
+          <text class="hint" x="110" y="194">2. flaskehals</text>
+        </g>
+        <g>
+          <rect x="38" y="258" width="48" height="12" rx="3" fill="var(--yellow)"/>
+          <text class="lbl" x="110" y="262">Halvledere</text>
+          <text class="hint" x="110" y="278">3. flaskehals</text>
+        </g>
+        <g>
+          <rect x="38" y="342" width="48" height="12" rx="3" fill="var(--brand)" opacity=".55"/>
+          <text class="lbl" x="110" y="346">Cloud &amp; modeller</text>
+          <text class="hint" x="110" y="362">Svær at spotte</text>
+        </g>
+        <g>
+          <rect x="38" y="426" width="48" height="12" rx="3" fill="var(--brand)" opacity=".55"/>
+          <text class="lbl" x="110" y="430">Apps &amp; fysisk AI</text>
+          <text class="hint" x="110" y="446">Efterspørgsel fra bunden</text>
+        </g>
+          <text class="cap" x="110" y="494">NÅR EN DÆMNING LETTER,</text>
+          <text class="cap" x="110" y="509">FLYTTER PRESSET ↓</text>
         </svg>
         <figcaption>Gul = de tre flaskehalse, NDI har nummereret (energi, datacentre, halvledere). Illustration af en tankegang, ikke en prognose eller en anbefaling. <a href="vaerdikaeder.html#kap-flaskehalse">Se flaskehalse på værdikæder →</a></figcaption>
       </figure>

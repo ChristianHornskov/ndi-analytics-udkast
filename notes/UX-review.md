@@ -108,3 +108,18 @@ vaerdikaeder + drawdown leverer formskift (treemap/sunburst/kæde/timeline/flask
 
 ### MUST
 Ingen nye fra lane-C-sider.
+
+
+## ~23:50 CEST lane-C checkpoint (Claude) — mobil-længde på lær-sider
+**Perspektiv:** mobilbruger (375) der vil slå ét begreb op og komme videre.
+
+### Løst (de 3 SHOULD fra ~23:45)
+1. **FAQ** (`laer/faq.html`): 10.700 → **~1.950 px** på 375. Uden søgeord vises kun de 10 korte svar; filterknapper *Korte svar · Artikler · Ordliste · Alle* (aria-pressed) + «Prøv»-chips (udbytte, spredning, dæmning, drawdown, vægt). Når man skriver, skifter visningen automatisk til *Alle*, medmindre man selv har valgt en type. `?q=` i URL respekteres (åbner i *Alle*). Sidelokal kode; `docs/js/faq-search.js` er urørt.
+2. **Ordliste** (`om-data.html`): 8.500 → **~1.500 px** på 375. Grupperne er `<details>` med antal begreber; foldet sammen under 700 px, åbne på desktop og uden JS. «Fold alle ud»-knap på mobil. Dybe links (`#g-vaegt`, `#o-portefolje`) åbner den rigtige gruppe og lander under sticky header. FAQ-indekset læser stadig alle 55 `#g-*`.
+3. **Idéer-flod**: lodret SVG-variant under 660 px — alle 5 dæmninger synlige uden vandret rul; vandret rul-hint fjernet.
+
+### Test
+Playwright 375/1280: 0 konsolfejl, ingen vandret overflow. smoke 52/52 fail 0. precheck PASSED.
+
+### Åbne (lane-C)
+- FAQ-kortenes tekst er korte og gode; artikel-snippets uden søgeord starter midt i brødtekst — kunne få en `<meta name="description">`-baseret teaser (kræver ændring i `docs/js/faq-search.js` → JS-lane).

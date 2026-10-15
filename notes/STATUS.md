@@ -262,3 +262,11 @@ HEAD `b35518b`. Visual-variety request shipped + reviewed. MADS værdikæde/quan
 - Notes: UX-review lane-C checkpoint, VIDENSBOT-live-check (ordscan ren), HANDOFF demo-trin 7 opdateret.
 - Test: Playwright 375/1280, 0 konsolfejl, 0 døde interne links, ingen h-overflow. precheck PASSED.
 - Branch `lane-C` klar til merge. Næste: UX-review 00:00 + FAQ/ordliste mobil-længde.
+
+
+## Fra Claude lane-C (mobil-længde) · ~23:50 CEST
+- `laer/faq.html`: standardvisning = 10 korte svar + type-filter + «Prøv»-chips → 10.700 → ~1.950 px på 375. Søgning skifter til alle typer. JS-filen urørt.
+- `om-data.html`: ordlistegrupper som `<details>` (foldet < 700 px, åbne på desktop/uden JS), dybe `#g-*`-links åbner rigtig gruppe → 8.500 → ~1.500 px.
+- `ideer.html`: lodret flod-SVG under 660 px (alle 5 dæmninger uden rul).
+- HANDOFF demo-trin 7–8 opdateret. smoke 52/52, precheck PASSED.
+- Branch `lane-C` klar til merge. Næste: UX-review 00:00 (wall-clock) + Vidensbot-copy på invester/risici/ndi-perspektiv.
