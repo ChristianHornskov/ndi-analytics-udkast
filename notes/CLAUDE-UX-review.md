@@ -36,3 +36,31 @@ Grundlag: live Pages (last-modified 21:50 UTC ≈ `a341c99`) + lokal `docs/` eft
 - `?periode=1m/3m` i embed ignoreres korrekt (viser siden start).
 - SoftBank-siden: "Hvilket problem løser det?", kilder med tjekdato, AI-udkast-mærker pr. felt, Group ≠ Corp. Stærk.
 - Fakta-siden med IFS/depotbank/rådgiver/CVR lukker en stor del af FO MUST 1.
+
+## 2026-10-16 00:00 CEST · cyklus 2
+Grundlag: `origin/main` `8b30c48` (lane-A: 13-leds vaerdikaede + deep-link). Pages: tekstdump af 17 sider er **identisk** med lokal main, så Pages er à jour. Playwright 1366 + 375, 26 URL'er, 0 JS-fejl, 0 4xx. Kort cyklus: kun få commits siden cyklus 1.
+
+### MUST (åbne fra cyklus 1, ingen ændring)
+1. **Drawdown-datoer** står stadig som "2. jun. 2026 → 8. apr. 2025" (risici) og "2026-06-02 → 2025-04-08" (fakta). `risk-stats.json` er uændret.
+2. **drawdown.html på 375 har stadig overflow**: scrollWidth 587. Det er den eneste side med vandret scroll.
+3. **Omkostningslink fra invester.html trin 4** mangler stadig.
+
+### SHOULD (nyt i denne cyklus)
+- **vaerdikaede.html (ny, 13 led) er god.** Den har dæmning-grupper, flod-gradient, "forsinket" pr. led og top 5 i `<details>`. Mindre punkter:
+  - **Lednumrene modsiger NDI-linsen.** `unique-metrics.json` siger "Led 1 og led 2: Energi og fysisk tech" (Tesla), "Led 3: chips" (Nvidia) og "Led 5: platforme" (Meta). Det følger den gamle 6-leds model. Linkene peger nu på 13-leds siden, hvor led 2 er Datacentre og led 5 er Foundry. FO ser modsigelsen med det samme. Brug ledets navn i stedet for nummer, eller opdatér til de 13 led.
+  - **Temaknapperne** (Energi / Fysisk tech / Software / Platforme / Chips / Compute / Optik) er en anden taksonomi end de 13 led og ligger lige over dem. Privat-personaen forstår ikke forskellen. Giv dem overskriften "Filtrér på tema".
+  - **"NDI"-mærket** på alle 13 led (title: "NDI har skrevet om leddet") kan ikke ses på mobil, fordi det kun står i en tooltip. Når mærket står på alle led, skiller det ikke noget fra. Fjern det, eller vis det kun, hvor det betyder noget.
+  - **Vægtsummen over leddene er ca. 50,9 %**, og selskaber kan stå i flere led. Der står "Vægt er summen af de tilordnede selskabers vægt" (godt), men tilføj "et selskab kan tælle i flere led", så ingen lægger tallene sammen.
+  - "BLOG 30. marts 2026" ser ud som en intern kildekode. Skriv "NDI-blog, 30. marts 2026" og link til indlægget.
+- **Udforsk på 375 er 26.300 px høj** (751 tekstlinjer). Det er den længste side. Indsæt fold eller "vis flere" efter de første sektioner (visual fatigue, begge personas).
+- **Porteføljen viser nu "80 af 345"**. Det er bedre end 345 rækker, men en tydelig **top 10** med temasøjler øverst mangler stadig.
+- Tomme stubs er uændrede: "Følg tema (stub)", "udfyldes af NDI" ×3 og "AFVENTER GENNEMGANG".
+- Uændret: "38.9 kr." og "Central Information Dokument" ×7 i footer.
+
+### Nice
+- Deep-link `vaerdikaeder.html?kaede=ai-compute#lk-memory` virker på 1366 og 375. Behold det.
+- Tesla `vaerdikaede.html?isin=` markerer 2 led. Godt til "hvor sidder mit selskab".
+
+### Godt / behold
+- Gaten for PMINDIAKK-afkast ("Vises efter 12 måneder … fra december 2026") er tydelig (se dog compliance om NAV).
+- AI-udkast-mærker på ndi-perspektiv (9) og SoftBank (13).

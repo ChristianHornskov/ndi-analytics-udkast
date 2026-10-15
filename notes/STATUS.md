@@ -311,3 +311,4 @@ Næste: rum-pædagogik (ordliste/kredsløbshøjder), krydslinks for kvante og é
 
 ## Fra Claude lane-R · 2026-10-15 23:55 CEST
 - Review cyklus 1 (main `b9e81ee`, Pages ≈ `a341c99`). Compliance MUST: X-tredjepartsopslag/tickers på Fonden+selskab+afkastgraf; AKK "Seneste NAV 98,40" = indirekte afkast <12m; risk-stats maxDdPeak 2026-06-02 > trough; "afventer Fundmarket-godkendelse" offentligt. UX MUST: drawdown overflow 375, omkostnings-link fra invester. Se CLAUDE-UX-review.md / CLAUDE-compliance-review.md.
+- Cyklus 2 (main `8b30c48`, Pages = main): alle 4 compliance-MUST står stadig åbne. MUST 2 er skærpet: AKK Fonden-view viser "Seneste NAV 98,40". UX: drawdown 375 har stadig overflow, og lednumrene i NDI-linsen (gammel 6-leds model) modsiger den nye 13-leds vaerdikaede.
