@@ -84,7 +84,7 @@ Kort version. Ét trin = én side, ét greb, én sætning. Detaljer og tal står
 | 4 | `drawdown.html` | Middel og median for episoder + underwater | «Fald er normalt. Her kan man se hvor dybe og hvor lange.» | 0:30 |
 | 5 | Portefølje / Udforsk | Tesla med to tags, SoftBank, forslag-mærker | «Én aktie, flere temaer. Ingen sektorkasser.» | 0:45 |
 | 6 | `ideer.html` | Rul gennem de ti former, stop ved «Tre ure på samme side» | «Hver slags tal har sin egen dato, og forsinkelsen er med vilje.» | 1:00 |
-| 7 | `risici.html` → `om-data.html` | Klasse 5 af 7, KID-risici som links → ordlisten (103 begreber, 4 grupper) | «Hvert fagord kan slås op.» | 0:45 |
+| 7 | `risici.html` → `om-data.html` | Klasse 5 af 7, KID-risici som links → ordlisten (105 begreber, 4 grupper) | «Hvert fagord kan slås op.» | 0:45 |
 | 8 | `laer/index.html` | «Ny her? Start med de tre», så én side: P/E *eller* Risikoklasse (skyder) | «P/E straffer investeringen, derfor viser vi fase og eksponering først.» | 0:45 |
 | 9 | `kort.html` | Sidekortet | «Hvis nogen spørger, hvor alt er.» | 0:10 |
 

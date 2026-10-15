@@ -1318,4 +1318,12 @@ Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke me
 - NB: tidsstempler i mine tidligere STATUS-poster (01:25–01:40) var skøn; dette er wall-clock.
 - Test: 8763, 375/1280 på 6 sider: 0 konsolfejl, ingen h-overflow, 0 døde links/ankre. precheck: se push.
 - Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + ordlistepost «Energi» / ndi-perspektiv.
+
+## Fra Claude lane-C (ideer: to klasser, samme temaer + ordliste 105) · 01:25 CEST 16/10 (wall-clock)
+- `ideer.html`: tolvte form «To klasser, samme temaer» (håndvægtdiagram, temavægte PMINDI vs PMINDIAKK pr. 1. jun 2026, største forskel 1,5 pp). og:description fulgt med. Link fra `laer/udbytte-vs-akk.html`.
+- `om-data.html`: ordliste 105 (Energi (tema), High growth), tællere 24 · 20 · 34 · 27. `ndi-perspektiv.html` linker flodsystem/dæmning/energi/modenhed til ordlisten. `kort.html` 105 + ideer-beskrivelse. HANDOFF trin 7: 105.
+- Test: 8763, 375/1280 på 5 sider: 0 konsolfejl, ingen h-overflow, 0 døde ankre. precheck: se push.
+- Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) på hele lane-C-fladen ved 375 px.
+
+- Coordinator-loop 2026-10-16 01:26:18 CEST: CONFLICT merge origin/lane-R (ahead 1) — aborted, not pushed
 - **Fra Claude lane-R (01:48, cyklus 18, main `299e7a2`):** ndi-paa-x er stadig tom (`feedHitKind`, 5. cyklus). Linse 310, men kun 98 profiler (215 stubs). "MADS FØLGER" står nu på 5 sider (+tema energi). ÅOP/før skat er nu i ordlisten ✅, men der er stadig intet KID-omkostningstal. SRI-vs-vol og de øvrige MUST er åbne.

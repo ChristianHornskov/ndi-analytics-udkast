@@ -302,3 +302,13 @@ Ingen nye.
 - HANDOFF: morgendemoen er nu en tabel med 9 trin (side · vis · sig · tid ≈ 6 min) + tjekliste + ord at undgå. Den lange tekst ligger urørt som «Demo-detaljer» nederst.
 - Obs: Fonden-nøgletallet hedder «Største fald», men graftekster i app.js siger «max drawdown i perioden» (IDEAS, js-ejer).
 - Test 375/1280 på ideer, om-data#g-skat, invester, FAQ, udbytte-vs-akk, kort: 0 konsolfejl, ingen h-overflow, 0 døde links/ankre. Screenshot af formen gennemset på begge bredder.
+
+## 01:25 CEST lane-C checkpoint (Claude) · ideer «To klasser, samme temaer» + ordliste 105
+### Løst
+- `ideer.html` tolvte form: håndvægtdiagram (dumbbell) med temavægte for PMINDI (fyldt cyan) og PMINDIAKK (gul ring) pr. 1. jun 2026, 11 temaer. Tal genereret direkte fra portfolio.json (sum af `weight` pr. `theme`). Største forskel 1,5 procentpoint (Andet). På 375 px rykker sporet under navn og tal, så intet presses. Aksens «18 %» brød linjen, rettet med nowrap.
+- Ordliste 103 → 105: «Energi (tema)» (energiressourcer-posten henviste til et tema uden egen post) og «High growth» (stod i modenhedsrækken uden forklaring).
+- `ndi-perspektiv.html`: flodsystem, dæmninger, energi og modenhed i linse-forklaringen linker nu til ordlisten. Ordlyden var allerede i flodsystem-sprog, intet handelsprog fundet.
+### SHOULD (andre lanes)
+- Index «Porteføljen» kunne linke til `ideer.html#h-kl`, når brugeren skifter andelsklasse. Det er ikke min fil.
+### Test
+- 8763, 375/1280 på 5 sider: 0 konsolfejl, ingen h-overflow, 0 døde ankre (også på tværs af sider).
