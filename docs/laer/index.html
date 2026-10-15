@@ -11,7 +11,7 @@
  <meta property="og:site_name" content="NDI Analytics (udkast)">
  <meta property="og:locale" content="da_DK">
  <meta property="og:title" content="Lær · NDI Analytics">
- <meta property="og:description" content="Korte artikler - generel information, ikke rådgivning.">
+ <meta property="og:description" content="Korte artikler om, hvordan NDI tænker, og hvad tallene betyder. Generel information, ikke rådgivning.">
  <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/laer/index.html">
  <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
  <meta property="og:image:width" content="1200">
@@ -19,6 +19,31 @@
  <meta property="og:image:alt" content="NDI Analytics - udkast. Gå på opdagelse i porteføljen.">
  <meta name="twitter:card" content="summary_large_image">
  <!-- og:end -->
+ <style>
+  .lp{margin:22px 0 8px}
+  .lp h2,.lg h2{font-size:18px;margin:0 0 4px}
+  .lp .sub,.lg .sub{color:var(--muted);margin:0 0 12px;font-size:14px}
+  .path{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;counter-reset:none;position:relative}
+  .path li{position:relative}
+  .path li:not(:last-child)::after{content:"→";position:absolute;right:-11px;top:22px;color:var(--faint);font-size:16px;z-index:1}
+  .path a{display:flex;flex-direction:column;gap:4px;height:100%;padding:14px;border-radius:12px;background:var(--panel-2);border-top:3px solid var(--yellow);text-decoration:none;color:var(--text)}
+  .path a:hover{background:var(--selected)}
+  .path a:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+  .path .n{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--yellow);color:#0b171d;font-weight:700;font-size:14px}
+  .path strong{font-size:16px}
+  .path span:not(.n){color:var(--muted);font-size:13px;line-height:1.45}
+  .path em,.door .fmt{font-style:normal;color:var(--faint);font-size:12px;margin-top:auto}
+  .door .fmt{margin-top:4px}
+  .lg{margin:26px 0 0}
+  .lg .doors{margin:0 0 6px}
+  .dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:8px;vertical-align:1px}
+  .dot.t{background:var(--cyan)}.dot.y{background:var(--yellow)}.dot.c{background:var(--text)}.dot.m{background:var(--faint)}
+  @media (max-width:640px){
+   .path{grid-template-columns:1fr;gap:10px}
+   .path li:not(:last-child)::after{content:"↓";right:auto;left:22px;top:auto;bottom:-15px}
+   .path a{padding:12px}
+  }
+ </style>
 </head>
 <body>
  <a class="skip" href="#main">Gå til indhold</a>
@@ -29,22 +54,59 @@
  <main id="main">
  <p class="eyebrow">LÆR · UDDANNELSE</p>
  <h1>Sådan forstår du NDI's perspektiv</h1>
- <p class="lede">Korte artikler - generel information, ikke rådgivning.</p>
- <div class="doors doors-pair">
- <a class="door" href="saadan-taenker-vi.html"><strong>Sådan tænker vi</strong><span>Tre udgangspunkter og fem principper bag porteføljen.</span><span class="go">Læs →</span></a>
- <a class="door" href="hvorfor-mange-aktier.html"><strong>Hvorfor så mange aktier?</strong><span>Varians, spredning og hvorfor vinderen er svær at pege på.</span><span class="go">Læs →</span></a>
- <a class="door" href="variance-drag.html"><strong>CAGR og gennemsnit</strong><span>Møntspillet, en skyder og hvorfor udsving trækker det årlige afkast ned.</span><span class="go">Læs →</span></a>
- <a class="door" href="pe-forklaring.html"><strong>Hvad P/E fortæller</strong><span>Markedets forventning - ikke en facitliste for tech.</span><span class="go">Læs →</span></a>
- <a class="door" href="livscyklus.html"><strong>Virksomheders livscyklus</strong><span>Fra præ-revenue til value - og hvorfor begge kan indgå.</span><span class="go">Læs →</span></a>
- <a class="door" href="udbytte-vs-akk.html"><strong>Udbytte eller akkumulerende?</strong><span>Ex-dato, totalafkast og de to klasser side om side.</span><span class="go">Læs →</span></a>
- <a class="door" href="valuta.html"><strong>Valuta: aktien og kronen</strong><span>Aktiens og dollarens bevægelse i ét tal - og hvor selskaberne er registreret.</span><span class="go">Læs →</span></a>
- <a class="door" href="forsinket-beholdning.html"><strong>Forsinket beholdning</strong><span>Hvorfor vægte ikke er dagsaktuelle.</span><span class="go">Læs →</span></a>
- <a class="door" href="faq.html"><strong>FAQ-søgning</strong><span>Søg på tværs af ofte stillede spørgsmål.</span><span class="go">Åbn FAQ →</span></a>
- <a class="door" href="faq-mangler-aktie.html"><strong>Hvorfor mangler aktie X?</strong><span>Søg under et andet navn, tragten fra marked til portefølje og typiske grunde.</span><span class="go">Læs →</span></a>
- <a class="door" href="../risici.html"><strong>Risici ved fonden</strong><span>Risikoklasse og vigtigste risici fra KID.</span><span class="go">Læs →</span></a>
- <a class="door" href="../om-data.html"><strong>Ordliste &amp; data</strong><span>CAGR, drawdown, fabless, SRI…</span><span class="go">Åbn →</span></a>
- <a class="door" href="../vaerdikaeder.html"><strong>Teknologiske værdikæder</strong><span>Flodsystem, rum, quantum.</span><span class="go">Åbn →</span></a>
- </div>
+ <p class="lede">Korte artikler om, hvordan vi tænker, og hvad tallene på siden betyder. Generel information, ikke rådgivning.</p>
+
+ <section class="panel lp" aria-labelledby="lp-h">
+  <h2 id="lp-h">Ny her? Start med de tre</h2>
+  <p class="sub">Tilsammen ca. 9 minutter. Derefter kan du tage resten i den rækkefølge, du vil.</p>
+  <ol class="path">
+   <li><a href="saadan-taenker-vi.html"><span class="n">1</span><strong>Sådan tænker vi</strong><span>Vi kan ikke forudsige vinderne. Hvad gør man så?</span><em>≈ 3 min · kæde</em></a></li>
+   <li><a href="hvorfor-mange-aktier.html"><span class="n">2</span><strong>Hvorfor så mange aktier?</strong><span>Spredning, og hvad den kan og ikke kan.</span><em>≈ 3 min · søjler</em></a></li>
+   <li><a href="variance-drag.html"><span class="n">3</span><strong>CAGR og gennemsnit</strong><span>Hvorfor udsving trækker det årlige afkast ned.</span><em>≈ 3 min · skyder</em></a></li>
+  </ol>
+ </section>
+
+ <section class="lg" aria-labelledby="g1">
+  <h2 id="g1"><span class="dot t"></span>Tankegangen</h2>
+  <p class="sub">Hvorfor fonden ser ud, som den gør.</p>
+  <div class="doors doors-pair">
+   <a class="door" href="saadan-taenker-vi.html"><strong>Sådan tænker vi</strong><span>Tre udgangspunkter og fem principper bag porteføljen.</span><em class="fmt">Kæde · ≈ 3 min</em><span class="go">Læs →</span></a>
+   <a class="door" href="hvorfor-mange-aktier.html"><strong>Hvorfor så mange aktier?</strong><span>Spredning, vægtfordeling og hvorfor vinderen er svær at pege på.</span><em class="fmt">Søjler · ≈ 3 min</em><span class="go">Læs →</span></a>
+   <a class="door" href="livscyklus.html"><strong>Virksomheders livscyklus</strong><span>Fra selskaber uden omsætning til modne, overskudsgivende selskaber, og hvorfor begge kan indgå.</span><em class="fmt">Kurve · ≈ 3 min</em><span class="go">Læs →</span></a>
+   <a class="door" href="pe-forklaring.html"><strong>Hvad P/E fortæller</strong><span>Et nøgletal, der straffer selskaber, som investerer i fremtiden.</span><em class="fmt">Regneeksempel · ≈ 3 min</em><span class="go">Læs →</span></a>
+  </div>
+ </section>
+
+ <section class="lg" aria-labelledby="g2">
+  <h2 id="g2"><span class="dot y"></span>Afkast og udsving</h2>
+  <p class="sub">Hvad tallene betyder, og hvad de ikke siger.</p>
+  <div class="doors">
+   <a class="door" href="variance-drag.html"><strong>CAGR og gennemsnit</strong><span>Møntspillet fra bogen og en skyder, du selv kan trække i.</span><em class="fmt">Skyder · ≈ 3 min</em><span class="go">Læs →</span></a>
+   <a class="door" href="valuta.html"><strong>Valuta: aktien og kronen</strong><span>Aktiens og dollarens bevægelse i ét tal, og hvor selskaberne er registreret.</span><em class="fmt">Skydere · ≈ 3 min</em><span class="go">Læs →</span></a>
+   <a class="door" href="../risici.html"><strong>Risici ved fonden</strong><span>Risikoklasse 5 af 7 og de vigtigste risici fra KID.</span><em class="fmt">Kort · ≈ 2 min</em><span class="go">Læs →</span></a>
+  </div>
+ </section>
+
+ <section class="lg" aria-labelledby="g3">
+  <h2 id="g3"><span class="dot c"></span>Fonden i praksis</h2>
+  <p class="sub">Når noget på siden undrer dig.</p>
+  <div class="doors">
+   <a class="door" href="udbytte-vs-akk.html"><strong>Udbytte eller akkumulerende?</strong><span>Ex-dato, totalafkast og de to klasser side om side.</span><em class="fmt">Tabel · ≈ 2 min</em><span class="go">Læs →</span></a>
+   <a class="door" href="forsinket-beholdning.html"><strong>Forsinket beholdning</strong><span>Hvorfor vægtene ikke er dagsaktuelle.</span><em class="fmt">Tidslinje · ≈ 2 min</em><span class="go">Læs →</span></a>
+   <a class="door" href="faq-mangler-aktie.html"><strong>Hvorfor mangler aktie X?</strong><span>Søg under et andet navn, og se tragten fra marked til portefølje.</span><em class="fmt">Søgning · ≈ 2 min</em><span class="go">Læs →</span></a>
+  </div>
+ </section>
+
+ <section class="lg" aria-labelledby="g4">
+  <h2 id="g4"><span class="dot m"></span>Slå op</h2>
+  <p class="sub">Når du leder efter ét svar eller ét ord.</p>
+  <div class="doors">
+   <a class="door" href="faq.html"><strong>FAQ-søgning</strong><span>Søg på tværs af ofte stillede spørgsmål.</span><em class="fmt">Søgning</em><span class="go">Åbn FAQ →</span></a>
+   <a class="door" href="../om-data.html"><strong>Ordliste &amp; data</strong><span>CAGR, fald fra top, fabless, risikoklasse og resten af ordene.</span><em class="fmt">Opslag</em><span class="go">Åbn →</span></a>
+   <a class="door" href="../vaerdikaeder.html"><strong>Teknologiske værdikæder</strong><span>Flodsystemet: efterspørgslen er vandet, flaskehalsene er dæmningerne.</span><em class="fmt">Tegning</em><span class="go">Åbn →</span></a>
+  </div>
+ </section>
+
  <p class="warn">Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.</p>
  </main>
 </body>

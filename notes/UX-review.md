@@ -169,3 +169,10 @@ Ingen nye.
 - Skydere testet: 0/−10 → 900 kr., +10/+5 → 1.155 kr., −30/+20 → 840 kr. Fallbacktekst uden JS står under.
 - FAQ: «valuta» finder artiklen (hub-scan i faq-search.js tager den automatisk med) og ordlisteopslaget.
 - Obs til næste review: lær-hubben har nu 13 døre. Overvej gruppering (Afkast · Fonden · Porteføljen) ved 02:00.
+
+## ~00:45 CEST lane-C checkpoint (Claude) — lær-hub grupperet
+- **Før:** 13 ens døre i ét gitter; ingen indgang for nye, ingen forskel på «læs en tanke» og «slå et ord op». Ordliste-døren sagde «drawdown» (jargon).
+- **Nu:** «Ny her? Start med de tre» (nummereret læsesti, gul top, pile → / ↓ på mobil), derefter fire grupper med farveprik og én linje: Tankegangen (2×2) · Afkast og udsving · Fonden i praksis · Slå op. Hver dør viser form + læsetid (ordtælling ÷ ~220 ord/min, rundet).
+- **Jargon:** «drawdown» → «fald fra top» i link-/dørtekster på lane-C-sider (variance-drag, hvorfor-mange-aktier, kort, om-data lede, ideer, FAQ-chip + spørgsmål). **Ikke min fil:** `drawdown.html` hedder stadig «Drawdown · …» i title/h1 — til den lane, der ejer den.
+- **Mobil:** hub 3.409 px (375). Læsestien dublerer 3 døre bevidst; kan skæres, hvis Mads synes den er lang.
+- Test: 375/1280 på 7 sider: 0 konsolfejl, 0 døde links, ingen h-overflow.

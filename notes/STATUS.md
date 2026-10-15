@@ -333,3 +333,10 @@ HEAD `b35518b`. Visual-variety request shipped + reviewed. MADS værdikæde/quan
 - Lær-hub, kort.html, FAQ (nyt kortsvar «Påvirker dollaren afkastet?», jargon fjernet i «Hvorfor så mange aktier?»), risici.html valutakort («mindst to tredjedele i dollar» → link til siden). HANDOFF trin 8–9 opdateret.
 - Test: 375/1280 på 6 sider: 0 konsolfejl, 0 døde links/ankre, ingen h-overflow; skydere verificeret. precheck: se push.
 - Branch `lane-C` klar til merge. Næste: lær-hub gruppering (13 døre) + UX-review 02:00.
+
+## Fra Claude lane-C (lær-hub grupperet + fald fra top) · ~00:45 CEST 16/10
+- `laer/index.html`: læsesti «Ny her? Start med de tre» (Sådan tænker vi → Hvorfor så mange aktier → CAGR og gennemsnit, ca. 9 min) + 13 døre i fire grupper (Tankegangen · Afkast og udsving · Fonden i praksis · Slå op); form + læsetid på hver dør; værdikæde-døren i flodsystem-sprog.
+- Jargon «drawdown» → «fald fra top» i dør-/linktekst: variance-drag, hvorfor-mange-aktier, kort, om-data, ideer, FAQ. **Til anden lane:** `drawdown.html` title/h1 «Drawdown» → «Fald fra top».
+- HANDOFF trin 9 (hub), UX-review checkpoint.
+- Test: 375/1280 på 7 sider: 0 konsolfejl, 0 døde links, ingen h-overflow. precheck: se push.
+- Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + FAQ-kortsvar mod de nye ordliste-begreber.
