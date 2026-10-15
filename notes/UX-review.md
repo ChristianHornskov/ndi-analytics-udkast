@@ -262,3 +262,10 @@ Ingen nye.
 - FAQ-søgning rammer «boble», «markedsbeskyttelse», «investeringsperiode».
 - Obs til js-ejer: `js/faq-search.js` linje 93/96 skriver «træf for “boble”» med engelske anførselstegn. Resten af siden bruger «».
 - Test 375/1280 på 7 sider: 0 konsolfejl, ingen h-overflow, 0 døde links/ankre. Dybe links #g-kapitalbeskyttelse og #g-investeringsperiode åbner den foldede gruppe og fremhæver posten på 375.
+
+## 01:20 CEST lane-C checkpoint (Claude) — hvad står der i tallet? + ÅOP/før skat + kort demo
+- **Hul lukket:** siden sagde mange steder «efter løbende omkostninger, før skat», men forklarede aldrig, hvad det betyder for læserens eget afkast. Ny ellevte form på `ideer.html` «Hvad står der i tallet?»: to grupper lag (fyldt cyan = med i fondens afkast, stiplet = kommer bagefter og afhænger af dig) med en gul «= Fondens afkast» og en stiplet «= Dit eget afkast». Hvert lag linker til ordlisten eller en lær-side. Ingen tal.
+- Ordliste 101 → 103: ÅOP (stod på forsiden og i Fonden uden forklaring) og «Før skat». Fonden-gruppen 20. Linket fra invester (trin 4), FAQ «Hvad koster det?» (+ «Afkasttallene er før skat.», stadig 16 korte svar), udbytte-siden.
+- HANDOFF: morgendemoen er nu en tabel med 9 trin (side · vis · sig · tid ≈ 6 min) + tjekliste + ord at undgå. Den lange tekst ligger urørt som «Demo-detaljer» nederst.
+- Obs: Fonden-nøgletallet hedder «Største fald», men graftekster i app.js siger «max drawdown i perioden» (IDEAS, js-ejer).
+- Test 375/1280 på ideer, om-data#g-skat, invester, FAQ, udbytte-vs-akk, kort: 0 konsolfejl, ingen h-overflow, 0 døde links/ankre. Screenshot af formen gennemset på begge bredder.

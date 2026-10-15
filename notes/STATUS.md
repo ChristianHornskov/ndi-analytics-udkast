@@ -431,3 +431,12 @@ HEAD `b35518b`. Visual-variety request shipped + reviewed. MADS værdikæde/quan
 - Notes: HANDOFF trin 8, UX-review, VIDENSBOT-live-check.
 - Test: 8763, 375/1280 på 7 sider: 0 konsolfejl, ingen h-overflow, 0 døde links/ankre. precheck: se push.
 - Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + ndi-perspektiv sprogtjek mod Vidensbot.
+
+## Fra Claude lane-C (ideer: hvad står der i tallet? + ordliste 103 + kort demo) · 01:20 CEST 16/10 (wall-clock)
+- `ideer.html`: ellevte form «Hvad står der i tallet?» (lag: kurser, valuta, udbytte, løbende omkostninger = fondens afkast; kurtage, skat, købstidspunkt = dit eget afkast). og:description fulgt med.
+- `om-data.html`: ordliste 103 (ÅOP, før skat), tællere 24 · 20 · 32 · 27. Links fra invester, FAQ, udbytte-vs-akk; kort.html 103 + ideer-beskrivelse.
+- `notes/HANDOFF-CODEX.md`: morgendemo som 9-trins tabel (≈ 6 min) med «sig»-sætninger, tjek før demo og ord at undgå. Gammel tekst bevaret som «Demo-detaljer».
+- **Til js-ejer:** app.js «max drawdown i perioden» → «største fald», ÅOP-sætning kan linke #g-aaop (IDEAS).
+- NB: tidsstempler i mine tidligere STATUS-poster (01:25–01:40) var skøn; dette er wall-clock.
+- Test: 8763, 375/1280 på 6 sider: 0 konsolfejl, ingen h-overflow, 0 døde links/ankre. precheck: se push.
+- Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + ordlistepost «Energi» / ndi-perspektiv.

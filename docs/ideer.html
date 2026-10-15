@@ -11,7 +11,7 @@
   <meta property="og:site_name" content="NDI Analytics (udkast)">
   <meta property="og:locale" content="da_DK">
   <meta property="og:title" content="Idéer · NDI Analytics">
-  <meta property="og:description" content="Hvorfor NDI Analytics: flodsystemet, tags i stedet for sektorkasser, 345 selskaber sorteret efter sektor og tema, fra forslag til tema, 345 aktier som prikker, tre datoer på én tidslinje, forsinket beholdning og siderne som et hus.">
+  <meta property="og:description" content="Hvorfor NDI Analytics: flodsystemet, tags i stedet for sektorkasser, 345 selskaber sorteret efter sektor og tema, fra forslag til tema, 345 aktier som prikker, tre datoer på én tidslinje, hvad et afkasttal indeholder, forsinket beholdning og siderne som et hus.">
   <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/ideer.html">
   <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
   <!-- og:end -->
@@ -173,6 +173,22 @@
     .ur-key .k3{background:repeating-linear-gradient(135deg,var(--yellow) 0 3px,transparent 3px 7px)}
     .ur-key .k4{width:0;height:12px;border-left:2px solid var(--yellow);margin-right:7px}
     .ur figcaption{font-size:12px;color:var(--faint);margin-top:12px;line-height:1.5}
+    .lag{background:#0b171d;border:1px solid var(--line);border-radius:14px;padding:14px;margin:0}
+    .lag-grp{list-style:none;margin:0;padding:0 0 0 14px;display:grid;gap:6px;border-left:3px solid var(--cyan)}
+    .lag-grp.ud{border-left:3px dashed var(--faint)}
+    .lag-h{font:600 11px var(--font);letter-spacing:.4px;color:var(--muted);margin:0 0 8px}
+    .lag-grp li{display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;background:#0f2a32;border-radius:8px;padding:8px 10px;font-size:13px;color:var(--muted);line-height:1.45}
+    .lag-grp.ud li{background:transparent;border:1px dashed var(--line)}
+    .lag-grp b{display:block;color:var(--text);font-size:14px;font-weight:600}
+    .lag-grp .sg{font:700 16px var(--font);color:var(--cyan);text-align:center;line-height:1.2}
+    .lag-grp.ud .sg{color:var(--faint)}
+    .lag-sum{display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:center;margin:8px 0 18px;padding:10px;border-radius:8px;border:2px solid var(--yellow);font-size:13px;color:var(--muted);line-height:1.45}
+    .lag-sum:last-of-type{margin-bottom:0}
+    .lag-sum .sg{font:700 18px var(--font);color:var(--yellow);text-align:center}
+    .lag-sum b{color:var(--text);font-size:14px}
+    .lag-sum.mit{border-style:dashed;border-color:var(--faint)}
+    .lag-sum.mit .sg{color:var(--faint)}
+    .lag figcaption{font-size:12px;color:var(--faint);margin-top:12px;line-height:1.5}
     @media (prefers-reduced-motion:no-preference){.flod .water{animation:flow 6s linear infinite}}
     @keyframes flow{to{stroke-dashoffset:-48}}
   </style>
@@ -479,6 +495,29 @@
         </ul>
         <div class="ur-axis" aria-hidden="true"><span style="left:10%">2024</span><span style="left:40.1%">2025</span><span style="left:70%">2026</span><span style="left:100%;transform:translateX(-100%)">2027</span></div>
         <figcaption>Datoer fra portfolio.json og fund-meta.json pr. 14. okt 2026. Kurser fra Fundmarket. Når der kommer en ny offentlig beholdning eller et nyt KID, flytter prikkerne sig. <a href="om-data.html#g-datostempler">Ordliste: datostempler</a> · <a href="om-data.html#g-forsinket">forsinket beholdning</a></figcaption>
+      </figure>
+    </section>
+
+    <section class="idea-sec" aria-labelledby="h-lag">
+      <h2 id="h-lag">Hvad står der i tallet?</h2>
+      <p class="sub">Et afkast på siden er flere bevægelser lagt oven på hinanden. Nogle er med i tallet. Andre kommer bagefter og afhænger af, hvor og hvornår du selv handler. Her er lagene i rækkefølge, uden tal.</p>
+      <figure class="lag">
+        <p class="lag-h">MED I FONDENS AFKAST</p>
+        <ol class="lag-grp">
+          <li><span class="sg" aria-hidden="true">±</span><span><b>Aktiernes kurser</b>Selskabernes kurser i deres egen valuta, oftest dollar.</span></li>
+          <li><span class="sg" aria-hidden="true">±</span><span><b>Valutakursen</b>Omregningen til kroner. Den kan trække begge veje. <a href="laer/valuta.html">Regnestykket →</a></span></li>
+          <li><span class="sg" aria-hidden="true">+</span><span><b>Udbytte</b>I <a href="om-data.html#g-total">totalafkastet</a> regnes udbyttet som geninvesteret. PMINDIAKK lader det blive i fonden. <a href="laer/udbytte-vs-akk.html">Forskellen →</a></span></li>
+          <li><span class="sg" aria-hidden="true">−</span><span><b>Fondens løbende omkostninger</b>Allerede trukket i andelskursen. <a href="om-data.html#g-omkostninger">Ordliste →</a></span></li>
+        </ol>
+        <p class="lag-sum"><span class="sg" aria-hidden="true">=</span><span><b>Fondens afkast.</b> Det tal, NDI Analytics viser, regnet fra <a href="om-data.html#g-foerste-nav">første NAV</a>.</span></p>
+        <p class="lag-h">KOMMER BAGEFTER, AFHÆNGER AF DIG</p>
+        <ol class="lag-grp ud">
+          <li><span class="sg" aria-hidden="true">−</span><span><b>Kurtage og spread</b>Det, din bank eller platform tager, når du handler. <a href="om-data.html#g-kurtage">Ordliste →</a></span></li>
+          <li><span class="sg" aria-hidden="true">−</span><span><b>Skat</b>Afhænger af din situation og af den konto, du investerer fra. <a href="om-data.html#g-skat">Før skat →</a></span></li>
+          <li><span class="sg" aria-hidden="true">±</span><span><b>Hvornår du købte</b>Siden regner fra fondens start. Dit eget forløb begynder den dag, du købte.</span></li>
+        </ol>
+        <p class="lag-sum mit"><span class="sg" aria-hidden="true">=</span><span><b>Dit eget afkast.</b> Det kan siden ikke vise, fordi det kun findes i dit depot.</span></p>
+        <figcaption>Skitse uden tal. Den viser rækkefølgen, ikke størrelsen på lagene. Officielle omkostningstal står i <a href="risici.html">KID</a>. Ikke rådgivning.</figcaption>
       </figure>
     </section>
 

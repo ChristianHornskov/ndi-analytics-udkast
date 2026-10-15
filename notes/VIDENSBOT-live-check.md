@@ -157,3 +157,8 @@ Sider: ideer, kort, om-data, invester, risici, ndi-perspektiv, laer/*.
 - «Boble» er en neutral definition («lettere at udpege bagefter end undervejs, ét nøgletal kan ikke afgøre det»). Ingen NDI-vurdering af, om der er en boble nu. Ugebrevscitatet på ideer er uændret.
 - Anbefalet investeringsperiode: «ikke en garanti for et positivt afkast efter 5 år». Ingen afkasttal, intet handelsprog.
 - Bed Vidensbot bekræfte: er «ingen markedsbeskyttelse» det ord, KID'et bruger, eller «ingen kapitalbeskyttelse»? Posten har id g-kapitalbeskyttelse og nævner begge ord.
+
+## lane-C · 01:20 16/10 (wall-clock) · ÅOP, før skat, ideer «Hvad står der i tallet?»
+- Ordliste 103: «ÅOP» (NDI Analytics regner ikke ÅOP ud, officielle tal i KID) og «Før skat» (beskatning afhænger af din situation og konto, «Siden giver ikke skatterådgivning»). Ingen satser, ingen skatteregler nævnt.
+- ideer.html ny form: lagene i et afkasttal (kurser ± valuta ± udbytte + omkostninger − = fondens afkast; derefter kurtage, skat, købstidspunkt = dit eget afkast). Ingen tal, «Skitse uden tal … Ikke rådgivning». Ingen handelsprog.
+- Bed Vidensbot tjekke: må «Spørg din bank eller rådgiver» stå i ordlisten, eller skal det være mere neutralt («Se Skattestyrelsen eller din rådgiver»)?
