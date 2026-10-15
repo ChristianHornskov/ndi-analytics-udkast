@@ -80,6 +80,12 @@
     .scarce h3{font-size:15px;color:var(--cyan);margin:0 0 6px}
     .scarce p{font-size:13px;color:var(--muted);line-height:1.55;margin:0}
     .scarce .tagline{font-size:11px;color:var(--yellow);letter-spacing:.4px;margin-bottom:6px;font-weight:700}
+
+    .chapter-nav{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 20px;position:sticky;top:56px;z-index:20;padding:8px 0;background:linear-gradient(#0b171df2,#0b171dcc 70%,transparent);backdrop-filter:blur(4px)}
+    .chapter-nav a{font-size:12px;color:var(--brand);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:6px 10px;background:#0b171d}
+    .chapter-nav a:hover{border-color:var(--cyan);color:var(--cyan)}
+    @media (prefers-reduced-motion:reduce){.chapter-nav{position:static}}
+
   </style>
 </head>
 <body>
@@ -96,6 +102,14 @@
   <main id="main">
     <p class="eyebrow">TECH · VÆRDIKÆDER</p>
     <h1>Hvor sidder fonden i teknologien?</h1>
+        <nav class="chapter-nav" aria-label="Afsnit">
+      <a href="#kap-treemap">Treemap</a>
+      <a href="#kap-kaeder">Kæder</a>
+      <a href="#kap-timeline">Tidslinje</a>
+      <a href="#kap-flaskehalse">Flaskehalse</a>
+      <a href="#kap-filosofi">Filosofi</a>
+    </nav>
+
     <div class="vc-hero">
       <p class="lede">Interaktive kæder for AI-compute, fysisk tech og energi. Hvert led viser forsinket eksponering fra snapshotet. Temaer mærket forslag afventer gennemgang.</p>
       <aside class="vc-callout" id="phil-callout">

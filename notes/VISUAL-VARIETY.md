@@ -14,7 +14,8 @@
 | Filosofi-callout / 4-kort | NDI-blik | ✅ |
 | Annoterede chart-elementer | Gul annotation / heat på celler | ✅ heat |
 | Ikoner pr. led | Unicode i kæde | ✅ |
-| Scroll-telling chapters | #kap-treemap / kæder / timeline / filosofi | ✅ |
+| Scroll-telling chapters | #kap-treemap / kæder / timeline / flaskehalse / filosofi | ✅ |
+| Sticky chapter-nav | Hurtig hop mellem former | ✅ |
 | Sunburst | Alternativ til treemap | ✅ toggle på vaerdikaeder |
 | Annoteret fondsgraf | Peak/trough labels (fond-view) | findes allerede i app |
 
