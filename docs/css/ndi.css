@@ -697,7 +697,10 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
 .year-rail a:hover{border-top-color:var(--cyan);background:var(--selected)}
 .year-rail a.yr-deep{border-top-color:var(--yellow)}
 .year-rail a.yr-deep:hover{border-top-color:var(--yellow)}
+.year-rail a.yr-open{border-top-color:var(--cyan)}
+.year-rail a.yr-open:hover{border-top-color:var(--cyan)}
 .year-rail .yr-mark{min-height:1.2em;font-size:11px;line-height:1.2;color:var(--yellow)}
+.year-rail .yr-open .yr-mark{color:var(--cyan)}
 .year-rail .yr-bar{display:block;width:100%;max-width:36px;border-radius:4px 4px 0 0;background:var(--brand);margin-bottom:6px}
 .year-rail .yr-bar.neg{background:var(--neg)}
 .year-rail .yr-y{font-size:12px;color:var(--muted)}
@@ -730,4 +733,6 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
   .figure text.uw-up{fill:#1d4e56}
   .year-rail .yr-mark{color:#333}
   .year-rail a.yr-deep{border-top-color:#111}
+  .year-rail a.yr-open{border-top-color:#1d4e56}
+  .year-rail .yr-open .yr-mark{color:#1d4e56}
 }

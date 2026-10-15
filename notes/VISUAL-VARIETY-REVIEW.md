@@ -104,6 +104,10 @@ Klasse-kortene i embed havde tom plads til højre. PMINDI har nu pilen ud. PMIND
 
 Prikfordelingen havde ingen grænse. En brand-streg står nu ved 10 % under nul, samme grænse som på kurven. Tallet −10 har samme farve. 4 af 41 prikker ligger til højre for stregen. Den gule prik er blandt dem. De øvrige ligger i bunken til venstre. Median og middel er uændrede, −2,8 % og −5,2 %. Ingen tekst uden for svg'en. Ingen sidescroll ved 1280, 375 og 320. Ingen konsolfejl.
 
+### Update · året under vand · 2026-10-16 ~01:32 CEST
+
+2026 i årssøjlerne sagde kun "til dato" og +4,0 %. Serien ligger stadig under vand i det år. Søjlen har nu cyan kant og teksten "Under vand". 2025 har stadig gul kant og "Dybeste fald", og søjlen er stadig +15,2 %. Søjlerne i samme række deler bundlinje ved 1280, 375 og 320. Teksten siger, at 2026 er året serien stadig ligger under vand, og at søjlen er årets afkast. Ingen sidescroll. Ingen konsolfejl.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.

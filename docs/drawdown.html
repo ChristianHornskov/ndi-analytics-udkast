@@ -213,12 +213,16 @@
 
  const maxRet = Math.max(...years.map(y => Math.abs(y.ret)), 1);
  const deepYear = dd ? dd.troughD.slice(0, 4) : '';
+ const openYear = open ? rows[rows.length - 1].d.slice(0, 4) : '';
  const yearCells = years.map(y => {
  const note = y.partial ? 'delår' : (y.to.slice(5) === '12-31' ? 'helår' : 'til dato');
  const h = Math.max(8, Math.round((Math.abs(y.ret) / maxRet) * 64));
  const neg = y.ret < 0;
  const deep = y.year === deepYear;
- return `<a href="periode.html?fund=${fundId}&year=${y.year}"${deep ? ' class="yr-deep"' : ''}><span class="yr-mark">${deep ? 'Dybeste fald' : ''}</span><span class="yr-bar${neg ? ' neg' : ''}" style="height:${h}px"></span><span class="yr-y">${y.year}</span><span class="yr-r ${neg ? 'neg' : 'pos'}">${fmtPct(y.ret)}</span><span class="yr-note">${note}</span></a>`;
+ const still = !deep && y.year === openYear;
+ const cls = deep ? 'yr-deep' : still ? 'yr-open' : '';
+ const mark = deep ? 'Dybeste fald' : still ? 'Under vand' : '';
+ return `<a href="periode.html?fund=${fundId}&year=${y.year}"${cls ? ` class="${cls}"` : ''}><span class="yr-mark">${mark}</span><span class="yr-bar${neg ? ' neg' : ''}" style="height:${h}px"></span><span class="yr-y">${y.year}</span><span class="yr-r ${neg ? 'neg' : 'pos'}">${fmtPct(y.ret)}</span><span class="yr-note">${note}</span></a>`;
  }).join('');
  const yearOfMax = years.find(y => y.year === deepYear);
  const yearLine = yearOfMax && yearOfMax.ret > 0
@@ -256,7 +260,7 @@
  <ol class="ep-ledger">${ledger}</ol>
  <h2 class="h-section">Kalenderår</h2>
  <div class="year-rail">${yearCells}</div>
- <p class="src">${yearLine} Søjlen er årets afkast.</p>
+ <p class="src">${yearLine}${openYear && openYear !== deepYear ? ` ${openYear} er året, serien stadig ligger under vand.` : ''} Søjlen er årets afkast.</p>
  <p class="link-row"><a href="periode.html?fund=${fundId}&year=YTD">År til dato →</a> · <a href="sammenlign.html">Sammenlign andelsklasser →</a> · <a href="om-data.html#g-drawdown">Ordliste: drawdown</a></p>
  <p class="src">Middel og median er over episoder fra top til bund. De er ikke et gennemsnit af hver dag under vand. Max er det samme tal som største fald på Fonden.</p>
  <p class="warn">${WARN_HIST}</p>`;

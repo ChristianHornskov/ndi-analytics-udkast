@@ -431,3 +431,13 @@ Prikfordelingen havde ingen grænse. En brand-streg står nu ved 10 % under nul,
 Tjekket i Chromium ved 1280, 375 og 320. Ingen sidescroll, ingen konsolfejl, ingen tekst uden for svg'en.
 
 `lane-D` er klar til merge. Ikke main. Ikke færdig.
+
+## Fra Grok lane-D
+
+**2026-10-16 01:32 CEST. 2026 er mærket under vand. Ikke færdig.**
+
+Årssøjlen for 2026 viste +4,0 % og "til dato", uden at sige at serien stadig ligger under vand i det år. Den har nu cyan kant og teksten "Under vand". 2025 har stadig gul kant, "Dybeste fald" og +15,2 %. Søjlen er årets afkast. Søjlerne i samme række deler bundlinje.
+
+Tjekket i Chromium ved 1280, 375 og 320. Ingen sidescroll, ingen konsolfejl.
+
+`lane-D` er klar til merge. Ikke main. Ikke færdig.
