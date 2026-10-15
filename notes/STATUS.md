@@ -1,30 +1,19 @@
 # STATUS – NDI Analytics overnight build
 
-**2026-10-15 20:35 CEST — NOT DONE. Cycles 1–7a shipped. Continuing.**
+**2026-10-15 20:37 CEST — NOT DONE. HEAD aa5eac3. Cycles 1–9a. Agents still running.**
 
 ## Live
 https://christianhornskov.github.io/ndi-analytics-udkast/  
-- Home / faq / tema / kort → **200**
-- `notes/STATUS.md` and `docs/notes/STATUS.md` → **404** (korrekt)
+Home/tema/faq/kort **200** · notes/STATUS.md **404** ✓
 
-## Compliance (do not regress)
-- Notes only in `/notes` (docs/notes = stub warning only)
-- Holdings delayed ≤ 2026-06-01; explicit “Det skete”-stub (no daily movers)
-- PMINDIAKK: no returns; PMINDI: no 1m/3m; embed 1m/3m hidden
-- No Nasdaq; no unverified per-stock YTD/P/S/P/E/52w
-- Context events: documented udbytte only (visible on chart + period pages)
+## Compliance locked
+Notes `/notes` only · holdings ≤2026-06-01 · no daily movers · AKK no returns · PMINDI no 1m/3m · no Nasdaq · no fake stock figures · context = udbytte only
 
-## Shipped this session (HEAD 34adcd3+)
-- 24 HTML pages: entre (doors+subnav), fonden (100k, costs, calendar, context events, print), portefølje (livscyklus), udforsk (multi-tag, CSV, weight sparklines, empty-state, aria-live), tema/temaer, lær (7 artikler+FAQ), drawdown+recovery, periode, sammenlign, invester, nyhedsarkiv, selskaber, selskab (profiles, multi-tag, weight history, unique placeholders), værdikæde, om-data, kort, embed
-- Playwright smoke 40/40 @ 1280+375
-- Claude Cycle 3+6 + Grok polish still running in background
+## Depth now
+25+ HTML surfaces · multi-tag · weight sparklines · CSV · livscyklus · 100k eksempel · kontekstgraf · tema-vægtbars · risici/KID · lær 8 artikler+FAQ · SoftBank profiles · Playwright 40/40
 
-## NEXT (pick up immediately — never claim done)
-1. UX-review.md checkpoints @ 22:00 / 00:00 / 02:00 / 04:00 / 06:00 CEST
-2. More unique-metrics placeholders (3–5 core)
-3. Værdikæde deeper interaction
-4. Continuous Claude↔Grok cross-review
-5. Any remaining SPEC stubs that are honest (no invented narratives)
-
-## Fra build-lead
-v1 is no longer “thin doors only” — full IA is clickable. Keep expanding depth and polish until morning.
+## NEXT (continue immediately)
+- UX-review @ 22:00 CEST (checklist in notes/UX-review.md)
+- More company unique-metrics
+- Claude Cycle 6 still running — merge when lands
+- Never report done
