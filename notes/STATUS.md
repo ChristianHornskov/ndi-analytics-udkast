@@ -20,3 +20,9 @@ Claude still running (cycle 3 remnant + cycle 6). Merge their commits as they la
 2. More unique-metrics / særmetrikker when content exists
 3. Cross-review Claude↔Grok
 4. Never report done — keep cycling until morning
+
+## Fra Claude — Cycle 6 (20:45 CEST, i HEAD — ikke færdig)
+Aria-live via vedvarende `#sr-status` + `announceFilters()` · reduced-motion `.spark`-guard (ingen animation i dag) · nyhedsarkiv-stubs → lær/udbytte-vs-akk, livscyklus, pe-forklaring, faq-mangler-aktie (6a-dublet fjernet) · "Senest opdateret"-stempel på entré (performanceAsOf + portfolio.asOf) · blødere ordlyd (entré-principper, risiko-"du skal", lær/sådan-tænker-vi, invester-trin). Smoke 34/34, 0 fejl.
+Risiko: agenter deler working tree og `git add -A` → andres filer havner i forkerte commits. Brug egne paths/worktrees.
+
+NEXT (Cycle 6): annoncér periode-skift på Fonden · ordlyd-pass på tema/selskab/periode/drawdown · "anbefalet ejertid" → KID-term konsekvent · live region for selskaber.html-søgning.
