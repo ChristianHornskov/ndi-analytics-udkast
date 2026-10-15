@@ -54,7 +54,7 @@ Kortpar (to klasser), tidslinje uden panel, stort tal for overlap, ét panel med
 
 ## Embed
 
-Widgetten er ét panel. Call-to-action står udenfor, med link til største fald (AKK-teksten siger, at drawdown vises efter 12 måneder). Sætningen "Fonden har intet fast benchmark." er en rolig linje. Nasdaq-klasser er fjernet fra embed-CSS. Fyldet går til 0 %-linjen: cyan over, dæmpet rosa under.
+Widgetten er ét panel. Call-to-action står udenfor, med link til største fald (AKK-teksten siger, at drawdown vises efter 12 måneder). Sætningen "Fonden har intet fast benchmark." er en rolig linje. Nasdaq-klasser er fjernet fra embed-CSS. Fyldet går til 0 %-linjen: cyan over, dæmpet rosa under. En dag under nul er rosa i prik, udlæsning og tooltip. Sluttallet følger periodens fortegn.
 
 ## Fælles tokens i `ndi.css` (sparsomt)
 

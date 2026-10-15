@@ -12,6 +12,8 @@
   --brand: #89aeb4;
   --yellow: #f5ee9e;
   --focus: #f5ee9e;
+  --neg: #c98a94;
+  --neg-ink: #e5b3ba;
   --radius: 15px;
   --danger-line: #f5ee9e55;
 }
@@ -303,6 +305,9 @@ button.legend {
   font-weight: 700;
 }
 
+.chart-container .end-label.pos { fill: var(--cyan); }
+.chart-container .end-label.neg { fill: var(--neg-ink); }
+
 .chart-container .crosshair {
   stroke: #aac0c7;
   stroke-width: 1;
@@ -338,6 +343,9 @@ button.legend {
   color: var(--cyan);
 }
 
+.tooltip-row.neg,
+.tooltip-row.neg strong { color: var(--neg-ink); }
+
 .chart-loading {
   position: absolute;
   inset: 0;
@@ -364,6 +372,7 @@ button.legend {
 }
 
 .chart-readout .date { color: var(--yellow); }
+.chart-readout .neg { color: var(--neg-ink); }
 
 .chart-slider {
   position: absolute;

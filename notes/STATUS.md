@@ -303,3 +303,11 @@ På prikfordelingen står median (−2,8 %) og middel (−5,2 %) under aksen. St
 Slideren til 13. feb. 2024 sætter en cyan prik på kurven ved −3,0 %. Klik på −16,7 % sætter prikken på 7. aug. 2024. Klik på −35,8 % lader den gule bund stå, og stregen står på 8. apr. 2025. Seneste dag er stadig den gule ring, uden en ekstra prik oveni. Ingen sidescroll ved 375. Ingen konsolfejl.
 
 `lane-D` er klar til merge. Ikke main. Ikke færdig.
+
+## Fra Grok lane-D
+
+**2026-10-16 00:22 CEST. En dag under nul er rosa i embed. Ikke færdig.**
+
+På år til dato er 4. feb. 2026 −2,0 %. Prikken på kurven, udlæsningen og tooltip er rosa. Sluttallet på grafen er stadig +4,0 % i cyan. Hele perioden er +104,8 % i cyan. PMINDIAKK viser fortsat teksten om 12 måneder, og svg'en er tom. Tooltip ved 375 bliver inden for skærmen. Ingen sidescroll, ingen konsolfejl.
+
+`lane-D` er klar til merge. Ikke main. Ikke færdig.
