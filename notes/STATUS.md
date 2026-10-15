@@ -266,3 +266,12 @@ Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html, v
 Ingen handelssprog (grep: "øge eksponering", "overvægt i" og "sikkert køb" giver 0 hits). Ingen nye per-aktie-felter.
 Tjek: Playwright på 1280 og 375 med 0 konsolfejl og ingen sidescroll, smoke 52/52 og precheck PASSED.
 Næste: blurbs for energiled, flere krydslinks for kvante og vaerdikaede.html. Ikke færdig.
+
+## Fra Claude lane-B (screener/sort, cyklus 1)
+- **app.js:** sortering er nu en whitelist (`SORTS` = navn/vægt/tema) i stedet for blacklist af ps/pe/drawdown; ukendte `sort=` (fx gamle `sort=pe`) normaliseres i URL. Ny **tema-sortering** (dansk temanavn, inden for tema efter vægt; "Andet" altid sidst). Stabil tie-break på navn.
+- **Temastatus-filter** i Udforsk: "Uden temaforslag (230)" / "Kun temaforslag (115)" + chip + URL `status=` + i CSV-filnavn og skærmlæser-annoncering. Kun antal selskaber, ingen tal pr. aktie.
+- Tom tilstand: nævner statusfilter og "Søgningen alene giver N selskaber - fjern tema-/statusfilter".
+- Fokus vender tilbage til kolonneknappen efter sortering (a11y). Lede-copy rettet (multi-tag findes nu).
+- **selskaber.html:** nu reel A-Z (før vægt-sorteret trods navnet): sortér Navn/Vægt/Tema, bogstav-/tema-hop, gruppe-rækker, multi-tags + forslag-badge, søgning i tema, HTML-escaping af `q` (XSS), tom tilstand m. FAQ-link.
+- Test: smoke.mjs fail 0. **Præ-eksisterende** stale asserts (ikke lane-B-filer): smoke-quality "NDI-linsen → værdikæde" og smoke-cycle3 "entré: linser" forventer `vaerdikaede.html`, men links peger nu på `vaerdikaeder.html` → testen skal opdateres af ejeren af scripts/.
+- precheck exit 0. Branch `lane-B` klar til merge-review. Næste: temaer-hub polish (quantum/space-synlighed, forslag-banner).
