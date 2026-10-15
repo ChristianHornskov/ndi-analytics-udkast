@@ -1021,3 +1021,143 @@ Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke me
 - Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + overveje P/E-dørens placering i lær-hub.
 - **Fra Claude lane-R (01:05, cyklus 14, main `6592e79`):** MUST: **ndi-paa-x.html er tom live** — `x-feed.js` på main mangler `feedHitKind` (kun på origin/lane-X); merge lane-X's `docs/js/x-feed.js`. Compliance: ndi-paa-x/omkostninger/nyhedsarkiv mangler "kan tabe"; "Mads følger" uændret (`x-feed.js:339`); rebalancering: "bogen råder" → "bogen skriver" + kilde på "fonden rebalancerer løbende".
 - **Fra Claude lane-R (01:08, cyklus 15, main `6592e79` uændret):** ndi-paa-x er stadig tom live (`feedHitKind`). Tag kun `docs/js/x-feed.js` fra lane-X, ikke hele lane-X, som er langt bagud. Fjern "Mads følger" (`x-feed.js:419` på lane-X) i samme commit. De øvrige MUST er uændrede.
+
+## Fra Claude lane-C (lær/risikoklasse + hub 4·4·4·3) · ~01:30 CEST 16/10
+- Ny lær-side `laer/risikoklasse.html`: fra udsving til klasse (kæde), skyder udsving pr. år → klasse 1–7, tabel med de syv PRIIPs-intervaller (klasse 5 = 20–30 %), «Hvad klassen ikke siger». Ingen fondsberegning påstået.
+- Lær-hub regrupperet: 15 døre, 4 · 4 · 4 · 3 (P/E → Afkast og udsving, Risici → Fonden i praksis). Ingen enlige døre.
+- Koblet på: risici.html (link under hver klasse), om-data (g-sri ↔ g-udsving → siden), FAQ (16 korte svar), kort.html.
+- **Til script-ejer:** `scripts/smoke.mjs` kender hverken `/laer/rebalancering.html` eller `/laer/risikoklasse.html`.
+- Notes: HANDOFF trin 8/9, UX-review, VIDENSBOT-live-check (bed om bekræftelse af KID-ordene for klasse 1–7).
+- Test: 8763, 375/1280 på 6 sider: 0 konsolfejl, ingen h-overflow, 0 døde links/ankre; screenshots gennemset. precheck: se push.
+- Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + invester/ndi-perspektiv sprogtjek.
+
+## Fra Claude lane-C (risikoklasse committet + ordliste 91 + sprogrens) · ~01:25 CEST 16/10
+- Commit 0bcde18: lær/risikoklasse (lå ucommittet). Rettet før commit: klasse 6 «næsthøjeste», uverificeret KID-citat fjernet, «mindst 5 år» tjekket mod fund-meta.json.
+- `om-data.html`: «v1», «peak→bund», «heuristik» og bindestreger brugt som tankestreg ud af synlig tekst. Ordliste 87 → 91 (depot, platforme, software, energiressourcer). Tællere 18 · 16 · 30 · 27.
+- `invester.html`: link til risikoklasse, flodsystem i én sætning. `kort.html`: 91.
+- **Til data-lane:** tankestreg/semikolon i unique-metrics-hints (IDEAS).
+- Test: 8763, 375/1280: 0 konsolfejl, ingen h-overflow, 0 døde ankre. precheck: se push.
+- Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + ideer.html tiende form eller lær-sidernes «Se også» mod ordlisten.
+
+## Fra Claude lane-C (ordliste 95 + lær-sider → ordliste) · ~01:15 CEST 16/10
+- `om-data.html`: ordliste 91 → 95 (median, markedsrisiko, selskabsspecifik risiko, PRIIPs). Tællere 21 · 17 · 30 · 27.
+- Ordlistelinks på fem lær-sider, der havde få eller ingen: hvorfor-mange-aktier, saadan-taenker-vi, udbytte-vs-akk, faq-mangler-aktie, risikoklasse. `ideer.html` median → ordliste. `kort.html` 95.
+- Notes: HANDOFF trin 8 (95), UX-review, VIDENSBOT-live-check.
+- Test: 8763, 375/1280 på 8 sider: 0 konsolfejl, ingen h-overflow, 0 døde ankre. precheck: se push.
+- Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + ideer.html tiende form.
+
+## Fra Grok lane-D
+
+**2026-10-16 01:00 CEST. Embed-prikken matcher udlæsningen. Ikke færdig.**
+
+En dag under nul havde en mørkere prik (`#c98a94`) end tallet i udlæsning og tooltip (`#e5b3ba`). Prikken er nu samme rosa. 4. feb. 2026 er −2,0 %. År til dato slutter stadig på +4,0 %. Hele perioden er +104,8 %.
+
+På 320 dækkede tooltip sluttallet. Det holder nu 8 px afstand, også når tallet er +104,8 %, ved 1280, 375 og 320. Ingen sidescroll, ingen konsolfejl. PMINDIAKK har stadig tom svg.
+
+`lane-D` er klar til merge. Ikke main. Ikke færdig.
+
+## Fra Grok lane-D
+
+**2026-10-16 01:02 CEST. Største temaforskel er markeret. Ikke færdig.**
+
+Sammenlign sagde, at den største forskel er ca. 1,5 procentpoint, men ikke i hvilket tema. Det er Andet / uklassificeret (11,6 % og 13,2 %). Rækken har en gul kant. Stadig ét panel. AKK-kortet har ingen afkastprocent, og datoen står på sin egen linje. Linket til drawdown er der. Ingen sidescroll ved 1280, 375 og 320. Ingen konsolfejl.
+
+`lane-D` er klar til merge. Ikke main. Ikke færdig.
+
+## Fra Grok lane-D
+
+**2026-10-16 01:05 CEST. Totalafkast er det store tal i embed. Ikke færdig.**
+
+De tre tal under grafen var lige store. Totalafkast er 36 px på desktop og 32 px under 640. CAGR og år til dato er 22 px. Tallene er uændrede: +104,8 %, +26,4 % og +4,0 %. PMINDIAKK viser stadig en streg, og svg'en er tom. Ingen sidescroll ved 1280, 375 og 320. Ingen konsolfejl.
+
+`lane-D` er klar til merge. Ikke main. Ikke færdig.
+
+## Fra Claude lane-A · 2026-10-16 ~01:40 CEST (rum: højdebånd og tjek dig selv)
+Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html, vaerdikaede.html, value-chains.json og notes.
+1. **Rum: "Hvem arbejder hvor højt?"** Ny sektion ved højdeskalaen (`#sp-bands`) med fem bånd: på jorden, lavt kredsløb, mellemhøjt kredsløb, geostationær bane og Månen. Hvert bånd har en kort forklaring og led-knapper med antal selskaber pr. 1. juni 2026, der åbner leddet. Hover eller fokus på et bånd fremhæver LEO, MEO eller GEO på skalaen. Alt er mærket baggrund, og noten siger, at et led og et selskab kan høre til flere højder, og at det ikke er en rangering eller en anbefaling. Data ligger i `space.bands`.
+2. **Rum: "Tjek dig selv".** Fem spørgsmål (`#sp-quiz`) om genbrug af raketter, løbende betaling, signaltid, NDI's tal om 90 % af opsendelserne (BLOG 23. juni 2024) og rum og compute. Hvert svar giver "Rigtigt." eller "Ikke helt.", en kort forklaring og et link til det sted på siden, hvor det står. Musk nævnes kun som hans påstand og ikke som NDI's forventning. Intet gemmes. Data ligger i `space.quiz`. Læse-ruten hedder nu "Rum i otte stop", og der er et link fra rum-fanens fire trin.
+3. **vaerdikaede.html:** Rum-kortet har fået linket "✓ Tjek dig selv: 5 spørgsmål →".
+Tjek: Playwright på 1280 og 375 med 0 konsolfejl og ingen sidescroll. 5 bånd, 9 led-knapper og 8 stop. Pointtallet stemmer (2 af 5 i testen), svaret "Se leddet" åbner `#lk-space-compute`, og linket fra vaerdikaede lander på `#sp-quiz`. smoke.mjs 52/52 fail 0 (egen server på 8817). Precheck PASSED. Grep efter handelssprog og tankestreger i diff giver 0 hits.
+Næste: energi-ledkortenes blurbs kan få samme "tjek dig selv"-form (3 spørgsmål), og kvante-fanens korte side kan få krydslinks fra ordbogen til energi (kryostater og strøm). Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 00:55 CEST. Southern Copper skriver, at produkterne er kobber, molybdæn, sølv og zink. Ikke færdig.**
+
+Forsiden skriver "Productos Principales: Cobre, Molibdeno, Plata y Zinc" og at selskabet er en del af Grupo México. Profilen siger det. Peru og Mexico stod i forvejen. Navngivne miner stod ikke på den hentede side og er ikke tilføjet. En advarsel om falske profiler er ikke kopieret. Ingen `reviewedAt`. Rollen i JSON nævner de fire produkter. Den vises ikke på kædesiden.
+
+Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Molybdæn og Grupo México står i det første afsnit. "Ikke et kraftværk" står efter "Læs hele forklaringen". Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `4e60350` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 00:58 CEST. Ivanhoe Electric skriver, at Tintic er et projekt i Utah, og at studiet af Santa Cruz er efter beholdningen. Ikke færdig.**
+
+Forsiden nævner Santa Cruz som kobberprojekt i Arizona og Tintic som kobber- og guldprojekt i Utah. Selskabet bruger målesystemet Typhoon til efterforskning. Nyheden om studiet er dateret 23. september 2026, efter beholdningen pr. 1. juni 2026. Studiet er ikke en mine i drift. Ord om høj lødighed, lave omkostninger og nutidsværdi er ikke taget med. Ingen `reviewedAt`. Rollen i JSON nævner begge projekter. Den vises ikke på kædesiden. Blurben og arkivkortet siger det samme.
+
+Tjekket i Chromium. Selskabssiden ved 375 px viser AI-udkast, Tintic og Typhoon. "tjekket mod kilden" er ikke med. Datoen står efter "Læs hele forklaringen". Kæden viser sætningen under Kritiske råstoffer. Arkivet har et nyt kort afsnit. Ingen konsolfejl. Ingen vandret scroll ved 375 eller 1280 px.
+
+**Push:** `lane-E` @ `9a62de0` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:00 CEST. Energy Fuels nævner White Mesa Mill og siger, at isotoper først er på vej. Ikke færdig.**
+
+Forsiden skriver, at selskabet fremstiller oxider af sjældne jordarter på et anlæg i USA, og at White Mesa Mill producerer uran, sjældne jordarter og vanadium. Titan, zirkonmineraler og medicinske isotoper står som produkter, selskabet er i gang med at tilføje. Ordene largest, leading og "10 of the 50" er ikke taget med. En bundtekst om miner i Colorado, Utah og Wyoming er ikke brugt. Ingen `reviewedAt`. Rollen i JSON nævner White Mesa. Den vises ikke på kædesiden.
+
+Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. White Mesa står i det første afsnit. Isotoper står efter "Læs hele forklaringen". Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `7d0a138` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:01 CEST. USA Rare Earth daterer Serra Verde til 4. september 2026, efter beholdningen. Ikke færdig.**
+
+Forsiden skriver, at aktiviteterne spænder over USA, Storbritannien og Brasilien, og at et anlæg i Frankrig er planlagt. Selskabet vil udvinde og forarbejde i Texas og i Brasilien. Magneter nævnes i Oklahoma. South Carolina står som planlagt. Overskriften om en gennemført sammenlægning med Serra Verde Group er dateret 4. september 2026, efter beholdningen pr. 1. juni 2026. Selve meddelelsen gav 403, så beløb og prisgulve er ikke taget med. Texas er ikke beskrevet som en mine i drift. Ingen `reviewedAt`.
+
+Tjekket i Chromium. Selskabssiden ved 375 px viser AI-udkast, Texas, Brasilien og Serra Verde. "tjekket mod kilden" er ikke med. Ingen beløb. Kæden og arkivet siger datoen. Ingen konsolfejl. Ingen vandret scroll ved 375 eller 1280 px.
+
+**Push:** `lane-E` @ `3511830` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:03 CEST. Generac skriver, at det også har bærbare generatorer, sol, batterier og ladere. Ikke færdig.**
+
+Forsiden skriver, at en hjemmegenerator giver strøm under et udfald, og at selskabet har bærbare generatorer, sol, batterilagring og ladere til elbiler. Det er udstyr hos kunden, ikke et elselskab og ikke en mine. Ord om at være mest betroet og citater fra kunder er ikke taget med. Ingen `reviewedAt`. Blurben under elproduktion siger det samme. Rollen i JSON er ikke vist på kædesiden.
+
+Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Bærbare generatorer og ladere står. Kæden viser sætningen. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `529103c` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:04 CEST. EQT skriver, at købet af Equitrans blev gennemført 22. juli 2024. Ikke færdig.**
+
+Meddelelsen er dateret 22. juli 2024, før beholdningen pr. 1. juni 2026. Equitrans er beskrevet som midstream-aktiver. EQT producerer naturgas i Appalachia. Gassen står som brændsel, ikke som en metalmine. Ordet only, breakeven-pris og synergibeløb er ikke taget med. Ingen `reviewedAt`. Blurben under elproduktion siger datoen.
+
+Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. 22. juli 2024 står. Ingen beløb. Kæden viser sætningen. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `20f9d68` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:06 CEST. Satellogic sætter fuld drift af Merlin til andet halvår 2027. Ikke færdig.**
+
+Satellitterne hedder NewSat. Forsiden sætter fuld drift af Merlin til andet halvår 2027, efter beholdningen pr. 1. juni 2026. Merlin er ikke beskrevet som en tjeneste i fuld drift. Selskabet opsender ikke selv raketterne. Ord om bedste opløsning og realtid er ikke taget med. Ingen `reviewedAt`. Blurben under satellitkommunikation og arkivkortet siger det samme.
+
+Tjekket i Chromium. Selskabssiden ved 375 px viser AI-udkast, NewSat og Merlin. "tjekket mod kilden" er ikke med. Kæden og arkivet viser 2027. Ingen konsolfejl. Ingen vandret scroll ved 375 eller 1280 px.
+
+**Push:** `lane-E` @ `ad828d7` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Claude lane-B (NDI-linse: fuld dækning i hardware-/energitemaer, cyklus 10)
+- **unique-metrics.json: 217 → 269 selskaber** (+52), samme 5 kvalitative felter (NDI-tag · Hvad ejer man? (AI-udkast) · Plads i værdikæden · Hold øje med (AI-udkast) · Livscyklus "Ikke klassificeret"). Ingen tal/kurser/afkast/prognoser/handelssprog. NDI-tag-feltet er genereret fra portfolio.json (`theme`/`themeStatus`/`themeFrom`), så forslag står som "Energi (forslag) … før: Andet".
+  - **Energi (18, alle temaforslag):** Enphase, Sunrun, Tigo, Array, Shoals (led 1 sol), Ballard (led 1 brint), Solaris Energy Infrastructure, ProPetro (led 1 strøm på stedet; olieservice nævnt ærligt), Terra Innovatum, Terrestrial Energy (led 2, "ingen reaktor i drift"), Tantalus (led 3 smart grid), NeoVolta, Amprius, Solid Power, Microvast, SES AI, Electrovaya, Enovix (led 4).
+  - **Chips (7):** Silicon Motion (led 6), MaxLinear (led 7), Cohu + ACM Research (led 4), Himax, Alpha & Omega, Ambiq (Robotik led 1 komponenter). **Compute (2):** One Stop Systems (led 8), Unusual Machines (Robotik led 1, tag-note: forretningen er droner).
+  - **Fysisk tech (6):** Li Auto (Robotik led 3), Power Solutions Intl (Energi led 1, som Generac), Nano Nuclear (Energi led 2, tag-note: hører hjemme i Energi), Flowserve, ITT, Terex ("Uden for kædernes led").
+  - **Energiressourcer (13):** Southern Copper, Capstone, Ero, Taseko, Ivanhoe Electric, Trilogy, Northern Dynasty (Pebble - "tilladelsen er afvist og sagen er i retten"), TMC (dybhav, ikke i produktion), Standard Lithium, American Battery Technology, USA Rare Earth, Almonty (led 5); Lightbridge (led 2, som Centrus).
+  - **SpaceTech (6):** Spire, BlackSky (Rum led 2), Starfighters Space (Rum led 1, "ingen satellitopsendelser endnu"), Voyager ("Uden for rum-kædens led" - rumstation/forsvar), Merlin + Airo (Robotik led 3, tag-note: kernen er luftfart/droner).
+- **Dækning (PMINDI):** Chips 54/54, Compute 18/18, Energi 37/37, Energiressourcer 27/27, Fysisk 27/27, SpaceTech 21/21, Quantum 4/4; Optik 22/31, Platforme 25/40, Software 28/51, Andet 6/35. I alt 269/345 (AKK 251/320).
+- **Ærlige tag-noter til NDI (data ikke ændret):** Nano Nuclear (Fysisk → Energi?), Unusual Machines (Compute → droner/Fysisk?), Merlin + Airo (SpaceTech → luftfart/droner), Voyager (SpaceTech, men intet led for bemandet rumfart). Fakta i "Hvad ejer man?" for små/nynoterede navne (Starfighters, Merlin, Airo, Terra Innovatum, Terrestrial) er AI-udkast og bør tjekkes særligt.
+- Ingen UI-ændringer; eksisterende linse-UI (badge, `linse=1`, tema-dækning, "Andre med NDI-linse i samme led") opdaterer automatisk.
+- Test: precheck exit 0. smoke 52/52 fail 0 (8792). smoke-quality 104/106 - kun den kendte forældede `vaerdikaede.html?isin=`-assert. Playwright: Enphase/Nano Nuclear/Silicon Motion (4 naboer i led 6)/Merlin/Southern Copper (naboer i Energi led 5)/Flowserve (ingen nabo-række)/Solaris (AKK) rendrer; A-Z "NDI-linse (269)"; 0 konsolfejl. Branch `lane-B` klar til merge-review. Næste: linser for Software/Optik/Platforme-restnavne eller screener-paritet.

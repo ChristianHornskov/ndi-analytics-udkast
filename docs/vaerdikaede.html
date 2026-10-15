@@ -148,12 +148,14 @@
  // Usikkerheder pr. kæde (kun hvor siden har sektionen)
  const RISK = { space: 'sp-risk', energy: 'e-risk' };
  const riskA = (c) => c.risks?.items?.length && RISK[c.id] ? `<a class="oc-gl" href="vaerdikaeder.html?kaede=${esc(c.id)}#${RISK[c.id]}"><span aria-hidden="true">⚠</span> Hvad kan gå galt? ${c.risks.items.length} usikkerheder →</a>` : '';
+ // Tjek dig selv (kun rum har den)
+ const quizA = (c) => c.id === 'space' && c.quiz?.items?.length ? `<a class="oc-gl" href="vaerdikaeder.html?kaede=space#sp-quiz"><span aria-hidden="true">✓</span> Tjek dig selv: ${c.quiz.items.length} spørgsmål →</a>` : '';
  document.getElementById('other-chains').innerHTML = pack.chains.filter(c => c.id !== 'ai-compute').map(c => {
  const ls = c.links.filter(l => !l.neighbour);
  const first = ls[0];
  const cos = new Set(ls.flatMap(l => l.companies.map(x => x.isin))).size;
  const lr = LEARN[c.id]?.(c);
- return `<article class="oc"><span class="oc-ico" aria-hidden="true">${c.icon || first?.icon || '◆'}</span><h3>${esc(c.title)}</h3><p>${esc(firstSentence(c.why))}</p><span class="oc-n">${ls.length} led · ${cos} selskaber pr. ${fmtDate(pack.asOf)}</span>${first ? `<a href="vaerdikaeder.html?kaede=${esc(c.id)}#lk-${esc(first.id)}">Start ved ${esc(first.short || first.label)} →</a>` : ''}${lr ? `<a class="oc-learn" href="vaerdikaeder.html?kaede=${esc(c.id)}#${lr[0]}"><span aria-hidden="true">${lr[1]}</span> ${esc(lr[2])} →</a>` : ''}${riskA(c)}${glossA(c)}</article>`;
+ return `<article class="oc"><span class="oc-ico" aria-hidden="true">${c.icon || first?.icon || '◆'}</span><h3>${esc(c.title)}</h3><p>${esc(firstSentence(c.why))}</p><span class="oc-n">${ls.length} led · ${cos} selskaber pr. ${fmtDate(pack.asOf)}</span>${first ? `<a href="vaerdikaeder.html?kaede=${esc(c.id)}#lk-${esc(first.id)}">Start ved ${esc(first.short || first.label)} →</a>` : ''}${lr ? `<a class="oc-learn" href="vaerdikaeder.html?kaede=${esc(c.id)}#${lr[0]}"><span aria-hidden="true">${lr[1]}</span> ${esc(lr[2])} →</a>` : ''}${riskA(c)}${quizA(c)}${glossA(c)}</article>`;
  }).join('');
 
  // Fem dæmninger → grupper af led (samme dæmninger som på vaerdikaeder.html)

@@ -719,20 +719,24 @@
   "US26884L1098": {
    "name": "EQT",
    "theme": "energy-resources",
-   "summary": "Producerer naturgas i Appalachia i USA.",
+   "summary": "Producerer naturgas i Appalachia i USA. Selskabet skriver, at købet af Equitrans Midstream blev gennemført 22. juli 2024.",
    "watch": "Gaspriser og produktion fra felterne.",
    "source": "https://www.eqt.com/",
-   "products": "Naturgas.",
+   "products": "Naturgas. Også midstream-aktiver efter købet af Equitrans.",
    "customers": "Købere af gas.",
    "role": "Brændsel til elproduktion.",
    "narrative": [
-    "EQT producerer naturgas i Appalachia i USA.",
-    "I kæden står selskabet på elproduktion, fordi gassen er brændsel. Det er ikke en metalmine."
+    "EQT producerer naturgas i Appalachia i USA. Selskabet skriver, at købet af Equitrans Midstream blev gennemført 22. juli 2024.",
+    "Equitrans er beskrevet som midstream-aktiver. I kæden står gassen som brændsel. Det er ikke en metalmine."
    ],
    "narrativeSources": [
     {
      "label": "Selskabets side",
      "url": "https://www.eqt.com/"
+    },
+    {
+     "label": "Meddelelse 22. juli 2024",
+     "url": "https://www.eqt.com/thought-leadership/eqt-completes-acquisition-of-equitrans-midstream"
     }
    ]
   },
@@ -879,15 +883,15 @@
   "US91733P1075": {
    "name": "USA Rare Earth",
    "theme": "energy-resources",
-   "summary": "Arbejder med et projekt for sjældne jordarter i Texas og med planer om magneter. Denne tekst beskriver ikke en mine i drift.",
+   "summary": "Selskabet skriver, at aktiviteterne spænder over USA, Storbritannien og Brasilien, og at det vil udvinde og forarbejde i Texas og i Brasilien. En overskrift dateret 4. september 2026 om Serra Verde Group ligger efter beholdningen. Texas er ikke beskrevet som en mine i drift.",
    "watch": "Om projektet og magnetplanerne bliver til drift.",
    "source": "https://www.usare.com/",
-   "products": "Et råstofprojekt og planer om videre forarbejdning.",
+   "products": "Planer om sjældne jordarter og magneter.",
    "customers": "Ingen driftkunder i denne beskrivelse.",
    "role": "Råstofprojekt.",
    "narrative": [
-    "USA Rare Earth arbejder med et projekt for sjældne jordarter i Texas og med planer om magneter.",
-    "Denne tekst beskriver ikke en mine i drift."
+    "USA Rare Earth skriver, at aktiviteterne spænder over USA, Storbritannien og Brasilien, og at et anlæg i Frankrig er planlagt. Selskabet vil udvinde og forarbejde i Texas og i Brasilien. Magneter nævnes i Oklahoma, og South Carolina står som planlagt.",
+    "Forsiden daterer 4. september 2026 en overskrift om, at sammenlægningen med Serra Verde Group er gennemført. Datoen ligger efter beholdningen pr. 1. juni 2026. Texas er ikke beskrevet som en mine i drift."
    ],
    "narrativeSources": [
     {
@@ -899,15 +903,15 @@
   "CA2926717083": {
    "name": "Energy Fuels",
    "theme": "energy-resources",
-   "summary": "Producerer og forarbejder uran i USA og arbejder også med sjældne jordarter. Det er ikke et kraftværk.",
+   "summary": "Selskabet skriver, at det fremstiller oxider af sjældne jordarter på et anlæg i USA. Siden nævner White Mesa Mill med uran, sjældne jordarter og vanadium. Det er ikke et kraftværk.",
    "watch": "Uranpriser, møllens drift og mængden af materiale, der bliver forarbejdet.",
    "source": "https://www.energyfuels.com/",
-   "products": "Urankoncentrat og forarbejdning af andre mineraler.",
+   "products": "Uran, sjældne jordarter og vanadium.",
    "customers": "Selskaber, der laver reaktorbrændsel, og industrikunder.",
    "role": "Råstof til atomkraft.",
    "narrative": [
-    "Energy Fuels producerer og forarbejder uran i USA og arbejder også med sjældne jordarter.",
-    "Det er brændsel og råstof, ikke et kraftværk."
+    "Energy Fuels skriver, at det fremstiller oxider af sjældne jordarter på et anlæg i USA. Siden nævner White Mesa Mill med uran, sjældne jordarter og vanadium.",
+    "Selskabet skriver, at titan, zirkonmineraler og medicinske isotoper er produkter, det er i gang med at tilføje. Det er ikke et kraftværk."
    ],
    "narrativeSources": [
     {
@@ -943,20 +947,24 @@
   "US46578C1080": {
    "name": "Ivanhoe Electric",
    "theme": "energy-resources",
-   "summary": "Udvikler et kobberprojekt i Arizona. Denne tekst beskriver ikke en mine i drift.",
+   "summary": "Udvikler projekter i USA. Selskabet skriver, at Santa Cruz er et kobberprojekt i Arizona, og at Tintic er et kobber- og guldprojekt i Utah. Teksten beskriver ikke en mine i drift.",
    "watch": "Undersøgelser, tilladelser og om minen bliver bygget.",
    "source": "https://www.ivanhoeelectric.com/",
-   "products": "Et kobberprojekt.",
+   "products": "Kobberprojekt i Arizona og kobber- og guldprojekt i Utah.",
    "customers": "Ingen driftkunder i denne beskrivelse.",
    "role": "Råstofprojekt til elnet og elektronik.",
    "narrative": [
-    "Ivanhoe Electric udvikler kobberprojektet Santa Cruz i Arizona.",
-    "Denne tekst beskriver ikke en mine i drift."
+    "Ivanhoe Electric skriver, at Santa Cruz er et kobberprojekt i Arizona, og at Tintic er et kobber- og guldprojekt i Utah. Selskabet bruger målesystemet Typhoon til efterforskning.",
+    "Selskabet udgav 23. september 2026 et studie af Santa Cruz. Datoen ligger efter beholdningen pr. 1. juni 2026. Studiet er ikke en mine i drift."
    ],
    "narrativeSources": [
     {
      "label": "Selskabets side",
      "url": "https://www.ivanhoeelectric.com/"
+    },
+    {
+     "label": "Studie af Santa Cruz",
+     "url": "https://ivanhoeelectric.com/news/2026-preliminary-feasibility-study-for-the-santa-cruz-copper-project-in-arizona-confirms-high-grade-low-cost-project-with/"
     }
    ]
   },
@@ -1119,15 +1127,15 @@
   "US84265V1052": {
    "name": "Southern Copper",
    "theme": "energy-resources",
-   "summary": "Driver kobberminedrift i Peru og Mexico.",
+   "summary": "Driver minedrift i Peru og Mexico. Selskabet skriver, at de vigtigste produkter er kobber, molybdæn, sølv og zink.",
    "watch": "Drift af minerne og kobberpriser.",
    "source": "https://www.southerncoppercorp.com/",
-   "products": "Kobber.",
+   "products": "Kobber, molybdæn, sølv og zink.",
    "customers": "Industrikunder.",
    "role": "Råstof.",
    "narrative": [
-    "Southern Copper driver kobberminedrift i Peru og Mexico.",
-    "Det er en mine i denne beskrivelse, ikke et kraftværk."
+    "Southern Copper skriver, at de vigtigste produkter er kobber, molybdæn, sølv og zink, og at selskabet er en del af Grupo México.",
+    "Det er minedrift i denne beskrivelse, ikke et kraftværk."
    ],
    "narrativeSources": [
     {
@@ -1357,15 +1365,15 @@
   "US80401C1009": {
    "name": "Satellogic",
    "theme": "space",
-   "summary": "Driver satellitter, der tager billeder af Jorden.",
+   "summary": "Driver satellitter, der tager billeder af Jorden. Satellitterne hedder NewSat. Forsiden sætter fuld drift af Merlin til andet halvår 2027.",
    "watch": "Satellitternes drift og kundernes brug af billederne.",
    "source": "https://satellogic.com/",
-   "products": "Billeder og data fra satellitter.",
+   "products": "Billeder fra satellitterne NewSat. Merlin er ikke i fuld drift i denne tekst.",
    "customers": "Offentlige og private kunder, der skal se Jorden ovenfra.",
    "role": "Satellittjeneste, ikke en raket.",
    "narrative": [
-    "Satellogic driver satellitter, der tager billeder af Jorden. Satellitterne hedder NewSat.",
-    "Selskabet opsender ikke selv raketterne i denne beskrivelse. Det står på satellitter."
+    "Satellogic driver satellitter, der tager billeder af Jorden. Satellitterne hedder NewSat. Forsiden sætter fuld drift af Merlin til andet halvår 2027.",
+    "Andet halvår 2027 ligger efter beholdningen pr. 1. juni 2026. Merlin er ikke beskrevet som en tjeneste i fuld drift. Selskabet opsender ikke selv raketterne i denne beskrivelse."
    ],
    "narrativeSources": [
     {
@@ -1601,15 +1609,15 @@
   "US3687361044": {
    "name": "Generac",
    "theme": "physical",
-   "summary": "Fremstiller reservegeneratorer til hjem og virksomheder.",
+   "summary": "Fremstiller reservegeneratorer til hjem og virksomheder. Selskabet skriver også, at det har bærbare generatorer, sol og batterilagring og ladere til elbiler. Det er ikke et elselskab.",
    "watch": "Efterspørgsel efter reservestrøm og forsyning af motorer.",
    "source": "https://www.generac.com/",
-   "products": "Generatorer og tilhørende udstyr.",
+   "products": "Reservegeneratorer, bærbare generatorer, sol, batterilagring og ladere til elbiler.",
    "customers": "Husholdninger, installatører og virksomheder.",
    "role": "Lokal reservestrøm, ikke et elnet.",
    "narrative": [
-    "Generac fremstiller reservegeneratorer til hjem og virksomheder.",
-    "De laver strøm, når nettet svigter. Selskabet er ikke et elselskab og ikke en mine."
+    "Generac skriver, at en hjemmegenerator giver strøm under et udfald, og at selskabet har bærbare generatorer. Siden nævner også sol, batterilagring og ladere til elbiler.",
+    "Det er udstyr hos kunden. Selskabet er ikke et elselskab og ikke en mine."
    ],
    "narrativeSources": [
     {

@@ -127,3 +127,31 @@ United States Antimony skriver selv, at de to materialer er antimon og zeolit. K
 ## Freeport · 2026-10-16 00:51 CEST
 
 Cerro Verde, El Abra og Grasberg står på siden. Lone Star er kun en gammel webcast-titel og er udeladt. AI-udkast uden gennemgangsdato. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Southern Copper · 2026-10-16 00:55 CEST
+
+Forsiden nævner kobber, molybdæn, sølv og zink og Grupo México. Minenavne stod ikke på siden og er udeladt. Advarslen om falske profiler er ikke kopieret. AI-udkast uden gennemgangsdato. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Ivanhoe Electric · 2026-10-16 00:58 CEST
+
+Santa Cruz og Tintic er projekter. Studiet er 23. september 2026, efter beholdningen. High-grade, low-cost, NPV og EXIM-beløb er ikke kopieret. 2029-prognosen er ikke skrevet ind. AI-udkast uden gennemgangsdato. Kæde og arkiv siger det samme. Chromium ved 375 og 1280 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Energy Fuels · 2026-10-16 01:00 CEST
+
+White Mesa Mill nævnes med uran, sjældne jordarter og vanadium. Oxider af sjældne jordarter laves på et anlæg i USA. Titan, zirkon og medicinske isotoper er under tilføjelse, ikke skrevet som drift. Largest, leading og 10 af 50 er ikke kopieret. Bundteksten om tre delstater er udeladt. AI-udkast uden gennemgangsdato. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## USA Rare Earth · 2026-10-16 01:01 CEST
+
+Serra Verde-overskriften er 4. september 2026, efter beholdningen. Brødteksten gav 403, så beløb og prisgulve er udeladt. Texas er ikke en mine i drift. Frankrig er planlagt. AI-udkast uden gennemgangsdato. Kæde og arkiv har datoen. Chromium ved 375 og 1280 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Generac · 2026-10-16 01:03 CEST
+
+Bærbare generatorer, sol, batterilagring og ladere står i sætninger på siden. Menupunktet alene er ikke brugt. Most trusted og kundecitater er ikke kopieret. Stadig ikke et elselskab. AI-udkast uden gennemgangsdato. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## EQT · 2026-10-16 01:04 CEST
+
+Købet af Equitrans er 22. juli 2024, før beholdningen. Only, breakeven og synergibeløb er ikke kopieret. Gassen er brændsel, ikke en metalmine. AI-udkast uden gennemgangsdato. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Satellogic · 2026-10-16 01:06 CEST
+
+Merlin er sat til fuld drift i andet halvår 2027, efter beholdningen. Daglige skanninger på produktsiden er ikke brugt som drift. NewSat står. Best-in-class er ikke kopieret. AI-udkast uden gennemgangsdato. Kæde og arkiv siger 2027. Chromium ved 375 og 1280 px. Ingen konsolfejl. Ingen vandret scroll.

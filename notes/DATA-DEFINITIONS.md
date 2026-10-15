@@ -105,6 +105,20 @@ Capstone skriver, at produktionen i 2025 var 225 k tonnes kobber. I teksten stå
 
 Freeports side nævner Cerro Verde og El Abra under Sydamerika og Grasberg under Indonesien. Teksten kalder dem miner, ikke et elselskab. Lone Star stod kun i en ældre webcast-titel og er ikke skrevet ind som drift.
 
+Southern Copper skriver, at de vigtigste produkter er kobber, molybdæn, sølv og zink, og at selskabet er en del af Grupo México. Peru og Mexico stod i profilen i forvejen. Toquepala, Cuajone, Buenavista og Ilo stod ikke på den hentede forside og er ikke tilføjet. En advarsel om falske profiler er ikke kopieret.
+
+Ivanhoe Electric skriver, at Santa Cruz er et kobberprojekt i Arizona, og at Tintic er et kobber- og guldprojekt i Utah. Typhoon er selskabets målesystem til efterforskning. Studiet af Santa Cruz er dateret 23. september 2026 og ligger efter beholdningen pr. 2026-06-01. Det er ikke en mine i drift. Nutidsværdi, afkastkrav, kobberpris og ordene high-grade og low-cost er ikke taget med. Hog Heaven er ikke beskrevet her, fordi projektsiden ikke er læst.
+
+Energy Fuels skriver, at det fremstiller oxider af sjældne jordarter på et anlæg i USA. White Mesa Mill nævnes med uran, sjældne jordarter og vanadium. Titan, zirkonmineraler og medicinske isotoper er produkter, selskabet er i gang med at tilføje, og de er ikke skrevet som igangværende produktion. Ordene largest og leading og tallet 10 af 50 er ikke taget med. En bundtekst om miner i tre delstater er ikke brugt.
+
+USA Rare Earth skriver, at aktiviteterne spænder over USA, Storbritannien og Brasilien, og at et anlæg i Frankrig er planlagt. Selskabet vil udvinde og forarbejde i Texas og i Brasilien. Magneter nævnes i Oklahoma, og South Carolina står som planlagt. En overskrift dateret 4. september 2026 siger, at sammenlægningen med Serra Verde Group er gennemført. Datoen ligger efter beholdningen pr. 2026-06-01. Meddelelsens brødtekst gav 403. Beløb, prisgulve og en påstand om et forbud i 2027 er ikke taget med. Texas er ikke beskrevet som en mine i drift.
+
+Generac skriver, at en hjemmegenerator giver strøm under et udfald, og at selskabet har bærbare generatorer, sol, batterilagring og ladere til elbiler. Det er udstyr hos kunden, ikke et elselskab og ikke en mine. Ordene most trusted og kundecitater er ikke taget med.
+
+EQT skriver, at købet af Equitrans Midstream blev gennemført 22. juli 2024. Datoen ligger før beholdningen pr. 2026-06-01. Equitrans er beskrevet som midstream-aktiver. EQT producerer naturgas i Appalachia, og gassen står som brændsel. Ordet only, en breakeven-pris og synergibeløb er ikke taget med. Et joint venture på 3,5 milliarder er ikke taget med.
+
+Satellogic skriver, at satellitterne hedder NewSat. Forsiden sætter fuld drift af Merlin til andet halvår 2027. Datoen ligger efter beholdningen pr. 2026-06-01. Merlin er ikke beskrevet som en tjeneste i fuld drift. Produktsidens nutid om daglige skanninger er ikke brugt som bevis på fuld drift. Ord om bedste opløsning er ikke taget med. Selskabet opsender ikke selv raketterne.
+
 ## År til dato på periodesiden
 
 `ytdReturn` i `data.js` bruger sidste punkt i året før som udgangspunkt, ikke 1. januar. For PMINDI pr. 2026-10-14 er det 2025-12-31, ikke 2026-01-02. `periode.html` viser den samme dato i "Fra → til". Kalenderår bruger samme base (`calendarYearReturns`).

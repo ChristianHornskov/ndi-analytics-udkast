@@ -2780,7 +2780,7 @@
     "note": "Opdelingen er vores forenkling og generel baggrund, ikke NDI's klassifikation. Et selskab kan tjene penge på flere måder. Søjlerne er en skitse, ikke tal. Antal er selskaber i den forsinkede beholdning pr. 1. juni 2026, som er tilordnet leddet. Det er ikke en rangering eller en anbefaling."
    },
    "route": {
-    "label": "Rum i syv stop",
+    "label": "Rum i otte stop",
     "lede": "Rum-fanen er lang. Vælg et stop, eller læs oppefra.",
     "stops": [
      {
@@ -2817,13 +2817,19 @@
       "id": "sp-alt",
       "icon": "📏",
       "k": "Hvor højt",
-      "t": "fra 400 km til Månen"
+      "t": "højder og hvem der er hvor"
      },
      {
       "id": "gloss-wrap",
       "icon": "◇",
       "k": "Ordbog",
       "t": "10 ord"
+     },
+     {
+      "id": "sp-quiz",
+      "icon": "✓",
+      "k": "Tjek dig selv",
+      "t": "fem spørgsmål"
      }
     ]
    },
@@ -2896,6 +2902,135 @@
      }
     ],
     "note": "Usikkerhederne er generel baggrundsviden og vores udvalg. De er ikke NDI's vurdering af enkelte selskaber. De to linjer med NDI-mærke er NDI's egne og har kilde. Kortene er ikke en rangering og ikke en anbefaling."
+   },
+   "bands": {
+    "title": "Hvem arbejder hvor højt?",
+    "lede": "Kædens led hører hjemme i forskellige højder. Det meste bygges på jorden, tjenesterne løber i kredsløb, og månen er det fjerneste mål.",
+    "items": [
+     {
+      "key": "ground",
+      "icon": "🏭",
+      "k": "På jorden",
+      "km": "0 km",
+      "t": "Dele og satellitter bygges på fabrikker. Raketterne starter herfra og flyver gennem alle højderne.",
+      "links": [
+       "parts",
+       "sats",
+       "launch"
+      ]
+     },
+     {
+      "key": "leo",
+      "icon": "📡",
+      "k": "Lavt kredsløb",
+      "km": "160 til 2.000 km",
+      "t": "Her ligger de fleste nye satellitter: internet, mobil fra rummet, kameraer og rumstationen. Tæt på jorden, så signalet er hurtigt.",
+      "links": [
+       "satcom",
+       "eo",
+       "orbit"
+      ]
+     },
+     {
+      "key": "meo",
+      "icon": "🧭",
+      "k": "Mellemhøjt kredsløb",
+      "km": "2.000 til 35.786 km",
+      "t": "Navigation som GPS ligger her. Få satellitter kan dække hele jorden.",
+      "links": [
+       "sats"
+      ]
+     },
+     {
+      "key": "geo",
+      "icon": "🛰",
+      "k": "Geostationær bane",
+      "km": "35.786 km",
+      "t": "Satellitten følger jordens rotation og står stille over ét punkt. Bruges til tv og kommunikation, men signalet er langsommere.",
+      "links": [
+       "satcom"
+      ]
+     },
+     {
+      "key": "moon",
+      "icon": "🌕",
+      "k": "Månen og længere ude",
+      "km": "384.400 km",
+      "t": "Månelandere og infrastruktur til fremtidige ture. Det er den tidligste og mest usikre del af kæden.",
+      "links": [
+       "orbit"
+      ]
+     }
+    ],
+    "note": "Højderne er generel baggrund. Tal ved leddene er antal selskaber i den forsinkede beholdning, som er tilordnet leddet. Et led kan høre til flere højder, og et selskab kan arbejde i flere. Ikke en rangering og ikke en anbefaling."
+   },
+   "quiz": {
+    "title": "Tjek dig selv: fem spørgsmål om rumkæden",
+    "lede": "Vælg et svar. Du får en kort forklaring og et link til det sted på siden, hvor det står. Intet gemmes.",
+    "items": [
+     {
+      "q": "Hvorfor er det blevet billigere at komme i kredsløb?",
+      "a": [
+       "Satellitterne er blevet tungere",
+       "Det store første trin lander igen og kan genbruges",
+       "Rummet er kommet tættere på"
+      ],
+      "ok": 1,
+      "why": "Når raketten kan flyve flere ture, fordeles prisen for den over mange opsendelser (baggrund).",
+      "sec": "sp-cost",
+      "more": "Hvorfor prisen faldt"
+     },
+     {
+      "q": "Hvordan betales satellitinternet typisk?",
+      "a": [
+       "Én gang, når satellitten sendes op",
+       "Løbende, som et abonnement",
+       "Det betales slet ikke endnu"
+      ],
+      "ok": 1,
+      "why": "Kommunikation og jorddata sælges år efter år. Dele, opsendelse og satellitter betales typisk én gang (vores forenkling).",
+      "sec": "sp-money",
+      "more": "Én gang eller løbende"
+     },
+     {
+      "q": "Hvorfor er satellitinternet rykket ned i lavt kredsløb?",
+      "a": [
+       "Signalet når frem og tilbage meget hurtigere",
+       "Der er mere sollys længere nede",
+       "Satellitterne kan ikke komme højere op"
+      ],
+      "ok": 0,
+      "why": "Via en geostationær satellit tager signalet omkring et halvt sekund frem og tilbage. Via lavt kredsløb tager det få hundrededele af et sekund (baggrund).",
+      "sec": "sp-alt",
+      "more": "Hvor højt er højt?"
+     },
+     {
+      "q": "Hvor stor en del af årets satellitopsendelser stod SpaceX for i NDI's gennemgang fra 2024?",
+      "a": [
+       "Omkring en fjerdedel",
+       "Omkring halvdelen",
+       "Omkring 90 %"
+      ],
+      "ok": 2,
+      "why": "Det er NDI's tal (BLOG 23. juni 2024). Det viser, hvor meget én aktør fylder, og bruges som illustration, ikke som anbefaling.",
+      "sec": "sp-risk",
+      "more": "Hvad kan gå galt?"
+     },
+     {
+      "q": "Hvad er \"rum og compute\" i dag?",
+      "a": [
+       "En stor og etableret forretning",
+       "En tidlig og usikker idé",
+       "Det led med flest selskaber i beholdningen"
+      ],
+      "ok": 1,
+      "why": "Ingen selskaber i den forsinkede beholdning er tilordnet leddet pr. 1. juni 2026. Elon Musks udsagn om SpaceX og compute i rummet er hans påstand, ikke NDI's forventning.",
+      "sec": "lk-space-compute",
+      "more": "Se leddet"
+     }
+    ],
+    "done": "Du har svaret på alle fem.",
+    "note": "Spørgsmålene er vores egne og skal gøre siden lettere at læse. De tester ikke viden om enkelte selskaber og er ikke en anbefaling."
    }
   },
   {
