@@ -259,3 +259,24 @@ Ingen nye.
 - Fundet og rettet under test: på 375 px roterede pilen i flowet en hel boks 90° og dækkede teksten. Nu skiftes → til ↓ med to spans.
 - Lær-hub: Tankegangen har nu 5 døre i et 2-kolonne gitter, så «Hvad P/E fortæller» står alene i fuld bredde på desktop. Acceptabelt, men Leo kan overveje at flytte P/E til «Afkast og udsving» (så 4 + 4).
 - 375/1280: 0 konsolfejl, ingen h-overflow på rebalancering, lær/index, FAQ. Skyder ved 900 % giver 52,6 % / 81 kr. (regnet efter).
+
+## ~01:30 CEST lane-C checkpoint (Claude) — lær/risikoklasse + hub 4 · 4 · 4 · 3
+- **Hul lukket:** risici.html viste «5 / 7 (middel-høj)» uden forklaring af, hvor tallet kommer fra. Ny side `laer/risikoklasse.html`: kæde i fire trin, skyder (udsving pr. år → klasse på skalaen, fondens klasse med blå kant), tabel med de syv intervaller og bjælke for intervallets bredde (klasse 6 = 50 point, klasse 7 stiplet = ingen loft), og «Hvad klassen ikke siger».
+- Risici: link «Hvad klassen betyder →» lige under hver klasse (ikke en fjerde knap i bunden, den rækkede allerede tre).
+- **Lær-hub:** P/E-døren stod alene i fuld bredde. Nu Tankegangen 4 (2×2) · Afkast og udsving 4 (CAGR, Risikoklasse, Valuta, P/E) · Fonden i praksis 4 (Risici flyttet hertil, ny tekst) · Slå op 3. Ingen enlige døre på desktop.
+- Ordliste: SRI og Udsving linker til hinanden og til siden. FAQ 16 korte svar.
+- Test (8763) 375/1280 på 6 sider: 0 konsolfejl, ingen h-overflow, 0 døde links/ankre. Skyder kontrolleret ved 0/3/15/20/25/30/40/80/100 (grænser 20 → 5, 30 → 6, 80 → 7).
+- Obs: tabellens fjerde kolonne (bjælker) skjules under 640 px. Tre kolonner er nok på mobil.
+
+## ~01:25 CEST lane-C checkpoint (Claude) — risikoklasse committet, ordliste 91, invester
+- Risikoklasse-siden lå ucommittet fra forrige cyklus. Gennemset før commit: klasse 6 hed «høj», men standardteksten i KID er «næsthøjeste». Rettet. Den uverificerede sætning «Fondens KID siger …» er fjernet, og «mindst 5 år» er tjekket mod fund-meta.json.
+- `om-data.html`: de sidste interne ord ud af synlig tekst («v1» ×6 → «udkastet», «peak→bund» → «fra top til bund», «heuristik», «drawdown-siden» → «Fald fra top», 8 bindestreger brugt som tankestreg). «Max» forklaret, så det matcher kortet på drawdown.html.
+- Ordliste 87 → 91: depot (ordet bruges på invester.html), platforme, software og energiressourcer (de tre temaer manglede, og platforme er det største målt på vægt i begge klasser pr. 1. jun 2026: 16,0 % / 14,7 %). Tællere 18 · 16 · 30 · 27 passer.
+- `invester.html`: «risikoklasse 5 af 7» → lær/risikoklasse; «Passer en bred teknologifond?» forklarer nu flodsystemet i én sætning (→ ordliste).
+- Test 375/1280 på invester, om-data, kort, FAQ, risikoklasse: 0 konsolfejl, ingen h-overflow, 0 døde ankre; FAQ-søgning rammer «depot», «platforme», «energiressourcer».
+
+## ~01:15 CEST lane-C checkpoint (Claude) — ordliste 95 + lær-sider linker til ordlisten
+- Ordliste 91 → 95: median (bruges på drawdown og ideer uden forklaring), markedsrisiko og selskabsspecifik risiko (kernen i «Hvorfor så mange aktier?», stod ikke i ordlisten), PRIIPs (nævnt på risikoklasse-siden). Tællere 21 · 17 · 30 · 27 passer.
+- Lær-sider uden ordlistelinks har fået dem: hvorfor-mange-aktier (3 nye + «Se også»), saadan-taenker-vi (flodsystem, dæmning, prospekt, KID, udgangspunkter), udbytte-vs-akk («I ordlisten»-linje + NAV), faq-mangler-aktie (likviditet, ticker), risikoklasse (PRIIPs). ideer.html: «medianen» → ordliste.
+- Obs til js/css-ejer: på mobil er ordlistegrupperne foldet sammen, når man åbner om-data.html uden hash. Links med #g-… folder den rigtige gruppe ud og fremhæver posten. Virker (testet #g-markedsrisiko på 375).
+- Test 375/1280 på 8 sider: 0 konsolfejl, ingen h-overflow, 0 døde ankre (den eneste træffer er skabelonen `g-${key}` i selskab.html).

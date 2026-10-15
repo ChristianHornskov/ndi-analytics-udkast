@@ -76,3 +76,7 @@ Offentlige (ikke-fortrolige) idéer spejles evt. på `docs/ideer.html`.
 
 ## Til beslutning (lane-C, 00:41 16/10)
 - «tags» bruges stadig som fagord (NDI-tags, multi-tag). Dansk alternativ: «mærker». Kræver samme ord i js/ og vaerdikaeder (andre lanes), ellers bliver sproget ujævnt. Ikke ændret.
+
+## lane-C ~01:25 — til data-lane (unique-metrics.json, ikke min fil)
+- Synlig tekst på ndi-perspektiv.html bryder Vidensbot pkt. 10: semikolon i Tesla-hint («Placeringen er pædagogisk; Tesla bygger …») og tankestreg i Rigetti-/Quantum-hint («regnekraft — ikke erstatning …») og Arm-hint («økosystem — ikke egen foundry»). Forslag: punktum/komma.
+- Ordlisten har ingen post for temaet «Energi» (kun energiressourcer, elnet, SMR, energilagring). Kan tilføjes, hvis Leo vil have alle 11 temaer i ordlisten.

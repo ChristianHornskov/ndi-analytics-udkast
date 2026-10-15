@@ -1016,3 +1016,27 @@ Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke me
 - Notes: HANDOFF trin 9, UX-review, VIDENSBOT-live-check.
 - Test: 8763, 375/1280: 0 konsolfejl, ingen h-overflow, 0 døde links/ankre. Mobil-fejl i flowpilen fundet og rettet. precheck PASSED.
 - Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + overveje P/E-dørens placering i lær-hub.
+
+## Fra Claude lane-C (lær/risikoklasse + hub 4·4·4·3) · ~01:30 CEST 16/10
+- Ny lær-side `laer/risikoklasse.html`: fra udsving til klasse (kæde), skyder udsving pr. år → klasse 1–7, tabel med de syv PRIIPs-intervaller (klasse 5 = 20–30 %), «Hvad klassen ikke siger». Ingen fondsberegning påstået.
+- Lær-hub regrupperet: 15 døre, 4 · 4 · 4 · 3 (P/E → Afkast og udsving, Risici → Fonden i praksis). Ingen enlige døre.
+- Koblet på: risici.html (link under hver klasse), om-data (g-sri ↔ g-udsving → siden), FAQ (16 korte svar), kort.html.
+- **Til script-ejer:** `scripts/smoke.mjs` kender hverken `/laer/rebalancering.html` eller `/laer/risikoklasse.html`.
+- Notes: HANDOFF trin 8/9, UX-review, VIDENSBOT-live-check (bed om bekræftelse af KID-ordene for klasse 1–7).
+- Test: 8763, 375/1280 på 6 sider: 0 konsolfejl, ingen h-overflow, 0 døde links/ankre; screenshots gennemset. precheck: se push.
+- Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + invester/ndi-perspektiv sprogtjek.
+
+## Fra Claude lane-C (risikoklasse committet + ordliste 91 + sprogrens) · ~01:25 CEST 16/10
+- Commit 0bcde18: lær/risikoklasse (lå ucommittet). Rettet før commit: klasse 6 «næsthøjeste», uverificeret KID-citat fjernet, «mindst 5 år» tjekket mod fund-meta.json.
+- `om-data.html`: «v1», «peak→bund», «heuristik» og bindestreger brugt som tankestreg ud af synlig tekst. Ordliste 87 → 91 (depot, platforme, software, energiressourcer). Tællere 18 · 16 · 30 · 27.
+- `invester.html`: link til risikoklasse, flodsystem i én sætning. `kort.html`: 91.
+- **Til data-lane:** tankestreg/semikolon i unique-metrics-hints (IDEAS).
+- Test: 8763, 375/1280: 0 konsolfejl, ingen h-overflow, 0 døde ankre. precheck: se push.
+- Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + ideer.html tiende form eller lær-sidernes «Se også» mod ordlisten.
+
+## Fra Claude lane-C (ordliste 95 + lær-sider → ordliste) · ~01:15 CEST 16/10
+- `om-data.html`: ordliste 91 → 95 (median, markedsrisiko, selskabsspecifik risiko, PRIIPs). Tællere 21 · 17 · 30 · 27.
+- Ordlistelinks på fem lær-sider, der havde få eller ingen: hvorfor-mange-aktier, saadan-taenker-vi, udbytte-vs-akk, faq-mangler-aktie, risikoklasse. `ideer.html` median → ordliste. `kort.html` 95.
+- Notes: HANDOFF trin 8 (95), UX-review, VIDENSBOT-live-check.
+- Test: 8763, 375/1280 på 8 sider: 0 konsolfejl, ingen h-overflow, 0 døde ankre. precheck: se push.
+- Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + ideer.html tiende form.
