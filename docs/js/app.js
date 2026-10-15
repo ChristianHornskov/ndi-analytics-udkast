@@ -143,6 +143,7 @@ function renderEntre(root) {
       <h2 style="font-size:18px;margin-bottom:10px">Hurtige genveje</h2>
       <p style="color:var(--muted);font-size:13px;margin-bottom:12px">Beholdning pr. ${fmtDate(DATA.portfolio.asOf)} · Afkast-snapshot (ikke live pipeline).</p>
       <div class="seg">
+        <a class="outline-btn small" href="temaer.html">Alle temaer</a>
         <a class="outline-btn small" href="tema.html?slug=chips&fund=${state.fund}">Tema: Chips</a>
         <a class="outline-btn small" href="laer/index.html">Lær</a>
         <a class="outline-btn small" href="drawdown.html?fund=${state.fund}">Drawdown</a>

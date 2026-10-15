@@ -1,36 +1,30 @@
 # STATUS – NDI Analytics overnight build
 
-**Build lead:** Grok Bot (executor) · **Leo** · Christian sover.
+**2026-10-15 20:27 CEST — Cycle 1 push (theme/edu/drawdown/compare/invest/archive/period/company index)**
 
-## Seneste opdatering
-**2026-10-15 20:27 CEST** — Shift-chunk push: compliance-låst v1 + overnight ekspansion (tema/lær/drawdown/invester/…). Pages live. Næste polish-worker kickes.
+## Live
+https://christianhornskov.github.io/ndi-analytics-udkast/
 
-## Live URL
-https://christianhornskov.github.io/ndi-analytics-udkast/ · Pages `built` · HTTP 200
+## Compliance (locked)
+- Notes ONLY in `/notes` (repo root). `docs/notes/` = stub warning only. STATUS must 404 on Pages.
+- Holdings delayed ≤ 2026-06-01. No daily movers.
+- PMINDIAKK: no returns until 12m. PMINDI: no 1m/3m. No Nasdaq. No unverified per-stock YTD/P/S/P/E/52w.
+- Context events: documented udbytte only.
 
-## Done (denne chunk)
-- [x] Monitoreret Claude×2 + Grok embed; dual-build `docs/b/` data merged → `docs/data/` (company-profiles, fund-meta); `docs/b` ikke linked
-- [x] Notes kanonisk i `/notes` (aldrig under `docs/` – Pages). `docs/notes/` kun stub/redirect
-- [x] Compliance urgent: delayed holdings **2026-06-01**; ingen dags-movers; PMINDIAKK uden afkast; PMINDI kun start/YTD/kalenderår; ingen uvurderede aktie-YTD/P/S/P/E/52w
-- [x] Site ekspansion: `tema.html`, `laer/*`, `drawdown.html`, `invester.html`, `sammenlign.html`, `selskaber.html`, `periode.html`, `nyhedsarkiv.html`, Grok embed (`embed/chart.css|js|html`)
-- [x] Playwright extended: 14 paths × desktop+mobile = OK
-- [x] Push til origin/main (dette commit)
+## Shipped this cycle
+- `tema.html?slug=` deep theme pages (from themes.json)
+- `laer/` education hub + 5 articles
+- `drawdown.html` fund-level max drawdown from NAV total
+- `periode.html?year=` period deep pages
+- `sammenlign.html` PMINDI vs AKK
+- `invester.html` Sådan investerer du flow
+- `nyhedsarkiv.html` newsletter archive concept
+- `selskaber.html` A–Z + search
+- Entré: 6 doors + expanded shortcuts; theme links from screener/table/company
+- Glossary expanded (`om-data.html`)
+- Embed: CTA + 1m/3m hidden
+- Company page: theme deep link + related same-theme
+- Playwright smoke 1280+375: all 200, no advice language, no notes leak
 
-## In progress / next
-- [ ] Polish-worker: wire `company-profiles.json` på selskabssider; tema deep-pages fra `themes.json`; mobile vs Jesper
-- [ ] Cross-review Claude↔Grok (“better not different”)
-- [ ] UX-review.md (mangler stadig – ingen live UX-reviewer endnu)
-- [ ] Flere dokumenterede kontekst-events (kun udbytte/source)
-- [ ] Print-CSS; embed CTA
-
-## Fra Claude
-Compliance-first strip af aktietal + AKK-gate; notes flyttet til `/notes`. Ekspansion iht. OVERNIGHT-BACKLOG.
-
-## Fra Grok
-Embed polish landet (egen chart.css/js, postMessage height, Nasdaq disabled note).
-
-## Agents after this push
-Se `logs/*.pid` / OVERNIGHT-BACKLOG cycle 2+.
-
-## Spørgsmål til Christian
-Defaults uændrede. SoftBank 1År-tal ikke vist (compliance strip).
+## Next cycles
+See OVERNIGHT-BACKLOG.md — multi-tag, mobile polish, more IDEAS, richer narratives, print polish, UX-review.md checkpoints.

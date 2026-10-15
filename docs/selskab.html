@@ -26,6 +26,7 @@
     const main = document.getElementById('main');
     const data = await loadAll();
     const meta = await fetch('data/fund-meta.json').then(r => r.ok ? r.json() : null).catch(() => null);
+    const monthsPack = await fetch('data/company-months.json').then(r => r.ok ? r.json() : null).catch(() => null);
     const priip = meta?.funds?.[fundId]?.priip;
     // U3: kom man fra screeneren, går Tilbage til samme filtre/sortering
     let backHref = `index.html?view=udforsk&fund=${fundId}`;
@@ -79,6 +80,22 @@
           <p style="color:var(--muted)">${p.watch || '–'}</p>
           <p class="band" style="margin-top:12px">Automatiske nyhedsresuméer (AI) er ikke aktive i udkastet. Når de kommer, mærkes de som AI og som generel information – ikke NDI's vurdering. Kun forsinkede offentlige beholdningsdata.</p>
         </section>
+        ${(() => {
+          const series = (monthsPack?.funds?.[fundId] || []).map(row => ({ d: row.date, w: row.weights?.[p.isin] })).filter(x => x.w != null);
+          if (series.length < 2) return `<section class="panel"><h2 style="font-size:16px;margin-bottom:8px">Vægt over tid</h2><p style="color:var(--muted);font-size:13px">Ingen månedsrapport-historik for denne ISIN i snapshotet.</p></section>`;
+          const maxW = Math.max(...series.map(x => x.w), 0.01);
+          const bars = series.map(x => {
+            const h = Math.max(4, Math.round((x.w / maxW) * 72));
+            return `<div style="display:flex;flex-direction:column;align-items:center;gap:4px;flex:1;min-width:18px" title="${x.d}: ${x.w.toFixed(2)} %"><div style="height:72px;display:flex;align-items:flex-end;width:100%"><div style="width:100%;height:${h}px;background:var(--brand);border-radius:3px 3px 0 0;opacity:.85"></div></div><span style="font-size:9px;color:var(--faint);writing-mode:horizontal-tb">${x.d.slice(2,7)}</span></div>`;
+          }).join('');
+          const first = series[0], last = series[series.length-1];
+          return `<section class="panel">
+            <h2 style="font-size:16px;margin-bottom:8px">Vægt over tid (månedsrapporter)</h2>
+            <p style="color:var(--muted);font-size:13px;margin-bottom:10px">${first.w.toFixed(2).replace('.',',')} % (${fmtDate(first.d)}) → ${last.w.toFixed(2).replace('.',',')} % (${fmtDate(last.d)}). Kun måneder hvor ISIN indgår i rapporten — mangler ikke udfyldt.</p>
+            <div style="display:flex;align-items:flex-end;gap:3px;overflow-x:auto;padding-bottom:4px">${bars}</div>
+            <p style="font-size:11px;color:var(--muted);margin-top:8px">Kilde: første Fundmarket-rapport pr. kalendermåned. Forsinket offentlig data.</p>
+          </section>`;
+        })()}
         <section class="panel">
           <h2 style="font-size:16px;margin-bottom:8px">Andre i samme tema (forsinket beholdning)</h2>
           <div class="table-wrap"><table class="data" style="min-width:0"><thead><tr><th>Navn</th><th>Vægt %</th></tr></thead><tbody>

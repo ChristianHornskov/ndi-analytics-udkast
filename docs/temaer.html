@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Temaer · NDI Analytics</title>
+  <link rel="stylesheet" href="css/ndi.css">
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><img src="assets/mark.svg" width="34" height="27" alt=""><span>NewDeal Invest</span></a>
+    <nav class="nav"><a href="index.html?view=udforsk">← Udforsk</a><a href="vaerdikaede.html">Værdikæde</a></nav>
+  </header>
+  <main id="main"><p style="color:var(--muted)">Henter temaer…</p></main>
+  <script type="module">
+    import { fmtDate } from './js/data.js';
+    const data = await fetch('data/themes.json').then(r => r.json());
+    const cards = (data.themes||[]).map(t => `
+      <a class="door" href="tema.html?slug=${encodeURIComponent(t.slug)}">
+        <strong>${t.title}</strong>
+        <span>${t.problem}</span>
+        <span class="go">${t.count} selskaber · ca. ${String(t.weightSum).replace('.',',')} % →</span>
+      </a>`).join('');
+    document.getElementById('main').innerHTML = `
+      <p class="eyebrow">TEMAER · OVERSIGT</p>
+      <h1>NDI-linsen</h1>
+      <p class="lede">Temaer viser eksponering i den forsinkede beholdning (pr. ${fmtDate(data.positionsAsOf)}) — ikke anbefalinger eller bevidste overvægte.</p>
+      <p class="band">Segmenter viser eksponering, ikke en anbefaling.</p>
+      <div class="doors">${cards}</div>
+      <p class="warn">Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.</p>`;
+  </script>
+</body>
+</html>

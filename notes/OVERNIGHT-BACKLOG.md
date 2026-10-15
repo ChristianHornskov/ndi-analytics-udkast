@@ -2,19 +2,22 @@
 
 Compliance locks (do not regress): notes only in `/notes`; delayed holdings ≤2026-06-01; no daily movers; PMINDIAKK no returns; PMINDI no 1m/3m; no unverified per-stock YTD/1Y/P/S/P/E; no fake 52w drawdown; no Nasdaq; no invented context narratives.
 
-## Cycle queue (pick next, build, cross-review, Playwright, push)
-1. Theme deep pages (`tema.html?slug=`) — problem, værdikæde, selskaber i forsinket beholdning
-2. Education hub (`laer/`) — Sådan tænker vi, hvorfor mange aktier/varians, P/E forklaring, livscyklus, FAQ mangler aktie X
-3. Glossary full page + inline ? links (already started)
-4. Fund drawdown page (fund-level only, from NAV total series — honest math)
-5. Context chart: ONLY documented events (udbytte ex-dato) with sources
-6. Comparison tool: PMINDI vs PMINDIAKK (NAV only for AKK; returns only PMINDI)
-7. Sådan investerer du — dedicated flow page (steps, ISIN copy, KID)
-8. Newsletter archive concept (static stub issues, subscribe stub)
-9. Period deep links `?view=fonden&periode=year:2024` shareable + landing copy
-10. Company index A–Z + search landing
-11. Print/PDF-friendly CSS
-12. Embed: CTA “Undersøg porteføljen mere” + AKK gate polish
-13. Multi-tag themes (Tesla energy+physical) where we can justify
-14. Mobile polish pass vs Jesper
-15. More IDEAS from meeting 0→1 uniqueness
+## Cycle queue
+1. [done] Theme deep pages (`tema.html?slug=`)
+2. [done] Education hub (`laer/`)
+3. [done] Glossary expansion + inline ? links
+4. [done] Fund drawdown page
+5. [done] Context chart: ONLY documented udbytte events
+6. [done] Comparison tool PMINDI vs PMINDIAKK
+7. [done] Sådan investerer du flow
+8. [done] Newsletter archive concept
+9. [done] Period deep links `periode.html`
+10. [done] Company index A–Z + search
+11. [next] Print/PDF-friendly CSS polish + theme hub index page
+12. [next] Embed polish + more CTAs; AKK gate already in
+13. [next] Multi-tag themes (Tesla energy+physical) where justified
+14. [next] Mobile polish pass vs Jesper mockup
+15. [next] More IDEAS uniqueness (0→1): richer værdikæde, tema landing grid, FAQ search, shareable filter URLs polish
+16. [next] Company deep: month history from company-months.json (weight over time) if honest
+17. [next] UX-review.md at 22/00/02/04/06 CEST
+18. Never report done — keep cycling
