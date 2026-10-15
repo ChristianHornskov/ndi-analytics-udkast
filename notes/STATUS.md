@@ -280,3 +280,13 @@ HEAD `b35518b`. Visual-variety request shipped + reviewed. MADS værdikæde/quan
 - Notes: UX-review 00:00, VIDENSBOT-live-check, HANDOFF demo-trin 8.
 - Test: Playwright 375/1280 på 5 sider: 0 konsolfejl, 0 døde links, ingen h-overflow. smoke 52/52 fail 0. precheck PASSED.
 - Branch `lane-C` klar til merge. Næste: lær-sider copy-gennemgang mod Vidensbot (saadan-taenker-vi, livscyklus, pe-forklaring) + UX-review 02:00.
+
+
+## Fra Claude lane-C (lær-sider mod Vidensbot) · ~00:20 CEST 16/10
+- `laer/saadan-taenker-vi.html`: tre udgangspunkter som kæde (BOG s. 27–28), fem principper hver med «Derfor:» + link, citat «Vores mål er ikke at finde den ene vinder» (ugebrev 13. jul 2026), «Markedet har som udgangspunkt ret», flodsystem uddybet, boks «Bogen og fonden er to forskellige ting» (TM §0).
+- `laer/livscyklus.html`: SVG-kurve (omsætning + overskudsgrad, 5 faser) med sidens 5 modenhedsgrupper; lodret variant < 660 px. Gruppekort, «rigtigt værktøj» (skrue/hammer, Amazon reinvesterer), ordlistelinks.
+- `laer/pe-forklaring.html`: hvad P/E er, høj/lav som forventning/bekymring, «Samme selskab, to valg» (opdigtet A/B: P/E 100 vs 25), P/E finder ikke bobler. Ingen P/E-tal pr. aktie.
+- `om-data.html`: ordliste 61 → 63 (tre udgangspunkter, livscyklus). kort.html-tæller + laer/index-tekst opdateret.
+- Fundet og rettet under test: lodret SVG blev også vist på desktop (CSS-specificitet); P/E-siden mistede sin media query.
+- Test: Playwright 375/1280: 0 konsolfejl, 0 døde links, ingen h-overflow. smoke 52/52 fail 0. precheck PASSED.
+- Branch `lane-C` klar til merge. Næste: forsinket-beholdning / udbytte-vs-akk / hvorfor-mange-aktier mod Vidensbot + UX-review 02:00.

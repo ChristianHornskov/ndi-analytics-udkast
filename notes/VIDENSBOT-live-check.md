@@ -80,3 +80,12 @@ Sider: ideer, kort, om-data, invester, risici, ndi-perspektiv, laer/*.
 - «Værdikæder, temaer og vægte viser eksponering … ikke bevidste overvægte og ikke anbefalinger» står nu også på risici (VIDENSBOT-krav §3 spænding).
 - Stokastisk proces / odds mod pris i ordlisten (TM afsnit 10), formuleret som NDI's beskrivelse, ikke som garanti.
 - Ordscan på de 4 sider: alle træf er negationer, KID-ordlyd («anbefaler mindst 5 års») eller falske positiver («kommunikation»). Ingen tal fra interne IA/PA-rapporter er sat på siden.
+
+
+## 2026-10-16 ~00:20 — lær: saadan-taenker-vi / livscyklus / pe-forklaring (Claude lane-C)
+- Kilder: BOG (s. 22–27, 64, 70–71, 139–152) og offentlige ugebreve (BLOG 27. okt 2025, 16. feb 2026, 30. mar 2026, 1. jun 2026, 13. jul 2026). **Ingen** citater fra visionsmødet, Slack, UDKAST, IA/PA eller ordrearknotater på siderne.
+- TM §0 respekteret: ny boks «Bogen og fonden er to forskellige ting» — bogens privatråd (køb og hold, ≤1 %, største selskaber, ikke time) adskilt fra fonden (løbende rebalancering, mange små positioner, modne + unge). Ingen tal for handelsomfang.
+- TM §1.8 «markedet har som udgangspunkt ret» → nyt afsnit; høj/lav P/E = forventning/bekymring (vision #22).
+- P/E-eksempel er opdigtet (A/B, samme markedsværdi) og markeret. Formuleret «målt på P/E ser A dyrere ud … selv om A bygger næste produkt» — ikke «A er bedst».
+- Amazon (bog s. 24) bruges kun som begrebseksempel med «ikke et syn på aktien».
+- Ordscan: træf er negationer («vinderne kan ikke forudsiges», «ikke automatisk billig») og KID-ordlyd. Ingen handelsprog.
