@@ -5100,6 +5100,2284 @@
           "href": "laer/livscyklus.html"
         }
       ]
+    },
+    "US8740391003": {
+      "name": "Taiwan Semiconductor (TSMC)",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Chips",
+          "hint": "Manuelt tag: chips (foundry). Primært tema i data: Andet / uklassificeret. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Kontraktfremstilling af chips",
+          "hint": "Verdens største chipfabrik på kontrakt: producerer chips designet af andre, herunder mange AI-acceleratorer.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "AI-compute · led 5: foundry",
+          "hint": "Fremstiller de chips, som chipdesignerne i led 3 tegner. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=US8740391003#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Kapacitet og geografi",
+          "hint": "Udbygning af avancerede processer og pakning, og fabrikkernes geografiske placering. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US0382221051": {
+      "name": "Applied Materials",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Chips",
+          "hint": "Primært tema: Chips. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Udstyr til chipfabrikker",
+          "hint": "Maskiner til blandt andet aflejring, ætsning og inspektion, som chipfabrikker bruger i produktionen.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "AI-compute · led 4: udstyr og litografi",
+          "hint": "Leverer maskinerne, som foundries i led 5 bygger chips med. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=US0382221051#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Fabrikkernes investeringer",
+          "hint": "Chipproducenternes investeringsniveau og eksportregler for udstyr. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US5128073062": {
+      "name": "Lam Research",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Chips",
+          "hint": "Primært tema: Chips. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Ætse- og aflejringsudstyr",
+          "hint": "Udstyr til at ætse og aflejre lag på wafere; vigtigt for blandt andet hukommelseschips.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "AI-compute · led 4: udstyr og litografi",
+          "hint": "Maskiner til chipfabrikker, især til hukommelse. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=US5128073062#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Hukommelsesinvesteringer",
+          "hint": "Hukommelsesproducenternes investeringer og eksportregler for udstyr. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US4824801009": {
+      "name": "KLA",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Chips",
+          "hint": "Primært tema: Chips. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Inspektion og måling",
+          "hint": "Udstyr og software, der finder fejl og måler strukturer under chipproduktionen.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "AI-compute · led 4: udstyr og litografi",
+          "hint": "Kvalitetskontrol inde i chipfabrikken. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=US4824801009#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Kompleksitet i produktionen",
+          "hint": "Jo mere komplekse chips, jo flere målinger; samt eksportregler. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "JP3571400005": {
+      "name": "Tokyo Electron",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Chips",
+          "hint": "Primært tema: Chips. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Udstyr til chipfabrikker",
+          "hint": "Japansk producent af blandt andet coating-, ætse- og aflejringsudstyr til waferproduktion.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "AI-compute · led 4: udstyr og litografi",
+          "hint": "Maskiner til chipfabrikker. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=JP3571400005#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Fabrikkernes investeringer",
+          "hint": "Chipproducenternes investeringer og handelsregler mellem regionerne. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "NL0000334118": {
+      "name": "ASM International",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Chips",
+          "hint": "Primært tema: Chips. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Udstyr til atomlagsaflejring",
+          "hint": "Hollandsk producent af udstyr, der lægger ekstremt tynde lag på wafere (ALD og epitaksi).",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "AI-compute · led 4: udstyr og litografi",
+          "hint": "Maskiner til avancerede chipprocesser. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=NL0000334118#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Nye transistordesigns",
+          "hint": "Overgangen til nye transistorarkitekturer, som kræver flere tynde lag. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "IL0010845571": {
+      "name": "Nova",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Chips",
+          "hint": "Primært tema: Chips. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Måleudstyr til chipproduktion",
+          "hint": "Israelsk producent af optiske og kemiske målesystemer til chipfabrikker.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "AI-compute · led 4: udstyr og litografi",
+          "hint": "Måling og procesteknisk kontrol i fabrikken. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=IL0010845571#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Fabrikkernes investeringer",
+          "hint": "Investeringer i avancerede processer og kundekoncentration. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US0545402085": {
+      "name": "Axcelis Technologies",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Chips",
+          "hint": "Primært tema: Chips. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Ionimplantering",
+          "hint": "Udstyr, der skyder ioner ind i siliciumskiver for at ændre materialets elektriske egenskaber.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "AI-compute · led 4: udstyr og litografi",
+          "hint": "Procesudstyr, blandt andet til effekt- og siliciumkarbidchips. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=US0545402085#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Effekt- og bilchips",
+          "hint": "Investeringer i effektchips og siliciumkarbid. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US29362U1043": {
+      "name": "Entegris",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Chips",
+          "hint": "Primært tema: Chips. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Materialer og renhed",
+          "hint": "Specialkemikalier, filtre og beholdere, der holder chipproduktionen ren.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "AI-compute · led 4: udstyr og litografi",
+          "hint": "Forbrugsmaterialer til chipfabrikker (ikke maskiner). Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=US29362U1043#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Produktionsvolumen",
+          "hint": "Antal producerede wafere, da materialer bruges løbende. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US8807701029": {
+      "name": "Teradyne",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Chips",
+          "hint": "Primært tema: Chips. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Testudstyr (og robotter)",
+          "hint": "Automatiseret test af chips og elektronik; ejer også samarbejdende robotter (Universal Robots).",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "AI-compute · led 4: udstyr og litografi",
+          "hint": "Tester chips før de sendes videre. Robotdelen hører til Robotik-kæden. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=US8807701029#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Test af AI-chips",
+          "hint": "Behovet for test af komplekse AI-chips og udviklingen i robotdelen. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "KYG0535Q1331": {
+      "name": "ASMPT",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Chips",
+          "hint": "Primært tema: Chips. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Pakke- og monteringsudstyr",
+          "hint": "Udstyr til at samle og pakke chips samt montere komponenter på printplader.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "AI-compute · led 4: udstyr og litografi",
+          "hint": "Bagerste del af chipproduktionen: pakning og montering. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=KYG0535Q1331#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Avanceret pakning",
+          "hint": "Efterspørgsel efter avanceret pakning til AI- og hukommelseschips. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US0316521006": {
+      "name": "Amkor Technology",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Chips",
+          "hint": "Primært tema: Chips. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Pakning og test på kontrakt",
+          "hint": "Pakker og tester chips for chipdesignere og -producenter.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "AI-compute · led 5: foundry",
+          "hint": "Sidste trin i fremstillingen, efter selve chipfabrikken. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=US0316521006#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Avanceret pakning",
+          "hint": "Udbygning af avanceret pakning og nye fabrikker uden for Asien. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US5012421013": {
+      "name": "Kulicke & Soffa",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Chips",
+          "hint": "Primært tema: Chips. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Bonding-udstyr",
+          "hint": "Maskiner, der forbinder chips elektrisk med deres pakke (wire- og avanceret bonding).",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "AI-compute · led 4: udstyr og litografi",
+          "hint": "Pakkeudstyr i den bagerste del af produktionen. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=US5012421013#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Skift til avanceret pakning",
+          "hint": "Hvor hurtigt avanceret pakning erstatter traditionel bonding. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "KYG254571055": {
+      "name": "Credo",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Chips",
+          "hint": "Primært tema: Chips. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Højhastighedsforbindelser",
+          "hint": "Chips og kabler, der flytter data hurtigt mellem servere og switche i datacentre.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "AI-compute · led 7: optik og netværk",
+          "hint": "Kobber- og optiske forbindelser i AI-klynger. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=KYG254571055#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Kundekoncentration",
+          "hint": "Afhængighed af få store datacenterkunder. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US5184151042": {
+      "name": "Lattice Semiconductor",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Chips",
+          "hint": "Primært tema: Chips. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Små programmerbare chips (FPGA)",
+          "hint": "Strømbesparende FPGA-chips, der kan omprogrammeres til styring og sikkerhed i elektronik.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "AI-compute · led 3: chipdesign",
+          "hint": "Chipdesign uden egen fabrik; bruges bl.a. i servere og industri. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=US5184151042#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Industri- og servermarkeder",
+          "hint": "Lagercyklus i industri og antal nye designs. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US0326541051": {
+      "name": "Analog Devices",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Chips",
+          "hint": "Primært tema: Chips. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Analoge chips og effektchips",
+          "hint": "Chips, der omsætter signaler fra den fysiske verden (lyd, tryk, strøm) til data og styrer strøm.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Robotik-kæden · led 1: komponenter",
+          "hint": "Sensorer og signal-chips i industri, biler og robotter. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=US0326541051#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Industricyklus",
+          "hint": "Lagerniveauer hos industri- og bilkunder. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US8825081040": {
+      "name": "Texas Instruments",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Chips",
+          "hint": "Primært tema: Chips. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Analoge og indlejrede chips",
+          "hint": "Bredt katalog af analoge chips og mikrocontrollere, fremstillet i egne fabrikker.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Robotik-kæden · led 1: komponenter",
+          "hint": "Basiskomponenter i næsten al elektronik. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=US8825081040#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Egne fabrikker",
+          "hint": "Udnyttelse af egne nye fabrikker og industriens lagercyklus. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "DE0006231004": {
+      "name": "Infineon",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Chips",
+          "hint": "Primært tema: Chips. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Effekthalvledere",
+          "hint": "Tysk producent af chips, der styrer strøm i biler, industri, vedvarende energi og datacentre.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Energi-kæden · led 3: elnet og transmission",
+          "hint": "Effektelektronik omformer og styrer strøm. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=DE0006231004#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Bil- og industrimarkeder",
+          "hint": "Efterspørgsel fra elbiler, industri og strømforsyning til datacentre. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US6821891057": {
+      "name": "onsemi",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Chips",
+          "hint": "Primært tema: Chips. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Effekt- og billedchips",
+          "hint": "Effekthalvledere (bl.a. siliciumkarbid) og billedsensorer, især til biler og industri.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Robotik-kæden · led 1: komponenter",
+          "hint": "Effekt- og sensorchips i køretøjer og maskiner. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=US6821891057#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Elbiler og siliciumkarbid",
+          "hint": "Elbilmarkedet og konkurrencen inden for siliciumkarbid. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US5950171042": {
+      "name": "Microchip Technology",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Chips",
+          "hint": "Primært tema: Chips. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Mikrocontrollere",
+          "hint": "Små indlejrede processorer og tilhørende chips til industri, biler og elektronik.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Robotik-kæden · led 1: komponenter",
+          "hint": "Styrechips i maskiner og apparater. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=US5950171042#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Lagercyklus",
+          "hint": "Lagerniveauer hos kunder og distributører. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US63942X1063": {
+      "name": "Navitas Semiconductor",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Chips",
+          "hint": "Primært tema: Chips. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Galliumnitrid-effektchips",
+          "hint": "Effektchips i galliumnitrid og siliciumkarbid til opladere, elbiler og strømforsyninger.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Energi-kæden · led 3: elnet og transmission",
+          "hint": "Mere effektiv strømomformning, bl.a. i datacentre. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=US63942X1063#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Fra design til volumen",
+          "hint": "Om nye designs bliver til større produktion, og kapitalbehov. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "NO0003055501": {
+      "name": "Nordic Semiconductor",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Chips",
+          "hint": "Primært tema: Chips. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Trådløse chips",
+          "hint": "Norsk chipdesigner af strømsvage Bluetooth- og mobilchips til tilsluttede enheder.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Robotik-kæden · led 1: komponenter",
+          "hint": "Trådløs forbindelse i små enheder og sensorer. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=NO0003055501#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Forbrugerelektronik og lagre",
+          "hint": "Lagercyklus og nye produktgenerationer. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US8716071076": {
+      "name": "Synopsys",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Software",
+          "hint": "Primært tema: Software. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Chipdesign-software (EDA)",
+          "hint": "Software og byggeklodser (IP), som chipdesignere bruger til at tegne og teste chips.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "AI-compute · led 3: chipdesign",
+          "hint": "Værktøjerne bag chipdesign; sælger ikke selv chips. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=US8716071076#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Antal chipprojekter",
+          "hint": "Antal nye chipdesigns og integration af opkøb. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US1273871087": {
+      "name": "Cadence Design Systems",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Software",
+          "hint": "Primært tema: Software. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Chipdesign-software (EDA)",
+          "hint": "Software og hardware til at designe, simulere og verificere chips og systemer.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "AI-compute · led 3: chipdesign",
+          "hint": "Værktøjerne bag chipdesign. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=US1273871087#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Antal chipprojekter",
+          "hint": "Antal nye chipdesigns, også hos datacenterkunder, der laver egne chips. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US8334451098": {
+      "name": "Snowflake",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Software",
+          "hint": "Primært tema: Software. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Dataplatform i skyen",
+          "hint": "Lagring og analyse af virksomheders data i skyen, betalt efter forbrug.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "AI-compute · led 10: data",
+          "hint": "Data skal samles og gøres klar, før AI kan bruge dem. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=US8334451098#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Forbrug og AI-funktioner",
+          "hint": "Kundernes forbrug og brugen af nye AI-funktioner. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US18915M1071": {
+      "name": "Cloudflare",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Software",
+          "hint": "Primært tema: Software. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Netværk, sikkerhed og edge",
+          "hint": "Globalt netværk, der beskytter og accelererer hjemmesider og apps, og kører kode tæt på brugerne.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "AI-compute · led 11: software",
+          "hint": "Infrastruktur-software mellem brugere og applikationer. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=US18915M1071#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Store kunder og nye produkter",
+          "hint": "Vækst blandt store kunder og produkter til AI-trafik. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US6974351057": {
+      "name": "Palo Alto Networks",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Software",
+          "hint": "Primært tema: Software. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Cybersikkerhed",
+          "hint": "Firewalls og sikkerhedssoftware til netværk, sky og sikkerhedsovervågning.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "AI-compute · led 11: software",
+          "hint": "Sikkerhedslaget omkring systemer og data. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=US6974351057#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Platformskifte",
+          "hint": "Kundernes skift fra enkeltprodukter til samlede platforme. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US22788C1053": {
+      "name": "CrowdStrike",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Software",
+          "hint": "Primært tema: Software. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Cybersikkerhed (endpoint)",
+          "hint": "Sky-baseret beskyttelse af computere, servere og identiteter.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "AI-compute · led 11: software",
+          "hint": "Sikkerhedslaget omkring systemer og data. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=US22788C1053#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Nye moduler",
+          "hint": "Hvor mange moduler kunderne tager i brug. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US34959E1091": {
+      "name": "Fortinet",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Software",
+          "hint": "Primært tema: Software. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Netværkssikkerhed",
+          "hint": "Firewalls med egne chips samt software til sikre netværk.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "AI-compute · led 11: software",
+          "hint": "Sikkerhed i netværket. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=US34959E1091#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Udskiftning af firewalls",
+          "hint": "Kundernes udskiftningscyklus for hardware. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US7811541090": {
+      "name": "Rubrik",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Software",
+          "hint": "Primært tema: Software. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Backup og datasikkerhed",
+          "hint": "Software til backup og gendannelse af data, bl.a. efter ransomware-angreb.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "AI-compute · led 10: data",
+          "hint": "Beskytter og gendanner virksomheders data. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=US7811541090#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Abonnementer",
+          "hint": "Overgangen til abonnementer og nye kunder. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US64119N6085": {
+      "name": "Netskope",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Software",
+          "hint": "Primært tema: Software. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Sky-sikkerhed",
+          "hint": "Sikkerhedsplatform, der kontrollerer adgang til skytjenester og internettet.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "AI-compute · led 11: software",
+          "hint": "Sikkerhedslaget mellem medarbejdere og skyen. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=US64119N6085#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Konkurrence",
+          "hint": "Konkurrence fra større sikkerhedsplatforme. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US79589L1061": {
+      "name": "Samsara",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Software",
+          "hint": "Primært tema: Software. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "IoT-platform til drift",
+          "hint": "Sensorer, kameraer og software, der overvåger køretøjer, udstyr og arbejdssteder.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Robotik-kæden · led 2: simulering og software",
+          "hint": "Data fra fysiske operationer samlet i software. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=US79589L1061#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Store kunder",
+          "hint": "Antal store kunder og nye produkter. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US91332U1016": {
+      "name": "Unity Software",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Software",
+          "hint": "Primært tema: Software. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Spilmotor og reklame",
+          "hint": "Værktøj til at bygge spil og 3D-indhold samt en reklameplatform til mobilspil.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Robotik-kæden · led 2: simulering og software",
+          "hint": "Real-time 3D bruges også til simulering. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=US91332U1016#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Reklamedelen",
+          "hint": "Udviklingen i reklameplatformen og prismodellen. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US3168411052": {
+      "name": "Figma",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Software",
+          "hint": "Primært tema: Software. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Designværktøj i browseren",
+          "hint": "Samarbejdsværktøj til at designe apps og hjemmesider.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "AI-compute · led 11: software",
+          "hint": "Applikationssoftware for designere og udviklere. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=US3168411052#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "AI-funktioner og konkurrence",
+          "hint": "Brugen af AI-funktioner og konkurrencen fra AI-værktøjer. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US4576422053": {
+      "name": "Innodata",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Software",
+          "hint": "Primært tema: Software. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Træningsdata til AI",
+          "hint": "Leverer data, annotering og evaluering, som AI-modeller trænes og testes med.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "AI-compute · led 10: data",
+          "hint": "Data er råstoffet til AI-modeller. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=US4576422053#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Kundekoncentration",
+          "hint": "Afhængighed af få store kunder. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US21874A1060": {
+      "name": "Core Scientific",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Software",
+          "hint": "Primært tema: Software. Temaet i data er Software, men forretningen er datacentre. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Datacentre (fra bitcoin-mining)",
+          "hint": "Omstiller datacentre fra bitcoin-mining til at huse AI-servere for kunder.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "AI-compute · led 2: datacentre og køling",
+          "hint": "Bygninger, strøm og køling til AI-servere. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=US21874A1060#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Omstilling og kontrakter",
+          "hint": "Tempoet i omstillingen og kundekontrakternes vilkår. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US0381692070": {
+      "name": "Applied Digital",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Software",
+          "hint": "Primært tema: Software. Temaet i data er Software, men forretningen er datacentre. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Datacentre til AI",
+          "hint": "Bygger og driver datacentre til AI-beregninger og andre krævende formål.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "AI-compute · led 2: datacentre og køling",
+          "hint": "Bygninger, strøm og køling til AI-servere. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=US0381692070#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Byggeri og finansiering",
+          "hint": "Byggetempo, finansiering og lejekontrakter. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US88080T1043": {
+      "name": "TeraWulf",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Platforme",
+          "hint": "Primært tema: Platforme. Temaet i data er Platforme, men forretningen er mining og datacentre. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Bitcoin-mining og datacentre",
+          "hint": "Mining af bitcoin og udlejning af datacenterkapacitet til AI.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "AI-compute · led 2: datacentre og køling",
+          "hint": "Strøm og bygninger, der kan bruges til AI-servere. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=US88080T1043#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Omstilling og bitcoin",
+          "hint": "Andelen af AI-kontrakter og bitcoinprisen. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US18452B2097": {
+      "name": "CleanSpark",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Platforme",
+          "hint": "Primært tema: Platforme. Temaet i data er Platforme, men forretningen er mining. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Bitcoin-mining",
+          "hint": "Mining af bitcoin i egne anlæg med adgang til strøm.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "AI-compute · led 2: datacentre og køling",
+          "hint": "Strømkapacitet, som også kan bruges til datacentre. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=US18452B2097#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Bitcoin og strøm",
+          "hint": "Bitcoinprisen, strømpriser og eventuel omstilling til AI. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "KYG114481008": {
+      "name": "Bitdeer",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Software",
+          "hint": "Primært tema: Software. Temaet i data er Software, men forretningen er mining. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Bitcoin-mining og mining-chips",
+          "hint": "Mining af bitcoin, eget design af mining-maskiner og datacenterkapacitet.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "AI-compute · led 2: datacentre og køling",
+          "hint": "Strøm og anlæg, der kan bruges til compute. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=KYG114481008#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Bitcoin og egne maskiner",
+          "hint": "Bitcoinprisen og udviklingen af egne mining-chips. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US17275R1023": {
+      "name": "Cisco Systems",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Optik & netværk",
+          "hint": "Primært tema: Optik & netværk. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Netværksudstyr og software",
+          "hint": "Switche, routere og sikkerhedssoftware til virksomheder, teleselskaber og datacentre.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "AI-compute · led 7: optik og netværk",
+          "hint": "Netværket, der binder servere og brugere sammen. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=US17275R1023#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "AI-netværk",
+          "hint": "Andelen af salg til AI-datacentre og abonnementer. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US8010561020": {
+      "name": "Sanmina",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Optik & netværk",
+          "hint": "Primært tema: Optik & netværk. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Elektronikproduktion på kontrakt",
+          "hint": "Fremstiller printplader, systemer og komponenter for andre virksomheder.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "AI-compute · led 8: serverinfrastruktur",
+          "hint": "Samler udstyr til datacentre, netværk og industri. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=US8010561020#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Datacenterandel",
+          "hint": "Andelen af produktion til datacentre. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "SG9999000020": {
+      "name": "Flex",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Optik & netværk",
+          "hint": "Primært tema: Optik & netværk. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Elektronikproduktion på kontrakt",
+          "hint": "Produktion for andre virksomheder samt egne strøm- og køleprodukter til datacentre.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "AI-compute · led 8: serverinfrastruktur",
+          "hint": "Samler og leverer udstyr til datacentre. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=SG9999000020#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Strøm og køling",
+          "hint": "Udviklingen i strøm- og køleprodukterne til datacentre. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US55306N1046": {
+      "name": "MKS Instruments",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Optik & netværk",
+          "hint": "Primært tema: Optik & netværk. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Komponenter til udstyr",
+          "hint": "Lasere, vakuum-, strøm- og målekomponenter til chipudstyr og elektronikproduktion.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "AI-compute · led 4: udstyr og litografi",
+          "hint": "Leverer delene inde i chipmaskinerne. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=US55306N1046#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Udstyrscyklus",
+          "hint": "Chipudstyrsmarkedet og gæld efter opkøb. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US3364331070": {
+      "name": "First Solar",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Andet / uklassificeret",
+          "hint": "Primært tema: Andet / uklassificeret. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Solpaneler (tyndfilm)",
+          "hint": "Amerikansk producent af solpaneler med egen tyndfilmsteknologi.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Energi-kæden · led 1: elproduktion",
+          "hint": "Solenergi til nettet. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=US3364331070#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Politik og handel",
+          "hint": "Toldregler, skattefradrag og priser på solpaneler. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US65290E1010": {
+      "name": "Nextracker",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Andet / uklassificeret",
+          "hint": "Primært tema: Andet / uklassificeret. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Solcellestativer (trackers)",
+          "hint": "Stativer, der drejer solpaneler efter solen i store solparker.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Energi-kæden · led 1: elproduktion",
+          "hint": "Udstyr til store solparker. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=US65290E1010#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Solpark-projekter",
+          "hint": "Antal store solparker og politiske rammer. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "CA1366351098": {
+      "name": "Canadian Solar",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Andet / uklassificeret",
+          "hint": "Primært tema: Andet / uklassificeret. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Solpaneler og batterier",
+          "hint": "Solpaneler, batterilagre og udvikling af sol- og lagerprojekter.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Energi-kæden · led 1: elproduktion",
+          "hint": "Solenergi; batterilagre hører til led 4. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=CA1366351098#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Priser og handel",
+          "hint": "Priser på paneler og toldregler. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US83417M1045": {
+      "name": "SolarEdge",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Andet / uklassificeret",
+          "hint": "Primært tema: Andet / uklassificeret. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Invertere til solceller",
+          "hint": "Elektronik, der omsætter strøm fra solpaneler, især til hustage.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Energi-kæden · led 1: elproduktion",
+          "hint": "Effektelektronik til solenergi. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=US83417M1045#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Lagre og konkurrence",
+          "hint": "Lagerniveauer hos forhandlere og konkurrence. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US29415C1018": {
+      "name": "Eos Energy",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Andet / uklassificeret",
+          "hint": "Primært tema: Andet / uklassificeret. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Zinkbaserede batterilagre",
+          "hint": "Batterilagre til elnettet baseret på zink i stedet for lithium.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Energi-kæden · led 4: energilagring og batterier",
+          "hint": "Lagring af strøm fra nettet. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=US29415C1018#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Produktionsopskalering",
+          "hint": "Om produktionen kan skaleres op, og kapitalbehov. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US72919P2020": {
+      "name": "Plug Power",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Andet / uklassificeret",
+          "hint": "Primært tema: Andet / uklassificeret. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Brint og brændselsceller",
+          "hint": "Brændselsceller, elektrolyseanlæg og brintforsyning.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Energi-kæden · led 1: elproduktion",
+          "hint": "Brint som energibærer. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=US72919P2020#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Kapitalbehov",
+          "hint": "Kapitalbehov og brintpriser. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US74767V1098": {
+      "name": "QuantumScape",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Andet / uklassificeret",
+          "hint": "Primært tema: Andet / uklassificeret. Navnet har intet med kvantecomputere at gøre. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Faststofbatterier (under udvikling)",
+          "hint": "Udvikler lithium-metal-faststofbatterier til elbiler; ikke i masseproduktion.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Energi-kæden · led 4: energilagring og batterier",
+          "hint": "Næste generation af batterier. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=US74767V1098#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Fra prototype til produktion",
+          "hint": "Om teknologien når produktion sammen med partnere. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US74164F1030": {
+      "name": "Primoris Services",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Fysisk tech",
+          "hint": "Primært tema: Fysisk tech. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Anlæg af el og energi",
+          "hint": "Bygger og vedligeholder elnet, solparker, rørledninger og industrianlæg.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Energi-kæden · led 3: elnet, transformere og transmission",
+          "hint": "Folk og maskiner, der bygger infrastrukturen. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=US74164F1030#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Ordrebog og kapacitet",
+          "hint": "Antal projekter og adgang til arbejdskraft. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US55405W1045": {
+      "name": "MYR Group",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Fysisk tech",
+          "hint": "Primært tema: Fysisk tech. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Elinstallation og transmission",
+          "hint": "Bygger højspændingsledninger, transformerstationer og elinstallationer.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Energi-kæden · led 3: elnet, transformere og transmission",
+          "hint": "Udbygning af elnettet. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=US55405W1045#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Elnet-investeringer",
+          "hint": "Forsyningsselskabernes investeringer i nettet. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US8592411016": {
+      "name": "Sterling Infrastructure",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Fysisk tech",
+          "hint": "Primært tema: Fysisk tech. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Byggeri af grunde og infrastruktur",
+          "hint": "Forberedelse af byggegrunde til datacentre og fabrikker samt vejbyggeri.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "AI-compute · led 2: datacentre og køling",
+          "hint": "Byggefasen før datacentret står. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=US8592411016#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Datacenterbyggeri",
+          "hint": "Andelen af arbejde for datacentre. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US1491231015": {
+      "name": "Caterpillar",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Andet / uklassificeret",
+          "hint": "Primært tema: Andet / uklassificeret. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Maskiner og motorer",
+          "hint": "Entreprenørmaskiner, minemaskiner og motorer/generatorer, bl.a. til nødstrøm i datacentre.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Energi-kæden · led 1: elproduktion",
+          "hint": "Generatorer og gasmotorer leverer strøm på stedet. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=US1491231015#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Byggeri og strøm",
+          "hint": "Byggeaktivitet, minedrift og efterspørgsel efter strømløsninger. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US0517741072": {
+      "name": "Aurora Innovation",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Andet / uklassificeret",
+          "hint": "Primært tema: Andet / uklassificeret. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Selvkørende lastbiler",
+          "hint": "Software og sensorer til førerløse lastbiler; tidlig kommerciel drift.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Robotik-kæden · led 3: robotter og autonome køretøjer",
+          "hint": "Autonom kørsel på motorvej. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=US0517741072#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Regulering og udrulning",
+          "hint": "Godkendelser, sikkerhed og antal køretøjer i drift. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "CA55293N1096": {
+      "name": "MDA Space",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "SpaceTech",
+          "hint": "Primært tema: SpaceTech. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Satellitter og robotik i rummet",
+          "hint": "Canadisk producent af satellitter, rumrobotarme og jordudstyr.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Rum-kæden · led 2: satellitkommunikation",
+          "hint": "Bygger satellitter til kommunikationskonstellationer. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html#kap-rum"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Store kontrakter",
+          "hint": "Fremdrift i store satellitprogrammer. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US46269C1027": {
+      "name": "Iridium",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Andet / uklassificeret",
+          "hint": "Primært tema: Andet / uklassificeret. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Satellittelefoni og -data",
+          "hint": "Driver en satellitkonstellation, der giver forbindelse overalt på jorden.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Rum-kæden · led 2: satellitkommunikation",
+          "hint": "Kommunikation via egen konstellation. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html#kap-rum"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Nye tjenester og konkurrence",
+          "hint": "Nye tjenester (fx navigation) og konkurrence fra nye konstellationer. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US03945R1023": {
+      "name": "Archer Aviation",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "SpaceTech",
+          "hint": "Primært tema: SpaceTech. Kernen er luftfart. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Elektriske lufttaxier (under udvikling)",
+          "hint": "Udvikler eVTOL-fly til korte flyvninger; ikke i kommerciel drift.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Uden for rum-kædens led",
+          "hint": "Luftfart, ikke rumfart. Temaet er SpaceTech. Placeringen er pædagogisk.",
+          "href": "tema.html?slug=space"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Certificering",
+          "hint": "Luftfartsmyndighedernes godkendelse og produktion. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US80401C1009": {
+      "name": "Satellogic",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "SpaceTech",
+          "hint": "Primært tema: SpaceTech. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Jordobservation",
+          "hint": "Små satellitter, der tager billeder af jorden i høj opløsning.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Rum-kæden · led 2: satellitkommunikation",
+          "hint": "Data fra satellitter. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html#kap-rum"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Kunder og finansiering",
+          "hint": "Offentlige kontrakter og kapitalbehov. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US4202011056": {
+      "name": "HawkEye 360",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "SpaceTech",
+          "hint": "Primært tema: SpaceTech. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Radiosignaler fra rummet",
+          "hint": "Satellitter, der kortlægger radiosignaler på jorden, bl.a. til forsvar og overvågning.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Rum-kæden · led 2: satellitkommunikation",
+          "hint": "Data fra satellitter. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html#kap-rum"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Offentlige kunder",
+          "hint": "Afhængighed af forsvars- og myndighedskontrakter. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "LU1778762911": {
+      "name": "Spotify",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Platforme",
+          "hint": "Primært tema: Platforme. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Lydstreaming",
+          "hint": "Abonnement- og reklamebaseret platform for musik, podcasts og lydbøger.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "AI-compute · led 12: forbrugerapplikationer",
+          "hint": "Forbrugerapp, hvor anbefalinger bygger på data. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=LU1778762911#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Abonnenter og rettighedsomkostninger",
+          "hint": "Brugervækst og betaling til rettighedshavere. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US01609W1027": {
+      "name": "Alibaba",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Platforme",
+          "hint": "Primært tema: Platforme. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "E-handel og cloud i Kina",
+          "hint": "Kinesiske handelsplatforme samt en af Kinas største cloud-udbydere.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "AI-compute · led 9: cloud og AI-modeller",
+          "hint": "Cloud-delen og egne AI-modeller; handel er forbrugerdelen. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=US01609W1027#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Cloud og regulering",
+          "hint": "Vækst i cloud, adgang til chips og kinesisk regulering. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US7223041028": {
+      "name": "PDD Holdings",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Platforme",
+          "hint": "Primært tema: Platforme. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Lavpris-e-handel",
+          "hint": "Ejer Pinduoduo i Kina og Temu internationalt.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Uden for AI-kæden",
+          "hint": "En handelsplatform. Temaet er Platforme.",
+          "href": "tema.html?slug=platforms"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Told og konkurrence",
+          "hint": "Handelsregler for småpakker og konkurrence. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "KYG596691041": {
+      "name": "Meituan",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Platforme",
+          "hint": "Primært tema: Platforme. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Levering og lokale tjenester",
+          "hint": "Kinesisk platform for madlevering, restaurantbooking og lokale tjenester.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Uden for AI-kæden",
+          "hint": "En lokal tjenesteplatform. Temaet er Platforme.",
+          "href": "tema.html?slug=platforms"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Konkurrence",
+          "hint": "Priskonkurrence med andre leveringsplatforme. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US00827B1061": {
+      "name": "Affirm",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Platforme",
+          "hint": "Primært tema: Platforme. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Udskudt betaling",
+          "hint": "Lån ved køb online og i butikker, gennem butikker og eget kort.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Uden for AI-kæden",
+          "hint": "En fintech-platform. Temaet er Platforme.",
+          "href": "tema.html?slug=platforms"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Kreditkvalitet og finansiering",
+          "hint": "Tab på lån og finansieringsomkostninger. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US36317J2096": {
+      "name": "Galaxy Digital",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Platforme",
+          "hint": "Primært tema: Platforme. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Kryptofinans og datacentre",
+          "hint": "Handel og formueforvaltning i kryptoaktiver samt et datacenter, der lejes ud til AI.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Uden for AI-kæden",
+          "hint": "Primært en finansplatform; datacenterdelen ligger tæt på AI-compute led 2. Temaet er Platforme.",
+          "href": "tema.html?slug=platforms"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Krypto og datacenter",
+          "hint": "Kryptomarkedet og fremdriften i datacenterprojektet. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
     }
   }
 }
