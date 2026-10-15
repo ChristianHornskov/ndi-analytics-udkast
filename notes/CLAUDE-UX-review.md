@@ -512,3 +512,26 @@ main er uændret siden cyklus 20, og Pages = `75a87c2`. Persona- og krav-filerne
 - **Privat:** ingen ændring. Lille tekst på vaerdikaeder er den nye mobil-irritation.
 - **Familiekontor:** intet samlet KID-omkostningstal, og sammenlign nævner ikke omkostninger.
 - **Visuel variation:** uændret.
+
+## 2026-10-16 01:50 CEST · cyklus 23 (main `ff29ec5` = `a664f4f` + noter, intet docs-delta)
+
+main er uændret i docs/ siden `75a87c2`, og Pages er stadig samme build (last-modified 15. okt. 23:37 GMT). Lane-R indeholder allerede origin/main, så jeg har ikke lavet `reset --hard`, fordi det ville kassere cyklus 21–22 lokalt. Persona- og krav-filerne er uændrede siden 23:43. Denne gang har jeg kørt nye vinkler: desktop 1280 med Playwright og scroll på 20 sider, KID-PDF'erne og omkostninger-siden ord for ord. Resultat: 0 pageerrors, 0 h-overflow, én h1 og `lang="da"` overalt, og 0 knapper eller formularfelter uden navn. (Portefølje gav 148 hits i første kørsel, men det var sorteringsknapper med tekst, altså et falsk positiv.)
+
+### MUST (nyt)
+- **Omkostninger viser ikke KID'ets samlede tal, selv om det står i den KID, siden linker til.** Begge KID'er (produktionsdato 2026-08-14) har "Årlig omkostningsmæssig konsekvens" ved exit efter 5 år: **2,79 % (PMINDI) og 2,85 % (PMINDIAKK) hvert år**. Ved exit efter 1 år er det 2,63 %/2,71 % (DKK 2.630/2.710 på 100.000 kr.). Siden skriver i dag "Tomme felter = udfyldes af NDI" og nægter at lægge satser sammen. Det er korrekt, men så er det netop KID-tallet, der skal stå øverst, med kilde og dato. Det lukker familiekontor-personaens MUST, som har stået åben siden de første cyklusser. Forslag: én KPI-linje "Omkostninger pr. år ifølge KID (5 år): 2,79 % / 2,85 %", et link til KID og teksten "Ikke et ÅOP. Kurtage og depot kommer oveni".
+- **Label uden tal:** under hver klasse står "Forventede samlede omkostninger i indeværende regnskabsår (Fundmarket)", men der er intet tal efter. Det læses som en tom stub. Sæt tallet ind (1,49 % + 0,64 %/0,72 % ifølge KID-opdelingen), eller fjern labelen.
+
+### SHOULD (nyt)
+- **"Øvrige løbende 1,49 %" er misvisende.** I KID'et hedder posten "Forvaltningsgebyrer og andre administrations- eller driftsomkostninger". "Øvrige" får hovedposten til at lyde som en restpost. Brug KID'ets ord, eller skriv "Forvaltning og administration".
+- **"Den ene forskel"-blokken** (0,08 procentpoint med en forstørret skala) fylder mest på siden, men er den mindst relevante oplysning for en privatperson. Flyt den under KID-tallet og tabellen.
+
+### MUST/SHOULD (uændret, re-verificeret på desktop)
+- Invester har tre "trin 4". Selskab viser "AI-udkast" over et tomt felt og stubs med "–". SRI 5 mod vol 32,46 % (se compliance). Lille tekst på vaerdikaeder ved 375. "Central Information Dokument". "BREAKING:" / "MADS FØLGER". Nyhedsarkiv har "Placeholder".
+
+### Persona-linser
+- **Privat:** omkostninger-siden er grundig, men svarer ikke på "hvad koster det mig om året?". KID-tallet 2,79 % er svaret.
+- **Familiekontor:** samme punkt. Med KID-tallet kan FO sammenligne direkte med andre UCITS. Uden det skal de selv åbne PDF'en.
+- **Visuel variation:** uændret, ingen ny træthed.
+
+### OK ✅
+- Alle 5 eksterne KID-/prospekt-links svarer 200 (2 KID-PDF'er, 2 Fundmarket-sider, fællesprospekt 24.10.2025). SRI 5/7 og 5 års anbefalet periode på siden stemmer med KID.

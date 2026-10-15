@@ -584,3 +584,28 @@ Ikke juridisk rådgivning. Pages = `75a87c2`. Jeg har grep'et renderet tekst liv
 
 ### OK ✅
 - Beholdning pr. 1. jun. 2026, ingen live trades, ingen 1m/3m på PMINDI og intet benchmark-claim. "kan tabe" og "Historisk afkast" står på entré, fonden, invester, fakta, drawdown, risici og sammenlign. AI-udkast er mærket på selskab (×10 på SoftBank).
+
+## 2026-10-16 01:50 CEST · cyklus 23 (main `ff29ec5`, intet docs-delta)
+
+Ikke juridisk rådgivning. Pages er samme build som i cyklus 22. Nyt i denne cyklus: jeg har hentet og læst begge KID-PDF'er (produktionsdato 2026-08-14), tjekket alle eksterne links og repo/data-eksponering, og kørt Playwright ved 1280 på 20 sider.
+
+### MUST (nyt / skærpet)
+8. **Repoet er stadig offentligt (re-verificeret 01:47).** api.github.com svarer 200 uden login, og `raw.githubusercontent.com/.../main/notes/VIDENSBOT-krav.md` svarer 200. Det er VIDENSBOT-live-checkens blokering 1 fra 21:55, og den er uændret. Alle interne noter er offentlige, også disse reviews, persona-filerne og STATUS. Det er en fortroligheds- og governancesag snarere end markedsføringsret, men det er en blocker før et udkast deles. Beslutningen ligger hos Christian (privat repo eller separat Pages-repo, og evt. omskrivning af historikken, som er destruktiv).
+9. **Omkostninger: KID'ets PRIIP-omkostningsindikator gengives ikke.** KID'et viser en årlig omkostningsmæssig konsekvens på **2,79 % (PMINDI) / 2,85 % (PMINDIAKK)** ved 5 år og 2,63 %/2,71 % ved 1 år. Siden viser postsatser (1,49 / 0,64 / 0,72 / 0,25 / 0,25) uden noget samlet tal. Marketingmateriale må ikke give et mere gunstigt indtryk af omkostningerne end KID'et. Når kun postsatser vises og 1,49 % står mest fremtrædende, er der risiko for netop det. Gengiv KID-tallet med kilde, dato og "før kurtage/depot". Dette erstatter det tidligere SHOULD "intet samlet KID-omkostningstal": nu er tallet kendt, og det er en MUST.
+
+### MUST (åbne, uændrede fra cyklus 22)
+1. Ingen "markedsføring"-mærkning. (Hittet på ndi-perspektiv er "spilmarkedsføring" i en selskabsbeskrivelse, altså et falsk positiv.)
+2. "MADS FØLGER" står på ndi-paa-x ×7 og SoftBank ×3.
+3. "kan tabe" er 0 på ndi-paa-x, omkostninger og nyhedsarkiv (re-verificeret ved 1280). ndi-paa-x har også 0 "Historisk afkast".
+4. PMINDIAKK NAV 98,40 står før 12 mdr. (sammenlign, fonden-toggle).
+5. ÅTD og +104,8 % står ved siden af "afventer Fundmarket-godkendelse".
+6. SRI 5 mod vol 32,46 %. KID'et klassificerer selv 5/7 ("middel-høj"), og scenarierne bruger et teknologiindeks som proxy før startdatoen. Siden gengiver KID'ets 5 ærligt ✅. Problemet er stadig, at laer/risikoklasse-teksten "20–30 %" står ved siden af en vist vol over 30 %. Forklar, at KID'ets SRI er beregnet efter PRIIP-metoden på en anden periode.
+7. `chartMarkers` @MadsC007 i afkastgrafen.
+
+### Lukket ✅
+- **Kvartalsbeholdning:** `data/company-months.json` er nu kun kvartalsslut (Mar/Jun/Sep/Dec) med cutoff 2026-06-01 og note "Forsinket snapshot". Det er live på Pages. VIDENSBOT-live-checkens blokering 2 er dermed løst. positionsAsOf = 2026-06-01 ✅.
+
+### OK ✅
+- KID-links: begge PRIIP-PDF'er svarer 200 (application/pdf). Det gør de to Fundmarket-produktsider og fællesprospektet (opdateret 24.10.2025) også. KID-ISIN DK0062499810/DK0064642623 stemmer med siden.
+- KID'ets scenarie-afkast (fx "25,42 % før omkostninger") gengives ikke på siden ✅. Det skal blive sådan.
+- Ingen fremadskuende udsagn og ingen rådgivningsord, som i cyklus 22.
