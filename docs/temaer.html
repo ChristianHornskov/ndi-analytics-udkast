@@ -30,10 +30,11 @@
  <script type="module">
  import { fmtDate, loadAll, fundById, themeProposals, daTheme, WARN_HIST, chainForTheme, chainHref } from './js/data.js';
  const u = new URL(location.href);
- const [data, all, vc] = await Promise.all([
+ const [data, all, vc, um] = await Promise.all([
  fetch('data/themes.json').then((r) => r.json()),
  loadAll(),
  fetch('data/value-chains.json').then((r) => r.json()).catch(() => ({ chains: [] })),
+ fetch('data/unique-metrics.json').then((r) => r.json()).catch(() => ({ byIsin: {} })),
  ]);
  const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
  const pct = (x) => (x || 0).toFixed(2).replace('.', ',');
@@ -44,12 +45,13 @@
  const prop = themeProposals(fund);
  const agg = {};
  for (const p of fund.positions || []) {
- const a = (agg[p.theme] ||= { count: 0, weight: 0, forslag: 0 });
+ const a = (agg[p.theme] ||= { count: 0, weight: 0, forslag: 0, lens: 0 });
  a.count++; a.weight += p.weight || 0;
+ if ((um.byIsin || {})[p.isin]) a.lens++; // NDI-linse (kvalitativ tekst) findes
  if (p.themeStatus === 'forslag') a.forslag++;
  }
  // Største tema først; Andet altid sidst, så det ikke ligner et rigtigt tema
- const themes = (data.themes || []).map((t) => ({ ...t, ...(agg[t.themeKey] || { count: 0, weight: 0, forslag: 0 }) }))
+ const themes = (data.themes || []).map((t) => ({ ...t, ...(agg[t.themeKey] || { count: 0, weight: 0, forslag: 0, lens: 0 }) }))
  .sort((a, b) => (a.themeKey === 'andet') - (b.themeKey === 'andet') || b.weight - a.weight);
  const real = themes.filter((t) => t.themeKey !== 'andet');
  // "Nyt tema" = alle selskaber i temaet er forslag (ingen fastlagte endnu), fx Quantum
@@ -71,6 +73,7 @@
  <strong><a href="tema.html?slug=${encodeURIComponent(t.slug)}&fund=${fund.id}" style="color:inherit;text-decoration:none">${esc(t.title)}</a>${propChip(t)}</strong>
  <span>${esc(t.problem)}</span>
  ${ch ? `<span>Værdikæde: <a href="${chainHref(t.themeKey)}">${esc(ch.title)}</a></span>` : ''}
+ ${t.lens ? `<span>NDI-linse: <a href="tema.html?slug=${encodeURIComponent(t.slug)}&fund=${fund.id}&linse=1" title="Kvalitativ beskrivelse (udkast), ikke en rating">${t.lens} af ${t.count} selskaber</a></span>` : ''}
  <a class="go" href="tema.html?slug=${encodeURIComponent(t.slug)}&fund=${fund.id}">${t.count ? `${t.count} ${t.count === 1 ? 'selskab' : 'selskaber'} · ca. ${pct(t.weight)} %` : `Ingen selskaber i ${esc(fund.short)}`} →</a>
  </div>`;
  }).join('');
