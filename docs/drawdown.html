@@ -74,10 +74,10 @@
  const t0 = Date.parse(rows[0].d + 'T12:00:00Z');
  const t1 = Date.parse(rows[rows.length - 1].d + 'T12:00:00Z');
 
- const underwater = () => {
  const W = 360, H = 168, padL = 28, padR = 12, padT = 16, padB = 20;
  const xOf = d => padL + ((Date.parse(d + 'T12:00:00Z') - t0) / Math.max(1, t1 - t0)) * (W - padL - padR);
  const yOf = v => padT + ((-Math.min(0, v)) / yMax) * (H - padT - padB);
+ const underwater = () => {
  const line = uw.map((u, i) => `${i ? 'L' : 'M'}${xOf(u.d).toFixed(1)},${yOf(u.u).toFixed(1)}`).join(' ');
  const y0 = yOf(0);
  const area = `${line} L${xOf(uw[uw.length - 1].d).toFixed(1)},${y0.toFixed(1)} L${xOf(uw[0].d).toFixed(1)},${y0.toFixed(1)} Z`;
@@ -118,8 +118,9 @@
  const nx = xOf(last.d), ny = yOf(last.u);
  parts.push(`<circle class="uw-now" cx="${nx.toFixed(1)}" cy="${ny.toFixed(1)}" r="3.4"/>`);
  parts.push(`<text class="uw-label" x="${(nx - 6).toFixed(1)}" y="${Math.max(12, ny - 6)}" text-anchor="end">nu ${fmtPct(last.u, 0)}</text>`);
- const desc = `Daglig afstand til løbende top fra ${fmtDate(rows[0].d)} til ${fmtDate(rows[rows.length - 1].d)}. Dybeste bund ${fmtPct(trough.u)} den ${fmtDate(trough.d)}. Seneste dag ${fmtPct(last.u)}.`;
- return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-labelledby="uw-title uw-desc"><title id="uw-title">Under vand</title><desc id="uw-desc">${desc}</desc>${parts.join('')}</svg>`;
+ parts.push(`<line id="uw-cursor" class="uw-cursor" x1="${nx.toFixed(1)}" x2="${nx.toFixed(1)}" y1="${y0.toFixed(1)}" y2="${(H - padB).toFixed(1)}"/>`);
+ const desc = `Daglig afstand til løbende top fra ${fmtDate(rows[0].d)} til ${fmtDate(rows[rows.length - 1].d)}. Dybeste bund ${fmtPct(trough.u)} den ${fmtDate(trough.d)}. Seneste dag ${fmtPct(last.u)}. Slideren under grafen vælger en dag.`;
+ return `<svg id="uw-svg" class="uw" viewBox="0 0 ${W} ${H}" role="img" aria-labelledby="uw-title uw-desc"><title id="uw-title">Under vand</title><desc id="uw-desc">${desc}</desc>${parts.join('')}</svg>`;
  };
 
  const depthPlot = () => {
@@ -199,7 +200,7 @@
  </div>
  ${anno ? `<p class="anno">${anno}</p>` : ''}
  <h2 class="h-section">Under vand</h2>
- <figure class="figure">${underwater()}<figcaption>0 % er på toppen. Kurven er afstanden til den løbende top, dag for dag. Gul prik er den dybeste bund. Gul ring er seneste dag.</figcaption></figure>
+ <figure class="figure">${underwater()}<figcaption>0 % er på toppen. Kurven er afstanden til den løbende top, dag for dag. Gul prik er den dybeste bund. Gul ring er seneste dag.</figcaption><div class="uw-scrub"><p id="uw-read" aria-live="polite">${fmtDate(uw[uw.length - 1].d)}: ${fmtPct(uw[uw.length - 1].u)} under den løbende top.</p><label class="sr-only" for="uw-slider">Vælg dag i serien</label><input id="uw-slider" type="range" min="0" max="${uw.length - 1}" value="${uw.length - 1}" aria-valuemin="0" aria-valuemax="${uw.length - 1}" aria-valuetext="${fmtDate(uw[uw.length - 1].d)}: ${fmtPct(uw[uw.length - 1].u)} under den løbende top."></div></figure>
  <h2 class="h-section">Hvor dybe er faldene?</h2>
  <figure class="figure plain">${depthPlot()}<figcaption>${depthCap}</figcaption></figure>
  <h2 class="h-section">De dybe episoder</h2>
@@ -211,6 +212,50 @@
  <p class="link-row"><a href="periode.html?fund=${fundId}&year=YTD">År til dato →</a> · <a href="sammenlign.html">Sammenlign andelsklasser →</a> · <a href="om-data.html#g-drawdown">Ordliste: drawdown</a></p>
  <p class="src">Middel og median er over episoder fra top til bund. De er ikke et gennemsnit af hver dag under vand. Max er det samme tal som største fald på Fonden.</p>
  <p class="warn">${WARN_HIST}</p>`;
+ const svg = document.getElementById('uw-svg');
+ const slider = document.getElementById('uw-slider');
+ const read = document.getElementById('uw-read');
+ const cursor = document.getElementById('uw-cursor');
+ const nearest = (t) => {
+ let lo = 0, hi = uw.length - 1;
+ while (lo < hi) {
+ const mid = (lo + hi) >> 1;
+ if (Date.parse(uw[mid].d + 'T12:00:00Z') < t) lo = mid + 1;
+ else hi = mid;
+ }
+ if (lo > 0) {
+ const prev = Math.abs(Date.parse(uw[lo - 1].d + 'T12:00:00Z') - t);
+ const here = Math.abs(Date.parse(uw[lo].d + 'T12:00:00Z') - t);
+ if (prev < here) return lo - 1;
+ }
+ return lo;
+ };
+ const show = (i) => {
+ const idx = Math.max(0, Math.min(uw.length - 1, i));
+ const u = uw[idx];
+ const text = `${fmtDate(u.d)}: ${fmtPct(u.u)} under den løbende top.`;
+ read.textContent = text;
+ slider.value = String(idx);
+ slider.setAttribute('aria-valuetext', text);
+ const x = xOf(u.d).toFixed(1);
+ cursor.setAttribute('x1', x);
+ cursor.setAttribute('x2', x);
+ };
+ const fromClient = (ev) => {
+ const rect = svg.getBoundingClientRect();
+ if (!rect.width) return;
+ const px = ((ev.clientX - rect.left) / rect.width) * W;
+ const frac = (px - padL) / (W - padL - padR);
+ show(nearest(t0 + Math.max(0, Math.min(1, frac)) * (t1 - t0)));
+ };
+ slider.addEventListener('input', () => show(Number(slider.value)));
+ svg.addEventListener('pointerdown', (ev) => {
+ svg.setPointerCapture(ev.pointerId);
+ fromClient(ev);
+ });
+ svg.addEventListener('pointermove', (ev) => {
+ if (ev.pointerType === 'mouse' || ev.buttons) fromClient(ev);
+ });
  }
  </script>
 </body>

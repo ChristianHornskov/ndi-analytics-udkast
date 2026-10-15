@@ -41,7 +41,7 @@ Siden må ikke være fire ens kort plus to mørke kasser. Formerne skifter ned a
 | Hero-tal | Det ene dybeste fald, med datoer og genopretning | ✅ `.hero-stat` |
 | Rolige tal | Middel og median som to linjer, ikke kort | ✅ `.quiet-stats` |
 | Gul annotation | Hvor serien ligger under vand i dag | ✅ `.anno` |
-| Underwater | Tid. Gul prik = dybeste bund. Ring = seneste dag | ✅ `.figure` |
+| Underwater | Tid. Gul prik = dybeste bund. Ring = seneste dag. Slider vælger en dag | ✅ `.figure` + `.uw-scrub` |
 | Prikfordeling | Hvorfor middel ligger dybere end median | ✅ `.figure.plain` |
 | Episodeliste | De fire fald dybere end 10 %, med varighed | ✅ `.ep-ledger` |
 | Årssøjler | Kalenderafkast som small multiples, link til periode | ✅ `.year-rail` |

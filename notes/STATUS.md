@@ -259,3 +259,13 @@ Embed: CTA i CSS, link til største fald (AKK siger at drawdown vises efter 12 m
 Fælles tokens, sparsomt: `--ink`, `.figure`, `.anno`, `.hero-stat`, `.ep-ledger`, `.year-rail`. `.scarce` og `.tm-svg` er stadig page-local.
 
 Tjekket i Chromium ved 1280, 375 og 320. Ingen sidescroll, ingen konsolfejl. AKK-kortet har ingen afkastprocent. Review i `notes/VISUAL-VARIETY-REVIEW.md`. Næste: skrub på underwater, så en dag kan læses uden hover som eneste vej. Ikke færdig.
+
+`lane-D` er pushet (`d1b1419`) og klar til merge. Ikke main.
+
+## Fra Grok lane-D
+
+**2026-10-15 23:59 CEST. Underwater kan skrubbes. Ikke færdig.**
+
+Slideren under grafen er synlig. Den starter på seneste dag: 14. okt. 2026, −23,4 % under den løbende top. Home går til 22. sep. 2023 (0,0 %). Et klik i venstre side af kurven sætter 22. dec. 2023. Udlæsningen står i teksten og i `aria-valuetext`. En lys lodret streg følger dagen. Gul prik og gul ring bliver stående som bund og seneste dag.
+
+Tjekket i Chromium ved 1280 og 375. Ingen sidescroll, ingen konsolfejl. `lane-D` er klar til merge. Ikke main. Ikke færdig.

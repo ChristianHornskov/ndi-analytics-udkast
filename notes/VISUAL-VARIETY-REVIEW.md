@@ -51,7 +51,7 @@ Ship. Visual-variety pass er i planen (`VISUAL-VARIETY.md`). Næste builder: SHO
 4. 2025 i plus og alligevel det dybeste fald. Søjlen er afkast, ikke drawdown.
 
 ### SHOULD
-1. Underwater kan ikke skrubbes. Datoen på en vilkårlig dag står ikke ved kurven. Næste cyklus: tastatur og pointer, uden at hover er den eneste måde at læse tallet.
+1. ~~Underwater kan ikke skrubbes.~~ Lukket 23:59. Slideren står synlig under grafen. Home hopper til første dag. Klik og træk flytter en lodret streg. Udlæsningen er altid i teksten.
 2. På 375 er prikbunken tæt. Den bærer pointen, og listen under har de fire dybe tal.
 3. De to sammenlign-kort ligner stadig hinanden. Det er parret. De må ikke få en tredje ens kasse ved siden af.
 
