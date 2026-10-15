@@ -5438,7 +5438,7 @@
           "name": "Serve Robotics",
           "symbol": "SERV",
           "weight": 0.31,
-          "theme": "andet",
+          "theme": "physical",
           "logoDomain": null,
           "sector": "Industrials",
           "industry": "Integrated Freight & Logistics",
@@ -5449,7 +5449,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag — warehouse/delivery robotics"
         },
         {
           "isin": "NL0013654783",
@@ -14327,7 +14327,7 @@
           "name": "Serve Robotics",
           "symbol": "SERV",
           "weight": 0.18,
-          "theme": "andet",
+          "theme": "physical",
           "logoDomain": null,
           "sector": "Industrials",
           "industry": "Integrated Freight & Logistics",
@@ -14338,7 +14338,7 @@
           "customers": null,
           "maturity": "ikke-klassificeret",
           "themeStatus": "forslag",
-          "themeNote": "forslag, afventer gennemgang"
+          "themeNote": "forslag — warehouse/delivery robotics"
         },
         {
           "isin": "US87288V1017",

@@ -130,3 +130,5 @@ Heuristik: GICS sector/industry → nærmeste NDI-tema (chips/compute/software/p
 | US26740W1099 | D-Wave Quantum Inc | 0.29 | compute | quantum | kvantecomputing (navn/kerneprodukt, forslag) |
 | US76655K1034 | Rigetti Computing Inc | 0.25 | compute | quantum | kvantecomputing (navn/kerneprodukt, forslag) |
 | US46222L1089 | IonQ | 0.04 | compute | quantum | kvantecomputing (navn/kerneprodukt, forslag) |
+
+| US81758H1068 | Serve Robotics | 0.31 | andet | physical | warehouse/delivery robotics (forslag) |

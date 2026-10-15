@@ -919,8 +919,8 @@
       "problem": "Selskaber der endnu ikke har fået et primært NDI-tema i udkastet. Eksponering, ikke anbefaling.",
       "chain": [],
       "themeKey": "andet",
-      "count": 68,
-      "weightSum": 11.92,
+      "count": 67,
+      "weightSum": 11.61,
       "companies": [
         {
           "isin": "US6837121036",
@@ -957,12 +957,6 @@
           "name": "Newmont",
           "weight": 0.31,
           "symbol": "NEM"
-        },
-        {
-          "isin": "US81758H1068",
-          "name": "Serve Robotics",
-          "weight": 0.31,
-          "symbol": "SERV"
         },
         {
           "isin": "US6877931096",
@@ -1537,8 +1531,8 @@
         "Software"
       ],
       "themeKey": "physical",
-      "count": 23,
-      "weightSum": 7.03,
+      "count": 24,
+      "weightSum": 7.34,
       "companies": [
         {
           "isin": "US88160R1014",
@@ -1587,6 +1581,12 @@
           "name": "Symbotic",
           "weight": 0.34,
           "symbol": "SYM"
+        },
+        {
+          "isin": "US81758H1068",
+          "name": "Serve Robotics",
+          "weight": 0.31,
+          "symbol": "SERV"
         },
         {
           "isin": "US1999081045",
