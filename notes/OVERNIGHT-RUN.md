@@ -4,6 +4,7 @@ End target: 2026-10-16 06:30 CEST
 Checkpoint every ≤30 min.
 
 ## Checkpoints
+- 23:10 — smoke 52/52. Entre flodsystem-copy. Chart DD-annotation. Next: UX 00:00.
 - 23:07 — Vidensbot→vaerdikaeder: 5 kæder (inkl. space), flodsystem, citat-compliance. Next: HANDOFF + UX 00:00.
 - 23:04 — ideer.html visual variety; sticky chapter-nav offset 64px. HEAD b35518b.
 - 23:00–23:04 — Shipped: vaerdikaeder (SVG treemap/sunburst, chains, timeline, flaskehalse), drawdown mean/median + maxDD bugfix, quantum forslag×4, unique-metrics, UX 23:00. Visual-variety plan+Grok review in notes/.

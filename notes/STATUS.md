@@ -241,3 +241,7 @@ HEAD `b35518b`. Visual-variety request shipped + reviewed. MADS værdikæde/quan
 - Ingen handelsprog (øger eksponering / overvægt i / sikkert køb). Snapshot 2026-06-01.
 - Playwright: 5 tabs, 13 AI-led, 3 space-led, 0 konsolfejl.
 - lær/saadan-taenker-vi: flodsystem-afsnit. Fintech = tema-note, ikke kæde.
+
+
+## Smoke · ~23:10 CEST
+- `scripts/smoke.mjs`: **52/52 fail 0** (inkl. vaerdikaeder). HEAD `37b6d55`.
