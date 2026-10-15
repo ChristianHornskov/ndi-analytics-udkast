@@ -73,6 +73,8 @@ Blurbs, der vises på værdikædesiden: SMR-leddet siger, at ingen af navnene er
 
 Konceptkortene i `nyhedsarkiv.html` gentager de samme grænser. De er ikke ugebreve.
 
+Indledningen på energikæden siger det samme: gas på elproduktion er brændsel, ikke en metalmine, og navnene under atomkraft og SMR er ikke værker i kommerciel drift. Indledningen på rumkæden siger, at leddet rum og compute er infrastruktur, ikke et datacenter i kredsløb. Merlin står i energikædens udeladte liste som luftfart, ikke som et rum-led. Feltet `omitted` vises ikke på siden.
+
 ## År til dato på periodesiden
 
 `ytdReturn` i `data.js` bruger sidste punkt i året før som udgangspunkt, ikke 1. januar. For PMINDI pr. 2026-10-14 er det 2025-12-31, ikke 2026-01-02. `periode.html` viser den samme dato i "Fra → til". Kalenderår bruger samme base (`calendarYearReturns`).

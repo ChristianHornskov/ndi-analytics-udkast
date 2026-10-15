@@ -357,3 +357,15 @@ Tjekket i Chromium på energi- og rumfanen. Teksterne står i kæden. Ingen kons
 Tjekket i Chromium. Teksterne står på siden. Linket til værdikædesiden åbner `vaerdikaeder.html`. Ingen konsolfejl. Ingen vandret scroll ved 375 px.
 
 **Push:** `lane-E` @ `ea822fe` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 ~00:45 CEST. Indledningen på kæderne siger grænsen, før leddene. Ikke færdig.**
+
+Energikædens `why` siger, at gas på elproduktion er brændsel, ikke en metalmine, og at navnene under atomkraft og SMR ikke er værker i kommerciel drift. Rumkædens `why` siger, at rum og compute er infrastruktur, ikke et datacenter i kredsløb. Merlin i den udeladte liste er rettet til luftfart. Listen vises ikke på siden.
+
+Tjekket i Chromium ved 375 px. Indledningerne står. Klik fra elproduktion til NextEra og fra opsendelse til Rocket Lab åbner selskabssiden med AI-udkast og uden gennemgangsdato. NextEras afsnit om Dominion ligger bag "Læs hele forklaringen". Periodesiden viser stadig 31. dec. 2025 og +4,0 %, og chippen "Siden første NAV". Ingen konsolfejl. Ingen vandret scroll ved 375 px på periodesiden.
+
+`forslag` på energi- og rum-leddene matcher `themeStatus` i beholdningen. Ingen afvigelser.
+
+**Push:** `lane-E` @ `9127b17` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

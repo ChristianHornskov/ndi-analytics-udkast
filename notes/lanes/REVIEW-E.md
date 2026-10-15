@@ -57,3 +57,7 @@ SMR, råstoffer og opsendelse er rettet i JSON, så teksten på siden skelner ko
 ## Nyhedsarkiv · 2026-10-16 ~00:40 CEST
 
 De to konceptkort siger det samme som kæden: gas er brændsel, SMR er ikke drift, råstoffer er både projekter og miner, Neutron og Eclipse er ikke fløjet, rum og compute er ikke et datacenter. Linket til værdikædesiden virker. Ingen konsolfejl. Ingen vandret scroll ved 375 px.
+
+## Indledning og klik · 2026-10-16 ~00:45 CEST
+
+`why` på energi og rum siger grænsen, før man åbner et led. Merlin i energikædens udeladte liste er luftfart, ikke et rum-led. Klik til NextEra og Rocket Lab lander på AI-udkast uden gennemgangsdato. ÅTD er stadig 31. dec. 2025 og +4,0 %. `forslag` matcher beholdningen på alle navne i de to kæder.
