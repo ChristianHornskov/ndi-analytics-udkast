@@ -1,32 +1,33 @@
 # Overnight status (live)
 
-Updated: 2026-10-15 23:57 CEST  
-Deadline: **09:00 CEST** · lanes until **08:30** · summary **08:45** · goal: vanvittigt
+Updated: 2026-10-16 00:40 CEST  
+Deadline: **09:00 CEST** · lanes until **08:30** · summary **08:45** · vanvittigt
 
-## Live
-- Claude A/B/C, Grok D/E/X, Reviewer R, overnight-watchdog (10 min ticks)
-- Auto-merge order D→A→E→B→C; skip X/R (already integrated)
+## Lanes
+Claude A/B/C/R + Grok D/E/X + overnight-watchdog — all running.
 
-## Landed on main tonight
-- FO: fakta.html, omkostninger.html, risici tal (vol/Sharpe calculated, official=udfyldes af NDI)
-- X: x-posts.json (19), ndi-paa-x.html, Hvad siger X on selskab/tema, cyan chart markers
-- Merged lane-A (værdikæder + enkel kæde deep-link), lane-B (screener sorts), lane-C (grupperet kort + ideer visuals)
-- Lane-R review notes (UX + compliance cycle 1)
-- Smoke-quality: fixed NDI-linsen → vaerdikaede.html?isin= (Tesla); FO/X browser check OK (19 cards, SoftBank X panel)
+## MUST (00:00 UX round) — done on main `02cebde`/`25b8b30`
+1. **Classifications:** Cipher Mining → compute (forslag); Opendoor (+warrants) → platforms (forslag); maturity forslag for **all 345** via public industry heuristic.
+2. **X-marker:** removed «rådgiver» wording; chart markers sanitized.
+3. **Udforsk URL search:** verified `?q=` filters list (Cipher/Opendoor); commitSearch keeps URL↔liste in sync.
+4. **Smoke:** `smoke.mjs` **52/52 fail 0**; Tesla lens → `vaerdikaede.html?isin=US88160R1014`; tema.html duplicate-`data` fixed.
+
+## Also
+- risk-stats maxDD peak **2025-02-18 → 2025-04-08** (was inverted)
+- UX top5: chart takeaway, tabular-nums, 150–250ms transitions + reduced-motion, portefølje top-10 + details, source captions
+- invester.html → fakta + omkostninger
 
 ## Click highlights
-1. fakta.html · omkostninger.html · risici.html  
-2. ndi-paa-x.html  
-3. selskab SoftBank / Tesla → Hvad siger X  
-4. Fonden-graf cyan X-markører  
-5. vaerdikaeder.html / vaerdikaede.html?isin=…  
-6. ideer.html flodsystem  
+1. Fonden — takeaway under graf + cyan X-markører (ingen rådgiver-tekst)
+2. Udforsk `?q=Cipher` / `?q=Opendoor`
+3. fakta / omkostninger / risici (korrekte DD-datoer)
+4. ndi-paa-x.html
+5. SoftBank / Tesla selskab (Hvad siger X + NDI-linse → værdikæde)
+6. vaerdikaeder.html flodsystem
 
 ## Pages
-~32+ HTML under docs/
+~32 HTML under docs/
 
-## Open for Christian
-- Auditor name  
-- Confirm calculated vol ~32,5% / Sharpe ~0,89 vs internal  
-- Pin X accounts/themes  
-- Codex handoff: notes/HANDOFF-CODEX.md + notes/X-LANE.md  
+## Tests
+- precheck OK
+- smoke.mjs 52/52 fail 0 (00:40 CEST)
