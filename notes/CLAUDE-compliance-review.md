@@ -452,3 +452,29 @@ Ikke juridisk rådgivning. Main og Pages er uændrede siden cyklus 16. Jeg har g
 
 ### OK ✅
 - Beholdning pr. 1. jun. 2026. Ingen 1m/3m. Intet benchmark-claim. "Historisk afkast" står på alle sider undtagen ndi-paa-x. Der er AI-mærkning.
+
+## 2026-10-16 01:48 CEST · cyklus 18 (main `299e7a2`, delta)
+
+Ikke juridisk rådgivning. Pages = `299e7a2`. Jeg har grep'et renderet tekst på 26 live-sider ved 375 og 1280 (efter scroll) og gennemgået diff'en `7b7734a..299e7a2` under docs/ (20 filer).
+
+### MUST (åbne)
+1. **Ingen markedsføringsmærkning:** "markedsføring" står 0 gange som mærkning. Det ene hit på ndi-perspektiv er "spilmarkedsføring" i en selskabsbeskrivelse. Uændret.
+2. **"MADS FØLGER" + tickers: 14 hits på 5 sider** (SoftBank 3, NVIDIA 3, TSMC 2, tema chips 4, **tema energi 2 (ny)**). Fx "MADS FØLGER · NVDA · CRWV · NBIS". Kilden er stadig `js/x-feed.js`. Antallet stiger, fordi kortene vælges ved rendering. Fjern personnavnet eller gør det neutralt.
+3. **"kan tabe" mangler** på omkostninger, nyhedsarkiv og ndi-paa-x (tom). Det står på alle andre 23 sider ✅.
+4. PMINDIAKK: sammenlign viser "Seneste NAV 98,40 (14. okt. 2026)" sammen med "Første NAV 5. dec. 2025". Et afkast før 12 mdr. kan regnes ud (ca. −1,6 %, hvis start-NAV var 100). Den nye tidslinje på Idéer («Tre ure») siger korrekt, at der kun vises seneste kurs og intet afkast. NDI skal stadig afklare, om NAV må stå.
+5. ÅTD og "Fonden steg +104,8 %" står på fonden ved siden af "ÅTD og 100.000 kr.-eksemplet afventer Fundmarket-godkendelse". Uændret.
+6. **SRI 5 kontra vol 32,46 %:** uændret. Risikoklasse siger stadig "Udsving på 25 % … Klassen dækker udsving fra 20 til 30 % pr. år. Det er fondens klasse", mens risici og fakta viser 32,46 %. Forklar VEV/PRIIPs-metoden, eller drop "udsving pr. år" som synonym.
+7. `chartMarkers` med @MadsC007-opslag i fondens afkastgraf og label "ikke NDI's holdning" på forvalterens egne opslag. Uændret (se cyklus 1, 4 og 17).
+
+### SHOULD
+- **Omkostninger: delvist bedre.** Ordlisten har nu `g-aaop` ("NDI Analytics regner ikke ÅOP ud. Fondens officielle omkostningstal står i KID") og `g-skat` ("Siden giver ikke skatterådgivning") ✅. Invester trin 4 og FAQ siger "før skat" ✅. Men det samlede omkostningstal fra KID står stadig ikke nogen steder. Det er stadig et persona/FO-MUST, når NDI har tallet.
+- **Ny ordlistepost "Anbefalet investeringsperiode":** "Det er ikke en garanti for et positivt afkast efter 5 år" ✅. "Ingen markedsbeskyttelse: … kan tabe en del af eller hele din investering" ✅. Det er en god risikotekst.
+- Idéer «Hvad står der i tallet?» er uden tal og slutter med "Ikke rådgivning" og "Officielle omkostningstal står i KID" ✅.
+- `unique-metrics.json` +41 linse-selskaber: grep efter køb/sælg/anbefal/kursmål/upside/billig/undervurderet giver 0 rådgivningshits. Alle hints er "Eksponering, ikke rating" eller "Forhold, ikke en prognose" ✅. Krypto-selskaber (ether/solana-beholdning) og eToro-hintet ("mulighed for at kopiere andre brugeres porteføljer") er beskrivende, ikke en opfordring ✅. Temaforslag er mærket "Afventer NDI-gennemgang" ✅.
+- Uændret: KID-link mangler i renderet tekst på værdikæder, drawdown, temaer, nyhedsarkiv, ndi-perspektiv og selskaber (kid:0). "Bogen råder privatinvestorer" står stadig på rebalancering (l. 72). "BREAKING:" ×2 på fonden og SoftBank.
+
+### Rådgivningsord ✅
+- Garanter, "køb nu", "øger eksponering" og "bedste tip": 0 hits. "overvægt" står kun i negationer ("ikke bevidste overvægte") på værdikæder, risici, temaer og tema-sider. Værdikæde-tilføjelserne (Expand, Tanbreez, York, Karman, Redwire, MDA, Planet) er daterede, efter beholdningen og afgrænsede ("ikke en mine i drift", "sender ikke selv") ✅.
+
+### OK ✅
+- Beholdning pr. 1. jun. 2026 (også i «Tre ure»). Ingen live trades. Ingen 1m/3m. "Fonden har intet fast benchmark". AI-mærkning er til stede. "Historisk afkast …" står på alle sider undtagen ndi-paa-x.
