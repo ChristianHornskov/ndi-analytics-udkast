@@ -188,3 +188,20 @@ Grundlag: `origin/main` `60cebcc`, uændret siden cyklus 5. Pages = main (22:11 
 MUST 2 (NDI-konti "ikke NDI's holdning"), 4 (forvalter-opslag om TSLA), 5 (AKK NAV + "samme strategi"), 7 ("afventer Fundmarket-godkendelse" offentligt), 8 (SpaceX-rubrik/profil). SHOULD-listen er uændret.
 
 **Blocker-rækkefølge foreslået:** 1 markedsføringsmærkning → 3 "Mads følger" → 6 DD-datoer → 5 AKK → 2/4 X-konti.
+
+## 2026-10-16 00:23 CEST · cyklus 7 (delta)
+Grundlag: `origin/main` `60cebcc`, uændret. Pages = main (22:11 UTC, md5 drawdown identisk). Ikke juridisk rådgivning. Endelig vurdering: Fundmarket (IFS).
+
+### Nyt verificeret i denne cyklus
+- **1m/3m på PMINDI:** ✅ ingen UI-eksponering. `slicePeriod()` i `js/data.js:56-59` kan stadig beregne '1m'/'3m', men ingen knap eller kald bruger dem. Fonden-segmentet er kun "Siden start / ÅTD / kalenderår" (`js/app.js:350-356`), og embed kun "ÅTD / Hele perioden". Det er død kode, men en latent risiko: fjern grenene, så ingen senere lane genaktiverer dem ved et uheld.
+- **PMINDIAKK < 12 mdr. i embed:** ✅ `embed/chart.js:167-171` viser "-" og "Vises efter 12 måneder". (MUST 5 om AKK-NAV/"samme strategi" på andre sider er stadig åben.)
+- **Nasdaq som benchmark:** ✅ 0 hits på "nasdaq" i html/js.
+- **Garanti/"sikker"/"bedste"-ordlyd:** ✅ 0 hits.
+
+### Genbekræftet åbne MUST
+1. Markedsføringsmærkning: "markedsføringsmateriale" 0 hits (blocker).
+3. "Mads følger"-badge: `js/x-feed.js` (1 forekomst).
+6. DD-datoer: `risk-stats.json` maxDdPeak 2026-06-02.
+2/4/5/7/8 uændret fra cyklus 5.
+
+**Blocker-rækkefølge (uændret):** 1 markedsføringsmærkning → 3 "Mads følger" → 6 DD-datoer → 5 AKK → 2/4 X-konti.

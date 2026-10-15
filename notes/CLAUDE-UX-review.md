@@ -162,3 +162,23 @@ Grundlag: `origin/main` `60cebcc`, **uændret siden cyklus 5**. Pages last-modif
 - Ingen nye. Se cyklus 5.
 
 Forslag til watchdog: Næste cyklus bør kun køre fuld Playwright, hvis `origin/main` har bevæget sig.
+
+## 2026-10-16 00:23 CEST · cyklus 7 (delta)
+Tidsstemplet er vægurstid. Cyklus 6's "00:25" lå lidt foran. Grundlag: `origin/main` `60cebcc`, **stadig uændret**. Pages last-modified 15. okt. 22:11 UTC, og `drawdown.html` har samme md5 lokalt og live (`cc07504…`). `docs/` på lane-R = main (0 filer i diff). Der er ingen ny leverance, så ingen ny Playwright-kørsel. Cyklus 5-målingerne gælder.
+
+### MUST (uændret, stadig åbne)
+1. Drawdown-datoer: `data/risk-stats.json` `maxDdPeak` = 2026-06-02 (efter trough). risici/fakta modsiger drawdown.html.
+2. omkostninger/fakta: "Tomme felter = udfyldes af NDI" + "kl n" over folden på 375.
+3. invester trin 1 → KID/prospekt, trin 4 → omkostninger.html.
+
+### SHOULD (uændret)
+- Én samlet løbende omkostning (kr. + %) på omkostninger.
+- Ét AI-banner pr. side i stedet for 74 mærker (ndi-perspektiv).
+- Fjern "Mads følger"-badgen (`js/x-feed.js:279`).
+- nyhedsarkiv: to synlige "Placeholder: …"-afsnit (`nyhedsarkiv.html:37,42`). Skjul siden eller fjern linket fra kort.html, indtil den har indhold.
+- udforsk 26k px på 375, ingen top 10, punktum som decimaltegn, "Central Information Dokument".
+
+### Nice
+- Ingen nye.
+
+Watchdog: main har ikke bevæget sig i to cyklusser. Næste fulde review først ved ny commit på main.
