@@ -349,3 +349,20 @@ Ingen nye.
 - Mini-grafen i skyderen: resten af kurven vises dæmpet, den valgte del gul, så man ser hvor man «kom ind».
 - Lær-hub: «Afkast og udsving» har 5 døre; den sidste (P/E) spænder hele rækken på desktop. Overvej at flytte P/E til «Tankegangen», hvis gruppen skal være 4.
 - Til js-ejer: Fonden-siden mangler et link til forklaringen tæt på grafen.
+
+## 02:00 UX-review lane-C (Claude) · kørt 01:42–01:55 wall-clock, efter merge af origin/main ind i lane-C
+Hele lane-C-fladen ved 375 px: ideer, kort, om-data, invester, risici, ndi-perspektiv og alle 15 lær-sider. Automatisk tjek pr. side: h-overflow, elementer bredere end skærmen, konsolfejl, døde ankre på siden og på tværs, `img` uden alt, store SVG'er uden etiket, tankestreger i synlig tekst, handelsord.
+### Resultat
+- 0 h-overflow, 0 konsolfejl, 0 døde links/ankre, 0 billeder uden alt, 0 SVG uden etiket på 21 sider.
+- Handelsord: kun «anbefaling» i «ikke en anbefaling», «Anbefalet investeringsperiode» (KID-ord) og «Køb og omkostninger» om køb af andele. OK.
+- Små trykflader: temalinks i varmekortet (17 px, tabelceller) og løbende links i tekst. OK efter WCAG 2.5.8 (inline). Risikokortenes «→»-links stod alene på en linje med 19 px: nu 25 px (padding).
+### Fundet efter merge og rettet
+- **Idéer viste gamle temaal.** Main har lane-B's temaforslag (37 selskaber flyttet ud af Andet, 4 fra compute til Quantum). Fem former havde de gamle tal hårdkodet: varmekortet, «Fra Andet til tema» (67 · 48 · 230 → 31 · 85 · 229), «345 aktier, én prik hver», «To klasser» (største forskel nu 1,6 pp) og «Lag på lag» (Energi 15 → 37 selskaber, 6,3 → 9,3 %). Alle regnet om fra portfolio.json med script. Vægte er uændrede, så «halvdelen»-kurven (26/76/160) og vægtintervallerne holder.
+- **Ordlisten:** antal i Chips (54/49), Compute (19/16), Optik (31/30), Fysisk tech (27), Energi (37, heraf 28 forslag). Temaforslag-posten har nu tallene og link til `ideer.html#h-tf`.
+- **risici.html viste interne ord** fra main: «Risikotal (beregnet i udkastet)», «udfyldes af NDI», «maturityStatus=forslag», «ofte 0 indtil NDI udfylder», og Andet = 63 (risk-stats.json) mens portfolio.json siger 31. Nu: «Udsving og fald i tal» (udsving pr. år 32,5 %, afkast pr. udsving 0,89, største fald −35,8 %, «regnet af NDI Analytics, ikke KID») + svar på «Hvorfor passer tallet ikke med risikoklassen?» (PRIIPs har egen metode). «Hvor langt er sorteringen i temaer?» tæller direkte fra portfolio.json, så tallene altid passer med Idéer.
+- kort.html: tankestreg i «NDI på X»-døren fjernet.
+### SHOULD (andre lanes)
+- `data/risk-stats.json` `classification` (andetCount 63, themeForslag 116) passer ikke med portfolio.json efter lane-B-merge (31 / 85 ekskl. Andet). risici.html bruger ikke længere de felter.
+- app.js nøgletal hedder stadig «Max drawdown». Resten af sitet siger «Største fald (fra top)».
+### Test
+- 8763, 375/1280: risici, ideer, om-data, kort, lær/risikoklasse: 0 konsolfejl, ingen h-overflow. Screenshots af `#tal` og de fem Idéer-former gennemset på 375.

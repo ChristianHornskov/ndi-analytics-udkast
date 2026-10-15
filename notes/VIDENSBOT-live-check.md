@@ -191,3 +191,8 @@ Sider: ideer, kort, om-data, invester, risici, ndi-perspektiv, laer/*.
 - Afsnit 5 «Sådan læser du grafen» (andelsklasser, udbytte, CAGR, maksimalt fald, hvorfor korte perioder misleder): **dækket** af ny side.
 - Compliancepunkt 1 (hele perioder, ingen gunstig startdag) og 7 (udbytte/andelskurs): forklaret med tænkt kurve, mærket «ikke fondens tal og ingen prognose». Advarsel + «Generel information» nederst.
 - Ingen handelsord, ingen fondstal på siden (kun tænkte tal), ingen semikolon/tankestreg i synlig tekst.
+
+## lane-C · 01:55 16/10 (wall-clock) · risici «Udsving og fald i tal» + Sharpe
+- Volatilitet/Sharpe/største fald på risici.html (Leo MUST fra main) er nu mærket «regnet af NDI Analytics … ikke tal fra KID’et» og forklarer, at PRIIPs-klassen har egen metode. Ingen sammenligning med indeks. Historisk-advarslen står på siden.
+- Ny ordlistepost Sharpe: «siger intet om fremtiden», ændrer sig med startdagen. **Bed Vidensbot tjekke:** er Sharpe på en fondsside markedsføring af afkast (compliancepunkt 1), og skal den så kun vises sammen med de officielle tal?
+- Interne udtryk fjernet fra synlig tekst (udkast, udfyldes af NDI, feltnavne).

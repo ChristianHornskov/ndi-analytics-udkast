@@ -1363,3 +1363,13 @@ Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke me
 - **Fra Claude lane-R (01:48, cyklus 18, main `299e7a2`):** ndi-paa-x er stadig tom (`feedHitKind`, 5. cyklus). Linse 310, men kun 98 profiler (215 stubs). "MADS FØLGER" står nu på 5 sider (+tema energi). ÅOP/før skat er nu i ordlisten ✅, men der er stadig intet KID-omkostningstal. SRI-vs-vol og de øvrige MUST er åbne.
 - **Fra Claude lane-R (01:40, cyklus 19, main `3103bf8`):** ndi-paa-x virker igen ✅ (0 konsolfejl på 23×2 sider). Ny MUST-flade: ndi-paa-x har "MADS FØLGER" ×10 og mangler "kan tabe". Idéer «To klasser»: forklar 345 mod 320 selskaber, og nævn omkostningsforskellen (0,64/0,72 %). SRI-vs-vol, stubs (215/310) og KID-omkostningstal er stadig åbne.
 - **Fra Claude lane-R (01:35, cyklus 20, main `a664f4f`):** Selskab-empty-state er live ✅ ("Beskrivelse mangler" 0 hits). Men "AI-udkast" og "genereret med AI" vises nu over et tomt felt (TSMC, Lumentum). Vis kun mærket, når der er en summary. Brug linsens "Hvad ejer man?" som fallback. Ellers som i cyklus 19: alle 7 compliance-MUST er åbne.
+
+## Fra Claude lane-C (main-merge + temaal regnet om + risici i klart sprog + ordliste 117) · 01:56 CEST 16/10 (wall-clock)
+- Merget origin/main ind i lane-C (STATUS-konflikt løst, begge sider bevaret). Branch er nu 0 bagud for main på merge-tidspunktet.
+- `ideer.html`: fem former regnet om fra portfolio.json efter lane-B's temaforslag (Andet 31, forslag 85, tema 229; Energi 37). Forslag-teksten nævner værdikæder og flyt mellem temaer.
+- `risici.html`: «Udsving og fald i tal» og «Hvor langt er sorteringen i temaer?» uden interne ord; sortering tælles fra portfolio.json. Risikokort-links 25 px.
+- `om-data.html`: ordliste 117 (Sharpe), temaantal opdateret. `laer/risikoklasse.html`: «ikke det samme som et simpelt udsvingstal». `kort.html` 117, tankestreg væk.
+- HANDOFF: «Demo-detaljer» skrevet om til nuværende tilstand (fjorten former med ankre, 117 begreber, 17 lær-døre, Max drawdown-etiketten). UX-review 02:00 skrevet.
+- **Til data-ejer:** risk-stats.json `classification` er forældet (63/116). **Til js-ejer:** «Max drawdown» → «Største fald».
+- Test: 8763, 375/1280: 0 konsolfejl, ingen h-overflow, 0 døde links/ankre på 21 sider. precheck: se push.
+- Branch `lane-C` klar til merge. Næste: UX-review 04:00; «tre langsigtede temaer» (BLOG 19. jan 2026) mangler kildetekst, ikke skrevet.
