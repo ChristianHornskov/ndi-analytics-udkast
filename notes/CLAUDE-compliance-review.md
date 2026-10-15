@@ -69,3 +69,39 @@ Grundlag: `origin/main` `8b30c48`. Pages-tekst er identisk med lokal main. Ikke 
 | AI-mærkning | ✅ ndi-perspektiv 9 mærker og "afventer NDI-gennemgang", selskab 13 |
 | Omkostninger | ⚠️ tal findes. KID-omkostningseffekt og invester-link mangler |
 | Screener-sortering (lane-B) | ✅ portefølje sorterer kun på vægt/navn/tema. `?sort=ret` ignoreres, ingen afkastkolonne |
+
+## 2026-10-16 00:20 CEST · cyklus 3
+Grundlag: `origin/main` `820f116`. `docs/` er uændret siden `8b30c48`, og Pages svarer til main. Ikke juridisk rådgivning. Endelig vurdering: Fundmarket (IFS) compliance. Cyklussen gentjekker MUST 1–4 og tilføjer (artikel-/afsnitshenvisninger er orienterende og skal verificeres) en gennemgang mod ESMA's retningslinjer for markedsføringsmateriale (ESMA34-45-1272) og CBDF-forordningen (EU) 2019/1156 art. 4.
+
+### MUST
+1. **Ny: siden er ikke mærket som markedsføringsmateriale.** "Markedsføringsmateriale" og "marketing communication" giver 0 hits i `docs/`. Footeren siger "Udkast / noindex … Ingen investeringsrådgivning". CBDF art. 4(1) og ESMA-retningslinjerne afsnit 4.1 kræver, at materialet tydeligt kan identificeres som markedsføring, og at der henvises til prospekt og KID ("Læs prospektet og KID, før du træffer en endelig investeringsbeslutning"). Tilføj det i footeren på alle sider og i embed. Prospektlinket findes kun på fakta.html. Læg det også i footeren og på invester trin 1.
+2. **(cyklus 1, MUST 1) X-tredjepartsopslag** på Fonden, i afkastgrafen og på selskabssider er uændret. SoftBank-siden viser stadig @FundaAI "$ORCL and $CRWV face a repricing of credit risk, along with SoftBank…".
+3. **(cyklus 1, MUST 2) PMINDIAKK "Seneste NAV 98,40"** står stadig på AKK-view + sammenlign. **Skærpet:** AKK-view skriver også "Klassen følger samme overordnede strategi som PMINDI" lige ved siden af PMINDI-fanen med +104,8 %. Det kan læses som et indirekte afkastudsagn for en klasse med mindre end 12 måneders historik. Fjern sætningen eller tilføj "PMINDI's afkast kan ikke overføres til PMINDIAKK".
+4. **(cyklus 1, MUST 3) risk-stats peak > trough** er uændret.
+5. **(cyklus 1, MUST 4) "afventer Fundmarket-godkendelse"** står stadig offentligt på Fonden.
+6. **Ny: "SpaceX: større end hele jordens økonomi"** er en rubrik på vaerdikaeder.html. Citatet er tilskrevet ("Elon Musks påstand … ikke NDI's forventning"), og det er godt. Men en rubrik i fondsmarkedsføring om et selskab med ekstremt fremadrettet påstand er ikke "fair, clear and not misleading" (ESMA afsnit 4.2–4.3: balance mellem fordele og risici, fair/klar/ikke vildledende). Det gælder især, fordi kilden er ugebrevet 12. okt. 2026. Brug en neutral rubrik og lad påstanden stå i brødteksten med forbeholdet. Alternativt fjern den.
+
+### SHOULD (nyt)
+- **SpaceX-profil med ISIN uden for snapshot.** `company-profiles.json` har `US84615Q1031` (SpaceX) med 4 videoer/artikler dateret 15. jun. til 8. okt. 2026. ISIN'en findes ikke i `portfolio.json` eller `company-months.json` (pr. 1. jun. 2026). Siden viser korrekt "indgår ikke i den forsinkede beholdning". Men en offentlig profil med ISIN, X-konti og NDI-indhold om et selskab uden for snapshottet kan afsløre en position, fonden har taget efter cutoff, hvis den har. Fjern ISIN-nøglen/profilen, indtil selskabet optræder i et offentliggjort snapshot. Ellers skal Leo bekræfte, at der ikke er nogen position.
+- **Perioder under 12 måneder for PMINDI:** ÅTD +4,0 % (KPI-kort), "2023 delår +16,7 %" (ca. 3 mdr.), 2026 delår og månedsgitteret (36 enkeltmåneder = 1m-afkast pr. måned, okt. 2026 = delmåned −9,2) står alle synligt. Reglen "ingen 1m/3m" overholdes for perioden-vælgeren, men gitteret og delårene viser i praksis korte perioder. KID'ets søjlediagram viser kun hele kalenderår. Lad Fundmarket afgøre det sammen med den udestående ÅTD-godkendelse (MUST 5). Indtil da: fjern delår og månedsgitter fra Fonden-hero, eller marker dem tydeligt.
+- **Historisk afkast er det mest fremhævede element** i Fonden-hero (+104,8 %, +26,4 % CAGR øverst, SRI til sidst). Tidligere resultater må ikke være det mest fremtrædende element (jf. MiFID II DR 2017/565 art. 44(4)(a), og ESMA-retningslinjerne afsnit 4.5 om afkastinformation). Giv risiko/SRI samme vægt i første række.
+- **Investorrettigheder/klageadgang:** 0 hits på "investorrettigheder" og "klage". Ved markedsføring på tværs af grænser forventes en henvisning til et resumé af investorrettigheder (Fundmarket har typisk et). Artikelhenvisningen skal Fundmarket bekræfte. Tilføj det på fakta.html. Lav prioritet, hvis siden kun markedsføres i DK.
+- **SFDR-klassifikation** (art. 6/8) står ingen steder. Siden indeholder ingen bæredygtighedsclaims (0 hits på "bæredygtig"). Det er OK, men FO-personaen spørger. Vis klassifikationen fra prospektet på fakta.html.
+- `company-profiles.json`-titel "Q2 Regnskaber fra Hims & Hers, Sea LTD og kæmpe NVIDIA nyheder - Mads giver sit take" (YouTube) står i data. Den er ikke fundet i crawlet tekst, men hvis den bliver vist: hype-sprog og enkeltaktier. Vis kun `context`-feltet.
+- Uændret: CHornskov "Begge er også i $PMINDI", "Central Information Dokument", Sharpe rf=0, "Juridisk start" vs første NAV, ugebrev-kildeangivelse i value-chains.json.
+
+### Tjekliste (delta mod cyklus 2)
+| Punkt | Status |
+|---|---|
+| Ikke-rådgivning / generel info | ✅ (invester: "Ikke rådgivning om, om du bør investere") |
+| Mærket som markedsføringsmateriale + henvisning til prospekt/KID | ❌ **ny MUST 1** |
+| Tab af kapital / historisk ≠ fremtid | ✅ uændret |
+| KID/SRI | ✅ (betegnelse ⚠️) |
+| Rådgivende ordlyd / hype | ⚠️ X-opslag + "SpaceX: større end hele jordens økonomi" (MUST 6) |
+| Handelssprog | ✅ 0 hits på "øger eksponering"/"overvægt"/kursmål |
+| asOf ≤ 2026-06-01 | ✅ portfolio/company-months. ⚠️ SpaceX-profil uden for snapshot |
+| PMINDIAKK < 12 mdr. | ❌ NAV 98,40 + "samme strategi" (MUST 3) |
+| 1m/3m PMINDI | ⚠️ månedsgitter/delår (SHOULD, Fundmarket) |
+| Nasdaq som benchmark | ✅ |
+| AI-mærkning | ✅ (UX: for mange mærker pr. side) |
+| Omkostninger | ⚠️ tal findes, "efter løbende omkostninger" er angivet ved afkast ✅. KID-omkostningseffekt og invester-link mangler |
