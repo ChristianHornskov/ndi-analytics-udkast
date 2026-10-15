@@ -323,6 +323,14 @@ function renderFonden(root) {
       <p style="margin-top:10px"><button type="button" class="outline-btn small" data-open="dlg-invest">ISIN &amp; investeringsflow</button>
       <a class="outline-btn small" style="margin-left:8px" href="om-data.html">Om data →</a></p>
     </section>
+
+    <section class="panel">
+      <h2 style="font-size:18px;margin-bottom:8px">Det skete i porteføljen</h2>
+      <p style="font-size:13px;color:var(--muted);line-height:1.55">Daglige top-bevægelser pr. aktie vises <strong style="color:var(--text)">ikke</strong> i denne version. Beholdningen er forsinket (månedsrapport), og kursafkast pr. aktie er under verifikation.</p>
+      <p class="band">Når funktionen kommer tilbage, bliver det kun fakta + dato — ingen anbefaling om at købe eller sælge.</p>
+      <p style="margin-top:10px"><a class="outline-btn small" href="selskaber.html?fund=${state.fund}">Se forsinket beholdning →</a>
+      <a class="outline-btn small" style="margin-left:8px" href="temaer.html">Temaer →</a></p>
+    </section>
     <section class="panel">
       <h2 style="font-size:18px;margin-bottom:8px">Risiko (kort)</h2>
       <ul style="color:var(--muted);font-size:13px;line-height:1.55;padding-left:18px;display:grid;gap:6px">
@@ -638,18 +646,25 @@ function wireKeyboard() {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       const bd = document.querySelector('.dialog-backdrop');
-      if (bd) { bd.querySelector('[data-close]')?.click() || bd.remove(); }
+      if (bd) { const c = bd.querySelector('[data-close]'); if (c) c.click(); else bd.remove(); }
       return;
     }
     const seg = e.target.closest?.('.seg');
-    if (!seg || !['ArrowLeft', 'ArrowRight'].includes(e.key)) return;
+    if (!seg || !['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(e.key)) return;
     const controls = [...seg.querySelectorAll('.control:not(:disabled)')];
     const i = controls.indexOf(document.activeElement);
     if (i < 0) return;
     e.preventDefault();
-    const next = e.key === 'ArrowRight' ? (i + 1) % controls.length : (i - 1 + controls.length) % controls.length;
-    controls[next].focus();
-    controls[next].click();
+    const n = controls.length;
+    const next = e.key === 'Home' ? 0 : e.key === 'End' ? n - 1
+      : e.key === 'ArrowRight' ? (i + 1) % n : (i - 1 + n) % n;
+    const target = controls[next];
+    // click() → paint() gentegner visningen; find samme kontrol igen og giv den fokus (APG tabs)
+    const key = ['data-fund', 'data-period', 'data-tag'].find((k) => target.hasAttribute(k));
+    const val = key && target.getAttribute(key);
+    target.click();
+    const again = key ? document.querySelector(`[${key}="${CSS.escape(val)}"]`) : target;
+    (again || target).focus();
   });
 }
 

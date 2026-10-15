@@ -15,7 +15,7 @@
   <main id="main"><p style="color:var(--muted)">Henter…</p></main>
   <script type="module">
     import { loadAll, fundById, calendarYearReturns, ytdReturn, periodReturn, cagr, WARN_HIST, fmtPct, fmtDate } from './js/data.js';
-    const { portfolio } = await loadAll();
+    const { portfolio, context } = await loadAll();
     const fundId = new URL(location.href).searchParams.get('fund') || 'pmindi';
     const year = new URL(location.href).searchParams.get('year') || 'YTD';
     const fund = fundById(portfolio, fundId);
@@ -59,6 +59,13 @@
           <h2 style="font-size:16px;margin-bottom:10px">Alle perioder</h2>
           <div style="display:flex;flex-wrap:wrap;gap:8px">${chips}</div>
         </section>
+        ${(() => {
+          const evts = (context?.events || []).filter(e => from && to && e.d >= from && e.d <= to);
+          if (!evts.length) return `<section class="panel"><h2 style="font-size:16px;margin-bottom:8px">Dokumenterede begivenheder</h2><p style="color:var(--muted);font-size:13px">Ingen dokumenterede udbytte-events i denne periode.</p></section>`;
+          return `<section class="panel"><h2 style="font-size:16px;margin-bottom:8px">Dokumenterede begivenheder</h2>
+            <ul style="color:var(--muted);line-height:1.55;padding-left:18px">${evts.map(e=>`<li><strong style="color:var(--text)">${fmtDate(e.d)}</strong> — ${e.title}</li>`).join('')}</ul>
+            <p style="font-size:11px;color:var(--muted);margin-top:8px">Kun dokumenterede fondsbegivenheder.</p></section>`;
+        })()}
         <p class="warn">${WARN_HIST}</p>`;
     }
   </script>
