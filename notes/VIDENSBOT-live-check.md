@@ -151,3 +151,9 @@ Sider: ideer, kort, om-data, invester, risici, ndi-perspektiv, laer/*.
 ## 2026-10-16 ~01:10 — ideer «Tre ure» (Claude lane-C)
 - Ny form forklarer datoerne: PMINDIAKK viser kun NAV indtil 12 måneders historik (ingen afkast, ingen dato lovet i teksten; grænsen er kun tegnet). Beholdning pr. 1. jun 2026 beskrevet som bevidst forsinket. Risikoklasse 5 af 7 henført til KID 14. aug 2026.
 - Ingen afkasttal, ingen korte perioder, intet handelsprog. Ordliste: omsætning og indtjening er neutrale definitioner.
+
+## lane-C ~01:40 — ordliste 101 (KID-risici)
+- Fire nye poster: vækst- og sektorrisiko, ingen markedsbeskyttelse, boble, anbefalet investeringsperiode. Kilde for de fem nøglerisici og «5 år»: fund-meta.json (priip.key_risks, recommended_holding_years) for begge klasser. Ingen ordrette KID-citater.
+- «Boble» er en neutral definition («lettere at udpege bagefter end undervejs, ét nøgletal kan ikke afgøre det»). Ingen NDI-vurdering af, om der er en boble nu. Ugebrevscitatet på ideer er uændret.
+- Anbefalet investeringsperiode: «ikke en garanti for et positivt afkast efter 5 år». Ingen afkasttal, intet handelsprog.
+- Bed Vidensbot bekræfte: er «ingen markedsbeskyttelse» det ord, KID'et bruger, eller «ingen kapitalbeskyttelse»? Posten har id g-kapitalbeskyttelse og nævner begge ord.

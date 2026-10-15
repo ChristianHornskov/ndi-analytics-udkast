@@ -254,3 +254,11 @@ Ingen nye.
 - Ordliste 95 → 97: omsætning og indtjening. P/E- og livscyklus-siden bruger begge ord bærende. Linket fra «præ-revenue» (skråstreg erstattet af «eller»), P/E- og livscyklus-sidens «Se også». «Afkast pr.»/«Beholdning pr.» har nu danske anførselstegn.
 - Obs til index-ejer: `index.html` linje ~91 siger «ÅOP-beregninger bygges ikke i aften». Intern arbejdssprog på forsiden. Forslag: «ÅOP vises ikke i udkastet. Se KID.»
 - Test 375/1280 på ideer, om-data, pe-forklaring, livscyklus, kort: 0 konsolfejl, ingen h-overflow, 0 døde ankre; alle `om-data.html#g-…`-links på tværs af docs/ findes.
+
+## ~01:40 CEST lane-C checkpoint (Claude) — KID-risikolisten forklaret, ordliste 101
+- **Hul lukket:** risici.html viste KID's fem nøglerisici som en tom liste af fagord («Vækst- og sektorrisiko», «Ingen markedsbeskyttelse»). Ingen af dem kunne slås op. Nu er hvert punkt et link til ordlisten (aktiemarkedsrisiko → markedsrisiko, valutarisiko → valuta, de to tab-punkter → ingen markedsbeskyttelse).
+- Ordliste 97 → 101: vækst- og sektorrisiko, ingen markedsbeskyttelse, boble (bruges på P/E-siden og i et ugebrevscitat på ideer), anbefalet investeringsperiode (risici, invester, risikoklasse, FAQ). Tællere 24 · 18 · 32 · 27 passer. Teksterne citerer ikke KID ordret, de siger «står blandt de vigtigste risici på Risici, som bygger på KID».
+- Linket ind: risici (risikoliste + «investeringsperiode»), invester («Har du tid?»), lær/risikoklasse, lær/pe-forklaring («boble»), kort.html 101.
+- FAQ-søgning rammer «boble», «markedsbeskyttelse», «investeringsperiode».
+- Obs til js-ejer: `js/faq-search.js` linje 93/96 skriver «træf for “boble”» med engelske anførselstegn. Resten af siden bruger «».
+- Test 375/1280 på 7 sider: 0 konsolfejl, ingen h-overflow, 0 døde links/ankre. Dybe links #g-kapitalbeskyttelse og #g-investeringsperiode åbner den foldede gruppe og fremhæver posten på 375.

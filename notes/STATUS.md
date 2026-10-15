@@ -422,3 +422,12 @@ HEAD `b35518b`. Visual-variety request shipped + reviewed. MADS værdikæde/quan
 - **Til index-ejer:** «ÅOP-beregninger bygges ikke i aften» på index.html er internt sprog (se UX-review).
 - Test: 8763, 375/1280: 0 konsolfejl, ingen h-overflow, 0 døde ankre. precheck: se push.
 - Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + sprogtjek ndi-perspektiv mod Vidensbot.
+
+## Fra Claude lane-C (KID-risici → ordliste 101) · ~01:40 CEST 16/10
+- `risici.html`: KID's fem nøglerisici er nu links til ordlisten; «investeringsperiode» linket.
+- `om-data.html`: ordliste 97 → 101 (vækst- og sektorrisiko, ingen markedsbeskyttelse, boble, anbefalet investeringsperiode). Tællere 24 · 18 · 32 · 27.
+- Links fra invester, lær/risikoklasse, lær/pe-forklaring; kort.html 101.
+- **Til js-ejer:** “” → «» i `js/faq-search.js` (IDEAS).
+- Notes: HANDOFF trin 8, UX-review, VIDENSBOT-live-check.
+- Test: 8763, 375/1280 på 7 sider: 0 konsolfejl, ingen h-overflow, 0 døde links/ankre. precheck: se push.
+- Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + ndi-perspektiv sprogtjek mod Vidensbot.
