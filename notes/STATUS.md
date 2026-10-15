@@ -408,3 +408,10 @@ HEAD `b35518b`. Visual-variety request shipped + reviewed. MADS værdikæde/quan
 - **Til data-lane:** tankestreg/semikolon i unique-metrics-hints (IDEAS).
 - Test: 8763, 375/1280: 0 konsolfejl, ingen h-overflow, 0 døde ankre. precheck: se push.
 - Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + ideer.html tiende form eller lær-sidernes «Se også» mod ordlisten.
+
+## Fra Claude lane-C (ordliste 95 + lær-sider → ordliste) · ~01:15 CEST 16/10
+- `om-data.html`: ordliste 91 → 95 (median, markedsrisiko, selskabsspecifik risiko, PRIIPs). Tællere 21 · 17 · 30 · 27.
+- Ordlistelinks på fem lær-sider, der havde få eller ingen: hvorfor-mange-aktier, saadan-taenker-vi, udbytte-vs-akk, faq-mangler-aktie, risikoklasse. `ideer.html` median → ordliste. `kort.html` 95.
+- Notes: HANDOFF trin 8 (95), UX-review, VIDENSBOT-live-check.
+- Test: 8763, 375/1280 på 8 sider: 0 konsolfejl, ingen h-overflow, 0 døde ankre. precheck: se push.
+- Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + ideer.html tiende form.

@@ -241,3 +241,9 @@ Ingen nye.
 - Ordliste 87 → 91: depot (ordet bruges på invester.html), platforme, software og energiressourcer (de tre temaer manglede, og platforme er det største målt på vægt i begge klasser pr. 1. jun 2026: 16,0 % / 14,7 %). Tællere 18 · 16 · 30 · 27 passer.
 - `invester.html`: «risikoklasse 5 af 7» → lær/risikoklasse; «Passer en bred teknologifond?» forklarer nu flodsystemet i én sætning (→ ordliste).
 - Test 375/1280 på invester, om-data, kort, FAQ, risikoklasse: 0 konsolfejl, ingen h-overflow, 0 døde ankre; FAQ-søgning rammer «depot», «platforme», «energiressourcer».
+
+## ~01:15 CEST lane-C checkpoint (Claude) — ordliste 95 + lær-sider linker til ordlisten
+- Ordliste 91 → 95: median (bruges på drawdown og ideer uden forklaring), markedsrisiko og selskabsspecifik risiko (kernen i «Hvorfor så mange aktier?», stod ikke i ordlisten), PRIIPs (nævnt på risikoklasse-siden). Tællere 21 · 17 · 30 · 27 passer.
+- Lær-sider uden ordlistelinks har fået dem: hvorfor-mange-aktier (3 nye + «Se også»), saadan-taenker-vi (flodsystem, dæmning, prospekt, KID, udgangspunkter), udbytte-vs-akk («I ordlisten»-linje + NAV), faq-mangler-aktie (likviditet, ticker), risikoklasse (PRIIPs). ideer.html: «medianen» → ordliste.
+- Obs til js/css-ejer: på mobil er ordlistegrupperne foldet sammen, når man åbner om-data.html uden hash. Links med #g-… folder den rigtige gruppe ud og fremhæver posten. Virker (testet #g-markedsrisiko på 375).
+- Test 375/1280 på 8 sider: 0 konsolfejl, ingen h-overflow, 0 døde ankre (den eneste træffer er skabelonen `g-${key}` i selskab.html).

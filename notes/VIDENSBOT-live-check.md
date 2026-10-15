@@ -142,3 +142,8 @@ Sider: ideer, kort, om-data, invester, risici, ndi-perspektiv, laer/*.
 ## lane-C · ~01:25 16/10 · ordliste 91 + invester
 - Nye poster er beskrivende (hvad temaet rummer, opgjort efter branche i portfolio.json PMINDI), ingen vurdering af temaernes udsigter. Platforme er «det største tema målt på vægt» pr. 1. jun 2026, regnet efter for begge klasser (16,0 % / 14,7 %).
 - invester.html flodsystem-sætningen genbruger ordlyden fra saadan-taenker-vi.html («når én flaskehals letter, flytter presset videre … i stedet for at gætte»). Ingen forudsigelse.
+
+## lane-C · ~01:15 16/10 · ordliste 95
+- Markedsrisiko/selskabsspecifik risiko er formuleret som forklaring af spredning («forsvinder ikke» / «bliver mindre, jo flere selskaber»). Samme ordvalg som hvorfor-mange-aktier.html, ingen påstand om fondens egne tal.
+- Median-posten nævner kun den typiske vægt ca. 0,2 % pr. 1. jun 2026 (samme tal som hvorfor-mange-aktier og ideer). Ingen kurser, ingen selskabsnavne.
+- PRIIPs: «EU-reglerne bag KID», ingen gengivelse af fondens KID-tekst.
