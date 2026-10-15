@@ -219,3 +219,25 @@ Main er ikke flyttet siden cyklus 8. Live-sitet er byte-identisk med `docs/` for
 
 ### Nice
 - Drawdown, sammenlign og lær/valuta er rene: korte sider med risikolinje og ingen stubs.
+
+## 2026-10-16 00:36 CEST · cyklus 10 (main `1bc0d43` uændret, delta + nye sider)
+
+Main har ikke flyttet sig. Jeg har kørt Playwright mod live-sitet på 25 sider ved 375 og 1280 px. Nye i denne runde er ndi-perspektiv, periode, selskaber A–Z, vaerdikaede, tema/chips, kort og lær/index. Alle sider svarer 200. Der er 0 sider med vandret scroll, 0 konsolfejl og 0 billeder uden alt-tekst. Hver side har præcis én h1.
+
+### MUST (uændret)
+- "Mads følger"/"Konti Mads følger" vises stadig på SoftBank og ndi-paa-x.
+- Toppunktet for drawdown ligger efter bunden (`data/risk-stats.json:9`).
+- "afventer"/"udfyldes" står synligt på fonden, fakta (×3), omkostninger, risici og temaer.
+
+### SHOULD (nyt)
+- **ndi-perspektiv er vokset til ca. 44.700 tegn og er 31.300 px høj på 375**, med **139 "AI-udkast"-mærker** (74 i cyklus 3) fordelt på 68 selskaber. Det er den længste side på sitet. Mærkerne er ren støj, og en privatinvestor kommer aldrig til bunden. Lav ét AI-banner øverst og en søgning, eller én kortside pr. selskab (linsen findes allerede på selskab.html).
+- **Dataformat:** udbytte vises som "38.9 kr." og "38.0 kr." (engelsk decimalpunktum) på fonden og periode.html, mens X-opslaget skriver "38,00 kr./andel". Brug da-DK med 2 decimaler (`38,90 kr.`).
+- **"Sådan investerer du", trin 4 "Ordre & omkostninger"** nævner kun kurtage og platformgebyr. Fondens egne løbende omkostninger (1,49 % + 0,64 % transaktion) og et link til omkostninger.html mangler. Det er netop her privat-personaen leder efter prisen.
+- **Primær-nav har ingen omkostninger:** Entré, Fonden, Porteføljen, Udforsk, Følg med, Risici og Invester. Omkostninger findes kun i "Også i udkastet"-listen nederst på entréen og som kort på fonden. FO-personaen forventer pris i højst ét klik fra forsiden.
+- **Små trykflader:** udforsk (ca. 700 links/knapper under 24 px høje på 375), selskaber A–Z (ca. 640) og portefølje (ca. 210). Det er hovedsageligt tabelrækkernes navne-links og tags. Det giver risiko for fejltryk på mobil (WCAG 2.5.8 kræver 24×24 px). Giv rækkerne `padding-block`, eller gør hele rækken klikbar.
+- Uændret fra cyklus 9: den tomme livscyklus-boks står øverst på porteføljen, der er ingen top-10-opsummering, nyhedsarkiv har 8 "Placeholder:", og værdikæder er stadig ca. 17.800 tegn.
+
+### Nice
+- Omkostninger: tastefejlen "inventeret" er rettet. Nu står der "Det er ikke et beregnet ÅOP" ✅.
+- periode.html er kort og ren og har risikolinje. AKK-tilstanden viser kun "Afkast vises efter 12 måneder" ✅.
+- Entré på 375: tre døre og en klar fold, og "Sådan investerer du" står som knap i headeren ✅.

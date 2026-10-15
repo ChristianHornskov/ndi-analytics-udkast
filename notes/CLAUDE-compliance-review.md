@@ -255,3 +255,34 @@ Ikke juridisk rådgivning. Tjekket med Playwright på renderet tekst fra live-si
 - PMINDIAKK 12m-gate holder. 1m/3m er ikke eksponeret. Nasdaq er kun nævnt som noteringsfakta.
 - AI-mærkningen er der på udforsk, værdikæder, selskab, temaer og idéer.
 - Risikoindikator 5/7 og KID står på entré, fonden, portefølje, udforsk, risici, invester og fakta.
+
+## 2026-10-16 00:36 CEST · cyklus 10 (main `1bc0d43` uændret, delta)
+
+Ikke juridisk rådgivning. Tjekket med Playwright på renderet tekst fra live-sitet (25 sider ved 375 og 1280) og med grep i `docs/`. Pages er lig med main.
+
+### MUST (åbne)
+1. **Ingen markedsføringsmærkning.** Renderet tekst indeholder "markedsføring" på 0 af 25 sider.
+2. **"Mads følger"** renderes stadig på SoftBank og ndi-paa-x.
+3. **DD-top efter bund** (`risk-stats.json:9`).
+4. **ndi-paa-x mangler en tabsadvarsel** (0 hits på "kan tabe" og 0 på "historisk afkast").
+5. **Genåbnet: PMINDIAKK-NAV før 12 mdr.** Cyklus 9 havde den under "OK", men den er **stadig synlig**. Fonden-AKK viser som første KPI "Seneste NAV", og sammenlign viser "Seneste NAV 98,40 (14. okt. 2026)" ved siden af "Første NAV 5. dec. 2025". Det giver et implicit afkast på −1,6 %. Fonden-AKK siger også stadig "Klassen følger samme overordnede strategi som PMINDI" uden "PMINDI's afkast kan ikke overføres". (`js/app.js` Fonden-AKK, `sammenlign.html:85`.)
+6. **ÅTD/100.000 kr. vises, selvom teksten siger, at de afventer Fundmarket-godkendelse.** Det står uændret på fonden. **Nyt:** periode.html spreder tallet videre ("YTD: +4,0 %", ÅTD-dyb-side, og linket "YTD dyb side" fra fonden). Det skal afgøres samlet: enten er tallene godkendt, og noten fjernes, eller også skjules ÅTD overalt (fonden-KPI, segment, periode, embed).
+
+### SHOULD
+- **Tredjeparts X-opslag på fonden** (fra cyklus 1, stadig åbent). Opslagene står under afkastgrafen, bl.a. @BullTheoryio "SoftBank is seeking to raise up to $100 billion…", @MilkRoadAI om Nvidia og @InvestNewdeal "$NVDA $SE $HIMS" (13. aug. 2026, dvs. *efter* beholdningssnapshottet 1. jun.). Sammen med "Fund manager Mads Christiansen comments on $SE earnings" kan opslag med tickers dateret efter snapshottet læses som en indikation af aktuelle positioner. Det er i strid med "ingen live trades" og med den forsinkede beholdning. Fjern feedet fra fonden, eller begræns det til opslag uden tickers.
+- **Delårsafkast for PMINDI** (2023 delår, ca. 3 mdr., og 2026 ÅTD) og månedsgitteret er uændret. Fundmarket skal afgøre det sammen med MUST 6.
+- **KID-link mangler** i renderet tekst på værdikæder, vaerdikaede, drawdown, temaer, idéer, ndi-perspektiv, selskaber A–Z, periode og nyhedsarkiv. Risikolinjen er der på alle sider undtagen ndi-paa-x og nyhedsarkiv (som kun har "historisk afkast").
+- **Omkostninger mangler stadig "Du kan tabe …"** (0 hits).
+- **Invester, trin 4** nævner ikke fondens løbende omkostninger (1,49 %) eller KID'ets samlede omkostninger. Tilføj et link til omkostninger.html eller KID'et (FO/privat MUST: omkostninger synlige før køb).
+
+### Rådgivningsord (gennemgået i kontekst) ✅
+- "køb/sælg/anbefal/overvægt/eksponering" står kun i negationer ("ikke hvilke aktier man bør købe", "Ingen anbefaling om at købe eller sælge", "ikke bevidste overvægte") eller beskrivende ("Annoncører køber adgang", "sælger dem videre").
+- "bedste bil" (Jesper om Tesla, X-citat på fonden og ndi-paa-x) er tredjeparts-/medarbejdertone ved siden af en beholdning. Det dækkes af SHOULD om X ovenfor.
+- Der er 0 hits på garanteret, sikker investering, outperform, slå markedet og "øger eksponering".
+- Nasdaq er kun nævnt som noteringsfakta. "Fonden har intet fast benchmark" står på fonden, om-data og periode ✅.
+
+### OK ✅
+- PMINDIAKK: periode.html AKK-gate og embed viser ingen afkast før 12 mdr. 1m/3m er ikke eksponeret.
+- Beholdningerne er forsinkede ("pr. 1. jun. 2026 … Ikke dagsaktuel"), og fonden siger "aldrig afslører fondens aktuelle handler".
+- AI-mærkningen er der (ndi-perspektiv 139, SoftBank 9). Mængden er et UX-problem, ikke et compliance-problem.
+- Omkostningssiden er ærlig: "Det er ikke et beregnet ÅOP", satserne lægges ikke sammen, og der er en kr.-kvittering.
