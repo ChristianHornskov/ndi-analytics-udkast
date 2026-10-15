@@ -4,6 +4,8 @@ End target: 2026-10-16 06:30 CEST
 Checkpoint every ≤30 min.
 
 ## Checkpoints
+- 23:04 — ideer.html visual variety; sticky chapter-nav offset 64px. HEAD b35518b.
+- 23:00–23:04 — Shipped: vaerdikaeder (SVG treemap/sunburst, chains, timeline, flaskehalse), drawdown mean/median + maxDD bugfix, quantum forslag×4, unique-metrics, UX 23:00. Visual-variety plan+Grok review in notes/.
 - 23:08 — Tesla callout + temaer treemap-CTA + UX 23:00 checkpoint. Market cap/produkt blokeret uden data.
 - 23:05 — Quantum-tag (forslag, 4 stk) + flaskehalse scroll-telling. themes/treemap rebuilt.
 - 23:00 — SVG treemap + sunburst på vaerdikaeder (Playwright OK). Next: næste MADS-item uden manglende data.

@@ -229,3 +229,7 @@ Ikke taget: MUST 4-rest (68 i Andet, modenhed), SHOULD 3, 5 og 7, COULD. notes/H
 - +4 quantum + Arm Holdings ADR i unique-metrics.json (kvalitativ, forslag/AI-udkast mærket).
 - Eksisterende værdikæde-href peget til vaerdikaeder.html.
 - smoke.mjs exit 0 (lokal).
+
+
+## Checkpoint ~23:04 CEST (Grok sole lead)
+HEAD `b35518b`. Visual-variety request shipped + reviewed. MADS værdikæde/quantum/flaskehalse/drawdown/Tesla [x]. Blokeret uden data: market cap, produktkategori, modenhed. Fortsætter til 06:30 — ikke done.
