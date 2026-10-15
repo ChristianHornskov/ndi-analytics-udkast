@@ -18,6 +18,33 @@
  <meta property="og:image:alt" content="NDI Analytics - udkast. Gå på opdagelse i porteføljen.">
  <meta name="twitter:card" content="summary_large_image">
  <!-- og:end -->
+<style>
+  .sp h2{font-size:18px;margin:0 0 8px}
+  .sp p{color:var(--muted);line-height:1.6;margin:0 0 10px}
+  .sp .src{font-size:13px;color:var(--faint);margin:8px 0 0}
+  .rb{display:grid;gap:8px;margin:12px 0 4px}
+  .rb .row{display:grid;grid-template-columns:76px 1fr 64px;align-items:center;gap:10px;font-size:14px;color:var(--muted)}
+  .rb .bar{display:flex;height:22px;border-radius:5px;overflow:hidden;background:var(--panel-2)}
+  .rb .m{background:var(--slate);box-shadow:inset 0 0 0 1px var(--line)}
+  .rb .i{background:var(--yellow)}
+  .rb .v{text-align:right;color:var(--text);font-variant-numeric:tabular-nums}
+  .rb .row.hl .lbl{color:var(--text);font-weight:600}
+  .key{display:flex;flex-wrap:wrap;gap:6px 14px;margin:6px 0 0;font-size:13px;color:var(--muted)}
+  .key i{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-1px;margin-right:6px}
+  .wd{display:grid;gap:8px;margin:12px 0 0}
+  .wd .row{display:grid;grid-template-columns:110px 1fr 44px;align-items:center;gap:10px;font-size:14px;color:var(--muted)}
+  .wd .bar{height:18px;border-radius:4px;background:var(--cyan)}
+  .wd .v{text-align:right;color:var(--text);font-variant-numeric:tabular-nums}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .two > div{background:var(--panel-2);border-radius:12px;padding:14px;line-height:1.5;color:var(--muted);font-size:14px}
+  .two h3{margin:0 0 4px;font-size:15px;color:var(--text)}
+  .two .yes{border-top:3px solid var(--cyan)}
+  .two .no{border-top:3px solid var(--yellow)}
+  .q{margin:0;padding:12px 16px;border-left:3px solid var(--yellow);background:var(--panel-2);border-radius:0 10px 10px 0}
+  .q p{color:var(--text);font-size:17px;margin:0}
+  .q cite{display:block;margin-top:6px;font-style:normal;font-size:13px;color:var(--faint)}
+  @media (max-width:640px){.two{grid-template-columns:1fr}.rb .row{grid-template-columns:62px 1fr 56px}.wd .row{grid-template-columns:96px 1fr 40px}}
+ </style>
 </head>
 <body>
  <a class="skip" href="#main">Gå til indhold</a>
@@ -28,15 +55,50 @@
  <main id="main">
  <p class="eyebrow">LÆR</p>
  <h1>Hvorfor så mange aktier?</h1>
- 
-<p class="lede">Bred spredning er ikke tilfældig. Den følger af, at den enkelte aktie kan svinge meget af grunde, der kun gælder netop det selskab. Det kaldes selskabsspecifik varians (eller risiko).</p>
-<section class="panel" style="color:var(--muted);line-height:1.6;display:grid;gap:12px">
-<p>Når man ikke kan pege på den ene vinder med sikkerhed, reducerer mange små positioner risikoen for, at enkelte selskabers skæbne dominerer resultatet.</p>
-<p>Porteføljen er bredt spredt. I det forsinkede snapshot pr. 1. juni 2026 vejer de fleste positioner mellem ca. 0,05 % og 1 %, og kun få vejer mere. Se <a href="../index.html?view=portefolje">Portefølje</a>.</p>
-<p>Temaerne på siderne <a href="../temaer.html">Temaer</a> og <a href="../vaerdikaede.html">Værdikæde</a> viser <strong style="color:var(--text)">eksponering</strong>. Ikke bevidste temaovervægte eller anbefalinger.</p>
-<p>Spredning mindsker selskabsspecifik risiko, men fjerner ikke markedsrisikoen: Når teknologiaktier generelt falder, falder en bredt spredt teknologiportefølje typisk også.</p>
-<p>Siden forklarer fondens tilgang. Den siger ikke noget om, hvordan du selv skal investere.</p>
-</section>
+ <p class="lede">Bred spredning er ikke tilfældig. Den følger af, at den enkelte aktie kan svinge meget af grunde, der kun gælder netop det selskab. Det kaldes selskabsspecifik varians (eller risiko).</p>
+
+ <section class="panel sp" aria-labelledby="sp-why">
+  <h2 id="sp-why">Udgangspunktet: vi kan ikke pege på vinderen</h2>
+  <p>NDI’s tilgang bygger på tre udgangspunkter: man kan ikke forudsige vinderne, man kan ikke beregne værdien præcist, og derfor svinger kurserne voldsomt. Når man ikke kan vide, hvilket selskab der vinder, er det mere robust at eje hele retningen end at satse på ét navn. Se <a href="saadan-taenker-vi.html">Sådan tænker vi</a>.</p>
+  <figure class="q"><p>Vores mål er ikke at finde den ene vinder</p><cite>NDI ugebrev, 13. juli 2026</cite></figure>
+ </section>
+
+ <section class="panel sp" aria-labelledby="sp-math" style="margin-top:14px">
+  <h2 id="sp-math">Udsving koster afkast, og spredning fjerner en del af dem</h2>
+  <p>Svingende afkast trækker det samlede resultat ned (<a href="variance-drag.html">variance drag</a>). Groft sagt koster en årlig volatilitet på σ omkring σ²/2 om året. Med 60&nbsp;% volatilitet er det ca. 18 procentpoint om året. Udsvingene har to kilder: markedet, som rammer alle teknologiaktier, og det selskabsspecifikke, som kun rammer det ene selskab. Den sidste del bliver mindre, jo flere selskaber man ejer.</p>
+  <div class="rb" role="img" aria-label="Tænkt eksempel. Årligt fradrag fra udsving i procentpoint: 1 aktie 27,6, 10 aktier 5,6, 30 aktier 3,9, 100 aktier 3,4, 300 aktier 3,2. Markedsdelen er 3,1 i alle tilfælde.">
+   <div class="row"><span class="lbl">1 aktie</span><span class="bar"><span class="m" style="width:11.3%"></span><span class="i" style="width:88.7%"></span></span><span class="v">27,6</span></div>
+   <div class="row"><span class="lbl">10</span><span class="bar"><span class="m" style="width:11.3%"></span><span class="i" style="width:8.9%"></span></span><span class="v">5,6</span></div>
+   <div class="row"><span class="lbl">30</span><span class="bar"><span class="m" style="width:11.3%"></span><span class="i" style="width:3%"></span></span><span class="v">3,9</span></div>
+   <div class="row"><span class="lbl">100</span><span class="bar"><span class="m" style="width:11.3%"></span><span class="i" style="width:0.9%"></span></span><span class="v">3,4</span></div>
+   <div class="row hl"><span class="lbl">300</span><span class="bar"><span class="m" style="width:11.3%"></span><span class="i" style="width:0.3%"></span></span><span class="v">3,2</span></div>
+  </div>
+  <p class="key"><span><i style="background:var(--slate);box-shadow:inset 0 0 0 1px var(--line)"></i>Markedsdel (forsvinder ikke)</span><span><i style="background:var(--yellow)"></i>Selskabsspecifik del</span><span>Tal: procentpoint om året</span></p>
+  <p class="src">Tænkt eksempel med opdigtede, men typiske størrelser: 25&nbsp;% markedsvolatilitet, 70&nbsp;% selskabsspecifik volatilitet pr. aktie, lige store vægte og uafhængige selskabsudsving. Det handler ikke om fonden og er ikke en prognose.</p>
+  <p style="margin-top:10px">Det meste af gevinsten kommer tidligt, men i teknologi er de selskabsspecifike udsving store, og det mærkes stadig ved 30 aktier. NDI har skrevet, at variansen med kun 30 aktier bliver for høj, og at en portefølje på 30–50 aktier er sårbar (NDI ugebreve 2. juni og 6. oktober 2025). Det er NDI’s vurdering.</p>
+ </section>
+
+ <section class="panel sp" aria-labelledby="sp-snap" style="margin-top:14px">
+  <h2 id="sp-snap">Sådan så det ud i snapshottet</h2>
+  <p>PMINDI pr. 1. juni 2026 (forsinket): 345 positioner. Halvdelen vejer 0,2&nbsp;% eller mindre, og kun 5 vejer 1&nbsp;% eller mere. De 10 største udgjorde tilsammen 11,9&nbsp;%.</p>
+  <div class="wd" role="img" aria-label="Antal positioner i PMINDI pr. 1. juni 2026 efter vægt: under 0,1 procent 55, 0,1 til 0,5 procent 247, 0,5 til 1 procent 38, 1 procent eller mere 5.">
+   <div class="row"><span>under 0,1&nbsp;%</span><span class="bar" style="width:22.3%"></span><span class="v">55</span></div>
+   <div class="row"><span>0,1–0,5&nbsp;%</span><span class="bar" style="width:100%"></span><span class="v">247</span></div>
+   <div class="row"><span>0,5–1&nbsp;%</span><span class="bar" style="width:15.4%"></span><span class="v">38</span></div>
+   <div class="row"><span>1&nbsp;% og mere</span><span class="bar" style="width:2%"></span><span class="v">5</span></div>
+  </div>
+  <p class="src">Antal positioner pr. vægtinterval. Kilde: fondens forsinkede beholdning pr. 1. juni 2026. Vægte og antal kan have ændret sig siden, se <a href="forsinket-beholdning.html">Hvorfor er beholdningen forsinket?</a> Gå selv på opdagelse under <a href="../index.html?view=portefolje">Portefølje</a>.</p>
+ </section>
+
+ <section class="panel sp" aria-labelledby="sp-what" style="margin-top:14px">
+  <h2 id="sp-what">Hvad spredning gør, og hvad den ikke gør</h2>
+  <div class="two">
+   <div class="yes"><h3>Det gør den</h3>Mindsker risikoen for, at ét selskabs skæbne dominerer resultatet. Gør det muligt at eje mange led i en <a href="../vaerdikaeder.html">værdikæde</a>, ikke kun de kendte navne.</div>
+   <div class="no"><h3>Det gør den ikke</h3>Fjerner markedsrisikoen. Når teknologiaktier generelt falder, falder en bredt spredt teknologiportefølje typisk også. Se <a href="../drawdown.html">Drawdown</a> og <a href="../risici.html">Risici</a>.</div>
+  </div>
+  <p style="margin-top:12px">Det gælder også på tværs af temaer: en stor overvægt i én branche øger variansen på samme måde som en stor enkeltaktie (NDI ugebrev 29. september 2025). Siderne <a href="../temaer.html">Temaer</a> og <a href="../vaerdikaeder.html">Værdikæder</a> viser derfor <strong style="color:var(--text)">eksponering</strong>. Ikke bevidste temaovervægte eller anbefalinger.</p>
+  <p>Siden forklarer fondens tilgang. Den siger ikke noget om, hvordan du selv skal investere. Bogens råd til private og fondens forvaltning er to forskellige ting, se <a href="saadan-taenker-vi.html#tv-bog">Bogen og fonden</a>.</p>
+ </section>
  <p class="warn">Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.</p>
  <p class="band">Generel information. Ikke investeringsrådgivning.</p>
  </main>

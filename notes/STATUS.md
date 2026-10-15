@@ -290,3 +290,12 @@ HEAD `b35518b`. Visual-variety request shipped + reviewed. MADS værdikæde/quan
 - Fundet og rettet under test: lodret SVG blev også vist på desktop (CSS-specificitet); P/E-siden mistede sin media query.
 - Test: Playwright 375/1280: 0 konsolfejl, 0 døde links, ingen h-overflow. smoke 52/52 fail 0. precheck PASSED.
 - Branch `lane-C` klar til merge. Næste: forsinket-beholdning / udbytte-vs-akk / hvorfor-mange-aktier mod Vidensbot + UX-review 02:00.
+
+
+## Fra Claude lane-C (tynde lær-sider mod Vidensbot) · ~00:45 CEST 16/10
+- `laer/hvorfor-mange-aktier.html`: «vi kan ikke pege på vinderen» + citat (ugebrev 13. jul 2026); stablede søjler for variance drag ved 1/10/30/100/300 aktier (tænkt eksempel, markedsdel vs selskabsspecifik); vægtfordeling fra snapshot 1. jun 2026 (PMINDI 345 pos.: 55 / 247 / 38 / 5; top 10 = 11,9 %); «gør / gør ikke»-kort; bog≠fond-link til `saadan-taenker-vi.html#tv-bog`.
+- `laer/udbytte-vs-akk.html`: ex-dato-visual (opdigtet 100 kr → 90 + 10), «Derfor viser vi totalafkast», sammenligningstabel (kort-layout < 640 px). Titel → «Udbytte eller akkumulerende?» (index, kort, FAQ-svar fulgt med).
+- `laer/forsinket-beholdning.html`: tidslinje «to datoer, to formål», hvorfor-sektion, «viser vi / viser vi ikke».
+- Faktarettelse: ordliste «Andelsklasse» sagde «samme portefølje». Snapshot: PMINDI 345, PMINDIAKK 320 (alle 320 også i PMINDI) → «samme strategi, beholdninger ligner meget, ikke identiske». **Ikke min fil:** `sammenlign.html:96` siger stadig «Samme portefølje» — til den lane, der ejer den.
+- Test: Playwright 375/1280 på 7 sider: 0 konsolfejl, 0 døde links, ingen h-overflow. precheck PASSED.
+- Branch `lane-C` klar til merge. Næste: variance-drag + faq-mangler-aktie visuelt + UX-review 02:00.

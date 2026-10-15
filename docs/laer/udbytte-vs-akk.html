@@ -3,14 +3,14 @@
 <head>
  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
  <meta name="robots" content="noindex,nofollow">
- <title>Udbytte vs akkumulering · NDI Analytics</title>
+ <title>Udbytte eller akkumulerende? · NDI Analytics</title>
  <link rel="stylesheet" href="../css/ndi.css">
  <!-- og:start -->
  <meta property="og:type" content="website">
  <meta property="og:site_name" content="NDI Analytics (udkast)">
  <meta property="og:locale" content="da_DK">
- <meta property="og:title" content="Udbytte vs akkumulering · NDI Analytics">
- <meta property="og:description" content="To andelsklasser med samme overordnede perspektiv, forskellig udbyttepolitik.">
+ <meta property="og:title" content="Udbytte eller akkumulerende? · NDI Analytics">
+ <meta property="og:description" content="PMINDI udbetaler udbytte, PMINDIAKK lader det blive i fonden. Sådan læser du kurs, ex-dato og totalafkast.">
  <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/laer/udbytte-vs-akk.html">
  <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
  <meta property="og:image:width" content="1200">
@@ -18,6 +18,36 @@
  <meta property="og:image:alt" content="NDI Analytics - udkast. Gå på opdagelse i porteføljen.">
  <meta name="twitter:card" content="summary_large_image">
  <!-- og:end -->
+<style>
+  .ua h2{font-size:18px;margin:0 0 8px}
+  .ua p{color:var(--muted);line-height:1.6;margin:0 0 10px}
+  .ua .src{font-size:13px;color:var(--faint);margin:8px 0 0}
+  .flow{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:8px 0 0}
+  .flow figure{margin:0;background:var(--panel-2);border-radius:12px;padding:14px}
+  .flow figcaption{font-weight:600;color:var(--text);margin-bottom:10px;font-size:15px}
+  .flow .steps{display:grid;grid-template-columns:1fr auto 1fr;align-items:end;gap:8px}
+  .flow .col{display:grid;gap:3px;justify-items:center;font-size:12px;color:var(--muted);text-align:center}
+  .flow .stack{display:flex;flex-direction:column-reverse;width:56px;height:120px;border-radius:6px;overflow:hidden;background:var(--bg)}
+  .flow .nav{background:var(--cyan)}
+  .flow .cash{background:var(--yellow)}
+  .flow .arrow{color:var(--faint);font-size:20px;padding-bottom:58px}
+  .flow .note{margin:10px 0 0;font-size:13px;color:var(--muted);line-height:1.5}
+  .key{display:flex;flex-wrap:wrap;gap:6px 14px;margin:10px 0 0;font-size:13px;color:var(--muted)}
+  .key i{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-1px;margin-right:6px}
+  .cmp{width:100%;border-collapse:collapse;font-size:14px}
+  .cmp th,.cmp td{padding:9px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;line-height:1.45}
+  .cmp thead th{color:var(--text);font-weight:600}
+  .cmp tbody th{color:var(--muted);font-weight:500;width:28%}
+  .cmp td{color:var(--text)}
+  @media (max-width:640px){
+   .flow{grid-template-columns:1fr}
+   .cmp thead{display:none}
+   .cmp tr{display:block;padding:8px 0;border-bottom:1px solid var(--line)}
+   .cmp th,.cmp td{display:block;border:0;padding:2px 0;width:auto}
+   .cmp tbody th{color:var(--text);font-weight:600}
+   .cmp td::before{content:attr(data-k) ": ";color:var(--faint)}
+  }
+ </style>
 </head>
 <body>
  <a class="skip" href="#main">Gå til indhold</a>
@@ -27,13 +57,57 @@
  </header>
  <main id="main">
  <p class="eyebrow">LÆR</p>
- <h1>Udbytte vs akkumulering</h1>
- <p class="lede">To andelsklasser med samme overordnede perspektiv, forskellig udbyttepolitik.</p>
- <section class="panel" style="color:var(--muted);line-height:1.6;display:grid;gap:12px">
- <p><strong style="color:var(--text)">PMINDI</strong> er udloddende: udbytte udbetales. På ex-dato falder andelskursen typisk med udbyttet. Totalafkastet viser værdien, hvis udbyttet var geninvesteret.</p>
- <p><strong style="color:var(--text)">PMINDIAKK</strong> er akkumulerende: afkastet bliver i fonden. Afkast for PMINDIAKK vises først, når klassen har 12 måneders historik.</p>
- <p>Hvilken klasse der passer, afhænger af din situation (skat, likviditet, mål). Dette er generel information. Ikke personlig rådgivning.</p>
- <p><a href="../sammenlign.html">Sammenlign fondene →</a> · <a href="../invester.html">Sådan investerer du →</a> · <a href="../risici.html">Risici ved fonden →</a></p>
+ <h1>Udbytte eller akkumulerende?</h1>
+ <p class="lede">PMINDI udbetaler udbytte. PMINDIAKK lader det blive i fonden. Strategien er den samme. Forskellen er, hvor pengene ender.</p>
+
+ <section class="panel ua" aria-labelledby="ua-ex">
+  <h2 id="ua-ex">Hvad sker der på ex-datoen?</h2>
+  <p>Et tænkt eksempel: en andel er 100&nbsp;kr. værd, og der udloddes 10&nbsp;kr. (overdrevet, så det kan ses).</p>
+  <div class="flow">
+   <figure aria-labelledby="ua-f1">
+    <figcaption id="ua-f1">PMINDI · udloddende</figcaption>
+    <div class="steps" role="img" aria-label="Før ex-dato: andel 100 kroner. Efter: andel 90 kroner plus 10 kroner udbetalt. Samlet stadig 100.">
+     <div class="col"><span class="stack"><span class="nav" style="height:100%"></span></span>Før<br><b style="color:var(--text)">100&nbsp;kr.</b></div>
+     <span class="arrow" aria-hidden="true">→</span>
+     <div class="col"><span class="stack"><span class="nav" style="height:90%"></span><span class="cash" style="height:10%"></span></span>Efter<br><b style="color:var(--text)">90 + 10&nbsp;kr.</b></div>
+    </div>
+    <p class="note">Kursen falder med udbyttet, men pengene er ikke tabt. De står nu på din konto (før skat).</p>
+   </figure>
+   <figure aria-labelledby="ua-f2">
+    <figcaption id="ua-f2">PMINDIAKK · akkumulerende</figcaption>
+    <div class="steps" role="img" aria-label="Før: andel 100 kroner. Efter: andel stadig 100 kroner. Afkastet bliver i fonden.">
+     <div class="col"><span class="stack"><span class="nav" style="height:100%"></span></span>Før<br><b style="color:var(--text)">100&nbsp;kr.</b></div>
+     <span class="arrow" aria-hidden="true">→</span>
+     <div class="col"><span class="stack"><span class="nav" style="height:100%"></span></span>Efter<br><b style="color:var(--text)">100&nbsp;kr.</b></div>
+    </div>
+    <p class="note">Ingen udbetaling og intet kursfald. Afkastet bliver i fonden og arbejder videre.</p>
+   </figure>
+  </div>
+  <p class="key"><span><i style="background:var(--cyan)"></i>Andelens værdi</span><span><i style="background:var(--yellow)"></i>Udbetalt udbytte</span></p>
+  <p class="src">Opdigtede tal, ikke fondens. PMINDI har hidtil haft ex-dato én gang om året i januar (22. januar 2025 og 20. januar 2026).</p>
+ </section>
+
+ <section class="panel ua" aria-labelledby="ua-tot" style="margin-top:14px">
+  <h2 id="ua-tot">Derfor viser vi totalafkast</h2>
+  <p>Hvis man kun kigger på kursen for PMINDI, ser hver ex-dato ud som et fald. Det er det ikke. Derfor viser grafen på forsiden <a href="../om-data.html#g-total">totalafkast</a>: værdien, som hvis udbyttet var geninvesteret. Så kan de to klasser sammenlignes på lige fod. Mange andre steder vises kun kursen, og så ser afkastet lavere ud, end det har været.</p>
+  <p>PMINDIAKK fik sin første kurs (NAV) 5. december 2025. Afkast for klassen vises først, når den har 12 måneders historik, så et kort forløb ikke bliver læst som et årsafkast.</p>
+ </section>
+
+ <section class="panel ua" aria-labelledby="ua-cmp" style="margin-top:14px">
+  <h2 id="ua-cmp">De to klasser side om side</h2>
+  <table class="cmp">
+   <thead><tr><th scope="col"></th><th scope="col">PMINDI</th><th scope="col">PMINDIAKK</th></tr></thead>
+   <tbody>
+    <tr><th scope="row">Udbytte</th><td data-k="PMINDI">Udbetales, hidtil én gang om året</td><td data-k="PMINDIAKK">Bliver i fonden</td></tr>
+    <tr><th scope="row">Kurs på ex-dato</th><td data-k="PMINDI">Falder med udbyttet</td><td data-k="PMINDIAKK">Intet udbyttefald</td></tr>
+    <tr><th scope="row">Første kurs</th><td data-k="PMINDI">September 2023</td><td data-k="PMINDIAKK">5. december 2025</td></tr>
+    <tr><th scope="row">Beholdning 1. jun 2026</th><td data-k="PMINDI">345 positioner</td><td data-k="PMINDIAKK">320 positioner, alle også i PMINDI</td></tr>
+    <tr><th scope="row">Skat</th><td colspan="2" data-k="Begge">Afhænger af din situation. Spørg din bank eller rådgiver.</td></tr>
+   </tbody>
+  </table>
+  <p style="margin-top:12px">Beholdningerne ligner hinanden meget, men er ikke identiske. Se dem under <a href="../index.html?view=portefolje">Portefølje</a> (forsinket, se <a href="forsinket-beholdning.html">hvorfor</a>).</p>
+  <p>Hvilken klasse der passer, afhænger af din situation: skat, om du vil have løbende udbetalinger, og hvor længe du vil investere. Dette er generel information. Ikke personlig rådgivning.</p>
+  <p><a href="../sammenlign.html">Sammenlign klasserne →</a> · <a href="../invester.html">Sådan investerer du →</a> · <a href="../risici.html">Risici ved fonden →</a></p>
  </section>
  <p class="warn">Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.</p>
  </main>

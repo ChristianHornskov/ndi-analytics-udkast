@@ -141,3 +141,8 @@ Playwright 375/1280: 0 konsolfejl, ingen vandret overflow. smoke 52/52 fail 0. p
 
 ### MUST
 Ingen nye.
+
+### Lane-C checkpoint ~00:45 (tynde lær-sider)
+- Tre lær-sider var én tekstblok hver. Nu har hver en visuel form, der matcher indholdet: søjler (spredning), før/efter-stabler (ex-dato), tidslinje (datoer).
+- Mobil 375: hvorfor-mange-aktier ~3.000 px, udbytte ~2.560 px, forsinket ~1.900 px. Tabellen på udbytte-siden bliver til kort < 640 px.
+- Åbent: `sammenlign.html` «Samme portefølje» (ikke lane-C).
