@@ -1,28 +1,27 @@
 # STATUS – NDI Analytics overnight build
 
-**2026-10-15 20:47 CEST — Sole lead. Precheck HARD rule live. NOT DONE.**
+**2026-10-15 20:49 CEST — Sole lead. Precheck on every push. NOT DONE.**
 
 ## Live
 https://christianhornskov.github.io/ndi-analytics-udkast/
 
 ## HARD RULE
-`bash scripts/precheck.sh` before every push (`scripts/push.sh`). See `notes/PRECHECK-RULE.md`.  
-Regression: `bash scripts/test-precheck.sh`.
+`bash scripts/precheck.sh` before every push (`scripts/push.sh`).  
+`bash scripts/test-precheck.sh` regression. See `notes/PRECHECK-RULE.md`.
 
-## Shipped since sole-lead handoff
-- precheck.sh + push.sh + test-precheck.sh
-- Grok CSS polish committed
-- Removed leftover P/S sort
-- Embed: only YTD + hele perioden (1m/3m/1y hidden; URL fallback)
-- Skip-links all pages
-- a11y radiogroup / dialog inert
-- om-data P/S wording
+## Recent (quality-first)
+- Grok CSS polish + aria-checked
+- Removed P/S sort leftover
+- Embed: only YTD+all; hard AKK gate (hide chart)
+- Skip-links; radiogroup a11y; dialog inert
+- Smoke 50/50
+- Softened risici wording; tema copy live region
 
 ## Agents
-Claude + Grok quality1 running with precheck in prompts.
+Claude + Grok quality1 still running (precheck in prompts).
 
 ## NEXT
-- Merge further Claude/Grok polish after review
-- UX-review.md @ 22:00 CEST
-- VIDENSBOT-live-check.md when it arrives
-- Quality > speed. Never report done.
+- UX-review.md @ **22:00 CEST** (read when reviewer posts)
+- VIDENSBOT-live-check.md when it lands
+- Continue Claude↔Grok cycles with precheck in every prompt
+- Never report done
