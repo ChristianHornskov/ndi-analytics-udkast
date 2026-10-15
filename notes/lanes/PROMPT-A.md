@@ -16,3 +16,9 @@ Mission: Polish Vidensbot flodsystem on vaerdikaeder. Space chain must be excell
 Commit on lane-A. Loop until 06:30 CEST — when one polish cycle ends, start the next (space pedagogy, energy link blurbs, quantum short page cross-links). Never idle.
 
 HARD RULE (Leo): Before EVERY git push run `bash scripts/precheck.sh` (must exit 0). Prefer `bash scripts/push.sh origin lane-X` then tell STATUS the branch is ready to merge — OR commit on lane branch only and do NOT push main. Precheck FAILS if docs/ has internal notes (only docs/notes stub allowed), raw data.json, holdings/company-months after 2026-06-01, daily moves (d1), or per-stock returns/P/S/P/E/52w — or if docs/js reads those fields. Internal docs only in /notes. Never force-push. Quality > speed. Never claim done. When cycle finishes: commit on YOUR lane branch, append STATUS "Fra Claude/Grok lane-X", then START THE NEXT checklist item immediately — no idle gaps until 06:30 CEST.
+
+
+## IDESPEJDER Top5 assignment (23:42)
+#1 AI-værdikædekort Convequity-stil: gør vaerdikaeder endnu mere kort-agtig (led→NDI selskaber, forklaring, klik). Flodsystem allerede startet — skærp.
+Also read notes/IDESPEJDER.md + PERSONA-*.md each cycle.
+Privat persona: forklar flaskehalse i almindeligt dansk; undgå jargonsprog i blurbs.
