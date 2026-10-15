@@ -1,46 +1,68 @@
-# IDEAS – ekstra værdi ud over mødet
+# IDEAS – NDI Analytics
 
-Prioritering: MUST i aften · SHOULD i nat · COULD senere. "Better, not just different."
+Hver idé: problem, målgruppe, værdi, hvorfor kun NDI, bygget-af, status.
+Offentlige (ikke-fortrolige) idéer spejles evt. på `docs/ideer.html`.
 
-## MUST (aften)
-- **Entré med tre døre** (Fonden / Porteføljen / Udforsk) – husmetaforen konkret.
-- **"Sådan investerer du"-skuffe** med Kopiér ISIN (begge klasser).
-- **Historisk-afkast-advarsel** ved hvert afkasttal/graf/kalender.
-- **NDI-tematags** (ikke GICS som hovedinddeling) + multi-tag.
-- **Modenhedsbadge** (præ-revenue → value) med "–" for P/S ved præ-revenue.
-- **"Hvilket problem løser det?"** øverst på selskabsside.
-- **noindex** på alle sider. Dansk UI.
-- **Embed-chart** (Jesper-stil) i docs/embed/ til forside-integration.
+## I1. Stedet man researcher tech-aktier i DK
+- **Problem:** Danske investorer mangler et sted, der ser tech-porteføljen gennem NDI's linse (ikke GICS-alene).
+- **For:** Nuværende og potentielle unitholdere; nysgerrige tech-investorere.
+- **Værdi:** Samler afkast, forsinket beholdning, temaer, selskabssider og lær ét sted.
+- **Kun NDI:** Adgang til fondens egne tags, ugebreve-kontekst og porteføljeholdets sprog.
+- **Bygges:** Static Pages-udkast nu; senere app/Azure.
+- **Status:** building (dette repo).
 
-## SHOULD (nat)
-- Livscyklus-strip (portefølje som prikker på kurven).
-- Værdikæde light: chips → fabs → datacenter → software (statisk kort).
-- Drawdown & genopretning-tabel for fonden.
-- Delbart link ("Kopiér link til denne liste").
-- Ordliste inline (CAGR, P/S, GARP, drawdown, fabless…).
-- Månedskalender fuld historik på Fonden; 3 år på teaser.
-- Kontekst-annotationer stub (toppe OG dyk) – neutrale fakta, ingen cherry-pick.
+## I2. NDI-tema & multi-tag (Tesla = energi + fysisk)
+- **Problem:** Ét GICS-tag skjuler, at Tesla er flere ting.
+- **For:** Brugere der udforsker eksponering.
+- **Værdi:** Ærlig mange-til-mange-model.
+- **Kun NDI:** NDI's egne tema-definitioner.
+- **Bygges:** multi-tags.json + chips i Udforsk + værdikæde-highlight.
+- **Status:** building (forslag overnight for tidligere "Andet").
 
-## COULD (level 2)
-- Interaktiv AI-udbygningskort / tidslinje (Mattias).
-- Tema-/selskab-mailabonnement (Mailchimp-tags) – kun stub nu.
-- CSV/PDF-eksport.
-- Sparklines i screener.
-- NDI-særmetrikker på 3–5 kerneselskaber (à la Waymo-miles).
-- Valgbare perspektiver (ejer/NDI/…).
-- Slack→Mads holdnings-eksperiment (kun internt).
+## I3. AI-værdikæden som research-kort
+- **Problem:** Svært at se, hvor i AI-stakken fonden er eksponeret.
+- **For:** Lærings-orienterede investorer.
+- **Værdi:** Pædagogisk kort fra energi → software med links til selskaber.
+- **Kun NDI:** Koblet til faktisk forsinket beholdning.
+- **Bygges:** vaerdikaede.html.
+- **Status:** done (Level 1).
 
-## Egne ideer (build lead)
-1. **Dagligt portefølje-overblik** ("Det skete i porteføljen"): top ± d1-bevægelser, kun fakta + dato, ingen dispositioner. Forsvinder/ældres når asOf skifter.
-2. **"Sådan tænker vi"** 5-afsnit (fra Vidensbot §5) – unik NDI-vinkel.
-3. **FAQ "Hvorfor mangler aktie X?"** – størrelse/likviditet/spredning.
-4. **Eksponering ≠ anbefaling**-bånd under alle segmentvisninger.
-5. **Print-venlig CSS** til PDF via browser print (midlertidigt indtil rigtig PDF).
-6. **Dark-first + respekt for prefers-reduced-motion**.
-7. **Keyboard-first** tabs/filtre (APG).
+## I4. Variance drag / "hvorfor CAGR ≠ gennemsnit"
+- **Problem:** Folk overvurderer simple gennemsnit.
+- **For:** Alle der læser afkast.
+- **Værdi:** Forventningsafstemning uden rådgivning.
+- **Kun NDI:** Tæt på Mads' bogsprog.
+- **Bygges:** lær/variance-drag.html.
+- **Status:** done (udkast).
 
-## Afviste / udskudt med begrundelse
-- Live afhængighed af Azure-pipeline → snapshot i repo.
-- Offentlige Trump/legacy-tags → skjulte (compliance).
-- AI-mail som hovedfeature → stub; ikke USP (Mads 8:39).
-- Kontekstgraf med citater level 1 → stub/udskudt (cherry-pick-risiko).
+## I5. Forsinket snapshot som tillidsfeature
+- **Problem:** Live beholdning ville afsløre handler.
+- **For:** Compliance + tillid.
+- **Værdi:** "Vi viser det offentlige, forsinkede billede."
+- **Kun NDI:** Fondmarket-rapporter + NDI-policy.
+- **Bygges:** precheck + UI-stempler.
+- **Status:** done (policy).
+
+## I6. Kontekstgraf med ugebrev-citater
+- **Problem:** Drawdowns uden fortælling.
+- **For:** Engagerede følgere.
+- **Værdi:** Læring — men cherry-picking-risiko.
+- **Kun NDI:** Mads' egne citater.
+- **Bygges:** Kun udbytte-prikker i v1; fulde narrativer deferred.
+- **Status:** deferred.
+
+## I7. Betalt research-lag / app
+- **Problem:** Mads vil investere i "stedet".
+- **For:** Power users.
+- **Værdi:** Dyb data, alerts, lister.
+- **Kun NDI:** Brand + dataprivilegium.
+- **Bygges:** Ide-fase.
+- **Status:** stub.
+
+## I8. Equal-ish weight forklaring
+- **Problem:** Brugere tror fonden er top-tung som et indeks.
+- **For:** Screener-brugere.
+- **Værdi:** Forstår spredning.
+- **Kun NDI:** Faktisk vægtfordeling i snapshot.
+- **Bygges:** weightProfileNote i portefølje.
+- **Status:** building.

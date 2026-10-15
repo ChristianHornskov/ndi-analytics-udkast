@@ -174,3 +174,26 @@
 ## Opdateringslog SPEC
 - 2026-10-15 20:14 CEST: v1 klikbar site live (entré/fonden/portefølje/udforsk/selskab/embed). Playwright OK.
 - 2026-10-15 20:08 CEST: Første SPEC. Indarbejdet alle 82 VB-punkter + 12 compliance + UX MUST + Leo-styring (Nasdaq Fundmarket-note, AI-mærkning, eksponering≠anbefaling, historisk advarsel overalt).
+
+
+## M. Mads-citat → feature (Slack + vision)
+
+Kilder: `viden/emner/slack_ny_graf_2026-10-15.md`, `vision.txt` / mødetransskript. Hvert citat mappes til det, udkastet allerede leverer eller mangler.
+
+| ID | Mads / kontekst | Feature i udkastet | Status |
+|---|---|---|---|
+| M1 | "stedet man researcher tech-aktier i Danmark" (7/10 HQ) | Entré + Udforsk + selskabssider + lær | building |
+| M2 | NDI-klassifikationer: modenhed, tema-tags, produktkategori (14/10 17:01) | themes.json, multi-tags, livscyklus-strip (tom indtil klassifikation), THEME-FORSLAG | building / forslag |
+| M3 | Sortering: drawdown fra 52u, optrend, vol, insider (14/10) | Fund-level drawdown-side. Per-aktie 52u **ikke** i v1 (compliance) | deferred / n/a-process |
+| M4 | Ingen P/E undtagen value; P/S for highgrowth→value (14/10) | Per-aktie P/E og P/S skjult i v1 (under verifikation) | done (hide) |
+| M5 | Selskabsbeskrivelse: hvilket problem løser det (14/10) | selskab.html "Hvilket problem løser det?" + AI-udkast-mærke | building |
+| M6 | SoftBank som demo på selskabsside (12/10 Christian/Mads-spor) | SoftBank-profil + NDI-linse | done |
+| M7 | Forklar ikke daglige dispositioner (12/10) | Ingen movers; forsinket snapshot | done |
+| M8 | Afkastkalender betryggende; almindelige danskere (15/10) | Månedskalender på Fonden (maks 3 år teaser) | done |
+| M9 | Minimalistisk start: graf, månedlige afkast, knapper til undersider (15/10 beslutning) | Entré-døre + Fonden-graf/kalender + sidekort | building |
+| M10 | To spor: Analytics vs "huset med rum" (15/10) | Entré som hus; Analytics i fonden/udforsk | building |
+| M11 | AI-værdikæde / datacenter→strøm→software (Mattias 15/10, Mads-vision) | vaerdikaede.html med tema-highlight + selskabssøgning | done |
+| M12 | Kontekstgraf med narrativer (Mattias) — Christian skeptisk | Kun dokumenterede udbytte-prikker | done (safe subset) |
+| M13 | "vi kan ikke finde den ene vinder" / mange aktier (bogen + lær) | lær/hvorfor-mange-aktier + variance-drag | done |
+| M14 | Villig til at bruge penge på research-app (7/10) | Ambition noteret i IDEAS.md — ikke i v1-betalingsflow | stub |
+

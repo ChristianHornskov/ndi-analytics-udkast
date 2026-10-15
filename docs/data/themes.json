@@ -1,1 +1,2224 @@
-{"positionsAsOf":"2026-06-01","fund":"pmindi","note":"Forsinket beholdning. Temaer = eksponering, ikke anbefaling.","themes":[{"title":"Chips","slug":"chips","problem":"Halvledere er byggestenene i AI og digital infrastruktur. Design, udstyr og produktion sætter tempoet for hele værdikæden.","chain":["Energi","Datacenter","Chips","Optik","Software"],"themeKey":"chips","count":52,"weightSum":13.19,"companies":[{"isin":"US82982T1060","name":"Sitime Corp","weight":1.15,"symbol":"SITM"},{"isin":"CA73044W3021","name":"Poet Technologies Inc","weight":0.96,"symbol":"POET"},{"isin":"AT0000A3EPA4","name":"Ams-Osram Ag","weight":0.58,"symbol":"AMS.SW"},{"isin":"KYG393871085","name":"GlobalFoundries","weight":0.57,"symbol":"GFS"},{"isin":"DE000A1K0235","name":"SUESS MicroTec N","weight":0.5,"symbol":"SMHN.DE"},{"isin":"US3463751087","name":"Formfactor Inc","weight":0.44,"symbol":"FORM"},{"isin":"GB0009619924","name":"Iqe Plc","weight":0.42,"symbol":"IQE.L"},{"isin":"US8168501018","name":"Semtech Corp","weight":0.41,"symbol":"SMTC"},{"isin":"US7509171069","name":"Rambus","weight":0.37,"symbol":"RMBS"},{"isin":"US00246W1036","name":"Axt Inc","weight":0.36,"symbol":"AXTI"},{"isin":"US4581401001","name":"Intel","weight":0.33,"symbol":"INTC"},{"isin":"DE000A0WMPJ6","name":"Aixtron N","weight":0.32,"symbol":"AIXA.DE"},{"isin":"JP3122400009","name":"Advantest Corp","weight":0.31,"symbol":"6857.T"},{"isin":"KYG037AX1015","name":"Ambarella Inc","weight":0.31,"symbol":"AMBA"},{"isin":"US9108734057","name":"United Microelectron-Sp Adr","weight":0.3,"symbol":"UMC"},{"isin":"JP3164720009","name":"Renesas Electro","weight":0.29,"symbol":"6723.T"},{"isin":"KYG0535Q1331","name":"Asmpt Ltd","weight":0.29,"symbol":"0522.HK"},{"isin":"JP3293330001","name":"Kokusai Electric Corp","weight":0.28,"symbol":"6525.T"},{"isin":"US00760J1088","name":"Aehr Test System","weight":0.26,"symbol":"AEHR"},{"isin":"JP3979200007","name":"Lasertec","weight":0.24,"symbol":"6920.T"},{"isin":"US43289P1066","name":"Himax Tech Sp ADR","weight":0.23,"symbol":"HIMX"},{"isin":"BMG6331P1041","name":"Alpha and Omega Semiconductor Ltd","weight":0.22,"symbol":"AOSL"},{"isin":"USN070592100","name":"ASML Hold NY Reg","weight":0.22,"symbol":"ASML"},{"isin":"US6098391054","name":"Monolithic Power","weight":0.21,"symbol":"MPWR"},{"isin":"US6833441057","name":"Onto Innovation","weight":0.21,"symbol":"ONTO"},{"isin":"IL0010952641","name":"Camtek Ltd","weight":0.2,"symbol":"CAMT"},{"isin":"NL0000334118","name":"Asm Int","weight":0.19,"symbol":"ASM.AS"},{"isin":"NL0012866412","name":"Besi Br","weight":0.19,"symbol":"BESI.AS"},{"isin":"US0316521006","name":"Amkor Technology","weight":0.18,"symbol":"AMKR"},{"isin":"US5012421013","name":"Kulicke & Soffa Industries","weight":0.18,"symbol":"KLIC"},{"isin":"US57776J1007","name":"Maxlinear Inc","weight":0.18,"symbol":"MXL"},{"isin":"US82706C1080","name":"Silicon Mot Sp ADR","weight":0.18,"symbol":"SIMO"},{"isin":"JP3571400005","name":"Tokyo Electron","weight":0.17,"symbol":"8035.T"},{"isin":"US5184151042","name":"Lattice Semicond","weight":0.16,"symbol":"LSCC"},{"isin":"US1925761066","name":"Cohu","weight":0.15,"symbol":"COHU"},{"isin":"US0326541051","name":"Analog Devices Inc","weight":0.14,"symbol":"ADI"},{"isin":"US8825081040","name":"Texas Instrument","weight":0.14,"symbol":"TXN"},{"isin":"DE0006231004","name":"Infineon Technolo N","weight":0.13,"symbol":"IFX.DE"},{"isin":"IL0010845571","name":"Nova Ltd","weight":0.13,"symbol":"NVMI"},{"isin":"KYG254571055","name":"Crdo","weight":0.13,"symbol":"CRDO"}]},{"title":"Compute","slug":"compute","problem":"Beregningskraft (GPU/CPU/acceleratorer og hukommelse) afgør, hvor hurtigt modeller og tjenester kan køre.","chain":["Chips","Compute","Software"],"themeKey":"compute","count":22,"weightSum":6.93,"companies":[{"isin":"FR0013227113","name":"Soitec","weight":0.85,"symbol":"SOI.PA"},{"isin":"US67066G1040","name":"Nvidia","weight":0.75,"symbol":"NVDA"},{"isin":"US78392B1070","name":"SK Hynix","weight":0.65,"symbol":"HY9H.F"},{"isin":"US7960508882","name":"Samsung Electronics","weight":0.61,"symbol":"SMSN.IL"},{"isin":"IL0010823792","name":"Tower Semicon In","weight":0.55,"symbol":"TSEM"},{"isin":"US15675D1037","name":"Cerebras Systems","weight":0.48,"symbol":"CBRS"},{"isin":"US5951121038","name":"Micron Technology","weight":0.31,"symbol":"MU"},{"isin":"US74766W1080","name":"Quantum Computing Inc","weight":0.3,"symbol":"QUBT"},{"isin":"US26740W1099","name":"D-Wave Quantum Inc","weight":0.29,"symbol":"QBTS"},{"isin":"JP3236330001","name":"Kioxia Holdings","weight":0.28,"symbol":"285A.T"},{"isin":"US80004C2008","name":"Sandisk Corp","weight":0.28,"symbol":"SNDK"},{"isin":"US9581021055","name":"Western Digital","weight":0.26,"symbol":"WDC"},{"isin":"IE00BKVD2N49","name":"Seagate Hldgs","weight":0.25,"symbol":"STX"},{"isin":"US76655K1034","name":"Rigetti Computing Inc","weight":0.25,"symbol":"RGTI"},{"isin":"US86800U3023","name":"Super Micro Computer Inc","weight":0.22,"symbol":"SMCI"},{"isin":"US91532F1021","name":"Unusual Machines Inc /Us","weight":0.18,"symbol":"UMAC"},{"isin":"US68247W1099","name":"One Stop Systems Inc","weight":0.14,"symbol":"OSS"},{"isin":"US0404132054","name":"Arista Networks Inc","weight":0.1,"symbol":"ANET"},{"isin":"US24703L2025","name":"Dell Tech","weight":0.1,"symbol":"DELL"},{"isin":"US46222L1089","name":"IonQ","weight":0.04,"symbol":"IONQ"},{"isin":"US0079031078","name":"Advanced Micro D","weight":0.03,"symbol":"AMD"},{"isin":"US0378331005","name":"Apple","weight":0.01,"symbol":"AAPL"}]},{"title":"Software","slug":"software","problem":"Software omsætter compute til produkter: modeller, orkestrering og virksomhedsapplikationer.","chain":["Compute","Software","Platforme"],"themeKey":"software","count":46,"weightSum":10.69,"companies":[{"isin":"IL0011301780","name":"Wix.Com Ltd","weight":0.96,"symbol":"WIX"},{"isin":"US17253J1060","name":"Cipher Mining Inc","weight":0.78,"symbol":"CIFR"},{"isin":"US69608A1088","name":"Palantir Tchnl","weight":0.78,"symbol":"PLTR"},{"isin":"US03831W1080","name":"AppLovin","weight":0.54,"symbol":"APP"},{"isin":"KYG4124C1096","name":"Ghl","weight":0.51,"symbol":"GRAB"},{"isin":"US90353T1007","name":"Uber Tech","weight":0.41,"symbol":"UBER"},{"isin":"KYG9572D1034","name":"Webull Corp","weight":0.37,"symbol":"BULL"},{"isin":"US68389X1054","name":"Oracle","weight":0.33,"symbol":"ORCL"},{"isin":"US7789203061","name":"Sharonai Holdings Inc","weight":0.33,"symbol":"SHAZ"},{"isin":"US82452J1097","name":"Shift4 Payments Inc-Class A","weight":0.33,"symbol":"FOUR"},{"isin":"KYG169101204","name":"Bullish","weight":0.31,"symbol":"BLSH"},{"isin":"US55318A1088","name":"Mntn Inc","weight":0.27,"symbol":"MNTN"},{"isin":"US7329081084","name":"Pony Ai Inc","weight":0.27,"symbol":"PONY"},{"isin":"US5949724083","name":"Microstrategy","weight":0.25,"symbol":"MSTR"},{"isin":"US45676K1034","name":"Infleqtion Inc","weight":0.24,"symbol":"INFQ"},{"isin":"US5000811043","name":"Kodiak Ai Inc","weight":0.23,"symbol":"KDK"},{"isin":"US8361001071","name":"SoundHound AI","weight":0.23,"symbol":"SOUN"},{"isin":"KYG290181018","name":"DLocal","weight":0.21,"symbol":"DLO"},{"isin":"US4576422053","name":"Innodata Inc","weight":0.2,"symbol":"INOD"},{"isin":"US87288V1017","name":"Tss Inc","weight":0.19,"symbol":"TSSI"},{"isin":"US0929151076","name":"Blaize Holdings Inc","weight":0.18,"symbol":"BZAI"},{"isin":"KYG114481008","name":"Bitdeer Technologies Group","weight":0.17,"symbol":"BTDR"},{"isin":"US8334451098","name":"Snowflake","weight":0.16,"symbol":"SNOW"},{"isin":"US91332U1016","name":"Unity Software","weight":0.16,"symbol":"U"},{"isin":"US3168411052","name":"Figma Inc-Cl A","weight":0.15,"symbol":"FIG"},{"isin":"US48581R2058","name":"Kaspi Sp GDR-Reg S","weight":0.15,"symbol":"KSPI"},{"isin":"US9509151083","name":"Weride Inc-Adr","weight":0.15,"symbol":"WRD"},{"isin":"US98956A1051","name":"Zeta Global Holdings Corp","weight":0.15,"symbol":"ZETA"},{"isin":"US79589L1061","name":"Samsara","weight":0.14,"symbol":"IOT"},{"isin":"US8716071076","name":"Synopsys","weight":0.14,"symbol":"SNPS"},{"isin":"IL0011858912","name":"Pagaya Technologies Ltd ","weight":0.13,"symbol":"PGY"},{"isin":"KYG961151035","name":"Whitefiber Inc","weight":0.13,"symbol":"WYFI"},{"isin":"US78781J1097","name":"Sailpoint Inc","weight":0.12,"symbol":"SAIL"},{"isin":"US86989Y1091","name":"Swarmer Inc","weight":0.11,"symbol":"SWMR"},{"isin":"KYG4602S1057","name":"Horizon Robotics Inc","weight":0.1,"symbol":"9660.HK"},{"isin":"US21874A1060","name":"Core Scientific","weight":0.1,"symbol":"CORZ"},{"isin":"US1273871087","name":"Cadence Design","weight":0.09,"symbol":"CDNS"},{"isin":"US4869171078","name":"Keel Infrastructure Corp","weight":0.09,"symbol":"KEEL"},{"isin":"US18915M1071","name":"Cloudflare","weight":0.08,"symbol":"NET"},{"isin":"US64119N6085","name":"Netskope Inc-Cl A","weight":0.08,"symbol":"NTSK"}]},{"title":"Platforme","slug":"platforms","problem":"Digitale platforme samler brugere, data og distribution – ofte med underliggende infrastrukturinvesteringer.","chain":["Software","Platforme"],"themeKey":"platforms","count":30,"weightSum":13.18,"companies":[{"isin":"US81141R1005","name":"Sea Sp ADR","weight":2.13,"symbol":"SE"},{"isin":"JP3436100006","name":"SoftBank Group","weight":1.51,"symbol":"9984.T"},{"isin":"US1468691027","name":"Carvana","weight":1.28,"symbol":"CVNA"},{"isin":"US58733R1023","name":"MercadoLibre","weight":0.93,"symbol":"MELI"},{"isin":"US83406F1021","name":"SoFi Tech","weight":0.87,"symbol":"SOFI"},{"isin":"US75734B1008","name":"Reddit","weight":0.6,"symbol":"RDDT"},{"isin":"US7707001027","name":"Robinhood Mkts","weight":0.6,"symbol":"HOOD"},{"isin":"US1725731079","name":"Circle Internet Group Inc","weight":0.59,"symbol":"CRCL"},{"isin":"US3493811034","name":"Figure Technology Solut-Cl A","weight":0.48,"symbol":"FIGR"},{"isin":"US22266T1097","name":"Coupang","weight":0.47,"symbol":"CPNG"},{"isin":"US09175A2069","name":"Bitmine Immersion Technologi","weight":0.37,"symbol":"BMNR"},{"isin":"US8200144058","name":"Sharplink Gaming Inc","weight":0.35,"symbol":"SBET"},{"isin":"NL0013654783","name":"Prosus Rg-N","weight":0.3,"symbol":"PRX.AS"},{"isin":"US36866J1051","name":"Gemini Space Station Inc","weight":0.28,"symbol":"GEMI"},{"isin":"US25809K1051","name":"DoorDash","weight":0.26,"symbol":"DASH"},{"isin":"GB00BMHVL512","name":"Klarna Group Plc","weight":0.2,"symbol":"KLAR"},{"isin":"US16679L1098","name":"Chewy","weight":0.2,"symbol":"CHWY"},{"isin":"US36317J2096","name":"Galaxy Digital Inc","weight":0.2,"symbol":"GLXY"},{"isin":"IL0011741688","name":"Global-E Online","weight":0.18,"symbol":"GLBE"},{"isin":"VGG320891077","name":"eToro Group","weight":0.18,"symbol":"ETOR"},{"isin":"US30303M1027","name":"Meta Platforms Inc","weight":0.16,"symbol":"META"},{"isin":"US36118L1061","name":"Futu Hldg Sp ADR","weight":0.16,"symbol":"FUTU"},{"isin":"KYG596691041","name":"Meituan Dianpi-B","weight":0.15,"symbol":"3690.HK"},{"isin":"US88080T1043","name":"Terawulf Inc","weight":0.13,"symbol":"WULF"},{"isin":"KYG1144A1058","name":"Bit Digital Inc","weight":0.12,"symbol":"BTBT"},{"isin":"US18452B2097","name":"Cleanspark","weight":0.12,"symbol":"CLSK"},{"isin":"LU2237380790","name":"Allegro.eu","weight":0.11,"symbol":"ALE.WA"},{"isin":"US00827B1061","name":"Affirm Hldg","weight":0.1,"symbol":"AFRM"},{"isin":"US7223041028","name":"Pinduoduo Sp ADS","weight":0.08,"symbol":"PDD"},{"isin":"US01609W1027","name":"Alibaba Grp Sp ADS","weight":0.07,"symbol":"BABA"}]},{"title":"Optik & netværk","slug":"optik-netvaerk","problem":"Data skal flyttes: laser, fiber og switches er flaskehalse i datacentre og mellem dem.","chain":["Datacenter","Optik","Chips"],"themeKey":"connect","count":23,"weightSum":6.78,"companies":[{"isin":"US55024U1097","name":"Lumentum Hldngs","weight":1.17,"symbol":"LITE"},{"isin":"SE0003917798","name":"Sivers Semiconductors","weight":0.94,"symbol":"SIVE.ST"},{"isin":"US03823U1025","name":"Applied Optoelectronics Inc","weight":0.49,"symbol":"AAOI"},{"isin":"CH0030380734","name":"Huber + Suhner Ag-Reg","weight":0.46,"symbol":"HUBN.SW"},{"isin":"US2193501051","name":"Corning Inc","weight":0.43,"symbol":"GLW"},{"isin":"US49338L1035","name":"Keysight Technologies In","weight":0.34,"symbol":"KEYS"},{"isin":"GB0006650450","name":"Oxford Instruments Plc","weight":0.33,"symbol":"OXIG.L"},{"isin":"US55405Y1001","name":"Macom Technology Solutions H","weight":0.29,"symbol":"MTSI"},{"isin":"US11135F1012","name":"Broadcom","weight":0.26,"symbol":"AVGO"},{"isin":"US00217D1000","name":"AST SpaceMobile","weight":0.25,"symbol":"ASTS"},{"isin":"KYG3323L1005","name":"Fabrinet","weight":0.23,"symbol":"FN"},{"isin":"CA15101Q2071","name":"Celestica","weight":0.22,"symbol":"CLS.TO"},{"isin":"CA50077N1024","name":"Kraken Robotics Inc","weight":0.21,"symbol":"PNG.V"},{"isin":"US1717793095","name":"Ciena Corp","weight":0.2,"symbol":"CIEN"},{"isin":"US19247G1076","name":"Coherent","weight":0.17,"symbol":"COHR"},{"isin":"US68236H2040","name":"Ondas Holdings Inc","weight":0.15,"symbol":"ONDS"},{"isin":"US4663131039","name":"Jabil Inc","weight":0.14,"symbol":"JBL"},{"isin":"US0320951017","name":"Amphenol","weight":0.1,"symbol":"APH"},{"isin":"US8010561020","name":"Sanmina Corp","weight":0.1,"symbol":"SANM"},{"isin":"GB00BS3DYQ52","name":"Raspberry PI","weight":0.09,"symbol":"RPI.L"},{"isin":"US17275R1023","name":"Cisco Systems","weight":0.08,"symbol":"CSCO"},{"isin":"US55306N1046","name":"Mks Instruments Inc","weight":0.07,"symbol":"MKSI"},{"isin":"SG9999000020","name":"Flex Ltd","weight":0.06,"symbol":"FLEX"}]},{"title":"SpaceTech","slug":"spacetech","problem":"Opsendelser og satellitter udvider infrastrukturen uden for jordens overflade.","chain":["Space","Connect","Compute"],"themeKey":"space","count":18,"weightSum":4.38,"companies":[{"isin":"US85529M1045","name":"Starfighters Space Inc","weight":0.52,"symbol":"FJET"},{"isin":"US5901061003","name":"Merlin Inc","weight":0.44,"symbol":"MRLN"},{"isin":"US05605H1005","name":"Bwx Technologies Inc","weight":0.39,"symbol":"BWXT"},{"isin":"US4859241048","name":"Karman Holdings Inc","weight":0.33,"symbol":"KRMN"},{"isin":"GB00B63H8491","name":"Rolls-Royce Hldg","weight":0.32,"symbol":"RR.L"},{"isin":"US31816X1063","name":"Firefly Aerospace Inc","weight":0.3,"symbol":"FLY"},{"isin":"US75776W1036","name":"Redwire Corp","weight":0.27,"symbol":"RDW"},{"isin":"US9870841007","name":"York Space Systems Inc","weight":0.25,"symbol":"YSS"},{"isin":"US4432011082","name":"Howmet Aerspc","weight":0.23,"symbol":"HWM"},{"isin":"US7731211089","name":"Rocket Lab Corp","weight":0.21,"symbol":"RKLB"},{"isin":"US80401C1009","name":"Satellogic Inc","weight":0.17,"symbol":"SATL"},{"isin":"US92892B1035","name":"Voyager Technologies Inc","weight":0.17,"symbol":"VOYG"},{"isin":"CA55293N1096","name":"Mda Space Ltd","weight":0.16,"symbol":"MDA.TO"},{"isin":"US4202011056","name":"Hawkeye 360 Inc","weight":0.16,"symbol":"HAWK"},{"isin":"US46125A1007","name":"Intuitive Machines Inc","weight":0.15,"symbol":"LUNR"},{"isin":"US03945R1023","name":"Archer Aviation Inc","weight":0.14,"symbol":"ACHR"},{"isin":"US72703X1063","name":"Planet Labs","weight":0.09,"symbol":"PL"},{"isin":"US0094221068","name":"Airo Group Holdings Inc","weight":0.08,"symbol":"AIRO"}]},{"title":"Fysisk tech","slug":"fysisk-tech","problem":"Robotik, elbiler og fysisk produktion kobler software til den virkelige verden.","chain":["Energi","Fysisk tech","Software"],"themeKey":"physical","count":16,"weightSum":5.16,"companies":[{"isin":"US88160R1014","name":"Tesla","weight":0.77,"symbol":"TSLA"},{"isin":"DE0006450000","name":"Lpkf Laser & Electronics Se","weight":0.62,"symbol":"LPK.DE"},{"isin":"US73933G2021","name":"Power Solutions Internationa","weight":0.55,"symbol":"PSIX"},{"isin":"US3453708600","name":"Ford Motor","weight":0.41,"symbol":"F"},{"isin":"US60471A1016","name":"Mirion Technologies Inc","weight":0.37,"symbol":"MIR"},{"isin":"US87151X1019","name":"Symbotic","weight":0.34,"symbol":"SYM"},{"isin":"US2310211063","name":"Cummins","weight":0.29,"symbol":"CMI"},{"isin":"US34354P1057","name":"Flowserve Corp","weight":0.26,"symbol":"FLS"},{"isin":"US37045V1008","name":"General Motors Co","weight":0.25,"symbol":"GM"},{"isin":"US45073V1089","name":"Itt Inc","weight":0.24,"symbol":"ITT"},{"isin":"US50202M1027","name":"Li Auto Sp ADS","weight":0.24,"symbol":"LI"},{"isin":"US67079K1007","name":"Nuscale Power Corp","weight":0.22,"symbol":"SMR"},{"isin":"US76954A1034","name":"Rivian Automotive Inc","weight":0.21,"symbol":"RIVN"},{"isin":"US36828A1016","name":"Ge Vernova Inc","weight":0.19,"symbol":"GEV"},{"isin":"US3687361044","name":"Generac Holdings Inc","weight":0.15,"symbol":"GNRC"},{"isin":"US63010H1086","name":"Nano Nuclear Energy Inc","weight":0.05,"symbol":"NNE"}]},{"title":"Energi","slug":"energi","problem":"Uden strøm ingen compute. Energi og power er en fysisk flaskehals for AI-udbygningen.","chain":["Energi","Datacenter","Compute"],"themeKey":"energy","count":9,"weightSum":4.26,"companies":[{"isin":"US21873S1087","name":"Coreweave Inc-Cl A","weight":0.9,"symbol":"CRWV"},{"isin":"US34379V1035","name":"Fluence Energy Inc","weight":0.81,"symbol":"FLNC"},{"isin":"US05614L2097","name":"Babcock & Wilcox","weight":0.6,"symbol":"BW"},{"isin":"US35834F1049","name":"T1 Energy Inc","weight":0.58,"symbol":"TE"},{"isin":"NL0009805522","name":"Nebius Group Nv","weight":0.5,"symbol":"NBIS"},{"isin":"AU0000185993","name":"Iris Energy","weight":0.49,"symbol":"IREN"},{"isin":"US92840M1027","name":"Vistra Corp","weight":0.14,"symbol":"VST"},{"isin":"US02156V1098","name":"Oklo Inc","weight":0.12,"symbol":"OKLO"},{"isin":"US87422Q1094","name":"Talen Energy Corp","weight":0.12,"symbol":"TLN"}]},{"title":"Energiressourcer","slug":"energiressourcer","problem":"Råstoffer og ressourcer understøtter energi- og elektronikforsyningen.","chain":["Energiressourcer","Energi","Chips"],"themeKey":"energy-resources","count":18,"weightSum":3.09,"companies":[{"isin":"US9115491030","name":"United States Antimony Corp","weight":0.44,"symbol":"UAMY"},{"isin":"CA8265991023","name":"Sigma Lithium Corp","weight":0.32,"symbol":"SGML"},{"isin":"US5533681012","name":"Mp Materials Corp","weight":0.26,"symbol":"MP"},{"isin":"CA6544846091","name":"Niocorp Developments Ltd","weight":0.23,"symbol":"NB"},{"isin":"AU000000LYC6","name":"Lynas Rare","weight":0.2,"symbol":"LYC.AX"},{"isin":"VGG2662B1031","name":"Critical Metals Corp","weight":0.2,"symbol":"CRML"},{"isin":"CA53681J1030","name":"Lithium Americas Corp","weight":0.18,"symbol":"LAC"},{"isin":"US91733P1075","name":"Usa Rare Earth Inc","weight":0.18,"symbol":"USAR"},{"isin":"CA0203987072","name":"Almonty Industries Inc","weight":0.15,"symbol":"ALM"},{"isin":"CA8536061010","name":"Standard Lithium Ltd","weight":0.13,"symbol":"SLI"},{"isin":"CA89621C1059","name":"Trilogy Metals Inc","weight":0.13,"symbol":"TMQ"},{"isin":"US46578C1080","name":"Ivanhoe Electric Inc / Us","weight":0.13,"symbol":"IE"},{"isin":"CA14071L1085","name":"Capstone Copper Corp","weight":0.11,"symbol":"CS.TO"},{"isin":"US35671D8570","name":"Freeport McMoRan","weight":0.11,"symbol":"FCX"},{"isin":"CA87261Y1060","name":"Tmc The Metals Co Inc","weight":0.1,"symbol":"TMC"},{"isin":"CA66510M2040","name":"Northern Dynasty Minerals","weight":0.08,"symbol":"NAK"},{"isin":"US84265V1052","name":"Southern Copper Corp","weight":0.08,"symbol":"SCCO"},{"isin":"CA2960061091","name":"Ero Copper Corp","weight":0.06,"symbol":"ERO"}]},{"title":"Andet / uklassificeret","slug":"andet","problem":"Selskaber der endnu ikke har fået et primært NDI-tema i udkastet. Eksponering, ikke anbefaling.","chain":[],"themeKey":"andet","count":111,"weightSum":24.28,"companies":[{"isin":"US19260Q1076","name":"Coinbase Glb","weight":0.81,"symbol":"COIN"},{"isin":"US6837121036","name":"Opendoor Tech","weight":0.64,"symbol":"OPEN"},{"isin":"US12047B1052","name":"US12047B1052","weight":0.61,"symbol":null},{"isin":"US77664L2079","name":"Root","weight":0.6,"symbol":"ROOT"},{"isin":"US2057683029","name":"Comstock Resources Inc","weight":0.58,"symbol":"CRK"},{"isin":"US4330001060","name":"Hims Hers Health Inc","weight":0.56,"symbol":"HIMS"},{"isin":"US83418M1036","name":"Solaris Energy Infrastructur","weight":0.54,"symbol":"SEI"},{"isin":"US74347M1080","name":"Propetro Holding Corp","weight":0.51,"symbol":"PUMP"},{"isin":"US7710491033","name":"Roblox","weight":0.51,"symbol":"RBLX"},{"isin":"US91680M1071","name":"Upstart Hldgs","weight":0.49,"symbol":"UPST"},{"isin":"US15643U1043","name":"Centrus Energy Corp-Class A","weight":0.43,"symbol":"LEU"},{"isin":"US46982L1089","name":"Jacobs Solutions","weight":0.43,"symbol":"J"},{"isin":"US52567D1072","name":"Lemonade","weight":0.43,"symbol":"LMND"},{"isin":"US03674X1063","name":"Antero Resources Corp","weight":0.41,"symbol":"AR"},{"isin":"US26884L1098","name":"Eqt","weight":0.41,"symbol":"EQT"},{"isin":"US5322751042","name":"Lightwave Logic Inc","weight":0.41,"symbol":"LWLG"},{"isin":"US65339F1012","name":"NextEra Energy","weight":0.39,"symbol":"NEE"},{"isin":"KYG6683N1034","name":"Nu","weight":0.37,"symbol":"NU"},{"isin":"US1651677353","name":"Expand Energy Corp","weight":0.37,"symbol":"EXE"},{"isin":"US47100L3015","name":"Defi Development Corp","weight":0.37,"symbol":"DFDV"},{"isin":"US1508701034","name":"Celanese Corp","weight":0.35,"symbol":"CE"},{"isin":"US3434121022","name":"Fluor Corp","weight":0.35,"symbol":"FLR"},{"isin":"US3149111086","name":"Fermi Inc","weight":0.31,"symbol":"FRMI"},{"isin":"US6516391066","name":"Newmont","weight":0.31,"symbol":"NEM"},{"isin":"US81758H1068","name":"Serve Robotics","weight":0.31,"symbol":"SERV"},{"isin":"US1999081045","name":"Comfort Systems Usa Inc","weight":0.3,"symbol":"FIX"},{"isin":"US6877931096","name":"Oscar Health","weight":0.3,"symbol":"OSCR"},{"isin":"NL0015002Q12","name":"Terra Innovatum Global Nv","weight":0.28,"symbol":"NKLR"},{"isin":"US74164F1030","name":"Primoris Services Corp","weight":0.28,"symbol":"PRIM"},{"isin":"US8425871071","name":"Southern Co/The","weight":0.28,"symbol":"SO"},{"isin":"CA6979001089","name":"Pan American Silver Corp","weight":0.27,"symbol":"PAAS.TO"},{"isin":"US02927U2087","name":"American Resources Corp","weight":0.27,"symbol":"AREC"},{"isin":"US64110L1061","name":"Netflix","weight":0.27,"symbol":"NFLX"},{"isin":"US8485603067","name":"Spire Global","weight":0.27,"symbol":"SPIR"},{"isin":"KYG651631007","name":"Joby Aviation Inc","weight":0.26,"symbol":"JOBY"},{"isin":"US35953D4016","name":"Fubotv Inc -Class A","weight":0.26,"symbol":"FUBO"},{"isin":"US53224K3023","name":"Lightbridge Corp","weight":0.26,"symbol":"LTBR"},{"isin":"US0937121079","name":"Bloom Energy Corp- A","weight":0.25,"symbol":"BE"},{"isin":"US88023B1035","name":"Tempus AI","weight":0.25,"symbol":"TEM"},{"isin":"DE000A161408","name":"HelloFresh Br","weight":0.24,"symbol":"HFG.F"}]}]}
+{
+  "positionsAsOf": "2026-06-01",
+  "fund": "pmindi",
+  "note": "Forsinket beholdning. Temaer = eksponering, ikke anbefaling.",
+  "themes": [
+    {
+      "title": "Platforme",
+      "slug": "platforms",
+      "problem": "Digitale platforme samler brugere, data og distribution – ofte med underliggende infrastrukturinvesteringer.",
+      "chain": [
+        "Software",
+        "Platforme"
+      ],
+      "themeKey": "platforms",
+      "count": 40,
+      "weightSum": 16.01,
+      "companies": [
+        {
+          "isin": "US81141R1005",
+          "name": "Sea Sp ADR",
+          "weight": 2.13,
+          "symbol": "SE"
+        },
+        {
+          "isin": "JP3436100006",
+          "name": "SoftBank Group",
+          "weight": 1.51,
+          "symbol": "9984.T"
+        },
+        {
+          "isin": "US1468691027",
+          "name": "Carvana",
+          "weight": 1.28,
+          "symbol": "CVNA"
+        },
+        {
+          "isin": "US58733R1023",
+          "name": "MercadoLibre",
+          "weight": 0.93,
+          "symbol": "MELI"
+        },
+        {
+          "isin": "US83406F1021",
+          "name": "SoFi Tech",
+          "weight": 0.87,
+          "symbol": "SOFI"
+        },
+        {
+          "isin": "US19260Q1076",
+          "name": "Coinbase Glb",
+          "weight": 0.81,
+          "symbol": "COIN"
+        },
+        {
+          "isin": "US12047B1052",
+          "name": "Bumble Inc",
+          "weight": 0.61,
+          "symbol": "BMBL"
+        },
+        {
+          "isin": "US75734B1008",
+          "name": "Reddit",
+          "weight": 0.6,
+          "symbol": "RDDT"
+        },
+        {
+          "isin": "US7707001027",
+          "name": "Robinhood Mkts",
+          "weight": 0.6,
+          "symbol": "HOOD"
+        },
+        {
+          "isin": "US1725731079",
+          "name": "Circle Internet Group Inc",
+          "weight": 0.59,
+          "symbol": "CRCL"
+        },
+        {
+          "isin": "US3493811034",
+          "name": "Figure Technology Solut-Cl A",
+          "weight": 0.48,
+          "symbol": "FIGR"
+        },
+        {
+          "isin": "US22266T1097",
+          "name": "Coupang",
+          "weight": 0.47,
+          "symbol": "CPNG"
+        },
+        {
+          "isin": "KYG6683N1034",
+          "name": "Nu",
+          "weight": 0.37,
+          "symbol": "NU"
+        },
+        {
+          "isin": "US09175A2069",
+          "name": "Bitmine Immersion Technologi",
+          "weight": 0.37,
+          "symbol": "BMNR"
+        },
+        {
+          "isin": "US47100L3015",
+          "name": "Defi Development Corp",
+          "weight": 0.37,
+          "symbol": "DFDV"
+        },
+        {
+          "isin": "US8200144058",
+          "name": "Sharplink Gaming Inc",
+          "weight": 0.35,
+          "symbol": "SBET"
+        },
+        {
+          "isin": "NL0013654783",
+          "name": "Prosus Rg-N",
+          "weight": 0.3,
+          "symbol": "PRX.AS"
+        },
+        {
+          "isin": "US36866J1051",
+          "name": "Gemini Space Station Inc",
+          "weight": 0.28,
+          "symbol": "GEMI"
+        },
+        {
+          "isin": "US64110L1061",
+          "name": "Netflix",
+          "weight": 0.27,
+          "symbol": "NFLX"
+        },
+        {
+          "isin": "US25809K1051",
+          "name": "DoorDash",
+          "weight": 0.26,
+          "symbol": "DASH"
+        },
+        {
+          "isin": "GB00BMHVL512",
+          "name": "Klarna Group Plc",
+          "weight": 0.2,
+          "symbol": "KLAR"
+        },
+        {
+          "isin": "US16679L1098",
+          "name": "Chewy",
+          "weight": 0.2,
+          "symbol": "CHWY"
+        },
+        {
+          "isin": "US36317J2096",
+          "name": "Galaxy Digital Inc",
+          "weight": 0.2,
+          "symbol": "GLXY"
+        },
+        {
+          "isin": "IL0011741688",
+          "name": "Global-E Online",
+          "weight": 0.18,
+          "symbol": "GLBE"
+        },
+        {
+          "isin": "VGG320891077",
+          "name": "eToro Group",
+          "weight": 0.18,
+          "symbol": "ETOR"
+        },
+        {
+          "isin": "US30303M1027",
+          "name": "Meta Platforms Inc",
+          "weight": 0.16,
+          "symbol": "META"
+        },
+        {
+          "isin": "US36118L1061",
+          "name": "Futu Hldg Sp ADR",
+          "weight": 0.16,
+          "symbol": "FUTU"
+        },
+        {
+          "isin": "KYG596691041",
+          "name": "Meituan Dianpi-B",
+          "weight": 0.15,
+          "symbol": "3690.HK"
+        },
+        {
+          "isin": "US39959A2050",
+          "name": "Upexi Inc",
+          "weight": 0.15,
+          "symbol": "UPXI"
+        },
+        {
+          "isin": "LU1778762911",
+          "name": "Spotify Tech",
+          "weight": 0.13,
+          "symbol": "SPOT"
+        },
+        {
+          "isin": "US88080T1043",
+          "name": "Terawulf Inc",
+          "weight": 0.13,
+          "symbol": "WULF"
+        },
+        {
+          "isin": "KYG1144A1058",
+          "name": "Bit Digital Inc",
+          "weight": 0.12,
+          "symbol": "BTBT"
+        },
+        {
+          "isin": "US18452B2097",
+          "name": "Cleanspark",
+          "weight": 0.12,
+          "symbol": "CLSK"
+        },
+        {
+          "isin": "US94845U1051",
+          "name": "WEBTOON Entr",
+          "weight": 0.12,
+          "symbol": "WBTN"
+        },
+        {
+          "isin": "LU2237380790",
+          "name": "Allegro.eu",
+          "weight": 0.11,
+          "symbol": "ALE.WA"
+        },
+        {
+          "isin": "US00827B1061",
+          "name": "Affirm Hldg",
+          "weight": 0.1,
+          "symbol": "AFRM"
+        },
+        {
+          "isin": "US7223041028",
+          "name": "Pinduoduo Sp ADS",
+          "weight": 0.08,
+          "symbol": "PDD"
+        },
+        {
+          "isin": "US01609W1027",
+          "name": "Alibaba Grp Sp ADS",
+          "weight": 0.07,
+          "symbol": "BABA"
+        },
+        {
+          "isin": "KY30744W1070",
+          "name": "Farfetch Ltd",
+          "weight": 0,
+          "symbol": "FTCHQ"
+        },
+        {
+          "isin": "US47100L1118",
+          "name": "Defi Development Corp (serie)",
+          "weight": 0,
+          "symbol": "DFDV"
+        }
+      ]
+    },
+    {
+      "title": "Chips",
+      "slug": "chips",
+      "problem": "Halvledere er byggestenene i AI og digital infrastruktur. Design, udstyr og produktion sætter tempoet for hele værdikæden.",
+      "chain": [
+        "Energi",
+        "Datacenter",
+        "Chips",
+        "Optik",
+        "Software"
+      ],
+      "themeKey": "chips",
+      "count": 53,
+      "weightSum": 13.19,
+      "companies": [
+        {
+          "isin": "US82982T1060",
+          "name": "Sitime Corp",
+          "weight": 1.15,
+          "symbol": "SITM"
+        },
+        {
+          "isin": "CA73044W3021",
+          "name": "Poet Technologies Inc",
+          "weight": 0.96,
+          "symbol": "POET"
+        },
+        {
+          "isin": "AT0000A3EPA4",
+          "name": "Ams-Osram Ag",
+          "weight": 0.58,
+          "symbol": "AMS.SW"
+        },
+        {
+          "isin": "KYG393871085",
+          "name": "GlobalFoundries",
+          "weight": 0.57,
+          "symbol": "GFS"
+        },
+        {
+          "isin": "DE000A1K0235",
+          "name": "SUESS MicroTec N",
+          "weight": 0.5,
+          "symbol": "SMHN.DE"
+        },
+        {
+          "isin": "US3463751087",
+          "name": "Formfactor Inc",
+          "weight": 0.44,
+          "symbol": "FORM"
+        },
+        {
+          "isin": "GB0009619924",
+          "name": "Iqe Plc",
+          "weight": 0.42,
+          "symbol": "IQE.L"
+        },
+        {
+          "isin": "US8168501018",
+          "name": "Semtech Corp",
+          "weight": 0.41,
+          "symbol": "SMTC"
+        },
+        {
+          "isin": "US7509171069",
+          "name": "Rambus",
+          "weight": 0.37,
+          "symbol": "RMBS"
+        },
+        {
+          "isin": "US00246W1036",
+          "name": "Axt Inc",
+          "weight": 0.36,
+          "symbol": "AXTI"
+        },
+        {
+          "isin": "US4581401001",
+          "name": "Intel",
+          "weight": 0.33,
+          "symbol": "INTC"
+        },
+        {
+          "isin": "DE000A0WMPJ6",
+          "name": "Aixtron N",
+          "weight": 0.32,
+          "symbol": "AIXA.DE"
+        },
+        {
+          "isin": "JP3122400009",
+          "name": "Advantest Corp",
+          "weight": 0.31,
+          "symbol": "6857.T"
+        },
+        {
+          "isin": "KYG037AX1015",
+          "name": "Ambarella Inc",
+          "weight": 0.31,
+          "symbol": "AMBA"
+        },
+        {
+          "isin": "US9108734057",
+          "name": "United Microelectron-Sp Adr",
+          "weight": 0.3,
+          "symbol": "UMC"
+        },
+        {
+          "isin": "JP3164720009",
+          "name": "Renesas Electro",
+          "weight": 0.29,
+          "symbol": "6723.T"
+        },
+        {
+          "isin": "KYG0535Q1331",
+          "name": "Asmpt Ltd",
+          "weight": 0.29,
+          "symbol": "0522.HK"
+        },
+        {
+          "isin": "JP3293330001",
+          "name": "Kokusai Electric Corp",
+          "weight": 0.28,
+          "symbol": "6525.T"
+        },
+        {
+          "isin": "US00760J1088",
+          "name": "Aehr Test System",
+          "weight": 0.26,
+          "symbol": "AEHR"
+        },
+        {
+          "isin": "JP3979200007",
+          "name": "Lasertec",
+          "weight": 0.24,
+          "symbol": "6920.T"
+        },
+        {
+          "isin": "US43289P1066",
+          "name": "Himax Tech Sp ADR",
+          "weight": 0.23,
+          "symbol": "HIMX"
+        },
+        {
+          "isin": "BMG6331P1041",
+          "name": "Alpha and Omega Semiconductor Ltd",
+          "weight": 0.22,
+          "symbol": "AOSL"
+        },
+        {
+          "isin": "USN070592100",
+          "name": "ASML Hold NY Reg",
+          "weight": 0.22,
+          "symbol": "ASML"
+        },
+        {
+          "isin": "US6098391054",
+          "name": "Monolithic Power",
+          "weight": 0.21,
+          "symbol": "MPWR"
+        },
+        {
+          "isin": "US6833441057",
+          "name": "Onto Innovation",
+          "weight": 0.21,
+          "symbol": "ONTO"
+        },
+        {
+          "isin": "IL0010952641",
+          "name": "Camtek Ltd",
+          "weight": 0.2,
+          "symbol": "CAMT"
+        },
+        {
+          "isin": "NL0000334118",
+          "name": "Asm Int",
+          "weight": 0.19,
+          "symbol": "ASM.AS"
+        },
+        {
+          "isin": "NL0012866412",
+          "name": "Besi Br",
+          "weight": 0.19,
+          "symbol": "BESI.AS"
+        },
+        {
+          "isin": "US0316521006",
+          "name": "Amkor Technology",
+          "weight": 0.18,
+          "symbol": "AMKR"
+        },
+        {
+          "isin": "US5012421013",
+          "name": "Kulicke & Soffa Industries",
+          "weight": 0.18,
+          "symbol": "KLIC"
+        },
+        {
+          "isin": "US57776J1007",
+          "name": "Maxlinear Inc",
+          "weight": 0.18,
+          "symbol": "MXL"
+        },
+        {
+          "isin": "US82706C1080",
+          "name": "Silicon Mot Sp ADR",
+          "weight": 0.18,
+          "symbol": "SIMO"
+        },
+        {
+          "isin": "JP3571400005",
+          "name": "Tokyo Electron",
+          "weight": 0.17,
+          "symbol": "8035.T"
+        },
+        {
+          "isin": "US5184151042",
+          "name": "Lattice Semicond",
+          "weight": 0.16,
+          "symbol": "LSCC"
+        },
+        {
+          "isin": "US1925761066",
+          "name": "Cohu",
+          "weight": 0.15,
+          "symbol": "COHU"
+        },
+        {
+          "isin": "US0326541051",
+          "name": "Analog Devices Inc",
+          "weight": 0.14,
+          "symbol": "ADI"
+        },
+        {
+          "isin": "US8825081040",
+          "name": "Texas Instrument",
+          "weight": 0.14,
+          "symbol": "TXN"
+        },
+        {
+          "isin": "DE0006231004",
+          "name": "Infineon Technolo N",
+          "weight": 0.13,
+          "symbol": "IFX.DE"
+        },
+        {
+          "isin": "IL0010845571",
+          "name": "Nova Ltd",
+          "weight": 0.13,
+          "symbol": "NVMI"
+        },
+        {
+          "isin": "KYG254571055",
+          "name": "Crdo",
+          "weight": 0.13,
+          "symbol": "CRDO"
+        },
+        {
+          "isin": "US5950171042",
+          "name": "Microchip Technology Inc",
+          "weight": 0.12,
+          "symbol": "MCHP"
+        },
+        {
+          "isin": "US63942X1063",
+          "name": "Navitas Semicond",
+          "weight": 0.12,
+          "symbol": "NVTS"
+        },
+        {
+          "isin": "US0231931058",
+          "name": "Ambiq Micro Inc",
+          "weight": 0.1,
+          "symbol": "AMBQ"
+        },
+        {
+          "isin": "US0545402085",
+          "name": "Axcelis Technologies Inc",
+          "weight": 0.1,
+          "symbol": "ACLS"
+        },
+        {
+          "isin": "US29362U1043",
+          "name": "Entegris Inc",
+          "weight": 0.09,
+          "symbol": "ENTG"
+        },
+        {
+          "isin": "US4824801009",
+          "name": "Kla",
+          "weight": 0.09,
+          "symbol": "KLAC"
+        },
+        {
+          "isin": "US6821891057",
+          "name": "ON Semiconductor",
+          "weight": 0.09,
+          "symbol": "ON"
+        },
+        {
+          "isin": "NO0003055501",
+          "name": "Nordic Semicondu",
+          "weight": 0.08,
+          "symbol": "NOD.OL"
+        },
+        {
+          "isin": "US8807701029",
+          "name": "Teradyne",
+          "weight": 0.06,
+          "symbol": "TER"
+        },
+        {
+          "isin": "US00108J1097",
+          "name": "ACM Research",
+          "weight": 0.04,
+          "symbol": "ACMR"
+        },
+        {
+          "isin": "US0382221051",
+          "name": "Applied Material",
+          "weight": 0.04,
+          "symbol": "AMAT"
+        },
+        {
+          "isin": "US5128073062",
+          "name": "Lam Research Corp",
+          "weight": 0.03,
+          "symbol": "LRCX"
+        },
+        {
+          "isin": "US0420682058",
+          "name": "Arm Holdings ADR",
+          "weight": 0,
+          "symbol": "ARM"
+        }
+      ]
+    },
+    {
+      "title": "Software",
+      "slug": "software",
+      "problem": "Software omsætter compute til produkter: modeller, orkestrering og virksomhedsapplikationer.",
+      "chain": [
+        "Compute",
+        "Software",
+        "Platforme"
+      ],
+      "themeKey": "software",
+      "count": 51,
+      "weightSum": 12.38,
+      "companies": [
+        {
+          "isin": "IL0011301780",
+          "name": "Wix.Com Ltd",
+          "weight": 0.96,
+          "symbol": "WIX"
+        },
+        {
+          "isin": "US17253J1060",
+          "name": "Cipher Mining Inc",
+          "weight": 0.78,
+          "symbol": "CIFR"
+        },
+        {
+          "isin": "US69608A1088",
+          "name": "Palantir Tchnl",
+          "weight": 0.78,
+          "symbol": "PLTR"
+        },
+        {
+          "isin": "US77664L2079",
+          "name": "Root",
+          "weight": 0.6,
+          "symbol": "ROOT"
+        },
+        {
+          "isin": "US03831W1080",
+          "name": "AppLovin",
+          "weight": 0.54,
+          "symbol": "APP"
+        },
+        {
+          "isin": "KYG4124C1096",
+          "name": "Ghl",
+          "weight": 0.51,
+          "symbol": "GRAB"
+        },
+        {
+          "isin": "US7710491033",
+          "name": "Roblox",
+          "weight": 0.51,
+          "symbol": "RBLX"
+        },
+        {
+          "isin": "US52567D1072",
+          "name": "Lemonade",
+          "weight": 0.43,
+          "symbol": "LMND"
+        },
+        {
+          "isin": "US90353T1007",
+          "name": "Uber Tech",
+          "weight": 0.41,
+          "symbol": "UBER"
+        },
+        {
+          "isin": "KYG9572D1034",
+          "name": "Webull Corp",
+          "weight": 0.37,
+          "symbol": "BULL"
+        },
+        {
+          "isin": "US68389X1054",
+          "name": "Oracle",
+          "weight": 0.33,
+          "symbol": "ORCL"
+        },
+        {
+          "isin": "US7789203061",
+          "name": "Sharonai Holdings Inc",
+          "weight": 0.33,
+          "symbol": "SHAZ"
+        },
+        {
+          "isin": "US82452J1097",
+          "name": "Shift4 Payments Inc-Class A",
+          "weight": 0.33,
+          "symbol": "FOUR"
+        },
+        {
+          "isin": "KYG169101204",
+          "name": "Bullish",
+          "weight": 0.31,
+          "symbol": "BLSH"
+        },
+        {
+          "isin": "US55318A1088",
+          "name": "Mntn Inc",
+          "weight": 0.27,
+          "symbol": "MNTN"
+        },
+        {
+          "isin": "US7329081084",
+          "name": "Pony Ai Inc",
+          "weight": 0.27,
+          "symbol": "PONY"
+        },
+        {
+          "isin": "US5949724083",
+          "name": "Microstrategy",
+          "weight": 0.25,
+          "symbol": "MSTR"
+        },
+        {
+          "isin": "US45676K1034",
+          "name": "Infleqtion Inc",
+          "weight": 0.24,
+          "symbol": "INFQ"
+        },
+        {
+          "isin": "US5000811043",
+          "name": "Kodiak Ai Inc",
+          "weight": 0.23,
+          "symbol": "KDK"
+        },
+        {
+          "isin": "US8361001071",
+          "name": "SoundHound AI",
+          "weight": 0.23,
+          "symbol": "SOUN"
+        },
+        {
+          "isin": "KYG290181018",
+          "name": "DLocal",
+          "weight": 0.21,
+          "symbol": "DLO"
+        },
+        {
+          "isin": "US4576422053",
+          "name": "Innodata Inc",
+          "weight": 0.2,
+          "symbol": "INOD"
+        },
+        {
+          "isin": "US87288V1017",
+          "name": "Tss Inc",
+          "weight": 0.19,
+          "symbol": "TSSI"
+        },
+        {
+          "isin": "US0929151076",
+          "name": "Blaize Holdings Inc",
+          "weight": 0.18,
+          "symbol": "BZAI"
+        },
+        {
+          "isin": "KYG114481008",
+          "name": "Bitdeer Technologies Group",
+          "weight": 0.17,
+          "symbol": "BTDR"
+        },
+        {
+          "isin": "US8334451098",
+          "name": "Snowflake",
+          "weight": 0.16,
+          "symbol": "SNOW"
+        },
+        {
+          "isin": "US91332U1016",
+          "name": "Unity Software",
+          "weight": 0.16,
+          "symbol": "U"
+        },
+        {
+          "isin": "US04681Y1038",
+          "name": "Ategrity Specialty Holdings",
+          "weight": 0.15,
+          "symbol": "ASIC"
+        },
+        {
+          "isin": "US3168411052",
+          "name": "Figma Inc-Cl A",
+          "weight": 0.15,
+          "symbol": "FIG"
+        },
+        {
+          "isin": "US48581R2058",
+          "name": "Kaspi Sp GDR-Reg S",
+          "weight": 0.15,
+          "symbol": "KSPI"
+        },
+        {
+          "isin": "US9509151083",
+          "name": "Weride Inc-Adr",
+          "weight": 0.15,
+          "symbol": "WRD"
+        },
+        {
+          "isin": "US98956A1051",
+          "name": "Zeta Global Holdings Corp",
+          "weight": 0.15,
+          "symbol": "ZETA"
+        },
+        {
+          "isin": "US79589L1061",
+          "name": "Samsara",
+          "weight": 0.14,
+          "symbol": "IOT"
+        },
+        {
+          "isin": "US8716071076",
+          "name": "Synopsys",
+          "weight": 0.14,
+          "symbol": "SNPS"
+        },
+        {
+          "isin": "IL0011858912",
+          "name": "Pagaya Technologies Ltd ",
+          "weight": 0.13,
+          "symbol": "PGY"
+        },
+        {
+          "isin": "KYG961151035",
+          "name": "Whitefiber Inc",
+          "weight": 0.13,
+          "symbol": "WYFI"
+        },
+        {
+          "isin": "US78781J1097",
+          "name": "Sailpoint Inc",
+          "weight": 0.12,
+          "symbol": "SAIL"
+        },
+        {
+          "isin": "US86989Y1091",
+          "name": "Swarmer Inc",
+          "weight": 0.11,
+          "symbol": "SWMR"
+        },
+        {
+          "isin": "KYG4602S1057",
+          "name": "Horizon Robotics Inc",
+          "weight": 0.1,
+          "symbol": "9660.HK"
+        },
+        {
+          "isin": "US21874A1060",
+          "name": "Core Scientific",
+          "weight": 0.1,
+          "symbol": "CORZ"
+        },
+        {
+          "isin": "US1273871087",
+          "name": "Cadence Design",
+          "weight": 0.09,
+          "symbol": "CDNS"
+        },
+        {
+          "isin": "US4869171078",
+          "name": "Keel Infrastructure Corp",
+          "weight": 0.09,
+          "symbol": "KEEL"
+        },
+        {
+          "isin": "US18915M1071",
+          "name": "Cloudflare",
+          "weight": 0.08,
+          "symbol": "NET"
+        },
+        {
+          "isin": "US64119N6085",
+          "name": "Netskope Inc-Cl A",
+          "weight": 0.08,
+          "symbol": "NTSK"
+        },
+        {
+          "isin": "US6974351057",
+          "name": "Palo Alto Net",
+          "weight": 0.08,
+          "symbol": "PANW"
+        },
+        {
+          "isin": "US7811541090",
+          "name": "Rubrik",
+          "weight": 0.08,
+          "symbol": "RBRK"
+        },
+        {
+          "isin": "US0381692070",
+          "name": "Applied Digital Corp",
+          "weight": 0.07,
+          "symbol": "APLD"
+        },
+        {
+          "isin": "US16935C1099",
+          "name": "Chime Financial Inc-Cl A",
+          "weight": 0.07,
+          "symbol": "CHYM"
+        },
+        {
+          "isin": "US6391931010",
+          "name": "Navan Inc-Cl A",
+          "weight": 0.07,
+          "symbol": "NAVN"
+        },
+        {
+          "isin": "US22788C1053",
+          "name": "CrwdStrik Hldg",
+          "weight": 0,
+          "symbol": "CRWD"
+        },
+        {
+          "isin": "US34959E1091",
+          "name": "Fortinet",
+          "weight": 0,
+          "symbol": "FTNT"
+        }
+      ]
+    },
+    {
+      "title": "Andet / uklassificeret",
+      "slug": "andet",
+      "problem": "Selskaber der endnu ikke har fået et primært NDI-tema i udkastet. Eksponering, ikke anbefaling.",
+      "chain": [],
+      "themeKey": "andet",
+      "count": 68,
+      "weightSum": 11.92,
+      "companies": [
+        {
+          "isin": "US6837121036",
+          "name": "Opendoor Tech",
+          "weight": 0.64,
+          "symbol": "OPEN"
+        },
+        {
+          "isin": "US4330001060",
+          "name": "Hims Hers Health Inc",
+          "weight": 0.56,
+          "symbol": "HIMS"
+        },
+        {
+          "isin": "US91680M1071",
+          "name": "Upstart Hldgs",
+          "weight": 0.49,
+          "symbol": "UPST"
+        },
+        {
+          "isin": "US1508701034",
+          "name": "Celanese Corp",
+          "weight": 0.35,
+          "symbol": "CE"
+        },
+        {
+          "isin": "US3149111086",
+          "name": "Fermi Inc",
+          "weight": 0.31,
+          "symbol": "FRMI"
+        },
+        {
+          "isin": "US6516391066",
+          "name": "Newmont",
+          "weight": 0.31,
+          "symbol": "NEM"
+        },
+        {
+          "isin": "US81758H1068",
+          "name": "Serve Robotics",
+          "weight": 0.31,
+          "symbol": "SERV"
+        },
+        {
+          "isin": "US6877931096",
+          "name": "Oscar Health",
+          "weight": 0.3,
+          "symbol": "OSCR"
+        },
+        {
+          "isin": "CA6979001089",
+          "name": "Pan American Silver Corp",
+          "weight": 0.27,
+          "symbol": "PAAS.TO"
+        },
+        {
+          "isin": "US02927U2087",
+          "name": "American Resources Corp",
+          "weight": 0.27,
+          "symbol": "AREC"
+        },
+        {
+          "isin": "US8485603067",
+          "name": "Spire Global",
+          "weight": 0.27,
+          "symbol": "SPIR"
+        },
+        {
+          "isin": "KYG651631007",
+          "name": "Joby Aviation Inc",
+          "weight": 0.26,
+          "symbol": "JOBY"
+        },
+        {
+          "isin": "US35953D4016",
+          "name": "Fubotv Inc -Class A",
+          "weight": 0.26,
+          "symbol": "FUBO"
+        },
+        {
+          "isin": "US53224K3023",
+          "name": "Lightbridge Corp",
+          "weight": 0.26,
+          "symbol": "LTBR"
+        },
+        {
+          "isin": "US0937121079",
+          "name": "Bloom Energy Corp- A",
+          "weight": 0.25,
+          "symbol": "BE"
+        },
+        {
+          "isin": "US88023B1035",
+          "name": "Tempus AI",
+          "weight": 0.25,
+          "symbol": "TEM"
+        },
+        {
+          "isin": "DE000A161408",
+          "name": "HelloFresh Br",
+          "weight": 0.24,
+          "symbol": "HFG.F"
+        },
+        {
+          "isin": "BG1100003166",
+          "name": "Shelly",
+          "weight": 0.23,
+          "symbol": "SLYG.DE"
+        },
+        {
+          "isin": "CA32076V1031",
+          "name": "First Majestic Silver Corp",
+          "weight": 0.23,
+          "symbol": "AG"
+        },
+        {
+          "isin": "US4227041062",
+          "name": "Hecla Mining Co",
+          "weight": 0.23,
+          "symbol": "HL"
+        },
+        {
+          "isin": "US1921085049",
+          "name": "Coeur Mining Inc",
+          "weight": 0.22,
+          "symbol": "CDE"
+        },
+        {
+          "isin": "US6406551068",
+          "name": "Neovolta Inc",
+          "weight": 0.22,
+          "symbol": "NEOV"
+        },
+        {
+          "isin": "US03214Q1085",
+          "name": "Amprius Technologies Inc",
+          "weight": 0.21,
+          "symbol": "AMPX"
+        },
+        {
+          "isin": "US1491231015",
+          "name": "Caterpillar",
+          "weight": 0.21,
+          "symbol": "CAT"
+        },
+        {
+          "isin": "US83422N1054",
+          "name": "Solid Power Inc",
+          "weight": 0.21,
+          "symbol": "SLDP"
+        },
+        {
+          "isin": "US0517741072",
+          "name": "Aurora Innovtn",
+          "weight": 0.2,
+          "symbol": "AUR"
+        },
+        {
+          "isin": "US74767V1098",
+          "name": "Quantumscape Corp",
+          "weight": 0.2,
+          "symbol": "QS"
+        },
+        {
+          "isin": "CA1366351098",
+          "name": "Canadian Solar Inc",
+          "weight": 0.19,
+          "symbol": "CSIQ"
+        },
+        {
+          "isin": "US83417M1045",
+          "name": "Solaredge Technologies Inc",
+          "weight": 0.18,
+          "symbol": "SEDG"
+        },
+        {
+          "isin": "US8807791038",
+          "name": "Terex Corp",
+          "weight": 0.18,
+          "symbol": "TEX"
+        },
+        {
+          "isin": "US22266M1045",
+          "name": "Coursera",
+          "weight": 0.17,
+          "symbol": "COUR"
+        },
+        {
+          "isin": "US29415C1018",
+          "name": "Eos Energy Enterprises Inc",
+          "weight": 0.17,
+          "symbol": "EOSE"
+        },
+        {
+          "isin": "CA87601F1062",
+          "name": "Tantalus Systems Holding Inc",
+          "weight": 0.16,
+          "symbol": "GRID.TO"
+        },
+        {
+          "isin": "DE000A2LQ884",
+          "name": "AUTO1 Group Br",
+          "weight": 0.15,
+          "symbol": "AG1.DE"
+        },
+        {
+          "isin": "US02451V3096",
+          "name": "American Battery Technology",
+          "weight": 0.15,
+          "symbol": "ABAT"
+        },
+        {
+          "isin": "US6458272050",
+          "name": "Idaho Strategic Resources In",
+          "weight": 0.15,
+          "symbol": "IDR"
+        },
+        {
+          "isin": "US88675P1030",
+          "name": "Tigo Energy Inc",
+          "weight": 0.15,
+          "symbol": "TYGO"
+        },
+        {
+          "isin": "JE00BYVQYS01",
+          "name": "International Workplace Grou",
+          "weight": 0.14,
+          "symbol": "IWG.L"
+        },
+        {
+          "isin": "US46269C1027",
+          "name": "Iridium Communications Inc",
+          "weight": 0.14,
+          "symbol": "IRDM"
+        },
+        {
+          "isin": "US53216B1044",
+          "name": "Lifemd Inc",
+          "weight": 0.14,
+          "symbol": "LFMD"
+        },
+        {
+          "isin": "US65290E1010",
+          "name": "Nextracker Inc-Cl A",
+          "weight": 0.14,
+          "symbol": "NXT"
+        },
+        {
+          "isin": "CH1176493729",
+          "name": "Bachem Holding Ag",
+          "weight": 0.13,
+          "symbol": "BANB.SW"
+        },
+        {
+          "isin": "US8740391003",
+          "name": "Taiwan Semi Sp ADR",
+          "weight": 0.13,
+          "symbol": "TSM"
+        },
+        {
+          "isin": "US3364331070",
+          "name": "First Solar",
+          "weight": 0.12,
+          "symbol": "FSLR"
+        },
+        {
+          "isin": "US68170A1088",
+          "name": "Omada Health Inc",
+          "weight": 0.12,
+          "symbol": "OMDA"
+        },
+        {
+          "isin": "CH0334081137",
+          "name": "Crispr Therapeutics Ag",
+          "weight": 0.11,
+          "symbol": "CRSP"
+        },
+        {
+          "isin": "US72919P2020",
+          "name": "Plug Power Inc",
+          "weight": 0.11,
+          "symbol": "PLUG"
+        },
+        {
+          "isin": "CA7142661031",
+          "name": "Perpetua Resources Corp",
+          "weight": 0.1,
+          "symbol": "PPTA"
+        },
+        {
+          "isin": "US04271T1007",
+          "name": "Array Technologies Inc",
+          "weight": 0.1,
+          "symbol": "ARRY"
+        },
+        {
+          "isin": "US59516C1062",
+          "name": "Microvast Holdings Inc",
+          "weight": 0.1,
+          "symbol": "MVST"
+        },
+        {
+          "isin": "US78397Q1094",
+          "name": "Ses Ai Corp",
+          "weight": 0.1,
+          "symbol": "SES"
+        },
+        {
+          "isin": "US86771W1053",
+          "name": "Sunrun Inc",
+          "weight": 0.1,
+          "symbol": "RUN"
+        },
+        {
+          "isin": "US29355A1079",
+          "name": "Enphase Energy",
+          "weight": 0.09,
+          "symbol": "ENPH"
+        },
+        {
+          "isin": "US4333131039",
+          "name": "Hinge Health Inc",
+          "weight": 0.09,
+          "symbol": "HNGE"
+        },
+        {
+          "isin": "US45826J1051",
+          "name": "Intellia Therapeutics Inc",
+          "weight": 0.09,
+          "symbol": "NTLA"
+        },
+        {
+          "isin": "KYG2584S1012",
+          "name": "Cslm Digital Asset Acqu - A",
+          "weight": 0.08,
+          "symbol": "KOYN"
+        },
+        {
+          "isin": "US09263B2079",
+          "name": "Blacksky Technology Inc",
+          "weight": 0.08,
+          "symbol": "BKSY"
+        },
+        {
+          "isin": "US5502411037",
+          "name": "Lumen Tech",
+          "weight": 0.08,
+          "symbol": "LUMN"
+        },
+        {
+          "isin": "CA0585861085",
+          "name": "Ballard Power Systems Inc",
+          "weight": 0.06,
+          "symbol": "BLDP"
+        },
+        {
+          "isin": "CA28617B6061",
+          "name": "Electrovaya Inc",
+          "weight": 0.05,
+          "symbol": "ELVA"
+        },
+        {
+          "isin": "US2935941078",
+          "name": "Enovix Corp",
+          "weight": 0.05,
+          "symbol": "ENVX"
+        },
+        {
+          "isin": "US82489W1071",
+          "name": "Shoals Technologies Group ",
+          "weight": 0.04,
+          "symbol": "SHLS"
+        },
+        {
+          "isin": "LU2380748603",
+          "name": "Marley Spoon Group",
+          "weight": 0.02,
+          "symbol": "MS1"
+        },
+        {
+          "isin": "CA00288U1066",
+          "name": "Abcellera Biologics Inc",
+          "weight": 0,
+          "symbol": "ABCL"
+        },
+        {
+          "isin": "US6837121291",
+          "name": "Opendoor Tech Warrant Series K",
+          "weight": 0,
+          "symbol": "OPENW"
+        },
+        {
+          "isin": "US6837121374",
+          "name": "Opendoor Tech Warrant Series A",
+          "weight": 0,
+          "symbol": "OPENL"
+        },
+        {
+          "isin": "US6837121457",
+          "name": "Opendoor Tech Warrant Series Z",
+          "weight": 0,
+          "symbol": "OPENZ"
+        },
+        {
+          "isin": "US83571B1008",
+          "name": "Sony Financial Group ADR",
+          "weight": 0,
+          "symbol": "SFGYY"
+        }
+      ]
+    },
+    {
+      "title": "Optik & netværk",
+      "slug": "optik-netvaerk",
+      "problem": "Data skal flyttes: laser, fiber og switches er flaskehalse i datacentre og mellem dem.",
+      "chain": [
+        "Datacenter",
+        "Optik",
+        "Chips"
+      ],
+      "themeKey": "connect",
+      "count": 30,
+      "weightSum": 8.21,
+      "companies": [
+        {
+          "isin": "US55024U1097",
+          "name": "Lumentum Hldngs",
+          "weight": 1.17,
+          "symbol": "LITE"
+        },
+        {
+          "isin": "SE0003917798",
+          "name": "Sivers Semiconductors",
+          "weight": 0.94,
+          "symbol": "SIVE.ST"
+        },
+        {
+          "isin": "US03823U1025",
+          "name": "Applied Optoelectronics Inc",
+          "weight": 0.49,
+          "symbol": "AAOI"
+        },
+        {
+          "isin": "CH0030380734",
+          "name": "Huber + Suhner Ag-Reg",
+          "weight": 0.46,
+          "symbol": "HUBN.SW"
+        },
+        {
+          "isin": "US2193501051",
+          "name": "Corning Inc",
+          "weight": 0.43,
+          "symbol": "GLW"
+        },
+        {
+          "isin": "US5322751042",
+          "name": "Lightwave Logic Inc",
+          "weight": 0.41,
+          "symbol": "LWLG"
+        },
+        {
+          "isin": "US49338L1035",
+          "name": "Keysight Technologies In",
+          "weight": 0.34,
+          "symbol": "KEYS"
+        },
+        {
+          "isin": "GB0006650450",
+          "name": "Oxford Instruments Plc",
+          "weight": 0.33,
+          "symbol": "OXIG.L"
+        },
+        {
+          "isin": "US55405Y1001",
+          "name": "Macom Technology Solutions H",
+          "weight": 0.29,
+          "symbol": "MTSI"
+        },
+        {
+          "isin": "US11135F1012",
+          "name": "Broadcom",
+          "weight": 0.26,
+          "symbol": "AVGO"
+        },
+        {
+          "isin": "US00217D1000",
+          "name": "AST SpaceMobile",
+          "weight": 0.25,
+          "symbol": "ASTS"
+        },
+        {
+          "isin": "US0126531013",
+          "name": "Albemarle",
+          "weight": 0.24,
+          "symbol": "ALB"
+        },
+        {
+          "isin": "US1638511089",
+          "name": "Chemours Co/The",
+          "weight": 0.24,
+          "symbol": "CC"
+        },
+        {
+          "isin": "KYG3323L1005",
+          "name": "Fabrinet",
+          "weight": 0.23,
+          "symbol": "FN"
+        },
+        {
+          "isin": "CA15101Q2071",
+          "name": "Celestica",
+          "weight": 0.22,
+          "symbol": "CLS.TO"
+        },
+        {
+          "isin": "CA50077N1024",
+          "name": "Kraken Robotics Inc",
+          "weight": 0.21,
+          "symbol": "PNG.V"
+        },
+        {
+          "isin": "US1717793095",
+          "name": "Ciena Corp",
+          "weight": 0.2,
+          "symbol": "CIEN"
+        },
+        {
+          "isin": "US83443Q1031",
+          "name": "Solstice Adv Materials Inc",
+          "weight": 0.18,
+          "symbol": "SOLS"
+        },
+        {
+          "isin": "CA64046G1063",
+          "name": "Neo Performance Materials In",
+          "weight": 0.17,
+          "symbol": "NEO.TO"
+        },
+        {
+          "isin": "US19247G1076",
+          "name": "Coherent",
+          "weight": 0.17,
+          "symbol": "COHR"
+        },
+        {
+          "isin": "US68236H2040",
+          "name": "Ondas Holdings Inc",
+          "weight": 0.15,
+          "symbol": "ONDS"
+        },
+        {
+          "isin": "US4663131039",
+          "name": "Jabil Inc",
+          "weight": 0.14,
+          "symbol": "JBL"
+        },
+        {
+          "isin": "FR0010313833",
+          "name": "Arkema",
+          "weight": 0.11,
+          "symbol": "AKE.PA"
+        },
+        {
+          "isin": "US0320951017",
+          "name": "Amphenol",
+          "weight": 0.1,
+          "symbol": "APH"
+        },
+        {
+          "isin": "US8010561020",
+          "name": "Sanmina Corp",
+          "weight": 0.1,
+          "symbol": "SANM"
+        },
+        {
+          "isin": "GB00BS3DYQ52",
+          "name": "Raspberry PI",
+          "weight": 0.09,
+          "symbol": "RPI.L"
+        },
+        {
+          "isin": "US00218A1051",
+          "name": "Asp Isotopes Inc",
+          "weight": 0.08,
+          "symbol": "ASPI"
+        },
+        {
+          "isin": "US17275R1023",
+          "name": "Cisco Systems",
+          "weight": 0.08,
+          "symbol": "CSCO"
+        },
+        {
+          "isin": "US55306N1046",
+          "name": "Mks Instruments Inc",
+          "weight": 0.07,
+          "symbol": "MKSI"
+        },
+        {
+          "isin": "SG9999000020",
+          "name": "Flex Ltd",
+          "weight": 0.06,
+          "symbol": "FLEX"
+        }
+      ]
+    },
+    {
+      "title": "Fysisk tech",
+      "slug": "fysisk-tech",
+      "problem": "Robotik, elbiler og fysisk produktion kobler software til den virkelige verden.",
+      "chain": [
+        "Energi",
+        "Fysisk tech",
+        "Software"
+      ],
+      "themeKey": "physical",
+      "count": 23,
+      "weightSum": 7.03,
+      "companies": [
+        {
+          "isin": "US88160R1014",
+          "name": "Tesla",
+          "weight": 0.77,
+          "symbol": "TSLA"
+        },
+        {
+          "isin": "DE0006450000",
+          "name": "Lpkf Laser & Electronics Se",
+          "weight": 0.62,
+          "symbol": "LPK.DE"
+        },
+        {
+          "isin": "US73933G2021",
+          "name": "Power Solutions Internationa",
+          "weight": 0.55,
+          "symbol": "PSIX"
+        },
+        {
+          "isin": "US46982L1089",
+          "name": "Jacobs Solutions",
+          "weight": 0.43,
+          "symbol": "J"
+        },
+        {
+          "isin": "US3453708600",
+          "name": "Ford Motor",
+          "weight": 0.41,
+          "symbol": "F"
+        },
+        {
+          "isin": "US60471A1016",
+          "name": "Mirion Technologies Inc",
+          "weight": 0.37,
+          "symbol": "MIR"
+        },
+        {
+          "isin": "US3434121022",
+          "name": "Fluor Corp",
+          "weight": 0.35,
+          "symbol": "FLR"
+        },
+        {
+          "isin": "US87151X1019",
+          "name": "Symbotic",
+          "weight": 0.34,
+          "symbol": "SYM"
+        },
+        {
+          "isin": "US1999081045",
+          "name": "Comfort Systems Usa Inc",
+          "weight": 0.3,
+          "symbol": "FIX"
+        },
+        {
+          "isin": "US2310211063",
+          "name": "Cummins",
+          "weight": 0.29,
+          "symbol": "CMI"
+        },
+        {
+          "isin": "US74164F1030",
+          "name": "Primoris Services Corp",
+          "weight": 0.28,
+          "symbol": "PRIM"
+        },
+        {
+          "isin": "US34354P1057",
+          "name": "Flowserve Corp",
+          "weight": 0.26,
+          "symbol": "FLS"
+        },
+        {
+          "isin": "US37045V1008",
+          "name": "General Motors Co",
+          "weight": 0.25,
+          "symbol": "GM"
+        },
+        {
+          "isin": "US45073V1089",
+          "name": "Itt Inc",
+          "weight": 0.24,
+          "symbol": "ITT"
+        },
+        {
+          "isin": "US50202M1027",
+          "name": "Li Auto Sp ADS",
+          "weight": 0.24,
+          "symbol": "LI"
+        },
+        {
+          "isin": "US67079K1007",
+          "name": "Nuscale Power Corp",
+          "weight": 0.22,
+          "symbol": "SMR"
+        },
+        {
+          "isin": "US74762E1029",
+          "name": "Quanta Services",
+          "weight": 0.22,
+          "symbol": "PWR"
+        },
+        {
+          "isin": "US76954A1034",
+          "name": "Rivian Automotive Inc",
+          "weight": 0.21,
+          "symbol": "RIVN"
+        },
+        {
+          "isin": "US36828A1016",
+          "name": "Ge Vernova Inc",
+          "weight": 0.19,
+          "symbol": "GEV"
+        },
+        {
+          "isin": "US55405W1045",
+          "name": "Myr Group Inc/Delaware",
+          "weight": 0.16,
+          "symbol": "MYRG"
+        },
+        {
+          "isin": "US3687361044",
+          "name": "Generac Holdings Inc",
+          "weight": 0.15,
+          "symbol": "GNRC"
+        },
+        {
+          "isin": "US8592411016",
+          "name": "Sterling Infrastructure Inc",
+          "weight": 0.13,
+          "symbol": "STRL"
+        },
+        {
+          "isin": "US63010H1086",
+          "name": "Nano Nuclear Energy Inc",
+          "weight": 0.05,
+          "symbol": "NNE"
+        }
+      ]
+    },
+    {
+      "title": "Compute",
+      "slug": "compute",
+      "problem": "Beregningskraft (GPU/CPU/acceleratorer og hukommelse) afgør, hvor hurtigt modeller og tjenester kan køre.",
+      "chain": [
+        "Chips",
+        "Compute",
+        "Software"
+      ],
+      "themeKey": "compute",
+      "count": 22,
+      "weightSum": 6.93,
+      "companies": [
+        {
+          "isin": "FR0013227113",
+          "name": "Soitec",
+          "weight": 0.85,
+          "symbol": "SOI.PA"
+        },
+        {
+          "isin": "US67066G1040",
+          "name": "Nvidia",
+          "weight": 0.75,
+          "symbol": "NVDA"
+        },
+        {
+          "isin": "US78392B1070",
+          "name": "SK Hynix",
+          "weight": 0.65,
+          "symbol": "HY9H.F"
+        },
+        {
+          "isin": "US7960508882",
+          "name": "Samsung Electronics",
+          "weight": 0.61,
+          "symbol": "SMSN.IL"
+        },
+        {
+          "isin": "IL0010823792",
+          "name": "Tower Semicon In",
+          "weight": 0.55,
+          "symbol": "TSEM"
+        },
+        {
+          "isin": "US15675D1037",
+          "name": "Cerebras Systems",
+          "weight": 0.48,
+          "symbol": "CBRS"
+        },
+        {
+          "isin": "US5951121038",
+          "name": "Micron Technology",
+          "weight": 0.31,
+          "symbol": "MU"
+        },
+        {
+          "isin": "US74766W1080",
+          "name": "Quantum Computing Inc",
+          "weight": 0.3,
+          "symbol": "QUBT"
+        },
+        {
+          "isin": "US26740W1099",
+          "name": "D-Wave Quantum Inc",
+          "weight": 0.29,
+          "symbol": "QBTS"
+        },
+        {
+          "isin": "JP3236330001",
+          "name": "Kioxia Holdings",
+          "weight": 0.28,
+          "symbol": "285A.T"
+        },
+        {
+          "isin": "US80004C2008",
+          "name": "Sandisk Corp",
+          "weight": 0.28,
+          "symbol": "SNDK"
+        },
+        {
+          "isin": "US9581021055",
+          "name": "Western Digital",
+          "weight": 0.26,
+          "symbol": "WDC"
+        },
+        {
+          "isin": "IE00BKVD2N49",
+          "name": "Seagate Hldgs",
+          "weight": 0.25,
+          "symbol": "STX"
+        },
+        {
+          "isin": "US76655K1034",
+          "name": "Rigetti Computing Inc",
+          "weight": 0.25,
+          "symbol": "RGTI"
+        },
+        {
+          "isin": "US86800U3023",
+          "name": "Super Micro Computer Inc",
+          "weight": 0.22,
+          "symbol": "SMCI"
+        },
+        {
+          "isin": "US91532F1021",
+          "name": "Unusual Machines Inc /Us",
+          "weight": 0.18,
+          "symbol": "UMAC"
+        },
+        {
+          "isin": "US68247W1099",
+          "name": "One Stop Systems Inc",
+          "weight": 0.14,
+          "symbol": "OSS"
+        },
+        {
+          "isin": "US0404132054",
+          "name": "Arista Networks Inc",
+          "weight": 0.1,
+          "symbol": "ANET"
+        },
+        {
+          "isin": "US24703L2025",
+          "name": "Dell Tech",
+          "weight": 0.1,
+          "symbol": "DELL"
+        },
+        {
+          "isin": "US46222L1089",
+          "name": "IonQ",
+          "weight": 0.04,
+          "symbol": "IONQ"
+        },
+        {
+          "isin": "US0079031078",
+          "name": "Advanced Micro D",
+          "weight": 0.03,
+          "symbol": "AMD"
+        },
+        {
+          "isin": "US0378331005",
+          "name": "Apple",
+          "weight": 0.01,
+          "symbol": "AAPL"
+        }
+      ]
+    },
+    {
+      "title": "Energi",
+      "slug": "energi",
+      "problem": "Uden strøm ingen compute. Energi og power er en fysisk flaskehals for AI-udbygningen.",
+      "chain": [
+        "Energi",
+        "Datacenter",
+        "Compute"
+      ],
+      "themeKey": "energy",
+      "count": 15,
+      "weightSum": 6.31,
+      "companies": [
+        {
+          "isin": "US21873S1087",
+          "name": "Coreweave Inc-Cl A",
+          "weight": 0.9,
+          "symbol": "CRWV"
+        },
+        {
+          "isin": "US34379V1035",
+          "name": "Fluence Energy Inc",
+          "weight": 0.81,
+          "symbol": "FLNC"
+        },
+        {
+          "isin": "US05614L2097",
+          "name": "Babcock & Wilcox",
+          "weight": 0.6,
+          "symbol": "BW"
+        },
+        {
+          "isin": "US35834F1049",
+          "name": "T1 Energy Inc",
+          "weight": 0.58,
+          "symbol": "TE"
+        },
+        {
+          "isin": "US83418M1036",
+          "name": "Solaris Energy Infrastructur",
+          "weight": 0.54,
+          "symbol": "SEI"
+        },
+        {
+          "isin": "US74347M1080",
+          "name": "Propetro Holding Corp",
+          "weight": 0.51,
+          "symbol": "PUMP"
+        },
+        {
+          "isin": "NL0009805522",
+          "name": "Nebius Group Nv",
+          "weight": 0.5,
+          "symbol": "NBIS"
+        },
+        {
+          "isin": "AU0000185993",
+          "name": "Iris Energy",
+          "weight": 0.49,
+          "symbol": "IREN"
+        },
+        {
+          "isin": "US65339F1012",
+          "name": "NextEra Energy",
+          "weight": 0.39,
+          "symbol": "NEE"
+        },
+        {
+          "isin": "NL0015002Q12",
+          "name": "Terra Innovatum Global Nv",
+          "weight": 0.28,
+          "symbol": "NKLR"
+        },
+        {
+          "isin": "US8425871071",
+          "name": "Southern Co/The",
+          "weight": 0.28,
+          "symbol": "SO"
+        },
+        {
+          "isin": "US92840M1027",
+          "name": "Vistra Corp",
+          "weight": 0.14,
+          "symbol": "VST"
+        },
+        {
+          "isin": "US02156V1098",
+          "name": "Oklo Inc",
+          "weight": 0.12,
+          "symbol": "OKLO"
+        },
+        {
+          "isin": "US87422Q1094",
+          "name": "Talen Energy Corp",
+          "weight": 0.12,
+          "symbol": "TLN"
+        },
+        {
+          "isin": "US8814541020",
+          "name": "Terrestrial Energy Inc",
+          "weight": 0.05,
+          "symbol": "IMSR"
+        }
+      ]
+    },
+    {
+      "title": "Energiressourcer",
+      "slug": "energiressourcer",
+      "problem": "Råstoffer og ressourcer understøtter energi- og elektronikforsyningen.",
+      "chain": [
+        "Energiressourcer",
+        "Energi",
+        "Chips"
+      ],
+      "themeKey": "energy-resources",
+      "count": 25,
+      "weightSum": 5.58,
+      "companies": [
+        {
+          "isin": "US2057683029",
+          "name": "Comstock Resources Inc",
+          "weight": 0.58,
+          "symbol": "CRK"
+        },
+        {
+          "isin": "US9115491030",
+          "name": "United States Antimony Corp",
+          "weight": 0.44,
+          "symbol": "UAMY"
+        },
+        {
+          "isin": "US15643U1043",
+          "name": "Centrus Energy Corp-Class A",
+          "weight": 0.43,
+          "symbol": "LEU"
+        },
+        {
+          "isin": "US03674X1063",
+          "name": "Antero Resources Corp",
+          "weight": 0.41,
+          "symbol": "AR"
+        },
+        {
+          "isin": "US26884L1098",
+          "name": "Eqt",
+          "weight": 0.41,
+          "symbol": "EQT"
+        },
+        {
+          "isin": "US1651677353",
+          "name": "Expand Energy Corp",
+          "weight": 0.37,
+          "symbol": "EXE"
+        },
+        {
+          "isin": "CA8265991023",
+          "name": "Sigma Lithium Corp",
+          "weight": 0.32,
+          "symbol": "SGML"
+        },
+        {
+          "isin": "US5533681012",
+          "name": "Mp Materials Corp",
+          "weight": 0.26,
+          "symbol": "MP"
+        },
+        {
+          "isin": "CA6544846091",
+          "name": "Niocorp Developments Ltd",
+          "weight": 0.23,
+          "symbol": "NB"
+        },
+        {
+          "isin": "AU000000LYC6",
+          "name": "Lynas Rare",
+          "weight": 0.2,
+          "symbol": "LYC.AX"
+        },
+        {
+          "isin": "VGG2662B1031",
+          "name": "Critical Metals Corp",
+          "weight": 0.2,
+          "symbol": "CRML"
+        },
+        {
+          "isin": "CA53681J1030",
+          "name": "Lithium Americas Corp",
+          "weight": 0.18,
+          "symbol": "LAC"
+        },
+        {
+          "isin": "US91733P1075",
+          "name": "Usa Rare Earth Inc",
+          "weight": 0.18,
+          "symbol": "USAR"
+        },
+        {
+          "isin": "CA2926717083",
+          "name": "Energy Fuels Inc",
+          "weight": 0.17,
+          "symbol": "EFR.TO"
+        },
+        {
+          "isin": "CA0203987072",
+          "name": "Almonty Industries Inc",
+          "weight": 0.15,
+          "symbol": "ALM"
+        },
+        {
+          "isin": "CA8536061010",
+          "name": "Standard Lithium Ltd",
+          "weight": 0.13,
+          "symbol": "SLI"
+        },
+        {
+          "isin": "CA89621C1059",
+          "name": "Trilogy Metals Inc",
+          "weight": 0.13,
+          "symbol": "TMQ"
+        },
+        {
+          "isin": "US46578C1080",
+          "name": "Ivanhoe Electric Inc / Us",
+          "weight": 0.13,
+          "symbol": "IE"
+        },
+        {
+          "isin": "CA8765111064",
+          "name": "Taseko Mines (Trekor Metals)",
+          "weight": 0.12,
+          "symbol": "TGB"
+        },
+        {
+          "isin": "CA14071L1085",
+          "name": "Capstone Copper Corp",
+          "weight": 0.11,
+          "symbol": "CS.TO"
+        },
+        {
+          "isin": "US35671D8570",
+          "name": "Freeport McMoRan",
+          "weight": 0.11,
+          "symbol": "FCX"
+        },
+        {
+          "isin": "CA87261Y1060",
+          "name": "Tmc The Metals Co Inc",
+          "weight": 0.1,
+          "symbol": "TMC"
+        },
+        {
+          "isin": "CA66510M2040",
+          "name": "Northern Dynasty Minerals",
+          "weight": 0.08,
+          "symbol": "NAK"
+        },
+        {
+          "isin": "US84265V1052",
+          "name": "Southern Copper Corp",
+          "weight": 0.08,
+          "symbol": "SCCO"
+        },
+        {
+          "isin": "CA2960061091",
+          "name": "Ero Copper Corp",
+          "weight": 0.06,
+          "symbol": "ERO"
+        }
+      ]
+    },
+    {
+      "title": "SpaceTech",
+      "slug": "spacetech",
+      "problem": "Opsendelser og satellitter udvider infrastrukturen uden for jordens overflade.",
+      "chain": [
+        "Space",
+        "Connect",
+        "Compute"
+      ],
+      "themeKey": "space",
+      "count": 18,
+      "weightSum": 4.38,
+      "companies": [
+        {
+          "isin": "US85529M1045",
+          "name": "Starfighters Space Inc",
+          "weight": 0.52,
+          "symbol": "FJET"
+        },
+        {
+          "isin": "US5901061003",
+          "name": "Merlin Inc",
+          "weight": 0.44,
+          "symbol": "MRLN"
+        },
+        {
+          "isin": "US05605H1005",
+          "name": "Bwx Technologies Inc",
+          "weight": 0.39,
+          "symbol": "BWXT"
+        },
+        {
+          "isin": "US4859241048",
+          "name": "Karman Holdings Inc",
+          "weight": 0.33,
+          "symbol": "KRMN"
+        },
+        {
+          "isin": "GB00B63H8491",
+          "name": "Rolls-Royce Hldg",
+          "weight": 0.32,
+          "symbol": "RR.L"
+        },
+        {
+          "isin": "US31816X1063",
+          "name": "Firefly Aerospace Inc",
+          "weight": 0.3,
+          "symbol": "FLY"
+        },
+        {
+          "isin": "US75776W1036",
+          "name": "Redwire Corp",
+          "weight": 0.27,
+          "symbol": "RDW"
+        },
+        {
+          "isin": "US9870841007",
+          "name": "York Space Systems Inc",
+          "weight": 0.25,
+          "symbol": "YSS"
+        },
+        {
+          "isin": "US4432011082",
+          "name": "Howmet Aerspc",
+          "weight": 0.23,
+          "symbol": "HWM"
+        },
+        {
+          "isin": "US7731211089",
+          "name": "Rocket Lab Corp",
+          "weight": 0.21,
+          "symbol": "RKLB"
+        },
+        {
+          "isin": "US80401C1009",
+          "name": "Satellogic Inc",
+          "weight": 0.17,
+          "symbol": "SATL"
+        },
+        {
+          "isin": "US92892B1035",
+          "name": "Voyager Technologies Inc",
+          "weight": 0.17,
+          "symbol": "VOYG"
+        },
+        {
+          "isin": "CA55293N1096",
+          "name": "Mda Space Ltd",
+          "weight": 0.16,
+          "symbol": "MDA.TO"
+        },
+        {
+          "isin": "US4202011056",
+          "name": "Hawkeye 360 Inc",
+          "weight": 0.16,
+          "symbol": "HAWK"
+        },
+        {
+          "isin": "US46125A1007",
+          "name": "Intuitive Machines Inc",
+          "weight": 0.15,
+          "symbol": "LUNR"
+        },
+        {
+          "isin": "US03945R1023",
+          "name": "Archer Aviation Inc",
+          "weight": 0.14,
+          "symbol": "ACHR"
+        },
+        {
+          "isin": "US72703X1063",
+          "name": "Planet Labs",
+          "weight": 0.09,
+          "symbol": "PL"
+        },
+        {
+          "isin": "US0094221068",
+          "name": "Airo Group Holdings Inc",
+          "weight": 0.08,
+          "symbol": "AIRO"
+        }
+      ]
+    }
+  ]
+}

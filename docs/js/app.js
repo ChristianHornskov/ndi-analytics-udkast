@@ -555,7 +555,7 @@ function renderPortefolje(root) {
     <h1>Beholdninger · ${fund.short}</h1>
     <p class="lede">Forsinket snapshot, pr. ${fmtDate(fund.positionsAsOf || DATA.portfolio.asOf)} (offentlig Fundmarket-rapport). Ikke dagsaktuel.</p>
     ${weightProfileNote(fund)}
-    <p class="band">Segmenter viser eksponering, ikke en anbefaling. <a href="temaer.html?fund=${state.fund}">Se tema-oversigt →</a></p>
+    <p class="band">Segmenter viser eksponering, ikke en anbefaling. <a href="temaer.html?fund=${state.fund}">Se tema-oversigt →</a> Temaer mærket <span class="badge badge-draft">forslag</span> afventer NDI-gennemgang.</p>
     ${fundToolbar()}
     ${renderLivscyklus(fund)}
     <p class="band" style="font-size:11px">Ingen P/S, P/E eller kursafkast pr. aktie i denne version. Tema-tags er udkast.</p>
@@ -590,7 +590,7 @@ function positionsTable(list, fund) {
   </tr></thead><tbody>${list.map((p) => `<tr>
     <td><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}">${p.name}</a> ${weightSpark(p.isin, fund.id)}<br><small style="color:var(--muted)">${p.isin}</small></td>
     <td>${(p.weight ?? 0).toFixed(2).replace('.', ',')}</td>
-    <td>${tagsFor(p, DATA.multiTags).map((t) => `<a class="tag" href="tema.html?slug=${encodeURIComponent(t)}&fund=${fund.id}">${daTheme(t)}</a>`).join(' ')}</td>
+    <td>${tagsFor(p, DATA.multiTags).map((t) => `<a class="tag" href="tema.html?slug=${encodeURIComponent(t)}&fund=${fund.id}">${daTheme(t)}</a>`).join(' ')}${p.themeStatus==='forslag'?' <span class="badge badge-draft" title="forslag, afventer gennemgang">forslag</span>':''}</td>
   </tr>`).join('')}</tbody></table></div>`, 'Rul til siden for flere kolonner.') +
   `<p style="font-size:11px;color:var(--muted);margin-top:8px">Kun vægt og tema. De små søjler ved navnet er selskabets <strong style="color:var(--text)">vægt i fonden</strong> pr. kvartalssnapshot frem til ${fmtDate(MONTHS?.cutoff || fund.positionsAsOf)}. Ikke aktiekurs. Ingen kursafkast pr. aktie i v1. Beholdning er forsinket.</p>`;
 }
