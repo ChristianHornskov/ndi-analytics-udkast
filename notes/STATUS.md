@@ -629,3 +629,13 @@ Meddelelsen er dateret 10. september 2026, efter beholdningen pr. 1. juni 2026. 
 Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Aurora Black står. Kæden og arkivet viser datoen. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `a4aff5e` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:08 CEST. York koordinerer opsendelseslogistik og sender ikke selv raketten op. Ikke færdig.**
+
+Forsiden skriver, at selskabet designer og fremstiller satellitplatforme, og at det koordinerer opsendelseslogistik fra design til levering. Det er ikke det samme som selv at sende raketten op. Selskabet driver ikke et datacenter i rummet. Et tal om tusindvis af satellitter i kredsløb er ikke taget med, fordi siden ikke siger, at York ejer dem. Et tæller-tal for kapacitet er heller ikke taget med. Ingen `reviewedAt`. Blurben og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Opsendelseslogistik står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `dbf15e9` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

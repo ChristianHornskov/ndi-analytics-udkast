@@ -121,6 +121,8 @@ Satellogic skriver, at satellitterne hedder NewSat. Forsiden sætter fuld drift 
 
 MDA skrev 10. september 2026, at selskabet præsenterede Aurora Black, en softwaredefineret satellit til forsvarskommunikation. Datoen ligger efter beholdningen pr. 2026-06-01. Præsentationen er ikke en konstellation i drift. Chorus er stadig omtalt, før konstellationen er sendt op. Sætningen om høj volumen i produktionen er ikke taget med. Det er ikke et datacenter.
 
+York skriver, at selskabet designer og fremstiller satellitplatforme, og at det koordinerer opsendelseslogistik fra design til levering. Logistikken er ikke det samme som selv at sende raketten op. Selskabet driver ikke et datacenter i rummet. Formuleringen om tusindvis af satellitter i kredsløb er ikke taget med, fordi siden ikke siger, at York ejer dem. Et opdelt tæller-tal på forsiden er ikke læst som en kapacitet.
+
 ## År til dato på periodesiden
 
 `ytdReturn` i `data.js` bruger sidste punkt i året før som udgangspunkt, ikke 1. januar. For PMINDI pr. 2026-10-14 er det 2025-12-31, ikke 2026-01-02. `periode.html` viser den samme dato i "Fra → til". Kalenderår bruger samme base (`calendarYearReturns`).

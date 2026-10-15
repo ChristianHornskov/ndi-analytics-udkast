@@ -1301,15 +1301,15 @@
   "US9870841007": {
    "name": "York Space Systems",
    "theme": "space",
-   "summary": "Bygger satellitplatforme til offentlige og private kunder. Platformen bærer kundens udstyr. Selskabet driver ikke et datacenter i rummet.",
+   "summary": "Bygger satellitplatforme til offentlige og private kunder. Selskabet skriver, at det også koordinerer opsendelseslogistik. Det er ikke det samme som selv at sende raketten op, og selskabet driver ikke et datacenter i rummet.",
    "watch": "Levering af satellitter og kundernes programmer.",
    "source": "https://www.yorkspacesystems.com/",
-   "products": "Satellitplatforme.",
+   "products": "Satellitplatforme og opsendelseslogistik.",
    "customers": "Offentlige og private kunder, der skal bruge en satellit.",
    "role": "Bygger satellitten. Driver den ikke som en forbrugertjeneste.",
    "narrative": [
-    "York bygger satellitplatforme til kunder. Platformen bærer kundens udstyr.",
-    "Selskabet driver ikke et datacenter i rummet."
+    "York skriver, at selskabet designer og fremstiller satellitplatforme, og at platformen bærer kundens udstyr. Siden siger også, at selskabet koordinerer opsendelseslogistik fra design til levering.",
+    "Logistikken er ikke det samme som selv at sende raketten op. Selskabet driver ikke et datacenter i rummet."
    ],
    "narrativeSources": [
     {
