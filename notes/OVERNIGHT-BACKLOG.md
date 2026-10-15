@@ -1,23 +1,30 @@
 # Overnight backlog (Christian: v1 too thin — non-stop until morning)
 
-Compliance locks (do not regress): notes only in `/notes`; delayed holdings ≤2026-06-01; no daily movers; PMINDIAKK no returns; PMINDI no 1m/3m; no unverified per-stock YTD/1Y/P/S/P/E; no fake 52w drawdown; no Nasdaq; no invented context narratives.
+Compliance locks: notes only `/notes`; holdings ≤2026-06-01; no daily movers; AKK no returns; PMINDI no 1m/3m; no unverified stock figures; no Nasdaq; context = udbytte only.
 
-## Cycle queue
-1. [done] Theme deep pages (`tema.html?slug=`)
-2. [done] Education hub (`laer/`)
-3. [done] Glossary expansion + inline ? links
-4. [done] Fund drawdown page
-5. [done] Context chart: ONLY documented udbytte events
-6. [done] Comparison tool PMINDI vs PMINDIAKK
-7. [done] Sådan investerer du flow
-8. [done] Newsletter archive concept
-9. [done] Period deep links `periode.html`
-10. [done] Company index A–Z + search
-11. [next] Print/PDF-friendly CSS polish + theme hub index page
-12. [next] Embed polish + more CTAs; AKK gate already in
-13. [next] Multi-tag themes (Tesla energy+physical) where justified
-14. [next] Mobile polish pass vs Jesper mockup
-15. [next] More IDEAS uniqueness (0→1): richer værdikæde, tema landing grid, FAQ search, shareable filter URLs polish
-16. [next] Company deep: month history from company-months.json (weight over time) if honest
-17. [next] UX-review.md at 22/00/02/04/06 CEST
-18. Never report done — keep cycling
+## Done tonight (cycles 1–6a)
+1. Theme deep + temaer hub
+2. Education lær/ + FAQ search + udbytte-vs-akk
+3. Glossary expansion
+4. Fund drawdown + recovery
+5. Context udbytte on chart + period pages
+6. PMINDI vs AKK compare
+7. Sådan investerer du
+8. Newsletter archive stubs
+9. Period deep pages
+10. Company A–Z + weight-over-time + profiles
+11. Print CSS + print btn
+12. Embed CTA + 1m/3m hidden
+13. Multi-tag overlay
+14. Mobile polish + empty states + og tags
+15. Livscyklus strip, CSV, sparklines (weight), keyboard, focus-trap, aria-live
+16. 100k example + omkostningsboks + Det-skete stub
+17. Sidekort, unique-metrics placeholders
+
+## Still queue (keep going — never done)
+- UX-review.md @ 22 / 00 / 02 / 04 / 06 CEST
+- More unique metrics for 3–5 core names
+- Deeper værdikæde interaction
+- Dialog focus return polish / APG tabs
+- Cross-review pass Claude↔Grok continuous
+- Any SPEC stub still open (E1 deeper narratives only if sourced)
