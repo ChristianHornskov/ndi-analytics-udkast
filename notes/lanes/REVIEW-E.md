@@ -41,3 +41,11 @@ Vistra-tallene er forsiden den 16. oktober 2026, ikke et NDI-regnestykke. 433 MW
 Projekter og rum-navne har "Kort fortalt" uden gennemgangsdato. Chromium på alle atten. Thacker Pass er opførelse med selskabets mål sent i 2027, ikke fuld drift. Standard Lithium har et demonstrationsanlæg, ikke en stor mine. Chorus er ikke sendt op i teksten. QSE-5 er ikke masseproduktion. Kurser fra Standard Lithiums side er udeladt. Tesla og T1 er urørt, fordi de har `reviewedAt`.
 
 Åbent: gasproducenterne, udstyrsnavnene Babcock, Cummins, Generac, Primoris og MYR, og de miner, der faktisk producerer. AI-compute-leddet er urørt.
+
+## Gas, net og miner · 2026-10-16 ~00:30 CEST
+
+Nitten "Kort fortalt" uden gennemgangsdato. Chromium ved 375 px, ingen vandret scroll, ingen konsolfejl. Kurser fra forsiderne er ikke skrevet ind.
+
+Sigma: `sigmalithium.com` viste den 16. oktober 2026 et foretagende om metalliske anoder. Det passer ikke med profilens lithiumkoncentrat i Brasilien. Kilden er flyttet til `https://sigmalithiumcorp.com/`, som er Sigma Lithium Corp. Babcock, T1 og Tesla er urørt på grund af `reviewedAt`.
+
+Åbent: gennemlæs blurbs i energi- og rumkæden mod de nye grænser. AI-compute-leddet er urørt.

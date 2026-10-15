@@ -317,3 +317,21 @@ NioCorp, Critical Metals, USA Rare Earth og Hawkeye 360 gav ikke en læsbar side
 Tjekket i Chromium på de atten sider. AI-udkast er med. Ingen gennemgangsdato. Ingen konsolfejl. Ingen vandret scroll ved 375 px.
 
 **Push:** `lane-E` @ `d4c8d57` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 ~00:30 CEST. Gas, netbyggere og miner i drift har Kort fortalt. Ikke færdig.**
+
+Nitten profiler uden `reviewedAt`. AI-udkast bliver.
+
+Gas: Comstock i Haynesville, Antero med Marcellus, EQT og Expand Energy. De står på elproduktion som brændsel, ikke som metalminer. Cummins og Generac laver motorer og generatorer og er ikke elselskaber. Primoris og MYR Group bygger nettet og ejer ikke strømmen.
+
+Miner: MP Materials ved Mountain Pass, United States Antimony, Energy Fuels (uran, ikke et kraftværk), Almonty (Panasqueira og Los Santos som miner, Valtreixal som projekt), Taseko/Gibraltar, siden bruger også navnet Trekor Metals, Freeport, Ero med Caraíba og Tucumã som kobber og Furnas som projekt. Lynas, Capstone og Southern Copper holdt sig til den gamle profil, fordi siden ikke gav en læsbar tekst. Kurser på Expand Energy og Taseko er ikke taget med.
+
+Sigma Lithium: `sigmalithium.com` beskrev anoder, ikke koncentrat i Brasilien. Kilden er nu `https://sigmalithiumcorp.com/`. Teksten siger lithiumkoncentrat, ikke et batteriselskab.
+
+Babcock & Wilcox, T1 Energy og Tesla har gennemgangsdato og er urørt. Af de unikke navne i energi- og rumkæden mangler kun de tre en "Kort fortalt".
+
+Tjekket i Chromium ved 375 px på de nitten sider, Sigma med. AI-udkast er med. Ingen gennemgangsdato. Ingen konsolfejl. Ingen vandret scroll. Ingen kurstegn i de nye afsnit.
+
+**Push:** `lane-E` @ `23415ee` er pushet efter precheck. Første forsøg blev afvist, andet gik igennem. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

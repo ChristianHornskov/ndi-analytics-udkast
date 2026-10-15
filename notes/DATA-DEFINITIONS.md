@@ -65,6 +65,10 @@ Samme nat også på Southern Company, Vistra, Talen, Bloom, Centrus, BWX Technol
 
 Senere samme nat: Terrestrial Energy, NioCorp, Critical Metals, Lithium Americas, USA Rare Earth, Standard Lithium, Trilogy, Ivanhoe Electric, Intuitive Machines, Howmet, Redwire, York, MDA, Satellogic, Hawkeye 360, QuantumScape, Eos og Solaris. Thacker Pass er under opførelse efter selskabets egen tekst, med mål om industriel skala sent i 2027, og er ikke fuld drift. Standard Lithium har et demonstrationsanlæg i drift efter selskabets tekst, ikke en stor mine. Chorus hos MDA er omtalt før opsendelse. QSE-5 hos QuantumScape er ikke masseproduktion. Tesla og T1 Energy har `reviewedAt` og er ikke rørt.
 
+Gasproducenterne Comstock, Antero, EQT og Expand Energy står på elproduktion, fordi gassen er brændsel, ikke fordi de er metalminer. Cummins og Generac står der som motorer og generatorer, ikke som elselskaber. Primoris og MYR Group står på elnet, fordi de bygger det. MP Materials, Gibraltar hos Taseko, Freeport, Ero og de andre kobbernavne er miner i beskrivelsen, hvor siden selv skelner mellem drift og projekt. Almonty nævner Panasqueira og Los Santos som miner og Valtreixal som projekt.
+
+Sigma Lithiums kilde er rettet fra `sigmalithium.com` til `https://sigmalithiumcorp.com/`. Den første side beskrev den 16. oktober 2026 et andet foretagende om metalliske lithiumanoder. Den nye side er Sigma Lithium Corp og lithiumkoncentrat i Brasilien. Babcock & Wilcox, T1 Energy og Tesla har `reviewedAt` og er ikke ændret.
+
 ## År til dato på periodesiden
 
 `ytdReturn` i `data.js` bruger sidste punkt i året før som udgangspunkt, ikke 1. januar. For PMINDI pr. 2026-10-14 er det 2025-12-31, ikke 2026-01-02. `periode.html` viser den samme dato i "Fra → til". Kalenderår bruger samme base (`calendarYearReturns`).

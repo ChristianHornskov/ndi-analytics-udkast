@@ -640,7 +640,17 @@
    "source": "https://www.comstockresources.com/",
    "products": "Naturgas.",
    "customers": "Købere af gas til industri, kraftværker og videre distribution.",
-   "role": "Brændsel til elproduktion, ikke et kraftværk."
+   "role": "Brændsel til elproduktion, ikke et kraftværk.",
+   "narrative": [
+    "Comstock Resources producerer naturgas i Haynesville, i Louisiana og i det østlige Texas.",
+    "I kæden står selskabet på elproduktion, fordi gassen er brændsel til kraftværker. Det er ikke en metalmine."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.comstockresources.com/"
+    }
+   ]
   },
   "US9115491030": {
    "name": "United States Antimony",
@@ -650,7 +660,17 @@
    "source": "https://www.usantimony.com/",
    "products": "Antimon og forarbejdede produkter.",
    "customers": "Industrikunder.",
-   "role": "Råstof, ikke elproduktion."
+   "role": "Råstof, ikke elproduktion.",
+   "narrative": [
+    "United States Antimony udvinder og forarbejder antimon i USA.",
+    "Metallet bruges blandt andet i legeringer. Selskabet er ikke et kraftværk."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.usantimony.com/"
+    }
+   ]
   },
   "US15643U1043": {
    "name": "Centrus Energy",
@@ -680,7 +700,17 @@
    "source": "https://www.anteroresources.com/",
    "products": "Naturgas og tilknyttede produkter.",
    "customers": "Købere af gas.",
-   "role": "Brændsel til elproduktion."
+   "role": "Brændsel til elproduktion.",
+   "narrative": [
+    "Antero Resources producerer naturgas og flydende gasprodukter i Appalachia. Selskabet nævner Marcellus.",
+    "I kæden står selskabet på elproduktion, fordi gassen er brændsel. Det er ikke en metalmine."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.anteroresources.com/"
+    }
+   ]
   },
   "US26884L1098": {
    "name": "EQT",
@@ -690,7 +720,17 @@
    "source": "https://www.eqt.com/",
    "products": "Naturgas.",
    "customers": "Købere af gas.",
-   "role": "Brændsel til elproduktion."
+   "role": "Brændsel til elproduktion.",
+   "narrative": [
+    "EQT producerer naturgas i Appalachia i USA.",
+    "I kæden står selskabet på elproduktion, fordi gassen er brændsel. Det er ikke en metalmine."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.eqt.com/"
+    }
+   ]
   },
   "US1651677353": {
    "name": "Expand Energy",
@@ -700,14 +740,34 @@
    "source": "https://www.expandenergy.com/",
    "products": "Naturgas.",
    "customers": "Købere af gas.",
-   "role": "Brændsel til elproduktion."
+   "role": "Brændsel til elproduktion.",
+   "narrative": [
+    "Expand Energy producerer naturgas i USA. Selskabet er dannet ved en sammenlægning af Chesapeake og Southwestern.",
+    "I kæden står selskabet på elproduktion, fordi gassen er brændsel. Det er ikke en metalmine."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.expandenergy.com/"
+    }
+   ]
   },
   "CA8265991023": {
    "name": "Sigma Lithium",
    "theme": "energy-resources",
    "summary": "Arbejder med produktion af lithiumkoncentrat i Brasilien. Lithium bruges i batterier.",
    "watch": "Drift af anlægget, lithiumpriser og kvaliteten af koncentratet.",
-   "source": "https://www.sigmalithium.com/",
+   "source": "https://sigmalithiumcorp.com/",
+   "narrative": [
+    "Sigma Lithium producerer lithiumkoncentrat i Brasilien. Selskabet skriver, at det bruges i batterier.",
+    "Det er råstof til batterier, ikke et batteriselskab og ikke et kraftværk."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://sigmalithiumcorp.com/"
+    }
+   ],
    "products": "Lithiumkoncentrat.",
    "customers": "Videreforarbejdning til batterimaterialer.",
    "role": "Råstof til batterier, ikke et færdigt lagersystem."
@@ -720,7 +780,17 @@
    "source": "https://mpmaterials.com/",
    "products": "Sjældne jordarter og produkter længere fremme i kæden.",
    "customers": "Industri, der bruger sjældne jordarter i magneter og elektronik.",
-   "role": "Råstof til elektronik, motorer og forsvar. Ikke et chipværk."
+   "role": "Råstof til elektronik, motorer og forsvar. Ikke et chipværk.",
+   "narrative": [
+    "MP Materials udvinder sjældne jordarter ved Mountain Pass i Californien og arbejder med magneter.",
+    "Det er en mine med videre forarbejdning i denne beskrivelse, ikke et projekt uden drift."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://mpmaterials.com/"
+    }
+   ]
   },
   "CA6544846091": {
    "name": "NioCorp",
@@ -770,7 +840,17 @@
    "source": "https://lynasrareearths.com/",
    "products": "Sjældne jordarter.",
    "customers": "Industrikunder.",
-   "role": "Råstof og forarbejdning."
+   "role": "Råstof og forarbejdning.",
+   "narrative": [
+    "Lynas udvinder sjældne jordarter og forarbejder dem. Minen ligger i Australien.",
+    "Det er råstof og forarbejdning, ikke et kraftværk."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://lynasrareearths.com/"
+    }
+   ]
   },
   "CA53681J1030": {
    "name": "Lithium Americas",
@@ -820,7 +900,17 @@
    "source": "https://www.energyfuels.com/",
    "products": "Urankoncentrat og forarbejdning af andre mineraler.",
    "customers": "Selskaber, der laver reaktorbrændsel, og industrikunder.",
-   "role": "Råstof til atomkraft."
+   "role": "Råstof til atomkraft.",
+   "narrative": [
+    "Energy Fuels producerer og forarbejder uran i USA og arbejder også med sjældne jordarter.",
+    "Det er brændsel og råstof, ikke et kraftværk."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.energyfuels.com/"
+    }
+   ]
   },
   "CA0203987072": {
    "name": "Almonty Industries",
@@ -830,7 +920,17 @@
    "source": "https://almonty.com/",
    "products": "Wolfram.",
    "customers": "Industrikunder.",
-   "role": "Råstof til industri, ikke elproduktion."
+   "role": "Råstof til industri, ikke elproduktion.",
+   "narrative": [
+    "Almonty arbejder med wolfram. Selskabet nævner minerne Panasqueira og Los Santos og projekter ved siden af, blandt andet Valtreixal.",
+    "Wolfram er et metal til hårde legeringer. Selskabet er ikke et kraftværk."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://almonty.com/"
+    }
+   ]
   },
   "US46578C1080": {
    "name": "Ivanhoe Electric",
@@ -900,7 +1000,17 @@
    "source": "https://www.tasekomines.com/",
    "products": "Kobber.",
    "customers": "Smelteværker og industrikunder.",
-   "role": "Råstof til elnet og elektronik."
+   "role": "Råstof til elnet og elektronik.",
+   "narrative": [
+    "Taseko driver kobberminen Gibraltar i Canada. Forsiden bruger også navnet Trekor Metals.",
+    "Gibraltar er kaldt en mine på siden. De andre navne på listen er ikke kaldt miner i denne tekst."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.tasekomines.com/"
+    }
+   ]
   },
   "CA14071L1085": {
    "name": "Capstone Copper",
@@ -910,7 +1020,17 @@
    "source": "https://capstonecopper.com/",
    "products": "Kobber.",
    "customers": "Smelteværker og industrikunder.",
-   "role": "Råstof."
+   "role": "Råstof.",
+   "narrative": [
+    "Capstone driver kobberminedrift.",
+    "Det er en mine i denne beskrivelse, ikke et kraftværk."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://capstonecopper.com/"
+    }
+   ]
   },
   "US35671D8570": {
    "name": "Freeport-McMoRan",
@@ -920,7 +1040,17 @@
    "source": "https://www.fcx.com/",
    "products": "Kobber og andre metaller fra samme miner.",
    "customers": "Industrikunder.",
-   "role": "Råstof til elnet, elektronik og byggeri."
+   "role": "Råstof til elnet, elektronik og byggeri.",
+   "narrative": [
+    "Freeport-McMoRan udvinder kobber, blandt andet i Amerika og Indonesien.",
+    "Det er en mine i drift i denne beskrivelse. Kobberet bruges blandt andet i elnettet. Selskabet er ikke et elselskab."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.fcx.com/"
+    }
+   ]
   },
   "CA87261Y1060": {
    "name": "The Metals Company",
@@ -970,7 +1100,17 @@
    "source": "https://www.southerncoppercorp.com/",
    "products": "Kobber.",
    "customers": "Industrikunder.",
-   "role": "Råstof."
+   "role": "Råstof.",
+   "narrative": [
+    "Southern Copper driver kobberminedrift i Peru og Mexico.",
+    "Det er en mine i denne beskrivelse, ikke et kraftværk."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.southerncoppercorp.com/"
+    }
+   ]
   },
   "CA2960061091": {
    "name": "Ero Copper",
@@ -980,7 +1120,17 @@
    "source": "https://www.ero.com/",
    "products": "Kobber.",
    "customers": "Industrikunder.",
-   "role": "Råstof."
+   "role": "Råstof.",
+   "narrative": [
+    "Ero driver minedrift i Brasilien. Siden nævner driften Caraíba, Tucumã og Xavantina og projektet Furnas.",
+    "Caraíba og Tucumã er kobber. Furnas er ikke beskrevet som en mine i drift."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.ero.com/"
+    }
+   ]
   },
   "US85529M1045": {
    "name": "Starfighters Space",
@@ -1324,7 +1474,17 @@
    "source": "https://investor.cummins.com/",
    "products": "Motorer, generatorer og komponenter.",
    "customers": "Lastbilproducenter, industri og kunder, der skal bruge strøm på stedet.",
-   "role": "Udstyr til elproduktion i lille skala, ikke et elselskab."
+   "role": "Udstyr til elproduktion i lille skala, ikke et elselskab.",
+   "narrative": [
+    "Cummins fremstiller motorer og generatoranlæg til køretøjer, industri og strøm.",
+    "I kæden står selskabet på elproduktion, fordi generatorerne kan lave strøm. Det er ikke et elselskab."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets investorkside",
+     "url": "https://investor.cummins.com/"
+    }
+   ]
   },
   "US67079K1007": {
    "name": "NuScale Power",
@@ -1394,7 +1554,17 @@
    "source": "https://www.myrgroup.com/",
    "products": "El-entrepriser.",
    "customers": "Elselskaber og store elforbrugere.",
-   "role": "Bygger nettet."
+   "role": "Bygger nettet.",
+   "narrative": [
+    "MYR Group bygger ledninger og transformerstationer i USA og Canada.",
+    "Selskabet ejer ikke strømmen. I kæden står det på elnet."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.myrgroup.com/"
+    }
+   ]
   },
   "US3687361044": {
    "name": "Generac",
@@ -1404,7 +1574,17 @@
    "source": "https://www.generac.com/",
    "products": "Generatorer og tilhørende udstyr.",
    "customers": "Husholdninger, installatører og virksomheder.",
-   "role": "Lokal reservestrøm, ikke et elnet."
+   "role": "Lokal reservestrøm, ikke et elnet.",
+   "narrative": [
+    "Generac fremstiller reservegeneratorer til hjem og virksomheder.",
+    "De laver strøm, når nettet svigter. Selskabet er ikke et elselskab og ikke en mine."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.generac.com/"
+    }
+   ]
   },
   "US74164F1030": {
    "name": "Primoris Services",
@@ -1414,7 +1594,17 @@
    "source": "https://www.primoriscorp.com/",
    "products": "Anlægsarbejde på energiinfrastruktur.",
    "customers": "Elselskaber, energiselskaber og industri.",
-   "role": "Bygger infrastrukturen. Ejer den ikke."
+   "role": "Bygger infrastrukturen. Ejer den ikke.",
+   "narrative": [
+    "Primoris bygger infrastruktur til el, energi og rørledninger.",
+    "Selskabet producerer ikke selv strømmen. I kæden står det på elnet."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.primoriscorp.com/"
+    }
+   ]
   },
   "US63010H1086": {
    "name": "Nano Nuclear Energy",
