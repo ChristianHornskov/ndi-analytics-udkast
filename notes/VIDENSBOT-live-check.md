@@ -138,3 +138,7 @@ Sider: ideer, kort, om-data, invester, risici, ndi-perspektiv, laer/*.
 - Ingen påstand om fondens egen volatilitet eller beregning. Skyderen er tænkte tal («viser reglen, ikke fondens egen beregning»). Klasse 5 → «20–30 %» er en regelgengivelse, ikke en måling.
 - «Hvad klassen ikke siger»: ikke garanti, siger ikke hvor dybt det kan gå (→ Fald fra top), fanger ikke koncentration/valuta (→ risici, ordliste), klasse 1 ≠ risikofri. Ingen egnethedsvurdering: «siger ikke noget om, hvorvidt fonden passer til dig. Læs KID».
 - Rettelse før commit (~01:05 wall-clock): klasse 6 hedder nu «næsthøjeste» (PRIIPs-standardteksten: «the second-highest risk class»), ikke «høj». Kolonnen hedder «Beskrivelse i KID», og noten siger «følger standardteksten i KID, forenklet». Den uverificerede sætning «Fondens KID siger middel-høj» er fjernet. «Mindst 5 år» er nu bekræftet mod fund-meta.json (`recommended_holding_years: 5`).
+
+## lane-C · ~01:25 16/10 · ordliste 91 + invester
+- Nye poster er beskrivende (hvad temaet rummer, opgjort efter branche i portfolio.json PMINDI), ingen vurdering af temaernes udsigter. Platforme er «det største tema målt på vægt» pr. 1. jun 2026, regnet efter for begge klasser (16,0 % / 14,7 %).
+- invester.html flodsystem-sætningen genbruger ordlyden fra saadan-taenker-vi.html («når én flaskehals letter, flytter presset videre … i stedet for at gætte»). Ingen forudsigelse.

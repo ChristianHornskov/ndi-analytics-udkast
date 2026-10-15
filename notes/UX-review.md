@@ -234,3 +234,10 @@ Ingen nye.
 - Ordliste: SRI og Udsving linker til hinanden og til siden. FAQ 16 korte svar.
 - Test (8763) 375/1280 på 6 sider: 0 konsolfejl, ingen h-overflow, 0 døde links/ankre. Skyder kontrolleret ved 0/3/15/20/25/30/40/80/100 (grænser 20 → 5, 30 → 6, 80 → 7).
 - Obs: tabellens fjerde kolonne (bjælker) skjules under 640 px. Tre kolonner er nok på mobil.
+
+## ~01:25 CEST lane-C checkpoint (Claude) — risikoklasse committet, ordliste 91, invester
+- Risikoklasse-siden lå ucommittet fra forrige cyklus. Gennemset før commit: klasse 6 hed «høj", men standardteksten i KID er «næsthøjeste». Rettet. Den uverificerede sætning «Fondens KID siger …» er fjernet, og «mindst 5 år» er tjekket mod fund-meta.json.
+- `om-data.html`: de sidste interne ord ud af synlig tekst («v1» ×6 → «udkastet», «peak→bund» → «fra top til bund», «heuristik», «drawdown-siden» → «Fald fra top», 8 bindestreger brugt som tankestreg). «Max» forklaret, så det matcher kortet på drawdown.html.
+- Ordliste 87 → 91: depot (ordet bruges på invester.html), platforme, software og energiressourcer (de tre temaer manglede, og platforme er det største målt på vægt i begge klasser pr. 1. jun 2026: 16,0 % / 14,7 %). Tællere 18 · 16 · 30 · 27 passer.
+- `invester.html`: «risikoklasse 5 af 7» → lær/risikoklasse; «Passer en bred teknologifond?» forklarer nu flodsystemet i én sætning (→ ordliste).
+- Test 375/1280 på invester, om-data, kort, FAQ, risikoklasse: 0 konsolfejl, ingen h-overflow, 0 døde ankre; FAQ-søgning rammer «depot», «platforme», «energiressourcer».

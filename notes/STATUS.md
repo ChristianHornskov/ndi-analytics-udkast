@@ -400,3 +400,11 @@ HEAD `b35518b`. Visual-variety request shipped + reviewed. MADS værdikæde/quan
 - Notes: HANDOFF trin 8/9, UX-review, VIDENSBOT-live-check (bed om bekræftelse af KID-ordene for klasse 1–7).
 - Test: 8763, 375/1280 på 6 sider: 0 konsolfejl, ingen h-overflow, 0 døde links/ankre; screenshots gennemset. precheck: se push.
 - Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + invester/ndi-perspektiv sprogtjek.
+
+## Fra Claude lane-C (risikoklasse committet + ordliste 91 + sprogrens) · ~01:25 CEST 16/10
+- Commit 0bcde18: lær/risikoklasse (lå ucommittet). Rettet før commit: klasse 6 «næsthøjeste», uverificeret KID-citat fjernet, «mindst 5 år» tjekket mod fund-meta.json.
+- `om-data.html`: «v1», «peak→bund», «heuristik» og bindestreger brugt som tankestreg ud af synlig tekst. Ordliste 87 → 91 (depot, platforme, software, energiressourcer). Tællere 18 · 16 · 30 · 27.
+- `invester.html`: link til risikoklasse, flodsystem i én sætning. `kort.html`: 91.
+- **Til data-lane:** tankestreg/semikolon i unique-metrics-hints (IDEAS).
+- Test: 8763, 375/1280: 0 konsolfejl, ingen h-overflow, 0 døde ankre. precheck: se push.
+- Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + ideer.html tiende form eller lær-sidernes «Se også» mod ordlisten.
