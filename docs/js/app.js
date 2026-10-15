@@ -528,17 +528,21 @@ function renderLivscyklus(fund) {
       <text class="life-n" x="${px(st.t)}" y="${H - 8}" text-anchor="middle">${list.length ? `${list.length} selskaber` : '-'}</text>`;
   }).join('');
   const summary = stages.map((st) => `${st.label}: ${byStage[st.id].length}`).join(', ');
-  return `<section class="panel life-strip">
-    <div class="life-head"><h2>Livscyklus</h2><span class="badge badge-draft">UDKAST</span></div>
+  const empty = classified === 0;
+  const curve = `<div class="life-body">
     <p class="life-intro">Pædagogisk model fra bogen: selskaber bevæger sig typisk fra præ-revenue mod value. Det er <strong>ikke en officiel NDI-rating</strong> og ikke en anbefaling.</p>
     <div class="life-scroll"><svg class="life-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="Livscykluskurve. ${summary}. ${unknown} ikke klassificeret.">
       <path class="life-curve" d="${path}"/>${nodes}
     </svg></div>
     <ol class="life-legend" aria-hidden="true">${stages.map((st) => `<li><strong>${st.label}</strong><span>${byStage[st.id].length || '-'}</span></li>`).join('')}</ol>
-    <p class="life-note">${classified
-      ? `${classified} af ${fund.positions.length} selskaber er placeret (manuel klassifikation). ${unknown} mangler.`
-      : `Ingen af fondens ${fund.positions.length} selskaber er klassificeret endnu, så kurven viser kun faserne. Prikker for selskaber kommer, når porteføljeholdet har klassificeret dem manuelt.`}
-      <a href="laer/livscyklus.html">Læs om livscyklus →</a></p>
+  </div>`;
+  const foot = empty
+    ? `Ingen af fondens ${fund.positions.length} selskaber er klassificeret endnu. Prikker kommer, når porteføljeholdet har klassificeret dem manuelt.`
+    : `${classified} af ${fund.positions.length} selskaber er placeret (manuel klassifikation). ${unknown} mangler.`;
+  return `<section class="panel life-strip${empty ? ' is-empty' : ''}">
+    <div class="life-head"><h2>Livscyklus</h2><span class="badge badge-draft">UDKAST</span></div>
+    ${curve}
+    <p class="life-note">${foot} <a href="laer/livscyklus.html">Læs om livscyklus →</a></p>
   </section>`;
 }
 

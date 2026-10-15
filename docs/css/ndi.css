@@ -147,7 +147,10 @@ table.data a:hover{color:var(--cyan);text-decoration:underline}
 .door:focus-visible{outline:2px solid var(--focus);outline-offset:3px}
 .metric strong{font-variant-numeric:tabular-nums}
 .cal .cell{font-variant-numeric:tabular-nums}
-.nav-text{background:none;padding:6px 0;font-weight:300;color:var(--muted);font-size:13px}.nav-text:hover{color:var(--text)}
+/* Følg med / Risici skal ligne de andre nav-links. --muted på #050a0f er ca. 10,5:1.
+   font-weight 300 fik de to knapper til at ligne disabled. */
+.nav-text{background:none;padding:6px 0;font-weight:400;color:var(--muted);font-size:inherit}
+.nav-text:hover,.nav-text:focus-visible{color:var(--text)}
 
 /* ---- Merge fra docs/b/css (Jesper-mockup), 2026-10-15 · Claude ----
    Kun tilføjelser/overstyringer; eksisterende klassenavne (.panel .door .control .cal .metrics .outline-btn …) bevaret. */
@@ -515,3 +518,25 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
 .spark-legend{display:flex;align-items:flex-start;gap:8px;margin:12px 0 6px;font-size:12px;color:var(--muted)}
 .spark-legend strong{color:var(--text);font-weight:500}
 .spark-legend .spark-key{margin:3px 0 0;flex:0 0 auto}
+
+/* UX 22:00 SHOULD 1: «Åbn screener» på selve Udforsk er den side, man allerede er på. */
+#app:has(#q) .toolbar a[href*="view=udforsk"]{display:none}
+
+/* UX 22:00 SHOULD 2: tom kurve (ingen klassificerede prikker) fylder ikke skærmen.
+   Noderne bliver i DOM, så smoke kan tælle faserne. Kurven kommer tilbage, når nogen er klassificeret. */
+.life-strip.is-empty .life-body{display:none}
+.life-strip.is-empty{padding-top:16px;padding-bottom:16px}
+.life-strip.is-empty .life-head{margin-bottom:0}
+.life-strip.is-empty .life-note{margin:8px 0 0}
+
+/* UX 22:00 MUST 5: én scroll-model under 560 px.
+   Siden ruller lodret. Tabellen ruller kun vandret, så Tema kan nås.
+   max-height + overflow:auto gav en indre lodret scroll inde i den vandrette. */
+@media (max-width:560px){
+  .table-wrap{
+    max-height:none;
+    overflow-x:auto;
+    overflow-y:hidden;
+    overscroll-behavior-x:contain;
+  }
+}
