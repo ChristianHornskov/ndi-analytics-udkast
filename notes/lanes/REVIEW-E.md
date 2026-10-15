@@ -175,3 +175,7 @@ Nyttelast, mellemtrin og raketmotorer står i sætninger. Affyringsudstyr er ikk
 ## Sigma · 2026-10-16 01:12 CEST
 
 Jequitinhonha-dalen står. Produktionen startede 17. april 2023, før beholdningen. Only og de fem nul-løfter er ikke kopieret. AI-udkast uden gennemgangsdato. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Antero · 2026-10-16 01:13 CEST
+
+Eksport af naturgas og LPG er med. "One of the largest" er ikke kopieret. Stadig brændsel, ikke en metalmine. AI-udkast uden gennemgangsdato. Kæden viser sætningen. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.

@@ -699,14 +699,14 @@
   "US03674X1063": {
    "name": "Antero Resources",
    "theme": "energy-resources",
-   "summary": "Producerer naturgas og flydende gasprodukter i Appalachia i USA.",
+   "summary": "Producerer naturgas og flydende gasprodukter i Appalachia i USA. Selskabet skriver, at det leverer naturgas og LPG til eksport.",
    "watch": "Gaspriser og produktion fra felterne.",
    "source": "https://www.anteroresources.com/",
-   "products": "Naturgas og tilknyttede produkter.",
+   "products": "Naturgas, flydende gasprodukter og LPG til eksport.",
    "customers": "Købere af gas.",
    "role": "Brændsel til elproduktion.",
    "narrative": [
-    "Antero Resources producerer naturgas og flydende gasprodukter i Appalachia. Selskabet nævner Marcellus.",
+    "Antero Resources producerer naturgas og flydende gasprodukter i Appalachia. Selskabet nævner Marcellus og skriver, at det leverer naturgas og LPG til eksport.",
     "I kæden står selskabet på elproduktion, fordi gassen er brændsel. Det er ikke en metalmine."
    ],
    "narrativeSources": [

@@ -669,3 +669,13 @@ Forsiden nævner Jequitinhonha-dalen. Selskabet skrev 17. april 2023, at produkt
 Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Jequitinhonha står. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `ee131c0` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:13 CEST. Antero skriver, at det leverer naturgas og LPG til eksport. Ikke færdig.**
+
+Forsiden siger, at selskabet er et gasselskab i Appalachia, og at det leverer naturgas og LPG til eksport. Marcellus stod i forvejen. Gassen er brændsel, ikke en metalmine. Formuleringen om at være blandt de største er ikke taget med. Ingen `reviewedAt`. Blurben under elproduktion siger eksporten.
+
+Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. LPG og eksport står. Kæden viser sætningen. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `a234654` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
