@@ -231,6 +231,34 @@
     .qz-score:empty{display:none}
     .risk{margin-top:16px;border:1px solid var(--line);border-left:3px solid var(--yellow);border-radius:12px;padding:12px 14px;background:linear-gradient(180deg,#14201f,#0b171d)}
     .risk h3{font-size:15px;color:var(--yellow);margin:0 0 4px}
+    .tr{margin:18px 0 6px}
+    .tr h3{font-size:15px;color:var(--cyan);margin:0 0 4px}
+    .tr-wrap{display:grid;gap:12px;margin-top:10px}
+    @media(min-width:900px){.tr-wrap{grid-template-columns:minmax(0,5fr) minmax(0,6fr);align-items:start}}
+    .tr-svg svg{display:block;width:100%;height:auto;max-width:520px}
+    .tr-svg .th{fill:none;stroke-width:2;opacity:.45;transition:opacity .15s,stroke-width .15s;cursor:pointer}
+    .tr-svg .th.ndi{stroke-dasharray:5 4}
+    .tr-svg .th.on{opacity:1;stroke-width:3.5}
+    .tr-svg.dim .th:not(.on){opacity:.12}
+    .tr-svg .nd circle{fill:#0e2027;stroke:#2a4650;stroke-width:1.5}
+    .tr-svg .nd.on circle{stroke:var(--yellow);stroke-width:2.5;fill:#2a2a14}
+    .tr-svg .nd text{fill:var(--text);font-size:12px}
+    .tr-svg .nd .ch{fill:var(--muted);font-size:10px}
+    .tr-svg .nd a{cursor:pointer}
+    .tr-svg .nd a:focus-visible circle{stroke:var(--yellow);stroke-width:2.5}
+    .tr-svg .col{fill:var(--muted);font-size:10px;letter-spacing:.6px;text-transform:uppercase}
+    .tr-cards{display:grid;gap:8px}
+    @media(min-width:640px){.tr-cards{grid-template-columns:1fr 1fr}}
+    .tr-card{border:1px solid var(--line);border-left:4px solid var(--c,#2a4650);border-radius:10px;padding:9px 11px;background:#0b171d;font-size:13px;line-height:1.45;color:var(--muted);display:flex;flex-direction:column;gap:5px;outline:none}
+    .tr-card.on,.tr-card:focus-visible{border-color:var(--yellow);border-left-color:var(--c,#2a4650)}
+    .tr-card h4{font-size:13.5px;margin:0;color:var(--text);display:flex;align-items:center;gap:8px}
+    .tr-card h4 .ic{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#16323b;font-size:12px;flex:0 0 auto}
+    .tr-card p{margin:0}
+    .tr-path{font-size:11.5px;color:var(--muted)}
+    .tr-path b{color:var(--text);font-weight:600}
+    .tr-tag{display:inline-block;font-size:10px;letter-spacing:.5px;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:0 6px;margin-left:4px;color:var(--muted)}
+    .tr-tag.ndi{border-color:var(--cyan);color:var(--cyan)}
+    .tr-go{font-size:12px;display:flex;flex-wrap:wrap;gap:4px 12px}
     .rk-grid{display:grid;gap:10px;margin-top:10px}
     @media(min-width:640px){.rk-grid{grid-template-columns:1fr 1fr}}
     @media(min-width:1000px){.rk-grid{grid-template-columns:1fr 1fr 1fr}}
@@ -517,7 +545,8 @@
             <p class="src" style="margin-top:8px"><a href="?kaede=space#sp-trip" data-sec="space:sp-trip">🛰 Følg én satellit fra fabrik til tjeneste, trin for trin →</a></p>
             <p class="src" style="margin-top:4px"><a href="?kaede=space#sp-money" data-sec="space:sp-money">🔁 Hvordan tjener rumkæden penge? Én gang eller løbende →</a></p>
             <p class="src" style="margin-top:4px"><a href="?kaede=space#sp-risk" data-sec="space:sp-risk">⚠ Hvad kan gå galt? Seks usikkerheder og hvor de rammer →</a></p>
-            <p class="src" style="margin-top:4px"><a href="?kaede=space#sp-quiz" data-sec="space:sp-quiz">✓ Tjek dig selv: fem spørgsmål om rumkæden →</a></p>
+            <p class="src" style="margin-top:4px"><a href="?kaede=space#sp-web" data-sec="space:sp-web">🧶 Rummet og de andre kæder: syv tråde til AI, energi, robotik og kvante →</a></p>
+            <p class="src" style="margin-top:4px"><a href="?kaede=space#sp-quiz" data-sec="space:sp-quiz">✓ Tjek dig selv: seks spørgsmål om rumkæden →</a></p>
           </div>
         </div>
         <section class="cost" id="sp-cost" aria-labelledby="sp-cost-h" hidden>
@@ -559,6 +588,15 @@
           <p class="src" id="rk-lede"></p>
           <div class="rk-grid" id="rk-grid"></div>
           <p class="src" id="rk-note" style="margin-top:8px"></p>
+        </section>
+        <section class="tr" id="sp-web" aria-labelledby="tr-h" hidden>
+          <h3 id="tr-h"></h3>
+          <p class="src" id="tr-lede"></p>
+          <div class="tr-wrap">
+            <div class="tr-svg" id="tr-svg"></div>
+            <div class="tr-cards" id="tr-cards"></div>
+          </div>
+          <p class="src" id="tr-note" style="margin-top:8px"></p>
         </section>
         <div class="sp-learn">
           <figure style="margin:0" id="sp-alt">
@@ -1216,6 +1254,77 @@
       return true;
     }
     if (sp) renderRisks(sp.risks, sp.links, ['rk-h', 'rk-lede', 'rk-grid', 'rk-note', 'sp-risk']);
+    // Rummet og de andre kæder: tråde fra rum-led til led i andre kæder (baggrund; én med kilde)
+    (function renderThreads(T) {
+      if (!T?.items?.length) return;
+      const NS = 'http://www.w3.org/2000/svg';
+      const COL = { 'ai-compute': '#9ecfd6', energy: '#f5ee9e', physical: '#c9a0dc', quantum: '#8fd1a8' };
+      const items = T.items.map((x, i) => {
+        const [cid, lid] = x.to.split(':');
+        const ch = pack.chains.find(c => c.id === cid);
+        return { ...x, i, cid, lid, ch, fl: sp.links.find(l => l.id === x.from), dst: ch?.links.find(l => l.id === lid) };
+      }).filter(x => x.fl && x.dst);
+      if (!items.length) return;
+      const left = sp.links.filter(l => items.some(x => x.from === l.id));
+      const chOrder = pack.chains.map(c => c.id);
+      const right = [...new Map(items.map(x => [x.to, x])).values()].sort((a, b) =>
+        chOrder.indexOf(a.cid) - chOrder.indexOf(b.cid) || a.ch.links.indexOf(a.dst) - b.ch.links.indexOf(b.dst));
+      const W = 400, top = 34, rowR = 46, H = top + right.length * rowR;
+      const rowL = (H - top) / left.length;
+      const yL = (id) => top + rowL * (left.findIndex(l => l.id === id) + .5);
+      const yR = (to) => top + rowR * (right.findIndex(x => x.to === to) + .5);
+      const xL = 138, xR = 262;
+      const svg = document.createElementNS(NS, 'svg');
+      svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+      svg.setAttribute('role', 'group');
+      svg.setAttribute('aria-label', `${T.title}: ${items.length} tråde fra ${left.length} rum-led til ${right.length} led i andre kæder`);
+      let s = `<text class="col" x="${xL + 12}" y="14" text-anchor="end">Rumkæden</text><text class="col" x="${xR - 12}" y="14">Andre kæder</text>`;
+      s += items.map(x => {
+        const y1 = yL(x.from), y2 = yR(x.to), mx = (xL + xR) / 2;
+        return `<path class="th${x.kind === 'ndi' ? ' ndi' : ''}" data-i="${x.i}" stroke="${COL[x.cid] || '#9ecfd6'}" d="M${xL + 12} ${y1} C${mx} ${y1} ${mx} ${y2} ${xR - 12} ${y2}"><title>${esc(x.fl.short || x.fl.label)} → ${esc(x.dst.short || x.dst.label)}: ${esc(x.k)}</title></path>`;
+      }).join('');
+      s += left.map(l => `<g class="nd" data-from="${esc(l.id)}"><a href="#lk-${esc(l.id)}" data-open="${esc(l.id)}" aria-label="${esc(l.label)}. Åbn rum-leddet"><circle cx="${xL}" cy="${yL(l.id)}" r="12"/><text x="${xL}" y="${yL(l.id) + 4}" text-anchor="middle" aria-hidden="true">${l.icon}</text><text x="${xL - 18}" y="${yL(l.id) + 4}" text-anchor="end">${esc(l.short || l.label)}</text></a></g>`).join('');
+      s += right.map(x => `<g class="nd" data-to="${esc(x.to)}"><a href="?kaede=${esc(x.cid)}#lk-${esc(x.lid)}" data-hop="${esc(x.to)}" aria-label="${esc(x.dst.label)} i ${esc(x.ch.title)}. Hop til leddet"><circle cx="${xR}" cy="${yR(x.to)}" r="12" style="stroke:${COL[x.cid]}"/><text x="${xR}" y="${yR(x.to) + 4}" text-anchor="middle" aria-hidden="true">${x.dst.icon}</text><text x="${xR + 18}" y="${yR(x.to)}">${esc(x.dst.short || x.dst.label)}</text><text class="ch" x="${xR + 18}" y="${yR(x.to) + 13}">${esc(x.ch.title)}</text></a></g>`).join('');
+      svg.innerHTML = s;
+      const host = document.getElementById('tr-svg');
+      host.appendChild(svg);
+      document.getElementById('tr-h').textContent = T.title;
+      document.getElementById('tr-lede').textContent = T.lede || '';
+      const cards = document.getElementById('tr-cards');
+      cards.innerHTML = items.map(x => `<article class="tr-card" data-i="${x.i}" tabindex="0" style="--c:${COL[x.cid] || '#2a4650'}">`
+        + `<h4><span class="ic" aria-hidden="true">${x.icon}</span>${esc(x.k)}<span class="tr-tag${x.kind === 'ndi' ? ' ndi' : ''}">${x.kind === 'ndi' ? 'NDI' : 'baggrund'}</span></h4>`
+        + `<p class="tr-path"><b>${esc(x.fl.short || x.fl.label)}</b> (rum) → <b>${esc(x.dst.short || x.dst.label)}</b> (${esc(x.ch.title)})</p>`
+        + `<p>${esc(x.t)}</p>`
+        + (x.src ? `<p class="src">Kilde: ${esc(x.src)}</p>` : '')
+        + `<p class="tr-go"><a href="#lk-${esc(x.from)}" data-open="${esc(x.from)}">Åbn rum-leddet</a><a href="?kaede=${esc(x.cid)}#lk-${esc(x.lid)}" data-hop="${esc(x.to)}">Hop til ${esc(x.dst.short || x.dst.label)} →</a>`
+        + (x.quote ? `<a href="#kap-rum" data-goto="space">Se citatet med kilde →</a>` : '')
+        + (x.more ? `<a href="?kaede=${esc(x.more.sec.split(':')[0])}#${esc(x.more.sec.split(':')[1])}" data-sec="${esc(x.more.sec)}">${esc(x.more.k)} →</a>` : '')
+        + `</p></article>`).join('');
+      document.getElementById('tr-note').textContent = T.note || '';
+      // test = hvilke tråde der lyser: én tråd (kort eller linje) eller alle tråde fra/til en knude
+      const on = (test) => {
+        const hit = items.filter(x => test && test(x));
+        host.classList.toggle('dim', hit.length > 0);
+        host.querySelectorAll('.th').forEach(p => p.classList.toggle('on', hit.some(x => x.i === +p.dataset.i)));
+        host.querySelectorAll('.nd').forEach(g => g.classList.toggle('on', hit.some(x => g.dataset.from === x.from || g.dataset.to === x.to)));
+        cards.querySelectorAll('.tr-card').forEach(c => c.classList.toggle('on', hit.some(x => x.i === +c.dataset.i)));
+      };
+      const pick = (e) => {
+        const t = e.target.closest('[data-i],[data-from],[data-to]');
+        if (!t) return on(null);
+        if (t.dataset.i != null) { const i = +t.dataset.i; return on(x => x.i === i); }
+        if (t.dataset.from) return on(x => x.from === t.dataset.from);
+        on(x => x.to === t.dataset.to);
+      };
+      [host, cards].forEach(el => {
+        el.addEventListener('mouseover', pick);
+        el.addEventListener('focusin', pick);
+        el.addEventListener('mouseleave', () => on(null));
+        el.addEventListener('focusout', (e) => { if (!el.contains(e.relatedTarget)) on(null); });
+      });
+      host.querySelectorAll('path.th').forEach(p => p.addEventListener('click', () => { const x = items.find(y => y.i === +p.dataset.i); if (x && linkOf(x.cid, x.lid)) go(x.cid, x.lid); }));
+      document.getElementById('sp-web').hidden = false;
+    })(sp?.threads);
     document.getElementById('sp-latency').textContent = sp?.latency || '';
     (function renderAltitudes(items) {
       if (!items?.length) return;

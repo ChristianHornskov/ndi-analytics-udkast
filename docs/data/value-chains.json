@@ -4312,7 +4312,7 @@
     "note": "Opdelingen er vores forenkling og generel baggrund, ikke NDI's klassifikation. Et selskab kan tjene penge på flere måder. Søjlerne er en skitse, ikke tal. Antal er selskaber i den forsinkede beholdning pr. 1. juni 2026, som er tilordnet leddet. Det er ikke en rangering eller en anbefaling."
    },
    "route": {
-    "label": "Rum i otte stop",
+    "label": "Rum i ni stop",
     "lede": "Rum-fanen er lang. Vælg et stop, eller læs oppefra.",
     "stops": [
      {
@@ -4346,6 +4346,12 @@
       "t": "seks usikkerheder"
      },
      {
+      "id": "sp-web",
+      "icon": "🧶",
+      "k": "Andre kæder",
+      "t": "syv tråde"
+     },
+     {
       "id": "sp-alt",
       "icon": "📏",
       "k": "Hvor højt",
@@ -4361,7 +4367,7 @@
       "id": "sp-quiz",
       "icon": "✓",
       "k": "Tjek dig selv",
-      "t": "fem spørgsmål"
+      "t": "seks spørgsmål"
      }
     ]
    },
@@ -4497,7 +4503,7 @@
     "note": "Højderne er generel baggrund. Tal ved leddene er antal selskaber i den forsinkede beholdning, som er tilordnet leddet. Et led kan høre til flere højder, og et selskab kan arbejde i flere. Ikke en rangering og ikke en anbefaling."
    },
    "quiz": {
-    "title": "Tjek dig selv: fem spørgsmål om rumkæden",
+    "title": "Tjek dig selv: seks spørgsmål om rumkæden",
     "lede": "Vælg et svar. Du får en kort forklaring og et link til det sted på siden, hvor det står. Intet gemmes.",
     "items": [
      {
@@ -4559,10 +4565,91 @@
       "why": "Ingen selskaber i den forsinkede beholdning er tilordnet leddet pr. 1. juni 2026. Elon Musks udsagn om SpaceX og compute i rummet er hans påstand, ikke NDI's forventning.",
       "sec": "lk-space-compute",
       "more": "Se leddet"
+     },
+     {
+      "q": "Hvad kører en satellit på, når den er i jordens skygge?",
+      "a": [
+       "Sit batteri",
+       "Strøm sendt op fra jorden",
+       "Ingenting, den slukker"
+      ],
+      "ok": 0,
+      "why": "Solpanelerne giver strøm i solen, og batteriet tager over i skyggen. Derfor hænger rumkæden også sammen med energilagring (baggrund).",
+      "sec": "sp-web",
+      "more": "Rummet og de andre kæder"
      }
     ],
-    "done": "Du har svaret på alle fem.",
+    "done": "Du har svaret på alle seks.",
     "note": "Spørgsmålene er vores egne og skal gøre siden lettere at læse. De tester ikke viden om enkelte selskaber og er ikke en anbefaling."
+   },
+   "threads": {
+    "title": "Rummet og de andre kæder",
+    "lede": "Rumkæden står ikke alene. Her er syv tråde fra et rum-led til et led i de andre kæder. Hold musen over en tråd, eller vælg et kort for at se, hvordan de hænger sammen.",
+    "items": [
+     {
+      "from": "sats",
+      "to": "ai-compute:chipdesign",
+      "icon": "◇",
+      "k": "En satellit er en computer",
+      "t": "En satellit er en lille computer med solpaneler og antenner. Chips i rummet skal tåle stråling og store temperaturskift, så de laves ofte i særlige udgaver.",
+      "kind": "baggrund"
+     },
+     {
+      "from": "sats",
+      "to": "energy:storage",
+      "icon": "🔋",
+      "k": "Batteriet i skyggen",
+      "t": "En satellit lever af solpaneler. Når den flyver gennem jordens skygge, kører den på sit batteri. Samme idé som et batteri, der gemmer solstrøm til aftenen på jorden.",
+      "kind": "baggrund"
+     },
+     {
+      "from": "satcom",
+      "to": "ai-compute:cloud",
+      "icon": "☁",
+      "k": "Cloud ud til skibe og fly",
+      "t": "Satellitinternet bringer cloud-tjenester ud til skibe, fly og steder uden kabel. Data skal stadig behandles i et datacenter på jorden.",
+      "kind": "baggrund"
+     },
+     {
+      "from": "eo",
+      "to": "ai-compute:data",
+      "icon": "▦",
+      "k": "Billeder bliver til data",
+      "t": "Jordobservation giver billeder i store mængder. De bliver først nyttige, når software og AI har læst dem, fx for at se afgrøder, skibe eller skader efter en storm.",
+      "kind": "baggrund"
+     },
+     {
+      "from": "orbit",
+      "to": "physical:robots",
+      "icon": "🤖",
+      "k": "Robotter langt fra mennesker",
+      "t": "Månelandere og robotarme på stationer skal klare sig selv, fordi signalet er længe undervejs. Det er samme opgave som for robotter på jorden: sanse, tænke og handle.",
+      "kind": "baggrund",
+      "more": {
+       "sec": "physical:p-loop",
+       "k": "Sanse, tænke, handle"
+      }
+     },
+     {
+      "from": "space-compute",
+      "to": "ai-compute:datacenter",
+      "icon": "✦",
+      "k": "Datacentre i kredsløb?",
+      "t": "Idéen er at sætte computerkraft i kredsløb, hvor der er sol hele tiden. Mads har gengivet Elon Musks påstand om SpaceX og compute i rummet. Det er Musks udsagn, ikke NDI's forventning og ikke en prognose.",
+      "kind": "ndi",
+      "src": "BLOG 12. oktober 2026",
+      "quote": true
+     },
+     {
+      "from": "satcom",
+      "to": "quantum:q-core",
+      "icon": "⚛",
+      "k": "Kvantenøgler via satellit",
+      "t": "Forskere har sendt kvantenøgler til kryptering mellem jorden og en satellit. Det er forskning og forsøg, ikke en tjeneste, man kan købe i dag.",
+      "kind": "baggrund"
+     }
+    ],
+    "note": "Trådene er faglige sammenhænge og vores udvalg (baggrund), bortset fra tråden om compute i rummet, der har kilde. De er ikke NDI's analyse, ikke en vurdering af enkelte selskaber og ikke en anbefaling. Fælles selskaber mellem kæderne står under \"Broer til andre kæder\" nederst i fanen."
    }
   },
   {

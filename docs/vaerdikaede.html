@@ -148,6 +148,8 @@
  // Usikkerheder pr. kæde (kun hvor siden har sektionen)
  const RISK = { space: 'sp-risk', energy: 'e-risk', physical: 'p-risk', quantum: 'q-risk' };
  const riskA = (c) => c.risks?.items?.length && RISK[c.id] ? `<a class="oc-gl" href="vaerdikaeder.html?kaede=${esc(c.id)}#${RISK[c.id]}"><span aria-hidden="true">⚠</span> Hvad kan gå galt? ${c.risks.items.length} usikkerheder →</a>` : '';
+ // Tråde til andre kæder (kun rum har sektionen)
+ const webA = (c) => c.id === 'space' && c.threads?.items?.length ? `<a class="oc-gl" href="vaerdikaeder.html?kaede=space#sp-web"><span aria-hidden="true">🧶</span> Rummet og de andre kæder: ${c.threads.items.length} tråde →</a>` : '';
  // Tjek dig selv (kun hvor siden har sektionen)
  const QUIZ = { space: 'sp-quiz', energy: 'e-quiz', quantum: 'q-quiz', physical: 'p-quiz' };
  const quizA = (c) => c.quiz?.items?.length && QUIZ[c.id] ? `<a class="oc-gl" href="vaerdikaeder.html?kaede=${esc(c.id)}#${QUIZ[c.id]}"><span aria-hidden="true">✓</span> Tjek dig selv: ${c.quiz.items.length} spørgsmål →</a>` : '';
@@ -156,7 +158,7 @@
  const first = ls[0];
  const cos = new Set(ls.flatMap(l => l.companies.map(x => x.isin))).size;
  const lr = LEARN[c.id]?.(c);
- return `<article class="oc"><span class="oc-ico" aria-hidden="true">${c.icon || first?.icon || '◆'}</span><h3>${esc(c.title)}</h3><p>${esc(firstSentence(c.why))}</p><span class="oc-n">${ls.length} led · ${cos} selskaber pr. ${fmtDate(pack.asOf)}</span>${first ? `<a href="vaerdikaeder.html?kaede=${esc(c.id)}#lk-${esc(first.id)}">Start ved ${esc(first.short || first.label)} →</a>` : ''}${lr ? `<a class="oc-learn" href="vaerdikaeder.html?kaede=${esc(c.id)}#${lr[0]}"><span aria-hidden="true">${lr[1]}</span> ${esc(lr[2])} →</a>` : ''}${riskA(c)}${quizA(c)}${glossA(c)}</article>`;
+ return `<article class="oc"><span class="oc-ico" aria-hidden="true">${c.icon || first?.icon || '◆'}</span><h3>${esc(c.title)}</h3><p>${esc(firstSentence(c.why))}</p><span class="oc-n">${ls.length} led · ${cos} selskaber pr. ${fmtDate(pack.asOf)}</span>${first ? `<a href="vaerdikaeder.html?kaede=${esc(c.id)}#lk-${esc(first.id)}">Start ved ${esc(first.short || first.label)} →</a>` : ''}${lr ? `<a class="oc-learn" href="vaerdikaeder.html?kaede=${esc(c.id)}#${lr[0]}"><span aria-hidden="true">${lr[1]}</span> ${esc(lr[2])} →</a>` : ''}${riskA(c)}${webA(c)}${quizA(c)}${glossA(c)}</article>`;
  }).join('');
 
  // Fem dæmninger → grupper af led (samme dæmninger som på vaerdikaeder.html)
