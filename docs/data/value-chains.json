@@ -1,6 +1,6 @@
 {
   "asOf": "2026-06-01",
-  "note": "Forsinket beholdning. Vægte = eksponering, ikke anbefaling eller bevidst overvægt. Tekst inspireret af NDI ugebreve / Vidensbot (okt 2026).",
+  "note": "Forsinket beholdning. Vægte er eksponering, ikke en anbefaling og ikke en bevidst overvægt. Tekst inspireret af NDI ugebreve og Vidensbot (oktober 2026). I energi- og rumkæden er eksemplerne valgt efter forretning. Samme selskab kan stå på mere end ét led.",
   "philosophy": {
     "lede": "NDI ser teknologi som værdikæder, ikke som de klassiske 11 sektorer. Et selskab kan høre til flere led. Vi kan ikke forudsige, hvilket selskab der vinder, men vi kan følge, hvor i kæden efterspørgslen presser på. Derfor ejer fonden mange selskaber på tværs af hele kæden.",
     "flod": "Vi ser AI-værdikæden som et flodsystem med en række dæmninger. Vandet repræsenterer efterspørgslen, og dæmningerne repræsenterer flaskehalse.",
@@ -53,7 +53,7 @@
     {
       "y": "Knaphed",
       "t": "Energi, wafers, optik",
-      "d": "Fysisk mangel på halvledere, datacentre, transformere, køling, transmission — og frem for alt energi."
+      "d": "Fysisk mangel på halvledere, datacentre, transformere, køling, transmission, og frem for alt energi."
     },
     {
       "y": "Citat",
@@ -1054,62 +1054,179 @@
     {
       "id": "energy",
       "title": "Energi & elektrificering",
-      "why": "AI, robotter og elbiler kræver meget mere strøm. NDI ser energi som den første flaskehals i AI-udbygningen.",
-      "source": "BLOG 30. marts 2026 · 7. juli 2025",
+      "why": "AI, robotter og elbiler kræver meget mere strøm. NDI ser energi som den første flaskehals i AI-udbygningen og som en del af kapløbet om strøm. Eksemplerne er valgt efter forretning, ikke efter den største vægt i temaet.",
+      "source": "BLOG 30. marts 2026 · 7. juli 2025 · 10. august 2026",
+      "exampleRule": "PMINDI pr. 2026-06-01. Et selskab kan stå på mere end ét led. weightSum er summen af de navngivne eksempler, ikke temaets samlede vægt i themes.json.",
+      "omitted": [
+        {
+          "isin": "US21873S1087",
+          "name": "CoreWeave",
+          "reason": "GPU-cloud. I energitemaet på grund af strømforbrug, ikke som kraftværk."
+        },
+        {
+          "isin": "NL0009805522",
+          "name": "Nebius",
+          "reason": "AI-cloud. Samme skel som CoreWeave."
+        },
+        {
+          "isin": "AU0000185993",
+          "name": "IREN",
+          "reason": "Datacentre til AI-cloud og bitcoin-mining. Strømmen er et input, ikke produktet."
+        },
+        {
+          "isin": "US74347M1080",
+          "name": "ProPetro",
+          "reason": "Service til olie- og gasboringer. Ikke elproduktion."
+        },
+        {
+          "isin": "US5901061003",
+          "name": "Merlin",
+          "reason": "Hører til rumtemaet. Se rumkæden."
+        }
+      ],
       "links": [
         {
           "id": "gen",
           "icon": "⚡",
           "label": "Elproduktion",
-          "blurb": "Gas, sol, vind, gasturbiner og producenter tæt på datacentre.",
-          "ndi": "NDI ser energi som den første flaskehals i AI-udbygningen og som del af et strategisk kapløb om elektroner.",
+          "blurb": "Gas, sol, vind, gasturbiner og kraftværker, også anlæg tæt på datacentre. Listen er selskaber, der producerer strøm, leverer brændsel til produktionen eller laver udstyret.",
+          "ndi": "NDI har skrevet om gas, gasturbiner, sol, vind og producenter tæt på datacentre (ugebrev 30. marts 2026). CoreWeave, Nebius og IREN er med i energitemaet som datacentre. De står ikke her. ProPetro laver service til boringer og står ikke her.",
           "themes": [
-            "energy"
+            "energy",
+            "energy-resources",
+            "physical",
+            "andet"
           ],
-          "weightSum": 6.31,
-          "count": 15,
+          "weightSum": 5.41,
+          "count": 16,
           "companies": [
-            {
-              "isin": "US21873S1087",
-              "name": "Coreweave Inc-Cl A",
-              "w": 0.9,
-              "sym": "CRWV",
-              "forslag": false
-            },
-            {
-              "isin": "US34379V1035",
-              "name": "Fluence Energy Inc",
-              "w": 0.81,
-              "sym": "FLNC",
-              "forslag": false
-            },
             {
               "isin": "US05614L2097",
               "name": "Babcock & Wilcox",
               "w": 0.6,
               "sym": "BW",
-              "forslag": false
+              "forslag": false,
+              "role": "Kedler og udstyr til kraftværker"
+            },
+            {
+              "isin": "US2057683029",
+              "name": "Comstock Resources",
+              "w": 0.58,
+              "sym": "CRK",
+              "forslag": true,
+              "role": "Naturgas, især i Haynesville"
             },
             {
               "isin": "US35834F1049",
-              "name": "T1 Energy Inc",
+              "name": "T1 Energy",
               "w": 0.58,
               "sym": "TE",
-              "forslag": false
+              "forslag": false,
+              "role": "Produktion af solcellemoduler"
             },
             {
               "isin": "US83418M1036",
-              "name": "Solaris Energy Infrastructur",
+              "name": "Solaris Energy Infrastructure",
               "w": 0.54,
               "sym": "SEI",
-              "forslag": true
+              "forslag": true,
+              "role": "Strømproduktion ved store forbrugere, blandt andet datacentre"
             },
             {
-              "isin": "US74347M1080",
-              "name": "Propetro Holding Corp",
-              "w": 0.51,
-              "sym": "PUMP",
-              "forslag": true
+              "isin": "US03674X1063",
+              "name": "Antero Resources",
+              "w": 0.41,
+              "sym": "AR",
+              "forslag": true,
+              "role": "Naturgas og flydende gasprodukter i Appalachia"
+            },
+            {
+              "isin": "US26884L1098",
+              "name": "EQT",
+              "w": 0.41,
+              "sym": "EQT",
+              "forslag": true,
+              "role": "Naturgas i Appalachia"
+            },
+            {
+              "isin": "US65339F1012",
+              "name": "NextEra Energy",
+              "w": 0.39,
+              "sym": "NEE",
+              "forslag": true,
+              "role": "Elselskab med sol, vind, gas og atomkraft"
+            },
+            {
+              "isin": "US1651677353",
+              "name": "Expand Energy",
+              "w": 0.37,
+              "sym": "EXE",
+              "forslag": true,
+              "role": "Naturgas i USA"
+            },
+            {
+              "isin": "US2310211063",
+              "name": "Cummins",
+              "w": 0.29,
+              "sym": "CMI",
+              "forslag": false,
+              "role": "Motorer og generatorer"
+            },
+            {
+              "isin": "US8425871071",
+              "name": "Southern Company",
+              "w": 0.28,
+              "sym": "SO",
+              "forslag": true,
+              "role": "Elselskab med blandt andet atomkraft og gas"
+            },
+            {
+              "isin": "US0937121079",
+              "name": "Bloom Energy",
+              "w": 0.25,
+              "sym": "BE",
+              "forslag": true,
+              "role": "Brændselsceller, der laver strøm hos kunden"
+            },
+            {
+              "isin": "US36828A1016",
+              "name": "GE Vernova",
+              "w": 0.19,
+              "sym": "GEV",
+              "forslag": false,
+              "role": "Gasturbiner, vind og udstyr til atomkraft"
+            },
+            {
+              "isin": "US3687361044",
+              "name": "Generac",
+              "w": 0.15,
+              "sym": "GNRC",
+              "forslag": false,
+              "role": "Reservegeneratorer"
+            },
+            {
+              "isin": "US92840M1027",
+              "name": "Vistra",
+              "w": 0.14,
+              "sym": "VST",
+              "forslag": false,
+              "role": "Elproduktion, blandt andet gas og atomkraft"
+            },
+            {
+              "isin": "US87422Q1094",
+              "name": "Talen Energy",
+              "w": 0.12,
+              "sym": "TLN",
+              "forslag": false,
+              "role": "Elproduktion med Susquehanna-værket som en central del"
+            },
+            {
+              "isin": "US72919P2020",
+              "name": "Plug Power",
+              "w": 0.11,
+              "sym": "PLUG",
+              "forslag": true,
+              "role": "Brændselsceller og udstyr til brint"
             }
           ],
           "seeChain": null
@@ -1118,56 +1235,71 @@
           "id": "smr",
           "icon": "◉",
           "label": "Atomkraft og SMR",
-          "blurb": "Små modulære reaktorer (SMR) er mindre atomkraftværker, der kan bygges i serie og placeres tæt på forbrug som datacentre.",
-          "ndi": "NDI har løbende skrevet om behovet for energiudbygning via atomkraft. Tidslinjer er usikre.",
+          "blurb": "Små modulære reaktorer er mindre atomkraftværker, der kan bygges mere ens og placeres tættere på forbruget, for eksempel et datacenter. Ingen af eksemplerne beskrives her som et anlæg i kommerciel drift.",
+          "ndi": "NDI har skrevet om energiudbygning via atomkraft, og om at tidslinjer og indtægter er usikre (ugebreve 27. januar 2025, 23. juni 2025 og 21. juli 2025). Store elselskaber med eksisterende atomkraft står under elproduktion.",
           "themes": [
+            "space",
             "energy",
-            "energy-resources"
+            "physical"
           ],
-          "weightSum": 11.89,
-          "count": 40,
+          "weightSum": 1.43,
+          "count": 7,
           "companies": [
             {
-              "isin": "US21873S1087",
-              "name": "Coreweave Inc-Cl A",
-              "w": 0.9,
-              "sym": "CRWV",
-              "forslag": false
+              "isin": "US05605H1005",
+              "name": "BWX Technologies",
+              "w": 0.39,
+              "sym": "BWXT",
+              "forslag": false,
+              "role": "Nukleare komponenter, blandt andet til flådereaktorer"
             },
             {
-              "isin": "US34379V1035",
-              "name": "Fluence Energy Inc",
-              "w": 0.81,
-              "sym": "FLNC",
-              "forslag": false
+              "isin": "GB00B63H8491",
+              "name": "Rolls-Royce",
+              "w": 0.32,
+              "sym": "RR.L",
+              "forslag": false,
+              "role": "Flymotorer og kraftsystemer. Koncernen udvikler også en lille modulær reaktor. Atomkraft er ikke hele selskabet."
             },
             {
-              "isin": "US05614L2097",
-              "name": "Babcock & Wilcox",
-              "w": 0.6,
-              "sym": "BW",
-              "forslag": false
+              "isin": "NL0015002Q12",
+              "name": "Terra Innovatum",
+              "w": 0.28,
+              "sym": "NKLR",
+              "forslag": true,
+              "role": "Mikroreaktoren SOLO er under udvikling. Ikke et anlæg i drift."
             },
             {
-              "isin": "US35834F1049",
-              "name": "T1 Energy Inc",
-              "w": 0.58,
-              "sym": "TE",
-              "forslag": false
+              "isin": "US67079K1007",
+              "name": "NuScale Power",
+              "w": 0.22,
+              "sym": "SMR",
+              "forslag": false,
+              "role": "Små modulære reaktorer under udvikling. Ikke et anlæg i kommerciel drift."
             },
             {
-              "isin": "US83418M1036",
-              "name": "Solaris Energy Infrastructur",
-              "w": 0.54,
-              "sym": "SEI",
-              "forslag": true
+              "isin": "US02156V1098",
+              "name": "Oklo",
+              "w": 0.12,
+              "sym": "OKLO",
+              "forslag": false,
+              "role": "Små atomkraftanlæg under udvikling. Ikke et anlæg i kommerciel drift."
             },
             {
-              "isin": "US74347M1080",
-              "name": "Propetro Holding Corp",
-              "w": 0.51,
-              "sym": "PUMP",
-              "forslag": true
+              "isin": "US63010H1086",
+              "name": "Nano Nuclear Energy",
+              "w": 0.05,
+              "sym": "NNE",
+              "forslag": false,
+              "role": "Meget små reaktorer under udvikling. Ikke et anlæg i drift."
+            },
+            {
+              "isin": "US8814541020",
+              "name": "Terrestrial Energy",
+              "w": 0.05,
+              "sym": "IMSR",
+              "forslag": true,
+              "role": "Reaktor med smeltet salt under udvikling. Ikke et anlæg i drift."
             }
           ],
           "seeChain": null
@@ -1176,55 +1308,54 @@
           "id": "grid",
           "icon": "⌒",
           "label": "Elnet, transformere og transmission",
-          "blurb": "Strømmen skal fra kraftværk til datacenter. Det kræver nye ledninger, transformerstationer og styring.",
-          "ndi": "Mangel på transformere, køling, transmissionskapacitet — og frem for alt energi.",
+          "blurb": "Strømmen skal fra kraftværk til datacenter. Det kræver ledninger, transformerstationer og selskaber, der bygger og udstyrer nettet.",
+          "ndi": "NDI har skrevet om mangel på transformere, køling og transmissionskapacitet (ugebrev 10. august 2026). Køling hører med i flaskehalsen. Selskaber, der alene laver ventilation, står ikke på dette led.",
           "themes": [
-            "energy"
+            "energy",
+            "physical"
           ],
-          "weightSum": 6.31,
-          "count": 15,
+          "weightSum": 1.39,
+          "count": 5,
           "companies": [
             {
-              "isin": "US21873S1087",
-              "name": "Coreweave Inc-Cl A",
-              "w": 0.9,
-              "sym": "CRWV",
-              "forslag": false
-            },
-            {
-              "isin": "US34379V1035",
-              "name": "Fluence Energy Inc",
-              "w": 0.81,
-              "sym": "FLNC",
-              "forslag": false
-            },
-            {
-              "isin": "US05614L2097",
-              "name": "Babcock & Wilcox",
-              "w": 0.6,
-              "sym": "BW",
-              "forslag": false
-            },
-            {
-              "isin": "US35834F1049",
-              "name": "T1 Energy Inc",
-              "w": 0.58,
-              "sym": "TE",
-              "forslag": false
-            },
-            {
               "isin": "US83418M1036",
-              "name": "Solaris Energy Infrastructur",
+              "name": "Solaris Energy Infrastructure",
               "w": 0.54,
               "sym": "SEI",
-              "forslag": true
+              "forslag": true,
+              "role": "Fordeling af strøm på anlæg ved store forbrugere"
             },
             {
-              "isin": "US74347M1080",
-              "name": "Propetro Holding Corp",
-              "w": 0.51,
-              "sym": "PUMP",
-              "forslag": true
+              "isin": "US74164F1030",
+              "name": "Primoris Services",
+              "w": 0.28,
+              "sym": "PRIM",
+              "forslag": true,
+              "role": "Bygger infrastruktur til el, energi og rør"
+            },
+            {
+              "isin": "US74762E1029",
+              "name": "Quanta Services",
+              "w": 0.22,
+              "sym": "PWR",
+              "forslag": true,
+              "role": "Bygger elnet og anden energiinfrastruktur"
+            },
+            {
+              "isin": "US36828A1016",
+              "name": "GE Vernova",
+              "w": 0.19,
+              "sym": "GEV",
+              "forslag": false,
+              "role": "Udstyr til elnettet, herunder styring og transformere"
+            },
+            {
+              "isin": "US55405W1045",
+              "name": "MYR Group",
+              "w": 0.16,
+              "sym": "MYRG",
+              "forslag": true,
+              "role": "Bygger ledninger og transformerstationer"
             }
           ],
           "seeChain": null
@@ -1233,56 +1364,47 @@
           "id": "storage",
           "icon": "🔋",
           "label": "Energilagring og batterier",
-          "blurb": "Batterier og lagring, der glatter produktion og forbrug.",
-          "ndi": "Batterier nævnes under energiflaskehalsen.",
+          "blurb": "Batterier og andre lagre, der kan gemme strøm og aflevere den senere. Lithium til batterierne står under råstoffer.",
+          "ndi": "NDI nævner batterier som del af energiflaskehalsen (ugebrev 30. marts 2026). Tesla er med, fordi koncernen også laver batterilagring.",
           "themes": [
             "energy",
-            "physical"
+            "physical",
+            "andet"
           ],
-          "weightSum": 13.65,
-          "count": 39,
+          "weightSum": 1.95,
+          "count": 4,
           "companies": [
             {
-              "isin": "US21873S1087",
-              "name": "Coreweave Inc-Cl A",
-              "w": 0.9,
-              "sym": "CRWV",
-              "forslag": false
-            },
-            {
               "isin": "US34379V1035",
-              "name": "Fluence Energy Inc",
+              "name": "Fluence Energy",
               "w": 0.81,
               "sym": "FLNC",
-              "forslag": false
+              "forslag": false,
+              "role": "Batterisystemer til elnettet"
             },
             {
-              "isin": "US05614L2097",
-              "name": "Babcock & Wilcox",
-              "w": 0.6,
-              "sym": "BW",
-              "forslag": false
+              "isin": "US88160R1014",
+              "name": "Tesla",
+              "w": 0.77,
+              "sym": "TSLA",
+              "forslag": false,
+              "role": "Batterilagring ved siden af biler og software"
             },
             {
-              "isin": "US35834F1049",
-              "name": "T1 Energy Inc",
-              "w": 0.58,
-              "sym": "TE",
-              "forslag": false
+              "isin": "US74767V1098",
+              "name": "QuantumScape",
+              "w": 0.2,
+              "sym": "QS",
+              "forslag": true,
+              "role": "Faststof-batterier under udvikling, især til køretøjer. Ikke masseproduktion."
             },
             {
-              "isin": "US83418M1036",
-              "name": "Solaris Energy Infrastructur",
-              "w": 0.54,
-              "sym": "SEI",
-              "forslag": true
-            },
-            {
-              "isin": "US74347M1080",
-              "name": "Propetro Holding Corp",
-              "w": 0.51,
-              "sym": "PUMP",
-              "forslag": true
+              "isin": "US29415C1018",
+              "name": "Eos Energy",
+              "w": 0.17,
+              "sym": "EOSE",
+              "forslag": true,
+              "role": "Zinkbatterier til lagring på elnettet"
             }
           ],
           "seeChain": null
@@ -1291,55 +1413,181 @@
           "id": "materials",
           "icon": "🪨",
           "label": "Kritiske råstoffer",
-          "blurb": "Kobber, sølv, sjældne jordarter og uran er nødvendige for chips, elnet, batterier og robotter.",
-          "ndi": "Råstoffer hører med i tech-kæden. En råstofanalyse skal også tage geopolitik med.",
+          "blurb": "Kobber, lithium, sjældne jordarter, uran, antimon og wolfram indgår i chips, elnet, batterier og reaktorer. Gasproducenter står under elproduktion.",
+          "ndi": "NDI regner råstoffer med i teknologien, og en råstofanalyse skal også tage geopolitik med (ugebreve 1. september 2025 og 21. september 2026). Flere navne er projekter uden minedrift. Det står i selskabsprofilen.",
           "themes": [
             "energy-resources"
           ],
-          "weightSum": 5.58,
-          "count": 25,
+          "weightSum": 3.81,
+          "count": 21,
           "companies": [
             {
-              "isin": "US2057683029",
-              "name": "Comstock Resources Inc",
-              "w": 0.58,
-              "sym": "CRK",
-              "forslag": true
-            },
-            {
               "isin": "US9115491030",
-              "name": "United States Antimony Corp",
+              "name": "United States Antimony",
               "w": 0.44,
               "sym": "UAMY",
-              "forslag": false
+              "forslag": false,
+              "role": "Antimon, udvinding og forarbejdning"
             },
             {
               "isin": "US15643U1043",
-              "name": "Centrus Energy Corp-Class A",
+              "name": "Centrus Energy",
               "w": 0.43,
               "sym": "LEU",
-              "forslag": true
+              "forslag": true,
+              "role": "Berigelse af uran til reaktorbrændsel"
             },
             {
-              "isin": "US03674X1063",
-              "name": "Antero Resources Corp",
-              "w": 0.41,
-              "sym": "AR",
-              "forslag": true
+              "isin": "CA8265991023",
+              "name": "Sigma Lithium",
+              "w": 0.32,
+              "sym": "SGML",
+              "forslag": false,
+              "role": "Lithiumkoncentrat i Brasilien"
             },
             {
-              "isin": "US26884L1098",
-              "name": "Eqt",
-              "w": 0.41,
-              "sym": "EQT",
-              "forslag": true
+              "isin": "US5533681012",
+              "name": "MP Materials",
+              "w": 0.26,
+              "sym": "MP",
+              "forslag": false,
+              "role": "Sjældne jordarter fra Mountain Pass og videre forarbejdning"
             },
             {
-              "isin": "US1651677353",
-              "name": "Expand Energy Corp",
-              "w": 0.37,
-              "sym": "EXE",
-              "forslag": true
+              "isin": "CA6544846091",
+              "name": "NioCorp",
+              "w": 0.23,
+              "sym": "NB",
+              "forslag": false,
+              "role": "Projekt med niobium og andre metaller. Ikke en mine i drift."
+            },
+            {
+              "isin": "VGG2662B1031",
+              "name": "Critical Metals",
+              "w": 0.2,
+              "sym": "CRML",
+              "forslag": false,
+              "role": "Projekt med sjældne jordarter i Grønland. Ikke en mine i drift."
+            },
+            {
+              "isin": "AU000000LYC6",
+              "name": "Lynas Rare Earths",
+              "w": 0.2,
+              "sym": "LYC.AX",
+              "forslag": false,
+              "role": "Udvinding og forarbejdning af sjældne jordarter"
+            },
+            {
+              "isin": "CA53681J1030",
+              "name": "Lithium Americas",
+              "w": 0.18,
+              "sym": "LAC",
+              "forslag": false,
+              "role": "Lithiumprojekt i Nevada. Ikke beskrevet som mine i fuld drift."
+            },
+            {
+              "isin": "US91733P1075",
+              "name": "USA Rare Earth",
+              "w": 0.18,
+              "sym": "USAR",
+              "forslag": false,
+              "role": "Projekt med sjældne jordarter og planer om magneter. Ikke en mine i drift."
+            },
+            {
+              "isin": "CA2926717083",
+              "name": "Energy Fuels",
+              "w": 0.17,
+              "sym": "EFR.TO",
+              "forslag": true,
+              "role": "Uran og forarbejdning, også af sjældne jordarter"
+            },
+            {
+              "isin": "CA0203987072",
+              "name": "Almonty Industries",
+              "w": 0.15,
+              "sym": "ALM",
+              "forslag": false,
+              "role": "Wolfram, miner og projekter"
+            },
+            {
+              "isin": "US46578C1080",
+              "name": "Ivanhoe Electric",
+              "w": 0.13,
+              "sym": "IE",
+              "forslag": false,
+              "role": "Kobberprojekt i Arizona. Ikke en mine i drift."
+            },
+            {
+              "isin": "CA8536061010",
+              "name": "Standard Lithium",
+              "w": 0.13,
+              "sym": "SLI",
+              "forslag": false,
+              "role": "Lithiumprojekter i Arkansas. Demonstrationsskala, ikke stor minedrift."
+            },
+            {
+              "isin": "CA89621C1059",
+              "name": "Trilogy Metals",
+              "w": 0.13,
+              "sym": "TMQ",
+              "forslag": false,
+              "role": "Kobberprojekter i Alaska. Ikke en mine i drift."
+            },
+            {
+              "isin": "CA8765111064",
+              "name": "Taseko Mines",
+              "w": 0.12,
+              "sym": "TGB",
+              "forslag": true,
+              "role": "Kobberminedrift, blandt andet Gibraltar-minen i Canada"
+            },
+            {
+              "isin": "CA14071L1085",
+              "name": "Capstone Copper",
+              "w": 0.11,
+              "sym": "CS.TO",
+              "forslag": false,
+              "role": "Kobberminedrift"
+            },
+            {
+              "isin": "US35671D8570",
+              "name": "Freeport-McMoRan",
+              "w": 0.11,
+              "sym": "FCX",
+              "forslag": false,
+              "role": "Kobberminedrift"
+            },
+            {
+              "isin": "CA87261Y1060",
+              "name": "The Metals Company",
+              "w": 0.1,
+              "sym": "TMC",
+              "forslag": false,
+              "role": "Undersøger metalnoduler på havbunden. Ikke produktion."
+            },
+            {
+              "isin": "CA66510M2040",
+              "name": "Northern Dynasty Minerals",
+              "w": 0.08,
+              "sym": "NAK",
+              "forslag": false,
+              "role": "Kobber- og guldprojekt i Alaska. Ikke en mine i drift."
+            },
+            {
+              "isin": "US84265V1052",
+              "name": "Southern Copper",
+              "w": 0.08,
+              "sym": "SCCO",
+              "forslag": false,
+              "role": "Kobberminedrift i Peru og Mexico"
+            },
+            {
+              "isin": "CA2960061091",
+              "name": "Ero Copper",
+              "w": 0.06,
+              "sym": "ERO",
+              "forslag": false,
+              "role": "Kobberminedrift i Brasilien"
             }
           ],
           "seeChain": null
@@ -1349,76 +1597,91 @@
     {
       "id": "space",
       "title": "Rumfart & satellitter",
-      "why": "Opsendelser, satellitter og kommunikation fra rummet. Prisen på at komme i kredsløb er faldet kraftigt, og det åbner nye markeder som satellitinternet og på sigt compute i rummet.",
-      "source": "BLOG 23. juni 2024 · 12. okt 2026",
+      "why": "Opsendelser, satellitter og kommunikation fra rummet. NDI beskriver, at prisen på at komme i kredsløb er faldet kraftigt, og at det åbner markeder som satellitinternet og på sigt beregning i rummet. Eksemplerne er valgt efter forretning. SpaceX indgår ikke i beholdningen pr. 1. juni 2026.",
+      "source": "BLOG 23. juni 2024 · 12. oktober 2026",
+      "exampleRule": "PMINDI pr. 2026-06-01. SpaceX (profil findes) er ikke i snapshottet. weightSum er summen af de navngivne eksempler.",
+      "omitted": [
+        {
+          "isin": "US84615Q1031",
+          "name": "SpaceX",
+          "reason": "Omtalt i formidlingen. Ikke i beholdningen pr. 2026-06-01."
+        },
+        {
+          "isin": "US5901061003",
+          "name": "Merlin",
+          "reason": "Autonom flyvning i fly. Luftfart, ikke opsendelse af satellitter. Tema i snapshottet: SpaceTech."
+        },
+        {
+          "isin": "US03945R1023",
+          "name": "Archer Aviation",
+          "reason": "Elektriske fly med lodret start. Luftfart, ikke rumfart. Tema i snapshottet: SpaceTech."
+        },
+        {
+          "isin": "US0094221068",
+          "name": "Airo Group",
+          "reason": "Droner, avionik og elektrisk luftfart. Tema i snapshottet: SpaceTech."
+        }
+      ],
       "links": [
         {
           "id": "launch",
           "icon": "🚀",
           "label": "Opsendelse",
-          "blurb": "Kapacitet til at sende satellitter og last i kredsløb. Prisen på opsendelse er faldet kraftigt.",
-          "ndi": "SpaceX har været omdrejningspunkt i NDI's formidling om opsendelser — som illustration af skiftet, ikke som anbefaling.",
+          "blurb": "Kapacitet til at sende satellitter og andet udstyr væk fra jorden, og selskaber der leverer dele til fartøjerne. Nogle programmer er i drift. Andre er stadig under udvikling.",
+          "ndi": "SpaceX er brugt som illustration i NDI's formidling om opsendelser (ugebrev 23. juni 2024). Selskabet indgår ikke i beholdningen pr. 1. juni 2026. Merlin, Archer og Airo Group er luftfart i SpaceTech-temaet og står ikke her. BWX Technologies og Rolls-Royce står under atomkraft.",
           "themes": [
             "space"
           ],
-          "weightSum": 4.38,
-          "count": 18,
+          "weightSum": 1.74,
+          "count": 6,
           "companies": [
             {
               "isin": "US85529M1045",
-              "name": "Starfighters Space Inc",
+              "name": "Starfighters Space",
               "w": 0.52,
               "sym": "FJET",
-              "forslag": false
-            },
-            {
-              "isin": "US5901061003",
-              "name": "Merlin Inc",
-              "w": 0.44,
-              "sym": "MRLN",
-              "forslag": false
-            },
-            {
-              "isin": "US05605H1005",
-              "name": "Bwx Technologies Inc",
-              "w": 0.39,
-              "sym": "BWXT",
-              "forslag": false
+              "forslag": false,
+              "role": "Supersoniske fly og et luftopsendelsesprogram under udvikling"
             },
             {
               "isin": "US4859241048",
-              "name": "Karman Holdings Inc",
+              "name": "Karman Space & Defense",
               "w": 0.33,
               "sym": "KRMN",
-              "forslag": false
-            },
-            {
-              "isin": "GB00B63H8491",
-              "name": "Rolls-Royce Hldg",
-              "w": 0.32,
-              "sym": "RR.L",
-              "forslag": false
+              "forslag": false,
+              "role": "Dele til løfteraketter, missiler og rumfart"
             },
             {
               "isin": "US31816X1063",
-              "name": "Firefly Aerospace Inc",
+              "name": "Firefly Aerospace",
               "w": 0.3,
               "sym": "FLY",
-              "forslag": false
+              "forslag": false,
+              "role": "Løfteraketter og en månelander"
             },
             {
-              "isin": "US75776W1036",
-              "name": "Redwire Corp",
-              "w": 0.27,
-              "sym": "RDW",
-              "forslag": false
+              "isin": "US4432011082",
+              "name": "Howmet Aerospace",
+              "w": 0.23,
+              "sym": "HWM",
+              "forslag": false,
+              "role": "Metaldele til fly og rumfart. Ikke et opsendelsesselskab."
             },
             {
-              "isin": "US9870841007",
-              "name": "York Space Systems Inc",
-              "w": 0.25,
-              "sym": "YSS",
-              "forslag": false
+              "isin": "US7731211089",
+              "name": "Rocket Lab",
+              "w": 0.21,
+              "sym": "RKLB",
+              "forslag": false,
+              "role": "Opsendelse af små satellitter"
+            },
+            {
+              "isin": "US46125A1007",
+              "name": "Intuitive Machines",
+              "w": 0.15,
+              "sym": "LUNR",
+              "forslag": false,
+              "role": "Månelandere og levering til Månen"
             }
           ],
           "seeChain": null
@@ -1427,69 +1690,69 @@
           "id": "satcom",
           "icon": "📡",
           "label": "Satellitkommunikation",
-          "blurb": "Løbende tjenester fra rummet: internet, observation og kommunikation.",
-          "ndi": "Starlink beskrives som løbende tjeneste, ikke blot en opsendelse (selskabsprofil, AI-udkast).",
+          "blurb": "Satellitter i drift eller under bygning: kommunikation, billeder af Jorden, radiosignaler og de platforme, satellitterne bygges på.",
+          "ndi": "Starlink er i en AI-selskabsprofil beskrevet som en løbende tjeneste, ikke kun en opsendelse. Det er et udkast, ikke NDI's færdige tekst. SpaceX indgår ikke i beholdningen pr. 1. juni 2026.",
           "themes": [
             "space"
           ],
-          "weightSum": 4.38,
-          "count": 18,
+          "weightSum": 1.31,
+          "count": 7,
           "companies": [
             {
-              "isin": "US85529M1045",
-              "name": "Starfighters Space Inc",
-              "w": 0.52,
-              "sym": "FJET",
-              "forslag": false
-            },
-            {
-              "isin": "US5901061003",
-              "name": "Merlin Inc",
-              "w": 0.44,
-              "sym": "MRLN",
-              "forslag": false
-            },
-            {
-              "isin": "US05605H1005",
-              "name": "Bwx Technologies Inc",
-              "w": 0.39,
-              "sym": "BWXT",
-              "forslag": false
-            },
-            {
-              "isin": "US4859241048",
-              "name": "Karman Holdings Inc",
-              "w": 0.33,
-              "sym": "KRMN",
-              "forslag": false
-            },
-            {
-              "isin": "GB00B63H8491",
-              "name": "Rolls-Royce Hldg",
-              "w": 0.32,
-              "sym": "RR.L",
-              "forslag": false
-            },
-            {
-              "isin": "US31816X1063",
-              "name": "Firefly Aerospace Inc",
-              "w": 0.3,
-              "sym": "FLY",
-              "forslag": false
-            },
-            {
               "isin": "US75776W1036",
-              "name": "Redwire Corp",
+              "name": "Redwire",
               "w": 0.27,
               "sym": "RDW",
-              "forslag": false
+              "forslag": false,
+              "role": "Komponenter til satellitter, blandt andet solpaneler og sensorer"
             },
             {
               "isin": "US9870841007",
-              "name": "York Space Systems Inc",
+              "name": "York Space Systems",
               "w": 0.25,
               "sym": "YSS",
-              "forslag": false
+              "forslag": false,
+              "role": "Bygger satellitplatforme"
+            },
+            {
+              "isin": "US7731211089",
+              "name": "Rocket Lab",
+              "w": 0.21,
+              "sym": "RKLB",
+              "forslag": false,
+              "role": "Rumfartøjer og satellitplatforme ved siden af opsendelse"
+            },
+            {
+              "isin": "US80401C1009",
+              "name": "Satellogic",
+              "w": 0.17,
+              "sym": "SATL",
+              "forslag": false,
+              "role": "Satellitter, der tager billeder af Jorden"
+            },
+            {
+              "isin": "US4202011056",
+              "name": "Hawkeye 360",
+              "w": 0.16,
+              "sym": "HAWK",
+              "forslag": false,
+              "role": "Satellitter, der opfanger radiosignaler til stedbestemmelse"
+            },
+            {
+              "isin": "CA55293N1096",
+              "name": "MDA Space",
+              "w": 0.16,
+              "sym": "MDA.TO",
+              "forslag": false,
+              "role": "Satellitter, rumrobotik og geodata"
+            },
+            {
+              "isin": "US72703X1063",
+              "name": "Planet Labs",
+              "w": 0.09,
+              "sym": "PL",
+              "forslag": false,
+              "role": "Satellitter, der tager billeder af Jorden"
             }
           ],
           "seeChain": null
@@ -1498,69 +1761,45 @@
           "id": "space-compute",
           "icon": "✦",
           "label": "Rum og compute",
-          "blurb": "På sigt: compute og infrastruktur i rummet. Tidligt og usikkert.",
-          "ndi": "SpaceTech får ofte ikke den værdiansættelse, nogle forventer. Se citat nedenfor — kun som citat.",
+          "blurb": "På sigt kan beregning ligge i rummet. I beholdningen pr. 1. juni 2026 er eksemplerne infrastruktur, robotik og satellitplatforme. Ingen af dem er et datacenter i kredsløb.",
+          "ndi": "Udsagnet om SpaceX og størrelsen af økonomien er Elon Musks og står kun som citat. Det er ikke NDI's forventning (ugebrev 12. oktober 2026).",
           "themes": [
             "space"
           ],
-          "weightSum": 4.38,
-          "count": 18,
+          "weightSum": 0.85,
+          "count": 4,
           "companies": [
             {
-              "isin": "US85529M1045",
-              "name": "Starfighters Space Inc",
-              "w": 0.52,
-              "sym": "FJET",
-              "forslag": false
-            },
-            {
-              "isin": "US5901061003",
-              "name": "Merlin Inc",
-              "w": 0.44,
-              "sym": "MRLN",
-              "forslag": false
-            },
-            {
-              "isin": "US05605H1005",
-              "name": "Bwx Technologies Inc",
-              "w": 0.39,
-              "sym": "BWXT",
-              "forslag": false
-            },
-            {
-              "isin": "US4859241048",
-              "name": "Karman Holdings Inc",
-              "w": 0.33,
-              "sym": "KRMN",
-              "forslag": false
-            },
-            {
-              "isin": "GB00B63H8491",
-              "name": "Rolls-Royce Hldg",
-              "w": 0.32,
-              "sym": "RR.L",
-              "forslag": false
-            },
-            {
-              "isin": "US31816X1063",
-              "name": "Firefly Aerospace Inc",
-              "w": 0.3,
-              "sym": "FLY",
-              "forslag": false
-            },
-            {
               "isin": "US75776W1036",
-              "name": "Redwire Corp",
+              "name": "Redwire",
               "w": 0.27,
               "sym": "RDW",
-              "forslag": false
+              "forslag": false,
+              "role": "Infrastruktur og fremstilling i rummet. Ikke et datacenter."
             },
             {
               "isin": "US9870841007",
-              "name": "York Space Systems Inc",
+              "name": "York Space Systems",
               "w": 0.25,
               "sym": "YSS",
-              "forslag": false
+              "forslag": false,
+              "role": "Satellitplatforme, der kan bære nyttelast. Ikke et datacenter."
+            },
+            {
+              "isin": "US92892B1035",
+              "name": "Voyager Technologies",
+              "w": 0.17,
+              "sym": "VOYG",
+              "forslag": false,
+              "role": "Ruminfrastruktur og forsvar. Starlab er et stationsprojekt, ikke en station i drift og ikke et datacenter."
+            },
+            {
+              "isin": "CA55293N1096",
+              "name": "MDA Space",
+              "w": 0.16,
+              "sym": "MDA.TO",
+              "forslag": false,
+              "role": "Rumrobotik. Ikke et datacenter."
             }
           ],
           "seeChain": null

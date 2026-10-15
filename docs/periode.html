@@ -44,14 +44,15 @@
  const end = fund.data[fund.data.length-1];
  from = end.d.slice(0,4)+'-01-01'; to = end.d;
  } else if (year === 'all' || year === 'start') {
- label = 'Siden start'; pct = periodReturn(fund.data);
+ label = 'Siden første NAV'; pct = periodReturn(fund.data);
  from = fund.data[0].d; to = fund.data[fund.data.length-1].d;
  } else {
  const row = years.find(c => String(c.year) === String(year));
  if (row) { label = row.year + (row.partial?' (delår)':''); pct = row.ret; from = row.from; to = row.to; }
  }
+ const firstNav = fund.data[0].d;
  const chips = [
- `<a class="tag" href="periode.html?fund=${fundId}&year=all">Siden start: ${fmtPct(periodReturn(fund.data))}</a>`,
+ `<a class="tag" href="periode.html?fund=${fundId}&year=all">Siden første NAV: ${fmtPct(periodReturn(fund.data))}</a>`,
  `<a class="tag" href="periode.html?fund=${fundId}&year=YTD">YTD: ${fmtPct(ytd)}</a>`,
  ...years.map(c => `<a class="tag" href="periode.html?fund=${fundId}&year=${c.year}">${c.year}: ${fmtPct(c.ret)}</a>`)
  ].join(' ');
@@ -67,7 +68,7 @@
  </div>
  <section class="panel">
  <h2 style="font-size:16px;margin-bottom:8px">Kontekst</h2>
- <p style="color:var(--muted);line-height:1.6">Tal fra fondens totalafkast-serie. Fonden har intet fast benchmark. Se <a href="drawdown.html?fund=${fundId}">drawdown</a> og dokumenterede udbytter i kontekstgrafen på fondssiden.</p>
+ <p style="color:var(--muted);line-height:1.6">Tal fra fondens totalafkast-serie, regnet fra første NAV ${fmtDate(firstNav)}. En juridisk stiftelsesdato kan ligge en anden dag og bruges ikke som anker for afkast. Fonden har intet fast benchmark. Se <a href="drawdown.html?fund=${fundId}">drawdown</a> og dokumenterede udbytter i kontekstgrafen på fondssiden.</p>
  </section>
  <section class="panel">
  <h2 style="font-size:16px;margin-bottom:10px">Alle perioder</h2>

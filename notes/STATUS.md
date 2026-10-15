@@ -245,3 +245,17 @@ HEAD `b35518b`. Visual-variety request shipped + reviewed. MADS værdikæde/quan
 
 ## Smoke · ~23:10 CEST
 - `scripts/smoke.mjs`: **52/52 fail 0** (inkl. vaerdikaeder). HEAD `37b6d55`.
+
+## Fra Grok lane-E
+
+**2026-10-15 ~23:55 CEST. Energi- og rumeksempler efter forretning. Ikke færdig.**
+
+Beholdning pr. 1. juni 2026. Ingen nye kurser, afkast, P/E eller P/S. HTML på værdikædesiden er ikke rørt.
+
+1. `value-chains.json`: energikædens fem led og rumkædens tre led lister selskaber efter forretning. Før stod de samme topvægte på hvert led, så CoreWeave også stod under atomkraft. Nu: elproduktion 16 selskaber (5,41 %), SMR 7 (1,43 %), elnet 5 (1,39 %), batterier 4 (1,95 %), råstoffer 21 (3,81 %). Rum: opsendelse 6 (1,74 %), satellitter 7 (1,31 %), rum og compute 4 (0,85 %). `weightSum` er summen af eksemplerne, ikke temaets samlede vægt.
+2. Udeladt med vilje og skrevet i teksten: CoreWeave, Nebius og IREN (datacentre), ProPetro (boreservice), Merlin, Archer og Airo (luftfart i SpaceTech-temaet). SpaceX er ikke i snapshottet. Rum og compute siger, at ingen af eksemplerne er et datacenter i kredsløb. Musk-citatet er stadig kun citat.
+3. `company-profiles.json`: 65 nye profiler for tomme rum- og energinavne, plus de fysiske og uklassificerede navne, kæden linker til. Ingen `reviewedAt`, så AI-udkast-badget bliver, uden dato for gennemgang. Kilde er selskabets egen side.
+4. `periode.html`: "Siden start" hedder "Siden første NAV", med datoen fra seriens første punkt. `nyhedsarkiv.html`: to konceptkort om energi og rum. Arkivet indeholder stadig ikke ugebrevene.
+5. Tjekket i Chromium ved 1280 og 375: energifanen viser Fluence, Oklo og Quanta og linker ikke CoreWeave. Rumfanen linker Rocket Lab og Planet og linker ikke Archer. Fluence og Oklo har AI-udkast. Periode 2025 og siden første NAV renderer. Ingen konsolfejl. Ingen vandret scroll på energikæden ved 375.
+
+AI-compute-leddet "Energi og strømfordeling" er ikke rettet, så det ikke støder sammen med lane A. Lane-E er ikke klar til merge, før precheck og push er kørt i samme cyklus. Ikke færdig.
