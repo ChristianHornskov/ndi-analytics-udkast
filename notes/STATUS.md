@@ -299,3 +299,12 @@ HEAD `b35518b`. Visual-variety request shipped + reviewed. MADS værdikæde/quan
 - Faktarettelse: ordliste «Andelsklasse» sagde «samme portefølje». Snapshot: PMINDI 345, PMINDIAKK 320 (alle 320 også i PMINDI) → «samme strategi, beholdninger ligner meget, ikke identiske». **Ikke min fil:** `sammenlign.html:96` siger stadig «Samme portefølje» — til den lane, der ejer den.
 - Test: Playwright 375/1280 på 7 sider: 0 konsolfejl, 0 døde links, ingen h-overflow. precheck PASSED.
 - Branch `lane-C` klar til merge. Næste: variance-drag + faq-mangler-aktie visuelt + UX-review 02:00.
+
+
+## Fra Claude lane-C (variance drag + mangler aktie X) · ~00:10 CEST 16/10
+- `laer/variance-drag.html`: Møntspillet fra bogen (s. 133–136, +50/−40 → 10.000 kr. bliver til 5.905 mod 16.289) som SVG over 10 år; skyder «Prøv selv» (±udsving → slutbeløb, CAGR, σ²/2) med fallback uden JS; søjler «et fald kræver en større stigning»; NDI-afsnit (vi viser CAGR, derfor spreder fonden bredt).
+- `laer/faq-mangler-aktie.html`: søgeformular → `selskaber.html?q=` (testet: «tsm» giver 1 træf); tre tjek (navn/ticker, dato 1. jun 2026, andelsklasse); tragt marked → portefølje (345); fire grundkort; «fravær er ikke en vurdering». Eksemplet var Alphabet, men Alphabet er **ikke** i snapshottet → skiftet til Meta/TSMC (verificeret i portfolio.json).
+- Bevidst ingen fast markedsværdigrænse: tese 2023 (gældende) siger ≥1 mia. USD, udkast 2.0 siger intet minimum. Siden siger kun «for lille eller handles for lidt» (MC, VB 24:50).
+- Ordliste 63 → 66 (ticker, ADR, møntspillet). FAQ-kortsvar + laer/index + kort-tæller fulgt med.
+- Test: Playwright 375/1280 på 6 sider: 0 konsolfejl, ingen h-overflow, skyder ±30 → 91 kr./−4,6 %. precheck se nedenfor.
+- Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + ideer.html visuel variation + HANDOFF demo-check.

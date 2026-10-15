@@ -10,7 +10,7 @@
  <meta property="og:site_name" content="NDI Analytics (udkast)">
  <meta property="og:locale" content="da_DK">
  <meta property="og:title" content="Hvorfor CAGR er lavere end gennemsnittet · NDI Analytics">
- <meta property="og:description" content="Når et afkast svinger, bliver det årlige gennemsnit og det, man faktisk står tilbage med, to forskellige tal. Forskellen kaldes ofte variance drag.">
+ <meta property="og:description" content="Møntspillet: +5 % i snit, men 10.000 kr. bliver til 5.905 kr. Sådan koster udsving afkast, og derfor spreder NDI bredt.">
  <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/laer/variance-drag.html">
  <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
  <meta property="og:image:width" content="1200">
@@ -18,6 +18,28 @@
  <meta property="og:image:alt" content="NDI Analytics - udkast. Gå på opdagelse i porteføljen.">
  <meta name="twitter:card" content="summary_large_image">
  <!-- og:end -->
+<style>
+  .sp h2{font-size:18px;margin:0 0 8px}
+  .sp p{color:var(--muted);line-height:1.6;margin:0 0 10px}
+  .sp p strong{color:var(--text)}
+  .sp .src{font-size:13px;color:var(--faint);margin:8px 0 0}
+  .ch{width:100%;height:auto;display:block;margin:10px 0 4px}
+  .ch text{fill:var(--faint);font-size:12px;font-family:inherit}
+  .ch .end{fill:var(--text);font-size:13px;font-weight:600}
+  .key{display:flex;flex-wrap:wrap;gap:6px 14px;margin:6px 0 0;font-size:13px;color:var(--muted)}
+  .key i{display:inline-block;width:14px;height:3px;vertical-align:3px;margin-right:6px;border-radius:2px}
+  .try{display:grid;gap:10px;margin-top:8px}
+  .try label{color:var(--text);font-weight:600}
+  .try input[type=range]{width:100%;accent-color:var(--yellow)}
+  .out{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .out > div{background:var(--panel-2);border-radius:10px;padding:10px 12px;color:var(--muted);font-size:13px;line-height:1.4}
+  .out b{display:block;color:var(--text);font-size:20px;font-variant-numeric:tabular-nums}
+  .rec{display:grid;gap:8px;margin:12px 0 4px}
+  .rec .row{display:grid;grid-template-columns:64px 1fr 64px;align-items:center;gap:10px;font-size:14px;color:var(--muted)}
+  .rec .bar{height:18px;border-radius:4px;background:var(--cyan)}
+  .rec .v{text-align:right;color:var(--text);font-variant-numeric:tabular-nums}
+  @media (max-width:640px){.out{grid-template-columns:1fr 1fr}.out > div:last-child{grid-column:1/-1}.rec .row{grid-template-columns:52px 1fr 56px}}
+ </style>
 </head>
 <body>
  <a class="skip" href="#main">Gå til indhold</a>
@@ -28,15 +50,78 @@
  <main id="main">
  <p class="eyebrow">LÆR</p>
  <h1>Hvorfor CAGR er lavere end gennemsnittet</h1>
+ <p class="lede">Når et afkast svinger, bliver det årlige gennemsnit og det, man faktisk står tilbage med, to forskellige tal. Forskellen kaldes variance drag (på dansk ofte variansdrag). Det er en af de vigtigste grunde til, at NDI spreder bredt.</p>
 
-<p class="lede">Når et afkast svinger, bliver det årlige gennemsnit og det, man faktisk står tilbage med, to forskellige tal. Forskellen kaldes ofte variance drag.</p>
-<section class="panel" style="color:var(--muted);line-height:1.6;display:grid;gap:12px">
-<p><strong style="color:var(--text)">Et tænkt eksempel.</strong> 100&nbsp;kr. stiger 50&nbsp;% det første år og falder 50&nbsp;% det andet år. Det simple gennemsnit af de to år er 0&nbsp;%. Men efter første år er beløbet 150&nbsp;kr., og efter andet år er det 75&nbsp;kr. Man har altså tabt 25&nbsp;%.</p>
-<p><strong style="color:var(--text)">CAGR</strong> (gennemsnitligt årligt afkast, geometrisk) måler den faste årlige rente, der ville give samme slutbeløb. I eksemplet er den ca. −13,4&nbsp;% om året, fordi 0,866 × 0,866 ≈ 0,75.</p>
-<p><strong style="color:var(--text)">Større udsving giver større forskel.</strong> Med +10&nbsp;% og −10&nbsp;% ender 100&nbsp;kr. på 99&nbsp;kr. Med +50&nbsp;% og −50&nbsp;% ender de på 75&nbsp;kr. Et fald kræver en større procentvis stigning for at blive indhentet: efter −50&nbsp;% skal der +100&nbsp;% til.</p>
-<p>Derfor viser vi CAGR og ikke et simpelt gennemsnit af årsafkast under <a href="../index.html?view=fonden">Fonden</a>. CAGR fortæller, hvad forløbet har givet i alt, omregnet til et år. Den fortæller ikke, hvor ujævn vejen var. Det viser <a href="../drawdown.html">Drawdown</a>.</p>
-<p>Tallene på siden er opdigtede og handler ikke om fonden. Siden forklarer et begreb. Den siger ikke noget om, hvordan du selv skal investere. Se også <a href="hvorfor-mange-aktier.html">Hvorfor så mange aktier?</a> og <a href="../om-data.html#g-cagr">ordlisten</a>.</p>
-</section>
+ <section class="panel sp" aria-labelledby="vd-coin">
+  <h2 id="vd-coin">Møntspillet: +5&nbsp;% i snit, men du taber</h2>
+  <p>Et tænkt spil fra NDI’s bog: Hvert år stiger din indsats enten 50&nbsp;% eller falder 40&nbsp;%, på skift. Gennemsnittet af de to år er <strong>+5&nbsp;%</strong>. Alligevel står 10.000&nbsp;kr. efter ti år i <strong>5.905&nbsp;kr.</strong> Uden udsving, med jævne 5&nbsp;% om året, var det blevet til <strong>16.289&nbsp;kr.</strong></p>
+  <svg class="ch" viewBox="0 0 600 240" role="img" aria-labelledby="vd-coin-t">
+   <title id="vd-coin-t">Tænkt eksempel over 10 år med 10.000 kr. Svingende: skiftevis plus 50 og minus 40 procent, ender på 5.905 kr. Jævnt plus 5 procent om året ender på 16.289 kr. Begge har et gennemsnit på 5 procent om året.</title>
+   <g stroke="var(--line)" stroke-width="1">
+    <line x1="48" y1="210" x2="584" y2="210"/><line x1="48" y1="156" x2="584" y2="156" stroke-dasharray="2 4"/><line x1="48" y1="101" x2="584" y2="101" stroke-dasharray="2 4"/><line x1="48" y1="47" x2="584" y2="47" stroke-dasharray="2 4"/>
+   </g>
+   <text x="42" y="214" text-anchor="end">0</text><text x="42" y="160" text-anchor="end">5.000</text><text x="42" y="105" text-anchor="end">10.000</text><text x="42" y="51" text-anchor="end">15.000</text>
+   <text x="48" y="230" text-anchor="middle">start</text><text x="316" y="230" text-anchor="middle">år 5</text><text x="584" y="230" text-anchor="middle">år 10</text>
+   <polyline fill="none" stroke="var(--cyan)" stroke-width="2.5" points="48,101 102,96 155,90 209,84 262,78 316,71 370,64 423,57 477,49 530,41 584,33"/>
+   <polyline fill="none" stroke="var(--yellow)" stroke-width="2.5" stroke-linejoin="round" points="48,101 102,47 155,112 209,63 262,122 316,78 370,131 423,91 477,139 530,103 584,146"/>
+   <circle cx="584" cy="33" r="4" fill="var(--cyan)"/><circle cx="584" cy="146" r="4" fill="var(--yellow)"/>
+   <text class="end" x="576" y="24" text-anchor="end">16.289</text><text class="end" x="576" y="166" text-anchor="end">5.905</text>
+  </svg>
+  <p class="key"><span><i style="background:var(--cyan)"></i>Jævnt +5&nbsp;% om året</span><span><i style="background:var(--yellow)"></i>Skiftevis +50&nbsp;% og −40&nbsp;%</span></p>
+  <p class="src">Tænkt eksempel. Kilde: Mads Christiansen og Jesper Bæk, «Den lille guide til investering i teknologiaktier» (2025), s. 133–136. Handler ikke om fonden.</p>
+  <p style="margin-top:10px">Grunden er, at et fald rammer et større beløb end det, stigningen startede fra. +50&nbsp;% og −40&nbsp;% giver 1,5 × 0,6 = 0,9. Hvert andet år mister du altså 10&nbsp;%, selv om gennemsnittet ser positivt ud.</p>
+ </section>
+
+ <section class="panel sp" aria-labelledby="vd-try" style="margin-top:14px">
+  <h2 id="vd-try">Prøv selv: hvor meget koster udsvinget?</h2>
+  <p>100&nbsp;kr. stiger først og falder så lige mange procent. Gennemsnittet er altid 0&nbsp;%. Træk i skyderen og se, hvad der er tilbage.</p>
+  <div class="try">
+   <label for="vd-x">Udsving: ±<span id="vd-xv">50</span>&nbsp;%</label>
+   <input id="vd-x" type="range" min="0" max="80" step="5" value="50">
+   <div class="out" aria-live="polite">
+    <div>Efter 2 år<b id="vd-end">75&nbsp;kr.</b></div>
+    <div>CAGR pr. år<b id="vd-cagr">−13,4&nbsp;%</b></div>
+    <div>Tommelfingerregel σ²/2<b id="vd-rule">−12,5&nbsp;%</b></div>
+   </div>
+  </div>
+  <p class="src">Uden JavaScript: ±10&nbsp;% giver 99&nbsp;kr., ±30&nbsp;% giver 91&nbsp;kr., ±50&nbsp;% giver 75&nbsp;kr. Tommelfingerreglen siger, at udsving med en årlig volatilitet på σ koster ca. σ²/2 om året. Ved 60&nbsp;% volatilitet er det ca. 18 procentpoint. Reglen er en tilnærmelse og passer bedst ved små udsving.</p>
+ </section>
+
+ <section class="panel sp" aria-labelledby="vd-rec" style="margin-top:14px">
+  <h2 id="vd-rec">Et fald kræver en større stigning</h2>
+  <p>Samme regnestykke set fra den anden side: Hvor meget skal der til for at komme tilbage til start?</p>
+  <div class="rec" role="img" aria-label="Stigning der skal til efter et fald: minus 10 procent kræver plus 11 procent, minus 20 kræver plus 25, minus 33 kræver plus 49, minus 50 kræver plus 100, minus 75 kræver plus 300.">
+   <div class="row"><span>−10&nbsp;%</span><span class="bar" style="width:3.7%"></span><span class="v">+11&nbsp;%</span></div>
+   <div class="row"><span>−20&nbsp;%</span><span class="bar" style="width:8.3%"></span><span class="v">+25&nbsp;%</span></div>
+   <div class="row"><span>−33&nbsp;%</span><span class="bar" style="width:16.4%"></span><span class="v">+49&nbsp;%</span></div>
+   <div class="row"><span>−50&nbsp;%</span><span class="bar" style="width:33.3%"></span><span class="v">+100&nbsp;%</span></div>
+   <div class="row"><span>−75&nbsp;%</span><span class="bar" style="width:100%"></span><span class="v">+300&nbsp;%</span></div>
+  </div>
+  <p class="src">Ren matematik, ikke en prognose. Se fondens faktiske fald under <a href="../drawdown.html">Drawdown</a>.</p>
+ </section>
+
+ <section class="panel sp" aria-labelledby="vd-ndi" style="margin-top:14px">
+  <h2 id="vd-ndi">Hvad det betyder for, hvordan vi viser tal</h2>
+  <p><strong>Vi viser CAGR, ikke et simpelt gennemsnit.</strong> CAGR (gennemsnitligt årligt afkast, geometrisk) er den faste årlige rente, der ville give samme slutbeløb. Den fortæller, hvad forløbet har givet i alt, omregnet til et år. Du finder den under <a href="../index.html?view=fonden">Fonden</a>. Den fortæller ikke, hvor ujævn vejen var. Det viser <a href="../drawdown.html">Drawdown</a>.</p>
+  <p><strong>Det er derfor, fonden spreder bredt.</strong> En enkelt teknologiaktie svinger meget, og det koster. En del af udsvinget skyldes kun det ene selskab, og den del bliver mindre, jo flere selskaber man ejer. Se <a href="hvorfor-mange-aktier.html">Hvorfor så mange aktier?</a></p>
+  <p>Bogen beskriver risiko som, hvor meget udfaldene spreder sig, og viser, at den spredning æder af det afkast, man faktisk står tilbage med (s. 133–140). Et kursfald er ikke i sig selv risikoen.</p>
+  <p style="margin-top:10px">Siden forklarer et begreb. Den siger ikke noget om, hvordan du selv skal investere. Se også <a href="../om-data.html#g-cagr">CAGR</a> og <a href="../om-data.html#g-variance-drag">variance drag</a> i ordlisten.</p>
+ </section>
+ <script>
+ (function(){
+  var x=document.getElementById('vd-x'); if(!x) return;
+  var f=function(n,d){return n.toLocaleString('da-DK',{minimumFractionDigits:d,maximumFractionDigits:d})};
+  var sign=function(n){return (n<0?'−':(n>0?'+':''))+f(Math.abs(n),1)+' %'};
+  function upd(){
+   var p=+x.value/100, end=100*(1+p)*(1-p), cagr=(Math.sqrt(end/100)-1)*100;
+   document.getElementById('vd-xv').textContent=x.value;
+   document.getElementById('vd-end').textContent=f(end,0)+' kr.';
+   document.getElementById('vd-cagr').textContent=sign(cagr);
+   document.getElementById('vd-rule').textContent=sign(-p*p/2*100);
+  }
+  x.addEventListener('input',upd); upd();
+ })();
+ </script>
  <p class="warn">Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.</p>
  <p class="band">Generel information. Ikke investeringsrådgivning.</p>
  </main>

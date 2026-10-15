@@ -89,3 +89,8 @@ Sider: ideer, kort, om-data, invester, risici, ndi-perspektiv, laer/*.
 - P/E-eksempel er opdigtet (A/B, samme markedsværdi) og markeret. Formuleret «målt på P/E ser A dyrere ud … selv om A bygger næste produkt» — ikke «A er bedst».
 - Amazon (bog s. 24) bruges kun som begrebseksempel med «ikke et syn på aktien».
 - Ordscan: træf er negationer («vinderne kan ikke forudsiges», «ikke automatisk billig») og KID-ordlyd. Ingen handelsprog.
+
+## lane-C · 00:10 16/10 · variance-drag + mangler aktie X
+- Variance drag: bruger bogens eget møntspil (s. 133–136) i stedet for opdigtet ±50. σ²/2 ved 60 % ≈ 18 pp matcher udkast pkt. 4.4.
+- Mangler aktie: ingen tærskel for markedsværdi nævnt, fordi tese 2023 og udkast 2.0 er uenige. Ingen købs-/sælg-holdning; «fravær er ikke en vurdering» + «med betyder ikke godt/billigt».
+- Ordscan: ingen «køb nu», «billig», «undervurderet», «anbefaler» på de to sider.
