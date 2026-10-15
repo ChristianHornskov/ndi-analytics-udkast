@@ -68,3 +68,7 @@ Se `notes/VISUAL-VARIETY-REVIEW.md`.
 | Før/nu-tegning (inline SVG) | Rum-fanen: to små raket-tegninger, "brugt én gang" (✕) og "lander og flyver igen" (stiplet bue), med pil imellem. Pilen drejer 90° på mobil | ✅ rum-fanen |
 | Årsagskæde med stiplede kort | Rum-fanen: Genbrug → Flere ture → Satellitter i serie → Tjenester. Ikon i rund plet, gul pil mellem kortene på desktop, og hvert kort åbner sit led. NDI-tallet står i en separat linje med cyan NDI-mærke | ✅ rum-fanen |
 | Robot-ordbog (⚙) | Robotik-fanen: 9 ord i samme gitter som rum-ordbogen, men med tandhjul i stedet for ◇. "Edge-AI" hopper til AI-kædens led for fysisk AI | ✅ robotik-fanen |
+| Strøm-rør (flowlist) | Energi-fanen: 5 stationer forbundet af et gult-til-cyan "rør" (lodret på mobil, vandret på desktop). Stationer med NDI-pres har en gul topkant og et gult "NDI · pres"-mærke med kilde. Lagring har et dæmpet "NDI · nævnt"-mærke | ✅ energi-fanen |
+| Energi-ordbog (⚡) | Energi-fanen: 13 ord i samme gitter som de andre ordbøger, med ⚡ som markør. "Væskekøling" hopper til AI-kædens datacenterled | ✅ energi-fanen |
+| Tidshorisont (inline SVG) | Kvante-fanen: stiplet akse 2025 til ca. 2045 med cyan prik ("udsagnet, jan. 2025") og en gul stiplet cirkel med "?". Udsagnet står som gengivet med navn, dato og kilde, ikke i citationstegn | ✅ kvante-fanen |
+| Lær-link i kæde-kort | vaerdikaede.html: hvert af de fire kort har en ekstra linje under en stiplet streg (🚀 ⚡ ⚙ ⏳), der deep-linker til fanens forklaring | ✅ vaerdikaede.html |

@@ -2895,7 +2895,127 @@
      "kind": "ndi"
     }
    ],
-   "icon": "⚡"
+   "icon": "⚡",
+   "flow": {
+    "title": "Fra råstof til regnekraft",
+    "lede": "Strømmen skal hele vejen fra mine og kraftværk til chippen i datacentret. Et gult mærke betyder, at NDI har skrevet om mangel eller pres i leddet. Tal er antal selskaber i den forsinkede beholdning pr. 1. juni 2026.",
+    "steps": [
+     {
+      "link": "materials",
+      "verb": "graves op",
+      "press": {
+       "t": "Prispres i metaller som kobber og sølv",
+       "src": "BLOG 16. februar 2026"
+      }
+     },
+     {
+      "link": "gen",
+      "verb": "bliver til strøm",
+      "alt": "smr",
+      "press": {
+       "t": "Første flaskehals: energi",
+       "src": "BLOG 30. marts 2026"
+      }
+     },
+     {
+      "link": "grid",
+      "verb": "sendes frem",
+      "press": {
+       "t": "Mangel på transformere og transmissionskapacitet",
+       "src": "BLOG 10. august 2026"
+      }
+     },
+     {
+      "link": "storage",
+      "verb": "gemmes til senere",
+      "note": {
+       "t": "Batterier nævnt under energiflaskehalsen",
+       "src": "BLOG 30. marts 2026"
+      }
+     },
+     {
+      "hop": "ai-compute:datacenter",
+      "verb": "bliver til compute",
+      "press": {
+       "t": "Anden flaskehals: datacentre",
+       "src": "BLOG 30. marts 2026"
+      }
+     }
+    ],
+    "fact": {
+     "t": "Ét års chipproduktion kan potentielt kræve strøm svarende til omkring to tredjedele af USA's installerede kapacitet.",
+     "src": "BLOG 10. august 2026"
+    },
+    "note": "Mærkerne viser, hvor NDI har beskrevet pres. De er ikke en prognose og ikke en anbefaling, og et led uden mærke er ikke uden betydning."
+   },
+   "glossary": [
+    {
+     "term": "Gigawatt (GW)",
+     "t": "Mål for, hvor meget strøm der kan leveres på én gang. 1 GW er 1.000 megawatt. Et stort atomkraftværk leverer omkring 1 GW.",
+     "link": "gen"
+    },
+    {
+     "term": "Installeret kapacitet",
+     "t": "Hvad alle kraftværker tilsammen kan levere på én gang. Forbrug over tid måles i stedet i kilowatt-timer.",
+     "link": "gen"
+    },
+    {
+     "term": "Grundlast",
+     "t": "Strøm, der kan leveres døgnet rundt uanset vejr, fx fra gas og atomkraft. Datacentre kører hele døgnet.",
+     "link": "gen"
+    },
+    {
+     "term": "Gasturbine",
+     "t": "En maskine, der brænder gas og driver en generator. Den kan startes hurtigt og bygges tæt på et datacenter.",
+     "link": "gen"
+    },
+    {
+     "term": "LNG",
+     "t": "Flydende naturgas. Gassen køles ned, så den kan sejles med skib i stedet for at løbe i rør.",
+     "link": "gen"
+    },
+    {
+     "term": "Fission",
+     "t": "Atomkraft, hvor tunge atomer som uran spaltes. Alle atomkraftværker i drift bruger fission. Fusion er noget andet og stadig på forsøgsstadiet.",
+     "link": "smr"
+    },
+    {
+     "term": "SMR",
+     "t": "Små modulære reaktorer. Mindre atomkraftværker, der kan bygges i serie. De fleste projekter i Vesten har endnu ikke anlæg i kommerciel drift.",
+     "link": "smr"
+    },
+    {
+     "term": "Transmission",
+     "t": "De store højspændingsledninger, der fører strøm over lange afstande. Det lokale net det sidste stykke hedder distribution.",
+     "link": "grid"
+    },
+    {
+     "term": "Transformer",
+     "t": "Ændrer spændingen, så strøm kan sendes langt ved høj spænding og bruges ved lav. Store transformere har flere års leveringstid.",
+     "link": "grid"
+    },
+    {
+     "term": "Batterilager",
+     "t": "Store batterier ved nettet, der gemmer strøm fra sol og vind og leverer den, når der er brug for den.",
+     "link": "storage"
+    },
+    {
+     "term": "Sjældne jordarter",
+     "t": "Metaller, der bruges i stærke magneter til motorer, vindmøller og robotter. Forarbejdningen er i dag koncentreret i Kina.",
+     "link": "materials"
+    },
+    {
+     "term": "Kobber",
+     "t": "Leder strømmen i ledninger, motorer, transformere og datacentre. Næsten al elektrificering bruger kobber.",
+     "link": "materials"
+    },
+    {
+     "term": "Væskekøling",
+     "t": "Kølevæske føres helt ind til chippen, fordi moderne AI-racks bliver for varme til luftkøling.",
+     "hop": "ai-compute:datacenter"
+    }
+   ],
+   "glossaryNote": "Ordbogen er generel baggrundsviden og ikke NDI's synspunkter. Den forklarer ord, der går igen i energikæden."
   },
   {
    "id": "space",
@@ -3530,7 +3650,19 @@
     }
    ],
    "bridgesNote": "Broerne er faglige sammenhænge. Ingen af kvanteleddets selskaber står i andre kæder i den forsinkede beholdning.",
-   "icon": "⚛"
+   "icon": "⚛",
+   "horizon": {
+    "title": "Hvor langt er der til nyttige kvantecomputere?",
+    "who": "NVIDIA's direktør",
+    "when": "januar 2025",
+    "t": "sagde, at nyttige kvantecomputere sandsynligvis ligger omkring 20 år ude.",
+    "src": "gengivet i BLOG 13. januar 2025",
+    "ndi": {
+     "t": "Mads nævner kvantecomputere som et accelererende segment med politisk medvind og høj volatilitet.",
+     "src": "BLOG 2. juni og 7. juli 2025"
+    },
+    "note": "Udsagnet er NVIDIA-direktørens, ikke Mads' og ikke NDI's prognose. Tidslinjen er usikker. Netop derfor bruger Mads kvante som eksempel på indtægter, der ikke passer i et regneark (BLOG 21. juli 2025)."
+   }
   }
  ],
  "themeNote": "Fintech/digitale betalinger behandles som tema (platforme), ikke som egen kæde. Kilderne beskriver ingen fintech-værdikæde.",
