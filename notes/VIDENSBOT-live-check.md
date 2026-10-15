@@ -56,3 +56,12 @@ Leos fem beslutninger er i det væsentlige gennemført på Pages siden, og siden
 1. Privat repo (og evt. separat offentligt Pages repo) eller omskrivning af git historikken.
 2. Kvartalssnapshot: 31. marts eller 30. juni 2026, og om månedshistorikken skal fjernes.
 3. Om ÅTD og 100.000 kr. eksemplet skal blive, før Fundmarket har set dem.
+
+
+## 2026-10-15 ~23:10 — værdikæder (Grok)
+Indhold fra `VIDENSBOT-vaerdikaeder.md` landet i `vaerdikaeder.html` + `value-chains.json`.
+- Compliance-band på siden.
+- Ingen "øger eksponering" / "overvægt i" / "sikkert køb".
+- Musk/SpaceX kun som citat med kilde (BLOG 12. okt 2026).
+- Holdings-eksempler bundet til asOf 2026-06-01 (recheck ved snapshot-skift).
+- Fintech = tema-note, ikke kæde.

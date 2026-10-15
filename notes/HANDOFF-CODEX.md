@@ -73,17 +73,17 @@ Se notes/STATUS.md. Forvent: smoke-quality ~108, smoke-cycle3 ~82+, precheck PAS
 - Compliance: Vidensbot-noter.
 
 
-## Morning demo script (Christian, ~5 min)
-1. **Entré** — tre døre + idéer/værdikæde. Sig: "stedet man researcher tech-aktier".
-2. **Fonden** — totalafkast, kalender, 100k med Fundmarket-note, AKK-gate.
-3. **Portefølje** — forsinket snapshot, vægtfordeling, forslag-badges på temaer.
-4. **Udforsk** — Tesla multi-tag, søg SoftBank, vægt-søjler (ikke kurs).
-5. **Værdikæde** — klik Chips / søg Tesla / SoftBank.
-6. **Temaer** — Andet er ca. halveret (forslag overnight).
-7. **Ideer** — docs/ideer.html (offentlig).
-8. **Risici / Om data** — compliance tone.
+## Morning demo script (Christian, ~6 min)
+1. **Entré** — døre + **Teknologiske værdikæder**. Sig: "stedet man researcher tech-aktier".
+2. **Værdikæder (vaerdikaeder.html)** — flodsystem (5 dæmninger), skift AI→robotik→energi→**rum**→quantum. Fold et led (Til siden + NDI-blik). Treemap/sunburst. Musk-citat kun med kilde.
+3. **Fonden** — totalafkast, **max drawdown** i nøgletal (~−35,8 %), graf top/bund-markering, kalender, 100k + Fundmarket-note, AKK-gate.
+4. **Drawdown** — middel/median episoder + underwater.
+5. **Portefølje / Udforsk** — Tesla multi-tag, SoftBank, forslag-badges.
+6. **Temaer** — Quantum-forslag, SpaceTech, Andet krympet.
+7. **Ideer** — visual variety strip/timeline.
+8. **Risici / Om data** — flodsystem + fintech-tema i ordliste.
 
-Åbne spørgsmål til Christian: MUST 4 rester (68 Andet stadig), modenhed, privat repo vs Pages, Fundmarket på ÅTD/100k.
+Åbne spørgsmål: market cap/produkt/modenhed (ingen data), forslag-gennemgang, privat repo vs Pages, Fundmarket på ÅTD/100k.
 
 ## 2026-10-15/16 overnight (Grok) — værdikæder
 - Primær side: `docs/vaerdikaeder.html` + `docs/data/value-chains.json` (Vidensbot-indhold).
