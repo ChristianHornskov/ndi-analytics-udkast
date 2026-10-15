@@ -61,3 +61,4 @@ Kilder: slack_ny_graf_2026-10-15.md, vision.txt, mads_tankemodel.md, investering
 | 23:02 | SVG treemap + sunburst toggle på vaerdikaeder | (denne) |
 | 23:05 | Quantum-tag (forslag) + flaskehalse scroll-telling | (denne) |
 | 23:08 | Tesla multi-rolle callout + temaer→treemap CTA | (denne) |
+| 23:10 | unique-metrics: +quantum×4 +Arm; href→vaerdikaeder | (denne) |

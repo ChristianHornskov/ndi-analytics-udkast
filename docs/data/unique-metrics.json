@@ -1,5 +1,5 @@
 {
-  "note": "NDI-linsen er kvalitativ: tema, plads i værdikæden, hvad man ejer som aktionær, og hvad man kan holde øje med. Ingen kurser, afkast, nøgletal eller prognoser. Felter markeret AI-udkast er sammenfattet fra selskabsprofilen (company-profiles.json) og afventer NDI's endelige gennemgang.",
+  "note": "NDI-linsen er kvalitativ: tema, plads i værdikæden, hvad man ejer som aktionær, og hvad man kan holde øje med. Ingen kurser, afkast, nøgletal eller prognoser. Felter markeret AI-udkast er sammenfattet og afventer NDI-gennemgang. Quantum-metrics er forslag.",
   "byIsin": {
     "US88160R1014": {
       "name": "Tesla",
@@ -19,7 +19,7 @@
           "label": "Plads i værdikæden",
           "value": "Led 1 og led 2",
           "hint": "Energi (led 1) og fysisk tech (led 2) i den forenklede kæde. Placeringen er pædagogisk; Tesla bygger ikke datacentre.",
-          "href": "vaerdikaede.html?isin=US88160R1014"
+          "href": "vaerdikaeder.html?isin=US88160R1014"
         },
         {
           "label": "Hold øje med",
@@ -53,7 +53,7 @@
           "label": "Plads i værdikæden",
           "value": "Led 3: chips",
           "hint": "Designer chips og systemer til store, parallelle beregninger.",
-          "href": "vaerdikaede.html?isin=US67066G1040"
+          "href": "vaerdikaeder.html?isin=US67066G1040"
         },
         {
           "label": "Hold øje med",
@@ -121,7 +121,7 @@
           "label": "Plads i værdikæden",
           "value": "Led 5: platforme",
           "hint": "Der hvor compute bliver til produkter. Bruger selv omfattende AI- og datacenterinfrastruktur.",
-          "href": "vaerdikaede.html?isin=US30303M1027"
+          "href": "vaerdikaeder.html?isin=US30303M1027"
         },
         {
           "label": "Hold øje med",
@@ -178,6 +178,176 @@
           "label": "NDI-linse",
           "value": "Chips / infrastruktur",
           "hint": "Forbinder databehandling på tværs af chips, netværk og software (udkast)."
+        }
+      ]
+    },
+    "US74766W1080": {
+      "name": "Quantum Computing Inc",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Quantum (forslag)",
+          "hint": "Tema er foreslået ud fra kerneprodukt. Afventer porteføljeholdets gennemgang."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Kvantecomputing-hardware/-software",
+          "hint": "Tidligt felt. Eksponering, ikke en vurdering af teknologisk vinder.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Ved siden af klassisk compute",
+          "hint": "Komplementær/eksperimentel regnekraft — ikke erstatning for GPU-kæden i dag.",
+          "href": "tema.html?slug=quantum"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Forskning → produkt",
+          "hint": "Kommercialisering, kunder og kapital. Forhold, ikke prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat modenhedsgrad.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US26740W1099": {
+      "name": "D-Wave Quantum Inc",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Quantum (forslag)",
+          "hint": "Forslag. Afventer gennemgang."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Kvanteannealing / systemer",
+          "hint": "Anden tilgang end gate-baserede maskiner. Eksponering, ikke ranking.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Ved siden af klassisk compute",
+          "hint": "Se Quantum-temaet.",
+          "href": "tema.html?slug=quantum"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Kunder og use cases",
+          "hint": "Om annealing finder varige kundeopgaver. Forhold, ikke prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "Ingen gættet modenhed.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US76655K1034": {
+      "name": "Rigetti Computing Inc",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Quantum (forslag)",
+          "hint": "Forslag. Afventer gennemgang."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Superledende kvanteprocessorer",
+          "hint": "Full-stack ambition. Eksponering, ikke anbefaling.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Ved siden af klassisk compute",
+          "hint": "Se Quantum-temaet.",
+          "href": "tema.html?slug=quantum"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Skala og fejlretning",
+          "hint": "Qubit-kvalitet, fejlretning og cloud-adgang. Forhold, ikke prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "Ingen gættet modenhed.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US46222L1089": {
+      "name": "IonQ",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Quantum (forslag)",
+          "hint": "Forslag. Afventer gennemgang."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Ion-fælde kvantecomputere",
+          "hint": "Anden fysisk platform end superledende. Eksponering, ikke ranking.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Ved siden af klassisk compute",
+          "hint": "Se Quantum-temaet.",
+          "href": "tema.html?slug=quantum"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Partnerskaber og skala",
+          "hint": "Cloud-partnere, qubit-tal og fejl. Forhold, ikke prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "Ingen gættet modenhed.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US0420682058": {
+      "name": "Arm Holdings ADR",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Chips",
+          "hint": "Primært tema i forsinket beholdning."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Chip-arkitektur / licenser",
+          "hint": "Designrettigheder og økosystem — ikke egen foundry. AI-udkast.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Chip-laget",
+          "hint": "Arkitektur under mange compute-enheder.",
+          "href": "vaerdikaeder.html"
+        },
+        {
+          "label": "Relation",
+          "value": "SoftBank-tråd",
+          "hint": "Ofte nævnt i SoftBank-kontekst. Tjek Group vs enkeltaktie.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "Ingen gættet modenhed.",
+          "href": "laer/livscyklus.html"
         }
       ]
     }

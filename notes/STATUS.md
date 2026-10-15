@@ -223,3 +223,9 @@ Ikke taget: MUST 4-rest (68 i Andet, modenhed), SHOULD 3, 5 og 7, COULD. notes/H
 - themes.json + treemap opdateret; multi-tags bi-tag compute.
 - vaerdikaeder: kap-flaskehalse scroll-telling (energi, wafers, datacenter, optik/folk) + compliance-band.
 - MADS: quantum [x], flaskehalse [x]. Market cap/produktkategori stadig blokeret uden data.
+
+
+## Fra Grok (unique-metrics) · ~23:10 CEST
+- +4 quantum + Arm Holdings ADR i unique-metrics.json (kvalitativ, forslag/AI-udkast mærket).
+- Eksisterende værdikæde-href peget til vaerdikaeder.html.
+- smoke.mjs exit 0 (lokal).
