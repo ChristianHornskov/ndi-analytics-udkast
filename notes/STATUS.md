@@ -381,3 +381,13 @@ Sammenlign sagde, at den største forskel er ca. 1,5 procentpoint, men ikke i hv
 De tre tal under grafen var lige store. Totalafkast er 36 px på desktop og 32 px under 640. CAGR og år til dato er 22 px. Tallene er uændrede: +104,8 %, +26,4 % og +4,0 %. PMINDIAKK viser stadig en streg, og svg'en er tom. Ingen sidescroll ved 1280, 375 og 320. Ingen konsolfejl.
 
 `lane-D` er klar til merge. Ikke main. Ikke færdig.
+
+## Fra Grok lane-D
+
+**2026-10-16 01:15 CEST. Søjlehøjden er dybden. Ikke færdig.**
+
+Søjlerne under underwater-kurven var lige høje. Højden følger nu dybden, bredden er tiden. −16,7 % er lavest. −35,8 % er højest. −26,6 % og −26,8 % ligger tæt, fordi faldene gør. Stregen ved 10 % under nul er brand, og tallet −10 har samme farve. Et klik på søjlen hopper til bunden, samme sted som rækken.
+
+Tjekket i Chromium ved 1280, 375 og 320. Ingen sidescroll, ingen konsolfejl, ingen tekst uden for svg'en. AKK siger stadig 12 måneder og har ingen procent.
+
+`lane-D` er klar til merge. Ikke main. Ikke færdig.
