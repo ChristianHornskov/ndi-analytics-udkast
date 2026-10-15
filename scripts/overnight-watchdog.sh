@@ -62,6 +62,9 @@ ensure_loops() {
 }
 
 merge_ready() {
+  # coordinator-loop owns merges — watchdog only keeps lanes alive
+  echo "skip merges (coordinator-loop owns merges)"
+  return 0
   cd "$ROOT"
   git fetch origin --prune -q || true
   SKIP=""
