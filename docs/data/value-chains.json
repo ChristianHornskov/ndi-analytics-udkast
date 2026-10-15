@@ -1089,7 +1089,7 @@
           "id": "gen",
           "icon": "⚡",
           "label": "Elproduktion",
-          "blurb": "Gas, sol, vind, gasturbiner og kraftværker, også anlæg tæt på datacentre. Listen er selskaber, der producerer strøm, leverer brændsel til produktionen eller laver udstyret.",
+          "blurb": "Gas, sol, vind, gasturbiner og kraftværker, også anlæg tæt på datacentre. Listen er selskaber, der producerer strøm, leverer brændsel til produktionen eller laver udstyret. Comstock, Antero, EQT og Expand leverer gas som brændsel. T1 Energy laver solcellemoduler. Cummins og Generac laver motorer og reservegeneratorer og er ikke elselskaber. Babcock & Wilcox leverer kedler og service. GE Vernova leverer udstyr og driver ikke værkerne. Bloom leverer brændselsceller hos kunden. Plug leverer brændselsceller og brintudstyr. Teksten siger ikke, at hvert anlæg kører.",
           "ndi": "NDI har skrevet om gas, gasturbiner, sol, vind og producenter tæt på datacentre (ugebrev 30. marts 2026). CoreWeave, Nebius og IREN er med i energitemaet som datacentre. De står ikke her. ProPetro laver service til boringer og står ikke her.",
           "themes": [
             "energy",

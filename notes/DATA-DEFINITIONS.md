@@ -83,6 +83,8 @@ Råstof-leddet siger også, at The Metals Company skriver, at prøvekørsel vent
 
 Elnet-blurb skelner byggerne fra dem, der leverer strøm. Quanta, Primoris og MYR Group bygger nettet og producerer ikke strømmen. GE Vernova leverer udstyr og driver ikke værkerne. Solaris leverer strøm tæt på store forbrugere. Solaris' forside omtaler 16. oktober 2026 købet af Omega med dato 6. juli 2026 i adressen `ir.solaris-energy.com/news/2026/07-06-2026-120016135`. Købet er efter beholdningen pr. 2026-06-01 og står ikke i kædeteksten. Vægtene er uændrede.
 
+Elproduktions-blurb navngiver forskellen. Comstock, Antero, EQT og Expand er gas som brændsel. T1 Energy laver solcellemoduler, efter den gennemgåede profil, og profilen er ikke ændret. Cummins og Generac er motorer og reservegeneratorer, ikke elselskaber. Babcock & Wilcox leverer kedler og service. GE Vernova leverer udstyr og driver ikke værkerne. Bloom er brændselsceller hos kunden. Plug er brændselsceller og brintudstyr. Teksten siger ikke, at hvert anlæg kører. Bloom og Plug gav 403 den 16. oktober 2026, så der er ingen nye produktnavne derfra.
+
 ## År til dato på periodesiden
 
 `ytdReturn` i `data.js` bruger sidste punkt i året før som udgangspunkt, ikke 1. januar. For PMINDI pr. 2026-10-14 er det 2025-12-31, ikke 2026-01-02. `periode.html` viser den samme dato i "Fra → til". Kalenderår bruger samme base (`calendarYearReturns`).

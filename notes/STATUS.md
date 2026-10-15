@@ -425,3 +425,17 @@ Solaris' forside omtaler 16. oktober 2026 købet af Omega, dateret 6. juli 2026.
 Tjekket i Chromium ved 375 px på energifanen og i nyhedsarkivet. Sætningerne står. Omega står ikke. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `c37e9c0` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 00:37 CEST. Elproduktion skelner brændsel, moduler og udstyr. Ikke færdig.**
+
+På energikæden siger elproduktions-leddet, at Comstock, Antero, EQT og Expand leverer gas som brændsel. T1 Energy laver solcellemoduler. Cummins og Generac laver motorer og reservegeneratorer og er ikke elselskaber. Babcock & Wilcox leverer kedler og service. GE Vernova leverer udstyr og driver ikke værkerne. Bloom leverer brændselsceller hos kunden. Plug leverer brændselsceller og brintudstyr. Teksten siger ikke, at hvert anlæg kører. Vægtene er ikke ændret. T1 og Babcock har `reviewedAt` og er ikke rørt i profilen.
+
+Bloom og Plug gav 403 i nat. Sætningerne er derfor de grænser, profilerne allerede havde. Cummins, Generac og Babcock svarede 200.
+
+`1efc064` indeholder elnet-teksten. Emnelinjen gentog den forrige, fordi beskedfilen ikke var skrevet om, da commit kørte. Indholdet er elnettet. Historikken er ikke omskrevet.
+
+Tjekket i Chromium ved 375 px på energifanen og i nyhedsarkivet. Sætningerne står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `1efc064` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

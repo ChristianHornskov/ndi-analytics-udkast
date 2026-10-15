@@ -81,3 +81,9 @@ Råstof-leddet skelner nu de tre navne, der lettest læses som drift. The Metals
 ## Elnet, bygherrer og Solaris · 2026-10-16 00:36 CEST
 
 Elnet-leddet siger, at Quanta, Primoris og MYR Group bygger og ikke producerer strømmen, at GE Vernova leverer udstyr, og at Solaris leverer strøm tæt på store forbrugere. Omega-købet 6. juli 2026 er efter snapshottet og er udeladt. "Largest workforce" hos Quanta er ikke kopieret. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Elproduktion, brændsel og udstyr · 2026-10-16 00:37 CEST
+
+Elproduktions-leddet siger, hvem der leverer gas, hvem der laver solcellemoduler, og hvem der laver udstyr. Bloom og Plug er brændselsceller. Teksten siger ikke, at hvert anlæg kører. Bloom og Plug gav 403, så der er ingen nye produktnavne. T1 og Babcock er ikke ændret i profilen. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
+
+`1efc064` har elnet-teksten. Emnelinjen gentog råstof-committen, fordi beskedfilen var gammel. Indholdet er rigtigt. Ingen force-push.
