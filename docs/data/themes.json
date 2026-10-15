@@ -2116,8 +2116,8 @@
       "slug": "spacetech",
       "problem": "Opsendelser og satellitter udvider infrastrukturen uden for jordens overflade.",
       "chain": [
-        "Space",
-        "Connect",
+        "SpaceTech",
+        "Optik & netværk",
         "Compute"
       ],
       "themeKey": "space",

@@ -132,3 +132,11 @@ Heuristik: GICS sector/industry → nærmeste NDI-tema (chips/compute/software/p
 | US46222L1089 | IonQ | 0.04 | compute | quantum | kvantecomputing (navn/kerneprodukt, forslag) |
 
 | US81758H1068 | Serve Robotics | 0.31 | andet | physical | warehouse/delivery robotics (forslag) |
+
+
+## themeFrom i portfolio.json (lane-B c2, 2026-10-15)
+Alle forslag-positioner, der har skiftet tema, har nu `themeFrom` = temaet før forslaget (baseline:
+portfolio.json før `8c355a9`). PMINDI: 44 andet→NDI-tema + 4 compute→quantum. PMINDIAKK: 41 + 4.
+Forslag der stadig står i `andet` har intet `themeFrom` (ingen flytning). Kun kvalitativ metadata, ingen tal pr. aktie.
+Bruges af temaer.html-banneret ("44 lå før i Andet. Desuden er 4 flyttet fra Compute til det nye tema Quantum")
+og som "før: X" i forslag-badges. Ved godkendelse: slet `themeStatus` + `themeFrom` sammen.

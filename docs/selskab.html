@@ -89,6 +89,9 @@
  const narrative = pr?.narrative || [];
  // VIDENSBOT #13: profiltekster er AI-genererede udkast og skal mærkes som det
  const AI_BADGE = '<span class="badge" title="Tekst genereret med AI - udkast">AI-udkast</span>';
+ // NDI-linse-links: label efter mål; tema-links følger valgt andelsklasse.
+ const lensLinkLabel = (href) => href.startsWith('vaerdikaede') ? 'Se i værdikæden' : href.startsWith('tema.html') ? 'Se temaet' : href.startsWith('laer/livscyklus') ? 'Om livscyklus' : 'Læs mere';
+ const lensHref = (href) => href.startsWith('tema.html') && !/[?&]fund=/.test(href) ? `${href}${href.includes('?') ? '&' : '?'}fund=${fundId}` : href;
  const AI_NOTE = pr
  ? `Udkast: beskrivelserne på siden er genereret med AI${pr.reviewedAt ? ` og tjekket mod kilden ${fmtDate(pr.reviewedAt)}` : ''}. Afventer NDI's endelige gennemgang.`
  : 'Udkast: kort beskrivelse genereret med AI og ikke gennemgået af NDI.';
@@ -144,7 +147,7 @@
 
  ${uniquePack?.byIsin?.[p.isin]?.metrics?.length ? `<section class="panel">
  <h2 class="panel-h">NDI-linsen (udkast)</h2>
- <div class="kpi-grid">${uniquePack.byIsin[p.isin].metrics.map(m => `<div class="kpi"><span class="label">${esc(m.label)}${m.ai ? ` ${AI_BADGE}` : ''}</span><strong style="font-size:16px">${esc(m.value)}</strong><span class="sub">${esc(m.hint||'')}${m.href ? ` <a href="${esc(m.href)}">${m.href.startsWith('vaerdikaede') ? 'Se i værdikæden' : 'Om livscyklus'} →</a>` : ''}</span></div>`).join('')}</div>
+ <div class="kpi-grid">${uniquePack.byIsin[p.isin].metrics.map(m => `<div class="kpi"><span class="label">${esc(m.label)}${m.ai ? ` ${AI_BADGE}` : ''}</span><strong style="font-size:16px">${esc(m.value)}</strong><span class="sub">${esc(m.hint||'')}${m.href ? ` <a href="${esc(lensHref(m.href))}">${lensLinkLabel(m.href)} →</a>` : ''}</span></div>`).join('')}</div>
  <p class="band">Kvalitativ linse: tema, rolle og forhold at holde øje med. Ingen kurser, afkast eller nøgletal. Felter med AI-udkast er sammenfattet fra selskabsprofilen. Eksponering, ikke anbefaling. <a href="ndi-perspektiv.html">Alle selskaber med NDI-linse →</a></p>
  </section>` : ''}
  ${(() => {
