@@ -851,3 +851,127 @@ Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html, v
 3. **vaerdikaede.html:** Rum- og energikortet har fået linket "⚠ Hvad kan gå galt? 6 usikkerheder →".
 Tjek: Playwright på 1280 og 375 med 0 konsolfejl og ingen sidescroll. 6 kort og 16 ramte led. Deep-link, toplink og linket fra vaerdikaede lander på `#e-risk`, og strimmel-klik åbner `#lk-gen` og `#lk-materials`. Rum har stadig 6 kort. smoke.mjs 52/52 fail 0. Precheck PASSED. Grep efter handelssprog og tankestreger i diff giver 0 hits.
 Næste: rum "hvem bygger hvad" pr. højdebånd (antal pr. led), og kvante-fanen kan få et hop fra broerne til energi (kryostater og strøm). Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 00:37 CEST. Elproduktion skelner brændsel, moduler og udstyr. Ikke færdig.**
+
+På energikæden siger elproduktions-leddet, at Comstock, Antero, EQT og Expand leverer gas som brændsel. T1 Energy laver solcellemoduler. Cummins og Generac laver motorer og reservegeneratorer og er ikke elselskaber. Babcock & Wilcox leverer kedler og service. GE Vernova leverer udstyr og driver ikke værkerne. Bloom leverer brændselsceller hos kunden. Plug leverer brændselsceller og brintudstyr. Teksten siger ikke, at hvert anlæg kører. Vægtene er ikke ændret. T1 og Babcock har `reviewedAt` og er ikke rørt i profilen.
+
+Bloom og Plug gav 403 i nat. Sætningerne er derfor de grænser, profilerne allerede havde. Cummins, Generac og Babcock svarede 200.
+
+`1efc064` indeholder elnet-teksten. Emnelinjen gentog den forrige, fordi beskedfilen ikke var skrevet om, da commit kørte. Indholdet er elnettet. Historikken er ikke omskrevet.
+
+Tjekket i Chromium ved 375 px på energifanen og i nyhedsarkivet. Sætningerne står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `1efc064` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 00:39 CEST. Batterier og satellitter siger, hvad Fluence, Eos, Redwire og Chorus ikke er. Ikke færdig.**
+
+På energikæden siger batteri-leddet, at Fluence leverer batterisystemer og software til nettet, ikke et kraftværk, og at teksten ikke siger, at selskabet selv laver cellerne. Eos laver zinkbatterier og er ikke en mine. QuantumScape er stadig ikke masseproduktion.
+
+På rumkæden siger satellit-leddet, at Redwire leverer dele og ikke selv sender op, at York bygger platforme til kunden, og at MDA omtaler Chorus, før konstellationen er sendt op. MDA's forside sagde det samme 16. oktober 2026. Fluence gav 403, så der er ingen nye produktnavne. Eos-siden kalder selskabet en leder og nævner et lån. Det er ikke kopieret. Vægtene er ikke ændret.
+
+Tjekket i Chromium ved 375 px på begge faner og i nyhedsarkivet. Sætningerne står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `7896363` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 00:42 CEST. Sangdong er efter beholdningen, og Standard Lithium er et demonstrationsanlæg. Ikke færdig.**
+
+På energikæden siger råstof-leddet, at Standard Lithium skriver, at et demonstrationsanlæg i Arkansas behandler saltvand, og at det ikke er de store projekter. Almonty skrev 23. september 2026, at Sangdong i Sydkorea har produceret wolfram for første gang siden 1993. Valtreixal er et projekt. Meddelelsen ligger efter beholdningen pr. 1. juni 2026. Kurser på Standard Lithiums forside er ikke kopieret. Ingen `reviewedAt`.
+
+Tjekket i Chromium ved 375 px på råstof-leddet, i nyhedsarkivet og på de to selskabssider. AI-udkast er med. "tjekket mod kilden" er ikke med. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `760d781` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 00:43 CEST. Opsendelse siger månelander, og rum-compute siger Starlab ikke er i drift. Ikke færdig.**
+
+På rumkæden siger opsendelses-leddet, at Intuitive Machines leverer til Månen og ikke er en satellit, der tager billeder af Jorden. Rum og compute siger, at Voyager omtaler Starlab som et stationsprojekt, og at det ikke er en station i drift. Sætningerne er de grænser, profilerne allerede havde. Intuitive Machines' side sendte i ring. Voyager gav 403. Der er ingen nye produktnavne derfra. Vægtene er ikke ændret.
+
+Tjekket i Chromium ved 375 px på rumfanen og i nyhedsarkivet. Sætningerne står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `8b6b48c` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 00:45 CEST. Florence Copper er kommerciel produktion efter beholdningen. Ikke færdig.**
+
+På energikæden siger råstof-leddet, at Taseko skrev 9. oktober 2026, at Florence Copper er gået i kommerciel produktion, og at meddelelsen ligger efter beholdningen pr. 1. juni 2026. Yellowhead, Aley og New Prosperity er ikke miner i drift i teksten. Gibraltar er stadig en mine. Kurser på Tasekos side er ikke kopieret. Formuleringen om at være den første nye amerikanske kobberkilde er ikke kopieret. Ingen `reviewedAt`.
+
+Vistra har fået kilden til aftalen med Meta af 9. januar 2026. Tallene er de samme: mere end 2.600 MW, heraf 2.176 MW i drift og 433 MW øget effekt. Det er ikke en ny reaktor. "Largest" er ikke kopieret.
+
+Tjekket i Chromium ved 375 px på råstof-leddet og på Taseko-siden. AI-udkast er med. "tjekket mod kilden" er ikke med. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `7b42c4a` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 00:46 CEST. NuScales 6 GW er et program, ikke et værk i drift. Ikke færdig.**
+
+På energikæden siger SMR-leddet, at NuScale skriver, at et program sammen med TVA kan blive op til 6 GW, og at det er udvikling, ikke et værk i drift. Ingen af navnene er stadig beskrevet som kommerciel drift. Formuleringerne historic, largest og proven er ikke kopieret. Profilen har kilden til programsiden. Ingen `reviewedAt`.
+
+Oklo, Nano Nuclear og Terrestrial er tjekket samme nat. Forsiderne beskriver projekter og udvikling, ikke et værk i drift. Rolls-Royce-adressen for SMR landede på koncernsiden, så der er ingen ny sætning derfra.
+
+Tjekket i Chromium ved 375 px på SMR-leddet og på NuScale-siden. AI-udkast er med. "tjekket mod kilden" er ikke med. 77 MW står stadig. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `10f22ce` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 00:48 CEST. Nyhedsarkivets konceptkort er delt i korte afsnit. Ikke færdig.**
+
+Energikortet er fem afsnit. Rumkortet er tre. Ordene er de samme som i kæden. Linket til værdikædesiden er der.
+
+Tjekket i Chromium ved 375 og 1280 px. Sætningerne står. Ingen konsolfejl. Ingen vandret scroll.
+
+Neutron-siden sagde samme nat stadig, at første flyvning ligger foran. Teksten om, at Neutron ikke er fløjet, er derfor ikke ændret.
+
+**Push:** `lane-E` @ `42f5f27` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 00:49 CEST. MP Materials skriver, at magneterne laves i Independence i Texas. Ikke færdig.**
+
+Profilen siger, at udvindingen er ved Mountain Pass i Californien, og at selskabet skriver, at magneter fremstilles på anlægget Independence i Texas. Det er en mine med videre forarbejdning, ikke et chipværk. Formuleringerne om verdens rigeste forekomst og verdens stærkeste magnet er ikke kopieret. Ingen `reviewedAt`.
+
+Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Independence står i det første afsnit. Ingen konsolfejl. Ingen vandret scroll.
+
+Firefly gav 403. Eclipse-sætningen er ikke ændret.
+
+**Push:** `lane-E` @ `71bd8a8` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 00:50 CEST. United States Antimony skriver, at de også forarbejder zeolit. Ikke færdig.**
+
+Profilen sagde kun antimon. Forsiden siger, at selskabet udvinder og forarbejder to materialer, antimon og zeolit. Teksten siger det, og at det ikke er et kraftværk. Formuleringen om hele kæden og om at fjerne afhængighed er ikke kopieret. Ingen `reviewedAt`. Rollen i JSON nævner zeolit. Den vises ikke på siden.
+
+Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Zeolit står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `a5c1301` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 00:51 CEST. Capstone nævner minerne, og Santo Domingo er et projekt. Ikke færdig.**
+
+Profilen siger, at selskabet skriver, at produktionen i 2025 var 225.000 ton kobber. Siden nævner Mantos Blancos, Cozamin, Pinto Valley og Mantoverde. Santo Domingo er beskrevet som et projekt, ikke som en mine i drift. Tallet på siden stod som 225 k tonnes. Formuleringerne om verdens behov og om at være den eneste er ikke kopieret. Ingen `reviewedAt`.
+
+Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. 225.000 ton står i det første afsnit. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `53f64d1` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 00:51 CEST. Freeport nævner Cerro Verde, El Abra og Grasberg. Ikke færdig.**
+
+Profilen siger, at siden nævner Cerro Verde og El Abra i Sydamerika og Grasberg i Indonesien. Det er miner, ikke et elselskab. En ældre webcast-titel om Lone Star er ikke brugt som bevis på drift. Ingen `reviewedAt`.
+
+Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Grasberg står i det første afsnit. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `b22dc26` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

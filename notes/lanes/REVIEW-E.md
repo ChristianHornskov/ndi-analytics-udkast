@@ -81,3 +81,49 @@ Råstof-leddet skelner nu de tre navne, der lettest læses som drift. The Metals
 ## Elnet, bygherrer og Solaris · 2026-10-16 00:36 CEST
 
 Elnet-leddet siger, at Quanta, Primoris og MYR Group bygger og ikke producerer strømmen, at GE Vernova leverer udstyr, og at Solaris leverer strøm tæt på store forbrugere. Omega-købet 6. juli 2026 er efter snapshottet og er udeladt. "Largest workforce" hos Quanta er ikke kopieret. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Elproduktion, brændsel og udstyr · 2026-10-16 00:37 CEST
+
+Elproduktions-leddet siger, hvem der leverer gas, hvem der laver solcellemoduler, og hvem der laver udstyr. Bloom og Plug er brændselsceller. Teksten siger ikke, at hvert anlæg kører. Bloom og Plug gav 403, så der er ingen nye produktnavne. T1 og Babcock er ikke ændret i profilen. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
+
+`1efc064` har elnet-teksten. Emnelinjen gentog råstof-committen, fordi beskedfilen var gammel. Indholdet er rigtigt. Ingen force-push.
+
+## Fluence, Eos og Chorus · 2026-10-16 00:39 CEST
+
+Batteri-leddet siger, at Fluence ikke er et kraftværk, og at cellerne ikke er beskrevet som selskabets egne. Eos er zinkbatterier, ikke en mine. Satellit-leddet siger, at Redwire ikke sender op, at York bygger platforme, og at Chorus ikke er sendt op. "Leader" og lånet hos Eos er ikke kopieret. Fluence gav 403. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Sangdong og demonstrationsanlæg · 2026-10-16 00:42 CEST
+
+Almontys meddelelse 23. september 2026 siger, at Sangdong igen har produceret wolfram. Teksten daterer det efter beholdningen 1. juni 2026. Valtreixal er et projekt. Standard Lithium behandler saltvand i et demonstrationsanlæg. Kurserne på forsiden er ikke kopieret. AI-udkast uden gennemgangsdato. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Månelander og Starlab · 2026-10-16 00:43 CEST
+
+Opsendelse siger, at Intuitive Machines ikke er en billedsatellit. Rum og compute siger, at Starlab ikke er en station i drift. Siderne gav omdirigering i ring og 403, så der er ingen nye produktnavne. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Florence Copper · 2026-10-16 00:45 CEST
+
+Taseko skriver 9. oktober 2026, at Florence Copper er i kommerciel produktion. Det er efter beholdningen. Yellowhead, Aley og New Prosperity er ikke miner i drift. Kurser og "first new US copper source" er ikke kopieret. Vistras 433 MW er stadig øget effekt, med kilde fra 9. januar 2026. AI-udkast uden gennemgangsdato. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## NuScale 6 GW · 2026-10-16 00:46 CEST
+
+Forsiden siger "to Power" et program på op til 6 GW. Teksten kalder det udvikling, ikke et værk i drift. "Largest" og "proven" er ikke kopieret. Oklo og Nano Nuclear beskriver stadig projekter. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Korte afsnit i arkivet · 2026-10-16 00:48 CEST
+
+Energikortet er fem afsnit og rumkortet tre. Ingen nye påstande. Chromium ved 375 og 1280 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Independence · 2026-10-16 00:49 CEST
+
+MP Materials skriver, at magneterne laves i Independence i Texas. Mountain Pass er minen. "World's richest" og "world's strongest" er ikke kopieret. Firefly gav 403, så Eclipse er urørt. AI-udkast uden gennemgangsdato. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Zeolit · 2026-10-16 00:50 CEST
+
+United States Antimony skriver selv, at de to materialer er antimon og zeolit. Kobolt og wolfram i menuen er ikke skrevet ind som produktion. "Entire arc" er ikke kopieret. AI-udkast uden gennemgangsdato. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Capstone · 2026-10-16 00:51 CEST
+
+225.000 ton kobber i 2025 er selskabets tal, skrevet om fra 225 k tonnes. Santo Domingo er et projekt. De fire andre navne står på siden ved produktionen. "World's" og "only" er ikke kopieret. AI-udkast uden gennemgangsdato. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Freeport · 2026-10-16 00:51 CEST
+
+Cerro Verde, El Abra og Grasberg står på siden. Lone Star er kun en gammel webcast-titel og er udeladt. AI-udkast uden gennemgangsdato. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
