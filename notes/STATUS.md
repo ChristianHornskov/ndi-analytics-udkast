@@ -255,3 +255,13 @@ HEAD `b35518b`. Visual-variety request shipped + reviewed. MADS værdikæde/quan
 - **selskaber.html:** nu reel A-Z (før vægt-sorteret trods navnet): sortér Navn/Vægt/Tema, bogstav-/tema-hop, gruppe-rækker, multi-tags + forslag-badge, søgning i tema, HTML-escaping af `q` (XSS), tom tilstand m. FAQ-link.
 - Test: smoke.mjs fail 0. **Præ-eksisterende** stale asserts (ikke lane-B-filer): smoke-quality "NDI-linsen → værdikæde" og smoke-cycle3 "entré: linser" forventer `vaerdikaede.html`, men links peger nu på `vaerdikaeder.html` → testen skal opdateres af ejeren af scripts/.
 - precheck exit 0. Branch `lane-B` klar til merge-review. Næste: temaer-hub polish (quantum/space-synlighed, forslag-banner).
+
+
+## Fra Claude lane-B (temaer-hub polish, cyklus 2)
+- **Forslag-banner rettet:** sagde "48 selskaber … De lå før i Andet" - forkert: 4 (IonQ, Rigetti, D-Wave, QCI) kom fra **Compute**. Nyt felt `themeFrom` på 93 forslag-positioner i portfolio.json (baseline før `8c355a9`; kun kvalitativ metadata). Banner nu: "44 lå før i Andet. Desuden er 4 flyttet fra Compute til det nye tema Quantum." (AKK: 41 + 4).
+- `themeProposals()` returnerer `fromAndet` + `retagged[]`. Ny helper `chainForTheme()` + `chainHref()` i data.js (hjem-kæde pr. tema; Energiressourcer → Energi-kæden, AI-stak → AI-compute).
+- **temaer.html:** respekterer nu `?fund=` (PMINDI/PMINDIAKK-switch; tal beregnes fra valgt klasses beholdning, så de matcher tema.html). Søjler sorteret efter vægt, Andet sidst og dæmpet, min. 2 % bredde så Quantum (0,88 %) ses. "nyt tema · forslag"-badge når alle selskaber i temaet er forslag. Ny sektion "Små temaer med egen værdikæde" (SpaceTech, Quantum). Hvert tema-kort linker til sin værdikæde. Link "Se alle forslag i screeneren" (`status=forslag`).
+- **tema.html:** kæde-knap peger på temaets egen kæde (Quantum → "Kvantecomputere", Space → #kap-rum) i stedet for altid AI-kæden; forslag-badge-titel "før: Compute"; kildelinje "Før forslaget: 4 i Compute". themes.json: SpaceTech-kæde `Space/Connect` → `SpaceTech/Optik & netværk` (så led bliver klikbare).
+- Screener + A-Z: forslag-badge-titel viser "før: X". Entré-badge følger valgt klasse.
+- **Til ejere uden for lane-B:** (1) om-data.html#g-temaforslag siger stadig kun "lå i Andet" - bør nævne Compute→Quantum. (2) vaerdikaeder.html mangler deep-link til fane (`?chain=quantum`); vi linker til #kap-kaeder. (3) smoke-quality/cycle3 stale asserts (vaerdikaede vs vaerdikaeder) uændret. (4) Port 8765 bruges af anden worktree - smoke kørt mod lane-B på 8792.
+- Test: smoke fail 0; 0 konsolfejl på temaer/tema (begge klasser). precheck exit 0. Branch `lane-B` klar til merge-review. Næste: unique-metrics for flere kernenavne (kvalitativt).

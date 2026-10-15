@@ -219,8 +219,8 @@ function markHscroll(root) {
 }
 
 function renderEntre(root) {
-  // Samme klasse som temaer.html (themes.json er bygget på PMINDI), så tallet matcher siden bag døren
-  const prop = themeProposals(fundById(DATA.portfolio, 'pmindi'));
+  // Samme klasse som temaer.html?fund= (hub'en tæller fra den valgte klasses beholdning), så tallet matcher siden bag døren
+  const prop = themeProposals(fundById(DATA.portfolio, state.fund));
   root.innerHTML = `
     <p class="eyebrow">NDI ANALYTICS · UDKAST</p>
     <h1>Gå på opdagelse i NewDeal Invest</h1>
@@ -420,7 +420,7 @@ function renderFonden(root) {
       <p style="font-size:13px;color:var(--muted);line-height:1.55">Daglige top-bevægelser pr. aktie vises <strong style="color:var(--text)">ikke</strong> i denne version. Beholdningen er et forsinket snapshot, og kursafkast pr. aktie er under verifikation.</p>
       <p class="band">Beholdninger vises kun som forsinket snapshot (seneste offentlige kvartalsrapport i udkastet), så siden aldrig afslører fondens aktuelle handler. Ingen anbefaling om at købe eller sælge.</p>
       <p style="margin-top:10px"><a class="outline-btn small" href="selskaber.html?fund=${state.fund}">Se forsinket beholdning →</a>
-      <a class="outline-btn small" style="margin-left:8px" href="temaer.html">Temaer →</a></p>
+      <a class="outline-btn small" style="margin-left:8px" href="temaer.html?fund=${state.fund}">Temaer →</a></p>
     </section>
     <section class="panel">
       <h2 style="font-size:18px;margin-bottom:8px">Risiko (kort)</h2>
@@ -632,7 +632,7 @@ function positionsTable(list, fund) {
   </tr></thead><tbody>${list.map((p) => `<tr>
     <td><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}">${p.name}</a> ${weightSpark(p.isin, fund.id)}<br><small style="color:var(--muted)">${p.isin}</small></td>
     <td>${(p.weight ?? 0).toFixed(2).replace('.', ',')}</td>
-    <td>${tagsFor(p, DATA.multiTags).map((t) => `<a class="tag" href="tema.html?slug=${encodeURIComponent(t)}&fund=${fund.id}">${daTheme(t)}</a>`).join(' ')}${p.themeStatus==='forslag'?' <span class="badge badge-draft" title="Temaet er et forslag fra udkastet og afventer NDI-gennemgang">forslag</span>':''}</td>
+    <td>${tagsFor(p, DATA.multiTags).map((t) => `<a class="tag" href="tema.html?slug=${encodeURIComponent(t)}&fund=${fund.id}">${daTheme(t)}</a>`).join(' ')}${p.themeStatus==='forslag'?` <span class="badge badge-draft" title="Temaet er et forslag fra udkastet og afventer NDI-gennemgang · før: ${p.themeFrom ? daTheme(p.themeFrom) : 'Andet'}">forslag</span>`:''}</td>
   </tr>`).join('')}</tbody></table></div>`, 'Rul til siden for flere kolonner.') +
   `<p style="font-size:11px;color:var(--muted);margin-top:8px">Kun vægt og tema. De små søjler ved navnet er selskabets <strong style="color:var(--text)">vægt i fonden</strong> pr. kvartalssnapshot frem til ${fmtDate(MONTHS?.cutoff || fund.positionsAsOf)}. Ikke aktiekurs. Ingen kursafkast pr. aktie i v1. Beholdning er forsinket.</p>`;
 }

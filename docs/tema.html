@@ -33,11 +33,12 @@
  <p data-kid-footer></p>
  </footer>
  <script type="module">
- import { loadAll, fundById, fmtDate, daTheme, WARN_HIST, findTheme, tagsFor, fillKidFooter } from './js/data.js';
+ import { loadAll, fundById, fmtDate, daTheme, WARN_HIST, findTheme, tagsFor, fillKidFooter, chainForTheme, chainHref } from './js/data.js';
  const u = new URL(location.href);
  const key = u.searchParams.get('slug') || 'chips';
  const fundId = u.searchParams.get('fund') || 'pmindi';
- const [data, td] = await Promise.all([loadAll(), fetch('data/themes.json').then((r) => r.json())]);
+ const [data, td, vc] = await Promise.all([loadAll(), fetch('data/themes.json').then((r) => r.json()),
+ fetch('data/value-chains.json').then((r) => r.json()).catch(() => ({ chains: [] }))]);
  fillKidFooter();
  const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
  const w = (x) => (x || 0).toFixed(2).replace('.', ',');
@@ -57,6 +58,10 @@
  .sort((a, b) => (b.weight || 0) - (a.weight || 0));
  const sum = list.reduce((s, p) => s + (p.weight || 0), 0);
  const nProp = tk === 'andet' ? 0 : list.filter((p) => p.theme === tk && p.themeStatus === 'forslag').length;
+ // Hvor kom forslagene fra? (themeFrom i portfolio.json; mangler = Andet)
+ const fromCounts = {};
+ for (const p of list) if (p.theme === tk && p.themeStatus === 'forslag') { const f0 = p.themeFrom || 'andet'; fromCounts[f0] = (fromCounts[f0] || 0) + 1; }
+ const fromTxt = Object.keys(fromCounts).length ? ' Før forslaget: ' + Object.entries(fromCounts).sort((a, b) => b[1] - a[1]).map(([k, n]) => `${n} i ${esc(k === 'andet' ? 'Andet' : daTheme(k))}`).join(', ') + '.' : '';
  const posAsOf = fmtDate(fund.positionsAsOf || td.positionsAsOf);
  const keyToSlug = Object.fromEntries(td.themes.map((t) => [t.title.toLowerCase(), t.slug]));
  const chain = (theme.chain || []).map((c) => {
@@ -64,11 +69,12 @@
  const cur = c.toLowerCase() === theme.title.toLowerCase() || slug === theme.slug;
  return slug && !cur ? `<a class="tag" href="tema.html?slug=${slug}&fund=${fundId}">${esc(c)}</a>` : `<span class="tag ${cur ? 'accent' : ''}">${esc(c)}</span>`;
  }).join(' <span aria-hidden="true">→</span> ');
+ const vchain = chainForTheme(vc.chains, tk);
  const others = td.themes.filter((t) => t.slug !== theme.slug);
  const rows = list.map((p) => {
  const multi = p.theme !== tk;
  return `<tr>
- <td><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}">${esc(p.name)}</a>${multi ? ` <span class="tag" title="Primært tema: ${esc(daTheme(p.theme))}">også ${esc(daTheme(p.theme))}</span>` : ''}${!multi && p.themeStatus === 'forslag' && tk !== 'andet' ? ' <span class="badge badge-draft" title="forslag, afventer gennemgang">forslag</span>' : ''}</td>
+ <td><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}">${esc(p.name)}</a>${multi ? ` <span class="tag" title="Primært tema: ${esc(daTheme(p.theme))}">også ${esc(daTheme(p.theme))}</span>` : ''}${!multi && p.themeStatus === 'forslag' && tk !== 'andet' ? ` <span class="badge badge-draft" title="Forslag, afventer gennemgang${p.themeFrom && p.themeFrom !== 'andet' ? ` · før: ${esc(daTheme(p.themeFrom))}` : ' · før: Andet'}">forslag</span>` : ''}</td>
  <td class="hide-sm-cell">${esc(p.role || '')}</td>
  <td>${w(p.weight)}</td>
  </tr>`;
@@ -88,17 +94,17 @@
  </div>
  <p class="band">Temaet viser <strong>eksponering</strong> i fondens forsinkede beholdning. Ikke en anbefaling eller en bevidst overvægt.</p>
 
- ${theme.chain?.length ? `<section class="panel">
+ ${theme.chain?.length || vchain ? `<section class="panel">
  <h2 class="panel-h brand">Plads i værdikæden</h2>
  <p class="chain-row">${chain}</p>
- <p class="link-row" style="margin-top:12px"><a class="outline-btn small" href="vaerdikaede.html">Se hele AI-værdikæden →</a></p>
+ <p class="link-row" style="margin-top:12px">${vchain ? `<a class="outline-btn small" href="${chainHref(tk)}">Værdikæden "${esc(vchain.title)}" →</a> ` : ''}<a class="outline-btn small" href="vaerdikaede.html">Enkel AI-kæde →</a></p>
  </section>` : ''}
 
  <section class="panel">
  <h2 class="panel-h">Selskaber i forsinket beholdning</h2>
  ${list.length ? `<div class="table-wrap"><table class="data" style="min-width:0"><thead><tr><th>Navn</th><th class="hide-sm-cell">Rolle</th><th>Vægt %</th></tr></thead><tbody>${rows}</tbody></table></div>`
  : `<p class="band">Ingen selskaber i ${esc(fund.short)} med dette tema pr. ${posAsOf}.</p>`}
- <p class="src">Sorteret efter vægt. Ingen kursafkast pr. aktie i udkastet.${nProp ? ` ${nProp} ${nProp === 1 ? 'selskab er' : 'selskaber er'} mærket <span class="badge badge-draft">forslag</span>: temaet er foreslået og afventer gennemgang (<a href="om-data.html#g-temaforslag">hvorfor</a>).` : ''}</p>
+ <p class="src">Sorteret efter vægt. Ingen kursafkast pr. aktie i udkastet.${nProp ? ` ${nProp} ${nProp === 1 ? 'selskab er' : 'selskaber er'} mærket <span class="badge badge-draft">forslag</span>: temaet er foreslået og afventer gennemgang (<a href="om-data.html#g-temaforslag">hvorfor</a>).${fromTxt}` : ''}</p>
  <p class="link-row" style="margin-top:10px"><a class="outline-btn small" href="index.html?view=udforsk&fund=${fund.id}&tags=${encodeURIComponent(tk)}">Åbn i screeneren →</a>
  <button type="button" class="outline-btn small" id="copy-tema">Kopiér link til tema</button>
  <span class="sr-only" id="copy-tema-status" role="status" aria-live="polite"></span></p>
