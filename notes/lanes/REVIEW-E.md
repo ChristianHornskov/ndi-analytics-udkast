@@ -111,3 +111,7 @@ Forsiden siger "to Power" et program på op til 6 GW. Teksten kalder det udvikli
 ## Korte afsnit i arkivet · 2026-10-16 00:48 CEST
 
 Energikortet er fem afsnit og rumkortet tre. Ingen nye påstande. Chromium ved 375 og 1280 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Independence · 2026-10-16 00:49 CEST
+
+MP Materials skriver, at magneterne laves i Independence i Texas. Mountain Pass er minen. "World's richest" og "world's strongest" er ikke kopieret. Firefly gav 403, så Eclipse er urørt. AI-udkast uden gennemgangsdato. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.

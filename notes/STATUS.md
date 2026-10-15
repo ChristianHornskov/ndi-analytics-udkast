@@ -507,3 +507,15 @@ Tjekket i Chromium ved 375 og 1280 px. Sætningerne står. Ingen konsolfejl. Ing
 Neutron-siden sagde samme nat stadig, at første flyvning ligger foran. Teksten om, at Neutron ikke er fløjet, er derfor ikke ændret.
 
 **Push:** `lane-E` @ `42f5f27` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 00:49 CEST. MP Materials skriver, at magneterne laves i Independence i Texas. Ikke færdig.**
+
+Profilen siger, at udvindingen er ved Mountain Pass i Californien, og at selskabet skriver, at magneter fremstilles på anlægget Independence i Texas. Det er en mine med videre forarbejdning, ikke et chipværk. Formuleringerne om verdens rigeste forekomst og verdens stærkeste magnet er ikke kopieret. Ingen `reviewedAt`.
+
+Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Independence står i det første afsnit. Ingen konsolfejl. Ingen vandret scroll.
+
+Firefly gav 403. Eclipse-sætningen er ikke ændret.
+
+**Push:** `lane-E` @ `71bd8a8` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
