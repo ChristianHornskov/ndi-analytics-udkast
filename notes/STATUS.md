@@ -369,3 +369,11 @@ HEAD `b35518b`. Visual-variety request shipped + reviewed. MADS værdikæde/quan
 - Notes: HANDOFF trin 7 (otte former), UX-review checkpoint.
 - Test: 8763, 375/1280: 0 konsolfejl, ingen h-overflow, screenshot gennemset. precheck PASSED.
 - Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + ndi-perspektiv/invester sprogtjek mod Vidensbot.
+
+## Fra Claude lane-C (stilscan + kvartals-fejl rettet) · ~00:41 CEST 16/10
+- Vidensbot punkt 10: 17 tankestreger/semikolon i synlig tekst rettet; «snapshot», «feature», «treemap/sunburst», «graf-pipeline», «v1», «Azure-kald», «cutoff/precheck» ud af offentlig tekst (ideer, om-data, kort, invester, risici, ndi-perspektiv, lær/forsinket-beholdning, lær/hvorfor-mange-aktier, FAQ).
+- **Fejl rettet:** om-data kaldte 1. juni 2026 «kvartalsslut» (to steder). HANDOFF linje 39 fulgt med.
+- invester.html trin 3–5 omskrevet til almindeligt dansk.
+- Notes: UX-review, VIDENSBOT-live-check, IDEAS («tags» → «mærker»?).
+- Test: 375/1280 på 9 sider: 0 konsolfejl, ingen h-overflow, 0 døde links/ankre. precheck: se push.
+- Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + ideer.html niende form.

@@ -36,7 +36,7 @@ Klikbart dansk udkast af "stedet man researcher tech-aktier i Danmark" (Mads). S
 
 ## Datakilder (udkast)
 1. **Afkast:** Fundmarket-baseret snapshot i `portfolio.funds[].data` (PMINDI: price+total; PMINDIAKK: price only indtil 12 mdr.).
-2. **Beholdning:** offentlig Fundmarket-rapport, forsinket snapshot pr. 2026-06-01 (kvartalsslut i company-months).
+2. **Beholdning:** offentlig Fundmarket-rapport, forsinket øjebliksbillede pr. 2026-06-01 (første tilgængelige rapport i juni, ikke et kvartalsskifte; Vidensbot blokering 2 er stadig åben).
 3. **Temaer:** manuel/NDI-linse + overnight forslag (`themeStatus: forslag`).
 4. **Profiler:** `company-profiles.json` (AI-assisteret, mærket).
 5. **KID:** `fund-meta.json` (SRI, key risks, URL).

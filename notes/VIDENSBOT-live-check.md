@@ -121,3 +121,7 @@ Sider: ideer, kort, om-data, invester, risici, ndi-perspektiv, laer/*.
 - Sprogscan (købsmulighed, kursmål, timing, billig/dyr, undervurderet, vinder, boble, trading, anbefal*) på alle lane-C-sider: 60 træffere, alle negationer eller ansvarsfraskrivelser («ikke en opfordring til at købe eller sælge», «ikke automatisk billig», «ikke at finde den ene vinder»). Intet at rette.
 - Nye begreber er beskrivende: «Hold øje med» = «hvad man kan følge, ikke en prognose». «Eksportregler»: «ikke en vurdering af, hvordan reglerne ændrer sig». «Indre værdi»: forskel til børsværdi «kan være stor i begge retninger» — ingen rabat/præmie-påstand om SoftBank.
 - «Neocloud» nævner CoreWeave som eksempel (findes i snapshot 1. jun 2026, og NDI-blogindlæg «The economy of a neocloud» er kilde i company-profiles). Ingen vurdering af selskabet.
+
+## Lane-C opfølgning 00:41 CEST 16/10 (Claude)
+- Punkt 10 (stil): tankestreger/semikolon i synlig tekst fjernet på lane-C-sider (ideer, om-data, kort, invester, risici, ndi-perspektiv, lær). Engelske ord reduceret (snapshot, feature, treemap/sunburst, pipeline, v1).
+- Blokering 2: om-data omtalte ikke længere 1. juni 2026 som «kvartalsslut». Selve datavalget (kvartal 31/3 eller 30/6) er stadig Leos beslutning og data-lanes opgave.

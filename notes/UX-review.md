@@ -206,3 +206,10 @@ Ingen nye.
 - Hvorfor: siden manglede et billede af *spredning* — «vi kan ikke pege på den ene vinder» er nu synligt som 345 små prikker. Linker til lær/hvorfor-mange-aktier.
 - Mobil 375: firkanter brydes under labelen (grid-række 2), ingen h-overflow. 1280: tre kolonner (label · prikker · tal).
 - Næste for ideer: overvej om «Tre sætninger»-citaterne skal flyttes op som afslutning på floden (læserækkefølge).
+
+## ~00:41 CEST lane-C checkpoint (Claude) — stilscan mod Vidensbot punkt 10
+- Tankestreger og semikolon i synlig tekst på lane-C-sider: 17 steder rettet til punktum eller komma (ideer, om-data, kort, ndi-perspektiv meta). Tilbage: kun datointerval «august–november».
+- «snapshot» → «øjebliksbillede»/«beholdning pr. 1. juni 2026» i synlig tekst (ideer, om-data, risici, forsinket-beholdning, hvorfor-mange-aktier, FAQ). «feature», «treemap/sunburst», «graf-pipeline», «v1», «Azure», «cutoff», «precheck» fjernet fra offentlig tekst.
+- **Faktuel rettelse:** om-data kaldte 1. juni 2026 «kvartalsslut». Det er det ikke (Vidensbot blokering 2). Nu: «første tilgængelige Fundmarket-rapport i juni. Datoen er ikke et kvartalsskifte.»
+- invester.html: trin 3–5 omskrevet uden skråstreger og intern jargon («Afkastfanen, kontekstgrafen», «UCITS», «v1»). ISIN'erne står nu med klassenavn.
+- Bevidst beholdt: «compute», «growth/GARP/value», «tags». Det er fagord med ordlisteopslag. Til beslutning (IDEAS): skal «tags» hedde «mærker»?
