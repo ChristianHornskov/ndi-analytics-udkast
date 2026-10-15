@@ -14,6 +14,10 @@ p = root/'docs/data/data.json'; p.write_text('{}')
 r = run(); p.unlink()
 assert r.returncode != 0, 'expected fail on data.json'
 
+p = root/'docs/sitemap.xml'; p.write_text('<urlset/>')
+r = run(); p.unlink()
+assert r.returncode != 0, 'expected fail on sitemap.xml'
+
 port = root/'docs/data/portfolio.json'; bak = port.read_bytes()
 d = json.loads(bak); d['funds'][0]['positions'][0]['d1'] = 1.0
 port.write_text(json.dumps(d)); r = run(); port.write_bytes(bak)

@@ -10,7 +10,7 @@ import re
 
 BASE = 'https://christianhornskov.github.io/ndi-analytics-udkast/'
 DOCS = pathlib.Path(__file__).resolve().parent.parent / 'docs'
-DEFAULT_DESC = 'NDI Analytics – klikbart udkast. Fonden, porteføljen og tech-temaer set gennem NDI\'s linse. Generel information, ikke rådgivning.'
+DEFAULT_DESC = 'NDI Analytics - klikbart udkast. Fonden, porteføljen og tech-temaer set gennem NDI\'s linse. Generel information, ikke rådgivning.'
 SKIP = {'notes/index.html'}
 NUM = re.compile(r'[+-]?\d+[.,]?\d*\s?%')
 
@@ -41,18 +41,18 @@ def main():
         esc = lambda s: html.escape(s, quote=True)
         block = (
             '<!-- og:start -->\n'
-            f'  <meta property="og:type" content="website">\n'
-            f'  <meta property="og:site_name" content="NDI Analytics (udkast)">\n'
-            f'  <meta property="og:locale" content="da_DK">\n'
-            f'  <meta property="og:title" content="{esc(title)}">\n'
-            f'  <meta property="og:description" content="{esc(desc)}">\n'
-            f'  <meta property="og:url" content="{esc(url)}">\n'
-            f'  <meta property="og:image" content="{BASE}assets/og-card.png">\n'
-            f'  <meta property="og:image:width" content="1200">\n'
-            f'  <meta property="og:image:height" content="630">\n'
-            f'  <meta property="og:image:alt" content="NDI Analytics – udkast. Gå på opdagelse i porteføljen.">\n'
-            f'  <meta name="twitter:card" content="summary_large_image">\n'
-            '  <!-- og:end -->'
+            f' <meta property="og:type" content="website">\n'
+            f' <meta property="og:site_name" content="NDI Analytics (udkast)">\n'
+            f' <meta property="og:locale" content="da_DK">\n'
+            f' <meta property="og:title" content="{esc(title)}">\n'
+            f' <meta property="og:description" content="{esc(desc)}">\n'
+            f' <meta property="og:url" content="{esc(url)}">\n'
+            f' <meta property="og:image" content="{BASE}assets/og-card.png">\n'
+            f' <meta property="og:image:width" content="1200">\n'
+            f' <meta property="og:image:height" content="630">\n'
+            f' <meta property="og:image:alt" content="NDI Analytics - udkast. Gå på opdagelse i porteføljen.">\n'
+            f' <meta name="twitter:card" content="summary_large_image">\n'
+            ' <!-- og:end -->'
         )
         # Fjern løse og:/twitter:-tags uden for blokken (fx relative og:image, som previews ikke kan hente)
         outside = re.sub(r'<!-- og:start -->.*?<!-- og:end -->', '', src, flags=re.S)

@@ -36,7 +36,7 @@
  <li>Fondens afkastdata: snapshot fra den offentlige graf-pipeline (Fundmarket-baseret), gemt lokalt i <code>data/</code>.</li>
  <li>Beholdninger: forsinket snapshot, pr. <strong>1. juni 2026</strong> (kvartalsslut i udkastet). Ingen live Azure-kald. Nyere end cutoff må ikke lægges i <code>docs/</code> (se precheck).</li>
  <li>Modenhed: heuristik/udkast hvor vist - ikke officiel NDI-rating. P/S og P/E pr. aktie vises ikke i v1.</li>
- <li>Startdato for afkast: <strong>første NAV</strong> (PMINDI 22. sep. 2023, PMINDIAKK 5. dec. 2025). Juridisk stiftelsesdato kan afvige . se ordlisten.</li>
+ <li>Startdato for afkast: <strong>første NAV</strong> (PMINDI 22. sep. 2023, PMINDIAKK 5. dec. 2025). Juridisk stiftelsesdato kan afvige, se ordlisten.</li>
  <li>Fonden har intet fast benchmark.</li>
  </ul>
  </section>
@@ -44,7 +44,7 @@
  <h2 style="font-size:16px;margin-bottom:10px">Ordliste</h2>
  <dl style="color:var(--muted);display:grid;gap:12px">
  <div id="g-foerste-nav"><dt style="color:var(--text)">Første NAV</dt><dd>Datoen for første indre værdi i afkastserien. Alle "siden start"-tal og 100.000-kr.-eksemplet er beregnet herfra. Ikke nødvendigvis samme dato som juridisk stiftelse.</dd></div>
- <div id="g-cagr"><dt style="color:var(--text)">CAGR</dt><dd>Gennemsnitligt årligt afkast (geometrisk) over perioden.</dd></div>
+ <div id="g-cagr"><dt style="color:var(--text)">CAGR</dt><dd>Gennemsnitligt årligt afkast (geometrisk) over perioden. Ligger under et simpelt gennemsnit af årsafkast, når afkastet svinger. Se <a href="laer/variance-drag.html">CAGR og gennemsnit</a>.</dd></div>
  <div id="g-total"><dt style="color:var(--text)">Totalafkast</dt><dd>Afkast inkl. geninvesteret udbytte, efter fondens løbende omkostninger, i DKK.</dd></div>
  <div id="g-ytd"><dt style="color:var(--text)">År til dato (ÅTD)</dt><dd>Afkast fra sidste handelsdag i forrige kalenderår til seneste dato.</dd></div>
  <div id="g-drawdown"><dt style="color:var(--text)">Drawdown / fald fra top</dt><dd>Fald fra et tidligere højdepunkt. På fondniveau: største fald fra top i totalafkast-serien (se drawdown-siden). Enkeltaktie-52-ugers-fald vises ikke i v1. Beskrivende - ikke en opfordring til at handle.</dd></div>
@@ -58,12 +58,12 @@
 
  <div id="g-akk"><dt style="color:var(--text)">Akkumulerende (AKK)</dt><dd>Andelsklasse der geninvesterer udbytte i stedet for at udbetale det. PMINDIAKK viser afkast efter 12 måneders historik.</dd></div>
  <div id="g-udbytte"><dt style="color:var(--text)">Udbytte / ex-dato</dt><dd>På ex-dato falder andelskursen med udbyttet. Totalafkastet viser værdien, hvis udbyttet var geninvesteret.</dd></div>
- <div id="g-isin"><dt style="color:var(--text)">ISIN</dt><dd>International Securities Identification Number . unik kode for fonden (PMINDI: DK0062499810, PMINDIAKK: DK0064642623).</dd></div>
+ <div id="g-isin"><dt style="color:var(--text)">ISIN</dt><dd>International Securities Identification Number, en unik kode for fonden (PMINDI: DK0062499810, PMINDIAKK: DK0064642623).</dd></div>
  <div id="g-kid"><dt style="color:var(--text)">KID</dt><dd>Central Information Dokument med risici, omkostninger og målgruppe.</dd></div>
- <div id="g-nav"><dt style="color:var(--text)">NAV</dt><dd>Net Asset Value . andelskursen. I udkastet: seneste snapshot, ikke live.</dd></div>
+ <div id="g-nav"><dt style="color:var(--text)">NAV</dt><dd>Net Asset Value, dvs. andelskursen. I udkastet: seneste snapshot, ikke live.</dd></div>
  <div id="g-datostempler"><dt style="color:var(--text)">"Afkast pr." og "Beholdning pr."</dt><dd>To forskellige datoer. "Afkast pr." er seneste NAV i afkastserien (beregnet fra første NAV). "Beholdning pr." er datoen for det forsinkede snapshot med positioner og vægte. Beholdningen er derfor ældre end afkastet.</dd></div>
  <div id="g-forsinket"><dt style="color:var(--text)">Forsinket beholdning</dt><dd>Forsinket snapshot fra Fundmarket (kvartalsslut i udkastet). Senest 1. juni 2026. Ikke dagsaktuel.</dd></div>
- <div id="g-tema"><dt style="color:var(--text)">Tema / NDI-linse</dt><dd>Chips, compute, software, platforme, optik &amp. netværk, SpaceTech, fysisk tech, energi m.fl. Viser eksponering, ikke anbefaling.</dd></div>
+ <div id="g-tema"><dt style="color:var(--text)">Tema / NDI-linse</dt><dd>Chips, compute, software, platforme, optik &amp; netværk, SpaceTech, fysisk tech, energi m.fl. Viser eksponering, ikke anbefaling.</dd></div>
  <div id="g-vaerdikaede"><dt style="color:var(--text)">AI-værdikæde</dt><dd>Pædagogisk model: energi → datacenter → chips → optik → software/platforme. Ikke en investeringsanbefaling.</dd></div>
 
  </dl>

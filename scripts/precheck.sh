@@ -41,6 +41,13 @@ while IFS= read -r -d '' f; do
   err "stray data.json: $f"
 done < <(find "$DOC" -type f -name 'data.json' -print0 2>/dev/null)
 
+# 2b) Udkast: robots.txt blokerer alt, så der må ikke ligge et sitemap, der siger det modsatte
+if [[ -f "$DOC/sitemap.xml" ]]; then
+  err "docs/sitemap.xml must not ship while robots.txt disallows everything (udkast)"
+else
+  ok "no docs/sitemap.xml"
+fi
+
 # 3–5) Snapshot JSON: holdings date, no d1, no per-stock returns
 node << NODE
 const fs = require('fs');

@@ -59,7 +59,7 @@
  document.getElementById('main').innerHTML = `
  <a class="back" href="index.html?view=fonden&fund=${fundId}&periode=${year==='YTD'?'ytd':year==='all'?'all':'year:'+year}">← Fonden</a>
  <p class="eyebrow">PERIODE · DYB SIDE</p>
- <h1>${fund.short} . ${label}</h1>
+ <h1>${fund.short} · ${label}</h1>
  <div class="kpi-grid">
  <div class="kpi"><span class="label">Afkast</span><strong class="${(pct||0)>=0?'pos':'neg'}">${fmtPct(pct)}</strong></div>
  <div class="kpi"><span class="label">Fra → til</span><strong style="font-size:16px">${fmtDate(from)} → ${fmtDate(to)}</strong></div>
@@ -77,7 +77,7 @@
  const evts = (context?.events || []).filter(e => from && to && e.d >= from && e.d <= to);
  if (!evts.length) return `<section class="panel"><h2 style="font-size:16px;margin-bottom:8px">Dokumenterede begivenheder</h2><p style="color:var(--muted);font-size:13px">Ingen dokumenterede udbytte-events i denne periode.</p></section>`;
  return `<section class="panel"><h2 style="font-size:16px;margin-bottom:8px">Dokumenterede begivenheder</h2>
- <ul style="color:var(--muted);line-height:1.55;padding-left:18px">${evts.map(e=>`<li><strong style="color:var(--text)">${fmtDate(e.d)}</strong> . ${e.title}</li>`).join('')}</ul>
+ <ul style="color:var(--muted);line-height:1.55;padding-left:18px">${evts.map(e=>`<li><strong style="color:var(--text)">${fmtDate(e.d)}</strong>: ${e.title}</li>`).join('')}</ul>
  <p style="font-size:11px;color:var(--muted);margin-top:8px">Kun dokumenterede fondsbegivenheder.</p></section>`;
  })()}
  <p class="warn">${WARN_HIST}</p>`;

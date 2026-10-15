@@ -21,7 +21,7 @@ let DATA = null;
 let MONTHS = null;
 
 function weightSpark(isin, fundId) {
-  // Kun fondens vægt pr. månedsrapport (≤ cutoff) - aldrig aktiekurs. Skala pr. række (form, ikke niveau).
+  // Kun fondens vægt pr. kvartalssnapshot (≤ cutoff) - aldrig aktiekurs. Skala pr. række (form, ikke niveau).
   const rows = MONTHS?.funds?.[fundId];
   if (!rows) return '';
   const pts0 = rows.map((row) => ({ d: row.date, w: row.weights?.[isin] })).filter((p) => p.w != null);
@@ -246,7 +246,7 @@ function renderEntre(root) {
       <a href="vaerdikaede.html">AI-værdikæden</a> ·
       <a href="sammenlign.html">PMINDI vs PMINDIAKK</a> ·
       <a href="nyhedsarkiv.html">Nyhedsarkiv</a> ·
-      <a href="om-data.html">Ordliste &amp. data</a> ·
+      <a href="om-data.html">Ordliste &amp; data</a> ·
       <a href="risici.html">Risici / KID</a> ·
       <a href="embed/chart.html">Embed-graf</a> ·
       <a href="kort.html">Sidekort</a> ·
@@ -304,7 +304,7 @@ function renderFonden(root) {
     return;
   }
 
-  // PMINDI: kun siden start, YTD, afsluttede kalenderår. ingen 1 md / 3 md
+  // PMINDI: kun siden start, YTD, afsluttede kalenderår, ingen 1 md / 3 md
   const years = calendarYearReturns(rows);
   const totAll = periodReturn(rows);
   const c = cagr(rows);
@@ -391,8 +391,8 @@ function renderFonden(root) {
     </section>
     <section class="panel">
       <h2 style="font-size:18px;margin-bottom:8px">Omkostninger (kort)</h2>
-      <p style="font-size:13px;color:var(--muted);line-height:1.55">Afkasttal er efter fondens løbende omkostninger. Egne kurtage-/platformgebyrer og skat er ikke med. Se KID for officielle omkostningsoplysninger. vi laver ikke nye ÅOP-beregninger i dette udkast.</p>
-      <p style="margin-top:10px"><button type="button" class="outline-btn small" data-open="dlg-invest">ISIN &amp. investeringsflow</button>
+      <p style="font-size:13px;color:var(--muted);line-height:1.55">Afkasttal er efter fondens løbende omkostninger. Egne kurtage-/platformgebyrer og skat er ikke med. Se KID for officielle omkostningsoplysninger. Vi laver ikke nye ÅOP-beregninger i dette udkast.</p>
+      <p style="margin-top:10px"><button type="button" class="outline-btn small" data-open="dlg-invest">ISIN &amp; investeringsflow</button>
       <a class="outline-btn small" style="margin-left:8px" href="om-data.html">Om data →</a></p>
     </section>
 
@@ -549,13 +549,27 @@ function renderPortefolje(root) {
     <a class="back" href="?view=entre&fund=${state.fund}" data-nav="entre">← Entré</a>
     <p class="eyebrow">PORTEFØLJEN</p>
     <h1>Beholdninger · ${fund.short}</h1>
-    <p class="lede">Forsinket snapshot, pr. ${fmtDate(fund.positionsAsOf || DATA.portfolio.asOf)} (offentlig Fundmarket-rapport). Ikke dagsaktuel. Vægte summerer til ca. 100 %.</p>
+    <p class="lede">Forsinket snapshot, pr. ${fmtDate(fund.positionsAsOf || DATA.portfolio.asOf)} (offentlig Fundmarket-rapport). Ikke dagsaktuel.</p>
+    ${weightProfileNote(fund)}
     <p class="band">Segmenter viser eksponering, ikke en anbefaling. <a href="temaer.html?fund=${state.fund}">Se tema-oversigt →</a></p>
     ${fundToolbar()}
     ${renderLivscyklus(fund)}
     <p class="band" style="font-size:11px">Ingen P/S, P/E eller kursafkast pr. aktie i denne version. Tema-tags er udkast.</p>
     ${positionsTable(list, fund)}
     <p style="font-size:12px;color:var(--muted);margin-top:10px">Viser ${list.length} af ${fund.positions.length} (top efter nuværende sortering). Åbn Udforsk for filtre.</p>`;
+}
+
+// Kvalitativ beskrivelse af vægtfordelingen i det forsinkede snapshot. Afrundet, ingen falsk præcision.
+function weightProfileNote(fund) {
+  const ws = fund.positions.map((p) => p.weight).filter((w) => typeof w === 'number');
+  if (!ws.length) return '';
+  const sum = ws.reduce((a, b) => a + b, 0);
+  const tenths = Math.round((ws.filter((w) => w >= 0.05 && w <= 1).length / ws.length) * 10);
+  const over1 = ws.filter((w) => w > 1).length;
+  const spread = tenths >= 8
+    ? `Bred spredning: ${tenths >= 10 ? 'næsten alle' : `ca. ${tenths} ud af 10`} positioner vejer mellem ca. 0,05 % og 1 %, og ${over1 <= 10 ? 'kun få' : over1} vejer mere end 1 %. Vægtene ligger forholdsvis tæt, men fonden er ikke ligevægtet. `
+    : '';
+  return `<p class="note-weights" style="font-size:13px;color:var(--muted);line-height:1.55">${spread}Aktievægtene i snapshottet summerer til ca. ${Math.round(sum)} %. <a href="laer/hvorfor-mange-aktier.html">Hvorfor så mange aktier?</a></p>`;
 }
 
 function fundToolbar() {

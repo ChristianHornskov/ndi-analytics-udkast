@@ -38,7 +38,7 @@
  document.getElementById('main').innerHTML = `
  <a class="back" href="index.html?view=fonden&fund=pmindiakk">← Fonden</a>
  <p class="eyebrow">FONDAFKAST · DRAWDOWN</p>
- <h1>Drawdown . ${fund.short}</h1>
+ <h1>Drawdown · ${fund.short}</h1>
  <section class="panel"><p style="color:var(--muted);line-height:1.6">Afkast og drawdown for PMINDIAKK vises efter 12 måneders historik. Klassen følger samme overordnede strategi som PMINDI.</p></section>
  <p class="warn">${WARN_HIST}</p>`;
  } else {
@@ -58,7 +58,7 @@
  document.getElementById('main').innerHTML = `
  <a class="back" href="index.html?view=fonden&fund=${fundId}">← Fonden</a>
  <p class="eyebrow">FONDAFKAST · DRAWDOWN</p>
- <h1>Drawdown . ${fund.short}</h1>
+ <h1>Drawdown · ${fund.short}</h1>
  <p class="lede">Største fald fra top i fondens totalafkast-serie (NAV total). Fondniveau. Ikke enkeltaktier.</p>
  <div class="kpi-grid" style="grid-template-columns:repeat(2,1fr)">
  <div class="kpi"><span class="label">Max drawdown</span><strong class="neg">${dd ? fmtPct(dd.dd) : '-'}</strong></div>
