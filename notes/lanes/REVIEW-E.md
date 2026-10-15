@@ -195,3 +195,7 @@ Artiklen 1. april 2026 siger will launch. Forsidens "launched" er ikke brugt som
 ## MYR · 2026-10-16 01:21 CEST
 
 Transmission, industri og vedvarende energi står i sætningen. Leader, largest og 130 år er ikke kopieret. Selskabet ejer ikke strømmen. AI-udkast uden gennemgangsdato. Kæde og arkiv siger det. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Solaris · 2026-10-16 01:26 CEST
+
+Meddelelsen 6. juli 2026 handler om GESA, ikke Omega. Banneret på forsiden siger Omega og peger på samme adresse. Teksten følger meddelelsen. Service, efter beholdningen, ikke et kraftværk. Leading og unmatched er ikke kopieret. AI-udkast uden gennemgangsdato. Elproduktion, elnet og arkiv siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll. Overskriften er beholdningens afkortede navn.

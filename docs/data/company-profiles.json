@@ -465,20 +465,24 @@
   "US83418M1036": {
    "name": "Solaris Energy Infrastructure",
    "theme": "energy",
-   "summary": "Leverer strømproduktion og fordeling, blandt andet anlæg ved datacentre og industrivirksomheder. Selskabet kommer fra udstyr til olieindustrien.",
+   "summary": "Leverer strømproduktion og fordeling tæt på store forbrugere. Selskabet skrev 6. juli 2026, at det har købt GESA, som er service til kraftværker. Datoen ligger efter beholdningen. Det er ikke et kraftværk i drift.",
    "watch": "Kontrakter med store strømforbrugere, adgang til udstyr og den ældre olieforretning ved siden af.",
    "source": "https://www.solaris-energy.com/",
    "products": "Anlæg, der producerer og fordeler strøm tæt på forbrugeren, plus service.",
    "customers": "Datacentre, industri og energikunder.",
    "role": "Strøm ved siden af store forbrugere, ikke et klassisk elselskab alene.",
    "narrative": [
-    "Solaris leverer produktion og fordeling af strøm tæt på store forbrugere.",
-    "Selskabet kommer fra udstyr til olieindustrien. I kæden står det både på elproduktion og på elnet."
+    "Solaris skriver, at selskabet er stiftet i 2014, og at det leverer produktion og fordeling af strøm til datacentre, energi, erhverv og industri. Selskabet skrev 6. juli 2026, at det har købt Global Energy Services Alliance, GESA.",
+    "GESA er beskrevet som service til kraftværker, sammensat af Baseload Power og Pro-Per Energy Services. Datoen ligger efter beholdningen pr. 1. juni 2026. Det er service, ikke et kraftværk i drift. I kæden står Solaris både på elproduktion og på elnet."
    ],
    "narrativeSources": [
     {
      "label": "Selskabets side",
      "url": "https://www.solaris-energy.com/"
+    },
+    {
+     "label": "GESA, 6. juli 2026",
+     "url": "https://ir.solaris-energy.com/news/2026/07-06-2026-120016135"
     }
    ]
   },

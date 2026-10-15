@@ -719,3 +719,13 @@ Forsiden skriver, at selskabet leverer elektrisk byggeri i USA og Canada, og at 
 Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Vedvarende energi står. Kæden og arkivet viser sætningen. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `bdd1213` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:26 CEST. Solaris skrev 6. juli 2026, at det har købt GESA. Ikke færdig.**
+
+Meddelelsen siger, at Solaris har købt Global Energy Services Alliance, GESA. GESA er service til kraftværker, sammensat af Baseload Power og Pro-Per Energy Services. Datoen ligger efter beholdningen pr. 1. juni 2026. Det er service, ikke et kraftværk i drift. Forsidens banner siger Omega og peger på samme meddelelse. Meddelelsen nævner ikke Omega, så teksten følger meddelelsen. Selskabet skriver, at det er stiftet i 2014, og at kunderne er datacentre, energi, erhverv og industri. Ordene leading og unmatched er ikke taget med. Ingen `reviewedAt`. Blurben under elproduktion og elnet og arkivet siger grænsen. Overskriften på selskabssiden er beholdningens afkortede navn. Profilnavnet er det fulde. AI-compute-listen er ikke ændret.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. GESA, Baseload og Pro-Per står. Omega står ikke. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `afc0b25` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

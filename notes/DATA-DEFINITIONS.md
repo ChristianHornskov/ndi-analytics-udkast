@@ -81,7 +81,7 @@ Opsendelses-blurb siger, at Starfighters skriver, at STARLAUNCH 1 er et suborbit
 
 Råstof-leddet siger også, at The Metals Company skriver, at prøvekørsel ventes i fjerde kvartal 2027, og at aftalen og ansøgningen ikke er produktion. Kilden er selskabets meddelelse i maj 2026 om Allseas og NOAA's offentliggørelse af ansøgningen i august 2026. Et navneplade-tal for kapacitet og formuleringen om verdens største ressource er ikke taget med. Northern Dynasty skriver, at Pebble er i føderal tilladelsesbehandling. Lithium Americas skriver, at Thacker Pass bygges, med mål om industriel skala sent i 2027. Ingen af de to er i fuld drift. Mountain Pass og Gibraltar er stadig miner i teksten.
 
-Elnet-blurb skelner byggerne fra dem, der leverer strøm. Quanta, Primoris og MYR Group bygger nettet og producerer ikke strømmen. GE Vernova leverer udstyr og driver ikke værkerne. Solaris leverer strøm tæt på store forbrugere. Solaris' forside omtaler 16. oktober 2026 købet af Omega med dato 6. juli 2026 i adressen `ir.solaris-energy.com/news/2026/07-06-2026-120016135`. Købet er efter beholdningen pr. 2026-06-01 og står ikke i kædeteksten. Vægtene er uændrede.
+Elnet-blurb skelner byggerne fra dem, der leverer strøm. Quanta, Primoris og MYR Group bygger nettet og producerer ikke strømmen. GE Vernova leverer udstyr og driver ikke værkerne. Solaris leverer strøm tæt på store forbrugere. Forsidens banner sagde 16. oktober 2026, at selskabet køber Omega, og linket peger på meddelelsen af 6. juli 2026. Meddelelsen handler om GESA og nævner ikke Omega. Kædeteksten følger meddelelsen. Vægtene er uændrede.
 
 Elproduktions-blurb navngiver forskellen. Comstock, Antero, EQT og Expand er gas som brændsel. T1 Energy laver solcellemoduler, efter den gennemgåede profil, og profilen er ikke ændret. Cummins og Generac er motorer og reservegeneratorer, ikke elselskaber. Babcock & Wilcox leverer kedler og service. GE Vernova leverer udstyr og driver ikke værkerne. Bloom er brændselsceller hos kunden. Plug er brændselsceller og brintudstyr. Teksten siger ikke, at hvert anlæg kører. Bloom og Plug gav 403 den 16. oktober 2026, så der er ingen nye produktnavne derfra.
 
@@ -95,7 +95,7 @@ Taseko skrev 9. oktober 2026, at Florence Copper er gået i kommerciel produktio
 
 SMR-leddet siger, at NuScale skriver, at et program sammen med TVA kan blive op til 6 GW, og at det er udvikling, ikke et værk i drift. Kilden er programsiden, som taler om at udvikle og idriftsætte kapacitet, ikke om et værk, der allerede kører. Ordene historic, largest og proven er ikke taget med. De øvrige SMR-navne er stadig ikke beskrevet som kommerciel drift.
 
-Konceptkortene i nyhedsarkivet er delt i korte afsnit, så grænserne kan læses hver for sig. Energikortet har fem afsnit. Rumkortet har tre. Indholdet er det samme som på kæden. Neutron-siden sagde 16. oktober 2026 stadig, at første flyvning ligger foran. Sætningen om, at Neutron ikke er fløjet, er ikke ændret.
+Konceptkortene i nyhedsarkivet er delt i korte afsnit, så grænserne kan læses hver for sig. Energikortet har ti afsnit. Rumkortet har ni. Indholdet er det samme som på kæden. Neutron-siden sagde 16. oktober 2026 stadig, at første flyvning ligger foran. Sætningen om, at Neutron ikke er fløjet, er ikke ændret.
 
 MP Materials skriver, at magneter fremstilles på anlægget Independence i Texas, og at udvindingen er ved Mountain Pass. Ordene om verdens rigeste forekomst og verdens stærkeste magnet er ikke taget med. Firefly gav 403 samme nat. Eclipse er derfor ikke omskrevet.
 
@@ -138,6 +138,8 @@ Planet nævner satellitterne SuperDove, SkySat, Pelican, Tanager og Owl. Owl er 
 Redwire skrev 1. april 2026, at kameraer og solsensorer skal med på Artemis II, og at systemet har 11 kameraer. Selskabet skriver, at det fremstiller og tester kamerasystemet til Orion på Artemis I til V. Datoen ligger før beholdningen pr. 2026-06-01. Artiklen siger "will launch". Et kort på forsiden siger "launched". Teksten følger artiklen og kalder ikke flyvningen gennemført. Selskabet sender ikke selv raketten op. Ordet historic og et ordrebeløb er ikke taget med.
 
 MYR Group skriver, at det bygger elektriske anlæg i USA og Canada, og at arbejdet dækker transmission, kommercielle og industrielle anlæg og vedvarende energi. Selskabet ejer ikke strømmen. Ordene leader og largest og tallet 130 år er ikke taget med.
+
+Solaris skrev 6. juli 2026, at det har købt Global Energy Services Alliance, GESA. GESA er beskrevet som service til kraftværker, sammensat af Baseload Power og Pro-Per Energy Services. Datoen ligger efter beholdningen pr. 2026-06-01. Det er ikke et kraftværk i drift. Forsidens banner siger Omega og peger på samme adresse, `https://ir.solaris-energy.com/news/2026/07-06-2026-120016135`. Meddelelsen nævner ikke Omega. Teksten følger meddelelsen. Selskabet skriver, at det er stiftet i 2014, og at det leverer strøm til datacentre, energi, erhverv og industri. Ordene leading og unmatched er ikke taget med. Beholdningens navn på selskabssiden er afkortet til "Solaris Energy Infrastructur". Profilnavnet og navnene på energikæden er det fulde navn. AI-compute-listen er ikke ændret. Vægtene er uændrede.
 
 ## År til dato på periodesiden
 
