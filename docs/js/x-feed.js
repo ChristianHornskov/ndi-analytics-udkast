@@ -114,6 +114,24 @@ article.x-card.is-lead .x-text{font-size:18px;line-height:1.5;max-width:68ch}
   .x-says .x-card.is-lead,#x-grid .x-card.is-lead{grid-column:1 / -1}
 }
 .x-says .x-card:not(.is-lead) .x-text{display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.x-door.is-direct{box-shadow:inset 3px 0 0 #9ecfd6}
+.x-door.is-theme{box-shadow:inset 3px 0 0 #617d84}
+.x-door.is-direct.is-on{box-shadow:inset 3px 0 0 #9ecfd6,inset 0 -2px 0 var(--yellow)}
+.x-door.is-theme.is-on{box-shadow:inset 3px 0 0 #617d84,inset 0 -2px 0 var(--yellow)}
+.x-lane{margin-top:16px;min-width:0}
+.x-lane-h{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:baseline;margin:0 0 8px}
+.x-lane-k{font-size:11px;letter-spacing:1.3px;font-weight:700;color:var(--cyan)}
+.x-lane.is-theme .x-lane-k{color:var(--muted)}
+.x-lane-h span:last-child{color:var(--faint);font-size:12px}
+.x-lane .x-grid{margin-top:0}
+.x-lane.is-theme .x-card{background:linear-gradient(180deg,#12262c 0%,#0e1c21 100%);box-shadow:none}
+.x-lane .x-grid .x-card:only-child{grid-column:1 / -1}
+#x-grid > .x-lane{grid-column:1 / -1}
+@media(min-width:980px){
+  #x-grid:not(:has(.is-lead)) > .x-card:last-child:nth-child(odd){grid-column:1 / -1}
+}
+.x-miss{font-size:12px;color:var(--faint);line-height:1.45;margin:10px 0 0}
+.x-zero{font-size:40px;line-height:1;font-weight:600;letter-spacing:-1px;color:var(--cyan);margin:0 0 6px;font-variant-numeric:tabular-nums}
 @media(max-width:700px){
   .x-spot{grid-template-columns:1fr}
   .x-grid{grid-template-columns:1fr}
@@ -276,6 +294,50 @@ export function postMatchesQuery(p, q) {
   return [...extra].some((a) => blob.includes(String(a).toLowerCase()));
 }
 
+/**
+ * Keep ranking (score, then date). On a theme basket, keep one slot for a
+ * theme-only hit so NVDA/SoftBank do not hide the tema-lane.
+ * Company pages pass one ticker plus a name (length ≤ 2) and do not reserve.
+ */
+export function arrangeHits(ranked, limit, { reserveTheme = false } = {}) {
+  const cap = Math.max(0, Number(limit) || 0);
+  const direct = ranked.filter((h) => h.score >= 2);
+  const theme = ranked.filter((h) => h.score < 2);
+  if (reserveTheme && direct.length && theme.length && cap >= 2) {
+    const directTake = direct.slice(0, Math.min(direct.length, cap - 1));
+    const themeTake = theme.slice(0, cap - directTake.length);
+    return { direct: directTake, theme: themeTake, total: ranked.length };
+  }
+  const slice = ranked.slice(0, cap);
+  return {
+    direct: slice.filter((h) => h.score >= 2),
+    theme: slice.filter((h) => h.score < 2),
+    total: ranked.length,
+  };
+}
+
+/** Feed badge. Query uses the same ticker match as the company panel. */
+export function feedHitKind(p, { q = '', f = 'all' } = {}) {
+  const query = String(q || '').trim();
+  if (query) {
+    const hit = matchPosts({ posts: [p] }, { tickers: [query] })[0];
+    if (hit?.score >= 2) return 'direct';
+    if (hit) return 'theme';
+    return '';
+  }
+  if (!f || f === 'all' || f === 'ndi') return '';
+  const themes = f === 'chips' ? ['chips', 'ai'] : [f];
+  const tickers = f === 'chips' ? ['NVDA'] : [];
+  const hit = matchPosts({ posts: [p] }, { tickers, themes })[0];
+  if (!hit) return '';
+  return hit.score >= 2 ? 'direct' : 'theme';
+}
+
+function markTerm(hit) {
+  if (!hit || hit.score < 2) return '';
+  return (hit.reasons || []).find((r) => /^(SoftBank|NVDA)$/i.test(String(r))) || '';
+}
+
 export function postWho(p, who) {
   if (!who || who === 'all') return true;
   if (who === 'curated') return p.curatedFrom === 'mads_following';
@@ -392,33 +454,59 @@ export function xSaysPanel(pack, { tickers = [], themes = [], limit = 4, title =
   ensureXStyles();
   if (!pack?.posts?.length) return '';
   const ranked = matchPosts(pack, { tickers, themes });
-  const hits = ranked.slice(0, limit);
+  const reserveTheme = (tickers || []).filter(Boolean).length > 2;
+  const view = arrangeHits(ranked, limit, { reserveTheme });
+  const shown = view.direct.length + view.theme.length;
   const snap = esc(fmtXDate(pack.snapshotAt) || String(pack.snapshotAt || '').slice(0, 10));
   const more = feedHref({ tickers, themes });
-  if (!hits.length) {
+  if (!shown) {
     if (!showEmpty) return '';
     return `<section class="panel x-says">
   <div class="x-says-h"><h2 class="panel-h">${esc(title)}</h2></div>
   <p class="band">${esc(X_LABEL)}. Snapshot ${snap}.</p>
   <div class="x-empty">
+    <p class="x-zero" aria-hidden="true">0</p>
     <p class="k">Ingen opslag i udsnittet</p>
     <p>Der er ikke et udvalgt opslag, der matcher dette selskab eller tema.</p>
     <p><a href="ndi-paa-x.html">Se hele feedet</a></p>
   </div>
 </section>`;
   }
-  const nLabel = ranked.length > hits.length
-    ? `Viser ${hits.length} af ${ranked.length} opslag`
-    : `${hits.length} opslag`;
-  const cards = hits.map((h, i) => xCard(h.post, {
-    reasons: h.reasons,
-    lead: i === 0,
-    hitKind: h.score >= 2 ? 'direct' : 'theme',
-  })).join('');
-  return `<section class="panel x-says">
-  <div class="x-says-h"><h2 class="panel-h">${esc(title)}</h2><span class="x-says-n">${nLabel}</span></div>
-  <p class="band">${esc(X_LABEL)}. Snapshot ${snap}.</p>
+  const bits = [];
+  if (view.direct.length) bits.push(`${view.direct.length} direkte`);
+  if (view.theme.length) bits.push(`${view.theme.length} tema`);
+  const nLabel = ranked.length > shown
+    ? `Viser ${bits.join(' og ')} · ${ranked.length} i alt`
+    : bits.join(' og ');
+  const lane = (kind, hits, leadLane) => {
+    if (!hits.length) return '';
+    const kicker = kind === 'direct' ? 'Direkte træf' : 'Tema';
+    const hint = kind === 'direct'
+      ? 'Nævner selskab eller ticker.'
+      : 'Rammer temaet. Ikke en ticker fra udsnittet.';
+    const cards = hits.map((h, i) => xCard(h.post, {
+      reasons: h.reasons,
+      lead: leadLane && i === 0,
+      hitKind: kind === 'direct' ? 'direct' : 'theme',
+      query: markTerm(h),
+    })).join('');
+    return `<div class="x-lane ${kind === 'direct' ? 'is-direct' : 'is-theme'}">
+  <p class="x-lane-h"><span class="x-lane-k">${kicker}</span><span>${hint}</span></p>
   <div class="x-grid">${cards}</div>
+</div>`;
+  };
+  const themeLeft = ranked.filter((h) => h.score < 2).length - view.theme.length;
+  const miss = view.direct.length && !view.theme.length && themeLeft > 0
+    ? '<p class="x-miss">Kun direkte træf i dette udsnit. Opslag, der bare deler tema, er udeladt, så navnet står først.</p>'
+    : !view.direct.length
+      ? '<p class="x-miss">Ingen opslag i udsnittet nævner selskabet eller tickeren. Kortene er tema.</p>'
+      : '';
+  return `<section class="panel x-says">
+  <div class="x-says-h"><h2 class="panel-h">${esc(title)}</h2><span class="x-says-n">${esc(nLabel)}</span></div>
+  <p class="band">${esc(X_LABEL)}. Snapshot ${snap}.</p>
+  ${lane('direct', view.direct, true)}
+  ${lane('theme', view.theme, !view.direct.length)}
+  ${miss}
   <p class="link-row" style="margin-top:12px"><a class="outline-btn small" href="${more}">Flere opslag i feedet →</a></p>
 </section>`;
 }
