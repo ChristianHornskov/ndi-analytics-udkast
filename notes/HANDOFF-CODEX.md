@@ -71,3 +71,16 @@ Se notes/STATUS.md. Forvent: smoke-quality ~108, smoke-cycle3 ~82+, precheck PAS
 - Design: Jesper (brand tokens i SPEC).
 - Indhold/klassifikation: Mads + porteføljehold.
 - Compliance: Vidensbot-noter.
+
+
+## Morning demo script (Christian, ~5 min)
+1. **Entré** — tre døre + idéer/værdikæde. Sig: "stedet man researcher tech-aktier".
+2. **Fonden** — totalafkast, kalender, 100k med Fundmarket-note, AKK-gate.
+3. **Portefølje** — forsinket snapshot, vægtfordeling, forslag-badges på temaer.
+4. **Udforsk** — Tesla multi-tag, søg SoftBank, vægt-søjler (ikke kurs).
+5. **Værdikæde** — klik Chips / søg Tesla / SoftBank.
+6. **Temaer** — Andet er ca. halveret (forslag overnight).
+7. **Ideer** — docs/ideer.html (offentlig).
+8. **Risici / Om data** — compliance tone.
+
+Åbne spørgsmål til Christian: MUST 4 rester (68 Andet stadig), modenhed, privat repo vs Pages, Fundmarket på ÅTD/100k.
