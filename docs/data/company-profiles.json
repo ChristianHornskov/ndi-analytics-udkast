@@ -510,7 +510,17 @@
    "source": "https://www.southerncompany.com/",
    "products": "El og i dele af koncernen også gas til slutkunder.",
    "customers": "Kunder i selskabets forsyningsområder.",
-   "role": "Eksisterende elproduktion, herunder store atomkraftværker, ikke en SMR-udvikler."
+   "role": "Eksisterende elproduktion, herunder store atomkraftværker, ikke en SMR-udvikler.",
+   "narrative": [
+    "Southern Company er et reguleret elselskab. Det ejer blandt andet Georgia Power, Alabama Power og Mississippi Power.",
+    "Selskabet skriver, at atomkraftværket Vogtle leverer strøm til mere end 1 million hjem og virksomheder i Georgia. Det er værker i drift. Southern er ikke en udvikler af små reaktorer."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.southerncompany.com/"
+    }
+   ]
   },
   "NL0015002Q12": {
    "name": "Terra Innovatum",
@@ -540,7 +550,17 @@
    "source": "https://www.vistracorp.com/",
    "products": "Elproduktion og salg af el.",
    "customers": "Elkunder og aftagere på engrosmarkedet.",
-   "role": "Elproduktion, herunder eksisterende atomkraft."
+   "role": "Elproduktion, herunder eksisterende atomkraft.",
+   "narrative": [
+    "Vistra producerer strøm og sælger el, blandt andet gennem TXU Energy.",
+    "Forsiden skriver, at selskabet har 20-årige aftaler med Meta om mere end 2.600 MW fra tre atomkraftværker. Heraf er 2.176 MW produktion i drift, og 433 MW er øget effekt på værkerne. Det er ikke et program for små nye reaktorer. Teksten siger ikke, at en ny reaktor er bygget."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.vistracorp.com/"
+    }
+   ]
   },
   "US02156V1098": {
    "name": "Oklo",
@@ -570,7 +590,17 @@
    "source": "https://www.talenenergy.com/",
    "products": "El fra egne kraftværker.",
    "customers": "Aftagere af strøm, herunder store forbrugere.",
-   "role": "Eksisterende elproduktion med atomkraft. Ikke en udvikler af små reaktorer."
+   "role": "Eksisterende elproduktion med atomkraft. Ikke en udvikler af små reaktorer.",
+   "narrative": [
+    "Talen Energy producerer strøm i USA. Atomkraftværket Susquehanna er en central del af forretningen.",
+    "Det er et værk i drift, ikke en udvikler af små reaktorer. I kæden står selskabet på elproduktion."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.talenenergy.com/"
+    }
+   ]
   },
   "US8814541020": {
    "name": "Terrestrial Energy",
@@ -610,7 +640,17 @@
    "source": "https://www.centrusenergy.com/",
    "products": "Uranbrændsel og berigelse.",
    "customers": "Reaktoroperatører og programmer, der har brug for beriget uran.",
-   "role": "Brændsel til atomkraft. Står under råstoffer, ikke som reaktorudvikler."
+   "role": "Brændsel til atomkraft. Står under råstoffer, ikke som reaktorudvikler.",
+   "narrative": [
+    "Centrus leverer beriget uran som brændsel til atomkraftværker. Selskabet skriver, at det udvider berigningen af lavt beriget uran og af HALEU til nyere reaktortyper.",
+    "Centrus er ikke et kraftværk og ikke en mine. I kæden står selskabet under råstoffer."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.centrusenergy.com/"
+    }
+   ]
   },
   "US03674X1063": {
    "name": "Antero Resources",
@@ -890,7 +930,17 @@
    "source": "https://www.bwxt.com/",
    "products": "Nukleare komponenter og tjenester.",
    "customers": "Offentlige kunder og civile nukleare kunder.",
-   "role": "Leverandør til atomkraft, ikke et opsendelsesselskab."
+   "role": "Leverandør til atomkraft, ikke et opsendelsesselskab.",
+   "narrative": [
+    "BWX Technologies fremstiller nukleare komponenter og leverer tjenester, blandt andet til flådereaktorer.",
+    "Snapshottet har selskabet under SpaceTech. Forretningen er atomkraft, ikke opsendelse af satellitter."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.bwxt.com/"
+    }
+   ]
   },
   "US4859241048": {
    "name": "Karman Space & Defense",
@@ -900,7 +950,17 @@
    "source": "https://www.karman-sd.com/",
    "products": "Beskyttelse af nyttelast, mellemtrin og fremdriftssystemer.",
    "customers": "Forsvars- og rumprogrammer.",
-   "role": "Komponenter til opsendelse."
+   "role": "Komponenter til opsendelse.",
+   "narrative": [
+    "Karman laver dele til løfteraketter, missiler og rum- og forsvarsteknik.",
+    "Selskabet sender ikke selv satellitter op. I kæden står det som leverandør af dele til opsendelse."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.karman-sd.com/"
+    }
+   ]
   },
   "GB00B63H8491": {
    "name": "Rolls-Royce",
@@ -910,7 +970,17 @@
    "source": "https://www.rolls-royce.com/",
    "products": "Flymotorer, kraftsystemer og et reaktorprogram under udvikling.",
    "customers": "Flyselskaber, forsvar og, hvis reaktoren bliver bygget, elforbrugere.",
-   "role": "Motorkoncern med et SMR-program. Ikke en opsender."
+   "role": "Motorkoncern med et SMR-program. Ikke en opsender.",
+   "narrative": [
+    "Rolls-Royce fremstiller flymotorer og kraftsystemer. Koncernen har også et program for en lille modulær reaktor. Atomkraft er ikke hele selskabet.",
+    "I juni 2026 skrev selskabet, at Rolls-Royce SMR er valgt til et projekt i Sverige. Valget er ikke et værk i drift. Selskabet sender ikke selv satellitter op."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.rolls-royce.com/"
+    }
+   ]
   },
   "US31816X1063": {
    "name": "Firefly Aerospace",
@@ -920,7 +990,17 @@
    "source": "https://fireflyspace.com/",
    "products": "Løfteraketter og månelandere.",
    "customers": "Kunder, der skal have nyttelast i rummet eller til Månen.",
-   "role": "Opsendelse og transport væk fra Jorden."
+   "role": "Opsendelse og transport væk fra Jorden.",
+   "narrative": [
+    "Firefly opsender raketten Alpha og bygger månelanderen Blue Ghost. Selskabet skriver, at Blue Ghost er landet på Månen og har arbejdet der.",
+    "En større raket, Eclipse, bygges sammen med Northrop Grumman. Denne beskrivelse omfatter ikke, at Eclipse har fløjet. Firefly står på opsendelse."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://fireflyspace.com/"
+    }
+   ]
   },
   "US75776W1036": {
    "name": "Redwire",
@@ -994,7 +1074,17 @@
    "source": "https://voyagertechnologies.com/",
    "products": "Ruminfrastruktur, forsvarsteknologi og et stationsprojekt.",
    "customers": "Rumprogrammer og forsvarskunder.",
-   "role": "Infrastruktur i rummet. Ikke beregning som forretning."
+   "role": "Infrastruktur i rummet. Ikke beregning som forretning.",
+   "narrative": [
+    "Voyager arbejder med ruminfrastruktur og forsvarsteknologi. Starlab er et projekt om en rumstation.",
+    "Denne beskrivelse omfatter ikke en station i drift og ikke et datacenter i kredsløb."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://voyagertechnologies.com/"
+    }
+   ]
   },
   "US4202011056": {
    "name": "Hawkeye 360",
@@ -1174,7 +1264,17 @@
    "source": "https://nanonuclearenergy.com/",
    "products": "Reaktordesign under udvikling.",
    "customers": "Ingen driftkunder i denne beskrivelse.",
-   "role": "Tidlig reaktorudvikling."
+   "role": "Tidlig reaktorudvikling.",
+   "narrative": [
+    "Nano Nuclear udvikler meget små reaktorer, blandt andet KRONOS. Selskabet skriver, at KRONOS er i en forberedende dialog med det amerikanske nukleare tilsyn om en byggetilladelse.",
+    "Dialogen er ikke en tilladelse, og den er ikke et anlæg i drift."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://nanonuclearenergy.com/"
+    }
+   ]
   },
   "US0937121079": {
    "name": "Bloom Energy",
@@ -1184,7 +1284,17 @@
    "source": "https://www.bloomenergy.com/",
    "products": "Brændselsceller og service.",
    "customers": "Virksomheder og datacentre, der vil have strøm på egen grund.",
-   "role": "Elproduktion hos kunden, ikke et klassisk kraftværk."
+   "role": "Elproduktion hos kunden, ikke et klassisk kraftværk.",
+   "narrative": [
+    "Bloom Energy leverer brændselsceller, der laver strøm hos kunden.",
+    "Det er elproduktion på stedet, ikke et klassisk kraftværk. Snapshottet har selskabet under Andet, med et temaforslag."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.bloomenergy.com/"
+    }
+   ]
   },
   "US72919P2020": {
    "name": "Plug Power",
@@ -1194,7 +1304,17 @@
    "source": "https://www.plugpower.com/",
    "products": "Brændselsceller, elektrolyse og brintudstyr.",
    "customers": "Industri og transport, der bruger brint.",
-   "role": "Brint og brændselsceller i energikæden."
+   "role": "Brint og brændselsceller i energikæden.",
+   "narrative": [
+    "Plug Power leverer brændselsceller og udstyr til brint.",
+    "Snapshottet har selskabet under Andet, med et temaforslag. Teksten beskriver udstyret. Den siger ikke, at hvert anlæg kører."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.plugpower.com/"
+    }
+   ]
   },
   "US29415C1018": {
    "name": "Eos Energy",

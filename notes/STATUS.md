@@ -289,3 +289,17 @@ Fluence-siden svarede 403 til opslaget. Der er ikke lagt nye produktnavne ind. D
 Tjekket i Chromium på de syv `selskab.html`. "Kort fortalt" og AI-udkast er med. Ingen konsolfejl. Ingen vandret scroll ved 375 px.
 
 **Push:** `lane-E` @ `acbac20` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 ~00:20 CEST. Kort fortalt på tolv navne, med grænse for hvad der er i drift. Ikke færdig.**
+
+`narrative` uden `reviewedAt` på Southern Company, Vistra, Talen, Bloom, Centrus, BWX Technologies, Rolls-Royce, Firefly, Voyager, Karman, Plug Power og Nano Nuclear. AI-udkast bliver.
+
+Tjekket mod sider, der svarede: Southern skriver, at Vogtle leverer strøm til mere end 1 million hjem og virksomheder i Georgia. Vistra skriver om 20-årige aftaler med Meta. Mere end 2.600 MW, heraf 2.176 MW i drift og 433 MW som øget effekt. Ikke en ny reaktor. Centrus udvider berigning, herunder HALEU, og er ikke et kraftværk. Rolls-Royce skrev i juni 2026, at SMR-programmet er valgt til et projekt i Sverige. Valget er ikke et værk i drift. Flymotorer er stadig hovedforretningen. Firefly skriver, at Blue Ghost er landet på Månen. Eclipse er ikke fløjet i teksten. Nano Nuclear omtaler en forberedende dialog om byggetilladelse til KRONOS. Dialogen er ikke en tilladelse.
+
+Siderne for Talen, Bloom, BWX Technologies, Voyager, Karman og Plug Power svarede 403. Der er ikke lagt nye tal eller produktnavne ind. Teksten gentager den profil, der allerede stod, og grænsen for drift.
+
+Tjekket i Chromium på de tolv sider. AI-udkast er med. "Tjekket mod kilden" er ikke med. Ingen konsolfejl. Ingen vandret scroll ved 375 px.
+
+**Push:** `lane-E` @ `c4d39e0` er pushet efter precheck. Første forsøg blev afvist, andet gik igennem. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

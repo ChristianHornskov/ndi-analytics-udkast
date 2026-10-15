@@ -61,6 +61,8 @@ Nye selskabsprofiler i `company-profiles.json` har ingen `reviewedAt`. Siden ska
 
 Samme felt, samme dag, på Fluence, NextEra, Rocket Lab, Planet, NuScale, Quanta og GE Vernova. NextEra og Quanta har `themeStatus` forslag i snapshottet, og teksten siger det. NuScale-teksten gengiver selskabets eget tal, 77 MW pr. modul, og siger at en designgodkendelse ikke er et værk i drift. Neutron er ikke fløjet i beskrivelsen. NextEra-forsiden omtaler en sammenlægning med Dominion Energy. Teksten siger ikke, at den er gennemført.
 
+Samme nat også på Southern Company, Vistra, Talen, Bloom, Centrus, BWX Technologies, Rolls-Royce, Firefly, Voyager, Karman, Plug Power og Nano Nuclear. Tal fra selskabssider gengives som selskabets egne: Vogtle og mere end 1 million hjem i Georgia, Vistra mere end 2.600 MW hvoraf 2.176 MW er drift og 433 MW er øget effekt, NuScale 77 MW. En udvælgelse, en designgodkendelse eller en forberedende dialog er ikke et værk i drift. HALEU hos Centrus er brændsel, ikke et kraftværk. Eclipse hos Firefly er ikke fløjet i beskrivelsen. Starlab er ikke en station i drift og ikke et datacenter.
+
 ## År til dato på periodesiden
 
 `ytdReturn` i `data.js` bruger sidste punkt i året før som udgangspunkt, ikke 1. januar. For PMINDI pr. 2026-10-14 er det 2025-12-31, ikke 2026-01-02. `periode.html` viser den samme dato i "Fra → til". Kalenderår bruger samme base (`calendarYearReturns`).
