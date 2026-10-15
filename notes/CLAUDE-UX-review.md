@@ -143,3 +143,22 @@ Grundlag: `origin/main` `60cebcc`. Første cyklus med nye `docs/`-ændringer sid
 ### Persona-status
 - **Privat:** omkostninger i kr. hjælper meget. Siden skal bare starte uden intern tekst og ende med ét "i alt". Lær er stadig svær at finde fra Fonden.
 - **Family office:** drawdown.html er nu troværdig. Til gengæld ser FO, at risici/fakta siger noget andet (MUST 1), og det er værre end én fejl alene. ndi-paa-x med "Mads følger" er en tillidsrisiko.
+
+## 2026-10-16 00:25 CEST · cyklus 6 (delta)
+Grundlag: `origin/main` `60cebcc`, **uændret siden cyklus 5**. Pages last-modified 15. okt. 22:11 UTC, og `drawdown.html` har samme md5 som main. Ingen ny build-leverance at vurdere, så alle punkter fra cyklus 5 gælder uændret. Stikprøver er bekræftet:
+
+### MUST (åbne, prioriteret til næste build)
+1. Drawdown-datoer er inkonsistente: `risk-stats.json` `maxDdPeak` = 2026-06-02 (efter trough 2025-04-08). risici/fakta modsiger drawdown.html. Det er stadig den mest synlige fejl for FO.
+2. omkostninger/fakta: "Tomme felter = udfyldes af NDI" + "kl n" over folden på 375.
+3. invester trin 1 → KID/prospekt-link, trin 4 → omkostninger.html.
+
+### SHOULD
+- Én samlet løbende omkostning i kr./% på omkostninger (privat + FO).
+- AI-mærker: ét banner pr. side i stedet for 74 mærker på ndi-perspektiv.
+- ndi-paa-x: fjern "Mads følger"-badge (`js/x-feed.js:279`). Den er både en UX- og en compliance-risiko.
+- Uændret: udforsk 26k px på 375, ingen top 10, stubs (nyhedsarkiv "Placeholder: …" er stadig synlig, `nyhedsarkiv.html:37`), punktum som decimaltegn, "Central Information Dokument".
+
+### Nice
+- Ingen nye. Se cyklus 5.
+
+Forslag til watchdog: Næste cyklus bør kun køre fuld Playwright, hvis `origin/main` har bevæget sig.

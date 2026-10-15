@@ -172,3 +172,19 @@ Grundlag: `origin/main` `60cebcc` (41 `docs/`-filer er ændret siden `820f116`).
 | AI-mærkning | ✅ |
 | Omkostninger | ⚠️ kr. pr. post ✅, samlet/RIY mangler |
 | Konsistens af nøgletal | ❌ **ny**: max-drawdown-datoer er forskellige på drawdown og risici/fakta |
+
+## 2026-10-16 00:25 CEST · cyklus 6 (delta)
+Grundlag: `origin/main` `60cebcc`, uændret siden cyklus 5. Pages = main (22:11 UTC). Ikke juridisk rådgivning. Endelig vurdering: Fundmarket (IFS).
+
+### Genverificeret (grep i `docs/`)
+- "markedsføringsmateriale": **0 hits**. MUST 1 er stadig åben (blocker).
+- `js/x-feed.js:279` renderer stadig "Mads følger" for `curatedFrom === 'mads_following'`. MUST 3 er åben. Nyeste X-opslag har `created_at` 2026-10-15 og ligger altså efter holdings-cutoff 2026-06-01. Tredjeparts ticker-udsagn om beholdningsnavne + forvalter-badge = mulig indirekte anbefaling.
+- `risk-stats.json` maxDdPeak 2026-06-02 / trough 2025-04-08: MUST 6 er åben (vildledende nøgletal på tværs af sider).
+- Rådgivende ordlyd: ✅ alle hits er negationer ("uden anbefaling", "ikke … anbefaling") eller KID-termen "anbefalet investeringsperiode/ejertid". Det er OK.
+- Handelssprog ("øger eksponering", "overvægt", kursmål): ✅ 0 hits i egen copy.
+- Omkostninger: ÅOP/løbende omkostninger nævnes på index, omkostninger, om-data og embed. Samlet sats og RIY mangler stadig (SHOULD, FO-MUST).
+
+### Uændret fra cyklus 5
+MUST 2 (NDI-konti "ikke NDI's holdning"), 4 (forvalter-opslag om TSLA), 5 (AKK NAV + "samme strategi"), 7 ("afventer Fundmarket-godkendelse" offentligt), 8 (SpaceX-rubrik/profil). SHOULD-listen er uændret.
+
+**Blocker-rækkefølge foreslået:** 1 markedsføringsmærkning → 3 "Mads følger" → 6 DD-datoer → 5 AKK → 2/4 X-konti.
