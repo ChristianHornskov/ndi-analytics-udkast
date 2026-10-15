@@ -406,3 +406,27 @@ Ikke juridisk rådgivning. Main og Pages er uændrede siden cyklus 14. Jeg har g
 
 ### OK ✅
 - Beholdning pr. 1. jun. 2026. Ingen live trades. Ingen 1m/3m. Intet benchmark-claim. AI-mærkning er til stede (ndi-perspektiv, værdikæder, temaer). "Historisk afkast …" står på alle sider undtagen ndi-paa-x.
+
+## 2026-10-16 01:15 CEST · cyklus 16 (main `7b7734a`, delta)
+
+Ikke juridisk rådgivning. Jeg har grep'et renderet tekst på 34 live-sider ved 375 (Pages = main `7b7734a`).
+
+### MUST (åbne)
+1. **Ingen markedsføringsmærkning:** "markedsføring" står på 0 af 34 sider. Uændret.
+2. **"MADS FØLGER" + tickers:** 10 hits på 3 sider (NVIDIA, SoftBank, tema chips), fx "MADS FØLGER · NVDA · CRWV · NBIS". Kilden er stadig `js/x-feed.js`. Fjern det eller gør det neutralt, når x-feed.js repareres.
+3. **"kan tabe" mangler** på omkostninger, nyhedsarkiv og ndi-paa-x (tom). Alle andre 31 sider har linjen ✅.
+4. PMINDIAKK: sammenlign viser "Seneste NAV 98,40 (14. okt. 2026)". Med første NAV synlig kan afkastet før 12 mdr. regnes ud. Teksten "Afkast vises efter 12 måneder" er god, men NDI bør afklare, om NAV må vises.
+5. ÅTD/"+104,8 %" står ved siden af "afventer Fundmarket-godkendelse". Uændret.
+6. **NY · SRI-forklaringen kan læses som uærlig.** `laer/risikoklasse.html` og ordlisten (`g-sri`) siger "Klasse 5 svarer til udsving på ca. 20 til 30 % om året", men risici og fakta viser "Volatilitet (ann.) 32,46 %" (beregnet) med link til siden. Efter sidens egen tabel ville det give klasse 6. Det skyldes sandsynligvis, at KID bruger VaR-ækvivalent volatilitet (VEV) over en anden periode og metode end den simple historiske std. Men siden siger det ikke, og en læser kan tro, at SRI er sat for lavt. Ret: (a) tilføj en sætning på risikoklasse og ved 32,46 % om, at KID's tal er VaR-baseret efter PRIIPs og over en anden periode, så den simple volatilitet ikke kan bruges til at slå klassen op; eller (b) skriv "klasse 5 dækker VEV 20–30 %" og drop "udsving pr. år" som synonym. Lad NDI/Fundmarket bekræfte, hvilket tal KID bygger på. Tabellens intervaller (0,5/5/12/20/30/80) og KID-ordene (lav … næsthøjeste) stemmer med PRIIPs bilag II ✅.
+
+### SHOULD
+- Risikoklasse: "Fondens KID anbefaler en investeringsperiode på mindst 5 år". Risici siger "Anbefalet investeringsperiode ifølge KID: 5 år". Brug KID's ordlyd ét sted (mindst/anbefalet), så de to ikke afviger.
+- Rum-quiz: Q4 (SpaceX ~90 % af opsendelser, NDI 2024) er kilde-angivet og mærket "ikke som anbefaling" ✅. Ingen selskabs-ticker i svarene ✅.
+- KID-link mangler stadig i renderet tekst på værdikæder, drawdown, temaer, idéer, nyhedsarkiv, periode, ndi-perspektiv, selskaber, vaerdikaede, lær/valuta, rebalancering og de 3 lær-FAQ-sider. "Central Information Dokument" står på 10 sider (brug "Dokument med central information").
+- Omkostninger: der er stadig intet ÅOP/samlede omkostninger fra KID (FO/persona MUST, når tallet findes). "Bogen råder" på rebalancering er uændret.
+
+### Rådgivningsord ✅
+- 0 hits på garanter, "køb nu", "øger eksponering" og "bedste". "overvægt" står kun i negationer ("ikke … bevidste overvægte"). "anbefal" står i negationer og KID-sprog. "sikkert" står kun i "vinderne kan ikke udpeges sikkert" ✅.
+
+### OK ✅
+- Beholdning pr. 1. jun. 2026 (også i den nye ordliste-median). Ingen live trades. Ingen 1m/3m. "Fonden har intet fast benchmark". AI-udkast-mærket står 557 gange på 4 sider. Den nye PRIIPs-ordlistepost er korrekt og neutral.

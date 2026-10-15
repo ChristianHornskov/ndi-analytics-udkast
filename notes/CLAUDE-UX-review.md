@@ -347,3 +347,26 @@ Main og Pages er uændrede siden cyklus 14. Det her er en re-verifikation: Playw
 
 ### OK
 - 0 h-overflow og én h1 på alle sider undtagen ndi-paa-x. Ingen andre konsolfejl.
+
+## 2026-10-16 01:15 CEST · cyklus 16 (main `7b7734a`, delta siden `6592e79`)
+
+Pages er lig med main (build `7b7734a`, 23:08 UTC). Jeg har kørt Playwright på 34 live-sider ved 375 og 1280 (nyt: lær/risikoklasse, NVIDIA, sammenlign a/b, hvorfor-mange-aktier, udbytte-vs-akk, faq-mangler-aktie) og taget skærmbilleder ved 375 af risikoklasse, rum-quizzen og TSMC. Delta: ny lær-side Risikoklasse 5, ordliste 95 begreber, værdikæder/rum ("Hvem arbejder hvor højt?", "Tjek dig selv", læse-rute 8 stop), NDI-linse 217 → 269, embed-graf, mindre tekstrettelser.
+
+### MUST
+- **ndi-paa-x.html er stadig tom live** (3. cyklus): 173 tegn, 0 h1, `SyntaxError … x-feed.js does not provide an export named 'feedHitKind'`. `docs/js/x-feed.js` er ikke ændret siden `6592e79`. Ret som i cyklus 15: tag kun `docs/js/x-feed.js` fra lane-X.
+- **Risikoklasse-siden modsiger risici/fakta** (se compliance MUST 6). Lær-siden siger "klasse 5 svarer til udsving på 20 til 30 % om året", og risici viser "Risikoklasse 5/7 … Hvad klassen betyder →" lige over "Volatilitet (ann.) 32,46 %". En FO-læser regner straks klasse 6. Forklar forskellen på stedet.
+- **Tomme stubs vokser med linserne:** 175 af 269 linse-selskaber har ingen post i `company-profiles.json` (før 143/217). TSMC (`US8740391003`) viser stadig "Beskrivelse mangler i udkastet", "Rolle i værdikæden –", "Produkter –", "Kunder –" med AI-mærke over en udfyldt linse. Det samme forslag gælder: brug linsens "Hvad ejer man?" som fallback og skjul de tomme felter.
+- ndi-perspektiv er nu ca. 165.000 tegn ved 375 (før 133.500) og har 597 små trykflader. Gruppér og fold sammen som standard.
+- "afventer"/"udfyldes" står 61 gange på 12 sider. Uændret.
+
+### SHOULD
+- **Rum-quizzen (375):** god og rolig form. Feedbacken ("Ikke helt." + link) er klar, og der står "Intet gemmes" ✅. Men ved hop til `#sp-quiz` dækker den sticky fanebjælke (Flaskehalse/Rum/Filosofi) overskriften. Tilføj `scroll-margin-top` på `section[id^=sp-]`. Forkert valgt svar har kun ✗ og en stiplet kant. Det er ok, men læg også farve eller tekst på.
+- **Risikoklasse-siden (375):** pædagogisk stærk (skyder, ikke-JS-fallback, "Hvad klassen ikke siger", "Klasse 1 er ikke risikofri"). Til gengæld er det første kort en lang pil-kæde på 4 trin før skyderen. Skyderen kunne flyttes op som første element.
+- Om-data ved 375 folder grupperne sammen (1.245 tegn mod 19.367 ved 1280) ✅. Det er den rigtige løsning for mobil.
+- TSMC hedder stadig "Taiwan Semi Sp ADR" i h1, og "Foundry : chips-produktion." har stadig mellemrum før kolon.
+- Uændret: omkostninger skal have 1,49 % før "den ene forskel", fakta siger SRI/forskel tre gange, drawdown-banneret mangler "Historisk, ikke en prognose", "BREAKING" står på 2 sider, "Placeholder:" står ×8 i nyhedsarkiv, og omkostninger er ikke i primær-nav på 375.
+
+### Nice / OK
+- 0 h-overflow på 34×2 sider. 0 konsolfejl undtagen ndi-paa-x. Én h1 på alle sider undtagen ndi-paa-x.
+- Visuel variation: højdebånd, quiz og risiko-skyder er tre nye former og ikke flere kort. Ingen kort-træthed.
+- Sammenlign: "Afkast vises efter 12 måneder fra 5. dec. 2026" med tidslinje er tydeligt for privatpersonaen.
