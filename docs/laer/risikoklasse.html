@@ -70,7 +70,7 @@
   <h2 id="rk-chain">Fra udsving til klasse</h2>
   <p>Klassen hedder i KID «risikoindikator» (på engelsk SRI). Den bygger på to ting: hvor meget kursen svinger, og risikoen for, at den, der har udstedt produktet, ikke kan betale.</p>
   <ol class="chain">
-   <li><strong>Kursudsving</strong>Hvor meget kursen har svinget i en årrække, regnet om til et tal pr. år.</li>
+   <li><strong>Kursudsving efter KID-metoden</strong>Hvor meget kursen har svinget i en årrække (som udgangspunkt 5 år), regnet om til et tal pr. år. Metoden giver ekstra vægt til store fald, så tallet er ikke det samme som et simpelt udsvingstal.</li>
    <li><strong>Markedsrisiko 1 til 7</strong>Udsvinget placeres i et af syv faste intervaller.</li>
    <li><strong>Kreditrisiko</strong>Kan udstederen betale? For en aktiefond som denne er det normalt ikke det, der trækker op.</li>
    <li class="end"><strong>Risikoindikator</strong>Det samlede tal, der står i KID. For fonden: 5.</li>
@@ -80,7 +80,7 @@
 
  <section class="panel sp" aria-labelledby="rk-try" style="margin-top:14px">
   <h2 id="rk-try">Prøv selv: hvor store udsving giver hvilken klasse?</h2>
-  <p>Træk i skyderen. Tallet er udsving pr. år (volatilitet). Skalaen viser den markedsrisiko-klasse, udsvinget ville give. Fondens klasse er markeret med en blå kant.</p>
+  <p>Træk i skyderen. Tallet er udsving pr. år, målt efter KID-metoden. Skalaen viser den markedsrisiko-klasse, udsvinget ville give. Et simpelt udsvingstal kan ikke sættes direkte ind her, se «Hvad klassen ikke siger» nedenfor. Fondens klasse er markeret med en blå kant.</p>
   <div class="try">
    <label for="rk-v">Udsving pr. år: <span id="rk-vv">25</span>&nbsp;%</label>
    <input id="rk-v" type="range" min="0" max="100" step="1" value="25" aria-describedby="rk-out">
@@ -96,7 +96,7 @@
   <p>Intervallerne er ikke lige brede. Klasse 6 spænder over 50 procentpoint, klasse 5 over 10. Derfor siger to fonde i samme klasse ikke nødvendigvis det samme.</p>
   <table class="bands">
    <caption class="sr-only">Markedsrisiko-klasser og de udsving pr. år, de dækker</caption>
-   <thead><tr><th scope="col">Klasse</th><th scope="col">Udsving pr. år</th><th scope="col">Beskrivelse i KID</th><th scope="col" class="wide" style="width:30%"><span class="sr-only">Bredde af intervallet</span></th></tr></thead>
+   <thead><tr><th scope="col">Klasse</th><th scope="col">Udsving pr. år (KID-metoden)</th><th scope="col">Beskrivelse i KID</th><th scope="col" class="wide" style="width:30%"><span class="sr-only">Bredde af intervallet</span></th></tr></thead>
    <tbody>
     <tr><td>1</td><td>under 0,5&nbsp;%</td><td>laveste</td><td class="wide"><span class="bar" style="width:1%"></span></td></tr>
     <tr><td>2</td><td>0,5 til 5&nbsp;%</td><td>lav</td><td class="wide"><span class="bar" style="width:9%"></span></td></tr>
@@ -116,7 +116,7 @@
    <li><strong>Den er ikke en garanti.</strong> Klassen bygger på udsving, der har været. Fremtidens udsving kan blive større, og klassen kan ændre sig.</li>
    <li><strong>Den siger ikke, hvor dybt det kan gå.</strong> Et tal for udsving pr. år viser ikke, hvor langt fondens kurs faldt fra top til bund, eller hvor længe det varede. Det ser du under <a href="../drawdown.html">Fald fra top</a>.</li>
    <li><strong>Den fanger ikke alt.</strong> At næsten alle selskaber er teknologi, og at mange handles i dollar, står som selvstændige risici i KID. Se <a href="../risici.html">Risici ved fonden</a>, <a href="../om-data.html#g-koncentration">koncentrationsrisiko</a> og <a href="valuta.html">Valuta</a>.</li>
-   <li><strong>Den er ikke det samme som et simpelt udsvingstal.</strong> KID’et regner udsvinget efter EU’s egen metode og periode. Regner man selv udsvinget på fondens kurser, kan man få et andet tal. NDI Analytics’ eget tal står under <a href="../risici.html#tal">Udsving og fald i tal</a>.</li>
+   <li><strong>Den er ikke det samme som et simpelt udsvingstal.</strong> KID’et regner udsvinget efter EU’s egen metode og periode. Regner man selv udsvinget på fondens kurser, kan man få et andet tal, og et simpelt tal over 30&nbsp;% betyder ikke i sig selv, at klassen er forkert. Se <a href="../om-data.html#g-kid-udsving">udsving efter KID-metoden</a>. NDI Analytics’ eget tal står under <a href="../risici.html#tal">Udsving og fald i tal</a>.</li>
    <li><strong>Klasse 1 er ikke risikofri.</strong> Den laveste klasse betyder lavest målte udsving, ikke at man ikke kan tabe penge.</li>
   </ul>
   <p style="margin-top:10px">Udsving er et grundvilkår for teknologiaktier. Hvorfor de også trækker det årlige afkast ned, står i <a href="variance-drag.html">CAGR og gennemsnit</a>. Hvorfor fonden spreder på mange selskaber, står i <a href="hvorfor-mange-aktier.html">Hvorfor så mange aktier?</a></p>

@@ -1384,3 +1384,11 @@ Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke me
 - Test: 8793, 375/1280: 0 konsolfejl, ingen h-overflow på ideer, saadan-taenker-vi, om-data. precheck exit 0.
 - **Til forside-ejer:** PERSONA-privat ønsker møntspillet og «Vi vælger udviklingen, ikke vinderen» direkte på forsiden; tekst og søjle-mønster kan genbruges fra `laer/saadan-taenker-vi.html#tv-vu`.
 - Branch `lane-C` klar til merge. Næste: UX-review 04:00.
+
+## Fra Claude lane-C (reviewer-MUST invester + SRI kontra udsving + «Hvor ligger pengene?» + ordliste 119) · 02:00 CEST 16/10 (wall-clock)
+- Merget origin/main ind i lane-C (STATUS-konflikt løst, begge sider bevaret).
+- `invester.html` (UX cyklus 21): tre «trin 4» → ét (omkostningslink bevaret). Ny sektion `#hvem` «Hvor ligger pengene, og hvem gør hvad?»: fire led som pilekæde (dit depot → Investeringsforeningen PortfolioManager → Fundmarket A/S (IFS) → Danske Bank A/S (depotbank)) + NDIIR som rådgiver med Mads Christiansen + linje til familiekontorer om CVR/revision/prospekt. Kilde: fund-facts.json (Fundmarket, 15. okt.). Svarer på PERSONA-FO «intet om depositar» og PERSONA-privat «hvem træffer beslutningerne».
+- Compliance MUST 6 (SRI 5 kontra udsving 32,46 %) i mine filer: `laer/risikoklasse.html` (kæde, skyder og tabel siger nu «efter KID-metoden», og et simpelt tal over 30 % betyder ikke, at klassen er forkert), `laer/faq.html`, og ordlisten `g-sri` og `g-udsving`. Ny ordliste-post 119 `#g-kid-udsving`. Afkast og risiko: 28 begreber. Kort 119.
+- **Til js-ejer:** `docs/js/data.js:251` og `docs/index.html:47/88` siger stadig «Central Information Dokument» → «dokument med central information (KID)». **Til fakta-ejer:** samme SRI-forklaring (link `om-data.html#g-kid-udsving`) ved udsving 32,46 % på fakta.
+- Test: 8793, 375/1280: 0 konsolfejl, ingen h-overflow, én h1 på invester, om-data, risikoklasse, faq, risici og kort. Alle `om-data.html#g-…`-links findes (0 døde ankre). precheck: se push.
+- Branch `lane-C` klar til merge. Næste: UX-review 04:00.
