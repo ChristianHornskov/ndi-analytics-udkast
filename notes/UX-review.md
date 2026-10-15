@@ -189,3 +189,13 @@ Ingen nye.
 - Fundet og rettet: klassen `.q` kolliderede med citatkortene (Quantum-rækken fik panel-baggrund) → `.qn`. Søjlerne strakte sig over 1100 px på desktop → max-width 560.
 - Ordliste 75 → 78: cloud og AI-modeller, robotik, energilagring og batterier (de hyppigste værdikæde-ord uden opslag: robot ×37, cloud ×12, batteri ×8). Wafer dækkes af litografi.
 - Test 375/1280: 0 konsolfejl, ingen h-overflow, #g-robotik/#g-cloud åbner rigtig gruppe på mobil.
+
+## ~00:55 CEST lane-C checkpoint (Claude) — ordliste 87 + linse-links
+### Løst
+- Ordliste 78 → 87: rebalancering (Fonden); hold øje med, kundekoncentration, kapitalbehov, indre værdi, qubit og fejlretning (Portefølje); neocloud, wafer, eksportregler (Værdikæder). Valgt ud fra ord, der står på siderne (NDI-linsen, value-chains.json, Quantum-temaet), men ikke var forklaret. Gruppetællere talt fra DOM: 18 · 15 · 27 · 27.
+- `ndi-perspektiv.html`: legenden linker «Hold øje med» og «Hvad ejer man?» til de nye begreber. `saadan-taenker-vi.html`: «rebalancering» linker til ordlisten.
+- FAQ-søgning finder de nye begreber (neocloud, qubit, rebalancering, indre værdi).
+### SHOULD (anden lane)
+- `unique-metrics.json`: fem selskaber har kun ét linse-felt, og feltnavnene varierer. Se IDEAS.
+### Test
+- 8763, 375/1280 på 5 sider: 0 konsolfejl, ingen h-overflow, 0 døde ankre (alle `om-data.html#…` fra FAQ og linse findes). Dybt link `#g-neocloud` åbner den rigtige gruppe på mobil.

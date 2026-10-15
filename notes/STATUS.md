@@ -354,3 +354,12 @@ HEAD `b35518b`. Visual-variety request shipped + reviewed. MADS værdikæde/quan
 - Notes: HANDOFF trin 7 (syv former) + trin 8 (78), UX-review, VIDENSBOT-live-check.
 - Test: 8763, 375/1280: 0 konsolfejl, ingen h-overflow, 0 døde ankre. precheck: se push.
 - Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + lær-sider linker til de nye begreber (robotik/cloud) + risici sprogtjek.
+
+## Fra Claude lane-C (ordliste 87 + linse-links + sprogscan) · ~00:55 CEST 16/10
+- `om-data.html`: ordliste 78 → 87 (rebalancering, hold øje med, kundekoncentration, kapitalbehov, indre værdi, qubit og fejlretning, neocloud, wafer, eksportregler). Gruppetæller 18 · 15 · 27 · 27.
+- `ndi-perspektiv.html`: legenden linker til de nye begreber. `laer/saadan-taenker-vi.html`: rebalancering → ordliste. `kort.html`: tæller 87.
+- Sprogscan af alle lane-C-sider mod Vidensbot: 60 træffere, alle negationer. Intet at rette.
+- **Til data-lane:** `unique-metrics.json` har fem tynde rækker (Poet, Fluence, Apple, AMD, Broadcom) og ujævne feltnavne (IDEAS).
+- Notes: HANDOFF trin 8 (87), UX-review, VIDENSBOT-live-check, IDEAS.
+- Test: 8763, 375/1280: 0 konsolfejl, ingen h-overflow, 0 døde ankre, FAQ-søgning rammer de nye begreber. precheck: se push.
+- Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + ideer.html ottende form.

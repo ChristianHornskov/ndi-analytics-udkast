@@ -116,3 +116,8 @@ Sider: ideer, kort, om-data, invester, risici, ndi-perspektiv, laer/*.
 ## ~00:35 CEST lane-C (Claude)
 - Ordliste «Cloud og AI-modeller» bruger value-chains.json-formuleringen «sværere at investere i lige nu» som NDI-vurdering — ingen anbefaling. «Robotik» = Vidensbot fase 3 (automatisering og robotisering), robotter forstået bredt.
 - Sprogscan af lane-C-sider (købsmulighed, kursmål, timing, billig/dyr, undervurderet, trading): ingen træffere ud over negationer («ikke automatisk billig», «ikke en anbefaling»).
+
+## ~00:55 CEST lane-C (Claude) — ordliste 87 + sprogscan
+- Sprogscan (købsmulighed, kursmål, timing, billig/dyr, undervurderet, vinder, boble, trading, anbefal*) på alle lane-C-sider: 60 træffere, alle negationer eller ansvarsfraskrivelser («ikke en opfordring til at købe eller sælge», «ikke automatisk billig», «ikke at finde den ene vinder»). Intet at rette.
+- Nye begreber er beskrivende: «Hold øje med» = «hvad man kan følge, ikke en prognose». «Eksportregler»: «ikke en vurdering af, hvordan reglerne ændrer sig». «Indre værdi»: forskel til børsværdi «kan være stor i begge retninger» — ingen rabat/præmie-påstand om SoftBank.
+- «Neocloud» nævner CoreWeave som eksempel (findes i snapshot 1. jun 2026, og NDI-blogindlæg «The economy of a neocloud» er kilde i company-profiles). Ingen vurdering af selskabet.
