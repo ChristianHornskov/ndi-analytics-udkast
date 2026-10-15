@@ -26,7 +26,7 @@ Kilder: slack_ny_graf_2026-10-15.md, vision.txt, mads_tankemodel.md, investering
 - [~] Modenhedsgrader (UI klar, data tom — manuel klassifikation mangler)
 - [ ] Market cap-lag — blokeret natten over (ingen mcap i portfolio.json; kræver kilde)
 - [ ] Produktkategori-lag — blokeret natten over (ingen produktkatalog-data)
-- [ ] Tema: reindustrialisering USA — åben (skjult/legacy-tags deferred)
+- [~] Tema: reindustrialisering USA — dækket pædagogisk via physical/energy/rum (ingen separat tag; legacy deferred)
 - [x] Energiforsyning / -transmission / -ressourcer (temaer energy + energy-resources)
 - [x] Optiske connects (tema connect)
 - [x] SpaceTech (tema space)

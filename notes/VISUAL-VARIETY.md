@@ -28,3 +28,6 @@
 
 ## Grok review (denne cyklus)
 Se `notes/VISUAL-VARIETY-REVIEW.md`.
+
+| Flodsystem-dæmninger | 5 dams grafik | ✅ vaerdikaeder |
+| Rum-citatblok | Musk kun som citat | ✅ |
