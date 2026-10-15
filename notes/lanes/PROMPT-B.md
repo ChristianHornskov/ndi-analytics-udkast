@@ -28,3 +28,7 @@ HARD RULE (Leo): Before EVERY git push run `bash scripts/precheck.sh` (must exit
 #5 Fonden: performance først — nøgletal under grafen tydeligere (ÅOP hvis i fund-meta, drawdown allerede).
 PERSONA-privat MUST: "Hvad koster det?"-boks fra KID/fund-meta; møntspil-link på entre; Top 10 før fuld tabel; skjul tom livscyklus offentligt; dansk komma i udbytte.
 Read notes/IDESPEJDER.md + PERSONA-privat.md + PERSONA-familyoffice.md each cycle.
+
+
+## Reviewer MUSTs (lane R)
+Every cycle: read notes/CLAUDE-UX-review.md and notes/CLAUDE-compliance-review.md (latest ## section). Fix any MUST that falls in YOUR owned files. Do not edit other lanes' files.

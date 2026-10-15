@@ -22,3 +22,7 @@ HARD RULE (Leo): Before EVERY git push run `bash scripts/precheck.sh` (must exit
 #1 AI-værdikædekort Convequity-stil: gør vaerdikaeder endnu mere kort-agtig (led→NDI selskaber, forklaring, klik). Flodsystem allerede startet — skærp.
 Also read notes/IDESPEJDER.md + PERSONA-*.md each cycle.
 Privat persona: forklar flaskehalse i almindeligt dansk; undgå jargonsprog i blurbs.
+
+
+## Reviewer MUSTs (lane R)
+Every cycle: read notes/CLAUDE-UX-review.md and notes/CLAUDE-compliance-review.md (latest ## section). Fix any MUST that falls in YOUR owned files. Do not edit other lanes' files.

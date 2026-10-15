@@ -18,3 +18,7 @@ HARD RULE (Leo): Before EVERY git push run `bash scripts/precheck.sh` (must exit
 
 ## IDESPEJDER #1 data (23:42)
 Berig value-chains.json til Convequity-agtigt kort (led blurbs, holdings 2026-06-01). Energy/space. Read IDESPEJDER + PERSONA-*.
+
+
+## Reviewer MUSTs (lane R)
+Every cycle: read notes/CLAUDE-UX-review.md and notes/CLAUDE-compliance-review.md (latest ## section). Fix any MUST that falls in YOUR owned files. Do not edit other lanes' files.

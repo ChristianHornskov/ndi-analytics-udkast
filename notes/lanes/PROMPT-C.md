@@ -23,3 +23,7 @@ HARD RULE (Leo): Before EVERY git push run `bash scripts/precheck.sh` (must exit
 #3/#8: "Hvorfor ejer vi den?" / NDI-linse forklaring i lær + ideer.
 PERSONA-privat: møntspil (+50/−40=90) på lær/forside-copy; "Vi vælger udviklingen, ikke vinderen"; porteføljehold navne hvis allerede offentlige; glossary plain Danish; fjern Level 1 jargon.
 UX checkpoints 00/02/04/06. Read IDESPEJDER + PERSONA-* each cycle.
+
+
+## Reviewer MUSTs (lane R)
+Every cycle: read notes/CLAUDE-UX-review.md and notes/CLAUDE-compliance-review.md (latest ## section). Fix any MUST that falls in YOUR owned files. Do not edit other lanes' files.

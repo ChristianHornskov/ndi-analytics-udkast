@@ -19,3 +19,7 @@ HARD RULE (Leo): Before EVERY git push run `bash scripts/precheck.sh` (must exit
 
 ## IDESPEJDER #5 + visual (23:42)
 Nordnet-agtig: nøgletalskort under grafer (drawdown/embed). Del-graf polish. PERSONA mobil: footer link-row ikke rodet (CSS). Read IDESPEJDER + PERSONA-*.
+
+
+## Reviewer MUSTs (lane R)
+Every cycle: read notes/CLAUDE-UX-review.md and notes/CLAUDE-compliance-review.md (latest ## section). Fix any MUST that falls in YOUR owned files. Do not edit other lanes' files.
