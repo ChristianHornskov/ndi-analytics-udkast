@@ -261,7 +261,7 @@
     const height = Math.max(220, box.clientHeight || 380);
     const mobile = width < 500;
     const left = mobile ? 40 : width * 0.072;
-    const right = mobile ? 58 : width * 0.09;
+    const right = mobile ? 68 : width * 0.09;
     const top = 14;
     const bottom = 36;
     const plotWidth = width - left - right;
@@ -303,7 +303,7 @@
     parts.push(`<path class="fund-area" d="${area}" fill="url(#fund-fill)" clip-path="url(#above-zero)"/>`);
     parts.push(`<path class="fund-area below" d="${area}" fill="var(--neg)" fill-opacity="0.28" clip-path="url(#below-zero)"/>`);
     parts.push(`<path class="fund-path" d="${line}"/>`);
-    parts.push(`<text class="end-label ${toneOf(periodReturn)}" x="${width - right + 8}" y="${y(last.value) + 4}" style="font-size:${mobile ? 9 : Math.max(10, width / 83)}px">${pct(periodReturn, true)}</text>`);
+    parts.push(`<text class="end-label ${toneOf(periodReturn)}" x="${width - right + 8}" y="${y(last.value) + 4}" style="font-size:${mobile ? 12 : Math.max(11, width / 83)}px">${pct(periodReturn, true)}</text>`);
     parts.push(`<g id="crosshair-group"><line id="crosshair" class="crosshair" y1="${top}" y2="${height - bottom}"/><circle id="fund-dot" r="3.4" fill="var(--cyan)" stroke="var(--panel)" stroke-width="1.5"/></g>`);
     parts.push(`<rect id="plot-hit" x="${left}" y="0" width="${plotWidth}" height="${height - bottom + 10}" fill="transparent" style="cursor:crosshair"/>`);
     svg.innerHTML = parts.join('');

@@ -59,7 +59,7 @@ Siden må ikke være fire ens kort plus to mørke kasser. Formerne skifter ned a
 | Hero-tal | Det ene dybeste fald, med datoer og genopretning | ✅ `.hero-stat` |
 | Rolige tal | Middel og median som to linjer, ikke kort | ✅ `.quiet-stats` |
 | Gul annotation | Hvor serien ligger under vand i dag | ✅ `.anno` |
-| Underwater | Tid. Gul prik = dybeste bund. Ring = seneste dag. Slider vælger en dag, cyan prik på kurven | ✅ `.figure` + `.uw-scrub` |
+| Underwater | Tid. Gul prik = dybeste bund. Ring = seneste dag. Tynd gul streg = toppen i den åbne episode. Slider vælger en dag, cyan prik på kurven | ✅ `.figure` + `.uw-scrub` |
 | Prikfordeling | Hvorfor middel ligger dybere end median. Navnene står under aksen | ✅ `.figure.plain` |
 | Episodeliste | De fire fald dybere end 10 %, med varighed. Klik hopper til bunden på kurven | ✅ `.ep-ledger` |
 | Årssøjler | Kalenderafkast som small multiples, link til periode. Året med det dybeste fald har gul kant. Søjlerne deler bundlinje | ✅ `.year-rail` |
@@ -68,11 +68,11 @@ Et plus-år kan rumme det dybeste fald. 2025 er eksemplet i copy, regnet fra ser
 
 ## Sammenlign
 
-Kortpar (to klasser), tidslinje uden panel, stort tal for overlap, ét panel med parvise temasøjler. Ikke tre `.panel` i træk. Krydslink til drawdown overlever, når siden er hentet.
+Kortpar (to klasser), tidslinje uden panel, stort tal for overlap, ét panel med parvise temasøjler. Ikke tre `.panel` i træk. Krydslink til drawdown overlever, når siden er hentet. Datoen for AKK-gaten står på sin egen linje.
 
 ## Embed
 
-Widgetten er ét panel. Call-to-action står udenfor, med link til største fald (AKK-teksten siger, at drawdown vises efter 12 måneder). Sætningen "Fonden har intet fast benchmark." er en rolig linje. Nasdaq-klasser er fjernet fra embed-CSS. Fyldet går til 0 %-linjen: cyan over, dæmpet rosa under. En dag under nul er rosa i prik, udlæsning og tooltip. Sluttallet følger periodens fortegn.
+Widgetten er ét panel. Call-to-action står udenfor, med link til største fald (AKK-teksten siger, at drawdown vises efter 12 måneder). Sætningen "Fonden har intet fast benchmark." er en rolig linje. Nasdaq-klasser er fjernet fra embed-CSS. Fyldet går til 0 %-linjen: cyan over, dæmpet rosa under. En dag under nul er rosa i prik, udlæsning og tooltip. Sluttallet følger periodens fortegn og er 12 px på smal skærm.
 
 ## Fælles tokens i `ndi.css` (sparsomt)
 

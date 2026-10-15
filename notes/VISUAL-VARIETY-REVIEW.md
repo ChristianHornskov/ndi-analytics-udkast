@@ -58,6 +58,9 @@ Ship. Visual-variety pass er i planen (`VISUAL-VARIETY.md`). Næste builder: SHO
 5. ~~Året med det dybeste fald var umarkeret i søjlerne.~~ Lukket 00:17. 2025 har gul overkant og teksten "Dybeste fald" over søjlen. Søjlerne deler bundlinje. Søjlen er stadig årets afkast.
 6. ~~Valgt dag var kun en lodret streg.~~ Lukket 00:20. En cyan prik sættes på kurven. Den skjules, når dagen allerede er den gule bund eller den gule ring, så de to mærker ikke dækkes.
 7. ~~Embed farvede en dag under nul med cyan.~~ Lukket 00:22. Prik, udlæsning og tooltip er rosa (`#e5b3ba`), når tallet er under nul. Hele perioden er stadig +104,8 % i cyan. År til dato slutter på +4,0 %.
+8. ~~Den åbne episode havde ingen markør på kurven.~~ Lukket 00:27. En tynd gul streg står på toppen 2. jun. 2026, med ordet "top". Den dækker ikke "nu −23 %" eller årstallene. Gul prik på den dybeste bund bliver stående.
+9. ~~AKK-datoen brækkede midt i måneden på 320.~~ Lukket 00:29. "fra 5. dec. 2026" står på sin egen linje. Ingen afkastprocent på kortet.
+10. ~~Sluttallet på embed var 9 px på mobil.~~ Lukket 00:31. Det er 12 px og står inden for svg'en ved 375 og 320. Hele perioden er stadig +104,8 %.
 
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."

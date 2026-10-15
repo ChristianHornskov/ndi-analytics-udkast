@@ -579,6 +579,7 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
 .cmp-card dt{color:var(--muted)}
 .cmp-card dd{margin:0;text-align:right;color:var(--text)}
 .cmp-card dd small{color:var(--faint)}
+.cmp-card .cmp-from{display:block}
 .tl{list-style:none;padding:0;margin:4px 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;position:relative}
 .tl li{position:relative;padding-top:18px;font-size:13px;color:var(--muted);line-height:1.45}
 .tl li::before{content:"";position:absolute;top:4px;left:0;width:10px;height:10px;border-radius:50%;background:var(--brand)}
@@ -628,6 +629,7 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
 .figure .uw-water{stroke:var(--faint);stroke-width:1;stroke-dasharray:4 4;vector-effect:non-scaling-stroke}
 .figure .uw-grid{stroke:var(--line);stroke-width:1;vector-effect:non-scaling-stroke}
 .figure .uw-drop{stroke:var(--yellow);stroke-width:1;vector-effect:non-scaling-stroke;opacity:.85}
+.figure .uw-open{stroke:var(--yellow);stroke-width:1.25;vector-effect:non-scaling-stroke;opacity:.9}
 .figure .uw-cursor{stroke:var(--text);stroke-width:1;opacity:.75;vector-effect:non-scaling-stroke}
 .figure .uw-pick{fill:var(--cyan);stroke:var(--bg);stroke-width:1.5;vector-effect:non-scaling-stroke}
 .figure svg.uw{cursor:crosshair;touch-action:pan-y}
@@ -700,6 +702,7 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
   .hero-stat .num,.ep-ledger .depth{color:#6d3038}
   .ep-ledger li.open .depth{color:#111}
   .figure text,.figure .tick,.figure .uw-label{fill:#333}
+  .figure .uw-open{stroke:#333;opacity:1}
   .year-rail .yr-mark{color:#333}
   .year-rail a.yr-deep{border-top-color:#111}
 }

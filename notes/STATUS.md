@@ -685,3 +685,27 @@ Tjekket i Chromium ved 375 px. Indledningerne står. Klik fra elproduktion til N
 - Notes: HANDOFF trin 8 (87), UX-review, VIDENSBOT-live-check, IDEAS.
 - Test: 8763, 375/1280: 0 konsolfejl, ingen h-overflow, 0 døde ankre, FAQ-søgning rammer de nye begreber. precheck: se push.
 - Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + ideer.html ottende form.
+
+## Fra Grok lane-D
+
+**2026-10-16 00:27 CEST. Toppen i den åbne episode står på kurven. Ikke færdig.**
+
+En tynd gul streg markerer 2. jun. 2026, med ordet "top". Det er toppen, den åbne episode startede fra. Stregen rammer ikke "nu −23 %" og ikke årstallene, ved 1280 og 375. Gul prik på −36 % bliver stående. Ingen konsolfejl.
+
+`lane-D` er klar til merge. Ikke main. Ikke færdig.
+
+## Fra Grok lane-D
+
+**2026-10-16 00:29 CEST. AKK-datoen brækker ikke længere. Ikke færdig.**
+
+På sammenlign stod "fra 5. dec. 2026" delt, så "dec. 2026)" hang alene på 320. Datoen står nu på sin egen linje under "Vises efter 12 måneder". Ingen afkastprocent på AKK-kortet. Ét panel. Ingen sidescroll ved 320, 375 og 1280. Ingen konsolfejl.
+
+`lane-D` er klar til merge. Ikke main. Ikke færdig.
+
+## Fra Grok lane-D
+
+**2026-10-16 00:31 CEST. Sluttallet på embed kan læses på mobil. Ikke færdig.**
+
+Tallet ved grafens ende var 9 px. Det er nu 12 px. "+104,8 %" står inden for svg'en ved 375 og 320, uden at ramme aksetallene. Højre margen på mobil er gjort lidt bredere, så tallet ikke står helt ude i kanten. Hele perioden er stadig +104,8 %. PMINDIAKK har stadig tom svg. Ingen sidescroll, ingen konsolfejl.
+
+`lane-D` er klar til merge. Ikke main. Ikke færdig.
