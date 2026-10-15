@@ -579,3 +579,13 @@ Forsiden skriver, at selskabet fremstiller oxider af sjældne jordarter på et a
 Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. White Mesa står i det første afsnit. Isotoper står efter "Læs hele forklaringen". Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `7d0a138` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:01 CEST. USA Rare Earth daterer Serra Verde til 4. september 2026, efter beholdningen. Ikke færdig.**
+
+Forsiden skriver, at aktiviteterne spænder over USA, Storbritannien og Brasilien, og at et anlæg i Frankrig er planlagt. Selskabet vil udvinde og forarbejde i Texas og i Brasilien. Magneter nævnes i Oklahoma. South Carolina står som planlagt. Overskriften om en gennemført sammenlægning med Serra Verde Group er dateret 4. september 2026, efter beholdningen pr. 1. juni 2026. Selve meddelelsen gav 403, så beløb og prisgulve er ikke taget med. Texas er ikke beskrevet som en mine i drift. Ingen `reviewedAt`.
+
+Tjekket i Chromium. Selskabssiden ved 375 px viser AI-udkast, Texas, Brasilien og Serra Verde. "tjekket mod kilden" er ikke med. Ingen beløb. Kæden og arkivet siger datoen. Ingen konsolfejl. Ingen vandret scroll ved 375 eller 1280 px.
+
+**Push:** `lane-E` @ `3511830` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

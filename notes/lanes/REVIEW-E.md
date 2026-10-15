@@ -139,3 +139,7 @@ Santa Cruz og Tintic er projekter. Studiet er 23. september 2026, efter beholdni
 ## Energy Fuels · 2026-10-16 01:00 CEST
 
 White Mesa Mill nævnes med uran, sjældne jordarter og vanadium. Oxider af sjældne jordarter laves på et anlæg i USA. Titan, zirkon og medicinske isotoper er under tilføjelse, ikke skrevet som drift. Largest, leading og 10 af 50 er ikke kopieret. Bundteksten om tre delstater er udeladt. AI-udkast uden gennemgangsdato. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## USA Rare Earth · 2026-10-16 01:01 CEST
+
+Serra Verde-overskriften er 4. september 2026, efter beholdningen. Brødteksten gav 403, så beløb og prisgulve er udeladt. Texas er ikke en mine i drift. Frankrig er planlagt. AI-udkast uden gennemgangsdato. Kæde og arkiv har datoen. Chromium ved 375 og 1280 px. Ingen konsolfejl. Ingen vandret scroll.
