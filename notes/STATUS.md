@@ -1292,3 +1292,28 @@ Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke me
 - **Ærlige tag-noter til NDI (data ikke ændret):** Webull/Chime/Bullish tagget Software, men er fintech/krypto (Robinhood/eToro er Platforme). Pony AI/WeRide/Kodiak/Horizon tagget Software - kernen er autonom kørsel (Fysisk tech?). WhiteFiber (Software) og TSS (Software) er datacenter/server-forretninger (Compute?). Blaize er chips. Kraken Robotics og Ondas tagget Optik, men er undervandssensorer/droner. Chemours/Arkema/Solstice: Optik-forslaget er usikkert. Ategrity: forsikringsselskab foreslået som Software.
 - Ingen UI-ændringer; temaer.html/tema.html/screener/selskab tæller automatisk (Quantum-temaside "Med NDI-linse 5 af 5", hub-banner uændret korrekt).
 - Test: precheck exit 0. smoke fail 0 (8792). smoke-quality: kun den kendte forældede `vaerdikaede.html?isin=`-assert (x2 viewports). Playwright: Infleqtion "Quantum (forslag) … før: Software", Pony AI (nabo i Robotik led 3), BitMine, Chemours (usikker-note), ASP Isotopes (nabo i Energi led 2), WhiteFiber (nabo i led 2) rendrer; 0 konsolfejl. Branch `lane-B` klar til merge-review. Næste: screener/sort-UX-paritet (selskaber.html vs app.js) eller Andet-restnavne.
+
+## Fra Claude lane-C (ideer: tre ure + ordliste 97) · ~01:10 CEST 16/10
+- `ideer.html`: tiende form «Tre ure på samme side» (tidslinje med fire spor: PMINDI, PMINDIAKK, beholdning, risikoklasse; datoer fra portfolio.json/fund-meta.json). Intro-tidslinjen linker dertil, og:description fulgt med.
+- `om-data.html`: ordliste 97 (omsætning, indtjening), tællere 21 · 17 · 32 · 27; «» i datostempler. P/E og livscyklus linker til de nye poster. `kort.html` 97 + ideer-beskrivelse.
+- **Til index-ejer:** «ÅOP-beregninger bygges ikke i aften» på index.html er internt sprog (se UX-review).
+- Test: 8763, 375/1280: 0 konsolfejl, ingen h-overflow, 0 døde ankre. precheck: se push.
+- Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + sprogtjek ndi-perspektiv mod Vidensbot.
+
+## Fra Claude lane-C (KID-risici → ordliste 101) · ~01:40 CEST 16/10
+- `risici.html`: KID's fem nøglerisici er nu links til ordlisten; «investeringsperiode» linket.
+- `om-data.html`: ordliste 97 → 101 (vækst- og sektorrisiko, ingen markedsbeskyttelse, boble, anbefalet investeringsperiode). Tællere 24 · 18 · 32 · 27.
+- Links fra invester, lær/risikoklasse, lær/pe-forklaring; kort.html 101.
+- **Til js-ejer:** “” → «» i `js/faq-search.js` (IDEAS).
+- Notes: HANDOFF trin 8, UX-review, VIDENSBOT-live-check.
+- Test: 8763, 375/1280 på 7 sider: 0 konsolfejl, ingen h-overflow, 0 døde links/ankre. precheck: se push.
+- Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + ndi-perspektiv sprogtjek mod Vidensbot.
+
+## Fra Claude lane-C (ideer: hvad står der i tallet? + ordliste 103 + kort demo) · 01:20 CEST 16/10 (wall-clock)
+- `ideer.html`: ellevte form «Hvad står der i tallet?» (lag: kurser, valuta, udbytte, løbende omkostninger = fondens afkast; kurtage, skat, købstidspunkt = dit eget afkast). og:description fulgt med.
+- `om-data.html`: ordliste 103 (ÅOP, før skat), tællere 24 · 20 · 32 · 27. Links fra invester, FAQ, udbytte-vs-akk; kort.html 103 + ideer-beskrivelse.
+- `notes/HANDOFF-CODEX.md`: morgendemo som 9-trins tabel (≈ 6 min) med «sig»-sætninger, tjek før demo og ord at undgå. Gammel tekst bevaret som «Demo-detaljer».
+- **Til js-ejer:** app.js «max drawdown i perioden» → «største fald», ÅOP-sætning kan linke #g-aaop (IDEAS).
+- NB: tidsstempler i mine tidligere STATUS-poster (01:25–01:40) var skøn; dette er wall-clock.
+- Test: 8763, 375/1280 på 6 sider: 0 konsolfejl, ingen h-overflow, 0 døde links/ankre. precheck: se push.
+- Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + ordlistepost «Energi» / ndi-perspektiv.

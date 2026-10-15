@@ -80,3 +80,11 @@ Offentlige (ikke-fortrolige) idéer spejles evt. på `docs/ideer.html`.
 ## lane-C ~01:25 — til data-lane (unique-metrics.json, ikke min fil)
 - Synlig tekst på ndi-perspektiv.html bryder Vidensbot pkt. 10: semikolon i Tesla-hint («Placeringen er pædagogisk; Tesla bygger …») og tankestreg i Rigetti-/Quantum-hint («regnekraft — ikke erstatning …») og Arm-hint («økosystem — ikke egen foundry»). Forslag: punktum/komma.
 - Ordlisten har ingen post for temaet «Energi» (kun energiressourcer, elnet, SMR, energilagring). Kan tilføjes, hvis Leo vil have alle 11 temaer i ordlisten.
+
+## lane-C ~01:40 — til js-ejer
+- `docs/js/faq-search.js` l. 93 og 96: “${q}” → «${q}» så tælleren følger husstilen.
+
+## lane-C 01:20 16/10 — til js-ejer (app.js, ikke min fil)
+- `docs/js/app.js` ~l. 403: «Vi laver ikke nye ÅOP-beregninger i dette udkast.» Kan nu linke `om-data.html#g-aaop`, og «skat» i samme sætning kan linke `#g-skat`.
+- Graf-tooltips/tekst i app.js bruger «max drawdown i perioden». Resten af siden siger «Største fald» / «fald fra top». Forslag: «største fald i perioden».
+- Mulig næste form på ideer: «Energi» mangler som ordlistepost (kun energiressourcer, elnet, SMR, lagring).
