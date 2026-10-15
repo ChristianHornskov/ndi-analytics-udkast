@@ -199,3 +199,10 @@ Ingen nye.
 - `unique-metrics.json`: fem selskaber har kun ét linse-felt, og feltnavnene varierer. Se IDEAS.
 ### Test
 - 8763, 375/1280 på 5 sider: 0 konsolfejl, ingen h-overflow, 0 døde ankre (alle `om-data.html#…` fra FAQ og linse findes). Dybt link `#g-neocloud` åbner den rigtige gruppe på mobil.
+
+## ~00:40 CEST lane-C checkpoint (Claude) — ideer.html ottende form «345 aktier, én prik hver»
+- Ny enhedsgraf: én firkant pr. selskab, grupperet pr. NDI-tema (antal · vægt til højre), «Andet» i grå sidst. Én farve (cyan), ingen kategoripalet; identitet bæres af tekstlabel, ikke farve. Legende-linje over grafen.
+- Under: antal selskaber pr. vægtinterval (55 · 110 · 79 · 58 · 38 · 5); intervallet med ligevægten (ca. 0,27 %) er markeret med gul ramme. Nøgletal: median ca. 0,2 %, top 10 ca. 11,9 %, største ca. 2,1 %. Ingen selskabsnavne, ingen kurs/afkast — kun vægt fra snapshot 1. jun 2026.
+- Hvorfor: siden manglede et billede af *spredning* — «vi kan ikke pege på den ene vinder» er nu synligt som 345 små prikker. Linker til lær/hvorfor-mange-aktier.
+- Mobil 375: firkanter brydes under labelen (grid-række 2), ingen h-overflow. 1280: tre kolonner (label · prikker · tal).
+- Næste for ideer: overvej om «Tre sætninger»-citaterne skal flyttes op som afslutning på floden (læserækkefølge).

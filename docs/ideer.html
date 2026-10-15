@@ -11,7 +11,7 @@
   <meta property="og:site_name" content="NDI Analytics (udkast)">
   <meta property="og:locale" content="da_DK">
   <meta property="og:title" content="Idéer · NDI Analytics">
-  <meta property="og:description" content="Hvorfor NDI Analytics: flodsystemet, tags i stedet for sektorkasser, fra forslag til tema, forsinket beholdning og siderne som et hus.">
+  <meta property="og:description" content="Hvorfor NDI Analytics: flodsystemet, tags i stedet for sektorkasser, fra forslag til tema, 345 aktier som prikker, forsinket beholdning og siderne som et hus.">
   <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/ideer.html">
   <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
   <!-- og:end -->
@@ -102,6 +102,26 @@
     .tf-split li.qn{color:var(--text)}
     .tf-split em{font-style:normal;text-align:right;color:var(--text)}
     .tf figcaption{font-size:12px;color:var(--faint);margin-top:10px;line-height:1.5}
+    .pr{background:#0b171d;border:1px solid var(--line);border-radius:14px;padding:14px;margin:0}
+    .pr-key{font-size:12px;color:var(--muted);margin:0 0 10px}
+    .pr-key .sw{display:inline-block;width:8px;height:8px;border-radius:2px;background:var(--cyan)}
+    .pr-key .sw.an{background:var(--faint)}
+    .pr-rows{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+    .pr-rows li{display:grid;grid-template-columns:130px 1fr 92px;align-items:start;gap:8px;font-size:13px;color:var(--muted)}
+    @media(max-width:559px){.pr-rows li{grid-template-columns:1fr auto}.pr-rows .sq{grid-column:1/-1;grid-row:2}}
+    .pr-rows a{color:var(--text)}
+    .pr-rows em{font-style:normal;text-align:right;color:var(--text);white-space:nowrap}
+    .pr-rows .sq{display:flex;flex-wrap:wrap;gap:2px;padding-top:3px}
+    .pr-rows .sq i{width:8px;height:8px;border-radius:2px;background:var(--cyan)}
+    .pr-rows li.an .sq i{background:var(--faint)}
+    .pr-hist li.ew{color:var(--text)}
+    .pr-hist i{background:var(--cyan)}
+    .pr-hist li.ew i{outline:2px solid var(--yellow);outline-offset:1px}
+    .pr-keys{display:grid;gap:10px;margin:14px 0 0;grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
+    .pr-keys div{border-left:3px solid var(--cyan);padding:2px 0 2px 10px}
+    .pr-keys dt{font-size:14px;color:var(--text);font-weight:600}
+    .pr-keys dd{margin:2px 0 0;font-size:13px;color:var(--muted);line-height:1.45}
+    .pr figcaption{font-size:12px;color:var(--faint);margin-top:10px;line-height:1.5}
     .hus{background:#0b171d;border:1px solid var(--line);border-radius:14px;padding:14px;margin:0}
     .hus-plan{display:grid;gap:8px;grid-template-columns:repeat(2,1fr);border:3px solid var(--brand);border-radius:6px;padding:8px;position:relative}
     @media(min-width:720px){.hus-plan{grid-template-columns:repeat(4,1fr)}}
@@ -302,6 +322,42 @@
           <li><span>Chips</span><i style="width:10%"></i><em>1</em></li>
         </ul>
         <figcaption>Antal selskaber og vægt i den forsinkede beholdning (PMINDI). De 345 aktier vejer tilsammen ca. 92 % i rapporten. Et tema viser eksponering, ikke en anbefaling. <a href="temaer.html">Temaer →</a> · <a href="tema.html?slug=quantum">Quantum →</a> · <a href="om-data.html#g-temaforslag">Ordliste: temaforslag</a></figcaption>
+      </figure>
+    </section>
+
+    <section class="idea-sec" aria-labelledby="h-pr">
+      <h2 id="h-pr">345 aktier, én prik hver</h2>
+      <p class="sub">Hver firkant er ét selskab i den forsinkede beholdning pr. 1. juni 2026. Ingen af dem fylder meget. Det er meningen: Vi kan ikke pege på den ene vinder, så fonden ejer mange af dem, der er med til at bygge teknologien.</p>
+      <figure class="pr">
+        <p class="pr-key"><span class="sw"></span> = ét selskab · <span class="sw an"></span> = intet NDI-tema endnu · tallet til højre: antal · vægt i fonden</p>
+        <ul class="pr-rows" aria-label="Antal selskaber og vægt pr. NDI-tema">
+          <li><a href="tema.html?slug=chips">Chips</a><span class="sq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><em>53 · 13,2 %</em></li>
+          <li><a href="tema.html?slug=software">Software</a><span class="sq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><em>51 · 12,4 %</em></li>
+          <li><a href="tema.html?slug=platforms">Platforme</a><span class="sq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><em>40 · 16,0 %</em></li>
+          <li><a href="tema.html?slug=optik-netvaerk">Optik &amp; netværk</a><span class="sq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><em>30 · 8,2 %</em></li>
+          <li><a href="tema.html?slug=energiressourcer">Energiressourcer</a><span class="sq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><em>25 · 5,6 %</em></li>
+          <li><a href="tema.html?slug=fysisk-tech">Fysisk tech</a><span class="sq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><em>24 · 7,3 %</em></li>
+          <li><a href="tema.html?slug=compute">Compute</a><span class="sq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><em>18 · 6,0 %</em></li>
+          <li><a href="tema.html?slug=spacetech">SpaceTech</a><span class="sq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><em>18 · 4,4 %</em></li>
+          <li><a href="tema.html?slug=energi">Energi</a><span class="sq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><em>15 · 6,3 %</em></li>
+          <li><a href="tema.html?slug=quantum">Quantum</a><span class="sq" aria-hidden="true"><i></i><i></i><i></i><i></i></span><em>4 · 0,9 %</em></li>
+          <li class="an"><a href="tema.html?slug=andet">Andet</a><span class="sq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><em>67 · 11,6 %</em></li>
+        </ul>
+        <p class="sub" style="margin:16px 0 6px">Hvor store er positionerne? Antal selskaber efter vægt i fonden.</p>
+        <ul class="tf-split pr-hist" aria-label="Antal selskaber pr. vægtinterval">
+          <li><span>under 0,1 %</span><i style="width:50%"></i><em>55</em></li>
+          <li><span>0,1–0,2 %</span><i style="width:100%"></i><em>110</em></li>
+          <li class="ew"><span>0,2–0,3 %</span><i style="width:72%"></i><em>79</em></li>
+          <li><span>0,3–0,5 %</span><i style="width:53%"></i><em>58</em></li>
+          <li><span>0,5–1 %</span><i style="width:35%"></i><em>38</em></li>
+          <li><span>1 % og over</span><i style="width:5%"></i><em>5</em></li>
+        </ul>
+        <dl class="pr-keys">
+          <div><dt>ca. 0,27 %</dt><dd>Hvis alle 345 vejede lige meget. Den markerede række er det interval, hvor ligevægten ligger.</dd></div>
+          <div><dt>ca. 0,2 %</dt><dd>Den typiske position (medianen). Halvdelen vejer mindre, halvdelen mere.</dd></div>
+          <div><dt>ca. 11,9 %</dt><dd>De ti største positioner tilsammen. Den største vejer ca. 2,1 %.</dd></div>
+        </dl>
+        <figcaption>Antal selskaber og vægt i PMINDI pr. 1. juni 2026. Temaets vægt er summen af selskabernes vægt; de 345 aktier vejer tilsammen ca. 92 % i rapporten. Viser eksponering, ikke en anbefaling. <a href="laer/hvorfor-mange-aktier.html">Hvorfor så mange aktier? →</a> · <a href="om-data.html#g-vaegt">Ordliste: vægt</a></figcaption>
       </figure>
     </section>
 
