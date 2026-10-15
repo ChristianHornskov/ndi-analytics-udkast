@@ -430,3 +430,25 @@ Ikke juridisk rådgivning. Jeg har grep'et renderet tekst på 34 live-sider ved 
 
 ### OK ✅
 - Beholdning pr. 1. jun. 2026 (også i den nye ordliste-median). Ingen live trades. Ingen 1m/3m. "Fonden har intet fast benchmark". AI-udkast-mærket står 557 gange på 4 sider. Den nye PRIIPs-ordlistepost er korrekt og neutral.
+
+## 2026-10-16 01:25 CEST · cyklus 17 (main `7b7734a`, re-verifikation)
+
+Ikke juridisk rådgivning. Main og Pages er uændrede siden cyklus 16. Jeg har grep'et renderet tekst på 23 live-sider ved 375 og 1280 (efter scroll).
+
+### MUST (alle åbne, re-verificeret)
+1. **Ingen markedsføringsmærkning:** "markedsføring" står på 0 af 23 sider.
+2. **"MADS FØLGER" + tickers: 12 hits på 4 sider** (SoftBank 3, NVIDIA 3, chips 4, **TSMC 2**, sidstnævnte ikke set i cyklus 16). docs/ er uændret, så forskellen skyldes sandsynligvis, hvilke kort der vælges ved rendering. TSMC viser fx "MADS FØLGER · ORCL · CRWV · SoftBank · 9984.T" lige før et kort fra @MadsC007. Når et kort med forvalterens navn står ved siden af tickers, ligner det endnu mere en anbefaling.
+3. **"kan tabe" mangler** stadig på omkostninger, nyhedsarkiv og ndi-paa-x (siden er tom). Det står på alle andre 20 sider ✅.
+4. PMINDIAKK: "Seneste NAV" vises på sammenlign før 12 mdr. NDI skal afklare det.
+5. ÅTD/"+104,8 %" står ved siden af "afventer Fundmarket-godkendelse".
+6. Forklaringen på SRI 5 kontra Vol 32,46 % mangler (risikoklasse, ordliste, risici, fakta).
+7. (Fra cyklus 4, stadig åben) Alle opslag i `x-posts.json`, også de 4 fra @MadsC007 (forvalter), har label "ikke NDI's holdning". `chartMarkers` lægger stadig to @MadsC007-opslag (13. og 14. okt.) som markører i fondens afkastgraf (`docs/js/app.js:469`). Se cyklus 1 og 4.
+
+### SHOULD (uændret)
+- KID-link mangler i renderet tekst på værdikæder, drawdown, temaer, idéer, nyhedsarkiv, ndi-perspektiv og selskaber. Der er intet ÅOP fra KID på omkostninger. Siden er ærlig ("ikke et ÅOP" ×7), men det er stadig et FO/persona-MUST. "Bogen råder" på rebalancering er uændret.
+
+### Rådgivningsord ✅
+- Garanter, "køb nu", "øger eksponering" og "bedste tip": 0 hits. "overvægt" står kun i negationer ("ikke bevidste overvægte") på værdikæder, risici, temaer og chips.
+
+### OK ✅
+- Beholdning pr. 1. jun. 2026. Ingen 1m/3m. Intet benchmark-claim. "Historisk afkast" står på alle sider undtagen ndi-paa-x. Der er AI-mærkning.

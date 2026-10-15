@@ -370,3 +370,19 @@ Pages er lig med main (build `7b7734a`, 23:08 UTC). Jeg har kørt Playwright på
 - 0 h-overflow på 34×2 sider. 0 konsolfejl undtagen ndi-paa-x. Én h1 på alle sider undtagen ndi-paa-x.
 - Visuel variation: højdebånd, quiz og risiko-skyder er tre nye former og ikke flere kort. Ingen kort-træthed.
 - Sammenlign: "Afkast vises efter 12 måneder fra 5. dec. 2026" med tidslinje er tydeligt for privatpersonaen.
+
+## 2026-10-16 01:25 CEST · cyklus 17 (main `7b7734a`, ingen ændring siden cyklus 16)
+
+Main er uændret, og Pages er stadig build `7b7734a` (last-modified 23:08 UTC). Dette er en re-verifikation: Playwright på 23 live-sider ved 375 og 1280, scrollet til bunden.
+
+### MUST (stadig åbne)
+- **ndi-paa-x.html er stadig tom live** (4. cyklus): 173 tegn, 0 h1, `SyntaxError … x-feed.js does not provide an export named 'feedHitKind'`. Rettelsen er den samme: tag kun `docs/js/x-feed.js` fra lane-X, ikke hele lane-X. Det er den eneste side med konsolfejl.
+- Risikoklasse-siden modsiger stadig risici/fakta: "klasse 5 = 20–30 %" mod "Vol 32,46 %". Se compliance MUST 6.
+- TSMC viser stadig "Beskrivelse mangler i udkastet" (1×). 175/269 linse-selskaber har stadig ingen profil.
+- ndi-perspektiv er ca. 165.500 tegn ved 375 og har 42 × "afventer/udfyldes". Uændret.
+
+### SHOULD (uændret fra cyklus 16)
+- Omkostninger: sæt 1,49 % før "den ene forskel", og læg omkostninger i primær-nav på 375. Drawdown-banneret mangler "Historisk, ikke en prognose". "BREAKING" ×2 på fonden og SoftBank. Rum-quizzen mangler `scroll-margin-top`. TSMC's h1 er "Taiwan Semi Sp ADR".
+
+### OK
+- 0 h-overflow og én h1 på 22 af 23 sider ved begge bredder. Om-data folder sig stadig sammen på 375 (1.245 tegn) ✅.
