@@ -471,3 +471,37 @@ Tjekket i Chromium på de syv `selskab.html`. "Kort fortalt" og AI-udkast er med
 - Ordliste 63 → 66 (ticker, ADR, møntspillet). FAQ-kortsvar + laer/index + kort-tæller fulgt med.
 - Test: Playwright 375/1280 på 6 sider: 0 konsolfejl, ingen h-overflow, skyder ±30 → 91 kr./−4,6 %. precheck se nedenfor.
 - Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + ideer.html visuel variation + HANDOFF demo-check.
+
+## Fra Grok lane-D
+
+**2026-10-16 00:17 CEST. Året med det dybeste fald er markeret. Ikke færdig.**
+
+2025 har gul overkant og teksten "Dybeste fald". Søjlen er stadig årets afkast, +15,2 %. Sætningen under søjlerne er den samme: året sluttede i plus og rummede alligevel det dybeste fald.
+
+På prikfordelingen står median (−2,8 %) og middel (−5,2 %) under aksen. Stregerne har en mørk kant, så de kan læses i bunken. Ingen overlap mellem tallene ved 1280, 375 og 320. Ingen sidescroll, ingen konsolfejl. AKK siger stadig 12 måneder og har ingen procent.
+
+`lane-D` er klar til merge. Ikke main. Ikke færdig.
+
+## Fra Grok lane-D
+
+**2026-10-16 00:20 CEST. Valgt dag får en prik på kurven. Ikke færdig.**
+
+Slideren til 13. feb. 2024 sætter en cyan prik på kurven ved −3,0 %. Klik på −16,7 % sætter prikken på 7. aug. 2024. Klik på −35,8 % lader den gule bund stå, og stregen står på 8. apr. 2025. Seneste dag er stadig den gule ring, uden en ekstra prik oveni. Ingen sidescroll ved 375. Ingen konsolfejl.
+
+`lane-D` er klar til merge. Ikke main. Ikke færdig.
+
+## Fra Grok lane-D
+
+**2026-10-16 00:22 CEST. En dag under nul er rosa i embed. Ikke færdig.**
+
+På år til dato er 4. feb. 2026 −2,0 %. Prikken på kurven, udlæsningen og tooltip er rosa. Sluttallet på grafen er stadig +4,0 % i cyan. Hele perioden er +104,8 % i cyan. PMINDIAKK viser fortsat teksten om 12 måneder, og svg'en er tom. Tooltip ved 375 bliver inden for skærmen. Ingen sidescroll, ingen konsolfejl.
+
+`lane-D` er klar til merge. Ikke main. Ikke færdig.
+
+## Fra Grok lane-D
+
+**2026-10-16 00:23 CEST. Årssøjlerne deler bundlinje. Ikke færdig.**
+
+Teksten "Dybeste fald" står over 2025-søjlen. De fire søjler ender på samme linje ved 1280. I to kolonner ved 375 og 320 ender de to søjler i samme række på samme linje. Søjlen er stadig årets afkast, +15,2 %. Ingen sidescroll, ingen konsolfejl.
+
+`lane-D` er klar til merge. Ikke main. Ikke færdig.

@@ -110,21 +110,22 @@
  parts.push(`<path class="uw-line" d="${line}"/>`);
  const trough = uw.find(u => u.d === dd.troughD) || uw.reduce((a, b) => a.u < b.u ? a : b);
  const tx = xOf(trough.d), ty = yOf(trough.u);
+ const last = uw[uw.length - 1];
+ const nx = xOf(last.d), ny = yOf(last.u);
+ parts.push(`<line id="uw-cursor" class="uw-cursor" x1="${nx.toFixed(1)}" x2="${nx.toFixed(1)}" y1="${y0.toFixed(1)}" y2="${(H - padB).toFixed(1)}"/>`);
+ parts.push(`<circle id="uw-pick" class="uw-pick" data-hide="${trough.d}|${last.d}" cx="${nx.toFixed(1)}" cy="${ny.toFixed(1)}" r="3.1" opacity="0"/>`);
  parts.push(`<line class="uw-drop" x1="${tx.toFixed(1)}" x2="${tx.toFixed(1)}" y1="${y0.toFixed(1)}" y2="${ty.toFixed(1)}"/>`);
  parts.push(`<circle class="uw-max" cx="${tx.toFixed(1)}" cy="${ty.toFixed(1)}" r="3.2"/>`);
  const lx = Math.min(W - padR - 4, Math.max(padL + 28, tx));
  parts.push(`<text class="uw-label" x="${lx.toFixed(1)}" y="${Math.max(12, ty - 7)}" text-anchor="middle">${fmtPct(trough.u, 0)}</text>`);
- const last = uw[uw.length - 1];
- const nx = xOf(last.d), ny = yOf(last.u);
  parts.push(`<circle class="uw-now" cx="${nx.toFixed(1)}" cy="${ny.toFixed(1)}" r="3.4"/>`);
  parts.push(`<text class="uw-label" x="${(nx - 6).toFixed(1)}" y="${Math.max(12, ny - 6)}" text-anchor="end">nu ${fmtPct(last.u, 0)}</text>`);
- parts.push(`<line id="uw-cursor" class="uw-cursor" x1="${nx.toFixed(1)}" x2="${nx.toFixed(1)}" y1="${y0.toFixed(1)}" y2="${(H - padB).toFixed(1)}"/>`);
- const desc = `Daglig afstand til løbende top fra ${fmtDate(rows[0].d)} til ${fmtDate(rows[rows.length - 1].d)}. Dybeste bund ${fmtPct(trough.u)} den ${fmtDate(trough.d)}. Seneste dag ${fmtPct(last.u)}. Slideren under grafen vælger en dag.`;
+ const desc = `Daglig afstand til løbende top fra ${fmtDate(rows[0].d)} til ${fmtDate(rows[rows.length - 1].d)}. Dybeste bund ${fmtPct(trough.u)} den ${fmtDate(trough.d)}. Seneste dag ${fmtPct(last.u)}. Slideren vælger en dag. En cyan prik sættes på kurven, medmindre dagen allerede er den gule prik eller den gule ring.`;
  return `<svg id="uw-svg" class="uw" viewBox="0 0 ${W} ${H}" role="img" aria-labelledby="uw-title uw-desc"><title id="uw-title">Under vand</title><desc id="uw-desc">${desc}</desc>${parts.join('')}</svg>`;
  };
 
  const depthPlot = () => {
- const W = 360, H = 118, padL = 10, padR = 8, axisY = 78;
+ const W = 360, H = 164, padL = 10, padR = 8, axisY = 100;
  const plotW = W - padL - padR;
  const xOf = v => padL + (Math.min(yMax, -v) / yMax) * plotW;
  const lanes = [-26, -16, -6, 4, 14];
@@ -132,14 +133,22 @@
  const isMax = Math.abs(e.dd - sum.max) < 0.001;
  const isOpen = !e.recoveredD;
  const cls = isMax ? 'dot max' : isOpen ? 'dot open' : 'dot';
- const cy = 46 + lanes[i % lanes.length];
+ const cy = 64 + lanes[i % lanes.length];
  return `<circle class="${cls}" cx="${xOf(e.dd).toFixed(1)}" cy="${cy}" r="${isMax || isOpen ? 4 : 3.1}"><title>${fmtDate(e.peakD)} til ${fmtDate(e.troughD)}: ${fmtPct(e.dd)}</title></circle>`;
  });
+ const medX = xOf(sum.median).toFixed(1);
+ const meanX = xOf(sum.mean).toFixed(1);
  const parts = [
  ...dots,
- `<line class="mark-med" x1="${xOf(sum.median).toFixed(1)}" x2="${xOf(sum.median).toFixed(1)}" y1="18" y2="${axisY}"/>`,
- `<line class="mark-mean" x1="${xOf(sum.mean).toFixed(1)}" x2="${xOf(sum.mean).toFixed(1)}" y1="18" y2="${axisY}"/>`,
- `<line class="axis" x1="${padL}" x2="${W - padR}" y1="${axisY}" y2="${axisY}"/>`
+ `<line class="mark-halo" x1="${medX}" x2="${medX}" y1="8" y2="${axisY}"/>`,
+ `<line class="mark-halo" x1="${meanX}" x2="${meanX}" y1="8" y2="${axisY}"/>`,
+ `<line class="mark-med" x1="${medX}" x2="${medX}" y1="8" y2="${axisY}"/>`,
+ `<line class="mark-mean" x1="${meanX}" x2="${meanX}" y1="8" y2="${axisY}"/>`,
+ `<line class="axis" x1="${padL}" x2="${W - padR}" y1="${axisY}" y2="${axisY}"/>`,
+ `<line class="mark-med" x1="${padL}" x2="${padL + 16}" y1="${axisY + 48}" y2="${axisY + 48}"/>`,
+ `<text class="tick mark-key" x="${padL + 20}" y="${axisY + 51}" text-anchor="start">median ${fmtPct(sum.median)}</text>`,
+ `<line class="mark-mean" x1="168" x2="184" y1="${axisY + 48}" y2="${axisY + 48}"/>`,
+ `<text class="tick mark-key" x="188" y="${axisY + 51}" text-anchor="start">middel ${fmtPct(sum.mean)}</text>`
  ];
  for (let g = 0; g <= yMax; g += 10) {
  const xx = (padL + (g / yMax) * plotW).toFixed(1);
@@ -165,21 +174,22 @@
  }).join('');
 
  const maxRet = Math.max(...years.map(y => Math.abs(y.ret)), 1);
+ const deepYear = dd ? dd.troughD.slice(0, 4) : '';
  const yearCells = years.map(y => {
  const note = y.partial ? 'delår' : (y.to.slice(5) === '12-31' ? 'helår' : 'til dato');
  const h = Math.max(8, Math.round((Math.abs(y.ret) / maxRet) * 64));
  const neg = y.ret < 0;
- return `<a href="periode.html?fund=${fundId}&year=${y.year}"><span class="yr-bar${neg ? ' neg' : ''}" style="height:${h}px"></span><span class="yr-y">${y.year}</span><span class="yr-r ${neg ? 'neg' : 'pos'}">${fmtPct(y.ret)}</span><span class="yr-note">${note}</span></a>`;
+ const deep = y.year === deepYear;
+ return `<a href="periode.html?fund=${fundId}&year=${y.year}"${deep ? ' class="yr-deep"' : ''}><span class="yr-mark">${deep ? 'Dybeste fald' : ''}</span><span class="yr-bar${neg ? ' neg' : ''}" style="height:${h}px"></span><span class="yr-y">${y.year}</span><span class="yr-r ${neg ? 'neg' : 'pos'}">${fmtPct(y.ret)}</span><span class="yr-note">${note}</span></a>`;
  }).join('');
- const maxYear = dd.troughD.slice(0, 4);
- const yearOfMax = years.find(y => y.year === maxYear);
+ const yearOfMax = years.find(y => y.year === deepYear);
  const yearLine = yearOfMax && yearOfMax.ret > 0
- ? `${maxYear} sluttede i plus (${fmtPct(yearOfMax.ret)}) og rummede alligevel det dybeste fald.`
+ ? `${yearOfMax.year} sluttede i plus (${fmtPct(yearOfMax.ret)}) og rummede alligevel det dybeste fald.`
  : 'Søjlen er årets afkast. Faldet fra top står i grafen ovenfor.';
  const anno = open
  ? `Lige nu, pr. ${fmtDate(rows[rows.length - 1].d)}, ligger serien ${fmtPct(nowU)} under toppen fra ${fmtDate(open.peakD)}. Bund i den episode var ${fmtPct(open.dd)} den ${fmtDate(open.troughD)}.`
  : '';
- const depthCap = `Hver prik er ét fald fra top til bund. ${eps.length} i alt. Den stiplede streg er median (${fmtPct(sum.median)}). Den fuldt optrukne lyse streg er middel (${fmtPct(sum.mean)}). Gul prik er det dybeste fald.${open ? ' Hul gul prik er den åbne episode.' : ''}`;
+ const depthCap = `Hver prik er ét fald fra top til bund. ${eps.length} i alt. Gul prik er det dybeste fald.${open ? ' Hul gul prik er den åbne episode.' : ''} Median og middel står under aksen.`;
 
  main.innerHTML = `
  <a class="back" href="index.html?view=fonden&fund=${fundId}">← Fonden</a>
@@ -200,7 +210,7 @@
  </div>
  ${anno ? `<p class="anno">${anno}</p>` : ''}
  <h2 class="h-section">Under vand</h2>
- <figure class="figure">${underwater()}<figcaption>0 % er på toppen. Kurven er afstanden til den løbende top, dag for dag. Gul prik er den dybeste bund. Gul ring er seneste dag.</figcaption><div class="uw-scrub"><p id="uw-read" aria-live="polite">${fmtDate(uw[uw.length - 1].d)}: ${fmtPct(uw[uw.length - 1].u)} under den løbende top.</p><label class="sr-only" for="uw-slider">Vælg dag i serien</label><input id="uw-slider" type="range" min="0" max="${uw.length - 1}" value="${uw.length - 1}" aria-valuemin="0" aria-valuemax="${uw.length - 1}" aria-valuetext="${fmtDate(uw[uw.length - 1].d)}: ${fmtPct(uw[uw.length - 1].u)} under den løbende top."></div></figure>
+ <figure class="figure">${underwater()}<figcaption>0 % er på toppen. Kurven er afstanden til den løbende top, dag for dag. Gul prik er den dybeste bund. Gul ring er seneste dag. Cyan prik er den valgte dag.</figcaption><div class="uw-scrub"><p id="uw-read" aria-live="polite">${fmtDate(uw[uw.length - 1].d)}: ${fmtPct(uw[uw.length - 1].u)} under den løbende top.</p><label class="sr-only" for="uw-slider">Vælg dag i serien</label><input id="uw-slider" type="range" min="0" max="${uw.length - 1}" value="${uw.length - 1}" aria-valuemin="0" aria-valuemax="${uw.length - 1}" aria-valuetext="${fmtDate(uw[uw.length - 1].d)}: ${fmtPct(uw[uw.length - 1].u)} under den løbende top."></div></figure>
  <h2 class="h-section">Hvor dybe er faldene?</h2>
  <figure class="figure plain">${depthPlot()}<figcaption>${depthCap}</figcaption></figure>
  <h2 class="h-section">De dybe episoder</h2>
@@ -216,6 +226,8 @@
  const slider = document.getElementById('uw-slider');
  const read = document.getElementById('uw-read');
  const cursor = document.getElementById('uw-cursor');
+ const pick = document.getElementById('uw-pick');
+ const hidePick = new Set((pick?.dataset.hide || '').split('|'));
  const nearest = (t) => {
  let lo = 0, hi = uw.length - 1;
  while (lo < hi) {
@@ -240,6 +252,11 @@
  const x = xOf(u.d).toFixed(1);
  cursor.setAttribute('x1', x);
  cursor.setAttribute('x2', x);
+ if (pick) {
+ pick.setAttribute('cx', x);
+ pick.setAttribute('cy', yOf(u.u).toFixed(1));
+ pick.setAttribute('opacity', hidePick.has(u.d) ? '0' : '1');
+ }
  };
  const fromClient = (ev) => {
  const rect = svg.getBoundingClientRect();

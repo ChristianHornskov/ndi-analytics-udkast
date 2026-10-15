@@ -24,6 +24,7 @@
     const value = Math.abs(n) < 0.05 ? 0 : n;
     return `${sign && value > 0 ? '+' : ''}${number.format(value)} %`;
   };
+  const toneOf = n => (n < -0.05 ? 'neg' : 'pos');
   const escape = s => String(s).replace(/[&<>"']/g, c => ({
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
   }[c]));
@@ -300,9 +301,9 @@
     const line = series.map((p, i) => `${i ? 'L' : 'M'}${x(p).toFixed(2)},${y(p.value).toFixed(2)}`).join(' ');
     const area = `${line} L${x(last).toFixed(2)},${yZero.toFixed(2)} L${x(first).toFixed(2)},${yZero.toFixed(2)} Z`;
     parts.push(`<path class="fund-area" d="${area}" fill="url(#fund-fill)" clip-path="url(#above-zero)"/>`);
-    parts.push(`<path class="fund-area below" d="${area}" fill="#c98a94" fill-opacity="0.28" clip-path="url(#below-zero)"/>`);
+    parts.push(`<path class="fund-area below" d="${area}" fill="var(--neg)" fill-opacity="0.28" clip-path="url(#below-zero)"/>`);
     parts.push(`<path class="fund-path" d="${line}"/>`);
-    parts.push(`<text class="end-label" x="${width - right + 8}" y="${y(last.value) + 4}" style="fill:var(--cyan);font-size:${mobile ? 9 : Math.max(10, width / 83)}px">${pct(periodReturn, true)}</text>`);
+    parts.push(`<text class="end-label ${toneOf(periodReturn)}" x="${width - right + 8}" y="${y(last.value) + 4}" style="font-size:${mobile ? 9 : Math.max(10, width / 83)}px">${pct(periodReturn, true)}</text>`);
     parts.push(`<g id="crosshair-group"><line id="crosshair" class="crosshair" y1="${top}" y2="${height - bottom}"/><circle id="fund-dot" r="3.4" fill="var(--cyan)" stroke="var(--panel)" stroke-width="1.5"/></g>`);
     parts.push(`<rect id="plot-hit" x="${left}" y="0" width="${plotWidth}" height="${height - bottom + 10}" fill="transparent" style="cursor:crosshair"/>`);
     svg.innerHTML = parts.join('');
@@ -323,14 +324,16 @@
     $('#crosshair').setAttribute('x2', x(p));
     $('#fund-dot').setAttribute('cx', x(p));
     $('#fund-dot').setAttribute('cy', y(p.value));
+    $('#fund-dot').setAttribute('fill', toneOf(p.value) === 'neg' ? 'var(--neg)' : 'var(--cyan)');
     $('#chart-slider').value = String(index);
     const value = pct(p.value, true);
-    $('#chart-readout').innerHTML = `<span class="date">${fmtDate(p.date)}</span> · ${state.fund}: ${value}`;
+    const tone = toneOf(p.value);
+    $('#chart-readout').innerHTML = `<span class="date">${fmtDate(p.date)}</span> · ${state.fund}: <span class="${tone}">${value}</span>`;
     $('#chart-slider').setAttribute('aria-valuetext', `${fmtDate(p.date)}, ${state.fund}: ${value}`);
     const tooltip = $('#chart-tooltip');
     tooltip.hidden = !showTooltip;
     if (showTooltip) {
-      tooltip.innerHTML = `<b>${fmtDate(p.date)}</b><div class="tooltip-row"><span>${state.fund}</span><strong>${value}</strong></div>`;
+      tooltip.innerHTML = `<b>${fmtDate(p.date)}</b><div class="tooltip-row ${tone}"><span>${state.fund}</span><strong>${value}</strong></div>`;
       const tooltipWidth = tooltip.offsetWidth || 180;
       tooltip.style.left = Math.min(Math.max(0, x(p) + 14), width - tooltipWidth) + 'px';
       tooltip.style.top = Math.max(5, Math.min(y(p.value) - 72, height - 90)) + 'px';
