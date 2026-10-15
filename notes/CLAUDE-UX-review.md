@@ -290,3 +290,23 @@ Siden cyklus 11 er main kun ændret af `25b8b30` (rettelsen af tema.html) og `82
 
 ### Nice
 - tema.html er stabil efter rettelsen, og "Kun med NDI-linse" virker.
+
+## 2026-10-16 00:51 CEST · cyklus 13 (main `883e616`, delta: NDI-linse 150 → 217)
+
+Siden cyklus 12 er der kun ændret i `docs/data/unique-metrics.json` (lane-B: +67 linser, 0 eksisterende ændret). Pages er lig med main (live JSON har 217). Jeg har kørt Playwright på 23 live-sider plus 5 selskabssider (SoftBank, TSMC, QuantumScape, Affirm, Spotify) ved 375 og 1280 px. Der er 0 konsolfejl og 0 sider med vandret scroll. (De 404'er i mit crawl skyldtes forkerte filnavne fra min side: fonden = index, portefølje = selskaber.)
+
+### MUST
+- **Tomme stubs over en udfyldt linse.** 58 af de 67 nye linse-selskaber (143 af alle 217) har ingen post i `company-profiles.json`. Øverst på fx TSMC står derfor "Hvilket problem løser det? **AI-udkast** – Beskrivelse mangler i udkastet", "Rolle i værdikæden **AI-udkast** –", "Produkter –" og "Kunder –". Længere nede er der en tom "Hold øje med **AI-udkast** –", mens linsen lige ovenover allerede har både "Hvad ejer man?" og "Hold øje med" udfyldt. Det ser ufærdigt ud for privatpersonaen, og AI-mærket står på tomt indhold. **Forslag:** brug linsens "Hvad ejer man?" som fallback i problem-feltet. Skjul tomme Rolle/Produkter/Kunder og den nederste "Hold øje med", når linsen findes.
+- Uændret fra cyklus 12: ndi-perspektiv på mobil er vokset til ca. 133.000 tegn, 93.800 px og 437 "AI-udkast"-mærker på 375 (før ca. 95.500 tegn / 303). Gruppér efter tema eller led og fold sammen som standard. "MADS FØLGER": se compliance.
+- "afventer"/"udfyldes" er stadig synligt på risici, temaer, tema, omkostninger, selskaber, fakta, ndi-perspektiv og selskabssider.
+
+### SHOULD
+- **TSMC står under "Andet / uklassificeret"** i "NDI-tema og plads i fonden", men linsen siger "Chips". Tabellen "Andre i Andet / uklassificeret" viser Hims & Hers, Upstart, Celanese, Newmont… under TSMC. Familieofficet vil undre sig. Det samme gælder First Solar, Caterpillar, Iridium m.fl. (lane-B's egne tag-noter). Brug linse-tagget som visningstema, når det findes, eller vis "Primært tema i data: Andet" med samme forklaring som linsen.
+- **Rå datanavne i h1 og naboliste:** "Taiwan Semi Sp ADR" (linsen siger "Taiwan Semiconductor (TSMC)"), "United Microelectron-Sp Adr", "Tower Semicon In". Linsens `name` kan bruges som displayName.
+- Typo: "Foundry : chips-produktion." (mellemrum før kolon).
+- "Modenhed GARP" og "Livscyklus GARP" står to gange på samme side (sidebar + linse).
+- Uændret: udbytte med punktum, X-kort klippes midt i ord, "BREAKING:", omkostninger er ikke i primær-nav på 375, små trykflader, "Placeholder:" i nyhedsarkiv.
+
+### Nice / OK
+- Naborækken virker på de nye led: TSMC → 6 i led 5 (Samsung, GlobalFoundries, Tower, Intel, UMC, Amkor). QuantumScape → Energi led 4. Spotify → led 12. Affirm ("Uden for AI-kæden") viser ingen række, som det skal.
+- Linseteksterne er korte, konkrete og ærlige ("Navnet har intet med kvantecomputere at gøre", "sælger ikke selv chips").

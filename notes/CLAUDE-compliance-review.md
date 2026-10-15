@@ -341,3 +341,25 @@ Ikke juridisk rådgivning. Tjekket med Playwright på 25 live-sider (375 og 1280
 
 ### OK ✅
 - Beholdningerne er forsinkede (pr. 1. jun. 2026). PMINDIAKK har en 12m-gate på periode/embed, og der er ingen 1m/3m. Der er intet benchmark-claim. AI-mærkning er til stede. Omkostningssiden siger ærligt "ikke et beregnet ÅOP".
+
+## 2026-10-16 00:51 CEST · cyklus 13 (main `883e616`, delta)
+
+Ikke juridisk rådgivning. Det eneste ændrede indhold er `unique-metrics.json`, hvor der er +67 linser. Jeg har grep'et dem alle og crawlet 28 live-sider/selskabssider ved 375 og 1280.
+
+### De nye linser ✅ (ingen blokering)
+- Der er 0 hits på køb/sælg-opfordring, garanteret, kursmål, procenter, "forvent", "potentiale", "overvægt" og "øger eksponering". "anbefal" står kun i Spotify-hintet ("anbefalinger bygger på data", om produktet). Affirm ("Lån ved køb") handler om produktet. Begge er OK.
+- Alle 67 har `ai: true` på "Hvad ejer man?" og "Hold øje med". Hvert hint siger "Eksponering, ikke rating" eller "Forhold, ikke en prognose".
+- SHOULD: der er ukilderede superlativer: TSMC "Verdens største chipfabrik på kontrakt" og Alibaba "en af Kinas største cloud-udbydere". De er faktuelt rimelige, men tilføj en kilde/dato eller blødgør dem ("en af de største").
+
+### MUST (åbne, uændret, men "Mads følger" er bredere end antaget)
+1. **Ingen markedsføringsmærkning.** "markedsføring" står på 0 af de crawlede sider.
+2. **"Mads følger" + tickers står på selskabssider generelt, ikke kun på SoftBank.** Det står også på TSMC (2), Affirm (2) og Spotify (2), fordi "Hvad siger X" vælger opslag efter tema ("Vist fordi: chips"). På TSMC-siden står fx FundaAI "$ORCL and $CRWV face a repricing of credit risk … pressure on neoclouds' purchasing power" med chips ORCL/CRWV/SoftBank og "MADS FØLGER", dateret 15. okt. 2026. Det er efter snapshottet 1. jun. og står ved siden af "Vægt i PMINDI 0,13 %". Rettelsen er stadig ét sted: `js/x-feed.js:339`. Overvej også at fjerne "Hvad siger X" fra selskabssider.
+3. ndi-paa-x og nyhedsarkiv mangler tabsadvarsel ("kan tabe": 0). Det samme gælder omkostninger (0).
+4. PMINDIAKK-NAV før 12 mdr. på sammenlign. 5. ÅTD "afventer" + ugatet graf-takeaway. Ingen af dem er re-verificeret som lukket i denne cyklus.
+
+### SHOULD
+- **Vægt over tid på selskabssider:** TSMC "3,94 % (1. dec. 2023) → 0,13 % (1. jun. 2026)". Det er forsinket og historisk og derfor OK efter reglen om forsinkelse. Men sammen med de aktuelle X-opslag ovenfor kan det læses som en fortælling om "salg". Hold X væk fra de sider, der viser vægthistorik.
+- Uændret: KID-link mangler i renderet tekst på værdikæder, vaerdikaede, drawdown, temaer, idéer, ndi-perspektiv, selskaber, periode og nyhedsarkiv. "Central Information Dokument" står stadig i footer (brug "Dokument med central information"). "BREAKING:"-opslag står på SoftBank, Affirm, Spotify og ndi-paa-x.
+
+### OK ✅
+- Beholdning pr. 1. jun. 2026 er tydelig. SRI 5/7 og KID-links står i footer på selskabssider. Der er 0 hits på garanteret/"køb nu"/"øger eksponering" i renderet tekst. Omkostningssiden siger ærligt, at det ikke er et beregnet ÅOP.
