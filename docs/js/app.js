@@ -255,7 +255,10 @@ function renderEntre(root) {
       <a href="selskaber.html?fund=${state.fund}">Selskaber A-Z</a> ·
       <a href="nyhedsarkiv.html">Nyhedsarkiv</a> ·
       <a href="om-data.html">Ordliste &amp; data</a> ·
+      <a href="fakta.html">Fakta</a> ·
+      <a href="omkostninger.html">Omkostninger</a> ·
       <a href="risici.html">Risici / KID</a> ·
+      <a href="ndi-paa-x.html">NDI på X</a> ·
       <a href="embed/chart.html">Embed-graf</a> ·
       <a href="kort.html">Sidekort</a> ·
       <button type="button" class="link-btn" data-open="dlg-follow">Følg med</button></p>
@@ -400,8 +403,9 @@ function renderFonden(root) {
     </section>
     <section class="panel">
       <h2 style="font-size:18px;margin-bottom:8px">Omkostninger (kort)</h2>
-      <p style="font-size:13px;color:var(--muted);line-height:1.55">Afkasttal er efter fondens løbende omkostninger. Egne kurtage-/platformgebyrer og skat er ikke med. Se KID for officielle omkostningsoplysninger. Vi laver ikke nye ÅOP-beregninger i dette udkast.</p>
-      <p style="margin-top:10px"><button type="button" class="outline-btn small" data-open="dlg-invest">ISIN &amp; investeringsflow</button>
+      <p style="font-size:13px;color:var(--muted);line-height:1.55">Afkasttal er efter fondens løbende omkostninger. Egne kurtage-/platformgebyrer og skat er ikke med. Tallene (løbende, porteføljetransaktion, emission/indløsning, intet resultathonorar) ligger på Fundmarket og er samlet på omkostningssiden.</p>
+      <p style="margin-top:10px"><a class="outline-btn small" href="omkostninger.html">Omkostninger med tal →</a>
+      <a class="outline-btn small" style="margin-left:8px" href="fakta.html">Fakta →</a>
       <a class="outline-btn small" style="margin-left:8px" href="om-data.html">Om data →</a></p>
     </section>
 
@@ -421,10 +425,15 @@ function renderFonden(root) {
         <li>Porteføljen er koncentreret i teknologi og typisk i USD-noterede papirer.</li>
       </ul>
       <p style="margin-top:12px"><button type="button" class="outline-btn small" data-open="dlg-invest">Sådan investerer du · Kopiér ISIN</button>
-      <a class="outline-btn small" style="margin-left:8px" href="risici.html">Risici / KID →</a></p>
+      <a class="outline-btn small" style="margin-left:8px" href="risici.html">Risici / KID →</a>
+      <a class="outline-btn small" style="margin-left:8px" href="fakta.html">Fakta →</a></p>
     </section>`;
 
   const ctxEvts = (DATA.context?.events || []).filter((e) => {
+    if (!sliced.length) return false;
+    return e.d >= sliced[0].d && e.d <= sliced[sliced.length - 1].d;
+  });
+  const xMarks = (DATA.xPosts?.chartMarkers || []).filter((e) => {
     if (!sliced.length) return false;
     return e.d >= sliced[0].d && e.d <= sliced[sliced.length - 1].d;
   });
@@ -436,14 +445,17 @@ function renderFonden(root) {
   if (ddMark?.troughD && sliced.some((r) => r.d === ddMark.troughD)) {
     ddEvts.push({ d: ddMark.troughD, kind: 'dip', title: `Bund (max drawdown ${fmtPct(ddMark.dd)})`, chartOnly: true });
   }
-  const evts = [...ctxEvts, ...ddEvts];
+  const evts = [...ctxEvts, ...ddEvts, ...xMarks];
   renderChart($('#perf-chart', root), sliced, evts, { label: 'Totalafkast' });
-  if (ctxEvts.length) {
+  if (ctxEvts.length || xMarks.length) {
     const box = document.createElement('section');
     box.className = 'panel';
-    box.innerHTML = `<h2 style="font-size:16px;margin-bottom:8px">Dokumenterede begivenheder i perioden</h2>
-      <ul style="color:var(--muted);line-height:1.55;padding-left:18px">${ctxEvts.map((e) => `<li><strong style="color:var(--text)">${fmtDate(e.d)}</strong>. ${e.title}${e.source ? ` <span style="font-size:11px">(${e.source})</span>` : ''}<br><span style="font-size:12px">${e.text || ''}</span></li>`).join('')}</ul>
-      <p style="font-size:11px;color:var(--muted);margin-top:8px">Kun dokumenterede fondsbegivenheder (udbytte). Grafen markerer også top/bund for max drawdown i perioden.</p>`;
+    const fundLis = ctxEvts.map((e) => `<li><strong style="color:var(--text)">${fmtDate(e.d)}</strong>. ${e.title}${e.source ? ` <span style="font-size:11px">(${e.source})</span>` : ''}<br><span style="font-size:12px">${e.text || ''}</span></li>`).join('');
+    const xLis = xMarks.map((e) => `<li><strong style="color:var(--text)">${fmtDate(e.d)}</strong>. ${e.title}${e.url ? ` · <a href="${e.url}" rel="noopener" target="_blank">X ↗</a>` : ''}<br><span style="font-size:12px">${e.text || ''}</span></li>`).join('');
+    box.innerHTML = `<h2 style="font-size:16px;margin-bottom:8px">Kontekst i perioden</h2>
+      ${fundLis ? `<p style="font-size:12px;color:var(--muted);margin-bottom:4px">Dokumenterede fondsbegivenheder</p><ul style="color:var(--muted);line-height:1.55;padding-left:18px">${fundLis}</ul>` : ''}
+      ${xLis ? `<p style="font-size:12px;color:var(--muted);margin:10px 0 4px">Udvalgte offentlige X-opslag — ikke NDI's holdning</p><ul style="color:var(--muted);line-height:1.55;padding-left:18px">${xLis}</ul>` : ''}
+      <p style="font-size:11px;color:var(--muted);margin-top:8px">Grafmarkører: udbytte (gul), drawdown (rød), X (cyan — klik åbner opslaget). <a href="ndi-paa-x.html">NDI på X →</a></p>`;
     $('#perf-chart', root)?.closest('section')?.after(box);
   } else if (ddEvts.length) {
     const note = document.createElement('p');

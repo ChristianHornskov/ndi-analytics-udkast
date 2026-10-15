@@ -74,6 +74,8 @@ h1{font-size:clamp(26px,3.5vw,38px);font-weight:700;letter-spacing:-1px;line-hei
 .chart-wrap text{fill:#acc7ce;font-size:12px;font-family:var(--font)}
 .chart-wrap .evt-dip{fill:var(--down)}
 .chart-wrap .evt-peak{fill:var(--yellow)}
+.chart-wrap .evt-x{fill:var(--cyan);stroke:#0b1c22;stroke-width:1.2;cursor:pointer}
+.chart-wrap a:focus .evt-x{outline:2px solid var(--yellow)}
 .chart-readout{min-height:22px;font-size:13px;color:#c6dce2;margin:8px 0 16px}
 
 .cal{display:grid;grid-template-columns:80px repeat(12,1fr);gap:3px;font-size:11px;margin-top:12px}

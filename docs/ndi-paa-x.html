@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="da">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+ <meta name="robots" content="noindex,nofollow">
+ <title>NDI på X · NDI Analytics</title>
+ <link rel="stylesheet" href="css/ndi.css">
+ <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+ <meta property="og:type" content="website">
+ <meta property="og:site_name" content="NDI Analytics (udkast)">
+ <meta property="og:locale" content="da_DK">
+ <meta property="og:title" content="NDI på X · NDI Analytics">
+ <meta property="og:description" content="Udvalgte offentlige X-opslag om NewDeal Invest, temaer og beholdninger. Ikke NDI's holdning.">
+ <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/ndi-paa-x.html">
+ <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
+ <meta name="twitter:card" content="summary_large_image">
+ <style>
+  .x-filters { display:flex; flex-wrap:wrap; gap:8px; margin:12px 0 16px; }
+  .x-filters button { font:inherit; cursor:pointer; }
+  .x-grid { display:grid; gap:14px; }
+  @media (min-width:900px){ .x-grid { grid-template-columns:1fr 1fr; } }
+ </style>
+</head>
+<body>
+ <a class="skip" href="#main">Gå til indhold</a>
+ <header class="site-header">
+ <a class="brand" href="index.html"><img src="assets/mark.svg" width="34" height="27" alt=""><span>NewDeal Invest</span></a>
+ <nav class="nav"><a href="index.html">← Entré</a><a href="nyhedsarkiv.html">Nyhedsarkiv</a></nav>
+ </header>
+ <main id="main"><p style="color:var(--muted)">Henter X-snapshot…</p></main>
+ <script type="module">
+ import { loadXPosts, xCard, fmtXDate } from './js/x-feed.js';
+ const pack = await loadXPosts();
+ const main = document.getElementById('main');
+ if (!pack?.posts?.length) {
+   main.innerHTML = `<p class="eyebrow">X · SNAPSHOT</p><h1>NDI på X</h1><p class="lede">Snapshot mangler endnu.</p>`;
+ } else {
+   const accounts = (pack.accounts || []).map(a => `@${a.username}`).join(' · ');
+   main.innerHTML = `
+   <p class="eyebrow">X · STATISK SNAPSHOT</p>
+   <h1>NDI på X</h1>
+   <p class="lede">Udvalgte offentlige opslag fra NDI-relaterede konti og kuraterede tech-stemmer. <strong>Ikke NDI's holdning.</strong> Egne kort — ingen X-embed-script.</p>
+   <p class="band">Snapshot ${fmtXDate(pack.snapshotAt)} · kilder: ${accounts}${pack.note ? ` · ${pack.note}` : ''}</p>
+   <div class="x-filters" role="toolbar" aria-label="Filtrer opslag">
+     <button type="button" class="control active" data-f="all">Alle</button>
+     <button type="button" class="control" data-f="ndi">NDI / fond</button>
+     <button type="button" class="control" data-f="chips">Chips / AI</button>
+     <button type="button" class="control" data-f="platforms">Platforme</button>
+     <button type="button" class="control" data-f="quantum">Quantum</button>
+     <button type="button" class="control" data-f="space">Space</button>
+     <button type="button" class="control" data-f="physical">Fysisk tech</button>
+   </div>
+   <div class="x-grid" id="x-grid"></div>
+   <p class="warn" style="margin-top:20px">Offentlige opslag kan være forældede, ufuldstændige eller subjektive. De er ikke investeringsrådgivning og erstatter ikke KID/prospekt.</p>
+   <p><a class="outline-btn" href="fakta.html">Fakta →</a>
+   <a class="outline-btn" style="margin-left:8px" href="nyhedsarkiv.html">Nyhedsarkiv →</a>
+   <a class="outline-btn" style="margin-left:8px" href="kort.html">Sidekort →</a></p>`;
+
+   const grid = document.getElementById('x-grid');
+   const posts = [...pack.posts].sort((a,b) => (b.created_at||'').localeCompare(a.created_at||''));
+   const render = (f) => {
+     const list = posts.filter(p => {
+       if (f === 'all') return true;
+       if (f === 'ndi') return (p.tags||[]).includes('ndi') || (p.tickers||[]).some(t => /PMINDI/.test(t)) || /InvestNewdeal|CHornskov|MadsC007|jesper_baek/.test(p.username);
+       return (p.tags||[]).includes(f) || (f==='chips' && (p.tags||[]).includes('ai'));
+     });
+     grid.innerHTML = list.length ? list.map(xCard).join('') : '<p class="band">Ingen opslag i dette filter.</p>';
+   };
+   render('all');
+   main.querySelectorAll('[data-f]').forEach(btn => btn.addEventListener('click', () => {
+     main.querySelectorAll('[data-f]').forEach(b => b.classList.toggle('active', b === btn));
+     render(btn.getAttribute('data-f'));
+   }));
+ }
+ </script>
+</body>
+</html>
