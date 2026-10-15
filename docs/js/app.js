@@ -13,12 +13,18 @@ const state = {
   maturity: [],
   sort: 'weight',
   dir: 'desc',
+  status: '', // '' | 'forslag' | 'fast' - temastatus, ikke et tal pr. aktie
   q: '',
   calFull: false,
 };
 
 let DATA = null;
 let MONTHS = null;
+
+// Compliance: kun disse sorteringer findes (whitelist). Ingen kurs-, P/S-, P/E-, 52u-, vol- eller
+// insider-sortering pr. aktie i v1 - se notes/MADS-CHECKLIST.md (deferred).
+const SORTS = { weight: 'vægt', name: 'navn', theme: 'tema' };
+const STATUSES = { forslag: 'kun temaforslag', fast: 'uden temaforslag' };
 
 function weightSpark(isin, fundId) {
   // Kun fondens vægt pr. kvartalssnapshot (≤ cutoff) - aldrig aktiekurs. Søjler fra nul pr. række,
@@ -53,8 +59,11 @@ function readUrl() {
   // Interne tags (legacy/Trump) må aldrig ende i chips eller URL - UX §0.2, INTERNAL-TAGS.md
   state.tags = publicTags((u.searchParams.get('tags') || '').split(',').filter(Boolean));
   state.maturity = (u.searchParams.get('mat') || '').split(',').filter(Boolean);
-  state.sort = u.searchParams.get('sort') || 'weight';
-  state.dir = u.searchParams.get('dir') || 'desc';
+  const sort = u.searchParams.get('sort');
+  state.sort = SORTS[sort] ? sort : 'weight';
+  state.dir = u.searchParams.get('dir') === 'asc' ? 'asc' : (u.searchParams.get('dir') === 'desc' ? 'desc' : (state.sort === 'weight' ? 'desc' : 'asc'));
+  const status = u.searchParams.get('status');
+  state.status = STATUSES[status] ? status : '';
   state.q = u.searchParams.get('q') || '';
   state.calFull = u.searchParams.get('cal') === 'all';
 }
@@ -71,7 +80,8 @@ function writeUrl(replace = false) {
   set('tags', state.tags.join(','), '');
   set('mat', state.maturity.join(','), '');
   set('sort', state.sort, 'weight');
-  set('dir', state.dir, 'desc');
+  set('dir', state.dir, state.sort === 'weight' ? 'desc' : 'asc');
+  set('status', state.status, '');
   set('q', state.q, '');
   set('cal', state.calFull ? 'all' : '', '');
   history[replace ? 'replaceState' : 'pushState'](null, '', u);
@@ -494,6 +504,8 @@ function filterPositions(fund) {
     return state.tags.some((x) => t.includes(x));
   });
   if (state.maturity.length) list = list.filter((p) => state.maturity.includes(p.maturity));
+  if (state.status === 'forslag') list = list.filter((p) => p.themeStatus === 'forslag');
+  if (state.status === 'fast') list = list.filter((p) => p.themeStatus !== 'forslag');
   if (state.q) {
     const q = state.q.toLowerCase();
     list = list.filter((p) =>
@@ -503,19 +515,24 @@ function filterPositions(fund) {
       daTheme(p.theme).toLowerCase().includes(q)
     );
   }
-  const dir = state.dir === 'asc' ? 1 : -1;
-  // Compliance: no per-stock P/S, P/E, YTD, drawdown sorts in v1
-  if (state.sort === 'ps' || state.sort === 'pe' || state.sort === 'drawdown52Approx') state.sort = 'weight';
-  list.sort((a, b) => {
-    const key = state.sort;
-    let av = a[key], bv = b[key];
-    if (key === 'name') return dir * (a.name || '').localeCompare(b.name || '', 'da');
-    if (av == null) av = 0; if (bv == null) bv = 0;
-    return dir * (av - bv);
-  });
-  return list;
+  return sortPositions(list, state.sort, state.dir);
 }
 
+// Kun whitelistede nøgler (SORTS). Tema: alfabetisk på dansk temanavn, inden for tema efter vægt;
+// "andet" (uklassificeret) altid sidst, uanset retning.
+// Stabil tie-break på navn, så rækkefølgen ikke hopper mellem visninger.
+function sortPositions(list, sort, dirName) {
+  const dir = dirName === 'asc' ? 1 : -1;
+  const byName = (a, b) => (a.name || '').localeCompare(b.name || '', 'da');
+  const w = (p) => (typeof p.weight === 'number' ? p.weight : 0);
+  const cmp = {
+    name: (a, b) => dir * byName(a, b),
+    weight: (a, b) => dir * (w(a) - w(b)) || byName(a, b),
+    theme: (a, b) => ((a.theme === 'andet') - (b.theme === 'andet'))
+      || dir * daTheme(a.theme).localeCompare(daTheme(b.theme), 'da') || (w(b) - w(a)) || byName(a, b),
+  }[SORTS[sort] ? sort : 'weight'];
+  return [...list].sort(cmp);
+}
 
 function renderLivscyklus(fund) {
   // Pædagogisk kurve (bogen: præ-revenue → value). Prikker = selskaber MED manuel modenhed;
@@ -611,11 +628,11 @@ function positionsTable(list, fund) {
     `<th><button type="button" data-sort="${key}" aria-sort="${state.sort===key?(state.dir==='asc'?'ascending':'descending'):'none'}">${label}${state.sort===key?(state.dir==='asc'?' ↑':' ↓'):''}</button></th>`;
   return `<p class="spark-legend"><svg class="spark-key" width="16" height="12" aria-hidden="true"><g fill="var(--cyan)"><rect x="0" y="6" width="4" height="6" rx="1"/><rect x="6" y="3" width="4" height="9" rx="1"/><rect x="12" y="0" width="4" height="12" rx="1"/></g></svg><span>Søjlerne ved navnet viser <strong>vægt i fonden pr. kvartal</strong>. Ikke aktiekurs.</span></p>` +
   hscroll(`<div class="table-wrap"><table class="data"><thead><tr>
-    ${th('name','Navn')}${th('weight','Vægt %')}<th>Tema</th>
+    ${th('name','Navn')}${th('weight','Vægt %')}${th('theme','Tema')}
   </tr></thead><tbody>${list.map((p) => `<tr>
     <td><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}">${p.name}</a> ${weightSpark(p.isin, fund.id)}<br><small style="color:var(--muted)">${p.isin}</small></td>
     <td>${(p.weight ?? 0).toFixed(2).replace('.', ',')}</td>
-    <td>${tagsFor(p, DATA.multiTags).map((t) => `<a class="tag" href="tema.html?slug=${encodeURIComponent(t)}&fund=${fund.id}">${daTheme(t)}</a>`).join(' ')}${p.themeStatus==='forslag'?' <span class="badge badge-draft" title="forslag, afventer gennemgang">forslag</span>':''}</td>
+    <td>${tagsFor(p, DATA.multiTags).map((t) => `<a class="tag" href="tema.html?slug=${encodeURIComponent(t)}&fund=${fund.id}">${daTheme(t)}</a>`).join(' ')}${p.themeStatus==='forslag'?' <span class="badge badge-draft" title="Temaet er et forslag fra udkastet og afventer NDI-gennemgang">forslag</span>':''}</td>
   </tr>`).join('')}</tbody></table></div>`, 'Rul til siden for flere kolonner.') +
   `<p style="font-size:11px;color:var(--muted);margin-top:8px">Kun vægt og tema. De små søjler ved navnet er selskabets <strong style="color:var(--text)">vægt i fonden</strong> pr. kvartalssnapshot frem til ${fmtDate(MONTHS?.cutoff || fund.positionsAsOf)}. Ikke aktiekurs. Ingen kursafkast pr. aktie i v1. Beholdning er forsinket.</p>`;
 }
@@ -625,9 +642,15 @@ function emptyScreener(fund) {
   const active = [
     state.q && `søgning “${esc(state.q)}”`,
     state.tags.length && `tema ${state.tags.map(daTheme).join(' / ')}`,
+    state.status && STATUSES[state.status],
   ].filter(Boolean).join(' og ');
+  // Hjælp: hvis søgningen alene giver hits, men kombinationen ikke gør, så sig det.
+  const qOnly = state.q && (state.tags.length || state.status)
+    ? fund.positions.filter((p) => [p.name, p.symbol, p.isin, daTheme(p.theme)].some((x) => (x || '').toLowerCase().includes(state.q.toLowerCase()))).length
+    : 0;
   return `<div class="empty-state" role="status">
     <strong>Ingen af fondens ${fund.positions.length} selskaber matcher ${active || 'filtrene'}</strong>
+    ${qOnly ? `<span>Søgningen alene giver ${qOnly} ${qOnly === 1 ? 'selskab' : 'selskaber'} - prøv at fjerne tema- eller statusfilteret.</span>` : ''}
     <span>Level 1 viser kun selskaber, fonden ejede pr. ${fmtDate(fund.positionsAsOf || DATA.portfolio.asOf)}. Et selskab, der ikke er med, er ikke et signal - se <a href="laer/faq-mangler-aktie.html">Hvorfor mangler aktie X?</a></span>
     <div class="row">
       ${state.q ? '<button type="button" class="outline-btn small" data-clear-q>Ryd søgning</button>' : ''}
@@ -635,6 +658,20 @@ function emptyScreener(fund) {
       <a class="outline-btn small" href="selskaber.html?fund=${state.fund}">Se A-Z-listen</a>
     </div>
   </div>`;
+}
+
+// Temastatus-filter: lader læseren (og NDI ved gennemgang) se, hvilke tema-tags der er forslag.
+// Antal er tællinger af selskaber - ingen tal pr. aktie.
+function statusFilterHtml(fund) {
+  const nForslag = fund.positions.filter((p) => p.themeStatus === 'forslag').length;
+  if (!nForslag) return '';
+  const btn = (v, label, n) =>
+    `<button type="button" class="control ${state.status === v ? 'active' : ''}" data-status="${v}" aria-pressed="${state.status === v}">${label} <small>(${n})</small></button>`;
+  return `<div class="filters" role="group" aria-label="Filtrér på temastatus">
+      ${btn('fast', 'Uden temaforslag', fund.positions.length - nForslag)}
+      ${btn('forslag', 'Kun temaforslag', nForslag)}
+      <small style="color:var(--muted);align-self:center"><span class="badge badge-draft">forslag</span> = tema foreslået i udkastet, afventer NDI-gennemgang.</small>
+    </div>`;
 }
 
 function renderUdforsk(root) {
@@ -645,7 +682,7 @@ function renderUdforsk(root) {
     <a class="back" href="?view=entre&fund=${state.fund}" data-nav="entre">← Entré</a>
     <p class="eyebrow">UDFORSK TECH</p>
     <h1>Screener · NDI-linse</h1>
-    <p class="lede">Level 1: kun selskaber i porteføljen. Tags er mange-til-mange i ambitionen. Her ét primært tema pr. selskab i udkastet.</p>
+    <p class="lede">Level 1: kun selskaber i porteføljen. Hvert selskab har ét primært tema; ${Object.keys(DATA.multiTags?.byIsin || {}).length} udvalgte selskaber har flere (multi-tag). Sortér på navn, vægt eller tema.</p>
     <p class="band">Informationen er generel - ikke en personlig anbefaling. Segmenter = eksponering.</p>
     ${fundToolbar({ screener: false })}
     <div class="filters">
@@ -659,6 +696,7 @@ function renderUdforsk(root) {
       ${themes.map((t) => `<button type="button" class="control ${state.tags.includes(t)?'active':''}" data-tag="${t}" aria-pressed="${state.tags.includes(t)}">${daTheme(t)}</button>`).join('')}
     </div>
     <p style="font-size:12px;color:var(--muted);margin:8px 0">Tema-dybsider: ${themes.map((t) => `<a href="tema.html?slug=${encodeURIComponent(t)}&fund=${state.fund}">${daTheme(t)}</a>`).join(' · ')} · <a href="selskaber.html?fund=${state.fund}">A-Z liste</a></p>
+    ${statusFilterHtml(fund)}
     <!-- Modenhedsfiltre skjult indtil manuel klassifikation -->
     <div class="chips" id="chips"></div>
     <p style="font-size:12px;color:var(--muted)" id="filter-status">${list.length} ${list.length === 1 ? 'resultat' : 'resultater'} · udkast-klassifikation</p>
@@ -669,6 +707,7 @@ function renderUdforsk(root) {
   const parts = [
     ...state.tags.map((t) => ({ k: 'tag', v: t, label: daTheme(t) })),
     ...state.maturity.map((m) => ({ k: 'mat', v: m, label: daMat(m) })),
+    ...(state.status ? [{ k: 'status', v: state.status, label: STATUSES[state.status] }] : []),
   ];
   chips.innerHTML = parts.map((p) =>
     `<span class="chip">${p.label}<button type="button" data-x="${p.k}:${p.v}" aria-label="Fjern filter ${p.label}">×</button></span>`).join('');
@@ -700,8 +739,8 @@ function announceFilters() {
   const parts = [`${fund.short}: ${n} af ${fund.positions.length} selskaber`];
   if (state.tags.length) parts.push(`tema ${state.tags.map(daTheme).join(', ')}`);
   if (state.q) parts.push(`søgning ${state.q}`);
-  const SORT = { weight: 'vægt', name: 'navn', ps: 'P/S' };
-  parts.push(`sorteret efter ${SORT[state.sort] || state.sort}, ${state.dir === 'asc' ? 'stigende' : 'faldende'}`);
+  if (state.status) parts.push(STATUSES[state.status]);
+  parts.push(`sorteret efter ${SORTS[state.sort]}, ${state.dir === 'asc' ? 'stigende' : 'faldende'}`);
   const msg = parts.join(' · ');
   // Første visning af en side annonceres ikke (overskriften læses allerede); kun ændringer.
   if (lastAnnounce !== null && msg !== lastAnnounce) live.textContent = msg;
@@ -709,12 +748,12 @@ function announceFilters() {
 }
 
 function onClick(e) {
-  const t = e.target.closest('[data-nav],[data-fund],[data-period],[data-sort],[data-tag],[data-mat],[data-open],[data-x],#reset-filters,#copy-link,#csv-export,[data-clear-q]');
+  const t = e.target.closest('[data-nav],[data-fund],[data-period],[data-sort],[data-tag],[data-mat],[data-status],[data-open],[data-x],#reset-filters,#copy-link,#csv-export,[data-clear-q]');
   if (!t) return;
   if (t.matches('[data-open]')) { openDialog(t.getAttribute('data-open')); return; }
   if (t.matches('[data-clear-q]')) { state.q = ''; writeUrl(); paint(); $('#q')?.focus(); return; }
   if (t.id === 'reset-filters') {
-    state.tags = []; state.maturity = []; state.q = ''; writeUrl(); paint(); return;
+    state.tags = []; state.maturity = []; state.q = ''; state.status = ''; writeUrl(); paint(); return;
   }
 
   if (t.id === 'csv-export') {
@@ -737,7 +776,7 @@ function onClick(e) {
     const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
     const a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
-    const filt = [...state.tags, state.q && 'soeg'].filter(Boolean).join('-');
+    const filt = [...state.tags, state.status, state.q && 'soeg'].filter(Boolean).join('-');
     a.download = `ndi-${state.fund}-${asOf}${filt ? '-' + filt.replace(/[^a-z0-9-]/gi, '') : ''}.csv`;
     document.body.append(a);
     a.click();
@@ -758,6 +797,7 @@ function onClick(e) {
     const [k, v] = t.getAttribute('data-x').split(':');
     if (k === 'tag') state.tags = state.tags.filter((x) => x !== v);
     if (k === 'mat') state.maturity = state.maturity.filter((x) => x !== v);
+    if (k === 'status') state.status = '';
     writeUrl(); paint(); return;
   }
   if (t.matches('[data-nav]')) {
@@ -769,8 +809,17 @@ function onClick(e) {
   if (t.matches('[data-period]')) { state.period = t.getAttribute('data-period'); writeUrl(); paint(); return; }
   if (t.matches('[data-sort]')) {
     const k = t.getAttribute('data-sort');
+    if (!SORTS[k]) return;
     if (state.sort === k) state.dir = state.dir === 'asc' ? 'desc' : 'asc';
-    else { state.sort = k; state.dir = k === 'name' ? 'asc' : 'desc'; }
+    else { state.sort = k; state.dir = k === 'weight' ? 'desc' : 'asc'; }
+    writeUrl(); paint();
+    // Tabellen gentegnes - giv fokus tilbage til samme kolonneknap (tastatur/skærmlæser)
+    $(`[data-sort="${k}"]`)?.focus();
+    return;
+  }
+  if (t.matches('[data-status]')) {
+    const v = t.getAttribute('data-status');
+    state.status = state.status === v || !STATUSES[v] ? '' : v;
     writeUrl(); paint(); return;
   }
   if (t.matches('[data-tag]')) {
@@ -843,7 +892,9 @@ function wireKeyboard() {
 async function main() {
   readUrl();
   // Strippede interne tags fjernes også fra adresselinjen, så de ikke deles via "Kopiér link"
-  if ((new URL(location.href).searchParams.get('tags') || '') !== state.tags.join(',')) writeUrl(true);
+  // Ugyldige/udfasede sorteringer (fx gamle links med sort=pe) normaliseres på samme måde
+  const u0 = new URL(location.href).searchParams;
+  if ((u0.get('tags') || '') !== state.tags.join(',') || (u0.get('sort') || 'weight') !== state.sort || (u0.has('status') && !state.status)) writeUrl(true);
   try {
     DATA = await loadAll();
     MONTHS = await fetch('data/company-months.json').then((r) => (r.ok ? r.json() : null)).catch(() => null);

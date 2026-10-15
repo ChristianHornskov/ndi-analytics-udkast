@@ -33,6 +33,7 @@ Kilder: slack_ny_graf_2026-10-15.md, vision.txt, mads_tankemodel.md, investering
 - [x] Quantum-tag — 4 selskaber (forslag); Quantumscape uændret (batteri)
 - [ ] Legacy-mistænkt / Trump-tags — deferred (UX skjult)
 - [ ] Sortering: 52u-drawdown, optrend, vol, insider — deferred (compliance på per-aktie)
+- [x] Compliance-sikker sortering (lane-B): whitelist navn/vægt/tema i screener + A-Z; temastatus-filter (forslag/uden); tomme tilstande med hjælp
 - [x] Ingen P/E i v1 (skjult); P/S skjult
 - [x] "Hvilket problem løser det?" på selskab
 - [x] Teslas multi-rolle (energi+fysisk) — multi-tag + pædagogisk callout på vaerdikaeder
@@ -63,3 +64,4 @@ Kilder: slack_ny_graf_2026-10-15.md, vision.txt, mads_tankemodel.md, investering
 | 23:08 | Tesla multi-rolle callout + temaer→treemap CTA | (denne) |
 | 23:10 | unique-metrics: +quantum×4 +Arm; href→vaerdikaeder | (denne) |
 | 23:07 | Vidensbot flodsystem → vaerdikaeder (5 kæder inkl. space) + lær | (denne) |
+| lane-B c1 | Screener: sort-whitelist, tema-sort, forslag-filter, A-Z-side | lane-B |
