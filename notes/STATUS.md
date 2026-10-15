@@ -446,3 +446,11 @@ HEAD `b35518b`. Visual-variety request shipped + reviewed. MADS værdikæde/quan
 - `om-data.html`: ordliste 105 (Energi (tema), High growth), tællere 24 · 20 · 34 · 27. `ndi-perspektiv.html` linker flodsystem/dæmning/energi/modenhed til ordlisten. `kort.html` 105 + ideer-beskrivelse. HANDOFF trin 7: 105.
 - Test: 8763, 375/1280 på 5 sider: 0 konsolfejl, ingen h-overflow, 0 døde ankre. precheck: se push.
 - Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) på hele lane-C-fladen ved 375 px.
+
+## Fra Claude lane-C (ideer: lag på lag + ordliste 109) · 01:27 CEST 16/10 (wall-clock)
+- `ideer.html`: trettende form «Lag på lag» (temaerne som stak fra jord til skærm, bredde = vægt i PMINDI, gul = NDI's flaskehalse; fysisk tech, SpaceTech, Quantum, Andet ved siden af). og:description fulgt med.
+- `om-data.html`: ordliste 109 (Chips, Compute, Optik &amp; netværk, Fysisk tech som temaer). Alle elleve temaer har nu en post. Tællere 24 · 20 · 38 · 27. Flodsystem-posten → `#h-stk`. `laer/saadan-taenker-vi.html` → `#h-stk`. `kort.html` 109.
+- Notes: HANDOFF trin 6 (tretten former, «Lag på lag»), trin 7 (109), UX-review, VIDENSBOT-live-check.
+- **Til tema-ejer:** temaer/tema kan linke temanavn → ordlistepost (liste i UX-review).
+- Test: 8763, 375/1280 på 3 sider: 0 konsolfejl, ingen h-overflow, 0 døde ankre. precheck: se push.
+- Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) på hele lane-C-fladen ved 375 px.

@@ -167,3 +167,8 @@ Sider: ideer, kort, om-data, invester, risici, ndi-perspektiv, laer/*.
 - Temavægte er aggregater pr. tema (ingen enkeltaktier, ingen kurser, ingen afkast), fra den offentlige beholdning pr. 1. jun 2026. Vægt i % af fonden, som i rapporten (summer 91,9 % / 90,0 %). Teksten forklarer ikke, hvad resten er, fordi det ikke står i datafilen. **Til review:** skal resten (kontanter m.m.) nævnes?
 - «Forskellen mellem klasserne ligger derfor især i udbyttet» er en beskrivelse af eksponering, ikke en anbefaling af en klasse. udbytte-vs-akk siger fortsat «afhænger af din situation».
 - Energi (tema): NDI kalder energi den første dæmning (samme som elnet-posten og ugebrevets flodsystem). «Temaet viser eksponering, ikke en anbefaling.» Ingen udsigter.
+
+## lane-C · 01:27 16/10 · «Lag på lag» + fire tema-poster
+- Stakken er formuleret som «en skitse af en tankegang, ikke en officiel model», og knyttet til flodsystemet med ugebrevets egen pointe (datacenter ↔ strøm). Kun aggregater pr. tema (antal, vægt), ingen enkeltaktier, kurser eller afkast. «Viser eksponering, ikke en anbefaling eller dagens fordeling.»
+- Chips-posten: «det tema med flest selskaber, når «Andet» ikke tælles med». Ingen vurdering af temaets udsigter.
+- **Til review:** er rækkefølgen energiressourcer → energi → chips → compute → optik → software → platforme i tråd med NDI's eget billede, eller skal optik ligge under compute? Datacentre (NDI's 2. flaskehals) har intet eget tema, hvilket figurteksten siger.

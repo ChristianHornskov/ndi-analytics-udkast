@@ -279,3 +279,13 @@ Ingen nye.
 - Index «Porteføljen» kunne linke til `ideer.html#h-kl`, når brugeren skifter andelsklasse. Det er ikke min fil.
 ### Test
 - 8763, 375/1280 på 5 sider: 0 konsolfejl, ingen h-overflow, 0 døde ankre (også på tværs af sider).
+
+## 01:27 CEST lane-C checkpoint (Claude) · ideer «Lag på lag» + ordliste 109
+### Løst
+- `ideer.html` trettende form «Lag på lag» (`#h-stk`): de syv temaer i stakken fra energiressourcer (jord) til platforme (bruger) som centrerede bjælker, bredde = vægt i PMINDI pr. 1. jun 2026, tal = antal selskaber · vægt. Gul = NDI's nummererede flaskehalse (energi, chips). Fysisk tech, SpaceTech, Quantum og Andet står ved siden af stakken. Ny visuel form (vase/stak), ingen SVG. På 375 px rykker bjælken under navn og tal, ingen h-overflow. «TÆT PÅ …»-mærkerne centreret over bjælkekolonnen på desktop.
+- Ordliste 105 → 109: Chips (tema), Compute (tema), Optik &amp; netværk (tema), Fysisk tech (tema). Fire af de elleve temaer manglede egen post; nu har alle temaer en. Tal fra portfolio.json (antal pr. andelsklasse).
+- Links: flodsystem-posten → `#h-stk`; lær/sådan tænker vi → `#h-stk`; kort.html 109 + ideer-beskrivelse; HANDOFF trin 6–7.
+### SHOULD (andre lanes)
+- `temaer.html`/`tema.html` kunne linke temaets navn til dets ordlistepost (`#g-chips-tema`, `#g-compute-tema`, `#g-optik-tema`, `#g-fysisk-tech`, `#g-energi`, `#g-platforme`, `#g-software-tema`, `#g-energiressourcer`, `#g-quantum`, `#g-spacetech`, `#g-andet`). Ikke min fil.
+### Test
+- 8763, 375/1280 på ideer, om-data, kort: 0 konsolfejl, ingen h-overflow, 0 døde ankre; dybt link `om-data.html#g-chips-tema` lander i synsfeltet på mobil. Screenshot af formen gennemset på begge bredder.
