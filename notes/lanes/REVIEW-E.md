@@ -127,3 +127,7 @@ United States Antimony skriver selv, at de to materialer er antimon og zeolit. K
 ## Freeport · 2026-10-16 00:51 CEST
 
 Cerro Verde, El Abra og Grasberg står på siden. Lone Star er kun en gammel webcast-titel og er udeladt. AI-udkast uden gennemgangsdato. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Southern Copper · 2026-10-16 00:55 CEST
+
+Forsiden nævner kobber, molybdæn, sølv og zink og Grupo México. Minenavne stod ikke på siden og er udeladt. Advarslen om falske profiler er ikke kopieret. AI-udkast uden gennemgangsdato. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.

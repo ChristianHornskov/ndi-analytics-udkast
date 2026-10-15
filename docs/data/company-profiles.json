@@ -1119,15 +1119,15 @@
   "US84265V1052": {
    "name": "Southern Copper",
    "theme": "energy-resources",
-   "summary": "Driver kobberminedrift i Peru og Mexico.",
+   "summary": "Driver minedrift i Peru og Mexico. Selskabet skriver, at de vigtigste produkter er kobber, molybdæn, sølv og zink.",
    "watch": "Drift af minerne og kobberpriser.",
    "source": "https://www.southerncoppercorp.com/",
-   "products": "Kobber.",
+   "products": "Kobber, molybdæn, sølv og zink.",
    "customers": "Industrikunder.",
    "role": "Råstof.",
    "narrative": [
-    "Southern Copper driver kobberminedrift i Peru og Mexico.",
-    "Det er en mine i denne beskrivelse, ikke et kraftværk."
+    "Southern Copper skriver, at de vigtigste produkter er kobber, molybdæn, sølv og zink, og at selskabet er en del af Grupo México.",
+    "Det er minedrift i denne beskrivelse, ikke et kraftværk."
    ],
    "narrativeSources": [
     {

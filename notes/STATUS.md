@@ -549,3 +549,13 @@ Profilen siger, at siden nævner Cerro Verde og El Abra i Sydamerika og Grasberg
 Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Grasberg står i det første afsnit. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `b22dc26` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 00:55 CEST. Southern Copper skriver, at produkterne er kobber, molybdæn, sølv og zink. Ikke færdig.**
+
+Forsiden skriver "Productos Principales: Cobre, Molibdeno, Plata y Zinc" og at selskabet er en del af Grupo México. Profilen siger det. Peru og Mexico stod i forvejen. Navngivne miner stod ikke på den hentede side og er ikke tilføjet. En advarsel om falske profiler er ikke kopieret. Ingen `reviewedAt`. Rollen i JSON nævner de fire produkter. Den vises ikke på kædesiden.
+
+Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Molybdæn og Grupo México står i det første afsnit. "Ikke et kraftværk" står efter "Læs hele forklaringen". Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `4e60350` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
