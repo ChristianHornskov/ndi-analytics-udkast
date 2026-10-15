@@ -220,3 +220,9 @@ Ingen nye.
 - Sektor = `sector`-feltet i portfolio.json (offentlige opslag). Bevidst **ikke** kaldt GICS, da feltnavnene er af Yahoo/Morningstar-typen. 14 selskaber uden sektor ligger i «Øvrige» (nævnt i figurteksten).
 - Mobil 375: lodrette kolonneoverskrifter, celler 25 px, ingen rul i tabellen (329/329), ingen h-overflow. 1280: centreret, nøglepointer i tre kolonner.
 - Ordliste «GICS-sektorer» linker nu til matrixen; kort.html og og:description fulgt med.
+
+## ~01:10 CEST lane-C checkpoint (Claude) — lær/rebalancering
+- Ny side `laer/rebalancering.html` dækker Vidensbot pkt. 24/31 (porteføljetekniske begrundelser) på almindeligt dansk. Skyder + ti søjler, ingen fondshandler, ingen satser.
+- Fundet og rettet under test: på 375 px roterede pilen i flowet en hel boks 90° og dækkede teksten. Nu skiftes → til ↓ med to spans.
+- Lær-hub: Tankegangen har nu 5 døre i et 2-kolonne gitter, så «Hvad P/E fortæller» står alene i fuld bredde på desktop. Acceptabelt, men Leo kan overveje at flytte P/E til «Afkast og udsving» (så 4 + 4).
+- 375/1280: 0 konsolfejl, ingen h-overflow på rebalancering, lær/index, FAQ. Skyder ved 900 % giver 52,6 % / 81 kr. (regnet efter).

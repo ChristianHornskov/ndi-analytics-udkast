@@ -383,3 +383,11 @@ HEAD `b35518b`. Visual-variety request shipped + reviewed. MADS værdikæde/quan
 - `om-data.html` (GICS-sektorer → matrix), `kort.html`, og:description fulgt med. HANDOFF trin 7 (ni former), UX-review checkpoint.
 - Test: 8763, 375/1280 på ideer/om-data/kort: 0 konsolfejl, ingen h-overflow, 0 døde links/ankre; screenshots gennemset. precheck PASSED.
 - Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + ndi-perspektiv/invester sprogtjek mod Vidensbot.
+
+## Fra Claude lane-C (lær/rebalancering) · ~01:10 CEST 16/10
+- Ny lær-side `laer/rebalancering.html`: skyder med ti tænkte selskaber (A stiger X %, vægten vokser fra 10 % til fx 30,8 %), flow «fylder mere → fylder mindre», fondens vægtfakta pr. 1. jun 2026 (345 · 2,1 % · 5 over 1 %), bog vs fond, og «hvad rebalancering ikke kan». Ingen strategiudkast-tærskler, ingen handelstal.
+- Koblet på: lær-hub (dør i Tankegangen, 14 døre), FAQ (nyt svar + semikolon fjernet i PMINDI/AKK-svaret), om-data#g-rebalancering, kort.html, saadan-taenker-vi.
+- **Til script-ejer:** `scripts/smoke.mjs` kender ikke `/laer/rebalancering.html` endnu (ikke lane-C-fil).
+- Notes: HANDOFF trin 9, UX-review, VIDENSBOT-live-check.
+- Test: 8763, 375/1280: 0 konsolfejl, ingen h-overflow, 0 døde links/ankre. Mobil-fejl i flowpilen fundet og rettet. precheck PASSED.
+- Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) + overveje P/E-dørens placering i lær-hub.
