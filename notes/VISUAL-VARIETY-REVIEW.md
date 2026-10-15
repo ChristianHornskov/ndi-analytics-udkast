@@ -78,6 +78,10 @@ På 320 dækkede tooltip sluttallet. Det stopper nu 8 px før tallet, på år ti
 
 Sammenlign sagde "største forskel" uden at vise hvilken række. Det er Andet / uklassificeret, ca. 1,5 procentpoint (11,6 % og 13,2 %). Rækken har en gul kant. Ét panel. Ingen afkastprocent på AKK-kortet. Datoen står på sin egen linje. Krydslink til drawdown er der. Ingen sidescroll ved 1280, 375 og 320. Ingen konsolfejl.
 
+### Update · embed-tal · 2026-10-16 ~01:05 CEST
+
+De tre tal under grafen var lige store. Totalafkast er nu 36 px (32 px under 640). CAGR og år til dato er 22 px. Tallene er de samme: +104,8 %, +26,4 % og +4,0 %. På PMINDIAKK står der stadig en streg, og svg'en er tom. Ingen sidescroll ved 1280, 375 og 320. Ingen konsolfejl.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.

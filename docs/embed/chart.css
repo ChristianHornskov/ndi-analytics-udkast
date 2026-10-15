@@ -416,7 +416,7 @@ button.legend {
 
 .metrics-grid {
   display: grid;
-  grid-template-columns: 1.15fr 1.2fr .95fr;
+  grid-template-columns: 1.45fr 1fr .95fr;
 }
 
 .metric {
@@ -445,8 +445,10 @@ button.legend {
   font-variant-numeric: tabular-nums;
 }
 
+.metric:first-child strong { font-size: 36px; }
+.metric:not(:first-child) strong { font-size: 22px; }
 .metric strong.accent { color: var(--cyan); }
-.metric strong.smaller { font-size: 22px; letter-spacing: -.3px; }
+.metric strong.smaller { font-size: 18px; letter-spacing: -.3px; }
 
 .metric small {
   font-size: 10px;
@@ -603,7 +605,8 @@ button.legend {
   }
   .metric:last-child { border-bottom: 0; padding-bottom: 0; }
   .metric-label { margin-bottom: 6px; }
-  .metric strong { font-size: 26px; }
+  .metric:first-child strong { font-size: 32px; }
+  .metric:not(:first-child) strong { font-size: 22px; }
   .warn { font-size: 12px; }
 }
 

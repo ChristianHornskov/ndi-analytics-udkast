@@ -373,3 +373,11 @@ På 320 dækkede tooltip sluttallet. Det holder nu 8 px afstand, også når tall
 Sammenlign sagde, at den største forskel er ca. 1,5 procentpoint, men ikke i hvilket tema. Det er Andet / uklassificeret (11,6 % og 13,2 %). Rækken har en gul kant. Stadig ét panel. AKK-kortet har ingen afkastprocent, og datoen står på sin egen linje. Linket til drawdown er der. Ingen sidescroll ved 1280, 375 og 320. Ingen konsolfejl.
 
 `lane-D` er klar til merge. Ikke main. Ikke færdig.
+
+## Fra Grok lane-D
+
+**2026-10-16 01:05 CEST. Totalafkast er det store tal i embed. Ikke færdig.**
+
+De tre tal under grafen var lige store. Totalafkast er 36 px på desktop og 32 px under 640. CAGR og år til dato er 22 px. Tallene er uændrede: +104,8 %, +26,4 % og +4,0 %. PMINDIAKK viser stadig en streg, og svg'en er tom. Ingen sidescroll ved 1280, 375 og 320. Ingen konsolfejl.
+
+`lane-D` er klar til merge. Ikke main. Ikke færdig.
