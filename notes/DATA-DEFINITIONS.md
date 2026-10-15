@@ -24,3 +24,10 @@ Prospektet nævner også første handelsdag 9. okt. 2023 (kl. n) og Akk stiftet 
 - `asOf` / `positionsAsOf` → forsinket beholdning (pt. 2026-06-01, cutoff for precheck)
 
 Skriv dem adskilt: "Afkast pr. … · Beholdning (forsinket) pr. …"
+
+
+## Værdikæde: physical → led 2 (default)
+
+**Default overnight:** temaet `physical` (Fysisk tech) forbliver koblet til led 2 "Datacenter & racks" i `docs/vaerdikaede.html`.
+
+Begrundelse: Level-1-modellen er pædagogisk og forenklet; fysisk hardware (racks, robotik, elbil-platforme) samles under det fysiske led, indtil Christian/Mads eventuelt splitter led 2. Tesla kan derfor fremhæves dér via multi-tag — det er eksponering, ikke en anbefaling.
