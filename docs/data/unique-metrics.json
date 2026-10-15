@@ -10540,6 +10540,754 @@
           "href": "laer/livscyklus.html"
         }
       ]
+    },
+    "CA6979001089": {
+      "name": "Pan American Silver",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Andet / uklassificeret",
+          "hint": "Primært tema: Andet / uklassificeret. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Sølv- og guldminer",
+          "hint": "Producerer sølv og guld fra miner i Nord- og Sydamerika.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Uden for værdikæderne",
+          "hint": "Ædelmetaller er ikke et led i værdikæderne. Placeringen er pædagogisk.",
+          "href": "tema.html?slug=andet"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Metalpriser og omkostninger",
+          "hint": "Sølv- og guldprisen, omkostningerne i minerne og politisk risiko i minelandene. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "CA32076V1031": {
+      "name": "First Majestic Silver",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Andet / uklassificeret",
+          "hint": "Primært tema: Andet / uklassificeret. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Sølvminer",
+          "hint": "Sølvproducent med miner primært i Mexico; producerer også guld.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Uden for værdikæderne",
+          "hint": "Ædelmetaller er ikke et led i værdikæderne. Sølv bruges også i solceller og elektronik, men selskabet er en ædelmetalproducent. Placeringen er pædagogisk.",
+          "href": "tema.html?slug=andet"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Sølvpris og omkostninger",
+          "hint": "Sølvprisen, omkostningerne i minerne og forholdene i Mexico. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US4227041062": {
+      "name": "Hecla Mining",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Andet / uklassificeret",
+          "hint": "Primært tema: Andet / uklassificeret. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Sølvminer",
+          "hint": "Sølvproducent med miner i USA og Canada; producerer også guld, bly og zink.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Uden for værdikæderne",
+          "hint": "Ædelmetaller er ikke et led i værdikæderne. Placeringen er pædagogisk.",
+          "href": "tema.html?slug=andet"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Sølvpris og driften i minerne",
+          "hint": "Sølvprisen, omkostningerne og driftsstabiliteten i de enkelte miner. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US1921085049": {
+      "name": "Coeur Mining",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Andet / uklassificeret",
+          "hint": "Primært tema: Andet / uklassificeret. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Guld- og sølvminer",
+          "hint": "Producerer guld og sølv fra miner i Nordamerika.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Uden for værdikæderne",
+          "hint": "Ædelmetaller er ikke et led i værdikæderne. Placeringen er pædagogisk.",
+          "href": "tema.html?slug=andet"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Metalpriser og omkostninger",
+          "hint": "Guld- og sølvprisen og omkostningerne i minerne. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US6458272050": {
+      "name": "Idaho Strategic Resources",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Andet / uklassificeret",
+          "hint": "Primært tema: Andet / uklassificeret. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Lille guldminer",
+          "hint": "Guldproduktion i Idaho; ejer også efterforskningsarealer med sjældne jordarter.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Uden for værdikæderne",
+          "hint": "Guld er ikke et led i værdikæderne. Arealerne med sjældne jordarter ligger tæt på Energi led 5 (kritiske råstoffer), men er efterforskning, ikke produktion. Placeringen er pædagogisk.",
+          "href": "tema.html?slug=andet"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Guldpris og efterforskning",
+          "hint": "Guldprisen, produktionen fra én region og fremdrift i efterforskningen. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "CA7142661031": {
+      "name": "Perpetua Resources",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Andet / uklassificeret",
+          "hint": "Primært tema: Andet / uklassificeret. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Mineprojekt: guld og antimon",
+          "hint": "Udvikler Stibnite-projektet i Idaho med guld og antimon. Ikke i produktion.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Uden for værdikæderne",
+          "hint": "Guld er ikke et led i værdikæderne; antimon er et kritisk råstof og ligger tæt på Energi led 5. Temaet er fortsat Andet. Placeringen er pædagogisk.",
+          "href": "tema.html?slug=andet"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Tilladelser og finansiering",
+          "hint": "Tilladelser, finansiering af minebyggeriet og tidsplanen frem mod produktion. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US02927U2087": {
+      "name": "American Resources",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Andet / uklassificeret",
+          "hint": "Primært tema: Andet / uklassificeret. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Kul og råstof-raffinering",
+          "hint": "Kulaktiviteter samt et datterselskab, der arbejder med raffinering af sjældne jordarter og batterimetaller.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Uden for værdikæderne",
+          "hint": "Hovedforretningen er ikke et led i værdikæderne; raffineringsdelen ligger tæt på Energi led 5 (kritiske råstoffer). Placeringen er pædagogisk.",
+          "href": "tema.html?slug=andet"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Raffinering og finansiering",
+          "hint": "Om raffineringsdelen kommer i kommerciel drift, og adgang til finansiering. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US1508701034": {
+      "name": "Celanese",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Andet / uklassificeret",
+          "hint": "Primært tema: Andet / uklassificeret. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Kemi og specialmaterialer",
+          "hint": "Producerer basiskemikalier (acetyler) og tekniske plastmaterialer til bl.a. biler, elektronik og medicinsk udstyr.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Uden for værdikæderne",
+          "hint": "Kemi er ikke et led i værdikæderne. Placeringen er pædagogisk.",
+          "href": "tema.html?slug=andet"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Efterspørgsel og gæld",
+          "hint": "Efterspørgslen fra industri og bilproduktion, råvareomkostninger og gældsniveau. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US3149111086": {
+      "name": "Fermi",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Andet / uklassificeret",
+          "hint": "Primært tema: Andet / uklassificeret. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Planlagt energi- og datacenter-campus",
+          "hint": "Udvikler et stort campus i Texas med egen strømproduktion til datacentre; selskabet er struktureret som REIT. Ikke i fuld drift.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "AI-compute · led 2: datacentre og køling",
+          "hint": "Strøm og arealer til datacentre; egen strømproduktion ligger også tæt på AI-compute led 1. Temaet er fortsat Andet. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=US3149111086#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Lejere, strøm og finansiering",
+          "hint": "Aftaler med lejere, tilladelser til strømproduktion og finansiering af byggeriet. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "BG1100003166": {
+      "name": "Shelly Group",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Andet / uklassificeret",
+          "hint": "Primært tema: Andet / uklassificeret. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Smart home-enheder",
+          "hint": "Udvikler og sælger forbundne enheder (relæer, sensorer, stikkontakter) til hjem og bygninger.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Uden for værdikæderne",
+          "hint": "Smart home-enheder sidder ikke i et led i værdikæderne. Placeringen er pædagogisk.",
+          "href": "tema.html?slug=andet"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Vækst og konkurrence",
+          "hint": "Salgsvækst uden for hjemmemarkederne og konkurrence fra større elektronikmærker. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US6877931096": {
+      "name": "Oscar Health",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Andet / uklassificeret",
+          "hint": "Primært tema: Andet / uklassificeret. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Sygeforsikring",
+          "hint": "Amerikansk sygeforsikringsselskab, især på det individuelle marked, med egen teknologiplatform.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Uden for værdikæderne",
+          "hint": "Forsikring er ikke et led i værdikæderne. Placeringen er pædagogisk.",
+          "href": "tema.html?slug=andet"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Regulering og skadesudgifter",
+          "hint": "Politiske ændringer i det individuelle sygeforsikringsmarked og udgifterne til behandling. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US53216B1044": {
+      "name": "LifeMD",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Andet / uklassificeret",
+          "hint": "Primært tema: Andet / uklassificeret. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Telemedicin",
+          "hint": "Online-lægekonsultationer og abonnementer på behandlinger, bl.a. vægttab og hormoner.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Uden for værdikæderne",
+          "hint": "En digital sundhedsplatform. Ligger ikke i et værdikæde-led. Placeringen er pædagogisk.",
+          "href": "tema.html?slug=andet"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Kundeerhvervelse og regulering",
+          "hint": "Omkostninger ved at skaffe kunder og sundhedsregulering. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US68170A1088": {
+      "name": "Omada Health",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Andet / uklassificeret",
+          "hint": "Primært tema: Andet / uklassificeret. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Virtuel behandling af kroniske sygdomme",
+          "hint": "Digitale programmer og fjernmonitorering for fx diabetes og forhøjet blodtryk, solgt via arbejdsgivere og forsikringer.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Uden for værdikæderne",
+          "hint": "En digital sundhedsplatform. Ligger ikke i et værdikæde-led. Placeringen er pædagogisk.",
+          "href": "tema.html?slug=andet"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Kunder og dokumentation",
+          "hint": "Aftaler med arbejdsgivere og forsikringer samt dokumentation for effekt. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US4333131039": {
+      "name": "Hinge Health",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Andet / uklassificeret",
+          "hint": "Primært tema: Andet / uklassificeret. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Digital fysioterapi",
+          "hint": "Digitale træningsprogrammer og sensorer til smerter i muskler og led, solgt via arbejdsgivere og forsikringer.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Uden for værdikæderne",
+          "hint": "En digital sundhedsplatform. Ligger ikke i et værdikæde-led. Placeringen er pædagogisk.",
+          "href": "tema.html?slug=andet"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Kunder og konkurrence",
+          "hint": "Nye arbejdsgiveraftaler, fastholdelse og konkurrence på digital sundhed. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "CH1176493729": {
+      "name": "Bachem",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Andet / uklassificeret",
+          "hint": "Primært tema: Andet / uklassificeret. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Kontraktproduktion af peptider",
+          "hint": "Udvikler og fremstiller peptider og oligonukleotider for medicinalselskaber.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Uden for værdikæderne",
+          "hint": "Medicinalproduktion er ikke et led i værdikæderne. Placeringen er pædagogisk.",
+          "href": "tema.html?slug=andet"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Kapacitet og kundeprojekter",
+          "hint": "Udbygning af produktionskapacitet og store kunders lægemiddelprojekter. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "CH0334081137": {
+      "name": "CRISPR Therapeutics",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Andet / uklassificeret",
+          "hint": "Primært tema: Andet / uklassificeret. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Genredigering",
+          "hint": "Udvikler behandlinger med CRISPR-genredigering; har en godkendt behandling mod arvelige blodsygdomme sammen med en partner.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Uden for værdikæderne",
+          "hint": "Bioteknologi er ikke et led i værdikæderne. Placeringen er pædagogisk.",
+          "href": "tema.html?slug=andet"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Udrulning og forsøg",
+          "hint": "Udrulningen af den godkendte behandling og resultater fra kliniske forsøg. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US45826J1051": {
+      "name": "Intellia Therapeutics",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Andet / uklassificeret",
+          "hint": "Primært tema: Andet / uklassificeret. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Genredigering i kroppen",
+          "hint": "Udvikler CRISPR-behandlinger, der gives direkte i kroppen; ingen godkendte produkter.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Uden for værdikæderne",
+          "hint": "Bioteknologi er ikke et led i værdikæderne. Placeringen er pædagogisk.",
+          "href": "tema.html?slug=andet"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Kliniske forsøg og sikkerhed",
+          "hint": "Resultater og sikkerhedsdata fra kliniske forsøg samt finansiering. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US35953D4016": {
+      "name": "Fubo",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Andet / uklassificeret",
+          "hint": "Primært tema: Andet / uklassificeret. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Streaming af sport og tv",
+          "hint": "Abonnementstjeneste med live-tv med fokus på sport.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Uden for værdikæderne",
+          "hint": "Streaming sidder ikke i et led i værdikæderne. Placeringen er pædagogisk.",
+          "href": "tema.html?slug=andet"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Abonnenter og rettigheder",
+          "hint": "Antal abonnenter og omkostninger til tv- og sportsrettigheder. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "DE000A161408": {
+      "name": "HelloFresh",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Andet / uklassificeret",
+          "hint": "Primært tema: Andet / uklassificeret. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Måltidskasser",
+          "hint": "Leverer måltidskasser og færdigretter på abonnement i flere lande.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Uden for værdikæderne",
+          "hint": "Forbrug er ikke et led i værdikæderne. Placeringen er pædagogisk.",
+          "href": "tema.html?slug=andet"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Kunder og marginer",
+          "hint": "Fastholdelse af kunder og omkostninger til råvarer og logistik. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "US22266M1045": {
+      "name": "Coursera",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Andet / uklassificeret",
+          "hint": "Primært tema: Andet / uklassificeret. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Online-uddannelse",
+          "hint": "Platform med kurser og uddannelser fra universiteter og virksomheder.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Uden for værdikæderne",
+          "hint": "En uddannelsesplatform. Ligger ikke i et værdikæde-led. Generativ AI er både et kursusemne og en konkurrent. Placeringen er pædagogisk.",
+          "href": "tema.html?slug=andet"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Efterspørgsel og AI-konkurrence",
+          "hint": "Efterspørgslen fra private og virksomheder og konkurrence fra gratis AI-værktøjer. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "DE000A2LQ884": {
+      "name": "AUTO1 Group",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Andet / uklassificeret",
+          "hint": "Primært tema: Andet / uklassificeret. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Online brugtbilshandel",
+          "hint": "Køber og sælger brugte biler online i Europa, både til forhandlere og private.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Uden for værdikæderne",
+          "hint": "Bilhandel er ikke et led i værdikæderne. Placeringen er pædagogisk.",
+          "href": "tema.html?slug=andet"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Brugtbilmarkedet og marginer",
+          "hint": "Priser på brugte biler, lageromsætning og indtjening pr. bil. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "JE00BYVQYS01": {
+      "name": "International Workplace Group",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Andet / uklassificeret",
+          "hint": "Primært tema: Andet / uklassificeret. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Fleksible kontorer",
+          "hint": "Udlejer fleksible kontorer og mødelokaler, bl.a. under Regus-navnet.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "Uden for værdikæderne",
+          "hint": "Kontorudlejning er ikke et led i værdikæderne. Placeringen er pædagogisk.",
+          "href": "tema.html?slug=andet"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Belægning og lejekontrakter",
+          "hint": "Efterspørgsel efter fleksible kontorer og forholdet til ejerne af bygningerne. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
     }
   }
 }

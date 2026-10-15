@@ -194,3 +194,14 @@ Kun `theme`/`themeStatus`/`themeFrom`/`themeNote` i portfolio.json, begge klasse
 | CA64046G1063 | Neo Performance Materials | connect (forslag fra Andet) | energy-resources | sjældne jordarter og permanente magneter; som USA Rare Earth (Energi led 5) |
 
 **Stadig tvivlsomme forslag (ikke ændret, nævnt i linsen):** Chemours, Arkema, Solstice Advanced Materials (kemi/materialer → Optik er usikkert; Andet eller "materialer" ville være mere ærligt). Ategrity er et forsikringsselskab foreslået som Software (som Lemonade/Root). Afventer NDI.
+
+## Andet-kandidater til NDI-gennemgang (lane-B c14, 2026-10-16) - INGEN data ændret
+NDI-linsen for de sidste Andet-navne peger på en plads tæt på et led. Temaet er bevidst ikke flyttet (forretningen er kun delvist i kæden eller ikke i drift). Vises på tema.html?slug=andet under "Tæt på et led i værdikæderne".
+
+| ISIN | Navn | Linsens plads | Hvorfor ikke flyttet |
+|---|---|---|---|
+| US3149111086 | Fermi | AI-compute led 2 (datacentre), egen strøm tæt på led 1 | REIT med planlagt campus, ikke i fuld drift; kunne blive Compute- eller Energi-forslag |
+| US02927U2087 | American Resources | tæt på Energi led 5 | hovedforretning er kul; raffinering af sjældne jordarter er endnu lille |
+| US6458272050 | Idaho Strategic Resources | tæt på Energi led 5 | guldproducent; sjældne jordarter kun efterforskning |
+| CA7142661031 | Perpetua Resources | tæt på Energi led 5 (antimon) | mineprojekt guld + antimon, ikke i produktion |
+| US88023B1035 | Tempus AI | AI-compute led 10 (data) | sundhed; uændret fra runde 2 |

@@ -116,6 +116,33 @@
  const cur = c.toLowerCase() === theme.title.toLowerCase() || slug === theme.slug;
  return slug && !cur ? `<a class="tag" href="tema.html?slug=${slug}&fund=${fundId}">${esc(c)}</a>` : `<span class="tag ${cur ? 'accent' : ''}">${esc(c)}</span>`;
  }).join(' <span aria-hidden="true">→</span> ');
+ // Andet: hvad ligger der, og hvilke navne ligger tæt på et led (ud fra NDI-linsen)? Kun navne og antal - ingen tal pr. aktie
+ const lensPlace = (p) => (lensOf(p)?.metrics || []).find((m) => m.label === 'Plads i værdikæden');
+ const nearLed = (p) => { const m = lensPlace(p); return !!m && (!/^Uden for/.test(m.value) || /tæt på/i.test(m.hint || '')); };
+ const nearTxt = (p) => { const m = lensPlace(p); if (!m) return ''; if (!/^Uden for/.test(m.value)) return m.value; const t = /tæt på ([^.;,]+)/i.exec(m.hint || ''); return t ? `delvist tæt på ${t[1]}` : m.value; };
+ const andetGroups = tk !== 'andet' || qRaw || status || onlyLens ? [] : (() => {
+ const g = [
+ { key: 'near', title: 'Tæt på et led i værdikæderne', note: 'NDI-linsen peger på en plads i en kæde, men temaet er ikke flyttet. Kandidater til NDI-gennemgang.', items: [] },
+ { key: 'metal', title: 'Ædelmetaller (guld og sølv)', note: 'Guld og sølv er ikke et led i værdikæderne.', items: [] },
+ { key: 'health', title: 'Sundhed og bioteknologi', note: 'Digital sundhed, forsikring og bioteknologi.', items: [] },
+ { key: 'zero', title: 'Restpositioner (vægt ca. 0)', note: 'Fx warrants og positioner under 0,01 %.', items: [] },
+ { key: 'other', title: 'Forbrug, ejendomme, kemi m.m.', note: 'Forretninger uden for de tekniske temaer.', items: [] },
+ ];
+ const by = Object.fromEntries(g.map((x) => [x.key, x]));
+ for (const p of list.filter((x) => x.theme === 'andet')) {
+ const k = !(p.weight > 0) ? 'zero' : nearLed(p) ? 'near' : /gold|silver|precious/i.test(p.industry || '') ? 'metal' : p.sector === 'Healthcare' ? 'health' : 'other';
+ by[k].items.push(p);
+ }
+ return g.filter((x) => x.items.length);
+ })();
+ const andetPanel = andetGroups.length ? `<section class="panel">
+ <h2 class="panel-h">Hvad ligger i Andet?</h2>
+ <p style="margin:0 0 10px;color:var(--muted)">Andet er ikke et tema, men de selskaber, NDI endnu ikke har givet et primært tema. Grupperingen er vores udkast ud fra branche og NDI-linsen - den ændrer ikke data.</p>
+ <div class="table-wrap"><table class="data" style="min-width:0"><thead><tr><th>Gruppe</th><th>Selskaber</th></tr></thead><tbody>
+ ${andetGroups.map((x) => { const its = x.items.slice().sort((a, b) => (b.weight || 0) - (a.weight || 0) || byName(a, b)); return `<tr><td><strong>${esc(x.title)}</strong> (${its.length})<br><small style="color:var(--muted)">${esc(x.note)}</small></td><td>${its.slice(0, 8).map((p) => `<a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}${x.key === 'near' ? '#ndi-linse' : ''}"${x.key === 'near' && lensPlace(p) ? ` title="${esc(nearTxt(p))}"` : ''}>${esc(p.name)}</a>`).join(', ')}${its.length > 8 ? ` <small style="color:var(--muted)">… +${its.length - 8} flere</small>` : ''}${x.key === 'near' ? `<br><small style="color:var(--muted)">${its.map((p) => `${esc(p.name)}: ${esc(nearTxt(p))}`).join(' · ')}</small>` : ''}</td></tr>`; }).join('')}
+ </tbody></table></div>
+ <p class="src">Navnene i hver gruppe står efter vægt. Se også <a href="om-data.html#g-temaforslag">hvordan temaforslag laves</a>.</p>
+ </section>` : '';
  const vchain = chainForTheme(vc.chains, tk);
  const others = td.themes.filter((t) => t.slug !== theme.slug);
  const rows = shown.map((p) => {
@@ -141,6 +168,8 @@
  <div class="metric"><div class="label">Med NDI-linse</div><strong>${nLens} af ${list.length}</strong><small>Kvalitativ beskrivelse (udkast), ikke en rating</small></div>
  </div>
  <p class="band">Temaet viser <strong>eksponering</strong> i fondens forsinkede beholdning. Ikke en anbefaling eller en bevidst overvægt.</p>
+
+ ${andetPanel}
 
  ${theme.chain?.length || vchain ? `<section class="panel">
  <h2 class="panel-h brand">Plads i værdikæden</h2>
