@@ -1,0 +1,113 @@
+{
+  "asOfNote": "Tal og stamdata fra offentlige kilder, hentet 2026-10-15. Tomme felter = udfyldes af NDI.",
+  "association": {
+    "name": "Investeringsforeningen PortfolioManager",
+    "source": "https://fundmarket.dk/newdeal-invest-kl-n/",
+    "sourceLabel": "Fundmarket – NewDeal Invest, kl n"
+  },
+  "ifs": {
+    "name": "Fundmarket A/S",
+    "cvr": "38257080",
+    "ft": "17120",
+    "address": "Folke Bernadottes Allé 45, 2100 København Ø",
+    "source": "https://fundmarket.dk/newdeal-invest-kl-n/",
+    "sourceLabel": "Fundmarket (sidefod) + newdealinvest.dk markedsføringsdisclaimer"
+  },
+  "advisor": {
+    "name": "NDIIR ApS",
+    "cvr": "43934090",
+    "address": "Skåde Højgårdsvej 75, 8270",
+    "source": "https://fundmarket.dk/newdeal-invest-kl-n/",
+    "source2": "https://www.newdealinvest.dk/"
+  },
+  "depositary": {
+    "name": "Danske Bank A/S",
+    "role": "Depotbank",
+    "source": "https://fundmarket.dk/newdeal-invest-kl-n/"
+  },
+  "auditor": {
+    "name": "udfyldes af NDI",
+    "note": "Ikke fundet på Fundmarket-produktsiderne ved opslag 15. okt. 2026. Tjek fællesprospekt."
+  },
+  "team": [
+    {
+      "name": "Mads Christiansen",
+      "role": "Fondschef og medstifter",
+      "source": "https://www.newdealinvest.dk/"
+    },
+    {
+      "name": "Jesper Bæk",
+      "role": "Digital produktdesigner, spiludvikler og teknologikonsulent",
+      "source": "https://www.newdealinvest.dk/"
+    },
+    {
+      "name": "Jordan Lambert",
+      "role": "CFA®, værdisætnings-specialist og direktør i Convequity",
+      "source": "https://www.newdealinvest.dk/"
+    },
+    {
+      "name": "Simon He",
+      "role": "Teknologigeneralist og analysechef i Convequity",
+      "source": "https://www.newdealinvest.dk/"
+    }
+  ],
+  "classes": {
+    "pmindi": {
+      "label": "NewDeal Invest, kl n (PMINDI)",
+      "isin": "DK0062499810",
+      "legalInception": "2023-09-25",
+      "distributing": true,
+      "listed": true,
+      "productType": "UCITS",
+      "esg": "Artikel 6",
+      "benchmark": "Nej",
+      "horizonYears": 5,
+      "sri": 5,
+      "sriMax": 7,
+      "costs": {
+        "otherOngoing": 1.49,
+        "portfolioTransaction": 0.64,
+        "entry": 0.25,
+        "exit": 0.25,
+        "performanceFee": false,
+        "performanceFeeText": "Afdelingen betaler ikke resultathonorar",
+        "note": "Forventede samlede omkostninger i indeværende regnskabsår (Fundmarket).",
+        "source": "https://fundmarket.dk/newdeal-invest-kl-n/"
+      },
+      "kidUrl": "https://node-api.fundmarket.dk/funds/documents/priip_ipm140b",
+      "fundmarketUrl": "https://fundmarket.dk/newdeal-invest-kl-n/"
+    },
+    "pmindiakk": {
+      "label": "NewDeal Invest Akk, kl n (PMINDIAKK)",
+      "isin": "DK0064642623",
+      "legalInception": "2025-12-05",
+      "distributing": false,
+      "listed": true,
+      "productType": "UCITS",
+      "esg": "Artikel 6",
+      "benchmark": "Nej",
+      "horizonYears": 5,
+      "sri": 5,
+      "sriMax": 7,
+      "costs": {
+        "otherOngoing": 1.49,
+        "portfolioTransaction": 0.72,
+        "entry": 0.25,
+        "exit": 0.25,
+        "performanceFee": false,
+        "performanceFeeText": "Afdelingen betaler ikke resultathonorar",
+        "note": "Forventede samlede omkostninger i indeværende regnskabsår (Fundmarket).",
+        "source": "https://fundmarket.dk/newdeal-invest-akk-kl-n/"
+      },
+      "kidUrl": "https://node-api.fundmarket.dk/funds/documents/priip_ipm145b",
+      "fundmarketUrl": "https://fundmarket.dk/newdeal-invest-akk-kl-n/"
+    }
+  },
+  "tax": {
+    "pmindi": "Udloddende klasse. Skatteregler for udloddende afdelinger følger dansk skattelovgivning — detaljer i fællesprospektet. Denne side erstatter ikke personlig skatterådgivning.",
+    "pmindiakk": "Akkumulerende klasse. Skatteregler for akkumulerende afdelinger (lagerbeskatning m.m.) følger dansk skattelovgivning — detaljer i fællesprospektet. Denne side erstatter ikke personlig skatterådgivning.",
+    "source": "https://fundmarket.dk/wp-content/uploads/Faellesprospekt-for-afdelinger-og-andelsklasser-i-Investeringsforeningen-Portfoliomanager-opdateret-24.10.2025.pdf",
+    "sourceLabel": "Fællesprospekt PortfolioManager (24.10.2025) — se afsnit om beskatning"
+  },
+  "prospectusUrl": "https://fundmarket.dk/wp-content/uploads/Faellesprospekt-for-afdelinger-og-andelsklasser-i-Investeringsforeningen-Portfoliomanager-opdateret-24.10.2025.pdf"
+}

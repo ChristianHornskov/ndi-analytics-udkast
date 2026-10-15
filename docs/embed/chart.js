@@ -24,6 +24,7 @@
     const value = Math.abs(n) < 0.05 ? 0 : n;
     return `${sign && value > 0 ? '+' : ''}${number.format(value)} %`;
   };
+  const toneOf = n => (n < -0.05 ? 'neg' : 'pos');
   const escape = s => String(s).replace(/[&<>"']/g, c => ({
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
   }[c]));
@@ -148,6 +149,14 @@
       el.setAttribute('aria-selected', String(active));
       el.tabIndex = active ? 0 : -1;
     });
+    const dd = document.getElementById('drawdown-link');
+    if (dd) {
+      const id = FUNDS[state.fund] || 'pmindi';
+      dd.href = `../drawdown.html?fund=${id}`;
+      dd.textContent = state.fund === 'PMINDIAKK'
+        ? 'Drawdown vises efter 12 måneder →'
+        : 'Se største fald →';
+    }
   }
 
   function updateMetrics() {
@@ -252,7 +261,7 @@
     const height = Math.max(220, box.clientHeight || 380);
     const mobile = width < 500;
     const left = mobile ? 40 : width * 0.072;
-    const right = mobile ? 58 : width * 0.09;
+    const right = mobile ? 68 : width * 0.09;
     const top = 14;
     const bottom = 36;
     const plotWidth = width - left - right;
@@ -262,12 +271,14 @@
     const t1 = timestamp(last.date);
     const x = p => left + (timestamp(p.date) - t0) / Math.max(1, t1 - t0) * plotWidth;
     const y = v => top + (upper - v) / (upper - lower) * plotHeight;
+    const plotBottom = height - bottom;
+    const yZero = Math.max(top, Math.min(plotBottom, y(0)));
 
     svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
     const parts = [
       `<title id="svg-title">Totalafkast for ${state.fund}</title>`,
       `<desc id="svg-description">Totalafkast i DKK, indekseret til 0 % den ${fmtDate(first.date)}. Seneste punkt ${fmtDate(last.date)}: ${pct(periodReturn, true)}. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast.</desc>`,
-      `<defs><linearGradient id="fund-fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9ecfd6" stop-opacity=".18"/><stop offset="100%" stop-color="#9ecfd6" stop-opacity="0"/></linearGradient></defs>`
+      `<defs><linearGradient id="fund-fill" gradientUnits="userSpaceOnUse" x1="0" y1="${top}" x2="0" y2="${yZero}"><stop offset="0%" stop-color="#9ecfd6" stop-opacity=".22"/><stop offset="100%" stop-color="#9ecfd6" stop-opacity=".05"/></linearGradient><clipPath id="above-zero"><rect x="0" y="0" width="${width}" height="${Math.max(0, yZero)}"/></clipPath><clipPath id="below-zero"><rect x="0" y="${yZero}" width="${width}" height="${Math.max(0, plotBottom - yZero)}"/></clipPath></defs>`
     ];
 
     for (let tick = lower; tick <= upper + step / 2; tick += step) {
@@ -288,11 +299,11 @@
     }
 
     const line = series.map((p, i) => `${i ? 'L' : 'M'}${x(p).toFixed(2)},${y(p.value).toFixed(2)}`).join(' ');
-    const plotBottom = height - bottom;
-    const area = `${line} L${x(last).toFixed(2)},${plotBottom} L${x(first).toFixed(2)},${plotBottom} Z`;
-    parts.push(`<path class="fund-area" d="${area}" fill="url(#fund-fill)"/>`);
+    const area = `${line} L${x(last).toFixed(2)},${yZero.toFixed(2)} L${x(first).toFixed(2)},${yZero.toFixed(2)} Z`;
+    parts.push(`<path class="fund-area" d="${area}" fill="url(#fund-fill)" clip-path="url(#above-zero)"/>`);
+    parts.push(`<path class="fund-area below" d="${area}" fill="var(--neg)" fill-opacity="0.28" clip-path="url(#below-zero)"/>`);
     parts.push(`<path class="fund-path" d="${line}"/>`);
-    parts.push(`<text class="end-label" x="${width - right + 8}" y="${y(last.value) + 4}" style="fill:var(--cyan);font-size:${mobile ? 9 : Math.max(10, width / 83)}px">${pct(periodReturn, true)}</text>`);
+    parts.push(`<text class="end-label ${toneOf(periodReturn)}" x="${width - right + 8}" y="${y(last.value) + 4}" style="font-size:${mobile ? 12 : Math.max(11, width / 83)}px">${pct(periodReturn, true)}</text>`);
     parts.push(`<g id="crosshair-group"><line id="crosshair" class="crosshair" y1="${top}" y2="${height - bottom}"/><circle id="fund-dot" r="3.4" fill="var(--cyan)" stroke="var(--panel)" stroke-width="1.5"/></g>`);
     parts.push(`<rect id="plot-hit" x="${left}" y="0" width="${plotWidth}" height="${height - bottom + 10}" fill="transparent" style="cursor:crosshair"/>`);
     svg.innerHTML = parts.join('');
@@ -313,17 +324,34 @@
     $('#crosshair').setAttribute('x2', x(p));
     $('#fund-dot').setAttribute('cx', x(p));
     $('#fund-dot').setAttribute('cy', y(p.value));
+    $('#fund-dot').setAttribute('fill', toneOf(p.value) === 'neg' ? 'var(--neg-ink)' : 'var(--cyan)');
     $('#chart-slider').value = String(index);
     const value = pct(p.value, true);
-    $('#chart-readout').innerHTML = `<span class="date">${fmtDate(p.date)}</span> · ${state.fund}: ${value}`;
+    const tone = toneOf(p.value);
+    $('#chart-readout').innerHTML = `<span class="date">${fmtDate(p.date)}</span> · ${state.fund}: <span class="${tone}">${value}</span>`;
     $('#chart-slider').setAttribute('aria-valuetext', `${fmtDate(p.date)}, ${state.fund}: ${value}`);
     const tooltip = $('#chart-tooltip');
     tooltip.hidden = !showTooltip;
     if (showTooltip) {
-      tooltip.innerHTML = `<b>${fmtDate(p.date)}</b><div class="tooltip-row"><span>${state.fund}</span><strong>${value}</strong></div>`;
+      tooltip.innerHTML = `<b>${fmtDate(p.date)}</b><div class="tooltip-row ${tone}"><span>${state.fund}</span><strong>${value}</strong></div>`;
       const tooltipWidth = tooltip.offsetWidth || 180;
-      tooltip.style.left = Math.min(Math.max(0, x(p) + 14), width - tooltipWidth) + 'px';
+      const end = $('.end-label');
+      const gutter = end ? Math.max(0, end.getBBox().x - 8) : width;
+      let left = x(p) + 14;
+      if (left + tooltipWidth > gutter) left = gutter - tooltipWidth;
+      if (left < 0) left = Math.max(0, x(p) - tooltipWidth - 14);
+      left = Math.min(Math.max(0, left), Math.max(0, width - tooltipWidth));
+      tooltip.style.left = left + 'px';
       tooltip.style.top = Math.max(5, Math.min(y(p.value) - 72, height - 90)) + 'px';
+      if (end) {
+        const tipBox = tooltip.getBoundingClientRect();
+        const endBox = end.getBoundingClientRect();
+        const overlapX = tipBox.right - endBox.left;
+        const overlapY = Math.min(tipBox.bottom, endBox.bottom) - Math.max(tipBox.top, endBox.top);
+        if (overlapX > -8 && overlapY > 0) {
+          tooltip.style.left = Math.max(0, left - overlapX - 8) + 'px';
+        }
+      }
     }
   }
 
@@ -365,7 +393,7 @@
     const el = $('#chart-loading');
     el.hidden = false;
     el.classList.add('error');
-    el.innerHTML = `<div><p>${escape(message)}</p><button type="button" class="outline-button" id="retry-chart" style="margin-top:14px">Prøv igen</button></div>`;
+    el.innerHTML = `<div><p>${escape(message)}</p><button type="button" class="outline-button" id="retry-chart">Prøv igen</button></div>`;
     $('#retry-chart').addEventListener('click', () => {
       el.classList.remove('error');
       el.textContent = 'Henter data…';

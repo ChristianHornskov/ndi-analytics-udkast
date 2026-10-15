@@ -35,15 +35,17 @@
  <p><a href="om-data.html">Om data &amp; begreber</a> · <a href="laer/index.html">Lær</a></p>
  </footer>
  <script type="module">
- import { loadAll, fundById, fmtDate, daTheme, WARN_HIST, loadFundMeta, loadProfiles, kidFooterHtml, tagsFor } from './js/data.js';
+ import { loadAll, fundById, fmtDate, daTheme, daMat, MATURITY_LABELS, WARN_HIST, loadFundMeta, loadProfiles, kidFooterHtml, tagsFor } from './js/data.js';
+ import { loadXPosts, xSaysPanel } from './js/x-feed.js';
  const u = new URL(location.href);
  const isin = u.searchParams.get('isin');
  let fundId = u.searchParams.get('fund') || 'pmindi';
  const main = document.getElementById('main');
- const [data, meta, prof, uniquePack, monthsPack] = await Promise.all([
+ const [data, meta, prof, uniquePack, monthsPack, xPack] = await Promise.all([
  loadAll(), loadFundMeta(), loadProfiles(),
  fetch('data/unique-metrics.json').then(r => r.ok ? r.json() : null).catch(() => null),
  fetch('data/company-months.json').then(r => r.ok ? r.json() : null).catch(() => null),
+ loadXPosts(),
  ]);
  const kid = kidFooterHtml(meta);
  if (kid) document.querySelector('[data-kid-footer]').innerHTML = kid;
@@ -87,12 +89,44 @@
  const narrative = pr?.narrative || [];
  // VIDENSBOT #13: profiltekster er AI-genererede udkast og skal mærkes som det
  const AI_BADGE = '<span class="badge" title="Tekst genereret med AI - udkast">AI-udkast</span>';
+ // NDI-linse-links: label efter mål; tema-links følger valgt andelsklasse.
+ const lensLinkLabel = (href) => href.startsWith('vaerdikaede') ? 'Se i værdikæden' : href.startsWith('tema.html') ? 'Se temaet' : href.startsWith('laer/livscyklus') ? 'Om livscyklus' : 'Læs mere';
+ const lensHref = (href) => href.startsWith('tema.html') && !/[?&]fund=/.test(href) ? `${href}${href.includes('?') ? '&' : '?'}fund=${fundId}` : href;
  const AI_NOTE = pr
  ? `Udkast: beskrivelserne på siden er genereret med AI${pr.reviewedAt ? ` og tjekket mod kilden ${fmtDate(pr.reviewedAt)}` : ''}. Afventer NDI's endelige gennemgang.`
  : 'Udkast: kort beskrivelse genereret med AI og ikke gennemgået af NDI.';
  const sameTheme = fund.positions.filter((x) => x.theme === p.theme && x.isin !== p.isin).sort((a, b) => (b.weight || 0) - (a.weight || 0));
  const priip = meta?.funds?.[fundId]?.priip;
  const temaHref = `tema.html?slug=${encodeURIComponent(p.theme)}&fund=${fundId}`;
+ // Modenhed kommer kun fra portfolio.json (manuel klassifikation). Linse-feltet "Livscyklus" overskrives herfra,
+ // så siden aldrig siger to forskellige ting. Tom/ukendt = "Ikke klassificeret" - vi gætter ikke.
+ const matSet = p.maturity in MATURITY_LABELS;
+ const matValue = matSet ? daMat(p.maturity) : 'Ikke klassificeret';
+ const matHint = matSet ? 'Manuel klassifikation i udkastet. Pædagogisk fase, ikke en rating.' : 'NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.';
+ const lensMetrics = (uniquePack?.byIsin?.[p.isin]?.metrics || []).map((m) =>
+ m.label === 'Livscyklus' ? { ...m, value: matValue, hint: matHint } : m);
+ // Andre i samme led: udledt af linsens "Plads i værdikæden" (fx "AI-compute · led 4", "Energi led 4 + robotik led 3").
+ // Kun selskaber med linse i den valgte klasse; pædagogisk nabolag, ikke en sammenligning eller rangering.
+ const CHAIN_NAMES = [['ai', /^ai-compute/i, 'AI-compute'], ['energy', /^energi/i, 'Energi'], ['physical', /^robotik/i, 'Robotik'], ['space', /^rum/i, 'Rum']];
+ const ledKeys = (isin) => {
+ const v = (uniquePack?.byIsin?.[isin]?.metrics || []).find((m) => m.label === 'Plads i værdikæden')?.value || '';
+ const keys = [];
+ for (const part of v.split('+')) {
+ const c = CHAIN_NAMES.find(([, re]) => re.test(part.trim()));
+ if (!c) continue;
+ for (const m of part.matchAll(/led (\d+)/g)) keys.push(`${c[0]}:${m[1]}`);
+ }
+ return keys;
+ };
+ const ledLabel = (k) => { const [c, n] = k.split(':'); return `${CHAIN_NAMES.find((x) => x[0] === c)[2]} · led ${n}`; };
+ const myLeds = ledKeys(p.isin);
+ const ledPeers = myLeds.map((k) => ({
+ k,
+ peers: fund.positions.filter((x) => x.isin !== p.isin && ledKeys(x.isin).includes(k))
+ .sort((a, b) => (b.weight || 0) - (a.weight || 0) || a.name.localeCompare(b.name, 'da')),
+ })).filter((g) => g.peers.length);
+ const PEER_MAX = 10;
+ const ledPeersHtml = ledPeers.length ? `<div class="lens-peers" style="margin-top:14px">${ledPeers.map((g) => `<p class="link-row"><span class="muted" style="font-size:12px">Andre med NDI-linse i ${esc(ledLabel(g.k))}:</span> ${g.peers.slice(0, PEER_MAX).map((x) => `<a class="tag" href="selskab.html?isin=${encodeURIComponent(x.isin)}&fund=${fundId}">${esc(x.name)}</a>`).join(' ')}${g.peers.length > PEER_MAX ? ` <span class="muted">+ ${g.peers.length - PEER_MAX} flere</span>` : ''}</p>`).join('')}<p class="src">Nabolag i værdikæden ud fra linsens placering - ikke en sammenligning eller rangering. Kun selskaber med NDI-linse i ${esc(fund.short)}.</p></div>` : '';
  document.title = `${p.name} · NDI Analytics`;
 
  main.innerHTML = `
@@ -104,7 +138,7 @@
 
  <section class="panel">
  <h2 class="panel-h brand">Hvilket problem løser det? ${AI_BADGE}</h2>
- <p class="prose">${esc(f('summary') || 'Beskrivelse mangler i udkastet.')}</p>
+ ${f('summary') ? `<p class="prose">${esc(f('summary'))}</p>` : `<p class="empty-state">Profiltekst mangler endnu for dette selskab (NDI-linse kan stadig findes nedenfor).</p>`}
  ${pr?.source ? `<p class="src">Kilde: ${ext(pr.source, host(pr.source))}${pr.reviewedAt ? ` · tjekket mod kilden ${fmtDate(pr.reviewedAt)}` : ''}</p>` : ''}
  <p class="src">${AI_NOTE} Generel information. Ikke en anbefaling.</p>
  </section>
@@ -133,17 +167,22 @@
  <a class="outline-btn small" href="${temaHref}">Temaside →</a>
  <a class="outline-btn small" href="index.html?view=udforsk&fund=${fundId}&tags=${encodeURIComponent(p.theme)}">Screener: ${esc(daTheme(p.theme))} →</a></p>
  ${data.multiTags?.byIsin?.[p.isin]?.why ? `<p class="src">${esc(data.multiTags.byIsin[p.isin].why)}</p>` : ''}
+ ${p.themeStatus === 'forslag' ? `<p class="src"><span class="badge badge-draft">forslag</span> ${p.theme === 'andet'
+ ? 'Selskabet har endnu intet primært NDI-tema (Andet / uklassificeret) og afventer NDI-gennemgang.'
+ : `Primært tema ${esc(daTheme(p.theme))} er et forslag fra udkastet (før: ${esc(p.themeFrom && p.themeFrom !== 'andet' ? daTheme(p.themeFrom) : 'Andet')}) og afventer NDI-gennemgang.`} <a href="om-data.html#g-temaforslag">Sådan sættes temaerne →</a></p>` : ''}
  <p class="band">Segmenter viser eksponering, ikke en anbefaling. Kursafkast, P/S og P/E pr. aktie vises ikke i udkastet (tallene er under verifikation).</p>
  <div class="metrics" style="margin-top:14px">
  <div class="metric"><div class="label">Vægt i ${esc(fund.short)}</div><strong>${w(p.weight)} %</strong><small>Beholdning pr. ${posAsOf} (forsinket)</small></div>
  <div class="metric"><div class="label">ISIN</div><strong style="font-size:15px">${esc(p.isin)}</strong><small>${esc(p.symbol || '')}</small></div>
+ <div class="metric"><div class="label">Modenhed</div><strong style="font-size:15px">${esc(matValue)}</strong><small>${esc(matHint)} <a href="laer/livscyklus.html">Om livscyklus →</a></small></div>
  </div>
  </section>
 
- ${uniquePack?.byIsin?.[p.isin]?.metrics?.length ? `<section class="panel">
+ ${lensMetrics.length ? `<section class="panel" id="ndi-linse">
  <h2 class="panel-h">NDI-linsen (udkast)</h2>
- <div class="kpi-grid">${uniquePack.byIsin[p.isin].metrics.map(m => `<div class="kpi"><span class="label">${esc(m.label)}${m.ai ? ` ${AI_BADGE}` : ''}</span><strong style="font-size:16px">${esc(m.value)}</strong><span class="sub">${esc(m.hint||'')}${m.href ? ` <a href="${esc(m.href)}">${m.href.startsWith('vaerdikaede') ? 'Se i værdikæden' : 'Om livscyklus'} →</a>` : ''}</span></div>`).join('')}</div>
- <p class="band">Kvalitativ linse: tema, rolle og forhold at holde øje med. Ingen kurser, afkast eller nøgletal. Felter med AI-udkast er sammenfattet fra selskabsprofilen. Eksponering, ikke anbefaling. <a href="ndi-perspektiv.html">Alle selskaber med NDI-linse →</a></p>
+ <div class="kpi-grid">${lensMetrics.map(m => `<div class="kpi"><span class="label">${esc(m.label)}${m.ai ? ` ${AI_BADGE}` : ''}</span><strong style="font-size:16px">${esc(m.value)}</strong><span class="sub">${esc(m.hint||'')}${m.href ? ` <a href="${esc(lensHref(m.href))}">${lensLinkLabel(m.href)} →</a>` : ''}</span></div>`).join('')}</div>
+ ${ledPeersHtml}
+ <p class="band">Kvalitativ linse: tema, rolle og forhold at holde øje med. Ingen kurser, afkast eller nøgletal. Felter med AI-udkast er sammenfattet fra selskabsprofilen eller offentligt kendte forretningsbeskrivelser og afventer NDI-gennemgang. Eksponering, ikke anbefaling. <a href="ndi-perspektiv.html">Alle selskaber med NDI-linse →</a></p>
  </section>` : ''}
  ${(() => {
  const series = (monthsPack?.funds?.[fundId] || []).map(row => ({ d: row.date, w: row.weights?.[p.isin] })).filter(x => x.w != null);
@@ -183,6 +222,8 @@
  <p class="src">${ext(priip.url, `Læs KID for ${fund.short} (Fundmarket, PDF)`)}</p>
  <p class="warn">${WARN_HIST}</p>
  </section>` : `<p class="warn">${WARN_HIST}</p>`}
+
+ ${xSaysPanel(xPack, { tickers: [p.symbol, p.name].filter(Boolean), themes: tagsFor(p, data.multiTags), limit: 3, title: 'Hvad siger X' })}
 
  <section class="panel">
  <h2 class="panel-h">Andre i ${esc(daTheme(p.theme))} (forsinket beholdning)</h2>

@@ -147,6 +147,39 @@ Ingen nye.
 - Mobil 375: hvorfor-mange-aktier ~3.000 px, udbytte ~2.560 px, forsinket ~1.900 px. Tabellen på udbytte-siden bliver til kort < 640 px.
 - Åbent: `sammenlign.html` «Samme portefølje» (ikke lane-C).
 
+## 00:00 CEST
+**Live:** https://christianhornskov.github.io/ndi-analytics-udkast/ · Screenshots: `notes/ux-screens/00-*.png` · Viewport: 1280 + 375 · Runde: natlig UX-review (Grok Bot).
+
+### Løst siden 22:00 CEST
+- **(mobil)** Hovednav viser nu Entré · Fonden · Porteføljen · Udforsk · Følg med · Risici (+ «Sådan investerer du»). MUST 1 lukket.
+- **(desktop + mobil)** Vægt-søjler med synlig forklaring: «Søjlerne ved navnet viser vægt i fonden pr. kvartal. Ikke aktiekurs.» MUST 3 lukket.
+- **(mobil)** Scroll-fælde i beholdningstabel: `max-height` væk under 560 px; siden scroller lodret, tabellen kun vandret. MUST 5 lukket (verificeret i DOM + lang screenshot).
+- **(desktop + mobil)** ISIN-som-navn: 0 tilfælde i PMINDI-snapshot. Coinbase ligger nu under Platforme (ikke Andet).
+- Typo «Ordliste &. data» rettet. «1 resultat» korrekt ved SoftBank-søgning. «Åbn screener» skjult på Udforsk.
+- Afkastadvarsel stadig lige under nøgletal på Fonden; datostempler synlige; ingen kursmål/anbefaling set. Palet respekteret.
+
+### MUST
+1. **(desktop + mobil)** Datakvalitet stadig åben (rester af 22:00 MUST 4): Cipher Mining Inc tagget `software`; Opendoor Tech Warrant i `andet`; alle **345** positioner har `maturity: ikke-klassificeret`; Andet er stadig ~**11,6 %** vægt / 67 selskaber (bedre end ~24 % ved 22:00, men stadig stort). Temaforslag-filtre («Uden temaforslag 250 / Kun 115») understreger, at klassifikation er uafklaret. Kræver porteføljeholdet — ikke UI-polish. [I7, data]
+2. **(desktop + mobil)** X-markør / feed-tekst ved performance: «Performance opdatering efter Q2 2026 — fonde NewDeal Invest **rådgiver** (totalafkast)» (`data/x-posts.json`). Lyder som at NDI rådgiver fonde; uheldigt ved afkasttal. Ret copy eller skjul markøren, indtil ordlyden er compliance-godkendt. [R2, compliance]
+3. **(desktop)** Udforsk-søgning: deep link `?q=softbank` viser korrekt 1 resultat, men **live tast-for-tast sync** (URL vs. liste) er ikke verificeret i denne runde. Behold 22:00 MUST 2 åben, indtil nogen skriver i feltet og tjekker forældede rækker. [U1/U2]
+
+### SHOULD
+1. **(mobil)** Nav-rækken ved 375 er tæt med lille tekst — hit-area sandsynligvis under 44 px. Overvej wrap, mindre mellemrum eller hamburger med samme destinationer. [M3, Apple 44 pt]
+2. **(mobil)** Portefølje-tabel: Tema-kolonne afskåret; scroll-hint er svagt/ikke synligt i første viewport — gør «Rul til siden…» tydeligere. [M1, TJ C4]
+3. **(desktop + mobil)** Livscyklus-boks (alle uklassificerede) fylder stadig højt over tabellen — foldbar indtil første klassifikation findes. [fra 22:00 SHOULD 2]
+4. **(desktop)** Udforsk: mange chips/filtre før første resultat — foldbart filter / sticky resultat-tæller (Stripe/Things: progressiv disclosure). [inspiration §5]
+5. **(desktop)** Dæmpede nav-punkter: tjek kontrast ≥4,5:1 mod `#050a0f`. [G1]
+
+### COULD
+1. Entré-hero vs. kort-række: jævnere bredde.
+2. Tabular nums konsekvent i vægt-/afkastkolonner (Linear/Vercel).
+3. Én synlig tekstpointe under fondsgrafen ud over advarslen (OWID/Stripe).
+
+### Top-3 MUST (til Leo)
+1. Datakvalitet: Cipher=Software, Opendoor=Andet, 345 uden modenhed, Andet ~11,6 %.
+2. X-tekst med «rådgiver» ved performance — ret eller skjul.
+3. Udforsk live-søgning (URL vs. liste) stadig uverificeret.
+
 ## ~00:15 CEST lane-C checkpoint (Claude) — ideer.html
 - **Intern tekst på offentlig side fjernet:** callout'en sagde «Designvalg … Jesper-palette», og bunden sagde «Flere interne noter ligger uden for Pages». Begge erstattet med tekst til brugeren (udgangspunkt: vi kan ikke pege på vinderen · generel information + link til risici).
 - **Tesla-eksemplet tjekket mod data:** portfolio.json har kun `theme: physical`, men selskabssiden viser tags «Fysisk tech + Energi», og value-chains.json har Tesla i 4 led (AI-compute: datacentre og køling, fysisk AI · Robotik: komponenter, robotter). Idésiden viser nu begge tags + en forgrening til de 4 led og linker til Tesla-siden. Første forsøg skrev «ét tema» — det ville have modsagt selskabssiden; rettet før commit.

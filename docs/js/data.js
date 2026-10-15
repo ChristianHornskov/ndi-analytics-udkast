@@ -28,7 +28,7 @@ let cache = null;
 
 export async function loadAll() {
   if (cache) return cache;
-  const [portfolio, latest, context, multiTags] = await Promise.all([
+  const [portfolio, latest, context, multiTags, xPosts] = await Promise.all([
     fetch('data/portfolio.json').then((r) => {
       if (!r.ok) throw new Error('portfolio.json');
       return r.json();
@@ -36,8 +36,9 @@ export async function loadAll() {
     fetch('data/latest.json').then((r) => (r.ok ? r.json() : null)).catch(() => null),
     fetch('data/context-events.json').then((r) => (r.ok ? r.json() : { events: [] })).catch(() => ({ events: [] })),
     fetch('data/multi-tags.json').then((r) => (r.ok ? r.json() : { byIsin: {} })).catch(() => ({ byIsin: {} })),
+    fetch('data/x-posts.json').then((r) => (r.ok ? r.json() : null)).catch(() => null),
   ]);
-  cache = { portfolio, latest, context, multiTags };
+  cache = { portfolio, latest, context, multiTags, xPosts };
   return cache;
 }
 
@@ -279,11 +280,42 @@ export function tagsFor(position, multiTags) {
 }
 
 // Overnight temaforslag (themeStatus: 'forslag'): kun antal, ingen nye tal pr. aktie.
-// moved = fik et NDI-tema i stedet for "andet"; open = står stadig i "andet".
+// moved = fik et foreslået NDI-tema; open = står stadig i "andet".
+// themeFrom = temaet før forslaget. fromAndet = flyttet ud af Andet; retagged = flyttet fra et andet
+// NDI-tema (fx Compute → Quantum), grupperet som { 'compute→quantum': n }.
 export function themeProposals(fund) {
   const props = (fund?.positions || []).filter((p) => p.themeStatus === 'forslag');
   const byTheme = {};
-  for (const p of props) if (p.theme !== 'andet') byTheme[p.theme] = (byTheme[p.theme] || 0) + 1;
+  const retaggedPairs = {};
+  let fromAndet = 0;
+  for (const p of props) {
+    if (p.theme === 'andet') continue;
+    byTheme[p.theme] = (byTheme[p.theme] || 0) + 1;
+    const from = p.themeFrom || 'andet';
+    if (from === 'andet') fromAndet++;
+    else { const k = `${from}→${p.theme}`; retaggedPairs[k] = (retaggedPairs[k] || 0) + 1; }
+  }
   const moved = props.filter((p) => p.theme !== 'andet').length;
-  return { total: props.length, moved, open: props.length - moved, byTheme };
+  const retagged = Object.entries(retaggedPairs).map(([k, n]) => {
+    const [from, to] = k.split('→');
+    return { from, to, n };
+  }).sort((a, b) => b.n - a.n);
+  return { total: props.length, moved, open: props.length - moved, byTheme, fromAndet, retagged };
 }
+
+// Værdikæde for et tema (value-chains.json). Et tema kan optræde i flere kæder; hjem-kæden er den,
+// hvor temaet er et bærende led. AI-stakkens temaer hører hjemme i AI-compute, Energiressourcer i Energi.
+// Øvrige temaer: kæde med samme id, ellers første kæde hvor temaet indgår.
+const CHAIN_HOME = {
+  chips: 'ai-compute', compute: 'ai-compute', connect: 'ai-compute', software: 'ai-compute', platforms: 'ai-compute',
+  'energy-resources': 'energy',
+};
+export function chainForTheme(chains, key) {
+  const list = chains || [];
+  return list.find((c) => c.id === (CHAIN_HOME[key] || key))
+    || list.find((c) => (c.links || c.steps || []).some((l) => (l.themes || []).includes(key)))
+    || null;
+}
+
+// Anker på vaerdikaeder.html: Rum har eget kapitel; øvrige kæder vælges i fanerne i #kap-kaeder.
+export const chainHref = (key) => (key === 'space' ? 'vaerdikaeder.html#kap-rum' : 'vaerdikaeder.html#kap-kaeder');

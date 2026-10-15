@@ -59,7 +59,7 @@
  <strong id="fund-return" aria-describedby="historisk-advarsel">-</strong>
  </div>
 </div>
- <p class="nasdaq-note">Fonden har intet fast benchmark.</p>
+ <p class="bench-note"><span class="status-dot" aria-hidden="true"></span>Fonden har intet fast benchmark.</p>
 
  <div class="chart-container" id="chart-container">
  <svg id="performance-chart" role="img" tabindex="0" aria-labelledby="svg-title svg-description"></svg>
@@ -99,9 +99,12 @@
  <p class="foot">Afkastet er i danske kroner og efter fondens løbende omkostninger, før skat og egne handelsomkostninger. Totalafkast forudsætter geninvesteret udbytte. Kilde: Fundmarket.</p>
  </section>
  
- <div class="embed-cta" style="margin-top:18px;padding:14px 0;border-top:1px solid #2b3e45;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between">
- <p style="margin:0;font-size:13px;color:#aac0c7">Vil du forstå beholdningen og temaerne?</p>
- <a href="../index.html?view=udforsk" style="display:inline-flex;padding:8px 14px;border:1.5px solid #89aeb4;border-radius:7px;color:#e6e8ed;text-decoration:none;font-size:13px">Undersøg porteføljen mere →</a>
+ <div class="embed-cta">
+ <p>Vil du forstå beholdningen, temaerne og de store fald?</p>
+ <div class="embed-cta-links">
+ <a class="outline-button" href="../index.html?view=udforsk">Undersøg porteføljen mere →</a>
+ <a class="outline-button" id="drawdown-link" href="../drawdown.html?fund=pmindi">Se største fald →</a>
+ </div>
  </div>
 
  </main>

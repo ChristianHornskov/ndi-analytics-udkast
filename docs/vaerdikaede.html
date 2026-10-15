@@ -6,36 +6,68 @@
  <meta name="robots" content="noindex,nofollow">
  <title>AI-værdikæde · NDI Analytics</title>
  <link rel="stylesheet" href="css/ndi.css">
+ <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
  <style>
- .chain{display:grid;gap:10px;margin-top:16px}
- .node{padding:16px;border:1.5px solid var(--brand);border-radius:12px;background:#0b171d}
- .node h3{font-size:16px;margin-bottom:6px;color:var(--cyan)}
- .node p{font-size:13px;color:var(--muted);line-height:1.45}
- .arrow{text-align:center;color:var(--brand);font-size:18px}
- .node{transition:border-color .15s,box-shadow .15s}
- .chain.filtering .node.hit{border-color:var(--yellow);box-shadow:inset 3px 0 0 var(--yellow)}
+ .river{position:relative;margin-top:18px;max-width:720px;padding-left:22px}
+ .river::before{content:"";position:absolute;left:6px;top:8px;bottom:8px;width:4px;border-radius:4px;background:linear-gradient(180deg,var(--yellow) 0%,var(--brand) 35%,var(--cyan) 100%);opacity:.7}
+ .dam-head{position:relative;margin:22px 0 8px;font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:var(--yellow);font-weight:700}
+ .dam-head:first-child{margin-top:0}
+ .dam-head::before{content:"";position:absolute;left:-22px;top:2px;width:16px;height:10px;border-radius:2px;background:var(--yellow);box-shadow:0 0 0 3px #0b171d}
+ .dam-head span{color:var(--muted);text-transform:none;letter-spacing:0;font-weight:400;margin-left:6px}
+ .chain{display:grid;gap:8px}
+ .node{display:grid;grid-template-columns:44px 1fr;gap:12px;padding:14px;border:1.5px solid var(--brand);border-radius:12px;background:#0b171d;transition:border-color .15s,box-shadow .15s}
  @media (prefers-reduced-motion:reduce){.node{transition:none}}
+ .chain.filtering .node{opacity:.55}
+ .chain.filtering .node.hit{opacity:1;border-color:var(--yellow);box-shadow:inset 3px 0 0 var(--yellow)}
+ .ico{width:44px;height:44px;border-radius:10px;background:#132a32;border:1px solid var(--line);display:grid;place-items:center;font-size:18px;color:var(--cyan);position:relative}
+ .ico b{position:absolute;right:-6px;bottom:-6px;min-width:20px;height:20px;border-radius:10px;background:var(--yellow);color:#0b171d;font-size:11px;display:grid;place-items:center;padding:0 4px}
+ .node h3{font-size:15px;margin:0 0 4px;color:var(--cyan)}
+ .node p{font-size:13px;color:var(--muted);line-height:1.45;margin:0}
+ .node .meta{font-size:12px;margin-top:6px}
+ .node .meta b{color:var(--text)}
  .node .hit-why{display:none;font-size:12px;color:var(--yellow);margin-top:6px}
  .node.hit .hit-why{display:block}
- .node details{margin-top:8px;font-size:13px}
+ .node details{margin-top:6px;font-size:13px}
  .node details summary{cursor:pointer;color:var(--cyan);min-height:32px;display:flex;align-items:center}
- .node details ol{margin:6px 0 0 20px;color:var(--muted);line-height:1.6}
- .chain-tools{display:grid;gap:10px;max-width:640px;margin-top:16px}
+ .node details ol{margin:4px 0 0 20px;color:var(--muted);line-height:1.6}
+ .node .more{font-size:12px;margin-top:4px}
+ .node .tag{display:inline-block;font-size:10px;letter-spacing:.4px;border:1px solid var(--line);border-radius:999px;padding:1px 7px;margin-left:6px;vertical-align:2px;color:var(--muted)}
+ .node .press{font-size:12px;line-height:1.4;margin-top:6px;color:var(--text)}
+ .node .press .pt{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.4px;border-radius:4px;padding:0 5px;margin-right:6px;background:#2a4650;color:var(--text)}
+ .node .press.lv-dam .pt{background:var(--yellow);color:#0b171d}
+ .node .press.lv-early .pt{background:transparent;color:var(--yellow);box-shadow:inset 0 0 0 1px var(--yellow)}
+ .node .press.lv-source .pt{background:var(--cyan);color:#0b171d}
+ .node .press .src{margin-left:4px;font-size:11px}
+ .chain-tools{display:grid;gap:10px;max-width:720px;margin-top:16px}
  .chain-tools .row{display:flex;flex-wrap:wrap;gap:6px}
- .chain-tools .control[aria-pressed="true"]{background:#203e47;border-color:var(--yellow)}
  .chain-tools input{width:100%;background:#0b171d;border:1px solid var(--line);border-radius:8px;padding:10px 12px;color:var(--text);min-height:44px;font:inherit}
  .chain-tools label{font-size:12px;color:var(--muted)}
  #chain-status{font-size:13px;color:var(--muted);min-height:1.4em}
- @media(min-width:800px){
- .chain{grid-template-columns:1fr;max-width:640px}
- }
+ .legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12px;color:var(--muted);margin:10px 0 0;max-width:720px}
+ .legend i{display:inline-block;width:12px;height:8px;border-radius:2px;background:var(--yellow);margin-right:6px;vertical-align:1px}
+ .legend i.r{width:4px;height:14px;background:linear-gradient(180deg,var(--yellow),var(--cyan));vertical-align:-2px}
+ .side{border:1px solid var(--line);border-left:4px solid var(--yellow);border-radius:12px;padding:14px 16px;background:#0b171d;max-width:720px;margin-top:22px;font-size:13px;line-height:1.55;color:var(--muted)}
+ .side strong{color:var(--yellow)}
+ .others{max-width:720px;margin-top:22px}
+ .others h2{font-size:18px;margin:0 0 4px}
+ .oc-grid{display:grid;gap:8px;grid-template-columns:repeat(auto-fill,minmax(165px,1fr));margin-top:10px}
+ .oc{border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:#0b171d;display:grid;gap:4px;align-content:start}
+ .oc .oc-ico{font-size:20px;line-height:1}
+ .oc h3{font-size:14px;margin:2px 0 0;color:var(--cyan)}
+ .oc p{font-size:12.5px;line-height:1.45;margin:0;color:var(--muted)}
+ .oc .oc-n{font-size:12px;color:var(--yellow)}
+ .oc a{font-size:12.5px}
+ .oc a.oc-gl{font-size:12px;color:var(--muted)}
+ .oc a.oc-gl span{color:var(--yellow)}
+ .oc a.oc-learn{border-top:1px dashed var(--line);padding-top:6px;margin-top:2px;color:var(--text)}
+ @media(max-width:600px){.river{padding-left:18px}.dam-head::before{left:-18px;width:12px}.node{grid-template-columns:36px 1fr;padding:12px;gap:10px}.ico{width:36px;height:36px;font-size:15px}}
  </style>
  <!-- og:start -->
  <meta property="og:type" content="website">
  <meta property="og:site_name" content="NDI Analytics (udkast)">
  <meta property="og:locale" content="da_DK">
  <meta property="og:title" content="AI-værdikæde · NDI Analytics">
- <meta property="og:description" content="Pædagogisk model. Ikke en anbefaling. Læs også Sådan tænker vi. En forenklet model: fra energi til software. Tags er eksponering - ikke anbefaling. Led linker til porteføljeselskaber.">
+ <meta property="og:description" content="AI-kæden i 13 led fra strøm til fysisk AI, i Mads' rækkefølge. Find et selskab og se, hvilke led det sidder i. Eksponering, ikke anbefaling.">
  <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/vaerdikaede.html">
  <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
  <meta property="og:image:width" content="1200">
@@ -48,44 +80,38 @@
  <a class="skip" href="#main">Gå til indhold</a>
  <header class="site-header">
  <a class="brand" href="index.html"><img src="assets/mark.svg" width="34" height="27" alt=""><span>NewDeal Invest</span></a>
- <nav class="nav"><a href="index.html?view=udforsk">← Udforsk</a></nav>
+ <nav class="nav"><a href="index.html?view=udforsk">← Udforsk</a><a href="vaerdikaeder.html">Alle kæder</a></nav>
  </header>
  <main id="main">
- <p class="eyebrow">TEMA · LIGHT</p>
- <h1>AI-udbygningen som værdikæde</h1>
-    <p class="band"><a href="vaerdikaeder.html"><strong>Ny:</strong> flere kæder, treemap og tidslinje →</a></p>
- <p style="max-width:62ch;color:var(--muted);font-size:14px;line-height:1.55;margin:8px 0 12px">NDI ser kæden som et flodsystem med dæmninger: når én flaskehals letter, flytter presset. Retning kan diskuteres — ikke den ene vinder. <a href="vaerdikaeder.html#kap-flaskehalse">Flaskehalse →</a></p>
- <p class="lede">Pædagogisk model. Ikke en anbefaling. Læs også <a href="laer/saadan-taenker-vi.html">Sådan tænker vi</a>. En forenklet model: fra energi til software. Tags er eksponering - ikke anbefaling. Led linker til porteføljeselskaber.</p>
- <p class="band">Generel information, ikke en anbefaling eller investeringsrådgivning. Værdikæder og temaer viser, hvad porteføljen er eksponeret mod. De er ikke bevidste overvægte. Beholdningen vises med forsinkelse.</p>
- <p class="band" id="chain-asof">Vægte og antal viser den forsinkede beholdning i PMINDI. Ingen kurser, afkast eller nøgletal pr. aktie.</p>
+ <p class="eyebrow">AI-VÆRDIKÆDEN · ENKEL VERSION</p>
+ <h1>Fra strøm til robot i 13 led</h1>
+ <p class="lede">Rækkefølgen følger Mads' egen inddeling (BLOG 30. marts 2026). Øverst er de fysiske led, som strøm, fabrikker og chips. Nederst er dem, der bruger compute: software, agenter og fysisk AI. Ifølge Mads kommer efterspørgslen i stigende grad nedefra, først fra agentisk AI og snart fra fysisk AI. Pædagogisk model. Ikke en anbefaling. Læs også <a href="laer/saadan-taenker-vi.html">Sådan tænker vi</a>.</p>
+ <p class="band">Generel information, ikke en anbefaling eller investeringsrådgivning. Værdikæder og temaer viser, hvad porteføljen er eksponeret mod. Fonden er bredt spredt på flere hundrede selskaber med små vægte. Beholdningen vises med forsinkelse.</p>
+ <p class="band" id="chain-asof">Antal og vægte viser den forsinkede beholdning i PMINDI. Ingen kurser, afkast eller nøgletal pr. aktie.</p>
+
  <div class="chain-tools" id="chain-tools" hidden>
  <div class="row" role="group" aria-label="Fremhæv led efter NDI-tema" id="theme-btns"></div>
  <div>
- <label for="co-find">Find et selskab i værdikæden (forsinket beholdning)</label>
- <input id="co-find" type="search" list="co-list" autocomplete="off" placeholder="Fx Nvidia, Tesla, SoftBank">
+ <label for="co-find">Find et selskab i kæden (forsinket beholdning)</label>
+ <input id="co-find" type="search" list="co-list" autocomplete="off" placeholder="Fx Nvidia, Tesla, ASML">
  <datalist id="co-list"></datalist>
  </div>
  <p id="chain-status" role="status" aria-live="polite"></p>
  </div>
- <div class="chain">
- <div class="node" data-theme-key="energy energy-resources"><h3>1. Energi &amp; power</h3><p>Strøm, transformere, gasturbiner - fysiske flaskehalse for compute.</p>
- <p class="src" data-weight></p><p><a href="tema.html?slug=energy">Tema: Energi →</a> · <a href="tema.html?slug=energiressourcer">Energiressourcer →</a> · <a href="index.html?view=udforsk&tags=energy">Screener →</a></p></div>
- <div class="arrow">↓</div>
- <div class="node" data-theme-key="physical"><h3>2. Datacenter &amp; racks</h3><p>Byggeri, køling, strømfordeling - der hvor GPU’erne står.</p>
- <p class="src" data-weight></p><p><a href="tema.html?slug=physical">Tema: Fysisk tech →</a> · <a href="index.html?view=udforsk&tags=physical">Screener →</a></p></div>
- <div class="arrow">↓</div>
- <div class="node" data-theme-key="chips compute"><h3>3. Chips (design &amp; fab)</h3><p>Fabless-designere, foundries og udstyr. Gorillaer og best-of-breed i halvledere.</p>
- <p class="src" data-weight></p><p><a href="tema.html?slug=chips">Tema: Chips →</a> · <a href="tema.html?slug=compute">Compute →</a> · <a href="index.html?view=udforsk&tags=chips">Screener →</a></p></div>
- <div class="arrow">↓</div>
- <div class="node" data-theme-key="connect"><h3>4. Optik &amp; netværk</h3><p>Laser, glasfiber, switches - data skal flyttes mellem og inde i datacentre.</p>
- <p class="src" data-weight></p><p><a href="tema.html?slug=connect">Tema: Optik &amp; netværk →</a> · <a href="index.html?view=udforsk&tags=connect">Screener →</a></p></div>
- <div class="arrow">↓</div>
- <div class="node" data-theme-key="software platforms"><h3>5. Software &amp; platforme</h3><p>Modeller, orkestrering, applikationer - der hvor compute bliver til produkter.</p>
- <p class="src" data-weight></p><p><a href="tema.html?slug=software">Software →</a> · <a href="tema.html?slug=platforms">Platforme →</a> · <a href="temaer.html">Alle temaer →</a></p></div>
- <div class="arrow">↓</div>
- <div class="node" data-theme-key="space"><h3>6. Space &amp; anden infrastruktur</h3><p>Satellitter og opsendelser som del af den bredere tech-infrastruktur.</p>
- <p class="src" data-weight></p><p><a href="tema.html?slug=space">Tema: SpaceTech →</a> · <a href="index.html?view=udforsk&tags=space">Screener →</a></p></div>
- </div>
+ <div class="legend" aria-hidden="true"><span><i class="r"></i>Floden: fra fysisk (gul) til digital (cyan)</span><span><i></i>Gruppe: de fem dæmninger i flodbilledet</span><span>Mærke på leddet: hvad NDI har skrevet om pres, med kilde</span></div>
+
+ <div class="river" id="river"><p class="src">Indlæser kæden…</p></div>
+
+ <aside class="side">
+ <strong>Flodsystemet.</strong> <span id="flod"></span>
+ <p class="link-row" style="margin:10px 0 0"><a href="vaerdikaeder.html#kap-flod">Dæmningerne forklaret →</a> · <a href="vaerdikaeder.html?kaede=ai-compute#a-pane">Flodkortet →</a> · <a href="vaerdikaeder.html?kaede=energy#kap-kaeder">Energikæden →</a> · <a href="vaerdikaeder.html?kaede=physical#kap-kaeder">Robotik →</a> · <a href="vaerdikaeder.html?kaede=space#kap-kaeder">Rumkæden →</a> · <a href="vaerdikaeder.html?kaede=quantum#kap-kaeder">Kvante (kort) →</a></p>
+ </aside>
+ <section class="others" aria-labelledby="oc-h">
+ <h2 id="oc-h">Fire andre kæder</h2>
+ <p class="src">AI-kæden står ikke alene. Hver kæde nedenfor har sin egen side med led, kilder og selskaber. Start ved det første led.</p>
+ <div class="oc-grid" id="other-chains"></div>
+ </section>
+ <p class="src" id="mapping-note" style="max-width:720px;margin-top:14px"></p>
  <p class="warn" style="margin-top:20px">Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.</p>
  </main>
 
@@ -93,87 +119,153 @@
  import { daTheme, fmtDate } from './js/data.js';
  const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
  const pct = (n) => String(n).replace('.', ',');
- const [data, multi] = await Promise.all([
- fetch('data/themes.json').then(r => r.json()).catch(() => null),
+ const [pack, themes, multi] = await Promise.all([
+ fetch('data/value-chains.json').then(r => r.json()),
+ fetch('data/themes.json').then(r => r.json()).catch(() => ({ themes: [] })),
  fetch('data/multi-tags.json').then(r => r.json()).catch(() => ({ byIsin: {} })),
  ]);
- if (!data?.themes) throw 0;
- const fundId = data.fund || 'pmindi';
- const by = Object.fromEntries(data.themes.map(t => [t.themeKey || t.slug, t]));
- const nodes = [...document.querySelectorAll('[data-theme-key]')];
- const keysOf = (el) => el.getAttribute('data-theme-key').split(/\s+/).filter(k => by[k]);
- const chainKeys = nodes.flatMap(keysOf);
- const asOf = fmtDate(data.positionsAsOf);
+ const fundId = 'pmindi';
+ const ai = pack.chains.find(c => c.id === 'ai-compute');
+ const links = ai.links.filter(l => !l.neighbour);
+
  document.getElementById('chain-asof').textContent =
- `Vægte og antal viser PMINDI's beholdning pr. ${asOf} (forsinket). Ingen kurser, afkast eller nøgletal pr. aktie. Temaer er eksponering, ikke anbefaling.` +
- (by.andet ? ` ${by.andet.count} selskaber (ca. ${pct(by.andet.weightSum)} %) har endnu intet primært tema og indgår ikke i kæden.` : '');
+ `Antal og vægte viser PMINDI's beholdning pr. ${fmtDate(pack.asOf)} (forsinket). Vægt er summen af de tilordnede selskabers vægt i fonden. Ingen kurser, afkast eller nøgletal pr. aktie. Temaer er eksponering, ikke anbefaling.`;
+ document.getElementById('flod').textContent = pack.philosophy?.flod || ai.why;
+ document.getElementById('mapping-note').textContent = pack.mappingNote || '';
 
- // Pr. led: vægt/antal + største positioner (fra themes.json, forsinket)
- nodes.forEach(el => {
- const keys = keysOf(el);
- const tip = el.querySelector('[data-weight]');
- if (tip) tip.textContent = keys.map(k => `${daTheme(k)} ca. ${pct(by[k].weightSum)} % · ${by[k].count} selskaber`).join(' · ') + ' (forsinket)';
- const why = document.createElement('p');
- why.className = 'hit-why';
- el.querySelector('h3').after(why);
- let anchor = el.querySelector('p.src');
- keys.forEach(k => {
- const top = (by[k].companies || []).slice(0, 5);
- if (!top.length) return;
- const d = document.createElement('details');
- d.dataset.key = k;
- d.innerHTML = `<summary>Største positioner i ${esc(daTheme(k))} (${top.length} af ${by[k].count})</summary><ol>${top.map(c => `<li><a href="selskab.html?isin=${encodeURIComponent(c.isin)}&fund=${fundId}">${esc(c.name)}</a> · vægt ${pct(c.weight)} %</li>`).join('')}</ol>`;
- anchor.after(d);
- anchor = d;
- });
- });
+ // Andre kæder: ét indgangsled pr. kæde
+ const firstSentence = (t) => (String(t || '').match(/^[^.]*\./) || [t])[0];
+ // Én forklaring pr. kæde (samme indhold som på vaerdikaeder.html)
+ const LEARN = {
+ space: (c) => c.trip ? ['sp-trip', '🛰', c.trip.title] : c.costStory && ['sp-cost', '🚀', c.costStory.title],
+ energy: (c) => c.flow && ['e-pane', '⚡', c.flow.title],
+ physical: (c) => c.phases?.length && ['p-pane', '⚙', "Mads' tre faser: fra modning til robotter"],
+ quantum: (c) => c.horizon && ['q-hz', '⏳', c.horizon.title],
+ };
+ // Ordbog pr. kæde (deep-link åbner den lukkede ordbog på mobil)
+ const GLOSS = { space: 'gloss-wrap', energy: 'e-gloss-wrap', physical: 'p-gloss-wrap', quantum: 'q-gl' };
+ const glossA = (c) => c.glossary?.length && GLOSS[c.id] ? `<a class="oc-gl" href="vaerdikaeder.html?kaede=${esc(c.id)}#${GLOSS[c.id]}"><span aria-hidden="true">◇</span> Ordbog: ${c.glossary.length} ord →</a>` : '';
+ // Usikkerheder pr. kæde (kun hvor siden har sektionen)
+ const RISK = { space: 'sp-risk', energy: 'e-risk' };
+ const riskA = (c) => c.risks?.items?.length && RISK[c.id] ? `<a class="oc-gl" href="vaerdikaeder.html?kaede=${esc(c.id)}#${RISK[c.id]}"><span aria-hidden="true">⚠</span> Hvad kan gå galt? ${c.risks.items.length} usikkerheder →</a>` : '';
+ // Tjek dig selv (kun hvor siden har sektionen)
+ const QUIZ = { space: 'sp-quiz', energy: 'e-quiz' };
+ const quizA = (c) => c.quiz?.items?.length && QUIZ[c.id] ? `<a class="oc-gl" href="vaerdikaeder.html?kaede=${esc(c.id)}#${QUIZ[c.id]}"><span aria-hidden="true">✓</span> Tjek dig selv: ${c.quiz.items.length} spørgsmål →</a>` : '';
+ document.getElementById('other-chains').innerHTML = pack.chains.filter(c => c.id !== 'ai-compute').map(c => {
+ const ls = c.links.filter(l => !l.neighbour);
+ const first = ls[0];
+ const cos = new Set(ls.flatMap(l => l.companies.map(x => x.isin))).size;
+ const lr = LEARN[c.id]?.(c);
+ return `<article class="oc"><span class="oc-ico" aria-hidden="true">${c.icon || first?.icon || '◆'}</span><h3>${esc(c.title)}</h3><p>${esc(firstSentence(c.why))}</p><span class="oc-n">${ls.length} led · ${cos} selskaber pr. ${fmtDate(pack.asOf)}</span>${first ? `<a href="vaerdikaeder.html?kaede=${esc(c.id)}#lk-${esc(first.id)}">Start ved ${esc(first.short || first.label)} →</a>` : ''}${lr ? `<a class="oc-learn" href="vaerdikaeder.html?kaede=${esc(c.id)}#${lr[0]}"><span aria-hidden="true">${lr[1]}</span> ${esc(lr[2])} →</a>` : ''}${riskA(c)}${quizA(c)}${glossA(c)}</article>`;
+ }).join('');
 
- // Selskab → temaer: primært tema (themes.json) ∪ multi-tags
+ // Fem dæmninger → grupper af led (samme dæmninger som på vaerdikaeder.html)
+ const GROUPS = [
+ { label: 'Dæmning 1 · Energi', hint: 'Første flaskehals', ids: ['energi'] },
+ { label: 'Dæmning 2 · Datacentre', hint: 'Fabrikken for compute', ids: ['datacenter'] },
+ { label: 'Dæmning 3 · Halvledere', hint: 'Design, fab, hukommelse, optik og servere', ids: ['chipdesign', 'equipment', 'foundry', 'memory', 'optics', 'servers'] },
+ { label: 'Dæmning 4 · Cloud og modeller', hint: 'Ifølge NDI endnu ingen tydelig flaskehals', ids: ['cloud', 'data'] },
+ { label: 'Dæmning 5 · Anvendelse', hint: 'Her opstår efterspørgslen', ids: ['software', 'agents', 'physical-ai'] },
+ ];
+ const placed = new Set(GROUPS.flatMap(g => g.ids));
+ const rest = links.filter(l => !placed.has(l.id)).map(l => l.id);
+ if (rest.length) GROUPS.push({ label: 'Øvrige led', hint: '', ids: rest });
+ const byId = Object.fromEntries(links.map(l => [l.id, l]));
+ const num = Object.fromEntries(links.map((l, i) => [l.id, i + 1]));
+
+ // Pres-mærke pr. led (samme som flodkortet på vaerdikaeder.html)
+ const PT = { early: 'Begyndende flaskehals', group: 'Del af halvlederne', open: 'Ingen tydelig flaskehals', source: 'Efterspørgslen starter her' };
+ const damNo = {};
+ links.filter(l => l.press?.level === 'dam').forEach((l, i) => { damNo[l.id] = i + 1; });
+ const pressLine = (l) => {
+ const p = l.press;
+ if (!p) return '';
+ const tag = p.level === 'dam' ? `${damNo[l.id]}. flaskehals` : PT[p.level];
+ if (!tag) return '';
+ const s = p.src === 'tolkning' ? '<span class="src">(vores tolkning)</span>' : `<span class="src">Kilde: ${esc(p.src)}</span>`;
+ return `<p class="press lv-${esc(p.level)}"><span class="pt">${esc(tag)}</span>${esc(p.t)}${s}</p>`;
+ };
+ const river = document.getElementById('river');
+ river.innerHTML = GROUPS.map(g => {
+ const ls = g.ids.map(id => byId[id]).filter(Boolean);
+ if (!ls.length) return '';
+ return `<p class="dam-head">${esc(g.label)}${g.hint ? `<span>${esc(g.hint)}</span>` : ''}</p><div class="chain">${ls.map(l => {
+ const top = l.companies.slice(0, 5);
+ const see = l.seeChain ? ` · <a href="vaerdikaeder.html?kaede=${esc(l.seeChain)}#kap-kaeder">Åbn ${esc(pack.chains.find(c => c.id === l.seeChain)?.title || l.seeChain)}-kæden →</a>` : '';
+ return `<article class="node" id="led-${esc(l.id)}" data-link="${esc(l.id)}">
+ <div class="ico" aria-hidden="true">${esc(l.icon || '•')}<b>${num[l.id]}</b></div>
+ <div>
+ <h3>${num[l.id]}. ${esc(l.label)}${l.kind === 'ndi' ? '<span class="tag" title="NDI har skrevet om leddet">NDI</span>' : ''}</h3>
+ <p>${esc(l.blurb)}</p>
+ ${pressLine(l)}
+ <p class="meta"><b>${l.count}</b> selskaber · ca. ${pct(l.weightSum.toFixed(1))} % af fonden (forsinket)</p>
+ <p class="hit-why"></p>
+ ${top.length ? `<details><summary>Største positioner i leddet (${top.length} af ${l.count})</summary><ol>${top.map(c => `<li><a href="selskab.html?isin=${encodeURIComponent(c.isin)}&fund=${fundId}">${esc(c.name)}</a> · vægt ${pct(c.w)} %</li>`).join('')}</ol></details>` : ''}
+ <p class="more"><a href="vaerdikaeder.html?kaede=ai-compute#lk-${esc(l.id)}">Hvorfor NDI følger leddet →</a>${see}</p>
+ </div>
+ </article>`;
+ }).join('')}</div>`;
+ }).join('');
+ const nodes = [...river.querySelectorAll('.node')];
+
+ // Selskaber: led-medlemskab fra value-chains.json, temaer fra themes.json ∪ multi-tags
  const cos = new Map();
- data.themes.forEach(t => (t.companies || []).forEach(c => {
- const e = cos.get(c.isin) || { isin: c.isin, name: c.name, tags: new Set() };
- e.tags.add(t.themeKey || t.slug);
- cos.set(c.isin, e);
- }));
- Object.entries(multi.byIsin || {}).forEach(([isin, m]) => {
- const e = cos.get(isin);
- if (e) { (m.tags || []).forEach(t => e.tags.add(t)); e.why = m.why; }
- });
+ const add = (isin, name) => { const e = cos.get(isin) || { isin, name, tags: new Set(), links: new Set() }; cos.set(isin, e); return e; };
+ links.forEach(l => l.companies.forEach(c => { const e = add(c.isin, c.name); e.links.add(l.id); if (c.theme) e.tags.add(c.theme); }));
+ (themes.themes || []).forEach(t => (t.companies || []).forEach(c => add(c.isin, c.name).tags.add(t.themeKey || t.slug)));
+ Object.entries(multi.byIsin || {}).forEach(([isin, m]) => { const e = cos.get(isin); if (e) { (m.tags || []).forEach(t => e.tags.add(t)); e.why = m.why; } });
  const list = [...cos.values()].sort((a, b) => a.name.localeCompare(b.name, 'da'));
  document.getElementById('co-list').innerHTML = list.map(c => `<option value="${esc(c.name)}">`).join('');
 
- const chain = document.querySelector('.chain');
+ // Temaknapper: primære temaer blandt kædens selskaber (ikke "andet")
+ const themeCount = new Map();
+ links.forEach(l => new Set(l.companies.map(c => c.theme)).forEach(t => t && t !== 'andet' && themeCount.set(t, (themeCount.get(t) || 0) + 1)));
+ const uniq = [...themeCount.keys()];
+ const chainEls = [...river.querySelectorAll('.chain')];
  const status = document.getElementById('chain-status');
  const btnWrap = document.getElementById('theme-btns');
  const input = document.getElementById('co-find');
- const uniq = [...new Set(chainKeys)];
  btnWrap.innerHTML = `<button type="button" class="control" data-k="" aria-pressed="true">Alle led</button>` +
  uniq.map(k => `<button type="button" class="control" data-k="${esc(k)}" aria-pressed="false">${esc(daTheme(k))}</button>`).join('');
  document.getElementById('chain-tools').hidden = false;
 
- function apply(keys, label, co) {
- const set = new Set(keys);
+ function setFiltering(on) { chainEls.forEach(c => c.classList.toggle('filtering', on)); }
+ function press(k) { btnWrap.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', String(k !== null && (b.dataset.k || '') === k))); }
+
+ function applyTheme(k) {
  let n = 0;
- nodes.forEach((el, i) => {
- const hitKeys = keysOf(el).filter(k => set.has(k));
- const hit = hitKeys.length > 0;
+ nodes.forEach(el => {
+ const l = byId[el.dataset.link];
+ const hits = k ? l.companies.filter(c => c.theme === k) : [];
+ const hit = hits.length > 0;
  el.classList.toggle('hit', hit);
- el.querySelector('.hit-why').textContent = hit ? `Eksponering via ${hitKeys.map(daTheme).join(' + ')}` : '';
- el.querySelectorAll('details').forEach(d => { d.open = hit && !co && set.has(d.dataset.key); });
+ el.querySelector('.hit-why').textContent = hit ? `${hits.length} af leddets ${l.count} selskaber har ${daTheme(k)} som primært tema` : '';
+ const d = el.querySelector('details'); if (d) d.open = false;
  if (hit) n++;
  });
- chain.classList.toggle('filtering', set.size > 0);
- btnWrap.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', String(co ? false : (b.dataset.k || '') === (keys[0] || '') && keys.length <= 1)));
- if (!set.size) { status.textContent = ''; return; }
- if (co) {
- const outside = [...co.tags].filter(k => !chainKeys.includes(k));
- status.innerHTML = `<a href="selskab.html?isin=${encodeURIComponent(co.isin)}&fund=${fundId}">${esc(co.name)}</a>: ${n ? `${n} led i kæden` : 'ingen led i den forenklede kæde'}` +
- (outside.length ? ` · også ${outside.map(daTheme).map(esc).join(', ')}` : '') +
+ setFiltering(!!k);
+ press(k || '');
+ status.textContent = k ? `${daTheme(k)}: ${n} af ${links.length} led fremhævet. Ét tema spænder over flere led.` : '';
+ }
+
+ function applyCo(co) {
+ nodes.forEach(el => {
+ const hit = co.links.has(el.dataset.link);
+ el.classList.toggle('hit', hit);
+ el.querySelector('.hit-why').textContent = hit ? `${co.name} er tilordnet dette led` : '';
+ const d = el.querySelector('details'); if (d) d.open = false;
+ });
+ setFiltering(true);
+ press(null);
+ const n = co.links.size;
+ const other = pack.chains.filter(c => c.id !== 'ai-compute' && c.links.some(l => l.companies.some(x => x.isin === co.isin)));
+ status.innerHTML = `<a href="selskab.html?isin=${encodeURIComponent(co.isin)}&fund=${fundId}">${esc(co.name)}</a>: ` +
+ (n ? `${n} led i AI-kæden (${[...co.links].map(id => `${num[id]}. ${esc(byId[id].label)}`).join(', ')})` : 'ingen led i AI-kæden') +
+ (other.length ? ` · også i ${other.map(c => `<a href="vaerdikaeder.html?kaede=${esc(c.id)}#kap-kaeder">${esc(c.title)}</a>`).join(', ')}` : '') +
  (co.why ? `. ${esc(co.why)}` : '.') + ' Eksponering, ikke anbefaling.';
- } else {
- status.textContent = `${label}: ${n} led fremhævet. De største positioner er foldet ud.`;
  }
- }
+
+ function reset() { nodes.forEach(el => el.classList.remove('hit')); setFiltering(false); press(''); status.textContent = ''; }
 
  function setUrl(param, val) {
  const u = new URL(location.href);
@@ -185,9 +277,9 @@
  btnWrap.addEventListener('click', (e) => {
  const b = e.target.closest('button');
  if (!b) return;
- const k = b.dataset.k;
  input.value = '';
- apply(k ? [k] : [], daTheme(k));
+ const k = b.dataset.k;
+ if (k) applyTheme(k); else reset();
  setUrl('tema', k);
  });
 
@@ -200,17 +292,11 @@
  }
  input.addEventListener('input', () => {
  const q = input.value.trim();
- if (!q) { apply([], ''); setUrl(); return; }
+ if (!q) { reset(); setUrl(); return; }
  const found = matches(q);
- if (found.length === 1) {
- const co = found[0];
- apply([...co.tags], co.name, co);
- setUrl('isin', co.isin);
- return;
- }
- apply([], '');
- setUrl();
- if (q.length < 2) { status.textContent = ''; return; }
+ if (found.length === 1) { applyCo(found[0]); setUrl('isin', found[0].isin); return; }
+ reset(); setUrl();
+ if (q.length < 2) return;
  status.innerHTML = found.length
  ? `${found.length} selskaber starter med "${esc(q)}". Skriv det fulde navn.`
  : `Intet selskab i den viste beholdning matcher "${esc(q)}". <a href="laer/faq-mangler-aktie.html">Hvorfor mangler en aktie?</a>`;
@@ -220,8 +306,8 @@
  const u = new URL(location.href);
  const tk = u.searchParams.get('tema');
  const isin = u.searchParams.get('isin');
- if (tk && uniq.includes(tk)) apply([tk], daTheme(tk));
- else if (isin && cos.has(isin)) { const co = cos.get(isin); input.value = co.name; apply([...co.tags], co.name, co); }
+ if (tk && uniq.includes(tk)) applyTheme(tk);
+ else if (isin && cos.has(isin)) { const co = cos.get(isin); input.value = co.name; applyCo(co); }
  </script>
 
 </body>

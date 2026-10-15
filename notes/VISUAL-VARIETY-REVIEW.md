@@ -35,3 +35,64 @@ Ship. Visual-variety pass er i planen (`VISUAL-VARIETY.md`). Næste builder: SHO
 
 ## Update ~23:02 CEST
 - **SVG-treemap + sunburst shipped** på vaerdikaeder (toggle). SHOULD 1 lukket. Legend + klik til tema.
+
+## Review · drawdown, sammenlign, embed · ~23:55 CEST
+
+**Sider:** `docs/drawdown.html`, `docs/sammenlign.html`, `docs/embed/chart.html` + `ndi.css`.  
+**Set i Chromium** ved 1280, 375 og 320. Ingen sidescroll. Ingen konsolfejl. AKK-gate holder (ingen procent på AKK-kortet, drawdown-siden siger 12 måneder).
+
+### Dom
+**Godkendt med SHOULD.** Drawdown skifter form: hero-tal, annotation, underwater, prikker, liste, årssøjler. Gul bruges til "lige nu" og til den dybeste bund. Sammenlign har ét panel tilbage (temasøjler). Embed er stadig ét widget-panel, med handlingen udenfor.
+
+### Stærkt
+1. Underwater viser både bunden i april 2025 (ca. −36 %) og at serien stadig er under vand (ca. −23 % pr. 14. okt. 2026).
+2. Prikfordelingen gør middel (−5,2 %) og median (−2,8 %) forståelige: de fleste fald ligger tæt på nul.
+3. De fire dybe episoder kan læses uden hover. Den åbne episode er den gule bjælke.
+4. 2025 i plus og alligevel det dybeste fald. Søjlen er afkast, ikke drawdown.
+
+### SHOULD
+1. ~~Underwater kan ikke skrubbes.~~ Lukket 23:59. Slideren står synlig under grafen. Home hopper til første dag. Klik og træk flytter en lodret streg. Udlæsningen er altid i teksten.
+2. På 375 er prikbunken tæt. Delvist lukket 00:17. Median og middel har navn under aksen, og stregerne har en mørk kant, så de kan ses i bunken. Bunken er stadig tæt. Det er pointen. Listen under har de fire dybe tal.
+3. De to sammenlign-kort ligner stadig hinanden. Det er parret. De må ikke få en tredje ens kasse ved siden af.
+4. ~~Episodelisten var løsrevet fra kurven.~~ Lukket 00:01. Et klik eller Enter hopper slideren til bunddatoen og markerer rækken.
+5. ~~Året med det dybeste fald var umarkeret i søjlerne.~~ Lukket 00:17. 2025 har gul overkant og teksten "Dybeste fald" over søjlen. Søjlerne deler bundlinje. Søjlen er stadig årets afkast.
+6. ~~Valgt dag var kun en lodret streg.~~ Lukket 00:20. En cyan prik sættes på kurven. Den skjules, når dagen allerede er den gule bund eller den gule ring, så de to mærker ikke dækkes.
+7. ~~Embed farvede en dag under nul med cyan.~~ Lukket 00:22. Prik, udlæsning og tooltip er rosa (`#e5b3ba`), når tallet er under nul. Hele perioden er stadig +104,8 % i cyan. År til dato slutter på +4,0 %.
+8. ~~Den åbne episode havde ingen markør på kurven.~~ Lukket 00:27. En tynd gul streg står på toppen 2. jun. 2026, med ordet "top". Den dækker ikke "nu −23 %" eller årstallene. Gul prik på den dybeste bund bliver stående.
+9. ~~AKK-datoen brækkede midt i måneden på 320.~~ Lukket 00:29. "fra 5. dec. 2026" står på sin egen linje. Ingen afkastprocent på kortet.
+10. ~~Sluttallet på embed var 9 px på mobil.~~ Lukket 00:31. Det er 12 px og står inden for svg'en ved 375 og 320. Hele perioden er stadig +104,8 %.
+
+### Update · episoder på kurven · 2026-10-16 ~00:50 CEST
+
+De fire episoder dybere end 10 % står som søjler mellem kurven og årstallene. Brand for de lukkede. Gul for den åbne. Den valgte har en lys kant. Seneste dag ligger i den åbne, så den er valgt ved start. Klik på −35,8 % flytter kanten til søjlen for 18. feb. 2025 til 26. aug. 2025 og sætter udlæsningen på 8. apr. 2025. En dag uden for de fire, 17. nov. 2023, slukker kanten og rækken.
+
+Ordet "tilbage" står over 26. aug. 2025. Det er dagen, det dybeste fald igen nåede sin top. "top" og "nu −23 %" rammer det ikke, ved 1280, 375 og 320. Ingen tekst uden for svg'en. Ingen sidescroll. Ingen konsolfejl. AKK siger stadig 12 måneder og har ingen procent.
+
+### Update · embed-prik · 2026-10-16 ~01:00 CEST
+
+Prikken på en dag under nul var `#c98a94` (`--neg`), mens udlæsning og tooltip var `#e5b3ba` (`--neg-ink`). Prikken er nu samme rosa. 4. feb. 2026 er −2,0 %. Sluttallet på år til dato er stadig +4,0 % i cyan. Hele perioden er +104,8 % i cyan.
+
+På 320 dækkede tooltip sluttallet. Det stopper nu 8 px før tallet, på år til dato og på hele perioden, ved 1280, 375 og 320. Ingen sidescroll. Ingen konsolfejl. PMINDIAKK har stadig tom svg og ingen procent.
+
+### Update · største forskel · 2026-10-16 ~01:02 CEST
+
+Sammenlign sagde "største forskel" uden at vise hvilken række. Det er Andet / uklassificeret, ca. 1,5 procentpoint (11,6 % og 13,2 %). Rækken har en gul kant. Ét panel. Ingen afkastprocent på AKK-kortet. Datoen står på sin egen linje. Krydslink til drawdown er der. Ingen sidescroll ved 1280, 375 og 320. Ingen konsolfejl.
+
+### Update · embed-tal · 2026-10-16 ~01:05 CEST
+
+De tre tal under grafen var lige store. Totalafkast er nu 36 px (32 px under 640). CAGR og år til dato er 22 px. Tallene er de samme: +104,8 %, +26,4 % og +4,0 %. På PMINDIAKK står der stadig en streg, og svg'en er tom. Ingen sidescroll ved 1280, 375 og 320. Ingen konsolfejl.
+
+### Update · søjlehøjde er dybden · 2026-10-16 ~01:15 CEST
+
+Søjlerne under kurven var lige høje. Højden er nu dybden, bredden er stadig tiden. −16,7 % er den lave søjle. −35,8 % er den høje. −26,6 % og −26,8 % er næsten lige høje, fordi faldene er det. De deler overkant. Stregen ved −10 er brand og tykkere end de andre gitterlinjer. Tallet −10 er samme farve. Et klik på søjlen for 8. apr. 2025 sætter udlæsningen til −35,8 % og markerer rækken. En dag uden for de fire, 3. nov. 2023, slukker kant og række.
+
+"tilbage", "top" og "nu −23 %" rammer ikke søjlerne eller hinanden, ved 1280, 375 og 320. Ingen tekst uden for svg'en. Ingen sidescroll. Ingen konsolfejl. AKK siger stadig 12 måneder og har ingen procent.
+
+### Update · udbytte-mærke · 2026-10-16 ~01:22 CEST
+
+De to sammenlign-kort er stadig et par, med samme felter. Forskellen er tegnet: PMINDI har en pil ud af kassen. PMINDIAKK har et loop, der vender tilbage i kassen. Ingen tredje kasse. Ét panel. AKK-kortet har ingen afkastprocent. "fra 5. dec. 2026" står på sin egen linje. Gul kant på Andet. Link til drawdown er der. Ingen sidescroll ved 1280, 375 og 320. Ingen konsolfejl.
+
+### Pas på
+- Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
+- Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.
+- `.scarce` og `.tm-svg` er ikke globale.

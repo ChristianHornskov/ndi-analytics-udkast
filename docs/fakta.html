@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="da">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+ <meta name="robots" content="noindex,nofollow">
+ <title>Fakta · NDI Analytics</title>
+ <link rel="stylesheet" href="css/ndi.css">
+ <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+ <meta property="og:type" content="website">
+ <meta property="og:site_name" content="NDI Analytics (udkast)">
+ <meta property="og:locale" content="da_DK">
+ <meta property="og:title" content="Fakta · NDI Analytics">
+ <meta property="og:description" content="Stamdata for NewDeal Invest fra offentlige kilder (Fundmarket / newdealinvest). Generel information. Ikke rådgivning.">
+ <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/fakta.html">
+ <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
+ <meta name="twitter:card" content="summary_large_image">
+ <style>
+  .fact-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:8px 0 14px}
+  .fact-card{background:radial-gradient(120% 80% at 0% 0%,rgba(158,207,214,.1),transparent 48%),linear-gradient(180deg,#16303a 0%,#11252c 62%);border:1px solid #345860;border-radius:16px;padding:18px 18px 16px;min-width:0}
+  .fact-card h2{font-size:22px;letter-spacing:-.4px;margin:0 0 2px}
+  .kicker{color:var(--brand);font-size:11px;font-weight:700;letter-spacing:1.4px;margin-bottom:6px}
+  .isin-row{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:#08171d;margin:12px 0}
+  .isin-row code{color:var(--cyan);font-size:15px;letter-spacing:.4px;font-weight:600}
+  .kv{display:grid;grid-template-columns:1fr 1fr;gap:12px 14px;margin-top:4px}
+  .kv .k{display:block;font-size:11px;color:var(--muted);margin-bottom:3px}
+  .kv .v{font-size:14px;color:var(--text);line-height:1.4}
+  .kv .is-diff .v{color:#f5ee9e}
+  .glance-board{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:0 0 12px}
+  .glance-tile{background:#0b171d;border:1px solid var(--line);border-radius:14px;padding:14px 14px 12px;min-width:0}
+  .glance-tile.is-diff{border-color:#f5ee9e88;box-shadow:inset 3px 0 0 var(--yellow)}
+  .glance-tile .k{font-size:11px;letter-spacing:.6px;color:var(--brand);font-weight:700;margin-bottom:8px;line-height:1.35}
+  .glance-tile strong{display:block;font-size:22px;font-weight:500;letter-spacing:-.4px;color:var(--cyan);font-variant-numeric:tabular-nums;line-height:1.15}
+  .glance-pair{display:flex;flex-wrap:wrap;gap:4px 12px}
+  .glance-pair b{font-weight:500;font-size:20px}
+  .glance-flag{display:inline-block;margin-top:8px;font-size:10px;letter-spacing:.8px;text-transform:uppercase;color:var(--faint)}
+  .glance-tile.is-diff .glance-flag{color:#f5ee9e}
+  .glance-tile p{color:var(--muted);font-size:12px;line-height:1.4;margin-top:6px;overflow-wrap:anywhere}
+  .kv .is-diff{grid-column:1 / -1}
+  .dd-dates{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+  .dd-dates article{background:#0b171d;border:1px solid #2a424a;border-radius:12px;padding:10px 12px;min-width:0}
+  .dd-dates article.is-odd{border-style:dashed;border-color:#f5ee9e66}
+  .dd-dates .k{display:block;font-size:11px;color:var(--muted);margin-bottom:4px}
+  .dd-dates strong{display:block;font-size:15px;font-weight:600;letter-spacing:-.2px}
+  .dd-dates small{display:block;color:var(--muted);font-size:12px;line-height:1.4;margin-top:4px}
+  .fact-card .sri{margin:12px 0 4px}
+  .fact-card .sri span{flex:1;width:auto;height:38px;font-variant-numeric:tabular-nums}
+  .fact-card .sri span.on{background:#f5ee9e;color:#1c1604;border-color:#f5ee9e}
+  .sri-cap{display:flex;justify-content:space-between;font-size:11px;color:var(--faint);margin:0 0 8px}
+  .glance{margin:0 0 18px}
+  .org{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .org article{background:#0b171d;border:1px solid var(--line);border-radius:12px;padding:12px 14px;min-width:0}
+  .org article.span-2{grid-column:1/-1}
+  .org .k{display:block;font-size:11px;color:var(--brand);letter-spacing:.4px;margin-bottom:4px}
+  .org strong{display:block;font-weight:600;margin-bottom:4px}
+  .org p{color:var(--muted);font-size:13px;line-height:1.45;margin:0}
+  .team{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .person{display:flex;gap:12px;align-items:flex-start;background:#0b171d;border-radius:12px;padding:12px 14px;border:1px solid var(--line);min-width:0}
+  .mono{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:13px;color:#050a0f;flex:none}
+  .person strong{display:block;margin-bottom:4px}
+  .person span{color:var(--muted);font-size:13px;line-height:1.45}
+  .gap-pill{display:inline-block;border:1px dashed #f5ee9e88;color:#f5ee9e;border-radius:999px;padding:2px 8px;font-size:12px;letter-spacing:.2px}
+  .tax-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .tax-grid h3{font-size:14px;margin-bottom:6px}
+  .tax-grid p{color:var(--muted);line-height:1.55;font-size:14px}
+  .risk-stage{margin:0 0 14px;scroll-margin-top:84px}
+  .risk-stage .risk-metrics strong{font-size:32px;letter-spacing:-.7px;font-weight:500}
+  .risk-split{display:grid;grid-template-columns:1.45fr .8fr;gap:14px;align-items:start}
+  .risk-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:4px 0 12px}
+  .risk-metrics .metric{padding:4px 12px;border-left:1px solid #829da02a}
+  .risk-metrics .metric:first-child{border-left:0;padding-left:0}
+  .risk-official{border:1px dashed #89aeb488;border-radius:14px;padding:14px;background:#0b171d;min-width:0}
+  .risk-official .label{font-size:11px;color:var(--muted);margin-bottom:8px}
+  .dd-track{height:10px;border-radius:99px;background:#0b171d;border:1px solid #2a424a;overflow:hidden}
+  .dd-track i{display:block;height:100%;background:var(--neg);border-radius:99px}
+  .empty-note{border:1px dashed #89aeb488;border-radius:14px;padding:22px 16px;color:var(--muted)}
+  @media(max-width:800px){
+    .fact-grid,.org,.team,.tax-grid,.kv,.risk-split,.risk-metrics,.glance-board,.dd-dates{grid-template-columns:1fr}
+    .risk-metrics .metric{border-left:0;padding-left:0;margin-bottom:12px}
+  }
+  @media(max-width:800px) and (min-width:560px){
+    .glance-board{grid-template-columns:1fr 1fr}
+  }
+ </style>
+</head>
+<body>
+ <a class="skip" href="#main">Gå til indhold</a>
+ <header class="site-header">
+ <a class="brand" href="index.html"><img src="assets/mark.svg" width="34" height="27" alt=""><span>NewDeal Invest</span></a>
+ <nav class="nav"><a href="index.html?view=fonden">← Fonden</a><a href="omkostninger.html">Omkostninger</a><a href="risici.html">Risici</a></nav>
+ </header>
+ <main id="main"><p style="color:var(--muted)">Henter…</p></main>
+ <footer class="site-footer">
+ <p>Udkast / noindex. Generel information fra offentlige kilder. Ikke rådgivning. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast.</p>
+ </footer>
+ <script type="module">
+ const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+ const main = document.getElementById('main');
+ const isGap = (s) => String(s || '').trim().toLowerCase() === 'udfyldes af ndi';
+ const show = (s) => isGap(s) ? '<span class="gap-pill">udfyldes af NDI</span>' : esc(s);
+ const num = (n) => {
+ if (n == null || Number.isNaN(Number(n))) return 'ikke oplyst';
+ const neg = Number(n) < 0;
+ const [a, b = ''] = String(Math.abs(Number(n))).split('.');
+ return (neg ? '-' : '') + a + (b ? ',' + b : '');
+ };
+ const pct = (n) => n == null || n === '' ? 'ikke oplyst' : num(n) + ' %';
+ const daDate = (iso) => {
+ if (!iso) return '';
+ const d = new Date(String(iso).length === 10 ? iso + 'T12:00:00' : iso);
+ if (Number.isNaN(d.getTime())) return esc(iso);
+ return d.toLocaleDateString('da-DK', { year: 'numeric', month: 'short', day: 'numeric' });
+ };
+ const mono = (name) => {
+ const parts = String(name || '').trim().split(/\s+/).filter(Boolean);
+ const letters = parts.length >= 2 ? parts[0][0] + parts[parts.length - 1][0] : String(name || '?').slice(0, 2);
+ return letters.toUpperCase();
+ };
+ const monoColor = (name) => {
+ const colors = ['#9ecfd6', '#89aeb4', '#d5e4e7', '#b7d4dc'];
+ let h = 0;
+ const s = String(name || '');
+ for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) >>> 0;
+ return colors[h % colors.length];
+ };
+ let facts, risk;
+ try {
+ const r = await fetch('data/fund-facts.json');
+ if (!r.ok) throw new Error('facts');
+ facts = await r.json();
+ const rr = await fetch('data/risk-stats.json');
+ risk = rr.ok ? await rr.json() : null;
+ } catch {
+ main.innerHTML = `<p class="eyebrow">FAKTA</p><h1>Fakta om fonden</h1><div class="empty-note"><p class="k" style="color:var(--text);font-weight:600">Data mangler</p><p>Siden læser kun data/fund-facts.json og data/risk-stats.json.</p></div>`;
+ }
+ if (facts) {
+ const c = facts.classes;
+ const A = c.pmindi;
+ const B = c.pmindiakk;
+ const sameSri = A.sri === B.sri && A.sriMax === B.sriMax;
+ const sameHorizon = A.horizonYears === B.horizonYears;
+ const sameOngoing = A.costs.otherOngoing === B.costs.otherOngoing;
+ const dTx = Number((Number(B.costs.portfolioTransaction) - Number(A.costs.portfolioTransaction)).toFixed(2));
+ const glance = [
+ sameSri ? `Begge klasser har SRI ${A.sri} af ${A.sriMax}.` : `SRI er ${A.sri} af ${A.sriMax} for PMINDI og ${B.sri} af ${B.sriMax} for PMINDIAKK.`,
+ sameHorizon ? `Anbefalet horisont er ${A.horizonYears} år.` : `Horisonten er ${A.horizonYears} år for PMINDI og ${B.horizonYears} år for PMINDIAKK.`,
+ sameOngoing ? `Øvrige løbende omkostninger er ${pct(A.costs.otherOngoing)} i begge.` : `Øvrige løbende er ${pct(A.costs.otherOngoing)} og ${pct(B.costs.otherOngoing)}.`,
+ dTx === 0
+ ? `Porteføljetransaktion er ${pct(A.costs.portfolioTransaction)} i begge.`
+ : `Porteføljetransaktion er ${pct(A.costs.portfolioTransaction)} i PMINDI og ${pct(B.costs.portfolioTransaction)} i PMINDIAKK.`,
+ ].join(' ');
+ const onlyFour = sameSri && sameHorizon && sameOngoing && dTx !== 0;
+ const glanceVisible = onlyFour
+ ? `Porteføljetransaktion er den eneste forskel i de fire tal: ${pct(A.costs.portfolioTransaction)} i PMINDI og ${pct(B.costs.portfolioTransaction)} i PMINDIAKK.`
+ : glance;
+ const tile = (kicker, valueHtml, same, detail) => `<article class="glance-tile${same ? '' : ' is-diff'}">
+ <p class="k">${kicker}</p>
+ <strong>${valueHtml}</strong>
+ <span class="glance-flag">${same ? 'Ens' : 'Forskel'}</span>
+ <p>${detail}</p>
+ </article>`;
+ const pair = (a, b) => `<span class="glance-pair"><b>${a}</b><b>${b}</b></span>`;
+ const glanceBoard = [
+ tile('SRI', sameSri ? `${A.sri} af ${A.sriMax}` : pair(`${A.sri} af ${A.sriMax}`, `${B.sri} af ${B.sriMax}`), sameSri, sameSri ? 'Begge klasser.' : 'PMINDI · PMINDIAKK.'),
+ tile('HORISONT', sameHorizon ? `${A.horizonYears} år` : pair(`${A.horizonYears} år`, `${B.horizonYears} år`), sameHorizon, sameHorizon ? 'Begge klasser.' : 'PMINDI · PMINDIAKK.'),
+ tile('ØVRIGE LØBENDE', sameOngoing ? pct(A.costs.otherOngoing) : pair(pct(A.costs.otherOngoing), pct(B.costs.otherOngoing)), sameOngoing, sameOngoing ? 'Begge klasser. Fundmarket.' : 'PMINDI · PMINDIAKK.'),
+ tile('PORTEFØLJETRANSAKTION', dTx === 0 ? pct(A.costs.portfolioTransaction) : pair(pct(A.costs.portfolioTransaction), pct(B.costs.portfolioTransaction)), dTx === 0, dTx === 0 ? 'Begge klasser.' : `PMINDI · PMINDIAKK · ${String(Math.abs(dTx)).replace('.', ',')} procentpoint.`),
+ ].join('');
+ const klasse = (cl, txDiff) => `
+ <article class="fact-card">
+ <p class="kicker">${cl.distributing ? 'UDLODDENDE' : 'AKKUMULERENDE'} · ${esc(cl.productType)}</p>
+ <h2>${esc(cl.label)}</h2>
+ <div class="isin-row">
+ <div><span class="k" style="display:block;font-size:11px;color:var(--muted);margin-bottom:3px">ISIN</span><code>${esc(cl.isin)}</code></div>
+ <button type="button" class="outline-btn small" data-copy="${esc(cl.isin)}">Kopiér ISIN</button>
+ </div>
+ <div class="sri" role="img" aria-label="Risikoindikator ${cl.sri} af ${cl.sriMax}">${Array.from({ length: cl.sriMax }, (_, i) => `<span class="${i + 1 === cl.sri ? 'on' : ''}">${i + 1}</span>`).join('')}</div>
+ <div class="sri-cap"><span>Lavere</span><span>SRI ${cl.sri} af ${cl.sriMax}</span><span>Højere</span></div>
+ <div class="kv">
+ <div><span class="k">Juridisk start</span><span class="v">${daDate(cl.legalInception)}</span></div>
+ <div><span class="k">Børsnoteret</span><span class="v">${cl.listed ? 'Ja' : 'Nej'}</span></div>
+ <div><span class="k">ESG</span><span class="v">${esc(cl.esg)}</span></div>
+ <div><span class="k">Benchmark</span><span class="v">${esc(cl.benchmark)}</span></div>
+ <div><span class="k">Horisont</span><span class="v">${esc(cl.horizonYears)} år</span></div>
+ <div><span class="k">Øvrige løbende</span><span class="v">${pct(cl.costs?.otherOngoing)}</span></div>
+ <div class="${txDiff ? 'is-diff' : ''}"><span class="k">Porteføljetransaktion</span><span class="v">${pct(cl.costs?.portfolioTransaction)}</span></div>
+ </div>
+ <p class="src">Øvrige løbende er Fundmarkets tal. Hele opstillingen står under omkostninger. ${esc(cl.costs?.note || '')}</p>
+ <p class="link-row" style="margin-top:14px">
+ <a class="outline-btn small" href="${esc(cl.kidUrl)}" rel="noopener noreferrer" target="_blank">KID PDF ↗</a>
+ <a class="outline-btn small" href="${esc(cl.fundmarketUrl)}" rel="noopener noreferrer" target="_blank">Fundmarket ↗</a>
+ <a class="outline-btn small" href="omkostninger.html">Omkostninger →</a>
+ </p>
+ </article>`;
+ const org = (k, title, body) => `<article><span class="k">${esc(k)}</span><strong>${title}</strong>${body ? `<p>${body}</p>` : ''}</article>`;
+ const ddWidth = risk && risk.maxDrawdownPct != null
+ ? Math.max(0, Math.min(100, Math.abs(Number(risk.maxDrawdownPct))))
+ : 0;
+ const peakAfterTrough = risk && risk.maxDdPeak && risk.maxDdTrough && String(risk.maxDdPeak) > String(risk.maxDdTrough);
+ const riskBlock = risk ? `<section class="panel risk-stage" id="risiko">
+ <h2 class="panel-h">Risikotal beregnet i udkastet</h2>
+ <p class="src" style="margin-bottom:8px">Pr. ${daDate(risk.asOf)}. ${esc(risk.method)}</p>
+ <div class="risk-split">
+ <div>
+ <div class="risk-metrics">
+ <div class="metric"><div class="label">Volatilitet (ann.)</div><strong>${pct(risk.volatilityAnnPct)}</strong><small>Beregnet · ikke Fundmarket</small></div>
+ <div class="metric"><div class="label">Sharpe (rf = 0)</div><strong>${num(risk.sharpeRf0)}</strong><small>Beregnet · ikke Fundmarket</small></div>
+ <div class="metric"><div class="label">Max drawdown</div><strong class="neg">${pct(risk.maxDrawdownPct)}</strong><small>Beregnet · ikke Fundmarket</small></div>
+ </div>
+ <div class="dd-track" role="img" aria-label="Max drawdown ${pct(risk.maxDrawdownPct)} på en skala fra 0 til 100 procent"><i style="width:${ddWidth}%"></i></div>
+ <div class="dd-dates">
+ <article><span class="k">Bund i filen</span><strong>${daDate(risk.maxDdTrough) || 'ikke oplyst'}</strong><small>Søjlen er den absolutte størrelse på en skala fra 0 til 100 %. Den er ikke forstørret.</small></article>
+ <article class="${peakAfterTrough ? 'is-odd' : ''}"><span class="k">${peakAfterTrough ? 'Topfeltet i filen' : 'Top i filen'}</span><strong>${daDate(risk.maxDdPeak) || 'ikke oplyst'}</strong><small>${peakAfterTrough ? 'Datoen ligger efter bunden og er ikke tegnet som start på faldet.' : 'Datoen står i risk-stats.json.'}</small></article>
+ </div>
+ </div>
+ <aside class="risk-official">
+ <div class="label">Officielt vol/Sharpe</div>
+ <p style="margin-bottom:8px">${show(risk.officialVolSharpe)}</p>
+ <p class="src" style="margin:0">${esc(risk.officialVolSharpeNote || '')}</p>
+ </aside>
+ </div>
+ </section>` : `<section class="panel"><h2 class="panel-h">Risikotal</h2><p class="band">risk-stats.json kunne ikke læses. Der vises ingen beregnede tal.</p></section>`;
+
+ main.innerHTML = `
+ <p class="eyebrow">FAKTAARK · OFFENTLIGE KILDER</p>
+ <h1>Fakta om fonden</h1>
+ <p class="lede">Stamdata for de to andelsklasser, hentet fra Fundmarket og newdealinvest.dk. Siden er generel information. Den er ikke rådgivning, og den er ikke foreningens officielle faktaark.</p>
+ <p class="band">${esc(facts.asOfNote)}</p>
+ <div class="glance-board" id="blik">${glanceBoard}</div>
+ <p class="sr-only">${glance}</p>
+ <p class="band glance">${glanceVisible} <a href="omkostninger.html${dTx !== 0 ? '#forskel' : ''}" style="white-space:nowrap">Se søjlerne →</a></p>
+ ${riskBlock}
+ <div class="fact-grid" id="klasser">
+ ${klasse(A, dTx !== 0)}
+ ${klasse(B, dTx !== 0)}
+ </div>
+
+ <section class="panel" id="organisation">
+ <h2 class="panel-h">Organisation</h2>
+ <div class="org">
+ ${org('Investeringsforening', show(facts.association.name), '')}
+ ${org('IFS (forvalter)', show(facts.ifs.name), `CVR ${esc(facts.ifs.cvr)} · FT ${esc(facts.ifs.ft)}<br>${esc(facts.ifs.address)}`)}
+ ${org('Investeringsrådgiver', show(facts.advisor.name), `CVR ${esc(facts.advisor.cvr)}<br>${esc(facts.advisor.address)}`)}
+ ${org('Depotbank', show(facts.depositary.name), esc(facts.depositary.role || ''))}
+ <article class="span-2"><span class="k">Revision</span><strong>${show(facts.auditor.name)}</strong><p>${esc(facts.auditor.note || '')}</p></article>
+ </div>
+ <p class="src" style="margin-top:12px">Kilder: <a href="${esc(facts.association.source)}" rel="noopener noreferrer" target="_blank">${esc(facts.association.sourceLabel)} ↗</a> · <a href="${esc(facts.prospectusUrl)}" rel="noopener noreferrer" target="_blank">Fællesprospekt ↗</a></p>
+ </section>
+
+ <section class="panel" id="hold">
+ <h2 class="panel-h">Porteføljehold</h2>
+ <div class="team">
+ ${facts.team.map((t) => `<article class="person"><span class="mono" style="background:${monoColor(t.name)}" aria-hidden="true">${esc(mono(t.name))}</span><div><strong>${esc(t.name)}</strong><span>${esc(t.role)}</span></div></article>`).join('')}
+ </div>
+ <p class="src" style="margin-top:10px">Kilde: <a href="${esc(facts.team[0]?.source || 'https://www.newdealinvest.dk/')}" rel="noopener noreferrer" target="_blank">newdealinvest.dk ↗</a></p>
+ </section>
+
+ <section class="panel" id="skat">
+ <h2 class="panel-h">Skat, kort</h2>
+ <div class="tax-grid">
+ <div><h3>PMINDI</h3><p>${esc(facts.tax.pmindi)}</p></div>
+ <div><h3>PMINDIAKK</h3><p>${esc(facts.tax.pmindiakk)}</p></div>
+ </div>
+ <p class="src" style="margin-top:10px"><a href="${esc(facts.tax.source)}" rel="noopener noreferrer" target="_blank">${esc(facts.tax.sourceLabel)} ↗</a></p>
+ </section>
+
+ <p class="warn">Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.</p>
+ <p class="sr-only" id="copy-status" role="status" aria-live="polite"></p>
+ <p class="link-row">
+ <a class="cta" href="omkostninger.html">Omkostninger →</a>
+ <a class="outline-btn" href="risici.html">Risici / KID →</a>
+ <a class="outline-btn" href="invester.html">Sådan investerer du →</a>
+ <a class="outline-btn" href="ndi-paa-x.html">NDI på X →</a>
+ </p>`;
+
+ const copyStatus = document.getElementById('copy-status');
+ main.addEventListener('click', async (e) => {
+ const btn = e.target.closest('[data-copy]');
+ if (!btn) return;
+ const v = btn.getAttribute('data-copy');
+ const old = btn.textContent;
+ let copied = false;
+ try {
+ await navigator.clipboard.writeText(v);
+ copied = true;
+ } catch {
+ try {
+ const ta = document.createElement('textarea');
+ ta.value = v;
+ ta.setAttribute('readonly', '');
+ ta.style.position = 'fixed';
+ ta.style.left = '-9999px';
+ document.body.appendChild(ta);
+ ta.select();
+ copied = document.execCommand('copy');
+ ta.remove();
+ } catch { copied = false; }
+ }
+ btn.textContent = copied ? 'Kopieret' : 'Kopiér ISIN';
+ if (copyStatus) copyStatus.textContent = copied ? `ISIN ${v} er kopieret.` : 'Kunne ikke kopiere. Markér ISIN og kopiér manuelt.';
+ setTimeout(() => { btn.textContent = old; }, 2000);
+ });
+ }
+ </script>
+</body>
+</html>

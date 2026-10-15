@@ -28,51 +28,112 @@
  </header>
  <main id="main"><p style="color:var(--muted)">Henter temaer…</p></main>
  <script type="module">
- import { fmtDate, loadAll, fundById, themeProposals } from './js/data.js';
- const [data, all] = await Promise.all([fetch('data/themes.json').then(r => r.json()), loadAll()]);
- // themes.json er bygget på PMINDI. Forslag tælles i samme klasse, så tallene passer sammen.
- const fund = fundById(all.portfolio, data.fund || 'pmindi');
+ import { fmtDate, loadAll, fundById, themeProposals, daTheme, WARN_HIST, chainForTheme, chainHref } from './js/data.js';
+ const u = new URL(location.href);
+ const [data, all, vc, um] = await Promise.all([
+ fetch('data/themes.json').then((r) => r.json()),
+ loadAll(),
+ fetch('data/value-chains.json').then((r) => r.json()).catch(() => ({ chains: [] })),
+ fetch('data/unique-metrics.json').then((r) => r.json()).catch(() => ({ byIsin: {} })),
+ ]);
+ const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+ const pct = (x) => (x || 0).toFixed(2).replace('.', ',');
+ // Antal/vægt beregnes fra den valgte andelsklasses forsinkede beholdning (primært tema),
+ // så hub, tema-side og forslag-tal altid bygger på samme klasse. Titel/problem fra themes.json.
+ const fund = fundById(all.portfolio, u.searchParams.get('fund') || data.fund || 'pmindi');
+ const posAsOf = fmtDate(fund.positionsAsOf || all.portfolio.asOf || data.positionsAsOf);
  const prop = themeProposals(fund);
+ const agg = {};
+ for (const p of fund.positions || []) {
+ const a = (agg[p.theme] ||= { count: 0, weight: 0, forslag: 0, lens: 0 });
+ a.count++; a.weight += p.weight || 0;
+ if ((um.byIsin || {})[p.isin]) a.lens++; // NDI-linse (kvalitativ tekst) findes
+ if (p.themeStatus === 'forslag') a.forslag++;
+ }
+ // Største tema først; Andet altid sidst, så det ikke ligner et rigtigt tema
+ const themes = (data.themes || []).map((t) => ({ ...t, ...(agg[t.themeKey] || { count: 0, weight: 0, forslag: 0, lens: 0 }) }))
+ .sort((a, b) => (a.themeKey === 'andet') - (b.themeKey === 'andet') || b.weight - a.weight);
+ const real = themes.filter((t) => t.themeKey !== 'andet');
+ // "Nyt tema" = alle selskaber i temaet er forslag (ingen fastlagte endnu), fx Quantum
+ const isNew = (t) => t.themeKey !== 'andet' && t.count > 0 && t.forslag === t.count;
+ const newThemes = real.filter(isNew);
+ const chainFor = (k) => chainForTheme(vc.chains, k);
  const propChip = (t) => {
- const n = t.themeKey === 'andet' ? prop.open : (prop.byTheme[t.themeKey] || 0);
- if (!n) return '';
- const txt = t.themeKey === 'andet' ? `${n} venter på et tema` : `+${n} forslag`;
- return ` <span class="badge badge-draft" title="Forslag, afventer gennemgang">${txt}</span>`;
+ if (t.themeKey === 'andet') return prop.open ? ` <span class="badge badge-draft" title="Afventer gennemgang">${prop.open} venter på et tema</span>` : '';
+ if (isNew(t)) return ' <span class="badge badge-draft" title="Hele temaet er et forslag og afventer gennemgang">nyt tema · forslag</span>';
+ const n = prop.byTheme[t.themeKey] || 0;
+ return n ? ` <span class="badge badge-draft" title="Forslag, afventer gennemgang">+${n} forslag</span>` : '';
  };
- const cards = (data.themes||[]).map(t => `
- <a class="door" href="tema.html?slug=${encodeURIComponent(t.slug)}&fund=${fund.id}">
- <strong>${t.title}${propChip(t)}</strong>
- <span>${t.problem}</span>
- <span class="go">${t.count} selskaber · ca. ${String(t.weightSum).replace('.',',')} % →</span>
- </a>`).join('');
+ const fundSwitch = `<div class="fund-switch" role="group" aria-label="Andelsklasse">${all.portfolio.funds.map((f) =>
+ `<a class="control ${f.id === fund.id ? 'active' : ''}" ${f.id === fund.id ? 'aria-current="true"' : ''} href="temaer.html?fund=${f.id}">${esc(f.short)}</a>`).join('')}</div>`;
+
+ const cards = themes.map((t) => {
+ const ch = t.themeKey !== 'andet' && chainFor(t.themeKey);
+ return `<div class="door" style="position:relative">
+ <strong><a href="tema.html?slug=${encodeURIComponent(t.slug)}&fund=${fund.id}" style="color:inherit;text-decoration:none">${esc(t.title)}</a>${propChip(t)}</strong>
+ <span>${esc(t.problem)}</span>
+ ${ch ? `<span>Værdikæde: <a href="${chainHref(t.themeKey)}">${esc(ch.title)}</a></span>` : ''}
+ ${t.lens ? `<span>NDI-linse: <a href="tema.html?slug=${encodeURIComponent(t.slug)}&fund=${fund.id}&linse=1" title="Kvalitativ beskrivelse (udkast), ikke en rating">${t.lens} af ${t.count} selskaber</a></span>` : ''}
+ <a class="go" href="tema.html?slug=${encodeURIComponent(t.slug)}&fund=${fund.id}">${t.count ? `${t.count} ${t.count === 1 ? 'selskab' : 'selskaber'} · ca. ${pct(t.weight)} %` : `Ingen selskaber i ${esc(fund.short)}`} →</a>
+ </div>`;
+ }).join('');
+
+ // Forslag-banner: skelner mellem "flyttet ud af Andet" og "flyttet fra et andet NDI-tema"
+ const retagTxt = prop.retagged.map((r, i) => `${r.n} ${i ? '' : prop.fromAndet ? 'flyttet ' : 'er flyttet '}fra ${esc(daTheme(r.from))} til ${isNew({ themeKey: r.to, ...(agg[r.to] || {}) }) ? 'det nye tema ' : ''}<a href="tema.html?slug=${encodeURIComponent((data.themes.find((t) => t.themeKey === r.to) || {}).slug || r.to)}&fund=${fund.id}">${esc(daTheme(r.to))}</a>`);
+ const andList = (xs) => (xs.length > 1 ? `${xs.slice(0, -1).join(', ')} og ${xs[xs.length - 1]}` : xs[0] || '');
+ const movedTxt = [
+ prop.fromAndet ? `${prop.fromAndet} lå før i <em>Andet</em>.` : '',
+ retagTxt.length ? `${prop.fromAndet ? 'Desuden er ' : ''}${andList(retagTxt)}.` : '',
+ ].filter(Boolean).join(' ');
  const review = prop.total ? `<section class="review-banner" aria-labelledby="rv-h">
  <p class="rv-kicker"><span class="badge badge-draft">FORSLAG</span> Afventer gennemgang</p>
- <h2 id="rv-h">${prop.moved} selskaber har fået et forslag til NDI-tema</h2>
- <p>De lå før i <em>Andet</em>. Forslagene bygger på offentlige ISIN-opslag og selskabets branche. ${prop.open} selskaber står stadig i Andet, fordi ingen NDI-linse passede godt nok. Porteføljeholdet gennemgår alle temaer, også de ældre, før noget bliver endeligt.</p>
- <p class="link-row"><a href="om-data.html#g-temaforslag">Sådan sættes temaerne →</a> <a href="tema.html?slug=andet&fund=${fund.id}">Se hvad der er tilbage i Andet →</a></p>
+ <h2 id="rv-h">${prop.moved} ${prop.moved === 1 ? 'selskab har' : 'selskaber har'} fået et forslag til NDI-tema</h2>
+ <p>${movedTxt}
+ Forslagene bygger på offentlige ISIN-opslag og selskabets branche.${prop.open ? ` ${prop.open} ${prop.open === 1 ? 'selskab står' : 'selskaber står'} stadig i Andet, fordi ingen NDI-linse passede godt nok.` : ''} Porteføljeholdet gennemgår alle temaer, også de ældre, før noget bliver endeligt.</p>
+ <p class="src" style="margin-top:6px">Tal for ${esc(fund.short)} · beholdning pr. ${posAsOf} (forsinket).</p>
+ <p class="link-row"><a href="om-data.html#g-temaforslag">Sådan sættes temaerne →</a> <a href="index.html?view=udforsk&fund=${fund.id}&status=forslag">Se alle forslag i screeneren →</a>${prop.open ? ` <a href="tema.html?slug=andet&fund=${fund.id}">Se hvad der er tilbage i Andet →</a>` : ''}</p>
  </section>` : '';
+
+ // Små temaer (fx Quantum, SpaceTech) forsvinder let i søjlerne: fremhæv dem med egen kæde
+ const small = real.filter((t) => t.count && (isNew(t) || (vc.chains || []).some((c) => c.id === t.themeKey && t.weight < 5)));
+ const spotlight = small.length ? `<section class="panel" aria-labelledby="sm-h" style="margin-bottom:18px">
+ <h2 id="sm-h" class="panel-h">Små temaer med egen værdikæde</h2>
+ <p style="font-size:13px;color:var(--muted);margin-bottom:10px">Lav vægt betyder ikke, at temaet er uvigtigt for linsen - kun at eksponeringen i beholdningen er lille.</p>
+ <ul style="display:grid;gap:8px;list-style:none;padding:0;margin:0">${small.map((t) => {
+ const ch = chainFor(t.themeKey);
+ return `<li><a href="tema.html?slug=${encodeURIComponent(t.slug)}&fund=${fund.id}"><strong>${esc(t.title)}</strong></a>${propChip(t)}
+ <span style="color:var(--muted);font-size:13px"> · ${t.count} ${t.count === 1 ? 'selskab' : 'selskaber'} · ca. ${pct(t.weight)} %</span>
+ ${ch ? ` · <a href="${chainHref(t.themeKey)}">Kæden "${esc(ch.title)}" →</a>` : ''}</li>`;
+ }).join('')}</ul>
+ </section>` : '';
+
+ const max = Math.max(...themes.map((x) => x.weight || 0), 0.01);
+ const bars = themes.map((t) => {
+ // Min. 2 % bredde, så små temaer stadig kan ses (tallet til højre er det præcise)
+ const w = t.weight ? Math.max(2, Math.round((t.weight / max) * 100)) : 0;
+ const andet = t.themeKey === 'andet';
+ return `<div style="display:grid;grid-template-columns:140px 1fr 64px;gap:10px;align-items:center;font-size:12px">
+ <a href="tema.html?slug=${encodeURIComponent(t.slug)}&fund=${fund.id}">${esc(andet ? 'Andet' : t.title)}${isNew(t) ? ' <span class="badge badge-draft" style="font-size:9px;padding:0 4px">nyt</span>' : ''}</a>
+ <div style="background:#0b171d;border-radius:6px;height:10px;overflow:hidden;border:1px solid var(--line)" aria-hidden="true"><div style="width:${w}%;height:100%;background:var(--brand)${andet ? ';opacity:.45' : ''}"></div></div>
+ <span style="color:var(--muted);text-align:right">${pct(t.weight)} %</span>
+ </div>`;
+ }).join('');
+
  document.getElementById('main').innerHTML = `
  <p class="eyebrow">TEMAER · OVERSIGT</p>
  <h1>NDI-linsen</h1>
- <p class="lede">Temaer viser eksponering i den forsinkede beholdning (pr. ${fmtDate(data.positionsAsOf)}). Ikke anbefalinger eller bevidste overvægte. Nye forslag: Quantum. Rumfart/satellitter har egen kæde på <a href="vaerdikaeder.html">værdikæder</a>.</p>
- <p class="band">Segmenter viser eksponering, ikke en anbefaling. <a href="vaerdikaeder.html#kap-treemap"><strong>Treemap / sunburst →</strong></a></p>
- <p class="anno" style="font-size:12px;color:var(--yellow)">Visuel genvej: samme vægte som mosaik/sol på værdikæde-siden — her som søjler + døre.</p>
+ <p class="lede">${real.length} temaer viser eksponering i den forsinkede beholdning (pr. ${posAsOf}). Ikke anbefalinger eller bevidste overvægte.${newThemes.length ? ` Nyt som forslag: ${newThemes.map((t) => esc(t.title)).join(', ')}.` : ''} Hvert tema peger videre til sin <a href="vaerdikaeder.html">værdikæde</a>.</p>
+ ${fundSwitch}
+ <p class="band">Segmenter viser eksponering, ikke en anbefaling. Samme vægte som mosaik/sol: <a href="vaerdikaeder.html#kap-treemap"><strong>Treemap / sunburst →</strong></a></p>
  ${review}
  <section class="panel" style="margin-bottom:18px">
- <h2 style="font-size:16px;margin-bottom:10px">Tema-vægte i forsinket beholdning</h2>
- <div style="display:grid;gap:8px">${(data.themes||[]).map(t=>{
- const max=Math.max(...data.themes.map(x=>x.weightSum||0),0.01);
- const pct=Math.round((t.weightSum/max)*100);
- return `<div style="display:grid;grid-template-columns:120px 1fr 64px;gap:10px;align-items:center;font-size:12px">
- <a href="tema.html?slug=${encodeURIComponent(t.slug)}&fund=${fund.id}">${t.title}</a>
- <div style="background:#0b171d;border-radius:6px;height:10px;overflow:hidden;border:1px solid var(--line)"><div style="width:${pct}%;height:100%;background:var(--brand)"></div></div>
- <span style="color:var(--muted);text-align:right">${String(t.weightSum).replace('.',',')} %</span>
- </div>`;
- }).join('')}</div>
- <p style="font-size:11px;color:var(--muted);margin-top:10px">Relative søjler (største tema = 100 % bredde). Eksponering, ikke anbefaling. Pr. ${fmtDate(data.positionsAsOf)}.</p>
+ <h2 style="font-size:16px;margin-bottom:10px">Tema-vægte i forsinket beholdning · ${esc(fund.short)}</h2>
+ <div style="display:grid;gap:8px">${bars}</div>
+ <p style="font-size:11px;color:var(--muted);margin-top:10px">Relative søjler (største tema = fuld bredde, mindst 2 % så små temaer kan ses). Primært tema pr. selskab; Andet = endnu uden NDI-tema. Eksponering, ikke anbefaling. Pr. ${posAsOf}.</p>
  </section>
+ ${spotlight}
  <div class="doors">${cards}</div>
- <p class="warn">Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.</p>`;
+ <p class="warn">${WARN_HIST}</p>`;
  </script>
 </body>
 </html>
