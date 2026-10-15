@@ -332,7 +332,6 @@ Pages er lig med main (deploy 00:54 CEST, `laer/rebalancering.html` er live). Je
 - Invester trin 3–5 er nu almindeligt dansk ("Depot hos bank eller handelsplatform", "Køb og omkostninger" nævner kurtage).
 - Selskab: forslag-mærket ("Primært tema … er et forslag fra udkastet (før: Andet) og afventer NDI-gennemgang") løser cyklus 13's TSMC/Andet-forvirring på en ærlig måde.
 - Visuel variation: drawdown-søjler, omkostnings-skala med zoom, rebalancerings-skyder og idéer-varmekort er fire forskellige former. Ingen kort-træthed på de nye sider.
-<<<<<<< HEAD
 
 ## 2026-10-16 01:08 CEST · cyklus 15 (main `6592e79`, ingen ændring siden cyklus 14)
 
@@ -348,5 +347,3 @@ Main og Pages er uændrede siden cyklus 14. Det her er en re-verifikation: Playw
 
 ### OK
 - 0 h-overflow og én h1 på alle sider undtagen ndi-paa-x. Ingen andre konsolfejl.
-=======
->>>>>>> origin/main
