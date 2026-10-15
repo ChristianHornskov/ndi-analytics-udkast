@@ -560,3 +560,23 @@ main er uændret i docs/ siden `75a87c2`. Pages er genbygget kl. 23:49 GMT, men 
 - **Privat (55+):** periode-siden er nyttig ("hvad gav fonden i 2025?"), men "dyb side", "YTD" og "38.9 kr." virker uprofessionelt. Laer-siderne (FAQ, udbytte-vs-akk og forsinket beholdning) er rolige og klare ✅.
 - **Familiekontor:** ville bruge embed og periode til intern rapportering. Begge mangler en kilde til omkostninger og et link til KID. Kalenderårstabellen bør vise 12-måneders perioder.
 - **Visuel variation:** laer og periode er enkle tekstsider, som giver en god pause efter fonden og udforsk. Ingen træthed.
+
+## 2026-10-16 01:57 CEST · cyklus 25 (main `90e7de8`, intet docs-delta)
+
+main/docs og Pages er uændrede. Live ved 375 er der ingen regression (16 sider: 0 fejl, 0 overflow). Denne cyklus er et **for-merge-kig på lane-grenene**.
+
+### MUST (uændret på main)
+- Invester har stadig tre "4."-trin (`invester.html:47/50/53`: "Ordre & omkostninger" + 2× "Køb og omkostninger"). Mit tidligere tjek for "trin 4" fangede dem ikke, men de er der. Det er ikke rettet på nogen lane-gren.
+- Omkostninger mangler KID-tallet (se compliance 9). "AI-udkast" over tomt felt og stubs på selskab.
+
+### SHOULD (nyt, fra lane-grene)
+- **lane-X omkostninger:** "Ikke et ÅOP" står 8 gange i den nye kode, og "Den ene forskel" (0,08 pp, 80 kr. på 100.000 kr.) bliver endnu mere fremtrædende med en forstørret skala og "receipt-gap". For en privatperson er sidens hovedbudskab stadig "forskellen er lille", ikke "det koster ca. 2,8 % om året". Vend rækkefølgen: KID-tal → postsatser → forskellen mellem klasserne. "ØVRIGE LØBENDE" er uændret (se cyklus 24: brug KID'ets ord).
+- **lane-X ndi-paa-x:** de tre spor ("Konti Mads følger", "NDI-konti", "Andre opslag") er en klar forbedring ✅. Tagget "Mads følger" pr. opslag bør dog sige "Fra en konto, Mads følger", ellers læses det som "Mads følger [dette selskab]".
+- **lane-C indre-vaerdi.html:** god og rolig. ".m"-grid'et med `grid-template-columns:11em 1fr 8.5em` får sit eget mobil-breakpoint ved 520 ✅. Lille faglig præcisering: "Nye penge … værdien pr. andel gør ikke [ændre sig]" passer kun uden emissionstillæg/udtrædelsesfradrag. Tilføj "(bortset fra små tillæg og fradrag, se omkostninger)".
+- **lane-C ideer.html:** koncentrationskurven ("345 vægte lagt sammen", "88 til halvdelen") er en ny visuel form. Den tilføjer variation uden træthed ✅.
+- **lane-X data/x-posts.json `callCountNote`:** "Andet/Tredje/Fjerde/Femte poleringspas samme dag: stadig ingen nye kald" er log-støj i en datafil, der serveres offentligt. Flyt det til notes/.
+
+### Persona-linser
+- **Privat:** lane-C's lær-sider (indre værdi, læs grafen) giver præcis den baggrund, som persona-filen efterspørger ✅. Omkostninger svarer stadig ikke på "hvad koster det mig?".
+- **Familiekontor:** lane-C's SRI-forklaring fjerner et oplagt spørgsmål i due diligence ✅. Omkostninger (KID-tal) og embed (KID/SRI) er stadig hullerne.
+- **Visuel variation:** ingen ny træthed. Lane-A tilføjer en modenhedstrappe og risikokort på vaerdikaeder, og det er efterhånden mange kort-typer på én side. Hold øje efter merge.

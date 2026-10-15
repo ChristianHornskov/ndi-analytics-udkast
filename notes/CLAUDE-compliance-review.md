@@ -636,3 +636,30 @@ Ikke juridisk rådgivning. Docs er samme build som i cyklus 22–23. Nyt i denne
 ### OK ✅
 - Embed ignorerer `?periode=1m`, så der vises ingen 1m på PMINDI ✅. Periode viser "Fonden har intet fast benchmark" ✅. Beholdning pr. 1. jun. 2026 er uændret ✅. AI-mærkning er uændret (selskab, tema, vaerdikaede).
 - Risikolinjen "Historisk afkast … kan tabe" står på alle 5 laer-sider, periode, kort, selskaber, tema, embed og invester.
+
+## 2026-10-16 01:57 CEST · cyklus 25 (main `90e7de8`, intet docs-delta)
+
+Ikke juridisk rådgivning. main/docs og Pages er samme build som i cyklus 22–24 (Last-Modified 23:49 GMT). Live ved 375 (16 sider, inkl. `?view=fonden/portefolje/udforsk`): 0 pageerrors, 0 overflow, én h1 pr. side. Nyt i denne cyklus: **for-merge-tjek af de seks lane-grene** (A, B, C, D, E, X), så compliance-problemer kan fanges før merge.
+
+### Lane-grene før merge
+- **lane-C: lukker delvist MUST 6 (SRI mod udsving).** `laer/risikoklasse.html` får "Den er ikke det samme som et simpelt udsvingstal. KID'et regner udsvinget efter EU's egen metode og periode …", og risici får "Hvorfor passer tallet ikke med risikoklassen?" ✅. Skyderteksten "Klassen dækker udsving fra 20 til 30 % pr. år" står stadig. Når lane-C er merget, betragter jeg MUST 6 som lukket, hvis forklaringen står på samme skærm som 32,46 %. Ny `laer/indre-vaerdi.html` og `laer/laes-grafen.html` har "Historisk afkast … kan tabe" ✅ og "Tænkte tal, ikke fondens" ✅. Ingen rådgivningsord.
+- **lane-X: halvt fremskridt på MUST 2, intet på MUST 9.** Overskriften "MADS FØLGER" bliver til sporet "Konti Mads følger · Udvalgte offentlige opslag — ikke NDI's holdning" ✅. Badgen `<span class="x-curated">Mads følger</span>` (`x-feed.js:506`) står stadig på hvert opslag, og den ender i versaler, hvis CSS'en uppercaser den. Foreslået tekst: "Fra en konto, Mads følger · ikke NDI's holdning". Ny fodnote: "ikke investeringsrådgivning og erstatter ikke KID eller prospekt" ✅. ndi-paa-x har dog stadig **0 "kan tabe"**. **Omkostninger på lane-X** gentager "Ikke et ÅOP" ×8 og udbygger blokken om forskellen på 0,08 pp. KID'ets **2,79 %/2,85 %** står stadig ikke på siden (0 hits på grenen), og "kan tabe" er stadig 0. Det er altså i den modsatte retning af MUST 9. Siden siger meget om, hvad tallet *ikke* er, men aldrig hvad KID'et siger, at det koster.
+- **lane-D (embed):** kun graf og akser. **MUST 11 er uændret på grenen** (ingen KID, SRI eller mærkning).
+- **lane-A (vaerdikaeder kvante/råstoffer):** Mads-udsagn har BLOG-dato som kilde. Prognoser fra tredjepart er mærket "ikke Mads' og ikke NDI's prognose" ✅. "ikke en rangering og ikke en anbefaling" ✅. Ingen handelssprog.
+- **lane-B / lane-E:** selskabsbeskrivelser. Hændelser efter 1. jun. 2026 (GESA 6. jul., salg af medicinforretningen 3. aug.) er eksplicit mærket "efter beholdningen" ✅. "Eksponering, ikke anbefaling" ✅.
+
+### MUST (åbne på main, uændrede)
+1. Ingen "markedsføringsmateriale"-mærkning (0 på 16 sider live).
+2. "MADS FØLGER" ×7 på ndi-paa-x (lane-X forbedrer det delvist).
+3. "kan tabe" er 0 på omkostninger og ndi-paa-x live (re-verificeret ved 375).
+4. PMINDIAKK NAV 98,40 står før 12 mdr.
+5. ÅTD ved "afventer Fundmarket-godkendelse": fonden ×4, periode ×3, embed ×2, drawdown ×1.
+6. SRI 5 mod laer "20–30 %" og vol 32,46 % (lukkes sandsynligvis af lane-C).
+7. `chartMarkers` @MadsC007.
+8. Repoet er offentligt (Christians beslutning).
+9. KID-omkostningstallet 2,79 %/2,85 % gengives ikke (0 hits live og 0 på lane-X).
+10. Delperioder vises som år (2023, ÅTD).
+11. Embed-grafen mangler KID, SRI og mærkning (også på lane-D).
+
+### OK ✅
+- KID-links: risici ×11, invester ×8, sammenlign ×4. "Historisk afkast" står på alle 16 sider undtagen ndi-paa-x. Beholdning pr. 1. jun. 2026. Ingen 1m/3m på PMINDI. Intet benchmark-claim.
