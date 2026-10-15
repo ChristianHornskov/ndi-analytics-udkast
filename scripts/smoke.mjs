@@ -18,6 +18,7 @@ const pages = [
   '/om-data.html',
   '/embed/chart.html',
   '/vaerdikaede.html',
+  '/vaerdikaeder.html',
   '/embed/chart.html?periode=1m',
   '/ndi-perspektiv.html',
   '/laer/udbytte-vs-akk.html',
