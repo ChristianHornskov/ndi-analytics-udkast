@@ -116,6 +116,34 @@
         "chips"
       ],
       "why": "Foundry :  chips-produktion."
+    },
+    "US74766W1080": {
+      "tags": [
+        "quantum",
+        "compute"
+      ],
+      "note": "forslag quantum; compute som bi-tag"
+    },
+    "US26740W1099": {
+      "tags": [
+        "quantum",
+        "compute"
+      ],
+      "note": "forslag quantum; compute som bi-tag"
+    },
+    "US76655K1034": {
+      "tags": [
+        "quantum",
+        "compute"
+      ],
+      "note": "forslag quantum; compute som bi-tag"
+    },
+    "US46222L1089": {
+      "tags": [
+        "quantum",
+        "compute"
+      ],
+      "note": "forslag quantum; compute som bi-tag"
     }
   }
 }

@@ -88,12 +88,6 @@
           "symbol": "CPNG"
         },
         {
-          "isin": "KYG6683N1034",
-          "name": "Nu",
-          "weight": 0.37,
-          "symbol": "NU"
-        },
-        {
           "isin": "US09175A2069",
           "name": "Bitmine Immersion Technologi",
           "weight": 0.37,
@@ -104,6 +98,12 @@
           "name": "Defi Development Corp",
           "weight": 0.37,
           "symbol": "DFDV"
+        },
+        {
+          "isin": "KYG6683N1034",
+          "name": "Nu",
+          "weight": 0.37,
+          "symbol": "NU"
         },
         {
           "isin": "US8200144058",
@@ -136,12 +136,6 @@
           "symbol": "DASH"
         },
         {
-          "isin": "GB00BMHVL512",
-          "name": "Klarna Group Plc",
-          "weight": 0.2,
-          "symbol": "KLAR"
-        },
-        {
           "isin": "US16679L1098",
           "name": "Chewy",
           "weight": 0.2,
@@ -152,6 +146,12 @@
           "name": "Galaxy Digital Inc",
           "weight": 0.2,
           "symbol": "GLXY"
+        },
+        {
+          "isin": "GB00BMHVL512",
+          "name": "Klarna Group Plc",
+          "weight": 0.2,
+          "symbol": "KLAR"
         },
         {
           "isin": "IL0011741688",
@@ -166,16 +166,16 @@
           "symbol": "ETOR"
         },
         {
-          "isin": "US30303M1027",
-          "name": "Meta Platforms Inc",
-          "weight": 0.16,
-          "symbol": "META"
-        },
-        {
           "isin": "US36118L1061",
           "name": "Futu Hldg Sp ADR",
           "weight": 0.16,
           "symbol": "FUTU"
+        },
+        {
+          "isin": "US30303M1027",
+          "name": "Meta Platforms Inc",
+          "weight": 0.16,
+          "symbol": "META"
         },
         {
           "isin": "KYG596691041",
@@ -244,16 +244,16 @@
           "symbol": "BABA"
         },
         {
-          "isin": "KY30744W1070",
-          "name": "Farfetch Ltd",
-          "weight": 0,
-          "symbol": "FTCHQ"
-        },
-        {
           "isin": "US47100L1118",
           "name": "Defi Development Corp (serie)",
-          "weight": 0,
+          "weight": 0.0,
           "symbol": "DFDV"
+        },
+        {
+          "isin": "KY30744W1070",
+          "name": "Farfetch Ltd",
+          "weight": 0.0,
+          "symbol": "FTCHQ"
         }
       ]
     },
@@ -363,16 +363,16 @@
           "symbol": "UMC"
         },
         {
-          "isin": "JP3164720009",
-          "name": "Renesas Electro",
-          "weight": 0.29,
-          "symbol": "6723.T"
-        },
-        {
           "isin": "KYG0535Q1331",
           "name": "Asmpt Ltd",
           "weight": 0.29,
           "symbol": "0522.HK"
+        },
+        {
+          "isin": "JP3164720009",
+          "name": "Renesas Electro",
+          "weight": 0.29,
+          "symbol": "6723.T"
         },
         {
           "isin": "JP3293330001",
@@ -399,16 +399,16 @@
           "symbol": "HIMX"
         },
         {
-          "isin": "BMG6331P1041",
-          "name": "Alpha and Omega Semiconductor Ltd",
-          "weight": 0.22,
-          "symbol": "AOSL"
-        },
-        {
           "isin": "USN070592100",
           "name": "ASML Hold NY Reg",
           "weight": 0.22,
           "symbol": "ASML"
+        },
+        {
+          "isin": "BMG6331P1041",
+          "name": "Alpha and Omega Semiconductor Ltd",
+          "weight": 0.22,
+          "symbol": "AOSL"
         },
         {
           "isin": "US6098391054",
@@ -495,6 +495,12 @@
           "symbol": "TXN"
         },
         {
+          "isin": "KYG254571055",
+          "name": "Crdo",
+          "weight": 0.13,
+          "symbol": "CRDO"
+        },
+        {
           "isin": "DE0006231004",
           "name": "Infineon Technolo N",
           "weight": 0.13,
@@ -505,12 +511,6 @@
           "name": "Nova Ltd",
           "weight": 0.13,
           "symbol": "NVMI"
-        },
-        {
-          "isin": "KYG254571055",
-          "name": "Crdo",
-          "weight": 0.13,
-          "symbol": "CRDO"
         },
         {
           "isin": "US5950171042",
@@ -587,7 +587,7 @@
         {
           "isin": "US0420682058",
           "name": "Arm Holdings ADR",
-          "weight": 0,
+          "weight": 0.0,
           "symbol": "ARM"
         }
       ]
@@ -834,16 +834,16 @@
           "symbol": "SWMR"
         },
         {
-          "isin": "KYG4602S1057",
-          "name": "Horizon Robotics Inc",
-          "weight": 0.1,
-          "symbol": "9660.HK"
-        },
-        {
           "isin": "US21874A1060",
           "name": "Core Scientific",
           "weight": 0.1,
           "symbol": "CORZ"
+        },
+        {
+          "isin": "KYG4602S1057",
+          "name": "Horizon Robotics Inc",
+          "weight": 0.1,
+          "symbol": "9660.HK"
         },
         {
           "isin": "US1273871087",
@@ -902,13 +902,13 @@
         {
           "isin": "US22788C1053",
           "name": "CrwdStrik Hldg",
-          "weight": 0,
+          "weight": 0.0,
           "symbol": "CRWD"
         },
         {
           "isin": "US34959E1091",
           "name": "Fortinet",
-          "weight": 0,
+          "weight": 0.0,
           "symbol": "FTNT"
         }
       ]
@@ -971,16 +971,16 @@
           "symbol": "OSCR"
         },
         {
-          "isin": "CA6979001089",
-          "name": "Pan American Silver Corp",
-          "weight": 0.27,
-          "symbol": "PAAS.TO"
-        },
-        {
           "isin": "US02927U2087",
           "name": "American Resources Corp",
           "weight": 0.27,
           "symbol": "AREC"
+        },
+        {
+          "isin": "CA6979001089",
+          "name": "Pan American Silver Corp",
+          "weight": 0.27,
+          "symbol": "PAAS.TO"
         },
         {
           "isin": "US8485603067",
@@ -989,16 +989,16 @@
           "symbol": "SPIR"
         },
         {
-          "isin": "KYG651631007",
-          "name": "Joby Aviation Inc",
-          "weight": 0.26,
-          "symbol": "JOBY"
-        },
-        {
           "isin": "US35953D4016",
           "name": "Fubotv Inc -Class A",
           "weight": 0.26,
           "symbol": "FUBO"
+        },
+        {
+          "isin": "KYG651631007",
+          "name": "Joby Aviation Inc",
+          "weight": 0.26,
+          "symbol": "JOBY"
         },
         {
           "isin": "US53224K3023",
@@ -1025,12 +1025,6 @@
           "symbol": "HFG.F"
         },
         {
-          "isin": "BG1100003166",
-          "name": "Shelly",
-          "weight": 0.23,
-          "symbol": "SLYG.DE"
-        },
-        {
           "isin": "CA32076V1031",
           "name": "First Majestic Silver Corp",
           "weight": 0.23,
@@ -1041,6 +1035,12 @@
           "name": "Hecla Mining Co",
           "weight": 0.23,
           "symbol": "HL"
+        },
+        {
+          "isin": "BG1100003166",
+          "name": "Shelly",
+          "weight": 0.23,
+          "symbol": "SLYG.DE"
         },
         {
           "isin": "US1921085049",
@@ -1205,12 +1205,6 @@
           "symbol": "PLUG"
         },
         {
-          "isin": "CA7142661031",
-          "name": "Perpetua Resources Corp",
-          "weight": 0.1,
-          "symbol": "PPTA"
-        },
-        {
           "isin": "US04271T1007",
           "name": "Array Technologies Inc",
           "weight": 0.1,
@@ -1221,6 +1215,12 @@
           "name": "Microvast Holdings Inc",
           "weight": 0.1,
           "symbol": "MVST"
+        },
+        {
+          "isin": "CA7142661031",
+          "name": "Perpetua Resources Corp",
+          "weight": 0.1,
+          "symbol": "PPTA"
         },
         {
           "isin": "US78397Q1094",
@@ -1253,16 +1253,16 @@
           "symbol": "NTLA"
         },
         {
-          "isin": "KYG2584S1012",
-          "name": "Cslm Digital Asset Acqu - A",
-          "weight": 0.08,
-          "symbol": "KOYN"
-        },
-        {
           "isin": "US09263B2079",
           "name": "Blacksky Technology Inc",
           "weight": 0.08,
           "symbol": "BKSY"
+        },
+        {
+          "isin": "KYG2584S1012",
+          "name": "Cslm Digital Asset Acqu - A",
+          "weight": 0.08,
+          "symbol": "KOYN"
         },
         {
           "isin": "US5502411037",
@@ -1303,31 +1303,31 @@
         {
           "isin": "CA00288U1066",
           "name": "Abcellera Biologics Inc",
-          "weight": 0,
+          "weight": 0.0,
           "symbol": "ABCL"
-        },
-        {
-          "isin": "US6837121291",
-          "name": "Opendoor Tech Warrant Series K",
-          "weight": 0,
-          "symbol": "OPENW"
         },
         {
           "isin": "US6837121374",
           "name": "Opendoor Tech Warrant Series A",
-          "weight": 0,
+          "weight": 0.0,
           "symbol": "OPENL"
+        },
+        {
+          "isin": "US6837121291",
+          "name": "Opendoor Tech Warrant Series K",
+          "weight": 0.0,
+          "symbol": "OPENW"
         },
         {
           "isin": "US6837121457",
           "name": "Opendoor Tech Warrant Series Z",
-          "weight": 0,
+          "weight": 0.0,
           "symbol": "OPENZ"
         },
         {
           "isin": "US83571B1008",
           "name": "Sony Financial Group ADR",
-          "weight": 0,
+          "weight": 0.0,
           "symbol": "SFGYY"
         }
       ]
@@ -1454,16 +1454,16 @@
           "symbol": "SOLS"
         },
         {
-          "isin": "CA64046G1063",
-          "name": "Neo Performance Materials In",
-          "weight": 0.17,
-          "symbol": "NEO.TO"
-        },
-        {
           "isin": "US19247G1076",
           "name": "Coherent",
           "weight": 0.17,
           "symbol": "COHR"
+        },
+        {
+          "isin": "CA64046G1063",
+          "name": "Neo Performance Materials In",
+          "weight": 0.17,
+          "symbol": "NEO.TO"
         },
         {
           "isin": "US68236H2040",
@@ -1690,8 +1690,8 @@
         "Software"
       ],
       "themeKey": "compute",
-      "count": 22,
-      "weightSum": 6.93,
+      "count": 18,
+      "weightSum": 6.05,
       "companies": [
         {
           "isin": "FR0013227113",
@@ -1736,18 +1736,6 @@
           "symbol": "MU"
         },
         {
-          "isin": "US74766W1080",
-          "name": "Quantum Computing Inc",
-          "weight": 0.3,
-          "symbol": "QUBT"
-        },
-        {
-          "isin": "US26740W1099",
-          "name": "D-Wave Quantum Inc",
-          "weight": 0.29,
-          "symbol": "QBTS"
-        },
-        {
           "isin": "JP3236330001",
           "name": "Kioxia Holdings",
           "weight": 0.28,
@@ -1770,12 +1758,6 @@
           "name": "Seagate Hldgs",
           "weight": 0.25,
           "symbol": "STX"
-        },
-        {
-          "isin": "US76655K1034",
-          "name": "Rigetti Computing Inc",
-          "weight": 0.25,
-          "symbol": "RGTI"
         },
         {
           "isin": "US86800U3023",
@@ -1808,12 +1790,6 @@
           "symbol": "DELL"
         },
         {
-          "isin": "US46222L1089",
-          "name": "IonQ",
-          "weight": 0.04,
-          "symbol": "IONQ"
-        },
-        {
           "isin": "US0079031078",
           "name": "Advanced Micro D",
           "weight": 0.03,
@@ -1824,6 +1800,44 @@
           "name": "Apple",
           "weight": 0.01,
           "symbol": "AAPL"
+        }
+      ]
+    },
+    {
+      "title": "Quantum",
+      "slug": "quantum",
+      "problem": "Kvantecomputing – tidligt tema, forslag til gennemgang.",
+      "chain": [
+        "Compute",
+        "Quantum"
+      ],
+      "themeKey": "quantum",
+      "count": 4,
+      "weightSum": 0.88,
+      "companies": [
+        {
+          "isin": "US74766W1080",
+          "name": "Quantum Computing Inc",
+          "weight": 0.3,
+          "symbol": "QUBT"
+        },
+        {
+          "isin": "US26740W1099",
+          "name": "D-Wave Quantum Inc",
+          "weight": 0.29,
+          "symbol": "QBTS"
+        },
+        {
+          "isin": "US76655K1034",
+          "name": "Rigetti Computing Inc",
+          "weight": 0.25,
+          "symbol": "RGTI"
+        },
+        {
+          "isin": "US46222L1089",
+          "name": "IonQ",
+          "weight": 0.04,
+          "symbol": "IONQ"
         }
       ]
     },
@@ -1895,16 +1909,16 @@
           "symbol": "NEE"
         },
         {
-          "isin": "NL0015002Q12",
-          "name": "Terra Innovatum Global Nv",
-          "weight": 0.28,
-          "symbol": "NKLR"
-        },
-        {
           "isin": "US8425871071",
           "name": "Southern Co/The",
           "weight": 0.28,
           "symbol": "SO"
+        },
+        {
+          "isin": "NL0015002Q12",
+          "name": "Terra Innovatum Global Nv",
+          "weight": 0.28,
+          "symbol": "NKLR"
         },
         {
           "isin": "US92840M1027",
@@ -2000,16 +2014,16 @@
           "symbol": "NB"
         },
         {
-          "isin": "AU000000LYC6",
-          "name": "Lynas Rare",
-          "weight": 0.2,
-          "symbol": "LYC.AX"
-        },
-        {
           "isin": "VGG2662B1031",
           "name": "Critical Metals Corp",
           "weight": 0.2,
           "symbol": "CRML"
+        },
+        {
+          "isin": "AU000000LYC6",
+          "name": "Lynas Rare",
+          "weight": 0.2,
+          "symbol": "LYC.AX"
         },
         {
           "isin": "CA53681J1030",
@@ -2036,6 +2050,12 @@
           "symbol": "ALM"
         },
         {
+          "isin": "US46578C1080",
+          "name": "Ivanhoe Electric Inc / Us",
+          "weight": 0.13,
+          "symbol": "IE"
+        },
+        {
           "isin": "CA8536061010",
           "name": "Standard Lithium Ltd",
           "weight": 0.13,
@@ -2046,12 +2066,6 @@
           "name": "Trilogy Metals Inc",
           "weight": 0.13,
           "symbol": "TMQ"
-        },
-        {
-          "isin": "US46578C1080",
-          "name": "Ivanhoe Electric Inc / Us",
-          "weight": 0.13,
-          "symbol": "IE"
         },
         {
           "isin": "CA8765111064",
@@ -2183,16 +2197,16 @@
           "symbol": "VOYG"
         },
         {
-          "isin": "CA55293N1096",
-          "name": "Mda Space Ltd",
-          "weight": 0.16,
-          "symbol": "MDA.TO"
-        },
-        {
           "isin": "US4202011056",
           "name": "Hawkeye 360 Inc",
           "weight": 0.16,
           "symbol": "HAWK"
+        },
+        {
+          "isin": "CA55293N1096",
+          "name": "Mda Space Ltd",
+          "weight": 0.16,
+          "symbol": "MDA.TO"
         },
         {
           "isin": "US46125A1007",

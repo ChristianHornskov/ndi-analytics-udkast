@@ -119,3 +119,14 @@ Heuristik: GICS sector/industry → nærmeste NDI-tema (chips/compute/software/p
 | US6837121374 | Opendoor Tech Warrant Series A | 0.00 | andet | andet | ISIN-opslag → andet |
 | US6837121457 | Opendoor Tech Warrant Series Z | 0.00 | andet | andet | ISIN-opslag → andet |
 | US83571B1008 | Sony Financial Group ADR | 0.00 | andet | andet | ISIN-opslag → andet |
+
+
+## Quantum-tag (2026-10-15 ~23:05)
+4 selskaber flyttet compute → quantum (themeStatus=forslag). Quantumscape (batteri) uændret i andet.
+
+| ISIN | Navn | Vægt % | Fra | Til | Begrundelse |
+|---|---|---:|---|---|---|
+| US74766W1080 | Quantum Computing Inc | 0.3 | compute | quantum | kvantecomputing (navn/kerneprodukt, forslag) |
+| US26740W1099 | D-Wave Quantum Inc | 0.29 | compute | quantum | kvantecomputing (navn/kerneprodukt, forslag) |
+| US76655K1034 | Rigetti Computing Inc | 0.25 | compute | quantum | kvantecomputing (navn/kerneprodukt, forslag) |
+| US46222L1089 | IonQ | 0.04 | compute | quantum | kvantecomputing (navn/kerneprodukt, forslag) |

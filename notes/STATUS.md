@@ -216,3 +216,10 @@ Ikke taget: MUST 4-rest (68 i Andet, modenhed), SHOULD 3, 5 og 7, COULD. notes/H
 ## Fra Grok (SVG treemap/sunburst) · ~23:00 CEST
 - vaerdikaeder: squarify SVG-treemap + sunburst-toggle, legend, 0 konsolfejl (Playwright).
 - Visual-variety SHOULD 1 lukket. Market cap-lag stadig åben (ingen mcap i data).
+
+
+## Fra Grok (quantum + flaskehalse) · ~23:05 CEST
+- Quantum-tema (forslag): IonQ, Rigetti, D-Wave, Quantum Computing Inc. Quantumscape uændret.
+- themes.json + treemap opdateret; multi-tags bi-tag compute.
+- vaerdikaeder: kap-flaskehalse scroll-telling (energi, wafers, datacenter, optik/folk) + compliance-band.
+- MADS: quantum [x], flaskehalse [x]. Market cap/produktkategori stadig blokeret uden data.

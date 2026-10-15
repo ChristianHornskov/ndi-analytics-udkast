@@ -30,7 +30,7 @@ Kilder: slack_ny_graf_2026-10-15.md, vision.txt, mads_tankemodel.md, investering
 - [x] Energiforsyning / -transmission / -ressourcer (temaer energy + energy-resources)
 - [x] Optiske connects (tema connect)
 - [x] SpaceTech (tema space)
-- [ ] Quantum-tag — åben
+- [x] Quantum-tag — 4 selskaber (forslag); Quantumscape uændret (batteri)
 - [ ] Legacy-mistænkt / Trump-tags — deferred (UX skjult)
 - [ ] Sortering: 52u-drawdown, optrend, vol, insider — deferred (compliance på per-aktie)
 - [x] Ingen P/E i v1 (skjult); P/S skjult
@@ -50,7 +50,7 @@ Kilder: slack_ny_graf_2026-10-15.md, vision.txt, mads_tankemodel.md, investering
 - [x] Hvorfor mange aktier / spredning
 - [x] Udvikling frem for vinder (lær/saadan-taenker-vi)
 - [x] P/E forklarer ikke tech (lær)
-- [~] Fysiske flaskehalse / knaphed som scroll-telling — chapters på vaerdikaeder; kan udvides
+- [x] Fysiske flaskehalse / knaphed som scroll-telling (kap-flaskehalse på vaerdikaeder)
 
 ## Cyklus-log
 | Tid | Item | Commit |
@@ -59,3 +59,4 @@ Kilder: slack_ny_graf_2026-10-15.md, vision.txt, mads_tankemodel.md, investering
 | 22:58 | Visual-variety pass + Grok review; ship vaerdikaeder.html | (denne) |
 | 23:00 | Drawdown middel/median + underwater + episode bars | (denne) |
 | 23:02 | SVG treemap + sunburst toggle på vaerdikaeder | (denne) |
+| 23:05 | Quantum-tag (forslag) + flaskehalse scroll-telling | (denne) |

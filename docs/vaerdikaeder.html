@@ -73,6 +73,13 @@
     .layout-toggle{display:flex;gap:8px;margin:8px 0 12px;flex-wrap:wrap}
     .anno{font-size:12px;color:var(--yellow);margin-top:4px}
 
+
+    .scarce-grid{display:grid;gap:12px;margin:16px 0}
+    @media(min-width:800px){.scarce-grid{grid-template-columns:1fr 1fr}}
+    .scarce{border:1.5px solid var(--brand);border-radius:12px;padding:16px;background:#0b171d;border-left:4px solid var(--yellow)}
+    .scarce h3{font-size:15px;color:var(--cyan);margin:0 0 6px}
+    .scarce p{font-size:13px;color:var(--muted);line-height:1.55;margin:0}
+    .scarce .tagline{font-size:11px;color:var(--yellow);letter-spacing:.4px;margin-bottom:6px;font-weight:700}
   </style>
 </head>
 <body>
@@ -122,6 +129,35 @@
       <h2>Tidslinje: teknologiske skift</h2>
       <p class="lede" style="font-size:14px;margin-bottom:8px">Ikke en prognose. En ramme for, hvorfor knaphed og flaskehalse flytter sig.</p>
       <div class="tl" id="timeline"></div>
+    </section>
+
+
+    <section class="chapter panel" id="kap-flaskehalse">
+      <h2>Fysiske flaskehalse (scroll-telling)</h2>
+      <p class="lede" style="font-size:14px">NDI ser AI-værdikæden som et flodsystem med dæmninger. Når én flaskehals letter, flytter presset. Ikke en prognose — en ramme for, hvorfor fonden ejer hele kæden.</p>
+      <div class="scarce-grid">
+        <article class="scarce">
+          <div class="tagline">FLASKEHALS · ENERGI</div>
+          <h3>Strøm før flere chips</h3>
+          <p>Uden ny elproduktion og stærkere net kan der ikke bygges mere compute. Gasturbiner, kernekraft, sol/vind, batterier og transmission hører med i tech-kæden — ikke kun chipdesign.</p>
+        </article>
+        <article class="scarce">
+          <div class="tagline">FLASKEHALS · WAFERS &amp; PACKAGING</div>
+          <h3>Silicium og avanceret pakning</h3>
+          <p>Efterspørgslen presser halvleder-kæden: design, foundry, udstyr og HBM/optik-pakning. Knaphed flytter mellem led, når kapacitet åbner et andet sted.</p>
+        </article>
+        <article class="scarce">
+          <div class="tagline">FLASKEHALS · DATACENTER</div>
+          <h3>Racks, køling, transformere</h3>
+          <p>Byggetid, køling og strømfordeling i datacentret er fysiske begrænsninger. Softwaren venter på mursten, kobber og kWh.</p>
+        </article>
+        <article class="scarce">
+          <div class="tagline">FLASKEHALS · OPTIK &amp; FOLK</div>
+          <h3>Forbindelser og kompetencer</h3>
+          <p>Optiske connects mellem knuder, og folk der kan bygge og drive systemerne, er også knaphed. Fonden spreder sig, fordi vi ikke ved, hvilken dæmning der næste gang holder vandet tilbage.</p>
+        </article>
+      </div>
+      <p class="band">Formuleringer inspireret af NDI's offentlige formidling. Generel information — ikke anbefaling. Se også <a href="laer/saadan-taenker-vi.html">Sådan tænker vi</a>.</p>
     </section>
 
     <section class="chapter panel" id="kap-filosofi">

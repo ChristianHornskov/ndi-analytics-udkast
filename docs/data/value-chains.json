@@ -1393,63 +1393,53 @@
   "treemap": [
     {
       "key": "platforms",
-      "label": "platforms",
       "w": 16.01,
       "n": 40
     },
     {
       "key": "chips",
-      "label": "chips",
       "w": 13.19,
       "n": 53
     },
     {
       "key": "software",
-      "label": "software",
       "w": 12.38,
       "n": 51
     },
     {
-      "key": "andet",
-      "label": "andet",
-      "w": 11.92,
-      "n": 68
-    },
-    {
       "key": "connect",
-      "label": "connect",
       "w": 8.21,
       "n": 30
     },
     {
       "key": "physical",
-      "label": "physical",
       "w": 7.03,
       "n": 23
     },
     {
-      "key": "compute",
-      "label": "compute",
-      "w": 6.93,
-      "n": 22
-    },
-    {
       "key": "energy",
-      "label": "energy",
       "w": 6.31,
       "n": 15
     },
     {
+      "key": "compute",
+      "w": 6.05,
+      "n": 18
+    },
+    {
       "key": "energy-resources",
-      "label": "energy-resources",
       "w": 5.58,
       "n": 25
     },
     {
       "key": "space",
-      "label": "space",
       "w": 4.38,
       "n": 18
+    },
+    {
+      "key": "quantum",
+      "w": 0.88,
+      "n": 4
     }
   ]
 }

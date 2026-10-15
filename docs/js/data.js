@@ -20,6 +20,7 @@ export const THEME_LABELS = {
   physical: 'Fysisk tech',
   energy: 'Energi',
   'energy-resources': 'Energiressourcer',
+  quantum: 'Quantum',
   andet: 'Andet / uklassificeret',
 };
 
