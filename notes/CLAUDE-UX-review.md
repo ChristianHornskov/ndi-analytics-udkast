@@ -241,3 +241,31 @@ Main har ikke flyttet sig. Jeg har kørt Playwright mod live-sitet på 25 sider 
 - Omkostninger: tastefejlen "inventeret" er rettet. Nu står der "Det er ikke et beregnet ÅOP" ✅.
 - periode.html er kort og ren og har risikolinje. AKK-tilstanden viser kun "Afkast vises efter 12 måneder" ✅.
 - Entré på 375: tre døre og en klar fold, og "Sådan investerer du" står som knap i headeren ✅.
+
+## 2026-10-16 00:41 CEST · cyklus 11 (main `fb68cd0`, delta efter merge af lane B/E/X)
+
+Main er gået fra `1bc0d43` til `fb68cd0` (30 docs-filer ændret). Live er lig med main: invester trin 4 og fondens graf-takeaway kan ses live. Jeg har kørt Playwright på 27 sider ved 375 og 1280 px. Der er 0 sider med vandret scroll. Én konsolfejl i første kørsel: tema.html gav "Identifier 'data' has already been declared" og viste kun 214 tegn. Ved genkørsel med cache-buster rendererede siden fint (56 selskaber i Chips, 0 fejl). Det var sandsynligvis Pages-cache midt i en deploy. Hold øje med det.
+
+### Lukket siden cyklus 10 ✅
+- **Top 10 på porteføljen:** "Top 10 efter vægt pr. 1. jun. 2026" står nu på porteføljen.
+- **Livscyklus-boksen er ikke længere tom.** Alle 345 selskaber er placeret og mærket "forslag fra offentlig industri/tema — afventer NDI".
+- **Invester trin 4** linker nu til "officielle omkostningstal" (omkostninger.html).
+- **Drawdown:** toppen er rettet til 18. feb. 2025, og der er en ny streg for "åben episode" med forklaring i figcaption og desc.
+- **Fonden har en klar takeaway under grafen:** "Fonden steg +104,8 % i den valgte periode (22. sep. 2023 → 14. okt. 2026)" plus kildelinje. Det hjælper privat-personaen.
+
+### MUST
+- **ndi-perspektiv er fordoblet igen:** ca. 95.500 tegn, **66.900 px på 375** (31.300 i cyklus 10) og **303 "AI-udkast"-mærker** (139 før). Det er nu 150 linser i JSON-rækkefølge (jf. lane-B i STATUS). Siden kan ikke bruges på mobil, og mærkerne er støj. Gruppér efter tema/led med `<details>` eller filter, og brug ét AI-banner øverst i stedet for et mærke pr. felt.
+- Uændret: "Mads følger"/"Konti Mads følger" (`js/x-feed.js:339`, `ndi-paa-x.html:86,109,163`).
+- Uændret: "afventer"/"udfyldes" står synligt på fonden (ÅTD), fakta (×3), risici (×2), portefølje (×2), udforsk (×2), SoftBank (×2) og omkostninger.
+
+### SHOULD
+- **Livscyklus på porteføljen** bruger "Growth / GARP / Value" og "Pædagogisk model fra bogen". Det er jargon for privat-personaen. Brug danske etiketter (Vækst / Vækst til rimelig pris / Værdi), og forklar "bogen" (hvilken?) eller fjern henvisningen.
+- **Udbytte vises stadig som "38.9 kr." og "38.0 kr."** på fonden og periode.html (engelsk punktum). Skriv `38,90 kr.`
+- **Primær-nav på 375** har stadig kun Entré, Fonden, Porteføljen og Udforsk. Omkostninger ligger i footer-linkrækken (`js/app.js:290`) og som knap på fonden. FO-personaen skal stadig lede efter dem.
+- **Små trykflader** er uændrede (tema ca. 114, ndi-perspektiv ca. 355 links under 24 px på 375).
+- **om-data på 375** viser kun ca. 1.100 tegn, fordi alle 4 `<details>` er lukkede, mens de er åbne på desktop. Det er fint, men titlerne skal sige, hvad der er indeni ("Ordliste (87 ord)").
+- Uændret: nyhedsarkiv har 8 "Placeholder:", og værdikæder er stadig ca. 18.000 tegn / 15.400 px på 375.
+
+### Nice
+- tema.html har nu "Kun med NDI-linse (27)" og teksten "Et selskab uden linse er ikke vurderet dårligere". Det er godt formuleret.
+- Visuel variation: drawdown, tema og fonden har hver sit tydelige mønster. Træthed opstår kun på de lange liste-sider (ndi-perspektiv, værdikæder).

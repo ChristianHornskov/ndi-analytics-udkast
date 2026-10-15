@@ -286,3 +286,36 @@ Ikke juridisk rådgivning. Tjekket med Playwright på renderet tekst fra live-si
 - Beholdningerne er forsinkede ("pr. 1. jun. 2026 … Ikke dagsaktuel"), og fonden siger "aldrig afslører fondens aktuelle handler".
 - AI-mærkningen er der (ndi-perspektiv 139, SoftBank 9). Mængden er et UX-problem, ikke et compliance-problem.
 - Omkostningssiden er ærlig: "Det er ikke et beregnet ÅOP", satserne lægges ikke sammen, og der er en kr.-kvittering.
+
+## 2026-10-16 00:41 CEST · cyklus 11 (main `fb68cd0`, delta)
+
+Ikke juridisk rådgivning. Tjekket med Playwright på renderet tekst fra live-sitet (27 sider ved 375 og 1280) og med grep/diff i `docs/` (`1bc0d43..fb68cd0`). Pages er lig med main.
+
+### Lukket ✅
+- **MUST 3 (DD-top efter bund) er lukket.** `risk-stats.json` har nu `maxDdPeak` 2025-02-18 før `maxDdTrough` 2025-04-08.
+- **X-tekst "fonde NewDeal Invest rådgiver"** er omskrevet til "offentlige totalafkasttal … (Fundmarket)" ✅. "$PMINDI betaler udbytte" og "Begge er også i $PMINDI" (@CHornskov) er fjernet fra nyhedsfeedet ✅.
+- **Invester trin 4** linker til omkostningstal ✅ (SHOULD fra cyklus 10).
+
+### MUST (åbne)
+1. **Ingen markedsføringsmærkning.** "markedsføring" står på 0 af 27 renderede sider (findes kun i `data/fund-facts.json`).
+2. **"Mads følger"** renderes stadig på SoftBank og ndi-paa-x (`js/x-feed.js:339`, `ndi-paa-x.html:86,109,163`).
+3. **ndi-paa-x mangler en tabsadvarsel** (0 hits på "tab" og 0 på "historisk afkast").
+4. **PMINDIAKK-NAV før 12 mdr.:** fonden-AKK viser stadig "Seneste NAV 98,40 · 14. okt. 2026" og "samme overordnede strategi som PMINDI" (`js/app.js:333,336`). Sammenlign er uændret.
+5. **ÅTD/100.000 kr. "afventer Fundmarket-godkendelse"** står stadig på fonden, mens tallene vises. **Nyt:** den nye graf-takeaway (`js/app.js` `#chart-takeaway`) gentager afkastet som prosa ("Fonden steg +104,8 % …"). Når der vælges ÅTD eller delår 2023, gentager den også de tal, der afventer godkendelse. Takeaway'en skal følge samme gate som ÅTD.
+
+### SHOULD
+- **Graf-takeaway uden advarsel lige ved siden af.** Advarslen "Historisk afkast er ikke en pålidelig indikator …" står i KPI-blokken over grafen, men ikke ved selve takeaway-sætningen. En sætning som "Fonden steg X %" bør have advarslen i samme blok. Det er nemt: tilføj den til `.src`-linjen.
+- **Tredjeparts X-markører på fondens graf/feed** er stadig til stede ("Udvalgte X-markører er offentlige opslag — ikke NDI's holdning" er nu skrevet under grafen ✅, men indholdet er uændret). Nyt opslag 2026-07-27 @BullTheoryio "BREAKING: Nvidia is in talks to backstop $250 BILLION…". Tekster er nu klippet midt i et ord ("Europe nee", "Jensen Huang says this is an eng"). Det er ikke et compliance-problem i sig selv, men det ser uredigeret ud, og "BREAKING" er hype-tone ved siden af en fond. Fjern det eller klip ved et ordskift.
+- **Livscyklus-forslag for alle 345:** de er tydeligt mærket "forslag … afventer NDI" ✅. "Growth/GARP/Value" kan dog læses som en stilkategori for fonden. Sørg for, at fondens officielle strategi ikke modsiges.
+- **KID-link mangler** stadig i renderet tekst på værdikæder, vaerdikaede, drawdown, temaer, tema, idéer, ndi-perspektiv, selskaber A–Z, periode og nyhedsarkiv.
+- **Omkostninger mangler stadig "Du kan tabe …"** (0 hits på "tab").
+
+### Rådgivningsord (gennemgået i kontekst) ✅
+- "overvægt" (værdikæder ×2, tema) står kun i negationer ("ikke bevidste overvægte", "ikke anbefaling eller bevidst overvægt").
+- "anbefaler" (FAQ, invester) bruges kun som "KID'et anbefaler mindst 5 år". Det er OK.
+- Der er 0 hits på garanteret, sikker investering, "køb nu" og "øger eksponering". Klarna-teksten er omformuleret til "udskudt betaling" (lane-B) ✅.
+
+### OK ✅
+- Beholdningerne er forsinkede (pr. 1. jun. 2026) på portefølje, tema og udforsk. Der er ingen live trades.
+- PMINDIAKK viser intet afkast før 12 mdr. ("Vises efter 12 måneder"). Der er ingen 1m/3m ("Ingen 1- eller 3-måneders fremhævning"). "Fonden har intet fast benchmark".
+- AI-mærkning er til stede (ndi-perspektiv 303, tema-linse "(linse, udkast)").
