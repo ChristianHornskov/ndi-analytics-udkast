@@ -505,3 +505,30 @@ På år til dato er 4. feb. 2026 −2,0 %. Prikken på kurven, udlæsningen og t
 Teksten "Dybeste fald" står over 2025-søjlen. De fire søjler ender på samme linje ved 1280. I to kolonner ved 375 og 320 ender de to søjler i samme række på samme linje. Søjlen er stadig årets afkast, +15,2 %. Ingen sidescroll, ingen konsolfejl.
 
 `lane-D` er klar til merge. Ikke main. Ikke færdig.
+
+## Fra Claude lane-A · 2026-10-16 ~00:25 CEST
+Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html, value-chains.json og notes.
+1. **Rum: "Hvorfor er det blevet billigere at komme op?"** Ny boks på rum-fanen med en før/nu-tegning (inline SVG: raket brugt én gang mod første trin, der lander igen) og en årsagskæde i fire kort: genbrug, flere ture, satellitter i serie og tjenester. Hvert kort åbner sit led. Teksten er mærket som baggrund, og der står ingen priser pr. kilo, fordi NDI ikke har opgjort dem. Det eneste tal er NDI's (SpaceX stod for 90 % af satellitopsendelserne, BLOG 23. juni 2024), og det står med NDI-mærke og kilde. Data ligger i `space.costStory`.
+2. **Robot-ordbog** på robotik-fanen med 9 ord (aktuator, sensor, lidar, effektelektronik, simulering, digital tvilling, humanoid, autonomi og edge-AI). Hvert ord linker til et led, og "Edge-AI" hopper til AI-kædens led for fysisk AI. Ordbogen er mærket som baggrund. Data ligger i `physical.glossary`. Rendering af ordbøgerne er samlet i én funktion, der deles af rum og robotik.
+Tjek: Playwright på 1280 og 375 med 0 konsolfejl og ingen sidescroll. Klik på "Satellitter i serie" åbner `#lk-sats`, og Edge-AI skifter til ai-compute. smoke.mjs 52/52 fail 0 (kørt mod lane-A's egen server; port 8765 var optaget af en anden worktree). Precheck PASSED. Grep efter handelssprog og tankestreger giver 0 hits.
+Næste: energiled mangler en lille ordbog eller "flaskehals"-markering pr. led, vaerdikaede.html kan vise rum-forklaringen i kort form, og kvante kan få en tidslinje-note (NVIDIA-udsagnet som citat med kilde). Ikke færdig.
+
+
+## Fra Claude lane-A · 2026-10-16 ~00:55 CEST
+Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html, vaerdikaede.html, value-chains.json og notes.
+1. **Energi-fanen: "Fra råstof til regnekraft".** Ny strømvej med 5 stationer: råstoffer, elproduktion (+ atomkraft/SMR), elnet, lagring og datacentre (hopper til AI-kæden). Hver station viser antal selskaber pr. 1. juni 2026. Stationer, hvor NDI har skrevet om pres, har et gult "NDI · pres"-mærke med kilde: kobber/sølv (BLOG 16/2-26), første flaskehals energi (30/3-26), transformere og transmission (10/8-26) og anden flaskehals datacentre (30/3-26). Lagring har et dæmpet "nævnt"-mærke. Under står NDI-tallet om ét års chipproduktion og to tredjedele af USA's kapacitet (BLOG 10/8-26). En note siger, at mærkerne ikke er prognose eller anbefaling. Data ligger i `energy.flow`.
+2. **Energi-ordbog** med 13 ord (GW, installeret kapacitet, grundlast, gasturbine, LNG, fission, SMR, transmission, transformer, batterilager, sjældne jordarter, kobber og væskekøling), mærket som baggrund. Hvert ord linker til et led. Data ligger i `energy.glossary`.
+3. **Kvante: "Hvor langt er der?".** Lille SVG-tidsakse (2025 til ca. 2045) med NVIDIA-direktørens udsagn gengivet med navn, dato og kilde (BLOG 13/1-25). Det står ikke i citationstegn, fordi vi ikke har ordlyden. Mads' egen formulering står i en separat NDI-linje. Noten siger, at det ikke er Mads' eller NDI's prognose. Data ligger i `quantum.horizon`.
+4. **vaerdikaede.html:** Hvert af de fire kæde-kort har fået et lær-link (🚀 ⚡ ⚙ ⏳), der åbner fanens forklaring direkte. vaerdikaeder.html understøtter nu deep-link til en sektion i en fane (`?kaede=energy#e-pane`, `#sp-cost`, `#p-pane`, `#q-hz`).
+Tjek: Playwright på 1280 og 375 med 0 konsolfejl og ingen sidescroll. Energi-hop fra datacenter-stationen åbner `ai-compute#lk-datacenter`, og alle 4 lær-links lander på sektionen. smoke.mjs 52/52 fail 0 (egen server på 8817). Precheck PASSED. Grep efter handelssprog og tankestreger giver 0 hits.
+Næste: AI-kædens 13 led kan få pres-mærker på samme måde (kun med NDI-kilde), og rum-fanen kan få en lille "hvem bygger hvad"-oversigt pr. højdebånd fra beholdningen. Ikke færdig.
+
+
+## Fra Claude lane-A · 2026-10-16 ~00:23 CEST
+Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html, vaerdikaede.html, value-chains.json og notes.
+1. **AI-fanen: "Floden gennem 13 led".** Nyt flodkort (inline SVG) med de 13 led i Mads' rækkefølge som stationer på en flod. Energi, datacentre og chipdesign har gule dæmninger ("1./2./3. flaskehals"), hukommelse og optik er mærket "begyndende flaskehals", og halvlederne står i en fælles boks. Cloud, data og software har stiplet ring ("ingen tydelig flaskehals"), og agenter og fysisk AI er cyan ("efterspørgslen starter her"). Alle mærker har kilden BLOG 30. marts 2026. Udstyr og foundry er mærket "(vores tolkning)", fordi NDI ikke har skrevet om pres netop dér. Kortet er vandret på desktop og lodret på mobil, og hver station åbner sit led. Data ligger i `press`, `short` og `riverMap` på ai-compute.
+2. **Pres-mærke på hvert AI-led-kort** (vaerdikaeder) og på hver node i vaerdikaede.html. Legenden på vaerdikaede.html siger ikke længere, at alle fem grupper er flaskehalse, og dæmning 4 står nu som "ifølge NDI endnu ingen tydelig flaskehals".
+3. **Handelssprog fjernet:** Agentisk AI sagde "NDI forventer, at dette led over tid fylder mere i porteføljen". Det er skrevet om til efterspørgsel og copilots.
+4. Deep-link `?kaede=ai-compute#a-pane`. Der er et link fra "Fem dæmninger" og fra vaerdikaede.html, og sektioner i faner har fået scroll-margin, så overskriften ikke gemmer sig under menuen.
+Tjek: Playwright på 1280 og 375 med 0 konsolfejl og ingen sidescroll. 13 stationer, og klik på 6 åbner `#lk-memory`. smoke.mjs fail 0 (egen server på 8817). Precheck PASSED. Grep efter handelssprog og tankestreger giver 0 hits.
+Næste: rum-fanen kan få "hvem bygger hvad" pr. højdebånd fra beholdningen (antal pr. led, ingen nøgletal), og kvante kan få krydslinks fra AI-flodkortet. Ikke færdig.

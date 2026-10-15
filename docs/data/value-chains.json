@@ -180,7 +180,13 @@
      "seeChain": null,
      "src": "BLOG 30. marts 2026 · 10. august 2026",
      "shift": "I USA får datacentre i stigende grad lov til at bygge egen strøm. Mads har beskrevet, at ét års chipproduktion potentielt kan kræve strøm svarende til omkring to tredjedele af USA's installerede kapacitet.",
-     "kind": "ndi"
+     "kind": "ndi",
+     "short": "Energi",
+     "press": {
+      "level": "dam",
+      "t": "Mads' første flaskehals i AI-udbygningen",
+      "src": "BLOG 30. marts 2026"
+     }
     },
     {
      "id": "datacenter",
@@ -244,7 +250,13 @@
      "seeChain": null,
      "src": "BLOG 30. marts 2026 · 27. juli 2026",
      "shift": "Moderne AI-racks bruger så meget strøm, at luftkøling ikke slår til, og væskekøling bliver standard (baggrund). Mads: hvis datacentret er fremtidens fabrik, bliver det strategisk, om intelligensen produceres i Vesten eller i Kina.",
-     "kind": "ndi"
+     "kind": "ndi",
+     "short": "Datacentre",
+     "press": {
+      "level": "dam",
+      "t": "Mange faktorer kan skabe flaskehalse her, fra byggeri til tilladelser",
+      "src": "BLOG 30. marts 2026"
+     }
     },
     {
      "id": "chipdesign",
@@ -306,7 +318,13 @@
      "seeChain": null,
      "src": "BLOG 30. marts 2026 · BOG s. 75–76",
      "shift": "XPU er en samlebetegnelse for specialiserede AI-chips, også cloudselskabernes egne (baggrund). Bogen bruger NVIDIA til at vise, at selv de største tech-aktier har haft fald på 50 til 90 %.",
-     "kind": "ndi"
+     "kind": "ndi",
+     "short": "Chipdesign",
+     "press": {
+      "level": "dam",
+      "t": "Halvledere er tredje flaskehals, med fokus på XPU'er og CPU'er",
+      "src": "BLOG 30. marts 2026"
+     }
     },
     {
      "id": "equipment",
@@ -369,7 +387,13 @@
      "seeChain": null,
      "src": "BLOG 21. oktober 2024 · 8. juni 2025",
      "shift": "Én leverandør dominerer EUV-litografi. Udstyrsselskaber afhænger af chipproducenternes investeringsbudgetter og svinger derfor meget (baggrund).",
-     "kind": "ndi"
+     "kind": "ndi",
+     "short": "Udstyr",
+     "press": {
+      "level": "group",
+      "t": "Hører til halvlederne. NDI har ikke skrevet om pres i netop dette led",
+      "src": "tolkning"
+     }
     },
     {
      "id": "foundry",
@@ -431,7 +455,13 @@
      "seeChain": null,
      "src": "BLOG 19. maj 2024 · 24. august 2026",
      "shift": "Den mest avancerede produktion er koncentreret i Taiwan, hvilket giver geopolitisk risiko (baggrund). Mads skriver, at Vesten skal bygge chipfabrikker sammen med kraftværker, elnet og datacentre.",
-     "kind": "ndi"
+     "kind": "ndi",
+     "short": "Foundry",
+     "press": {
+      "level": "group",
+      "t": "Hører til halvlederne. NDI har ikke skrevet om pres i netop dette led",
+      "src": "tolkning"
+     }
     },
     {
      "id": "memory",
@@ -491,7 +521,13 @@
      "seeChain": null,
      "src": "BLOG 16. december 2024 · 30. marts 2026",
      "shift": "Hukommelse har historisk været en meget cyklisk branche med store prisudsving (baggrund). Mads har siden 2024 set HBM som et led, hvor knapheden kan vise sig.",
-     "kind": "ndi"
+     "kind": "ndi",
+     "short": "Hukommelse",
+     "press": {
+      "level": "early",
+      "t": "Et af de led, hvor NDI allerede ser pres, sammen med optik",
+      "src": "BLOG 30. marts 2026"
+     }
     },
     {
      "id": "optics",
@@ -553,7 +589,13 @@
      "seeChain": null,
      "src": "BLOG 30. marts 2026 · 29. juni 2026",
      "shift": "Co-packaged optics, hvor optikken sidder direkte ved chippen, er en af teknologierne, der skal reducere strømforbruget (baggrund).",
-     "kind": "ndi"
+     "kind": "ndi",
+     "short": "Optik",
+     "press": {
+      "level": "early",
+      "t": "Et af de led, hvor NDI allerede ser pres, sammen med hukommelse",
+      "src": "BLOG 30. marts 2026"
+     }
     },
     {
      "id": "servers",
@@ -614,7 +656,13 @@
      "seeChain": null,
      "src": "BLOG 30. marts 2026",
      "shift": "Leddet samler chips, hukommelse og netværk til færdige systemer, så det mærker presset fra flere led på én gang (tolkning).",
-     "kind": "ndi"
+     "kind": "ndi",
+     "short": "Servere",
+     "press": {
+      "level": "group",
+      "t": "Nævnt som en del af halvlederflaskehalsen",
+      "src": "BLOG 30. marts 2026"
+     }
     },
     {
      "id": "cloud",
@@ -676,7 +724,13 @@
      "seeChain": null,
      "src": "BLOG 30. marts 2026 · 27. juli 2026",
      "shift": "Mads skriver, at intelligens bliver en råvare, og at AI-økonomien er begyndt at finansiere sig selv (BLOG 12. oktober 2026). Open weights kalder han \"en accelerator for hele AI-økonomien\".",
-     "kind": "ndi"
+     "kind": "ndi",
+     "short": "Cloud",
+     "press": {
+      "level": "open",
+      "t": "Endnu ingen tydelige flaskehalse. Mere et spørgsmål om, hvem der klarer sig",
+      "src": "BLOG 30. marts 2026"
+     }
     },
     {
      "id": "data",
@@ -737,7 +791,13 @@
      "seeChain": null,
      "src": "BLOG 30. marts 2026",
      "shift": "Forretningsmodellen er ikke afklaret endnu. NDI har ikke beskrevet, hvordan den kan udvikle sig.",
-     "kind": "ndi"
+     "kind": "ndi",
+     "short": "Data",
+     "press": {
+      "level": "open",
+      "t": "Interessant, men stadig en ret uafklaret forretningsmodel",
+      "src": "BLOG 30. marts 2026"
+     }
     },
     {
      "id": "software",
@@ -797,14 +857,20 @@
      "seeChain": null,
      "src": "BLOG 2. juni 2024 · 13. april 2026",
      "shift": "Holdningen har ændret sig: i 2024 handlede skepsisen om høje værdiansættelser, i 2026 om tvivl på selve forretningsmodellen, fordi AI kan forstyrre den.",
-     "kind": "ndi"
+     "kind": "ndi",
+     "short": "Software",
+     "press": {
+      "level": "open",
+      "t": "Svært at identificere de langsigtede selskaber, og feltet er relativt højt prissat",
+      "src": "BLOG 30. marts 2026"
+     }
     },
     {
      "id": "agents",
      "icon": "◎",
      "label": "Forbrugerapplikationer og agentisk AI",
      "blurb": "AI-assistenter og agenter, der selv udfører opgaver for mennesker og virksomheder.",
-     "ndi": "Efterspørgslen efter compute kommer i stigende grad herfra. NDI forventer, at dette led over tid fylder mere i porteføljen. Fase 2: copilots.",
+     "ndi": "Efterspørgslen efter compute kommer i stigende grad herfra. Mads kalder fase 2 for copilots: AI, der hjælper mennesker med opgaverne.",
      "themes": [
       "platforms",
       "software"
@@ -858,7 +924,13 @@
      "seeChain": null,
      "src": "BLOG 30. marts 2026 · 7. oktober 2024",
      "shift": "Fra chatbots, der svarer, til agenter, der handler. Det er her, efterspørgslen begynder i Mads' flodbillede.",
-     "kind": "ndi"
+     "kind": "ndi",
+     "short": "Agenter",
+     "press": {
+      "level": "source",
+      "t": "Efterspørgslen kommer i stigende grad herfra: først fra agentisk AI",
+      "src": "BLOG 30. marts 2026"
+     }
     },
     {
      "id": "physical-ai",
@@ -920,10 +992,28 @@
      "seeChain": "physical",
      "src": "BLOG 30. marts 2026 · 7. oktober 2024",
      "shift": "Mads forventer, at fysisk AI \"snart\" driver compute-efterspørgslen efter agentisk AI. Der er ingen præcise årstal.",
-     "kind": "ndi"
+     "kind": "ndi",
+     "short": "Fysisk AI",
+     "press": {
+      "level": "source",
+      "t": "… og snart fra fysisk AI",
+      "src": "BLOG 30. marts 2026"
+     }
     }
    ],
-   "icon": "🧠"
+   "icon": "🧠",
+   "riverMap": {
+    "title": "Floden gennem 13 led",
+    "lede": "Mads ser AI-kæden som et flodsystem. Vandet er efterspørgslen, og den starter nederst i kæden hos agenter og fysisk AI. Dæmningerne er de led, hvor NDI har skrevet om flaskehalse. Klik et led for at åbne det.",
+    "levels": {
+     "dam": "Dæmning: NDI kalder leddet en flaskehals",
+     "early": "Begyndende flaskehals ifølge NDI",
+     "group": "Hører til halvlederne (tredje flaskehals)",
+     "open": "Ingen tydelig flaskehals ifølge NDI",
+     "source": "Her starter efterspørgslen ifølge NDI"
+    },
+    "note": "Mærkerne gengiver, hvad NDI har skrevet (BLOG 30. marts 2026), og hvor det er vores tolkning, står det. De er ikke en prognose, ikke en rangering af selskaber og ikke en anbefaling. Ifølge Mads flytter presset til næste led, når en flaskehals løses."
+   }
   },
   {
    "id": "physical",
@@ -1144,7 +1234,55 @@
     "q": "Det, som vil ændre måden vi lever på, er den automatisering og robotisering, som vil skabe fase 3",
     "src": "BLOG 7. oktober 2024"
    },
-   "icon": "🤖"
+   "icon": "🤖",
+   "glossary": [
+    {
+     "term": "Aktuator",
+     "t": "Den del, der får robotten til at bevæge sig, fx en elmotor i et led eller et hydraulisk stempel. Det er robottens muskler.",
+     "link": "components"
+    },
+    {
+     "term": "Sensor",
+     "t": "Robottens sanser: kameraer, mikrofoner, tryk- og kraftsensorer. Uden dem ved robotten ikke, hvor den er, eller hvad den rører ved.",
+     "link": "components"
+    },
+    {
+     "term": "Lidar",
+     "t": "En laser, der måler afstande mange gange i sekundet og giver et 3D-billede af omgivelserne. Bruges i mange selvkørende biler og robotter.",
+     "link": "components"
+    },
+    {
+     "term": "Effektelektronik",
+     "t": "Elektronik, der styrer strømmen fra batteriet til motorerne. Bruges også i elbiler, solceller og elnet.",
+     "link": "components"
+    },
+    {
+     "term": "Simulering",
+     "t": "En virtuel verden, hvor robotten kan øve millioner af gange, før den prøver i virkeligheden. Det er billigere og mere sikkert end at øve med en rigtig robot.",
+     "link": "sim"
+    },
+    {
+     "term": "Digital tvilling",
+     "t": "En digital kopi af en fabrik, maskine eller by, som opdateres med data fra virkeligheden. Man kan afprøve ændringer i kopien først.",
+     "link": "sim"
+    },
+    {
+     "term": "Humanoid",
+     "t": "En robot bygget i menneskeform med arme, ben og hænder, så den kan bruge de samme værktøjer og rum, som mennesker bruger.",
+     "link": "robots"
+    },
+    {
+     "term": "Autonomi",
+     "t": "Hvor meget en maskine kan selv uden et menneske. Det går fra hjælp til føreren til at køre helt selv i bestemte områder.",
+     "link": "robots"
+    },
+    {
+     "term": "Edge-AI",
+     "t": "AI, der kører på en chip i selve robotten eller bilen i stedet for i et datacenter. Det giver hurtigere reaktion og virker uden netforbindelse.",
+     "hop": "ai-compute:physical-ai"
+    }
+   ],
+   "glossaryNote": "Ordbogen er generel baggrundsviden, ikke NDI's synspunkter. Ordene er valgt, fordi de går igen i robotkædens tre led."
   },
   {
    "id": "energy",
@@ -1679,7 +1817,127 @@
      "kind": "ndi"
     }
    ],
-   "icon": "⚡"
+   "icon": "⚡",
+   "flow": {
+    "title": "Fra råstof til regnekraft",
+    "lede": "Strømmen skal hele vejen fra mine og kraftværk til chippen i datacentret. Et gult mærke betyder, at NDI har skrevet om mangel eller pres i leddet. Tal er antal selskaber i den forsinkede beholdning pr. 1. juni 2026.",
+    "steps": [
+     {
+      "link": "materials",
+      "verb": "graves op",
+      "press": {
+       "t": "Prispres i metaller som kobber og sølv",
+       "src": "BLOG 16. februar 2026"
+      }
+     },
+     {
+      "link": "gen",
+      "verb": "bliver til strøm",
+      "alt": "smr",
+      "press": {
+       "t": "Første flaskehals: energi",
+       "src": "BLOG 30. marts 2026"
+      }
+     },
+     {
+      "link": "grid",
+      "verb": "sendes frem",
+      "press": {
+       "t": "Mangel på transformere og transmissionskapacitet",
+       "src": "BLOG 10. august 2026"
+      }
+     },
+     {
+      "link": "storage",
+      "verb": "gemmes til senere",
+      "note": {
+       "t": "Batterier nævnt under energiflaskehalsen",
+       "src": "BLOG 30. marts 2026"
+      }
+     },
+     {
+      "hop": "ai-compute:datacenter",
+      "verb": "bliver til compute",
+      "press": {
+       "t": "Anden flaskehals: datacentre",
+       "src": "BLOG 30. marts 2026"
+      }
+     }
+    ],
+    "fact": {
+     "t": "Ét års chipproduktion kan potentielt kræve strøm svarende til omkring to tredjedele af USA's installerede kapacitet.",
+     "src": "BLOG 10. august 2026"
+    },
+    "note": "Mærkerne viser, hvor NDI har beskrevet pres. De er ikke en prognose og ikke en anbefaling, og et led uden mærke er ikke uden betydning."
+   },
+   "glossary": [
+    {
+     "term": "Gigawatt (GW)",
+     "t": "Mål for, hvor meget strøm der kan leveres på én gang. 1 GW er 1.000 megawatt. Et stort atomkraftværk leverer omkring 1 GW.",
+     "link": "gen"
+    },
+    {
+     "term": "Installeret kapacitet",
+     "t": "Hvad alle kraftværker tilsammen kan levere på én gang. Forbrug over tid måles i stedet i kilowatt-timer.",
+     "link": "gen"
+    },
+    {
+     "term": "Grundlast",
+     "t": "Strøm, der kan leveres døgnet rundt uanset vejr, fx fra gas og atomkraft. Datacentre kører hele døgnet.",
+     "link": "gen"
+    },
+    {
+     "term": "Gasturbine",
+     "t": "En maskine, der brænder gas og driver en generator. Den kan startes hurtigt og bygges tæt på et datacenter.",
+     "link": "gen"
+    },
+    {
+     "term": "LNG",
+     "t": "Flydende naturgas. Gassen køles ned, så den kan sejles med skib i stedet for at løbe i rør.",
+     "link": "gen"
+    },
+    {
+     "term": "Fission",
+     "t": "Atomkraft, hvor tunge atomer som uran spaltes. Alle atomkraftværker i drift bruger fission. Fusion er noget andet og stadig på forsøgsstadiet.",
+     "link": "smr"
+    },
+    {
+     "term": "SMR",
+     "t": "Små modulære reaktorer. Mindre atomkraftværker, der kan bygges i serie. De fleste projekter i Vesten har endnu ikke anlæg i kommerciel drift.",
+     "link": "smr"
+    },
+    {
+     "term": "Transmission",
+     "t": "De store højspændingsledninger, der fører strøm over lange afstande. Det lokale net det sidste stykke hedder distribution.",
+     "link": "grid"
+    },
+    {
+     "term": "Transformer",
+     "t": "Ændrer spændingen, så strøm kan sendes langt ved høj spænding og bruges ved lav. Store transformere har flere års leveringstid.",
+     "link": "grid"
+    },
+    {
+     "term": "Batterilager",
+     "t": "Store batterier ved nettet, der gemmer strøm fra sol og vind og leverer den, når der er brug for den.",
+     "link": "storage"
+    },
+    {
+     "term": "Sjældne jordarter",
+     "t": "Metaller, der bruges i stærke magneter til motorer, vindmøller og robotter. Forarbejdningen er i dag koncentreret i Kina.",
+     "link": "materials"
+    },
+    {
+     "term": "Kobber",
+     "t": "Leder strømmen i ledninger, motorer, transformere og datacentre. Næsten al elektrificering bruger kobber.",
+     "link": "materials"
+    },
+    {
+     "term": "Væskekøling",
+     "t": "Kølevæske føres helt ind til chippen, fordi moderne AI-racks bliver for varme til luftkøling.",
+     "hop": "ai-compute:datacenter"
+    }
+   ],
+   "glossaryNote": "Ordbogen er generel baggrundsviden og ikke NDI's synspunkter. Den forklarer ord, der går igen i energikæden."
   },
   {
    "id": "space",
@@ -2262,7 +2520,49 @@
     }
    ],
    "latency": "Højden betyder noget for brugeren. Et signal til en geostationær satellit og tilbage tager omkring et halvt sekund. Via lavt kredsløb tager det få hundrededele af et sekund. Det er en af grundene til, at satellitinternet er rykket ned i lavt kredsløb (baggrund).",
-   "icon": "🚀"
+   "icon": "🚀",
+   "costStory": {
+    "title": "Hvorfor er det blevet billigere at komme op?",
+    "before": {
+     "k": "Før",
+     "t": "De fleste raketter blev brugt én gang. De faldt i havet eller brændte op efter turen, så hver opsendelse krævede en ny raket."
+    },
+    "after": {
+     "k": "Nu",
+     "t": "Det store første trin lander igen og kan flyve flere ture. Prisen for selve raketten fordeles over mange opsendelser."
+    },
+    "levers": [
+     {
+      "icon": "♻",
+      "k": "Genbrug",
+      "t": "Når raketten kan genbruges, er det især brændstof, klargøring og service, der koster pr. tur.",
+      "link": "launch"
+     },
+     {
+      "icon": "⇡",
+      "k": "Flere ture",
+      "t": "Billigere ture betyder, at de bliver flere. Hyppige opsendelser gør det nemmere at planlægge store projekter.",
+      "link": "launch"
+     },
+     {
+      "icon": "▦",
+      "k": "Satellitter i serie",
+      "t": "Når det er billigt at sende op, kan satellitterne bygges i serie på samlebånd i stedet for at blive håndbygget én ad gangen.",
+      "link": "sats"
+     },
+     {
+      "icon": "⟳",
+      "k": "Tjenester",
+      "t": "Med mange satellitter i lavt kredsløb kan der sælges internet og jorddata som abonnement.",
+      "link": "satcom"
+     }
+    ],
+    "ndi": {
+     "t": "SpaceX stod for 90 % af årets satellitopsendelser i NDI's gennemgang fra 2024. Det viser, hvor meget én aktør med genbrugelige raketter kom til at fylde.",
+     "src": "BLOG 23. juni 2024"
+    },
+    "note": "Forklaringen er generel baggrundsviden og ikke NDI's synspunkter. Vi viser ikke priser pr. kilo, fordi NDI ikke har opgjort dem. Tallet om 90 % er NDI's."
+   }
   },
   {
    "id": "quantum",
@@ -2349,7 +2649,19 @@
     }
    ],
    "bridgesNote": "Broerne er faglige sammenhænge. Ingen af kvanteleddets selskaber står i andre kæder i den forsinkede beholdning.",
-   "icon": "⚛"
+   "icon": "⚛",
+   "horizon": {
+    "title": "Hvor langt er der til nyttige kvantecomputere?",
+    "who": "NVIDIA's direktør",
+    "when": "januar 2025",
+    "t": "sagde, at nyttige kvantecomputere sandsynligvis ligger omkring 20 år ude.",
+    "src": "gengivet i BLOG 13. januar 2025",
+    "ndi": {
+     "t": "Mads nævner kvantecomputere som et accelererende segment med politisk medvind og høj volatilitet.",
+     "src": "BLOG 2. juni og 7. juli 2025"
+    },
+    "note": "Udsagnet er NVIDIA-direktørens, ikke Mads' og ikke NDI's prognose. Tidslinjen er usikker. Netop derfor bruger Mads kvante som eksempel på indtægter, der ikke passer i et regneark (BLOG 21. juli 2025)."
+   }
   }
  ],
  "themeNote": "Fintech/digitale betalinger behandles som tema (platforme), ikke som egen kæde. Kilderne beskriver ingen fintech-værdikæde.",

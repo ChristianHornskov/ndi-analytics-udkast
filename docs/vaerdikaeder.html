@@ -127,6 +127,78 @@
     .gloss dd a{font-size:12px;white-space:nowrap}
     .q-pane{display:none;margin:4px 0 18px}
     .q-pane.on{display:block}
+    .cost{margin-top:16px;border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:linear-gradient(180deg,#0e2027,#0b171d)}
+    .cost h3{font-size:15px;color:var(--cyan);margin:0 0 10px}
+    .cost-ba{display:grid;gap:8px;grid-template-columns:1fr;align-items:stretch}
+    @media(min-width:640px){.cost-ba{grid-template-columns:1fr auto 1fr}}
+    .cost-ba .ba{border:1px solid var(--line);border-radius:10px;padding:9px 11px;background:#0b171d;font-size:13px;line-height:1.45;color:var(--muted)}
+    .cost-ba .ba svg{display:block;width:100%;max-width:200px;height:auto;margin:0 0 6px}
+    .cost-ba .ba b{display:block;font-size:11px;letter-spacing:.5px;text-transform:uppercase;color:var(--yellow);margin-bottom:2px}
+    .cost-ba .ba.now{border-color:var(--brand)}
+    .cost-ba .arr{align-self:center;justify-self:center;color:var(--yellow);font-size:22px;line-height:1}
+    @media(max-width:639px){.cost-ba .arr{transform:rotate(90deg)}}
+    .levers{display:grid;gap:8px;margin:10px 0 0;padding:0;list-style:none;grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
+    .levers li{position:relative;border:1px dashed #3a5a63;border-radius:10px;padding:9px 11px;font-size:12.5px;line-height:1.45;color:var(--muted)}
+    .levers li .lv-i{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#16323b;color:var(--yellow);font-size:13px;margin-right:6px;vertical-align:middle}
+    .levers li b{color:var(--text);font-size:13px}
+    .levers li p{margin:5px 0 4px}
+    .levers li a{font-size:12px}
+    @media(min-width:760px){.levers li:not(:last-child)::after{content:"→";position:absolute;right:-9px;top:50%;transform:translateY(-50%);color:var(--yellow);font-size:13px;background:#0d1d23;padding:0 1px}}
+    .cost-ndi{margin:10px 0 0;font-size:13px;line-height:1.5;color:var(--text);border-left:3px solid var(--brand);padding:4px 0 4px 10px}
+    .cost-ndi .tag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.4px;color:#0b171d;background:var(--cyan);border-radius:4px;padding:0 5px;margin-right:6px}
+    .a-pane{display:none;margin:4px 0 18px;border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:linear-gradient(180deg,#0e2027,#0b171d)}
+    .a-pane.on{display:block}
+    #a-pane,#e-pane,#p-pane,#sp-cost,#q-hz{scroll-margin-top:110px}
+    .a-pane h3{font-size:15px;color:var(--cyan);margin:0 0 4px}
+    .rv-host svg{display:block;width:100%;height:auto;margin:10px 0 4px}
+    .rv-host a:focus-visible circle{stroke:var(--text);stroke-width:3}
+    .rv-flow{animation:rvflow 2.4s linear infinite}
+    @keyframes rvflow{to{stroke-dashoffset:-36}}
+    @media (prefers-reduced-motion:reduce){.rv-flow{animation:none}}
+    .rv-legend{display:flex;flex-wrap:wrap;gap:6px 14px;margin:6px 0 0;padding:0;list-style:none;font-size:12px;color:var(--muted)}
+    .rv-legend i{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:5px;vertical-align:-2px;border:2px solid var(--brand);background:#0b171d}
+    .rv-legend .lv-dam i{background:var(--yellow);border-color:var(--yellow)}
+    .rv-legend .lv-early i{border-color:var(--yellow)}
+    .rv-legend .lv-open i{border-color:#829da0;border-style:dashed}
+    .rv-legend .lv-source i{background:var(--cyan);border-color:var(--cyan)}
+    .rv-legend b{color:var(--text);font-weight:700}
+    .vc-press{margin:6px 0 0;font-size:12.5px;line-height:1.45;color:var(--text)}
+    .vc-press .tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.4px;border-radius:4px;padding:0 5px;margin-right:6px;background:#2a4650;color:var(--text)}
+    .vc-press.lv-dam .tag{background:var(--yellow);color:#0b171d}
+    .vc-press.lv-early .tag{background:transparent;color:var(--yellow);box-shadow:inset 0 0 0 1px var(--yellow)}
+    .vc-press.lv-source .tag{background:var(--cyan);color:#0b171d}
+    .vc-press .src{margin-left:4px}
+    .e-pane{display:none;margin:4px 0 18px}
+    .e-pane.on{display:block}
+    .e-pane h3{font-size:15px;color:var(--cyan);margin:0 0 4px}
+    .eflow{display:grid;gap:0;margin:12px 0 0;padding:0;list-style:none}
+    @media(min-width:900px){.eflow{grid-template-columns:repeat(5,1fr);gap:0 18px}}
+    .eflow li{position:relative;border:1px solid var(--line);border-radius:12px;padding:10px 12px;background:#0b171d;margin-bottom:22px}
+    .eflow li.press{border-top:3px solid var(--yellow)}
+    .eflow li:not(:last-child)::after{content:"";position:absolute;left:50%;bottom:-23px;width:4px;height:22px;margin-left:-2px;background:linear-gradient(180deg,var(--yellow),var(--brand));border-radius:2px}
+    @media(min-width:900px){.eflow li{margin-bottom:0}.eflow li:not(:last-child)::after{left:auto;right:-19px;top:46px;bottom:auto;width:20px;height:4px;margin:0;background:linear-gradient(90deg,var(--yellow),var(--brand))}}
+    .eflow .ef-top{display:flex;align-items:center;gap:8px}
+    .eflow .ef-i{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#16323b;font-size:15px;flex:0 0 auto}
+    .eflow .ef-k{font-size:13px;font-weight:700;color:var(--text);line-height:1.25}
+    .eflow .ef-k small{display:block;font-weight:400;font-size:11.5px;color:var(--muted)}
+    .eflow .ef-n{font-size:12px;color:var(--muted);margin:6px 0 0}
+    .eflow .ef-n b{color:var(--yellow)}
+    .eflow .ef-p{margin:6px 0 0;font-size:12px;line-height:1.4;color:var(--text)}
+    .eflow .ef-p .tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.4px;color:#0b171d;background:var(--yellow);border-radius:4px;padding:0 5px;margin-right:4px}
+    .eflow .ef-p.soft .tag{background:#5a7f88;color:var(--text)}
+    .eflow .ef-p .src{display:block;font-size:11px;margin-top:2px}
+    .eflow a{font-size:12px}
+    .e-fact{margin:12px 0 0;font-size:13.5px;line-height:1.5;color:var(--text);border-left:3px solid var(--brand);padding:4px 0 4px 10px}
+    .e-fact .tag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.4px;color:#0b171d;background:var(--cyan);border-radius:4px;padding:0 5px;margin-right:6px}
+    .e-pane .gloss-wrap{margin-top:14px}
+    .e-pane .gloss dt::before{content:"⚡ "}
+    .q-hz{margin-top:12px;border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:linear-gradient(180deg,#0e2027,#0b171d)}
+    .q-hz h3{font-size:15px;color:var(--cyan);margin:0 0 8px}
+    .q-hz svg{display:block;width:100%;max-width:560px;height:auto;margin:0 0 8px}
+    .q-hz .said{font-size:13.5px;line-height:1.5;color:var(--text);margin:0}
+    .q-hz .said .who{color:var(--yellow);font-weight:700}
+    .p-pane .gloss-wrap{margin-top:14px}
+    .p-pane .gloss dt::before{content:"⚙ "}
     .p-pane{display:none;margin:4px 0 18px}
     .p-pane.on{display:block}
     .phases{display:grid;gap:10px;margin:0;padding:0;list-style:none}
@@ -210,6 +282,7 @@
       <p class="lede" style="font-size:14px;margin-bottom:8px">Når én flaskehals letter, flytter presset. Det er en ramme, ikke en prognose.</p>
       <div class="dams" id="dams" role="list"></div>
       <p class="src" id="counts-note"></p>
+      <p class="src" style="margin-top:6px"><a href="?kaede=ai-compute#a-pane" data-sec="ai-compute:a-pane">Se alle 13 led i flodkortet, med NDI's mærke og kilde pr. led →</a></p>
     </section>
 
     <section class="chapter panel" id="kap-treemap">
@@ -250,6 +323,17 @@
             </ol>
           </div>
         </div>
+        <section class="cost" id="sp-cost" aria-labelledby="sp-cost-h" hidden>
+          <h3 id="sp-cost-h"></h3>
+          <div class="cost-ba">
+            <div class="ba" id="cost-before"></div>
+            <span class="arr" aria-hidden="true">→</span>
+            <div class="ba now" id="cost-after"></div>
+          </div>
+          <ol class="levers" id="cost-levers" aria-label="Fra billig opsendelse til tjenester"></ol>
+          <p class="cost-ndi" id="cost-ndi"></p>
+          <p class="src" id="cost-note" style="margin-top:6px"></p>
+        </section>
         <div class="sp-learn">
           <figure style="margin:0">
             <h3>Hvor højt er højt?</h3>
@@ -271,6 +355,13 @@
           NDI har ikke skrevet en egentlig analyse af kvantekæden, så siden holdes kort. Mads nævner kvantecomputere som et segment med politisk medvind og høj volatilitet og som eksempel på teknologier, hvis indtægter ikke passer i et regneark (BLOG 2. juni og 21. juli 2025).
           <p class="link-row" style="margin:10px 0 0"><a href="tema.html?slug=quantum&amp;fund=pmindi">Quantum-temaet i beholdningen →</a> · <a href="laer/saadan-taenker-vi.html">Hvorfor usikre indtægter ikke passer i et regneark →</a></p>
         </aside>
+        <section class="q-hz" id="q-hz" aria-labelledby="q-hz-h" hidden>
+          <h3 id="q-hz-h"></h3>
+          <div id="q-hz-svg"></div>
+          <p class="said" id="q-hz-said"></p>
+          <p class="cost-ndi" id="q-hz-ndi"></p>
+          <p class="src" id="q-hz-note" style="margin-top:6px"></p>
+        </section>
         <div class="bridges" style="margin-top:12px">
           <h3>Hvor kvante møder resten af kæden</h3>
           <div class="br-grid" id="q-bridges"></div>
@@ -282,6 +373,32 @@
         <ol class="phases" id="phases" aria-label="Mads' tre faser"></ol>
         <blockquote class="ph-quote" id="ph-quote"></blockquote>
         <p class="src" id="ph-src" style="margin-top:6px"></p>
+        <details class="gloss-wrap" id="p-gloss-wrap">
+          <summary><h3>Robot-ordbog</h3><span class="src" id="p-gloss-count">Ord, der gør kæden lettere at læse</span></summary>
+          <dl class="gloss" id="p-gloss"></dl>
+          <p class="src" id="p-gloss-note" style="margin-top:8px"></p>
+        </details>
+      </div>
+
+      <div class="a-pane" id="a-pane" aria-labelledby="rv-h">
+        <h3 id="rv-h"></h3>
+        <p class="src" id="rv-lede"></p>
+        <div class="rv-host" id="rv-host"></div>
+        <ul class="rv-legend" id="rv-legend"></ul>
+        <p class="src" id="rv-note" style="margin-top:6px"></p>
+      </div>
+
+      <div class="e-pane" id="e-pane" aria-label="Energi forklaret">
+        <h3 id="ef-title"></h3>
+        <p class="src" id="ef-lede"></p>
+        <ol class="eflow" id="eflow" aria-label="Strømmens vej fra råstof til datacenter"></ol>
+        <p class="e-fact" id="ef-fact"></p>
+        <p class="src" id="ef-note" style="margin-top:6px"></p>
+        <details class="gloss-wrap" id="e-gloss-wrap">
+          <summary><h3>Energi-ordbog</h3><span class="src" id="e-gloss-count">Ord, der gør kæden lettere at læse</span></summary>
+          <dl class="gloss" id="e-gloss"></dl>
+          <p class="src" id="e-gloss-note" style="margin-top:8px"></p>
+        </details>
       </div>
 
       <p class="anno" id="chain-tip">Klik et led for selskaber. Hvert led har tre dele: hvad det er, hvorfor NDI følger det, og hvad der ændrer sig.</p>
@@ -520,6 +637,7 @@
     const spacePane = document.getElementById('space-pane');
     const qPane = document.getElementById('q-pane');
     const pPane = document.getElementById('p-pane');
+    const ePane = document.getElementById('e-pane');
     const bridgesEl = document.getElementById('chain-bridges');
     document.getElementById('mapping-note').textContent = pack.mappingNote || '';
     const pct = (x) => String(x).replace('.', ',') + ' %';
@@ -532,11 +650,46 @@
       `<div class="sp-fact"><div class="k">${esc(x.k)}</div><p>${esc(x.t)}</p><div class="src">Kilde: ${esc(x.src)}</div></div>`).join('');
 
     // Ordbog + højdeskala (baggrund, ikke NDI-synspunkter)
-    document.getElementById('space-gloss').innerHTML = (sp?.glossary || []).map(g =>
-      `<div><dt>${esc(g.term)}</dt><dd>${esc(g.t)}${g.link ? ` <a href="#lk-${esc(g.link)}" data-open="${esc(g.link)}">Se leddet →</a>` : ''}</dd></div>`).join('');
-    document.getElementById('gloss-note').textContent = sp?.glossaryNote || '';
-    if (matchMedia('(min-width: 900px)').matches) document.getElementById('gloss-wrap').open = true;
-    if (sp?.glossary?.length) document.getElementById('gloss-count').textContent = `${sp.glossary.length} ord, der gør kæden lettere at læse`;
+    const glossLink = (g) => {
+      if (g.hop) {
+        const [cid, lid] = g.hop.split(':');
+        const t = pack.chains.find(c => c.id === cid);
+        return ` <a href="?kaede=${esc(cid)}#lk-${esc(lid)}" data-hop="${esc(g.hop)}">Se leddet i ${esc(t?.title || cid)} →</a>`;
+      }
+      return g.link ? ` <a href="#lk-${esc(g.link)}" data-open="${esc(g.link)}">Se leddet →</a>` : '';
+    };
+    function renderGloss(ch, ids) {
+      const [listId, noteId, countId, wrapId] = ids;
+      document.getElementById(listId).innerHTML = (ch?.glossary || []).map(g =>
+        `<div><dt>${esc(g.term)}</dt><dd>${esc(g.t)}${glossLink(g)}</dd></div>`).join('');
+      document.getElementById(noteId).textContent = ch?.glossaryNote || '';
+      if (ch?.glossary?.length) document.getElementById(countId).textContent = `${ch.glossary.length} ord, der gør kæden lettere at læse`;
+      if (matchMedia('(min-width: 900px)').matches) document.getElementById(wrapId).open = true;
+    }
+    renderGloss(sp, ['space-gloss', 'gloss-note', 'gloss-count', 'gloss-wrap']);
+
+    // Hvorfor billigere at komme op (baggrund + ét NDI-tal med kilde)
+    (function renderCost(c) {
+      if (!c) return;
+      const rocket = (reuse) => `<svg viewBox="0 0 200 64" aria-hidden="true">`
+        + `<line x1="0" y1="58" x2="200" y2="58" stroke="#3a5a63"/>`
+        + `<g transform="translate(26 6)"><rect x="0" y="16" width="14" height="34" rx="3" fill="#89aeb4"/><path d="M0 16 L7 2 L14 16Z" fill="#cfe3e6"/></g>`
+        + (reuse
+          ? `<path d="M48 26 C 88 14, 132 14, 168 30" fill="none" stroke="var(--yellow)" stroke-dasharray="3 3"/><path d="M168 30 L162 24 M168 30 L160 31" stroke="var(--yellow)"/>`
+            + `<g transform="translate(160 30)"><rect x="0" y="0" width="12" height="26" rx="3" fill="#89aeb4"/><path d="M-3 26 L2 20 M15 26 L10 20" stroke="#cfe3e6"/></g>`
+            + `<text x="100" y="10" text-anchor="middle" fill="var(--muted)" font-size="9.5">lander og flyver igen</text>`
+          : `<path d="M48 26 C 90 14, 130 18, 160 52" fill="none" stroke="#829da0" stroke-dasharray="3 3"/><text x="168" y="54" fill="#d98a7a" font-size="14">✕</text>`
+            + `<text x="100" y="10" text-anchor="middle" fill="var(--muted)" font-size="9.5">brugt én gang</text>`)
+        + `</svg>`;
+      document.getElementById('sp-cost-h').textContent = c.title;
+      document.getElementById('cost-before').innerHTML = rocket(false) + `<b>${esc(c.before.k)}</b>${esc(c.before.t)}`;
+      document.getElementById('cost-after').innerHTML = rocket(true) + `<b>${esc(c.after.k)}</b>${esc(c.after.t)}`;
+      document.getElementById('cost-levers').innerHTML = (c.levers || []).map(l =>
+        `<li><span class="lv-i" aria-hidden="true">${esc(l.icon)}</span><b>${esc(l.k)}</b><p>${esc(l.t)}</p>${l.link ? `<a href="#lk-${esc(l.link)}" data-open="${esc(l.link)}">Se leddet →</a>` : ''}</li>`).join('');
+      document.getElementById('cost-ndi').innerHTML = c.ndi ? `<span class="tag">NDI</span>${esc(c.ndi.t)} <span class="src">Kilde: ${esc(c.ndi.src)}</span>` : '';
+      document.getElementById('cost-note').textContent = c.note || '';
+      document.getElementById('sp-cost').hidden = false;
+    })(sp?.costStory);
     document.getElementById('sp-latency').textContent = sp?.latency || '';
     (function renderAltitudes(items) {
       if (!items?.length) return;
@@ -584,6 +737,7 @@
       `<li class="phase${i === all.length - 2 ? ' now' : ''}${i === all.length - 1 ? ' next' : ''}"><div class="ph-n">${esc(f.n)} · ${esc(f.when)}</div><h3>${esc(f.label)}</h3><p>${esc(f.t)}</p>${f.link ? `<p style="margin-top:6px"><a href="#lk-${esc(f.link)}" data-open="${esc(f.link)}">Se leddet →</a></p>` : ''}</li>`).join('');
     if (phys?.phasesQuote) document.getElementById('ph-quote').innerHTML = `<q>${esc(phys.phasesQuote.q)}</q><cite>Mads Christiansen, ${esc(phys.phasesQuote.src)}</cite>`;
     document.getElementById('ph-src').textContent = phys?.phasesSrc ? `Kilde: ${phys.phasesSrc}` : '';
+    renderGloss(phys, ['p-gloss', 'p-gloss-note', 'p-gloss-count', 'p-gloss-wrap']);
 
     // Broer: led i andre kæder, der deler selskaber med den valgte kæde
     const linkOf = (cid, lid) => pack.chains.find(c => c.id === cid)?.links.find(l => l.id === lid);
@@ -597,6 +751,149 @@
     const qc = pack.chains.find(c => c.id === 'quantum');
     document.getElementById('q-bridges').innerHTML = (qc?.bridges || []).map(brCard).join('');
     document.getElementById('q-bridges-note').textContent = qc?.bridgesNote || '';
+    // Energi: strømmens vej med NDI-mærker for pres (kilde pr. mærke)
+    const en = pack.chains.find(c => c.id === 'energy');
+    (function renderFlow(f) {
+      if (!f) return;
+      document.getElementById('ef-title').textContent = f.title;
+      document.getElementById('ef-lede').textContent = f.lede;
+      const mark = (m, soft) => m ? `<p class="ef-p${soft ? ' soft' : ''}"><span class="tag">${soft ? 'NDI · nævnt' : 'NDI · pres'}</span>${esc(m.t)}<span class="src">Kilde: ${esc(m.src)}</span></p>` : '';
+      document.getElementById('eflow').innerHTML = (f.steps || []).map(st => {
+        const [cid, lid] = st.hop ? st.hop.split(':') : ['energy', st.link];
+        const l = linkOf(cid, lid);
+        if (!l) return '';
+        const other = cid !== 'energy' ? pack.chains.find(c => c.id === cid) : null;
+        const alt = st.alt ? linkOf('energy', st.alt) : null;
+        const open = other
+          ? `<a href="?kaede=${esc(cid)}#lk-${esc(lid)}" data-hop="${esc(st.hop)}">Se leddet i ${esc(other.title)} →</a>`
+          : `<a href="#lk-${esc(lid)}" data-open="${esc(lid)}">Se leddet →</a>`;
+        const altA = alt ? ` · <a href="#lk-${esc(alt.id)}" data-open="${esc(alt.id)}">${esc(alt.label)} (${alt.count}) →</a>` : '';
+        return `<li class="${st.press ? 'press' : ''}"><div class="ef-top"><span class="ef-i" aria-hidden="true">${l.icon || '◆'}</span><span class="ef-k">${esc(l.short || l.label)}<small>${esc(st.verb)}</small></span></div>`
+          + `<p class="ef-n"><b>${l.count}</b> selskaber${other ? ` · ${esc(other.title)}` : ''}</p>${mark(st.press, false)}${mark(st.note, true)}<p style="margin:6px 0 0">${open}${altA}</p></li>`;
+      }).join('');
+      document.getElementById('ef-fact').innerHTML = f.fact ? `<span class="tag">NDI</span>${esc(f.fact.t)} <span class="src">Kilde: ${esc(f.fact.src)}</span>` : '';
+      document.getElementById('ef-note').textContent = f.note || '';
+    })(en?.flow);
+    renderGloss(en, ['e-gloss', 'e-gloss-note', 'e-gloss-count', 'e-gloss-wrap']);
+
+    // Kvante: tidshorisont som gengivet udsagn med kilde (ikke NDI-prognose)
+    (function renderHorizon(h) {
+      if (!h) return;
+      document.getElementById('q-hz-h').textContent = h.title;
+      const W = 560, x0 = 30, x1 = 520, y = 40;
+      const X = (yr) => x0 + (yr - 2025) / 20 * (x1 - x0);
+      let t = `<svg viewBox="0 0 ${W} 80" role="img" aria-label="Tidslinje fra 2025 til omkring 2045. Et udsagn, ikke en prognose.">`
+        + `<line x1="${x0}" y1="${y}" x2="${x1}" y2="${y}" stroke="#829da0" stroke-dasharray="4 5"/>`;
+      [2025, 2030, 2035, 2040, 2045].forEach(yr => {
+        t += `<line x1="${X(yr)}" y1="${y - 4}" x2="${X(yr)}" y2="${y + 4}" stroke="#829da0"/><text x="${X(yr)}" y="${y + 20}" text-anchor="middle" fill="var(--muted)" font-size="13">${yr === 2045 ? 'ca. 2045' : yr}</text>`;
+      });
+      t += `<circle cx="${X(2025)}" cy="${y}" r="6" fill="var(--cyan)"/><text x="${X(2025)}" y="${y - 14}" text-anchor="start" fill="var(--cyan)" font-size="13" font-weight="700">udsagnet, jan. 2025</text>`
+        + `<circle cx="${X(2045)}" cy="${y}" r="9" fill="none" stroke="var(--yellow)" stroke-width="2" stroke-dasharray="3 3"/><text x="${X(2045)}" y="${y + 4}" text-anchor="middle" fill="var(--yellow)" font-size="15" font-weight="700">?</text>`
+        + `<text x="${X(2045)}" y="${y - 16}" text-anchor="end" fill="var(--yellow)" font-size="13">hans udsagn: ca. 20 år</text></svg>`;
+      document.getElementById('q-hz-svg').innerHTML = t;
+      document.getElementById('q-hz-said').innerHTML = `<span class="who">${esc(h.who)}</span> ${esc(h.t)} <span class="src">(${esc(h.when)}, ${esc(h.src)})</span>`;
+      document.getElementById('q-hz-ndi').innerHTML = h.ndi ? `<span class="tag">NDI</span>${esc(h.ndi.t)} <span class="src">Kilde: ${esc(h.ndi.src)}</span>` : '';
+      document.getElementById('q-hz-note').textContent = h.note || '';
+      document.getElementById('q-hz').hidden = false;
+    })(qc?.horizon);
+    // AI: flodkort over de 13 led med NDI's pres-mærker (kilde pr. mærke)
+    const aiCh = pack.chains.find(c => c.id === 'ai-compute');
+    const aPane = document.getElementById('a-pane');
+    const RV_SHORT = { dam: 'flaskehals', early: 'Begyndende flaskehals', group: 'Del af halvlederne', open: 'Ingen tydelig flaskehals', source: 'Efterspørgslen starter her' };
+    const rvLinks = (aiCh?.links || []).filter(l => !l.neighbour && l.press);
+    const damNo = {};
+    rvLinks.filter(l => l.press.level === 'dam').forEach((l, i) => { damNo[l.id] = i + 1; });
+    const rvSub = (l) => l.press.level === 'dam' ? `${damNo[l.id]}. ${RV_SHORT.dam}` : RV_SHORT[l.press.level];
+    function rvNode(l, i, x, y) {
+      const lv = l.press.level;
+      const fill = { dam: 'var(--yellow)', source: 'var(--cyan)' }[lv] || '#0b171d';
+      const stroke = { dam: 'var(--yellow)', early: 'var(--yellow)', source: 'var(--cyan)', open: '#829da0' }[lv] || 'var(--brand)';
+      const txt = (lv === 'dam' || lv === 'source') ? '#0b171d' : lv === 'open' ? 'var(--muted)' : 'var(--text)';
+      const lab = `Led ${i + 1}, ${l.label}: ${rvSub(l)}. ${l.count} selskaber.`;
+      return `<a href="#lk-${esc(l.id)}" data-open="${esc(l.id)}" aria-label="${esc(lab)}"><title>${esc(lab)}</title>`
+        + `<circle cx="${x}" cy="${y}" r="13" fill="${fill}" stroke="${stroke}" stroke-width="2.5"${lv === 'open' ? ' stroke-dasharray="4 3"' : ''}/>`
+        + `<text x="${x}" y="${y + 4.5}" text-anchor="middle" font-size="12" font-weight="700" fill="${txt}">${i + 1}</text></a>`;
+    }
+    function rvSmooth(pts) {
+      let d = `M${pts[0][0]},${pts[0][1]}`;
+      for (let i = 1; i < pts.length; i++) {
+        const [x0, y0] = pts[i - 1], [x1, y1] = pts[i];
+        const mx = (x0 + x1) / 2, my = (y0 + y1) / 2;
+        d += ` Q${x0},${y0} ${mx},${my}`;
+        if (i === pts.length - 1) d += ` T${x1},${y1}`;
+      }
+      return d;
+    }
+    function renderRiver() {
+      if (!rvLinks.length) return;
+      const wide = matchMedia('(min-width: 760px)').matches;
+      const n = rvLinks.length;
+      const semi = rvLinks.map((l, i) => [l, i]).filter(([l]) => ['dam', 'early', 'group'].includes(l.press.level) && !['energi', 'datacenter'].includes(l.id)).map(([, i]) => i);
+      let svg, pts;
+      if (wide) {
+        const W = 1000, H = 250, cy = 128;
+        pts = rvLinks.map((l, i) => [44 + i * (900 / (n - 1)), cy + 22 * Math.sin(i * 0.95)]);
+        svg = `<svg viewBox="0 0 ${W} ${H}" role="group" aria-label="Flodkort: AI-kæden i ${n} led fra energi til fysisk AI med NDI's flaskehalse">`
+          + `<defs><linearGradient id="rvg" x1="0" x2="1"><stop offset="0" stop-color="#d9c56b"/><stop offset=".45" stop-color="#5f8f98"/><stop offset="1" stop-color="#9ecfd6"/></linearGradient></defs>`;
+        if (semi.length) {
+          const xa = pts[semi[0]][0] - 30, xb = pts[semi[semi.length - 1]][0] + 30;
+          svg += `<rect x="${xa}" y="34" width="${xb - xa}" height="${H - 52}" rx="12" fill="#16323b" fill-opacity=".55" stroke="var(--line)" stroke-dasharray="3 4"/>`
+            + `<text x="${(xa + xb) / 2}" y="50" text-anchor="middle" font-size="11" letter-spacing=".6" fill="var(--muted)">HALVLEDERE · TREDJE FLASKEHALS</text>`;
+        }
+        const d = rvSmooth([[12, pts[0][1]], ...pts, [W - 12, pts[n - 1][1]]]);
+        svg += `<path d="${d}" fill="none" stroke="url(#rvg)" stroke-width="16" stroke-linecap="round" opacity=".55"/>`
+          + `<path class="rv-flow" d="${rvSmooth([[W - 12, pts[n - 1][1]], ...[...pts].reverse(), [12, pts[0][1]]])}" fill="none" stroke="#e8f4f5" stroke-opacity=".55" stroke-width="2" stroke-dasharray="6 12"/>`;
+        rvLinks.forEach((l, i) => {
+          const [x, y] = pts[i];
+          if (l.press.level === 'dam') {
+            svg += `<rect x="${x - 24}" y="${y - 20}" width="6" height="40" rx="2" fill="var(--yellow)"/>`
+              + `<text x="${x}" y="${y - 27}" text-anchor="middle" font-size="11" font-weight="700" fill="var(--yellow)">${damNo[l.id]}. flaskehals</text>`;
+          }
+          const ly = y + (i % 2 ? 46 : 32);
+          svg += rvNode(l, i, x, y)
+            + `<text x="${x}" y="${ly}" text-anchor="middle" font-size="12" font-weight="700" fill="${l.press.level === 'open' ? 'var(--muted)' : 'var(--cyan)'}">${esc(l.short || l.label)}</text>`
+            + `<text x="${x}" y="${ly + 13}" text-anchor="middle" font-size="10.5" fill="var(--muted)">${l.count} selsk.</text>`;
+        });
+        svg += `<text x="${W - 10}" y="${H - 6}" text-anchor="end" font-size="11.5" fill="var(--cyan)">← efterspørgslen starter her og flyder mod energien</text></svg>`;
+      } else {
+        const W = 360, row = 50, top = 30, H = top + n * row + 30;
+        pts = rvLinks.map((l, i) => [40 + 10 * Math.sin(i * 1.1), top + 14 + i * row]);
+        svg = `<svg viewBox="0 0 ${W} ${H}" role="group" aria-label="Flodkort: AI-kæden i ${n} led fra energi øverst til fysisk AI nederst med NDI's flaskehalse">`
+          + `<defs><linearGradient id="rvg" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#d9c56b"/><stop offset=".45" stop-color="#5f8f98"/><stop offset="1" stop-color="#9ecfd6"/></linearGradient></defs>`;
+        if (semi.length) {
+          const ya = pts[semi[0]][1] - 22, yb = pts[semi[semi.length - 1]][1] + 22;
+          svg += `<rect x="4" y="${ya}" width="${W - 8}" height="${yb - ya}" rx="10" fill="#16323b" fill-opacity=".55" stroke="var(--line)" stroke-dasharray="3 4"/>`
+            + `<text x="${W - 10}" y="${yb - 7}" text-anchor="end" font-size="10" letter-spacing=".5" fill="var(--muted)">HALVLEDERE · 3. FLASKEHALS</text>`;
+        }
+        const up = [[pts[n - 1][0], H - 6], ...[...pts].reverse(), [pts[0][0], 6]];
+        const d = rvSmooth([[pts[0][0], 6], ...pts, [pts[n - 1][0], H - 6]]);
+        svg += `<path d="${d}" fill="none" stroke="url(#rvg)" stroke-width="14" stroke-linecap="round" opacity=".55"/>`
+          + `<path class="rv-flow" d="${rvSmooth(up)}" fill="none" stroke="#e8f4f5" stroke-opacity=".55" stroke-width="2" stroke-dasharray="6 12"/>`;
+        rvLinks.forEach((l, i) => {
+          const [x, y] = pts[i];
+          if (l.press.level === 'dam') svg += `<rect x="${x - 20}" y="${y - 19}" width="40" height="5" rx="2" fill="var(--yellow)"/>`;
+          const sub = rvSub(l);
+          svg += rvNode(l, i, x, y)
+            + `<text x="72" y="${y - 1}" font-size="13" font-weight="700" fill="${l.press.level === 'open' ? 'var(--muted)' : 'var(--cyan)'}">${esc(l.short || l.label)} <tspan font-weight="400" font-size="11" fill="var(--muted)">· ${l.count} selsk.</tspan></text>`
+            + `<text x="72" y="${y + 14}" font-size="11" fill="${['dam', 'early'].includes(l.press.level) ? 'var(--yellow)' : 'var(--muted)'}">${esc(sub)}</text>`;
+        });
+        svg += `<text x="${W - 10}" y="${H - 8}" text-anchor="end" font-size="11" fill="var(--cyan)">↑ efterspørgslen starter nederst</text></svg>`;
+      }
+      document.getElementById('rv-host').innerHTML = svg;
+    }
+    if (aiCh?.riverMap && rvLinks.length) {
+      const rm = aiCh.riverMap;
+      document.getElementById('rv-h').textContent = rm.title;
+      document.getElementById('rv-lede').textContent = rm.lede;
+      const cnt = {};
+      rvLinks.forEach(l => { cnt[l.press.level] = (cnt[l.press.level] || 0) + 1; });
+      document.getElementById('rv-legend').innerHTML = ['dam', 'early', 'group', 'open', 'source'].filter(k => cnt[k]).map(k =>
+        `<li class="lv-${k}"><i aria-hidden="true"></i>${esc(rm.levels[k])} <b>${cnt[k]}</b></li>`).join('');
+      document.getElementById('rv-note').textContent = rm.note;
+      renderRiver();
+      matchMedia('(min-width: 760px)').addEventListener('change', renderRiver);
+    }
+
     function renderBridges(ch) {
       const where = {};
       pack.chains.filter(c => c.id !== ch.id).forEach(c => c.links.forEach(l => l.companies.forEach(co => {
@@ -672,6 +969,14 @@
       host.appendChild(svg);
     }
 
+    // Pres-mærke på kortet: samme mærke som i flodkortet, med kilde eller "tolkning"
+    function pressLine(l) {
+      const p = l.press;
+      if (!p || !RV_SHORT[p.level]) return '';
+      const s = p.src === 'tolkning' ? '<span class="src">(vores tolkning)</span>' : `<span class="src">Kilde: ${esc(p.src)}</span>`;
+      return `<p class="vc-press lv-${esc(p.level)}"><span class="tag">${esc(rvSub(l))}</span>${esc(p.t)}${s}</p>`;
+    }
+
     function companyChips(l, ch, all) {
       const own = chainTheme[ch.id];
       const list = all ? l.companies : l.companies.slice(0, SHOW);
@@ -695,6 +1000,8 @@
       spacePane.classList.toggle('on', id === 'space');
       qPane.classList.toggle('on', id === 'quantum');
       pPane.classList.toggle('on', id === 'physical');
+      ePane.classList.toggle('on', id === 'energy');
+      aPane.classList.toggle('on', id === 'ai-compute' && !!aiCh?.riverMap);
       renderBridges(ch);
       if (id === 'space') renderOrbit(ch);
       const max = Math.max(...ch.links.map(l => l.weightSum || 0), 0.01);
@@ -728,7 +1035,7 @@
           <div>
             <h3><span class="src" style="font-weight:400">${l.neighbour ? 'Nabo' : 'Led ' + (i + 1)} · </span>${esc(l.label)}</h3>
             <div class="vc-sec"><h4>Hvad er det</h4><p>${esc(l.blurb)}</p></div>
-            <div class="vc-sec"><h4>Hvorfor følger NDI det ${kindTag}</h4><p>${esc(l.ndi || '')}</p>${l.src ? `<div class="vc-srcline">Kilde: ${esc(l.src)}</div>` : ''}</div>
+            <div class="vc-sec"><h4>Hvorfor følger NDI det ${kindTag}</h4><p>${esc(l.ndi || '')}</p>${l.src ? `<div class="vc-srcline">Kilde: ${esc(l.src)}</div>` : ''}${pressLine(l)}</div>
             ${l.shift ? `<div class="vc-sec"><h4>Hvad ændrer sig</h4><p>${esc(l.shift)}</p></div>` : ''}
             <div class="vc-num"><b>${l.count}</b> selskaber · ca. <b>${pct(l.weightSum)}</b> af PMINDI pr. ${fmtDate(pack.asOf)}</div>
             <div class="vc-bar" aria-hidden="true"><i style="width:${Math.min(100, (l.weightSum / max) * 100).toFixed(1)}%"></i></div>
@@ -803,6 +1110,8 @@
       }
       const hp = e.target.closest('[data-hop]');
       if (hp) { e.preventDefault(); const [c, l] = hp.dataset.hop.split(':'); if (linkOf(c, l)) go(c, l); return; }
+      const sc = e.target.closest('[data-sec]');
+      if (sc) { e.preventDefault(); const [c, sec] = sc.dataset.sec.split(':'); render(c); document.getElementById(sec)?.scrollIntoView({ block: 'start' }); return; }
       const dm = e.target.closest('[data-dam]');
       if (dm) { e.preventDefault(); go('ai-compute', dm.dataset.dam); return; }
       const o = e.target.closest('[data-open]');
@@ -827,6 +1136,9 @@
     // Deep link til ét led (fx fra vaerdikaede.html): ?kaede=ai-compute#lk-memory
     const startLink = location.hash.startsWith('#lk-') ? decodeURIComponent(location.hash.slice(4)) : '';
     if (startLink && document.getElementById(`lk-${startLink}`)) go(startChain, startLink);
+    // Deep link til en forklaring i en fane, fx ?kaede=energy#e-pane eller ?kaede=space#sp-cost
+    const startSec = !startLink && /^#[a-z][\w-]*$/.test(location.hash) ? document.querySelector(`#kap-kaeder ${location.hash}`) : null;
+    if (startSec && startSec.offsetParent !== null) requestAnimationFrame(() => startSec.scrollIntoView({ block: 'start' }));
   </script>
 </body>
 </html>
