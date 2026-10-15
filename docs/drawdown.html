@@ -19,20 +19,6 @@
  <meta property="og:image:alt" content="NDI Analytics - udkast.">
  <meta name="twitter:card" content="summary_large_image">
  <!-- og:end -->
- <style>
-  .uw{width:100%;height:120px;background:#0b171d;border:1px solid var(--line);border-radius:12px;margin:12px 0 8px}
-  .ep-bars{display:flex;align-items:flex-end;gap:6px;height:100px;margin:12px 0;padding:8px 4px;background:#0b171d;border:1px solid var(--line);border-radius:12px}
-  .ep-bars .b{flex:1;min-width:8px;background:linear-gradient(180deg,#5a3030,var(--brand));border-radius:4px 4px 0 0;position:relative}
-  .ep-bars .b.max{background:linear-gradient(180deg,#8a4040,var(--yellow))}
-  .ep-bars .b span{position:absolute;bottom:100%;left:50%;transform:translateX(-50%);font-size:9px;color:var(--muted);white-space:nowrap;display:none}
-  .ep-bars .b:hover span,.ep-bars .b.max span{display:block;color:var(--yellow)}
-  .anno{font-size:12px;color:var(--yellow);margin:4px 0 12px}
-  .sm{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:12px 0}
-  .sm-card{background:#0b171d;border:1px solid var(--line);border-radius:12px;padding:14px}
-  .sm-card .lab{font-size:12px;color:var(--muted)}
-  .sm-card .num{font-size:24px;font-weight:700;letter-spacing:-.5px;margin:6px 0 2px}
-  .sm-card .num.neg{color:#e8a0a0}
- </style>
 </head>
 <body>
  <a class="skip" href="#main">Gå til indhold</a>
@@ -40,7 +26,7 @@
  <a class="brand" href="index.html"><img src="assets/mark.svg" width="34" height="27" alt=""><span>NewDeal Invest</span></a>
  <nav class="nav"><a href="index.html?view=fonden">← Fonden</a><a href="om-data.html#g-drawdown">Ordliste</a></nav>
  </header>
- <main id="main"><p style="color:var(--muted)">Henter…</p></main>
+ <main id="main"><p class="muted">Henter…</p></main>
  <footer class="site-footer"><p>Udkast / noindex. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast.</p></footer>
  <script type="module">
  import { loadAll, fundById, maxDrawdown, drawdownSummary, calendarYearReturns, WARN_HIST, fmtDate, fmtPct } from './js/data.js';
@@ -48,76 +34,238 @@
  const fundId = new URL(location.href).searchParams.get('fund') || 'pmindi';
  const fund = fundById(portfolio, fundId);
  const isAkk = fund.id === 'pmindiakk';
+ const main = document.getElementById('main');
+
  if (isAkk) {
- document.getElementById('main').innerHTML = `
+ main.innerHTML = `
  <a class="back" href="index.html?view=fonden&fund=pmindiakk">← Fonden</a>
  <p class="eyebrow">FONDAFKAST · DRAWDOWN</p>
  <h1>Drawdown · ${fund.short}</h1>
- <section class="panel"><p style="color:var(--muted);line-height:1.6">Afkast og drawdown for PMINDIAKK vises efter 12 måneders historik. Klassen følger samme overordnede strategi som PMINDI.</p></section>
+ <section class="panel"><p class="muted" style="line-height:1.6">Afkast og drawdown for PMINDIAKK vises efter 12 måneders historik. Klassen følger samme overordnede strategi som PMINDI.</p></section>
+ <p class="link-row"><a href="sammenlign.html">Sammenlign andelsklasser →</a></p>
  <p class="warn">${WARN_HIST}</p>`;
+ } else if (!fund.data?.length) {
+ main.innerHTML = `<p class="muted">Ingen serie.</p>`;
  } else {
- const dd = maxDrawdown(fund.data);
- const sum = drawdownSummary(fund.data);
- const years = calendarYearReturns(fund.data);
+ const rows = fund.data;
+ const dd = maxDrawdown(rows);
+ const sum = drawdownSummary(rows);
+ const years = calendarYearReturns(rows);
+ const eps = sum.episodes;
  let recovery = null;
  if (dd) {
- const troughIdx = fund.data.findIndex(r => r.d === dd.troughD);
- const peakVal = fund.data.find(r => r.d === dd.peakD)?.total;
+ const troughIdx = rows.findIndex(r => r.d === dd.troughD);
+ const peakVal = rows.find(r => r.d === dd.peakD)?.total;
  if (troughIdx >= 0 && peakVal) {
- for (let i = troughIdx; i < fund.data.length; i++) {
- if (fund.data[i].total >= peakVal) { recovery = fund.data[i].d; break; }
+ for (let i = troughIdx; i < rows.length; i++) {
+ if (rows[i].total >= peakVal) { recovery = rows[i].d; break; }
  }
  }
  }
- // Underwater SVG (daily dd from running peak)
- const rows = fund.data;
  let peak = rows[0].total;
  const uw = rows.map(r => {
  if (r.total >= peak) peak = r.total;
  return { d: r.d, u: ((r.total / peak) - 1) * 100 };
  });
- const W=640,H=110,pad=8;
- const x=i=>pad+(i/(uw.length-1))*(W-2*pad);
- const y=v=>pad+((-Math.min(v,0))/Math.max(0.01,-Math.min(...uw.map(u=>u.u))))*(H-2*pad);
- const line=uw.map((u,i)=>`${i?'L':'M'}${x(i).toFixed(1)},${y(u.u).toFixed(1)}`).join(' ');
- const area=line+` L${x(uw.length-1).toFixed(1)},${H-pad} L${pad},${H-pad} Z`;
- const maxAbs=Math.max(0.01,-Math.min(...uw.map(u=>u.u)));
- // Episode bars (depth)
- const eps = [...sum.episodes].sort((a,b)=>a.peakD.localeCompare(b.peakD));
- const minDd = Math.min(...eps.map(e=>e.dd), -0.01);
- const bars = eps.map(e => {
- const h = Math.max(4, (e.dd / minDd) * 84);
- const isMax = e.dd === sum.max;
- return `<div class="b${isMax?' max':''}" style="height:${h}px" title="${e.peakD} → ${e.troughD}: ${fmtPct(e.dd)}"><span>${fmtPct(e.dd,0)}</span></div>`;
+ const nowU = uw[uw.length - 1].u;
+ const open = eps.find(e => !e.recoveredD) || null;
+ const maxAbs = Math.max(1, ...eps.map(e => -e.dd), ...uw.map(u => -u.u));
+ const yMax = Math.ceil(maxAbs / 5) * 5;
+ const t0 = Date.parse(rows[0].d + 'T12:00:00Z');
+ const t1 = Date.parse(rows[rows.length - 1].d + 'T12:00:00Z');
+
+ const W = 360, H = 168, padL = 28, padR = 12, padT = 16, padB = 20;
+ const xOf = d => padL + ((Date.parse(d + 'T12:00:00Z') - t0) / Math.max(1, t1 - t0)) * (W - padL - padR);
+ const yOf = v => padT + ((-Math.min(0, v)) / yMax) * (H - padT - padB);
+ const underwater = () => {
+ const line = uw.map((u, i) => `${i ? 'L' : 'M'}${xOf(u.d).toFixed(1)},${yOf(u.u).toFixed(1)}`).join(' ');
+ const y0 = yOf(0);
+ const area = `${line} L${xOf(uw[uw.length - 1].d).toFixed(1)},${y0.toFixed(1)} L${xOf(uw[0].d).toFixed(1)},${y0.toFixed(1)} Z`;
+ const parts = [
+ `<defs><linearGradient id="uwFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9ecfd6" stop-opacity="0.05"/><stop offset="100%" stop-color="#c98a94" stop-opacity="0.5"/></linearGradient></defs>`,
+ `<line class="uw-water" x1="${padL}" x2="${W - padR}" y1="${y0.toFixed(1)}" y2="${y0.toFixed(1)}"/>`
+ ];
+ for (let g = 10; g <= yMax; g += 10) {
+ const yy = yOf(-g).toFixed(1);
+ parts.push(`<line class="uw-grid" x1="${padL}" x2="${W - padR}" y1="${yy}" y2="${yy}"/>`);
+ parts.push(`<text class="tick" x="${padL - 4}" y="${Number(yy) + 3}" text-anchor="end">-${g}</text>`);
+ }
+ parts.push(`<text class="tick" x="${padL - 4}" y="${(y0 + 3).toFixed(1)}" text-anchor="end">0</text>`);
+ const spans = [];
+ for (const r of rows) {
+ const y = r.d.slice(0, 4);
+ const hit = spans.find(s => s.y === y);
+ if (hit) hit.b = r.d;
+ else spans.push({ y, a: r.d, b: r.d });
+ }
+ let prevX = -999;
+ for (const s of spans) {
+ const mid = (Date.parse(s.a + 'T12:00:00Z') + Date.parse(s.b + 'T12:00:00Z')) / 2;
+ const xx = padL + ((mid - t0) / Math.max(1, t1 - t0)) * (W - padL - padR);
+ if (xx - prevX < 42) continue;
+ prevX = xx;
+ parts.push(`<text class="tick" x="${xx.toFixed(1)}" y="${H - 4}" text-anchor="middle">${s.y}</text>`);
+ }
+ parts.push(`<path d="${area}" fill="url(#uwFill)"/>`);
+ parts.push(`<path class="uw-line" d="${line}"/>`);
+ const trough = uw.find(u => u.d === dd.troughD) || uw.reduce((a, b) => a.u < b.u ? a : b);
+ const tx = xOf(trough.d), ty = yOf(trough.u);
+ parts.push(`<line class="uw-drop" x1="${tx.toFixed(1)}" x2="${tx.toFixed(1)}" y1="${y0.toFixed(1)}" y2="${ty.toFixed(1)}"/>`);
+ parts.push(`<circle class="uw-max" cx="${tx.toFixed(1)}" cy="${ty.toFixed(1)}" r="3.2"/>`);
+ const lx = Math.min(W - padR - 4, Math.max(padL + 28, tx));
+ parts.push(`<text class="uw-label" x="${lx.toFixed(1)}" y="${Math.max(12, ty - 7)}" text-anchor="middle">${fmtPct(trough.u, 0)}</text>`);
+ const last = uw[uw.length - 1];
+ const nx = xOf(last.d), ny = yOf(last.u);
+ parts.push(`<circle class="uw-now" cx="${nx.toFixed(1)}" cy="${ny.toFixed(1)}" r="3.4"/>`);
+ parts.push(`<text class="uw-label" x="${(nx - 6).toFixed(1)}" y="${Math.max(12, ny - 6)}" text-anchor="end">nu ${fmtPct(last.u, 0)}</text>`);
+ parts.push(`<line id="uw-cursor" class="uw-cursor" x1="${nx.toFixed(1)}" x2="${nx.toFixed(1)}" y1="${y0.toFixed(1)}" y2="${(H - padB).toFixed(1)}"/>`);
+ const desc = `Daglig afstand til løbende top fra ${fmtDate(rows[0].d)} til ${fmtDate(rows[rows.length - 1].d)}. Dybeste bund ${fmtPct(trough.u)} den ${fmtDate(trough.d)}. Seneste dag ${fmtPct(last.u)}. Slideren under grafen vælger en dag.`;
+ return `<svg id="uw-svg" class="uw" viewBox="0 0 ${W} ${H}" role="img" aria-labelledby="uw-title uw-desc"><title id="uw-title">Under vand</title><desc id="uw-desc">${desc}</desc>${parts.join('')}</svg>`;
+ };
+
+ const depthPlot = () => {
+ const W = 360, H = 118, padL = 10, padR = 8, axisY = 78;
+ const plotW = W - padL - padR;
+ const xOf = v => padL + (Math.min(yMax, -v) / yMax) * plotW;
+ const lanes = [-26, -16, -6, 4, 14];
+ const dots = eps.map((e, i) => {
+ const isMax = Math.abs(e.dd - sum.max) < 0.001;
+ const isOpen = !e.recoveredD;
+ const cls = isMax ? 'dot max' : isOpen ? 'dot open' : 'dot';
+ const cy = 46 + lanes[i % lanes.length];
+ return `<circle class="${cls}" cx="${xOf(e.dd).toFixed(1)}" cy="${cy}" r="${isMax || isOpen ? 4 : 3.1}"><title>${fmtDate(e.peakD)} til ${fmtDate(e.troughD)}: ${fmtPct(e.dd)}</title></circle>`;
+ });
+ const parts = [
+ ...dots,
+ `<line class="mark-med" x1="${xOf(sum.median).toFixed(1)}" x2="${xOf(sum.median).toFixed(1)}" y1="18" y2="${axisY}"/>`,
+ `<line class="mark-mean" x1="${xOf(sum.mean).toFixed(1)}" x2="${xOf(sum.mean).toFixed(1)}" y1="18" y2="${axisY}"/>`,
+ `<line class="axis" x1="${padL}" x2="${W - padR}" y1="${axisY}" y2="${axisY}"/>`
+ ];
+ for (let g = 0; g <= yMax; g += 10) {
+ const xx = (padL + (g / yMax) * plotW).toFixed(1);
+ parts.push(`<text class="tick" x="${xx}" y="${axisY + 16}" text-anchor="middle">${g === 0 ? '0' : '-' + g}</text>`);
+ }
+ const desc = `${eps.length} episoder. Median ${fmtPct(sum.median)}. Middel ${fmtPct(sum.mean)}. Dybest ${fmtPct(sum.max)}.`;
+ return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-labelledby="dp-title dp-desc"><title id="dp-title">Fordeling af fald</title><desc id="dp-desc">${desc}</desc>${parts.join('')}</svg>`;
+ };
+
+ let deep = eps.filter(e => e.dd <= -10).sort((a, b) => a.peakD.localeCompare(b.peakD));
+ if (!deep.length) deep = [...eps].sort((a, b) => a.dd - b.dd).slice(0, 3).sort((a, b) => a.peakD.localeCompare(b.peakD));
+ const endOf = e => e.recoveredD || rows[rows.length - 1].d;
+ const spanDays = e => Math.max(1, Math.round((Date.parse(endOf(e) + 'T12:00:00Z') - Date.parse(e.peakD + 'T12:00:00Z')) / 86400000));
+ const maxSpan = Math.max(...deep.map(spanDays));
+ const ledger = deep.map(e => {
+ const days = spanDays(e);
+ const openRow = !e.recoveredD;
+ const tail = openRow
+ ? `${days} dage siden toppen. Stadig åben. Seneste dag ${fmtPct(nowU)}.`
+ : `Tilbage på toppen ${fmtDate(e.recoveredD)}. ${days} dage fra top til genopretning.`;
+ const w = Math.max(8, Math.round((days / maxSpan) * 100));
+ return `<li class="${openRow ? 'open' : ''}"><button type="button" class="ep-jump" data-date="${e.troughD}" aria-pressed="false"><span class="depth">${fmtPct(e.dd)}</span><span class="meta"><strong>${fmtDate(e.peakD)}</strong> til bund <strong>${fmtDate(e.troughD)}</strong>. ${tail}<span class="dur" aria-hidden="true"><span style="width:${w}%"></span></span></span></button></li>`;
  }).join('');
- const yearRows = years.map(y => `<tr><td>${y.year}${y.partial?' (delår)':''}</td><td class="${y.ret>=0?'pos':'neg'}">${fmtPct(y.ret)}</td><td>${fmtDate(y.from)} → ${fmtDate(y.to)}</td></tr>`).join('');
- document.getElementById('main').innerHTML = `
+
+ const maxRet = Math.max(...years.map(y => Math.abs(y.ret)), 1);
+ const yearCells = years.map(y => {
+ const note = y.partial ? 'delår' : (y.to.slice(5) === '12-31' ? 'helår' : 'til dato');
+ const h = Math.max(8, Math.round((Math.abs(y.ret) / maxRet) * 64));
+ const neg = y.ret < 0;
+ return `<a href="periode.html?fund=${fundId}&year=${y.year}"><span class="yr-bar${neg ? ' neg' : ''}" style="height:${h}px"></span><span class="yr-y">${y.year}</span><span class="yr-r ${neg ? 'neg' : 'pos'}">${fmtPct(y.ret)}</span><span class="yr-note">${note}</span></a>`;
+ }).join('');
+ const maxYear = dd.troughD.slice(0, 4);
+ const yearOfMax = years.find(y => y.year === maxYear);
+ const yearLine = yearOfMax && yearOfMax.ret > 0
+ ? `${maxYear} sluttede i plus (${fmtPct(yearOfMax.ret)}) og rummede alligevel det dybeste fald.`
+ : 'Søjlen er årets afkast. Faldet fra top står i grafen ovenfor.';
+ const anno = open
+ ? `Lige nu, pr. ${fmtDate(rows[rows.length - 1].d)}, ligger serien ${fmtPct(nowU)} under toppen fra ${fmtDate(open.peakD)}. Bund i den episode var ${fmtPct(open.dd)} den ${fmtDate(open.troughD)}.`
+ : '';
+ const depthCap = `Hver prik er ét fald fra top til bund. ${eps.length} i alt. Den stiplede streg er median (${fmtPct(sum.median)}). Den fuldt optrukne lyse streg er middel (${fmtPct(sum.mean)}). Gul prik er det dybeste fald.${open ? ' Hul gul prik er den åbne episode.' : ''}`;
+
+ main.innerHTML = `
  <a class="back" href="index.html?view=fonden&fund=${fundId}">← Fonden</a>
  <p class="eyebrow">FONDAFKAST · DRAWDOWN</p>
  <h1>Drawdown · ${fund.short}</h1>
  <p class="lede">Fald fra top i fondens totalafkast-serie (NAV total). Fondniveau. Ikke enkeltaktier.</p>
- <div class="sm">
- <div class="sm-card"><div class="lab">Max (dybeste)</div><div class="num neg">${sum.max!=null?fmtPct(sum.max):'-'}</div><div class="lab">${dd?fmtDate(dd.peakD)+' → '+fmtDate(dd.troughD):''}</div></div>
- <div class="sm-card"><div class="lab">Middel (episoder)</div><div class="num neg">${sum.mean!=null?fmtPct(sum.mean):'-'}</div><div class="lab">${eps.length} episoder peak→bund</div></div>
- <div class="sm-card"><div class="lab">Median (episoder)</div><div class="num neg">${sum.median!=null?fmtPct(sum.median):'-'}</div><div class="lab">Halvdelen er dybere</div></div>
- <div class="sm-card"><div class="lab">Genopretning (max)</div><div class="num" style="font-size:16px;color:var(--cyan)">${recovery?fmtDate(recovery):(dd?'Ikke endnu / i serien':'-')}</div><div class="lab">Tilbage til forrige top</div></div>
+ <div class="hero-stat">
+ <div>
+ <p class="kicker">Dybeste fald fra top</p>
+ <p class="num">${sum.max != null ? fmtPct(sum.max) : '-'}</p>
+ <p class="when">${dd ? `<strong>${fmtDate(dd.peakD)}</strong> til <strong>${fmtDate(dd.troughD)}</strong>` : ''}</p>
+ <p class="when">${recovery ? `Tilbage på den top ${fmtDate(recovery)}.` : 'Serien er ikke tilbage på den top.'}</p>
  </div>
- <p class="anno">Under vand: daglig afstand til løbende top. Gul søjle = dybeste episode.</p>
- <svg class="uw" viewBox="0 0 ${W} ${H}" role="img" aria-label="Underwater drawdown">
-  <path d="${area}" fill="rgba(137,174,180,.22)" stroke="none"/>
-  <path d="${line}" fill="none" stroke="var(--cyan)" stroke-width="1.6"/>
-  <text x="${pad}" y="14" fill="var(--muted)" font-size="10">0 %</text>
-  <text x="${pad}" y="${H-4}" fill="var(--yellow)" font-size="10">${fmtPct(-maxAbs,0)}</text>
- </svg>
- <h2 style="font-size:16px;margin:16px 0 4px">Episoder (dybde)</h2>
- <div class="ep-bars" role="img" aria-label="Drawdown-episoder">${bars}</div>
- <p class="src">Middel og median er over afsluttede og åbne peak→bund-episoder, ikke over alle dage under vand. Max matcher «største fald».</p>
- <section class="panel" style="margin-top:18px">
- <h2 style="font-size:16px;margin-bottom:10px">Kalenderår (til kontekst)</h2>
- <div class="table-wrap"><table class="data" style="min-width:0"><thead><tr><th>År</th><th>Afkast</th><th>Periode</th></tr></thead><tbody>${yearRows}</tbody></table></div>
- <p style="font-size:11px;color:var(--muted);margin-top:8px">Klik et år: ${years.map(y=>`<a href="periode.html?fund=${fundId}&year=${y.year}">${y.year}</a>`).join(' · ')} · <a href="periode.html?fund=${fundId}&year=YTD">YTD</a></p>
- </section>
+ <dl class="quiet-stats">
+ <div><dt>Middel</dt><dd>${sum.mean != null ? fmtPct(sum.mean) : '-'}<small>${eps.length} episoder</small></dd></div>
+ <div><dt>Median</dt><dd>${sum.median != null ? fmtPct(sum.median) : '-'}<small>Halvdelen er dybere</small></dd></div>
+ </dl>
+ </div>
+ ${anno ? `<p class="anno">${anno}</p>` : ''}
+ <h2 class="h-section">Under vand</h2>
+ <figure class="figure">${underwater()}<figcaption>0 % er på toppen. Kurven er afstanden til den løbende top, dag for dag. Gul prik er den dybeste bund. Gul ring er seneste dag.</figcaption><div class="uw-scrub"><p id="uw-read" aria-live="polite">${fmtDate(uw[uw.length - 1].d)}: ${fmtPct(uw[uw.length - 1].u)} under den løbende top.</p><label class="sr-only" for="uw-slider">Vælg dag i serien</label><input id="uw-slider" type="range" min="0" max="${uw.length - 1}" value="${uw.length - 1}" aria-valuemin="0" aria-valuemax="${uw.length - 1}" aria-valuetext="${fmtDate(uw[uw.length - 1].d)}: ${fmtPct(uw[uw.length - 1].u)} under den løbende top."></div></figure>
+ <h2 class="h-section">Hvor dybe er faldene?</h2>
+ <figure class="figure plain">${depthPlot()}<figcaption>${depthCap}</figcaption></figure>
+ <h2 class="h-section">De dybe episoder</h2>
+ <p class="src" style="margin-top:0">Episoder dybere end 10 %. De øvrige ${eps.length - deep.length} er med i middel, median og prikkerne. Vælg en episode for at se bunden på kurven.</p>
+ <ol class="ep-ledger">${ledger}</ol>
+ <h2 class="h-section">Kalenderår</h2>
+ <div class="year-rail">${yearCells}</div>
+ <p class="src">${yearLine} Søjlen er årets afkast.</p>
+ <p class="link-row"><a href="periode.html?fund=${fundId}&year=YTD">År til dato →</a> · <a href="sammenlign.html">Sammenlign andelsklasser →</a> · <a href="om-data.html#g-drawdown">Ordliste: drawdown</a></p>
+ <p class="src">Middel og median er over episoder fra top til bund. De er ikke et gennemsnit af hver dag under vand. Max er det samme tal som største fald på Fonden.</p>
  <p class="warn">${WARN_HIST}</p>`;
+ const svg = document.getElementById('uw-svg');
+ const slider = document.getElementById('uw-slider');
+ const read = document.getElementById('uw-read');
+ const cursor = document.getElementById('uw-cursor');
+ const nearest = (t) => {
+ let lo = 0, hi = uw.length - 1;
+ while (lo < hi) {
+ const mid = (lo + hi) >> 1;
+ if (Date.parse(uw[mid].d + 'T12:00:00Z') < t) lo = mid + 1;
+ else hi = mid;
+ }
+ if (lo > 0) {
+ const prev = Math.abs(Date.parse(uw[lo - 1].d + 'T12:00:00Z') - t);
+ const here = Math.abs(Date.parse(uw[lo].d + 'T12:00:00Z') - t);
+ if (prev < here) return lo - 1;
+ }
+ return lo;
+ };
+ const show = (i) => {
+ const idx = Math.max(0, Math.min(uw.length - 1, i));
+ const u = uw[idx];
+ const text = `${fmtDate(u.d)}: ${fmtPct(u.u)} under den løbende top.`;
+ read.textContent = text;
+ slider.value = String(idx);
+ slider.setAttribute('aria-valuetext', text);
+ const x = xOf(u.d).toFixed(1);
+ cursor.setAttribute('x1', x);
+ cursor.setAttribute('x2', x);
+ };
+ const fromClient = (ev) => {
+ const rect = svg.getBoundingClientRect();
+ if (!rect.width) return;
+ const px = ((ev.clientX - rect.left) / rect.width) * W;
+ const frac = (px - padL) / (W - padL - padR);
+ show(nearest(t0 + Math.max(0, Math.min(1, frac)) * (t1 - t0)));
+ };
+ slider.addEventListener('input', () => show(Number(slider.value)));
+ svg.addEventListener('pointerdown', (ev) => {
+ svg.setPointerCapture(ev.pointerId);
+ fromClient(ev);
+ });
+ svg.addEventListener('pointermove', (ev) => {
+ if (ev.pointerType === 'mouse' || ev.buttons) fromClient(ev);
+ });
+ const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ document.querySelectorAll('.ep-jump').forEach((btn) => {
+ btn.addEventListener('click', () => {
+ const d = btn.dataset.date;
+ const hit = uw.findIndex((u) => u.d === d);
+ show(hit >= 0 ? hit : nearest(Date.parse(d + 'T12:00:00Z')));
+ document.querySelectorAll('.ep-jump').forEach((b) => b.setAttribute('aria-pressed', String(b === btn)));
+ svg.scrollIntoView({ block: 'nearest', behavior: reduce ? 'auto' : 'smooth' });
+ });
+ });
  }
  </script>
 </body>

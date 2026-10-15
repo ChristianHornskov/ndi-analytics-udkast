@@ -89,8 +89,8 @@
  </section>
  </div>
 
- <section class="panel cmp-timeline" aria-labelledby="tl-h">
- <h2 class="panel-h" id="tl-h">Tidslinje</h2>
+ <section class="cmp-time" aria-labelledby="tl-h">
+ <h2 class="h-section" id="tl-h">Tidslinje</h2>
  <ol class="tl">
  <li><time datetime="${firstA}">${fmtDate(firstA)}</time><span>PMINDI: første NAV. Herfra regnes "siden start".</span></li>
  <li><time datetime="${firstB}">${fmtDate(firstB)}</time><span>PMINDIAKK: første NAV. Samme portefølje, udbyttet bliver i fonden.</span></li>
@@ -98,9 +98,10 @@
  </ol>
  </section>
 
- <section class="panel" aria-labelledby="ov-h">
- <h2 class="panel-h" id="ov-h">Samme selskaber</h2>
+ <section class="cmp-share" aria-labelledby="ov-h">
+ <h2 class="h-section" id="ov-h">Samme selskaber</h2>
  <p class="cmp-big"><strong>${shared}</strong> af ${(b.positions || []).length} selskaber i PMINDIAKK findes også i PMINDI${onlyB ? `. ${onlyB} findes kun i PMINDIAKK` : ''}.</p>
+ ${onlyB ? `<p class="cmp-legend"><span><span class="cmp-key a" aria-hidden="true"></span>I begge</span><span><span class="cmp-key b" aria-hidden="true"></span>Kun i PMINDIAKK</span></p><div class="cmp-sharebar" role="img" aria-label="${shared} af ${(b.positions || []).length} i begge klasser"><span class="a" style="width:${Math.round((shared / Math.max(1, (b.positions || []).length)) * 100)}%"></span><span class="b" style="width:${Math.round((onlyB / Math.max(1, (b.positions || []).length)) * 100)}%"></span></div>` : ''}
  <p class="src">Forsinket beholdning pr. ${posAsOf}. PMINDI har ${(a.positions || []).length} positioner. Små forskelle i antal og vægt skyldes, at klasserne har forskellig størrelse og pengestrømme. Det er ikke to forskellige strategier.</p>
  </section>
 
@@ -112,6 +113,7 @@
  <p class="link-row" style="margin-top:10px"><a href="temaer.html">Alle temaer →</a> · <a href="om-data.html#g-akk">Hvad betyder akkumulerende?</a></p>
  </section>
 
+ <p class="link-row cmp-links"><a href="drawdown.html">Drawdown (PMINDI) →</a> · <a href="vaerdikaeder.html">Værdikæder →</a> · <a href="laer/udbytte-vs-akk.html">Udbytte eller akkumulerende →</a></p>
  <p class="band">Hvilken klasse der passer, afhænger af din egen situation, fx skat og om du vil have udbytte udbetalt. Siden giver ikke rådgivning. Læs KID for begge klasser under <a href="risici.html">Risici / KID</a>.</p>
  <p class="warn">${WARN_HIST}</p>`;
  </script>

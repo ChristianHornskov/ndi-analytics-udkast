@@ -310,3 +310,42 @@ Tjek: Playwright på 1280 og 375 med 0 konsolfejl og ingen sidescroll. Tesla `?i
 Næste: rum-pædagogik (ordliste/kredsløbshøjder), krydslinks for kvante og ét led pr. kæde i vaerdikaede.html. Ikke færdig.
 
 - Lane-R: UX + compliance review cycle 1 landed (notes/CLAUDE-*-review.md).
+## Fra Grok lane-D
+
+**2026-10-15 23:56 CEST. Drawdown-former, sammenlign, embed. Ikke færdig.**
+
+Drawdown er ikke længere fire ens kort og to mørke kasser. Hero-tal for det dybeste fald (−35,8 %, 18. feb. 2025 til 8. apr. 2025, tilbage 26. aug. 2025). Gul linje om at serien pr. 14. okt. 2026 stadig ligger −23,4 % under toppen fra 2. jun. 2026. Underwater-figur, prikfordeling (middel −5,2 %, median −2,8 %, 41 episoder), liste over de fire fald dybere end 10 %, årssøjler med link til periode. 2025 sluttede i plus og rummede alligevel det dybeste fald.
+
+Sammenlign: tidslinje og overlap står uden panel. Temasøjlerne er det ene panel. Krydslinks til drawdown, værdikæder og udbytte-siden bliver stående efter load.
+
+Embed: CTA i CSS, link til største fald (AKK siger at drawdown vises efter 12 måneder). "Fonden har intet fast benchmark." Nasdaq-klasser er væk fra embed-CSS.
+
+Fælles tokens, sparsomt: `--ink`, `.figure`, `.anno`, `.hero-stat`, `.ep-ledger`, `.year-rail`. `.scarce` og `.tm-svg` er stadig page-local.
+
+Tjekket i Chromium ved 1280, 375 og 320. Ingen sidescroll, ingen konsolfejl. AKK-kortet har ingen afkastprocent. Review i `notes/VISUAL-VARIETY-REVIEW.md`. Næste: skrub på underwater, så en dag kan læses uden hover som eneste vej. Ikke færdig.
+
+`lane-D` er pushet (`d1b1419`) og klar til merge. Ikke main.
+
+## Fra Grok lane-D
+
+**2026-10-15 23:59 CEST. Underwater kan skrubbes. Ikke færdig.**
+
+Slideren under grafen er synlig. Den starter på seneste dag: 14. okt. 2026, −23,4 % under den løbende top. Home går til 22. sep. 2023 (0,0 %). Et klik i venstre side af kurven sætter 22. dec. 2023. Udlæsningen står i teksten og i `aria-valuetext`. En lys lodret streg følger dagen. Gul prik og gul ring bliver stående som bund og seneste dag.
+
+Tjekket i Chromium ved 1280 og 375. Ingen sidescroll, ingen konsolfejl. `lane-D` er klar til merge. Ikke main. Ikke færdig.
+
+## Fra Grok lane-D
+
+**2026-10-16 00:01 CEST. Episode hopper til bunden på kurven. Ikke færdig.**
+
+De fire dybe episoder er knapper. Klik på −35,8 % sætter udlæsningen til 8. apr. 2025, −35,8 % under den løbende top. Enter gør det samme. Én række er markeret. På 375 står tallet over teksten, og den åbne episode er stadig den gule bjælke. Ingen sidescroll, ingen konsolfejl.
+
+`lane-D` (`671eb03` og dette commit) er klar til merge. Ikke main. Ikke færdig.
+
+## Fra Grok lane-D
+
+**2026-10-16 00:06 CEST. Embed-fyld til nul. Ikke færdig.**
+
+Grafens areal slutter ved 0 %. Over linjen er cyan. Under linjen er dæmpet rosa (`#c98a94`), samme tone som de negative tal. År til dato viser dykket i starten af 2026 som rosa. Hele perioden er stadig +104,8 %. PMINDIAKK viser fortsat "Vises efter 12 måneder", og svg'en er tom. Ingen konsolfejl.
+
+`lane-D` er klar til merge. Ikke main. Ikke færdig.
