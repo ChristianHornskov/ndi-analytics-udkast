@@ -99,6 +99,8 @@ Konceptkortene i nyhedsarkivet er delt i korte afsnit, så grænserne kan læses
 
 MP Materials skriver, at magneter fremstilles på anlægget Independence i Texas, og at udvindingen er ved Mountain Pass. Ordene om verdens rigeste forekomst og verdens stærkeste magnet er ikke taget med. Firefly gav 403 samme nat. Eclipse er derfor ikke omskrevet.
 
+United States Antimony skriver, at selskabet udvinder og forarbejder antimon og zeolit. Det er ikke et kraftværk. Markedsformuleringen om hele kæden fra malm til metal er ikke taget med. Kobolt og wolfram stod i en menu, men teksten om to materialer nævner antimon og zeolit, så de to andre er ikke skrevet ind som produktion.
+
 ## År til dato på periodesiden
 
 `ytdReturn` i `data.js` bruger sidste punkt i året før som udgangspunkt, ikke 1. januar. For PMINDI pr. 2026-10-14 er det 2025-12-31, ikke 2026-01-02. `periode.html` viser den samme dato i "Fra → til". Kalenderår bruger samme base (`calendarYearReturns`).

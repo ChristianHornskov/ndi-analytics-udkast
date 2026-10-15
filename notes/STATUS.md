@@ -519,3 +519,13 @@ Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke me
 Firefly gav 403. Eclipse-sætningen er ikke ændret.
 
 **Push:** `lane-E` @ `71bd8a8` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 00:50 CEST. United States Antimony skriver, at de også forarbejder zeolit. Ikke færdig.**
+
+Profilen sagde kun antimon. Forsiden siger, at selskabet udvinder og forarbejder to materialer, antimon og zeolit. Teksten siger det, og at det ikke er et kraftværk. Formuleringen om hele kæden og om at fjerne afhængighed er ikke kopieret. Ingen `reviewedAt`. Rollen i JSON nævner zeolit. Den vises ikke på siden.
+
+Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Zeolit står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `a5c1301` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

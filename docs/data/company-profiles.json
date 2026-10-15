@@ -659,15 +659,15 @@
   "US9115491030": {
    "name": "United States Antimony",
    "theme": "energy-resources",
-   "summary": "Udvinder og forarbejder antimon. Metallet bruges blandt andet i flammehæmmere, legeringer og visse energianvendelser.",
+   "summary": "Selskabet skriver, at det udvinder og forarbejder antimon og zeolit. Det er ikke et kraftværk.",
    "watch": "Miner, forarbejdning og efterspørgsel efter antimon.",
    "source": "https://www.usantimony.com/",
-   "products": "Antimon og forarbejdede produkter.",
+   "products": "Antimon og zeolit.",
    "customers": "Industrikunder.",
    "role": "Råstof, ikke elproduktion.",
    "narrative": [
-    "United States Antimony udvinder og forarbejder antimon i USA.",
-    "Metallet bruges blandt andet i legeringer. Selskabet er ikke et kraftværk."
+    "United States Antimony skriver, at selskabet udvinder og forarbejder to materialer, antimon og zeolit.",
+    "Det er råstoffer, ikke et kraftværk."
    ],
    "narrativeSources": [
     {

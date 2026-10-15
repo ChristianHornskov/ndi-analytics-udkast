@@ -115,3 +115,7 @@ Energikortet er fem afsnit og rumkortet tre. Ingen nye påstande. Chromium ved 3
 ## Independence · 2026-10-16 00:49 CEST
 
 MP Materials skriver, at magneterne laves i Independence i Texas. Mountain Pass er minen. "World's richest" og "world's strongest" er ikke kopieret. Firefly gav 403, så Eclipse er urørt. AI-udkast uden gennemgangsdato. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Zeolit · 2026-10-16 00:50 CEST
+
+United States Antimony skriver selv, at de to materialer er antimon og zeolit. Kobolt og wolfram i menuen er ikke skrevet ind som produktion. "Entire arc" er ikke kopieret. AI-udkast uden gennemgangsdato. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
