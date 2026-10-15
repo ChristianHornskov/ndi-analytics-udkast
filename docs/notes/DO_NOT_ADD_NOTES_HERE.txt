@@ -1,0 +1,2 @@
+COMPLIANCE: Do not place STATUS, SPEC, VIDENSBOT, UX-krav or any internal notes under docs/.
+Canonical path: /notes at the repository root (not published by GitHub Pages).
