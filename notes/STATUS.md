@@ -469,3 +469,11 @@ Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html, v
 3. **Rettelse:** `note` i value-chains.json siger nu "Vægten viser, hvor stor en del af porteføljen selskabet udgør" i stedet for "Vægte = eksponering … overvægt".
 Tjek: Playwright på 1280 og 375 med 0 sidefejl og ingen sidescroll på alle fem faner. Antal bokse: AI 0, robotik 3, energi 5, rum 8 og kvante 1. "Se hvorfor prisen faldt" lander på `#sp-cost` (194 px), og "Se citatet med kilde" lander på `#kap-rum` (172 px), uden at kortet åbner. smoke.mjs 52/52 fail 0 (egen server på 8817). Precheck PASSED. Grep efter handelssprog og tankestreger i diff giver kun "ikke en anbefaling".
 Næste: flodkortets knuder kan fremhæves ved hop fra AI-ledkortet, og kvante-fanen kan få et link fra kortet tilbage til rummet. Ikke færdig.
+
+## Fra Claude lane-A · 2026-10-16 ~02:55 CEST (deep links til kapitler, flodknude ved hop)
+Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html og notes.
+1. **Fejlrettelse: deep links til kapitler landede forkert.** vaerdikaede.html linker til `vaerdikaeder.html?kaede=…#kap-kaeder` for alle kæder. Siden bygges først, når value-chains.json er hentet, så browserens eget hop landede midt i flodkapitlet (375 px: `#kap-kaeder` 1610 px under toppen, 1280 px: `#kap-rum` 9604 px under). Starthoppet gælder nu ethvert id på siden og ikke kun afsnit inde i `#kap-kaeder`. Efter rettelsen lander `#kap-kaeder`, `#kap-flod` og `#kap-rum` på 200 px (375) og 172 px (1280), og fane-afsnit som `#sp-cost` og `#e-risk` lander som før (222 og 194 px).
+2. **Flodkort:** Pillen "Led N af 13 i floden" på AI-ledkortene får knuden på flodkortet til at lyse gult i 4 sekunder og ruller den til midten af skærmen. Knuderne har `data-lks`. Testet med Hukommelse (led 6) på 1280 og 375.
+3. **Rum:** "Rummet og de andre kæder" har nu en ramme med prikket kant i venstre side ligesom de andre rum-sektioner. Før stod den løst på baggrunden.
+Tjek: Playwright på 375 for alle fem faner og vaerdikaede.html med 0 sidefejl og ingen sidescroll. smoke.mjs 52/52 fail 0 (egen server på 8817). Precheck PASSED. Grep efter handelssprog og tankestreger i diff giver 0 hits.
+Næste: rum-fanen er 10.900 px høj på mobil, så læse-ruten kan få en "tilbage til ruten"-knap, og energi- og kvantesektionerne kan få samme rammetjek. Ikke færdig.

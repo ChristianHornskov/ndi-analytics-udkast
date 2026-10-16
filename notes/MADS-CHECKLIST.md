@@ -63,6 +63,7 @@ Kilder: slack_ny_graf_2026-10-15.md, vision.txt, mads_tankemodel.md, investering
 - [x] Energi: "Hvor i strømvejen" på hvert ledkort (5 trin fra råstof til datacenter, leddet fremhævet, hop til AI-floden; baggrund) + led i strømmens rækkefølge + genveje i energi-fanen (lane-A)
 - [x] Rum: "Rummet og de andre kæder" (trådediagram med 7 tråde fra 5 rum-led til led i AI, energi, robotik og kvante; hop til leddet, Musk-udsagnet kun via citatet med kilde; resten baggrund) + 6. quizspørgsmål + læse-rute "Rum i ni stop"; vaerdikaede.html: trådelink på rumkortet (lane-A)
 - [x] Rum: "Leddet i rum-fanen" på hvert rum-ledkort (rejse-strimmel i 6 trin med klik til trinnet + piller til penge, usikkerheder, tråde og højde, som fremhæver de relevante kort); kvante-genvej til tråden "Kvantenøgler via satellit"; `#sp-web` lander under menuen (lane-A)
+- [x] Deep links til kapitler (`?kaede=space#kap-kaeder` fra vaerdikaede.html, `#kap-rum`, `#kap-flod`) lander nu rigtigt, efter at siden er bygget; AI-ledkortets "Led N af 13 i floden" lyser knuden op på flodkortet; "Rummet og de andre kæder" har ramme som de andre rum-sektioner (lane-A)
 - [x] Rum: "Kort fortalt" på alle 8 rum-ledkort (Gør + Penge med pengesporets ikon: én gang, løbende eller endnu tidligt; NDI-linjen om Starlink med kilde, compute i rummet linker kun til citatet med kilde); "Hvad er det" gentager ikke længere "Gør" og forklarer i stedet fart, bus, signalvej, radar og afstand (baggrund) (lane-A)
 
 ## Formidling / filosofi
