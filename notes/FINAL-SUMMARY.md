@@ -26,7 +26,7 @@ Static Danish site (`docs/`, GitHub Pages) for NewDeal Invest PMINDI / PMINDIAKK
 
 ## Tests
 - `scripts/precheck.sh` (run before every push): data cutoffs, no per-stock fields, X compliance (house-only, @InvestNewdeal markers, no $PMINDI holdings, no 13 Aug ticker post), AKK no series, Danish maturity labels, no internal agent comments in docs/.
-- `scripts/smoke.mjs`: 27 URLs × 1280/375 + Nasdaq on/off check at both widths = 56 checks — HTTP 200, no JS errors, no advice wording, no notes leak, Markedsføring+KID footer. Last: 56/0 (07:48). Precheck now allows Nasdaq only with the exact label, off by default, and never called a benchmark.
+- `scripts/smoke.mjs`: 27 URLs × 1280/375 + Nasdaq on/off and rolling/top-5 checks at both widths = 58 checks — HTTP 200, no JS errors, no advice wording, no notes leak, Markedsføring+KID footer. Last: 58/0 (07:58). Precheck now allows Nasdaq only with the exact label, off by default, and never called a benchmark.
 - `scripts/jargon-sweep.mjs`: rendered-text scan for internal jargon. Clean (only glossary/NDI's own "Flodsystem").
 
 ## Open questions – Christian
@@ -49,5 +49,6 @@ _Updated 2026-10-16 07:21 CEST — HEAD 160de10_
 ## graf-v2 review (07:35, read-only) → `notes/GRAF-V2-GAP.md`
 - The public graf-v2 page currently renders no chart iframe (Wix v516: only the head script for `ndi-v2-*` postMessage). The feature list is therefore based on the shared chart release on the same Azure host (`graph/latest.json` → release 59bd88d8…, asOf 2026-10-15) plus the original graf-v2 spec. Nothing on graf-v2 or the live site was touched.
 - Added, one at a time: (1) Nasdaq-100 comparison line with label [76b0e7d]; (2) Kurs/Totalafkast toggle; (3) dividend U markers; (4) touch, arrow-key and Home/End tooltip with cursor line [d24c675].
-- Still missing (needs a decision): 1 md/3 mdr periods (deliberately excluded for compliance), the "100.000 kr." illustration, rolling 12-month returns, a list of the five deepest drawdowns, a staleness warning, 52-week highs (per-stock prices, so excluded).
+- 07:53 (Leo 07:50): (5) rolling 12-month total return, (6) table of the 5 deepest drawdowns (peak/trough/recovered), (7) staleness warning when return data is >3 days old [4b67fa6]. Generator: `scripts/build-nasdaq-compare.py`. HANDOFF-CODEX updated.
+- Deliberately left out (needs a decision): 1 md/3 mdr, the "100.000 kr." illustration, 52-week highs.
 - Show URL: https://christianhornskov.github.io/ndi-analytics-udkast/?view=fonden&cmp=nasdaq
