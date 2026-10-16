@@ -477,3 +477,12 @@ Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html og
 3. **Rum:** "Rummet og de andre kæder" har nu en ramme med prikket kant i venstre side ligesom de andre rum-sektioner. Før stod den løst på baggrunden.
 Tjek: Playwright på 375 for alle fem faner og vaerdikaede.html med 0 sidefejl og ingen sidescroll. smoke.mjs 52/52 fail 0 (egen server på 8817). Precheck PASSED. Grep efter handelssprog og tankestreger i diff giver 0 hits.
 Næste: rum-fanen er 10.900 px høj på mobil, så læse-ruten kan få en "tilbage til ruten"-knap, og energi- og kvantesektionerne kan få samme rammetjek. Ikke færdig.
+
+## Fra Claude lane-A · 2026-10-16 ~02:50 CEST (rum: stop-for-stop gennem den lange fane)
+Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html og notes.
+1. **"Stop N af 9" nederst i hvert stop på rum-fanen.** Rum-fanen er ca. 10.900 px høj på mobil, så hvert af de ni stop i læse-ruten slutter nu med en lille bjælke. Den viser ni prikker (læst = cyan, her = gul), "Stop 3 af 9: 🛰 Én satellit", "← forrige stop", "Næste: 🔁 Penge →" og "↑ Ruten". Det sidste stop siger "✓ Ruten er slut. Op til starten ↑". Ordbogens bjælke står under den lukkede ordbog, så den altid kan ses. På mobil fylder "Næste" hele bredden øverst, og de to andre deler rækken under.
+2. **Ruten øverst husker, hvor man har været.** Det stop, der fylder læsefeltet, får gul kant (`aria-current="location"`), og de stop, man har set, får en cyan ring om ikonet.
+3. **Rettelse:** "↑ Ruten" peger på `#space-pane` med scroll-margin. Et hop direkte til `#sp-route` landede under kapitelmenuen (84 px).
+Alt bygges ud fra `route.stops`, så der er ingen ny tekst at kildebelægge.
+Tjek: Playwright på 1280 og 375 med 0 sidefejl og ingen sidescroll. 9 bjælker. "Næste" fra Billigere lander på `#sp-trip` (194/222 px), "↑ Ruten" lander med ruten synlig på 194 px, og Ordbog → Tjek dig selv lander på 194/222 px. smoke.mjs 52/52 fail 0 (egen server på 8817). Precheck PASSED. Grep efter handelssprog og tankestreger i diff giver 0 hits.
+Næste: energi- og kvantefanen kan få samme stop-bjælker, hvis de får en rute, og kvante (kort) på vaerdikaede.html kan linke direkte til kvantetrappen. Ikke færdig.
