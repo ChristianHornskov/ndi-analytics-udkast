@@ -280,7 +280,7 @@ export function kidFooterHtml(meta) {
     .filter(([, f]) => f.priip?.url)
     .map(([id, f]) => `<a href="${f.priip.url}">KID ${labels[id] || id} <span class="ext-mark">↗</span></a> <span class="kid-meta">(ISIN ${f.priip.isin} · SRI ${f.priip.risk_class}/${f.priip.risk_scale_max} · pr. ${fmtDate(f.priip.production_date)})</span>`);
   if (!links.length) return '';
-  return `Central Information Dokument (Fundmarket, ekstern PDF): ${links.join(' · ')}`;
+  return `Dokument med central information (KID, Fundmarket, ekstern PDF): ${links.join(' · ')}`;
 }
 
 /** Udfyld [data-kid-footer] fra fund-meta; statisk fallback-tekst bevares ved fejl. */

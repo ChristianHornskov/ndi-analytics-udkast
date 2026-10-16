@@ -200,8 +200,8 @@
  }).join('');
  const first = series[0], last = series[series.length-1];
  return `<section class="panel">
- <h2 class="panel-h">Vægt over tid (kvartalssnapshots)</h2>
- <p class="src">${first.w.toFixed(2).replace('.',',')} % (${fmtDate(first.d)}) → ${last.w.toFixed(2).replace('.',',')} % (${fmtDate(last.d)}). Kun måneder hvor ISIN indgår.</p>
+ <h2 class="panel-h">Vægt i fonden over tid</h2>
+ <p class="src">${first.w.toFixed(2).replace('.',',')} % (${fmtDate(first.d)}) → ${last.w.toFixed(2).replace('.',',')} % (${fmtDate(last.d)}). Kun rapportdatoer hvor ISIN indgår. Forsinket snapshot pr. ${fmtDate(last.d)}, ikke aktiekurs.</p>
  <div style="display:flex;align-items:flex-end;gap:3px;overflow-x:auto;padding-bottom:4px">${bars}</div>
  </section>`;
  })()}
