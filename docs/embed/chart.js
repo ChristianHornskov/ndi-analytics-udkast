@@ -200,9 +200,9 @@
     $('#metric-ytd').textContent = pct(ytd, true);
     $('#metric-dd').textContent = pct(dd.max, true);
     $('#metric-total-note').textContent = `Siden ${fmtDate(first.d)} · efter løbende omkostninger`;
-    $('#metric-cagr-note').textContent = annual == null
+    $('#metric-cagr-note').innerHTML = annual == null
       ? `Historik ${number.format(years)} år · vises efter ét års data`
-      : `${number.format(years)} år siden start`;
+      : `${number.format(years)} år siden start <span class="keep">${fmtDate(first.d)}</span>`;
     $('#metric-ytd-note').innerHTML = `Fra 1. jan. ${last.d.slice(0, 4)} til <span class="keep">${fmtDate(last.d)}</span>. Delår, afventer <span class="keep">Fundmarket-godkendelse.</span>`;
     $('#metric-dd-note').textContent = `Bund ${fmtDate(dd.trough)} · fra en top i perioden`;
     const well = document.getElementById('metric-dd-well');

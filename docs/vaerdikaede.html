@@ -90,9 +90,9 @@
  <main id="main">
  <p class="eyebrow">AI-VÆRDIKÆDEN · ENKEL VERSION</p>
  <h1>Fra strøm til robot i 13 led</h1>
- <p class="lede">Rækkefølgen følger Mads' egen inddeling (BLOG 30. marts 2026). Øverst er de fysiske led, som strøm, fabrikker og chips. Nederst er dem, der bruger compute: software, agenter og fysisk AI. Ifølge Mads kommer efterspørgslen i stigende grad nedefra, først fra agentisk AI og snart fra fysisk AI. Pædagogisk model. Ikke en anbefaling. Læs også <a href="laer/saadan-taenker-vi.html">Sådan tænker vi</a>.</p>
+ <p class="lede">Rækkefølgen følger Mads' egen inddeling (NDI-indlæg 30. marts 2026). Øverst er de fysiske led, som strøm, fabrikker og chips. Nederst er dem, der bruger compute: software, agenter og fysisk AI. Ifølge Mads kommer efterspørgslen i stigende grad nedefra, først fra agentisk AI og snart fra fysisk AI. Pædagogisk model. Ikke en anbefaling. Læs også <a href="laer/saadan-taenker-vi.html">Sådan tænker vi</a>.</p>
  <p class="band">Generel information, ikke en anbefaling eller investeringsrådgivning. Værdikæder og temaer viser, hvad porteføljen er eksponeret mod. Fonden er bredt spredt på flere hundrede selskaber med små vægte. Beholdningen vises med forsinkelse.</p>
- <p class="src" style="margin-top:6px"><b>AI-udkast.</b> Teksterne er sammenfattet med AI ud fra NDI's ugebreve, bogen og selskabernes egne sider. De afventer NDI-gennemgang. Afsnit mærket NDI har kilde. <a href="om-data.html#g-ai-udkast">Om AI-udkast →</a></p>
+ <p class="src" style="margin-top:6px"><b>AI-udkast.</b> Teksterne er sammenfattet med AI ud fra NDI's offentlige indlæg, NDI's bog og selskabernes egne sider. De afventer NDI-gennemgang. Mads Christiansen er NDI's stifter; 'NDI-indlæg' med dato henviser til NDI's offentlige indlæg på den dato. Afsnit mærket NDI har kilde. <a href="om-data.html#g-ai-udkast">Om AI-udkast →</a></p>
  <p class="band" id="chain-asof">Antal og vægte viser den forsinkede beholdning i PMINDI. Ingen kurser, afkast eller nøgletal pr. aktie.</p>
 
  <div class="chain-tools" id="chain-tools" hidden>
@@ -122,7 +122,8 @@
  </main>
 
  <script type="module">
- import { daTheme, fmtDate } from './js/data.js';
+ import { daTheme, fmtDate, displayName } from './js/data.js';
+ const coName = (c) => displayName(c).replace(/ (Ag|Se|Nv|Sa|Asa|Ab|Oyj)$/, (m, s) => ' ' + s.toUpperCase());
  const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
  const pct = (n) => String(n).replace('.', ',');
  const [pack, themes, multi] = await Promise.all([
@@ -223,7 +224,7 @@
  <p class="meta"><b>${l.count}</b> selskaber · ca. ${pct(l.weightSum.toFixed(1))} % af fonden (forsinket)</p>
  ${alsoLine(l)}
  <p class="hit-why"></p>
- ${top.length ? `<details><summary>Største selskaber i leddet efter vægt (${top.length} af ${l.count})</summary><ol>${top.map(c => `<li><a href="selskab.html?isin=${encodeURIComponent(c.isin)}&fund=${fundId}">${esc(c.name)}</a> · vægt ${pct(c.w)} %</li>`).join('')}</ol></details>` : ''}
+ ${top.length ? `<details><summary>Største selskaber i leddet efter vægt (${top.length} af ${l.count})</summary><ol>${top.map(c => `<li><a href="selskab.html?isin=${encodeURIComponent(c.isin)}&fund=${fundId}">${esc(coName(c))}</a> · vægt ${pct(c.w)} %</li>`).join('')}</ol></details>` : ''}
  <p class="more"><a href="vaerdikaeder.html?kaede=ai-compute#lk-${esc(l.id)}">Hvorfor NDI følger leddet →</a>${see}</p>
  </div>
  </article>`;
@@ -233,7 +234,7 @@
 
  // Selskaber: led-medlemskab fra value-chains.json, temaer fra themes.json ∪ multi-tags
  const cos = new Map();
- const add = (isin, name) => { const e = cos.get(isin) || { isin, name, tags: new Set(), links: new Set() }; cos.set(isin, e); return e; };
+ const add = (isin, name) => { const e = cos.get(isin) || { isin, name: coName({ name }), raw: name, tags: new Set(), links: new Set() }; cos.set(isin, e); return e; };
  links.forEach(l => l.companies.forEach(c => { const e = add(c.isin, c.name); e.links.add(l.id); if (c.theme) e.tags.add(c.theme); }));
  (themes.themes || []).forEach(t => (t.companies || []).forEach(c => add(c.isin, c.name).tags.add(t.themeKey || t.slug)));
  Object.entries(multi.byIsin || {}).forEach(([isin, m]) => { const e = cos.get(isin); if (e) { (m.tags || []).forEach(t => e.tags.add(t)); e.why = m.why; } });
@@ -309,9 +310,9 @@
  function matches(q) {
  const s = q.trim().toLowerCase();
  if (!s) return [];
- const exact = list.filter(c => c.name.toLowerCase() === s);
+ const exact = list.filter(c => c.name.toLowerCase() === s || c.raw.toLowerCase() === s);
  if (exact.length) return exact;
- return list.filter(c => c.name.toLowerCase().startsWith(s));
+ return list.filter(c => c.name.toLowerCase().startsWith(s) || c.raw.toLowerCase().startsWith(s));
  }
  input.addEventListener('input', () => {
  const q = input.value.trim();

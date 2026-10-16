@@ -200,6 +200,11 @@ if command -v rg >/dev/null 2>&1; then
   fi
 fi
 
+
+# UX 06:00 guards
+if rg -q '2087874479141589021' "$DOC/data/x-posts.json" 2>/dev/null; then err "x-posts.json still has 13 Aug ticker post"; else ok "13 Aug ticker post removed"; fi
+if rg -q "garp: 'GARP'|highgrowth: 'High growth'" "$DOC/js/data.js" 2>/dev/null; then err "English maturity labels in data.js"; else ok "Danish maturity labels"; fi
+
 if [[ "$FAIL" -ne 0 ]]; then
   echo "=== PRECHECK FAILED — do not push ===" >&2
   exit 1

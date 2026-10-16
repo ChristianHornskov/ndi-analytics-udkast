@@ -29,7 +29,7 @@
  </footer>
  <noscript><p style="max-width:1180px;margin:0 auto;padding:0 20px 24px;color:#aac0c7">Siden læser kun den statiske fil. Slå JavaScript til for at se kortene. Browseren kalder ikke X.</p></noscript>
  <script type="module">
- import { loadXPosts, xCard, fmtXDate, highlightHtml, X_LABEL, X_FILTERS, postInFilter, postMatchesQuery, postWho, feedHitKind, archiveHit, xScoreHtml, xPlace, xWhoBarHtml, xWhoDoorHtml, xSpineHtml } from './js/x-feed.js';
+ import { loadXPosts, xCard, fmtXDate, highlightHtml, X_LABEL, X_FILTERS, postInFilter, postMatchesQuery, postWho, feedHitKind, archiveHit, xScoreHtml, xPlace, xWhoBarHtml, xWhoDoorHtml, xSpineHtml, xAtlasHtml } from './js/x-feed.js';
  const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
  const main = document.getElementById('main');
  const pack = await loadXPosts();
@@ -192,7 +192,8 @@
  const fLabel = X_FILTERS.find((f) => f.id === state.f);
  if (state.f !== 'all' && fLabel) bits.push(chip(fLabel.label, 'f'));
  if (state.who === 'house') bits.push(chip('NDI-konti', 'who'));
- if (state.who === 'curated') bits.push(chip('Konti NDI følger', 'who'));
+ else if (state.who === 'curated') bits.push(chip('Konti NDI følger', 'who'));
+ else if (state.who && state.who !== 'all') bits.push(chip('@' + state.who, 'who'));
  active.innerHTML = bits.join('');
  const focused = bits.length ? ` · ${bits.length === 1 ? 'ét filter' : bits.length + ' filtre'}` : '';
  const leadOn = Boolean(state.q.trim() || state.f !== 'all');
@@ -248,7 +249,8 @@
  if (state.q.trim()) picked.push('søgning «' + state.q.trim() + '»');
  if (state.f !== 'all' && fLabel) picked.push(fLabel.label);
  if (state.who === 'house') picked.push('NDI-konti');
- if (state.who === 'curated') picked.push('konti NDI følger');
+ else if (state.who === 'curated') picked.push('konti NDI følger');
+ else if (state.who && state.who !== 'all') picked.push('@' + state.who);
  const pickedLine = picked.length ? ` Aktivt: ${picked.join(' · ')}.` : '';
  const scoreItems = [];
  if (leadOn && list.length) {
@@ -274,12 +276,17 @@
  : '';
  live.classList.toggle('is-echo', scoreItems.length > 0);
  active.classList.toggle('is-echo', leadOn);
+ const atlasOf = (hotPosts, extra) => xAtlasHtml(posts, {
+ hotIds: new Set(hotPosts.map((p) => String(p.id))),
+ who: state.who,
+ label: `${X_LABEL}. Konto og dato i snapshotet.`,
+ ...extra,
+ });
  const homeSlot = document.getElementById('x-spine-home');
  if (homeSlot) {
- homeSlot.innerHTML = leadOn ? '' : xSpineHtml(posts, {
- jump: true,
+ homeSlot.innerHTML = leadOn ? '' : atlasOf(list, {
  home: true,
- label: `${X_LABEL}. Alle opslag i snapshotet, efter dato.`,
+ leadId: list[0]?.id || '',
  });
  }
  const trackSpine = (leadId, series) => xSpineHtml(posts, {
@@ -318,7 +325,8 @@
  + homeLane('is-rest', other, 'Andre opslag', 'Hverken en NDI-konto eller mærket fra listen over fulgte konti');
  } else if (!direct.length && !theme.length) {
  const [first, ...tail] = list;
- grid.innerHTML = trackSpine(first?.id, null) + scoreBar + `<div class="x-stage">${xCard(first, { query: markQ, lead: true, reasons: reasonsFor(first) })}</div>`
+ const atlas = atlasOf(list, { compact: true, pick: false, leadId: first?.id || '', rows: 'hot' });
+ grid.innerHTML = trackSpine(first?.id, null) + scoreBar + `<div class="x-split"><div class="x-split-main"><div class="x-stage">${xCard(first, { query: markQ, lead: true, reasons: reasonsFor(first) })}</div></div><div class="x-split-side">${atlas}</div></div>`
  + (tail.length ? `<div class="x-grid" style="grid-column:1/-1">${tail.map((p) => xCard(p, { query: markQ })).join('')}</div>` : '');
  } else {
  const pickFrom = (arr, id) => {
@@ -350,9 +358,8 @@
  const series = leadKind === 'direct' ? [leadPost, ...restDirect] : [leadPost, ...restTheme];
  const dated = series.length > 1;
  const quote = `<div class="x-stage">${xCard(leadPost, { query: markQ, lead: true, hitKind: leadKind, reasons: reasonsFor(leadPost), dated, place: dated ? xPlace(series, leadPost.id) : null })}</div>`;
- const stage = sideLane
- ? `<div class="x-split"><div class="x-split-main">${quote}</div><div class="x-split-side">${sideLane}</div></div>`
- : quote;
+ const atlas = atlasOf(list, { compact: true, pick: true, rows: 'hot', leadId: leadPost?.id || '' });
+ const stage = `<div class="x-split"><div class="x-split-main">${quote}</div><div class="x-split-side">${atlas}${sideLane}</div></div>`;
  grid.innerHTML = trackSpine(leadPost?.id, series) + scoreBar + stage
  + belowLane
  + (restHits.length ? `<div class="x-grid" style="grid-column:1/-1">${restHits.map((p) => xCard(p, { query: state.q })).join('')}</div>` : '');
@@ -436,6 +443,14 @@
  if (k === 'q') { state = { ...state, q: '' }; qInput.value = ''; }
  if (k === 'f') state = { ...state, f: 'all' };
  if (k === 'who') state = { ...state, who: 'all' };
+ write(state);
+ render();
+ return;
+ }
+ const atlasWho = e.target.closest('[data-atlas-who]');
+ if (atlasWho) {
+ const id = atlasWho.getAttribute('data-atlas-who');
+ state = { ...state, who: state.who === id ? 'all' : id };
  write(state);
  render();
  return;

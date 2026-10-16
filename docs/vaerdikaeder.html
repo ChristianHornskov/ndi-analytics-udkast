@@ -546,7 +546,7 @@
       <div>
         <p class="lede" id="phil-lede">Indlæser…</p>
         <p class="band" id="compliance-band"></p>
-        <p class="src" style="margin-top:6px"><span class="vc-kind" style="margin-right:6px">AI-udkast</span>Teksterne er sammenfattet med AI ud fra NDI's ugebreve, bogen og selskabernes egne sider. De afventer NDI-gennemgang. Afsnit mærket NDI har kilde. <a href="om-data.html#g-ai-udkast">Om AI-udkast →</a></p>
+        <p class="src" style="margin-top:6px"><span class="vc-kind" style="margin-right:6px">AI-udkast</span>Teksterne er sammenfattet med AI ud fra NDI's offentlige indlæg, NDI's bog og selskabernes egne sider. De afventer NDI-gennemgang. Mads Christiansen er NDI's stifter; 'NDI-indlæg' med dato henviser til NDI's offentlige indlæg på den dato. Afsnit mærket NDI har kilde. <a href="om-data.html#g-ai-udkast">Om AI-udkast →</a></p>
       </div>
       <aside class="vc-callout">
         <strong>Kæden som en flod</strong>
@@ -687,7 +687,7 @@
       <div class="q-pane" id="q-pane">
         <aside class="vc-callout">
           <strong>Kort kæde med vilje.</strong>
-          NDI har ikke skrevet en egentlig analyse af kvantekæden, så siden holdes kort. Mads nævner kvantecomputere som et segment med politisk medvind og store udsving i kurserne og som eksempel på teknologier, hvis indtægter ikke passer i et regneark (BLOG 2. juni og 21. juli 2025).
+          NDI har ikke skrevet en egentlig analyse af kvantekæden, så siden holdes kort. Mads Christiansen, NDI's stifter, nævner kvantecomputere som et segment med politisk medvind og store udsving i kurserne og som eksempel på teknologier, hvis indtægter ikke passer i et regneark (NDI-indlæg 2. juni og 21. juli 2025).
           <p class="link-row" style="margin:10px 0 0"><a href="tema.html?slug=quantum&amp;fund=pmindi">Quantum-temaet i beholdningen →</a> · <a href="laer/saadan-taenker-vi.html">Hvorfor usikre indtægter ikke passer i et regneark →</a></p>
         </aside>
         <ul class="p-links" id="q-links" aria-label="Spring til" hidden></ul>
@@ -866,13 +866,13 @@
       <h2>Rum og compute: et citat, ikke en prognose</h2>
       <p class="lede" style="font-size:14px;margin-bottom:8px">Mads har gengivet en påstand fra Elon Musk om SpaceX og compute i rummet. Den står her ordret og med kilde, så du kan se, hvem der siger hvad.</p>
       <div id="quotes"></div>
-      <p class="band">Citatet er Elon Musks påstand, gengivet i NDI's ugebrev. Det er ikke NDI's forventning, ikke en prognose og ikke en anbefaling. <a href="?kaede=space#kap-kaeder" data-goto="space">Se rumkæden →</a></p>
+      <p class="band">Citatet er Elon Musks påstand, gengivet i et offentligt NDI-indlæg. Det er ikke NDI's forventning, ikke en prognose og ikke en anbefaling. <a href="?kaede=space#kap-kaeder" data-goto="space">Se rumkæden →</a></p>
     </section>
 
     <section class="chapter panel" id="kap-filosofi">
       <h2>NDI-blikket (kort)</h2>
       <div class="sm">
-        <div class="sm-card"><div class="lab">Princip</div><div class="num" style="font-size:16px;line-height:1.35;color:var(--text)">Vælg udviklingen, ikke vinderen</div><p class="src">Retningen kan man se. Den ene vinder kan man ikke udpege. Mads' overskrift, ugebrev 7. september 2026.</p></div>
+        <div class="sm-card"><div class="lab">Princip</div><div class="num" style="font-size:16px;line-height:1.35;color:var(--text)">Vælg udviklingen, ikke vinderen</div><p class="src">Retningen kan man se. Den ene vinder kan man ikke udpege. Mads' overskrift, NDI-indlæg 7. september 2026.</p></div>
         <div class="sm-card"><div class="lab">Princip</div><div class="num" style="font-size:16px;line-height:1.35;color:var(--text)">Hele kæden</div><p class="src">Råstoffer, energi og infrastruktur tæller med.</p></div>
         <div class="sm-card"><div class="lab">Princip</div><div class="num" style="font-size:16px;line-height:1.35;color:var(--text)">Knaphed</div><p class="src">Strøm, siliciumskiver, optik og folk.</p></div>
         <div class="sm-card"><div class="lab">Princip</div><div class="num" style="font-size:16px;line-height:1.35;color:var(--text)">Forsinket sandhed</div><p class="src">Offentlig beholdning pr. 1. juni 2026, ikke dagens handler.</p></div>
@@ -887,7 +887,9 @@
     <p class="link-row"><a href="vaerdikaede.html">Klassisk AI-kæde →</a> · <a href="temaer.html">Temaer →</a> · <a href="?kaede=space#kap-kaeder" data-goto="space">Rumkæden →</a> · <a href="?kaede=quantum#kap-kaeder" data-goto="quantum">Kvantekæden →</a> · <a href="tema.html?slug=space&amp;fund=pmindi">SpaceTech-tema →</a> · <a href="laer/saadan-taenker-vi.html">Sådan tænker vi →</a></p>
   </main>
   <script type="module">
-    import { daTheme, fmtDate } from './js/data.js';
+    import { daTheme, fmtDate, displayName } from './js/data.js';
+    // Læsbart navn (depotbankens forkortelser rettet, selskabsform med versaler); ISIN er nøglen
+    const coName = (c) => displayName(c).replace(/ (Ag|Se|Nv|Sa|Asa|Ab|Oyj)$/, (m, s) => ' ' + s.toUpperCase());
     const esc = (s) => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
     const pack = await fetch('data/value-chains.json').then(r => r.json());
     const fund = 'pmindi';
@@ -939,7 +941,7 @@
       const total = items.reduce((s, i) => s + i.w, 0) || 1;
       const out = [];
       let i = 0;
-      const nodes = items.map(it => ({ ...it, area: (it.w / total) * w * h }));
+      const nodes = items.map(it => ({ ...it, pct: it.w, area: (it.w / total) * w * h }));
       let rx = x, ry = y, rw = w, rh = h;
       while (i < nodes.length) {
         const vertical = rw >= rh;
@@ -973,33 +975,40 @@
     }
     function renderTreemap(host, items) {
       const W = 720, H = 320, pad = 4;
+      // squarify overskriver w med boksens bredde; vægten ligger i pct. Farve følger legendens rækkefølge
       const layout = squarify([...items].sort((a,b)=>b.w-a.w), pad, pad, W-2*pad, H-2*pad);
+      const maxPct = Math.max(...items.map(it => it.w), 1);
+      const fit = (txt, px, cw) => { const n = Math.floor((cw - 14) / px); return txt.length <= n ? txt : txt.slice(0, Math.max(1, n - 1)) + '…'; };
       const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
       svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
       svg.setAttribute('class', 'tm-svg');
       svg.setAttribute('role', 'img');
       svg.setAttribute('aria-label', 'Tema-treemap');
-      layout.forEach((c, i) => {
+      layout.forEach((c) => {
+        const i = items.findIndex(it => it.key === c.key);
         const a = document.createElementNS('http://www.w3.org/2000/svg', 'a');
         a.setAttribute('href', `tema.html?slug=${encodeURIComponent(c.key)}&fund=${fund}`);
+        const ttl = document.createElementNS('http://www.w3.org/2000/svg', 'title');
+        ttl.textContent = `${daTheme(c.key)}: ${String(c.pct).replace('.', ',')} % af beholdningen pr. ${fmtDate(pack.asOf)}`;
+        a.appendChild(ttl);
         const r = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
         r.setAttribute('class', 'tm-leaf');
         r.setAttribute('x', c.x); r.setAttribute('y', c.y);
         r.setAttribute('width', Math.max(0, c.w)); r.setAttribute('height', Math.max(0, c.h));
         r.setAttribute('rx', 6); r.setAttribute('fill', PAL[i % PAL.length]);
-        r.setAttribute('fill-opacity', String(0.55 + 0.35 * (c.w / (items[0]?.w || 1))));
+        r.setAttribute('fill-opacity', String(0.55 + 0.35 * (c.pct / maxPct)));
         a.appendChild(r);
         if (c.w > 70 && c.h > 36) {
           const t1 = document.createElementNS('http://www.w3.org/2000/svg', 'text');
           t1.setAttribute('x', c.x + 8); t1.setAttribute('y', c.y + 18);
           t1.setAttribute('fill', '#e8f2f4'); t1.setAttribute('font-size', '12');
-          t1.textContent = daTheme(c.key);
+          t1.textContent = fit(daTheme(c.key), 7, c.w);
           a.appendChild(t1);
           const t2 = document.createElementNS('http://www.w3.org/2000/svg', 'text');
           t2.setAttribute('x', c.x + 8); t2.setAttribute('y', c.y + 36);
           t2.setAttribute('fill', 'var(--yellow)'); t2.setAttribute('font-size', '14');
           t2.setAttribute('font-weight', '700');
-          t2.textContent = String(c.w).replace('.', ',') + ' %';
+          t2.textContent = fit(String(c.pct).replace('.', ',') + ' %', 9, c.w);
           a.appendChild(t2);
         }
         svg.appendChild(a);
@@ -1159,7 +1168,7 @@
       const who = (l) => {
         if (!l) return '';
         if (!l.count) return `<p class="who">${esc(l.short || l.label)}: ingen selskaber i beholdningen er tilordnet leddet.</p>`;
-        const names = l.companies.slice(0, 3).map(c => `<a href="selskab.html?isin=${encodeURIComponent(c.isin)}&fund=${fund}">${esc(c.name)}</a>`).join(', ');
+        const names = l.companies.slice(0, 3).map(c => `<a href="selskab.html?isin=${encodeURIComponent(c.isin)}&fund=${fund}">${esc(coName(c))}</a>`).join(', ');
         return `<p class="who">Led: <b>${esc(l.short || l.label)}</b> · ${l.count} selskaber pr. ${asOf}, fx ${names}. <a href="#lk-${esc(l.id)}" data-open="${esc(l.id)}">Se leddet →</a></p>`;
       };
       let cur = 0;
@@ -1466,7 +1475,7 @@
 
     // Slå et led op i en vilkårlig kæde
     const linkOf = (cid, lid) => pack.chains.find(c => c.id === cid)?.links.find(l => l.id === lid);
-    // Robotik: Mads' tre faser (BLOG 7. okt 2024)
+    // Robotik: Mads' tre faser (NDI-indlæg 7. okt 2024)
     const phys = pack.chains.find(c => c.id === 'physical');
     document.getElementById('phases').innerHTML = (phys?.phases || []).map((f, i, all) =>
       `<li class="phase${i === all.length - 2 ? ' now' : ''}${i === all.length - 1 ? ' next' : ''}"><div class="ph-n">${esc(f.n)} · ${esc(f.when)}</div><h3>${esc(f.label)}</h3><p>${esc(f.t)}</p>${f.link ? `<p style="margin-top:6px"><a href="#lk-${esc(f.link)}" data-open="${esc(f.link)}">Se leddet →</a></p>` : ''}</li>`).join('');
@@ -1916,7 +1925,7 @@
         const k = `${src.id}|${c.id}:${l.id}`;
         if (!pairs.has(k)) pairs.set(k, { src, c, l, names: [] });
         const p = pairs.get(k);
-        if (!p.names.includes(co.name)) p.names.push(co.name);
+        if (!p.names.includes(coName(co))) p.names.push(coName(co));
       })));
       const list = [...pairs.values()].sort((a, b) => b.names.length - a.names.length).slice(0, 6);
       if (!list.length) {
@@ -2008,7 +2017,7 @@
       const list = all ? l.companies : l.companies.slice(0, SHOW);
       return list.map(c => {
         const other = own && c.theme !== own;
-        return `<a class="chip${other ? ' other' : ''}" href="selskab.html?isin=${encodeURIComponent(c.isin)}&fund=${fund}">${esc(c.name)} <small>${pct(c.w)}${other ? ' · tema ' + esc(daTheme(c.theme)) : ''}${c.forslag ? ' · forslag' : ''}</small></a>`;
+        return `<a class="chip${other ? ' other' : ''}" href="selskab.html?isin=${encodeURIComponent(c.isin)}&fund=${fund}">${esc(coName(c))} <small>${pct(c.w)}${other ? ' · tema ' + esc(daTheme(c.theme)) : ''}${c.forslag ? ' · forslag' : ''}</small></a>`;
       }).join('');
     }
 
