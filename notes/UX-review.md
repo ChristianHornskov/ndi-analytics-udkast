@@ -573,3 +573,8 @@ Ordlisten (lane-C) dækker nu ordene. Teksten i UI'et ligger hos andre lanes, s�
 - Tjekket alle 23 lane-C-sider (ideer, kort, om-data, invester, risici, ndi-perspektiv, lær/*) for de tre 06:00-MUSTs og SHOULD 1: ingen «High growth», «Præ-revenue», «Præ-profit», «YTD», «Dyb →», «Level 1» eller «(stub)». 
 - De tre top-MUSTs (livscyklus-kurve labels, tom X-markør 13. aug., mobil Udforsk-fold) ligger i `docs/js/*` og `index.html`, som ikke er lane-C's filer → til Leo/lane-A/B.
 - lane-C er merget med origin/main (merge, ikke rebase, så pushede commits ikke omskrives). Precheck OK.
+
+## 06:50 CEST lane-C · temaantal var forældede (rettet)
+- Temaerne i portfolio.json er ændret siden lane-C regnede ideer om (~02:30). Nu: 227 med tema · 87 forslag · 31 Andet, Software 48, Platforme 45, Optik 28, Energiressourcer 30, Quantum 5. Rettet i ideer (6 billeder), ordliste, lær/sektorer og HANDOFF. Vægthistogram, kvartiler (26/76/160) og livscyklus-fordelingen var stadig rigtige.
+- Til andre lanes og reviewere: citér ikke længere «229 / 85». risici.html `#sortering` tæller live og er den sikre kilde.
+- Andre ændringer fra lane-C efter 06:31: ndi-perspektiv bruger displayName(), har 24 px selskabslinks og egen indledning, og datafeltets ord vises på dansk. Ordlisten har danske forklaringer i 13 engelske opslagsord. Livscyklus-skitsen bruger Udforsks danske navne.
