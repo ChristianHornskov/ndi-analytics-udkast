@@ -491,3 +491,13 @@ Den åbne søjle er gul og valgt fra start. Kanten var for tynd til at ses mod d
 Tjekket i Chromium. Ingen sidescroll ved 320. Ingen konsolfejl.
 
 `lane-D` er klar til merge. Ikke main. Ikke færdig.
+
+## Fra Grok lane-D
+
+**2026-10-16 02:15 CEST. Stregen ved nul er lys. Ikke færdig.**
+
+Nul-linjen under vand var stiplet og svag, især hvor kurven lå dybt. Den er nu lys og hel, og tallet 0 har samme farve. Grænsen ved 10 % under nul er stadig brand. Tallene på kurven er uændrede.
+
+Tjekket i Chromium ved 1280, 375 og 320. Ingen sidescroll, ingen konsolfejl. AKK siger stadig 12 måneder.
+
+`lane-D` er klar til merge. Ikke main. Ikke færdig.

@@ -630,12 +630,14 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
 .uw-key .k-dot{width:8px;height:8px;border-radius:50%;background:var(--yellow)}
 .uw-key .k-ring{width:8px;height:8px;border-radius:50%;box-shadow:inset 0 0 0 1.6px var(--yellow);background:var(--ink)}
 .uw-key .k-pick{width:8px;height:8px;border-radius:50%;background:var(--cyan)}
+.uw-key .k-zero{width:16px;height:2px;border-radius:1px;background:var(--text)}
 .uw-key .k-gate{width:16px;height:2px;border-radius:1px;background:var(--brand)}
 .uw-key .k-span{width:14px;height:8px;border-radius:2px;background:var(--brand)}
 .uw-key .k-span.open{height:11px;background:var(--yellow)}
 .figure .tick{fill:var(--faint)}
 .figure .uw-line{fill:none;stroke:var(--cyan);stroke-width:1.75;stroke-linejoin:round;stroke-linecap:round;vector-effect:non-scaling-stroke}
-.figure .uw-water{stroke:var(--faint);stroke-width:1;stroke-dasharray:4 4;vector-effect:non-scaling-stroke}
+.figure .uw-water{stroke:var(--text);stroke-width:1.25;vector-effect:non-scaling-stroke}
+.figure text.tick.uw-zero{fill:var(--text)}
 .figure .uw-grid{stroke:var(--line);stroke-width:1;vector-effect:non-scaling-stroke}
 .figure .uw-drop{stroke:var(--yellow);stroke-width:1;vector-effect:non-scaling-stroke;opacity:.85}
 .figure .uw-open{stroke:var(--yellow);stroke-width:1.25;vector-effect:non-scaling-stroke;opacity:.9;pointer-events:none}
@@ -727,6 +729,8 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
   .ep-ledger li.open .depth{color:#111}
   .figure text,.figure .tick,.figure .uw-label{fill:#333}
   .figure .uw-plate{fill:#fff}
+  .figure .uw-water{stroke:#111}
+  .figure text.tick.uw-zero{fill:#111}
   .figure .uw-open{stroke:#333;opacity:1}
   .figure .uw-gate{stroke:#1d4e56}
   .figure text.tick.uw-gate{fill:#1d4e56}

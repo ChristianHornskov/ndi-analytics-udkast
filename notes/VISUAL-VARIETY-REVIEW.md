@@ -128,6 +128,10 @@ På bred skærm stoppede temasøjlerne ved 560 px, og panelet havde et tomt felt
 
 Den åbne søjle er gul og valgt fra start. Den lyse kant var 1,25 px og forsvandt mod det gule. Den er nu 3 px, så den ses mod baggrunden. En valgt søjle i brand er stadig 1,25 px. Et klik på søjlen for 8. apr. 2025 sætter udlæsningen til −35,8 %, og den gule søjle mister kanten. Ingen sidescroll ved 320. Ingen konsolfejl.
 
+### Update · stregen ved nul er lys · 2026-10-16 ~02:15 CEST
+
+Nul-linjen var en svag stiplet streg og forsvandt, hvor kurven lå under vand. Den er nu lys og hel, tegnet oven på fyldet, og tallet 0 har samme farve. Stregen ved 10 % under nul er stadig brand og tykkere. Nøglen siger "0 % er toppen". "-36 %" og "nu -23 %" er uændrede. Et klik på søjlen for 8. apr. 2025 sætter udlæsningen til −35,8 %. Ingen tekst uden for svg'en. Ingen sidescroll ved 1280, 375 og 320. Ingen konsolfejl. AKK siger stadig 12 måneder og har ingen procent.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.
