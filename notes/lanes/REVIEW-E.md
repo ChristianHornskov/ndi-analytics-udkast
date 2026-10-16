@@ -282,6 +282,10 @@ St. Gabriel i Louisiana er flydende brint sammen med Olin gennem Hidrogenii. Kom
 
 Aftalen af 1. april 2025 siger, at Bloom og Conagra vil bruge brændselsceller på Conagras fabrikker i Troy og Archbold i Ohio. Før beholdningen. Ikke skrevet som celler, der allerede kører. Ikke et klassisk kraftværk. Megawatt, kapitalramme, leader og leading er ikke kopieret. AI-udkast uden gennemgangsdato. Elproduktions-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
 
+## Southern · 2026-10-16 03:00 CEST
+
+Siden om atomkraft skriver, at Plant Vogtle har fire enheder i drift. Forsiden skriver, at værket leverer strøm til mere end 1 million hjem og virksomheder i Georgia. Siderne daterer ikke tallene. Læst 16. oktober 2026. Ikke knyttet til beholdningen. Ikke en lille reaktor under udvikling. Georgia Power, Alabama Power og Mississippi Power er med. Largest, premier, leads og No. 1 er ikke kopieret. Tallet på næsten 30.000 medarbejdere og orkanoverskriften er ikke brugt. AI-udkast uden gennemgangsdato. Elproduktions-blurben og arkivet siger grænsen. Vægten 0,28 er uændret. Chromium ved 375 px. Kæden er også tjekket ved 1280 px og ved 375 px. "tjekket mod kilden" er ikke med. Vogtle står. Ingen konsolfejl. Ingen vandret scroll.
+
 ## NextEra · 2026-10-16 02:58 CEST
 
 Om-siden har overskriften 2013 og skriver, at effektudvidelsen på St. Lucie, Turkey Point og Point Beach omfattede seks atomkraftenheder. Før beholdningen. Ikke et nyt værk. Ikke en lille reaktor under udvikling. Florida Power & Light har mere end 6 millioner tilslutninger. Forsiden siger, at sammenlægningen med Dominion ikke er gennemført i teksten. Largest, industry-leading, multi-billion og U.S. history er ikke kopieret. Overskrifter om Google Cloud, Meta og Symmetry er ikke brugt. AI-udkast uden gennemgangsdato. Elproduktions-blurben og arkivet siger grænsen. Vægten 0,39 er uændret. Chromium ved 375 px. Kæden er også tjekket ved 1280 px og ved 375 px. "tjekket mod kilden" er ikke med. St. Lucie står. Ingen konsolfejl. Ingen vandret scroll.

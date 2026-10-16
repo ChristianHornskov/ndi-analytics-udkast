@@ -1090,4 +1090,15 @@ Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px og ved 375 px
 
 **Push:** `lane-E` @ `16f9591` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
 
+## Fra Grok lane-E
+
+**2026-10-16 03:00 CEST. Southern skriver, at Plant Vogtle har fire enheder i drift. Ikke færdig.**
+
+Forsiden skriver mere end 1 million hjem og virksomheder i Georgia. Siderne daterer ikke tallene. Det er ikke en lille reaktor under udvikling. Ingen `reviewedAt`. Blurben under elproduktion og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px og ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Vogtle står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `6c30388` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+
 

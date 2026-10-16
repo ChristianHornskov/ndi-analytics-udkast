@@ -533,19 +533,23 @@
   "US8425871071": {
    "name": "Southern Company",
    "theme": "energy",
-   "summary": "Reguleret elselskab i det sydøstlige USA. Produktionen omfatter blandt andet atomkraft og gas.",
-   "watch": "Drift af kraftværker, brændsel, regulering og investeringer i nettet.",
-   "source": "https://www.southerncompany.com/",
-   "products": "El og i dele af koncernen også gas til slutkunder.",
-   "customers": "Kunder i selskabets forsyningsområder.",
-   "role": "Eksisterende elproduktion, herunder store atomkraftværker, ikke en SMR-udvikler.",
+   "summary": "Reguleret elselskab. Selskabet skriver, at Plant Vogtle har fire enheder i drift og leverer strøm til mere end 1 million hjem og virksomheder i Georgia. Siderne daterer ikke tallene. Det er ikke en lille reaktor under udvikling.",
+   "watch": "Om de fire enheder på Vogtle bliver ved med at være i drift. Siderne daterer ikke tallene.",
+   "source": "https://www.southerncompany.com/solutions/nuclear-energy.html",
+   "products": "El, herunder fra Plant Vogtle. Fire enheder i drift. Ikke en lille reaktor under udvikling.",
+   "customers": "Kunder i selskabets forsyningsområder, herunder Georgia. Teksten nævner mere end 1 million hjem og virksomheder.",
+   "role": "Vogtle har fire enheder i drift. Ikke en lille reaktor under udvikling.",
    "narrative": [
-    "Southern Company er et reguleret elselskab. Det ejer blandt andet Georgia Power, Alabama Power og Mississippi Power.",
-    "Selskabet skriver, at atomkraftværket Vogtle leverer strøm til mere end 1 million hjem og virksomheder i Georgia. Det er værker i drift. Southern er ikke en udvikler af små reaktorer."
+    "Southern skriver, at Plant Vogtle har fire enheder i drift. Forsiden skriver, at værket leverer strøm til mere end 1 million hjem og virksomheder i Georgia. Siderne daterer ikke tallene. De er læst 16. oktober 2026 og er ikke knyttet til beholdningen pr. 1. juni 2026. Det er et værk i drift, ikke en lille reaktor under udvikling.",
+    "Selskabet ejer blandt andet Georgia Power, Alabama Power og Mississippi Power. Det er et reguleret elselskab med eksisterende værker, ikke en udvikler af små reaktorer."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets side",
+     "label": "Vogtle",
+     "url": "https://www.southerncompany.com/solutions/nuclear-energy.html"
+    },
+    {
+     "label": "Forside",
      "url": "https://www.southerncompany.com/"
     }
    ]
