@@ -302,6 +302,30 @@ export function themeProposals(fund) {
   return { total: props.length, moved, open: props.length - moved, byTheme, fromAndet, retagged };
 }
 
+// Temaforslag som skift "fra → til" (themeFrom → theme; uden themeFrom = fra Andet). Bruges til
+// gennemgangs-filteret skift=<fra>~<til> i screener og A-Z. "andet~andet" = forslag uden tema endnu.
+// Kun tema-felter - ingen tal pr. aktie.
+export function themeShift(p) {
+  if (p?.themeStatus !== 'forslag') return null;
+  const from = p.themeFrom || 'andet';
+  return { from, to: p.theme, key: `${from}~${p.theme}` };
+}
+export function themeShifts(positions) {
+  const m = new Map();
+  for (const p of positions || []) {
+    const s = themeShift(p);
+    if (!s) continue;
+    if (!m.has(s.key)) m.set(s.key, { ...s, n: 0 });
+    m.get(s.key).n++;
+  }
+  // Flyttede først (flest øverst), "stadig Andet" sidst
+  return [...m.values()].sort((a, b) => ((a.to === 'andet') - (b.to === 'andet')) || b.n - a.n
+    || daTheme(a.to).localeCompare(daTheme(b.to), 'da'));
+}
+// "Andet / uklassificeret" forkortes til "Andet" i skift-etiketter og før-linjer
+export const shiftFromLabel = (from) => (from === 'andet' ? 'Andet' : daTheme(from));
+export const shiftLabel = (s) => (s.to === 'andet' ? 'Stadig Andet (intet tema passede)' : `${shiftFromLabel(s.from)} → ${daTheme(s.to)}`);
+
 // Værdikæde for et tema (value-chains.json). Et tema kan optræde i flere kæder; hjem-kæden er den,
 // hvor temaet er et bærende led. AI-stakkens temaer hører hjemme i AI-compute, Energiressourcer i Energi.
 // Øvrige temaer: kæde med samme id, ellers første kæde hvor temaet indgår.

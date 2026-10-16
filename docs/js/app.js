@@ -2,7 +2,7 @@ import {
   loadAll, fundById, slicePeriod, cagr, periodReturn, ytdReturn,
   monthlyReturns, maxDrawdown, fmtPct, fmtDate, daTheme, daMat, WARN_HIST,
   MATURITY_LABELS, THEME_LABELS, calendarYearReturns, lastNav, publicTags, tagsFor, fillKidFooter, themeProposals,
-  searchPosition,
+  searchPosition, themeShift, themeShifts, shiftLabel, shiftFromLabel,
 } from './data.js';
 import { renderChart } from './chart.js';
 
@@ -15,6 +15,7 @@ const state = {
   sort: 'weight',
   dir: 'desc',
   status: '', // '' | 'forslag' | 'fast' - temastatus, ikke et tal pr. aktie
+  skift: '', // '' | '<fra>~<til>' - gennemgang af ét temaforslag-skift (kræver status=forslag)
   linse: false, // kun selskaber med kvalitativ NDI-linse (unique-metrics.json); samme URL som A-Z: linse=1
   q: '',
   calFull: false,
@@ -85,6 +86,9 @@ function readUrl() {
   state.dir = u.searchParams.get('dir') === 'asc' ? 'asc' : (u.searchParams.get('dir') === 'desc' ? 'desc' : (state.sort === 'weight' ? 'desc' : 'asc'));
   const status = u.searchParams.get('status');
   state.status = STATUSES[status] ? status : '';
+  // Skift valideres mod data i main() (sanitizeShift); her kun formen <fra>~<til>
+  const skift = u.searchParams.get('skift') || '';
+  state.skift = state.status === 'forslag' && /^[a-z-]+~[a-z-]+$/.test(skift) ? skift : '';
   state.q = u.searchParams.get('q') || '';
   state.linse = u.searchParams.get('linse') === '1';
   state.calFull = u.searchParams.get('cal') === 'all';
@@ -104,6 +108,7 @@ function writeUrl(replace = false) {
   set('sort', state.sort, 'weight');
   set('dir', state.dir, state.sort === 'weight' ? 'desc' : 'asc');
   set('status', state.status, '');
+  set('skift', state.status === 'forslag' ? state.skift : '', '');
   set('q', state.q, '');
   set('linse', state.linse ? '1' : '', '');
   set('cal', state.calFull ? 'all' : '', '');
@@ -521,7 +526,7 @@ function renderCalendar(el, rows) {
 }
 
 
-function filterPositions(fund) {
+function filterPositions(fund, { ignoreShift = false } = {}) {
   let list = [...fund.positions];
   if (state.tags.length) list = list.filter((p) => {
     const t = tagsFor(p, DATA.multiTags);
@@ -530,6 +535,7 @@ function filterPositions(fund) {
   if (state.maturity.length) list = list.filter((p) => state.maturity.includes(p.maturity));
   if (state.status === 'forslag') list = list.filter((p) => p.themeStatus === 'forslag');
   if (state.status === 'fast') list = list.filter((p) => p.themeStatus !== 'forslag');
+  if (state.skift && !ignoreShift) list = list.filter((p) => themeShift(p)?.key === state.skift);
   if (state.linse) list = list.filter(hasLens);
   HITS = new Map();
   if (state.q.trim()) {
@@ -657,9 +663,55 @@ function positionsTable(list, fund) {
   </tr></thead><tbody>${list.map((p, i) => `${themeGroupRow(list, i)}<tr>
     <td><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}">${p.name}</a>${hasLens(p) ? ` <a class="badge" href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}#ndi-linse" title="Kvalitativ NDI-linse: rolle, plads i værdikæden og forhold at holde øje med (udkast)" aria-label="NDI-linse for ${p.name}">NDI-linse</a>` : ''} ${weightSpark(p.isin, fund.id)}<br><small style="color:var(--muted)">${p.isin}</small>${hitNote(p)}</td>
     <td>${(p.weight ?? 0).toFixed(2).replace('.', ',')}</td>
-    <td>${tagsFor(p, DATA.multiTags).map((t) => `<a class="tag" href="tema.html?slug=${encodeURIComponent(t)}&fund=${fund.id}">${daTheme(t)}</a>`).join(' ')}${p.themeStatus==='forslag'?` <span class="badge badge-draft" title="Temaet er et forslag fra udkastet og afventer NDI-gennemgang · før: ${p.themeFrom ? daTheme(p.themeFrom) : 'Andet'}">forslag</span>`:''}</td>
+    <td>${tagsFor(p, DATA.multiTags).map((t) => `<a class="tag" href="tema.html?slug=${encodeURIComponent(t)}&fund=${fund.id}">${daTheme(t)}</a>`).join(' ')}${forslagCell(p)}</td>
   </tr>`).join('')}</tbody></table></div>`, 'Rul til siden for flere kolonner.') +
   `<p style="font-size:11px;color:var(--muted);margin-top:8px">Kun vægt og tema. De små søjler ved navnet er selskabets <strong style="color:var(--text)">vægt i fonden</strong> pr. kvartalssnapshot frem til ${fmtDate(MONTHS?.cutoff || fund.positionsAsOf)}. Ikke aktiekurs. Ingen kursafkast pr. aktie i v1. Beholdning er forsinket.</p>`;
+}
+
+// Forslag-mærke + synlig "før"-linje (tidligere kun i tooltip), så skiftet kan læses uden hover.
+function forslagCell(p) {
+  const s = themeShift(p);
+  if (!s) return '';
+  const before = s.to === 'andet' ? 'intet NDI-tema passede endnu' : `før: ${shiftFromLabel(s.from)}`;
+  return ` <span class="badge badge-draft" title="Temaet er et forslag fra udkastet og afventer NDI-gennemgang · ${before}">forslag</span><br><small class="shift-note" style="color:var(--muted)">${before}</small>`;
+}
+
+// Gennemgang af temaforslag (vises ved status=forslag): ét filter pr. skift "fra → til" med antal
+// selskaber efter øvrige filtre. Hjælper NDI med at tage stilling til ét skift ad gangen. Ingen tal pr. aktie.
+function shiftPanelHtml(fund) {
+  if (state.status !== 'forslag') return '';
+  const base = filterPositions(fund, { ignoreShift: true });
+  const shifts = themeShifts(base);
+  const all = themeShifts(fund.positions);
+  if (!all.length) return '';
+  const btn = (s) => {
+    const on = state.skift === s.key;
+    return `<button type="button" class="control ${on ? 'active' : ''}" data-skift="${s.key}" aria-pressed="${on}">${shiftLabel(s)} <small>(${s.n})</small></button>`;
+  };
+  const cur = state.skift && all.find((s) => s.key === state.skift);
+  const moved = all.filter((s) => s.to !== 'andet').reduce((a, s) => a + s.n, 0);
+  const open = all.filter((s) => s.to === 'andet').reduce((a, s) => a + s.n, 0);
+  return `<section class="panel shift-panel" aria-label="Gennemgang af temaforslag" style="margin:10px 0;padding:12px 14px">
+    <p style="margin:0 0 6px;font-size:13px"><strong>Gennemgang af temaforslag</strong> · ${moved} selskaber har fået et foreslået tema${open ? `, ${open} står stadig i Andet` : ''}. Vælg ét skift ad gangen:</p>
+    <div class="filters" role="group" aria-label="Filtrér på temaskift" style="margin:0">
+      ${shifts.length ? shifts.map(btn).join('') : '<small style="color:var(--muted)">Ingen temaforslag matcher de øvrige filtre.</small>'}
+      ${state.skift && !shifts.some((s) => s.key === state.skift) && cur ? btn({ ...cur, n: 0 }) : ''}
+    </div>
+    <p style="margin:6px 0 0;font-size:12px;color:var(--muted)">${cur
+      ? (cur.to === 'andet'
+        ? `${cur.n} selskaber er markeret som forslag, men intet NDI-tema passede godt nok (fx guld/sølv, sundhed, forbrug). <a href="tema.html?slug=andet&fund=${state.fund}">Hvad ligger i Andet? →</a>`
+        : `Foreslået flyttet fra ${shiftFromLabel(cur.from)} til ${daTheme(cur.to)} ud fra ISIN-opslag, branche og plads i værdikæderne. <a href="tema.html?slug=${encodeURIComponent(cur.to)}&fund=${state.fund}&status=forslag">Se dem på temasiden →</a>`)
+      : 'Forslagene er udkast og ændrer ikke fondens beholdning. Antal = selskaber efter de øvrige filtre.'} <a href="om-data.html#g-temaforslag">Om temaforslag</a></p>
+  </section>`;
+}
+
+// Et skift, der ikke findes i den valgte andelsklasse (fx efter fondsskift), fjernes - ingen tavs tom liste.
+function sanitizeShift() {
+  if (!state.skift) return false;
+  const fund = fundById(DATA.portfolio, state.fund);
+  if (state.status === 'forslag' && themeShifts(fund.positions).some((s) => s.key === state.skift)) return false;
+  state.skift = '';
+  return true;
 }
 
 // Når søgningen kun rammer NDI-linsens tekst, vises hvilket felt der matchede (fx "kobber" → Hvad ejer man?).
@@ -690,6 +742,7 @@ function azHref() {
   if (state.q.trim()) u.set('q', state.q.trim());
   if (state.linse) u.set('linse', '1');
   if (state.status) u.set('status', state.status);
+  if (state.skift) u.set('skift', state.skift);
   if (state.sort !== 'name') u.set('sort', state.sort); // A-Z: navn er standard; ingen retning (vægt altid faldende)
   return `selskaber.html?${u}`;
 }
@@ -701,10 +754,11 @@ function emptyScreener(fund) {
     state.tags.length && `tema ${state.tags.map(daTheme).join(' / ')}`,
     state.maturity.length && `modenhed ${state.maturity.map(daMat).join(' / ')}`,
     state.status && STATUSES[state.status],
+    state.skift && `temaskift ${state.skift.split('~').map(shiftFromLabel).join(' → ')}`,
     state.linse && 'kun med NDI-linse',
   ].filter(Boolean).join(' og ');
   // Hjælp: hvis søgningen alene giver hits, men kombinationen ikke gør, så sig det.
-  const qOnly = state.q.trim() && (state.tags.length || state.status || state.maturity.length || state.linse)
+  const qOnly = state.q.trim() && (state.tags.length || state.status || state.skift || state.maturity.length || state.linse)
     ? fund.positions.filter((p) => searchPosition(p, state.q, DATA.multiTags, LENS)).length
     : 0;
   return `<div class="empty-state" role="status">
@@ -715,6 +769,7 @@ function emptyScreener(fund) {
     <div class="row">
       ${state.q ? '<button type="button" class="outline-btn small" data-clear-q>Ryd søgning</button>' : ''}
       ${state.linse ? '<button type="button" class="outline-btn small" data-linse>Vis også uden NDI-linse</button>' : ''}
+      ${state.skift ? `<button type="button" class="outline-btn small" data-x="skift:${state.skift}">Alle temaforslag</button>` : ''}
       <button type="button" class="outline-btn small" id="reset-filters">Nulstil alle filtre</button>
       <a class="outline-btn small" href="${azHref()}">Se A-Z-listen</a>
     </div>
@@ -783,6 +838,7 @@ function renderUdforsk(root) {
     </div>
     <p style="font-size:12px;color:var(--muted);margin:8px 0">Tema-dybsider: ${themes.map((t) => `<a href="tema.html?slug=${encodeURIComponent(t)}&fund=${state.fund}">${daTheme(t)}</a>`).join(' · ')} · <a href="${azHref()}">A-Z liste</a></p>
     ${statusFilterHtml(fund)}
+    ${shiftPanelHtml(fund)}
     ${lensFilterHtml(fund)}
     ${maturityFilterHtml(fund)}
     <div class="chips" id="chips"></div>
@@ -795,6 +851,7 @@ function renderUdforsk(root) {
     ...state.tags.map((t) => ({ k: 'tag', v: t, label: daTheme(t) })),
     ...state.maturity.map((m) => ({ k: 'mat', v: m, label: daMat(m) })),
     ...(state.status ? [{ k: 'status', v: state.status, label: STATUSES[state.status] }] : []),
+    ...(state.skift ? [{ k: 'skift', v: state.skift, label: shiftLabel(themeShift(fund.positions.find((p) => themeShift(p)?.key === state.skift)) || { from: '', to: '' }) }] : []),
     ...(state.linse ? [{ k: 'linse', v: '1', label: 'Kun med NDI-linse' }] : []),
   ];
   chips.innerHTML = parts.map((p) =>
@@ -804,6 +861,7 @@ function renderUdforsk(root) {
 function paint() {
   const root = $('#app');
   if (!root || !DATA) return;
+  if (sanitizeShift()) writeUrl(true);
   $all('.nav [data-nav]').forEach((a) => {
     a.setAttribute('aria-current', a.getAttribute('data-nav') === state.view ? 'page' : 'false');
   });
@@ -828,6 +886,7 @@ function announceFilters() {
   if (state.tags.length) parts.push(`tema ${state.tags.map(daTheme).join(', ')}`);
   if (state.q) parts.push(`søgning ${state.q}`);
   if (state.status) parts.push(STATUSES[state.status]);
+  if (state.skift) parts.push(`temaskift ${state.skift.split('~').map(shiftFromLabel).join(' til ')}`);
   if (state.linse) parts.push('kun med NDI-linse');
   parts.push(`sorteret efter ${SORTS[state.sort]}, ${state.dir === 'asc' ? 'stigende' : 'faldende'}`);
   const msg = parts.join(' · ');
@@ -837,12 +896,12 @@ function announceFilters() {
 }
 
 function onClick(e) {
-  const t = e.target.closest('[data-nav],[data-fund],[data-period],[data-sort],[data-tag],[data-mat],[data-status],[data-linse],[data-open],[data-x],#reset-filters,#copy-link,#csv-export,[data-clear-q]');
+  const t = e.target.closest('[data-nav],[data-fund],[data-period],[data-sort],[data-tag],[data-mat],[data-status],[data-skift],[data-linse],[data-open],[data-x],#reset-filters,#copy-link,#csv-export,[data-clear-q]');
   if (!t) return;
   if (t.matches('[data-open]')) { openDialog(t.getAttribute('data-open')); return; }
   if (t.matches('[data-clear-q]')) { state.q = ''; writeUrl(); paint(); $('#q')?.focus(); return; }
   if (t.id === 'reset-filters') {
-    state.tags = []; state.maturity = []; state.q = ''; state.status = ''; state.linse = false; writeUrl(); paint(); return;
+    state.tags = []; state.maturity = []; state.q = ''; state.status = ''; state.skift = ''; state.linse = false; writeUrl(); paint(); return;
   }
 
   if (t.id === 'csv-export') {
@@ -851,11 +910,13 @@ function onClick(e) {
     const fund = fundById(DATA.portfolio, state.fund);
     const list = filterPositions(fund);
     const asOf = fund.positionsAsOf || DATA.portfolio.asOf;
-    const rows = [['Navn', 'ISIN', 'Ticker', 'Vægt %', 'Temaer', 'Beholdning pr.']].concat(
+    const rows = [['Navn', 'ISIN', 'Ticker', 'Vægt %', 'Temaer', 'Temastatus', 'Før (forslag)', 'Beholdning pr.']].concat(
       list.map((p) => [
         p.name || '', p.isin || '', p.symbol || '',
         p.weight == null ? '' : p.weight.toFixed(2).replace('.', ','),
         tagsFor(p, DATA.multiTags).map(daTheme).join(' | '),
+        p.themeStatus === 'forslag' ? 'forslag (udkast)' : '',
+        themeShift(p) ? shiftFromLabel(themeShift(p).from) : '',
         asOf,
       ])
     );
@@ -865,7 +926,7 @@ function onClick(e) {
     const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
     const a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
-    const filt = [...state.tags, ...state.maturity, state.status, state.linse && 'linse', state.q && 'soeg'].filter(Boolean).join('-');
+    const filt = [...state.tags, ...state.maturity, state.status, state.skift.replace('~', '-til-'), state.linse && 'linse', state.q && 'soeg'].filter(Boolean).join('-');
     a.download = `ndi-${state.fund}-${asOf}${filt ? '-' + filt.replace(/[^a-z0-9-]/gi, '') : ''}.csv`;
     document.body.append(a);
     a.click();
@@ -886,7 +947,8 @@ function onClick(e) {
     const [k, v] = t.getAttribute('data-x').split(':');
     if (k === 'tag') state.tags = state.tags.filter((x) => x !== v);
     if (k === 'mat') state.maturity = state.maturity.filter((x) => x !== v);
-    if (k === 'status') state.status = '';
+    if (k === 'status') { state.status = ''; state.skift = ''; }
+    if (k === 'skift') state.skift = '';
     if (k === 'linse') state.linse = false;
     writeUrl(); paint(); return;
   }
@@ -910,7 +972,16 @@ function onClick(e) {
   if (t.matches('[data-status]')) {
     const v = t.getAttribute('data-status');
     state.status = state.status === v || !STATUSES[v] ? '' : v;
+    if (state.status !== 'forslag') state.skift = '';
     writeUrl(); paint(); return;
+  }
+  if (t.matches('[data-skift]')) {
+    const v = t.getAttribute('data-skift');
+    state.status = 'forslag';
+    state.skift = state.skift === v ? '' : v;
+    writeUrl(); paint();
+    $(`[data-skift="${CSS.escape(v)}"]`)?.focus();
+    return;
   }
   if (t.matches('[data-linse]')) {
     state.linse = !state.linse;
@@ -990,7 +1061,7 @@ async function main() {
   // Strippede interne tags fjernes også fra adresselinjen, så de ikke deles via "Kopiér link"
   // Ugyldige/udfasede sorteringer (fx gamle links med sort=pe) normaliseres på samme måde
   const u0 = new URL(location.href).searchParams;
-  if ((u0.get('tags') || '') !== state.tags.join(',') || (u0.get('sort') || 'weight') !== state.sort || (u0.has('status') && !state.status)) writeUrl(true);
+  if ((u0.get('tags') || '') !== state.tags.join(',') || (u0.get('sort') || 'weight') !== state.sort || (u0.has('status') && !state.status) || (u0.has('skift') && !state.skift)) writeUrl(true);
   try {
     DATA = await loadAll();
     [MONTHS, LENS] = await Promise.all([
