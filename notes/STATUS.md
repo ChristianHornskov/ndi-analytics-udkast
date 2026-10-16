@@ -1395,3 +1395,173 @@ Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html, v
 4. **vaerdikaede.html:** Rumkortet har fået "🧶 Rummet og de andre kæder: 7 tråde →".
 Tjek: Playwright på 1280 og 375 med 0 konsolfejl og ingen sidescroll. 7 tråde, 12 knuder og 7 kort. Hover på et kort fremhæver 1 tråd og 2 knuder, og hover på Satellitter fremhæver 2 tråde. Hop giver `?kaede=quantum#lk-q-core`, "Sanse, tænke, handle" lander på `#p-loop` (194 px), og citat-linket lander på `#kap-rum`. smoke.mjs 52/52 fail 0 (egen server på 8817). Precheck PASSED. Grep efter handelssprog og tankestreger i diff giver 0 hits.
 Næste: energi-ledkortenes blurbs kan strammes (én sætning om, hvad leddet gør, og én om, hvorfor det presser), og kvante-fanen kan få et lille link tilbage fra kvantetråden. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:21 CEST. MYR Group skriver, at arbejdet også dækker industri og vedvarende energi. Ikke færdig.**
+
+Forsiden skriver, at selskabet leverer elektrisk byggeri i USA og Canada, og at projekterne dækker transmission, kommercielle og industrielle anlæg og vedvarende energi. Selskabet ejer ikke strømmen. Ordene leader, largest og 130 år er ikke taget med. Ingen `reviewedAt`. Blurben under elnet og arkivet siger det samme.
+
+Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Vedvarende energi står. Kæden og arkivet viser sætningen. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `bdd1213` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:26 CEST. Solaris skrev 6. juli 2026, at det har købt GESA. Ikke færdig.**
+
+Meddelelsen siger, at Solaris har købt Global Energy Services Alliance, GESA. GESA er service til kraftværker, sammensat af Baseload Power og Pro-Per Energy Services. Datoen ligger efter beholdningen pr. 1. juni 2026. Det er service, ikke et kraftværk i drift. Forsidens banner siger Omega og peger på samme meddelelse. Meddelelsen nævner ikke Omega, så teksten følger meddelelsen. Selskabet skriver, at det er stiftet i 2014, og at kunderne er datacentre, energi, erhverv og industri. Ordene leading og unmatched er ikke taget med. Ingen `reviewedAt`. Blurben under elproduktion og elnet og arkivet siger grænsen. Overskriften på selskabssiden er beholdningens afkortede navn. Profilnavnet er det fulde. AI-compute-listen er ikke ændret.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. GESA, Baseload og Pro-Per står. Omega står ikke. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `afc0b25` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:30 CEST. Ero skriver, at Xavantina er en guldmine, og at Vale ejer Furnas. Ikke færdig.**
+
+Caraíba i Bahia er et kobberkompleks. Tucumã i Pará er en kobbermine, og kommerciel produktion blev nået 1. juli 2025, før beholdningen. Xavantina i Mato Grosso er en underjordisk guldmine med eget anlæg. Furnas er et kobber- og guldprojekt. Siden skriver, at Vale Base Metals ejer det, og at Ero har en ret til at optjene en andel på 60 % efter en aftale fra juli 2024. Det er ikke en mine i drift. Et forstudie fra februar 2026 ligger før beholdningen og er foreløbigt. Siden kalder det ikke en reserve. High-grade, ounces og dollar pr. ounce er ikke taget med. Ingen `reviewedAt`. Blurben under råstoffer og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Guldminen, 60 % og forstudiet står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `962c850` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:33 CEST. BWX Technologies skriver, at Lynchburg fremstiller flådereaktorer, og at salget af medicinforretningen ikke er gennemført. Ikke færdig.**
+
+Fabrikken i Lynchburg fremstiller reaktorer til ubåde og hangarskibe. Siden nævner Ohio, Virginia, Seawolf, Los Angeles, Nimitz og Ford. Columbia-klassen er under bygning. Teksten siger komponenter, ikke at båden er i tjeneste. TRISO er brændsel, ikke et kraftværk. Project Pele er et design, ikke et værk i drift. Selskabet skrev 3. august 2026, at det har aftalt at sælge medicinforretningen til Nordic Capital. Aftalen afventer myndighedsgodkendelse og ventes afsluttet inden udgangen af 2026. Datoen ligger efter beholdningen. Salget er ikke gennemført. Beløbet i overskriften og ordet leading er ikke taget med. Ingen `reviewedAt`. Blurben under atomkraft og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Lynchburg, Pele og 3. august 2026 står. Beløbet står ikke. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `772de94` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:34 CEST. Talen skriver, at flåden også har kul, naturgas og olie, og at Brandon Shores kører videre. Ikke færdig.**
+
+Susquehanna er atomkraftværket. Siden nævner også kul, naturgas og olie. Selskabet skriver, at det leverer strøm til Amazon ved Susquehanna. Brandon Shores var planlagt lukket 1. juni 2025 og kører videre til 31. maj 2031 efter en pålidelighedsaftale. Brunner Island kan bruge både kul og naturgas. Kul skal stoppe inden udgangen af 2028, og det er ikke sket i teksten. Det er ikke en udvikler af små reaktorer. Leading, sixth largest og megawatt er ikke taget med. Ingen `reviewedAt`. Blurben under elproduktion og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Brandon Shores og Amazon står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `ea2595e` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:37 CEST. Nano Nuclear skriver, at KRONOS-ansøgningen er til behandling og ikke givet. Ikke færdig.**
+
+University of Illinois indsendte ansøgningen 31. marts 2026. Tilsynet tog den til behandling 18. maj 2026. Formel behandling begyndte 23. juni 2026, efter beholdningen. De to første datoer ligger før. Ansøgningen er ikke en byggetilladelse, og byggeriet er ikke gået i gang. En offentlig tidsplan peger på september 2027. Selskabet ser en mulighed for byggeri i andet halvår 2027. Det er en forventning. Forsiden siger stadig forberedende dialog. Meddelelsen af 13. oktober 2026 er mere præcis, og teksten følger meddelelsen. ZEUS og LOKI er design. Ingen `reviewedAt`. Blurben under atomkraft og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. 23. juni 2026 og "ikke givet" står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `bc2e228` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:39 CEST. Howmet skriver, at det også laver smedede hjul til lastbiler og busser. Ikke færdig.**
+
+Selskabet skriver, at det laver dele til flyskrog og flymotorer og også smedede hjul og chassis til lastbiler og busser. Det sender ikke raketter op. Formuleringerne om de mest avancerede fly og om Model T er ikke taget med. Udbytte og kvartalsregnskab er ikke taget med. Ingen `reviewedAt`. Blurben under opsendelse og arkivet siger grænsen. Overskriften på selskabssiden er beholdningens afkortede navn. Profilnavnet er det fulde.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Smedede hjul står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `8366cb6` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:40 CEST. Cummins skriver, at forretningen har fem dele, og at det ikke er et elselskab. Ikke færdig.**
+
+De fem dele er komponenter, motorer, distribution, kraftsystemer og Accelera. Distribution er selskabets egen del, ikke et elnet. Hovedsædet ligger i Columbus i Indiana. Selskabet er stiftet i 1919. Generatorerne kan lave strøm. Det er ikke et elselskab. Ordet leader og et 52-ugers-felt på investorskabelonen er ikke taget med. Ingen `reviewedAt`. Blurben under elproduktion og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Accelera står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `4359117` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:42 CEST. ProPetro skriver, at arbejdet er trykpumpning i Permian-bassinet. Ikke færdig.**
+
+Det er service til selskaber, der leder efter og udvinder olie og gas. Det er ikke et kraftværk og ikke en mine. Selskabet står ikke på elproduktion. Leading, premier og largest er ikke taget med. Ingen `reviewedAt`. NDI-blikket under elproduktion og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Permian står. Selskabet står ikke i selskabslisten. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `02c86a0` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:43 CEST. Terra Innovatum skriver, at konceptet SOLO er fra 2018. Ikke færdig.**
+
+Det er en mikroreaktor under udvikling. Teksten beskriver ikke et værk i drift. Forsiden viser to forskellige tal for effekt. Ingen af dem er taget med. Leader og capital-efficient er ikke taget med. Ingen `reviewedAt`. Blurben under atomkraft og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. 2018 står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `6a491f2` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:46 CEST. Airo nævner RQ-35 Heidrun, RQ-70, JC250 og JX250. Ikke færdig.**
+
+Selskabet skriver, at kunderne er militære, offentlige og kommercielle. Platformene står på siden. Teksten kalder dem ikke en flåde i drift og ikke satellitter. Selskabet står ikke som eksempel på opsendelse. Ingen `reviewedAt`. NDI-blikket under opsendelse og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. RQ-35 står. Selskabet står ikke i selskabslisten. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `27dccea` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:55 CEST. United States Antimony skriver, at zeolit kommer fra Preston. Ikke færdig.**
+
+Smelteværket for antimonoxid ligger i Thompson Falls i Montana. Siden skriver, at en ny tilladelse til minen dér var usikker, og at udvindingen blev lagt tilbage til Mexico. Det første gravearbejde i Alaska er ikke skrevet som en mine i drift. Areal-tal på siden er ikke ens og er ikke taget med. Ingen `reviewedAt`. Blurben under råstoffer og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Preston står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `d602d78` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:55 CEST. Merlin skriver, at Merlin Pilot er software til eksisterende fly. Ikke færdig.**
+
+Samarbejdet om C-130J har længere rækkevidde som mål. Det er ikke en flåde, der allerede flyver med softwaren. Navnet er ikke Satellogics satellit. Beløb og timetal på forsiden er ikke taget med. Ingen `reviewedAt`. NDI-blikket under opsendelse og arkivet siger grænsen. Selskabet står ikke i selskabslisten.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Merlin Pilot står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `114d9a6` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:57 CEST. Lithium Americas skriver, at centret i Reno er et laboratorium. Ikke færdig.**
+
+Byggeriet på Thacker Pass begyndte i begyndelsen af 2023, før beholdningen. Målet sent i 2027 er ikke en mine i fuld drift. Centret afprøver processen og er ikke minen. World's largest er ikke taget med. Ingen `reviewedAt`. NDI-blikket under råstoffer og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Reno står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `af67076` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:59 CEST. Oklo skrev, at testreaktoren Groves nåede en kædereaktion ved lav effekt. Ikke færdig.**
+
+Datoen er 6. august 2026, efter beholdningen. Meddelelsen af 13. oktober 2026 siger, at reaktoren ligger i Texas. Det er ikke et kommercielt kraftværk og ikke salg af isotoper. Aurora er en sikkerhedsanalyse fra 11. juni 2026, ikke et værk i drift. Groves-2 er ikke bygget. Ingen `reviewedAt`. Blurben under atomkraft og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Groves står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `29388e6` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 02:01 CEST. Southern Copper skriver, at Tía María er et kobberprojekt. Ikke færdig.**
+
+Projektet ligger i Cocachacra i provinsen Islay i Arequipa. Forekomsterne hedder La Tapada og Tía María. Tilladelser til byggeri er ikke en mine i drift. Beløb og rente på en obligation er ikke taget med. Ingen `reviewedAt`. Blurben under råstoffer og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Tía María står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `1972434` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 02:06 CEST. Rocket Lab skriver, at HASTE er et suborbitalt testfartøj. Ikke færdig.**
+
+Det flyver fra Wallops i Virginia og sætter ikke satellitter i kredsløb. Electron er den orbitale raket. Neutron er stadig under udvikling. Nyttelast-tal og en overskrift om Iridium er ikke taget med. Ingen `reviewedAt`. Blurben under opsendelse og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. HASTE står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `4ecafbd` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

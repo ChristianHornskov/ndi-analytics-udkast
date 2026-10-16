@@ -191,3 +191,73 @@ Pelican, Tanager og Owl er tilføjet ved siden af SuperDove og SkySat. Owl er n�
 ## Redwire · 2026-10-16 01:20 CEST
 
 Artiklen 1. april 2026 siger will launch. Forsidens "launched" er ikke brugt som gennemført flyvning. 11 kameraer. Ikke en opsender. Historic og ordrebeløb er ikke kopieret. AI-udkast uden gennemgangsdato. Kæde og arkiv har grænsen. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## MYR · 2026-10-16 01:21 CEST
+
+Transmission, industri og vedvarende energi står i sætningen. Leader, largest og 130 år er ikke kopieret. Selskabet ejer ikke strømmen. AI-udkast uden gennemgangsdato. Kæde og arkiv siger det. Chromium ved 375 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Solaris · 2026-10-16 01:26 CEST
+
+Meddelelsen 6. juli 2026 handler om GESA, ikke Omega. Banneret på forsiden siger Omega og peger på samme adresse. Teksten følger meddelelsen. Service, efter beholdningen, ikke et kraftværk. Leading og unmatched er ikke kopieret. AI-udkast uden gennemgangsdato. Elproduktion, elnet og arkiv siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll. Overskriften er beholdningens afkortede navn.
+
+## Ero · 2026-10-16 01:30 CEST
+
+Xavantina er en guldmine i Mato Grosso. Tucumã er kobber, med kommerciel produktion 1. juli 2025, før beholdningen. Furnas ejes af Vale Base Metals. Ero har en ret til at optjene 60 %, ikke et ejerskab endnu. Forstudiet fra februar 2026 er foreløbigt og ikke en reserve. High-grade, ounces og omkostninger er ikke kopieret. AI-udkast uden gennemgangsdato. Råstof-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## BWXT · 2026-10-16 01:33 CEST
+
+Lynchburg fremstiller reaktorer til flåden. Columbia er under bygning, ikke i tjeneste. TRISO er brændsel. Project Pele er et design, ikke et værk i drift. Aftalen 3. august 2026 om medicinforretningen er ikke gennemført og ligger efter beholdningen. Beløbet og leading er ikke kopieret. AI-udkast uden gennemgangsdato. Atomkraft-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Talen · 2026-10-16 01:34 CEST
+
+Flåden er atomkraft, kul, naturgas og olie. Susquehanna er atomkraftværket. Amazon står som aftager ved Susquehanna. Brandon Shores var planlagt lukket 1. juni 2025 og kører videre til 31. maj 2031. Brunner Island har kul til udgangen af 2028, ikke stoppet. Leading, sixth largest og megawatt er ikke kopieret. AI-udkast uden gennemgangsdato. Elproduktions-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Nano · 2026-10-16 01:37 CEST
+
+Meddelelsen 13. oktober 2026 siger, at ansøgningen er til behandling. Forsidens "pre-application" er ikke brugt. Indsendt 31. marts 2026, taget til behandling 18. maj 2026, formel behandling 23. juni 2026 efter beholdningen. Ikke en tilladelse. Ikke et værk. Byggeri i andet halvår 2027 er en forventning. ZEUS og LOKI er design. World-class og largest er ikke kopieret. AI-udkast uden gennemgangsdato. Atomkraft-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Howmet · 2026-10-16 01:39 CEST
+
+Smedede hjul og chassis til lastbiler og busser er tilføjet ved siden af flyskrog og flymotorer. Ikke en opsendelse. Mest avancerede, Model T og udbytte er ikke kopieret. AI-udkast uden gennemgangsdato. Opsendelses-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll. Overskriften er beholdningens afkortede navn.
+
+## Cummins · 2026-10-16 01:40 CEST
+
+Fem dele: komponenter, motorer, distribution, kraftsystemer og Accelera. Distribution er ikke et elnet. Columbus, Indiana, 1919. Ikke et elselskab. Leader og 52-ugers-feltet er ikke kopieret. AI-udkast uden gennemgangsdato. Elproduktions-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll. Et P/E i sidens menu er den fælles navigation, ikke teksten om Cummins.
+
+## ProPetro · 2026-10-16 01:42 CEST
+
+Trykpumpning i Permian-bassinet. Service, ikke et kraftværk og ikke en mine. Står ikke på elproduktionslisten. Leading, premier og largest er ikke kopieret. AI-udkast uden gennemgangsdato. NDI-blikket og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Terra Innovatum · 2026-10-16 01:43 CEST
+
+SOLO er et koncept fra 2018, ikke et værk i drift. To forskellige effekt-tal på forsiden er ikke kopieret. Leader og capital-efficient er ikke kopieret. Ikke blandet sammen med Terrestrial Energy. AI-udkast uden gennemgangsdato. Atomkraft-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Airo · 2026-10-16 01:46 CEST
+
+RQ-35 Heidrun, RQ-70, JC250 og JX250 står under platforme. Kunderne er militære, offentlige og kommercielle. Ikke skrevet som en flåde i drift. Ikke satellitter. Står ikke på opsendelseslisten. AI-udkast uden gennemgangsdato. NDI-blikket og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## United States Antimony · 2026-10-16 01:55 CEST
+
+Zeolit fra minen og anlægget i Preston i Idaho. Smelteværk for antimonoxid i Thompson Falls i Montana. Siden siger, at minen dér ikke fik en ny tilladelse, og at udvindingen blev lagt tilbage til Mexico. Alaska er første gravearbejde, ikke en mine i drift. Madero er med. Puerto Blanco kører ikke. Los Juarez er ikke aktiv. Areal-talene på siden er ikke ens og er ikke kopieret. Only, sold out og one of the best er ikke kopieret. Billedteksten om en sten i Montana i 2026 er ikke brugt som drift. AI-udkast uden gennemgangsdato. Råstof-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Merlin · 2026-10-16 01:55 CEST
+
+Merlin Pilot er software til fly, der allerede er i drift. Samarbejde med den amerikanske specialoperationskommando om C-130J er et mål om længere rækkevidde, ikke en flåde der allerede flyver med softwaren. Ikke Satellogics satellit af samme navn. Ikke på opsendelseslisten. 105 millioner dollars, hundredvis af timer og de næste 100 år er ikke kopieret. AI-udkast uden gennemgangsdato. NDI-blikket og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Lithium Americas · 2026-10-16 01:57 CEST
+
+Thacker Pass i det nordlige Nevada. Byggeriet begyndte i begyndelsen af 2023, før beholdningen. Målet sent i 2027 er ikke fuld drift. Reno-centret er et laboratorium og et pilotanlæg, ikke minen. World's largest, unmatched, børsnavne og ISO er ikke kopieret som en mine. AI-udkast uden gennemgangsdato. NDI-blikket og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Oklo · 2026-10-16 01:59 CEST
+
+Groves er en testreaktor. Selskabet skrev 6. august 2026, at den nåede en kædereaktion ved lav effekt. Efter beholdningen. Texas står i meddelelsen af 13. oktober 2026. Ikke et kommercielt kraftværk. Ikke salg af isotoper. Aurora ved Idaho National Laboratory er en foreløbig sikkerhedsanalyse af 11. juni 2026, ikke et værk. Groves-2 Forge er et planlagt pilotanlæg og er ikke bygget. First, leading, NYSE og politiker-citater er ikke kopieret. AI-udkast uden gennemgangsdato. Atomkraft-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Southern Copper · 2026-10-16 02:01 CEST
+
+Tía María er et kobberprojekt i Cocachacra, Islay, Arequipa. To forekomster, La Tapada og Tía María. Tilladelser til byggeri er ikke en mine i drift. World-class, first, primer og obligationens beløb er ikke kopieret. AI-udkast uden gennemgangsdato. Råstof-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Rocket Lab · 2026-10-16 02:06 CEST
+
+HASTE er et suborbitalt testfartøj bygget ud fra Electron. Wallops i Virginia. Ikke en orbital opsendelse. Neutron er stadig under udvikling. 700 kg, largest og Iridium-overskriften er ikke kopieret. AI-udkast uden gennemgangsdato. Opsendelses-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
+
+Lynas svarede tomt. NioCorp gav 403. Intuitive Machines endte i en omdirigering. Ingen ny sætning dér.
