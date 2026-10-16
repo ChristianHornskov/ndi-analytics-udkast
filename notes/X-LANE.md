@@ -4,6 +4,15 @@
 **Branch:** lane-X  
 **Deadline:** keep until 08:30, polish, report 08:45, demo 09:00.
 
+## Denne nat (2026-10-16) · syvende pas
+
+Ingen nye X-kald. `callCountNote` beholder 30/min og 1000/day, noten om ét søgekald 2026-10-15, og at der ikke er kaldt 2026-10-16. Tilføjet: syvende poleringspas, stadig ingen kald. 21 opslag uændret. Browseren kalder ikke X. Ingen embed. Ingen secrets. NewDeal Invest i ét ord. Tal kun fra `fund-facts.json` og `risk-stats.json`. 80 kr. er 720 − 640 på 100.000 kr. 1.490 kr. er 1,49 % af 100.000 kr. 250 kr. er 0,25 % af 100.000 kr.
+
+- `docs/js/x-feed.js` og `docs/ndi-paa-x.html`: forsiden åbner på det nyeste opslag som citat (FundaAI, 15. okt., SoftBank i teksten), med «Seneste opslag» og «Udvalgte offentlige opslag — ikke NDI's holdning». Dørene er kompakte og bærer tallet: SoftBank 3 direkte, Nvidia 6 direkte, Chips / AI 6 direkte 5 tema. På 1280×800 er byline 609–664 og fod 686–718. På 390×844 er byline 634–689 og fod 711–777, og overflow er 0. Et aktivt spor er uændret i tælling: SoftBank 3 direkte med ordet markeret (byline 566–621, fod 686–718), Nvidia 6 direkte, Chips / AI 6 direkte og 5 tema. På 900×800 er chips-foden 717–749. Tom tilstand siger 0, «Aktivt: Quantum · konti Mads følger» og labelen. Et tryk på det aktive filter eller den aktive afsender slår valget fra. Citatet er sat i serif. Panelets tal sidder i linjen under den sticky header. Spor-logikken er uændret: direkte før tema, temakurv reserverer ét tema-kort, selskabssider reserverer ikke.
+- Paneler via `#hvad-siger-x`: SoftBank 3 direkte, 0 tema, 3 udeladt, SoftBank markeret. Nvidia 3 direkte, 0 tema, 2 udeladt. Chips 3 direkte, 1 tema, 1 udeladt, NVDA markeret. Platforme 3 direkte, 1 tema, 6 i alt. Compute 4 direkte, 0 tema, 7 i alt. Quantum 1 direkte, 0 tema. Space 0 direkte, 1 tema. Båndet læser «…holdning. Snapshot 15. okt. 2026.»
+- `docs/fakta.html`: 80 kr. og risikotallene er sat i serif. På 1280×800 er 80 kr. 339–393, 32,46 % / 0,89 / −35,82 % 561–661, og datokortene 693–790. Bund 8. apr. 2025. Topfeltet 2. jun. 2026 er stiplet. På 390 er 80 kr. 398–438. «Ikke et ÅOP.» Officielt vol/Sharpe er «udfyldes af NDI». Søjlen er stadig 0–100 % og ikke forstørret.
+- `docs/omkostninger.html`: heroen er 80 kr. i serif. Under skalaen står kronelinjen: 1.490 kr. øvrige løbende, begge, 640 kr. og 720 kr. porteføljetransaktion, 250 kr. emission og 250 kr. indløsning, maks., begge. «Linjerne er ikke lagt sammen.» På 1280×800 er linjen 726–757. På 390 står 80 kr. 482–525, før 0,64 % ved 581. Legendens tekst er «PMINDI 0,64 %» og «PMINDIAKK 0,72 %». Skalaen 0–2 % og udsnittet 0,48–0,88 % er uændret. Ingen sum.
+
 ## Denne nat (2026-10-16) · sjette pas
 
 Ingen nye X-kald. `callCountNote` beholder 30/min og 1000/day, noten om ét søgekald 2026-10-15, og at der ikke er kaldt 2026-10-16. Tilføjet: sjette poleringspas, stadig ingen kald. 21 opslag uændret. Browseren kalder ikke X. Ingen embed. Ingen secrets. NewDeal Invest i ét ord. Tal kun fra `fund-facts.json` og `risk-stats.json`. 80 kr. er 720 − 640 på 100.000 kr., samme afrunding som omkostningssiden.
@@ -60,6 +69,8 @@ Ingen nye X-kald. `callCountNote` beholder 30/min og 1000/day, noten om ét søg
 «Udvalgte offentlige opslag — ikke NDI's holdning»
 
 ## Verifikation
+
+Syvende pas, headless Chrome mod denne worktree (port 8899): overflow 0 på NDI på X (forside, SoftBank, Nvidia, Chips / AI, tom tilstand) ved 1280×800, på Chips / AI ved 900×800, på forsiden og SoftBank ved 390×844. Fakta og omkostninger overflow 0 ved 1280×800 og 390×844. Forsiden: FundaAI-citatet helt i første skærm (1280 byline 609–664, fod 686–718; 390 byline 634–689, fod 711–777), døre 3 / 6 / 6 direkte 5 tema, label med punktum. SoftBank-søgning: ordet markeret, 3 direkte, fod 686–718. Chips: 6 og 5. Fakta: 80 kr. 339–393, 32,46 % 561–661, datokort 693–790. Omkostninger: kronelinjen 1.490 / 640 / 720 / 250 i første skærm ved 1280 (726–757). Mobil: 80 kr. før 0,64 %. Paneler uændrede i tælling. Ingen X-embed. Ingen sidefejl.
 
 Sjette pas, headless Chrome mod denne worktree (port 8899): overflow 0 på NDI på X (forside, SoftBank, Nvidia, Chips / AI, tom tilstand) ved 1280×800, på SoftBank ved 900×800 og 390×844, og på forsiden ved 390. Fakta og omkostninger overflow 0 ved 1280×800 og 390×844. SoftBank-søgning: hele kortet i første skærm (byline 576–631, fod 695–727), ordet SoftBank markeret, tallet 3 direkte. Chips i feedet: 6 direkte og 5 tema. Fakta: 80 kr., 32,46 % og datokortene (8. apr. 2025 / 2. jun. 2026) i første skærm ved 1280. Omkostninger mobil: 80 kr. før 0,64 %. Kvitteringer: 1.490 / 640 / 720 / 250 og 80 kr. mellem kortene. Paneler via `#hvad-siger-x` uændrede i tælling. Ingen X-embed. Ingen sidefejl.
 

@@ -51,7 +51,7 @@
   .delta-nums b{display:block;font-size:28px;font-weight:500;letter-spacing:-.6px;color:var(--cyan);font-variant-numeric:tabular-nums;line-height:1.1}
   .delta-nums small{display:block;margin-top:4px;font-size:12px;color:var(--faint)}
   .delta-mid{text-align:center;padding:0 8px 2px;align-self:center}
-  .delta-nums .delta-mid b{color:#f5ee9e;font-size:clamp(48px,6.2vw,72px);font-weight:600;letter-spacing:-2.2px;line-height:.9}
+  .delta-nums .delta-mid b{color:#f5ee9e;font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-size:clamp(48px,6.2vw,72px);font-weight:500;letter-spacing:-2.2px;line-height:.9}
   .delta-mid small{display:block;max-width:18ch;margin:6px auto 0;line-height:1.35}
   .receipt-gap{margin:12px 0 0;padding:12px 14px;border-left:3px solid var(--yellow);background:#0b171d;border-radius:0 12px 12px 0;color:var(--muted);font-size:14px;line-height:1.45}
   .receipt-gap b{color:var(--text);font-variant-numeric:tabular-nums;font-weight:600}
@@ -73,6 +73,10 @@
   .receipt-bridge{display:flex;flex-direction:row;align-items:center;justify-content:center;gap:10px;text-align:center;min-width:0;margin:0;padding:12px 10px;border:1px solid #f5ee9e55;border-radius:14px;background:radial-gradient(80% 90% at 50% 0%,rgba(245,238,158,.16),transparent 68%),#0b171d}
   .receipt-bridge b{color:#f5ee9e;font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-size:28px;font-weight:500;letter-spacing:-.8px;font-variant-numeric:tabular-nums;line-height:1}
   .receipt-bridge span{color:var(--faint);font-size:11px;letter-spacing:.8px;text-transform:uppercase;white-space:nowrap}
+  .kr-line{display:flex;flex-wrap:wrap;gap:6px 18px;margin:12px 0 0;padding-top:12px;border-top:1px solid #345860;font-size:13px;color:var(--muted);line-height:1.4}
+  .kr-line b{color:var(--text);font-variant-numeric:tabular-nums;font-weight:600}
+  .kr-line b.is-gap{color:#f5ee9e}
+  .metrics .metric.is-echo strong{color:var(--muted);font-size:22px}
   @media(min-width:801px){
     .receipts:has(.receipt-bridge){grid-template-columns:minmax(0,1fr) 118px minmax(0,1fr);align-items:center}
     .receipt-bridge{flex-direction:column;gap:4px;padding:16px 8px}
@@ -185,6 +189,13 @@
  })() : '';
  const fullLeft = mark(loTx);
  const fullWidth = mark(hiTx) - fullLeft;
+ const ongoingBits = sameOngoing
+ ? `<b>${kr(a.otherOngoing)}</b> øvrige løbende, begge`
+ : `<b>${kr(a.otherOngoing)}</b> og <b>${kr(b.otherOngoing)}</b> øvrige løbende`;
+ const entryBits = sameEntry
+ ? `<b>${kr(a.entry)}</b> emission og <b>${kr(a.exit)}</b> indløsning, maks., begge`
+ : `PMINDI <b>${kr(a.entry)}</b> / <b>${kr(a.exit)}</b> · PMINDIAKK <b>${kr(b.entry)}</b> / <b>${kr(b.exit)}</b>, maks.`;
+ const krLine = dTx === 0 ? '' : `<p class="kr-line"><span>${ongoingBits}</span><span><b>${kr(a.portfolioTransaction)}</b> og <b class="is-gap">${kr(b.portfolioTransaction)}</b> porteføljetransaktion</span><span>${entryBits}</span><span>Linjerne er ikke lagt sammen.</span></p>`;
  const deltaStage = dTx === 0 ? '' : `<section class="delta-stage" id="forskel">
  <p class="kicker">${onlyTx ? 'DEN ENE FORSKEL' : 'PORTEFØLJETRANSAKTION'}</p>
  <h2>${onlyTx ? 'Porteføljetransaktion skiller klasserne' : 'Porteføljetransaktion'}</h2>
@@ -197,7 +208,8 @@
  <div class="delta-ends" aria-hidden="true"><span>0 %</span><span>${pct(SCALE)}</span></div>
  <p class="delta-key"><span><i class="a"></i>PMINDI ${pct(a.portfolioTransaction)}</span><span><i class="b"></i>PMINDIAKK ${pct(b.portfolioTransaction)}</span></p>
  ${zoomBlock}
- <p class="scale-note">Den øverste linje er skalaen 0 til ${pct(SCALE)}. Afstanden er lille, fordi forskellen er ${pp(Math.abs(dTx))}. Den nederste linje er et udsnit, så markørerne kan skelnes. Udsnittet er forstørret. Forskellen er stadig ${pp(Math.abs(dTx))}, ${krGapTxt} på 100.000 kr. Det er ikke en sum af satserne og ikke et ÅOP.</p>
+ <p class="scale-note">Skalaen er 0 til ${pct(SCALE)}. Udsnittet er forstørret, så markørerne kan skelnes. Forskellen er stadig ${pp(Math.abs(dTx))}, ${krGapTxt} på 100.000 kr. Ikke et ÅOP.</p>
+ ${krLine}
  </section>`;
  const receiptGap = dTx === 0 ? '' : `<p class="receipt-gap">Porteføljetransaktion på 100.000 kr. er ${kr(a.portfolioTransaction)} i PMINDI og ${kr(b.portfolioTransaction)} i PMINDIAKK. Forskellen er <b class="is-gap">${krGapTxt}</b> ${onlyTx ? 'De andre linjer er ens. ' : ''}Ingen linje er lagt sammen. Ikke et ÅOP.</p>`;
  const spoken = onlyTx
@@ -238,8 +250,8 @@
  ${deltaStage}
  <div class="metrics">
  <div class="metric"><div class="label">Øvrige løbende${sameOngoing ? ', begge klasser' : ', PMINDI / AKK'}</div><strong>${sameOngoing ? pct(a.otherOngoing) : pct(a.otherOngoing) + ' / ' + pct(b.otherOngoing)}</strong><small>Forventet · Fundmarket</small></div>
- <div class="metric"><div class="label">Porteføljetransaktion, PMINDI</div><strong>${pct(a.portfolioTransaction)}</strong><small>Forventet</small></div>
- <div class="metric"><div class="label">Porteføljetransaktion, PMINDIAKK</div><strong>${pct(b.portfolioTransaction)}</strong><small>Forventet</small></div>
+ <div class="metric is-echo"><div class="label">Porteføljetransaktion, PMINDI</div><strong>${pct(a.portfolioTransaction)}</strong><small>Forventet · samme tal som ovenfor</small></div>
+ <div class="metric is-echo"><div class="label">Porteføljetransaktion, PMINDIAKK</div><strong>${pct(b.portfolioTransaction)}</strong><small>Forventet · samme tal som ovenfor</small></div>
  <div class="metric"><div class="label">Resultathonorar</div><strong>${feeNo ? 'Nej' : 'Se klasser'}</strong><small>${feeNo ? 'Begge klasser · Fundmarket' : 'Se teksten på klassekortet'}</small></div>
  </div>
  <p class="band">${onlyTx ? `Kun porteføljetransaktion skiller klasserne. ${sameLine} ${entryLine} ${feeLine} Ikke et ÅOP.` : `${spoken} ${sameLine} ${entryLine} ${feeLine}`}</p>

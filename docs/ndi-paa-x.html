@@ -111,7 +111,7 @@
  <h1>NDI på X</h1>
  <p class="lede x-intro">${posts.length} offentlige opslag i et fast udsnit. Egne kort. Ingen X-embed, og browseren kalder ikke X.</p>
  <p class="warn x-label">${esc(X_LABEL)}.</p>
- <p class="band x-snap">Snapshot ${esc(fmtXDate(pack.snapshotAt))}. NDI-konti: ${esc(house)}.${curatedN ? ` ${curatedN} opslag er fra konti, som Mads følger.` : ''}</p>
+ <p class="band x-snap">Snapshot ${esc(fmtXDate(pack.snapshotAt))}. ${posts.length} opslag. NDI-konti: ${esc(house)}.${curatedN ? ` ${curatedN} fra konti, som Mads følger.` : ''} Egne kort. Ingen X-embed, og browseren kalder ikke X.</p>
 
  <div class="x-spot" id="spor" aria-label="Genveje til demo">
  ${door('soft', 'ndi-paa-x.html?q=SoftBank', 'q', 'SoftBank', 'SELSKAB · DIREKTE', 'SoftBank', softScore, softPost, 'Seneste', 'direct')}
@@ -193,6 +193,7 @@
  const focused = bits.length ? ` · ${bits.length === 1 ? 'ét filter' : bits.length + ' filtre'}` : '';
  const leadOn = Boolean(state.q.trim() || state.f !== 'all');
  document.body.classList.toggle('x-focused', leadOn);
+ document.body.classList.toggle('x-home', !leadOn);
  const direct = [];
  const theme = [];
  const restHits = [];
@@ -268,10 +269,17 @@
  </div>
  </div>`;
  } else if (!leadOn) {
- const house = list.filter((p) => postWho(p, 'house'));
- const curated = list.filter((p) => postWho(p, 'curated'));
- const other = list.filter((p) => !postWho(p, 'house') && !postWho(p, 'curated'));
- grid.innerHTML = homeLane('is-curated', curated, 'Konti Mads følger', "Udvalgte offentlige opslag — ikke NDI's holdning")
+ const [newest, ...rest] = list;
+ const stageMod = postWho(newest, 'house') ? 'is-house' : (postWho(newest, 'curated') ? 'is-curated' : 'is-rest');
+ const stage = `<div class="x-lane ${stageMod}">
+ <p class="x-lane-h"><span class="x-lane-k">Seneste opslag</span><span>${esc(X_LABEL)}</span></p>
+ <div class="x-stage">${xCard(newest, { lead: true })}</div>
+ </div>`;
+ const house = rest.filter((p) => postWho(p, 'house'));
+ const curated = rest.filter((p) => postWho(p, 'curated'));
+ const other = rest.filter((p) => !postWho(p, 'house') && !postWho(p, 'curated'));
+ grid.innerHTML = stage
+ + homeLane('is-curated', curated, 'Konti Mads følger', "Udvalgte offentlige opslag — ikke NDI's holdning")
  + homeLane('is-house', house, 'NDI-konti', 'InvestNewdeal, Mads, Jesper og Christian')
  + homeLane('is-rest', other, 'Andre opslag', 'Hverken en NDI-konto eller mærket fra listen Mads følger');
  } else if (!direct.length && !theme.length) {
