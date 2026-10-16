@@ -1514,3 +1514,18 @@ Main er ikke flyttet siden c61. Live md5 = main på 14 sider (index, vaerdikaede
 - S-K1 takeaway følger ikke Kurs/Totalafkast · S-K2 Kurs vs. Nasdaq er skævt · S-K3 udbytte-forbehold i U-tooltip.
 - S-N1 totalafkast vs. kursindeks · S-N2 Yahoo/Nasdaq-licens · S-N3 forbehold i readout.
 - S3, S5, S12 (ældre, åbne).
+
+## 2026-10-16 08:08 CEST · cyklus 63 · freeze-verifikation (main `a81c67c` uændret, live = main)
+
+Rettelse: c62-headeren "08:10" var forkert. Den blev skrevet før 08:08.
+
+- Live md5 = main på 11 sider (index, vaerdikaeder, drawdown, risici, selskab, temaer, invester, om-data, ndi-paa-x, sammenlign). Live-sweep på 24 URL'er (cache-bust) gav 0 fejl og 0 overflow. Tab- og historisk-advarsel findes på alle 24. ✅
+- "overvægt"-hits (vaerdikaeder, risici, temaer, tema, laer) er kun negationer eller pædagogiske. ✅
+- M1-indholdet er uændret i `docs/data/x-posts.json` ("BREAKING: Nvidia is in talks to backstop $250 BI…").
+
+### MUST
+- Uændret: **M1** (ndi-paa-x knude/lead løfter tredjeparts-hype frem) og **ÅOP** (mangler).
+
+### SHOULD
+- **S-T1 (NY)** · `tema.html?slug=…`: footeren siger "ikke en anbefaling" og "historisk afkast …", men den siger ikke "ingen investeringsrådgivning" og har ikke tab-linjen. Tab-linjen (WARN_HIST) står kun i brødteksten nederst. De andre 23 sider har alle tre i footeren. Forslag: brug samme footer-tekst som de øvrige sider, så teksten også står der, hvis brødteksten ikke renderer.
+- Åbne: S-R1, S-D1, S-D2, S-K1–K3, S-N1–N3, S3, S5, S12.

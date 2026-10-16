@@ -1530,3 +1530,14 @@ Intet nyt produktindhold siden c61. Live = main pr. md5 på 14 sider, og footer 
 
 ### Nice
 - Saml klik-kort-mønstrene (nyhedsarkiv, Kryds) under ét idiom · aria-live på embed #day-say · trim callCountNote i x-posts.json.
+
+## 2026-10-16 08:08 CEST · cyklus 63 · freeze-verifikation (main `a81c67c` uændret)
+
+Ingen nye UX-ændringer på main siden c61. Live-sweep på 24 URL'er gav 0 fejl og 0 overflow.
+
+### MUST
+- Ingen nye.
+
+### SHOULD
+- U-T1 · `tema.html` har en kortere footer end resten af sitet (se compliance S-T1). Footeren bør være ens overalt, så den ikke ser ud som en anden side.
+- Åbne som i c61/c62 (U-V1 Venn-fatigue, U-X1).
