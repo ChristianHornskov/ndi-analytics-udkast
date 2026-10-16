@@ -1272,3 +1272,130 @@ Der er ingen docs-delta siden c48. Live md5 = main på de kontrollerede filer, o
 
 ### Nice
 - Uændret fra c46 (blandede Inc/Ltd-suffikser, "1 selskaber passer").
+
+## 2026-10-16 07:15 CEST · cyklus 51 (main `83c64d0` uændret; live = main)
+
+Der er ingen docs-delta siden c48. Live md5 = lokal for index, drawdown, omkostninger, risici, invester, værdikæder og js/app.js. Jeg har kørt en ny live-sweep af 50 URL'er @375 (/tmp/laneR/c51). Den gav 0 sidefejl og 0 horisontalt overflow, og tiny, højde, flags og hits er identiske med c48b.
+
+### MUST
+- Ingen.
+
+### SHOULD (åbne, genverificeret i kilden)
+- `?view=fonden&fund=PMINDIAKK` har 0 forekomster af "omkostning" i den synlige tekst. "2,85 %" står kun i PMINDI-panelet (`js/app.js:460`), som AKK-grenen aldrig når frem til. Det er en persona- og FO-MUST.
+- `omkostninger.html:441` "Tast 1 eller 5." står stadig i summary.
+- Værdikæder har stadig tap-mål under 24 px @375 (jf. c47).
+- `selskab.html` `.tri` er tre lukkede details.
+
+### Nice
+- Uændret fra c46.
+
+## 2026-10-16 07:18 CEST · cyklus 51b (main `91328f6`, docs-delta mod `83c64d0`: 22 filer; live = main)
+
+**Korrektion til c51:** main flyttede til `91328f6` (lane-A/B/C/E), mens jeg skrev c51. Afsnittet "uændret" ovenfor gjaldt `83c64d0`. Live md5 = main for app.js, drawdown og embed/chart. Jeg har kørt en ny live-sweep af 50 URL'er @375 (/tmp/laneR/c51b): 0 sidefejl og 0 overflow.
+
+### Lukket
+- **PMINDIAKK-omkostninger:** fælles `costPanel(true)` (`js/app.js:338/384`). AKK-visningen viser nu "Omkostninger (kort)" med 2,85 % / 2,79 % (`cd321da`).
+- **Tap-mål @375** (antal links/knapper under 24 px):
+
+  | Side | Før | Nu |
+  |---|---|---|
+  | værdikæder | 123 | 8 |
+  | værdikæde ai-compute | 98 | 6 |
+  | temaer | 71 | 24 |
+  | tema-sider | 26–138 | 15–36 |
+  | selskaber | 382 | 37 |
+
+### MUST
+- Ingen.
+
+### SHOULD
+- **Ny regression: `ndi-perspektiv.html` @375 har 493 tap-mål under 24 px (før 85).** Årsagen er de nye ordliste-links på feltnavne (`LABEL_G`, h≈20 px). De står ca. fem gange pr. selskabskort i alle `lg-*`-grupper (platforme 92, software 63, chips 60). Det er inline-links, så WCAG 2.5.8's undtagelse dækker dem formelt. Men på mobil ligger de tæt op ad selskabslinket i kortets `h3`. Forslag: link kun ordlisten én gang pr. gruppe, eller i forklaringsboksen, som allerede linker til den.
+- `omkostninger.html:441` "Tast 1 eller 5." står stadig i summary.
+- `selskab.html` `.tri` er tre lukkede details.
+
+### Nice
+- `om-data.html#g-drivkraefter` "som NDI's indlæg 19. januar 2026 vil bruge til at forklare …". Brug datid eller nutid ("bruger").
+- Sammenlign "Udbyttets vej": god, rolig visuel variation. AKK-gaten (12 mdr.) bliver gentaget korrekt ✅.
+
+### Persona-linser
+- Privat: AKK-køberen ser nu sine omkostninger direkte i fondsvisningen ✅.
+- FO: alle 73 nye felter af typen Forretningsmodel/Svært at kopiere er mærket AI-udkast og skrevet som beskrivelse, ikke vurdering ✅.
+
+## 2026-10-16 07:23 CEST · cyklus 52 (main `85704e3`, docs-delta mod `91328f6`: 5 filer — fakta, omkostninger, ndi-paa-x, x-feed.js, x-posts.json (lane-X); live = main)
+
+Live md5 = main for alle 5 filer. Live-sweep af 50 URL'er @375 (/tmp/laneR/c52): 0 overflow. Én sidefejl, som er forbigående (se nedenfor). De øvrige 49 er identiske med c51b (tiny/h/flags).
+
+### MUST
+- Ingen.
+
+### SHOULD
+- **Ny (drift): cache-skævhed mellem HTML og ES-moduler efter deploy.** Første sweep fik `ndi-paa-x.html` tom (h=800, h1 tom) med "x-feed.js does not provide an export named 'xSkyHtml'". HTML'en var ny, mens `js/x-feed.js` kom fra CDN/browser-cache (Pages `cache-control: max-age=600`). En ny kontekst med `?cb=` loader fint (h=7802, 0 fejl). Effekt: en tilbagevendende besøgende kan få en blank side i op til ca. 10 min efter hver lane-X-deploy. Forslag efter freeze: versionér modul-imports (`./js/x-feed.js?v=<sha>`) eller hold eksportnavne bagudkompatible. Ikke en blokering til morgen-demo, men det er værd at genindlæse før demo.
+- `ndi-perspektiv.html` 493 tap-mål < 24 px er stadig åben (fra c51b).
+- `omkostninger.html:588` "Tast 1 eller 5." står stadig i summary (linjenr. flyttet fra 441).
+
+### Lukket / verificeret ny delta
+- **omkostninger: ny "Hvor er KID?"-knap** (`data-ask=kid`, 115×32 px @375, ok tap-mål). Den viser 2,79 % / 2,85 % "KID ved 5 år · ikke tegnet" over skalaen. Det er ærligt: KID'et tegnes ikke på postsatsskalaen og blandes ikke sammen med den. 0 overflow, tiny 6.
+- **fakta: klasse-tidslinje** @375: 0 overflow, tiny 11, 0 JS-fejl.
+
+### Nice
+- omkostninger: "Ikke et ÅOP." står 4–5 gange i forskellige tilstande. Det er korrekt, men gentagelsen trætter. Ét fast sted ved overskriften ville være nok.
+
+### Persona-linser
+- Privat: KID-knappen svarer direkte på "hvad koster det i alt?" ✅.
+- FO: tydelig adskillelse af KID-RIY og postsatser ✅. ÅOP er stadig ikke angivet (bevidst, "Ikke et ÅOP"). Se compliance.
+
+## 2026-10-16 07:34 CEST · cyklus 53 (main `f6d6b4b`, docs-delta mod `85704e3`: drawdown, sammenlign, embed/chart, ndi.css, vaerdikaeder + value-chains (lane-A/D); live = main, md5 verificeret)
+
+Fuld live-sweep af 50 URL'er (375 px) og delta-check af de nye komponenter. 0 pageerrors og 0 overflow.
+
+### Løst siden c52
+- **ndi-paa-x renderer nu live** (c52-drift var CDN-cache): h1 "NDI på X", 19 opslag, 7802 px, 0 fejl. Drift-SHOULD 10 lukkes.
+
+### Delta verificeret (live, 375 px)
+- **embed/chart PMINDI:** ny stop-række "Start/Seneste" (44 px knapper). "Laveste" droppes ved overlap på 375, som designet. Ny Udskriv-knap + print-mast med rådgivnings-/historik-linje ✅. **PMINDIAKK:** ingen stops, 0 %-tal ✅.
+- **drawdown:** ny livstidsbånd med 4 dybe episoder (44 px). Klik giver "−16,7 % fra 16. jul. 2024 til bund 7. aug. 2024" ✅. AKK: 0 episoder, 0 %-tal ✅.
+- **sammenlign:** KID-omkostningspar er nu knapper (min-height 44), og klik siger hvilken klasse tallet gælder ✅ (lukker c51-forvekslingsrisikoen).
+
+### MUST
+- Ingen nye.
+
+### SHOULD
+1. **ndi-paa-x, tap-mål:** 102 elementer < 24 px på 375. Det er 32 `.x-atlas-dot` (16×16, absolut placeret, kan ligge oven i hinanden ved samme dato) og ca. 70 `a.tag` (h=16). WCAG 2.5.8 spacing-undtagelsen holder ikke, når prikkerne overlapper. Fix: ::before-hit-area 24 px eller collapse af samme-dags-prikker. Tags: padding til ≥ 24 px.
+2. **ndi-paa-x, rå engelske slugs som tags:** "physical", "platforms", "energy", "ndi", "europe", "ai" står ved siden af danske emnenavne ("Fysisk tech", "Platforme"). Jargon/inkonsistens for privat-personaen. Brug displayName fra temaerne.
+3. **ndi-paa-x, selvmodsigende label øverst:** "Udvalgte offentlige opslag — ikke NDI's holdning. NDI-konti … kan være NDI's holdning." (ndi-paa-x.html:110). Første sætning burde kun gælde fulgte konti: "Opslag fra konti NDI følger er ikke NDI's holdning."
+4. Stående fra c52: index.html:89 KID-ordlyd og omkostninger.html:606 intern formulering (se compliance).
+
+### Nice
+- Engelsksprogede tredjepartsopslag (FundaAI, Bull Theory) uden dansk resumé er tunge for privat-personaen. FO-personaen er ok med det.
+
+## 2026-10-16 07:37 CEST · cyklus 54 · freeze-tjek (main `f6d6b4b`, uændret siden c53; live = main, md5 ok på 10 nøglesider)
+
+Sidste cyklus før LEO FREEZE kl. 08:00. Live-sweep af 20 nøgle-URL'er på 375 px med cache-bust: 0 pageerrors, 0 vandret overflow. Rådgivnings-, tab- og historik-linjen er til stede på alle 20.
+
+### MUST
+- Ingen.
+
+### SHOULD (uændret fra c53 — kun tekst/CSS, kan laves som bugfix efter 08:00)
+1. ndi-paa-x: 102 tap-mål < 24 px (`.x-atlas-dot`, `a.tag`).
+2. ndi-paa-x: rå engelske slugs som tags. Brug displayName.
+3. ndi-paa-x.html:110: selvmodsigende label ("ikke NDI's holdning" … "kan være NDI's holdning"). Står stadig i kilden.
+4. index.html:89 KID-ordlyd og omkostninger.html:606 intern formulering. Begge står stadig i kilden.
+
+### Nice
+- Uændret (engelske tredjepartsopslag uden dansk resumé).
+
+## 2026-10-16 07:41 CEST · cyklus 55 · freeze-tjek (main `f6d6b4b`, uændret; live = main, md5 ok på 11 nøglesider)
+
+Main har ikke flyttet sig siden c53. Live svarer byte for byte til main på index, selskaber, vaerdikaeder, drawdown, risici, temaer, invester, om-data, omkostninger og ndi-paa-x. (fonden og udforsk findes ikke som selvstændige filer. De dækkes af index og selskaber.)
+
+### MUST
+- Ingen.
+
+### SHOULD (uændret, genverificeret i kilden)
+1. ndi-paa-x: tap-mål < 24 px (`.x-atlas-dot`, `a.tag`).
+2. ndi-paa-x: rå engelske slugs som tags.
+3. ndi-paa-x.html:110 selvmodsigende label. Står stadig.
+4. index.html:89 KID-ordlyd og omkostninger.html:606 intern formulering. Står stadig.
+
+### Nice
+- Uændret.
