@@ -203,6 +203,7 @@ section.panel.x-says{background:transparent;border:0;border-top:1px solid #24383
 .x-miss{font-size:12px;color:var(--faint);line-height:1.45;margin:10px 0 0}
 .x-zero{font-size:40px;line-height:1;font-weight:600;letter-spacing:-1px;color:var(--cyan);margin:0 0 6px;font-variant-numeric:tabular-nums}
 body.x-focused .x-door{min-height:0;padding:12px 14px 10px;gap:4px}
+body.x-focused .x-door .k{display:none}
 body.x-focused .x-door-q,body.x-focused .x-door-by{display:none}
 body.x-focused .x-spot{margin-bottom:8px}
 body.x-focused .x-filters{margin:4px 0}
@@ -234,12 +235,13 @@ body.x-focused .x-label{margin:0 0 8px}
   body.x-focused .x-intro{order:3}
   body.x-focused .x-label{order:4}
   body.x-focused .x-snap{order:5}
-  body.x-focused .x-spot{order:6}
-  body.x-focused .x-jumps{order:7}
-  body.x-focused #x-grid{order:8}
-  body.x-focused .x-tools{order:9}
-  body.x-focused .x-footwarn{order:10}
-  body.x-focused .x-footlinks{order:11}
+  body.x-focused #x-spine-home{order:6}
+  body.x-focused .x-spot{order:7}
+  body.x-focused .x-jumps{order:8}
+  body.x-focused #x-grid{order:9}
+  body.x-focused .x-tools{order:10}
+  body.x-focused .x-footwarn{order:11}
+  body.x-focused .x-footlinks{order:12}
   .x-score-bar{display:grid;grid-template-columns:auto auto minmax(0,1fr);grid-template-areas:"n p s" "w w w";column-gap:12px;row-gap:4px;align-items:end;padding-left:10px}
   .x-score{grid-area:n}
   .x-prov{grid-area:p}
@@ -462,9 +464,75 @@ button.x-voice{cursor:pointer}
 .x-sky-node[aria-pressed="true"] span{color:#f5ee9e}
 .x-sky-node[aria-pressed="true"] i{box-shadow:0 0 0 2px #f5ee9e}
 .x-sky-node:focus-visible{outline:2px solid #f5ee9e;outline-offset:2px}
+.x-weave{margin:0 0 8px;padding:8px 12px 6px;border:1px solid #345860;border-radius:16px;background:radial-gradient(90% 90% at 0% 0%,rgba(245,238,158,.12),transparent 46%),#0d1c22}
+.x-weave-top{display:flex;justify-content:space-between;gap:8px 14px;align-items:baseline;flex-wrap:wrap;margin:0 0 4px}
+.x-weave-top .k{margin:0;font-size:11px;letter-spacing:1.4px;color:var(--brand);font-weight:700}
+.x-weave-top p{margin:0;font-size:13px;line-height:1.35;color:var(--text);max-width:70ch}
+.x-weave-map{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);grid-template-areas:"soft sn nv" "sc chips nc";gap:8px 10px;align-items:center}
+.x-weave-node{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:54px;border-radius:14px;border:1px solid #345860;background:#0b171d;padding:4px 8px}
+.x-weave-node b{font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-size:24px;font-weight:500;letter-spacing:-.6px;line-height:.9;color:#f5ee9e}
+.x-weave-node span{font-size:12px;color:var(--muted);margin-top:2px}
+.x-weave-node.is-hot{border-color:#f5ee9e88;box-shadow:inset 0 -2px 0 #f5ee9e}
+.x-weave-node.is-zero b{color:#c5d6db}
+.x-weave-node.is-soft{grid-area:soft}
+.x-weave-node.is-nv{grid-area:nv}
+.x-weave-node.is-chips{grid-area:chips}
+.x-weave-bridge{appearance:none;display:flex;flex-direction:column;align-items:center;justify-content:center;border:1px solid #f5ee9e66;background:#0b171d;color:#f5ee9e;border-radius:999px;min-width:52px;min-height:36px;padding:4px 10px;cursor:pointer;font:inherit}
+.x-weave-bridge.is-sn{grid-area:sn}
+.x-weave-bridge.is-sc{grid-area:sc;justify-self:end}
+.x-weave-bridge.is-nc{grid-area:nc;justify-self:start}
+.x-weave-bridge b{font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-size:22px;font-weight:500;line-height:1;letter-spacing:-.4px}
+.x-weave-bridge i{font-style:normal;font-size:10px;letter-spacing:.2px;line-height:1.2;color:var(--faint);max-width:16ch}
+.x-weave-bridge.is-zero{color:var(--faint);border-style:dashed;border-color:#345860}
+.x-weave-bridge.is-hot{box-shadow:0 0 0 1px #f5ee9e55}
+.x-weave-bridge[aria-pressed="true"]{background:#f5ee9e;color:#1c1604;border-color:#f5ee9e}
+.x-weave-bridge[aria-pressed="true"] i{color:#3d3810}
+.x-weave-bridge:focus-visible{outline:2px solid #f5ee9e;outline-offset:2px}
+.x-weave-foot{margin:4px 0 0;font-size:12px;line-height:1.35;color:var(--faint)}
+body.x-focused .x-weave{margin:0 0 4px;padding:0;border:0;background:transparent;border-radius:0}
+body.x-focused .x-weave-top,body.x-focused .x-weave-foot{display:none}
+body.x-focused .x-weave-node{display:none}
+body.x-focused .x-weave-map{display:flex;flex-wrap:wrap;gap:6px}
+body.x-focused .x-weave-bridge{flex:1 1 120px;min-height:28px;padding:2px 8px}
+body.x-archive main{display:flex;flex-direction:column}
+@media(min-width:900px){
+  body.x-archive main>.eyebrow{order:1}
+  body.x-archive main>h1{order:2}
+  body.x-archive main>.x-intro{order:3}
+  body.x-archive main>.x-label{order:4}
+  body.x-archive main>.x-snap{order:5}
+  body.x-archive main>.x-spot{order:6}
+  body.x-archive main>.x-jumps{order:7}
+  body.x-archive main>#x-spine-home{order:8}
+  body.x-archive main>.x-tools{order:9}
+  body.x-archive main>#x-grid{order:10}
+  body.x-archive main>.x-footwarn{order:11}
+  body.x-archive main>.x-footlinks{order:12}
+  body.x-focused .x-label{padding:6px 10px;margin:0 0 4px}
+  body.x-focused h1{font-size:22px;line-height:1.15;margin:0 0 2px}
+  body.x-focused #x-grid{margin-top:4px}
+  body.x-focused .x-score-bar{margin-bottom:4px}
+  body.x-focused .x-door{padding:3px 10px}
+  body.x-focused .x-spot{margin:0 0 2px}
+  body.x-archive:not(.x-focused) .x-spot{margin-bottom:6px}
+  body.x-archive:not(.x-focused) .x-weave{margin-bottom:4px;padding:6px 12px 4px}
+  body.x-archive:not(.x-focused) .x-weave-map{gap:4px 8px}
+  body.x-archive:not(.x-focused) .x-weave-node{min-height:0;padding:2px 8px}
+  body.x-archive:not(.x-focused) .x-weave-node b{font-size:22px}
+  body.x-archive:not(.x-focused) .x-weave-node span{margin-top:0}
+  body.x-focused article.x-card.is-quote .x-text{display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden;white-space:normal}
+}
 @media(max-width:700px){
   .x-sky-node{width:68px}
   .x-sky-row{gap:6px 2px}
+  .x-weave-map{grid-template-columns:1fr;grid-template-areas:"soft" "sn" "nv" "sc" "chips" "nc";justify-items:center}
+  .x-weave-node{width:min(100%,280px)}
+  .x-weave-bridge.is-sc,.x-weave-bridge.is-nc{justify-self:center}
+  body.x-focused .x-weave-map{display:flex;flex-direction:row}
+  body.x-focused .x-weave{margin:0}
+  body.x-focused .x-weave-bridge i{display:none}
+  body.x-focused .x-weave-bridge{flex:1 1 0;min-height:26px;padding:2px 6px}
+  article.x-card.is-quote .x-foot,article.x-card.is-slip .x-foot{margin-top:4px}
 }
 @media(prefers-reduced-motion:reduce){
   button.x-atlas-dot:hover::after{transform:translate(-50%,-50%)}
@@ -911,6 +979,99 @@ export function xSkyHtml(posts, { active = 'all' } = {}) {
   </div>`;
 }
 
+function knotSentence(bridge) {
+  const n = bridge?.posts?.length || 0;
+  const id = bridge?.id || '';
+  if (id === 'soft-nv') {
+    if (!n) return 'Ingen opslag nævner både SoftBank og NVDA.';
+    if (n === 1) return '1 opslag nævner både SoftBank og NVDA.';
+    return `${n} opslag nævner både SoftBank og NVDA.`;
+  }
+  if (id === 'soft-chips') {
+    if (!n) return 'Ingen SoftBank-opslag ligger i Chips / AI.';
+    if (n === 1) return '1 SoftBank-opslag ligger også i Chips / AI.';
+    return `${n} SoftBank-opslag ligger også i Chips / AI.`;
+  }
+  if (id === 'nv-chips') {
+    if (!n) return 'Ingen opslag med NVDA ligger i Chips / AI.';
+    const word = n === 1 ? 'opslag' : 'opslag';
+    return `${n} ${word} med NVDA ligger i Chips / AI. Filteret tæller tickeren med.`;
+  }
+  return '';
+}
+
+/**
+ * Shared posts between the three demo doors. Counts come from the posts passed in.
+ * No network. A zero bridge is still a button.
+ */
+export function xKnotMap(posts) {
+  const list = posts || [];
+  const soft = list.filter((p) => postMatchesQuery(p, 'SoftBank'));
+  const nv = list.filter((p) => postMatchesQuery(p, 'NVDA'));
+  const chips = list.filter((p) => postInFilter(p, 'chips'));
+  const idSet = (arr) => new Set(arr.map((p) => String(p.id)));
+  const both = (a, b) => {
+    const ids = idSet(b);
+    return a.filter((p) => ids.has(String(p.id)));
+  };
+  const bridges = [
+    { id: 'soft-nv', posts: both(soft, nv) },
+    { id: 'soft-chips', posts: both(soft, chips) },
+    { id: 'nv-chips', posts: both(nv, chips) },
+  ].map((b) => ({ ...b, sentence: knotSentence(b) }));
+  return {
+    nodes: [
+      { id: 'soft', label: 'SoftBank', n: soft.length },
+      { id: 'nv', label: 'Nvidia', n: nv.length },
+      { id: 'chips', label: 'Chips / AI', n: chips.length },
+    ],
+    bridges,
+  };
+}
+
+export function xWeaveHtml(posts, { active = '', hot = '' } = {}) {
+  ensureXStyles();
+  const map = xKnotMap(posts);
+  const on = (id) => active === id;
+  const touch = (id) => {
+    if (!hot) return false;
+    if (hot === 'soft') return id.startsWith('soft');
+    if (hot === 'nv') return id === 'soft-nv' || id === 'nv-chips';
+    if (hot === 'chips') return id.endsWith('chips');
+    return false;
+  };
+  const bridge = (id, cls, short) => {
+    const b = map.bridges.find((x) => x.id === id);
+    const n = b ? b.posts.length : 0;
+    const zero = n === 0 ? ' is-zero' : '';
+    const hotCls = touch(id) ? ' is-hot' : '';
+    return `<button type="button" class="x-weave-bridge ${cls}${zero}${hotCls}" data-knot="${esc(id)}" aria-pressed="${on(id) ? 'true' : 'false'}" aria-keyshortcuts="${id === 'soft-nv' ? '4' : ''}" aria-label="${esc(b ? b.sentence : '')}"><b>${n}</b><i>${esc(short)}</i></button>`;
+  };
+  const node = (id, label) => {
+    const item = map.nodes.find((x) => x.id === id);
+    const n = item ? item.n : 0;
+    const zero = n === 0 ? ' is-zero' : '';
+    const hotCls = hot === id ? ' is-hot' : '';
+    return `<span class="x-weave-node is-${id}${zero}${hotCls}"><b>${n}</b><span>${esc(label)}</span></span>`;
+  };
+  const open = map.bridges.find((b) => b.id === active);
+  const line = open
+    ? open.sentence
+    : 'Stregen tæller opslag, der ligger i begge. Tast 4 åbner det fælles SoftBank- og NVDA-opslag.';
+  return `<div class="x-weave" data-weave="1">
+    <div class="x-weave-top"><p class="k">Kryds</p><p>${esc(line)}</p></div>
+    <div class="x-weave-map" role="group" aria-label="${esc(line)} ${esc(X_LABEL)}">
+      ${node('soft', 'SoftBank')}
+      ${bridge('soft-nv', 'is-sn', 'SoftBank · Nvidia')}
+      ${node('nv', 'Nvidia')}
+      ${bridge('soft-chips', 'is-sc', 'SoftBank · Chips')}
+      ${node('chips', 'Chips / AI')}
+      ${bridge('nv-chips', 'is-nc', 'Nvidia · Chips')}
+    </div>
+    <p class="x-weave-foot">${esc(X_LABEL)}.</p>
+  </div>`;
+}
+
 /**
  * Proportional date line. Filled dots are in the view. Open dots are context.
  * Ghost links go to the archive. They carry a date, not an account name or a quote.
@@ -1244,6 +1405,16 @@ function tagHref(tag) {
 
 function highlightTerms(q) {
   const query = String(q || '').trim();
+  if (!query) return [];
+  if (query.includes('|')) {
+    const terms = [];
+    for (const part of query.split('|')) {
+      for (const t of highlightTerms(part.trim())) {
+        if (!terms.some((x) => x.toLowerCase() === t.toLowerCase())) terms.push(t);
+      }
+    }
+    return terms.sort((a, b) => b.length - a.length);
+  }
   if (query.length < 2) return [];
   const terms = [query];
   const add = (s) => {
