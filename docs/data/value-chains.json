@@ -1235,15 +1235,15 @@
           "id": "smr",
           "icon": "◉",
           "label": "Atomkraft og SMR",
-          "blurb": "Nogle navne udvikler små reaktorer, der kan placeres tættere på forbruget. Ingen af dem beskrives her som et anlæg i kommerciel drift. NuScale skriver, at et program sammen med TVA kan blive op til 6 GW. Modulsiden skriver, at indeslutningen er en cylinder på 76 fod gange 15 fod, og at modulet vejer omkring 700 tons. Det er et design, ikke et værk i drift. BWX Technologies skriver, at fabrikken i Lynchburg fremstiller reaktorer til flåden. Project Pele er et design, ikke et værk i drift. Aftalen af 3. august 2026 om salg af medicinforretningen er ikke gennemført og ligger efter beholdningen. Rolls-Royce skrev 15. juni 2026, at Videberg Kraft har valgt selskabet til tre små reaktorer på Sveriges vestkyst. Det er efter beholdningen og ikke et værk i drift. Atomkraft er ikke hele selskabet. Nano Nuclear skriver, at ansøgningen om byggetilladelse til KRONOS er til behandling. Den er ikke givet. Formel behandling begyndte 23. juni 2026, efter beholdningen. Terra Innovatum skriver, at konceptet SOLO er fra 2018. Det er ikke et værk i drift. Terrestrial Energy skriver, at IMSR er specificeret til 390 MWe netto eller 822 MWt netto, og at brændslet er lavt beriget uran under 5 % U-235. De første anlæg er sat til begyndelsen af 2030'erne. Det er en forventning, ikke et anlæg i drift. Oklo skrev 6. august 2026, at testreaktoren Groves nåede en kædereaktion ved lav effekt. Det er efter beholdningen. Det er ikke et kraftværk i drift og ikke salg af isotoper.",
-          "ndi": "NDI har skrevet om energiudbygning via atomkraft, og om at tidslinjer og indtægter er usikre (ugebreve 27. januar 2025, 23. juni 2025 og 21. juli 2025). Store elselskaber med eksisterende atomkraft står under elproduktion.",
+          "blurb": "Nogle navne udvikler små reaktorer, der kan placeres tættere på forbruget. Ingen af dem beskrives her som et anlæg i kommerciel drift. NuScale skriver, at et program sammen med TVA kan blive op til 6 GW. Modulsiden skriver, at indeslutningen er en cylinder på 76 fod gange 15 fod, og at modulet vejer omkring 700 tons. Det er et design, ikke et værk i drift. BWX Technologies skriver, at fabrikken i Lynchburg fremstiller reaktorer til flåden. Project Pele er et design, ikke et værk i drift. Aftalen af 3. august 2026 om salg af medicinforretningen er ikke gennemført og ligger efter beholdningen. Rolls-Royce skrev 15. juni 2026, at Videberg Kraft har valgt selskabet til tre små reaktorer på Sveriges vestkyst. Det er efter beholdningen og ikke et værk i drift. Atomkraft er ikke hele selskabet. Nano Nuclear skriver, at ansøgningen om byggetilladelse til KRONOS er til behandling. Den er ikke givet. Formel behandling begyndte 23. juni 2026, efter beholdningen. Terra Innovatum skriver, at konceptet SOLO er fra 2018. Det er ikke et værk i drift. Terrestrial Energy skriver, at IMSR er specificeret til 390 MWe netto eller 822 MWt netto, og at brændslet er lavt beriget uran under 5 % U-235. De første anlæg er sat til begyndelsen af 2030'erne. Det er en forventning, ikke et anlæg i drift. Oklo skrev 6. august 2026, at testreaktoren Groves nåede en kædereaktion ved lav effekt. Det er efter beholdningen. Det er ikke et kraftværk i drift og ikke salg af isotoper. Lightbridge skriver, at selskabet udvikler metalliske brændselsstave med en kerne af uran og zirkonium. Hovedsædet ligger i Reston i Virginia. Det er ikke et værk i drift. Selskabet skrev 9. september 2026, at det har fået adgang til at bestråle beklædte stave i Advanced Test Reactor ved Idaho National Laboratory. Meddelelsen siger, at testen skal gennemføres. Den er ikke gennemført i teksten. Det er efter beholdningen. Det er en testreaktor, ikke et kraftværk.",
+          "ndi": "NDI har skrevet om energiudbygning via atomkraft, og om at tidslinjer og indtægter er usikre (ugebreve 27. januar 2025, 23. juni 2025 og 21. juli 2025). Store elselskaber med eksisterende atomkraft står under elproduktion. Lightbridge er brændsel under udvikling. Adgangen til testreaktoren i Idaho er dateret 9. september 2026 og ligger efter beholdningen. Det er ikke et kraftværk.",
           "themes": [
             "space",
             "energy",
             "physical"
           ],
-          "weightSum": 1.43,
-          "count": 7,
+          "weightSum": 1.69,
+          "count": 8,
           "companies": [
             {
               "isin": "US05605H1005",
@@ -1268,6 +1268,14 @@
               "sym": "NKLR",
               "forslag": true,
               "role": "SOLO er et koncept fra 2018. Ikke et anlæg i drift."
+            },
+            {
+              "isin": "US53224K3023",
+              "name": "Lightbridge",
+              "w": 0.26,
+              "sym": "LTBR",
+              "forslag": true,
+              "role": "Metallisk brændsel under udvikling. Adgang til test i Idaho 9. september 2026 er ikke et kraftværk."
             },
             {
               "isin": "US67079K1007",
@@ -1413,13 +1421,13 @@
           "id": "materials",
           "icon": "🪨",
           "label": "Kritiske råstoffer",
-          "blurb": "Kobber, lithium, sjældne jordarter, uran, antimon og wolfram indgår i chips, elnet, batterier og reaktorer. Gasproducenter står under elproduktion. Lynas skriver, at Mt Weld ligger 35 km syd for Laverton, og at anlægget i Kalgoorlie laver et blandet karbonat af koncentratet. Selskabet skriver, at karbonatet skal viderebehandles i Gebeng i Malaysia. Det er mine og forarbejdning, ikke et kraftværk. Almonty skriver, at Beralt ejer 100 % af wolframminen Panasqueira i Covilha i Portugal, med tilladelse til 2052. Level 4 er ikke skrevet som drift. MP Materials skriver, at minen og forarbejdningen ligger i Mountain Pass i Californien, og at magnetfabrikken ligger i Fort Worth i Texas. Om-siden skriver, at Mountain Pass blev genstartet i 2017. Det er ikke et chipværk. Freeport skriver, at Morenci i Arizona er et åbent brud i drift siden 1939, og at selskabet har 72 % af minen. Det er ikke et elselskab. Standard Lithium skriver, at fase 1 i South West Arkansas er sat til 22.500 ton lithiumkarbonat om året, med mål om kommerciel produktion i 2029. Selskabet har 55 %, og Equinor har 45 %. Det er et mål, ikke en stor mine. Northern Dynasty skrev 26. juni 2026, at mundtlige indlæg om at trække et veto fra EPA tilbage blev holdt 25. juni 2026. Det er efter beholdningen. Der er ingen afgørelse og ingen mine i drift. Centrus skriver, at berigning begyndte i slutningen af 2023 på American Centrifuge Plant i Piketon i Ohio. Det er før beholdningen. Aftalen med Antares af 17. september 2026 ligger efter beholdningen og er ikke en levering, der allerede er sket. Det er brændsel, ikke et kraftværk. The Metals Company skriver, at prøvekørsel ventes at begynde i fjerde kvartal 2027. Aftalen og ansøgningen er ikke produktion. Ivanhoe Electric skriver, at Santa Cruz i Arizona og Tintic i Utah er projekter. Et studie dateret 23. september 2026 ligger efter beholdningen pr. 1. juni 2026 og er ikke en mine i drift. USA Rare Earth daterer 4. september 2026 en overskrift om Serra Verde Group. Den ligger efter beholdningen, og Texas er ikke beskrevet som en mine i drift. Critical Metals skrev 5. oktober 2026, at Grønland har godkendt planer for Tanbreez. Driftstilladelser mangler før byggeri, og meddelelsen er efter beholdningen. Ero skriver, at Xavantina er en guldmine i Mato Grosso. Siden skriver, at Vale Base Metals ejer Furnas, og at Ero har en ret til at optjene en andel. Det er ikke en mine i drift. United States Antimony skriver, at zeolit kommer fra minen i Preston i Idaho. Det første gravearbejde i Alaska er ikke skrevet som en mine i drift. Southern Copper skriver, at Tía María i Arequipa er et kobberprojekt. Tilladelser til byggeri er ikke en mine i drift. Trilogy skrev 21. september 2026, at et varsel om miljøredegørelse for Arctic i Alaska er udsendt. Det er efter beholdningen. Det er ikke en tilladelse og ikke en mine i drift. Taseko skriver, at Gibraltar i British Columbia kan behandle 85.000 tons i døgnet. Florence lavede det første kobber i februar 2026. Meldingen om kommerciel produktion er fra 9. oktober 2026 og ligger efter beholdningen. Capstone skriver, at produktionen i 2025 var 225.000 ton kobber. Mantoverde i Chile er sat til 32.000 ton malm i døgnet. Santo Domingo er et projekt, ikke en mine. Sigma Lithium skriver, at Grota do Cirilo i Minas Gerais er sat til 270.000 ton lithiumkoncentrat om året. Fase 1 gik i drift i 2023. Fase 2 er ikke produktion. Energy Fuels skrev 29. juli 2026, at White Mesa Mill i Utah kan lave op til 1.000 ton NdPr-oxid om året, og at et byggeri til tunge sjældne jordarter er gået i gang. Meddelelsen ligger efter beholdningen. Det er ikke et kraftværk.",
-          "ndi": "NDI regner råstoffer med i teknologien, og en råstofanalyse skal også tage geopolitik med (ugebreve 1. september 2025 og 21. september 2026). Flere navne er projekter uden minedrift. Andre driver miner, blandt andet Mountain Pass og Gibraltar. Northern Dynasty skrev 26. juni 2026, at mundtlige indlæg om at trække et veto fra EPA tilbage blev holdt 25. juni 2026. Det er efter beholdningen. Der er ingen afgørelse og ingen mine. Lithium Americas skriver, at Thacker Pass bygges, med mål om industriel skala sent i 2027, og at byggeriet begyndte i begyndelsen af 2023. Centret i Reno er et laboratorium, ikke minen. Ingen af de to er i fuld drift. Standard Lithium skriver, at fase 1 i South West Arkansas er et mål på 22.500 ton om året i 2029, og at et demonstrationsanlæg ved El Dorado behandler saltvand. Det er ikke en stor mine. Almonty skrev 23. september 2026, at Sangdong i Sydkorea har produceret wolfram for første gang siden 1993. Valtreixal er et projekt. Meddelelsen ligger efter beholdningen pr. 1. juni 2026. Taseko skriver, at Gibraltar i British Columbia er en kobber- og molybdænmine med en kapacitet på 85.000 tons i døgnet. Florence lavede det første kobber i februar 2026. Selskabet skrev 9. oktober 2026, at produktionen er kommerciel. Den meddelelse ligger efter beholdningen. Yellowhead, Aley og New Prosperity er ikke miner i drift i denne tekst. Capstone skriver, at produktionen i 2025 var 225.000 ton kobber. Mantoverde havde kommerciel produktion på sulfidmøllen i september 2024. Santo Domingo er et projekt. Selskabet skrev 21. september 2026, at det har en aftale om at sælge Cozamin. Den meddelelse ligger efter beholdningen. Sigma Lithium skriver, at navneskiltet på Grota do Cirilo er 270.000 ton koncentrat om året, og at fase 1 gik i drift i 2023. Fase 2 er et mål på 520.000 ton og er ikke produktion. Energy Fuels skrev 29. juli 2026, at White Mesa i Utah har kapacitet til op til 1.000 ton NdPr-oxid om året. Byggeriet til terbium og dysprosium er ikke drift. Meddelelsen ligger efter beholdningen. Profilen siger, hvad der er drift, og hvad der er projekt.",
+          "blurb": "Kobber, lithium, sjældne jordarter, uran, antimon og wolfram indgår i chips, elnet, batterier og reaktorer. Gasproducenter står under elproduktion. Lynas skriver, at Mt Weld ligger 35 km syd for Laverton, og at anlægget i Kalgoorlie laver et blandet karbonat af koncentratet. Selskabet skriver, at karbonatet skal viderebehandles i Gebeng i Malaysia. Det er mine og forarbejdning, ikke et kraftværk. Almonty skriver, at Beralt ejer 100 % af wolframminen Panasqueira i Covilha i Portugal, med tilladelse til 2052. Level 4 er ikke skrevet som drift. MP Materials skriver, at minen og forarbejdningen ligger i Mountain Pass i Californien, og at magnetfabrikken ligger i Fort Worth i Texas. Om-siden skriver, at Mountain Pass blev genstartet i 2017. Det er ikke et chipværk. Freeport skriver, at Morenci i Arizona er et åbent brud i drift siden 1939, og at selskabet har 72 % af minen. Det er ikke et elselskab. Standard Lithium skriver, at fase 1 i South West Arkansas er sat til 22.500 ton lithiumkarbonat om året, med mål om kommerciel produktion i 2029. Selskabet har 55 %, og Equinor har 45 %. Det er et mål, ikke en stor mine. Northern Dynasty skrev 26. juni 2026, at mundtlige indlæg om at trække et veto fra EPA tilbage blev holdt 25. juni 2026. Det er efter beholdningen. Der er ingen afgørelse og ingen mine i drift. Centrus skriver, at berigning begyndte i slutningen af 2023 på American Centrifuge Plant i Piketon i Ohio. Det er før beholdningen. Aftalen med Antares af 17. september 2026 ligger efter beholdningen og er ikke en levering, der allerede er sket. Det er brændsel, ikke et kraftværk. The Metals Company skriver, at prøvekørsel ventes at begynde i fjerde kvartal 2027. Aftalen og ansøgningen er ikke produktion. Ivanhoe Electric skriver, at Santa Cruz i Arizona og Tintic i Utah er projekter. Et studie dateret 23. september 2026 ligger efter beholdningen pr. 1. juni 2026 og er ikke en mine i drift. USA Rare Earth daterer 4. september 2026 en overskrift om Serra Verde Group. Den ligger efter beholdningen, og Texas er ikke beskrevet som en mine i drift. Critical Metals skrev 5. oktober 2026, at Grønland har godkendt planer for Tanbreez. Driftstilladelser mangler før byggeri, og meddelelsen er efter beholdningen. Ero skriver, at Xavantina er en guldmine i Mato Grosso. Siden skriver, at Vale Base Metals ejer Furnas, og at Ero har en ret til at optjene en andel. Det er ikke en mine i drift. United States Antimony skriver, at zeolit kommer fra minen i Preston i Idaho. Det første gravearbejde i Alaska er ikke skrevet som en mine i drift. Southern Copper skriver, at Tía María i Arequipa er et kobberprojekt. Tilladelser til byggeri er ikke en mine i drift. Trilogy skrev 21. september 2026, at et varsel om miljøredegørelse for Arctic i Alaska er udsendt. Det er efter beholdningen. Det er ikke en tilladelse og ikke en mine i drift. Taseko skriver, at Gibraltar i British Columbia kan behandle 85.000 tons i døgnet. Florence lavede det første kobber i februar 2026. Meldingen om kommerciel produktion er fra 9. oktober 2026 og ligger efter beholdningen. Capstone skriver, at produktionen i 2025 var 225.000 ton kobber. Mantoverde i Chile er sat til 32.000 ton malm i døgnet. Santo Domingo er et projekt, ikke en mine. Sigma Lithium skriver, at Grota do Cirilo i Minas Gerais er sat til 270.000 ton lithiumkoncentrat om året. Fase 1 gik i drift i 2023. Fase 2 er ikke produktion. Energy Fuels skrev 29. juli 2026, at White Mesa Mill i Utah kan lave op til 1.000 ton NdPr-oxid om året, og at et byggeri til tunge sjældne jordarter er gået i gang. Meddelelsen ligger efter beholdningen. Det er ikke et kraftværk. Albemarle skriver, at Silver Peak i Nevada og Salar de Atacama i Chile er i drift. Silver Peak laver lithiumkarbonat og lithiumhydroxid af saltvand i solbassiner. Siden skriver, at produktionen begyndte for mere end 50 år siden, og daterer ikke tallet. Kings Mountain i North Carolina står på en liste over aktiviteter, men anlægssiden skriver, at minen stod stille fra begyndelsen af 1990'erne, og at selskabet søger at genåbne den. Det er ikke en mine i drift. Lithiumsiden nævner også Greenbushes og Wodgina i Western Australia. En ejerandel er ikke læst. Direkte udvinding i Chile er beskrevet som et arbejde, der er i gang, ikke som drift. Selskabet skriver også, at det laver brom.",
+          "ndi": "NDI regner råstoffer med i teknologien, og en råstofanalyse skal også tage geopolitik med (ugebreve 1. september 2025 og 21. september 2026). Flere navne er projekter uden minedrift. Andre driver miner, blandt andet Mountain Pass og Gibraltar. Northern Dynasty skrev 26. juni 2026, at mundtlige indlæg om at trække et veto fra EPA tilbage blev holdt 25. juni 2026. Det er efter beholdningen. Der er ingen afgørelse og ingen mine. Lithium Americas skriver, at Thacker Pass bygges, med mål om industriel skala sent i 2027, og at byggeriet begyndte i begyndelsen af 2023. Centret i Reno er et laboratorium, ikke minen. Ingen af de to er i fuld drift. Standard Lithium skriver, at fase 1 i South West Arkansas er et mål på 22.500 ton om året i 2029, og at et demonstrationsanlæg ved El Dorado behandler saltvand. Det er ikke en stor mine. Almonty skrev 23. september 2026, at Sangdong i Sydkorea har produceret wolfram for første gang siden 1993. Valtreixal er et projekt. Meddelelsen ligger efter beholdningen pr. 1. juni 2026. Taseko skriver, at Gibraltar i British Columbia er en kobber- og molybdænmine med en kapacitet på 85.000 tons i døgnet. Florence lavede det første kobber i februar 2026. Selskabet skrev 9. oktober 2026, at produktionen er kommerciel. Den meddelelse ligger efter beholdningen. Yellowhead, Aley og New Prosperity er ikke miner i drift i denne tekst. Capstone skriver, at produktionen i 2025 var 225.000 ton kobber. Mantoverde havde kommerciel produktion på sulfidmøllen i september 2024. Santo Domingo er et projekt. Selskabet skrev 21. september 2026, at det har en aftale om at sælge Cozamin. Den meddelelse ligger efter beholdningen. Sigma Lithium skriver, at navneskiltet på Grota do Cirilo er 270.000 ton koncentrat om året, og at fase 1 gik i drift i 2023. Fase 2 er et mål på 520.000 ton og er ikke produktion. Energy Fuels skrev 29. juli 2026, at White Mesa i Utah har kapacitet til op til 1.000 ton NdPr-oxid om året. Byggeriet til terbium og dysprosium er ikke drift. Meddelelsen ligger efter beholdningen. Profilen siger, hvad der er drift, og hvad der er projekt. Albemarle skriver, at Silver Peak i Nevada og Salar de Atacama i Chile er i drift. Kings Mountain er ikke en mine i drift. Greenbushes og Wodgina er nævnt under aktiviteter, og en ejerandel er ikke læst.",
           "themes": [
             "energy-resources"
           ],
-          "weightSum": 3.81,
-          "count": 21,
+          "weightSum": 4.05,
+          "count": 22,
           "companies": [
             {
               "isin": "US9115491030",
@@ -1452,6 +1460,14 @@
               "sym": "MP",
               "forslag": false,
               "role": "Mine i Mountain Pass. Magneter i Fort Worth. Genstart i 2017. Ikke et chipværk."
+            },
+            {
+              "isin": "US0126531013",
+              "name": "Albemarle",
+              "w": 0.24,
+              "sym": "ALB",
+              "forslag": true,
+              "role": "Silver Peak og Salar de Atacama er i drift. Kings Mountain er ikke en mine i drift."
             },
             {
               "isin": "CA6544846091",
@@ -1690,13 +1706,13 @@
           "id": "satcom",
           "icon": "📡",
           "label": "Satellitkommunikation",
-          "blurb": "Satellitter i drift eller under bygning: kommunikation, billeder af Jorden, radiosignaler og de platforme, satellitterne bygges på. Redwire leverer dele og sender ikke selv op. Selskabet skrev 1. april 2026, at kameraer skal med på Artemis II. Meddelelsen siger ikke, at flyvningen er gennemført. York bygger platforme til kunden og skriver, at det koordinerer opsendelseslogistik. Det er ikke det samme som selv at sende raketten op. MDA skrev 16. september 2026, at Chorus er tre satellitter. To er nye, en i X-bånd og en i C-bånd. Selskabet skriver, at RADARSAT-2 allerede er i kredsløb. Opsendelsen af de nye er sat til sent i 2026. Det er en plan. De to nye er ikke sendt op. Meddelelsen ligger efter beholdningen. MDA præsenterede 10. september 2026 Aurora Black. Det er efter beholdningen og ikke en konstellation i drift. Satellogic sætter fuld drift af Merlin til andet halvår 2027. Det er ikke en tjeneste i fuld drift. Planet nævner SuperDove, SkySat, Pelican, Tanager og Owl. Owl er omtalt som næste generation.",
-          "ndi": "Starlink er i en AI-selskabsprofil beskrevet som en løbende tjeneste, ikke kun en opsendelse. Det er et udkast, ikke NDI's færdige tekst. SpaceX indgår ikke i beholdningen pr. 1. juni 2026.",
+          "blurb": "Satellitter i drift eller under bygning: kommunikation, billeder af Jorden, radiosignaler og de platforme, satellitterne bygges på. Redwire leverer dele og sender ikke selv op. Selskabet skrev 1. april 2026, at kameraer skal med på Artemis II. Meddelelsen siger ikke, at flyvningen er gennemført. York bygger platforme til kunden og skriver, at det koordinerer opsendelseslogistik. Det er ikke det samme som selv at sende raketten op. MDA skrev 16. september 2026, at Chorus er tre satellitter. To er nye, en i X-bånd og en i C-bånd. Selskabet skriver, at RADARSAT-2 allerede er i kredsløb. Opsendelsen af de nye er sat til sent i 2026. Det er en plan. De to nye er ikke sendt op. Meddelelsen ligger efter beholdningen. MDA præsenterede 10. september 2026 Aurora Black. Det er efter beholdningen og ikke en konstellation i drift. Satellogic sætter fuld drift af Merlin til andet halvår 2027. Det er ikke en tjeneste i fuld drift. Planet nævner SuperDove, SkySat, Pelican, Tanager og Owl. Owl er omtalt som næste generation. Spire skriver, at selskabet selv designer, bygger og driver en satellitkonstellation, og at fabrikken ligger i Glasgow. Siden om rumtjenester skriver, at mere end 175 satellitter er sendt op. Siden daterer ikke tallet. Selskabet opsender ikke selv raketterne. En demonstrator, HyMS, blev sendt op i januar 2026, før beholdningen. NOAA forlængede 4. august 2026 en aftale om at vurdere dataene. Det er efter beholdningen og ikke en ny konstellation. Iridium skriver, at den første satellit blev sendt op i 1997, at nettet var i fuld drift i 1998, og at en udskiftning af satellitterne blev færdig i 2019. Nettet ligger i lav bane omkring 780 km. Det er tale, data og position. Det er ikke billeder af Jorden. BlackSky skriver, at Spectra er platformen til billeder og analyse, og at selskabet driver en konstellation i lav bane. Selskabet skrev 14. september 2026, at den femte Gen-3 tog de første billeder mindre end 20 timer efter opsendelsen. Billedet er dateret 11. september 2026. Begge datoer ligger efter beholdningen. Selskabet skriver, at Gen-2 stadig er en del af konstellationen. Teksten siger ikke, at alle planlagte Gen-3 er i kredsløb.",
+          "ndi": "Starlink er i en AI-selskabsprofil beskrevet som en løbende tjeneste, ikke kun en opsendelse. Det er et udkast, ikke NDI's færdige tekst. SpaceX indgår ikke i beholdningen pr. 1. juni 2026. Spire, Iridium og BlackSky indgår i beholdningen pr. 1. juni 2026. Spire skriver, at satellitterne bygges i Glasgow, og at selskabet ikke selv sender raketten op. Iridium skriver, at nettet var i fuld drift i 1998. BlackSky skrev 14. september 2026, at den femte Gen-3 tog de første billeder. Det er efter beholdningen.",
           "themes": [
             "space"
           ],
-          "weightSum": 1.31,
-          "count": 7,
+          "weightSum": 1.8,
+          "count": 10,
           "companies": [
             {
               "isin": "US75776W1036",
@@ -1705,6 +1721,14 @@
               "sym": "RDW",
               "forslag": false,
               "role": "Kameraer og dele. Artemis II-meddelelsen 1. april 2026 siger ikke, at flyvningen er gennemført."
+            },
+            {
+              "isin": "US8485603067",
+              "name": "Spire Global",
+              "w": 0.27,
+              "sym": "SPIR",
+              "forslag": true,
+              "role": "Egen konstellation. Fabrik i Glasgow. HyMS blev sendt op i januar 2026. NOAA-vurderingen 4. august 2026 er efter beholdningen."
             },
             {
               "isin": "US9870841007",
@@ -1747,12 +1771,28 @@
               "role": "Chorus er tre satellitter. De to nye er ikke sendt op. Aurora Black er præsenteret 10. september 2026."
             },
             {
+              "isin": "US46269C1027",
+              "name": "Iridium Communications",
+              "w": 0.14,
+              "sym": "IRDM",
+              "forslag": true,
+              "role": "Tale, data og position fra lav bane omkring 780 km. Nettet var i fuld drift i 1998. Ikke billeder af Jorden."
+            },
+            {
               "isin": "US72703X1063",
               "name": "Planet Labs",
               "w": 0.09,
               "sym": "PL",
               "forslag": false,
               "role": "Billedsatellitter. Siden nævner SuperDove, SkySat, Pelican, Tanager og Owl. Owl er næste generation."
+            },
+            {
+              "isin": "US09263B2079",
+              "name": "BlackSky",
+              "w": 0.08,
+              "sym": "BKSY",
+              "forslag": true,
+              "role": "Billeder fra lav bane. Femte Gen-3 tog de første billeder 11. september 2026, efter beholdningen. Gen-2 er stadig med."
             }
           ],
           "seeChain": null
