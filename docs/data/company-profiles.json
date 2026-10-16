@@ -60,13 +60,27 @@
   "US88160R1014": {
    "name": "Tesla",
    "theme": "physical",
-   "summary": "Producerer elbiler, batterilagring og energiprodukter. Software og automatisering er integreret i selskabets produkter og produktion.",
-   "watch": "Bilmarkedets konkurrence, indtjening pr. bil og kapitalbehov.",
-   "source": "https://www.tesla.com/about",
-   "products": "Elbiler, batterilagring og energiløsninger med tilhørende software og service.",
+   "summary": "Producerer elbiler, batterilagring og energiprodukter. Megapack er batteriudstyr. 10.000 enheder om året i Lathrop er en kapacitet, ikke et målt år.",
+   "watch": "Om 40 GWh læses som årets produktion, eller som et kraftværk selskabet driver.",
+   "source": "https://www.tesla.com/megafactory",
+   "products": "Elbiler og Megapack. Lathrop er sat til 10.000 enheder om året, svarende til 40 GWh.",
    "customers": "Bilister, virksomheder og kunder med behov for lagring af elektricitet.",
-   "role": "Kombinerer batterier, effektelektronik, software og fysisk produktion.",
+   "role": "Batteriudstyr ved siden af biler. 40 GWh i Lathrop er en kapacitet, ikke et kraftværk.",
    "reviewedAt": "2026-10-08",
+   "narrative": [
+    "Tesla laver biler og batteriudstyr. Siden om Megafactory i Lathrop, læst 16. oktober 2026, skriver, at anlægget kan lave 10.000 Megapack om året, svarende til 40 GWh. Det er en kapacitet. Siden daterer ikke tallet. Det er ikke et målt år og ikke et kraftværk.",
+    "En gengivelse af Megapack-siden dateret 10. juli 2026 skriver, at fabrikkerne i Lathrop og i Shanghai tilsammen har en fremstillingskapacitet på 80 GWh, eller 20.000 enheder, om året. Samme gengivelse skriver mere end 58 GWh i drift globalt og over 65 lande. Den daterer ikke tallene. Datoen ligger efter beholdningen. De to tekster bruger ikke samme tal."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Megafactory i Lathrop",
+     "url": "https://www.tesla.com/megafactory"
+    },
+    {
+     "label": "Megapack, gengivelse 10. juli 2026",
+     "url": "https://www.tesla.com/megapack"
+    }
+   ],
    "xAccounts": [
     {
      "handle": "Tesla",
@@ -506,7 +520,7 @@
    "source": "https://www.solaris-energy.com/",
    "products": "Anlæg, der producerer og fordeler strøm tæt på forbrugeren, plus service.",
    "customers": "Datacentre, industri og energikunder.",
-   "role": "Strøm ved siden af store forbrugere, ikke et klassisk elselskab alene.",
+   "role": "Stiftet 2014. Produktion og fordeling. GESA er service, ikke et kraftværk.",
    "narrative": [
     "Solaris skriver, at selskabet er stiftet i 2014, og at det leverer produktion og fordeling af strøm til datacentre, energi, erhverv og industri. Selskabet skrev 6. juli 2026, at det har købt Global Energy Services Alliance, GESA.",
     "GESA er beskrevet som service til kraftværker, sammensat af Baseload Power og Pro-Per Energy Services. Datoen ligger efter beholdningen pr. 1. juni 2026. Det er service, ikke et kraftværk i drift. I kæden står Solaris både på elproduktion og på elnet."
@@ -601,20 +615,24 @@
   "NL0015002Q12": {
    "name": "Terra Innovatum",
    "theme": "energy",
-   "summary": "Udvikler mikroreaktoren SOLO. Selskabet skriver, at konceptet er fra 2018. Denne tekst beskriver ikke et værk i drift.",
-   "watch": "Om designet bliver godkendt og bygget. Teksten beskriver ikke et værk i drift.",
+   "summary": "Udvikler mikroreaktoren SOLO. Selskabet skriver, at konceptet er fra 2018. Forsiden skriver både 4 MW og 5 MW termisk. Denne tekst beskriver ikke et værk i drift.",
+   "watch": "Om 4 MW og 5 MW læses som ét tal, eller som et værk i drift. 2028 er en plan, der kræver godkendelse.",
    "source": "https://www.terrainnovatum.com/",
-   "products": "En mikroreaktor, der er tiltænkt strøm og varme tæt på forbrugeren.",
+   "products": "SOLO. Forsiden skriver 1 MW elektrisk og både 4 MW og 5 MW termisk. Det er en specifikation.",
    "customers": "Industri, datacentre og andre store forbrugere, hvis anlægget bliver bygget.",
-   "role": "Udvikling af små reaktorer. Ikke elproduktion i drift.",
+   "role": "Koncept fra 2018. 2028 er et mål, der kræver godkendelse. Ikke et værk i drift.",
    "narrative": [
-    "Terra Innovatum skriver, at konceptet til mikroreaktoren SOLO er fra 2018. Siden beskriver et anlæg under udvikling.",
-    "Det er ikke et værk i drift. Reaktoren er tiltænkt strøm tæt på forbrugeren, hvis den bliver bygget og godkendt."
+    "Terra Innovatum skriver, at konceptet SOLO er fra 2018, og at datoerne er planlagt og afhænger af godkendelse fra USNRC. Forsiden, læst 16. oktober 2026, skriver 1 MW elektrisk og både 5 MW og 4 MW termisk. De to termiske tal står på samme side. Siden daterer dem ikke. Teknologisiden skriver 1 MWe og 5 MWth med mål om 2028. Det er en specifikation. 2028 er en plan. Det er ikke et værk i drift.",
+    "Teknologisiden skriver, at kernen er gaskølet med helium, og at brændslet er uran. Forsiden sætter andelen til 4,95 %. Teknologisiden skriver også under 5 % U-235. Forsiden skriver en kube på 10 gange 10 meter. Teknologisiden skriver en container på 2,4 gange 2,4 gange 12 meter. Teksterne bruger ikke samme mål. 15 år ved fuld effekt uden ny brændsel er en specifikation, ikke et målt år."
    ],
    "narrativeSources": [
     {
      "label": "Selskabets side",
      "url": "https://www.terrainnovatum.com/"
+    },
+    {
+     "label": "Teknologisiden",
+     "url": "https://www.terrainnovatum.com/technology"
     }
    ]
   },
@@ -1828,14 +1846,15 @@
    "name": "Redwire",
    "theme": "space",
    "summary": "Laver kameraer og solsensorer til Orion. Meddelelsen 1. april 2026 siger, at udstyret will launch på Artemis II, og ikke at flyvningen er fløjet. Forsiden uden dato skriver launched. Det er ikke en opsender.",
-   "watch": "Om forsiden, læst 16. oktober 2026, bliver læst som om Artemis II var fløjet pr. 1. juni 2026. Meddelelsen 1. april 2026 siger will launch.",
+   "watch": "Om forsiden læses som om Artemis II var fløjet, og om 43 og 54 PIL-BOX læses som samme tal. 54 er efter beholdningen.",
    "source": "https://redwirespace.com/",
-   "products": "Kamerasystem til Orion på Artemis I til V og fire solsensorer til servicemodulet. Ikke en raket.",
+   "products": "Kameraer og solsensorer til Orion. PIL-BOX er udstyr til krystaller. Ikke en raket og ikke et datacenter.",
    "customers": "Lockheed Martin til kameraerne og Airbus til solsensorerne. Siden nævner NASA's Orion.",
-   "role": "Kameraer og solsensorer. Ikke en opsender.",
+   "role": "Kameraer, solsensorer og PIL-BOX. Ikke en opsender og ikke et datacenter.",
    "narrative": [
     "Redwire skrev 1. april 2026 i Jacksonville, at optik og solsensorer will launch med Orion på Artemis II. Kamerasystemet er 11 kameraer, heraf trådløse kameraer på de fire solpaneler. Fire solsensorer til det europæiske servicemodul leveres via Airbus. Selskabet skriver, at sensorerne kørte på Artemis I. Produktionen og testen af kamerasystemet til Artemis I til V sker via Lockheed Martin.",
-    "Datoen ligger før beholdningen pr. 1. juni 2026. Meddelelsen siger ikke, at Artemis II er fløjet. Forsiden, læst 16. oktober 2026, skriver launched uden dato. Den sætning er ikke meddelelsen fra 1. april. Adressen i sidefoden er 8226 Philips Highway, Suite 101, Jacksonville, FL 32256. Samme meddelelse skriver cirka 1.400 medarbejdere. Ordet leader er ikke taget med. Selskabet sender ikke selv raketten op."
+    "Datoen ligger før beholdningen pr. 1. juni 2026. Meddelelsen siger ikke, at Artemis II er fløjet. Forsiden, læst 16. oktober 2026, skriver launched uden dato. Den sætning er ikke meddelelsen fra 1. april. Adressen i sidefoden er 8226 Philips Highway, Suite 101, Jacksonville, FL 32256. Samme meddelelse skriver cirka 1.400 medarbejdere. Ordet leader er ikke taget med. Selskabet sender ikke selv raketten op.",
+    "Jacksonville-siden, læst 16. oktober 2026, kalder anlægget hovedkontor og skriver også 1000 Riverside Avenue, Suite 600. Siden skriver 37.000 kvadratfod og 37.247 kvadratfod. De to tal er ikke ens. Siden daterer dem ikke. Det er et anlæg på jorden. Meddelelsen 11. marts 2026 skriver 43 PIL-BOX. En tekst om undersøgelser, der kom tilbage 17. juni 2026, skriver 54 PIL-BOX fløjet til dato. Den dato ligger efter beholdningen. De to tællinger er ikke samme tal. PIL-BOX er udstyr til krystaller, ikke et datacenter."
    ],
    "narrativeSources": [
     {
@@ -1845,6 +1864,18 @@
     {
      "label": "Forside",
      "url": "https://rdw.com/"
+    },
+    {
+     "label": "Jacksonville",
+     "url": "https://rdw.com/locations/jacksonville/"
+    },
+    {
+     "label": "43 PIL-BOX, 11. marts 2026",
+     "url": "https://rdw.com/newsroom/nasa-awards-redwire-4-million-in-additional-funding-to-support-trailblazing-drug-development-in-microgravity/"
+    },
+    {
+     "label": "54 PIL-BOX, hjemkomst 17. juni 2026",
+     "url": "https://rdw.com/newsroom/redwire-completes-on-orbit-operations-for-cancer-therapeutic-and-other-pharmaceutical-investigations/"
     }
    ]
   },

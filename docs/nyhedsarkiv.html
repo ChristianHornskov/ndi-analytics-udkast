@@ -10,14 +10,49 @@
   .tri details{border:1px solid var(--line);border-radius:8px;padding:10px 12px}
   .tri summary{cursor:pointer;font-weight:600}
   .tri p{color:var(--muted);font-size:13px;line-height:1.5;margin:8px 0 0}
+  .two-led{border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:12px 0 0}
+  .two-led h3{font-size:16px;margin:0 0 6px}
+  .two-led .intro{color:var(--muted);line-height:1.6;margin:0}
+  .two-led .cols{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:8px 0}
+  .two-led button{appearance:none;font:inherit;text-align:left;color:var(--text);background:transparent;border:1px solid var(--line);border-radius:8px;min-height:44px;padding:10px 12px;cursor:pointer}
+  .two-led button[aria-pressed="true"]{border-color:var(--cyan)}
+  .two-led button strong{display:block;margin:0 0 6px}
+  .two-led button span{display:block;color:var(--muted);font-size:13px;line-height:1.5}
+  .two-led .live{color:var(--muted);line-height:1.6;margin:0}
+  .two-led .print-all{display:none}
   @media (max-width:640px){
-   .tri{grid-template-columns:1fr}
+   .tri,.two-led .cols{grid-template-columns:1fr}
   }
+  .not-that{border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:12px 0 0}
+  .not-that h3{font-size:16px;margin:0 0 6px}
+  .not-that .stops{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+  .not-that button{appearance:none;font:inherit;color:var(--text);background:transparent;border:1px solid var(--line);border-radius:8px;min-height:44px;padding:8px 14px;cursor:pointer}
+  .not-that button[aria-pressed="true"]{border-color:var(--cyan)}
+  .not-that .rail{display:flex;align-items:center;max-width:280px;margin:4px 0 8px}
+  .not-that .rail i{width:12px;height:12px;border-radius:50%;border:2px solid var(--muted);display:block;flex:none}
+  .not-that .rail i.on{background:var(--cyan);border-color:var(--cyan)}
+  .not-that .rail b{flex:1;height:2px;background:var(--line)}
+  .not-that .live{color:var(--muted);line-height:1.6;margin:0}
+  .not-that .print-all{display:none}
+  .chain-map{border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:12px 0 0}
+  .chain-map h3{font-size:16px;margin:0 0 6px}
+  .chain-map .nodes{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:8px 0}
+  .chain-map button{appearance:none;font:inherit;color:var(--text);background:transparent;border:1px solid var(--line);border-radius:8px;min-height:44px;min-width:44px;padding:8px 14px;cursor:pointer}
+  .chain-map button[aria-pressed="true"]{border-color:var(--cyan)}
+  .chain-map .edge{flex:1;min-width:24px;height:2px;background:var(--line)}
+  .chain-map .live{color:var(--muted);line-height:1.6;margin:0}
+  .chain-map .print-all{display:none}
   @media print {
    .skip, .site-header .nav { display: none; }
    details, details > p { display: block !important; }
    details > summary { font-weight: 600; }
-   .tri details{break-inside:avoid;border-color:#333}
+   .chain-map button{border-color:#333}
+   .not-that .stops,.not-that .rail,.not-that .live,.chain-map .nodes,.chain-map .live,.two-led .cols,.two-led .live{display:none}
+   .not-that .print-all,.chain-map .print-all,.two-led .print-all{display:block;color:#111}
+   .not-that .print-all p,.chain-map .print-all p,.two-led .print-all p{margin:4px 0}
+   .tri details,.not-that,.chain-map,.two-led{break-inside:avoid;border-color:#333}
+   .two-led button{border-color:#333}
+   .not-that button{border-color:#333}
    body, .site-footer { background: #fff; color: #111; }
   }
  </style>
@@ -104,6 +139,24 @@
  <p>Datoen er nyere end beholdningen. Karman gennemførte købet af Walker 28. august 2026. Meddelelsen ændrer ikke tallene ovenfor.</p>
  </details>
  </div>
+ <section class="not-that" data-open="plant" aria-label="Hvad er det ikke">
+ <h3>Hvad er det ikke?</h3>
+ <p style="color:var(--muted);line-height:1.6;margin:0">Knapperne viser et eksempel, der ikke er det, ordet lyder som. Det er selskabernes egne ord, ikke en anbefaling.</p>
+ <div class="stops" role="group" aria-label="Vælg et ord">
+ <button type="button" data-stop="plant" aria-pressed="true">Kraftværk</button>
+ <button type="button" data-stop="mine" aria-pressed="false">Mine</button>
+ <button type="button" data-stop="launch" aria-pressed="false">Opsendelse</button>
+ <button type="button" data-stop="office" aria-pressed="false">Kontor</button>
+ </div>
+ <div class="rail" aria-hidden="true"><i class="on" data-stop="plant"></i><b></b><i data-stop="mine"></i><b></b><i data-stop="launch"></i><b></b><i data-stop="office"></i></div>
+ <p class="live" aria-live="polite"></p>
+ <div class="print-all">
+ <p data-stop="plant">Kraftværk. Babcock &amp; Wilcox skriver, at 1,2 GW 4. marts 2026 er Base Electrons anlæg. Det er kedler, ikke et værk selskabet driver.</p>
+ <p data-stop="mine">Mine. Expand Energy skrev 16. september 2026, at handlen med Twin Eagle er gennemført. Twin Eagle er et marketingselskab, ikke en mine. Datoen ligger efter beholdningen.</p>
+ <p data-stop="launch">Opsendelse. Howmet skriver, at 1948 er et smedet aluminiumshjul til lastbiler. Det er et produkt, ikke en opsendelse.</p>
+ <p data-stop="office">Kontor. Planet skriver 645 Harrison Street, 4. sal, i San Francisco. Det er et kontor, ikke en satellit.</p>
+ </div>
+ </section>
  <p style="color:var(--muted);margin:8px 0 0">Gas står som brændsel. Små reaktorer er ikke beskrevet som værker i drift. NuScale skriver, at et program sammen med TVA kan blive op til 6 GW. Det er ikke et værk i drift.</p>
  <p style="color:var(--muted);margin:8px 0 0">NuScale skriver, at modulet er en cylinder på 76 fod gange 15 fod og vejer omkring 700 tons. Det er et design, ikke et værk i drift.</p>
  <p style="color:var(--muted);margin:8px 0 0">Eos skriver, at fremstilling af Z3 begyndte i august 2023 på Eos Ingenuity Park i Turtle Creek i Pennsylvania. Det er batterier, ikke en mine og ikke et kraftværk.</p>
@@ -111,7 +164,7 @@
  <p style="color:var(--muted);margin:8px 0 0">Talen skriver, at flåden også har kul, naturgas og olie. Brandon Shores var planlagt lukket 1. juni 2025 og kører videre efter en pålidelighedsaftale. Det er ikke en lille reaktor under udvikling.</p>
  <p style="color:var(--muted);margin:8px 0 0">Nano Nuclear skriver, at ansøgningen om byggetilladelse til KRONOS er til behandling. Den er ikke givet. Formel behandling begyndte 23. juni 2026, efter beholdningen. Det er ikke et værk i drift.</p>
  <p style="color:var(--muted);margin:8px 0 0">ProPetro skriver, at arbejdet er trykpumpning i Permian-bassinet. Det er service til boringer, ikke et kraftværk. Selskabet står ikke på elproduktion.</p>
- <p style="color:var(--muted);margin:8px 0 0">Terra Innovatum skriver, at konceptet SOLO er fra 2018. Det er ikke et værk i drift.</p>
+ <p style="color:var(--muted);margin:8px 0 0">Terra Innovatum skriver, at konceptet SOLO er fra 2018, og at datoerne afhænger af godkendelse fra USNRC. Forsiden, læst 16. oktober 2026, skriver 1 MW elektrisk og både 5 MW og 4 MW termisk. De to termiske tal står på samme side. Teknologisiden skriver 1 MWe og 5 MWth med mål om 2028. Det er en plan, ikke et værk i drift. En kube på 10 gange 10 meter og en container på 2,4 gange 2,4 gange 12 meter er ikke samme mål.</p>
  <p style="color:var(--muted);margin:8px 0 0">Rolls-Royce skrev 15. juni 2026, at Videberg Kraft har valgt selskabet til tre små reaktorer på Sveriges vestkyst. Det er efter beholdningen og ikke et værk i drift. Atomkraft er ikke hele selskabet.</p>
  <p style="color:var(--muted);margin:8px 0 0">Terrestrial Energy skriver, at IMSR er specificeret til 390 MWe netto eller 822 MWt netto, og at brændslet er lavt beriget uran under 5 % U-235. De første anlæg er sat til begyndelsen af 2030'erne. Det er en forventning, ikke et værk i drift.</p>
  <p style="color:var(--muted);margin:8px 0 0">Expand Energy skrev 16. september 2026, at handlen med Twin Eagle er gennemført. Det er efter beholdningen. Twin Eagle er et marketingselskab, ikke en mine.</p>
@@ -120,7 +173,20 @@
  <p style="color:var(--muted);margin:8px 0 0">Comstock skriver, at jordpositionen i Western Haynesville i det østlige Texas er mere end 535.000 netto-acres, og at gasproduktionen er certificeret efter MiQ-standarden. Siden daterer ikke tallet. Det er brændsel, ikke en mine.</p>
  <p style="color:var(--muted);margin:8px 0 0">Centrus skriver, at berigning begyndte i slutningen af 2023 på American Centrifuge Plant i Piketon i Ohio. Det er før beholdningen. Aftalen med Antares af 17. september 2026 ligger efter beholdningen og er ikke en levering, der allerede er sket. Det er brændsel, ikke et kraftværk.</p>
  <p style="color:var(--muted);margin:8px 0 0">Northern Dynasty skrev 26. juni 2026, at mundtlige indlæg om at trække et veto fra EPA tilbage blev holdt 25. juni 2026. Det er efter beholdningen. Der er ingen afgørelse og ingen mine i drift.</p>
- <p style="color:var(--muted);margin:8px 0 0">Solaris skrev 6. juli 2026, at det har købt GESA. GESA er service til kraftværker. Det er efter beholdningen, og det er ikke et kraftværk i drift.</p>
+ <p style="color:var(--muted);margin:8px 0 0">Solaris skrev 6. juli 2026, at det har købt GESA. GESA er service til kraftværker. Det er efter beholdningen, og det er ikke et kraftværk i drift. Selskabet skriver, at det er stiftet i 2014, og at det også fordeler strøm.</p>
+ <section class="two-led" data-open="gen" aria-label="Solaris på to led">
+ <h3>Solaris på to led</h3>
+ <p class="intro">Samme selskab står to steder. Begge kort står. Et klik fremhæver ét. Det er ikke en anbefaling.</p>
+ <div class="cols" role="group" aria-label="Vælg et led">
+ <button type="button" data-stop="gen" aria-pressed="true"><strong>Elproduktion</strong><span>Købet af GESA 6. juli 2026 er service til kraftværker. Datoen ligger efter beholdningen. Det er ikke et kraftværk i drift.</span></button>
+ <button type="button" data-stop="grid" aria-pressed="false"><strong>Elnet</strong><span>Selskabet skriver, at det er stiftet i 2014, og at det fordeler strøm til datacentre, energi, erhverv og industri.</span></button>
+ </div>
+ <p class="live" aria-live="polite"></p>
+ <div class="print-all">
+ <p data-stop="gen">Elproduktion. Købet af GESA 6. juli 2026 er service til kraftværker. Datoen ligger efter beholdningen. Det er ikke et kraftværk i drift.</p>
+ <p data-stop="grid">Elnet. Selskabet skriver, at det er stiftet i 2014, og at det fordeler strøm til datacentre, energi, erhverv og industri.</p>
+ </div>
+ </section>
  <p style="color:var(--muted);margin:8px 0 0">Nogle råstoffer er projekter, andre er miner. The Metals Company skrev 11. maj 2026, at idriftsættelse ventes i fjerde kvartal 2027. Prøven på 3.000 ton er fra 2022. Det er ikke produktion. Standard Lithium har et mål for fase 1 og et demonstrationsanlæg, ikke en stor mine.</p>
  <p style="color:var(--muted);margin:8px 0 0">NioCorp skriver i kvartalsrapporten til 31. marts 2026, at Elk Creek i det sydøstlige Nebraska ikke er i produktion. En kontrakt om mineportalen er fra februar 2026. Det er ikke en mine i drift.</p>
  <p style="color:var(--muted);margin:8px 0 0">American Battery Technology skriver i kvartalsrapporten til 31. marts 2026, at genbrugsanlægget ligger i Storey County, og at bygningen i Fernley ikke er taget i brug. Tonopah Flats er et projekt, ikke en mine.</p>
@@ -162,6 +228,7 @@
  <p style="color:var(--muted);margin:8px 0 0">Enphase skriver, at selskabet er stiftet i 2006, og at det laver mikroinvertere. Hovedkontoret ligger i Fremont i Californien. Kontraktproduktion i South Carolina og Texas begyndte i 2023. 5 millioner mikroinvertere i kvartalet og 65 MWh batterier i kvartalet er kapacitet, ikke et målt år. Omkring 89,4 millioner mikroinvertere står uden dato på siden læst 16. oktober 2026. Det er udstyr, ikke et kraftværk.</p>
  <p style="color:var(--muted);margin:8px 0 0">Microvast skriver, at det laver celler, moduler, pakker og lagringssystemer, og at det har to produktionssteder. Byerne er ikke navngivet. Hovedkontoret ligger i Houston. 20 år er driftserfaring, ikke et stiftelsesår. Siden om lagring til nettet er skrevet som næste generation. Det er ikke et lager i drift.</p>
  <p style="color:var(--muted);margin:8px 0 0">NeoVolta skriver, at selskabet er stiftet i 2018 i Poway, og at NV14 samles i San Diego. Siden skriver 14 kWh, 14,3 kWh og 14,4 kWh. Tallene er ikke ens. En side indbyder til åbning af et nyt anlæg i Pendergrass den 17. september 2026. Det er efter beholdningen. Teksten siger ikke, at anlægget er i drift. 2 GWh i 2026 er en overskrift, ikke et målt år.</p>
+ <p style="color:var(--muted);margin:8px 0 0">Tesla skriver på siden om Megafactory i Lathrop, læst 16. oktober 2026, at anlægget kan lave 10.000 Megapack om året, svarende til 40 GWh. Det er en kapacitet, ikke et målt år. En gengivelse af Megapack-siden dateret 10. juli 2026 skriver 80 GWh for Lathrop og Shanghai tilsammen, eller 20.000 enheder om året, og mere end 58 GWh i drift globalt. Den daterer ikke tallene. De to tekster bruger ikke samme tal. Det er batteriudstyr, ikke et kraftværk.</p>
  <p style="color:var(--muted);margin:8px 0 0">Neo skriver, at Magnequench har anlæg i Tianjin, Chuzhou og Korat. Selskabet skrev 14. september 2026, at magnetfabrikken i Estland er i kommerciel produktion. Det er efter beholdningen. Fase 1A er sat til cirka 2.000 ton om året og er et navneskilt. Silmet 2.0 i Sillamäe blev udpeget 13. oktober 2026. Det er ikke en gennemført udvidelse og ikke en mine.</p>
  <p style="color:var(--muted);margin:8px 0 0">Ero skriver, at Xavantina i Mato Grosso er en guldmine, og at Tucumã nåede kommerciel produktion 1. juli 2025. Det er før beholdningen. Siden skriver, at Vale Base Metals ejer Furnas, og at Ero har en ret til at optjene en andel. Det er ikke en mine i drift.</p>
  <p style="color:var(--muted);margin:8px 0 0">United States Antimony skriver, at zeolit kommer fra Preston, og at Madero blev genstartet i januar 2025 efter stop i marts 2024. 163.788 pund i 2024 er det års tal. Det første gravearbejde i Alaska er ikke en mine i drift.</p>
@@ -183,6 +250,23 @@
  <p class="eyebrow" style="margin:0">KONCEPT · KÆDE</p>
  <h2 style="font-size:18px;margin:4px 0">Rumfart og satellitter</h2>
  <p style="color:var(--muted);margin:0">Koncept. Arkivet indeholder ikke ugebrevet. Opsendelse, satellitter og beregning i rummet er skilt ad på <a href="vaerdikaeder.html">værdikædesiden</a>. SpaceX er omtalt i formidlingen og indgår ikke i beholdningen pr. 1. juni 2026. Musk-citatet står kun som citat.</p>
+ <section class="chain-map" data-open="launch" aria-label="Tre led i rumkæden">
+ <h3>Tre led</h3>
+ <p style="color:var(--muted);line-height:1.6;margin:0">Kortet viser tre led. Et klik viser ét eksempel. Det er ikke en rute, et selskab selv flyver.</p>
+ <div class="nodes" role="group" aria-label="Vælg et led">
+ <button type="button" data-stop="launch" aria-pressed="true">Opsendelse</button>
+ <span class="edge" aria-hidden="true"></span>
+ <button type="button" data-stop="sat" aria-pressed="false">Satellit</button>
+ <span class="edge" aria-hidden="true"></span>
+ <button type="button" data-stop="compute" aria-pressed="false">Rum og compute</button>
+ </div>
+ <p class="live" aria-live="polite"></p>
+ <div class="print-all">
+ <p data-stop="launch">Opsendelse. Rocket Lab skriver, at HASTE er et suborbitalt testfartøj. Det er ikke en orbital opsendelse. Neutron er stadig under udvikling.</p>
+ <p data-stop="sat">Satellit. York skriver, at 21 satellitter er opsendt til Tranche 1. Selskabet sender ikke selv raketten op.</p>
+ <p data-stop="compute">Rum og compute. Redwire og York bygger udstyr og satellitkroppe. Ingen af dem driver beregning i kredsløb.</p>
+ </div>
+ </section>
  <p style="color:var(--muted);margin:8px 0 0">Neutron og Eclipse er ikke fløjet i beskrivelserne. Starfighters skriver, at flåden er syv F-104, og at flyene kan bære nyttelast til 45.000 fod. Forsiden skriver, at en opsendelsestilladelse fra FAA er undervejs. STARLAUNCH 1 er ikke en orbital rute. Howmet skriver tre forskellige ting. De står i kortet under.</p>
  <div style="border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:10px 0 0">
  <p style="margin:0 0 6px;font-weight:600">Howmet · tre ting siden selv skriver</p>
@@ -202,6 +286,19 @@
  <p style="color:var(--muted);margin:4px 0">MK 54 · øvelsesdel uden sprængladning. 22. juli 2026 er efter beholdningen. Ikke en opsendelse.</p>
  </div>
  <p style="color:var(--muted);margin:8px 0 0">Redwire skrev 1. april 2026, at 11 kameraer og fire solsensorer will launch på Artemis II. Meddelelsen siger ikke, at flyvningen er gennemført. Forsiden, læst 16. oktober 2026, skriver launched uden dato. Det er ikke beholdningens meddelelse. Selskabet sender ikke selv op.</p>
+ <section class="two-led" data-open="before" aria-label="To tællinger for PIL-BOX">
+ <h3>To tællinger</h3>
+ <p class="intro">PIL-BOX er udstyr til krystaller. De to tal er ikke det samme. Det er ikke et datacenter.</p>
+ <div class="cols" role="group" aria-label="Vælg en tælling">
+ <button type="button" data-stop="before" aria-pressed="true"><strong>11. marts 2026</strong><span>Meddelelsen skriver 43 PIL-BOX. Datoen ligger før beholdningen.</span></button>
+ <button type="button" data-stop="after" aria-pressed="false"><strong>17. juni 2026</strong><span>Undersøgelserne kom tilbage, og siden skriver 54 PIL-BOX fløjet til dato. Datoen ligger efter beholdningen.</span></button>
+ </div>
+ <p class="live" aria-live="polite"></p>
+ <div class="print-all">
+ <p data-stop="before">11. marts 2026. Meddelelsen skriver 43 PIL-BOX. Datoen ligger før beholdningen. Det er udstyr til krystaller, ikke et datacenter.</p>
+ <p data-stop="after">17. juni 2026. Undersøgelserne kom tilbage, og siden skriver 54 PIL-BOX fløjet til dato. Datoen ligger efter beholdningen. Det er ikke samme tal som 43.</p>
+ </div>
+ </section>
  <p style="color:var(--muted);margin:8px 0 0">MDA skrev 16. september 2026, at Chorus er tre satellitter, og at de to nye ikke er sendt op. Starlab er ikke en station i drift. Ingen af eksemplerne under rum og compute er et datacenter i kredsløb.</p>
  <p style="color:var(--muted);margin:8px 0 0">Redwire skrev 1. april 2026, at kameraer skal med på Artemis II. Meddelelsen siger ikke, at flyvningen er gennemført.</p>
  <p style="color:var(--muted);margin:8px 0 0">Satellogic skriver, at satellitterne hedder NewSat. Forsiden sætter fuld drift af Merlin til andet halvår 2027. Det er efter beholdningen, og det er ikke en tjeneste i fuld drift. Tre ting står i kortet under.</p>
@@ -209,7 +306,7 @@
  <p style="margin:0 0 6px;font-weight:600">Satellogic · tre ting siden selv skriver</p>
  <p style="color:var(--muted);margin:4px 0">Davidson · 210 Delburg St. Kortet siger Charlotte. Et kontor, ikke en satellit.</p>
  <p style="color:var(--muted);margin:4px 0">November 2015 · tidslinjen skriver en færdig fabrik uden by. Salene i Buenos Aires og Córdoba er ikke den fabrik.</p>
- <p style="color:var(--muted);margin:4px 0">Merlin.01 · sendt op 1. oktober 2026 med SpaceX, efter beholdningen. Fuld drift er andet halvår 2027.</p>
+ <p style="color:var(--muted);margin:4px 0">Merlin.01 · sendt op 1. oktober 2026 med SpaceX, efter beholdningen. Datafeltet siger 2. oktober. Fuld drift er andet halvår 2027 og er en plan.</p>
  </div>
  <p style="color:var(--muted);margin:8px 0 0">MDA præsenterede 10. september 2026 satellitten Aurora Black. Det er efter beholdningen, og det er ikke en konstellation i drift. MDA skrev 16. september 2026, at Chorus er tre satellitter. To er nye, en i X-bånd og en i C-bånd. Selskabet skriver, at RADARSAT-2 allerede er i kredsløb. Opsendelsen af de nye er sat til sent i 2026. Det er en plan. De to nye er ikke sendt op. Meddelelsen ligger efter beholdningen.</p>
  <p style="color:var(--muted);margin:8px 0 0">Planet nævner satellitterne SuperDove, SkySat, Pelican, Tanager og Owl. Owl er omtalt som næste generation. Selskabet opsender ikke selv raketterne. Tre adresser står i kortet under.</p>
@@ -241,5 +338,32 @@
  <p><strong>Markedsføringsmateriale.</strong> Læs <a href="https://fundmarket.dk/wp-content/uploads/Faellesprospekt-for-afdelinger-og-andelsklasser-i-Investeringsforeningen-Portfoliomanager-opdateret-24.10.2025.pdf" rel="noopener" target="_blank">prospektet ↗</a> og KID for <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm140b" rel="noopener" target="_blank">PMINDI ↗</a> eller <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm145b" rel="noopener" target="_blank">PMINDIAKK ↗</a>, før du træffer en endelig investeringsbeslutning.</p>
  <p>Udkast / noindex. Ikke den officielle side og ingen investeringsrådgivning. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering. <a href="om-data.html">Data og ordliste</a>.</p>
  </footer>
+ <script>
+ (function () {
+ function bindPicker(box) {
+  if (!box) return;
+  var live = box.querySelector(".live");
+  var map = {};
+  box.querySelectorAll(".print-all p[data-stop]").forEach(function (p) {
+   map[p.getAttribute("data-stop")] = p.textContent;
+  });
+  function show(id) {
+   box.querySelectorAll("button[data-stop]").forEach(function (b) {
+    b.setAttribute("aria-pressed", b.getAttribute("data-stop") === id ? "true" : "false");
+   });
+   box.querySelectorAll(".rail i").forEach(function (dot) {
+    dot.classList.toggle("on", dot.getAttribute("data-stop") === id);
+   });
+   if (live) live.textContent = map[id] || "";
+  }
+  box.querySelectorAll("button[data-stop]").forEach(function (b) {
+   b.addEventListener("click", function () { show(b.getAttribute("data-stop")); });
+  });
+  var first = box.querySelector("button[data-stop]");
+  show(box.getAttribute("data-open") || (first ? first.getAttribute("data-stop") : ""));
+ }
+ document.querySelectorAll(".not-that, .chain-map, .two-led").forEach(bindPicker);
+ })();
+ </script>
 </body>
 </html>
