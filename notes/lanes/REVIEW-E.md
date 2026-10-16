@@ -282,6 +282,10 @@ St. Gabriel i Louisiana er flydende brint sammen med Olin gennem Hidrogenii. Kom
 
 Aftalen af 1. april 2025 siger, at Bloom og Conagra vil bruge brændselsceller på Conagras fabrikker i Troy og Archbold i Ohio. Før beholdningen. Ikke skrevet som celler, der allerede kører. Ikke et klassisk kraftværk. Megawatt, kapitalramme, leader og leading er ikke kopieret. AI-udkast uden gennemgangsdato. Elproduktions-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
 
+## Rolls-Royce · 2026-10-16 02:43 CEST
+
+Meddelelsen 15. juni 2026 siger, at Videberg Kraft har valgt Rolls-Royce SMR til tre små reaktorer på Sveriges vestkyst. Videberg Kraft ejes af Vattenfall og Industrikraft i Sverige. Udvælgelsen begyndte i 2022. Efter beholdningen. Ikke et værk i drift. Atomkraft er ikke hele selskabet. Aftalerne med Great British Energy Nuclear (GBE-N) og CEZ Group er nævnt uden dato og er ikke værker i drift. First, only, market leader, first-mover, direktørens citat og børskoder er ikke kopieret. Navnet på den britiske part står på siden med en tankestreg. Teksten her skriver det uden. AI-udkast uden gennemgangsdato. SMR-blurben og arkivet siger grænsen. Vægtene er uændrede. Chromium ved 375 px. Kæden er også tjekket ved 1280 px. "tjekket mod kilden" er ikke med. Videberg står. Ingen konsolfejl. Ingen vandret scroll. Ordet første på kæden og i arkivet kommer fra ældre sætninger om Terrestrial, zeolit og Almonty.
+
 ## GE Vernova · 2026-10-16 02:56 CEST
 
 Gassiden viser turbinerne 9HA, 7HA og LM2500. Atomkraftsiden siger, at dampkraft understøtter mere end 80 anlæg i Amerika, og at cirka 85 GW er den installerede base hos selskabet og hos andre leverandører. Tallet dækker også andres udstyr. Selskabet driver ikke værkerne. Forsiden siger cirka 85.000 mennesker i cirka 100 lande. World-leading er ikke kopieret. AI-udkast uden gennemgangsdato. Elproduktions-blurben og arkivet siger grænsen. Elnet-blurben er uændret på den korte sætning. Vægtene er uændrede. Chromium ved 375 px. Kæden er også tjekket ved 1280 px. "tjekket mod kilden" er ikke med. 9HA står. Ingen konsolfejl. Ingen vandret scroll.

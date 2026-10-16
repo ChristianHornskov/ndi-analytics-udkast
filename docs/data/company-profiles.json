@@ -1353,20 +1353,20 @@
   "GB00B63H8491": {
    "name": "Rolls-Royce",
    "theme": "space",
-   "summary": "Fremstiller flymotorer og kraftsystemer. Koncernen udvikler også en lille modulær reaktor. Atomkraft er ikke hele selskabet. Snapshottet har aktien under SpaceTech.",
-   "watch": "Flytrafik, service af motorer og om reaktorprogrammet bliver bygget.",
+   "summary": "Fremstiller flymotorer og kraftsystemer. Selskabet skrev 15. juni 2026, at Videberg Kraft har valgt Rolls-Royce SMR til tre små reaktorer på Sveriges vestkyst. Det er efter beholdningen og ikke et værk i drift. Atomkraft er ikke hele selskabet.",
+   "watch": "Om valget i Sverige bliver et værk. Teksten beskriver ikke et anlæg i drift.",
    "source": "https://www.rolls-royce.com/",
-   "products": "Flymotorer, kraftsystemer og et reaktorprogram under udvikling.",
-   "customers": "Flyselskaber, forsvar og, hvis reaktoren bliver bygget, elforbrugere.",
-   "role": "Motorkoncern med et SMR-program. Ikke en opsender.",
+   "products": "Flymotorer, kraftsystemer og et reaktorprogram. Valget i Sverige er ikke et værk i drift.",
+   "customers": "Flyselskaber og forsvar. Videberg Kraft er et valg, ikke en kunde med et værk i drift.",
+   "role": "Motorkoncern med et SMR-program. Ikke en opsender og ikke et værk i drift.",
    "narrative": [
-    "Rolls-Royce fremstiller flymotorer og kraftsystemer. Koncernen har også et program for en lille modulær reaktor. Atomkraft er ikke hele selskabet.",
-    "I juni 2026 skrev selskabet, at Rolls-Royce SMR er valgt til et projekt i Sverige. Valget er ikke et værk i drift. Selskabet sender ikke selv satellitter op."
+    "Rolls-Royce skrev 15. juni 2026, at Videberg Kraft har valgt Rolls-Royce SMR til tre små reaktorer på Sveriges vestkyst. Videberg Kraft ejes af Vattenfall og Industrikraft i Sverige. Udvælgelsen begyndte i 2022. Datoen for valget ligger efter beholdningen pr. 1. juni 2026. Valget er ikke et værk i drift.",
+    "Meddelelsen nævner også en aftale med Great British Energy Nuclear (GBE-N) om reaktorer i Storbritannien og en aftale med CEZ Group om arbejde i Tjekkiet. Meddelelsen daterer ikke de to aftaler. Ingen af dem er et værk i drift. Atomkraft er ikke hele selskabet. Selskabet sender ikke selv satellitter op."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets side",
-     "url": "https://www.rolls-royce.com/"
+     "label": "Sverige, 15. juni 2026",
+     "url": "https://www.rolls-royce.com/media/press-releases/2026/15-06-2026-rr-smr-selected-to-deliver-swedens-first-new-nuclear-power-for-over-40-years.aspx"
     }
    ]
   },

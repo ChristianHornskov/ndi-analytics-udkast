@@ -1009,3 +1009,13 @@ Dampkraft til atomkraft understøtter mere end 80 anlæg i Amerika. Cirka 85 GW 
 Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. 9HA står. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `57169d9` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 02:43 CEST. Rolls-Royce skrev, at Videberg Kraft valgte tre små reaktorer 15. juni 2026. Ikke færdig.**
+
+Valget ligger efter beholdningen pr. 1. juni 2026 og er ikke et værk i drift. Videberg Kraft ejes af Vattenfall og Industrikraft i Sverige. Aftalerne med Great British Energy Nuclear (GBE-N) og CEZ Group er ikke dateret i meddelelsen og er ikke værker i drift. Atomkraft er ikke hele selskabet. Ingen `reviewedAt`. Blurben under små reaktorer og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Videberg står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `bdec96d` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
