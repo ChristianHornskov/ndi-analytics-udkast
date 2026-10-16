@@ -1045,20 +1045,24 @@
   "CA8536061010": {
    "name": "Standard Lithium",
    "theme": "energy-resources",
-   "summary": "Udvikler projekter, der henter lithium ud af saltvand i Arkansas. Denne tekst beskriver demonstrationsskala, ikke en stor mine.",
-   "watch": "Om demonstrationen kan blive til kommerciel produktion.",
+   "summary": "Udvikler lithium fra saltvand. Selskabet skriver, at fase 1 i South West Arkansas er sat til 22.500 ton lithiumkarbonat om året, og at målet for kommerciel produktion er 2029. Det er et mål, ikke en stor mine i drift.",
+   "watch": "Om målet i 2029 bliver til drift. Fase 1 er en kapacitet, ikke en produktion, der er i gang.",
    "source": "https://www.standardlithium.com/",
-   "products": "Lithiumprojekter.",
+   "products": "Et mål om 22.500 ton lithiumkarbonat om året i fase 1. Ikke en stor mine.",
    "customers": "Ingen stor kommerciel kundebase i denne beskrivelse.",
-   "role": "Råstof til batterier.",
+   "role": "Fase 1 er et mål til 2029. Ikke en stor mine i drift.",
    "narrative": [
-    "Standard Lithium skriver, at et demonstrationsanlæg ved El Dorado i Arkansas behandler saltvand.",
-    "Projekterne i Arkansas og i Texas er ikke beskrevet som en stor mine i drift."
+    "Standard Lithium skriver, at South West Arkansas er et projekt sammen med Equinor. Standard Lithium har 55 %, og Equinor har 45 %. Selskabet kalder samarbejdet Smackover Lithium. Projektet ligger i det sydlige Arkansas, cirka 24 km vest for Magnolia og cirka 11 km syd for Lewisville. Selskabet skriver, at fase 1 er sat til 22.500 ton batterikvalitets lithiumkarbonat om året, og at målet for første kommercielle produktion er 2029. Siden skriver, at byggeriet ventes at begynde i 2026, kort efter en endelig investeringsbeslutning. Teksten siger ikke, at beslutningen er truffet, og den siger ikke, at byggeriet er i gang. Forsiden opgør ressourcen til 1,2 Mt LCE som målt og indikeret. Det er en ressource, ikke en produktion.",
+    "Et demonstrationsanlæg ved LANXESS South Plant nær El Dorado i Arkansas behandler saltvand. Forsiden skriver, at anlægget har været i drift i 5 år eller mere. Siden skriver, at anlægget siden 2020 har behandlet cirka 40 millioner gallons saltvand. Gallons er selskabets eget mål og er ikke regnet om. Anlægget er ikke fase 1 og ikke en stor mine."
    ],
    "narrativeSources": [
     {
      "label": "Selskabets side",
      "url": "https://www.standardlithium.com/"
+    },
+    {
+     "label": "South West Arkansas",
+     "url": "https://www.standardlithium.com/projects/smackover/south-west-arkansas/"
     },
     {
      "label": "Demonstrationsanlæg",
