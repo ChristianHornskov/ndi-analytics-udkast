@@ -6,10 +6,18 @@
  <title>Nyhedsarkiv · NDI Analytics</title>
  <link rel="stylesheet" href="css/ndi.css">
  <style>
+  .tri{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:12px 0 0}
+  .tri details{border:1px solid var(--line);border-radius:8px;padding:10px 12px}
+  .tri summary{cursor:pointer;font-weight:600}
+  .tri p{color:var(--muted);font-size:13px;line-height:1.5;margin:8px 0 0}
+  @media (max-width:640px){
+   .tri{grid-template-columns:1fr}
+  }
   @media print {
    .skip, .site-header .nav { display: none; }
    details, details > p { display: block !important; }
    details > summary { font-weight: 600; }
+   .tri details{break-inside:avoid;border-color:#333}
    body, .site-footer { background: #fff; color: #111; }
   }
  </style>
@@ -82,6 +90,20 @@
  <summary>Kapacitet, målt år og dato efter beholdningen</summary>
  <p style="color:var(--muted);margin:8px 0 0">En kapacitet er det, anlægget er sat til. Den er ikke årets produktion. Et årstal er det år, selskabet selv har målt. En dato efter 1. juni 2026 er ikke beholdningens tal. Et kontor, en afbryder og et navngivet projekt er ikke et kraftværk, selskabet ejer. Et smedet hjul fra 1948 er et produkt, ikke en opsendelse. Et postnummer er ikke en gade. En øvelsesdel uden sprængladning er ikke en opsendelse. Et kontor på 4. sal er ikke en satellit. En fabrik, der er planlagt til at åbne, er ikke i drift. En gade i Davidson er ikke Charlotte. En opsendelse i oktober 2026 er ikke fuld drift i 2027. Noterne er selskabernes egne ord. De er ikke en anbefaling.</p>
  </details>
+ <div class="tri" aria-label="Tre ord, der ikke er det samme">
+ <details>
+ <summary>Kapacitet</summary>
+ <p>Det, anlægget er sat til. Ikke årets produktion. Ballard skriver, at anlæggene kan lave over 1,6 GW. Det er en kapacitet, ikke et målt år.</p>
+ </details>
+ <details>
+ <summary>Målt år</summary>
+ <p>Et år, selskabet selv har talt. Antero skriver, at 24 millioner tønder LPG gik til eksport i 2025. Det er det års tal.</p>
+ </details>
+ <details>
+ <summary>Efter 1. juni 2026</summary>
+ <p>Datoen er nyere end beholdningen. Karman gennemførte købet af Walker 28. august 2026. Meddelelsen ændrer ikke tallene ovenfor.</p>
+ </details>
+ </div>
  <p style="color:var(--muted);margin:8px 0 0">Gas står som brændsel. Små reaktorer er ikke beskrevet som værker i drift. NuScale skriver, at et program sammen med TVA kan blive op til 6 GW. Det er ikke et værk i drift.</p>
  <p style="color:var(--muted);margin:8px 0 0">NuScale skriver, at modulet er en cylinder på 76 fod gange 15 fod og vejer omkring 700 tons. Det er et design, ikke et værk i drift.</p>
  <p style="color:var(--muted);margin:8px 0 0">Eos skriver, at fremstilling af Z3 begyndte i august 2023 på Eos Ingenuity Park i Turtle Creek i Pennsylvania. Det er batterier, ikke en mine og ikke et kraftværk.</p>
