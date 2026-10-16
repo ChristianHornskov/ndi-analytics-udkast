@@ -522,8 +522,7 @@ button.legend {
   color: #e4dcaa;
   font-size: 12px;
   line-height: 1.6;
-  display: flex;
-  align-items: center;
+  align-self: start;
 }
 
 .foot {

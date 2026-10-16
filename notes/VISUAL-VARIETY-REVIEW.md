@@ -244,6 +244,10 @@ På 1100 stod pilen og loopet i højre kant af kortet, med et tomt felt imellem.
 
 Søjlerne var 8 px, og procenten fyldte sin 52 px-celle. De er 12 px høje. Tallet har 64 px, og «17,2 %» har 27 px til overs i cellen. Quantum er stadig 16 px mod 14 px på 390, så 0,1 point kan ses. Platforme har den gule kant. AKK-kortet har ca. 2,85 % og «Ingen kurs». Ingen sidescroll ved 1280, 390 og 320. Ingen konsolfejl.
 
+### Update · advarslen følger teksten · 2026-10-16 ~04:31 CEST
+
+På 1100 var advarslen lige så høj som de fire kort, 364 px, med én sætning i midten. Den er 62 px og står i toppen, på linje med totalafkast. Kortene er uændrede: +104,8 %, +26,4 %, +4,0 % med forbehold, −35,8 %. På 390 og 320 står advarslen under kortene. PMINDIAKK har advarslen og ingen procent. Ingen sidescroll. Ingen konsolfejl.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.
