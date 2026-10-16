@@ -884,8 +884,16 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
   .ep-ledger li.open .dur span{background:#333}
   .ep-jump{display:grid !important;background:transparent !important;color:#111 !important;box-shadow:none !important}
   .fork-arm{display:flex !important;color:#111 !important}
-  .fork-say{color:#111;border-left-color:#111}
-  .fork-src{color:#111;border-color:#1d4e56}
+  .fork-say,.fork-end{color:#111;border-left-color:#111}
+  .fork-src{color:#111;border-color:#1d4e56;background:#fff}
+  .cmp-card,.cmp-card h2,.cmp-card dd,.cmp-flow strong,.cmp-name,.tl time,.h-section,.cmp-big,.band{color:#111}
+  .cmp-card{background:#fff;border-color:#ccc}
+  .cmp-card dt,.cmp-flow,.cmp-from,.tl li,.cmp-legend,.cmp-v,.cmp-cost-note{color:#333}
+  .cmp-big strong{color:#1d4e56}
+  .cmp-bar{background:#fff;border-color:#ccc}
+  .cmp-line.a .cmp-bar span,.cmp-key.a{background:#1d4e56;print-color-adjust:exact}
+  .cmp-line.b .cmp-bar span,.cmp-key.b{background:#5f8f96;print-color-adjust:exact}
+  .cmp-card,.fork,.cmp-cost{break-inside:avoid}
   .ep-stop{display:block !important}
   .hero-stat,.ep-ledger li,.year-rail a{break-inside:avoid}
 }

@@ -26,9 +26,10 @@
  <a class="brand" href="index.html"><img src="assets/mark.svg" width="34" height="27" alt=""><span>NewDeal Invest</span></a>
  <nav class="nav"><a href="index.html">← Entré</a><a href="invester.html">Sådan investerer du</a></nav>
  </header>
+ <p class="print-mast">NewDeal Invest. Udskrift. Markedsføringsmateriale. Generel information, <span class="ep-pct">ikke investeringsrådgivning.</span> Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast.</p>
  <main id="main"><p style="color:var(--muted)">Henter…</p><p class="link-row chip-links"><a href="drawdown.html">Fald fra top (PMINDI) →</a> · <a href="vaerdikaeder.html">Værdikæder →</a></p>
 </main>
- <footer class="site-footer"><p><strong>Markedsføringsmateriale.</strong> Læs <a href="https://fundmarket.dk/wp-content/uploads/Faellesprospekt-for-afdelinger-og-andelsklasser-i-Investeringsforeningen-Portfoliomanager-opdateret-24.10.2025.pdf" rel="noopener" target="_blank">prospektet ↗</a> og KID for <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm140b" rel="noopener" target="_blank">PMINDI ↗</a> eller <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm145b" rel="noopener" target="_blank">PMINDIAKK ↗</a>, før du træffer en endelig investeringsbeslutning.</p><p>Udkast / noindex. Eksponering, ikke anbefaling. Du kan tabe penge.</p><p data-kid-footer></p></footer>
+ <footer class="site-footer"><p><strong>Markedsføringsmateriale.</strong> Læs <a href="https://fundmarket.dk/wp-content/uploads/Faellesprospekt-for-afdelinger-og-andelsklasser-i-Investeringsforeningen-Portfoliomanager-opdateret-24.10.2025.pdf" rel="noopener" target="_blank">prospektet ↗</a> og KID for <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm140b" rel="noopener" target="_blank">PMINDI ↗</a> eller <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm145b" rel="noopener" target="_blank">PMINDIAKK ↗</a>, før du træffer <span class="cmp-when">en endelig investeringsbeslutning.</span></p><p>Udkast / noindex. Generel information, <span class="cmp-when">ikke investeringsrådgivning.</span> Eksponering, ikke anbefaling. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan <span class="cmp-when">tabe penge.</span></p><p data-kid-footer></p></footer>
  <script type="module">
  import { loadAll, fundById, lastNav, WARN_HIST, fmtDate, daTheme, fillKidFooter } from './js/data.js';
  const [{ portfolio }, facts] = await Promise.all([
@@ -83,6 +84,7 @@
  <p class="eyebrow">SAMMENLIGN ANDELSKLASSER</p>
  <h1>Én portefølje, to måder at få <span class="cmp-when">udbyttet på</span></h1>
  <p class="lede">PMINDI og PMINDIAKK investerer efter samme strategi i de samme selskaber. Forskellen er, hvad der sker med udbyttet: det udbetales til dig, eller det bliver <span class="cmp-when">i fonden.</span></p>
+ <p class="share-row"><button type="button" class="outline-btn" id="print-sheet">Udskriv</button></p>
 
  <div class="cmp-cards">
  <section class="cmp-card a" aria-labelledby="c-a">
@@ -165,6 +167,7 @@
  if (forkNote) forkNote.innerHTML = forkSay[btn.dataset.arm] || '';
  });
  });
+ document.getElementById('print-sheet')?.addEventListener('click', () => { window.print(); });
  </script>
 </body>
 </html>

@@ -376,3 +376,7 @@ Ny form på sammenlign, under KID-parret og over tidslinjen. «Samme selskaber»
 ### Update · stop på kurven · 2026-10-16 ~07:15 CEST
 
 Ny form i embed, under udlæsningen. En streg med stop. Afstanden er tiden. Start sætter kurven til 0 % den 22. sep. 2023. Seneste er 14. okt. 2026. Laveste vises, når ordet har plads. På år til dato er det −10,0 % den 30. mar. 2026, og prikken får en gul ring. På hele perioden ligger det laveste punkt for tæt på starten, så det udelades. PMINDIAKK har ingen stop og ingen procent. Knapperne er 44 px. Ingen sidescroll ved 300–1100. Ingen konsolfejl. «til dig» og «en endelig investeringsbeslutning» holder sammen. «Delår, afventer» holder sammen.
+
+### Update · udskrift af sammenlign · 2026-10-16 ~07:20 CEST
+
+«Udskriv» står under indledningen og er 44 px. På skærmen er masten skjult. På papir er knappen væk. Kortene er hvide med mørk tekst. PMINDI har 126,52 (14. okt. 2026). PMINDIAKK har Ingen kurs. KID-parret er ca. 2,79 % og ca. 2,85 %. Udbyttets vej og tidslinjen følger med. Øverst og i footeren står markedsføringsmateriale, ikke investeringsrådgivning og den historiske advarsel. Ingen sidescroll ved 320, 390 og 1100. Ingen konsolfejl.
