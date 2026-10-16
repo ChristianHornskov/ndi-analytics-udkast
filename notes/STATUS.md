@@ -1656,45 +1656,10 @@ Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er
 - Test: 8793, 375/1280: 0 konsolfejl, ingen h-overflow, én h1 på invester, om-data, risikoklasse, faq, risici og kort. Alle `om-data.html#g-…`-links findes (0 døde ankre). precheck: se push.
 - Branch `lane-C` klar til merge. Næste: UX-review 04:00.
 
-## Fra Claude lane-C (NDI-perspektiv foldet sammen + KID-link på 8 sider) · 02:15 CEST 16/10 (wall-clock)
-- `ndi-perspektiv.html` (UX SHOULD cyklus 19–22): 310 selskaber i 12 temagrupper (`<details>`, temachips med ankre `#lg-…`, søgefelt). Kort pr. selskab: tema-mærke, «Hvad ejer man?», plads i værdikæden; resten under «Hvorfor ejer vi den? Mere fra linsen». Livscyklus forklaret én gang i stedet for ×309. Synlig tekst er ca. 2.500 tegn (før ca. 192.000). «Afventer» står ×2 (før 53). Båndet har «Vi vælger udviklingen, ikke vinderen» (PERSONA-privat).
-- KID-linje med direkte links til begge klassers KID (officiel titel) på ndi-perspektiv og 7 lær-sider, der manglede den (compliance SHOULD).
-- HANDOFF: demo-punkt 11 (NDI-perspektiv). UX-review 02:15.
-- Test: 17 sider × 375/1280: 0 konsolfejl, 0 h-overflow, én h1, KID i renderet tekst. precheck: se push.
-- **Til andre lanes:** KID-link mangler stadig på vaerdikaeder, drawdown, temaer, nyhedsarkiv, periode og selskaber. Samme linje kan kopieres fra `docs/laer/livscyklus.html`.
-- Branch `lane-C` klar til merge. Næste: UX-review 04:00.
-
-## Fra Claude lane-C (ordliste 124 + «tags»/«screener» → klart dansk) · 02:35 CEST 16/10 (wall-clock)
-- Merget origin/main ind i lane-C (ingen konflikter).
-- `om-data.html`: ordliste 119 → 124. Nye poster i «Værdikæder og flodsystemet» (30 → 35): Træning og brug af AI-modeller (inferens) `#g-traening-brug`, DRAM og NAND `#g-dram-nand`, EUV `#g-euv`, Edge-AI `#g-edge-ai`, Bitcoin-mining i datacentre `#g-bitcoin-mining`. Alle fem ord står i value-chains.json, company-profiles.json eller unique-metrics.json uden at have en post. «Flere tags pr. selskab» → «Flere temaer pr. selskab». «i screeneren» → «under Udforsk på forsiden».
-- PERSONA-privat «fjern jargon»: «Multi-tag i stedet for ét GICS-label» → «Flere temaer pr. selskab i stedet for én sektor». «tags» → «temaer» på ideer (h-vs, tidslinje, og:description) og faq (Tesla-svaret). 0 «tags» tilbage på ideer og faq.
-- `kort.html` 124. HANDOFF demo 5/6/8 opdateret (124 begreber, 28 · 22 · 39 · 35, «Én kasse eller flere temaer»).
-- Test: 8794, 375/1280 på om-data (+ `#g-euv` åbner gruppen), ideer, kort, faq, risici, invester, ndi-perspektiv: 0 konsolfejl, 0 h-overflow, én h1. 0 døde `#g-`-ankre. precheck: se push.
-- **Til vaerdikaeder/js-ejer:** EUV, DRAM/NAND, Edge-AI og bitcoin-mining kan nu linkes til `om-data.html#g-…` fra hint-teksterne. **Til Udforsk-ejer:** «tags» i SPA'en bør hedde «temaer».
-- Branch `lane-C` klar til merge. Næste: UX-review 04:00.
 - Coordinator-loop 2026-10-16 02:12:29 CEST: CONFLICT merge origin/lane-R (ahead 3) — aborted, not pushed
 
 - Coordinator (manual) 2026-10-16 02:14:18 : Leo 02:00 UX MUSTs (dividends comma, Max DD→Største fald, ÅOP-aften-frase væk, AI-udkast kun ved tekst, vaerdikaeder ≥12px mobil) + SHOULDs (menu 44px, life-strip collapse, tema wrap) + FO (andet 6,27 % synket, klasser-forskel, KID-omkostning, Mangler-fra-NDI-boks) + privat 02:07 (Sådan tænker vi-links, færre forslag-badges, vurder-afkast uden Nasdaq). Compliance: KID RIY, Fulgt konto, kan tabe, chartMarkers uden @MadsC007.
 
-## Fra Claude lane-C (compliance MUST 6 + KID-omkostning på invester + ideer «Hvorfor ejer vi den?») · 02:18 CEST 16/10 (wall-clock)
-- Merget origin/main (e402f15) ind i lane-C (STATUS-konflikt løst, begge sider bevaret).
-- Compliance MUST 6 (cyklus 25): skyderteksten på `laer/risikoklasse.html` siger nu «målt efter KID-metoden» og, for klasse 5, «Et simpelt udsvingstal over 30 % betyder ikke, at klassen er forkert» (både uden JS og i scriptet).
-- Compliance MUST 9 / PERSONA-privat «hvad koster det mig?»: `invester.html` trin 4 begynder med KID'ets samlede årlige omkostning 2,79 % (PMINDI) / 2,85 % (PMINDIAKK) ved 5 år, et tænkt eksempel (100.000 kr. → ca. 2.790 kr. om året, før kurtage og depot) og direkte links til begge KID. Trin 5 slutter med «Du kan tabe penge». Ordlisten `#g-omkostninger` har samme tal.
-- UX SHOULD (cyklus 25): `laer/indre-vaerdi.html` «værdien pr. andel gør ikke (bortset fra små tillæg og fradrag ved køb og salg, se omkostninger)».
-- `ideer.html` ny form nr. 15 «Hvorfor ejer vi den?» (`#h-ln`, IDESPEJDER #3/#8): NDI-linsens fem spørgsmål lagt rundt om en cirkel med ASML (Chips, 0,22 % af PMINDI pr. 1. jun 2026, fra portfolio.json; tekster fra unique-metrics.json, AI-udkast mærket). Billedtekst: «lille position», «du kan tabe penge», «ikke en karakter, et kursmål eller en anbefaling». Indholdsfortegnelse 14 billeder. HANDOFF demo: femten former.
-- Test: lokal server, 375/1280 på ideer, invester, om-data, risikoklasse, indre-vaerdi, kort: 0 konsolfejl, 0 h-overflow, én h1, 0 døde ankre. precheck: se push.
-- **Til fakta-ejer (main):** `fakta.html:245` læser `A.costs.kidRiy5y`, men feltet findes ikke i `docs/data/fund-facts.json`, og `omkostninger.html` har intet `#kid-omkostning`-anker. Linjen viser derfor ikke tallet. Enten tilføjes feltet + ankeret, eller teksten skrives statisk som på invester.
-- **NB:** 2,79/2,85 kommer fra compliance-review (KID læst af reviewer), ikke fra en datafil. HANDOFF har allerede «bekræft kilde/dato» som åbent spørgsmål til NDI.
-- Branch `lane-C` klar til merge. Næste: UX-review 04:00.
-
-## Fra Claude lane-C (meta description 21 sider + FAQ 23 svar + ÅTD/delår) · 02:22 CEST 16/10 (wall-clock)
-- UX Nice cyklus 24: `<meta name="description">` på alle 21 lane-C-sider (ideer, kort, om-data, invester, risici, ndi-perspektiv, laer/*), uden procenttal. og-meta.py kørt; kun egne filer committet. **Til andre lanes:** kør `python3 scripts/og-meta.py` efter at have givet egne sider en description (fonden/omkostninger/drawdown mangler stadig).
-- UX SHOULD cyklus 24: kort «ÅTD dyb side» → «Afkast pr. kalenderår», link til 2025.
-- Compliance MUST 10 (mine filer): ordliste ÅTD = delår; FAQ «Hvorfor er 2023 ikke et helt år?».
-- FAQ 18 → 23 korte svar: omkostning (KID 2,79/2,85 %, anker `invester.html#koster`), skat (generelt), delår, benchmark/sammenligning, hvem træffer beslutningerne. Ordliste `#g-benchmark` fik «sådan sammenligner du selv».
-- **Til periode-ejer:** `periode.html` default er stadig `year=YTD` og viser «YTD:»-chip (MUST 10 / UX cyklus 24).
-- Test: 10 sider × 375/1280: 0 konsolfejl, 0 overflow, én h1. precheck: se push.
-- Branch `lane-C` klar til merge. Næste: UX-review 04:00.
 - Lead 2026-10-16 02:18:04 CEST: Leo 02:00/02:07 fixes on main (e402f15/5843694). Coord hardened (no auto-stash). Monitor+loop running. Queued lane merges R/A/B/C/D/E/X.
 
 - Lead 2026-10-16 02:18:12 CEST: lane R/A/B/C CONFLICT on STATUS (and app.js for B) — aborted; coordinator continues.
@@ -1756,3 +1721,18 @@ Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er
 - Vidensbot §5 «tre langsigtede temaer» (ugebrev 19. jan 2026): ny sektion `laer/saadan-taenker-vi.html#tv-dr` + ny form `ideer.html#h-dr` (Venn, temaer med vægt, mærket skitse). Ordliste 140 (+tre drivkræfter, realkapital). ASML «mulig flaskehals».
 - MUSTs i lane-C-filer (UX + compliance cyklus 25): ingen åbne (MUST 6-skyderen har forklaringen på samme skærm, indre-værdi har tillæg/fradrag).
 - Test 5 sider × 320/375/1280: 0 fejl, 0 overflow, én h1. Precheck OK. Branch `lane-C` klar til merge. Næste: UX-review 04:00.
+- Coordinator-loop 2026-10-16 02:32:51 CEST: MERGED origin/lane-D (ahead was 10) — precheck+smoke OK, pushed
+
+- Coordinator-loop 2026-10-16 02:32:51 CEST: CONFLICT merge origin/lane-A (ahead 4) — aborted, not pushed
+
+- Coordinator-loop 2026-10-16 02:32:51 CEST: CONFLICT merge origin/lane-E (ahead 8) — aborted, not pushed
+
+- Coordinator-loop 2026-10-16 02:32:52 CEST: CONFLICT merge origin/lane-B (ahead 3) — aborted, not pushed
+
+- Coordinator-loop 2026-10-16 02:32:52 CEST: MERGED origin/lane-C with STATUS-ours resolution (ahead was 12) — pending precheck
+
+- Coordinator-loop 2026-10-16 02:33:44 CEST: MERGED origin/lane-C (ahead was 12) — precheck+smoke OK, pushed
+
+- Coordinator-loop 2026-10-16 02:33:44 CEST: CONFLICT merge origin/lane-X (ahead 8) — aborted, not pushed
+
+- Coordinator-loop 2026-10-16 02:33:44 CEST: MERGED origin/lane-R with STATUS-ours resolution (ahead was 12) — pending precheck

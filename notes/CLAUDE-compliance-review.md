@@ -663,3 +663,179 @@ Ikke juridisk rådgivning. main/docs og Pages er samme build som i cyklus 22–2
 
 ### OK ✅
 - KID-links: risici ×11, invester ×8, sammenlign ×4. "Historisk afkast" står på alle 16 sider undtagen ndi-paa-x. Beholdning pr. 1. jun. 2026. Ingen 1m/3m på PMINDI. Intet benchmark-claim.
+
+## 2026-10-16 02:05 CEST · cyklus 26 (main `90e7de8`, intet docs-delta)
+
+Ikke juridisk rådgivning. main/docs og Pages er uændrede siden cyklus 22. Jeg har kun lavet et for-merge-tjek af lane-commits efter 01:57 (grep af `+`-linjer for rådgivnings- og handelsord, benchmark, 1m/3m, AI-mærkning og omkostninger).
+
+### Lane-grene før merge
+- **lane-X (`b58126a`): MUST 9 er stadig åben.** omkostninger: 2,79 = 0, "kan tabe" = 0, "Ikke et ÅOP" ×8. fakta: 2,79 = 0, "Ikke et ÅOP" ×4, og den nye strip viser "Øvrige løbende 1,49 %" som eneste omkostningstal. Risikoen er, at en læser opfatter 1,49 % som den samlede løbende omkostning, når KID'et siger 2,79 %/2,85 %. Det er værre end i cyklus 25, fordi tallet nu også står på fakta. ndi-paa-x: "kan tabe" er stadig 0 (MUST 3). Badgen `x-curated` "Mads følger" er uændret (`x-feed.js:538`) (MUST 2, delvis).
+- **lane-C (`74e42c4`):** ideer har "Historisk afkast er ikke en pålidelig indikator … kan tabe" (×2) ✅. "Fonden har intet fast benchmark, så grafen står alene" ✅. "AI-udkast og mærket sådan" ✅. Møntspillet er "tænkte tal" og ikke fondens ✅. Ingen rådgivningsord.
+- **lane-A (`2e5fe11`):** Musk-udsagnet er gengivet som "Musks udsagn, ikke NDI's forventning og ikke en prognose", med kilde ✅. Alle nye noter har "ikke en anbefaling/rangering" ✅.
+- **lane-B (`28190f5`):** "Eksponering, ikke anbefaling" står ved temalisten ✅. asOf kommer fra `fund.positionsAsOf` ✅.
+- **lane-D / lane-E:** der er ingen compliance-relevante tekstændringer. MUST 11 (embed uden KID/SRI) er uændret på lane-D.
+- Grep over alle seks grene: **0** "køb/sælg", "sikker/garanti", "bedste", "overvægt", "øger eksponering", "1m/3m", "Nasdaq" og "BREAKING" i nye linjer ✅.
+
+### MUST (åbne på main, uændrede: 1–11 som i cyklus 25)
+Prioritet før merge af lane-X: **9** (KID-tal 2,79 %/2,85 % ved siden af hver postsats, også i fakta-strip) og **3** ("kan tabe" på omkostninger + ndi-paa-x).
+
+## 2026-10-16 02:02 CEST · cyklus 27 (main `69c9033`, intet docs-delta)
+
+Ikke juridisk rådgivning. main/docs er uændrede siden `90e7de8`. Pages blev genudrullet 00:00 GMT og er byte-ens med main på index/invester/omkostninger/selskab. Jeg har lavet et for-merge-tjek af lane-C `c7dae02` og lane-E `1972434`.
+
+### Lane-grene før merge
+- **lane-C (`c7dae02`): lukker MUST 6 (SRI mod simpelt udsving)** ✅. risikoklasse, faq og ordliste siger nu "målt efter KID-metoden" og "et simpelt tal over 30 % betyder ikke i sig selv, at klassen er forkert". Klasse 5 = 20–30 % passer til PRIIPs MRM-intervallet ✅. "Giver ekstra vægt til store fald" er en forenklet, men forsvarlig beskrivelse af Cornish-Fisher-VEV.
+- **lane-C invester «hvem gør hvad»:** fortæller ærligt, at man ejer en andel og ikke aktierne. Den peger på prospektet som "det gældende dokument" ✅. **SHOULD:** at Fundmarket A/S er IFS og Danske Bank A/S er depotbank, er faktuelle påstande om fondens organisation. Verificér mod det gældende prospekt eller KID, før det merges (kilden er angivet som Fundmarkets produktside, 15. okt. 2026). "Holdet bag rådgiver om, hvilke selskaber fonden ejer" er korrekt formuleret som rådgiver, ikke forvalter ✅.
+- **lane-C invester trin 4:** omkostningslinket og "efter løbende omkostninger, før skat" står nu i det samme trin ✅. KID-tallet 2,79 %/2,85 % mangler stadig (MUST 9).
+- **lane-E (`1972434`) Oklo:** begivenheder efter asOf er dateret og markeret "efter beholdningen pr. 1. juni 2026" ✅. Der er kilde-URL'er til tre pressemeddelelser ✅. "ikke en vurdering af aktien" ✅.
+- Grep af `+`-linjer på C og E: alle hits for køb/sælg/anbefal/garanti/sikker står i nægtende eller faktuel sammenhæng ("ikke en anbefaling", "aftalt at sælge medicinforretningen", "sikkerhedsvurdering") ✅. 0 hits for "overvægt", "øger eksponering", 1m/3m og Nasdaq ✅.
+
+### MUST (åbne på main)
+Uændret: 1–11 som i cyklus 25. Efter merge af lane-C forventes **6** lukket. Prioritet: **9** (KID-total 2,79 %/2,85 % på omkostninger, fakta-strip og invester trin 4), **3** ("kan tabe" på omkostninger og ndi-paa-x) og **11** (embed uden KID/SRI).
+
+## 2026-10-16 02:15 CEST · cyklus 28 (main `69c9033`, intet docs-delta)
+
+Ikke juridisk rådgivning. main/docs og Pages er uændrede (Pages 00:00 GMT). Jeg har lavet et for-merge-tjek af lane-E `4ecafbd`/`00c3c32` og lane-D `549158a`.
+
+### Lane-grene før merge
+- **lane-E:** begivenheder efter asOf er dateret og markeret "efter beholdningen" (Solaris/GESA 6. jul., BWXT 3. aug., Oklo 6. aug., Nano Nuclear 23. jun.) ✅. Kilde-URL'er til Tía María og HASTE ✅. Grep af `+`-linjer: "købt GESA", "aftalt at sælge medicinforretningen", "sikkerhedsanalyse" og "sikkerhedsvurdering" er faktuelle virksomhedshandlinger og ikke rådgivning ✅. 0 hits for "overvægt", "øger eksponering", 1m/3m og Nasdaq ✅.
+- **SHOULD (lane-E):** de mange nægtelser ("ikke en mine i drift", "ikke et kraftværk") er ikke et compliance-problem i sig selv. Men gentagne afgrænsninger på en markedsføringsside kan læses som svar på påstande, der aldrig er fremsat. Hold det faktuelt og kortfattet. Et udsagn som "Tilladelser til byggeri er ikke en mine i drift" er korrekt, men skal kunne kildebelægges ordret ("Siden skriver …") ✅.
+- **lane-E nyhedsarkiv:** nye linjer om selskabsbegivenheder efter 1. juni 2026 er nyheder om selskaberne og ikke om fondens handler ✅. Der står intet om, at fonden har købt eller solgt.
+- **lane-D `549158a`:** kun CSS, ingen tekst. MUST 11 (embed uden KID/SRI) er uændret.
+
+### MUST (åbne på main)
+Uændret: 1–11 som i cyklus 25. **6** lukkes ved merge af lane-C. Prioritet: **9** (KID-total 2,79 %/2,85 % på omkostninger, fakta-strip og invester trin 4), **3** ("kan tabe" på omkostninger og ndi-paa-x) og **11** (embed uden KID/SRI).
+
+## 2026-10-16 02:13 CEST · cyklus 29 (main `a34a733`, docs-delta: lane A–E + X merget)
+
+Ikke juridisk rådgivning. Pages (00:09:59 GMT) svarer til main `a34a733`. Jeg har kørt Playwright live ved 375 px (37 URL'er) og grep i docs/ efter merge.
+
+### Status pr. MUST
+1. **Mærkning "markedsføringsmateriale":** 0 hits i docs/. **Åben.**
+2. **"Mads følger" / tredjepartsopslag: skærpet.** X-panelet står nu også på `tema.html` (alle temaer) og `selskab.html`. Det er ikke længere kun ndi-paa-x. SoftBank viser to @BullTheoryio-opslag med "BREAKING:" (kapitalrejsning på 100 mia. $, garanti på 250 mia. $) og badgen "MADS FØLGER". tema energi/chips viser @FundaAI om "repricing of credit risk" for ORCL/CRWV/SoftBank, der er "Vist fordi: CRWV". "Ikke NDI's holdning" står der ✅. Men tredjepartsrygter om navngivne beholdninger ved siden af fondens vægt, med en badge der knytter dem til forvalterens rådgiver, kan læses som kurateret markedskommentar. Det gælder særligt i lyset af reglerne om markedsmisbrug/investeringsanbefalinger (MAR art. 20). **Anbefaling før næste demo:** fjern X-panelet fra tema/selskab, eller fold det sammen, fjern "MADS FØLGER"-badgen og filtrér "BREAKING"-opslag fra. Cyklus 26 talte "BREAKING" = 0 på grenene, men det er kommet med i merge `a34a733`/`688dc82`.
+3. **"kan tabe":** omkostninger 0, ndi-paa-x 0. **Åben.** omkostninger har "historisk afkast"-linjen (1) men ikke tabsrisikoen. ndi-paa-x har ingen af dem.
+4. **PMINDIAKK før 12 mdr.:** ingen afkasttal ✅ ("Vises efter 12 måneder fra 5. dec. 2026"). NAV 98,40 står på `?view=fonden&fund=PMINDIAKK` og sammenlign. Et NAV-niveau er ikke et afkast, men en læser kan regne −1,6 % ud. **Christians beslutning.** Jeg anbefaler at beholde NAV med "første NAV" og datoen ved siden af, eller fjerne det til 12 mdr.
+5. **ÅTD "afventer Fundmarket-godkendelse":** står stadig på `?view=fonden` (ÅTD +4,0 % og 100.000 kr.-eksempel). **Åben.** Vis ikke tal, der ikke er godkendt.
+6. **SRI mod udsving:** lukket med lane-C ✅ (risikoklasse: "målt efter KID-metoden").
+7. **`chartMarkers` med @MadsC007:** "Udvalgte X-markører er offentl…" står stadig i grafen på fonden. **Åben** (som cyklus 25).
+8. **Offentligt repo:** Christians beslutning, uændret.
+9. **KID-omkostningstotal 2,79 %/2,85 %:** 0 hits i docs/ og live. **Åben, højeste prioritet** for persona familiekontor. Omkostninger har "ÅOP"/"løbende omkostninger" ×9, men intet samlet KID-tal.
+10. **Delperioder som år:** delvis lukket ✅. Årstabellen siger "2023 delår" (22. sep.–31. dec. 2023), og chippen er "2023*". ÅTD 2026 står stadig som "2026"-chip uden "delår". **SHOULD**, ikke længere MUST.
+11. **Embed uden KID/SRI:** `embed/chart.html` har "kan tabe" ✅ og "historisk" ✅, men KID-link = 0 og SRI = 0. **Åben.** Et embed, der deles ud af konteksten, er det stykke markedsføring, der mest har brug for KID-henvisningen.
+
+### Nyt på main efter merge: OK ✅
+- `laer/indre-vaerdi.html` og `laer/laes-grafen.html`: tænkte tal, "historisk afkast er ikke en pålidelig indikator", "intet fast benchmark", "efter løbende omkostninger, før skat og dine egne handelsomkostninger". Ingen rådgivningsord.
+- "overvægt" ×5 står alle i nægtende/forklarende form ("ikke bevidste overvægte og ikke anbefalinger") ✅. Ingen "øger eksponering".
+- 0 hits for "Nasdaq", "garanter", "bedste", "sælg " og "købe nu" i docs/ ✅. Ingen 1m/3m på PMINDI (embed/chart.js siger eksplicit "Aldrig 1 md / 3 md") ✅.
+- Beholdning pr. 1. jun. 2026 "(forsinket)" står på tema, portefølje og fonden ✅. Hændelser efter asOf er daterede (lane-E) ✅.
+- AI-mærkning: SoftBank ×10, ndi-perspektiv ×667, risici ×1 ✅.
+- invester «hvem gør hvad» er merget. Verifikation af IFS/depotbank mod prospektet står stadig som SHOULD (cyklus 27).
+
+### Prioritet
+**2** (X-panel på produktsider, ny flade) → **9** (KID-total) → **5** (ÅTD uden godkendelse) → **3** ("kan tabe" på omkostninger/ndi-paa-x) → **11** (embed KID/SRI) → **1** (mærkning).
+
+## 2026-10-16 02:17 CEST · cyklus 30 (main `e402f15`, docs-delta)
+
+Ikke juridisk rådgivning. Pages (00:15:49 GMT) = main `e402f15`. Jeg har kørt Playwright live ved 375 på 24 URL'er med tekst-tælling og grep i docs/.
+
+### Status pr. MUST
+1. **"Markedsføringsmateriale"-mærkning:** 0 hits på alle 24 sider. **Åben.**
+2. **Tredjepartsopslag / "MADS FØLGER": uændret på tema/selskab og nu også på fonden.** SoftBank-selskabssiden har "MADS FØLGER" ×3 + 2× "BREAKING" (@BullTheoryio). tema energi har "MADS FØLGER" ×2. ndi-paa-x har ×10. **Nyt:** `chartMarkers` i `x-posts.json` er skiftet fra @MadsC007 til bl.a. @BullTheoryio-opslag med "BREAKING". De vises under fondens hovedgraf på `?view=fonden` (BREAKING ×2). Det betyder, at tredjepartsrygter om navngivne beholdninger (SoftBank-kapitalrejsning, Nvidia-garanti) nu står direkte ved fondens afkastgraf. **Højeste prioritet.** Begræns grafmarkører til NDI's egne konti, og fjern "BREAKING"/"MADS FØLGER" fra produktsider.
+3. **"kan tabe":** omkostninger 0, ndi-paa-x 0 (live re-verificeret). **Åben.** Entré-kortet lover "du kan tabe penge" på omkostninger, men siden har det ikke.
+4. **PMINDIAKK før 12 mdr.:** ingen afkasttal ✅. NAV-niveau er uændret og afventer Christians beslutning.
+5. **ÅTD +4,0 % og 100.000 kr.-eksempel "afventer Fundmarket-godkendelse"** står stadig på fonden (ÅTD ×4). **Åben.**
+6. SRI mod udsving: lukket ✅.
+7. **`chartMarkers` @MadsC007:** fjernet ✅, men erstattet af et værre problem (se 2).
+8. Offentligt repo: Christians beslutning.
+9. **KID-omkostningstal: regression i præsentation.** fakta viser nu "KID'ets årlige omkostningsmæssige konsekvens er **ikke oplyst** for PMINDI og **ikke oplyst** for PMINDIAKK ved 5 år", fordi `costs.kidRiy5y` mangler i `fund-facts.json`. Det er faktuelt forkert (KID'et oplyser 2,79 %/2,85 %) og kan læses som manglende PRIIP-oplysning. omkostninger.html er uændret: 0 hits for 2,79/2,85, og ankret `#kid-omkostning` findes ikke. `HANDOFF-CODEX.md` påstår, at "KID RIY på omkostninger" er landet. **Det er ikke sandt på main.** Ret data og omkostningssektion, eller fjern fakta-boksen, indtil tallet er der.
+10. Delperioder: "2023*" med "delår" ✅. "2026"-chip og ÅTD er stadig delår uden mærkning (SHOULD).
+11. **Embed uden KID/SRI:** KID-links 0. **Åben.**
+
+### Nyt OK ✅
+- "Største fald" i stedet for "Max drawdown" på fonden og fakta. AI-badge vises kun ved tekst (selskab). Der er ikke længere en tom "AI-udkast" ✅.
+- Benchmark: "Fonden har intet fast benchmark. Vi tegner ikke en sammenligningskurve (fx Nasdaq)" ✅ (ingen benchmark-claim). **SHOULD:** "det er en compliance-beslutning" er intern begrundelse på en kundeside. Fjern halvdelen.
+- "Sådan kan du selv vurdere afkastet +104,8 %" henviser til største fald, risici og horisont. Der er intet rådgivningssprog ✅.
+- 0 hits for "overvægt" i handelsbetydning, "øger eksponering", 1m/3m på PMINDI, "garanteret", "bedste" og "sælg nu" ✅. Beholdning pr. 1. jun. 2026 (forsinket) står på selskab, portefølje og fonden ✅.
+
+### Prioritet
+**2** (X-tredjepart ved fondens graf + produktsider) → **9** (fakta "ikke oplyst" + manglende KID-tal på omkostninger) → **5** (ÅTD uden godkendelse) → **3** → **11** → **1**.
+
+## 2026-10-16 02:24 CEST · cyklus 31 (main `3e4ec15`, docs-delta `5843694`)
+
+Ikke juridisk rådgivning. Pages (00:15:49 GMT) = `e402f15`, og `5843694` er ikke live endnu. Status nedenfor gælder **main** (lokal Playwright ved 375 + grep). Jeg har krydstjekket KID-tal mod Fundmarket-PDF'erne.
+
+### Status pr. MUST
+1. **"Markedsføringsmateriale"-mærkning:** kun ndi-paa-x ("NDI-konti er markedsføring/udkast"). Fonden, fakta og omkostninger har 0. **Åben.**
+2. **Tredjepartsopslag på produktsider: delvis.** "MADS FØLGER" → "Fulgt konto"/"Konti NDI følger" ✅ (fjerner koblingen til forvalterens rådgiver). Men `chartMarkers` viser stadig @BullTheoryio "BREAKING: SoftBank … $100 billion" og @MilkRoadAI under fondens afkastgraf. SoftBank-selskabssiden har 2 × "BREAKING" og @FundaAI "repricing of credit risk" ved siden af fondens beholdning. **Åben, højeste prioritet.** Grafmarkører kun fra @InvestNewdeal. Ingen tredjepartsrygter om navngivne beholdninger på selskab/tema (MAR art. 20-hensyn, som i cyklus 29).
+3. **"kan tabe":** omkostninger (lede, footer, warn) ✅ og ndi-paa-x (snap-bånd, footwarn, footer) ✅. **Lukket på main** (live efter Pages).
+4. PMINDIAKK før 12 mdr.: ingen afkast ✅. NAV-niveau afventer Christians beslutning.
+5. **ÅTD +4,0 % og 100.000 kr.-eksempel "afventer Fundmarket-godkendelse"** står stadig på fonden (sætningen er synlig for kunden). **Åben.** Vis ikke tal, der eksplicit afventer godkendelse. Skjul dem, eller få godkendelsen.
+6. SRI mod udsving: lukket ✅.
+7. @MadsC007-chartMarkers: lukket ✅ (se 2 for erstatningen).
+8. Offentligt repo: Christians beslutning.
+9. **KID-omkostningsindikator: lukket ✅.** omkostninger `#kid-omkostning` og fakta viser 2,79 %/2,85 % (5 år) og 2,63 %/2,71 % (1 år). Det stemmer med KID-PDF'erne (priip_ipm140b og priip_ipm145b, "Årlig omkostningsmæssig konsekvens"), og der er link til begge KID'er. Det står eksplicit, at postsatser ≠ ÅOP og ikke er et billigere alternativ. **SHOULD:** sætningen "det tal, marketingmateriale skal gengive ærligt" er intern compliance-begrundelse på en kundeside. Fjern den. **SHOULD:** fakta-opsummeringen øverst nævner kun 1,49 % (postsats). Sæt KID-tallet først for konsistens (ESMA-retningslinjerne for markedsføring: omkostninger må ikke fremstilles lavere end i KID).
+10. Delperioder: "2023 delår" ✅. "2026"/ÅTD er delår uden mærkning (SHOULD).
+11. **Embed (`embed/chart.html`):** "kan tabe" ✅ og "historisk" ✅, men KID-link 0 og SRI 0. **Åben.**
+
+### Nyt
+- **SHOULD:** `x-posts.json` har et opslag med `complianceNote: "Omskrevet i snapshot"`. Et omskrevet opslag, der vises som opslagets tekst med "Åbn på X ↗", er ikke en tro gengivelse. Marker "omskrevet/resumé" i UI'et, eller brug originalteksten.
+- **SHOULD:** fonden siger "seneste offentlige kvartalsrapport" om beholdningen, men om-data siger, at 1. juni ikke er et kvartalsskifte. Hold forsinkelsesformuleringen ens ("forsinket snapshot pr. 1. jun. 2026").
+- Beholdning asOf: alle beholdningsfiler har 2026-06-01 ✅. Afkast er pr. 14./15. okt. 2026 ✅. Ingen live-handler.
+- 0 hits for "øger eksponering", "garanteret", "sikker investering", "køb nu"/"sælg nu" og "bedste". "overvægt" står kun i nægtende form ✅. "anbefal…" står kun som "ikke en anbefaling" eller "KID anbefaler 5 år" ✅. Ingen 1m/3m på PMINDI ✅. Nasdaq nævnes kun som "vi tegner ikke en sammenligningskurve (fx Nasdaq)" og i @InvestNewdeal-børsnoteringsopslaget ✅.
+- AI-mærkning: uændret ✅ (ndi-perspektiv og selskab "AI-udkast" kun ved tekst).
+
+### Prioritet
+**2** (tredjeparts-"BREAKING" ved fondens graf + SoftBank) → **5** (ÅTD "afventer godkendelse" vist) → **11** (embed KID/SRI) → **1** (mærkning) → SHOULD: intern "marketingmateriale"-sætning, fakta-opsummering med KID først.
+
+## 2026-10-16 02:40 CEST · cyklus 32 (main `3e4ec15`, live = main)
+
+Ikke juridisk rådgivning. Jeg har kørt live ved 375 på 22 sider og grep efter rådgivnings-/handelsord. Alle hits på "anbefal*", "sælg", "overvægt" og "Anbefalet" er negationer ("ikke en anbefaling", "ikke bevidste overvægte", "ingen anbefaling om at købe eller sælge"), KID-termer ("Anbefalet ejertid/investeringsperiode 5 år") eller forretningsbeskrivelser ("sælger telefoner"). Ingen "øger eksponering", "garanteret", "sikkert" eller "bedste tip" ✅.
+
+### MUST (blocker)
+1. **Tredjeparts-X-opslag med "BREAKING" på fondens produktside og SoftBank-siden** (åben fra cyklus 30/31). @BullTheoryio og @MilkRoadAI vises under fondens hovedgraf. Ved markedsføring af en konkret fond kan kuraterede tredjepartsnyheder om porteføljeselskaber læses som markedsføringsbudskab, som NDI står inde for. Overskriften "ikke NDI's holdning" ændrer ikke på, at NDI har valgt dem. **Ret:** kun NDI-egne konti i `chartMarkers`. På selskab/tema skal panelet foldes sammen og "BREAKING" filtreres fra.
+2. **Nyhedsarkiv mangler tabsadvarsel** (0 hits på "tabe"/"kan falde"). Siden har "Historisk afkast er ikke en pålidelig indikator" og "Ikke rådgivning", men ikke "Du kan tabe en del af eller hele din investering". Alle andre 21 testede sider har den nu ✅. Tilføj standardlinjen i footeren.
+
+### SHOULD
+- Fonden: "det er en compliance-beslutning, ikke et datamangel" (`js/app.js:414`). Internt sprog, og det fremhæver Nasdaq som det implicitte sammenligningsgrundlag. Skriv: "Fonden har intet fast benchmark, så vi tegner ingen sammenligningskurve."
+- Fonden: "seneste offentlige kvartalsrapport" passer ikke med om-data (snapshot pr. 1. jun. 2026 er ikke kvartalsskifte). Det er en præcisionsfejl i beholdningsforsinkelses-oplysningen.
+- Omkostninger: "marketingmateriale skal gengive ærligt" og "Tomme felter = udfyldes af NDI" er interne compliance-noter på en kundeside.
+
+### Tjekliste (live)
+- Ikke-rådgivning / generel information: ✅ på alle 22 sider.
+- Tabsadvarsel synlig: ✅ 21/22 (nyhedsarkiv ✗).
+- Historisk afkast ≠ fremtid: ✅ 22/22.
+- KID/PRIIP-links + SRI 5/7 (KID 14. aug. 2026) ✅. Omkostningsindikator (RIY) 2,79/2,85 % ved 5 år er vist og matcher KID (verificeret i cyklus 31) ✅. ÅOP er bevidst ikke vist, og det er forklaret ("ikke et ÅOP") ✅.
+- Beholdning forsinket: `portfolio.json`, `value-chains.json` og `multi-tags.json` asOf 2026-06-01 ✅ (≤ 2026-06-01). Ingen live handler.
+- PMINDI: ingen 1m/3m-chips ✅. PMINDIAKK: "Afkast vises efter 12 måneder" (cyklus 29) ✅. Nasdaq nævnes kun negativt ("vi tegner ikke … fx Nasdaq") ✅. Se SHOULD om formulering.
+- AI-mærkning: "AI-udkast"-badge på selskabs-/perspektivtekster ✅. Risici har "Tekst markeret AI-…" ✅.
+- Ingen trading-sprog fra Mads-ugebreve ✅.
+
+## 2026-10-16 02:31 CEST · cyklus 33 (main `3e4ec15`, live = main, intet docs-delta)
+
+Ikke juridisk rådgivning. Live ved 375 på 21 URL'er plus kontekst-grep af alle hits på rådgivnings- og handelsord. Alle "anbefal*/overvægt/køb/sælg/eksponering" er negationer ("ikke en anbefaling", "ikke bevidste overvægte", "ikke som købsanbefaling") eller procesbeskrivelser (invester: "hvordan man typisk køber andele … Ikke rådgivning om, om du bør"). Ingen "øger eksponering", "garanteret" eller "bedste tip". "sikkert" står kun som "vinderne kan ikke udpeges sikkert" ✅.
+
+### MUST (blocker)
+1. **Tredjeparts-"BREAKING" ved fondens afkastgraf og på SoftBank** (åben siden cyklus 30). Der er nu 2 × @BullTheoryio under fondens graf: SoftBank-kapitalrejsning på $100 mia. og Nvidia-backstop på $250 mia. for OpenAI. SoftBank-siden mærker Nvidia/OpenAI-opslaget "DIREKTE TRÆF · Vist fordi: SoftBank", så NDI aktivt kobler et rygte til en beholdning. **Ret:** `chartMarkers` → kun NDI-egne konti. Fjern eller fold tredjepartspanelet på selskab/tema (MAR art. 20-hensyn, jf. cyklus 29).
+2. **Nyhedsarkiv mangler tabsadvarsel** (åben fra cyklus 32). Tilføj "Du kan tabe en del af eller hele din investering".
+3. **ÅTD +4,0 % "afventer Fundmarket-godkendelse"** står stadig synligt på fonden. **Nyt:** periode og embed viser det samme ÅTD **uden** forbeholdet. Enten er tallet godkendt, og så skal forbeholdet væk, eller også er det ikke, og så skal det væk alle tre steder.
+
+### SHOULD
+4. **Delperioder på `periode.html`:** "2023: +16,7 %" (22.9.–31.12.2023) står som helt kalenderår uden "delår", selvom fonden er rettet (cyklus 29). "2026"/"YTD" er også delår. Jf. MiFID-delegeret forordning 2017/565 art. 44(4): historiske resultater for hele 12-månedersperioder. Mærk "delår" som på fonden.
+5. **Embed (`embed/chart.html`)** har stadig 0 KID-links, ingen SRI og ingen "markedsføringsmateriale". Den viser CAGR +26,4 % over 3,1 år (åben siden cyklus 24).
+6. **Periode** mangler KID-link, SRI og "ikke rådgivning". Den har kun den korte tabslinje. Siden kan nås direkte (fra kort), så den er en selvstændig side med afkasttal.
+7. Fra cyklus 32: "compliance-beslutning, ikke et datamangel" (fonden, Nasdaq). "kvartalsrapport" vs. snapshot pr. 1. jun. 2026. Interne noter på omkostninger.
+8. "Markedsføringsmateriale"-mærkning: kun på ndi-paa-x (uændret).
+
+### Tjekliste (live)
+- Ikke-rådgivning: ✅ på alle produktsider (periode/drawdown/embed har kun tabs- og historiklinjen).
+- Tabsadvarsel: ✅ 20/21 (nyhedsarkiv ✗).
+- Historisk afkast ≠ fremtid: ✅ 21/21.
+- KID/SRI 5/7: ✅ fonden, portefølje, risici, fakta, omkostninger, sammenlign, selskab, tema. ✗ embed, periode, drawdown.
+- Omkostninger: KID-RIY 2,79 %/2,85 % (5 år) live på fakta og omkostninger ✅. ÅOP er forklaret som ikke-ÅOP ✅. Persona- og FO-MUST er dækket.
+- Beholdning forsinket pr. 1. jun. 2026 ✅ (portefølje, SoftBank, vaerdikaeder, temaer). Ingen live-handler.
+- PMINDIAKK (`?fund=PMINDIAKK`): ingen afkasttal, "kan tabe" ×3 ✅. PMINDI: ingen 1m/3m ✅ (udforsk-hit på "3m" er et ISIN-fragment). Nasdaq kun som "vi tegner ikke …" og Nasdaq Copenhagen-notering ✅.
+- AI-mærkning: SoftBank "AI-udkast" ×9 ✅. vaerdikaeder "Tekst inspireret af NDI ugebreve / Vidensbot" ✅.
+- Ingen Mads-trading-sprog ✅.
+
+### Prioritet
+**1** (BREAKING + "Vist fordi: SoftBank") → **3** (ÅTD-forbehold inkonsistent på 3 sider) → **2** (nyhedsarkiv-tab) → **4/5/6** (periode/embed delår + KID).
