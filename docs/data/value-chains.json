@@ -182,7 +182,7 @@
           "id": "datacenter",
           "icon": "▣",
           "label": "Datacentre og køling",
-          "blurb": "Datacentret er fabrikken, hvor strøm bliver til compute. Det kræver byggeri, strømfordeling, køling, jord og tilladelser.",
+          "blurb": "Datacentret er fabrikken, hvor strøm bliver til compute, altså regnekraft. Det kræver byggeri, strømfordeling, køling, jord og tilladelser.",
           "ndi": "NDI ser dette led som en mulig flaskehals — \"anden flaskehals: datacentre\".",
           "themes": [
             "physical",
@@ -240,7 +240,7 @@
           "id": "chipdesign",
           "icon": "◇",
           "label": "Chipdesign (GPU, XPU og CPU)",
-          "blurb": "Her designes de processorer, der regner AI-modellerne. Mange designere ejer ingen fabrik (fabless) og får chips produceret hos andre.",
+          "blurb": "Her designes de processorer, der regner AI-modellerne: grafikchips (GPU), specialchips (XPU) og almindelige processorer (CPU). Mange designere ejer ingen fabrik (fabless) og får chips produceret hos andre.",
           "ndi": "Halvledere er \"tredje flaskehals\". Fokus på AI XPU'er og CPU'er.",
           "themes": [
             "chips"
@@ -412,7 +412,7 @@
           "icon": "▤",
           "label": "Hukommelse",
           "blurb": "AI-modeller skal have data tæt på processoren. Højbåndbreddehukommelse (HBM) er blevet en af de mest efterspurgte komponenter.",
-          "ndi": "NDI ser begyndende flaskehalse i hukommelse og optisk connectivity.",
+          "ndi": "NDI ser begyndende flaskehalse i hukommelse og i de optiske forbindelser mellem chips.",
           "themes": [
             "chips"
           ],
@@ -468,7 +468,7 @@
           "id": "optics",
           "icon": "◑",
           "label": "Optik og netværk",
-          "blurb": "Data skal flyttes hurtigt mellem tusindvis af chips. Det sker med switches, lasere og glasfiber, og i stigende grad med lys i stedet for kobber.",
+          "blurb": "Data skal flyttes hurtigt mellem tusindvis af chips. Det sker med netværksudstyr (switches), lasere og glasfiber, og i stigende grad med lys i stedet for kobber.",
           "ndi": "Et af de vigtigste fokusområder i 2026 med begyndende flaskehalse.",
           "themes": [
             "connect"
@@ -525,7 +525,7 @@
           "id": "servers",
           "icon": "▤",
           "label": "Serverinfrastruktur",
-          "blurb": "Servere, racks og strømforsyninger, der samler chips, hukommelse og netværk til færdige AI-systemer.",
+          "blurb": "Servere, serverskabe (racks) og strømforsyninger, der samler chips, hukommelse og netværk til færdige AI-systemer.",
           "ndi": "Nævnt som del af halvlederflaskehalsen.",
           "themes": [
             "compute",
@@ -757,7 +757,7 @@
           "icon": "◎",
           "label": "Forbrugerapplikationer og agentisk AI",
           "blurb": "AI-assistenter og agenter, der selv udfører opgaver for mennesker og virksomheder.",
-          "ndi": "Efterspørgslen efter compute kommer i stigende grad herfra. Fase 2: copilots.",
+          "ndi": "Efterspørgslen efter compute kommer i stigende grad herfra. Fase 2 hos NDI er copilots: AI-hjælpere inde i de programmer, man allerede bruger.",
           "themes": [
             "software",
             "platforms"
@@ -879,8 +879,8 @@
           "id": "components",
           "icon": "⚙",
           "label": "Komponenter",
-          "blurb": "Sensorer, motorer, effektelektronik og batterier til robotter og autonome systemer.",
-          "ndi": "Bred eksponering i microchips, software, simulering, automatisering og robotisering.",
+          "blurb": "Sensorer, motorer, elektronik der styrer strømmen, og batterier til robotter og autonome systemer.",
+          "ndi": "Bred eksponering i mikrochips, software, simulering, automatisering og robotisering.",
           "themes": [
             "physical",
             "chips",
@@ -2164,7 +2164,7 @@
           "icon": "⚛",
           "label": "Kvantecomputing",
           "blurb": "Computere, der bruger kvantefysik til at løse bestemte typer problemer langt hurtigere. Teknologien er stadig tidlig.",
-          "ndi": "Nævnt som accelererende segment med politisk medvind og høj volatilitet — og som eksempel på teknologier med usikre indtægter.",
+          "ndi": "Nævnt som accelererende segment med politisk medvind og store udsving i kurserne — og som eksempel på teknologier med usikre indtægter.",
           "themes": [
             "quantum"
           ],
