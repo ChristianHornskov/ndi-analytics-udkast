@@ -1759,19 +1759,27 @@
   "US74164F1030": {
    "name": "Primoris Services",
    "theme": "physical",
-   "summary": "Bygger infrastruktur til el, energi og rørledninger.",
-   "watch": "Ordrer på anlæg og udførelse af projekterne.",
-   "source": "https://www.primoriscorp.com/",
-   "products": "Anlægsarbejde på energiinfrastruktur.",
-   "customers": "Elselskaber, energiselskaber og industri.",
-   "role": "Bygger infrastrukturen. Ejer den ikke.",
+   "summary": "Bygger elnet, rørledninger og infrastruktur frem til datacentre. Selskabet skriver, at rødderne går tilbage til ARB i Bakersfield i 1960, og at Primoris blev dannet i 2004. Det producerer ikke strømmen.",
+   "watch": "Om arbejdet er byggeri. Teksten beskriver ikke ejerskab af strømmen eller af datacentret.",
+   "source": "https://www.prim.com/about/history",
+   "products": "Byggeri af elnet, rørledninger og anlæg. Også infrastruktur frem til datacentre. Ikke selve strømmen.",
+   "customers": "Elselskaber, energiselskaber og industri. Ikke ejer af datacentret i denne tekst.",
+   "role": "Bygger nettet og infrastruktur frem til datacentre. Ejer ikke strømmen.",
    "narrative": [
-    "Primoris bygger infrastruktur til el, energi og rørledninger.",
-    "Selskabet producerer ikke selv strømmen. I kæden står det på elnet."
+    "Primoris skriver, at rødderne går tilbage til 1960 og stiftelsen af ARB, Inc. i Bakersfield i Californien, et selskab, der bygger rørledninger. Primoris blev dannet i 2004 som moderselskab. Siden om datacentre skriver, at selskabet planlægger, bygger og forbinder infrastruktur til gas, sol og batterilagring og til strøm frem til datacentre. Det ejer ikke strømmen og ikke datacentret.",
+    "I kæden står selskabet på elnet. Domænet primoriscorp.com peger den 16. oktober 2026 videre til prim.com."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets side",
+     "label": "Historie",
+     "url": "https://www.prim.com/about/history"
+    },
+    {
+     "label": "Datacentre",
+     "url": "https://www.prim.com/capabilities/data-centers"
+    },
+    {
+     "label": "Tidligere domæne, videresender",
      "url": "https://www.primoriscorp.com/"
     }
    ]

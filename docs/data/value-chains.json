@@ -1308,7 +1308,7 @@
           "id": "grid",
           "icon": "⌒",
           "label": "Elnet, transformere og transmission",
-          "blurb": "Strømmen skal fra kraftværk til datacenter. Det kræver ledninger, transformerstationer og selskaber, der bygger og udstyrer nettet. Quanta, Primoris og MYR Group bygger nettet. De producerer ikke strømmen. MYR skriver, at arbejdet også dækker kommercielle og industrielle anlæg og vedvarende energi. GE Vernova leverer udstyr og driver ikke værkerne. Solaris leverer strøm tæt på store forbrugere. Selskabet skrev 6. juli 2026, at det har købt GESA. Det er efter beholdningen og er service, ikke et kraftværk i drift.",
+          "blurb": "Strømmen skal fra kraftværk til datacenter. Det kræver ledninger, transformerstationer og selskaber, der bygger og udstyrer nettet. Quanta, Primoris og MYR Group bygger nettet. De producerer ikke strømmen. MYR skriver, at arbejdet også dækker kommercielle og industrielle anlæg og vedvarende energi. Primoris skriver, at rødderne går tilbage til ARB i Bakersfield i 1960, og at selskabet også bygger infrastruktur frem til datacentre. Det ejer ikke strømmen og ikke datacentret. GE Vernova leverer udstyr og driver ikke værkerne. Solaris leverer strøm tæt på store forbrugere. Selskabet skrev 6. juli 2026, at det har købt GESA. Det er efter beholdningen og er service, ikke et kraftværk i drift.",
           "ndi": "NDI har skrevet om mangel på transformere, køling og transmissionskapacitet (ugebrev 10. august 2026). Køling hører med i flaskehalsen. Selskaber, der alene laver ventilation, står ikke på dette led.",
           "themes": [
             "energy",
@@ -1331,7 +1331,7 @@
               "w": 0.28,
               "sym": "PRIM",
               "forslag": true,
-              "role": "Bygger infrastruktur til el, energi og rør"
+              "role": "Bygger nettet og infrastruktur frem til datacentre. Ejer ikke strømmen."
             },
             {
               "isin": "US74762E1029",

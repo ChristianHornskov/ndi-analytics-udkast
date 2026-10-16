@@ -949,3 +949,13 @@ Tallet er selskabets eget design, ikke et anlæg i drift. Alternativet er 822 MW
 Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. 390 MWe står. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `09ac89c` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 02:36 CEST. Primoris skriver, at rødderne går tilbage til ARB i Bakersfield i 1960. Ikke færdig.**
+
+Primoris blev dannet i 2004. Siden om datacentre beskriver byggeri af infrastruktur, ikke ejerskab af strømmen eller af datacentret. Domænet primoriscorp.com peger videre til prim.com. Top five, largest og premier er ikke taget med. Ingen `reviewedAt`. Blurben under elnet og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Bakersfield står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `85fffbd` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
