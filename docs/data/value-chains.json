@@ -1089,8 +1089,8 @@
           "id": "gen",
           "icon": "⚡",
           "label": "Elproduktion",
-          "blurb": "Gas, sol, vind, gasturbiner og kraftværker, også anlæg tæt på datacentre. Listen er selskaber, der producerer strøm, leverer brændsel til produktionen eller laver udstyret. NextEra skriver, at en effektudvidelse på St. Lucie, Turkey Point og Point Beach blev færdig i 2013 og omfattede seks atomkraftenheder. Det er ikke et nyt værk. Southern skriver, at Plant Vogtle har fire enheder i drift og leverer strøm til mere end 1 million hjem og virksomheder i Georgia. Siden daterer ikke tallet. Det er ikke en lille reaktor under udvikling. Comstock, Antero, EQT og Expand leverer gas som brændsel. Comstock skriver, at jordpositionen i Western Haynesville i det østlige Texas er mere end 535.000 netto-acres, og at gasproduktionen er certificeret efter MiQ-standarden. Siden daterer ikke tallet. Det er brændsel, ikke en mine. Antero skriver, at det leverer naturgas og LPG til eksport. EQT skriver, at købet af Equitrans Midstream blev gennemført 22. juli 2024. Expand Energy skrev 16. september 2026, at handlen med Twin Eagle er gennemført. Det er efter beholdningen. Twin Eagle er et marketingselskab, ikke en mine. T1 Energy laver solcellemoduler. Cummins skriver, at forretningen er delt i komponenter, motorer, distribution, kraftsystemer og Accelera. Det er ikke et elselskab. Generac skriver, at det laver reservegeneratorer til hjemmet, bærbare generatorer, sol og batterilagring og ladere til elbiler. Ingen af dem er elselskaber. Babcock & Wilcox leverer kedler og service. GE Vernova skriver, at gassiden viser turbinerne 9HA, 7HA og LM2500, og at dampkraft til atomkraft understøtter mere end 80 anlæg i Amerika. Cirka 85 GW er den installerede base hos selskabet og hos andre leverandører. Selskabet driver ikke værkerne. Bloom skrev 1. april 2025, at cellerne skal bruges på Conagras fabrikker i Troy og Archbold i Ohio. Det er en aftale, og teksten siger ikke, at cellerne allerede kører. Plug skrev 22. april 2026, at anlægget i St. Gabriel i Louisiana har lavet flydende brint siden 23. april 2025. Det er et fælles anlæg med Olin og ligger før beholdningen. Det er ikke et elselskab, og teksten siger ikke, at hvert anlæg kører. Solaris skrev 6. juli 2026, at det har købt GESA. Det er efter beholdningen og er service, ikke et kraftværk i drift. Talen skriver, at flåden også har kul, naturgas og olie. Brandon Shores var planlagt lukket 1. juni 2025 og kører videre efter en pålidelighedsaftale. Det er ikke en lille reaktor under udvikling.",
-          "ndi": "NDI har skrevet om gas, gasturbiner, sol, vind og producenter tæt på datacentre (ugebrev 30. marts 2026). CoreWeave, Nebius og IREN er med i energitemaet som datacentre. De står ikke her. ProPetro skriver, at arbejdet er trykpumpning i Permian-bassinet. Det er service til boringer og står ikke her.",
+          "blurb": "Gas, sol, vind, gasturbiner og kraftværker, også anlæg tæt på datacentre. Listen er selskaber, der producerer strøm, leverer brændsel til produktionen eller laver udstyret. NextEra skriver, at en effektudvidelse på St. Lucie, Turkey Point og Point Beach blev færdig i 2013 og omfattede seks atomkraftenheder. Det er ikke et nyt værk. Southern skriver, at Plant Vogtle har fire enheder i drift og leverer strøm til mere end 1 million hjem og virksomheder i Georgia. Siden daterer ikke tallet. Det er ikke en lille reaktor under udvikling. Comstock, Antero, EQT og Expand leverer gas som brændsel. Comstock skriver, at jordpositionen i Western Haynesville i det østlige Texas er mere end 535.000 netto-acres, og at gasproduktionen er certificeret efter MiQ-standarden. Siden daterer ikke tallet. Det er brændsel, ikke en mine. Antero skriver, at det leverer naturgas og LPG til eksport. EQT skriver, at købet af Equitrans Midstream blev gennemført 22. juli 2024. Expand Energy skrev 16. september 2026, at handlen med Twin Eagle er gennemført. Det er efter beholdningen. Twin Eagle er et marketingselskab, ikke en mine. T1 Energy laver solcellemoduler. Cummins skriver, at forretningen er delt i komponenter, motorer, distribution, kraftsystemer og Accelera. Det er ikke et elselskab. Generac skriver, at det laver reservegeneratorer til hjemmet, bærbare generatorer, sol og batterilagring og ladere til elbiler. Ingen af dem er elselskaber. Babcock & Wilcox leverer kedler og service. GE Vernova skriver, at gassiden viser turbinerne 9HA, 7HA og LM2500, og at dampkraft til atomkraft understøtter mere end 80 anlæg i Amerika. Cirka 85 GW er den installerede base hos selskabet og hos andre leverandører. Selskabet driver ikke værkerne. Bloom skrev 1. april 2025, at cellerne skal bruges på Conagras fabrikker i Troy og Archbold i Ohio. Det er en aftale, og teksten siger ikke, at cellerne allerede kører. Plug skrev 22. april 2026, at anlægget i St. Gabriel i Louisiana har lavet flydende brint siden 23. april 2025. Det er et fælles anlæg med Olin og ligger før beholdningen. Det er ikke et elselskab, og teksten siger ikke, at hvert anlæg kører. Solaris skrev 6. juli 2026, at det har købt GESA. Det er efter beholdningen og er service, ikke et kraftværk i drift. Talen skriver, at flåden også har kul, naturgas og olie. Brandon Shores var planlagt lukket 1. juni 2025 og kører videre efter en pålidelighedsaftale. Det er ikke en lille reaktor under udvikling. Vistra skrev 9. januar 2026, at aftaler med Meta dækker 2.176 MW atomkraft i drift og 433 MW øget effekt på Perry, Davis-Besse og Beaver Valley. Det er ikke en ny reaktor. Leverancerne begynder sent i 2026, efter beholdningen.",
+          "ndi": "NDI har skrevet om gas, gasturbiner, sol, vind og producenter tæt på datacentre (ugebrev 30. marts 2026). CoreWeave, Nebius og IREN er med i energitemaet som datacentre. De står ikke her. ProPetro skriver, at arbejdet er trykpumpning i Permian-bassinet. Det er service til boringer og står ikke her. Vistra skrev 9. januar 2026, at 2.176 MW er værker i drift, og at 433 MW er øget effekt. Det er ikke en ny reaktor.",
           "themes": [
             "energy",
             "energy-resources",
@@ -1210,7 +1210,7 @@
               "w": 0.14,
               "sym": "VST",
               "forslag": false,
-              "role": "Elproduktion, blandt andet gas og atomkraft"
+              "role": "Aftale med Meta: 2.176 MW i drift og 433 MW øget effekt. Ikke en ny reaktor."
             },
             {
               "isin": "US87422Q1094",
@@ -1690,7 +1690,7 @@
           "id": "satcom",
           "icon": "📡",
           "label": "Satellitkommunikation",
-          "blurb": "Satellitter i drift eller under bygning: kommunikation, billeder af Jorden, radiosignaler og de platforme, satellitterne bygges på. Redwire leverer dele og sender ikke selv op. Selskabet skrev 1. april 2026, at kameraer skal med på Artemis II. Meddelelsen siger ikke, at flyvningen er gennemført. York bygger platforme til kunden og skriver, at det koordinerer opsendelseslogistik. Det er ikke det samme som selv at sende raketten op. MDA omtaler Chorus, før konstellationen er sendt op. MDA præsenterede 10. september 2026 Aurora Black. Det er efter beholdningen og ikke en konstellation i drift. Satellogic sætter fuld drift af Merlin til andet halvår 2027. Det er ikke en tjeneste i fuld drift. Planet nævner SuperDove, SkySat, Pelican, Tanager og Owl. Owl er omtalt som næste generation.",
+          "blurb": "Satellitter i drift eller under bygning: kommunikation, billeder af Jorden, radiosignaler og de platforme, satellitterne bygges på. Redwire leverer dele og sender ikke selv op. Selskabet skrev 1. april 2026, at kameraer skal med på Artemis II. Meddelelsen siger ikke, at flyvningen er gennemført. York bygger platforme til kunden og skriver, at det koordinerer opsendelseslogistik. Det er ikke det samme som selv at sende raketten op. MDA skrev 16. september 2026, at Chorus er tre satellitter. To er nye, en i X-bånd og en i C-bånd. Selskabet skriver, at RADARSAT-2 allerede er i kredsløb. Opsendelsen af de nye er sat til sent i 2026. Det er en plan. De to nye er ikke sendt op. Meddelelsen ligger efter beholdningen. MDA præsenterede 10. september 2026 Aurora Black. Det er efter beholdningen og ikke en konstellation i drift. Satellogic sætter fuld drift af Merlin til andet halvår 2027. Det er ikke en tjeneste i fuld drift. Planet nævner SuperDove, SkySat, Pelican, Tanager og Owl. Owl er omtalt som næste generation.",
           "ndi": "Starlink er i en AI-selskabsprofil beskrevet som en løbende tjeneste, ikke kun en opsendelse. Det er et udkast, ikke NDI's færdige tekst. SpaceX indgår ikke i beholdningen pr. 1. juni 2026.",
           "themes": [
             "space"
@@ -1744,7 +1744,7 @@
               "w": 0.16,
               "sym": "MDA.TO",
               "forslag": false,
-              "role": "Satellitter og rumrobotik. Aurora Black er præsenteret 10. september 2026, ikke en konstellation i drift."
+              "role": "Chorus er tre satellitter. De to nye er ikke sendt op. Aurora Black er præsenteret 10. september 2026."
             },
             {
               "isin": "US72703X1063",
@@ -1761,7 +1761,7 @@
           "id": "space-compute",
           "icon": "✦",
           "label": "Rum og compute",
-          "blurb": "På sigt kan beregning ligge i rummet. I beholdningen pr. 1. juni 2026 er eksemplerne infrastruktur, robotik og satellitplatforme. Ingen af dem er et datacenter i kredsløb. Voyager omtaler Starlab som et stationsprojekt. Det er ikke en station i drift. Selskabet skrev 8. september 2026, at GOEX ved Camp Minden i Louisiana igen producerer sortkrudt. Det er efter beholdningen, og det er ikke en rumstation.",
+          "blurb": "På sigt kan beregning ligge i rummet. I beholdningen pr. 1. juni 2026 er eksemplerne infrastruktur, robotik og satellitplatforme. Ingen af dem er et datacenter i kredsløb. Voyager omtaler Starlab som et stationsprojekt. Det er ikke en station i drift. Selskabet skrev 8. september 2026, at GOEX ved Camp Minden i Louisiana igen producerer sortkrudt. Det er efter beholdningen, og det er ikke en rumstation. MDA skrev 16. september 2026, at Chorus er billeder af Jorden. De to nye satellitter er ikke sendt op. Det er ikke et datacenter.",
           "ndi": "Udsagnet om SpaceX og størrelsen af økonomien er Elon Musks og står kun som citat. Det er ikke NDI's forventning (ugebrev 12. oktober 2026).",
           "themes": [
             "space"
@@ -1799,7 +1799,7 @@
               "w": 0.16,
               "sym": "MDA.TO",
               "forslag": false,
-              "role": "Rumrobotik. Ikke et datacenter."
+              "role": "Chorus er billeder af Jorden. De to nye satellitter er ikke sendt op. Ikke et datacenter."
             }
           ],
           "seeChain": null
