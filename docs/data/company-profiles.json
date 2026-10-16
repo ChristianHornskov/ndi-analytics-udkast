@@ -247,12 +247,22 @@
   "US35834F1049": {
    "name": "T1 Energy",
    "theme": "energy",
-   "summary": "Arbejder med amerikansk produktion af solenergiudstyr. Selskabets aktiviteter omfatter produktion af solcellemoduler og opbygning af forsyningskæder.",
-   "watch": "Kapitalbehov, industripolitik, told og priser på solenergiudstyr.",
+   "summary": "Laver solcellemoduler. Fabrikssiden sætter G1_Dallas til 5 GW moduler om året. Det er en kapacitet, ikke et målt år. G2-celler er anslået og ikke i drift. Foden skriver Austin, Texas, uden gade.",
+   "watch": "Om 5 GW bliver læst som årets produktion. G2 er anslået cellekapacitet, ikke et anlæg i drift. Koordinaterne for G1 og G2 begynder med samme tal.",
    "source": "https://t1energy.com/manufacturing/",
-   "products": "Solcellemoduler og aktiviteter inden for den amerikanske forsyningskæde til solenergi.",
-   "customers": "Kunder i markedet for solenergianlæg.",
-   "role": "Industriel produktion af udstyr, der omdanner sollys til elektricitet.",
+   "products": "Solcellemoduler. G1 er sat til 5 GW om året og omkring 12.000 paneler i døgnet uden dato. G2 er anslået 5 GW celler om året. Ikke et kraftværk.",
+   "customers": "Siden navngiver ikke en køber af modulerne.",
+   "role": "Moduler. 5 GW er en kapacitet. G2-celler er anslået. Austin i foden er ikke en gade.",
+   "narrative": [
+    "Fabrikssiden, læst 16. oktober 2026, sætter G1_Dallas til 5 GW solcellemoduler om året og omkring 12.000 paneler i døgnet. 5 GW er en kapacitet. Paneletallet er ikke dateret. G2 er sat til anslået 5 GW celler om året og et mål om 90 procent genbrug af vand. Teksten siger next up om solceller fra en ny fabrik uden for Austin. Det er ikke celler i drift.",
+    "Samme side skriver koordinater for G1_Dallas, 32,60157 nord og 96,70376 vest, og for G2_Austin, 32,60210 nord og 96,70345 vest. Begge begynder med 32,60 nord og 96,70 vest. En overskrift er ikke en by. Foden skriver T1 Energy Inc. og Austin, Texas, USA, uden gade. Ordene advanced, cutting-edge og future er ikke taget med."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Fabrikker",
+     "url": "https://t1energy.com/manufacturing/"
+    }
+   ],
    "reviewedAt": "2026-10-08"
   },
   "IL0010823792": {
