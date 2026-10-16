@@ -400,3 +400,7 @@ Hver temarække på sammenlign kan vælges. Sætningen gentager de to vægte, de
 ### Update · første dag under 10 % · 2026-10-16 ~07:33 CEST
 
 Ny kontrol på drawdown, ved kurven. Knappen hopper til 2. aug. 2024. Udlæsningen siger −13,8 % under den løbende top. Ved siden af står 267 af 770 dage. Det er et dagtal, ikke en procent. Knappen er 44 px. På 320 px slutter sætningen med «løbende top» på én linje. Ingen sidescroll ved 320, 390 og 1100. Ingen konsolfejl. På papir er knappen væk, og dagtallet bliver. PMINDIAKK har ingen linje og ingen procent. Cyklus 50 har ingen MUST i egne filer.
+
+### Update · to spor på tidslinjen · 2026-10-16 ~07:37 CEST
+
+Ny form på sammenlign, over den eksisterende tidslinje. To spor. Længden er tiden fra 22. sep. 2023 til 5. dec. 2026. PMINDI er den lange brand-streg frem til 14. okt. 2026. PMINDIAKK er den korte cyan-streg fra 5. dec. 2025. Stiplet streg til højre er datoen, kursen kan vises. Et klik på PMINDI siger første NAV og seneste kursdag. Et klik på PMINDIAKK siger, at kursen vises efter 12 måneder, fra 5. dec. 2026. Ingen ny procent. Knapperne er 44 px. Ingen sidescroll ved 300–1100. Ingen konsolfejl. På papir bliver sporene. KID-parret er stadig ca. 2,79 % og ca. 2,85 %. PMINDIAKK har stadig Ingen kurs.

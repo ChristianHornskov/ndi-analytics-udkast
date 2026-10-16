@@ -609,6 +609,21 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
 .tl li:last-child::after{display:none}
 .tl li.future::before{background:transparent;border:2px dashed var(--cyan)}
 .tl time{display:block;color:var(--text);font-weight:600;margin-bottom:2px}
+.span-map{margin:0 0 12px}
+.span-lanes{display:grid;gap:4px}
+.span-lane{display:grid;grid-template-columns:minmax(96px,118px) minmax(0,1fr);gap:10px;align-items:center;width:100%;min-height:44px;margin:0;padding:4px 8px;border:0;border-radius:8px;background:transparent;color:inherit;font:inherit;text-align:left;cursor:pointer}
+.span-lane[aria-pressed=true] .span-name{box-shadow:inset 0 -2px 0 var(--yellow)}
+.span-lane:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+.span-name{font-size:13px;font-weight:650;white-space:nowrap;color:var(--text)}
+.span-lane.a .span-name{color:var(--brand)}
+.span-lane.b .span-name{color:var(--cyan)}
+.span-rail{position:relative;height:8px;border-radius:99px;background:var(--line)}
+.span-rail i{position:absolute;top:0;bottom:0;border-radius:99px;background:var(--brand)}
+.span-lane.b .span-rail i{background:var(--cyan)}
+.span-rail b{position:absolute;right:0;top:-4px;width:0;height:16px;border-left:2px dashed var(--cyan)}
+.span-axis{display:grid;grid-template-columns:minmax(96px,118px) minmax(0,1fr);gap:10px;margin:2px 0 0;padding:0 8px;font-size:12px;color:var(--muted)}
+.span-ends{display:flex;justify-content:space-between;gap:8px}
+.span-say{margin:8px 0 0;font-size:14px;line-height:1.45;color:var(--text);border-left:3px solid var(--brand);padding:2px 0 2px 10px}
 .cmp-big{font-size:15px;color:var(--muted);margin:0 0 6px}
 .cmp-big strong{font-size:28px;color:var(--cyan);font-weight:500;margin-right:4px}
 .cmp-legend{display:flex;gap:16px;font-size:12px;color:var(--muted);margin:0 0 8px}
@@ -923,6 +938,13 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
   .cmp-row{display:grid !important;color:#111 !important;background:#fff}
   .cmp-theme-say,.cmp-name{color:#111}
   .cmp-cost-say{color:#111;border-left-color:#111}
+  .span-lane{display:grid !important;color:#111 !important;background:#fff}
+  .span-name,.span-say,.span-axis{color:#111}
+  .span-rail{background:#fff;border:1px solid #ccc}
+  .span-lane i{background:#1d4e56;print-color-adjust:exact}
+  .span-lane.b i{background:#5f8f96;print-color-adjust:exact}
+  .span-rail b{border-left-color:#1d4e56}
+  .span-map{break-inside:avoid}
   .ep-stop{display:block !important}
   .hero-stat,.ep-ledger li,.year-rail a{break-inside:avoid}
 }
