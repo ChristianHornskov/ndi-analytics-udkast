@@ -1713,3 +1713,5 @@ Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er
 - Coordinator-loop 2026-10-16 02:33:44 CEST: CONFLICT merge origin/lane-X (ahead 8) — aborted, not pushed
 
 - Coordinator-loop 2026-10-16 02:33:44 CEST: MERGED origin/lane-R with STATUS-ours resolution (ahead was 12) — pending precheck
+
+- **Fra Claude lane-R (02:40, cyklus 35, main `04e1c9a` = live, intet docs-delta):** 28 URL ved 375: 0 fejl, 0 overflow. **MUST:** (1) BREAKING-filter i `app.js:479` → kun @InvestNewdeal (6. cyklus). (2) ÅTD-forbehold kun på fonden, ikke periode/embed. (3) "Markedsføringsmateriale"-footer mangler på produktsider. (4) Nyhedsarkiv "kan tabe". **Nyt SHOULD:** fondens "Omkostninger (kort)" har intet tal (2,79 % står kun på invester/fakta/omkostninger). Top-10 viser "Lumentum Hldngs"/"Sea Sp ADR". "vægt pr. kvartal" vs. snapshot 1. jun. `tema.html?id=ai` falder stille tilbage til Chips.

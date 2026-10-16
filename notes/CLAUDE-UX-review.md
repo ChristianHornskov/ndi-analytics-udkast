@@ -821,3 +821,28 @@ Pages (00:33:44 GMT) har samme md5 som main på risici, ndi-perspektiv, ideer, d
 - **Privat (55+):** risici-prospektafsnittet og livscyklus-bakken er forståelige. "Drawdown", "YTD" og "CAGR" er stadig de ord, de snubler over. Det engelske BREAKING-opslag under fondens graf er stadig det største ro-brud.
 - **Familiekontor:** `#prospekt` med sidetal-kilde rammer dem præcist. De vil dog fange 332/345 og livscyklus "vi gætter ikke" vs. "maskinelt forslag". Det er små inkonsistenser, men de tæller.
 - **Visuel variation:** forbedret (bobler, chips). Træthed skyldes længde på ideer/udforsk/vaerdikaeder, ikke ensformighed.
+
+## 2026-10-16 02:40 CEST · cyklus 35 (main `04e1c9a`, intet docs-delta siden `65b1947`, live = main)
+
+Main har kun fået notes/coordinator-merges siden cyklus 34, og `git diff 65b1947 04e1c9a -- docs` er tomt. Jeg har kørt Playwright live ved 375 på 28 URL'er (inkl. PMINDIAKK, tema, vaerdikaede og lær). Resultat: 0 pageerrors og 0 vandret overflow. Højderne er uændrede (selskaber 66.172, udforsk 28.282, ideer 16.688, vaerdikaeder 15.593 px). Denne cyklus ser på det, der ikke blev tjekket i 34: top-10, fondens omkostningsblok, tema-fallback og ndi-paa-x.
+
+### MUST (uændret, se cyklus 34)
+- **Fonden + SoftBank + ndi-paa-x: tredjeparts-"BREAKING"** (@BullTheoryio ×2 under fondens graf, "Vist fordi: SoftBank" ×2). Rettelsen er ét filter: `docs/js/app.js:479` `chartMarkers.filter(...)` → tilføj `&& e.username === 'InvestNewdeal'` (eller rens `x-posts.json` → `chartMarkers`). Dette er 6. cyklus i træk.
+- **Nyhedsarkiv:** "Placeholder" og 0 × "tabe" (uændret).
+
+### SHOULD (nyt i denne cyklus)
+- **Fondens "Omkostninger (kort)" har intet tal.** Der står "Tallene … ligger på Fundmarket og er samlet på omkostningssiden". Invester, fakta og omkostninger viser ellers 2,79 %/2,85 % (KID, 5 år). Det er netop den side, persona-familiekontoret læser først (PERSONA-familyoffice MUST 2). Tilføj én linje: "Samlede årlige omkostninger ca. 2,79 % ved 5 års ejertid (KID)."
+- **Top-10 (portefølje/udforsk) viser rå Bloomberg-forkortelser:** "Sea Sp ADR", "Lumentum Hldngs", "Sitime Corp". Det ser ufærdigt ud for en privat investor. Brug visningsnavn fra `company-profiles.json`, hvis feltet findes (Sea Ltd, Lumentum Holdings, SiTime).
+- **"Søjlerne ved navnet viser vægt i fonden pr. kvartal"** (portefølje og udforsk), mens om-data siger, at 1. jun. ikke er et kvartalsskifte. Skriv "pr. snapshot" (samme problem som "kvartalsrapport" på fonden).
+- **`tema.html?id=ai` viser stille "Chips".** Et ukendt id falder tilbage til første tema, og `themes.json` har ingen `id`-felter. Delte/gamle links lander dermed på et forkert tema uden besked. Vis "Temaet findes ikke → Alle temaer".
+- **Fra 32–34, stadig åbne:** drawdown h1 "Drawdown · PMINDI" og dobbelt "← Fonden". Periode "YTD/CAGR/2023 uden delår". "kl n" (fakta ×3, omkostninger ×2, invester ×1). "datamangel" og "kvartalsrapport" (fonden). Sharpe-underlabel (risici, fakta). 332 vs 345. Livscyklus "vi gætter ikke" vs. maskinelt forslag.
+
+### Positivt
+- 100.000 kr.-eksemplet er eksemplarisk. Det siger "efter fondens løbende omkostninger, før skat og egne handelsomkostninger", "første NAV, ikke stiftelsesdato" og "regneeksempel, ikke en prognose".
+- Invester trin 4 forklarer omkostninger med KID-tal og et tænkt kroneeksempel. Det er den bedste omkostningstekst for privatpersonaen.
+- ndi-paa-x adskiller NDI-konti (@InvestNewdeal, @MadsC007, @jesper_baek, @CHornskov) fra "fulgte konti, ikke NDI's holdning". Grep efter købt/solgt/øget/buy/sell/trim: 0 handelssprog i medarbejderopslag ✅.
+
+### Persona-linser
+- **Privat (55+):** kan nu finde prisen (invester, omkostninger), men ikke på fondens egen side. Navnene "Hldngs/Sp ADR" i top-10 virker som et regneark.
+- **Familiekontor:** prospekt-sektionen og 100k-eksemplet er stærke. De mangler fortsat omkostningstallet ved hero/KPI og et downloadbart faktaark (PERSONA-FO §4).
+- **Visuel variation:** ingen ændring. Trætheden skyldes længde (selskaber 88 skærme ved 375), ikke ensformighed.

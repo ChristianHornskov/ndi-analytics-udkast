@@ -870,3 +870,34 @@ Ikke juridisk rådgivning. Kørt live ved 375 på 27 URL'er, med kontekst-grep a
 
 ### Prioritet
 **1** (BREAKING) → **2** (footer med markedsføringsmateriale/prospekt på produktsiderne, så den matcher lær-siderne) → **3** (ÅTD-forbehold på 3 sider) → **4** (nyhedsarkiv) → **5/6** (periode/drawdown/embed KID + delår) → **7** (verificér prospekt-fakta).
+
+## 2026-10-16 02:40 CEST · cyklus 35 (main `04e1c9a`, intet docs-delta siden `65b1947`, live = main)
+
+Ikke juridisk rådgivning. Live ved 375 på 28 URL'er, med regex-flag pr. side (tab, historik, rådgivning, KID, SRI, markedsføringsmateriale, AI, BREAKING, omkostninger) og kontekst-grep. "overvægt"-hits er alle negationer ("ikke … bevidst overvægt"). "afventer" står som "afventer NDI-gennemgang" (AI-udkast) og som ÅTD-forbeholdet. Ingen "øger eksponering", "garanteret", "køb/sælg nu" eller "bedste tip". Ingen 1m/3m på PMINDI. ndi-paa-x: 0 handelssprog i opslag fra NDI-medarbejderkonti ✅.
+
+### MUST (blocker, uændret)
+1. **Tredjeparts-"BREAKING" ved fondens afkastgraf og på SoftBank** (6. cyklus). Det skal rettes i `docs/js/app.js:479` (filtrer `chartMarkers` til @InvestNewdeal) og i selskabspanelets "Vist fordi"-match.
+2. **ÅTD +4,0 % / 100.000 kr.-eksemplet "afventer Fundmarket-godkendelse"** står kun på fonden. Periode og embed viser samme ÅTD uden forbehold.
+3. **Nyhedsarkiv mangler "Du kan tabe …"** (ét footer-tekststykke).
+4. **"Markedsføringsmateriale"-mærkning** mangler på produktsiderne (fonden, portefølje, fakta, omkostninger, selskab, periode, drawdown, embed). Den findes på risici, invester, om-data, ideer, kort, ndi-perspektiv og lær.
+
+### SHOULD
+5. **Omkostningstal på fondens produktside:** "Omkostninger (kort)" henviser kun videre. Ved markedsføring af en konkret fond med afkasttal bør de samlede omkostninger (KID 2,79 %/2,85 % ved 5 år) stå på samme side som afkastet, ikke ét klik væk. Tallet findes og er verificeret (cyklus 31), så det er kun en placeringsfejl.
+6. **Embed / periode / drawdown:** ingen KID-link eller SRI (uændret). Embed viser CAGR +26,4 %.
+7. **Beholdningsforsinkelse, ordvalg:** "seneste offentlige kvartalsrapport" (fonden) og "vægt pr. kvartal" (portefølje/udforsk) passer ikke med om-data ("snapshot pr. 1. jun. 2026, ikke kvartalsskifte"). Selve datoen er korrekt ✅.
+8. **Interne noter på kundeside** (omkostninger: "Tomme felter = udfyldes af NDI", "marketingmateriale skal gengive ærligt"). Fonden: "compliance-beslutning, ikke et datamangel".
+9. **NDI-medarbejderkonti som markedsføring:** ndi-paa-x erklærer @MadsC007/@jesper_baek/@CHornskov for "markedsføring … kan være NDI's holdning". Det er ærligt, men det betyder, at fremtidige private opslag (fx positionskommentarer) automatisk bliver fondsmarkedsføring på sitet. Indfør et manuelt godkendelsesflag pr. opslag, før det vises.
+
+### Tjekliste (live)
+- Ikke-rådgivning: ✅ alle produktsider (fonden: "Ingen investeringsrådgivning" i footer + "Ingen anbefaling om at købe eller sælge"). Periode/drawdown/embed kun tab+historik.
+- Tabsadvarsel: ✅ 27/28 (nyhedsarkiv ✗).
+- Historisk afkast ≠ fremtid: ✅ 28/28.
+- KID/PRIIP + SRI 5/7 (KID 14. aug. 2026): ✅ fonden, PMINDIAKK, portefølje, risici, fakta, sammenlign, selskab, tema, invester, lær. ✗ embed, periode, drawdown, selskaber, vaerdikaeder.
+- Omkostninger: KID-RIY 2,79/2,85 % på invester, fakta og omkostninger ✅. Fonden uden tal (SHOULD 5). Persona-/FO-MUST er dækket på sitet.
+- Beholdning asOf 2026-06-01 ✅ (portefølje, selskaber "345 positioner pr. 1. jun. 2026", tema, SoftBank). Ingen live-handler.
+- PMINDIAKK: ingen afkasttal, "kan tabe" ✅. Nasdaq: kun negativ omtale ✅.
+- AI-mærkning: "AI-udkast … afventer NDI-gennemgang" på selskab/tema/ndi-perspektiv/ideer ✅. Livscyklus = "maskinelt forslag" ✅.
+- Mads-handelssprog: 0 ✅.
+
+### Prioritet
+**1** (BREAKING, ét filter) → **2** (ÅTD-forbehold ens på 3 sider eller fjern) → **4** (markedsføringsmateriale-footer på produktsider) → **3** (nyhedsarkiv) → **5** (omkostningstal på fonden).
