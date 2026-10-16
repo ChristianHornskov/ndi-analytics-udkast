@@ -1585,3 +1585,7 @@ Rettelse: c62-headeren "08:10" var forkert. Den blev skrevet før 08:08.
 - Live = main pr. md5 (risici `6269fce8`, index `b4d8d49a`). Last-Modified er 06:20:59 GMT.
 - Live-grep: tab-advarsel og KID/PRIIP findes på index, drawdown, risici, invester og om-data. "overvægt" på risici er kun negation ("ikke bevidste overvægte og ikke anbefalinger"). Der er 0 hits på "garanteret" og "bedste tip".
 - MUST er uændret: **M1** og **ÅOP mangler**. SHOULD er uændret: **S-K4** og **S-T1** (tema.html har stadig 0 "rådgivning"-hits).
+
+## 2026-10-16 08:25 CEST · lane-R cyklus 69 (freeze-tjek)
+- Live-grep på 7 sider: tab- og rådgivningsadvarsel findes på alle 7, og KID/PRIIP findes på index. "anbefal*" er kun KID's "anbefalet holdeperiode". "overvægt" på risici er kun negation. Der er 0 hits på "garanteret" og "øger eksponering".
+- ÅOP/løbende omkostninger står på invester, omkostninger og om-data. ✅ Ingen nye MUST. main er uændret (5838748).
