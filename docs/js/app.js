@@ -2,7 +2,7 @@ import {
   loadAll, fundById, slicePeriod, cagr, periodReturn, ytdReturn,
   monthlyReturns, maxDrawdown, fmtPct, fmtDate, daTheme, daMat, daMatPlain, WARN_HIST,
   MATURITY_LABELS, THEME_LABELS, calendarYearReturns, lastNav, publicTags, tagsFor, fillKidFooter, themeProposals,
-  searchPosition, themeShift, themeShifts, shiftLabel, shiftFromLabel, themeDoubt, doubtAltLabel,
+  searchPosition, themeShift, themeShifts, shiftLabel, shiftFromLabel, themeDoubt, doubtAltLabel, warrantParent,
 } from './data.js';
 import { renderChart } from './chart.js';
 
@@ -743,7 +743,7 @@ function positionsTable(list, fund) {
   hscroll(`<div class="table-wrap"><table class="data screener-table"><thead><tr>
     ${th('name','Navn')}${th('weight','Vægt %')}${th('theme','Tema')}
   </tr></thead><tbody>${list.map((p, i) => `${themeGroupRow(list, i)}<tr>
-    <td><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}">${p.name}</a>${hasLens(p) ? ` <a class="lens-mark" href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}#ndi-linse" title="NDI’s fem spørgsmål om selskabet (udkast)" aria-label="NDI-perspektiv for ${p.name}">◉</a>` : ''} ${weightSpark(p.isin, fund.id)}<br><small style="color:var(--muted)">${p.isin}</small>${hitNote(p)}${mobileThemeLine(p, fund)}</td>
+    <td><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}">${p.name}</a>${hasLens(p) ? ` <a class="lens-mark" href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}#ndi-linse" title="NDI’s fem spørgsmål om selskabet (udkast)" aria-label="NDI-perspektiv for ${p.name}">◉</a>` : ''} ${weightSpark(p.isin, fund.id)}<br><small style="color:var(--muted)">${p.isin}</small>${warrantNote(p, fund)}${hitNote(p)}${mobileThemeLine(p, fund)}</td>
     <td>${(p.weight ?? 0).toFixed(2).replace('.', ',')}</td>
     <td>${tagsFor(p, DATA.multiTags).map((t) => `<a class="tag" href="tema.html?slug=${encodeURIComponent(t)}&fund=${fund.id}">${daTheme(t)}</a>`).join(' ')}${forslagCell(p)}</td>
   </tr>`).join('')}</tbody></table></div>`, 'Rul til siden for flere kolonner.') +
@@ -855,6 +855,12 @@ function viaLens(list) {
   return n ? ` (${n} via NDI-linsens tekst)` : '';
 }
 
+function warrantNote(p, fund) {
+  const par = warrantParent(p, fund.positions);
+  if (!par) return '';
+  const link = par.isin ? `<a href="selskab.html?isin=${encodeURIComponent(par.isin)}&fund=${fund.id}">${par.name}</a>` : par.name;
+  return `<br><small style="color:var(--muted);display:inline-block;white-space:normal;max-width:36ch;line-height:1.35;text-align:left">Warrant (tegningsret) på ${link} - ikke et selvstændigt selskab</small>`;
+}
 function hitNote(p) {
   const h = HITS.get(p.isin);
   if (h?.via !== 'linse') return '';

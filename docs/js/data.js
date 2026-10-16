@@ -361,6 +361,15 @@ export function themeDoubt(p) {
   if (p?.themeStatus !== 'forslag' || !p.themeDoubt) return null;
   return { why: p.themeDoubt, alt: p.themeAlt || '' };
 }
+// Warrants (tegningsretter) ligger som egne positioner med ~0 % vægt, men er ikke selvstændige selskaber.
+// Moderselskabet findes ud fra navnet før "Warrant" (fx "Opendoor Tech Warrant Series A" → "Opendoor Tech").
+export function warrantParent(p, positions = []) {
+  const m = /^(.*?)\s+warrants?\b/i.exec(p?.name || '');
+  if (!m) return null;
+  const base = m[1].trim();
+  const hit = positions.find((x) => x.isin !== p.isin && x.name.trim().toLowerCase() === base.toLowerCase());
+  return hit || { name: base, isin: null };
+}
 export const doubtAltLabel = (alt) => (!alt ? '' : alt === 'andet' ? 'bliv i Andet' : daTheme(alt));
 
 // "Andet / uklassificeret" forkortes til "Andet" i skift-etiketter og før-linjer
