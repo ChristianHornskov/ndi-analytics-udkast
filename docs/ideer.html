@@ -519,7 +519,7 @@
           </table>
         </div>
         <dl class="pr-keys">
-          <div><dt>151 i én kasse</dt><dd>Sektoren teknologi rummer 151 af de 345 selskaber. Hos os fordeler de sig på syv temaer, fra chips og compute til optik, software og Quantum.</dd></div>
+          <div><dt>151 i én kasse</dt><dd>Sektoren teknologi rummer <span id="mx-tech">151</span> af de <span id="mx-n">345</span> selskaber. Hos os fordeler de sig på <span id="mx-k">syv</span> temaer, fra chips og compute til optik, software og Quantum.</dd></div>
           <div><dt>Platforme</dt><dd>Temaet samler selskaber, der i sektorlisterne står under finans, forbrugsgoder og kommunikation. Det fælles er den digitale platform, ikke sektoren.</dd></div>
           <div><dt>SpaceTech og fysisk tech</dt><dd>Næsten alle står i sektorlisterne under industri. Hos os er det to forskellige led i to forskellige kæder.</dd></div>
         </dl>
@@ -992,6 +992,23 @@
         const mx = Math.max(...lis.map((li) => a[key(li)]?.w || 0)) || 1;
         lis.forEach((li) => { const t = key(li); if (!a[t]) return; li.querySelector('.bar i').style.width = (a[t].w / mx * 100).toFixed(1) + '%'; li.querySelector('em').textContent = `${a[t].n} · ${nf(a[t].w)} %`; });
         stk.querySelectorAll('dt').forEach((dt) => { const t = key(dt); if (a[t]) dt.innerHTML = `${link(t)} · ${a[t].n} · ${nf(a[t].w)} %`; });
+      }
+      // Varmekort: tema × klassisk sektor
+      const mxt = document.querySelector('figure.mx tbody');
+      if (mxt) {
+        const COL = { Technology: 0, Industrials: 1, 'Basic Materials': 2, 'Consumer Cyclical': 3, 'Financial Services': 4, 'Communication Services': 5, Utilities: 6, Energy: 6 };
+        const m = {};
+        A.forEach((p) => { (m[p.theme] || (m[p.theme] = [0, 0, 0, 0, 0, 0, 0, 0]))[COL[p.sector] ?? 7] += 1; });
+        const sum = (r) => r.reduce((x, y) => x + y, 0);
+        const top = Math.max(...Object.values(m).flat()) || 1;
+        const cell = (n) => n ? `<td${n >= 30 ? ' class="hi"' : ''} style="--a:${+(0.15 + 0.85 * n / top).toFixed(2)}">${n}</td>` : '<td class="z">·</td>';
+        const order = [...Object.keys(m).filter((t) => t !== 'andet' && SLUG[t]).sort((x, y) => sum(m[y]) - sum(m[x]) || NAME(x).localeCompare(NAME(y), 'da')), ...(m.andet ? ['andet'] : [])];
+        const tot = [0, 1, 2, 3, 4, 5, 6, 7].map((i) => order.reduce((s2, t) => s2 + m[t][i], 0));
+        mxt.innerHTML = order.map((t) => `<tr${t === 'andet' ? ' class="an"' : ''}><th scope="row">${link(t)}</th>${m[t].map(cell).join('')}<td class="sum">${sum(m[t])}</td></tr>`).join('')
+          + `<tr class="tot"><th scope="row">I alt</th>${tot.map((n) => `<td>${n}</td>`).join('')}<td class="sum">${sum(tot)}</td></tr>`;
+        const ord = ['nul', 'ét', 'to', 'tre', 'fire', 'fem', 'seks', 'syv', 'otte', 'ni', 'ti', 'elleve'];
+        const set = (id, v) => { const e = document.getElementById(id); if (e) e.textContent = v; };
+        set('mx-tech', tot[0]); set('mx-n', sum(tot)); const kk = order.filter((t) => m[t][0]).length; set('mx-k', ord[kk] || kk);
       }
       // To klasser: prik pr. klasse på en skala til 18 %
       const kl = document.querySelector('ul.kl-rows');
