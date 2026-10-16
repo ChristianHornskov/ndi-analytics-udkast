@@ -87,6 +87,7 @@ article.x-card.is-quote .x-foot{margin-top:10px}
 .x-hit.theme{color:var(--muted);border-color:#617d84}
 .x-because{font-size:12px;color:var(--cyan)}
 .x-foot{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:auto}
+.x-foot a.tag.is-hit{border-color:#f5ee9eaa;color:#f5ee9e;background:#f5ee9e14}
 .x-curated{font-size:10px;letter-spacing:.6px;text-transform:uppercase;color:#f5ee9e;border:1px solid #f5ee9e66;border-radius:999px;padding:3px 8px}
 .x-house{font-size:10px;letter-spacing:.6px;text-transform:uppercase;color:var(--cyan);border:1px solid #9ecfd666;border-radius:999px;padding:3px 8px}
 .x-mark{background:#f5ee9e;color:#1c1604;border-radius:4px;padding:0 4px;font-weight:650}
@@ -94,10 +95,16 @@ article.x-card.is-quote .x-foot{margin-top:10px}
 .x-door{text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:8px;min-height:208px;padding:16px 16px 14px;border-radius:16px;border:1px solid #345860;background:radial-gradient(90% 80% at 100% 0%,rgba(158,207,214,.13),transparent 52%),#0d1c22}
 .x-door:hover{border-color:var(--cyan);background:#132a32}
 .x-door.is-on{border-color:var(--cyan);box-shadow:inset 0 -2px 0 var(--yellow)}
+.x-door.is-on .x-door-n{color:#f5ee9e}
 .x-door .k{font-size:11px;letter-spacing:1.4px;color:var(--brand);font-weight:700}
 .x-door-top{display:flex;justify-content:space-between;gap:8px;align-items:baseline}
 .x-door-top strong{font-size:22px;letter-spacing:-.4px}
 .x-door-n{color:var(--muted);font-size:12px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.x-door-score{display:flex;gap:10px;margin-left:auto;flex:none;align-items:flex-end}
+.x-door-score span{display:flex;flex-direction:column;align-items:flex-end;min-width:0}
+.x-door-score b{font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-size:34px;font-weight:500;line-height:.8;letter-spacing:-1px;color:#f5ee9e;font-variant-numeric:tabular-nums}
+.x-door-score i{font-style:normal;margin-top:4px;font-size:9px;letter-spacing:.7px;text-transform:uppercase;color:var(--faint)}
+.x-door-score b.is-theme{color:var(--muted);font-size:28px}
 .x-door-q{color:var(--text);font-size:14px;line-height:1.45;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;min-height:calc(1.45em * 3)}
 .x-door-q::before{content:"„";color:#f5ee9e;font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-size:22px;line-height:0;margin-right:5px}
 .x-door-by{margin-top:auto;color:var(--faint);font-size:12px}
@@ -110,12 +117,23 @@ article.x-card.is-quote .x-foot{margin-top:10px}
 .x-filters .control.is-zero{opacity:.5}
 .x-filters .control[aria-pressed="true"]{background:#203e47;color:#fff;border-color:#9ecfd6;box-shadow:inset 0 -2px 0 #f5ee9e;font-weight:600}
 .x-live{font-size:13px;color:var(--muted);margin:8px 0 0;font-variant-numeric:tabular-nums}
+.x-score-bar{display:flex;flex-wrap:wrap;gap:8px 22px;align-items:flex-end;justify-content:space-between;margin:2px 0 10px;min-width:0}
+.x-score{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:flex-end;min-width:0}
+.x-score-n{min-width:44px}
+.x-score-n b{display:block;font-size:clamp(28px,4vw,42px);line-height:.85;font-weight:600;letter-spacing:-1.2px;color:var(--cyan);font-variant-numeric:tabular-nums}
+.x-score-n span{display:block;margin-top:4px;font-size:10px;letter-spacing:.8px;text-transform:uppercase;color:var(--faint)}
+.x-score-n.is-direct:not(.is-zero) b{color:#f5ee9e;font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-weight:500}
+.x-score-n.is-zero b{color:var(--faint);font-weight:500}
+.x-says-h .x-score-n.is-out b,.x-says-h .x-score-n.is-all b{color:var(--faint);font-size:22px;font-family:inherit;font-weight:500}
+.x-asof{color:var(--faint);font-size:12px;line-height:1.35;padding-bottom:2px;max-width:42ch}
+.x-says-h .x-score-n b{font-size:clamp(26px,3vw,34px)}
 .x-active{margin-top:8px}
 .x-active:empty{display:none}
 .x-empty{border:1px dashed #89aeb488;border-radius:16px;padding:28px 18px;text-align:center;background:#89aeb40a}
 .x-empty p{color:var(--muted);line-height:1.5}
 .x-empty .k{color:var(--text);font-weight:600;font-size:16px;margin-bottom:6px}
 .x-suggest{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:14px}
+section.panel.x-says{background:transparent;border:0;border-top:1px solid #24383f;border-radius:0;padding:22px 0 4px;scroll-margin-top:76px}
 .x-says-h{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:8px}
 .x-says-h .panel-h{margin:0}
 .x-says-n{color:var(--muted);font-size:12px;font-variant-numeric:tabular-nums;white-space:nowrap}
@@ -162,25 +180,94 @@ body.x-focused .x-tools{padding-top:4px;padding-bottom:6px}
 @media(min-width:900px){
   body.x-focused #x-grid{scroll-margin-top:120px}
 }
+#x-grid > .x-score-bar{grid-column:1 / -1}
+body.x-focused .x-intro,body.x-focused .x-snap,body.x-focused .x-jumps{display:none}
+body.x-focused h1{font-size:28px;margin:0 0 6px}
+body.x-focused .eyebrow{margin-bottom:2px}
+body.x-focused .x-label{margin:0 0 8px}
 @media(max-width:700px){
   .x-spot{grid-template-columns:1fr}
   .x-grid{grid-template-columns:1fr}
   .x-card time{white-space:normal}
   .x-door{min-height:0}
   .x-door-q{min-height:0}
-  body.x-focused .x-spot{display:flex;grid-template-columns:none;overflow-x:auto;gap:8px}
-  body.x-focused .x-door{flex:0 0 78%}
+  body.x-focused .x-spot{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));overflow:visible;gap:8px}
+  body.x-focused .x-door{flex:none;min-width:0;padding:8px 8px 7px}
+  body.x-focused .x-door .k,body.x-focused .x-door-n,body.x-focused .x-door-score{display:none}
+  body.x-focused .x-door-top strong{font-size:13px;letter-spacing:-.2px}
   body.x-focused .x-tools{position:static;background:transparent;border-bottom:0;backdrop-filter:none}
   body.x-focused #x-grid{scroll-margin-top:0}
+  body.x-focused main{display:flex;flex-direction:column}
+  body.x-focused .eyebrow{order:1}
+  body.x-focused h1{order:2;font-size:22px}
+  body.x-focused .x-intro{order:3}
+  body.x-focused .x-label{order:4}
+  body.x-focused .x-snap{order:5}
+  body.x-focused .x-spot{order:6}
+  body.x-focused .x-jumps{order:7}
+  body.x-focused #x-grid{order:8}
+  body.x-focused .x-tools{order:9}
+  body.x-focused .x-footwarn{order:10}
+  body.x-focused .x-footlinks{order:11}
 }
 @media(prefers-reduced-motion:reduce){
   .x-door{transition:none}
+}
+body.x-focused .x-door-score{gap:8px;align-items:baseline}
+body.x-focused .x-door-score span{flex-direction:row;gap:4px;align-items:baseline}
+body.x-focused .x-door-score b,.body.x-focused .x-door-score b.is-theme{font-family:inherit;font-size:13px;font-weight:600;letter-spacing:0;line-height:1;color:var(--muted)}
+body.x-focused .x-door-score i{margin-top:0;font-size:11px;letter-spacing:0;text-transform:none}
+@media(min-width:900px){
+  body.x-focused .x-spot{margin-bottom:4px}
+  body.x-focused .x-door{padding:8px 12px 7px}
+  body.x-focused .x-tools{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) auto;
+    column-gap:12px;
+    row-gap:6px;
+    align-items:center;
+    padding-top:2px;
+    padding-bottom:4px;
+  }
+  body.x-focused .x-tools .filters{grid-column:1;grid-row:1;margin:0;min-width:0}
+  body.x-focused .x-tools .filters input[type=search]{width:100%;min-width:0}
+  body.x-focused #x-who{grid-column:2;grid-row:1;margin:0;flex-wrap:nowrap}
+  body.x-focused #x-f{grid-column:1 / -1;grid-row:2;margin:0}
+  body.x-focused #x-live{grid-column:1 / -1;margin:0}
+  body.x-focused #x-active{grid-column:1 / -1;margin-top:0}
+  body.x-focused #x-live.is-echo{
+    position:absolute;top:0;left:0;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
+    clip:rect(0,0,0,0);white-space:nowrap;border:0;pointer-events:none;
+  }
+  body.x-focused #x-active.is-echo{display:none}
 }
 `;
   document.head.appendChild(s);
 }
 
 if (typeof document !== 'undefined') ensureXStyles();
+
+/** Company and theme pages insert the panel after fetch. Honour #hvad-siger-x. */
+function followPanelHash() {
+  if (typeof location === 'undefined' || location.hash !== '#hvad-siger-x') return;
+  const go = () => {
+    const el = document.getElementById('hvad-siger-x');
+    if (!el) return false;
+    requestAnimationFrame(() => el.scrollIntoView({ block: 'start' }));
+    return true;
+  };
+  const watch = () => {
+    if (go()) return;
+    const root = document.body;
+    if (!root) return;
+    const obs = new MutationObserver(() => { if (go()) obs.disconnect(); });
+    obs.observe(root, { childList: true, subtree: true });
+    setTimeout(() => obs.disconnect(), 10000);
+  };
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', watch);
+  else watch();
+}
+followPanelHash();
 
 export async function loadXPosts() {
   ensureXStyles();
@@ -372,6 +459,16 @@ function markTerm(hit) {
   return (hit.reasons || []).find((r) => /^(SoftBank|NVDA)$/i.test(String(r))) || '';
 }
 
+export function xScoreHtml(items) {
+  const cells = (items || []).map((it) => {
+    const n = Number(it.n) || 0;
+    const zero = n === 0 ? ' is-zero' : '';
+    const mod = it.mod ? ` ${it.mod}` : '';
+    return `<div class="x-score-n${mod}${zero}"><b>${n}</b><span>${esc(it.label)}</span></div>`;
+  }).join('');
+  return `<div class="x-score">${cells}</div>`;
+}
+
 export function postWho(p, who) {
   if (!who || who === 'all') return true;
   if (who === 'curated') return p.curatedFrom === 'mads_following';
@@ -432,9 +529,11 @@ function highlight(text, q) {
 export function xCard(p, opt = {}) {
   ensureXStyles();
   const reasons = opt.reasons || [];
+  const hitTerms = highlightTerms(opt.query).map((t) => t.toLowerCase());
+  const tagCls = (label) => (hitTerms.includes(String(label).toLowerCase()) ? ' tag is-hit' : ' tag');
   const tags = [
-    ...(p.tickers || []).slice(0, 4).map((t) => `<a class="tag" href="${esc(tickerHref(t))}">${esc(t)}</a>`),
-    ...(p.tags || []).slice(0, 3).map((t) => `<a class="tag" href="${esc(tagHref(t))}">${esc(t)}</a>`),
+    ...(p.tickers || []).slice(0, 4).map((t) => `<a class="${tagCls(t).trim()}" href="${esc(tickerHref(t))}">${esc(t)}</a>`),
+    ...(p.tags || []).slice(0, 3).map((t) => `<a class="${tagCls(t).trim()}" href="${esc(tagHref(t))}">${esc(t)}</a>`),
   ].join('');
   const curated = p.curatedFrom === 'mads_following' ? '<span class="x-curated">Mads følger</span>' : '';
   const house = isHouse(p) ? '<span class="x-house">NDI-konto</span>' : '';
@@ -517,10 +616,21 @@ export function xSaysPanel(pack, { tickers = [], themes = [], limit = 4, title =
   const shown = view.direct.length + view.theme.length;
   const snap = esc(fmtXDate(pack.snapshotAt) || String(pack.snapshotAt || '').slice(0, 10));
   const more = feedHref({ tickers, themes });
+  const directAll = ranked.filter((h) => h.score >= 2).length;
+  const themeAll = ranked.filter((h) => h.score < 2).length;
+  const themeLeft = themeAll - view.theme.length;
+  const directLeft = directAll - view.direct.length;
+  const scoreItems = [
+    { n: view.direct.length, label: 'direkte', mod: 'is-direct' },
+    { n: view.theme.length, label: 'tema', mod: 'is-theme' },
+  ];
+  if (themeLeft > 0) scoreItems.push({ n: themeLeft, label: 'udeladt', mod: 'is-out' });
+  else if (directLeft > 0) scoreItems.push({ n: ranked.length, label: 'i alt', mod: 'is-all' });
+  const score = xScoreHtml(scoreItems);
   if (!shown) {
     if (!showEmpty) return '';
-    return `<section class="panel x-says">
-  <div class="x-says-h"><h2 class="panel-h">${esc(title)}</h2></div>
+    return `<section class="panel x-says" id="hvad-siger-x">
+  <div class="x-says-h"><h2 class="panel-h">${esc(title)}</h2>${xScoreHtml([{ n: 0, label: 'direkte', mod: 'is-direct' }, { n: 0, label: 'tema', mod: 'is-theme' }])}</div>
   <p class="band">${esc(X_LABEL)}. Snapshot ${snap}.</p>
   <div class="x-empty">
     <p class="x-zero" aria-hidden="true">0</p>
@@ -563,14 +673,14 @@ export function xSaysPanel(pack, { tickers = [], themes = [], limit = 4, title =
   <div class="x-grid">${cards}</div>
 </div>`;
   };
-  const themeLeft = ranked.filter((h) => h.score < 2).length - view.theme.length;
   const miss = view.direct.length && !view.theme.length && themeLeft > 0
     ? '<p class="x-miss">Kun direkte træf i dette udsnit. Opslag, der bare deler tema, er udeladt, så navnet står først.</p>'
     : !view.direct.length
       ? `<p class="x-miss">Ingen opslag i udsnittet nævner selskabet eller tickeren. ${restTheme.length ? 'Kortene er tema.' : 'Kortet er tema.'}</p>`
       : '';
-  return `<section class="panel x-says">
-  <div class="x-says-h"><h2 class="panel-h">${esc(title)}</h2><span class="x-says-n">${esc(nLabel)}</span></div>
+  return `<section class="panel x-says" id="hvad-siger-x">
+  <div class="x-says-h"><h2 class="panel-h">${esc(title)}</h2>${score}</div>
+  <p class="sr-only">${esc(nLabel)}</p>
   <p class="band">${esc(X_LABEL)}. Snapshot ${snap}.</p>
   ${quote}
   ${lane('direct', restDirect)}

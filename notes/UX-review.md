@@ -312,3 +312,57 @@ Ingen nye.
 - Index «Porteføljen» kunne linke til `ideer.html#h-kl`, når brugeren skifter andelsklasse. Det er ikke min fil.
 ### Test
 - 8763, 375/1280 på 5 sider: 0 konsolfejl, ingen h-overflow, 0 døde ankre (også på tværs af sider).
+
+## 01:27 CEST lane-C checkpoint (Claude) · ideer «Lag på lag» + ordliste 109
+### Løst
+- `ideer.html` trettende form «Lag på lag» (`#h-stk`): de syv temaer i stakken fra energiressourcer (jord) til platforme (bruger) som centrerede bjælker, bredde = vægt i PMINDI pr. 1. jun 2026, tal = antal selskaber · vægt. Gul = NDI's nummererede flaskehalse (energi, chips). Fysisk tech, SpaceTech, Quantum og Andet står ved siden af stakken. Ny visuel form (vase/stak), ingen SVG. På 375 px rykker bjælken under navn og tal, ingen h-overflow. «TÆT PÅ …»-mærkerne centreret over bjælkekolonnen på desktop.
+- Ordliste 105 → 109: Chips (tema), Compute (tema), Optik &amp; netværk (tema), Fysisk tech (tema). Fire af de elleve temaer manglede egen post; nu har alle temaer en. Tal fra portfolio.json (antal pr. andelsklasse).
+- Links: flodsystem-posten → `#h-stk`; lær/sådan tænker vi → `#h-stk`; kort.html 109 + ideer-beskrivelse; HANDOFF trin 6–7.
+### SHOULD (andre lanes)
+- `temaer.html`/`tema.html` kunne linke temaets navn til dets ordlistepost (`#g-chips-tema`, `#g-compute-tema`, `#g-optik-tema`, `#g-fysisk-tech`, `#g-energi`, `#g-platforme`, `#g-software-tema`, `#g-energiressourcer`, `#g-quantum`, `#g-spacetech`, `#g-andet`). Ikke min fil.
+### Test
+- 8763, 375/1280 på ideer, om-data, kort: 0 konsolfejl, ingen h-overflow, 0 døde ankre; dybt link `om-data.html#g-chips-tema` lander i synsfeltet på mobil. Screenshot af formen gennemset på begge bredder.
+
+## 01:30 CEST lane-C checkpoint (Claude) · ideer «Hvor mange selskaber er halvdelen?» + ordliste 110
+- Fjortende form på `ideer.html` (`#h-kv`), placeret lige efter «345 aktier, én prik hver»: kumuleret vægtkurve (SVG, 345 punkter), største position først, stiplet ligevægtslinje. Tre gule punkter: 26 / 76 / 160 selskaber = ¼ / ½ / ¾ af aktiernes samlede vægt. Ligevægt ville kræve 173 til halvdelen.
+- Ny visuel type på siden (linjekurve med referencelinje). De andre former er bjælker, prikker, flow, tidslinje, stak, hus.
+- 375 px: kurve og tre nøgletal under hinanden. ≥860 px: nøgletal i kolonne til højre for kurven, så der ikke står tom plads. Etiketten «lige vægt» lå først oven på linjen og ud over kanten. Rettet før commit.
+- Ordliste 110: «Fundmarket» (brugt på 6 sider uden forklaring). Prospekt og Forsinket beholdning linker dertil. Koncentrationsrisiko → `ideer.html#h-kv`. `lær/hvorfor-mange-aktier` → `#h-kv`.
+- Test: 8763, 375/1280 på ideer, om-data, kort, lær/hvorfor-mange-aktier: 0 konsolfejl, ingen h-overflow, 0 døde links/ankre.
+
+## 01:32 CEST lane-C checkpoint (Claude) · ordliste 114 (led fra værdikæderne + delår)
+- Tjek: alle led-navne i `value-chains.json` mod ordlisten. Manglede: Serverinfrastruktur, Elproduktion, Simulering og software. Nu poster (`#g-servere`, `#g-elproduktion`, `#g-simulering`) med samme ordlyd som led-teksten.
+- «delår» står i app.js, periode og drawdown uden forklaring. Ny post `#g-delaar` (2023 er delår, starter ved første NAV 22. sep 2023, ikke omregnet til helt år). Linket fra Idéer «Tre ure».
+- Tællere: 25 · 21 · 38 · 30 = 114. kort.html og HANDOFF trin 7 fulgt med.
+- **Til js-ejer:** delår-badge i app.js (linje ~347/350) kan linke `om-data.html#g-delaar`. **Til værdikæde-ejer:** led-kort kan linke til `#g-servere`, `#g-elproduktion`, `#g-simulering`; flere «ndi»-tekster i value-chains.json bruger stadig tankestreg (—), jf. Vidensbot punkt 10.
+- Test: 8793, 375/1280 på om-data, ideer, kort: 0 konsolfejl, ingen h-overflow. 0 døde ankre på alle sider.
+
+## 01:36 CEST lane-C checkpoint (Claude) · lær «Indre værdi» + ordliste 115
+- Hul: «NAV»/andelskurs stod på Fonden, udbytte-siden og ordlisten, men ingen side forklarede, hvad tallet er, eller hvorfor nye investorer ikke flytter det. Ny `laer/indre-vaerdi.html`: regnestykke-kæde (aktier og kontanter − gæld ÷ andele = indre værdi), tre skydere (kurs ±50 %, nye penge 0–100 mio., udbytte 0–10 kr.) med tre bjælker (formue, antal andele, værdi pr. andel) mod en prikket udgangslinje, «Tre ting at tage med», «Samme ord, to betydninger» (fond vs. SoftBank-betydningen fra NDI-linsen), «Hvor du ser den på siden».
+- Lær-hub: grupperne er nu 4 · 4 · 4 · 4. «Indre værdi» i Fonden i praksis, «Hvorfor mangler aktie X?» flyttet til Slå op (det er en søgning).
+- Ordliste 115: ny «Udstedelse og indløsning» (Fonden 22). «Indre værdi» skrevet om til to betydninger. NAV linker til siden. FAQ: nyt kort svar «Hvad er en andel værd (NAV)?» (nu 17). kort.html, udbytte-vs-akk linker.
+- 375 px: kæden lodret med operatorer imellem, skydere under hinanden, bjælken under navn og tal. Prikket udgangslinje var usynlig på den gule bjælke. Rettet (mørk streg).
+- Test: 8763, 375/1280 på 6 sider: 0 konsolfejl, ingen h-overflow, 0 døde links/ankre. Skyder-regnestykket tjekket: +10 %, 50 mio., 5 kr. → 110 → 105 kr., 1,45 mio. andele.
+
+## 01:55 CEST lane-C checkpoint (Claude) · lær «Sådan læser du grafen» + ordliste 116
+- Ny side ved 375 px: graf (SVG) skalerer ned, fem numre læses som liste under; skyder fylder bredden; siger/siger-ikke stables. Ingen h-overflow. Akse-etiketter (År 1–3) er små på 375, men læsbare.
+- Mini-grafen i skyderen: resten af kurven vises dæmpet, den valgte del gul, så man ser hvor man «kom ind».
+- Lær-hub: «Afkast og udsving» har 5 døre; den sidste (P/E) spænder hele rækken på desktop. Overvej at flytte P/E til «Tankegangen», hvis gruppen skal være 4.
+- Til js-ejer: Fonden-siden mangler et link til forklaringen tæt på grafen.
+
+## 02:00 UX-review lane-C (Claude) · kørt 01:42–01:55 wall-clock, efter merge af origin/main ind i lane-C
+Hele lane-C-fladen ved 375 px: ideer, kort, om-data, invester, risici, ndi-perspektiv og alle 15 lær-sider. Automatisk tjek pr. side: h-overflow, elementer bredere end skærmen, konsolfejl, døde ankre på siden og på tværs, `img` uden alt, store SVG'er uden etiket, tankestreger i synlig tekst, handelsord.
+### Resultat
+- 0 h-overflow, 0 konsolfejl, 0 døde links/ankre, 0 billeder uden alt, 0 SVG uden etiket på 21 sider.
+- Handelsord: kun «anbefaling» i «ikke en anbefaling», «Anbefalet investeringsperiode» (KID-ord) og «Køb og omkostninger» om køb af andele. OK.
+- Små trykflader: temalinks i varmekortet (17 px, tabelceller) og løbende links i tekst. OK efter WCAG 2.5.8 (inline). Risikokortenes «→»-links stod alene på en linje med 19 px: nu 25 px (padding).
+### Fundet efter merge og rettet
+- **Idéer viste gamle temaal.** Main har lane-B's temaforslag (37 selskaber flyttet ud af Andet, 4 fra compute til Quantum). Fem former havde de gamle tal hårdkodet: varmekortet, «Fra Andet til tema» (67 · 48 · 230 → 31 · 85 · 229), «345 aktier, én prik hver», «To klasser» (største forskel nu 1,6 pp) og «Lag på lag» (Energi 15 → 37 selskaber, 6,3 → 9,3 %). Alle regnet om fra portfolio.json med script. Vægte er uændrede, så «halvdelen»-kurven (26/76/160) og vægtintervallerne holder.
+- **Ordlisten:** antal i Chips (54/49), Compute (19/16), Optik (31/30), Fysisk tech (27), Energi (37, heraf 28 forslag). Temaforslag-posten har nu tallene og link til `ideer.html#h-tf`.
+- **risici.html viste interne ord** fra main: «Risikotal (beregnet i udkastet)», «udfyldes af NDI», «maturityStatus=forslag», «ofte 0 indtil NDI udfylder», og Andet = 63 (risk-stats.json) mens portfolio.json siger 31. Nu: «Udsving og fald i tal» (udsving pr. år 32,5 %, afkast pr. udsving 0,89, største fald −35,8 %, «regnet af NDI Analytics, ikke KID») + svar på «Hvorfor passer tallet ikke med risikoklassen?» (PRIIPs har egen metode). «Hvor langt er sorteringen i temaer?» tæller direkte fra portfolio.json, så tallene altid passer med Idéer.
+- kort.html: tankestreg i «NDI på X»-døren fjernet.
+### SHOULD (andre lanes)
+- `data/risk-stats.json` `classification` (andetCount 63, themeForslag 116) passer ikke med portfolio.json efter lane-B-merge (31 / 85 ekskl. Andet). risici.html bruger ikke længere de felter.
+- app.js nøgletal hedder stadig «Max drawdown». Resten af sitet siger «Største fald (fra top)».
+### Test
+- 8763, 375/1280: risici, ideer, om-data, kort, lær/risikoklasse: 0 konsolfejl, ingen h-overflow. Screenshots af `#tal` og de fem Idéer-former gennemset på 375.

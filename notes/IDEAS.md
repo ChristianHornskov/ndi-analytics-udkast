@@ -88,3 +88,8 @@ Offentlige (ikke-fortrolige) idéer spejles evt. på `docs/ideer.html`.
 - `docs/js/app.js` ~l. 403: «Vi laver ikke nye ÅOP-beregninger i dette udkast.» Kan nu linke `om-data.html#g-aaop`, og «skat» i samme sætning kan linke `#g-skat`.
 - Graf-tooltips/tekst i app.js bruger «max drawdown i perioden». Resten af siden siger «Største fald» / «fald fra top». Forslag: «største fald i perioden».
 - Mulig næste form på ideer: «Energi» mangler som ordlistepost (kun energiressourcer, elnet, SMR, lagring).
+
+## lane-C 01:32 16/10 — til js-/værdikæde-ejer
+- app.js delår-badge → `om-data.html#g-delaar`. drawdown.html «(delår)» samme.
+- vaerdikaeder: led «Serverinfrastruktur», «Elproduktion», «Simulering og software» → `#g-servere`, `#g-elproduktion`, `#g-simulering`.
+- value-chains.json: «—» i ndi-tekster (fx «Se citat nedenfor — kun som citat», «ASML ... — som caseforståelse») → punktum eller komma (Vidensbot punkt 10).
