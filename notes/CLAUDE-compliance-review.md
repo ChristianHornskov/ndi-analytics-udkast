@@ -1058,3 +1058,28 @@ Ikke-rådgivning ✅ · tabsadvarsel 32/32 ✅ · historisk afkast ≠ fremtid 3
 
 ### Prioritet
 Ingen blokere. **1** → **2** → **3** + **4** (begge tekstrettelser i `data.js`/`app.js`, kan tages i ét commit) → **5**.
+
+## 2026-10-16 06:20 CEST · cyklus 42 (main `6c06c90`, ingen docs-delta siden cyklus 41; live = main)
+
+Ikke juridisk rådgivning. Sweepet er udvidet til 50 URL'er ved 375 (32 basis plus 8 selskaber og 10 temaer), med flag-tælling. Basis-URL'erne er byte-identiske med cyklus 41.
+
+### Tjekliste (50/50)
+Tabsadvarsel ✅ · historisk afkast ≠ fremtid ✅ · KID-link ✅ · ikke-rådgivning ✅ ("Ingen investeringsrådgivning"/"Ikke en anbefaling"; regex-misset på 8 sider skyldes ordformen, ikke manglende tekst) · SRI 5/7 på alle selskabs- og temasider med "gælder fonden som helhed - ikke [selskab] alene" ✅ · beholdning pr. 1. jun. 2026 (forsinket) ✅ · "overvægt" kun som negation ✅ · ingen køb/sælg-, garanti- eller tipsprog ✅ · AI-mærke ("AI-udkast", "Maskinelt forslag … afventer NDI-gennemgang") på alle 10 selskabssider ✅.
+
+### Nyt i den udvidede dækning
+- **Selskabssider uden profil** siger åbent "Profiltekst mangler endnu". Der er ingen opfundet tekst, og det er compliance-mæssigt korrekt ✅. Se UX SHOULD 1 for prioritering.
+- **"Vægt over tid"** (fx Lumentum 0,46 % → 1,17 %) viser historiske og forsinkede vægte og stopper 1. jun. 2026. Det afslører ingen aktuelle handler ✅. Teksten er neutral ("Kun måneder hvor ISIN indgår"). Pas på, hvis der senere tilføjes ord som "øget/øger", for så nærmer det sig ugebrevets handelssprog.
+- **Afkortede navne** ("Macom Technology Solutions H") er ikke et compliance-problem i sig selv. Men et korrekt selskabsnavn er en del af "klar og ikke vildledende" information. SHOULD (lav).
+
+### MUST
+- **Ingen åbne MUST-blokere.**
+
+### SHOULD (åbne, uændret fra cyklus 40/41)
+1. "Gns. årligt afkast" uden "siden start 22. sep. 2023" (fonden/embed, `periode.html:113`).
+2. Værdikæder er ikke AI-mærket (`vaerdikaeder.html`, `vaerdikaede.html`).
+3. "Central Information Dokument" → "Dokument med central information (KID)" (`js/data.js`, `index.html`).
+4. "Forsinket kvartalssnapshot" (`js/app.js:359`, `:428`) og nu også "Vægt over tid (kvartalssnapshots)" på selskabssiden → "snapshot pr. 1. jun. 2026".
+5. Intern sætning `omkostninger.html:370`.
+
+### Prioritet
+Uændret: **1** → **2** → **3** + **4** → **5**.

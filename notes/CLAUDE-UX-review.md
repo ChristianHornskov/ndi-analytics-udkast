@@ -1033,3 +1033,28 @@ Live Playwright ved 375 på 32 URL'er (samme sæt som cyklus 40). **0 pageerrors
 - **Privat 55+:** ordlisten giver nu svar på "hvad er Sp ADR?", men de skal stadig finde den. Et `title`/link på rå navne i listen ville hjælpe, hvis `displayName()` ikke udrulles.
 - **Familiekontor:** form 19 er den slags regnskabslæsning, de forventer, med kilde (10-K) og egen beregning. Det er godt.
 - **Idéspejder:** #13 er leveret. Næste lavthængende frugt er #9 (fakta vs. vurdering-mærke), som også løser compliance-AI-mærkningen på værdikæder.
+
+## 2026-10-16 06:20 CEST · cyklus 42 (main `6c06c90`, ingen docs-delta siden cyklus 41; live = main)
+
+Main er uændret, og live-teksten er byte-identisk med cyklus 41 på alle 32 basis-URL'er. Sweepet er derfor udvidet med **18 nye URL'er ved 375**: 8 selskabssider (Lumentum, SiTime, Wix, MercadoLibre, SoFi, IQE, Chemours, US Antimony) og de 10 øvrige temaslugs. Resultat på alle 50: **0 pageerrors og 0 vandret overflow**. "Overvægt" står kun i negationen "ikke en bevidst overvægt" på alle 11 temasider ✅.
+
+### MUST
+- Ingen UX-blokere.
+
+### SHOULD (nye)
+1. **Halvdelen af top-10 er tomme stubs.** Efter vægt i PMINDI har nr. 4 Lumentum (1,17 %), nr. 5 SiTime (1,15 %), nr. 6 Poet (0,96 %), nr. 7 Wix (0,96 %) og nr. 9 MercadoLibre (0,93 %) ingen `summary`. På siden står "Profiltekst mangler endnu" og "Rolle, produkter og kunder er ikke beskrevet endnu". SoFi (nr. 11) og Coinbase (nr. 13) er i samme situation. Top-10 linkes fra entré og portefølje, så det er de sider, en ny besøgende åbner først. Prioritér profiler efter vægt frem for alfabetisk. Det skærper cyklus 39 SHOULD 2 (315 af 345 uden summary): de første 7 profiler giver mest.
+2. **"Hold øje med -" er bekræftet** (lukker Nice-tjekket fra cyklus 41). Det ses på 7 af 8 nye selskabssider uden `watch`. Samme side viser lige over et AI-udkast under "Hold øje med" i NDI-linsen (fx Lumentum: "Kunder og produktgenerationer …"). Når `watch` mangler, så brug linsens tekst eller skjul den nederste blok. Et "-" ligner en fejl.
+3. **Navne er afkortet midt i et ord ved 28 tegn** (depotbankens feltgrænse). `displayName()` fanger dem ikke, så de står også som h1: "Macom Technology Solutions H", "Power Solutions Internationa", "Solaris Energy Infrastructur", "Bitmine Immersion Technologi", "Figure Technology Solut-Cl A", "Neo Performance Materials In", "Idaho Strategic Resources In", "International Workplace Grou". Tilsvarende "Keysight Technologies In" (24 tegn). Det er 10 positioner, så de kan klares med `NAME_FIX`. Det er mere synligt end "Sp ADR", fordi det ligner en fejl.
+
+### SHOULD (åbne, uændret)
+- Cyklus 41 SHOULD 1–6 står stadig: rå navne i lister, warrant-siden, "Dyb"/"er afventer", "Kvartalssnapshot", der nu også står i overskriften "Vægt over tid (kvartalssnapshots)" på selskabssiden, hvor sidste punkt er 1. jun. 2026, KID-betegnelsen og periode-YTD.
+
+### Nice
+- **Temasider:** "før: Compute" under hvert navn på quantum (5 af 5 er "forslag") er udkastsprog. Privat 55+ ved ikke, hvad "før" henviser til. Skriv "tema før forslag: Compute", eller vis det kun i tooltip.
+- **Visuel variation:** de 11 temasider har ens skabelon på 2,5–6k px. Det er fint som opslag, men ingen af dem har en figur. En lille vægt-søjle pr. selskab, som på ideer form 19, ville bryde tabellen op.
+- Touch-mål under 24 px er uændrede (udforsk 697, ndi-perspektiv 418, selskaber 382). Temasiderne ligger på 26–131 og selskabssiderne på 22–39.
+
+### Persona-linser
+- **Privat 55+:** klikker de på nr. 4 i top-10 (Lumentum), får de en side, der først siger "mangler endnu" og nederst "Hold øje med -". Det er det svageste indtryk på sitet lige nu.
+- **Familiekontor:** de afkortede navne (\"…Internationa\") undergraver tilliden til datakvaliteten mere end noget andet, de ser i listen.
+- **Idéspejder:** #9 (fakta vs. vurdering) er stadig næste. Profiler efter vægt (SHOULD 1) er en dataopgave, ikke en idé, men har størst effekt pr. time.
