@@ -402,3 +402,10 @@ Hele lane-C-fladen ved 375 px: ideer, kort, om-data, invester, risici, ndi-persp
 - **Visuel variation:** risici har nu 14 risikokort i to grids. Ved 375 er sektionen lang (ca. 2.300 px). Hvis reviewer finder det tungt, kan den foldes som `<details>` («For dig, der vil gå i dybden»). Jeg har ikke gjort det endnu, fordi FO skal kunne finde den uden at klikke.
 - **Åbent (HANDOFF):** prospektet 24.10.2025 nævner kun kl n (PMINDI) og skriver «fokuseret portefølje». NDI/Fundmarket bør afstemme det.
 - Test (Playwright, lokal): risici, om-data, laer/faq, kort × 375/1280: 0 konsolfejl, 0 h-overflow, én h1. 8 kort i `#prospekt`. 0 døde `om-data.html#g-…`-links fra risici, invester, faq.
+
+## 02:45 CEST lane-C checkpoint (Claude) · livscyklus på dansk + «Hvor på bakken ligger vægten?» + ordliste 138
+- **Level 1-jargon (PERSONA-privat):** `laer/livscyklus.html` bruger nu danske fasenavne først: før omsætning (præ-revenue), før overskud (præ-profit), høj vækst, vækst med overskud (GARP), moden (value). Matcher Mads' egen inddeling i visionsmødet (#44: før omsætning, før overskud, overskud). Ordlistens «Modenhed» er skrevet om på samme måde. Kort: «Koncept-stub» → «Tidlig skitse, endnu ikke i brug».
+- **Ny form på ideer (`#h-lc`):** bobler på livscyklus-bakken, areal ∝ vægt. Tal regnet fra portfolio.json (PMINDI 345: 1,0 / 1,5 / 55,5 / 30,2 / 11,8 %; AKK ca. 53 / 30 / 14 %). Tydeligt mærket «FORSLAG, IKKE NDI'S VURDERING», fordi alle 345 modenheder er `maturityStatus: forslag`. Konsistent med ASML-linsen («NDI har endnu ikke sat en modenhedsgrad»). Visuel variation: første boble-/arealform på siden.
+- **Ordliste 138:** + Transaktionsomkostninger (KID-post, ≠ din kurtage), + Indeksfond og ETF (fonden er ikke en indeksfond, intet benchmark).
+- Tjek: 320/375/1280 på ideer, livscyklus, om-data, kort: scrollWidth = viewport, 0 pageerrors. Precheck OK.
+- Åbent til Christian/NDI: må den maskinelle modenhedsfordeling vises offentligt, før NDI har gennemgået den? Hvis nej, fjern `#h-lc` (én sektion + én TOC-linje).

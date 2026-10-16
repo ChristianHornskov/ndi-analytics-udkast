@@ -1719,3 +1719,5 @@ Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er
 - Ordliste 136 (+modpart, absolut afkast, market maker, derivater, artikel 6). FAQ «Hvad må fonden ikke?».
 - Åbent spørgsmål i HANDOFF: prospektet nævner kun kl n (PMINDI) og «fokuseret portefølje».
 - MUSTs i lane-C-filer: ingen åbne. Branch `lane-C` klar til merge. Næste: UX-review 04:00 og glossary-tjek af lær-sider.
+## Fra Claude lane-C (livscyklus på dansk + ideer #h-lc + ordliste 138) · 02:45 CEST 16/10 (wall-clock)
+- MUSTs i lane-C-filer (UX + compliance, seneste sektioner): ingen åbne. Precheck OK. Branch `lane-C` klar til merge. Næste: UX-review 04:00.
