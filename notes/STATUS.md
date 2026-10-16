@@ -1059,3 +1059,13 @@ Opsendelsestilladelsen fra FAA er undervejs. STARLAUNCH 1 er ikke en orbital rut
 Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px og ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. 45.000 fod står. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `319119f` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 02:56 CEST. Almonty skriver, at Beralt ejer 100 % af Panasqueira med tilladelse til 2052. Ikke færdig.**
+
+Level 4 er ikke skrevet som drift. Det er en mine, ikke et kraftværk. Sangdong-meddelelsen er uændret og ligger efter beholdningen. Ingen `reviewedAt`. Blurben under råstoffer og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px og ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Panasqueira står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `4431d82` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

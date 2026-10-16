@@ -985,20 +985,20 @@
   "CA0203987072": {
    "name": "Almonty Industries",
    "theme": "energy-resources",
-   "summary": "Arbejder med wolframminer og wolframprojekter. Wolfram bruges i hårde legeringer og industri.",
-   "watch": "Drift af minerne og prisen på wolfram.",
-   "source": "https://almonty.com/",
-   "products": "Wolfram.",
-   "customers": "Industrikunder.",
-   "role": "Råstof til industri, ikke elproduktion.",
+   "summary": "Arbejder med wolfram. Selskabet skriver, at Beralt ejer 100 % af minen Panasqueira i Covilha i Portugal, med tilladelse til 2052. Level 4 er ikke skrevet som drift. Det er ikke et kraftværk.",
+   "watch": "Om Level 4 bliver finansieret. Teksten siger ikke, at udvidelsen er i drift.",
+   "source": "https://almonty.com/project/panasqueira-mine/",
+   "products": "Wolfram fra Panasqueira. Level 4 er ikke skrevet som drift.",
+   "customers": "Industrikunder. Teksten nævner ikke en navngiven leverance.",
+   "role": "Panasqueira er en mine med tilladelse til 2052. Ikke et kraftværk.",
    "narrative": [
-    "Almonty arbejder med wolfram. Selskabet nævner minerne Panasqueira og Los Santos. Valtreixal er et projekt.",
-    "Selskabet skrev 23. september 2026, at Sangdong i Sydkorea har produceret wolfram for første gang siden 1993. Meddelelsen ligger efter beholdningen pr. 1. juni 2026. Selskabet er ikke et kraftværk."
+    "Almonty skriver, at det indirekte helejede datterselskab Beralt Tin and Wolfram (Portugal) ejer 100 % af wolframminen Panasqueira i Covilha i Portugal. Siden skriver, at minen har en udvindingstilladelse frem til 2052, som kan forlænges. Level 4 er beskrevet som en udvidelse, der kan gå videre, når finansieringen er på plads. Siden siger ikke, at Level 4 er i drift. Panasqueira er ikke et kraftværk.",
+    "Selskabet skrev 23. september 2026, at Sangdong i Sydkorea har produceret wolfram for første gang siden 1993. Meddelelsen ligger efter beholdningen pr. 1. juni 2026. Menuen nævner også Los Santos. Denne tekst beskriver ikke den mine. Selskabet er ikke et kraftværk."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets side",
-     "url": "https://almonty.com/"
+     "label": "Panasqueira",
+     "url": "https://almonty.com/project/panasqueira-mine/"
     },
     {
      "label": "Meddelelse 23. september 2026",
