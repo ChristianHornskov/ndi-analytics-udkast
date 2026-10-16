@@ -408,3 +408,7 @@ Ny form på sammenlign, over den eksisterende tidslinje. To spor. Længden er ti
 ### Update · dage over og under nul · 2026-10-16 ~07:40 CEST
 
 Ny form i embed, under stoppene. En tynd streg. Brand er dagene på eller over nul. Rosa er dagene under nul. På hele perioden er det 749 af 770 og 21 af 770. På år til dato er det 161 af 197. Sætningen siger, at nul er første dag i perioden, og at dagene under nul ikke er et fald fra top. Ingen procent i sætningen. Knapperne er 44 px. Ingen sidescroll ved 300–1100. Ingen konsolfejl. På papir er knapperne væk, og stregen og sætningen bliver. PMINDIAKK har ingen streg, ingen procent, og teksten om 5. december 2026.
+
+### Update · år under 10 % · 2026-10-16 ~07:42 CEST
+
+Ny række på drawdown, under hoppet til første dag. Tre knapper: 2024, 2025 og 2026. Et klik hopper til årets første dag mindst 10 % under toppen. 2024 lander 2. aug. 2024 på −13,8 %. 2025 lander 25. feb. 2025 på −12,2 %. 2026 lander 2. jan. 2026 på −14,7 %. 2023 har ingen knap. Knapperne er 44 px og står på én række ved 300 px. Den valgte har en gul streg. Ingen sidescroll. Ingen konsolfejl. På papir er knapperne væk, og etiketten bliver. PMINDIAKK har ingen række og ingen procent.
