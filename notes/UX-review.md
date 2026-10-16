@@ -499,3 +499,21 @@ Hele lane-C-fladen ved 375 px: ideer, kort, om-data, invester, risici, ndi-persp
 2. X-markør `$NVDA $SE $HIMS` på performance-graf — skjul/omskriv.
 3. `temaer.html` uden Markedsføringsmateriale + KID-footer.
 
+
+## 06:00 CEST lane-C checkpoint (Claude) · egne sider, 375 + 1280, lokal main + lane-C
+**Omfang:** 14 sider i lane-C's ejerskab (ideer, kort, om-data, invester, risici, ndi-perspektiv, lær-oversigt, FAQ, tidslinje, sektorer, Sådan tænker vi, livscyklus, risikoklasse) og Entré som reference. Screenshots `notes/ux-screens/06-C-*-mob.png`.
+
+**Resultat:** 0 JS-fejl, 0 vandret overflow ved 375 og 1280. Alle sider har «Markedsføringsmateriale» og tabsadvarsel. Handelsord («køb», «sælg», «kursmål») står kun i negationer («ikke en karakter, et kursmål eller en anbefaling»). CAGR og P/E står kun i forklaringer eller som navn på en lær-side, ikke i overskrifter.
+
+### Rettet i denne runde
+- **(mobil)** `ideer.html`: 30 temalinks i varmekortet og tre rækkediagrammer var 19 px høje, under WCAG 2.5.8 (24 px). Nu er de 24 px. Små mål ved 375: 30 → 1.
+- **(desktop + mobil)** `om-data.html`: gruppetallene i ordlisten var forældede (35 · 41 · 35 mod reelt 36 · 42 · 38). Tallet tælles nu på siden, så nye begreber ikke giver skæve tal igen.
+- HANDOFF-CODEX: lær-døre 18 → 19, NDI-perspektiv-grupper rettet til det, siden viser nu (333 selskaber, Andet 27).
+
+### Status på cyklus 38-fund i andre lanes (tjekket i kode 06:05)
+- X-tematræf: `x-feed.js` har nu et filter, der kun viser husets konti (precheck bekræfter) ✅.
+- «Manuel klassifikation» står ikke længere i `selskab.html` ✅.
+
+### SHOULD (lane-C, næste)
+1. ~~`risici.html` «årlige afkast (CAGR)» uden link~~. Rettet i samme runde: CAGR linker nu til `om-data.html#g-cagr`.
+2. `ndi-perspektiv.html`: «Andet / uklassificeret 27» er højere end de 6 fra kl. 02:30. Det kommer af lane-B's temaforslag. Tjek, at lead-teksten ikke lover færre.

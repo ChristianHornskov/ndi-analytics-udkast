@@ -93,7 +93,7 @@
  </details>
  </section>
  <section class="panel" id="o-fonden">
- <details class="gl-group" open><summary><h2 style="font-size:16px;margin:0">Fonden og andelsklasser</h2><span class="gl-n">35 begreber</span></summary>
+ <details class="gl-group" open><summary><h2 style="font-size:16px;margin:0">Fonden og andelsklasser</h2><span class="gl-n">36 begreber</span></summary>
  <dl style="color:var(--muted);display:grid;gap:12px">
  <div id="g-kurtage"><dt style="color:var(--text)">Kurtage og spread</dt><dd>Det, din bank eller platform tager for at handle, og forskellen mellem køb- og salgskurs. Kommer oven i fondens løbende omkostninger og afhænger af, hvor du handler. NDI Analytics viser ikke live kurser.</dd></div>
  <div id="g-transaktion"><dt style="color:var(--text)">Transaktionsomkostninger</dt><dd>Det, det koster fonden selv at købe og sælge aktier, fx når den <a href="#g-rebalancering">rebalancerer</a>. Står som en særskilt post i <a href="#g-kid">KID</a> og er en del af fondens samlede omkostninger. Det er ikke det samme som din egen <a href="#g-kurtage">kurtage</a>.</dd></div>
@@ -135,7 +135,7 @@
  </details>
  </section>
  <section class="panel" id="o-portefolje">
- <details class="gl-group" open><summary><h2 style="font-size:16px;margin:0">Portefølje, temaer og modenhed</h2><span class="gl-n">41 begreber</span></summary>
+ <details class="gl-group" open><summary><h2 style="font-size:16px;margin:0">Portefølje, temaer og modenhed</h2><span class="gl-n">42 begreber</span></summary>
  <dl style="color:var(--muted);display:grid;gap:12px">
  <div id="g-vaegt"><dt style="color:var(--text)">Vægt</dt><dd>Et selskabs andel af fondens formue på beholdningsdatoen. Den lille linje ved selskabsnavnet viser vægten over tid i fonden, ikke aktiekursen.</dd></div>
  <div id="g-spredning"><dt style="color:var(--text)">Spredning / tæt på ligevægt</dt><dd>Fonden ejer flere hundrede selskaber med små vægte, tæt på ligevægt. Ingen enkelt aktie afgør resultatet. Se <a href="laer/hvorfor-mange-aktier.html">Hvorfor så mange aktier?</a></dd></div>
@@ -183,7 +183,7 @@
  </details>
  </section>
  <section class="panel" id="o-kaeder">
- <details class="gl-group" open><summary><h2 style="font-size:16px;margin:0">Værdikæder og flodsystemet</h2><span class="gl-n">35 begreber</span></summary>
+ <details class="gl-group" open><summary><h2 style="font-size:16px;margin:0">Værdikæder og flodsystemet</h2><span class="gl-n">38 begreber</span></summary>
  <dl style="color:var(--muted);display:grid;gap:12px">
  <div id="g-vaerdikaede"><dt style="color:var(--text)">Værdikæde</dt><dd>Rækken af led fra råvare og energi til det færdige produkt. AI-compute-kæden har 13 led: energi, datacentre, chipdesign, udstyr, foundry, hukommelse, optik, servere, cloud og modeller, data, software, apps og fysisk AI. Pædagogisk model, ikke en investeringsanbefaling. Se <a href="vaerdikaeder.html">værdikæderne</a>.</dd></div>
  <div id="g-led"><dt style="color:var(--text)">Led</dt><dd>Ét trin i en værdikæde, fx "Optik og netværk". Et selskab kan stå i flere led.</dd></div>
@@ -240,6 +240,11 @@
  (() => {
   const groups = [...document.querySelectorAll('.gl-group')];
   const all = document.getElementById('gl-all');
+  // Tæl begreberne, så tallet i overskriften ikke kan blive forældet, når nye kommer til.
+  groups.forEach((d) => {
+   const n = d.querySelectorAll('[id^="g-"]').length, el = d.querySelector('.gl-n');
+   if (el && n) el.textContent = n + (n === 1 ? ' begreb' : ' begreber');
+  });
   const openFor = (hash) => {
    const t = hash && document.getElementById(decodeURIComponent(hash.slice(1)));
    const d = t && (t.querySelector('.gl-group') || t.closest('.gl-group'));
