@@ -879,3 +879,62 @@ Alle centrale dokumenter svarer 200 live: KID PMINDI/PMINDIAKK (`priip_ipm140b`/
 - **Privat (55+):** sitet er teknisk tilgængeligt (skip-link, alt, labels). Den reelle barriere på mobil er de små chips. På desktop ser fonden rolig og overskuelig ud, men fire grønne afkasttal i stor skrift kommer før risikoen.
 - **Familiekontor:** på desktop leder de efter et omkostningstal i KPI-rækken, og der er plads til det. KID- og prospektlinks virker og peger på de rigtige PDF'er ✅.
 - **Visuel variation:** desktop er luftigt og ensartet. Der er ingen ny træthed. Trætheden er fortsat længden på mobil.
+
+## 2026-10-16 02:49 CEST · cyklus 37 (main `3e25f16`, docs-delta siden `04e1c9a`: ideer-foldning, drawdown, fagord ud af overskrifter, tre drivkræfter)
+
+Pages (00:47:36 GMT) = main. Playwright kørte live ved 375 på 28 URL'er og ved 1280 på ideer og drawdown.
+
+### Nyt ✅
+- **Ideer på mobil er foldet:** 375 = 7.560 px (før 18.199). 11 sektioner som `<details>`. "Fold alle ud" er 44 px. Dybe links folder ud: `#h-dr` åbner og lander ved y=112. Desktop er åben, og knappen hedder "Fold alle sammen". Det er den største forbedring af mobil-træthed i nattens løb.
+- **Venn "Tre drivkræfter, ét overlap"** er læsbar ved 375 (SVG 317 px). Den er mærket "NDI Analytics' skitse … ikke NDI's egen opdeling", og alle vægte har datoen 1. jun 2026. Den er også et nyt billede, så variationen er god.
+- **Drawdown:** episoder har tal på de dybe prikker. Den valgte episode er gul på kurven. 0 SVG-tekster under 10 px. Kalenderår mærker 2023 "delår" og 2026 "til dato" ✅.
+- Lær/ordliste: "CAGR" er ude af overskrifterne ("Hvorfor det årlige afkast er lavere end gennemsnittet"). Ordlisten har 142 begreber, med nye "Årlig omkostningsmæssig konsekvens (KID)" og "Øjebliksbillede".
+
+### MUST
+- (uændret, 8. cyklus) **Tredjeparts-"BREAKING"** (@BullTheoryio) under fondens graf og på SoftBank. Se compliance.
+
+### SHOULD (nyt)
+1. **Fagord-oprydningen er halv.** Commit `1beebba` fjernede CAGR/drawdown fra lær, men de mest besøgte flader har dem stadig:
+   - drawdown `h1` "**Drawdown** · PMINDI" og kicker "FONDAFKAST · DRAWDOWN". Skriv "Fald fra top · PMINDI", som sidekortet allerede kalder siden.
+   - fonden KPI "Gns. årligt afkast (**CAGR**)", "Grafmarkører: … drawdown (rød)" og "Åbn drawdown-side → **YTD dyb side**".
+   - entré: "Møntspillet (+50/−40) og variance drag: CAGR og gennemsnit".
+   - periode: "Drawdown", "CAGR (hele serien)", "YTD: +4,0 %". Embed: "CAGR · 3,1 år siden start".
+   - Privat 55+ møder fagordene på fonden, før de når lær.
+2. **"kl n"** er rettet på invester, men står stadig på fakta (3×) og omkostninger (2×) ("NewDeal Invest, kl n (PMINDI)"). Skriv "andelsklasse PMINDI".
+3. **Drawdown "Under vand" ved 375:** etiketterne "tilbage", "top" og "nu −23 %" sidder tæt i højre side. Forklaringen under grafen er 8 linjer plus 4 linjer. Det er meget tekst til én graf på mobil. Fold "Bredden er tiden …" ind i en `<details>` "Sådan læser du grafen".
+4. Fra cyklus 36, stadig åbent: touch-mål på 17–18 px på udforsk/portefølje. Omkostningstal som 6. KPI-kort på fonden. Entré "Modenhed: 345 selskaber klassificeret (udkast)".
+
+### Nice
+- Venn: "Quantum 0,9 % · forslag" er det eneste tema med "forslag". Forklar det i figurteksten ("forslag = tema endnu ikke bekræftet af NDI"), ellers ligner det en tastefejl.
+- Ideer ved 1280 er 10.961 px med alle 11 åbne. Overvej også at folde efter de første 3 på desktop.
+
+### Persona-linser
+- **Privat 55+:** ideer på mobil er nu overskuelig. Drawdown-siden hedder stadig "Drawdown" øverst, så fagord-indsatsen ses ikke dér, hvor de lander fra fonden.
+- **Familiekontor:** de tre drivkræfter er klart sourcet (ugebrev 19. jan 2026) og skitse-mærket ✅. FO vil stadig se omkostningstallet på fonden.
+- **Idéspejder:** Venn er et godt "ét billede"-svar på "hvad tror NDI på?".
+
+## 2026-10-16 02:55 CEST · cyklus 38 (main `3e25f16`, intet docs-delta siden cyklus 37, live = main)
+
+Pages (00:47:36 GMT) = main. Denne cyklus dækker det, 32–37 ikke stikprøvede: **8 selskabssider** (top, midt, warrants, mindste), **alle 11 temasider**, sammenlign, kort og to 404-tilfælde. Playwright kørte live ved 375. Resultat: 0 pageerrors og 0 vandret overflow.
+
+### Nyt ✅
+- `tema.html?slug=findesikke` viser "Temaet findes ikke", og `selskab.html?isin=XX…` viser "Selskabet findes ikke i beholdningen". Fallback-fejlen fra cyklus 35 er lukket.
+- Alle temasider og selskabssider har tabsadvarsel, KID-link, SRI 5/7 med "gælder fonden som helhed – ikke X alene" og forsinket-mærket ✅.
+
+### MUST
+- **Tredjeparts-"BREAKING" er ikke kun på SoftBank. Den står på alle 44 platforme-selskaber og på `tema.html?slug=platforms`.** Stikprøven viser "BREAKING: SoftBank is seeking to raise up to $100 billion …" (@BullTheoryio) på Carvana og begge Opendoor-warrants med "Vist fordi: platforme". De andre fulgte konti følger samme mønster: @FundaAI ("$ORCL and $CRWV face a repricing of credit risk") og @MelvinInvests står på alle chips-, energi- og compute-sider, fx SUESS MicroTec. Det er altså ikke kun graf-markørerne (`app.js:479`). **Rettelsen sidder i `docs/js/x-feed.js:365` `matchPosts`:** tema-træf skal kun gælde husets konti. Tilføj `if (!nameHit && !isHouse(p)) continue;` før `hits.push`. `isHouse` findes allerede (linje 308).
+
+### SHOULD (nyt)
+1. **Livscyklus har nu en fjerde formulering.** `selskab.html:106` siger "**Manuel** klassifikation i udkastet" for alle 345, men data siger `maturityStatus: "forslag"` / "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang" for alle 345. Den direkte modsiger data. Brug `maturityStatus === 'forslag'` → "Maskinelt forslag, afventer NDI-gennemgang. Ikke en rating."
+2. **Tomme profiler:** kun 98 af 345 selskaber har en profil i `company-profiles.json`. De øvrige ~247 sider viser "Profiltekst mangler endnu" og "Rolle i værdikæden –", "Produkter –" og "Kunder –". Skjul de tre tomme felter, når profilen mangler, og vis i stedet ét link: "Se temaet Platforme".
+3. **Warrants som selskaber:** "Opendoor Tech Warrant Series A/Z" har vægt 0,00 %, egen side (4.257 px) og tom profil. 10 positioner har vægt < 0,005 %. Grupper dem under moderselskabet ("Opendoor (inkl. warrants)"), eller vis dem kun i fuld liste.
+4. **Rå navne er udbredt:** 187 af 345 navne har Bloomberg-suffiks/forkortelser ("Sea Sp ADR" som h1, "SUESS MicroTec N", "Southern Co/The", "Lumentum Hldngs"). h1 på en selskabsside er det første, en privatinvestor ser. Det er udvidelsen af SHOULD fra cyklus 35.
+5. **Sammenlign nævner ikke omkostningsforskellen** (KID ca. 2,79 % vs. 2,85 % ved 5 år). FO spørger først om den, når de vælger mellem to klasser. Tilføj én linje i hvert kort.
+
+### Nice
+- Engelske X-citater står uoversat. Det er fint som citat, men et "(engelsk opslag)"-mærke eller en dansk resumelinje vil hjælpe 55+.
+
+### Persona-linser
+- **Privat 55+:** hvis de klikker på Carvana fra top-10, er det første eksterne opslag "BREAKING … $100 billion". Det er uro, ikke information. De tomme "–"-felter får sitet til at virke ufærdigt.
+- **Familiekontor:** "Manuel klassifikation" over for data "forslag" er den slags inkonsistens, de fanger. Sammenlign uden omkostninger er en tabt chance.
+- **Visuel variation:** temasiderne har ens struktur, men 3–6k px hver er acceptabelt. Selskabssider uden profil er mest X-panel og fondstekst.
