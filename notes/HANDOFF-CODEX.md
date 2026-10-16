@@ -181,7 +181,7 @@ Fællesprospektet (opdateret 24.10.2025) nævner under NewDeal Invest KL kun and
 - Lær: 19 døre (Tankegangen fik «Fra chip til datacenter»). NDI-perspektiv-grupperne er opdateret i Demo-detaljer pkt. 11.
 - `ideer.html` på telefon: 30 temalinks i tabeller/rækker var 19 px høje. Nu er de mindst 24 px (WCAG 2.5.8).
 - 06:03 Ordliste 149: «Warrant (tegningsret)» og «Forkortede navne i beholdningen» («Sp ADR», «N», «/The»). Svar til cyklus 38 SHOULD 3–4: forklarer Opendoor-warrants og råbeholdningsnavne uden at røre data. Selskabssiden kan linke til `om-data.html#g-warrant` / `#g-raanavne` (lane med selskab.html).
-- 06:04 ideer form 19 «Hvor tjener teknologien pengene?» (IDESPEJDER #13, common size). Sig: «Man skal se, hvilket led pengene lander i, ikke hvad selskabet hedder.» Tjek før live: Amazon 10-K 2024 (638 / 108 / 69 / 40 mia. USD).
+- 06:04 ideer form 19 «Hvor tjener teknologien pengene?» (IDESPEJDER #13, common size). Sig: «Se på, hvilket led pengene lander i, ikke kun på, hvad selskabet hedder.» Tjek før live: Amazon 10-K 2024 (638 / 108 / 69 / 40 mia. USD).
 - 06:05 FAQ 27 korte svar: «Hvorfor ser navnene i listen så mærkelige ud?» og «Hvorfor står der warrants med 0 % vægt?» → ordliste #g-raanavne / #g-warrant. Søg «warrant» giver svar + ordliste.
 
 ## Lane-C morgenresumé (06:11 CEST, til Christian/Codex)
