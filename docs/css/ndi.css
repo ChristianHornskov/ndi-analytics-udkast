@@ -757,6 +757,7 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
 .year-hop{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 14px}
 .year-hop .outline-btn{min-height:44px;min-width:44px}
 .year-hop .src{flex:1 0 100%;margin:0}
+.year-say{flex:1 0 100%;margin:4px 0 0;font-size:14px;line-height:1.45;color:var(--text);border-left:3px solid var(--brand);padding:2px 0 2px 10px;min-height:1.45em}
 .year-hop button[aria-pressed=true]{box-shadow:inset 0 -2px 0 var(--yellow)}
 .since-bund{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin:0 0 14px}
 .since-bund .outline-btn{min-height:44px}
@@ -930,7 +931,7 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
   .life-ep i{background:#1d4e56}
   .life-ep.open i{background:#333}
   .life-gap{background:#1d4e56;opacity:1}
-  .life-say{color:#111;border-left-color:#111}
+  .life-say,.year-say{color:#111;border-left-color:#111}
   .fork-arm{display:flex !important;color:#111 !important}
   .fork-say,.fork-end{color:#111;border-left-color:#111}
   .fork-src{color:#111;border-color:#1d4e56;background:#fff}

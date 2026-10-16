@@ -424,3 +424,7 @@ Ny form i embed, over grafen. Et spor for hele perioden, fra 22. sep. 2023 til 1
 ### Update · to slags rækker · 2026-10-16 ~07:48 CEST
 
 Main lagde en Nasdaq-række med klassen `.cmp-row`. Temarækken på sammenlign bruger samme navn. CSS er delt: temarækken er `.cmp-themes .cmp-row` og stadig et gitter med margin 0. Nasdaq-rækken er `div.cmp-row` med margin 10 px. Kontakten er 44 px og slået fra. Sætningen «Fonden har intet fast benchmark» står der stadig. Ingen konsolfejl.
+
+### Update · dage pr. år · 2026-10-16 ~07:49 CEST
+
+År-rækken på drawdown siger nu også et dagtal. 2024 har 16 dage, 2025 har 116, 2026 har 135. Tilsammen 267, samme tal som hele serien. Et klik hopper stadig til årets første dag under 10 %. Sætningen har ingen ny procent. Knapperne er 44 px. Ingen sidescroll ved 320 og 1100. Ingen konsolfejl. På papir er knapperne væk, og dagtallet bliver. PMINDIAKK har ingen række og ingen procent.

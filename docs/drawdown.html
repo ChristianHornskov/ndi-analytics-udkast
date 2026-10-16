@@ -88,17 +88,19 @@
  const firstUnder = usedGate ? uw.find((u) => u.u <= -10) : null;
  const underN = usedGate ? uw.filter((u) => u.u <= -10).length : 0;
  const yearUnder = [];
+ const yearN = new Map();
  if (usedGate) {
  const seenY = new Set();
  for (const u of uw) {
  if (u.u > -10) continue;
  const y = u.d.slice(0, 4);
+ yearN.set(y, (yearN.get(y) || 0) + 1);
  if (seenY.has(y)) continue;
  seenY.add(y);
  yearUnder.push({ y, d: u.d });
  }
  }
- const yearHop = yearUnder.length ? `<div class="year-hop" role="group" aria-label="Første dag under 10 procent i året"><span class="src">Første dag i året under <span class="ep-pct">10 %</span></span>${yearUnder.map((y) => `<button type="button" class="outline-btn" data-date="${y.d}" aria-pressed="false">${y.y}</button>`).join('')}</div>` : '';
+ const yearHop = yearUnder.length ? `<div class="year-hop" role="group" aria-label="Første dag under 10 procent i året"><span class="src">Første dag i året under <span class="ep-pct">10 %</span></span>${yearUnder.map((y) => `<button type="button" class="outline-btn" data-date="${y.d}" data-n="${yearN.get(y.y)}" aria-pressed="false">${y.y}</button>`).join('')}<p class="year-say" id="year-say"></p></div>` : '';
  const sinceN = open ? Math.round((Date.parse(rows[rows.length - 1].d + 'T12:00:00Z') - Date.parse(open.troughD + 'T12:00:00Z')) / 86400000) : null;
  const sinceBund = open && sinceN != null ? `<p class="since-bund"><button type="button" class="outline-btn" id="since-bund" data-date="${open.troughD}" aria-pressed="false">Siden bunden</button><span class="src"><span class="ep-pct">${sinceN} dage</span> siden <span class="ep-pct">${fmtDate(open.troughD)}</span>. Serien er ikke tilbage <span class="ep-pct">på den top.</span></span></p>` : '';
  if (!deep.length) deep = [...eps].sort((a, b) => a.dd - b.dd).slice(0, 3).sort((a, b) => a.peakD.localeCompare(b.peakD));
@@ -476,6 +478,14 @@
  document.querySelectorAll('.year-hop button').forEach((b) => {
  b.setAttribute('aria-pressed', String(b.dataset.date === u.d));
  });
+ const yearSay = document.getElementById('year-say');
+ if (yearSay) {
+ const y = u.d.slice(0, 4);
+ const n = yearN.get(y) || 0;
+ yearSay.innerHTML = n
+ ? `${y}: <span class="ep-pct">${n} dage</span> lå mindst <span class="ep-pct">10 %</span> under den <span class="ep-pct">løbende top</span>.`
+ : `${y} havde ingen dag mindst <span class="ep-pct">10 %</span> under den <span class="ep-pct">løbende top</span>.`;
+ }
  document.getElementById('since-bund')?.setAttribute('aria-pressed', String(!!open && u.d === open.troughD));
  const lifeSay = document.getElementById('life-say');
  if (lifeSay) {

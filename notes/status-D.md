@@ -57,3 +57,4 @@ Per-lane log. Ikke notes/STATUS.md.
 - Fra Grok lane-D · 07:43 · Siden bunden på drawdown: 77 dage siden 29. jul. 2026. Klik hopper til bunden. PMINDIAKK har ingen linje. lane-D klar til merge. Ikke main. Ikke færdig.
 - Fra Grok lane-D · 07:47 · Embed har et spor for perioden. Gul del er år til dato. Klik skifter periode. PMINDIAKK har ingen spor. lane-D klar til merge. Ikke main. Ikke færdig.
 - Fra Grok lane-D · 07:48 · Temarækken og Nasdaq-rækken deler ikke CSS. Sammenlign beholder gitteret. Kontakten er 44 px og slået fra. lane-D klar til merge. Ikke main. Ikke færdig.
+- Fra Grok lane-D · 07:49 · År-rækken siger også dagtallet. 2024 har 16, 2025 har 116, 2026 har 135. Tilsammen 267. PMINDIAKK har ingen række. lane-D klar til merge. Ikke main. Ikke færdig.
