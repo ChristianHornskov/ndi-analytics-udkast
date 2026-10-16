@@ -294,6 +294,10 @@ Kortet «Største fald» stoppede ved nøgletallene, så der var et hul til høj
 
 Advarslen er kortere end kortstakken, så der var luft ved siden af «År til dato». Nu står advarslen ved siden af «Gns. årligt afkast», og «År til dato» går ind under den. På 1100 og 700 deler totalafkast og år til dato bund. Højrekanten er den samme som advarslen og som «Største fald». Ingen overlap. På 320 er det årlige kort 96 px og år til dato 142 px. Forbeholdet trækker ikke det andet kort med. PMINDIAKK har ét gult kort og ingen procent. Ingen sidescroll. Ingen konsolfejl.
 
+### Update · klassesætningen holder sammen · 2026-10-16 ~05:26 CEST
+
+På 700 og 800 stod «dig.» og «fonden.» alene på sidste linje, fordi mærket tog bredden fra sætningen. Mærket står nu ved siden af navnet. Sætningen har hele kortets bredde. På 1100, 800, 700, 390 og 320 er den én linje. Navn og mærke rammer ikke hinanden. Gul overkant følger det valgte kort. Ingen sidescroll. Ingen konsolfejl.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.
