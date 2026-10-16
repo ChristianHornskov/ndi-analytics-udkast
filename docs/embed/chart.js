@@ -25,6 +25,7 @@
     return `${sign && value > 0 ? '+' : ''}${number.format(value)} %`;
   };
   const toneOf = n => (n < -0.05 ? 'neg' : 'pos');
+  const ytdCaveat = () => '<span class="keep">Delår, ikke</span> <span class="keep">et helt år.</span> <span class="keep">Markedsføringsangivelsen</span> afventer <span class="keep">Fundmarket-godkendelse.</span>';
   const escape = s => String(s).replace(/[&<>"']/g, c => ({
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
   }[c]));
@@ -203,7 +204,7 @@
     $('#metric-cagr-note').innerHTML = annual == null
       ? `Historik ${number.format(years)} år · vises efter ét års data`
       : `${number.format(years)} år siden start <span class="keep">${fmtDate(first.d)}</span>`;
-    $('#metric-ytd-note').innerHTML = `Fra 1. jan. ${last.d.slice(0, 4)} til <span class="keep">${fmtDate(last.d)}</span>. <span class="keep">Delår, afventer</span> <span class="keep">Fundmarket-godkendelse.</span>`;
+    $('#metric-ytd-note').innerHTML = `Fra 1. jan. ${last.d.slice(0, 4)} til <span class="keep">${fmtDate(last.d)}</span>. ${ytdCaveat()}`;
     $('#metric-dd-note').textContent = `Bund ${fmtDate(dd.trough)} · fra en top i perioden`;
     const well = document.getElementById('metric-dd-well');
     if (well) {
@@ -292,7 +293,7 @@
 
     const context = [];
     if (state.truncated) context.push('Viser den tilgængelige historik i den valgte periode.');
-    if (state.period === 'ytd') context.push('År til dato afventer <span class="keep">Fundmarket-godkendelse.</span>');
+    if (state.period === 'ytd') context.push(ytdCaveat());
     $('#chart-context').innerHTML = context.join(' ');
     $('#chart-context').hidden = !context.length;
 
@@ -510,7 +511,7 @@
     $$('#life-bit button').forEach((btn) => btn.setAttribute('aria-pressed', String(btn.dataset.period === state.period)));
     const when = (d) => `<span class="keep">${d}</span>`;
     say.innerHTML = ytdOn
-      ? `År til dato frem til ${when(box.dataset.ytdTo)}. <span class="keep">Delår, afventer</span> <span class="keep">Fundmarket-godkendelse.</span>`
+      ? `År til dato frem til ${when(box.dataset.ytdTo)}. ${ytdCaveat()}`
       : `Hele perioden fra ${when(box.dataset.from)} til ${when(box.dataset.to)}. Den gule del er <span class="keep">år til dato.</span>`;
   }
 
@@ -538,23 +539,24 @@
       hop.hidden = first < 0;
       if (first >= 0) hop.dataset.i = String(first);
     }
-    paintDaySplit(box.dataset.side || 'over');
+    paintDaySplit(box.dataset.side || 'both');
   }
 
   function paintDaySplit(side) {
     const box = $('#day-split');
     const say = $('#day-say');
     if (!box || box.hidden) return;
-    const use = side === 'under' ? 'under' : 'over';
+    const use = side === 'under' || side === 'over' ? side : 'both';
     box.dataset.side = use;
-    $$('#day-split button').forEach((btn) => btn.setAttribute('aria-pressed', String(btn.dataset.side === use)));
+    $$('#day-split .day-picks button').forEach((btn) => btn.setAttribute('aria-pressed', String(btn.dataset.side === use)));
     if (!say) return;
     const n = box.dataset.n;
-    if (use === 'under') {
-      say.innerHTML = `${box.dataset.under} af ${n} dage lå <span class="keep">under nul.</span> Det er afstanden til periodens start, <span class="keep">ikke et fald</span> <span class="keep">fra top.</span>`;
-    } else {
-      say.innerHTML = `${box.dataset.over} af ${n} dage lå på eller <span class="keep">over nul.</span> Nul er første dag <span class="keep">i perioden.</span>`;
-    }
+    const both = `${n} dage i perioden: ${box.dataset.under} <span class="keep">under nul</span>, ${box.dataset.over} på eller <span class="keep">over nul.</span>`;
+    const hist = `<span class="keep">Historisk afkast</span> er ikke en pålidelig indikator for <span class="keep">fremtidigt afkast.</span>`;
+    const gloss = use === 'under'
+      ? `Det er afstanden til periodens start, <span class="keep">ikke et fald</span> <span class="keep">fra top.</span>`
+      : `Nul er første dag <span class="keep">i perioden.</span>`;
+    say.innerHTML = `${both} ${gloss} ${hist}`;
   }
 
   function syncStops(index) {

@@ -65,6 +65,27 @@ b, strong { font-weight: 700; }
   border: 0;
 }
 
+.skip {
+  position: fixed;
+  z-index: 50;
+  top: 8px;
+  left: 8px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 14px;
+  background: var(--selected);
+  color: var(--text);
+  text-decoration: none;
+  border-radius: 8px;
+  transform: translateY(-160%);
+}
+.skip:focus {
+  transform: none;
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
 .embed {
   max-width: 1120px;
   margin: 0 auto;
