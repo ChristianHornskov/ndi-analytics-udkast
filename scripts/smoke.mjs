@@ -46,14 +46,20 @@ for (const width of [1280, 375]) {
       const hasWarn = /Historisk afkast|ikke en pålidelig/i.test(body) || path.includes('laer') || path.includes('nyheds') || path.includes('invester') || path.includes('vaerdikaede') || path === '/';
       const badAdvice = /køb nu|sælg nu|anbefaler vi at købe/i.test(body);
       const notesLeak = await page.locator('text=STATUS – NDI').count();
-      results.push({ width, path, status, err: errors.splice(0).join(' | '), warn: hasWarn, badAdvice, notesLeak, title: await page.title() });
+      const html = await page.content();
+      const hasMarketing = /Markedsføringsmateriale|MARKEDSFØRINGSMATERIALE/.test(html + body);
+      const hasKid = /KID|Central Information|priip_ipm/i.test(html + body);
+      // Lær-undersider may inherit via SPA; product pages must have both
+      const needsFooter = !path.includes('/laer/') && path !== '/embed/chart.html?periode=1m';
+      const footerOk = !needsFooter || (hasMarketing && hasKid);
+      results.push({ width, path, status, err: errors.splice(0).join(' | '), warn: hasWarn, badAdvice, notesLeak, hasMarketing, hasKid, footerOk, title: await page.title() });
     } catch (e) {
-      results.push({ width, path, status: 0, err: String(e), warn: false, badAdvice: false, notesLeak: 0, title: '' });
+      results.push({ width, path, status: 0, err: String(e), warn: false, badAdvice: false, notesLeak: 0, hasMarketing: false, hasKid: false, footerOk: false, title: '' });
     }
   }
   await context.close();
 }
 await browser.close();
-const fail = results.filter(r => r.status !== 200 || r.err || r.badAdvice || r.notesLeak);
+const fail = results.filter(r => r.status !== 200 || r.err || r.badAdvice || r.notesLeak || r.footerOk === false);
 console.log(JSON.stringify({ total: results.length, fail: fail.length, results }, null, 2));
 process.exit(fail.length ? 1 : 0);

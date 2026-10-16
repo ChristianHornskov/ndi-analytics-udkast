@@ -937,3 +937,11 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
   }
   .chip-links a:hover{border-color:var(--brand);color:var(--text)}
 }
+
+
+/* Fonden mobile: keep hist-warn on first screen with big return figures */
+@media (max-width: 800px) {
+  .fonden-lede{font-size:13px;margin-bottom:10px;line-height:1.4}
+  .panel > .metrics + .eyebrow{margin-top:10px}
+  .panel > .warn-hist{font-size:13px;line-height:1.4;margin:6px 0 8px}
+}

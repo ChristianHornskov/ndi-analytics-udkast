@@ -208,8 +208,16 @@ function fundSeg() {
     ({ attr: `data-fund="${f.id}"`, on: f.id === state.fund, label: f.short })));
 }
 
+function stripCashtags(text) {
+  return String(text || '')
+    .replace(/\$[A-Za-z][A-Za-z0-9._]*/g, '')
+    .replace(/[ \t]{2,}/g, ' ')
+    .replace(/\n{3,}/g, '\n\n')
+    .trim();
+}
+
 function warnHtml() {
-  return `<p class="eyebrow" style="margin-bottom:6px">MARKEDSFØRINGSMATERIALE</p><p class="warn" role="note">${WARN_HIST}</p>`;
+  return `<p class="eyebrow" style="margin-bottom:6px">MARKEDSFØRINGSMATERIALE</p><p class="warn warn-hist" role="note">${WARN_HIST}</p>`;
 }
 
 /** Vandret scroll. Hint og fade vises kun, når indholdet er bredere end feltet. */
@@ -402,7 +410,7 @@ function renderFonden(root) {
     <a class="back" href="?view=entre&fund=${state.fund}" data-nav="entre">← Entré</a>
     <p class="eyebrow">FONDEN · MARKEDSFØRINGSMATERIALE</p>
     <h1>${fund.short || fund.id.toUpperCase()}</h1>
-    <p class="lede">Udloddende andelsklasse. Totalafkast i DKK efter fondens løbende omkostninger, før skat og egne handelsomkostninger. Afkast pr. ${fmtDate(asOfPerf)}. Beholdning nedenfor er et forsinket snapshot, pr. ${fmtDate(posAsOf)}.</p>
+    <p class="lede fonden-lede">Udloddende · totalafkast i DKK efter løbende omkostninger · afkast pr. ${fmtDate(asOfPerf)} · beholdning forsinket pr. ${fmtDate(posAsOf)}.</p>
     <div class="toolbar">
       ${fundSeg()}
       ${periodSeg}
@@ -417,11 +425,11 @@ function renderFonden(root) {
       </div>
       ${warnHtml()}
       <p class="note-fundmarket">Fonden har intet fast benchmark.</p>
-      <p style="font-size:13px;color:var(--muted);line-height:1.55;margin:8px 0">Sådan kan du selv vurdere afkastet ${fmtPct(totAll)} siden start: se <a href="drawdown.html?fund=${state.fund}">største fald</a> (hvor dybt kurven har dykket), udsvingene på <a href="risici.html#tal">Risici</a>, og om din horisont matcher KID’ets 5 år. Læs også <a href="laer/laes-grafen.html">Sådan læser du grafen</a> og <a href="laer/variance-drag.html">hvad udsving koster</a>. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast.</p>
       <p style="font-size:13px;color:var(--muted);margin:8px 0">Graf: ${periodLabel}</p>
       <div class="chart-wrap" id="perf-chart"></div>
       <p class="chart-takeaway" id="chart-takeaway" style="font-size:14px;color:var(--text);margin:8px 0 4px;line-height:1.45"></p>
-      <p class="src" style="margin:0 0 8px">Kilde: Fundmarket-baseret totalafkast-snapshot · pr. ${fmtDate(asOfPerf)}. Udvalgte X-markører er offentlige opslag — ikke NDI's holdning.</p>
+      <p style="font-size:13px;color:var(--muted);line-height:1.55;margin:8px 0">Sådan kan du selv vurdere afkastet ${fmtPct(totAll)} siden start: se <a href="drawdown.html?fund=${state.fund}">største fald</a>, udsvingene på <a href="risici.html#tal">Risici</a>, og om din horisont matcher KID’ets 5 år. <a href="laer/laes-grafen.html">Sådan læser du grafen →</a></p>
+      <p class="src" style="margin:0 0 8px">Kilde: Fundmarket-baseret totalafkast-snapshot · pr. ${fmtDate(asOfPerf)}. X-markører: kun @InvestNewdeal.</p>
       <p style="font-size:12px;color:var(--muted)">PMINDI: andelskursen falder med udbyttet på ex-dato. Totalafkastet viser værdien, hvis udbyttet var geninvesteret.</p>
     </section>
     <section class="panel">
@@ -500,7 +508,8 @@ function renderFonden(root) {
   if (ddMark?.troughD && sliced.some((r) => r.d === ddMark.troughD)) {
     ddEvts.push({ d: ddMark.troughD, kind: 'dip', title: `Bund (største fald ${fmtPct(ddMark.dd)})`, chartOnly: true });
   }
-  const evts = [...ctxEvts, ...ddEvts, ...xMarks];
+  const xMarksSafe = xMarks.map((e) => ({ ...e, text: stripCashtags(e.text) }));
+  const evts = [...ctxEvts, ...ddEvts, ...xMarksSafe];
   renderChart($('#perf-chart', root), sliced, evts, { label: 'Totalafkast' });
   const take = $('#chart-takeaway', root);
   if (take && sliced.length >= 2) {
@@ -513,7 +522,7 @@ function renderFonden(root) {
     const box = document.createElement('section');
     box.className = 'panel';
     const fundLis = ctxEvts.map((e) => `<li><strong style="color:var(--text)">${fmtDate(e.d)}</strong>. ${e.title}${e.source ? ` <span style="font-size:11px">(${e.source})</span>` : ''}<br><span style="font-size:12px">${e.text || ''}</span></li>`).join('');
-    const xLis = xMarks.map((e) => `<li><strong style="color:var(--text)">${fmtDate(e.d)}</strong>. ${e.title}${e.url ? ` · <a href="${e.url}" rel="noopener" target="_blank">X ↗</a>` : ''}<br><span style="font-size:12px">${e.text || ''}</span></li>`).join('');
+    const xLis = xMarks.map((e) => `<li><strong style="color:var(--text)">${fmtDate(e.d)}</strong>. ${e.title}${e.url ? ` · <a href="${e.url}" rel="noopener" target="_blank">X ↗</a>` : ''}<br><span style="font-size:12px">${stripCashtags(e.text) || ''}</span></li>`).join('');
     box.innerHTML = `<h2 style="font-size:16px;margin-bottom:8px">Kontekst i perioden</h2>
       ${fundLis ? `<p style="font-size:12px;color:var(--muted);margin-bottom:4px">Dokumenterede fondsbegivenheder</p><ul style="color:var(--muted);line-height:1.55;padding-left:18px">${fundLis}</ul>` : ''}
       ${xLis ? `<p style="font-size:12px;color:var(--muted);margin:10px 0 4px">X-opslag fra @InvestNewdeal (fondens konto)</p><ul style="color:var(--muted);line-height:1.55;padding-left:18px">${xLis}</ul>` : ''}
