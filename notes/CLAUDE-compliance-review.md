@@ -1235,3 +1235,19 @@ Ikke juridisk rådgivning. Delta siden `4f52bd6` er 17 filer: lane-A/C kildeangi
 
 ### Prioritet før freeze (08:00)
 9 + 7 + 3 + 5 er fortsat fire små tekst- og blokrettelser. De falder alle under "bug fixes/footer/warning checks" efter 08:00.
+
+## 2026-10-16 07:01 CEST · cyklus 49 (main `83c64d0` uændret; live = main)
+
+Ikke juridisk rådgivning. Der er ingen docs-delta siden c48. Sweep 50 URL'er (c49): hits og flags er identiske med c48b. Intet nyt købs-, sælg-, garanti-, trading-, Nasdaq-benchmark- eller 1m/3m-sprog. PMINDIAKK viser stadig ingen NAV/kurs før 5. dec. 2026 ✅.
+
+### MUST
+- **Ingen åbne MUST-blokere.**
+
+### SHOULD (åbne, verificeret i kilden pr. `83c64d0`)
+3. `index.html:89` "Se Central Information Dokument" → "Se KID'et (Central Information) før du investerer".
+5. `omkostninger.html:458` "Det er det tal, marketingmateriale skal gengive ærligt" (intern formulering, fjern eller omskriv).
+7. `drawdown.html` (0× "rådgivning") og `embed/chart.html` (kun `og:description`) mangler en synlig ikke-rådgivningslinje.
+9. PMINDIAKK-fondsvisningen mangler omkostningsindikatoren (2,85 %).
+
+### Prioritet før freeze (08:00)
+Rækkefølge: 9 → 7 → 3 → 5. Alle fire er små rettelser af tekst eller advarsler og må laves efter 08:00 som fejlrettelser. Stop-commit er 08:30.
