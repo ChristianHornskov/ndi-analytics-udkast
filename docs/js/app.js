@@ -48,6 +48,12 @@ function sanitizeMaturity() {
   return before !== state.maturity.join(',');
 }
 // Samme for ?tags=: et ukendt/stavet forkert tema giver ellers 0 resultater uden forklaring. Behold kun temaer, som findes i data.
+function sanitizeFund() {
+  if (DATA.portfolio.funds.some((f) => f.id === state.fund)) return false;
+  state.fund = 'pmindi';
+  return true;
+}
+
 function sanitizeTags() {
   const known = new Set(DATA.portfolio.funds.flatMap((f) => f.positions.flatMap((p) => tagsFor(p, DATA.multiTags))));
   const before = state.tags.join(',');
@@ -82,7 +88,8 @@ function $all(sel, root = document) { return [...root.querySelectorAll(sel)]; }
 
 function readUrl() {
   const u = new URL(location.href);
-  state.fund = (u.searchParams.get('fund') || 'pmindi').toLowerCase();
+  // fund indsættes i href'er - kun [a-z0-9-] her, og valideres mod fondslisten i main() (sanitizeFund)
+  state.fund = (u.searchParams.get('fund') || 'pmindi').toLowerCase().replace(/[^a-z0-9-]/g, '') || 'pmindi';
   state.view = u.searchParams.get('view') || 'entre';
   state.period = u.searchParams.get('periode') || 'all';
   // Interne tags (legacy/Trump) må aldrig ende i chips eller URL - UX §0.2, INTERNAL-TAGS.md
@@ -1271,12 +1278,12 @@ async function main() {
     $('#app').innerHTML = `<p class="warn">Data kunne ikke hentes (${err.message}). Genindlæs siden.</p>`;
     return;
   }
-  if (sanitizeMaturity() | sanitizeTags()) writeUrl(true);
+  if (sanitizeFund() | sanitizeMaturity() | sanitizeTags()) writeUrl(true);
   fillKidFooter();
   document.addEventListener('click', onClick);
   document.addEventListener('input', onInput);
   wireKeyboard();
-  window.addEventListener('popstate', () => { readUrl(); if (sanitizeMaturity() | sanitizeTags()) writeUrl(true); paint(); });
+  window.addEventListener('popstate', () => { readUrl(); if (sanitizeFund() | sanitizeMaturity() | sanitizeTags()) writeUrl(true); paint(); });
   window.addEventListener('resize', () => markHscroll($('#app')));
   // [data-open] håndteres af onClick-delegering (tidligere dobbelt listener → to dialoger)
   paint();
