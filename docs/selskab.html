@@ -204,11 +204,11 @@
  <div style="display:flex;align-items:flex-end;gap:3px;overflow-x:auto;padding-bottom:4px">${bars}</div>
  </section>`;
  })()}
- <section class="panel">
- <h2 class="panel-h">Hold øje med${f('watch') ? ` ${AI_BADGE}` : ''}</h2>
- <p class="prose muted">${esc(f('watch') || '-')}</p>
+ ${f('watch') ? `<section class="panel">
+ <h2 class="panel-h">Hold øje med ${AI_BADGE}</h2>
+ <p class="prose muted">${esc(f('watch'))}</p>
  <p class="src">Forhold der kan påvirke selskabet. Ikke en prognose eller vurdering af aktien.</p>
- </section>
+ </section>` : ''}
 
  ${media.length || (pr?.xAccounts || []).length ? `<section class="panel">
  <h2 class="panel-h">Se og læs mere</h2>
