@@ -192,6 +192,10 @@ Under prikkerne står én sætning: hver prik er et fald, gul er det dybeste, hu
 
 Sætningen er «Fald fra top, PMINDI. Dybeste fald -35,8 % fra 18. feb. 2025 til 8. apr. 2025. Lige nu -23,4 % under toppen pr. 14. okt. 2026.» plus adressen og advarslen. Når udklipsholderen er lukket, står sætningen selv under knappen. Ingen sidescroll ved 320.
 
+### Update · periode-knapper 44 px · 2026-10-16 ~03:47 CEST
+
+«År til dato» og «Hele perioden» var 40 px på 390 og 42 px på 700. De er 44 px. Klasse-kortene var allerede høje nok. Ingen sidescroll. Drawdown og sammenlign har ingen knapper under 44 px ved 390.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.

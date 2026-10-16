@@ -600,7 +600,7 @@ button.legend {
 
 @media (max-width: 800px) {
   .panel { padding: 22px 18px 16px; }
-  .control { font-size: 13px; min-height: 42px; padding: 0 10px; }
+  .control { font-size: 13px; min-height: 44px; padding: 0 10px; }
   .legend strong { font-size: 24px; }
   .metric strong { font-size: 24px; }
 }
@@ -637,7 +637,7 @@ button.legend {
     min-width: calc(33% - 4px);
     padding: 0 7px;
     font-size: 12px;
-    min-height: 40px;
+    min-height: 44px;
   }
 
   .chart-legends { gap: 16px; margin: 14px 0 12px; }
