@@ -3621,7 +3621,7 @@
               "w": 0.28,
               "sym": "PRIM",
               "forslag": true,
-              "role": "Kontor i Dallas. Fort Worth er linjearbejde, ikke en ledning selskabet ejer. Bakersfield og Irvine er ikke den samme adresse."
+              "role": "Bygger og vedligeholder elnet og ledninger for andre. Ejer ikke selv nettet. Kontor i Dallas."
             },
             {
               "isin": "US74762E1029",
@@ -4936,7 +4936,7 @@
               "w": 0.17,
               "sym": "SATL",
               "forslag": false,
-              "role": "Davidson er ikke Charlotte. Merlin.01 er 1. oktober 2026, datafeltet siger 2. oktober. Fuld drift i 2027 er en plan."
+              "role": "Bygger små satellitter, der fotograferer Jorden, og sælger billederne og dataene."
             },
             {
               "isin": "US4202011056",
