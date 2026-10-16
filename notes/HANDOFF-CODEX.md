@@ -192,6 +192,7 @@ Fællesprospektet (opdateret 24.10.2025) nævner under NewDeal Invest KL kun and
 - `invester.html` trin 4: omkostningsafsnittet læses roligere. `risici.html`: CAGR linker til ordlisten. `kort.html`: Idéer-døren er opdateret.
 - Demo-tallene ovenfor er tjekket mod siderne kl. 06:00: lær 19 døre, NDI-perspektiv 333, FAQ 27, ordliste 151, ideer 13 foldede på mobil.
 - **Efter main 06:31** (danske modenhedsnavne, Udforsk-overskrift): *Livscyklus* (lær) bruger nu de samme fem navne i skitsen som Udforsk-filteret. Ordlisten fører med «Udforsk (screener)». `ndi-perspektiv.html` viser rensede navne (SiTime, IQE, Wix.com …) via sidens `displayName()`, og selskabslinks er nu 24 px høje. Demo-trin 3 og 5 er rettet. Tal i ideer er gentjekket mod portfolio.json.
+- **Temaantal (06:49–07:05):** tallene var forældede (229/85 → 227/87) og er rettet overalt. ideer (#h-tf, #h-mx, #h-pr, #h-kl, #h-stk, #h-dr) og lær/sektorer tæller nu selv fra portfolio.json ved indlæsning, med de statiske tal som reserve. Uden og med JS giver de det samme, og der er testet med ændret data. Kun ordlistens temaposter har stadig antal i teksten. Tesla står nu i 5 led på 3 kæder (energilagring er kommet til). Kildeangivelser er ændret fra «NDI ugebrev» til «NDI-indlæg».
 
 **Skal tjekkes før live:** Amazon-tallene fra 10-K 2024 (se VIDENSBOT-live-check) og årstallene på tidslinjen.
 
