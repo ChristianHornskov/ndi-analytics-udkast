@@ -157,7 +157,11 @@
  from = fund.data[0].d; to = fund.data[fund.data.length-1].d;
  } else {
  const row = years.find(c => String(c.year) === String(year));
- if (row) { label = row.year + (row.partial?' (delår)':''); pct = row.ret; from = row.from; to = row.to; }
+ if (row) {
+  const openYear = row.to && row.to.slice(5) !== '12-31';
+  label = row.year + ((row.partial || openYear) ? ' (delår)' : '');
+  pct = row.ret; from = row.from; to = row.to;
+ }
  }
  const firstNav = fund.data[0].d;
  const lastNav = fund.data[fund.data.length - 1].d;
@@ -226,7 +230,11 @@
  const chips = [
  `<a class="tag" href="periode.html?fund=${fundId}&year=all">Siden første NAV: ${fmtPct(periodReturn(fund.data))}</a>`,
  `<a class="tag" href="periode.html?fund=${fundId}&year=YTD">År til dato: ${fmtPct(ytd)}</a>`,
- ...years.map(c => `<a class="tag" href="periode.html?fund=${fundId}&year=${c.year}">${c.year}: ${fmtPct(c.ret)}</a>`)
+ ...years.map(c => {
+  const openYear = c.to && c.to.slice(5) !== '12-31';
+  const name = c.year + ((c.partial || openYear) ? ' (delår)' : '');
+  return `<a class="tag" href="periode.html?fund=${fundId}&year=${c.year}">${name}: ${fmtPct(c.ret)}</a>`;
+ })
  ].join(' ');
  document.title = `${label} · ${fund.short} · NDI`;
  document.getElementById('main').innerHTML = `

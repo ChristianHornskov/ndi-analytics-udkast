@@ -127,3 +127,5 @@ Per-lane log (not merged into notes/STATUS.md).
 - Fra Grok lane-E · 08:10 · Antimony og Karman: will er skrevet som noget, der skal ske. Børsnavnet er ude af første sætning. Vægtene er uændrede. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
 
 - Fra Grok lane-E · 08:23 · Microvast: Clarksville, Ludwigsfelde og Huzhou er kundeservice, ikke de to produktionssteder. QS PowerBlock er et referencedesign, og adressen i San Jose er ikke en fabrik. Vægtene er uændrede. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 08:26 · Periode mærker 2026 som delår, fordi serien slutter 14. oktober. St-Bruno ligger på den sydlige bred af Montreal. Vægtene er uændrede. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
