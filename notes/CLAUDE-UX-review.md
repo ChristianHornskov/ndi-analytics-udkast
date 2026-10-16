@@ -643,3 +643,38 @@ main/docs er uændrede siden `90e7de8`, og Pages er stadig fra 00:00 GMT. Lane-R
 - **Privat:** præcision er godt, men 5–7 nægtelser pr. afsnit gør teksten sværere at læse end den uklarhed, de retter.
 - **Familiekontor:** præcise statusord ("projekt", "tilladelse givet", "efter beholdningen 1. juni 2026") er værdifulde i DD. Sig dem én gang pr. selskab.
 - **Visuel variation:** ingen ny form. Risikoen er nu tekstmængde, ikke formtræthed.
+
+## 2026-10-16 02:13 CEST · cyklus 29 (main `a34a733`, stort docs-delta: merge af lane A–E + X)
+
+main har fået lane A, B, C, D og E samt X-panel på tema (`a34a733`, 26 docs-filer, +2.501/−308). Pages last-modified er 00:09:59 GMT, og det er samme minut som `a34a733`. Live svarer til main. Lane-R er **ikke** nulstillet: `reset --hard` ville kassere pushede notes-commits og kræve force-push. I stedet er origin/main merget ind (konflikt i STATUS.md løst ved at beholde begge sider), så docs/ er identisk med main. Persona- og krav-filerne er uændrede (kun VIDENSBOT-live-check +29 linjer). Jeg har kørt Playwright live ved 375 px på 37 URL'er, inkl. `?view=fonden|portefolje|udforsk`, `selskab.html?isin=JP3436100006` (SoftBank) og `tema.html?slug=energi|chips`.
+
+**Resultat live:** 0 pageerrors og 0 vandret overflow på alle 37. NB: `fonden.html`, `portefolje.html` og `udforsk.html` giver 404. Ruterne er `?view=…`. Det er ikke en fejl, men links udefra med de "pæne" navne vil fejle.
+
+### MUST
+1. **X-panelet er nu på produktsider (tema + selskab), med "MADS FØLGER"-badge og "BREAKING".** `tema.html?slug=energi` og `chips` har en "Hvad siger X"-boks midt i temaet. SoftBank-siden viser @BullTheoryio "BREAKING: SoftBank is seeking to raise up to $100 billion …" og "BREAKING: Nvidia is in talks to backstop $250 BILLION …" med badgen **MADS FØLGER** og "Vist fordi: SoftBank · platforme". Teksten er engelsk, kommer fra tredjepart og er usikker. Den står under en fond, som ejer selskabet. "Udvalgte offentlige opslag — ikke NDI's holdning" står der ✅, men badgen "MADS FØLGER" i versaler trækker den modsatte vej. Forslag: (a) badge → "Konto på Mads' følgeliste" i normal skrift, eller fjern den på tema/selskab. (b) Filtrér "BREAKING"/kun-overskrift-opslag fra på produktsider. (c) Fold panelet sammen som standard på tema/selskab ("Vis 4 opslag fra X"). Se compliance MUST 2.
+2. **Omkostninger: KID-totalen 2,79 %/2,85 % står stadig ingen steder** (0 hits i docs/ og live). Persona privat: "Hvad koster det mig om året?" er stadig ubesvaret på omkostninger, fakta og invester.
+3. **ÅTD med "afventer Fundmarket-godkendelse"** står stadig på `?view=fonden` (chip "ÅTD", "+4,0 %", src-linje). Enten skjules ÅTD, til godkendelsen foreligger, eller også fjernes forbeholdet. Det ser uprofessionelt ud at vise et tal og samtidig sige, at det ikke er godkendt.
+
+### SHOULD
+- **ndi-perspektiv er 143.428 px høj ved 375** (ca. 180 skærme) og har 666 badges på 10 px. Fold selskaberne sammen pr. tema, eller vis 20 og "Vis flere". (Åben siden cyklus 22.)
+- **Små skrifttyper på mobil:** tema energi har 113 elementer under 11 px (71 `.badge` på 10 px, 28 `small` på 10,8 px). selskaber og `?view=udforsk` har ca. 800 (tabellen). vaerdikaeder har 32 (`.vc-kind`/`.tag` på 10 px). ndi-paa-x har 9 px kursiv ×4. Minimum 11 px, gerne 12 px for alt, der skal læses.
+- **"Dyb →"** i årstabellen på fonden er stadig jargon (cyklus 24: "DYB SIDE"). Skriv "Se perioden →".
+- **vaerdikaeder er 15.414 px høj ved 375** efter merge af lane-A (flodkort, risikokort ×3 faner, quiz ×4, ordbøger, trappe, termometer, løkke og tråde). Genvejene øverst hjælper ✅, men siden har nu ca. 12 forskellige former. Overvej at lægge quiz og ordbog bag en fold pr. fane.
+- **Nyhedsarkiv:** der er stadig 10 linjer "ikke et …" fra lane-E. Ser ud som QA-noter (fra cyklus 28).
+- **invester:** "kl n" står stadig i kildelinjen (cyklus 27). Skriv "andelsklasse".
+
+### Lukket ✅
+- Invester har nu ét "4."-trin (lane-C).
+- Kæde-blurbs er trimmet: 0 strenge over 600 tegn i `value-chains.json` (cyklus 28-forslaget er fulgt).
+- Årstabellen siger nu "2023 delår" og chippen "2023*" (delvis lukning af compliance MUST 10).
+- PMINDIAKK periode: "Afkast vises efter 12 måneder" + risikolinje ✅.
+- Nye lær-sider `indre-vaerdi` og `laes-grafen`: klart dansk, "tænkt fond", intet benchmark, "før skat og dine egne handelsomkostninger" ✅. Flot.
+
+### Nice
+- Engelske X-opslag på danske sider: vis en dansk etiket ("Opslag på engelsk") eller en kort dansk overskrift.
+- Hold `?view=fonden` som kanonisk og lav små redirect-sider `fonden.html` → `?view=fonden` (også portefolje/udforsk), så delte links virker.
+
+### Persona-linser
+- **Privat:** den nye "Sådan læser du grafen" og "Indre værdi" besvarer præcis de begynderspørgsmål, persona-filen stiller ✅. X-panelet med "BREAKING" på SoftBank er det modsatte af den rolige tone, personaen ønsker.
+- **Familiekontor:** vil spørge, hvorfor tredjepartsrygter står på en produktside, og hvem der kuraterer dem. Kræver stadig KID-omkostningstotal og ÅOP.
+- **Visuel variation:** vaerdikaeder er nu siden med flest former. Risikoen er træthed ved 375 px, ikke ensformighed. Andre sider er fine.

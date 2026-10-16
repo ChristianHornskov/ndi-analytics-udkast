@@ -705,3 +705,31 @@ Ikke juridisk rådgivning. main/docs og Pages er uændrede (Pages 00:00 GMT). Je
 
 ### MUST (åbne på main)
 Uændret: 1–11 som i cyklus 25. **6** lukkes ved merge af lane-C. Prioritet: **9** (KID-total 2,79 %/2,85 % på omkostninger, fakta-strip og invester trin 4), **3** ("kan tabe" på omkostninger og ndi-paa-x) og **11** (embed uden KID/SRI).
+
+## 2026-10-16 02:13 CEST · cyklus 29 (main `a34a733`, docs-delta: lane A–E + X merget)
+
+Ikke juridisk rådgivning. Pages (00:09:59 GMT) svarer til main `a34a733`. Jeg har kørt Playwright live ved 375 px (37 URL'er) og grep i docs/ efter merge.
+
+### Status pr. MUST
+1. **Mærkning "markedsføringsmateriale":** 0 hits i docs/. **Åben.**
+2. **"Mads følger" / tredjepartsopslag: skærpet.** X-panelet står nu også på `tema.html` (alle temaer) og `selskab.html`. Det er ikke længere kun ndi-paa-x. SoftBank viser to @BullTheoryio-opslag med "BREAKING:" (kapitalrejsning på 100 mia. $, garanti på 250 mia. $) og badgen "MADS FØLGER". tema energi/chips viser @FundaAI om "repricing of credit risk" for ORCL/CRWV/SoftBank, der er "Vist fordi: CRWV". "Ikke NDI's holdning" står der ✅. Men tredjepartsrygter om navngivne beholdninger ved siden af fondens vægt, med en badge der knytter dem til forvalterens rådgiver, kan læses som kurateret markedskommentar. Det gælder særligt i lyset af reglerne om markedsmisbrug/investeringsanbefalinger (MAR art. 20). **Anbefaling før næste demo:** fjern X-panelet fra tema/selskab, eller fold det sammen, fjern "MADS FØLGER"-badgen og filtrér "BREAKING"-opslag fra. Cyklus 26 talte "BREAKING" = 0 på grenene, men det er kommet med i merge `a34a733`/`688dc82`.
+3. **"kan tabe":** omkostninger 0, ndi-paa-x 0. **Åben.** Begge sider har nu "historisk afkast"-linjen på omkostninger (1) men ikke tabsrisikoen.
+4. **PMINDIAKK før 12 mdr.:** ingen afkasttal ✅ ("Vises efter 12 måneder fra 5. dec. 2026"). NAV 98,40 står på `?view=fonden&fund=PMINDIAKK` og sammenlign. Et NAV-niveau er ikke et afkast, men en læser kan regne −1,6 % ud. **Christians beslutning.** Jeg anbefaler at beholde NAV med "første NAV" og datoen ved siden af, eller fjerne det til 12 mdr.
+5. **ÅTD "afventer Fundmarket-godkendelse":** står stadig på `?view=fonden` (ÅTD +4,0 % og 100.000 kr.-eksempel). **Åben.** Vis ikke tal, der ikke er godkendt.
+6. **SRI mod udsving:** lukket med lane-C ✅ (risikoklasse: "målt efter KID-metoden").
+7. **`chartMarkers` med @MadsC007:** "Udvalgte X-markører er offentl…" står stadig i grafen på fonden. **Åben** (som cyklus 25).
+8. **Offentligt repo:** Christians beslutning, uændret.
+9. **KID-omkostningstotal 2,79 %/2,85 %:** 0 hits i docs/ og live. **Åben, højeste prioritet** for persona familiekontor. Omkostninger har "ÅOP"/"løbende omkostninger" ×9, men intet samlet KID-tal.
+10. **Delperioder som år:** delvis lukket ✅. Årstabellen siger "2023 delår" (22. sep.–31. dec. 2023), og chippen er "2023*". ÅTD 2026 står stadig som "2026"-chip uden "delår". **SHOULD**, ikke længere MUST.
+11. **Embed uden KID/SRI:** `embed/chart.html` har "kan tabe" ✅ og "historisk" ✅, men KID-link = 0 og SRI = 0. **Åben.** Et embed, der deles ud af konteksten, er det stykke markedsføring, der mest har brug for KID-henvisningen.
+
+### Nyt på main efter merge: OK ✅
+- `laer/indre-vaerdi.html` og `laer/laes-grafen.html`: tænkte tal, "historisk afkast er ikke en pålidelig indikator", "intet fast benchmark", "efter løbende omkostninger, før skat og dine egne handelsomkostninger". Ingen rådgivningsord.
+- "overvægt" ×5 står alle i nægtende/forklarende form ("ikke bevidste overvægte og ikke anbefalinger") ✅. Ingen "øger eksponering".
+- 0 hits for "Nasdaq", "garanter", "bedste", "sælg " og "købe nu" i docs/ ✅. Ingen 1m/3m på PMINDI (embed/chart.js siger eksplicit "Aldrig 1 md / 3 md") ✅.
+- Beholdning pr. 1. jun. 2026 "(forsinket)" står på tema, portefølje og fonden ✅. Hændelser efter asOf er daterede (lane-E) ✅.
+- AI-mærkning: SoftBank ×10, ndi-perspektiv ×667, risici ×1 ✅.
+- invester «hvem gør hvad» er merget. Verifikation af IFS/depotbank mod prospektet står stadig som SHOULD (cyklus 27).
+
+### Prioritet
+**2** (X-panel på produktsider, ny flade) → **9** (KID-total) → **5** (ÅTD uden godkendelse) → **3** ("kan tabe" på omkostninger/ndi-paa-x) → **11** (embed KID/SRI) → **1** (mærkning).
