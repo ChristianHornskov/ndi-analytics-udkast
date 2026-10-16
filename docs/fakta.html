@@ -215,11 +215,38 @@
   .venn-list{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;list-style:none;padding:0;margin:10px 0 0}
   .venn-list li{border:1px solid #345860;border-radius:999px;padding:3px 8px;font-size:12px;line-height:1.35;color:var(--cyan);background:#0b171d}
   .life-print{display:none}
+  .meet{margin:0 0 14px;padding:12px 14px 12px;border:1px solid #345860;border-radius:16px;background:radial-gradient(80% 90% at 100% 0%,rgba(245,238,158,.1),transparent 46%),#0d1c22;scroll-margin-top:84px}
+  .meet-top{display:flex;justify-content:space-between;gap:8px 14px;align-items:baseline;flex-wrap:wrap;margin:0 0 8px}
+  .meet-top .kicker{margin:0}
+  .meet-top p{margin:0;font-size:14px;line-height:1.45;color:var(--text);max-width:78ch}
+  .meet-ask{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 8px}
+  .meet-ask button{appearance:none;border:1px solid #345860;background:#0b171d;color:var(--muted);border-radius:999px;padding:4px 10px;font:inherit;font-size:12px;cursor:pointer;min-height:32px;display:inline-flex;align-items:center;gap:6px}
+  .meet-ask button kbd{font:inherit;font-size:10px;letter-spacing:.4px;color:var(--faint);border:1px solid #345860;border-radius:4px;padding:0 4px}
+  .meet-ask button[aria-pressed="true"]{border-color:#f5ee9e88;color:var(--text);box-shadow:inset 0 -2px 0 #f5ee9e}
+  .meet-ask button:focus-visible{outline:2px solid #f5ee9e;outline-offset:2px}
+  .meet-lane,.meet-scale{display:grid;grid-template-columns:minmax(0,168px) minmax(80px,1fr) minmax(0,148px);gap:8px;align-items:center}
+  .meet-lane{min-height:28px}
+  .meet-name{font-size:12px;color:var(--text);line-height:1.25}
+  .meet-track{position:relative;height:18px;border-radius:99px;background:#0b171d;box-shadow:inset 0 0 0 1px #2a424a}
+  .meet-tick{position:absolute;top:3px;width:2px;height:12px;border-radius:1px;transform:translateX(-50%);background:#9ecfd6}
+  .meet-tick.is-tx{background:#f5ee9e}
+  .meet-tick.is-kid{top:1px;width:3px;height:16px;background:#f5ee9e}
+  .meet-tick.is-sum{top:1px;width:0;height:16px;background:transparent;border-left:2px dashed #f5ee9e}
+  .meet-val{font-size:12px;color:var(--cyan);font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+  .meet-lane.is-ghost{display:none}
+  .meet-lane.is-ghost .meet-name{color:var(--faint)}
+  .meet-lane.is-ghost .meet-val{color:#f5ee9e}
+  .meet.is-sum .meet-lane.is-ghost{display:grid}
+  .meet-scale{margin-top:2px;font-size:11px;color:var(--faint)}
+  .meet-scale span:nth-child(2){display:flex;justify-content:space-between}
+  .meet-foot{margin:8px 0 0;font-size:12px;line-height:1.45;color:var(--faint)}
+  .meet-print{display:none}
   @media print{
-    .life-ask,.life-note{display:none}
-    .life-print{display:block;margin-top:8px;font-size:12px;line-height:1.45}
-    .life-print p{margin:0 0 4px}
+    .life-ask,.life-note,.meet-ask{display:none}
+    .life-print,.meet-print{display:block;margin-top:8px;font-size:12px;line-height:1.45}
+    .life-print p,.meet-print p{margin:0 0 4px}
     .life-stamps{display:flex}
+    .meet-lane.is-ghost{display:grid}
   }
   @media(max-width:800px){
     .fact-grid,.org,.team,.tax-grid,.kv,.risk-split,.risk-metrics,.glance-board,.dd-dates{grid-template-columns:1fr}
@@ -250,6 +277,9 @@
     .venn-stage{grid-template-columns:1fr;min-height:0;gap:8px;justify-items:center}
     .venn-wing.is-a,.venn-wing.is-b{margin:0}
     .venn-wing{width:min(100%,200px)}
+    .meet-lane,.meet-scale{grid-template-columns:1fr}
+    .meet-val{text-align:left}
+    .meet-scale span:nth-child(1),.meet-scale span:nth-child(3){display:none}
   }
   @media(max-width:800px) and (min-width:560px){
     .glance-board{grid-template-columns:1fr 1fr}
@@ -685,6 +715,42 @@
  <div class="life-print"><p>${esc(startNote)}</p><p>${esc(formNote)}</p><p>${esc(sameNote)}</p><p>${esc(crossNote)} ${esc(noteA)} ${esc(noteB)}</p></div>
  </section>`;
  })();
+ const meetScale = 4;
+ const meetAt = (n) => Math.round(Math.max(0, Math.min(100, (Number(n) / meetScale) * 100)) * 10) / 10;
+ const rate2 = (n) => {
+ const [w, f] = Number(n).toFixed(2).split('.');
+ return w + ',' + f + ' %';
+ };
+ const onA = Number(A.costs.otherOngoing);
+ const onB = Number(B.costs.otherOngoing);
+ const txAr = Number(A.costs.portfolioTransaction);
+ const txBr = Number(B.costs.portfolioTransaction);
+ const kidAr = Number(A.costs.kidRiy5y);
+ const kidBr = Number(B.costs.kidRiy5y);
+ const meetOk = [onA, onB, txAr, txBr, kidAr, kidBr].every((n) => Number.isFinite(n));
+ const sumAr = Number((onA + txAr).toFixed(2));
+ const sumBr = Number((onB + txBr).toFixed(2));
+ const meetTicks = (vals, cls) => [...new Set(vals.map((n) => Number(n).toFixed(2)))].map((n) => `<i class="meet-tick ${cls}" style="left:${meetAt(n)}%" title="${rate2(n)}"></i>`).join('');
+ const pairTxt = (x, y) => rate2(x) === rate2(y) ? rate2(x) : `${rate2(x)} · ${rate2(y)}`;
+ const plainSay = `Øvrige løbende står ved ${pairTxt(onA, onB)}. Porteføljetransaktion står ved ${pairTxt(txAr, txBr)}. KID ved 5 år står ved ${pairTxt(kidAr, kidBr)}. Linealen lægger dem ikke sammen.`;
+ const sumSay = `${rate2(onA)} + ${rate2(txAr)} er ${rate2(sumAr)}, ${krTxt(krOf(sumAr))} på 100.000 kr. KID ved 5 år er ${rate2(kidAr)}, ${krTxt(krOf(kidAr))} De mødes ikke. ${rate2(onB)} + ${rate2(txBr)} er ${rate2(sumBr)}, ${krTxt(krOf(sumBr))} KID er ${rate2(kidBr)}, ${krTxt(krOf(kidBr))} De mødes ikke. Summen er regnet på siden. Den står ikke hos Fundmarket, og den er ikke et ÅOP.`;
+ const wantSum = new URL(location.href).searchParams.get('sum') === '1';
+ const meetHtml = meetOk ? `<section class="meet${wantSum ? ' is-sum' : ''}" id="lineal" data-plain="${esc(plainSay)}" data-sumsay="${esc(sumSay)}">
+ <div class="meet-top"><p class="kicker">LINEAL</p><p data-meet-say>${esc(wantSum ? sumSay : plainSay)}</p></div>
+ <div class="meet-ask" role="group" aria-label="Hvad linealen viser">
+ <button type="button" data-sum="0" aria-pressed="${wantSum ? 'false' : 'true'}" aria-keyshortcuts="g">Tallene<kbd>G</kbd></button>
+ <button type="button" data-sum="1" aria-pressed="${wantSum ? 'true' : 'false'}" aria-keyshortcuts="g">Summen<kbd>G</kbd></button>
+ </div>
+ <div class="meet-chart" role="img" aria-label="${esc(wantSum ? sumSay : plainSay)}">
+ <div class="meet-lane"><span class="meet-name">Øvrige løbende</span><div class="meet-track">${meetTicks([onA, onB], 'is-post')}</div><span class="meet-val">${pairTxt(onA, onB)}</span></div>
+ <div class="meet-lane"><span class="meet-name">Porteføljetransaktion</span><div class="meet-track">${meetTicks([txAr, txBr], 'is-tx')}</div><span class="meet-val">${pairTxt(txAr, txBr)}</span></div>
+ <div class="meet-lane"><span class="meet-name">KID ved 5 år</span><div class="meet-track">${meetTicks([kidAr, kidBr], 'is-kid')}</div><span class="meet-val">${pairTxt(kidAr, kidBr)}</span></div>
+ <div class="meet-lane is-ghost"><span class="meet-name">Sum på siden</span><div class="meet-track">${meetTicks([sumAr, sumBr], 'is-sum')}</div><span class="meet-val">${pairTxt(sumAr, sumBr)}</span></div>
+ </div>
+ <div class="meet-scale" aria-hidden="true"><span></span><span><i>0 %</i><i>4 %</i></span><span></span></div>
+ <p class="meet-foot">Skalaen går fra 0 til 4 %, så KID ved 5 år kan stå på den. 4 % er ikke et tal fra fonden. Summen er øvrige løbende plus porteføljetransaktion, regnet på siden. Emission og indløsning er ikke med, fordi de er lofter. Linjerne er ikke lagt sammen i KID, og ingen af tallene er et ÅOP. <a href="omkostninger.html?sum=1#lineal">Samme lineal på omkostninger →</a></p>
+ <div class="meet-print"><p>${esc(plainSay)}</p><p>${esc(sumSay)}</p></div>
+ </section>` : '';
 
  main.innerHTML = `
  <p class="eyebrow">FAKTAARK · OFFENTLIGE KILDER</p>
@@ -694,8 +760,9 @@
  ${hero}
  ${strip}
  <p class="sr-only">${glance}</p>
- <p class="band glance">${glanceVisible} <a href="omkostninger.html${dTx !== 0 ? '#forskel' : ''}" style="white-space:nowrap">Se søjlerne →</a> <a href="#klasselinje" style="white-space:nowrap">Klasselinje →</a> <a href="?linje=cross#klasselinje" style="white-space:nowrap">Kryds →</a></p>
+ <p class="band glance">${glanceVisible} <a href="omkostninger.html${dTx !== 0 ? '#forskel' : ''}" style="white-space:nowrap">Se søjlerne →</a> <a href="#klasselinje" style="white-space:nowrap">Klasselinje →</a> <a href="?linje=cross#klasselinje" style="white-space:nowrap">Kryds →</a> <a href="#lineal" style="white-space:nowrap">Lineal →</a></p>
  ${riskBlock}
+ ${meetHtml}
  ${lifeHtml}
  ${pegBoard}
  <section class="panel" id="klasser-forskel">
@@ -881,6 +948,22 @@
  };
  const wantLife = new URL(location.href).searchParams.get('linje');
  if (wantLife) pickLife(wantLife);
+ const pickSum = (on, push) => {
+ const root = document.getElementById('lineal');
+ if (!root) return;
+ root.classList.toggle('is-sum', on);
+ root.querySelector('[data-sum="0"]')?.setAttribute('aria-pressed', on ? 'false' : 'true');
+ root.querySelector('[data-sum="1"]')?.setAttribute('aria-pressed', on ? 'true' : 'false');
+ const say = root.querySelector('[data-meet-say]');
+ if (say) say.textContent = on ? (root.dataset.sumsay || '') : (root.dataset.plain || '');
+ const chart = root.querySelector('.meet-chart');
+ if (chart) chart.setAttribute('aria-label', say ? say.textContent : '');
+ if (!push) return;
+ const u = new URL(location.href);
+ if (on) u.searchParams.set('sum', '1');
+ else u.searchParams.delete('sum');
+ history.replaceState(null, '', u);
+ };
  main.addEventListener('click', (e) => {
  const venn = e.target.closest('[data-venn]');
  if (venn && venn.closest('#klasselinje')) {
@@ -895,6 +978,11 @@
  const ask = e.target.closest('[data-ask]');
  if (ask && ask.closest('#satskort')) {
  pickAsk(ask.getAttribute('data-ask'));
+ return;
+ }
+ const sumBtn = e.target.closest('#lineal [data-sum]');
+ if (sumBtn) {
+ pickSum(sumBtn.getAttribute('data-sum') === '1', true);
  return;
  }
  const peg = e.target.closest('[data-peg]');
@@ -950,6 +1038,14 @@
  if (!next) return;
  pickLife(next.getAttribute('data-life'));
  }
+ root.scrollIntoView({ block: 'nearest' });
+ return;
+ }
+ if (e.key === 'g') {
+ const root = document.getElementById('lineal');
+ if (!root) return;
+ e.preventDefault();
+ pickSum(!root.classList.contains('is-sum'), true);
  root.scrollIntoView({ block: 'nearest' });
  return;
  }

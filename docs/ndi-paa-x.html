@@ -29,7 +29,7 @@
  </footer>
  <noscript><p style="max-width:1180px;margin:0 auto;padding:0 20px 24px;color:#aac0c7">Siden læser kun den statiske fil. Slå JavaScript til for at se kortene. Browseren kalder ikke X.</p></noscript>
  <script type="module">
- import { loadXPosts, xCard, fmtXDate, highlightHtml, X_LABEL, X_FILTERS, postInFilter, postMatchesQuery, postWho, feedHitKind, archiveHit, xScoreHtml, xPlace, xWhoBarHtml, xWhoDoorHtml, xSpineHtml, xAtlasHtml, xVoicesHtml, xSkyHtml, xWeaveHtml, xKnotMap } from './js/x-feed.js';
+ import { loadXPosts, xCard, fmtXDate, highlightHtml, X_LABEL, X_FILTERS, postInFilter, postMatchesQuery, postWho, feedHitKind, archiveHit, xScoreHtml, xPlace, xWhoBarHtml, xWhoDoorHtml, xSpineHtml, xAtlasHtml, xVoicesHtml, xSkyHtml, xWeaveHtml, xKnotMap, xMonthHtml } from './js/x-feed.js';
  const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
  const main = document.getElementById('main');
  const pack = await loadXPosts();
@@ -86,10 +86,25 @@
  </a>`;
 
  const KNOTS = new Set(['soft-nv', 'soft-chips', 'nv-chips']);
+ const MONTH_DA = ['januar', 'februar', 'marts', 'april', 'maj', 'juni', 'juli', 'august', 'september', 'oktober', 'november', 'december'];
+ const monthOf = (p) => {
+ const t = Date.parse(p?.created_at || '');
+ if (Number.isNaN(t)) return '';
+ const d = new Date(t);
+ return d.getUTCFullYear() + '-' + String(d.getUTCMonth() + 1).padStart(2, '0');
+ };
+ const monthName = (key) => {
+ if (!/^\d{4}-\d{2}$/.test(key || '')) return '';
+ const name = MONTH_DA[Number(key.slice(5, 7)) - 1];
+ if (!name) return '';
+ return name.charAt(0).toUpperCase() + name.slice(1) + ' ' + key.slice(0, 4);
+ };
  const read = () => {
  const u = new URL(location.href);
  const knot = u.searchParams.get('knot') || '';
- return { f: u.searchParams.get('f') || 'all', q: u.searchParams.get('q') || '', who: u.searchParams.get('who') || 'all', id: u.searchParams.get('id') || '', knot: KNOTS.has(knot) ? knot : '' };
+ const moRaw = u.searchParams.get('mo') || '';
+ const mo = /^\d{4}-\d{2}$/.test(moRaw) ? moRaw : '';
+ return { f: u.searchParams.get('f') || 'all', q: u.searchParams.get('q') || '', who: u.searchParams.get('who') || 'all', id: u.searchParams.get('id') || '', knot: KNOTS.has(knot) ? knot : '', mo };
  };
  const write = (st) => {
  const u = new URL(location.href);
@@ -98,13 +113,16 @@
  if (st.who && st.who !== 'all') u.searchParams.set('who', st.who); else u.searchParams.delete('who');
  if (st.id) u.searchParams.set('id', st.id); else u.searchParams.delete('id');
  if (st.knot && KNOTS.has(st.knot)) u.searchParams.set('knot', st.knot); else u.searchParams.delete('knot');
+ if (st.mo && /^\d{4}-\d{2}$/.test(st.mo)) u.searchParams.set('mo', st.mo); else u.searchParams.delete('mo');
  history.replaceState(null, '', u);
  };
  let state = read();
  let focusPicked = Boolean(state.id);
- const knotScope = () => xKnotMap(posts.filter((p) => postWho(p, state.who)));
+ const inMonth = (p) => !state.mo || monthOf(p) === state.mo;
+ const scopePosts = () => posts.filter((p) => postWho(p, state.who) && inMonth(p));
+ const knotScope = () => xKnotMap(scopePosts());
  const apply = (list) => {
- let out = list.filter((p) => postInFilter(p, state.f) && postWho(p, state.who) && postMatchesQuery(p, state.q));
+ let out = list.filter((p) => postInFilter(p, state.f) && postWho(p, state.who) && postMatchesQuery(p, state.q) && inMonth(p));
  if (!state.knot) return out;
  const bridge = knotScope().bridges.find((b) => b.id === state.knot);
  const ids = new Set((bridge?.posts || []).map((p) => String(p.id)));
@@ -164,7 +182,7 @@
  const paintFilters = () => {
  const bar = document.getElementById('x-f');
  bar.innerHTML = X_FILTERS.map((f) => {
- const n = posts.filter((p) => postInFilter(p, f.id) && postWho(p, state.who) && postMatchesQuery(p, state.q)).length;
+ const n = posts.filter((p) => postInFilter(p, f.id) && postWho(p, state.who) && postMatchesQuery(p, state.q) && inMonth(p)).length;
  const on = state.f === f.id;
  const share = posts.length ? Math.round((n / posts.length) * 1000) / 10 : 0;
  return `<button type="button" class="control${on ? ' active' : ''}${n === 0 ? ' is-zero' : ''}" data-f="${f.id}" aria-pressed="${on}"><span class="x-flab">${f.label}<span class="x-count">${n}</span></span><span class="x-meter" aria-hidden="true"><i style="width:${share}%"></i></span></button>`;
@@ -175,7 +193,7 @@
  const on = id === state.who;
  b.classList.toggle('active', on);
  b.setAttribute('aria-pressed', on ? 'true' : 'false');
- const n = posts.filter((p) => postWho(p, id) && postInFilter(p, state.f) && postMatchesQuery(p, state.q)).length;
+ const n = posts.filter((p) => postWho(p, id) && postInFilter(p, state.f) && postMatchesQuery(p, state.q) && inMonth(p)).length;
  const share = posts.length ? Math.round((n / posts.length) * 1000) / 10 : 0;
  b.innerHTML = `<span class="x-flab">${whoLabel[id] || id}<span class="x-count">${n}</span></span><span class="x-meter" aria-hidden="true"><i style="width:${share}%"></i></span>`;
  });
@@ -206,12 +224,13 @@
  if (state.who === 'house') bits.push(chip('NDI-konti', 'who'));
  else if (state.who === 'curated') bits.push(chip('Konti NDI følger', 'who'));
  else if (state.who && state.who !== 'all') bits.push(chip('@' + state.who, 'who'));
+ if (state.mo && monthName(state.mo)) bits.push(chip(monthName(state.mo), 'mo'));
  active.innerHTML = bits.join('');
  const knotMap = knotScope();
  const knotBridge = state.knot ? knotMap.bridges.find((b) => b.id === state.knot) : null;
  const topic = state.knot ? (knotBridge?.posts || []) : topicBase;
  const focused = bits.length ? ` · ${bits.length === 1 ? 'ét filter' : bits.length + ' filtre'}` : '';
- const leadOn = Boolean(state.q.trim() || state.f !== 'all' || state.knot);
+ const leadOn = Boolean(state.q.trim() || state.f !== 'all' || state.knot || state.mo);
  const knotQ = state.knot === 'nv-chips' ? 'NVDA' : (state.knot === 'soft-nv' || state.knot === 'soft-chips' ? 'SoftBank' : state.q.trim());
  const voiceBlock = (leadOn && topic.length) ? xVoicesHtml(topic, { q: knotQ, who: state.who }) : '';
  document.body.classList.toggle('x-focused', leadOn);
@@ -270,6 +289,7 @@
  if (state.who === 'house') picked.push('NDI-konti');
  else if (state.who === 'curated') picked.push('konti NDI følger');
  else if (state.who && state.who !== 'all') picked.push('@' + state.who);
+ if (state.mo && monthName(state.mo)) picked.push(monthName(state.mo));
  if (knotBridge) picked.push(knotBridge.sentence.replace(/\.$/, ''));
  const pickedLine = picked.length ? ` Aktivt: ${picked.join(' · ')}.` : '';
  const scoreItems = [];
@@ -306,10 +326,12 @@
  });
  const qHot = state.q.trim().toLowerCase();
  const weaveHot = state.knot ? '' : (state.f === 'all' && ['softbank', '9984.t', '9984', 'sftby'].includes(qHot) ? 'soft' : state.f === 'all' && ['nvda', 'nvidia'].includes(qHot) ? 'nv' : state.f === 'chips' && !qHot ? 'chips' : '');
- const weaveHtml = xWeaveHtml(posts.filter((p) => postWho(p, state.who)), { active: state.knot, hot: weaveHot });
+ const weaveHtml = xWeaveHtml(scopePosts(), { active: state.knot, hot: weaveHot });
+ const monthOnly = Boolean(state.mo) && !state.q.trim() && state.f === 'all' && !state.knot;
+ const monthHtml = xMonthHtml(posts.filter((p) => postWho(p, state.who)), { active: state.mo });
  const homeSlot = document.getElementById('x-spine-home');
  if (homeSlot) {
- homeSlot.innerHTML = weaveHtml + (leadOn ? '' : atlasOf(list, {
+ homeSlot.innerHTML = weaveHtml + ((!leadOn || monthOnly) ? monthHtml : '') + (leadOn ? '' : atlasOf(list, {
  home: true,
  leadId: list[0]?.id || '',
  }));
@@ -321,7 +343,7 @@
  jump: true,
  label: 'Datoer i snapshotet. Fyldt prik er i filteret. Åben prik er udenfor filteret.',
  });
- const skyPosts = posts.filter((p) => postWho(p, state.who) && postMatchesQuery(p, state.q));
+ const skyPosts = posts.filter((p) => postWho(p, state.who) && postMatchesQuery(p, state.q) && inMonth(p));
  const skyBlock = (!leadOn || !list.length) ? xSkyHtml(skyPosts, { active: state.f }) : '';
  if (!list.length) {
  const emptySpine = xSpineHtml(posts, {
@@ -424,9 +446,9 @@
  const mode = el.getAttribute('data-jump');
  const v = el.getAttribute('data-v') || '';
  const clearWho = el.hasAttribute('data-clear-who');
- if (mode === 'reset') state = { f: 'all', q: '', who: 'all', knot: '' };
- else if (mode === 'q') state = { f: 'all', q: v, who: clearWho ? 'all' : state.who, knot: '' };
- else if (mode === 'f') state = { ...state, f: v, q: '', who: clearWho ? 'all' : state.who, id: '', knot: '' };
+ if (mode === 'reset') state = { f: 'all', q: '', who: 'all', knot: '', mo: '' };
+ else if (mode === 'q') state = { f: 'all', q: v, who: clearWho ? 'all' : state.who, knot: '', mo: '' };
+ else if (mode === 'f') state = { ...state, f: v, q: '', who: clearWho ? 'all' : state.who, id: '', knot: '', mo: '' };
  qInput.value = state.q;
  write(state);
  render();
@@ -445,18 +467,30 @@
  const ae = document.activeElement;
  if (ae && ae.closest('input, textarea, select, [contenteditable="true"]')) return;
  if (e.key === 'Escape') {
- if (!(state.q.trim() || state.f !== 'all' || state.who !== 'all' || state.id || state.knot)) return;
+ if (!(state.q.trim() || state.f !== 'all' || state.who !== 'all' || state.id || state.knot || state.mo)) return;
  e.preventDefault();
- state = { f: 'all', q: '', who: 'all', id: '', knot: '' };
+ state = { f: 'all', q: '', who: 'all', id: '', knot: '', mo: '' };
  qInput.value = '';
  write(state);
  render();
  return;
  }
+ if (e.key === 'm') {
+ const busy = document.querySelector('[data-mo-busy]');
+ const id = busy ? busy.getAttribute('data-mo') : '';
+ if (!id) return;
+ e.preventDefault();
+ state = { ...state, mo: state.mo === id ? '' : id, id: '', knot: '' };
+ qInput.value = state.q;
+ write(state);
+ render();
+ if (state.mo) revealHits(true);
+ return;
+ }
  if (e.key === '4') {
  e.preventDefault();
  const on = state.knot === 'soft-nv';
- state = { f: 'all', q: '', who: state.who, id: '', knot: on ? '' : 'soft-nv' };
+ state = { f: 'all', q: '', who: state.who, id: '', knot: on ? '' : 'soft-nv', mo: '' };
  qInput.value = '';
  write(state);
  render();
@@ -482,7 +516,7 @@
  if (knotBtn) {
  const id = knotBtn.getAttribute('data-knot');
  const on = state.knot === id;
- state = { f: 'all', q: '', who: state.who, id: '', knot: on ? '' : id };
+ state = { f: 'all', q: '', who: state.who, id: '', knot: on ? '' : id, mo: '' };
  qInput.value = '';
  write(state);
  render();
@@ -495,8 +529,18 @@
  if (k === 'q') { state = { ...state, q: '', knot: '' }; qInput.value = ''; }
  if (k === 'f') state = { ...state, f: 'all', knot: '' };
  if (k === 'who') state = { ...state, who: 'all' };
+ if (k === 'mo') state = { ...state, mo: '' };
  write(state);
  render();
+ return;
+ }
+ const moBtn = e.target.closest('[data-mo]');
+ if (moBtn) {
+ const id = moBtn.getAttribute('data-mo');
+ state = { ...state, mo: state.mo === id ? '' : id, id: '', knot: '' };
+ write(state);
+ render();
+ if (state.mo) revealHits(true);
  return;
  }
  const voice = e.target.closest('[data-voice]');
