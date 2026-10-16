@@ -13,3 +13,4 @@ Per-lane log (not merged into notes/STATUS.md).
 - Fra Claude lane-C · 06:12 · Ordliste 150: «Screener (Udforsk)» (ordet står i UI på tema/selskab uden forklaring; persona-privat flag). Kort + HANDOFF. Klar til merge.
 - Fra Claude lane-C · 06:13 · UX-review: 5 fagord i andre lanes' UI (fakta auditor-hul, multi-tagges, YTD-knap, engelske livscyklus-labels, screener) med danske forslag til Leo.
 - Fra Claude lane-C · 06:13 · Ordliste: livscyklus-opslag med dansk først (Før omsætning/før overskud · Høj vækst · Vækst med overskud · Moden), engelsk i parentes.
+- Fra Claude lane-C · 06:15 · Slutkontrol: smoke.mjs fail 0, precheck OK, egne sider 0 JS-fejl/0 overflow (375+1280). lane-C klar til merge.
