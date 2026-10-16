@@ -320,6 +320,24 @@ body.x-home .x-door-score i{margin-top:0;font-size:9px;letter-spacing:.5px;text-
   .x-split-side .x-card{box-shadow:none}
   .x-says > .x-split{margin-top:4px}
 }
+.x-lane.is-rail{border-left:0;padding-left:0}
+.x-lane.is-rail .x-grid{position:relative;display:flex;flex-direction:column;gap:0;margin-top:2px}
+.x-lane.is-rail .x-grid::before{content:"";position:absolute;left:79px;top:7px;bottom:16px;width:1px;background:linear-gradient(#f5ee9e,#345860);pointer-events:none}
+.x-lane.is-theme.is-rail .x-grid::before{background:#617d84}
+article.x-card.is-rail{display:grid;grid-template-columns:72px minmax(0,1fr);column-gap:14px;align-items:start;position:relative;padding:0 0 12px;margin:0;background:transparent;border:0;border-radius:0;box-shadow:none}
+article.x-card.is-rail .x-rail-when time{display:block;font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-size:18px;font-weight:500;letter-spacing:-.4px;line-height:1;color:#f5ee9e;white-space:nowrap}
+article.x-card.is-rail .x-rail-when span{display:block;margin-top:4px;font-size:11px;color:var(--faint);font-variant-numeric:tabular-nums}
+.x-lane.is-theme.is-rail article.x-card.is-rail .x-rail-when time{color:#c5d6db}
+article.x-card.is-rail .x-dot{position:absolute;left:75px;top:5px;width:9px;height:9px;border-radius:50%;background:#f5ee9e;box-shadow:0 0 0 3px var(--bg);z-index:1}
+.x-lane.is-theme.is-rail article.x-card.is-rail .x-dot{background:#9eb4ba}
+article.x-card.is-rail .x-rail-body{min-width:0;padding-top:0}
+article.x-card.is-rail .x-rail-who{display:flex;gap:6px;align-items:baseline;min-width:0}
+article.x-card.is-rail .x-rail-who strong{font-size:13px;letter-spacing:-.2px;white-space:nowrap}
+article.x-card.is-rail .x-rail-who span{color:var(--faint);font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+article.x-card.is-rail .x-text{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;white-space:normal;font-size:13.5px;line-height:1.35;margin-top:3px}
+article.x-card.is-rail .x-foot{margin-top:6px;gap:6px}
+article.x-card.is-rail .x-foot .outline-btn.small{min-height:28px;padding:4px 8px}
+.x-lane.is-theme article.x-card.is-rail{background:transparent;box-shadow:none}
 `;
   document.head.appendChild(s);
 }
@@ -367,6 +385,13 @@ export function fmtXDate(iso) {
   } catch {
     return String(iso).slice(0, 10);
   }
+}
+
+function fmtXParts(iso) {
+  const full = fmtXDate(iso);
+  const m = String(full).match(/^(.*?)\s+(\d{4})$/);
+  if (!m) return { label: full, year: '' };
+  return { label: m[1], year: m[2] };
 }
 
 function initials(p) {
@@ -631,6 +656,31 @@ export function xCard(p, opt = {}) {
     ${tags}
   </p>`;
   const text = `<p class="x-text">${highlight(p.text, opt.query)}</p>`;
+  if (opt.rail) {
+    const when = fmtXParts(p.created_at);
+    const hitTags = [
+      ...(p.tickers || []).slice(0, 4).filter((t) => hitTerms.includes(String(t).toLowerCase())).map((t) => `<a class="tag is-hit" href="${esc(tickerHref(t))}">${esc(t)}</a>`),
+      ...(p.tags || []).slice(0, 3).filter((t) => hitTerms.includes(String(t).toLowerCase())).map((t) => `<a class="tag is-hit" href="${esc(tagHref(t))}">${esc(t)}</a>`),
+    ].join('');
+    return `<article class="${cls} is-rail">
+  <div class="x-rail-when">
+    <time datetime="${esc(p.created_at)}">${esc(when.label)}</time>
+    <span>${esc(when.year)}</span>
+  </div>
+  <span class="x-dot" aria-hidden="true"></span>
+  <div class="x-rail-body">
+    <header class="x-rail-who"><strong>${esc(p.name || p.username)}</strong><span>@${esc(p.username)}</span></header>
+    ${text}
+    ${because ? `<p class="x-why">${because}</p>` : why}
+    <p class="x-foot">
+      <a class="outline-btn small" href="${esc(p.url)}" rel="noopener noreferrer" target="_blank">Åbn på X ↗</a>
+      ${house}
+      ${curated}
+      ${hitTags}
+    </p>
+  </div>
+</article>`;
+  }
   if (opt.lead) {
     return `<article class="${cls}">
   <blockquote class="x-quote">
@@ -735,7 +785,7 @@ export function xSaysPanel(pack, { tickers = [], themes = [], limit = 4, title =
     hitKind: leadKind,
     query: markTerm(leadHit),
   })}</div>`;
-  const lane = (kind, hits) => {
+  const lane = (kind, hits, rail) => {
     if (!hits.length) return '';
     const quotedTheme = !view.direct.length;
     const kicker = kind === 'direct' ? 'Øvrige direkte træf' : (quotedTheme ? 'Øvrige tema' : 'Tema');
@@ -746,8 +796,9 @@ export function xSaysPanel(pack, { tickers = [], themes = [], limit = 4, title =
       reasons: h.reasons,
       hitKind: kind,
       query: markTerm(h),
+      rail,
     })).join('');
-    return `<div class="x-lane ${kind === 'direct' ? 'is-direct' : 'is-theme'}">
+    return `<div class="x-lane ${kind === 'direct' ? 'is-direct' : 'is-theme'}${rail ? ' is-rail' : ''}">
   <p class="x-lane-h"><span class="x-lane-k">${kicker}</span><span>${hint}</span></p>
   <div class="x-grid">${cards}</div>
 </div>`;
@@ -757,8 +808,8 @@ export function xSaysPanel(pack, { tickers = [], themes = [], limit = 4, title =
     : !view.direct.length
       ? `<p class="x-miss">Ingen opslag i udsnittet nævner selskabet eller tickeren. ${restTheme.length ? 'Kortene er tema.' : 'Kortet er tema.'}</p>`
       : '';
-  const sideLane = lane('direct', restDirect) || lane('theme', restTheme);
-  const belowLane = restDirect.length && restTheme.length ? lane('theme', restTheme) : '';
+  const sideLane = lane('direct', restDirect, true) || lane('theme', restTheme, true);
+  const belowLane = restDirect.length && restTheme.length ? lane('theme', restTheme, false) : '';
   const stage = sideLane
     ? `<div class="x-split"><div class="x-split-main">${quote}</div><div class="x-split-side">${sideLane}</div></div>`
     : quote;

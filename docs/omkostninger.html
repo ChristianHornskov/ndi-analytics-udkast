@@ -30,7 +30,7 @@
   .cmp-line b{font-variant-numeric:tabular-nums;color:var(--cyan);font-weight:500;min-width:72px;text-align:right}
   .cost-bar{height:8px;border-radius:99px;background:#0b171d;border:1px solid #2a424a;overflow:hidden}
   .cost-bar i{display:block;height:100%;background:linear-gradient(90deg,#89aeb4,#9ecfd6);border-radius:99px}
-  .scale-note{font-size:12px;color:var(--faint);margin-top:14px;line-height:1.5}
+  .scale-note{font-size:12px;color:var(--faint);margin-top:8px;line-height:1.45}
   .receipts{display:grid;grid-template-columns:1fr 1fr;gap:14px}
   .receipt{background:#0b171d;border:1px solid #345860;border-top:7px solid #f5ee9e55;border-radius:2px 2px 16px 16px;padding:16px 16px 14px;min-width:0}
   .receipt h3{font-size:16px;letter-spacing:-.2px;margin:0 0 4px}
@@ -72,7 +72,7 @@
   .delta-zoom .k{font-size:11px;letter-spacing:1.2px;font-weight:700;color:var(--brand);margin:0 0 8px}
   .delta-zoom .delta-track{height:16px;margin-top:22px}
   .delta-zoom .delta-kr{font-size:15px;top:-18px}
-  .delta-context{margin-top:14px;padding-top:12px;border-top:1px dashed #345860}
+  .delta-context{margin-top:8px;padding-top:8px;border-top:1px dashed #345860}
   .delta-context .k{font-size:11px;letter-spacing:1.2px;font-weight:700;color:var(--faint);margin:0 0 8px}
   .delta-track.is-context{height:8px;margin-top:8px}
   .delta-kr{position:absolute;top:-15px;transform:translateX(-50%);font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-size:13px;font-weight:500;letter-spacing:-.3px;color:#f5ee9e;white-space:nowrap;line-height:1;pointer-events:none}
@@ -82,6 +82,15 @@
   .kr-line{display:flex;flex-wrap:wrap;gap:6px 18px;margin:12px 0 0;padding-top:12px;border-top:1px solid #345860;font-size:13px;color:var(--muted);line-height:1.4}
   .kr-line b{color:var(--text);font-variant-numeric:tabular-nums;font-weight:600}
   .kr-line b.is-gap{color:#f5ee9e}
+  .kr-chips{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;list-style:none;padding:6px 0 0;margin:6px 0 0;border-top:1px solid #345860}
+  .kr-chips li{background:#0b171d;border:1px solid #345860;border-radius:12px;padding:5px 8px 4px;min-width:0}
+  .kr-chips b{display:block;font-variant-numeric:tabular-nums;font-size:16px;font-weight:600;letter-spacing:-.3px;color:var(--text);line-height:1.1}
+  .kr-chips li > span{display:block;margin-top:3px;color:var(--faint);font-size:11px;line-height:1.3}
+  .kr-chips li.is-gap{border-color:#f5ee9e66;box-shadow:inset 3px 0 0 var(--yellow)}
+  .kr-chips .kr-pair{display:flex;align-items:baseline;justify-content:space-between;gap:6px;min-width:0}
+  .kr-chips .kr-pair b{display:inline;font-size:14px;color:var(--cyan);font-weight:600}
+  .kr-chips .kr-pair em{font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-style:normal;font-weight:500;font-size:20px;letter-spacing:-.5px;color:#f5ee9e;line-height:1}
+  .kr-aside{margin:3px 0 0;color:var(--faint);font-size:12px}
   .metrics .metric.is-echo strong{color:var(--muted);font-size:22px}
   @media(min-width:801px){
     .receipts:has(.receipt-bridge){grid-template-columns:minmax(0,1fr) 118px minmax(0,1fr);align-items:center}
@@ -93,6 +102,7 @@
     .delta-nums{grid-template-columns:1fr;gap:12px}
     .delta-mid{order:-1;text-align:left;padding:0}
     .delta-nums .delta-mid small{margin-left:0;max-width:none}
+    .kr-chips{grid-template-columns:1fr 1fr}
   }
  </style>
 </head>
@@ -196,13 +206,15 @@
  })() : '';
  const fullLeft = mark(loTx);
  const fullWidth = mark(hiTx) - fullLeft;
- const ongoingBits = sameOngoing
- ? `<b>${kr(a.otherOngoing)}</b> øvrige løbende, begge`
- : `<b>${kr(a.otherOngoing)}</b> og <b>${kr(b.otherOngoing)}</b> øvrige løbende`;
- const entryBits = sameEntry
- ? `<b>${kr(a.entry)}</b> emission og <b>${kr(a.exit)}</b> indløsning, maks., begge`
- : `PMINDI <b>${kr(a.entry)}</b> / <b>${kr(a.exit)}</b> · PMINDIAKK <b>${kr(b.entry)}</b> / <b>${kr(b.exit)}</b>, maks.`;
- const krLine = dTx === 0 ? '' : `<p class="kr-line"><span>${ongoingBits}</span><span><b>${kr(a.portfolioTransaction)}</b> og <b class="is-gap">${kr(b.portfolioTransaction)}</b> porteføljetransaktion</span><span>${entryBits}</span><span>Linjerne er ikke lagt sammen.</span></p>`;
+ const krChip = (amount, label) => `<li><b>${amount}</b><span>${label}</span></li>`;
+ const ongoingChips = sameOngoing
+ ? krChip(kr(a.otherOngoing), 'Øvrige løbende · begge')
+ : krChip(kr(a.otherOngoing), 'Øvrige løbende · PMINDI') + krChip(kr(b.otherOngoing), 'Øvrige løbende · PMINDIAKK');
+ const entryChips = sameEntry
+ ? krChip(kr(a.entry), 'Emission, maks. · begge') + krChip(kr(a.exit), 'Indløsning, maks. · begge')
+ : krChip(kr(a.entry), 'Emission, maks. · PMINDI') + krChip(kr(b.entry), 'Emission, maks. · PMINDIAKK') + krChip(kr(a.exit), 'Indløsning, maks. · PMINDI') + krChip(kr(b.exit), 'Indløsning, maks. · PMINDIAKK');
+ const gapChip = `<li class="is-gap"><span class="kr-pair"><b>${kr(a.portfolioTransaction)}</b><em>${krGapTxt}</em><b>${kr(b.portfolioTransaction)}</b></span><span>Porteføljetransaktion · forskellen</span></li>`;
+ const krLine = dTx === 0 ? '' : `<ul class="kr-chips">${ongoingChips}${gapChip}${entryChips}</ul><p class="kr-aside">Linjerne er ikke lagt sammen.</p>`;
  const deltaStage = dTx === 0 ? '' : `<section class="delta-stage" id="forskel">
  <p class="kicker">${onlyTx ? 'DEN ENE FORSKEL' : 'PORTEFØLJETRANSAKTION'}</p>
  <h2>${onlyTx ? 'Porteføljetransaktion skiller klasserne' : 'Porteføljetransaktion'}</h2>
