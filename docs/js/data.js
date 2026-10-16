@@ -385,6 +385,8 @@ const NAME_FIX = {
   'General Motors Co': 'General Motors', 'Hecla Mining Co': 'Hecla Mining', 'Tmc The Metals Co Inc': 'TMC The Metals Company',
   'Ams-Osram Ag': 'ams OSRAM', 'Microstrategy': 'MicroStrategy', 'Hims Hers Health Inc': 'Hims & Hers Health',
   'Solstice Adv Materials Inc': 'Solstice Advanced Materials',
+  'SoFi Tech': 'SoFi Technologies', 'Opendoor Tech': 'Opendoor Technologies', 'Uber Tech': 'Uber Technologies',
+  'Spotify Tech': 'Spotify Technology', 'Dell Tech': 'Dell Technologies', 'Lumen Tech': 'Lumen Technologies', 'WEBTOON Entr': 'WEBTOON Entertainment',
 };
 // Selskabsnavne, som depotbanken har gjort til "Titel Case" (SITIME → Sitime). Kun ord, hvis rigtige stavemåde er sikker.
 const WORD_FIX = {
@@ -398,6 +400,9 @@ const WORD_FIX = {
 export function displayName(p) {
   const raw = (p?.name || '').trim();
   if (NAME_FIX[raw]) return NAME_FIX[raw];
+  // Warrants arver moderselskabets læsbare navn ("Opendoor Tech Warrant Series A" → "Opendoor Technologies Warrant Series A")
+  const wm = /^(.*?)(\s+warrants?\b.*)$/i.exec(raw);
+  if (wm && NAME_FIX[wm[1]]) return NAME_FIX[wm[1]] + wm[2];
   let n = raw.replace(/\/The$/, '').replace(/\s*\/\s*(Us|Delaware)$/i, '');
   const adr = /(\s+Sp)?[\s-]+ADR$/i.test(n);
   n = n.replace(/(\s+Sp)?[\s-]+ADR$/i, '')

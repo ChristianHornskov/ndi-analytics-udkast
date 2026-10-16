@@ -885,7 +885,7 @@ function viaLens(list) {
 function warrantNote(p, fund) {
   const par = warrantParent(p, fund.positions);
   if (!par) return '';
-  const link = par.isin ? `<a href="selskab.html?isin=${encodeURIComponent(par.isin)}&fund=${fund.id}">${par.name}</a>` : par.name;
+  const link = par.isin ? `<a href="selskab.html?isin=${encodeURIComponent(par.isin)}&fund=${fund.id}">${displayName(par)}</a>` : displayName(par);
   return `<br><small style="color:var(--muted);display:inline-block;white-space:normal;max-width:36ch;line-height:1.35;text-align:left">Warrant (tegningsret) på ${link} - ikke et selvstændigt selskab</small>`;
 }
 function hitNote(p) {
