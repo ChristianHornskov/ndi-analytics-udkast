@@ -166,10 +166,12 @@
       set('metric-total', '-');
       set('metric-cagr', '-');
       set('metric-ytd', '-');
+      set('metric-dd', '-');
       const note = document.getElementById('metric-total-note');
       if (note) note.textContent = 'Afkast vises efter 12 måneder';
       set('metric-cagr-note', 'Vises efter 12 måneder');
       set('metric-ytd-note', 'Vises efter 12 måneder');
+      set('metric-dd-note', 'Vises efter 12 måneder');
       return;
     }
 
@@ -180,17 +182,33 @@
     const total = (last.total / first.total - 1) * 100;
     const annual = cagr(first, last);
     const ytd = indexSeries(periodSlice(points, 'ytd').points).at(-1)?.value ?? null;
+    const shown = periodSlice(points, state.period).points;
+    const dd = periodDrawdown(shown);
     const years = yearsBetween(first.d, last.d);
 
     $('#metric-total').textContent = pct(total, true);
     $('#metric-cagr').textContent = annual == null ? 'Under 1 år' : pct(annual, true);
     $('#metric-ytd').textContent = pct(ytd, true);
+    $('#metric-dd').textContent = pct(dd.max, true);
     $('#metric-total-note').textContent = `Siden ${fmtDate(first.d)} · efter løbende omkostninger`;
     $('#metric-cagr-note').textContent = annual == null
       ? `Historik ${number.format(years)} år · vises efter ét års data`
-      : `CAGR · ${number.format(years)} år siden start`;
-    $('#metric-ytd-note').textContent = `Fra 1. jan. ${last.d.slice(0, 4)} til ${fmtDate(last.d)}`;
+      : `${number.format(years)} år siden start`;
+    $('#metric-ytd-note').textContent = `Fra 1. jan. ${last.d.slice(0, 4)} til ${fmtDate(last.d)}. Afventer Fundmarket-godkendelse.`;
+    $('#metric-dd-note').textContent = `Bund ${fmtDate(dd.trough)} · fra en top i perioden`;
     $('#metric-cagr').classList.toggle('smaller', annual == null);
+  }
+
+  function periodDrawdown(points) {
+    let peak = points[0].total;
+    let max = 0;
+    let trough = points[0].d;
+    for (const p of points) {
+      if (p.total >= peak) peak = p.total;
+      const dd = (p.total / peak - 1) * 100;
+      if (dd < max) { max = dd; trough = p.d; }
+    }
+    return { max, trough };
   }
 
   function niceScale(values) {
@@ -246,6 +264,7 @@
 
     const context = [];
     if (state.truncated) context.push('Viser den tilgængelige historik i den valgte periode.');
+    if (state.period === 'ytd') context.push('År til dato afventer Fundmarket-godkendelse.');
     $('#chart-context').textContent = context.join(' ');
     $('#chart-context').hidden = !context.length;
 
@@ -418,6 +437,7 @@
     if (!FUNDS[fund] || fund === state.fund) return;
     state.fund = fund;
     state.selectedDate = null;
+    paintSri();
     update();
   }
 
@@ -480,6 +500,40 @@
     if (period) selectPeriod(period.dataset.period);
   });
 
+  $('#share-chart')?.addEventListener('click', async () => {
+    const note = $('#share-note');
+    const pointe = $('#chart-pointe')?.textContent?.trim() || `${state.fund}, totalafkast.`;
+    const text = `${pointe} ${location.href}\nHistorisk afkast er ikke en pålidelig indikator for fremtidigt afkast.`;
+    let ok = false;
+    try {
+      await navigator.clipboard.writeText(text);
+      ok = true;
+    } catch {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.left = '-999px';
+      document.body.append(ta);
+      ta.select();
+      try { ok = document.execCommand('copy'); } catch { ok = false; }
+      ta.remove();
+    }
+    if (note) {
+      note.hidden = false;
+      note.textContent = ok ? 'Teksten er kopieret.' : text;
+    }
+    sendHeight();
+  });
+
+  function paintSri() {
+    const line = $('#sri-line');
+    const priip = state.meta?.funds?.[FUNDS[state.fund]]?.priip;
+    if (!line || !priip) return;
+    line.hidden = false;
+    line.innerHTML = `Risikoindikator (SRI) ${priip.risk_class} af ${priip.risk_scale_max} ifølge KID. Gælder fonden som helhed. <a href="${escape(priip.url)}">Læs KID ↗</a>`;
+  }
+
   document.addEventListener('keydown', event => {
     const tab = event.target.closest('[data-period]');
     if (tab && ['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) {
@@ -539,6 +593,11 @@
         if (!Array.isArray(fund.data) || fund.data.length < 2) throw new Error('Afkastserien er ufuldstændig.');
       }
       state.ready = true;
+      try {
+        const metaRes = await fetch(new URL('../data/fund-meta.json', location.href), { cache: 'no-store' });
+        if (metaRes.ok) state.meta = await metaRes.json();
+      } catch { /* SRI-linjen er ekstra */ }
+      paintSri();
       update();
       if (document.fonts?.ready) document.fonts.ready.then(() => { renderChart(); sendHeight(); });
     } catch (error) {

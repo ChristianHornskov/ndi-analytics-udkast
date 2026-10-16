@@ -166,6 +166,12 @@ Sliderens knap lå i kanten af kortet, mens kurvens første og sidste dag står 
 
 −26,6 % og −26,8 % er næsten lige høje. Tallet står nu over de søjler, der ikke er det dybeste fald. −35,8 % beholder −36 % ved prikken. Tallene rammer ikke hinanden, prikken, "nu" eller årstallene, ved 1280, 375 og 320. Et klik på −26,6 % sætter udlæsningen på 30. mar. 2026. Den åbne er gul. Ingen sidescroll. Ingen konsolfejl.
 
+### Update · nøgletal under grafen · 2026-10-16 ~03:25 CEST
+
+Tre kort under kurven, ikke et panel. Nu under vand er −23,4 % pr. 14. okt. 2026, med gul kant. Der er 4 episoder dybere end 10 %. Den længste er 208 dage, fra top til genopretning. Et klik på søjlen −26,6 % sætter udlæsningen på 30. mar. 2026. «Tilbage» og «top» rammer ikke «nu −23 %». Den lange tekst ligger i «Sådan læser du grafen», lukket. Overskriften er «Fald fra top». 2026 har forbeholdet om Fundmarket-godkendelse. SRI 5 af 7 og markedsføringslinjen står på siden. Ingen tekst i svg'en rammer en anden. Ingen sidescroll ved 1280, 375 og 320. Ingen konsolfejl.
+
+Embed under grafen: totalafkast +104,8 % er det høje kort. Ved siden af står +26,4 % og år til dato +4,0 % med forbeholdet. Største fald på hele perioden er −35,8 %, bund 8. apr. 2025. På år til dato er største fald −26,8 %, bund 29. jul. 2026, og linjen over kortene siger, at år til dato afventer godkendelse. Det rosa tal på den kurve er stadig −10,0 %. PMINDIAKK har streger og ingen procent. Del grafen viser sætningen, når udklipsholderen er lukket. Sammenlign har ca. 2,79 % og ca. 2,85 % i hvert kort. På 375 er «Også i udkastet» 14 chips à 44 px, og siden scroller ikke sidelæns. Ingen konsolfejl.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.
