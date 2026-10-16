@@ -33,13 +33,17 @@
  <p data-kid-footer></p>
  </footer>
  <script type="module">
- import { loadAll, fundById, fmtDate, daTheme, WARN_HIST, findTheme, tagsFor, fillKidFooter, chainForTheme, chainHref } from './js/data.js';
+ import { loadAll, fundById, fmtDate, daTheme, WARN_HIST, findTheme, tagsFor, fillKidFooter, chainForTheme, chainHref, searchPosition } from './js/data.js';
  import { loadXPosts, xSaysPanel } from './js/x-feed.js';
-
-import { loadAll, fundById, fmtDate, daTheme, WARN_HIST, findTheme, tagsFor, fillKidFooter, chainForTheme, chainHref, searchPosition } from './js/data.js';
  const u = new URL(location.href);
  const key = u.searchParams.get('slug') || 'chips';
  const fundId = u.searchParams.get('fund') || 'pmindi';
+  // Samme whitelist som screener/A-Z: kun navn/vægt (tema er fast her) og temastatus. Ingen tal pr. aktie.
+ const SORTS = { weight: 'Vægt', name: 'Navn A-Z' };
+ const sort = SORTS[u.searchParams.get('sort')] ? u.searchParams.get('sort') : 'weight';
+ const STATUSES = { forslag: 'Kun temaforslag', fast: 'Uden temaforslag' };
+ const status = STATUSES[u.searchParams.get('status')] ? u.searchParams.get('status') : '';
+ const qRaw = (u.searchParams.get('q') || '').trim();
  const onlyLens = u.searchParams.get('linse') === '1';
  const [data, td, vc, um, xPack] = await Promise.all([
    loadAll(),
@@ -48,16 +52,6 @@ import { loadAll, fundById, fmtDate, daTheme, WARN_HIST, findTheme, tagsFor, fil
    fetch('data/unique-metrics.json').then((r) => r.json()).catch(() => ({ byIsin: {} })),
    loadXPosts(),
  ]);
-
-// Samme whitelist som screener/A-Z: kun navn/vægt (tema er fast her) og temastatus. Ingen tal pr. aktie.
- const SORTS = { weight: 'Vægt', name: 'Navn A-Z' };
- const sort = SORTS[u.searchParams.get('sort')] ? u.searchParams.get('sort') : 'weight';
- const STATUSES = { forslag: 'Kun temaforslag', fast: 'Uden temaforslag' };
- const status = STATUSES[u.searchParams.get('status')] ? u.searchParams.get('status') : '';
- const qRaw = (u.searchParams.get('q') || '').trim();
- const [data, td, vc, um] = await Promise.all([loadAll(), fetch('data/themes.json').then((r) => r.json()),
- fetch('data/value-chains.json').then((r) => r.json()).catch(() => ({ chains: [] })),
- fetch('data/unique-metrics.json').then((r) => r.json()).catch(() => ({ byIsin: {} }))]);
  // NDI-linse: kun kvalitativ tekst (hvad ejer man, plads i kæden). Ingen tal pr. aktie.
  const lensOf = (p) => (um.byIsin || {})[p.isin];
  const lensOwn = (p) => ((lensOf(p)?.metrics || []).find((m) => m.label === 'Hvad ejer man?') || {}).value || '';
@@ -119,7 +113,7 @@ import { loadAll, fundById, fmtDate, daTheme, WARN_HIST, findTheme, tagsFor, fil
  // Hvor kom forslagene fra? (themeFrom i portfolio.json; mangler = Andet)
  const fromCounts = {};
  for (const p of list) if (p.theme === tk && p.themeStatus === 'forslag') { const f0 = p.themeFrom || 'andet'; fromCounts[f0] = (fromCounts[f0] || 0) + 1; }
- const fromTxt = Object.keys(fromCounts).length ? ' Før forslaget: ' + Object.entries(fromCounts).sort((a, b) => b[1] - a[1]).map(([k, n]) => `${n} i ${esc(k === 'andet' ? 'Andet' : daTheme(k))}`).join(', ') + '.' : '';
+ const fromTxt = Object.keys(fromCounts).length ? ' Før forslaget: ' + Object.entries(fromCounts).sort((a, b) => b[1] - a[1]).map(([k, n]) => `<a href="index.html?view=udforsk${fund.id !== 'pmindi' ? `&fund=${fund.id}` : ''}&status=forslag&skift=${encodeURIComponent(`${k}~${tk}`)}" title="Gennemgå dette temaskift i screeneren">${n} i ${esc(k === 'andet' ? 'Andet' : daTheme(k))}</a>`).join(', ') + '.' : '';
  const posAsOf = fmtDate(fund.positionsAsOf || td.positionsAsOf);
  const keyToSlug = Object.fromEntries(td.themes.map((t) => [t.title.toLowerCase(), t.slug]));
  const chain = (theme.chain || []).map((c) => {
@@ -159,7 +153,7 @@ import { loadAll, fundById, fmtDate, daTheme, WARN_HIST, findTheme, tagsFor, fil
  const rows = shown.map((p) => {
  const multi = p.theme !== tk;
  return `<tr>
- <td><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}">${esc(p.name)}</a>${multi ? ` <span class="tag" title="Primært tema: ${esc(daTheme(p.theme))}">også ${esc(daTheme(p.theme))}</span>` : ''}${!multi && p.themeStatus === 'forslag' && tk !== 'andet' ? ` <span class="badge badge-draft" title="Forslag, afventer gennemgang${p.themeFrom && p.themeFrom !== 'andet' ? ` · før: ${esc(daTheme(p.themeFrom))}` : ' · før: Andet'}">forslag</span>` : ''}${lensOf(p) ? ` <a class="badge" href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}#ndi-linse" title="Kvalitativ NDI-linse: rolle, plads i værdikæden og forhold at holde øje med (udkast)" aria-label="NDI-linse for ${esc(p.name)}">NDI-linse</a>` : ''}${hitNote(p)}</td>
+ <td><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}">${esc(p.name)}</a>${multi ? ` <span class="tag" title="Primært tema: ${esc(daTheme(p.theme))}">også ${esc(daTheme(p.theme))}</span>` : ''}${!multi && p.themeStatus === 'forslag' && tk !== 'andet' ? ` <span class="badge badge-draft" title="Forslag, afventer gennemgang${p.themeFrom && p.themeFrom !== 'andet' ? ` · før: ${esc(daTheme(p.themeFrom))}` : ' · før: Andet'}">forslag</span>` : ''}${lensOf(p) ? ` <a class="badge" href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}#ndi-linse" title="Kvalitativ NDI-linse: rolle, plads i værdikæden og forhold at holde øje med (udkast)" aria-label="NDI-linse for ${esc(p.name)}">NDI-linse</a>` : ''}${hitNote(p)}${!multi && p.themeStatus === 'forslag' && tk !== 'andet' ? `<br><small style="color:var(--muted)">før: ${esc(p.themeFrom && p.themeFrom !== 'andet' ? daTheme(p.themeFrom) : 'Andet')}</small>` : ''}</td>
  <td class="hide-sm-cell">${p.role ? esc(p.role) : lensOwn(p) ? `${esc(lensOwn(p))} <small style="color:var(--muted)" title="Fra NDI-linsen, AI-udkast der afventer NDI-gennemgang">(linse, udkast)</small>` : '<span style="color:var(--muted)">–</span>'}</td>
  <td>${w(p.weight)}</td>
  </tr>`;
