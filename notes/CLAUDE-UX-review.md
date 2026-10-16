@@ -1003,3 +1003,33 @@ Live Playwright ved 375 på 32 URL'er (entré, fonden ±AKK, portefølje, udfors
 - **Familiekontor:** warrant-mærket er korrekt og præcist. En warrant-side med "Modenhed: Høj vækst" vil de stadig undre sig over.
 - **Idéspejder:** "Andre med NDI-linse i led 4" er en god sidegang, men de rå navne ("Iqe Plc", "Axt Inc") gør den mindre indbydende.
 - **Visuel variation:** periode-bjælken er en ny figurtype (godt). Selskabssider er nu kortere, når profilen mangler (SUESS 4,6k px).
+
+## 2026-10-16 06:25 CEST · cyklus 41 (main `6c06c90`, docs-delta 4 filer siden `5bdb064`; live = main)
+
+Live Playwright ved 375 på 32 URL'er (samme sæt som cyklus 40). **0 pageerrors og 0 vandret overflow.** Pages er ajour: ideer form 19 (`#h-cs`) og ordlistens `g-warrant` er live.
+
+### Nyt i delta ✅
+- **Ideer form 19 "Hvor tjener teknologien pengene?"** (IDESPEJDER #13) viser Amazon 2024 med AWS ≈ 17 % af omsætningen og ≈ 58 % af driftsresultatet. Tallene stemmer med 10-K (638/108 og 69/40 mia. USD). To vandrette stablede søjler er en ny figurtype og giver variation. Sektionen er en lukket `<details>`, og rækkerne stables ved ≤ 520 px. Forbeholdet "Amazon er ikke i fondens beholdning … ikke en vurdering af aktien" er klart.
+- **Ordliste:** "Warrant (tegningsret)" og "Forkortede navne i beholdningen" (Sp ADR, N, /The) forklarer præcis de rå navne, som persona privat 55+ snublede over. Gruppetallene tælles nu i JS, så de ikke kan blive forældede ✅.
+- **Ideer-temalinks er ≥ 24 px** (WCAG 2.5.8) ✅. **Risici:** CAGR linker til ordlisten ✅.
+
+### MUST
+- Ingen UX-blokere.
+
+### SHOULD (åbne, uændret i dette delta)
+1. **Rå navne i lister:** "Sea Sp ADR" står i portefølje, udforsk, selskaber og tema platforms og under "Andre i …" på SoftBank/Carvana. "Southern Co/The" står i udforsk og selskaber, "Iqe Plc" i udforsk, tema chips og selskaber. Ordlisten forklarer nu forkortelserne, men brug `displayName()` i listerne, så navnet er det samme fra liste til side (cyklus 40 SHOULD 1).
+2. **Warrant-siden er stadig en fuld selskabsside** (cyklus 40 SHOULD 2). Ordlisteopslaget er nu klar, så det kan linkes fra båndet.
+3. **Jargon:** "PERIODE · DYB SIDE" og "Dyb →" (fonden, periode) og "22 temaforslag **er afventer**" (temaer) står stadig.
+4. **"Kvartalssnapshot"** står stadig på fonden, fonden-AKK, portefølje, udforsk og selskab, selvom om-data siger, at 1. jun. ikke er et kvartalsskifte.
+5. **"Central Information Dokument"** står i footeren på 13 af 32 URL'er (entré, fonden ±AKK, portefølje, udforsk, drawdown, periode, sammenlign, selskab ×2, temaer, tema ×2). Se compliance.
+6. **Periode-YTD:** "Gennemsnitligt årligt afkast +26,4 %" står under "År til dato +4,0 %" uden "siden start".
+
+### Nice
+- Form 19 bruger Amazon, som ikke er i beholdningen. Et eksempel fra beholdningen (fx Oracle: cloud mod licens) ville binde idéen til fonden. Det kræver dog segmentdata med driftsresultat, som Oracle ikke oplyser på samme måde, så Amazon er et forsvarligt valg.
+- "Hold øje med -" blev ikke set i dette sweep (SoftBank og Carvana har `watch`). Tjek en side uden `watch`, før punktet lukkes.
+- Touch-mål på udforsk og ndi-perspektiv er uændrede (697/418 under 24 px).
+
+### Persona-linser
+- **Privat 55+:** ordlisten giver nu svar på "hvad er Sp ADR?", men de skal stadig finde den. Et `title`/link på rå navne i listen ville hjælpe, hvis `displayName()` ikke udrulles.
+- **Familiekontor:** form 19 er den slags regnskabslæsning, de forventer, med kilde (10-K) og egen beregning. Det er godt.
+- **Idéspejder:** #13 er leveret. Næste lavthængende frugt er #9 (fakta vs. vurdering-mærke), som også løser compliance-AI-mærkningen på værdikæder.

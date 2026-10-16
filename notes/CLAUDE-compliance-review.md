@@ -1034,3 +1034,27 @@ Ikke-rådgivning ✅ (alle footere) · tabsadvarsel 32/32 ✅ · historisk afkas
 
 ### Prioritet
 Ingen blokere. **2** (periode på gns. årligt afkast, nu også periode-siden) → **1** (AI-mærke værdikæder) → **3** → **4** → **5**.
+
+## 2026-10-16 06:25 CEST · cyklus 41 (main `6c06c90`, docs-delta 4 filer siden `5bdb064`; live = main)
+
+Ikke juridisk rådgivning. Live sweep ved 375 på 32 URL'er med flag-tælling, plus grep i `docs/**`.
+
+### Tjekliste
+Ikke-rådgivning ✅ · tabsadvarsel 32/32 ✅ · historisk afkast ≠ fremtid 32/32 ✅ · KID-links 32/32 ✅ · SRI på produkt- og afkastsider ✅ · beholdning pr. 1. jun. 2026 forsinket ✅ · ingen live-handler ✅ · PMINDIAKK uden afkast før 12 mdr. ✅ · ingen 1m/3m ✅ · intet benchmark og Nasdaq kun som noteringssted ✅ · "overvægt" kun i negationer/pædagogisk ✅ · ingen "garanteret/sikkert afkast/køb nu/bedste tip/øger eksponering" ✅ · omkostninger (KID-RIY, "ikke et ÅOP") ✅ · "BREAKING:" står kun i tredjepartsopslag på `ndi-paa-x.html` under "FULGT KONTO" og "ikke NDI's holdning". Det er uændret siden cyklus 39 og OK ✅.
+
+### Nyt i delta
+- **Form 19 (Amazon/AWS):** Amazon står ikke i beholdningen, og det siges eksplicit. Teksten siger "ikke en vurdering af aktien", og kilden (10-K) adskilles fra NDI's egen beregning. Der er ingen opfordring og intet kursudsagn. OK ✅. Tallene er kontrolleret mod 10-K for 2024 (omsætning 638,0/AWS 107,6 mia. USD, driftsresultat 68,6/AWS 39,8 mia. USD) ✅.
+- **Ordliste-warrant:** "Vægten er typisk tæt på 0 %" og "samme selskab" er korrekte og ikke vildledende ✅.
+
+### MUST
+- **Ingen åbne MUST-blokere.**
+
+### SHOULD (alle åbne fra cyklus 40, uændret)
+1. **Afkast uden periode:** "Gns. årligt afkast" på fonden/embed og "Gennemsnitligt årligt afkast" på `periode.html:113` (YTD-visningen) mangler "siden start 22. sep. 2023". Det er størst på periode-YTD, hvor tallet står under "År til dato".
+2. **Værdikæder er ikke AI-mærket** (`vaerdikaeder.html`, `vaerdikaede.html`). Tilføj: "AI-assisteret udkast ud fra selskabernes egne kilder, gennemgås af NDI."
+3. **KID-betegnelse:** "Central Information Dokument" kommer fra `js/data.js` og `index.html` og ses på 13 af 32 URL'er. Brug "Dokument med central information (KID)".
+4. **"Forsinket kvartalssnapshot"** (`js/app.js:359` og `:428`) beskriver datogrundlaget forkert (1. jun. 2026 er ikke et kvartalsskifte). Skriv "forsinket snapshot pr. 1. jun. 2026".
+5. **Intern sætning** `omkostninger.html:370`: "Det er det tal, marketingmateriale skal gengive ærligt."
+
+### Prioritet
+Ingen blokere. **1** → **2** → **3** + **4** (begge tekstrettelser i `data.js`/`app.js`, kan tages i ét commit) → **5**.
