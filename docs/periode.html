@@ -24,17 +24,26 @@
  <a class="skip" href="#main">Gå til indhold</a>
  <header class="site-header">
  <a class="brand" href="index.html"><img src="assets/mark.svg" width="34" height="27" alt=""><span>NewDeal Invest</span></a>
- <nav class="nav"><a href="index.html?view=fonden">← Fonden</a><a href="drawdown.html">Drawdown</a></nav>
+ <nav class="nav"><a href="index.html?view=fonden">← Fonden</a><a href="drawdown.html">Fald fra top</a></nav>
  </header>
  <main id="main"><p style="color:var(--muted)">Henter…</p></main>
+ <footer class="site-footer">
+ <p><strong>Markedsføringsmateriale.</strong> Læs <a href="https://fundmarket.dk/wp-content/uploads/Faellesprospekt-for-afdelinger-og-andelsklasser-i-Investeringsforeningen-Portfoliomanager-opdateret-24.10.2025.pdf" rel="noopener" target="_blank">prospektet ↗</a> og KID for <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm140b" rel="noopener" target="_blank">PMINDI ↗</a> eller <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm145b" rel="noopener" target="_blank">PMINDIAKK ↗</a>, før du træffer en endelig investeringsbeslutning.</p>
+ <p>Udkast / noindex. Ikke den officielle side og ingen investeringsrådgivning. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering. <a href="om-data.html">Data og ordliste</a>.</p>
+ </footer>
  <script type="module">
- import { loadAll, fundById, calendarYearReturns, ytdReturn, periodReturn, cagr, WARN_HIST, fmtPct, fmtDate } from './js/data.js';
+ import { loadAll, fundById, calendarYearReturns, ytdReturn, periodReturn, cagr, WARN_HIST, fmtPct, fmtDate, loadFundMeta, kidFooterHtml } from './js/data.js';
  const { portfolio, context } = await loadAll();
+ const meta = await loadFundMeta();
  const fundId = new URL(location.href).searchParams.get('fund') || 'pmindi';
  const year = new URL(location.href).searchParams.get('year') || 'YTD';
  const fund = fundById(portfolio, fundId);
+ const priip = meta?.funds?.[fundId]?.priip;
+ const sriHtml = priip
+  ? `<p class="band">Risikoindikator <strong>${priip.risk_class}</strong> af ${priip.risk_scale_max} ifølge KID (pr. ${fmtDate(priip.production_date)}). Anbefalet tid ${priip.recommended_holding_years} år. Tallet gælder fonden som helhed, ikke en enkelt periode. <a href="risici.html">Risici</a>.</p><p class="src">${kidFooterHtml(meta)}</p>`
+  : '';
  if (fund.id === 'pmindiakk') {
- document.getElementById('main').innerHTML = `<p class="eyebrow">PERIODE</p><h1>${fund.short}</h1><section class="panel"><p style="color:var(--muted)">Afkast vises efter 12 måneder.</p></section><p class="warn">${WARN_HIST}</p>`;
+ document.getElementById('main').innerHTML = `<p class="eyebrow">PERIODE</p><h1>${fund.short}</h1><section class="panel"><p style="color:var(--muted)">Afkast vises efter 12 måneder.</p></section>${sriHtml}<p class="warn">${WARN_HIST}</p>`;
  } else {
  const years = calendarYearReturns(fund.data);
  const ytd = ytdReturn(fund.data);
@@ -56,7 +65,7 @@
  const firstNav = fund.data[0].d;
  const chips = [
  `<a class="tag" href="periode.html?fund=${fundId}&year=all">Siden første NAV: ${fmtPct(periodReturn(fund.data))}</a>`,
- `<a class="tag" href="periode.html?fund=${fundId}&year=YTD">YTD: ${fmtPct(ytd)}</a>`,
+ `<a class="tag" href="periode.html?fund=${fundId}&year=YTD">År til dato: ${fmtPct(ytd)}</a>`,
  ...years.map(c => `<a class="tag" href="periode.html?fund=${fundId}&year=${c.year}">${c.year}: ${fmtPct(c.ret)}</a>`)
  ].join(' ');
  document.title = `${label} · ${fund.short} · NDI`;
@@ -67,11 +76,13 @@
  <div class="kpi-grid">
  <div class="kpi"><span class="label">Afkast</span><strong class="${(pct||0)>=0?'pos':'neg'}">${fmtPct(pct)}</strong></div>
  <div class="kpi"><span class="label">Fra → til</span><strong style="font-size:16px">${fmtDate(from)} → ${fmtDate(to)}</strong></div>
- <div class="kpi"><span class="label">CAGR (hele serien)</span><strong>${fmtPct(cagr(fund.data))}</strong></div>
+ <div class="kpi"><span class="label">Gennemsnitligt årligt afkast</span><strong>${fmtPct(cagr(fund.data))}</strong></div>
  </div>
+ <p class="band">År til dato afventer Fundmarket-godkendelse. Tallet er ikke et helt års afkast.</p>
+ ${sriHtml}
  <section class="panel">
  <h2 style="font-size:16px;margin-bottom:8px">Kontekst</h2>
- <p style="color:var(--muted);line-height:1.6">Tal fra fondens totalafkast-serie, regnet fra første NAV ${fmtDate(firstNav)}. En juridisk stiftelsesdato kan ligge en anden dag og bruges ikke som anker for afkast. År til dato bruger sidste punkt i året før som udgangspunkt, samme metode som fondssiden. Et kalenderår, der endnu ikke er slut, bruger samme sidste punkt. Derfor er 2026 og år til dato ens i denne serie. Fonden har intet fast benchmark. Se <a href="drawdown.html?fund=${fundId}">drawdown</a> og dokumenterede udbytter i kontekstgrafen på fondssiden.</p>
+ <p style="color:var(--muted);line-height:1.6">Tal fra fondens totalafkast-serie, regnet fra første NAV ${fmtDate(firstNav)}. En juridisk stiftelsesdato kan ligge en anden dag og bruges ikke som anker for afkast. År til dato bruger sidste punkt i året før som udgangspunkt, samme metode som fondssiden. Et kalenderår, der endnu ikke er slut, bruger samme sidste punkt. Derfor er 2026 og år til dato ens i denne serie. Fonden har intet fast benchmark. Se <a href="drawdown.html?fund=${fundId}">fald fra top</a> og dokumenterede udbytter i kontekstgrafen på fondssiden. <a href="om-data.html#g-ytd">Ordliste: år til dato</a>.</p>
  </section>
  <section class="panel">
  <h2 style="font-size:16px;margin-bottom:10px">Alle perioder</h2>
