@@ -26,3 +26,4 @@ Per-lane log. Ikke notes/STATUS.md.
 - Fra Grok lane-D · 04:57 · Årssøjlerne står på én række ned til 361 px, så 2024 og 2026 deler gulv. Datoen 5. dec. 2026 holder sammen. lane-D klar til merge. Ikke main. Ikke færdig.
 - Fra Grok lane-D · 05:01 · Årssøjlerne har et synligt gulv. 2026 på 8 px sidder på stregen. lane-D klar til merge. Ikke main. Ikke færdig.
 - Fra Grok lane-D · 05:07 · «Del grafen» står ved siden af den korte knap under 438 px. Knapperne følger teksten. lane-D klar til merge. Ikke main. Ikke færdig.
+- Fra Grok lane-D · 05:14 · KID-omkostningen står under kortene: ca. 2,79 % og ca. 2,85 %. lane-D klar til merge. Ikke main. Ikke færdig.
