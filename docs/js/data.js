@@ -395,8 +395,10 @@ const WORD_FIX = {
   Sitime: 'SiTime', Formfactor: 'FormFactor', Blacksky: 'BlackSky', Abcellera: 'AbCellera', Maxlinear: 'MaxLinear',
   Quantumscape: 'QuantumScape', Solaredge: 'SolarEdge', Terawulf: 'TeraWulf', Whitefiber: 'WhiteFiber', Lifemd: 'LifeMD',
   Weride: 'WeRide', Nuscale: 'NuScale', Propetro: 'ProPetro', Fubotv: 'fuboTV', Niocorp: 'NioCorp', Sharonai: 'SharonAI',
-  Sharplink: 'SharpLink', Sailpoint: 'SailPoint', Defi: 'DeFi', Neovolta: 'NeoVolta', Coreweave: 'CoreWeave', Cleanspark: 'CleanSpark', 'Wix.Com': 'Wix.com',
+  Eqt: 'EQT', Poet: 'POET', Sharplink: 'SharpLink', Sailpoint: 'SailPoint', Defi: 'DeFi', Neovolta: 'NeoVolta', Coreweave: 'CoreWeave', Cleanspark: 'CleanSpark', 'Wix.Com': 'Wix.com',
 };
+// Efter reglerne: kendte navne, der stadig ser forkerte ud (Ghl = Grab Holdings, identificeret via ISIN KYG4124C1096).
+const FINAL_FIX = { Ghl: 'Grab Holdings', 'Raspberry PI': 'Raspberry Pi', 'Chemours Co': 'Chemours', DLocal: 'dLocal', 'Freeport McMoRan': 'Freeport-McMoRan', Nu: 'Nu Holdings' };
 export function displayName(p) {
   const raw = (p?.name || '').trim();
   if (NAME_FIX[raw]) return NAME_FIX[raw];
@@ -412,6 +414,7 @@ export function displayName(p) {
   // Selskabsform til sidst (Inc, Corp, Ltd, Plc, AG, SE, NV) - ikke "Co", der står i fx "Southern Co".
   if (!/\/The$/.test(raw)) n = n.replace(/\s*\b(Inc|Corp|Ltd|Plc|Ag|Se|Nv)\.?$/i, '').trim();
   n = n.replace(/[\w.]+/g, (w) => WORD_FIX[w] || w);
+  n = FINAL_FIX[n] || n;
   return adr ? `${n} (ADR)` : n;
 }
 // Warrants (tegningsretter) ligger som egne positioner med ~0 % vægt, men er ikke selvstændige selskaber.
