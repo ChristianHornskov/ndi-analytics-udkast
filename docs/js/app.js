@@ -292,12 +292,12 @@ function renderEntre(root) {
     <p class="doors-h"><span class="doors-step">Forstå linsen</span> Hvordan NDI ser tech</p>
     <nav class="doors-sub doors-sub-3" aria-label="Forstå linsen">
       <a href="temaer.html?fund=${state.fund}"><strong>Temaer${prop.moved ? ` <span class="badge badge-draft" title="Forslag, afventer gennemgang">${prop.moved} forslag</span>` : ''}</strong><span>Fra chips til software - hvad hvert tema dækker</span></a>
-      <a href="vaerdikaeder.html"><strong>Teknologiske værdikæder</strong><span>Flodsystem: AI, robotik, energi, rum, quantum</span></a>
+      <a href="vaerdikaeder.html"><strong>Teknologiske værdikæder</strong><span>Fra chip til energi og rum — hvor flaskehalsene sidder</span></a>
       <a href="laer/saadan-taenker-vi.html"><strong>Sådan tænker vi</strong><span>Møntspil, udviklingen frem for vinderen, bogen vs fonden</span></a>
       <a href="omkostninger.html"><strong>Omkostninger</strong><span>Hvad koster det at eje fonden? (ca. 2,8 % om året)</span></a>
       <a href="laer/index.html"><strong>Lær</strong><span>Livscyklus, P/E, variance drag og FAQ</span></a>
     </nav>
-    <a class="why-card" href="ideer.html"><strong>Hvorfor NDI Analytics?</strong><span>Idéerne bag udkastet: multi-tag, værdikæden og forsinket beholdning som et bevidst valg.</span><span class="go" aria-hidden="true">→</span></a>
+    <a class="why-card" href="ideer.html"><strong>Hvorfor NDI Analytics?</strong><span>Idéerne bag udkastet: flere temaer pr. selskab, værdikæden og forsinket beholdning som et bevidst valg.</span><span class="go" aria-hidden="true">→</span></a>
     <p class="more-links">Også i udkastet:
       <a href="drawdown.html?fund=${state.fund}">Største fald</a> ·
       <a href="sammenlign.html">PMINDI vs PMINDIAKK</a> ·

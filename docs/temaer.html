@@ -106,7 +106,7 @@
  const k = `${daTheme(p.theme)} → ${alt === 'andet' ? 'Andet' : doubtAltLabel(alt) || '?'}`;
  (doubtGroups[k] ||= []).push(p);
  }
- const doubtTxt = doubts.length ? `<p style="margin-top:8px"><span class="badge" style="background:transparent;border:1px dashed var(--yellow);color:var(--yellow)">usikkert</span> <strong>${doubts.length} af forslagene er udkastet selv i tvivl om</strong> - en kort beslutningsliste til NDI: ${Object.entries(doubtGroups).sort((a, b) => b[1].length - a[1].length).map(([k, ps]) => `<span title="${esc(ps.map((p) => p.name).join(', '))}">${esc(k)} (${ps.length})</span>`).join(' · ')}. <small>(foreslået tema → alternativ)</small></p>` : '';
+ const doubtTxt = doubts.length ? `<details style="margin-top:8px"><summary style="cursor:pointer;color:var(--muted);font-size:13px">${doubts.length} temaforslag er stadig usikre (til porteføljeholdet)</summary><p style="margin-top:6px;font-size:13px;color:var(--muted)">${Object.entries(doubtGroups).sort((a, b) => b[1].length - a[1].length).map(([k, ps]) => `<span title="${esc(ps.map((p) => p.name).join(', '))}">${esc(k)} (${ps.length})</span>`).join(' · ')}</p></details>` : '';
  const review = prop.total ? `<section class="review-banner" aria-labelledby="rv-h">
  <p class="rv-kicker"><span class="badge badge-draft">FORSLAG</span> Afventer gennemgang</p>
  <h2 id="rv-h">${prop.moved} ${prop.moved === 1 ? 'selskab har' : 'selskaber har'} fået et forslag til NDI-tema</h2>
