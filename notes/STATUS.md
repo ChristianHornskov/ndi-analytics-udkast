@@ -1779,3 +1779,15 @@ Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er
 - 57169d9 vaerdikaeder: Quanta skriver at West Fort McMurray omfatter over 310 miles ledning
 - a2d824f vaerdikaeder: Northern Dynasty skrev at indlæg om EPA-vetoet blev holdt 25. juni 2026
 - 133852c vaerdikaeder: Centrus skriver at berigning i Piketon begyndte i slutningen af 2023
+
+### Appended from lane-X merge 2026-10-16 03:05:06 CEST
+- 5476ea0 lane-X: date the other X hits and show the kroner as chips
+- ea3004d lane-X: put the other X hits beside the quote and lead costs with the gap
+- ba8a853 lane-X: poster the hit counts and mark SoftBank on the cover
+- d788212 lane-X: open X on the latest quote and show the kroner lines
+- b58126a lane-X: show the hit count on the door and 80 kr between the receipts
+- 2b638e3 lane-X: fit the full X quote on the first screen
+- 8190468 lane-X: put the X hit and the 80 kr gap on the first screen
+- c982662 lane-X: pull-quote the X hit and poster the 80 kr gap
+- 2baf5cb lane-X: show the X quote and the cost gap on the first screen
+- 591f500 lane-X: split direct X hits from the one cost gap
