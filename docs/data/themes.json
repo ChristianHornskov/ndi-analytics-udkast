@@ -12,8 +12,8 @@
         "Platforme"
       ],
       "themeKey": "platforms",
-      "count": 40,
-      "weightSum": 16.01,
+      "count": 45,
+      "weightSum": 17.16,
       "companies": [
         {
           "isin": "US81141R1005",
@@ -52,6 +52,12 @@
           "symbol": "COIN"
         },
         {
+          "isin": "US6837121036",
+          "name": "Opendoor Tech",
+          "weight": 0.64,
+          "symbol": "OPEN"
+        },
+        {
           "isin": "US12047B1052",
           "name": "Bumble Inc",
           "weight": 0.61,
@@ -74,6 +80,12 @@
           "name": "Circle Internet Group Inc",
           "weight": 0.59,
           "symbol": "CRCL"
+        },
+        {
+          "isin": "KYG4124C1096",
+          "name": "Ghl",
+          "weight": 0.51,
+          "symbol": "GRAB"
         },
         {
           "isin": "US3493811034",
@@ -254,6 +266,24 @@
           "name": "Farfetch Ltd",
           "weight": 0.0,
           "symbol": "FTCHQ"
+        },
+        {
+          "isin": "US6837121374",
+          "name": "Opendoor Tech Warrant Series A",
+          "weight": 0.0,
+          "symbol": "OPENL"
+        },
+        {
+          "isin": "US6837121291",
+          "name": "Opendoor Tech Warrant Series K",
+          "weight": 0.0,
+          "symbol": "OPENW"
+        },
+        {
+          "isin": "US6837121457",
+          "name": "Opendoor Tech Warrant Series Z",
+          "weight": 0.0,
+          "symbol": "OPENZ"
         }
       ]
     },
@@ -608,20 +638,14 @@
         "Platforme"
       ],
       "themeKey": "software",
-      "count": 50,
-      "weightSum": 12.14,
+      "count": 48,
+      "weightSum": 10.85,
       "companies": [
         {
           "isin": "IL0011301780",
           "name": "Wix.Com Ltd",
           "weight": 0.96,
           "symbol": "WIX"
-        },
-        {
-          "isin": "US17253J1060",
-          "name": "Cipher Mining Inc",
-          "weight": 0.78,
-          "symbol": "CIFR"
         },
         {
           "isin": "US69608A1088",
@@ -640,12 +664,6 @@
           "name": "AppLovin",
           "weight": 0.54,
           "symbol": "APP"
-        },
-        {
-          "isin": "KYG4124C1096",
-          "name": "Ghl",
-          "weight": 0.51,
-          "symbol": "GRAB"
         },
         {
           "isin": "US7710491033",
@@ -919,15 +937,9 @@
       "problem": "Selskaber der endnu ikke har fået et primært NDI-tema i udkastet. Eksponering, ikke anbefaling.",
       "chain": [],
       "themeKey": "andet",
-      "count": 35,
-      "weightSum": 6.91,
+      "count": 31,
+      "weightSum": 6.27,
       "companies": [
-        {
-          "isin": "US6837121036",
-          "name": "Opendoor Tech",
-          "weight": 0.64,
-          "symbol": "OPEN"
-        },
         {
           "isin": "US4330001060",
           "name": "Hims Hers Health Inc",
@@ -1109,24 +1121,6 @@
           "symbol": "ABCL"
         },
         {
-          "isin": "US6837121374",
-          "name": "Opendoor Tech Warrant Series A",
-          "weight": 0.0,
-          "symbol": "OPENL"
-        },
-        {
-          "isin": "US6837121291",
-          "name": "Opendoor Tech Warrant Series K",
-          "weight": 0.0,
-          "symbol": "OPENW"
-        },
-        {
-          "isin": "US6837121457",
-          "name": "Opendoor Tech Warrant Series Z",
-          "weight": 0.0,
-          "symbol": "OPENZ"
-        },
-        {
           "isin": "US83571B1008",
           "name": "Sony Financial Group ADR",
           "weight": 0.0,
@@ -1144,8 +1138,8 @@
         "Chips"
       ],
       "themeKey": "connect",
-      "count": 29,
-      "weightSum": 8.04,
+      "count": 28,
+      "weightSum": 7.8,
       "companies": [
         {
           "isin": "US55024U1097",
@@ -1212,12 +1206,6 @@
           "name": "AST SpaceMobile",
           "weight": 0.25,
           "symbol": "ASTS"
-        },
-        {
-          "isin": "US0126531013",
-          "name": "Albemarle",
-          "weight": 0.24,
-          "symbol": "ALB"
         },
         {
           "isin": "US1638511089",
@@ -1510,14 +1498,20 @@
         "Software"
       ],
       "themeKey": "compute",
-      "count": 18,
-      "weightSum": 6.05,
+      "count": 19,
+      "weightSum": 6.83,
       "companies": [
         {
           "isin": "FR0013227113",
           "name": "Soitec",
           "weight": 0.85,
           "symbol": "SOI.PA"
+        },
+        {
+          "isin": "US17253J1060",
+          "name": "Cipher Mining Inc",
+          "weight": 0.78,
+          "symbol": "CIFR"
         },
         {
           "isin": "US67066G1040",
@@ -1914,8 +1908,8 @@
         "Chips"
       ],
       "themeKey": "energy-resources",
-      "count": 29,
-      "weightSum": 6.24,
+      "count": 30,
+      "weightSum": 6.48,
       "companies": [
         {
           "isin": "US2057683029",
@@ -1970,6 +1964,12 @@
           "name": "Lightbridge Corp",
           "weight": 0.26,
           "symbol": "LTBR"
+        },
+        {
+          "isin": "US0126531013",
+          "name": "Albemarle",
+          "weight": 0.24,
+          "symbol": "ALB"
         },
         {
           "isin": "CA6544846091",

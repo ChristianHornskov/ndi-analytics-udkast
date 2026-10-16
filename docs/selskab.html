@@ -35,7 +35,7 @@
  <p><a href="om-data.html">Om data &amp; begreber</a> · <a href="laer/index.html">Lær</a></p>
  </footer>
  <script type="module">
- import { loadAll, fundById, fmtDate, daTheme, daMat, MATURITY_LABELS, WARN_HIST, loadFundMeta, loadProfiles, kidFooterHtml, tagsFor } from './js/data.js';
+ import { loadAll, fundById, fmtDate, daTheme, WARN_HIST, loadFundMeta, loadProfiles, kidFooterHtml, tagsFor, themeDoubt, doubtAltLabel, maturityView } from './js/data.js';
  import { loadXPosts, xSaysPanel } from './js/x-feed.js';
  const u = new URL(location.href);
  const isin = u.searchParams.get('isin');
@@ -99,11 +99,11 @@
  const sameTheme = fund.positions.filter((x) => x.theme === p.theme && x.isin !== p.isin).sort((a, b) => (b.weight || 0) - (a.weight || 0));
  const priip = meta?.funds?.[fundId]?.priip;
  const temaHref = `tema.html?slug=${encodeURIComponent(p.theme)}&fund=${fundId}`;
- // Modenhed kommer kun fra portfolio.json (manuel klassifikation). Linse-feltet "Livscyklus" overskrives herfra,
- // så siden aldrig siger to forskellige ting. Tom/ukendt = "Ikke klassificeret" - vi gætter ikke.
- const matSet = p.maturity in MATURITY_LABELS;
- const matValue = matSet ? daMat(p.maturity) : 'Ikke klassificeret';
- const matHint = matSet ? 'Manuel klassifikation i udkastet. Pædagogisk fase, ikke en rating.' : 'NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.';
+ // Modenhed kommer kun fra portfolio.json. Linse-feltet "Livscyklus" overskrives herfra, så siden aldrig siger
+ // to forskellige ting. maturityStatus=forslag = maskinelt forslag (afventer NDI); tom/ukendt = "Ikke klassificeret".
+ const mv = maturityView(p);
+ const matValue = mv.value;
+ const matHint = mv.hint;
  const lensMetrics = (uniquePack?.byIsin?.[p.isin]?.metrics || []).map((m) =>
  m.label === 'Livscyklus' ? { ...m, value: matValue, hint: matHint } : m);
  // Andre i samme led: udledt af linsens "Plads i værdikæden" (fx "AI-compute · led 4", "Energi led 4 + robotik led 3").
@@ -171,6 +171,7 @@
  ${p.themeStatus === 'forslag' ? `<p class="src"><span class="badge badge-draft">forslag</span> ${p.theme === 'andet'
  ? 'Selskabet har endnu intet primært NDI-tema (Andet / uklassificeret) og afventer NDI-gennemgang.'
  : `Primært tema ${esc(daTheme(p.theme))} er et forslag fra udkastet (før: ${esc(p.themeFrom && p.themeFrom !== 'andet' ? daTheme(p.themeFrom) : 'Andet')}) og afventer NDI-gennemgang.`} <a href="om-data.html#g-temaforslag">Sådan sættes temaerne →</a></p>` : ''}
+ ${themeDoubt(p) ? `<p class="src"><span class="badge" style="background:transparent;border:1px dashed var(--yellow);color:var(--yellow)">usikkert</span> Udkastet er selv i tvivl om forslaget: ${esc(themeDoubt(p).why)}${themeDoubt(p).alt ? ` Alternativ: ${esc(doubtAltLabel(themeDoubt(p).alt))}.` : ''} <a href="index.html?view=udforsk${fundId !== 'pmindi' ? `&fund=${fundId}` : ''}&status=forslag&tvivl=1">Alle usikre forslag →</a></p>` : ''}
  <p class="band">Segmenter viser eksponering, ikke en anbefaling. Kursafkast, P/S og P/E pr. aktie vises ikke i udkastet (tallene er under verifikation).</p>
  <div class="metrics" style="margin-top:14px">
  <div class="metric"><div class="label">Vægt i ${esc(fund.short)}</div><strong>${w(p.weight)} %</strong><small>Beholdning pr. ${posAsOf} (forsinket)</small></div>

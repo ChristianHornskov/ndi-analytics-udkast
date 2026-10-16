@@ -187,6 +187,25 @@ export function fmtDate(iso) {
 export function daTheme(t) { return THEME_LABELS[t] || t; }
 export function daMat(m) { return MATURITY_LABELS[m] || m; }
 
+// Livscyklus i almindeligt dansk (samme ord som ideer.html/laer). Kun etiketter - ingen tal.
+export const MATURITY_PLAIN = {
+  prerevenue: 'Før omsætning',
+  preprofit: 'Før overskud',
+  highgrowth: 'Høj vækst',
+  garp: 'Vækst med overskud',
+  value: 'Moden',
+};
+export function daMatPlain(m) { return MATURITY_PLAIN[m] || daMat(m); }
+
+// Modenhed for ét selskab, ærligt mærket: maskinelt forslag (maturityStatus=forslag) eller manuel klassifikation.
+export function maturityView(p) {
+  if (!(p?.maturity in MATURITY_LABELS)) return { set: false, forslag: false, value: 'Ikke klassificeret', hint: 'NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.' };
+  const forslag = p.maturityStatus === 'forslag';
+  return forslag
+    ? { set: true, forslag, value: `${daMatPlain(p.maturity)} (forslag)`, hint: 'Maskinelt forslag ud fra offentlig branche og tema. Afventer NDI-gennemgang. Pædagogisk fase, ikke en rating.' }
+    : { set: true, forslag, value: daMatPlain(p.maturity), hint: 'Manuel klassifikation i udkastet. Pædagogisk fase, ikke en rating.' };
+}
+
 
 /** Tags der ikke må vises offentligt før compliance-review (UX §0.2). */
 export const BANNED_PUBLIC_TAGS = new Set([
@@ -302,6 +321,38 @@ export function themeProposals(fund) {
   }).sort((a, b) => b.n - a.n);
   return { total: props.length, moved, open: props.length - moved, byTheme, fromAndet, retagged };
 }
+
+// Temaforslag som skift "fra → til" (themeFrom → theme; uden themeFrom = fra Andet). Bruges til
+// gennemgangs-filteret skift=<fra>~<til> i screener og A-Z. "andet~andet" = forslag uden tema endnu.
+// Kun tema-felter - ingen tal pr. aktie.
+export function themeShift(p) {
+  if (p?.themeStatus !== 'forslag') return null;
+  const from = p.themeFrom || 'andet';
+  return { from, to: p.theme, key: `${from}~${p.theme}` };
+}
+export function themeShifts(positions) {
+  const m = new Map();
+  for (const p of positions || []) {
+    const s = themeShift(p);
+    if (!s) continue;
+    if (!m.has(s.key)) m.set(s.key, { ...s, n: 0 });
+    m.get(s.key).n++;
+  }
+  // Flyttede først (flest øverst), "stadig Andet" sidst
+  return [...m.values()].sort((a, b) => ((a.to === 'andet') - (b.to === 'andet')) || b.n - a.n
+    || daTheme(a.to).localeCompare(daTheme(b.to), 'da'));
+}
+// Usikre temaforslag (portfolio.json themeDoubt/themeAlt): udkastets egen tvivl om et forslag, så NDI
+// har en kort beslutningsliste. why = begrundelse (tekst), alt = alternativt tema-nøgle ('andet' = bliv i Andet).
+export function themeDoubt(p) {
+  if (p?.themeStatus !== 'forslag' || !p.themeDoubt) return null;
+  return { why: p.themeDoubt, alt: p.themeAlt || '' };
+}
+export const doubtAltLabel = (alt) => (!alt ? '' : alt === 'andet' ? 'bliv i Andet' : daTheme(alt));
+
+// "Andet / uklassificeret" forkortes til "Andet" i skift-etiketter og før-linjer
+export const shiftFromLabel = (from) => (from === 'andet' ? 'Andet' : daTheme(from));
+export const shiftLabel = (s) => (s.to === 'andet' ? 'Stadig Andet (intet tema passede)' : `${shiftFromLabel(s.from)} → ${daTheme(s.to)}`);
 
 // Værdikæde for et tema (value-chains.json). Et tema kan optræde i flere kæder; hjem-kæden er den,
 // hvor temaet er et bærende led. AI-stakkens temaer hører hjemme i AI-compute, Energiressourcer i Energi.

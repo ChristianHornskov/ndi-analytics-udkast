@@ -313,7 +313,7 @@
         {
           "label": "NDI-tag",
           "value": "Quantum (forslag)",
-          "hint": "Tema er foreslået ud fra kerneprodukt. Afventer porteføljeholdets gennemgang."
+          "hint": "Temaforslag: Quantum (før: Compute). Afventer NDI-gennemgang. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -347,7 +347,7 @@
         {
           "label": "NDI-tag",
           "value": "Quantum (forslag)",
-          "hint": "Forslag. Afventer gennemgang."
+          "hint": "Temaforslag: Quantum (før: Compute). Afventer NDI-gennemgang. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -381,7 +381,7 @@
         {
           "label": "NDI-tag",
           "value": "Quantum (forslag)",
-          "hint": "Forslag. Afventer gennemgang."
+          "hint": "Temaforslag: Quantum (før: Compute). Afventer NDI-gennemgang. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -415,7 +415,7 @@
         {
           "label": "NDI-tag",
           "value": "Quantum (forslag)",
-          "hint": "Forslag. Afventer gennemgang."
+          "hint": "Temaforslag: Quantum (før: Compute). Afventer NDI-gennemgang. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -448,8 +448,8 @@
       "metrics": [
         {
           "label": "NDI-tag",
-          "value": "Chips",
-          "hint": "Primært tema: Chips. Eksponering, ikke rating."
+          "value": "Chips (forslag)",
+          "hint": "Temaforslag: Chips (før: Andet / uklassificeret). Afventer NDI-gennemgang. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -822,8 +822,8 @@
       "metrics": [
         {
           "label": "NDI-tag",
-          "value": "Software",
-          "hint": "Primært tema: Software. Eksponering, ikke rating."
+          "value": "Compute (forslag)",
+          "hint": "Temaforslag: Compute (før: Software). Afventer NDI-gennemgang. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -834,7 +834,7 @@
         {
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 2: datacentre",
-          "hint": "Strøm og bygninger, der kan blive til compute. Temaet er Software, men rollen er fysisk infrastruktur. Placeringen er pædagogisk.",
+          "hint": "Strøm og bygninger, der kan blive til compute. Temaforslaget Compute passer til rollen som fysisk infrastruktur. Placeringen er pædagogisk.",
           "href": "vaerdikaede.html?isin=US17253J1060"
         },
         {
@@ -1196,8 +1196,8 @@
       "metrics": [
         {
           "label": "NDI-tag",
-          "value": "Platforme",
-          "hint": "Primært tema: Platforme. Eksponering, ikke rating."
+          "value": "Platforme (forslag)",
+          "hint": "Temaforslag: Platforme (før: Andet / uklassificeret). Afventer NDI-gennemgang. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -1264,8 +1264,8 @@
       "metrics": [
         {
           "label": "NDI-tag",
-          "value": "Platforme",
-          "hint": "Primært tema: Platforme. Eksponering, ikke rating."
+          "value": "Platforme (forslag)",
+          "hint": "Temaforslag: Platforme (før: Andet / uklassificeret). Afventer NDI-gennemgang. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -1502,8 +1502,8 @@
       "metrics": [
         {
           "label": "NDI-tag",
-          "value": "Software",
-          "hint": "Primært tema: Software. Eksponering, ikke rating."
+          "value": "Software (forslag)",
+          "hint": "Temaforslag: Software (før: Andet / uklassificeret). Afventer NDI-gennemgang. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -1672,8 +1672,8 @@
       "metrics": [
         {
           "label": "NDI-tag",
-          "value": "Energiressourcer",
-          "hint": "Primært tema: Energiressourcer. Eksponering, ikke rating."
+          "value": "Energiressourcer (forslag)",
+          "hint": "Temaforslag: Energiressourcer (før: Andet / uklassificeret). Afventer NDI-gennemgang. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -1808,8 +1808,8 @@
       "metrics": [
         {
           "label": "NDI-tag",
-          "value": "Energi",
-          "hint": "Primært tema: Energi. Eksponering, ikke rating."
+          "value": "Energi (forslag)",
+          "hint": "Temaforslag: Energi (før: Andet / uklassificeret). Afventer NDI-gennemgang. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -1944,8 +1944,8 @@
       "metrics": [
         {
           "label": "NDI-tag",
-          "value": "Optik & netværk",
-          "hint": "Primært tema: Optik & netværk. Eksponering, ikke rating."
+          "value": "Optik & netværk (forslag)",
+          "hint": "Temaforslag: Optik & netværk (før: Andet / uklassificeret). Afventer NDI-gennemgang. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -1978,8 +1978,8 @@
       "metrics": [
         {
           "label": "NDI-tag",
-          "value": "Energiressourcer",
-          "hint": "Primært tema: Energiressourcer. Eksponering, ikke rating."
+          "value": "Energiressourcer (forslag)",
+          "hint": "Temaforslag: Energiressourcer (før: Andet / uklassificeret). Afventer NDI-gennemgang. Usikkert forslag: Naturgasproducent: brændsel til elproduktion (Energi-kæden led 1) snarere end et kritisk råstof. Alternativ: Energi. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -2012,8 +2012,8 @@
       "metrics": [
         {
           "label": "NDI-tag",
-          "value": "Energiressourcer",
-          "hint": "Primært tema: Energiressourcer. Eksponering, ikke rating."
+          "value": "Energiressourcer (forslag)",
+          "hint": "Temaforslag: Energiressourcer (før: Andet / uklassificeret). Afventer NDI-gennemgang. Usikkert forslag: Naturgasproducent: brændsel til elproduktion (Energi-kæden led 1) snarere end et kritisk råstof. Alternativ: Energi. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -2046,8 +2046,8 @@
       "metrics": [
         {
           "label": "NDI-tag",
-          "value": "Energiressourcer",
-          "hint": "Primært tema: Energiressourcer. Eksponering, ikke rating."
+          "value": "Energiressourcer (forslag)",
+          "hint": "Temaforslag: Energiressourcer (før: Andet / uklassificeret). Afventer NDI-gennemgang. Usikkert forslag: Naturgasproducent: brændsel til elproduktion (Energi-kæden led 1) snarere end et kritisk råstof. Alternativ: Energi. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -2080,8 +2080,8 @@
       "metrics": [
         {
           "label": "NDI-tag",
-          "value": "Fysisk tech",
-          "hint": "Primært tema: Fysisk tech. Eksponering, ikke rating."
+          "value": "Fysisk tech (forslag)",
+          "hint": "Temaforslag: Fysisk tech (før: Andet / uklassificeret). Afventer NDI-gennemgang. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -2114,8 +2114,8 @@
       "metrics": [
         {
           "label": "NDI-tag",
-          "value": "Software",
-          "hint": "Primært tema: Software. Eksponering, ikke rating."
+          "value": "Software (forslag)",
+          "hint": "Temaforslag: Software (før: Andet / uklassificeret). Afventer NDI-gennemgang. Usikkert forslag: Forsikringsselskab bygget på data og software; Software-temaet dækker ellers leverandører af software. Alternativ: bliv i Andet. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -2148,8 +2148,8 @@
       "metrics": [
         {
           "label": "NDI-tag",
-          "value": "Software",
-          "hint": "Primært tema: Software. Eksponering, ikke rating."
+          "value": "Software (forslag)",
+          "hint": "Temaforslag: Software (før: Andet / uklassificeret). Afventer NDI-gennemgang. Usikkert forslag: Forsikringsselskab bygget på data og software; Software-temaet dækker ellers leverandører af software. Alternativ: bliv i Andet. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -2284,8 +2284,8 @@
       "metrics": [
         {
           "label": "NDI-tag",
-          "value": "Andet / uklassificeret",
-          "hint": "Primært tema: Andet / uklassificeret. Eksponering, ikke rating."
+          "value": "Platforme (forslag)",
+          "hint": "Usikkert forslag: Platforme (før: Andet / uklassificeret). Alternativ: bliv i Andet. Afventer NDI-gennemgang. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -2296,8 +2296,8 @@
         {
           "label": "Plads i værdikæden",
           "value": "Uden for AI-kæden",
-          "hint": "En digital boligplatform. Ligger ikke i et værdikæde-led. Placeringen er pædagogisk.",
-          "href": "tema.html?slug=andet"
+          "hint": "En digital boligplatform, der selv ejer boligerne på lager. Ligger ikke i et værdikæde-led. Placeringen er pædagogisk.",
+          "href": "tema.html?slug=platforms"
         },
         {
           "label": "Hold øje med",
@@ -2556,8 +2556,8 @@
       "metrics": [
         {
           "label": "NDI-tag",
-          "value": "Fysisk tech",
-          "hint": "Primært tema: Fysisk tech. Eksponering, ikke rating."
+          "value": "Fysisk tech (forslag)",
+          "hint": "Temaforslag: Fysisk tech (før: Andet / uklassificeret). Afventer NDI-gennemgang. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -2624,8 +2624,8 @@
       "metrics": [
         {
           "label": "NDI-tag",
-          "value": "Fysisk tech",
-          "hint": "Primært tema: Fysisk tech. Eksponering, ikke rating."
+          "value": "Fysisk tech (forslag)",
+          "hint": "Temaforslag: Fysisk tech (før: Andet / uklassificeret). Afventer NDI-gennemgang. Usikkert forslag: Projekterer og bygger energianlæg og fabrikker; Energi-kæden kan passe bedre end Fysisk tech. Alternativ: Energi. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -2658,8 +2658,8 @@
       "metrics": [
         {
           "label": "NDI-tag",
-          "value": "Fysisk tech",
-          "hint": "Primært tema: Fysisk tech. Eksponering, ikke rating."
+          "value": "Fysisk tech (forslag)",
+          "hint": "Temaforslag: Fysisk tech (før: Andet / uklassificeret). Afventer NDI-gennemgang. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -3168,8 +3168,8 @@
       "metrics": [
         {
           "label": "NDI-tag",
-          "value": "Optik & netværk",
-          "hint": "Tagget Optik & netværk i data, men kernen er lithium (passer bedre til Energiressourcer). Eksponering, ikke rating. NDI bør se på temaet."
+          "value": "Energiressourcer (forslag)",
+          "hint": "Temaforslag: Energiressourcer (før: Andet / uklassificeret). Afventer NDI-gennemgang. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -3202,8 +3202,8 @@
       "metrics": [
         {
           "label": "NDI-tag",
-          "value": "Energiressourcer",
-          "hint": "Primært tema: Energiressourcer. Eksponering, ikke rating."
+          "value": "Energiressourcer (forslag)",
+          "hint": "Temaforslag: Energiressourcer (før: Andet / uklassificeret). Afventer NDI-gennemgang. Usikkert forslag: Naturgasproducent: brændsel til elproduktion (Energi-kæden led 1) snarere end et kritisk råstof. Alternativ: Energi. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -4290,8 +4290,8 @@
       "metrics": [
         {
           "label": "NDI-tag",
-          "value": "Energi",
-          "hint": "Primært tema: Energi. Eksponering, ikke rating."
+          "value": "Energi (forslag)",
+          "hint": "Temaforslag: Energi (før: Andet / uklassificeret). Afventer NDI-gennemgang. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -4358,8 +4358,8 @@
       "metrics": [
         {
           "label": "NDI-tag",
-          "value": "Fysisk tech",
-          "hint": "Primært tema: Fysisk tech. Eksponering, ikke rating."
+          "value": "Fysisk tech (forslag)",
+          "hint": "Temaforslag: Fysisk tech (før: Andet / uklassificeret). Afventer NDI-gennemgang. Usikkert forslag: Bygger elnet (Energi-kæden led 3); Fysisk tech dækker ellers robotik, elbiler og produktion. Alternativ: Energi. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -4426,7 +4426,7 @@
       "metrics": [
         {
           "label": "NDI-tags",
-          "value": "Energi + fysisk tech",
+          "value": "Energi (forslag)",
           "hint": "Multi-tag: energi og fysisk tech. Primært tema er forslag: Energi (før: Andet / uklassificeret). Afventer NDI-gennemgang. Eksponering, ikke rating."
         },
         {
@@ -4528,8 +4528,8 @@
       "metrics": [
         {
           "label": "NDI-tag",
-          "value": "Energiressourcer",
-          "hint": "Primært tema: Energiressourcer. Eksponering, ikke rating."
+          "value": "Energiressourcer (forslag)",
+          "hint": "Temaforslag: Energiressourcer (før: Andet / uklassificeret). Afventer NDI-gennemgang. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -4607,8 +4607,8 @@
         },
         {
           "label": "Plads i værdikæden",
-          "value": "Rum-kæden · led 2: tjenester fra rummet",
-          "hint": "Observation som løbende tjeneste fra kredsløb. Placeringen er pædagogisk.",
+          "value": "Rum-kæden · led 2: satellitkommunikation",
+          "hint": "Jordobservation: data fra egne satellitter sendt ned og solgt som løbende tjeneste. Kæden har ikke et eget observations-led, så den står ved satellitterne. Placeringen er pædagogisk.",
           "href": "vaerdikaeder.html?isin=US72703X1063#kap-rum"
         },
         {
@@ -4641,8 +4641,8 @@
         },
         {
           "label": "Plads i værdikæden",
-          "value": "Rum-kæden · led 1: transport",
-          "hint": "Transport til og landing på Månen; bygger ikke selv raketter. Placeringen er pædagogisk.",
+          "value": "Rum-kæden · led 1: opsendelse (månelandere)",
+          "hint": "Transport til og landing på Månen; bygger ikke selv raketter, men hører til i kædens første led om at komme ud i rummet. Placeringen er pædagogisk.",
           "href": "vaerdikaeder.html?isin=US46125A1007#kap-rum"
         },
         {
@@ -4698,8 +4698,8 @@
       "metrics": [
         {
           "label": "NDI-tag",
-          "value": "Platforme",
-          "hint": "Primært tema: Platforme. Eksponering, ikke rating."
+          "value": "Platforme (forslag)",
+          "hint": "Temaforslag: Platforme (før: Andet / uklassificeret). Afventer NDI-gennemgang. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -4766,8 +4766,8 @@
       "metrics": [
         {
           "label": "NDI-tag",
-          "value": "Platforme",
-          "hint": "Primært tema: Platforme. Eksponering, ikke rating."
+          "value": "Platforme (forslag)",
+          "hint": "Temaforslag: Platforme (før: Andet / uklassificeret). Afventer NDI-gennemgang. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -6058,8 +6058,8 @@
       "metrics": [
         {
           "label": "NDI-tag",
-          "value": "Software",
-          "hint": "Primært tema: Software. Eksponering, ikke rating."
+          "value": "Software (forslag)",
+          "hint": "Temaforslag: Software (før: Andet / uklassificeret). Afventer NDI-gennemgang. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -6840,8 +6840,8 @@
       "metrics": [
         {
           "label": "NDI-tag",
-          "value": "Fysisk tech",
-          "hint": "Primært tema: Fysisk tech. Eksponering, ikke rating."
+          "value": "Fysisk tech (forslag)",
+          "hint": "Temaforslag: Fysisk tech (før: Andet / uklassificeret). Afventer NDI-gennemgang. Usikkert forslag: Bygger elnet (Energi-kæden led 3); Fysisk tech dækker ellers robotik, elbiler og produktion. Alternativ: Energi. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -6874,8 +6874,8 @@
       "metrics": [
         {
           "label": "NDI-tag",
-          "value": "Fysisk tech",
-          "hint": "Primært tema: Fysisk tech. Eksponering, ikke rating."
+          "value": "Fysisk tech (forslag)",
+          "hint": "Temaforslag: Fysisk tech (før: Andet / uklassificeret). Afventer NDI-gennemgang. Usikkert forslag: Bygger elnet (Energi-kæden led 3); Fysisk tech dækker ellers robotik, elbiler og produktion. Alternativ: Energi. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -6908,8 +6908,8 @@
       "metrics": [
         {
           "label": "NDI-tag",
-          "value": "Fysisk tech",
-          "hint": "Primært tema: Fysisk tech. Eksponering, ikke rating."
+          "value": "Fysisk tech (forslag)",
+          "hint": "Temaforslag: Fysisk tech (før: Andet / uklassificeret). Afventer NDI-gennemgang. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -7180,8 +7180,8 @@
       "metrics": [
         {
           "label": "NDI-tag",
-          "value": "Platforme",
-          "hint": "Primært tema: Platforme. Eksponering, ikke rating."
+          "value": "Platforme (forslag)",
+          "hint": "Temaforslag: Platforme (før: Andet / uklassificeret). Afventer NDI-gennemgang. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -7419,7 +7419,7 @@
         {
           "label": "NDI-tag",
           "value": "Energi (forslag)",
-          "hint": "Temaforslag: Energi (før: Andet / uklassificeret), ud fra pladsen i værdikæden. Afventer NDI-gennemgang. Kernen er olieservice. Eksponering, ikke rating."
+          "hint": "Temaforslag: Energi (før: Andet / uklassificeret), ud fra pladsen i værdikæden. Afventer NDI-gennemgang. Usikkert forslag: Kernen er frakturering til olie- og gasbrønde; kun den nye strømforretning sidder i Energi-kæden led 1. Alternativ: bliv i Andet. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -9765,7 +9765,7 @@
         {
           "label": "NDI-tag",
           "value": "Software (forslag)",
-          "hint": "Temaforslag: Software (før: Andet / uklassificeret). Afventer NDI-gennemgang. Forretningen er et forsikringsselskab; temaforslaget Software er tvivlsomt. Eksponering, ikke rating."
+          "hint": "Temaforslag: Software (før: Andet / uklassificeret). Afventer NDI-gennemgang. Usikkert forslag: Forsikringsselskab bygget på data og software; Software-temaet dækker ellers leverandører af software. Alternativ: bliv i Andet. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -9901,7 +9901,7 @@
         {
           "label": "NDI-tag",
           "value": "Platforme (forslag)",
-          "hint": "Temaforslag: Platforme (før: Andet / uklassificeret). Afventer NDI-gennemgang. Kernen er en solana-beholdning. Eksponering, ikke rating."
+          "hint": "Temaforslag: Platforme (før: Andet / uklassificeret). Afventer NDI-gennemgang. Usikkert forslag: Kernen er en beholdning af kryptovalutaen solana - ikke en digital platform. Alternativ: bliv i Andet. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -9935,7 +9935,7 @@
         {
           "label": "NDI-tag",
           "value": "Platforme (forslag)",
-          "hint": "Temaforslag: Platforme (før: Andet / uklassificeret). Afventer NDI-gennemgang. Kernen er en solana-beholdning ved siden af forbrugsvarer. Eksponering, ikke rating."
+          "hint": "Temaforslag: Platforme (før: Andet / uklassificeret). Afventer NDI-gennemgang. Usikkert forslag: Kernen er en beholdning af kryptovalutaen solana - ikke en digital platform. Alternativ: bliv i Andet. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -10240,8 +10240,8 @@
       "metrics": [
         {
           "label": "NDI-tag",
-          "value": "Connect (forslag)",
-          "hint": "Temaforslag: Optiske connects (før: Andet / uklassificeret). Afventer NDI-gennemgang. Forretningen er kemi; Optik-forslaget er usikkert. Eksponering, ikke rating."
+          "value": "Optik & netværk (forslag)",
+          "hint": "Temaforslag: Optik & netværk (før: Andet / uklassificeret). Afventer NDI-gennemgang. Usikkert forslag: Forretningen er kemi (pigment, kølemidler, fluorpolymerer); kun en lille del rører elektronik og køling. Alternativ: bliv i Andet. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -10274,8 +10274,8 @@
       "metrics": [
         {
           "label": "NDI-tag",
-          "value": "Connect (forslag)",
-          "hint": "Temaforslag: Optiske connects (før: Andet / uklassificeret). Afventer NDI-gennemgang. Forretningen er specialmaterialer; Optik-forslaget er usikkert. Eksponering, ikke rating."
+          "value": "Optik & netværk (forslag)",
+          "hint": "Temaforslag: Optik & netværk (før: Andet / uklassificeret). Afventer NDI-gennemgang. Usikkert forslag: Kølemidler og specialmaterialer; materialer til chipfremstilling (AI-compute led 4) er en mindre del. Alternativ: Chips. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -10308,8 +10308,8 @@
       "metrics": [
         {
           "label": "NDI-tag",
-          "value": "Connect (forslag)",
-          "hint": "Temaforslag: Optiske connects (før: Andet / uklassificeret). Afventer NDI-gennemgang. Forretningen er specialkemi; Optik-forslaget er usikkert. Eksponering, ikke rating."
+          "value": "Optik & netværk (forslag)",
+          "hint": "Temaforslag: Optik & netværk (før: Andet / uklassificeret). Afventer NDI-gennemgang. Usikkert forslag: Specialkemi til mange industrier; Optik-forslaget bygger ikke på en klar plads i værdikæderne. Alternativ: bliv i Andet. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -10444,8 +10444,8 @@
       "metrics": [
         {
           "label": "NDI-tag",
-          "value": "Connect (forslag)",
-          "hint": "Temaforslag: Optiske connects (før: Andet / uklassificeret). Afventer NDI-gennemgang. Eksponering, ikke rating."
+          "value": "Optik & netværk (forslag)",
+          "hint": "Temaforslag: Optik & netværk (før: Andet / uklassificeret). Afventer NDI-gennemgang. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -11279,6 +11279,40 @@
           "label": "Hold øje med",
           "value": "Belægning og lejekontrakter",
           "hint": "Efterspørgsel efter fleksible kontorer og forholdet til ejerne af bygningerne. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
+    },
+    "KYG4124C1096": {
+      "name": "Grab Holdings",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Platforme (forslag)",
+          "hint": "Temaforslag: Platforme (før: Software). Står som \"Ghl\" i beholdningslisten - ISIN KYG4124C1096 og ticker GRAB er Grab Holdings. Afventer NDI-gennemgang. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Superapp i Sydøstasien",
+          "hint": "Kørsel (ride-hailing), levering af mad og dagligvarer samt betalinger, udlån og digitale banker i én app på tværs af flere lande i Sydøstasien.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "AI-compute · led 12: forbrugerapps",
+          "hint": "Der hvor digitale tjenester møder forbrugeren, ligesom Sea. Grab bygger ikke selv compute-infrastruktur. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=KYG4124C1096#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Konkurrence og kredit",
+          "hint": "Konkurrencen i kørsel og levering, regulering af chauffører og kreditrisikoen i finansdelen. Forhold, ikke en prognose.",
           "ai": true
         },
         {

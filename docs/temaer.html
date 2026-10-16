@@ -28,7 +28,7 @@
  </header>
  <main id="main"><p style="color:var(--muted)">Henter temaer…</p></main>
  <script type="module">
- import { fmtDate, loadAll, fundById, themeProposals, daTheme, WARN_HIST, chainForTheme, chainHref, tagsFor } from './js/data.js';
+ import { fmtDate, loadAll, fundById, themeProposals, daTheme, WARN_HIST, chainForTheme, chainHref, tagsFor, themeDoubt, doubtAltLabel } from './js/data.js';
  const u = new URL(location.href);
  const [data, all, vc, um] = await Promise.all([
  fetch('data/themes.json').then((r) => r.json()),
@@ -98,13 +98,23 @@
  prop.fromAndet ? `${prop.fromAndet} lå før i <em>Andet</em>.` : '',
  retagTxt.length ? `${prop.fromAndet ? 'Desuden: ' : ''}${andList(retagTxt)}.` : '',
  ].filter(Boolean).join(' ');
+ // NDI-beslutningsliste: forslag, udkastet selv er i tvivl om, grupperet pr. foreslået tema → alternativ
+ const doubts = (fund.positions || []).filter((p) => themeDoubt(p));
+ const doubtGroups = {};
+ for (const p of doubts) {
+ const alt = themeDoubt(p).alt;
+ const k = `${daTheme(p.theme)} → ${alt === 'andet' ? 'Andet' : doubtAltLabel(alt) || '?'}`;
+ (doubtGroups[k] ||= []).push(p);
+ }
+ const doubtTxt = doubts.length ? `<p style="margin-top:8px"><span class="badge" style="background:transparent;border:1px dashed var(--yellow);color:var(--yellow)">usikkert</span> <strong>${doubts.length} af forslagene er udkastet selv i tvivl om</strong> - en kort beslutningsliste til NDI: ${Object.entries(doubtGroups).sort((a, b) => b[1].length - a[1].length).map(([k, ps]) => `<span title="${esc(ps.map((p) => p.name).join(', '))}">${esc(k)} (${ps.length})</span>`).join(' · ')}. <small>(foreslået tema → alternativ)</small></p>` : '';
  const review = prop.total ? `<section class="review-banner" aria-labelledby="rv-h">
  <p class="rv-kicker"><span class="badge badge-draft">FORSLAG</span> Afventer gennemgang</p>
  <h2 id="rv-h">${prop.moved} ${prop.moved === 1 ? 'selskab har' : 'selskaber har'} fået et forslag til NDI-tema</h2>
  <p>${movedTxt}
  Forslagene bygger på offentlige ISIN-opslag, selskabets branche og dets plads i værdikæderne.${prop.open ? ` ${prop.open} ${prop.open === 1 ? 'selskab står' : 'selskaber står'} stadig i Andet, fordi intet NDI-tema passede godt nok (fx guld/sølv, sundhed, forbrug).` : ''} Porteføljeholdet gennemgår alle temaer, også de ældre, før noget bliver endeligt.</p>
+ ${doubtTxt}
  <p class="src" style="margin-top:6px">Tal for ${esc(fund.short)} · beholdning pr. ${posAsOf} (forsinket).</p>
- <p class="link-row"><a href="om-data.html#g-temaforslag">Sådan sættes temaerne →</a> <a href="index.html?view=udforsk&fund=${fund.id}&status=forslag">Se alle forslag i screeneren →</a>${prop.open ? ` <a href="tema.html?slug=andet&fund=${fund.id}">Se hvad der er tilbage i Andet →</a>` : ''}</p>
+ <p class="link-row"><a href="om-data.html#g-temaforslag">Sådan sættes temaerne →</a> <a href="index.html?view=udforsk&fund=${fund.id}&status=forslag">Se alle forslag i screeneren →</a>${doubts.length ? ` <a href="index.html?view=udforsk&fund=${fund.id}&status=forslag&tvivl=1">Se de ${doubts.length} usikre →</a>` : ''}${prop.open ? ` <a href="tema.html?slug=andet&fund=${fund.id}">Se hvad der er tilbage i Andet →</a>` : ''}</p>
  </section>` : '';
 
  // Små temaer (fx Quantum, SpaceTech) forsvinder let i søjlerne: fremhæv dem med egen kæde

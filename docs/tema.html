@@ -33,7 +33,7 @@
  <p data-kid-footer></p>
  </footer>
  <script type="module">
- import { loadAll, fundById, fmtDate, daTheme, WARN_HIST, findTheme, tagsFor, fillKidFooter, chainForTheme, chainHref, searchPosition } from './js/data.js';
+ import { loadAll, fundById, fmtDate, daTheme, WARN_HIST, findTheme, tagsFor, fillKidFooter, chainForTheme, chainHref, searchPosition, themeDoubt, doubtAltLabel } from './js/data.js';
  import { loadXPosts, xSaysPanel } from './js/x-feed.js';
  const u = new URL(location.href);
  const key = u.searchParams.get('slug') || 'chips';
@@ -105,14 +105,17 @@
  })();
  const hitNote = (p) => {
  const h = hits.get(p.isin);
- if (h?.via === 'linse') return `<br><small style="color:var(--muted)">Match i NDI-linsen · ${esc(h.label)}: ${esc(h.value)}</small>`;
- if (h?.via === 'tema' && p.theme !== tk && h.value !== theme.title) return `<br><small style="color:var(--muted)">Match på tema-tag: ${esc(h.value)}</small>`;
+ if (h?.via === 'linse') return `<br><small style="color:var(--muted);display:inline-block;white-space:normal;max-width:36ch;line-height:1.35;text-align:left">Match i NDI-linsen · ${esc(h.label)}: ${esc(h.value)}</small>`;
+ if (h?.via === 'tema' && p.theme !== tk && h.value !== theme.title) return `<br><small style="color:var(--muted);display:inline-block;white-space:normal;max-width:36ch;line-height:1.35;text-align:left">Match på tema-tag: ${esc(h.value)}</small>`;
  return '';
  };
  const nProp = tk === 'andet' ? 0 : list.filter((p) => p.theme === tk && p.themeStatus === 'forslag').length;
  // Hvor kom forslagene fra? (themeFrom i portfolio.json; mangler = Andet)
  const fromCounts = {};
  for (const p of list) if (p.theme === tk && p.themeStatus === 'forslag') { const f0 = p.themeFrom || 'andet'; fromCounts[f0] = (fromCounts[f0] || 0) + 1; }
+ // Usikre forslag (themeDoubt) i temaet → NDI-beslutningslisten i screeneren
+ const nDoubt = tk === 'andet' ? 0 : list.filter((p) => p.theme === tk && themeDoubt(p)).length;
+ const doubtTxt = nDoubt ? ` <a href="index.html?view=udforsk${fund.id !== 'pmindi' ? `&fund=${fund.id}` : ''}&tags=${encodeURIComponent(tk)}&status=forslag&tvivl=1" title="Forslag, udkastet selv er i tvivl om - med begrundelse og alternativ">${nDoubt} ${nDoubt === 1 ? 'forslag er markeret usikkert' : 'forslag er markeret usikre'}</a>.` : '';
  const fromTxt = Object.keys(fromCounts).length ? ' Før forslaget: ' + Object.entries(fromCounts).sort((a, b) => b[1] - a[1]).map(([k, n]) => `<a href="index.html?view=udforsk${fund.id !== 'pmindi' ? `&fund=${fund.id}` : ''}&status=forslag&skift=${encodeURIComponent(`${k}~${tk}`)}" title="Gennemgå dette temaskift i screeneren">${n} i ${esc(k === 'andet' ? 'Andet' : daTheme(k))}</a>`).join(', ') + '.' : '';
  const posAsOf = fmtDate(fund.positionsAsOf || td.positionsAsOf);
  const keyToSlug = Object.fromEntries(td.themes.map((t) => [t.title.toLowerCase(), t.slug]));
@@ -144,7 +147,7 @@
  <h2 class="panel-h">Hvad ligger i Andet?</h2>
  <p style="margin:0 0 10px;color:var(--muted)">Andet er ikke et tema, men de selskaber, NDI endnu ikke har givet et primært tema. Grupperingen er vores udkast ud fra branche og NDI-linsen - den ændrer ikke data.</p>
  <div class="table-wrap"><table class="data" style="min-width:0"><thead><tr><th>Gruppe</th><th>Selskaber</th></tr></thead><tbody>
- ${andetGroups.map((x) => { const its = x.items.slice().sort((a, b) => (b.weight || 0) - (a.weight || 0) || byName(a, b)); return `<tr><td><strong>${esc(x.title)}</strong> (${its.length})<br><small style="color:var(--muted)">${esc(x.note)}</small></td><td>${its.slice(0, 8).map((p) => `<a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}${x.key === 'near' ? '#ndi-linse' : ''}"${x.key === 'near' && lensPlace(p) ? ` title="${esc(nearTxt(p))}"` : ''}>${esc(p.name)}</a>`).join(', ')}${its.length > 8 ? ` <small style="color:var(--muted)">… +${its.length - 8} flere</small>` : ''}${x.key === 'near' ? `<br><small style="color:var(--muted)">${its.map((p) => `${esc(p.name)}: ${esc(nearTxt(p))}`).join(' · ')}</small>` : ''}</td></tr>`; }).join('')}
+ ${andetGroups.map((x) => { const its = x.items.slice().sort((a, b) => (b.weight || 0) - (a.weight || 0) || byName(a, b)); return `<tr><td><strong>${esc(x.title)}</strong> (${its.length})<br><small style="color:var(--muted);display:inline-block;white-space:normal;max-width:36ch;line-height:1.35;text-align:left">${esc(x.note)}</small></td><td style="white-space:normal;text-align:left;min-width:14em">${its.slice(0, 8).map((p) => `<a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}${x.key === 'near' ? '#ndi-linse' : ''}"${x.key === 'near' && lensPlace(p) ? ` title="${esc(nearTxt(p))}"` : ''}>${esc(p.name)}</a>`).join(', ')}${its.length > 8 ? ` <small style="color:var(--muted);display:inline-block;white-space:normal;max-width:36ch;line-height:1.35;text-align:left">… +${its.length - 8} flere</small>` : ''}${x.key === 'near' ? `<br><small style="color:var(--muted);display:inline-block;white-space:normal;max-width:36ch;line-height:1.35;text-align:left">${its.map((p) => `${esc(p.name)}: ${esc(nearTxt(p))}`).join(' · ')}</small>` : ''}</td></tr>`; }).join('')}
  </tbody></table></div>
  <p class="src">Navnene i hver gruppe står efter vægt. Se også <a href="om-data.html#g-temaforslag">hvordan temaforslag laves</a>.</p>
  </section>` : '';
@@ -153,7 +156,7 @@
  const rows = shown.map((p) => {
  const multi = p.theme !== tk;
  return `<tr>
- <td><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}">${esc(p.name)}</a>${multi ? ` <span class="tag" title="Primært tema: ${esc(daTheme(p.theme))}">også ${esc(daTheme(p.theme))}</span>` : ''}${!multi && p.themeStatus === 'forslag' && tk !== 'andet' ? ` <span class="badge badge-draft" title="Forslag, afventer gennemgang${p.themeFrom && p.themeFrom !== 'andet' ? ` · før: ${esc(daTheme(p.themeFrom))}` : ' · før: Andet'}">forslag</span>` : ''}${lensOf(p) ? ` <a class="badge" href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}#ndi-linse" title="Kvalitativ NDI-linse: rolle, plads i værdikæden og forhold at holde øje med (udkast)" aria-label="NDI-linse for ${esc(p.name)}">NDI-linse</a>` : ''}${hitNote(p)}${!multi && p.themeStatus === 'forslag' && tk !== 'andet' ? `<br><small style="color:var(--muted)">før: ${esc(p.themeFrom && p.themeFrom !== 'andet' ? daTheme(p.themeFrom) : 'Andet')}</small>` : ''}</td>
+ <td><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}">${esc(p.name)}</a>${multi ? ` <span class="tag" title="Primært tema: ${esc(daTheme(p.theme))}">også ${esc(daTheme(p.theme))}</span>` : ''}${!multi && p.themeStatus === 'forslag' && tk !== 'andet' ? ` <span class="badge badge-draft" title="Forslag, afventer gennemgang${p.themeFrom && p.themeFrom !== 'andet' ? ` · før: ${esc(daTheme(p.themeFrom))}` : ' · før: Andet'}">forslag</span>` : ''}${lensOf(p) ? ` <a class="badge" href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}#ndi-linse" title="Kvalitativ NDI-linse: rolle, plads i værdikæden og forhold at holde øje med (udkast)" aria-label="NDI-linse for ${esc(p.name)}">NDI-linse</a>` : ''}${hitNote(p)}${!multi && p.themeStatus === 'forslag' && tk !== 'andet' ? `<br><small style="color:var(--muted);display:inline-block;white-space:normal;max-width:36ch;line-height:1.35;text-align:left">før: ${esc(p.themeFrom && p.themeFrom !== 'andet' ? daTheme(p.themeFrom) : 'Andet')}</small>` : ''}${!multi && themeDoubt(p) ? `<br><small style="color:var(--muted);display:inline-block;white-space:normal;max-width:36ch;line-height:1.35;text-align:left"><span class="badge" style="background:transparent;border:1px dashed var(--yellow);color:var(--yellow)">usikkert</span> ${esc(themeDoubt(p).why)}${themeDoubt(p).alt ? ` · alternativ: ${esc(doubtAltLabel(themeDoubt(p).alt))}` : ''}</small>` : ''}</td>
  <td class="hide-sm-cell">${p.role ? esc(p.role) : lensOwn(p) ? `${esc(lensOwn(p))} <small style="color:var(--muted)" title="Fra NDI-linsen, AI-udkast der afventer NDI-gennemgang">(linse, udkast)</small>` : '<span style="color:var(--muted)">–</span>'}</td>
  <td>${w(p.weight)}</td>
  </tr>`;
@@ -203,7 +206,7 @@
  <div class="row">${onlyLens ? `<a class="outline-btn small" href="${esc(temaHref({ linse: false }))}">Vis også uden NDI-linse</a> ` : ''}${status ? `<a class="outline-btn small" href="${esc(temaHref({ status: '' }))}">Fjern temastatus-filter</a> ` : ''}${qRaw ? `<a class="outline-btn small" href="${esc(temaHref({ q: '' }))}">Ryd søgning</a>` : ''}</div>
  </div>`
  : `<p class="band">Ingen selskaber i ${esc(fund.short)} med dette tema pr. ${posAsOf}.</p>`}
- <p class="src">Sorteret efter ${sort === 'name' ? 'navn' : 'vægt'}. Ingen kursafkast pr. aktie i udkastet.${nLens ? ' <span class="badge">NDI-linse</span> = kvalitativ beskrivelse (hvad ejer man, plads i værdikæden, hold øje med); tekster markeret udkast afventer NDI-gennemgang.' : ''}${nProp ? ` ${nProp} ${nProp === 1 ? 'selskab er' : 'selskaber er'} mærket <span class="badge badge-draft">forslag</span>: temaet er foreslået og afventer gennemgang (<a href="om-data.html#g-temaforslag">hvorfor</a>).${fromTxt}` : ''}</p>
+ <p class="src">Sorteret efter ${sort === 'name' ? 'navn' : 'vægt'}. Ingen kursafkast pr. aktie i udkastet.${nLens ? ' <span class="badge">NDI-linse</span> = kvalitativ beskrivelse (hvad ejer man, plads i værdikæden, hold øje med); tekster markeret udkast afventer NDI-gennemgang.' : ''}${nProp ? ` ${nProp} ${nProp === 1 ? 'selskab er' : 'selskaber er'} mærket <span class="badge badge-draft">forslag</span>: temaet er foreslået og afventer gennemgang (<a href="om-data.html#g-temaforslag">hvorfor</a>).${fromTxt}${doubtTxt}` : ''}</p>
  <p class="link-row" style="margin-top:10px"><a class="outline-btn small" href="${esc(screenerHref)}">Åbn i screeneren →</a>
  <button type="button" class="outline-btn small" id="copy-tema">Kopiér link til tema</button>
  <span class="sr-only" id="copy-tema-status" role="status" aria-live="polite"></span></p>

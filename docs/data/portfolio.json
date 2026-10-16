@@ -4246,9 +4246,10 @@
           "maturity": "preprofit",
           "themeStatus": "forslag",
           "themeNote": "forslag: offentlig 10-K — digital iBuyer/proptech-platform (Opendoor).",
-          "themeFrom": "andet",
           "maturityStatus": "forslag",
-          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
+          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang",
+          "themeDoubt": "iBuyer, der selv køber og ejer boliger på lager; Platforme-temaet dækker ellers digitale markedspladser uden eget lager.",
+          "themeAlt": "andet"
         },
         {
           "isin": "DE0006450000",
@@ -4380,7 +4381,9 @@
           "themeFrom": "andet",
           "themeNote": "forslag, afventer gennemgang",
           "maturityStatus": "forslag",
-          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
+          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang",
+          "themeDoubt": "Forsikringsselskab bygget på data og software; Software-temaet dækker ellers leverandører af software.",
+          "themeAlt": "andet"
         },
         {
           "isin": "US1725731079",
@@ -4437,7 +4440,9 @@
           "themeFrom": "andet",
           "themeNote": "forslag, afventer gennemgang",
           "maturityStatus": "forslag",
-          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
+          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang",
+          "themeDoubt": "Naturgasproducent: brændsel til elproduktion (Energi-kæden led 1) snarere end et kritisk råstof.",
+          "themeAlt": "energy"
         },
         {
           "isin": "US35834F1049",
@@ -4593,7 +4598,7 @@
           "name": "Ghl",
           "symbol": "GRAB",
           "weight": 0.51,
-          "theme": "software",
+          "theme": "platforms",
           "logoDomain": null,
           "sector": "Technology",
           "industry": "Software—Application",
@@ -4604,7 +4609,10 @@
           "customers": null,
           "maturity": "highgrowth",
           "maturityStatus": "forslag",
-          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
+          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang",
+          "themeStatus": "forslag",
+          "themeFrom": "software",
+          "themeNote": "forslag, afventer gennemgang — Ghl = Grab Holdings (ISIN KYG4124C1096, ticker GRAB): kørsel, levering og betalinger i Sydøstasien, samme type platform som Sea (runde 5: ISIN-opslag)"
         },
         {
           "isin": "US74347M1080",
@@ -4625,7 +4633,9 @@
           "themeFrom": "andet",
           "themeNote": "forslag, afventer gennemgang",
           "maturityStatus": "forslag",
-          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
+          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang",
+          "themeDoubt": "Kernen er frakturering til olie- og gasbrønde; kun den nye strømforretning sidder i Energi-kæden led 1.",
+          "themeAlt": "andet"
         },
         {
           "isin": "US7710491033",
@@ -4945,7 +4955,9 @@
           "themeFrom": "andet",
           "themeNote": "forslag, afventer gennemgang",
           "maturityStatus": "forslag",
-          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
+          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang",
+          "themeDoubt": "Forsikringsselskab bygget på data og software; Software-temaet dækker ellers leverandører af software.",
+          "themeAlt": "andet"
         },
         {
           "isin": "GB0009619924",
@@ -4984,7 +4996,9 @@
           "themeFrom": "andet",
           "themeNote": "forslag, afventer gennemgang",
           "maturityStatus": "forslag",
-          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
+          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang",
+          "themeDoubt": "Naturgasproducent: brændsel til elproduktion (Energi-kæden led 1) snarere end et kritisk råstof.",
+          "themeAlt": "energy"
         },
         {
           "isin": "US26884L1098",
@@ -5005,7 +5019,9 @@
           "themeFrom": "andet",
           "themeNote": "forslag, afventer gennemgang",
           "maturityStatus": "forslag",
-          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
+          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang",
+          "themeDoubt": "Naturgasproducent: brændsel til elproduktion (Energi-kæden led 1) snarere end et kritisk råstof.",
+          "themeAlt": "energy"
         },
         {
           "isin": "US3453708600",
@@ -5197,7 +5213,9 @@
           "themeFrom": "andet",
           "themeNote": "forslag, afventer gennemgang",
           "maturityStatus": "forslag",
-          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
+          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang",
+          "themeDoubt": "Naturgasproducent: brændsel til elproduktion (Energi-kæden led 1) snarere end et kritisk råstof.",
+          "themeAlt": "energy"
         },
         {
           "isin": "US47100L3015",
@@ -5218,7 +5236,9 @@
           "themeFrom": "andet",
           "themeNote": "forslag, afventer gennemgang",
           "maturityStatus": "forslag",
-          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
+          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang",
+          "themeDoubt": "Kernen er en beholdning af kryptovalutaen solana - ikke en digital platform.",
+          "themeAlt": "andet"
         },
         {
           "isin": "US60471A1016",
@@ -5313,7 +5333,9 @@
           "themeFrom": "andet",
           "themeNote": "forslag, afventer gennemgang",
           "maturityStatus": "forslag",
-          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
+          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang",
+          "themeDoubt": "Projekterer og bygger energianlæg og fabrikker; Energi-kæden kan passe bedre end Fysisk tech.",
+          "themeAlt": "energy"
         },
         {
           "isin": "US8200144058",
@@ -5967,7 +5989,9 @@
           "themeFrom": "andet",
           "themeNote": "forslag, afventer gennemgang",
           "maturityStatus": "forslag",
-          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
+          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang",
+          "themeDoubt": "Bygger elnet (Energi-kæden led 3); Fysisk tech dækker ellers robotik, elbiler og produktion.",
+          "themeAlt": "energy"
         },
         {
           "isin": "US80004C2008",
@@ -6508,7 +6532,7 @@
           "name": "Albemarle",
           "symbol": "ALB",
           "weight": 0.24,
-          "theme": "connect",
+          "theme": "energy-resources",
           "logoDomain": null,
           "sector": "Basic Materials",
           "industry": "Specialty Chemicals",
@@ -6520,7 +6544,7 @@
           "maturity": "garp",
           "themeStatus": "forslag",
           "themeFrom": "andet",
-          "themeNote": "forslag, afventer gennemgang",
+          "themeNote": "forslag, afventer gennemgang (runde 4: lithium som Energiressourcer; før foreslået Optik)",
           "maturityStatus": "forslag",
           "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
         },
@@ -6543,7 +6567,9 @@
           "themeFrom": "andet",
           "themeNote": "forslag, afventer gennemgang",
           "maturityStatus": "forslag",
-          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
+          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang",
+          "themeDoubt": "Forretningen er kemi (pigment, kølemidler, fluorpolymerer); kun en lille del rører elektronik og køling.",
+          "themeAlt": "andet"
         },
         {
           "isin": "US45073V1089",
@@ -6568,7 +6594,7 @@
           "name": "Infleqtion Inc",
           "symbol": "INFQ",
           "weight": 0.24,
-          "theme": "software",
+          "theme": "quantum",
           "logoDomain": null,
           "sector": "Technology",
           "industry": "Software—Infrastructure",
@@ -6579,7 +6605,10 @@
           "customers": null,
           "maturity": "highgrowth",
           "maturityStatus": "forslag",
-          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
+          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang",
+          "themeStatus": "forslag",
+          "themeFrom": "software",
+          "themeNote": "forslag, afventer gennemgang — quantum computing og kvantesensorer (runde 3: kerneprodukt)"
         },
         {
           "isin": "US50202M1027",
@@ -6881,7 +6910,9 @@
           "themeFrom": "andet",
           "themeNote": "forslag, afventer gennemgang",
           "maturityStatus": "forslag",
-          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
+          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang",
+          "themeDoubt": "Bygger elnet (Energi-kæden led 3); Fysisk tech dækker ellers robotik, elbiler og produktion.",
+          "themeAlt": "energy"
         },
         {
           "isin": "US86800U3023",
@@ -7535,7 +7566,9 @@
           "themeFrom": "andet",
           "themeNote": "forslag, afventer gennemgang",
           "maturityStatus": "forslag",
-          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
+          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang",
+          "themeDoubt": "Kølemidler og specialmaterialer; materialer til chipfremstilling (AI-compute led 4) er en mindre del.",
+          "themeAlt": "chips"
         },
         {
           "isin": "US8807791038",
@@ -7638,7 +7671,7 @@
           "name": "Neo Performance Materials In",
           "symbol": "NEO.TO",
           "weight": 0.17,
-          "theme": "connect",
+          "theme": "energy-resources",
           "logoDomain": null,
           "sector": "Basic Materials",
           "industry": "Specialty Chemicals",
@@ -7650,7 +7683,7 @@
           "maturity": "garp",
           "themeStatus": "forslag",
           "themeFrom": "andet",
-          "themeNote": "forslag, afventer gennemgang",
+          "themeNote": "forslag, afventer gennemgang (runde 3: sjældne jordarter/magneter som USA Rare Earth; før foreslået Optik)",
           "maturityStatus": "forslag",
           "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
         },
@@ -7915,7 +7948,9 @@
           "themeFrom": "andet",
           "themeNote": "forslag, afventer gennemgang",
           "maturityStatus": "forslag",
-          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
+          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang",
+          "themeDoubt": "Bygger elnet (Energi-kæden led 3); Fysisk tech dækker ellers robotik, elbiler og produktion.",
+          "themeAlt": "energy"
         },
         {
           "isin": "US8334451098",
@@ -8049,7 +8084,9 @@
           "themeFrom": "andet",
           "themeNote": "forslag, afventer gennemgang",
           "maturityStatus": "forslag",
-          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
+          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang",
+          "themeDoubt": "Forsikringsselskab bygget på data og software; Software-temaet dækker ellers leverandører af software.",
+          "themeAlt": "andet"
         },
         {
           "isin": "US1925761066",
@@ -8124,7 +8161,9 @@
           "themeFrom": "andet",
           "themeNote": "forslag, afventer gennemgang",
           "maturityStatus": "forslag",
-          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
+          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang",
+          "themeDoubt": "Kernen er en beholdning af kryptovalutaen solana - ikke en digital platform.",
+          "themeAlt": "andet"
         },
         {
           "isin": "US46125A1007",
@@ -8994,7 +9033,9 @@
           "themeFrom": "andet",
           "themeNote": "forslag, afventer gennemgang",
           "maturityStatus": "forslag",
-          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
+          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang",
+          "themeDoubt": "Specialkemi til mange industrier; Optik-forslaget bygger ikke på en klar plads i værdikæderne.",
+          "themeAlt": "andet"
         },
         {
           "isin": "LU2237380790",
@@ -9603,7 +9644,7 @@
           "name": "Asp Isotopes Inc",
           "symbol": "ASPI",
           "weight": 0.08,
-          "theme": "connect",
+          "theme": "energy-resources",
           "logoDomain": null,
           "sector": "Basic Materials",
           "industry": "Specialty Chemicals",
@@ -9615,7 +9656,7 @@
           "maturity": "garp",
           "themeStatus": "forslag",
           "themeFrom": "andet",
-          "themeNote": "forslag, afventer gennemgang",
+          "themeNote": "forslag, afventer gennemgang (runde 3: isotoper/kernebrændsel som Centrus; før foreslået Optik)",
           "maturityStatus": "forslag",
           "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
         },
@@ -10323,7 +10364,9 @@
           "themeFrom": "andet",
           "themeNote": "forslag, afventer gennemgang",
           "maturityStatus": "forslag",
-          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
+          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang",
+          "themeDoubt": "Kernen er en beholdning af kryptovalutaen solana - ikke en digital platform.",
+          "themeAlt": "andet"
         },
         {
           "isin": "US6837121291",
@@ -10342,9 +10385,10 @@
           "maturity": "highgrowth",
           "themeStatus": "forslag",
           "themeNote": "forslag: offentlig 10-K — digital iBuyer/proptech-platform (Opendoor).",
-          "themeFrom": "andet",
           "maturityStatus": "forslag",
-          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
+          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang",
+          "themeDoubt": "iBuyer, der selv køber og ejer boliger på lager; Platforme-temaet dækker ellers digitale markedspladser uden eget lager.",
+          "themeAlt": "andet"
         },
         {
           "isin": "US6837121374",
@@ -10363,9 +10407,10 @@
           "maturity": "highgrowth",
           "themeStatus": "forslag",
           "themeNote": "forslag: offentlig 10-K — digital iBuyer/proptech-platform (Opendoor).",
-          "themeFrom": "andet",
           "maturityStatus": "forslag",
-          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
+          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang",
+          "themeDoubt": "iBuyer, der selv køber og ejer boliger på lager; Platforme-temaet dækker ellers digitale markedspladser uden eget lager.",
+          "themeAlt": "andet"
         },
         {
           "isin": "US6837121457",
@@ -10384,9 +10429,10 @@
           "maturity": "highgrowth",
           "themeStatus": "forslag",
           "themeNote": "forslag: offentlig 10-K — digital iBuyer/proptech-platform (Opendoor).",
-          "themeFrom": "andet",
           "maturityStatus": "forslag",
-          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
+          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang",
+          "themeDoubt": "iBuyer, der selv køber og ejer boliger på lager; Platforme-temaet dækker ellers digitale markedspladser uden eget lager.",
+          "themeAlt": "andet"
         },
         {
           "isin": "US83571B1008",
@@ -11412,7 +11458,9 @@
           "themeFrom": "andet",
           "themeNote": "forslag, afventer gennemgang",
           "maturityStatus": "forslag",
-          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
+          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang",
+          "themeDoubt": "Naturgasproducent: brændsel til elproduktion (Energi-kæden led 1) snarere end et kritisk råstof.",
+          "themeAlt": "energy"
         },
         {
           "isin": "US46982L1089",
@@ -11675,7 +11723,9 @@
           "themeFrom": "andet",
           "themeNote": "forslag, afventer gennemgang",
           "maturityStatus": "forslag",
-          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
+          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang",
+          "themeDoubt": "Kernen er frakturering til olie- og gasbrønde; kun den nye strømforretning sidder i Energi-kæden led 1.",
+          "themeAlt": "andet"
         },
         {
           "isin": "US90353T1007",
@@ -11750,7 +11800,9 @@
           "themeFrom": "andet",
           "themeNote": "forslag, afventer gennemgang",
           "maturityStatus": "forslag",
-          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
+          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang",
+          "themeDoubt": "Naturgasproducent: brændsel til elproduktion (Energi-kæden led 1) snarere end et kritisk råstof.",
+          "themeAlt": "energy"
         },
         {
           "isin": "CA2926717083",
@@ -12112,7 +12164,9 @@
           "themeFrom": "andet",
           "themeNote": "forslag, afventer gennemgang",
           "maturityStatus": "forslag",
-          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
+          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang",
+          "themeDoubt": "Kernen er en beholdning af kryptovalutaen solana - ikke en digital platform.",
+          "themeAlt": "andet"
         },
         {
           "isin": "US4227041062",
@@ -12191,7 +12245,9 @@
           "themeFrom": "andet",
           "themeNote": "forslag, afventer gennemgang",
           "maturityStatus": "forslag",
-          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
+          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang",
+          "themeDoubt": "Forretningen er kemi (pigment, kølemidler, fluorpolymerer); kun en lille del rører elektronik og køling.",
+          "themeAlt": "andet"
         },
         {
           "isin": "US74164F1030",
@@ -12212,7 +12268,9 @@
           "themeFrom": "andet",
           "themeNote": "forslag, afventer gennemgang",
           "maturityStatus": "forslag",
-          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
+          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang",
+          "themeDoubt": "Bygger elnet (Energi-kæden led 3); Fysisk tech dækker ellers robotik, elbiler og produktion.",
+          "themeAlt": "energy"
         },
         {
           "isin": "US1508701034",
@@ -12253,7 +12311,9 @@
           "themeFrom": "andet",
           "themeNote": "forslag, afventer gennemgang",
           "maturityStatus": "forslag",
-          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
+          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang",
+          "themeDoubt": "Naturgasproducent: brændsel til elproduktion (Energi-kæden led 1) snarere end et kritisk råstof.",
+          "themeAlt": "energy"
         },
         {
           "isin": "US35834F1049",
@@ -12516,7 +12576,9 @@
           "themeFrom": "andet",
           "themeNote": "forslag, afventer gennemgang",
           "maturityStatus": "forslag",
-          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
+          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang",
+          "themeDoubt": "Projekterer og bygger energianlæg og fabrikker; Energi-kæden kan passe bedre end Fysisk tech.",
+          "themeAlt": "energy"
         },
         {
           "isin": "US5949724083",
@@ -12652,7 +12714,7 @@
           "name": "Ghl",
           "symbol": "GRAB",
           "weight": 0.34,
-          "theme": "software",
+          "theme": "platforms",
           "logoDomain": null,
           "sector": "Technology",
           "industry": "Software—Application",
@@ -12663,7 +12725,10 @@
           "customers": null,
           "maturity": "highgrowth",
           "maturityStatus": "forslag",
-          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
+          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang",
+          "themeStatus": "forslag",
+          "themeFrom": "software",
+          "themeNote": "forslag, afventer gennemgang — Ghl = Grab Holdings (ISIN KYG4124C1096, ticker GRAB): kørsel, levering og betalinger i Sydøstasien, samme type platform som Sea (runde 5: ISIN-opslag)"
         },
         {
           "isin": "US2193501051",
@@ -12792,7 +12857,9 @@
           "themeFrom": "andet",
           "themeNote": "forslag, afventer gennemgang",
           "maturityStatus": "forslag",
-          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
+          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang",
+          "themeDoubt": "Specialkemi til mange industrier; Optik-forslaget bygger ikke på en klar plads i værdikæderne.",
+          "themeAlt": "andet"
         },
         {
           "isin": "US1651677353",
@@ -12813,7 +12880,9 @@
           "themeFrom": "andet",
           "themeNote": "forslag, afventer gennemgang",
           "maturityStatus": "forslag",
-          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
+          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang",
+          "themeDoubt": "Naturgasproducent: brændsel til elproduktion (Energi-kæden led 1) snarere end et kritisk råstof.",
+          "themeAlt": "energy"
         },
         {
           "isin": "US25809K1051",
@@ -12891,7 +12960,9 @@
           "themeFrom": "andet",
           "themeNote": "forslag, afventer gennemgang",
           "maturityStatus": "forslag",
-          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
+          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang",
+          "themeDoubt": "Forsikringsselskab bygget på data og software; Software-temaet dækker ellers leverandører af software.",
+          "themeAlt": "andet"
         },
         {
           "isin": "US88675P1030",
@@ -13227,9 +13298,10 @@
           "maturity": "preprofit",
           "themeStatus": "forslag",
           "themeNote": "forslag: offentlig 10-K — digital iBuyer/proptech-platform (Opendoor).",
-          "themeFrom": "andet",
           "maturityStatus": "forslag",
-          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
+          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang",
+          "themeDoubt": "iBuyer, der selv køber og ejer boliger på lager; Platforme-temaet dækker ellers digitale markedspladser uden eget lager.",
+          "themeAlt": "andet"
         },
         {
           "isin": "KYG3323L1005",
@@ -13272,7 +13344,7 @@
           "name": "Albemarle",
           "symbol": "ALB",
           "weight": 0.29,
-          "theme": "connect",
+          "theme": "energy-resources",
           "logoDomain": null,
           "sector": "Basic Materials",
           "industry": "Specialty Chemicals",
@@ -13284,7 +13356,7 @@
           "maturity": "garp",
           "themeStatus": "forslag",
           "themeFrom": "andet",
-          "themeNote": "forslag, afventer gennemgang",
+          "themeNote": "forslag, afventer gennemgang (runde 4: lithium som Energiressourcer; før foreslået Optik)",
           "maturityStatus": "forslag",
           "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
         },
@@ -13875,7 +13947,9 @@
           "themeFrom": "andet",
           "themeNote": "forslag, afventer gennemgang",
           "maturityStatus": "forslag",
-          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
+          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang",
+          "themeDoubt": "Forsikringsselskab bygget på data og software; Software-temaet dækker ellers leverandører af software.",
+          "themeAlt": "andet"
         },
         {
           "isin": "US55318A1088",
@@ -14001,7 +14075,7 @@
           "name": "Neo Performance Materials In",
           "symbol": "NEO.TO",
           "weight": 0.24,
-          "theme": "connect",
+          "theme": "energy-resources",
           "logoDomain": null,
           "sector": "Basic Materials",
           "industry": "Specialty Chemicals",
@@ -14013,7 +14087,7 @@
           "maturity": "garp",
           "themeStatus": "forslag",
           "themeFrom": "andet",
-          "themeNote": "forslag, afventer gennemgang",
+          "themeNote": "forslag, afventer gennemgang (runde 3: sjældne jordarter/magneter som USA Rare Earth; før foreslået Optik)",
           "maturityStatus": "forslag",
           "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
         },
@@ -14182,7 +14256,9 @@
           "themeFrom": "andet",
           "themeNote": "forslag, afventer gennemgang",
           "maturityStatus": "forslag",
-          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
+          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang",
+          "themeDoubt": "Bygger elnet (Energi-kæden led 3); Fysisk tech dækker ellers robotik, elbiler og produktion.",
+          "themeAlt": "energy"
         },
         {
           "isin": "US74766W1080",
@@ -14624,7 +14700,7 @@
           "name": "Infleqtion Inc",
           "symbol": "INFQ",
           "weight": 0.22,
-          "theme": "software",
+          "theme": "quantum",
           "logoDomain": null,
           "sector": "Technology",
           "industry": "Software—Infrastructure",
@@ -14635,7 +14711,10 @@
           "customers": null,
           "maturity": "highgrowth",
           "maturityStatus": "forslag",
-          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
+          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang",
+          "themeStatus": "forslag",
+          "themeFrom": "software",
+          "themeNote": "forslag, afventer gennemgang — quantum computing og kvantesensorer (runde 3: kerneprodukt)"
         },
         {
           "isin": "US55405W1045",
@@ -14656,7 +14735,9 @@
           "themeFrom": "andet",
           "themeNote": "forslag, afventer gennemgang",
           "maturityStatus": "forslag",
-          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
+          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang",
+          "themeDoubt": "Bygger elnet (Energi-kæden led 3); Fysisk tech dækker ellers robotik, elbiler og produktion.",
+          "themeAlt": "energy"
         },
         {
           "isin": "US64110L1061",
@@ -15348,7 +15429,9 @@
           "themeFrom": "andet",
           "themeNote": "forslag, afventer gennemgang",
           "maturityStatus": "forslag",
-          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
+          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang",
+          "themeDoubt": "Kølemidler og specialmaterialer; materialer til chipfremstilling (AI-compute led 4) er en mindre del.",
+          "themeAlt": "chips"
         },
         {
           "isin": "US86771W1053",
@@ -15768,7 +15851,9 @@
           "themeFrom": "andet",
           "themeNote": "forslag, afventer gennemgang",
           "maturityStatus": "forslag",
-          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
+          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang",
+          "themeDoubt": "Kernen er en beholdning af kryptovalutaen solana - ikke en digital platform.",
+          "themeAlt": "andet"
         },
         {
           "isin": "US46578C1080",
@@ -16317,7 +16402,9 @@
           "themeFrom": "andet",
           "themeNote": "forslag, afventer gennemgang",
           "maturityStatus": "forslag",
-          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
+          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang",
+          "themeDoubt": "Forsikringsselskab bygget på data og software; Software-temaet dækker ellers leverandører af software.",
+          "themeAlt": "andet"
         },
         {
           "isin": "US26740W1099",
@@ -16460,7 +16547,7 @@
           "name": "Asp Isotopes Inc",
           "symbol": "ASPI",
           "weight": 0.13,
-          "theme": "connect",
+          "theme": "energy-resources",
           "logoDomain": null,
           "sector": "Basic Materials",
           "industry": "Specialty Chemicals",
@@ -16472,7 +16559,7 @@
           "maturity": "garp",
           "themeStatus": "forslag",
           "themeFrom": "andet",
-          "themeNote": "forslag, afventer gennemgang",
+          "themeNote": "forslag, afventer gennemgang (runde 3: isotoper/kernebrændsel som Centrus; før foreslået Optik)",
           "maturityStatus": "forslag",
           "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
         },
@@ -17259,7 +17346,9 @@
           "themeFrom": "andet",
           "themeNote": "forslag, afventer gennemgang",
           "maturityStatus": "forslag",
-          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
+          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang",
+          "themeDoubt": "Kernen er en beholdning af kryptovalutaen solana - ikke en digital platform.",
+          "themeAlt": "andet"
         },
         {
           "isin": "US6837121291",
@@ -17278,9 +17367,10 @@
           "maturity": "highgrowth",
           "themeStatus": "forslag",
           "themeNote": "forslag: offentlig 10-K — digital iBuyer/proptech-platform (Opendoor).",
-          "themeFrom": "andet",
           "maturityStatus": "forslag",
-          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
+          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang",
+          "themeDoubt": "iBuyer, der selv køber og ejer boliger på lager; Platforme-temaet dækker ellers digitale markedspladser uden eget lager.",
+          "themeAlt": "andet"
         },
         {
           "isin": "US6837121374",
@@ -17299,9 +17389,10 @@
           "maturity": "highgrowth",
           "themeStatus": "forslag",
           "themeNote": "forslag: offentlig 10-K — digital iBuyer/proptech-platform (Opendoor).",
-          "themeFrom": "andet",
           "maturityStatus": "forslag",
-          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
+          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang",
+          "themeDoubt": "iBuyer, der selv køber og ejer boliger på lager; Platforme-temaet dækker ellers digitale markedspladser uden eget lager.",
+          "themeAlt": "andet"
         },
         {
           "isin": "US6837121457",
@@ -17320,9 +17411,10 @@
           "maturity": "highgrowth",
           "themeStatus": "forslag",
           "themeNote": "forslag: offentlig 10-K — digital iBuyer/proptech-platform (Opendoor).",
-          "themeFrom": "andet",
           "maturityStatus": "forslag",
-          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang"
+          "maturityNote": "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang",
+          "themeDoubt": "iBuyer, der selv køber og ejer boliger på lager; Platforme-temaet dækker ellers digitale markedspladser uden eget lager.",
+          "themeAlt": "andet"
         }
       ],
       "positionsAsOf": "2026-06-01",

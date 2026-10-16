@@ -209,3 +209,39 @@ NDI-linsen for de sidste Andet-navne peger på en plads tæt på et led. Temaet 
 | US6458272050 | Idaho Strategic Resources | tæt på Energi led 5 | guldproducent; sjældne jordarter kun efterforskning |
 | CA7142661031 | Perpetua Resources | tæt på Energi led 5 (antimon) | mineprojekt guld + antimon, ikke i produktion |
 | US88023B1035 | Tempus AI | AI-compute led 10 (data) | sundhed; uændret fra runde 2 |
+
+## Runde 4 + NDI-beslutningsliste: usikre forslag (lane-B c16, 2026-10-16)
+Kun `theme`/`themeFrom`/`themeNote` (Albemarle) og nye felter `themeDoubt` (begrundelse, tekst) + `themeAlt` (alternativ tema-nøgle; `andet` = bliv i Andet) i portfolio.json, begge klasser. themes.json (PMINDI) genberegnet (Optik 29 → 28, Energiressourcer 29 → 30).
+
+**Rettet:** Albemarle (US0126531013) connect → energy-resources (themeFrom: andet). Lithium, som de øvrige lithium-navne; linsen sagde allerede "kernen er lithium".
+
+**Usikre forslag (temaet IKKE ændret - NDI beslutter):** 18 i PMINDI (DeFi-serien tæller med), 18 i AKK.
+
+| Foreslået → alternativ | Navne | Begrundelse |
+|---|---|---|
+| Energiressourcer → Energi | Comstock, Antero, EQT, Expand Energy | naturgas = brændsel til elproduktion (Energi led 1), ikke kritisk råstof |
+| Fysisk tech → Energi | Quanta, MYR, Primoris (bygger elnet, Energi led 3); Fluor (energianlæg) | Fysisk tech dækker ellers robotik/elbiler/produktion |
+| Software → bliv i Andet | Root, Lemonade, Ategrity | forsikringsselskaber (insurtech) |
+| Platforme → bliv i Andet | Upexi, DeFi Development (+ serie) | kernen er en solana-beholdning |
+| Optik → bliv i Andet | Chemours, Arkema | kemi til mange industrier |
+| Optik → Chips | Solstice Advanced Materials | chipmaterialer (AI-compute led 4) er den del, der passer |
+| Energi → bliv i Andet | ProPetro | kernen er frakturering; kun ny strømforretning i Energi led 1 |
+
+Bevidst IKKE markeret: Comfort Systems, Sterling, Jacobs (AI-compute led 2 har temaerne physical+compute, så Fysisk tech er konsistent med kæden); Coinbase/Nu (fintech-platforme); Caterpillar/Terex (maskiner); Lightwave Logic (elektro-optiske polymerer = led 7).
+
+**Linse-konsistens:** NDI-tag-feltet i unique-metrics.json siger nu "<Tema> (forslag)" + "Temaforslag: X (før: Y). Afventer NDI-gennemgang." for alle 41 forslag, der før stod som "Primært tema: X" (eller "Connect (forslag)"); usikre forslag får "Usikkert forslag: … Alternativ: …" i hint. Eksisterende ekstra-noter (multi-tag, foundry) er bevaret.
+
+## Runde 5: ISIN-opslag på navnløse positioner (lane-B c18, 2026-10-16)
+Kun `theme`/`themeStatus`/`themeFrom`/`themeNote` i portfolio.json, begge klasser. themes.json (PMINDI): Ghl flyttet fra Software til Platforme (Software 50 → 49, ca. 12,14 → 11,63 %; Platforme 40 → 41, ca. 16,01 → 16,52 %). Øvrig rækkefølge uændret.
+
+**Rettet:** "Ghl" (KYG4124C1096, ticker GRAB) = **Grab Holdings** (Sydøstasiatisk superapp: kørsel, levering, betalinger/digitale banker). Software → Platforme (forslag, themeFrom software), samme type som Sea. Ny NDI-linse (AI-compute led 12: forbrugerapplikationer), hvor NDI-tag-hint forklarer at "Ghl" i beholdningslisten er Grab. Navnet i portfolio.json er IKKE ændret (kildedata) - det bør rettes i datakilden.
+
+**Stadig uden linse (bevidst):** Sharonai Holdings (SHAZ), Swarmer (SWMR), Keel Infrastructure (KEEL) - usikker viden om forretningen; CSLM (SPAC); vægt-0-positioner. Til opfølgning: value-chains.json (ikke lane-B's fil) viser stadig "Ghl" uden forslag-mærke som eksempel i AI-compute led 10-12.
+
+## Merge med main + koordinatorens runde (lane-B c19, 2026-10-16 ~03:00)
+- origin/main merget ind i lane-B (koordinatoren kunne ikke merge lane-B pga. 40 konflikter i portfolio.json). Tema-felterne blev flettet felt for felt pr. (klasse, ISIN, navn); main's maturity-felter beholdt.
+- **Beholdt fra main (bevidst, 02cebde):** Cipher Mining software → compute (forslag, nu `themeFrom: software`); Opendoor + 3 warrants andet → platforms (forslag).
+- **Gendannet fra lane-B (main havde en ældre lane-B-kopi, ikke en beslutning):** Infleqtion → quantum (runde 3), Neo Performance + ASP Isotopes → energy-resources (runde 3).
+- **Opendoor markeret usikker** (`themeDoubt`, `themeAlt: andet`): iBuyer, der selv ejer boliger på lager; Platforme-temaet dækker ellers markedspladser uden eget lager. Beslutningslisten er nu 22 (18 + Opendoor-aktien og 3 warrants).
+- themes.json (PMINDI) genberegnet: Platforme 41 → 45, Software 49 → 48, Compute 18 → 19, Andet 35 → 31 (vægt 6,27 %, samme som main's synkede tal). Forslag i alt 87 (80 fra Andet).
+- NDI-linse: Cipher "Compute (forslag)", Opendoor "Platforme (forslag)" + usikker-tekst.
