@@ -254,14 +254,16 @@
 
  const spanDays = e => Math.max(1, Math.round((Date.parse(endOf(e) + 'T12:00:00Z') - Date.parse(e.peakD + 'T12:00:00Z')) / 86400000));
  const maxSpan = Math.max(...deep.map(spanDays));
+ const deepMax = Math.max(...deep.map((e) => Math.abs(e.dd)), 1);
  const ledger = deep.map(e => {
  const days = spanDays(e);
  const openRow = !e.recoveredD;
  const tail = openRow
- ? `${days} dage siden toppen. Stadig åben. Seneste dag ${fmtPct(nowU)}.`
- : `Tilbage på toppen ${fmtDate(e.recoveredD)}. ${days} dage fra top til genopretning.`;
+ ? `${days} dage siden toppen. Stadig åben. Seneste dag <span class="ep-pct">${fmtPct(nowU)}</span>.`
+ : `Tilbage på toppen <strong>${fmtDate(e.recoveredD)}</strong>. ${days} dage fra top til genopretning.`;
  const w = Math.max(8, Math.round((days / maxSpan) * 100));
- return `<li class="${openRow ? 'open' : ''}"><button type="button" class="ep-jump" data-date="${e.troughD}" aria-pressed="false"><span class="depth">${fmtPct(e.dd)}</span><span class="meta"><strong>${fmtDate(e.peakD)}</strong> til bund <strong>${fmtDate(e.troughD)}</strong>. ${tail}<span class="dur" aria-hidden="true"><span style="width:${w}%"></span></span></span></button></li>`;
+ const stem = Math.max(8, Math.round((Math.abs(e.dd) / deepMax) * 28));
+ return `<li class="${openRow ? 'open' : ''}"><button type="button" class="ep-jump" data-date="${e.troughD}" aria-pressed="false"><span class="depth"><i class="ep-stem" style="height:${stem}px" aria-hidden="true"></i><span>${fmtPct(e.dd)}</span></span><span class="meta"><strong>${fmtDate(e.peakD)}</strong> til bund <strong>${fmtDate(e.troughD)}</strong>. ${tail}<span class="dur" aria-hidden="true"><span style="width:${w}%"></span></span></span></button></li>`;
  }).join('');
 
  const maxRet = Math.max(...years.map(y => Math.abs(y.ret)), 1);
