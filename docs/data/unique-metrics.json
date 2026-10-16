@@ -222,6 +222,18 @@
           "ai": true
         },
         {
+          "label": "Forretningsmodel",
+          "value": "Projekter, service og software",
+          "hint": "Leverer batterilagringsanlæg til elselskaber og udviklere som projekter, og tjener derudover på serviceaftaler og software til at styre anlæggene.",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "Integration og software",
+          "hint": "Erfaring med at designe og samle store anlæg samt egen styringssoftware. Køber battericellerne hos andre og afhænger af handelsregler og told. Beskrivelse, ikke en vurdering.",
+          "ai": true
+        },
+        {
           "label": "Plads i værdikæden",
           "value": "Energi-kæden · led 4: lagring",
           "hint": "Lagring gør sol og vind mere brugbart og kan aflaste elnettet. Placeringen er pædagogisk.",
@@ -896,6 +908,18 @@
           "ai": true
         },
         {
+          "label": "Forretningsmodel",
+          "value": "Udlån, bank og teknologi",
+          "hint": "Renteindtægter fra udlån (især privatlån) og indlån i egen bank, gebyrer fra investering og kort, plus betaling fra andre finansielle selskaber for teknologiplatformen (Galileo).",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "Bank og platform i ét",
+          "hint": "Har egen amerikansk banklicens, så udlån kan finansieres med indlån, og sælger samme teknologi videre til andre. Afhænger af kreditkvaliteten og renteniveauet. Beskrivelse, ikke en vurdering.",
+          "ai": true
+        },
+        {
           "label": "Plads i værdikæden",
           "value": "Uden for AI-kæden",
           "hint": "En digital finansplatform. Fintech er et tema, ikke et led i værdikæderne. Placeringen er pædagogisk.",
@@ -927,6 +951,18 @@
           "label": "Hvad ejer man?",
           "value": "Materialet under chippen",
           "hint": "Specialiserede halvledersubstrater, blandt andet silicon-on-insulator, som chips bygges ovenpå.",
+          "ai": true
+        },
+        {
+          "label": "Forretningsmodel",
+          "value": "Salg af substrater",
+          "hint": "Sælger færdige substrat-wafers til chipproducenter og -fabrikker, som bygger chips ovenpå til fx mobiltelefoner, biler og industri.",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "Egen proces (Smart Cut)",
+          "hint": "Bygger på egen proces og patenter til at overføre tynde lag silicium. Afhænger af få store kunder og af mobil- og bilmarkedets cyklus. Beskrivelse, ikke en vurdering.",
           "ai": true
         },
         {
@@ -998,6 +1034,18 @@
           "ai": true
         },
         {
+          "label": "Forretningsmodel",
+          "value": "Softwareabonnementer",
+          "hint": "Offentlige myndigheder og virksomheder betaler for licenser og abonnementer på platformene, ofte i flerårige aftaler.",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "Dyb integration",
+          "hint": "Softwaren bliver bygget ind i kundens data og daglige drift, og offentligt arbejde kræver sikkerhedsgodkendelser. En stor del af indtægten kommer fra offentlige kontrakter. Beskrivelse, ikke en vurdering.",
+          "ai": true
+        },
+        {
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 11: software",
           "hint": "Der hvor AI-modeller bliver til arbejdsgange i virksomheder og offentlige organisationer. Placeringen er pædagogisk.",
@@ -1032,6 +1080,18 @@
           "ai": true
         },
         {
+          "label": "Forretningsmodel",
+          "value": "Salg af hukommelseschips",
+          "hint": "Sælger DRAM, herunder HBM, og NAND til producenter af servere, AI-systemer, telefoner og pc’er. Priserne svinger med udbud og efterspørgsel.",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "Procesteknik og kapital",
+          "hint": "Avanceret hukommelse kræver egen procesteknik og meget store investeringer i fabrikker. HBM sælges til få store kunder. Beskrivelse, ikke en vurdering.",
+          "ai": true
+        },
+        {
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 6: hukommelse",
           "hint": "AI-chips skal have data tæt på. Hukommelse er blevet en af flaskehalsene. Placeringen er pædagogisk.",
@@ -1063,6 +1123,18 @@
           "label": "Hvad ejer man?",
           "value": "Hukommelse, chipfabrik og elektronik",
           "hint": "DRAM- og NAND-hukommelse, chipproduktion for andre og forbrugerelektronik i én koncern.",
+          "ai": true
+        },
+        {
+          "label": "Forretningsmodel",
+          "value": "Chips og elektronik",
+          "hint": "Tjener penge på salg af hukommelseschips, chipproduktion for andre, telefoner, skærme og forbrugerelektronik.",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "Skala og egne fabrikker",
+          "hint": "Ejer selv fabrikkerne bag mange af produkterne og producerer i meget stor skala. Hukommelsesdelen følger branchens prisudsving. Beskrivelse, ikke en vurdering.",
           "ai": true
         },
         {
@@ -1168,6 +1240,18 @@
           "ai": true
         },
         {
+          "label": "Forretningsmodel",
+          "value": "Annoncer og datalicenser",
+          "hint": "Hovedindtægten er annoncer. Derudover betaler AI- og søgeselskaber for adgang til indholdet via dataaftaler.",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "Brugerskabt arkiv",
+          "hint": "Mange års samtaler skrevet af brugerne og fællesskaber drevet af frivillige moderatorer. Afhænger af de frivillige og af trafik fra søgemaskiner. Beskrivelse, ikke en vurdering.",
+          "ai": true
+        },
+        {
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 10: data",
           "hint": "Menneskeskabt indhold er også data, som AI-modeller kan trænes på. Placeringen er pædagogisk.",
@@ -1199,6 +1283,18 @@
           "label": "Hvad ejer man?",
           "value": "Investeringsapp",
           "hint": "En app til handel med aktier, optioner og krypto samt opsparings- og kortprodukter.",
+          "ai": true
+        },
+        {
+          "label": "Forretningsmodel",
+          "value": "Handel, renter og abonnement",
+          "hint": "Indtægter når kunderne handler (bl.a. betaling for ordreflow), renteindtægter på kundernes midler og abonnementet Robinhood Gold.",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "Brand og enkel app",
+          "hint": "Et kendt brand blandt yngre investorer og en app, der er bygget til mobil fra start. Indtjeningen følger kundernes handelsaktivitet og regler for ordreflow. Beskrivelse, ikke en vurdering.",
           "ai": true
         },
         {
@@ -1236,6 +1332,18 @@
           "ai": true
         },
         {
+          "label": "Forretningsmodel",
+          "value": "Produktion for kunder",
+          "hint": "Kunderne betaler for at få deres eget chipdesign produceret, ofte i flerårige aftaler om kapacitet.",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "Specialprocesser og placering",
+          "hint": "Specialiserede processer (fx til radio, strømstyring og siliciumfotonik) og fabrikker i USA, Europa og Asien. Konkurrerer ikke om de allermindste procesteknologier. Beskrivelse, ikke en vurdering.",
+          "ai": true
+        },
+        {
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 5: foundry",
           "hint": "Fabrikken, der omsætter kunders chipdesign til fysiske chips. Placeringen er pædagogisk.",
@@ -1267,6 +1375,18 @@
           "label": "Hvad ejer man?",
           "value": "Chipfabrik for analoge chips",
           "hint": "Produktion for andre af specialiserede analoge chips til sensorer, kommunikation og strømstyring.",
+          "ai": true
+        },
+        {
+          "label": "Forretningsmodel",
+          "value": "Produktion for kunder",
+          "hint": "Chipselskaber uden egne fabrikker betaler for at få deres analoge chips produceret.",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "Analog specialviden",
+          "hint": "Specialprocesser til fx radio, sensorer, strømstyring og siliciumfotonik samt fabrikker i flere lande. Afhænger af kundernes designvalg. Beskrivelse, ikke en vurdering.",
           "ai": true
         },
         {
@@ -1304,6 +1424,18 @@
           "ai": true
         },
         {
+          "label": "Forretningsmodel",
+          "value": "Andel af annoncekroner",
+          "hint": "Annoncører betaler for at nå app-brugere, og selskabet tager en andel af annoncekronerne. Selskabet har frasolgt sin egen spilforretning.",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "Data og algoritmer",
+          "hint": "Annoncemotoren bliver bedre af data fra mange apps og annoncer. Afhænger af Apples og Googles regler for apps og persondata. Beskrivelse, ikke en vurdering.",
+          "ai": true
+        },
+        {
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 11: software",
           "hint": "Algoritmer og data bruges til at matche annoncer og målgrupper. Placeringen er pædagogisk.",
@@ -1338,6 +1470,18 @@
           "ai": true
         },
         {
+          "label": "Forretningsmodel",
+          "value": "Handelsgebyrer og tjenester",
+          "hint": "Gebyrer når kunder handler kryptoaktiver, plus indtægter fra abonnementer og tjenester som opbevaring, staking og andel af renteindtægter på stablecoinen USDC.",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "Licenser og tillid",
+          "hint": "Licenser og tilladelser i flere lande og et kendt brand gør det tungt for nye at komme ind. Indtjeningen svinger med kryptomarkedets aktivitet. Beskrivelse, ikke en vurdering.",
+          "ai": true
+        },
+        {
           "label": "Plads i værdikæden",
           "value": "Uden for AI-kæden",
           "hint": "En finansiel platform for kryptoaktiver. Fintech er et tema, ikke et led i værdikæderne. Placeringen er pædagogisk.",
@@ -1369,6 +1513,18 @@
           "label": "Hvad ejer man?",
           "value": "Stablecoin-udsteder",
           "hint": "Udsteder USDC, en digital dollar på blockchains, der er bakket op af reserver, og bygger betalingsinfrastruktur oven på den.",
+          "ai": true
+        },
+        {
+          "label": "Forretningsmodel",
+          "value": "Renter på reserverne",
+          "hint": "Hovedindtægten er renter på de reserver (kontanter og korte statsobligationer), der står bag USDC. En del deles med distributionspartnere, især Coinbase.",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "Regulering og netværk",
+          "hint": "Regulerede og løbende rapporterede reserver samt bred brug på mange blockchains og børser. Afhænger af renteniveauet og af partnere. Beskrivelse, ikke en vurdering.",
           "ai": true
         },
         {
