@@ -981,3 +981,31 @@ Ikke-rådgivning ✅ · tabsadvarsel ✅ · historisk afkast ≠ fremtid ✅ · 
 
 ### Prioritet
 **1** (X-tematræf + chartMarkers, ét samlet fix) → ÅTD-forbehold → footer → **5** → KID/SRI-huller → **6**.
+
+## 2026-10-16 06:15 CEST · cyklus 39 (main `e9ea004`, docs-delta 251 commits; live = main)
+
+Ikke juridisk rådgivning. Live sweep ved 375 på 32 sider med regex-flag og kontekstudtræk.
+
+### Lukket siden cyklus 38 ✅
+- **MUST 1 (tredjeparts-X ved fondens produkter) er LUKKET.** `docs/js/x-feed.js:522` `matchPosts(houseOnly = true)`. Tema-træf gælder kun `isHouse`. Selskabs- og temapaneler viser kun NDI-konti, og grafmarkører kun @InvestNewdeal (`x-feed.js:448`, `app.js:490`). Fulgte konti står kun på `ndi-paa-x.html` med mærket "ikke NDI's holdning" og "Du kan tabe penge" ✅.
+- **ÅTD-forbehold er nu ens overalt:** fonden, drawdown, periode og embed siger "delår, afventer Fundmarket-godkendelse" ✅.
+- **"Markedsføringsmateriale"** står i footer/overskrift på alle 32 sider ✅.
+- **Nyhedsarkiv:** "Placeholder" er væk, og der er tabsadvarsel ✅.
+- **Maskinel mærkning på selskab** er rettet til "Maskinelt forslag … afventer NDI-gennemgang" ✅.
+- **Omkostninger:** KID-RIY 2,79/2,85 % (5 år) og 2,63/2,71 % (1 år) står på fonden, sammenlign, omkostninger og entré. "Ikke et ÅOP" er tydeligt ✅.
+
+### Tjekliste
+Ikke-rådgivning ✅ (alle footere; "Ingen anbefaling om at købe eller sælge" på fonden) · tabsadvarsel 32/32 ✅ · historisk afkast ≠ fremtid 32/32 ✅ · KID-links 32/32 ✅ · SRI 5/7 på fonden/risici/selskab/tema/embed/periode/drawdown ✅ · beholdning pr. 1. jun. 2026 forsinket ✅ · ingen live-handler ✅ · PMINDIAKK ingen kurs før 5. dec. 2026 ✅ · ingen 1m/3m ("Ingen 1- eller 3-måneders fremhævning") ✅ · intet benchmark ("intet fast benchmark; ingen sammenligningskurve") ✅ · "overvægt" kun i negationer ("ikke bevidste overvægte") ✅ · ingen "garanteret/sikker/køb nu/bedste tip" ✅ · AI-mærkning: udkast/forslag mærket på selskab/tema/ideer/perspektiv ✅, men ✗ værdikæder (se SHOULD 2) · omkostninger ✅.
+
+### MUST
+- **Ingen åbne MUST-blokere i denne cyklus.**
+
+### SHOULD
+1. **Footerens dokumentnavn:** "Central Information Dokument" (bl.a. PMINDIAKK-visningen) er ikke PRIIP-forordningens danske betegnelse. Brug "Dokument med central information (KID)" overalt, som fakta/omkostninger/ndi-på-x allerede gør.
+2. **Værdikæder er ikke AI-mærket:** `vaerdikaeder.html` siger "Tekst inspireret af NDI ugebreve", men nævner ikke, at teksten er AI-/udkastsammenfattet (kæde-teksterne er rettet i mange enkeltcommits). Tilføj "AI-assisteret udkast, gennemgås af NDI", som på selskab/ideer.
+3. **Intern compliance-tekst til kunden** (`omkostninger.html`): "Det er det tal, marketingmateriale skal gengive ærligt". Det er en intern note og bør omformuleres (se UX SHOULD 5).
+4. **"Gns. årligt afkast +26,4 %"** på fonden står uden periode i selve KPI'en. Perioden står kun i nabo-KPI'en. Tilføj "siden start 22. sep. 2023" (afkasttal skal angive periode).
+5. Uændret: KID-link er der, men SRI-tal mangler på omkostninger, sammenlign, temaer og værdikæder. Det er OK for ikke-afkastsider, så det er lav prioritet.
+
+### Prioritet
+Ingen blokere. **2** (AI-mærkning værdikæder) → **4** (periode på CAGR) → **1** (KID-betegnelse) → **3**.
