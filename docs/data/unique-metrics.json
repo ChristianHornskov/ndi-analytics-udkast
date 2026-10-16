@@ -16,6 +16,18 @@
           "ai": true
         },
         {
+          "label": "Forretningsmodel",
+          "value": "Biler, energilagring og service",
+          "hint": "Hovedindtægten er salg af elbiler. Energilagring (Powerwall til hjem, Megapack til elnet og virksomheder) og service, herunder ladenetværket, er de øvrige ben.",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "Vertikal integration",
+          "hint": "Udvikler selv batteripakker, effektelektronik, software og fabrikker og driver eget ladenetværk (Supercharger). Afhænger samtidig af batteriråvarer og af direktør Elon Musk. Beskrivelse, ikke en vurdering.",
+          "ai": true
+        },
+        {
           "label": "Plads i værdikæden",
           "value": "Energi led 4 + robotik led 3",
           "hint": "Energilagring (Energi-kæden, led 4) og køretøjer/robotik (Robotik-kæden, led 3). Placeringen er pædagogisk; Tesla bygger ikke datacentre.",
@@ -50,6 +62,18 @@
           "ai": true
         },
         {
+          "label": "Forretningsmodel",
+          "value": "Chips og systemer til datacentre",
+          "hint": "Datacenter-forretningen (GPU'er, hele systemer og netværk) er den største del. Gaming, professionel grafik og biler er mindre ben.",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "Softwareøkosystemet CUDA",
+          "hint": "Udviklere har i mange år bygget værktøjer og modeller på CUDA, så et skift til andre chips kræver ekstra arbejde. Chipsene produceres hos eksterne fabrikker (især TSMC). Beskrivelse, ikke en vurdering.",
+          "ai": true
+        },
+        {
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 3: chipdesign",
           "hint": "Designer chips og systemer til store, parallelle beregninger.",
@@ -81,6 +105,18 @@
           "label": "Hvad ejer man?",
           "value": "Ejerandele, ikke ét produkt",
           "hint": "Indirekte eksponering mod blandt andet Arm, Vision Funds og telekommunikation.",
+          "ai": true
+        },
+        {
+          "label": "Forretningsmodel",
+          "value": "Værdi i ejerandele",
+          "hint": "Koncernen tjener primært på værdien af sine ejerandele (bl.a. Arm, Vision Funds og telekom via SoftBank Corp.) og på salg eller belåning af dem, ikke på salg af egne produkter.",
+          "ai": true
+        },
+        {
+          "label": "Nøgleafhængighed",
+          "value": "Arm, finansiering og grundlæggeren",
+          "hint": "En stor del af værdien ligger i ejerandelen i Arm. Koncernen finansierer sig blandt andet med lån, og grundlægger Masayoshi Son præger investeringsstrategien, som de seneste år er samlet om AI (bl.a. en stor ejerandel i OpenAI). Beskrivelse, ikke en vurdering.",
           "ai": true
         },
         {
@@ -288,6 +324,18 @@
           "ai": true
         },
         {
+          "label": "Forretningsmodel",
+          "value": "Chips + softwareabonnementer",
+          "hint": "To ben: halvlederløsninger og infrastruktursoftware. Softwaredelen (bl.a. VMware, købt 2023) sælges i stigende grad som abonnement.",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "Bredde og kundetilpassede chips",
+          "hint": "En bred portefølje af netværks- og forbindelseschips samt chips, som store datacenterkunder designer sammen med Broadcom til deres egne systemer. Produktionen sker i høj grad hos eksterne chipfabrikker. Beskrivelse, ikke en vurdering.",
+          "ai": true
+        },
+        {
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 7: optik og netværk",
           "hint": "Forbinder chips i datacentre. Kundetilpassede chips placerer den også i led 3. Placeringen er pædagogisk.",
@@ -492,6 +540,18 @@
           "ai": true
         },
         {
+          "label": "Forretningsmodel",
+          "value": "Provision, spil og finansydelser",
+          "hint": "Shopee tjener på gebyrer og annoncer fra sælgere, Garena på onlinespil (bl.a. Free Fire), og Monee på betalinger og lån. Primært i Sydøstasien og Latinamerika.",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "Et samlet økosystem",
+          "hint": "Kunder kan handle på Shopee og betale eller låne gennem Monee i samme økosystem, med egen levering i flere markeder. Beskrivelse, ikke en vurdering.",
+          "ai": true
+        },
+        {
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 12: forbrugerapps",
           "hint": "Der hvor digitale tjenester møder forbrugeren. Sea bygger ikke selv compute-infrastruktur. Placeringen er pædagogisk.",
@@ -523,6 +583,18 @@
           "label": "Hvad ejer man?",
           "value": "Digital bilhandel med fysisk bagland",
           "hint": "En onlineplatform til brugte biler, koblet til inspektion, klargøring, transport og finansiering.",
+          "ai": true
+        },
+        {
+          "label": "Forretningsmodel",
+          "value": "Bilsalg plus finansiering",
+          "hint": "Tjener på salg af brugte biler online (med levering eller afhentning, bl.a. fra bilautomater) og på billån, som i vid udstrækning sælges videre til investorer.",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "Eget fysisk bagland",
+          "hint": "Eget netværk af klargøringscentre og transport bag onlinesalget. Det er dyrt og tager tid at opbygge. Beskrivelse, ikke en vurdering.",
           "ai": true
         },
         {
@@ -560,6 +632,18 @@
           "ai": true
         },
         {
+          "label": "Forretningsmodel",
+          "value": "Komponenter til netværk",
+          "hint": "Sælger lasere, optiske chips og moduler til producenter af netværksudstyr og direkte til store datacenterkunder, samt lasere til industri og 3D-sensorer.",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "Egen laserproduktion",
+          "hint": "Laserchips kræver specialiseret produktion og mange års procesviden, som Lumentum har i egne fabrikker. Beskrivelse, ikke en vurdering.",
+          "ai": true
+        },
+        {
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 7: optik og netværk",
           "hint": "Data skal flyttes hurtigt mellem mange chips. Optik er en af de fysiske flaskehalse. Placeringen er pædagogisk.",
@@ -594,6 +678,18 @@
           "ai": true
         },
         {
+          "label": "Forretningsmodel",
+          "value": "Salg af timing-chips",
+          "hint": "Sælger timing-chips (oscillatorer og clock-chips) til producenter af servere, netværk, biler, industri og forbrugerelektronik. Produktionen sker hos eksterne partnere.",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "MEMS-timing i silicium",
+          "hint": "Har specialiseret sig i timing i silicium (MEMS) frem for kvartskrystaller, som branchen traditionelt har brugt. Beskrivelse, ikke en vurdering.",
+          "ai": true
+        },
+        {
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 3: chipdesign",
           "hint": "En lille, men nødvendig komponent i servere, netværk, biler og forbrugerelektronik. Placeringen er pædagogisk.",
@@ -625,6 +721,18 @@
           "label": "Hvad ejer man?",
           "value": "Værktøjer til hjemmesider",
           "hint": "En platform, hvor små virksomheder og privatpersoner bygger og driver hjemmesider og webshops.",
+          "ai": true
+        },
+        {
+          "label": "Forretningsmodel",
+          "value": "Abonnementer",
+          "hint": "Gratis at starte; kunder betaler abonnement for eget domæne, webshop og flere funktioner. Tjener også på betalinger og på bureauer, der bygger sider for kunder.",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "Brugervenlighed og bredde",
+          "hint": "Mange små virksomheder har deres side og webshop samlet ét sted, hvilket gør skift besværligt. AI-værktøjer kan både styrke og udfordre det. Beskrivelse, ikke en vurdering.",
           "ai": true
         },
         {
@@ -696,6 +804,18 @@
           "ai": true
         },
         {
+          "label": "Forretningsmodel",
+          "value": "Markedsplads, betalinger og lån",
+          "hint": "Tjener på gebyrer og annoncer på markedspladsen, på leveringer (Mercado Envios) og på betalinger og kredit gennem Mercado Pago. Størst i Brasilien, Mexico og Argentina.",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "Egen logistik og betaling",
+          "hint": "Markedsplads, eget leveringsnetværk og betalingsløsning hænger sammen, så handel, levering og betaling sker hos samme selskab. Beskrivelse, ikke en vurdering.",
+          "ai": true
+        },
+        {
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 12: forbrugerapps",
           "hint": "Der hvor digitale tjenester møder forbrugeren. Placeringen er pædagogisk.",
@@ -727,6 +847,18 @@
           "label": "Hvad ejer man?",
           "value": "Lejet AI-computerkraft",
           "hint": "En cloudplatform med GPU-servere, lagring og netværk, som kunder lejer til at træne og køre AI-modeller.",
+          "ai": true
+        },
+        {
+          "label": "Forretningsmodel",
+          "value": "Udlejning af GPU-kapacitet",
+          "hint": "Kunder lejer GPU-servere, ofte på flerårige kontrakter. Udbygningen finansieres i høj grad med lån, og en stor del af omsætningen kommer fra få store AI-kunder.",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "Specialiseret AI-cloud",
+          "hint": "Bygget til AI-beregninger fra starten (GPU'er, netværk og software til at styre store klynger), i modsætning til en bred, generel cloud. Beskrivelse, ikke en vurdering.",
           "ai": true
         },
         {
