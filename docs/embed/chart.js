@@ -275,11 +275,14 @@
     const yZero = Math.max(top, Math.min(plotBottom, y(0)));
     const deepest = Math.min(...series.map((p) => p.value));
     const belowEnd = Math.max(yZero + 8, y(Math.min(0, deepest)));
+    const trough = series.reduce((a, b) => (b.value < a.value ? b : a));
+    // Kun et tal, når dalen er høj nok til at læses. Et kort dyk på hele perioden bliver i fyldet.
+    const markTrough = trough.value < -0.05 && (y(trough.value) - yZero) >= 22;
 
     svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
     const parts = [
       `<title id="svg-title">Totalafkast for ${state.fund}</title>`,
-      `<desc id="svg-description">Totalafkast i DKK, indekseret til 0 % den ${fmtDate(first.date)}. Seneste punkt ${fmtDate(last.date)}: ${pct(periodReturn, true)}.${deepest < -0.05 ? ' Feltet under nul er rosa.' : ''} Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast.</desc>`,
+      `<desc id="svg-description">Totalafkast i DKK, indekseret til 0 % den ${fmtDate(first.date)}. Seneste punkt ${fmtDate(last.date)}: ${pct(periodReturn, true)}.${deepest < -0.05 ? ' Feltet under nul er rosa.' : ''}${markTrough ? ` Dybeste punkt under nul er ${pct(trough.value, true)} den ${fmtDate(trough.date)}.` : ''} Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast.</desc>`,
       `<defs><linearGradient id="fund-fill" gradientUnits="userSpaceOnUse" x1="0" y1="${top}" x2="0" y2="${yZero}"><stop offset="0%" stop-color="#9ecfd6" stop-opacity=".22"/><stop offset="100%" stop-color="#9ecfd6" stop-opacity=".05"/></linearGradient><linearGradient id="below-fill" gradientUnits="userSpaceOnUse" x1="0" y1="${yZero}" x2="0" y2="${belowEnd}"><stop offset="0%" stop-color="#e5b3ba" stop-opacity=".45"/><stop offset="100%" stop-color="#e5b3ba" stop-opacity=".92"/></linearGradient><clipPath id="above-zero"><rect x="0" y="0" width="${width}" height="${Math.max(0, yZero)}"/></clipPath><clipPath id="below-zero"><rect x="0" y="${yZero}" width="${width}" height="${Math.max(0, plotBottom - yZero)}"/></clipPath></defs>`
     ];
 
@@ -305,10 +308,18 @@
     parts.push(`<path class="fund-area" d="${area}" fill="url(#fund-fill)" clip-path="url(#above-zero)"/>`);
     parts.push(`<path class="fund-area below" d="${area}" fill="url(#below-fill)" clip-path="url(#below-zero)"/>`);
     parts.push(`<path class="fund-path" d="${line}"/>`);
+    if (markTrough) {
+      const tx = x(trough);
+      const ty = y(trough.value);
+      const size = mobile ? 12 : Math.max(11, width / 83);
+      parts.push(`<circle class="trough-dot" cx="${tx.toFixed(2)}" cy="${ty.toFixed(2)}" r="3.2"/>`);
+      parts.push(`<text class="trough-label" x="${tx.toFixed(2)}" y="${(ty + 20).toFixed(2)}" text-anchor="middle" style="font-size:${size}px">${escape(pct(trough.value, true))}</text>`);
+    }
     parts.push(`<text class="end-label ${toneOf(periodReturn)}" x="${width - right + 8}" y="${y(last.value) + 4}" style="font-size:${mobile ? 12 : Math.max(11, width / 83)}px">${pct(periodReturn, true)}</text>`);
     parts.push(`<g id="crosshair-group"><line id="crosshair" class="crosshair" y1="${top}" y2="${height - bottom}"/><circle id="fund-dot" r="3.4" fill="var(--cyan)" stroke="var(--panel)" stroke-width="1.5"/></g>`);
     parts.push(`<rect id="plot-hit" x="${left}" y="0" width="${plotWidth}" height="${height - bottom + 10}" fill="transparent" style="cursor:crosshair"/>`);
     svg.innerHTML = parts.join('');
+    placeTroughLabel(svg);
 
     state.geometry = { x, y, left, plotWidth, width, height, t0, t1 };
     $('#chart-slider').max = String(series.length - 1);
@@ -316,6 +327,32 @@
     setPoint(index, false);
     $('#chart-loading').hidden = true;
     sendHeight();
+  }
+
+  function placeTroughLabel(svg) {
+    const label = svg.querySelector('.trough-label');
+    const dot = svg.querySelector('.trough-dot');
+    if (!label || !dot) return;
+    const vb = svg.viewBox.baseVal;
+    const overlaps = (a, b) => a.width > 0 && b.width > 0
+      && a.x < b.x + b.width && a.x + a.width > b.x
+      && a.y < b.y + b.height && a.y + a.height > b.y;
+    const dy = (n) => label.setAttribute('y', (Number(label.getAttribute('y')) + n).toFixed(2));
+    let box = label.getBBox();
+    const dotY = Number(dot.getAttribute('cy'));
+    if (box.y < dotY + 8) dy(dotY + 8 - box.y);
+    box = label.getBBox();
+    const grids = [...svg.querySelectorAll('.axis-grid')].map((line) => Number(line.getAttribute('y1')));
+    for (const gy of grids) {
+      if (gy > box.y - 1 && gy < box.y + box.height + 1) dy(gy + 3 - box.y);
+    }
+    box = label.getBBox();
+    if (box.y + box.height > vb.height - 2) dy(vb.height - 2 - (box.y + box.height));
+    box = label.getBBox();
+    const others = [...svg.querySelectorAll('text')].filter((n) => n !== label).map((n) => n.getBBox());
+    if (others.some((b) => overlaps(box, b)) || box.x < 1 || box.x + box.width > vb.width - 1 || box.y < 1 || box.y + box.height > vb.height - 1) {
+      label.remove();
+    }
   }
 
   function setPoint(index, showTooltip) {
