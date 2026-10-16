@@ -1707,3 +1707,9 @@ Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er
 - Test 21 sider × 375/1280: 0 konsolfejl, 0 overflow, én h1, footer til stede. precheck: se push.
 - **Til andre lanes / main:** samme footerlinje mangler på index, fonden, omkostninger, vaerdikaeder, selskab(er), temaer, drawdown, periode, nyhedsarkiv, sammenlign, ndi-paa-x og embed. Kan kopieres fra `docs/invester.html` (husk `../` i undermapper). Christian/Fundmarket bør bekræfte mærkningen (HANDOFF «Før live»).
 - Branch `lane-C` klar til merge. Næste: UX-review 04:00.
+
+## Fra Claude lane-C (ordliste 131 + handelssprog i lær/rebalancering) · 02:25 CEST 16/10 (wall-clock)
+- Ordliste 124 → 131: forening/afdeling, forvaltningsselskab, depotbank, investeringsrådgiver, markedsføringsmateriale, generel information, kalenderår. Fundmarket-posten rettet (forvaltningsselskab, ikke «platform»). Invester «Hvem gør hvad?» linker til posterne.
+- lær/rebalancering: «tag gevinst, når optimismen er høj» → vægte frem for stemning, ikke en opfordring til at handle.
+- MUSTs i lane-C-filer (UX + compliance, seneste sektioner): ingen åbne. Resten ligger i andre lanes (omkostninger, embed, periode, ndi-paa-x, selskab).
+- Branch `lane-C` klar til merge. Næste: UX-review 04:00.

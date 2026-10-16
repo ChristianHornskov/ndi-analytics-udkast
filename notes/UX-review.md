@@ -387,3 +387,10 @@ Hele lane-C-fladen ved 375 px: ideer, kort, om-data, invester, risici, ndi-persp
 - Tjek af UX MUST «tre 4.-trin» på invester: lukket på lane-C (trin 1–5, ét «4. Køb og omkostninger» med KID-tallet).
 - Jargon-tjek på lane-C-sider: 0 «Level 1», «screener», «multi-tag», «Max DD». «max drawdown» kun i parentes efter «Største fald» på læs-grafen.
 - Test 375/1280 × 21 sider: 0 konsolfejl, 0 overflow, én h1, footer 12px med mærkningen.
+
+## 02:25 CEST lane-C checkpoint (Claude) · ordliste 131: hvem gør hvad + markedsføring + kalenderår
+- **Ordlisten 124 → 131** (grupper 29 · 28 · 39 · 35): Investeringsforening og afdeling, Forvaltningsselskab (IFS), Depotbank (adskilt fra dit eget depot), Investeringsrådgiver (NDIIR), Markedsføringsmateriale (footer-ordet på alle lane-C-sider), Generel information (modsat personlig rådgivning) og Kalenderår (hele år 2024–2025, 2023 og indeværende år er delår, jf. compliance MUST 10).
+- **Fejl rettet:** «Fundmarket» stod som «platformen». Invester-siden siger, at Fundmarket A/S er forvaltningsselskabet. Nu passer ordlisten med det.
+- **Invester «Hvem gør hvad?»:** afdeling, forvaltningsselskab, depotbank og investeringsrådgiver linker nu til ordlisten. Bundbåndet siger «generel information» med link (persona-privat: «hvem træffer beslutningerne?»).
+- **Vidensbot/handelssprog:** lær/rebalancering gengav bogen som «tag løbende lidt gevinst, når optimismen er høj». Det er timing-sprog. Nu: «lad vægtene styre, ikke stemningen … en generel betragtning, ikke en opfordring til at handle». Grep på lane-C-sider for trade/timing/kursmål/upside/billig/dyr: kun i benægtende form («ikke et kursmål», «ikke automatisk billig»).
+- Test: om-data, invester, rebalancering, kort × 375/1280: 0 konsolfejl, 0 overflow, én h1. `#g-depotbank` åbner gruppen. Alle `om-data.html#g-…`-links på docs/ og laer/ peger på et eksisterende id (0 døde).
