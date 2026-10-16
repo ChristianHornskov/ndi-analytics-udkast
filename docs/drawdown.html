@@ -267,6 +267,28 @@
  const stem = Math.max(8, Math.round((Math.abs(e.dd) / deepMax) * 28));
  return `<li class="${openRow ? 'open' : ''}"><button type="button" class="ep-jump" data-date="${e.troughD}" aria-pressed="false"><span class="depth"><i class="ep-stem" style="height:${stem}px" aria-hidden="true"></i><span>${fmtPct(e.dd)}</span></span><span class="meta"><strong>${fmtDate(e.peakD)}</strong> til bund <strong>${fmtDate(e.troughD)}</strong>. ${tail}<span class="dur" aria-hidden="true"><span style="width:${w}%"></span></span></span></button></li>`;
  }).join('');
+ const dayBetween = (a, b) => Math.max(0, Math.round((Date.parse(b + 'T12:00:00Z') - Date.parse(a + 'T12:00:00Z')) / 86400000));
+ const lifeCols = [];
+ const lifeCells = [];
+ let lifeCursor = rows[0].d;
+ for (const e of deep) {
+ const gap = dayBetween(lifeCursor, e.peakD);
+ if (gap > 0) {
+ lifeCols.push(`minmax(0,${gap}fr)`);
+ lifeCells.push('<span class="life-gap" aria-hidden="true"></span>');
+ }
+ lifeCols.push(`minmax(44px,${spanDays(e)}fr)`);
+ lifeCells.push(`<button type="button" class="life-ep${!e.recoveredD ? ' open' : ''}" data-date="${e.troughD}" aria-pressed="false" aria-label="${fmtDate(e.peakD)} til ${fmtDate(e.troughD)}, ${fmtPct(e.dd)}"><i aria-hidden="true"></i></button>`);
+ lifeCursor = endOf(e);
+ }
+ const lifeTail = dayBetween(lifeCursor, rows[rows.length - 1].d);
+ if (lifeTail > 0) {
+ lifeCols.push(`minmax(0,${lifeTail}fr)`);
+ lifeCells.push('<span class="life-gap" aria-hidden="true"></span>');
+ }
+ const life = deep.length
+ ? `<figure class="life"><div class="life-track" role="group" aria-label="Dybe episoder på hele serien" style="grid-template-columns:${lifeCols.join(' ')}">${lifeCells.join('')}</div><p class="life-say" id="life-say">Bredden er tiden, fra <span class="ep-pct">${fmtDate(rows[0].d)}</span> til <span class="ep-pct">${fmtDate(rows[rows.length - 1].d)}</span>.</p></figure>`
+ : '';
 
  const maxRet = Math.max(...years.map(y => Math.abs(y.ret)), 1);
  const deepYear = dd ? dd.troughD.slice(0, 4) : '';
@@ -350,6 +372,7 @@
  <figure class="figure plain">${depthPlot()}<figcaption><p>${depthLead}</p>${depthMore ? `<details class="more"><summary>Sådan læser du prikkerne</summary><p>${depthMore}</p></details>` : ''}</figcaption></figure>
  <h2 class="h-section">De dybe episoder</h2>
  <p class="src" style="margin-top:0">${usedGate ? 'Episoder dybere end 10 %.' : 'De dybeste episoder.'} De øvrige ${eps.length - deep.length} er med i middel, median og prikkerne. Vælg en episode. Tidspunkterne sætter dagen <span class="ep-pct">på kurven.</span></p>
+ ${life}
  ${deep.length ? `<div class="ep-path" id="ep-path"><h3 class="ep-path-k" id="ep-path-h">Tre tidspunkter</h3><p class="src ep-path-lead">Afstanden mellem prikkerne er tiden. Et klik sætter dagen <span class="ep-pct">på kurven.</span></p><div class="ep-rail" id="ep-rail" role="group" aria-labelledby="ep-path-h"></div><p class="ep-path-say" id="ep-path-say" aria-live="polite"></p></div>` : ''}
  <ol class="ep-ledger">${ledger}</ol>
  <h2 class="h-section">Kalenderår</h2>
@@ -428,6 +451,15 @@
  b.setAttribute('aria-pressed', String(on));
  });
  const epHere = deep.find((e) => u.d >= e.peakD && u.d <= endOf(e));
+ document.querySelectorAll('.life-ep').forEach((b) => {
+ b.setAttribute('aria-pressed', String(!!epHere && b.dataset.date === epHere.troughD));
+ });
+ const lifeSay = document.getElementById('life-say');
+ if (lifeSay) {
+ lifeSay.innerHTML = epHere
+ ? `${fmtPct(epHere.dd)} fra <span class="ep-pct">${fmtDate(epHere.peakD)}</span> til bund <span class="ep-pct">${fmtDate(epHere.troughD)}</span>.`
+ : `Mellem episoderne. Serien går fra <span class="ep-pct">${fmtDate(rows[0].d)}</span> til <span class="ep-pct">${fmtDate(rows[rows.length - 1].d)}</span>.`;
+ }
  if (epHere) paintPath(epHere, u.d);
  };
  const fromClient = (ev) => {
@@ -459,7 +491,7 @@
  svg.addEventListener('pointerup', () => { stick = false; });
  svg.addEventListener('pointercancel', () => { stick = false; });
  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
- document.querySelectorAll('.ep-jump').forEach((btn) => {
+ document.querySelectorAll('.ep-jump, .life-ep').forEach((btn) => {
  btn.addEventListener('click', () => {
  const d = btn.dataset.date;
  const hit = uw.findIndex((u) => u.d === d);
