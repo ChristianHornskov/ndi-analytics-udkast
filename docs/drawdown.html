@@ -26,8 +26,9 @@
  <a class="brand" href="index.html"><img src="assets/mark.svg" width="34" height="27" alt=""><span>NewDeal Invest</span></a>
  <nav class="nav"><a href="index.html?view=fonden">← Fonden</a><a href="om-data.html#g-drawdown">Ordliste</a></nav>
  </header>
+ <p class="print-mast">NewDeal Invest. Udskrift. Markedsføringsmateriale. Generel information, <span class="ep-pct">ikke investeringsrådgivning.</span> Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast.</p>
  <main id="main"><p class="muted">Henter…</p></main>
- <footer class="site-footer"><p><strong>Markedsføringsmateriale.</strong> Læs <a href="https://fundmarket.dk/wp-content/uploads/Faellesprospekt-for-afdelinger-og-andelsklasser-i-Investeringsforeningen-Portfoliomanager-opdateret-24.10.2025.pdf" rel="noopener" target="_blank">prospektet ↗</a> og KID for <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm140b" rel="noopener" target="_blank">PMINDI ↗</a> eller <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm145b" rel="noopener" target="_blank">PMINDIAKK ↗</a>, før du træffer en endelig investeringsbeslutning.</p><p>Udkast / noindex. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe penge.</p><p data-kid-footer></p></footer>
+ <footer class="site-footer"><p><strong>Markedsføringsmateriale.</strong> Læs <a href="https://fundmarket.dk/wp-content/uploads/Faellesprospekt-for-afdelinger-og-andelsklasser-i-Investeringsforeningen-Portfoliomanager-opdateret-24.10.2025.pdf" rel="noopener" target="_blank">prospektet ↗</a> og KID for <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm140b" rel="noopener" target="_blank">PMINDI ↗</a> eller <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm145b" rel="noopener" target="_blank">PMINDIAKK ↗</a>, før du træffer en endelig investeringsbeslutning.</p><p>Udkast / noindex. Generel information, <span class="ep-pct">ikke investeringsrådgivning.</span> Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan <span class="ep-pct">tabe penge.</span></p><p data-kid-footer></p></footer>
  <script type="module">
  import { loadAll, fundById, maxDrawdown, drawdownSummary, calendarYearReturns, WARN_HIST, fmtDate, fmtPct, loadFundMeta, kidFooterHtml } from './js/data.js';
  const [{ portfolio }, meta] = await Promise.all([loadAll(), loadFundMeta()]);
@@ -46,6 +47,7 @@
  <p class="lede">Ny andelsklasse. Fald fra top for PMINDIAKK vises efter <span class="ep-pct">12 måneders historik.</span> Ingen NAV eller graf før <span class="ep-pct">5. december 2026.</span> Klassen følger samme overordnede strategi <span class="ep-pct">som PMINDI.</span></p>
  ${meta?.funds?.pmindiakk?.priip ? `<p class="src">Risikoindikator (SRI) ${meta.funds.pmindiakk.priip.risk_class} af ${meta.funds.pmindiakk.priip.risk_scale_max} ifølge KID. Gælder fonden som helhed. <a href="${meta.funds.pmindiakk.priip.url}"><span class="ep-pct">Læs KID ↗</span></a></p>` : ''}
  <p class="link-row chip-links"><a href="sammenlign.html">Sammenlign andelsklasser →</a></p>
+ <p class="share-row"><button type="button" class="outline-btn" id="print-sheet">Udskriv</button></p>
  <p class="warn">${WARN_HIST}</p>`;
  } else if (!fund.data?.length) {
  main.innerHTML = `<p class="muted">Ingen serie.</p>`;
@@ -343,11 +345,12 @@
  <figure class="figure">${underwater()}<figcaption><p>0 % er på toppen. Kurven er afstanden til den løbende top, <span class="ep-pct">dag for dag.</span></p><ul class="uw-key"><li><i class="k-zero" aria-hidden="true"></i>0 % er toppen</li><li><i class="k-dot" aria-hidden="true"></i>Dybeste bund</li><li><i class="k-ring" aria-hidden="true"></i>Seneste dag</li><li><i class="k-pick" aria-hidden="true"></i>Valgt dag</li><li><i class="k-ep" aria-hidden="true"></i>Valgt episode</li>${usedGate ? '<li><i class="k-gate" aria-hidden="true"></i>10 % under nul</li>' : ''}<li><i class="k-span" aria-hidden="true"></i><i class="k-span open" aria-hidden="true"></i>Højde er dybde. Gul er åben</li></ul><details class="more"><summary>Sådan læser du grafen</summary><p>Bredden er tiden. Den gule del af kurven er den episode, den valgte dag ligger i. Et klik på søjlen hopper til bunden.${open ? ' Ordet top er starten på den åbne episode.' : ''}${recovery ? ' Ordet tilbage er dagen, det dybeste fald nåede <span class="ep-pct">sin top igen.</span>' : ''}</p></details></figcaption><div class="uw-scrub" style="--uw-pad:${(padL / W * 100).toFixed(3)}%;--uw-plot:${((W - padL - padR) / W * 100).toFixed(3)}%"><p id="uw-read" aria-live="polite"><span class="ep-pct">${fmtDate(uw[uw.length - 1].d)}</span>: ${fmtPct(uw[uw.length - 1].u)} under den <span class="ep-pct">løbende top</span>.</p><label class="sr-only" for="uw-slider">Vælg dag i serien</label><input id="uw-slider" type="range" min="0" max="${uw.length - 1}" value="${uw.length - 1}" aria-valuemin="0" aria-valuemax="${uw.length - 1}" aria-valuetext="${fmtDate(uw[uw.length - 1].d)}: ${fmtPct(uw[uw.length - 1].u)} under den løbende top."></div></figure>
  ${well || `<ul class="stat-strip" aria-label="Nøgletal under grafen"><li class="now"><span>Nu under vand</span><strong>${fmtPct(nowU)}</strong><small>pr. ${fmtDate(rows[rows.length - 1].d)}</small></li><li><span>Dybe episoder</span><strong>${deep.length}</strong><small>${usedGate ? 'dybere end 10 %' : 'de dybeste'}</small></li><li><span>Længste</span><strong>${longDays} dage</strong><small>${longNote}</small></li></ul>`}
  ${peakShare}
- <p class="share-row"><button type="button" class="outline-btn" id="share-chart">Del grafen</button><span id="share-note" class="src" hidden></span></p>
+ <p class="share-row"><button type="button" class="outline-btn" id="share-chart">Del grafen</button><button type="button" class="outline-btn" id="print-sheet">Udskriv</button><span id="share-note" class="src" hidden></span></p>
  <h2 class="h-section">Hvor dybe er faldene?</h2>
  <figure class="figure plain">${depthPlot()}<figcaption><p>${depthLead}</p>${depthMore ? `<details class="more"><summary>Sådan læser du prikkerne</summary><p>${depthMore}</p></details>` : ''}</figcaption></figure>
  <h2 class="h-section">De dybe episoder</h2>
- <p class="src" style="margin-top:0">${usedGate ? 'Episoder dybere end 10 %.' : 'De dybeste episoder.'} De øvrige ${eps.length - deep.length} er med i middel, median og prikkerne. Vælg en episode, eller klik søjlen, for at se bunden <span class="ep-pct">på kurven.</span></p>
+ <p class="src" style="margin-top:0">${usedGate ? 'Episoder dybere end 10 %.' : 'De dybeste episoder.'} De øvrige ${eps.length - deep.length} er med i middel, median og prikkerne. Vælg en episode. Tidspunkterne sætter dagen <span class="ep-pct">på kurven.</span></p>
+ ${deep.length ? `<div class="ep-path" id="ep-path"><h3 class="ep-path-k" id="ep-path-h">Tre tidspunkter</h3><p class="src ep-path-lead">Afstanden mellem prikkerne er tiden. Et klik sætter dagen <span class="ep-pct">på kurven.</span></p><div class="ep-rail" id="ep-rail" role="group" aria-labelledby="ep-path-h"></div><p class="ep-path-say" id="ep-path-say" aria-live="polite"></p></div>` : ''}
  <ol class="ep-ledger">${ledger}</ol>
  <h2 class="h-section">Kalenderår</h2>
  <div class="year-rail">${yearCells}</div>
@@ -424,6 +427,8 @@
  const on = [...document.querySelectorAll('.uw-span.on')].some((el) => el.dataset.trough === b.dataset.date);
  b.setAttribute('aria-pressed', String(on));
  });
+ const epHere = deep.find((e) => u.d >= e.peakD && u.d <= endOf(e));
+ if (epHere) paintPath(epHere, u.d);
  };
  const fromClient = (ev) => {
  const rect = svg.getBoundingClientRect();
@@ -462,6 +467,48 @@
  svg.scrollIntoView({ block: 'nearest', behavior: reduce ? 'auto' : 'smooth' });
  });
  });
+ let pathKey = '';
+ const paintPath = (e, day) => {
+ const rail = document.getElementById('ep-rail');
+ const say = document.getElementById('ep-path-say');
+ if (!rail || !say || !e) return;
+ const tPeak = Date.parse(e.peakD + 'T12:00:00Z');
+ const tEnd = Date.parse(endOf(e) + 'T12:00:00Z');
+ const span = Math.max(1, tEnd - tPeak);
+ const at = (d) => Math.max(0, Math.min(100, ((Date.parse(d + 'T12:00:00Z') - tPeak) / span) * 100));
+ const stops = [
+ { id: 'top', d: e.peakD, label: 'Top', say: `Toppen <span class="ep-pct">${fmtDate(e.peakD)}</span>. Herfra måles faldet.` },
+ { id: 'bund', d: e.troughD, label: 'Bund', say: `Bunden <span class="ep-pct">${fmtDate(e.troughD)}</span>, ${fmtPct(e.dd)} <span class="ep-pct">under toppen</span>.` }
+ ];
+ if (e.recoveredD) {
+ stops.push({ id: 'tilbage', d: e.recoveredD, label: 'Tilbage', say: `Tilbage på toppen <span class="ep-pct">${fmtDate(e.recoveredD)}</span>. ${spanDays(e)} dage fra top <span class="ep-pct">til genopretning</span>.` });
+ } else {
+ const lastD = rows[rows.length - 1].d;
+ stops.push({ id: 'nu', d: lastD, label: 'Nu', say: `Seneste dag <span class="ep-pct">${fmtDate(lastD)}</span>, ${fmtPct(nowU)} <span class="ep-pct">under toppen</span>. Episoden er <span class="ep-pct">stadig åben</span>.` });
+ }
+ stops.forEach((s, i) => { s.pct = i === stops.length - 1 ? 100 : at(s.d); });
+ for (let i = 1; i < stops.length; i++) {
+ if (stops[i].pct - stops[i - 1].pct < 16) stops[i].above = !stops[i - 1].above;
+ }
+ const hit = stops.find((s) => s.d === day);
+ const key = `${e.peakD}|${hit ? hit.id : ''}`;
+ if (key === pathKey) return;
+ pathKey = key;
+ rail.innerHTML = `<span class="ep-line" aria-hidden="true"></span>` + stops.map((s) => {
+ const on = hit && hit.id === s.id;
+ return `<button type="button" class="ep-stop${s.above ? ' above' : ''}" style="--at:${s.pct.toFixed(1)}" data-date="${s.d}" aria-pressed="${on ? 'true' : 'false'}" aria-label="${s.label}, ${fmtDate(s.d)}"><i aria-hidden="true"></i><span class="ep-stop-lab">${s.label}</span></button>`;
+ }).join('');
+ say.innerHTML = hit ? hit.say : `Top <span class="ep-pct">${fmtDate(e.peakD)}</span>. Bund ${fmtPct(e.dd)} den <span class="ep-pct">${fmtDate(e.troughD)}</span>.`;
+ rail.querySelectorAll('.ep-stop').forEach((btn) => {
+ btn.addEventListener('click', () => {
+ const d = btn.dataset.date;
+ const i = uw.findIndex((u) => u.d === d);
+ show(i >= 0 ? i : nearest(Date.parse(d + 'T12:00:00Z')));
+ });
+ });
+ };
+ const pathDefault = (open && deep.some((e) => e.peakD === open.peakD) && open) || deep.find((e) => Math.abs(e.dd - sum.max) < 0.001) || deep[0];
+ if (pathDefault) paintPath(pathDefault, pathDefault.recoveredD ? pathDefault.troughD : rows[rows.length - 1].d);
  show(uw.length - 1);
  const shareBtn = document.getElementById('share-chart');
  const shareNote = document.getElementById('share-note');
@@ -488,6 +535,7 @@
  }
  });
  }
+ document.getElementById('print-sheet')?.addEventListener('click', () => { window.print(); });
  </script>
 </body>
 </html>

@@ -114,6 +114,18 @@
  </div>
  ${riyBlock}
 
+ <section class="fork" aria-labelledby="fork-h">
+ <h2 class="h-section" id="fork-h">Udbyttets vej</h2>
+ <div class="fork-stage">
+ <p class="fork-src">Samme selskaber</p>
+ <div class="fork-split" role="group" aria-label="Hvor udbyttet går hen">
+ <button type="button" class="fork-arm a" data-arm="a" aria-pressed="true"><span class="fork-line" aria-hidden="true"></span><span class="fork-end">Ud til dig</span></button>
+ <button type="button" class="fork-arm b" data-arm="b" aria-pressed="false"><span class="fork-line loop" aria-hidden="true"></span><span class="fork-end">Bliver <span class="cmp-when">i fonden</span></span></button>
+ </div>
+ </div>
+ <p class="fork-say" id="fork-say">PMINDI udbetaler udbyttet <span class="cmp-when">til dig.</span> Klassen ejer de samme selskaber <span class="cmp-when">som PMINDIAKK.</span></p>
+ </section>
+
  <section class="cmp-time" aria-labelledby="tl-h">
  <h2 class="h-section" id="tl-h">Tidslinje</h2>
  <ol class="tl">
@@ -142,6 +154,17 @@
  <p class="link-row cmp-links chip-links"><a href="drawdown.html">Fald fra top (PMINDI) →</a> · <a href="vaerdikaeder.html">Værdikæder →</a> · <a href="laer/udbytte-vs-akk.html">Udbytte eller akkumulerende →</a></p>
  <p class="band">Hvilken klasse der passer, afhænger af din egen situation, fx skat og om du vil have udbytte udbetalt. Siden giver ikke rådgivning. Læs KID for begge klasser under <a href="risici.html" class="cmp-when">Risici / KID</a>.</p>
  <p class="warn">${WARN_HIST}</p>`;
+ const forkSay = {
+ a: 'PMINDI udbetaler udbyttet <span class="cmp-when">til dig.</span> Klassen ejer de samme selskaber <span class="cmp-when">som PMINDIAKK.</span>',
+ b: 'PMINDIAKK lader udbyttet blive <span class="cmp-when">i fonden.</span> Kursen vises efter <span class="cmp-when">12 måneder</span>, fra <span class="cmp-when">' + fmtDate(gateIso) + '</span>.'
+ };
+ const forkNote = document.getElementById('fork-say');
+ document.querySelectorAll('.fork-arm').forEach((btn) => {
+ btn.addEventListener('click', () => {
+ document.querySelectorAll('.fork-arm').forEach((b) => b.setAttribute('aria-pressed', String(b === btn)));
+ if (forkNote) forkNote.innerHTML = forkSay[btn.dataset.arm] || '';
+ });
+ });
  </script>
 </body>
 </html>
