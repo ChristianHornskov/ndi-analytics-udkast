@@ -150,6 +150,10 @@ Prikkerne til højre for 10 % under nul havde ingen tal. −16,7 %, −26,6 %, �
 
 På mobil stoppede stregen 2 px før næste prik. Den ender nu i prikkens midte, både vandret på bred skærm og lodret på 375. Den stiplede prik for 5. dec. 2026 er stadig åben. AKK-kortet har ingen afkastprocent. Ingen sidescroll ved 320. Ingen konsolfejl.
 
+### Update · tal på det dybeste dyk · 2026-10-16 ~02:54 CEST
+
+På år til dato bundede serien på −10,0 % den 30. mar. 2026. Tallet stod kun i tooltip. Det står nu under prikken, i samme rosa som feltet. Prikken og tallet rammer ikke kurven, sluttallet eller et gittertal, ved 1100, 375 og 320. Tooltip på den dag rammer hverken tallet eller sluttallet +4,0 %. Hele perioden har et kort dyk i oktober 2023. Det er for lavt til et tal og bliver i det rosa felt. Sluttallet er stadig +104,8 %. 20. feb. 2026 er −2,5 %. PMINDIAKK har tom svg, ingen procent, og linket siger at drawdown vises efter 12 måneder. Ingen sidescroll. Ingen konsolfejl.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.

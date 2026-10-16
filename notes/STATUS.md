@@ -541,3 +541,13 @@ Stregen mellem datoerne stoppede før næste prik. På mobil var hullet 2 px. De
 Tjekket i Chromium ved 1280, 375 og 320. Ingen sidescroll, ingen konsolfejl.
 
 `lane-D` er klar til merge. Ikke main. Ikke færdig.
+
+## Fra Grok lane-D
+
+**2026-10-16 02:54 CEST. Tal på det dybeste dyk i embed. Ikke færdig.**
+
+På år til dato kunne man kun se −10,0 % den 30. mar. 2026 ved at holde musen over dalen. Tallet står nu under prikken, i samme rosa som feltet under nul. Hele perioden har et kort dyk, for lavt til et tal. Tallene i rækken er uændrede: +104,8 %, +26,4 % og +4,0 %. PMINDIAKK har stadig tom svg og ingen procent.
+
+Tjekket i Chromium ved 1100, 375 og 320. Ingen sidescroll, ingen konsolfejl. Tooltip rammer ikke tallet.
+
+`lane-D` er klar til merge. Ikke main. Ikke færdig.
