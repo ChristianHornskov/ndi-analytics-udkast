@@ -347,6 +347,9 @@
               "sym": "APLD",
               "theme": "software"
             }
+          ],
+          "facts": [
+            "IREN (tidl. Iris Energy): IREN skriver, at det selv ejer og driver datacentre, der er bygget til regnekraft, som bruger meget strøm på lidt plads. Selskabet skriver også, at det har sikret over 5 GW strøm fordelt på 8 steder i Nordamerika, Europa og Australien. De største anlæg i Sweetwater (Texas) og Oklahoma er under opførelse eller i udvikling, så en stor del af kapaciteten er en plan. Ifølge siden dækker '100 % vedvarende energi' også købte certifikater (RECs). Siden er læst i oktober 2026, altså efter beholdningen."
           ]
         },
         {
@@ -1373,6 +1376,10 @@
               "sym": "FLEX",
               "theme": "connect"
             }
+          ],
+          "facts": [
+            "Super Micro Computer: Supermicro kalder sig leverandør af 'Rack-Scale Total IT Solutions', altså færdige serverskabe med servere, lager og netværk samlet på forhånd. Selskabet fremhæver væskekøling direkte på chippen (DLC) og skriver, at det designer, udvikler og producerer i USA med hovedsæde i San Jose i Californien. Chippene køber det hos andre, fx Chipdesign-leddet ovenfor.",
+            "Celestica: Celestica skriver, at det udvikler, designer og producerer 'rygraden' i AI og cloud. Selskabet tilbyder design, produktion, forsyningskæde og samling af hele serverskabe (rack-integration)."
           ]
         },
         {
@@ -1583,6 +1590,10 @@
               "sym": "RBRK",
               "theme": "software"
             }
+          ],
+          "facts": [
+            "Innodata: Innodata kalder sig et globalt data engineering-selskab. Det laver store mængder træningsdata til AI-modeller, tester modellerne for sikkerhed og fejl og bruger fagfolk til at rette svarene, når modellen tager fejl eller finder på noget (hallucinationer).",
+            "Snowflake: Snowflake beskriver sin platform som en 'Data Cloud', hvor virksomheder samler data, der ellers ligger spredt, deler dem sikkert og kører analyser og AI på dem. Selskabet lejer platformen ud og ejer ikke selv dataene."
           ]
         },
         {
