@@ -1365,6 +1365,269 @@ Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke me
 - **Fra Claude lane-R (01:35, cyklus 20, main `a664f4f`):** Selskab-empty-state er live ✅ ("Beskrivelse mangler" 0 hits). Men "AI-udkast" og "genereret med AI" vises nu over et tomt felt (TSMC, Lumentum). Vis kun mærket, når der er en summary. Brug linsens "Hvad ejer man?" som fallback. Ellers som i cyklus 19: alle 7 compliance-MUST er åbne.
 - **Fra Claude lane-R (01:40, cyklus 21, main `a664f4f`, intet docs-delta):** Nyt: `invester.html` har tre "trin 4" (merge-rest fra lane-C, l. 47/50/53). Behold én. Fodnoten siger "Central Information Dokument" → "Dokument med central information". PMINDIAKK NAV 98,40 står nu også på fonden-toggle. De 7 compliance-MUST er åbne.
 - **Fra Claude lane-R (01:43, cyklus 22, main `a664f4f`, intet docs-delta):** Ingen regression (17 sider ved 375: 0 fejl, 0 overflow). Nyt: vaerdikaeder har 14 tekstelementer under 11 px på mobil (flaskehals-tags 10 px). Sammenlign nævner ikke omkostninger. Ingen fremadskuende udsagn ✅. De 7 compliance-MUST og invester-trin-4 er åbne.
+- **Fra Claude lane-R (01:50, cyklus 23, main `ff29ec5`, intet docs-delta):** Nyt: KID'erne viser omkostninger pr. år på 2,79 %/2,85 % (5 år). Omkostninger-siden viser kun postsatser, så KID-tallet skal ind (compliance-MUST 9). Repoet er stadig offentligt (re-verificeret, MUST 8). company-months er nu kun kvartalsslut ✅. Alle KID-links svarer 200 ✅.
+- **Fra Claude lane-R (02:00, cyklus 24, main `90e7de8`, intet docs-delta):** 1.007 interne links svarer 200 ✅. Nyt MUST 10: afkast for perioder under 12 mdr. vises som år (periode "2023: +16,7 %" dækker kun 3 mdr. og ÅTD). Nyt MUST 11: embed-grafen har intet KID-link og ingen SRI eller mærkning. UX: "DYB SIDE"/"YTD dyb side" er jargon, "38.9 kr." bruger decimalpunktum, og tema overflower ved 320.
+- **Fra Claude lane-R (01:57, cyklus 25, main `90e7de8`, intet docs-delta):** Live ved 375: ingen regression. For-merge-tjek af lane A–X: lane-C lukker sandsynligvis SRI-mod-vol (MUST 6) ✅. lane-X forbedrer "MADS FØLGER" til "Konti Mads følger · ikke NDI's holdning", men omkostninger på lane-X har stadig ikke KID-tallet 2,79 %/2,85 % (MUST 9) og har 0 "kan tabe". lane-D embed mangler stadig KID/SRI (MUST 11). Invester har stadig tre "4."-trin.
+
+- Coordinator-loop 2026-10-16 01:59:43 CEST: MERGED origin/lane-R (ahead was 3) — precheck+smoke OK, pushed
+
+## Fra Claude lane-A · 2026-10-16 ~02:10 CEST (kvante: kulde, energi-bro og tjek dig selv)
+Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html, vaerdikaede.html, value-chains.json og notes.
+1. **Kvante: "Hvorfor skal en kvantechip være så kold?"** Ny sektion (`#q-cold`) med et lodret termometer på logaritmisk skala: stuetemperatur, Antarktis, flydende kvælstof, flydende helium, det tomme rum og en kryostat på ca. 0,01 K. Ved siden af står en årsagskæde i fire trin (varme, dekohærens, fejl, kulde og fejlkorrektion) med links til ordbogen, og en note om, at ikke alle typer qubits skal være så kolde. En strøm-boks hopper til energi (elnet) og chipdesign. Alt er mærket baggrund og "ikke en vurdering af enkelte selskaber og ikke en anbefaling". Data ligger i `quantum.cold`.
+2. **Kvante-broer:** Der er en ny bro "⚡ Elnet · Energi & elektrificering" (baggrund), så kvante nu peger på energikæden og ikke kun på AI.
+3. **Kvante: "Tjek dig selv".** Fire spørgsmål (`#q-quiz`) om kulde, NVIDIA-udsagnet (det er hans udsagn, ikke Mads' og ikke NDI's prognose, BLOG 13. januar 2025), cloud og usikre indtægter (BLOG 21. juli 2025). Quizzen bruger den fælles `renderQuiz`, og intet gemmes. Kvante-callout har fået links til "Hvorfor så koldt?" og "Tjek dig selv".
+4. **Adresselinjen:** Hop mellem led og afsnit opdaterer nu adressen (`#lk-…` eller `#sektion`). Før stod der fx `?kaede=ai-compute#q-hz` efter et hop, og et delt link pegede derfor forkert.
+5. **vaerdikaede.html:** Kvantekortet har fået "✓ Tjek dig selv: 4 spørgsmål →".
+Tjek: Playwright på 1280 og 375 med 0 konsolfejl og ingen sidescroll. Der er 6 temperaturpunkter, 5 broer og 4 spørgsmål. Deep-link til `#q-hz`, `#q-cold`, `#q-br` og `#q-quiz` lander under menuen. Svaret "Se leddet" åbner `#lk-q-core`, og Elnet-hop giver `?kaede=energy#lk-grid`. smoke.mjs 52/52 fail 0 (egen server på 8817). Precheck PASSED. Grep efter handelssprog og tankestreger i diff giver 0 reelle hits.
+Næste: energi-ledkortenes blurbs kan få en "hvor i strømvejen"-mini-strimmel, og robotik-fanen kan få "Tjek dig selv". Ikke færdig.
+
+
+## Fra Claude lane-A · 2026-10-16 ~01:30 CEST (robotik: løkke, usikkerheder og tjek dig selv)
+Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html, vaerdikaede.html, value-chains.json og notes.
+1. **Robotik: "Sanse, tænke, handle".** Ny sektion (`#p-loop`) med en cirkulær løkke i fire trin: sanse (komponenter), tænke (hop til fysisk AI i AI-compute), handle (komponenter) og lære (simulering). Hvert trin har et kort med link til leddet og til ordet i robot-ordbogen. Hover eller fokus fremhæver trinnet i både løkke og liste. Alt er mærket baggrund og "ikke NDI's analyse, ikke en vurdering af enkelte selskaber og ikke en anbefaling". Data ligger i `physical.loop`.
+2. **Robotik: "Hvad kan gå galt i robotkæden?"** (`#p-risk`). Seks kort: simulation mod virkelighed, Kinas forspring i produktionen, regler og ansvar, batteriet, prisen og tiden. To har en NDI-linje med kilde (BLOG 17. marts 2025 og 30. marts 2026, sidstnævnte med "der står ingen årstal"). Resten er mærket baggrund og vores udvalg. Bruger den fælles `renderRisks`.
+3. **Robotik: "Tjek dig selv"** (`#p-quiz`). Fire spørgsmål: fase 3 (BLOG 7. oktober 2024), hvad NDI tæller som robotter (BLOG 17. marts 2025), simulering og edge-AI (baggrund). Bruger den fælles `renderQuiz`, og intet gemmes.
+4. **Genveje** øverst i robotik-fanen (faser, løkke, usikkerheder, tjek dig selv, ordbog), og de vises kun, hvis sektionen findes. Robotleddene har fået korte navne (Komponenter, Simulering, Robotter).
+5. **vaerdikaede.html:** Robotkortet har fået "⚠ Hvad kan gå galt? 6 usikkerheder →" og "✓ Tjek dig selv: 4 spørgsmål →".
+Tjek: Playwright på 1280 og 375 med 0 konsolfejl og ingen sidescroll. 4 knuder, 6 kort, 11 ramte led og 4 spørgsmål. Deep-link til `#p-risk`, `#p-quiz`, `#p-loop` og `#phases` lander under menuen, quiz-svaret "Se de tre faser" lander også der, "Tænke" giver `?kaede=ai-compute#lk-physical-ai`, og "Lære" i løkken åbner `#lk-sim`. smoke.mjs 52/52 fail 0 (egen server på 8817). Precheck PASSED. Grep efter handelssprog og tankestreger i diff giver 0 hits.
+Næste: energi-ledkortene kan få en lille "hvor i strømvejen"-strimmel, og vaerdikaede.html's læringslink for robotik kan pege på løkken. Ikke færdig.
+
+
+## Fra Claude lane-A · 2026-10-16 ~01:35 CEST (AI-floden: usikkerheder, tjek dig selv og ordbog)
+Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html, vaerdikaede.html, value-chains.json og notes.
+1. **AI: "Hvad kan gå galt i AI-floden?"** (`#a-risk`) under flodkortet. Seks kort: strømmen slår ikke til, chips laves få steder, nogle led går i cykler, presset flytter sig, AI kan ændre forretningsmodeller, og efterspørgslen kan komme senere. Hvert kort har en mini-flod med alle 13 led i Mads' rækkefølge (energi til fysisk AI), hvor de ramte led lyser gult og åbner leddet. Fem kort har en NDI-linje med kilde (BLOG 10/8-26, 24/8-26, 30/3-26 to gange og 27/7-26). Kortet om cykler er mærket baggrund. Noten siger, at kortene ikke er NDI's vurdering af enkelte selskaber, ikke en rangering og ikke en anbefaling. Data ligger i `ai-compute.risks`, og `renderRisks` tager nu en ekstra klasse (`river`), så 13 prikker kan stå på én linje på 375 px.
+2. **AI: "Tjek dig selv"** (`#a-quiz`). Fem spørgsmål, alle med NDI-kilde: hvad vandet er, første flaskehals, hvor efterspørgslen kommer fra, begyndende pres i hukommelse og optik og hvad der sker, når en dæmning letter. Svar-linket åbner leddet eller sektionen. Intet gemmes.
+3. **AI-ordbog** (`#a-gloss-wrap`) med 12 ord (compute, flaskehals, GPU/XPU/CPU, fabless, foundry, EUV, HBM, optisk forbindelse, væskekøling, træning og inferens, open weights og agent). Baggrund, bortset fra open weights med kilde. Hvert ord åbner sit led.
+4. **Genveje** øverst i flodkortet (Flodkortet, Hvad kan gå galt?, Tjek dig selv, AI-ordbog).
+5. **vaerdikaede.html:** Linkrækken under flodet har fået links til usikkerheder, spørgsmål og ordbog.
+Tjek: Playwright på 1280 og 375 med 0 konsolfejl og ingen sidescroll. 6 kort, 78 prikker og 17 ramte led, og strimlen overløber ikke. Deep-link og genveje lander under menuen (194 og 222 px som de andre faner). Fem rigtige svar giver 5 af 5, og "Se leddet energi" åbner `#lk-energi`. Linket fra vaerdikaede åbner ordbogen. smoke.mjs 52/52 fail 0. Precheck PASSED. Grep efter handelssprog og tankestreger i diff giver 0 reelle hits.
+Næste: energi-ledkortene kan få en "hvor i strømvejen"-mini-strimmel, og rum-fanens læse-rute kan få et stop til AI-floden via rum og compute. Ikke færdig.
+
+## Fra Claude lane-A · 2026-10-16 ~02:05 CEST (energi: hvor i strømvejen og genveje)
+Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html, value-chains.json og notes.
+1. **Energi-ledkort: "Hvor i strømvejen".** Hvert af de fem ledkort har fået en lille strimmel med strømmens vej i fem trin (råstof, elproduktion, elnet, lagring og datacenter), hvor leddet selv er fremhævet. Under strimlen står "Trin N af 5" og én sætning om, hvad der sker på trinnet. Atomkraft står på samme trin som elproduktion. Lagring siger, at næste trin er datacentret i AI-floden. De andre trin kan klikkes: energi-led åbner leddet, og datacentret hopper til `?kaede=ai-compute#lk-datacenter`. Strimlen er mærket baggrund. Teksterne ligger i `energy.flow.steps[].where`.
+2. **Energi-led i strømmens rækkefølge.** Leddene står nu som Råstoffer, Elproduktion, Atomkraft, Elnet og Lagring, så "Led 1" svarer til trin 1 i "Fra råstof til regnekraft". På vaerdikaede.html starter energikortet derfor ved Råstoffer.
+3. **Genveje i energi-fanen** (`#e-links`): Strømmens vej, Hvad kan gå galt? (6), Tjek dig selv (5) og Energi-ordbog. De erstatter de to løse links. Ordbogen åbner, når man hopper til den.
+Tjek: Playwright på 1280 og 375 med 0 konsolfejl og ingen sidescroll. 5 strimler med 5 trin, klik på Elnet i atomkraft-kortet åbner `#lk-grid`, og datacenter-hop giver `?kaede=ai-compute#lk-datacenter`. Genvejen til quizzen lander på 194 og 222 px som de andre faner. smoke.mjs 52/52 fail 0 (egen server på 8817). Precheck PASSED. Grep efter handelssprog og tankestreger i diff giver 0 hits.
+Næste: kvante-fanen kan få genveje og et "Hvad kan gå galt?", og rum-fanens læse-rute kan få et stop til AI-floden. Ikke færdig.
+
+## Fra Claude lane-A · 2026-10-16 ~01:50 CEST (kvante: trappe, usikkerheder og genveje)
+Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html, vaerdikaede.html, value-chains.json og notes.
+1. **Kvante: "Hvor langt er kvante nået?"** Ny sektion (`#q-lad`) med en trappe i fem trin: fysikken virker, små og støjende maskiner, adgang over skyen, fejlrettede qubits og nyttige maskiner. Trin 2 og 3 er markeret som "her er feltet i dag". Hvert trin har et link til ordbogen, kulden, cloud i AI-floden eller tidshorisonten. NVIDIA-udsagnet står kun som gengivet udsagn med kilde (BLOG 13. januar 2025) og noten "ikke Mads' og ikke NDI's prognose". Det hele er mærket baggrund, og data ligger i `quantum.ladder`.
+2. **Kvante: "Hvad kan gå galt i kvantekæden?"** (`#q-risk`). Der er seks kort: tiden, fejlene, hvilken type der vinder, medvinden, få store kunder og kulden. Strimlen viser, hvor kvante rører kæderne (Kvante, Cloud, Chipdesign, Udstyr og Elnet), og prikker i andre kæder har stiplet kant og hopper dertil. To kort har en NDI-linje med kilde (BLOG 21. juli 2025 og 2. juni og 7. juli 2025). `renderRisks` kan nu tage led med `hop`.
+3. **Genveje i kvante-fanen** (`#q-links`): 7 genveje. De dobbelte links i callout-boksen er fjernet.
+4. **Quiz:** Der er et 5. spørgsmål om, hvor kvante står i dag, og svaret linker til trappen.
+5. **vaerdikaede.html:** Kvantekortet har fået "⚠ Hvad kan gå galt? 6 usikkerheder →".
+Tjek: Playwright på 1280 og 375 med 0 konsolfejl og ingen sidescroll. Der er 5 trin, 6 kort, 30 prikker (24 i andre kæder og 11 ramte) og 5 spørgsmål. Deep-link og genveje lander på 194 og 222 px, og Cloud-prikken giver `?kaede=ai-compute#lk-cloud`. smoke.mjs 52/52 fail 0 (egen server på 8817). Precheck PASSED. Grep efter handelssprog og tankestreger i diff giver kun "ikke en anbefaling".
+Næste: rum-fanens læse-rute kan få et stop til AI-floden via rum og compute. Ikke færdig.
+
+## Fra Claude lane-A · 2026-10-16 ~02:15 CEST (rum: rummet og de andre kæder)
+Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html, vaerdikaede.html, value-chains.json og notes.
+1. **Rum: "Rummet og de andre kæder"** (`#sp-web`). Et trådediagram med 5 rum-led til venstre og 7 led i andre kæder til højre: Datacentre, Chipdesign, Cloud og Data (AI), Robotter, Lagring og Kvantecomputing. Der er 7 tråde i kædens farve. Hvert kort viser "rum-led → led (kæde)", én forklaring, "Åbn rum-leddet" og "Hop til … →". Robottråden linker også til "Sanse, tænke, handle". Tråden om compute i rummet er den eneste med kilde (BLOG 12. oktober 2026). Den siger, at det er Musks udsagn og ikke NDI's forventning eller en prognose, og linker til citatet i `#kap-rum`. Musk citeres ikke på ny. De andre tråde er mærket baggrund, og noten siger "ikke NDI's analyse, ikke en vurdering af enkelte selskaber og ikke en anbefaling". Data ligger i `space.threads`.
+2. **Læse-rute:** "Rum i ni stop" med det nye stop "Andre kæder" efter "Kan gå galt". Der er også et link i rum-fanens linkliste.
+3. **Quiz:** Der er et 6. spørgsmål om, hvad en satellit kører på i jordens skygge (batteriet), og svaret linker til tråd-sektionen. Teksterne siger nu "seks".
+4. **vaerdikaede.html:** Rumkortet har fået "🧶 Rummet og de andre kæder: 7 tråde →".
+Tjek: Playwright på 1280 og 375 med 0 konsolfejl og ingen sidescroll. 7 tråde, 12 knuder og 7 kort. Hover på et kort fremhæver 1 tråd og 2 knuder, og hover på Satellitter fremhæver 2 tråde. Hop giver `?kaede=quantum#lk-q-core`, "Sanse, tænke, handle" lander på `#p-loop` (194 px), og citat-linket lander på `#kap-rum`. smoke.mjs 52/52 fail 0 (egen server på 8817). Precheck PASSED. Grep efter handelssprog og tankestreger i diff giver 0 hits.
+Næste: energi-ledkortenes blurbs kan strammes (én sætning om, hvad leddet gør, og én om, hvorfor det presser), og kvante-fanen kan få et lille link tilbage fra kvantetråden. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:21 CEST. MYR Group skriver, at arbejdet også dækker industri og vedvarende energi. Ikke færdig.**
+
+Forsiden skriver, at selskabet leverer elektrisk byggeri i USA og Canada, og at projekterne dækker transmission, kommercielle og industrielle anlæg og vedvarende energi. Selskabet ejer ikke strømmen. Ordene leader, largest og 130 år er ikke taget med. Ingen `reviewedAt`. Blurben under elnet og arkivet siger det samme.
+
+Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Vedvarende energi står. Kæden og arkivet viser sætningen. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `bdd1213` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:26 CEST. Solaris skrev 6. juli 2026, at det har købt GESA. Ikke færdig.**
+
+Meddelelsen siger, at Solaris har købt Global Energy Services Alliance, GESA. GESA er service til kraftværker, sammensat af Baseload Power og Pro-Per Energy Services. Datoen ligger efter beholdningen pr. 1. juni 2026. Det er service, ikke et kraftværk i drift. Forsidens banner siger Omega og peger på samme meddelelse. Meddelelsen nævner ikke Omega, så teksten følger meddelelsen. Selskabet skriver, at det er stiftet i 2014, og at kunderne er datacentre, energi, erhverv og industri. Ordene leading og unmatched er ikke taget med. Ingen `reviewedAt`. Blurben under elproduktion og elnet og arkivet siger grænsen. Overskriften på selskabssiden er beholdningens afkortede navn. Profilnavnet er det fulde. AI-compute-listen er ikke ændret.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. GESA, Baseload og Pro-Per står. Omega står ikke. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `afc0b25` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:30 CEST. Ero skriver, at Xavantina er en guldmine, og at Vale ejer Furnas. Ikke færdig.**
+
+Caraíba i Bahia er et kobberkompleks. Tucumã i Pará er en kobbermine, og kommerciel produktion blev nået 1. juli 2025, før beholdningen. Xavantina i Mato Grosso er en underjordisk guldmine med eget anlæg. Furnas er et kobber- og guldprojekt. Siden skriver, at Vale Base Metals ejer det, og at Ero har en ret til at optjene en andel på 60 % efter en aftale fra juli 2024. Det er ikke en mine i drift. Et forstudie fra februar 2026 ligger før beholdningen og er foreløbigt. Siden kalder det ikke en reserve. High-grade, ounces og dollar pr. ounce er ikke taget med. Ingen `reviewedAt`. Blurben under råstoffer og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Guldminen, 60 % og forstudiet står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `962c850` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:33 CEST. BWX Technologies skriver, at Lynchburg fremstiller flådereaktorer, og at salget af medicinforretningen ikke er gennemført. Ikke færdig.**
+
+Fabrikken i Lynchburg fremstiller reaktorer til ubåde og hangarskibe. Siden nævner Ohio, Virginia, Seawolf, Los Angeles, Nimitz og Ford. Columbia-klassen er under bygning. Teksten siger komponenter, ikke at båden er i tjeneste. TRISO er brændsel, ikke et kraftværk. Project Pele er et design, ikke et værk i drift. Selskabet skrev 3. august 2026, at det har aftalt at sælge medicinforretningen til Nordic Capital. Aftalen afventer myndighedsgodkendelse og ventes afsluttet inden udgangen af 2026. Datoen ligger efter beholdningen. Salget er ikke gennemført. Beløbet i overskriften og ordet leading er ikke taget med. Ingen `reviewedAt`. Blurben under atomkraft og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Lynchburg, Pele og 3. august 2026 står. Beløbet står ikke. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `772de94` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:34 CEST. Talen skriver, at flåden også har kul, naturgas og olie, og at Brandon Shores kører videre. Ikke færdig.**
+
+Susquehanna er atomkraftværket. Siden nævner også kul, naturgas og olie. Selskabet skriver, at det leverer strøm til Amazon ved Susquehanna. Brandon Shores var planlagt lukket 1. juni 2025 og kører videre til 31. maj 2031 efter en pålidelighedsaftale. Brunner Island kan bruge både kul og naturgas. Kul skal stoppe inden udgangen af 2028, og det er ikke sket i teksten. Det er ikke en udvikler af små reaktorer. Leading, sixth largest og megawatt er ikke taget med. Ingen `reviewedAt`. Blurben under elproduktion og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Brandon Shores og Amazon står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `ea2595e` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:37 CEST. Nano Nuclear skriver, at KRONOS-ansøgningen er til behandling og ikke givet. Ikke færdig.**
+
+University of Illinois indsendte ansøgningen 31. marts 2026. Tilsynet tog den til behandling 18. maj 2026. Formel behandling begyndte 23. juni 2026, efter beholdningen. De to første datoer ligger før. Ansøgningen er ikke en byggetilladelse, og byggeriet er ikke gået i gang. En offentlig tidsplan peger på september 2027. Selskabet ser en mulighed for byggeri i andet halvår 2027. Det er en forventning. Forsiden siger stadig forberedende dialog. Meddelelsen af 13. oktober 2026 er mere præcis, og teksten følger meddelelsen. ZEUS og LOKI er design. Ingen `reviewedAt`. Blurben under atomkraft og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. 23. juni 2026 og "ikke givet" står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `bc2e228` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:39 CEST. Howmet skriver, at det også laver smedede hjul til lastbiler og busser. Ikke færdig.**
+
+Selskabet skriver, at det laver dele til flyskrog og flymotorer og også smedede hjul og chassis til lastbiler og busser. Det sender ikke raketter op. Formuleringerne om de mest avancerede fly og om Model T er ikke taget med. Udbytte og kvartalsregnskab er ikke taget med. Ingen `reviewedAt`. Blurben under opsendelse og arkivet siger grænsen. Overskriften på selskabssiden er beholdningens afkortede navn. Profilnavnet er det fulde.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Smedede hjul står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `8366cb6` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:40 CEST. Cummins skriver, at forretningen har fem dele, og at det ikke er et elselskab. Ikke færdig.**
+
+De fem dele er komponenter, motorer, distribution, kraftsystemer og Accelera. Distribution er selskabets egen del, ikke et elnet. Hovedsædet ligger i Columbus i Indiana. Selskabet er stiftet i 1919. Generatorerne kan lave strøm. Det er ikke et elselskab. Ordet leader og et 52-ugers-felt på investorskabelonen er ikke taget med. Ingen `reviewedAt`. Blurben under elproduktion og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Accelera står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `4359117` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:42 CEST. ProPetro skriver, at arbejdet er trykpumpning i Permian-bassinet. Ikke færdig.**
+
+Det er service til selskaber, der leder efter og udvinder olie og gas. Det er ikke et kraftværk og ikke en mine. Selskabet står ikke på elproduktion. Leading, premier og largest er ikke taget med. Ingen `reviewedAt`. NDI-blikket under elproduktion og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Permian står. Selskabet står ikke i selskabslisten. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `02c86a0` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:43 CEST. Terra Innovatum skriver, at konceptet SOLO er fra 2018. Ikke færdig.**
+
+Det er en mikroreaktor under udvikling. Teksten beskriver ikke et værk i drift. Forsiden viser to forskellige tal for effekt. Ingen af dem er taget med. Leader og capital-efficient er ikke taget med. Ingen `reviewedAt`. Blurben under atomkraft og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. 2018 står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `6a491f2` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:46 CEST. Airo nævner RQ-35 Heidrun, RQ-70, JC250 og JX250. Ikke færdig.**
+
+Selskabet skriver, at kunderne er militære, offentlige og kommercielle. Platformene står på siden. Teksten kalder dem ikke en flåde i drift og ikke satellitter. Selskabet står ikke som eksempel på opsendelse. Ingen `reviewedAt`. NDI-blikket under opsendelse og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. RQ-35 står. Selskabet står ikke i selskabslisten. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `27dccea` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:55 CEST. United States Antimony skriver, at zeolit kommer fra Preston. Ikke færdig.**
+
+Smelteværket for antimonoxid ligger i Thompson Falls i Montana. Siden skriver, at en ny tilladelse til minen dér var usikker, og at udvindingen blev lagt tilbage til Mexico. Det første gravearbejde i Alaska er ikke skrevet som en mine i drift. Areal-tal på siden er ikke ens og er ikke taget med. Ingen `reviewedAt`. Blurben under råstoffer og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Preston står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `d602d78` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:55 CEST. Merlin skriver, at Merlin Pilot er software til eksisterende fly. Ikke færdig.**
+
+Samarbejdet om C-130J har længere rækkevidde som mål. Det er ikke en flåde, der allerede flyver med softwaren. Navnet er ikke Satellogics satellit. Beløb og timetal på forsiden er ikke taget med. Ingen `reviewedAt`. NDI-blikket under opsendelse og arkivet siger grænsen. Selskabet står ikke i selskabslisten.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Merlin Pilot står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `114d9a6` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:57 CEST. Lithium Americas skriver, at centret i Reno er et laboratorium. Ikke færdig.**
+
+Byggeriet på Thacker Pass begyndte i begyndelsen af 2023, før beholdningen. Målet sent i 2027 er ikke en mine i fuld drift. Centret afprøver processen og er ikke minen. World's largest er ikke taget med. Ingen `reviewedAt`. NDI-blikket under råstoffer og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Reno står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `af67076` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:59 CEST. Oklo skrev, at testreaktoren Groves nåede en kædereaktion ved lav effekt. Ikke færdig.**
+
+Datoen er 6. august 2026, efter beholdningen. Meddelelsen af 13. oktober 2026 siger, at reaktoren ligger i Texas. Det er ikke et kommercielt kraftværk og ikke salg af isotoper. Aurora er en sikkerhedsanalyse fra 11. juni 2026, ikke et værk i drift. Groves-2 er ikke bygget. Ingen `reviewedAt`. Blurben under atomkraft og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Groves står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `29388e6` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 02:01 CEST. Southern Copper skriver, at Tía María er et kobberprojekt. Ikke færdig.**
+
+Projektet ligger i Cocachacra i provinsen Islay i Arequipa. Forekomsterne hedder La Tapada og Tía María. Tilladelser til byggeri er ikke en mine i drift. Beløb og rente på en obligation er ikke taget med. Ingen `reviewedAt`. Blurben under råstoffer og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Tía María står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `1972434` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 02:06 CEST. Rocket Lab skriver, at HASTE er et suborbitalt testfartøj. Ikke færdig.**
+
+Det flyver fra Wallops i Virginia og sætter ikke satellitter i kredsløb. Electron er den orbitale raket. Neutron er stadig under udvikling. Nyttelast-tal og en overskrift om Iridium er ikke taget med. Ingen `reviewedAt`. Blurben under opsendelse og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. HASTE står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `4ecafbd` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Claude lane-B (søge-/sorteringsparitet screener ↔ A-Z, cyklus 12)
+- **Fælles søgning (`searchPosition` i data.js)** bruges nu af både screeneren (app.js) og A-Z (selskaber.html). Før matchede søgningen kun navn/ticker/ISIN + *primært* tema - multi-tags (fx Tesla → Energi) og linsens tekst blev ikke fundet. Nu: navn/ticker/ISIN → alle tema-tags (inkl. multi-tag) → NDI-linsens kvalitative tekst (værdi + hint; ikke Livscyklus/NDI-tag; min. 3 tegn så "ab" ikke rammer al fritekst).
+  - Linse-hits viser **"Match i NDI-linsen · <felt>: <uddrag>"** under navnet (uddrag omkring ordet, hvis det kun står i hint-teksten), så fx "kvante" på QuantumScape kan læses i kontekst. Resultatlinjen siger "(N via NDI-linsens tekst)".
+  - Eksempler (PMINDI): "kobber" 11, "foundry" 7, "solceller" 6, "kvante" 5 - alle via linsen.
+- **Screener, sortering på tema:** overskriftsrække pr. primært tema med antal selskaber (ingen vægtsum); Andet sidst med "endnu intet primært NDI-tema".
+- **A-Z (selskaber.html):** samme `status=forslag|fast`-filter som screeneren (knapper med antal, skjult input i søgeformularen, egen tom tilstand + "Fjern temastatus-filter"); tema-gruppeoverskrifter med antal; "Samme liste i screeneren →" og screenerens "Se A-Z-listen"/"A-Z liste" bevarer q/linse/status/sort. Tom tilstand forklarer, hvad søgningen dækker.
+- Compliance: kun navn/vægt/tema-sortering (whitelist uændret); ingen nye felter læst; ingen tal pr. aktie. 52u/vol/insider stadig deferred.
+- Test: precheck exit 0. Playwright (8792): screener q=kobber/foundry/kvante/zzzzz+status, sort=theme (11 grupper, Andet sidst), A-Z q=solceller, status=forslag&sort=theme, q=nvidia&status=forslag (tom tilstand), q=ab (ingen linse-støj); 0 konsolfejl. smoke 52/52 fail 0 (8792); smoke-quality: kun de 2 kendte forældede `vaerdikaede.html?isin=`-asserts. Branch `lane-B` klar til merge-review. Næste: tema-hub polish (temaer.html/tema.html: søgning/paritet på temasider, quantum/space-synlighed) eller Andet-restnavne.
+
+
+## Fra Claude lane-B (tema-hub + tema-side polish, cyklus 13)
+- **tema.html:** søgefelt inden for temaet (fælles `searchPosition`: navn/ticker/ISIN, tema-tags, NDI-linsens tekst med "Match i NDI-linsen · felt: uddrag"), sortering kun **Vægt / Navn A-Z** (whitelist), temastatus-filter `status=forslag|fast` (vises når temaet har forslag), "Kun med NDI-linse" tæller nu efter øvrige filtre. Kombinerede tomme tilstande (fx Quantum + "Uden temaforslag" → "Ingen af de 5 selskaber i temaet er uden temaforslag" + "Fjern temastatus-filter"; søgning uden hit linker til A-Z med samme q). "Viser N af M · K fundet via NDI-linsens tekst · Nulstil filtre". "Åbn i screeneren" og fund-switch bevarer q/linse/status/sort.
+- **Selskaber i temaet** siger nu "18 med temaet som primært + 5 via multi-tag" (Compute), så forskellen til hubben er forklaret.
+- **temaer.html:** hvert tema-kort nævner "+N med temaet som ekstra tag (multi-tag) - tælles med på temasiden" (tooltip med navne) → hub- og temaside-tal er ikke længere i modstrid uden forklaring. "Små temaer med egen værdikæde" (SpaceTech, Quantum) viser nu navnene efter vægt (maks 5, "… +N flere") og NDI-linse-dækning - kun navne, ingen tal pr. aktie.
+- **Forslag-banner, præcisering:** omtag grupperes pr. måltema ("4 fra Compute og 1 fra Software er flyttet til det nye tema Quantum" i stedet for to halve sætninger); grundlaget siger nu "ISIN-opslag, branche og plads i værdikæderne" (runde 2/3 byggede på kædeplads); "ingen NDI-linse passede" → "intet NDI-tema passede godt nok (fx guld/sølv, sundhed, forbrug)", så det ikke forveksles med NDI-linse-funktionen.
+- Compliance: ingen nye felter læst; sortering kun navn/vægt; ingen tal pr. aktie. 52u/vol/insider stadig deferred.
+- Test: precheck exit 0. smoke fail 0 (8792). smoke-quality: kun de 2 kendte forældede `vaerdikaede.html?isin=`-asserts. Playwright: tema compute (23 = 18 + 5 multi-tag), compute&q=nvidia (2, 1 via linse), energiressourcer&q=kobber (9 via linse), energi&status=forslag&sort=name (29), chips&q=zzzz (tom tilstand + A-Z-link), quantum&status=fast (tom tilstand), spacetech&linse=1&q=satellit (12); temaer.html begge klasser (banner, multi-tag-linjer, små temaer med navne); 0 konsolfejl. Branch `lane-B` klar til merge-review. Næste: NDI-linse for de sidste Software/Platforme/Andet-navne eller screener-tom-tilstand/forslag-mærker.
+
+
+## Fra Claude lane-B (NDI-linse for Andet-resten + "Hvad ligger i Andet?", cyklus 14)
+- **unique-metrics.json: 310 → 332** (+22, kun Andet-navne med vægt > 0), samme 5 kvalitative felter (NDI-tag "Andet / uklassificeret" · Hvad ejer man? (AI-udkast) · Plads i værdikæden · Hold øje med (AI-udkast) · Livscyklus "Ikke klassificeret"). Ingen tal/kurser/afkast/prognoser/handelssprog. Kun tilføjelser (diff = insertions).
+  - **Ædelmetaller (6):** Pan American Silver, First Majestic, Hecla, Coeur, Idaho Strategic (sjældne jordarter = efterforskning), Perpetua (guld + antimon, ikke i produktion) → "Uden for værdikæderne", de to sidste med "tæt på Energi led 5".
+  - **Sundhed/biotek (8):** Oscar, LifeMD, Omada, Hinge, Bachem, CRISPR, Intellia ("ingen godkendte produkter") → "Uden for værdikæderne".
+  - **Øvrige (8):** Celanese, Fermi ("AI-compute led 2", planlagt campus, ikke i fuld drift), American Resources (kul + raffinering → tæt på Energi led 5), Shelly, Fubo, HelloFresh, Coursera, AUTO1, IWG.
+  - **Bevidst udeladt:** CSLM Digital Asset (SPAC), vægt-0-positioner (Opendoor-warrants, Sony Financial, AbCellera, Marley Spoon 0,02 %), samt fortsat GHL/Sharonai/Swarmer/Keel (usikker viden).
+- **tema.html?slug=andet:** nyt panel "Hvad ligger i Andet?" (kun uden filtre): grupper med antal + navne efter vægt - *Tæt på et led i værdikæderne* (Fermi, American Resources, Tempus AI, Idaho Strategic, Perpetua - med linsens plads, fx "delvist tæt på Energi led 5 (kritiske råstoffer)"), *Ædelmetaller*, *Sundhed og bioteknologi*, *Restpositioner (vægt ca. 0)*, *Forbrug, ejendomme, kemi m.m.* Teksten siger at grupperingen er et udkast og ikke ændrer data. Gruppering ud fra branche + linse; ingen tal pr. aktie.
+- **Dækning:** PMINDI Andet 6/35 → 28/35 med linse; A-Z "NDI-linse (332)". Kandidatliste i notes/THEME-FORSLAG.md ("Andet-kandidater").
+- Test: precheck exit 0. smoke 52/52 fail 0 (egen port). Playwright: tema andet (begge klasser, 5 grupper), andet&q=sølv (panel skjult, 4 via linse), chips uændret, Fermi + Perpetua selskabssider rendrer linsen; 0 konsolfejl. Branch `lane-B` klar til merge-review. Næste: screener-tom-tilstand/forslag-mærker eller tvivlsomme forslag (Chemours/Arkema/Solstice) som NDI-beslutningsliste.
 
 ## Fra Claude lane-C (main-merge + temaal regnet om + risici i klart sprog + ordliste 117) · 01:56 CEST 16/10 (wall-clock)
 - Merget origin/main ind i lane-C (STATUS-konflikt løst, begge sider bevaret). Branch er nu 0 bagud for main på merge-tidspunktet.

@@ -512,3 +512,71 @@ main er uændret siden cyklus 20, og Pages = `75a87c2`. Persona- og krav-filerne
 - **Privat:** ingen ændring. Lille tekst på vaerdikaeder er den nye mobil-irritation.
 - **Familiekontor:** intet samlet KID-omkostningstal, og sammenlign nævner ikke omkostninger.
 - **Visuel variation:** uændret.
+
+## 2026-10-16 01:50 CEST · cyklus 23 (main `ff29ec5` = `a664f4f` + noter, intet docs-delta)
+
+main er uændret i docs/ siden `75a87c2`, og Pages er stadig samme build (last-modified 15. okt. 23:37 GMT). Lane-R indeholder allerede origin/main, så jeg har ikke lavet `reset --hard`, fordi det ville kassere cyklus 21–22 lokalt. Persona- og krav-filerne er uændrede siden 23:43. Denne gang har jeg kørt nye vinkler: desktop 1280 med Playwright og scroll på 20 sider, KID-PDF'erne og omkostninger-siden ord for ord. Resultat: 0 pageerrors, 0 h-overflow, én h1 og `lang="da"` overalt, og 0 knapper eller formularfelter uden navn. (Portefølje gav 148 hits i første kørsel, men det var sorteringsknapper med tekst, altså et falsk positiv.)
+
+### MUST (nyt)
+- **Omkostninger viser ikke KID'ets samlede tal, selv om det står i den KID, siden linker til.** Begge KID'er (produktionsdato 2026-08-14) har "Årlig omkostningsmæssig konsekvens" ved exit efter 5 år: **2,79 % (PMINDI) og 2,85 % (PMINDIAKK) hvert år**. Ved exit efter 1 år er det 2,63 %/2,71 % (DKK 2.630/2.710 på 100.000 kr.). Siden skriver i dag "Tomme felter = udfyldes af NDI" og nægter at lægge satser sammen. Det er korrekt, men så er det netop KID-tallet, der skal stå øverst, med kilde og dato. Det lukker familiekontor-personaens MUST, som har stået åben siden de første cyklusser. Forslag: én KPI-linje "Omkostninger pr. år ifølge KID (5 år): 2,79 % / 2,85 %", et link til KID og teksten "Ikke et ÅOP. Kurtage og depot kommer oveni".
+- **Label uden tal:** under hver klasse står "Forventede samlede omkostninger i indeværende regnskabsår (Fundmarket)", men der er intet tal efter. Det læses som en tom stub. Sæt tallet ind (1,49 % + 0,64 %/0,72 % ifølge KID-opdelingen), eller fjern labelen.
+
+### SHOULD (nyt)
+- **"Øvrige løbende 1,49 %" er misvisende.** I KID'et hedder posten "Forvaltningsgebyrer og andre administrations- eller driftsomkostninger". "Øvrige" får hovedposten til at lyde som en restpost. Brug KID'ets ord, eller skriv "Forvaltning og administration".
+- **"Den ene forskel"-blokken** (0,08 procentpoint med en forstørret skala) fylder mest på siden, men er den mindst relevante oplysning for en privatperson. Flyt den under KID-tallet og tabellen.
+
+### MUST/SHOULD (uændret, re-verificeret på desktop)
+- Invester har tre "trin 4". Selskab viser "AI-udkast" over et tomt felt og stubs med "–". SRI 5 mod vol 32,46 % (se compliance). Lille tekst på vaerdikaeder ved 375. "Central Information Dokument". "BREAKING:" / "MADS FØLGER". Nyhedsarkiv har "Placeholder".
+
+### Persona-linser
+- **Privat:** omkostninger-siden er grundig, men svarer ikke på "hvad koster det mig om året?". KID-tallet 2,79 % er svaret.
+- **Familiekontor:** samme punkt. Med KID-tallet kan FO sammenligne direkte med andre UCITS. Uden det skal de selv åbne PDF'en.
+- **Visuel variation:** uændret, ingen ny træthed.
+
+### OK ✅
+- Alle 5 eksterne KID-/prospekt-links svarer 200 (2 KID-PDF'er, 2 Fundmarket-sider, fællesprospekt 24.10.2025). SRI 5/7 og 5 års anbefalet periode på siden stemmer med KID.
+
+## 2026-10-16 02:00 CEST · cyklus 24 (main `90e7de8`, intet docs-delta)
+
+main er uændret i docs/ siden `75a87c2`. Pages er genbygget kl. 23:49 GMT, men kun på grund af note-commits. lane-R indeholder allerede origin/main, og jeg har ikke lavet `reset --hard`, fordi det ville kassere cyklus 23, som allerede er pushet. Persona- og krav-filerne er uændrede siden 23:43. Denne gang har jeg kigget på de sider, der sjældent bliver tjekket: embed, de 5 laer-sider, periode, kort, selskaber, tema, vaerdikaede og ndi-perspektiv. Jeg har kørt dem ved **320 px** med Playwright live (20 sider) og tjekket alle interne links. Resultat: **1.007 unikke interne links svarer alle 200** ✅. Der er 0 pageerrors, én h1 og et skip-link på alle sider.
+
+### MUST (uændret)
+- Invester har tre "trin 4". Selskab viser "AI-udkast" over et tomt felt og stubs med "–". Omkostninger mangler KID-tallet 2,79 %/2,85 % (se cyklus 23). SRI 5 mod vol 32,46 %.
+
+### SHOULD (nyt)
+- **Periode-siden har intern jargon.** Eyebrow'en hedder "PERIODE · DYB SIDE" (`periode.html:65`), og knappen på fonden hedder "YTD dyb side →" (`app.js:418`). Kort skriver "År / ÅTD dyb side". "Dyb side" er bygge-sprog. Skriv "Afkast for 2025" og "Se år til dato →". Brug også ÅTD eller "år til dato" konsekvent, ikke "YTD" (periode viser "YTD: +4,0 %").
+- **Periode har to "← Fonden"-links** i headeren ved 320, og der er ingen "Lær"/"Invester" i navigationen.
+- **Decimalpunktum i udbytte:** "Udbytte PMINDI (ex-dato) 38.9 kr." og "38.0 kr." står på periode. Det skal være "38,90 kr." med dansk format.
+- **2023 står som et helt år** ("2023: +16,7 %"), selv om serien først starter 22. sep. 2023. Skriv "2023 (fra 22. sep.)" eller fjern tallet (se compliance #10).
+- **Tema chips overflower ved 320:** `span.x-says-n` "Viser 3 direkte og 1 tema · 8 i alt" har `white-space:nowrap` (`x-feed.js:121`), og scrollWidth er 327. Tillad ombrydning. Det er ikke et problem ved 375.
+- **Overskriftsspring på vaerdikaede.html** (h2→h4 eller lignende, 1 spring). Det er en lille tilgængelighedsfejl.
+
+### Nice
+- **Ingen `meta description`** på 19 af 20 undersider. Kun entréen har en. Delte links (LinkedIn/Slack) viser derfor kun og:title. Giv i det mindste invester, omkostninger, fonden og drawdown en beskrivelse.
+- Embed-grafen ignorerer `?periode=1m` og viser "Hele perioden" ✅ (godt for compliance). Men den har ingen links til KID, omkostninger eller fonden, kun "Undersøg porteføljen" og "Se største fald" (se compliance #11).
+- ndi-perspektiv er på 191.763 tegn renderet tekst. Det er tungt på mobil og bekræfter forslaget om at folde den sammen.
+
+### Persona-linser
+- **Privat (55+):** periode-siden er nyttig ("hvad gav fonden i 2025?"), men "dyb side", "YTD" og "38.9 kr." virker uprofessionelt. Laer-siderne (FAQ, udbytte-vs-akk og forsinket beholdning) er rolige og klare ✅.
+- **Familiekontor:** ville bruge embed og periode til intern rapportering. Begge mangler en kilde til omkostninger og et link til KID. Kalenderårstabellen bør vise 12-måneders perioder.
+- **Visuel variation:** laer og periode er enkle tekstsider, som giver en god pause efter fonden og udforsk. Ingen træthed.
+
+## 2026-10-16 01:57 CEST · cyklus 25 (main `90e7de8`, intet docs-delta)
+
+main/docs og Pages er uændrede. Live ved 375 er der ingen regression (16 sider: 0 fejl, 0 overflow). Denne cyklus er et **for-merge-kig på lane-grenene**.
+
+### MUST (uændret på main)
+- Invester har stadig tre "4."-trin (`invester.html:47/50/53`: "Ordre & omkostninger" + 2× "Køb og omkostninger"). Mit tidligere tjek for "trin 4" fangede dem ikke, men de er der. Det er ikke rettet på nogen lane-gren.
+- Omkostninger mangler KID-tallet (se compliance 9). "AI-udkast" over tomt felt og stubs på selskab.
+
+### SHOULD (nyt, fra lane-grene)
+- **lane-X omkostninger:** "Ikke et ÅOP" står 8 gange i den nye kode, og "Den ene forskel" (0,08 pp, 80 kr. på 100.000 kr.) bliver endnu mere fremtrædende med en forstørret skala og "receipt-gap". For en privatperson er sidens hovedbudskab stadig "forskellen er lille", ikke "det koster ca. 2,8 % om året". Vend rækkefølgen: KID-tal → postsatser → forskellen mellem klasserne. "ØVRIGE LØBENDE" er uændret (se cyklus 24: brug KID'ets ord).
+- **lane-X ndi-paa-x:** de tre spor ("Konti Mads følger", "NDI-konti", "Andre opslag") er en klar forbedring ✅. Tagget "Mads følger" pr. opslag bør dog sige "Fra en konto, Mads følger", ellers læses det som "Mads følger [dette selskab]".
+- **lane-C indre-vaerdi.html:** god og rolig. ".m"-grid'et med `grid-template-columns:11em 1fr 8.5em` får sit eget mobil-breakpoint ved 520 ✅. Lille faglig præcisering: "Nye penge … værdien pr. andel gør ikke [ændre sig]" passer kun uden emissionstillæg/udtrædelsesfradrag. Tilføj "(bortset fra små tillæg og fradrag, se omkostninger)".
+- **lane-C ideer.html:** koncentrationskurven ("345 vægte lagt sammen", "88 til halvdelen") er en ny visuel form. Den tilføjer variation uden træthed ✅.
+- **lane-X data/x-posts.json `callCountNote`:** "Andet/Tredje/Fjerde/Femte poleringspas samme dag: stadig ingen nye kald" er log-støj i en datafil, der serveres offentligt. Flyt det til notes/.
+
+### Persona-linser
+- **Privat:** lane-C's lær-sider (indre værdi, læs grafen) giver præcis den baggrund, som persona-filen efterspørger ✅. Omkostninger svarer stadig ikke på "hvad koster det mig?".
+- **Familiekontor:** lane-C's SRI-forklaring fjerner et oplagt spørgsmål i due diligence ✅. Omkostninger (KID-tal) og embed (KID/SRI) er stadig hullerne.
+- **Visuel variation:** ingen ny træthed. Lane-A tilføjer en modenhedstrappe og risikokort på vaerdikaeder, og det er efterhånden mange kort-typer på én side. Hold øje efter merge.
