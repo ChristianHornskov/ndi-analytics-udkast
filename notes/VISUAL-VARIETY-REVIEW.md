@@ -342,6 +342,10 @@ På PMINDIAKK stod «2026.» alene under grafen ved 520 og 540. Fra 460 til 500 
 
 Sætningen under navnet var 24–28 px, samme størrelse som et afkasttal. «måneder» stod alene fra 480 til 560. Den er nu 16 px, og «12 måneder» holder sammen. På 320 holder «12 måneder.» også sammen i dato-linjen. Ingen procent. Ingen sidescroll fra 320 til 1100. Ingen konsolfejl. PMINDI viser stadig +104,8 % i det store tal.
 
+### Update · AKK-datoen på drawdown · 2026-10-16 ~06:17 CEST
+
+På PMINDIAKK stod «2026.» for sig selv ved 440 og 460, skilt fra «5. december». «12» stod for enden af linjen og «måneders» på den næste. «12 måneders historik» og «5. december 2026» holder nu sammen. Ingen procent. Ingen sidescroll. Ingen konsolfejl.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.
