@@ -1664,28 +1664,6 @@ Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er
 
 - Lead 2026-10-16 02:18:12 CEST: lane R/A/B/C CONFLICT on STATUS (and app.js for B) — aborted; coordinator continues.
 
-## Fra Claude lane-C (compliance MUST 1: markedsføringsmærkning i footer på 21 sider) · 02:24 CEST 16/10 (wall-clock)
-- Merget origin/main (3e4ec15) ind i lane-C (STATUS-konflikt løst, begge sider bevaret).
-- Alle 21 lane-C-sider (ideer, kort, om-data, invester, risici, ndi-perspektiv, 15 × laer/) har nu `footer.site-footer`: «Markedsføringsmateriale. Læs prospektet og KID for PMINDI eller PMINDIAKK, før du træffer en endelig investeringsbeslutning» (direkte links) + udkast/noindex, historisk afkast, «Du kan tabe en del af eller hele din investering». Før: ingen footer på disse sider.
-- `invester.html` trin 1 linker direkte til fællesprospektet.
-- UX MUST «tre 4.-trin på invester» er allerede lukket på lane-C.
-- Test 21 sider × 375/1280: 0 konsolfejl, 0 overflow, én h1, footer til stede. precheck: se push.
-- **Til andre lanes / main:** samme footerlinje mangler på index, fonden, omkostninger, vaerdikaeder, selskab(er), temaer, drawdown, periode, nyhedsarkiv, sammenlign, ndi-paa-x og embed. Kan kopieres fra `docs/invester.html` (husk `../` i undermapper). Christian/Fundmarket bør bekræfte mærkningen (HANDOFF «Før live»).
-- Branch `lane-C` klar til merge. Næste: UX-review 04:00.
-
-## Fra Claude lane-C (ordliste 131 + handelssprog i lær/rebalancering) · 02:25 CEST 16/10 (wall-clock)
-- Ordliste 124 → 131: forening/afdeling, forvaltningsselskab, depotbank, investeringsrådgiver, markedsføringsmateriale, generel information, kalenderår. Fundmarket-posten rettet (forvaltningsselskab, ikke «platform»). Invester «Hvem gør hvad?» linker til posterne.
-- lær/rebalancering: «tag gevinst, når optimismen er høj» → vægte frem for stemning, ikke en opfordring til at handle.
-- MUSTs i lane-C-filer (UX + compliance, seneste sektioner): ingen åbne. Resten ligger i andre lanes (omkostninger, embed, periode, ndi-paa-x, selskab).
-- Branch `lane-C` klar til merge. Næste: UX-review 04:00.
-
-## Fra Claude lane-C (risici #prospekt + ordliste 136 + FAQ 24) · 02:30 CEST 16/10 (wall-clock)
-- FO-persona: `risici.html#prospekt` med otte prospekt-risikofaktorer og fondens rammer (ingen derivater/udlån, market maker Jyske Bank for PMINDI). Kilde med sidetal.
-- Ordliste 136 (+modpart, absolut afkast, market maker, derivater, artikel 6). FAQ «Hvad må fonden ikke?».
-- Åbent spørgsmål i HANDOFF: prospektet nævner kun kl n (PMINDI) og «fokuseret portefølje».
-- MUSTs i lane-C-filer: ingen åbne. Branch `lane-C` klar til merge. Næste: UX-review 04:00 og glossary-tjek af lær-sider.
-## Fra Claude lane-C (livscyklus på dansk + ideer #h-lc + ordliste 138) · 02:45 CEST 16/10 (wall-clock)
-- MUSTs i lane-C-filer (UX + compliance, seneste sektioner): ingen åbne. Precheck OK. Branch `lane-C` klar til merge. Næste: UX-review 04:00.
 - Coordinator-loop 2026-10-16 02:27:02 CEST: CONFLICT merge origin/lane-D (ahead 10) — aborted, not pushed
 
 - Coordinator-loop 2026-10-16 02:27:02 CEST: SKIP origin/lane-A — dirty working tree (no auto-stash)
@@ -1716,11 +1694,6 @@ Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er
 
 - Coordinator-loop 2026-10-16 02:31:58 CEST: MERGED origin/lane-D with STATUS-ours resolution (ahead was 10) — pending precheck
 
-## Fra Claude lane-C (tre drivkræfter + ideer Venn + ordliste 140) · 02:38 CEST 16/10 (wall-clock)
-- Merget origin/main (9791596) ind i lane-C: STATUS-konflikten, der fik coordinator til at afbryde 02:31, er løst (begge sider bevaret).
-- Vidensbot §5 «tre langsigtede temaer» (ugebrev 19. jan 2026): ny sektion `laer/saadan-taenker-vi.html#tv-dr` + ny form `ideer.html#h-dr` (Venn, temaer med vægt, mærket skitse). Ordliste 140 (+tre drivkræfter, realkapital). ASML «mulig flaskehals».
-- MUSTs i lane-C-filer (UX + compliance cyklus 25): ingen åbne (MUST 6-skyderen har forklaringen på samme skærm, indre-værdi har tillæg/fradrag).
-- Test 5 sider × 320/375/1280: 0 fejl, 0 overflow, én h1. Precheck OK. Branch `lane-C` klar til merge. Næste: UX-review 04:00.
 - Coordinator-loop 2026-10-16 02:32:51 CEST: MERGED origin/lane-D (ahead was 10) — precheck+smoke OK, pushed
 
 - Coordinator-loop 2026-10-16 02:32:51 CEST: CONFLICT merge origin/lane-A (ahead 4) — aborted, not pushed
@@ -1737,11 +1710,21 @@ Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er
 
 - Coordinator-loop 2026-10-16 02:33:44 CEST: MERGED origin/lane-R with STATUS-ours resolution (ahead was 12) — pending precheck
 
-### Fra Claude lane-C · 02:41 CEST
-- ideer.html: 11 af 16 billeder foldet som `<details>` på mobil (18.199 → 7.560 px ved 375), «Fold alle ud», dybe links/indholdsfortegnelse folder ud, desktop uændret. Risici: "Sharpe"-underlabel → almindeligt dansk. Invester: "kl n" rettet. UX-review + HANDOFF opdateret. Branch lane-C klar til merge.
+- Coordinator-loop 2026-10-16 02:34:37 CEST: MERGED origin/lane-R (ahead was 12) — precheck+smoke OK, pushed
 
 ### Fra Claude lane-C (02:43 CEST)
 - Fagord ud af overskrifterne (CAGR → «årligt afkast / afkast pr. år», "max drawdown", "underwater-graf"), ordliste 142 (#g-riy, #g-snapshot). Precheck OK. Branch lane-C klar til merge. Næste: 04:00 UX-checkpoint, periode-/drawdown-sprogforslag til Codex, ideer-variation.
 
 ### Fra Claude lane-C · 02:46 CEST
 Ordliste 147 (ESG, krypto/blockchain/stablecoin, EDA, autonom kørsel, LEO, lithium i råstoffer). kort-dør opdateret. precheck exit 0. lane-C klar til merge. Næste: 04:00 UX-checkpoint + lær-sider mod Vidensbot.
+- Coordinator-loop 2026-10-16 02:44:37 CEST: MERGED origin/lane-D with STATUS-ours resolution (ahead was 4) — pending precheck
+
+- Coordinator-loop 2026-10-16 02:45:30 CEST: MERGED origin/lane-D (ahead was 4) — precheck+smoke OK, pushed
+
+- Coordinator-loop 2026-10-16 02:45:30 CEST: CONFLICT merge origin/lane-A (ahead 7) — aborted, not pushed
+
+- Coordinator-loop 2026-10-16 02:45:31 CEST: CONFLICT merge origin/lane-E (ahead 14) — aborted, not pushed
+
+- Coordinator-loop 2026-10-16 02:45:31 CEST: CONFLICT merge origin/lane-B (ahead 4) — aborted, not pushed
+
+- Coordinator-loop 2026-10-16 02:45:31 CEST: MERGED origin/lane-C with STATUS-ours resolution (ahead was 5) — pending precheck

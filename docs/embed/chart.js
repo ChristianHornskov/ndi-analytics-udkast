@@ -273,12 +273,14 @@
     const y = v => top + (upper - v) / (upper - lower) * plotHeight;
     const plotBottom = height - bottom;
     const yZero = Math.max(top, Math.min(plotBottom, y(0)));
+    const deepest = Math.min(...series.map((p) => p.value));
+    const belowEnd = Math.max(yZero + 8, y(Math.min(0, deepest)));
 
     svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
     const parts = [
       `<title id="svg-title">Totalafkast for ${state.fund}</title>`,
-      `<desc id="svg-description">Totalafkast i DKK, indekseret til 0 % den ${fmtDate(first.date)}. Seneste punkt ${fmtDate(last.date)}: ${pct(periodReturn, true)}. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast.</desc>`,
-      `<defs><linearGradient id="fund-fill" gradientUnits="userSpaceOnUse" x1="0" y1="${top}" x2="0" y2="${yZero}"><stop offset="0%" stop-color="#9ecfd6" stop-opacity=".22"/><stop offset="100%" stop-color="#9ecfd6" stop-opacity=".05"/></linearGradient><clipPath id="above-zero"><rect x="0" y="0" width="${width}" height="${Math.max(0, yZero)}"/></clipPath><clipPath id="below-zero"><rect x="0" y="${yZero}" width="${width}" height="${Math.max(0, plotBottom - yZero)}"/></clipPath></defs>`
+      `<desc id="svg-description">Totalafkast i DKK, indekseret til 0 % den ${fmtDate(first.date)}. Seneste punkt ${fmtDate(last.date)}: ${pct(periodReturn, true)}.${deepest < -0.05 ? ' Feltet under nul er rosa.' : ''} Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast.</desc>`,
+      `<defs><linearGradient id="fund-fill" gradientUnits="userSpaceOnUse" x1="0" y1="${top}" x2="0" y2="${yZero}"><stop offset="0%" stop-color="#9ecfd6" stop-opacity=".22"/><stop offset="100%" stop-color="#9ecfd6" stop-opacity=".05"/></linearGradient><linearGradient id="below-fill" gradientUnits="userSpaceOnUse" x1="0" y1="${yZero}" x2="0" y2="${belowEnd}"><stop offset="0%" stop-color="#e5b3ba" stop-opacity=".45"/><stop offset="100%" stop-color="#e5b3ba" stop-opacity=".92"/></linearGradient><clipPath id="above-zero"><rect x="0" y="0" width="${width}" height="${Math.max(0, yZero)}"/></clipPath><clipPath id="below-zero"><rect x="0" y="${yZero}" width="${width}" height="${Math.max(0, plotBottom - yZero)}"/></clipPath></defs>`
     ];
 
     for (let tick = lower; tick <= upper + step / 2; tick += step) {
@@ -301,7 +303,7 @@
     const line = series.map((p, i) => `${i ? 'L' : 'M'}${x(p).toFixed(2)},${y(p.value).toFixed(2)}`).join(' ');
     const area = `${line} L${x(last).toFixed(2)},${yZero.toFixed(2)} L${x(first).toFixed(2)},${yZero.toFixed(2)} Z`;
     parts.push(`<path class="fund-area" d="${area}" fill="url(#fund-fill)" clip-path="url(#above-zero)"/>`);
-    parts.push(`<path class="fund-area below" d="${area}" fill="var(--neg)" fill-opacity="0.28" clip-path="url(#below-zero)"/>`);
+    parts.push(`<path class="fund-area below" d="${area}" fill="url(#below-fill)" clip-path="url(#below-zero)"/>`);
     parts.push(`<path class="fund-path" d="${line}"/>`);
     parts.push(`<text class="end-label ${toneOf(periodReturn)}" x="${width - right + 8}" y="${y(last.value) + 4}" style="font-size:${mobile ? 12 : Math.max(11, width / 83)}px">${pct(periodReturn, true)}</text>`);
     parts.push(`<g id="crosshair-group"><line id="crosshair" class="crosshair" y1="${top}" y2="${height - bottom}"/><circle id="fund-dot" r="3.4" fill="var(--cyan)" stroke="var(--panel)" stroke-width="1.5"/></g>`);
