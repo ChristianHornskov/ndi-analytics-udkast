@@ -1917,3 +1917,19 @@ Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er
 - Coordinator-loop 2026-10-16 07:15:15 CEST: MERGED origin/lane-R (ahead was 8) — precheck+smoke OK, pushed
 
 - Coordinator-loop 2026-10-16 07:26:09 CEST: MERGED origin/lane-D (ahead was 9) — precheck+smoke OK, pushed
+
+- Coordinator-loop 2026-10-16 07:40:09 CEST: PUSH FAIL after merge origin/lane-A — left on local main
+
+- Coordinator-loop 2026-10-16 07:41:09 CEST: PUSH FAIL after merge origin/lane-E — left on local main
+
+- Coordinator-loop 2026-10-16 07:42:03 CEST: MERGED origin/lane-B (ahead was 10) — precheck+smoke OK, pushed
+
+- Coordinator-loop 2026-10-16 07:42:56 CEST: MERGED origin/lane-C (ahead was 15) — precheck+smoke OK, pushed
+
+- Coordinator-loop 2026-10-16 07:43:49 CEST: MERGED origin/lane-R (ahead was 9) — precheck+smoke OK, pushed
+
+- Coordinator-loop 2026-10-16 07:54:50 CEST: MERGED origin/lane-D (ahead was 17) — precheck+smoke OK, pushed
+
+- Coordinator-loop 2026-10-16 07:55:50 CEST: MERGED origin/lane-A (ahead was 25) — precheck+smoke OK, pushed
+
+- Coordinator-loop 2026-10-16 07:56:51 CEST: MERGED origin/lane-E (ahead was 10) — precheck+smoke OK, pushed

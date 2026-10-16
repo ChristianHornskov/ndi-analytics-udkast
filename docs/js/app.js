@@ -1,6 +1,6 @@
 import {
   loadAll, fundById, slicePeriod, cagr, periodReturn, ytdReturn,
-  monthlyReturns, maxDrawdown, fmtPct, fmtDate, daTheme, daMat, daMatPlain, WARN_HIST,
+  monthlyReturns, maxDrawdown, topDrawdowns, rolling12, daysOld, fmtPct, fmtDate, daTheme, daMat, daMatPlain, WARN_HIST,
   MATURITY_LABELS, THEME_LABELS, calendarYearReturns, lastNav, publicTags, tagsFor, fillKidFooter, themeProposals,
   searchPosition, themeShift, themeShifts, shiftLabel, shiftFromLabel, themeDoubt, doubtAltLabel, warrantParent, displayName,
 } from './data.js';
@@ -20,7 +20,15 @@ const state = {
   linse: false, // kun selskaber med kvalitativ NDI-linse (unique-metrics.json); samme URL som A-Z: linse=1
   q: '',
   calFull: false,
+  basis: 'total', // total | price (URL visning=kurs)
+  cmp: false, // valgfri Nasdaq-100-sammenligningslinje (URL cmp=nasdaq)
 };
+let NASDAQ = null;
+async function loadNasdaq() {
+  if (NASDAQ) return NASDAQ;
+  try { const r = await fetch('data/nasdaq-compare.json', { cache: 'no-cache' }); NASDAQ = r.ok ? await r.json() : { data: [] }; } catch (_) { NASDAQ = { data: [] }; }
+  return NASDAQ;
+}
 
 let DATA = null;
 let MONTHS = null;
@@ -46,6 +54,19 @@ function sanitizeMaturity() {
   const before = state.maturity.join(',');
   state.maturity = state.maturity.filter((m) => known.has(m));
   return before !== state.maturity.join(',');
+}
+// Samme for ?tags=: et ukendt/stavet forkert tema giver ellers 0 resultater uden forklaring. Behold kun temaer, som findes i data.
+function sanitizeFund() {
+  if (DATA.portfolio.funds.some((f) => f.id === state.fund)) return false;
+  state.fund = 'pmindi';
+  return true;
+}
+
+function sanitizeTags() {
+  const known = new Set(DATA.portfolio.funds.flatMap((f) => f.positions.flatMap((p) => tagsFor(p, DATA.multiTags))));
+  const before = state.tags.join(',');
+  state.tags = state.tags.filter((t) => known.has(t));
+  return before !== state.tags.join(',');
 }
 
 function weightSpark(isin, fundId) {
@@ -75,9 +96,12 @@ function $all(sel, root = document) { return [...root.querySelectorAll(sel)]; }
 
 function readUrl() {
   const u = new URL(location.href);
-  state.fund = (u.searchParams.get('fund') || 'pmindi').toLowerCase();
+  // fund indsættes i href'er - kun [a-z0-9-] her, og valideres mod fondslisten i main() (sanitizeFund)
+  state.fund = (u.searchParams.get('fund') || 'pmindi').toLowerCase().replace(/[^a-z0-9-]/g, '') || 'pmindi';
   state.view = u.searchParams.get('view') || 'entre';
   state.period = u.searchParams.get('periode') || 'all';
+  state.cmp = u.searchParams.get('cmp') === 'nasdaq';
+  state.basis = u.searchParams.get('visning') === 'kurs' ? 'price' : 'total';
   // Interne tags (legacy/Trump) må aldrig ende i chips eller URL - UX §0.2, INTERNAL-TAGS.md
   state.tags = publicTags((u.searchParams.get('tags') || '').split(',').filter(Boolean));
   state.maturity = (u.searchParams.get('mat') || '').split(',').filter(Boolean);
@@ -102,6 +126,8 @@ function writeUrl(replace = false) {
     else u.searchParams.set(k, v);
   };
   set('fund', state.fund, 'pmindi');
+  set('cmp', state.cmp ? 'nasdaq' : '', '');
+  set('visning', state.basis === 'price' ? 'kurs' : '', '');
   set('view', state.view, 'entre');
   set('periode', state.period, 'all');
   set('tags', state.tags.join(','), '');
@@ -428,6 +454,7 @@ function renderFonden(root) {
     <p class="eyebrow">FONDEN · MARKEDSFØRINGSMATERIALE</p>
     <h1>${fund.short || fund.id.toUpperCase()}</h1>
     <p class="lede fonden-lede">Udloddende · totalafkast i DKK efter løbende omkostninger · afkast pr. ${fmtDate(asOfPerf)} · beholdning forsinket pr. ${fmtDate(posAsOf)}.</p>
+    ${(() => { const age = daysOld(asOfPerf); return age > 3 ? `<p class="stale-warn" role="status">Bemærk: Afkastdata er ${age} dage gamle (seneste kurs ${fmtDate(asOfPerf)}). Se den officielle kurs hos Fundmarket.</p>` : ''; })()}
     <div class="toolbar">
       ${fundSeg()}
       ${periodSeg}
@@ -443,7 +470,10 @@ function renderFonden(root) {
         <div class="metric"><div class="label">Største fald ${gl('drawdown')}</div><strong class="neg">${fmtPct(maxDrawdown(rows)?.dd)}</strong><small><a href="drawdown.html?fund=${state.fund}">Middel/median →</a></small></div>
         <div class="metric"><div class="label">Risikoindikator (KID) ${gl('sri')}</div><strong>5 / 7</strong><small>Anbefalet ejertid 5 år</small></div>
       </div>
-      <p class="note-fundmarket">Fonden har intet fast benchmark; vi viser derfor ingen sammenligningskurve. Beholdningen er et forsinket snapshot pr. ${fmtDate(posAsOf)} (seneste offentlige Fundmarket-rapport) og ikke dagsaktuel.</p>
+      <p class="note-fundmarket">Fonden har intet fast benchmark. Beholdningen er et forsinket snapshot pr. ${fmtDate(posAsOf)} (seneste offentlige Fundmarket-rapport) og ikke dagsaktuel.</p>
+      <div class="cmp-row"><span class="seg" role="group" aria-label="Afkast eller kurs"><button type="button" class="control${state.basis === 'total' ? ' active' : ''}" data-basis="total" aria-pressed="${state.basis === 'total'}">Totalafkast</button><button type="button" class="control${state.basis === 'price' ? ' active' : ''}" data-basis="price" aria-pressed="${state.basis === 'price'}">Kurs</button></span> <label class="cmp-toggle"><input type="checkbox" id="cmp-nasdaq" ${state.cmp ? 'checked' : ''}> Vis Nasdaq-100 som sammenligning</label></div>
+      <p class="basis-note" style="font-size:12px;color:var(--muted);margin:2px 0">${state.basis === 'price' ? 'Kurs: andelskursens udvikling uden udbytte. Kursen falder med udbyttet på ex-datoen (U).' : 'Totalafkast: som om udbyttet blev geninvesteret. U markerer ex-datoen for udbytte.'}</p>
+      <p class="cmp-label" id="cmp-label" ${state.cmp ? '' : 'hidden'}>Nasdaq vises kun som sammenligning, ikke som fondens benchmark. Historisk afkast er ingen garanti.</p>
       <p style="font-size:13px;color:var(--muted);margin:8px 0">Graf: ${periodLabel}</p>
       <div class="chart-wrap" id="perf-chart"></div>
       <p class="chart-takeaway" id="chart-takeaway" style="font-size:14px;color:var(--text);margin:8px 0 4px;line-height:1.45"></p>
@@ -519,8 +549,46 @@ function renderFonden(root) {
     ddEvts.push({ d: ddMark.troughD, kind: 'dip', title: `Bund (største fald ${fmtPct(ddMark.dd)})`, chartOnly: true });
   }
   const xMarksSafe = xMarks.map((e) => ({ ...e, text: stripCashtags(e.text) }));
-  const evts = [...ctxEvts, ...ddEvts, ...xMarksSafe];
-  renderChart($('#perf-chart', root), sliced, evts, { label: 'Totalafkast' });
+  const divEvts = (fund.dividends || []).filter((dv) => sliced.some((r) => r.d >= dv.exDate) && dv.exDate >= (sliced[0]?.d || '')).map((dv) => ({ d: dv.exDate, kind: 'div', title: `Udbytte ex-dato ${fmtDate(dv.exDate)}: ${String(dv.amount).replace('.', ',')} kr. pr. andel`, chartOnly: true }));
+  const evts = [...ctxEvts, ...ddEvts, ...xMarksSafe, ...divEvts];
+  const drawPerf = (cmpRows) => renderChart($('#perf-chart', root), sliced, evts, { label: state.basis === 'price' ? 'Kurs' : 'Totalafkast', basis: state.basis, compare: cmpRows, compareName: 'Nasdaq-100' });
+  drawPerf(null);
+  if (state.cmp) loadNasdaq().then((nq) => { if (state.cmp && $('#perf-chart', root)) drawPerf(nq.data || []); });
+  const cmpBox = $('#cmp-nasdaq', root);
+  root.querySelectorAll('[data-basis]').forEach((b) => b.addEventListener('click', () => { state.basis = b.getAttribute('data-basis'); writeUrl(true); paint(); }));
+  if (cmpBox) cmpBox.addEventListener('change', () => { state.cmp = cmpBox.checked; writeUrl(true); paint(); });
+  {
+    const r12 = rolling12(rows);
+    const dds = topDrawdowns(rows, 5);
+    const host = $('#perf-chart', root)?.closest('section');
+    if (host && (r12.length > 1 || dds.length)) {
+      const sec = document.createElement('section');
+      sec.className = 'panel';
+      sec.id = 'rullende-og-nedture';
+      let svg = '';
+      if (r12.length > 1) {
+        const W = 1000, H = 220, pl = 52, pr = 16, pt = 12, pb = 28;
+        const vs = r12.map((p) => p.v); let mn = Math.min(0, ...vs), mx = Math.max(0, ...vs); const sp = (mx - mn) || 1; mn -= sp * .08; mx += sp * .08;
+        const X = (i) => pl + (i / (r12.length - 1)) * (W - pl - pr), Y = (v) => pt + (1 - (v - mn) / (mx - mn)) * (H - pt - pb);
+        const d = r12.map((p, i) => `${i ? 'L' : 'M'}${X(i).toFixed(1)},${Y(p.v).toFixed(1)}`).join(' ');
+        const ticks = [mn, (mn + mx) / 2, mx].map((v) => `<text x="${pl - 8}" y="${Y(v) + 4}" text-anchor="end">${fmtPct(v, 0)}</text>`).join('');
+        const xl = [0, r12.length - 1].map((i) => `<text x="${X(i)}" y="${H - 8}" text-anchor="${i ? 'end' : 'start'}">${fmtDate(r12[i].d)}</text>`).join('');
+        const last = r12[r12.length - 1];
+        const pos = r12.filter((p) => p.v > 0).length;
+        svg = `<div class="chart-wrap r12"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Rullende 12-måneders totalafkast">${ticks}<line class="zero" x1="${pl}" x2="${W - pr}" y1="${Y(0)}" y2="${Y(0)}"/><path class="fund" d="${d}"/>${xl}</svg></div>
+          <p class="chart-readout">Seneste 12 måneder (pr. ${fmtDate(last.d)}): ${fmtPct(last.v)}. Bedste ${fmtPct(Math.max(...vs))}, svageste ${fmtPct(Math.min(...vs))}. Positivt i ${Math.round(pos / r12.length * 100)} % af de målte dage.</p>`;
+      }
+      const ddRows = dds.map((x, i) => `<tr><td>${i + 1}</td><td class="neg">${fmtPct(x.dd)}</td><td>${fmtDate(x.peakD)}</td><td>${fmtDate(x.troughD)}</td><td>${x.recD ? fmtDate(x.recD) : 'Ikke genvundet endnu'}</td></tr>`).join('');
+      sec.innerHTML = `<h2 style="font-size:18px;margin-bottom:6px">Rullende 12-måneders afkast</h2>
+        <p style="font-size:12px;color:var(--muted);margin-bottom:8px">Hvert punkt svarer på: Hvad gav en investering i de foregående 12 måneder? Totalafkast i DKK efter løbende omkostninger. Starter først, når der er 12 måneders historik.</p>
+        ${svg}
+        <h2 style="font-size:18px;margin:18px 0 6px">De 5 dybeste fald siden start</h2>
+        <p style="font-size:12px;color:var(--muted);margin-bottom:8px">Et fald måles fra en top til bunden, før fonden igen nåede over toppen.</p>
+        ${hscroll(`<div class="table-wrap"><table class="data" style="min-width:0"><thead><tr><th>#</th><th>Fald</th><th>Top</th><th>Bund</th><th>Genvundet</th></tr></thead><tbody>${ddRows}</tbody></table></div>`, 'Rul til siden for flere kolonner.')}
+        ${warnHtml()}`;
+      host.after(sec);
+    }
+  }
   const take = $('#chart-takeaway', root);
   if (take && sliced.length >= 2) {
     const first = sliced[0], last = sliced[sliced.length - 1];
@@ -878,7 +946,7 @@ function viaLens(list) {
 function warrantNote(p, fund) {
   const par = warrantParent(p, fund.positions);
   if (!par) return '';
-  const link = par.isin ? `<a href="selskab.html?isin=${encodeURIComponent(par.isin)}&fund=${fund.id}">${par.name}</a>` : par.name;
+  const link = par.isin ? `<a href="selskab.html?isin=${encodeURIComponent(par.isin)}&fund=${fund.id}">${displayName(par)}</a>` : displayName(par);
   return `<br><small style="color:var(--muted);display:inline-block;white-space:normal;max-width:36ch;line-height:1.35;text-align:left">Warrant (tegningsret) på ${link} - ikke et selvstændigt selskab</small>`;
 }
 function hitNote(p) {
@@ -1007,7 +1075,7 @@ function renderUdforsk(root) {
       <!-- Følg tema stub skjult indtil tilmelding er aktiv -->
     </div>
     <details class="udforsk-filters" id="udforsk-filters">
-    <summary class="outline-btn small">Filtre (tema, status, modenhed) <span class="muted">· ${state.tags.length + state.maturity.length + (state.status?1:0) + (state.linse?1:0) + (state.skift?1:0)} aktive</span></summary>
+    <summary class="outline-btn small">Filtre (tema, status, modenhed) <span class="muted">· ${(n => n === 1 ? '1 aktivt' : `${n} aktive`)(state.tags.length + state.maturity.length + (state.status?1:0) + (state.linse?1:0) + (state.skift?1:0))}</span></summary>
     <div class="filters" role="group" aria-label="Filtrér på tema">
       ${themes.map((t) => `<button type="button" class="control ${state.tags.includes(t)?'active':''}" data-tag="${t}" aria-pressed="${state.tags.includes(t)}" title="${tagCount[t].prim} med ${daTheme(t)} som primært tema${tagCount[t].multi ? ` + ${tagCount[t].multi} som ekstra tema` : ''}">${daTheme(t)} <small style="opacity:.75">${tagCount[t].prim}${tagCount[t].multi ? ` +${tagCount[t].multi}` : ''}</small></button>`).join('')}
     </div>
@@ -1020,7 +1088,7 @@ function renderUdforsk(root) {
     </details>
     <div class="chips" id="chips"></div>
     <p style="font-size:12px;color:var(--muted)" id="filter-status">${list.length} ${list.length === 1 ? 'resultat' : 'resultater'}${viaLens(list)} · udkast-klassifikation</p>
-    <p class="uf-machine-note" style="font-size:12px;color:var(--muted);margin:-6px 0 8px">Tema og modenhed er maskinelle <span class="badge badge-draft">forslag</span> ud fra offentlig branche/tema og afventer NDI.</p>
+    <p class="uf-machine-note" style="font-size:12px;color:var(--muted);margin:-6px 0 8px">Tema og modenhed er maskinelle <span class="badge badge-draft">forslag</span> ud fra offentlig branche/tema og afventer NDI.${list.some(hasLens) ? ' <span aria-hidden="true">◉</span> = NDI-linse: faste spørgsmål om, hvad selskabet giver porteføljen (udkast, ikke en karakter). <a href="laer/saadan-taenker-vi.html#tv-hv">Hvad er det?</a>' : ''}</p>
     ${list.length ? positionsTable(list, fund) : emptyScreener(fund)}
     ${warnHtml()}`;
 
@@ -1264,12 +1332,12 @@ async function main() {
     $('#app').innerHTML = `<p class="warn">Data kunne ikke hentes (${err.message}). Genindlæs siden.</p>`;
     return;
   }
-  if (sanitizeMaturity()) writeUrl(true);
+  if (sanitizeFund() | sanitizeMaturity() | sanitizeTags()) writeUrl(true);
   fillKidFooter();
   document.addEventListener('click', onClick);
   document.addEventListener('input', onInput);
   wireKeyboard();
-  window.addEventListener('popstate', () => { readUrl(); if (sanitizeMaturity()) writeUrl(true); paint(); });
+  window.addEventListener('popstate', () => { readUrl(); if (sanitizeFund() | sanitizeMaturity() | sanitizeTags()) writeUrl(true); paint(); });
   window.addEventListener('resize', () => markHscroll($('#app')));
   // [data-open] håndteres af onClick-delegering (tidligere dobbelt listener → to dialoger)
   paint();

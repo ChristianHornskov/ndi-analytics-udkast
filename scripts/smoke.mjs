@@ -27,6 +27,7 @@ const pages = [
   '/selskab.html?isin=US88160R1014',
   '/laer/faq.html',
   '/temaer.html',
+  '/?view=fonden&cmp=nasdaq',
 ];
 const results = [];
 const browser = await chromium.launch({ headless: true });
@@ -58,6 +59,26 @@ for (const width of [1280, 375]) {
     }
   }
   await context.close();
+}
+// Nasdaq-sammenligning: tilladt KUN som valgfri linje med præcis label, og slået fra som standard
+const NQ_LABEL = 'Nasdaq vises kun som sammenligning, ikke som fondens benchmark. Historisk afkast er ingen garanti.';
+for (const width of [1280, 375]) {
+  const ctx = await browser.newContext({ viewport: { width, height: 800 } });
+  const pg = await ctx.newPage();
+  await pg.goto(BASE + '/?view=fonden', { waitUntil: 'networkidle' });
+  const offCmp = await pg.locator('#perf-chart path.cmp').count();
+  await pg.goto(BASE + '/?view=fonden&cmp=nasdaq', { waitUntil: 'networkidle' });
+  await pg.waitForSelector('#perf-chart path.cmp', { timeout: 5000 }).catch(() => {});
+  const onCmp = await pg.locator('#perf-chart path.cmp').count();
+  const label = (await pg.locator('#cmp-label').textContent().catch(() => '')) || '';
+  const labelVisible = await pg.locator('#cmp-label').isVisible().catch(() => false);
+  const ok = offCmp === 0 && onCmp === 1 && label.trim() === NQ_LABEL && labelVisible;
+  await pg.goto(BASE + '/?view=fonden', { waitUntil: 'networkidle' });
+  const ddN = await pg.locator('#rullende-og-nedture tbody tr').count();
+  const r12 = await pg.locator('#rullende-og-nedture .r12 path.fund').count();
+  results.push({ width, path: 'rolling12+top5dd', status: 200, err: (ddN === 5 && r12 === 1) ? '' : `dd rows=${ddN} r12=${r12}`, footerOk: true });
+  results.push({ width, path: 'nasdaq-compare', status: 200, err: ok ? '' : `nasdaq: off=${offCmp} on=${onCmp} labelVisible=${labelVisible} label="${label.trim()}"`, footerOk: true });
+  await ctx.close();
 }
 await browser.close();
 const fail = results.filter(r => r.status !== 200 || r.err || r.badAdvice || r.notesLeak || r.footerOk === false);

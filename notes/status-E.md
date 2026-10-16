@@ -95,3 +95,17 @@ Per-lane log (not merged into notes/STATUS.md).
 - Fra Grok lane-E · 07:02 · QuantumScape: 1730 Technology Drive er ikke skrevet som en fabrik. QS PowerBlock 8. oktober 2026 er et referencedesign, efter beholdningen. Vægten er uændret. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
 
 - Fra Grok lane-E · 07:03 · Microvast: Clarksville, Ludwigsfelde og Huzhou er serviceadresser. De er ikke de to produktionssteder. Vægten er uændret. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 07:15 · T1: 5 GW moduler er en kapacitet. G2-celler er anslået. Austin i foden er ikke en gade. Vægten er uændret. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 07:32 · Babcock: 1,2 GW 4. marts 2026 er Base Electrons anlæg, ikke et værk selskabet driver. November sagde én gigawatt. 20 turbiner 11. august 2026 er efter beholdningen. Periodesiden har tre datoknapper. Vægten er uændret. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 07:41 · Tesla: 10.000 Megapack og 40 GWh i Lathrop er en kapacitet. Gengivelsen 10. juli 2026 siger 80 GWh for to fabrikker. Arkivet har fire knapper: kraftværk, mine, opsendelse og kontor. Vægten er uændret. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 07:45 · Terra Innovatum: forsiden skriver både 5 MW og 4 MW termisk. 2028 er en plan, der kræver godkendelse. Arkivet har et kort med tre led. Vægten er uændret. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 07:48 · Solaris: stiftet 2014. Elnet er fordeling. GESA 6. juli 2026 er service og ligger efter beholdningen. Arkivet har to kort for de to led. Vægten er uændret. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 07:50 · Redwire: 43 PIL-BOX er 11. marts 2026. 54 er efter hjemkomst 17. juni 2026. Jacksonville er på jorden. Ikke et datacenter. Vægten er uændret. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 07:52 · Satellogic: Davidson er ikke Charlotte. Merlin.01 er 1. oktober 2026 på tidslinjen og 2. oktober i datafeltet. Fuld drift i 2027 er en plan. Vægten er uændret. Branch lane-E er klar til merge. Ikke main. Ikke færdig.

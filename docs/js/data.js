@@ -185,6 +185,41 @@ export function maxDrawdown(rows) {
   return { dd: best.dd * 100, peakD: best.peakD, troughD: best.troughD };
 }
 
+/** De n dybeste, ikke-overlappende nedture (top → bund → genvundet). dd i % */
+export function topDrawdowns(rows, n = 5) {
+  if (!rows?.length) return [];
+  const eps = [];
+  let peak = rows[0], trough = null;
+  for (const r of rows) {
+    if (r.total >= peak.total) {
+      if (trough && trough.total < peak.total) eps.push({ peakD: peak.d, troughD: trough.d, recD: r.d, dd: (trough.total / peak.total - 1) * 100 });
+      peak = r; trough = null;
+    } else if (!trough || r.total < trough.total) trough = r;
+  }
+  if (trough && trough.total < peak.total) eps.push({ peakD: peak.d, troughD: trough.d, recD: null, dd: (trough.total / peak.total - 1) * 100 });
+  return eps.sort((a, b) => a.dd - b.dd).slice(0, n);
+}
+
+/** Rullende 12-måneders totalafkast: for hver dato med ≥ 12 mdr. historik, afkast fra nærmeste dato ≤ 1 år før. */
+export function rolling12(rows) {
+  const out = [];
+  let j = 0;
+  for (let i = 0; i < rows.length; i++) {
+    const d = new Date(rows[i].d + 'T12:00:00Z'); d.setUTCFullYear(d.getUTCFullYear() - 1);
+    const lim = d.toISOString().slice(0, 10);
+    if (rows[0].d > lim) continue;
+    while (j + 1 < rows.length && rows[j + 1].d <= lim) j++;
+    out.push({ d: rows[i].d, v: (rows[i].total / rows[j].total - 1) * 100 });
+  }
+  return out;
+}
+
+/** Dage mellem ISO-dato og i dag (kalenderdage) */
+export function daysOld(iso, now = new Date()) {
+  if (!iso) return null;
+  return Math.floor((now - new Date(iso + 'T12:00:00Z')) / 86400000);
+}
+
 export function fmtPct(n, digits = 1) {
   if (n == null || Number.isNaN(n)) return '-';
   const sign = n > 0 ? '+' : '';
@@ -385,6 +420,8 @@ const NAME_FIX = {
   'General Motors Co': 'General Motors', 'Hecla Mining Co': 'Hecla Mining', 'Tmc The Metals Co Inc': 'TMC The Metals Company',
   'Ams-Osram Ag': 'ams OSRAM', 'Microstrategy': 'MicroStrategy', 'Hims Hers Health Inc': 'Hims & Hers Health',
   'Solstice Adv Materials Inc': 'Solstice Advanced Materials',
+  'SoFi Tech': 'SoFi Technologies', 'Opendoor Tech': 'Opendoor Technologies', 'Uber Tech': 'Uber Technologies',
+  'Spotify Tech': 'Spotify Technology', 'Dell Tech': 'Dell Technologies', 'Lumen Tech': 'Lumen Technologies', 'WEBTOON Entr': 'WEBTOON Entertainment',
 };
 // Selskabsnavne, som depotbanken har gjort til "Titel Case" (SITIME → Sitime). Kun ord, hvis rigtige stavemåde er sikker.
 const WORD_FIX = {
@@ -393,11 +430,16 @@ const WORD_FIX = {
   Sitime: 'SiTime', Formfactor: 'FormFactor', Blacksky: 'BlackSky', Abcellera: 'AbCellera', Maxlinear: 'MaxLinear',
   Quantumscape: 'QuantumScape', Solaredge: 'SolarEdge', Terawulf: 'TeraWulf', Whitefiber: 'WhiteFiber', Lifemd: 'LifeMD',
   Weride: 'WeRide', Nuscale: 'NuScale', Propetro: 'ProPetro', Fubotv: 'fuboTV', Niocorp: 'NioCorp', Sharonai: 'SharonAI',
-  Sharplink: 'SharpLink', Sailpoint: 'SailPoint', Defi: 'DeFi', Neovolta: 'NeoVolta', Coreweave: 'CoreWeave', Cleanspark: 'CleanSpark', 'Wix.Com': 'Wix.com',
+  Eqt: 'EQT', Poet: 'POET', Sharplink: 'SharpLink', Sailpoint: 'SailPoint', Defi: 'DeFi', Neovolta: 'NeoVolta', Coreweave: 'CoreWeave', Cleanspark: 'CleanSpark', 'Wix.Com': 'Wix.com',
 };
+// Efter reglerne: kendte navne, der stadig ser forkerte ud (Ghl = Grab Holdings, identificeret via ISIN KYG4124C1096).
+const FINAL_FIX = { Ghl: 'Grab Holdings', 'Raspberry PI': 'Raspberry Pi', 'Chemours Co': 'Chemours', DLocal: 'dLocal', 'Freeport McMoRan': 'Freeport-McMoRan', Nu: 'Nu Holdings' };
 export function displayName(p) {
   const raw = (p?.name || '').trim();
   if (NAME_FIX[raw]) return NAME_FIX[raw];
+  // Warrants arver moderselskabets læsbare navn ("Opendoor Tech Warrant Series A" → "Opendoor Technologies Warrant Series A")
+  const wm = /^(.*?)(\s+warrants?\b.*)$/i.exec(raw);
+  if (wm && NAME_FIX[wm[1]]) return NAME_FIX[wm[1]] + wm[2];
   let n = raw.replace(/\/The$/, '').replace(/\s*\/\s*(Us|Delaware)$/i, '');
   const adr = /(\s+Sp)?[\s-]+ADR$/i.test(n);
   n = n.replace(/(\s+Sp)?[\s-]+ADR$/i, '')
@@ -407,6 +449,7 @@ export function displayName(p) {
   // Selskabsform til sidst (Inc, Corp, Ltd, Plc, AG, SE, NV) - ikke "Co", der står i fx "Southern Co".
   if (!/\/The$/.test(raw)) n = n.replace(/\s*\b(Inc|Corp|Ltd|Plc|Ag|Se|Nv)\.?$/i, '').trim();
   n = n.replace(/[\w.]+/g, (w) => WORD_FIX[w] || w);
+  n = FINAL_FIX[n] || n;
   return adr ? `${n} (ADR)` : n;
 }
 // Warrants (tegningsretter) ligger som egne positioner med ~0 % vægt, men er ikke selvstændige selskaber.

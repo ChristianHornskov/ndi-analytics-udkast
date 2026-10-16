@@ -49,3 +49,14 @@ Per-lane log. Ikke notes/STATUS.md.
 - Fra Grok lane-D · 07:22 · Udskriv på embed. Papiret beholder kurven, stoppene og advarslen. Knappen står ikke i opfordringen. PMINDIAKK har knappen og ingen procent. lane-D klar til merge. Ikke main. Ikke færdig.
 - Fra Grok lane-D · 07:28 · Hele forløbet på drawdown: de fire dybe episoder på én tidslinje. Klik hopper til bunden. PMINDIAKK har ingen linje. lane-D klar til merge. Ikke main. Ikke færdig.
 - Fra Grok lane-D · 07:32 · Klik på KID-parret på sammenlign. Sætningen siger klassen: ca. 2,79 % eller ca. 2,85 %. PMINDIAKK stadig uden kurs før 5. dec. 2026. lane-D klar til merge. Ikke main. Ikke færdig.
+- Fra Grok lane-D · 07:26 · Temarækker på sammenlign kan vælges. Sætningen gentager de to vægte. Eksponering, ikke anbefaling. lane-D klar til merge. Ikke main. Ikke færdig.
+- Fra Grok lane-D · 07:33 · Første dag under 10 % på drawdown hopper til 2. aug. 2024. 267 af 770 dage lå mindst 10 % under toppen. PMINDIAKK har ingen linje. lane-D klar til merge. Ikke main. Ikke færdig.
+- Fra Grok lane-D · 07:37 · Tidslinjen på sammenlign har to spor. Længden er tiden. PMINDIAKK har ingen kurs før 5. dec. 2026. lane-D klar til merge. Ikke main. Ikke færdig.
+- Fra Grok lane-D · 07:40 · Embed tæller dagene på eller under nul. 749 af 770 på hele perioden. Det er ikke et fald fra top. PMINDIAKK har ingen streg. lane-D klar til merge. Ikke main. Ikke færdig.
+- Fra Grok lane-D · 07:42 · År-knapper på drawdown hopper til årets første dag under 10 %. 2024, 2025 og 2026. PMINDIAKK har ingen række. lane-D klar til merge. Ikke main. Ikke færdig.
+- Fra Grok lane-D · 07:43 · Siden bunden på drawdown: 77 dage siden 29. jul. 2026. Klik hopper til bunden. PMINDIAKK har ingen linje. lane-D klar til merge. Ikke main. Ikke færdig.
+- Fra Grok lane-D · 07:47 · Embed har et spor for perioden. Gul del er år til dato. Klik skifter periode. PMINDIAKK har ingen spor. lane-D klar til merge. Ikke main. Ikke færdig.
+- Fra Grok lane-D · 07:48 · Temarækken og Nasdaq-rækken deler ikke CSS. Sammenlign beholder gitteret. Kontakten er 44 px og slået fra. lane-D klar til merge. Ikke main. Ikke færdig.
+- Fra Grok lane-D · 07:49 · År-rækken siger også dagtallet. 2024 har 16, 2025 har 116, 2026 har 135. Tilsammen 267. PMINDIAKK har ingen række. lane-D klar til merge. Ikke main. Ikke færdig.
+- Fra Grok lane-D · 07:51 · Embed hopper til første dag under nul. Hele perioden er 3. okt. 2023. Det er afstanden til starten, ikke et fald fra top. PMINDIAKK har ingen knap. lane-D klar til merge. Ikke main. Ikke færdig.
+- Fra Grok lane-D · 07:52 · PMINDIAKK-sporet siger, at klassen har eksisteret i 313 dage. Kursen vises stadig efter 12 måneder. lane-D klar til merge. Ikke main. Ikke færdig.

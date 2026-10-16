@@ -205,6 +205,20 @@ fi
 if rg -q '2087874479141589021' "$DOC/data/x-posts.json" 2>/dev/null; then err "x-posts.json still has 13 Aug ticker post"; else ok "13 Aug ticker post removed"; fi
 if rg -q "garp: 'GARP'|highgrowth: 'High growth'" "$DOC/js/data.js" 2>/dev/null; then err "English maturity labels in data.js"; else ok "Danish maturity labels"; fi
 
+# Nasdaq (Christian 07:35): tilladt som valgfri sammenligning, men kun med præcis label og aldrig kaldt benchmark
+NQ_LABEL='Nasdaq vises kun som sammenligning, ikke som fondens benchmark. Historisk afkast er ingen garanti.'
+if rg -q -i 'nasdaq' "$DOC/js" 2>/dev/null; then
+  if rg -q -F "$NQ_LABEL" "$DOC/js/app.js"; then ok "Nasdaq comparison carries exact label"; else err "Nasdaq in docs/js without exact comparison label"; fi
+  if rg -q "cmp: true" "$DOC/js/app.js"; then err "Nasdaq comparison must be off by default"; else ok "Nasdaq comparison off by default"; fi
+  if rg -n -i 'nasdaq[^.]{0,40}(er|som) (fondens )?benchmark|benchmark: *.?nasdaq' "$DOC" --glob '*.html' --glob '*.js' | rg -v -F 'ikke som fondens benchmark' | rg -q .; then err "Nasdaq described as benchmark"; else ok "Nasdaq never called benchmark"; fi
+fi
+if [ -f "$DOC/data/nasdaq-compare.json" ]; then
+  python3 -c "import json,sys;d=json.load(open('$DOC/data/nasdaq-compare.json'));sys.exit(0 if d.get('data') and all(len(p)==2 for p in d['data']) else 1)" && ok "nasdaq-compare.json index-only series" || err "nasdaq-compare.json malformed"
+fi
+
+# Datafriskhed: daysOld-logik (advarsel > 3 dage)
+if node --input-type=module -e "import {daysOld} from '$DOC/js/data.js'; const n=new Date('2026-10-16T08:00:00Z'); process.exit(daysOld('2026-10-11',n)===4 && daysOld('2026-10-14',n)===1 ? 0 : 1)" 2>/dev/null; then ok "staleness helper (>3 dage)"; else err "staleness helper broken"; fi
+if rg -q 'stale-warn' "$DOC/js/app.js"; then ok "Fonden has staleness warning"; else err "Fonden staleness warning missing"; fi
 if [[ "$FAIL" -ne 0 ]]; then
   echo "=== PRECHECK FAILED — do not push ===" >&2
   exit 1

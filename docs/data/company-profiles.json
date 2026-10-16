@@ -60,13 +60,27 @@
   "US88160R1014": {
    "name": "Tesla",
    "theme": "physical",
-   "summary": "Producerer elbiler, batterilagring og energiprodukter. Software og automatisering er integreret i selskabets produkter og produktion.",
-   "watch": "Bilmarkedets konkurrence, indtjening pr. bil og kapitalbehov.",
-   "source": "https://www.tesla.com/about",
-   "products": "Elbiler, batterilagring og energiløsninger med tilhørende software og service.",
+   "summary": "Producerer elbiler, batterilagring og energiprodukter. Megapack er batteriudstyr. 10.000 enheder om året i Lathrop er en kapacitet, ikke et målt år.",
+   "watch": "Om 40 GWh læses som årets produktion, eller som et kraftværk selskabet driver.",
+   "source": "https://www.tesla.com/megafactory",
+   "products": "Elbiler og Megapack. Lathrop er sat til 10.000 enheder om året, svarende til 40 GWh.",
    "customers": "Bilister, virksomheder og kunder med behov for lagring af elektricitet.",
-   "role": "Kombinerer batterier, effektelektronik, software og fysisk produktion.",
+   "role": "Batteriudstyr ved siden af biler. 40 GWh i Lathrop er en kapacitet, ikke et kraftværk.",
    "reviewedAt": "2026-10-08",
+   "narrative": [
+    "Tesla laver biler og batteriudstyr. Siden om Megafactory i Lathrop, læst 16. oktober 2026, skriver, at anlægget kan lave 10.000 Megapack om året, svarende til 40 GWh. Det er en kapacitet. Siden daterer ikke tallet. Det er ikke et målt år og ikke et kraftværk.",
+    "En gengivelse af Megapack-siden dateret 10. juli 2026 skriver, at fabrikkerne i Lathrop og i Shanghai tilsammen har en fremstillingskapacitet på 80 GWh, eller 20.000 enheder, om året. Samme gengivelse skriver mere end 58 GWh i drift globalt og over 65 lande. Den daterer ikke tallene. Datoen ligger efter beholdningen. De to tekster bruger ikke samme tal."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Megafactory i Lathrop",
+     "url": "https://www.tesla.com/megafactory"
+    },
+    {
+     "label": "Megapack, gengivelse 10. juli 2026",
+     "url": "https://www.tesla.com/megapack"
+    }
+   ],
    "xAccounts": [
     {
      "handle": "Tesla",
@@ -203,12 +217,38 @@
   "US05614L2097": {
    "name": "Babcock & Wilcox",
    "theme": "energy",
-   "summary": "Leverer teknologi og service til energiproduktion og industrielle anlæg. Forretningen omfatter blandt andet kedler, forbrændingssystemer og emissionsbehandling.",
-   "watch": "Projektgennemførelse, finansiering og efterspørgsel fra energi- og industrikunder.",
-   "source": "https://www.babcock.com/",
-   "products": "Udstyr og service til energiproduktion og industri, blandt andet kedler og systemer til emissionsbehandling.",
-   "customers": "Energi- og industrivirksomheder.",
-   "role": "Den fysiske energi- og anlægsinfrastruktur, som blandt andet databehandling er afhængig af.",
+   "summary": "Laver kedler og står for design og byggeri. Meddelelsen af 4. marts 2026 er 1,2 GW for Base Electron, som skal eje anlæggene. Det er ikke et kraftværk, Babcock & Wilcox driver. 20 turbiner af 11. august 2026 ligger efter beholdningen.",
+   "watch": "Om 1,2 GW bliver læst som et værk i drift. Meddelelsen af 4. november 2025 siger én gigawatt og nævner også fire anlæg på 300 MW. Levering er sat til udgangen af 2028. Turbinerne af 11. august 2026 er efter beholdningen.",
+   "source": "https://www.babcock.com/home/about/corporate/news/babcock-and-wilcox-receives-full-notice-to-proceed-on-24-billion-power-generation-project-for-base-electron-to-supply-power-to-applied-digital-ai-factory-campuses",
+   "products": "Kedler, dele og design-byggeri. Aftalen af 4. marts 2026 omfatter fire kedler på 300 MW fyret med naturgas. Ikke et kraftværk selskabet driver.",
+   "customers": "Base Electron er skrevet som den uafhængige producent, der skal udvikle og eje anlæggene. Applied Digital er nævnt som modtager af strømmen under særskilte aftaler.",
+   "role": "Kedler. 1,2 GW er Base Electrons anlæg, ikke et værk Babcock & Wilcox driver.",
+   "narrative": [
+    "Babcock & Wilcox skriver, at hovedkontoret ligger på 1200 E Market St, Ste 650, i Akron i Ohio, og at Chanute Manufacturing ligger på 1700 S Washington i Chanute i Kansas. Det er kontor og fremstilling, ikke et kraftværk. Selskabet skrev 4. november 2025, at en begrænset igangsættelse gjaldt ét projekt om én gigawatt, og at planen var fire anlæg på 300 MW med mål om drift i 2028. Samme tekst siger, at selskabet har designet og installeret kedler med mere end 400 GW installeret kapacitet på andres kraftværker og industrianlæg. Det er ikke værker, selskabet driver.",
+    "Selskabet skrev 4. marts 2026, at den fulde igangsættelse er en design- og byggeaftale om 1,2 GW med fire naturgasfyrede kedler på 300 MW og dampturbiner. Base Electron er skrevet som den uafhængige producent, der udvikler og ejer anlæggene. Meddelelsen af 8. januar 2026 sætter levering til udgangen af 2028. De tre datoer ligger før beholdningen pr. 1. juni 2026. Teksten siger ikke, at anlægget er i drift. November-teksten siger én gigawatt, og marts-teksten siger 1,2 GW. De to tekster bruger ikke samme tal. Meddelelsen af 11. august 2026 om 20 dampturbiner på 50 MW, i alt 1 GW, til programmet FastPower ligger efter beholdningen og er ikke et værk i drift. Den ekstra 1,2 GW er en mulighed, Base Electron vurderer."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Kontakt, hovedkontor og Chanute",
+     "url": "https://www.babcock.com/contact-us"
+    },
+    {
+     "label": "Begrænset igangsættelse 4. november 2025",
+     "url": "https://www.babcock.com/home/about/corporate/news/babcock-and-wilcox-announces-ai-data-center-power-generation-solution-and-signs-lntp-with-applied-digital-to-design-and-install-one-gigawatt-of-electric-power"
+    },
+    {
+     "label": "Meddelelse 8. januar 2026",
+     "url": "https://www.babcock.com/home/about/corporate/news/babcock-and-wilcox-selects-siemens-energy-to-supply-steam-turbine-generator-sets-for-applied-digital-data-center-power-project"
+    },
+    {
+     "label": "Fuld igangsættelse 4. marts 2026",
+     "url": "https://www.babcock.com/home/about/corporate/news/babcock-and-wilcox-receives-full-notice-to-proceed-on-24-billion-power-generation-project-for-base-electron-to-supply-power-to-applied-digital-ai-factory-campuses"
+    },
+    {
+     "label": "Meddelelse 11. august 2026",
+     "url": "https://www.babcock.com/home/about/corporate/news/babcock-and-wilcox-signs-agreement-with-siemens-energy-to-commence-work-on-20-steam-turbines-for-data-center-power-generation"
+    }
+   ],
    "reviewedAt": "2026-10-08"
   },
   "DE0006450000": {
@@ -247,12 +287,22 @@
   "US35834F1049": {
    "name": "T1 Energy",
    "theme": "energy",
-   "summary": "Arbejder med amerikansk produktion af solenergiudstyr. Selskabets aktiviteter omfatter produktion af solcellemoduler og opbygning af forsyningskæder.",
-   "watch": "Kapitalbehov, industripolitik, told og priser på solenergiudstyr.",
+   "summary": "Laver solcellemoduler. Fabrikssiden sætter G1_Dallas til 5 GW moduler om året. Det er en kapacitet, ikke et målt år. G2-celler er anslået og ikke i drift. Foden skriver Austin, Texas, uden gade.",
+   "watch": "Om 5 GW bliver læst som årets produktion. G2 er anslået cellekapacitet, ikke et anlæg i drift. Koordinaterne for G1 og G2 begynder med samme tal.",
    "source": "https://t1energy.com/manufacturing/",
-   "products": "Solcellemoduler og aktiviteter inden for den amerikanske forsyningskæde til solenergi.",
-   "customers": "Kunder i markedet for solenergianlæg.",
-   "role": "Industriel produktion af udstyr, der omdanner sollys til elektricitet.",
+   "products": "Solcellemoduler. G1 er sat til 5 GW om året og omkring 12.000 paneler i døgnet uden dato. G2 er anslået 5 GW celler om året. Ikke et kraftværk.",
+   "customers": "Siden navngiver ikke en køber af modulerne.",
+   "role": "Moduler. 5 GW er en kapacitet. G2-celler er anslået. Austin i foden er ikke en gade.",
+   "narrative": [
+    "Fabrikssiden, læst 16. oktober 2026, sætter G1_Dallas til 5 GW solcellemoduler om året og omkring 12.000 paneler i døgnet. 5 GW er en kapacitet. Paneletallet er ikke dateret. G2 er sat til anslået 5 GW celler om året og et mål om 90 procent genbrug af vand. Teksten siger next up om solceller fra en ny fabrik uden for Austin. Det er ikke celler i drift.",
+    "Samme side skriver koordinater for G1_Dallas, 32,60157 nord og 96,70376 vest, og for G2_Austin, 32,60210 nord og 96,70345 vest. Begge begynder med 32,60 nord og 96,70 vest. En overskrift er ikke en by. Foden skriver T1 Energy Inc. og Austin, Texas, USA, uden gade. Ordene advanced, cutting-edge og future er ikke taget med."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Fabrikker",
+     "url": "https://t1energy.com/manufacturing/"
+    }
+   ],
    "reviewedAt": "2026-10-08"
   },
   "IL0010823792": {
@@ -470,7 +520,7 @@
    "source": "https://www.solaris-energy.com/",
    "products": "Anlæg, der producerer og fordeler strøm tæt på forbrugeren, plus service.",
    "customers": "Datacentre, industri og energikunder.",
-   "role": "Strøm ved siden af store forbrugere, ikke et klassisk elselskab alene.",
+   "role": "Stiftet 2014. Produktion og fordeling. GESA er service, ikke et kraftværk.",
    "narrative": [
     "Solaris skriver, at selskabet er stiftet i 2014, og at det leverer produktion og fordeling af strøm til datacentre, energi, erhverv og industri. Selskabet skrev 6. juli 2026, at det har købt Global Energy Services Alliance, GESA.",
     "GESA er beskrevet som service til kraftværker, sammensat af Baseload Power og Pro-Per Energy Services. Datoen ligger efter beholdningen pr. 1. juni 2026. Det er service, ikke et kraftværk i drift. I kæden står Solaris både på elproduktion og på elnet."
@@ -565,20 +615,24 @@
   "NL0015002Q12": {
    "name": "Terra Innovatum",
    "theme": "energy",
-   "summary": "Udvikler mikroreaktoren SOLO. Selskabet skriver, at konceptet er fra 2018. Denne tekst beskriver ikke et værk i drift.",
-   "watch": "Om designet bliver godkendt og bygget. Teksten beskriver ikke et værk i drift.",
+   "summary": "Udvikler mikroreaktoren SOLO. Selskabet skriver, at konceptet er fra 2018. Forsiden skriver både 4 MW og 5 MW termisk. Denne tekst beskriver ikke et værk i drift.",
+   "watch": "Om 4 MW og 5 MW læses som ét tal, eller som et værk i drift. 2028 er en plan, der kræver godkendelse.",
    "source": "https://www.terrainnovatum.com/",
-   "products": "En mikroreaktor, der er tiltænkt strøm og varme tæt på forbrugeren.",
+   "products": "SOLO. Forsiden skriver 1 MW elektrisk og både 4 MW og 5 MW termisk. Det er en specifikation.",
    "customers": "Industri, datacentre og andre store forbrugere, hvis anlægget bliver bygget.",
-   "role": "Udvikling af små reaktorer. Ikke elproduktion i drift.",
+   "role": "Koncept fra 2018. 2028 er et mål, der kræver godkendelse. Ikke et værk i drift.",
    "narrative": [
-    "Terra Innovatum skriver, at konceptet til mikroreaktoren SOLO er fra 2018. Siden beskriver et anlæg under udvikling.",
-    "Det er ikke et værk i drift. Reaktoren er tiltænkt strøm tæt på forbrugeren, hvis den bliver bygget og godkendt."
+    "Terra Innovatum skriver, at konceptet SOLO er fra 2018, og at datoerne er planlagt og afhænger af godkendelse fra USNRC. Forsiden, læst 16. oktober 2026, skriver 1 MW elektrisk og både 5 MW og 4 MW termisk. De to termiske tal står på samme side. Siden daterer dem ikke. Teknologisiden skriver 1 MWe og 5 MWth med mål om 2028. Det er en specifikation. 2028 er en plan. Det er ikke et værk i drift.",
+    "Teknologisiden skriver, at kernen er gaskølet med helium, og at brændslet er uran. Forsiden sætter andelen til 4,95 %. Teknologisiden skriver også under 5 % U-235. Forsiden skriver en kube på 10 gange 10 meter. Teknologisiden skriver en container på 2,4 gange 2,4 gange 12 meter. Teksterne bruger ikke samme mål. 15 år ved fuld effekt uden ny brændsel er en specifikation, ikke et målt år."
    ],
    "narrativeSources": [
     {
      "label": "Selskabets side",
      "url": "https://www.terrainnovatum.com/"
+    },
+    {
+     "label": "Teknologisiden",
+     "url": "https://www.terrainnovatum.com/technology"
     }
    ]
   },
@@ -1792,14 +1846,15 @@
    "name": "Redwire",
    "theme": "space",
    "summary": "Laver kameraer og solsensorer til Orion. Meddelelsen 1. april 2026 siger, at udstyret will launch på Artemis II, og ikke at flyvningen er fløjet. Forsiden uden dato skriver launched. Det er ikke en opsender.",
-   "watch": "Om forsiden, læst 16. oktober 2026, bliver læst som om Artemis II var fløjet pr. 1. juni 2026. Meddelelsen 1. april 2026 siger will launch.",
+   "watch": "Om forsiden læses som om Artemis II var fløjet, og om 43 og 54 PIL-BOX læses som samme tal. 54 er efter beholdningen.",
    "source": "https://redwirespace.com/",
-   "products": "Kamerasystem til Orion på Artemis I til V og fire solsensorer til servicemodulet. Ikke en raket.",
+   "products": "Kameraer og solsensorer til Orion. PIL-BOX er udstyr til krystaller. Ikke en raket og ikke et datacenter.",
    "customers": "Lockheed Martin til kameraerne og Airbus til solsensorerne. Siden nævner NASA's Orion.",
-   "role": "Kameraer og solsensorer. Ikke en opsender.",
+   "role": "Kameraer, solsensorer og PIL-BOX. Ikke en opsender og ikke et datacenter.",
    "narrative": [
     "Redwire skrev 1. april 2026 i Jacksonville, at optik og solsensorer will launch med Orion på Artemis II. Kamerasystemet er 11 kameraer, heraf trådløse kameraer på de fire solpaneler. Fire solsensorer til det europæiske servicemodul leveres via Airbus. Selskabet skriver, at sensorerne kørte på Artemis I. Produktionen og testen af kamerasystemet til Artemis I til V sker via Lockheed Martin.",
-    "Datoen ligger før beholdningen pr. 1. juni 2026. Meddelelsen siger ikke, at Artemis II er fløjet. Forsiden, læst 16. oktober 2026, skriver launched uden dato. Den sætning er ikke meddelelsen fra 1. april. Adressen i sidefoden er 8226 Philips Highway, Suite 101, Jacksonville, FL 32256. Samme meddelelse skriver cirka 1.400 medarbejdere. Ordet leader er ikke taget med. Selskabet sender ikke selv raketten op."
+    "Datoen ligger før beholdningen pr. 1. juni 2026. Meddelelsen siger ikke, at Artemis II er fløjet. Forsiden, læst 16. oktober 2026, skriver launched uden dato. Den sætning er ikke meddelelsen fra 1. april. Adressen i sidefoden er 8226 Philips Highway, Suite 101, Jacksonville, FL 32256. Samme meddelelse skriver cirka 1.400 medarbejdere. Ordet leader er ikke taget med. Selskabet sender ikke selv raketten op.",
+    "Jacksonville-siden, læst 16. oktober 2026, kalder anlægget hovedkontor og skriver også 1000 Riverside Avenue, Suite 600. Siden skriver 37.000 kvadratfod og 37.247 kvadratfod. De to tal er ikke ens. Siden daterer dem ikke. Det er et anlæg på jorden. Meddelelsen 11. marts 2026 skriver 43 PIL-BOX. En tekst om undersøgelser, der kom tilbage 17. juni 2026, skriver 54 PIL-BOX fløjet til dato. Den dato ligger efter beholdningen. De to tællinger er ikke samme tal. PIL-BOX er udstyr til krystaller, ikke et datacenter."
    ],
    "narrativeSources": [
     {
@@ -1809,6 +1864,18 @@
     {
      "label": "Forside",
      "url": "https://rdw.com/"
+    },
+    {
+     "label": "Jacksonville",
+     "url": "https://rdw.com/locations/jacksonville/"
+    },
+    {
+     "label": "43 PIL-BOX, 11. marts 2026",
+     "url": "https://rdw.com/newsroom/nasa-awards-redwire-4-million-in-additional-funding-to-support-trailblazing-drug-development-in-microgravity/"
+    },
+    {
+     "label": "54 PIL-BOX, hjemkomst 17. juni 2026",
+     "url": "https://rdw.com/newsroom/redwire-completes-on-orbit-operations-for-cancer-therapeutic-and-other-pharmaceutical-investigations/"
     }
    ]
   },
