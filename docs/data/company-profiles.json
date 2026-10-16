@@ -1125,20 +1125,40 @@
   "CA14071L1085": {
    "name": "Capstone Copper",
    "theme": "energy-resources",
-   "summary": "Driver kobberminedrift. Selskabet skriver, at produktionen i 2025 var 225.000 ton kobber. Santo Domingo er et projekt, ikke en mine i drift.",
-   "watch": "Drift af minerne og kobberpriser.",
-   "source": "https://capstonecopper.com/",
-   "products": "Kobber.",
-   "customers": "Smelteværker og industrikunder.",
-   "role": "Råstof.",
+   "summary": "Driver kobberminer i Chile, Arizona og Mexico. Selskabet skriver, at produktionen i 2025 var 225.000 ton kobber. Santo Domingo er et projekt, ikke en mine i drift.",
+   "watch": "Om byggeriet på Mantoverde bliver færdigt, og om salget af Cozamin lukker. Færdigdatoen og salgsaftalen ligger efter beholdningen.",
+   "source": "https://capstonecopper.com/operations/mantoverde/",
+   "products": "Kobber fra miner i drift. Mantoverde er sat til 32.000 ton malm i døgnet. Det er en kapacitet. Santo Domingo er ikke en mine.",
+   "customers": "Siden navngiver ikke en kunde.",
+   "role": "Miner i drift. 225.000 ton kobber i 2025. Santo Domingo er et projekt.",
    "narrative": [
-    "Capstone skriver, at selskabet producerede 225.000 ton kobber i 2025. Siden nævner Mantos Blancos, Cozamin, Pinto Valley og Mantoverde.",
-    "Santo Domingo er beskrevet som et projekt, ikke som en mine i drift. Selskabet er ikke et kraftværk."
+    "Capstone skriver, at produktionen i 2025 var 225.000 ton kobber. Siden siger tonnes. Tallet er ikke regnet om. Pinto Valley i Arizona er en åben mine, som selskabet ejer 100 % af. Koncentratoren er sat til 60.000 ton malm i døgnet, og katodeanlægget er sat til 11.000 ton om året. Begge tal er kapacitet, ikke en målt produktion. Mantoverde ligger i Atacama i Chile, 56 km sydøst for Chañaral. Selskabet har 70 %, og Mitsubishi Materials har 30 %. Sulfidmøllen er sat til 32.000 ton malm i døgnet, og katodekapaciteten er sat til 60.000 ton om året. Første koncentrat kom i juni 2024, og kommerciel produktion blev meldt i september 2024. Begge datoer ligger før beholdningen pr. 1. juni 2026.",
+    "Siden skriver, at en udvidelse fra 32.000 til 45.000 ton malm i døgnet blev besluttet i tredje kvartal 2025. Beslutningen ligger før beholdningen. Siden, læst 16. oktober 2026, skriver, at byggeriet er i gang, og at det ventes færdigt i tredje kvartal 2026. Færdigdatoen ligger efter beholdningen. Mantos Blancos i Antofagasta er en åben mine, som selskabet ejer 100 % af. Santo Domingo ligger cirka 35 km nordøst for Mantoverde. Det er et projekt. Et studie sætter de første syv år til 106.000 ton kobber om året. Det er et tal i studiet, ikke en produktion. Selskabet skrev 21. september 2026, at det har en aftale om at sælge Cozamin. Handlen ventes lukket i fjerde kvartal 2026, hvis vilkårene bliver opfyldt. Den meddelelse ligger efter beholdningen. Cozamin er ikke solgt i denne tekst."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets side",
+     "label": "Forsiden, 225.000 ton i 2025",
      "url": "https://capstonecopper.com/"
+    },
+    {
+     "label": "Mantoverde",
+     "url": "https://capstonecopper.com/operations/mantoverde/"
+    },
+    {
+     "label": "Pinto Valley",
+     "url": "https://capstonecopper.com/operations/pinto-valley/"
+    },
+    {
+     "label": "Driften og Santo Domingo",
+     "url": "https://capstonecopper.com/operations/"
+    },
+    {
+     "label": "Santo Domingo",
+     "url": "https://capstonecopper.com/operations/santo-domingo/"
+    },
+    {
+     "label": "Cozamin, 21. september 2026",
+     "url": "https://capstonecopper.com/news/capstone-copper-announces-sale-of-cozamin-for-total-consideration-of-up-to-385-million/"
     }
    ]
   },

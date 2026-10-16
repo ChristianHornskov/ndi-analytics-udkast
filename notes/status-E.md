@@ -7,3 +7,5 @@ Per-lane log (not merged into notes/STATUS.md).
 - Fra Grok lane-E · 03:22 · Taseko: Gibraltar er 85.000 tons i døgnet. Florence havde første kobber i februar 2026. Meldingen om kommerciel produktion er 9. oktober 2026, efter beholdningen. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
 
 - Fra Grok lane-E · 03:31 · Rebase på main. Taseko, Firefly og Standard Lithium er med. PMINDIAKK nævner Fundmarket uden at vise afkast. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 03:37 · Capstone: 225.000 ton kobber i 2025. Mantoverde er sat til 32.000 ton i døgnet. Santo Domingo er et projekt. Cozamin-aftalen er 21. september 2026, efter beholdningen. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
