@@ -158,6 +158,10 @@ På år til dato bundede serien på −10,0 % den 30. mar. 2026. Tallet stod kun
 
 Temasøjlerne blev rundet til hele procent af den længste søjle. Quantum var 0,9 % og 0,8 % og lige lange. SpaceTech var 4,4 % og 4,3 % og lige lange. Bredden følger nu vægten. Quantum 0,9 % er længere end 0,8 %. SpaceTech 4,4 % er få pixel længere end 4,3 %. Det er størrelsen af 0,1 point på den skala. Andet / uklassificeret har stadig gul kant. Ét panel. AKK-kortet har ingen afkastprocent. Ingen sidescroll ved 1280, 375 og 320. Ingen konsolfejl.
 
+### Update · slideren står under dagen · 2026-10-16 ~03:01 CEST
+
+Sliderens knap lå i kanten af kortet, mens kurvens første og sidste dag står inde i plottet. På 1100 var hullet omkring 70 px ved starten og over 100 px ved slutningen. Knappen følger nu plottets bredde. Ved 22. sep. 2023 og ved 14. okt. 2026 møder den stregen, ved 1280, 375 og 320. Et klik på −35,8 % sætter udlæsningen på 8. apr. 2025. Der kan weekender skubbe knappen omkring 5 px, stadig inden for knappen. Ingen sidescroll. Ingen konsolfejl. PMINDIAKK har ingen slider og ingen procent.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.

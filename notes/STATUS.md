@@ -561,3 +561,13 @@ Søjlerne blev rundet til hele procent af den længste. Quantum 0,9 % og 0,8 % v
 Tjekket i Chromium ved 1280, 375 og 320. Ingen sidescroll, ingen konsolfejl.
 
 `lane-D` er klar til merge. Ikke main. Ikke færdig.
+
+## Fra Grok lane-D
+
+**2026-10-16 03:01 CEST. Slideren står under dagen. Ikke færdig.**
+
+Knappen på drawdown sad i kortets kant, mens kurven starter og slutter inde i plottet. Den følger nu plottets bredde. Første og sidste dag møder stregen ved 1280, 375 og 320. Et klik på −35,8 % lander på 8. apr. 2025. PMINDIAKK har stadig ingen graf og ingen procent.
+
+Tjekket i Chromium. Ingen sidescroll, ingen konsolfejl.
+
+`lane-D` er klar til merge. Ikke main. Ikke færdig.
