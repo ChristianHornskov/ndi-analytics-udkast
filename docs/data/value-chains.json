@@ -815,7 +815,8 @@
               "forslag": false
             }
           ],
-          "seeChain": null
+          "seeChain": null,
+          "shift": "NDI skriver, at efterspørgslen efter regnekraft i stigende grad kommer fra bunden af kæden: \"Først fra agentic AI og snart fra fysisk AI\" (BLOG 30. marts 2026). Agenterne er altså der, hvor trækket kommer fra nu."
         },
         {
           "id": "physical-ai",
@@ -872,7 +873,8 @@
               "forslag": false
             }
           ],
-          "seeChain": "physical"
+          "seeChain": "physical",
+          "shift": "Ifølge NDI er fysisk AI den næste kilde til efterspørgsel efter regnekraft, \"snart\" efter agentisk AI (BLOG 30. marts 2026). Der er ingen præcise årstal."
         }
       ]
     },
