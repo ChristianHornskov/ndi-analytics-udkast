@@ -673,20 +673,20 @@
   "US2057683029": {
    "name": "Comstock Resources",
    "theme": "energy-resources",
-   "summary": "Producerer naturgas i USA, især i Haynesville.",
-   "watch": "Gaspriser, boreresultater og hvor meget felterne kan levere.",
-   "source": "https://www.comstockresources.com/",
-   "products": "Naturgas.",
+   "summary": "Producerer naturgas i Haynesville, i Louisiana og i det østlige Texas. Selskabet skriver, at jordpositionen i Western Haynesville er mere end 535.000 netto-acres, og at gassen er certificeret efter MiQ-standarden. Det er brændsel, ikke en mine.",
+   "watch": "Om jordpositionen i Western Haynesville. Teksten beskriver ikke en mine og ikke et kraftværk.",
+   "source": "https://www.comstockresources.com/aboutus.html",
+   "products": "Naturgas. Certificeret efter MiQ-standarden ifølge selskabets side.",
    "customers": "Købere af gas til industri, kraftværker og videre distribution.",
-   "role": "Brændsel til elproduktion, ikke et kraftværk.",
+   "role": "Brændsel til elproduktion. Ikke en mine og ikke et kraftværk.",
    "narrative": [
-    "Comstock Resources producerer naturgas i Haynesville, i Louisiana og i det østlige Texas.",
-    "I kæden står selskabet på elproduktion, fordi gassen er brændsel til kraftværker. Det er ikke en metalmine."
+    "Comstock skriver, at jordpositionen i Western Haynesville i det østlige Texas er mere end 535.000 netto-acres, og at gasproduktionen er certificeret efter MiQ-standarden. Siden daterer ikke tallet. Det er læst 16. oktober 2026 og er ikke knyttet til beholdningen pr. 1. juni 2026.",
+    "Selskabet producerer naturgas i Haynesville, i Louisiana og i det østlige Texas. I kæden står det på elproduktion, fordi gassen er brændsel til kraftværker. Det er ikke en metalmine."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets side",
-     "url": "https://www.comstockresources.com/"
+     "label": "Om selskabet",
+     "url": "https://www.comstockresources.com/aboutus.html"
     }
    ]
   },

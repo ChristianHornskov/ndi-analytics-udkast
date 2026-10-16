@@ -959,3 +959,13 @@ Primoris blev dannet i 2004. Siden om datacentre beskriver byggeri af infrastruk
 Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Bakersfield står. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `85fffbd` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 02:40 CEST. Comstock skriver, at jordpositionen i Western Haynesville er mere end 535.000 netto-acres. Ikke færdig.**
+
+Gasproduktionen er certificeret efter MiQ-standarden. Siden daterer ikke tallet, så det er ikke knyttet til beholdningen. Leading, high-return og et tal om 3.300 boresteder er ikke taget med. Det er brændsel, ikke en mine. Ingen `reviewedAt`. Blurben under elproduktion og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. 535.000 står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `21ff175` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
