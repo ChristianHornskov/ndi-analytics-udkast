@@ -6,7 +6,7 @@ Live: https://christianhornskov.github.io/ndi-analytics-udkast/ (udkast, noindex
 ## What was built
 Static Danish site (`docs/`, GitHub Pages) for NewDeal Invest PMINDI / PMINDIAKK:
 - **Entré** (3 doors, "Sådan tænker vi" incl. coin game 100→+50→−40 = 90 kr., team named).
-- **Fonden**: total return/CAGR with hist-warning right beside the figures, chart with @InvestNewdeal-only markers (no tickers), calendar years + monthly grid (2023 now complete), 100k example, explicit "intet fast benchmark; ingen sammenligningskurve", delayed quarterly snapshot policy. PMINDIAKK: no NAV/series until 5 Dec 2026.
+- **Fonden**: total return/CAGR with hist-warning right beside the figures, chart with @InvestNewdeal-only markers (no tickers), calendar years + monthly grid (2023 now complete), 100k example, "intet fast benchmark" + **optional Nasdaq-100 comparison line (off by default, `?view=fonden&cmp=nasdaq`) with the label "Nasdaq vises kun som sammenligning, ikke som fondens benchmark. Historisk afkast er ingen garanti."**, Kurs/Totalafkast toggle, dividend "U" ex-date markers, touch/keyboard tooltip, delayed quarterly snapshot policy. PMINDIAKK: no NAV/series until 5 Dec 2026.
 - **Porteføljen / Udforsk**: 345 holdings, top 10, Danish lifecycle (Før omsætning → Moden, marked forslag), themes, search incl. NDI-perspective text, CSV, filters folded on mobile.
 - **Omkostninger / Fakta / Risici**: KID RIY 2,79/2,85 % in kroner first; Fundmarket post rates folded; org chain; prospectus risk factors; "Mangler fra NDI" single box.
 - **Værdikæder** (AI-compute, physical, energy, space, quantum) with ~100 company profiles, dated, "not in operation" honesty.
@@ -26,13 +26,13 @@ Static Danish site (`docs/`, GitHub Pages) for NewDeal Invest PMINDI / PMINDIAKK
 
 ## Tests
 - `scripts/precheck.sh` (run before every push): data cutoffs, no per-stock fields, X compliance (house-only, @InvestNewdeal markers, no $PMINDI holdings, no 13 Aug ticker post), AKK no series, Danish maturity labels, no internal agent comments in docs/.
-- `scripts/smoke.mjs`: 26 URLs × 1280/375 = 52 checks — HTTP 200, no JS errors, no advice wording, no notes leak, Markedsføring+KID footer. Last: 52/0.
+- `scripts/smoke.mjs`: 27 URLs × 1280/375 + Nasdaq on/off check at both widths = 56 checks — HTTP 200, no JS errors, no advice wording, no notes leak, Markedsføring+KID footer. Last: 56/0 (07:48). Precheck now allows Nasdaq only with the exact label, off by default, and never called a benchmark.
 - `scripts/jargon-sweep.mjs`: rendered-text scan for internal jargon. Clean (only glossary/NDI's own "Flodsystem").
 
 ## Open questions – Christian
 - AUM (not in Fundmarket snapshot).
 - Auditor name (fællesprospekt).
-- Confirm policy: no benchmark/comparison curve.
+- Nasdaq comparison is back per Christian (07:35). Questions: should it be Nasdaq-100 **TR** instead of the price index ^NDX in DKK? Is Yahoo Finance acceptable as the source? Does Fundmarket need to approve it for marketing? Should 1 md/3 mdr periods (graf-v2 has them) and the "100.000 kr." illustration come back?
 - Cash: Fundmarket pages (16 Oct ~05:40) show Kontanter **24,18 % PMINDIAKK**, **0,75 % PMINDI**, undated "historiske beholdninger". Our calculated 8 % removed. Which date, and may we show it with source?
 - Fundmarket approval of ÅTD and 100k example; official vol/Sharpe (we show calculated 32,5 % / 0,89).
 - Public repo vs Pages; GitHub Pages lag 1–2 min.
@@ -45,3 +45,9 @@ Static Danish site (`docs/`, GitHub Pages) for NewDeal Invest PMINDI / PMINDIAKK
 ## Codex handoff
 `notes/HANDOFF-CODEX.md` (architecture, data files, compliance rules, open items) · `notes/X-LANE.md` · `notes/THEME-FORSLAG.md` · `notes/DATA-DEFINITIONS.md` · `notes/MADS-CHECKLIST.md`. Infra: `scripts/coordinator-loop.sh` (10-min merge w/ precheck+smoke, notes auto-commit), worktrees `/workspace/ndi-wt-{A..E,R,X}`, lane prompts `notes/lanes/PROMPT-*.md`.
 _Updated 2026-10-16 07:21 CEST — HEAD 160de10_
+
+## graf-v2 review (07:35, read-only) → `notes/GRAF-V2-GAP.md`
+- The public graf-v2 page currently renders no chart iframe (Wix v516: only the head script for `ndi-v2-*` postMessage). The feature list is therefore based on the shared chart release on the same Azure host (`graph/latest.json` → release 59bd88d8…, asOf 2026-10-15) plus the original graf-v2 spec. Nothing on graf-v2 or the live site was touched.
+- Added, one at a time: (1) Nasdaq-100 comparison line with label [76b0e7d]; (2) Kurs/Totalafkast toggle; (3) dividend U markers; (4) touch, arrow-key and Home/End tooltip with cursor line [d24c675].
+- Still missing (needs a decision): 1 md/3 mdr periods (deliberately excluded for compliance), the "100.000 kr." illustration, rolling 12-month returns, a list of the five deepest drawdowns, a staleness warning, 52-week highs (per-stock prices, so excluded).
+- Show URL: https://christianhornskov.github.io/ndi-analytics-udkast/?view=fonden&cmp=nasdaq
