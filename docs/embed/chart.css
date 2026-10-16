@@ -582,6 +582,18 @@ button.legend {
   gap: 8px;
 }
 
+.cta-break { display: none; }
+
+/* Under 438 px kan de tre knapper ikke stå på én linje. Den lange knap
+   tager sin egen række, så «Del grafen» ikke står alene. */
+@media (max-width: 436px) {
+  .cta-break {
+    display: block;
+    flex-basis: 100%;
+    height: 0;
+  }
+}
+
 .embed-cta .outline-button {
   font-size: 13px;
   padding: 8px 14px;
