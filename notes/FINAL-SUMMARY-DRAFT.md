@@ -59,3 +59,11 @@ See notes/HANDOFF-CODEX.md + notes/X-LANE.md + notes/THEME-FORSLAG.md
 4. Nasdaq-sammenligningsnote væk; ÅTD-caveats på periode/drawdown/embed.
 5. Markedsføringsmateriale på produktsider; nyhedsarkiv tab-advarsel; modenhed=forslag; HANDOFF Mads.
 6. precheck guards for 1–3. Smoke 52/0.
+
+
+## Pre-08:45 checklist (2026-10-16 04:09:29 )
+- Vidensbot blockers 1–5: CONFIRMED on main + precheck guards green.
+- Queue: invester 1–5, dividends 38,9/38,0, AI-udkast conditional, FO andet 6,27%, Mangler-boks, Sådan tænker vi→Lær, KID RIY, Markedsføringsmateriale, ÅTD caveats.
+- HTML pages under docs/: 39
+- Smoke: 52/0 last run. Coordinator+watchdog+monitor detached.
+- Open for Christian/Codex: AUM, auditor, comparison curve (no Nasdaq), Mads maturity input, ÅTD Fundmarket approval, official vol/Sharpe, Pages lag.

@@ -1817,3 +1817,5 @@ Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er
 - Coordinator-loop 2026-10-16 03:58:27 CEST: MERGED origin/lane-D (ahead was 6) — precheck+smoke OK, pushed
 
 - Coordinator-loop 2026-10-16 03:59:20 CEST: MERGED origin/lane-E (ahead was 5) — precheck+smoke OK, pushed
+
+- Lead 2026-10-16 04:09:29 : Vidensbot 1–5 re-verified on main (precheck OK). Queue UX/FO/privat largely landed. Merged D+X. Maturity copy=forslag. Pages ~39 html. Sleep→08:45 summary.
