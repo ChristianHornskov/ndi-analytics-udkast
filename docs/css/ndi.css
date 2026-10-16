@@ -846,7 +846,7 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
 }
 
 
-/* Leo 02:00 mobile polish */
+/* Mobile polish */
 @media (max-width: 800px) {
   .nav a, .nav button, .nav .nav-text {
     min-height: 44px;

@@ -183,6 +183,23 @@ if [[ -f "$DOC/js/x-feed.js" ]]; then
   fi
 fi
 
+
+# FO 05:00 — no internal overnight/agent comments in public docs/
+if command -v rg >/dev/null 2>&1; then
+  if hits=$(rg -n --glob '*.html' --glob '*.js' --glob '*.css' --glob '*.json' --glob '*.mjs' \
+      -e 'Vidensbot|Leo [0-9]{2}:[0-9]{2}|COORD-HOLD|HANDOFF-CODEX|Claude lane|Grok lane|overnight loop' \
+      "$DOC" 2>/dev/null | head -20); then
+    if [ -n "$hits" ]; then
+      echo "$hits" >&2
+      err "internal agent/overnight comments found in docs/ (scrub before push)"
+    else
+      ok "no internal agent comments in docs/"
+    fi
+  else
+    ok "no internal agent comments in docs/"
+  fi
+fi
+
 if [[ "$FAIL" -ne 0 ]]; then
   echo "=== PRECHECK FAILED — do not push ===" >&2
   exit 1

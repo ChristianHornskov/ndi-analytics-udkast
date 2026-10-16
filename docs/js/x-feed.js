@@ -492,7 +492,7 @@ function textNameHit(text, wantT) {
 }
 
 /** Ranked hits for selskab/tema on fund pages.
- * Compliance (Vidensbot 03:00): ONLY house accounts. Theme matches only apply to house.
+ * Compliance: ONLY house accounts. Theme matches only apply to house.
  * Third-party accounts never appear on fond/selskab/tema panels. */
 export function matchPosts(pack, { tickers = [], themes = [], houseOnly = true } = {}) {
   const wantT = expandTickers(tickers);

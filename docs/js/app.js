@@ -343,7 +343,7 @@ function renderFonden(root) {
   const posAsOf = fund.positionsAsOf || DATA.portfolio.asOf;
   const nav = lastNav(rows);
 
-  // PMINDIAKK: Leo 03:00 — skjul NAV og kursserie indtil 5. dec. 2026
+  // PMINDIAKK: skjul NAV og kursserie indtil 12 måneder efter start (5. dec. 2026)
   if (isAkk) {
     root.innerHTML = `
       <a class="back" href="?view=entre&fund=${state.fund}" data-nav="entre">← Entré</a>
@@ -357,7 +357,7 @@ function renderFonden(root) {
         <p class="band" style="font-size:16px;color:var(--text);line-height:1.55"><strong>Ny andelsklasse, kurs vises efter 12 måneder.</strong></p>
         <p style="color:var(--muted);line-height:1.55">Kurs og afkast for PMINDIAKK vises fra 5. december 2026. Klassen følger samme overordnede strategi som PMINDI. Der vises ingen NAV og ingen kursserie før da.</p>
         ${warnHtml()}
-        <p class="note-fundmarket">Fonden har intet fast benchmark.</p>
+        <p class="note-fundmarket">Fonden har intet fast benchmark; vi viser derfor ingen sammenligningskurve. Beholdningen er et forsinket kvartalssnapshot (seneste offentlige Fundmarket-rapport) — ikke dagsaktuelt.</p>
       </section>
       <section class="panel">
         <h2 style="font-size:18px;margin-bottom:8px">Risiko (kort)</h2>
@@ -426,7 +426,7 @@ function renderFonden(root) {
         <div class="metric"><div class="label">Største fald ${gl('drawdown')}</div><strong class="neg">${fmtPct(maxDrawdown(rows)?.dd)}</strong><small><a href="drawdown.html?fund=${state.fund}">Middel/median →</a></small></div>
         <div class="metric"><div class="label">Risikoindikator (KID) ${gl('sri')}</div><strong>5 / 7</strong><small>Anbefalet ejertid 5 år</small></div>
       </div>
-      <p class="note-fundmarket">Fonden har intet fast benchmark.</p>
+      <p class="note-fundmarket">Fonden har intet fast benchmark; vi viser derfor ingen sammenligningskurve. Beholdningen er et forsinket kvartalssnapshot (seneste offentlige Fundmarket-rapport) — ikke dagsaktuelt.</p>
       <p style="font-size:13px;color:var(--muted);margin:8px 0">Graf: ${periodLabel}</p>
       <div class="chart-wrap" id="perf-chart"></div>
       <p class="chart-takeaway" id="chart-takeaway" style="font-size:14px;color:var(--text);margin:8px 0 4px;line-height:1.45"></p>
@@ -494,7 +494,7 @@ function renderFonden(root) {
   const xMarks = (DATA.xPosts?.chartMarkers || []).filter((e) => {
     if (!sliced.length) return false;
     if (e.d < sliced[0].d || e.d > sliced[sliced.length - 1].d) return false;
-    // Vidensbot 03:00: fondsgrafen må kun vise @InvestNewdeal
+    // Fondsgrafen: kun @InvestNewdeal-markører
     const title = String(e.title || '');
     const url = String(e.url || '');
     const who = ((title.match(/@([A-Za-z0-9_]+)/) || [])[1]
@@ -715,7 +715,9 @@ function weightProfileNote(fund) {
   const spread = tenths >= 8
     ? `Bred spredning: ${tenths >= 10 ? 'næsten alle' : `ca. ${tenths} ud af 10`} positioner vejer mellem ca. 0,05 % og 1 %, og ${over1 <= 10 ? 'kun få' : over1} vejer mere end 1 %. Vægtene ligger forholdsvis tæt, men fonden er ikke ligevægtet. `
     : '';
-  return `<p class="note-weights" style="font-size:13px;color:var(--muted);line-height:1.55">${spread}Aktievægtene i snapshottet summerer til ca. ${Math.round(sum)} %. <a href="laer/hvorfor-mange-aktier.html">Hvorfor så mange aktier?</a></p>`;
+  const cash = Math.max(0, 100 - sum);
+  const cashTxt = Number.isFinite(sum) ? ` Kontantandel ca. <strong style="color:var(--text)">${cash.toFixed(1).replace('.', ',')} %</strong> (100 − aktievægte; forsinket snapshot).` : '';
+  return `<p class="note-weights" style="font-size:13px;color:var(--muted);line-height:1.55">${spread}Aktievægtene i snapshottet summerer til ca. ${Math.round(sum)} %.${cashTxt} <a href="laer/hvorfor-mange-aktier.html">Hvorfor så mange aktier?</a></p>`;
 }
 
 // UX 22:00 SHOULD 1: på Udforsk er man allerede i screeneren, så knappen udelades dér
@@ -768,7 +770,7 @@ function mobileThemeLine(p, fund) {
 }
 
 // Forslag-mærke + synlig "før"-linje (tidligere kun i tooltip), så skiftet kan læses uden hover.
-// Kun i gennemgangstilstand (status=forslag): Leo 02:07 bad om færre forslag-mærker i den almindelige liste.
+// Kun i gennemgangstilstand (status=forslag): færre forslag-mærker i den almindelige liste.
 function forslagCell(p) {
   if (state.status !== 'forslag') return '';
   const s = themeShift(p);

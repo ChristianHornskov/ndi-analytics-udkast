@@ -163,3 +163,15 @@ Fællesprospektet (opdateret 24.10.2025) nævner under NewDeal Invest KL kun and
 - UI skal sige **forslag**, aldrig «klassificeret», indtil NDI har godkendt.
 - **Mads’ input på modenhed** mangler stadig: hvem sætter præ-revenue → value, og er heuristikken fra offentlig industri OK som midlertidigt forslag?
 - Codex/Christian: aftal proces med Mads før modenhedsfiltre præsenteres som andet end forslag.
+
+
+## Åbne spørgsmål til Christian / Mads (FO 05:00 · 2026-10-16)
+
+- **AUM** (formue under forvaltning): ikke udfyldt fra Fundmarket-snapshot — indsæt officiel AUM når NDI leverer.
+- **Revisor**: `fund-facts.auditor.name` står stadig «udfyldes af NDI». Bekræft navn fra fællesprospekt.
+- **Benchmarkbeslutning**: UI siger eksplicit «intet fast benchmark; vi viser derfor ingen sammenligningskurve». Bekræft at det forbliver policy (ingen Nasdaq/peer-kurve) før demo.
+- **Modenhed (maturity)**: alle 345 er `maturityStatus: forslag`. Mads skal gennemgå / godkende før det præsenteres som andet end forslag.
+- **Kontantandel**: UI viser ca. 8,1 % (100 − aktievægte) fra forsinket PMINDI-snapshot pr. 1. jun. 2026. Fundmarket kan vise anden kontantandel på en anden dato — bekræft om vi skal hente officiel cash % fra Fundmarket.
+- **AKK startdato**: ensrettet til Fundmarket «Startdato» **05-12-2025** (fund-facts + fund-meta + første NAV). Tidligere fund-meta 02-12-2025 er rettet.
+- **Dækning 91,01 % vs 96,59 %**: UI bruger 91,01 % (antal positioner uden theme=andet). fund-meta.classificationCoverage 96,59 % er ældre vægt-felt — ikke vist. Bekræft om Mads vil have vægt-baseret dækning i stedet.
+

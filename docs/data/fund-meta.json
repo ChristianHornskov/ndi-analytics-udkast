@@ -57,7 +57,8 @@
           }
         ],
         "checkedAt": "2026-10-15T10:06:54.031131+02:00"
-      }
+      },
+      "classificationCoverageNote": "Vægtdækning af positioner med tema ≠ andet (fund-meta historisk felt). UI bruger risk-stats.classification.coverageMeta = antal-baseret (ikke-Andet)/alle = 91,01 %. De to tal måler forskelligt — se coverageMetaNote."
     },
     "pmindiakk": {
       "priip": {
@@ -79,7 +80,7 @@
         "sha256": "1a98f61b066f671df314ff725d4ddede500bae1178f8aee335ed660e33d8087a",
         "bytes": 428332
       },
-      "legalInception": "2025-12-02",
+      "legalInception": "2025-12-05",
       "performanceAsOf": "2026-10-14",
       "reportDate": "2026-10-15",
       "classificationCoverage": 96.88,
@@ -99,7 +100,8 @@
           }
         ],
         "checkedAt": "2026-10-15T10:06:54.031131+02:00"
-      }
+      },
+      "legalInceptionNote": "Fundmarket stamdata «Startdato» 05-12-2025 (hentet 2026-10-16). Afviger fra ældre meta 2025-12-02. Første NAV i portfolio = 2025-12-05. fund-facts.legalInception er samme kilde."
     }
   }
 }

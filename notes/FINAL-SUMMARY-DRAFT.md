@@ -67,3 +67,10 @@ See notes/HANDOFF-CODEX.md + notes/X-LANE.md + notes/THEME-FORSLAG.md
 - HTML pages under docs/: 39
 - Smoke: 52/0 last run. Coordinator+watchdog+monitor detached.
 - Open for Christian/Codex: AUM, auditor, comparison curve (no Nasdaq), Mads maturity input, ÅTD Fundmarket approval, official vol/Sharpe, Pages lag.
+
+
+## Lead update 2026-10-16 05:10 CEST · FO 05:00 + UX 04:00
+- HEAD: see git log. Smoke 52/0. Precheck + internal-comment guard green.
+- UX 04:00 MUSTs: fonden hist-warn beside big returns; chart cashtags scrubbed; temaer(+all) Markedsføring+KID footer + smoke.
+- FO 05:00: explicit no-benchmark/no-curve + kvartalsforsinkelse; AKK inception = Fundmarket 05-12-2025; coverage 91,01 % (antal) vs 96,59 % (ældre vægt, ikke UI); kontantandel ~8,1 % eksplicit; docs/ scrubbet for Vidensbot/Leo; AUM/revisor/benchmark/modenhed → HANDOFF.
+- Merges: D/E/X unblocked 04:58; loop auto-commits notes/ before merge; more D/E/X merged 05:03–05:07.
