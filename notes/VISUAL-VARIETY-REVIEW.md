@@ -220,6 +220,12 @@ Varighedsbjælken under de fire episoder bruger samme skala. 208 dage er den læ
 
 På 390 og 320 er linkrækkerne på sammenlign og under årssøjlerne chips på 44 px. Prikkerne mellem linkene er væk. På 1280 er de stadig en linje. Ingen sidescroll. Ingen konsolfejl.
 
+### Update · dage på toppen · 2026-10-16 ~04:16 CEST
+
+Under brønden står en andel, 14 px høj, højst 520 px. Brand er dagene på den løbende top. Resten af sporet er mørkt. 93 af 770 dage ligger på toppen. De øvrige 677 ligger under den. Fyldet er 12 % af sporet, målt 63 px af 520 på 1280, 44 af 362 på 390 og 35 af 292 på 320. Teksten siger ikke en procent. Middel og median står som episoder, ikke som disse dage. Sætningen nederst siger kun, at max er det samme tal som største fald på Fonden.
+
+PMINDIAKK har ingen andel og ingen procent. Footer-links er nowrap. «KID PMINDI ↗» knækker ikke. Ingen sidescroll ved 1280, 390 og 320, heller ikke på sammenlign, embed og forsiden. Ingen konsolfejl.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.

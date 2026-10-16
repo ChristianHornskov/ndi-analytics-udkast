@@ -602,7 +602,7 @@ button.legend {
 }
 
 .sri-line a,
-.embed-legal a { color: var(--brand); }
+.embed-legal a { color: var(--brand); white-space: nowrap; }
 
 .embed-legal {
   margin-top: 18px;
