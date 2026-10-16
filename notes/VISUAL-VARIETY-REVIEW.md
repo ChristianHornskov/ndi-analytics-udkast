@@ -208,6 +208,12 @@ Et klik på −35,8 % sætter udlæsningen på 8. apr. 2025. De 16 tekster i kur
 
 Embed på 390 og 320: totalafkast i fuld bredde, +26,4 % og år til dato side om side, største fald i fuld bredde. Søjlen ved −35,8 % fylder omkring en tredjedel. Fuld søjle er −100 %. På år til dato er største fald −26,8 %, og søjlen er kortere. PMINDIAKK er ét gult kort, søjlen er skjult, svg'en er tom, og der er ingen procent. «CAGR» står ikke i kortet. Ingen sidescroll. Ingen konsolfejl.
 
+### Update · årssøjler og varighed · 2026-10-16 ~04:06 CEST
+
+Årssøjlerne deler bundlinje. På 1280 ligger alle fire bunde på samme linje. På 390 og 320 deler de to i samme række bund. 2024 er 64 px høj og 92 px bred. 2026 er 8 px høj. Søjlen er stadig årets afkast: 2025 er +15,2 % med gul kant og teksten Dybeste fald. 2026 er +4,0 % med cyan kant, Under vand, og til dato i gult. Ingen sidescroll.
+
+Varighedsbjælken under de fire episoder bruger samme skala. 208 dage er den længste. 87 dage er under halvdelen. 189 dage ligger tæt på 208, fordi faldene er det. Den åbne er gul. Et klik på −35,8 % sætter stadig udlæsningen på 8. apr. 2025. Ingen konsolfejl.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.
