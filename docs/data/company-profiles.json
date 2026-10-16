@@ -1671,15 +1671,15 @@
   "US67079K1007": {
    "name": "NuScale Power",
    "theme": "physical",
-   "summary": "Udvikler små modulære reaktorer. Denne tekst beskriver ikke et anlæg i kommerciel drift. Snapshottet har selskabet under fysisk tech.",
-   "watch": "Godkendelser og om en kunde faktisk bygger det første værk.",
+   "summary": "Udvikler små modulære reaktorer. Selskabet skriver, at modulet er en cylinder på 76 fod gange 15 fod og vejer omkring 700 tons. Det er et design, ikke et værk i drift. Snapshottet har selskabet under fysisk tech.",
+   "watch": "Om designet bliver til et værk. Teksten beskriver ikke et anlæg i drift.",
    "source": "https://www.nuscalepower.com/",
-   "products": "Et reaktordesign og tilhørende tjenester.",
-   "customers": "Forsyningsselskaber og store forbrugere, hvis et værk bliver bygget.",
-   "role": "Udvikling af SMR.",
+   "products": "Et reaktordesign. 77 MW pr. modul og en cylinder på 76 fod gange 15 fod. Ikke et værk i drift.",
+   "customers": "Forsyningsselskaber og store forbrugere, hvis et værk bliver bygget. Teksten beskriver ikke et værk i drift.",
+   "role": "Reaktordesign. Ikke et værk i drift.",
    "narrative": [
-    "NuScale udvikler en lille reaktor, som selskabet kalder NuScale Power Module. Selskabet skriver, at det amerikanske nukleare tilsyn, NRC, har godkendt designet, og angiver en effekt på 77 MW pr. modul.",
-    "Godkendelsen er ikke et værk i kommerciel drift. Denne tekst siger ikke, at et anlæg leverer strøm. Selskabet omtaler et program sammen med TVA på op til 6 GW. Det er udvikling, ikke et værk i drift."
+    "NuScale skriver, at NuScale Power Module er specificeret til 77 MW pr. modul. Samme side skriver, at indeslutningen er en cylinder på 76 fod gange 15 fod, og at modulet vejer omkring 700 tons og sendes fra fabrikken i tre dele med lastbil, tog eller pram. Brændslet er letvandsbrændsel, beriget til under 5 %. En udskiftning kan ligge med op til 21 måneders mellemrum. Et anlæg med 12 moduler er specificeret til op til 924 MWe. Det er et design. Teksten beskriver ikke et modul, der er leveret til et værk, og ikke et værk i drift.",
+    "Selskabet skriver, at NRC har godkendt designet. Godkendelsen er ikke et værk i drift. Et program sammen med TVA er omtalt som op til 6 GW. Det er udvikling. Siden om E2 Center beskriver en simulator af et kontrolrum med 12 moduler, ikke et kraftværk. ENTRA1 Energy er nævnt som partner på kommercialisering. Teksten siger ikke, at et anlæg er i drift."
    ],
    "narrativeSources": [
     {
@@ -1689,6 +1689,10 @@
     {
      "label": "Program med TVA",
      "url": "https://interactive.nuscalepower.com/tva-program"
+    },
+    {
+     "label": "E2 Center",
+     "url": "https://www.nuscalepower.com/products/e2-centers"
     }
    ]
   },

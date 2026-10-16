@@ -1029,3 +1029,13 @@ Mt Weld ligger 35 km syd for Laverton. Koncentratanlægget blev taget i brug i 2
 Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Kalgoorlie står. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `1aeff9c` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 02:52 CEST. NuScale skriver, at modulet er en cylinder på 76 fod gange 15 fod. Ikke færdig.**
+
+Omkring 700 tons i tre dele. 77 MW pr. modul. 12 moduler er specificeret til op til 924 MWe. Det er et design, ikke et værk i drift. Ingen `reviewedAt`. Blurben under små reaktorer og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. 76 fod står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `85f63ed` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
