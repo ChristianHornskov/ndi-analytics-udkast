@@ -577,23 +577,19 @@
   "US92840M1027": {
    "name": "Vistra",
    "theme": "energy",
-   "summary": "Producerer strøm i USA, blandt andet fra gas og atomkraft, og sælger el til kunder.",
-   "watch": "Kraftværkernes drift, brændselspriser og efterspørgsel efter strøm.",
-   "source": "https://www.vistracorp.com/",
-   "products": "Elproduktion og salg af el.",
-   "customers": "Elkunder og aftagere på engrosmarkedet.",
-   "role": "Elproduktion, herunder eksisterende atomkraft.",
+   "summary": "Producerer strøm i USA, blandt andet fra gas og atomkraft. Selskabet skrev 9. januar 2026, at aftaler med Meta dækker 2.176 MW i drift og 433 MW øget effekt. Det er ikke en ny reaktor.",
+   "watch": "Om den øgede effekt bliver bygget. Leverancerne begynder sent i 2026, efter beholdningen. 433 MW er ikke en ny reaktor.",
+   "source": "https://investor.vistracorp.com/2026-01-09-Vistra-and-Meta-Announce-Agreements-to-Support-Nuclear-Plants-in-PJM-and-Add-New-Nuclear-Generation-to-the-Grid",
+   "products": "El fra eksisterende værker. Aftalen er 2.176 MW i drift og 433 MW øget effekt.",
+   "customers": "Meta er kunden i aftalen. Selskabet skriver, at strømmen stadig går til nettet.",
+   "role": "Atomkraft i drift og en aftale om øget effekt. Ikke en ny reaktor.",
    "narrative": [
-    "Vistra producerer strøm og sælger el, blandt andet gennem TXU Energy.",
-    "Forsiden skriver, at selskabet har 20-årige aftaler med Meta om mere end 2.600 MW fra tre atomkraftværker. Heraf er 2.176 MW produktion i drift, og 433 MW er øget effekt på værkerne. Det er ikke et program for små nye reaktorer. Teksten siger ikke, at en ny reaktor er bygget."
+    "Vistra skrev 9. januar 2026, at selskabet har indgået 20-årige aftaler med Meta om tre atomkraftværker. 2.176 MW kommer fra Perry og Davis-Besse i Ohio, som er i drift. 433 MW er øget effekt på Perry, Davis-Besse og Beaver Valley i Pennsylvania. Tilsammen er det 2.609 MW, når det hele er med. Det er ikke en ny reaktor. Aftalen ligger før beholdningen pr. 1. juni 2026. Leverancerne begynder sent i 2026, og den fulde mængde er sat til 2034. De datoer ligger efter beholdningen.",
+    "Perry i Ohio er sat til 1.268 MW. Davis-Besse i Oak Harbor i Ohio er sat til 908 MW. Beaver Valley i det vestlige Pennsylvania er sat til 1.872 MW. Det er værkernes kapacitet, ikke aftalens mængde. Tilladelserne rækker til 2036 for Beaver Valley enhed 1, til 2037 for Davis-Besse, til 2046 for Perry og til 2047 for Beaver Valley enhed 2. Teksten siger, at selskabet vil søge forlængelse. Den er ikke givet. Selskabet skriver, at flåden også har gas, kul, sol og batterier. Denne tekst beskriver atomkraftaftalen."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets side",
-     "url": "https://www.vistracorp.com/"
-    },
-    {
-     "label": "Aftale med Meta 9. januar 2026",
+     "label": "Aftale med Meta, 9. januar 2026",
      "url": "https://investor.vistracorp.com/2026-01-09-Vistra-and-Meta-Announce-Agreements-to-Support-Nuclear-Plants-in-PJM-and-Add-New-Nuclear-Generation-to-the-Grid"
     }
    ]

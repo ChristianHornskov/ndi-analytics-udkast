@@ -13,3 +13,5 @@ Per-lane log (not merged into notes/STATUS.md).
 - Fra Grok lane-E · 03:46 · Sigma Lithium: Grota do Cirilo er sat til 270.000 ton koncentrat om året. Fase 1 gik i drift i 2023. Fase 2 er et mål på 520.000 ton og er ikke produktion. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
 
 - Fra Grok lane-E · 03:44 · Energy Fuels: White Mesa kan lave op til 1.000 ton NdPr om året. Byggeriet til tunge sjældne jordarter er meldt 29. juli 2026, efter beholdningen. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 03:46 · Vistra: aftalen med Meta er 2.176 MW i drift og 433 MW øget effekt. Det er ikke en ny reaktor. Leverancerne begynder sent i 2026, efter beholdningen. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
