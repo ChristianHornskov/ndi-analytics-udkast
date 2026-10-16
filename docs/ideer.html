@@ -558,7 +558,7 @@
           <li class="f"><b>Forslag</b><span class="n">87 selskaber · ca. 20,4 % af fonden</span>Et tema foreslået ud fra offentlige opslag, selskabets branche og dets plads i værdikæderne. Et forslag kan også flytte et selskab fra ét tema til et andet, fx fra compute til Quantum. Står med mærket <span class="badge badge-draft">forslag</span> på temasiderne.</li>
           <li class="t"><b>Tema</b><span class="n">227 selskaber · ca. 65,2 % af fonden</span>Har et NDI-tema. Porteføljeholdet gennemgår også de ældre temaer, før de er endelige.</li>
         </ol>
-        <p class="sub" style="margin:18px 0 0">De 87 forslag fordelt på temaer. Alle fem selskaber i Quantum er forslag, fordi temaet er nyt.</p>
+        <p class="sub" id="tf-sub" style="margin:18px 0 0">De 87 forslag fordelt på temaer. Alle fem selskaber i Quantum er forslag, fordi temaet er nyt.</p>
         <ul class="tf-split" aria-label="Temaforslag pr. tema">
           <li><span>Energi</span><i style="width:100%"></i><em>28</em></li>
           <li><span>Platforme</span><i style="width:54%"></i><em>15</em></li>
@@ -935,6 +935,38 @@
     b.addEventListener('click',function(){var all=f.every(function(d){return d.open});f.forEach(function(d){d.open=!all});sync()});
     window.addEventListener('hashchange',openHash);openHash();sync();
   })();
+  </script>
+  <script type="module">
+  // «Fra Andet til tema» tælles fra portfolio.json, så tallene følger med, når temaforslag bliver gennemgået.
+  // Tallene i HTML'en står som reserve, hvis filen ikke kan hentes.
+  import { daTheme } from './js/data.js';
+  try {
+    const pf = await fetch('data/portfolio.json').then((r) => r.ok ? r.json() : null);
+    const pos = pf?.funds?.find((f) => f.id === 'pmindi')?.positions;
+    const fig = document.querySelector('figure.tf');
+    if (pos?.length && fig) {
+      const nf = (x) => x.toFixed(1).replace('.', ',');
+      const w = (xs) => nf(xs.reduce((s, p) => s + (p.weight || 0), 0));
+      const an = pos.filter((p) => p.theme === 'andet');
+      const fo = pos.filter((p) => p.theme !== 'andet' && p.themeStatus === 'forslag');
+      const te = pos.filter((p) => p.theme !== 'andet' && p.themeStatus !== 'forslag');
+      const bar = fig.querySelector('.tf-bar');
+      bar.setAttribute('aria-label', `Af ${pos.length} aktier står ${an.length} i Andet, ${fo.length} har et temaforslag, og ${te.length} har et tema.`);
+      [['a', an], ['f', fo], ['t', te]].forEach(([k, xs]) => {
+        const sp = bar.querySelector('.' + k); sp.style.flex = String(xs.length); sp.textContent = xs.length;
+        fig.querySelector(`.tf-flow li.${k} .n`).textContent = `${xs.length} selskaber · ca. ${w(xs)} % af fonden`;
+      });
+      const by = {};
+      fo.forEach((p) => { by[p.theme] = (by[p.theme] || 0) + 1; });
+      const rows = Object.entries(by).sort((x, y) => y[1] - x[1] || daTheme(x[0]).localeCompare(daTheme(y[0]), 'da'));
+      const mx = rows[0]?.[1] || 1;
+      const esc = (t) => String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;');
+      fig.querySelector('.tf-split').innerHTML = rows.map(([t, n]) => `<li${t === 'quantum' ? ' class="qn"' : ''}><span>${esc(daTheme(t))}</span><i style="width:${Math.round(n / mx * 100)}%"></i><em>${n}</em></li>`).join('');
+      const qAll = pos.filter((p) => p.theme === 'quantum'), qFo = qAll.filter((p) => p.themeStatus === 'forslag');
+      const ord = ['nul', 'ét', 'to', 'tre', 'fire', 'fem', 'seks', 'syv', 'otte', 'ni', 'ti'];
+      document.getElementById('tf-sub').textContent = `De ${fo.length} forslag fordelt på temaer.` + (qAll.length && qFo.length === qAll.length ? ` Alle ${ord[qAll.length] || qAll.length} selskaber i Quantum er forslag, fordi temaet er nyt.` : '');
+    }
+  } catch (e) { /* tallene i HTML'en bliver stående */ }
   </script>
 </body>
 </html>
