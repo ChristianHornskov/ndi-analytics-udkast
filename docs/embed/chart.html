@@ -77,6 +77,14 @@
   <div class="stops-track" id="stops-track" role="group" aria-label="Stop på kurven"></div>
   <p class="stops-say" id="stops-say"></p>
  </div>
+ <div class="day-split" id="day-split" hidden>
+  <div class="day-track" aria-hidden="true"><i class="over" id="day-over-bar"></i><i class="under" id="day-under-bar"></i></div>
+  <div class="day-picks" role="group" aria-label="Dage på og under nul">
+   <button type="button" data-side="over" aria-pressed="true">På eller <span class="keep">over nul</span></button>
+   <button type="button" class="under" data-side="under" aria-pressed="false"><span class="keep">Under nul</span></button>
+  </div>
+  <p class="day-say" id="day-say"></p>
+ </div>
  <p class="chart-context" id="chart-context" hidden></p>
  <p class="chart-pointe" id="chart-pointe"></p>
 

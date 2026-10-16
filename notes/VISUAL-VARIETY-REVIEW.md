@@ -404,3 +404,7 @@ Ny kontrol på drawdown, ved kurven. Knappen hopper til 2. aug. 2024. Udlæsning
 ### Update · to spor på tidslinjen · 2026-10-16 ~07:37 CEST
 
 Ny form på sammenlign, over den eksisterende tidslinje. To spor. Længden er tiden fra 22. sep. 2023 til 5. dec. 2026. PMINDI er den lange brand-streg frem til 14. okt. 2026. PMINDIAKK er den korte cyan-streg fra 5. dec. 2025. Stiplet streg til højre er datoen, kursen kan vises. Et klik på PMINDI siger første NAV og seneste kursdag. Et klik på PMINDIAKK siger, at kursen vises efter 12 måneder, fra 5. dec. 2026. Ingen ny procent. Knapperne er 44 px. Ingen sidescroll ved 300–1100. Ingen konsolfejl. På papir bliver sporene. KID-parret er stadig ca. 2,79 % og ca. 2,85 %. PMINDIAKK har stadig Ingen kurs.
+
+### Update · dage over og under nul · 2026-10-16 ~07:40 CEST
+
+Ny form i embed, under stoppene. En tynd streg. Brand er dagene på eller over nul. Rosa er dagene under nul. På hele perioden er det 749 af 770 og 21 af 770. På år til dato er det 161 af 197. Sætningen siger, at nul er første dag i perioden, og at dagene under nul ikke er et fald fra top. Ingen procent i sætningen. Knapperne er 44 px. Ingen sidescroll ved 300–1100. Ingen konsolfejl. På papir er knapperne væk, og stregen og sætningen bliver. PMINDIAKK har ingen streg, ingen procent, og teksten om 5. december 2026.
