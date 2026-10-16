@@ -1283,3 +1283,26 @@ Ikke juridisk rådgivning. Der er ingen docs-delta. Ny live-sweep af 50 URL'er: 
 
 ### Freeze-note
 Freeze starter kl. 08:00. Alle fire er tekst- og advarselsrettelser og må laves som fejlrettelser indtil stop-commit kl. 08:30. Ejer-lanerne skal tage dem, da lane-R er read-only.
+
+## 2026-10-16 07:18 CEST · cyklus 51b (main `91328f6`; live = main)
+
+Ikke juridisk rådgivning. **Korrektion til c51:** main flyttede til `91328f6` under cyklussen. Denne sektion erstatter statuslisten i c51.
+
+### Lukket
+- **SHOULD 9 lukket.** PMINDIAKK-visningen viser KID-RIY 2,85 % (og 2,79 % for PMINDI) via `costPanel(true)`. Live-flaget "okon" er nu 1. NAV/kurs er stadig skjult før 5. dec. 2026 ✅.
+- **SHOULD 7 lukket.**
+  - `drawdown.html` har nu en footer med "Generel information, ikke investeringsrådgivning … Du kan tabe penge" plus en print-mast, som kun vises ved udskrift (`.print-mast` `display:none` på skærm).
+  - `embed/chart.html` har synlig tekst: "Generel information, ikke investeringsrådgivning".
+  - Live-flaget "radg" er 1 på begge sider.
+- **AI-mærkning:** `unique-metrics.json` har 73 nye felter af typen Forretningsmodel/Svært at kopiere. Alle har `ai: true` og vises med "AI-udkast" på selskabssiderne (fx SoFi). Ordsweep: "sælger"/"køber" bruges kun beskrivende om selskabernes forretning (0 køb/sælg-opfordringer). Der er ingen anbefaling, garanti, overvægt eller eksponeringssprog.
+- Modenhed er nu omdøbt til "maskinelt forslag" i stedet for klassifikation/rating (`9c23bc8`). Det mindsker indtrykket af en vurdering ✅.
+
+### MUST
+- **Ingen åbne MUST-blokere.**
+
+### SHOULD (åbne pr. `91328f6`)
+3. `index.html:89` "Se Central Information Dokument" → "Se KID'et (Central Information) før du investerer".
+5. `omkostninger.html:458` "Det er det tal, marketingmateriale skal gengive ærligt" er en intern formulering.
+
+### Freeze-note
+De to resterende punkter er rene tekstrettelser, som kan laves før 08:30.

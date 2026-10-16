@@ -1288,3 +1288,35 @@ Der er ingen docs-delta siden c48. Live md5 = lokal for index, drawdown, omkostn
 
 ### Nice
 - Uændret fra c46.
+
+## 2026-10-16 07:18 CEST · cyklus 51b (main `91328f6`, docs-delta mod `83c64d0`: 22 filer; live = main)
+
+**Korrektion til c51:** main flyttede til `91328f6` (lane-A/B/C/E), mens jeg skrev c51. Afsnittet "uændret" ovenfor gjaldt `83c64d0`. Live md5 = main for app.js, drawdown og embed/chart. Jeg har kørt en ny live-sweep af 50 URL'er @375 (/tmp/laneR/c51b): 0 sidefejl og 0 overflow.
+
+### Lukket
+- **PMINDIAKK-omkostninger:** fælles `costPanel(true)` (`js/app.js:338/384`). AKK-visningen viser nu "Omkostninger (kort)" med 2,85 % / 2,79 % (`cd321da`).
+- **Tap-mål @375** (antal links/knapper under 24 px):
+
+  | Side | Før | Nu |
+  |---|---|---|
+  | værdikæder | 123 | 8 |
+  | værdikæde ai-compute | 98 | 6 |
+  | temaer | 71 | 24 |
+  | tema-sider | 26–138 | 15–36 |
+  | selskaber | 382 | 37 |
+
+### MUST
+- Ingen.
+
+### SHOULD
+- **Ny regression: `ndi-perspektiv.html` @375 har 493 tap-mål under 24 px (før 85).** Årsagen er de nye ordliste-links på feltnavne (`LABEL_G`, h≈20 px). De står ca. fem gange pr. selskabskort i alle `lg-*`-grupper (platforme 92, software 63, chips 60). Det er inline-links, så WCAG 2.5.8's undtagelse dækker dem formelt. Men på mobil ligger de tæt op ad selskabslinket i kortets `h3`. Forslag: link kun ordlisten én gang pr. gruppe, eller i forklaringsboksen, som allerede linker til den.
+- `omkostninger.html:441` "Tast 1 eller 5." står stadig i summary.
+- `selskab.html` `.tri` er tre lukkede details.
+
+### Nice
+- `om-data.html#g-drivkraefter` "som NDI's indlæg 19. januar 2026 vil bruge til at forklare …". Brug datid eller nutid ("bruger").
+- Sammenlign "Udbyttets vej": god, rolig visuel variation. AKK-gaten (12 mdr.) bliver gentaget korrekt ✅.
+
+### Persona-linser
+- Privat: AKK-køberen ser nu sine omkostninger direkte i fondsvisningen ✅.
+- FO: alle 73 nye felter af typen Forretningsmodel/Svært at kopiere er mærket AI-udkast og skrevet som beskrivelse, ikke vurdering ✅.
