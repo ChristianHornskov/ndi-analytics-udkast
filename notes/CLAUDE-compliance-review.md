@@ -1147,3 +1147,27 @@ Ikke juridisk rådgivning. Denne cyklus var en dybere kontrol i kilden (`docs/**
 - **Ny tekst er OK:** "Hvad ændrer sig" (`l.shift`) og plan-markering ("er en plan", "ikke fløjet" fremhævet) gør tydeligere, hvad der er fakta, og hvad der er planer ✅. Livscyklus-labels på dansk i `data.js`. X-posts er reduceret (−34 linjer, opslag/markør fra 13. aug. fjernet). Der er ingen nye købs-, sælg- eller garantiord i delta.
 - **SHOULD 7 (footere på drawdown/embed/periode) er stadig åben.** Ingen af de tre footere er rørt.
 - **Prioritet nu:** 7 + 3 (to steder) + 4 (selskab h2) + 5 + rest af 1 (`app.js:420`), alt sammen tekst-rettelser i ét commit → 6.
+
+## 2026-10-16 06:40 CEST · cyklus 45 (main `b6dfcba`; live = `cfb03ab`)
+
+Ikke juridisk rådgivning. Delta siden addendum c44: `cfb03ab` er nu live, og lane-D (`44a551a`, `b0e7cd2`) er merget på main: embed "N år siden start {dato}" og et span i drawdown.
+
+### Korrektion
+- **SHOULD 7 gælder kun `drawdown.html` og `embed/chart.html`.** `periode.html` har allerede "Ikke den officielle side og ingen investeringsrådgivning" i footeren (live og kilde, også i c44). Sweepets `radg`-flag fangede ikke formuleringen, og det blev ikke kontrolleret mod teksten. drawdown har 0 forekomster af "rådgivning" i kilden. I embed står ordet kun i `og:description`, som ikke er synlig.
+
+### MUST
+- **Ingen åbne MUST-blokere.** Fonden, portefølje, risici og invester har "ikke rådgivning/anbefaling", tabsadvarsel, historik-advarsel, KID-links og SRI 5/7. Beholdning pr. 1. juni 2026. Ingen nye købs-, sælg-, garanti- eller trading-ord i delta.
+
+### Ny SHOULD
+8. **Udforsk på mobil: mærket for maskinel klassifikation er flyttet bag en lukket `<details>`** (følger af 7a5b111). Tema- og modenhedssøjlerne vises stadig pr. række, men forbeholdet "alle som forslag (maskinelt …, afventer NDI)" kræver nu et klik. Kun "udkast-klassifikation" er synligt. Kravet om AI- og maskinmærkning taler for, at forbeholdet står synligt ved det indhold, det gælder. Rettelse: én synlig linje uden for `<details>`.
+
+### SHOULD (åbne)
+1. Rest: `js/app.js:420` "Gns. årligt afkast" på fonden står uden periode. Embed siger nu "år siden start {dato}" ✅ (`44a551a`).
+3. **Næsten lukket ✅ (lane-B, `b6dfcba`):** `data.js` KID-footeren siger nu "Dokument med central information (KID, …)". Rest: `index.html:89` "Se Central Information Dokument".
+4. **Lukket ✅ (lane-B):** "kvartalssnapshot" er fjernet fra synlig tekst. Fonden siger "forsinket snapshot pr. {dato}", og selskab-h2 er nu "Vægt i fonden over tid … ikke aktiekurs". Det nye warrant-afsnit på moderselskabets side ("Beholdningen har også N warrants …") er beskrivende og OK.
+5. Intern sætning på `omkostninger.html:372`: "Det er det tal, marketingmateriale skal gengive ærligt".
+6. Rå eller afkortede selskabsnavne (UX).
+7. Footer uden ikke-rådgivning på drawdown og embed (se korrektion).
+
+### Prioritet
+**8** + **7** (to footer-linjer) + **3/4/5** og resten af **1** samlet i ét tekst-commit. Det er bugfix/tekst og falder inden for freeze-reglen efter 08:00.

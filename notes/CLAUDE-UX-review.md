@@ -1122,3 +1122,31 @@ Uændret fra cyklus 43. Det, der giver mest pr. time, er stadig (a) `displayName
 ### Addendum 06:38: main `cfb03ab` (docs-delta 10 filer)
 - **Lukket ✅:** jargon i værdikæder ("Flodsystem/Treemap/Sunburst" → "Dæmninger/Temaer", "Felter/Ringe", "Kæden som en flod", "TEKNOLOGI · VÆRDIKÆDER"). Princip-kortet "Vælg udviklingen, ikke vinderen" er nu klart i stedet for "Udvikling > vinder". "Screener · NDI-linse" → "Udforsk porteføljen". Udforsk-filtre er foldet sammen på mobil med "N aktive", hvilket burde sænke tiny-tallet (698) markant. Det bekræftes i næste live-sweep.
 - **Åbne:** `vaerdikaeder.html` har stadig 0 forekomster af `displayName` (SHOULD 1). `omkostninger.html:356` "Tast 1 eller 5" er uændret (SHOULD 3). `selskab.html:202` "kvartalssnapshots" er uændret.
+
+## 2026-10-16 06:40 CEST · cyklus 45 (main `b6dfcba` inkl. lane-D + lane-B; live = `cfb03ab`, mens lane-D-deltaet på 2 filer endnu ikke er deployet)
+
+Live-sweep på 50 URL'er ved 375: **0 pageerrors og 0 vandret overflow.** Live er nu `cfb03ab`. Sidehøjder er ændret på 18 URL'er (værdikæde ai-compute +1062 px på grund af "Hvad ændrer sig", nyhedsarkiv +1331, temaer/selskaber −13 til −511), og tiny-tallet er faldet med 2–6 på selskabs- og temasider.
+
+### Verificeret live (cfb03ab) ✅
+- Udforsk-filtrene er foldet sammen på mobil ("Filtre (tema, status, modenhed) · 0 aktive"). Siden er 900 px kortere.
+- Opslaget og markøren fra 13. aug. er væk (0 forekomster af "13. aug" på forsiden og i nyhedsarkivet).
+- Værdikæde-jargon er ryddet op, og AI-udkast-mærket er synligt på `vaerdikaeder.html` og `vaerdikaede.html?id=ai-compute`.
+
+### MUST
+- Ingen UX-blokere.
+
+### SHOULD
+1. **Ny (korrektion til addendum c44): foldningen sænker IKKE tiny-tallet på udforsk.** Det er stadig 698. En opdeling viser 345× navnelink i rækkerne (h18) + 333× `a.lens-mark` ◉ (h16) + 20 andre. Filtrene var aldrig årsagen. Rettelse: `min-height:24px` (eller 44 px på rækken) på række-linket, og ◉ bør enten være en del af række-linket eller have padding. Det er det samme mønster som ndi-perspektiv 418 / selskaber 382.
+2. **Ny: foldningen gemmer oplysningerne om maskinel klassifikation.** "Modenhed: 345 af 345 placeret - alle som forslag (maskinelt …, afventer NDI)" og "forslag = tema foreslået i udkastet" står nu kun inde i den lukkede `<details>`. Synligt er kun "345 resultater · udkast-klassifikation". Se compliance c45 SHOULD 8. Rettelse: én synlig linje under resultattallet: "Tema og modenhed er maskinelle forslag, afventer NDI."
+3. `vaerdikaeder.html` mangler stadig `displayName()` ("Power Solutions Internationa", "Lpkf Laser & Electronics Se").
+4. Rå versaler i h1 på selskabssider (Sitime Corp, Iqe Plc, Wix.Com Ltd …): `NAME_FIX`.
+5. `omkostninger.html:356` "Tast 1 eller 5." står stadig i den synlige summary-tekst.
+6. 5–6 af top-10/15 viser "Profiltekst mangler endnu".
+7. ~~Jargon "kvartalssnapshot"~~ er lukket ✅ af lane-B (`b6dfcba`). Moderselskaber linker nu til deres warrants (fx Power Solutions) ✅.
+
+### Nice
+- Temasiderne har stadig ingen figur.
+
+### Persona-linser
+- **Privat (375):** Udforsk er markant roligere nu. Den største tilbageværende friktion er de små tap-mål i listen (punkt 1).
+- **Family office:** De mærker hurtigst forsvinden af "maskinelt"-forbeholdet fra udforsk (punkt 2). Det skal være synligt uden klik.
