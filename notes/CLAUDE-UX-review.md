@@ -1399,3 +1399,104 @@ Main har ikke flyttet sig siden c53. Live svarer byte for byte til main på inde
 
 ### Nice
 - Uændret.
+
+## 2026-10-16 07:42 CEST · cyklus 56 · freeze-tjek (main `ffda4c8`, ny siden c55; Pages lagger — 6 af 7 ændrede filer endnu ikke live, testet lokalt)
+
+Main flyttede f6d6b4b → ffda4c8 (lane-B displayName i warrant-/risikolinjer + `?tags=`-sanering; lane-E periode "Tre datoer, tre roller" + T1/Babcock-faktatekster). Lokal test @375: 0 pageerrors, 0 overflow.
+
+- periode (PMINDI YTD/all/2025): ny knapgruppe Første NAV / Udgangspunkt / Sidste punkt, 44 px høje knapper, aria-pressed skifter, live-tekst korrekt pr. tilstand (YTD 31. dec. 2025 → 14. okt. 2026). Print viser alle tre linjer. ✅
+- periode PMINDIAKK: samme panel uden tal (0 procenttal på siden). ✅
+- index `?tags=xyz,platforms` → URL saneres til `?tags=platforms` i stedet for 0 resultater. ✅
+- selskab SoftBank + warrants: displayName bruges nu også i warrant-linjen. ✅
+- 20-URL live-sweep (c54-script): 0 fejl/overflow, rådgivnings-/tab-/historik-linje på alle. "overvægt"-flag på vaerdikaeder/risici/temaer er negerede ansvarsfraskrivelser ("ikke bevidste overvægte") — falsk positiv.
+
+### MUST
+- Ingen.
+
+### SHOULD
+1. NY · value-chains.json `role` for T1 Energy og Babcock & Wilcox er blevet faktatjek-noter i stedet for rollebeskrivelser ("5 GW moduler om året er en kapacitet. G2-celler er anslået. Austin i foden er ikke en gade."). Feltet vises som rolle-kolonne i tema.html:185. Privat-personaen forstår ikke "Austin i foden er ikke en gade". Ret rollen tilbage til "Solcellemoduler" / "Kedler og design-byggeri til kraftværker" og lad facts[] bære resten. Ren tekst, kan laves i bugfix-vinduet.
+2–5. Uændret fra c55 (ndi-paa-x tap-mål, slugs, label :110; index:89 + omkostninger:606).
+
+### Nice
+- Uændret.
+
+## 2026-10-16 07:46 CEST · cyklus 57 · freeze-tjek (main `13b77f0`, live = main på alle 7 ændrede filer, md5)
+
+Ændringer siden c56: lane-C ordliste +5 (MW/GW, LNG, HALEU, brændselscelle, faststofbatteri; 159 begreber), temaantal i ordlisten tælles nu fra portfolio.json, modenhed vises nu som maskinelt forslag (ASML-linse, livscyklus, FAQ), ental/flertal-rettelser, risici uden udviklersprog.
+
+- om-data: alle 14 `data-gc/gf` tal regnes live og passer med den statiske reserve (87/345/31, chips 54/49, compute 19/16, optik 28/27, fysisk 27/27, energi 37/37/28). ✅
+- Portefølje-livscyklus: 345 af 345 har et forslag, og kurven forklares i én linje: "maskinelt ud fra offentlig branche og tema, afventer NDI-gennemgang". ✅ SoftBank-siden viser "Moden (forslag)" med samme forklaring og "ikke en rating". ✅
+- risici: "Temadækning … det tal UI bruger" er erstattet af almindeligt dansk. ✅
+- 22-URL live-sweep @375 (c54 + livscyklus + faq): 0 overflow og 0 pageerrors. Rådgivnings-, tab- og historiklinjen findes på alle. "overvægt" er de kendte negerede hits.
+
+### MUST
+- Ingen.
+
+### SHOULD
+1. Delvist rettet · T1 Energy-rollen er ryddet op (ingen faktatjek-tekst). Babcock & Wilcox har stadig `role` = "Kedler og design-byggeri. 1,2 GW 4. marts 2026 er Base Electrons anlæg. 20 turbiner 11. august 2026 er efter beholdningen…" i value-chains.json. Behold kun "Kedler og design-byggeri til kraftværker" og lad facts[] bære datoerne.
+2. NY · selskab.html viser stadig label "NDI-tag" (fx SoftBank: "NDI-tag Platforme"). Det kommer fra unique-metrics.json (333 labels). ndi-perspektiv oversætter allerede via `da()` til "NDI-tema". Det samme bør ske på selskabssiden, så ordet er ens overalt. Ren visningstekst.
+3. Livscyklus på Portefølje: alle 345 placeringer er nu maskinelle. Mærkningen står kun i én linje under kurven. Overvej "(forslag)" i tooltip pr. prik, som på selskabssiden. Persona privat læser ellers "Høj vækst 186" som NDI's egen vurdering.
+4–6. Uændret: ndi-paa-x tap-mål/slugs/label :110, index:89, omkostninger:606.
+
+### Nice
+- Uændret.
+
+## 2026-10-16 07:47 CEST · cyklus 57b · Nasdaq-toggle (main `76b0e7d`)
+- Toggle og forklaring er tydelige, mobil 375 ok. Den guldfarvede stiplede linje er let at skelne fra fondens cyan linje. ✅
+- SHOULD: FO-personaen vil straks spørge "totalafkast vs kursindeks?". Se compliance S-N1: brug total return, eller forklar forskellen i én sætning.
+
+## 2026-10-16 07:50 CEST · cyklus 58 · Fonden graf-v2-paritet (main `0e08feb`)
+
+### MUST
+- Ingen nye.
+
+### SHOULD
+- Kurs-tilstand: takeaway og "Sådan kan du selv vurdere afkastet" siger +104,8 %, mens grafen siger +26,5 %. En privat investor ser to forskellige "afkast" for den samme periode (se compliance S-K1). Lad teksten følge den valgte visning, eller skriv "totalafkast" eksplicit.
+- Kurs + Nasdaq giver et billede, hvor det ser ud, som om fonden har klaret sig dårligt mod Nasdaq (+26,5 vs +94,5). Family office-linsen vil spørge, om grundlaget er sammenligneligt. Skjul sammenligningen i Kurs-tilstand, eller forklar forskellen (compliance S-K2).
+
+### Nice
+- Tastatur-tooltip: svg har `tabindex=0`, men ingen `aria-label`, og `.chart-readout` har ingen `aria-live="polite"`. Pil- og Home/End-navigation bliver derfor ikke læst op af skærmlæsere.
+- U-markøren er kun 12 px tekst. På 375 er tooltippet (`<title>`) ikke tilgængeligt ved berøring. Readoutet viser dog udbyttet, når cursoren står på ex-datoen. Ok.
+
+## 2026-10-16 07:54 CEST · cyklus 59 · freeze-tjek + rullende 12m/5 dybeste fald (main `41a61c6`, live = main pr. md5)
+
+Ændring siden c58: `4b67fa6` tilføjer en sektion "Rullende 12-måneders afkast" + "De 5 dybeste fald siden start" på Fonden og en advarsel om datafriskhed, når data er mere end 3 dage gamle.
+
+- Fonden @375/1280: sektionen ligger efter "Kontekst i perioden". 0 overflow, 0 pageerrors. Tabellen (552 px) ligger i hscroll med "Rul til siden"-hint. ✅ Fald-tallene (-35,8 / -26,8 / -26,6 / -16,7 %) er de samme som på drawdown.html. ✅ warnHtml (tab/historik) er med i sektionen. ✅
+- PMINDIAKK: sektionen vises ikke (early return før 12m). ✅
+- Stale-advarsel: data er pr. 14. okt. og i dag er 16. okt., så advarslen vises ikke. Det er korrekt.
+- Live footer-sweep @375 (20 URL'er, cache-bust): radg/tab/hist findes på alle, 0 overflow og 0 pageerrors. "overvægt" er de kendte negerede hits.
+
+### MUST
+- Ingen.
+
+### SHOULD
+1. NY · Den rullende sektion følger ikke den valgte periode. Den viser altid siden start, også når ÅTD eller et år er valgt. Det er fint, men overskriften bør sige "siden start", så en privat investor ikke tror, at den hænger sammen med periodeknapperne.
+2. NY · Stale-advarslen nævner "Fundmarket" uden link. Link til den samme Fundmarket-side, som KID-footeren bruger.
+3. c58 S-K1/S-K2 (takeaway i Kurs-tilstand, Kurs vs Nasdaq) er åbne og uændrede.
+4. c57 SHOULD 1–3 (B&W role, "NDI-tag"-label, livscyklus "(forslag)" pr. prik) er åbne.
+
+### Nice
+- Den rullende graf har ingen tooltip/readout pr. punkt og ingen `aria-live`. Den har kun et samlet readout. Ok for udkast.
+
+## 2026-10-16 07:57 CEST · cyklus 60 · freeze-tjek: embed dage over/under nul, drawdown år-/bund-hop, sammenlign klasse-spor (main `f2c83d5`, live = main pr. md5 på embed/chart.js, drawdown, sammenlign, vaerdikaeder)
+
+Nyt siden c59 (`41a61c6`): embed har "dage på/over vs. under nul" + "Første dag under nul" + en livsbjælke (hele perioden vs. ÅTD). Drawdown har "Første dag under 10 %", knapper for hvert år og "Siden bunden" (dage). Sammenlign har klasse-spor (PMINDI/PMINDIAKK). Værdikæder/nyhedsarkiv har flere faktarettelser og nye klik-kort ("Hvad er det ikke?", "Solaris på to led", "Tre led").
+
+Testet lokalt (git archive af main, port 8960) @375 og @1280: 0 pageerrors, 0 overflow, 0 nye klikmål under 24 px.
+- Embed PMINDI: "749 af 770 dage lå på eller over nul. Nul er første dag i perioden." Ved ÅTD: 161/197, og "Under nul" giver "36 af 197 … afstanden til periodens start, ikke et fald fra top". ✅ Forbeholdet er godt.
+- Embed/drawdown med fund=PMINDIAKK: ingen dag-split, livsbjælke, år-hop eller bund-hop. ✅ AKK-gaten holder.
+- Drawdown: "267 af 770 dage lå mindst 10 % under den løbende top", "2026: 135 dage …", "77 dage siden 29. jul. 2026. Serien er ikke tilbage på den top." Ærlig og neutral formulering. ✅
+- Sammenlign: AKK-sporet siger "eksisteret i 313 dage. Kursen vises efter 12 måneder, fra 5. dec. 2026". Ingen afkast. ✅
+
+### MUST
+- Ingen.
+
+### SHOULD
+1. NY · Embed-livsbjælken skriver ved ÅTD: "Delår, afventer Fundmarket-godkendelse." En privat investor kan læse det som om tallene ikke er godkendte eller er foreløbige. Det er uklart, hvad der afventer hvad. Skriv i stedet fx "Delårstal fra Fundmarket pr. <dato>", eller fjern sætningen.
+2. NY · Embed dag-split står som standard på "På eller over nul" (749/770 ≈ 97 %). Det er samme mønster som c59 S-R1, hvor den gunstige andel bliver vist først. Se compliance S-D1.
+3. Åbne fra c59: den rullende sektion bør sige "siden start", og stale-advarslen bør linke til Fundmarket. Åbne fra c58: S-K1/S-K2. Åbne fra c57: SHOULD 1–3.
+
+### Nice
+- Nyhedsarkiv "Hvad er det ikke?" (Kraftværk/Mine/Opsendelse/Kontor) er sjov, men et visuelt mønster mere at lære (variety-træthed). Overvej at samle klik-kortene på én side under ét fælles mønster.
+- Embed .day-track har aria-hidden. Tallene står i #day-say, men den har ingen aria-live, så skærmlæsere hører ikke skiftet over/under.

@@ -14,3 +14,4 @@ Per-lane log (not merged into notes/STATUS.md).
 - Fra Grok lane-X · 06:38 · Konto-kort på X-arkivet (konto og dato, forstørret udsnit). Satskort på fakta og omkostninger, skala 0 til 2 %, afstanden følger satsen.
 - Fra Grok lane-X · 06:56 · Stemmekort på et åbent X-spor (SoftBank 0 NDI / 3 fulgte). KID 2,79 % og 2,85 % står ved siden af satsskalaen og er ikke tegnet på den.
 - Fra Grok lane-X · 07:15 · Klasselinje på fakta og omkostninger (802 dage mellem de to juridiske starter). Emnekort på X-arkivet, Quantum som tom ring.
+- Fra Grok lane-X · 07:50 · Kryds på X (SoftBank 3, Nvidia 5, Chips 10, streger 1, 3 og 5). Klasselinjen har samme kryds: 10 ens felter, 5 i hver vinge.
