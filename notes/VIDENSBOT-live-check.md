@@ -220,3 +220,7 @@ Sider: ideer, kort, om-data, invester, risici, ndi-perspektiv, laer/*.
 ## lane-C · 03:05 16/10 · laer/sektorer.html
 - Ny side efter Vidensbot §5-ønsket «Hvorfor vi ikke bruger de 11 sektorer». Teksten bruger kun eksponeringssprog («hvilken del af udviklingen giver selskabet os?», «Vi vælger udviklingen, ikke vinderen») og flodsystemets første dæmning (energi). Ingen vægte pr. selskab og ingen handelsord.
 - **Bed Vidensbot tjekke:** de seks korte «hvorfor flere temaer»-linjer er omskrevet fra multi-tags.json `why` til almindeligt dansk (fx CoreWeave: «leje af AI-regnekraft i skyen, med et stort behov for strøm»). Er de i tråd med NDI's egen beskrivelse?
+
+## lane-C · 02:55 16/10 · laer/tidslinje.html
+- Historisk tidslinje i flodsystem-sprog. Navngivne selskaber (Intel, TSMC, Nvidia, Amazon, Google, OpenAI-produktet ChatGPT) står kun som historiske milepæle, uden vægte og uden links til selskabssider, og med «At et selskab er nævnt, er ikke en anbefaling».
+- **Bed Vidensbot/NDI tjekke:** (1) årstallene (2019 EUV i masseproduktion, 2023 chipmangel inkl. avanceret pakning, 2024 datacentre, 2025 strøm). De sidste tre er forenklede perioder, ikke enkeltbegivenheder. (2) Er tredelingen «chippen → regnekraft → forsyning» i tråd med Mads' flodsystem (ugebrev 30. marts 2026)? (3) Er «NDI kalder energi den første dæmning» korrekt gengivet?

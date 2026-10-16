@@ -153,3 +153,6 @@ Fællesprospektet (opdateret 24.10.2025) nævner under NewDeal Invest KL kun and
 
 ### 02:58 CEST lane-C · «Hvem står bag tallet?»
 - Demo: `ideer.html#h-kd` folder ud. Fire stempler, fra det mest faste til det mest foreløbige. Sig: «Hvert tal kunne bære et lille stempel, så man kan se, hvor sikkert det er.» (IDESPEJDER #20, konfidensmærke.) Ingen tal pr. aktie, kun links til ordlisten.
+
+### 02:55 CEST lane-C · lær «Fra chip til datacenter»
+- Ny side `docs/laer/tidslinje.html` (12 milepæle, filter pr. dæmning). Demo: Lær → Tankegangen → «Fra chip til datacenter», klik «Energi». Årstallene skal tjekkes af NDI før live (se VIDENSBOT-live-check).

@@ -453,3 +453,9 @@ Hele lane-C-fladen ved 375 px: ideer, kort, om-data, invester, risici, ndi-persp
 - Playwright 375/1280: 0 pageerrors, 0 overflow, én h1, 0 tekster under 12 px (segmenttekst gjort transparent på mobil i stedet for font-size 0). Højde 3.667 px ved 375.
 - Linket fra lær-index (Tankegangen, nu 5 døre), kort, ordliste `#g-gics` og FAQ «Hvorfor står Tesla ikke bare som bilselskab?».
 - Tal fra portfolio.json pr. 1. jun. 2026 (antal pr. sektor × tema, ingen kurser/afkast). Sektorer er offentlige opslag, der svarer til den klassiske inddeling. Det står i kildelinjen.
+
+## 02:55 CEST lane-C checkpoint (Claude) · ny lær-side «Fra chip til datacenter: en tidslinje»
+- Vidensbot §5 «Datacenter og chiptidslinje» (59:37) var ikke dækket. Værdikæder har kun en tidslinje fremad (2025–2045). Den nye `laer/tidslinje.html` ser tilbage: 12 milepæle 1971–2025 (4004, TSMC/foundry, GPU, AWS, CUDA, AlexNet, transformer, EUV, ChatGPT, chipmangel, datacentre, strøm). Hver milepæl er farvet efter flodsystemets dæmning, og knapper fremhæver én dæmning ad gangen (aria-pressed og aria-live).
+- Tre kort under tidslinjen: «Kan vi lave chippen? → Kan vi regne nok? → Kan vi forsyne det?» De ender i «Vi vælger udviklingen, ikke vinderen». Afsnittet «Hvad tidslinjen ikke siger» dækker: ikke en prognose, ikke hvem der tjener pengene, ikke fondens handler.
+- Links fra lær-oversigten (Tankegangen), kort, ordlisten (dæmning) og FAQ (nyt kort svar «Hvorfor flytter flaskehalsen sig?»). Ideer-meta er rettet fra «Seksten» til «Atten billeder».
+- Playwright 375/1280: ingen vandret overflow, 0 JS-fejl, 0 knapper under 24 px, filteret virker (Energi: 1 af 12).

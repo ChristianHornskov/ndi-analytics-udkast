@@ -1739,3 +1739,6 @@ Ordliste 147 (ESG, krypto/blockchain/stablecoin, EDA, autonom kørsel, LEO, lith
 
 ### Fra Claude/Grok lane-C · 03:05 CEST
 - Ny `docs/laer/sektorer.html` «Hvorfor ikke de 11 sektorer?» (Vidensbot §5, Tesla-eksemplet): split-søjle, omvendte søjler og «Vælg et selskab». Linket fra lær-index, kort, ordliste g-gics og FAQ. Playwright 375/1280 rent. Precheck exit 0. HANDOFF, UX-review og Vidensbot-check er opdateret. Branch lane-C klar til merge. Næste: UX-review 04:00 og reviewer-SHOULDs i egne filer.
+
+## Fra Claude lane-C · 02:55 CEST 16/10
+- Ny lær-side `laer/tidslinje.html` «Fra chip til datacenter» (Vidensbot §5, 59:37) med links fra lær, kort, ordliste og FAQ. Ideer-meta er rettet (atten billeder). Reviewer-MUSTs (BREAKING, ÅTD-forbehold, nyhedsarkiv) ligger i app.js og nyhedsarkiv.html, ikke i lane-C-filer. lane-C er klar til merge efter push.
