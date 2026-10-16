@@ -382,6 +382,18 @@ const NAME_FIX = {
   'Power Solutions Internationa': 'Power Solutions International', 'Solaris Energy Infrastructur': 'Solaris Energy Infrastructure',
   'Figure Technology Solut-Cl A': 'Figure Technology Solutions', 'Asm Int': 'ASM International', 'Crdo': 'Credo Technology',
   'Prosus Rg-N': 'Prosus', 'Huber + Suhner Ag-Reg': 'Huber + Suhner',
+  'General Motors Co': 'General Motors', 'Hecla Mining Co': 'Hecla Mining', 'Tmc The Metals Co Inc': 'TMC The Metals Company',
+  'Ams-Osram Ag': 'ams OSRAM', 'Microstrategy': 'MicroStrategy', 'Hims Hers Health Inc': 'Hims & Hers Health',
+  'Solstice Adv Materials Inc': 'Solstice Advanced Materials',
+};
+// Selskabsnavne, som depotbanken har gjort til "Titel Case" (SITIME → Sitime). Kun ord, hvis rigtige stavemåde er sikker.
+const WORD_FIX = {
+  Ai: 'AI', Usa: 'USA', Iqe: 'IQE', Axt: 'AXT', Bwx: 'BWX', Ge: 'GE', Itt: 'ITT', Mks: 'MKS', Mp: 'MP', Mda: 'MDA',
+  Myr: 'MYR', Tss: 'TSS', Ses: 'SES', Asp: 'ASP', Crispr: 'CRISPR', Mntn: 'MNTN', Kla: 'KLA', Lpkf: 'LPKF', Asmpt: 'ASMPT',
+  Sitime: 'SiTime', Formfactor: 'FormFactor', Blacksky: 'BlackSky', Abcellera: 'AbCellera', Maxlinear: 'MaxLinear',
+  Quantumscape: 'QuantumScape', Solaredge: 'SolarEdge', Terawulf: 'TeraWulf', Whitefiber: 'WhiteFiber', Lifemd: 'LifeMD',
+  Weride: 'WeRide', Nuscale: 'NuScale', Propetro: 'ProPetro', Fubotv: 'fuboTV', Niocorp: 'NioCorp', Sharonai: 'SharonAI',
+  Sharplink: 'SharpLink', Sailpoint: 'SailPoint', Defi: 'DeFi', Neovolta: 'NeoVolta', Coreweave: 'CoreWeave', Cleanspark: 'CleanSpark', 'Wix.Com': 'Wix.com',
 };
 export function displayName(p) {
   const raw = (p?.name || '').trim();
@@ -392,6 +404,9 @@ export function displayName(p) {
     .replace(/\s*-\s*(Cl(ass)?\s*)?A$/i, '') // aktieklasse A
     .replace(/(\s|-)N$/, '').replace(/\s+Br$/, '') // tysk navneaktie / ihændehaver
     .replace(/\bHld(n)?gs?\b/g, 'Holdings').trim();
+  // Selskabsform til sidst (Inc, Corp, Ltd, Plc, AG, SE, NV) - ikke "Co", der står i fx "Southern Co".
+  if (!/\/The$/.test(raw)) n = n.replace(/\s*\b(Inc|Corp|Ltd|Plc|Ag|Se|Nv)\.?$/i, '').trim();
+  n = n.replace(/[\w.]+/g, (w) => WORD_FIX[w] || w);
   return adr ? `${n} (ADR)` : n;
 }
 // Warrants (tegningsretter) ligger som egne positioner med ~0 % vægt, men er ikke selvstændige selskaber.
