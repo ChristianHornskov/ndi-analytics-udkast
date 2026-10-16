@@ -889,3 +889,13 @@ Datoen er 8. september 2026, efter beholdningen. Det er forsvarsmateriale, ikke 
 Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Camp Minden står. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `00c3c32` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 02:10 CEST. QuantumScape nævner QS PowerBlock til datacentre. Ikke færdig.**
+
+QSE-5 er stadig nævnt til køretøjer. QS PowerBlock er ikke et lager i drift, og teksten beskriver ikke masseproduktion. Formuleringen om den første anodeløse celle er ikke taget med. Ingen `reviewedAt`. Blurben under energilagring og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. QS PowerBlock står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `040120f` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

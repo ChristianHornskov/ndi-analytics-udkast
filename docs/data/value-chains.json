@@ -1364,7 +1364,7 @@
           "id": "storage",
           "icon": "🔋",
           "label": "Energilagring og batterier",
-          "blurb": "Batterier og andre lagre, der kan gemme strøm og aflevere den senere. Lithium til batterierne står under råstoffer. QuantumScape er et batteridesign til køretøjer og er ikke masseproduktion. Fluence leverer batterisystemer og software til nettet. Det er ikke et kraftværk, og teksten siger ikke, at selskabet selv laver cellerne. Eos laver zinkbatterier. Det er ikke en mine.",
+          "blurb": "Batterier og andre lagre, der kan gemme strøm og aflevere den senere. Lithium til batterierne står under råstoffer. QuantumScape er et batteridesign til køretøjer og nævner også QS PowerBlock til datacentre. Det er ikke masseproduktion og ikke et lager i drift. Fluence leverer batterisystemer og software til nettet. Det er ikke et kraftværk, og teksten siger ikke, at selskabet selv laver cellerne. Eos laver zinkbatterier. Det er ikke en mine.",
           "ndi": "NDI nævner batterier som del af energiflaskehalsen (ugebrev 30. marts 2026). Tesla er med, fordi koncernen også laver batterilagring.",
           "themes": [
             "energy",
@@ -1396,7 +1396,7 @@
               "w": 0.2,
               "sym": "QS",
               "forslag": true,
-              "role": "Faststof-batterier under udvikling, især til køretøjer. Ikke masseproduktion."
+              "role": "QSE-5 og QS PowerBlock er design. Ikke masseproduktion og ikke et lager i drift."
             },
             {
               "isin": "US29415C1018",

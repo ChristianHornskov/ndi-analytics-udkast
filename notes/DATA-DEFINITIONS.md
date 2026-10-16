@@ -95,7 +95,7 @@ Taseko skrev 9. oktober 2026, at Florence Copper er gået i kommerciel produktio
 
 SMR-leddet siger, at NuScale skriver, at et program sammen med TVA kan blive op til 6 GW, og at det er udvikling, ikke et værk i drift. Kilden er programsiden, som taler om at udvikle og idriftsætte kapacitet, ikke om et værk, der allerede kører. Ordene historic, largest og proven er ikke taget med. De øvrige SMR-navne er stadig ikke beskrevet som kommerciel drift.
 
-Konceptkortene i nyhedsarkivet er delt i korte afsnit, så grænserne kan læses hver for sig. Energikortet har tyve afsnit. Rumkortet har tretten. Indholdet er det samme som på kæden. Neutron-siden sagde 16. oktober 2026 stadig, at første flyvning ligger foran. Sætningen om, at Neutron ikke er fløjet, er ikke ændret.
+Konceptkortene i nyhedsarkivet er delt i korte afsnit, så grænserne kan læses hver for sig. Energikortet har enogtyve afsnit. Rumkortet har tretten. Indholdet er det samme som på kæden. Neutron-siden sagde 16. oktober 2026 stadig, at første flyvning ligger foran. Sætningen om, at Neutron ikke er fløjet, er ikke ændret.
 
 MP Materials skriver, at magneter fremstilles på anlægget Independence i Texas, og at udvindingen er ved Mountain Pass. Ordene om verdens rigeste forekomst og verdens stærkeste magnet er ikke taget med. Firefly gav 403 samme nat. Eclipse er derfor ikke omskrevet.
 
@@ -172,6 +172,8 @@ Southern Copper skriver, at Tía María er et kobberprojekt i Cocachacra i provi
 Rocket Lab skriver, at HASTE er et suborbitalt testfartøj bygget ud fra Electron, og at det flyver fra Wallops i Virginia. Det sætter ikke satellitter i kredsløb. Neutron er stadig under udvikling, og den første flyvning er ikke gennemført i teksten. Tal for nyttelast, ordet largest og en overskrift om Iridium er ikke taget med. Lynas og NioCorp gav ikke en læsbar side samme nat. Intuitive Machines endte i en omdirigering. De tre er ikke omskrevet. Vægtene er uændrede.
 
 Voyager skrev 8. september 2026, at anlægget GOEX ved Camp Minden i Louisiana igen producerer sortkrudt. Datoen ligger efter beholdningen pr. 2026-06-01. Det er forsvarsmateriale, ikke en rumstation. Starlab er stadig et projekt og ikke en station i drift. Ordene only, sole og world-class er ikke taget med. Et anlæg i Pueblo er beskrevet som tiltænkt produktion, og kvadratmeterne er ikke taget med. Vægtene er uændrede.
+
+QuantumScape nævner QSE-5 til køretøjer og QS PowerBlock til datacentre. Teksten beskriver ikke masseproduktion og ikke et lager i drift. Formuleringen om branchens første anodeløse celle er ikke taget med. Adressen i San Jose er ikke brugt som en fabrik i drift. Vægtene er uændrede.
 
 ## År til dato på periodesiden
 

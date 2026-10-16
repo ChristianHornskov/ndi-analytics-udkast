@@ -1855,15 +1855,15 @@
   "US74767V1098": {
    "name": "QuantumScape",
    "theme": "andet",
-   "summary": "Udvikler faststof-batterier, især til køretøjer. Denne tekst beskriver ikke masseproduktion. Snapshottet har selskabet under Andet, med et temaforslag.",
-   "watch": "Om teknologien kan produceres i mængde, og om en bilproducent tager den i brug.",
+   "summary": "Udvikler faststof-batterier. Siden nævner QSE-5 til køretøjer og QS PowerBlock til datacentre. Denne tekst beskriver ikke masseproduktion og ikke et lager i drift.",
+   "watch": "Om teknologien kan produceres i mængde. QS PowerBlock er ikke et lager i drift.",
    "source": "https://www.quantumscape.com/",
-   "products": "Et batteridesign under udvikling.",
-   "customers": "Bilproducenter, hvis produktionen kommer i gang.",
-   "role": "Batteriteknologi, ikke et lagersystem i drift på elnettet.",
+   "products": "Batteridesign, herunder QSE-5 og QS PowerBlock. Ikke masseproduktion.",
+   "customers": "Bilproducenter og datacentre er nævnt. Teksten beskriver ikke et lager i drift.",
+   "role": "Batteridesign. QS PowerBlock er ikke et lager i drift.",
    "narrative": [
-    "QuantumScape udvikler faststof-batterier til køretøjer. Selskabet omtaler batteriet QSE-5.",
-    "Denne tekst beskriver ikke masseproduktion og ikke et lager på elnettet. Snapshottet har selskabet under Andet, med et temaforslag."
+    "QuantumScape udvikler faststof-batterier. Siden nævner QSE-5 til køretøjer og QS PowerBlock til datacentre.",
+    "Denne tekst beskriver ikke masseproduktion og ikke et lager i drift. Snapshottet har selskabet under Andet, med et temaforslag."
    ],
    "narrativeSources": [
     {
