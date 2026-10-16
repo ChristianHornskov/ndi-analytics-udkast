@@ -384,3 +384,7 @@ Ny form i embed, under udlæsningen. En streg med stop. Afstanden er tiden. Star
 ### Update · udskrift af embed · 2026-10-16 ~07:22 CEST
 
 «Udskriv» står under nøgletallene og er 44 px. Den står ikke i rækken med Del grafen. På papir er knappen og opfordringen væk. Mast og footer har markedsføringsmateriale, ikke investeringsrådgivning og den historiske advarsel. År til dato beholder −10,0 %. PMINDIAKK har knappen, teksten om 12 måneder og 5. december 2026, og ingen procent. Ingen sidescroll ved 320, 390 og 1100. Ingen konsolfejl.
+
+### Update · hele forløbet · 2026-10-16 ~07:28 CEST
+
+Ny form på drawdown, over de tre tidspunkter. Fire streger på én linje. Bredden er tiden fra 22. sep. 2023 til 14. okt. 2026. Den åbne er gul. Et klik hopper til bunden. Sætningen siger −26,8 % for den åbne, og −16,7 %, −35,8 % og −26,6 % for de lukkede. De tre tidspunkter følger med. På 300 px er hver streg mindst 44 px. Ingen sidescroll. Ingen konsolfejl. PMINDIAKK har ingen linje og ingen procent.

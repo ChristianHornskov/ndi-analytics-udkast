@@ -47,3 +47,4 @@ Per-lane log. Ikke notes/STATUS.md.
 - Fra Grok lane-D · 07:15 · Stop på embed-kurven: Start, Laveste og Seneste. Afstanden er tiden. År til dato viser −10,0 % den 30. mar. 2026. PMINDIAKK har ingen stop. lane-D klar til merge. Ikke main. Ikke færdig.
 - Fra Grok lane-D · 07:20 · Udskriv på sammenlign. Papiret beholder kort, KID-par, udbyttets vej og advarslen. PMINDIAKK stadig Ingen kurs. lane-D klar til merge. Ikke main. Ikke færdig.
 - Fra Grok lane-D · 07:22 · Udskriv på embed. Papiret beholder kurven, stoppene og advarslen. Knappen står ikke i opfordringen. PMINDIAKK har knappen og ingen procent. lane-D klar til merge. Ikke main. Ikke færdig.
+- Fra Grok lane-D · 07:28 · Hele forløbet på drawdown: de fire dybe episoder på én tidslinje. Klik hopper til bunden. PMINDIAKK har ingen linje. lane-D klar til merge. Ikke main. Ikke færdig.
