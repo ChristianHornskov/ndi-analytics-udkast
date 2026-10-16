@@ -167,7 +167,7 @@
  const show = (s, label) => {
    if (isGap(s)) {
      if (label) gaps.push(label);
-     return '<span class="muted">—</span>';
+     return '<a class="muted" href="#mangler-ndi" title="Se samlet liste">—</a>';
    }
    return esc(s);
  };
@@ -365,7 +365,7 @@
  <div class="dd-track" role="img" aria-label="Største fald ${pct(risk.maxDrawdownPct)} på en skala fra 0 til 100 procent"><i style="width:${ddWidth}%"></i><span class="dd-cap" aria-hidden="true">0–100 %</span></div>
  ${dateRow}
  </div>
- <aside class="risk-official">
+ <aside class="risk-official"${isGap(risk.officialVolSharpe) ? ' hidden' : ''}>
  <div class="label">Officielt vol/Sharpe</div>
  <p style="margin-bottom:8px">${show(risk.officialVolSharpe, 'Officiel volatilitet / Sharpe')}</p>
  <p class="src" style="margin:0">${esc(risk.officialVolSharpeNote || '')}</p>
@@ -404,7 +404,7 @@
  ${org('IFS (forvalter)', show(facts.ifs.name, 'IFS (forvalter)'), `CVR ${esc(facts.ifs.cvr)} · FT ${esc(facts.ifs.ft)}<br>${esc(facts.ifs.address)}`)}
  ${org('Investeringsrådgiver', show(facts.advisor.name, 'Investeringsrådgiver'), `CVR ${esc(facts.advisor.cvr)}<br>${esc(facts.advisor.address)}`)}
  ${org('Depotbank', show(facts.depositary.name, 'Depotbank'), esc(facts.depositary.role || ''))}
- <article class="span-2"><span class="k">Revision</span><strong>${show(facts.auditor.name, 'Revision / auditor')}</strong><p>${esc(facts.auditor.note || '')}</p></article>
+ <article class="span-2"><span class="k">Revision</span><strong>${show(facts.auditor.name, 'Revision / auditor')}</strong>${isGap(facts.auditor.name) ? '' : `<p>${esc(facts.auditor.note || '')}</p>`}</article>
  </div>
  <p class="src" style="margin-top:12px">Kilder: <a href="${esc(facts.association.source)}" rel="noopener noreferrer" target="_blank">${esc(facts.association.sourceLabel)} ↗</a> · <a href="${esc(facts.prospectusUrl)}" rel="noopener noreferrer" target="_blank">Fællesprospekt ↗</a></p>
  </section>

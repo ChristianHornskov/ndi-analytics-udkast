@@ -171,7 +171,7 @@ Fællesprospektet (opdateret 24.10.2025) nævner under NewDeal Invest KL kun and
 - **Revisor**: `fund-facts.auditor.name` står stadig «udfyldes af NDI». Bekræft navn fra fællesprospekt.
 - **Benchmarkbeslutning**: UI siger eksplicit «intet fast benchmark; vi viser derfor ingen sammenligningskurve». Bekræft at det forbliver policy (ingen Nasdaq/peer-kurve) før demo.
 - **Modenhed (maturity)**: alle 345 er `maturityStatus: forslag`. Mads skal gennemgå / godkende før det præsenteres som andet end forslag.
-- **Kontantandel**: UI viser ca. 8,1 % (100 − aktievægte) fra forsinket PMINDI-snapshot pr. 1. jun. 2026. Fundmarket kan vise anden kontantandel på en anden dato — bekræft om vi skal hente officiel cash % fra Fundmarket.
+- **Kontantandel (åbent, 05:40)**: Fundmarkets produktsider (hentet 16. okt. 2026 ~05:40) viser *Kontanter* **24,18 %** for **PMINDIAKK** og **0,75 %** for **PMINDI** (begge «historiske beholdninger», udateret på siden). Vores tidligere 8 % var beregnet (100 − aktievægte i 1. jun.-snapshot) og er **fjernet fra UI**. Spørgsmål til Fundmarket/NDI: hvilken dato gælder tallene, og må vi vise dem med kilde+dato?
 - **AKK startdato**: ensrettet til Fundmarket «Startdato» **05-12-2025** (fund-facts + fund-meta + første NAV). Tidligere fund-meta 02-12-2025 er rettet.
 - **Dækning 91,01 % vs 96,59 %**: UI bruger 91,01 % (antal positioner uden theme=andet). fund-meta.classificationCoverage 96,59 % er ældre vægt-felt — ikke vist. Bekræft om Mads vil have vægt-baseret dækning i stedet.
 

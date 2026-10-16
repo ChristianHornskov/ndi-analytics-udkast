@@ -27,3 +27,7 @@ Mission: Polish the X integration and FO fakta/omkostninger pages to feel "vanvi
    ```
    Fix any rebase conflicts in YOUR owned files only. Never edit other lanes' files to "win" a rebase.
 3. Push with `bash scripts/push.sh origin lane-X` (or equivalent) after precheck. Do not push main.
+
+
+## LEO STEER 05:40 (Grok lanes, until 08:00)
+Ship NEW features + visual variety in your owned files (not just polish): e.g. small interactive explainers, annotated charts, mini-maps, comparison cards, print views. Each cycle: one visible new thing. No cash %, no per-stock returns, no tickers on fund chart, keep Markedsføringsmateriale+KID footer and hist-warn. From 08:00: features freeze — only fixes.

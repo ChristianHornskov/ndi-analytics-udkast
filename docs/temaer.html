@@ -51,7 +51,7 @@
  if (p.themeStatus === 'forslag') a.forslag++;
  }
  // Multi-tag: tema-siden tæller også selskaber med temaet som ekstra tag (fx Nvidia i Compute).
- // Hubben viser primært tema (vægte summerer til 100 %) og nævner multi-tags separat, så tallene stemmer med tema-siden.
+ // Hubben viser primært tema (vægte summerer til 100 %) og nævner ekstra temaer separat, så tallene stemmer med tema-siden.
  const multi = {};
  for (const p of fund.positions || []) for (const t of tagsFor(p, all.multiTags)) if (t !== p.theme) (multi[t] ||= []).push(p.name);
  // Små temaer: vis hvem der er der (kun navne efter vægt, ingen tal pr. aktie)
@@ -80,7 +80,7 @@
  <span>${esc(t.problem)}</span>
  ${ch ? `<span>Værdikæde: <a href="${chainHref(t.themeKey)}">${esc(ch.title)}</a></span>` : ''}
  ${t.lens ? `<span>NDI-linse: <a href="tema.html?slug=${encodeURIComponent(t.slug)}&fund=${fund.id}&linse=1" title="Kvalitativ beskrivelse (udkast), ikke en rating">${t.lens} af ${t.count} selskaber</a></span>` : ''}
- ${(multi[t.themeKey] || []).length ? `<span title="${esc(multi[t.themeKey].join(', '))}">+${multi[t.themeKey].length} med temaet som ekstra tag (multi-tag) - tælles med på temasiden</span>` : ''}
+ ${(multi[t.themeKey] || []).length ? `<span title="${esc(multi[t.themeKey].join(', '))}">+${multi[t.themeKey].length} har temaet som ekstra tema - tælles med på temasiden</span>` : ''}
  <a class="go" href="tema.html?slug=${encodeURIComponent(t.slug)}&fund=${fund.id}">${t.count ? `${t.count} ${t.count === 1 ? 'selskab' : 'selskaber'} · ca. ${pct(t.weight)} %` : `Ingen selskaber i ${esc(fund.short)}`} →</a>
  </div>`;
  }).join('');
@@ -106,7 +106,7 @@
  const k = `${daTheme(p.theme)} → ${alt === 'andet' ? 'Andet' : doubtAltLabel(alt) || '?'}`;
  (doubtGroups[k] ||= []).push(p);
  }
- const doubtTxt = doubts.length ? `<details style="margin-top:8px"><summary style="cursor:pointer;color:var(--muted);font-size:13px">${doubts.length} temaforslag er stadig usikre (til porteføljeholdet)</summary><p style="margin-top:6px;font-size:13px;color:var(--muted)">${Object.entries(doubtGroups).sort((a, b) => b[1].length - a[1].length).map(([k, ps]) => `<span title="${esc(ps.map((p) => p.name).join(', '))}">${esc(k)} (${ps.length})</span>`).join(' · ')}</p></details>` : '';
+ const doubtTxt = doubts.length ? `<details style="margin-top:8px"><summary style="cursor:pointer;color:var(--muted);font-size:13px">${doubts.length} temaforslag er afventer gennemgang</summary><p style="margin-top:6px;font-size:13px;color:var(--muted)">${Object.entries(doubtGroups).sort((a, b) => b[1].length - a[1].length).map(([k, ps]) => `<span title="${esc(ps.map((p) => p.name).join(', '))}">${esc(k)} (${ps.length})</span>`).join(' · ')}</p></details>` : '';
  const review = prop.total ? `<section class="review-banner" aria-labelledby="rv-h">
  <p class="rv-kicker"><span class="badge badge-draft">FORSLAG</span> Afventer gennemgang</p>
  <h2 id="rv-h">${prop.moved} ${prop.moved === 1 ? 'selskab har' : 'selskaber har'} fået et forslag til NDI-tema</h2>
@@ -114,7 +114,7 @@
  Forslagene bygger på offentlige ISIN-opslag, selskabets branche og dets plads i værdikæderne.${prop.open ? ` ${prop.open} ${prop.open === 1 ? 'selskab står' : 'selskaber står'} stadig i Andet, fordi intet NDI-tema passede godt nok (fx guld/sølv, sundhed, forbrug).` : ''} Porteføljeholdet gennemgår alle temaer, også de ældre, før noget bliver endeligt.</p>
  ${doubtTxt}
  <p class="src" style="margin-top:6px">Tal for ${esc(fund.short)} · beholdning pr. ${posAsOf} (forsinket).</p>
- <p class="link-row"><a href="om-data.html#g-temaforslag">Sådan sættes temaerne →</a> <a href="index.html?view=udforsk&fund=${fund.id}&status=forslag">Se alle forslag i screeneren →</a>${doubts.length ? ` <a href="index.html?view=udforsk&fund=${fund.id}&status=forslag&tvivl=1">Se de ${doubts.length} usikre →</a>` : ''}${prop.open ? ` <a href="tema.html?slug=andet&fund=${fund.id}">Se hvad der er tilbage i Andet →</a>` : ''}</p>
+ <p class="link-row"><a href="om-data.html#g-temaforslag">Sådan sættes temaerne →</a> <a href="index.html?view=udforsk&fund=${fund.id}&status=forslag">Se alle forslag i Udforsk →</a>${doubts.length ? ` <a href="index.html?view=udforsk&fund=${fund.id}&status=forslag&tvivl=1">Se de ${doubts.length} usikre →</a>` : ''}${prop.open ? ` <a href="tema.html?slug=andet&fund=${fund.id}">Se hvad der er tilbage i Andet →</a>` : ''}</p>
  </section>` : '';
 
  // Små temaer (fx Quantum, SpaceTech) forsvinder let i søjlerne: fremhæv dem med egen kæde
