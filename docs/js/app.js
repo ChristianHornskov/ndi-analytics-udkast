@@ -928,7 +928,7 @@ function maturityFilterHtml(fund) {
     `<button type="button" class="control ${state.maturity.includes(m) ? 'active' : ''}" data-mat="${m}" aria-pressed="${state.maturity.includes(m)}">${label} <small>(${n[m]})</small></button>`).join('');
   return `<div class="filters" role="group" aria-label="Filtrér på modenhed">
       ${btns}
-      <small style="color:var(--muted);align-self:center">Modenhed: ${total} af ${fund.positions.length} placeret${nForslag ? ` - ${nForslag === total ? 'alle' : nForslag} som <span class="badge badge-draft">forslag</span> (maskinelt ud fra offentlig branche/tema, afventer NDI)` : ' (manuel klassifikation)'}. <a href="laer/livscyklus.html">Om livscyklus →</a></small>
+      <small style="color:var(--muted);align-self:center">Modenhed: ${total} af ${fund.positions.length} placeret${nForslag ? ` - ${nForslag === total ? 'alle' : nForslag} som <span class="badge badge-draft">forslag</span> (maskinelt ud fra offentlig branche/tema, afventer NDI)` : ` — alle er <span class="badge badge-draft">forslag</span>`}. <a href="laer/livscyklus.html">Om livscyklus →</a></small>
     </div>`;
 }
 
