@@ -578,3 +578,14 @@ Ordlisten (lane-C) dækker nu ordene. Teksten i UI'et ligger hos andre lanes, s�
 - Temaerne i portfolio.json er ændret siden lane-C regnede ideer om (~02:30). Nu: 227 med tema · 87 forslag · 31 Andet, Software 48, Platforme 45, Optik 28, Energiressourcer 30, Quantum 5. Rettet i ideer (6 billeder), ordliste, lær/sektorer og HANDOFF. Vægthistogram, kvartiler (26/76/160) og livscyklus-fordelingen var stadig rigtige.
 - Til andre lanes og reviewere: citér ikke længere «229 / 85». risici.html `#sortering` tæller live og er den sikre kilde.
 - Andre ændringer fra lane-C efter 06:31: ndi-perspektiv bruger displayName(), har 24 px selskabslinks og egen indledning, og datafeltets ord vises på dansk. Ordlisten har danske forklaringer i 13 engelske opslagsord. Livscyklus-skitsen bruger Udforsks danske navne.
+
+## 08:00 CEST lane-C · freeze-checkpoint (Claude)
+**Shippet mellem 06:31 og 08:00 (alt på lane-C, pushet):**
+- **Data-nøjagtighed:** temaantallene var forældede (229/85 → 227/87, Quantum 4 → 5, Software 50 → 48 osv.) og er rettet. ideer (6 billeder), lær/sektorer og ordlistens temaopslag tæller nu selv fra portfolio.json, med de statiske tal som reserve. Uden og med JS er resultatet identisk, og der er testet med ændret data. Tesla: 5 led i 3 kæder. Modenhed er beskrevet ens overalt som maskinelt forslag (ASML-linsen, livscyklus-teksten).
+- **Sprog:** kildeangivelser «NDI ugebrev» → «NDI-indlæg» (som Leos ddce7ce). Mads introduceres. Ordlisten har danske forklaringer i 13 engelske opslagsord. ndi-perspektiv viser datafeltets «tag/multi-tag/rating/Connect/—» som «tema/flere temaer/karakter/Optik & netværk/komma». Udviklerlinjen på risici #sortering er fjernet.
+- **Ordliste 159** (+8): forretningsmodel, svært at kopiere, nøgleafhængighed, beriget uran/HALEU, brændselscelle, faststofbatteri, MW/GW og LNG. **FAQ 28** (+«Hvad betyder forslag?»).
+- **ndi-perspektiv:** displayName (SiTime, IQE …), egen indledning, Connect lagt sammen med Optik & netværk (11 grupper), feltnavne linker til ordlisten, tap-mål 24 px (c51b-regressionen er rettet), ental «1 selskab passer».
+- **Tjek:** 23 lane-C-sider × 375/1280 uden overflow og uden konsolfejl. Ingen brudte interne links. jargon-sweep er ren (kun ordlistens egen gloss). Ingen «ugebrev», «rating» eller tankestreger på lane-C-sider.
+
+**Efter 08:00 (kun rettelser):** reviewer-MUSTs i lane-C-filer, hvis de kommer. Ellers kun tjek.
+**Til Leo (uden for lane-C):** selskab/tema «Screener:» → «Udforsk:». FINAL-SUMMARY: ordliste 159, 87 forslag + 31 Andet. NuScale-tag i unique-metrics. risk-stats classification.themeForslag=116 er forældet.

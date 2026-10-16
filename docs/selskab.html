@@ -243,6 +243,10 @@
  </tbody></table></div>
  <p class="link-row" style="margin-top:10px">${sameTheme.length > 8 ? `<a href="${temaHref}">Alle ${sameTheme.length + 1} i temaet →</a> · ` : ''}<a href="selskaber.html?fund=${fundId}">Alle selskaber A-Z →</a> · <a href="vaerdikaede.html">AI-værdikæden →</a></p>
  </section>`;
+ // Indholdet renderes asynkront, så browserens eget hop til #anker (fx ◉ → #ndi-linse) er sket før sektionen fandtes.
+ let target = null;
+ try { target = location.hash.length > 1 && document.getElementById(decodeURIComponent(location.hash.slice(1))); } catch { /* ugyldigt anker */ }
+ if (target) target.scrollIntoView();
  }
  </script>
 </body>
