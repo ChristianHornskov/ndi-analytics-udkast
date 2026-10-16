@@ -105,7 +105,7 @@ Undgå at sige: «køb», «sælg», «kursmål», «billig», «god aktie», «
 - Åbne MADS uden data: market cap, produktkategori, modenhed.
 
 ## Demo-detaljer (opslag ved spørgsmål · tjekket mod siden 16/10 ~02:30, lane-C efter merge af main)
-Tal fra beholdningen er PMINDI pr. 1. jun 2026 efter lane-B's temaforslag (main): 345 aktier, 227 med tema, 87 forslag, 31 i Andet (gentjekket 06:55).
+Tal fra beholdningen er PMINDI pr. 1. jun 2026 efter lane-B's temaforslag (main): 345 aktier, 227 med tema, 87 forslag, 31 i Andet (gentjekket 06:49).
 
 1. **Entré** (`index.html`). Døre + «Teknologiske værdikæder». Sig: «stedet man researcher tech-aktier».
 2. **Værdikæder** (`vaerdikaeder.html`). Flodsystem med 5 dæmninger, skift AI → robotik → energi → rum → quantum, fold et led ud (Til siden + NDI-blik). Musk-citat kun med kilde.
