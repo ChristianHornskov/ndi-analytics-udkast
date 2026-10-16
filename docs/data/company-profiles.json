@@ -1097,23 +1097,27 @@
   "CA8765111064": {
    "name": "Taseko Mines",
    "theme": "energy-resources",
-   "summary": "Driver kobberminedrift, blandt andet Gibraltar-minen i Canada.",
-   "watch": "Drift af minen, kobberpriser og øvrige projekter.",
-   "source": "https://www.tasekomines.com/",
-   "products": "Kobber.",
-   "customers": "Smelteværker og industrikunder.",
-   "role": "Råstof til elnet og elektronik.",
+   "summary": "Driver Gibraltar, en kobber- og molybdænmine i British Columbia. Siden skriver, at Florence lavede det første kobber i februar 2026. Meldingen om kommerciel produktion er fra 9. oktober 2026 og ligger efter beholdningen.",
+   "watch": "Om Gibraltar kører, og hvordan første kobber i februar 2026 skal læses ved siden af meldingen i oktober.",
+   "source": "https://www.trekormetals.com/properties/gibraltar-mine/",
+   "products": "Kobber og molybdæn fra Gibraltar. Florence er sat til 85 millioner pund kobberkatode om året. Det er en kapacitet, ikke en målt årsproduktion.",
+   "customers": "Siden navngiver ikke en kunde på Gibraltar.",
+   "role": "Gibraltar er i drift. Florence havde første kobber i februar 2026. Oktober-meldingen ligger efter beholdningen.",
    "narrative": [
-    "Taseko driver kobberminen Gibraltar i Canada. Forsiden bruger også navnet Trekor Metals.",
-    "Selskabet skrev 9. oktober 2026, at Florence Copper er gået i kommerciel produktion. Meddelelsen ligger efter beholdningen pr. 1. juni 2026. Yellowhead er i en godkendelsesproces. Aley står som projekt. New Prosperity står ikke som mine på siden."
+    "Siden bruger navnet Trekor Metals. Taseko skriver, at selskabet ejer og driver Gibraltar, en kobber- og molybdænmine i det sydlige centrale British Columbia, i Cariboo-Chilcotin. Kapaciteten er 85.000 tons malm i døgnet. Siden siger tons, og tallet er ikke regnet om. Gennemsnittet over minens levetid er 130 millioner pund kobber om året. Det er et gennemsnit i selskabets tekst, ikke et målt år. Siden skriver, at minen har kørt uafbrudt i selskabets eje i mere end 20 år, og at den ventes at kunne producere til mindst 2044. 2044 er selskabets forventning.",
+    "Florence Copper ligger syd for Phoenix i Florence i Arizona. Siden skriver, at det første kobber blev lavet i februar 2026, og at byggeriet af anlægget til kommerciel produktion begyndte i januar 2024. Begge datoer ligger før beholdningen pr. 1. juni 2026. Kapaciteten er 85 millioner pund kobberkatode om året, og minens levetid er sat til 22 år. Pund er ikke regnet om. Selskabet skrev 9. oktober 2026, at produktionen er kommerciel. Den meddelelse ligger efter beholdningen. Yellowhead, Aley og New Prosperity er ikke miner i drift i denne tekst."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets side",
-     "url": "https://www.tasekomines.com/"
+     "label": "Gibraltar",
+     "url": "https://www.trekormetals.com/properties/gibraltar-mine/"
     },
     {
-     "label": "Florence Copper 9. oktober 2026",
+     "label": "Florence Copper",
+     "url": "https://www.trekormetals.com/properties/florence-copper/"
+    },
+    {
+     "label": "Florence, 9. oktober 2026",
      "url": "https://www.tasekomines.com/trekor-talks/florence-copper-begins-commercial-production-the-first-new-us-copper-source-in-nearly-two-decades"
     }
    ]
