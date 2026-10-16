@@ -140,7 +140,7 @@
 
  <section class="panel">
  <h2 class="panel-h brand">Hvilket problem løser det?${f('summary') ? ` ${AI_BADGE}` : ''}</h2>
- ${f('summary') ? `<p class="prose">${esc(f('summary'))}</p>` : `<p class="empty-state">Profiltekst mangler endnu for dette selskab (NDI-linse kan stadig findes nedenfor).</p>`}
+ ${f('summary') ? `<p class="prose">${esc(f('summary'))}</p>` : `<p class="empty-state">Profiltekst mangler endnu for dette selskab.${lensMetrics.length ? ' NDI-linsen nedenfor beskriver, hvad man ejer.' : ''}</p>`}
  ${pr?.source ? `<p class="src">Kilde: ${ext(pr.source, host(pr.source))}${pr.reviewedAt ? ` · tjekket mod kilden ${fmtDate(pr.reviewedAt)}` : ''}</p>` : ''}
  ${AI_NOTE ? `<p class="src">${AI_NOTE} Generel information. Ikke en anbefaling.</p>` : `<p class="src">Generel information. Ikke en anbefaling.</p>`}
  </section>
@@ -154,14 +154,14 @@
  ${(pr.narrativeSources || []).length ? `<p class="src">Kilder: ${pr.narrativeSources.map((s) => ext(s.url, s.label)).join(' · ')}</p>` : ''}
  </section>` : ''}
 
- <section class="panel">
- <h2 class="panel-h brand">Rolle i værdikæden${(f('role') || f('products') || f('customers')) ? ` ${AI_BADGE}` : ''}</h2>
- <p class="prose muted">${esc(f('role') || '-')}</p>
- <dl class="facts">
- <dt>Produkter</dt><dd>${esc(f('products') || '-')}</dd>
- <dt>Kunder</dt><dd>${esc(f('customers') || '-')}</dd>
- </dl>
- </section>
+ ${(f('role') || f('products') || f('customers')) ? `<section class="panel">
+ <h2 class="panel-h brand">Rolle i værdikæden ${AI_BADGE}</h2>
+ ${f('role') ? `<p class="prose muted">${esc(f('role'))}</p>` : ''}
+ ${(f('products') || f('customers')) ? `<dl class="facts">
+ ${f('products') ? `<dt>Produkter</dt><dd>${esc(f('products'))}</dd>` : ''}
+ ${f('customers') ? `<dt>Kunder</dt><dd>${esc(f('customers'))}</dd>` : ''}
+ </dl>` : ''}
+ </section>` : `<p class="src">Rolle, produkter og kunder er ikke beskrevet endnu for dette selskab.${lensMetrics.length ? ' <a href="#ndi-linse">Se NDI-linsen nedenfor →</a> ·' : ''} <a href="${temaHref}">Se temaet ${esc(daTheme(p.theme))} →</a></p>`}
 
  <section class="panel">
  <h2 class="panel-h">NDI-tema og plads i fonden</h2>
