@@ -736,6 +736,9 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
 .ep-ledger .meta{font-size:13px;color:var(--muted);line-height:1.45}
 .ep-pct{white-space:nowrap}
 .ep-ledger .meta strong{color:var(--text);font-weight:600;white-space:nowrap}
+.under-hop{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin:0 0 14px}
+.under-hop .outline-btn{min-height:44px}
+.under-hop .src{margin:0}
 .life{margin:0 0 14px}
 .life-track{display:grid;align-items:center;height:44px}
 .life-gap{height:2px;background:var(--brand);border-radius:99px;opacity:.55}

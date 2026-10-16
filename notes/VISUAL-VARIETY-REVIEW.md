@@ -396,3 +396,7 @@ KID-parret på sammenlign kan vælges. PMINDI er ca. 2,79 %. PMINDIAKK er ca. 2,
 ### Update · temarække · 2026-10-16 ~07:26 CEST
 
 Hver temarække på sammenlign kan vælges. Sætningen gentager de to vægte, der står i rækken, og siger eksponering, ikke anbefaling. Største forskel åbner på Platforme, 17,2 % og 15,3 %. Et klik på Chips siger 13,3 % og 11,9 %. Rækken er mindst 44 px. Ingen sidescroll ved 320, 390 og 1100. Ingen konsolfejl. På papir bliver rækkerne.
+
+### Update · første dag under 10 % · 2026-10-16 ~07:33 CEST
+
+Ny kontrol på drawdown, ved kurven. Knappen hopper til 2. aug. 2024. Udlæsningen siger −13,8 % under den løbende top. Ved siden af står 267 af 770 dage. Det er et dagtal, ikke en procent. Knappen er 44 px. På 320 px slutter sætningen med «løbende top» på én linje. Ingen sidescroll ved 320, 390 og 1100. Ingen konsolfejl. På papir er knappen væk, og dagtallet bliver. PMINDIAKK har ingen linje og ingen procent. Cyklus 50 har ingen MUST i egne filer.
