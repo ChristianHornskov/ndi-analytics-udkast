@@ -956,3 +956,6 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
   .panel > .metrics-returns ~ .warn-hist{font-size:13px;line-height:1.4;margin:4px 0 10px}
   .metrics-more{margin-top:8px;padding-top:4px;border-top:1px solid #829da022}
 }
+
+.lens-mark{display:inline-block;margin-left:4px;font-size:11px;color:var(--muted);text-decoration:none;opacity:.75}
+.lens-mark:hover,.lens-mark:focus{color:var(--cyan);opacity:1}

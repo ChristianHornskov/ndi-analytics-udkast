@@ -104,13 +104,25 @@ export function last12mReturn(rows) {
 
 /** Monthly calendar returns from daily totals */
 export function monthlyReturns(rows) {
+  if (!rows?.length) return [];
   const byMonth = new Map();
+  const firstByMonth = new Map();
   for (const r of rows) {
     const m = r.d.slice(0, 7);
+    if (!firstByMonth.has(m)) firstByMonth.set(m, r);
     byMonth.set(m, r);
   }
   const months = [...byMonth.keys()].sort();
   const out = [];
+  // Første (del)måned: fra første NAV til månedens sidste kurs — så sep. 2023 ikke står som «-»
+  if (months.length) {
+    const m0 = months[0];
+    const a = firstByMonth.get(m0);
+    const b = byMonth.get(m0);
+    if (a && b && a.d !== b.d && a.total) {
+      out.push({ month: m0, ret: ((b.total / a.total) - 1) * 100, partial: true });
+    }
+  }
   for (let i = 1; i < months.length; i++) {
     const prev = byMonth.get(months[i - 1]);
     const cur = byMonth.get(months[i]);

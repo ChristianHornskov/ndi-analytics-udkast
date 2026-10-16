@@ -336,12 +336,19 @@
  </article>`;
  };
 
+ const plainLead = `<section class="panel" style="margin-bottom:14px">
+ <p style="font-size:18px;color:var(--text);line-height:1.45;margin:0">Ca. <strong>2,8&nbsp;% om året</strong> — det er KID’s samlede omkostningsindikator ved 5 år (PMINDI <strong>${pct(a.kidRiy5y)}</strong> / PMINDIAKK <strong>${pct(b.kidRiy5y)}</strong>). På 100.000&nbsp;kr. svarer det til ca. <strong>${kr(a.kidRiy5y)}</strong> / <strong>${kr(b.kidRiy5y)}</strong> om året. Hertil kommer din banks kurtage og depot. Intet resultathonorar. Du kan tabe penge.</p>
+ </section>`;
+ const detailHero = `<details class="cost-details" style="margin-bottom:14px">
+ <summary style="cursor:pointer;color:var(--cyan);font-size:14px;padding:8px 0">For de nysgerrige: klasseforskel og postsatser</summary>
+ <p class="lede" style="margin-top:8px">Nedenfor: KID-tal side om side og Fundmarkets postsatser. Postsatserne er <strong style="color:var(--text)">ikke et ÅOP</strong> og må ikke læses som et billigere alternativ til KID-tallet.</p>
+ ${hero}
+ </details>`;
  main.innerHTML = `
  <p class="eyebrow">OMKOSTNINGER · FUNDMARKET</p>
  <h1>Hvad koster fonden?</h1>
- <p class="lede">Først KID’ets samlede omkostningsindikator (PRIIP). Derefter Fundmarkets postsatser for indeværende regnskabsår. Postsatserne er ikke et ÅOP og må ikke læses som et billigere alternativ til KID-tallet. Kurtage og depot hos din bank kommer oveni. Du kan tabe penge.</p>
- <p class="band">${esc(facts.asOfNote)}</p>
- ${hero}
+ ${plainLead}
+ ${detailHero}
  <div class="metrics">
  <div class="metric"><div class="label">KID · årlig konsekvens (1 år)</div><strong>${pct(a.kidRiy1y)} / ${pct(b.kidRiy1y)}</strong><small>${h1 ? `forskel ${h1.gap}${sameKr ? ' · samme beløb som postsatsen' : ''} · ikke det samme tal` : 'PMINDI / PMINDIAKK · KID'}</small></div>
  <div class="metric"><div class="label">Øvrige løbende${sameOngoing ? ', begge' : ''}</div><strong>${sameOngoing ? pct(a.otherOngoing) : pct(a.otherOngoing) + ' / ' + pct(b.otherOngoing)}</strong><small>Postsats · Fundmarket · ${sameOngoing ? kr(a.otherOngoing) : kr(a.otherOngoing) + ' / ' + kr(b.otherOngoing)}</small></div>

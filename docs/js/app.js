@@ -294,7 +294,7 @@ function renderEntre(root) {
       <a href="temaer.html?fund=${state.fund}"><strong>Temaer${prop.moved ? ` <span class="badge badge-draft" title="Forslag, afventer gennemgang">${prop.moved} forslag</span>` : ''}</strong><span>Fra chips til software - hvad hvert tema dækker</span></a>
       <a href="vaerdikaeder.html"><strong>Teknologiske værdikæder</strong><span>Flodsystem: AI, robotik, energi, rum, quantum</span></a>
       <a href="laer/saadan-taenker-vi.html"><strong>Sådan tænker vi</strong><span>Møntspil, udviklingen frem for vinderen, bogen vs fonden</span></a>
-      <a href="omkostninger.html"><strong>Omkostninger</strong><span>KID-tal og Fundmarket-postsatser — du kan tabe penge</span></a>
+      <a href="omkostninger.html"><strong>Omkostninger</strong><span>Hvad koster det at eje fonden? (ca. 2,8 % om året)</span></a>
       <a href="laer/index.html"><strong>Lær</strong><span>Livscyklus, P/E, variance drag og FAQ</span></a>
     </nav>
     <a class="why-card" href="ideer.html"><strong>Hvorfor NDI Analytics?</strong><span>Idéerne bag udkastet: multi-tag, værdikæden og forsinket beholdning som et bevidst valg.</span><span class="go" aria-hidden="true">→</span></a>
@@ -315,7 +315,7 @@ function renderEntre(root) {
       <button type="button" class="link-btn" data-open="dlg-follow">Følg med</button></p>
     <section class="panel" style="margin-top:18px">
       <h2 style="font-size:18px;margin-bottom:8px">Porteføljeholdet</h2>
-      <p style="color:var(--muted);font-size:14px;line-height:1.5">NewDeal Invest forvaltes af et porteføljehold med fokus på teknologi og bred spredning. Læs mere om holdet på <a href="https://newdealinvest.dk/">newdealinvest.dk</a>.</p>
+      <p style="color:var(--muted);font-size:14px;line-height:1.5"><strong style="color:var(--text)">Mads Christiansen</strong> (fondschef og medstifter) og <strong style="color:var(--text)">Jesper Bæk</strong> — forfattere til <em>Den lille guide til investering i teknologiaktier</em>. NewDeal Invest forvaltes med fokus på teknologi og bred spredning. <a href="https://newdealinvest.dk/">Mere om holdet på newdealinvest.dk →</a></p>
     </section>
     <section class="panel" style="margin-top:18px">
       <h2 style="font-size:18px;margin-bottom:8px">Sådan tænker vi (kort)</h2>
@@ -549,7 +549,17 @@ function renderFonden(root) {
 function renderCalendar(el, rows) {
   const months = monthlyReturns(rows);
   let list = months;
-  if (!state.calFull) list = months.slice(-36);
+  if (!state.calFull) {
+    list = months.slice(-36);
+    // Behold startåret (fx 2023 sep/okt), så delårsafkastet kan stemme med månedsgitteret
+    const firstY = months[0]?.month?.slice(0, 4);
+    if (firstY) {
+      const early = months.filter((m) => m.month.startsWith(firstY));
+      const have = new Set(list.map((m) => m.month));
+      for (const m of early) if (!have.has(m.month)) list.push(m);
+      list.sort((a, b) => a.month.localeCompare(b.month));
+    }
+  }
   const byYear = new Map();
   for (const m of list) {
     const y = m.month.slice(0, 4);
@@ -568,7 +578,10 @@ function renderCalendar(el, rows) {
       return `<div class="cell ${cls}" title="${fmtPct(v)}" aria-label="${y} måned ${mi + 1}: ${fmtPct(v)}">${v.toFixed(1).replace('.', ',')}</div>`;
     }).join('');
   }).join('');
-  el.innerHTML = `<div class="cal">${head}${body}</div>`;
+  const note = months[0]?.partial
+    ? `<p style="font-size:11px;color:var(--muted);margin-top:8px">Første måned (${months[0].month.slice(5)}/${months[0].month.slice(0, 4)}) er et delår fra første NAV — derfor kan den se anderledes ud end et helt kalenderår.</p>`
+    : '';
+  el.innerHTML = `<div class="cal">${head}${body}</div>${note}`;
 }
 
 
@@ -734,7 +747,7 @@ function positionsTable(list, fund) {
   hscroll(`<div class="table-wrap"><table class="data screener-table"><thead><tr>
     ${th('name','Navn')}${th('weight','Vægt %')}${th('theme','Tema')}
   </tr></thead><tbody>${list.map((p, i) => `${themeGroupRow(list, i)}<tr>
-    <td><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}">${p.name}</a>${hasLens(p) ? ` <a class="badge" href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}#ndi-linse" title="Kvalitativ NDI-linse: rolle, plads i værdikæden og forhold at holde øje med (udkast)" aria-label="NDI-linse for ${p.name}">NDI-linse</a>` : ''} ${weightSpark(p.isin, fund.id)}<br><small style="color:var(--muted)">${p.isin}</small>${hitNote(p)}${mobileThemeLine(p, fund)}</td>
+    <td><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}">${p.name}</a>${hasLens(p) ? ` <a class="lens-mark" href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}#ndi-linse" title="NDI’s fem spørgsmål om selskabet (udkast)" aria-label="NDI-perspektiv for ${p.name}">◉</a>` : ''} ${weightSpark(p.isin, fund.id)}<br><small style="color:var(--muted)">${p.isin}</small>${hitNote(p)}${mobileThemeLine(p, fund)}</td>
     <td>${(p.weight ?? 0).toFixed(2).replace('.', ',')}</td>
     <td>${tagsFor(p, DATA.multiTags).map((t) => `<a class="tag" href="tema.html?slug=${encodeURIComponent(t)}&fund=${fund.id}">${daTheme(t)}</a>`).join(' ')}${forslagCell(p)}</td>
   </tr>`).join('')}</tbody></table></div>`, 'Rul til siden for flere kolonner.') +

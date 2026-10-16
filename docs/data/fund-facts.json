@@ -1,5 +1,5 @@
 {
-  "asOfNote": "Tal og stamdata fra offentlige kilder, hentet 2026-10-15. Tomme felter = udfyldes af NDI.",
+  "asOfNote": "Tal og stamdata fra offentlige kilder (Fundmarket/KID), hentet 2026-10-15. Felter uden officiel kilde er markeret til NDI.",
   "association": {
     "name": "Investeringsforeningen PortfolioManager",
     "source": "https://fundmarket.dk/newdeal-invest-kl-n/",
