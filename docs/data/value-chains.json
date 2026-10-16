@@ -1050,7 +1050,8 @@
               "forslag": false
             }
           ],
-          "seeChain": null
+          "seeChain": null,
+          "shift": "NDI venter, at fysisk AI \"snart\" bliver den næste kilde til efterspørgsel efter regnekraft, efter agentisk AI (BLOG 30. marts 2026). Der er ingen præcise årstal."
         }
       ]
     },
@@ -1431,7 +1432,8 @@
             "Terrestrial Energy: Terrestrial Energy skriver, at IMSR er specificeret til 390 MWe netto eller 822 MWt netto, og at brændslet er lavt beriget uran under 5 % U-235. De første anlæg er sat til begyndelsen af 2030'erne. Det er en forventning, ikke et anlæg i drift.",
             "Oklo: Oklo skrev 6. august 2026, at testreaktoren Groves nåede en kædereaktion ved lav effekt. Det er efter beholdningen. Det er ikke et kraftværk i drift og ikke salg af isotoper.",
             "Lightbridge: Lightbridge skriver, at selskabet udvikler metalliske brændselsstave med en kerne af uran og zirkonium. Hovedsædet ligger i Reston i Virginia. Det er ikke et værk i drift. Selskabet skrev 9. september 2026, at det har fået adgang til at bestråle beklædte stave i Advanced Test Reactor ved Idaho National Laboratory. Meddelelsen siger, at testen skal gennemføres. Den er ikke gennemført i teksten. Det er efter beholdningen. Det er en testreaktor, ikke et kraftværk."
-          ]
+          ],
+          "shift": "NDI skrev, at USA ventes at rykke hurtigt på SMR (BLOG 27. januar 2025). Baggrund: tidslinjerne er usikre og afhænger af godkendelser."
         },
         {
           "id": "grid",
@@ -1503,7 +1505,8 @@
             "GE Vernova: GE Vernova skriver, at GIS-udstyr dækker fra 50 kV til 800 kV, og at afbrydere til generatorer dækker installationer op til 1.500 MW. Det er udstyr. Selskabet driver ikke værkerne.",
             "Solaris Energy Infrastructure: Solaris leverer strøm tæt på store forbrugere. Selskabet skrev 6. juli 2026, at det har købt GESA. Det er efter beholdningen og er service, ikke et kraftværk i drift.",
             "Tantalus Systems: Tantalus skriver, at det laver en platform til distributionsnet, med TRUConnect, TRUFlex, TRUGrid, TRUSync og TRUSense. Det er udstyr og software. Selskabet driver ikke nettet."
-          ]
+          ],
+          "shift": "NDI har skrevet om prispres i elinfrastruktur (BLOG 16. februar 2026). Baggrund: det tager flere år at få leveret store transformere."
         },
         {
           "id": "storage",
@@ -1881,7 +1884,8 @@
             "NioCorp: NioCorp skriver i kvartalsrapporten til 31. marts 2026, at Elk Creek i det sydøstlige Nebraska ikke er i produktion. En kontrakt om mineportalen er fra februar 2026. Det er ikke en mine i drift.",
             "American Battery Technology: American Battery Technology skriver i en kvartalsrapport, at genbrugsanlægget ligger i Tahoe-Reno Industrial Center i Storey County, og at bygningen i Fernley ikke er taget i brug. Tonopah Flats er et projekt, ikke en mine.",
             "Lithium Americas: Lithium Americas skriver, at Thacker Pass bygges, med mål om industriel skala sent i 2027, og at byggeriet begyndte i begyndelsen af 2023. Centret i Reno er et laboratorium, ikke minen. Ingen af de to er i fuld drift."
-          ]
+          ],
+          "shift": "NDI skriver, at råstoffer kommer \"i første række\" i amerikansk udenrigspolitik (BLOG 5. januar 2026), og har nævnt prispres i metaller som kobber og sølv (BLOG 16. februar 2026)."
         }
       ]
     },
