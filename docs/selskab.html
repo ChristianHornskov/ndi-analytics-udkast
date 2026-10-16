@@ -138,6 +138,7 @@
  <h1>${esc(shownName)}</h1>
  <p class="company-meta">${shownName !== p.name ? `Beholdningsnavn: ${esc(p.name)} · ` : ''}${esc(p.symbol || '')} · ${esc(p.isin)} · vægt ${w(p.weight)} % · beholdning pr. ${posAsOf} (forsinket)</p>
  ${(() => { const par = warrantParent(p, fund.positions); return par ? `<p class="band">Dette er en warrant (tegningsret) på ${par.isin ? `<a href="selskab.html?isin=${encodeURIComponent(par.isin)}&fund=${fundId}">${esc(par.name)}</a>` : esc(par.name)} - ikke et selvstændigt selskab. Den står som egen linje i beholdningen (vægt ${w(p.weight)} %).${par.isin ? ` Selskabet beskrives på ${esc(par.name)}s side.` : ''}</p>` : ''; })()}
+ ${(() => { const ws = fund.positions.filter((x) => warrantParent(x, fund.positions)?.isin === p.isin); return ws.length ? `<p class="src">Beholdningen har også ${ws.length} ${ws.length === 1 ? 'warrant' : 'warrants'} (tegningsretter) på ${esc(displayName(p))}: ${ws.map((x) => `<a href="selskab.html?isin=${encodeURIComponent(x.isin)}&fund=${fundId}">${esc(x.name.replace(/^.*?warrants?\s*/i, '') || x.name)}</a>`).join(', ')}. De står som egne linjer med en vægt på ${ws.map((x) => w(x.weight)).filter((v, j, a) => a.indexOf(v) === j).join('/')} %.</p>` : ''; })()}
  ${switched ? `<p class="band">Selskabet indgår ikke i den valgte klasse, så siden viser ${esc(fund.short)}.</p>` : ''}
 
  <section class="panel">
