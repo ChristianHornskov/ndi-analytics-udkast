@@ -846,3 +846,36 @@ Main har kun fået notes/coordinator-merges siden cyklus 34, og `git diff 65b194
 - **Privat (55+):** kan nu finde prisen (invester, omkostninger), men ikke på fondens egen side. Navnene "Hldngs/Sp ADR" i top-10 virker som et regneark.
 - **Familiekontor:** prospekt-sektionen og 100k-eksemplet er stærke. De mangler fortsat omkostningstallet ved hero/KPI og et downloadbart faktaark (PERSONA-FO §4).
 - **Visuel variation:** ingen ændring. Trætheden skyldes længde (selskaber 88 skærme ved 375), ikke ensformighed.
+
+## 2026-10-16 02:47 CEST · cyklus 36 (main `04e1c9a`, intet docs-delta siden `65b1947`, live = main)
+
+Pages (00:34:58 GMT) = main. Main har ikke ændret sig siden cyklus 35, så denne cyklus dækker det, som 32–35 ikke tjekkede: **desktop 1280**, **tilgængelighed** (alt, labels, overskriftsniveauer, fokus, touch-mål) og **eksterne links**. Playwright kørte live på 16 sider ved 375 og ved 1280.
+
+### Tilgængelighed ✅ (godt)
+- `lang="da"` på alle 35 HTML-filer. `noindex` på alle sider og `robots.txt` med `Disallow: /` ✅ (vigtigt for et udkast).
+- 0 `<img>` uden alt. 0 store SVG'er uden `aria-label`/`role`. 0 inputs uden label. 0 spring i overskriftsniveauer på alle 16 sider.
+- "Gå til indhold" er første tab-stop. Tab-rækkefølgen på fonden er logisk (logo → nav → "Sådan investerer du" → "← Entré"), og alle tab-stop har synlig fokusmarkering.
+- (Sorteringsknapperne i portefølje og ordlisten på om-data er kun "tomme" i automatikken, fordi de ligger i lukkede sektioner. De er ikke en fejl.)
+
+### SHOULD (nyt)
+- **Touch-mål under 24 px ved 375** (WCAG 2.5.8 kræver mindst 24×24):
+  - Udforsk: 29 chips/selskabslinks er 17–18 px høje ("Chips", "Energi", "Soitec", "Tesla" …).
+  - Fonden: 16 stk, bl.a. "X ↗" (26×20) i opslagslisten og "Risici" (31×18).
+  - Portefølje: 12 tema-søjler/links er 18 px høje.
+  - Om-data: 22 stk ("FAQ" 28×20 og ordliste-spring).
+  - Privat 55+ rammer forkert chip på telefonen. **Ret:** `min-height: 32px` + `padding-block` på `.chip`/inline-links i lister.
+- **Entré siger "Modenhed: 345 selskaber klassificeret (udkast)"** (`docs/js/app.js:266`). ndi-perspektiv siger "NDI har ikke sat livscyklus for nogen selskaber endnu … Vi gætter ikke", og ideer kalder det "maskinelt forslag". Det er tredje formulering for den samme ting og den mest misvisende: "klassificeret" lyder som NDI's vurdering. Skriv "Livscyklus: maskinelt forslag for 345 selskaber (ikke NDI's vurdering)".
+- **Fonden ved 1280: risikoindikator 5/7 står alene på anden række** under fire afkast-KPI'er. Den ser ud som en eftertanke, og højre halvdel af hero er tom. Fyld rækken op med **"Omkostninger 2,79 %/år (KID, 5 år)"** som 6. kort, så der står 3+3. Det løser også cyklus 35's "intet omkostningstal på fonden" og giver risiko og omkostninger samme vægt som afkastet.
+- **Entré ved 1280:** kortet "Omkostninger" har undertitlen "KID-tal og Fundmarket-postsatser — du kan tabe penge". Tabsadvarslen hører ikke til omkostninger. Skriv "KID: ca. 2,79 % om året ved 5 års ejertid". Kortet "Lær" siger "variance drag", som er jargon på forsiden. Skriv "hvorfor gennemsnit snyder". Fliserne står i rækker af 3+2, så der er et hul. Det er mindre vigtigt.
+
+### Eksterne links ✅
+Alle centrale dokumenter svarer 200 live: KID PMINDI/PMINDIAKK (`priip_ipm140b`/`145b`, application/pdf), fællesprospekt (Fundmarket, opdateret 24.10.2025, pdf), Fundmarket kl. n-sider, newdealinvest.dk og group.softbank IR. Der er 25 eksterne mål i alt. 10 af dem er X-opslag, heraf 3 fra @BullTheoryio og 2 fra @MilkRoadAI (se MUST).
+
+### MUST (uændret, se cyklus 34/35)
+- Tredjeparts-"BREAKING" under fondens graf og på SoftBank (7. cyklus). Rettelsen er ét filter i `docs/js/app.js:479`.
+- Nyhedsarkiv: "Placeholder" ×8 og 0 × "tabe".
+
+### Persona-linser
+- **Privat (55+):** sitet er teknisk tilgængeligt (skip-link, alt, labels). Den reelle barriere på mobil er de små chips. På desktop ser fonden rolig og overskuelig ud, men fire grønne afkasttal i stor skrift kommer før risikoen.
+- **Familiekontor:** på desktop leder de efter et omkostningstal i KPI-rækken, og der er plads til det. KID- og prospektlinks virker og peger på de rigtige PDF'er ✅.
+- **Visuel variation:** desktop er luftigt og ensartet. Der er ingen ny træthed. Trætheden er fortsat længden på mobil.

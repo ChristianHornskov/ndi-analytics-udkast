@@ -901,3 +901,28 @@ Ikke juridisk rådgivning. Live ved 375 på 28 URL'er, med regex-flag pr. side (
 
 ### Prioritet
 **1** (BREAKING, ét filter) → **2** (ÅTD-forbehold ens på 3 sider eller fjern) → **4** (markedsføringsmateriale-footer på produktsider) → **3** (nyhedsarkiv) → **5** (omkostningstal på fonden).
+
+## 2026-10-16 02:47 CEST · cyklus 36 (main `04e1c9a`, intet docs-delta, live = main)
+
+Ikke juridisk rådgivning. Main er uændret, så fokus er nyt: **dokumentlinks virker**, **indeksering af udkastet** og **fremhævning af afkast vs. risiko på desktop 1280** (ESMA-retningslinjer for markedsføringsmateriale, 2021, afsnit 4.2–4.3: risiko skal stå mindst lige så fremtrædende som fordele, og afkasttal skal stå med periode).
+
+### Verificeret ✅
+- **KID-links virker:** `node-api.fundmarket.dk/.../priip_ipm140b` og `priip_ipm145b` → 200 application/pdf. Fællesprospektet (opdateret 24.10.2025) → 200 pdf. Fundmarket-produktsiderne → 200.
+- **Udkastet indekseres ikke:** `noindex` på alle 35 sider og `robots.txt` `Disallow: /`. Det er vigtigt, så et uafklaret udkast med afkasttal ikke kan findes som "markedsføring" via søgning.
+- **Fonden 1280:** "Historisk afkast er ikke en pålidelig indikator … Du kan tabe en del af eller hele din investering" står i første skærmbillede (y≈676 ved 800 px højde) ✅. Totalafkast har periode ("Fra første NAV 22. sep. 2023") ✅.
+- Øvrige punkter er uændret fra cyklus 35: ingen 1m/3m på PMINDI, intet PMINDIAKK-afkast, ingen Nasdaq-benchmark, beholdning pr. 1. jun. 2026, AI-udkast mærket, 0 Mads-handelssprog.
+
+### MUST (uændret)
+1. Tredjeparts-"BREAKING" ved fondens afkastgraf og på SoftBank (7. cyklus). Fix: `docs/js/app.js:479`.
+2. ÅTD +4,0 % "afventer Fundmarket-godkendelse" står kun på fonden. Periode og embed viser tallet uden forbehold.
+3. "Markedsføringsmateriale"/prospekt-footer mangler på produktsiderne.
+4. Nyhedsarkiv mangler "Du kan tabe …".
+
+### SHOULD (nyt)
+5. **Afkast fylder mere end risiko og omkostninger på desktop.** Fonden viser fire afkast-KPI'er i stor skrift (+104,8 %, +26,4 %, +4,0 %, −35,8 %). SRI 5/7 står alene på anden række, og omkostningerne står slet ikke i KPI-blokken. ESMA lægger vægt på, at risiko og omkostninger skal være "lige så fremtrædende". **Ret:** SRI og "Omkostninger ca. 2,79 %/år (KID, 5 år)" ind som række 2, i samme kortstørrelse (se UX cyklus 36).
+6. **"Gns. årligt afkast (CAGR) +26,4 %"** har som underlabel kun "Efter løbende omkostninger" og ingen periode. Periode og antal år skal stå ved hvert afkasttal. Skriv "22. sep. 2023 – 14. okt. 2026 (3,1 år)". Det samme gælder embed og periode.
+7. **Entré "Modenhed: 345 selskaber klassificeret (udkast)"** (`app.js:266`) kan læses som NDI's egen vurdering af alle beholdninger. Andre steder mærkes det som "maskinelt forslag, ikke NDI's vurdering". Ensret mærkningen af AI-/maskinelt indhold.
+8. Fra cyklus 34/35, stadig åbne: embed, periode og drawdown mangler KID/SRI. Interne noter på omkostninger og fonden ("Tomme felter = udfyldes af NDI", "compliance-beslutning, ikke et datamangel"). "kvartalsrapport"/"pr. kvartal" vs. snapshot. Godkendelsesflag pr. opslag for NDI-medarbejderkonti. Prospekt-fakta på risici `#prospekt` skal verificeres af NDI.
+
+### Prioritet
+**1** (BREAKING) → **2** (ÅTD-forbehold) → **3** (footer) → **5/6** (SRI + omkostninger i KPI-rækken, periode ved CAGR) → **4** (nyhedsarkiv) → **7**.
