@@ -919,3 +919,13 @@ Meddelelsen er fra 22. april 2026. Begge datoer ligger før beholdningen. Det er
 Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. St. Gabriel står. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `321370e` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 02:18 CEST. Bloom skrev, at cellerne skal bruges på Conagras fabrikker i Troy og Archbold. Ikke færdig.**
+
+Meddelelsen er fra 1. april 2025, før beholdningen. Det er en aftale. Teksten siger ikke, at cellerne allerede kører. Det er ikke et klassisk kraftværk. Megawatt, en kapitalramme og ordene leader og leading er ikke taget med. Ingen `reviewedAt`. Blurben under elproduktion og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Troy og Archbold står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `a711f7a` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

@@ -1795,20 +1795,24 @@
   "US0937121079": {
    "name": "Bloom Energy",
    "theme": "andet",
-   "summary": "Leverer brændselsceller, der laver strøm på stedet hos kunden. Snapshottet har selskabet under Andet, med et temaforslag.",
-   "watch": "Driftsikkerhed hos kunderne og om nye anlæg bliver bestilt.",
+   "summary": "Leverer brændselsceller, der laver strøm på stedet hos kunden. Selskabet skrev 1. april 2025, at cellerne skal bruges på Conagras fabrikker i Troy og Archbold i Ohio. Det er en aftale, og teksten siger ikke, at cellerne allerede kører.",
+   "watch": "Om aftalen i Troy og Archbold bliver til drift. Teksten siger ikke, at cellerne allerede kører.",
    "source": "https://www.bloomenergy.com/",
    "products": "Brændselsceller og service.",
-   "customers": "Virksomheder og datacentre, der vil have strøm på egen grund.",
-   "role": "Elproduktion hos kunden, ikke et klassisk kraftværk.",
+   "customers": "Virksomheder og datacentre, der vil have strøm på egen grund. Aftalen nævner Conagra i Ohio.",
+   "role": "Brændselsceller hos kunden. Aftalen med Conagra er ikke et kraftværk i drift.",
    "narrative": [
-    "Bloom Energy leverer brændselsceller, der laver strøm hos kunden.",
-    "Det er elproduktion på stedet, ikke et klassisk kraftværk. Snapshottet har selskabet under Andet, med et temaforslag."
+    "Bloom skrev 1. april 2025, at selskabet og Conagra vil bruge brændselsceller på Conagras fabrikker i Troy og Archbold i Ohio. Det er en aftale. Teksten siger ikke, at cellerne allerede kører. Datoen ligger før beholdningen pr. 1. juni 2026.",
+    "Det er strøm hos kunden, ikke et klassisk kraftværk. Teksten siger ikke, at hvert anlæg kører. Snapshottet har selskabet under Andet, med et temaforslag."
    ],
    "narrativeSources": [
     {
      "label": "Selskabets side",
      "url": "https://www.bloomenergy.com/"
+    },
+    {
+     "label": "Conagra, 1. april 2025",
+     "url": "https://www.bloomenergy.com/news/conagra-brands-collaborates-with-bloom-energy-to-utilize-fuel-cell-technology-at-its-ohio-production-facilities/"
     }
    ]
   },
