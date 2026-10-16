@@ -16,7 +16,12 @@ export function renderChart(container, rows, events = [], opts = {}) {
     wrap.innerHTML = '<p class="chart-readout">Ingen data for perioden.</p>';
     return;
   }
-  const W = 1000, H = 410, pad = { l: 52, r: 24, t: 20, b: 36 };
+  // Mobil: viewBox = faktisk pixelbredde, så aksetekst er ≥ 11 px og grafen ≥ 220 px høj
+  const cw = container.clientWidth || 1000;
+  const narrow = cw < 700;
+  const W = narrow ? Math.max(300, Math.round(cw)) : 1000;
+  const H = narrow ? 240 : 410;
+  const pad = narrow ? { l: 44, r: (opts.compare ? 108 : 12), t: 16, b: 30 } : { l: 52, r: (opts.compare ? 150 : 24), t: 20, b: 36 };
   // Valgfri sammenligningslinje (Nasdaq-100), rebaseret til periodens første fondsdato
   let cmp = null;
   if (Array.isArray(opts.compare) && opts.compare.length) {
@@ -36,7 +41,7 @@ export function renderChart(container, rows, events = [], opts = {}) {
   const cmpPath = cmp ? cmp.map((v, i) => v == null ? '' : `${i && cmp[i - 1] != null ? 'L' : 'M'}${x(i).toFixed(1)},${y(v).toFixed(1)}`).join(' ') : '';
 
   const evMap = new Map((events || []).map((e) => [e.d, e]));
-  const yTicks = 5;
+  const yTicks = narrow ? 4 : 5;
   let grid = '';
   for (let t = 0; t <= yTicks; t++) {
     const v = min + ((max - min) * t) / yTicks;
@@ -85,12 +90,24 @@ export function renderChart(container, rows, events = [], opts = {}) {
     return `<circle class="${cls}" cx="${x(i)}" cy="${y(s.v)}" r="5"><title>${tip}</title></circle>`;
   }).join('');
 
+  // Slutlabels på hver linje (kun når sammenligning vises)
+  let endLabels = '';
+  if (cmp) {
+    const li = series.length - 1;
+    const yf = y(series[li].v);
+    let ci = li; while (ci > 0 && cmp[ci] == null) ci--;
+    let yc = y(cmp[ci]);
+    if (Math.abs(yc - yf) < 16) yc = yf + (yc >= yf ? 16 : -16);
+    const lx = x(li) + 6;
+    endLabels = `<text class="end-fund" x="${lx}" y="${yf + 4}">Fonden ${fmtPct(series[li].v)}</text>` +
+      `<text class="end-cmp" x="${lx}" y="${yc + 4}">${narrow ? 'Nasdaq' : (opts.compareName || 'Nasdaq-100')} ${fmtPct(cmp[ci])}</text>`;
+  }
   const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
   svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
   svg.setAttribute('role', 'img');
   svg.setAttribute('aria-label', opts.label || 'Afkastgraf');
   svg.innerHTML = `${grid}<line class="zero" x1="${pad.l}" x2="${W - pad.r}" y1="${zeroY}" y2="${zeroY}"/>` +
-    (cmpPath ? `<path class="cmp" d="${cmpPath}"/>` : '') + `<path class="fund" d="${path}"/>${marks}${xLabels}`;
+    (cmpPath ? `<path class="cmp" d="${cmpPath}"/>` : '') + `<path class="fund" d="${path}"/>` + endLabels + `${marks}${xLabels}`;
   wrap.appendChild(svg);
 
   const readout = document.createElement('p');

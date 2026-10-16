@@ -534,6 +534,25 @@ body.x-archive main{display:flex;flex-direction:column}
   body.x-focused .x-weave-bridge{flex:1 1 0;min-height:26px;padding:2px 6px}
   article.x-card.is-quote .x-foot,article.x-card.is-slip .x-foot{margin-top:4px}
 }
+.x-months{margin:0 0 6px;padding:6px 12px 6px;border:1px solid #345860;border-radius:16px;background:#0d1c22}
+.x-months-top{display:flex;justify-content:space-between;gap:8px 12px;align-items:baseline;flex-wrap:wrap;margin:0 0 4px}
+.x-months-top .k{margin:0;font-size:11px;letter-spacing:1.4px;color:var(--brand);font-weight:700}
+.x-months-top p{margin:0;font-size:13px;line-height:1.35;color:var(--text);max-width:70ch}
+.x-months-row{display:flex;flex-wrap:wrap;gap:4px}
+.x-mo{appearance:none;display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:44px;min-height:34px;padding:2px 5px;border:1px solid #345860;border-radius:10px;background:#0b171d;color:var(--muted);font:inherit;line-height:1.1}
+.x-mo b{font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-size:15px;font-weight:500;color:#f5ee9e;line-height:1}
+.x-mo i{font-style:normal;font-size:10px;letter-spacing:.2px;color:var(--faint);margin-top:2px}
+button.x-mo{cursor:pointer}
+.x-mo.is-zero{border-style:dashed;color:#617d84}
+.x-mo.is-zero b{color:#617d84}
+.x-mo[aria-pressed="true"]{background:#f5ee9e;border-color:#f5ee9e;color:#1c1604}
+.x-mo[aria-pressed="true"] b,.x-mo[aria-pressed="true"] i{color:#1c1604}
+.x-mo:focus-visible{outline:2px solid #f5ee9e;outline-offset:2px}
+.x-months-foot{margin:4px 0 0;font-size:12px;line-height:1.35;color:var(--faint)}
+body.x-focused .x-months-top,body.x-focused .x-months-foot{display:none}
+body.x-focused .x-months{margin:0 0 4px;padding:0;border:0;background:transparent;border-radius:0}
+body.x-focused .x-mo{min-height:26px;min-width:36px;padding:1px 4px}
+body.x-focused .x-mo b{font-size:13px}
 @media(prefers-reduced-motion:reduce){
   button.x-atlas-dot:hover::after{transform:translate(-50%,-50%)}
 }
@@ -1069,6 +1088,76 @@ export function xWeaveHtml(posts, { active = '', hot = '' } = {}) {
       ${bridge('nv-chips', 'is-nc', 'Nvidia · Chips')}
     </div>
     <p class="x-weave-foot">${esc(X_LABEL)}.</p>
+  </div>`;
+}
+
+const MONTH_SHORT = ['jan', 'feb', 'mar', 'apr', 'maj', 'jun', 'jul', 'aug', 'sep', 'okt', 'nov', 'dec'];
+const MONTH_FULL = ['januar', 'februar', 'marts', 'april', 'maj', 'juni', 'juli', 'august', 'september', 'oktober', 'november', 'december'];
+
+function monthStamp(key) {
+  if (!/^\d{4}-\d{2}$/.test(key || '')) return '';
+  const m = Number(key.slice(5, 7));
+  const name = MONTH_FULL[m - 1];
+  if (!name) return '';
+  return name.charAt(0).toUpperCase() + name.slice(1) + ' ' + key.slice(0, 4);
+}
+
+/**
+ * One cell per month from the earliest post to the latest. Empty months stay, as 0.
+ * Counts are the posts passed in. No network.
+ */
+export function xMonthHtml(posts, { active = '' } = {}) {
+  ensureXStyles();
+  const counts = new Map();
+  let min = '';
+  let max = '';
+  for (const p of posts || []) {
+    const t = Date.parse(p?.created_at || '');
+    if (Number.isNaN(t)) continue;
+    const d = new Date(t);
+    const key = d.getUTCFullYear() + '-' + String(d.getUTCMonth() + 1).padStart(2, '0');
+    counts.set(key, (counts.get(key) || 0) + 1);
+    if (!min || key < min) min = key;
+    if (!max || key > max) max = key;
+  }
+  if (!min) return '';
+  let best = '';
+  let bestN = 0;
+  for (const [key, n] of counts) {
+    if (n >= bestN) { bestN = n; best = key; }
+  }
+  const cells = [];
+  let y = Number(min.slice(0, 4));
+  let m = Number(min.slice(5, 7));
+  const endY = Number(max.slice(0, 4));
+  const endM = Number(max.slice(5, 7));
+  let prevYear = null;
+  while (y < endY || (y === endY && m <= endM)) {
+    const key = y + '-' + String(m).padStart(2, '0');
+    const n = counts.get(key) || 0;
+    const short = MONTH_SHORT[m - 1];
+    const showYear = prevYear !== y;
+    prevYear = y;
+    const face = showYear ? `${short} ${String(y).slice(2)}` : short;
+    const long = monthStamp(key);
+    if (!n) {
+      cells.push(`<span class="x-mo is-zero"><i>${esc(face)}</i><b>0</b><span class="sr-only">${esc(long)}, 0 opslag</span></span>`);
+    } else {
+      const on = active === key;
+      const busy = key === best ? ' data-mo-busy="1" aria-keyshortcuts="m"' : '';
+      cells.push(`<button type="button" class="x-mo" data-mo="${esc(key)}" aria-pressed="${on ? 'true' : 'false'}" aria-label="${esc(long)}, ${n} opslag${on ? ', valgt' : ''}"${busy}><i>${esc(face)}</i><b>${n}</b></button>`);
+    }
+    m += 1;
+    if (m > 12) { m = 1; y += 1; }
+  }
+  const activeN = active ? (counts.get(active) || 0) : 0;
+  const line = active
+    ? `${monthStamp(active) || active} har ${activeN} opslag i snapshotet.`
+    : `Hver måned fra første til seneste opslag. Tomme måneder er 0. Tast M åbner ${monthStamp(best) || 'den fyldigste måned'}, som har ${bestN}.`;
+  return `<div class="x-months" data-months="1">
+    <div class="x-months-top"><p class="k">Måneder</p><p>${esc(line)}</p></div>
+    <div class="x-months-row" role="group" aria-label="${esc(line)} ${esc(X_LABEL)}">${cells.join('')}</div>
+    <p class="x-months-foot">${esc(X_LABEL)}.</p>
   </div>`;
 }
 

@@ -1478,3 +1478,68 @@ Gennemgået: embed dag-split/livsbjælke, drawdown år-/bund-hop, sammenlign kla
 - **S-D1 (NY)** · Embed viser som standard "749 af 770 dage lå på eller over nul". Ligesom S-R1 (97 % positive dage) fremhæver det en gunstig historisk statistik. Den afhænger desuden helt af startdatoen ("nul er første dag"). Forbeholdet står der, men standardvisningen er den gunstige side. Forslag: vis begge tal i samme sætning (fx "749 dage over, 21 under"), eller start på en neutral visning. Tilføj "Historisk udvikling er ingen garanti for fremtidigt afkast" tæt på tallet, fordi embeds kan blive vist uden for sitet.
 - **S-D2 (NY)** · "Delår, afventer Fundmarket-godkendelse" (embed ÅTD) kan læses som om tallene er ikke-godkendte eller foreløbige. Hvis ÅTD-tal ikke er endelige, bør de ikke vises i et embed. Hvis de er endelige, skal sætningen væk eller omformuleres.
 - Åbne: S-R1, S-K1/S-K2, S-N1–N3, M1 (status som i c59).
+
+## 2026-10-16 08:05 CEST · cyklus 61 · freeze-tjek (main `a81c67c`, live = main)
+
+Gennemgået: fakta/omkostninger Kryds (Venn), ndi-paa-x knude-filter (soft-nv / soft-chips / nv-chips), selskaber fund-sanering og nasdaq-compare.json-label.
+
+- Kryds: hver visning siger "ikke en kurs, ikke et afkast", "KID er ikke en postsats og ikke et ÅOP", og felterne stammer fra fund-facts.json. SRI 5 af 7 og horisont 5 år står ens i begge klasser. Der vises ingen afkast for PMINDIAKK. ✅
+- nasdaq-compare.json: "kursindeks (uden udbytte)" og "vises kun som sammenligning, ikke som fondens benchmark" står i datafilen. ✅ S-N1 (totalafkast vs. kursindeks) er stadig åben.
+- Ordsweep på 23 sider: hits er kun negationer ("ikke en anbefaling", "ikke en bevidst overvægt") og KID-ordet "anbefalet/anbefaler … investeringsperiode". ✅
+- Footer (rådgivning/tab/historisk) findes på alle testede sider. ✅
+
+### MUST (før go-live, uændret, men skærpet)
+- **M1** · Knude-filteret på ndi-paa-x (`?knot=soft-nv`) gør et tredjepartsopslag fra @BullTheoryio ("BREAKING … $250 BILLION …") til lead-kort med "DIREKTE TRÆF"-mærke. Forbeholdet "ikke NDI's holdning" står på siden. Men et kurateret, fremhævet hype-opslag om to beholdninger kan stadig opfattes som NDI-markedsføring (vildledning, MiFID art. 44). Fjern tredjepartskonti fra knuder og lead, eller drop knude-funktionen før go-live.
+
+### SHOULD
+- Åbne: S-D1, S-D2, S-R1, S-K1/S-K2, S-N1–N3 (som i c60).
+
+### ÅOP
+Uændret. Kryds-figuren siger eksplicit "ikke et ÅOP". ÅOP-tal mangler stadig.
+
+## 2026-10-16 08:10 CEST · cyklus 62 · slut-tjek ved freeze (main `a81c67c` uændret siden c61, live = main)
+
+Main er ikke flyttet siden c61. Live md5 = main på 14 sider (index, vaerdikaeder, drawdown, risici, temaer, invester, om-data, fakta, omkostninger, sammenlign, ndi-paa-x, selskab, selskaber). Alle 20 html-sider i docs/ har en footer med rådgivning, tab og historisk afkast.
+
+- Ordsweep (øger eksponering/overvægt/garanteret/bedste tip/køb nu/sælg nu) i html/js/json: hits er kun negationer og et pædagogisk afsnit i `laer/hvorfor-mange-aktier.html` ("en stor overvægt i én branche øger variansen"). Det beskriver diversifikation og er ikke handelssprog om fonden. ✅
+- asOf: beholdningsfilerne er 2026-06-01. 2026-10-14/15 findes kun i kurs- og statistikfiler (latest, risk-stats, fund-meta, nasdaq-compare). Ingen live trades. ✅
+
+### Samlet åben liste før go-live
+**MUST**
+- **M1** · ndi-paa-x knude/lead løfter tredjeparts-hype ("BREAKING … $250 BILLION") om beholdninger frem (c61).
+- **ÅOP** · ÅOP/samlede omkostninger i kr. mangler stadig. Kryds siger korrekt "ikke et ÅOP", men tallet skal findes (persona + FO MUST).
+
+**SHOULD**
+- S-R1 "97 % positive dage" (overlappende vinduer) · S-D1 embed "749 af 770 dage over nul" som standard · S-D2 "afventer Fundmarket-godkendelse".
+- S-K1 takeaway følger ikke Kurs/Totalafkast · S-K2 Kurs vs. Nasdaq er skævt · S-K3 udbytte-forbehold i U-tooltip.
+- S-N1 totalafkast vs. kursindeks · S-N2 Yahoo/Nasdaq-licens · S-N3 forbehold i readout.
+- S3, S5, S12 (ældre, åbne).
+
+## 2026-10-16 08:08 CEST · cyklus 63 · freeze-verifikation (main `a81c67c` uændret, live = main)
+
+Rettelse: c62-headeren "08:10" var forkert. Den blev skrevet før 08:08.
+
+- Live md5 = main på 10 sider (index, vaerdikaeder, drawdown, risici, selskab, temaer, invester, om-data, ndi-paa-x, sammenlign). Live-sweep på 24 URL'er (cache-bust) gav 0 fejl og 0 overflow. Tab- og historisk-advarsel findes på alle 24. ✅
+- "overvægt"-hits (vaerdikaeder, risici, temaer, tema, laer) er kun negationer eller pædagogiske. ✅
+- M1-indholdet er uændret i `docs/data/x-posts.json` ("BREAKING: Nvidia is in talks to backstop $250 BI…").
+
+### MUST
+- Uændret: **M1** (ndi-paa-x knude/lead løfter tredjeparts-hype frem) og **ÅOP** (mangler).
+
+### SHOULD
+- **S-T1 (NY)** · `tema.html?slug=…`: footeren siger "ikke en anbefaling" og "historisk afkast …", men den siger ikke "ingen investeringsrådgivning" og har ikke tab-linjen. Tab-linjen (WARN_HIST) står kun i brødteksten nederst. De andre 23 sider har alle tre i footeren. Forslag: brug samme footer-tekst som de øvrige sider, så teksten også står der, hvis brødteksten ikke renderer.
+- Åbne: S-R1, S-D1, S-D2, S-K1–K3, S-N1–N3, S3, S5, S12.
+
+## 2026-10-16 08:12 CEST · cyklus 64 · freeze-tjek (main `1f8ec72`, ny siden c63: lane-A/lane-D freeze-bugfixes)
+
+- Nyt på main siden `a81c67c`: kun `docs/data/value-chains.json` (de interne revisionsnoter er fjernet fra facts/role-tekster) og `docs/drawdown.html` (år uden en dag på ≥10 % under top, fx "2023 havde ingen dag …"). Diff-sweep for garanter/sikker/køb/overvægt/eksponering/anbefal: kun neutrale hits ("købte Routejade", "Købet af Walker … efter beholdningen"). Rest-sweep efter "rettet/tidligere stod/revision/korrigeret" i value-chains.json på main gav 0 hits. ✅ Det nye drawdown-udsagn er beskrivende og historisk, ikke et løfte. ✅
+- Live = main på 27 filer (alle html, js, portfolio.json, x-posts.json) for c63-indholdet. `value-chains.json` halter på Pages (md5 ≠ main ved 08:12, normal CDN-forsinkelse), og `drawdown.html` er allerede live. ✅
+- 20 live-URL'er @375 (cache-bust): 0 fejl, 0 overflow. Rådgivning-, tab- og historisk-linjen er på 20/20. ✅
+- ÅOP: omkostninger.html skriver stadig "Ikke et ÅOP" alle steder, og der er intet ÅOP-tal. Teksten er ærlig, men tallet mangler fortsat.
+
+### MUST
+- Uændret: **M1** (ndi-paa-x knude/lead løfter tredjeparts-BREAKING frem) og **ÅOP mangler** (FO-persona MUST).
+
+### SHOULD
+- **S-T1 stadig åben**: `tema.html?slug=platforms` og `?slug=optik-netvaerk` live har ingen "rådgivning"-tekst i DOM'en (textContent). Tab- og historisk-linjen er der.
+- Åbne: S-R1, S-D1, S-D2, S-K1–K3, S-N1–N3, S3, S5, S12.

@@ -1500,3 +1500,57 @@ Testet lokalt (git archive af main, port 8960) @375 og @1280: 0 pageerrors, 0 ov
 ### Nice
 - Nyhedsarkiv "Hvad er det ikke?" (Kraftværk/Mine/Opsendelse/Kontor) er sjov, men et visuelt mønster mere at lære (variety-træthed). Overvej at samle klik-kortene på én side under ét fælles mønster.
 - Embed .day-track har aria-hidden. Tallene står i #day-say, men den har ingen aria-live, så skærmlæsere hører ikke skiftet over/under.
+
+## 2026-10-16 08:05 CEST · cyklus 61 · freeze-tjek: Klasselinje "Kryds" (Venn), ndi-paa-x knude-filter, fund-sanering (main `a81c67c`, live = main pr. md5 på 6 filer)
+
+Testet lokalt på 21 sider @375 og @1280 (42 + 4 kombinationer). 0 vandret overflow. Footer findes på alle sider.
+
+### MUST
+- Ingen.
+
+### SHOULD
+- **U-V1** · Kryds/Venn på fakta og omkostninger er korrekt: 10 ens felter, 5 kun PMINDI og 5 kun PMINDIAKK. Knapperne er 200×200 og 128×128 @375, så de er gode tap-mål. Men det er endnu et visuelt idiom på de to sider (linje, søjler, og nu cirkler). Det bidrager til visual-variety-fatigue. Privat-personaen får ikke ny viden ud over chip-listen. Overvej at vise chip-listen som standard og cirklerne kun i `?linje=cross`.
+- **U-X1** · `ndi-paa-x?knot=soft-nv` viser 1 opslag. Lead-kortet er tredjeparts "BREAKING: Nvidia … $250 BILLION … built by SoftBank" med mærket "DIREKTE TRÆF · Vist fordi: SoftBank · NVDA". Knuden løfter dermed det mest hype-prægede tredjepartsopslag op som lead. Se compliance M1.
+
+### Nice
+- `selskaber.html?fund=<x>` falder nu stille tilbage til pmindi. ✅ Filtertælleren siger "1 aktivt" i ental. ✅
+- `x-posts.json` callCountNote er en log over 23 "poleringspas". Den vises ikke på siden (grep i js/html giver 0), men bør trimmes før go-live.
+
+## 2026-10-16 08:10 CEST · cyklus 62 · slut-tjek ved freeze (main `a81c67c` uændret, live = main)
+
+Intet nyt produktindhold siden c61. Live = main pr. md5 på 14 sider, og footer findes på alle 20 sider.
+
+### MUST
+- Ingen nye. (Compliance M1 og manglende ÅOP gælder også som UX-blokkere for FO-personaen.)
+
+### SHOULD (samlet, åbne)
+- U-V1 Venn-fatigue på fakta/omkostninger · U-X1 knude-lead på ndi-paa-x.
+- c60: tekst i livsbjælken "afventer Fundmarket-godkendelse" · dag-split viser den gunstige side som standard.
+- c59: rullende sektion bør sige "siden start", og stale-advarslen bør linke til Fundmarket · c58 S-K1/S-K2 · c57 SHOULD 1–3.
+
+### Nice
+- Saml klik-kort-mønstrene (nyhedsarkiv, Kryds) under ét idiom · aria-live på embed #day-say · trim callCountNote i x-posts.json.
+
+## 2026-10-16 08:08 CEST · cyklus 63 · freeze-verifikation (main `a81c67c` uændret)
+
+Ingen nye UX-ændringer på main siden c61. Live-sweep på 24 URL'er gav 0 fejl og 0 overflow.
+
+### MUST
+- Ingen nye.
+
+### SHOULD
+- U-T1 · `tema.html` har en kortere footer end resten af sitet (se compliance S-T1). Footeren bør være ens overalt, så den ikke ser ud som en anden side.
+- Åbne som i c61/c62 (U-V1 Venn-fatigue, U-X1).
+
+## 2026-10-16 08:12 CEST · cyklus 64 · freeze-tjek (main `1f8ec72`)
+
+### MUST
+- Ingen nye. 20 live-URL'er @375 har 0 overflow og 0 pageerrors. De 4 ekstra URL'er (2× tema, vaerdikaede, laer) har også 0 overflow.
+
+### SHOULD
+- vaerdikaeder-facts (lane-A/D freeze-fix) lyder nu som forklaringer, ikke som interne revisionsnoter. Det er godt for privat-personaen. Behold tonen.
+- drawdown: år-rækken nævner nu de rolige år ("… havde ingen dag mindst 10 % under den løbende top"). Det giver kontekst. Tjek efter Pages-deploy, at linjen ikke brydes uheldigt mellem knapperne @375.
+- Åbne fra tidligere: U-V1 (Venn-fatigue), U-X1, S-T1 (tema-footer).
+
+### Nice
+- Ingen nye.
