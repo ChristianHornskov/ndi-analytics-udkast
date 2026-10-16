@@ -420,3 +420,7 @@ Ny linje på drawdown, under år-knapperne. Knappen hopper til bunden 29. jul. 2
 ### Update · spor for perioden · 2026-10-16 ~07:47 CEST
 
 Ny form i embed, over grafen. Et spor for hele perioden, fra 22. sep. 2023 til 14. okt. 2026. Den gule del til højre er år til dato. Et klik på den gule del skifter til år til dato og siger frem til 14. okt. 2026, at det er et delår, og at det afventer Fundmarket-godkendelse. Et klik på resten skifter tilbage. Knapperne er 44 px. Den gule del er 69 px ved 300. Ingen procent i sætningen. Ingen sidescroll ved 300–1100. Ingen konsolfejl. På papir bliver sporet. PMINDIAKK har ingen spor og ingen procent. Cyklus 55 har ingen MUST i egne filer.
+
+### Update · to slags rækker · 2026-10-16 ~07:48 CEST
+
+Main lagde en Nasdaq-række med klassen `.cmp-row`. Temarækken på sammenlign bruger samme navn. CSS er delt: temarækken er `.cmp-themes .cmp-row` og stadig et gitter med margin 0. Nasdaq-rækken er `div.cmp-row` med margin 10 px. Kontakten er 44 px og slået fra. Sætningen «Fonden har intet fast benchmark» står der stadig. Ingen konsolfejl.
