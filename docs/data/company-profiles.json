@@ -1741,24 +1741,24 @@
   "US75776W1036": {
    "name": "Redwire",
    "theme": "space",
-   "summary": "Leverer dele til satellitter og rumfartøjer. Selskabet skrev 1. april 2026, at kameraer og solsensorer skal med på Artemis II. Meddelelsen siger ikke, at flyvningen er gennemført. Det er ikke et datacenter og ikke en opsender.",
-   "watch": "Ordrer til satellitprogrammer og om aktiviteterne i rummet bliver til en forretning.",
+   "summary": "Laver kameraer og solsensorer til Orion. Meddelelsen 1. april 2026 siger, at udstyret will launch på Artemis II, og ikke at flyvningen er fløjet. Forsiden uden dato skriver launched. Det er ikke en opsender.",
+   "watch": "Om forsiden, læst 16. oktober 2026, bliver læst som om Artemis II var fløjet pr. 1. juni 2026. Meddelelsen 1. april 2026 siger will launch.",
    "source": "https://redwirespace.com/",
-   "products": "Dele til satellitter, kameraer og solsensorer.",
-   "customers": "Satellitbyggere og rumprogrammer.",
-   "role": "Infrastruktur til satellitter. Ikke en opsender og ikke et orbitalt datacenter.",
+   "products": "Kamerasystem til Orion på Artemis I til V og fire solsensorer til servicemodulet. Ikke en raket.",
+   "customers": "Lockheed Martin til kameraerne og Airbus til solsensorerne. Siden nævner NASA's Orion.",
+   "role": "Kameraer og solsensorer. Ikke en opsender.",
    "narrative": [
-    "Redwire skriver, at selskabet fremstiller og tester kamerasystemet til Orion på Artemis I til V. Selskabet skrev 1. april 2026, at systemet til Artemis II har 11 kameraer, og at udstyret skal med på flyvningen.",
-    "Datoen ligger før beholdningen pr. 1. juni 2026. Meddelelsen beskriver ikke flyvningen som gennemført. Selskabet sender ikke selv raketten op og driver ikke et datacenter i kredsløb."
+    "Redwire skrev 1. april 2026 i Jacksonville, at optik og solsensorer will launch med Orion på Artemis II. Kamerasystemet er 11 kameraer, heraf trådløse kameraer på de fire solpaneler. Fire solsensorer til det europæiske servicemodul leveres via Airbus. Selskabet skriver, at sensorerne kørte på Artemis I. Produktionen og testen af kamerasystemet til Artemis I til V sker via Lockheed Martin.",
+    "Datoen ligger før beholdningen pr. 1. juni 2026. Meddelelsen siger ikke, at Artemis II er fløjet. Forsiden, læst 16. oktober 2026, skriver launched uden dato. Den sætning er ikke meddelelsen fra 1. april. Adressen i sidefoden er 8226 Philips Highway, Suite 101, Jacksonville, FL 32256. Samme meddelelse skriver cirka 1.400 medarbejdere. Ordet leader er ikke taget med. Selskabet sender ikke selv raketten op."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets side",
-     "url": "https://redwirespace.com/"
-    },
-    {
      "label": "Artemis II, 1. april 2026",
      "url": "https://rdw.com/newsroom/redwires-advanced-imaging-and-navigation-technology-will-enable-nasas-historic-artemis-ii-mission/"
+    },
+    {
+     "label": "Forside",
+     "url": "https://rdw.com/"
     }
    ]
   },
