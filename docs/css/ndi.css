@@ -668,7 +668,7 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
 .figure svg.uw .uw-span-hit{cursor:pointer}
 .uw-scrub{margin-top:8px;--uw-thumb:18px}
 .uw-scrub p{margin:0 0 4px;font-size:13px;color:var(--text);font-variant-numeric:tabular-nums;min-height:1.3em}
-.uw-scrub input{width:calc(var(--uw-plot) + var(--uw-thumb));margin-left:calc(var(--uw-pad) - var(--uw-thumb) / 2);appearance:none;-webkit-appearance:none;background:transparent;height:32px;accent-color:var(--cyan)}
+.uw-scrub input{width:calc(var(--uw-plot) + var(--uw-thumb));margin-left:calc(var(--uw-pad) - var(--uw-thumb) / 2);appearance:none;-webkit-appearance:none;background:transparent;height:44px;accent-color:var(--cyan)}
 .uw-scrub input::-webkit-slider-runnable-track{height:4px;background:var(--line);border-radius:99px}
 .uw-scrub input::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:18px;height:18px;margin-top:-7px;border-radius:50%;background:var(--cyan);border:2px solid var(--ink)}
 .uw-scrub input::-moz-range-track{height:4px;background:var(--line);border-radius:99px}

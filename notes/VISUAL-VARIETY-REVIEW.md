@@ -196,6 +196,10 @@ Sætningen er «Fald fra top, PMINDI. Dybeste fald -35,8 % fra 18. feb. 2025 til
 
 «År til dato» og «Hele perioden» var 40 px på 390 og 42 px på 700. De er 44 px. Klasse-kortene var allerede høje nok. Ingen sidescroll. Drawdown og sammenlign har ingen knapper under 44 px ved 390.
 
+### Update · sliderfelt 44 px · 2026-10-16 ~03:48 CEST
+
+Feltet under kurven er 44 px højt. Knapperne er stadig 18 px, sporet er stadig tyndt. På sidste dag, 14. okt. 2026, møder knappens midte stregen (afstand 0). Udlæsningen er −23,4 %. Ingen sidescroll ved 390.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.
