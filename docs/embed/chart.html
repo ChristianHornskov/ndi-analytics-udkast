@@ -21,7 +21,6 @@
  <!-- og:end -->
 </head>
 <body>
-<p class="eyebrow" style="padding:8px 12px">Markedsføringsmateriale</p>
  <a class="skip" href="#chart-title">Gå til graf</a>
  <main class="embed">
  <section class="panel" aria-labelledby="chart-title">
@@ -84,7 +83,7 @@
  <small id="metric-total-note">Siden start · efter omkostninger</small>
  </div>
  <div class="metric">
- <span class="metric-label">Gns. årligt afkast (CAGR)</span>
+ <span class="metric-label">Gns. årligt afkast</span>
  <strong id="metric-cagr" aria-describedby="historisk-advarsel">-</strong>
  <small id="metric-cagr-note">CAGR · siden start</small>
  </div>
@@ -93,6 +92,11 @@
  <strong id="metric-ytd" aria-describedby="historisk-advarsel">-</strong>
  <small id="metric-ytd-note">Fra årets start</small>
  </div>
+ <div class="metric metric-dd">
+ <span class="metric-label">Største fald</span>
+ <strong id="metric-dd" aria-describedby="historisk-advarsel">-</strong>
+ <small id="metric-dd-note">I den viste periode</small>
+ </div>
  </div>
  <aside class="warn" role="note" id="historisk-advarsel">
  Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.
@@ -100,6 +104,7 @@
  </div>
 
  <p class="foot">Afkastet er i danske kroner og efter fondens løbende omkostninger, før skat og egne handelsomkostninger. Totalafkast forudsætter geninvesteret udbytte. Kilde: Fundmarket.</p>
+ <p class="sri-line" id="sri-line" hidden></p>
  </section>
  
  <div class="embed-cta">
@@ -107,8 +112,15 @@
  <div class="embed-cta-links">
  <a class="outline-button" href="../index.html?view=udforsk">Undersøg porteføljen mere →</a>
  <a class="outline-button" id="drawdown-link" href="../drawdown.html?fund=pmindi">Se største fald →</a>
+ <button class="outline-button" type="button" id="share-chart">Del grafen</button>
  </div>
+ <p class="share-note" id="share-note" hidden></p>
  </div>
+
+ <footer class="embed-legal">
+ <p><strong>Markedsføringsmateriale.</strong> Læs <a href="https://fundmarket.dk/wp-content/uploads/Faellesprospekt-for-afdelinger-og-andelsklasser-i-Investeringsforeningen-Portfoliomanager-opdateret-24.10.2025.pdf" rel="noopener" target="_blank">prospektet ↗</a> og KID for <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm140b" rel="noopener" target="_blank">PMINDI ↗</a> eller <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm145b" rel="noopener" target="_blank">PMINDIAKK ↗</a>, før du træffer en endelig investeringsbeslutning.</p>
+ <p>Udkast. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe penge.</p>
+ </footer>
 
  </main>
  <noscript>

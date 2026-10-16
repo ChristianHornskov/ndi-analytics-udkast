@@ -3,14 +3,14 @@
 <head>
  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
  <meta name="robots" content="noindex,nofollow">
- <title>Drawdown · NDI Analytics</title>
+ <title>Fald fra top · NDI Analytics</title>
  <link rel="stylesheet" href="css/ndi.css">
  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
  <!-- og:start -->
  <meta property="og:type" content="website">
  <meta property="og:site_name" content="NDI Analytics (udkast)">
  <meta property="og:locale" content="da_DK">
- <meta property="og:title" content="Drawdown · NDI Analytics">
+ <meta property="og:title" content="Fald fra top · NDI Analytics">
  <meta property="og:description" content="Største, middel og median fald fra top i fondens totalafkast-serie. Fondniveau. Ikke enkeltaktier.">
  <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/drawdown.html">
  <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
@@ -27,11 +27,12 @@
  <nav class="nav"><a href="index.html?view=fonden">← Fonden</a><a href="om-data.html#g-drawdown">Ordliste</a></nav>
  </header>
  <main id="main"><p class="muted">Henter…</p></main>
- <footer class="site-footer">
- <p class="eyebrow" style="margin-bottom:4px">Markedsføringsmateriale</p><p>Udkast / noindex. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast.</p></footer>
+ <footer class="site-footer"><p><strong>Markedsføringsmateriale.</strong> Læs <a href="https://fundmarket.dk/wp-content/uploads/Faellesprospekt-for-afdelinger-og-andelsklasser-i-Investeringsforeningen-Portfoliomanager-opdateret-24.10.2025.pdf" rel="noopener" target="_blank">prospektet ↗</a> og KID for <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm140b" rel="noopener" target="_blank">PMINDI ↗</a> eller <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm145b" rel="noopener" target="_blank">PMINDIAKK ↗</a>, før du træffer en endelig investeringsbeslutning.</p><p>Udkast / noindex. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe penge.</p><p data-kid-footer></p></footer>
  <script type="module">
- import { loadAll, fundById, maxDrawdown, drawdownSummary, calendarYearReturns, WARN_HIST, fmtDate, fmtPct } from './js/data.js';
- const { portfolio } = await loadAll();
+ import { loadAll, fundById, maxDrawdown, drawdownSummary, calendarYearReturns, WARN_HIST, fmtDate, fmtPct, loadFundMeta, kidFooterHtml } from './js/data.js';
+ const [{ portfolio }, meta] = await Promise.all([loadAll(), loadFundMeta()]);
+ const kidSlot = document.querySelector('[data-kid-footer]');
+ if (kidSlot) { const kidHtml = kidFooterHtml(meta); if (kidHtml) kidSlot.innerHTML = kidHtml; }
  const fundId = new URL(location.href).searchParams.get('fund') || 'pmindi';
  const fund = fundById(portfolio, fundId);
  const isAkk = fund.id === 'pmindiakk';
@@ -40,9 +41,10 @@
  if (isAkk) {
  main.innerHTML = `
  <a class="back" href="index.html?view=fonden&fund=pmindiakk">← Fonden</a>
- <p class="eyebrow">FONDAFKAST · DRAWDOWN</p>
- <h1>Drawdown · ${fund.short}</h1>
- <section class="panel"><p class="muted" style="line-height:1.6">Afkast og drawdown for PMINDIAKK vises efter 12 måneders historik. Klassen følger samme overordnede strategi som PMINDI.</p></section>
+ <p class="eyebrow">FONDAFKAST · FALD FRA TOP</p>
+ <h1>Fald fra top · ${fund.short}</h1>
+ <p class="lede">Ny andelsklasse. Fald fra top for PMINDIAKK vises efter 12 måneders historik. Ingen NAV eller graf før 5. december 2026. Klassen følger samme overordnede strategi som PMINDI.</p>
+ ${meta?.funds?.pmindiakk?.priip ? `<p class="src">Risikoindikator (SRI) ${meta.funds.pmindiakk.priip.risk_class} af ${meta.funds.pmindiakk.priip.risk_scale_max} ifølge KID. Gælder fonden som helhed. <a href="${meta.funds.pmindiakk.priip.url}">Læs KID ↗</a></p>` : ''}
  <p class="link-row"><a href="sammenlign.html">Sammenlign andelsklasser →</a></p>
  <p class="warn">${WARN_HIST}</p>`;
  } else if (!fund.data?.length) {
@@ -137,22 +139,34 @@
  const cls = !e.recoveredD ? 'uw-span open' : 'uw-span';
  const title = `${fmtDate(e.peakD)} til ${fmtDate(endOf(e))}. Bund ${fmtDate(e.troughD)}, ${fmtPct(e.dd)}.`;
  const w = (x2 - x1).toFixed(1);
- parts.push(`<rect class="uw-span-hit" data-trough="${e.troughD}" x="${x1.toFixed(1)}" y="${railTop.toFixed(1)}" width="${w}" height="${Math.max(h, 28).toFixed(1)}"><title>${title}</title></rect>`);
+ parts.push(`<rect class="uw-span-hit" data-trough="${e.troughD}" x="${x1.toFixed(1)}" y="${(railTop - 16).toFixed(1)}" width="${w}" height="${(Math.max(h, 28) + 16).toFixed(1)}"><title>${title}</title></rect>`);
  parts.push(`<rect class="${cls}" data-peak="${e.peakD}" data-end="${endOf(e)}" data-trough="${e.troughD}" x="${x1.toFixed(1)}" y="${railTop.toFixed(1)}" width="${w}" height="${h.toFixed(1)}" rx="1"/>`);
+ const isMax = Math.abs(e.dd - sum.max) < 0.001;
+ if (!isMax) {
+ const openBar = !e.recoveredD;
+ const lx = openBar ? x1 + 6 : (x1 + x2) / 2;
+ const anchor = openBar ? 'start' : 'middle';
+ parts.push(`<text class="uw-span-lab${openBar ? ' open' : ''}" x="${lx.toFixed(1)}" y="${(railTop - 4).toFixed(1)}" text-anchor="${anchor}">${fmtPct(e.dd, 1)}</text>`);
  }
+ }
+ const openX = open ? xOf(open.peakD) : null;
+ const backX = recovery ? xOf(recovery) : null;
+ const backY = backX != null && openX != null && Math.abs(backX - openX) < 56 ? 30 : 16;
  if (recovery) {
- const rx = xOf(recovery).toFixed(1);
- const backY = 16;
+ const rx = backX.toFixed(1);
  parts.push(`<line class="uw-up-tick" x1="${rx}" x2="${rx}" y1="${backY + 5}" y2="${y0.toFixed(1)}"/>`);
  parts.push(`<text class="uw-up" x="${rx}" y="${backY}" text-anchor="middle">tilbage</text>`);
  }
  if (open) {
- const x1 = xOf(open.peakD).toFixed(1);
+ const nearEnd = openX > (W - padR) - 72;
  const topY = 18;
+ const anchor = nearEnd ? 'end' : 'middle';
+ const lx = (nearEnd ? openX - 5 : openX).toFixed(1);
+ const x1 = openX.toFixed(1);
  const inRail = deep.some((e) => e.peakD === open.peakD);
  const y2 = inRail ? (railTop + barH(open)).toFixed(1) : (H - padB).toFixed(1);
  parts.push(`<line class="uw-open" x1="${x1}" x2="${x1}" y1="${topY + 5}" y2="${y2}"/>`);
- parts.push(`<text class="uw-label" x="${x1}" y="${topY}" text-anchor="middle">top</text>`);
+ parts.push(`<text class="uw-label" x="${lx}" y="${topY}" text-anchor="${anchor}">top</text>`);
  }
  parts.push(`<path class="uw-line" d="${line}"/>`);
  parts.push(`<path id="uw-ep" class="uw-ep" d=""/>`);
@@ -168,11 +182,11 @@
  parts.push(`<text class="uw-label uw-max-label" x="${lx.toFixed(1)}" y="${Math.max(12, ty - 7)}" text-anchor="middle">${fmtPct(trough.u, 0)}</text>`);
  parts.push(`<circle class="uw-now" cx="${nx.toFixed(1)}" cy="${ny.toFixed(1)}" r="3.4"/>`);
  const nowX = (nx + 8).toFixed(1);
- const nowTop = Math.max(14, ny - 4);
- parts.push(`<text class="uw-label uw-now-label" text-anchor="start"><tspan x="${nowX}" y="${nowTop.toFixed(1)}">nu</tspan><tspan x="${nowX}" y="${(nowTop + 11).toFixed(1)}">${fmtPct(last.u, 0)}</tspan></text>`);
+ const nowTop = Math.max(16, ny - 10);
+ parts.push(`<text class="uw-label uw-now-label" text-anchor="start"><tspan x="${nowX}" y="${nowTop.toFixed(1)}">nu</tspan><tspan x="${nowX}" y="${(nowTop + 14).toFixed(1)}">${fmtPct(last.u, 0)}</tspan></text>`);
  const barSay = usedGate
- ? `${deep.length} søjler mellem kurven og årstallene er episoder dybere end 10 %. Højden er dybden, bredden er tiden. Stregen ved 10 % under nul er grænsen for de søjler.`
- : `${deep.length} søjler mellem kurven og årstallene er de dybeste episoder. Højden er dybden, bredden er tiden.`;
+ ? `${deep.length} søjler mellem kurven og årstallene er episoder dybere end 10 %. Højden er dybden, bredden er tiden. Tallet over søjlen er dybden. Det dybeste fald har tallet ved prikken. Stregen ved 10 % under nul er grænsen for de søjler.`
+ : `${deep.length} søjler mellem kurven og årstallene er de dybeste episoder. Højden er dybden, bredden er tiden. Tallet over søjlen er dybden.`;
  const desc = `Daglig afstand til løbende top fra ${fmtDate(rows[0].d)} til ${fmtDate(rows[rows.length - 1].d)}. Stregen ved nul er toppen. Dybeste bund ${fmtPct(trough.u)} den ${fmtDate(trough.d)}. Seneste dag ${fmtPct(last.u)}, ved ringen. ${open ? `Den tynde gule streg til højre er toppen ${fmtDate(open.peakD)}, hvor den åbne episode startede.` : ''} ${barSay} Den valgte har en lys kant. Den gule del af kurven er den episode, den valgte dag ligger i. Et klik på søjlen hopper til bunden. ${recovery ? `Ordet tilbage markerer ${fmtDate(recovery)}, hvor det dybeste fald igen nåede sin top.` : ''} Slideren vælger en dag. En cyan prik sættes på kurven, medmindre dagen allerede er den gule prik eller den gule ring.`;
  return `<svg id="uw-svg" class="uw" viewBox="0 0 ${W} ${H}" role="img" aria-labelledby="uw-title uw-desc"><title id="uw-title">Under vand</title><desc id="uw-desc">${desc}</desc>${parts.join('')}</svg>`;
  };
@@ -182,7 +196,7 @@
  const plotW = W - padL - padR;
  const xOf = v => padL + (Math.min(yMax, -v) / yMax) * plotW;
  const lanes = [-26, -16, -6, 4, 14];
- const labs = [];
+ const labeled = [];
  const dots = eps.map((e, i) => {
  const isMax = Math.abs(e.dd - sum.max) < 0.001;
  const isOpen = !e.recoveredD;
@@ -190,11 +204,27 @@
  const cy = 64 + lanes[i % lanes.length];
  const cx = xOf(e.dd);
  if (usedGate && e.dd <= -10) {
- const lab = isMax ? 'dot-lab max' : isOpen ? 'dot-lab open' : 'dot-lab';
- labs.push(`<text class="${lab}" x="${cx.toFixed(1)}" y="${(cy - 11).toFixed(1)}" text-anchor="middle">${fmtPct(e.dd, 1)}</text>`);
+ labeled.push({ cx, cy, text: fmtPct(e.dd, 1), lab: isMax ? 'dot-lab max' : isOpen ? 'dot-lab open' : 'dot-lab' });
  }
  return `<circle class="${cls}" cx="${cx.toFixed(1)}" cy="${cy}" r="${isMax || isOpen ? 4 : 3.1}"><title>${fmtDate(e.peakD)} til ${fmtDate(e.troughD)}: ${fmtPct(e.dd)}</title></circle>`;
  });
+ const placed = [];
+ for (const it of labeled) {
+ let x = it.cx, y = it.cy - 12, anchor = 'middle';
+ const near = placed.find((o) => Math.abs(o.cx - it.cx) < 46);
+ if (near) {
+ const goLeft = it.cx <= near.cx;
+ if (goLeft) {
+ x = it.cx - 7; y = it.cy - 3; anchor = 'end';
+ near.x = near.cx + 7; near.y = near.cy - 3; near.anchor = 'start';
+ } else {
+ near.x = near.cx - 7; near.y = near.cy - 3; near.anchor = 'end';
+ x = it.cx + 7; y = it.cy - 3; anchor = 'start';
+ }
+ }
+ placed.push({ ...it, x, y, anchor });
+ }
+ const labs = placed.map((p) => `<text class="${p.lab}" x="${p.x.toFixed(1)}" y="${p.y.toFixed(1)}" text-anchor="${p.anchor}">${p.text}</text>`);
  const medX = xOf(sum.median).toFixed(1);
  const meanX = xOf(sum.mean).toFixed(1);
  const gateX = usedGate && yMax >= 10 ? xOf(-10).toFixed(1) : null;
@@ -254,12 +284,17 @@
  ? `Lige nu, pr. ${fmtDate(rows[rows.length - 1].d)}, ligger serien ${fmtPct(nowU)} under toppen fra ${fmtDate(open.peakD)}. Bund i den episode var ${fmtPct(open.dd)} den ${fmtDate(open.troughD)}.`
  : '';
  const depthCap = `Hver prik er ét fald fra top til bund. ${eps.length} i alt. Gul prik er det dybeste fald.${open ? ' Hul gul prik er den åbne episode.' : ''} Median og middel står under aksen.${usedGate ? ' Stregen ved 10 % under nul er den samme grænse som på kurven. Prikker til højre for den har tal og står i listen.' : ''}`;
-
+ const longest = deep.length ? deep.reduce((a, b) => (spanDays(a) >= spanDays(b) ? a : b)) : null;
+ const longDays = longest ? spanDays(longest) : 0;
+ const longNote = longest && !longest.recoveredD ? 'stadig åben' : 'fra top til genopretning';
+ const priip = meta?.funds?.[fund.id]?.priip;
+ const sriLine = priip ? `<p class="src">Risikoindikator (SRI) ${priip.risk_class} af ${priip.risk_scale_max} ifølge KID. Gælder fonden som helhed, ikke det enkelte fald. <a href="${priip.url}">Læs KID ↗</a></p>` : '';
  main.innerHTML = `
  <a class="back" href="index.html?view=fonden&fund=${fundId}">← Fonden</a>
- <p class="eyebrow">FONDAFKAST · DRAWDOWN</p>
- <h1>Drawdown · ${fund.short}</h1>
+ <p class="eyebrow">FONDAFKAST · FALD FRA TOP</p>
+ <h1>Fald fra top · ${fund.short}</h1>
  <p class="lede">Fald fra top i fondens totalafkast-serie (NAV total). Fondniveau. Ikke enkeltaktier.</p>
+ ${sriLine}
  <div class="hero-stat">
  <div>
  <p class="kicker">Dybeste fald fra top</p>
@@ -274,7 +309,13 @@
  </div>
  ${anno ? `<p class="anno">${anno}</p>` : ''}
  <h2 class="h-section">Under vand</h2>
- <figure class="figure">${underwater()}<figcaption><p>0 % er på toppen. Kurven er afstanden til den løbende top, dag for dag.</p><ul class="uw-key"><li><i class="k-zero" aria-hidden="true"></i>0 % er toppen</li><li><i class="k-dot" aria-hidden="true"></i>Dybeste bund</li><li><i class="k-ring" aria-hidden="true"></i>Seneste dag</li><li><i class="k-pick" aria-hidden="true"></i>Valgt dag</li><li><i class="k-ep" aria-hidden="true"></i>Valgt episode</li>${usedGate ? '<li><i class="k-gate" aria-hidden="true"></i>10 % under nul</li>' : ''}<li><i class="k-span" aria-hidden="true"></i><i class="k-span open" aria-hidden="true"></i>Højde er dybde. Gul er åben</li></ul><p>Bredden er tiden. Den gule del af kurven er den episode, den valgte dag ligger i. Et klik på søjlen hopper til bunden.${open ? ' Ordet top er starten på den åbne episode.' : ''}${recovery ? ' Ordet tilbage er dagen, det dybeste fald nåede sin top igen.' : ''}</p></figcaption><div class="uw-scrub" style="--uw-pad:${(padL / W * 100).toFixed(3)}%;--uw-plot:${((W - padL - padR) / W * 100).toFixed(3)}%"><p id="uw-read" aria-live="polite">${fmtDate(uw[uw.length - 1].d)}: ${fmtPct(uw[uw.length - 1].u)} under den løbende top.</p><label class="sr-only" for="uw-slider">Vælg dag i serien</label><input id="uw-slider" type="range" min="0" max="${uw.length - 1}" value="${uw.length - 1}" aria-valuemin="0" aria-valuemax="${uw.length - 1}" aria-valuetext="${fmtDate(uw[uw.length - 1].d)}: ${fmtPct(uw[uw.length - 1].u)} under den løbende top."></div></figure>
+ <figure class="figure">${underwater()}<figcaption><p>0 % er på toppen. Kurven er afstanden til den løbende top, dag for dag.</p><ul class="uw-key"><li><i class="k-zero" aria-hidden="true"></i>0 % er toppen</li><li><i class="k-dot" aria-hidden="true"></i>Dybeste bund</li><li><i class="k-ring" aria-hidden="true"></i>Seneste dag</li><li><i class="k-pick" aria-hidden="true"></i>Valgt dag</li><li><i class="k-ep" aria-hidden="true"></i>Valgt episode</li>${usedGate ? '<li><i class="k-gate" aria-hidden="true"></i>10 % under nul</li>' : ''}<li><i class="k-span" aria-hidden="true"></i><i class="k-span open" aria-hidden="true"></i>Højde er dybde. Gul er åben</li></ul><details class="more"><summary>Sådan læser du grafen</summary><p>Bredden er tiden. Den gule del af kurven er den episode, den valgte dag ligger i. Et klik på søjlen hopper til bunden.${open ? ' Ordet top er starten på den åbne episode.' : ''}${recovery ? ' Ordet tilbage er dagen, det dybeste fald nåede sin top igen.' : ''}</p></details></figcaption><div class="uw-scrub" style="--uw-pad:${(padL / W * 100).toFixed(3)}%;--uw-plot:${((W - padL - padR) / W * 100).toFixed(3)}%"><p id="uw-read" aria-live="polite">${fmtDate(uw[uw.length - 1].d)}: ${fmtPct(uw[uw.length - 1].u)} under den løbende top.</p><label class="sr-only" for="uw-slider">Vælg dag i serien</label><input id="uw-slider" type="range" min="0" max="${uw.length - 1}" value="${uw.length - 1}" aria-valuemin="0" aria-valuemax="${uw.length - 1}" aria-valuetext="${fmtDate(uw[uw.length - 1].d)}: ${fmtPct(uw[uw.length - 1].u)} under den løbende top."></div></figure>
+ <ul class="stat-strip" aria-label="Nøgletal under grafen">
+ <li class="now"><span>Nu under vand</span><strong>${fmtPct(nowU)}</strong><small>pr. ${fmtDate(rows[rows.length - 1].d)}</small></li>
+ <li><span>Dybe episoder</span><strong>${deep.length}</strong><small>${usedGate ? 'dybere end 10 %' : 'de dybeste'}</small></li>
+ <li><span>Længste</span><strong>${longDays} dage</strong><small>${longNote}</small></li>
+ </ul>
+ <p class="share-row"><button type="button" class="outline-btn" id="share-chart">Del grafen</button><span id="share-note" class="src" hidden></span></p>
  <h2 class="h-section">Hvor dybe er faldene?</h2>
  <figure class="figure plain">${depthPlot()}<figcaption>${depthCap}</figcaption></figure>
  <h2 class="h-section">De dybe episoder</h2>
@@ -284,7 +325,7 @@
  <div class="year-rail">${yearCells}</div>
  <p class="src">${yearLine}${openYear && openYear !== deepYear ? ` ${openYear} er året, serien stadig ligger under vand.` : ''} Søjlen er årets afkast.</p>
  <p class="src">ÅTD er et delår og afventer Fundmarket-godkendelse.</p>
- <p class="link-row"><a href="periode.html?fund=${fundId}&year=YTD">År til dato →</a> · <a href="sammenlign.html">Sammenlign andelsklasser →</a> · <a href="om-data.html#g-drawdown">Ordliste: drawdown</a></p>
+ <p class="link-row"><a href="periode.html?fund=${fundId}&year=YTD">År til dato →</a> · <a href="sammenlign.html">Sammenlign andelsklasser →</a> · <a href="om-data.html#g-drawdown">Ordliste: fald fra top</a></p>
  <p class="src">Middel og median er over episoder fra top til bund. De er ikke et gennemsnit af hver dag under vand. Max er det samme tal som største fald på Fonden.</p>
  <p class="warn">${WARN_HIST}</p>`;
  const svg = document.getElementById('uw-svg');
@@ -394,6 +435,30 @@
  });
  });
  show(uw.length - 1);
+ const shareBtn = document.getElementById('share-chart');
+ const shareNote = document.getElementById('share-note');
+ shareBtn?.addEventListener('click', async () => {
+ const text = `Fald fra top, ${fund.short}. Dybeste fald ${fmtPct(sum.max)} fra ${fmtDate(dd.peakD)} til ${fmtDate(dd.troughD)}. ${location.href}\nHistorisk afkast er ikke en pålidelig indikator for fremtidigt afkast.`;
+ let ok = false;
+ try {
+ await navigator.clipboard.writeText(text);
+ ok = true;
+ } catch {
+ const ta = document.createElement('textarea');
+ ta.value = text;
+ ta.setAttribute('readonly', '');
+ ta.style.position = 'fixed';
+ ta.style.left = '-999px';
+ document.body.append(ta);
+ ta.select();
+ try { ok = document.execCommand('copy'); } catch { ok = false; }
+ ta.remove();
+ }
+ if (shareNote) {
+ shareNote.hidden = false;
+ shareNote.textContent = ok ? 'Teksten er kopieret.' : text;
+ }
+ });
  }
  </script>
 </body>

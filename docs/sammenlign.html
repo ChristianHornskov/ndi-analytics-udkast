@@ -28,11 +28,13 @@
  </header>
  <main id="main"><p style="color:var(--muted)">Henter…</p><p class="link-row"><a href="drawdown.html">Drawdown (PMINDI) →</a> · <a href="vaerdikaeder.html">Værdikæder →</a></p>
 </main>
- <footer class="site-footer">
- <p class="eyebrow" style="margin-bottom:4px">Markedsføringsmateriale</p><p>Udkast / noindex. Eksponering, ikke anbefaling.</p><p data-kid-footer></p></footer>
+ <footer class="site-footer"><p><strong>Markedsføringsmateriale.</strong> Læs <a href="https://fundmarket.dk/wp-content/uploads/Faellesprospekt-for-afdelinger-og-andelsklasser-i-Investeringsforeningen-Portfoliomanager-opdateret-24.10.2025.pdf" rel="noopener" target="_blank">prospektet ↗</a> og KID for <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm140b" rel="noopener" target="_blank">PMINDI ↗</a> eller <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm145b" rel="noopener" target="_blank">PMINDIAKK ↗</a>, før du træffer en endelig investeringsbeslutning.</p><p>Udkast / noindex. Eksponering, ikke anbefaling. Du kan tabe penge.</p><p data-kid-footer></p></footer>
  <script type="module">
  import { loadAll, fundById, lastNav, WARN_HIST, fmtDate, daTheme, fillKidFooter } from './js/data.js';
- const { portfolio } = await loadAll();
+ const [{ portfolio }, facts] = await Promise.all([
+ loadAll(),
+ fetch('data/fund-facts.json').then((r) => (r.ok ? r.json() : null)).catch(() => null)
+ ]);
  fillKidFooter();
  const a = fundById(portfolio, 'pmindi');
  const b = fundById(portfolio, 'pmindiakk');
@@ -57,10 +59,16 @@
  <span class="cmp-pair">${bar(ta[k], 'a', 'PMINDI')}${bar(tb[k], 'b', 'PMINDIAKK')}</span></li>`).join('');
  const navA = lastNav(a.data), navB = lastNav(b.data);
  const firstA = a.data?.[0]?.d || a.inception, firstB = b.data?.[0]?.d || b.inception;
+ const navCell = (nav) => (nav ? `${n2(nav.price)} <small>(${fmtDate(nav.d)})</small>` : '-');
  // AKK-gate: afkast først efter 12 måneders historik fra første NAV
  const gate = new Date(firstB); gate.setFullYear(gate.getFullYear() + 1);
  const gateIso = gate.toISOString().slice(0, 10);
  const posAsOf = fmtDate(a.positionsAsOf || portfolio.asOf);
+ const riyLine = (id) => {
+ const n = facts?.classes?.[id]?.costs?.kidRiy5y;
+ if (n == null) return '';
+ return `<div><dt>KID, 5 år</dt><dd>ca. ${n.toFixed(2).replace('.', ',')} %<small class="cmp-from">årlig omkostning i KID. Før kurtage og depot.</small></dd></div>`;
+ };
  document.getElementById('main').innerHTML = `
  <p class="eyebrow">SAMMENLIGN ANDELSKLASSER</p>
  <h1>Én portefølje, to måder at få udbyttet på</h1>
@@ -75,8 +83,9 @@
  <dl>
  <div><dt>ISIN</dt><dd>${esc(a.isin)}</dd></div>
  <div><dt>Første NAV</dt><dd>${fmtDate(firstA)}</dd></div>
- <div><dt>Seneste NAV</dt><dd>${navA ? n2(navA.price) : '-'} <small>(${fmtDate(navA?.d)})</small></dd></div>
+ <div><dt>Seneste NAV</dt><dd>${navCell(navA)}</dd></div>
  <div><dt>Afkast</dt><dd>Vises på Fonden</dd></div>
+ ${riyLine('pmindi')}
  </dl>
  <a class="outline-btn" href="index.html?view=fonden&fund=pmindi">Se PMINDI →</a>
  </section>
@@ -87,9 +96,10 @@
  <p class="cmp-flow">Udbytte <span aria-hidden="true">→</span> <strong>geninvesteres i fonden</strong></p>
  <dl>
  <div><dt>ISIN</dt><dd>${esc(b.isin)}</dd></div>
- <div><dt>Første NAV</dt><dd>${fmtDate(firstB)}</dd></div>
- <div><dt>Seneste NAV</dt><dd>${navB ? n2(navB.price) : '-'} <small>(${fmtDate(navB?.d)})</small></dd></div>
- <div><dt>Afkast</dt><dd><strong>Vises efter 12 måneder</strong><small class="cmp-from">fra ${fmtDate(gateIso)}</small></dd></div>
+ <div><dt>${navB ? 'Første NAV' : 'Klassen startede'}</dt><dd>${fmtDate(firstB)}</dd></div>
+ <div><dt>Seneste NAV</dt><dd>${navCell(navB)}</dd></div>
+ <div><dt>Afkast</dt><dd><strong>Ny andelsklasse</strong><small class="cmp-from">kurs vises efter 12 måneder, fra ${fmtDate(gateIso)}</small></dd></div>
+ ${riyLine('pmindiakk')}
  </dl>
  <a class="outline-btn" href="index.html?view=fonden&fund=pmindiakk">Se PMINDIAKK →</a>
  </section>
@@ -99,8 +109,8 @@
  <h2 class="h-section" id="tl-h">Tidslinje</h2>
  <ol class="tl">
  <li><time datetime="${firstA}">${fmtDate(firstA)}</time><span>PMINDI: første NAV. Herfra regnes "siden start".</span></li>
- <li><time datetime="${firstB}">${fmtDate(firstB)}</time><span>PMINDIAKK: første NAV. Samme portefølje, udbyttet bliver i fonden.</span></li>
- <li class="future"><time datetime="${gateIso}">${fmtDate(gateIso)}</time><span>PMINDIAKK har 12 måneders historik. Først da vises klassens afkast.</span></li>
+ <li><time datetime="${firstB}">${fmtDate(firstB)}</time><span>PMINDIAKK starter. Samme portefølje, udbyttet bliver i fonden. Kursen vises efter 12 måneder.</span></li>
+ <li class="future"><time datetime="${gateIso}">${fmtDate(gateIso)}</time><span>Ingen NAV eller graf før den dato. Først da vises klassens afkast.</span></li>
  </ol>
  </section>
 

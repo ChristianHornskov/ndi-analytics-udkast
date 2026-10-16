@@ -162,6 +162,28 @@ Temasøjlerne blev rundet til hele procent af den længste søjle. Quantum var 0
 
 Sliderens knap lå i kanten af kortet, mens kurvens første og sidste dag står inde i plottet. På 1100 var hullet omkring 70 px ved starten og over 100 px ved slutningen. Knappen følger nu plottets bredde. Ved 22. sep. 2023 og ved 14. okt. 2026 møder den stregen, ved 1280, 375 og 320. Et klik på −35,8 % sætter udlæsningen på 8. apr. 2025. Der kan weekender skubbe knappen omkring 5 px, stadig inden for knappen. Ingen sidescroll. Ingen konsolfejl. PMINDIAKK har ingen slider og ingen procent.
 
+### Update · tal over søjlerne · 2026-10-16 ~03:06 CEST
+
+−26,6 % og −26,8 % er næsten lige høje. Tallet står nu over de søjler, der ikke er det dybeste fald. −35,8 % beholder −36 % ved prikken. Tallene rammer ikke hinanden, prikken, "nu" eller årstallene, ved 1280, 375 og 320. Et klik på −26,6 % sætter udlæsningen på 30. mar. 2026. Den åbne er gul. Ingen sidescroll. Ingen konsolfejl.
+
+### Update · nøgletal under grafen · 2026-10-16 ~03:25 CEST
+
+Tre kort under kurven, ikke et panel. Nu under vand er −23,4 % pr. 14. okt. 2026, med gul kant. Der er 4 episoder dybere end 10 %. Den længste er 208 dage, fra top til genopretning. Et klik på søjlen −26,6 % sætter udlæsningen på 30. mar. 2026. «Tilbage» og «top» rammer ikke «nu −23 %». Den lange tekst ligger i «Sådan læser du grafen», lukket. Overskriften er «Fald fra top». 2026 har forbeholdet om Fundmarket-godkendelse. SRI 5 af 7 og markedsføringslinjen står på siden. Ingen tekst i svg'en rammer en anden. Ingen sidescroll ved 1280, 375 og 320. Ingen konsolfejl.
+
+Embed under grafen: totalafkast +104,8 % er det høje kort. Ved siden af står +26,4 % og år til dato +4,0 % med forbeholdet. Største fald på hele perioden er −35,8 %, bund 8. apr. 2025. På år til dato er største fald −26,8 %, bund 29. jul. 2026, og linjen over kortene siger, at år til dato afventer godkendelse. Det rosa tal på den kurve er stadig −10,0 %. PMINDIAKK har streger og ingen procent. Del grafen viser sætningen, når udklipsholderen er lukket. Sammenlign har ca. 2,79 % og ca. 2,85 % i hvert kort. På 375 er «Også i udkastet» 14 chips à 44 px, og siden scroller ikke sidelæns. Ingen konsolfejl.
+
+### Update · tom AKK-serie · 2026-10-16 ~03:30 CEST
+
+PMINDIAKK har ingen kurspunkter i data. Embed loader stadig PMINDI. Klassen viser ét gult kort, «Kurs og afkast», med en streg og sætningen om 12 måneder. De tre andre kort er skjult. Grafen er skjult. Teksten siger ingen NAV eller graf før 5. december 2026. Linket hedder «Fald fra top vises efter 12 måneder». Ingen procent. På PMINDI er de fire kort tilbage: +104,8 %, +26,4 %, +4,0 % med delår-forbeholdet, og −35,8 %. På år til dato er største fald −26,8 %. Drawdown AKK har ingen procent og samme dato. Sammenlign siger «Klassen startede 5. dec. 2025», seneste NAV er en streg, og KID 5 år er ca. 2,85 %. «til dato» på 2026-søjlen er gul. Ingen tekst i de to svg'er rammer en anden, målt hver for sig. Ingen sidescroll. Ingen konsolfejl.
+
+### Update · nøgle i to kolonner · 2026-10-16 ~03:41 CEST
+
+På 390 px er nøglen under kurven et gitter, to og to. Sidste linje, «Højde er dybde. Gul er åben», går hele vejen og er én linje. På 1280 er nøglen stadig én række. «nu» står over «−23 %», med luft imellem, og rammer ikke «top» eller søjletallene. Ingen tekst uden for svg'en. Ingen sidescroll. Ingen konsolfejl i den måling.
+
+### Update · to næsten lige dybe prikker · 2026-10-16 ~03:44 CEST
+
+−26,6 % og −26,8 % ligger to pixel fra hinanden på aksen. Tallene stod i samme søjle, så det nederste læstes som om det hørte til den øverste prik. Nu ender −26,6 % til venstre for sin prik, og −26,8 % starter til højre for den åbne. −16,7 % og −35,8 % bliver over deres prikker. Ingen tal rammer hinanden eller kanten af svg'en, ved 390. Ingen sidescroll.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.

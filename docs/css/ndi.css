@@ -652,6 +652,8 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
 .figure .uw-open{stroke:var(--yellow);stroke-width:1.25;vector-effect:non-scaling-stroke;opacity:.9;pointer-events:none}
 .figure .uw-gate{stroke:var(--brand);stroke-width:2;vector-effect:non-scaling-stroke;pointer-events:none}
 .figure text.tick.uw-gate{fill:var(--brand)}
+.figure .uw-span-lab{fill:var(--text);font-size:10px;pointer-events:none}
+.figure .uw-span-lab.open{fill:var(--yellow)}
 .figure .uw-span{fill:var(--brand);opacity:.92;pointer-events:none}
 .figure .uw-span.open{fill:var(--yellow);opacity:1}
 .figure .uw-span.on{stroke:var(--text);stroke-width:1.25;vector-effect:non-scaling-stroke}
@@ -721,6 +723,19 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
 .year-rail .yr-y{font-size:12px;color:var(--muted)}
 .year-rail .yr-r{font-size:16px;font-variant-numeric:tabular-nums}
 .year-rail .yr-note{font-size:11px;color:var(--faint)}
+.year-rail a.yr-open .yr-note{color:var(--yellow)}
+.stat-strip{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:10px;list-style:none;margin:2px 0 8px;padding:0}
+.stat-strip li{background:var(--ink);border-radius:12px;padding:12px 14px 11px;border-top:3px solid var(--brand);min-width:0}
+.stat-strip li.now{border-top-color:var(--yellow);background:linear-gradient(180deg,color-mix(in srgb,var(--yellow) 12%,var(--ink)),var(--ink) 46%)}
+.stat-strip li:nth-child(3){border-top-color:var(--cyan)}
+.stat-strip span{display:block;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.stat-strip strong{display:block;margin-top:6px;font-size:26px;font-weight:650;letter-spacing:-.5px;color:var(--text);font-variant-numeric:tabular-nums;line-height:1.05}
+.stat-strip li.now strong{color:var(--yellow);font-size:clamp(28px,4vw,34px)}
+.stat-strip small{display:block;margin-top:4px;font-size:12px;color:var(--faint);line-height:1.35;font-weight:400}
+.share-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin:0 0 16px}
+.share-row .outline-btn{min-height:44px}
+.share-row .src{margin:0;overflow-wrap:anywhere}
+.figure details.more summary{min-height:44px;display:flex;align-items:center}
 .cmp-time,.cmp-share{margin:6px 0 4px}
 .cmp-sharebar{display:flex;height:10px;border-radius:99px;overflow:hidden;background:var(--ink);border:1px solid var(--line);margin:8px 0;max-width:420px}
 .cmp-sharebar .a{background:var(--brand)}
@@ -731,6 +746,9 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
   .year-rail{grid-template-columns:1fr 1fr}
   .ep-jump{grid-template-columns:1fr;gap:2px}
   .hero-stat .num{font-size:46px}
+  .stat-strip{grid-template-columns:1fr}
+  .uw-key{display:grid;grid-template-columns:1fr 1fr;gap:8px 12px}
+  .uw-key li:last-child{grid-column:1 / -1}
 }
 @media print{
   .figure{background:#fff;border-color:#ccc;break-inside:avoid}
@@ -738,7 +756,7 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
   .figure figcaption,.hero-stat .when,.ep-ledger .meta{color:#333}
   .hero-stat .num,.ep-ledger .depth{color:#6d3038}
   .ep-ledger li.open .depth{color:#111}
-  .figure text,.figure .tick,.figure .uw-label,.figure .dot-lab{fill:#333}
+  .figure text,.figure .tick,.figure .uw-label,.figure .uw-span-lab,.figure .dot-lab{fill:#333}
   .figure .uw-plate{fill:#fff}
   .figure .uw-water{stroke:#111}
   .figure text.tick.uw-zero{fill:#111}
@@ -755,6 +773,9 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
   .year-rail a.yr-deep{border-top-color:#111}
   .year-rail a.yr-open{border-top-color:#1d4e56}
   .year-rail .yr-open .yr-mark{color:#1d4e56}
+  .year-rail .yr-open .yr-note{color:#333}
+  .stat-strip li{background:#fff;border:1px solid #ccc}
+  .stat-strip strong,.stat-strip li.now strong{color:#111}
 }
 
 /* UX-inspiration top5: tabular nums + calm motion + as-of */
@@ -818,5 +839,43 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
   }
   .note-fundmarket {
     font-size: 12px;
+  }
+}
+
+/* PERSONA mobil: «Også i udkastet» er chips, ikke én linje med prikker. */
+@media (max-width: 640px) {
+  .more-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    font-size: 0;
+    line-height: 1.2;
+    margin: 12px 0 8px;
+  }
+  .more-links::before {
+    content: "Også i udkastet";
+    flex-basis: 100%;
+    font-size: 12px;
+    color: var(--faint);
+    line-height: 1.4;
+  }
+  .more-links a,
+  .more-links .link-btn {
+    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 6px 12px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: #0b171d;
+    color: var(--text);
+    text-decoration: none;
+  }
+  .more-links a:hover,
+  .more-links .link-btn:hover {
+    border-color: var(--brand);
+    color: var(--text);
   }
 }
