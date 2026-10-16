@@ -214,6 +214,12 @@ Embed på 390 og 320: totalafkast i fuld bredde, +26,4 % og år til dato side om
 
 Varighedsbjælken under de fire episoder bruger samme skala. 208 dage er den længste. 87 dage er under halvdelen. 189 dage ligger tæt på 208, fordi faldene er det. Den åbne er gul. Et klik på −35,8 % sætter stadig udlæsningen på 8. apr. 2025. Ingen konsolfejl.
 
+### Update · hel bjælke og chips · 2026-10-16 ~04:09 CEST
+
+320 af 320 selskaber i PMINDIAKK findes også i PMINDI. Bjælken er hel, 18 px høj, og fyldet går fra kant til kant. Teksten siger «I begge. Hele bjælken». PMINDI har stadig 345 positioner i noten under. AKK-kortet har ca. 2,85 % som KID-omkostning og ingen afkastprocent. Linket hedder «Fald fra top (PMINDI)».
+
+På 390 og 320 er linkrækkerne på sammenlign og under årssøjlerne chips på 44 px. Prikkerne mellem linkene er væk. På 1280 er de stadig en linje. Ingen sidescroll. Ingen konsolfejl.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.

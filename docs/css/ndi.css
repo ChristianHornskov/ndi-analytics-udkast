@@ -748,7 +748,8 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
 .share-row .src{margin:0;overflow-wrap:anywhere}
 .figure details.more summary{min-height:44px;display:flex;align-items:center}
 .cmp-time,.cmp-share{margin:6px 0 4px}
-.cmp-sharebar{display:flex;height:10px;border-radius:99px;overflow:hidden;background:var(--ink);border:1px solid var(--line);margin:8px 0;max-width:420px}
+.cmp-sharebar{display:flex;height:18px;border-radius:99px;overflow:hidden;background:var(--ink);border:1px solid var(--line);margin:8px 0 0;max-width:640px}
+.cmp-sharebar span{min-width:0}
 .cmp-sharebar .a{background:var(--brand)}
 .cmp-sharebar .b{background:var(--cyan)}
 .cmp-links{margin:16px 0}
@@ -895,4 +896,18 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
     border-color: var(--brand);
     color: var(--text);
   }
+  .chip-links{gap:8px;font-size:0;line-height:1.2}
+  .chip-links a{
+    font-size:13px;
+    display:inline-flex;
+    align-items:center;
+    min-height:44px;
+    padding:6px 12px;
+    border:1px solid var(--line);
+    border-radius:999px;
+    background:#0b171d;
+    color:var(--text);
+    text-decoration:none;
+  }
+  .chip-links a:hover{border-color:var(--brand);color:var(--text)}
 }
