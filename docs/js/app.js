@@ -2,7 +2,7 @@ import {
   loadAll, fundById, slicePeriod, cagr, periodReturn, ytdReturn,
   monthlyReturns, maxDrawdown, fmtPct, fmtDate, daTheme, daMat, daMatPlain, WARN_HIST,
   MATURITY_LABELS, THEME_LABELS, calendarYearReturns, lastNav, publicTags, tagsFor, fillKidFooter, themeProposals,
-  searchPosition, themeShift, themeShifts, shiftLabel, shiftFromLabel, themeDoubt, doubtAltLabel, warrantParent,
+  searchPosition, themeShift, themeShifts, shiftLabel, shiftFromLabel, themeDoubt, doubtAltLabel, warrantParent, displayName,
 } from './data.js';
 import { renderChart } from './chart.js';
 
@@ -610,7 +610,7 @@ function filterPositions(fund, { ignoreShift = false, ignoreDoubt = false } = {}
 // Stabil tie-break på navn, så rækkefølgen ikke hopper mellem visninger.
 function sortPositions(list, sort, dirName) {
   const dir = dirName === 'asc' ? 1 : -1;
-  const byName = (a, b) => (a.name || '').localeCompare(b.name || '', 'da');
+  const byName = (a, b) => displayName(a).localeCompare(displayName(b), 'da');
   const w = (p) => (typeof p.weight === 'number' ? p.weight : 0);
   const cmp = {
     name: (a, b) => dir * byName(a, b),
@@ -743,7 +743,7 @@ function positionsTable(list, fund) {
   hscroll(`<div class="table-wrap"><table class="data screener-table"><thead><tr>
     ${th('name','Navn')}${th('weight','Vægt %')}${th('theme','Tema')}
   </tr></thead><tbody>${list.map((p, i) => `${themeGroupRow(list, i)}<tr>
-    <td><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}">${p.name}</a>${hasLens(p) ? ` <a class="lens-mark" href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}#ndi-linse" title="NDI’s fem spørgsmål om selskabet (udkast)" aria-label="NDI-perspektiv for ${p.name}">◉</a>` : ''} ${weightSpark(p.isin, fund.id)}<br><small style="color:var(--muted)">${p.isin}</small>${warrantNote(p, fund)}${hitNote(p)}${mobileThemeLine(p, fund)}</td>
+    <td><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}" title="Beholdningsnavn: ${p.name}">${displayName(p)}</a>${hasLens(p) ? ` <a class="lens-mark" href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}#ndi-linse" title="NDI’s fem spørgsmål om selskabet (udkast)" aria-label="NDI-perspektiv for ${p.name}">◉</a>` : ''} ${weightSpark(p.isin, fund.id)}<br><small style="color:var(--muted)">${p.isin}</small>${warrantNote(p, fund)}${hitNote(p)}${mobileThemeLine(p, fund)}</td>
     <td>${(p.weight ?? 0).toFixed(2).replace('.', ',')}</td>
     <td>${tagsFor(p, DATA.multiTags).map((t) => `<a class="tag" href="tema.html?slug=${encodeURIComponent(t)}&fund=${fund.id}">${daTheme(t)}</a>`).join(' ')}${forslagCell(p)}</td>
   </tr>`).join('')}</tbody></table></div>`, 'Rul til siden for flere kolonner.') +
