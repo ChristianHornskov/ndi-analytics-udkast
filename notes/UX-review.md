@@ -366,3 +366,46 @@ Hele lane-C-fladen ved 375 px: ideer, kort, om-data, invester, risici, ndi-persp
 - app.js nøgletal hedder stadig «Max drawdown». Resten af sitet siger «Største fald (fra top)».
 ### Test
 - 8763, 375/1280: risici, ideer, om-data, kort, lær/risikoklasse: 0 konsolfejl, ingen h-overflow. Screenshots af `#tal` og de fem Idéer-former gennemset på 375.
+
+## 02:15 CEST lane-C checkpoint (Claude) · NDI-perspektiv foldet sammen + KID på alle lær-sider
+- **ndi-perspektiv (UX SHOULD cyklus 19–22: «ca. 192.000 tegn, 53 × afventer, fold sammen»):** Én lang tabel med 310 rækker er erstattet af 12 temagrupper som `<details>` med antal, en kort sætning i klart dansk pr. tema, temachips med ankre (`#lg-chips` osv. åbner gruppen) og et søgefelt, der filtrerer på navn og linse-tekst og åbner de grupper, der passer. Hvert selskab viser navn, tema-mærke (stiplet = forslag), «Hvad ejer man?» og «Plads i værdikæden». Forklaringer og «Hold øje med» ligger under «Hvorfor ejer vi den? Mere fra linsen». Livscyklus («Ikke klassificeret» ×309) er udeladt pr. række og forklaret én gang. Synlig tekst: ca. 2.500 tegn ved åbning (før ca. 192.000), «afventer» ×2 (før 53).
+- **Persona-privat:** «Vi vælger udviklingen, ikke vinderen» står i båndet øverst og linker til «Hvorfor ejer vi den?» i *Sådan tænker vi*.
+- **Compliance SHOULD (KID-link mangler i renderet tekst):** ndi-perspektiv og de 7 lær-sider uden KID (faq-mangler-aktie, forsinket-beholdning, hvorfor-mange-aktier, livscyklus, pe-forklaring, udbytte-vs-akk, variance-drag) har nu linjen «Generel information, ikke rådgivning. Før du investerer, så læs dokumentet med central information (KID) …» med direkte Fundmarket-links til PMINDI og PMINDIAKK. Den officielle titel bruges (jf. SHOULD om «Central Information Dokument»).
+- Test (Playwright, lokal server): 17 sider × 375/1280: 0 konsolfejl, 0 h-overflow, én h1, KID i renderet tekst overalt. Søgning «kobber» → 7 selskaber. `#lg-chips` åbner gruppen.
+- **Åbent (ikke mine filer):** vaerdikaeder, drawdown, temaer, nyhedsarkiv, periode og selskaber mangler stadig KID-link. Selskab: «AI-udkast» over tomt felt.
+
+## 02:22 CEST lane-C checkpoint (Claude) · meta description på 21 sider + FAQ 23 svar
+- UX Nice (cyklus 24, «ingen meta description på 19/20 undersider»): ideer, kort, om-data, invester, risici, ndi-perspektiv og alle 15 lær-sider har nu `<meta name="description">` i almindeligt dansk og uden procenttal. `scripts/og-meta.py` er kørt, så og:description følger med (kun mine filer er committet). Variance-drag-preview siger nu møntspillet i kroner (100 → 150 → 90 kr.), ikke «+5 %».
+- UX SHOULD (cyklus 24, «dyb side»/«ÅTD»): `kort.html` «År / ÅTD dyb side» → «Afkast pr. kalenderår · Ét år ad gangen, fra 2025. Delår er mærket.», linker til `periode.html?year=2025` i stedet for YTD.
+- Compliance MUST 10 i mine filer: ordlisten `#g-ytd` siger nu, at ÅTD er et delår og ikke kan sammenlignes direkte med hele år. FAQ «Hvorfor er 2023 ikke et helt år?». FAQ-svaret om 3 måneder nævner ikke længere «år til dato» som noget, fonden fremhæver.
+- PERSONA-privat (#1 omkostninger, #6 referencepunkt, #3 hvem) + FO MUST 2 (skat): fem nye/omskrevne korte svar i FAQ. Skattesvaret er bevidst generelt (ingen skatteregler, «spørg din bank, revisor eller rådgiver»).
+- Test: 10 sider × 375/1280: 0 konsolfejl, 0 h-overflow, én h1. FAQ-søgning «sammenligne» giver 8 træf.
+
+## 02:24 CEST lane-C checkpoint (Claude) · footer med markedsføringsmærkning på 21 sider
+- Compliance MUST 1 (blocker, cyklus 3 → 25): lane-C-siderne havde slet ingen footer. Nu har alle 21 en `site-footer`: **«Markedsføringsmateriale.»** + direkte links til fællesprospektet og begge KID + «Udkast / noindex … Du kan tabe en del af eller hele din investering» + link til ordlisten.
+- Invester trin 1 linker direkte til prospektet (før: «Prospektlink findes på faktasiden»).
+- Tjek af UX MUST «tre 4.-trin» på invester: lukket på lane-C (trin 1–5, ét «4. Køb og omkostninger» med KID-tallet).
+- Jargon-tjek på lane-C-sider: 0 «Level 1», «screener», «multi-tag», «Max DD». «max drawdown» kun i parentes efter «Største fald» på læs-grafen.
+- Test 375/1280 × 21 sider: 0 konsolfejl, 0 overflow, én h1, footer 12px med mærkningen.
+
+## 02:25 CEST lane-C checkpoint (Claude) · ordliste 131: hvem gør hvad + markedsføring + kalenderår
+- **Ordlisten 124 → 131** (grupper 29 · 28 · 39 · 35): Investeringsforening og afdeling, Forvaltningsselskab (IFS), Depotbank (adskilt fra dit eget depot), Investeringsrådgiver (NDIIR), Markedsføringsmateriale (footer-ordet på alle lane-C-sider), Generel information (modsat personlig rådgivning) og Kalenderår (hele år 2024–2025, 2023 og indeværende år er delår, jf. compliance MUST 10).
+- **Fejl rettet:** «Fundmarket» stod som «platformen». Invester-siden siger, at Fundmarket A/S er forvaltningsselskabet. Nu passer ordlisten med det.
+- **Invester «Hvem gør hvad?»:** afdeling, forvaltningsselskab, depotbank og investeringsrådgiver linker nu til ordlisten. Bundbåndet siger «generel information» med link (persona-privat: «hvem træffer beslutningerne?»).
+- **Vidensbot/handelssprog:** lær/rebalancering gengav bogen som «tag løbende lidt gevinst, når optimismen er høj». Det er timing-sprog. Nu: «lad vægtene styre, ikke stemningen … en generel betragtning, ikke en opfordring til at handle». Grep på lane-C-sider for trade/timing/kursmål/upside/billig/dyr: kun i benægtende form («ikke et kursmål», «ikke automatisk billig»).
+- Test: om-data, invester, rebalancering, kort × 375/1280: 0 konsolfejl, 0 overflow, én h1. `#g-depotbank` åbner gruppen. Alle `om-data.html#g-…`-links på docs/ og laer/ peger på et eksisterende id (0 døde).
+
+## 02:30 CEST lane-C checkpoint (Claude) · risici: «Hvad prospektet nævner» til familiekontoret + ordliste 136
+- **PERSONA-familyoffice §7 («Risici: KID-resumé; let for FO, ingen likviditet/koncentration/modpart») og MUST 1 (governance):** ny sektion `risici.html#prospekt` med otte risikofaktorer, som fællesprospektet nævner for afdelingen (aktier, investeringsområde, selskabsspecifikke forhold, valuta, modpart, kontantindestående, værdiansættelse, bæredygtighed). De er skrevet i almindeligt dansk og hver har et link til ordlisten. Under dem står «Rammer for, hvad fonden må»: ingen derivater, intet værdipapirudlån, ingen aktive køb af unoterede aktier, min. 500 mio. kr. markedsværdi, intet benchmark (absolut afkast), høj risikoprofil og 5+ år, Jyske Bank A/S som market maker for PMINDI. Kilden står med sidetal (s. 82–84, 102–105, 128) og hentedato. Kun prospektets egne udsagn, ingen fortolkning.
+- **Ordlisten 131 → 136:** Modpartsrisiko, Absolut afkast (med «betyder ikke, at afkastet altid er positivt … du kan tabe penge»), Market maker, Afledte finansielle instrumenter, Artikel 6-afdeling. `#g-benchmark` forklarer nu *hvorfor* der ikke er et benchmark (prospektets ordlyd). Kort-siden viser 136.
+- **FAQ 24:** «Hvad må fonden ikke?» → `risici.html#prospekt`.
+- **Visuel variation:** risici har nu 14 risikokort i to grids. Ved 375 er sektionen lang (ca. 2.300 px). Hvis reviewer finder det tungt, kan den foldes som `<details>` («For dig, der vil gå i dybden»). Jeg har ikke gjort det endnu, fordi FO skal kunne finde den uden at klikke.
+- **Åbent (HANDOFF):** prospektet 24.10.2025 nævner kun kl n (PMINDI) og skriver «fokuseret portefølje». NDI/Fundmarket bør afstemme det.
+- Test (Playwright, lokal): risici, om-data, laer/faq, kort × 375/1280: 0 konsolfejl, 0 h-overflow, én h1. 8 kort i `#prospekt`. 0 døde `om-data.html#g-…`-links fra risici, invester, faq.
+
+## 02:45 CEST lane-C checkpoint (Claude) · livscyklus på dansk + «Hvor på bakken ligger vægten?» + ordliste 138
+- **Level 1-jargon (PERSONA-privat):** `laer/livscyklus.html` bruger nu danske fasenavne først: før omsætning (præ-revenue), før overskud (præ-profit), høj vækst, vækst med overskud (GARP), moden (value). Matcher Mads' egen inddeling i visionsmødet (#44: før omsætning, før overskud, overskud). Ordlistens «Modenhed» er skrevet om på samme måde. Kort: «Koncept-stub» → «Tidlig skitse, endnu ikke i brug».
+- **Ny form på ideer (`#h-lc`):** bobler på livscyklus-bakken, areal ∝ vægt. Tal regnet fra portfolio.json (PMINDI 345: 1,0 / 1,5 / 55,5 / 30,2 / 11,8 %; AKK ca. 53 / 30 / 14 %). Tydeligt mærket «FORSLAG, IKKE NDI'S VURDERING», fordi alle 345 modenheder er `maturityStatus: forslag`. Konsistent med ASML-linsen («NDI har endnu ikke sat en modenhedsgrad»). Visuel variation: første boble-/arealform på siden.
+- **Ordliste 138:** + Transaktionsomkostninger (KID-post, ≠ din kurtage), + Indeksfond og ETF (fonden er ikke en indeksfond, intet benchmark).
+- Tjek: 320/375/1280 på ideer, livscyklus, om-data, kort: scrollWidth = viewport, 0 pageerrors. Precheck OK.
+- Åbent til Christian/NDI: må den maskinelle modenhedsfordeling vises offentligt, før NDI har gennemgået den? Hvis nej, fjern `#h-lc` (én sektion + én TOC-linje).

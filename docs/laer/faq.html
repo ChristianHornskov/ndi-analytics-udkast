@@ -4,13 +4,14 @@
  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
  <meta name="robots" content="noindex,nofollow">
  <title>FAQ · NDI Analytics</title>
+ <meta name="description" content="Korte svar på de mest almindelige spørgsmål om fonden, med søgning på tværs af alle lær-artikler og ordlisten. Generel information, ikke rådgivning.">
  <link rel="stylesheet" href="../css/ndi.css">
  <!-- og:start -->
  <meta property="og:type" content="website">
  <meta property="og:site_name" content="NDI Analytics (udkast)">
  <meta property="og:locale" content="da_DK">
  <meta property="og:title" content="FAQ · NDI Analytics">
- <meta property="og:description" content="Søg på tværs af korte svar, alle lær-artikler og ordlisten. Søgningen sker i din browser. Generel information. Ikke rådgivning.">
+ <meta property="og:description" content="Korte svar på de mest almindelige spørgsmål om fonden, med søgning på tværs af alle lær-artikler og ordlisten. Generel information, ikke rådgivning.">
  <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/laer/faq.html">
  <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
  <meta property="og:image:width" content="1200">
@@ -59,6 +60,10 @@
  <div id="faq-list" class="faq-list" data-filter="Spørgsmål"></div>
  <p class="warn">Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.</p>
  </main>
+ <footer class="site-footer">
+ <p><strong>Markedsføringsmateriale.</strong> Læs <a href="https://fundmarket.dk/wp-content/uploads/Faellesprospekt-for-afdelinger-og-andelsklasser-i-Investeringsforeningen-Portfoliomanager-opdateret-24.10.2025.pdf" rel="noopener" target="_blank">prospektet ↗</a> og KID for <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm140b" rel="noopener" target="_blank">PMINDI ↗</a> eller <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm145b" rel="noopener" target="_blank">PMINDIAKK ↗</a>, før du træffer en endelig investeringsbeslutning.</p>
+ <p>Udkast / noindex. Ikke den officielle side og ingen investeringsrådgivning. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering. <a href="../om-data.html">Data og ordliste</a>.</p>
+ </footer>
  <script type="module">
  import { initFaq } from '../js/faq-search.js';
  const curated = [
@@ -69,16 +74,21 @@
  { q: 'Hvad er forskellen på PMINDI og PMINDIAKK?', a: 'PMINDI udbetaler udbytte, PMINDIAKK lader det blive i fonden. Samme strategi. Sammenlign på totalafkast.', href: 'udbytte-vs-akk.html' },
  { q: 'Hvad er en andel værd (NAV)?', a: 'Fondens formue delt på antal andele. Aktiernes kurser, valuta, udbytte og omkostninger flytter tallet. Nye penge i fonden gør den større, men ikke andelen mere værd.', href: 'indre-vaerdi.html' },
  { q: 'Hvordan investerer jeg?', a: 'Start med tre spørgsmål: Har du tid (KID anbefaler mindst 5 år)? Kan du holde til store fald undervejs? Passer en bred teknologifond til dig? Læs så KID for den andelsklasse, du vil have, og find fonden hos din bank eller platform. Ikke rådgivning.', href: '../invester.html' },
- { q: 'Hvad koster det at købe andele?', a: 'To slags omkostninger: fondens løbende omkostninger, som allerede er trukket i afkasttallene, og kurtage og spread hos din bank eller platform, når du handler. De gældende satser står i KID og hos din platform. Afkasttallene er før skat.', href: '../om-data.html#g-kurtage' },
+ { q: 'Hvad må fonden ikke?', a: 'Ifølge prospektet må fonden ikke bruge afledte finansielle instrumenter (derivater) og må ikke låne værdipapirer ud. Den må heller ikke aktivt købe unoterede aktier. Den investerer primært i børsnoterede, udenlandske aktier med en markedsværdi på mindst 500 mio. kr. Rammerne kan ændres af foreningens bestyrelse. Prospektet er det gældende dokument.', href: '../risici.html#prospekt' },
+ { q: 'Hvad koster det mig om året?', a: 'KID’et opgør de samlede årlige omkostninger til ca. 2,79 % for PMINDI og 2,85 % for PMINDIAKK, hvis du holder fonden i 5 år. Tænkt eksempel: 100.000 kr. i fonden svarer til ca. 2.790 kr. om året. Dertil kommer kurtage og eventuelt depotgebyr hos din bank eller platform. Fondens omkostninger er allerede trukket i afkasttallene. KID’et er det gældende dokument.', href: '../invester.html#koster' },
+ { q: 'Hvordan bliver afkastet beskattet?', a: 'Det afhænger af din egen situation og af, om du investerer fra frie midler, pension eller et selskab. Afkasttallene her er før skat. Siden giver ikke skatterådgivning. Spørg din bank, revisor eller rådgiver.', href: '../om-data.html#g-skat' },
  { q: 'Er temaer anbefalinger?', a: 'Nej. Et tema viser, hvilken teknologi fonden giver eksponering mod, og hvor mange selskaber der hører til. Det er ikke et råd om at købe noget.', href: '../temaer.html' },
- { q: 'Hvorfor står Tesla ikke bare som bilselskab?', a: 'Sektorlister giver hvert selskab én kasse. Her kan et selskab have flere tags og høre til flere led. Tesla har to tags (fysisk tech og energi) og står i fire led på to værdikæder.', href: '../ideer.html#h-vs' },
+ { q: 'Hvorfor står Tesla ikke bare som bilselskab?', a: 'Sektorlister giver hvert selskab én kasse. Her kan et selskab høre til flere temaer og flere led. Tesla hører til to temaer (fysisk tech og energi) og står i fire led på to værdikæder.', href: '../ideer.html#h-vs' },
  { q: 'Hvad er flodsystemet?', a: 'NDI’s billede af AI-værdikæden: efterspørgslen er vandet, flaskehalsene er dæmninger. Fem dæmninger: energi, datacentre, halvledere, cloud og modeller samt applikationer og fysisk AI. Når én flaskehals letter, flytter presset videre.', href: '../vaerdikaeder.html#kap-flod' },
  { q: 'Er det ikke meget teknologi i én fond?', a: 'Jo. Spredningen er inden for teknologi, ikke væk fra den. Flere hundrede selskaber mindsker risikoen ved det enkelte selskab, men beskytter ikke mod et fald i hele teknologisektoren.', href: '../om-data.html#g-koncentration' },
  { q: 'Hvor aktuelle er beholdningerne?', a: 'Forsinket øjebliksbillede (i udkastet pr. 1. juni 2026). Ikke dagsaktuel.', href: 'forsinket-beholdning.html' },
  { q: 'Hvorfor er CAGR lavere end gennemsnittet?', a: 'Udsving trækker det geometriske årlige afkast under et simpelt gennemsnit. Tænkt eksempel på siden.', href: 'variance-drag.html' },
  { q: 'Påvirker dollaren afkastet?', a: 'Ja. Fonden opgøres i kroner, men mindst to tredjedele af beholdningen handles i dollar. Afkastet i kroner er aktiens og valutaens bevægelse lagt sammen.', href: 'valuta.html' },
  { q: 'Hvad betyder risikoklasse 5?', a: 'Risikoklassen i KID er et mål for, hvor meget kursen har svinget, sat på en skala fra 1 til 7. Klasse 5 svarer til udsving på ca. 20 til 30 % om året, målt efter KID-metoden, og kaldes middel-høj. Et simpelt udsvingstal for fonden kan godt ligge højere, fordi det er et andet mål over en anden periode. Klassen er ikke en garanti og fanger ikke alle risici.', href: 'risikoklasse.html' },
- { q: 'Hvorfor viser I ikke afkast for de seneste 3 måneder?', a: 'Fordi en kort periode kan vise næsten hvad som helst, alt efter hvilken dag den starter. Fonden viser afkast siden start, år til dato og hele kalenderår. Så kan ingen vælge en periode, fordi den ser god ud.', href: 'laes-grafen.html' },
+ { q: 'Hvorfor viser I ikke afkast for de seneste 3 måneder?', a: 'Fordi en kort periode kan vise næsten hvad som helst, alt efter hvilken dag den starter. Fonden viser afkast siden start og pr. kalenderår. Så kan ingen vælge en periode, fordi den ser god ud.', href: 'laes-grafen.html' },
+ { q: 'Hvorfor er 2023 ikke et helt år?', a: 'Fonden fik sin første kurs 22. september 2023, så tallet for 2023 dækker kun godt tre måneder. Det samme gælder året indtil nu: det er et delår, ikke et helt års afkast. Et delår kan ikke sammenlignes direkte med de hele år ved siden af.', href: '../om-data.html#g-delaar' },
+ { q: 'Hvad skal jeg sammenligne afkastet med?', a: 'Fonden har intet fast benchmark (sammenligningsindeks), så siden sammenligner ikke med et indeks. Vil du selv sammenligne med en anden fond, så brug samme periode, samme valuta og afkast efter omkostninger, og se på de største fald, ikke kun på afkastet.', href: '../om-data.html#g-benchmark' },
+ { q: 'Hvem træffer beslutningerne?', a: 'NewDeal Invest (NDIIR ApS) er investeringsrådgiver og rådgiver om, hvilke selskaber fonden ejer. Fonden er en afdeling i Investeringsforeningen PortfolioManager. Forvaltningsselskabet Fundmarket A/S har ansvaret for fonden, og Danske Bank er depotbank. Dine andele ligger i dit eget depot.', href: '../invester.html#hvem' },
  { q: 'Hvad er fald fra top (drawdown)?', a: 'Hvor meget fondens totalafkast er faldet fra en tidligere top, og hvor længe det varede. Se siden Fald fra top.', href: '../drawdown.html' },
  { q: 'Sådan tænker NDI', a: 'Fem principper: teknologi er drivkraften, udviklingen frem for den enkelte vinder (bred spredning), høj variation er et grundvilkår, P/E siger mindre om selskaber, der investerer tungt, og lang horisont.', href: 'saadan-taenker-vi.html' },
  ];

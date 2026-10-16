@@ -1671,3 +1671,43 @@ Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er
 - **Fra Claude lane-R (02:24, cyklus 31, main `3e4ec15`):** Pages er stadig på `e402f15`, så `5843694` er ikke live endnu. På main er KID-RIY **lukket** ✅: 2,79/2,85 % (5 år) og 2,63/2,71 % (1 år), verificeret mod KID-PDF. "Kan tabe" på omkostninger/ndi-paa-x ✅. **Stadig MUST:** chartMarkers under fondens graf viser @BullTheoryio "BREAKING" (SoftBank $100 mia.), og SoftBank-siden har 2× BREAKING. Begræns til @InvestNewdeal. ÅTD "afventer Fundmarket-godkendelse" er stadig synlig. Embed mangler KID-link. SHOULD: fjern "det tal, marketingmateriale skal gengive ærligt" fra omkostninger.
 - **Fra Claude lane-R (02:40, cyklus 32, main `3e4ec15` = live):** Pages-lag er indhentet. KID-RIY og "ikke ÅOP" er nu live ✅, 22 URL ved 375: 0 fejl, 0 overflow. **MUST:** (1) @BullTheoryio/@MilkRoadAI "BREAKING" under fondens graf og på SoftBank. Begræns chartMarkers til @InvestNewdeal. (2) Nyhedsarkiv mangler "du kan tabe". SHOULD: internt sprog på omkostninger ("Tomme felter = udfyldes af NDI", "marketingmateriale skal …"), "kl n" ×3, "kvartalsrapport" på fonden, "datamangel".
 - **Fra Claude lane-R (02:31, cyklus 33, main `3e4ec15` = live):** Intet docs-delta. 21 URL ved 375: 0 fejl, 0 overflow. **MUST:** (1) 2× @BullTheoryio "BREAKING" under fondens graf. SoftBank mærker Nvidia/OpenAI-opslaget "Vist fordi: SoftBank". Begræns chartMarkers til @InvestNewdeal. (2) ÅTD "afventer Fundmarket-godkendelse" på fonden, men periode og embed viser samme ÅTD uden forbehold. (3) Nyhedsarkiv mangler "kan tabe". **Nyt SHOULD:** `periode.html` har ikke fået fondens rettelser ("2023" uden delår, "YTD/CAGR", dobbelt "← Fonden"). `drawdown.html` h1 "Drawdown" → "Største fald".
+
+- Coordinator-loop 2026-10-16 02:27:02 CEST: CONFLICT merge origin/lane-D (ahead 10) — aborted, not pushed
+
+- Coordinator-loop 2026-10-16 02:27:02 CEST: SKIP origin/lane-A — dirty working tree (no auto-stash)
+
+- Coordinator-loop 2026-10-16 02:27:02 CEST: SKIP origin/lane-E — dirty working tree (no auto-stash)
+
+- Coordinator-loop 2026-10-16 02:27:02 CEST: SKIP origin/lane-B — dirty working tree (no auto-stash)
+
+- Coordinator-loop 2026-10-16 02:27:02 CEST: SKIP origin/lane-C — dirty working tree (no auto-stash)
+
+- Coordinator-loop 2026-10-16 02:27:02 CEST: SKIP origin/lane-X — dirty working tree (no auto-stash)
+
+- Coordinator-loop 2026-10-16 02:27:02 CEST: SKIP origin/lane-R — dirty working tree (no auto-stash)
+
+- Coordinator-loop 2026-10-16 02:31:31 CEST: CONFLICT merge origin/lane-D (ahead 10) — aborted, not pushed
+
+- Coordinator-loop 2026-10-16 02:31:31 CEST: CONFLICT merge origin/lane-A (ahead 4) — aborted, not pushed
+
+- Coordinator-loop 2026-10-16 02:31:31 CEST: CONFLICT merge origin/lane-E (ahead 7) — aborted, not pushed
+
+- Coordinator-loop 2026-10-16 02:31:32 CEST: CONFLICT merge origin/lane-B (ahead 3) — aborted, not pushed
+
+- Coordinator-loop 2026-10-16 02:31:32 CEST: CONFLICT merge origin/lane-C (ahead 11) — aborted, not pushed
+
+- Coordinator-loop 2026-10-16 02:31:32 CEST: CONFLICT merge origin/lane-X (ahead 8) — aborted, not pushed
+
+- Coordinator-loop 2026-10-16 02:31:32 CEST: CONFLICT merge origin/lane-R (ahead 11) — aborted, not pushed
+
+- Coordinator-loop 2026-10-16 02:31:58 CEST: MERGED origin/lane-D with STATUS-ours resolution (ahead was 10) — pending precheck
+
+- Coordinator-loop 2026-10-16 02:32:51 CEST: MERGED origin/lane-D (ahead was 10) — precheck+smoke OK, pushed
+
+- Coordinator-loop 2026-10-16 02:32:51 CEST: CONFLICT merge origin/lane-A (ahead 4) — aborted, not pushed
+
+- Coordinator-loop 2026-10-16 02:32:51 CEST: CONFLICT merge origin/lane-E (ahead 8) — aborted, not pushed
+
+- Coordinator-loop 2026-10-16 02:32:52 CEST: CONFLICT merge origin/lane-B (ahead 3) — aborted, not pushed
+
+- Coordinator-loop 2026-10-16 02:32:52 CEST: MERGED origin/lane-C with STATUS-ours resolution (ahead was 12) — pending precheck

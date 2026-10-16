@@ -4,13 +4,14 @@
  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
  <meta name="robots" content="noindex,nofollow">
  <title>Risikoklasse 5: hvad tallet betyder · NDI Analytics</title>
+ <meta name="description" content="Risikoklassen i KID er et mål for udsving på en skala fra 1 til 7. Træk i skyderen og se, hvad klassen betyder, og hvad den ikke siger.">
  <link rel="stylesheet" href="../css/ndi.css">
  <!-- og:start -->
  <meta property="og:type" content="website">
  <meta property="og:site_name" content="NDI Analytics (udkast)">
  <meta property="og:locale" content="da_DK">
  <meta property="og:title" content="Risikoklasse 5: hvad tallet betyder · NDI Analytics">
- <meta property="og:description" content="Risikoklassen i KID er et mål for udsving, oversat til en skala fra 1 til 7. Træk i skyderen og se, hvilke udsving der giver hvilken klasse, og hvad tallet ikke siger.">
+ <meta property="og:description" content="Risikoklassen i KID er et mål for udsving på en skala fra 1 til 7. Træk i skyderen og se, hvad klassen betyder, og hvad den ikke siger.">
  <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/laer/risikoklasse.html">
  <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
  <meta property="og:image:width" content="1200">
@@ -86,7 +87,7 @@
    <input id="rk-v" type="range" min="0" max="100" step="1" value="25" aria-describedby="rk-out">
    <div class="scale" id="rk-scale" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span class="on fund">5</span><span>6</span><span>7</span></div>
    <div class="scale-legend" aria-hidden="true"><span>Lavere risiko</span><span>Højere risiko</span></div>
-   <p class="res" id="rk-out" aria-live="polite">Udsving på 25&nbsp;% pr. år giver <b>klasse 5</b> (middel-høj). Klassen dækker udsving fra 20 til 30&nbsp;% pr. år.</p>
+   <p class="res" id="rk-out" aria-live="polite">Udsving på 25&nbsp;% pr. år giver <b>klasse 5</b> (middel-høj). Klassen dækker udsving fra 20 til 30&nbsp;% pr. år, målt efter KID-metoden. Det er fondens klasse. Et simpelt udsvingstal over 30&nbsp;% betyder ikke, at klassen er forkert.</p>
   </div>
   <p class="src">Uden JavaScript: 3&nbsp;% giver klasse 2, 15&nbsp;% giver klasse 4, 25&nbsp;% giver klasse 5, 40&nbsp;% giver klasse 6. Tænkte tal. Skyderen viser reglen, ikke fondens egen beregning.</p>
  </section>
@@ -134,7 +135,7 @@
    document.getElementById('rk-vv').textContent=f(x);
    cells.forEach(function(c,i){c.classList.toggle('on',i===k)});
    var b=B[k], span=k===0?'under 0,5 % pr. år':k===6?'over 80 % pr. år':'fra '+f(b[0])+' til '+f(b[1])+' % pr. år';
-   document.getElementById('rk-out').innerHTML='Udsving på '+f(x)+'&nbsp;% pr. år giver <b>klasse '+(k+1)+'</b> ('+b[2]+'). Klassen dækker udsving '+span+'.'+(k===4?' Det er fondens klasse.':'');
+   document.getElementById('rk-out').innerHTML='Udsving på '+f(x)+'&nbsp;% pr. år giver <b>klasse '+(k+1)+'</b> ('+b[2]+'). Klassen dækker udsving '+span+', målt efter KID-metoden.'+(k===4?' Det er fondens klasse. Et simpelt udsvingstal over 30&nbsp;% betyder ikke, at klassen er forkert.':'');
   }
   v.addEventListener('input',upd); upd();
  })();
@@ -142,5 +143,9 @@
  <p class="warn">Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.</p>
  <p class="band">Generel information. Ikke investeringsrådgivning.</p>
  </main>
+ <footer class="site-footer">
+ <p><strong>Markedsføringsmateriale.</strong> Læs <a href="https://fundmarket.dk/wp-content/uploads/Faellesprospekt-for-afdelinger-og-andelsklasser-i-Investeringsforeningen-Portfoliomanager-opdateret-24.10.2025.pdf" rel="noopener" target="_blank">prospektet ↗</a> og KID for <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm140b" rel="noopener" target="_blank">PMINDI ↗</a> eller <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm145b" rel="noopener" target="_blank">PMINDIAKK ↗</a>, før du træffer en endelig investeringsbeslutning.</p>
+ <p>Udkast / noindex. Ikke den officielle side og ingen investeringsrådgivning. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering. <a href="../om-data.html">Data og ordliste</a>.</p>
+ </footer>
 </body>
 </html>
