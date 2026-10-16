@@ -2227,20 +2227,28 @@
   "US55405W1045": {
    "name": "MYR Group",
    "theme": "physical",
-   "summary": "Bygger elektriske anlæg i USA og Canada. Selskabet skriver, at arbejdet dækker transmission, kommercielle og industrielle anlæg og vedvarende energi. Selskabet ejer ikke strømmen.",
-   "watch": "Ordrer fra elselskaber og mandskab.",
-   "source": "https://www.myrgroup.com/",
-   "products": "El-entrepriser, herunder transmission og vedvarende energi.",
-   "customers": "Elselskaber og store elforbrugere.",
-   "role": "Bygger nettet.",
+   "summary": "Bygger elektriske anlæg i USA og Canada. Hovedkontoret i Thornton er ikke en ledning. Venice–Campbell 138 kV er et projekt uden dato.",
+   "watch": "Om et projektnavn bliver læst som ejerskab. Siden daterer ikke projekterne.",
+   "source": "https://myrgroup.com/about/",
+   "products": "Byggeri af transmission, distribution og industrielt elarbejde. Ikke ejerskab af strømmen.",
+   "customers": "Kunder i USA og Canada. Navne på ejere af anlæggene er ikke taget med.",
+   "role": "Bygger nettet. Ejer ikke ledningen.",
    "narrative": [
-    "MYR Group bygger elektriske anlæg i USA og Canada. Selskabet skriver, at arbejdet dækker transmission, kommercielle og industrielle anlæg og vedvarende energi.",
-    "Selskabet ejer ikke strømmen. I kæden står det på elnet."
+    "Om-siden, læst 16. oktober 2026, skriver, at MYR Group har været i gang siden 1891, og at selskabet er noteret på NASDAQ under MYRG. Hovedkontoret ligger på 12121 Grant St, Suite #610, i Thornton i Colorado. Det er et kontor, ikke en ledning. Mere end 9.000 medarbejdere står uden dato. Datterselskaber laver transmission, distribution og industrielt elarbejde i USA og Canada. De ejer ikke strømmen. Ordene leader, largest og top five er ikke taget med.",
+    "Forsiden nævner projekter uden dato. Venice to Campbell er en 138 kV-krydsning af Mississippi. Aeolus, Anticline og Jim Bridger er stationsarbejde. Battle Mountain Solar & Storage er et projektnavn, ikke et lager selskabet driver. Edmonton Valley er letbane. Iowa Derecho er beredskab. Ingen af dem er skrevet som anlæg, selskabet ejer. Telefonnummeret er ikke taget med."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets side",
-     "url": "https://www.myrgroup.com/"
+     "label": "Om selskabet",
+     "url": "https://myrgroup.com/about/"
+    },
+    {
+     "label": "Kontakt",
+     "url": "https://myrgroup.com/contact/"
+    },
+    {
+     "label": "Forside",
+     "url": "https://myrgroup.com/"
     }
    ]
   },
