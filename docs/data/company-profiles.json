@@ -2576,6 +2576,42 @@
      "url": "https://microvast.com/future/energy-storage/"
     }
    ]
+  },
+  "US6406551068": {
+   "name": "NeoVolta",
+   "theme": "energy",
+   "summary": "Laver batterier til boliger. Stiftet i 2018 i Poway i Californien. NV14 samles i San Diego. Et nyt anlæg i Pendergrass har en indbydelse til åbning 17. september 2026, efter beholdningen. Det er ikke et lager i drift.",
+   "watch": "Om åbningen 17. september 2026 bliver læst som drift pr. 1. juni 2026. Siden er en indbydelse. 2 GWh i 2026 er en overskrift, ikke et målt år. NV14 står som 14, 14,3 og 14,4 kWh.",
+   "source": "https://neovolta.com/our-story",
+   "products": "NV14 med hybrid-inverter og litium-jern-fosfat. Ikke et kraftværk.",
+   "customers": "Boliger via certificerede forhandlere. Siden navngiver ikke et lager, selskabet driver.",
+   "role": "Hjemmebatterier. Ikke et lager i drift.",
+   "narrative": [
+    "NeoVolta skriver, at selskabet er stiftet i 2018 i Poway i Californien af Brent Willson, og at det udvikler og fremstiller batterier til boliger. Hovedkontoret ligger på 12195 Dearborn Place i Poway, CA 92064. Sidetitlen skriver NASDAQ: NEOV. Et noteringsår stod ikke i de læste afsnit. NV14 er et system med hybrid-inverter og litium-jern-fosfat. Siden skriver 14 kWh, 14,3 kWh og 14,4 kWh. Tallene er ikke ens. FAQ skriver, at systemet samles og testes i San Diego, og at nogle komponenter kommer fra udlandet.",
+    "Om-siden viser Pendergrass i Georgia under udvidelse og overskriften 2 GWh i 2026. Det er ikke et målt år, og året er ikke afsluttet før beholdningen. En side indbyder til åbning af et nyt produktionsanlæg, NeoVolta Power, på 595 Henry D Robinson Blvd. i Pendergrass den 17. september 2026 kl. 10 til 14. Datoen ligger efter beholdningen pr. 1. juni 2026. Teksten siger ikke, at anlægget producerer. HTML-skallen havde ingen brødtekst. Sætningerne stod i sidens script, læst 16. oktober 2026. Ordene lead og free from the grid er ikke taget med. Det er batterier hos kunden, ikke et lager i drift."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Om selskabet",
+     "url": "https://neovolta.com/our-story"
+    },
+    {
+     "label": "NV14",
+     "url": "https://neovolta.com/nv14"
+    },
+    {
+     "label": "FAQ",
+     "url": "https://neovolta.com/faq"
+    },
+    {
+     "label": "Kontakt",
+     "url": "https://neovolta.com/contact-us"
+    },
+    {
+     "label": "Åbning i Pendergrass",
+     "url": "https://neovolta.com/events/sept17-ga-opening-rsvp-7KQ4"
+    }
+   ]
   }
  },
  "media": [
