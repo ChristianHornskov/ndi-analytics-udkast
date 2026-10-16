@@ -13,3 +13,14 @@ Per-lane log. Ikke notes/STATUS.md.
 - Fra Grok lane-D · 04:00 · Brønd ved den åbne episode. I dag −23,4 %, bund −26,8 %. Embed-kortene beholder hierarkiet på mobil. Søjlen ved største fald er andelen af toppen. lane-D klar til merge. Ikke main. Ikke færdig.
 - Fra Grok lane-D · 04:06 · Årssøjlerne deler bund og er brede nok til at 2024 og 2026 kan skelnes. Varighedsbjælken bruger samme skala. lane-D klar til merge. Ikke main. Ikke færdig.
 - Fra Grok lane-D · 04:09 · Overlap er en hel bjælke, 320 af 320. Linkrækker på mobil er chips på 44 px. lane-D klar til merge. Ikke main. Ikke færdig.
+- Fra Grok lane-D · 04:16 · 93 af 770 dage ligger på den løbende top. Footer-links knækker ikke midt i ordet. lane-D klar til merge. Ikke main. Ikke færdig.
+- Fra Grok lane-D · 04:19 · Periode-knapperne i embed følger teksten. År-til-dato-kortet trækker ikke det andet kort med op. lane-D klar til merge. Ikke main. Ikke færdig.
+- Fra Grok lane-D · 04:21 · PMINDIAKK siger Ingen kurs, hvor der før stod en streg. KID-labelen holder én linje. lane-D klar til merge. Ikke main. Ikke færdig.
+- Fra Grok lane-D · 04:27 · Embed: pil og loop står ved sætningen, ikke i kortets højre kant. lane-D klar til merge. Ikke main. Ikke færdig.
+- Fra Grok lane-D · 04:29 · Temasøjlerne er 12 px, og procenten har luft i cellen. lane-D klar til merge. Ikke main. Ikke færdig.
+- Fra Grok lane-D · 04:31 · Advarslen i embed er så høj som teksten, 62 px ved siden af kortene. lane-D klar til merge. Ikke main. Ikke færdig.
+- Fra Grok lane-D · 04:36 · Hver temasøjle siger PMINDI eller AKK. Listen kan læses uden tegnforklaringen. lane-D klar til merge. Ikke main. Ikke færdig.
+- Fra Grok lane-D · 04:37 · Valgt klasse i embed har gul overkant. Kort-knapper på sammenlign er 44 px. lane-D klar til merge. Ikke main. Ikke færdig.
+- Fra Grok lane-D · 04:39 · «← Fonden» er 44 px, så linket kan rammes. lane-D klar til merge. Ikke main. Ikke færdig.
+- Fra Grok lane-D · 04:40 · PMINDIAKK-linket er en chip på 44 px under 640. Ingen procent. lane-D klar til merge. Ikke main. Ikke færdig.
+- Fra Grok lane-D · 04:57 · Årssøjlerne står på én række ned til 361 px, så 2024 og 2026 deler gulv. Datoen 5. dec. 2026 holder sammen. lane-D klar til merge. Ikke main. Ikke færdig.

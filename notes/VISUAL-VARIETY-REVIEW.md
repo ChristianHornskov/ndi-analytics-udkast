@@ -220,6 +220,56 @@ Varighedsbjælken under de fire episoder bruger samme skala. 208 dage er den læ
 
 På 390 og 320 er linkrækkerne på sammenlign og under årssøjlerne chips på 44 px. Prikkerne mellem linkene er væk. På 1280 er de stadig en linje. Ingen sidescroll. Ingen konsolfejl.
 
+### Update · dage på toppen · 2026-10-16 ~04:16 CEST
+
+Under brønden står en andel, 14 px høj, højst 520 px. Brand er dagene på den løbende top. Resten af sporet er mørkt. 93 af 770 dage ligger på toppen. De øvrige 677 ligger under den. Fyldet er 12 % af sporet, målt 63 px af 520 på 1280, 44 af 362 på 390 og 35 af 292 på 320. Teksten siger ikke en procent. Middel og median står som episoder, ikke som disse dage. Sætningen nederst siger kun, at max er det samme tal som største fald på Fonden.
+
+PMINDIAKK har ingen andel og ingen procent. Footer-links er nowrap. «KID PMINDI ↗» knækker ikke. Ingen sidescroll ved 1280, 390 og 320, heller ikke på sammenlign, embed og forsiden. Ingen konsolfejl.
+
+### Update · periode-knapper følger teksten · 2026-10-16 ~04:19 CEST
+
+På 1100 er «År til dato» 93 px og «Hele perioden» 127 px, begge 44 px høje, til venstre i værktøjslinjen. De fylder ikke de 1042 px. På 700 og 641 er de samme. Under 640 deler de rækken. Et klik på år til dato sætter største fald til −26,8 %, sluttallet til +4,0 %, og det rosa tal på kurven er −10,0 %. Forbeholdet står der.
+
+På 390 er kortet for gns. årligt afkast 96 px. År til dato er 127 px, fordi forbeholdet har flere linjer. Det korte kort trækkes ikke op i samme højde. PMINDIAKK har tom svg og ingen procent. Ingen sidescroll. Ingen konsolfejl.
+
+### Update · ingen kurs · 2026-10-16 ~04:21 CEST
+
+PMINDIAKK havde en bindestreg på 4 px ud for Seneste NAV. Feltet siger nu «Ingen kurs». Det er ikke en procent. KID er stadig ca. 2,85 %. På 320 står «KID, 5 år» på én linje, og værdien bryder under den. Ingen række overlapper. PMINDI har stadig 126,52 (14. okt. 2026). Ingen sidescroll ved 1280, 390 og 320. Ingen konsolfejl.
+
+### Update · mærket følger sætningen · 2026-10-16 ~04:27 CEST
+
+På 1100 stod pilen og loopet i højre kant af kortet, med et tomt felt imellem. De står nu 16 px efter sætningen. Teksten rammer ikke mærket, ved 1100, 700, 390 og 320. På 320 bryder sætningen, og mærket står ved siden af. Et klik på PMINDIAKK vælger kortet. Svg'en er tom, og der er ingen procent. Ingen sidescroll. Ingen konsolfejl.
+
+### Update · temasøjler 12 px · 2026-10-16 ~04:29 CEST
+
+Søjlerne var 8 px, og procenten fyldte sin 52 px-celle. De er 12 px høje. Tallet har 64 px, og «17,2 %» har 27 px til overs i cellen. Quantum er stadig 16 px mod 14 px på 390, så 0,1 point kan ses. Platforme har den gule kant. AKK-kortet har ca. 2,85 % og «Ingen kurs». Ingen sidescroll ved 1280, 390 og 320. Ingen konsolfejl.
+
+### Update · advarslen følger teksten · 2026-10-16 ~04:31 CEST
+
+På 1100 var advarslen lige så høj som de fire kort, 364 px, med én sætning i midten. Den er 62 px og står i toppen, på linje med totalafkast. Kortene er uændrede: +104,8 %, +26,4 %, +4,0 % med forbehold, −35,8 %. På 390 og 320 står advarslen under kortene. PMINDIAKK har advarslen og ingen procent. Ingen sidescroll. Ingen konsolfejl.
+
+### Update · PMINDI og AKK på hver række · 2026-10-16 ~04:36 CEST
+
+Temasøjlerne havde farve, men ikke navn. Hver række siger nu PMINDI i brand og AKK i cyan, 52 px, før søjlen. Teksten rammer ikke søjlen. På 320 er Quantum 7 px mod 6 px. Tallene er 1,1 % og 1,0 %. På 1280 er de 49 px og 44 px. Platforme har stadig gul kant, 17,2 % og 15,3 %. Skærmlæseren siger PMINDIAKK på AKK-rækken. AKK-kortet har ca. 2,85 % og Ingen kurs. Ingen sidescroll ved 1280, 390 og 320. Ingen konsolfejl.
+
+### Update · gul overkant og 44 px · 2026-10-16 ~04:37 CEST
+
+Det valgte klassekort i embed har gul overkant, `#f5ee9e`. Et klik flytter kanten fra PMINDI til PMINDIAKK. PMINDIAKK har tom svg og ingen procent. På sammenlign er «Se PMINDI» og «Se PMINDIAKK» 44 px ved 1280, 768 og 390. Ingen sidescroll. Ingen konsolfejl.
+
+### Update · tilbage-link 44 px · 2026-10-16 ~04:39 CEST
+
+«← Fonden» på drawdown var 19 px høj. Den er 44 px ved 1280, 390 og 320, med 16 px luft ned til øjenbrynet. PMINDIAKK har ingen procent. Forsiden og om-data scroller ikke sidelæns ved 320. Ingen konsolfejl.
+
+### Update · AKK-link er en chip · 2026-10-16 ~04:40 CEST
+
+På PMINDIAKK var «Sammenlign andelsklasser» en tekstlinje. Under 640 px er den en chip, 44 px høj. På 1280 er den 22 px, uden pille. Siden har ingen procent. Ingen sidescroll. Ingen konsolfejl.
+
+### Update · årene deler gulv på telefonen · 2026-10-16 ~04:55 CEST
+
+På 390 stod årene i to rækker, så 2024 og 2026 ikke kunne sammenlignes på samme gulv. Ned til 361 px er de fire søjler på én række. Bundene ligger på samme linje. 2024 er 64 px. 2026 er 8 px. 2025 har gul overkant, 2026 cyan, og «til dato» er gul. «Dybeste fald» holder én linje. Under 360 px er det to rækker igen, og hver række deler gulv. Ingen sidescroll ved 1280, 390, 361 og 320.
+
+På sammenlign holder «5. dec. 2026» sammen, når forklaringen skifter linje. KID-noten skifter mellem «årlig omkostning i KID.» og «Før kurtage og depot.» PMINDI har stadig 126,52 (14. okt. 2026) og ca. 2,79 %. AKK har ca. 2,85 % og Ingen kurs. PMINDIAKK-drawdown har ingen procent. Ingen sidescroll. Ingen konsolfejl.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.

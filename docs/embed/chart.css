@@ -139,18 +139,23 @@ b, strong { font-weight: 700; }
   border: 2px solid #8ba8b1;
   border-radius: 8px;
   text-align: left;
-  padding: 14px 15px 13px;
-  display: flex;
-  flex-direction: column;
+  padding: 14px 14px 13px 15px;
+  display: grid;
+  grid-template-columns: minmax(0, max-content) 88px;
+  justify-content: start;
+  column-gap: 16px;
+  align-items: center;
   min-width: 0;
   min-height: 72px;
   box-shadow: inset 0 0 0 1px #8ba8b11a;
 }
 
-.class-card { position: relative; padding-right: 108px; }
-.class-card.selected { background: var(--selected); }
+.class-card.selected { background: var(--selected); border-top-color: var(--yellow); }
 .class-card:hover { border-color: var(--cyan); background: #203941; }
-.class-mark { position: absolute; right: 14px; top: 50%; width: 78px; height: 28px; transform: translateY(-50%); pointer-events: none; }
+.class-card.selected:hover { border-top-color: var(--yellow); }
+.class-mark { position: static; width: 88px; height: 28px; grid-column: 2; grid-row: 1 / span 2; justify-self: end; pointer-events: none; }
+.class-title { grid-column: 1; grid-row: 1; }
+.class-subtitle { grid-column: 1; grid-row: 2; }
 .class-card[data-fund="PMINDI"] .class-mark { color: var(--brand); }
 .class-card[data-fund="PMINDIAKK"] .class-mark { color: var(--cyan); }
 .class-mark rect, .class-mark path { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linejoin: round; stroke-linecap: round; }
@@ -210,8 +215,8 @@ b, strong { font-weight: 700; }
 }
 .control:active { background: #294c55; }
 
-.periods { flex: 1; }
-.periods .control { flex: 1; padding: 0 10px; }
+.periods { flex: 0 1 auto; }
+.periods .control { flex: 0 0 auto; padding: 0 16px; }
 
 .chart-legends {
   display: flex;
@@ -518,8 +523,7 @@ button.legend {
   color: #e4dcaa;
   font-size: 12px;
   line-height: 1.6;
-  display: flex;
-  align-items: center;
+  align-self: start;
 }
 
 .foot {
@@ -602,7 +606,7 @@ button.legend {
 }
 
 .sri-line a,
-.embed-legal a { color: var(--brand); }
+.embed-legal a { color: var(--brand); white-space: nowrap; }
 
 .embed-legal {
   margin-top: 18px;
@@ -642,8 +646,8 @@ button.legend {
   .data-source { justify-content: flex-start; }
 
   .class-options { grid-template-columns: 1fr; gap: 8px; }
-  .class-card { min-height: 0; padding: 13px 96px 13px 14px; }
-  .class-mark { width: 70px; right: 12px; }
+  .class-card { min-height: 0; padding: 13px 12px 13px 14px; grid-template-columns: minmax(0, max-content) 78px; column-gap: 12px; }
+  .class-mark { width: 78px; }
 
   .chart-toolbar {
     flex-wrap: wrap;
@@ -677,7 +681,7 @@ button.legend {
   .embed-cta { align-items: flex-start; }
 
   .metrics-row { grid-template-columns: 1fr; gap: 14px; }
-  .metrics-grid { grid-template-columns: 1fr 1fr; }
+  .metrics-grid { grid-template-columns: 1fr 1fr; align-items: start; }
   .metric:first-child { grid-column: 1 / -1; grid-row: auto; }
   .metric-dd { grid-column: 1 / -1; }
   .metric-label { margin-bottom: 6px; }
