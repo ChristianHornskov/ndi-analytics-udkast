@@ -18,13 +18,20 @@
   .period-pair .pair-card .pair-pct.neg{color:var(--neg-ink)}
   .period-pair .pair-when{margin:4px 0 8px;color:var(--muted);font-size:13px}
   .period-pair .pair-card p{color:var(--muted);font-size:13px;line-height:1.5;margin:0}
+  .life-map .track{position:relative;height:18px;border-radius:9px;background:#0b171d;border:1px solid var(--line);margin:12px 0 26px}
+  .life-map .mark{position:absolute;top:-1px;bottom:-1px;border-radius:9px;background:rgba(159,211,218,.35);border:1px solid var(--cyan)}
+  .life-map .tick{position:absolute;top:0;bottom:0;width:1px;background:var(--muted)}
+  .life-map .tick i{position:absolute;top:22px;left:50%;transform:translateX(-50%);font-style:normal;font-size:11px;color:var(--muted);white-space:nowrap}
+  .life-map .scale{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin:0}
   @media (max-width:640px){
    .period-pair .pair{grid-template-columns:1fr}
+   .life-map .scale span:nth-child(2){flex-basis:100%}
   }
   @media print {
-   .period-span,.period-pair{break-inside:avoid}
-   .period-span .track{background:#eee;border-color:#333}
+   .period-span,.period-pair,.life-map{break-inside:avoid}
+   .period-span .track,.life-map .track{background:#eee;border-color:#333}
    .period-span .mark{background:#333}
+   .life-map .mark{background:#ddd;border-color:#333}
    .period-pair .pair-card{border-color:#333}
    .site-footer{color:#111}
   }
@@ -113,6 +120,33 @@
  const lastNav = fund.data[fund.data.length - 1].d;
  const annual = cagr(fund.data);
  const onSeries = year === 'all' || year === 'start';
+ function seriesMap() {
+  if (!from || !to || !firstNav || !lastNav) return '';
+  const t0 = Date.parse(firstNav + 'T00:00:00Z');
+  const t1 = Date.parse(lastNav + 'T00:00:00Z');
+  const span = t1 - t0;
+  if (!(span > 0)) return '';
+  const a = Math.max(t0, Math.min(t1, Date.parse(from + 'T00:00:00Z')));
+  const b = Math.max(a, Math.min(t1, Date.parse(to + 'T00:00:00Z')));
+  const left = ((a - t0) / span) * 100;
+  const width = Math.max(1.5, ((b - t0) / span) * 100 - left);
+  const y0 = Number(firstNav.slice(0, 4));
+  const y1 = Number(lastNav.slice(0, 4));
+  const ticks = [];
+  for (let y = y0 + 1; y <= y1; y++) {
+   const t = Date.parse(y + '-01-01T00:00:00Z');
+   if (!(t > t0 && t < t1)) continue;
+   ticks.push(`<span class="tick" style="left:${(((t - t0) / span) * 100).toFixed(1)}%"><i>${y}</i></span>`);
+  }
+  const whole = a - t0 < 86400000 && t1 - b < 86400000;
+  const note = whole
+   ? `Hele bjælken er den valgte periode, fra første NAV ${fmtDate(firstNav)} til sidste punkt ${fmtDate(lastNav)}.`
+   : `Den markerede del er den valgte periode, ${fmtDate(from)} til ${fmtDate(to)}. Bjælken går fra første NAV ${fmtDate(firstNav)} til sidste punkt ${fmtDate(lastNav)}.`;
+  const aria = whole
+   ? `Hele serien fra ${fmtDate(firstNav)} til ${fmtDate(lastNav)} er markeret.`
+   : `Valgt periode ${fmtDate(from)} til ${fmtDate(to)} markeret på serien fra ${fmtDate(firstNav)} til ${fmtDate(lastNav)}.`;
+  return `<section class="panel life-map" aria-label="Valgt periode på hele serien"><h2 style="font-size:16px;margin-bottom:8px">Hvor i serien siden første NAV?</h2><p style="color:var(--muted);line-height:1.6">${note} Årstallene på bjælken er 1. januar. Det er datoer, ikke et afkast. Fonden, ikke en enkelt aktie.</p><div class="track" role="img" aria-label="${aria}"><div class="mark" style="left:${left.toFixed(1)}%;width:${width.toFixed(1)}%"></div>${ticks.join('')}</div><p class="scale"><span>${fmtDate(firstNav)}</span><span>${fmtDate(from)} → ${fmtDate(to)}</span><span>${fmtDate(lastNav)}</span></p></section>`;
+ }
  function periodPair() {
   if (pct == null || !from || !to || annual == null) return '';
   const seriesHref = `periode.html?fund=${fundId}&year=all`;
@@ -147,6 +181,7 @@
  </div>
  ${(year === 'YTD' || year === 'ytd') ? '<p class="band">År til dato afventer Fundmarket-godkendelse. Tallet er ikke et helt års afkast.</p>' : ''}
  ${periodSpan(from, to, year)}
+ ${seriesMap()}
  ${periodPair()}
  ${sriHtml}
  <section class="panel">

@@ -33,7 +33,7 @@
     .vc-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 12px}
     .vc-tabs .control{min-height:44px}
     .layout-toggle{display:flex;gap:8px;margin:8px 0 12px;flex-wrap:wrap}
-    .vc-chain{display:grid;gap:0;margin:8px 0 28px}
+    .vc-chain{display:grid;grid-template-columns:minmax(0,1fr);gap:0;margin:8px 0 28px}
     .vc-link{display:grid;grid-template-columns:56px 1fr;gap:12px;padding:16px;border:1.5px solid var(--brand);border-radius:12px;background:#0b171d;margin:0;transition:border-color .15s,box-shadow .15s}
     .vc-link+.vc-arrow{text-align:center;color:var(--brand);font-size:18px;padding:4px 0;opacity:.85}
     .vc-link:hover,.vc-link.is-open{border-color:var(--yellow);box-shadow:inset 3px 0 0 var(--yellow)}
@@ -89,6 +89,11 @@
     .vc-cos .chip{display:inline-block;margin:3px 6px 3px 0;font-size:12px;padding:3px 8px;border:1px solid var(--line);border-radius:999px;text-decoration:none;background:#0f2028}
     .vc-cos .chip small{color:var(--muted)}
     .vc-cos .chip.other{border-style:dashed}
+    .vc-cos .chip.placed{border-color:var(--cyan);background:#0f2a30}
+    .vc-cos .chip.placed small i{font-style:normal;color:var(--yellow)}
+    .vc-grp{margin:2px 0 0;font-size:12px;color:var(--muted)}
+    .vc-grp b{color:var(--text,inherit);font-weight:600}
+    .vc-grp .pin{color:var(--cyan);margin-right:4px}
     .vc-facts{margin-top:10px;font-size:13px}
     .vc-facts summary{cursor:pointer;color:var(--brand);font-size:12px}
     .vc-facts ul{margin:6px 0 0;padding-left:18px;color:var(--muted);line-height:1.5}
@@ -303,6 +308,7 @@
     .e-pane .risk h3{color:var(--yellow)}
     .rk-strip.flow li+li::before{content:"›";width:auto;height:auto;background:none;color:#4a6a74;font-size:15px;line-height:1;padding:0 3px}
     .rk-strip.flow a{border-radius:7px}
+    .sp-hub .rk-strip.flow{flex-wrap:wrap;row-gap:4px}
     .e-where .rk-strip{margin:4px 0 6px}
     .e-where .rk-strip.flow::after{content:none}
     .e-where .rk-strip .cur{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:8px;font-size:14px;border:2px solid var(--yellow);background:#2a2a14;box-shadow:0 0 0 3px rgba(255,214,0,.12)}
@@ -355,6 +361,7 @@
     .trip-grid{display:grid;gap:12px;margin-top:10px}
     @media(min-width:760px){.trip-grid{grid-template-columns:.9fr 1.1fr;align-items:center}}
     .trip-scene svg{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:10px;background:radial-gradient(ellipse at 50% 130%,#173640 0%,#0b171d 60%,#070f13 100%)}
+    .trip-scene svg,#alt-host svg{overflow:hidden}
     .trip-scene text{font-family:inherit}
     .trip-scene .st{cursor:pointer}
     .trip-scene .st circle{fill:#0b171d;stroke:#3a5a63;stroke-width:1.5;transition:stroke .2s}
@@ -379,6 +386,10 @@
     .rv-host svg{display:block;width:100%;height:auto;margin:10px 0 4px}
     .rv-host a:focus-visible circle{stroke:var(--text);stroke-width:3}
     .rv-host a.mk{outline:none;box-shadow:none;animation:none}
+    /* tap-mål ≥24 px (UX c47 SHOULD 8): hele rækken/zonen er klikbar, tekst lader klik gå igennem */
+    .rv-host text{pointer-events:none}
+    .rv-host a{cursor:pointer}
+    .rv-host a:hover .rv-hit{fill:rgba(255,255,255,.04)}
     .rv-host a.mk circle{stroke:var(--yellow);stroke-width:5;filter:drop-shadow(0 0 6px rgba(255,214,0,.7))}
     .rv-flow{animation:rvflow 2.4s linear infinite}
     @keyframes rvflow{to{stroke-dashoffset:-36}}
@@ -500,7 +511,8 @@
     @media(max-width:700px){
       .dams{flex-direction:column}
       .dam-arrow{transform:rotate(90deg);align-self:center}
-      .vc-link{grid-template-columns:44px 1fr;padding:12px}
+      .vc-link{grid-template-columns:44px minmax(0,1fr);padding:12px}
+      .vc-link > div{overflow-wrap:anywhere}
       .vc-ico{width:44px;height:44px;font-size:18px}
       .chapter-nav{top:56px}
     }
@@ -514,6 +526,18 @@
       .eflow .ef-p .tag,.eflow .ef-p .src,.eflow .ef-s .src,.phase .ph-n{font-size:12px!important}
       .rk-strip.river a{width:20px;height:20px}
     }
+    /* tap-mål ≥24 px (UX c47 SHOULD 8): på mobil slår floden et sving: 2 rækker à 7 led, linjen løber bag prikkerne */
+    @media(max-width:519px){
+      .rk-strip.river{display:grid;grid-template-columns:repeat(7,1fr);row-gap:6px}
+      .rk-strip.river li{justify-content:center;background:linear-gradient(#5f8f98,#5f8f98) center/100% 2px no-repeat}
+      .rk-strip.river li:nth-child(7n+1){background-position:right center;background-size:50% 2px}
+      .rk-strip.river li:nth-child(7n),.rk-strip.river li:last-child{background-position:left center;background-size:50% 2px}
+      .rk-strip.river li+li::before{content:none}
+      .rk-strip.river a{width:26px!important;height:26px!important;opacity:.7}
+      .rk-strip.river a.hit{opacity:1}
+      .rk-strip.river li:nth-child(odd) a{transform:none}
+    }
+    .dam > a,.gloss dd a:last-child,.band > a,main .link-row a,.tr-go a,p.who > a:last-child,.levers li > a,#space-pane p.src > a,.vb-row a[data-sec]{display:inline-flex;align-items:center;min-height:26px;min-width:26px}
 
 </style>
 </head>
@@ -1813,13 +1837,13 @@
     const damNo = {};
     rvLinks.filter(l => l.press.level === 'dam').forEach((l, i) => { damNo[l.id] = i + 1; });
     const rvSub = (l) => l.press.level === 'dam' ? `${damNo[l.id]}. ${RV_SHORT.dam}` : RV_SHORT[l.press.level];
-    function rvNode(l, i, x, y) {
+    function rvNode(l, i, x, y, hit = '') {
       const lv = l.press.level;
       const fill = { dam: 'var(--yellow)', source: 'var(--cyan)' }[lv] || '#0b171d';
       const stroke = { dam: 'var(--yellow)', early: 'var(--yellow)', source: 'var(--cyan)', open: '#829da0' }[lv] || 'var(--brand)';
       const txt = (lv === 'dam' || lv === 'source') ? '#0b171d' : lv === 'open' ? 'var(--muted)' : 'var(--text)';
       const lab = `Led ${i + 1}, ${l.label}: ${rvSub(l)}. ${l.count} selskaber.`;
-      return `<a href="#lk-${esc(l.id)}" data-open="${esc(l.id)}" data-lks="${esc(l.id)}" aria-label="${esc(lab)}"><title>${esc(lab)}</title>`
+      return `<a href="#lk-${esc(l.id)}" data-open="${esc(l.id)}" data-lks="${esc(l.id)}" aria-label="${esc(lab)}"><title>${esc(lab)}</title>${hit}`
         + `<circle cx="${x}" cy="${y}" r="13" fill="${fill}" stroke="${stroke}" stroke-width="2.5"${lv === 'open' ? ' stroke-dasharray="4 3"' : ''}/>`
         + `<text x="${x}" y="${y + 4.5}" text-anchor="middle" font-size="12" font-weight="700" fill="${txt}">${i + 1}</text></a>`;
     }
@@ -1859,7 +1883,7 @@
               + `<text x="${x}" y="${y - 27}" text-anchor="middle" font-size="11" font-weight="700" fill="var(--yellow)">${damNo[l.id]}. flaskehals</text>`;
           }
           const ly = y + (i % 2 ? 46 : 32);
-          svg += rvNode(l, i, x, y)
+          svg += rvNode(l, i, x, y, `<circle class="rv-hit" cx="${x}" cy="${y}" r="24" fill="transparent"/>`)
             + `<text x="${x}" y="${ly}" text-anchor="middle" font-size="12" font-weight="700" fill="${l.press.level === 'open' ? 'var(--muted)' : 'var(--cyan)'}">${esc(l.short || l.label)}</text>`
             + `<text x="${x}" y="${ly + 13}" text-anchor="middle" font-size="10.5" fill="var(--muted)">${l.count} selsk.</text>`;
         });
@@ -1882,7 +1906,7 @@
           const [x, y] = pts[i];
           if (l.press.level === 'dam') svg += `<rect x="${x - 20}" y="${y - 19}" width="40" height="5" rx="2" fill="var(--yellow)"/>`;
           const sub = rvSub(l);
-          svg += rvNode(l, i, x, y)
+          svg += rvNode(l, i, x, y, `<rect class="rv-hit" x="0" y="${y - row / 2}" width="${W}" height="${row}" fill="transparent"/>`)
             + `<text x="72" y="${y - 1}" font-size="13" font-weight="700" fill="${l.press.level === 'open' ? 'var(--muted)' : 'var(--cyan)'}">${esc(l.short || l.label)} <tspan font-weight="400" font-size="11" fill="var(--muted)">· ${l.count} selsk.</tspan></text>`
             + `<text x="72" y="${y + 14}" font-size="11" fill="${['dam', 'early'].includes(l.press.level) ? 'var(--yellow)' : 'var(--muted)'}">${esc(sub)}</text>`;
         });
@@ -2012,6 +2036,12 @@
       return `<p class="vc-press lv-${esc(p.level)}"><span class="tag">${esc(rvSub(l))}</span>${esc(p.t)}${s}</p>`;
     }
 
+    // "Placeret i netop dette led": NDI-linsens plads i værdikæden pr. selskab (ikke hele temaet)
+    function placedChips(l, all) {
+      const list = all ? l.placed : l.placed.slice(0, SHOW);
+      return list.map(c => `<a class="chip placed" href="selskab.html?isin=${encodeURIComponent(c.isin)}&fund=${fund}">${esc(coName(c))} <small>${pct(c.w)}${c.partial ? ' · <i>delvist</i>' : ''}</small></a>`).join('');
+    }
+
     function companyChips(l, ch, all) {
       const own = chainTheme[ch.id];
       const list = all ? l.companies : l.companies.slice(0, SHOW);
@@ -2065,8 +2095,17 @@
         const kindTag = l.kind === 'baggrund'
           ? '<span class="vc-kind" title="Generel baggrundsviden, ikke Mads\' synspunkt">baggrund</span>'
           : '<span class="vc-kind ndi" title="Mads\' eller bogens synspunkt med kilde">NDI</span>';
+        // Kun i AI- og robotkæden deler flere led ét temas liste; energi og rum er allerede valgt efter forretning
+        const np = (id === 'ai-compute' || id === 'physical') ? (l.placed?.length || 0) : 0;
+        const twins = ch.links.filter(x => x !== l && x.count && (x.themes || []).join() === (l.themes || []).join()).map(x => x.short || x.label);
+        const placedHtml = np
+          ? `<p class="vc-grp"><span class="pin" aria-hidden="true">◉</span><b>Placeret i netop dette led</b> · ${np} selskaber ifølge NDI-linsen</p><div class="chips" data-grp="placed">${placedChips(l, false)}</div>${np > SHOW ? `<button type="button" class="vc-more" data-more="placed">Vis alle ${np} →</button>` : ''}`
+          : '';
+        const themeHead = np || twins.length
+          ? `<p class="vc-grp"><b>Hele temaet${l.themes?.length ? ' ' + esc(l.themes.map(daTheme).join(' + ')) : ''}</b> · ${l.count} selskaber${twins.length ? `, deles med ${esc(twins.join(', '))}` : ''}</p>`
+          : '';
         const cosHtml = l.count
-          ? `<div class="chips">${companyChips(l, ch, false)}</div>${l.count > SHOW ? `<button type="button" class="vc-more" data-more="1">Vis alle ${l.count} →</button>` : ''}`
+          ? `${placedHtml}${themeHead}<div class="chips" data-grp="theme">${companyChips(l, ch, false)}</div>${l.count > SHOW ? `<button type="button" class="vc-more" data-more="theme">Vis alle ${l.count} →</button>` : ''}${np ? `<p class="src" style="margin-top:6px">${esc(pack.placedNote || '')}</p>` : ''}`
           : '<p class="src">Ingen selskaber i den forsinkede beholdning er tilordnet dette led.</p>';
         el.innerHTML = `
           <div class="vc-ico" aria-hidden="true">${l.icon || '◆'}</div>
@@ -2078,7 +2117,7 @@
             ${l.shift ? `<div class="vc-sec"><h4>Hvad ændrer sig</h4><p>${esc(l.shift)}</p></div>` : ''}
             ${id === 'energy' ? whereLine(l) : ''}
             ${id === 'space' ? spaceHub(l) : findHub(l, ch)}
-            <div class="vc-num"><b>${l.count}</b> selskaber · ca. <b>${pct(l.weightSum)}</b> af PMINDI pr. ${fmtDate(pack.asOf)}</div>
+            <div class="vc-num">${np ? `<b>${np}</b> placeret i leddet · ` : ''}<b>${l.count}</b> selskaber i ${twins.length ? 'hele temaet' : 'leddet'} · ca. <b>${pct(l.weightSum)}</b> af PMINDI pr. ${fmtDate(pack.asOf)}</div>
             <div class="vc-bar" aria-hidden="true"><i style="width:${Math.min(100, (l.weightSum / max) * 100).toFixed(1)}%"></i></div>
             <div class="vc-hint">${l.count ? 'Klik for at se selskaberne' : ''}</div>
             <div class="vc-cos">${cosHtml}${factsBox(l)}${see}</div>
@@ -2094,7 +2133,7 @@
           const more = e.target.closest('[data-more]');
           if (more) {
             e.stopPropagation();
-            el.querySelector('.chips').innerHTML = companyChips(l, ch, true);
+            el.querySelector(`.chips[data-grp="${more.dataset.more}"]`).innerHTML = more.dataset.more === 'placed' ? placedChips(l, true) : companyChips(l, ch, true);
             more.remove();
             return;
           }

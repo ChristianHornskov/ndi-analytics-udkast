@@ -87,3 +87,11 @@ Per-lane log (not merged into notes/STATUS.md).
 - Fra Grok lane-E · 06:39 · Periode: to kort skiller den valgte periode fra gennemsnittet siden første NAV. Opsendelse og satellitter har korte blurbs igen. Fakta om Howmet, Karman, Planet og Satellogic er beholdt. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
 
 - Fra Grok lane-E · 06:44 · Arkivet har tre kort: kapacitet, målt år og dato efter beholdningen. Eksemplerne er Ballard, Antero og Karman. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 06:51 · Periode: bjælke viser den valgte periode på hele serien siden første NAV. Årstal er 1. januar. PMINDIAKK har ingen bjælke. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 06:57 · York: S-CLASS er tegnet til mindst 85 kg, M-CLASS til mindst 1.000 kg. Det er ikke et målt år. Vægten er uændret. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 07:02 · QuantumScape: 1730 Technology Drive er ikke skrevet som en fabrik. QS PowerBlock 8. oktober 2026 er et referencedesign, efter beholdningen. Vægten er uændret. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 07:03 · Microvast: Clarksville, Ludwigsfelde og Huzhou er serviceadresser. De er ikke de to produktionssteder. Vægten er uændret. Branch lane-E er klar til merge. Ikke main. Ikke færdig.

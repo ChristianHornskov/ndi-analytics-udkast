@@ -222,6 +222,18 @@
           "ai": true
         },
         {
+          "label": "Forretningsmodel",
+          "value": "Projekter, service og software",
+          "hint": "Leverer batterilagringsanlæg til elselskaber og udviklere som projekter, og tjener derudover på serviceaftaler og software til at styre anlæggene.",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "Integration og software",
+          "hint": "Erfaring med at designe og samle store anlæg samt egen styringssoftware. Køber battericellerne hos andre og afhænger af handelsregler og told. Beskrivelse, ikke en vurdering.",
+          "ai": true
+        },
+        {
           "label": "Plads i værdikæden",
           "value": "Energi-kæden · led 4: lagring",
           "hint": "Lagring gør sol og vind mere brugbart og kan aflaste elnettet. Placeringen er pædagogisk.",
@@ -896,6 +908,18 @@
           "ai": true
         },
         {
+          "label": "Forretningsmodel",
+          "value": "Udlån, bank og teknologi",
+          "hint": "Renteindtægter fra udlån (især privatlån) og indlån i egen bank, gebyrer fra investering og kort, plus betaling fra andre finansielle selskaber for teknologiplatformen (Galileo).",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "Bank og platform i ét",
+          "hint": "Har egen amerikansk banklicens, så udlån kan finansieres med indlån, og sælger samme teknologi videre til andre. Afhænger af kreditkvaliteten og renteniveauet. Beskrivelse, ikke en vurdering.",
+          "ai": true
+        },
+        {
           "label": "Plads i værdikæden",
           "value": "Uden for AI-kæden",
           "hint": "En digital finansplatform. Fintech er et tema, ikke et led i værdikæderne. Placeringen er pædagogisk.",
@@ -927,6 +951,18 @@
           "label": "Hvad ejer man?",
           "value": "Materialet under chippen",
           "hint": "Specialiserede halvledersubstrater, blandt andet silicon-on-insulator, som chips bygges ovenpå.",
+          "ai": true
+        },
+        {
+          "label": "Forretningsmodel",
+          "value": "Salg af substrater",
+          "hint": "Sælger færdige substrat-wafers til chipproducenter og -fabrikker, som bygger chips ovenpå til fx mobiltelefoner, biler og industri.",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "Egen proces (Smart Cut)",
+          "hint": "Bygger på egen proces og patenter til at overføre tynde lag silicium. Afhænger af få store kunder og af mobil- og bilmarkedets cyklus. Beskrivelse, ikke en vurdering.",
           "ai": true
         },
         {
@@ -964,6 +1000,18 @@
           "ai": true
         },
         {
+          "label": "Forretningsmodel",
+          "value": "Mining og lejeaftaler",
+          "hint": "Tjener penge på bitcoin, der udvindes i egne anlæg, og i stigende grad på flerårige lejeaftaler, hvor compute-kunder bruger anlæggenes strøm og plads.",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "Strømaftaler og byggeret",
+          "hint": "Adgang til store strømtilslutninger og grunde tager år at opnå. Indtjeningen fra mining følger bitcoin-prisen. Beskrivelse, ikke en vurdering.",
+          "ai": true
+        },
+        {
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 2: datacentre",
           "hint": "Strøm og bygninger, der kan blive til compute. Temaforslaget Compute passer til rollen som fysisk infrastruktur. Placeringen er pædagogisk.",
@@ -995,6 +1043,18 @@
           "label": "Hvad ejer man?",
           "value": "Software til data og beslutninger",
           "hint": "Platforme, der samler en organisations data og gør dem brugbare i drift og beslutninger, også med AI.",
+          "ai": true
+        },
+        {
+          "label": "Forretningsmodel",
+          "value": "Softwareabonnementer",
+          "hint": "Offentlige myndigheder og virksomheder betaler for licenser og abonnementer på platformene, ofte i flerårige aftaler.",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "Dyb integration",
+          "hint": "Softwaren bliver bygget ind i kundens data og daglige drift, og offentligt arbejde kræver sikkerhedsgodkendelser. En stor del af indtægten kommer fra offentlige kontrakter. Beskrivelse, ikke en vurdering.",
           "ai": true
         },
         {
@@ -1032,6 +1092,18 @@
           "ai": true
         },
         {
+          "label": "Forretningsmodel",
+          "value": "Salg af hukommelseschips",
+          "hint": "Sælger DRAM, herunder HBM, og NAND til producenter af servere, AI-systemer, telefoner og pc’er. Priserne svinger med udbud og efterspørgsel.",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "Procesteknik og kapital",
+          "hint": "Avanceret hukommelse kræver egen procesteknik og meget store investeringer i fabrikker. HBM sælges til få store kunder. Beskrivelse, ikke en vurdering.",
+          "ai": true
+        },
+        {
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 6: hukommelse",
           "hint": "AI-chips skal have data tæt på. Hukommelse er blevet en af flaskehalsene. Placeringen er pædagogisk.",
@@ -1063,6 +1135,18 @@
           "label": "Hvad ejer man?",
           "value": "Hukommelse, chipfabrik og elektronik",
           "hint": "DRAM- og NAND-hukommelse, chipproduktion for andre og forbrugerelektronik i én koncern.",
+          "ai": true
+        },
+        {
+          "label": "Forretningsmodel",
+          "value": "Chips og elektronik",
+          "hint": "Tjener penge på salg af hukommelseschips, chipproduktion for andre, telefoner, skærme og forbrugerelektronik.",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "Skala og egne fabrikker",
+          "hint": "Ejer selv fabrikkerne bag mange af produkterne og producerer i meget stor skala. Hukommelsesdelen følger branchens prisudsving. Beskrivelse, ikke en vurdering.",
           "ai": true
         },
         {
@@ -1100,6 +1184,18 @@
           "ai": true
         },
         {
+          "label": "Forretningsmodel",
+          "value": "Salg af maskiner og service",
+          "hint": "Sælger lasersystemer til industrikunder og tjener derudover på service og reservedele til de installerede maskiner.",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "Laserteknik til nicher",
+          "hint": "Egne laserprocesser til bestemte opgaver, fx bearbejdning af glas til chipindpakning. Ordrerne svinger med kundernes investeringer. Beskrivelse, ikke en vurdering.",
+          "ai": true
+        },
+        {
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 4: udstyr",
           "hint": "Produktionsudstyr. Indpakning af chips er ét af flere anvendelsesområder. Placeringen er pædagogisk.",
@@ -1131,6 +1227,18 @@
           "label": "Hvad ejer man?",
           "value": "Udstyr til energiproduktion",
           "hint": "Kedler, forbrændingssystemer og emissionsbehandling til kraftværker og industri.",
+          "ai": true
+        },
+        {
+          "label": "Forretningsmodel",
+          "value": "Udstyr, projekter og service",
+          "hint": "Sælger kedler og miljøudstyr som projekter og tjener løbende på reservedele og service til et stort installeret anlæg.",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "Installeret base",
+          "hint": "Mange års installerede anlæg giver løbende service- og reservedelsarbejde. Store projekter kan give tab ved forsinkelser. Beskrivelse, ikke en vurdering.",
           "ai": true
         },
         {
@@ -1168,6 +1276,18 @@
           "ai": true
         },
         {
+          "label": "Forretningsmodel",
+          "value": "Annoncer og datalicenser",
+          "hint": "Hovedindtægten er annoncer. Derudover betaler AI- og søgeselskaber for adgang til indholdet via dataaftaler.",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "Brugerskabt arkiv",
+          "hint": "Mange års samtaler skrevet af brugerne og fællesskaber drevet af frivillige moderatorer. Afhænger af de frivillige og af trafik fra søgemaskiner. Beskrivelse, ikke en vurdering.",
+          "ai": true
+        },
+        {
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 10: data",
           "hint": "Menneskeskabt indhold er også data, som AI-modeller kan trænes på. Placeringen er pædagogisk.",
@@ -1199,6 +1319,18 @@
           "label": "Hvad ejer man?",
           "value": "Investeringsapp",
           "hint": "En app til handel med aktier, optioner og krypto samt opsparings- og kortprodukter.",
+          "ai": true
+        },
+        {
+          "label": "Forretningsmodel",
+          "value": "Handel, renter og abonnement",
+          "hint": "Indtægter når kunderne handler (bl.a. betaling for ordreflow), renteindtægter på kundernes midler og abonnementet Robinhood Gold.",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "Brand og enkel app",
+          "hint": "Et kendt brand blandt yngre investorer og en app, der er bygget til mobil fra start. Indtjeningen følger kundernes handelsaktivitet og regler for ordreflow. Beskrivelse, ikke en vurdering.",
           "ai": true
         },
         {
@@ -1236,6 +1368,18 @@
           "ai": true
         },
         {
+          "label": "Forretningsmodel",
+          "value": "Produktion for kunder",
+          "hint": "Kunderne betaler for at få deres eget chipdesign produceret, ofte i flerårige aftaler om kapacitet.",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "Specialprocesser og placering",
+          "hint": "Specialiserede processer (fx til radio, strømstyring og siliciumfotonik) og fabrikker i USA, Europa og Asien. Konkurrerer ikke om de allermindste procesteknologier. Beskrivelse, ikke en vurdering.",
+          "ai": true
+        },
+        {
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 5: foundry",
           "hint": "Fabrikken, der omsætter kunders chipdesign til fysiske chips. Placeringen er pædagogisk.",
@@ -1267,6 +1411,18 @@
           "label": "Hvad ejer man?",
           "value": "Chipfabrik for analoge chips",
           "hint": "Produktion for andre af specialiserede analoge chips til sensorer, kommunikation og strømstyring.",
+          "ai": true
+        },
+        {
+          "label": "Forretningsmodel",
+          "value": "Produktion for kunder",
+          "hint": "Chipselskaber uden egne fabrikker betaler for at få deres analoge chips produceret.",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "Analog specialviden",
+          "hint": "Specialprocesser til fx radio, sensorer, strømstyring og siliciumfotonik samt fabrikker i flere lande. Afhænger af kundernes designvalg. Beskrivelse, ikke en vurdering.",
           "ai": true
         },
         {
@@ -1304,6 +1460,18 @@
           "ai": true
         },
         {
+          "label": "Forretningsmodel",
+          "value": "Andel af annoncekroner",
+          "hint": "Annoncører betaler for at nå app-brugere, og selskabet tager en andel af annoncekronerne. Selskabet har frasolgt sin egen spilforretning.",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "Data og algoritmer",
+          "hint": "Annoncemotoren bliver bedre af data fra mange apps og annoncer. Afhænger af Apples og Googles regler for apps og persondata. Beskrivelse, ikke en vurdering.",
+          "ai": true
+        },
+        {
           "label": "Plads i værdikæden",
           "value": "AI-compute · led 11: software",
           "hint": "Algoritmer og data bruges til at matche annoncer og målgrupper. Placeringen er pædagogisk.",
@@ -1335,6 +1503,18 @@
           "label": "Hvad ejer man?",
           "value": "Kryptobørs og opbevaring",
           "hint": "Handel med og opbevaring af kryptoaktiver for private og institutioner, plus infrastruktur som egen blockchain (Base) og stablecoin-samarbejde.",
+          "ai": true
+        },
+        {
+          "label": "Forretningsmodel",
+          "value": "Handelsgebyrer og tjenester",
+          "hint": "Gebyrer når kunder handler kryptoaktiver, plus indtægter fra abonnementer og tjenester som opbevaring, staking og andel af renteindtægter på stablecoinen USDC.",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "Licenser og tillid",
+          "hint": "Licenser og tilladelser i flere lande og et kendt brand gør det tungt for nye at komme ind. Indtjeningen svinger med kryptomarkedets aktivitet. Beskrivelse, ikke en vurdering.",
           "ai": true
         },
         {
@@ -1372,6 +1552,18 @@
           "ai": true
         },
         {
+          "label": "Forretningsmodel",
+          "value": "Renter på reserverne",
+          "hint": "Hovedindtægten er renter på de reserver (kontanter og korte statsobligationer), der står bag USDC. En del deles med distributionspartnere, især Coinbase.",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "Regulering og netværk",
+          "hint": "Regulerede og løbende rapporterede reserver samt bred brug på mange blockchains og børser. Afhænger af renteniveauet og af partnere. Beskrivelse, ikke en vurdering.",
+          "ai": true
+        },
+        {
           "label": "Plads i værdikæden",
           "value": "Uden for AI-kæden",
           "hint": "Betalings- og finansinfrastruktur. Fintech er et tema, ikke et led i værdikæderne. Placeringen er pædagogisk.",
@@ -1403,6 +1595,18 @@
           "label": "Hvad ejer man?",
           "value": "Dating-apps",
           "hint": "Apps til dating og venskaber, blandt andet Bumble og Badoo, med indtjening fra abonnementer og tilkøb.",
+          "ai": true
+        },
+        {
+          "label": "Forretningsmodel",
+          "value": "Abonnementer og tilkøb",
+          "hint": "Brugerne kan bruge apps gratis, og indtægten kommer fra dem, der betaler for abonnement eller enkelte ekstrafunktioner.",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "Netværk af brugere",
+          "hint": "En dating-app er mere værd, jo flere relevante brugere der er i området. Afhænger af app-butikkerne og brugernes skiften mellem apps. Beskrivelse, ikke en vurdering.",
           "ai": true
         },
         {
@@ -1440,6 +1644,18 @@
           "ai": true
         },
         {
+          "label": "Forretningsmodel",
+          "value": "Salg af komponenter",
+          "hint": "Sælger LED’er, lasere og sensorer til producenter af biler, industriudstyr og elektronik, ofte bygget ind i kundernes produkter i flere år.",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "Optisk procesviden",
+          "hint": "Lang erfaring med optiske halvledere og designs, der bliver valgt ind i bilmodeller for hele deres levetid. Bilindustrien fylder meget. Beskrivelse, ikke en vurdering.",
+          "ai": true
+        },
+        {
           "label": "Plads i værdikæden",
           "value": "Robotik-kæden · led 1: komponenter",
           "hint": "Sensorer og lyskilder er komponenter i biler, maskiner og robotter. Placeringen er pædagogisk.",
@@ -1471,6 +1687,18 @@
           "label": "Hvad ejer man?",
           "value": "Solcellemoduler produceret i USA",
           "hint": "Produktion af solcellemoduler og opbygning af en amerikansk forsyningskæde til solenergi.",
+          "ai": true
+        },
+        {
+          "label": "Forretningsmodel",
+          "value": "Salg af solcellemoduler",
+          "hint": "Sælger solcellemoduler produceret i USA til udviklere af solcelleparker og planlægger at producere flere dele af kæden selv.",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "Produktion i USA",
+          "hint": "Amerikansk produktion kan give adgang til industripolitisk støtte og beskyttelse mod told. Afhænger af politik og af teknologi og forsyning fra partnere. Beskrivelse, ikke en vurdering.",
           "ai": true
         },
         {
@@ -2120,6 +2348,18 @@
           "ai": true
         },
         {
+          "label": "Forretningsmodel",
+          "value": "Salg af naturgas",
+          "hint": "Udvinder og sælger naturgas. Indtægten følger gasprisen og den producerede mængde.",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "Placering og reserver",
+          "hint": "Gasreserver tæt på Golfkysten med dens kraftværker og LNG-eksport. Produktet er en råvare, så prisen sættes af markedet. Beskrivelse, ikke en vurdering.",
+          "ai": true
+        },
+        {
           "label": "Plads i værdikæden",
           "value": "Energi-kæden · led 1: elproduktion",
           "hint": "Naturgas er brændsel til gaskraftværker, som leverer strøm til blandt andet datacentre. Selskabet producerer gassen, ikke strømmen. Placeringen er pædagogisk.",
@@ -2290,6 +2530,18 @@
           "ai": true
         },
         {
+          "label": "Forretningsmodel",
+          "value": "Forsikringspræmier",
+          "hint": "Kunderne betaler præmie for bilforsikring. Indtjeningen er forskellen mellem præmier og udbetalte skader og omkostninger. Salg sker både direkte og via partnere.",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "Kørselsdata i prisen",
+          "hint": "Prissætter ud fra målt kørsel, ikke kun alder og bopæl. Andre forsikringsselskaber bruger også kørselsdata, og priserne er reguleret i hver delstat. Beskrivelse, ikke en vurdering.",
+          "ai": true
+        },
+        {
           "label": "Plads i værdikæden",
           "value": "Uden for AI-kæden",
           "hint": "Et forsikringsselskab bygget på data og software. Insurtech er et tema, ikke et led i værdikæderne. Placeringen er pædagogisk.",
@@ -2392,6 +2644,18 @@
           "ai": true
         },
         {
+          "label": "Forretningsmodel",
+          "value": "Abonnementer på behandling",
+          "hint": "Kunderne betaler typisk et løbende abonnement for online-konsultation og medicin eller produkter leveret hjem.",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "Brand og egen kæde",
+          "hint": "Et kendt forbrugerbrand og egen platform fra konsultation til levering. Afhænger af sundhedsregler og af reglerne for kopierede lægemidler. Beskrivelse, ikke en vurdering.",
+          "ai": true
+        },
+        {
           "label": "Plads i værdikæden",
           "value": "Uden for AI-kæden",
           "hint": "En digital sundhedsplatform. Ligger ikke i et værdikæde-led. Placeringen er pædagogisk.",
@@ -2423,6 +2687,18 @@
           "label": "Hvad ejer man?",
           "value": "Digital bolighandel",
           "hint": "Køber boliger direkte fra sælgere via en onlineplatform og sælger dem videre.",
+          "ai": true
+        },
+        {
+          "label": "Forretningsmodel",
+          "value": "Køb og videresalg af boliger",
+          "hint": "Indtjeningen er forskellen mellem købs- og salgspris på boliger samt gebyrer, fratrukket omkostninger til istandsættelse, finansiering og den tid, boligen står på lager.",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "Prismodeller og data",
+          "hint": "Prissætter boliger automatisk ud fra data om tidligere handler. Ejer selv boligerne og bærer derfor risikoen, når priserne falder. Beskrivelse, ikke en vurdering.",
           "ai": true
         },
         {
@@ -7526,6 +7802,18 @@
           "ai": true
         },
         {
+          "label": "Forretningsmodel",
+          "value": "Udlejning af strøm og udstyr",
+          "hint": "Lejer kraftværkskapacitet ud på kontrakter til fx datacentre og tjener på udstyr og logistik til olie- og gasbrønde.",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "Hurtig strøm på stedet",
+          "hint": "Kan levere strøm, mens kunden venter på nettilslutning. Gasturbiner kan også købes eller lejes af andre. Beskrivelse, ikke en vurdering.",
+          "ai": true
+        },
+        {
           "label": "Plads i værdikæden",
           "value": "Energi-kæden · led 1: elproduktion",
           "hint": "Strøm på stedet, mens nettilslutningen venter. Olieservicedelen ligger uden for kæden. Placeringen er pædagogisk.",
@@ -7557,6 +7845,18 @@
           "label": "Hvad ejer man?",
           "value": "Frakturering og strøm",
           "hint": "Leverer hydraulisk frakturering til olie- og gasbrønde i Texas og har startet en forretning med strøm på stedet.",
+          "ai": true
+        },
+        {
+          "label": "Forretningsmodel",
+          "value": "Ydelser til brønde og strøm",
+          "hint": "Tjener penge på at udføre frakturering for olie- og gasselskaber og på at leje strømkapacitet ud på stedet.",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "Udstyr og kundeforhold",
+          "hint": "Egen flåde af udstyr og faste kunderelationer i Texas. Efterspørgslen følger olieselskabernes aktivitet. Beskrivelse, ikke en vurdering.",
           "ai": true
         },
         {
@@ -11433,6 +11733,18 @@
           "label": "Hvad ejer man?",
           "value": "Superapp i Sydøstasien",
           "hint": "Kørsel (ride-hailing), levering af mad og dagligvarer samt betalinger, udlån og digitale banker i én app på tværs af flere lande i Sydøstasien.",
+          "ai": true
+        },
+        {
+          "label": "Forretningsmodel",
+          "value": "Provision og finans",
+          "hint": "Tager provision på kørsel og levering, får gebyrer fra handlende og tjener på betalinger og udlån i appen.",
+          "ai": true
+        },
+        {
+          "label": "Svært at kopiere",
+          "value": "Netværk i mange byer",
+          "hint": "Mange chauffører, bude, butikker og brugere i samme app på tværs af flere lande. Konkurrencen og reglerne er forskellige fra land til land. Beskrivelse, ikke en vurdering.",
           "ai": true
         },
         {
