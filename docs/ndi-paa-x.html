@@ -27,7 +27,7 @@
  </footer>
  <noscript><p style="max-width:1180px;margin:0 auto;padding:0 20px 24px;color:#aac0c7">Siden læser kun den statiske fil. Slå JavaScript til for at se kortene. Browseren kalder ikke X.</p></noscript>
  <script type="module">
- import { loadXPosts, xCard, fmtXDate, highlightHtml, X_LABEL, X_FILTERS, postInFilter, postMatchesQuery, postWho, feedHitKind } from './js/x-feed.js';
+ import { loadXPosts, xCard, fmtXDate, highlightHtml, X_LABEL, X_FILTERS, postInFilter, postMatchesQuery, postWho, feedHitKind, xScoreHtml, matchPosts } from './js/x-feed.js';
  const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
  const main = document.getElementById('main');
  const pack = await loadXPosts();
@@ -43,9 +43,6 @@
  const posts = [...pack.posts].sort((a, b) => (b.created_at || '').localeCompare(a.created_at || ''));
  const house = (pack.accounts || []).map((a) => '@' + a.username).join(' · ');
  const curatedN = posts.filter((p) => p.curatedFrom === 'mads_following').length;
- const nSoft = posts.filter((p) => postMatchesQuery(p, 'SoftBank')).length;
- const nNv = posts.filter((p) => postMatchesQuery(p, 'NVDA')).length;
- const nChips = posts.filter((p) => postInFilter(p, 'chips')).length;
  const softPost = posts.find((p) => postMatchesQuery(p, 'SoftBank'));
  const nvPost = posts.find((p) => postMatchesQuery(p, 'NVDA'));
  const chipsPosts = posts.filter((p) => postInFilter(p, 'chips'));
@@ -57,9 +54,31 @@
  const sp = cut.lastIndexOf(' ');
  return (sp > 90 ? cut.slice(0, sp) : cut).trim() + '…';
  };
- const door = (spot, href, jump, v, kicker, title, n, post, byKind, kind) => `<a class="x-door is-${kind}" href="${href}" data-jump="${jump}" data-v="${esc(v)}" data-spot="${spot}">
+ const splitOf = (list, kindOf) => {
+ let direct = 0;
+ let theme = 0;
+ for (const p of list) {
+ const k = kindOf(p);
+ if (k === 'direct') direct += 1;
+ else if (k === 'theme') theme += 1;
+ }
+ return { direct, theme };
+ };
+ const scoreOf = (split, total) => {
+ const cell = (n, label, theme) => `<span><b${theme ? ' class="is-theme"' : ''}>${n}</b><i>${label}</i></span>`;
+ if (split.direct && split.theme) return `<span class="x-door-score">${cell(split.direct, 'direkte')}${cell(split.theme, 'tema', true)}</span>`;
+ if (split.direct) return `<span class="x-door-score">${cell(split.direct, 'direkte')}</span>`;
+ if (split.theme) return `<span class="x-door-score">${cell(split.theme, 'tema', true)}</span>`;
+ return `<span class="x-door-score">${cell(total, 'opslag')}</span>`;
+ };
+ const softList = posts.filter((p) => postMatchesQuery(p, 'SoftBank'));
+ const nvList = posts.filter((p) => postMatchesQuery(p, 'NVDA'));
+ const softScore = scoreOf(splitOf(softList, (p) => feedHitKind(p, { q: 'SoftBank' })), softList.length);
+ const nvScore = scoreOf(splitOf(nvList, (p) => feedHitKind(p, { q: 'NVDA' })), nvList.length);
+ const chipsScore = scoreOf(splitOf(chipsPosts, (p) => feedHitKind(p, { f: 'chips' })), chipsPosts.length);
+ const door = (spot, href, jump, v, kicker, title, score, post, byKind, kind) => `<a class="x-door is-${kind}" href="${href}" data-jump="${jump}" data-v="${esc(v)}" data-spot="${spot}">
  <span class="k">${kicker}</span>
- <span class="x-door-top"><strong>${title}</strong><span class="x-door-n">${n} opslag</span></span>
+ <span class="x-door-top"><strong>${title}</strong>${score}</span>
  ${post ? `<span class="x-door-q">${highlightHtml(excerpt(post), v === 'chips' ? 'chips' : v)}</span><span class="x-door-by">${byKind} · @${esc(post.username)} · ${esc(fmtXDate(post.created_at))}</span>` : '<span class="x-door-q">Ingen opslag i snapshotet.</span>'}
  </a>`;
 
@@ -76,25 +95,34 @@
  };
  let state = read();
  const apply = (list) => list.filter((p) => postInFilter(p, state.f) && postWho(p, state.who) && postMatchesQuery(p, state.q));
+ const reasonsFor = (p) => {
+ const q = state.q.trim();
+ const themes = !q && state.f && state.f !== 'all' && state.f !== 'ndi'
+ ? (state.f === 'chips' ? ['chips', 'ai'] : [state.f])
+ : [];
+ const tickers = q ? [q] : (state.f === 'chips' ? ['NVDA'] : []);
+ if (!tickers.length && !themes.length) return [];
+ return matchPosts({ posts: [p] }, { tickers, themes })[0]?.reasons || [];
+ };
  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
  main.innerHTML = `
  <p class="eyebrow">X · STATISK SNAPSHOT</p>
  <h1>NDI på X</h1>
- <p class="lede">${posts.length} offentlige opslag i et fast udsnit. Egne kort. Ingen X-embed, og browseren kalder ikke X.</p>
- <p class="warn">${esc(X_LABEL)}.</p>
- <p class="band">Snapshot ${esc(fmtXDate(pack.snapshotAt))}. NDI-konti: ${esc(house)}.${curatedN ? ` ${curatedN} opslag er fra konti, som Mads følger.` : ''}</p>
+ <p class="lede x-intro">${posts.length} offentlige opslag i et fast udsnit. Egne kort. Ingen X-embed, og browseren kalder ikke X.</p>
+ <p class="warn x-label">${esc(X_LABEL)}.</p>
+ <p class="band x-snap">Snapshot ${esc(fmtXDate(pack.snapshotAt))}. NDI-konti: ${esc(house)}.${curatedN ? ` ${curatedN} opslag er fra konti, som Mads følger.` : ''}</p>
 
  <div class="x-spot" id="spor" aria-label="Genveje til demo">
- ${door('soft', 'ndi-paa-x.html?q=SoftBank', 'q', 'SoftBank', 'SELSKAB · DIREKTE', 'SoftBank', nSoft, softPost, 'Seneste', 'direct')}
- ${door('nv', 'ndi-paa-x.html?q=NVDA', 'q', 'NVDA', 'SELSKAB · DIREKTE', 'Nvidia', nNv, nvPost, 'Seneste', 'direct')}
- ${door('chips', 'ndi-paa-x.html?f=chips', 'f', 'chips', 'TEMA', 'Chips / AI', nChips, chipsPost, 'Eksempel', 'theme')}
+ ${door('soft', 'ndi-paa-x.html?q=SoftBank', 'q', 'SoftBank', 'SELSKAB · DIREKTE', 'SoftBank', softScore, softPost, 'Seneste', 'direct')}
+ ${door('nv', 'ndi-paa-x.html?q=NVDA', 'q', 'NVDA', 'SELSKAB · DIREKTE', 'Nvidia', nvScore, nvPost, 'Seneste', 'direct')}
+ ${door('chips', 'ndi-paa-x.html?f=chips', 'f', 'chips', 'TEMA', 'Chips / AI', chipsScore, chipsPost, 'Eksempel', 'theme')}
  </div>
- <p class="link-row" style="margin-top:-2px">
- <a class="outline-btn small" href="selskab.html?isin=JP3436100006&fund=pmindi">SoftBank på selskabssiden →</a>
- <a class="outline-btn small" href="selskab.html?isin=US67066G1040&fund=pmindi">Nvidia på selskabssiden →</a>
- <a class="outline-btn small" href="tema.html?slug=chips&fund=pmindi">Tema: chips →</a>
- <a class="outline-btn small" href="tema.html?slug=platforms&fund=pmindi">Tema: platforme →</a>
+ <p class="link-row x-jumps" style="margin-top:-2px">
+ <a class="outline-btn small" href="selskab.html?isin=JP3436100006&fund=pmindi#hvad-siger-x">SoftBank på selskabssiden →</a>
+ <a class="outline-btn small" href="selskab.html?isin=US67066G1040&fund=pmindi#hvad-siger-x">Nvidia på selskabssiden →</a>
+ <a class="outline-btn small" href="tema.html?slug=chips&fund=pmindi#hvad-siger-x">Tema: chips →</a>
+ <a class="outline-btn small" href="tema.html?slug=platforms&fund=pmindi#hvad-siger-x">Tema: platforme →</a>
  </p>
 
  <div class="x-tools" id="x-tools">
@@ -112,8 +140,8 @@
  <div class="x-active chips" id="x-active"></div>
  </div>
  <div class="x-grid" id="x-grid"></div>
- <p class="warn" style="margin-top:20px">Opslagene kan være forældede, ufuldstændige eller subjektive. De er ikke investeringsrådgivning og erstatter ikke KID eller prospekt.</p>
- <p class="link-row">
+ <p class="warn x-footwarn" style="margin-top:20px">Opslagene kan være forældede, ufuldstændige eller subjektive. De er ikke investeringsrådgivning og erstatter ikke KID eller prospekt.</p>
+ <p class="link-row x-footlinks">
  <a class="outline-btn" href="fakta.html">Fakta →</a>
  <a class="outline-btn" href="omkostninger.html">Omkostninger →</a>
  <a class="outline-btn" href="nyhedsarkiv.html">Nyhedsarkiv →</a>
@@ -192,7 +220,7 @@
  if (!q && state.f === 'chips' && kind === 'theme') hint = 'Chips eller AI, uden NVDA-ticker.';
  const quotedTheme = !direct.length;
  const kicker = kind === 'direct' ? 'Øvrige direkte træf' : (quotedTheme ? 'Øvrige tema' : 'Tema');
- const body = cards.map((p) => xCard(p, { query: markQ, hitKind: kind })).join('');
+ const body = cards.map((p) => xCard(p, { query: markQ, hitKind: kind, reasons: reasonsFor(p) })).join('');
  return `<div class="x-lane ${kind === 'direct' ? 'is-direct' : 'is-theme'}">
  <p class="x-lane-h"><span class="x-lane-k">${kicker}</span><span>${hint} · ${cards.length}</span></p>
  <div class="x-grid">${body}</div>
@@ -211,6 +239,21 @@
  if (state.who === 'house') picked.push('NDI-konti');
  if (state.who === 'curated') picked.push('konti Mads følger');
  const pickedLine = picked.length ? ` Aktivt: ${picked.join(' · ')}.` : '';
+ const scoreItems = [];
+ if (leadOn && list.length) {
+ if (direct.length || theme.length) {
+ const themeFilter = !state.q.trim() && state.f !== 'all' && state.f !== 'ndi';
+ if (direct.length || themeFilter) scoreItems.push({ n: direct.length, label: 'direkte', mod: 'is-direct' });
+ if (theme.length || themeFilter) scoreItems.push({ n: theme.length, label: 'tema', mod: 'is-theme' });
+ } else {
+ scoreItems.push({ n: list.length, label: 'opslag', mod: 'is-direct' });
+ }
+ }
+ const scoreBar = scoreItems.length
+ ? `<div class="x-score-bar">${xScoreHtml(scoreItems)}<span class="x-asof">Snapshot ${esc(fmtXDate(pack.snapshotAt))}</span></div>`
+ : '';
+ live.classList.toggle('is-echo', scoreItems.length > 0);
+ active.classList.toggle('is-echo', leadOn);
  if (!list.length) {
  grid.innerHTML = `<div class="x-empty x-stage">
  <p class="x-zero" aria-hidden="true">0</p>
@@ -233,14 +276,14 @@
  + homeLane('is-rest', other, 'Andre opslag', 'Hverken en NDI-konto eller mærket fra listen Mads følger');
  } else if (!direct.length && !theme.length) {
  const [first, ...tail] = list;
- grid.innerHTML = `<div class="x-stage">${xCard(first, { query: markQ, lead: true })}</div>`
+ grid.innerHTML = scoreBar + `<div class="x-stage">${xCard(first, { query: markQ, lead: true, reasons: reasonsFor(first) })}</div>`
  + (tail.length ? `<div class="x-grid" style="grid-column:1/-1">${tail.map((p) => xCard(p, { query: markQ })).join('')}</div>` : '');
  } else {
  const leadPost = direct[0] || theme[0];
  const leadKind = direct.length ? 'direct' : 'theme';
  const restDirect = direct.length ? direct.slice(1) : [];
  const restTheme = direct.length ? theme : theme.slice(1);
- grid.innerHTML = `<div class="x-stage">${xCard(leadPost, { query: markQ, lead: true, hitKind: leadKind })}</div>`
+ grid.innerHTML = scoreBar + `<div class="x-stage">${xCard(leadPost, { query: markQ, lead: true, hitKind: leadKind, reasons: reasonsFor(leadPost) })}</div>`
  + laneOf('direct', restDirect)
  + laneOf('theme', restTheme)
  + (restHits.length ? `<div class="x-grid" style="grid-column:1/-1">${restHits.map((p) => xCard(p, { query: state.q })).join('')}</div>` : '');
@@ -248,14 +291,19 @@
  };
 
  const revealHits = (smooth) => {
- const lead = document.querySelector('#x-grid .is-quote .x-by') || document.querySelector('#x-grid .x-empty .k, #x-grid .x-text');
+ const lead = document.querySelector('#x-grid .is-quote .x-by') || document.querySelector('#x-grid .x-empty .k');
  if (!lead) return;
  const r = lead.getBoundingClientRect();
- if (r.top >= 64 && r.bottom <= window.innerHeight - 8) return;
+ const viewBottom = window.innerHeight - 12;
+ if (r.top >= 56 && r.bottom <= viewBottom) return;
  const behavior = smooth && !reduceMotion ? 'smooth' : 'auto';
- const narrow = window.matchMedia('(max-width: 700px)').matches;
- const target = narrow ? document.getElementById('x-grid') : document.getElementById('spor');
- target?.scrollIntoView({ behavior, block: 'start' });
+ const quote = lead.closest('article') || lead.closest('.x-empty') || lead;
+ const top = quote.getBoundingClientRect().top;
+ let delta = 0;
+ if (r.bottom > viewBottom) delta = r.bottom - viewBottom;
+ if (top - delta < 56) delta = top - 56;
+ if (Math.abs(delta) < 2) return;
+ window.scrollBy({ top: delta, behavior });
  };
  const applyJump = (el, scroll) => {
  const mode = el.getAttribute('data-jump');
@@ -293,11 +341,13 @@
  const f = e.target.closest('[data-f]');
  const w = e.target.closest('[data-who]');
  if (f) {
- state = { ...state, f: f.getAttribute('data-f') };
+ const id = f.getAttribute('data-f');
+ state = { ...state, f: state.f === id && id !== 'all' ? 'all' : id };
  write(state);
  render();
  } else if (w) {
- state = { ...state, who: w.getAttribute('data-who') };
+ const id = w.getAttribute('data-who');
+ state = { ...state, who: state.who === id && id !== 'all' ? 'all' : id };
  write(state);
  render();
  }
