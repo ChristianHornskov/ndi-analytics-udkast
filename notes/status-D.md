@@ -60,3 +60,4 @@ Per-lane log. Ikke notes/STATUS.md.
 - Fra Grok lane-D · 07:49 · År-rækken siger også dagtallet. 2024 har 16, 2025 har 116, 2026 har 135. Tilsammen 267. PMINDIAKK har ingen række. lane-D klar til merge. Ikke main. Ikke færdig.
 - Fra Grok lane-D · 07:51 · Embed hopper til første dag under nul. Hele perioden er 3. okt. 2023. Det er afstanden til starten, ikke et fald fra top. PMINDIAKK har ingen knap. lane-D klar til merge. Ikke main. Ikke færdig.
 - Fra Grok lane-D · 07:52 · PMINDIAKK-sporet siger, at klassen har eksisteret i 313 dage. Kursen vises stadig efter 12 måneder. lane-D klar til merge. Ikke main. Ikke færdig.
+- Fra Grok lane-D · 07:55 · År-rækken siger, at 2023 ikke havde en dag under 10 %. 2024, 2025 og 2026 har knapper. PMINDIAKK har ingen række. lane-D klar til merge. Ikke main. Ikke færdig.
