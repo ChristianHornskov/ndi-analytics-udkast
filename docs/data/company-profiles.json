@@ -865,17 +865,21 @@
   "CA6544846091": {
    "name": "NioCorp",
    "theme": "energy-resources",
-   "summary": "Udvikler et projekt i Nebraska med blandt andet niobium. Denne tekst beskriver ikke en mine i drift.",
-   "watch": "Finansiering, tilladelser og om minen bliver bygget.",
-   "source": "https://www.niocorp.com/",
-   "products": "Et mineprojekt, ikke en igangværende produktion.",
-   "customers": "Ingen driftkunder i denne beskrivelse.",
-   "role": "Råstofprojekt.",
+   "summary": "Udvikler Elk Creek i det sydøstlige Nebraska med niobium, scandium og titan. Kvartalsrapporten til 31. marts 2026 siger, at projektet ikke er i produktion.",
+   "watch": "Om portalen bliver til en mine. Kontrakten er ikke drift.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1512228/000119312526223959/nb-20260331.htm",
+   "products": "Et projekt med niobium, scandium og titan. Ikke en mine i produktion.",
+   "customers": "Ingen indtægt fra minedrift i rapporten.",
+   "role": "Råstofprojekt uden produktion.",
    "narrative": [
-    "NioCorp udvikler et projekt i Nebraska med blandt andet niobium.",
-    "Denne tekst beskriver ikke en mine i drift."
+    "NioCorp Developments Ltd. er registreret i British Columbia. Hovedkontoret ligger på 7000 South Yosemite Street, Suite 115, i Centennial i Colorado. Det er kontoret, ikke minen. Selskabet er noteret på NASDAQ under NB.",
+    "Kvartalsrapporten for perioden til 31. marts 2026 skriver, at Elk Creek i det sydøstlige Nebraska er et projekt med niobium, scandium og titan. Selskabet har ingen indtægt fra minedrift. Projektet er ikke i produktion. Der skal mere kapital til, før byggeri og kommerciel drift. I februar 2026 indgik datterselskabet en kontrakt om mineportal og jordarbejde. Betaling sker, efterhånden som arbejdet er udført. Pr. 31. marts 2026 var det meste af forudbetalingen ikke modregnet. Tilknyttede aftaler om ingeniørarbejde, skråninger, tilsyn og stålbuer havde fået udført arbejde. Beløb er ikke taget med. Johnson County i Nebraska har en aftale om veje ved projektet. Det er ikke minen. I december 2025 købte selskabet aktiver og rettigheder til aluminium-scandium. Teksten siger, at det er til en mulig senere forsyning, og at det afhænger af finansiering og udvikling. Hjemmesiden gav en captcha 16. oktober 2026. Sætningerne er fra kvartalsrapporten. Det er ikke en mine i drift."
    ],
    "narrativeSources": [
+    {
+     "label": "Kvartalsrapport til 31. marts 2026",
+     "url": "https://www.sec.gov/Archives/edgar/data/1512228/000119312526223959/nb-20260331.htm"
+    },
     {
      "label": "Selskabets side",
      "url": "https://www.niocorp.com/"

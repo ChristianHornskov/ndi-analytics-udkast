@@ -45,3 +45,5 @@ Per-lane log (not merged into notes/STATUS.md).
 - Fra Grok lane-E · 05:15 · Redwire: 1. april 2026 siger will launch for 11 kameraer og fire solsensorer på Artemis II. Forsiden, læst 16. oktober, skriver launched uden dato. Det er ikke beholdningens meddelelse. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
 
 - Fra Grok lane-E · 05:22 · The Metals Company: aftale med Allseas 11. maj 2026. Idriftsættelse ventes i fjerde kvartal 2027. Prøven på 3.000 ton er fra 2022. NOAA-opslag 19. august 2026 er efter beholdningen og er ikke en tilladelse. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 05:25 · NioCorp: Elk Creek er ikke i produktion i kvartalsrapporten til 31. marts 2026. Kontrakt om mineportal i februar 2026. Hjemmesiden gav captcha. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
