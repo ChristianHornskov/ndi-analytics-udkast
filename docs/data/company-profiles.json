@@ -2516,6 +2516,66 @@
      "url": "https://aspisotopes.com/"
     }
    ]
+  },
+  "US29355A1079": {
+   "name": "Enphase Energy",
+   "theme": "energy",
+   "summary": "Laver mikroinvertere til solanlæg. Stiftet i 2006. Hovedkontoret ligger i Fremont i Californien. Kontraktproduktion i South Carolina og Texas er kapacitet, ikke et målt år. Det er udstyr, ikke et kraftværk.",
+   "watch": "Om 89,4 millioner mikroinvertere bliver læst som beholdningen pr. 1. juni 2026. Tallet står uden dato på siden læst 16. oktober 2026. 5 millioner i kvartalet er kapacitet.",
+   "source": "https://enphase.com/about-us",
+   "products": "Mikroinvertere og IQ-batterier. Ikke et kraftværk.",
+   "customers": "Boliger og installatører. Siden nævner systemer i mere end 165 lande og navngiver ikke et kraftværk.",
+   "role": "Udstyr til solanlæg. Ikke et elselskab.",
+   "narrative": [
+    "Enphase skriver, at selskabet er stiftet i 2006 af Raghu Belur og Martin Fornage i Californien. Det første mikroinverter-system er sat til 2008. Selskabet blev noteret på NASDAQ i 2012 under ENPH. IQ-batterier til kunder i Nordamerika begyndte i 2020. IQ8 begyndte i 2021. IQ Battery 5P er sat til 2023. Kontraktproduktion i USA begyndte samme år. Hovedkontoret ligger på 47281 Bayside Pkwy. i Fremont i Californien.",
+    "Produktionssiden skriver, at der sendes fra kontraktfabrikker i South Carolina og Texas, og at Texas har linjer til IQ-batterier. Kapaciteten pr. anlæg er 5 millioner mikroinvertere i kvartalet. Batterikapaciteten i USA er 65 MWh i kvartalet. Siden omregner det til mere end 50.000 IQ-batterier om året. Det er kapacitet, ikke et målt år. Tidslinjen siger mere end 73 millioner mikroinvertere i 2024 og mere end 4 millioner systemer i 2025, før beholdningen. Om-siden skriver omkring 89,4 millioner mikroinvertere og omkring 5,3 millioner systemer uden dato. Siden er læst 16. oktober 2026. De to tal er ikke beholdningens tal. Et beløb pr. fabrik og ordene leader og revolutionary er ikke taget med. Det er udstyr, ikke et kraftværk."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Om selskabet",
+     "url": "https://enphase.com/about-us"
+    },
+    {
+     "label": "Produktion",
+     "url": "https://enphase.com/manufacturing"
+    },
+    {
+     "label": "Kontakt",
+     "url": "https://enphase.com/contact-us"
+    }
+   ]
+  },
+  "US59516C1062": {
+   "name": "Microvast",
+   "theme": "energy",
+   "summary": "Laver litium-ion-celler, moduler, pakker og lagringssystemer. To produktionssteder er ikke navngivet med by. Hovedkontoret ligger i Houston. Siden om netlagring er næste generation. Det er ikke et lager i drift.",
+   "watch": "Om to produktionssteder bliver læst som et lager i drift. Siden navngiver ikke byerne. 20 år er driftserfaring, ikke et stiftelsesår.",
+   "source": "https://microvast.com/company/",
+   "products": "Celler, moduler, pakker og lagringssystemer. Katode, anode og elektrolyt. Ikke et kraftværk.",
+   "customers": "Siden nævner transport, tungt udstyr og lagring. Den navngiver ikke en kunde.",
+   "role": "Celler og systemer. Ikke et lager i drift.",
+   "narrative": [
+    "Microvast skriver, at selskabet er vertikalt integreret, og at det selv laver katode, anode og elektrolyt samt celler, moduler, pakker og lagringssystemer. Kemierne på siden er NMC, LFP og LTO. Selskabet skriver, at alle produktionssteder er ISO 14001. Om-siden skriver to produktionssteder. Byerne er ikke navngivet. Drift i USA, Kina og Tyskland er ikke de to steder.",
+    "Hovedkontoret ligger på 2929 Briarpark Drive i Houston i Texas. Siden skriver cirka 2.000 medarbejdere og 20 års driftserfaring. Begge tal er uden dato, og 20 år er ikke et stiftelsesår. Siden om fremtidig lagring til nettet er skrevet som næste generation. Den siger ikke, at et lager er i drift. Ordene leader, safest, highest og maximize er ikke taget med."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabet",
+     "url": "https://microvast.com/company/"
+    },
+    {
+     "label": "Batterier",
+     "url": "https://microvast.com/batteries/"
+    },
+    {
+     "label": "Kontakt",
+     "url": "https://microvast.com/contact/"
+    },
+    {
+     "label": "Lagring",
+     "url": "https://microvast.com/future/energy-storage/"
+    }
+   ]
   }
  },
  "media": [
