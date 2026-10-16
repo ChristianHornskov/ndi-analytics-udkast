@@ -2,7 +2,7 @@ import {
   loadAll, fundById, slicePeriod, cagr, periodReturn, ytdReturn,
   monthlyReturns, maxDrawdown, fmtPct, fmtDate, daTheme, daMat, daMatPlain, WARN_HIST,
   MATURITY_LABELS, THEME_LABELS, calendarYearReturns, lastNav, publicTags, tagsFor, fillKidFooter, themeProposals,
-  searchPosition, themeShift, themeShifts, shiftLabel, shiftFromLabel, themeDoubt, doubtAltLabel, warrantParent,
+  searchPosition, themeShift, themeShifts, shiftLabel, shiftFromLabel, themeDoubt, doubtAltLabel, warrantParent, displayName,
 } from './data.js';
 import { renderChart } from './chart.js';
 
@@ -610,7 +610,7 @@ function filterPositions(fund, { ignoreShift = false, ignoreDoubt = false } = {}
 // Stabil tie-break på navn, så rækkefølgen ikke hopper mellem visninger.
 function sortPositions(list, sort, dirName) {
   const dir = dirName === 'asc' ? 1 : -1;
-  const byName = (a, b) => (a.name || '').localeCompare(b.name || '', 'da');
+  const byName = (a, b) => displayName(a).localeCompare(displayName(b), 'da');
   const w = (p) => (typeof p.weight === 'number' ? p.weight : 0);
   const cmp = {
     name: (a, b) => dir * byName(a, b),
@@ -622,15 +622,16 @@ function sortPositions(list, sort, dirName) {
 }
 
 function renderLivscyklus(fund) {
-  // Pædagogisk kurve (bogen: præ-revenue → value). Prikker = selskaber MED manuel modenhed;
-  // uklassificerede placeres ikke - vi gætter ikke i UI (lær/livscyklus.html).
+  // Pædagogisk kurve (bogen: præ-revenue → value). Prikker = selskaber med en modenhed i data
+  // (i dag maskinelle forslag, maturityStatus=forslag); uden modenhed placeres ikke (lær/livscyklus.html).
+  // Etiketter i almindeligt dansk (MATURITY_PLAIN), samme ord som selskab.html og screenerens filter.
   const stages = [
-    { id: 'prerevenue', label: 'Præ-revenue', t: 0.07 },
-    { id: 'preprofit', label: 'Præ-profit', t: 0.29 },
-    { id: 'highgrowth', label: 'High growth', t: 0.5 },
-    { id: 'garp', label: 'GARP', t: 0.71 },
-    { id: 'value', label: 'Value', t: 0.93 },
-  ];
+    { id: 'prerevenue', t: 0.07 },
+    { id: 'preprofit', t: 0.29 },
+    { id: 'highgrowth', t: 0.5 },
+    { id: 'garp', t: 0.71 },
+    { id: 'value', t: 0.93 },
+  ].map((st) => ({ ...st, label: daMatPlain(st.id) }));
   const W = 720, H = 190, L = 24, R = 24, TOP = 26, BOT = 54;
   const px = (t) => L + t * (W - L - R);
   const py = (t) => H - BOT - (H - BOT - TOP) / (1 + Math.exp(-9 * (t - 0.5)));
@@ -645,11 +646,15 @@ function renderLivscyklus(fund) {
   const classified = (fund.positions || []).length - unknown;
   const nodes = stages.map((st) => {
     const list = byStage[st.id];
-    // Selskabsprikker spredes langs kurven omkring fasen; radius ~ √vægt
+    // Selskabsprikker spredes langs kurven omkring fasen; radius ~ √vægt. Store faser bliver bredere
+    // i stedet for højere, så stakken ikke klippes i toppen af SVG'en (maks. 0,18 af bredden pr. fase).
+    const rowsMax = Math.max(1, Math.floor((py(st.t) - 10 - 6) / 7));
+    const cols = Math.max(9, Math.ceil(list.length / rowsMax));
+    const step = Math.min(0.012, 0.18 / cols);
     const dots = list.map((p, i) => {
-      const t = Math.min(0.99, Math.max(0.01, st.t + ((i % 9) - 4) * 0.012));
+      const t = Math.min(0.99, Math.max(0.01, st.t + ((i % cols) - (cols - 1) / 2) * step));
       const r = Math.max(2.5, Math.sqrt(p.weight || 0) * 2.4);
-      return `<circle class="life-co" cx="${px(t).toFixed(1)}" cy="${(py(t) - 10 - Math.floor(i / 9) * 7).toFixed(1)}" r="${r.toFixed(1)}"><title>${p.name} · ${(p.weight ?? 0).toFixed(2).replace('.', ',')} %</title></circle>`;
+      return `<circle class="life-co" cx="${px(t).toFixed(1)}" cy="${(py(t) - 10 - Math.floor(i / cols) * 7).toFixed(1)}" r="${r.toFixed(1)}"><title>${displayName(p)} · ${(p.weight ?? 0).toFixed(2).replace('.', ',')} %</title></circle>`;
     }).join('');
     return `${dots}<circle class="life-node" cx="${px(st.t)}" cy="${py(st.t).toFixed(1)}" r="7"/>
       <text class="life-lbl" x="${px(st.t)}" y="${H - 26}" text-anchor="middle">${st.label}</text>
@@ -658,7 +663,7 @@ function renderLivscyklus(fund) {
   const summary = stages.map((st) => `${st.label}: ${byStage[st.id].length}`).join(', ');
   const empty = classified === 0;
   const curve = `<div class="life-body">
-    <p class="life-intro">Pædagogisk model fra bogen: selskaber bevæger sig typisk fra præ-revenue mod value. Det er <strong>ikke en officiel NDI-rating</strong> og ikke en anbefaling.</p>
+    <p class="life-intro">Pædagogisk model fra bogen: selskaber bevæger sig typisk fra før omsætning mod moden. Det er <strong>ikke en officiel NDI-rating</strong> og ikke en anbefaling.</p>
     <div class="life-scroll"><svg class="life-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="Livscykluskurve. ${summary}. ${unknown} uden forslag.">
       <path class="life-curve" d="${path}"/>${nodes}
     </svg></div>
@@ -667,7 +672,7 @@ function renderLivscyklus(fund) {
   const nForslag = (fund.positions || []).filter((p) => p.maturityStatus === 'forslag' && byStage[p.maturity]).length;
   const foot = empty
     ? `Ingen af fondens ${fund.positions.length} selskaber har et modenheds<strong>forslag</strong> endnu.`
-    : `${classified} af ${fund.positions.length} selskaber har et modenheds<span class="badge badge-draft">forslag</span> (foreløbigt skøn — afventer NDI). ${unknown ? unknown + ' uden forslag.' : ''}`;
+    : `${classified} af ${fund.positions.length} selskaber har et modenheds<span class="badge badge-draft">forslag</span> (maskinelt ud fra offentlig branche og tema, afventer NDI-gennemgang). ${unknown ? unknown + ' uden forslag.' : ''}`;
   return `<section class="panel life-strip${empty ? ' is-empty' : ''}">
     <div class="life-head"><h2>Livscyklus</h2><span class="badge badge-draft" title="Heuristik — afventer NDI">udkast</span></div>
     ${curve}
@@ -677,9 +682,12 @@ function renderLivscyklus(fund) {
 
 function renderPortefolje(root) {
   const fund = fundById(DATA.portfolio, state.fund);
-  const all = filterPositions(fund);
-  const top10 = all.slice(0, 10);
-  const more = all.slice(10, 80);
+  // Udvalget er altid efter vægt (overskriften lover det); sorteringsknapperne styrer kun rækkefølgen i tabellen.
+  const byWeight = sortPositions(filterPositions(fund), 'weight', 'desc');
+  const top10 = sortPositions(byWeight.slice(0, 10), state.sort, state.dir);
+  const more = sortPositions(byWeight.slice(10, 80), state.sort, state.dir);
+  const top10All = sortPositions(fund.positions, 'weight', 'desc').slice(0, 10);
+  const top10Sum = top10All.reduce((s, p) => s + (p.weight || 0), 0);
   root.innerHTML = `
     <a class="back" href="?view=entre&fund=${state.fund}" data-nav="entre">← Entré</a>
     <p class="eyebrow">PORTEFØLJEN</p>
@@ -691,7 +699,7 @@ function renderPortefolje(root) {
     ${renderLivscyklus(fund)}
     <section class="panel">
       <h2 style="font-size:16px;margin-bottom:6px">Top 10 efter vægt</h2>
-      <p class="src" style="margin-bottom:10px">pr. ${fmtDate(fund.positionsAsOf || DATA.portfolio.asOf)} · forsinket snapshot. Eksponering, ikke anbefaling.</p>
+      <p class="src" style="margin-bottom:10px">pr. ${fmtDate(fund.positionsAsOf || DATA.portfolio.asOf)} · forsinket snapshot. De 10 største udgør tilsammen ${top10Sum.toFixed(1).replace('.', ',')} % af ${fund.short} (${fund.positions.length} selskaber i alt). Eksponering, ikke anbefaling.</p>
       ${positionsTable(top10, fund)}
     </section>
     <details class="panel" style="padding:12px 16px">
@@ -743,7 +751,7 @@ function positionsTable(list, fund) {
   hscroll(`<div class="table-wrap"><table class="data screener-table"><thead><tr>
     ${th('name','Navn')}${th('weight','Vægt %')}${th('theme','Tema')}
   </tr></thead><tbody>${list.map((p, i) => `${themeGroupRow(list, i)}<tr>
-    <td><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}">${p.name}</a>${hasLens(p) ? ` <a class="lens-mark" href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}#ndi-linse" title="NDI’s fem spørgsmål om selskabet (udkast)" aria-label="NDI-perspektiv for ${p.name}">◉</a>` : ''} ${weightSpark(p.isin, fund.id)}<br><small style="color:var(--muted)">${p.isin}</small>${warrantNote(p, fund)}${hitNote(p)}${mobileThemeLine(p, fund)}</td>
+    <td><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}" title="Beholdningsnavn: ${p.name}">${displayName(p)}</a>${hasLens(p) ? ` <a class="lens-mark" href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}#ndi-linse" title="NDI’s fem spørgsmål om selskabet (udkast)" aria-label="NDI-perspektiv for ${p.name}">◉</a>` : ''} ${weightSpark(p.isin, fund.id)}<br><small style="color:var(--muted)">${p.isin}</small>${warrantNote(p, fund)}${hitNote(p)}${mobileThemeLine(p, fund)}</td>
     <td>${(p.weight ?? 0).toFixed(2).replace('.', ',')}</td>
     <td>${tagsFor(p, DATA.multiTags).map((t) => `<a class="tag" href="tema.html?slug=${encodeURIComponent(t)}&fund=${fund.id}">${daTheme(t)}</a>`).join(' ')}${forslagCell(p)}</td>
   </tr>`).join('')}</tbody></table></div>`, 'Rul til siden for flere kolonner.') +
@@ -963,12 +971,20 @@ function maturityFilterHtml(fund) {
 function renderUdforsk(root) {
   const fund = fundById(DATA.portfolio, state.fund);
   const list = filterPositions(fund);
-  const themes = [...new Set(fund.positions.flatMap((p) => tagsFor(p, DATA.multiTags)))].sort();
+  const themes = [...new Set(fund.positions.flatMap((p) => tagsFor(p, DATA.multiTags)))]
+    .sort((a, b) => ((a === 'andet') - (b === 'andet')) || daTheme(a).localeCompare(daTheme(b), 'da'));
+  // Antal pr. tema-knap: primært tema + via multi-tag, så multi-tags kan ses før man klikker
+  const tagCount = {};
+  for (const p of fund.positions) for (const t of tagsFor(p, DATA.multiTags)) {
+    const c = (tagCount[t] ||= { prim: 0, multi: 0 });
+    if (t === p.theme) c.prim++; else c.multi++;
+  }
+  const nMulti = fund.positions.filter((p) => tagsFor(p, DATA.multiTags).length > 1).length;
   root.innerHTML = `
     <a class="back" href="?view=entre&fund=${state.fund}" data-nav="entre">← Entré</a>
     <p class="eyebrow">UDFORSK TECH</p>
     <h1>Screener · NDI-linse</h1>
-    <p class="lede">Kun selskaber i porteføljen. Hvert selskab har ét primært tema; ${Object.keys(DATA.multiTags?.byIsin || {}).length} udvalgte har flere temaer. Sortér på navn, vægt eller tema. Søgningen dækker også NDI-linsens tekst (fx “foundry”, “kobber”, “solceller”).</p>
+    <p class="lede">Kun selskaber i porteføljen. Hvert selskab har ét primært tema; ${nMulti} udvalgte har flere temaer (multi-tag). Sortér på navn, vægt eller tema. Søgningen dækker også NDI-linsens tekst (fx “foundry”, “kobber”, “solceller”).</p>
     <p class="band">Informationen er generel - ikke en personlig anbefaling. Segmenter = eksponering.</p>
     ${fundToolbar({ screener: false })}
     <div class="filters">
@@ -979,8 +995,9 @@ function renderUdforsk(root) {
       <!-- Følg tema stub skjult indtil tilmelding er aktiv -->
     </div>
     <div class="filters" role="group" aria-label="Filtrér på tema">
-      ${themes.map((t) => `<button type="button" class="control ${state.tags.includes(t)?'active':''}" data-tag="${t}" aria-pressed="${state.tags.includes(t)}">${daTheme(t)}</button>`).join('')}
+      ${themes.map((t) => `<button type="button" class="control ${state.tags.includes(t)?'active':''}" data-tag="${t}" aria-pressed="${state.tags.includes(t)}" title="${tagCount[t].prim} med ${daTheme(t)} som primært tema${tagCount[t].multi ? ` + ${tagCount[t].multi} via multi-tag` : ''}">${daTheme(t)} <small style="opacity:.75">${tagCount[t].prim}${tagCount[t].multi ? ` +${tagCount[t].multi}` : ''}</small></button>`).join('')}
     </div>
+    <p style="font-size:12px;color:var(--muted);margin:4px 0 0">Tal på knapperne: selskaber med temaet som primært tema, + dem der har det som ekstra tema (multi-tag). Vælger du flere temaer, vises selskaber med mindst ét af dem.</p>
     <p style="font-size:12px;color:var(--muted);margin:8px 0">Tema-dybsider: ${themes.map((t) => `<a href="tema.html?slug=${encodeURIComponent(t)}&fund=${state.fund}">${daTheme(t)}</a>`).join(' · ')} · <a href="${azHref()}">A-Z liste</a></p>
     ${statusFilterHtml(fund)}
     ${shiftPanelHtml(fund)}
@@ -1053,13 +1070,13 @@ function onClick(e) {
 
   if (t.id === 'csv-export') {
     flushSearch();
-    // Dansk Excel: UTF-8 BOM, semikolon, decimalkomma. Kun felter der også vises i UI (navn, ISIN, vægt, tema).
+    // Dansk Excel: UTF-8 BOM, semikolon, decimalkomma. Kun felter der også vises i UI (navn, beholdningsnavn, ISIN, vægt, tema).
     const fund = fundById(DATA.portfolio, state.fund);
     const list = filterPositions(fund);
     const asOf = fund.positionsAsOf || DATA.portfolio.asOf;
-    const rows = [['Navn', 'ISIN', 'Ticker', 'Vægt %', 'Temaer', 'Temastatus', 'Før (forslag)', 'Usikkert forslag', 'Alternativ', 'Beholdning pr.']].concat(
+    const rows = [['Navn', 'Beholdningsnavn', 'ISIN', 'Ticker', 'Vægt %', 'Temaer', 'Temastatus', 'Før (forslag)', 'Usikkert forslag', 'Alternativ', 'Beholdning pr.']].concat(
       list.map((p) => [
-        p.name || '', p.isin || '', p.symbol || '',
+        displayName(p), p.name || '', p.isin || '', p.symbol || '',
         p.weight == null ? '' : p.weight.toFixed(2).replace('.', ','),
         tagsFor(p, DATA.multiTags).map(daTheme).join(' | '),
         p.themeStatus === 'forslag' ? 'forslag (udkast)' : '',
