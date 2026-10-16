@@ -83,7 +83,7 @@ Widgetten er ét panel. Call-to-action står udenfor, med link til største fald
 
 Footer-links (`a` i `.site-footer` og i embed) holder sig på én linje, så «KID PMINDI ↗» ikke knækker. Teksten omkring dem må stadig skifte linje.
 
-På mobil er «Også i udkastet» chips med 44 px højde. Prikkerne mellem linkene vises ikke. Desktop er uændret.
+På mobil er «Også i udkastet» chips med 44 px højde. Prikkerne mellem linkene vises ikke. Desktop er uændret. «← Fonden» er 44 px høj, så den kan rammes.
 
 `.scarce` og `.tm-svg` bliver page-local på vaerdikaeder. De er ikke løftet ud.
 

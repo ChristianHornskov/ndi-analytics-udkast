@@ -256,6 +256,10 @@ Temasøjlerne havde farve, men ikke navn. Hver række siger nu PMINDI i brand og
 
 Det valgte klassekort i embed har gul overkant, `#f5ee9e`. Et klik flytter kanten fra PMINDI til PMINDIAKK. PMINDIAKK har tom svg og ingen procent. På sammenlign er «Se PMINDI» og «Se PMINDIAKK» 44 px ved 1280, 768 og 390. Ingen sidescroll. Ingen konsolfejl.
 
+### Update · tilbage-link 44 px · 2026-10-16 ~04:39 CEST
+
+«← Fonden» på drawdown var 19 px høj. Den er 44 px ved 1280, 390 og 320, med 16 px luft ned til øjenbrynet. PMINDIAKK har ingen procent. Forsiden og om-data scroller ikke sidelæns ved 320. Ingen konsolfejl.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.
