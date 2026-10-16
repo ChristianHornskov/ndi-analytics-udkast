@@ -73,6 +73,10 @@ for (const width of [1280, 375]) {
   const label = (await pg.locator('#cmp-label').textContent().catch(() => '')) || '';
   const labelVisible = await pg.locator('#cmp-label').isVisible().catch(() => false);
   const ok = offCmp === 0 && onCmp === 1 && label.trim() === NQ_LABEL && labelVisible;
+  await pg.goto(BASE + '/?view=fonden', { waitUntil: 'networkidle' });
+  const ddN = await pg.locator('#rullende-og-nedture tbody tr').count();
+  const r12 = await pg.locator('#rullende-og-nedture .r12 path.fund').count();
+  results.push({ width, path: 'rolling12+top5dd', status: 200, err: (ddN === 5 && r12 === 1) ? '' : `dd rows=${ddN} r12=${r12}`, footerOk: true });
   results.push({ width, path: 'nasdaq-compare', status: 200, err: ok ? '' : `nasdaq: off=${offCmp} on=${onCmp} labelVisible=${labelVisible} label="${label.trim()}"`, footerOk: true });
   await ctx.close();
 }
