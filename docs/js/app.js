@@ -1,6 +1,6 @@
 import {
   loadAll, fundById, slicePeriod, cagr, periodReturn, ytdReturn,
-  monthlyReturns, maxDrawdown, fmtPct, fmtDate, daTheme, daMat, daMatPlain, WARN_HIST,
+  monthlyReturns, maxDrawdown, topDrawdowns, rolling12, daysOld, fmtPct, fmtDate, daTheme, daMat, daMatPlain, WARN_HIST,
   MATURITY_LABELS, THEME_LABELS, calendarYearReturns, lastNav, publicTags, tagsFor, fillKidFooter, themeProposals,
   searchPosition, themeShift, themeShifts, shiftLabel, shiftFromLabel, themeDoubt, doubtAltLabel, warrantParent, displayName,
 } from './data.js';
@@ -447,6 +447,7 @@ function renderFonden(root) {
     <p class="eyebrow">FONDEN · MARKEDSFØRINGSMATERIALE</p>
     <h1>${fund.short || fund.id.toUpperCase()}</h1>
     <p class="lede fonden-lede">Udloddende · totalafkast i DKK efter løbende omkostninger · afkast pr. ${fmtDate(asOfPerf)} · beholdning forsinket pr. ${fmtDate(posAsOf)}.</p>
+    ${(() => { const age = daysOld(asOfPerf); return age > 3 ? `<p class="stale-warn" role="status">Bemærk: Afkastdata er ${age} dage gamle (seneste kurs ${fmtDate(asOfPerf)}). Se den officielle kurs hos Fundmarket.</p>` : ''; })()}
     <div class="toolbar">
       ${fundSeg()}
       ${periodSeg}
@@ -549,6 +550,38 @@ function renderFonden(root) {
   const cmpBox = $('#cmp-nasdaq', root);
   root.querySelectorAll('[data-basis]').forEach((b) => b.addEventListener('click', () => { state.basis = b.getAttribute('data-basis'); writeUrl(true); paint(); }));
   if (cmpBox) cmpBox.addEventListener('change', () => { state.cmp = cmpBox.checked; writeUrl(true); paint(); });
+  {
+    const r12 = rolling12(rows);
+    const dds = topDrawdowns(rows, 5);
+    const host = $('#perf-chart', root)?.closest('section');
+    if (host && (r12.length > 1 || dds.length)) {
+      const sec = document.createElement('section');
+      sec.className = 'panel';
+      sec.id = 'rullende-og-nedture';
+      let svg = '';
+      if (r12.length > 1) {
+        const W = 1000, H = 220, pl = 52, pr = 16, pt = 12, pb = 28;
+        const vs = r12.map((p) => p.v); let mn = Math.min(0, ...vs), mx = Math.max(0, ...vs); const sp = (mx - mn) || 1; mn -= sp * .08; mx += sp * .08;
+        const X = (i) => pl + (i / (r12.length - 1)) * (W - pl - pr), Y = (v) => pt + (1 - (v - mn) / (mx - mn)) * (H - pt - pb);
+        const d = r12.map((p, i) => `${i ? 'L' : 'M'}${X(i).toFixed(1)},${Y(p.v).toFixed(1)}`).join(' ');
+        const ticks = [mn, (mn + mx) / 2, mx].map((v) => `<text x="${pl - 8}" y="${Y(v) + 4}" text-anchor="end">${fmtPct(v, 0)}</text>`).join('');
+        const xl = [0, r12.length - 1].map((i) => `<text x="${X(i)}" y="${H - 8}" text-anchor="${i ? 'end' : 'start'}">${fmtDate(r12[i].d)}</text>`).join('');
+        const last = r12[r12.length - 1];
+        const pos = r12.filter((p) => p.v > 0).length;
+        svg = `<div class="chart-wrap r12"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Rullende 12-måneders totalafkast">${ticks}<line class="zero" x1="${pl}" x2="${W - pr}" y1="${Y(0)}" y2="${Y(0)}"/><path class="fund" d="${d}"/>${xl}</svg></div>
+          <p class="chart-readout">Seneste 12 måneder (pr. ${fmtDate(last.d)}): ${fmtPct(last.v)}. Bedste ${fmtPct(Math.max(...vs))}, svageste ${fmtPct(Math.min(...vs))}. Positivt i ${Math.round(pos / r12.length * 100)} % af de målte dage.</p>`;
+      }
+      const ddRows = dds.map((x, i) => `<tr><td>${i + 1}</td><td class="neg">${fmtPct(x.dd)}</td><td>${fmtDate(x.peakD)}</td><td>${fmtDate(x.troughD)}</td><td>${x.recD ? fmtDate(x.recD) : 'Ikke genvundet endnu'}</td></tr>`).join('');
+      sec.innerHTML = `<h2 style="font-size:18px;margin-bottom:6px">Rullende 12-måneders afkast</h2>
+        <p style="font-size:12px;color:var(--muted);margin-bottom:8px">Hvert punkt svarer på: Hvad gav en investering i de foregående 12 måneder? Totalafkast i DKK efter løbende omkostninger. Starter først, når der er 12 måneders historik.</p>
+        ${svg}
+        <h2 style="font-size:18px;margin:18px 0 6px">De 5 dybeste fald siden start</h2>
+        <p style="font-size:12px;color:var(--muted);margin-bottom:8px">Et fald måles fra en top til bunden, før fonden igen nåede over toppen.</p>
+        ${hscroll(`<div class="table-wrap"><table class="data" style="min-width:0"><thead><tr><th>#</th><th>Fald</th><th>Top</th><th>Bund</th><th>Genvundet</th></tr></thead><tbody>${ddRows}</tbody></table></div>`, 'Rul til siden for flere kolonner.')}
+        ${warnHtml()}`;
+      host.after(sec);
+    }
+  }
   const take = $('#chart-takeaway', root);
   if (take && sliced.length >= 2) {
     const first = sliced[0], last = sliced[sliced.length - 1];
