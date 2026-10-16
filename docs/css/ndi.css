@@ -585,6 +585,7 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
 .cmp-card dd{margin:0;text-align:right;color:var(--text);min-width:0}
 .cmp-card dd small{color:var(--faint)}
 .cmp-card .cmp-from{display:block}
+.cmp-when{white-space:nowrap}
 .cmp-card .outline-btn{min-height:44px}
 .cmp-empty{color:var(--faint);font-weight:500}
 .tl{list-style:none;padding:0;margin:4px 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;position:relative}
@@ -768,7 +769,10 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
 .cmp-links{margin:16px 0}
 @media (max-width:640px){
   .hero-stat{grid-template-columns:1fr;gap:6px}
-  .year-rail{grid-template-columns:1fr 1fr}
+  .year-rail{grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+  .year-rail a{padding:6px 2px 8px}
+  .year-rail .yr-mark{font-size:10px}
+  .year-rail .yr-r{font-size:13px}
   .ep-jump{grid-template-columns:1fr;gap:2px}
   .hero-stat .num{font-size:46px}
   .stat-strip{grid-template-columns:1fr}
@@ -777,6 +781,12 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
   .depth-well{order:1}
   .uw-key{display:grid;grid-template-columns:1fr 1fr;gap:8px 12px}
   .uw-key li:last-child{grid-column:1 / -1}
+}
+@media (max-width:360px){
+  .year-rail{grid-template-columns:1fr 1fr;gap:10px}
+  .year-rail a{padding:8px 6px 10px}
+  .year-rail .yr-mark{font-size:11px}
+  .year-rail .yr-r{font-size:16px}
 }
 @media print{
   .figure{background:#fff;border-color:#ccc;break-inside:avoid}

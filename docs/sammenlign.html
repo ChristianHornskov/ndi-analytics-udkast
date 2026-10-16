@@ -59,7 +59,7 @@
  <span class="cmp-pair">${bar(ta[k], 'a', 'PMINDI')}${bar(tb[k], 'b', 'PMINDIAKK')}</span></li>`).join('');
  const navA = lastNav(a.data), navB = lastNav(b.data);
  const firstA = a.data?.[0]?.d || a.inception, firstB = b.data?.[0]?.d || b.inception;
- const navCell = (nav) => (nav ? `${n2(nav.price)} <small>(${fmtDate(nav.d)})</small>` : '<span class="cmp-empty">Ingen kurs</span>');
+ const navCell = (nav) => (nav ? `${n2(nav.price)} <small class="cmp-when">(${fmtDate(nav.d)})</small>` : '<span class="cmp-empty">Ingen kurs</span>');
  // AKK-gate: afkast først efter 12 måneders historik fra første NAV
  const gate = new Date(firstB); gate.setFullYear(gate.getFullYear() + 1);
  const gateIso = gate.toISOString().slice(0, 10);
@@ -67,7 +67,7 @@
  const riyLine = (id) => {
  const n = facts?.classes?.[id]?.costs?.kidRiy5y;
  if (n == null) return '';
- return `<div><dt>KID, 5 år</dt><dd>ca. ${n.toFixed(2).replace('.', ',')} %<small class="cmp-from">årlig omkostning i KID. Før kurtage og depot.</small></dd></div>`;
+ return `<div><dt>KID, 5 år</dt><dd>ca. ${n.toFixed(2).replace('.', ',')} %<small class="cmp-from"><span class="cmp-when">årlig omkostning i KID.</span> <span class="cmp-when">Før kurtage og depot.</span></small></dd></div>`;
  };
  document.getElementById('main').innerHTML = `
  <p class="eyebrow">SAMMENLIGN ANDELSKLASSER</p>
@@ -98,7 +98,7 @@
  <div><dt>ISIN</dt><dd>${esc(b.isin)}</dd></div>
  <div><dt>${navB ? 'Første NAV' : 'Klassen startede'}</dt><dd>${fmtDate(firstB)}</dd></div>
  <div><dt>Seneste NAV</dt><dd>${navCell(navB)}</dd></div>
- <div><dt>Afkast</dt><dd><strong>Ny andelsklasse</strong><small class="cmp-from">kurs vises efter 12 måneder, fra ${fmtDate(gateIso)}</small></dd></div>
+ <div><dt>Afkast</dt><dd><strong>Ny andelsklasse</strong><small class="cmp-from">kurs vises efter 12 måneder, fra <span class="cmp-when">${fmtDate(gateIso)}</span></small></dd></div>
  ${riyLine('pmindiakk')}
  </dl>
  <a class="outline-btn" href="index.html?view=fonden&fund=pmindiakk">Se PMINDIAKK →</a>

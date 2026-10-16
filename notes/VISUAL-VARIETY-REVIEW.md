@@ -264,6 +264,12 @@ Det valgte klassekort i embed har gul overkant, `#f5ee9e`. Et klik flytter kante
 
 På PMINDIAKK var «Sammenlign andelsklasser» en tekstlinje. Under 640 px er den en chip, 44 px høj. På 1280 er den 22 px, uden pille. Siden har ingen procent. Ingen sidescroll. Ingen konsolfejl.
 
+### Update · årene deler gulv på telefonen · 2026-10-16 ~04:55 CEST
+
+På 390 stod årene i to rækker, så 2024 og 2026 ikke kunne sammenlignes på samme gulv. Ned til 361 px er de fire søjler på én række. Bundene ligger på samme linje. 2024 er 64 px. 2026 er 8 px. 2025 har gul overkant, 2026 cyan, og «til dato» er gul. «Dybeste fald» holder én linje. Under 360 px er det to rækker igen, og hver række deler gulv. Ingen sidescroll ved 1280, 390, 361 og 320.
+
+På sammenlign holder «5. dec. 2026» sammen, når forklaringen skifter linje. KID-noten skifter mellem «årlig omkostning i KID.» og «Før kurtage og depot.» PMINDI har stadig 126,52 (14. okt. 2026) og ca. 2,79 %. AKK har ca. 2,85 % og Ingen kurs. PMINDIAKK-drawdown har ingen procent. Ingen sidescroll. Ingen konsolfejl.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.
