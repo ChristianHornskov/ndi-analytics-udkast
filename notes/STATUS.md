@@ -481,3 +481,13 @@ På bred skærm stoppede temasøjlerne ved 560 px, med et tomt felt til højre i
 Tjekket i Chromium ved 1280, 800, 375 og 320. Ingen sidescroll, ingen konsolfejl.
 
 `lane-D` er klar til merge. Ikke main. Ikke færdig.
+
+## Fra Grok lane-D
+
+**2026-10-16 02:06 CEST. Lys kant på den gule søjle. Ikke færdig.**
+
+Den åbne søjle er gul og valgt fra start. Kanten var for tynd til at ses mod det gule. Den er nu 3 px og lys, så den ses mod baggrunden. En valgt søjle i brand er stadig 1,25 px. Et klik på 8. apr. 2025 sætter stadig udlæsningen til −35,8 %.
+
+Tjekket i Chromium. Ingen sidescroll ved 320. Ingen konsolfejl.
+
+`lane-D` er klar til merge. Ikke main. Ikke færdig.
