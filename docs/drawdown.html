@@ -136,8 +136,15 @@
  const cls = !e.recoveredD ? 'uw-span open' : 'uw-span';
  const title = `${fmtDate(e.peakD)} til ${fmtDate(endOf(e))}. Bund ${fmtDate(e.troughD)}, ${fmtPct(e.dd)}.`;
  const w = (x2 - x1).toFixed(1);
- parts.push(`<rect class="uw-span-hit" data-trough="${e.troughD}" x="${x1.toFixed(1)}" y="${railTop.toFixed(1)}" width="${w}" height="${Math.max(h, 28).toFixed(1)}"><title>${title}</title></rect>`);
+ parts.push(`<rect class="uw-span-hit" data-trough="${e.troughD}" x="${x1.toFixed(1)}" y="${(railTop - 16).toFixed(1)}" width="${w}" height="${(Math.max(h, 28) + 16).toFixed(1)}"><title>${title}</title></rect>`);
  parts.push(`<rect class="${cls}" data-peak="${e.peakD}" data-end="${endOf(e)}" data-trough="${e.troughD}" x="${x1.toFixed(1)}" y="${railTop.toFixed(1)}" width="${w}" height="${h.toFixed(1)}" rx="1"/>`);
+ const isMax = Math.abs(e.dd - sum.max) < 0.001;
+ if (!isMax) {
+ const openBar = !e.recoveredD;
+ const lx = openBar ? x1 + 6 : (x1 + x2) / 2;
+ const anchor = openBar ? 'start' : 'middle';
+ parts.push(`<text class="uw-span-lab${openBar ? ' open' : ''}" x="${lx.toFixed(1)}" y="${(railTop - 4).toFixed(1)}" text-anchor="${anchor}">${fmtPct(e.dd, 1)}</text>`);
+ }
  }
  if (recovery) {
  const rx = xOf(recovery).toFixed(1);
@@ -170,8 +177,8 @@
  const nowTop = Math.max(14, ny - 4);
  parts.push(`<text class="uw-label uw-now-label" text-anchor="start"><tspan x="${nowX}" y="${nowTop.toFixed(1)}">nu</tspan><tspan x="${nowX}" y="${(nowTop + 11).toFixed(1)}">${fmtPct(last.u, 0)}</tspan></text>`);
  const barSay = usedGate
- ? `${deep.length} søjler mellem kurven og årstallene er episoder dybere end 10 %. Højden er dybden, bredden er tiden. Stregen ved 10 % under nul er grænsen for de søjler.`
- : `${deep.length} søjler mellem kurven og årstallene er de dybeste episoder. Højden er dybden, bredden er tiden.`;
+ ? `${deep.length} søjler mellem kurven og årstallene er episoder dybere end 10 %. Højden er dybden, bredden er tiden. Tallet over søjlen er dybden. Det dybeste fald har tallet ved prikken. Stregen ved 10 % under nul er grænsen for de søjler.`
+ : `${deep.length} søjler mellem kurven og årstallene er de dybeste episoder. Højden er dybden, bredden er tiden. Tallet over søjlen er dybden.`;
  const desc = `Daglig afstand til løbende top fra ${fmtDate(rows[0].d)} til ${fmtDate(rows[rows.length - 1].d)}. Stregen ved nul er toppen. Dybeste bund ${fmtPct(trough.u)} den ${fmtDate(trough.d)}. Seneste dag ${fmtPct(last.u)}, ved ringen. ${open ? `Den tynde gule streg til højre er toppen ${fmtDate(open.peakD)}, hvor den åbne episode startede.` : ''} ${barSay} Den valgte har en lys kant. Den gule del af kurven er den episode, den valgte dag ligger i. Et klik på søjlen hopper til bunden. ${recovery ? `Ordet tilbage markerer ${fmtDate(recovery)}, hvor det dybeste fald igen nåede sin top.` : ''} Slideren vælger en dag. En cyan prik sættes på kurven, medmindre dagen allerede er den gule prik eller den gule ring.`;
  return `<svg id="uw-svg" class="uw" viewBox="0 0 ${W} ${H}" role="img" aria-labelledby="uw-title uw-desc"><title id="uw-title">Under vand</title><desc id="uw-desc">${desc}</desc>${parts.join('')}</svg>`;
  };

@@ -652,6 +652,8 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
 .figure .uw-open{stroke:var(--yellow);stroke-width:1.25;vector-effect:non-scaling-stroke;opacity:.9;pointer-events:none}
 .figure .uw-gate{stroke:var(--brand);stroke-width:2;vector-effect:non-scaling-stroke;pointer-events:none}
 .figure text.tick.uw-gate{fill:var(--brand)}
+.figure .uw-span-lab{fill:var(--text);font-size:10px;pointer-events:none}
+.figure .uw-span-lab.open{fill:var(--yellow)}
 .figure .uw-span{fill:var(--brand);opacity:.92;pointer-events:none}
 .figure .uw-span.open{fill:var(--yellow);opacity:1}
 .figure .uw-span.on{stroke:var(--text);stroke-width:1.25;vector-effect:non-scaling-stroke}
@@ -738,7 +740,7 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
   .figure figcaption,.hero-stat .when,.ep-ledger .meta{color:#333}
   .hero-stat .num,.ep-ledger .depth{color:#6d3038}
   .ep-ledger li.open .depth{color:#111}
-  .figure text,.figure .tick,.figure .uw-label,.figure .dot-lab{fill:#333}
+  .figure text,.figure .tick,.figure .uw-label,.figure .uw-span-lab,.figure .dot-lab{fill:#333}
   .figure .uw-plate{fill:#fff}
   .figure .uw-water{stroke:#111}
   .figure text.tick.uw-zero{fill:#111}

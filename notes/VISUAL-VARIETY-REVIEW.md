@@ -162,6 +162,10 @@ Temasøjlerne blev rundet til hele procent af den længste søjle. Quantum var 0
 
 Sliderens knap lå i kanten af kortet, mens kurvens første og sidste dag står inde i plottet. På 1100 var hullet omkring 70 px ved starten og over 100 px ved slutningen. Knappen følger nu plottets bredde. Ved 22. sep. 2023 og ved 14. okt. 2026 møder den stregen, ved 1280, 375 og 320. Et klik på −35,8 % sætter udlæsningen på 8. apr. 2025. Der kan weekender skubbe knappen omkring 5 px, stadig inden for knappen. Ingen sidescroll. Ingen konsolfejl. PMINDIAKK har ingen slider og ingen procent.
 
+### Update · tal over søjlerne · 2026-10-16 ~03:06 CEST
+
+−26,6 % og −26,8 % er næsten lige høje. Tallet står nu over de søjler, der ikke er det dybeste fald. −35,8 % beholder −36 % ved prikken. Tallene rammer ikke hinanden, prikken, "nu" eller årstallene, ved 1280, 375 og 320. Et klik på −26,6 % sætter udlæsningen på 30. mar. 2026. Den åbne er gul. Ingen sidescroll. Ingen konsolfejl.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.
