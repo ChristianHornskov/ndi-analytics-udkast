@@ -33,7 +33,7 @@
  <p data-kid-footer></p>
  </footer>
  <script type="module">
- import { loadAll, fundById, fmtDate, daTheme, WARN_HIST, findTheme, tagsFor, fillKidFooter, chainForTheme, chainHref, searchPosition } from './js/data.js';
+ import { loadAll, fundById, fmtDate, daTheme, WARN_HIST, findTheme, tagsFor, fillKidFooter, chainForTheme, chainHref, searchPosition, themeDoubt, doubtAltLabel } from './js/data.js';
  const u = new URL(location.href);
  const key = u.searchParams.get('slug') || 'chips';
  const fundId = u.searchParams.get('fund') || 'pmindi';
@@ -108,6 +108,9 @@
  // Hvor kom forslagene fra? (themeFrom i portfolio.json; mangler = Andet)
  const fromCounts = {};
  for (const p of list) if (p.theme === tk && p.themeStatus === 'forslag') { const f0 = p.themeFrom || 'andet'; fromCounts[f0] = (fromCounts[f0] || 0) + 1; }
+ // Usikre forslag (themeDoubt) i temaet → NDI-beslutningslisten i screeneren
+ const nDoubt = tk === 'andet' ? 0 : list.filter((p) => p.theme === tk && themeDoubt(p)).length;
+ const doubtTxt = nDoubt ? ` <a href="index.html?view=udforsk${fund.id !== 'pmindi' ? `&fund=${fund.id}` : ''}&tags=${encodeURIComponent(tk)}&status=forslag&tvivl=1" title="Forslag, udkastet selv er i tvivl om - med begrundelse og alternativ">${nDoubt} ${nDoubt === 1 ? 'forslag er markeret usikkert' : 'forslag er markeret usikre'}</a>.` : '';
  const fromTxt = Object.keys(fromCounts).length ? ' Før forslaget: ' + Object.entries(fromCounts).sort((a, b) => b[1] - a[1]).map(([k, n]) => `<a href="index.html?view=udforsk${fund.id !== 'pmindi' ? `&fund=${fund.id}` : ''}&status=forslag&skift=${encodeURIComponent(`${k}~${tk}`)}" title="Gennemgå dette temaskift i screeneren">${n} i ${esc(k === 'andet' ? 'Andet' : daTheme(k))}</a>`).join(', ') + '.' : '';
  const posAsOf = fmtDate(fund.positionsAsOf || td.positionsAsOf);
  const keyToSlug = Object.fromEntries(td.themes.map((t) => [t.title.toLowerCase(), t.slug]));
@@ -148,7 +151,7 @@
  const rows = shown.map((p) => {
  const multi = p.theme !== tk;
  return `<tr>
- <td><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}">${esc(p.name)}</a>${multi ? ` <span class="tag" title="Primært tema: ${esc(daTheme(p.theme))}">også ${esc(daTheme(p.theme))}</span>` : ''}${!multi && p.themeStatus === 'forslag' && tk !== 'andet' ? ` <span class="badge badge-draft" title="Forslag, afventer gennemgang${p.themeFrom && p.themeFrom !== 'andet' ? ` · før: ${esc(daTheme(p.themeFrom))}` : ' · før: Andet'}">forslag</span>` : ''}${lensOf(p) ? ` <a class="badge" href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}#ndi-linse" title="Kvalitativ NDI-linse: rolle, plads i værdikæden og forhold at holde øje med (udkast)" aria-label="NDI-linse for ${esc(p.name)}">NDI-linse</a>` : ''}${hitNote(p)}${!multi && p.themeStatus === 'forslag' && tk !== 'andet' ? `<br><small style="color:var(--muted)">før: ${esc(p.themeFrom && p.themeFrom !== 'andet' ? daTheme(p.themeFrom) : 'Andet')}</small>` : ''}</td>
+ <td><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}">${esc(p.name)}</a>${multi ? ` <span class="tag" title="Primært tema: ${esc(daTheme(p.theme))}">også ${esc(daTheme(p.theme))}</span>` : ''}${!multi && p.themeStatus === 'forslag' && tk !== 'andet' ? ` <span class="badge badge-draft" title="Forslag, afventer gennemgang${p.themeFrom && p.themeFrom !== 'andet' ? ` · før: ${esc(daTheme(p.themeFrom))}` : ' · før: Andet'}">forslag</span>` : ''}${lensOf(p) ? ` <a class="badge" href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}#ndi-linse" title="Kvalitativ NDI-linse: rolle, plads i værdikæden og forhold at holde øje med (udkast)" aria-label="NDI-linse for ${esc(p.name)}">NDI-linse</a>` : ''}${hitNote(p)}${!multi && p.themeStatus === 'forslag' && tk !== 'andet' ? `<br><small style="color:var(--muted)">før: ${esc(p.themeFrom && p.themeFrom !== 'andet' ? daTheme(p.themeFrom) : 'Andet')}</small>` : ''}${!multi && themeDoubt(p) ? `<br><small style="color:var(--muted)"><span class="badge" style="background:transparent;border:1px dashed var(--yellow);color:var(--yellow)">usikkert</span> ${esc(themeDoubt(p).why)}${themeDoubt(p).alt ? ` · alternativ: ${esc(doubtAltLabel(themeDoubt(p).alt))}` : ''}</small>` : ''}</td>
  <td class="hide-sm-cell">${p.role ? esc(p.role) : lensOwn(p) ? `${esc(lensOwn(p))} <small style="color:var(--muted)" title="Fra NDI-linsen, AI-udkast der afventer NDI-gennemgang">(linse, udkast)</small>` : '<span style="color:var(--muted)">–</span>'}</td>
  <td>${w(p.weight)}</td>
  </tr>`;
@@ -198,7 +201,7 @@
  <div class="row">${onlyLens ? `<a class="outline-btn small" href="${esc(temaHref({ linse: false }))}">Vis også uden NDI-linse</a> ` : ''}${status ? `<a class="outline-btn small" href="${esc(temaHref({ status: '' }))}">Fjern temastatus-filter</a> ` : ''}${qRaw ? `<a class="outline-btn small" href="${esc(temaHref({ q: '' }))}">Ryd søgning</a>` : ''}</div>
  </div>`
  : `<p class="band">Ingen selskaber i ${esc(fund.short)} med dette tema pr. ${posAsOf}.</p>`}
- <p class="src">Sorteret efter ${sort === 'name' ? 'navn' : 'vægt'}. Ingen kursafkast pr. aktie i udkastet.${nLens ? ' <span class="badge">NDI-linse</span> = kvalitativ beskrivelse (hvad ejer man, plads i værdikæden, hold øje med); tekster markeret udkast afventer NDI-gennemgang.' : ''}${nProp ? ` ${nProp} ${nProp === 1 ? 'selskab er' : 'selskaber er'} mærket <span class="badge badge-draft">forslag</span>: temaet er foreslået og afventer gennemgang (<a href="om-data.html#g-temaforslag">hvorfor</a>).${fromTxt}` : ''}</p>
+ <p class="src">Sorteret efter ${sort === 'name' ? 'navn' : 'vægt'}. Ingen kursafkast pr. aktie i udkastet.${nLens ? ' <span class="badge">NDI-linse</span> = kvalitativ beskrivelse (hvad ejer man, plads i værdikæden, hold øje med); tekster markeret udkast afventer NDI-gennemgang.' : ''}${nProp ? ` ${nProp} ${nProp === 1 ? 'selskab er' : 'selskaber er'} mærket <span class="badge badge-draft">forslag</span>: temaet er foreslået og afventer gennemgang (<a href="om-data.html#g-temaforslag">hvorfor</a>).${fromTxt}${doubtTxt}` : ''}</p>
  <p class="link-row" style="margin-top:10px"><a class="outline-btn small" href="${esc(screenerHref)}">Åbn i screeneren →</a>
  <button type="button" class="outline-btn small" id="copy-tema">Kopiér link til tema</button>
  <span class="sr-only" id="copy-tema-status" role="status" aria-live="polite"></span></p>

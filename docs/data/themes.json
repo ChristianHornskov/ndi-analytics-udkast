@@ -1144,8 +1144,8 @@
         "Chips"
       ],
       "themeKey": "connect",
-      "count": 29,
-      "weightSum": 8.04,
+      "count": 28,
+      "weightSum": 7.8,
       "companies": [
         {
           "isin": "US55024U1097",
@@ -1212,12 +1212,6 @@
           "name": "AST SpaceMobile",
           "weight": 0.25,
           "symbol": "ASTS"
-        },
-        {
-          "isin": "US0126531013",
-          "name": "Albemarle",
-          "weight": 0.24,
-          "symbol": "ALB"
         },
         {
           "isin": "US1638511089",
@@ -1914,8 +1908,8 @@
         "Chips"
       ],
       "themeKey": "energy-resources",
-      "count": 29,
-      "weightSum": 6.24,
+      "count": 30,
+      "weightSum": 6.48,
       "companies": [
         {
           "isin": "US2057683029",
@@ -1970,6 +1964,12 @@
           "name": "Lightbridge Corp",
           "weight": 0.26,
           "symbol": "LTBR"
+        },
+        {
+          "isin": "US0126531013",
+          "name": "Albemarle",
+          "weight": 0.24,
+          "symbol": "ALB"
         },
         {
           "isin": "CA6544846091",

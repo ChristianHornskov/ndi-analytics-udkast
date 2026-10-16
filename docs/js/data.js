@@ -322,6 +322,14 @@ export function themeShifts(positions) {
   return [...m.values()].sort((a, b) => ((a.to === 'andet') - (b.to === 'andet')) || b.n - a.n
     || daTheme(a.to).localeCompare(daTheme(b.to), 'da'));
 }
+// Usikre temaforslag (portfolio.json themeDoubt/themeAlt): udkastets egen tvivl om et forslag, så NDI
+// har en kort beslutningsliste. why = begrundelse (tekst), alt = alternativt tema-nøgle ('andet' = bliv i Andet).
+export function themeDoubt(p) {
+  if (p?.themeStatus !== 'forslag' || !p.themeDoubt) return null;
+  return { why: p.themeDoubt, alt: p.themeAlt || '' };
+}
+export const doubtAltLabel = (alt) => (!alt ? '' : alt === 'andet' ? 'bliv i Andet' : daTheme(alt));
+
 // "Andet / uklassificeret" forkortes til "Andet" i skift-etiketter og før-linjer
 export const shiftFromLabel = (from) => (from === 'andet' ? 'Andet' : daTheme(from));
 export const shiftLabel = (s) => (s.to === 'andet' ? 'Stadig Andet (intet tema passede)' : `${shiftFromLabel(s.from)} → ${daTheme(s.to)}`);

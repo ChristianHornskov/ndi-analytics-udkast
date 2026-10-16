@@ -205,3 +205,24 @@ NDI-linsen for de sidste Andet-navne peger på en plads tæt på et led. Temaet 
 | US6458272050 | Idaho Strategic Resources | tæt på Energi led 5 | guldproducent; sjældne jordarter kun efterforskning |
 | CA7142661031 | Perpetua Resources | tæt på Energi led 5 (antimon) | mineprojekt guld + antimon, ikke i produktion |
 | US88023B1035 | Tempus AI | AI-compute led 10 (data) | sundhed; uændret fra runde 2 |
+
+## Runde 4 + NDI-beslutningsliste: usikre forslag (lane-B c16, 2026-10-16)
+Kun `theme`/`themeFrom`/`themeNote` (Albemarle) og nye felter `themeDoubt` (begrundelse, tekst) + `themeAlt` (alternativ tema-nøgle; `andet` = bliv i Andet) i portfolio.json, begge klasser. themes.json (PMINDI) genberegnet (Optik 29 → 28, Energiressourcer 29 → 30).
+
+**Rettet:** Albemarle (US0126531013) connect → energy-resources (themeFrom: andet). Lithium, som de øvrige lithium-navne; linsen sagde allerede "kernen er lithium".
+
+**Usikre forslag (temaet IKKE ændret - NDI beslutter):** 18 i PMINDI (DeFi-serien tæller med), 18 i AKK.
+
+| Foreslået → alternativ | Navne | Begrundelse |
+|---|---|---|
+| Energiressourcer → Energi | Comstock, Antero, EQT, Expand Energy | naturgas = brændsel til elproduktion (Energi led 1), ikke kritisk råstof |
+| Fysisk tech → Energi | Quanta, MYR, Primoris (bygger elnet, Energi led 3); Fluor (energianlæg) | Fysisk tech dækker ellers robotik/elbiler/produktion |
+| Software → bliv i Andet | Root, Lemonade, Ategrity | forsikringsselskaber (insurtech) |
+| Platforme → bliv i Andet | Upexi, DeFi Development (+ serie) | kernen er en solana-beholdning |
+| Optik → bliv i Andet | Chemours, Arkema | kemi til mange industrier |
+| Optik → Chips | Solstice Advanced Materials | chipmaterialer (AI-compute led 4) er den del, der passer |
+| Energi → bliv i Andet | ProPetro | kernen er frakturering; kun ny strømforretning i Energi led 1 |
+
+Bevidst IKKE markeret: Comfort Systems, Sterling, Jacobs (AI-compute led 2 har temaerne physical+compute, så Fysisk tech er konsistent med kæden); Coinbase/Nu (fintech-platforme); Caterpillar/Terex (maskiner); Lightwave Logic (elektro-optiske polymerer = led 7).
+
+**Linse-konsistens:** NDI-tag-feltet i unique-metrics.json siger nu "<Tema> (forslag)" + "Temaforslag: X (før: Y). Afventer NDI-gennemgang." for alle 41 forslag, der før stod som "Primært tema: X" (eller "Connect (forslag)"); usikre forslag får "Usikkert forslag: … Alternativ: …" i hint. Eksisterende ekstra-noter (multi-tag, foundry) er bevaret.
