@@ -14,7 +14,7 @@ Static Danish site (`docs/`, GitHub Pages) for NewDeal Invest PMINDI / PMINDIAKK
 - Compliance: Markedsføringsmateriale + KID + prospekt footer on every page; no per-stock returns; holdings ≤ 1 Jun 2026; no cashtags on fund chart; no holdings-revealing posts.
 
 ## 5 pages to show Christian
-1. Fonden – https://christianhornskov.github.io/ndi-analytics-udkast/?view=fonden
+1. Fonden (with Nasdaq comparison) – https://christianhornskov.github.io/ndi-analytics-udkast/?view=fonden&cmp=nasdaq
 2. Værdikæder – https://christianhornskov.github.io/ndi-analytics-udkast/vaerdikaeder.html
 3. Omkostninger – https://christianhornskov.github.io/ndi-analytics-udkast/omkostninger.html
 4. Sådan tænker vi – https://christianhornskov.github.io/ndi-analytics-udkast/laer/saadan-taenker-vi.html
@@ -22,7 +22,7 @@ Static Danish site (`docs/`, GitHub Pages) for NewDeal Invest PMINDI / PMINDIAKK
 (Bonus: Risici – …/risici.html)
 
 ## Page count
-38 public HTML pages (incl. 17 under laer/) + SPA views (Entré, Fonden, Porteføljen, Udforsk). ~1.000 commits overnight across 7 lanes.
+39 HTML pages in docs/ (incl. 17 under laer/) + SPA views (Entré, Fonden, Porteføljen, Udforsk). ~1.280 commits since 15 Oct 18:00 across 7 lanes + coordinator.
 
 ## Tests
 - `scripts/precheck.sh` (run before every push): data cutoffs, no per-stock fields, X compliance (house-only, @InvestNewdeal markers, no $PMINDI holdings, no 13 Aug ticker post), AKK no series, Danish maturity labels, no internal agent comments in docs/.
@@ -58,3 +58,6 @@ _Updated 2026-10-16 07:21 CEST — HEAD 160de10_
 - MUST 2 Fonden mobile chart: the viewBox now matches the real width, so the chart is 305×240 px with 11 px axis text. The Nasdaq line is stronger (orange #f0b45a, 2,6 px, dashed). End labels read "Fonden +104,8 %" / "Nasdaq +94,5 %" (desktop: "Nasdaq-100").
 - SHOULD: cmp/visning only go into the URL on Fonden, so the Entré link stays clean. "Dyb →" is now "Se året i detaljer".
 - Smoke regression added (ux-0800-mobile). Freeze from 08:20.
+
+## Final check 08:32 CEST
+HEAD 1d89d6f+ · precheck PASSED · smoke 59/0 · jargon clean (accepted: Flodsystem, screener in glossary) · Pages: the top 5 + nasdaq-compare.json return 200, and the live chart.js has the end labels. Lanes stopped committing at 08:30.
