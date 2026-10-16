@@ -1448,3 +1448,16 @@ Uændret.
 
 ### ÅOP
 Uændret.
+
+## 2026-10-16 07:54 CEST · cyklus 59 · rullende 12m, 5 dybeste fald, stale-advarsel (main `41a61c6`, testet lokalt på archive + live md5 = main)
+
+- Rullende 12m og nedture regnes på totalafkast i DKK efter løbende omkostninger, og det står i teksten. Fald-tabellen viser også det åbne fald ("Ikke genvundet endnu", -26,8 %). Seneste 12m (-14,8 %) står lige så tydeligt som bedste (+72,5 %). Fremstillingen er afbalanceret. ✅ Advarslen om historisk afkast/tab står direkte under sektionen. ✅
+- PMINDIAKK: ingen rullende tal og ingen fald. 12m-gaten holder. ✅ Ingen 1m/3m på PMINDI. ✅
+- Datafriskhed: advarslen vises, når afkastdata er mere end 3 dage gamle. Det styrker kravet om "ingen live trades/kurser". ✅
+
+### SHOULD (før go-live)
+- S-R1 (NY) · "Positivt i 97 % af de målte dage": de rullende 12-måneders vinduer overlapper næsten helt, så tallet ser ud som en sandsynlighed for et positivt år. Det kan læses som et løfte om gevinst (MiFID art. 44 stk. 2: et retvisende billede). Fjern sætningen, eller tilføj "overlappende perioder. Det siger ikke noget om sandsynligheden fremover".
+- S-K1, S-K2, S-K3, S-N1, S-N2, S-N3 er åbne. M1 er uændret. S3, S5 og S12 er åbne.
+
+### ÅOP
+Uændret.

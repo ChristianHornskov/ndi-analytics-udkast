@@ -1457,3 +1457,24 @@ Main flyttede f6d6b4b → ffda4c8 (lane-B displayName i warrant-/risikolinjer + 
 ### Nice
 - Tastatur-tooltip: svg har `tabindex=0`, men ingen `aria-label`, og `.chart-readout` har ingen `aria-live="polite"`. Pil- og Home/End-navigation bliver derfor ikke læst op af skærmlæsere.
 - U-markøren er kun 12 px tekst. På 375 er tooltippet (`<title>`) ikke tilgængeligt ved berøring. Readoutet viser dog udbyttet, når cursoren står på ex-datoen. Ok.
+
+## 2026-10-16 07:54 CEST · cyklus 59 · freeze-tjek + rullende 12m/5 dybeste fald (main `41a61c6`, live = main pr. md5)
+
+Ændring siden c58: `4b67fa6` tilføjer en sektion "Rullende 12-måneders afkast" + "De 5 dybeste fald siden start" på Fonden og en advarsel om datafriskhed, når data er mere end 3 dage gamle.
+
+- Fonden @375/1280: sektionen ligger efter "Kontekst i perioden". 0 overflow, 0 pageerrors. Tabellen (552 px) ligger i hscroll med "Rul til siden"-hint. ✅ Fald-tallene (-35,8 / -26,8 / -26,6 / -16,7 %) er de samme som på drawdown.html. ✅ warnHtml (tab/historik) er med i sektionen. ✅
+- PMINDIAKK: sektionen vises ikke (early return før 12m). ✅
+- Stale-advarsel: data er pr. 14. okt. og i dag er 16. okt., så advarslen vises ikke. Det er korrekt.
+- Live footer-sweep @375 (20 URL'er, cache-bust): radg/tab/hist findes på alle, 0 overflow og 0 pageerrors. "overvægt" er de kendte negerede hits.
+
+### MUST
+- Ingen.
+
+### SHOULD
+1. NY · Den rullende sektion følger ikke den valgte periode. Den viser altid siden start, også når ÅTD eller et år er valgt. Det er fint, men overskriften bør sige "siden start", så en privat investor ikke tror, at den hænger sammen med periodeknapperne.
+2. NY · Stale-advarslen nævner "Fundmarket" uden link. Link til den samme Fundmarket-side, som KID-footeren bruger.
+3. c58 S-K1/S-K2 (takeaway i Kurs-tilstand, Kurs vs Nasdaq) er åbne og uændrede.
+4. c57 SHOULD 1–3 (B&W role, "NDI-tag"-label, livscyklus "(forslag)" pr. prik) er åbne.
+
+### Nice
+- Den rullende graf har ingen tooltip/readout pr. punkt og ingen `aria-live`. Den har kun et samlet readout. Ok for udkast.
