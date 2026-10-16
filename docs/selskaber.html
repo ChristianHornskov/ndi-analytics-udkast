@@ -82,13 +82,16 @@
  const anchor = (g) => 'g-' + g.toLowerCase().replace(/[^a-z0-9æøå]+/g, '-');
  const nForslag = pos.filter(isForslag).length;
  const nForslagQ = matchQ.filter(isForslag).length;
+ const nForslagAll = all.filter(isForslag).length;
  const groupCount = (g) => pos.filter((p) => groupOf(p) === g).length;
  const hitNote = (p) => {
    const h = hits.get(p.isin);
    return h?.via === 'linse' ? `<br><small style="color:var(--muted);display:inline-block;white-space:normal;max-width:36ch;line-height:1.35;text-align:left">Match i <a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${encodeURIComponent(fundId)}#ndi-linse">NDI-linsen</a> · ${esc(h.label)}: ${esc(h.value)}</small>` : '';
  };
  // Forslag-mærke + synlig "før"-linje (som screeneren)
+ // Som Udforsk: forslag-mærker kun i gennemgangstilstand (status=forslag). Forbeholdet står synligt i lede i stedet.
  const forslagCell = (p) => {
+   if (status !== 'forslag') return '';
    const s = themeShift(p);
    if (!s) return '';
    const before = s.to === 'andet' ? 'intet NDI-tema passede endnu' : `før: ${esc(shiftFromLabel(s.from))}`;
@@ -100,7 +103,7 @@
  const tagLinks = (p) => tagsFor(p, multiTags).map((t) => `<a class="tag" href="tema.html?slug=${encodeURIComponent(t)}&fund=${encodeURIComponent(fundId)}">${esc(daTheme(t))}</a>`).join(' ');
  const row = (p) => `
  <tr>
- <td><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${encodeURIComponent(fundId)}" title="Beholdningsnavn: ${esc(p.name)}" style="display:inline-block;min-height:24px;padding-top:3px">${esc(displayName(p))}</a>${p.symbol ? ` <small style="color:var(--muted)">${esc(p.symbol)}</small>` : ''}${hasLens(p) ? ` <span class="badge" title="Kvalitativ NDI-linse: rolle, plads i værdikæden og forhold at holde øje med (udkast)">NDI-linse</span>` : ''}${(() => { const par = warrantParent(p, fund.positions); return par ? `<br><small style="color:var(--muted);display:inline-block;white-space:normal;max-width:36ch;line-height:1.35;text-align:left">Warrant (tegningsret) på ${par.isin ? `<a href="selskab.html?isin=${encodeURIComponent(par.isin)}&fund=${encodeURIComponent(fundId)}">${esc(par.name)}</a>` : esc(par.name)} - ikke et selvstændigt selskab</small>` : ''; })()}${hitNote(p)}<span class="az-m-line"><small style="color:var(--muted)">${esc(p.isin)}</small><br>${tagLinks(p)}${forslagCell(p)}</span></td>
+ <td><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${encodeURIComponent(fundId)}" title="Beholdningsnavn: ${esc(p.name)}" style="display:inline-block;min-height:24px;padding-top:3px">${esc(displayName(p))}</a>${p.symbol ? ` <small style="color:var(--muted)">${esc(p.symbol)}</small>` : ''}${hasLens(p) ? ` <span class="badge" title="Kvalitativ NDI-linse: rolle, plads i værdikæden og forhold at holde øje med (udkast)">NDI-linse</span>` : ''}${(() => { const par = warrantParent(p, fund.positions); return par ? `<br><small style="color:var(--muted);display:inline-block;white-space:normal;max-width:36ch;line-height:1.35;text-align:left">Warrant (tegningsret) på ${par.isin ? `<a href="selskab.html?isin=${encodeURIComponent(par.isin)}&fund=${encodeURIComponent(fundId)}">${esc(displayName(par))}</a>` : esc(displayName(par))} - ikke et selvstændigt selskab</small>` : ''; })()}${hitNote(p)}<span class="az-m-line"><small style="color:var(--muted)">${esc(p.isin)}</small><br>${tagLinks(p)}${forslagCell(p)}</span></td>
  <td>${esc(p.isin)}</td>
  <td>${tagLinks(p)}${forslagCell(p)}</td>
  <td>${pct(p.weight)}</td>
@@ -152,7 +155,7 @@
  document.getElementById('main').innerHTML = `
  <p class="eyebrow">ALLE SELSKABER · FORSINKET BEHOLDNING</p>
  <h1>${esc(fund.short)}</h1>
- <p class="lede">${q || onlyLens || status || skift || tvivl ? `${pos.length} af ${all.length}` : all.length} positioner pr. ${fmtDate(fund.positionsAsOf || portfolio.asOf)}. Eksponering, ikke anbefaling.${nViaLens ? ` ${nViaLens} fundet via NDI-linsens tekst.` : ''}</p>
+ <p class="lede">${q || onlyLens || status || skift || tvivl ? `${pos.length} af ${all.length}` : all.length} positioner pr. ${fmtDate(fund.positionsAsOf || portfolio.asOf)}. Eksponering, ikke anbefaling.${nForslagAll && status !== 'forslag' ? ` Temaerne er udkast: ${nForslagAll} er maskinelle temaforslag, der afventer NDI (<a href="${esc(link({ status: 'forslag', skift: '', tvivl: '' }))}">vis dem</a>).` : ''}${nViaLens ? ` ${nViaLens} fundet via NDI-linsens tekst.` : ''}</p>
  <form method="get" role="search" style="margin-bottom:12px;display:flex;gap:8px;flex-wrap:wrap">
  <input type="hidden" name="fund" value="${esc(fundId)}">
  ${sort !== 'name' ? `<input type="hidden" name="sort" value="${sort}">` : ''}
