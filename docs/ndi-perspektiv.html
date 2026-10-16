@@ -102,6 +102,7 @@
  const slug = (g) => 'lg-' + g.toLowerCase().replace(/[^a-zæøå0-9]+/g, '-').replace(/-+$/, '');
  // Datafeltets ord → sidens ord (samme som Udforsk efter 06:31). Data ændres ikke.
  const da = (t) => String(t ?? '').replace(/^NDI-tags$/, 'NDI-temaer').replace(/\s*\(multi-tag\)/gi, '').replace(/Multi-tag: /g, 'To temaer: ').replace(/Multi-tag\./g, 'Flere temaer.').replace(/ikke rating/g, 'ikke en karakter').replace(/\bConnect\b/g, 'Optik & netværk').replace(/\bconnect\b/g, 'optik & netværk');
+ const LABEL_G = { 'Forretningsmodel': 'g-forretningsmodel', 'Svært at kopiere': 'g-svaert-kopiere', 'Nøgleafhængighed': 'g-noegleafhaengighed', 'Hold øje med': 'g-hold-oeje', 'Livscyklus': 'g-modenhed' };
  const val = (m) => m.href ? `<a href="${esc(m.href)}">${esc(da(m.value))}</a>` : esc(da(m.value));
  const card = ([isin, v]) => {
   const ms = v.metrics || [];
@@ -110,7 +111,7 @@
   const forslag = tag && /forslag/i.test(tag.value);
   const extra = ms.filter(m => m !== tag && m !== own && m !== place && m !== watch && !(m.label === 'Livscyklus' && /ikke klassificeret/i.test(m.value)));
   const detail = [tag, own, place, watch, ...extra].filter(m => m && (m.hint || m === watch || extra.includes(m))).map(m =>
-   `<div class="lens-m"><strong>${esc(da(m.label))}${/\?$/.test(m.label) ? '' : ':'}</strong> ${m === own || m === place ? '' : `${val(m)}${m.ai ? ` ${AI_BADGE}` : ''}`}${m.hint ? `<span class="lens-hint">${esc(da(m.hint))}</span>` : ''}</div>`).join('');
+   `<div class="lens-m"><strong>${LABEL_G[m.label] ? `<a href="om-data.html#${LABEL_G[m.label]}">${esc(da(m.label))}</a>` : esc(da(m.label))}${/\?$/.test(m.label) ? '' : ':'}</strong> ${m === own || m === place ? '' : `${val(m)}${m.ai ? ` ${AI_BADGE}` : ''}`}${m.hint ? `<span class="lens-hint">${esc(da(m.hint))}</span>` : ''}</div>`).join('');
   const hay = [v.name, displayName(v), ...ms.map(m => m.value)].join(' ').toLowerCase();
   return `<article class="lens-co" data-q="${esc(hay)}">
    <h3><a href="selskab.html?isin=${encodeURIComponent(isin)}">${esc(displayName(v))}</a>${tag ? ` <span class="lens-tag-f" title="${forslag ? 'Temaet er et forslag og afventer NDI-gennemgang' : 'NDI-tema'}">${esc(da(tag.value))}</span>` : ''}</h3>
