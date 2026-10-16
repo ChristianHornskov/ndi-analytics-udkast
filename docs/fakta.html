@@ -149,6 +149,22 @@
   .peg-ends .peg-scale{grid-column:2;display:flex;justify-content:space-between;font-size:11px;color:var(--faint)}
   .peg-note{margin:0;font-size:14px;line-height:1.45;color:var(--text)}
   .peg-foot{margin:6px 0 0;font-size:12px;line-height:1.45;color:var(--faint)}
+  .peg-board{position:relative}
+  .peg-ask{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 8px}
+  .peg-ask button{appearance:none;border:1px solid #345860;background:#0b171d;color:var(--muted);border-radius:999px;padding:4px 10px;font:inherit;font-size:12px;cursor:pointer;min-height:32px;display:inline-flex;align-items:center;gap:6px}
+  .peg-ask button kbd{font:inherit;font-size:10px;letter-spacing:.4px;color:var(--faint);border:1px solid #345860;border-radius:4px;padding:0 4px}
+  .peg-ask button[aria-checked="true"]{border-color:#f5ee9e88;color:var(--text);box-shadow:inset 0 -2px 0 #f5ee9e}
+  .peg-ask button:focus-visible{outline:2px solid #f5ee9e;outline-offset:2px}
+  .peg-board.is-kid .peg-row{opacity:.4}
+  .peg-board.is-kid .peg-note{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  .peg-over{margin:2px 0 8px}
+  .peg-over-row{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1.15fr);gap:8px;align-items:center}
+  .peg-over-scale{height:16px;border-radius:99px;background:#0b171d;box-shadow:inset 0 0 0 1px #2a424a;display:flex;align-items:center;justify-content:space-between;padding:0 8px;font-size:11px;color:var(--faint)}
+  .peg-over-break{font-size:10px;letter-spacing:.6px;text-transform:uppercase;color:#f5ee9e;border-bottom:2px dashed #f5ee9e88;padding:0 2px 2px;white-space:nowrap}
+  .peg-over-off{display:flex;flex-wrap:wrap;gap:2px 8px;align-items:baseline;background:#0b171d;border:1px dashed #f5ee9e88;border-radius:12px;padding:6px 10px;min-width:0}
+  .peg-over-off b{font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-size:22px;font-weight:500;color:#f5ee9e;letter-spacing:-.4px}
+  .peg-over-off i{flex-basis:100%;font-style:normal;font-size:11px;color:var(--faint)}
+  .peg-over-say{margin:6px 0 0;font-size:14px;line-height:1.45;color:var(--text)}
   @media(max-width:800px){
     .fact-grid,.org,.team,.tax-grid,.kv,.risk-split,.risk-metrics,.glance-board,.dd-dates{grid-template-columns:1fr}
     .glance-tile.is-gap strong{font-size:36px}
@@ -170,6 +186,8 @@
     .peg-val{text-align:left}
     .peg-ends{grid-template-columns:1fr;padding:0}
     .peg-ends .peg-scale{grid-column:1}
+    .peg-over-row{grid-template-columns:1fr}
+    .peg-over-off b{font-size:20px}
   }
   @media(max-width:800px) and (min-width:560px){
     .glance-board{grid-template-columns:1fr 1fr}
@@ -459,14 +477,37 @@
  },
  ];
  const pegStart = pegItems.find((it) => Number(it.a) !== Number(it.b)) || pegItems[0];
+ const samePeg = pegItems.find((it) => Number(it.a) === Number(it.b)) || pegStart;
  const kidOver = h5 && (Number(A.costs.kidRiy5y) > pegScale || Number(B.costs.kidRiy5y) > pegScale);
  const feeBit = !A.costs.performanceFee && !B.costs.performanceFee ? ' Ingen af klasserne betaler resultathonorar, ifølge Fundmarket.' : '';
- const pegBoard = `<section class="peg-board" id="satskort">
- <div class="peg-top"><p class="kicker">POSTSATSER</p><p>Én skala, 0 til ${pct(pegScale)}. Afstanden følger satsen.</p></div>
+ const kidBits = [];
+ if (h5) kidBits.push(`KID ved 5 år er ${h5.pctA} og ${h5.pctB}`);
+ if (h1) kidBits.push(`KID ved 1 år er ${h1.pctA} og ${h1.pctB}`);
+ const kidPlateNote = kidBits.length
+ ? `${kidBits.join('. ')}. ${kidOver ? 'Tallene ligger over skalaen og er ikke tegnet.' : 'Tallene er ikke tegnet på postsatsskalaen.'} Det er et andet tal end postsatserne. Ikke et ÅOP.`
+ : '';
+ const kidPair = h5 || h1;
+ const kidPlate = kidPlateNote ? `<div class="peg-over" hidden>
+ <div class="peg-over-row" aria-hidden="true">
+ <span class="peg-over-scale"><i>0 %</i><i>${pct(pegScale)}</i></span>
+ <span class="peg-over-break">skalaen stopper</span>
+ <span class="peg-over-off"><b>${kidPair.pctA}</b><b>${kidPair.pctB}</b><i>KID ved ${kidPair.y} år · ikke tegnet</i></span>
+ </div>
+ </div>` : '';
+ const askKid = kidPlateNote ? `<button type="button" role="radio" data-ask="kid" aria-checked="false" tabindex="-1" aria-keyshortcuts="k">Hvor er KID?<kbd>K</kbd></button>` : '';
+ const pegBoard = `<section class="peg-board" id="satskort" data-split-peg="${pegStart.id}" data-same-peg="${samePeg.id}">
+ <div class="peg-top"><p class="kicker">POSTSATSER</p><p>Én skala, 0 til ${pct(pegScale)}. Afstanden følger satsen. KID er ikke på skalaen.</p></div>
+ <div class="peg-ask" role="radiogroup" aria-label="Hvad tallet svarer på">
+ <button type="button" role="radio" class="is-on" data-ask="split" aria-checked="true" aria-keyshortcuts="s">Hvad skiller?<kbd>S</kbd></button>
+ <button type="button" role="radio" data-ask="same" aria-checked="false" tabindex="-1" aria-keyshortcuts="e">Hvad er ens?<kbd>E</kbd></button>
+ ${askKid}
+ </div>
  <div role="radiogroup" aria-label="Postsatser på én skala">
- ${pegItems.map((it) => `<button type="button" class="peg-row${it.id === pegStart.id ? ' is-on' : ''}" role="radio" data-peg="${it.id}" tabindex="${it.id === pegStart.id ? '0' : '-1'}" aria-checked="${it.id === pegStart.id ? 'true' : 'false'}" data-note="${esc(it.note)}"><span class="peg-name">${esc(it.label)}</span><span class="peg-track" aria-hidden="true">${pegDots(it.a, it.b)}</span><span class="peg-val">${pegVal(it.a, it.b)}</span></button>`).join('')}
+ ${pegItems.map((it) => `<button type="button" class="peg-row${it.id === pegStart.id ? ' is-on' : ''}" role="radio" data-peg="${it.id}" data-differ="${Number(it.a) !== Number(it.b) ? '1' : '0'}" tabindex="${it.id === pegStart.id ? '0' : '-1'}" aria-checked="${it.id === pegStart.id ? 'true' : 'false'}" data-note="${esc(it.note)}"><span class="peg-name">${esc(it.label)}</span><span class="peg-track" aria-hidden="true">${pegDots(it.a, it.b)}</span><span class="peg-val">${pegVal(it.a, it.b)}</span></button>`).join('')}
  </div>
  <div class="peg-ends" aria-hidden="true"><span class="peg-scale"><i>0 %</i><i>${pct(pegScale)}</i></span></div>
+ ${kidPlate}
+ <p class="sr-only" data-kid-note>${esc(kidPlateNote)}</p>
  <p class="peg-note" data-peg-note aria-live="polite">${esc(pegStart.note)}</p>
  <p class="peg-foot">${h5 ? `KID ved 5 år er ${h5.pctA} og ${h5.pctB}. ${kidOver ? 'Tallet ligger over skalaen og er et andet tal end postsatserne.' : 'Det er et andet tal end postsatserne.'}` : ''}${feeBit} Linjerne er ikke lagt sammen. <a href="omkostninger.html#satskort">Samme kort på omkostninger →</a></p>
  </section>`;
@@ -577,6 +618,20 @@
  }
  };
  if (heroStart) paintKid(heroStart.y, false);
+ const setAsk = (id) => {
+ const board = document.getElementById('satskort');
+ if (!board) return;
+ board.querySelectorAll('[data-ask]').forEach((b) => {
+ const on = b.getAttribute('data-ask') === id;
+ b.classList.toggle('is-on', on);
+ b.setAttribute('aria-checked', on ? 'true' : 'false');
+ b.tabIndex = on ? 0 : -1;
+ });
+ const kid = id === 'kid';
+ board.classList.toggle('is-kid', kid);
+ const over = board.querySelector('.peg-over');
+ if (over) over.hidden = !kid;
+ };
  const pickPeg = (id) => {
  const board = document.getElementById('satskort');
  if (!board) return;
@@ -591,8 +646,27 @@
  });
  const note = board.querySelector('[data-peg-note]');
  if (note) note.textContent = btn.getAttribute('data-note') || '';
+ setAsk(btn.getAttribute('data-differ') === '1' ? 'split' : 'same');
+ };
+ const pickAsk = (id) => {
+ const board = document.getElementById('satskort');
+ if (!board) return;
+ if (id === 'kid') {
+ setAsk('kid');
+ const note = board.querySelector('[data-peg-note]');
+ const src = board.querySelector('[data-kid-note]');
+ if (note && src) note.textContent = src.textContent || '';
+ return;
+ }
+ const pegId = id === 'same' ? board.getAttribute('data-same-peg') : board.getAttribute('data-split-peg');
+ if (pegId) pickPeg(pegId);
  };
  main.addEventListener('click', (e) => {
+ const ask = e.target.closest('[data-ask]');
+ if (ask && ask.closest('#satskort')) {
+ pickAsk(ask.getAttribute('data-ask'));
+ return;
+ }
  const peg = e.target.closest('[data-peg]');
  if (peg && peg.closest('#satskort')) {
  pickPeg(peg.getAttribute('data-peg'));
@@ -604,7 +678,7 @@
  });
  main.addEventListener('keydown', (e) => {
  if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
- if (!e.target.closest || !e.target.closest('#satskort')) return;
+ if (!e.target.closest || !e.target.closest('#satskort [data-peg]')) return;
  const buttons = [...document.querySelectorAll('#satskort [data-peg]')];
  const i = buttons.findIndex((b) => b.getAttribute('aria-checked') === 'true');
  const next = buttons[i + (e.key === 'ArrowDown' ? 1 : -1)];
@@ -615,9 +689,17 @@
  });
  window.addEventListener('keydown', (e) => {
  if (e.altKey || e.metaKey || e.ctrlKey || e.shiftKey) return;
- if (e.key !== '1' && e.key !== '5') return;
  const ae = document.activeElement;
  if (ae && ae.closest('input, textarea, select, [contenteditable="true"]')) return;
+ const askKey = { s: 'split', e: 'same', k: 'kid' }[e.key];
+ if (askKey) {
+ const askBtn = document.querySelector(`#satskort [data-ask="${askKey}"]`);
+ if (!askBtn) return;
+ e.preventDefault();
+ pickAsk(askKey);
+ return;
+ }
+ if (e.key !== '1' && e.key !== '5') return;
  if (!document.querySelector(`#kid-hero [data-kid="${e.key}"]`)) return;
  e.preventDefault();
  paintKid(e.key, true);

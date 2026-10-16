@@ -29,7 +29,7 @@
  </footer>
  <noscript><p style="max-width:1180px;margin:0 auto;padding:0 20px 24px;color:#aac0c7">Siden læser kun den statiske fil. Slå JavaScript til for at se kortene. Browseren kalder ikke X.</p></noscript>
  <script type="module">
- import { loadXPosts, xCard, fmtXDate, highlightHtml, X_LABEL, X_FILTERS, postInFilter, postMatchesQuery, postWho, feedHitKind, archiveHit, xScoreHtml, xPlace, xWhoBarHtml, xWhoDoorHtml, xSpineHtml, xAtlasHtml } from './js/x-feed.js';
+ import { loadXPosts, xCard, fmtXDate, highlightHtml, X_LABEL, X_FILTERS, postInFilter, postMatchesQuery, postWho, feedHitKind, archiveHit, xScoreHtml, xPlace, xWhoBarHtml, xWhoDoorHtml, xSpineHtml, xAtlasHtml, xVoicesHtml } from './js/x-feed.js';
  const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
  const main = document.getElementById('main');
  const pack = await loadXPosts();
@@ -187,6 +187,7 @@
  const render = () => {
  paintFilters();
  const list = apply(posts);
+ const topic = posts.filter((p) => postInFilter(p, state.f) && postMatchesQuery(p, state.q));
  const bits = [];
  if (state.q.trim()) bits.push(chip('Søgning: ' + state.q.trim(), 'q'));
  const fLabel = X_FILTERS.find((f) => f.id === state.f);
@@ -197,6 +198,7 @@
  active.innerHTML = bits.join('');
  const focused = bits.length ? ` · ${bits.length === 1 ? 'ét filter' : bits.length + ' filtre'}` : '';
  const leadOn = Boolean(state.q.trim() || state.f !== 'all');
+ const voiceBlock = (leadOn && topic.length) ? xVoicesHtml(topic, { q: state.q.trim(), who: state.who }) : '';
  document.body.classList.toggle('x-focused', leadOn);
  const direct = [];
  const theme = [];
@@ -304,6 +306,7 @@
  grid.innerHTML = `<div class="x-empty x-stage">
  <p class="x-zero" aria-hidden="true">0</p>
  <p class="k">Ingen opslag i filteret</p>
+ ${voiceBlock}
  ${emptySpine}
  <p>Ingen af de ${posts.length} opslag i snapshotet rammer det valgte.${pickedLine} Prøv et spor, eller nulstil.</p>
  <p class="x-empty-meter"><span class="x-meter" aria-hidden="true"><i style="width:0%"></i></span><span>0 af ${posts.length}</span></p>
@@ -326,7 +329,7 @@
  } else if (!direct.length && !theme.length) {
  const [first, ...tail] = list;
  const atlas = atlasOf(list, { compact: true, pick: false, leadId: first?.id || '', rows: 'hot' });
- grid.innerHTML = trackSpine(first?.id, null) + scoreBar + `<div class="x-split"><div class="x-split-main"><div class="x-stage">${xCard(first, { query: markQ, lead: true, reasons: reasonsFor(first) })}</div></div><div class="x-split-side">${atlas}</div></div>`
+ grid.innerHTML = trackSpine(first?.id, null) + scoreBar + `<div class="x-split"><div class="x-split-main"><div class="x-stage">${xCard(first, { query: markQ, lead: true, reasons: reasonsFor(first) })}</div></div><div class="x-split-side">${voiceBlock}${atlas}</div></div>`
  + (tail.length ? `<div class="x-grid" style="grid-column:1/-1">${tail.map((p) => xCard(p, { query: markQ })).join('')}</div>` : '');
  } else {
  const pickFrom = (arr, id) => {
@@ -359,7 +362,7 @@
  const dated = series.length > 1;
  const quote = `<div class="x-stage">${xCard(leadPost, { query: markQ, lead: true, hitKind: leadKind, reasons: reasonsFor(leadPost), dated, place: dated ? xPlace(series, leadPost.id) : null })}</div>`;
  const atlas = atlasOf(list, { compact: true, pick: true, rows: 'hot', leadId: leadPost?.id || '' });
- const stage = `<div class="x-split"><div class="x-split-main">${quote}</div><div class="x-split-side">${atlas}${sideLane}</div></div>`;
+ const stage = `<div class="x-split"><div class="x-split-main">${quote}</div><div class="x-split-side">${voiceBlock}${atlas}${sideLane}</div></div>`;
  grid.innerHTML = trackSpine(leadPost?.id, series) + scoreBar + stage
  + belowLane
  + (restHits.length ? `<div class="x-grid" style="grid-column:1/-1">${restHits.map((p) => xCard(p, { query: state.q })).join('')}</div>` : '');
@@ -443,6 +446,14 @@
  if (k === 'q') { state = { ...state, q: '' }; qInput.value = ''; }
  if (k === 'f') state = { ...state, f: 'all' };
  if (k === 'who') state = { ...state, who: 'all' };
+ write(state);
+ render();
+ return;
+ }
+ const voice = e.target.closest('[data-voice]');
+ if (voice) {
+ const id = voice.getAttribute('data-voice');
+ state = { ...state, who: state.who === id ? 'all' : id, id: '' };
  write(state);
  render();
  return;
