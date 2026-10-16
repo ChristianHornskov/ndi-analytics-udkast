@@ -19,13 +19,13 @@ Opdateret 16. okt. 2026 kl. ca. 07:55 CEST. graf-v2 og live-siden er ikke ændre
 | 6 | Klassevælger PMINDI / PMINDIAKK | Ja | Høj | AKK uden kursserie til 5. dec. 2026 (compliance) |
 | 7 | Periodeafkast-tekst under grafen ("Totalafkast: x %") | Ja | Mellem | `#chart-takeaway` |
 | 8 | "Hvis du investerede 100.000 kr." (ved klassens start, geninvesteret udbytte) | Mangler | Mellem-høj for private, men compliance-følsom | Ikke tilføjet. Kræver FO-godkendelse af illustrativ beregning |
-| 9 | Drawdown-graf + "fem dybeste nedture" markeret | Delvis | Mellem | Vi har drawdown.html og top/bund-markører. De fem dybeste som liste mangler |
-| 10 | Rullende 12-måneders afkast ("Hvad gav en investering de foregående 12 måneder?") | Mangler | Mellem | Kandidat til næste tilføjelse |
+| 9 | Drawdown-graf + "fem dybeste nedture" markeret | **Ja (nu)** | Mellem | Vi har drawdown.html og top/bund-markører. De fem dybeste som liste mangler |
+| 10 | Rullende 12-måneders afkast ("Hvad gav en investering de foregående 12 måneder?") | **Ja (nu)** | Mellem | Kandidat til næste tilføjelse |
 | 11 | Årsafkast-tabel fra Fundmarkets årsrapport + "evidence"-note | Ja (kalenderår) | Mellem | Kildenote kan skærpes |
 | 12 | Top-10 / spredning, sektorring | Ja (Portefølje) | Høj | Snapshot ≤ 2026-06-01 |
 | 13 | 52-ugers-højeste-fordeling (highs.js) | Mangler | Lav-mellem | Bruger aktiekurser pr. aktie, compliance-tvivl. Udeladt |
 | 14 | Kort over hovedsæder (geography.json) | Delvis | Lav | Vi har landeliste/tema |
-| 15 | Datafriskhed ("ikke realtid", >3 dage gammel advarsel) | Delvis | Mellem | Vi viser "pr. dato". Stale-advarsel mangler |
+| 15 | Datafriskhed ("ikke realtid", >3 dage gammel advarsel) | **Ja (nu)** | Mellem | Vi viser "pr. dato". Stale-advarsel mangler |
 | 16 | PRIIP-KID-dokumentplade | Ja | Høj | Footer + risici |
 | 17 | Auto-højde/scroll via postMessage til Wix | Ja (embed/chart.html) | Lav | Ikke relevant for Pages |
 | 18 | Eksport/CSV/PNG af grafen | Ikke set i graf-v2 | Lav | Vi har Print/PDF og CSV i Udforsk |
@@ -34,11 +34,12 @@ Opdateret 16. okt. 2026 kl. ca. 07:55 CEST. graf-v2 og live-siden er ikke ændre
 1. Nasdaq-100-sammenligningslinje + label + precheck/smoke-regler (76b0e7d)
 2. Kurs/Totalafkast-toggle
 3. Udbytte-U-markører
-4. Touch- og tastatur-tooltip med cursorlinje
+4. Touch- og tastatur-tooltip med cursorlinje (d24c675)
+5. Rullende 12-mdr., 5 dybeste fald, datafriskhed-advarsel >3 dage (4b67fa6)
 
 ## Nasdaq-serie: metode
 `docs/data/nasdaq-compare.json`: Nasdaq-100 **kursindeks** (^NDX, uden udbytte), omregnet til DKK med DKK=X-dagslukkekurs, kun på fondens handelsdage (766 punkter, 2023-09-22 → 2026-10-14). Kilde: Yahoo Finance. Et total return-indeks (^XNDX) var ikke tilgængeligt. Legenden siger det eksplicit. **Åbent spørgsmål:** skal det være Nasdaq-100 TR (fair over for fondens totalafkast), og må Yahoo bruges som kilde i markedsføring (Fundmarket-godkendelse)?
 
 ## Tests
 - precheck har 4 nye regler: Nasdaq kræver præcis label, er slået fra som standard, kaldes aldrig benchmark, og serien er velformet.
-- smoke: 27 URL × 2 bredder + Nasdaq-tjek (fra = ingen linje, til = 1 linje + synlig label) = 56/0.
+- smoke: 27 URL × 2 bredder + Nasdaq-tjek (fra = ingen linje, til = 1 linje + synlig label) = 58/0 (inkl. rullende/top-5-tjek).

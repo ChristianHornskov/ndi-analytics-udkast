@@ -56,14 +56,22 @@
  const gapLabel = n1(maxDiff);
  const gapNames = keys.filter((k) => n1(diffOf(k)) === gapLabel).map((k) => daTheme(k));
  const bar = (v, cls, label) => `<span class="cmp-line ${cls}"><span class="sr-only">${label}: </span><span class="cmp-who" aria-hidden="true">${label === 'PMINDIAKK' ? 'AKK' : label}</span><span class="cmp-bar" aria-hidden="true"><span style="width:${((v / max) * 100).toFixed(2)}%"></span></span><span class="cmp-v">${n1(v)} %</span></span>`;
- const themeRows = keys.map((k) => `<li${n1(diffOf(k)) === gapLabel ? ' class="cmp-gap"' : ''}><span class="cmp-name">${esc(daTheme(k))}</span>
- <span class="cmp-pair">${bar(ta[k], 'a', 'PMINDI')}${bar(tb[k], 'b', 'PMINDIAKK')}</span></li>`).join('');
+ const themeRows = keys.map((k) => `<li${n1(diffOf(k)) === gapLabel ? ' class="cmp-gap"' : ''}><button type="button" class="cmp-row" data-name="${esc(daTheme(k))}" data-a="${n1(ta[k] || 0)} %" data-b="${n1(tb[k] || 0)} %"><span class="cmp-name">${esc(daTheme(k))}</span>
+ <span class="cmp-pair">${bar(ta[k], 'a', 'PMINDI')}${bar(tb[k], 'b', 'PMINDIAKK')}</span></button></li>`).join('');
  const navA = lastNav(a.data), navB = lastNav(b.data);
  const firstA = a.data?.[0]?.d || a.inception, firstB = b.data?.[0]?.d || b.inception;
  const navCell = (nav) => (nav ? `${n2(nav.price)} <small class="cmp-when">(${fmtDate(nav.d)})</small>` : '<span class="cmp-empty">Ingen kurs</span>');
  // AKK-gate: afkast først efter 12 måneders historik fra første NAV
  const gate = new Date(firstB); gate.setFullYear(gate.getFullYear() + 1);
  const gateIso = gate.toISOString().slice(0, 10);
+ const nowIso = navA?.d || firstA;
+ const spanT0 = Date.parse(firstA + 'T12:00:00Z');
+ const spanT1 = Date.parse(gateIso + 'T12:00:00Z');
+ const spanAt = (iso) => Math.max(0, Math.min(100, ((Date.parse(iso + 'T12:00:00Z') - spanT0) / Math.max(1, spanT1 - spanT0)) * 100));
+ const nowAt = spanAt(nowIso);
+ const bAt = spanAt(firstB);
+ const bothN = Math.round((Date.parse(nowIso + 'T12:00:00Z') - Date.parse(firstB + 'T12:00:00Z')) / 86400000);
+ const w = (n) => n.toFixed(2);
  const posAsOf = fmtDate(a.positionsAsOf || portfolio.asOf);
  const riyTxt = (id) => {
  const n = facts?.classes?.[id]?.costs?.kidRiy5y;
@@ -131,6 +139,15 @@
 
  <section class="cmp-time" aria-labelledby="tl-h">
  <h2 class="h-section" id="tl-h">Tidslinje</h2>
+ <p class="src">Længden er tiden. Stregen til højre er datoen, hvor kursen for PMINDIAKK <span class="cmp-when">kan vises.</span></p>
+ <div class="span-map">
+ <div class="span-lanes" role="group" aria-label="Hvor længe klasserne har fandtes">
+ <button type="button" class="span-lane a" data-lane="a" aria-pressed="true"><span class="span-name">PMINDI</span><span class="span-rail" aria-hidden="true"><i style="left:0%;width:${w(nowAt)}%"></i><b></b></span></button>
+ <button type="button" class="span-lane b" data-lane="b" aria-pressed="false"><span class="span-name">PMINDIAKK</span><span class="span-rail" aria-hidden="true"><i style="left:${w(bAt)}%;width:${w(Math.max(0, nowAt - bAt))}%"></i><b></b></span></button>
+ </div>
+ <p class="span-axis"><span class="span-pad" aria-hidden="true"></span><span class="span-ends"><time class="cmp-when" datetime="${firstA}">${fmtDate(firstA)}</time><time class="cmp-when" datetime="${gateIso}">${fmtDate(gateIso)}</time></span></p>
+ <p class="span-say" id="span-say"></p>
+ </div>
  <ol class="tl">
  <li><time datetime="${firstA}">${fmtDate(firstA)}</time><span>PMINDI: første NAV. Herfra regnes <span class="cmp-when">"siden start"</span>.</span></li>
  <li><time datetime="${firstB}">${fmtDate(firstB)}</time><span>PMINDIAKK starter. Samme portefølje, udbyttet bliver i fonden. Kursen vises efter <span class="cmp-when">12 måneder.</span></span></li>
@@ -151,6 +168,7 @@
  <p class="src" style="margin-bottom:10px">Vægt pr. tema i hver klasse (primært tema). Største forskel: ca. ${gapLabel} procentpoint${gapNames.length ? `, i ${esc(gapNames.join(' og '))}` : ''}. Rækken har en gul kant. Eksponering, <span class="cmp-when">ikke anbefaling.</span></p>
  <p class="cmp-legend"><span><span class="cmp-key a" aria-hidden="true"></span>PMINDI</span><span><span class="cmp-key b" aria-hidden="true"></span>PMINDIAKK</span></p>
  <ul class="cmp-themes">${themeRows}</ul>
+ <p class="cmp-theme-say" id="theme-say"></p>
  <p class="link-row chip-links" style="margin-top:10px"><a href="temaer.html">Alle temaer →</a> · <a href="om-data.html#g-akk">Hvad betyder akkumulerende?</a></p>
  </section>
 
@@ -181,6 +199,29 @@
  paintCost(riyA ? 'a' : 'b');
  document.querySelectorAll('.cmp-cost-pair button').forEach((btn) => {
  btn.addEventListener('click', () => paintCost(btn.dataset.cost));
+ });
+ const themeSay = document.getElementById('theme-say');
+ const paintTheme = (btn) => {
+ document.querySelectorAll('.cmp-row').forEach((b) => b.setAttribute('aria-pressed', String(b === btn)));
+ if (themeSay && btn) themeSay.innerHTML = `${esc(btn.dataset.name)}: PMINDI <span class="cmp-when">${esc(btn.dataset.a)}</span>. PMINDIAKK <span class="cmp-when">${esc(btn.dataset.b)}</span>. Eksponering, <span class="cmp-when">ikke anbefaling.</span>`;
+ };
+ const themeStart = document.querySelector('.cmp-themes .cmp-gap .cmp-row') || document.querySelector('.cmp-row');
+ if (themeStart) paintTheme(themeStart);
+ document.querySelectorAll('.cmp-row').forEach((btn) => {
+ btn.addEventListener('click', () => paintTheme(btn));
+ });
+ const spanNote = document.getElementById('span-say');
+ const spanSay = {
+ a: 'PMINDI har første NAV <span class="cmp-when">' + fmtDate(firstA) + '</span>. Seneste kursdag er <span class="cmp-when">' + fmtDate(nowIso) + '</span>. Afkastet vises <span class="cmp-when">på Fonden.</span>',
+ b: 'PMINDIAKK startede <span class="cmp-when">' + fmtDate(firstB) + '</span>. Klassen har eksisteret i <span class="cmp-when">' + bothN + ' dage.</span> Kursen vises efter <span class="cmp-when">12 måneder</span>, fra <span class="cmp-when">' + fmtDate(gateIso) + '</span>.'
+ };
+ const paintSpan = (lane) => {
+ document.querySelectorAll('.span-lane').forEach((btn) => btn.setAttribute('aria-pressed', String(btn.dataset.lane === lane)));
+ if (spanNote) spanNote.innerHTML = spanSay[lane] || '';
+ };
+ paintSpan('a');
+ document.querySelectorAll('.span-lane').forEach((btn) => {
+ btn.addEventListener('click', () => paintSpan(btn.dataset.lane));
  });
  </script>
 </body>

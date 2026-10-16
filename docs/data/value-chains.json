@@ -176,7 +176,7 @@
               "forslag": true
             }
           ],
-          "seeChain": null,
+          "seeChain": "energy",
           "shift": "I USA får datacentre i stigende grad lov til at bygge deres egen strøm (NDI-indlæg 30. marts 2026). NDI skriver, at ét års chipproduktion potentielt kan kræve strøm svarende til omkring to tredjedele af USA's installerede kapacitet (NDI-indlæg 10. august 2026).",
           "src": "NDI-indlæg 30. marts 2026 · 10. august 2026",
           "kind": "ndi",
@@ -194,6 +194,9 @@
               "sym": "CMI",
               "theme": "physical"
             }
+          ],
+          "facts": [
+            "Cummins: Cummins skrev 12. november 2025 i artiklen 'Powering Growth: Cummins' Solutions for Data Center Backup Power' om nødstrøm til datacentre, altså generatorer, der overtager, hvis elnettet svigter. Det er ikke et elselskab, men en leverandør af reservestrøm."
           ]
         },
         {
@@ -2400,7 +2403,8 @@
             }
           ],
           "facts": [
-            "Ambarella: Ambarella kalder sine chips 'AI Vision Processors For Edge Applications' og skriver, at de gør kameraer klogere ved at trække brugbare data ud af videoen. Analysen sker i selve apparatet og ikke i skyen. Robotter står på siden som et anvendelsesområde sammen med industri og overvågning. Siden er læst i oktober 2026."
+            "Ambarella: Ambarella kalder sine chips 'AI Vision Processors For Edge Applications' og skriver, at de gør kameraer klogere ved at trække brugbare data ud af videoen. Analysen sker i selve apparatet og ikke i skyen. Robotter står på siden som et anvendelsesområde sammen med industri og overvågning. Siden er læst i oktober 2026.",
+            "Texas Instruments: Texas Instruments har en side om humanoide robotter, altså robotter med menneskelig form. Selskabet skriver, at det leverer 'comprehensive system-level solutions' til dem, blandt andet chips, der styrer strømmen til robottens motorer. Siden er læst i oktober 2026."
           ]
         },
         {
@@ -3435,7 +3439,7 @@
               "w": 0.28,
               "sym": "NKLR",
               "forslag": true,
-              "role": "SOLO er et koncept fra 2018. Ikke et anlæg i drift."
+              "role": "SOLO er et koncept fra 2018. Forsiden skriver både 5 MW og 4 MW termisk. Målet om 2028 kræver godkendelse. Ikke et værk i drift."
             },
             {
               "isin": "US53224K3023",
@@ -3484,7 +3488,7 @@
             "BWX Technologies: BWX Technologies skriver, at fabrikken i Lynchburg fremstiller reaktorer til flåden. Project Pele er et design, ikke et værk i drift. Aftalen af 3. august 2026 om salg af medicinforretningen er ikke gennemført og ligger efter beholdningen.",
             "Rolls-Royce: Rolls-Royce skrev 15. juni 2026, at Videberg Kraft har valgt selskabet til tre små reaktorer på Sveriges vestkyst. Det er efter beholdningen og ikke et værk i drift. Atomkraft er ikke hele selskabet.",
             "Nano Nuclear Energy: Nano Nuclear skriver, at ansøgningen om byggetilladelse til KRONOS er til behandling. Den er ikke givet. Formel behandling begyndte 23. juni 2026, efter beholdningen.",
-            "Terra Innovatum: Terra Innovatum skriver, at konceptet SOLO er fra 2018. Det er ikke et værk i drift.",
+            "Terra Innovatum: Selskabet skriver, at konceptet SOLO er fra 2018, og at datoerne er planlagt og afhænger af godkendelse fra USNRC. Forsiden, læst 16. oktober 2026, skriver elektrisk effekt 1 MW og termisk effekt både 5 MW og 4 MW. De to termiske tal står på samme side. Siden daterer dem ikke. Teknologisiden skriver 1 MWe og 5 MWth med mål om 2028. Det er en specifikation, ikke et værk i drift. 2028 er en plan. Samme side skriver, at kernen er gaskølet med helium, og at brændslet er uran. Forsiden sætter andelen til 4,95 %. Teknologisiden skriver også under 5 % U-235. Forsiden skriver en kube på 10 gange 10 meter. Teknologisiden skriver en container på 2,4 gange 2,4 gange 12 meter. Teksterne bruger ikke samme mål. 15 år ved fuld effekt uden ny brændsel er en specifikation, ikke et målt år.",
             "Terrestrial Energy: Terrestrial Energy skriver, at IMSR er specificeret til 390 MWe netto eller 822 MWt netto, og at brændslet er lavt beriget uran under 5 % U-235. De første anlæg er sat til begyndelsen af 2030'erne. Det er en forventning, ikke et anlæg i drift.",
             "Oklo: Oklo skrev 6. august 2026, at testreaktoren Groves nåede en kædereaktion ved lav effekt. Det er efter beholdningen. Det er ikke et kraftværk i drift og ikke salg af isotoper.",
             "Lightbridge: Lightbridge skriver, at selskabet udvikler metalliske brændselsstave med en kerne af uran og zirkonium. Hovedsædet ligger i Reston i Virginia. Det er ikke et værk i drift. Selskabet skrev 9. september 2026, at det har fået adgang til at bestråle beklædte stave i Advanced Test Reactor ved Idaho National Laboratory. Meddelelsen siger, at testen skal gennemføres. Den er ikke gennemført i teksten. Det er efter beholdningen. Det er en testreaktor, ikke et kraftværk."
@@ -3609,7 +3613,7 @@
               "w": 0.54,
               "sym": "SEI",
               "forslag": true,
-              "role": "Fordeling af strøm på anlæg ved store forbrugere"
+              "role": "Stiftet 2014. Fordeling til datacentre og industri. GESA 6. juli 2026 er service og ligger efter beholdningen. Ikke et kraftværk."
             },
             {
               "isin": "US74164F1030",
@@ -3658,7 +3662,7 @@
             "MYR Group: MYR skriver, at hovedkontoret ligger i Thornton, og at Venice–Campbell er en 138 kV-krydsning uden dato. Det er et projekt. Selskabet ejer ikke ledningen. Arbejdet dækker også kommercielle og industrielle anlæg og vedvarende energi.",
             "Primoris Services: Primoris skriver, at rødderne går tilbage til ARB i Bakersfield i 1960, og at selskabet også bygger infrastruktur frem til datacentre. Kontaktsiden skriver selskabet i Dallas og linjearbejde i Fort Worth. Irvine er ikke Bakersfield. Det ejer ikke strømmen og ikke datacentret.",
             "GE Vernova: GE Vernova skriver, at GIS-udstyr dækker fra 50 kV til 800 kV, og at afbrydere til generatorer dækker installationer op til 1.500 MW. Det er udstyr. Selskabet driver ikke værkerne.",
-            "Solaris Energy Infrastructure: Solaris leverer strøm tæt på store forbrugere. Selskabet skrev 6. juli 2026, at det har købt GESA. Det er efter beholdningen og er service, ikke et kraftværk i drift.",
+            "Solaris Energy Infrastructure: Selskabet skriver, at det er stiftet i 2014, og at det leverer produktion og fordeling af strøm til datacentre, energi, erhverv og industri. På elnet er det fordelingen. Selskabet skrev 6. juli 2026, at det har købt GESA. Datoen ligger efter beholdningen. GESA er service til kraftværker, ikke et kraftværk i drift.",
             "Tantalus Systems: Tantalus skriver, at det laver en platform til distributionsnet, med TRUConnect, TRUFlex, TRUGrid, TRUSync og TRUSense. Det er udstyr og software. Selskabet driver ikke nettet."
           ],
           "shift": "NDI har skrevet om prispres i elinfrastruktur (NDI-indlæg 16. februar 2026). Baggrund: det tager flere år at få leveret store transformere.",
@@ -3755,7 +3759,7 @@
               "w": 0.77,
               "sym": "TSLA",
               "forslag": false,
-              "role": "Batterilagring ved siden af biler og software"
+              "role": "Megapack er batteriudstyr. Lathrop er sat til 10.000 enheder og 40 GWh om året. 80 GWh er to fabrikker i gengivelsen 10. juli 2026. Ikke samme tal. Ikke et kraftværk."
             },
             {
               "isin": "US03214Q1085",
@@ -3860,7 +3864,7 @@
             "Sunrun: Sunrun skriver, at der er installeret 4,6 GWh tilknyttet lagerkapacitet pr. 30. juni 2026. Datoen ligger efter beholdningen pr. 1. juni 2026. Siden kalder det batterier hos kunderne, koblet sammen. Det er ikke et kraftværk.",
             "Microvast: Microvast skriver, at det laver celler, moduler, pakker og lagringssystemer, og at det selv laver katode, anode og elektrolyt. Kemierne på siden er NMC, LFP og LTO. Selskabet skriver, at det har to produktionssteder, og at de er ISO 14001. Byerne er ikke navngivet. Supportsiden, læst 16. oktober 2026, er kundeservice og skriver 780 International Blvd i Clarksville, An der Eichspitze 8 i Ludwigsfelde og Hongfeng Road 2198 i Huzhou. Det er serviceadresser, ikke bevis for, at en fabrik kører. Siden skriver 20 års driftserfaring. Det er ikke et stiftelsesår. Drift i USA, Kina og Tyskland er ikke de to steder. Siden om fremtidig lagring til nettet er skrevet som næste generation, ikke som et lager i drift.",
             "NeoVolta: NeoVolta skriver, at selskabet er stiftet i 2018 i Poway i Californien af Brent Willson, og at det laver batterier til boliger. NV14 er et system med hybrid-inverter og litium-jern-fosfat. Siden skriver 14 kWh, 14,3 kWh og 14,4 kWh. Tallene er ikke ens. FAQ skriver, at NV14 samles og testes i San Diego, og at nogle komponenter kommer fra udlandet. Om-siden viser Pendergrass i Georgia og overskriften 2 GWh i 2026. Det er ikke et målt år. En side indbyder til åbning af et nyt produktionsanlæg i Pendergrass den 17. september 2026. Datoen ligger efter beholdningen. Teksten siger ikke, at anlægget er i drift. Det er batterier hos kunden, ikke et lager, selskabet driver.",
-            "Tesla: Tesla er med, fordi koncernen også laver batterilagring."
+            "Tesla: Siden om Megafactory i Lathrop, læst 16. oktober 2026, skriver, at anlægget kan lave 10.000 Megapack om året, svarende til 40 GWh. Det er en kapacitet, ikke et målt år. Siden daterer ikke tallet. En gengivelse af Megapack-siden dateret 10. juli 2026 skriver, at fabrikkerne i Lathrop og i Shanghai tilsammen har en fremstillingskapacitet på 80 GWh, eller 20.000 enheder, om året. Samme gengivelse skriver mere end 58 GWh i drift globalt og over 65 lande. Den daterer ikke tallene. Indeksdatoen ligger efter beholdningen. De to tekster bruger ikke samme tal. Teksten siger ikke, at Tesla driver et kraftværk. Det er batteriudstyr ved siden af biler og software."
           ],
           "shift": "NDI har skrevet om ny amerikansk told på kinesiske batterikomponenter i forbindelse med batteriværdikæden (NDI-indlæg 21. juli 2025).",
           "src": "NDI-indlæg 21. juli 2025 · 30. marts 2026",
@@ -4070,7 +4074,7 @@
               "w": 0.15,
               "sym": "ALM",
               "forslag": false,
-              "role": "Panasqueira i Portugal har tilladelse til 2052. Level 4 er ikke skrevet som drift."
+              "role": "Panasqueira i Portugal har tilladelse til 2052."
             },
             {
               "isin": "US02451V3096",
@@ -4172,7 +4176,7 @@
           "seeChain": null,
           "facts": [
             "Lynas Rare Earths: Lynas skriver, at Mt Weld ligger 35 km syd for Laverton, og at anlægget i Kalgoorlie laver et blandet karbonat af koncentratet. Selskabet skriver, at karbonatet skal viderebehandles i Gebeng i Malaysia. Det er mine og forarbejdning, ikke et kraftværk.",
-            "Almonty Industries: Almonty skriver, at Beralt ejer 100 % af wolframminen Panasqueira i Covilha i Portugal, med tilladelse til 2052. Level 4 er ikke skrevet som drift. Almonty skrev 23. september 2026, at Sangdong i Sydkorea har produceret wolfram for første gang siden 1993. Valtreixal er et projekt. Meddelelsen om Sangdong ligger efter beholdningen pr. 1. juni 2026.",
+            "Almonty Industries: Almonty skriver, at Beralt ejer 100 % af wolframminen Panasqueira i Covilha i Portugal, med tilladelse til 2052. Almonty skrev 23. september 2026, at Sangdong i Sydkorea har produceret wolfram for første gang siden 1993. Valtreixal er et projekt. Meddelelsen om Sangdong ligger efter beholdningen pr. 1. juni 2026.",
             "MP Materials: MP Materials skriver, at minen og forarbejdningen ligger i Mountain Pass i Californien, og at magnetfabrikken ligger i Fort Worth i Texas. Om-siden skriver, at Mountain Pass blev genstartet i 2017. Det er ikke et chipværk.",
             "Freeport-McMoRan: Freeport skriver, at Morenci i Arizona er et åbent brud i drift siden 1939, og at selskabet har 72 % af minen. Det er ikke et elselskab.",
             "Standard Lithium: Standard Lithium skriver, at fase 1 i South West Arkansas er sat til 22.500 ton lithiumkarbonat om året, med mål om kommerciel produktion i 2029. Selskabet har 55 %, og Equinor har 45 %. Det er et mål, ikke en stor mine.",
@@ -4932,7 +4936,7 @@
               "w": 0.17,
               "sym": "SATL",
               "forslag": false,
-              "role": "Billedsatellitter. Merlin er sat til fuld drift i andet halvår 2027."
+              "role": "Davidson er ikke Charlotte. Merlin.01 er 1. oktober 2026, datafeltet siger 2. oktober. Fuld drift i 2027 er en plan."
             },
             {
               "isin": "US4202011056",
@@ -4990,7 +4994,7 @@
             "Planet Labs: satellitfamilierne hedder SuperDove, SkySat, Pelican og Tanager. Owl er omtalt som næste generation.",
             "BlackSky: driver satellitter i lav bane og sælger billeder og analyse. Den femte Gen-3 tog sine første billeder under 20 timer efter opsendelsen (meddelt 14. september 2026, efter beholdningen). Ikke alle planlagte Gen-3 er i kredsløb.",
             "Hawkeye 360: over 30 satellitter i kredsløb ifølge prospektet af 6. maj 2026. Tre satellitter flyver sammen for at finde ud af, hvor et radiosignal kommer fra.",
-            "Satellogic: fuld drift af Merlin-satellitterne er sat til andet halvår 2027. Det er en plan.",
+            "Satellogic: Kontaktsiden, læst 16. oktober 2026, skriver Charlotte og gaden 210 Delburg St. i Davidson. Davidson er ikke Charlotte. Det er et kontor, ikke en satellit. Tidslinjen skriver en fabrik færdig i november 2015 uden by. Kontorerne er ikke den fabrik. Tidslinjen skriver, at Merlin.01 blev sendt op 1. oktober 2026 med SpaceX. Datafeltet siger 2. oktober. Begge datoer ligger efter beholdningen. Forsiden sætter fuld drift af Merlin til andet halvår 2027. Det er en plan. En opsendelse er ikke fuld drift. Selskabet sender ikke selv raketten op.",
             "MDA Space: Chorus er tre satellitter, der tager billeder af Jorden. RADARSAT-2 er allerede i kredsløb. De to nye er sat til opsendelse sent i 2026 (meddelt 16. september 2026, efter beholdningen). Aurora Black blev præsenteret 10. september 2026 og er ikke i drift.",
             "York Space Systems: bygger satellitkroppe i tre størrelser. Platformsiden, læst 16. oktober 2026, sætter S-CLASS til mindst 85 kg nyttelast og 500 W spids, som kan udvides til 1 kW. LX-CLASS er sat til mindst 300 kg og 1,5 kW spids. M-CLASS er sat til mindst 1.000 kg og 8 kW spids. Det er det, platformen er tegnet til, ikke et målt år. 21 satellitter er sendt op til det amerikanske forsvars første hold (Tranche 1). York planlægger opsendelserne, men sender ikke selv raketten op.",
             "Rocket Lab: bygger og tester rumfartøjer i Long Beach i Californien. CAPSTONE fløj til en bane om Månen i 2022. Selskabet er valgt til 17 satellitkroppe til Globalstar og 18 satellitter til det amerikanske forsvar. Ingen af dem er skrevet som opsendt.",
@@ -5106,7 +5110,7 @@
               "w": 0.27,
               "sym": "RDW",
               "forslag": false,
-              "role": "Infrastruktur og fremstilling i rummet. Ikke et datacenter."
+              "role": "PIL-BOX er krystaller. 43 er 11. marts 2026. 54 er efter hjemkomst 17. juni 2026. Ikke et datacenter."
             },
             {
               "isin": "US9870841007",
@@ -5133,11 +5137,12 @@
               "role": "Chorus er billeder af Jorden. De to nye satellitter er ikke sendt op. Ikke et datacenter."
             }
           ],
-          "seeChain": null,
+          "seeChain": "ai-compute",
           "facts": [
             "Voyager Technologies: Starlab er et projekt til en rumstation. Det er ikke en station i drift. Selskabet skrev 8. september 2026, at et anlæg i Louisiana igen producerer sortkrudt. Det er efter beholdningen og har ikke med rummet at gøre.",
             "MDA Space: Chorus er satellitter til billeder af Jorden, ikke et datacenter. De to nye er ikke sendt op.",
-            "Redwire og York Space Systems: bygger udstyr og satellitkroppe. Ingen af dem driver beregning i kredsløb."
+            "Redwire: Jacksonville-siden, læst 16. oktober 2026, kalder anlægget hovedkontor og skriver to adresser, 8226 Philips Highway, Suite 101, og 1000 Riverside Avenue, Suite 600. Siden skriver 37.000 kvadratfod og 37.247 kvadratfod. De to tal er ikke ens. Siden daterer dem ikke. Det er et anlæg på jorden. Arbejdsområderne nævner fremstilling i rummet. Det er ikke et datacenter i kredsløb. Meddelelsen 11. marts 2026 skriver 43 PIL-BOX. Datoen ligger før beholdningen. En senere tekst skriver, at undersøgelserne kom tilbage 17. juni 2026, og at det markerer 54 PIL-BOX fløjet til dato. Den dato ligger efter beholdningen. De to tællinger er ikke samme tal. PIL-BOX er udstyr til krystaller, ikke et datacenter.",
+            "York Space Systems: Harbinger er et kontrolcenter på jorden. Potomac er samling og test. Ingen af dem er et datacenter i kredsløb."
           ],
           "shift": "NDI nævner beregning i rummet som noget, der kan komme på sigt (NDI-indlæg 23. juni 2024). I dag er det en idé, ikke et marked. Udsagnet om SpaceX står kun som Elon Musks citat med kilde.",
           "alt": 4,
@@ -5230,6 +5235,11 @@
           "term": "Radarsatellit (SAR)",
           "t": "Jordobservation med radar i stedet for kamera. Radar ser gennem skyer og om natten.",
           "link": "satcom"
+        },
+        {
+          "term": "Køleflade (radiator)",
+          "t": "En stor plade, der sender varme ud i rummet som stråling. I vakuum er der ingen luft at blæse varmen væk med, så computere i kredsløb skal have køleflader. Jo mere regnekraft, jo større skal de være.",
+          "link": "space-compute"
         }
       ],
       "glossaryNote": "Ordbogen og højderne er generel baggrundsviden, ikke NDI's synspunkter. Højderne er omtrentlige.",
@@ -5452,7 +5462,7 @@
             "id": "gloss-wrap",
             "icon": "◇",
             "k": "Ordbog",
-            "t": "10 ord"
+            "t": "11 ord"
           },
           {
             "id": "sp-quiz",
@@ -5728,7 +5738,7 @@
             "to": "ai-compute:datacenter",
             "icon": "✦",
             "k": "Datacentre i kredsløb?",
-            "t": "Idéen er at sætte computerkraft i kredsløb, hvor der er sol hele tiden. Mads har gengivet Elon Musks påstand om SpaceX og compute i rummet. Det er Musks udsagn, ikke NDI's forventning og ikke en prognose.",
+            "t": "Idéen er at sætte computerkraft i kredsløb, hvor solen skinner næsten hele tiden. Mads har gengivet Elon Musks påstand om SpaceX og compute i rummet (NDI-indlæg 12. oktober 2026). Det er Musks udsagn, ikke NDI's forventning og ikke en prognose.",
             "kind": "ndi",
             "src": "NDI-indlæg 12. oktober 2026",
             "quote": true
@@ -5756,7 +5766,7 @@
           "icon": "⚛",
           "label": "Kvantecomputing",
           "blurb": "Computere, der bruger kvantefysik til at løse bestemte typer problemer langt hurtigere. Teknologien er stadig tidlig.",
-          "ndi": "Nævnt som accelererende segment med politisk medvind og store udsving i kurserne — og som eksempel på teknologier med usikre indtægter.",
+          "ndi": "Nævnt som et område i hurtig vækst med politisk opbakning, hvor kurserne svinger meget — og som eksempel på teknologier, hvor det er usikkert, hvornår der kommer indtægter.",
           "themes": [
             "quantum"
           ],
@@ -5797,7 +5807,7 @@
           "kind": "ndi",
           "src": "NDI-indlæg 2. juni 2025 · 7. juli 2025 · 21. juli 2025 · selskabernes egne sider (QCi, D-Wave, Rigetti, IonQ)",
           "brief": {
-            "does": "Bygger computere, der regner med qubits i stedet for almindelige bits.",
+            "does": "Bygger computere, der regner med qubits (kvantebits, der kan være 0 og 1 på samme tid) i stedet for almindelige bits.",
             "why": {
               "k": "Endnu tidligt",
               "t": "Feltet står på trin 2 og 3 af fem: maskinerne laver mange fejl, og man lejer tid på dem over skyen.",
@@ -6241,5 +6251,5 @@
   "countsNote": "Forsinket beholdning pr. 2026-06-01 (PMINDI, antal selskaber pr. tema): platforme 40, chips 53, software 51, andet / uklassificeret 67, optik & netværk 30, fysisk tech 24, compute 18, quantum 4, energi 15, energiressourcer 25, spacetech 18. Brug antal i brødtekst, ikke vægte, når du citerer oversigten.",
   "mappingNote": "Hvilke selskaber der står under hvert led, er et redaktionelt udkast ud fra selskabets forretning. Det er ikke NDI's officielle klassifikation og kan indeholde fejl. Et selskab kan stå i flere led. Vægte er fra den forsinkede beholdning pr. 1. juni 2026 (PMINDI).",
   "bridgesNote": "Broer viser led i andre kæder, som deler selskaber med denne kæde i den forsinkede beholdning pr. 1. juni 2026. Ét selskab kan have flere roller. Tilordningen er et redaktionelt udkast.",
-  "placedNote": "'Placeret i netop dette led' bygger på NDI-linsens felt 'Plads i værdikæden' for det enkelte selskab. Placeringen er pædagogisk og kvalitativ. Vægte er fra den forsinkede beholdning i PMINDI pr. 1. juni 2026 og er ikke en anbefaling."
+  "placedNote": "'Placeret i netop dette led' bygger på NDI's egen placering af hvert enkelt selskab i værdikæden. Placeringen er pædagogisk og kvalitativ. Vægte er fra den forsinkede beholdning i PMINDI pr. 1. juni 2026 og er ikke en anbefaling."
 }

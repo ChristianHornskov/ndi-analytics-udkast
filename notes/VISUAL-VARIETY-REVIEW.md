@@ -392,3 +392,47 @@ Ny form på drawdown, over de tre tidspunkter. Fire streger på én linje. Bredd
 ### Update · KID-tallet · 2026-10-16 ~07:32 CEST
 
 KID-parret på sammenlign kan vælges. PMINDI er ca. 2,79 %. PMINDIAKK er ca. 2,85 %. Sætningen nævner klassen. For PMINDIAKK står også, at kursen vises efter 12 måneder, fra 5. dec. 2026. Den valgte har en gul streg. Knapperne er over 44 px. Ingen sidescroll ved 300–1100. Ingen konsolfejl. På papir bliver begge tal.
+
+### Update · temarække · 2026-10-16 ~07:26 CEST
+
+Hver temarække på sammenlign kan vælges. Sætningen gentager de to vægte, der står i rækken, og siger eksponering, ikke anbefaling. Største forskel åbner på Platforme, 17,2 % og 15,3 %. Et klik på Chips siger 13,3 % og 11,9 %. Rækken er mindst 44 px. Ingen sidescroll ved 320, 390 og 1100. Ingen konsolfejl. På papir bliver rækkerne.
+
+### Update · første dag under 10 % · 2026-10-16 ~07:33 CEST
+
+Ny kontrol på drawdown, ved kurven. Knappen hopper til 2. aug. 2024. Udlæsningen siger −13,8 % under den løbende top. Ved siden af står 267 af 770 dage. Det er et dagtal, ikke en procent. Knappen er 44 px. På 320 px slutter sætningen med «løbende top» på én linje. Ingen sidescroll ved 320, 390 og 1100. Ingen konsolfejl. På papir er knappen væk, og dagtallet bliver. PMINDIAKK har ingen linje og ingen procent. Cyklus 50 har ingen MUST i egne filer.
+
+### Update · to spor på tidslinjen · 2026-10-16 ~07:37 CEST
+
+Ny form på sammenlign, over den eksisterende tidslinje. To spor. Længden er tiden fra 22. sep. 2023 til 5. dec. 2026. PMINDI er den lange brand-streg frem til 14. okt. 2026. PMINDIAKK er den korte cyan-streg fra 5. dec. 2025. Stiplet streg til højre er datoen, kursen kan vises. Et klik på PMINDI siger første NAV og seneste kursdag. Et klik på PMINDIAKK siger, at kursen vises efter 12 måneder, fra 5. dec. 2026. Ingen ny procent. Knapperne er 44 px. Ingen sidescroll ved 300–1100. Ingen konsolfejl. På papir bliver sporene. KID-parret er stadig ca. 2,79 % og ca. 2,85 %. PMINDIAKK har stadig Ingen kurs.
+
+### Update · dage over og under nul · 2026-10-16 ~07:40 CEST
+
+Ny form i embed, under stoppene. En tynd streg. Brand er dagene på eller over nul. Rosa er dagene under nul. På hele perioden er det 749 af 770 og 21 af 770. På år til dato er det 161 af 197. Sætningen siger, at nul er første dag i perioden, og at dagene under nul ikke er et fald fra top. Ingen procent i sætningen. Knapperne er 44 px. Ingen sidescroll ved 300–1100. Ingen konsolfejl. På papir er knapperne væk, og stregen og sætningen bliver. PMINDIAKK har ingen streg, ingen procent, og teksten om 5. december 2026.
+
+### Update · år under 10 % · 2026-10-16 ~07:42 CEST
+
+Ny række på drawdown, under hoppet til første dag. Tre knapper: 2024, 2025 og 2026. Et klik hopper til årets første dag mindst 10 % under toppen. 2024 lander 2. aug. 2024 på −13,8 %. 2025 lander 25. feb. 2025 på −12,2 %. 2026 lander 2. jan. 2026 på −14,7 %. 2023 har ingen knap. Knapperne er 44 px og står på én række ved 300 px. Den valgte har en gul streg. Ingen sidescroll. Ingen konsolfejl. På papir er knapperne væk, og etiketten bliver. PMINDIAKK har ingen række og ingen procent.
+
+### Update · siden bunden · 2026-10-16 ~07:43 CEST
+
+Ny linje på drawdown, under år-knapperne. Knappen hopper til bunden 29. jul. 2026. Udlæsningen siger −26,8 %. Ved siden af står 77 dage siden den dato, og at serien ikke er tilbage på den top. Tallet er dage, ikke en ny procent. Knappen er 44 px. Ingen sidescroll ved 300–1100. Ingen konsolfejl. På papir er knappen væk, og sætningen bliver. PMINDIAKK har ingen linje, ingen procent, og teksten om 5. december 2026.
+
+### Update · spor for perioden · 2026-10-16 ~07:47 CEST
+
+Ny form i embed, over grafen. Et spor for hele perioden, fra 22. sep. 2023 til 14. okt. 2026. Den gule del til højre er år til dato. Et klik på den gule del skifter til år til dato og siger frem til 14. okt. 2026, at det er et delår, og at det afventer Fundmarket-godkendelse. Et klik på resten skifter tilbage. Knapperne er 44 px. Den gule del er 69 px ved 300. Ingen procent i sætningen. Ingen sidescroll ved 300–1100. Ingen konsolfejl. På papir bliver sporet. PMINDIAKK har ingen spor og ingen procent. Cyklus 55 har ingen MUST i egne filer.
+
+### Update · to slags rækker · 2026-10-16 ~07:48 CEST
+
+Main lagde en Nasdaq-række med klassen `.cmp-row`. Temarækken på sammenlign bruger samme navn. CSS er delt: temarækken er `.cmp-themes .cmp-row` og stadig et gitter med margin 0. Nasdaq-rækken er `div.cmp-row` med margin 10 px. Kontakten er 44 px og slået fra. Sætningen «Fonden har intet fast benchmark» står der stadig. Ingen konsolfejl.
+
+### Update · dage pr. år · 2026-10-16 ~07:49 CEST
+
+År-rækken på drawdown siger nu også et dagtal. 2024 har 16 dage, 2025 har 116, 2026 har 135. Tilsammen 267, samme tal som hele serien. Et klik hopper stadig til årets første dag under 10 %. Sætningen har ingen ny procent. Knapperne er 44 px. Ingen sidescroll ved 320 og 1100. Ingen konsolfejl. På papir er knapperne væk, og dagtallet bliver. PMINDIAKK har ingen række og ingen procent.
+
+### Update · første dag under nul · 2026-10-16 ~07:51 CEST
+
+Ny knap i embed, under dagtallet. Et klik sætter kurvens første dag under nul. På hele perioden er det 3. okt. 2023, og udlæsningen siger −1,9 %. På år til dato er det 4. feb. 2026, og udlæsningen siger −2,0 %. Det er afstanden til periodens start, ikke et fald fra top. Knappen er 44 px. Ingen sidescroll. Ingen konsolfejl. På papir er knappen væk. PMINDIAKK har ingen knap og ingen procent.
+
+### Update · hvor længe klassen har eksisteret · 2026-10-16 ~07:52 CEST
+
+Klik på PMINDIAKK-sporet siger nu også, at klassen har eksisteret i 313 dage, fra 5. dec. 2025 til seneste kursdag 14. okt. 2026. Kursen vises stadig efter 12 måneder, fra 5. dec. 2026. Ingen procent i sætningen. Ingen sidescroll ved 300. Ingen konsolfejl. PMINDI-sporet er uændret.
