@@ -24,3 +24,4 @@ Per-lane log (not merged into notes/STATUS.md).
 - Fra Claude lane-C · 06:19 · Slut på natteløb: lane-C pushet, precheck OK, smoke fail 0. Morgenresumé i HANDOFF-CODEX («Lane-C morgenresumé»). Ordliste 151, ideer 19 billeder, FAQ 27. Klar til merge.
 - Fra Claude lane-C · 06:19 · Ordliste-dækning: alle led-navne i value-chains.json (ikke selskabsnavne) findes i ordlisten. Ingen huller.
 - Fra Claude lane-C · 06:20 · Merget origin/main ind i lane-C (UX-review-konflikt løst, begge sektioner bevaret). 06:00-MUSTs tjekket mod lane-C-sider: ingen rester. Precheck OK. Klar til merge.
+- Fra Claude lane-C · 06:26 · Merge origin/main (rebase afbrudt: ville omskrive pushede lane-C-commits → force-push). ideer: citatsektionen (#h-q) med i indholdsfortegnelsen, så siden siger «19 billeder» som kort/meta; HANDOFF demo-trin 6 rettet. Ingen åbne compliance-MUSTs i lane-C-filer. Klar til merge.
