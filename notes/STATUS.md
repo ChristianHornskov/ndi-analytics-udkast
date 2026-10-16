@@ -1695,3 +1695,6 @@ Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er
 - **Til periode-ejer:** `periode.html` default er stadig `year=YTD` og viser «YTD:»-chip (MUST 10 / UX cyklus 24).
 - Test: 10 sider × 375/1280: 0 konsolfejl, 0 overflow, én h1. precheck: se push.
 - Branch `lane-C` klar til merge. Næste: UX-review 04:00.
+- Lead 2026-10-16 02:18:04 CEST: Leo 02:00/02:07 fixes on main (e402f15/5843694). Coord hardened (no auto-stash). Monitor+loop running. Queued lane merges R/A/B/C/D/E/X.
+
+- Lead 2026-10-16 02:18:12 CEST: lane R/A/B/C CONFLICT on STATUS (and app.js for B) — aborted; coordinator continues.

@@ -33,3 +33,14 @@
 
 ## Codex handoff
 See notes/HANDOFF-CODEX.md + notes/X-LANE.md + notes/THEME-FORSLAG.md
+
+
+## Update 2026-10-16 02:17 CEST
+- HEAD: see git log. Smoke 52/0. Coordinator-loop nohup (no auto-stash over WIP).
+- Leo 02:00 MUSTs landed: dividends 38,9/38,0; Største fald; ÅOP-aften frase væk; AI-udkast kun ved tekst; vaerdikaeder ≥12px mobil.
+- SHOULDs: menu 44px; life-strip collapses on mobil; tema wraps.
+- FO: andetWeight 6,27 % synket; klasser-forskel; KID-omkostning; Mangler-fra-NDI-boks; HANDOFF AUM/auditor/kurve (ingen Nasdaq).
+- Privat 02:07: Sådan tænker vi→Lær; færre forslag-badges; vurder-afkast uden benchmark-kurve.
+- Compliance: KID RIY 2,79/2,85; Fulgt konto; kan tabe; chartMarkers uden @MadsC007.
+- invester.html steps already 1–5 (Pages may lag).
+- Open for Christian: AUM, auditor, comparison curve decision, ÅTD/delår Fundmarket, official vol/Sharpe.

@@ -74,7 +74,7 @@
  </header>
  <main id="main"><p style="color:var(--muted)">Henter…</p></main>
  <footer class="site-footer">
- <p>Udkast / noindex. Forventede satser fra Fundmarket. Ikke et ÅOP. Ikke rådgivning.</p>
+ <p>Udkast / noindex. KID-omkostningsindikator + Fundmarket-postsatser. Ikke et ÅOP. Du kan tabe penge. Ikke rådgivning.</p>
  </footer>
  <script type="module">
  const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -211,14 +211,26 @@
  main.innerHTML = `
  <p class="eyebrow">OMKOSTNINGER · FUNDMARKET</p>
  <h1>Hvad koster fonden?</h1>
- <p class="lede">Forventede omkostninger i indeværende regnskabsår, som de står på Fundmarket. Det er ikke et beregnet ÅOP. Kurtage og depot hos din bank kommer oveni.</p>
+ <p class="lede">Først KID’ets samlede omkostningsindikator (PRIIP). Derefter Fundmarkets postsatser for indeværende regnskabsår. Postsatserne er ikke et ÅOP og må ikke læses som et billigere alternativ til KID-tallet. Kurtage og depot hos din bank kommer oveni. Du kan tabe penge.</p>
  <p class="band">${esc(facts.asOfNote)}</p>
  <div class="metrics">
- <div class="metric"><div class="label">Øvrige løbende${sameOngoing ? ', begge klasser' : ', PMINDI / AKK'}</div><strong>${sameOngoing ? pct(a.otherOngoing) : pct(a.otherOngoing) + ' / ' + pct(b.otherOngoing)}</strong><small>Forventet · Fundmarket</small></div>
- <div class="metric"><div class="label">Porteføljetransaktion, PMINDI</div><strong>${pct(a.portfolioTransaction)}</strong><small>Forventet</small></div>
- <div class="metric"><div class="label">Porteføljetransaktion, PMINDIAKK</div><strong>${pct(b.portfolioTransaction)}</strong><small>Forventet</small></div>
- <div class="metric"><div class="label">Resultathonorar</div><strong>${feeNo ? 'Nej' : 'Se klasser'}</strong><small>${feeNo ? 'Begge klasser · Fundmarket' : 'Se teksten på klassekortet'}</small></div>
+ <div class="metric"><div class="label">KID · årlig konsekvens (5 år)</div><strong>${pct(a.kidRiy5y)} / ${pct(b.kidRiy5y)}</strong><small>PMINDI / PMINDIAKK · før kurtage/depot</small></div>
+ <div class="metric"><div class="label">KID · årlig konsekvens (1 år)</div><strong>${pct(a.kidRiy1y)} / ${pct(b.kidRiy1y)}</strong><small>PMINDI / PMINDIAKK · KID</small></div>
+ <div class="metric"><div class="label">Øvrige løbende${sameOngoing ? ', begge' : ''}</div><strong>${sameOngoing ? pct(a.otherOngoing) : pct(a.otherOngoing) + ' / ' + pct(b.otherOngoing)}</strong><small>Postsats · Fundmarket</small></div>
+ <div class="metric"><div class="label">Resultathonorar</div><strong>${feeNo ? 'Nej' : 'Se klasser'}</strong><small>${feeNo ? 'Begge klasser · Fundmarket' : 'Se klassekortet'}</small></div>
  </div>
+ <section class="panel" id="kid-omkostning">
+ <h2 class="panel-h">KID: samlet omkostningsindikator</h2>
+ <p class="lede" style="margin-bottom:10px">KID’et viser den årlige omkostningsmæssige konsekvens (PRIIP-omkostningsindikator). Det er det tal, marketingmateriale skal gengive ærligt — ikke kun de enkelte postsatser.</p>
+ <div class="table-wrap"><table class="data" style="min-width:0">
+ <thead><tr><th></th><th>PMINDI</th><th>PMINDIAKK</th></tr></thead>
+ <tbody>
+ <tr><td>Ved 5 år (anbefalet periode)</td><td>${pct(a.kidRiy5y)}</td><td>${pct(b.kidRiy5y)}</td></tr>
+ <tr><td>Ved 1 år</td><td>${pct(a.kidRiy1y)}</td><td>${pct(b.kidRiy1y)}</td></tr>
+ </tbody>
+ </table></div>
+ <p class="src" style="margin-top:10px">${esc(a.kidRiyNote || '')} Kilde: KID via Fundmarket. <a href="${esc(A.kidUrl)}" rel="noopener noreferrer" target="_blank">KID PMINDI ↗</a> · <a href="${esc(B.kidUrl)}" rel="noopener noreferrer" target="_blank">KID PMINDIAKK ↗</a></p>
+ </section>
  <p class="band">${onlyTx ? `Kun porteføljetransaktion skiller klasserne. ${sameLine} ${entryLine} ${feeLine} Ikke et ÅOP.` : `${spoken} ${sameLine} ${entryLine} ${feeLine}`}</p>
  ${deltaStage}
 
@@ -276,7 +288,7 @@
  ${card(B)}
  </div>
 
- <p class="warn">Afkasttal på NDI Analytics er efter fondens løbende omkostninger, før din egen kurtage og dit depot. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast.</p>
+ <p class="warn">Du kan tabe penge. Afkasttal på NDI Analytics er efter fondens løbende omkostninger, før din egen kurtage og dit depot. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Se KID’ets samlede omkostningsindikator ovenfor — ikke kun postsatserne.</p>
  <p class="link-row">
  <a class="cta" href="fakta.html">Fakta →</a>
  <a class="outline-btn" href="risici.html">Risici / KID →</a>
