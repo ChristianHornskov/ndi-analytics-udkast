@@ -44,3 +44,9 @@ See notes/HANDOFF-CODEX.md + notes/X-LANE.md + notes/THEME-FORSLAG.md
 - Compliance: KID RIY 2,79/2,85; Fulgt konto; kan tabe; chartMarkers uden @MadsC007.
 - invester.html steps already 1–5 (Pages may lag).
 - Open for Christian: AUM, auditor, comparison curve decision, ÅTD/delår Fundmarket, official vol/Sharpe.
+
+
+## Lead update 2026-10-16 03:08:38 
+- Manual merge wave: A (vaerdikaeder), E (profiles/nyhedsarkiv), X (kept KID/Fulgt konto), D (visual).
+- Structural fix: `notes/status-{A–E,R,X}.md` + rebase instruction in all PROMPTs; watchdog reads ROOT prompts.
+- Smoke 52 fail 0. Coordinator detached. Report 08:45.
