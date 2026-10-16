@@ -1083,3 +1083,91 @@ Tabsadvarsel ✅ · historisk afkast ≠ fremtid ✅ · KID-link ✅ · ikke-rå
 
 ### Prioritet
 Uændret: **1** → **2** → **3** + **4** → **5**.
+
+## 2026-10-16 06:27 CEST · cyklus 43 (main `24e1fce`, docs-delta 24 filer siden `6c06c90`; live = main)
+
+Ikke juridisk rådgivning. 50 URL'er ved 375. Basis-tjeklisten er som i cyklus 42: tabsadvarsel, historisk ≠ fremtid, KID-link, ikke-rådgivning, SRI 5/7 med "gælder fonden som helhed", beholdning pr. 1. jun. 2026 (forsinket), "overvægt" kun som negation (13 sider) og intet køb/sælg-, garanti- eller tipsprog ✅.
+
+### Delta gennemgået
+- **`js/app.js` livscyklus:** "maskinelt ud fra offentlig branche og tema, afventer NDI-gennemgang" plus "ikke en officiel NDI-rating og ikke en anbefaling". Det er tydelig AI/maskin-mærkning ✅.
+- **Top-10-sum** ("udgør tilsammen 11,9 %"): et faktuelt, forsinket tal med "Eksponering, ikke anbefaling" ✅.
+- **Ordliste "Resultathonorar"** og omkostninger "Ingen af klasserne betaler resultathonorar, ifølge Fundmarket". Det har kilde og stemmer med KID-teksten "Resultathonorar: Nej" ✅.
+- **Ideer #h-cs:** "Derfor kigger vi efter" er blevet til "værd at se på". NDI tilskrives ikke længere en arbejdsgang, og det er bedre ✅.
+- **NDI på X, datolinje:** "Udvalgte offentlige opslag — ikke NDI's holdning … Du kan tabe penge" står over linjen ✅. De to "BREAKING:"-opslag fra @BullTheoryio (tredjepart) er uændrede og mærket "FULGT KONTO". Det er acceptabelt, fordi de er tydeligt tredjepart. Der er ingen nye X-kald (`callCountNote`).
+- **Drawdown PMINDIAKK:** "vises efter 12 måneders historik. Ingen NAV eller graf før 5. december 2026" ✅. Der er ingen 1m/3m på PMINDI og ingen Nasdaq-benchmark ✅.
+
+### MUST
+- **Ingen åbne MUST-blokere.**
+
+### SHOULD (åbne, uændret, verificeret i kode på `24e1fce`)
+1. "Gns. årligt afkast" uden "siden start 22. sep. 2023": `js/app.js:420` og `periode.html:113` ("Gennemsnitligt årligt afkast" under YTD).
+2. Værdikæder er ikke AI-mærket (`vaerdikaeder.html`, `vaerdikaede.html`). Der er stadig 0 forekomster af "AI-udkast"/"maskinel" i sidernes tekst.
+3. "Central Information Dokument" står i `js/data.js:283` → "Dokument med central information (KID)".
+4. "kvartalssnapshot": `js/app.js:359`, `:428`, `:758` og `selskab.html:202` → "snapshot pr. 1. jun. 2026".
+5. Intern sætning, nu på `omkostninger.html:372`: "Det er det tal, marketingmateriale skal gengive ærligt".
+
+### Ny SHOULD (lav)
+6. Selskabsnavne i rå form ("Iqe Plc", "Sitime Corp") og den afkortede "Power Solutions Internationa" på `vaerdikaeder.html` (se UX SHOULD 1–2). Korrekte navne hører til "klar og ikke vildledende".
+
+### Prioritet
+**1** → **2** → **3** + **4** + **5** (rene tekstrettelser, ét commit) → **6**.
+
+## 2026-10-16 06:33 CEST · cyklus 44 (main `24e1fce`, ingen docs-delta siden cyklus 43; live = main)
+
+Ikke juridisk rådgivning. Denne cyklus var en dybere kontrol i kilden (`docs/**` html/js/json) ud over live-sweepet på 50 URL'er.
+
+### Kildescan
+- **Rådgivningsagtigt sprog** (køb nu/sælg/anbefal*/garanter*/sikker afkast/bedste tip/kursmål/upside/risikofri/øger eksponering/overvægt/undervægt): alle hits er beskrivende ("selskabet sælger …"), KID-terminologi ("anbefalet investeringsperiode") eller negationer ("ikke en anbefaling", "ikke bevidste overvægte"). Undtagelsen er `laer/hvorfor-mange-aktier.html`: "en stor overvægt i én branche øger variansen". Det er generel pædagogik om spredning, ikke trading-sprog ✅.
+- **Benchmark/Nasdaq:** "Nasdaq" står kun som noteringssted i selskabsprofiler. Overalt står "intet fast benchmark" (`fund-facts.json` "benchmark": "Nej") ✅.
+- **asOf:** beholdningsdatoer (`asOf`/`positionsAsOf`/`holdingsAsOf`) er alle 2026-06-01. 2026-10-14/15 i `fund-meta`, `latest` og `risk-stats` er NAV-/afkastserier, ikke beholdning ✅.
+- **Meta-beskrivelser:** alle HTML-sider er `noindex`. Ingen description lover afkast eller "vindere" ✅.
+
+### MUST
+- **Ingen åbne MUST-blokere.**
+
+### Ny SHOULD
+7. **Ikke-rådgivning mangler i footeren på `drawdown.html`, `embed/chart.html` og `periode.html`.** De tre sider har "Markedsføringsmateriale", prospekt- og KID-links, "Historisk afkast er ikke en pålidelig indikator" og tabsadvarslen, men ingen synlig "Generel information, ikke investeringsrådgivning". Det samme gælder live (tekst-længde uændret siden cyklus 41). Det blev noteret som et faktum i cyklus 26–28 ("kun tab+historik"), men blev aldrig rejst som et punkt. Det er vigtigst for **embed**, fordi grafen er beregnet til at blive delt og indlejret uden for sitet. Dens eneste "ikke rådgivning" står i `og:description`, som brugeren ikke ser. Rettelse: tilføj "Generel information, ikke investeringsrådgivning." til footerens anden linje på de tre sider. Det er den samme formulering som på fonden og om-data.
+
+### SHOULD (åbne, uændret fra cyklus 43)
+1. "Gns. årligt afkast" står uden periode ("siden start 22. sep. 2023"): `js/app.js:420`, `periode.html:113`.
+2. Værdikæder er ikke AI-mærket (`vaerdikaeder.html`, `vaerdikaede.html`).
+3. "Central Information Dokument" står i `js/data.js:283` og er synlig i KID-footeren på bl.a. drawdown → "Dokument med central information (KID)".
+4. "kvartalssnapshot": `js/app.js:359/428/758` og `selskab.html:202`.
+5. Intern sætning på `omkostninger.html:372`: "Det er det tal, marketingmateriale skal gengive ærligt".
+6. Rå eller afkortede selskabsnavne (UX SHOULD 1–2).
+
+### Prioritet
+**7** (tre footere, én linje hver) + **3** + **4** + **5** samlet i ét tekst-commit → **1** → **2** → **6**.
+
+### Addendum 06:38: main `cfb03ab` (docs-delta 10 filer siden `24e1fce`, live har AI-mærket på værdikæder = opdateret)
+- **Lukket SHOULD 2 ✅:** `vaerdikaeder.html` og `vaerdikaede.html` har nu "AI-udkast. Teksterne er sammenfattet med AI ud fra NDI's ugebreve … afventer NDI-gennemgang" med link til `om-data#g-ai-udkast`.
+- **SHOULD 1 halvt lukket:** `periode.html:113` siger nu "Gennemsnitligt årligt afkast siden {første NAV}" ✅. `js/app.js:420` ("Gns. årligt afkast" på fonden) står stadig uden periode.
+- **SHOULD 4 delvist:** værdikæder siger nu "forsinket beholdning pr. 1. juni 2026" i stedet for "snapshot" ✅. `selskab.html:202` "Vægt over tid (kvartalssnapshots)" er uændret.
+- **SHOULD 3 udvidet:** "Central Information Dokument" står også i `index.html:89` ("Se Central Information Dokument før du investerer"), ud over `js/data.js:283`.
+- **Ny tekst er OK:** "Hvad ændrer sig" (`l.shift`) og plan-markering ("er en plan", "ikke fløjet" fremhævet) gør tydeligere, hvad der er fakta, og hvad der er planer ✅. Livscyklus-labels på dansk i `data.js`. X-posts er reduceret (−34 linjer, opslag/markør fra 13. aug. fjernet). Der er ingen nye købs-, sælg- eller garantiord i delta.
+- **SHOULD 7 (footere på drawdown/embed/periode) er stadig åben.** Ingen af de tre footere er rørt.
+- **Prioritet nu:** 7 + 3 (to steder) + 4 (selskab h2) + 5 + rest af 1 (`app.js:420`), alt sammen tekst-rettelser i ét commit → 6.
+
+## 2026-10-16 06:40 CEST · cyklus 45 (main `b6dfcba`; live = `cfb03ab`)
+
+Ikke juridisk rådgivning. Delta siden addendum c44: `cfb03ab` er nu live, og lane-D (`44a551a`, `b0e7cd2`) er merget på main: embed "N år siden start {dato}" og et span i drawdown.
+
+### Korrektion
+- **SHOULD 7 gælder kun `drawdown.html` og `embed/chart.html`.** `periode.html` har allerede "Ikke den officielle side og ingen investeringsrådgivning" i footeren (live og kilde, også i c44). Sweepets `radg`-flag fangede ikke formuleringen, og det blev ikke kontrolleret mod teksten. drawdown har 0 forekomster af "rådgivning" i kilden. I embed står ordet kun i `og:description`, som ikke er synlig.
+
+### MUST
+- **Ingen åbne MUST-blokere.** Fonden, portefølje, risici og invester har "ikke rådgivning/anbefaling", tabsadvarsel, historik-advarsel, KID-links og SRI 5/7. Beholdning pr. 1. juni 2026. Ingen nye købs-, sælg-, garanti- eller trading-ord i delta.
+
+### Ny SHOULD
+8. **Udforsk på mobil: mærket for maskinel klassifikation er flyttet bag en lukket `<details>`** (følger af 7a5b111). Tema- og modenhedssøjlerne vises stadig pr. række, men forbeholdet "alle som forslag (maskinelt …, afventer NDI)" kræver nu et klik. Kun "udkast-klassifikation" er synligt. Kravet om AI- og maskinmærkning taler for, at forbeholdet står synligt ved det indhold, det gælder. Rettelse: én synlig linje uden for `<details>`.
+
+### SHOULD (åbne)
+1. Rest: `js/app.js:420` "Gns. årligt afkast" på fonden står uden periode. Embed siger nu "år siden start {dato}" ✅ (`44a551a`).
+3. **Næsten lukket ✅ (lane-B, `b6dfcba`):** `data.js` KID-footeren siger nu "Dokument med central information (KID, …)". Rest: `index.html:89` "Se Central Information Dokument".
+4. **Lukket ✅ (lane-B):** "kvartalssnapshot" er fjernet fra synlig tekst. Fonden siger "forsinket snapshot pr. {dato}", og selskab-h2 er nu "Vægt i fonden over tid … ikke aktiekurs". Det nye warrant-afsnit på moderselskabets side ("Beholdningen har også N warrants …") er beskrivende og OK.
+5. Intern sætning på `omkostninger.html:372`: "Det er det tal, marketingmateriale skal gengive ærligt".
+6. Rå eller afkortede selskabsnavne (UX).
+7. Footer uden ikke-rådgivning på drawdown og embed (se korrektion).
+
+### Prioritet
+**8** + **7** (to footer-linjer) + **3/4/5** og resten af **1** samlet i ét tekst-commit. Det er bugfix/tekst og falder inden for freeze-reglen efter 08:00.

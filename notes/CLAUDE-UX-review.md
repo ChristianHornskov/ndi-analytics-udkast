@@ -1060,3 +1060,93 @@ Main er uændret, og live-teksten er byte-identisk med cyklus 41 på alle 32 bas
 - **Idéspejder:** #9 (fakta vs. vurdering) er stadig næste. Profiler efter vægt (SHOULD 1) er en dataopgave, ikke en idé, men har størst effekt pr. time.
 
 > **Addendum (efter merge):** main er under cyklussen rykket til `23ad292` (13 docs-filer). `af96c18` "selskab: skjul tomt 'Hold øje med'-panel" ser ud til at løse SHOULD 2 ovenfor, og `0f32f90`/`a4d1848` berører top-10 og visningsnavne. KID-betegnelse, "kvartalssnapshot" og "Gns. årligt afkast" er uændrede i grep. Hele deltaet gennemgås live i cyklus 43.
+
+## 2026-10-16 06:27 CEST · cyklus 43 (main `24e1fce`, docs-delta 24 filer siden `6c06c90`; live = main)
+
+Live-sweep på 50 URL'er ved 375: **0 pageerrors og 0 vandret overflow**. Live har den nye `NAME_FIX`, så Pages er ikke forsinket.
+
+### Lukket siden cyklus 42 ✅
+- **Afkortede navne (cyklus 42 SHOULD 3):** `displayName()` dækker nu alle 10 navne, der var afkortet ved 28 tegn, plus ~35 forkortelser (Applied Material, Palantir Tchnl …). Det gælder udforsk, selskaber, portefølje, h1 og CSV (CSV har nu også "Beholdningsnavn"). 0 hits i liste-teksterne.
+- **"Hold øje med -" (cyklus 42 SHOULD 2):** panelet er skjult, når det er tomt. 0 hits på 8 selskabssider.
+- **Top-10:** udvalget tages nu altid efter vægt, også når man sorterer på navn, og summen står over listen ("De 10 største udgør tilsammen 11,9 % af PMINDI (345 selskaber i alt)"). Det giver en god kontekst for koncentration til familiekontoret.
+- **Livscyklus på dansk:** "Før omsætning / Høj vækst / Vækst med overskud / Moden" står både i kurven og i ordlisten, og engelsk står i parentes. Det lukker jargon-punktet fra cyklus 41.
+- **Tema-knapper i udforsk** viser antal (primært + multi-tag), og der er en forklaring under knapperne.
+- **NDI på X:** den nye datolinje (2. maj 2025 → 15. okt. 2026) giver visuel variation. Ved 375 ligger prikkerne til højre oven i hinanden (8–10 opslag i okt.), men det fungerer stadig.
+
+### MUST
+- Ingen UX-blokere.
+
+### SHOULD (nye)
+1. **`vaerdikaeder.html` bruger ikke `displayName()`.** "6 fælles: Tesla, Lpkf Laser & Electronics Se, **Power Solutions Internationa** og 3 til" står 3 gange på siden. Det er den eneste rest af den afkortede navnefejl, og den sidder på sitets mest besøgte forklaringsside. Brug `displayName` i fælles-listen.
+2. **Store/små bogstaver i h1 på selskabssider:** "Sitime Corp", "Iqe Plc", "Wix.Com Ltd", "SoFi Tech", "Chemours Co", "United States Antimony Corp". De står i rå form fra depotbanken, og 3 af dem er i top-10/top-15. Tilføj `NAME_FIX`: SiTime, IQE, Wix.com, SoFi Technologies, Chemours, United States Antimony.
+3. **`omkostninger.html:356` "Tast 1 eller 5."** står i summary-teksten. Det er en tastaturgenvej, som ikke virker på mobil, og privat 55+ forstår den ikke. Flyt den til en `title`, eller vis den kun ved `(hover:hover)`.
+
+### SHOULD (åbne)
+- Cyklus 42 SHOULD 1: 5 af top-10 har stadig ingen profiltekst (Lumentum, SiTime, Poet, Wix, MercadoLibre, og også SoFi). "Profiltekst mangler endnu" er uændret på alle 6.
+- Cyklus 41: "Dyb"/"YTD dyb side" på fonden, "Kvartalssnapshot" (portefølje/udforsk-forklaring og "Vægt over tid (kvartalssnapshots)").
+- Touch-mål under 24 px er uændrede (udforsk 698, ndi-perspektiv 418, selskaber 382). Lane-C har rettet sine egne sider (ideer, invester, FAQ, ordliste).
+
+### Nice
+- Temasiderne har stadig ingen figur (cyklus 42).
+- `fakta.html` har fået en fald-hældning ("dd-slope") og en "rail-key" ("Søjlerne deler skalaen 0 til X kr."). Det er god forklaring ✅.
+
+### Persona-linser
+- **Privat 55+:** navnene ser nu professionelle ud i listerne. Den svageste oplevelse er stadig "Profiltekst mangler" på nr. 4–7.
+- **Familiekontor:** top-10-summen (11,9 %) og "Beholdningsnavn" i CSV giver mere tillid til dataene.
+- **Idéspejder:** #9 (fakta vs. vurdering) er uændret næste. Profiler efter vægt er stadig det, der giver mest pr. time.
+
+## 2026-10-16 06:33 CEST · cyklus 44 (main `24e1fce`, ingen docs-delta siden cyklus 43; live = main)
+
+Live-sweep på 50 URL'er ved 375: **0 pageerrors og 0 vandret overflow**. Tiny-tal og sidehøjder er identiske med cyklus 43 på alle 50 URL'er, så live er uændret, og Pages er ikke forsinket.
+
+### MUST
+- Ingen UX-blokere.
+
+### SHOULD (åbne, uændret fra cyklus 43, i prioriteret rækkefølge)
+1. `vaerdikaeder.html` bruger ikke `displayName()`. "Power Solutions Internationa" og "Lpkf Laser & Electronics Se" står i fælles-listen (3×).
+2. Store/små bogstaver i h1 på selskabssider står i rå form: Sitime Corp, Iqe Plc, Wix.Com Ltd, SoFi Tech, Chemours Co, United States Antimony Corp. Løsning: `NAME_FIX`.
+3. `omkostninger.html:356` "Tast 1 eller 5." er en tastaturgenvej i den synlige tekst og virker ikke på mobil.
+4. 5–6 af top-10/15 viser "Profiltekst mangler endnu" (Lumentum, SiTime, Poet, Wix, MercadoLibre, SoFi).
+5. "Dyb"/"YTD dyb side" og "kvartalssnapshot" er jargon (cyklus 41).
+6. Touch-mål under 24 px er uændrede: udforsk 698, ndi-perspektiv 418, selskaber 382.
+
+### Ny (UX-side af en compliance-SHOULD)
+- Footeren på `drawdown.html`, `embed/chart.html` og `periode.html` har ingen "Generel information, ikke investeringsrådgivning". Se compliance cyklus 44 SHOULD 7. Embed er den side, der deles uden for sitet, så footeren skal kunne stå alene.
+
+### Nice
+- Temasiderne har stadig ingen figur.
+
+### Persona-linser
+Uændret fra cyklus 43. Det, der giver mest pr. time, er stadig (a) `displayName` i værdikæder og `NAME_FIX` for h1, som er én lille ændring, og (b) profiler for top-10 efter vægt.
+
+### Addendum 06:38: main `cfb03ab` (docs-delta 10 filer)
+- **Lukket ✅:** jargon i værdikæder ("Flodsystem/Treemap/Sunburst" → "Dæmninger/Temaer", "Felter/Ringe", "Kæden som en flod", "TEKNOLOGI · VÆRDIKÆDER"). Princip-kortet "Vælg udviklingen, ikke vinderen" er nu klart i stedet for "Udvikling > vinder". "Screener · NDI-linse" → "Udforsk porteføljen". Udforsk-filtre er foldet sammen på mobil med "N aktive", hvilket burde sænke tiny-tallet (698) markant. Det bekræftes i næste live-sweep.
+- **Åbne:** `vaerdikaeder.html` har stadig 0 forekomster af `displayName` (SHOULD 1). `omkostninger.html:356` "Tast 1 eller 5" er uændret (SHOULD 3). `selskab.html:202` "kvartalssnapshots" er uændret.
+
+## 2026-10-16 06:40 CEST · cyklus 45 (main `b6dfcba` inkl. lane-D + lane-B; live = `cfb03ab`, mens lane-D-deltaet på 2 filer endnu ikke er deployet)
+
+Live-sweep på 50 URL'er ved 375: **0 pageerrors og 0 vandret overflow.** Live er nu `cfb03ab`. Sidehøjder er ændret på 18 URL'er (værdikæde ai-compute +1062 px på grund af "Hvad ændrer sig", nyhedsarkiv +1331, temaer/selskaber −13 til −511), og tiny-tallet er faldet med 2–6 på selskabs- og temasider.
+
+### Verificeret live (cfb03ab) ✅
+- Udforsk-filtrene er foldet sammen på mobil ("Filtre (tema, status, modenhed) · 0 aktive"). Siden er 900 px kortere.
+- Opslaget og markøren fra 13. aug. er væk (0 forekomster af "13. aug" på forsiden og i nyhedsarkivet).
+- Værdikæde-jargon er ryddet op, og AI-udkast-mærket er synligt på `vaerdikaeder.html` og `vaerdikaede.html?id=ai-compute`.
+
+### MUST
+- Ingen UX-blokere.
+
+### SHOULD
+1. **Ny (korrektion til addendum c44): foldningen sænker IKKE tiny-tallet på udforsk.** Det er stadig 698. En opdeling viser 345× navnelink i rækkerne (h18) + 333× `a.lens-mark` ◉ (h16) + 20 andre. Filtrene var aldrig årsagen. Rettelse: `min-height:24px` (eller 44 px på rækken) på række-linket, og ◉ bør enten være en del af række-linket eller have padding. Det er det samme mønster som ndi-perspektiv 418 / selskaber 382.
+2. **Ny: foldningen gemmer oplysningerne om maskinel klassifikation.** "Modenhed: 345 af 345 placeret - alle som forslag (maskinelt …, afventer NDI)" og "forslag = tema foreslået i udkastet" står nu kun inde i den lukkede `<details>`. Synligt er kun "345 resultater · udkast-klassifikation". Se compliance c45 SHOULD 8. Rettelse: én synlig linje under resultattallet: "Tema og modenhed er maskinelle forslag, afventer NDI."
+3. `vaerdikaeder.html` mangler stadig `displayName()` ("Power Solutions Internationa", "Lpkf Laser & Electronics Se").
+4. Rå versaler i h1 på selskabssider (Sitime Corp, Iqe Plc, Wix.Com Ltd …): `NAME_FIX`.
+5. `omkostninger.html:356` "Tast 1 eller 5." står stadig i den synlige summary-tekst.
+6. 5–6 af top-10/15 viser "Profiltekst mangler endnu".
+7. ~~Jargon "kvartalssnapshot"~~ er lukket ✅ af lane-B (`b6dfcba`). Moderselskaber linker nu til deres warrants (fx Power Solutions) ✅.
+
+### Nice
+- Temasiderne har stadig ingen figur.
+
+### Persona-linser
+- **Privat (375):** Udforsk er markant roligere nu. Den største tilbageværende friktion er de små tap-mål i listen (punkt 1).
+- **Family office:** De mærker hurtigst forsvinden af "maskinelt"-forbeholdet fra udforsk (punkt 2). Det skal være synligt uden klik.
