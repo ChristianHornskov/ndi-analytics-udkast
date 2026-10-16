@@ -60,7 +60,12 @@
   .delta-zoom .k{font-size:11px;letter-spacing:1.2px;font-weight:700;color:var(--brand);margin:0 0 8px}
   .cost-hero{display:grid;grid-template-columns:1fr;gap:10px;align-items:stretch;margin:0 0 14px}
   .cost-hero.is-pair{grid-template-columns:minmax(0,1.2fr) auto minmax(210px,.78fr)}
-  .cost-neq{display:grid;place-items:center;margin:0;color:#f5ee9e;font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-size:28px;line-height:1}
+  .cost-neq{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;margin:0;text-align:center;color:#f5ee9e}
+  .cost-neq .mark{font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-size:28px;line-height:1}
+  .cost-neq .word{font-size:10px;letter-spacing:.6px;text-transform:uppercase;line-height:1.25;color:var(--faint);max-width:9ch}
+  .cost-hero.is-same .cost-neq .word{color:#f5ee9e}
+  .cost-hero.is-same .cost-hero-kid{box-shadow:inset 0 0 0 1px #f5ee9e88}
+  .cost-hero.is-same [data-kid-gap],.cost-hero.is-same .gap-kr{text-shadow:0 0 16px rgba(245,238,158,.55)}
   .cost-hero article{border-radius:16px;padding:14px 16px 12px;min-width:0}
   .cost-hero-kid{border:1px solid #345860;background:linear-gradient(180deg,#16303a,#11252c)}
   .cost-hero-gap{border:1px solid #f5ee9e55;background:radial-gradient(90% 90% at 100% 0%,rgba(245,238,158,.12),transparent 50%),linear-gradient(180deg,#16303a,#11252c)}
@@ -96,7 +101,8 @@
   @media(max-width:800px){
     .cost-grid,.receipts,.kr-chips{grid-template-columns:1fr}
     .cost-hero.is-pair{grid-template-columns:1fr}
-    .cost-neq{padding:2px 0}
+    .cost-neq{flex-direction:row;gap:10px;padding:2px 0}
+    .cost-neq .word{max-width:none}
     .kr-chips{grid-template-columns:1fr 1fr}
     .cmp-line{grid-template-columns:72px minmax(0,1fr) auto}
     .delta-nums{grid-template-columns:1fr;gap:12px}
@@ -237,8 +243,21 @@
  : 'Ikke det samme som postsatserne. Ikke et ÅOP.';
  const wantH = new URL(location.href).searchParams.get('h');
  const heroStart = kidHorizons.find((h) => String(h.y) === wantH) || h5 || kidHorizons[0] || null;
- const kidSwitch = kidHorizons.length > 1 ? `<div class="kid-switch" role="group" aria-label="KID-horisont">${kidHorizons.map((h) => `<button type="button" data-kid="${h.y}" aria-pressed="${heroStart && h.y === heroStart.y ? 'true' : 'false'}" aria-label="Vis KID ved ${h.y} år. Forskellen er ${h.gap}.">${h.y} år <b>${h.gap}</b></button>`).join('')}</div>` : '';
- const hero = `<div class="cost-hero${dTx === 0 ? '' : ' is-pair'}">
+ const amountsMatch = (h) => Boolean(h && dTx !== 0 && h.gapN === txGapN);
+ const bridgeCopy = (h) => {
+ const same = amountsMatch(h);
+ return {
+ same,
+ mark: same ? '=' : '≠',
+ word: same ? 'samme beløb' : 'andet beløb',
+ sr: same
+ ? `${h.gap} og ${krGapTxt} er samme beløb. Ikke det samme tal.`
+ : `${h ? h.gap : ''} og ${krGapTxt} er ikke samme beløb.`,
+ };
+ };
+ const startBridge = bridgeCopy(heroStart);
+ const kidSwitch = kidHorizons.length > 1 ? `<div class="kid-switch" role="group" aria-label="KID-horisont">${kidHorizons.map((h) => `<button type="button" data-kid="${h.y}" aria-pressed="${heroStart && h.y === heroStart.y ? 'true' : 'false'}" aria-keyshortcuts="${h.y}" aria-label="Vis KID ved ${h.y} år. Forskellen er ${h.gap}.">${h.y} år <b>${h.gap}</b></button>`).join('')}</div>` : '';
+ const hero = `<div class="cost-hero${dTx === 0 ? '' : ' is-pair'}${startBridge.same ? ' is-same' : ''}" id="blik">
  <article class="cost-hero-kid" id="kid-hero">
  <div class="kid-head"><p class="kicker">KID</p>${kidSwitch}</div>
  <div class="cost-hero-nums" aria-live="polite">
@@ -248,7 +267,7 @@
  </div>
  <p class="cost-hero-note sr-only">${kidNote}</p>
  </article>
- ${dTx === 0 ? '' : `<p class="cost-neq"><span aria-hidden="true">≠</span><span class="sr-only">KID-tallet og postsatserne er ikke det samme og må ikke lægges sammen.</span></p><article class="cost-hero-gap">
+ ${dTx === 0 ? '' : `<p class="cost-neq" aria-live="polite"><span class="mark" data-bridge-mark aria-hidden="true">${startBridge.mark}</span><span class="word" data-bridge-word>${startBridge.word}</span><span class="sr-only" data-bridge-sr>${startBridge.sr}</span></p><article class="cost-hero-gap">
  <p class="kicker">POSTSATS · PORTEFØLJETRANSAKTION</p>
  <p class="gap-kr">${krGapTxt}</p>
  <p class="gap-sub"><b>${pct(a.portfolioTransaction)}</b> PMINDI · <b>${pct(b.portfolioTransaction)}</b> PMINDIAKK</p>
@@ -408,6 +427,17 @@
  root.querySelector('[data-kid-kb]').textContent = `${h.krB} på 100.000 kr.`;
  root.querySelector('[data-kid-gap]').textContent = h.gap;
  root.querySelector('[data-kid-eq]').innerHTML = `${h.eq ? `${h.eq}<br>` : ''}ikke postsatserne`;
+ const hero = document.getElementById('blik');
+ const copy = bridgeCopy(h);
+ if (hero) {
+ hero.classList.toggle('is-same', copy.same);
+ const mark = hero.querySelector('[data-bridge-mark]');
+ const word = hero.querySelector('[data-bridge-word]');
+ const sr = hero.querySelector('[data-bridge-sr]');
+ if (mark) mark.textContent = copy.mark;
+ if (word) word.textContent = copy.word;
+ if (sr) sr.textContent = copy.sr;
+ }
  root.querySelectorAll('[data-kid]').forEach((btn) => {
  btn.setAttribute('aria-pressed', Number(btn.getAttribute('data-kid')) === h.y ? 'true' : 'false');
  });
@@ -432,6 +462,15 @@
  const btn = e.target.closest('[data-kid]');
  if (!btn || !document.getElementById('kid-hero')?.contains(btn)) return;
  paintKid(btn.getAttribute('data-kid'), true);
+ });
+ window.addEventListener('keydown', (e) => {
+ if (e.altKey || e.metaKey || e.ctrlKey || e.shiftKey) return;
+ if (e.key !== '1' && e.key !== '5') return;
+ const ae = document.activeElement;
+ if (ae && ae.closest('input, textarea, select, [contenteditable="true"]')) return;
+ if (!document.querySelector(`#kid-hero [data-kid="${e.key}"]`)) return;
+ e.preventDefault();
+ paintKid(e.key, true);
  });
  }
  </script>
