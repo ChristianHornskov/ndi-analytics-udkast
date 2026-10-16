@@ -825,7 +825,7 @@ function fundToolbar({ screener = true } = {}) {
 
 function positionsTable(list, fund) {
   const th = (key, label) =>
-    `<th><button type="button" data-sort="${key}" aria-sort="${state.sort===key?(state.dir==='asc'?'ascending':'descending'):'none'}">${label}${state.sort===key?(state.dir==='asc'?' ↑':' ↓'):''}</button></th>`;
+    `<th${state.sort===key?` aria-sort="${state.dir==='asc'?'ascending':'descending'}"`:''}><button type="button" data-sort="${key}">${label}${state.sort===key?(state.dir==='asc'?' ↑':' ↓'):''}</button></th>`;
   return `<p class="spark-legend"><svg class="spark-key" width="16" height="12" aria-hidden="true"><g fill="var(--cyan)"><rect x="0" y="6" width="4" height="6" rx="1"/><rect x="6" y="3" width="4" height="9" rx="1"/><rect x="12" y="0" width="4" height="12" rx="1"/></g></svg><span>Søjlerne ved navnet viser <strong>vægt i fonden pr. kvartal</strong>. Ikke aktiekurs.</span></p>` +
   mobileSortHtml() +
   hscroll(`<div class="table-wrap"><table class="data screener-table"><thead><tr>
