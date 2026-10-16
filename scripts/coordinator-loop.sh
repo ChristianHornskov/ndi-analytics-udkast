@@ -41,6 +41,11 @@ log_status() {
     echo ""
     echo "- Coordinator-loop $(date '+%Y-%m-%d %H:%M:%S %Z'): $msg"
   } >> "$STATUS"
+  # Keep tree clean so later lanes in the same tick are not skipped
+  if ! git diff --quiet -- notes/STATUS.md 2>/dev/null; then
+    git add notes/STATUS.md 2>/dev/null || true
+    git commit -m "notes: coordinator-loop $(date +%H:%M) — ${msg:0:60}" 2>/dev/null || true
+  fi
 }
 
 LANES=(D A E B C X R)
