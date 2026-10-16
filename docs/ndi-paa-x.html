@@ -209,6 +209,8 @@
  if (!cards.length) return '';
  const film = mode === 'film';
  const rail = mode === 'rail';
+ const leadKind = direct.length ? 'direct' : 'theme';
+ const pickable = kind === leadKind && (film || rail);
  const q = state.q.trim();
  let hint = kind === 'direct' ? 'Nævner navnet eller tickeren.' : 'Rammer temaet. Ikke en ticker fra udsnittet.';
  if (!q && state.f === 'chips' && kind === 'direct') hint = 'Ticker NVDA i opslaget.';
@@ -217,9 +219,10 @@
  const kicker = film || rail
  ? (kind === 'direct' ? 'Andre datoer' : 'Andre datoer · tema')
  : kind === 'direct' ? 'Øvrige direkte træf' : (quotedTheme ? 'Øvrige tema' : 'Tema');
- const body = cards.map((p) => xCard(p, { query: markQ, hitKind: kind, reasons: reasonsFor(p), rail: film ? 'film' : rail })).join('');
+ const note = pickable ? 'Klik en dato. ' : '';
+ const body = cards.map((p) => xCard(p, { query: markQ, hitKind: kind, reasons: reasonsFor(p), rail: film ? 'film' : rail, pickable })).join('');
  return `<div class="x-lane ${kind === 'direct' ? 'is-direct' : 'is-theme'}${film ? ' is-film' : ''}${rail ? ' is-rail' : ''}">
- <p class="x-lane-h"><span class="x-lane-k">${kicker}</span><span>${hint} · ${cards.length}</span></p>
+ <p class="x-lane-h"><span class="x-lane-k">${kicker}</span><span class="x-lane-hint">${note}${hint} · ${cards.length}</span></p>
  <div class="x-grid">${body}</div>
  </div>`;
  };
