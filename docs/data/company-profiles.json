@@ -2247,20 +2247,20 @@
   "US3687361044": {
    "name": "Generac",
    "theme": "physical",
-   "summary": "Fremstiller reservegeneratorer til hjem og virksomheder. Selskabet skriver også, at det har bærbare generatorer, sol og batterilagring og ladere til elbiler. Det er ikke et elselskab.",
-   "watch": "Efterspørgsel efter reservestrøm og forsyning af motorer.",
-   "source": "https://www.generac.com/",
-   "products": "Reservegeneratorer, bærbare generatorer, sol, batterilagring og ladere til elbiler.",
-   "customers": "Husholdninger, installatører og virksomheder.",
-   "role": "Lokal reservestrøm, ikke et elnet.",
+   "summary": "Fremstiller reservegeneratorer. Stiftet i 1959. Afbrydere til reservestrøm er sat til anvendelser op til 2 MW. Det er udstyr, ikke et kraftværk.",
+   "watch": "Om 2 MW bliver læst som et kraftværk. Tallet er afbryderens anvendelse, ikke et målt år.",
+   "source": "https://www.generac.com/about/",
+   "products": "Bærbare generatorer og generatorer til bolig, erhverv og industri. Afbrydere. Mobile generatorer på trailer.",
+   "customers": "Husholdninger, installatører og virksomheder. Navne er ikke taget med.",
+   "role": "Udstyr til reservestrøm. Ikke et elselskab.",
    "narrative": [
-    "Generac skriver, at en hjemmegenerator giver strøm under et udfald, og at selskabet har bærbare generatorer. Siden nævner også sol, batterilagring og ladere til elbiler.",
-    "Det er udstyr hos kunden. Selskabet er ikke et elselskab og ikke en mine."
+    "Om-siden, læst 16. oktober 2026, skriver, at Generac er stiftet i 1959. Selskabet laver bærbare generatorer og generatorer til bolig, erhverv og industri. Manuelle og fuldautomatiske afbrydere er til reservestrøm i anvendelser op til 2 MW. Det er udstyr, ikke et kraftværk og ikke et målt år. Generac Mobile er lysmaster og mobile generatorer på trailer. Det er heller ikke et kraftværk. En gadeadresse stod ikke på de læste sider og er ikke opfundet. Siden siger ikke, at selskabet er noteret på en navngiven børs.",
+    "Forsiden skriver since 1959 i en tillidssætning. Den er ikke en fabrik. Ordene first, leading, widest, pioneered og trusted er ikke taget med. Højtryksrensere står på om-siden og er ikke elnettet. Det er udstyr hos kunden. Selskabet er ikke et elselskab og ikke en mine."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets side",
-     "url": "https://www.generac.com/"
+     "label": "Om selskabet",
+     "url": "https://www.generac.com/about/"
     }
    ]
   },

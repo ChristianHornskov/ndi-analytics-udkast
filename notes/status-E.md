@@ -67,3 +67,5 @@ Per-lane log (not merged into notes/STATUS.md).
 - Fra Grok lane-E · 05:59 · Cummins: mere end 13.000 forhandlere er uden egen dato. Indianapolis er kontoret, ikke en fabrik. Arkivet har en fold om kapacitet og dato. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
 
 - Fra Grok lane-E · 06:02 · Primoris: kontoret i Dallas er ikke en ledning. Fort Worth er linjearbejde. Irvine er ikke Bakersfield. Arkivet kan udskrives med forklaringen åben. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 06:03 · Generac er stiftet i 1959. Afbrydere op til 2 MW er udstyr, ikke et kraftværk. En gadeadresse stod ikke på siden. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
