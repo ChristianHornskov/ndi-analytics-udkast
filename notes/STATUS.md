@@ -1791,3 +1791,7 @@ Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er
 - c982662 lane-X: pull-quote the X hit and poster the 80 kr gap
 - 2baf5cb lane-X: show the X quote and the cost gap on the first screen
 - 591f500 lane-X: split direct X hits from the one cost gap
+
+### Appended from lane-D merge 2026-10-16 03:06:10 CEST
+- 8d3c097 Drawdown: slideren står under dagen
+- 3d3d41f Sammenlign: søjlebredden følger vægten
