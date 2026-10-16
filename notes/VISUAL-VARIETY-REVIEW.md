@@ -142,6 +142,10 @@ Kurven var cyan hele vejen. Den episode, den valgte dag ligger i, er nu gul oven
 
 Feltet under nul på år til dato var en grå plet. Det er nu `#e5b3ba`, svagt ved nul-linjen og stærkest i bunden af faldet. Samme farve som prik, udlæsning og tooltip. Hele perioden er stadig +104,8 % i cyan. År til dato slutter på +4,0 %. 20. feb. 2026 er −2,5 %, og tooltip rammer ikke sluttallet. PMINDIAKK har tom svg, ingen procent, og linket siger at drawdown vises efter 12 måneder. Ingen sidescroll ved 1100, 375 og 320. Ingen konsolfejl.
 
+### Update · tal på de dybe prikker · 2026-10-16 ~02:45 CEST
+
+Prikkerne til højre for 10 % under nul havde ingen tal. −16,7 %, −26,6 %, −26,8 % og −35,8 % står nu over prikken. −35,8 % og den åbne er gule. De to andre er lyse. Bunken til venstre er stadig uden tal. Tallene rammer ikke hinanden eller en prik, og de står inden for svg'en. Median er −2,8 %. Middel er −5,2 %. Ingen sidescroll ved 1280, 375 og 320. Ingen konsolfejl.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.

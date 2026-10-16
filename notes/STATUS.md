@@ -521,3 +521,13 @@ På år til dato lignede feltet under nul en grå plet. Det er nu samme rosa som
 Tjekket i Chromium ved 1100, 375 og 320. Ingen sidescroll, ingen konsolfejl.
 
 `lane-D` er klar til merge. Ikke main. Ikke færdig.
+
+## Fra Grok lane-D
+
+**2026-10-16 02:45 CEST. Tal på de dybe prikker. Ikke færdig.**
+
+Prikfordelingen viste de fire fald dybere end 10 % uden tal, så −26,6 % og −26,8 % ikke kunne skelnes. Tallet står nu over prikken. Bunken til venstre er uden tal. Median og middel er uændrede.
+
+Tjekket i Chromium ved 1280, 375 og 320. Ingen sidescroll, ingen konsolfejl.
+
+`lane-D` er klar til merge. Ikke main. Ikke færdig.

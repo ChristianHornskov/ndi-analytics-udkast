@@ -181,12 +181,18 @@
  const plotW = W - padL - padR;
  const xOf = v => padL + (Math.min(yMax, -v) / yMax) * plotW;
  const lanes = [-26, -16, -6, 4, 14];
+ const labs = [];
  const dots = eps.map((e, i) => {
  const isMax = Math.abs(e.dd - sum.max) < 0.001;
  const isOpen = !e.recoveredD;
  const cls = isMax ? 'dot max' : isOpen ? 'dot open' : 'dot';
  const cy = 64 + lanes[i % lanes.length];
- return `<circle class="${cls}" cx="${xOf(e.dd).toFixed(1)}" cy="${cy}" r="${isMax || isOpen ? 4 : 3.1}"><title>${fmtDate(e.peakD)} til ${fmtDate(e.troughD)}: ${fmtPct(e.dd)}</title></circle>`;
+ const cx = xOf(e.dd);
+ if (usedGate && e.dd <= -10) {
+ const lab = isMax ? 'dot-lab max' : isOpen ? 'dot-lab open' : 'dot-lab';
+ labs.push(`<text class="${lab}" x="${cx.toFixed(1)}" y="${(cy - 11).toFixed(1)}" text-anchor="middle">${fmtPct(e.dd, 1)}</text>`);
+ }
+ return `<circle class="${cls}" cx="${cx.toFixed(1)}" cy="${cy}" r="${isMax || isOpen ? 4 : 3.1}"><title>${fmtDate(e.peakD)} til ${fmtDate(e.troughD)}: ${fmtPct(e.dd)}</title></circle>`;
  });
  const medX = xOf(sum.median).toFixed(1);
  const meanX = xOf(sum.mean).toFixed(1);
@@ -202,14 +208,15 @@
  `<line class="mark-med" x1="${padL}" x2="${padL + 16}" y1="${axisY + 48}" y2="${axisY + 48}"/>`,
  `<text class="tick mark-key" x="${padL + 20}" y="${axisY + 51}" text-anchor="start">median ${fmtPct(sum.median)}</text>`,
  `<line class="mark-mean" x1="168" x2="184" y1="${axisY + 48}" y2="${axisY + 48}"/>`,
- `<text class="tick mark-key" x="188" y="${axisY + 51}" text-anchor="start">middel ${fmtPct(sum.mean)}</text>`
+ `<text class="tick mark-key" x="188" y="${axisY + 51}" text-anchor="start">middel ${fmtPct(sum.mean)}</text>`,
+ ...labs
  ];
  for (let g = 0; g <= yMax; g += 10) {
  const xx = (padL + (g / yMax) * plotW).toFixed(1);
  const gate = gateX && g === 10;
  parts.push(`<text class="tick${gate ? ' uw-gate' : ''}" x="${xx}" y="${axisY + 16}" text-anchor="middle">${g === 0 ? '0' : '-' + g}</text>`);
  }
- const desc = `${eps.length} episoder. Median ${fmtPct(sum.median)}. Middel ${fmtPct(sum.mean)}. Dybest ${fmtPct(sum.max)}.${gateX ? ' Stregen ved 10 % under nul er den samme grænse som på kurven. Prikker til højre for den står i listen.' : ''}`;
+ const desc = `${eps.length} episoder. Median ${fmtPct(sum.median)}. Middel ${fmtPct(sum.mean)}. Dybest ${fmtPct(sum.max)}.${gateX ? ' Stregen ved 10 % under nul er den samme grænse som på kurven. Prikker til højre for den har tal og står i listen.' : ''}`;
  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-labelledby="dp-title dp-desc"><title id="dp-title">Fordeling af fald</title><desc id="dp-desc">${desc}</desc>${parts.join('')}</svg>`;
  };
 
@@ -245,7 +252,7 @@
  const anno = open
  ? `Lige nu, pr. ${fmtDate(rows[rows.length - 1].d)}, ligger serien ${fmtPct(nowU)} under toppen fra ${fmtDate(open.peakD)}. Bund i den episode var ${fmtPct(open.dd)} den ${fmtDate(open.troughD)}.`
  : '';
- const depthCap = `Hver prik er ét fald fra top til bund. ${eps.length} i alt. Gul prik er det dybeste fald.${open ? ' Hul gul prik er den åbne episode.' : ''} Median og middel står under aksen.${usedGate ? ' Stregen ved 10 % under nul er den samme grænse som på kurven. Prikker til højre for den står i listen.' : ''}`;
+ const depthCap = `Hver prik er ét fald fra top til bund. ${eps.length} i alt. Gul prik er det dybeste fald.${open ? ' Hul gul prik er den åbne episode.' : ''} Median og middel står under aksen.${usedGate ? ' Stregen ved 10 % under nul er den samme grænse som på kurven. Prikker til højre for den har tal og står i listen.' : ''}`;
 
  main.innerHTML = `
  <a class="back" href="index.html?view=fonden&fund=${fundId}">← Fonden</a>
