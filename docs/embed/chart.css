@@ -150,8 +150,9 @@ b, strong { font-weight: 700; }
   box-shadow: inset 0 0 0 1px #8ba8b11a;
 }
 
-.class-card.selected { background: var(--selected); }
+.class-card.selected { background: var(--selected); border-top-color: var(--yellow); }
 .class-card:hover { border-color: var(--cyan); background: #203941; }
+.class-card.selected:hover { border-top-color: var(--yellow); }
 .class-mark { position: static; width: 88px; height: 28px; grid-column: 2; grid-row: 1 / span 2; justify-self: end; pointer-events: none; }
 .class-title { grid-column: 1; grid-row: 1; }
 .class-subtitle { grid-column: 1; grid-row: 2; }

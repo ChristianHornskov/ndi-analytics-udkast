@@ -585,6 +585,7 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
 .cmp-card dd{margin:0;text-align:right;color:var(--text);min-width:0}
 .cmp-card dd small{color:var(--faint)}
 .cmp-card .cmp-from{display:block}
+.cmp-card .outline-btn{min-height:44px}
 .cmp-empty{color:var(--faint);font-weight:500}
 .tl{list-style:none;padding:0;margin:4px 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;position:relative}
 .tl li{position:relative;padding-top:18px;font-size:13px;color:var(--muted);line-height:1.45}

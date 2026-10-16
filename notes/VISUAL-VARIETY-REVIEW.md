@@ -252,6 +252,10 @@ På 1100 var advarslen lige så høj som de fire kort, 364 px, med én sætning 
 
 Temasøjlerne havde farve, men ikke navn. Hver række siger nu PMINDI i brand og AKK i cyan, 52 px, før søjlen. Teksten rammer ikke søjlen. På 320 er Quantum 7 px mod 6 px. Tallene er 1,1 % og 1,0 %. På 1280 er de 49 px og 44 px. Platforme har stadig gul kant, 17,2 % og 15,3 %. Skærmlæseren siger PMINDIAKK på AKK-rækken. AKK-kortet har ca. 2,85 % og Ingen kurs. Ingen sidescroll ved 1280, 390 og 320. Ingen konsolfejl.
 
+### Update · gul overkant og 44 px · 2026-10-16 ~04:37 CEST
+
+Det valgte klassekort i embed har gul overkant, `#f5ee9e`. Et klik flytter kanten fra PMINDI til PMINDIAKK. PMINDIAKK har tom svg og ingen procent. På sammenlign er «Se PMINDI» og «Se PMINDIAKK» 44 px ved 1280, 768 og 390. Ingen sidescroll. Ingen konsolfejl.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.
