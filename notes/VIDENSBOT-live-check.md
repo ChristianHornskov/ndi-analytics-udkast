@@ -228,3 +228,7 @@ Sider: ideer, kort, om-data, invester, risici, ndi-perspektiv, laer/*.
 ## 06:04 CEST lane-C · ideer `#h-cs` «Hvor tjener teknologien pengene?»
 - Tal til efterprøvning før live: Amazon 10-K for 2024: net sales ca. 638,0 mia. USD, heraf AWS ca. 107,6 mia. (ca. 17 %). Operating income ca. 68,6 mia. USD, heraf AWS ca. 39,8 mia. (ca. 58 %).
 - Vidensbot-linje: «værdikæde frem for sektor». Pengene lander i et led (cloud), ikke i det selskabsnavn, folk kender. Ingen handelssprog. Amazon er ikke i beholdningen, og det står ved figuren.
+
+## 06:17 CEST lane-C · tidslinjens årstal selvtjekket
+- Claude har tjekket `laer/tidslinje.html` ud fra egen viden (ikke opslag): 1971 Intel 4004 · 1987 TSMC · 1999 GeForce 256 · 2006 AWS (S3/EC2) · 2007 CUDA (annonceret nov. 2006, frigivet 2007) · 2012 AlexNet · 2017 transformeren («Attention Is All You Need») · 2019 EUV i masseproduktion (TSMC N7+) · 2022 ChatGPT (30. nov.). Ingen fejl fundet.
+- 2023–2025 er tendenser, ikke enkeltbegivenheder («ikke chips / plads / strøm nok»). De bør læses af NDI, så de passer med ugebrevenes formuleringer.

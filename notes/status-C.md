@@ -16,3 +16,4 @@ Per-lane log (not merged into notes/STATUS.md).
 - Fra Claude lane-C · 06:15 · Slutkontrol: smoke.mjs fail 0, precheck OK, egne sider 0 JS-fejl/0 overflow (375+1280). lane-C klar til merge.
 - Fra Claude lane-C · 06:16 · Ordliste 151: resultathonorar (bruges 6× på omkostninger/fakta/sammenlign uden forklaring). Klar til merge.
 - Fra Claude lane-C · 06:16 · ideer: indholdsfortegnelsen sagde «16 billeder», men listede 18. Nu tæller siden selv (statisk fallback 18).
+- Fra Claude lane-C · 06:17 · Vidensbot-check: tidslinjens 12 årstal selvtjekket, ingen fejl. 2023–25 er tendenser til NDI-læsning.
