@@ -1905,19 +1905,28 @@
   "US80401C1009": {
    "name": "Satellogic",
    "theme": "space",
-   "summary": "Driver satellitter, der tager billeder af Jorden. Satellitterne hedder NewSat. Forsiden sætter fuld drift af Merlin til andet halvår 2027.",
-   "watch": "Satellitternes drift og kundernes brug af billederne.",
-   "source": "https://satellogic.com/",
-   "products": "Billeder fra satellitterne NewSat. Merlin er ikke i fuld drift i denne tekst.",
-   "customers": "Offentlige og private kunder, der skal se Jorden ovenfra.",
-   "role": "Satellittjeneste, ikke en raket.",
+   "summary": "Tager billeder af Jorden med satellitterne NewSat. Kortet siger Charlotte, og gaden er i Davidson. Tidslinjen skriver en fabrik færdig i november 2015 uden by. Merlin.01 blev sendt op 1. oktober 2026 med SpaceX. Fuld drift er stadig andet halvår 2027. Selskabet sender ikke selv raketten op.",
+   "watch": "Om Merlin er i fuld drift. Opsendelsen 1. oktober 2026 er efter beholdningen og er ikke fuld drift.",
+   "source": "https://satellogic.com/company/contact-us/",
+   "products": "NewSat er billedsatellitter. Merlin.01 er en opsendelse 1. oktober 2026. Fuld drift af Merlin er sat til andet halvår 2027.",
+   "customers": "Tidslinjen nævner en kommerciel kontrakt i oktober 2018 uden kundenavn.",
+   "role": "Davidson er ikke Charlotte. Fabrikken i 2015 har ingen by. Merlin.01 er ikke fuld drift.",
    "narrative": [
-    "Satellogic driver satellitter, der tager billeder af Jorden. Satellitterne hedder NewSat. Forsiden sætter fuld drift af Merlin til andet halvår 2027.",
-    "Andet halvår 2027 ligger efter beholdningen pr. 1. juni 2026. Merlin er ikke beskrevet som en tjeneste i fuld drift. Selskabet opsender ikke selv raketterne i denne beskrivelse."
+    "Kontaktsiden, læst 16. oktober 2026, skriver Charlotte og gaden 210 Delburg St. i Davidson i North Carolina. Davidson er ikke Charlotte. Det er et kontor, ikke en satellit. Buenos Aires er 1. sal på Scalabrini Ortiz 3333. Córdoba er 5. sal på Av. Hipólito Yrigoyen 146. Montevideo er suite 324 i Zonamerica. De er kontorer.",
+    "Tidslinjen på om-siden daterer stiftelsen til juli 2010. Den skriver, at en fabrik stod færdig i november 2015, og den nævner ikke byen. Kontorerne er ikke den fabrik. Samme tidslinje skriver, at selskabet blev noteret på Nasdaq den 26. januar 2022 under SATL. Det er en notering, ikke en satellit. Ordet first er ikke taget med.",
+    "Tidslinjen skriver, at Merlin.01, NewSat 56, 57 og 64 blev sendt op 1. oktober 2026 med SpaceX fra Vandenberg. Datafeltet siger 2. oktober. Begge datoer ligger efter beholdningen pr. 1. juni 2026. Forsiden sætter fuld drift af Merlin til andet halvår 2027. En opsendelse er ikke fuld drift. NewSat 53 og 54 er skrevet som 30. marts 2026 i sætningen og 31. marts i datafeltet. Det ligger før beholdningen. Selskabet sender ikke selv raketten op."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets side",
+     "label": "Kontakt",
+     "url": "https://satellogic.com/company/contact-us/"
+    },
+    {
+     "label": "Om selskabet",
+     "url": "https://satellogic.com/company/about-satellogic/"
+    },
+    {
+     "label": "Forsiden",
      "url": "https://satellogic.com/"
     }
    ]

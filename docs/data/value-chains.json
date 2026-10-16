@@ -1899,7 +1899,7 @@
           "id": "satcom",
           "icon": "📡",
           "label": "Satellitkommunikation",
-          "blurb": "Satellitter, der er i kredsløb eller under bygning. Nogle sender tale og data, nogle tager billeder af Jorden, og nogle opfanger radiosignaler. Hertil kommer selskaber, der bygger selve satellitkroppen, som udstyret sættes på. En satellit i drift kan sælge data eller forbindelse i årevis, så længe den virker. Planet skriver kontor på 4. sal på 645 Harrison Street i San Francisco. Kortet siger Washington D.C., og gaden ligger i Arlington. Fabrikken i Berlin er planlagt til efteråret 2026 og er ikke i drift. Selskabet opsender ikke selv.",
+          "blurb": "Satellitter, der er i kredsløb eller under bygning. Nogle sender tale og data, nogle tager billeder af Jorden, og nogle opfanger radiosignaler. Hertil kommer selskaber, der bygger selve satellitkroppen, som udstyret sættes på. En satellit i drift kan sælge data eller forbindelse i årevis, så længe den virker. Planet skriver kontor på 4. sal på 645 Harrison Street i San Francisco. Kortet siger Washington D.C., og gaden ligger i Arlington. Fabrikken i Berlin er planlagt til efteråret 2026 og er ikke i drift. Selskabet opsender ikke selv. Satellogic skriver Charlotte på kortet, og gaden er i Davidson. Tidslinjen skriver en fabrik færdig i november 2015 uden by. Merlin.01 blev sendt op 1. oktober 2026 med SpaceX, efter beholdningen. Fuld drift er stadig andet halvår 2027.",
           "ndi": "Starlink er i en AI-selskabsprofil beskrevet som en løbende tjeneste, ikke kun en opsendelse. Det er et udkast, ikke NDI's færdige tekst. SpaceX indgår ikke i beholdningen pr. 1. juni 2026. Spire, Iridium og BlackSky indgår i beholdningen pr. 1. juni 2026.",
           "themes": [
             "space"
@@ -1945,7 +1945,7 @@
               "w": 0.17,
               "sym": "SATL",
               "forslag": false,
-              "role": "Billedsatellitter. Merlin er sat til fuld drift i andet halvår 2027."
+              "role": "Davidson er ikke Charlotte. Fabrikken i 2015 har ingen by. Merlin.01 i oktober 2026 er ikke fuld drift."
             },
             {
               "isin": "US4202011056",
@@ -2003,7 +2003,7 @@
             "Planet Labs: kontoret ligger på 645 Harrison Street, 4. sal, i San Francisco. Det er ikke en satellit. Kortet siger Washington D.C., og adressen er i Arlington. Artiklen 21. september 2026 skriver, at fabrikken i Berlin er planlagt til efteråret. Den er ikke i drift. Selskabet opsender ikke selv.",
             "BlackSky: driver satellitter i lav bane og sælger billeder og analyse. Den femte Gen-3 tog sine første billeder under 20 timer efter opsendelsen (meddelt 14. september 2026, efter beholdningen). Ikke alle planlagte Gen-3 er i kredsløb.",
             "Hawkeye 360: over 30 satellitter i kredsløb ifølge prospektet af 6. maj 2026. Tre satellitter flyver sammen for at finde ud af, hvor et radiosignal kommer fra.",
-            "Satellogic: fuld drift af Merlin-satellitterne er sat til andet halvår 2027. Det er en plan.",
+            "Satellogic: kortet siger Charlotte, og gaden er 210 Delburg St. i Davidson. Det er et kontor. Tidslinjen skriver en fabrik færdig i november 2015 uden by. Merlin.01 blev sendt op med SpaceX 1. oktober 2026, efter beholdningen. Fuld drift er stadig andet halvår 2027. Selskabet sender ikke selv raketten op.",
             "MDA Space: Chorus er tre satellitter, der tager billeder af Jorden. RADARSAT-2 er allerede i kredsløb. De to nye er sat til opsendelse sent i 2026 (meddelt 16. september 2026, efter beholdningen). Aurora Black blev præsenteret 10. september 2026 og er ikke i drift.",
             "York Space Systems: bygger satellitkroppe i tre størrelser. 21 satellitter er sendt op til det amerikanske forsvars første hold (Tranche 1). York planlægger opsendelserne, men sender ikke selv raketten op.",
             "Rocket Lab: bygger og tester rumfartøjer i Long Beach i Californien. CAPSTONE fløj til en bane om Månen i 2022. Selskabet er valgt til 17 satellitkroppe til Globalstar og 18 satellitter til det amerikanske forsvar. Ingen af dem er skrevet som opsendt.",

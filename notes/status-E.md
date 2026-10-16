@@ -77,3 +77,5 @@ Per-lane log (not merged into notes/STATUS.md).
 - Fra Grok lane-E · 06:16 · Karman: postnummer 92649 er ikke en gade. Walker blev købt 28. august 2026, efter beholdningen. MK 54 er en øvelsesdel uden sprængladning. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
 
 - Fra Grok lane-E · 06:19 · Planet: 4. sal på Harrison Street er et kontor. Arlington er ikke Washington D.C. Berlin-fabrikken er planlagt til efteråret 2026 og er ikke i drift. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 06:22 · Satellogic: Davidson er ikke Charlotte. Fabrikken i november 2015 har ingen by. Merlin.01 1. oktober 2026 er ikke fuld drift i 2027. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
