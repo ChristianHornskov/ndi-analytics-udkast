@@ -1519,7 +1519,7 @@ Main er ikke flyttet siden c61. Live md5 = main på 14 sider (index, vaerdikaede
 
 Rettelse: c62-headeren "08:10" var forkert. Den blev skrevet før 08:08.
 
-- Live md5 = main på 11 sider (index, vaerdikaeder, drawdown, risici, selskab, temaer, invester, om-data, ndi-paa-x, sammenlign). Live-sweep på 24 URL'er (cache-bust) gav 0 fejl og 0 overflow. Tab- og historisk-advarsel findes på alle 24. ✅
+- Live md5 = main på 10 sider (index, vaerdikaeder, drawdown, risici, selskab, temaer, invester, om-data, ndi-paa-x, sammenlign). Live-sweep på 24 URL'er (cache-bust) gav 0 fejl og 0 overflow. Tab- og historisk-advarsel findes på alle 24. ✅
 - "overvægt"-hits (vaerdikaeder, risici, temaer, tema, laer) er kun negationer eller pædagogiske. ✅
 - M1-indholdet er uændret i `docs/data/x-posts.json` ("BREAKING: Nvidia is in talks to backstop $250 BI…").
 
