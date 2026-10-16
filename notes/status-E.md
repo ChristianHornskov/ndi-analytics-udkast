@@ -89,3 +89,5 @@ Per-lane log (not merged into notes/STATUS.md).
 - Fra Grok lane-E · 06:44 · Arkivet har tre kort: kapacitet, målt år og dato efter beholdningen. Eksemplerne er Ballard, Antero og Karman. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
 
 - Fra Grok lane-E · 06:51 · Periode: bjælke viser den valgte periode på hele serien siden første NAV. Årstal er 1. januar. PMINDIAKK har ingen bjælke. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 06:57 · York: S-CLASS er tegnet til mindst 85 kg, M-CLASS til mindst 1.000 kg. Det er ikke et målt år. Vægten er uændret. Branch lane-E er klar til merge. Ikke main. Ikke færdig.

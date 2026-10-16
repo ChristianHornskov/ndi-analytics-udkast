@@ -1815,15 +1815,15 @@
   "US9870841007": {
    "name": "York Space Systems",
    "theme": "space",
-   "summary": "Bygger satellitplatformene S-CLASS, LX-CLASS og M-CLASS. Årsrapporten for 2025 skriver, at 21 satellitter er opsendt til Tranche 1. Selskabet sender ikke selv raketten op.",
+   "summary": "Bygger satellitplatformene S-CLASS, LX-CLASS og M-CLASS. Platformsiden sætter S-CLASS til mindst 85 kg nyttelast og M-CLASS til mindst 1.000 kg. Det er en tegning, ikke et målt år. Årsrapporten for 2025 skriver, at 21 satellitter er opsendt til Tranche 1. Selskabet sender ikke selv raketten op.",
    "watch": "Om de næste trancher bliver opsendt. Kapacitetstallet er ikke et målt år.",
    "source": "https://www.sec.gov/Archives/edgar/data/2086587/000162828026019923/yorkspacesystemsinc10-k.htm",
-   "products": "S-CLASS, LX-CLASS og M-CLASS. Ikke en raket.",
+   "products": "S-CLASS er sat til mindst 85 kg nyttelast og 500 W spids, som kan udvides til 1 kW. LX-CLASS er sat til mindst 300 kg og 1,5 kW spids. M-CLASS er sat til mindst 1.000 kg og 8 kW spids. Det er en tegning, ikke et målt år. Ikke en raket.",
    "customers": "SDA stod for næsten hele omsætningen og ordrebeholdningen i 2025. Beløb er ikke taget med.",
    "role": "Satellitplatforme og kontrol fra jorden. Ikke en opsender og ikke et datacenter i rummet.",
    "narrative": [
     "York Space Systems er stiftet i 2012 af Dirk Wallinger og noteret på New York Stock Exchange under YSS. Hovedkontoret ligger på 6060 S. Willow Drive i Greenwood Village i Colorado. Rapporten skriver, at anlæggene ligger i Denver-området, og at de er lejet. MSU Denver er elektronik. Harbinger er kontrolcenter for satellitter. Potomac og Wazee er produktion. Greenwood Village bruges også til samling og test. Der er produktion i Cape Town. Andre kontorer ligger i Austin, Laurel, Washington D.C., Traverse City og Colorado Springs. Potomac er sat til 60.000 kvadratfod og åbnede i august 2023. Selskabet mener, at det kan fremstille og teste over 1.000 satellitter om året. Det er en kapacitet, ikke et målt år.",
-    "Årsrapporten for 2025 skriver, at Tranche 0 blev leveret i 2022, og at 21 satellitter er opsendt til Tranche 1. En dato for de 21 står ikke i den sætning. Selskabet var prime på SDA-kontrakter for tranche 0, 1 og 2. SDA stod for næsten hele omsætningen og ordrebeholdningen i 2025. Pr. 31. december 2025 var der 710 fuldtidsansatte. Orbion blev købt i marts 2026 og er fremdrift. ATLAS blev købt i august 2025, og rapporten skriver mere end 45 jordantenner i den forbindelse. Begge datoer ligger før beholdningen. Selskabet koordinerer opsendelse. Det sender ikke selv raketten op. Harbinger er på jorden, ikke et datacenter i rummet. Ordene leader, most og before competitors er ikke taget med. Hjemmesiden, læst 16. oktober 2026, havde slogans og titlen Denver. Gaden står i årsrapporten."
+    "Årsrapporten for 2025 skriver, at Tranche 0 blev leveret i 2022, og at 21 satellitter er opsendt til Tranche 1. En dato for de 21 står ikke i den sætning. Selskabet var prime på SDA-kontrakter for tranche 0, 1 og 2. SDA stod for næsten hele omsætningen og ordrebeholdningen i 2025. Pr. 31. december 2025 var der 710 fuldtidsansatte. Orbion blev købt i marts 2026 og er fremdrift. ATLAS blev købt i august 2025, og rapporten skriver mere end 45 jordantenner i den forbindelse. Begge datoer ligger før beholdningen. Selskabet koordinerer opsendelse. Det sender ikke selv raketten op. Harbinger er på jorden, ikke et datacenter i rummet. Ordene leader, most og before competitors er ikke taget med. Hjemmesiden, læst 16. oktober 2026, havde slogans og titlen Denver. Gaden står i årsrapporten. Platformsiden samme dag sætter S-CLASS til mindst 85 kg nyttelast og 500 W spids, som kan udvides til 1 kW. LX-CLASS er sat til mindst 300 kg og 1,5 kW spids. M-CLASS er sat til mindst 1.000 kg og 8 kW spids. Målene er det, platformen er tegnet til. De er ikke et målt år. Ordene flight proven, most stringent og half the cost er ikke taget med."
    ],
    "narrativeSources": [
     {
@@ -1833,6 +1833,10 @@
     {
      "label": "Selskabets side",
      "url": "https://www.yorkspacesystems.com/"
+    },
+    {
+     "label": "Platforme",
+     "url": "https://www.yorkspacesystems.com/platforms"
     }
    ]
   },
