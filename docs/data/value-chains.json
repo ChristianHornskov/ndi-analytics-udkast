@@ -185,7 +185,16 @@
             "level": "dam",
             "t": "Mads' første flaskehals i AI-udbygningen",
             "src": "NDI-indlæg 30. marts 2026"
-          }
+          },
+          "placed": [
+            {
+              "isin": "US2310211063",
+              "name": "Cummins",
+              "w": 0.29,
+              "sym": "CMI",
+              "theme": "physical"
+            }
+          ]
         },
         {
           "id": "datacenter",
@@ -252,7 +261,93 @@
             "level": "dam",
             "t": "Mange faktorer kan skabe flaskehalse her, fra byggeri til tilladelser",
             "src": "NDI-indlæg 30. marts 2026"
-          }
+          },
+          "placed": [
+            {
+              "isin": "US17253J1060",
+              "name": "Cipher Mining Inc",
+              "w": 0.78,
+              "sym": "CIFR",
+              "theme": "compute"
+            },
+            {
+              "isin": "AU0000185993",
+              "name": "Iris Energy",
+              "w": 0.49,
+              "sym": "IREN",
+              "theme": "energy"
+            },
+            {
+              "isin": "US46982L1089",
+              "name": "Jacobs Solutions",
+              "w": 0.43,
+              "sym": "J",
+              "theme": "physical"
+            },
+            {
+              "isin": "US3149111086",
+              "name": "Fermi Inc",
+              "w": 0.31,
+              "sym": "FRMI",
+              "theme": "andet"
+            },
+            {
+              "isin": "US1999081045",
+              "name": "Comfort Systems Usa Inc",
+              "w": 0.3,
+              "sym": "FIX",
+              "theme": "physical"
+            },
+            {
+              "isin": "KYG114481008",
+              "name": "Bitdeer Technologies Group",
+              "w": 0.17,
+              "sym": "BTDR",
+              "theme": "software"
+            },
+            {
+              "isin": "US88080T1043",
+              "name": "Terawulf Inc",
+              "w": 0.13,
+              "sym": "WULF",
+              "theme": "platforms"
+            },
+            {
+              "isin": "US8592411016",
+              "name": "Sterling Infrastructure Inc",
+              "w": 0.13,
+              "sym": "STRL",
+              "theme": "physical"
+            },
+            {
+              "isin": "KYG961151035",
+              "name": "Whitefiber Inc",
+              "w": 0.13,
+              "sym": "WYFI",
+              "theme": "software"
+            },
+            {
+              "isin": "US18452B2097",
+              "name": "Cleanspark",
+              "w": 0.12,
+              "sym": "CLSK",
+              "theme": "platforms"
+            },
+            {
+              "isin": "US21874A1060",
+              "name": "Core Scientific",
+              "w": 0.1,
+              "sym": "CORZ",
+              "theme": "software"
+            },
+            {
+              "isin": "US0381692070",
+              "name": "Applied Digital Corp",
+              "w": 0.07,
+              "sym": "APLD",
+              "theme": "software"
+            }
+          ]
         },
         {
           "id": "chipdesign",
@@ -317,7 +412,86 @@
             "level": "dam",
             "t": "Halvledere er tredje flaskehals, med fokus på XPU'er og CPU'er",
             "src": "NDI-indlæg 30. marts 2026"
-          }
+          },
+          "placed": [
+            {
+              "isin": "US82982T1060",
+              "name": "Sitime Corp",
+              "w": 1.15,
+              "sym": "SITM",
+              "theme": "chips"
+            },
+            {
+              "isin": "US67066G1040",
+              "name": "Nvidia",
+              "w": 0.75,
+              "sym": "NVDA",
+              "theme": "compute"
+            },
+            {
+              "isin": "US15675D1037",
+              "name": "Cerebras Systems",
+              "w": 0.48,
+              "sym": "CBRS",
+              "theme": "compute"
+            },
+            {
+              "isin": "US4581401001",
+              "name": "Intel",
+              "w": 0.33,
+              "sym": "INTC",
+              "theme": "chips"
+            },
+            {
+              "isin": "US6098391054",
+              "name": "Monolithic Power",
+              "w": 0.21,
+              "sym": "MPWR",
+              "theme": "chips"
+            },
+            {
+              "isin": "US0929151076",
+              "name": "Blaize Holdings Inc",
+              "w": 0.18,
+              "sym": "BZAI",
+              "theme": "software"
+            },
+            {
+              "isin": "US5184151042",
+              "name": "Lattice Semicond",
+              "w": 0.16,
+              "sym": "LSCC",
+              "theme": "chips"
+            },
+            {
+              "isin": "US8716071076",
+              "name": "Synopsys",
+              "w": 0.14,
+              "sym": "SNPS",
+              "theme": "software"
+            },
+            {
+              "isin": "US1273871087",
+              "name": "Cadence Design",
+              "w": 0.09,
+              "sym": "CDNS",
+              "theme": "software"
+            },
+            {
+              "isin": "US0079031078",
+              "name": "Advanced Micro D",
+              "w": 0.03,
+              "sym": "AMD",
+              "theme": "compute"
+            },
+            {
+              "isin": "US0420682058",
+              "name": "Arm Holdings ADR",
+              "w": 0.0,
+              "sym": "ARM",
+              "theme": "chips"
+            }
+          ]
         },
         {
           "id": "equipment",
@@ -382,7 +556,227 @@
             "level": "group",
             "t": "Hører til halvlederne. NDI har ikke skrevet om pres i netop dette led",
             "src": "tolkning"
-          }
+          },
+          "placed": [
+            {
+              "isin": "FR0013227113",
+              "name": "Soitec",
+              "w": 0.85,
+              "sym": "SOI.PA",
+              "theme": "compute"
+            },
+            {
+              "isin": "DE0006450000",
+              "name": "Lpkf Laser & Electronics Se",
+              "w": 0.62,
+              "sym": "LPK.DE",
+              "theme": "physical"
+            },
+            {
+              "isin": "DE000A1K0235",
+              "name": "SUESS MicroTec N",
+              "w": 0.5,
+              "sym": "SMHN.DE",
+              "theme": "chips"
+            },
+            {
+              "isin": "US3463751087",
+              "name": "Formfactor Inc",
+              "w": 0.44,
+              "sym": "FORM",
+              "theme": "chips"
+            },
+            {
+              "isin": "GB0009619924",
+              "name": "Iqe Plc",
+              "w": 0.42,
+              "sym": "IQE.L",
+              "theme": "chips"
+            },
+            {
+              "isin": "US00246W1036",
+              "name": "Axt Inc",
+              "w": 0.36,
+              "sym": "AXTI",
+              "theme": "chips"
+            },
+            {
+              "isin": "GB0006650450",
+              "name": "Oxford Instruments Plc",
+              "w": 0.33,
+              "sym": "OXIG.L",
+              "theme": "connect",
+              "partial": true
+            },
+            {
+              "isin": "DE000A0WMPJ6",
+              "name": "Aixtron N",
+              "w": 0.32,
+              "sym": "AIXA.DE",
+              "theme": "chips"
+            },
+            {
+              "isin": "JP3122400009",
+              "name": "Advantest Corp",
+              "w": 0.31,
+              "sym": "6857.T",
+              "theme": "chips"
+            },
+            {
+              "isin": "KYG0535Q1331",
+              "name": "Asmpt Ltd",
+              "w": 0.29,
+              "sym": "0522.HK",
+              "theme": "chips"
+            },
+            {
+              "isin": "JP3293330001",
+              "name": "Kokusai Electric Corp",
+              "w": 0.28,
+              "sym": "6525.T",
+              "theme": "chips"
+            },
+            {
+              "isin": "US00760J1088",
+              "name": "Aehr Test System",
+              "w": 0.26,
+              "sym": "AEHR",
+              "theme": "chips"
+            },
+            {
+              "isin": "JP3979200007",
+              "name": "Lasertec",
+              "w": 0.24,
+              "sym": "6920.T",
+              "theme": "chips"
+            },
+            {
+              "isin": "USN070592100",
+              "name": "ASML Hold NY Reg",
+              "w": 0.22,
+              "sym": "ASML",
+              "theme": "chips"
+            },
+            {
+              "isin": "US6833441057",
+              "name": "Onto Innovation",
+              "w": 0.21,
+              "sym": "ONTO",
+              "theme": "chips"
+            },
+            {
+              "isin": "IL0010952641",
+              "name": "Camtek Ltd",
+              "w": 0.2,
+              "sym": "CAMT",
+              "theme": "chips"
+            },
+            {
+              "isin": "NL0012866412",
+              "name": "Besi Br",
+              "w": 0.19,
+              "sym": "BESI.AS",
+              "theme": "chips"
+            },
+            {
+              "isin": "NL0000334118",
+              "name": "Asm Int",
+              "w": 0.19,
+              "sym": "ASM.AS",
+              "theme": "chips"
+            },
+            {
+              "isin": "US5012421013",
+              "name": "Kulicke & Soffa Industries",
+              "w": 0.18,
+              "sym": "KLIC",
+              "theme": "chips"
+            },
+            {
+              "isin": "US83443Q1031",
+              "name": "Solstice Adv Materials Inc",
+              "w": 0.18,
+              "sym": "SOLS",
+              "theme": "connect"
+            },
+            {
+              "isin": "JP3571400005",
+              "name": "Tokyo Electron",
+              "w": 0.17,
+              "sym": "8035.T",
+              "theme": "chips"
+            },
+            {
+              "isin": "US1925761066",
+              "name": "Cohu",
+              "w": 0.15,
+              "sym": "COHU",
+              "theme": "chips"
+            },
+            {
+              "isin": "IL0010845571",
+              "name": "Nova Ltd",
+              "w": 0.13,
+              "sym": "NVMI",
+              "theme": "chips"
+            },
+            {
+              "isin": "US0545402085",
+              "name": "Axcelis Technologies Inc",
+              "w": 0.1,
+              "sym": "ACLS",
+              "theme": "chips"
+            },
+            {
+              "isin": "US4824801009",
+              "name": "Kla",
+              "w": 0.09,
+              "sym": "KLAC",
+              "theme": "chips"
+            },
+            {
+              "isin": "US29362U1043",
+              "name": "Entegris Inc",
+              "w": 0.09,
+              "sym": "ENTG",
+              "theme": "chips"
+            },
+            {
+              "isin": "US55306N1046",
+              "name": "Mks Instruments Inc",
+              "w": 0.07,
+              "sym": "MKSI",
+              "theme": "connect"
+            },
+            {
+              "isin": "US8807701029",
+              "name": "Teradyne",
+              "w": 0.06,
+              "sym": "TER",
+              "theme": "chips"
+            },
+            {
+              "isin": "US0382221051",
+              "name": "Applied Material",
+              "w": 0.04,
+              "sym": "AMAT",
+              "theme": "chips"
+            },
+            {
+              "isin": "US00108J1097",
+              "name": "ACM Research",
+              "w": 0.04,
+              "sym": "ACMR",
+              "theme": "chips"
+            },
+            {
+              "isin": "US5128073062",
+              "name": "Lam Research Corp",
+              "w": 0.03,
+              "sym": "LRCX",
+              "theme": "chips"
+            }
+          ]
         },
         {
           "id": "foundry",
@@ -448,7 +842,58 @@
             "level": "group",
             "t": "Hører til halvlederne. NDI har ikke skrevet om pres i netop dette led",
             "src": "tolkning"
-          }
+          },
+          "placed": [
+            {
+              "isin": "US7960508882",
+              "name": "Samsung Electronics",
+              "w": 0.61,
+              "sym": "SMSN.IL",
+              "theme": "compute"
+            },
+            {
+              "isin": "KYG393871085",
+              "name": "GlobalFoundries",
+              "w": 0.57,
+              "sym": "GFS",
+              "theme": "chips"
+            },
+            {
+              "isin": "IL0010823792",
+              "name": "Tower Semicon In",
+              "w": 0.55,
+              "sym": "TSEM",
+              "theme": "compute"
+            },
+            {
+              "isin": "US4581401001",
+              "name": "Intel",
+              "w": 0.33,
+              "sym": "INTC",
+              "theme": "chips"
+            },
+            {
+              "isin": "US9108734057",
+              "name": "United Microelectron-Sp Adr",
+              "w": 0.3,
+              "sym": "UMC",
+              "theme": "chips"
+            },
+            {
+              "isin": "US0316521006",
+              "name": "Amkor Technology",
+              "w": 0.18,
+              "sym": "AMKR",
+              "theme": "chips"
+            },
+            {
+              "isin": "US8740391003",
+              "name": "Taiwan Semi Sp ADR",
+              "w": 0.13,
+              "sym": "TSM",
+              "theme": "chips"
+            }
+          ]
         },
         {
           "id": "memory",
@@ -514,7 +959,72 @@
             "level": "early",
             "t": "Et af de led, hvor NDI allerede ser pres, sammen med optik",
             "src": "NDI-indlæg 30. marts 2026"
-          }
+          },
+          "placed": [
+            {
+              "isin": "US78392B1070",
+              "name": "SK Hynix",
+              "w": 0.65,
+              "sym": "HY9H.F",
+              "theme": "compute"
+            },
+            {
+              "isin": "US7960508882",
+              "name": "Samsung Electronics",
+              "w": 0.61,
+              "sym": "SMSN.IL",
+              "theme": "compute"
+            },
+            {
+              "isin": "US7509171069",
+              "name": "Rambus",
+              "w": 0.37,
+              "sym": "RMBS",
+              "theme": "chips"
+            },
+            {
+              "isin": "US5951121038",
+              "name": "Micron Technology",
+              "w": 0.31,
+              "sym": "MU",
+              "theme": "compute"
+            },
+            {
+              "isin": "US80004C2008",
+              "name": "Sandisk Corp",
+              "w": 0.28,
+              "sym": "SNDK",
+              "theme": "compute"
+            },
+            {
+              "isin": "JP3236330001",
+              "name": "Kioxia Holdings",
+              "w": 0.28,
+              "sym": "285A.T",
+              "theme": "compute"
+            },
+            {
+              "isin": "US9581021055",
+              "name": "Western Digital",
+              "w": 0.26,
+              "sym": "WDC",
+              "theme": "compute"
+            },
+            {
+              "isin": "IE00BKVD2N49",
+              "name": "Seagate Hldgs",
+              "w": 0.25,
+              "sym": "STX",
+              "theme": "compute"
+            },
+            {
+              "isin": "US82706C1080",
+              "name": "Silicon Mot Sp ADR",
+              "w": 0.18,
+              "sym": "SIMO",
+              "theme": "chips"
+            }
+          ]
         },
         {
           "id": "optics",
@@ -580,7 +1090,149 @@
             "level": "early",
             "t": "Et af de led, hvor NDI allerede ser pres, sammen med hukommelse",
             "src": "NDI-indlæg 30. marts 2026"
-          }
+          },
+          "placed": [
+            {
+              "isin": "US55024U1097",
+              "name": "Lumentum Hldngs",
+              "w": 1.17,
+              "sym": "LITE",
+              "theme": "connect"
+            },
+            {
+              "isin": "CA73044W3021",
+              "name": "Poet Technologies Inc",
+              "w": 0.96,
+              "sym": "POET",
+              "theme": "chips"
+            },
+            {
+              "isin": "SE0003917798",
+              "name": "Sivers Semiconductors",
+              "w": 0.94,
+              "sym": "SIVE.ST",
+              "theme": "connect"
+            },
+            {
+              "isin": "US03823U1025",
+              "name": "Applied Optoelectronics Inc",
+              "w": 0.49,
+              "sym": "AAOI",
+              "theme": "connect"
+            },
+            {
+              "isin": "CH0030380734",
+              "name": "Huber + Suhner Ag-Reg",
+              "w": 0.46,
+              "sym": "HUBN.SW",
+              "theme": "connect"
+            },
+            {
+              "isin": "US2193501051",
+              "name": "Corning Inc",
+              "w": 0.43,
+              "sym": "GLW",
+              "theme": "connect"
+            },
+            {
+              "isin": "US8168501018",
+              "name": "Semtech Corp",
+              "w": 0.41,
+              "sym": "SMTC",
+              "theme": "chips"
+            },
+            {
+              "isin": "US5322751042",
+              "name": "Lightwave Logic Inc",
+              "w": 0.41,
+              "sym": "LWLG",
+              "theme": "connect"
+            },
+            {
+              "isin": "US49338L1035",
+              "name": "Keysight Technologies In",
+              "w": 0.34,
+              "sym": "KEYS",
+              "theme": "connect"
+            },
+            {
+              "isin": "US55405Y1001",
+              "name": "Macom Technology Solutions H",
+              "w": 0.29,
+              "sym": "MTSI",
+              "theme": "connect"
+            },
+            {
+              "isin": "US11135F1012",
+              "name": "Broadcom",
+              "w": 0.26,
+              "sym": "AVGO",
+              "theme": "connect"
+            },
+            {
+              "isin": "KYG3323L1005",
+              "name": "Fabrinet",
+              "w": 0.23,
+              "sym": "FN",
+              "theme": "connect"
+            },
+            {
+              "isin": "US1717793095",
+              "name": "Ciena Corp",
+              "w": 0.2,
+              "sym": "CIEN",
+              "theme": "connect"
+            },
+            {
+              "isin": "US57776J1007",
+              "name": "Maxlinear Inc",
+              "w": 0.18,
+              "sym": "MXL",
+              "theme": "chips"
+            },
+            {
+              "isin": "US19247G1076",
+              "name": "Coherent",
+              "w": 0.17,
+              "sym": "COHR",
+              "theme": "connect"
+            },
+            {
+              "isin": "KYG254571055",
+              "name": "Crdo",
+              "w": 0.13,
+              "sym": "CRDO",
+              "theme": "chips"
+            },
+            {
+              "isin": "US0404132054",
+              "name": "Arista Networks Inc",
+              "w": 0.1,
+              "sym": "ANET",
+              "theme": "compute"
+            },
+            {
+              "isin": "US0320951017",
+              "name": "Amphenol",
+              "w": 0.1,
+              "sym": "APH",
+              "theme": "connect"
+            },
+            {
+              "isin": "US17275R1023",
+              "name": "Cisco Systems",
+              "w": 0.08,
+              "sym": "CSCO",
+              "theme": "connect"
+            },
+            {
+              "isin": "US5502411037",
+              "name": "Lumen Tech",
+              "w": 0.08,
+              "sym": "LUMN",
+              "theme": "connect"
+            }
+          ]
         },
         {
           "id": "servers",
@@ -646,7 +1298,65 @@
             "level": "group",
             "t": "Nævnt som en del af halvlederflaskehalsen",
             "src": "NDI-indlæg 30. marts 2026"
-          }
+          },
+          "placed": [
+            {
+              "isin": "US86800U3023",
+              "name": "Super Micro Computer Inc",
+              "w": 0.22,
+              "sym": "SMCI",
+              "theme": "compute"
+            },
+            {
+              "isin": "CA15101Q2071",
+              "name": "Celestica",
+              "w": 0.22,
+              "sym": "CLS.TO",
+              "theme": "connect"
+            },
+            {
+              "isin": "US87288V1017",
+              "name": "Tss Inc",
+              "w": 0.19,
+              "sym": "TSSI",
+              "theme": "software"
+            },
+            {
+              "isin": "US4663131039",
+              "name": "Jabil Inc",
+              "w": 0.14,
+              "sym": "JBL",
+              "theme": "connect"
+            },
+            {
+              "isin": "US68247W1099",
+              "name": "One Stop Systems Inc",
+              "w": 0.14,
+              "sym": "OSS",
+              "theme": "compute"
+            },
+            {
+              "isin": "US24703L2025",
+              "name": "Dell Tech",
+              "w": 0.1,
+              "sym": "DELL",
+              "theme": "compute"
+            },
+            {
+              "isin": "US8010561020",
+              "name": "Sanmina Corp",
+              "w": 0.1,
+              "sym": "SANM",
+              "theme": "connect"
+            },
+            {
+              "isin": "SG9999000020",
+              "name": "Flex Ltd",
+              "w": 0.06,
+              "sym": "FLEX",
+              "theme": "connect"
+            }
+          ]
         },
         {
           "id": "cloud",
@@ -713,7 +1423,44 @@
             "level": "open",
             "t": "Endnu ingen tydelige flaskehalse. Mere et spørgsmål om, hvem der klarer sig",
             "src": "NDI-indlæg 30. marts 2026"
-          }
+          },
+          "placed": [
+            {
+              "isin": "US21873S1087",
+              "name": "Coreweave Inc-Cl A",
+              "w": 0.9,
+              "sym": "CRWV",
+              "theme": "energy"
+            },
+            {
+              "isin": "NL0009805522",
+              "name": "Nebius Group Nv",
+              "w": 0.5,
+              "sym": "NBIS",
+              "theme": "energy"
+            },
+            {
+              "isin": "US68389X1054",
+              "name": "Oracle",
+              "w": 0.33,
+              "sym": "ORCL",
+              "theme": "software"
+            },
+            {
+              "isin": "US30303M1027",
+              "name": "Meta Platforms Inc",
+              "w": 0.16,
+              "sym": "META",
+              "theme": "platforms"
+            },
+            {
+              "isin": "US01609W1027",
+              "name": "Alibaba Grp Sp ADS",
+              "w": 0.07,
+              "sym": "BABA",
+              "theme": "platforms"
+            }
+          ]
         },
         {
           "id": "data",
@@ -779,7 +1526,44 @@
             "level": "open",
             "t": "Interessant, men stadig en ret uafklaret forretningsmodel",
             "src": "NDI-indlæg 30. marts 2026"
-          }
+          },
+          "placed": [
+            {
+              "isin": "US75734B1008",
+              "name": "Reddit",
+              "w": 0.6,
+              "sym": "RDDT",
+              "theme": "platforms"
+            },
+            {
+              "isin": "US88023B1035",
+              "name": "Tempus AI",
+              "w": 0.25,
+              "sym": "TEM",
+              "theme": "andet"
+            },
+            {
+              "isin": "US4576422053",
+              "name": "Innodata Inc",
+              "w": 0.2,
+              "sym": "INOD",
+              "theme": "software"
+            },
+            {
+              "isin": "US8334451098",
+              "name": "Snowflake",
+              "w": 0.16,
+              "sym": "SNOW",
+              "theme": "software"
+            },
+            {
+              "isin": "US7811541090",
+              "name": "Rubrik",
+              "w": 0.08,
+              "sym": "RBRK",
+              "theme": "software"
+            }
+          ]
         },
         {
           "id": "software",
@@ -845,7 +1629,114 @@
             "level": "open",
             "t": "Svært at identificere de langsigtede selskaber, og feltet er relativt højt prissat",
             "src": "NDI-indlæg 30. marts 2026"
-          }
+          },
+          "placed": [
+            {
+              "isin": "IL0011301780",
+              "name": "Wix.Com Ltd",
+              "w": 0.96,
+              "sym": "WIX",
+              "theme": "software"
+            },
+            {
+              "isin": "US69608A1088",
+              "name": "Palantir Tchnl",
+              "w": 0.78,
+              "sym": "PLTR",
+              "theme": "software"
+            },
+            {
+              "isin": "US03831W1080",
+              "name": "AppLovin",
+              "w": 0.54,
+              "sym": "APP",
+              "theme": "software"
+            },
+            {
+              "isin": "US68389X1054",
+              "name": "Oracle",
+              "w": 0.33,
+              "sym": "ORCL",
+              "theme": "software"
+            },
+            {
+              "isin": "US8361001071",
+              "name": "SoundHound AI",
+              "w": 0.23,
+              "sym": "SOUN",
+              "theme": "software"
+            },
+            {
+              "isin": "US3168411052",
+              "name": "Figma Inc-Cl A",
+              "w": 0.15,
+              "sym": "FIG",
+              "theme": "software"
+            },
+            {
+              "isin": "US98956A1051",
+              "name": "Zeta Global Holdings Corp",
+              "w": 0.15,
+              "sym": "ZETA",
+              "theme": "software"
+            },
+            {
+              "isin": "IL0011858912",
+              "name": "Pagaya Technologies Ltd ",
+              "w": 0.13,
+              "sym": "PGY",
+              "theme": "software"
+            },
+            {
+              "isin": "US78781J1097",
+              "name": "Sailpoint Inc",
+              "w": 0.12,
+              "sym": "SAIL",
+              "theme": "software"
+            },
+            {
+              "isin": "US18915M1071",
+              "name": "Cloudflare",
+              "w": 0.08,
+              "sym": "NET",
+              "theme": "software"
+            },
+            {
+              "isin": "US6974351057",
+              "name": "Palo Alto Net",
+              "w": 0.08,
+              "sym": "PANW",
+              "theme": "software"
+            },
+            {
+              "isin": "US64119N6085",
+              "name": "Netskope Inc-Cl A",
+              "w": 0.08,
+              "sym": "NTSK",
+              "theme": "software"
+            },
+            {
+              "isin": "US6391931010",
+              "name": "Navan Inc-Cl A",
+              "w": 0.07,
+              "sym": "NAVN",
+              "theme": "software"
+            },
+            {
+              "isin": "US22788C1053",
+              "name": "CrwdStrik Hldg",
+              "w": 0.0,
+              "sym": "CRWD",
+              "theme": "software"
+            },
+            {
+              "isin": "US34959E1091",
+              "name": "Fortinet",
+              "w": 0.0,
+              "sym": "FTNT",
+              "theme": "software"
+            }
+          ]
         },
         {
           "id": "agents",
@@ -912,7 +1803,86 @@
             "level": "source",
             "t": "Efterspørgslen kommer i stigende grad herfra: først fra agentisk AI",
             "src": "NDI-indlæg 30. marts 2026"
-          }
+          },
+          "placed": [
+            {
+              "isin": "US81141R1005",
+              "name": "Sea Sp ADR",
+              "w": 2.13,
+              "sym": "SE",
+              "theme": "platforms"
+            },
+            {
+              "isin": "US58733R1023",
+              "name": "MercadoLibre",
+              "w": 0.93,
+              "sym": "MELI",
+              "theme": "platforms"
+            },
+            {
+              "isin": "US12047B1052",
+              "name": "Bumble Inc",
+              "w": 0.61,
+              "sym": "BMBL",
+              "theme": "platforms"
+            },
+            {
+              "isin": "US7710491033",
+              "name": "Roblox",
+              "w": 0.51,
+              "sym": "RBLX",
+              "theme": "software"
+            },
+            {
+              "isin": "KYG4124C1096",
+              "name": "Ghl",
+              "w": 0.51,
+              "sym": "GRAB",
+              "theme": "platforms"
+            },
+            {
+              "isin": "US90353T1007",
+              "name": "Uber Tech",
+              "w": 0.41,
+              "sym": "UBER",
+              "theme": "software"
+            },
+            {
+              "isin": "US30303M1027",
+              "name": "Meta Platforms Inc",
+              "w": 0.16,
+              "sym": "META",
+              "theme": "platforms"
+            },
+            {
+              "isin": "US48581R2058",
+              "name": "Kaspi Sp GDR-Reg S",
+              "w": 0.15,
+              "sym": "KSPI",
+              "theme": "software"
+            },
+            {
+              "isin": "LU1778762911",
+              "name": "Spotify Tech",
+              "w": 0.13,
+              "sym": "SPOT",
+              "theme": "platforms"
+            },
+            {
+              "isin": "US94845U1051",
+              "name": "WEBTOON Entr",
+              "w": 0.12,
+              "sym": "WBTN",
+              "theme": "platforms"
+            },
+            {
+              "isin": "US0378331005",
+              "name": "Apple",
+              "w": 0.01,
+              "sym": "AAPL",
+              "theme": "compute"
+            }
+          ]
         },
         {
           "id": "physical-ai",
@@ -1287,7 +2257,114 @@
               "kind": "tolkning",
               "level": "open"
             }
-          }
+          },
+          "placed": [
+            {
+              "isin": "AT0000A3EPA4",
+              "name": "Ams-Osram Ag",
+              "w": 0.58,
+              "sym": "AMS.SW",
+              "theme": "chips"
+            },
+            {
+              "isin": "KYG037AX1015",
+              "name": "Ambarella Inc",
+              "w": 0.31,
+              "sym": "AMBA",
+              "theme": "chips"
+            },
+            {
+              "isin": "JP3164720009",
+              "name": "Renesas Electro",
+              "w": 0.29,
+              "sym": "6723.T",
+              "theme": "chips"
+            },
+            {
+              "isin": "US43289P1066",
+              "name": "Himax Tech Sp ADR",
+              "w": 0.23,
+              "sym": "HIMX",
+              "theme": "chips"
+            },
+            {
+              "isin": "BMG6331P1041",
+              "name": "Alpha and Omega Semiconductor Ltd",
+              "w": 0.22,
+              "sym": "AOSL",
+              "theme": "chips"
+            },
+            {
+              "isin": "CA50077N1024",
+              "name": "Kraken Robotics Inc",
+              "w": 0.21,
+              "sym": "PNG.V",
+              "theme": "connect"
+            },
+            {
+              "isin": "US91532F1021",
+              "name": "Unusual Machines Inc /Us",
+              "w": 0.18,
+              "sym": "UMAC",
+              "theme": "compute"
+            },
+            {
+              "isin": "US0326541051",
+              "name": "Analog Devices Inc",
+              "w": 0.14,
+              "sym": "ADI",
+              "theme": "chips"
+            },
+            {
+              "isin": "US8825081040",
+              "name": "Texas Instrument",
+              "w": 0.14,
+              "sym": "TXN",
+              "theme": "chips"
+            },
+            {
+              "isin": "US5950171042",
+              "name": "Microchip Technology Inc",
+              "w": 0.12,
+              "sym": "MCHP",
+              "theme": "chips"
+            },
+            {
+              "isin": "US0231931058",
+              "name": "Ambiq Micro Inc",
+              "w": 0.1,
+              "sym": "AMBQ",
+              "theme": "chips"
+            },
+            {
+              "isin": "KYG4602S1057",
+              "name": "Horizon Robotics Inc",
+              "w": 0.1,
+              "sym": "9660.HK",
+              "theme": "software"
+            },
+            {
+              "isin": "US6821891057",
+              "name": "ON Semiconductor",
+              "w": 0.09,
+              "sym": "ON",
+              "theme": "chips"
+            },
+            {
+              "isin": "GB00BS3DYQ52",
+              "name": "Raspberry PI",
+              "w": 0.09,
+              "sym": "RPI.L",
+              "theme": "connect"
+            },
+            {
+              "isin": "NO0003055501",
+              "name": "Nordic Semicondu",
+              "w": 0.08,
+              "sym": "NOD.OL",
+              "theme": "chips"
+            }
+          ]
         },
         {
           "id": "sim",
@@ -1358,7 +2435,23 @@
               "kind": "ndi",
               "level": "open"
             }
-          }
+          },
+          "placed": [
+            {
+              "isin": "US91332U1016",
+              "name": "Unity Software",
+              "w": 0.16,
+              "sym": "U",
+              "theme": "software"
+            },
+            {
+              "isin": "US79589L1061",
+              "name": "Samsara",
+              "w": 0.14,
+              "sym": "IOT",
+              "theme": "software"
+            }
+          ]
         },
         {
           "id": "robots",
@@ -1429,7 +2522,107 @@
               "kind": "ndi",
               "level": "next"
             }
-          }
+          },
+          "placed": [
+            {
+              "isin": "US88160R1014",
+              "name": "Tesla",
+              "w": 0.77,
+              "sym": "TSLA",
+              "theme": "physical"
+            },
+            {
+              "isin": "US5901061003",
+              "name": "Merlin Inc",
+              "w": 0.44,
+              "sym": "MRLN",
+              "theme": "space"
+            },
+            {
+              "isin": "US3453708600",
+              "name": "Ford Motor",
+              "w": 0.41,
+              "sym": "F",
+              "theme": "physical"
+            },
+            {
+              "isin": "US87151X1019",
+              "name": "Symbotic",
+              "w": 0.34,
+              "sym": "SYM",
+              "theme": "physical"
+            },
+            {
+              "isin": "US81758H1068",
+              "name": "Serve Robotics",
+              "w": 0.31,
+              "sym": "SERV",
+              "theme": "physical"
+            },
+            {
+              "isin": "US7329081084",
+              "name": "Pony Ai Inc",
+              "w": 0.27,
+              "sym": "PONY",
+              "theme": "software"
+            },
+            {
+              "isin": "US37045V1008",
+              "name": "General Motors Co",
+              "w": 0.25,
+              "sym": "GM",
+              "theme": "physical"
+            },
+            {
+              "isin": "US50202M1027",
+              "name": "Li Auto Sp ADS",
+              "w": 0.24,
+              "sym": "LI",
+              "theme": "physical"
+            },
+            {
+              "isin": "US5000811043",
+              "name": "Kodiak Ai Inc",
+              "w": 0.23,
+              "sym": "KDK",
+              "theme": "software"
+            },
+            {
+              "isin": "US76954A1034",
+              "name": "Rivian Automotive Inc",
+              "w": 0.21,
+              "sym": "RIVN",
+              "theme": "physical"
+            },
+            {
+              "isin": "US0517741072",
+              "name": "Aurora Innovtn",
+              "w": 0.2,
+              "sym": "AUR",
+              "theme": "physical"
+            },
+            {
+              "isin": "US9509151083",
+              "name": "Weride Inc-Adr",
+              "w": 0.15,
+              "sym": "WRD",
+              "theme": "software"
+            },
+            {
+              "isin": "US68236H2040",
+              "name": "Ondas Holdings Inc",
+              "w": 0.15,
+              "sym": "ONDS",
+              "theme": "connect"
+            },
+            {
+              "isin": "US0094221068",
+              "name": "Airo Group Holdings Inc",
+              "w": 0.08,
+              "sym": "AIRO",
+              "theme": "space"
+            }
+          ]
         }
       ],
       "phases": [
@@ -1968,7 +3161,198 @@
               "kind": "ndi",
               "level": "dam"
             }
-          }
+          },
+          "placed": [
+            {
+              "isin": "US05614L2097",
+              "name": "Babcock & Wilcox",
+              "w": 0.6,
+              "sym": "BW",
+              "theme": "energy"
+            },
+            {
+              "isin": "US35834F1049",
+              "name": "T1 Energy Inc",
+              "w": 0.58,
+              "sym": "TE",
+              "theme": "energy"
+            },
+            {
+              "isin": "US2057683029",
+              "name": "Comstock Resources Inc",
+              "w": 0.58,
+              "sym": "CRK",
+              "theme": "energy-resources"
+            },
+            {
+              "isin": "US73933G2021",
+              "name": "Power Solutions Internationa",
+              "w": 0.55,
+              "sym": "PSIX",
+              "theme": "physical"
+            },
+            {
+              "isin": "US83418M1036",
+              "name": "Solaris Energy Infrastructur",
+              "w": 0.54,
+              "sym": "SEI",
+              "theme": "energy"
+            },
+            {
+              "isin": "US74347M1080",
+              "name": "Propetro Holding Corp",
+              "w": 0.51,
+              "sym": "PUMP",
+              "theme": "energy"
+            },
+            {
+              "isin": "US26884L1098",
+              "name": "Eqt",
+              "w": 0.41,
+              "sym": "EQT",
+              "theme": "energy-resources"
+            },
+            {
+              "isin": "US03674X1063",
+              "name": "Antero Resources Corp",
+              "w": 0.41,
+              "sym": "AR",
+              "theme": "energy-resources"
+            },
+            {
+              "isin": "US65339F1012",
+              "name": "NextEra Energy",
+              "w": 0.39,
+              "sym": "NEE",
+              "theme": "energy"
+            },
+            {
+              "isin": "US1651677353",
+              "name": "Expand Energy Corp",
+              "w": 0.37,
+              "sym": "EXE",
+              "theme": "energy-resources"
+            },
+            {
+              "isin": "US8425871071",
+              "name": "Southern Co/The",
+              "w": 0.28,
+              "sym": "SO",
+              "theme": "energy"
+            },
+            {
+              "isin": "US0937121079",
+              "name": "Bloom Energy Corp- A",
+              "w": 0.25,
+              "sym": "BE",
+              "theme": "energy"
+            },
+            {
+              "isin": "US1491231015",
+              "name": "Caterpillar",
+              "w": 0.21,
+              "sym": "CAT",
+              "theme": "physical"
+            },
+            {
+              "isin": "US36828A1016",
+              "name": "Ge Vernova Inc",
+              "w": 0.19,
+              "sym": "GEV",
+              "theme": "physical"
+            },
+            {
+              "isin": "CA1366351098",
+              "name": "Canadian Solar Inc",
+              "w": 0.19,
+              "sym": "CSIQ",
+              "theme": "energy"
+            },
+            {
+              "isin": "US83417M1045",
+              "name": "Solaredge Technologies Inc",
+              "w": 0.18,
+              "sym": "SEDG",
+              "theme": "energy"
+            },
+            {
+              "isin": "US3687361044",
+              "name": "Generac Holdings Inc",
+              "w": 0.15,
+              "sym": "GNRC",
+              "theme": "physical"
+            },
+            {
+              "isin": "US88675P1030",
+              "name": "Tigo Energy Inc",
+              "w": 0.15,
+              "sym": "TYGO",
+              "theme": "energy"
+            },
+            {
+              "isin": "US92840M1027",
+              "name": "Vistra Corp",
+              "w": 0.14,
+              "sym": "VST",
+              "theme": "energy"
+            },
+            {
+              "isin": "US65290E1010",
+              "name": "Nextracker Inc-Cl A",
+              "w": 0.14,
+              "sym": "NXT",
+              "theme": "energy"
+            },
+            {
+              "isin": "US3364331070",
+              "name": "First Solar",
+              "w": 0.12,
+              "sym": "FSLR",
+              "theme": "energy"
+            },
+            {
+              "isin": "US72919P2020",
+              "name": "Plug Power Inc",
+              "w": 0.11,
+              "sym": "PLUG",
+              "theme": "energy"
+            },
+            {
+              "isin": "US04271T1007",
+              "name": "Array Technologies Inc",
+              "w": 0.1,
+              "sym": "ARRY",
+              "theme": "energy"
+            },
+            {
+              "isin": "US86771W1053",
+              "name": "Sunrun Inc",
+              "w": 0.1,
+              "sym": "RUN",
+              "theme": "energy"
+            },
+            {
+              "isin": "US29355A1079",
+              "name": "Enphase Energy",
+              "w": 0.09,
+              "sym": "ENPH",
+              "theme": "energy"
+            },
+            {
+              "isin": "CA0585861085",
+              "name": "Ballard Power Systems Inc",
+              "w": 0.06,
+              "sym": "BLDP",
+              "theme": "energy"
+            },
+            {
+              "isin": "US82489W1071",
+              "name": "Shoals Technologies Group ",
+              "w": 0.04,
+              "sym": "SHLS",
+              "theme": "energy"
+            }
+          ]
         },
         {
           "id": "smr",
@@ -2072,7 +3456,94 @@
               "kind": "baggrund",
               "level": "early"
             }
-          }
+          },
+          "placed": [
+            {
+              "isin": "US15643U1043",
+              "name": "Centrus Energy Corp-Class A",
+              "w": 0.43,
+              "sym": "LEU",
+              "theme": "energy-resources"
+            },
+            {
+              "isin": "US05605H1005",
+              "name": "Bwx Technologies Inc",
+              "w": 0.39,
+              "sym": "BWXT",
+              "theme": "space"
+            },
+            {
+              "isin": "US60471A1016",
+              "name": "Mirion Technologies Inc",
+              "w": 0.37,
+              "sym": "MIR",
+              "theme": "physical"
+            },
+            {
+              "isin": "GB00B63H8491",
+              "name": "Rolls-Royce Hldg",
+              "w": 0.32,
+              "sym": "RR.L",
+              "theme": "space",
+              "partial": true
+            },
+            {
+              "isin": "NL0015002Q12",
+              "name": "Terra Innovatum Global Nv",
+              "w": 0.28,
+              "sym": "NKLR",
+              "theme": "energy"
+            },
+            {
+              "isin": "US53224K3023",
+              "name": "Lightbridge Corp",
+              "w": 0.26,
+              "sym": "LTBR",
+              "theme": "energy-resources"
+            },
+            {
+              "isin": "US67079K1007",
+              "name": "Nuscale Power Corp",
+              "w": 0.22,
+              "sym": "SMR",
+              "theme": "physical"
+            },
+            {
+              "isin": "US87422Q1094",
+              "name": "Talen Energy Corp",
+              "w": 0.12,
+              "sym": "TLN",
+              "theme": "energy"
+            },
+            {
+              "isin": "US02156V1098",
+              "name": "Oklo Inc",
+              "w": 0.12,
+              "sym": "OKLO",
+              "theme": "energy"
+            },
+            {
+              "isin": "US00218A1051",
+              "name": "Asp Isotopes Inc",
+              "w": 0.08,
+              "sym": "ASPI",
+              "theme": "energy-resources"
+            },
+            {
+              "isin": "US8814541020",
+              "name": "Terrestrial Energy Inc",
+              "w": 0.05,
+              "sym": "IMSR",
+              "theme": "energy"
+            },
+            {
+              "isin": "US63010H1086",
+              "name": "Nano Nuclear Energy Inc",
+              "w": 0.05,
+              "sym": "NNE",
+              "theme": "physical"
+            }
+          ]
         },
         {
           "id": "grid",
@@ -2158,7 +3629,58 @@
               "kind": "ndi",
               "level": "dam"
             }
-          }
+          },
+          "placed": [
+            {
+              "isin": "US74164F1030",
+              "name": "Primoris Services Corp",
+              "w": 0.28,
+              "sym": "PRIM",
+              "theme": "physical"
+            },
+            {
+              "isin": "US74762E1029",
+              "name": "Quanta Services",
+              "w": 0.22,
+              "sym": "PWR",
+              "theme": "physical"
+            },
+            {
+              "isin": "US36828A1016",
+              "name": "Ge Vernova Inc",
+              "w": 0.19,
+              "sym": "GEV",
+              "theme": "physical"
+            },
+            {
+              "isin": "US55405W1045",
+              "name": "Myr Group Inc/Delaware",
+              "w": 0.16,
+              "sym": "MYRG",
+              "theme": "physical"
+            },
+            {
+              "isin": "CA87601F1062",
+              "name": "Tantalus Systems Holding Inc",
+              "w": 0.16,
+              "sym": "GRID.TO",
+              "theme": "energy"
+            },
+            {
+              "isin": "DE0006231004",
+              "name": "Infineon Technolo N",
+              "w": 0.13,
+              "sym": "IFX.DE",
+              "theme": "chips"
+            },
+            {
+              "isin": "US63942X1063",
+              "name": "Navitas Semicond",
+              "w": 0.12,
+              "sym": "NVTS",
+              "theme": "chips"
+            }
+          ]
         },
         {
           "id": "storage",
@@ -2308,7 +3830,86 @@
               "kind": "ndi",
               "level": "note"
             }
-          }
+          },
+          "placed": [
+            {
+              "isin": "US34379V1035",
+              "name": "Fluence Energy Inc",
+              "w": 0.81,
+              "sym": "FLNC",
+              "theme": "energy"
+            },
+            {
+              "isin": "US88160R1014",
+              "name": "Tesla",
+              "w": 0.77,
+              "sym": "TSLA",
+              "theme": "physical"
+            },
+            {
+              "isin": "US6406551068",
+              "name": "Neovolta Inc",
+              "w": 0.22,
+              "sym": "NEOV",
+              "theme": "energy"
+            },
+            {
+              "isin": "US03214Q1085",
+              "name": "Amprius Technologies Inc",
+              "w": 0.21,
+              "sym": "AMPX",
+              "theme": "energy"
+            },
+            {
+              "isin": "US83422N1054",
+              "name": "Solid Power Inc",
+              "w": 0.21,
+              "sym": "SLDP",
+              "theme": "energy"
+            },
+            {
+              "isin": "US74767V1098",
+              "name": "Quantumscape Corp",
+              "w": 0.2,
+              "sym": "QS",
+              "theme": "energy"
+            },
+            {
+              "isin": "US29415C1018",
+              "name": "Eos Energy Enterprises Inc",
+              "w": 0.17,
+              "sym": "EOSE",
+              "theme": "energy"
+            },
+            {
+              "isin": "US59516C1062",
+              "name": "Microvast Holdings Inc",
+              "w": 0.1,
+              "sym": "MVST",
+              "theme": "energy"
+            },
+            {
+              "isin": "US78397Q1094",
+              "name": "Ses Ai Corp",
+              "w": 0.1,
+              "sym": "SES",
+              "theme": "energy"
+            },
+            {
+              "isin": "CA28617B6061",
+              "name": "Electrovaya Inc",
+              "w": 0.05,
+              "sym": "ELVA",
+              "theme": "energy"
+            },
+            {
+              "isin": "US2935941078",
+              "name": "Enovix Corp",
+              "w": 0.05,
+              "sym": "ENVX",
+              "theme": "energy"
+            }
+          ]
         },
         {
           "id": "materials",
@@ -2564,7 +4165,170 @@
               "kind": "ndi",
               "level": "dam"
             }
-          }
+          },
+          "placed": [
+            {
+              "isin": "US9115491030",
+              "name": "United States Antimony Corp",
+              "w": 0.44,
+              "sym": "UAMY",
+              "theme": "energy-resources"
+            },
+            {
+              "isin": "CA8265991023",
+              "name": "Sigma Lithium Corp",
+              "w": 0.32,
+              "sym": "SGML",
+              "theme": "energy-resources"
+            },
+            {
+              "isin": "US5533681012",
+              "name": "Mp Materials Corp",
+              "w": 0.26,
+              "sym": "MP",
+              "theme": "energy-resources"
+            },
+            {
+              "isin": "US0126531013",
+              "name": "Albemarle",
+              "w": 0.24,
+              "sym": "ALB",
+              "theme": "energy-resources"
+            },
+            {
+              "isin": "CA6544846091",
+              "name": "Niocorp Developments Ltd",
+              "w": 0.23,
+              "sym": "NB",
+              "theme": "energy-resources"
+            },
+            {
+              "isin": "AU000000LYC6",
+              "name": "Lynas Rare",
+              "w": 0.2,
+              "sym": "LYC.AX",
+              "theme": "energy-resources"
+            },
+            {
+              "isin": "VGG2662B1031",
+              "name": "Critical Metals Corp",
+              "w": 0.2,
+              "sym": "CRML",
+              "theme": "energy-resources"
+            },
+            {
+              "isin": "CA53681J1030",
+              "name": "Lithium Americas Corp",
+              "w": 0.18,
+              "sym": "LAC",
+              "theme": "energy-resources"
+            },
+            {
+              "isin": "US91733P1075",
+              "name": "Usa Rare Earth Inc",
+              "w": 0.18,
+              "sym": "USAR",
+              "theme": "energy-resources"
+            },
+            {
+              "isin": "CA2926717083",
+              "name": "Energy Fuels Inc",
+              "w": 0.17,
+              "sym": "EFR.TO",
+              "theme": "energy-resources"
+            },
+            {
+              "isin": "CA64046G1063",
+              "name": "Neo Performance Materials In",
+              "w": 0.17,
+              "sym": "NEO.TO",
+              "theme": "energy-resources"
+            },
+            {
+              "isin": "CA0203987072",
+              "name": "Almonty Industries Inc",
+              "w": 0.15,
+              "sym": "ALM",
+              "theme": "energy-resources"
+            },
+            {
+              "isin": "US02451V3096",
+              "name": "American Battery Technology",
+              "w": 0.15,
+              "sym": "ABAT",
+              "theme": "energy-resources"
+            },
+            {
+              "isin": "CA8536061010",
+              "name": "Standard Lithium Ltd",
+              "w": 0.13,
+              "sym": "SLI",
+              "theme": "energy-resources"
+            },
+            {
+              "isin": "CA89621C1059",
+              "name": "Trilogy Metals Inc",
+              "w": 0.13,
+              "sym": "TMQ",
+              "theme": "energy-resources"
+            },
+            {
+              "isin": "US46578C1080",
+              "name": "Ivanhoe Electric Inc / Us",
+              "w": 0.13,
+              "sym": "IE",
+              "theme": "energy-resources"
+            },
+            {
+              "isin": "CA8765111064",
+              "name": "Taseko Mines (Trekor Metals)",
+              "w": 0.12,
+              "sym": "TGB",
+              "theme": "energy-resources"
+            },
+            {
+              "isin": "US35671D8570",
+              "name": "Freeport McMoRan",
+              "w": 0.11,
+              "sym": "FCX",
+              "theme": "energy-resources"
+            },
+            {
+              "isin": "CA14071L1085",
+              "name": "Capstone Copper Corp",
+              "w": 0.11,
+              "sym": "CS.TO",
+              "theme": "energy-resources"
+            },
+            {
+              "isin": "CA87261Y1060",
+              "name": "Tmc The Metals Co Inc",
+              "w": 0.1,
+              "sym": "TMC",
+              "theme": "energy-resources"
+            },
+            {
+              "isin": "CA66510M2040",
+              "name": "Northern Dynasty Minerals",
+              "w": 0.08,
+              "sym": "NAK",
+              "theme": "energy-resources"
+            },
+            {
+              "isin": "US84265V1052",
+              "name": "Southern Copper Corp",
+              "w": 0.08,
+              "sym": "SCCO",
+              "theme": "energy-resources"
+            },
+            {
+              "isin": "CA2960061091",
+              "name": "Ero Copper Corp",
+              "w": 0.06,
+              "sym": "ERO",
+              "theme": "energy-resources"
+            }
+          ]
         }
       ],
       "icon": "⚡",
@@ -3034,7 +4798,44 @@
               "sec": "space:sp-cost",
               "secT": "Se hvorfor prisen faldt"
             }
-          }
+          },
+          "placed": [
+            {
+              "isin": "US85529M1045",
+              "name": "Starfighters Space Inc",
+              "w": 0.52,
+              "sym": "FJET",
+              "theme": "space"
+            },
+            {
+              "isin": "US4859241048",
+              "name": "Karman Holdings Inc",
+              "w": 0.33,
+              "sym": "KRMN",
+              "theme": "space"
+            },
+            {
+              "isin": "US31816X1063",
+              "name": "Firefly Aerospace Inc",
+              "w": 0.3,
+              "sym": "FLY",
+              "theme": "space"
+            },
+            {
+              "isin": "US7731211089",
+              "name": "Rocket Lab Corp",
+              "w": 0.21,
+              "sym": "RKLB",
+              "theme": "space"
+            },
+            {
+              "isin": "US46125A1007",
+              "name": "Intuitive Machines Inc",
+              "w": 0.15,
+              "sym": "LUNR",
+              "theme": "space"
+            }
+          ]
         },
         {
           "id": "satcom",
@@ -3168,7 +4969,79 @@
               "sec": "space:sp-money",
               "secT": "Se pengesporene"
             }
-          }
+          },
+          "placed": [
+            {
+              "isin": "US75776W1036",
+              "name": "Redwire Corp",
+              "w": 0.27,
+              "sym": "RDW",
+              "theme": "space"
+            },
+            {
+              "isin": "US8485603067",
+              "name": "Spire Global",
+              "w": 0.27,
+              "sym": "SPIR",
+              "theme": "space"
+            },
+            {
+              "isin": "US9870841007",
+              "name": "York Space Systems Inc",
+              "w": 0.25,
+              "sym": "YSS",
+              "theme": "space"
+            },
+            {
+              "isin": "US00217D1000",
+              "name": "AST SpaceMobile",
+              "w": 0.25,
+              "sym": "ASTS",
+              "theme": "connect"
+            },
+            {
+              "isin": "US80401C1009",
+              "name": "Satellogic Inc",
+              "w": 0.17,
+              "sym": "SATL",
+              "theme": "space"
+            },
+            {
+              "isin": "CA55293N1096",
+              "name": "Mda Space Ltd",
+              "w": 0.16,
+              "sym": "MDA.TO",
+              "theme": "space"
+            },
+            {
+              "isin": "US4202011056",
+              "name": "Hawkeye 360 Inc",
+              "w": 0.16,
+              "sym": "HAWK",
+              "theme": "space"
+            },
+            {
+              "isin": "US46269C1027",
+              "name": "Iridium Communications Inc",
+              "w": 0.14,
+              "sym": "IRDM",
+              "theme": "space"
+            },
+            {
+              "isin": "US72703X1063",
+              "name": "Planet Labs",
+              "w": 0.09,
+              "sym": "PL",
+              "theme": "space"
+            },
+            {
+              "isin": "US09263B2079",
+              "name": "Blacksky Technology Inc",
+              "w": 0.08,
+              "sym": "BKSY",
+              "theme": "space"
+            }
+          ]
         },
         {
           "id": "space-compute",
@@ -4314,5 +6187,6 @@
   ],
   "countsNote": "Forsinket beholdning pr. 2026-06-01 (PMINDI, antal selskaber pr. tema): platforme 40, chips 53, software 51, andet / uklassificeret 67, optik & netværk 30, fysisk tech 24, compute 18, quantum 4, energi 15, energiressourcer 25, spacetech 18. Brug antal i brødtekst, ikke vægte, når du citerer oversigten.",
   "mappingNote": "Hvilke selskaber der står under hvert led, er et redaktionelt udkast ud fra selskabets forretning. Det er ikke NDI's officielle klassifikation og kan indeholde fejl. Et selskab kan stå i flere led. Vægte er fra den forsinkede beholdning pr. 1. juni 2026 (PMINDI).",
-  "bridgesNote": "Broer viser led i andre kæder, som deler selskaber med denne kæde i den forsinkede beholdning pr. 1. juni 2026. Ét selskab kan have flere roller. Tilordningen er et redaktionelt udkast."
+  "bridgesNote": "Broer viser led i andre kæder, som deler selskaber med denne kæde i den forsinkede beholdning pr. 1. juni 2026. Ét selskab kan have flere roller. Tilordningen er et redaktionelt udkast.",
+  "placedNote": "'Placeret i netop dette led' bygger på NDI-linsens felt 'Plads i værdikæden' for det enkelte selskab. Placeringen er pædagogisk og kvalitativ. Vægte er fra den forsinkede beholdning i PMINDI pr. 1. juni 2026 og er ikke en anbefaling."
 }
