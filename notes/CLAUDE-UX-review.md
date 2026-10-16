@@ -791,3 +791,91 @@ Pages (00:22:23 GMT) = main. Sidste docs-commit er `5843694`. Playwright live ve
 - **Privat (55+):** drawdown-siden er ærlig og rolig ("−23 % under toppen nu"). Ordet "Drawdown" i overskriften og "YTD/CAGR" på periode er dog uden for deres ordforråd. Engelske BREAKING-opslag er stadig det største ro-brud.
 - **Familiekontor:** de vil bemærke, at periode og fonden ikke siger det samme om 2023/ÅTD. Inkonsistens mellem sider svækker tilliden mere end selve tallet.
 - **Visuel variation:** ingen ændring. Træthed skyldes længde på mobil, ikke ensformighed.
+
+## 2026-10-16 02:36 CEST · cyklus 34 (main `65b1947`, live = main)
+
+Pages (00:33:44 GMT) har samme md5 som main på risici, ndi-perspektiv, ideer, drawdown og embed/chart.js. Docs-delta siden cyklus 33: 26 filer (lane-C/D-merges). Det nye er risici `#prospekt`, ideer `#h-lc` (livscyklus-bobler), ndi-perspektiv (temagrupper og søgning), footer med "Markedsføringsmateriale" på lær-siderne, ordliste 138 og flere drawdown-/embed-finjusteringer. Playwright live ved 375 på 27 URL'er: 0 pageerrors, 0 vandret overflow, én h1 overalt ✅.
+
+### MUST
+- **Fonden + SoftBank: tredjeparts-"BREAKING" (uændret, 5. cyklus i træk).** Der er 2 × @BullTheoryio under fondens graf. SoftBank viser "DIREKTE TRÆF · Vist fordi: SoftBank" på Nvidia/OpenAI-opslaget. **Ret:** `chartMarkers` → kun @InvestNewdeal.
+- **Nyhedsarkiv:** "Placeholder" står 8 gange, og "tabe" står 0 gange (uændret). Skjul siden fra kort/nav, indtil den har indhold, eller fyld den.
+
+### SHOULD
+- **Livscyklus siger to modsatte ting.** ndi-perspektiv: "NDI har ikke sat livscyklus for nogen selskaber endnu … Vi gætter ikke." Ideer `#h-lc` viser derimod en fordeling på faser (55,5 % høj vækst osv.) som "maskinelt forslag". Begge dele er ærlige hver for sig, men læst efter hinanden lyder det som et selvmodsigende udsagn. Skriv på perspektiv: "NDI har ikke sat livscyklus. Et maskinelt forslag ud fra branchekoder ses på Idéer →".
+- **Antal selskaber:** ndi-perspektiv siger "332 selskaber i 12 temaer", mens ideer, portefølje og ordliste siger 345 (PMINDI) / 320 (PMINDIAKK). 332 er antallet af profiler, ikke af beholdninger. Skriv "332 af fondens 345 selskaber har en profil", ellers spørger familiekontoret, hvilket tal der er rigtigt.
+- **ndi-perspektiv, livscyklus-feltet:** "Modenhed fra før omsætning til value". "value" er en rest fra den engelske skala. Commit `c0468bb` har ellers omdøbt den til "moden".
+- **Drawdown:** h1 er stadig "Drawdown · PMINDI". Der er stadig dobbelt "← Fonden" (header og brødtekst). Grafen og episodelisten er blevet pænere (nøgle under kurven, årstal, gul åben episode). Teksten er rolig og ærlig ✅.
+- **Periode:** uændret fra cyklus 33 ("2023: +16,7 %" uden delår, "YTD", "CAGR", dobbelt "← Fonden").
+- **Fra cyklus 32/33, stadig åbne:** "kl n" (invester ×1, fakta ×3, omkostninger ×2), "Tomme felter = udfyldes af NDI" og "marketingmateriale skal gengive ærligt" (omkostninger), "kvartalsrapport" og "datamangel" (fonden), "Grafmarkører: … drawdown (rød)", "Sharpe" som underlabel på risici, embed "CAGR" ×2.
+
+### Positivt (nyt)
+- **Risici `#prospekt`** er det bedste stykke familiekontor-indhold på sitet. Det giver otte prospekt-risici i almindeligt dansk, rammer (ingen derivater, ingen udlån, intet benchmark, absolut afkast), market maker og "prospektets ordlyd gælder". Hvert punkt har et ordliste-link.
+- **Ideer `#h-lc`** er en ny visuel form (bobler på en bakke) med tydelig "FORSLAG, IKKE NDI'S VURDERING" og "du kan tabe penge". God variation.
+- **ndi-perspektiv** er gået fra en meget lang liste til 12 temachips med søgning (3.007 px ved 375). Det er en stor mobilforbedring.
+
+### Nice
+- Ideer er vokset til 16.688 px ved 375 (fra 14.377). Fold kortene efter de første 3–4, eller giv siden en indholdsfortegnelse med spring.
+- "Central Information Dokument" i footeren på fonden/SoftBank/sammenlign. Lær-siderne siger nu korrekt "KID". Ensret.
+
+### Persona-linser
+- **Privat (55+):** risici-prospektafsnittet og livscyklus-bakken er forståelige. "Drawdown", "YTD" og "CAGR" er stadig de ord, de snubler over. Det engelske BREAKING-opslag under fondens graf er stadig det største ro-brud.
+- **Familiekontor:** `#prospekt` med sidetal-kilde rammer dem præcist. De vil dog fange 332/345 og livscyklus "vi gætter ikke" vs. "maskinelt forslag". Det er små inkonsistenser, men de tæller.
+- **Visuel variation:** forbedret (bobler, chips). Træthed skyldes længde på ideer/udforsk/vaerdikaeder, ikke ensformighed.
+
+## 2026-10-16 02:40 CEST · cyklus 35 (main `04e1c9a`, intet docs-delta siden `65b1947`, live = main)
+
+Main har kun fået notes/coordinator-merges siden cyklus 34, og `git diff 65b1947 04e1c9a -- docs` er tomt. Jeg har kørt Playwright live ved 375 på 28 URL'er (inkl. PMINDIAKK, tema, vaerdikaede og lær). Resultat: 0 pageerrors og 0 vandret overflow. Højderne er uændrede (selskaber 66.172, udforsk 28.282, ideer 16.688, vaerdikaeder 15.593 px). Denne cyklus ser på det, der ikke blev tjekket i 34: top-10, fondens omkostningsblok, tema-fallback og ndi-paa-x.
+
+### MUST (uændret, se cyklus 34)
+- **Fonden + SoftBank + ndi-paa-x: tredjeparts-"BREAKING"** (@BullTheoryio ×2 under fondens graf, "Vist fordi: SoftBank" ×2). Rettelsen er ét filter: `docs/js/app.js:479` `chartMarkers.filter(...)` → tilføj `&& e.username === 'InvestNewdeal'` (eller rens `x-posts.json` → `chartMarkers`). Dette er 6. cyklus i træk.
+- **Nyhedsarkiv:** "Placeholder" og 0 × "tabe" (uændret).
+
+### SHOULD (nyt i denne cyklus)
+- **Fondens "Omkostninger (kort)" har intet tal.** Der står "Tallene … ligger på Fundmarket og er samlet på omkostningssiden". Invester, fakta og omkostninger viser ellers 2,79 %/2,85 % (KID, 5 år). Det er netop den side, persona-familiekontoret læser først (PERSONA-familyoffice MUST 2). Tilføj én linje: "Samlede årlige omkostninger ca. 2,79 % ved 5 års ejertid (KID)."
+- **Top-10 (portefølje/udforsk) viser rå Bloomberg-forkortelser:** "Sea Sp ADR", "Lumentum Hldngs", "Sitime Corp". Det ser ufærdigt ud for en privat investor. Brug visningsnavn fra `company-profiles.json`, hvis feltet findes (Sea Ltd, Lumentum Holdings, SiTime).
+- **"Søjlerne ved navnet viser vægt i fonden pr. kvartal"** (portefølje og udforsk), mens om-data siger, at 1. jun. ikke er et kvartalsskifte. Skriv "pr. snapshot" (samme problem som "kvartalsrapport" på fonden).
+- **`tema.html?id=ai` viser stille "Chips".** Et ukendt id falder tilbage til første tema, og `themes.json` har ingen `id`-felter. Delte/gamle links lander dermed på et forkert tema uden besked. Vis "Temaet findes ikke → Alle temaer".
+- **Fra 32–34, stadig åbne:** drawdown h1 "Drawdown · PMINDI" og dobbelt "← Fonden". Periode "YTD/CAGR/2023 uden delår". "kl n" (fakta ×3, omkostninger ×2, invester ×1). "datamangel" og "kvartalsrapport" (fonden). Sharpe-underlabel (risici, fakta). 332 vs 345. Livscyklus "vi gætter ikke" vs. maskinelt forslag.
+
+### Positivt
+- 100.000 kr.-eksemplet er eksemplarisk. Det siger "efter fondens løbende omkostninger, før skat og egne handelsomkostninger", "første NAV, ikke stiftelsesdato" og "regneeksempel, ikke en prognose".
+- Invester trin 4 forklarer omkostninger med KID-tal og et tænkt kroneeksempel. Det er den bedste omkostningstekst for privatpersonaen.
+- ndi-paa-x adskiller NDI-konti (@InvestNewdeal, @MadsC007, @jesper_baek, @CHornskov) fra "fulgte konti, ikke NDI's holdning". Grep efter købt/solgt/øget/buy/sell/trim: 0 handelssprog i medarbejderopslag ✅.
+
+### Persona-linser
+- **Privat (55+):** kan nu finde prisen (invester, omkostninger), men ikke på fondens egen side. Navnene "Hldngs/Sp ADR" i top-10 virker som et regneark.
+- **Familiekontor:** prospekt-sektionen og 100k-eksemplet er stærke. De mangler fortsat omkostningstallet ved hero/KPI og et downloadbart faktaark (PERSONA-FO §4).
+- **Visuel variation:** ingen ændring. Trætheden skyldes længde (selskaber 88 skærme ved 375), ikke ensformighed.
+
+## 2026-10-16 02:47 CEST · cyklus 36 (main `04e1c9a`, intet docs-delta siden `65b1947`, live = main)
+
+Pages (00:34:58 GMT) = main. Main har ikke ændret sig siden cyklus 35, så denne cyklus dækker det, som 32–35 ikke tjekkede: **desktop 1280**, **tilgængelighed** (alt, labels, overskriftsniveauer, fokus, touch-mål) og **eksterne links**. Playwright kørte live på 16 sider ved 375 og ved 1280.
+
+### Tilgængelighed ✅ (godt)
+- `lang="da"` på alle 35 HTML-filer. `noindex` på alle sider og `robots.txt` med `Disallow: /` ✅ (vigtigt for et udkast).
+- 0 `<img>` uden alt. 0 store SVG'er uden `aria-label`/`role`. 0 inputs uden label. 0 spring i overskriftsniveauer på alle 16 sider.
+- "Gå til indhold" er første tab-stop. Tab-rækkefølgen på fonden er logisk (logo → nav → "Sådan investerer du" → "← Entré"), og alle tab-stop har synlig fokusmarkering.
+- (Sorteringsknapperne i portefølje og ordlisten på om-data er kun "tomme" i automatikken, fordi de ligger i lukkede sektioner. De er ikke en fejl.)
+
+### SHOULD (nyt)
+- **Touch-mål under 24 px ved 375** (WCAG 2.5.8 kræver mindst 24×24):
+  - Udforsk: 29 chips/selskabslinks er 17–18 px høje ("Chips", "Energi", "Soitec", "Tesla" …).
+  - Fonden: 16 stk, bl.a. "X ↗" (26×20) i opslagslisten og "Risici" (31×18).
+  - Portefølje: 12 tema-søjler/links er 18 px høje.
+  - Om-data: 22 stk ("FAQ" 28×20 og ordliste-spring).
+  - Privat 55+ rammer forkert chip på telefonen. **Ret:** `min-height: 32px` + `padding-block` på `.chip`/inline-links i lister.
+- **Entré siger "Modenhed: 345 selskaber klassificeret (udkast)"** (`docs/js/app.js:266`). ndi-perspektiv siger "NDI har ikke sat livscyklus for nogen selskaber endnu … Vi gætter ikke", og ideer kalder det "maskinelt forslag". Det er tredje formulering for den samme ting og den mest misvisende: "klassificeret" lyder som NDI's vurdering. Skriv "Livscyklus: maskinelt forslag for 345 selskaber (ikke NDI's vurdering)".
+- **Fonden ved 1280: risikoindikator 5/7 står alene på anden række** under fire afkast-KPI'er. Den ser ud som en eftertanke, og højre halvdel af hero er tom. Fyld rækken op med **"Omkostninger 2,79 %/år (KID, 5 år)"** som 6. kort, så der står 3+3. Det løser også cyklus 35's "intet omkostningstal på fonden" og giver risiko og omkostninger samme vægt som afkastet.
+- **Entré ved 1280:** kortet "Omkostninger" har undertitlen "KID-tal og Fundmarket-postsatser — du kan tabe penge". Tabsadvarslen hører ikke til omkostninger. Skriv "KID: ca. 2,79 % om året ved 5 års ejertid". Kortet "Lær" siger "variance drag", som er jargon på forsiden. Skriv "hvorfor gennemsnit snyder". Fliserne står i rækker af 3+2, så der er et hul. Det er mindre vigtigt.
+
+### Eksterne links ✅
+Alle centrale dokumenter svarer 200 live: KID PMINDI/PMINDIAKK (`priip_ipm140b`/`145b`, application/pdf), fællesprospekt (Fundmarket, opdateret 24.10.2025, pdf), Fundmarket kl. n-sider, newdealinvest.dk og group.softbank IR. Der er 25 eksterne mål i alt. 10 af dem er X-opslag, heraf 3 fra @BullTheoryio og 2 fra @MilkRoadAI (se MUST).
+
+### MUST (uændret, se cyklus 34/35)
+- Tredjeparts-"BREAKING" under fondens graf og på SoftBank (7. cyklus). Rettelsen er ét filter i `docs/js/app.js:479`.
+- Nyhedsarkiv: "Placeholder" ×8 og 0 × "tabe".
+
+### Persona-linser
+- **Privat (55+):** sitet er teknisk tilgængeligt (skip-link, alt, labels). Den reelle barriere på mobil er de små chips. På desktop ser fonden rolig og overskuelig ud, men fire grønne afkasttal i stor skrift kommer før risikoen.
+- **Familiekontor:** på desktop leder de efter et omkostningstal i KPI-rækken, og der er plads til det. KID- og prospektlinks virker og peger på de rigtige PDF'er ✅.
+- **Visuel variation:** desktop er luftigt og ensartet. Der er ingen ny træthed. Trætheden er fortsat længden på mobil.
