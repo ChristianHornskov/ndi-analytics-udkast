@@ -1020,7 +1020,7 @@ function renderUdforsk(root) {
     </details>
     <div class="chips" id="chips"></div>
     <p style="font-size:12px;color:var(--muted)" id="filter-status">${list.length} ${list.length === 1 ? 'resultat' : 'resultater'}${viaLens(list)} · udkast-klassifikation</p>
-    <p class="uf-machine-note" style="font-size:12px;color:var(--muted);margin:-6px 0 8px">Tema og modenhed er maskinelle <span class="badge badge-draft">forslag</span> ud fra offentlig branche/tema og afventer NDI.</p>
+    <p class="uf-machine-note" style="font-size:12px;color:var(--muted);margin:-6px 0 8px">Tema og modenhed er maskinelle <span class="badge badge-draft">forslag</span> ud fra offentlig branche/tema og afventer NDI.${list.some(hasLens) ? ' <span aria-hidden="true">◉</span> = NDI-linse: faste spørgsmål om, hvad selskabet giver porteføljen (udkast, ikke en karakter). <a href="laer/saadan-taenker-vi.html#tv-hv">Hvad er det?</a>' : ''}</p>
     ${list.length ? positionsTable(list, fund) : emptyScreener(fund)}
     ${warnHtml()}`;
 
