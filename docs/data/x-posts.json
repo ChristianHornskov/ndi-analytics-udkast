@@ -32,7 +32,7 @@
         "ai"
       ],
       "tickers": [],
-      "label": "Udvalgte offentlige opslag — ikke NDI's holdning"
+      "label": "Fra NDI-relateret konto (udkast / markedsføring)"
     },
     {
       "id": "2087874479141589021",
@@ -50,7 +50,7 @@
         "SE",
         "HIMS"
       ],
-      "label": "Udvalgte offentlige opslag — ikke NDI's holdning"
+      "label": "Fra NDI-relateret konto (udkast / markedsføring)"
     },
     {
       "id": "2072602813142630625",
@@ -65,7 +65,7 @@
       "tickers": [
         "PMINDI"
       ],
-      "label": "Udvalgte offentlige opslag — ikke NDI's holdning",
+      "label": "Fra NDI-relateret konto (udkast / markedsføring)",
       "complianceNote": "Omskrevet i snapshot: undgår \"rådgiver\"-formulering på grafmarkør."
     },
     {
@@ -81,7 +81,7 @@
       "tickers": [
         "SE"
       ],
-      "label": "Udvalgte offentlige opslag — ikke NDI's holdning"
+      "label": "Fra NDI-relateret konto (udkast / markedsføring)"
     },
     {
       "id": "2016558534171738574",
@@ -96,7 +96,7 @@
       "tickers": [
         "PMINDIAKK"
       ],
-      "label": "Udvalgte offentlige opslag — ikke NDI's holdning"
+      "label": "Fra NDI-relateret konto (udkast / markedsføring)"
     },
     {
       "id": "2013306008832008498",
@@ -111,7 +111,7 @@
       "tickers": [
         "PMINDI"
       ],
-      "label": "Udvalgte offentlige opslag — ikke NDI's holdning"
+      "label": "Fra NDI-relateret konto (udkast / markedsføring)"
     },
     {
       "id": "2110388749947261403",
@@ -126,7 +126,7 @@
         "europe"
       ],
       "tickers": [],
-      "label": "Udvalgte offentlige opslag — ikke NDI's holdning"
+      "label": "Fra NDI-relateret konto (udkast / markedsføring)"
     },
     {
       "id": "2110494122285191370",
@@ -139,7 +139,7 @@
         "space"
       ],
       "tickers": [],
-      "label": "Udvalgte offentlige opslag — ikke NDI's holdning"
+      "label": "Fra NDI-relateret konto (udkast / markedsføring)"
     },
     {
       "id": "2109979767407509867",
@@ -155,7 +155,7 @@
       "tickers": [
         "TSLA"
       ],
-      "label": "Udvalgte offentlige opslag — ikke NDI's holdning"
+      "label": "Fra NDI-relateret konto (udkast / markedsføring)"
     },
     {
       "id": "2110478406294880346",
@@ -169,7 +169,7 @@
         "energy"
       ],
       "tickers": [],
-      "label": "Udvalgte offentlige opslag — ikke NDI's holdning"
+      "label": "Fra NDI-relateret konto (udkast / markedsføring)"
     },
     {
       "id": "2109729412589523271",
@@ -185,7 +185,7 @@
       "tickers": [
         "TSLA"
       ],
-      "label": "Udvalgte offentlige opslag — ikke NDI's holdning"
+      "label": "Fra NDI-relateret konto (udkast / markedsføring)"
     },
     {
       "id": "2110465338420674785",
@@ -200,7 +200,7 @@
       "tickers": [
         "U"
       ],
-      "label": "Udvalgte offentlige opslag — ikke NDI's holdning"
+      "label": "Fra NDI-relateret konto (udkast / markedsføring)"
     },
     {
       "id": "1920549372925808643",
@@ -217,7 +217,7 @@
         "QBTS",
         "PMINDI"
       ],
-      "label": "Udvalgte offentlige opslag — ikke NDI's holdning"
+      "label": "Fra NDI-relateret konto (udkast / markedsføring)"
     },
     {
       "id": "1918304252847440315",
@@ -232,7 +232,7 @@
       "tickers": [
         "UPST"
       ],
-      "label": "Udvalgte offentlige opslag — ikke NDI's holdning"
+      "label": "Fra NDI-relateret konto (udkast / markedsføring)"
     },
     {
       "id": "2110628812753158432",
@@ -252,7 +252,7 @@
         "9984.T",
         "9984"
       ],
-      "label": "Udvalgte offentlige opslag — ikke NDI's holdning",
+      "label": "Fra en konto NDI følger — ikke NDI’s holdning",
       "curatedFrom": "mads_following"
     },
     {
@@ -270,7 +270,7 @@
       "tickers": [
         "NVDA"
       ],
-      "label": "Udvalgte offentlige opslag — ikke NDI's holdning",
+      "label": "Fra en konto NDI følger — ikke NDI’s holdning",
       "curatedFrom": "mads_following"
     },
     {
@@ -287,7 +287,7 @@
       "tickers": [
         "NVDA"
       ],
-      "label": "Udvalgte offentlige opslag — ikke NDI's holdning",
+      "label": "Fra en konto NDI følger — ikke NDI’s holdning",
       "curatedFrom": "mads_following"
     },
     {
@@ -306,7 +306,7 @@
         "CRWV",
         "NBIS"
       ],
-      "label": "Udvalgte offentlige opslag — ikke NDI's holdning",
+      "label": "Fra en konto NDI følger — ikke NDI’s holdning",
       "curatedFrom": "mads_following"
     },
     {
@@ -324,7 +324,7 @@
       "tickers": [
         "NVDA"
       ],
-      "label": "Udvalgte offentlige opslag — ikke NDI's holdning",
+      "label": "Fra en konto NDI følger — ikke NDI’s holdning",
       "curatedFrom": "mads_following"
     },
     {
@@ -343,7 +343,7 @@
         "9984.T",
         "9984"
       ],
-      "label": "Udvalgte offentlige opslag — ikke NDI's holdning",
+      "label": "Fra en konto NDI følger — ikke NDI’s holdning",
       "curatedFrom": "mads_following"
     },
     {
@@ -364,7 +364,7 @@
         "9984.T",
         "9984"
       ],
-      "label": "Udvalgte offentlige opslag — ikke NDI's holdning",
+      "label": "Fra en konto NDI følger — ikke NDI’s holdning",
       "curatedFrom": "mads_following"
     }
   ],
@@ -506,28 +506,12 @@
       "source": "X (udvalgt offentligt opslag — ikke NDI’s holdning)"
     },
     {
-      "d": "2026-10-14",
-      "title": "X · @MadsC007",
-      "text": "Believing that we can compete by simply using AI, without producing the chips ourselves… is incredibly naive. Europe nee",
-      "url": "https://x.com/MadsC007/status/2110388749947261403",
-      "kind": "x",
-      "source": "X (udvalgt offentligt opslag — ikke NDI’s holdning)"
-    },
-    {
-      "d": "2026-10-13",
-      "title": "X · @MadsC007",
-      "text": "Listening to Bloomberg about AI is like asking a BWM sales rep for facts about Tesla cars",
-      "url": "https://x.com/MadsC007/status/2109979767407509867",
-      "kind": "x",
-      "source": "X (udvalgt offentligt opslag — ikke NDI’s holdning)"
-    },
-    {
       "d": "2026-10-12",
       "title": "X · @jesper_baek",
       "text": "Teslas succes er bevis… Det lykkedes ikke at gøre elbilen til allemandseje, fordi den var grøn - men fordi de lavede den",
       "url": "https://x.com/jesper_baek/status/2109729412589523271",
       "kind": "x",
-      "source": "X (udvalgt offentligt opslag — ikke NDI’s holdning)"
+      "source": "X · NDI-relateret konto (udkast / markedsføring — kan være NDI-holdning)"
     },
     {
       "d": "2026-10-11",
@@ -551,7 +535,7 @@
       "text": "Kvartalswebinar Q3, resultater og opdatering på mikro, makro, AI og geopolitik",
       "url": "https://x.com/InvestNewdeal/status/2106390787793498165",
       "kind": "x",
-      "source": "X (udvalgt offentligt opslag — ikke NDI’s holdning)"
+      "source": "X · NDI-relateret konto (udkast / markedsføring — kan være NDI-holdning)"
     },
     {
       "d": "2026-09-28",
@@ -575,7 +559,7 @@
       "text": "$NVDA $SE $HIMS",
       "url": "https://x.com/InvestNewdeal/status/2087874479141589021",
       "kind": "x",
-      "source": "X (udvalgt offentligt opslag — ikke NDI’s holdning)"
+      "source": "X · NDI-relateret konto (udkast / markedsføring — kan være NDI-holdning)"
     },
     {
       "d": "2026-07-27",
@@ -591,7 +575,7 @@
       "text": "Performance-opdatering efter Q2 2026 — offentlige totalafkasttal for NewDeal Invest-fondene (Fundmarket).",
       "url": "https://x.com/InvestNewdeal/status/2072602813142630625",
       "kind": "x",
-      "source": "X (udvalgt offentligt opslag — ikke NDI’s holdning)"
+      "source": "X · NDI-relateret konto (udkast / markedsføring — kan være NDI-holdning)"
     },
     {
       "d": "2026-03-03",
@@ -599,7 +583,7 @@
       "text": "NewDeal Invest Fund manager Mads Christiansen comments on $SE earnings.",
       "url": "https://x.com/InvestNewdeal/status/2028884313425506598",
       "kind": "x",
-      "source": "X (udvalgt offentligt opslag — ikke NDI’s holdning)"
+      "source": "X · NDI-relateret konto (udkast / markedsføring — kan være NDI-holdning)"
     },
     {
       "d": "2026-01-28",
@@ -607,7 +591,7 @@
       "text": "NewDeal Invests akkumulerende fond PMINDIAKK er nu børsnoteret hos Nasdaq Copenhagen",
       "url": "https://x.com/InvestNewdeal/status/2016558534171738574",
       "kind": "x",
-      "source": "X (udvalgt offentligt opslag — ikke NDI’s holdning)"
+      "source": "X · NDI-relateret konto (udkast / markedsføring — kan være NDI-holdning)"
     }
   ],
   "callCountNote": "Hentet via x MCP get_users_by_usernames + get_users_posts (4 konti). Limits: 30/min, 1000/day. Lane X 2026-10-15: ét søgekald efter SoftBank hos konti fra mads_following (BullTheoryio). Browseren kalder ikke X."

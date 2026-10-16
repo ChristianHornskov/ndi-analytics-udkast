@@ -535,7 +535,7 @@ export function xCard(p, opt = {}) {
     ...(p.tickers || []).slice(0, 4).map((t) => `<a class="${tagCls(t).trim()}" href="${esc(tickerHref(t))}">${esc(t)}</a>`),
     ...(p.tags || []).slice(0, 3).map((t) => `<a class="${tagCls(t).trim()}" href="${esc(tagHref(t))}">${esc(t)}</a>`),
   ].join('');
-  const curated = p.curatedFrom === 'mads_following' ? '<span class="x-curated">Mads følger</span>' : '';
+  const curated = p.curatedFrom === 'mads_following' ? '<span class="x-curated" title="Fra en konto NDI følger — ikke NDI\'s holdning">Fulgt konto</span>' : '';
   const house = isHouse(p) ? '<span class="x-house">NDI-konto</span>' : '';
   const hit = opt.hitKind === 'direct'
     ? '<span class="x-hit direct">Direkte træf</span>'
