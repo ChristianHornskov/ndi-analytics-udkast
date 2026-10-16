@@ -95,7 +95,7 @@ Taseko skrev 9. oktober 2026, at Florence Copper er gået i kommerciel produktio
 
 SMR-leddet siger, at NuScale skriver, at et program sammen med TVA kan blive op til 6 GW, og at det er udvikling, ikke et værk i drift. Kilden er programsiden, som taler om at udvikle og idriftsætte kapacitet, ikke om et værk, der allerede kører. Ordene historic, largest og proven er ikke taget med. De øvrige SMR-navne er stadig ikke beskrevet som kommerciel drift.
 
-Konceptkortene i nyhedsarkivet er delt i korte afsnit, så grænserne kan læses hver for sig. Energikortet har fireogtyve afsnit. Rumkortet har tretten. Indholdet er det samme som på kæden. Neutron-siden sagde 16. oktober 2026 stadig, at første flyvning ligger foran. Sætningen om, at Neutron ikke er fløjet, er ikke ændret.
+Konceptkortene i nyhedsarkivet er delt i korte afsnit, så grænserne kan læses hver for sig. Energikortet har femogtyve afsnit. Rumkortet har tretten. Indholdet er det samme som på kæden. Neutron-siden sagde 16. oktober 2026 stadig, at første flyvning ligger foran. Sætningen om, at Neutron ikke er fløjet, er ikke ændret.
 
 MP Materials skriver, at magneter fremstilles på anlægget Independence i Texas, og at udvindingen er ved Mountain Pass. Ordene om verdens rigeste forekomst og verdens stærkeste magnet er ikke taget med. Firefly gav 403 samme nat. Eclipse er derfor ikke omskrevet.
 
@@ -180,6 +180,8 @@ Fluence nævner platformen Smartstack. Det er et batterisystem til nettet, ikke 
 Plug skrev 22. april 2026, at anlægget i St. Gabriel i Louisiana har lavet flydende brint siden 23. april 2025. Begge datoer ligger før beholdningen pr. 2026-06-01. Anlægget ejes sammen med Olin gennem Hidrogenii. Siden nævner også Woodbine i Georgia og Charleston i Tennessee. Det er brint, ikke et elselskab. Teksten siger ikke, at hvert anlæg kører. Ton pr. dag, trailer-tal, effektivitet og kundenavne er ikke taget med. Ordet leading er ikke taget med. Vægtene er uændrede.
 
 Bloom skrev 1. april 2025, at selskabet og Conagra vil bruge brændselsceller på Conagras fabrikker i Troy og Archbold i Ohio. Datoen ligger før beholdningen pr. 2026-06-01. Det er en aftale. Teksten siger ikke, at cellerne allerede kører. Det er ikke et klassisk kraftværk, og teksten siger ikke, at hvert anlæg kører. Megawatt, en kapitalramme og ordene leader og leading er ikke taget med. Vægtene er uændrede.
+
+Trilogy skrev 21. september 2026, at U.S. Army Corps of Engineers har udsendt et varsel om en miljøredegørelse for Arctic-projektet i Ambler-distriktet i Alaska. Datoen ligger efter beholdningen pr. 2026-06-01. Varslet starter høringen. Det er ikke en tilladelse og ikke en mine i drift. Arctic føres videre i Ambler Metals sammen med South32. Bornite er stadig et projekt. Ordene high-grade og flagship er ikke taget med. Tidsplanen frem mod en afgørelse er ikke taget med. Vægtene er uændrede.
 
 ## År til dato på periodesiden
 

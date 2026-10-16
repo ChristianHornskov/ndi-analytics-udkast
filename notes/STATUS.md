@@ -929,3 +929,13 @@ Meddelelsen er fra 1. april 2025, før beholdningen. Det er en aftale. Teksten s
 Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Troy og Archbold står. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `a711f7a` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 02:26 CEST. Trilogy skrev, at et varsel om miljøredegørelse for Arctic er udsendt. Ikke færdig.**
+
+Meddelelsen er fra 21. september 2026, efter beholdningen. Varslet starter høringen. Det er ikke en tilladelse og ikke en mine i drift. Arctic føres videre sammen med South32. Bornite er stadig et projekt. High-grade, flagship og tidsplanen er ikke taget med. Ingen `reviewedAt`. Blurben under råstoffer og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Arctic står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `635db12` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

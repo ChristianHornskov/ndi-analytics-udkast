@@ -1041,20 +1041,24 @@
   "CA89621C1059": {
    "name": "Trilogy Metals",
    "theme": "energy-resources",
-   "summary": "Udvikler kobberprojekter i Alaska. Denne tekst beskriver ikke en mine i drift.",
-   "watch": "Tilladelser, adgang til området og om en mine bliver bygget.",
+   "summary": "Udvikler kobberprojekterne Arctic og Bornite i Alaska. Selskabet skrev 21. september 2026, at et varsel om miljøredegørelse for Arctic er udsendt. Det er efter beholdningen og er ikke en mine i drift.",
+   "watch": "Om miljøgennemgangen af Arctic bliver til en afgørelse. Teksten beskriver ikke en mine i drift.",
    "source": "https://trilogymetals.com/",
-   "products": "Kobberprojekter.",
+   "products": "Kobberprojekterne Arctic og Bornite. Ingen mine i drift i denne tekst.",
    "customers": "Ingen driftkunder i denne beskrivelse.",
-   "role": "Råstofprojekt.",
+   "role": "Råstofprojekt. Varslet for Arctic er ikke en mine i drift.",
    "narrative": [
-    "Trilogy Metals arbejder med efterforskning og udvikling af Arctic og Bornite i Alaska. Det er kobberprojekter.",
-    "Selskabet kalder arbejdet efterforskning og udvikling. Denne tekst beskriver ikke en mine i drift."
+    "Trilogy skrev 21. september 2026, at U.S. Army Corps of Engineers har udsendt et varsel om en miljøredegørelse for Arctic-projektet i Ambler-distriktet i Alaska. Datoen ligger efter beholdningen pr. 1. juni 2026. Varslet starter høringen. Det er ikke en tilladelse og ikke en mine i drift.",
+    "Arctic og Bornite er stadig projekter under efterforskning og udvikling. Arctic føres videre i Ambler Metals, som Trilogy og South32 ejer sammen. Denne tekst beskriver ikke en mine i drift."
    ],
    "narrativeSources": [
     {
      "label": "Selskabets side",
      "url": "https://trilogymetals.com/"
+    },
+    {
+     "label": "Arctic, 21. september 2026",
+     "url": "https://trilogymetals.com/news-and-media/news/trilogy-metals-announces-publication-of-notice-of-intent-by-u-s-army-corps-of-engineers-for-alaskas-high-grade-arctic-copper-zinc-lead-gold-silver-project/"
     }
    ]
   },

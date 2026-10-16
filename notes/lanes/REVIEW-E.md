@@ -281,3 +281,7 @@ St. Gabriel i Louisiana er flydende brint sammen med Olin gennem Hidrogenii. Kom
 ## Bloom · 2026-10-16 02:18 CEST
 
 Aftalen af 1. april 2025 siger, at Bloom og Conagra vil bruge brændselsceller på Conagras fabrikker i Troy og Archbold i Ohio. Før beholdningen. Ikke skrevet som celler, der allerede kører. Ikke et klassisk kraftværk. Megawatt, kapitalramme, leader og leading er ikke kopieret. AI-udkast uden gennemgangsdato. Elproduktions-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Trilogy · 2026-10-16 02:26 CEST
+
+Varsel af 21. september 2026 om miljøredegørelse for Arctic i Ambler-distriktet. Efter beholdningen. Starter høringen. Ikke en tilladelse. Ikke en mine. Ambler Metals ejes sammen med South32. Bornite er stadig et projekt. High-grade, flagship og tidsplanen er ikke kopieret. AI-udkast uden gennemgangsdato. Råstof-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
