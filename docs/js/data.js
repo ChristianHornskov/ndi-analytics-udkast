@@ -385,6 +385,8 @@ const NAME_FIX = {
   'General Motors Co': 'General Motors', 'Hecla Mining Co': 'Hecla Mining', 'Tmc The Metals Co Inc': 'TMC The Metals Company',
   'Ams-Osram Ag': 'ams OSRAM', 'Microstrategy': 'MicroStrategy', 'Hims Hers Health Inc': 'Hims & Hers Health',
   'Solstice Adv Materials Inc': 'Solstice Advanced Materials',
+  'SoFi Tech': 'SoFi Technologies', 'Opendoor Tech': 'Opendoor Technologies', 'Uber Tech': 'Uber Technologies',
+  'Spotify Tech': 'Spotify Technology', 'Dell Tech': 'Dell Technologies', 'Lumen Tech': 'Lumen Technologies', 'WEBTOON Entr': 'WEBTOON Entertainment',
 };
 // Selskabsnavne, som depotbanken har gjort til "Titel Case" (SITIME → Sitime). Kun ord, hvis rigtige stavemåde er sikker.
 const WORD_FIX = {
@@ -393,11 +395,16 @@ const WORD_FIX = {
   Sitime: 'SiTime', Formfactor: 'FormFactor', Blacksky: 'BlackSky', Abcellera: 'AbCellera', Maxlinear: 'MaxLinear',
   Quantumscape: 'QuantumScape', Solaredge: 'SolarEdge', Terawulf: 'TeraWulf', Whitefiber: 'WhiteFiber', Lifemd: 'LifeMD',
   Weride: 'WeRide', Nuscale: 'NuScale', Propetro: 'ProPetro', Fubotv: 'fuboTV', Niocorp: 'NioCorp', Sharonai: 'SharonAI',
-  Sharplink: 'SharpLink', Sailpoint: 'SailPoint', Defi: 'DeFi', Neovolta: 'NeoVolta', Coreweave: 'CoreWeave', Cleanspark: 'CleanSpark', 'Wix.Com': 'Wix.com',
+  Eqt: 'EQT', Poet: 'POET', Sharplink: 'SharpLink', Sailpoint: 'SailPoint', Defi: 'DeFi', Neovolta: 'NeoVolta', Coreweave: 'CoreWeave', Cleanspark: 'CleanSpark', 'Wix.Com': 'Wix.com',
 };
+// Efter reglerne: kendte navne, der stadig ser forkerte ud (Ghl = Grab Holdings, identificeret via ISIN KYG4124C1096).
+const FINAL_FIX = { Ghl: 'Grab Holdings', 'Raspberry PI': 'Raspberry Pi', 'Chemours Co': 'Chemours', DLocal: 'dLocal', 'Freeport McMoRan': 'Freeport-McMoRan', Nu: 'Nu Holdings' };
 export function displayName(p) {
   const raw = (p?.name || '').trim();
   if (NAME_FIX[raw]) return NAME_FIX[raw];
+  // Warrants arver moderselskabets læsbare navn ("Opendoor Tech Warrant Series A" → "Opendoor Technologies Warrant Series A")
+  const wm = /^(.*?)(\s+warrants?\b.*)$/i.exec(raw);
+  if (wm && NAME_FIX[wm[1]]) return NAME_FIX[wm[1]] + wm[2];
   let n = raw.replace(/\/The$/, '').replace(/\s*\/\s*(Us|Delaware)$/i, '');
   const adr = /(\s+Sp)?[\s-]+ADR$/i.test(n);
   n = n.replace(/(\s+Sp)?[\s-]+ADR$/i, '')
@@ -407,6 +414,7 @@ export function displayName(p) {
   // Selskabsform til sidst (Inc, Corp, Ltd, Plc, AG, SE, NV) - ikke "Co", der står i fx "Southern Co".
   if (!/\/The$/.test(raw)) n = n.replace(/\s*\b(Inc|Corp|Ltd|Plc|Ag|Se|Nv)\.?$/i, '').trim();
   n = n.replace(/[\w.]+/g, (w) => WORD_FIX[w] || w);
+  n = FINAL_FIX[n] || n;
   return adr ? `${n} (ADR)` : n;
 }
 // Warrants (tegningsretter) ligger som egne positioner med ~0 % vægt, men er ikke selvstændige selskaber.
