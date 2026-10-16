@@ -1761,7 +1761,7 @@
           "id": "space-compute",
           "icon": "✦",
           "label": "Rum og compute",
-          "blurb": "På sigt kan beregning ligge i rummet. I beholdningen pr. 1. juni 2026 er eksemplerne infrastruktur, robotik og satellitplatforme. Ingen af dem er et datacenter i kredsløb. Voyager omtaler Starlab som et stationsprojekt. Det er ikke en station i drift.",
+          "blurb": "På sigt kan beregning ligge i rummet. I beholdningen pr. 1. juni 2026 er eksemplerne infrastruktur, robotik og satellitplatforme. Ingen af dem er et datacenter i kredsløb. Voyager omtaler Starlab som et stationsprojekt. Det er ikke en station i drift. Selskabet skrev 8. september 2026, at GOEX ved Camp Minden i Louisiana igen producerer sortkrudt. Det er efter beholdningen, og det er ikke en rumstation.",
           "ndi": "Udsagnet om SpaceX og størrelsen af økonomien er Elon Musks og står kun som citat. Det er ikke NDI's forventning (ugebrev 12. oktober 2026).",
           "themes": [
             "space"
@@ -1791,7 +1791,7 @@
               "w": 0.17,
               "sym": "VOYG",
               "forslag": false,
-              "role": "Ruminfrastruktur og forsvar. Starlab er et stationsprojekt, ikke en station i drift og ikke et datacenter."
+              "role": "Starlab er et projekt. GOEX ved Camp Minden, 8. september 2026, er sortkrudt, ikke en station."
             },
             {
               "isin": "CA55293N1096",

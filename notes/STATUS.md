@@ -879,3 +879,13 @@ Det flyver fra Wallops i Virginia og sætter ikke satellitter i kredsløb. Elect
 Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. HASTE står. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `4ecafbd` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 02:08 CEST. Voyager skrev, at GOEX ved Camp Minden igen producerer sortkrudt. Ikke færdig.**
+
+Datoen er 8. september 2026, efter beholdningen. Det er forsvarsmateriale, ikke en rumstation. Starlab er stadig et projekt. Only, sole og world-class er ikke taget med. Ingen `reviewedAt`. Blurben under rum og compute og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Camp Minden står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `00c3c32` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

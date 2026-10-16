@@ -1489,20 +1489,24 @@
   "US92892B1035": {
    "name": "Voyager Technologies",
    "theme": "space",
-   "summary": "Arbejder med ruminfrastruktur og forsvarsteknologi. Starlab er et projekt om en kommerciel rumstation. Denne tekst beskriver ikke en station i drift og ikke et datacenter i kredsløb.",
-   "watch": "Om stationsprojektet bliver bygget, og ordrer i forsvarsforretningen.",
+   "summary": "Arbejder med ruminfrastruktur og forsvarsteknologi. Selskabet skrev 8. september 2026, at GOEX ved Camp Minden i Louisiana igen producerer sortkrudt. Starlab er stadig et projekt, ikke en station i drift.",
+   "watch": "Om stationsprojektet bliver bygget. Sortkrudt ved Camp Minden er ikke en rumstation.",
    "source": "https://voyagertechnologies.com/",
-   "products": "Ruminfrastruktur, forsvarsteknologi og et stationsprojekt.",
+   "products": "Ruminfrastruktur, forsvarsteknologi og sortkrudt. Starlab er et projekt.",
    "customers": "Rumprogrammer og forsvarskunder.",
-   "role": "Infrastruktur i rummet. Ikke beregning som forretning.",
+   "role": "Starlab er et projekt. GOEX ved Camp Minden er sortkrudt, ikke en station.",
    "narrative": [
-    "Voyager arbejder med ruminfrastruktur og forsvarsteknologi. Starlab er et projekt om en rumstation.",
-    "Denne beskrivelse omfatter ikke en station i drift og ikke et datacenter i kredsløb."
+    "Voyager skrev 8. september 2026, at anlægget GOEX ved Camp Minden i Louisiana igen producerer sortkrudt. Datoen ligger efter beholdningen pr. 1. juni 2026. Det er forsvarsmateriale, ikke en rumstation.",
+    "Starlab er stadig et projekt om en kommerciel rumstation. Denne beskrivelse omfatter ikke en station i drift og ikke et datacenter i kredsløb."
    ],
    "narrativeSources": [
     {
      "label": "Selskabets side",
      "url": "https://voyagertechnologies.com/"
+    },
+    {
+     "label": "GOEX, 8. september 2026",
+     "url": "https://voyagertechnologies.com/insights/americas-only-black-powder-plant-is-back-in-production/"
     }
    ]
   },

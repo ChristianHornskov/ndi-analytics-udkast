@@ -261,3 +261,7 @@ Tía María er et kobberprojekt i Cocachacra, Islay, Arequipa. To forekomster, L
 HASTE er et suborbitalt testfartøj bygget ud fra Electron. Wallops i Virginia. Ikke en orbital opsendelse. Neutron er stadig under udvikling. 700 kg, largest og Iridium-overskriften er ikke kopieret. AI-udkast uden gennemgangsdato. Opsendelses-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
 
 Lynas svarede tomt. NioCorp gav 403. Intuitive Machines endte i en omdirigering. Ingen ny sætning dér.
+
+## Voyager · 2026-10-16 02:08 CEST
+
+GOEX ved Camp Minden i Louisiana producerer igen sortkrudt ifølge meddelelsen af 8. september 2026. Efter beholdningen. Ikke en rumstation. Starlab er stadig et projekt og ikke et datacenter. Only, sole, world-class og Pueblo-kvadratmeter er ikke kopieret. AI-udkast uden gennemgangsdato. Blurben under rum og compute og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
