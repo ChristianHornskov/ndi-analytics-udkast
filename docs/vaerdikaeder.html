@@ -546,7 +546,7 @@
       <div>
         <p class="lede" id="phil-lede">Indlæser…</p>
         <p class="band" id="compliance-band"></p>
-        <p class="src" style="margin-top:6px"><span class="vc-kind" style="margin-right:6px">AI-udkast</span>Teksterne er sammenfattet med AI ud fra NDI's ugebreve, bogen og selskabernes egne sider. De afventer NDI-gennemgang. Afsnit mærket NDI har kilde. <a href="om-data.html#g-ai-udkast">Om AI-udkast →</a></p>
+        <p class="src" style="margin-top:6px"><span class="vc-kind" style="margin-right:6px">AI-udkast</span>Teksterne er sammenfattet med AI ud fra NDI's offentlige indlæg, NDI's bog og selskabernes egne sider. De afventer NDI-gennemgang. Mads Christiansen er NDI's stifter; 'NDI-indlæg' med dato henviser til NDI's offentlige indlæg på den dato. Afsnit mærket NDI har kilde. <a href="om-data.html#g-ai-udkast">Om AI-udkast →</a></p>
       </div>
       <aside class="vc-callout">
         <strong>Kæden som en flod</strong>
@@ -687,7 +687,7 @@
       <div class="q-pane" id="q-pane">
         <aside class="vc-callout">
           <strong>Kort kæde med vilje.</strong>
-          NDI har ikke skrevet en egentlig analyse af kvantekæden, så siden holdes kort. Mads nævner kvantecomputere som et segment med politisk medvind og store udsving i kurserne og som eksempel på teknologier, hvis indtægter ikke passer i et regneark (BLOG 2. juni og 21. juli 2025).
+          NDI har ikke skrevet en egentlig analyse af kvantekæden, så siden holdes kort. Mads Christiansen, NDI's stifter, nævner kvantecomputere som et segment med politisk medvind og store udsving i kurserne og som eksempel på teknologier, hvis indtægter ikke passer i et regneark (NDI-indlæg 2. juni og 21. juli 2025).
           <p class="link-row" style="margin:10px 0 0"><a href="tema.html?slug=quantum&amp;fund=pmindi">Quantum-temaet i beholdningen →</a> · <a href="laer/saadan-taenker-vi.html">Hvorfor usikre indtægter ikke passer i et regneark →</a></p>
         </aside>
         <ul class="p-links" id="q-links" aria-label="Spring til" hidden></ul>
@@ -866,13 +866,13 @@
       <h2>Rum og compute: et citat, ikke en prognose</h2>
       <p class="lede" style="font-size:14px;margin-bottom:8px">Mads har gengivet en påstand fra Elon Musk om SpaceX og compute i rummet. Den står her ordret og med kilde, så du kan se, hvem der siger hvad.</p>
       <div id="quotes"></div>
-      <p class="band">Citatet er Elon Musks påstand, gengivet i NDI's ugebrev. Det er ikke NDI's forventning, ikke en prognose og ikke en anbefaling. <a href="?kaede=space#kap-kaeder" data-goto="space">Se rumkæden →</a></p>
+      <p class="band">Citatet er Elon Musks påstand, gengivet i et offentligt NDI-indlæg. Det er ikke NDI's forventning, ikke en prognose og ikke en anbefaling. <a href="?kaede=space#kap-kaeder" data-goto="space">Se rumkæden →</a></p>
     </section>
 
     <section class="chapter panel" id="kap-filosofi">
       <h2>NDI-blikket (kort)</h2>
       <div class="sm">
-        <div class="sm-card"><div class="lab">Princip</div><div class="num" style="font-size:16px;line-height:1.35;color:var(--text)">Vælg udviklingen, ikke vinderen</div><p class="src">Retningen kan man se. Den ene vinder kan man ikke udpege. Mads' overskrift, ugebrev 7. september 2026.</p></div>
+        <div class="sm-card"><div class="lab">Princip</div><div class="num" style="font-size:16px;line-height:1.35;color:var(--text)">Vælg udviklingen, ikke vinderen</div><p class="src">Retningen kan man se. Den ene vinder kan man ikke udpege. Mads' overskrift, NDI-indlæg 7. september 2026.</p></div>
         <div class="sm-card"><div class="lab">Princip</div><div class="num" style="font-size:16px;line-height:1.35;color:var(--text)">Hele kæden</div><p class="src">Råstoffer, energi og infrastruktur tæller med.</p></div>
         <div class="sm-card"><div class="lab">Princip</div><div class="num" style="font-size:16px;line-height:1.35;color:var(--text)">Knaphed</div><p class="src">Strøm, siliciumskiver, optik og folk.</p></div>
         <div class="sm-card"><div class="lab">Princip</div><div class="num" style="font-size:16px;line-height:1.35;color:var(--text)">Forsinket sandhed</div><p class="src">Offentlig beholdning pr. 1. juni 2026, ikke dagens handler.</p></div>
@@ -1475,7 +1475,7 @@
 
     // Slå et led op i en vilkårlig kæde
     const linkOf = (cid, lid) => pack.chains.find(c => c.id === cid)?.links.find(l => l.id === lid);
-    // Robotik: Mads' tre faser (BLOG 7. okt 2024)
+    // Robotik: Mads' tre faser (NDI-indlæg 7. okt 2024)
     const phys = pack.chains.find(c => c.id === 'physical');
     document.getElementById('phases').innerHTML = (phys?.phases || []).map((f, i, all) =>
       `<li class="phase${i === all.length - 2 ? ' now' : ''}${i === all.length - 1 ? ' next' : ''}"><div class="ph-n">${esc(f.n)} · ${esc(f.when)}</div><h3>${esc(f.label)}</h3><p>${esc(f.t)}</p>${f.link ? `<p style="margin-top:6px"><a href="#lk-${esc(f.link)}" data-open="${esc(f.link)}">Se leddet →</a></p>` : ''}</li>`).join('');
