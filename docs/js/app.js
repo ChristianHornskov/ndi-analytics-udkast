@@ -417,7 +417,7 @@ function renderFonden(root) {
     <section class="panel">
       <div class="metrics metrics-returns">
         <div class="metric"><div class="label">Totalafkast siden start ${gl('total')}</div><strong>${fmtPct(totAll)}</strong><small>Fra første NAV ${fmtDate(rows[0]?.d)} · DKK</small></div>
-        <div class="metric"><div class="label">Gns. årligt afkast ${gl('cagr')}</div><strong>${fmtPct(c)}</strong><small>Efter løbende omkostninger</small></div>
+        <div class="metric"><div class="label">Gns. årligt afkast siden start ${gl('cagr')}</div><strong>${fmtPct(c)}</strong><small>${fmtDate(rows[0]?.d)} - ${fmtDate(asOfPerf)} · efter løbende omkostninger</small></div>
       </div>
       ${warnHtml()}
       <div class="metrics metrics-more">
@@ -751,7 +751,7 @@ function positionsTable(list, fund) {
   hscroll(`<div class="table-wrap"><table class="data screener-table"><thead><tr>
     ${th('name','Navn')}${th('weight','Vægt %')}${th('theme','Tema')}
   </tr></thead><tbody>${list.map((p, i) => `${themeGroupRow(list, i)}<tr>
-    <td><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}" title="Beholdningsnavn: ${p.name}">${displayName(p)}</a>${hasLens(p) ? ` <a class="lens-mark" href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}#ndi-linse" title="NDI’s fem spørgsmål om selskabet (udkast)" aria-label="NDI-perspektiv for ${p.name}">◉</a>` : ''} ${weightSpark(p.isin, fund.id)}<br><small style="color:var(--muted)">${p.isin}</small>${warrantNote(p, fund)}${hitNote(p)}${mobileThemeLine(p, fund)}</td>
+    <td><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}" title="Beholdningsnavn: ${p.name}" style="display:inline-block;min-height:24px;padding-top:3px">${displayName(p)}</a>${hasLens(p) ? ` <a class="lens-mark" style="display:inline-block;min-width:24px;min-height:24px;text-align:center;line-height:24px" href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}#ndi-linse" title="NDI’s fem spørgsmål om selskabet (udkast)" aria-label="NDI-perspektiv for ${p.name}">◉</a>` : ''} ${weightSpark(p.isin, fund.id)}<br><small style="color:var(--muted)">${p.isin}</small>${warrantNote(p, fund)}${hitNote(p)}${mobileThemeLine(p, fund)}</td>
     <td>${(p.weight ?? 0).toFixed(2).replace('.', ',')}</td>
     <td>${tagsFor(p, DATA.multiTags).map((t) => `<a class="tag" href="tema.html?slug=${encodeURIComponent(t)}&fund=${fund.id}">${daTheme(t)}</a>`).join(' ')}${forslagCell(p)}</td>
   </tr>`).join('')}</tbody></table></div>`, 'Rul til siden for flere kolonner.') +
@@ -1008,6 +1008,7 @@ function renderUdforsk(root) {
     </details>
     <div class="chips" id="chips"></div>
     <p style="font-size:12px;color:var(--muted)" id="filter-status">${list.length} ${list.length === 1 ? 'resultat' : 'resultater'}${viaLens(list)} · udkast-klassifikation</p>
+    <p class="uf-machine-note" style="font-size:12px;color:var(--muted);margin:-6px 0 8px">Tema og modenhed er maskinelle <span class="badge badge-draft">forslag</span> ud fra offentlig branche/tema og afventer NDI.</p>
     ${list.length ? positionsTable(list, fund) : emptyScreener(fund)}
     ${warnHtml()}`;
 
