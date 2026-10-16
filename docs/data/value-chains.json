@@ -2212,7 +2212,7 @@
               "w": 0.2,
               "sym": "QS",
               "forslag": true,
-              "role": "QSE-5 og QS PowerBlock er design. Ikke masseproduktion og ikke et lager i drift."
+              "role": "QSE-5 er et design. QS PowerBlock er et referencedesign fra 8. oktober 2026. Adressen i San Jose er ikke en fabrik."
             },
             {
               "isin": "US29415C1018",
@@ -2281,7 +2281,7 @@
           ],
           "seeChain": null,
           "facts": [
-            "QuantumScape: QuantumScape er et batteridesign til køretøjer og nævner også QS PowerBlock til datacentre. Det er ikke masseproduktion og ikke et lager i drift.",
+            "QuantumScape: selskabet skriver, at det er stiftet i 2010, og at separatoren er keramik. Foden på forsiden, læst 16. oktober 2026, skriver 1730 Technology Drive i San Jose. Teksten siger ikke, at adressen er en fabrik. Meddelelsen 8. oktober 2026 i San Jose præsenterer QS PowerBlock som et referencedesign til rack i datacentre. Datoen ligger efter beholdningen. Det er ikke et lager i drift og ikke masseproduktion.",
             "Fluence Energy: Fluence leverer batterisystemer og software til nettet og nævner platformen Smartstack. Det er ikke et kraftværk, og teksten siger ikke, at selskabet selv laver cellerne.",
             "Eos Energy: Eos skriver, at fremstilling af Z3 begyndte i august 2023 på Eos Ingenuity Park i Turtle Creek i Pennsylvania. Det er batterier, ikke en mine og ikke et kraftværk.",
             "Solid Power: Solid Power skriver, at det udvikler faststofbatterier og leverer sulfid-elektrolyt og celleteknologi til partnere. Elektrolytsiden skriver, at elektrolytten laves i pilotskala, og at store celler testes på en linje, selskabet kalder skalerbar. Det er ikke masseproduktion. Det er ikke et lager i drift.",

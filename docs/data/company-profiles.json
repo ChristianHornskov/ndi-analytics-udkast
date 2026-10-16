@@ -2451,20 +2451,28 @@
   "US74767V1098": {
    "name": "QuantumScape",
    "theme": "andet",
-   "summary": "Udvikler faststof-batterier. Siden nævner QSE-5 til køretøjer og QS PowerBlock til datacentre. Denne tekst beskriver ikke masseproduktion og ikke et lager i drift.",
+   "summary": "Udvikler faststof-batterier og er stiftet i 2010. Foden på forsiden skriver 1730 Technology Drive i San Jose og siger ikke, at det er en fabrik. QS PowerBlock blev præsenteret 8. oktober 2026 som et referencedesign. Datoen ligger efter beholdningen. Det er ikke masseproduktion og ikke et lager i drift.",
    "watch": "Om teknologien kan produceres i mængde. QS PowerBlock er ikke et lager i drift.",
    "source": "https://www.quantumscape.com/",
    "products": "Batteridesign, herunder QSE-5 og QS PowerBlock. Ikke masseproduktion.",
    "customers": "Bilproducenter og datacentre er nævnt. Teksten beskriver ikke et lager i drift.",
-   "role": "Batteridesign. QS PowerBlock er ikke et lager i drift.",
+   "role": "Batteridesign. Adressen i San Jose er ikke skrevet som en fabrik. QS PowerBlock er et referencedesign fra 8. oktober 2026, ikke et lager i drift.",
    "narrative": [
-    "QuantumScape udvikler faststof-batterier. Siden nævner QSE-5 til køretøjer og QS PowerBlock til datacentre.",
-    "Denne tekst beskriver ikke masseproduktion og ikke et lager i drift. Snapshottet har selskabet under Andet, med et temaforslag."
+    "QuantumScape skriver, at selskabet er stiftet i 2010, og at separatoren er en keramik, der holder anode og katode fra hinanden. Lithium-anoden dannes ved første opladning. QSE-5 er nævnt til køretøjer. Foden på forsiden, læst 16. oktober 2026, skriver QuantumScape Battery, Inc. og 1730 Technology Drive, San Jose, CA 95110. Teksten siger ikke, at adressen er en fabrik.",
+    "Meddelelsen 8. oktober 2026 i San Jose præsenterer QS PowerBlock som et referencedesign til rack i datacentre. Datoen ligger efter beholdningen pr. 1. juni 2026. Det er ikke et lager i drift og ikke masseproduktion. Ordene best, first, leader, next-generation, proven og safer er ikke taget med. Snapshottet har selskabet under Andet, med et temaforslag."
    ],
    "narrativeSources": [
     {
      "label": "Selskabets side",
      "url": "https://www.quantumscape.com/"
+    },
+    {
+     "label": "Om selskabet",
+     "url": "https://www.quantumscape.com/company/"
+    },
+    {
+     "label": "QS PowerBlock",
+     "url": "https://www.quantumscape.com/quantumscape-announces-qs-powerblock-for-in-rack-energy-storage-in-ai-data-centers/"
     }
    ]
   },
