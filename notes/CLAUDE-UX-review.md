@@ -1444,3 +1444,16 @@ Main flyttede f6d6b4b → ffda4c8 (lane-B displayName i warrant-/risikolinjer + 
 ## 2026-10-16 07:47 CEST · cyklus 57b · Nasdaq-toggle (main `76b0e7d`)
 - Toggle og forklaring er tydelige, mobil 375 ok. Den guldfarvede stiplede linje er let at skelne fra fondens cyan linje. ✅
 - SHOULD: FO-personaen vil straks spørge "totalafkast vs kursindeks?". Se compliance S-N1: brug total return, eller forklar forskellen i én sætning.
+
+## 2026-10-16 07:50 CEST · cyklus 58 · Fonden graf-v2-paritet (main `0e08feb`)
+
+### MUST
+- Ingen nye.
+
+### SHOULD
+- Kurs-tilstand: takeaway og "Sådan kan du selv vurdere afkastet" siger +104,8 %, mens grafen siger +26,5 %. En privat investor ser to forskellige "afkast" for den samme periode (se compliance S-K1). Lad teksten følge den valgte visning, eller skriv "totalafkast" eksplicit.
+- Kurs + Nasdaq giver et billede, hvor det ser ud, som om fonden har klaret sig dårligt mod Nasdaq (+26,5 vs +94,5). Family office-linsen vil spørge, om grundlaget er sammenligneligt. Skjul sammenligningen i Kurs-tilstand, eller forklar forskellen (compliance S-K2).
+
+### Nice
+- Tastatur-tooltip: svg har `tabindex=0`, men ingen `aria-label`, og `.chart-readout` har ingen `aria-live="polite"`. Pil- og Home/End-navigation bliver derfor ikke læst op af skærmlæsere.
+- U-markøren er kun 12 px tekst. På 375 er tooltippet (`<title>`) ikke tilgængeligt ved berøring. Readoutet viser dog udbyttet, når cursoren står på ex-datoen. Ok.

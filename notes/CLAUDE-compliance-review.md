@@ -1432,3 +1432,19 @@ Uændret.
 - S-N1 · Skæv sammenligning: fonden vises som **totalafkast** og Nasdaq-100 som **kursindeks uden udbytte** (^NDX). Over perioden 2023-09 → 2026-10 er udbytte på ca. 0,7 %/år udeladt, så Nasdaq ser ca. 2 procentpoint lavere ud. Readout viser "Fonden +104,8 % · Nasdaq-100 +94,5 %". Det er mærket, men en fair præsentation (MiFID art. 44 / ESMA-retningslinjer om sammenligninger) kræver sammenlignelige grundlag. Brug Nasdaq-100 Total Return (XNDX), eller skriv i labelen, hvilken vej forskellen trækker ("uden udbytte, derfor lidt for lavt").
 - S-N2 · Datakilde/licens: Yahoo Finance-dagslukkekurser og navnet Nasdaq-100 i offentlig markedsføring kræver normalt en licens fra Nasdaq. Få det afklaret, eller brug en licenseret kilde, før siden bliver offentlig.
 - S-N3 · Labelen vises kun, når checkboxen er slået til. Det er ok, men readoutet "Nasdaq-100 +94,5 %" står uden "ikke benchmark" i samme linje. Overvej at gentage "(sammenligning)" i readoutet, så et screenshot ikke fjerner forbeholdet.
+
+## 2026-10-16 07:50 CEST · cyklus 58 · Kurs/Totalafkast + udbytte-U (main `0e08feb`, live = main pr. md5)
+
+- Kurs/Totalafkast-knapperne (44 px @375) er sat til Totalafkast som standard. Kurs-tilstanden har en forklaring ("uden udbytte … falder med udbyttet på ex-datoen"). Grafens data stemmer med udbyttet: 185,13 → 147,40 den 22. jan. 2025 (38,9 kr.) og 174,28 → 133,04 den 20. jan. 2026 (38,0 kr.). ✅
+- U-markører kun ved de 2 bekræftede ex-datoer. Teksten er faktuel ("Udbytte ex-dato …: 38,9 kr. pr. andel"). ✅
+- PMINDIAKK med `visning=kurs&cmp=nasdaq`: ingen knapper, ingen U-markører, ingen tal. 12m-gaten holder. ✅ 0 overflow @375/1280, 0 pageerrors.
+- Nasdaq stadig slået fra som standard, med label. "Intet fast benchmark" står uændret. ✅
+
+### SHOULD (før go-live)
+- S-K1 · Tal, der ikke passer sammen, i Kurs-tilstand: grafen og readoutet viser "Fonden +26,5 %", men overskriften lige under (#chart-takeaway) siger stadig "Fonden steg +104,8 % i den valgte periode". Det samme gælder "afkastet +104,8 % siden start". Tallet er det korrekte totalafkast, men det står uden mærkning ved siden af et andet tal. Skriv "Totalafkastet steg …" i takeaway, eller lad teksten følge den valgte visning.
+- S-K2 · Kurs + Nasdaq er skævt den anden vej: "Fonden +26,5 % · Nasdaq-100 +94,5 %". Fondens kurs er reduceret med ca. 77 kr. udbytte, mens Nasdaq-indekset kun mister ca. 0,7 % om året. Fonden ser derfor markant dårligere ud end sit egentlige afkast. Det er ikke ulovligt til fondens fordel, men det er ikke en fair sammenligning (samme princip som S-N1). Skjul Nasdaq i Kurs-tilstand, eller tilføj "fondens kurs er reduceret med udbetalt udbytte" i labelen.
+- S-K3 (lav) · U-tooltip: tilføj "Tidligere udbytte er ingen garanti for fremtidigt udbytte" (ex-datoer og beløb kan læses som en fast udlodning).
+- S-N1, S-N2, S-N3 (Nasdaq TR/licens/readout) åbne. M1 uændret. S3, S5, S12 åbne.
+
+### ÅOP
+Uændret.
