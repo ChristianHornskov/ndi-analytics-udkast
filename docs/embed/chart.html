@@ -61,7 +61,7 @@
    <button type="button" class="life-bit-all" data-period="all" aria-label="Hele perioden" aria-pressed="true"></button>
    <button type="button" class="life-bit-ytd" id="life-bit-ytd" data-period="ytd" aria-label="År til dato" aria-pressed="false"></button>
   </div>
-  <p class="life-bit-say" id="life-bit-say"></p>
+  <p class="life-bit-say" id="life-bit-say" aria-live="polite"></p>
  </div>
 
  <div class="chart-legends">
@@ -94,7 +94,7 @@
   <p class="day-say" id="day-say" aria-live="polite"></p>
   <p class="day-hop"><button type="button" id="first-below" hidden>Første dag <span class="keep">under nul</span></button></p>
  </div>
- <p class="chart-context" id="chart-context" hidden></p>
+ <p class="chart-context" id="chart-context" hidden aria-live="polite"></p>
  <p class="chart-pointe" id="chart-pointe"></p>
 
  <div class="metrics-row">
