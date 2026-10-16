@@ -859,3 +859,13 @@ Datoen er 6. august 2026, efter beholdningen. Meddelelsen af 13. oktober 2026 si
 Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Groves står. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `29388e6` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 02:01 CEST. Southern Copper skriver, at Tía María er et kobberprojekt. Ikke færdig.**
+
+Projektet ligger i Cocachacra i provinsen Islay i Arequipa. Forekomsterne hedder La Tapada og Tía María. Tilladelser til byggeri er ikke en mine i drift. Beløb og rente på en obligation er ikke taget med. Ingen `reviewedAt`. Blurben under råstoffer og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Tía María står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `1972434` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

@@ -1173,20 +1173,24 @@
   "US84265V1052": {
    "name": "Southern Copper",
    "theme": "energy-resources",
-   "summary": "Driver minedrift i Peru og Mexico. Selskabet skriver, at de vigtigste produkter er kobber, molybdæn, sølv og zink.",
-   "watch": "Drift af minerne og kobberpriser.",
+   "summary": "Driver minedrift i Peru og Mexico. Selskabet skriver, at de vigtigste produkter er kobber, molybdæn, sølv og zink. Siden om Tía María skriver, at det er et kobberprojekt i Arequipa, ikke en mine i drift.",
+   "watch": "Drift af minerne. Tía María er et projekt, ikke en mine i drift.",
    "source": "https://www.southerncoppercorp.com/",
-   "products": "Kobber, molybdæn, sølv og zink.",
+   "products": "Kobber, molybdæn, sølv og zink. Tía María er et projekt.",
    "customers": "Industrikunder.",
-   "role": "Råstof.",
+   "role": "Kobber i drift. Tía María i Arequipa er et projekt, ikke en mine i drift.",
    "narrative": [
     "Southern Copper skriver, at de vigtigste produkter er kobber, molybdæn, sølv og zink, og at selskabet er en del af Grupo México.",
-    "Det er minedrift i denne beskrivelse, ikke et kraftværk."
+    "Siden om Tía María skriver, at det er et kobberprojekt i Cocachacra i provinsen Islay i Arequipa. Projektet har to forekomster, La Tapada og Tía María. Siden skriver, at der er tilladelser til at bygge projektet. Det er ikke en mine i drift. Det er heller ikke et kraftværk."
    ],
    "narrativeSources": [
     {
      "label": "Selskabets side",
      "url": "https://www.southerncoppercorp.com/"
+    },
+    {
+     "label": "Tía María",
+     "url": "https://southerncoppercorp.com/tiamaria/"
     }
    ]
   },

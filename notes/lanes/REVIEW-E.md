@@ -251,3 +251,7 @@ Thacker Pass i det nordlige Nevada. Byggeriet begyndte i begyndelsen af 2023, f�
 ## Oklo · 2026-10-16 01:59 CEST
 
 Groves er en testreaktor. Selskabet skrev 6. august 2026, at den nåede en kædereaktion ved lav effekt. Efter beholdningen. Texas står i meddelelsen af 13. oktober 2026. Ikke et kommercielt kraftværk. Ikke salg af isotoper. Aurora ved Idaho National Laboratory er en foreløbig sikkerhedsanalyse af 11. juni 2026, ikke et værk. Groves-2 Forge er et planlagt pilotanlæg og er ikke bygget. First, leading, NYSE og politiker-citater er ikke kopieret. AI-udkast uden gennemgangsdato. Atomkraft-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Southern Copper · 2026-10-16 02:01 CEST
+
+Tía María er et kobberprojekt i Cocachacra, Islay, Arequipa. To forekomster, La Tapada og Tía María. Tilladelser til byggeri er ikke en mine i drift. World-class, first, primer og obligationens beløb er ikke kopieret. AI-udkast uden gennemgangsdato. Råstof-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
