@@ -1,10 +1,10 @@
 {
   "asOf": "2026-06-01",
-  "note": "Forsinket beholdning. Vægte er eksponering, ikke en anbefaling og ikke en bevidst overvægt. Tekst inspireret af NDI ugebreve. I energi- og rumkæden er eksemplerne valgt efter forretning. Samme selskab kan stå på mere end ét led.",
+  "note": "Forsinket beholdning. Vægte er eksponering, ikke en anbefaling og ikke en bevidst overvægt. Tekst inspireret af NDI's offentlige formidling. I energi- og rumkæden er eksemplerne valgt efter forretning. Samme selskab kan stå på mere end ét led.",
   "philosophy": {
     "lede": "NDI ser teknologi som værdikæder, ikke som de klassiske 11 sektorer. Et selskab kan høre til flere led. Vi kan ikke forudsige, hvilket selskab der vinder, men vi kan følge, hvor i kæden efterspørgslen presser på. Derfor ejer fonden mange selskaber på tværs af hele kæden.",
     "flod": "Vi ser AI-værdikæden som et flodsystem med en række dæmninger. Vandet repræsenterer efterspørgslen, og dæmningerne repræsenterer flaskehalse.",
-    "flodSource": "NDI ugebrev, 30. marts 2026",
+    "flodSource": "NDI-indlæg, 30. marts 2026",
     "dams": [
       {
         "id": "energi",
@@ -118,7 +118,7 @@
       "id": "ai-compute",
       "title": "AI-compute",
       "why": "Mads beskriver AI-værdikæden som et flodsystem: når én dæmning (flaskehals) letter, flytter presset. Efterspørgslen kommer i stigende grad fra bunden — først fra AI-agenter, der selv udfører opgaver (agentisk AI), og snart fra fysisk AI som robotter.",
-      "source": "BLOG 30. marts 2026",
+      "source": "NDI-indlæg 30. marts 2026",
       "links": [
         {
           "id": "energi",
@@ -177,14 +177,14 @@
             }
           ],
           "seeChain": null,
-          "shift": "I USA får datacentre i stigende grad lov til at bygge deres egen strøm (BLOG 30. marts 2026). NDI skriver, at ét års chipproduktion potentielt kan kræve strøm svarende til omkring to tredjedele af USA's installerede kapacitet (BLOG 10. august 2026).",
-          "src": "BLOG 30. marts 2026 · 10. august 2026",
+          "shift": "I USA får datacentre i stigende grad lov til at bygge deres egen strøm (NDI-indlæg 30. marts 2026). NDI skriver, at ét års chipproduktion potentielt kan kræve strøm svarende til omkring to tredjedele af USA's installerede kapacitet (NDI-indlæg 10. august 2026).",
+          "src": "NDI-indlæg 30. marts 2026 · 10. august 2026",
           "kind": "ndi",
           "short": "Energi",
           "press": {
             "level": "dam",
             "t": "Mads' første flaskehals i AI-udbygningen",
-            "src": "BLOG 30. marts 2026"
+            "src": "NDI-indlæg 30. marts 2026"
           }
         },
         {
@@ -244,14 +244,14 @@
             }
           ],
           "seeChain": null,
-          "shift": "NDI skriver: \"Er datacentret fremtidens fabrik, bliver det strategisk afgørende, om intelligensen produceres i Vesten eller i Kina\" (BLOG 27. juli 2026).",
-          "src": "BLOG 30. marts 2026 · 27. juli 2026",
+          "shift": "NDI skriver: \"Er datacentret fremtidens fabrik, bliver det strategisk afgørende, om intelligensen produceres i Vesten eller i Kina\" (NDI-indlæg 27. juli 2026).",
+          "src": "NDI-indlæg 30. marts 2026 · 27. juli 2026",
           "kind": "ndi",
           "short": "Datacentre",
           "press": {
             "level": "dam",
             "t": "Mange faktorer kan skabe flaskehalse her, fra byggeri til tilladelser",
-            "src": "BLOG 30. marts 2026"
+            "src": "NDI-indlæg 30. marts 2026"
           }
         },
         {
@@ -310,13 +310,13 @@
             }
           ],
           "seeChain": null,
-          "src": "BLOG 30. marts 2026 · BOG s. 75–76",
+          "src": "NDI-indlæg 30. marts 2026 · NDI's bog s. 75–76",
           "kind": "ndi",
           "short": "Chipdesign",
           "press": {
             "level": "dam",
             "t": "Halvledere er tredje flaskehals, med fokus på XPU'er og CPU'er",
-            "src": "BLOG 30. marts 2026"
+            "src": "NDI-indlæg 30. marts 2026"
           }
         },
         {
@@ -375,7 +375,7 @@
             }
           ],
           "seeChain": null,
-          "src": "BLOG 21. oktober 2024 · 8. juni 2025",
+          "src": "NDI-indlæg 21. oktober 2024 · 8. juni 2025",
           "kind": "ndi",
           "short": "Udstyr",
           "press": {
@@ -440,8 +440,8 @@
             }
           ],
           "seeChain": null,
-          "shift": "Chipfabrikker i Vesten er blevet et strategisk tema hos NDI: \"Vi skal bygge kraftværker, elnet, datacentre, chipfabrikker, robotfabrikker, forsvarsindustri og rum-infrastruktur\" (BLOG 24. august 2026).",
-          "src": "BLOG 19. maj 2024 · 24. august 2026",
+          "shift": "Chipfabrikker i Vesten er blevet et strategisk tema hos NDI: \"Vi skal bygge kraftværker, elnet, datacentre, chipfabrikker, robotfabrikker, forsvarsindustri og rum-infrastruktur\" (NDI-indlæg 24. august 2026).",
+          "src": "NDI-indlæg 19. maj 2024 · 24. august 2026",
           "kind": "ndi",
           "short": "Foundry",
           "press": {
@@ -506,14 +506,14 @@
             }
           ],
           "seeChain": null,
-          "shift": "NDI så \"nye vækstlommer længere nede i værdikæden\" i hukommelse (BLOG 6. oktober 2025). I 2026 nævnes hukommelse som et af de steder, hvor der allerede er begyndende flaskehalse (BLOG 30. marts 2026).",
-          "src": "BLOG 16. december 2024 · 30. marts 2026",
+          "shift": "NDI så \"nye vækstlommer længere nede i værdikæden\" i hukommelse (NDI-indlæg 6. oktober 2025). I 2026 nævnes hukommelse som et af de steder, hvor der allerede er begyndende flaskehalse (NDI-indlæg 30. marts 2026).",
+          "src": "NDI-indlæg 16. december 2024 · 30. marts 2026",
           "kind": "ndi",
           "short": "Hukommelse",
           "press": {
             "level": "early",
             "t": "Et af de led, hvor NDI allerede ser pres, sammen med optik",
-            "src": "BLOG 30. marts 2026"
+            "src": "NDI-indlæg 30. marts 2026"
           }
         },
         {
@@ -572,14 +572,14 @@
             }
           ],
           "seeChain": null,
-          "shift": "NDI skriver, at efterspørgslen efter regnekraft understøtter \"hele værdikæden omkring AI, fra chips og memory til optiske interconnects, datacentre og energi\" (BLOG 29. juni 2026).",
-          "src": "BLOG 30. marts 2026 · 29. juni 2026",
+          "shift": "NDI skriver, at efterspørgslen efter regnekraft understøtter \"hele værdikæden omkring AI, fra chips og memory til optiske interconnects, datacentre og energi\" (NDI-indlæg 29. juni 2026).",
+          "src": "NDI-indlæg 30. marts 2026 · 29. juni 2026",
           "kind": "ndi",
           "short": "Optik",
           "press": {
             "level": "early",
             "t": "Et af de led, hvor NDI allerede ser pres, sammen med hukommelse",
-            "src": "BLOG 30. marts 2026"
+            "src": "NDI-indlæg 30. marts 2026"
           }
         },
         {
@@ -639,13 +639,13 @@
             }
           ],
           "seeChain": null,
-          "src": "BLOG 30. marts 2026",
+          "src": "NDI-indlæg 30. marts 2026",
           "kind": "ndi",
           "short": "Servere",
           "press": {
             "level": "group",
             "t": "Nævnt som en del af halvlederflaskehalsen",
-            "src": "BLOG 30. marts 2026"
+            "src": "NDI-indlæg 30. marts 2026"
           }
         },
         {
@@ -705,14 +705,14 @@
             }
           ],
           "seeChain": null,
-          "shift": "NDI skriver, at AI-økonomien er begyndt at finansiere sig selv (BLOG 12. oktober 2026).",
-          "src": "BLOG 30. marts 2026 · 27. juli 2026",
+          "shift": "NDI skriver, at AI-økonomien er begyndt at finansiere sig selv (NDI-indlæg 12. oktober 2026).",
+          "src": "NDI-indlæg 30. marts 2026 · 27. juli 2026",
           "kind": "ndi",
           "short": "Cloud",
           "press": {
             "level": "open",
             "t": "Endnu ingen tydelige flaskehalse. Mere et spørgsmål om, hvem der klarer sig",
-            "src": "BLOG 30. marts 2026"
+            "src": "NDI-indlæg 30. marts 2026"
           }
         },
         {
@@ -772,13 +772,13 @@
             }
           ],
           "seeChain": null,
-          "src": "BLOG 30. marts 2026",
+          "src": "NDI-indlæg 30. marts 2026",
           "kind": "ndi",
           "short": "Data",
           "press": {
             "level": "open",
             "t": "Interessant, men stadig en ret uafklaret forretningsmodel",
-            "src": "BLOG 30. marts 2026"
+            "src": "NDI-indlæg 30. marts 2026"
           }
         },
         {
@@ -837,14 +837,14 @@
             }
           ],
           "seeChain": null,
-          "shift": "I 2024 var NDI forsigtig, fordi softwareselskaber var dyrt prissat (BLOG 2. juni 2024). I 2026 gælder tvivlen selve forretningsmodellen, fordi AI kan true den (BLOG 13. april 2026).",
-          "src": "BLOG 2. juni 2024 · 13. april 2026",
+          "shift": "I 2024 var NDI forsigtig, fordi softwareselskaber var dyrt prissat (NDI-indlæg 2. juni 2024). I 2026 gælder tvivlen selve forretningsmodellen, fordi AI kan true den (NDI-indlæg 13. april 2026).",
+          "src": "NDI-indlæg 2. juni 2024 · 13. april 2026",
           "kind": "ndi",
           "short": "Software",
           "press": {
             "level": "open",
             "t": "Svært at identificere de langsigtede selskaber, og feltet er relativt højt prissat",
-            "src": "BLOG 30. marts 2026"
+            "src": "NDI-indlæg 30. marts 2026"
           }
         },
         {
@@ -904,14 +904,14 @@
             }
           ],
           "seeChain": null,
-          "shift": "NDI skriver, at efterspørgslen efter regnekraft i stigende grad kommer fra bunden af kæden: \"Først fra agentic AI og snart fra fysisk AI\" (BLOG 30. marts 2026). Agenterne er altså der, hvor trækket kommer fra nu.",
-          "src": "BLOG 30. marts 2026 · 7. oktober 2024",
+          "shift": "NDI skriver, at efterspørgslen efter regnekraft i stigende grad kommer fra bunden af kæden: \"Først fra agentic AI og snart fra fysisk AI\" (NDI-indlæg 30. marts 2026). Agenterne er altså der, hvor trækket kommer fra nu.",
+          "src": "NDI-indlæg 30. marts 2026 · 7. oktober 2024",
           "kind": "ndi",
           "short": "Agenter",
           "press": {
             "level": "source",
             "t": "Efterspørgslen kommer i stigende grad herfra: først fra agentisk AI",
-            "src": "BLOG 30. marts 2026"
+            "src": "NDI-indlæg 30. marts 2026"
           }
         },
         {
@@ -970,14 +970,14 @@
             }
           ],
           "seeChain": "physical",
-          "shift": "Ifølge NDI er fysisk AI den næste kilde til efterspørgsel efter regnekraft, \"snart\" efter agentisk AI (BLOG 30. marts 2026). Der er ingen præcise årstal.",
-          "src": "BLOG 30. marts 2026 · 7. oktober 2024",
+          "shift": "Ifølge NDI er fysisk AI den næste kilde til efterspørgsel efter regnekraft, \"snart\" efter agentisk AI (NDI-indlæg 30. marts 2026). Der er ingen præcise årstal.",
+          "src": "NDI-indlæg 30. marts 2026 · 7. oktober 2024",
           "kind": "ndi",
           "short": "Fysisk AI",
           "press": {
             "level": "source",
             "t": "… og snart fra fysisk AI",
-            "src": "BLOG 30. marts 2026"
+            "src": "NDI-indlæg 30. marts 2026"
           }
         }
       ],
@@ -992,7 +992,7 @@
           "open": "Ingen tydelig flaskehals ifølge NDI",
           "source": "Her starter efterspørgslen ifølge NDI"
         },
-        "note": "Mærkerne gengiver, hvad NDI har skrevet (BLOG 30. marts 2026), og hvor det er vores tolkning, står det. De er ikke en prognose, ikke en rangering af selskaber og ikke en anbefaling. Ifølge Mads flytter presset til næste led, når en flaskehals løses."
+        "note": "Mærkerne gengiver, hvad NDI har skrevet (NDI-indlæg 30. marts 2026), og hvor det er vores tolkning, står det. De er ikke en prognose, ikke en rangering af selskaber og ikke en anbefaling. Ifølge Mads flytter presset til næste led, når en flaskehals løses."
       },
       "risks": {
         "title": "Hvad kan gå galt i AI-floden?",
@@ -1008,7 +1008,7 @@
             ],
             "ndi": {
               "t": "Ét års chipproduktion kan potentielt kræve strøm svarende til omkring to tredjedele af USA's installerede kapacitet.",
-              "src": "BLOG 10. august 2026"
+              "src": "NDI-indlæg 10. august 2026"
             }
           },
           {
@@ -1022,7 +1022,7 @@
             ],
             "ndi": {
               "t": "\"Vi skal bygge kraftværker, elnet, datacentre, chipfabrikker, robotfabrikker, forsvarsindustri og rum-infrastruktur.\"",
-              "src": "BLOG 24. august 2026"
+              "src": "NDI-indlæg 24. august 2026"
             }
           },
           {
@@ -1047,7 +1047,7 @@
             ],
             "ndi": {
               "t": "Når en dæmning letter, flytter presset til næste led i flodsystemet.",
-              "src": "BLOG 30. marts 2026"
+              "src": "NDI-indlæg 30. marts 2026"
             }
           },
           {
@@ -1061,7 +1061,7 @@
             ],
             "ndi": {
               "t": "\"Kunden køber løsningen på opgaven, ikke modellen bag.\" Chips, energi og datacentre kan ifølge NDI fortsat være differentierede.",
-              "src": "BLOG 27. juli 2026"
+              "src": "NDI-indlæg 27. juli 2026"
             }
           },
           {
@@ -1074,7 +1074,7 @@
             ],
             "ndi": {
               "t": "Efterspørgslen kommer i stigende grad fra agentisk AI og snart fra fysisk AI. Der står ingen årstal.",
-              "src": "BLOG 30. marts 2026"
+              "src": "NDI-indlæg 30. marts 2026"
             }
           }
         ],
@@ -1093,7 +1093,7 @@
               "Pengene, der investeres"
             ],
             "ok": 1,
-            "why": "Vandet er efterspørgslen, og dæmningerne er flaskehalse (NDI, BLOG 30. marts 2026).",
+            "why": "Vandet er efterspørgslen, og dæmningerne er flaskehalse (NDI, NDI-indlæg 30. marts 2026).",
             "sec": "a-pane",
             "more": "Se flodkortet"
           },
@@ -1105,7 +1105,7 @@
               "Energi"
             ],
             "ok": 2,
-            "why": "Mads kalder energi den første flaskehals, datacentre den anden og halvledere den tredje (BLOG 30. marts 2026).",
+            "why": "Mads kalder energi den første flaskehals, datacentre den anden og halvledere den tredje (NDI-indlæg 30. marts 2026).",
             "sec": "lk-energi",
             "more": "Se leddet energi"
           },
@@ -1117,7 +1117,7 @@
               "Fra elnettet"
             ],
             "ok": 0,
-            "why": "\"Først fra agentic AI og snart fra fysisk AI\" (BLOG 30. marts 2026). Der står ingen årstal.",
+            "why": "\"Først fra agentic AI og snart fra fysisk AI\" (NDI-indlæg 30. marts 2026). Der står ingen årstal.",
             "sec": "lk-agents",
             "more": "Se leddet agenter"
           },
@@ -1129,7 +1129,7 @@
               "Software og agenter"
             ],
             "ok": 1,
-            "why": "\"Særligt hukommelse og optisk connectivity er områder, hvor vi allerede ser begyndende flaskehalse\" (BLOG 30. marts 2026).",
+            "why": "\"Særligt hukommelse og optisk connectivity er områder, hvor vi allerede ser begyndende flaskehalse\" (NDI-indlæg 30. marts 2026).",
             "sec": "lk-memory",
             "more": "Se leddet hukommelse"
           },
@@ -1141,7 +1141,7 @@
               "Alle led bliver lige store"
             ],
             "ok": 0,
-            "why": "Floden løber videre, og presset flytter til næste dæmning (BLOG 30. marts 2026). Derfor ser NDI på hele kæden og ikke kun ét led.",
+            "why": "Floden løber videre, og presset flytter til næste dæmning (NDI-indlæg 30. marts 2026). Derfor ser NDI på hele kæden og ikke kun ét led.",
             "sec": "a-risk",
             "more": "Hvad kan gå galt?"
           }
@@ -1201,7 +1201,7 @@
         },
         {
           "term": "Open weights",
-          "t": "En AI-model, hvor de lærte tal (vægtene) er frit tilgængelige, så andre kan køre den selv. NDI kalder det \"en accelerator for hele AI-økonomien\" (BLOG 27. juli 2026).",
+          "t": "En AI-model, hvor de lærte tal (vægtene) er frit tilgængelige, så andre kan køre den selv. NDI kalder det \"en accelerator for hele AI-økonomien\" (NDI-indlæg 27. juli 2026).",
           "link": "cloud"
         },
         {
@@ -1216,7 +1216,7 @@
       "id": "physical",
       "title": "Robotik & fysisk AI",
       "why": "Når AI får krop, bliver det til robotter, selvkørende biler, droner og automatiserede fabrikker. NDI ser det som næste store fase efter chatbots og AI-hjælpere i de programmer, man allerede bruger (copilots).",
-      "source": "BLOG 7. okt 2024 · BOG s. 40–43",
+      "source": "NDI-indlæg 7. okt 2024 · NDI's bog s. 40–43",
       "links": [
         {
           "id": "components",
@@ -1276,7 +1276,7 @@
             }
           ],
           "seeChain": null,
-          "src": "BLOG 10. juni 2024",
+          "src": "NDI-indlæg 10. juni 2024",
           "kind": "ndi",
           "short": "Komponenter",
           "brief": {
@@ -1346,7 +1346,7 @@
             }
           ],
           "seeChain": null,
-          "src": "BLOG 10. juni 2024 · 23. juni 2025",
+          "src": "NDI-indlæg 10. juni 2024 · 23. juni 2025",
           "kind": "ndi",
           "short": "Simulering",
           "brief": {
@@ -1354,7 +1354,7 @@
             "why": {
               "k": "Intet mærke",
               "t": "NDI nævner simulering som en del af feltet, men ikke som en flaskehals.",
-              "src": "BLOG 10. juni 2024 · 23. juni 2025",
+              "src": "NDI-indlæg 10. juni 2024 · 23. juni 2025",
               "kind": "ndi",
               "level": "open"
             }
@@ -1416,8 +1416,8 @@
             }
           ],
           "seeChain": null,
-          "shift": "NDI venter, at fysisk AI \"snart\" bliver den næste kilde til efterspørgsel efter regnekraft, efter agentisk AI (BLOG 30. marts 2026). Der er ingen præcise årstal.",
-          "src": "BLOG 7. oktober 2024 · 17. marts 2025 · BOG s. 40–43 og 118–119",
+          "shift": "NDI venter, at fysisk AI \"snart\" bliver den næste kilde til efterspørgsel efter regnekraft, efter agentisk AI (NDI-indlæg 30. marts 2026). Der er ingen præcise årstal.",
+          "src": "NDI-indlæg 7. oktober 2024 · 17. marts 2025 · NDI's bog s. 40–43 og 118–119",
           "kind": "ndi",
           "short": "Robotter",
           "brief": {
@@ -1425,7 +1425,7 @@
             "why": {
               "k": "Næste fase",
               "t": "Mads ser automatisering og robotisering som fase 3, den fase der vil ændre måden, vi lever på.",
-              "src": "BLOG 7. oktober 2024",
+              "src": "NDI-indlæg 7. oktober 2024",
               "kind": "ndi",
               "level": "next"
             }
@@ -1453,10 +1453,10 @@
           "link": "robots"
         }
       ],
-      "phasesSrc": "BLOG 7. oktober 2024 · BOG s. 39–43. Faserne er Mads' inddeling. Der er ingen præcise årstal for fase 3.",
+      "phasesSrc": "NDI-indlæg 7. oktober 2024 · NDI's bog s. 39–43. Faserne er Mads' inddeling. Der er ingen præcise årstal for fase 3.",
       "phasesQuote": {
         "q": "Det, som vil ændre måden vi lever på, er den automatisering og robotisering, som vil skabe fase 3",
-        "src": "BLOG 7. oktober 2024"
+        "src": "NDI-indlæg 7. oktober 2024"
       },
       "icon": "🤖",
       "glossary": [
@@ -1566,7 +1566,7 @@
             ],
             "ndi": {
               "t": "Mads skriver, at Vesten skal indhente Kinas forspring i robotproduktion.",
-              "src": "BLOG 17. marts 2025"
+              "src": "NDI-indlæg 17. marts 2025"
             }
           },
           {
@@ -1605,7 +1605,7 @@
             ],
             "ndi": {
               "t": "NDI skriver, at efterspørgslen efter compute først kommer fra agentisk AI og \"snart fra fysisk AI\". Der står ingen årstal.",
-              "src": "BLOG 30. marts 2026"
+              "src": "NDI-indlæg 30. marts 2026"
             }
           }
         ],
@@ -1623,7 +1623,7 @@
               "Internet og mobil"
             ],
             "ok": 1,
-            "why": "Fase 1 er modning, fase 2 er copilots, og fase 3 er automatisering og robotisering, hvor AI får krop (BLOG 7. oktober 2024).",
+            "why": "Fase 1 er modning, fase 2 er copilots, og fase 3 er automatisering og robotisering, hvor AI får krop (NDI-indlæg 7. oktober 2024).",
             "sec": "phases",
             "more": "Se de tre faser"
           },
@@ -1635,7 +1635,7 @@
               "Også droner, fly og andre autonome systemer"
             ],
             "ok": 2,
-            "why": "NDI forstår robotter bredt som \"droner, fly, soldater, missiler og andre autonome systemer\" (BLOG 17. marts 2025).",
+            "why": "NDI forstår robotter bredt som \"droner, fly, soldater, missiler og andre autonome systemer\" (NDI-indlæg 17. marts 2025).",
             "sec": "lk-robots",
             "more": "Se leddet robotter"
           },
@@ -1672,7 +1672,7 @@
       "id": "energy",
       "title": "Energi & elektrificering",
       "why": "AI, robotter og elbiler kræver meget mere strøm. NDI ser energi som den første flaskehals i AI-udbygningen og som en del af kapløbet om strøm. Eksemplerne er valgt efter forretning, ikke efter den største vægt i temaet. Gasselskaberne under elproduktion leverer brændsel. De er ikke miner. Navnene under atomkraft og SMR er ikke beskrevet som værker i kommerciel drift.",
-      "source": "BLOG 30. marts 2026 · 7. juli 2025 · 10. august 2026",
+      "source": "NDI-indlæg 30. marts 2026 · 7. juli 2025 · 10. august 2026",
       "exampleRule": "PMINDI pr. 2026-06-01. Et selskab kan stå på mere end ét led. weightSum er summen af de navngivne eksempler, ikke temaets samlede vægt i themes.json.",
       "omitted": [
         {
@@ -1707,7 +1707,7 @@
           "icon": "⚡",
           "label": "Elproduktion",
           "blurb": "Strømmen skal produceres et sted: i gas-, sol-, vind- og atomkraftværker. Listen rummer elselskaber, der driver værkerne, gasselskaber, der leverer brændslet, og selskaber, der laver udstyret, fx turbiner, solpaneler, stativer og invertere (de kasser, der gør solstrøm klar til nettet). Mange af dem driver ikke selv et kraftværk.",
-          "ndi": "NDI har skrevet om gas, gasturbiner, sol, vind og producenter tæt på datacentre (ugebrev 30. marts 2026). CoreWeave, Nebius og IREN er med i energitemaet som datacentre. De står ikke her. ProPetro skriver, at arbejdet er trykpumpning i Permian-bassinet. Det er service til boringer og står heller ikke her.",
+          "ndi": "NDI har skrevet om gas, gasturbiner, sol, vind og producenter tæt på datacentre (NDI-indlæg 30. marts 2026). CoreWeave, Nebius og IREN er med i energitemaet som datacentre. De står ikke her. ProPetro skriver, at arbejdet er trykpumpning i Permian-bassinet. Det er service til boringer og står heller ikke her.",
           "themes": [
             "energy",
             "energy-resources",
@@ -1955,8 +1955,8 @@
             "Sunrun: Sunrun skriver, at selskabet er dannet i 2007, og at det leverer solservice til boliger. Over 1 million kunder er afrundet og gælder pr. august 2024, før beholdningen. Servicen er solgt i 22 stater, Washington D.C. og Puerto Rico. Aftalerne er skrevet som 20 eller 25 år. Det er service hos kunden, ikke et kraftværk.",
             "Enphase Energy: Enphase skriver, at selskabet er stiftet i 2006 i Californien, og at det laver mikroinvertere. Kontraktproduktion i USA begyndte i 2023. Produktionssiden skriver, at der sendes fra kontraktfabrikker i South Carolina og Texas, og at Texas også har linjer til IQ-batterier. Kapaciteten pr. anlæg er 5 millioner mikroinvertere i kvartalet. Batterikapaciteten i USA er 65 MWh i kvartalet. Det er kapacitet, ikke et målt år. Tidslinjen siger mere end 73 millioner mikroinvertere i 2024 og mere end 4 millioner systemer i 2025. Begge ligger før beholdningen. Om-siden skriver omkring 89,4 millioner mikroinvertere og omkring 5,3 millioner systemer uden dato. Siden er læst 16. oktober 2026, så de to tal er ikke beholdningens tal. Det er udstyr, ikke et kraftværk."
           ],
-          "shift": "I USA får datacentre i stigende grad lov til at bygge deres egen strøm (BLOG 30. marts 2026). NDI har skrevet om energiudbygning via LNG, olie, atomkraft og fission (BLOG 1. september 2025).",
-          "src": "BLOG 30. marts 2026 · 1. september 2025 · 12. maj 2025",
+          "shift": "I USA får datacentre i stigende grad lov til at bygge deres egen strøm (NDI-indlæg 30. marts 2026). NDI har skrevet om energiudbygning via LNG, olie, atomkraft og fission (NDI-indlæg 1. september 2025).",
+          "src": "NDI-indlæg 30. marts 2026 · 1. september 2025 · 12. maj 2025",
           "kind": "ndi",
           "short": "Elproduktion",
           "brief": {
@@ -1964,7 +1964,7 @@
             "why": {
               "k": "Pres",
               "t": "Mads kalder energi den første flaskehals i AI-udbygningen.",
-              "src": "BLOG 30. marts 2026",
+              "src": "NDI-indlæg 30. marts 2026",
               "kind": "ndi",
               "level": "dam"
             }
@@ -1975,7 +1975,7 @@
           "icon": "◉",
           "label": "Atomkraft og SMR",
           "blurb": "Små atomreaktorer (SMR) er reaktorer, der bygges som moduler og kan placeres tættere på forbruget. Feltet er tidligt. Ingen af selskaberne her beskrives som et anlæg i kommerciel drift. Nogle har designs og ansøgninger. Andre udvikler brændsel eller laver reaktorer til flåden.",
-          "ndi": "NDI har skrevet om energiudbygning via atomkraft, og om at tidslinjer og indtægter er usikre (ugebreve 27. januar 2025, 23. juni 2025 og 21. juli 2025). Store elselskaber med eksisterende atomkraft står under elproduktion.",
+          "ndi": "NDI har skrevet om energiudbygning via atomkraft, og om at tidslinjer og indtægter er usikre (NDI-indlæg 27. januar 2025, 23. juni 2025 og 21. juli 2025). Store elselskaber med eksisterende atomkraft står under elproduktion.",
           "themes": [
             "space",
             "energy",
@@ -2060,8 +2060,8 @@
             "Oklo: Oklo skrev 6. august 2026, at testreaktoren Groves nåede en kædereaktion ved lav effekt. Det er efter beholdningen. Det er ikke et kraftværk i drift og ikke salg af isotoper.",
             "Lightbridge: Lightbridge skriver, at selskabet udvikler metalliske brændselsstave med en kerne af uran og zirkonium. Hovedsædet ligger i Reston i Virginia. Det er ikke et værk i drift. Selskabet skrev 9. september 2026, at det har fået adgang til at bestråle beklædte stave i Advanced Test Reactor ved Idaho National Laboratory. Meddelelsen siger, at testen skal gennemføres. Den er ikke gennemført i teksten. Det er efter beholdningen. Det er en testreaktor, ikke et kraftværk."
           ],
-          "shift": "NDI skrev, at USA ventes at rykke hurtigt på SMR (BLOG 27. januar 2025). Baggrund: tidslinjerne er usikre og afhænger af godkendelser.",
-          "src": "BLOG 27. januar 2025 · 23. juni 2025 · 21. juli 2025",
+          "shift": "NDI skrev, at USA ventes at rykke hurtigt på SMR (NDI-indlæg 27. januar 2025). Baggrund: tidslinjerne er usikre og afhænger af godkendelser.",
+          "src": "NDI-indlæg 27. januar 2025 · 23. juni 2025 · 21. juli 2025",
           "kind": "ndi",
           "short": "Atomkraft",
           "brief": {
@@ -2079,7 +2079,7 @@
           "icon": "⌒",
           "label": "Elnet, transformere og transmission",
           "blurb": "Strømmen skal fra kraftværk til datacenter. Det kræver ledninger, transformerstationer og selskaber, der bygger og udstyrer nettet. Quanta, Primoris og MYR Group bygger nettet. De producerer ikke strømmen. Andre laver udstyr eller software til nettet.",
-          "ndi": "NDI har skrevet om mangel på transformere, køling og transmissionskapacitet (ugebrev 10. august 2026). Køling hører med i flaskehalsen. Selskaber, der alene laver ventilation, står ikke på dette led.",
+          "ndi": "NDI har skrevet om mangel på transformere, køling og transmissionskapacitet (NDI-indlæg 10. august 2026). Køling hører med i flaskehalsen. Selskaber, der alene laver ventilation, står ikke på dette led.",
           "themes": [
             "energy",
             "physical"
@@ -2145,8 +2145,8 @@
             "Solaris Energy Infrastructure: Solaris leverer strøm tæt på store forbrugere. Selskabet skrev 6. juli 2026, at det har købt GESA. Det er efter beholdningen og er service, ikke et kraftværk i drift.",
             "Tantalus Systems: Tantalus skriver, at det laver en platform til distributionsnet, med TRUConnect, TRUFlex, TRUGrid, TRUSync og TRUSense. Det er udstyr og software. Selskabet driver ikke nettet."
           ],
-          "shift": "NDI har skrevet om prispres i elinfrastruktur (BLOG 16. februar 2026). Baggrund: det tager flere år at få leveret store transformere.",
-          "src": "BLOG 30. marts 2026 · 10. august 2026 · 16. februar 2026",
+          "shift": "NDI har skrevet om prispres i elinfrastruktur (NDI-indlæg 16. februar 2026). Baggrund: det tager flere år at få leveret store transformere.",
+          "src": "NDI-indlæg 30. marts 2026 · 10. august 2026 · 16. februar 2026",
           "kind": "ndi",
           "short": "Elnet",
           "brief": {
@@ -2154,7 +2154,7 @@
             "why": {
               "k": "Pres",
               "t": "NDI skriver om mangel på transformere og transmissionskapacitet.",
-              "src": "BLOG 10. august 2026",
+              "src": "NDI-indlæg 10. august 2026",
               "kind": "ndi",
               "level": "dam"
             }
@@ -2165,7 +2165,7 @@
           "icon": "🔋",
           "label": "Energilagring og batterier",
           "blurb": "Batterier og andre lagre, der kan gemme strøm og aflevere den senere, fx når solen ikke skinner. Listen rummer selskaber, der laver battericeller, hele lagersystemer til nettet eller batterier til hjemmet. Mange af dem er stadig på pilotstadiet, altså små prøvelinjer før egentlig masseproduktion. Lithium til batterierne står under råstoffer.",
-          "ndi": "NDI nævner batterier som del af energiflaskehalsen (ugebrev 30. marts 2026). Tesla er med, fordi koncernen også laver batterilagring. Canadian Solar og Sunrun står også under elproduktion.",
+          "ndi": "NDI nævner batterier som del af energiflaskehalsen (NDI-indlæg 30. marts 2026). Tesla er med, fordi koncernen også laver batterilagring. Canadian Solar og Sunrun står også under elproduktion.",
           "themes": [
             "energy",
             "physical",
@@ -2295,8 +2295,8 @@
             "NeoVolta: NeoVolta skriver, at selskabet er stiftet i 2018 i Poway i Californien af Brent Willson, og at det laver batterier til boliger. NV14 er et system med hybrid-inverter og litium-jern-fosfat. Siden skriver 14 kWh, 14,3 kWh og 14,4 kWh. Tallene er ikke ens. FAQ skriver, at NV14 samles og testes i San Diego, og at nogle komponenter kommer fra udlandet. Om-siden viser Pendergrass i Georgia og overskriften 2 GWh i 2026. Det er ikke et målt år. En side indbyder til åbning af et nyt produktionsanlæg i Pendergrass den 17. september 2026. Datoen ligger efter beholdningen. Teksten siger ikke, at anlægget er i drift. Det er batterier hos kunden, ikke et lager, selskabet driver.",
             "Tesla: Tesla er med, fordi koncernen også laver batterilagring."
           ],
-          "shift": "NDI har skrevet om ny amerikansk told på kinesiske batterikomponenter i forbindelse med batteriværdikæden (BLOG 21. juli 2025).",
-          "src": "BLOG 21. juli 2025 · 30. marts 2026",
+          "shift": "NDI har skrevet om ny amerikansk told på kinesiske batterikomponenter i forbindelse med batteriværdikæden (NDI-indlæg 21. juli 2025).",
+          "src": "NDI-indlæg 21. juli 2025 · 30. marts 2026",
           "kind": "ndi",
           "short": "Lagring",
           "brief": {
@@ -2304,7 +2304,7 @@
             "why": {
               "k": "Nævnt",
               "t": "Batterier nævnes under energiflaskehalsen, og ny told på kinesiske batterikomponenter flytter, hvor kæden bygges.",
-              "src": "BLOG 30. marts 2026 · 21. juli 2025",
+              "src": "NDI-indlæg 30. marts 2026 · 21. juli 2025",
               "kind": "ndi",
               "level": "note"
             }
@@ -2315,7 +2315,7 @@
           "icon": "🪨",
           "label": "Kritiske råstoffer",
           "blurb": "Kobber, lithium, sjældne jordarter, uran, antimon og wolfram indgår i chips, elnet, batterier og reaktorer. Listen rummer både miner i drift og projekter, der endnu ikke producerer. Forskellen betyder noget: et projekt skal have tilladelser og bygges, før der kommer råstof ud. Gasproducenter står under elproduktion.",
-          "ndi": "NDI regner råstoffer med i teknologien, og en råstofanalyse skal også tage geopolitik med (ugebreve 1. september 2025 og 21. september 2026). Flere navne er projekter uden minedrift. Andre driver miner, blandt andet Mountain Pass og Gibraltar.",
+          "ndi": "NDI regner råstoffer med i teknologien, og en råstofanalyse skal også tage geopolitik med (NDI-indlæg 1. september 2025 og 21. september 2026). Flere navne er projekter uden minedrift. Andre driver miner, blandt andet Mountain Pass og Gibraltar.",
           "themes": [
             "energy-resources"
           ],
@@ -2551,8 +2551,8 @@
             "American Battery Technology: American Battery Technology skriver i en kvartalsrapport, at genbrugsanlægget ligger i Tahoe-Reno Industrial Center i Storey County, og at bygningen i Fernley ikke er taget i brug. Tonopah Flats er et projekt, ikke en mine.",
             "Lithium Americas: Lithium Americas skriver, at Thacker Pass bygges, med mål om industriel skala sent i 2027, og at byggeriet begyndte i begyndelsen af 2023. Centret i Reno er et laboratorium, ikke minen. Ingen af de to er i fuld drift."
           ],
-          "shift": "NDI skriver, at råstoffer kommer \"i første række\" i amerikansk udenrigspolitik (BLOG 5. januar 2026), og har nævnt prispres i metaller som kobber og sølv (BLOG 16. februar 2026).",
-          "src": "BLOG 16. februar 2026 · 1. september 2025 · 5. januar 2026 · 21. september 2026",
+          "shift": "NDI skriver, at råstoffer kommer \"i første række\" i amerikansk udenrigspolitik (NDI-indlæg 5. januar 2026), og har nævnt prispres i metaller som kobber og sølv (NDI-indlæg 16. februar 2026).",
+          "src": "NDI-indlæg 16. februar 2026 · 1. september 2025 · 5. januar 2026 · 21. september 2026",
           "kind": "ndi",
           "short": "Råstoffer",
           "brief": {
@@ -2560,7 +2560,7 @@
             "why": {
               "k": "Pres",
               "t": "Mads beskriver prispres i kobber og sølv, og en råstofanalyse skal i dag også tage geopolitik med.",
-              "src": "BLOG 16. februar 2026 · 21. september 2026",
+              "src": "NDI-indlæg 16. februar 2026 · 21. september 2026",
               "kind": "ndi",
               "level": "dam"
             }
@@ -2577,11 +2577,11 @@
             "verb": "graves op",
             "press": {
               "t": "Prispres i metaller som kobber og sølv",
-              "src": "BLOG 16. februar 2026"
+              "src": "NDI-indlæg 16. februar 2026"
             },
             "shift": {
               "t": "Råstoffer er rykket op i amerikansk udenrigspolitik, så en råstofanalyse skal i dag også tage højde for geopolitik og ikke kun udbud og efterspørgsel.",
-              "src": "BLOG 5. januar og 21. september 2026",
+              "src": "NDI-indlæg 5. januar og 21. september 2026",
               "kind": "ndi"
             },
             "where": "Her graves metaller og brændsler op, som resten af vejen bygges af."
@@ -2592,11 +2592,11 @@
             "alt": "smr",
             "press": {
               "t": "Første flaskehals: energi",
-              "src": "BLOG 30. marts 2026"
+              "src": "NDI-indlæg 30. marts 2026"
             },
             "shift": {
               "t": "I USA får datacentre i stigende grad lov til at bygge deres egen strøm tæt på anlægget.",
-              "src": "BLOG 30. marts 2026",
+              "src": "NDI-indlæg 30. marts 2026",
               "kind": "ndi"
             },
             "where": "Her bliver gas, sol, vind og atomkraft til strøm."
@@ -2606,7 +2606,7 @@
             "verb": "sendes frem",
             "press": {
               "t": "Mangel på transformere og transmissionskapacitet",
-              "src": "BLOG 10. august 2026"
+              "src": "NDI-indlæg 10. august 2026"
             },
             "shift": {
               "t": "Store transformere bygges på bestilling, og leveringstiden kan være flere år. Derfor kan elnettet halte efter, selv når strømmen findes.",
@@ -2619,11 +2619,11 @@
             "verb": "gemmes til senere",
             "note": {
               "t": "Batterier nævnt under energiflaskehalsen",
-              "src": "BLOG 30. marts 2026"
+              "src": "NDI-indlæg 30. marts 2026"
             },
             "shift": {
               "t": "Ny amerikansk told på kinesiske batterikomponenter flytter, hvor batterikæden bygges.",
-              "src": "BLOG 21. juli 2025",
+              "src": "NDI-indlæg 21. juli 2025",
               "kind": "ndi"
             },
             "where": "Her gemmes strømmen, til den skal bruges."
@@ -2633,11 +2633,11 @@
             "verb": "bliver til compute",
             "press": {
               "t": "Anden flaskehals: datacentre",
-              "src": "BLOG 30. marts 2026"
+              "src": "NDI-indlæg 30. marts 2026"
             },
             "shift": {
               "t": "Hvis datacentret er fremtidens fabrik, bliver det strategisk afgørende, om intelligensen produceres i Vesten eller i Kina.",
-              "src": "BLOG 27. juli 2026",
+              "src": "NDI-indlæg 27. juli 2026",
               "kind": "ndi"
             },
             "where": "Her bliver strømmen til compute."
@@ -2645,7 +2645,7 @@
         ],
         "fact": {
           "t": "Ét års chipproduktion kan potentielt kræve strøm svarende til omkring to tredjedele af USA's installerede kapacitet.",
-          "src": "BLOG 10. august 2026"
+          "src": "NDI-indlæg 10. august 2026"
         },
         "note": "Mærkerne viser, hvor NDI har beskrevet pres. De er ikke en prognose og ikke en anbefaling, og et led uden mærke er ikke uden betydning.",
         "shiftNote": "\"Det ændrer sig\" er NDI's beskrivelse med kilde, undtagen hvor der står baggrund."
@@ -2739,7 +2739,7 @@
             ],
             "ndi": {
               "t": "NDI beskriver fysisk mangel på \"transformere, køling, transmissionskapacitet og frem for alt energi\".",
-              "src": "BLOG 10. august 2026"
+              "src": "NDI-indlæg 10. august 2026"
             }
           },
           {
@@ -2752,7 +2752,7 @@
             ],
             "ndi": {
               "t": "Mads skriver, at en råstofanalyse i dag også skal tage højde for geopolitik og ikke kun udbud og efterspørgsel.",
-              "src": "BLOG 21. september 2026"
+              "src": "NDI-indlæg 21. september 2026"
             }
           },
           {
@@ -2765,7 +2765,7 @@
             ],
             "ndi": {
               "t": "NDI har beskrevet prispres i metaller som kobber og sølv.",
-              "src": "BLOG 16. februar 2026"
+              "src": "NDI-indlæg 16. februar 2026"
             }
           },
           {
@@ -2789,7 +2789,7 @@
             ],
             "ndi": {
               "t": "Mads har kritiseret, at Tyskland udbyggede sol og vind og samtidig lukkede kul og atomkraft.",
-              "src": "BLOG 12. maj 2025"
+              "src": "NDI-indlæg 12. maj 2025"
             }
           },
           {
@@ -2818,7 +2818,7 @@
               "Smartphones"
             ],
             "ok": 1,
-            "why": "NDI beskriver energi som den første flaskehals og datacentre som den anden (BLOG 30. marts 2026).",
+            "why": "NDI beskriver energi som den første flaskehals og datacentre som den anden (NDI-indlæg 30. marts 2026).",
             "sec": "e-pane",
             "more": "Fra råstof til regnekraft"
           },
@@ -2830,7 +2830,7 @@
               "Datacentre må kun bruge strøm om natten"
             ],
             "ok": 0,
-            "why": "Store transformere bygges på bestilling, og leveringstiden kan være flere år (baggrund). NDI beskriver mangel på transformere og transmissionskapacitet (BLOG 10. august 2026).",
+            "why": "Store transformere bygges på bestilling, og leveringstiden kan være flere år (baggrund). NDI beskriver mangel på transformere og transmissionskapacitet (NDI-indlæg 10. august 2026).",
             "sec": "lk-grid",
             "more": "Se leddet elnet"
           },
@@ -2854,7 +2854,7 @@
               "Vejret i næste uge"
             ],
             "ok": 1,
-            "why": "Råstoffer er rykket op i amerikansk udenrigspolitik, og Mads skriver, at analysen derfor også skal tage geopolitik med (BLOG 21. september 2026).",
+            "why": "Råstoffer er rykket op i amerikansk udenrigspolitik, og Mads skriver, at analysen derfor også skal tage geopolitik med (NDI-indlæg 21. september 2026).",
             "sec": "e-risk",
             "more": "Hvad kan gå galt?"
           },
@@ -2866,7 +2866,7 @@
               "Strømmen fra dem bliver givet væk"
             ],
             "ok": 0,
-            "why": "Tidsplanen afhænger af godkendelser (baggrund). NDI skriver, at atomenergi ikke altid får den værdiansættelse, den måske burde, fordi indtægterne er usikre (BLOG 21. juli 2025).",
+            "why": "Tidsplanen afhænger af godkendelser (baggrund). NDI skriver, at atomenergi ikke altid får den værdiansættelse, den måske burde, fordi indtægterne er usikre (NDI-indlæg 21. juli 2025).",
             "sec": "lk-smr",
             "more": "Se leddet atomkraft"
           }
@@ -2922,7 +2922,7 @@
       "id": "space",
       "title": "Rumfart & satellitter",
       "why": "Opsendelser, satellitter og kommunikation fra rummet. NDI beskriver, at prisen på at komme i kredsløb er faldet kraftigt, og at det åbner markeder som satellitinternet og på sigt beregning i rummet. Eksemplerne er valgt efter forretning. SpaceX indgår ikke i beholdningen pr. 1. juni 2026. I leddet \"Rum og compute\" er eksemplerne i dag udstyr og satellitter, ikke et datacenter i kredsløb.",
-      "source": "BLOG 23. juni 2024 · 12. oktober 2026",
+      "source": "NDI-indlæg 23. juni 2024 · 12. oktober 2026",
       "exampleRule": "PMINDI pr. 2026-06-01. SpaceX (profil findes) er ikke i snapshottet. weightSum er summen af de navngivne eksempler.",
       "omitted": [
         {
@@ -2952,7 +2952,7 @@
           "icon": "🚀",
           "label": "Opsendelse",
           "blurb": "Raketter og fartøjer, der bringer satellitter og udstyr væk fra Jorden, og selskaber, der laver dele til dem. Nogle programmer flyver allerede. Andre er stadig under udvikling. Flere af selskaberne her sender ikke selv noget op. De leverer motorer, metaldele eller beskyttelse til det, raketten bærer.",
-          "ndi": "SpaceX er brugt som illustration i NDI's formidling om opsendelser (ugebrev 23. juni 2024). Selskabet indgår ikke i beholdningen pr. 1. juni 2026. Luftfartsselskaberne i SpaceTech-temaet (Merlin, Archer og Airo Group) står ikke her. BWX Technologies og Rolls-Royce står under atomkraft i energikæden.",
+          "ndi": "SpaceX er brugt som illustration i NDI's formidling om opsendelser (NDI-indlæg 23. juni 2024). Selskabet indgår ikke i beholdningen pr. 1. juni 2026. Luftfartsselskaberne i SpaceTech-temaet (Merlin, Archer og Airo Group) står ikke her. BWX Technologies og Rolls-Royce står under atomkraft i energikæden.",
           "themes": [
             "space"
           ],
@@ -3018,9 +3018,9 @@
             "Howmet Aerospace: om-siden daterer et smedet aluminiumshjul til lastbiler til 1948. Dele til gasturbiner er ikke et kraftværk. Forsvars- og rumsiden skriver materialer til Apollo og rumfærgen. Selskabet sender ikke selv op.",
             "Navneforveksling: selskabet Merlin laver software, der skal kunne flyve fly selv. Det er ikke Satellogics satellit af samme navn."
           ],
-          "shift": "NDI beskriver, at prisen på at komme i kredsløb er faldet kraftigt (BLOG 23. juni 2024). Det er det første skridt. Billigere opsendelse gør det muligt at bygge resten af kæden.",
+          "shift": "NDI beskriver, at prisen på at komme i kredsløb er faldet kraftigt (NDI-indlæg 23. juni 2024). Det er det første skridt. Billigere opsendelse gør det muligt at bygge resten af kæden.",
           "alt": 1,
-          "src": "BLOG 23. juni 2024",
+          "src": "NDI-indlæg 23. juni 2024",
           "kind": "ndi",
           "short": "Opsendelse",
           "brief": {
@@ -3151,7 +3151,7 @@
             "Intuitive Machines: købte Lanteris 13. januar 2026, som bygger satellitkroppe. 18 af dem til det amerikanske forsvar er valgt, men ikke skrevet som opsendt.",
             "Redwire: laver og tester kameraerne til NASAs Orion-kapsel via Lockheed Martin. Meddelelsen fra 1. april 2026 siger, at 11 kameraer og fire solsensorer skal med på Artemis II. Den siger ikke, at flyvningen er gennemført. Redwire sender ikke selv op."
           ],
-          "shift": "Når opsendelse bliver billigere, åbner det markeder som satellitinternet, ifølge NDI (BLOG 23. juni 2024). Her kommer pengene typisk løbende, så længe satellitterne virker, og ikke kun én gang.",
+          "shift": "Når opsendelse bliver billigere, åbner det markeder som satellitinternet, ifølge NDI (NDI-indlæg 23. juni 2024). Her kommer pengene typisk løbende, så længe satellitterne virker, og ikke kun én gang.",
           "alt": 3,
           "src": "Selskabsprofil (AI-udkast)",
           "kind": "ndi",
@@ -3175,7 +3175,7 @@
           "icon": "✦",
           "label": "Rum og compute",
           "blurb": "Tanken er, at computere på sigt også kan stå i rummet. I beholdningen pr. 1. juni 2026 er eksemplerne infrastruktur, robotik og satellitplatforme. Ingen af dem er et datacenter i kredsløb.",
-          "ndi": "Udsagnet om SpaceX og størrelsen af økonomien er Elon Musks og står kun som citat. Det er ikke NDI's forventning (ugebrev 12. oktober 2026).",
+          "ndi": "Udsagnet om SpaceX og størrelsen af økonomien er Elon Musks og står kun som citat. Det er ikke NDI's forventning (NDI-indlæg 12. oktober 2026).",
           "themes": [
             "space"
           ],
@@ -3221,9 +3221,9 @@
             "MDA Space: Chorus er satellitter til billeder af Jorden, ikke et datacenter. De to nye er ikke sendt op.",
             "Redwire og York Space Systems: bygger udstyr og satellitkroppe. Ingen af dem driver beregning i kredsløb."
           ],
-          "shift": "NDI nævner beregning i rummet som noget, der kan komme på sigt (BLOG 23. juni 2024). I dag er det en idé, ikke et marked. Udsagnet om SpaceX står kun som Elon Musks citat med kilde.",
+          "shift": "NDI nævner beregning i rummet som noget, der kan komme på sigt (NDI-indlæg 23. juni 2024). I dag er det en idé, ikke et marked. Udsagnet om SpaceX står kun som Elon Musks citat med kilde.",
           "alt": 4,
-          "src": "BLOG 12. oktober 2026",
+          "src": "NDI-indlæg 12. oktober 2026",
           "kind": "ndi",
           "short": "Rum og compute",
           "brief": {
@@ -3244,22 +3244,22 @@
         {
           "k": "Hvorfor rum hører til tech",
           "t": "Mads nævner rum-infrastruktur på listen over det, Vesten skal bygge: \"kraftværker, elnet, datacentre, chipfabrikker, robotfabrikker, forsvarsindustri og rum-infrastruktur\".",
-          "src": "BLOG 24. august 2026"
+          "src": "NDI-indlæg 24. august 2026"
         },
         {
           "k": "Værdiansættelse",
           "t": "SpaceTech får efter NDI's opfattelse ikke altid den værdiansættelse, det måske burde, fordi indtægterne er usikre og ikke passer i et regneark.",
-          "src": "BLOG 21. juli 2025"
+          "src": "NDI-indlæg 21. juli 2025"
         },
         {
           "k": "Metode",
           "t": "Mads skriver, at klassiske value-metoder giver et \"korrekt nej\" til SpaceX, men at metoden bliver til dogme, hvis man ikke ser på, hvad selskabet bygger.",
-          "src": "BLOG 1. juni 2026"
+          "src": "NDI-indlæg 1. juni 2026"
         },
         {
           "k": "Beholdningsdato",
           "t": "SpaceX blev børsnoteret efter beholdningsdatoen 1. juni 2026 og indgår derfor ikke i den viste forsinkede beholdning.",
-          "src": "BLOG 22. juni 2026"
+          "src": "NDI-indlæg 22. juni 2026"
         }
       ],
       "glossary": [
@@ -3387,7 +3387,7 @@
         ],
         "ndi": {
           "t": "SpaceX stod for 90 % af årets satellitopsendelser i NDI's gennemgang fra 2024. Det viser, hvor meget én aktør med genbrugelige raketter kom til at fylde.",
-          "src": "BLOG 23. juni 2024"
+          "src": "NDI-indlæg 23. juni 2024"
         },
         "note": "Forklaringen er generel baggrundsviden og ikke NDI's synspunkter. Vi viser ikke priser pr. kilo, fordi NDI ikke har opgjort dem. Tallet om 90 % er NDI's."
       },
@@ -3566,7 +3566,7 @@
             ],
             "ndi": {
               "t": "SpaceX stod for 90 % af årets satellitopsendelser i NDI's gennemgang fra 2024.",
-              "src": "BLOG 23. juni 2024"
+              "src": "NDI-indlæg 23. juni 2024"
             }
           },
           {
@@ -3604,7 +3604,7 @@
             ],
             "ndi": {
               "t": "SpaceTech får efter NDI's opfattelse ikke altid den værdiansættelse, det måske burde, fordi indtægterne er usikre og ikke passer i et regneark.",
-              "src": "BLOG 21. juli 2025"
+              "src": "NDI-indlæg 21. juli 2025"
             }
           }
         ],
@@ -3717,7 +3717,7 @@
               "Omkring 90 %"
             ],
             "ok": 2,
-            "why": "Det er NDI's tal (BLOG 23. juni 2024). Det viser, hvor meget én aktør fylder, og bruges som illustration, ikke som anbefaling.",
+            "why": "Det er NDI's tal (NDI-indlæg 23. juni 2024). Det viser, hvor meget én aktør fylder, og bruges som illustration, ikke som anbefaling.",
             "sec": "sp-risk",
             "more": "Hvad kan gå galt?"
           },
@@ -3804,7 +3804,7 @@
             "k": "Datacentre i kredsløb?",
             "t": "Idéen er at sætte computerkraft i kredsløb, hvor der er sol hele tiden. Mads har gengivet Elon Musks påstand om SpaceX og compute i rummet. Det er Musks udsagn, ikke NDI's forventning og ikke en prognose.",
             "kind": "ndi",
-            "src": "BLOG 12. oktober 2026",
+            "src": "NDI-indlæg 12. oktober 2026",
             "quote": true
           },
           {
@@ -3823,7 +3823,7 @@
       "id": "quantum",
       "title": "Kvantecomputere",
       "why": "Computere, der bruger kvantefysik til bestemte problemtyper. Teknologien er stadig tidlig. NDI har ikke skrevet en egentlig analyse af kvantekæden — siden holdes kort.",
-      "source": "BLOG 2. juni 2025 · 21. juli 2025",
+      "source": "NDI-indlæg 2. juni 2025 · 21. juli 2025",
       "links": [
         {
           "id": "q-core",
@@ -3867,9 +3867,9 @@
             }
           ],
           "seeChain": null,
-          "shift": "NVIDIAs direktør sagde i januar 2025, at nyttige kvantecomputere sandsynligvis ligger omkring 20 år ude (gengivet i BLOG 13. januar 2025). Det er hans udsagn, ikke NDI's forventning. Se tidshorisonten i kvante-fanen.",
+          "shift": "NVIDIAs direktør sagde i januar 2025, at nyttige kvantecomputere sandsynligvis ligger omkring 20 år ude (gengivet i NDI-indlæg 13. januar 2025). Det er hans udsagn, ikke NDI's forventning. Se tidshorisonten i kvante-fanen.",
           "kind": "ndi",
-          "src": "BLOG 2. juni 2025 · 7. juli 2025 · 21. juli 2025 · selskabernes egne sider (QCi, D-Wave, Rigetti, IonQ)",
+          "src": "NDI-indlæg 2. juni 2025 · 7. juli 2025 · 21. juli 2025 · selskabernes egne sider (QCi, D-Wave, Rigetti, IonQ)",
           "brief": {
             "does": "Bygger computere, der regner med qubits i stedet for almindelige bits.",
             "why": {
@@ -3926,7 +3926,7 @@
           "icon": "∑",
           "href": "laer/saadan-taenker-vi.html",
           "label": "Sådan tænker vi",
-          "t": "Mads bruger kvante som eksempel på teknologi, hvis indtægter er for usikre til et regneark (BLOG 21. juli 2025).",
+          "t": "Mads bruger kvante som eksempel på teknologi, hvis indtægter er for usikre til et regneark (NDI-indlæg 21. juli 2025).",
           "kind": "ndi"
         }
       ],
@@ -3937,12 +3937,12 @@
         "who": "NVIDIA's direktør",
         "when": "januar 2025",
         "t": "sagde, at nyttige kvantecomputere sandsynligvis ligger omkring 20 år ude.",
-        "src": "gengivet i BLOG 13. januar 2025",
+        "src": "gengivet i NDI-indlæg 13. januar 2025",
         "ndi": {
-          "t": "Mads nævner kvantecomputere som et accelererende segment med politisk medvind og høj volatilitet.",
-          "src": "BLOG 2. juni og 7. juli 2025"
+          "t": "Mads Christiansen, NDI's stifter, nævner kvantecomputere som et accelererende segment med politisk medvind og høj volatilitet.",
+          "src": "NDI-indlæg 2. juni og 7. juli 2025"
         },
-        "note": "Udsagnet er NVIDIA-direktørens, ikke Mads' og ikke NDI's prognose. Tidslinjen er usikker. Netop derfor bruger Mads kvante som eksempel på indtægter, der ikke passer i et regneark (BLOG 21. juli 2025).",
+        "note": "Udsagnet er NVIDIA-direktørens, ikke Mads' og ikke NDI's prognose. Tidslinjen er usikker. Netop derfor bruger Mads kvante som eksempel på indtægter, der ikke passer i et regneark (NDI-indlæg 21. juli 2025).",
         "river": {
           "t": "Kvante står uden for AI-floden og rører den kun to steder: cloud og chipdesign.",
           "links": [
@@ -4113,7 +4113,7 @@
               "Det er NDI's prognose"
             ],
             "ok": 1,
-            "why": "Det er NVIDIA-direktørens udsagn, gengivet i BLOG 13. januar 2025. Det er ikke Mads' og ikke NDI's prognose.",
+            "why": "Det er NVIDIA-direktørens udsagn, gengivet i NDI-indlæg 13. januar 2025. Det er ikke Mads' og ikke NDI's prognose.",
             "sec": "q-hz",
             "more": "Se tidshorisonten"
           },
@@ -4149,7 +4149,7 @@
               "Fordi teknologien er færdigudviklet"
             ],
             "ok": 1,
-            "why": "Mads bruger kvante som eksempel på teknologi, hvis indtægter ikke passer i et regneark (BLOG 21. juli 2025).",
+            "why": "Mads bruger kvante som eksempel på teknologi, hvis indtægter ikke passer i et regneark (NDI-indlæg 21. juli 2025).",
             "sec": "lk-q-core",
             "more": "Se leddet kvantecomputing"
           }
@@ -4215,7 +4215,7 @@
         "said": {
           "who": "NVIDIA's direktør",
           "t": "sagde i januar 2025, at nyttige kvantecomputere sandsynligvis ligger omkring 20 år ude.",
-          "src": "gengivet i BLOG 13. januar 2025",
+          "src": "gengivet i NDI-indlæg 13. januar 2025",
           "note": "Det er hans udsagn, ikke Mads' og ikke NDI's prognose."
         },
         "legend": {
@@ -4246,7 +4246,7 @@
             ],
             "ndi": {
               "t": "Mads bruger kvante som eksempel på teknologier, hvis indtægter er for usikre til at passe i et regneark.",
-              "src": "BLOG 21. juli 2025"
+              "src": "NDI-indlæg 21. juli 2025"
             }
           },
           {
@@ -4275,8 +4275,8 @@
               "q-core"
             ],
             "ndi": {
-              "t": "Mads nævner kvantecomputere som et segment med politisk medvind og høj volatilitet.",
-              "src": "BLOG 2. juni og 7. juli 2025"
+              "t": "Mads Christiansen, NDI's stifter, nævner kvantecomputere som et segment med politisk medvind og høj volatilitet.",
+              "src": "NDI-indlæg 2. juni og 7. juli 2025"
             }
           },
           {
@@ -4307,7 +4307,7 @@
   "quotes": [
     {
       "text": "SpaceX: større end hele jordens økonomi",
-      "attribution": "Elon Musk, gengivet i NDI ugebrev 12. oktober 2026",
+      "attribution": "Elon Musk, gengivet i NDI-indlæg 12. oktober 2026",
       "note": "Påstand fra Musk, ikke NDI's forventning. Kun som citat.",
       "chain": "space"
     }
