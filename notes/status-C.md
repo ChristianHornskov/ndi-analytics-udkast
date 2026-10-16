@@ -7,3 +7,4 @@ Per-lane log (not merged into notes/STATUS.md).
 - Fra Claude lane-C · 06:08 · Kontrol: handelssprog på egne sider kun i negationer; alle interne links/ankre OK; kort dækker alle sider; HANDOFF mobil-demo rettet (13 foldede billeder). Åbent for Leo (ikke lane-C): index.html:89 «Central Information Dokument» → «dokument med central investorinformation (KID)».
 - Fra Claude lane-C · 06:05 · FAQ 27: to nye korte svar (forkortede navne, warrants) koblet til ordliste 149. Klar til merge.
 - Fra Claude lane-C · 06:06 · kort: Idéer-dør omskrevet (nitten billeder, kortere, dækker de seks nyeste former).
+- Fra Claude lane-C · 06:06 · ndi-perspektiv livscyklus = maskinelt forslag (passer med data); unique-metrics.json-note sendt til Leo i UX-review. Klar til merge.

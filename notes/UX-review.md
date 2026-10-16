@@ -517,3 +517,7 @@ Hele lane-C-fladen ved 375 px: ideer, kort, om-data, invester, risici, ndi-persp
 ### SHOULD (lane-C, næste)
 1. ~~`risici.html` «årlige afkast (CAGR)» uden link~~. Rettet i samme runde: CAGR linker nu til `om-data.html#g-cagr`.
 2. `ndi-perspektiv.html`: «Andet / uklassificeret 27» er højere end de 6 fra kl. 02:30. Det kommer af lane-B's temaforslag. Tjek, at lead-teksten ikke lover færre.
+
+## 06:06 CEST lane-C · ndi-perspektiv: livscyklus-formulering
+- `ndi-perspektiv.html`: forklaringen af livscyklus siger nu «kun et maskinelt forslag, som afventer NDI's gennemgang», ikke bare «ikke sat». Det passer med `maturityStatus: forslag` (samme uoverensstemmelse som cyklus 38 SHOULD 1 på selskab.html).
+- **Til Leo (ikke lane-C's fil):** `docs/data/unique-metrics.json` `note` siger «Quantum-metrics er forslag» (engelsk fagord) og «Livscyklus er ikke klassificeret for nogen selskaber endnu». Forslag: «Quantum-temaet er et forslag. Livscyklus findes kun som maskinelt forslag og afventer NDI's gennemgang.»
