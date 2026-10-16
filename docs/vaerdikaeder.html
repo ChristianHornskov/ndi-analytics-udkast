@@ -1899,7 +1899,7 @@
       host.appendChild(svg);
     }
 
-    // Kort fortalt: hvad leddet gør, og hvorfor det presser. Data i links[].brief
+    // Kort fortalt: hvad leddet gør, og hvorfor det presser (rum: hvordan det betales). Data i links[].brief, w.i kan give eget ikon
     const BRIEF_I = { dam: '!', early: '⏳', note: '✎', next: '➜', open: '·' };
     const BRIEF_KIND = { ndi: ['NDI', ' ndi', 'Mads\' eller bogens synspunkt med kilde'], baggrund: ['baggrund', '', 'Generel baggrundsviden, ikke Mads\' synspunkt'], tolkning: ['vores tolkning', '', 'Vores tolkning, ikke Mads\' synspunkt'] };
     function briefBox(l) {
@@ -1908,7 +1908,7 @@
       const w = b.why || {};
       const lv = BRIEF_I[w.level] ? w.level : 'open';
       const kd = BRIEF_KIND[w.kind] || BRIEF_KIND.baggrund;
-      const why = w.t ? `<p class="vb-row why"><span class="vb-i" aria-hidden="true">${BRIEF_I[lv]}</span><span><b>${esc(w.k || 'Pres')}</b>${esc(w.t)} <span class="vc-kind${kd[1]}" title="${esc(kd[2])}">${esc(kd[0])}</span>${w.src ? `<span class="src">Kilde: ${esc(w.src)}</span>` : ''}${w.sec ? ` <a href="?kaede=${esc(w.sec.split(':')[0])}#${esc(w.sec.split(':')[1])}" data-sec="${esc(w.sec)}">${esc(w.secT || 'Se mere')} →</a>` : ''}</span></p>` : '';
+      const why = w.t ? `<p class="vb-row why"><span class="vb-i" aria-hidden="true">${esc(w.i || BRIEF_I[lv])}</span><span><b>${esc(w.k || 'Pres')}</b>${esc(w.t)} <span class="vc-kind${kd[1]}" title="${esc(kd[2])}">${esc(kd[0])}</span>${w.src ? `<span class="src">Kilde: ${esc(w.src)}</span>` : ''}${w.sec ? ` <a href="?kaede=${esc(w.sec.split(':')[0])}#${esc(w.sec.split(':')[1])}" data-sec="${esc(w.sec)}">${esc(w.secT || 'Se mere')} →</a>` : ''}</span></p>` : '';
       return `<div class="vc-brief lv-${lv}" role="group" aria-label="Kort fortalt om ${esc(l.short || l.label)}">`
         + `<p class="vb-row"><span class="vb-i" aria-hidden="true">⚙</span><span><b>Gør</b>${esc(b.does)}</span></p>${why}</div>`;
     }

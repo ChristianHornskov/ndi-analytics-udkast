@@ -1,6 +1,6 @@
 {
  "asOf": "2026-06-01",
- "note": "Forsinket beholdning. Vægte = eksponering, ikke anbefaling eller bevidst overvægt. Tekst inspireret af NDI ugebreve / Vidensbot (okt 2026).",
+ "note": "Forsinket beholdning. Vægten viser, hvor stor en del af porteføljen selskabet udgør. Den er ikke en anbefaling eller et bevidst valg. Tekst inspireret af NDI ugebreve / Vidensbot (okt 2026).",
  "philosophy": {
   "lede": "NDI ser teknologi som værdikæder, ikke som de klassiske 11 sektorer. Et selskab kan høre til flere led. Vi kan ikke forudsige, hvilket selskab der vinder, men vi kan følge, hvor i kæden efterspørgslen presser på. Derfor ejer fonden mange selskaber på tværs af hele kæden.",
   "flod": "Vi ser AI-værdikæden som et flodsystem med en række dæmninger. Vandet repræsenterer efterspørgslen, og dæmningerne repræsenterer flaskehalse.",
@@ -3767,7 +3767,7 @@
      "icon": "⚙",
      "label": "Dele, motorer og fremdrift",
      "alt": 0,
-     "blurb": "Strukturer, motorer, strømforsyning og undersystemer, som raketter og satellitter er bygget af. Mange af selskaberne leverer også til luftfart og forsvar.",
+     "blurb": "Det er delene, en raket eller satellit samles af: motorer, tanke, solpaneler, batterier og elektronik, der kan tåle stråling og kulde. Mange af selskaberne leverer også til luftfart og forsvar.",
      "ndi": "NDI har ikke beskrevet dette led særskilt. Det står her, fordi resten af kæden afhænger af det (tolkning).",
      "kind": "baggrund",
      "src": "Baggrund",
@@ -3819,14 +3819,26 @@
      "weightSum": 1.54,
      "themes": [
       "space"
-     ]
+     ],
+     "brief": {
+      "does": "Bygger motorer, strukturer og strømforsyning til raketter og satellitter.",
+      "why": {
+       "k": "Penge",
+       "i": "🧾",
+       "t": "Betales én gang pr. leverance. Flere opsendelser giver flere ordrer.",
+       "kind": "baggrund",
+       "level": "open",
+       "sec": "space:sp-money",
+       "secT": "Se pengesporene"
+      }
+     }
     },
     {
      "id": "launch",
      "icon": "🚀",
      "label": "Opsendelse",
      "alt": 1,
-     "blurb": "Raketter, der sender satellitter og last i kredsløb. Genbrugelige raketter har gjort opsendelse meget billigere.",
+     "blurb": "En raket skal op på ca. 28.000 km/t for at blive i lavt kredsløb. Derfor er det meste af raketten brændstof, og lasten er kun en lille del af vægten.",
      "ndi": "SpaceX stod for 90 % af årets satellitopsendelser i NDI's gennemgang fra 2024. Det bruges som illustration af skiftet, ikke som anbefaling.",
      "src": "BLOG 23. juni 2024",
      "shift": "Billigere opsendelse er det skift, der gør resten af kæden mulig. Konkurrencen fra mindre raketselskaber er stadig ung (baggrund).",
@@ -3862,14 +3874,26 @@
      "weightSum": 1.03,
      "themes": [
       "space"
-     ]
+     ],
+     "brief": {
+      "does": "Sender satellitter og last op i kredsløb.",
+      "why": {
+       "k": "Penge",
+       "i": "🧾",
+       "t": "Betales én gang pr. tur. Genbrugelige raketter har gjort turen billigere, så flere har råd til at sende noget op.",
+       "kind": "baggrund",
+       "level": "open",
+       "sec": "space:sp-cost",
+       "secT": "Se hvorfor prisen faldt"
+      }
+     }
     },
     {
      "id": "sats",
      "icon": "🛰",
      "label": "Satellitter",
      "alt": 2,
-     "blurb": "Selskaber, der designer og bygger satellitter og deres \"bus\", altså platformen med strøm, styring og kommunikation.",
+     "blurb": "En satellit består af en \"bus\" og det udstyr, den er sendt op for. Bussen er platformen med strøm, styring og radio. Udstyret er fx en antenne, et kamera eller en sensor.",
      "ndi": "NDI har ikke beskrevet dette led særskilt (tolkning).",
      "kind": "baggrund",
      "src": "Baggrund",
@@ -3913,14 +3937,26 @@
      "weightSum": 0.89,
      "themes": [
       "space"
-     ]
+     ],
+     "brief": {
+      "does": "Designer og bygger satellitter, ofte mange ens ad gangen.",
+      "why": {
+       "k": "Penge",
+       "i": "🧾",
+       "t": "Betales én gang pr. satellit. Når en konstellation skal udskiftes efter nogle år, kommer der nye ordrer.",
+       "kind": "baggrund",
+       "level": "open",
+       "sec": "space:sp-trip",
+       "secT": "Følg én satellit"
+      }
+     }
     },
     {
      "id": "satcom",
      "icon": "📡",
      "label": "Kommunikation fra rummet",
      "alt": 3,
-     "blurb": "Internet, telefoni og dataforbindelser via satellit, også direkte til almindelige mobiltelefoner.",
+     "blurb": "Signalet går fra en antenne på jorden op til en satellit og ned igen. Lavt kredsløb giver kort forsinkelse, men kræver mange satellitter, fordi hver kun dækker et lille område ad gangen. Nogle tjenester når nu direkte til almindelige mobiltelefoner.",
      "ndi": "NDI's selskabsprofil beskriver Starlink som en løbende tjeneste, ikke blot en opsendelse (AI-udkast).",
      "src": "Selskabsprofil (AI-udkast)",
      "shift": "Værdien flytter fra den enkelte opsendelse til abonnementer, der løber år efter år (tolkning).",
@@ -3958,14 +3994,27 @@
       "connect",
       "space",
       "andet"
-     ]
+     ],
+     "brief": {
+      "does": "Sælger internet og dataforbindelse via satellit.",
+      "why": {
+       "k": "Penge",
+       "i": "🔁",
+       "t": "Betales løbende som abonnement. NDI's selskabsprofil beskriver Starlink som en løbende tjeneste, ikke blot en opsendelse.",
+       "kind": "ndi",
+       "src": "Selskabsprofil (AI-udkast)",
+       "level": "next",
+       "sec": "space:sp-money",
+       "secT": "Se pengesporene"
+      }
+     }
     },
     {
      "id": "eo",
      "icon": "🌍",
      "label": "Jordobservation og rumdata",
      "alt": 3,
-     "blurb": "Satellitter, der fotograferer jorden eller opfanger radiosignaler. Data sælges til landbrug, forsikring, klima og forsvar.",
+     "blurb": "Satellitterne tager billeder i synligt lys, i infrarødt eller med radar, som kan se gennem skyer og mørke. Nogle opfanger radiosignaler fra skibe og fly.",
      "ndi": "NDI har ikke beskrevet dette led særskilt (tolkning).",
      "kind": "baggrund",
      "src": "Baggrund",
@@ -4018,14 +4067,26 @@
      "themes": [
       "andet",
       "space"
-     ]
+     ],
+     "brief": {
+      "does": "Fotograferer jorden og sælger billeder og data.",
+      "why": {
+       "k": "Penge",
+       "i": "🔁",
+       "t": "Betales løbende for data, fx til landbrug, forsikring og forsvar. AI gør billederne billigere at analysere.",
+       "kind": "baggrund",
+       "level": "next",
+       "sec": "space:sp-money",
+       "secT": "Se pengesporene"
+      }
+     }
     },
     {
      "id": "orbit",
      "icon": "🌙",
      "label": "Månen og stationer i kredsløb",
      "alt": 4,
-     "blurb": "Månelandere, kommercielle rumstationer og infrastruktur, der skal bruges længere ude.",
+     "blurb": "Månen ligger ca. 384.000 km væk, næsten tusind gange længere ude end Den Internationale Rumstation på ca. 400 km. Alt, der skal derud, kræver mere brændstof og længere planlægning.",
      "ndi": "NDI har ikke beskrevet dette led særskilt (tolkning).",
      "kind": "baggrund",
      "src": "Baggrund",
@@ -4069,23 +4130,47 @@
      "weightSum": 0.89,
      "themes": [
       "space"
-     ]
+     ],
+     "brief": {
+      "does": "Bygger månelandere og private rumstationer.",
+      "why": {
+       "k": "Penge",
+       "i": "⏳",
+       "t": "Endnu tidligt. Der er få faste kunder, og meget afhænger af kontrakter med rumagenturer.",
+       "kind": "baggrund",
+       "level": "early",
+       "sec": "space:sp-risk",
+       "secT": "Se usikkerhederne"
+      }
+     }
     },
     {
      "id": "space-compute",
      "icon": "✦",
      "label": "Rum og compute",
      "alt": 4,
-     "blurb": "Idéen om at placere computerkraft i kredsløb, hvor der er sol og kulde. Det er tidligt og usikkert.",
+     "blurb": "Idéen er at bruge solenergi uden skyer og nat og lade rummets kulde hjælpe med kølingen. I vakuum kan varme dog kun stråles væk, så det kræver store radiatorer. Det er tidligt og usikkert.",
      "ndi": "Mads har gengivet Elon Musks påstand om SpaceX og compute i rummet. Se citatet nedenfor. Det er Musks udsagn, ikke NDI's forventning.",
      "src": "BLOG 12. oktober 2026",
-     "shift": "Ingen selskaber i den forsinkede beholdning er tilordnet dette led. Det er en idé, ikke et marked endnu (tolkning).",
+     "shift": "Det afhænger af, om opsendelse bliver billig nok til at sende tonsvis af udstyr op, og om udstyret kan repareres eller udskiftes på afstand (tolkning).",
      "kind": "ndi",
      "short": "Rum og compute",
      "companies": [],
      "count": 0,
      "weightSum": 0,
-     "themes": []
+     "themes": [],
+     "brief": {
+      "does": "Vil placere regnekraft i kredsløb, hvor der er sol og kulde.",
+      "why": {
+       "k": "Penge",
+       "i": "⏳",
+       "t": "Ingen kunder endnu, og ingen selskaber i beholdningen er tilordnet leddet. Det er en idé, ikke et marked.",
+       "kind": "tolkning",
+       "level": "early",
+       "sec": "space:kap-rum",
+       "secT": "Se citatet med kilde"
+      }
+     }
     },
     {
      "id": "air",
@@ -4093,11 +4178,11 @@
      "label": "Nabo: luftfart og autonom flyvning",
      "alt": -1,
      "neighbour": true,
-     "blurb": "Flytaxaer, autonome fly og droner. De ligger i temaet SpaceTech, men er luftfart, ikke rumfart.",
+     "blurb": "Leddet ligger i temaet SpaceTech, men det er luftfart, ikke rumfart. Flyene bliver i atmosfæren, langt under de ca. 100 km, hvor rummet regnes for at begynde.",
      "ndi": "NDI har ikke beskrevet dette led særskilt. Det vises for at forklare, hvad temaet rummer (tolkning).",
      "kind": "baggrund",
      "src": "Baggrund",
-     "shift": "Elektriske flytaxaer venter på godkendelser fra luftfartsmyndighederne (baggrund).",
+     "shift": "Batterier, der er lette nok til længere ture, og regler for droner uden pilot bestemmer tempoet (baggrund).",
      "companies": [
       {
        "isin": "US5901061003",
@@ -4137,7 +4222,17 @@
      "themes": [
       "space",
       "andet"
-     ]
+     ],
+     "brief": {
+      "does": "Udvikler elektriske flytaxaer, droner og autonome fly.",
+      "why": {
+       "k": "Venter på",
+       "i": "⏳",
+       "t": "Godkendelser fra luftfartsmyndighederne, før flytaxaerne kan flyve med passagerer.",
+       "kind": "baggrund",
+       "level": "early"
+      }
+     }
     }
    ],
    "intro": [
