@@ -416,3 +416,7 @@ Ny række på drawdown, under hoppet til første dag. Tre knapper: 2024, 2025 og
 ### Update · siden bunden · 2026-10-16 ~07:43 CEST
 
 Ny linje på drawdown, under år-knapperne. Knappen hopper til bunden 29. jul. 2026. Udlæsningen siger −26,8 %. Ved siden af står 77 dage siden den dato, og at serien ikke er tilbage på den top. Tallet er dage, ikke en ny procent. Knappen er 44 px. Ingen sidescroll ved 300–1100. Ingen konsolfejl. På papir er knappen væk, og sætningen bliver. PMINDIAKK har ingen linje, ingen procent, og teksten om 5. december 2026.
+
+### Update · spor for perioden · 2026-10-16 ~07:47 CEST
+
+Ny form i embed, over grafen. Et spor for hele perioden, fra 22. sep. 2023 til 14. okt. 2026. Den gule del til højre er år til dato. Et klik på den gule del skifter til år til dato og siger frem til 14. okt. 2026, at det er et delår, og at det afventer Fundmarket-godkendelse. Et klik på resten skifter tilbage. Knapperne er 44 px. Den gule del er 69 px ved 300. Ingen procent i sætningen. Ingen sidescroll ved 300–1100. Ingen konsolfejl. På papir bliver sporet. PMINDIAKK har ingen spor og ingen procent. Cyklus 55 har ingen MUST i egne filer.

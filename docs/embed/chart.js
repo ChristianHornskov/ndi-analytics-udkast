@@ -261,6 +261,8 @@
     if (stops) stops.hidden = true;
     const days = $('#day-split');
     if (days) days.hidden = true;
+    const bit = $('#life-bit');
+    if (bit) bit.hidden = true;
     $('#chart-pointe').innerHTML = 'Ny andelsklasse, kurs vises efter <span class="keep">12 måneder.</span> Ingen NAV eller graf før <span class="keep">5. december 2026.</span>';
     $('#chart-loading').hidden = true;
     state.series = [];
@@ -371,6 +373,7 @@
     $('#chart-slider').max = String(series.length - 1);
     renderStops();
     renderDaySplit();
+    renderLifeBit();
     const index = state.selectedDate ? nearest(series, state.selectedDate) : series.length - 1;
     setPoint(index, false);
     $('#chart-loading').hidden = true;
@@ -461,6 +464,54 @@
 
   function hitOverlap() {
     return boxesOverlap($$('#stops-track .stop'), 2);
+  }
+
+  function renderLifeBit() {
+    const box = $('#life-bit');
+    if (!box) return;
+    const all = fundRecord()?.data;
+    if (isAkk() || !all || all.length < 2) {
+      box.hidden = true;
+      return;
+    }
+    const ytd = periodSlice(all, 'ytd').points;
+    if (!ytd || ytd.length < 2) {
+      box.hidden = true;
+      return;
+    }
+    const t0 = timestamp(all[0].d);
+    const t1 = timestamp(all[all.length - 1].d);
+    const span = Math.max(1, t1 - t0);
+    const left = ((timestamp(ytd[0].d) - t0) / span) * 100;
+    const width = ((timestamp(ytd[ytd.length - 1].d) - timestamp(ytd[0].d)) / span) * 100;
+    box.hidden = false;
+    box.dataset.from = fmtDate(all[0].d);
+    box.dataset.to = fmtDate(all[all.length - 1].d);
+    box.dataset.ytdFrom = fmtDate(ytd[0].d);
+    box.dataset.ytdTo = fmtDate(ytd[ytd.length - 1].d);
+    const ytdBtn = $('#life-bit-ytd');
+    const rail = box.querySelector('.life-bit-rail');
+    const minPct = rail && rail.clientWidth ? (44 / rail.clientWidth) * 100 : 12;
+    let w = Math.max(width, minPct);
+    let l = left;
+    if (l + w > 100) l = Math.max(0, 100 - w);
+    if (ytdBtn) {
+      ytdBtn.style.left = `${l.toFixed(2)}%`;
+      ytdBtn.style.width = `${w.toFixed(2)}%`;
+    }
+    paintLifeBit();
+  }
+
+  function paintLifeBit() {
+    const box = $('#life-bit');
+    const say = $('#life-bit-say');
+    if (!box || box.hidden || !say) return;
+    const ytdOn = state.period === 'ytd';
+    $$('#life-bit button').forEach((btn) => btn.setAttribute('aria-pressed', String(btn.dataset.period === state.period)));
+    const when = (d) => `<span class="keep">${d}</span>`;
+    say.innerHTML = ytdOn
+      ? `År til dato frem til ${when(box.dataset.ytdTo)}. <span class="keep">Delår, afventer</span> <span class="keep">Fundmarket-godkendelse.</span>`
+      : `Hele perioden fra ${when(box.dataset.from)} til ${when(box.dataset.to)}. Den gule del er <span class="keep">år til dato.</span>`;
   }
 
   function renderDaySplit() {
