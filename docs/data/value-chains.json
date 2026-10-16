@@ -1899,7 +1899,7 @@
           "id": "satcom",
           "icon": "📡",
           "label": "Satellitkommunikation",
-          "blurb": "Satellitter, der er i kredsløb eller under bygning. Nogle sender tale og data, nogle tager billeder af Jorden, og nogle opfanger radiosignaler. Hertil kommer selskaber, der bygger selve satellitkroppen, som udstyret sættes på. En satellit i drift kan sælge data eller forbindelse i årevis, så længe den virker.",
+          "blurb": "Satellitter, der er i kredsløb eller under bygning. Nogle sender tale og data, nogle tager billeder af Jorden, og nogle opfanger radiosignaler. Hertil kommer selskaber, der bygger selve satellitkroppen, som udstyret sættes på. En satellit i drift kan sælge data eller forbindelse i årevis, så længe den virker. Planet skriver kontor på 4. sal på 645 Harrison Street i San Francisco. Kortet siger Washington D.C., og gaden ligger i Arlington. Fabrikken i Berlin er planlagt til efteråret 2026 og er ikke i drift. Selskabet opsender ikke selv.",
           "ndi": "Starlink er i en AI-selskabsprofil beskrevet som en løbende tjeneste, ikke kun en opsendelse. Det er et udkast, ikke NDI's færdige tekst. SpaceX indgår ikke i beholdningen pr. 1. juni 2026. Spire, Iridium og BlackSky indgår i beholdningen pr. 1. juni 2026.",
           "themes": [
             "space"
@@ -1985,7 +1985,7 @@
               "w": 0.09,
               "sym": "PL",
               "forslag": false,
-              "role": "Billedsatellitter. Siden nævner SuperDove, SkySat, Pelican, Tanager og Owl. Owl er næste generation."
+              "role": "Kontor på 4. sal i San Francisco. Arlington er ikke Washington D.C. Berlin-fabrikken er ikke åbnet."
             },
             {
               "isin": "US09263B2079",
@@ -2000,7 +2000,7 @@
           "facts": [
             "Iridium Communications: den første satellit blev sendt op i 1997, nettet var i fuld drift i 1998, og satellitterne var skiftet ud i 2019. Nettet ligger i ca. 780 km højde og bruges til tale, data og position, ikke billeder.",
             "Spire Global: designer, bygger og driver sine egne satellitter fra en fabrik i Glasgow. Mere end 175 er sendt op (tallet er ikke dateret). Selskabet sender ikke selv raketterne op.",
-            "Planet Labs: satellitfamilierne hedder SuperDove, SkySat, Pelican og Tanager. Owl er omtalt som næste generation.",
+            "Planet Labs: kontoret ligger på 645 Harrison Street, 4. sal, i San Francisco. Det er ikke en satellit. Kortet siger Washington D.C., og adressen er i Arlington. Artiklen 21. september 2026 skriver, at fabrikken i Berlin er planlagt til efteråret. Den er ikke i drift. Selskabet opsender ikke selv.",
             "BlackSky: driver satellitter i lav bane og sælger billeder og analyse. Den femte Gen-3 tog sine første billeder under 20 timer efter opsendelsen (meddelt 14. september 2026, efter beholdningen). Ikke alle planlagte Gen-3 er i kredsløb.",
             "Hawkeye 360: over 30 satellitter i kredsløb ifølge prospektet af 6. maj 2026. Tre satellitter flyver sammen for at finde ud af, hvor et radiosignal kommer fra.",
             "Satellogic: fuld drift af Merlin-satellitterne er sat til andet halvår 2027. Det er en plan.",

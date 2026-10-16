@@ -2112,20 +2112,33 @@
   "US72703X1063": {
    "name": "Planet Labs",
    "theme": "space",
-   "summary": "Driver satellitter, der tager billeder af Jorden. Siden nævner SuperDove, SkySat, Pelican, Tanager og Owl. Owl er omtalt som næste generation. Selskabet opsender ikke selv raketterne.",
-   "watch": "Satellitternes drift og kundernes abonnementer på billeder.",
-   "source": "https://www.planet.com/",
-   "products": "Satellitbilleder og data.",
-   "customers": "Offentlige myndigheder, virksomheder inden for landbrug, kortlægning og forsikring.",
-   "role": "Satellittjeneste.",
+   "summary": "Tager billeder af Jorden med SuperDove, SkySat, Pelican og Tanager. Owl er næste generation og er ikke skrevet som en flåde i drift. Kontoret ligger på 4. sal i San Francisco. Fabrikken i Berlin er planlagt til efteråret 2026 og er ikke i drift. Selskabet opsender ikke selv.",
+   "watch": "Om fabrikken i Berlin åbner. Artiklen 21. september 2026 er efter beholdningen og beskriver ikke en fabrik i drift.",
+   "source": "https://www.planet.com/locations/",
+   "products": "Billeder fra SuperDove, SkySat, Pelican og Tanager. Owl er næste generation. Pelican i Berlin er en plan. Siden siger ikke, at den satellit er bygget.",
+   "customers": "Siden nævner offentlige og private kunder til billeder. En navngiven kontrakt står ikke på de læste sider.",
+   "role": "Kontor på 4. sal i San Francisco. Arlington er ikke Washington D.C. Berlin-fabrikken er ikke åbnet.",
    "narrative": [
-    "Planet driver satellitter, der tager billeder af Jorden. Selskabet sælger billederne og analyser af dem. Siden nævner SuperDove, SkySat, Pelican, Tanager og Owl. Owl er omtalt som næste generation.",
-    "Teksten kalder ikke Owl en særskilt flåde i drift. Planet opsender ikke selv raketterne i denne beskrivelse."
+    "Lokationssiden, læst 16. oktober 2026, skriver Planet Labs PBC på 645 Harrison St., Floor 4, i San Francisco. Det er et kontor, ikke en satellit. Kontaktsiden kalder et kontor Washington D.C. Adressen er 2101 Wilson Blvd #1201 i Arlington i Virginia. Arlington er ikke Washington D.C. Telefonnumre er ikke taget med.",
+    "Samme side har to adresser i Berlin: Kurfürstendamm 22 og Berlin Decks, Friedrich-Krause-Ufer 16-21. Artiklen 21. september 2026 skriver, at satellitfabrikken i Berlin er planlagt til at åbne i efteråret. Den nævner ikke gaden. Et Pelican-billede er dateret 26. juni 2026. Begge datoer ligger efter beholdningen pr. 1. juni 2026. Billedet er ikke en produktionsstart. En rendering af Pelican er ikke en bygget satellit. Mere end 150 personer i Berlin og omkring 70 flere roller frem til 2027 er ikke et målt år. RapidEye i 2015 i Brandenburg er et tidligere køb, ikke fabrikken.",
+    "Konstellationssiden skriver, at selskabet designer, bygger, samler og tester satellitter selv, og at hundredvis er sendt op siden 2013 gennem partnere. Tallet er ikke et talt år. Selskabet opsender ikke selv raketterne. Nyeste satellitter har NVIDIA Jetson om bord. Det er behandling på satellitten, ikke et datacenter i kredsløb. Owl er stadig næste generation. Ordene pioneering, unprecedented og next-generation er ikke taget med, ud over sidens eget navn på Owl."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets side",
-     "url": "https://www.planet.com/"
+     "label": "Lokationer",
+     "url": "https://www.planet.com/locations/"
+    },
+    {
+     "label": "Kontakt",
+     "url": "https://www.planet.com/contact/"
+    },
+    {
+     "label": "Konstellationer",
+     "url": "https://www.planet.com/constellations/"
+    },
+    {
+     "label": "Berlin, 21. september 2026",
+     "url": "https://www.planet.com/pulse/planet-s-next-chapter-in-germany-expanding-our-european-operations-with-satellite-manufacturing/"
     }
    ]
   },
