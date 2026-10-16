@@ -1110,3 +1110,13 @@ div.cmp-row{margin:10px 0 2px}.cmp-toggle{font-size:14px;cursor:pointer;display:
 .chart-wrap .cursor{pointer-events:none}
 .stale-warn{font-size:13px;color:var(--text);background:rgba(211,143,136,.14);border-left:3px solid #d38f88;padding:6px 10px;margin:6px 0}
 #rullende-og-nedture td,#rullende-og-nedture th{white-space:nowrap}.chart-wrap.r12 svg{min-height:160px}
+
+/* UX 08:00 MUST 2: mobilgraf læsbar, Nasdaq tydelig */
+.chart-wrap .cmp{stroke:#f0b45a;stroke-width:2.6;stroke-dasharray:7 4;opacity:1}
+.lg-cmp{border-top:2.6px dashed #f0b45a}
+.chart-wrap .end-fund{fill:var(--cyan);font-weight:700;font-size:12px}
+.chart-wrap .end-cmp{fill:#f0b45a;font-weight:700;font-size:12px}
+@media (max-width:700px){.chart-wrap{min-height:240px;aspect-ratio:auto;height:auto}.chart-wrap svg{height:auto;min-height:220px}.chart-wrap text{font-size:11px}}
+.uf-about{margin:10px 0}.uf-about>*{margin-top:8px}
+@media (max-width:800px){#app .eyebrow+h1{margin-top:2px}}
+@media (max-width:700px){.chart-wrap .end-fund,.chart-wrap .end-cmp{font-size:11px}}
