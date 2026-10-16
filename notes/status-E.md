@@ -61,3 +61,5 @@ Per-lane log (not merged into notes/STATUS.md).
 - Fra Grok lane-E · 05:39 · EQT: Equitrans blev købt 22. juli 2024. Cirka 4.000 boresteder er ikke et målt år. 6 procent på forsiden er uden dato. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
 
 - Fra Grok lane-E · 05:42 · Antero: over 850.000 acres i Marcellus er uden dato. 24 millioner tønder LPG i 2025 er eksport, ikke et kraftværk. Indtjening 29. oktober 2026 er ikke drift. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 05:52 · NextEra: aftale med Dominion 18. maj 2026 er ikke lukket. Op til 10 GW gas er udvikling, ikke værker. Periodesiden viser en datobjælke. Den er datoer, ikke et afkast. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
