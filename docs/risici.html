@@ -85,7 +85,7 @@
  <div class="risk-card"><strong>Flaskehalse kan flytte sig</strong>NDI ser AI-værdikæden som et flodsystem, hvor efterspørgslen presser på fem dæmninger: energi, datacentre, halvledere, cloud og modeller samt applikationer og fysisk AI. Når en flaskehals løsner sig, flytter presset videre, og selskaberne i det led kan falde samtidig. <a href="vaerdikaeder.html#kap-flod">Se de fem dæmninger →</a> · <a href="om-data.html#g-daemning">Ordliste →</a></div>
  <div class="risk-card"><strong>Valuta</strong>Mindst to tredjedele af beholdningen handles i dollar (beholdning pr. 1. juni 2026). Fonden opgøres i kroner, så valutakursen påvirker afkastet i begge retninger. <a href="laer/valuta.html">Sådan virker det →</a></div>
  <div class="risk-card"><strong>Tidlige selskaber</strong>En del af porteføljen er selskaber før omsætning eller før overskud. De kan vokse meget, men kan også mislykkes helt. <a href="laer/livscyklus.html">Selskabers livscyklus →</a></div>
- <div class="risk-card"><strong>Udsving trækker afkastet ned</strong>Et fald på 50 % kræver en stigning på 100 % for at komme tilbage. Derfor er det årlige afkast (CAGR) lavere end et simpelt gennemsnit, når kurserne svinger meget. <a href="laer/variance-drag.html">CAGR og gennemsnit →</a></div>
+ <div class="risk-card"><strong>Udsving trækker afkastet ned</strong>Et fald på 50 % kræver en stigning på 100 % for at komme tilbage. Derfor er det årlige afkast (CAGR) lavere end et simpelt gennemsnit, når kurserne svinger meget. <a href="laer/variance-drag.html">Årligt afkast og gennemsnit →</a></div>
  </div>
  <p style="color:var(--muted);line-height:1.55;font-size:14px">Værdikæder, temaer og vægte viser, hvad porteføljen er eksponeret mod. De er ikke bevidste overvægte og ikke anbefalinger.</p>
  </section>
@@ -145,11 +145,11 @@
    <p style="color:var(--muted);line-height:1.55;margin-bottom:10px">Regnet af NDI Analytics ud fra PMINDI’s totalafkast fra første NAV til ${fmtDate(rs.asOf)}. Det er ikke tal fra KID’et.</p>
    <div class="metrics">
      <div class="metric"><div class="label">Udsving pr. år</div><strong>${pct(rs.volatilityAnnPct)}</strong><small>Volatilitet. <a href="om-data.html#g-udsving">Ordliste →</a></small></div>
-     <div class="metric"><div class="label">Afkast pr. udsving</div><strong>${String(rs.sharpeRf0).replace('.', ',')}</strong><small>Sharpe, uden rente trukket fra. <a href="om-data.html#g-sharpe">Ordliste →</a></small></div>
+     <div class="metric"><div class="label">Afkast pr. udsving</div><strong>${String(rs.sharpeRf0).replace('.', ',')}</strong><small>Gns. afkast delt med udsving, uden rente trukket fra. <a href="om-data.html#g-sharpe">Ordliste →</a></small></div>
      <div class="metric"><div class="label">Største fald fra top</div><strong class="neg">${pct(rs.maxDrawdownPct)}</strong><small>${fmtDate(rs.maxDdPeak)} til ${fmtDate(rs.maxDdTrough)}</small></div>
    </div>
    <p style="color:var(--muted);line-height:1.55;margin-top:12px"><strong style="color:var(--text)">Hvorfor passer tallet ikke med risikoklassen?</strong> Risikoklassen i KID’et regnes efter EU’s regler (<a href="om-data.html#g-priips">PRIIPs</a>) med deres egen metode og periode. Tallet her er et simpelt mål for de udsving, fonden har haft. Det kan ikke bruges til at regne klassen ud, og det siger ikke, hvor store udsvingene bliver fremover. <a href="laer/risikoklasse.html">Hvad klassen betyder →</a></p>
-   <p class="src">${placeholder ? 'Fundmarket viser ikke udsving og Sharpe på fondens produktside (tjekket 15. okt. 2026).' : `Officielle tal fra Fundmarket: ${rs.officialVolSharpe}.`} <a href="drawdown.html">Fald fra top →</a> · <a href="fakta.html">Fakta →</a> · <a href="omkostninger.html">Omkostninger →</a></p>`;
+   <p class="src">${placeholder ? 'Fundmarket viser ikke udsving og afkast pr. udsving på fondens produktside (tjekket 15. okt. 2026).' : `Officielle tal fra Fundmarket: ${rs.officialVolSharpe}.`} <a href="drawdown.html">Fald fra top →</a> · <a href="fakta.html">Fakta →</a> · <a href="omkostninger.html">Omkostninger →</a></p>`;
  } else {
    document.getElementById('risk-stats').innerHTML = '<p style="color:var(--muted)">Tallene kunne ikke hentes. <a href="drawdown.html">Fald fra top →</a></p>';
  }
