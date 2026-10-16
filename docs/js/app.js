@@ -356,7 +356,7 @@ function renderFonden(root) {
         <p class="band" style="font-size:16px;color:var(--text);line-height:1.55"><strong>Ny andelsklasse, kurs vises efter 12 måneder.</strong></p>
         <p style="color:var(--muted);line-height:1.55">Kurs og afkast for PMINDIAKK vises fra 5. december 2026. Klassen følger samme overordnede strategi som PMINDI. Der vises ingen NAV og ingen kursserie før da.</p>
         ${warnHtml()}
-        <p class="note-fundmarket">Fonden har intet fast benchmark; vi viser derfor ingen sammenligningskurve. Beholdningen er et forsinket kvartalssnapshot (seneste offentlige Fundmarket-rapport) — ikke dagsaktuelt.</p>
+        <p class="note-fundmarket">Fonden har intet fast benchmark; vi viser derfor ingen sammenligningskurve. Beholdningen er et forsinket snapshot pr. ${fmtDate(posAsOf)} (seneste offentlige Fundmarket-rapport) og ikke dagsaktuel.</p>
       </section>
       <section class="panel">
         <h2 style="font-size:18px;margin-bottom:8px">Risiko (kort)</h2>
@@ -425,7 +425,7 @@ function renderFonden(root) {
         <div class="metric"><div class="label">Største fald ${gl('drawdown')}</div><strong class="neg">${fmtPct(maxDrawdown(rows)?.dd)}</strong><small><a href="drawdown.html?fund=${state.fund}">Middel/median →</a></small></div>
         <div class="metric"><div class="label">Risikoindikator (KID) ${gl('sri')}</div><strong>5 / 7</strong><small>Anbefalet ejertid 5 år</small></div>
       </div>
-      <p class="note-fundmarket">Fonden har intet fast benchmark; vi viser derfor ingen sammenligningskurve. Beholdningen er et forsinket kvartalssnapshot (seneste offentlige Fundmarket-rapport) — ikke dagsaktuelt.</p>
+      <p class="note-fundmarket">Fonden har intet fast benchmark; vi viser derfor ingen sammenligningskurve. Beholdningen er et forsinket snapshot pr. ${fmtDate(posAsOf)} (seneste offentlige Fundmarket-rapport) og ikke dagsaktuel.</p>
       <p style="font-size:13px;color:var(--muted);margin:8px 0">Graf: ${periodLabel}</p>
       <div class="chart-wrap" id="perf-chart"></div>
       <p class="chart-takeaway" id="chart-takeaway" style="font-size:14px;color:var(--text);margin:8px 0 4px;line-height:1.45"></p>
@@ -755,7 +755,7 @@ function positionsTable(list, fund) {
     <td>${(p.weight ?? 0).toFixed(2).replace('.', ',')}</td>
     <td>${tagsFor(p, DATA.multiTags).map((t) => `<a class="tag" href="tema.html?slug=${encodeURIComponent(t)}&fund=${fund.id}">${daTheme(t)}</a>`).join(' ')}${forslagCell(p)}</td>
   </tr>`).join('')}</tbody></table></div>`, 'Rul til siden for flere kolonner.') +
-  `<p style="font-size:11px;color:var(--muted);margin-top:8px">Kun vægt og tema. De små søjler ved navnet er selskabets <strong style="color:var(--text)">vægt i fonden</strong> pr. kvartalssnapshot frem til ${fmtDate(MONTHS?.cutoff || fund.positionsAsOf)}. Ikke aktiekurs. Ingen kursafkast pr. aktie i v1. Beholdning er forsinket.</p>`;
+  `<p style="font-size:11px;color:var(--muted);margin-top:8px">Kun vægt og tema. De små søjler ved navnet er selskabets <strong style="color:var(--text)">vægt i fonden</strong> i de offentlige rapporter frem til snapshot pr. ${fmtDate(MONTHS?.cutoff || fund.positionsAsOf)}. Ikke aktiekurs. Ingen kursafkast pr. aktie i v1. Beholdning er forsinket.</p>`;
 }
 
 // Mobil (≤560 px): tema-kolonnen skjules, og temaet står som kompakt linje under navnet, så hele rækken

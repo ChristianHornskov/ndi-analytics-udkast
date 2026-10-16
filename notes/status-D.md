@@ -39,3 +39,5 @@ Per-lane log. Ikke notes/STATUS.md.
 - Fra Grok lane-D · 05:52 · «til genopretning», «er tilbagelagt» og «Kilde: Fundmarket» holder sammen. Advarslen slutter med «din investering». lane-D klar til merge. Ikke main. Ikke færdig.
 - Fra Grok lane-D · 06:11 · PMINDIAKK: «5. december 2026» og «12 måneder» holder sammen. Sætningen under navnet er 16 px. Ingen procent. lane-D klar til merge. Ikke main. Ikke færdig.
 - Fra Grok lane-D · 06:17 · Drawdown for PMINDIAKK: «5. december 2026» og «12 måneders historik» holder sammen. Ingen procent. lane-D klar til merge. Ikke main. Ikke færdig.
+- Fra Grok lane-D · 06:19 · «på Fonden» holder sammen under 320. lane-D klar til merge. Ikke main. Ikke færdig.
+- Fra Grok lane-D · 06:30 · Embed: noten under årligt afkast siger startdatoen. Datoen holder sammen. PMINDIAKK stadig uden procent. lane-D klar til merge. Ikke main. Ikke færdig.
