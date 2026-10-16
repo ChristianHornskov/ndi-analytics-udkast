@@ -1308,7 +1308,7 @@
           "id": "grid",
           "icon": "⌒",
           "label": "Elnet, transformere og transmission",
-          "blurb": "Strømmen skal fra kraftværk til datacenter. Det kræver ledninger, transformerstationer og selskaber, der bygger og udstyrer nettet. Quanta, Primoris og MYR Group bygger nettet. De producerer ikke strømmen. MYR skriver, at arbejdet også dækker kommercielle og industrielle anlæg og vedvarende energi. Primoris skriver, at rødderne går tilbage til ARB i Bakersfield i 1960, og at selskabet også bygger infrastruktur frem til datacentre. Det ejer ikke strømmen og ikke datacentret. GE Vernova leverer udstyr og driver ikke værkerne. Solaris leverer strøm tæt på store forbrugere. Selskabet skrev 6. juli 2026, at det har købt GESA. Det er efter beholdningen og er service, ikke et kraftværk i drift.",
+          "blurb": "Strømmen skal fra kraftværk til datacenter. Det kræver ledninger, transformerstationer og selskaber, der bygger og udstyrer nettet. Quanta, Primoris og MYR Group bygger nettet. De producerer ikke strømmen. Quanta skriver, at West Fort McMurray-projektet i Alberta omfatter over 310 miles 500 kV-ledning og stationerne Livock og Thickwood Hills. Siden kalder det et projekt. Quanta ejer ikke ledningen. MYR skriver, at arbejdet også dækker kommercielle og industrielle anlæg og vedvarende energi. Primoris skriver, at rødderne går tilbage til ARB i Bakersfield i 1960, og at selskabet også bygger infrastruktur frem til datacentre. Det ejer ikke strømmen og ikke datacentret. GE Vernova leverer udstyr og driver ikke værkerne. Solaris leverer strøm tæt på store forbrugere. Selskabet skrev 6. juli 2026, at det har købt GESA. Det er efter beholdningen og er service, ikke et kraftværk i drift.",
           "ndi": "NDI har skrevet om mangel på transformere, køling og transmissionskapacitet (ugebrev 10. august 2026). Køling hører med i flaskehalsen. Selskaber, der alene laver ventilation, står ikke på dette led.",
           "themes": [
             "energy",
@@ -1339,7 +1339,7 @@
               "w": 0.22,
               "sym": "PWR",
               "forslag": true,
-              "role": "Bygger elnet og anden energiinfrastruktur"
+              "role": "Bygger nettet. West Fort McMurray er et projekt. Quanta ejer ikke ledningen."
             },
             {
               "isin": "US36828A1016",

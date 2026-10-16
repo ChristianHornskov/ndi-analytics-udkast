@@ -1691,15 +1691,15 @@
   "US74762E1029": {
    "name": "Quanta Services",
    "theme": "physical",
-   "summary": "Bygger og vedligeholder elnet og anden energiinfrastruktur, herunder ledninger og stationer.",
-   "watch": "Ordrer fra elselskaber og adgang til mandskab og udstyr.",
-   "source": "https://www.quantaservices.com/",
-   "products": "Anlægsarbejde på elnet og energiinfrastruktur.",
+   "summary": "Bygger og vedligeholder elnet. Selskabet skriver, at West Fort McMurray-projektet i Alberta omfatter over 310 miles 500 kV-ledning og stationerne Livock og Thickwood Hills. Quanta ejer ikke ledningen. Hovedsædet ligger i Houston i Texas.",
+   "watch": "Om projekterne er byggeri. Teksten beskriver ikke ejerskab af ledningen.",
+   "source": "https://www.quantaservices.com/capabilities/electric-power/",
+   "products": "Byggeri og vedligehold af ledninger og transformerstationer. Ikke selve strømmen.",
    "customers": "Elselskaber og andre ejere af net.",
-   "role": "Bygger nettet. Producerer ikke strømmen.",
+   "role": "Bygger nettet. Ejer ikke ledningen.",
    "narrative": [
-    "Quanta Services bygger og vedligeholder elnet. Arbejdet dækker ledninger, transformerstationer og distributionsnet. Selskabet arbejder også på kraftværker.",
-    "Quanta ejer ikke strømmen. I kæden står selskabet på elnet. Temaet i snapshottet er et forslag."
+    "Quanta skriver, at West Fort McMurray-projektet i det nordlige centrale Alberta omfatter over 310 miles 500 kV-ledning, udvidelse af stationen Livock og anlæg af stationen Thickwood Hills. Siden kalder det et projekt. Teksten siger ikke, at Quanta ejer ledningen, og ikke at den er i drift. Miles er selskabets eget mål.",
+    "Selskabet har hovedsæde på 2727 North Loop West i Houston i Texas. Quanta ejer ikke strømmen. I kæden står selskabet på elnet. Temaet i snapshottet er et forslag."
    ],
    "narrativeSources": [
     {

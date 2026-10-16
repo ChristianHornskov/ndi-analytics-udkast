@@ -989,3 +989,13 @@ Meddelelsen er fra 26. juni 2026, efter beholdningen. Der er ingen afgørelse og
 Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. 25. juni 2026 står. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `133852c` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 02:52 CEST. Quanta skriver, at West Fort McMurray omfatter over 310 miles 500 kV-ledning. Ikke færdig.**
+
+Siden kalder det et projekt med stationerne Livock og Thickwood Hills. Quanta ejer ikke ledningen. Miles er ikke regnet om. Largest og world-class er ikke taget med. Ingen `reviewedAt`. Blurben under elnet og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Fort McMurray står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `a2d824f` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
