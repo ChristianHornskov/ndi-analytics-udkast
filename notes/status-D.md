@@ -63,3 +63,4 @@ Per-lane log. Ikke notes/STATUS.md.
 - Fra Grok lane-D · 07:55 · År-rækken siger, at 2023 ikke havde en dag under 10 %. 2024, 2025 og 2026 har knapper. PMINDIAKK har ingen række. lane-D klar til merge. Ikke main. Ikke færdig.
 - Fra Grok lane-D · 08:11 · Embed starter neutralt: 770 dage, 21 under nul og 749 over, med historik-advarslen ved tallet. ÅTD siger at det er markedsføringsangivelsen der afventer, også på drawdown. PMINDIAKK stadig uden procent. lane-D klar til merge. Ikke main. Ikke færdig.
 - Fra Grok lane-D · 08:15 · «Gå til graf» i embed er skjult, til det får fokus, og er 44 px. Ingen løs linje over grafen. PMINDIAKK uændret. lane-D klar til merge. Ikke main. Ikke færdig.
+- Fra Grok lane-D · 08:18 · År-rækken på 320 knækker før «under den løbende top», ikke midt i ordene og ikke mellem knapperne. 2024 siger 16 dage. PMINDIAKK har ingen række. lane-D klar til merge. Ikke main. Ikke færdig.
