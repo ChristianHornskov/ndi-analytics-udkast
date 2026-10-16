@@ -81,7 +81,7 @@
   .dd-cap{position:absolute;right:10px;top:0;height:100%;display:flex;align-items:center;font-size:10px;letter-spacing:.8px;text-transform:uppercase;color:#c5d6db;pointer-events:none}
   .empty-note{border:1px dashed #89aeb488;border-radius:14px;padding:22px 16px;color:var(--muted)}
   .fact-hero{display:grid;grid-template-columns:1fr;gap:10px;align-items:stretch;margin:0 0 8px}
-  .band.glance{margin:4px 0 8px}
+  .band.glance{margin:2px 0 0}
   .fact-hero.is-pair{grid-template-columns:minmax(0,1.2fr) auto minmax(210px,.78fr)}
   .fact-hero article{border-radius:16px;padding:12px 14px 10px;min-width:0}
   .fact-hero-kid{border:1px solid #345860;background:linear-gradient(180deg,#16303a,#11252c)}
@@ -99,11 +99,19 @@
   .fact-hero-gap .gap-sub b{color:var(--cyan);font-weight:600}
   .fact-hero-gap .gap-eq{margin:3px 0 0;font-size:13px;line-height:1.35;color:#f5ee9e}
   .fact-neq{display:grid;place-items:center;margin:0;color:#f5ee9e;font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-size:28px;line-height:1}
-  .fact-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;list-style:none;padding:0;margin:0 0 8px}
+  .fact-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;list-style:none;padding:0;margin:0 0 4px}
   .fact-strip li{background:#0b171d;border:1px solid var(--line);border-radius:12px;padding:8px 12px;min-width:0}
   .fact-strip .k{display:block;font-size:11px;letter-spacing:.6px;color:var(--brand);font-weight:700;margin-bottom:4px}
   .fact-strip strong{display:block;font-size:18px;font-weight:500;letter-spacing:-.3px;color:var(--cyan);font-variant-numeric:tabular-nums}
   .fact-strip .sri-mini{margin-top:6px}
+  .kid-head{display:flex;justify-content:space-between;align-items:center;gap:8px 12px;flex-wrap:wrap;margin:0 0 8px}
+  .kid-head .kicker{margin:0}
+  .kid-switch{display:flex;gap:4px;flex:none}
+  .kid-switch button{appearance:none;border:1px solid #345860;background:#0b171d;color:var(--muted);border-radius:999px;padding:4px 8px 4px 10px;font:inherit;font-size:12px;line-height:1.2;cursor:pointer;display:inline-flex;align-items:baseline;gap:6px;min-height:32px}
+  .kid-switch button b{font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-weight:500;font-size:14px;letter-spacing:-.3px;color:#c5d6db}
+  .kid-switch button[aria-pressed="true"]{border-color:#f5ee9e88;color:var(--text);box-shadow:inset 0 -2px 0 #f5ee9e}
+  .kid-switch button[aria-pressed="true"] b{color:#f5ee9e}
+  .kid-switch button:focus-visible{outline:2px solid #f5ee9e;outline-offset:2px}
   @media(max-width:800px){
     .fact-grid,.org,.team,.tax-grid,.kv,.risk-split,.risk-metrics,.glance-board,.dd-dates{grid-template-columns:1fr}
     .glance-tile.is-gap strong{font-size:36px}
@@ -216,22 +224,44 @@
  const kidHi = kidOk ? Math.max(Number(A.costs.kidRiy5y), Number(B.costs.kidRiy5y)) : null;
  const kidLo = kidOk ? Math.min(Number(A.costs.kidRiy5y), Number(B.costs.kidRiy5y)) : null;
  const kidEq = kidOk && kidHi !== kidLo ? `${krTxt(krOf(kidHi))} − ${krTxt(krOf(kidLo))}` : '';
- const glanceVisible = kidOk
+ const horizonOf = (years, rateA, rateB) => {
+ if (!Number.isFinite(Number(rateA)) || !Number.isFinite(Number(rateB))) return null;
+ const ka = krOf(rateA);
+ const kb = krOf(rateB);
+ const gapN = Math.abs(kb - ka);
+ const hi = Math.max(ka, kb);
+ const lo = Math.min(ka, kb);
+ return { y: years, pctA: pct(rateA), pctB: pct(rateB), krA: krTxt(ka), krB: krTxt(kb), gap: krTxt(gapN), gapN, eq: hi === lo ? '' : `${krTxt(hi)} − ${krTxt(lo)}` };
+ };
+ const kidHorizons = [horizonOf(1, A.costs.kidRiy1y, B.costs.kidRiy1y), horizonOf(5, A.costs.kidRiy5y, B.costs.kidRiy5y)].filter(Boolean);
+ const txGapN = Math.abs(krOf(B.costs.portfolioTransaction) - krOf(A.costs.portfolioTransaction));
+ const h1 = kidHorizons.find((h) => h.y === 1) || null;
+ const h5 = kidHorizons.find((h) => h.y === 5) || null;
+ const sameKr = h1 && dTx !== 0 && h1.gapN === txGapN;
+ const kidNote = (h1 && h5)
+ ? `Ved 1 år er forskellen ${h1.gap}${sameKr ? ', samme beløb som postsatsen. ' : ' '}Ved 5 år er den ${h5.gap} Ikke det samme tal. Ikke et ÅOP. Før kurtage og depot.`
+ : 'Ikke det samme som postsatserne. Ikke et ÅOP. Før kurtage og depot.';
+ const wantH = new URL(location.href).searchParams.get('h');
+ const heroStart = kidHorizons.find((h) => String(h.y) === wantH) || h5 || kidHorizons[0] || null;
+ const glanceVisible = (h1 && h5)
+ ? `KID ved 5 år er ${h5.pctA} og ${h5.pctB}, forskel ${h5.gap} KID ved 1 år er ${h1.pctA} og ${h1.pctB}, forskel ${h1.gap} ${onlyFour ? `Den eneste forskel i postsatserne er porteføljetransaktion, ${pct(A.costs.portfolioTransaction)} og ${pct(B.costs.portfolioTransaction)}, ${krGapTxt}` : glance} ${sameKr ? 'KID ved 1 år og postsatsen rammer samme kronerbeløb. Det er ikke det samme tal.' : 'De to tal er ikke det samme.'} Ikke et ÅOP.`
+ : (kidOk
  ? `KID ved 5 år er ${pct(A.costs.kidRiy5y)} og ${pct(B.costs.kidRiy5y)}. ${onlyFour ? `Den eneste forskel i postsatserne er porteføljetransaktion, ${pct(A.costs.portfolioTransaction)} og ${pct(B.costs.portfolioTransaction)}.` : glance} De to tal er ikke det samme. Ikke et ÅOP.`
  : (onlyFour
  ? `Porteføljetransaktion er den eneste forskel i postsatserne: ${pct(A.costs.portfolioTransaction)} i PMINDI og ${pct(B.costs.portfolioTransaction)} i PMINDIAKK.`
- : glance);
+ : glance));
  const sriMeter = sameSri
  ? `<span class="sri-mini" aria-hidden="true">${Array.from({ length: A.sriMax }, (_, i) => `<i class="${i + 1 === A.sri ? 'on' : ''}"></i>`).join('')}</span>`
  : '';
- const heroKid = kidOk ? `<article class="fact-hero-kid">
- <p class="kicker">KID · 5 ÅR · ÅRLIG KONSEKVENS</p>
- <div class="fact-hero-nums">
- <div><span>PMINDI</span><b>${pct(A.costs.kidRiy5y)}</b><small>${krTxt(krOf(A.costs.kidRiy5y))} på 100.000 kr.</small></div>
- <div class="mid"><span>forskel</span><em>${kidGapTxt}</em><small>${kidEq ? `${kidEq}<br>` : ''}ikke postsatserne</small></div>
- <div><span>PMINDIAKK</span><b>${pct(B.costs.kidRiy5y)}</b><small>${krTxt(krOf(B.costs.kidRiy5y))} på 100.000 kr.</small></div>
+ const kidSwitch = kidHorizons.length > 1 ? `<div class="kid-switch" role="group" aria-label="KID-horisont">${kidHorizons.map((h) => `<button type="button" data-kid="${h.y}" aria-pressed="${heroStart && h.y === heroStart.y ? 'true' : 'false'}" aria-label="Vis KID ved ${h.y} år. Forskellen er ${h.gap}.">${h.y} år <b>${h.gap}</b></button>`).join('')}</div>` : '';
+ const heroKid = heroStart ? `<article class="fact-hero-kid" id="kid-hero">
+ <div class="kid-head"><p class="kicker">KID</p>${kidSwitch}</div>
+ <div class="fact-hero-nums" aria-live="polite">
+ <div><span>PMINDI</span><b data-kid-a>${heroStart.pctA}</b><small data-kid-ka>${heroStart.krA} på 100.000 kr.</small></div>
+ <div class="mid"><span>forskel</span><em data-kid-gap>${heroStart.gap}</em><small data-kid-eq>${heroStart.eq ? `${heroStart.eq}<br>` : ''}ikke postsatserne</small></div>
+ <div><span>PMINDIAKK</span><b data-kid-b>${heroStart.pctB}</b><small data-kid-kb>${heroStart.krB} på 100.000 kr.</small></div>
  </div>
- <p class="fact-hero-note">Ikke det samme som postsatserne. Ikke et ÅOP. Før kurtage og depot.</p>
+ <p class="fact-hero-note sr-only">${kidNote}</p>
  </article>` : '';
  const heroGap = dTx === 0 ? '' : `<article class="fact-hero-gap">
  <p class="kicker">POSTSATS · PORTEFØLJETRANSAKTION</p>
@@ -320,7 +350,7 @@
  </section>
  <section class="panel" id="omkostningsniveau">
  <h2 class="panel-h">Omkostningsniveau (kort)</h2>
- <p style="color:var(--muted);line-height:1.55">KID’ets årlige omkostningsmæssige konsekvens er <strong style="color:var(--text)">${pct(A.costs.kidRiy5y)}</strong> for PMINDI og <strong style="color:var(--text)">${pct(B.costs.kidRiy5y)}</strong> for PMINDIAKK ved 5 år (før din kurtage og dit depot). Postsatserne hos Fundmarket (øvrige løbende ${pct(A.costs.otherOngoing)} m.m.) er enkeltdele — ikke et billigere alternativ til KID-tallet. <a href="omkostninger.html#kid-omkostning">Se opstillingen →</a></p>
+ <p style="color:var(--muted);line-height:1.55">KID’ets årlige omkostningsmæssige konsekvens er <strong style="color:var(--text)">${h5 ? h5.pctA : pct(A.costs.kidRiy5y)}</strong> for PMINDI og <strong style="color:var(--text)">${h5 ? h5.pctB : pct(B.costs.kidRiy5y)}</strong> for PMINDIAKK ved 5 år${h1 ? `, og <strong style="color:var(--text)">${h1.pctA}</strong> og <strong style="color:var(--text)">${h1.pctB}</strong> ved 1 år` : ''} (før din kurtage og dit depot). Postsatserne hos Fundmarket (øvrige løbende ${pct(A.costs.otherOngoing)} m.m.) er enkeltdele, ikke et billigere alternativ til KID-tallet. <a href="omkostninger.html#kid-omkostning">Se opstillingen →</a></p>
  </section>
  <div class="fact-grid" id="klasser">
  ${klasse(A, dTx !== 0)}
@@ -367,6 +397,38 @@
  <a class="outline-btn" href="ndi-paa-x.html">NDI på X →</a>
  </p>`;
 
+ const paintKid = (years, pushUrl) => {
+ const h = kidHorizons.find((x) => x.y === Number(years));
+ const root = document.getElementById('kid-hero');
+ if (!h || !root) return;
+ root.querySelector('[data-kid-a]').textContent = h.pctA;
+ root.querySelector('[data-kid-b]').textContent = h.pctB;
+ root.querySelector('[data-kid-ka]').textContent = `${h.krA} på 100.000 kr.`;
+ root.querySelector('[data-kid-kb]').textContent = `${h.krB} på 100.000 kr.`;
+ root.querySelector('[data-kid-gap]').textContent = h.gap;
+ root.querySelector('[data-kid-eq]').innerHTML = `${h.eq ? `${h.eq}<br>` : ''}ikke postsatserne`;
+ root.querySelectorAll('[data-kid]').forEach((btn) => {
+ btn.setAttribute('aria-pressed', Number(btn.getAttribute('data-kid')) === h.y ? 'true' : 'false');
+ });
+ main.querySelectorAll('a[href^="omkostninger.html"]').forEach((a) => {
+ const u = new URL(a.getAttribute('href'), location.href);
+ if (h.y === 5) u.searchParams.delete('h');
+ else u.searchParams.set('h', String(h.y));
+ a.setAttribute('href', `omkostninger.html${u.search}${u.hash}`);
+ });
+ if (pushUrl) {
+ const u = new URL(location.href);
+ if (h.y === 5) u.searchParams.delete('h');
+ else u.searchParams.set('h', String(h.y));
+ history.replaceState(null, '', u);
+ }
+ };
+ if (heroStart) paintKid(heroStart.y, false);
+ main.addEventListener('click', (e) => {
+ const btn = e.target.closest('[data-kid]');
+ if (!btn || !document.getElementById('kid-hero')?.contains(btn)) return;
+ paintKid(btn.getAttribute('data-kid'), true);
+ });
  const copyStatus = document.getElementById('copy-status');
  main.addEventListener('click', async (e) => {
  const btn = e.target.closest('[data-copy]');

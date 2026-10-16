@@ -85,16 +85,18 @@
 
  const read = () => {
  const u = new URL(location.href);
- return { f: u.searchParams.get('f') || 'all', q: u.searchParams.get('q') || '', who: u.searchParams.get('who') || 'all' };
+ return { f: u.searchParams.get('f') || 'all', q: u.searchParams.get('q') || '', who: u.searchParams.get('who') || 'all', id: u.searchParams.get('id') || '' };
  };
  const write = (st) => {
  const u = new URL(location.href);
  if (st.f && st.f !== 'all') u.searchParams.set('f', st.f); else u.searchParams.delete('f');
  if (st.q) u.searchParams.set('q', st.q); else u.searchParams.delete('q');
  if (st.who && st.who !== 'all') u.searchParams.set('who', st.who); else u.searchParams.delete('who');
+ if (st.id) u.searchParams.set('id', st.id); else u.searchParams.delete('id');
  history.replaceState(null, '', u);
  };
  let state = read();
+ let focusPicked = Boolean(state.id);
  const apply = (list) => list.filter((p) => postInFilter(p, state.f) && postWho(p, state.who) && postMatchesQuery(p, state.q));
  const reasonsFor = (p) => archiveHit(p, { q: state.q, f: state.f }).reasons;
  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -219,7 +221,7 @@
  const kicker = film || rail
  ? (kind === 'direct' ? 'Andre datoer' : 'Andre datoer · tema')
  : kind === 'direct' ? 'Øvrige direkte træf' : (quotedTheme ? 'Øvrige tema' : 'Tema');
- const note = pickable ? 'Klik en dato. ' : '';
+ const note = pickable ? 'Klik en dato, eller brug piletasterne. ' : '';
  const body = cards.map((p) => xCard(p, { query: markQ, hitKind: kind, reasons: reasonsFor(p), rail: film ? 'film' : rail, pickable })).join('');
  return `<div class="x-lane ${kind === 'direct' ? 'is-direct' : 'is-theme'}${film ? ' is-film' : ''}${rail ? ' is-rail' : ''}">
  <p class="x-lane-h"><span class="x-lane-k">${kicker}</span><span class="x-lane-hint">${note}${hint} · ${cards.length}</span></p>
@@ -279,10 +281,22 @@
  grid.innerHTML = scoreBar + `<div class="x-stage">${xCard(first, { query: markQ, lead: true, reasons: reasonsFor(first) })}</div>`
  + (tail.length ? `<div class="x-grid" style="grid-column:1/-1">${tail.map((p) => xCard(p, { query: markQ })).join('')}</div>` : '');
  } else {
- const leadPost = direct[0] || theme[0];
+ const pickFrom = (arr, id) => {
+ if (!id) return { lead: arr[0], rest: arr.slice(1) };
+ const hit = arr.find((p) => p.id === id);
+ if (!hit) return null;
+ return { lead: hit, rest: arr.filter((p) => p.id !== id) };
+ };
  const leadKind = direct.length ? 'direct' : 'theme';
- const restDirect = direct.length ? direct.slice(1) : [];
- const restTheme = direct.length ? theme : theme.slice(1);
+ const picked = direct.length ? pickFrom(direct, state.id) : pickFrom(theme, state.id);
+ const opened = picked || (direct.length ? pickFrom(direct, '') : pickFrom(theme, ''));
+ const leadPost = opened.lead;
+ const restDirect = direct.length ? opened.rest : [];
+ const restTheme = direct.length ? theme : opened.rest;
+ if (state.id && leadPost?.id !== state.id) {
+ state = { ...state, id: '' };
+ write(state);
+ }
  const packLane = (kind, hits, allowBeside) => {
  if (!hits.length) return { beside: '', below: '' };
  if (hits.length >= 3) return { beside: '', below: laneOf(kind, hits, 'film') };
@@ -293,13 +307,22 @@
  const themePacked = packLane('theme', restTheme, !restDirect.length);
  const sideLane = directPacked.beside || themePacked.beside;
  const belowLane = directPacked.below + themePacked.below;
- const quote = `<div class="x-stage">${xCard(leadPost, { query: markQ, lead: true, hitKind: leadKind, reasons: reasonsFor(leadPost) })}</div>`;
+ const dated = (leadKind === 'direct' ? restDirect : restTheme).length > 0;
+ const quote = `<div class="x-stage">${xCard(leadPost, { query: markQ, lead: true, hitKind: leadKind, reasons: reasonsFor(leadPost), dated })}</div>`;
  const stage = sideLane
  ? `<div class="x-split"><div class="x-split-main">${quote}</div><div class="x-split-side">${sideLane}</div></div>`
  : quote;
  grid.innerHTML = scoreBar + stage
  + belowLane
  + (restHits.length ? `<div class="x-grid" style="grid-column:1/-1">${restHits.map((p) => xCard(p, { query: state.q })).join('')}</div>` : '');
+ }
+ if (focusPicked && state.id) {
+ focusPicked = false;
+ const lead = grid.querySelector('article.is-lead');
+ if (lead && lead.getAttribute('data-x-id') === state.id) {
+ lead.setAttribute('tabindex', '-1');
+ lead.focus({ preventScroll: true });
+ }
  }
  };
 
@@ -332,6 +355,12 @@
  else if (scroll) revealHits(true);
  };
 
+ main.addEventListener('ndi-x-pick', (e) => {
+ const id = e.detail && e.detail.id;
+ if (!id || state.id === id) return;
+ state = { ...state, id };
+ write(state);
+ });
  main.addEventListener('click', (e) => {
  const clr = e.target.closest('[data-clear]');
  if (clr) {

@@ -301,6 +301,11 @@ button.x-pick:hover time{text-decoration:underline;text-underline-offset:3px}
 button.x-pick:focus-visible{outline:2px solid #f5ee9e;outline-offset:3px}
 .x-lane-h .x-lane-hint,.x-lane-n{color:var(--faint);font-size:12px;font-weight:400;letter-spacing:0}
 .x-stage.x-picked{margin-top:10px}
+.x-by-when{margin-left:auto;display:flex;flex-direction:column;align-items:flex-end;justify-content:center;gap:2px;min-width:0}
+article.x-card.is-quote .x-by-when time,article.x-card.is-slip .x-by-when time{margin-left:0;font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-size:16px;font-weight:500;letter-spacing:-.3px;line-height:1;color:#f5ee9e}
+.x-now{font-style:normal;font-size:10px;letter-spacing:.7px;text-transform:uppercase;font-weight:700;line-height:1.15;color:#f5ee9e}
+article.x-card.is-lead:focus{outline:none}
+article.x-card.is-lead:focus-visible{outline:2px solid #f5ee9e;outline-offset:3px}
 `;
   document.head.appendChild(s);
 }
@@ -703,7 +708,7 @@ export function xCard(p, opt = {}) {
       : `<span>${esc(when.year)}</span>`;
     if (!opt.pickable) return { film: `${time}${year}`, rail: `<div class="x-rail-when">${time}${year}</div>` };
     const label = `Vis opslaget fra ${fmtXDate(p.created_at)} som citat`;
-    const btn = `<button type="button" class="x-pick ${mode === 'film' ? 'x-film-when' : 'x-rail-when'}" data-x-pick aria-label="${esc(label)}">${time}${year}</button>`;
+    const btn = `<button type="button" class="x-pick ${mode === 'film' ? 'x-film-when' : 'x-rail-when'}" data-x-pick aria-keyshortcuts="ArrowLeft ArrowRight" aria-label="${esc(label)}">${time}${year}</button>`;
     return { film: btn, rail: btn };
   };
   if (opt.rail && opt.rail !== 'film') {
@@ -741,9 +746,15 @@ export function xCard(p, opt = {}) {
   ${because ? `<p class="x-why">${because}</p>` : (why || '')}
 </article>`;
   }
+  const shownWhen = () => {
+    const time = `<time datetime="${esc(p.created_at)}">${esc(fmtXDate(p.created_at))}</time>`;
+    if (!opt.dated) return time;
+    return `<span class="x-by-when">${time}<i class="x-now">Denne dato</i></span>`;
+  };
+  const currentAttr = opt.lead && opt.dated ? ' aria-current="true"' : '';
   if (opt.lead && isTickerSlip(p.text)) {
     const slipCls = ['x-card', 'panel', 'is-lead', 'is-slip', opt.hitKind === 'direct' ? 'is-direct' : ''].filter(Boolean).join(' ');
-    return `<article class="${slipCls}"${idAttr}>
+    return `<article class="${slipCls}"${idAttr}${currentAttr}>
   <p class="kicker" style="color:var(--brand);font-size:11px;font-weight:700;letter-spacing:1.4px;margin:0">KORT OPSLAG</p>
   <p class="x-slip">${highlight(p.text, opt.query)}</p>
   <div class="x-by">
@@ -752,14 +763,14 @@ export function xCard(p, opt = {}) {
       <strong>${esc(p.name || p.username)}</strong>
       <span>@${esc(p.username)}</span>
     </div>
-    <time datetime="${esc(p.created_at)}">${esc(fmtXDate(p.created_at))}</time>
+    ${shownWhen()}
   </div>
   ${why}
   ${foot}
 </article>`;
   }
   if (opt.lead) {
-    return `<article class="${cls}"${idAttr}>
+    return `<article class="${cls}"${idAttr}${currentAttr}>
   <blockquote class="x-quote">
     <span class="x-qmark" aria-hidden="true">„</span>
     ${text}
@@ -770,7 +781,7 @@ export function xCard(p, opt = {}) {
       <strong>${esc(p.name || p.username)}</strong>
       <span>@${esc(p.username)}</span>
     </div>
-    <time datetime="${esc(p.created_at)}">${esc(fmtXDate(p.created_at))}</time>
+    ${shownWhen()}
   </div>
   ${why}
   ${foot}
@@ -867,7 +878,7 @@ export function xSaysPanel(pack, { tickers = [], themes = [], limit = 4, title =
     const hint = kind === 'direct'
       ? 'Nævner selskab eller ticker.'
       : 'Rammer temaet. Ikke en ticker fra udsnittet.';
-    const note = pickable ? 'Klik en dato. ' : '';
+    const note = pickable ? 'Klik en dato, eller brug piletasterne. ' : '';
     const cards = hits.map((h) => xCard(h.post, {
       reasons: h.reasons,
       hitKind: kind,
@@ -904,7 +915,7 @@ export function xSaysPanel(pack, { tickers = [], themes = [], limit = 4, title =
   <p>Panelet er kun NDI-konti. ${view.theme.length ? `Kortene nedenfor deler tema. De nævner ikke ${nameBit}.` : ''}</p>
 </div>`;
     belowLane = view.theme.length ? `<div class="x-lane is-theme${film ? ' is-film' : ''}">
-  <p class="x-lane-h"><span class="x-lane-k">Samme tema</span><span class="x-lane-hint">${who ? `Nævner ikke ${esc(who)}.` : 'Nævner ikke selskabet eller tickeren.'}${film ? ' Klik en dato.' : ''}</span><span class="x-lane-n">${view.theme.length}</span></p>
+  <p class="x-lane-h"><span class="x-lane-k">Samme tema</span><span class="x-lane-hint">${who ? `Nævner ikke ${esc(who)}.` : 'Nævner ikke selskabet eller tickeren.'}${film ? ' Klik en dato, eller brug piletasterne.' : ''}</span><span class="x-lane-n">${view.theme.length}</span></p>
   <div class="x-grid">${cards}</div>
 </div>` : '';
   } else {
@@ -913,6 +924,7 @@ export function xSaysPanel(pack, { tickers = [], themes = [], limit = 4, title =
       lead: true,
       hitKind: leadKind,
       query: markTerm(leadHit),
+      dated: restDirect.length > 0,
     })}</div>`;
     const directPacked = packLane('direct', restDirect, true);
     const themePacked = packLane('theme', restTheme, !restDirect.length);
@@ -944,6 +956,15 @@ function bindXPick() {
     if (!btn) return;
     e.preventDefault();
     promoteCard(btn.closest('article.x-card'));
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+    if (e.altKey || e.metaKey || e.ctrlKey || e.shiftKey) return;
+    const ae = document.activeElement;
+    if (!ae || ae.closest('input, textarea, select, [contenteditable="true"]')) return;
+    const scope = ae.closest('#x-grid, section.x-says');
+    if (!scope) return;
+    if (cyclePick(scope, e.key === 'ArrowRight' ? 1 : -1)) e.preventDefault();
   });
 }
 
@@ -986,6 +1007,7 @@ function promoteCard(card) {
     lead: true,
     hitKind: next.hitKind,
     query: next.query,
+    dated: true,
   });
   const sorted = pool
     .map((id) => cardMeta.get(id))
@@ -1024,4 +1046,35 @@ function promoteCard(card) {
     document.body.appendChild(live);
   }
   live.textContent = `Citatet viser nu opslaget fra ${fmtXDate(next.post.created_at)}.`;
+  const quoteNow = stageHost.querySelector('article');
+  if (quoteNow) {
+    quoteNow.dispatchEvent(new CustomEvent('ndi-x-pick', { bubbles: true, detail: { id: next.post.id } }));
+  }
+}
+
+function cyclePick(scope, dir) {
+  const lead = scope.querySelector('article.is-lead');
+  if (!lead) return false;
+  const kind = leadKindOf(lead);
+  const lane = [...scope.querySelectorAll('.x-lane')].find((el) => {
+    if (!el.querySelector('[data-x-pick]')) return false;
+    const laneKind = el.classList.contains('is-theme') ? 'theme' : 'direct';
+    return laneKind === kind;
+  });
+  if (!lane) return false;
+  const ids = [
+    lead.getAttribute('data-x-id'),
+    ...[...lane.querySelectorAll('article.x-card[data-x-id]')].map((a) => a.getAttribute('data-x-id')),
+  ];
+  const items = ids.map((id) => cardMeta.get(id)).filter(Boolean);
+  items.sort((a, b) => String(b.post.created_at || '').localeCompare(String(a.post.created_at || '')));
+  const cur = items.findIndex((m) => String(m.post.id) === lead.getAttribute('data-x-id'));
+  if (cur < 0) return false;
+  const next = items[cur + (dir > 0 ? 1 : -1)];
+  if (!next) return false;
+  const id = String(next.post.id).replace(/"/g, '');
+  const card = lane.querySelector(`article.x-card[data-x-id="${id}"]`);
+  if (!card) return false;
+  promoteCard(card);
+  return true;
 }
