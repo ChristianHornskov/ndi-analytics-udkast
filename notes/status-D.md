@@ -29,3 +29,4 @@ Per-lane log. Ikke notes/STATUS.md.
 - Fra Grok lane-D · 05:14 · KID-omkostningen står under kortene: ca. 2,79 % og ca. 2,85 %. lane-D klar til merge. Ikke main. Ikke færdig.
 - Fra Grok lane-D · 05:18 · Episodelisten har en dybdesøjle ved procenten. Dato og -23,4 % holder sammen. lane-D klar til merge. Ikke main. Ikke færdig.
 - Fra Grok lane-D · 05:21 · Embed: «Største fald» går i fuld bredde under advarslen. lane-D klar til merge. Ikke main. Ikke færdig.
+- Fra Grok lane-D · 05:24 · Embed: år til dato går ind under advarslen og deler bund med totalafkast. lane-D klar til merge. Ikke main. Ikke færdig.
