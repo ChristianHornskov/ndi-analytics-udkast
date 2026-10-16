@@ -1981,7 +1981,8 @@
             "Karman Space & Defense: beskytter lasten, laver mellemtrin og samler raketmotorer. Sender ikke selv satellitter op.",
             "Howmet Aerospace: metaldele til fly og smedede hjul til lastbiler og busser. Sender ikke selv noget op.",
             "Navneforveksling: selskabet Merlin laver software, der skal kunne flyve fly selv. Det er ikke Satellogics satellit af samme navn."
-          ]
+          ],
+          "shift": "NDI beskriver, at prisen på at komme i kredsløb er faldet kraftigt (BLOG 23. juni 2024). Det er det første skridt. Billigere opsendelse gør det muligt at bygge resten af kæden."
         },
         {
           "id": "satcom",
@@ -2097,7 +2098,8 @@
             "Rocket Lab: bygger og tester rumfartøjer i Long Beach i Californien. CAPSTONE fløj til en bane om Månen i 2022. Selskabet er valgt til 17 satellitkroppe til Globalstar og 18 satellitter til det amerikanske forsvar. Ingen af dem er skrevet som opsendt.",
             "Intuitive Machines: købte Lanteris 13. januar 2026, som bygger satellitkroppe. 18 af dem til det amerikanske forsvar er valgt, men ikke skrevet som opsendt.",
             "Redwire: laver og tester kameraerne til NASAs Orion-kapsel via Lockheed Martin. Meddelelsen fra 1. april 2026 siger, at 11 kameraer og fire solsensorer skal med på Artemis II. Den siger ikke, at flyvningen er gennemført. Redwire sender ikke selv op."
-          ]
+          ],
+          "shift": "Når opsendelse bliver billigere, åbner det markeder som satellitinternet, ifølge NDI (BLOG 23. juni 2024). Her kommer pengene typisk løbende, så længe satellitterne virker, og ikke kun én gang."
         },
         {
           "id": "space-compute",
@@ -2149,7 +2151,8 @@
             "Voyager Technologies: Starlab er et projekt til en rumstation. Det er ikke en station i drift. Selskabet skrev 8. september 2026, at et anlæg i Louisiana igen producerer sortkrudt. Det er efter beholdningen og har ikke med rummet at gøre.",
             "MDA Space: Chorus er satellitter til billeder af Jorden, ikke et datacenter. De to nye er ikke sendt op.",
             "Redwire og York Space Systems: bygger udstyr og satellitkroppe. Ingen af dem driver beregning i kredsløb."
-          ]
+          ],
+          "shift": "NDI nævner beregning i rummet som noget, der kan komme på sigt (BLOG 23. juni 2024). I dag er det en idé, ikke et marked. Udsagnet om SpaceX står kun som Elon Musks citat med kilde."
         }
       ]
     },
