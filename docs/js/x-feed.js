@@ -241,6 +241,50 @@ body.x-focused .x-door-score i{margin-top:0;font-size:11px;letter-spacing:0;text
   }
   body.x-focused #x-active.is-echo{display:none}
 }
+.x-split{display:flex;flex-direction:column;gap:0;min-width:0}
+#x-grid > .x-split{grid-column:1 / -1}
+.x-split-main,.x-split-side{min-width:0}
+.x-split-side .x-lane{margin-top:0;border-left:0;padding-left:0}
+@media(min-width:980px){
+  #x-grid > .x-split,.x-says > .x-split{display:grid;grid-template-columns:minmax(0,1.38fr) minmax(270px,.84fr);gap:0 16px;align-items:start}
+  .x-split-side .x-grid{grid-template-columns:1fr}
+  .x-says > .x-split{margin-top:4px}
+}
+.x-lane.is-rail{border-left:0;padding-left:0}
+.x-lane.is-rail .x-grid{position:relative;display:flex;flex-direction:column;gap:0;margin-top:2px}
+.x-lane.is-rail .x-grid::before{content:"";position:absolute;left:79px;top:7px;bottom:16px;width:1px;background:linear-gradient(#f5ee9e,#345860);pointer-events:none}
+.x-lane.is-theme.is-rail .x-grid::before{background:#617d84}
+article.x-card.is-rail{display:grid;grid-template-columns:72px minmax(0,1fr);column-gap:14px;align-items:start;position:relative;padding:0 0 12px;margin:0;background:transparent;border:0;border-radius:0;box-shadow:none}
+article.x-card.is-rail .x-rail-when time{display:block;margin:0;font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-size:18px;font-weight:500;letter-spacing:-.4px;line-height:1;color:#f5ee9e;white-space:nowrap}
+article.x-card.is-rail .x-rail-when span{display:block;margin-top:4px;font-size:11px;color:var(--faint);font-variant-numeric:tabular-nums}
+.x-lane.is-theme.is-rail article.x-card.is-rail .x-rail-when time{color:#c5d6db}
+article.x-card.is-rail .x-dot{position:absolute;left:75px;top:5px;width:9px;height:9px;border-radius:50%;background:#f5ee9e;box-shadow:0 0 0 3px var(--bg);z-index:1}
+.x-lane.is-theme.is-rail article.x-card.is-rail .x-dot{background:#9eb4ba}
+article.x-card.is-rail .x-rail-body{min-width:0;padding-top:0}
+article.x-card.is-rail .x-rail-who{display:flex;gap:6px;align-items:baseline;min-width:0}
+article.x-card.is-rail .x-rail-who strong{font-size:13px;letter-spacing:-.2px;white-space:nowrap}
+article.x-card.is-rail .x-rail-who span{color:var(--faint);font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+article.x-card.is-rail .x-text{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;white-space:normal;font-size:13.5px;line-height:1.35;margin-top:3px}
+article.x-card.is-rail .x-foot{margin-top:6px;gap:6px}
+article.x-card.is-rail .x-foot .outline-btn.small{min-height:28px;padding:4px 8px}
+.x-lane.is-theme article.x-card.is-rail{background:transparent;box-shadow:none}
+.x-lane.is-film{border-left:0;padding-left:0;margin-top:10px}
+#x-grid > .x-lane.is-film,.x-says > .x-lane.is-film{grid-column:1 / -1}
+.x-lane.is-film .x-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:8px;margin-top:0}
+article.x-card.is-film{display:flex;flex-direction:column;gap:0;align-items:stretch;min-width:0;margin:0;padding:10px 12px 9px;background:#0b171d;border:1px solid #345860;border-top:3px solid #f5ee9e;border-radius:12px;box-shadow:none}
+.x-lane.is-theme.is-film article.x-card.is-film{border-top-color:#9eb4ba;background:#0e1c21}
+article.x-card.is-film time{display:block;margin:0;font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-size:22px;font-weight:500;letter-spacing:-.5px;line-height:1;color:#f5ee9e;white-space:nowrap}
+.x-lane.is-theme.is-film article.x-card.is-film time{color:#c5d6db}
+article.x-card.is-film .x-film-y{display:block;margin:2px 0 6px;font-size:11px;color:var(--faint);font-variant-numeric:tabular-nums}
+article.x-card.is-film .x-film-top{display:flex;gap:6px;align-items:center;min-width:0}
+article.x-card.is-film .x-film-who{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:inherit;text-decoration:none;font-size:13px;font-weight:650;letter-spacing:-.2px}
+article.x-card.is-film .x-film-who:hover{color:var(--cyan)}
+article.x-card.is-film .x-curated,article.x-card.is-film .x-house{flex:none;padding:2px 6px}
+.x-says article.x-card.is-film .x-text,#x-grid article.x-card.is-film .x-text{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;white-space:normal;font-size:12.5px;line-height:1.35;margin:6px 0 0}
+article.x-card.is-film .x-why{margin:6px 0 0;font-size:11px}
+@media(max-width:700px){
+  .x-lane.is-film .x-grid{grid-template-columns:1fr 1fr}
+}
 `;
   document.head.appendChild(s);
 }
@@ -293,6 +337,13 @@ export function fmtXDate(iso) {
   } catch {
     return String(iso).slice(0, 10);
   }
+}
+
+function fmtXParts(iso) {
+  const full = fmtXDate(iso);
+  const m = String(full).match(/^(.*)\s(\d{4})$/);
+  if (!m) return { label: full || '—', year: '' };
+  return { label: m[1], year: m[2] };
 }
 
 function initials(p) {
@@ -585,6 +636,45 @@ export function xCard(p, opt = {}) {
     ${tags}
   </p>`;
   const text = `<p class="x-text">${highlight(p.text, opt.query)}</p>`;
+  if (opt.rail && opt.rail !== 'film') {
+    const when = fmtXParts(p.created_at);
+    const hitTags = [
+      ...(p.tickers || []).slice(0, 4).filter((t) => hitTerms.includes(String(t).toLowerCase())).map((t) => `<a class="tag is-hit" href="${esc(tickerHref(t))}">${esc(t)}</a>`),
+      ...(p.tags || []).slice(0, 3).filter((t) => hitTerms.includes(String(t).toLowerCase())).map((t) => `<a class="tag is-hit" href="${esc(tagHref(t))}">${esc(t)}</a>`),
+    ].join('');
+    return `<article class="${cls} is-rail">
+  <div class="x-rail-when">
+    <time datetime="${esc(p.created_at)}">${esc(when.label)}</time>
+    <span>${esc(when.year)}</span>
+  </div>
+  <span class="x-dot" aria-hidden="true"></span>
+  <div class="x-rail-body">
+    <header class="x-rail-who"><strong>${esc(p.name || p.username)}</strong><span>@${esc(p.username)}</span></header>
+    ${text}
+    ${because ? `<p class="x-why">${because}</p>` : why}
+    <p class="x-foot">
+      <a class="outline-btn small" href="${esc(p.url)}" rel="noopener noreferrer" target="_blank">Åbn på X ↗</a>
+      ${house}
+      ${curated}
+      ${hitTags}
+    </p>
+  </div>
+</article>`;
+  }
+  if (opt.rail === 'film') {
+    const when = fmtXParts(p.created_at);
+    const badge = curated || house;
+    return `<article class="${cls} is-film">
+  <time datetime="${esc(p.created_at)}">${esc(when.label)}</time>
+  <span class="x-film-y">${esc(when.year)}</span>
+  <div class="x-film-top">
+    <a class="x-film-who" href="${esc(p.url)}" rel="noopener noreferrer" target="_blank">${esc(p.name || p.username)}</a>
+    ${badge}
+  </div>
+  ${text}
+  ${because ? `<p class="x-why">${because}</p>` : (why || '')}
+</article>`;
+  }
   if (opt.lead) {
     return `<article class="${cls}">
   <blockquote class="x-quote">
@@ -689,10 +779,14 @@ export function xSaysPanel(pack, { tickers = [], themes = [], limit = 4, title =
     hitKind: leadKind,
     query: markTerm(leadHit),
   })}</div>`;
-  const lane = (kind, hits) => {
+  const lane = (kind, hits, mode) => {
     if (!hits.length) return '';
+    const film = mode === 'film';
+    const rail = mode === 'rail';
     const quotedTheme = !view.direct.length;
-    const kicker = kind === 'direct' ? 'Øvrige direkte træf' : (quotedTheme ? 'Øvrige tema' : 'Tema');
+    const kicker = film || rail
+      ? (kind === 'direct' ? 'Andre datoer' : 'Andre datoer · tema')
+      : kind === 'direct' ? 'Øvrige direkte træf' : (quotedTheme ? 'Øvrige tema' : 'Tema');
     const hint = kind === 'direct'
       ? 'Nævner selskab eller ticker.'
       : 'Rammer temaet. Ikke en ticker fra udsnittet.';
@@ -700,12 +794,26 @@ export function xSaysPanel(pack, { tickers = [], themes = [], limit = 4, title =
       reasons: h.reasons,
       hitKind: kind,
       query: markTerm(h),
+      rail: film ? 'film' : rail,
     })).join('');
-    return `<div class="x-lane ${kind === 'direct' ? 'is-direct' : 'is-theme'}">
+    return `<div class="x-lane ${kind === 'direct' ? 'is-direct' : 'is-theme'}${film ? ' is-film' : ''}${rail ? ' is-rail' : ''}">
   <p class="x-lane-h"><span class="x-lane-k">${kicker}</span><span>${hint}</span></p>
   <div class="x-grid">${cards}</div>
 </div>`;
   };
+  const packLane = (kind, hits, allowBeside) => {
+    if (!hits.length) return { beside: '', below: '' };
+    if (hits.length >= 3) return { beside: '', below: lane(kind, hits, 'film') };
+    if (allowBeside) return { beside: lane(kind, hits, 'rail'), below: '' };
+    return { beside: '', below: lane(kind, hits) };
+  };
+  const directPacked = packLane('direct', restDirect, true);
+  const themePacked = packLane('theme', restTheme, !restDirect.length);
+  const sideLane = directPacked.beside || themePacked.beside;
+  const belowLane = directPacked.below + themePacked.below;
+  const stage = sideLane
+    ? `<div class="x-split"><div class="x-split-main">${quote}</div><div class="x-split-side">${sideLane}</div></div>`
+    : quote;
   const miss = view.direct.length && !view.theme.length && themeLeft > 0
     ? '<p class="x-miss">Kun direkte træf i dette udsnit. Opslag, der bare deler tema, er udeladt, så navnet står først.</p>'
     : !view.direct.length
@@ -715,9 +823,8 @@ export function xSaysPanel(pack, { tickers = [], themes = [], limit = 4, title =
   <div class="x-says-h"><h2 class="panel-h">${esc(title)}</h2>${score}</div>
   <p class="sr-only">${esc(nLabel)}</p>
   <p class="band">${esc(X_LABEL)}. Snapshot ${snap}.</p>
-  ${quote}
-  ${lane('direct', restDirect)}
-  ${lane('theme', restTheme)}
+  ${stage}
+  ${belowLane}
   ${miss}
   <p class="link-row" style="margin-top:12px"><a class="outline-btn small" href="${more}">Flere opslag i feedet →</a></p>
 </section>`;
