@@ -1039,3 +1039,13 @@ Omkring 700 tons i tre dele. 77 MW pr. modul. 12 moduler er specificeret til op 
 Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. 76 fod står. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `85f63ed` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 02:55 CEST. Eos skriver, at fremstilling af Z3 begyndte i august 2023 i Turtle Creek. Ikke færdig.**
+
+Eos Ingenuity Park i Pennsylvania. Fem råvarer er nævnt. Siden daterer ikke produktionens størrelse. Det er batterier, ikke en mine og ikke et kraftværk. Ingen `reviewedAt`. Blurben under lagring og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px og ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Turtle Creek står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `5b53fb6` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

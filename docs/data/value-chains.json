@@ -1364,7 +1364,7 @@
           "id": "storage",
           "icon": "🔋",
           "label": "Energilagring og batterier",
-          "blurb": "Batterier og andre lagre, der kan gemme strøm og aflevere den senere. Lithium til batterierne står under råstoffer. QuantumScape er et batteridesign til køretøjer og nævner også QS PowerBlock til datacentre. Det er ikke masseproduktion og ikke et lager i drift. Fluence leverer batterisystemer og software til nettet og nævner platformen Smartstack. Det er ikke et kraftværk, og teksten siger ikke, at selskabet selv laver cellerne. Eos laver zinkbatterier. Det er ikke en mine.",
+          "blurb": "Batterier og andre lagre, der kan gemme strøm og aflevere den senere. Lithium til batterierne står under råstoffer. QuantumScape er et batteridesign til køretøjer og nævner også QS PowerBlock til datacentre. Det er ikke masseproduktion og ikke et lager i drift. Fluence leverer batterisystemer og software til nettet og nævner platformen Smartstack. Det er ikke et kraftværk, og teksten siger ikke, at selskabet selv laver cellerne. Eos skriver, at fremstilling af Z3 begyndte i august 2023 på Eos Ingenuity Park i Turtle Creek i Pennsylvania. Det er batterier, ikke en mine og ikke et kraftværk.",
           "ndi": "NDI nævner batterier som del af energiflaskehalsen (ugebrev 30. marts 2026). Tesla er med, fordi koncernen også laver batterilagring.",
           "themes": [
             "energy",
@@ -1404,7 +1404,7 @@
               "w": 0.17,
               "sym": "EOSE",
               "forslag": true,
-              "role": "Zinkbatterier til lagring på elnettet"
+              "role": "Z3 fremstilles i Turtle Creek siden august 2023. Ikke en mine og ikke et kraftværk."
             }
           ],
           "seeChain": null

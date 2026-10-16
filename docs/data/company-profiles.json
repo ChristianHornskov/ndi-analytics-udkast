@@ -1887,20 +1887,20 @@
   "US29415C1018": {
    "name": "Eos Energy",
    "theme": "andet",
-   "summary": "Udvikler zinkbaserede batterier til lagring af strøm på elnettet. Snapshottet har selskabet under Andet, med et temaforslag.",
-   "watch": "Om batterierne bliver leveret og holder i drift hos kunderne.",
-   "source": "https://www.eose.com/",
-   "products": "Batterisystemer til elnettet.",
-   "customers": "Elselskaber og projektudviklere.",
-   "role": "Lagring, ikke råstof.",
+   "summary": "Laver zinkbatterier til elnettet. Selskabet skriver, at fremstilling af Z3 begyndte i august 2023 på Eos Ingenuity Park i Turtle Creek i Pennsylvania. Det er batterier, ikke en mine og ikke et kraftværk.",
+   "watch": "Om fabrikken i Turtle Creek bliver ved med at fremstille Z3. Teksten er ikke et kraftværk.",
+   "source": "https://www.eose.com/technology/manufacturing/",
+   "products": "Zinkbatteriet Z3. Fremstilling i Turtle Creek siden august 2023. Ikke et kraftværk.",
+   "customers": "Elselskaber og projektudviklere. Teksten nævner ikke en navngiven leverance.",
+   "role": "Batterier til lagring. Ikke en mine og ikke et kraftværk.",
    "narrative": [
-    "Eos laver zinkbaserede batterier til lagring på elnettet. Selskabet skriver, at systemerne fremstilles i USA.",
-    "Det er lagring, ikke en mine og ikke et kraftværk. Snapshottet har selskabet under Andet, med et temaforslag."
+    "Eos skriver, at fremstilling af batteriet Z3 begyndte i august 2023 på Eos Ingenuity Park i Turtle Creek i Pennsylvania. Datoen ligger før beholdningen pr. 1. juni 2026. Siden nævner fem råvarer: zinkbromid, titanium i industrikvalitet, grafitfilt, plast til støbning og vand. Det er batterier, ikke en mine og ikke et kraftværk.",
+    "Siden daterer ikke, hvor stor produktionen er. Teksten siger ikke, at hvert anlæg kører, og ikke at batterierne står i et kraftværk. Snapshottet har selskabet under Andet, med et temaforslag."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets side",
-     "url": "https://www.eose.com/"
+     "label": "Fremstilling",
+     "url": "https://www.eose.com/technology/manufacturing/"
     }
    ]
   },

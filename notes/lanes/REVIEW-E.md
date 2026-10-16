@@ -282,6 +282,10 @@ St. Gabriel i Louisiana er flydende brint sammen med Olin gennem Hidrogenii. Kom
 
 Aftalen af 1. april 2025 siger, at Bloom og Conagra vil bruge brændselsceller på Conagras fabrikker i Troy og Archbold i Ohio. Før beholdningen. Ikke skrevet som celler, der allerede kører. Ikke et klassisk kraftværk. Megawatt, kapitalramme, leader og leading er ikke kopieret. AI-udkast uden gennemgangsdato. Elproduktions-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
 
+## Eos · 2026-10-16 02:55 CEST
+
+Fremstillingssiden siger, at Z3-produktionen begyndte i august 2023 på Eos Ingenuity Park i Turtle Creek i Pennsylvania. Før beholdningen. Fem råvarer: zinkbromid, titanium i industrikvalitet, grafitfilt, plast til støbning og vand. Siden daterer ikke størrelsen. Ikke en mine og ikke et kraftværk. First, fully made-in-America, low-cost, ethical, ingenious og 25 år er ikke kopieret. Kursgraf og Golden Dome er ikke brugt. AI-udkast uden gennemgangsdato. Lagrings-blurben og arkivet siger grænsen. Vægten 0,17 er uændret. Chromium ved 375 px. Kæden er også tjekket ved 1280 px og ved 375 px. "tjekket mod kilden" er ikke med. Turtle Creek står. Ingen konsolfejl. Ingen vandret scroll. Ordet første på kæden kommer fra ældre sætninger.
+
 ## NuScale · 2026-10-16 02:52 CEST
 
 Modulsiden skriver 77 MW pr. modul, en cylinder på 76 fod gange 15 fod og omkring 700 tons i tre dele. Brændsel under 5 %. Udskiftning op til 21 måneder. 12 moduler er specificeret til op til 924 MWe. Det er et design. Ikke et leveret modul og ikke et værk i drift. NRC-godkendelsen og TVA-programmet på op til 6 GW er ikke drift. E2 Center er en simulator. ENTRA1 er en partner, ikke et værk. First, only, lower cost, walk-away safe og ready to deploy er ikke kopieret. Fod og tons er ikke regnet om. Kapacitetsfaktor og 36 måneder er ikke kopieret. AI-udkast uden gennemgangsdato. SMR-blurben og arkivet siger grænsen. Vægten 0,22 er uændret. Chromium ved 375 px. Kæden er også tjekket ved 1280 px. "tjekket mod kilden" er ikke med. 76 fod står. Ingen konsolfejl. Ingen vandret scroll. Ordet første på kæden kommer fra ældre sætninger.
