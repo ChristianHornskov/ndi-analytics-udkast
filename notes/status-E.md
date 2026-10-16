@@ -65,3 +65,5 @@ Per-lane log (not merged into notes/STATUS.md).
 - Fra Grok lane-E · 05:52 · NextEra: aftale med Dominion 18. maj 2026 er ikke lukket. Op til 10 GW gas er udvikling, ikke værker. Periodesiden viser en datobjælke. Den er datoer, ikke et afkast. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
 
 - Fra Grok lane-E · 05:59 · Cummins: mere end 13.000 forhandlere er uden egen dato. Indianapolis er kontoret, ikke en fabrik. Arkivet har en fold om kapacitet og dato. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 06:02 · Primoris: kontoret i Dallas er ikke en ledning. Fort Worth er linjearbejde. Irvine er ikke Bakersfield. Arkivet kan udskrives med forklaringen åben. Branch lane-E er klar til merge. Ikke main. Ikke færdig.

@@ -2267,17 +2267,21 @@
   "US74164F1030": {
    "name": "Primoris Services",
    "theme": "physical",
-   "summary": "Bygger elnet, rørledninger og infrastruktur frem til datacentre. Selskabet skriver, at rødderne går tilbage til ARB i Bakersfield i 1960, og at Primoris blev dannet i 2004. Det producerer ikke strømmen.",
-   "watch": "Om arbejdet er byggeri. Teksten beskriver ikke ejerskab af strømmen eller af datacentret.",
-   "source": "https://www.prim.com/about/history",
+   "summary": "Bygger elnet, rørledninger og infrastruktur frem til datacentre. Kontoret i Dallas er ikke en ledning. Fort Worth er linjearbejde. Bakersfield og Irvine er ikke den samme adresse.",
+   "watch": "Om et kontor bliver læst som en ledning. Selskabet ejer ikke strømmen.",
+   "source": "https://www.prim.com/contact",
    "products": "Byggeri af elnet, rørledninger og anlæg. Også infrastruktur frem til datacentre. Ikke selve strømmen.",
    "customers": "Elselskaber, energiselskaber og industri. Ikke ejer af datacentret i denne tekst.",
-   "role": "Bygger nettet og infrastruktur frem til datacentre. Ejer ikke strømmen.",
+   "role": "Bygger nettet. Kontorerne er ikke ledningerne.",
    "narrative": [
-    "Primoris skriver, at rødderne går tilbage til 1960 og stiftelsen af ARB, Inc. i Bakersfield i Californien, et selskab, der bygger rørledninger. Primoris blev dannet i 2004 som moderselskab. Siden om datacentre skriver, at selskabet planlægger, bygger og forbinder infrastruktur til gas, sol og batterilagring og til strøm frem til datacentre. Det ejer ikke strømmen og ikke datacentret.",
-    "I kæden står selskabet på elnet. Domænet primoriscorp.com peger den 16. oktober 2026 videre til prim.com."
+    "Historien skriver, at rødderne går tilbage til 1960 og stiftelsen af ARB, Inc. i Bakersfield i Californien. Primoris blev dannet i 2004 som moderselskab. Siden om datacentre skriver, at selskabet planlægger, bygger og forbinder infrastruktur til gas, sol og batterilagring og til strøm frem til datacentre. Det ejer ikke strømmen og ikke datacentret. Ordene ranked, top five og pioneering er ikke taget med.",
+    "Kontaktsiden, læst 16. oktober 2026, skriver Primoris Services Corporation på 2300 N. Field Street #1900 i Dallas i Texas. Brev til bestyrelsen bruger Suite 1900 på samme gade. Det er et kontor, ikke en ledning. Power Line Services og Primoris T&D står begge på 1121 Riverside Dr i Fort Worth. To navne, én adresse. Det er linjearbejde på listen, ikke en ledning selskabet ejer. ARB Industrial, ARB Underground og Edison Power Constructors står på 7515 Irvine Center Drive Suite 200 i Irvine. Irvine er ikke Bakersfield. Primoris Energy Services og Primoris Pipeline står på 14455 Primoris Way i Houston. Det er et kontor på listen, ikke et kraftværk. Siden har flere kontorer. Telefonnumre er ikke taget med. Domænet primoriscorp.com peger den 16. oktober 2026 videre til prim.com."
    ],
    "narrativeSources": [
+    {
+     "label": "Kontakt",
+     "url": "https://www.prim.com/contact"
+    },
     {
      "label": "Historie",
      "url": "https://www.prim.com/about/history"
