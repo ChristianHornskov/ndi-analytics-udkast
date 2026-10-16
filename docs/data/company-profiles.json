@@ -445,14 +445,14 @@
   "US34379V1035": {
    "name": "Fluence Energy",
    "theme": "energy",
-   "summary": "Leverer batterisystemer og software, der lagrer strøm på elnettet og afleverer den igen.",
-   "watch": "Projekternes størrelse, forsyning af battericeller og kundernes investeringer i elnet.",
+   "summary": "Leverer batterisystemer og software, der lagrer strøm på elnettet og afleverer den igen. Siden nævner platformen Smartstack. Det er ikke et kraftværk, og teksten siger ikke, at selskabet selv laver cellerne.",
+   "watch": "Projekternes størrelse og forsyning af battericeller. Smartstack er ikke et kraftværk.",
    "source": "https://fluenceenergy.com/",
-   "products": "Batterisystemer til elnettet og tilhørende software.",
+   "products": "Batterisystemer til elnettet, herunder Smartstack, og tilhørende software.",
    "customers": "Elselskaber, projektudviklere og store elforbrugere.",
-   "role": "Lagring mellem elproduktion og forbrug.",
+   "role": "Batterisystemer til nettet. Smartstack er ikke et kraftværk, og teksten siger ikke, at selskabet laver cellerne.",
    "narrative": [
-    "Fluence leverer batterisystemer og software til elnettet. Systemerne lagrer strøm og sender den ud igen.",
+    "Fluence leverer batterisystemer og software til elnettet. Siden nævner platformen Smartstack. Systemerne lagrer strøm og sender den ud igen.",
     "Fluence er ikke et kraftværk. Denne beskrivelse siger heller ikke, at selskabet selv fremstiller battericellerne. I kæden står selskabet på batterier."
    ],
    "narrativeSources": [
@@ -509,19 +509,23 @@
   "US65339F1012": {
    "name": "NextEra Energy",
    "theme": "energy",
-   "summary": "Amerikansk energikoncern med regulerede elselskaber og elproduktion fra blandt andet sol, vind, gas og atomkraft.",
-   "watch": "Tilladelser, nettilslutning, brændsel og udbygning af ny produktion.",
-   "source": "https://www.nexteraenergy.com/",
-   "products": "El til kunder i regulerede områder og strøm fra egne anlæg.",
-   "customers": "Husholdninger, virksomheder og aftagere af strøm.",
-   "role": "Elproduktion og distribution i den klassiske energikæde.",
+   "summary": "Elselskab med atomkraft, gas, sol og vind. Selskabet skriver, at en effektudvidelse på St. Lucie, Turkey Point og Point Beach blev færdig i 2013. Det er ikke et nyt værk.",
+   "watch": "Om sammenlægningen med Dominion bliver gennemført. Teksten siger ikke, at den er sket. Udvidelsen i 2013 er ikke et nyt værk.",
+   "source": "https://www.nexteraenergy.com/about-us.html",
+   "products": "El fra blandt andet St. Lucie, Turkey Point og Point Beach. Udvidelsen i 2013 er ikke et nyt værk.",
+   "customers": "Husholdninger og virksomheder, herunder Florida Power & Light. Teksten nævner mere end 6 millioner tilslutninger.",
+   "role": "Eksisterende elproduktion. Udvidelsen i 2013 er ikke et nyt værk.",
    "narrative": [
-    "NextEra Energy ejer Florida Power & Light, som leverer el i Florida. Selskabet skriver, at Florida Power & Light har mere end 6 millioner tilslutninger.",
-    "Koncernen producerer også selv strøm fra sol, vind, gas og atomkraft i drift. Derfor står den på elproduktion og ikke som udvikler af små reaktorer. Temaet i snapshottet er et forslag. Forsiden skriver, at NextEra og Dominion Energy skal lægges sammen. Teksten siger ikke, at sammenlægningen er gennemført."
+    "NextEra skriver, at en effektudvidelse på atomkraftværkerne St. Lucie, Turkey Point og Point Beach blev færdig i 2013 og omfattede seks enheder. Datoen ligger før beholdningen pr. 1. juni 2026. Det er en udvidelse af eksisterende enheder, ikke et nyt værk. Selskabet skriver også, at Florida Power & Light har mere end 6 millioner tilslutninger.",
+    "Koncernen producerer strøm fra sol, vind, gas og atomkraft. Derfor står den på elproduktion og ikke som udvikler af små reaktorer. Temaet i snapshottet er et forslag. Forsiden skriver, at NextEra og Dominion Energy skal lægges sammen. Teksten siger ikke, at sammenlægningen er gennemført."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets side",
+     "label": "Om selskabet, 2013",
+     "url": "https://www.nexteraenergy.com/about-us.html"
+    },
+    {
+     "label": "Selskabets forside",
      "url": "https://www.nexteraenergy.com/"
     }
    ]
@@ -529,19 +533,23 @@
   "US8425871071": {
    "name": "Southern Company",
    "theme": "energy",
-   "summary": "Reguleret elselskab i det sydøstlige USA. Produktionen omfatter blandt andet atomkraft og gas.",
-   "watch": "Drift af kraftværker, brændsel, regulering og investeringer i nettet.",
-   "source": "https://www.southerncompany.com/",
-   "products": "El og i dele af koncernen også gas til slutkunder.",
-   "customers": "Kunder i selskabets forsyningsområder.",
-   "role": "Eksisterende elproduktion, herunder store atomkraftværker, ikke en SMR-udvikler.",
+   "summary": "Reguleret elselskab. Selskabet skriver, at Plant Vogtle har fire enheder i drift og leverer strøm til mere end 1 million hjem og virksomheder i Georgia. Siderne daterer ikke tallene. Det er ikke en lille reaktor under udvikling.",
+   "watch": "Om de fire enheder på Vogtle bliver ved med at være i drift. Siderne daterer ikke tallene.",
+   "source": "https://www.southerncompany.com/solutions/nuclear-energy.html",
+   "products": "El, herunder fra Plant Vogtle. Fire enheder i drift. Ikke en lille reaktor under udvikling.",
+   "customers": "Kunder i selskabets forsyningsområder, herunder Georgia. Teksten nævner mere end 1 million hjem og virksomheder.",
+   "role": "Vogtle har fire enheder i drift. Ikke en lille reaktor under udvikling.",
    "narrative": [
-    "Southern Company er et reguleret elselskab. Det ejer blandt andet Georgia Power, Alabama Power og Mississippi Power.",
-    "Selskabet skriver, at atomkraftværket Vogtle leverer strøm til mere end 1 million hjem og virksomheder i Georgia. Det er værker i drift. Southern er ikke en udvikler af små reaktorer."
+    "Southern skriver, at Plant Vogtle har fire enheder i drift. Forsiden skriver, at værket leverer strøm til mere end 1 million hjem og virksomheder i Georgia. Siderne daterer ikke tallene. De er læst 16. oktober 2026 og er ikke knyttet til beholdningen pr. 1. juni 2026. Det er et værk i drift, ikke en lille reaktor under udvikling.",
+    "Selskabet ejer blandt andet Georgia Power, Alabama Power og Mississippi Power. Det er et reguleret elselskab med eksisterende værker, ikke en udvikler af små reaktorer."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets side",
+     "label": "Vogtle",
+     "url": "https://www.southerncompany.com/solutions/nuclear-energy.html"
+    },
+    {
+     "label": "Forside",
      "url": "https://www.southerncompany.com/"
     }
    ]
@@ -649,40 +657,44 @@
   "US8814541020": {
    "name": "Terrestrial Energy",
    "theme": "energy",
-   "summary": "Udvikler en reaktor, der bruger smeltet salt (IMSR). Denne tekst beskriver ikke et anlæg i drift.",
-   "watch": "Godkendelser og om designet bliver bygget.",
+   "summary": "Udvikler reaktoren IMSR med smeltet salt. Selskabet specificerer 390 MWe netto eller 822 MWt netto og brændsel under 5 % U-235. De første anlæg er sat til begyndelsen af 2030'erne. Det er ikke et anlæg i drift.",
+   "watch": "Om designet bliver godkendt og bygget. Teksten beskriver ikke et anlæg i drift.",
    "source": "https://www.terrestrialenergy.com/",
-   "products": "En reaktortype under udvikling.",
+   "products": "Et reaktordesign, IMSR. Ikke et anlæg i drift.",
    "customers": "Ingen driftkunder i denne beskrivelse.",
-   "role": "Udvikling af en anden type lille reaktor.",
+   "role": "Design specificeret til 390 MWe netto. Ikke et anlæg i drift.",
    "narrative": [
-    "Terrestrial Energy udvikler reaktoren IMSR. Den bruger smeltet salt.",
-    "Denne beskrivelse omfatter ikke et anlæg i drift."
+    "Terrestrial Energy skriver, at IMSR er specificeret til 390 MWe netto eller 822 MWt netto, og at brændslet er lavt beriget uran under 5 % U-235. Varmen er specificeret til 585 grader. Selskabet skriver, at de første anlæg skal bygges, godkendes og tages i brug i begyndelsen af 2030'erne. Det er selskabets egen tidsplan. Der er ikke et anlæg i drift.",
+    "Kernenheden er designet til syv år og skal derefter skiftes. Det er stadig et design. NDI har skrevet, at tidslinjer for den slags anlæg er usikre. Teksten her er en beskrivelse af selskabet, ikke en vurdering af aktien."
    ],
    "narrativeSources": [
     {
      "label": "Selskabets side",
      "url": "https://www.terrestrialenergy.com/"
+    },
+    {
+     "label": "IMSR, teknologisiden",
+     "url": "https://www.terrestrialenergy.com/technology"
     }
    ]
   },
   "US2057683029": {
    "name": "Comstock Resources",
    "theme": "energy-resources",
-   "summary": "Producerer naturgas i USA, især i Haynesville.",
-   "watch": "Gaspriser, boreresultater og hvor meget felterne kan levere.",
-   "source": "https://www.comstockresources.com/",
-   "products": "Naturgas.",
+   "summary": "Producerer naturgas i Haynesville, i Louisiana og i det østlige Texas. Selskabet skriver, at jordpositionen i Western Haynesville er mere end 535.000 netto-acres, og at gassen er certificeret efter MiQ-standarden. Det er brændsel, ikke en mine.",
+   "watch": "Om jordpositionen i Western Haynesville. Teksten beskriver ikke en mine og ikke et kraftværk.",
+   "source": "https://www.comstockresources.com/aboutus.html",
+   "products": "Naturgas. Certificeret efter MiQ-standarden ifølge selskabets side.",
    "customers": "Købere af gas til industri, kraftværker og videre distribution.",
-   "role": "Brændsel til elproduktion, ikke et kraftværk.",
+   "role": "Brændsel til elproduktion. Ikke en mine og ikke et kraftværk.",
    "narrative": [
-    "Comstock Resources producerer naturgas i Haynesville, i Louisiana og i det østlige Texas.",
-    "I kæden står selskabet på elproduktion, fordi gassen er brændsel til kraftværker. Det er ikke en metalmine."
+    "Comstock skriver, at jordpositionen i Western Haynesville i det østlige Texas er mere end 535.000 netto-acres, og at gasproduktionen er certificeret efter MiQ-standarden. Siden daterer ikke tallet. Det er læst 16. oktober 2026 og er ikke knyttet til beholdningen pr. 1. juni 2026.",
+    "Selskabet producerer naturgas i Haynesville, i Louisiana og i det østlige Texas. I kæden står det på elproduktion, fordi gassen er brændsel til kraftværker. Det er ikke en metalmine."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets side",
-     "url": "https://www.comstockresources.com/"
+     "label": "Om selskabet",
+     "url": "https://www.comstockresources.com/aboutus.html"
     }
    ]
   },
@@ -713,20 +725,28 @@
   "US15643U1043": {
    "name": "Centrus Energy",
    "theme": "energy-resources",
-   "summary": "Arbejder med berigelse af uran, så det kan bruges som brændsel i reaktorer. Det er ikke et kraftværk og ikke en mine.",
-   "watch": "Tilladelser, teknisk drift af berigelse og ordrer på brændsel.",
-   "source": "https://www.centrusenergy.com/",
-   "products": "Uranbrændsel og berigelse.",
-   "customers": "Reaktoroperatører og programmer, der har brug for beriget uran.",
-   "role": "Brændsel til atomkraft. Står under råstoffer, ikke som reaktorudvikler.",
+   "summary": "Beriger uran til brændsel. Selskabet skriver, at berigning begyndte i slutningen af 2023 på American Centrifuge Plant i Piketon i Ohio. Det er ikke et kraftværk og ikke en mine.",
+   "watch": "Om berigningen i Piketon forbliver brændsel. Aftalen med Antares er ikke en levering, der allerede er sket.",
+   "source": "https://www.centrusenergy.com/contact/piketon-ohio/",
+   "products": "Beriget uran, herunder HALEU. Centrifuger af typen AC100M i Piketon.",
+   "customers": "Det amerikanske energiministerium og aftagere af brændsel. Antares er en aftale fra 17. september 2026, ikke en levering.",
+   "role": "Brændsel fra Piketon. Ikke et kraftværk og ikke en mine.",
    "narrative": [
-    "Centrus leverer beriget uran som brændsel til atomkraftværker. Selskabet skriver, at det udvider berigningen af lavt beriget uran og af HALEU til nyere reaktortyper.",
-    "Centrus er ikke et kraftværk og ikke en mine. I kæden står selskabet under råstoffer."
+    "Centrus skriver, at berigning af uran begyndte i slutningen af 2023 på American Centrifuge Plant i Piketon i Ohio. Datoen ligger før beholdningen pr. 1. juni 2026. Selskabet skriver, at anlægget har en tilladelse fra Nuclear Regulatory Commission til produktion af HALEU, og at centrifuger af typen AC100M stilles op efter en aftale med det amerikanske energiministerium. Teksten siger ikke, at anlægget kører i fuld skala. Det er brændsel, ikke et kraftværk.",
+    "Centrus skrev 17. september 2026, at selskabet har indgået en flerårig aftale om at levere HALEU til Antares. Leveringerne skal begynde inden udgangen af årtiet. Datoen ligger efter beholdningen. Aftalen er ikke en levering, der allerede er sket. Antares' reaktorprojekter er ikke skrevet som værker i drift. Centrus sender ikke selv satellitter op."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets side",
-     "url": "https://www.centrusenergy.com/"
+     "label": "Piketon",
+     "url": "https://www.centrusenergy.com/contact/piketon-ohio/"
+    },
+    {
+     "label": "HALEU",
+     "url": "https://www.centrusenergy.com/what-we-do/nuclear-fuel/high-assay-low-enriched-uranium/"
+    },
+    {
+     "label": "Antares, 17. september 2026",
+     "url": "https://www.centrusenergy.com/news/centrus-and-antares-sign-multi-year-haleu-supply-contract/"
     }
    ]
   },
@@ -821,20 +841,24 @@
   "US5533681012": {
    "name": "MP Materials",
    "theme": "energy-resources",
-   "summary": "Udvinder sjældne jordarter ved Mountain Pass i USA og arbejder med videre forarbejdning, herunder magneter.",
-   "watch": "Produktion, forarbejdning uden for minen og efterspørgsel efter magneter.",
-   "source": "https://mpmaterials.com/",
-   "products": "Sjældne jordarter og produkter længere fremme i kæden.",
-   "customers": "Industri, der bruger sjældne jordarter i magneter og elektronik.",
-   "role": "Råstof til elektronik, motorer og forsvar. Ikke et chipværk.",
+   "summary": "Udvinder sjældne jordarter ved Mountain Pass i Californien og fremstiller magneter i Fort Worth i Texas. Selskabet skriver, at Mountain Pass blev genstartet i 2017. Siderne daterer ikke en aktuel mængde. Det er ikke et chipværk.",
+   "watch": "Om fabrikken i Fort Worth kører i en skala, siden ikke angiver. Teksten er ikke et chipværk.",
+   "source": "https://www.mpmaterials.com/facilities/",
+   "products": "Sjældne jordarter fra Mountain Pass og magneter i Fort Worth. Ikke et chipværk.",
+   "customers": "Industri, der bruger sjældne jordarter i magneter. Teksten nævner ikke en navngiven leverance.",
+   "role": "Mine i Mountain Pass og magneter i Fort Worth. Ikke et chipværk.",
    "narrative": [
-    "MP Materials udvinder sjældne jordarter ved Mountain Pass i Californien. Selskabet skriver, at magneter fremstilles på anlægget Independence i Texas.",
-    "Det er en mine med videre forarbejdning i denne beskrivelse, ikke et projekt uden drift og ikke et chipværk."
+    "MP Materials skriver, at Mountain Pass Mine and Processing Facility ligger på 67750 Bailey Road i Mountain Pass i Californien. Selskabet skriver, at Independence Magnet Manufacturing Facility ligger på 13840 Independence Parkway i Fort Worth i Texas. Om-siden skriver, at Mountain Pass blev genstartet i 2017. Datoen ligger før beholdningen pr. 1. juni 2026. Siderne daterer ikke en aktuel mængde. Det er en mine og en magnetfabrik, ikke et chipværk.",
+    "Hovedsædet ligger på 1700 S Pavilion Center Drive, ottende etage, i Las Vegas i Nevada. Hovedsædet er ikke minen. Teksten siger ikke, at fabrikken i Fort Worth kører i en bestemt skala."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets side",
-     "url": "https://mpmaterials.com/"
+     "label": "Anlæg",
+     "url": "https://www.mpmaterials.com/facilities/"
+    },
+    {
+     "label": "Om selskabet",
+     "url": "https://www.mpmaterials.com/about/"
     }
    ]
   },
@@ -889,20 +913,24 @@
   "AU000000LYC6": {
    "name": "Lynas Rare Earths",
    "theme": "energy-resources",
-   "summary": "Udvinder sjældne jordarter og forarbejder dem. Minen ligger i Australien, og forarbejdning sker også andre steder.",
-   "watch": "Drift af mine og forarbejdning, og reglerne for de anlæg, der skiller metallerne ad.",
+   "summary": "Udvinder og forarbejder sjældne jordarter. Selskabet skriver, at Mt Weld ligger 35 km syd for Laverton, og at anlægget i Kalgoorlie laver et blandet karbonat, som skal viderebehandles i Gebeng i Malaysia. Det er mine og forarbejdning, ikke et kraftværk.",
+   "watch": "Om anlægget i Kalgoorlie kører i den skala, siden beskriver. Siden daterer ikke starten. Det er ikke et kraftværk.",
    "source": "https://lynasrareearths.com/",
-   "products": "Sjældne jordarter.",
-   "customers": "Industrikunder.",
-   "role": "Råstof og forarbejdning.",
+   "products": "Koncentrat fra Mt Weld, blandet karbonat fra Kalgoorlie og viderebehandling i Gebeng. Ikke et kraftværk.",
+   "customers": "Industrikunder. Teksten nævner ikke navngivne kunder.",
+   "role": "Mine og forarbejdning. Kalgoorlie laver karbonat. Ikke et kraftværk.",
    "narrative": [
-    "Lynas udvinder sjældne jordarter og forarbejder dem. Minen ligger i Australien.",
-    "Det er råstof og forarbejdning, ikke et kraftværk."
+    "Lynas skriver, at minen Mt Weld ligger 35 km syd for Laverton i Western Australia, og at koncentratanlægget blev taget i brug i 2011, 1,5 km fra minen. På anlægget i Kalgoorlie blandes koncentratet med koncentreret svovlsyre og knækkes i en roterovn. Ovnen er 110 m lang og 6 m høj. Selskabet skriver, at processen giver et blandet karbonat, MREC, som skal viderebehandles i Gebeng i Malaysia. Om-siden skriver, at produktionen i Malaysia begyndte i 2012. Årstallene ligger før beholdningen pr. 1. juni 2026. Det er mine og forarbejdning, ikke et kraftværk.",
+    "Siden om Kalgoorlie daterer ikke, hvornår anlægget begyndte. En compliance-rapport beskriver aktiviteter fra 1. januar 2025 til 31. december 2025. Perioden ligger før beholdningen. Restprodukter køres tilbage til depoter ved Mt Weld under Ministerial Statement 1216. Det er ikke en ny minetilladelse i denne tekst. Om-siden nævner neodym, praseodym, lanthan, cerium, dysprosium, terbium og samarium. Teksten siger ikke, at hvert produkt kommer fra Gebeng."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets side",
-     "url": "https://lynasrareearths.com/"
+     "label": "Om Lynas",
+     "url": "https://lynasrareearths.com/about-us/"
+    },
+    {
+     "label": "Kalgoorlie",
+     "url": "https://lynasrareearths.com/kalgoorlie-western-australia/"
     }
    ]
   },
@@ -969,20 +997,20 @@
   "CA0203987072": {
    "name": "Almonty Industries",
    "theme": "energy-resources",
-   "summary": "Arbejder med wolframminer og wolframprojekter. Wolfram bruges i hårde legeringer og industri.",
-   "watch": "Drift af minerne og prisen på wolfram.",
-   "source": "https://almonty.com/",
-   "products": "Wolfram.",
-   "customers": "Industrikunder.",
-   "role": "Råstof til industri, ikke elproduktion.",
+   "summary": "Arbejder med wolfram. Selskabet skriver, at Beralt ejer 100 % af minen Panasqueira i Covilha i Portugal, med tilladelse til 2052. Level 4 er ikke skrevet som drift. Det er ikke et kraftværk.",
+   "watch": "Om Level 4 bliver finansieret. Teksten siger ikke, at udvidelsen er i drift.",
+   "source": "https://almonty.com/project/panasqueira-mine/",
+   "products": "Wolfram fra Panasqueira. Level 4 er ikke skrevet som drift.",
+   "customers": "Industrikunder. Teksten nævner ikke en navngiven leverance.",
+   "role": "Panasqueira er en mine med tilladelse til 2052. Ikke et kraftværk.",
    "narrative": [
-    "Almonty arbejder med wolfram. Selskabet nævner minerne Panasqueira og Los Santos. Valtreixal er et projekt.",
-    "Selskabet skrev 23. september 2026, at Sangdong i Sydkorea har produceret wolfram for første gang siden 1993. Meddelelsen ligger efter beholdningen pr. 1. juni 2026. Selskabet er ikke et kraftværk."
+    "Almonty skriver, at det indirekte helejede datterselskab Beralt Tin and Wolfram (Portugal) ejer 100 % af wolframminen Panasqueira i Covilha i Portugal. Siden skriver, at minen har en udvindingstilladelse frem til 2052, som kan forlænges. Level 4 er beskrevet som en udvidelse, der kan gå videre, når finansieringen er på plads. Siden siger ikke, at Level 4 er i drift. Panasqueira er ikke et kraftværk.",
+    "Selskabet skrev 23. september 2026, at Sangdong i Sydkorea har produceret wolfram for første gang siden 1993. Meddelelsen ligger efter beholdningen pr. 1. juni 2026. Menuen nævner også Los Santos. Denne tekst beskriver ikke den mine. Selskabet er ikke et kraftværk."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets side",
-     "url": "https://almonty.com/"
+     "label": "Panasqueira",
+     "url": "https://almonty.com/project/panasqueira-mine/"
     },
     {
      "label": "Meddelelse 23. september 2026",
@@ -1041,20 +1069,24 @@
   "CA89621C1059": {
    "name": "Trilogy Metals",
    "theme": "energy-resources",
-   "summary": "Udvikler kobberprojekter i Alaska. Denne tekst beskriver ikke en mine i drift.",
-   "watch": "Tilladelser, adgang til området og om en mine bliver bygget.",
+   "summary": "Udvikler kobberprojekterne Arctic og Bornite i Alaska. Selskabet skrev 21. september 2026, at et varsel om miljøredegørelse for Arctic er udsendt. Det er efter beholdningen og er ikke en mine i drift.",
+   "watch": "Om miljøgennemgangen af Arctic bliver til en afgørelse. Teksten beskriver ikke en mine i drift.",
    "source": "https://trilogymetals.com/",
-   "products": "Kobberprojekter.",
+   "products": "Kobberprojekterne Arctic og Bornite. Ingen mine i drift i denne tekst.",
    "customers": "Ingen driftkunder i denne beskrivelse.",
-   "role": "Råstofprojekt.",
+   "role": "Råstofprojekt. Varslet for Arctic er ikke en mine i drift.",
    "narrative": [
-    "Trilogy Metals arbejder med efterforskning og udvikling af Arctic og Bornite i Alaska. Det er kobberprojekter.",
-    "Selskabet kalder arbejdet efterforskning og udvikling. Denne tekst beskriver ikke en mine i drift."
+    "Trilogy skrev 21. september 2026, at U.S. Army Corps of Engineers har udsendt et varsel om en miljøredegørelse for Arctic-projektet i Ambler-distriktet i Alaska. Datoen ligger efter beholdningen pr. 1. juni 2026. Varslet starter høringen. Det er ikke en tilladelse og ikke en mine i drift.",
+    "Arctic og Bornite er stadig projekter under efterforskning og udvikling. Arctic føres videre i Ambler Metals, som Trilogy og South32 ejer sammen. Denne tekst beskriver ikke en mine i drift."
    ],
    "narrativeSources": [
     {
      "label": "Selskabets side",
      "url": "https://trilogymetals.com/"
+    },
+    {
+     "label": "Arctic, 21. september 2026",
+     "url": "https://trilogymetals.com/news-and-media/news/trilogy-metals-announces-publication-of-notice-of-intent-by-u-s-army-corps-of-engineers-for-alaskas-high-grade-arctic-copper-zinc-lead-gold-silver-project/"
     }
    ]
   },
@@ -1105,20 +1137,20 @@
   "US35671D8570": {
    "name": "Freeport-McMoRan",
    "theme": "energy-resources",
-   "summary": "Driver kobberminedrift. Siden nævner Cerro Verde, El Abra og Grasberg. Det er ikke et elselskab.",
-   "watch": "Drift af minerne, kobberpriser og lokale tilladelser.",
-   "source": "https://www.fcx.com/",
-   "products": "Kobber og andre metaller fra samme miner.",
-   "customers": "Industrikunder.",
-   "role": "Råstof til elnet, elektronik og byggeri.",
+   "summary": "Driver kobberminer. Selskabet skriver, at Morenci i Arizona er et åbent brud i drift siden 1939, og at Freeport har 72 % af minen. Det er ikke et elselskab.",
+   "watch": "Om kapacitetstallet er det, anlægget maler. Teksten er ikke et elselskab.",
+   "source": "https://www.fcx.com/operations/united-states",
+   "products": "Kobber fra Morenci. To koncentratorer kan male 132.000 ton malm i døgnet. Ikke et elselskab.",
+   "customers": "Industrikunder. Teksten nævner ikke en navngiven leverance fra Morenci.",
+   "role": "Morenci er et åbent brud i drift siden 1939. Freeport har 72 %.",
    "narrative": [
-    "Freeport-McMoRan udvinder kobber. Siden nævner Cerro Verde og El Abra i Sydamerika og Grasberg i Indonesien.",
-    "Det er miner i denne beskrivelse, ikke et elselskab."
+    "Freeport skriver, at Morenci er et åbent kobberbrud, som har været i drift siden 1939. Minen ligger i Greenlee County i Arizona, cirka 50 miles nordøst for Safford. Selskabet skriver, at det har 72 % af minen. Sumitomo Metal Mining Arizona har 15 %, og SMM Morenci har 13 %. To koncentratorer kan male 132.000 ton malm i døgnet. Det er selskabets kapacitetstal, ikke en målt dagsproduktion. Miles er ikke regnet om. Det er en mine, ikke et elselskab.",
+    "Menuen nævner også andre anlæg, blandt andet Grasberg, Cerro Verde og El Abra. Denne tekst beskriver ikke de anlæg."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets side",
-     "url": "https://www.fcx.com/"
+     "label": "USA, Morenci",
+     "url": "https://www.fcx.com/operations/united-states"
     }
    ]
   },
@@ -1153,20 +1185,24 @@
   "CA66510M2040": {
    "name": "Northern Dynasty Minerals",
    "theme": "energy-resources",
-   "summary": "Ejeren af Pebble-projektet i Alaska, et kobber- og guldprojekt. Denne tekst beskriver ikke en mine i drift.",
-   "watch": "Om projektet får tilladelse. Det har været omstridt i mange år.",
+   "summary": "Ejer Pebble-projektet i Alaska gennem Pebble Limited Partnership. Sagen om et veto fra EPA havde mundtlige indlæg 25. juni 2026. Der er ingen afgørelse og ingen mine i drift.",
+   "watch": "Om domstolen træffer en afgørelse. Indlæggene er ikke en tilladelse.",
    "source": "https://northerndynastyminerals.com/",
-   "products": "Et mineprojekt.",
+   "products": "Et kobber- og guldprojekt. Ikke en mine i drift.",
    "customers": "Ingen driftkunder i denne beskrivelse.",
-   "role": "Råstofprojekt uden drift.",
+   "role": "Råstofprojekt uden drift. Indlæggene er ikke en afgørelse.",
    "narrative": [
-    "Northern Dynasty ejer Pebble-projektet i Alaska. Det er et kobber- og guldprojekt, og der er ingen mine i drift.",
-    "Projektet har i årevis manglet de tilladelser, en mine kræver. Profilen beskriver projektet."
+    "Northern Dynasty skrev 26. juni 2026, at mundtlige indlæg blev holdt 25. juni 2026 ved den føderale distriktsdomstol i Alaska. Sagen søger at trække et veto fra det amerikanske miljøagentur EPA tilbage. Datoen ligger efter beholdningen pr. 1. juni 2026. Der er ingen afgørelse. Det er ikke en tilladelse og ikke en mine i drift.",
+    "Selskabet har hjemme i Vancouver i Canada og skriver, at Pebble ejes gennem det helejede datterselskab Pebble Limited Partnership. Det omfatter 1.840 mineralrettigheder i det sydvestlige Alaska, herunder Pebble-forekomsten, 200 miles fra Anchorage og 125 miles fra Bristol Bay. Det er selskabets eget mål. Der er ingen mine i drift."
    ],
    "narrativeSources": [
     {
      "label": "Selskabets side",
      "url": "https://northerndynastyminerals.com/"
+    },
+    {
+     "label": "Mundtlige indlæg, 26. juni 2026",
+     "url": "https://northerndynastyminerals.com/news/news-releases/2026/northern-dynasty-reports-oral-arguments-held/"
     }
    ]
   },
@@ -1233,20 +1269,20 @@
   "US85529M1045": {
    "name": "Starfighters Space",
    "theme": "space",
-   "summary": "Flyver en flåde af supersoniske F-104-fly og udvikler et program til at sende nyttelast fra luften. Orbital opsendelse er under udvikling i denne beskrivelse, ikke en etableret rutetjeneste.",
-   "watch": "Om testflyvninger fører til en opsendelse, og om kunderne er der.",
-   "source": "https://ir.starfightersspace.com/",
-   "products": "Flyvning med supersoniske fly og et luftopsendelsesprogram.",
-   "customers": "Kunder til testflyvning og, hvis programmet lykkes, til opsendelse.",
-   "role": "Tidligt opsendelsesled. Ikke en satellitoperatør.",
+   "summary": "Flyver syv F-104 og udvikler luftopsendelse. Selskabet skriver, at flyene kan bære nyttelast til 45.000 fod, og at en opsendelsestilladelse fra FAA er undervejs. Det er ikke en orbital rute.",
+   "watch": "Om tilladelsen bliver givet, og om den planlagte flyvning i december bliver gennemført. Teksten beskriver ikke en orbital opsendelse.",
+   "source": "https://www.starfightersspace.com/",
+   "products": "Flyvning med syv F-104 og programmet STARLAUNCH. Tilladelsen er undervejs.",
+   "customers": "Forsiden nævner Lockheed Martin, GE, Innoveering, Space Florida og Air Force Research Laboratory. Teksten siger ikke, at de er kunder på en orbital opsendelse.",
+   "role": "Syv F-104. Opsendelsestilladelse undervejs. Ikke en orbital rute.",
    "narrative": [
-    "Starfighters Space skriver, at selskabet flyver supersoniske F-104-fly fra Kennedy Space Center. Flyene kan bruges som første trin til luftopsendelse.",
-    "Selskabet skrev 13. oktober 2026, at STARLAUNCH 1 er et suborbitalt udviklingsfartøj. Den planlagte flyvning i december er med raketten under vingen. Det er ikke en orbital rute, og det er ikke en gennemført opsendelse."
+    "Starfighters skriver, at flåden er syv F-104, og at flyene kan bære nyttelast til 45.000 fod som led i luftopsendelse. Selskabet skriver, at det flyver fra Kennedy Space Center. Forsiden skriver, at en opsendelsestilladelse fra FAA er undervejs. Det er ikke en tilladelse, der er givet, og ikke en orbital rute. Fod er selskabets eget mål.",
+    "Selskabet skrev 13. oktober 2026, at STARLAUNCH 1 er et suborbitalt udviklingsfartøj, og at en planlagt flyvning i december er med raketten under vingen mellem Kennedy Space Center og Cecil Spaceport i Jacksonville. Meddelelsen ligger efter beholdningen pr. 1. juni 2026. Flyvningen er ikke gennemført. Om-teksten skriver også, at flåden flyver fra Midland i Texas. Det er ikke en opsendelse af satellitter."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets investorkside",
-     "url": "https://ir.starfightersspace.com/"
+     "label": "Selskabets side",
+     "url": "https://www.starfightersspace.com/"
     },
     {
      "label": "Meddelelse 13. oktober 2026",
@@ -1333,20 +1369,20 @@
   "GB00B63H8491": {
    "name": "Rolls-Royce",
    "theme": "space",
-   "summary": "Fremstiller flymotorer og kraftsystemer. Koncernen udvikler også en lille modulær reaktor. Atomkraft er ikke hele selskabet. Snapshottet har aktien under SpaceTech.",
-   "watch": "Flytrafik, service af motorer og om reaktorprogrammet bliver bygget.",
+   "summary": "Fremstiller flymotorer og kraftsystemer. Selskabet skrev 15. juni 2026, at Videberg Kraft har valgt Rolls-Royce SMR til tre små reaktorer på Sveriges vestkyst. Det er efter beholdningen og ikke et værk i drift. Atomkraft er ikke hele selskabet.",
+   "watch": "Om valget i Sverige bliver et værk. Teksten beskriver ikke et anlæg i drift.",
    "source": "https://www.rolls-royce.com/",
-   "products": "Flymotorer, kraftsystemer og et reaktorprogram under udvikling.",
-   "customers": "Flyselskaber, forsvar og, hvis reaktoren bliver bygget, elforbrugere.",
-   "role": "Motorkoncern med et SMR-program. Ikke en opsender.",
+   "products": "Flymotorer, kraftsystemer og et reaktorprogram. Valget i Sverige er ikke et værk i drift.",
+   "customers": "Flyselskaber og forsvar. Videberg Kraft er et valg, ikke en kunde med et værk i drift.",
+   "role": "Motorkoncern med et SMR-program. Ikke en opsender og ikke et værk i drift.",
    "narrative": [
-    "Rolls-Royce fremstiller flymotorer og kraftsystemer. Koncernen har også et program for en lille modulær reaktor. Atomkraft er ikke hele selskabet.",
-    "I juni 2026 skrev selskabet, at Rolls-Royce SMR er valgt til et projekt i Sverige. Valget er ikke et værk i drift. Selskabet sender ikke selv satellitter op."
+    "Rolls-Royce skrev 15. juni 2026, at Videberg Kraft har valgt Rolls-Royce SMR til tre små reaktorer på Sveriges vestkyst. Videberg Kraft ejes af Vattenfall og Industrikraft i Sverige. Udvælgelsen begyndte i 2022. Datoen for valget ligger efter beholdningen pr. 1. juni 2026. Valget er ikke et værk i drift.",
+    "Meddelelsen nævner også en aftale med Great British Energy Nuclear (GBE-N) om reaktorer i Storbritannien og en aftale med CEZ Group om arbejde i Tjekkiet. Meddelelsen daterer ikke de to aftaler. Ingen af dem er et værk i drift. Atomkraft er ikke hele selskabet. Selskabet sender ikke selv satellitter op."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets side",
-     "url": "https://www.rolls-royce.com/"
+     "label": "Sverige, 15. juni 2026",
+     "url": "https://www.rolls-royce.com/media/press-releases/2026/15-06-2026-rr-smr-selected-to-deliver-swedens-first-new-nuclear-power-for-over-40-years.aspx"
     }
    ]
   },
@@ -1489,20 +1525,24 @@
   "US92892B1035": {
    "name": "Voyager Technologies",
    "theme": "space",
-   "summary": "Arbejder med ruminfrastruktur og forsvarsteknologi. Starlab er et projekt om en kommerciel rumstation. Denne tekst beskriver ikke en station i drift og ikke et datacenter i kredsløb.",
-   "watch": "Om stationsprojektet bliver bygget, og ordrer i forsvarsforretningen.",
+   "summary": "Arbejder med ruminfrastruktur og forsvarsteknologi. Selskabet skrev 8. september 2026, at GOEX ved Camp Minden i Louisiana igen producerer sortkrudt. Starlab er stadig et projekt, ikke en station i drift.",
+   "watch": "Om stationsprojektet bliver bygget. Sortkrudt ved Camp Minden er ikke en rumstation.",
    "source": "https://voyagertechnologies.com/",
-   "products": "Ruminfrastruktur, forsvarsteknologi og et stationsprojekt.",
+   "products": "Ruminfrastruktur, forsvarsteknologi og sortkrudt. Starlab er et projekt.",
    "customers": "Rumprogrammer og forsvarskunder.",
-   "role": "Infrastruktur i rummet. Ikke beregning som forretning.",
+   "role": "Starlab er et projekt. GOEX ved Camp Minden er sortkrudt, ikke en station.",
    "narrative": [
-    "Voyager arbejder med ruminfrastruktur og forsvarsteknologi. Starlab er et projekt om en rumstation.",
-    "Denne beskrivelse omfatter ikke en station i drift og ikke et datacenter i kredsløb."
+    "Voyager skrev 8. september 2026, at anlægget GOEX ved Camp Minden i Louisiana igen producerer sortkrudt. Datoen ligger efter beholdningen pr. 1. juni 2026. Det er forsvarsmateriale, ikke en rumstation.",
+    "Starlab er stadig et projekt om en kommerciel rumstation. Denne beskrivelse omfatter ikke en station i drift og ikke et datacenter i kredsløb."
    ],
    "narrativeSources": [
     {
      "label": "Selskabets side",
      "url": "https://voyagertechnologies.com/"
+    },
+    {
+     "label": "GOEX, 8. september 2026",
+     "url": "https://voyagertechnologies.com/insights/americas-only-black-powder-plant-is-back-in-production/"
     }
    ]
   },
@@ -1643,15 +1683,15 @@
   "US67079K1007": {
    "name": "NuScale Power",
    "theme": "physical",
-   "summary": "Udvikler små modulære reaktorer. Denne tekst beskriver ikke et anlæg i kommerciel drift. Snapshottet har selskabet under fysisk tech.",
-   "watch": "Godkendelser og om en kunde faktisk bygger det første værk.",
+   "summary": "Udvikler små modulære reaktorer. Selskabet skriver, at modulet er en cylinder på 76 fod gange 15 fod og vejer omkring 700 tons. Det er et design, ikke et værk i drift. Snapshottet har selskabet under fysisk tech.",
+   "watch": "Om designet bliver til et værk. Teksten beskriver ikke et anlæg i drift.",
    "source": "https://www.nuscalepower.com/",
-   "products": "Et reaktordesign og tilhørende tjenester.",
-   "customers": "Forsyningsselskaber og store forbrugere, hvis et værk bliver bygget.",
-   "role": "Udvikling af SMR.",
+   "products": "Et reaktordesign. 77 MW pr. modul og en cylinder på 76 fod gange 15 fod. Ikke et værk i drift.",
+   "customers": "Forsyningsselskaber og store forbrugere, hvis et værk bliver bygget. Teksten beskriver ikke et værk i drift.",
+   "role": "Reaktordesign. Ikke et værk i drift.",
    "narrative": [
-    "NuScale udvikler en lille reaktor, som selskabet kalder NuScale Power Module. Selskabet skriver, at det amerikanske nukleare tilsyn, NRC, har godkendt designet, og angiver en effekt på 77 MW pr. modul.",
-    "Godkendelsen er ikke et værk i kommerciel drift. Denne tekst siger ikke, at et anlæg leverer strøm. Selskabet omtaler et program sammen med TVA på op til 6 GW. Det er udvikling, ikke et værk i drift."
+    "NuScale skriver, at NuScale Power Module er specificeret til 77 MW pr. modul. Samme side skriver, at indeslutningen er en cylinder på 76 fod gange 15 fod, og at modulet vejer omkring 700 tons og sendes fra fabrikken i tre dele med lastbil, tog eller pram. Brændslet er letvandsbrændsel, beriget til under 5 %. En udskiftning kan ligge med op til 21 måneders mellemrum. Et anlæg med 12 moduler er specificeret til op til 924 MWe. Det er et design. Teksten beskriver ikke et modul, der er leveret til et værk, og ikke et værk i drift.",
+    "Selskabet skriver, at NRC har godkendt designet. Godkendelsen er ikke et værk i drift. Et program sammen med TVA er omtalt som op til 6 GW. Det er udvikling. Siden om E2 Center beskriver en simulator af et kontrolrum med 12 moduler, ikke et kraftværk. ENTRA1 Energy er nævnt som partner på kommercialisering. Teksten siger ikke, at et anlæg er i drift."
    ],
    "narrativeSources": [
     {
@@ -1661,21 +1701,25 @@
     {
      "label": "Program med TVA",
      "url": "https://interactive.nuscalepower.com/tva-program"
+    },
+    {
+     "label": "E2 Center",
+     "url": "https://www.nuscalepower.com/products/e2-centers"
     }
    ]
   },
   "US74762E1029": {
    "name": "Quanta Services",
    "theme": "physical",
-   "summary": "Bygger og vedligeholder elnet og anden energiinfrastruktur, herunder ledninger og stationer.",
-   "watch": "Ordrer fra elselskaber og adgang til mandskab og udstyr.",
-   "source": "https://www.quantaservices.com/",
-   "products": "Anlægsarbejde på elnet og energiinfrastruktur.",
+   "summary": "Bygger og vedligeholder elnet. Selskabet skriver, at West Fort McMurray-projektet i Alberta omfatter over 310 miles 500 kV-ledning og stationerne Livock og Thickwood Hills. Quanta ejer ikke ledningen. Hovedsædet ligger i Houston i Texas.",
+   "watch": "Om projekterne er byggeri. Teksten beskriver ikke ejerskab af ledningen.",
+   "source": "https://www.quantaservices.com/capabilities/electric-power/",
+   "products": "Byggeri og vedligehold af ledninger og transformerstationer. Ikke selve strømmen.",
    "customers": "Elselskaber og andre ejere af net.",
-   "role": "Bygger nettet. Producerer ikke strømmen.",
+   "role": "Bygger nettet. Ejer ikke ledningen.",
    "narrative": [
-    "Quanta Services bygger og vedligeholder elnet. Arbejdet dækker ledninger, transformerstationer og distributionsnet. Selskabet arbejder også på kraftværker.",
-    "Quanta ejer ikke strømmen. I kæden står selskabet på elnet. Temaet i snapshottet er et forslag."
+    "Quanta skriver, at West Fort McMurray-projektet i det nordlige centrale Alberta omfatter over 310 miles 500 kV-ledning, udvidelse af stationen Livock og anlæg af stationen Thickwood Hills. Siden kalder det et projekt. Teksten siger ikke, at Quanta ejer ledningen, og ikke at den er i drift. Miles er selskabets eget mål.",
+    "Selskabet har hovedsæde på 2727 North Loop West i Houston i Texas. Quanta ejer ikke strømmen. I kæden står selskabet på elnet. Temaet i snapshottet er et forslag."
    ],
    "narrativeSources": [
     {
@@ -1687,20 +1731,33 @@
   "US36828A1016": {
    "name": "GE Vernova",
    "theme": "physical",
-   "summary": "Leverer udstyr til elproduktion og elnet, blandt andet gasturbiner, vindmøller og udstyr til atomkraft og transformere. Snapshottet har selskabet under fysisk tech.",
-   "watch": "Ordrer på turbiner og netudstyr, og evnen til at levere.",
-   "source": "https://www.gevernova.com/",
-   "products": "Kraftværksudstyr og netudstyr.",
-   "customers": "Elselskaber og industri.",
-   "role": "Udstyr til både produktion og net.",
+   "summary": "Leverer udstyr til elnet og elproduktion. Netsiden skriver, at GIS-udstyr dækker fra 50 kV til 800 kV. Gassiden viser turbinerne 9HA, 7HA og LM2500. Selskabet driver ikke værkerne.",
+   "watch": "Om tallene er udstyr i andres anlæg. Teksten beskriver ikke værker, selskabet selv driver.",
+   "source": "https://www.gevernova.com/grid-solutions",
+   "products": "GIS fra 50 kV til 800 kV og gasturbiner, blandt andet 9HA, 7HA og LM2500. Ikke værker i egen drift.",
+   "customers": "Elselskaber og industri. Teksten siger ikke, at selskabet ejer ledningerne.",
+   "role": "GIS og turbiner er udstyr. Selskabet driver ikke værkerne.",
    "narrative": [
-    "GE Vernova leverer udstyr til elproduktion og til elnettet. Det er blandt andet gasturbiner, vindmøller og udstyr til atomkraft og til nettet.",
-    "Selskabet driver ikke de værker, udstyret står i. I kæden står selskabet derfor både på elproduktion og på elnet."
+    "GE Vernova skriver, at GIS-udstyr dækker fra 50 kV til 800 kV, og at SF6-fri GIS findes ved 145 kV og 420 kV. Siden skriver, at afbrydere til generatorer dækker installationer op til 1.500 MW. Det er udstyr. Selskabet driver ikke værkerne og ejer ikke ledningerne.",
+    "Gassiden viser turbiner, blandt andet H-klassen 9HA og 7HA og den aeroderivative LM2500. Siden om atomkraft skriver, at dampkraft understøtter mere end 80 anlæg i Amerika, og at den installerede base af dampturbiner og generatorer hos selskabet og hos andre leverandører er cirka 85 GW. Tallet dækker også andres udstyr.",
+    "Siden om nettet skriver, at afbrydere til frakobling laves på otte fabrikker i syv lande, og at den linje går tilbage til 1960. Forsiden skriver, at selskabet er cirka 85.000 mennesker i cirka 100 lande. I kæden står det både på elproduktion og på elnet."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets side",
+     "label": "Gas",
+     "url": "https://www.gevernova.com/gas-power"
+    },
+    {
+     "label": "Atomkraft",
+     "url": "https://www.gevernova.com/nuclear-power"
+    },
+    {
+     "label": "Forsiden",
      "url": "https://www.gevernova.com/"
+    },
+    {
+     "label": "Elnet",
+     "url": "https://www.gevernova.com/grid-solutions"
     }
    ]
   },
@@ -1747,19 +1804,27 @@
   "US74164F1030": {
    "name": "Primoris Services",
    "theme": "physical",
-   "summary": "Bygger infrastruktur til el, energi og rørledninger.",
-   "watch": "Ordrer på anlæg og udførelse af projekterne.",
-   "source": "https://www.primoriscorp.com/",
-   "products": "Anlægsarbejde på energiinfrastruktur.",
-   "customers": "Elselskaber, energiselskaber og industri.",
-   "role": "Bygger infrastrukturen. Ejer den ikke.",
+   "summary": "Bygger elnet, rørledninger og infrastruktur frem til datacentre. Selskabet skriver, at rødderne går tilbage til ARB i Bakersfield i 1960, og at Primoris blev dannet i 2004. Det producerer ikke strømmen.",
+   "watch": "Om arbejdet er byggeri. Teksten beskriver ikke ejerskab af strømmen eller af datacentret.",
+   "source": "https://www.prim.com/about/history",
+   "products": "Byggeri af elnet, rørledninger og anlæg. Også infrastruktur frem til datacentre. Ikke selve strømmen.",
+   "customers": "Elselskaber, energiselskaber og industri. Ikke ejer af datacentret i denne tekst.",
+   "role": "Bygger nettet og infrastruktur frem til datacentre. Ejer ikke strømmen.",
    "narrative": [
-    "Primoris bygger infrastruktur til el, energi og rørledninger.",
-    "Selskabet producerer ikke selv strømmen. I kæden står det på elnet."
+    "Primoris skriver, at rødderne går tilbage til 1960 og stiftelsen af ARB, Inc. i Bakersfield i Californien, et selskab, der bygger rørledninger. Primoris blev dannet i 2004 som moderselskab. Siden om datacentre skriver, at selskabet planlægger, bygger og forbinder infrastruktur til gas, sol og batterilagring og til strøm frem til datacentre. Det ejer ikke strømmen og ikke datacentret.",
+    "I kæden står selskabet på elnet. Domænet primoriscorp.com peger den 16. oktober 2026 videre til prim.com."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets side",
+     "label": "Historie",
+     "url": "https://www.prim.com/about/history"
+    },
+    {
+     "label": "Datacentre",
+     "url": "https://www.prim.com/capabilities/data-centers"
+    },
+    {
+     "label": "Tidligere domæne, videresender",
      "url": "https://www.primoriscorp.com/"
     }
    ]
@@ -1791,75 +1856,83 @@
   "US0937121079": {
    "name": "Bloom Energy",
    "theme": "andet",
-   "summary": "Leverer brændselsceller, der laver strøm på stedet hos kunden. Snapshottet har selskabet under Andet, med et temaforslag.",
-   "watch": "Driftsikkerhed hos kunderne og om nye anlæg bliver bestilt.",
+   "summary": "Leverer brændselsceller, der laver strøm på stedet hos kunden. Selskabet skrev 1. april 2025, at cellerne skal bruges på Conagras fabrikker i Troy og Archbold i Ohio. Det er en aftale, og teksten siger ikke, at cellerne allerede kører.",
+   "watch": "Om aftalen i Troy og Archbold bliver til drift. Teksten siger ikke, at cellerne allerede kører.",
    "source": "https://www.bloomenergy.com/",
    "products": "Brændselsceller og service.",
-   "customers": "Virksomheder og datacentre, der vil have strøm på egen grund.",
-   "role": "Elproduktion hos kunden, ikke et klassisk kraftværk.",
+   "customers": "Virksomheder og datacentre, der vil have strøm på egen grund. Aftalen nævner Conagra i Ohio.",
+   "role": "Brændselsceller hos kunden. Aftalen med Conagra er ikke et kraftværk i drift.",
    "narrative": [
-    "Bloom Energy leverer brændselsceller, der laver strøm hos kunden.",
-    "Det er elproduktion på stedet, ikke et klassisk kraftværk. Snapshottet har selskabet under Andet, med et temaforslag."
+    "Bloom skrev 1. april 2025, at selskabet og Conagra vil bruge brændselsceller på Conagras fabrikker i Troy og Archbold i Ohio. Det er en aftale. Teksten siger ikke, at cellerne allerede kører. Datoen ligger før beholdningen pr. 1. juni 2026.",
+    "Det er strøm hos kunden, ikke et klassisk kraftværk. Teksten siger ikke, at hvert anlæg kører. Snapshottet har selskabet under Andet, med et temaforslag."
    ],
    "narrativeSources": [
     {
      "label": "Selskabets side",
      "url": "https://www.bloomenergy.com/"
+    },
+    {
+     "label": "Conagra, 1. april 2025",
+     "url": "https://www.bloomenergy.com/news/conagra-brands-collaborates-with-bloom-energy-to-utilize-fuel-cell-technology-at-its-ohio-production-facilities/"
     }
    ]
   },
   "US72919P2020": {
    "name": "Plug Power",
    "theme": "andet",
-   "summary": "Leverer brændselsceller og udstyr til brint. Snapshottet har selskabet under Andet, med et temaforslag.",
-   "watch": "Om brintanlæggene kører, og om kunderne fortsat bestiller udstyret.",
+   "summary": "Leverer brændselsceller og udstyr til brint. Selskabet skrev 22. april 2026, at anlægget i St. Gabriel i Louisiana har lavet flydende brint siden 23. april 2025. Det er et fælles anlæg med Olin, ikke et elselskab.",
+   "watch": "Drift på anlægget i St. Gabriel. Teksten siger ikke, at hvert anlæg kører.",
    "source": "https://www.plugpower.com/",
-   "products": "Brændselsceller, elektrolyse og brintudstyr.",
+   "products": "Brændselsceller, elektrolyse og flydende brint. St. Gabriel er et fælles anlæg med Olin.",
    "customers": "Industri og transport, der bruger brint.",
-   "role": "Brint og brændselsceller i energikæden.",
+   "role": "Brintanlæg i St. Gabriel sammen med Olin. Ikke et elselskab. Teksten siger ikke, at hvert anlæg kører.",
    "narrative": [
-    "Plug Power leverer brændselsceller og udstyr til brint.",
-    "Snapshottet har selskabet under Andet, med et temaforslag. Teksten beskriver udstyret. Den siger ikke, at hvert anlæg kører."
+    "Plug skrev 22. april 2026, at selskabet og Olin gennem det fælles selskab Hidrogenii har et anlæg til flydende brint i St. Gabriel i Louisiana. Siden skriver, at kommerciel drift begyndte 23. april 2025, da den første tankvogn blev fyldt. Begge datoer ligger før beholdningen pr. 1. juni 2026.",
+    "Siden nævner også anlæg i Woodbine i Georgia og Charleston i Tennessee. Det er brint, ikke et elselskab. Teksten siger ikke, at hvert anlæg kører. Snapshottet har selskabet under Andet, med et temaforslag."
    ],
    "narrativeSources": [
     {
      "label": "Selskabets side",
      "url": "https://www.plugpower.com/"
+    },
+    {
+     "label": "St. Gabriel, 22. april 2026",
+     "url": "https://www.plugpower.com/one-year-strong-plug-and-olins-louisiana-hydrogen-plant/"
     }
    ]
   },
   "US29415C1018": {
    "name": "Eos Energy",
    "theme": "andet",
-   "summary": "Udvikler zinkbaserede batterier til lagring af strøm på elnettet. Snapshottet har selskabet under Andet, med et temaforslag.",
-   "watch": "Om batterierne bliver leveret og holder i drift hos kunderne.",
-   "source": "https://www.eose.com/",
-   "products": "Batterisystemer til elnettet.",
-   "customers": "Elselskaber og projektudviklere.",
-   "role": "Lagring, ikke råstof.",
+   "summary": "Laver zinkbatterier til elnettet. Selskabet skriver, at fremstilling af Z3 begyndte i august 2023 på Eos Ingenuity Park i Turtle Creek i Pennsylvania. Det er batterier, ikke en mine og ikke et kraftværk.",
+   "watch": "Om fabrikken i Turtle Creek bliver ved med at fremstille Z3. Teksten er ikke et kraftværk.",
+   "source": "https://www.eose.com/technology/manufacturing/",
+   "products": "Zinkbatteriet Z3. Fremstilling i Turtle Creek siden august 2023. Ikke et kraftværk.",
+   "customers": "Elselskaber og projektudviklere. Teksten nævner ikke en navngiven leverance.",
+   "role": "Batterier til lagring. Ikke en mine og ikke et kraftværk.",
    "narrative": [
-    "Eos laver zinkbaserede batterier til lagring på elnettet. Selskabet skriver, at systemerne fremstilles i USA.",
-    "Det er lagring, ikke en mine og ikke et kraftværk. Snapshottet har selskabet under Andet, med et temaforslag."
+    "Eos skriver, at fremstilling af batteriet Z3 begyndte i august 2023 på Eos Ingenuity Park i Turtle Creek i Pennsylvania. Datoen ligger før beholdningen pr. 1. juni 2026. Siden nævner fem råvarer: zinkbromid, titanium i industrikvalitet, grafitfilt, plast til støbning og vand. Det er batterier, ikke en mine og ikke et kraftværk.",
+    "Siden daterer ikke, hvor stor produktionen er. Teksten siger ikke, at hvert anlæg kører, og ikke at batterierne står i et kraftværk. Snapshottet har selskabet under Andet, med et temaforslag."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets side",
-     "url": "https://www.eose.com/"
+     "label": "Fremstilling",
+     "url": "https://www.eose.com/technology/manufacturing/"
     }
    ]
   },
   "US74767V1098": {
    "name": "QuantumScape",
    "theme": "andet",
-   "summary": "Udvikler faststof-batterier, især til køretøjer. Denne tekst beskriver ikke masseproduktion. Snapshottet har selskabet under Andet, med et temaforslag.",
-   "watch": "Om teknologien kan produceres i mængde, og om en bilproducent tager den i brug.",
+   "summary": "Udvikler faststof-batterier. Siden nævner QSE-5 til køretøjer og QS PowerBlock til datacentre. Denne tekst beskriver ikke masseproduktion og ikke et lager i drift.",
+   "watch": "Om teknologien kan produceres i mængde. QS PowerBlock er ikke et lager i drift.",
    "source": "https://www.quantumscape.com/",
-   "products": "Et batteridesign under udvikling.",
-   "customers": "Bilproducenter, hvis produktionen kommer i gang.",
-   "role": "Batteriteknologi, ikke et lagersystem i drift på elnettet.",
+   "products": "Batteridesign, herunder QSE-5 og QS PowerBlock. Ikke masseproduktion.",
+   "customers": "Bilproducenter og datacentre er nævnt. Teksten beskriver ikke et lager i drift.",
+   "role": "Batteridesign. QS PowerBlock er ikke et lager i drift.",
    "narrative": [
-    "QuantumScape udvikler faststof-batterier til køretøjer. Selskabet omtaler batteriet QSE-5.",
-    "Denne tekst beskriver ikke masseproduktion og ikke et lager på elnettet. Snapshottet har selskabet under Andet, med et temaforslag."
+    "QuantumScape udvikler faststof-batterier. Siden nævner QSE-5 til køretøjer og QS PowerBlock til datacentre.",
+    "Denne tekst beskriver ikke masseproduktion og ikke et lager i drift. Snapshottet har selskabet under Andet, med et temaforslag."
    ],
    "narrativeSources": [
     {

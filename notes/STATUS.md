@@ -1762,3 +1762,20 @@ Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er
 - 720854e vaerdikaeder: 'Kort fortalt' på 9 ledkort i energi, robotik og kvante (Gør + pres med niveau, mærke og kilde), strammere energi-blurbs, kvante 'Se trappen'
 - d5f65f0 vaerdikaeder: 'Find leddet igen' på alle 22 ledkort uden for rum (plads i floden, usikkerheder, quiz, ordbog, tråd fra rummet, kvante møder leddet) med gul fremhævning ved hop; rum-hub får quiz og ordbog; data-lks på quiz, ordbog og kvantebroer
 - aff0942 vaerdikaeder: rum-ledkort 'Leddet i rum-fanen' (rejse-strimmel i 6 trin med klik til trinnet, piller til penge/usikkerheder/tråde/højde der fremhæver kortene), kvante-genvej til kvantetråden, scroll-margin for #sp-web
+
+### Appended from lane-E merge 2026-10-16 03:04:01 CEST
+- 2268d7d vaerdikaeder: Freeport skriver at Morenci er et aabent brud i drift siden 1939
+- be3ddde vaerdikaeder: GE Vernova skriver at GIS-udstyr daekker fra 50 kV til 800 kV
+- 7ee1e45 vaerdikaeder: Southern skriver at Plant Vogtle har fire enheder i drift
+- 6c30388 vaerdikaeder: NextEra skriver at udvidelsen paa St. Lucie blev faerdig i 2013
+- 16f9591 vaerdikaeder: MP Materials skriver at magnetfabrikken ligger i Fort Worth
+- 7f1857d vaerdikaeder: Almonty skriver at Beralt ejer Panasqueira med tilladelse til 2052
+- 4431d82 vaerdikaeder: Starfighters skriver at flaaden er syv F-104 og at nyttelast kan til 45.000 fod
+- 319119f vaerdikaeder: Eos skriver at Z3-fremstilling begyndte i august 2023 i Turtle Creek
+- 5b53fb6 vaerdikaeder: NuScale skriver at modulet er 76 fod gange 15 fod
+- 85f63ed vaerdikaeder: Lynas skriver at Kalgoorlie laver blandet karbonat fra Mt Weld
+- 1aeff9c vaerdikaeder: Rolls-Royce skrev at Videberg Kraft valgte tre små reaktorer 15. juni 2026
+- bdec96d vaerdikaeder: GE Vernova viser turbinerne 9HA, 7HA og LM2500
+- 57169d9 vaerdikaeder: Quanta skriver at West Fort McMurray omfatter over 310 miles ledning
+- a2d824f vaerdikaeder: Northern Dynasty skrev at indlæg om EPA-vetoet blev holdt 25. juni 2026
+- 133852c vaerdikaeder: Centrus skriver at berigning i Piketon begyndte i slutningen af 2023

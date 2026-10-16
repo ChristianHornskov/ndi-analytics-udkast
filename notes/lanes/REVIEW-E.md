@@ -261,3 +261,99 @@ Tía María er et kobberprojekt i Cocachacra, Islay, Arequipa. To forekomster, L
 HASTE er et suborbitalt testfartøj bygget ud fra Electron. Wallops i Virginia. Ikke en orbital opsendelse. Neutron er stadig under udvikling. 700 kg, largest og Iridium-overskriften er ikke kopieret. AI-udkast uden gennemgangsdato. Opsendelses-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
 
 Lynas svarede tomt. NioCorp gav 403. Intuitive Machines endte i en omdirigering. Ingen ny sætning dér.
+
+## Voyager · 2026-10-16 02:08 CEST
+
+GOEX ved Camp Minden i Louisiana producerer igen sortkrudt ifølge meddelelsen af 8. september 2026. Efter beholdningen. Ikke en rumstation. Starlab er stadig et projekt og ikke et datacenter. Only, sole, world-class og Pueblo-kvadratmeter er ikke kopieret. AI-udkast uden gennemgangsdato. Blurben under rum og compute og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## QuantumScape · 2026-10-16 02:10 CEST
+
+QSE-5 til køretøjer og QS PowerBlock til datacentre. Ikke masseproduktion. Ikke et lager i drift. First og anode-less er ikke kopieret. Adressen i San Jose er ikke brugt som en fabrik. AI-udkast uden gennemgangsdato. Energilagrings-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Fluence · 2026-10-16 02:12 CEST
+
+Smartstack er en platform til batterier på nettet. Ikke et kraftværk. Teksten siger ikke, at selskabet laver cellerne. Market-leading og 30 procent er ikke kopieret. AI-compute-listen er ikke rørt. AI-udkast uden gennemgangsdato. Energilagrings-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Plug · 2026-10-16 02:14 CEST
+
+St. Gabriel i Louisiana er flydende brint sammen med Olin gennem Hidrogenii. Kommerciel drift fra 23. april 2025. Meddelelsen er 22. april 2026. Begge datoer er før beholdningen. Ikke et elselskab. Ikke hvert anlæg. Woodbine og Charleston er nævnt uden tonnage. Leading, 15 ton pr. dag, 90 procent og kundenavne er ikke kopieret. AI-udkast uden gennemgangsdato. Elproduktions-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Bloom · 2026-10-16 02:18 CEST
+
+Aftalen af 1. april 2025 siger, at Bloom og Conagra vil bruge brændselsceller på Conagras fabrikker i Troy og Archbold i Ohio. Før beholdningen. Ikke skrevet som celler, der allerede kører. Ikke et klassisk kraftværk. Megawatt, kapitalramme, leader og leading er ikke kopieret. AI-udkast uden gennemgangsdato. Elproduktions-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Freeport · 2026-10-16 03:03 CEST
+
+Siden om USA skriver, at Morenci er et åbent kobberbrud i Greenlee County i Arizona, cirka 50 miles nordøst for Safford, i drift siden 1939. Freeport har 72 %. Sumitomo Metal Mining Arizona har 15 %. SMM Morenci har 13 %. To koncentratorer kan male 132.000 ton malm i døgnet. Det er et kapacitetstal, ikke en målt dagsproduktion. Miles er ikke regnet om. Ikke et elselskab. Grasberg, Cerro Verde og El Abra står i menuen og er ikke beskrevet. Largest, foremost, leading og world's first er ikke kopieret. AI-udkast uden gennemgangsdato. Råstof-blurben og arkivet siger grænsen. Vægten 0,11 er uændret. Chromium ved 375 px. Kæden er også tjekket ved 1280 px og ved 375 px. "tjekket mod kilden" er ikke med. Morenci står. Ingen konsolfejl. Ingen vandret scroll.
+
+## GE Vernova elnet · 2026-10-16 03:02 CEST
+
+Netsiden skriver, at GIS dækker fra 50 kV til 800 kV, at SF6-fri GIS findes ved 145 kV og 420 kV, og at afbrydere til generatorer dækker op til 1.500 MW. Afbrydere til frakobling laves på otte fabrikker i syv lande, og siden daterer linjen til 1960. Det er udstyr. Selskabet driver ikke værkerne og ejer ikke ledningerne. Turbinerne og de 85 GW er uændrede. Market leader, industry leader, top og among the highest er ikke kopieret. AI-udkast uden gennemgangsdato. Elnet-blurben og arkivet siger grænsen. Vægten 0,19 er uændret. Chromium ved 375 px. Kæden er også tjekket ved 1280 px og ved 375 px. "tjekket mod kilden" er ikke med. 50 kV står. Ingen konsolfejl. Ingen vandret scroll.
+
+## Southern · 2026-10-16 03:00 CEST
+
+Siden om atomkraft skriver, at Plant Vogtle har fire enheder i drift. Forsiden skriver, at værket leverer strøm til mere end 1 million hjem og virksomheder i Georgia. Siderne daterer ikke tallene. Læst 16. oktober 2026. Ikke knyttet til beholdningen. Ikke en lille reaktor under udvikling. Georgia Power, Alabama Power og Mississippi Power er med. Largest, premier, leads og No. 1 er ikke kopieret. Tallet på næsten 30.000 medarbejdere og orkanoverskriften er ikke brugt. AI-udkast uden gennemgangsdato. Elproduktions-blurben og arkivet siger grænsen. Vægten 0,28 er uændret. Chromium ved 375 px. Kæden er også tjekket ved 1280 px og ved 375 px. "tjekket mod kilden" er ikke med. Vogtle står. Ingen konsolfejl. Ingen vandret scroll.
+
+## NextEra · 2026-10-16 02:58 CEST
+
+Om-siden har overskriften 2013 og skriver, at effektudvidelsen på St. Lucie, Turkey Point og Point Beach omfattede seks atomkraftenheder. Før beholdningen. Ikke et nyt værk. Ikke en lille reaktor under udvikling. Florida Power & Light har mere end 6 millioner tilslutninger. Forsiden siger, at sammenlægningen med Dominion ikke er gennemført i teksten. Largest, industry-leading, multi-billion og U.S. history er ikke kopieret. Overskrifter om Google Cloud, Meta og Symmetry er ikke brugt. AI-udkast uden gennemgangsdato. Elproduktions-blurben og arkivet siger grænsen. Vægten 0,39 er uændret. Chromium ved 375 px. Kæden er også tjekket ved 1280 px og ved 375 px. "tjekket mod kilden" er ikke med. St. Lucie står. Ingen konsolfejl. Ingen vandret scroll.
+
+## MP Materials · 2026-10-16 02:57 CEST
+
+Anlægssiden skriver, at Mountain Pass Mine and Processing Facility ligger på 67750 Bailey Road i Mountain Pass i Californien, og at Independence Magnet Manufacturing Facility ligger på 13840 Independence Parkway i Fort Worth i Texas. Hovedsædet i Las Vegas er ikke minen. Om-siden skriver, at Mountain Pass blev genstartet i 2017. Før beholdningen. Siderne daterer ikke en mængde. Ikke et chipværk. Only, champion, world's richest, world's strongest, unmatched, leadership og full supply chain er ikke kopieret. AI-udkast uden gennemgangsdato. Råstof-blurben og arkivet siger grænsen. Vægten 0,26 er uændret. Chromium ved 375 px. Kæden er også tjekket ved 1280 px og ved 375 px. "tjekket mod kilden" er ikke med. Fort Worth står. Ingen konsolfejl. Ingen vandret scroll.
+
+## Almonty · 2026-10-16 02:56 CEST
+
+Siden om Panasqueira siger, at Beralt Tin and Wolfram (Portugal) er et indirekte helejet datterselskab og ejer 100 % af wolframminen i Covilha. Tilladelsen løber til 2052 og kan forlænges. Forlængelsen er ikke skrevet som sket. Level 4 kræver finansiering og er ikke skrevet som drift. Sangdong 23. september 2026 er den ældre sætning og ligger efter beholdningen. Los Santos står kun i menuen og er ikke beskrevet. Oldest, first, high-grade, trusted, doubling, 74 % og en portugisisk notits om 250 ansatte er ikke kopieret. AI-udkast uden gennemgangsdato. Råstof-blurben og arkivet siger grænsen. Vægten 0,15 er uændret. Chromium ved 375 px. Kæden er også tjekket ved 1280 px og ved 375 px. "tjekket mod kilden" er ikke med. Panasqueira står. Ingen konsolfejl. Ingen vandret scroll. Ordet første på kæden er den ældre sætning om energi som flaskehals.
+
+## Starfighters · 2026-10-16 02:53 CEST
+
+Forsiden siger, at flåden er syv F-104, og at flyene kan bære nyttelast til 45.000 fod. Opsendelsestilladelsen fra FAA er undervejs. Ikke givet. Ikke en orbital rute. Meddelelsen 13. oktober 2026 siger, at STARLAUNCH 1 er et suborbitalt udviklingsfartøj, og at decemberflyvningen er planlagt med raketten under vingen mellem Kennedy Space Center og Cecil Spaceport. Efter beholdningen. Ikke gennemført. Midland i Texas er også nævnt. Fod er ikke regnet om. Only, world, cost-effective, revolution, børskode og citater er ikke kopieret. Kunderne på forsiden er ikke skrevet som købere af en orbital opsendelse. AI-udkast uden gennemgangsdato. Opsendelses-blurben og arkivet siger grænsen. Vægten 0,52 er uændret. Chromium ved 375 px. Kæden er også tjekket ved 1280 px og ved 375 px. "tjekket mod kilden" er ikke med. 45.000 fod står. Ingen konsolfejl. Ingen vandret scroll.
+
+## Eos · 2026-10-16 02:55 CEST
+
+Fremstillingssiden siger, at Z3-produktionen begyndte i august 2023 på Eos Ingenuity Park i Turtle Creek i Pennsylvania. Før beholdningen. Fem råvarer: zinkbromid, titanium i industrikvalitet, grafitfilt, plast til støbning og vand. Siden daterer ikke størrelsen. Ikke en mine og ikke et kraftværk. First, fully made-in-America, low-cost, ethical, ingenious og 25 år er ikke kopieret. Kursgraf og Golden Dome er ikke brugt. AI-udkast uden gennemgangsdato. Lagrings-blurben og arkivet siger grænsen. Vægten 0,17 er uændret. Chromium ved 375 px. Kæden er også tjekket ved 1280 px og ved 375 px. "tjekket mod kilden" er ikke med. Turtle Creek står. Ingen konsolfejl. Ingen vandret scroll. Ordet første på kæden kommer fra ældre sætninger.
+
+## NuScale · 2026-10-16 02:52 CEST
+
+Modulsiden skriver 77 MW pr. modul, en cylinder på 76 fod gange 15 fod og omkring 700 tons i tre dele. Brændsel under 5 %. Udskiftning op til 21 måneder. 12 moduler er specificeret til op til 924 MWe. Det er et design. Ikke et leveret modul og ikke et værk i drift. NRC-godkendelsen og TVA-programmet på op til 6 GW er ikke drift. E2 Center er en simulator. ENTRA1 er en partner, ikke et værk. First, only, lower cost, walk-away safe og ready to deploy er ikke kopieret. Fod og tons er ikke regnet om. Kapacitetsfaktor og 36 måneder er ikke kopieret. AI-udkast uden gennemgangsdato. SMR-blurben og arkivet siger grænsen. Vægten 0,22 er uændret. Chromium ved 375 px. Kæden er også tjekket ved 1280 px. "tjekket mod kilden" er ikke med. 76 fod står. Ingen konsolfejl. Ingen vandret scroll. Ordet første på kæden kommer fra ældre sætninger.
+
+## Lynas · 2026-10-16 02:50 CEST
+
+Om-siden siger, at Mt Weld ligger 35 km syd for Laverton, og at koncentratanlægget blev taget i brug i 2011, 1,5 km fra minen. Kalgoorlie-siden siger, at koncentratet blandes med koncentreret svovlsyre og knækkes i en roterovn på 110 m gange 6 m, og at processen giver MREC, som skal viderebehandles i Gebeng. Produktionen i Malaysia begyndte i 2012 ifølge om-siden. Årstallene er før beholdningen. Kalgoorlie-siden daterer ikke starten. Rapporten dækker aktiviteter i 2025, før beholdningen. Ministerial Statement 1216 dækker restprodukter, ikke en ny minetilladelse. Ikke et kraftværk. World's only, highest grade, leading, state-of-the-art, first of its kind og one of the largest er ikke kopieret. Aktiekurs og forkortelsen Sa er ikke kopieret. Forsiden, Mt Weld-siden og Kuantan-siden gav captcha. AI-udkast uden gennemgangsdato. Råstof-blurben og arkivet siger grænsen. Vægtene er uændrede. Chromium ved 375 px. Kæden er også tjekket ved 1280 px. "tjekket mod kilden" er ikke med. Kalgoorlie står. Ingen konsolfejl. Ingen vandret scroll.
+
+## Rolls-Royce · 2026-10-16 02:43 CEST
+
+Meddelelsen 15. juni 2026 siger, at Videberg Kraft har valgt Rolls-Royce SMR til tre små reaktorer på Sveriges vestkyst. Videberg Kraft ejes af Vattenfall og Industrikraft i Sverige. Udvælgelsen begyndte i 2022. Efter beholdningen. Ikke et værk i drift. Atomkraft er ikke hele selskabet. Aftalerne med Great British Energy Nuclear (GBE-N) og CEZ Group er nævnt uden dato og er ikke værker i drift. First, only, market leader, first-mover, direktørens citat og børskoder er ikke kopieret. Navnet på den britiske part står på siden med en tankestreg. Teksten her skriver det uden. AI-udkast uden gennemgangsdato. SMR-blurben og arkivet siger grænsen. Vægtene er uændrede. Chromium ved 375 px. Kæden er også tjekket ved 1280 px. "tjekket mod kilden" er ikke med. Videberg står. Ingen konsolfejl. Ingen vandret scroll. Ordet første på kæden og i arkivet kommer fra ældre sætninger om Terrestrial, zeolit og Almonty.
+
+## GE Vernova · 2026-10-16 02:56 CEST
+
+Gassiden viser turbinerne 9HA, 7HA og LM2500. Atomkraftsiden siger, at dampkraft understøtter mere end 80 anlæg i Amerika, og at cirka 85 GW er den installerede base hos selskabet og hos andre leverandører. Tallet dækker også andres udstyr. Selskabet driver ikke værkerne. Forsiden siger cirka 85.000 mennesker i cirka 100 lande. World-leading er ikke kopieret. AI-udkast uden gennemgangsdato. Elproduktions-blurben og arkivet siger grænsen. Elnet-blurben er uændret på den korte sætning. Vægtene er uændrede. Chromium ved 375 px. Kæden er også tjekket ved 1280 px. "tjekket mod kilden" er ikke med. 9HA står. Ingen konsolfejl. Ingen vandret scroll.
+
+## Quanta · 2026-10-16 02:52 CEST
+
+Elsiden beskriver West Fort McMurray i det nordlige centrale Alberta: over 310 miles 500 kV-ledning, udvidelse af Livock og anlæg af Thickwood Hills. Siden kalder det et projekt. Ikke ejer af ledningen. Ikke skrevet som drift. Miles er ikke regnet om. Houston er hovedsædet. Largest og world-class er ikke kopieret. Gateway West på 150 miles er udeladt, fordi siden ikke siger, om linjen er i drift. AI-udkast uden gennemgangsdato. Elnet-blurben og arkivet siger grænsen. Vægtene er uændrede. Chromium ved 375 px. Kæden er også tjekket ved 1280 px. "tjekket mod kilden" er ikke med. Fort McMurray står. Ingen konsolfejl. Ingen vandret scroll.
+
+## Northern Dynasty · 2026-10-16 02:48 CEST
+
+Meddelelsen 26. juni 2026 siger, at mundtlige indlæg blev holdt 25. juni 2026 ved den føderale distriktsdomstol i Alaska. Sagen søger at trække EPA's veto tilbage. Efter beholdningen. Ingen afgørelse. Ikke en tilladelse. Ikke en mine. 1.840 mineralrettigheder, 200 miles og 125 miles er selskabets egne mål og er ikke regnet om. World-class, kurser og direktørens citat er ikke kopieret. AI-udkast uden gennemgangsdato. Råstof-blurben, NDI-blikket og arkivet siger grænsen. Vægtene er uændrede. Chromium ved 375 px. Kæden er også tjekket ved 1280 px. "tjekket mod kilden" er ikke med. 25. juni 2026 står. Ingen konsolfejl. Ingen vandret scroll.
+
+## Centrus · 2026-10-16 02:44 CEST
+
+Berigning begyndte i slutningen af 2023 på American Centrifuge Plant i Piketon i Ohio. Før beholdningen. HALEU-tilladelsen fra Nuclear Regulatory Commission er med. Ordet first og "siden 1954" er ikke kopieret. AC100M stilles op efter en aftale med energiministeriet. Teksten siger ikke fuld skala. Aftalen med Antares er 17. september 2026, efter beholdningen, og er ikke en levering. Antares' projekter er ikke værker i drift. Trusted, most advanced, NYSE og forudbetalinger er ikke kopieret. AI-udkast uden gennemgangsdato. Råstof-blurben og arkivet siger grænsen. Vægtene er uændrede. Chromium ved 375 px. Kæden er også tjekket ved 1280 px. "tjekket mod kilden" er ikke med. Piketon står. Ingen konsolfejl. Ingen vandret scroll.
+
+## Comstock · 2026-10-16 02:40 CEST
+
+Siden om selskabet siger mere end 535.000 netto-acres i Western Haynesville i det østlige Texas. Gasproduktionen er certificeret efter MiQ-standarden. Siden daterer ikke tallet, så det er ikke knyttet til beholdningen 1. juni 2026. Leading, premier, lowest, high-return, top tier og 3.300 boresteder er ikke kopieret. En sætning om datacenter-efterspørgsel er ikke læst som et ejet datacenter. Stadig brændsel, ikke en mine. AI-udkast uden gennemgangsdato. Elproduktions-blurben og arkivet siger grænsen. Vægtene er uændrede. Chromium ved 375 px. Kæden er også tjekket ved 1280 px. "tjekket mod kilden" er ikke med. 535.000 står. Ingen konsolfejl. Ingen vandret scroll.
+
+## Primoris · 2026-10-16 02:36 CEST
+
+Historien siger, at rødderne går tilbage til ARB, Inc. i Bakersfield i 1960, og at Primoris blev dannet i 2004. Siden om datacentre siger byggeri af infrastruktur til gas, sol, batterilagring og strøm. Ikke ejer af strømmen og ikke af datacentret. primoriscorp.com videresender til prim.com den 16. oktober 2026. Top five, largest, premier, best in class, 70 år og millionbeløb er ikke kopieret. AI-udkast uden gennemgangsdato. Elnet-blurben og arkivet siger grænsen. Vægtene er uændrede. Chromium ved 375 px. Kæden er også tjekket ved 1280 px. "tjekket mod kilden" er ikke med. Bakersfield står. Ingen konsolfejl. Ingen vandret scroll.
+
+## Terrestrial Energy · 2026-10-16 02:30 CEST
+
+Teknologisiden specificerer IMSR til 390 MWe netto eller 822 MWt netto. Brændslet er lavt beriget uran under 5 % U-235. Varmen er 585 grader. De første anlæg er sat til begyndelsen af 2030'erne. Det er selskabets tidsplan, ikke et værk i drift. Kernenheden er designet til syv år. Most, capital-efficient, 44 % og 32 % er ikke kopieret. Ikke blandet sammen med Terra Innovatum. AI-udkast uden gennemgangsdato. Atomkraft-blurben og arkivet siger grænsen. Vægtene er uændrede. Chromium ved 375 px. Kæden er også tjekket ved 1280 px. "tjekket mod kilden" er ikke med. 390 MWe står. Syv år ligger bag "Læs hele forklaringen". Ingen konsolfejl. Ingen vandret scroll.
+
+## Trilogy · 2026-10-16 02:26 CEST
+
+Varsel af 21. september 2026 om miljøredegørelse for Arctic i Ambler-distriktet. Efter beholdningen. Starter høringen. Ikke en tilladelse. Ikke en mine. Ambler Metals ejes sammen med South32. Bornite er stadig et projekt. High-grade, flagship og tidsplanen er ikke kopieret. AI-udkast uden gennemgangsdato. Råstof-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
