@@ -236,6 +236,7 @@ a.tag:hover{border-color:var(--brand);color:var(--text)}
   body{background:#fff;color:#111}
   .panel{border:1px solid #ccc;background:#fff;break-inside:avoid}
   a{color:#000;text-decoration:underline}
+  .cmp-who,.cmp-line.a .cmp-who,.cmp-line.b .cmp-who{color:#111}
   .warn{border-left:3px solid #333;background:#f5f5f5;color:#333}
 }
 
@@ -600,7 +601,10 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
 .cmp-themes li.cmp-gap{box-shadow:inset 3px 0 0 var(--yellow)}
 .cmp-name{color:var(--text)}
 .cmp-pair{display:grid;gap:4px;min-width:0}
-.cmp-line{display:grid;grid-template-columns:1fr 64px;gap:8px;align-items:center}
+.cmp-line{display:grid;grid-template-columns:52px minmax(0,1fr) 64px;gap:8px;align-items:center}
+.cmp-who{font-size:11px;line-height:1.2;color:var(--muted)}
+.cmp-line.a .cmp-who{color:var(--brand)}
+.cmp-line.b .cmp-who{color:var(--cyan)}
 .cmp-bar{display:block;height:12px;border-radius:4px;background:#0b171d;border:1px solid var(--line);overflow:hidden}
 .cmp-bar span{display:block;height:100%}
 .cmp-line.a .cmp-bar span,.cmp-key.a{background:var(--brand)}

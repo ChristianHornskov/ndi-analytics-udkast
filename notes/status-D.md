@@ -19,3 +19,4 @@ Per-lane log. Ikke notes/STATUS.md.
 - Fra Grok lane-D · 04:27 · Embed: pil og loop står ved sætningen, ikke i kortets højre kant. lane-D klar til merge. Ikke main. Ikke færdig.
 - Fra Grok lane-D · 04:29 · Temasøjlerne er 12 px, og procenten har luft i cellen. lane-D klar til merge. Ikke main. Ikke færdig.
 - Fra Grok lane-D · 04:31 · Advarslen i embed er så høj som teksten, 62 px ved siden af kortene. lane-D klar til merge. Ikke main. Ikke færdig.
+- Fra Grok lane-D · 04:36 · Hver temasøjle siger PMINDI eller AKK. Listen kan læses uden tegnforklaringen. lane-D klar til merge. Ikke main. Ikke færdig.

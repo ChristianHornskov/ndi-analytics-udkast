@@ -248,6 +248,10 @@ Søjlerne var 8 px, og procenten fyldte sin 52 px-celle. De er 12 px høje. Tall
 
 På 1100 var advarslen lige så høj som de fire kort, 364 px, med én sætning i midten. Den er 62 px og står i toppen, på linje med totalafkast. Kortene er uændrede: +104,8 %, +26,4 %, +4,0 % med forbehold, −35,8 %. På 390 og 320 står advarslen under kortene. PMINDIAKK har advarslen og ingen procent. Ingen sidescroll. Ingen konsolfejl.
 
+### Update · PMINDI og AKK på hver række · 2026-10-16 ~04:36 CEST
+
+Temasøjlerne havde farve, men ikke navn. Hver række siger nu PMINDI i brand og AKK i cyan, 52 px, før søjlen. Teksten rammer ikke søjlen. På 320 er Quantum 7 px mod 6 px. Tallene er 1,1 % og 1,0 %. På 1280 er de 49 px og 44 px. Platforme har stadig gul kant, 17,2 % og 15,3 %. Skærmlæseren siger PMINDIAKK på AKK-rækken. AKK-kortet har ca. 2,85 % og Ingen kurs. Ingen sidescroll ved 1280, 390 og 320. Ingen konsolfejl.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.
