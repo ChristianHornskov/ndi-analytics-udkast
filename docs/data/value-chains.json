@@ -1627,8 +1627,8 @@
           "id": "launch",
           "icon": "🚀",
           "label": "Opsendelse",
-          "blurb": "Kapacitet til at sende satellitter og andet udstyr væk fra jorden, og selskaber der leverer dele til fartøjerne. Nogle programmer er i drift. Andre er stadig under udvikling. Starfighters skriver, at flåden er syv F-104, og at flyene kan bære nyttelast til 45.000 fod. Forsiden skriver, at en opsendelsestilladelse fra FAA er undervejs. STARLAUNCH 1 er et suborbitalt udviklingsfartøj og ikke en orbital rute. Howmet skriver, at det laver metaldele til fly og også smedede hjul til lastbiler og busser. Det sender ikke selv op. Karman skriver, at det beskytter nyttelast, laver mellemtrin og samler raketmotorer. Det sender ikke selv satellitter op. Intuitive Machines leverer til Månen. Det er ikke en satellit, der tager billeder af Jorden. Rocket Lab skriver, at HASTE er et suborbitalt testfartøj fra Wallops i Virginia. Det er ikke en orbital opsendelse af satellitter.",
-          "ndi": "SpaceX er brugt som illustration i NDI's formidling om opsendelser (ugebrev 23. juni 2024). Selskabet indgår ikke i beholdningen pr. 1. juni 2026. Merlin, Archer og Airo Group er luftfart i SpaceTech-temaet og står ikke her. Airo nævner RQ-35 Heidrun, RQ-70, JC250 og JX250. Det er ikke satellitter. Selskabet Merlin skriver, at Merlin Pilot er software til fly, der allerede er i drift, og nævner et samarbejde om C-130J. Målet er autonomi. Det er ikke Satellogics satellit af samme navn. BWX Technologies og Rolls-Royce står under atomkraft. Neutron hos Rocket Lab og Eclipse hos Firefly er ikke fløjet i beskrivelserne. Firefly skriver, at Blue Ghost er landet på Månen.",
+          "blurb": "Kapacitet til at sende satellitter og andet udstyr væk fra jorden, og selskaber der leverer dele til fartøjerne. Nogle programmer er i drift. Andre er stadig under udvikling. Starfighters skriver, at flåden er syv F-104, og at flyene kan bære nyttelast til 45.000 fod. Forsiden skriver, at en opsendelsestilladelse fra FAA er undervejs. STARLAUNCH 1 er et suborbitalt udviklingsfartøj og ikke en orbital rute. Howmet skriver, at det laver metaldele til fly og også smedede hjul til lastbiler og busser. Det sender ikke selv op. Karman skriver, at det beskytter nyttelast, laver mellemtrin og samler raketmotorer. Det sender ikke selv satellitter op. Intuitive Machines leverer til Månen. Det er ikke en satellit, der tager billeder af Jorden. Rocket Lab skriver, at HASTE er et suborbitalt testfartøj fra Wallops i Virginia. Det er ikke en orbital opsendelse af satellitter. Firefly skriver, at Alpha er 31,7 m lang og sat til 1.030 kg til en lav bane i 300 km. Blue Ghost Mission 1 landede 2. marts 2025. Eclipse er ikke fløjet.",
+          "ndi": "SpaceX er brugt som illustration i NDI's formidling om opsendelser (ugebrev 23. juni 2024). Selskabet indgår ikke i beholdningen pr. 1. juni 2026. Merlin, Archer og Airo Group er luftfart i SpaceTech-temaet og står ikke her. Airo nævner RQ-35 Heidrun, RQ-70, JC250 og JX250. Det er ikke satellitter. Selskabet Merlin skriver, at Merlin Pilot er software til fly, der allerede er i drift, og nævner et samarbejde om C-130J. Målet er autonomi. Det er ikke Satellogics satellit af samme navn. BWX Technologies og Rolls-Royce står under atomkraft. Neutron hos Rocket Lab og Eclipse hos Firefly er ikke fløjet i beskrivelserne. Firefly skriver, at Blue Ghost Mission 1 landede 2. marts 2025 i Mare Crisium. Datoen ligger før beholdningen.",
           "themes": [
             "space"
           ],
@@ -1657,7 +1657,7 @@
               "w": 0.3,
               "sym": "FLY",
               "forslag": false,
-              "role": "Løfteraketter og en månelander"
+              "role": "Alpha er sat til 1.030 kg. Blue Ghost Mission 1 landede 2. marts 2025. Eclipse er ikke fløjet."
             },
             {
               "isin": "US4432011082",
