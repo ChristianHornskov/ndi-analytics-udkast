@@ -210,8 +210,8 @@ b, strong { font-weight: 700; }
 }
 .control:active { background: #294c55; }
 
-.periods { flex: 1; }
-.periods .control { flex: 1; padding: 0 10px; }
+.periods { flex: 0 1 auto; }
+.periods .control { flex: 0 0 auto; padding: 0 16px; }
 
 .chart-legends {
   display: flex;
@@ -677,7 +677,7 @@ button.legend {
   .embed-cta { align-items: flex-start; }
 
   .metrics-row { grid-template-columns: 1fr; gap: 14px; }
-  .metrics-grid { grid-template-columns: 1fr 1fr; }
+  .metrics-grid { grid-template-columns: 1fr 1fr; align-items: start; }
   .metric:first-child { grid-column: 1 / -1; grid-row: auto; }
   .metric-dd { grid-column: 1 / -1; }
   .metric-label { margin-bottom: 6px; }

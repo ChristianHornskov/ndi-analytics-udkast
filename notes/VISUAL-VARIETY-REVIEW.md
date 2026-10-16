@@ -226,6 +226,12 @@ Under brønden står en andel, 14 px høj, højst 520 px. Brand er dagene på de
 
 PMINDIAKK har ingen andel og ingen procent. Footer-links er nowrap. «KID PMINDI ↗» knækker ikke. Ingen sidescroll ved 1280, 390 og 320, heller ikke på sammenlign, embed og forsiden. Ingen konsolfejl.
 
+### Update · periode-knapper følger teksten · 2026-10-16 ~04:19 CEST
+
+På 1100 er «År til dato» 93 px og «Hele perioden» 127 px, begge 44 px høje, til venstre i værktøjslinjen. De fylder ikke de 1042 px. På 700 og 641 er de samme. Under 640 deler de rækken. Et klik på år til dato sætter største fald til −26,8 %, sluttallet til +4,0 %, og det rosa tal på kurven er −10,0 %. Forbeholdet står der.
+
+På 390 er kortet for gns. årligt afkast 96 px. År til dato er 127 px, fordi forbeholdet har flere linjer. Det korte kort trækkes ikke op i samme højde. PMINDIAKK har tom svg og ingen procent. Ingen sidescroll. Ingen konsolfejl.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.
