@@ -389,3 +389,13 @@ Meddelelsen af 16. september 2026, efter beholdningen. Chorus er tre satellitter
 ## Trilogy · 2026-10-16 02:26 CEST
 
 Varsel af 21. september 2026 om miljøredegørelse for Arctic i Ambler-distriktet. Efter beholdningen. Starter høringen. Ikke en tilladelse. Ikke en mine. Ambler Metals ejes sammen med South32. Bornite er stadig et projekt. High-grade, flagship og tidsplanen er ikke kopieret. AI-udkast uden gennemgangsdato. Råstof-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Freeze · 2026-10-16 08:03 CEST
+
+Cyklus 60 har ingen MUST i lane-E-filer. M1 om ndi-paa-x er ikke vores fil.
+
+T1 og Babcock: selskabssiden siger Solcellemoduler og Kedler og design-byggeri til kraftværker. AI-udkast og tjekket mod kilden 8. oktober 2026 er med. 5 GW og 1,2 GW står under produkter. Footer og historisk advarsel er med.
+
+tema.html kolonnen Rolle læser portfolio.json. De to sætninger der var allerede almindeligt dansk. vaerdikaeder.html viser ikke company.role. Kæderollerne for T1, Babcock og MDA er alligevel korte, så feltet ikke er en faktatjek-note. Faktateksten beholder datoerne.
+
+MDA: kontrolcenteret 11. august 2026 i St-Bruno-de-Montarville er på jorden. Kortet Tre satellitter viser RADARSAT-2, X-bånd og C-bånd. De to nye er stiplede. Ved 390 px står de under hinanden. Et klik på PIL-BOX efter lader Solaris blive på elproduktion. Feature-freeze fra 08:00. Ingen ny widget efter kortet.
