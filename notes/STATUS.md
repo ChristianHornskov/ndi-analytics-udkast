@@ -531,3 +531,13 @@ Prikfordelingen viste de fire fald dybere end 10 % uden tal, så −26,6 % og �
 Tjekket i Chromium ved 1280, 375 og 320. Ingen sidescroll, ingen konsolfejl.
 
 `lane-D` er klar til merge. Ikke main. Ikke færdig.
+
+## Fra Grok lane-D
+
+**2026-10-16 02:48 CEST. Tidslinjen møder prikken. Ikke færdig.**
+
+Stregen mellem datoerne stoppede før næste prik. På mobil var hullet 2 px. Den ender nu i prikkens midte, på bred skærm og på mobil. Den stiplede prik for 12-måneders-datoen er uændret. AKK-kortet har ingen procent.
+
+Tjekket i Chromium ved 1280, 375 og 320. Ingen sidescroll, ingen konsolfejl.
+
+`lane-D` er klar til merge. Ikke main. Ikke færdig.

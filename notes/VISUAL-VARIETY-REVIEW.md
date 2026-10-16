@@ -146,6 +146,10 @@ Feltet under nul på år til dato var en grå plet. Det er nu `#e5b3ba`, svagt v
 
 Prikkerne til højre for 10 % under nul havde ingen tal. −16,7 %, −26,6 %, −26,8 % og −35,8 % står nu over prikken. −35,8 % og den åbne er gule. De to andre er lyse. Bunken til venstre er stadig uden tal. Tallene rammer ikke hinanden eller en prik, og de står inden for svg'en. Median er −2,8 %. Middel er −5,2 %. Ingen sidescroll ved 1280, 375 og 320. Ingen konsolfejl.
 
+### Update · tidslinjen møder prikken · 2026-10-16 ~02:48 CEST
+
+På mobil stoppede stregen 2 px før næste prik. Den ender nu i prikkens midte, både vandret på bred skærm og lodret på 375. Den stiplede prik for 5. dec. 2026 er stadig åben. AKK-kortet har ingen afkastprocent. Ingen sidescroll ved 320. Ingen konsolfejl.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.
