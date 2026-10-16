@@ -240,6 +240,10 @@ PMINDIAKK havde en bindestreg på 4 px ud for Seneste NAV. Feltet siger nu «Ing
 
 På 1100 stod pilen og loopet i højre kant af kortet, med et tomt felt imellem. De står nu 16 px efter sætningen. Teksten rammer ikke mærket, ved 1100, 700, 390 og 320. På 320 bryder sætningen, og mærket står ved siden af. Et klik på PMINDIAKK vælger kortet. Svg'en er tom, og der er ingen procent. Ingen sidescroll. Ingen konsolfejl.
 
+### Update · temasøjler 12 px · 2026-10-16 ~04:29 CEST
+
+Søjlerne var 8 px, og procenten fyldte sin 52 px-celle. De er 12 px høje. Tallet har 64 px, og «17,2 %» har 27 px til overs i cellen. Quantum er stadig 16 px mod 14 px på 390, så 0,1 point kan ses. Platforme har den gule kant. AKK-kortet har ca. 2,85 % og «Ingen kurs». Ingen sidescroll ved 1280, 390 og 320. Ingen konsolfejl.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.

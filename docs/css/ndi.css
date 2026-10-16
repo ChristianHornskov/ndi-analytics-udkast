@@ -600,13 +600,13 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
 .cmp-themes li.cmp-gap{box-shadow:inset 3px 0 0 var(--yellow)}
 .cmp-name{color:var(--text)}
 .cmp-pair{display:grid;gap:4px;min-width:0}
-.cmp-line{display:grid;grid-template-columns:1fr 52px;gap:8px;align-items:center}
-.cmp-bar{display:block;height:8px;border-radius:4px;background:#0b171d;border:1px solid var(--line);overflow:hidden}
+.cmp-line{display:grid;grid-template-columns:1fr 64px;gap:8px;align-items:center}
+.cmp-bar{display:block;height:12px;border-radius:4px;background:#0b171d;border:1px solid var(--line);overflow:hidden}
 .cmp-bar span{display:block;height:100%}
 .cmp-line.a .cmp-bar span,.cmp-key.a{background:var(--brand)}
 .cmp-line.b .cmp-bar span,.cmp-key.b{background:var(--cyan)}
 .cmp-key{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:6px;vertical-align:middle}
-.cmp-v{text-align:right;color:var(--muted);font-size:12px}
+.cmp-v{text-align:right;color:var(--muted);font-size:12px;font-variant-numeric:tabular-nums}
 @media (max-width:560px){
   .cmp-cards{grid-template-columns:1fr}
   .tl{grid-template-columns:1fr;gap:10px}
