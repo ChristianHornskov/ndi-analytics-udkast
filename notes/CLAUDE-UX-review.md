@@ -580,3 +580,25 @@ main/docs og Pages er uændrede. Live ved 375 er der ingen regression (16 sider:
 - **Privat:** lane-C's lær-sider (indre værdi, læs grafen) giver præcis den baggrund, som persona-filen efterspørger ✅. Omkostninger svarer stadig ikke på "hvad koster det mig?".
 - **Familiekontor:** lane-C's SRI-forklaring fjerner et oplagt spørgsmål i due diligence ✅. Omkostninger (KID-tal) og embed (KID/SRI) er stadig hullerne.
 - **Visuel variation:** ingen ny træthed. Lane-A tilføjer en modenhedstrappe og risikokort på vaerdikaeder, og det er efterhånden mange kort-typer på én side. Hold øje efter merge.
+
+## 2026-10-16 02:05 CEST · cyklus 26 (main `90e7de8`, intet docs-delta)
+
+main/docs og Pages er uændrede (Last-Modified 23:49 GMT). Live-regression ved 375 blev kørt i cyklus 25 og er ikke gentaget. Persona-, krav- og idéfilerne er uændrede. Fokus i denne cyklus er de nye lane-commits efter 01:57: X `b58126a`, C `74e42c4`, A `2e5fe11`, B `28190f5`, D `e3c0330` og E `29388e6`.
+
+### MUST (uændret på main)
+- Invester har tre "4."-trin. Selskab har "AI-udkast" over et tomt felt. Omkostninger mangler KID-tallet 2,79 %/2,85 %.
+
+### SHOULD (nyt, fra lane-grene)
+- **lane-X fakta.html "Ens i begge"-strip:** "SRI 5 af 7 · Horisont 5 år · Øvrige løbende 1,49 %". "Øvrige løbende" er nu kopieret til endnu en side. Brug KID'ets ord ("Forvaltning og administration") og sæt KID-totalen ved siden af. Ellers ser 1,49 % ud som den samlede pris.
+- **lane-X fakta/omkostninger:** "Ikke et ÅOP" står 8 gange på omkostninger og 4 gange på fakta. Én forklaring pr. side er nok. Gentagelsen virker defensiv over for en privat læser.
+- **lane-X x-door-score** (store serif-tal på 34 px for antal hits) tilføjer endnu en tal-plakat. Kombineret med "80 kr"-plakaten på omkostninger begynder plakatformen at gå igen på tværs af siderne (visuel træthed, lav).
+- **lane-C ideer «To klasser, samme temaer»:** klar og rolig ✅. "intet tema skiller sig mere end 1,6 procentpoint ud" er godt konkret. Indholdsfortegnelsen med 12 former hjælper ✅.
+- **lane-C møntspil** (100 → 150 → 90 kr.) er korrekt regnet og pædagogisk stærk for persona privat ✅.
+- **lane-A rum-tråde:** Musk kun via citat med kilde og "ikke NDI's forventning og ikke en prognose" ✅. vaerdikaeder har nu 9-stops læse-rute + quiz + modenhedstrappe + risikokort + trådediagram. Det er mange former på én side, så tjek ved 375 efter merge, at læse-ruten står øverst.
+
+### Nice
+- lane-X `callCountNote` vokser ("Sjette poleringspas samme dag …"). Det er stadig log-støj i en offentlig datafil.
+
+### Persona-linser
+- **Privat:** lane-C giver nu svar på "hvorfor to klasser?" og "hvorfor koster udsving?" ✅. Omkostninger svarer stadig ikke på "hvad koster det om året?".
+- **Familiekontor:** "Ens i begge"-strippen er nyttig til at sammenligne klasserne, men uden KID-totalen kan den ikke bruges i DD.

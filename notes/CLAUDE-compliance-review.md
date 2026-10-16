@@ -663,3 +663,18 @@ Ikke juridisk rådgivning. main/docs og Pages er samme build som i cyklus 22–2
 
 ### OK ✅
 - KID-links: risici ×11, invester ×8, sammenlign ×4. "Historisk afkast" står på alle 16 sider undtagen ndi-paa-x. Beholdning pr. 1. jun. 2026. Ingen 1m/3m på PMINDI. Intet benchmark-claim.
+
+## 2026-10-16 02:05 CEST · cyklus 26 (main `90e7de8`, intet docs-delta)
+
+Ikke juridisk rådgivning. main/docs og Pages er uændrede siden cyklus 22. Jeg har kun lavet et for-merge-tjek af lane-commits efter 01:57 (grep af `+`-linjer for rådgivnings- og handelsord, benchmark, 1m/3m, AI-mærkning og omkostninger).
+
+### Lane-grene før merge
+- **lane-X (`b58126a`): MUST 9 er stadig åben.** omkostninger: 2,79 = 0, "kan tabe" = 0, "Ikke et ÅOP" ×8. fakta: 2,79 = 0, "Ikke et ÅOP" ×4, og den nye strip viser "Øvrige løbende 1,49 %" som eneste omkostningstal. Risikoen er, at en læser opfatter 1,49 % som den samlede løbende omkostning, når KID'et siger 2,79 %/2,85 %. Det er værre end i cyklus 25, fordi tallet nu også står på fakta. ndi-paa-x: "kan tabe" er stadig 0 (MUST 3). Badgen `x-curated` "Mads følger" er uændret (`x-feed.js:538`) (MUST 2, delvis).
+- **lane-C (`74e42c4`):** ideer har "Historisk afkast er ikke en pålidelig indikator … kan tabe" (×2) ✅. "Fonden har intet fast benchmark, så grafen står alene" ✅. "AI-udkast og mærket sådan" ✅. Møntspillet er "tænkte tal" og ikke fondens ✅. Ingen rådgivningsord.
+- **lane-A (`2e5fe11`):** Musk-udsagnet er gengivet som "Musks udsagn, ikke NDI's forventning og ikke en prognose", med kilde ✅. Alle nye noter har "ikke en anbefaling/rangering" ✅.
+- **lane-B (`28190f5`):** "Eksponering, ikke anbefaling" står ved temalisten ✅. asOf kommer fra `fund.positionsAsOf` ✅.
+- **lane-D / lane-E:** der er ingen compliance-relevante tekstændringer. MUST 11 (embed uden KID/SRI) er uændret på lane-D.
+- Grep over alle seks grene: **0** "køb/sælg", "sikker/garanti", "bedste", "overvægt", "øger eksponering", "1m/3m", "Nasdaq" og "BREAKING" i nye linjer ✅.
+
+### MUST (åbne på main, uændrede: 1–11 som i cyklus 25)
+Prioritet før merge af lane-X: **9** (KID-tal 2,79 %/2,85 % ved siden af hver postsats, også i fakta-strip) og **3** ("kan tabe" på omkostninger + ndi-paa-x).
