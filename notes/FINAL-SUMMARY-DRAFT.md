@@ -85,3 +85,6 @@ See notes/HANDOFF-CODEX.md + notes/X-LANE.md + notes/THEME-FORSLAG.md
 
 
 ## → Full final summary: notes/FINAL-SUMMARY.md (kept current)
+
+## 07:48 graf-v2 + Nasdaq
+- GRAF-V2-GAP.md written. Nasdaq comparison (optional, exact label) 76b0e7d. Kurs toggle, U markers, keyboard tooltip d24c675. Smoke 56/0, precheck green (+4 Nasdaq rules). See FINAL-SUMMARY.md, section graf-v2.
