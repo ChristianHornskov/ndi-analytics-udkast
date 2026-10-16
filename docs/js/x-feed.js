@@ -126,7 +126,23 @@ article.x-card.is-quote .x-foot{margin-top:10px}
 .x-score-n.is-direct:not(.is-zero) b{color:#f5ee9e;font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-weight:500}
 .x-score-n.is-zero b{color:var(--faint);font-weight:500}
 .x-says-h .x-score-n.is-out b,.x-says-h .x-score-n.is-all b{color:var(--faint);font-size:22px;font-family:inherit;font-weight:500}
-.x-asof{color:var(--faint);font-size:12px;line-height:1.35;padding-bottom:2px;max-width:42ch}
+.x-asof{color:var(--faint);font-size:12px;line-height:1.35;padding-bottom:2px;max-width:40ch;display:flex;flex-direction:column;align-items:flex-end;gap:2px;text-align:right}
+.x-who-say{color:var(--muted)}
+.x-snap-mini{color:var(--faint)}
+.x-prov{display:flex;flex-direction:column;align-items:stretch;flex:none;border:1px solid #345860;border-radius:12px;overflow:hidden;background:#0b171d}
+.x-prov-nums{display:flex}
+.x-prov .x-score-n{min-width:68px;padding:7px 12px 6px}
+.x-prov .x-score-n + .x-score-n{border-left:1px solid #345860}
+.x-prov .x-score-n b{font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-size:28px;font-weight:500;letter-spacing:-.6px;line-height:.85}
+.x-prov .x-score-n.is-house:not(.is-zero) b{color:var(--cyan)}
+.x-prov .x-score-n.is-curated:not(.is-zero){background:#f5ee9e12}
+.x-prov .x-score-n.is-curated:not(.is-zero) b{color:#f5ee9e}
+.x-prov .x-score-n.is-house.is-zero b{color:#c5d6db}
+.x-prov-k{display:block;padding:0 8px 5px;font-size:10px;letter-spacing:.5px;text-transform:uppercase;color:var(--faint);text-align:center}
+.x-door-who{display:block;margin-top:2px;font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.x-door-who b{font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-weight:500;font-size:18px;letter-spacing:-.4px;color:#f5ee9e}
+.x-door-who b.is-zero{color:#c5d6db}
+body.x-focused .x-door-who{display:none}
 .x-says-h .x-score-n b{font-size:clamp(26px,3vw,34px)}
 .x-active{margin-top:8px}
 .x-active:empty{display:none}
@@ -210,6 +226,9 @@ body.x-focused .x-label{margin:0 0 8px}
   body.x-focused .x-tools{order:9}
   body.x-focused .x-footwarn{order:10}
   body.x-focused .x-footlinks{order:11}
+  .x-who-say{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  .x-prov .x-score-n{min-width:54px;padding:5px 8px 4px}
+  .x-prov .x-score-n b{font-size:22px}
 }
 @media(prefers-reduced-motion:reduce){
   .x-door{transition:none}
@@ -603,6 +622,79 @@ export function xPlace(posts, leadId) {
   return { i: i + 1, n: ordered.length };
 }
 
+/** House account, account NDI follows, or anyone else. Counts only. */
+export function xWhoSplit(posts) {
+  let house = 0;
+  let curated = 0;
+  let other = 0;
+  for (const p of posts || []) {
+    if (isHouse(p)) house += 1;
+    else if (p.curatedFrom === 'mads_following') curated += 1;
+    else other += 1;
+  }
+  const n = house + curated + other;
+  return { house, curated, other, n };
+}
+
+/**
+ * One or two sentences. Names a company when the query is SoftBank or NVDA.
+ * Does not name third-party accounts.
+ */
+export function xWhoSentence(split, { name = '', scope = 'direct' } = {}) {
+  const { house, curated, other } = split || {};
+  const bits = [];
+  if (name) {
+    if (!house) bits.push(`Ingen NDI-opslag nævner ${name}.`);
+    else if (house === 1) bits.push(`1 NDI-opslag nævner ${name}.`);
+    else bits.push(`${house} NDI-opslag nævner ${name}.`);
+  } else if (!house) {
+    bits.push(scope === 'direct' ? 'Ingen af de direkte er fra en NDI-konto.' : 'Ingen i udsnittet er fra en NDI-konto.');
+  } else if (!curated && !other) {
+    bits.push('Alle i udsnittet er fra NDI-konti.');
+  } else if (house === 1) {
+    bits.push(scope === 'direct' ? '1 direkte er fra en NDI-konto.' : '1 er fra en NDI-konto.');
+  } else {
+    bits.push(`${house} er fra NDI-konti.`);
+  }
+  if (curated && !other) {
+    const verb = scope === 'direct' ? 'direkte er' : 'er';
+    bits.push(curated === 1
+      ? `1 ${verb} fra en konto, som NDI følger.`
+      : `${curated} ${verb} fra konti, som NDI følger.`);
+  } else if (curated && other) {
+    bits.push(`${curated} er fra konti, som NDI følger. ${other} er fra andre konti.`);
+  } else if (other) {
+    bits.push(other === 1 ? '1 er fra en anden konto.' : `${other} er fra andre konti.`);
+  }
+  return bits.join(' ');
+}
+
+/** Compact plate for an active track. The sentence is the accessible name. */
+export function xWhoBarHtml(posts, { q = '', scope = 'direct', snap = '', caption = '' } = {}) {
+  const split = xWhoSplit(posts);
+  if (!split.n) return '';
+  const name = singleCompanyName([q]);
+  const say = xWhoSentence(split, { name, scope });
+  const cell = (n, label, mod) => `<div class="x-score-n ${mod}${n ? '' : ' is-zero'}"><b>${n}</b><span>${esc(label)}</span></div>`;
+  const cells = cell(split.house, 'NDI', 'is-house')
+    + cell(split.curated, 'fulgte', 'is-curated')
+    + (split.other ? cell(split.other, 'andre', 'is-other') : '');
+  const cap = caption ? `<span class="x-prov-k">${esc(caption)}</span>` : '';
+  const snapBit = snap ? `<span class="x-snap-mini">Snapshot ${esc(snap)}</span>` : '';
+  return `<div class="x-prov"><div class="x-prov-nums">${cells}</div>${cap}</div><span class="x-asof"><span class="x-who-say">${esc(say)}</span>${snapBit}</span>`;
+}
+
+/** One line on a door. Hidden once a track is open, so the quote keeps the room. */
+export function xWhoDoorHtml(posts) {
+  const split = xWhoSplit(posts);
+  if (!split.n) return '';
+  const b = (n, label) => `<b class="${n ? '' : 'is-zero'}">${n}</b> ${esc(label)}`;
+  const bits = [b(split.house, 'NDI'), b(split.curated, 'fulgte')];
+  if (split.other) bits.push(b(split.other, 'andre'));
+  const say = xWhoSentence(split, { scope: 'all' });
+  return `<span class="x-door-who">Hvem · ${bits.join(' · ')}<span class="sr-only"> ${esc(say)}</span></span>`;
+}
+
 export function xScoreHtml(items) {
   const cells = (items || []).map((it) => {
     const n = Number(it.n) || 0;
@@ -834,6 +926,44 @@ function feedHref({ tickers = [], themes = [] } = {}) {
 }
 
 /**
+ * Posts from accounts NDI follows that the feed would show and this panel will not.
+ * No account names and no post text. House-only panels stay house-only.
+ */
+function feedContrastSentence(pack, { tickers = [], themes = [] } = {}) {
+  const href = feedHref({ tickers, themes });
+  let q = '';
+  let f = '';
+  try {
+    const u = new URL(href, 'https://ndi.local/');
+    q = u.searchParams.get('q') || '';
+    f = u.searchParams.get('f') || '';
+  } catch {
+    return '';
+  }
+  if (!q && !f) return '';
+  const posts = (pack?.posts || []).filter((p) => (
+    !revealsHoldings(p.text)
+    && !isHouse(p)
+    && postInFilter(p, f || 'all')
+    && postMatchesQuery(p, q)
+  ));
+  const use = q ? posts.filter((p) => feedHitKind(p, { q, f: f || 'all' }) === 'direct') : posts;
+  if (!use.length) return '';
+  const split = xWhoSplit(use);
+  const n = split.curated + split.other;
+  if (!n) return '';
+  let from;
+  if (split.other && split.curated) from = `${n} opslag i feedet fra andre konti`;
+  else if (split.other) from = n === 1 ? '1 opslag i feedet fra en anden konto' : `${n} opslag i feedet fra andre konti`;
+  else from = n === 1 ? '1 opslag i feedet fra en konto, som NDI følger' : `${n} opslag i feedet fra konti, som NDI følger`;
+  const name = singleCompanyName(tickers) || singleCompanyName([q]);
+  if (name) return `${from}, nævner ${name}. De vises ikke her.`;
+  const theme = f && f !== 'all' ? (THEME_DA[f] || f) : '';
+  if (theme) return `${from}, ligger på temaet ${theme}. De vises ikke her.`;
+  return `${from}. De vises ikke her.`;
+}
+
+/**
  * Panel for company and theme pages.
  * No hits: returns '' so pages without a match stay quiet.
  * Pass showEmpty:true to render the empty state.
@@ -847,6 +977,7 @@ export function xSaysPanel(pack, { tickers = [], themes = [], limit = 4, title =
   const shown = view.direct.length + view.theme.length;
   const snap = esc(fmtXDate(pack.snapshotAt) || String(pack.snapshotAt || '').slice(0, 10));
   const more = feedHref({ tickers, themes });
+  const contrast = feedContrastSentence(pack, { tickers, themes });
   const directAll = ranked.filter((h) => h.score >= 2).length;
   const themeAll = ranked.filter((h) => h.score < 2).length;
   const themeLeft = themeAll - view.theme.length;
@@ -862,11 +993,11 @@ export function xSaysPanel(pack, { tickers = [], themes = [], limit = 4, title =
     if (!showEmpty) return '';
     return `<section class="panel x-says" id="hvad-siger-x">
   <div class="x-says-h"><h2 class="panel-h">${esc(title)}</h2>${xScoreHtml([{ n: 0, label: 'direkte', mod: 'is-direct' }, { n: 0, label: 'tema', mod: 'is-theme' }])}</div>
-  <p class="band">${esc(X_LABEL)}. Snapshot ${snap}.</p>
+  <p class="band">${esc(X_LABEL)}. Snapshot ${snap}.${contrast ? ` ${esc(contrast)}` : ''}</p>
   <div class="x-empty">
     <p class="x-zero" aria-hidden="true">0</p>
     <p class="k">Ingen opslag i udsnittet</p>
-    <p>Der er ikke et udvalgt opslag, der matcher dette selskab eller tema.</p>
+    <p>${contrast ? 'Panelet er kun NDI-konti.' : 'Der er ikke et udvalgt opslag, der matcher dette selskab eller tema.'}</p>
     <p><a href="ndi-paa-x.html">Se hele feedet</a></p>
   </div>
 </section>`;
@@ -956,7 +1087,7 @@ export function xSaysPanel(pack, { tickers = [], themes = [], limit = 4, title =
   return `<section class="panel x-says" id="hvad-siger-x">
   <div class="x-says-h"><h2 class="panel-h">${esc(title)}</h2>${score}</div>
   <p class="sr-only">${esc(nLabel)}</p>
-  <p class="band">Kun NDI-konti i dette panel. I feedet: ${esc(X_LABEL)}. Snapshot ${snap}.</p>
+  <p class="band">Kun NDI-konti i dette panel. I feedet: ${esc(X_LABEL)}. Snapshot ${snap}.${contrast ? ` ${esc(contrast)}` : ''}</p>
   ${stage}
   ${belowLane}
   ${miss}
