@@ -579,20 +579,13 @@ Ordlisten (lane-C) dækker nu ordene. Teksten i UI'et ligger hos andre lanes, s�
 - Til andre lanes og reviewere: citér ikke længere «229 / 85». risici.html `#sortering` tæller live og er den sikre kilde.
 - Andre ændringer fra lane-C efter 06:31: ndi-perspektiv bruger displayName(), har 24 px selskabslinks og egen indledning, og datafeltets ord vises på dansk. Ordlisten har danske forklaringer i 13 engelske opslagsord. Livscyklus-skitsen bruger Udforsks danske navne.
 
-## 08:00 CEST morgentjek
-Live, Playwright 375x812 + 1280x800. Screens: `ux-screens/0800-*.png`. Ingen kode rettet.
+## 08:00 CEST lane-C · freeze-checkpoint (Claude)
+**Shippet mellem 06:31 og 08:00 (alt på lane-C, pushet):**
+- **Data-nøjagtighed:** temaantallene var forældede (229/85 → 227/87, Quantum 4 → 5, Software 50 → 48 osv.) og er rettet. ideer (6 billeder), lær/sektorer og ordlistens temaopslag tæller nu selv fra portfolio.json, med de statiske tal som reserve. Uden og med JS er resultatet identisk, og der er testet med ændret data. Tesla: 5 led i 3 kæder. Modenhed er beskrevet ens overalt som maskinelt forslag (ASML-linsen, livscyklus-teksten).
+- **Sprog:** kildeangivelser «NDI ugebrev» → «NDI-indlæg» (som Leos ddce7ce). Mads introduceres. Ordlisten har danske forklaringer i 13 engelske opslagsord. ndi-perspektiv viser datafeltets «tag/multi-tag/rating/Connect/—» som «tema/flere temaer/karakter/Optik & netværk/komma». Udviklerlinjen på risici #sortering er fjernet.
+- **Ordliste 159** (+8): forretningsmodel, svært at kopiere, nøgleafhængighed, beriget uran/HALEU, brændselscelle, faststofbatteri, MW/GW og LNG. **FAQ 28** (+«Hvad betyder forslag?»).
+- **ndi-perspektiv:** displayName (SiTime, IQE …), egen indledning, Connect lagt sammen med Optik & netværk (11 grupper), feltnavne linker til ordlisten, tap-mål 24 px (c51b-regressionen er rettet), ental «1 selskab passer».
+- **Tjek:** 23 lane-C-sider × 375/1280 uden overflow og uden konsolfejl. Ingen brudte interne links. jargon-sweep er ren (kun ordlistens egen gloss). Ingen «ugebrev», «rating» eller tankestreger på lane-C-sider.
 
-### MUST
-1. **(mobil)** Udforsk: første skærm viser stadig ingen resultatrække. Filtre er foldet («Filtre … · 0 aktive»), men intro, linse-boks, fondsvalg, søgning, forklaring og sortering fylder hele de 812 px. Første række ligger under folden (`0800-mobil-udforsk.png`). Flyt «Søjlerne …»/NDI-linse-teksten under listen eller fold introen sammen. **Ikke løst.**
-2. **(mobil)** Fonden `cmp=nasdaq`: grafen er kun ca. 305x125 px. Akse-tal og datoer er ca. 5 px og kan ikke læses. Nasdaq-linjen (stiplet guld 1,8 px, opacity 0,9) er svær at skelne fra gitteret ved den størrelse. Der er ingen end-labels på linjerne, og forklaringen bryder om, så Nasdaq-stregen står på linjen over sin tekst (`0800-mobil-fonden-nasdaq-graf.png`). Grafen skal være højere på mobil (≥ 220 px), skriften i SVG skal være mindst 11 px, og linjerne skal have direkte labels ved enden («Fonden +104,8 %», «Nasdaq-100 +94,5 %»).
-
-### SHOULD
-1. «← Entré» fra `?view=fonden&cmp=nasdaq` fører til `/?cmp=nasdaq`, så cmp-parameteren følger med ud på Entré. Ryd view-specifikke parametre.
-2. Når Nasdaq slås fra, bruges replaceState. Det er OK, men så bør det heller ikke tælle som en tilstand, Tilbage skal huske. Det virker i dag: Tilbage gendanner `cmp=nasdaq` med tjekboksen slået til, og `periode=ytd` bevares.
-3. «Dyb →» / «YTD dyb side →» er uændret (06:00 SHOULD 1).
-
-### Status
-- Livscyklus-labels: **løst**. Før omsætning / Før overskud / Høj vækst / Vækst med overskud / Moden. Ingen GARP eller High growth fundet.
-- Tom X-markør 13. aug.: **løst**. Ingen 13. aug.-markør og ingen $NVDA/$HIMS i DOM. Der er 4 X-markører, og alle har tekst.
-- Mobil Udforsk-fold: **ikke løst** (MUST 1).
-- Nasdaq-linje: **delvist løst**. Forklaring, kilde, dato, «kun sammenligning, ikke benchmark», advarsel (top ≈ 745 px i første viewport, gentaget ved graf) og URL-state/Tilbage virker. Grafen kan ikke læses ved 375 px (MUST 2). Ingen vandret overflow (scrollWidth 375).
+**Efter 08:00 (kun rettelser):** reviewer-MUSTs i lane-C-filer, hvis de kommer. Ellers kun tjek.
+**Til Leo (uden for lane-C):** selskab/tema «Screener:» → «Udforsk:». FINAL-SUMMARY: ordliste 159, 87 forslag + 31 Andet. NuScale-tag i unique-metrics. risk-stats classification.themeForslag=116 er forældet.
