@@ -46,6 +46,7 @@
  .lens-grp p.lens-gintro{color:var(--muted);font-size:14px;line-height:1.5;margin:0 0 10px}
  .lens-co{border-top:1px solid var(--line);padding:12px 0}
  .lens-co h3{font-size:16px;margin:0 0 4px}
+ .lens-co h3 a{display:inline-block;min-height:24px;padding:2px 0;line-height:20px}
  .lens-co .lens-line{font-size:15px;line-height:1.5;margin:2px 0}
  .lens-co .lens-line span.k{color:var(--muted)}
  .lens-co details summary{cursor:pointer;color:var(--brand);font-size:14px;min-height:32px;padding:6px 0}
@@ -100,6 +101,8 @@
  }
  const order = [...groups.entries()].sort((a, b) => (a[0].startsWith('Andet') - b[0].startsWith('Andet')) || b[1].length - a[1].length);
  const slug = (g) => 'lg-' + g.toLowerCase().replace(/[^a-zæøå0-9]+/g, '-').replace(/-+$/, '');
+ // Datafeltets ord → sidens ord (samme som Udforsk efter 06:31). Data ændres ikke.
+ const da = (t) => String(t ?? '').replace(/^NDI-tags$/, 'NDI-temaer').replace(/\s*\(multi-tag\)/gi, '').replace(/Multi-tag: /g, 'To temaer: ').replace(/Multi-tag\./g, 'Flere temaer.').replace(/ikke rating/g, 'ikke en karakter');
  const val = (m) => m.href ? `<a href="${esc(m.href)}">${esc(m.value)}</a>` : esc(m.value);
  const card = ([isin, v]) => {
   const ms = v.metrics || [];
@@ -108,7 +111,7 @@
   const forslag = tag && /forslag/i.test(tag.value);
   const extra = ms.filter(m => m !== tag && m !== own && m !== place && m !== watch && !(m.label === 'Livscyklus' && /ikke klassificeret/i.test(m.value)));
   const detail = [tag, own, place, watch, ...extra].filter(m => m && (m.hint || m === watch || extra.includes(m))).map(m =>
-   `<div class="lens-m"><strong>${esc(m.label)}${/\?$/.test(m.label) ? '' : ':'}</strong> ${m === own || m === place ? '' : `${val(m)}${m.ai ? ` ${AI_BADGE}` : ''}`}${m.hint ? `<span class="lens-hint">${esc(m.hint)}</span>` : ''}</div>`).join('');
+   `<div class="lens-m"><strong>${esc(da(m.label))}${/\?$/.test(m.label) ? '' : ':'}</strong> ${m === own || m === place ? '' : `${val(m)}${m.ai ? ` ${AI_BADGE}` : ''}`}${m.hint ? `<span class="lens-hint">${esc(da(m.hint))}</span>` : ''}</div>`).join('');
   const hay = [v.name, displayName(v), ...ms.map(m => m.value)].join(' ').toLowerCase();
   return `<article class="lens-co" data-q="${esc(hay)}">
    <h3><a href="selskab.html?isin=${encodeURIComponent(isin)}">${esc(displayName(v))}</a>${tag ? ` <span class="lens-tag-f" title="${forslag ? 'Temaet er et forslag og afventer NDI-gennemgang' : 'NDI-tema'}">${esc(tag.value)}</span>` : ''}</h3>
@@ -122,7 +125,7 @@
  document.getElementById('main').innerHTML = `
  <p class="eyebrow">NDI-PERSPEKTIV · UDKAST</p>
  <h1>NDI-linsen på udvalgte selskaber</h1>
- <p class="lede">${esc(pack.note || 'Kvalitativ linse, udkast. Ingen kurser, afkast eller nøgletal.')}</p>
+ <p class="lede">NDI-linsen er kvalitativ: tema, plads i værdikæden, hvad man ejer som aktionær, og hvad man kan holde øje med. Ingen kurser, afkast, nøgletal eller prognoser. Felter mærket AI-udkast er sammenfattet maskinelt og afventer NDI's gennemgang. Temaerne i Quantum er alle forslag. Livscyklus findes kun som et maskinelt forslag og står derfor én gang i forklaringen nedenfor, ikke ved hvert selskab.</p>
  <p class="band">Eksponering og pædagogik, ikke anbefaling. Vi vælger udviklingen, ikke vinderen: linsen forklarer, hvad et selskab giver andel i, ikke om det bliver en god investering. Åbn et selskab for <a href="vaerdikaede.html">værdikæden</a> og <a href="temaer.html">temaerne</a>, eller læs <a href="laer/saadan-taenker-vi.html#tv-hv">Hvorfor ejer vi den?</a></p>
  <section class="panel lens-legend">
  <h2 style="font-size:16px;margin-bottom:6px">Hvad linsen spørger om</h2>
