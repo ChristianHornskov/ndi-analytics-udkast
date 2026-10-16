@@ -510,7 +510,7 @@ Hele lane-C-fladen ved 375 px: ideer, kort, om-data, invester, risici, ndi-persp
 - **(desktop + mobil)** `om-data.html`: gruppetallene i ordlisten var forældede (35 · 41 · 35 mod reelt 36 · 42 · 38). Tallet tælles nu på siden, så nye begreber ikke giver skæve tal igen.
 - HANDOFF-CODEX: lær-døre 18 → 19, NDI-perspektiv-grupper rettet til det, siden viser nu (333 selskaber, Andet 27).
 
-### Status på cyklus 38-fund i andre lanes (tjekket i kode 06:05)
+### Status på cyklus 38-fund i andre lanes (tjekket i kode 06:02)
 - X-tematræf: `x-feed.js` har nu et filter, der kun viser husets konti (precheck bekræfter) ✅.
 - «Manuel klassifikation» står ikke længere i `selskab.html` ✅.
 

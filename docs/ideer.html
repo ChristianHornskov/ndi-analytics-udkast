@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
   <title>Idéer · NDI Analytics</title>
- <meta name="description" content="Atten billeder om NDI Analytics: flodsystemet, flere temaer pr. selskab, hvor mange selskaber der er halvdelen af fonden, og hvorfor vi ejer et selskab. Ikke rådgivning.">
+ <meta name="description" content="Nitten billeder om NDI Analytics: flodsystemet, flere temaer pr. selskab, hvor mange selskaber der er halvdelen af fonden, og hvorfor vi ejer et selskab. Ikke rådgivning.">
   <link rel="stylesheet" href="css/ndi.css">
   <!-- og:start -->
  <meta property="og:type" content="website">
  <meta property="og:site_name" content="NDI Analytics (udkast)">
  <meta property="og:locale" content="da_DK">
  <meta property="og:title" content="Idéer · NDI Analytics">
- <meta property="og:description" content="Atten billeder om NDI Analytics: flodsystemet, flere temaer pr. selskab, hvor mange selskaber der er halvdelen af fonden, og hvorfor vi ejer et selskab. Ikke rådgivning.">
+ <meta property="og:description" content="Nitten billeder om NDI Analytics: flodsystemet, flere temaer pr. selskab, hvor mange selskaber der er halvdelen af fonden, og hvorfor vi ejer et selskab. Ikke rådgivning.">
  <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/ideer.html">
  <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
  <meta property="og:image:width" content="1200">
@@ -329,6 +329,16 @@
     .stp-k ul{margin:0;padding-left:18px}
     .stp-k li{margin:2px 0}
     .stp figcaption{grid-column:1/-1;font-size:12px;color:var(--faint);line-height:1.5}
+    /* Form 19: andel af omsætning mod andel af driftsresultat */
+    .cs{margin:0;display:grid;gap:14px}
+    .cs-row{display:grid;grid-template-columns:120px 1fr;gap:10px;align-items:center;font-size:13px}
+    @media(max-width:520px){.cs-row{grid-template-columns:1fr;gap:4px}}
+    .cs-bar{display:flex;height:34px;border-radius:8px;overflow:hidden;border:1px solid var(--line)}
+    .cs-bar span{display:flex;align-items:center;padding:0 8px;font-size:12px;font-variant-numeric:tabular-nums;white-space:nowrap}
+    .cs-bar .aws{background:var(--cyan);color:#0b171d;font-weight:700}
+    .cs-bar .rest{background:#16323b;color:var(--muted);flex:1}
+    .cs-key{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--muted)}
+    .cs-key i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
     /* Mål for tryk (WCAG 2.5.8): temalinks i tabeller og rækker mindst 24 px høje */
     .pr-rows li>a,.kl-rows li>a,.stk-rows li>a,th[scope=row]>a{display:inline-block;min-height:24px;line-height:24px}
   </style>
@@ -380,7 +390,7 @@
 
     <nav class="idea-toc" aria-label="Billeder på siden">
       <p class="lbl">16 billeder på siden</p>
-      <ol><li><a href="#h-flod">Flodsystemet på ét billede</a></li><li><a href="#h-vs">Én kasse eller flere temaer</a></li><li><a href="#h-mx">Samme 345 selskaber, to sorteringer</a></li><li><a href="#h-wk">Vægt er ikke kurs</a></li><li><a href="#h-tf">Fra «Andet» til tema</a></li><li><a href="#h-pr">345 aktier, én prik hver</a></li><li><a href="#h-kv">Hvor mange selskaber er halvdelen?</a></li><li><a href="#h-lc">Hvor på bakken ligger vægten?</a></li><li><a href="#h-uw">Fald fra top som episoder</a></li><li><a href="#h-ur">Tre ure på samme side</a></li><li><a href="#h-lag">Hvad står der i tallet?</a></li><li><a href="#h-kl">To klasser, samme temaer</a></li><li><a href="#h-stk">Lag på lag</a></li><li><a href="#h-dr">Tre drivkræfter, ét overlap</a></li><li><a href="#h-ln">Hvorfor ejer vi den?</a></li><li><a href="#h-kd">Hvem står bag tallet?</a></li><li><a href="#h-hus">Bygget som et hus</a></li></ol>
+      <ol><li><a href="#h-flod">Flodsystemet på ét billede</a></li><li><a href="#h-vs">Én kasse eller flere temaer</a></li><li><a href="#h-mx">Samme 345 selskaber, to sorteringer</a></li><li><a href="#h-wk">Vægt er ikke kurs</a></li><li><a href="#h-tf">Fra «Andet» til tema</a></li><li><a href="#h-pr">345 aktier, én prik hver</a></li><li><a href="#h-kv">Hvor mange selskaber er halvdelen?</a></li><li><a href="#h-lc">Hvor på bakken ligger vægten?</a></li><li><a href="#h-uw">Fald fra top som episoder</a></li><li><a href="#h-ur">Tre ure på samme side</a></li><li><a href="#h-lag">Hvad står der i tallet?</a></li><li><a href="#h-kl">To klasser, samme temaer</a></li><li><a href="#h-stk">Lag på lag</a></li><li><a href="#h-dr">Tre drivkræfter, ét overlap</a></li><li><a href="#h-ln">Hvorfor ejer vi den?</a></li><li><a href="#h-kd">Hvem står bag tallet?</a></li><li><a href="#h-cs">Hvor tjener teknologien pengene?</a></li><li><a href="#h-hus">Bygget som et hus</a></li></ol>
     </nav>
 
     <section class="idea-sec" aria-labelledby="h-flod">
@@ -858,6 +868,17 @@
           <ul><li>Flere tekster på selskabssiderne, bl.a. dele af <a href="om-data.html#g-ndi-linse">NDI-linsen</a></li><li>Afkast, omkostninger og risikoindikator kommer ikke herfra, men fra de to første stempler</li></ul>
         </div>
         <figcaption>Fire slags stempler, fra det mest faste (offentliggjort) til det mest foreløbige (udkast). Rammen skifter fra hel til stiplet. Skitse, ikke færdig funktion. Se <a href="om-data.html#g-ai-udkast">AI-udkast</a> og <a href="laer/forsinket-beholdning.html">Hvorfor beholdningen er forsinket</a>.</figcaption>
+      </figure>
+    </details>
+
+    <details class="idea-sec fold" aria-labelledby="h-cs">
+      <summary><h2 id="h-cs">Hvor tjener teknologien pengene?</h2><span class="more" aria-hidden="true"></span></summary>
+      <p class="sub">Et selskab kan være kendt for én ting og tjene pengene på en anden. Amazon er et godt eksempel: de fleste kender netbutikken, men cloud-delen AWS, der lejer regnekraft ud til andre, står for en lille del af salget og over halvdelen af driftsresultatet. Derfor kigger vi efter, hvilket led i <a href="om-data.html#g-vaerdikaede">værdikæden</a> pengene faktisk lander i, og ikke kun på, hvad selskabet hedder.</p>
+      <figure class="cs" role="img" aria-label="Amazon 2024: AWS udgør ca. 17 procent af omsætningen og ca. 58 procent af driftsresultatet.">
+        <div class="cs-row"><strong>Omsætning</strong><div class="cs-bar" aria-hidden="true"><span class="aws" style="width:17%">17 %</span><span class="rest">Resten af Amazon 83 %</span></div></div>
+        <div class="cs-row"><strong>Driftsresultat</strong><div class="cs-bar" aria-hidden="true"><span class="aws" style="width:58%">AWS 58 %</span><span class="rest">42 %</span></div></div>
+        <div class="cs-key" aria-hidden="true"><span><i style="background:var(--cyan)"></i>AWS (cloud)</span><span><i style="background:#16323b;border:1px solid var(--line)"></i>Netbutik, annoncer, abonnementer m.m.</span></div>
+        <figcaption>Amazon, kalenderåret 2024: omsætning ca. 638 mia. dollar, heraf AWS ca. 108 mia. Driftsresultat ca. 69 mia. dollar, heraf AWS ca. 40 mia. Offentliggjort af Amazon i årsrapporten (10-K). Andelene er regnet ud af NDI Analytics. Amazon er ikke i fondens beholdning pr. 1. juni 2026. Eksemplet viser en måde at læse et regnskab på og er ikke en vurdering af aktien. Se <a href="om-data.html#g-hyperscaler">hyperscaler</a> og <a href="om-data.html#g-cloud">cloud</a>.</figcaption>
       </figure>
     </details>
 
