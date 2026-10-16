@@ -1257,20 +1257,20 @@
   "US85529M1045": {
    "name": "Starfighters Space",
    "theme": "space",
-   "summary": "Flyver en flåde af supersoniske F-104-fly og udvikler et program til at sende nyttelast fra luften. Orbital opsendelse er under udvikling i denne beskrivelse, ikke en etableret rutetjeneste.",
-   "watch": "Om testflyvninger fører til en opsendelse, og om kunderne er der.",
-   "source": "https://ir.starfightersspace.com/",
-   "products": "Flyvning med supersoniske fly og et luftopsendelsesprogram.",
-   "customers": "Kunder til testflyvning og, hvis programmet lykkes, til opsendelse.",
-   "role": "Tidligt opsendelsesled. Ikke en satellitoperatør.",
+   "summary": "Flyver syv F-104 og udvikler luftopsendelse. Selskabet skriver, at flyene kan bære nyttelast til 45.000 fod, og at en opsendelsestilladelse fra FAA er undervejs. Det er ikke en orbital rute.",
+   "watch": "Om tilladelsen bliver givet, og om den planlagte flyvning i december bliver gennemført. Teksten beskriver ikke en orbital opsendelse.",
+   "source": "https://www.starfightersspace.com/",
+   "products": "Flyvning med syv F-104 og programmet STARLAUNCH. Tilladelsen er undervejs.",
+   "customers": "Forsiden nævner Lockheed Martin, GE, Innoveering, Space Florida og Air Force Research Laboratory. Teksten siger ikke, at de er kunder på en orbital opsendelse.",
+   "role": "Syv F-104. Opsendelsestilladelse undervejs. Ikke en orbital rute.",
    "narrative": [
-    "Starfighters Space skriver, at selskabet flyver supersoniske F-104-fly fra Kennedy Space Center. Flyene kan bruges som første trin til luftopsendelse.",
-    "Selskabet skrev 13. oktober 2026, at STARLAUNCH 1 er et suborbitalt udviklingsfartøj. Den planlagte flyvning i december er med raketten under vingen. Det er ikke en orbital rute, og det er ikke en gennemført opsendelse."
+    "Starfighters skriver, at flåden er syv F-104, og at flyene kan bære nyttelast til 45.000 fod som led i luftopsendelse. Selskabet skriver, at det flyver fra Kennedy Space Center. Forsiden skriver, at en opsendelsestilladelse fra FAA er undervejs. Det er ikke en tilladelse, der er givet, og ikke en orbital rute. Fod er selskabets eget mål.",
+    "Selskabet skrev 13. oktober 2026, at STARLAUNCH 1 er et suborbitalt udviklingsfartøj, og at en planlagt flyvning i december er med raketten under vingen mellem Kennedy Space Center og Cecil Spaceport i Jacksonville. Meddelelsen ligger efter beholdningen pr. 1. juni 2026. Flyvningen er ikke gennemført. Om-teksten skriver også, at flåden flyver fra Midland i Texas. Det er ikke en opsendelse af satellitter."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets investorkside",
-     "url": "https://ir.starfightersspace.com/"
+     "label": "Selskabets side",
+     "url": "https://www.starfightersspace.com/"
     },
     {
      "label": "Meddelelse 13. oktober 2026",

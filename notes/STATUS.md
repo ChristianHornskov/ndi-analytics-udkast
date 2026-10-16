@@ -1049,3 +1049,13 @@ Eos Ingenuity Park i Pennsylvania. Fem råvarer er nævnt. Siden daterer ikke pr
 Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px og ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Turtle Creek står. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `5b53fb6` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 02:53 CEST. Starfighters skriver, at flåden er syv F-104, og at flyene kan bære nyttelast til 45.000 fod. Ikke færdig.**
+
+Opsendelsestilladelsen fra FAA er undervejs. STARLAUNCH 1 er ikke en orbital rute. Decemberflyvningen i meddelelsen af 13. oktober 2026 er ikke gennemført. Ingen `reviewedAt`. Blurben under opsendelse og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px og ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. 45.000 fod står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `319119f` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
