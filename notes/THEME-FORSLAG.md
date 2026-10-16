@@ -226,3 +226,10 @@ Kun `theme`/`themeFrom`/`themeNote` (Albemarle) og nye felter `themeDoubt` (begr
 Bevidst IKKE markeret: Comfort Systems, Sterling, Jacobs (AI-compute led 2 har temaerne physical+compute, så Fysisk tech er konsistent med kæden); Coinbase/Nu (fintech-platforme); Caterpillar/Terex (maskiner); Lightwave Logic (elektro-optiske polymerer = led 7).
 
 **Linse-konsistens:** NDI-tag-feltet i unique-metrics.json siger nu "<Tema> (forslag)" + "Temaforslag: X (før: Y). Afventer NDI-gennemgang." for alle 41 forslag, der før stod som "Primært tema: X" (eller "Connect (forslag)"); usikre forslag får "Usikkert forslag: … Alternativ: …" i hint. Eksisterende ekstra-noter (multi-tag, foundry) er bevaret.
+
+## Runde 5: ISIN-opslag på navnløse positioner (lane-B c18, 2026-10-16)
+Kun `theme`/`themeStatus`/`themeFrom`/`themeNote` i portfolio.json, begge klasser. themes.json (PMINDI): Ghl flyttet fra Software til Platforme (Software 50 → 49, ca. 12,14 → 11,63 %; Platforme 40 → 41, ca. 16,01 → 16,52 %). Øvrig rækkefølge uændret.
+
+**Rettet:** "Ghl" (KYG4124C1096, ticker GRAB) = **Grab Holdings** (Sydøstasiatisk superapp: kørsel, levering, betalinger/digitale banker). Software → Platforme (forslag, themeFrom software), samme type som Sea. Ny NDI-linse (AI-compute led 12: forbrugerapplikationer), hvor NDI-tag-hint forklarer at "Ghl" i beholdningslisten er Grab. Navnet i portfolio.json er IKKE ændret (kildedata) - det bør rettes i datakilden.
+
+**Stadig uden linse (bevidst):** Sharonai Holdings (SHAZ), Swarmer (SWMR), Keel Infrastructure (KEEL) - usikker viden om forretningen; CSLM (SPAC); vægt-0-positioner. Til opfølgning: value-chains.json (ikke lane-B's fil) viser stadig "Ghl" uden forslag-mærke som eksempel i AI-compute led 10-12.

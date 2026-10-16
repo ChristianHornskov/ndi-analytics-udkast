@@ -11288,6 +11288,40 @@
           "href": "laer/livscyklus.html"
         }
       ]
+    },
+    "KYG4124C1096": {
+      "name": "Grab Holdings",
+      "metrics": [
+        {
+          "label": "NDI-tag",
+          "value": "Platforme (forslag)",
+          "hint": "Temaforslag: Platforme (før: Software). Står som \"Ghl\" i beholdningslisten - ISIN KYG4124C1096 og ticker GRAB er Grab Holdings. Afventer NDI-gennemgang. Eksponering, ikke rating."
+        },
+        {
+          "label": "Hvad ejer man?",
+          "value": "Superapp i Sydøstasien",
+          "hint": "Kørsel (ride-hailing), levering af mad og dagligvarer samt betalinger, udlån og digitale banker i én app på tværs af flere lande i Sydøstasien.",
+          "ai": true
+        },
+        {
+          "label": "Plads i værdikæden",
+          "value": "AI-compute · led 12: forbrugerapps",
+          "hint": "Der hvor digitale tjenester møder forbrugeren, ligesom Sea. Grab bygger ikke selv compute-infrastruktur. Placeringen er pædagogisk.",
+          "href": "vaerdikaeder.html?isin=KYG4124C1096#kap-kaeder"
+        },
+        {
+          "label": "Hold øje med",
+          "value": "Konkurrence og kredit",
+          "hint": "Konkurrencen i kørsel og levering, regulering af chauffører og kreditrisikoen i finansdelen. Forhold, ikke en prognose.",
+          "ai": true
+        },
+        {
+          "label": "Livscyklus",
+          "value": "Ikke klassificeret",
+          "hint": "NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.",
+          "href": "laer/livscyklus.html"
+        }
+      ]
     }
   }
 }

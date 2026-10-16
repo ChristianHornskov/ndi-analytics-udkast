@@ -4517,7 +4517,7 @@
           "name": "Ghl",
           "symbol": "GRAB",
           "weight": 0.51,
-          "theme": "software",
+          "theme": "platforms",
           "logoDomain": null,
           "sector": "Technology",
           "industry": "Software—Application",
@@ -4526,7 +4526,10 @@
           "products": null,
           "watch": null,
           "customers": null,
-          "maturity": "ikke-klassificeret"
+          "maturity": "ikke-klassificeret",
+          "themeStatus": "forslag",
+          "themeFrom": "software",
+          "themeNote": "forslag, afventer gennemgang — Ghl = Grab Holdings (ISIN KYG4124C1096, ticker GRAB): kørsel, levering og betalinger i Sydøstasien, samme type platform som Sea (runde 5: ISIN-opslag)"
         },
         {
           "isin": "US74347M1080",
@@ -11861,7 +11864,7 @@
           "name": "Ghl",
           "symbol": "GRAB",
           "weight": 0.34,
-          "theme": "software",
+          "theme": "platforms",
           "logoDomain": null,
           "sector": "Technology",
           "industry": "Software—Application",
@@ -11870,7 +11873,10 @@
           "products": null,
           "watch": null,
           "customers": null,
-          "maturity": "ikke-klassificeret"
+          "maturity": "ikke-klassificeret",
+          "themeStatus": "forslag",
+          "themeFrom": "software",
+          "themeNote": "forslag, afventer gennemgang — Ghl = Grab Holdings (ISIN KYG4124C1096, ticker GRAB): kørsel, levering og betalinger i Sydøstasien, samme type platform som Sea (runde 5: ISIN-opslag)"
         },
         {
           "isin": "US2193501051",

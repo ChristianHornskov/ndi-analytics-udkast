@@ -662,14 +662,43 @@ function positionsTable(list, fund) {
   const th = (key, label) =>
     `<th><button type="button" data-sort="${key}" aria-sort="${state.sort===key?(state.dir==='asc'?'ascending':'descending'):'none'}">${label}${state.sort===key?(state.dir==='asc'?' ↑':' ↓'):''}</button></th>`;
   return `<p class="spark-legend"><svg class="spark-key" width="16" height="12" aria-hidden="true"><g fill="var(--cyan)"><rect x="0" y="6" width="4" height="6" rx="1"/><rect x="6" y="3" width="4" height="9" rx="1"/><rect x="12" y="0" width="4" height="12" rx="1"/></g></svg><span>Søjlerne ved navnet viser <strong>vægt i fonden pr. kvartal</strong>. Ikke aktiekurs.</span></p>` +
-  hscroll(`<div class="table-wrap"><table class="data"><thead><tr>
+  mobileSortHtml() +
+  hscroll(`<div class="table-wrap"><table class="data screener-table"><thead><tr>
     ${th('name','Navn')}${th('weight','Vægt %')}${th('theme','Tema')}
   </tr></thead><tbody>${list.map((p, i) => `${themeGroupRow(list, i)}<tr>
-    <td><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}">${p.name}</a>${hasLens(p) ? ` <a class="badge" href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}#ndi-linse" title="Kvalitativ NDI-linse: rolle, plads i værdikæden og forhold at holde øje med (udkast)" aria-label="NDI-linse for ${p.name}">NDI-linse</a>` : ''} ${weightSpark(p.isin, fund.id)}<br><small style="color:var(--muted)">${p.isin}</small>${hitNote(p)}</td>
+    <td><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}">${p.name}</a>${hasLens(p) ? ` <a class="badge" href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}#ndi-linse" title="Kvalitativ NDI-linse: rolle, plads i værdikæden og forhold at holde øje med (udkast)" aria-label="NDI-linse for ${p.name}">NDI-linse</a>` : ''} ${weightSpark(p.isin, fund.id)}<br><small style="color:var(--muted)">${p.isin}</small>${hitNote(p)}${mobileThemeLine(p, fund)}</td>
     <td>${(p.weight ?? 0).toFixed(2).replace('.', ',')}</td>
     <td>${tagsFor(p, DATA.multiTags).map((t) => `<a class="tag" href="tema.html?slug=${encodeURIComponent(t)}&fund=${fund.id}">${daTheme(t)}</a>`).join(' ')}${forslagCell(p)}</td>
   </tr>`).join('')}</tbody></table></div>`, 'Rul til siden for flere kolonner.') +
   `<p style="font-size:11px;color:var(--muted);margin-top:8px">Kun vægt og tema. De små søjler ved navnet er selskabets <strong style="color:var(--text)">vægt i fonden</strong> pr. kvartalssnapshot frem til ${fmtDate(MONTHS?.cutoff || fund.positionsAsOf)}. Ikke aktiekurs. Ingen kursafkast pr. aktie i v1. Beholdning er forsinket.</p>`;
+}
+
+// Mobil (≤560 px): tema-kolonnen skjules, og temaet står som kompakt linje under navnet, så hele rækken
+// (navn, vægt, tema, forslag/usikkert) kan læses uden vandret rulning. Sorteringen flyttes til en knaprække,
+// fordi kolonneknappen "Tema" forsvinder med kolonnen. Kun navn/vægt/tema (whitelist SORTS).
+const MOBILE_CSS = `<style>
+  .pt-m-theme,.pt-m-sort{display:none}
+  @media (max-width:560px){
+    table.screener-table{min-width:0}
+    table.screener-table th:nth-child(3),table.screener-table td:nth-child(3){display:none}
+    table.screener-table th:first-child,table.screener-table td:first-child{max-width:none;min-width:0;box-shadow:none}
+    .pt-m-theme{display:block;margin-top:4px;white-space:normal;line-height:1.6}
+    .pt-m-theme .tag{margin:0 4px 2px 0}
+    .pt-m-sort{display:flex}
+  }
+</style>`;
+function mobileSortHtml() {
+  const btn = (k, label) => {
+    const on = state.sort === k;
+    return `<button type="button" class="control ${on ? 'active' : ''}" data-sort="${k}" aria-pressed="${on}">${label}${on ? (state.dir === 'asc' ? ' ↑' : ' ↓') : ''}</button>`;
+  };
+  return `${MOBILE_CSS}<div class="filters pt-m-sort" role="group" aria-label="Sortér listen">
+      <small style="color:var(--muted);align-self:center">Sortér:</small>${btn('name', 'Navn')}${btn('weight', 'Vægt')}${btn('theme', 'Tema')}
+    </div>`;
+}
+function mobileThemeLine(p, fund) {
+  const tags = tagsFor(p, DATA.multiTags).map((t) => `<a class="tag" href="tema.html?slug=${encodeURIComponent(t)}&fund=${fund.id}">${daTheme(t)}</a>`).join(' ');
+  return `<span class="pt-m-theme">${tags}${forslagCell(p)}</span>`;
 }
 
 // Forslag-mærke + synlig "før"-linje (tidligere kun i tooltip), så skiftet kan læses uden hover.
@@ -1001,7 +1030,8 @@ function onClick(e) {
     else { state.sort = k; state.dir = k === 'weight' ? 'desc' : 'asc'; }
     writeUrl(); paint();
     // Tabellen gentegnes - giv fokus tilbage til samme kolonneknap (tastatur/skærmlæser)
-    $(`[data-sort="${k}"]`)?.focus();
+    // To knapper pr. nøgle (kolonne + mobil-knaprække) - fokusér den, der er synlig
+    ($all(`[data-sort="${k}"]`).find((b) => b.offsetParent) || $(`[data-sort="${k}"]`))?.focus();
     return;
   }
   if (t.matches('[data-status]')) {

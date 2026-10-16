@@ -12,8 +12,8 @@
         "Platforme"
       ],
       "themeKey": "platforms",
-      "count": 40,
-      "weightSum": 16.01,
+      "count": 41,
+      "weightSum": 16.52,
       "companies": [
         {
           "isin": "US81141R1005",
@@ -74,6 +74,12 @@
           "name": "Circle Internet Group Inc",
           "weight": 0.59,
           "symbol": "CRCL"
+        },
+        {
+          "isin": "KYG4124C1096",
+          "name": "Ghl",
+          "weight": 0.51,
+          "symbol": "GRAB"
         },
         {
           "isin": "US3493811034",
@@ -608,8 +614,8 @@
         "Platforme"
       ],
       "themeKey": "software",
-      "count": 50,
-      "weightSum": 12.14,
+      "count": 49,
+      "weightSum": 11.63,
       "companies": [
         {
           "isin": "IL0011301780",
@@ -640,12 +646,6 @@
           "name": "AppLovin",
           "weight": 0.54,
           "symbol": "APP"
-        },
-        {
-          "isin": "KYG4124C1096",
-          "name": "Ghl",
-          "weight": 0.51,
-          "symbol": "GRAB"
         },
         {
           "isin": "US7710491033",

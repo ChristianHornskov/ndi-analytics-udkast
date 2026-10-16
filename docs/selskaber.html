@@ -97,11 +97,12 @@
    const doubtNote = d ? `<small style="color:var(--muted);display:block;margin-left:auto;white-space:normal;max-width:36ch;line-height:1.35;text-align:left">usikkert: ${esc(d.why)}${d.alt ? ` · alternativ: ${esc(doubtAltLabel(d.alt))}` : ''}</small>` : '';
    return ` <span class="badge badge-draft" title="Temaet er et forslag fra udkastet og afventer NDI-gennemgang · ${before}">forslag</span>${doubt}<small style="color:var(--muted);display:block;margin-left:auto;white-space:normal;max-width:36ch;line-height:1.35;text-align:left">${before}</small>${doubtNote}`;
  };
+ const tagLinks = (p) => tagsFor(p, multiTags).map((t) => `<a class="tag" href="tema.html?slug=${encodeURIComponent(t)}&fund=${encodeURIComponent(fundId)}">${esc(daTheme(t))}</a>`).join(' ');
  const row = (p) => `
  <tr>
- <td><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${encodeURIComponent(fundId)}">${esc(p.name)}</a>${p.symbol ? ` <small style="color:var(--muted)">${esc(p.symbol)}</small>` : ''}${hasLens(p) ? ` <span class="badge" title="Kvalitativ NDI-linse: rolle, plads i værdikæden og forhold at holde øje med (udkast)">NDI-linse</span>` : ''}${hitNote(p)}</td>
+ <td><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${encodeURIComponent(fundId)}">${esc(p.name)}</a>${p.symbol ? ` <small style="color:var(--muted)">${esc(p.symbol)}</small>` : ''}${hasLens(p) ? ` <span class="badge" title="Kvalitativ NDI-linse: rolle, plads i værdikæden og forhold at holde øje med (udkast)">NDI-linse</span>` : ''}${hitNote(p)}<span class="az-m-line"><small style="color:var(--muted)">${esc(p.isin)}</small><br>${tagLinks(p)}${forslagCell(p)}</span></td>
  <td>${esc(p.isin)}</td>
- <td>${tagsFor(p, multiTags).map((t) => `<a class="tag" href="tema.html?slug=${encodeURIComponent(t)}&fund=${encodeURIComponent(fundId)}">${esc(daTheme(t))}</a>`).join(' ')}${forslagCell(p)}</td>
+ <td>${tagLinks(p)}${forslagCell(p)}</td>
  <td>${pct(p.weight)}</td>
  </tr>`;
  let body = '', groups = [];
@@ -165,7 +166,18 @@
  ${status === 'forslag' ? shiftNav() : ''}
  ${jump}
  ${nForslag ? `<p style="font-size:12px;color:var(--muted)">${nForslag} af ${pos.length} har et tema mærket <span class="badge badge-draft">forslag</span> - foreslået i udkastet, afventer NDI-gennemgang. <a href="temaer.html?fund=${encodeURIComponent(fundId)}">Se temaoversigt →</a></p>` : ''}
- <div class="table-wrap"><table class="data"><thead><tr><th scope="col">Navn</th><th scope="col">ISIN</th><th scope="col">Tema</th><th scope="col">Vægt %</th></tr></thead><tbody>${pos.length ? body : empty}</tbody></table></div>
+ <style>
+ /* Mobil (≤560 px): ISIN og tema står som kompakt linje under navnet, så rækken kan læses uden vandret rulning. */
+ .az-m-line{display:none}
+ @media (max-width:560px){
+   table.az-table{min-width:0}
+   table.az-table th:nth-child(2),table.az-table td:nth-child(2),table.az-table th:nth-child(3),table.az-table td:nth-child(3){display:none}
+   table.az-table th:first-child,table.az-table td:first-child{max-width:none;min-width:0;box-shadow:none}
+   .az-m-line{display:block;margin-top:4px;white-space:normal;line-height:1.6}
+   .az-m-line .tag{margin:0 4px 2px 0}
+ }
+ </style>
+ <div class="table-wrap"><table class="data az-table"><thead><tr><th scope="col">Navn</th><th scope="col">ISIN</th><th scope="col">Tema</th><th scope="col">Vægt %</th></tr></thead><tbody>${pos.length ? body : empty}</tbody></table></div>
  <p style="font-size:11px;color:var(--muted);margin-top:8px">${nLens ? `<span class="badge">NDI-linse</span> = kvalitativ beskrivelse (rolle, værdikæde, hold øje med) - udkast, ikke anbefaling. <a href="ndi-perspektiv.html">Om NDI-linsen</a>. ` : ''}Kun navn, ISIN, tema og vægt i fonden. Ingen kursafkast, P/S eller P/E pr. aktie i denne version.</p>
  <p class="warn">${WARN_HIST}</p>`;
  if (location.hash) document.getElementById(location.hash.slice(1))?.scrollIntoView();
