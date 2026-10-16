@@ -1383,3 +1383,19 @@ Sidste cyklus før LEO FREEZE kl. 08:00. Live-sweep af 20 nøgle-URL'er på 375 
 
 ### Nice
 - Uændret (engelske tredjepartsopslag uden dansk resumé).
+
+## 2026-10-16 07:41 CEST · cyklus 55 · freeze-tjek (main `f6d6b4b`, uændret; live = main, md5 ok på 11 nøglesider)
+
+Main har ikke flyttet sig siden c53. Live svarer byte for byte til main på index, selskaber, vaerdikaeder, drawdown, risici, temaer, invester, om-data, omkostninger og ndi-paa-x. (fonden og udforsk findes ikke som selvstændige filer. De dækkes af index og selskaber.)
+
+### MUST
+- Ingen.
+
+### SHOULD (uændret, genverificeret i kilden)
+1. ndi-paa-x: tap-mål < 24 px (`.x-atlas-dot`, `a.tag`).
+2. ndi-paa-x: rå engelske slugs som tags.
+3. ndi-paa-x.html:110 selvmodsigende label. Står stadig.
+4. index.html:89 KID-ordlyd og omkostninger.html:606 intern formulering. Står stadig.
+
+### Nice
+- Uændret.

@@ -1371,3 +1371,21 @@ Ikke juridisk rådgivning. Der er ingen docs-delta siden c53. Footer- og advarse
 
 ### ÅOP
 Uændret. "Ikke et ÅOP" + KID-RIY. FO-ønsket om ÅOP afklares med compliance.
+
+## 2026-10-16 07:41 CEST · cyklus 55 · freeze-tjek (main `f6d6b4b`, uændret; live = main)
+
+Ikke juridisk rådgivning. Der er ingen docs-delta.
+
+### Verificeret
+- Ordsweep i docs (garanteret/sikker gevinst/køb nu/sælg nu/øger eksponering/bedste tip/anbefaler vi): 0 hits ✅.
+- Beholdningsdata `portfolio.json` har asOf 2026-06-01 (≤ grænsen) ✅. Filerne med asOf i oktober er NAV/meta (fund-meta, latest, risk-stats). Det er ikke beholdninger.
+- Live = main (md5) på 11 nøglesider, så footer-advarslerne fra c54 gælder fortsat.
+
+### MUST
+- M1 (ndi-paa-x tredjepartskuratering) er åben før go-live. Det er en beslutning til Leo/compliance, ikke en freeze-rettelse.
+
+### SHOULD
+- S3 (index.html:89), S5 (omkostninger.html:606) og S12 (ndi-paa-x.html:110) er stadig åbne. Alle tre er rene tekstrettelser til bugfix-vinduet 08:00–08:30. S11 er uændret.
+
+### ÅOP
+Uændret.
