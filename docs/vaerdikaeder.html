@@ -286,6 +286,7 @@
     .sp-hub .rk-strip{margin:3px 0 4px;width:fit-content;max-width:100%}
     .sp-hub .rk-strip.trip::after{content:"↺";margin-left:6px;font-size:13px;color:#4a6a74}
     .sp-hub .mn-chips{margin-top:6px}
+    .f-hub .mn-chips{margin-top:2px}
     .mk{outline:2px solid var(--yellow);outline-offset:2px;box-shadow:0 0 0 6px rgba(255,214,0,.12)}
     @media(prefers-reduced-motion:no-preference){.mk{animation:mk-pulse 1.2s ease-out 2}}
     @keyframes mk-pulse{0%{box-shadow:0 0 0 0 rgba(255,214,0,.45)}100%{box-shadow:0 0 0 10px rgba(255,214,0,0)}}
@@ -1042,7 +1043,7 @@
     function renderGloss(ch, ids) {
       const [listId, noteId, countId, wrapId] = ids;
       document.getElementById(listId).innerHTML = (ch?.glossary || []).map(g =>
-        `<div><dt>${esc(g.term)}</dt><dd>${esc(g.t)}${glossLink(g)}</dd></div>`).join('');
+        `<div${g.link ? ` data-lks="${esc(g.link)}"` : ''}><dt>${esc(g.term)}</dt><dd>${esc(g.t)}${glossLink(g)}</dd></div>`).join('');
       document.getElementById(noteId).textContent = ch?.glossaryNote || '';
       if (ch?.glossary?.length) document.getElementById(countId).textContent = `${ch.glossary.length} ord, der gør kæden lettere at læse`;
       if (matchMedia('(min-width: 900px)').matches) document.getElementById(wrapId).open = true;
@@ -1205,7 +1206,7 @@
       $('lede').textContent = z.lede;
       list.innerHTML = z.items.map((x, i) => {
         const href = x.sec.startsWith('lk-') ? `#${esc(x.sec)}" data-open="${esc(x.sec.slice(3))}` : `?kaede=${c}#${esc(x.sec)}" data-sec="${c}:${esc(x.sec)}`;
-        return `<li><fieldset><legend>${esc(x.q)}</legend><div class="qz-opts">`
+        return `<li${x.sec.startsWith('lk-') ? ` data-lks="${esc(x.sec.slice(3))}"` : ''}><fieldset><legend>${esc(x.q)}</legend><div class="qz-opts">`
           + x.a.map((a, j) => `<button type="button" data-q="${i}" data-a="${j}">${esc(a)}</button>`).join('')
           + `</div></fieldset><p class="qz-why" id="${p}-why-${i}" aria-live="polite" hidden><b></b> ${esc(x.why)} <a href="${href}">${esc(x.more)} →</a></p></li>`;
       }).join('');
@@ -1455,7 +1456,7 @@
       const [cid, lid] = (b.to || '').split(':');
       const ch = pack.chains.find(c => c.id === cid);
       const href = b.href || `?kaede=${esc(cid)}#lk-${esc(lid)}`;
-      return `<a class="br" href="${href}"${b.to ? ` data-hop="${esc(b.to)}"` : ''}><span class="br-ico" aria-hidden="true">${b.icon || '◆'}</span><span class="br-t">${esc(b.label)}${ch ? ` <small>· ${esc(ch.title)}</small>` : ''} <small>· ${kindTxt(b.kind)}</small></span><span class="br-d">${esc(b.t)}</span></a>`;
+      return `<a class="br" href="${href}"${b.to ? ` data-hop="${esc(b.to)}" data-lks="${esc(b.to)}"` : ''}><span class="br-ico" aria-hidden="true">${b.icon || '◆'}</span><span class="br-t">${esc(b.label)}${ch ? ` <small>· ${esc(ch.title)}</small>` : ''} <small>· ${kindTxt(b.kind)}</small></span><span class="br-d">${esc(b.t)}</span></a>`;
     };
     const qc = pack.chains.find(c => c.id === 'quantum');
     document.getElementById('q-bridges').innerHTML = (qc?.bridges || []).map(brCard).join('');
@@ -1527,6 +1528,44 @@
         + `<p class="ew-t">Trin <b>${pos + 1}</b> af ${steps.length}. ${esc(st.where || '')}${also}${next} <a href="?kaede=energy#eflow" data-sec="energy:eflow">Se hele vejen →</a></p></div>`;
     }
 
+    // Find leddet igen: usikkerheder, quiz og ordbog i egen fane, plus tråde og broer fra rum og kvante.
+    // Kun henvisninger til sider og afsnit, der allerede findes; ingen ny tekst at kildebelægge
+    const HUB_SECS = {
+      'ai-compute': { risk: 'a-risk', quiz: 'a-quiz', gloss: 'a-gloss-wrap', map: 'a-pane' },
+      energy: { risk: 'e-risk', quiz: 'e-quiz', gloss: 'e-gloss-wrap' },
+      physical: { risk: 'p-risk', quiz: 'p-quiz', gloss: 'p-gloss-wrap' },
+      quantum: { risk: 'q-risk', quiz: 'q-quiz', gloss: 'q-gl' },
+      space: { risk: 'sp-risk', quiz: 'sp-quiz', gloss: 'gloss-wrap' },
+    };
+    function hubChips(l, ch, kinds = ['map', 'risk', 'quiz', 'gloss', 'web', 'q']) {
+      const S = HUB_SECS[ch.id] || {};
+      const shown = (id) => { const el = id && document.getElementById(id); return el && !el.hidden; };
+      const out = [];
+      const add = (cid, sec, ic, k, t, mark) => out.push(`<li><a href="?kaede=${esc(cid)}#${esc(sec)}" data-sec="${esc(cid)}:${esc(sec)}"${mark ? ` data-mark="${esc(mark)}"` : ''} title="${esc(t)}"><span aria-hidden="true">${ic}</span>${k}</a></li>`);
+      const nm = (x) => esc(x.short || x.label);
+      if (kinds.includes('map') && S.map && shown(S.map)) {
+        const i = rvLinks.indexOf(l);
+        if (i >= 0) add(ch.id, S.map, '🌊', `Led <b>${i + 1}</b> af ${rvLinks.length} i floden`, `Flodkortet: ${l.label}, ${rvSub(l)}`);
+      }
+      const rk = (ch.risks?.items || []).filter(x => x.links.includes(l.id));
+      if (kinds.includes('risk') && rk.length && shown(S.risk)) add(ch.id, S.risk, '⚠', `<b>${rk.length}</b> af ${ch.risks.items.length} usikkerheder`, `Usikkerheder, der rammer leddet: ${rk.map(x => x.k).join(', ')}`, l.id);
+      const qz = (ch.quiz?.items || []).filter(x => x.sec === `lk-${l.id}`);
+      if (kinds.includes('quiz') && qz.length && shown(S.quiz)) add(ch.id, S.quiz, '✓', `${qz.length === 1 ? 'Ét spørgsmål' : qz.length + ' spørgsmål'} i Tjek dig selv`, `Spørgsmål: ${qz.map(x => x.q).join(' ')}`, l.id);
+      const gl = (ch.glossary || []).filter(g => g.link === l.id).map(g => g.term.split(' · ')[0]);
+      if (kinds.includes('gloss') && gl.length && document.getElementById(S.gloss)) add(ch.id, S.gloss, '📖', gl.length <= 2 ? esc(gl.join(' · ')) : `<b>${gl.length}</b> ord i ordbogen`, `Ordbogen: ${gl.join(', ')}`, l.id);
+      const key = `${ch.id}:${l.id}`;
+      const th = ch.id === 'space' ? [] : (sp?.threads?.items || []).filter(x => x.to === key);
+      if (kinds.includes('web') && th.length && shown('sp-web')) add('space', 'sp-web', '🛰', `Tråd fra rummet: ${th.map(x => nm(linkOf('space', x.from) || {})).join(' og ')}`, `Rummet og de andre kæder: ${th.map(x => x.k).join(', ')}`, key);
+      const qb = ch.id === 'quantum' ? [] : (qc?.bridges || []).filter(b => b.to === key);
+      if (kinds.includes('q') && qb.length && document.getElementById('q-br')) add('quantum', 'q-br', '⚛', 'Kvante møder leddet', `Hvor kvante møder kæden: ${qb.map(b => b.t).join(' ')}`, key);
+      return out.join('');
+    }
+    function findHub(l, ch) {
+      if (l.neighbour || ch.id === 'space') return '';
+      const list = hubChips(l, ch);
+      return list ? `<div class="vc-sec f-hub"><h4>Find leddet igen</h4><ul class="mn-chips" aria-label="Find leddet andre steder på siden">${list}</ul></div>` : '';
+    }
+
     // Rum: hvor leddet optræder i rum-fanen (rejsen, pengene, usikkerheder, tråde, højde). Kun henvisninger til siden selv
     function spaceHub(l) {
       if (!sp || l.neighbour) return '';
@@ -1550,7 +1589,8 @@
       const bd = (sp.bands?.items || []).filter(x => x.links.includes(l.id));
       if (bd.length) chips.push(['sp-bands', '📏', bd.map(x => x.k).join(' · '), `Højde: ${bd.map(x => x.k).join(', ')}`]);
       const list = chips.filter(([sec]) => document.getElementById(sec)).map(([sec, ic, k, t]) =>
-        `<li><a href="?kaede=space#${sec}" data-sec="space:${sec}" data-mark="${esc(l.id)}" title="${esc(t)}"><span aria-hidden="true">${ic}</span>${esc(k)}</a></li>`).join('');
+        `<li><a href="?kaede=space#${sec}" data-sec="space:${sec}" data-mark="${esc(l.id)}" title="${esc(t)}"><span aria-hidden="true">${ic}</span>${esc(k)}</a></li>`).join('')
+        + hubChips(l, sp, ['quiz', 'gloss']);
       return `<div class="vc-sec sp-hub"><h4>Leddet i rum-fanen</h4>`
         + `<ol class="rk-strip flow trip" aria-label="En satellits rejse i ${steps.length} trin">${strip}</ol>`
         + `<p class="ew-t">${tripT}</p>`
@@ -1917,7 +1957,7 @@
             <div class="vc-sec"><h4>Hvorfor følger NDI det ${kindTag}</h4><p>${esc(l.ndi || '')}</p>${l.src ? `<div class="vc-srcline">Kilde: ${esc(l.src)}</div>` : ''}${pressLine(l)}</div>
             ${l.shift ? `<div class="vc-sec"><h4>Hvad ændrer sig</h4><p>${esc(l.shift)}</p></div>` : ''}
             ${id === 'energy' ? whereLine(l) : ''}
-            ${id === 'space' ? spaceHub(l) : ''}
+            ${id === 'space' ? spaceHub(l) : findHub(l, ch)}
             <div class="vc-num"><b>${l.count}</b> selskaber · ca. <b>${pct(l.weightSum)}</b> af PMINDI pr. ${fmtDate(pack.asOf)}</div>
             <div class="vc-bar" aria-hidden="true"><i style="width:${Math.min(100, (l.weightSum / max) * 100).toFixed(1)}%"></i></div>
             <div class="vc-hint">${l.count ? 'Klik for at se selskaberne' : ''}</div>
