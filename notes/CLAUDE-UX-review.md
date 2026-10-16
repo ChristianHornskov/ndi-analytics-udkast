@@ -1095,7 +1095,7 @@ Live-sweep på 50 URL'er ved 375: **0 pageerrors og 0 vandret overflow**. Live h
 - **Familiekontor:** top-10-summen (11,9 %) og "Beholdningsnavn" i CSV giver mere tillid til dataene.
 - **Idéspejder:** #9 (fakta vs. vurdering) er uændret næste. Profiler efter vægt er stadig det, der giver mest pr. time.
 
-## 2026-10-16 06:45 CEST · cyklus 44 (main `24e1fce`, ingen docs-delta siden cyklus 43; live = main)
+## 2026-10-16 06:33 CEST · cyklus 44 (main `24e1fce`, ingen docs-delta siden cyklus 43; live = main)
 
 Live-sweep på 50 URL'er ved 375: **0 pageerrors og 0 vandret overflow**. Tiny-tal og sidehøjder er identiske med cyklus 43 på alle 50 URL'er, så live er uændret, og Pages er ikke forsinket.
 
@@ -1118,3 +1118,7 @@ Live-sweep på 50 URL'er ved 375: **0 pageerrors og 0 vandret overflow**. Tiny-t
 
 ### Persona-linser
 Uændret fra cyklus 43. Det, der giver mest pr. time, er stadig (a) `displayName` i værdikæder og `NAME_FIX` for h1, som er én lille ændring, og (b) profiler for top-10 efter vægt.
+
+### Addendum 06:38: main `cfb03ab` (docs-delta 10 filer)
+- **Lukket ✅:** jargon i værdikæder ("Flodsystem/Treemap/Sunburst" → "Dæmninger/Temaer", "Felter/Ringe", "Kæden som en flod", "TEKNOLOGI · VÆRDIKÆDER"). Princip-kortet "Vælg udviklingen, ikke vinderen" er nu klart i stedet for "Udvikling > vinder". "Screener · NDI-linse" → "Udforsk porteføljen". Udforsk-filtre er foldet sammen på mobil med "N aktive", hvilket burde sænke tiny-tallet (698) markant. Det bekræftes i næste live-sweep.
+- **Åbne:** `vaerdikaeder.html` har stadig 0 forekomster af `displayName` (SHOULD 1). `omkostninger.html:356` "Tast 1 eller 5" er uændret (SHOULD 3). `selskab.html:202` "kvartalssnapshots" er uændret.

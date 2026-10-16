@@ -1112,7 +1112,7 @@ Ikke juridisk rådgivning. 50 URL'er ved 375. Basis-tjeklisten er som i cyklus 4
 ### Prioritet
 **1** → **2** → **3** + **4** + **5** (rene tekstrettelser, ét commit) → **6**.
 
-## 2026-10-16 06:45 CEST · cyklus 44 (main `24e1fce`, ingen docs-delta siden cyklus 43; live = main)
+## 2026-10-16 06:33 CEST · cyklus 44 (main `24e1fce`, ingen docs-delta siden cyklus 43; live = main)
 
 Ikke juridisk rådgivning. Denne cyklus var en dybere kontrol i kilden (`docs/**` html/js/json) ud over live-sweepet på 50 URL'er.
 
@@ -1138,3 +1138,12 @@ Ikke juridisk rådgivning. Denne cyklus var en dybere kontrol i kilden (`docs/**
 
 ### Prioritet
 **7** (tre footere, én linje hver) + **3** + **4** + **5** samlet i ét tekst-commit → **1** → **2** → **6**.
+
+### Addendum 06:38: main `cfb03ab` (docs-delta 10 filer siden `24e1fce`, live har AI-mærket på værdikæder = opdateret)
+- **Lukket SHOULD 2 ✅:** `vaerdikaeder.html` og `vaerdikaede.html` har nu "AI-udkast. Teksterne er sammenfattet med AI ud fra NDI's ugebreve … afventer NDI-gennemgang" med link til `om-data#g-ai-udkast`.
+- **SHOULD 1 halvt lukket:** `periode.html:113` siger nu "Gennemsnitligt årligt afkast siden {første NAV}" ✅. `js/app.js:420` ("Gns. årligt afkast" på fonden) står stadig uden periode.
+- **SHOULD 4 delvist:** værdikæder siger nu "forsinket beholdning pr. 1. juni 2026" i stedet for "snapshot" ✅. `selskab.html:202` "Vægt over tid (kvartalssnapshots)" er uændret.
+- **SHOULD 3 udvidet:** "Central Information Dokument" står også i `index.html:89` ("Se Central Information Dokument før du investerer"), ud over `js/data.js:283`.
+- **Ny tekst er OK:** "Hvad ændrer sig" (`l.shift`) og plan-markering ("er en plan", "ikke fløjet" fremhævet) gør tydeligere, hvad der er fakta, og hvad der er planer ✅. Livscyklus-labels på dansk i `data.js`. X-posts er reduceret (−34 linjer, opslag/markør fra 13. aug. fjernet). Der er ingen nye købs-, sælg- eller garantiord i delta.
+- **SHOULD 7 (footere på drawdown/embed/periode) er stadig åben.** Ingen af de tre footere er rørt.
+- **Prioritet nu:** 7 + 3 (to steder) + 4 (selskab h2) + 5 + rest af 1 (`app.js:420`), alt sammen tekst-rettelser i ét commit → 6.
