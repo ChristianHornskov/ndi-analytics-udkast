@@ -10,8 +10,18 @@
   .tri details{border:1px solid var(--line);border-radius:8px;padding:10px 12px}
   .tri summary{cursor:pointer;font-weight:600}
   .tri p{color:var(--muted);font-size:13px;line-height:1.5;margin:8px 0 0}
+  .two-led{border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:12px 0 0}
+  .two-led h3{font-size:16px;margin:0 0 6px}
+  .two-led .intro{color:var(--muted);line-height:1.6;margin:0}
+  .two-led .cols{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:8px 0}
+  .two-led button{appearance:none;font:inherit;text-align:left;color:var(--text);background:transparent;border:1px solid var(--line);border-radius:8px;min-height:44px;padding:10px 12px;cursor:pointer}
+  .two-led button[aria-pressed="true"]{border-color:var(--cyan)}
+  .two-led button strong{display:block;margin:0 0 6px}
+  .two-led button span{display:block;color:var(--muted);font-size:13px;line-height:1.5}
+  .two-led .live{color:var(--muted);line-height:1.6;margin:0}
+  .two-led .print-all{display:none}
   @media (max-width:640px){
-   .tri{grid-template-columns:1fr}
+   .tri,.two-led .cols{grid-template-columns:1fr}
   }
   .not-that{border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:12px 0 0}
   .not-that h3{font-size:16px;margin:0 0 6px}
@@ -37,10 +47,11 @@
    details, details > p { display: block !important; }
    details > summary { font-weight: 600; }
    .chain-map button{border-color:#333}
-   .not-that .stops,.not-that .rail,.not-that .live,.chain-map .nodes,.chain-map .live{display:none}
-   .not-that .print-all,.chain-map .print-all{display:block;color:#111}
-   .not-that .print-all p,.chain-map .print-all p{margin:4px 0}
-   .tri details,.not-that,.chain-map{break-inside:avoid;border-color:#333}
+   .not-that .stops,.not-that .rail,.not-that .live,.chain-map .nodes,.chain-map .live,.two-led .cols,.two-led .live{display:none}
+   .not-that .print-all,.chain-map .print-all,.two-led .print-all{display:block;color:#111}
+   .not-that .print-all p,.chain-map .print-all p,.two-led .print-all p{margin:4px 0}
+   .tri details,.not-that,.chain-map,.two-led{break-inside:avoid;border-color:#333}
+   .two-led button{border-color:#333}
    .not-that button{border-color:#333}
    body, .site-footer { background: #fff; color: #111; }
   }
@@ -162,7 +173,20 @@
  <p style="color:var(--muted);margin:8px 0 0">Comstock skriver, at jordpositionen i Western Haynesville i det østlige Texas er mere end 535.000 netto-acres, og at gasproduktionen er certificeret efter MiQ-standarden. Siden daterer ikke tallet. Det er brændsel, ikke en mine.</p>
  <p style="color:var(--muted);margin:8px 0 0">Centrus skriver, at berigning begyndte i slutningen af 2023 på American Centrifuge Plant i Piketon i Ohio. Det er før beholdningen. Aftalen med Antares af 17. september 2026 ligger efter beholdningen og er ikke en levering, der allerede er sket. Det er brændsel, ikke et kraftværk.</p>
  <p style="color:var(--muted);margin:8px 0 0">Northern Dynasty skrev 26. juni 2026, at mundtlige indlæg om at trække et veto fra EPA tilbage blev holdt 25. juni 2026. Det er efter beholdningen. Der er ingen afgørelse og ingen mine i drift.</p>
- <p style="color:var(--muted);margin:8px 0 0">Solaris skrev 6. juli 2026, at det har købt GESA. GESA er service til kraftværker. Det er efter beholdningen, og det er ikke et kraftværk i drift.</p>
+ <p style="color:var(--muted);margin:8px 0 0">Solaris skrev 6. juli 2026, at det har købt GESA. GESA er service til kraftværker. Det er efter beholdningen, og det er ikke et kraftværk i drift. Selskabet skriver, at det er stiftet i 2014, og at det også fordeler strøm.</p>
+ <section class="two-led" data-open="gen" aria-label="Solaris på to led">
+ <h3>Solaris på to led</h3>
+ <p class="intro">Samme selskab står to steder. Begge kort står. Et klik fremhæver ét. Det er ikke en anbefaling.</p>
+ <div class="cols" role="group" aria-label="Vælg et led">
+ <button type="button" data-stop="gen" aria-pressed="true"><strong>Elproduktion</strong><span>Købet af GESA 6. juli 2026 er service til kraftværker. Datoen ligger efter beholdningen. Det er ikke et kraftværk i drift.</span></button>
+ <button type="button" data-stop="grid" aria-pressed="false"><strong>Elnet</strong><span>Selskabet skriver, at det er stiftet i 2014, og at det fordeler strøm til datacentre, energi, erhverv og industri.</span></button>
+ </div>
+ <p class="live" aria-live="polite"></p>
+ <div class="print-all">
+ <p data-stop="gen">Elproduktion. Købet af GESA 6. juli 2026 er service til kraftværker. Datoen ligger efter beholdningen. Det er ikke et kraftværk i drift.</p>
+ <p data-stop="grid">Elnet. Selskabet skriver, at det er stiftet i 2014, og at det fordeler strøm til datacentre, energi, erhverv og industri.</p>
+ </div>
+ </section>
  <p style="color:var(--muted);margin:8px 0 0">Nogle råstoffer er projekter, andre er miner. The Metals Company skrev 11. maj 2026, at idriftsættelse ventes i fjerde kvartal 2027. Prøven på 3.000 ton er fra 2022. Det er ikke produktion. Standard Lithium har et mål for fase 1 og et demonstrationsanlæg, ikke en stor mine.</p>
  <p style="color:var(--muted);margin:8px 0 0">NioCorp skriver i kvartalsrapporten til 31. marts 2026, at Elk Creek i det sydøstlige Nebraska ikke er i produktion. En kontrakt om mineportalen er fra februar 2026. Det er ikke en mine i drift.</p>
  <p style="color:var(--muted);margin:8px 0 0">American Battery Technology skriver i kvartalsrapporten til 31. marts 2026, at genbrugsanlægget ligger i Storey County, og at bygningen i Fernley ikke er taget i brug. Tonopah Flats er et projekt, ikke en mine.</p>
@@ -325,7 +349,7 @@
   var first = box.querySelector("button[data-stop]");
   show(box.getAttribute("data-open") || (first ? first.getAttribute("data-stop") : ""));
  }
- document.querySelectorAll(".not-that, .chain-map").forEach(bindPicker);
+ document.querySelectorAll(".not-that, .chain-map, .two-led").forEach(bindPicker);
  })();
  </script>
 </body>
