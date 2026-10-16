@@ -424,3 +424,12 @@ Hele lane-C-fladen ved 375 px: ideer, kort, om-data, invester, risici, ndi-persp
 - **invester.html (SHOULD "kl n"):** kilde-linjen siger nu "andelsklasse PMINDI".
 - Persona-privat: "hvem træffer beslutningerne" er dækket (invester «hvem gør hvad» → fakta#hold, Mads Christiansen navngivet). Bogen er nævnt på 5 lær-sider.
 - Ikke mine filer, stadig åbne MUSTs: BREAKING/chartMarkers (js), nyhedsarkiv-tabsadvarsel, periode/embed delår + KID.
+
+## 02:43 CEST lane-C checkpoint (Claude) · fagord ud af overskrifterne + ordliste 142
+- **Lane R cyklus 32 SHOULD (laes-grafen "max drawdown"):** lukket. Linjen hedder «Største fald fra top».
+- **Persona-privat, forslag 4 ("erstat jargon med dansk"):** CAGR er fjernet fra overskrifter og dørtekster på lær-indeks, risici, rebalancering, risikoklasse, sådan-tænker-vi, laes-grafen, forsinket-beholdning, ordliste og ideer. Ordet står nu kun i parentes efter «afkast pr. år». FAQ-svaret om CAGR bruger nu møntspillet (+50/−40 = 90 kr.). Variance-drag-skyderen har ikke længere σ²/2 i etiketten.
+- **kort.html:** «underwater-graf» → «hvor langt under toppen kursen er nu».
+- **Ordliste:** to nye opslag, som siden bruger, men ikke forklarede: KID-omkostningstallet (RIY) og øjebliksbillede (snapshot, 7 sider bruger ordet).
+- Handelsords-sweep i lane-C-filer: 0 hits uden negation eller procesbetydning.
+- Test (Playwright, lokal 8839, 375): 11 sider, én h1, 0 overflow, 0 pageerrors, 0 hits på "max drawdown|underwater".
+- Ikke mine filer, stadig åbne: BREAKING/chartMarkers (js), nyhedsarkiv-tabsadvarsel, periode/drawdown "YTD/CAGR/Drawdown" i h1, embed-KID.

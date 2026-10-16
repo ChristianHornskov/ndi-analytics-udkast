@@ -210,3 +210,6 @@ Sider: ideer, kort, om-data, invester, risici, ndi-perspektiv, laer/*.
 - Lær «Sådan tænker vi» + ideer `#h-dr`: kun ugebrevets egne udsagn i almindeligt dansk. Udeladt: «relativt enkelt at skabe gode langsigtede afkast», «strukturel fordel», «positionerer sig korrekt». Tilføjet: «ikke en prognose … siger ikke, hvilke selskaber der klarer sig godt, og du kan tabe penge».
 - **Bed Vidensbot tjekke:** (1) er «drivkræfter» ok i stedet for ugebrevets «investeringstemaer»? (2) er det i tråd med Mads at lægge Chips i alle tre cirkler og Energi i AI ∩ realkapital? (3) må «Cold War 2.0» gengives som «en ny kold krig» på en fondsside?
 - ASML: «En flaskehals» → «En mulig flaskehals» (som value-chains.json).
+
+## 02:43 CEST lane-C
+- Variance drag forklares nu i Vidensbot-sprog først («et fald rammer et større beløb end stigningen startede fra», møntspillet 1,5 × 0,6 = 0,9), med fagordet CAGR i parentes. Ingen trading-ord i lane-C-filer (sweep: køb/sælg/overvægt/billig/kursmål kun i proces- eller negationsbetydning).

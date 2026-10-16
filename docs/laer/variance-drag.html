@@ -3,14 +3,14 @@
 <head>
  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
  <meta name="robots" content="noindex,nofollow">
- <title>Hvorfor CAGR er lavere end gennemsnittet · NDI Analytics</title>
+ <title>Hvorfor det årlige afkast er lavere end gennemsnittet · NDI Analytics</title>
  <meta name="description" content="Møntspillet: 100 kr. stiger til 150 kr. og falder til 90 kr. Sådan koster store udsving afkast, og derfor spreder NDI bredt.">
  <link rel="stylesheet" href="../css/ndi.css">
  <!-- og:start -->
  <meta property="og:type" content="website">
  <meta property="og:site_name" content="NDI Analytics (udkast)">
  <meta property="og:locale" content="da_DK">
- <meta property="og:title" content="Hvorfor CAGR er lavere end gennemsnittet · NDI Analytics">
+ <meta property="og:title" content="Hvorfor det årlige afkast er lavere end gennemsnittet · NDI Analytics">
  <meta property="og:description" content="Møntspillet: 100 kr. stiger til 150 kr. og falder til 90 kr. Sådan koster store udsving afkast, og derfor spreder NDI bredt.">
  <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/laer/variance-drag.html">
  <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
@@ -50,7 +50,7 @@
  </header>
  <main id="main">
  <p class="eyebrow">LÆR</p>
- <h1>Hvorfor CAGR er lavere end gennemsnittet</h1>
+ <h1>Hvorfor det årlige afkast er lavere end gennemsnittet</h1>
  <p class="lede">Når et afkast svinger, bliver det årlige gennemsnit og det, man faktisk står tilbage med, to forskellige tal. Forskellen kaldes variance drag (på dansk ofte variansdrag). Det er en af de vigtigste grunde til, at NDI spreder bredt.</p>
 
  <section class="panel sp" aria-labelledby="vd-coin">
@@ -81,11 +81,11 @@
    <input id="vd-x" type="range" min="0" max="80" step="5" value="50">
    <div class="out" aria-live="polite">
     <div>Efter 2 år<b id="vd-end">75&nbsp;kr.</b></div>
-    <div>CAGR pr. år<b id="vd-cagr">−13,4&nbsp;%</b></div>
-    <div>Tommelfingerregel σ²/2<b id="vd-rule">−12,5&nbsp;%</b></div>
+    <div>Afkast pr. år<b id="vd-cagr">−13,4&nbsp;%</b></div>
+    <div>Tommelfingerregel<b id="vd-rule">−12,5&nbsp;%</b></div>
    </div>
   </div>
-  <p class="src">Uden JavaScript: ±10&nbsp;% giver 99&nbsp;kr., ±30&nbsp;% giver 91&nbsp;kr., ±50&nbsp;% giver 75&nbsp;kr. Tommelfingerreglen siger, at udsving med en årlig volatilitet på σ koster ca. σ²/2 om året. Ved 60&nbsp;% volatilitet er det ca. 18 procentpoint. Reglen er en tilnærmelse og passer bedst ved små udsving.</p>
+  <p class="src">Uden JavaScript: ±10&nbsp;% giver 99&nbsp;kr., ±30&nbsp;% giver 91&nbsp;kr., ±50&nbsp;% giver 75&nbsp;kr. Tommelfingerreglen siger, at udsving koster ca. det halve af udsvinget ganget med sig selv om året (på fagsprog σ²/2). Svinger kursen ca. 60&nbsp;% om året, koster det ca. 18 procentpoint om året. Reglen er en tilnærmelse og passer bedst ved små udsving.</p>
  </section>
 
  <section class="panel sp" aria-labelledby="vd-rec" style="margin-top:14px">
@@ -103,7 +103,7 @@
 
  <section class="panel sp" aria-labelledby="vd-ndi" style="margin-top:14px">
   <h2 id="vd-ndi">Hvad det betyder for, hvordan vi viser tal</h2>
-  <p><strong>Vi viser CAGR, ikke et simpelt gennemsnit.</strong> CAGR (gennemsnitligt årligt afkast, geometrisk) er den faste årlige rente, der ville give samme slutbeløb. Den fortæller, hvad forløbet har givet i alt, omregnet til et år. Du finder den under <a href="../index.html?view=fonden">Fonden</a>. Den fortæller ikke, hvor ujævn vejen var. Det viser <a href="../drawdown.html">Fald fra top</a>.</p>
+  <p><strong>Vi viser afkastet pr. år, ikke et simpelt gennemsnit.</strong> Afkastet pr. år (på fagsprog CAGR) er den faste årlige rente, der ville give samme slutbeløb. Den fortæller, hvad forløbet har givet i alt, omregnet til et år. Du finder den under <a href="../index.html?view=fonden">Fonden</a>. Den fortæller ikke, hvor ujævn vejen var. Det viser <a href="../drawdown.html">Fald fra top</a>.</p>
   <p><strong>Det er derfor, fonden spreder bredt.</strong> En enkelt teknologiaktie svinger meget, og det koster. En del af udsvinget skyldes kun det ene selskab, og den del bliver mindre, jo flere selskaber man ejer. Se <a href="hvorfor-mange-aktier.html">Hvorfor så mange aktier?</a></p>
   <p>Bogen beskriver risiko som, hvor meget udfaldene spreder sig, og viser, at den spredning æder af det afkast, man faktisk står tilbage med (s. 133–140). Et kursfald er ikke i sig selv risikoen.</p>
   <p style="margin-top:10px">Siden forklarer et begreb. Den siger ikke noget om, hvordan du selv skal investere. Se også <a href="../om-data.html#g-cagr">CAGR</a> og <a href="../om-data.html#g-variance-drag">variance drag</a> i ordlisten.</p>

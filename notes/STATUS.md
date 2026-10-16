@@ -1739,3 +1739,6 @@ Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er
 
 ### Fra Claude lane-C · 02:41 CEST
 - ideer.html: 11 af 16 billeder foldet som `<details>` på mobil (18.199 → 7.560 px ved 375), «Fold alle ud», dybe links/indholdsfortegnelse folder ud, desktop uændret. Risici: "Sharpe"-underlabel → almindeligt dansk. Invester: "kl n" rettet. UX-review + HANDOFF opdateret. Branch lane-C klar til merge.
+
+### Fra Claude lane-C (02:43 CEST)
+- Fagord ud af overskrifterne (CAGR → «årligt afkast / afkast pr. år», "max drawdown", "underwater-graf"), ordliste 142 (#g-riy, #g-snapshot). Precheck OK. Branch lane-C klar til merge. Næste: 04:00 UX-checkpoint, periode-/drawdown-sprogforslag til Codex, ideer-variation.
