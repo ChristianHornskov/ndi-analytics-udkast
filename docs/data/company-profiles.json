@@ -1822,24 +1822,33 @@
   "US4432011082": {
    "name": "Howmet Aerospace",
    "theme": "space",
-   "summary": "Laver metaldele til flymotorer og flyskrog. Selskabet skriver, at det også laver smedede hjul til lastbiler og busser. Det sender ikke raketter op.",
-   "watch": "Produktion til fly og til lastbiler. Selskabet sender ikke op.",
-   "source": "https://www.howmet.com/",
-   "products": "Dele til flyskrog og flymotorer. Smedede hjul og chassis til lastbiler og busser.",
-   "customers": "Fly- og motorproducenter og producenter af lastbiler og busser.",
-   "role": "Dele til fly, rumfart og tung transport. Ikke en opsendelse.",
+   "summary": "Laver dele til flymotorer, flyskrog og industrielle gasturbiner. Om-siden daterer et smedet aluminiumshjul til lastbiler til 1948. Forsvars- og rumsiden skriver materialer til Apollo og rumfærgen. Det er dele, ikke en opsendelse. Lokationssiden nævner lande og ikke en gade.",
+   "watch": "1948 er et produktår for et hjul, ikke en fabrik og ikke en opsendelse. Gasturbinedele er ikke et kraftværk.",
+   "source": "https://www.howmet.com/about-us/",
+   "products": "Dele til flymotorer og industrielle gasturbiner: airfoils, ringe, skiver og smedegods. Befæstelse til fly. Smedet aluminiumshjul til lastbiler, dateret 1948.",
+   "customers": "Fly- og motorproducenter. Siden nævner Pratt & Whitney og F-35 uden en dateret kontrakt. Lastbiler til hjulene.",
+   "role": "1948 er et lastbilhjul. Gasturbine og Apollo er dele. Ikke en opsendelse.",
    "narrative": [
-    "Howmet skriver, at det laver dele til flyskrog og flymotorer, og at det også laver smedede hjul og chassis til lastbiler og busser.",
-    "Det er dele. Selskabet sender ikke raketter op. Snapshottet har aktien under SpaceTech."
+    "Om-siden, læst 16. oktober 2026, skriver, at selskabet laver dele til flymotorer og industrielle gasturbiner, herunder airfoils, ringe, skiver og smedegods. Den nævner vakuumsmeltede superlegeringer, bearbejdning, belægninger og hot isostatic pressing. Det er dele. Selskabet driver ikke kraftværket.",
+    "Samme side daterer et smedet aluminiumshjul til lastbiler til 1948. Det er et produkt, ikke en fabrik og ikke en opsendelse. Befæstelse sidder fra næse til hale på fly og på flymotorer. Flysiden nævner Flite-Tite som befæstelse. Det er ikke et fly, selskabet selv flyver.",
+    "Forsvars- og rumsiden skriver, at materialer var med på Apollo og rumfærgen, og at løsningerne dækker løfteraketter, fremdrift og kapsler. Selskabet sender ikke selv op. En korttekst nævner F-35 og en motor hos Pratt & Whitney. Den daterer ikke en kontrakt. Lokationssiden lister lande og fire forretningsdele og viser ikke en gade. Ordene world-class, market-leading, number one, leader, first, largest og most advanced er ikke taget med."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets side",
-     "url": "https://www.howmet.com/"
+     "label": "Om selskabet",
+     "url": "https://www.howmet.com/about-us/"
     },
     {
-     "label": "Markeder",
-     "url": "https://www.howmet.com/markets-and-product-lines/"
+     "label": "Forsvar og rum",
+     "url": "https://www.howmet.com/defense/"
+    },
+    {
+     "label": "Fly",
+     "url": "https://www.howmet.com/aerospace/"
+    },
+    {
+     "label": "Lokationer",
+     "url": "https://www.howmet.com/locations/"
     }
    ]
   },

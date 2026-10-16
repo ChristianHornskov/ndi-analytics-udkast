@@ -1827,7 +1827,7 @@
           "id": "launch",
           "icon": "🚀",
           "label": "Opsendelse",
-          "blurb": "Raketter og fartøjer, der bringer satellitter og udstyr væk fra Jorden, og selskaber, der laver dele til dem. Nogle programmer flyver allerede. Andre er stadig under udvikling. Flere af selskaberne her sender ikke selv noget op. De leverer motorer, metaldele eller beskyttelse til det, raketten bærer.",
+          "blurb": "Raketter og fartøjer, der bringer satellitter og udstyr væk fra Jorden, og selskaber, der laver dele til dem. Nogle programmer flyver allerede. Andre er stadig under udvikling. Flere af selskaberne her sender ikke selv noget op. De leverer motorer, metaldele eller beskyttelse til det, raketten bærer. Howmet skriver, at et smedet aluminiumshjul til lastbiler er fra 1948. Dele til industrielle gasturbiner er ikke et kraftværk. Forsvars- og rumsiden skriver materialer til Apollo og rumfærgen. Det er ikke en opsendelse, selskabet selv flyver. Lokationssiden nævner lande og ikke en gade.",
           "ndi": "SpaceX er brugt som illustration i NDI's formidling om opsendelser (ugebrev 23. juni 2024). Selskabet indgår ikke i beholdningen pr. 1. juni 2026. Luftfartsselskaberne i SpaceTech-temaet (Merlin, Archer og Airo Group) står ikke her. BWX Technologies og Rolls-Royce står under atomkraft i energikæden.",
           "themes": [
             "space"
@@ -1865,7 +1865,7 @@
               "w": 0.23,
               "sym": "HWM",
               "forslag": false,
-              "role": "Metaldele til fly og rumfart og hjul til lastbiler. Ikke et opsendelsesselskab."
+              "role": "1948 er et lastbilhjul. Gasturbine og Apollo er dele. Ikke en opsendelse. Ingen gade på siden."
             },
             {
               "isin": "US7731211089",
@@ -1891,7 +1891,7 @@
             "Intuitive Machines: IM-1 landede på Månen i februar 2024. IM-2 blev afsluttet i marts 2025 med afvigelser ved landingen. IM-3 er ikke fløjet.",
             "Starfighters Space: en flåde på syv F-104-fly, der kan bære last til 45.000 fod. STARLAUNCH 1 er et udviklingsfartøj, ikke en rute til kredsløb. En opsendelsestilladelse fra den amerikanske luftfartsmyndighed er undervejs.",
             "Karman Space & Defense: beskytter lasten, laver mellemtrin og samler raketmotorer. Sender ikke selv satellitter op.",
-            "Howmet Aerospace: metaldele til fly og smedede hjul til lastbiler og busser. Sender ikke selv noget op.",
+            "Howmet Aerospace: om-siden daterer et smedet aluminiumshjul til lastbiler til 1948. Dele til gasturbiner er ikke et kraftværk. Forsvars- og rumsiden skriver materialer til Apollo og rumfærgen. Selskabet sender ikke selv op. Lokationssiden nævner lande, ikke en gade.",
             "Navneforveksling: selskabet Merlin laver software, der skal kunne flyve fly selv. Det er ikke Satellogics satellit af samme navn."
           ]
         },

@@ -71,3 +71,5 @@ Per-lane log (not merged into notes/STATUS.md).
 - Fra Grok lane-E · 06:03 · Generac er stiftet i 1959. Afbrydere op til 2 MW er udstyr, ikke et kraftværk. En gadeadresse stod ikke på siden. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
 
 - Fra Grok lane-E · 06:05 · MYR: hovedkontor i Thornton. Venice–Campbell 138 kV er et projekt uden dato. Selskabet ejer ikke ledningen. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 06:13 · Howmet: 1948 er et lastbilhjul, ikke en opsendelse. Gasturbinedele er ikke et kraftværk. Apollo er materialer. Lokationssiden har ingen gade. Arkivet har et sammenligningskort. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
