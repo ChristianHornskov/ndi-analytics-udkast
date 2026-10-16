@@ -1154,7 +1154,7 @@
               "w": 0.39,
               "sym": "NEE",
               "forslag": true,
-              "role": "St. Lucie, Turkey Point og Point Beach blev udvidet i 2013. Ikke et nyt værk."
+              "role": "Udvidelse i 2013 på seks enheder. Aftale med Dominion 18. maj 2026 er ikke lukket. Op til 10 GW gas er udvikling, ikke værker."
             },
             {
               "isin": "US1651677353",
@@ -1170,7 +1170,7 @@
               "w": 0.29,
               "sym": "CMI",
               "forslag": false,
-              "role": "Fem dele: komponenter, motorer, distribution, kraftsystemer og Accelera. Ikke et elselskab."
+              "role": "Hovedsæde i Columbus siden 1919. Mere end 13.000 forhandlere er uden egen dato. Ikke et elselskab."
             },
             {
               "isin": "US8425871071",
@@ -1311,14 +1311,14 @@
           ],
           "seeChain": null,
           "facts": [
-            "NextEra Energy: NextEra skriver, at en effektudvidelse på St. Lucie, Turkey Point og Point Beach blev færdig i 2013 og omfattede seks atomkraftenheder. Det er ikke et nyt værk.",
+            "NextEra Energy: NextEra skriver, at en effektudvidelse på St. Lucie, Turkey Point og Point Beach blev færdig i 2013 og omfattede seks atomkraftenheder. Det er ikke et nyt værk. Selskabet skrev 18. maj 2026, at aftalen med Dominion ikke er lukket. Op til 10 GW gas i Texas og Pennsylvania er udvikling, ikke værker.",
             "Southern Company: Southern skriver, at Plant Vogtle har fire enheder i drift og leverer strøm til mere end 1 million hjem og virksomheder i Georgia. Det er ikke en lille reaktor under udvikling.",
             "Comstock Resources: Comstock skriver, at jordpositionen i Western Haynesville i det østlige Texas er mere end 535.000 netto-acres, og at gasproduktionen er certificeret efter MiQ-standarden. Det er brændsel, ikke en mine.",
             "Antero Resources: Antero skriver, at det har over 850.000 acres i Marcellus uden dato, og at 24 millioner tønder LPG gik til eksport i 2025. Det er brændsel, ikke en mine.",
             "EQT: EQT skriver, at købet af Equitrans Midstream blev gennemført 22. juli 2024, og at der er cirka 4.000 boresteder. Det er ikke et målt år.",
             "Expand Energy: Expand Energy skrev 16. september 2026, at handlen med Twin Eagle er gennemført. Det er efter beholdningen. Twin Eagle er et marketingselskab, ikke en mine.",
             "T1 Energy: T1 Energy laver solcellemoduler.",
-            "Cummins: Cummins skriver, at forretningen er delt i komponenter, motorer, distribution, kraftsystemer og Accelera. Det er ikke et elselskab.",
+            "Cummins: Cummins skriver, at forretningen er delt i komponenter, motorer, distribution, kraftsystemer og Accelera. Mere end 13.000 certificerede forhandlere står uden egen dato. Det er ikke et elselskab.",
             "Generac: Generac skriver, at det laver reservegeneratorer til hjemmet, bærbare generatorer, sol og batterilagring og ladere til elbiler.",
             "Babcock & Wilcox: Babcock & Wilcox leverer kedler og service.",
             "GE Vernova: GE Vernova skriver, at gassiden viser turbinerne 9HA, 7HA og LM2500, og at dampkraft til atomkraft understøtter mere end 80 anlæg i Amerika. Cirka 85 GW er den installerede base hos selskabet og hos andre leverandører. Selskabet driver ikke værkerne.",
@@ -1457,7 +1457,7 @@
               "w": 0.28,
               "sym": "PRIM",
               "forslag": true,
-              "role": "Bygger nettet og infrastruktur frem til datacentre. Ejer ikke strømmen."
+              "role": "Kontor i Dallas. Fort Worth er linjearbejde, ikke en ledning selskabet ejer. Bakersfield og Irvine er ikke den samme adresse."
             },
             {
               "isin": "US74762E1029",
@@ -1496,7 +1496,7 @@
           "facts": [
             "Quanta Services: Quanta skriver, at West Fort McMurray-projektet i Alberta omfatter over 310 miles 500 kV-ledning og stationerne Livock og Thickwood Hills. Siden kalder det et projekt. Quanta ejer ikke ledningen.",
             "MYR Group: MYR skriver, at arbejdet også dækker kommercielle og industrielle anlæg og vedvarende energi.",
-            "Primoris Services: Primoris skriver, at rødderne går tilbage til ARB i Bakersfield i 1960, og at selskabet også bygger infrastruktur frem til datacentre. Det ejer ikke strømmen og ikke datacentret.",
+            "Primoris Services: Primoris skriver, at rødderne går tilbage til ARB i Bakersfield i 1960, og at selskabet også bygger infrastruktur frem til datacentre. Kontaktsiden skriver selskabet i Dallas og linjearbejde i Fort Worth. Irvine er ikke Bakersfield. Det ejer ikke strømmen og ikke datacentret.",
             "GE Vernova: GE Vernova skriver, at GIS-udstyr dækker fra 50 kV til 800 kV, og at afbrydere til generatorer dækker installationer op til 1.500 MW. Det er udstyr. Selskabet driver ikke værkerne.",
             "Solaris Energy Infrastructure: Solaris leverer strøm tæt på store forbrugere. Selskabet skrev 6. juli 2026, at det har købt GESA. Det er efter beholdningen og er service, ikke et kraftværk i drift.",
             "Tantalus Systems: Tantalus skriver, at det laver en platform til distributionsnet, med TRUConnect, TRUFlex, TRUGrid, TRUSync og TRUSense. Det er udstyr og software. Selskabet driver ikke nettet."

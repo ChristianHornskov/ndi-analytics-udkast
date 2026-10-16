@@ -509,15 +509,15 @@
   "US65339F1012": {
    "name": "NextEra Energy",
    "theme": "energy",
-   "summary": "Elselskab med atomkraft, gas, sol og vind. Selskabet skriver, at en effektudvidelse på St. Lucie, Turkey Point og Point Beach blev færdig i 2013. Det er ikke et nyt værk.",
-   "watch": "Om sammenlægningen med Dominion bliver gennemført. Teksten siger ikke, at den er sket. Udvidelsen i 2013 er ikke et nyt værk.",
-   "source": "https://www.nexteraenergy.com/about-us.html",
-   "products": "El fra blandt andet St. Lucie, Turkey Point og Point Beach. Udvidelsen i 2013 er ikke et nyt værk.",
-   "customers": "Husholdninger og virksomheder, herunder Florida Power & Light. Teksten nævner mere end 6 millioner tilslutninger.",
-   "role": "Eksisterende elproduktion. Udvidelsen i 2013 er ikke et nyt værk.",
+   "summary": "Elselskab med atomkraft, gas, sol og vind. Udvidelsen i 2013 omfattede seks enheder. Aftalen med Dominion 18. maj 2026 er ikke lukket. Op til 10 GW gas er udvikling, ikke værker.",
+   "watch": "Om aftalen med Dominion bliver godkendt og lukket. 12 til 18 måneder er en forventning. 10 GW er ikke værker i drift.",
+   "source": "https://newsroom.nexteraenergy.com/2026-05-18-NextEra-Energy-and-Dominion-Energy-to-Combine,-Creating-the-Worlds-Largest-Regulated-Electric-Utility-Business-and-North-Americas-Premier-Energy-Infrastructure-Platform-Benefiting-Customers?l=12",
+   "products": "El fra St. Lucie, Turkey Point og Point Beach efter udvidelsen i 2013. Gas i Texas og Pennsylvania er udvikling, ikke værker.",
+   "customers": "Florida Power & Light. Mere end 6 millioner tilslutninger på forsiden er uden dato. Cirka 12 millioner mennesker står i meddelelsen 18. maj 2026. De to tal er ikke det samme.",
+   "role": "Eksisterende elproduktion. Aftalen med Dominion er ikke lukket. 10 GW gas er ikke værker.",
    "narrative": [
-    "NextEra skriver, at en effektudvidelse på atomkraftværkerne St. Lucie, Turkey Point og Point Beach blev færdig i 2013 og omfattede seks enheder. Datoen ligger før beholdningen pr. 1. juni 2026. Det er en udvidelse af eksisterende enheder, ikke et nyt værk. Selskabet skriver også, at Florida Power & Light har mere end 6 millioner tilslutninger.",
-    "Koncernen producerer strøm fra sol, vind, gas og atomkraft. Derfor står den på elproduktion og ikke som udvikler af små reaktorer. Temaet i snapshottet er et forslag. Forsiden skriver, at NextEra og Dominion Energy skal lægges sammen. Teksten siger ikke, at sammenlægningen er gennemført."
+    "Selskabet er noteret på New York Stock Exchange under NEE. Hovedkontoret ligger i Juno Beach i Florida. En gadeadresse stod ikke i de læste meddelelser og er ikke opfundet. Om-siden skriver, at udvidelsen i 2013 på St. Lucie, Turkey Point og Point Beach omfattede seks atomkraftenheder. Det er ikke et nyt værk. Forsiden, læst 16. oktober 2026, skriver mere end 6 millioner tilslutninger og omkring 12 millioner mennesker i Florida. Meddelelsen 18. maj 2026 skriver cirka 12 millioner mennesker. Tilslutninger og mennesker er ikke det samme. Forsidens tal har ingen dato. Ordene largest, leading og premier er ikke taget med.",
+    "Selskabet skrev 18. maj 2026, at det har indgået en endelig aftale med Dominion Energy om at lægge selskaberne sammen. Aftalen er ikke gennemført. Lukning ventes om 12 til 18 måneder og afventer godkendelser, blandt andet fra aktionærer, FERC og NRC samt tilsyn i Virginia, North Carolina og South Carolina. Aftaledatoen ligger før beholdningen pr. 1. juni 2026. Lukningen ligger efter. 10 millioner tilslutninger og 110 GW står som det samlede selskab, hvis aftalen lukkes. Det er ikke driften i dag, og 110 GW er ikke et målt år. To hovedkontorer i Juno Beach og Richmond er planen, hvis aftalen lukkes. Selskabet skrev 20. marts 2026, at en godkendelse dækker udvikling af op til 10 GW gasfyret produktion i Texas og Pennsylvania. Teksten siger, at det afventer endelige dokumenter, byggeri og idriftsættelse. Tæt på 30 hubs er projekter på forskellige stadier. Omkring 40 er et mål. Det er ikke værker i drift. Beløb er ikke taget med."
    ],
    "narrativeSources": [
     {
@@ -527,6 +527,14 @@
     {
      "label": "Selskabets forside",
      "url": "https://www.nexteraenergy.com/"
+    },
+    {
+     "label": "Aftale med Dominion, 18. maj 2026",
+     "url": "https://newsroom.nexteraenergy.com/2026-05-18-NextEra-Energy-and-Dominion-Energy-to-Combine,-Creating-the-Worlds-Largest-Regulated-Electric-Utility-Business-and-North-Americas-Premier-Energy-Infrastructure-Platform-Benefiting-Customers?l=12"
+    },
+    {
+     "label": "Gas, 20. marts 2026",
+     "url": "https://newsroom.nexteraenergy.com/2026-03-20-NextEra-Energy-receives-approval-from-President-Donald-J-Trump-to-develop-up-to-10-GW-of-natural-gas-powered-generation-to-meet-nations-historic-power-demand?l=12"
     }
    ]
   },
@@ -2118,15 +2126,15 @@
   "US2310211063": {
    "name": "Cummins",
    "theme": "physical",
-   "summary": "Fremstiller motorer og generatorer. Selskabet skriver, at forretningen er delt i komponenter, motorer, distribution, kraftsystemer og Accelera. Det er ikke et elselskab.",
-   "watch": "Efterspørgsel efter motorer og generatorer. Selskabet er ikke et elselskab.",
+   "summary": "Fremstiller motorer og generatorer. Fem dele: komponenter, motorer, distribution, kraftsystemer og Accelera. Mere end 13.000 forhandlere står uden egen dato. Det er ikke et elselskab.",
+   "watch": "Om forhandlertallet bliver læst som fabrikker. Tallet har ingen egen dato. Selskabet er ikke et elselskab.",
    "source": "https://investor.cummins.com/",
-   "products": "Motorer, generatorer, komponenter, kraftsystemer og Accelera.",
-   "customers": "Lastbilproducenter, industri og kunder, der skal bruge strøm på stedet.",
-   "role": "Udstyr til elproduktion i lille skala, ikke et elselskab.",
+   "products": "Motorer, generatorer, koblingsanlæg og batterisystemer. Udstyr, ikke et lager i drift.",
+   "customers": "Forhandlere og slutkunder. Navne er ikke taget med.",
+   "role": "Udstyr til elproduktion. Ikke et elselskab.",
    "narrative": [
-    "Cummins skriver, at forretningen har fem dele: komponenter, motorer, distribution, kraftsystemer og Accelera. Distribution er selskabets egen del, ikke et elnet.",
-    "Selskabet skriver, at det har hovedsæde i Columbus i Indiana, og at det er stiftet i 1919. I kæden står det på elproduktion, fordi generatorerne kan lave strøm. Det er ikke et elselskab."
+    "Investorsiden, læst 16. oktober 2026, skriver Cummins Inc. (CMI). Siden siger ikke, at selskabet er noteret på en navngiven børs. Hovedsædet ligger i Columbus i Indiana, og selskabet er stiftet i 1919. Sidefoden skriver postboks 3005, Columbus, IN 47202-3005. Det er en postboks, ikke en fabrik. Investorkontoret ligger på 301 East Market Street i Indianapolis i Indiana. Det er et kontor, ikke en fabrik. cummins.com gav 403 samme dag og er ikke brugt.",
+    "Forretningen er delt i Components, Engine, Distribution, Power Systems og Accelera. Distribution er selskabets egen del, ikke et elnet. Siden viser omkring 640 distributører, herunder egne, joint ventures og uafhængige, mere end 13.000 certificerede forhandlere og omkring 190 lande. Tallene har ingen egen dato. 31. december 2025 står ved 10-K-linjen ved siden af og er ikke taget som forhandlernes dato. Omkring 70.000 medarbejdere står uden dato. Generatorer og batterisystemer er udstyr. Det er ikke et elselskab og ikke et lager i drift. Beløb og ordet leader er ikke taget med."
    ],
    "narrativeSources": [
     {
@@ -2259,17 +2267,21 @@
   "US74164F1030": {
    "name": "Primoris Services",
    "theme": "physical",
-   "summary": "Bygger elnet, rørledninger og infrastruktur frem til datacentre. Selskabet skriver, at rødderne går tilbage til ARB i Bakersfield i 1960, og at Primoris blev dannet i 2004. Det producerer ikke strømmen.",
-   "watch": "Om arbejdet er byggeri. Teksten beskriver ikke ejerskab af strømmen eller af datacentret.",
-   "source": "https://www.prim.com/about/history",
+   "summary": "Bygger elnet, rørledninger og infrastruktur frem til datacentre. Kontoret i Dallas er ikke en ledning. Fort Worth er linjearbejde. Bakersfield og Irvine er ikke den samme adresse.",
+   "watch": "Om et kontor bliver læst som en ledning. Selskabet ejer ikke strømmen.",
+   "source": "https://www.prim.com/contact",
    "products": "Byggeri af elnet, rørledninger og anlæg. Også infrastruktur frem til datacentre. Ikke selve strømmen.",
    "customers": "Elselskaber, energiselskaber og industri. Ikke ejer af datacentret i denne tekst.",
-   "role": "Bygger nettet og infrastruktur frem til datacentre. Ejer ikke strømmen.",
+   "role": "Bygger nettet. Kontorerne er ikke ledningerne.",
    "narrative": [
-    "Primoris skriver, at rødderne går tilbage til 1960 og stiftelsen af ARB, Inc. i Bakersfield i Californien, et selskab, der bygger rørledninger. Primoris blev dannet i 2004 som moderselskab. Siden om datacentre skriver, at selskabet planlægger, bygger og forbinder infrastruktur til gas, sol og batterilagring og til strøm frem til datacentre. Det ejer ikke strømmen og ikke datacentret.",
-    "I kæden står selskabet på elnet. Domænet primoriscorp.com peger den 16. oktober 2026 videre til prim.com."
+    "Historien skriver, at rødderne går tilbage til 1960 og stiftelsen af ARB, Inc. i Bakersfield i Californien. Primoris blev dannet i 2004 som moderselskab. Siden om datacentre skriver, at selskabet planlægger, bygger og forbinder infrastruktur til gas, sol og batterilagring og til strøm frem til datacentre. Det ejer ikke strømmen og ikke datacentret. Ordene ranked, top five og pioneering er ikke taget med.",
+    "Kontaktsiden, læst 16. oktober 2026, skriver Primoris Services Corporation på 2300 N. Field Street #1900 i Dallas i Texas. Brev til bestyrelsen bruger Suite 1900 på samme gade. Det er et kontor, ikke en ledning. Power Line Services og Primoris T&D står begge på 1121 Riverside Dr i Fort Worth. To navne, én adresse. Det er linjearbejde på listen, ikke en ledning selskabet ejer. ARB Industrial, ARB Underground og Edison Power Constructors står på 7515 Irvine Center Drive Suite 200 i Irvine. Irvine er ikke Bakersfield. Primoris Energy Services og Primoris Pipeline står på 14455 Primoris Way i Houston. Det er et kontor på listen, ikke et kraftværk. Siden har flere kontorer. Telefonnumre er ikke taget med. Domænet primoriscorp.com peger den 16. oktober 2026 videre til prim.com."
    ],
    "narrativeSources": [
+    {
+     "label": "Kontakt",
+     "url": "https://www.prim.com/contact"
+    },
     {
      "label": "Historie",
      "url": "https://www.prim.com/about/history"
