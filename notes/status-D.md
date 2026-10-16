@@ -49,3 +49,4 @@ Per-lane log. Ikke notes/STATUS.md.
 - Fra Grok lane-D · 07:22 · Udskriv på embed. Papiret beholder kurven, stoppene og advarslen. Knappen står ikke i opfordringen. PMINDIAKK har knappen og ingen procent. lane-D klar til merge. Ikke main. Ikke færdig.
 - Fra Grok lane-D · 07:28 · Hele forløbet på drawdown: de fire dybe episoder på én tidslinje. Klik hopper til bunden. PMINDIAKK har ingen linje. lane-D klar til merge. Ikke main. Ikke færdig.
 - Fra Grok lane-D · 07:32 · Klik på KID-parret på sammenlign. Sætningen siger klassen: ca. 2,79 % eller ca. 2,85 %. PMINDIAKK stadig uden kurs før 5. dec. 2026. lane-D klar til merge. Ikke main. Ikke færdig.
+- Fra Grok lane-D · 07:26 · Temarækker på sammenlign kan vælges. Sætningen gentager de to vægte. Eksponering, ikke anbefaling. lane-D klar til merge. Ikke main. Ikke færdig.

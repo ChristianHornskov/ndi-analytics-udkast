@@ -392,3 +392,7 @@ Ny form på drawdown, over de tre tidspunkter. Fire streger på én linje. Bredd
 ### Update · KID-tallet · 2026-10-16 ~07:32 CEST
 
 KID-parret på sammenlign kan vælges. PMINDI er ca. 2,79 %. PMINDIAKK er ca. 2,85 %. Sætningen nævner klassen. For PMINDIAKK står også, at kursen vises efter 12 måneder, fra 5. dec. 2026. Den valgte har en gul streg. Knapperne er over 44 px. Ingen sidescroll ved 300–1100. Ingen konsolfejl. På papir bliver begge tal.
+
+### Update · temarække · 2026-10-16 ~07:26 CEST
+
+Hver temarække på sammenlign kan vælges. Sætningen gentager de to vægte, der står i rækken, og siger eksponering, ikke anbefaling. Største forskel åbner på Platforme, 17,2 % og 15,3 %. Et klik på Chips siger 13,3 % og 11,9 %. Rækken er mindst 44 px. Ingen sidescroll ved 320, 390 og 1100. Ingen konsolfejl. På papir bliver rækkerne.

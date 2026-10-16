@@ -56,8 +56,8 @@
  const gapLabel = n1(maxDiff);
  const gapNames = keys.filter((k) => n1(diffOf(k)) === gapLabel).map((k) => daTheme(k));
  const bar = (v, cls, label) => `<span class="cmp-line ${cls}"><span class="sr-only">${label}: </span><span class="cmp-who" aria-hidden="true">${label === 'PMINDIAKK' ? 'AKK' : label}</span><span class="cmp-bar" aria-hidden="true"><span style="width:${((v / max) * 100).toFixed(2)}%"></span></span><span class="cmp-v">${n1(v)} %</span></span>`;
- const themeRows = keys.map((k) => `<li${n1(diffOf(k)) === gapLabel ? ' class="cmp-gap"' : ''}><span class="cmp-name">${esc(daTheme(k))}</span>
- <span class="cmp-pair">${bar(ta[k], 'a', 'PMINDI')}${bar(tb[k], 'b', 'PMINDIAKK')}</span></li>`).join('');
+ const themeRows = keys.map((k) => `<li${n1(diffOf(k)) === gapLabel ? ' class="cmp-gap"' : ''}><button type="button" class="cmp-row" data-name="${esc(daTheme(k))}" data-a="${n1(ta[k] || 0)} %" data-b="${n1(tb[k] || 0)} %"><span class="cmp-name">${esc(daTheme(k))}</span>
+ <span class="cmp-pair">${bar(ta[k], 'a', 'PMINDI')}${bar(tb[k], 'b', 'PMINDIAKK')}</span></button></li>`).join('');
  const navA = lastNav(a.data), navB = lastNav(b.data);
  const firstA = a.data?.[0]?.d || a.inception, firstB = b.data?.[0]?.d || b.inception;
  const navCell = (nav) => (nav ? `${n2(nav.price)} <small class="cmp-when">(${fmtDate(nav.d)})</small>` : '<span class="cmp-empty">Ingen kurs</span>');
@@ -151,6 +151,7 @@
  <p class="src" style="margin-bottom:10px">Vægt pr. tema i hver klasse (primært tema). Største forskel: ca. ${gapLabel} procentpoint${gapNames.length ? `, i ${esc(gapNames.join(' og '))}` : ''}. Rækken har en gul kant. Eksponering, <span class="cmp-when">ikke anbefaling.</span></p>
  <p class="cmp-legend"><span><span class="cmp-key a" aria-hidden="true"></span>PMINDI</span><span><span class="cmp-key b" aria-hidden="true"></span>PMINDIAKK</span></p>
  <ul class="cmp-themes">${themeRows}</ul>
+ <p class="cmp-theme-say" id="theme-say"></p>
  <p class="link-row chip-links" style="margin-top:10px"><a href="temaer.html">Alle temaer →</a> · <a href="om-data.html#g-akk">Hvad betyder akkumulerende?</a></p>
  </section>
 
@@ -181,6 +182,16 @@
  paintCost(riyA ? 'a' : 'b');
  document.querySelectorAll('.cmp-cost-pair button').forEach((btn) => {
  btn.addEventListener('click', () => paintCost(btn.dataset.cost));
+ });
+ const themeSay = document.getElementById('theme-say');
+ const paintTheme = (btn) => {
+ document.querySelectorAll('.cmp-row').forEach((b) => b.setAttribute('aria-pressed', String(b === btn)));
+ if (themeSay && btn) themeSay.innerHTML = `${esc(btn.dataset.name)}: PMINDI <span class="cmp-when">${esc(btn.dataset.a)}</span>. PMINDIAKK <span class="cmp-when">${esc(btn.dataset.b)}</span>. Eksponering, <span class="cmp-when">ikke anbefaling.</span>`;
+ };
+ const themeStart = document.querySelector('.cmp-themes .cmp-gap .cmp-row') || document.querySelector('.cmp-row');
+ if (themeStart) paintTheme(themeStart);
+ document.querySelectorAll('.cmp-row').forEach((btn) => {
+ btn.addEventListener('click', () => paintTheme(btn));
  });
  </script>
 </body>

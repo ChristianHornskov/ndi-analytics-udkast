@@ -613,8 +613,12 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
 .cmp-big strong{font-size:28px;color:var(--cyan);font-weight:500;margin-right:4px}
 .cmp-legend{display:flex;gap:16px;font-size:12px;color:var(--muted);margin:0 0 8px}
 .cmp-themes{list-style:none;margin:0;padding:0}
-.cmp-themes li{display:grid;grid-template-columns:minmax(120px,200px) 1fr;gap:12px;align-items:center;padding:8px 0 8px 8px;border-top:1px solid var(--line);font-size:13px}
+.cmp-themes li{display:block;padding:0;border:0;font-size:13px}
 .cmp-themes li.cmp-gap{box-shadow:inset 3px 0 0 var(--yellow)}
+.cmp-row{display:grid;grid-template-columns:minmax(120px,200px) 1fr;gap:12px;align-items:center;width:100%;min-height:44px;margin:0;padding:8px 0 8px 8px;border:0;border-top:1px solid var(--line);background:transparent;color:inherit;font:inherit;font-size:13px;text-align:left;cursor:pointer}
+.cmp-row[aria-pressed=true] .cmp-name{box-shadow:inset 0 -2px 0 var(--yellow)}
+.cmp-row:focus-visible{outline:2px solid var(--cyan);outline-offset:2px;border-radius:8px}
+.cmp-theme-say{margin:8px 0 0;font-size:14px;line-height:1.45;color:var(--text);border-left:3px solid var(--cyan);padding:2px 0 2px 10px}
 .cmp-name{color:var(--text)}
 .cmp-pair{display:grid;gap:4px;min-width:0}
 .cmp-line{display:grid;grid-template-columns:52px minmax(0,1fr) 64px;gap:8px;align-items:center}
@@ -634,7 +638,8 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
   .tl li{padding:0 0 0 20px}
   .tl li::before{top:5px}
   .tl li::after{top:17px;left:4px;right:auto;width:2px;height:calc(100% + 3px)}
-  .cmp-themes li{grid-template-columns:1fr;gap:6px}
+  .cmp-themes li{display:block}
+  .cmp-row{grid-template-columns:1fr;gap:6px}
 }
 
 /* NDI på X — own cards, no embed */
@@ -912,6 +917,8 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
   .cmp-line.b .cmp-bar span,.cmp-key.b{background:#5f8f96;print-color-adjust:exact}
   .cmp-card,.fork,.cmp-cost{break-inside:avoid}
   .cmp-cost-pair button{display:flex !important;color:#111 !important;box-shadow:none !important}
+  .cmp-row{display:grid !important;color:#111 !important;background:#fff}
+  .cmp-theme-say,.cmp-name{color:#111}
   .cmp-cost-say{color:#111;border-left-color:#111}
   .ep-stop{display:block !important}
   .hero-stat,.ep-ledger li,.year-rail a{break-inside:avoid}
