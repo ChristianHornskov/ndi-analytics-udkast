@@ -446,3 +446,10 @@ Hele lane-C-fladen ved 375 px: ideer, kort, om-data, invester, risici, ndi-persp
 - Foldet på mobil ligesom de andre billeder efter de fire første. Dybt link `#h-kd` folder ud.
 - Test (Playwright, lokal 8833) på ideer, om-data, lær-indeks og kort ved 320/375/1280: én h1, 0 overflow, 0 pageerrors. Stemplerne er 292/347/563 px brede.
 - Reviewer cyklus 33: ingen MUST i lane-C-filer. 04:00-checkpointet følger.
+
+## 03:05 CEST lane-C checkpoint (Claude) · ny lær-side «Hvorfor ikke de 11 sektorer?»
+- Vidensbot §5 nævnte «Hvorfor vi ikke bruger de 11 sektorer» med Tesla-eksemplet (mødet 27:36) som egen tekst. Det fandtes kun som matrix på Idéer og som FAQ-svar. Nu er det en lær-side med tre forskellige former: en kasse, der splittes (teknologi 151 → seks temaer), søjler den anden vej (energi 37 ← syv sektorer) og «Vælg et selskab» med seks knapper (aria-pressed, aria-live).
+- Fair over for sektorer: «Det er sektorer gode til» (fælles standard, må gerne stå) mod «Det kan de ikke». Det svarer til MC 27:17: «GICS må gerne vises, men ikke som hovedinddeling».
+- Playwright 375/1280: 0 pageerrors, 0 overflow, én h1, 0 tekster under 12 px (segmenttekst gjort transparent på mobil i stedet for font-size 0). Højde 3.667 px ved 375.
+- Linket fra lær-index (Tankegangen, nu 5 døre), kort, ordliste `#g-gics` og FAQ «Hvorfor står Tesla ikke bare som bilselskab?».
+- Tal fra portfolio.json pr. 1. jun. 2026 (antal pr. sektor × tema, ingen kurser/afkast). Sektorer er offentlige opslag, der svarer til den klassiske inddeling. Det står i kildelinjen.

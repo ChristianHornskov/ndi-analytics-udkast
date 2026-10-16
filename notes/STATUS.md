@@ -1736,3 +1736,6 @@ Ordliste 147 (ESG, krypto/blockchain/stablecoin, EDA, autonom kørsel, LEO, lith
 - Coordinator-loop 2026-10-16 02:46:24 CEST: CONFLICT merge origin/lane-X (ahead 9) — aborted, not pushed
 
 - Coordinator-loop 2026-10-16 02:46:24 CEST: MERGED origin/lane-R with STATUS-ours resolution (ahead was 5) — pending precheck
+
+### Fra Claude/Grok lane-C · 03:05 CEST
+- Ny `docs/laer/sektorer.html` «Hvorfor ikke de 11 sektorer?» (Vidensbot §5, Tesla-eksemplet): split-søjle, omvendte søjler og «Vælg et selskab». Linket fra lær-index, kort, ordliste g-gics og FAQ. Playwright 375/1280 rent. Precheck exit 0. HANDOFF, UX-review og Vidensbot-check er opdateret. Branch lane-C klar til merge. Næste: UX-review 04:00 og reviewer-SHOULDs i egne filer.

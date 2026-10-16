@@ -216,3 +216,7 @@ Sider: ideer, kort, om-data, invester, risici, ndi-perspektiv, laer/*.
 
 ## lane-C · ordliste 147 (03:00)
 - Nye opslag holdt i Vidensbot-tonen: beskriver forretning/teknologi, ingen handelsord, ingen prognoser. Krypto-opslaget understreger «beskriver selskabernes forretning, ikke en anbefaling». Autonom kørsel: «stadig under udvikling».
+
+## lane-C · 03:05 16/10 · laer/sektorer.html
+- Ny side efter Vidensbot §5-ønsket «Hvorfor vi ikke bruger de 11 sektorer». Teksten bruger kun eksponeringssprog («hvilken del af udviklingen giver selskabet os?», «Vi vælger udviklingen, ikke vinderen») og flodsystemets første dæmning (energi). Ingen vægte pr. selskab og ingen handelsord.
+- **Bed Vidensbot tjekke:** de seks korte «hvorfor flere temaer»-linjer er omskrevet fra multi-tags.json `why` til almindeligt dansk (fx CoreWeave: «leje af AI-regnekraft i skyen, med et stort behov for strøm»). Er de i tråd med NDI's egen beskrivelse?
