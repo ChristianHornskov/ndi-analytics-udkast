@@ -110,7 +110,7 @@
  <div class="kpi-grid">
  <div class="kpi"><span class="label">Afkast</span><strong class="${(pct||0)>=0?'pos':'neg'}">${fmtPct(pct)}</strong></div>
  <div class="kpi"><span class="label">Fra → til</span><strong style="font-size:16px">${fmtDate(from)} → ${fmtDate(to)}</strong></div>
- <div class="kpi"><span class="label">Gennemsnitligt årligt afkast</span><strong>${fmtPct(cagr(fund.data))}</strong></div>
+ <div class="kpi"><span class="label">Gennemsnitligt årligt afkast siden ${fmtDate(firstNav)}</span><strong>${fmtPct(cagr(fund.data))}</strong></div>
  </div>
  <p class="band">År til dato afventer Fundmarket-godkendelse. Tallet er ikke et helt års afkast.</p>
  ${periodSpan(from, to, year)}

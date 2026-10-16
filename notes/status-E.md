@@ -81,3 +81,5 @@ Per-lane log (not merged into notes/STATUS.md).
 - Fra Grok lane-E · 06:22 · Satellogic: Davidson er ikke Charlotte. Fabrikken i november 2015 har ingen by. Merlin.01 1. oktober 2026 er ikke fuld drift i 2027. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
 
 - Fra Grok lane-E · 06:26 · Merge af main. Korte energiblurbs beholdt. Roller og fakta beholdt. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 06:28 · Periode: gennemsnitligt årligt afkast siger siden første NAV. For PMINDI er det 22. sep. 2023. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
