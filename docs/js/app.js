@@ -1062,13 +1062,13 @@ function onClick(e) {
 
   if (t.id === 'csv-export') {
     flushSearch();
-    // Dansk Excel: UTF-8 BOM, semikolon, decimalkomma. Kun felter der også vises i UI (navn, ISIN, vægt, tema).
+    // Dansk Excel: UTF-8 BOM, semikolon, decimalkomma. Kun felter der også vises i UI (navn, beholdningsnavn, ISIN, vægt, tema).
     const fund = fundById(DATA.portfolio, state.fund);
     const list = filterPositions(fund);
     const asOf = fund.positionsAsOf || DATA.portfolio.asOf;
-    const rows = [['Navn', 'ISIN', 'Ticker', 'Vægt %', 'Temaer', 'Temastatus', 'Før (forslag)', 'Usikkert forslag', 'Alternativ', 'Beholdning pr.']].concat(
+    const rows = [['Navn', 'Beholdningsnavn', 'ISIN', 'Ticker', 'Vægt %', 'Temaer', 'Temastatus', 'Før (forslag)', 'Usikkert forslag', 'Alternativ', 'Beholdning pr.']].concat(
       list.map((p) => [
-        p.name || '', p.isin || '', p.symbol || '',
+        displayName(p), p.name || '', p.isin || '', p.symbol || '',
         p.weight == null ? '' : p.weight.toFixed(2).replace('.', ','),
         tagsFor(p, DATA.multiTags).map(daTheme).join(' | '),
         p.themeStatus === 'forslag' ? 'forslag (udkast)' : '',
