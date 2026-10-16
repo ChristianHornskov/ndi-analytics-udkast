@@ -74,13 +74,22 @@
  const t0 = Date.parse(rows[0].d + 'T12:00:00Z');
  const t1 = Date.parse(rows[rows.length - 1].d + 'T12:00:00Z');
 
- const W = 360, H = 240, padL = 28, padR = 12, padT = 32, padB = 76;
+ const W = 396, H = 240, padL = 28, padR = 48, padT = 32, padB = 76;
  const xOf = d => padL + ((Date.parse(d + 'T12:00:00Z') - t0) / Math.max(1, t1 - t0)) * (W - padL - padR);
  const yOf = v => padT + ((-Math.min(0, v)) / yMax) * (H - padT - padB);
  let deep = eps.filter(e => e.dd <= -10).sort((a, b) => a.peakD.localeCompare(b.peakD));
  const usedGate = deep.length > 0;
  if (!deep.length) deep = [...eps].sort((a, b) => a.dd - b.dd).slice(0, 3).sort((a, b) => a.peakD.localeCompare(b.peakD));
  const endOf = e => e.recoveredD || rows[rows.length - 1].d;
+ const epD = (from, to) => {
+ let d = '', n = 0;
+ for (const u of uw) {
+ if (u.d < from || u.d > to) continue;
+ d += `${n ? 'L' : 'M'}${xOf(u.d).toFixed(1)},${yOf(u.u).toFixed(1)}`;
+ n++;
+ }
+ return n >= 2 ? d : '';
+ };
  const underwater = () => {
  const line = uw.map((u, i) => `${i ? 'L' : 'M'}${xOf(u.d).toFixed(1)},${yOf(u.u).toFixed(1)}`).join(' ');
  const y0 = yOf(0);
@@ -132,17 +141,20 @@
  }
  if (recovery) {
  const rx = xOf(recovery).toFixed(1);
- parts.push(`<line class="uw-up-tick" x1="${rx}" x2="${rx}" y1="${(y0 - 7).toFixed(1)}" y2="${y0.toFixed(1)}"/>`);
- parts.push(`<text class="uw-up" x="${rx}" y="16" text-anchor="middle">tilbage</text>`);
+ const backY = 16;
+ parts.push(`<line class="uw-up-tick" x1="${rx}" x2="${rx}" y1="${backY + 5}" y2="${y0.toFixed(1)}"/>`);
+ parts.push(`<text class="uw-up" x="${rx}" y="${backY}" text-anchor="middle">tilbage</text>`);
  }
  if (open) {
  const x1 = xOf(open.peakD).toFixed(1);
+ const topY = 18;
  const inRail = deep.some((e) => e.peakD === open.peakD);
  const y2 = inRail ? (railTop + barH(open)).toFixed(1) : (H - padB).toFixed(1);
- parts.push(`<line class="uw-open" x1="${x1}" x2="${x1}" y1="${y0.toFixed(1)}" y2="${y2}"/>`);
- parts.push(`<text class="uw-label" x="${x1}" y="18" text-anchor="middle">top</text>`);
+ parts.push(`<line class="uw-open" x1="${x1}" x2="${x1}" y1="${topY + 5}" y2="${y2}"/>`);
+ parts.push(`<text class="uw-label" x="${x1}" y="${topY}" text-anchor="middle">top</text>`);
  }
  parts.push(`<path class="uw-line" d="${line}"/>`);
+ parts.push(`<path id="uw-ep" class="uw-ep" d=""/>`);
  const trough = uw.find(u => u.d === dd.troughD) || uw.reduce((a, b) => a.u < b.u ? a : b);
  const tx = xOf(trough.d), ty = yOf(trough.u);
  const last = uw[uw.length - 1];
@@ -154,11 +166,13 @@
  const lx = Math.min(W - padR - 4, Math.max(padL + 28, tx));
  parts.push(`<text class="uw-label uw-max-label" x="${lx.toFixed(1)}" y="${Math.max(12, ty - 7)}" text-anchor="middle">${fmtPct(trough.u, 0)}</text>`);
  parts.push(`<circle class="uw-now" cx="${nx.toFixed(1)}" cy="${ny.toFixed(1)}" r="3.4"/>`);
- parts.push(`<text class="uw-label uw-now-label" x="${(nx - 6).toFixed(1)}" y="${Math.max(12, ny - 6)}" text-anchor="end">nu ${fmtPct(last.u, 0)}</text>`);
+ const nowX = (nx + 8).toFixed(1);
+ const nowTop = Math.max(14, ny - 4);
+ parts.push(`<text class="uw-label uw-now-label" text-anchor="start"><tspan x="${nowX}" y="${nowTop.toFixed(1)}">nu</tspan><tspan x="${nowX}" y="${(nowTop + 11).toFixed(1)}">${fmtPct(last.u, 0)}</tspan></text>`);
  const barSay = usedGate
  ? `${deep.length} søjler mellem kurven og årstallene er episoder dybere end 10 %. Højden er dybden, bredden er tiden. Stregen ved 10 % under nul er grænsen for de søjler.`
  : `${deep.length} søjler mellem kurven og årstallene er de dybeste episoder. Højden er dybden, bredden er tiden.`;
- const desc = `Daglig afstand til løbende top fra ${fmtDate(rows[0].d)} til ${fmtDate(rows[rows.length - 1].d)}. Stregen ved nul er toppen. Dybeste bund ${fmtPct(trough.u)} den ${fmtDate(trough.d)}. Seneste dag ${fmtPct(last.u)}. ${open ? `Den tynde gule streg til højre er toppen ${fmtDate(open.peakD)}, hvor den åbne episode startede.` : ''} ${barSay} Den valgte har en lys kant. Et klik på søjlen hopper til bunden. ${recovery ? `Ordet tilbage markerer ${fmtDate(recovery)}, hvor det dybeste fald igen nåede sin top.` : ''} Slideren vælger en dag. En cyan prik sættes på kurven, medmindre dagen allerede er den gule prik eller den gule ring.`;
+ const desc = `Daglig afstand til løbende top fra ${fmtDate(rows[0].d)} til ${fmtDate(rows[rows.length - 1].d)}. Stregen ved nul er toppen. Dybeste bund ${fmtPct(trough.u)} den ${fmtDate(trough.d)}. Seneste dag ${fmtPct(last.u)}, ved ringen. ${open ? `Den tynde gule streg til højre er toppen ${fmtDate(open.peakD)}, hvor den åbne episode startede.` : ''} ${barSay} Den valgte har en lys kant. Den gule del af kurven er den episode, den valgte dag ligger i. Et klik på søjlen hopper til bunden. ${recovery ? `Ordet tilbage markerer ${fmtDate(recovery)}, hvor det dybeste fald igen nåede sin top.` : ''} Slideren vælger en dag. En cyan prik sættes på kurven, medmindre dagen allerede er den gule prik eller den gule ring.`;
  return `<svg id="uw-svg" class="uw" viewBox="0 0 ${W} ${H}" role="img" aria-labelledby="uw-title uw-desc"><title id="uw-title">Under vand</title><desc id="uw-desc">${desc}</desc>${parts.join('')}</svg>`;
  };
 
@@ -167,12 +181,18 @@
  const plotW = W - padL - padR;
  const xOf = v => padL + (Math.min(yMax, -v) / yMax) * plotW;
  const lanes = [-26, -16, -6, 4, 14];
+ const labs = [];
  const dots = eps.map((e, i) => {
  const isMax = Math.abs(e.dd - sum.max) < 0.001;
  const isOpen = !e.recoveredD;
  const cls = isMax ? 'dot max' : isOpen ? 'dot open' : 'dot';
  const cy = 64 + lanes[i % lanes.length];
- return `<circle class="${cls}" cx="${xOf(e.dd).toFixed(1)}" cy="${cy}" r="${isMax || isOpen ? 4 : 3.1}"><title>${fmtDate(e.peakD)} til ${fmtDate(e.troughD)}: ${fmtPct(e.dd)}</title></circle>`;
+ const cx = xOf(e.dd);
+ if (usedGate && e.dd <= -10) {
+ const lab = isMax ? 'dot-lab max' : isOpen ? 'dot-lab open' : 'dot-lab';
+ labs.push(`<text class="${lab}" x="${cx.toFixed(1)}" y="${(cy - 11).toFixed(1)}" text-anchor="middle">${fmtPct(e.dd, 1)}</text>`);
+ }
+ return `<circle class="${cls}" cx="${cx.toFixed(1)}" cy="${cy}" r="${isMax || isOpen ? 4 : 3.1}"><title>${fmtDate(e.peakD)} til ${fmtDate(e.troughD)}: ${fmtPct(e.dd)}</title></circle>`;
  });
  const medX = xOf(sum.median).toFixed(1);
  const meanX = xOf(sum.mean).toFixed(1);
@@ -188,14 +208,15 @@
  `<line class="mark-med" x1="${padL}" x2="${padL + 16}" y1="${axisY + 48}" y2="${axisY + 48}"/>`,
  `<text class="tick mark-key" x="${padL + 20}" y="${axisY + 51}" text-anchor="start">median ${fmtPct(sum.median)}</text>`,
  `<line class="mark-mean" x1="168" x2="184" y1="${axisY + 48}" y2="${axisY + 48}"/>`,
- `<text class="tick mark-key" x="188" y="${axisY + 51}" text-anchor="start">middel ${fmtPct(sum.mean)}</text>`
+ `<text class="tick mark-key" x="188" y="${axisY + 51}" text-anchor="start">middel ${fmtPct(sum.mean)}</text>`,
+ ...labs
  ];
  for (let g = 0; g <= yMax; g += 10) {
  const xx = (padL + (g / yMax) * plotW).toFixed(1);
  const gate = gateX && g === 10;
  parts.push(`<text class="tick${gate ? ' uw-gate' : ''}" x="${xx}" y="${axisY + 16}" text-anchor="middle">${g === 0 ? '0' : '-' + g}</text>`);
  }
- const desc = `${eps.length} episoder. Median ${fmtPct(sum.median)}. Middel ${fmtPct(sum.mean)}. Dybest ${fmtPct(sum.max)}.${gateX ? ' Stregen ved 10 % under nul er den samme grænse som på kurven. Prikker til højre for den står i listen.' : ''}`;
+ const desc = `${eps.length} episoder. Median ${fmtPct(sum.median)}. Middel ${fmtPct(sum.mean)}. Dybest ${fmtPct(sum.max)}.${gateX ? ' Stregen ved 10 % under nul er den samme grænse som på kurven. Prikker til højre for den har tal og står i listen.' : ''}`;
  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-labelledby="dp-title dp-desc"><title id="dp-title">Fordeling af fald</title><desc id="dp-desc">${desc}</desc>${parts.join('')}</svg>`;
  };
 
@@ -231,7 +252,7 @@
  const anno = open
  ? `Lige nu, pr. ${fmtDate(rows[rows.length - 1].d)}, ligger serien ${fmtPct(nowU)} under toppen fra ${fmtDate(open.peakD)}. Bund i den episode var ${fmtPct(open.dd)} den ${fmtDate(open.troughD)}.`
  : '';
- const depthCap = `Hver prik er ét fald fra top til bund. ${eps.length} i alt. Gul prik er det dybeste fald.${open ? ' Hul gul prik er den åbne episode.' : ''} Median og middel står under aksen.${usedGate ? ' Stregen ved 10 % under nul er den samme grænse som på kurven. Prikker til højre for den står i listen.' : ''}`;
+ const depthCap = `Hver prik er ét fald fra top til bund. ${eps.length} i alt. Gul prik er det dybeste fald.${open ? ' Hul gul prik er den åbne episode.' : ''} Median og middel står under aksen.${usedGate ? ' Stregen ved 10 % under nul er den samme grænse som på kurven. Prikker til højre for den har tal og står i listen.' : ''}`;
 
  main.innerHTML = `
  <a class="back" href="index.html?view=fonden&fund=${fundId}">← Fonden</a>
@@ -252,7 +273,7 @@
  </div>
  ${anno ? `<p class="anno">${anno}</p>` : ''}
  <h2 class="h-section">Under vand</h2>
- <figure class="figure">${underwater()}<figcaption><p>0 % er på toppen. Kurven er afstanden til den løbende top, dag for dag.</p><ul class="uw-key"><li><i class="k-zero" aria-hidden="true"></i>0 % er toppen</li><li><i class="k-dot" aria-hidden="true"></i>Dybeste bund</li><li><i class="k-ring" aria-hidden="true"></i>Seneste dag</li><li><i class="k-pick" aria-hidden="true"></i>Valgt dag</li>${usedGate ? '<li><i class="k-gate" aria-hidden="true"></i>10 % under nul</li>' : ''}<li><i class="k-span" aria-hidden="true"></i><i class="k-span open" aria-hidden="true"></i>Højde er dybde. Gul er åben</li></ul><p>Bredden er tiden. Et klik på søjlen hopper til bunden.${open ? ' Ordet top er starten på den åbne episode.' : ''}${recovery ? ' Ordet tilbage er dagen, det dybeste fald nåede sin top igen.' : ''}</p></figcaption><div class="uw-scrub"><p id="uw-read" aria-live="polite">${fmtDate(uw[uw.length - 1].d)}: ${fmtPct(uw[uw.length - 1].u)} under den løbende top.</p><label class="sr-only" for="uw-slider">Vælg dag i serien</label><input id="uw-slider" type="range" min="0" max="${uw.length - 1}" value="${uw.length - 1}" aria-valuemin="0" aria-valuemax="${uw.length - 1}" aria-valuetext="${fmtDate(uw[uw.length - 1].d)}: ${fmtPct(uw[uw.length - 1].u)} under den løbende top."></div></figure>
+ <figure class="figure">${underwater()}<figcaption><p>0 % er på toppen. Kurven er afstanden til den løbende top, dag for dag.</p><ul class="uw-key"><li><i class="k-zero" aria-hidden="true"></i>0 % er toppen</li><li><i class="k-dot" aria-hidden="true"></i>Dybeste bund</li><li><i class="k-ring" aria-hidden="true"></i>Seneste dag</li><li><i class="k-pick" aria-hidden="true"></i>Valgt dag</li><li><i class="k-ep" aria-hidden="true"></i>Valgt episode</li>${usedGate ? '<li><i class="k-gate" aria-hidden="true"></i>10 % under nul</li>' : ''}<li><i class="k-span" aria-hidden="true"></i><i class="k-span open" aria-hidden="true"></i>Højde er dybde. Gul er åben</li></ul><p>Bredden er tiden. Den gule del af kurven er den episode, den valgte dag ligger i. Et klik på søjlen hopper til bunden.${open ? ' Ordet top er starten på den åbne episode.' : ''}${recovery ? ' Ordet tilbage er dagen, det dybeste fald nåede sin top igen.' : ''}</p></figcaption><div class="uw-scrub"><p id="uw-read" aria-live="polite">${fmtDate(uw[uw.length - 1].d)}: ${fmtPct(uw[uw.length - 1].u)} under den løbende top.</p><label class="sr-only" for="uw-slider">Vælg dag i serien</label><input id="uw-slider" type="range" min="0" max="${uw.length - 1}" value="${uw.length - 1}" aria-valuemin="0" aria-valuemax="${uw.length - 1}" aria-valuetext="${fmtDate(uw[uw.length - 1].d)}: ${fmtPct(uw[uw.length - 1].u)} under den løbende top."></div></figure>
  <h2 class="h-section">Hvor dybe er faldene?</h2>
  <figure class="figure plain">${depthPlot()}<figcaption>${depthCap}</figcaption></figure>
  <h2 class="h-section">De dybe episoder</h2>
@@ -267,19 +288,21 @@
  const svg = document.getElementById('uw-svg');
  const plateLabels = () => {
  svg.querySelectorAll('.uw-plate').forEach((n) => n.remove());
- for (const sel of ['.uw-max-label', '.uw-now-label']) {
- const el = svg.querySelector(sel);
- if (!el) continue;
- const b = el.getBBox();
+ for (const el of svg.querySelectorAll('.uw-max-label, .uw-now-label')) {
+ const nodes = [...el.querySelectorAll('tspan')];
+ const targets = nodes.length ? nodes : [el];
+ for (const node of targets) {
+ const b = node.getBBox();
  if (b.width < 1) continue;
  const plate = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
  plate.setAttribute('class', 'uw-plate');
- plate.setAttribute('x', (b.x - 2).toFixed(1));
- plate.setAttribute('y', (b.y - 1.5).toFixed(1));
- plate.setAttribute('width', (b.width + 4).toFixed(1));
- plate.setAttribute('height', (b.height + 1.5).toFixed(1));
+ plate.setAttribute('x', (b.x - 1.5).toFixed(1));
+ plate.setAttribute('y', (b.y - 0.5).toFixed(1));
+ plate.setAttribute('width', (b.width + 3).toFixed(1));
+ plate.setAttribute('height', (b.height + 1).toFixed(1));
  plate.setAttribute('rx', '2');
  el.before(plate);
+ }
  }
  };
  if (document.fonts?.ready) document.fonts.ready.then(plateLabels);
@@ -321,6 +344,11 @@
  document.querySelectorAll('.uw-span').forEach((el) => {
  el.classList.toggle('on', u.d >= el.dataset.peak && u.d <= el.dataset.end);
  });
+ const epLine = document.getElementById('uw-ep');
+ if (epLine) {
+ const ep = deep.find((e) => u.d >= e.peakD && u.d <= endOf(e));
+ epLine.setAttribute('d', ep ? epD(ep.peakD, endOf(ep)) : '');
+ }
  document.querySelectorAll('.ep-jump').forEach((b) => {
  const on = [...document.querySelectorAll('.uw-span.on')].some((el) => el.dataset.trough === b.dataset.date);
  b.setAttribute('aria-pressed', String(on));

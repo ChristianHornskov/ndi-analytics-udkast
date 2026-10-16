@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
   <title>Idéer · NDI Analytics</title>
- <meta name="description" content="Femten billeder om NDI Analytics: flodsystemet, flere temaer pr. selskab, hvor mange selskaber der er halvdelen af fonden, og hvorfor vi ejer et selskab. Ikke rådgivning.">
+ <meta name="description" content="Seksten billeder om NDI Analytics: flodsystemet, flere temaer pr. selskab, hvor mange selskaber der er halvdelen af fonden, og hvorfor vi ejer et selskab. Ikke rådgivning.">
   <link rel="stylesheet" href="css/ndi.css">
   <!-- og:start -->
  <meta property="og:type" content="website">
  <meta property="og:site_name" content="NDI Analytics (udkast)">
  <meta property="og:locale" content="da_DK">
  <meta property="og:title" content="Idéer · NDI Analytics">
- <meta property="og:description" content="Femten billeder om NDI Analytics: flodsystemet, flere temaer pr. selskab, hvor mange selskaber der er halvdelen af fonden, og hvorfor vi ejer et selskab. Ikke rådgivning.">
+ <meta property="og:description" content="Seksten billeder om NDI Analytics: flodsystemet, flere temaer pr. selskab, hvor mange selskaber der er halvdelen af fonden, og hvorfor vi ejer et selskab. Ikke rådgivning.">
  <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/ideer.html">
  <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
  <meta property="og:image:width" content="1200">
@@ -261,6 +261,18 @@
     .kv-keys dt{font-size:15px;color:var(--text);font-weight:700}
     .kv-keys dd{margin:2px 0 0;font-size:13px;color:var(--muted);line-height:1.45}
     .kv figcaption{font-size:12px;color:var(--faint);margin-top:12px;line-height:1.5}
+    .dr{background:#0b171d;border:1px solid var(--line);border-radius:14px;padding:14px;margin:0;display:grid;gap:14px;grid-template-columns:1fr}
+    @media(min-width:760px){.dr{grid-template-columns:minmax(0,400px) 1fr;align-items:center}}
+    .dr svg{width:100%;max-width:400px;height:auto;justify-self:center;display:block}
+    .dr svg text{font:11px var(--font);fill:var(--text);text-anchor:middle}
+    .dr svg text.w{fill:var(--muted);font-size:10.5px}
+    .dr svg text.lab{font-weight:700;font-size:12px;letter-spacing:.3px}
+    .dr-key{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+    .dr-key li{border-left:3px solid var(--cyan);padding:2px 0 2px 10px;color:var(--muted);font-size:14px;line-height:1.5}
+    .dr-key li.k2{border-left-color:var(--yellow)}
+    .dr-key li.k3{border-left-color:var(--neg)}
+    .dr-key strong{display:block;color:var(--text)}
+    .dr figcaption{grid-column:1/-1}
     .lens{background:#0b171d;border:1px solid var(--line);border-radius:14px;padding:16px;margin:0;display:grid;gap:10px;grid-template-columns:1fr}
     .lens .eye{justify-self:center;width:170px;height:170px;border-radius:50%;border:3px solid var(--cyan);box-shadow:0 0 0 8px rgba(158,207,214,.10),inset 0 0 0 1px var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:14px}
     .lens .eye b{font-size:20px;color:var(--text)}
@@ -290,6 +302,18 @@
     .lc-keys dt{font-weight:600}
     .lc-keys dd{margin:2px 0 0;color:var(--muted);font-size:14px;line-height:1.45}
     .lcw figcaption{margin-top:12px}
+    .idea-sec.open{margin-top:24px}
+    .idea-sec.fold{border-top:1px solid var(--line);margin:0;padding:14px 0 6px}
+    .idea-sec.fold>summary{display:flex;align-items:baseline;justify-content:space-between;gap:12px;cursor:pointer;list-style:none;min-height:44px}
+    .idea-sec.fold>summary::-webkit-details-marker{display:none}
+    .idea-sec.fold>summary h2{margin:0}
+    .idea-sec.fold .more{flex:none;font-size:12px;color:var(--cyan);white-space:nowrap}
+    .idea-sec.fold .more::after{content:"Vis ▾"}
+    .idea-sec.fold[open] .more{color:var(--muted)}
+    .idea-sec.fold[open] .more::after{content:"Skjul ▴"}
+    .idea-sec.fold[open]>summary{margin-bottom:8px}
+    .fold-bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;margin:32px 0 4px;font-size:13px;color:var(--muted)}
+    .fold-bar button{font:inherit;font-size:13px;color:var(--cyan);background:none;border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-height:44px;cursor:pointer}
   </style>
 </head>
 <body>
@@ -338,8 +362,8 @@
 
 
     <nav class="idea-toc" aria-label="Billeder på siden">
-      <p class="lbl">15 billeder på siden</p>
-      <ol><li><a href="#h-flod">Flodsystemet på ét billede</a></li><li><a href="#h-vs">Én kasse eller flere temaer</a></li><li><a href="#h-mx">Samme 345 selskaber, to sorteringer</a></li><li><a href="#h-wk">Vægt er ikke kurs</a></li><li><a href="#h-tf">Fra «Andet» til tema</a></li><li><a href="#h-pr">345 aktier, én prik hver</a></li><li><a href="#h-kv">Hvor mange selskaber er halvdelen?</a></li><li><a href="#h-lc">Hvor på bakken ligger vægten?</a></li><li><a href="#h-uw">Fald fra top som episoder</a></li><li><a href="#h-ur">Tre ure på samme side</a></li><li><a href="#h-lag">Hvad står der i tallet?</a></li><li><a href="#h-kl">To klasser, samme temaer</a></li><li><a href="#h-stk">Lag på lag</a></li><li><a href="#h-ln">Hvorfor ejer vi den?</a></li><li><a href="#h-hus">Bygget som et hus</a></li></ol>
+      <p class="lbl">16 billeder på siden</p>
+      <ol><li><a href="#h-flod">Flodsystemet på ét billede</a></li><li><a href="#h-vs">Én kasse eller flere temaer</a></li><li><a href="#h-mx">Samme 345 selskaber, to sorteringer</a></li><li><a href="#h-wk">Vægt er ikke kurs</a></li><li><a href="#h-tf">Fra «Andet» til tema</a></li><li><a href="#h-pr">345 aktier, én prik hver</a></li><li><a href="#h-kv">Hvor mange selskaber er halvdelen?</a></li><li><a href="#h-lc">Hvor på bakken ligger vægten?</a></li><li><a href="#h-uw">Fald fra top som episoder</a></li><li><a href="#h-ur">Tre ure på samme side</a></li><li><a href="#h-lag">Hvad står der i tallet?</a></li><li><a href="#h-kl">To klasser, samme temaer</a></li><li><a href="#h-stk">Lag på lag</a></li><li><a href="#h-dr">Tre drivkræfter, ét overlap</a></li><li><a href="#h-ln">Hvorfor ejer vi den?</a></li><li><a href="#h-hus">Bygget som et hus</a></li></ol>
     </nav>
 
     <section class="idea-sec" aria-labelledby="h-flod">
@@ -491,8 +515,10 @@
       </div>
     </section>
 
-    <section class="idea-sec" aria-labelledby="h-tf">
-      <h2 id="h-tf">Fra «Andet» til tema</h2>
+    <div class="fold-bar"><span>Flere billeder nedenfor. Tryk på en overskrift for at folde den ud.</span><button type="button" id="fold-all">Fold alle ud</button></div>
+
+    <details class="idea-sec fold" aria-labelledby="h-tf">
+      <summary><h2 id="h-tf">Fra «Andet» til tema</h2><span class="more" aria-hidden="true"></span></summary>
       <p class="sub">Et NDI-tema bliver ikke sat i ét hug. Selskaber uden tema står i «Andet». Derfra får de et forslag, og porteføljeholdet gennemgår forslagene. Tallene er fra den forsinkede beholdning pr. 1. juni 2026: 345 aktier.</p>
       <figure class="tf">
         <div class="tf-bar" role="img" aria-label="Af 345 aktier står 31 i Andet, 85 har et temaforslag, og 229 har et tema.">
@@ -518,10 +544,10 @@
         </ul>
         <figcaption>Antal selskaber og vægt i den forsinkede beholdning (PMINDI). De 345 aktier vejer tilsammen ca. 92 % i rapporten. Et tema viser eksponering, ikke en anbefaling. <a href="temaer.html">Temaer →</a> · <a href="tema.html?slug=quantum">Quantum →</a> · <a href="om-data.html#g-temaforslag">Ordliste: temaforslag</a></figcaption>
       </figure>
-    </section>
+    </details>
 
-    <section class="idea-sec" aria-labelledby="h-pr">
-      <h2 id="h-pr">345 aktier, én prik hver</h2>
+    <details class="idea-sec fold" aria-labelledby="h-pr">
+      <summary><h2 id="h-pr">345 aktier, én prik hver</h2><span class="more" aria-hidden="true"></span></summary>
       <p class="sub">Hver firkant er ét selskab i den forsinkede beholdning pr. 1. juni 2026. Ingen af dem fylder meget. Det er meningen: Vi kan ikke pege på den ene vinder, så fonden ejer mange af dem, der er med til at bygge teknologien.</p>
       <figure class="pr">
         <p class="pr-key"><span class="sw"></span> = ét selskab · <span class="sw an"></span> = intet NDI-tema endnu · tallet til højre: antal · vægt i fonden</p>
@@ -554,10 +580,10 @@
         </dl>
         <figcaption>Antal selskaber og vægt i PMINDI pr. 1. juni 2026. Temaets vægt er summen af selskabernes vægt. De 345 aktier vejer tilsammen ca. 92 % i rapporten. Viser eksponering, ikke en anbefaling. <a href="laer/hvorfor-mange-aktier.html">Hvorfor så mange aktier? →</a> · <a href="om-data.html#g-vaegt">Ordliste: vægt</a></figcaption>
       </figure>
-    </section>
+    </details>
 
-    <section class="idea-sec" aria-labelledby="h-kv">
-      <h2 id="h-kv">Hvor mange selskaber er halvdelen?</h2>
+    <details class="idea-sec fold" aria-labelledby="h-kv">
+      <summary><h2 id="h-kv">Hvor mange selskaber er halvdelen?</h2><span class="more" aria-hidden="true"></span></summary>
       <p class="sub">Læg positionerne sammen én ad gangen, den største først. Kurven viser, hvor hurtigt vægten hober sig op. Med 345 aktier er fonden bred, men ikke flad: de største positioner vejer mere end de mindste, uden at nogen enkelt fylder meget.</p>
       <figure class="kv">
         <svg viewBox="0 0 360 236" role="img" aria-labelledby="kv-t kv-d">
@@ -582,10 +608,10 @@
         </dl>
         <figcaption>PMINDI pr. 1. juni 2026 fra den offentlige, forsinkede beholdning. Procent af aktiernes samlede vægt, som er ca. 92 % af fonden i rapporten. Kurven er de 345 vægte lagt sammen, uden navne. For PMINDIAKK (320 aktier) skal der 88 til halvdelen. Viser <a href="om-data.html#g-koncentration">koncentration</a> og <a href="om-data.html#g-spredning">spredning</a>, ikke en anbefaling. <a href="#h-pr">Samme vægte som prikker ↑</a> · <a href="laer/hvorfor-mange-aktier.html">Hvorfor så mange aktier? →</a></figcaption>
       </figure>
-    </section>
+    </details>
 
-    <section class="idea-sec" aria-labelledby="h-lc">
-      <h2 id="h-lc">Hvor på bakken ligger vægten?</h2>
+    <details class="idea-sec fold" aria-labelledby="h-lc">
+      <summary><h2 id="h-lc">Hvor på bakken ligger vægten?</h2><span class="more" aria-hidden="true"></span></summary>
       <p class="sub">Bogen tegner et selskabs liv som en bakke: først ingen omsætning, så hurtig vækst, så overskud og til sidst et modent selskab. Hver boble er en fase, og jo større boblen er, jo mere af fonden ligger der. Det meste ligger på vej op ad bakken, hvor pengene stadig går til at bygge det næste.</p>
       <figure class="lcw">
         <svg viewBox="0 0 360 236" role="img" aria-labelledby="lc-t lc-d">
@@ -619,10 +645,10 @@
         </dl>
         <figcaption>PMINDI pr. 1. juni 2026 fra den offentlige, forsinkede beholdning. Procent af aktiernes samlede vægt (ca. 92 % af fonden). <strong>Faserne er et maskinelt forslag ud fra offentlige branchekoder.</strong> NDI har endnu ikke sat en modenhedsgrad for et eneste selskab, så billedet er en skitse, ikke en klassificering. For PMINDIAKK (320 aktier) er tallene næsten de samme: ca. 53 % høj vækst, 30 % vækst med overskud og 14 % moden. Viser fordeling, ikke en anbefaling, og du kan tabe penge. <a href="laer/livscyklus.html">Livscyklus forklaret →</a> · <a href="om-data.html#g-modenhed">Ordliste: modenhed</a></figcaption>
       </figure>
-    </section>
+    </details>
 
-    <section class="idea-sec" aria-labelledby="h-uw">
-      <h2 id="h-uw">Fald fra top som episoder</h2>
+    <details class="idea-sec fold" aria-labelledby="h-uw">
+      <summary><h2 id="h-uw">Fald fra top som episoder</h2><span class="more" aria-hidden="true"></span></summary>
       <p class="sub">Et samlet tal for «største fald» siger ikke, hvor ofte det sker, eller hvor længe det varer. Derfor deler vi fondens fald op i episoder: fra en top, ned til bunden og tilbage til en ny top.</p>
       <figure class="uw">
         <svg viewBox="0 0 360 256" role="img" aria-labelledby="uw-t uw-d">
@@ -651,10 +677,10 @@
         <div><dt>Hyppighed</dt><dd>Hvor mange episoder der har været. Det viser, at fald er en normal del af at eje tech.</dd></div>
       </dl>
       <p class="sub" style="margin-top:12px">Det er samme tanke som <a href="laer/variance-drag.html">variance drag</a>: et fald på 24 % kræver en stigning på godt 31 % for at komme tilbage. Ordliste: <a href="om-data.html#g-drawdown">fald fra top</a> · <a href="om-data.html#g-underwater">underwater-graf</a>.</p>
-    </section>
+    </details>
 
-    <section class="idea-sec" aria-labelledby="h-ur">
-      <h2 id="h-ur">Tre ure på samme side</h2>
+    <details class="idea-sec fold" aria-labelledby="h-ur">
+      <summary><h2 id="h-ur">Tre ure på samme side</h2><span class="more" aria-hidden="true"></span></summary>
       <p class="sub">Kurserne er fra midten af oktober, beholdningen er fra juni, og risikoklassen er fra august. Det er ikke rod. Hver slags tal har sin egen dato, og siden skriver datoen ved tallet. Her er de lagt på samme tidslinje.</p>
       <figure class="ur">
         <p class="ur-key"><span><i class="k1"></i>afkast vises</span><span><i class="k2"></i>kun seneste kurs (NAV)</span><span><i class="k3"></i>bevidst forsinkelse</span><span><i class="k4"></i>seneste NAV, 14. okt 2026</span></p>
@@ -667,10 +693,10 @@
         <div class="ur-axis" aria-hidden="true"><span style="left:10%">2024</span><span style="left:40.1%">2025</span><span style="left:70%">2026</span><span style="left:100%;transform:translateX(-100%)">2027</span></div>
         <figcaption>Datoer fra portfolio.json og fund-meta.json pr. 14. okt 2026. Kurser fra Fundmarket. Når der kommer en ny offentlig beholdning eller et nyt KID, flytter prikkerne sig. <a href="om-data.html#g-datostempler">Ordliste: datostempler</a> · <a href="om-data.html#g-forsinket">forsinket beholdning</a></figcaption>
       </figure>
-    </section>
+    </details>
 
-    <section class="idea-sec" aria-labelledby="h-lag">
-      <h2 id="h-lag">Hvad står der i tallet?</h2>
+    <details class="idea-sec fold" aria-labelledby="h-lag">
+      <summary><h2 id="h-lag">Hvad står der i tallet?</h2><span class="more" aria-hidden="true"></span></summary>
       <p class="sub">Et afkast på siden er flere bevægelser lagt oven på hinanden. Nogle er med i tallet. Andre kommer bagefter og afhænger af, hvor og hvornår du selv handler. Her er lagene i rækkefølge, uden tal.</p>
       <figure class="lag">
         <p class="lag-h">MED I FONDENS AFKAST</p>
@@ -690,10 +716,10 @@
         <p class="lag-sum mit"><span class="sg" aria-hidden="true">=</span><span><b>Dit eget afkast.</b> Det kan siden ikke vise, fordi det kun findes i dit depot.</span></p>
         <figcaption>Skitse uden tal. Den viser rækkefølgen, ikke størrelsen på lagene. Officielle omkostningstal står i <a href="risici.html">KID</a>. Ikke rådgivning.</figcaption>
       </figure>
-    </section>
+    </details>
 
-    <section class="idea-sec" aria-labelledby="h-kl">
-      <h2 id="h-kl">To klasser, samme temaer</h2>
+    <details class="idea-sec fold" aria-labelledby="h-kl">
+      <summary><h2 id="h-kl">To klasser, samme temaer</h2><span class="more" aria-hidden="true"></span></summary>
       <p class="sub">PMINDI og PMINDIAKK er to andelsklasser med samme tankegang. Den ene udbetaler udbytte, den anden lader det blive i fonden. Hver klasse har sin egen beholdning. PMINDIAKK startede 5. december 2025 og havde pr. 1. juni 2026 320 selskaber, PMINDI 345. Alle 320 findes også i PMINDI. Lægger man temaerne side om side, ligger prikkerne tæt: intet tema skiller sig mere end 1,6 procentpoint ud. Forskellen mellem klasserne ligger derfor især i udbyttet og i en lille forskel i omkostningerne til handel i porteføljen, ikke i hvilke teknologier de giver eksponering mod. <a href="omkostninger.html">Omkostninger side om side →</a></p>
       <figure class="kl">
         <p class="kl-key"><span><i class="k1"></i>PMINDI (udloddende), 345 selskaber</span><span><i class="k2"></i>PMINDIAKK (akkumulerende), 320 selskaber</span></p>
@@ -714,10 +740,10 @@
         <div class="kl-axis" aria-hidden="true"><span style="left:0;transform:none">0 %</span><span style="left:33.3%">6 %</span><span style="left:66.7%">12 %</span><span style="left:100%;transform:translateX(-100%)">18 %</span></div>
         <figcaption>Vægt i procent af fonden pr. 1. jun 2026 fra den offentlige, forsinkede beholdning, lagt sammen pr. NDI-tema. Alle 320 selskaber i PMINDIAKK findes også i PMINDI. Det primære tema tæller én gang pr. selskab. Temaerne summer til 91,9 % og 90,0 %, som vægtene står i rapporten. Viser eksponering, ikke en anbefaling og ikke dagens fordeling. <a href="laer/udbytte-vs-akk.html">Udbytte eller akkumulerende →</a> · <a href="om-data.html#g-andelsklasse">Ordliste: andelsklasse</a></figcaption>
       </figure>
-    </section>
+    </details>
 
-    <section class="idea-sec" aria-labelledby="h-stk">
-      <h2 id="h-stk">Lag på lag</h2>
+    <details class="idea-sec fold" aria-labelledby="h-stk">
+      <summary><h2 id="h-stk">Lag på lag</h2><span class="more" aria-hidden="true"></span></summary>
       <p class="sub">Temaerne kan stilles oven på hinanden, fra jorden og op til skærmen. Hvert lag bygger på laget under. Det er samme tanke som i <a href="#h-flod">flodsystemet</a>: et datacenter kan ikke tages i brug hurtigere, end der kan leveres strøm til det. Bjælkens bredde viser, hvor stor en del af fonden laget fylder.</p>
       <figure class="stk">
         <p class="stk-end">↑ TÆT PÅ BRUGEREN</p>
@@ -739,9 +765,42 @@
         </dl>
         <figcaption>Tal: antal selskaber · vægt i procent af PMINDI pr. 1. jun 2026 fra den offentlige, forsinkede beholdning. Gul = de lag, NDI har nummereret som flaskehalse. Datacentre er NDI’s anden flaskehals, men er ikke et eget tema. Rækkefølgen er en skitse af en tankegang, ikke en officiel model, og den viser eksponering, ikke en anbefaling eller dagens fordeling. <a href="temaer.html">Temaer →</a> · <a href="om-data.html#g-chips-tema">Ordliste: temaerne</a></figcaption>
       </figure>
-    </section>
+    </details>
 
-    <section class="idea-sec" aria-labelledby="h-ln">
+    <details class="idea-sec fold" aria-labelledby="h-dr">
+      <summary><h2 id="h-dr">Tre drivkræfter, ét overlap</h2><span class="more" aria-hidden="true"></span></summary>
+      <p class="sub">I januar 2026 skrev Mads Christiansen om tre store udviklinger, som NDI vil bruge til at forklare sine investeringer de næste ti år: AI, et skift mod fabrikker og infrastruktur, og en ny kold krig mellem Kina og Vesten. Lægger man fondens temaer ind i tre cirkler, ser man, at de fleste temaer berører mere end én af dem. Chips står i midten.</p>
+      <figure class="dr">
+        <svg viewBox="0 0 400 380" role="img" aria-labelledby="dr-t dr-d">
+          <title id="dr-t">Tre drivkræfter som tre overlappende cirkler med fondens temaer</title>
+          <desc id="dr-d">Cirklerne hedder AI, realkapital og ny kold krig. Kun i AI: platforme 16,7 procent, software 11,6, optik og netværk 8,3 og compute 6,8. AI og realkapital: energi 9,3 og fysisk tech 7,9. AI og ny kold krig: quantum 0,9, forslag. Realkapital og ny kold krig: energiressourcer 6,0 og SpaceTech 4,9. Alle tre: chips 13,3 procent. Andet, 6,3 procent, står uden for cirklerne.</desc>
+          <circle cx="145" cy="145" r="110" style="fill:var(--cyan);fill-opacity:.10;stroke:var(--cyan);stroke-width:1.5"/>
+          <circle cx="255" cy="145" r="110" style="fill:var(--yellow);fill-opacity:.08;stroke:var(--yellow);stroke-width:1.5"/>
+          <circle cx="200" cy="240" r="110" style="fill:var(--neg);fill-opacity:.10;stroke:var(--neg);stroke-width:1.5"/>
+          <text class="lab" x="70" y="24" style="fill:var(--cyan)">1 · AI</text>
+          <text class="lab" x="330" y="24" style="fill:var(--yellow)">2 · REALKAPITAL</text>
+          <text class="lab" x="200" y="370" style="fill:var(--neg-ink)">3 · NY KOLD KRIG</text>
+          <text x="84" y="88">Platforme</text><text class="w" x="84" y="100">16,7 %</text>
+          <text x="84" y="116">Software</text><text class="w" x="84" y="128">11,6 %</text>
+          <text x="84" y="144">Optik &amp; netværk</text><text class="w" x="84" y="156">8,3 %</text>
+          <text x="84" y="172">Compute</text><text class="w" x="84" y="184">6,8 %</text>
+          <text x="200" y="76">Energi</text><text class="w" x="200" y="88">9,3 %</text>
+          <text x="200" y="106">Fysisk tech</text><text class="w" x="200" y="118">7,9 %</text>
+          <text x="200" y="176" style="font-weight:700">Chips</text><text class="w" x="200" y="189">13,3 %</text>
+          <text x="142" y="222">Quantum</text><text class="w" x="142" y="234">0,9 % · forslag</text>
+          <text x="272" y="200">Energi-</text><text x="272" y="212">ressourcer</text><text class="w" x="272" y="224">6,0 %</text>
+          <text x="270" y="240">SpaceTech</text><text class="w" x="270" y="251">4,9 %</text>
+        </svg>
+        <ol class="dr-key">
+          <li><strong>1 · AI gør intelligens billigere</strong>Ugebrevet sammenligner med elektriciteten for 100 år siden. Det giver vækst hos dem, der leverer AI, men er også en risiko: selskaber, der ikke tager AI til sig, kan miste deres plads, uanset hvor længe de har klaret sig godt. Ugebrevet kalder AI modvind for en del software.</li>
+          <li class="k2"><strong>2 · Fra finansielle aktiver til realkapital</strong>Vesten, især USA, bygger igen fabrikker, energi og infrastruktur. Realkapital er de fysiske ting, der producerer noget.</li>
+          <li class="k3"><strong>3 · En ny kold krig</strong>Rivaliseringen mellem Kina og Vesten betyder, at handelspolitik, tilskud og <a href="om-data.html#g-eksportregler">eksportregler</a> i højere grad styrer, hvor pengene går hen.</li>
+        </ol>
+        <figcaption>Drivkræfterne er fra NDI ugebrev uge 3, 19. januar 2026 («De tre overordnede investeringstemaer for de næste 10 år»). Placeringen af temaerne i cirklerne er NDI Analytics’ skitse ud fra ugebrevets ord, ikke NDI’s egen opdeling. Tal: vægt i procent af PMINDI pr. 1. jun 2026 fra den offentlige, forsinkede beholdning, det primære tema én gang pr. selskab. Andet (6,3 %) står uden for cirklerne. Drivkræfterne er Mads’ syn på retningen, ikke en prognose. De siger ikke, hvilke selskaber der klarer sig godt, og du kan tabe penge. <a href="laer/saadan-taenker-vi.html#tv-dr">Sådan tænker vi →</a> · <a href="#h-stk">Samme temaer som lag ↑</a> · <a href="om-data.html#g-drivkraefter">Ordliste: tre drivkræfter</a></figcaption>
+      </figure>
+    </details>
+
+    <section class="idea-sec open" aria-labelledby="h-ln">
       <h2 id="h-ln">Hvorfor ejer vi den?</h2>
       <p class="sub">Spørgsmålet er ikke «bliver det her vinderen?», men «hvilken del af udviklingen giver det fonden?». Fem faste spørgsmål, som vi kalder NDI-linsen, lagt rundt om ét selskab. Eksemplet er ASML, fordi det står ved en af de dæmninger, <a href="#h-flod">flodsystemet</a> handler om.</p>
       <figure class="lens">
@@ -749,7 +808,7 @@
         <ol class="qq">
           <li><b>Hvilket tema?</b><strong>Chips.</strong> Den del af teknologien, selskabet hører til.</li>
           <li><b>Hvad ejer man?</b><strong>Litografimaskiner</strong>, som overfører kredsløbsmønstre til siliciumskiver.<span class="ai">AI-udkast</span></li>
-          <li><b>Hvor i kæden?</b><strong>AI-compute, led 4:</strong> udstyr og litografi. En flaskehals: de mest avancerede chips kan ikke laves uden <a href="om-data.html#g-euv">EUV</a>.</li>
+          <li><b>Hvor i kæden?</b><strong>AI-compute, led 4:</strong> udstyr og litografi. En mulig flaskehals: de mest avancerede chips kan ikke laves uden <a href="om-data.html#g-euv">EUV</a>.</li>
           <li><b>Hvor modent?</b><strong>Ikke klassificeret.</strong> NDI har endnu ikke sat en <a href="laer/livscyklus.html">modenhedsgrad</a>. Vi gætter ikke.</li>
           <li><b>Hold øje med</b><strong>Eksportregler og kundernes investeringer.</strong> Forhold, der kan ændre billedet, ikke en prognose.<span class="ai">AI-udkast</span></li>
         </ol>
@@ -757,8 +816,8 @@
       </figure>
     </section>
 
-    <section class="idea-sec" aria-labelledby="h-hus">
-      <h2 id="h-hus">Bygget som et hus</h2>
+    <details class="idea-sec fold" aria-labelledby="h-hus">
+      <summary><h2 id="h-hus">Bygget som et hus</h2><span class="more" aria-hidden="true"></span></summary>
       <p class="sub">Man kommer ind ad entréen og vælger selv, hvilket rum man vil ind i. Ingen behøver at gå i alle rum. Har du kun et minut, så tag den første dør: fondens afkast for den andelsklasse, du ejer.</p>
       <figure class="hus">
         <nav class="hus-plan" aria-label="Siderne som rum i et hus">
@@ -773,7 +832,7 @@
         </nav>
         <figcaption>Hvert rum er et link. Den stiplede gule ramme er entréen. <a href="kort.html">Hele sidekortet →</a></figcaption>
       </figure>
-    </section>
+    </details>
 
     <section class="idea-sec" aria-labelledby="h-q">
       <h2 id="h-q">Tre sætninger, siden bygger på</h2>
@@ -787,7 +846,7 @@
     <div class="doors" style="margin-top:20px">
       <a class="door" href="vaerdikaeder.html"><strong>Teknologiske værdikæder</strong><span>Fladekort, ringdiagram, tidslinje, flaskehalse.</span><span class="go">Åbn →</span></a>
       <a class="door" href="laer/saadan-taenker-vi.html"><strong>Sådan tænker vi</strong><span>Udvikling frem for vinder, møntspillet og «Hvorfor ejer vi den?».</span><span class="go">Åbn →</span></a>
-      <a class="door" href="om-data.html"><strong>Ordliste &amp; data</strong><span>CAGR, fald fra top, temaforslag.</span><span class="go">Åbn →</span></a>
+      <a class="door" href="om-data.html"><strong>Ordliste &amp; data</strong><span>Afkast pr. år, fald fra top, temaforslag.</span><span class="go">Åbn →</span></a>
     </div>
 
     <p class="warn">Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.</p>
@@ -797,5 +856,16 @@
  <p><strong>Markedsføringsmateriale.</strong> Læs <a href="https://fundmarket.dk/wp-content/uploads/Faellesprospekt-for-afdelinger-og-andelsklasser-i-Investeringsforeningen-Portfoliomanager-opdateret-24.10.2025.pdf" rel="noopener" target="_blank">prospektet ↗</a> og KID for <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm140b" rel="noopener" target="_blank">PMINDI ↗</a> eller <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm145b" rel="noopener" target="_blank">PMINDIAKK ↗</a>, før du træffer en endelig investeringsbeslutning.</p>
  <p>Udkast / noindex. Ikke den officielle side og ingen investeringsrådgivning. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering. <a href="om-data.html">Data og ordliste</a>.</p>
  </footer>
+  <script>
+  (function(){
+    var f=[].slice.call(document.querySelectorAll('details.fold')),b=document.getElementById('fold-all');
+    function sync(){var all=f.every(function(d){return d.open});b.textContent=all?'Fold alle sammen':'Fold alle ud';b.setAttribute('aria-expanded',all)}
+    function openHash(){var t=location.hash&&document.getElementById(location.hash.slice(1));var d=t&&t.closest('details.fold');if(d){d.open=true;t.scrollIntoView()}}
+    if(window.matchMedia('(min-width:860px)').matches)f.forEach(function(d){d.open=true});
+    f.forEach(function(d){d.addEventListener('toggle',sync)});
+    b.addEventListener('click',function(){var all=f.every(function(d){return d.open});f.forEach(function(d){d.open=!all});sync()});
+    window.addEventListener('hashchange',openHash);openHash();sync();
+  })();
+  </script>
 </body>
 </html>

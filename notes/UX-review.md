@@ -409,3 +409,27 @@ Hele lane-C-fladen ved 375 px: ideer, kort, om-data, invester, risici, ndi-persp
 - **Ordliste 138:** + Transaktionsomkostninger (KID-post, ≠ din kurtage), + Indeksfond og ETF (fonden er ikke en indeksfond, intet benchmark).
 - Tjek: 320/375/1280 på ideer, livscyklus, om-data, kort: scrollWidth = viewport, 0 pageerrors. Precheck OK.
 - Åbent til Christian/NDI: må den maskinelle modenhedsfordeling vises offentligt, før NDI har gennemgået den? Hvis nej, fjern `#h-lc` (én sektion + én TOC-linje).
+
+## 02:38 CEST lane-C checkpoint (Claude) · tre drivkræfter (Vidensbot §5) + Venn på ideer + ordliste 140
+- **Vidensbot-krav §5 «De tre langsigtede temaer» (BLOG 19. jan 2026) var ikke dækket nogen steder.** Kilden læst i /workspace/mads/blog. Ny sektion `laer/saadan-taenker-vi.html#tv-dr` «Tre drivkræfter for de næste ti år»: AI gør intelligens billigere, fra papir til fabrikker (realkapital), en ny kold krig. Ugebrevets eget ord er «investeringstemaer». Her hedder de drivkræfter, så de ikke forveksles med fondens elleve temaer. Bevidst udeladt fra kilden: «relativt enkelt at skabe gode langsigtede afkast» og «strukturel fordel» (løfte/markedsføring). Medtaget: «AI er modvind for en del software», så drivkraften ikke læses som ren medvind.
+- **Ny form nr. 16 på ideer (`#h-dr`, «Tre drivkræfter, ét overlap»):** første Venn-diagram på siden. Fondens temaer lagt i tre cirkler med vægt pr. tema (PMINDI pr. 1. jun 2026, regnet fra portfolio.json): Chips (13,3 %) i midten, Energi og Fysisk tech i AI ∩ realkapital, Energiressourcer og SpaceTech i realkapital ∩ kold krig, Quantum (forslag) i AI ∩ kold krig, Andet uden for. Mærket «NDI Analytics' skitse ud fra ugebrevets ord, ikke NDI's egen opdeling». Ingen sum pr. drivkraft (det ville ligne en eksponeringsopgørelse, NDI ikke har lavet).
+- **Vidensbot-spørgsmål lukket:** ASML-linsen sagde «En flaskehals». Nu «En mulig flaskehals», som i value-chains.json.
+- Ordliste 138 → 140: Tre drivkræfter, Realkapital. Lær-indeks: «Sådan tænker vi» ≈ 5 min.
+- Test (Playwright, lokal 8833): ideer, sådan-tænker-vi, om-data, kort, lær-indeks × 320/375/1280: scrollWidth = viewport, én h1, 0 døde ankre, 0 konsolfejl. Venn-tekster flyttet, så de ikke krydser cirkelkanterne (screenshot 375/1280). Ved 375 er SVG-teksten ca. 9 px: læsbar, men lille. Teksten står også i `<desc>` og i listen under.
+- **Til Christian/NDI:** må temaerne placeres i Mads' tre drivkræfter på en offentlig side, når det er vores skitse? Hvis nej: fjern `#h-dr` (én sektion + én TOC-linje). Lær-sektionen kan blive stående uden eksempler.
+
+## 02:41 CEST lane-C checkpoint (Claude) · ideer foldet på mobil + to reviewer-SHOULDs
+- **ideer.html (lane R cyklus 33, Nice: "fold efter de første 3"):** de første fire billeder (flodsystem, én kasse/flere temaer, to sorteringer, vægt ≠ kurs), «Hvorfor ejer vi den?» og citaterne står åbne. De øvrige 11 billeder er nu native `<details>` med overskriften som summary ("Vis ▾"/"Skjul ▴", 44 px trykflade) og en «Fold alle ud»-knap. Fra 860 px er alt foldet ud som før. Indholdsfortegnelse og dybe links (fx `ideer.html#h-lc`) folder målet ud. Højde ved 375: **18.199 → 7.560 px**. 0 pageerrors, 0 vandret overflow ved 375/1280 (Playwright lokalt).
+- **risici.html (SHOULD):** "Sharpe" er fjernet som underlabel → "Gns. afkast delt med udsving, uden rente trukket fra" + ordlistelink. Kilde-linjen siger "afkast pr. udsving" i stedet for "Sharpe". Ordet står kun i ordlisten.
+- **invester.html (SHOULD "kl n"):** kilde-linjen siger nu "andelsklasse PMINDI".
+- Persona-privat: "hvem træffer beslutningerne" er dækket (invester «hvem gør hvad» → fakta#hold, Mads Christiansen navngivet). Bogen er nævnt på 5 lær-sider.
+- Ikke mine filer, stadig åbne MUSTs: BREAKING/chartMarkers (js), nyhedsarkiv-tabsadvarsel, periode/embed delår + KID.
+
+## 02:43 CEST lane-C checkpoint (Claude) · fagord ud af overskrifterne + ordliste 142
+- **Lane R cyklus 32 SHOULD (laes-grafen "max drawdown"):** lukket. Linjen hedder «Største fald fra top».
+- **Persona-privat, forslag 4 ("erstat jargon med dansk"):** CAGR er fjernet fra overskrifter og dørtekster på lær-indeks, risici, rebalancering, risikoklasse, sådan-tænker-vi, laes-grafen, forsinket-beholdning, ordliste og ideer. Ordet står nu kun i parentes efter «afkast pr. år». FAQ-svaret om CAGR bruger nu møntspillet (+50/−40 = 90 kr.). Variance-drag-skyderen har ikke længere σ²/2 i etiketten.
+- **kort.html:** «underwater-graf» → «hvor langt under toppen kursen er nu».
+- **Ordliste:** to nye opslag, som siden bruger, men ikke forklarede: KID-omkostningstallet (RIY) og øjebliksbillede (snapshot, 7 sider bruger ordet).
+- Handelsords-sweep i lane-C-filer: 0 hits uden negation eller procesbetydning.
+- Test (Playwright, lokal 8839, 375): 11 sider, én h1, 0 overflow, 0 pageerrors, 0 hits på "max drawdown|underwater".
+- Ikke mine filer, stadig åbne: BREAKING/chartMarkers (js), nyhedsarkiv-tabsadvarsel, periode/drawdown "YTD/CAGR/Drawdown" i h1, embed-KID.

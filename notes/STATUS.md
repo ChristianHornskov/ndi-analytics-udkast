@@ -1710,6 +1710,25 @@ Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er
 
 - Coordinator-loop 2026-10-16 02:33:44 CEST: MERGED origin/lane-R with STATUS-ours resolution (ahead was 12) — pending precheck
 
+- Coordinator-loop 2026-10-16 02:34:37 CEST: MERGED origin/lane-R (ahead was 12) — precheck+smoke OK, pushed
+
+- Coordinator-loop 2026-10-16 02:44:37 CEST: MERGED origin/lane-D with STATUS-ours resolution (ahead was 4) — pending precheck
+
+- Coordinator-loop 2026-10-16 02:45:30 CEST: MERGED origin/lane-D (ahead was 4) — precheck+smoke OK, pushed
+
+- Coordinator-loop 2026-10-16 02:45:30 CEST: CONFLICT merge origin/lane-A (ahead 7) — aborted, not pushed
+
+- Coordinator-loop 2026-10-16 02:45:31 CEST: CONFLICT merge origin/lane-E (ahead 14) — aborted, not pushed
+
+- Coordinator-loop 2026-10-16 02:45:31 CEST: CONFLICT merge origin/lane-B (ahead 4) — aborted, not pushed
+
+- Coordinator-loop 2026-10-16 02:45:31 CEST: MERGED origin/lane-C with STATUS-ours resolution (ahead was 5) — pending precheck
+
+- Coordinator-loop 2026-10-16 02:46:24 CEST: MERGED origin/lane-C (ahead was 5) — precheck+smoke OK, pushed
+
+- Coordinator-loop 2026-10-16 02:46:24 CEST: CONFLICT merge origin/lane-X (ahead 9) — aborted, not pushed
+
+- Coordinator-loop 2026-10-16 02:46:24 CEST: MERGED origin/lane-R with STATUS-ours resolution (ahead was 5) — pending precheck
 ## Fra Claude lane-B (gennemgang af temaforslag: skift-filter fra → til, cyklus 15)
 - **Screener (app.js), ved `status=forslag`:** nyt panel "Gennemgang af temaforslag" - "81 selskaber har fået et foreslået tema, 35 står stadig i Andet" + ét filter pr. skift med antal efter øvrige filtre: Andet → Energi (28), → Energiressourcer (11), → Fysisk tech (11), → Platforme (10), → Optik (6), → Software (5), Compute → Quantum (4), Andet → SpaceTech (3), → Chips (2), Software → Quantum (1), *Stadig Andet (intet tema passede)* (35). URL `skift=<fra>~<til>` (deles via "Kopiér link", chip, skærmlæser-annoncering, tom tilstand med "Alle temaforslag"). Valgt skift forklares (grundlag + link til temasiden med `status=forslag` / "Hvad ligger i Andet?"). Formål: NDI kan tage stilling til ét skift ad gangen.
 - **Robusthed:** `skift` uden `status=forslag` eller ukendt skift (fx `andet~chips` i AKK efter fondsskift) fjernes fra URL'en - ingen tavs tom liste. Fjernes status, ryddes skift også.
