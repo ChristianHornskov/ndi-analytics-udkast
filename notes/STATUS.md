@@ -979,3 +979,13 @@ Anlægget er American Centrifuge Plant i Ohio. Datoen ligger før beholdningen. 
 Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Piketon står. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `6115d81` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 02:48 CEST. Northern Dynasty skrev, at mundtlige indlæg om EPA's veto blev holdt 25. juni 2026. Ikke færdig.**
+
+Meddelelsen er fra 26. juni 2026, efter beholdningen. Der er ingen afgørelse og ingen mine. 1.840 mineralrettigheder og afstandene i miles er selskabets egne tal og er ikke regnet om. World-class og kurser er ikke taget med. Ingen `reviewedAt`. Blurben under råstoffer og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. 25. juni 2026 står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `133852c` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

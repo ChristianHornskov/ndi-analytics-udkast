@@ -282,6 +282,10 @@ St. Gabriel i Louisiana er flydende brint sammen med Olin gennem Hidrogenii. Kom
 
 Aftalen af 1. april 2025 siger, at Bloom og Conagra vil bruge brændselsceller på Conagras fabrikker i Troy og Archbold i Ohio. Før beholdningen. Ikke skrevet som celler, der allerede kører. Ikke et klassisk kraftværk. Megawatt, kapitalramme, leader og leading er ikke kopieret. AI-udkast uden gennemgangsdato. Elproduktions-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
 
+## Northern Dynasty · 2026-10-16 02:48 CEST
+
+Meddelelsen 26. juni 2026 siger, at mundtlige indlæg blev holdt 25. juni 2026 ved den føderale distriktsdomstol i Alaska. Sagen søger at trække EPA's veto tilbage. Efter beholdningen. Ingen afgørelse. Ikke en tilladelse. Ikke en mine. 1.840 mineralrettigheder, 200 miles og 125 miles er selskabets egne mål og er ikke regnet om. World-class, kurser og direktørens citat er ikke kopieret. AI-udkast uden gennemgangsdato. Råstof-blurben, NDI-blikket og arkivet siger grænsen. Vægtene er uændrede. Chromium ved 375 px. Kæden er også tjekket ved 1280 px. "tjekket mod kilden" er ikke med. 25. juni 2026 står. Ingen konsolfejl. Ingen vandret scroll.
+
 ## Centrus · 2026-10-16 02:44 CEST
 
 Berigning begyndte i slutningen af 2023 på American Centrifuge Plant i Piketon i Ohio. Før beholdningen. HALEU-tilladelsen fra Nuclear Regulatory Commission er med. Ordet first og "siden 1954" er ikke kopieret. AC100M stilles op efter en aftale med energiministeriet. Teksten siger ikke fuld skala. Aftalen med Antares er 17. september 2026, efter beholdningen, og er ikke en levering. Antares' projekter er ikke værker i drift. Trusted, most advanced, NYSE og forudbetalinger er ikke kopieret. AI-udkast uden gennemgangsdato. Råstof-blurben og arkivet siger grænsen. Vægtene er uændrede. Chromium ved 375 px. Kæden er også tjekket ved 1280 px. "tjekket mod kilden" er ikke med. Piketon står. Ingen konsolfejl. Ingen vandret scroll.

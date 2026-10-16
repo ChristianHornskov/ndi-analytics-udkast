@@ -1169,20 +1169,24 @@
   "CA66510M2040": {
    "name": "Northern Dynasty Minerals",
    "theme": "energy-resources",
-   "summary": "Ejeren af Pebble-projektet i Alaska, et kobber- og guldprojekt. Denne tekst beskriver ikke en mine i drift.",
-   "watch": "Om projektet får tilladelse. Det har været omstridt i mange år.",
+   "summary": "Ejer Pebble-projektet i Alaska gennem Pebble Limited Partnership. Sagen om et veto fra EPA havde mundtlige indlæg 25. juni 2026. Der er ingen afgørelse og ingen mine i drift.",
+   "watch": "Om domstolen træffer en afgørelse. Indlæggene er ikke en tilladelse.",
    "source": "https://northerndynastyminerals.com/",
-   "products": "Et mineprojekt.",
+   "products": "Et kobber- og guldprojekt. Ikke en mine i drift.",
    "customers": "Ingen driftkunder i denne beskrivelse.",
-   "role": "Råstofprojekt uden drift.",
+   "role": "Råstofprojekt uden drift. Indlæggene er ikke en afgørelse.",
    "narrative": [
-    "Northern Dynasty ejer Pebble-projektet i Alaska. Det er et kobber- og guldprojekt, og der er ingen mine i drift.",
-    "Projektet har i årevis manglet de tilladelser, en mine kræver. Profilen beskriver projektet."
+    "Northern Dynasty skrev 26. juni 2026, at mundtlige indlæg blev holdt 25. juni 2026 ved den føderale distriktsdomstol i Alaska. Sagen søger at trække et veto fra det amerikanske miljøagentur EPA tilbage. Datoen ligger efter beholdningen pr. 1. juni 2026. Der er ingen afgørelse. Det er ikke en tilladelse og ikke en mine i drift.",
+    "Selskabet har hjemme i Vancouver i Canada og skriver, at Pebble ejes gennem det helejede datterselskab Pebble Limited Partnership. Det omfatter 1.840 mineralrettigheder i det sydvestlige Alaska, herunder Pebble-forekomsten, 200 miles fra Anchorage og 125 miles fra Bristol Bay. Det er selskabets eget mål. Der er ingen mine i drift."
    ],
    "narrativeSources": [
     {
      "label": "Selskabets side",
      "url": "https://northerndynastyminerals.com/"
+    },
+    {
+     "label": "Mundtlige indlæg, 26. juni 2026",
+     "url": "https://northerndynastyminerals.com/news/news-releases/2026/northern-dynasty-reports-oral-arguments-held/"
     }
    ]
   },
