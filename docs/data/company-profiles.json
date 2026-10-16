@@ -60,13 +60,27 @@
   "US88160R1014": {
    "name": "Tesla",
    "theme": "physical",
-   "summary": "Producerer elbiler, batterilagring og energiprodukter. Software og automatisering er integreret i selskabets produkter og produktion.",
-   "watch": "Bilmarkedets konkurrence, indtjening pr. bil og kapitalbehov.",
-   "source": "https://www.tesla.com/about",
-   "products": "Elbiler, batterilagring og energiløsninger med tilhørende software og service.",
+   "summary": "Producerer elbiler, batterilagring og energiprodukter. Megapack er batteriudstyr. 10.000 enheder om året i Lathrop er en kapacitet, ikke et målt år.",
+   "watch": "Om 40 GWh læses som årets produktion, eller som et kraftværk selskabet driver.",
+   "source": "https://www.tesla.com/megafactory",
+   "products": "Elbiler og Megapack. Lathrop er sat til 10.000 enheder om året, svarende til 40 GWh.",
    "customers": "Bilister, virksomheder og kunder med behov for lagring af elektricitet.",
-   "role": "Kombinerer batterier, effektelektronik, software og fysisk produktion.",
+   "role": "Batteriudstyr ved siden af biler. 40 GWh i Lathrop er en kapacitet, ikke et kraftværk.",
    "reviewedAt": "2026-10-08",
+   "narrative": [
+    "Tesla laver biler og batteriudstyr. Siden om Megafactory i Lathrop, læst 16. oktober 2026, skriver, at anlægget kan lave 10.000 Megapack om året, svarende til 40 GWh. Det er en kapacitet. Siden daterer ikke tallet. Det er ikke et målt år og ikke et kraftværk.",
+    "En gengivelse af Megapack-siden dateret 10. juli 2026 skriver, at fabrikkerne i Lathrop og i Shanghai tilsammen har en fremstillingskapacitet på 80 GWh, eller 20.000 enheder, om året. Samme gengivelse skriver mere end 58 GWh i drift globalt og over 65 lande. Den daterer ikke tallene. Datoen ligger efter beholdningen. De to tekster bruger ikke samme tal."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Megafactory i Lathrop",
+     "url": "https://www.tesla.com/megafactory"
+    },
+    {
+     "label": "Megapack, gengivelse 10. juli 2026",
+     "url": "https://www.tesla.com/megapack"
+    }
+   ],
    "xAccounts": [
     {
      "handle": "Tesla",
