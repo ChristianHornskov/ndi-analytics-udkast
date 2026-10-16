@@ -938,3 +938,35 @@ Pages (00:47:36 GMT) = main. Denne cyklus dækker det, 32–37 ikke stikprøvede
 - **Privat 55+:** hvis de klikker på Carvana fra top-10, er det første eksterne opslag "BREAKING … $100 billion". Det er uro, ikke information. De tomme "–"-felter får sitet til at virke ufærdigt.
 - **Familiekontor:** "Manuel klassifikation" over for data "forslag" er den slags inkonsistens, de fanger. Sammenlign uden omkostninger er en tabt chance.
 - **Visuel variation:** temasiderne har ens struktur, men 3–6k px hver er acceptabelt. Selskabssider uden profil er mest X-panel og fondstekst.
+
+## 2026-10-16 06:15 CEST · cyklus 39 (main `e9ea004`, docs-delta siden `3e25f16`: 251 commits, 38 docs-filer; live 05:49 CEST = main)
+
+Live Playwright-sweep ved 375 px på 32 sider (entré, fonden ±AKK, portefølje, udforsk, værdikæder, drawdown, risici, SoftBank, Carvana, temaer, tema ai/platforms, invester, om-data, fakta, omkostninger, sammenlign, periode, nyhedsarkiv, ideer, kort, selskaber, ndi-på-x, embed, lær ×5). **0 pageerrors og 0 vandret overflow.**
+
+### Lukket siden cyklus 38 ✅
+- Tredjeparts-X på selskabs- og temasider er væk. `matchPosts` er nu `houseOnly = true`, og tema-træf gælder kun husets konti. SoftBank viser "Kun NDI-konti i dette panel … 3 opslag fra konti, som NDI følger … vises ikke her". Carvana og `tema?slug=platforms` har 0 "BREAKING". `chartMarkerIsInvestNewdeal` + `app.js:490` = fondsgrafen viser kun @InvestNewdeal.
+- Livscyklus på selskabssiden siger "Maskinelt forslag ud fra offentlig branche og tema. Afventer NDI-gennemgang." Det matcher data.
+- Sammenlign viser nu KID-omkostning. Den nye side `omkostninger.html` er grundig: KID 1 år/5 år, postsatser, 80 kr.-forskellen, "ikke et ÅOP". Fonden har "Omkostninger (kort)" med RIY 2,79/2,85 %, og entréen har "ca. 2,8 % om året" ✅. FO-kravet om omkostninger er indfriet.
+- PMINDIAKK-visningen viser ingen kurs: "vises fra 5. december 2026", ingen NAV/serie ✅.
+- Nyhedsarkivet har ikke længere "Placeholder". "kl n" er væk.
+
+### MUST
+- Ingen nye UX-blokere.
+
+### SHOULD
+1. **Fagord og engelsk i fondens afkasttabel (375):** "Dyb →" i hver række, "YTD dyb side →", "Vs PMINDIAKK →" og "Middel/median →" under Største fald. Privat 55+ kan ikke afkode "Dyb" og "YTD", og sitet siger ellers konsekvent "ÅTD"/"År til dato". Forslag: "Se året →", "År til dato i detaljer →", "Sammenlign med PMINDIAKK →", "Typiske fald →".
+2. **Grammatikfejl `temaer.html:109`:** "22 temaforslag er afventer gennemgang" → "22 temaforslag afventer gennemgang".
+3. **Entréens tal for temaforslag forvirrer:** kortet siger "Temaer **87 forslag**" (det er 87 *selskaber* med temaforslag; der er 10 temaer). Porteføljekortet siger "Modenhed: 345 selskaber med forslag", og temaer siger "22 temaforslag … afventer". Tre forskellige tal står med ordet "forslag". Skriv "87 selskaber med temaforslag" eller drop tallet på entréen.
+4. **Rå Bloomberg-navne består** ("Sea Sp ADR" i "Andre i Platforme" på SoftBank, "Southern Co/The" osv.). Det er uændret fra cyklus 35/38.
+5. **Omkostninger: intern meta-sætning til kunden:** "Det er det tal, marketingmateriale skal gengive ærligt — ikke kun de enkelte postsatser." Det lyder som en note til sig selv. Skriv i stedet: "Det er det samlede tal, du bør se på."
+6. **Footer-navnet er inkonsistent:** PMINDIAKK-visningen og nogle sider har "Central Information Dokument", mens fakta/ndi-på-x/omkostninger har "Dokument med central information (KID)". Commit `71ce68e` ville ensrette. Det er ikke slået igennem alle steder (bl.a. footeren på `?view=fonden&fund=PMINDIAKK`).
+7. Uændret fra 38: tomme profilfelter ("–") på ~247 selskaber, og warrants som selvstændige selskaber.
+
+### Nice
+- Fonden: "Gns. årligt afkast +26,4 %" mangler periode. Underteksten "Efter løbende omkostninger" kan blive til "Siden start 22. sep. 2023 · efter løbende omkostninger".
+- `ndi-paa-x.html` er nu klart mærket ("7 opslag er fra konti, som NDI følger (ikke NDI's holdning)", "Hvem · 0 NDI · 3 fulgte"). Engelske tredjepartscitater bør stadig have et "(engelsk)"-mærke.
+
+### Persona-linser
+- **Privat 55+:** entré → fonden er rolig. Omkostningstallet står på entréen, og tabsadvarslen er synlig over folden ved 375 (screenshot). Tabellen med "Dyb/YTD" er det eneste sted, de falder af.
+- **Familiekontor:** omkostningssiden er nu stærk (KID vs. postsatser, ikke-ÅOP-forbehold). Tre forskellige "forslag"-tal på entré/portefølje/temaer er den inkonsistens, de spørger til.
+- **Visuel variation:** omkostningssiden (skala + forstørret udsnit) og X-klyngerne bryder kort-mønsteret godt. Fonden ved 375 er 5,8k px, og selskaber.html er 37k px. Det er acceptabelt for A–Z, men der bør være et hop-til-bogstav øverst. Det findes allerede ✅.
