@@ -2129,15 +2129,16 @@
   "CA55293N1096": {
    "name": "MDA Space",
    "theme": "space",
-   "summary": "Bygger satellitter, rumrobotik og systemer til geodata. Selskabet skrev 16. september 2026, at Chorus er tre satellitter, og at de to nye ikke er sendt op. Aurora Black er præsenteret 10. september 2026. Det er ikke et datacenter.",
-   "watch": "Om de to nye Chorus-satellitter bliver sendt op. Sent i 2026 er en plan. De er ikke i kredsløb.",
+   "summary": "Bygger satellitter, rumrobotik og systemer til geodata. Selskabet skrev 16. september 2026, at Chorus er tre satellitter, og at de to nye ikke er sendt op. Kontrolcenteret i St-Bruno-de-Montarville åbnede 11. august 2026. Det er på jorden. Aurora Black er præsenteret 10. september 2026. Det er ikke et datacenter.",
+   "watch": "Om de to nye Chorus-satellitter bliver sendt op. Sent i 2026 er en plan. Kommerciel drift tidligt i 2027 er også en plan.",
    "source": "https://mda.space/article/mda-space-announces-end-to-end-mda-chorus-product-portfolio-in-advance-of-constellation-launch",
-   "products": "Satellitter, robotarme og geodata. Chorus er billeder af Jorden.",
+   "products": "Satellitter, robotarme og geodata. Chorus er billeder af Jorden. COMMAND er software, ikke en satellit.",
    "customers": "Rumagenturer, satellitoperatører og forsvar.",
-   "role": "Jordobservation og robotik. De to nye Chorus-satellitter er ikke sendt op.",
+   "role": "Jordobservation og robotik. Kontrolcenteret i St-Bruno er på jorden. De to nye Chorus-satellitter er ikke sendt op.",
    "narrative": [
     "MDA bygger satellitter og rumrobotik og arbejder med geodata. Selskabet skrev 10. september 2026, at det præsenterede Aurora Black, en softwaredefineret satellit til forsvarskommunikation.",
-    "Datoen for Aurora Black ligger efter beholdningen pr. 1. juni 2026. Præsentationen er ikke en konstellation i drift. Selskabet skrev 16. september 2026, at Chorus er tre satellitter: to nye, en i X-bånd og en i C-bånd, plus RADARSAT-2, som allerede er i kredsløb. Opsendelsen af de nye er sat til sent i 2026. Det er en plan. De to nye er ikke sendt op. Meddelelsen ligger efter beholdningen. Det er ikke et datacenter."
+    "Datoen for Aurora Black ligger efter beholdningen pr. 1. juni 2026. Præsentationen er ikke en konstellation i drift. Selskabet skrev 16. september 2026, at Chorus er tre satellitter: to nye, en i X-bånd og en i C-bånd, plus RADARSAT-2, som allerede er i kredsløb. Opsendelsen af de nye er sat til sent i 2026. Det er en plan. De to nye er ikke sendt op. Meddelelsen ligger efter beholdningen. Det er ikke et datacenter.",
+    "Meddelelsen 11. august 2026 skriver, at kontrolcenteret for Chorus åbnede i St-Bruno-de-Montarville i Quebec, syd for Montreal. Det er et anlæg på jorden. Datoen ligger efter beholdningen. Samme tekst sætter opsendelsen til sent i 2026 og kommerciel drift til tidligt i 2027. Begge er planer. Siden sætter billedbredden til 700 km og opløsningen under en meter, når konstellationen er sat i drift. Det er ikke sket. C-bånd er beskrevet som det brede billede og X-bånd som det tætte. Meddelelsen 16. september 2026 nævner COMMAND, COMMAND PRO og INTELLIGENCE. De er produkter til at søge, styre og læse billeder. De er ikke satellitter. COMMAND PRO nævner en jordstation hos kunden. Det er ikke et datacenter i kredsløb."
    ],
    "narrativeSources": [
     {
@@ -2151,6 +2152,10 @@
     {
      "label": "Chorus, 16. september 2026",
      "url": "https://mda.space/article/mda-space-announces-end-to-end-mda-chorus-product-portfolio-in-advance-of-constellation-launch"
+    },
+    {
+     "label": "Kontrolcenter, 11. august 2026",
+     "url": "https://mda.space/article/mda-space-opens-mda-chorus-control-centre-in-quebec"
     }
    ]
   },

@@ -109,3 +109,5 @@ Per-lane log (not merged into notes/STATUS.md).
 - Fra Grok lane-E · 07:50 · Redwire: 43 PIL-BOX er 11. marts 2026. 54 er efter hjemkomst 17. juni 2026. Jacksonville er på jorden. Ikke et datacenter. Vægten er uændret. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
 
 - Fra Grok lane-E · 07:52 · Satellogic: Davidson er ikke Charlotte. Merlin.01 er 1. oktober 2026 på tidslinjen og 2. oktober i datafeltet. Fuld drift i 2027 er en plan. Vægten er uændret. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 07:58 · MDA: kontrolcenteret i St-Bruno-de-Montarville åbnede 11. august 2026. Det er på jorden. X-bånd og C-bånd er ikke sendt op. Arkivet har et kort med tre satellitter. Vægten er uændret. Branch lane-E er klar til merge. Ikke main. Ikke færdig.

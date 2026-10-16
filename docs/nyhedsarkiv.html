@@ -20,8 +20,17 @@
   .two-led button span{display:block;color:var(--muted);font-size:13px;line-height:1.5}
   .two-led .live{color:var(--muted);line-height:1.6;margin:0}
   .two-led .print-all{display:none}
+  .sky{border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:12px 0 0}
+  .sky h3{font-size:16px;margin:0 0 6px}
+  .sky .intro{color:var(--muted);line-height:1.6;margin:0}
+  .sky .birds{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;list-style:none;margin:8px 0;padding:0}
+  .sky .birds li{border:1px solid var(--line);border-radius:8px;padding:10px 12px;min-height:44px}
+  .sky .birds li.plan{border-style:dashed}
+  .sky .birds strong{display:block;margin:0 0 6px}
+  .sky .birds span{display:block;color:var(--muted);font-size:13px;line-height:1.5}
+  .sky .ground{color:var(--muted);line-height:1.6;margin:0;border-top:1px solid var(--line);padding-top:8px}
   @media (max-width:640px){
-   .tri,.two-led .cols{grid-template-columns:1fr}
+   .tri,.two-led .cols,.sky .birds{grid-template-columns:1fr}
   }
   .not-that{border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:12px 0 0}
   .not-that h3{font-size:16px;margin:0 0 6px}
@@ -50,7 +59,8 @@
    .not-that .stops,.not-that .rail,.not-that .live,.chain-map .nodes,.chain-map .live,.two-led .cols,.two-led .live{display:none}
    .not-that .print-all,.chain-map .print-all,.two-led .print-all{display:block;color:#111}
    .not-that .print-all p,.chain-map .print-all p,.two-led .print-all p{margin:4px 0}
-   .tri details,.not-that,.chain-map,.two-led{break-inside:avoid;border-color:#333}
+   .tri details,.not-that,.chain-map,.two-led,.sky{break-inside:avoid;border-color:#333}
+   .sky .birds li{border-color:#333}
    .two-led button{border-color:#333}
    .not-that button{border-color:#333}
    body, .site-footer { background: #fff; color: #111; }
@@ -299,7 +309,7 @@
  <p data-stop="after">17. juni 2026. Undersøgelserne kom tilbage, og siden skriver 54 PIL-BOX fløjet til dato. Datoen ligger efter beholdningen. Det er ikke samme tal som 43.</p>
  </div>
  </section>
- <p style="color:var(--muted);margin:8px 0 0">MDA skrev 16. september 2026, at Chorus er tre satellitter, og at de to nye ikke er sendt op. Starlab er ikke en station i drift. Ingen af eksemplerne under rum og compute er et datacenter i kredsløb.</p>
+ <p style="color:var(--muted);margin:8px 0 0">MDA skrev 16. september 2026, at Chorus er tre satellitter, og at de to nye ikke er sendt op. Kontrolcenteret i St-Bruno-de-Montarville åbnede 11. august 2026 og er på jorden. Starlab er ikke en station i drift. Ingen af eksemplerne under rum og compute er et datacenter i kredsløb.</p>
  <p style="color:var(--muted);margin:8px 0 0">Redwire skrev 1. april 2026, at kameraer skal med på Artemis II. Meddelelsen siger ikke, at flyvningen er gennemført.</p>
  <p style="color:var(--muted);margin:8px 0 0">Satellogic skriver, at satellitterne hedder NewSat. Forsiden sætter fuld drift af Merlin til andet halvår 2027. Det er efter beholdningen, og det er ikke en tjeneste i fuld drift. Tre ting står i kortet under.</p>
  <div style="border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:10px 0 0">
@@ -309,6 +319,16 @@
  <p style="color:var(--muted);margin:4px 0">Merlin.01 · sendt op 1. oktober 2026 med SpaceX, efter beholdningen. Datafeltet siger 2. oktober. Fuld drift er andet halvår 2027 og er en plan.</p>
  </div>
  <p style="color:var(--muted);margin:8px 0 0">MDA præsenterede 10. september 2026 satellitten Aurora Black. Det er efter beholdningen, og det er ikke en konstellation i drift. MDA skrev 16. september 2026, at Chorus er tre satellitter. To er nye, en i X-bånd og en i C-bånd. Selskabet skriver, at RADARSAT-2 allerede er i kredsløb. Opsendelsen af de nye er sat til sent i 2026. Det er en plan. De to nye er ikke sendt op. Meddelelsen ligger efter beholdningen.</p>
+ <section class="sky" aria-label="Chorus, tre satellitter og et kontrolcenter på jorden">
+ <h3>Tre satellitter</h3>
+ <p class="intro">Meddelelsen 16. september 2026. To er ikke sendt op. Kontrolcenteret er på jorden.</p>
+ <ol class="birds">
+ <li><strong>RADARSAT-2</strong><span>Allerede i kredsløb. Siden skriver det.</span></li>
+ <li class="plan"><strong>X-bånd</strong><span>Ny. Opsendelse sent i 2026 er en plan. Ikke sendt op.</span></li>
+ <li class="plan"><strong>C-bånd</strong><span>Ny. Samme plan. Ikke sendt op.</span></li>
+ </ol>
+ <p class="ground">St-Bruno-de-Montarville · kontrolcenter på jorden, åbnet 11. august 2026, efter beholdningen. COMMAND, COMMAND PRO og INTELLIGENCE er produkter, ikke satellitter.</p>
+ </section>
  <p style="color:var(--muted);margin:8px 0 0">Planet nævner satellitterne SuperDove, SkySat, Pelican, Tanager og Owl. Owl er omtalt som næste generation. Selskabet opsender ikke selv raketterne. Tre adresser står i kortet under.</p>
  <div style="border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:10px 0 0">
  <p style="margin:0 0 6px;font-weight:600">Planet · tre ting siden selv skriver</p>
