@@ -984,7 +984,7 @@ function renderUdforsk(root) {
     <a class="back" href="?view=entre&fund=${state.fund}" data-nav="entre">← Entré</a>
     <p class="eyebrow">UDFORSK TECH</p>
     <h1>Screener · NDI-linse</h1>
-    <p class="lede">Kun selskaber i porteføljen. Hvert selskab har ét primært tema; ${nMulti} udvalgte har flere temaer (multi-tag). Sortér på navn, vægt eller tema. Søgningen dækker også NDI-linsens tekst (fx “foundry”, “kobber”, “solceller”).</p>
+    <p class="lede">Kun selskaber i porteføljen. Hvert selskab har ét primært tema; ${nMulti} udvalgte har flere temaer. Sortér på navn, vægt eller tema. Søgningen dækker også NDI-linsens tekst (fx “foundry”, “kobber”, “solceller”).</p>
     <p class="band">Informationen er generel - ikke en personlig anbefaling. Segmenter = eksponering.</p>
     ${fundToolbar({ screener: false })}
     <div class="filters">
@@ -995,9 +995,9 @@ function renderUdforsk(root) {
       <!-- Følg tema stub skjult indtil tilmelding er aktiv -->
     </div>
     <div class="filters" role="group" aria-label="Filtrér på tema">
-      ${themes.map((t) => `<button type="button" class="control ${state.tags.includes(t)?'active':''}" data-tag="${t}" aria-pressed="${state.tags.includes(t)}" title="${tagCount[t].prim} med ${daTheme(t)} som primært tema${tagCount[t].multi ? ` + ${tagCount[t].multi} via multi-tag` : ''}">${daTheme(t)} <small style="opacity:.75">${tagCount[t].prim}${tagCount[t].multi ? ` +${tagCount[t].multi}` : ''}</small></button>`).join('')}
+      ${themes.map((t) => `<button type="button" class="control ${state.tags.includes(t)?'active':''}" data-tag="${t}" aria-pressed="${state.tags.includes(t)}" title="${tagCount[t].prim} med ${daTheme(t)} som primært tema${tagCount[t].multi ? ` + ${tagCount[t].multi} som ekstra tema` : ''}">${daTheme(t)} <small style="opacity:.75">${tagCount[t].prim}${tagCount[t].multi ? ` +${tagCount[t].multi}` : ''}</small></button>`).join('')}
     </div>
-    <p style="font-size:12px;color:var(--muted);margin:4px 0 0">Tal på knapperne: selskaber med temaet som primært tema, + dem der har det som ekstra tema (multi-tag). Vælger du flere temaer, vises selskaber med mindst ét af dem.</p>
+    <p style="font-size:12px;color:var(--muted);margin:4px 0 0">Tal på knapperne: selskaber med temaet som primært tema, + dem der har det som ekstra tema. Vælger du flere temaer, vises selskaber med mindst ét af dem.</p>
     <p style="font-size:12px;color:var(--muted);margin:8px 0">Tema-dybsider: ${themes.map((t) => `<a href="tema.html?slug=${encodeURIComponent(t)}&fund=${state.fund}">${daTheme(t)}</a>`).join(' · ')} · <a href="${azHref()}">A-Z liste</a></p>
     ${statusFilterHtml(fund)}
     ${shiftPanelHtml(fund)}
