@@ -1885,3 +1885,5 @@ Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er
 - Coordinator-loop 2026-10-16 06:26:09 CEST: MERGED origin/lane-R (ahead was 5) — precheck+smoke OK, pushed
 
 - Coordinator-loop 2026-10-16 06:37:03 CEST: MERGED origin/lane-D (ahead was 2) — precheck+smoke OK, pushed
+
+- Coordinator-loop 2026-10-16 06:37:57 CEST: MERGED origin/lane-B (ahead was 10) — precheck+smoke OK, pushed
