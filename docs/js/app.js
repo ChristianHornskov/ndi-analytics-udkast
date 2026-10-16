@@ -126,8 +126,10 @@ function writeUrl(replace = false) {
     else u.searchParams.set(k, v);
   };
   set('fund', state.fund, 'pmindi');
-  set('cmp', state.cmp ? 'nasdaq' : '', '');
-  set('visning', state.basis === 'price' ? 'kurs' : '', '');
+  // Nasdaq/kurs-visning hører kun til Fonden og følger ikke med til Entré m.fl.
+  const onFonden = state.view === 'fonden';
+  set('cmp', onFonden && state.cmp ? 'nasdaq' : '', '');
+  set('visning', onFonden && state.basis === 'price' ? 'kurs' : '', '');
   set('view', state.view, 'entre');
   set('periode', state.period, 'all');
   set('tags', state.tags.join(','), '');
@@ -446,7 +448,7 @@ function renderFonden(root) {
     `<tr><td>${y.year}${y.partial ? ' <span class="badge">delår</span>' : ''}</td><td>${fmtPct(y.ret)}</td><td style="color:var(--muted);font-size:12px">${fmtDate(y.from)} - ${fmtDate(y.to)}</td></tr>`
   ).join('');
   const yearTableDeep = years.map((y) =>
-    `<tr><td>${y.year}${y.partial ? ' <span class="badge">delår</span>' : ''}</td><td>${fmtPct(y.ret)}</td><td style="color:var(--muted);font-size:12px">${fmtDate(y.from)} - ${fmtDate(y.to)}</td><td><a href="periode.html?fund=${state.fund}&year=${y.year}">Dyb →</a></td></tr>`
+    `<tr><td>${y.year}${y.partial ? ' <span class="badge">delår</span>' : ''}</td><td>${fmtPct(y.ret)}</td><td style="color:var(--muted);font-size:12px">${fmtDate(y.from)} - ${fmtDate(y.to)}</td><td><a href="periode.html?fund=${state.fund}&year=${y.year}">Se året i detaljer</a></td></tr>`
   ).join('');
 
   root.innerHTML = `
@@ -825,7 +827,7 @@ function fundToolbar({ screener = true } = {}) {
 
 function positionsTable(list, fund) {
   const th = (key, label) =>
-    `<th><button type="button" data-sort="${key}" aria-sort="${state.sort===key?(state.dir==='asc'?'ascending':'descending'):'none'}">${label}${state.sort===key?(state.dir==='asc'?' ↑':' ↓'):''}</button></th>`;
+    `<th${state.sort===key?` aria-sort="${state.dir==='asc'?'ascending':'descending'}"`:''}><button type="button" data-sort="${key}">${label}${state.sort===key?(state.dir==='asc'?' ↑':' ↓'):''}</button></th>`;
   return `<p class="spark-legend"><svg class="spark-key" width="16" height="12" aria-hidden="true"><g fill="var(--cyan)"><rect x="0" y="6" width="4" height="6" rx="1"/><rect x="6" y="3" width="4" height="9" rx="1"/><rect x="12" y="0" width="4" height="12" rx="1"/></g></svg><span>Søjlerne ved navnet viser <strong>vægt i fonden pr. kvartal</strong>. Ikke aktiekurs.</span></p>` +
   mobileSortHtml() +
   hscroll(`<div class="table-wrap"><table class="data screener-table"><thead><tr>
@@ -1093,6 +1095,16 @@ function renderUdforsk(root) {
     ${warnHtml()}`;
 
   const uf = $('#udforsk-filters', root); if (uf && window.matchMedia('(min-width: 801px)').matches) uf.open = true;
+  // UX 08:00 MUST 1: på mobil skal første resultat ses på første skærm → intro/info flyttes under listen
+  if (window.matchMedia('(max-width: 800px)').matches) {
+    const after = document.createElement('details');
+    after.className = 'uf-about';
+    after.innerHTML = '<summary class="outline-btn small">Om listen</summary>';
+    ['.uf-lede', '.uf-band', '.uf-machine-note'].forEach((sel) => { const el = root.querySelector(sel); if (el) after.appendChild(el); });
+    root.querySelectorAll('#copy-link,#csv-export').forEach((b) => after.appendChild(b));
+    const last = root.lastElementChild; // historisk-advarsel nederst
+    if (last) root.insertBefore(after, last); else root.appendChild(after);
+  }
   const chips = $('#chips', root);
   const parts = [
     ...state.tags.map((t) => ({ k: 'tag', v: t, label: daTheme(t) })),

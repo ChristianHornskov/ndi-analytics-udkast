@@ -181,7 +181,7 @@
    .az-m-line .tag{margin:0 4px 2px 0}
  }
  </style>
- <div class="table-wrap"><table class="data az-table"><thead><tr><th scope="col">Navn</th><th scope="col">ISIN</th><th scope="col">Tema</th><th scope="col">Vægt %</th></tr></thead><tbody>${pos.length ? body : empty}</tbody></table></div>
+ <div class="table-wrap"><table class="data az-table"><thead><tr><th scope="col"${sort === 'name' ? ' aria-sort="ascending"' : ''}>Navn</th><th scope="col">ISIN</th><th scope="col"${sort === 'theme' ? ' aria-sort="ascending"' : ''}>Tema</th><th scope="col"${sort === 'weight' ? ' aria-sort="descending"' : ''}>Vægt %</th></tr></thead><tbody>${pos.length ? body : empty}</tbody></table></div>
  <p style="font-size:11px;color:var(--muted);margin-top:8px">${nLens ? `<span class="badge">NDI-linse</span> = kvalitativ beskrivelse (rolle, værdikæde, hold øje med) - udkast, ikke anbefaling. <a href="ndi-perspektiv.html">Om NDI-linsen</a>. ` : ''}Kun navn, ISIN, tema og vægt i fonden. Ingen kursafkast, P/S eller P/E pr. aktie i denne version.</p>
  <p class="warn">${WARN_HIST}</p>`;
  if (location.hash) document.getElementById(location.hash.slice(1))?.scrollIntoView();
