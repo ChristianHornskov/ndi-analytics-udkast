@@ -459,3 +459,43 @@ Hele lane-C-fladen ved 375 px: ideer, kort, om-data, invester, risici, ndi-persp
 - Tre kort under tidslinjen: «Kan vi lave chippen? → Kan vi regne nok? → Kan vi forsyne det?» De ender i «Vi vælger udviklingen, ikke vinderen». Afsnittet «Hvad tidslinjen ikke siger» dækker: ikke en prognose, ikke hvem der tjener pengene, ikke fondens handler.
 - Links fra lær-oversigten (Tankegangen), kort, ordlisten (dæmning) og FAQ (nyt kort svar «Hvorfor flytter flaskehalsen sig?»). Ideer-meta er rettet fra «Seksten» til «Atten billeder».
 - Playwright 375/1280: ingen vandret overflow, 0 JS-fejl, 0 knapper under 24 px, filteret virker (Energi: 1 af 12).
+
+## 04:00 CEST
+**Live:** https://christianhornskov.github.io/ndi-analytics-udkast/ · Screenshots: `notes/ux-screens/04-*.png` · Viewport: 1280 + 375 · Runde: natlig UX-review (Grok Bot) · Pages last-modified ~02:13 UTC (04:13 CEST).
+
+**Perspektiver:** privatinvestor (55+, mobil først) + institutionel/family office (desktop, sporbarhed, mærkning).
+
+### Løst siden 00:00 CEST
+- **(desktop + mobil)** 00:00 MUST 1 (datakvalitet): Cipher Mining → `compute` (forslag); Opendoor (+ warrants) → `platforms` (forslag); Coinbase → `platforms`. Andet: 31 selskaber / **ca. 6,3 %** vægt (fra ~11,6 %). 0 ISIN-som-navn. Alle 345 har `maturityStatus: forslag` (ikke længere «ikke-klassificeret»).
+- **(desktop + mobil)** 00:00 MUST 2: X-markørtekst uden «rådgiver» (kun i `complianceNote`). Performance-markør nu: «offentlige totalafkasttal for NewDeal Invest-fondene (Fundmarket)».
+- **(desktop)** 00:00 MUST 3: `commitSearch` (150 ms) synker `?q=` ↔ liste; deep link `?q=softbank` / Cipher / Opendoor verificeret i overnight-status + live.
+- **(mobil)** Hovednav viser stadig Entré · Fonden · Porteføljen · Udforsk · Følg med · Risici (CSS-override af `.hide-sm`).
+- **(desktop + mobil)** Fonden: eyebrow «FONDEN · MARKEDSFØRINGSMATERIALE»; advarsel i KPI-panelet (DOM); «Største fald» (ikke Max DD); takeaway under graf; PMINDIAKK uden kursserie («efter 12 måneder»).
+- **(desktop + mobil)** SoftBank-selskab: udfyldt linse med «AI-udkast» + «ikke en anbefaling»; vægt 1,51 % pr. 1. jun. 2026; ingen kursmål set.
+- **(mobil)** Livscyklus: «Vis kurve» (skjult default) — 00:00 SHOULD om tom/høj boks delvist lukket.
+- Palet respekteret (gul sparsomt på forslag-badges). Notes ikke på Pages.
+
+### MUST
+1. **(mobil)** Fonden: første viewport viser store afkasttal (**+104,8 %**, **+26,4 %**) uden historisk-afkast-advarsel synlig. Advarslen ligger korrekt i DOM under KPI-gitteret, men gitteret skubber den under fold på 375. Privatinvestor scanner tal før scroll. Flyt en kompakt `warn` *over* eller *mellem* første KPI-række på smalle viewports, eller gør KPI-gitteret én kolonne med advarsel efter de to første tal. [UX-krav afkastadvarsel, brief, inspiration §1 Stripe/OWID]
+2. **(desktop + mobil)** X-grafmarkør med teksten **`$NVDA $SE $HIMS`** på performance-grafen. Ligner ticker-picks ved afkasttal → mistillid hos både privat og institutionel (anbefalingsagtigt). Skjul, omskriv til kontekst uden tickers, eller flyt til NDI-på-X uden grafmarkør. [R2, compliance-tone, brief «ingen rådgivning»]
+3. **(desktop + mobil)** `temaer.html` mangler **Markedsføringsmateriale**-footer og KID/prospekt-links (live HTML: ingen `site-footer` / KID). Temaer er en produktdør fra Entré («87 forslag»). Andre sider har mærkningen — hullet skaber ujævn tillid. [compliance MUST 1 / HANDOFF, OWID «kilde synlig»]
+
+### SHOULD
+1. **(mobil)** Nav-rækken stadig tæt; CSS `min-height: 36px` < Apple 44 pt. Wrap hjælper, men hit-area er under mål. [M3, Apple HIG]
+2. **(mobil)** Udforsk: søgning + «Følg tema (stub)» + mange chips før første resultat — fold filtre / bottom sheet (Things/Robinhood progressiv disclosure). [inspiration §4–5, 00:00 SHOULD]
+3. **(desktop + mobil)** Skjul synlig stub **«Følg tema (stub)»** på Udforsk (stadig i live UI). [22:00 COULD 1]
+4. **(desktop + mobil)** KPI-label «Gns. årligt afkast **(CAGR)**» — CAGR i synlig label er jargon for privatinvestor; lær-sider har allerede renset overskrifter. Brug «Gns. årligt afkast» + tooltip/ordliste. [persona-privat, lane-C precedent]
+5. **(desktop)** Selskabsside: reduceret header (kun «Udforsk» + CTA) vs. fuld nav på SPA — dobbelt «tilbage»-mønster uændret. [22:00 SHOULD 5]
+6. **(desktop + mobil)** Udforsk-lede nævner stadig **«Level 1»** — fagord uden forklaring i første afsnit. [minimize jargon]
+7. **(mobil)** Fonden: datostempel gentaget (global linje + lede) — støj i første viewport. [scanbarhed]
+
+### COULD
+1. Tabular nums konsekvent i vægtkolonner (Linear/Vercel) — delvist på plads overnight; spot-tjek screener.
+2. Entré: «87 forslag» / «345 … forslag»-badges er ærlige, men tætte gul-badges kan signalere «ufærdigt»; overvej én samlet statuslinje i stedet for badge pr. dør. [tillid, OWID huller synlige — uden at over-badge]
+3. Chart-takeaway gentager procent; hold den kort og sørg for at warn forbliver i samme synsfelt som takeaway ved scroll til graf (Stripe + advarsel).
+
+### Top-3 MUST (til Leo)
+1. Mobil Fonden: afkastadvarsel under fold ved store afkasttal.
+2. X-markør `$NVDA $SE $HIMS` på performance-graf — skjul/omskriv.
+3. `temaer.html` uden Markedsføringsmateriale + KID-footer.
+
