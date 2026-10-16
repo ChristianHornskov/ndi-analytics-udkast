@@ -36,7 +36,8 @@
  ]);
  const hasLens = (p) => !!lens?.byIsin?.[p.isin]?.metrics?.length;
  const url = new URL(location.href);
- const fundId = url.searchParams.get('fund') || 'pmindi';
+ // fund indsættes i href'er - kun [a-z0-9-]
+ const fundId = (url.searchParams.get('fund') || 'pmindi').toLowerCase().replace(/[^a-z0-9-]/g, '') || 'pmindi';
  const fund = fundById(portfolio, fundId);
  const qRaw = (url.searchParams.get('q') || '').trim();
  const q = qRaw.toLowerCase();

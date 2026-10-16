@@ -56,6 +56,12 @@ function sanitizeMaturity() {
   return before !== state.maturity.join(',');
 }
 // Samme for ?tags=: et ukendt/stavet forkert tema giver ellers 0 resultater uden forklaring. Behold kun temaer, som findes i data.
+function sanitizeFund() {
+  if (DATA.portfolio.funds.some((f) => f.id === state.fund)) return false;
+  state.fund = 'pmindi';
+  return true;
+}
+
 function sanitizeTags() {
   const known = new Set(DATA.portfolio.funds.flatMap((f) => f.positions.flatMap((p) => tagsFor(p, DATA.multiTags))));
   const before = state.tags.join(',');
@@ -90,7 +96,8 @@ function $all(sel, root = document) { return [...root.querySelectorAll(sel)]; }
 
 function readUrl() {
   const u = new URL(location.href);
-  state.fund = (u.searchParams.get('fund') || 'pmindi').toLowerCase();
+  // fund indsættes i href'er - kun [a-z0-9-] her, og valideres mod fondslisten i main() (sanitizeFund)
+  state.fund = (u.searchParams.get('fund') || 'pmindi').toLowerCase().replace(/[^a-z0-9-]/g, '') || 'pmindi';
   state.view = u.searchParams.get('view') || 'entre';
   state.period = u.searchParams.get('periode') || 'all';
   state.cmp = u.searchParams.get('cmp') === 'nasdaq';
@@ -1068,7 +1075,7 @@ function renderUdforsk(root) {
       <!-- Følg tema stub skjult indtil tilmelding er aktiv -->
     </div>
     <details class="udforsk-filters" id="udforsk-filters">
-    <summary class="outline-btn small">Filtre (tema, status, modenhed) <span class="muted">· ${state.tags.length + state.maturity.length + (state.status?1:0) + (state.linse?1:0) + (state.skift?1:0)} aktive</span></summary>
+    <summary class="outline-btn small">Filtre (tema, status, modenhed) <span class="muted">· ${(n => n === 1 ? '1 aktivt' : `${n} aktive`)(state.tags.length + state.maturity.length + (state.status?1:0) + (state.linse?1:0) + (state.skift?1:0))}</span></summary>
     <div class="filters" role="group" aria-label="Filtrér på tema">
       ${themes.map((t) => `<button type="button" class="control ${state.tags.includes(t)?'active':''}" data-tag="${t}" aria-pressed="${state.tags.includes(t)}" title="${tagCount[t].prim} med ${daTheme(t)} som primært tema${tagCount[t].multi ? ` + ${tagCount[t].multi} som ekstra tema` : ''}">${daTheme(t)} <small style="opacity:.75">${tagCount[t].prim}${tagCount[t].multi ? ` +${tagCount[t].multi}` : ''}</small></button>`).join('')}
     </div>
@@ -1325,12 +1332,12 @@ async function main() {
     $('#app').innerHTML = `<p class="warn">Data kunne ikke hentes (${err.message}). Genindlæs siden.</p>`;
     return;
   }
-  if (sanitizeMaturity() | sanitizeTags()) writeUrl(true);
+  if (sanitizeFund() | sanitizeMaturity() | sanitizeTags()) writeUrl(true);
   fillKidFooter();
   document.addEventListener('click', onClick);
   document.addEventListener('input', onInput);
   wireKeyboard();
-  window.addEventListener('popstate', () => { readUrl(); if (sanitizeMaturity() | sanitizeTags()) writeUrl(true); paint(); });
+  window.addEventListener('popstate', () => { readUrl(); if (sanitizeFund() | sanitizeMaturity() | sanitizeTags()) writeUrl(true); paint(); });
   window.addEventListener('resize', () => markHscroll($('#app')));
   // [data-open] håndteres af onClick-delegering (tidligere dobbelt listener → to dialoger)
   paint();
