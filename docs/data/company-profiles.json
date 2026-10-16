@@ -1731,15 +1731,16 @@
   "US36828A1016": {
    "name": "GE Vernova",
    "theme": "physical",
-   "summary": "Leverer udstyr til elproduktion og elnet. Gassiden viser turbinerne 9HA, 7HA og LM2500. Siden om atomkraft skriver, at dampkraft understøtter mere end 80 anlæg i Amerika. Selskabet driver ikke værkerne.",
+   "summary": "Leverer udstyr til elnet og elproduktion. Netsiden skriver, at GIS-udstyr dækker fra 50 kV til 800 kV. Gassiden viser turbinerne 9HA, 7HA og LM2500. Selskabet driver ikke værkerne.",
    "watch": "Om tallene er udstyr i andres anlæg. Teksten beskriver ikke værker, selskabet selv driver.",
-   "source": "https://www.gevernova.com/gas-power",
-   "products": "Gasturbiner, blandt andet 9HA, 7HA og LM2500, og dampturbiner til atomkraft. Ikke værker i egen drift.",
-   "customers": "Elselskaber og industri.",
-   "role": "Udstyr til både produktion og net. Driver ikke værkerne.",
+   "source": "https://www.gevernova.com/grid-solutions",
+   "products": "GIS fra 50 kV til 800 kV og gasturbiner, blandt andet 9HA, 7HA og LM2500. Ikke værker i egen drift.",
+   "customers": "Elselskaber og industri. Teksten siger ikke, at selskabet ejer ledningerne.",
+   "role": "GIS og turbiner er udstyr. Selskabet driver ikke værkerne.",
    "narrative": [
-    "GE Vernova skriver, at gassiden viser turbiner, blandt andet H-klassen 9HA og 7HA og den aeroderivative LM2500. Siden om atomkraft skriver, at dampkraft understøtter mere end 80 anlæg i Amerika, og at den installerede base af dampturbiner og generatorer hos selskabet og hos andre leverandører er cirka 85 GW. Tallet dækker også andres udstyr.",
-    "Forsiden skriver, at selskabet er cirka 85.000 mennesker i cirka 100 lande. Selskabet driver ikke de værker, udstyret står i. I kæden står det både på elproduktion og på elnet."
+    "GE Vernova skriver, at GIS-udstyr dækker fra 50 kV til 800 kV, og at SF6-fri GIS findes ved 145 kV og 420 kV. Siden skriver, at afbrydere til generatorer dækker installationer op til 1.500 MW. Det er udstyr. Selskabet driver ikke værkerne og ejer ikke ledningerne.",
+    "Gassiden viser turbiner, blandt andet H-klassen 9HA og 7HA og den aeroderivative LM2500. Siden om atomkraft skriver, at dampkraft understøtter mere end 80 anlæg i Amerika, og at den installerede base af dampturbiner og generatorer hos selskabet og hos andre leverandører er cirka 85 GW. Tallet dækker også andres udstyr.",
+    "Siden om nettet skriver, at afbrydere til frakobling laves på otte fabrikker i syv lande, og at den linje går tilbage til 1960. Forsiden skriver, at selskabet er cirka 85.000 mennesker i cirka 100 lande. I kæden står det både på elproduktion og på elnet."
    ],
    "narrativeSources": [
     {
@@ -1753,6 +1754,10 @@
     {
      "label": "Forsiden",
      "url": "https://www.gevernova.com/"
+    },
+    {
+     "label": "Elnet",
+     "url": "https://www.gevernova.com/grid-solutions"
     }
    ]
   },

@@ -1100,5 +1100,16 @@ Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px og ved 375 px
 
 **Push:** `lane-E` @ `6c30388` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
 
+## Fra Grok lane-E
+
+**2026-10-16 03:02 CEST. GE Vernova skriver, at GIS-udstyr dækker fra 50 kV til 800 kV. Ikke færdig.**
+
+Afbrydere til generatorer dækker op til 1.500 MW. Det er udstyr. Selskabet driver ikke værkerne. Ingen `reviewedAt`. Blurben under elnet og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px og ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. 50 kV står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `7ee1e45` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+
 
 

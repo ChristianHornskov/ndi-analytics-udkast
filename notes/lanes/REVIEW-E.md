@@ -282,6 +282,10 @@ St. Gabriel i Louisiana er flydende brint sammen med Olin gennem Hidrogenii. Kom
 
 Aftalen af 1. april 2025 siger, at Bloom og Conagra vil bruge brændselsceller på Conagras fabrikker i Troy og Archbold i Ohio. Før beholdningen. Ikke skrevet som celler, der allerede kører. Ikke et klassisk kraftværk. Megawatt, kapitalramme, leader og leading er ikke kopieret. AI-udkast uden gennemgangsdato. Elproduktions-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
 
+## GE Vernova elnet · 2026-10-16 03:02 CEST
+
+Netsiden skriver, at GIS dækker fra 50 kV til 800 kV, at SF6-fri GIS findes ved 145 kV og 420 kV, og at afbrydere til generatorer dækker op til 1.500 MW. Afbrydere til frakobling laves på otte fabrikker i syv lande, og siden daterer linjen til 1960. Det er udstyr. Selskabet driver ikke værkerne og ejer ikke ledningerne. Turbinerne og de 85 GW er uændrede. Market leader, industry leader, top og among the highest er ikke kopieret. AI-udkast uden gennemgangsdato. Elnet-blurben og arkivet siger grænsen. Vægten 0,19 er uændret. Chromium ved 375 px. Kæden er også tjekket ved 1280 px og ved 375 px. "tjekket mod kilden" er ikke med. 50 kV står. Ingen konsolfejl. Ingen vandret scroll.
+
 ## Southern · 2026-10-16 03:00 CEST
 
 Siden om atomkraft skriver, at Plant Vogtle har fire enheder i drift. Forsiden skriver, at værket leverer strøm til mere end 1 million hjem og virksomheder i Georgia. Siderne daterer ikke tallene. Læst 16. oktober 2026. Ikke knyttet til beholdningen. Ikke en lille reaktor under udvikling. Georgia Power, Alabama Power og Mississippi Power er med. Largest, premier, leads og No. 1 er ikke kopieret. Tallet på næsten 30.000 medarbejdere og orkanoverskriften er ikke brugt. AI-udkast uden gennemgangsdato. Elproduktions-blurben og arkivet siger grænsen. Vægten 0,28 er uændret. Chromium ved 375 px. Kæden er også tjekket ved 1280 px og ved 375 px. "tjekket mod kilden" er ikke med. Vogtle står. Ingen konsolfejl. Ingen vandret scroll.
