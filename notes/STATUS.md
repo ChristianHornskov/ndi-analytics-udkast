@@ -1663,3 +1663,17 @@ Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er
 - Lead 2026-10-16 02:18:04 CEST: Leo 02:00/02:07 fixes on main (e402f15/5843694). Coord hardened (no auto-stash). Monitor+loop running. Queued lane merges R/A/B/C/D/E/X.
 
 - Lead 2026-10-16 02:18:12 CEST: lane R/A/B/C CONFLICT on STATUS (and app.js for B) — aborted; coordinator continues.
+
+- Coordinator-loop 2026-10-16 02:27:02 CEST: CONFLICT merge origin/lane-D (ahead 10) — aborted, not pushed
+
+- Coordinator-loop 2026-10-16 02:27:02 CEST: SKIP origin/lane-A — dirty working tree (no auto-stash)
+
+- Coordinator-loop 2026-10-16 02:27:02 CEST: SKIP origin/lane-E — dirty working tree (no auto-stash)
+
+- Coordinator-loop 2026-10-16 02:27:02 CEST: SKIP origin/lane-B — dirty working tree (no auto-stash)
+
+- Coordinator-loop 2026-10-16 02:27:02 CEST: SKIP origin/lane-C — dirty working tree (no auto-stash)
+
+- Coordinator-loop 2026-10-16 02:27:02 CEST: SKIP origin/lane-X — dirty working tree (no auto-stash)
+
+- Coordinator-loop 2026-10-16 02:27:02 CEST: SKIP origin/lane-R — dirty working tree (no auto-stash)
