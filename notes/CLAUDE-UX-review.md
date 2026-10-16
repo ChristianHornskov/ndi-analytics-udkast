@@ -734,3 +734,34 @@ Pages (00:15:49 GMT) = `e402f15`. **`5843694` er ikke live endnu (Pages-lag)**: 
 - **Privat (55+):** omkostninger er nu klar: ét KID-tal, før tabellerne ✅. Fonden er stadig forstyrret af engelske "BREAKING"-opslag under grafen.
 - **Familiekontor:** KID-total + "ikke ÅOP" + kilde-links til begge KID'er dækker deres omkostnings-MUST ✅. ÅOP er bevidst ikke vist. Det er forsvarligt, når KID-RIY er der. Næste spørgsmål bliver kurering af tredjepartsopslag på produktsider.
 - **Visuel variation:** ingen nye former. Omkostninger har nu metric → tabel → "den ene forskel"-skala, hvilket er god variation.
+
+## 2026-10-16 02:40 CEST · cyklus 32 (main `3e4ec15`, intet docs-delta siden cyklus 31)
+
+Pages (00:22:23 GMT) = main `3e4ec15` ✅. Lag fra cyklus 31 er indhentet: live `fund-facts.json` har `kidRiy5y`, omkostninger har `#kid-omkostning`, og "MADS FØLGER" er væk. Lane-R indeholder allerede origin/main, så der var ingen merge og ingen reset (reset ville kræve force-push). Playwright live ved 375 på 22 URL'er: 0 pageerrors, 0 vandret overflow, én h1 overalt ✅.
+
+### MUST
+- **Fonden: tredjeparts-"BREAKING" under hovedgrafen (uændret fra cyklus 31, nu live).** Under "Udvalgte offentlige X-opslag — ikke NDI's holdning" står @BullTheoryio "BREAKING: SoftBank is seeking to raise up to $100 billion …" og @MilkRoadAI (Nvidia $1B) mellem @jesper_baek og @InvestNewdeal. **Ret:** `chartMarkers` → kun @InvestNewdeal (webinarer/børsnotering).
+
+### SHOULD
+- **Omkostninger: internt sprog, nu live.** (1) "Det er det tal, marketingmateriale skal gengive ærligt — ikke kun de enkelte postsatser." (2) "Tomme felter = udfyldes af NDI." Begge er regler til os selv. Forslag: "Tallet samler alle fondens omkostninger i ét årligt tal, så du kan sammenligne med andre fonde." Fjern linje (2), eller skjul den bag `?intern=1`.
+- **"kl n"** står nu på 3 sider: invester, fakta ("Fundmarket – NewDeal Invest, kl n ↗") og omkostninger. Skriv "andelsklasse" eller fjern.
+- **Fonden "seneste offentlige kvartalsrapport i udkastet"**: stadig live. Om-data siger, at 1. juni ikke er et kvartalsskifte. Skriv "forsinket snapshot pr. 1. jun. 2026".
+- **"Dyb →"** står 4× i årstabellen på fonden. Skriv "Se perioden →".
+- **Livscyklus-strip:** der er 0 elementer med `aria-expanded` på fonden ved 375. Foldningen er stadig ikke en `<button>`.
+- **Nyhedsarkiv:** synlig tekst "Placeholder: Sådan investerer du" og "Arkivet er et UI-koncept". Det er OK for et udkast, men ordet "Placeholder" bør ikke kunne ses. Brug "Kommer snart".
+- Højder ved 375 er uændrede: ndi-perspektiv 143.436, selskaber 66.172, udforsk 28.282, vaerdikaeder 15.593 px. Det er træthedsrisiko på mobil. Fold/paginér (åben siden cyklus 22/29/31).
+- `laer/laes-grafen.html`: "max drawdown" står der stadig (1 hit). Resten af sitet siger "Største fald".
+
+### Lukket ✅ (verificeret live)
+- Omkostninger: KID 2,79 %/2,85 % (5 år) og 2,63 %/2,71 % (1 år) vises først, med "ikke et ÅOP" og "du kan tabe" ✅.
+- Fakta "Omkostningsniveau (kort)" viser 2,79/2,85 og ikke "ikke oplyst" ✅.
+- Fonden-chips: kun Siden start / ÅTD / 2023* / år. Ingen 1m/3m ✅.
+
+### Nice
+- "Central Information Dokument" står stadig på entré, fonden, portefølje, udforsk, selskab og tema (footer). Skriv "Central information (KID)" eller fjern.
+- Fakta-opsummeringen nævner stadig "Øvrige løbende 1,49 %" før KID-tallet. Sæt KID-tallet først (cyklus 31).
+
+### Persona-linser
+- **Privat (55+):** omkostninger og fakta er nu rolige og ærlige ✅. Det største ro-brud er stadig engelske "BREAKING"-opslag på fonden og SoftBank.
+- **Familiekontor:** omkostnings-MUST er dækket live ✅. Det næste, de vil stille spørgsmål ved, er interne hjælpetekster ("Tomme felter = udfyldes af NDI", "Mangler fra NDI", "kl n"), som får produktet til at virke ufærdigt.
+- **Visuel variation:** ingen ændring. Problemet er længde på mobil, ikke ensformighed.

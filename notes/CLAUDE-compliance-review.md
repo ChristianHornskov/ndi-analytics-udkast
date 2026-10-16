@@ -786,3 +786,26 @@ Ikke juridisk rådgivning. Pages (00:15:49 GMT) = `e402f15`, og `5843694` er ikk
 
 ### Prioritet
 **2** (tredjeparts-"BREAKING" ved fondens graf + SoftBank) → **5** (ÅTD "afventer godkendelse" vist) → **11** (embed KID/SRI) → **1** (mærkning) → SHOULD: intern "marketingmateriale"-sætning, fakta-opsummering med KID først.
+
+## 2026-10-16 02:40 CEST · cyklus 32 (main `3e4ec15`, live = main)
+
+Ikke juridisk rådgivning. Jeg har kørt live ved 375 på 22 sider og grep efter rådgivnings-/handelsord. Alle hits på "anbefal*", "sælg", "overvægt" og "Anbefalet" er negationer ("ikke en anbefaling", "ikke bevidste overvægte", "ingen anbefaling om at købe eller sælge"), KID-termer ("Anbefalet ejertid/investeringsperiode 5 år") eller forretningsbeskrivelser ("sælger telefoner"). Ingen "øger eksponering", "garanteret", "sikkert" eller "bedste tip" ✅.
+
+### MUST (blocker)
+1. **Tredjeparts-X-opslag med "BREAKING" på fondens produktside og SoftBank-siden** (åben fra cyklus 30/31). @BullTheoryio og @MilkRoadAI vises under fondens hovedgraf. Ved markedsføring af en konkret fond kan kuraterede tredjepartsnyheder om porteføljeselskaber læses som markedsføringsbudskab, som NDI står inde for. Overskriften "ikke NDI's holdning" ændrer ikke på, at NDI har valgt dem. **Ret:** kun NDI-egne konti i `chartMarkers`. På selskab/tema skal panelet foldes sammen og "BREAKING" filtreres fra.
+2. **Nyhedsarkiv mangler tabsadvarsel** (0 hits på "tabe"/"kan falde"). Siden har "Historisk afkast er ikke en pålidelig indikator" og "Ikke rådgivning", men ikke "Du kan tabe en del af eller hele din investering". Alle andre 21 testede sider har den nu ✅. Tilføj standardlinjen i footeren.
+
+### SHOULD
+- Fonden: "det er en compliance-beslutning, ikke et datamangel" (`js/app.js:414`). Internt sprog, og det fremhæver Nasdaq som det implicitte sammenligningsgrundlag. Skriv: "Fonden har intet fast benchmark, så vi tegner ingen sammenligningskurve."
+- Fonden: "seneste offentlige kvartalsrapport" passer ikke med om-data (snapshot pr. 1. jun. 2026 er ikke kvartalsskifte). Det er en præcisionsfejl i beholdningsforsinkelses-oplysningen.
+- Omkostninger: "marketingmateriale skal gengive ærligt" og "Tomme felter = udfyldes af NDI" er interne compliance-noter på en kundeside.
+
+### Tjekliste (live)
+- Ikke-rådgivning / generel information: ✅ på alle 22 sider.
+- Tabsadvarsel synlig: ✅ 21/22 (nyhedsarkiv ✗).
+- Historisk afkast ≠ fremtid: ✅ 22/22.
+- KID/PRIIP-links + SRI 5/7 (KID 14. aug. 2026) ✅. Omkostningsindikator (RIY) 2,79/2,85 % ved 5 år er vist og matcher KID (verificeret i cyklus 31) ✅. ÅOP er bevidst ikke vist, og det er forklaret ("ikke et ÅOP") ✅.
+- Beholdning forsinket: `portfolio.json`, `value-chains.json` og `multi-tags.json` asOf 2026-06-01 ✅ (≤ 2026-06-01). Ingen live handler.
+- PMINDI: ingen 1m/3m-chips ✅. PMINDIAKK: "Afkast vises efter 12 måneder" (cyklus 29) ✅. Nasdaq nævnes kun negativt ("vi tegner ikke … fx Nasdaq") ✅. Se SHOULD om formulering.
+- AI-mærkning: "AI-udkast"-badge på selskabs-/perspektivtekster ✅. Risici har "Tekst markeret AI-…" ✅.
+- Ingen trading-sprog fra Mads-ugebreve ✅.
