@@ -380,3 +380,5 @@ NextEra, Oklo, Terrestrial Energy, Taseko og Karman har en kort rollelinje på s
 Redwire på satellitter har rollelinjen kameraer og solsensorer til Orion. Vægten er uændret 0,27. Summen på leddet er uændret 1,95. Meddelelsen 1. april 2026 siger, at udstyret skal med på Artemis II. Forsiden bruger det engelske ord launched uden dato. Den sætning er ikke meddelelsen fra 1. april. Ingen `reviewedAt`. AI-udkast-badgen bliver.
 
 Meddelelsen 11. august 2026 siger, at St-Bruno-de-Montarville ligger på den sydlige bred af Montreal. Teksten siger det sådan. Den siger ikke blot syd for byen.
+
+United States Antimony og Karman havde det engelske will i forklaringen. Det er skrevet om som noget, der skal ske. Antimony-rollen er antimon og zeolit. Preston og Alaska står i forklaringen. Børsnavnet er taget ud af den første sætning. Karman-rollen er uændret. Ingen `reviewedAt`. AI-udkast-badgen bliver. Vægtene er uændrede.
