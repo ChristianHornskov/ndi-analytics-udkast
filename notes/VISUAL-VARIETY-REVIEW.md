@@ -336,6 +336,12 @@ På sammenlign stod «anbefaling.» alene fra 480 til 880, og «strategier.» al
 
 Advarslen lod «investering.» stå alene fra 400 til 760. Sidste linje er nu «din investering.» I embed holder «Kilde: Fundmarket» sammen fra 320 til 880. Ingen sidescroll ved 320, 400 og 700. PMINDIAKK har ingen procent. Ingen konsolfejl.
 
+### Update · AKK-sætningen · 2026-10-16 ~06:11 CEST
+
+På PMINDIAKK stod «2026.» alene under grafen ved 520 og 540. Fra 460 til 500 stod «december 2026.» under «5.». Datoen «5. december 2026» er nu én linje.
+
+Sætningen under navnet var 24–28 px, samme størrelse som et afkasttal. «måneder» stod alene fra 480 til 560. Den er nu 16 px, og «12 måneder» holder sammen. På 320 holder «12 måneder.» også sammen i dato-linjen. Ingen procent. Ingen sidescroll fra 320 til 1100. Ingen konsolfejl. PMINDI viser stadig +104,8 % i det store tal.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.
