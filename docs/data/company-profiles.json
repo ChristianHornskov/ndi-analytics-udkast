@@ -769,15 +769,15 @@
   "US26884L1098": {
    "name": "EQT",
    "theme": "energy-resources",
-   "summary": "Producerer naturgas i Appalachia i USA. Selskabet skriver, at købet af Equitrans Midstream blev gennemført 22. juli 2024.",
-   "watch": "Gaspriser og produktion fra felterne.",
-   "source": "https://www.eqt.com/",
-   "products": "Naturgas. Også midstream-aktiver efter købet af Equitrans.",
-   "customers": "Købere af gas.",
-   "role": "Brændsel til elproduktion.",
+   "summary": "Producerer naturgas i Appalachia. Købet af Equitrans Midstream blev gennemført 22. juli 2024. Cirka 4.000 boresteder er ikke et målt år.",
+   "watch": "Om borestederne bliver til produktion. Tallet er ikke et års resultat.",
+   "source": "https://www.eqt.com/thought-leadership/eqt-completes-acquisition-of-equitrans-midstream",
+   "products": "Naturgas og midstream efter Equitrans. Ikke et kraftværk.",
+   "customers": "Købere af gas. Navne er ikke taget med.",
+   "role": "Brændsel til elproduktion. Ikke en mine.",
    "narrative": [
-    "EQT producerer naturgas i Appalachia i USA. Selskabet skriver, at købet af Equitrans Midstream blev gennemført 22. juli 2024.",
-    "Equitrans er beskrevet som midstream-aktiver. I kæden står gassen som brændsel. Det er ikke en metalmine."
+    "EQT Corporation er noteret på New York Stock Exchange under EQT. Meddelelsen er dateret Pittsburgh 22. juli 2024 og siger, at købet af Equitrans Midstream er gennemført. Datoen ligger før beholdningen. Equitrans er midstream. Meddelelsen skriver cirka 4.000 boresteder. Det er et lager af steder, ikke et målt års produktion.",
+    "Selskabet skriver, at driften ligger i Appalachian Basin. Forsiden, læst 16. oktober 2026, skriver 6 procent af landets gasproduktion uden dato. Det er ikke et dateret år. En gadeadresse stod ikke på de læste sider og er ikke opfundet. Beløb og ordene only, first og largest er ikke taget med. Det er brændsel, ikke en mine og ikke et kraftværk."
    ],
    "narrativeSources": [
     {

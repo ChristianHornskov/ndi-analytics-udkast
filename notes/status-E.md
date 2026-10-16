@@ -57,3 +57,5 @@ Per-lane log (not merged into notes/STATUS.md).
 - Fra Grok lane-E · 05:36 · American Battery Technology er sat på råstoffer. Genbrug i Storey County. Fernley er ikke taget i brug. Tonopah er ikke en mine. Summen er 4,45 og antallet 25. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
 
 - Fra Grok lane-E · 05:38 · United States Antimony: Madero stod stille fra marts 2024 og blev genstartet i januar 2025. 163.788 pund er det års tal. Alaska er will, ikke en mine. To acre-tal er ikke ens. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 05:39 · EQT: Equitrans blev købt 22. juli 2024. Cirka 4.000 boresteder er ikke et målt år. 6 procent på forsiden er uden dato. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
