@@ -118,7 +118,7 @@ article.x-card.is-quote .x-foot{margin-top:10px}
 .x-filters .control.is-zero{opacity:.5}
 .x-filters .control[aria-pressed="true"]{background:#203e47;color:#fff;border-color:#9ecfd6;box-shadow:inset 0 -2px 0 #f5ee9e;font-weight:600}
 .x-live{font-size:13px;color:var(--muted);margin:8px 0 0;font-variant-numeric:tabular-nums}
-.x-score-bar{display:flex;flex-wrap:wrap;gap:8px 22px;align-items:flex-end;justify-content:space-between;margin:2px 0 10px;min-width:0}
+.x-score-bar{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:flex-start;gap:10px 18px;margin:2px 0 10px;min-width:0;padding-left:12px;box-shadow:inset 3px 0 0 #f5ee9e}
 .x-score{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:flex-end;min-width:0}
 .x-score-n{min-width:44px}
 .x-score-n b{display:block;font-size:clamp(28px,4vw,42px);line-height:.85;font-weight:600;letter-spacing:-1.2px;color:var(--cyan);font-variant-numeric:tabular-nums}
@@ -126,8 +126,8 @@ article.x-card.is-quote .x-foot{margin-top:10px}
 .x-score-n.is-direct:not(.is-zero) b{color:#f5ee9e;font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-weight:500}
 .x-score-n.is-zero b{color:var(--faint);font-weight:500}
 .x-says-h .x-score-n.is-out b,.x-says-h .x-score-n.is-all b{color:var(--faint);font-size:22px;font-family:inherit;font-weight:500}
-.x-asof{color:var(--faint);font-size:12px;line-height:1.35;padding-bottom:2px;max-width:40ch;display:flex;flex-direction:column;align-items:flex-end;gap:2px;text-align:right}
-.x-who-say{color:var(--muted)}
+.x-asof{color:var(--faint);font-size:13.5px;line-height:1.35;padding-bottom:2px;max-width:58ch;display:flex;flex-direction:column;align-items:flex-start;gap:2px;text-align:left}
+.x-who-say{color:var(--text)}
 .x-snap-mini{color:var(--faint)}
 .x-prov{display:flex;flex-direction:column;align-items:stretch;flex:none;border:1px solid #345860;border-radius:12px;overflow:hidden;background:#0b171d}
 .x-prov-nums{display:flex}
@@ -226,7 +226,15 @@ body.x-focused .x-label{margin:0 0 8px}
   body.x-focused .x-tools{order:9}
   body.x-focused .x-footwarn{order:10}
   body.x-focused .x-footlinks{order:11}
-  .x-who-say{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  .x-score-bar{display:grid;grid-template-columns:auto auto minmax(0,1fr);grid-template-areas:"n p s" "w w w";column-gap:12px;row-gap:4px;align-items:end;padding-left:10px}
+  .x-score{grid-area:n}
+  .x-prov{grid-area:p}
+  .x-asof{display:contents;max-width:none}
+  .x-snap-mini{grid-area:s;justify-self:end;align-self:end}
+  .x-who-say{grid-area:w;position:static;width:auto;height:auto;margin:0;padding:0;overflow:hidden;clip:auto;white-space:normal;border:0;color:var(--text);font-size:13px;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+  article.x-card.is-quote,article.x-card.is-slip{padding:12px 14px 10px}
+  article.x-card.is-quote .x-by,article.x-card.is-slip .x-by{margin-top:10px;padding-top:8px}
+  article.x-card.is-quote .x-foot,article.x-card.is-slip .x-foot{margin-top:8px}
   .x-prov .x-score-n{min-width:54px;padding:5px 8px 4px}
   .x-prov .x-score-n b{font-size:22px}
 }
