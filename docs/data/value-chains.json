@@ -5145,7 +5145,7 @@
           "kind": "ndi",
           "short": "Rum og compute",
           "brief": {
-            "does": "Vil placere regnekraft i kredsløb, hvor der er sol og kulde.",
+            "does": "Vil placere regnekraft i kredsløb, hvor solen skinner næsten hele tiden og kan give strøm.",
             "why": {
               "k": "Penge",
               "i": "⏳",
@@ -5434,7 +5434,7 @@
             "id": "sp-risk",
             "icon": "⚠",
             "k": "Kan gå galt",
-            "t": "seks usikkerheder"
+            "t": "syv usikkerheder"
           },
           {
             "id": "sp-web",
@@ -5510,6 +5510,14 @@
             "links": [
               "launch",
               "satcom",
+              "space-compute"
+            ]
+          },
+          {
+            "icon": "🌡",
+            "k": "Varmen skal væk",
+            "t": "Rummet er koldt, men der er ingen luft til at køle med. Varmen fra chippene kan kun slippe væk som stråling, så et datacenter i kredsløb skal have store køleflader ud over solpanelerne. Det gør det tungere og dyrere at sende op.",
+            "links": [
               "space-compute"
             ]
           },
