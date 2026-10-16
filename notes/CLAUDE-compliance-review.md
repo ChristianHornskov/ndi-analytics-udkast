@@ -1389,3 +1389,19 @@ Ikke juridisk rådgivning. Der er ingen docs-delta.
 
 ### ÅOP
 Uændret.
+
+## 2026-10-16 07:42 CEST · cyklus 56 · freeze-tjek (main `ffda4c8`; ændrede filer testet lokalt, Pages lagger)
+
+- periode "Tre datoer, tre roller": hver tekst siger "ikke en prognose" / "siger ikke noget om det næste år" — past ≠ future holder. ✅ PMINDIAKK-varianten viser ingen afkast og ingen 1m/3m (0 procenttal). ✅ YTD markeret som afventende Fundmarket-godkendelse. ✅
+- Nye faktatekster (B&W, T1) skelner planer/kapacitet fra drift og daterer før/efter beholdningen. Ingen handels- eller rådgivningsord. ✅
+- selskab.html: "anbefalet investeringshorisont" er KID-ordlyd fra PRIIP — ok.
+- Ordsweep: kun negerede "ikke bevidste overvægte" — ok.
+
+### MUST
+- M1 (ndi-paa-x tredjepartskuratering) åben før go-live. Uændret.
+
+### SHOULD
+- S3, S5, S12 åbne (tekst). S11 uændret.
+
+### ÅOP
+Uændret.

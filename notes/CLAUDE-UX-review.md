@@ -1399,3 +1399,23 @@ Main har ikke flyttet sig siden c53. Live svarer byte for byte til main på inde
 
 ### Nice
 - Uændret.
+
+## 2026-10-16 07:42 CEST · cyklus 56 · freeze-tjek (main `ffda4c8`, ny siden c55; Pages lagger — 6 af 7 ændrede filer endnu ikke live, testet lokalt)
+
+Main flyttede f6d6b4b → ffda4c8 (lane-B displayName i warrant-/risikolinjer + `?tags=`-sanering; lane-E periode "Tre datoer, tre roller" + T1/Babcock-faktatekster). Lokal test @375: 0 pageerrors, 0 overflow.
+
+- periode (PMINDI YTD/all/2025): ny knapgruppe Første NAV / Udgangspunkt / Sidste punkt, 44 px høje knapper, aria-pressed skifter, live-tekst korrekt pr. tilstand (YTD 31. dec. 2025 → 14. okt. 2026). Print viser alle tre linjer. ✅
+- periode PMINDIAKK: samme panel uden tal (0 procenttal på siden). ✅
+- index `?tags=xyz,platforms` → URL saneres til `?tags=platforms` i stedet for 0 resultater. ✅
+- selskab SoftBank + warrants: displayName bruges nu også i warrant-linjen. ✅
+- 20-URL live-sweep (c54-script): 0 fejl/overflow, rådgivnings-/tab-/historik-linje på alle. "overvægt"-flag på vaerdikaeder/risici/temaer er negerede ansvarsfraskrivelser ("ikke bevidste overvægte") — falsk positiv.
+
+### MUST
+- Ingen.
+
+### SHOULD
+1. NY · value-chains.json `role` for T1 Energy og Babcock & Wilcox er blevet faktatjek-noter i stedet for rollebeskrivelser ("5 GW moduler om året er en kapacitet. G2-celler er anslået. Austin i foden er ikke en gade."). Feltet vises som rolle-kolonne i tema.html:185. Privat-personaen forstår ikke "Austin i foden er ikke en gade". Ret rollen tilbage til "Solcellemoduler" / "Kedler og design-byggeri til kraftværker" og lad facts[] bære resten. Ren tekst, kan laves i bugfix-vinduet.
+2–5. Uændret fra c55 (ndi-paa-x tap-mål, slugs, label :110; index:89 + omkostninger:606).
+
+### Nice
+- Uændret.
