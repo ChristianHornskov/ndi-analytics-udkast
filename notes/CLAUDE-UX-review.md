@@ -1440,3 +1440,7 @@ Main flyttede f6d6b4b → ffda4c8 (lane-B displayName i warrant-/risikolinjer + 
 
 ### Nice
 - Uændret.
+
+## 2026-10-16 07:52 CEST · cyklus 57b · Nasdaq-toggle (main `76b0e7d`)
+- Toggle og forklaring er tydelige, mobil 375 ok. Den guldfarvede stiplede linje er let at skelne fra fondens cyan linje. ✅
+- SHOULD: FO-personaen vil straks spørge "totalafkast vs kursindeks?". Se compliance S-N1: brug total return, eller forklar forskellen i én sætning.

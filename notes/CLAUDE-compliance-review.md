@@ -1422,3 +1422,13 @@ Uændret.
 
 ### ÅOP
 Uændret.
+
+## 2026-10-16 07:52 CEST · cyklus 57b · Nasdaq-100-sammenligning (main `76b0e7d`, testet lokalt på archive af origin/main)
+
+- Fonden `?view=fonden`: checkboxen "Vis Nasdaq-100 som sammenligning" er slået fra som standard (44 px). Når den slås til (`cmp=nasdaq`), vises en stiplet linje, en forklaring ("kursindeks uden udbytte, omregnet til DKK") og label "Nasdaq vises kun som sammenligning, ikke som fondens benchmark. Historisk afkast er ingen garanti." Teksten "Fonden har intet fast benchmark" står stadig. ✅ Tjekpunktet "ingen Nasdaq som officielt benchmark" holder.
+- PMINDIAKK + `cmp=nasdaq`: hverken checkbox, linje eller tal. 12m-gaten holder. ✅ embed/chart ignorerer `cmp`. ✅ 0 overflow @375, 0 pageerrors.
+
+### SHOULD (før go-live)
+- S-N1 · Skæv sammenligning: fonden vises som **totalafkast** og Nasdaq-100 som **kursindeks uden udbytte** (^NDX). Over perioden 2023-09 → 2026-10 er udbytte på ca. 0,7 %/år udeladt, så Nasdaq ser ca. 2 procentpoint lavere ud. Readout viser "Fonden +104,8 % · Nasdaq-100 +94,5 %". Det er mærket, men en fair præsentation (MiFID art. 44 / ESMA-retningslinjer om sammenligninger) kræver sammenlignelige grundlag. Brug Nasdaq-100 Total Return (XNDX), eller skriv i labelen, hvilken vej forskellen trækker ("uden udbytte, derfor lidt for lavt").
+- S-N2 · Datakilde/licens: Yahoo Finance-dagslukkekurser og navnet Nasdaq-100 i offentlig markedsføring kræver normalt en licens fra Nasdaq. Få det afklaret, eller brug en licenseret kilde, før siden bliver offentlig.
+- S-N3 · Labelen vises kun, når checkboxen er slået til. Det er ok, men readoutet "Nasdaq-100 +94,5 %" står uden "ikke benchmark" i samme linje. Overvej at gentage "(sammenligning)" i readoutet, så et screenshot ikke fjerner forbeholdet.
