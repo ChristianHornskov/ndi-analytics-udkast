@@ -1430,6 +1430,26 @@
     }
    ]
   },
+  "CA28617B6061": {
+   "name": "Electrovaya",
+   "theme": "energy",
+   "summary": "Laver lithium-ion-batterisystemer. Siden sætter fabrikken i Jamestown i New York til 137.000 kvadratfod og hovedkontoret i Mississauga i Ontario til 65.000 kvadratfod. Mississauga samler lavspændingssystemer. Faststof ligger i Electrovaya Labs og er udvikling, ikke fabrikken.",
+   "watch": "Hvad fabrikken i Jamestown leverer, og hvad laboratoriet i Mississauga stadig udvikler. Siden giver ikke et års tal for celler.",
+   "source": "https://electrovaya.com/our-facilities/",
+   "products": "Infinity-moduler til lav og høj spænding, batterilagring, udstyr i lufthavne og truckbatterier. Faststof er udvikling.",
+   "customers": "Siden nævner industrielle kunder til lavspændingssystemer. Den nævner ikke et navngivet selskab.",
+   "role": "Batterisystemer. Faststof er ikke fabrikken.",
+   "narrative": [
+    "Electrovaya skriver, at fabrikken i Jamestown i New York er 137.000 kvadratfod, og at den skal levere lithium-ion-celler fra USA. Siden kalder anlægget en gigafactory. Et beløb for kapacitet og ordene groundbreaking og low-cost er ikke taget med. Teksten giver ikke et års tal for celler.",
+    "Hovedkontoret i Mississauga i Ontario er sat til 65.000 kvadratfod. Siden skriver, at det er ingeniørarbejde og samling af lavspændingssystemer. Electrovaya Labs samme sted udvikler faststofbatterier og en coating uden opløsningsmiddel. Det er udvikling, ikke den samme tekst som fabrikken i Jamestown. Det er ikke et lager i drift."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Anlæg",
+     "url": "https://electrovaya.com/our-facilities/"
+    }
+   ]
+  },
   "CA64046G1063": {
    "name": "Neo Performance Materials",
    "theme": "energy-resources",

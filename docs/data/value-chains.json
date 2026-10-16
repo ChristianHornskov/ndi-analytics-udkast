@@ -1420,15 +1420,15 @@
           "id": "storage",
           "icon": "🔋",
           "label": "Energilagring og batterier",
-          "blurb": "Batterier og andre lagre, der kan gemme strøm og aflevere den senere. Lithium til batterierne står under råstoffer. QuantumScape er et batteridesign til køretøjer og nævner også QS PowerBlock til datacentre. Det er ikke masseproduktion og ikke et lager i drift. Fluence leverer batterisystemer og software til nettet og nævner platformen Smartstack. Det er ikke et kraftværk, og teksten siger ikke, at selskabet selv laver cellerne. Eos skriver, at fremstilling af Z3 begyndte i august 2023 på Eos Ingenuity Park i Turtle Creek i Pennsylvania. Det er batterier, ikke en mine og ikke et kraftværk. Solid Power skriver, at det udvikler faststofbatterier og leverer sulfid-elektrolyt og celleteknologi til partnere. Elektrolytsiden skriver, at elektrolytten laves i pilotskala, og at store celler testes på en linje, selskabet kalder skalerbar. Det er ikke masseproduktion. Hovedkontoret ligger på 486 S. Pierce Ave. i Louisville i Colorado. Siden nævner også 14902 Grant Street i Thornton i Colorado. Ordene leading, most advanced og only er ikke taget med. Det er ikke et lager i drift. Amprius skriver, at det laver battericeller med siliciumanode. Adressen er 1180 Page Ave i Fremont i Californien. Siden skriver, at selskabet er stiftet i 2008, at fremstilling i kWh-skala begyndte i 2016, og at salg begyndte i 2018. I 2024 satte siden en udvidelse i MWh-skala i gang og nævner GWh-skala som kontraktproduktion hos partnere. Produktionssiden har et afsnit, der hedder Fremont Pilot Production. Pilotlinjen er ikke det samme som partnernes linjer. Det er ikke et lager i drift.",
-          "ndi": "NDI nævner batterier som del af energiflaskehalsen (ugebrev 30. marts 2026). Tesla er med, fordi koncernen også laver batterilagring. Solid Power er elektrolyt i pilotskala, ikke masseproduktion. Amprius har en pilotlinje i Fremont. GWh-skala på siden er kontraktproduktion hos partnere, ikke et målt år.",
+          "blurb": "Batterier og andre lagre, der kan gemme strøm og aflevere den senere. Lithium til batterierne står under råstoffer. QuantumScape er et batteridesign til køretøjer og nævner også QS PowerBlock til datacentre. Det er ikke masseproduktion og ikke et lager i drift. Fluence leverer batterisystemer og software til nettet og nævner platformen Smartstack. Det er ikke et kraftværk, og teksten siger ikke, at selskabet selv laver cellerne. Eos skriver, at fremstilling af Z3 begyndte i august 2023 på Eos Ingenuity Park i Turtle Creek i Pennsylvania. Det er batterier, ikke en mine og ikke et kraftværk. Solid Power skriver, at det udvikler faststofbatterier og leverer sulfid-elektrolyt og celleteknologi til partnere. Elektrolytsiden skriver, at elektrolytten laves i pilotskala, og at store celler testes på en linje, selskabet kalder skalerbar. Det er ikke masseproduktion. Hovedkontoret ligger på 486 S. Pierce Ave. i Louisville i Colorado. Siden nævner også 14902 Grant Street i Thornton i Colorado. Ordene leading, most advanced og only er ikke taget med. Det er ikke et lager i drift. Amprius skriver, at det laver battericeller med siliciumanode. Adressen er 1180 Page Ave i Fremont i Californien. Siden skriver, at selskabet er stiftet i 2008, at fremstilling i kWh-skala begyndte i 2016, og at salg begyndte i 2018. I 2024 satte siden en udvidelse i MWh-skala i gang og nævner GWh-skala som kontraktproduktion hos partnere. Produktionssiden har et afsnit, der hedder Fremont Pilot Production. Pilotlinjen er ikke det samme som partnernes linjer. Det er ikke et lager i drift. Electrovaya skriver, at fabrikken i Jamestown i New York er 137.000 kvadratfod, og at hovedkontoret i Mississauga i Ontario er 65.000 kvadratfod og samler lavspændingssystemer. Faststof står under Electrovaya Labs og er udvikling, ikke den samme tekst som fabrikken. Et beløb for kapacitet er ikke taget med. Det er ikke et lager i drift.",
+          "ndi": "NDI nævner batterier som del af energiflaskehalsen (ugebrev 30. marts 2026). Tesla er med, fordi koncernen også laver batterilagring. Solid Power er elektrolyt i pilotskala, ikke masseproduktion. Amprius har en pilotlinje i Fremont. GWh-skala på siden er kontraktproduktion hos partnere, ikke et målt år. Electrovaya: Jamestown er fabrikken. Faststof i Mississauga er et laboratorium.",
           "themes": [
             "energy",
             "physical",
             "andet"
           ],
-          "weightSum": 2.37,
-          "count": 6,
+          "weightSum": 2.42,
+          "count": 7,
           "companies": [
             {
               "isin": "US34379V1035",
@@ -1477,6 +1477,14 @@
               "sym": "EOSE",
               "forslag": true,
               "role": "Z3 fremstilles i Turtle Creek siden august 2023. Ikke en mine og ikke et kraftværk."
+            },
+            {
+              "isin": "CA28617B6061",
+              "name": "Electrovaya",
+              "w": 0.05,
+              "sym": "ELVA",
+              "forslag": true,
+              "role": "Fabrik i Jamestown. Lavspænding samles i Mississauga. Faststof er et laboratorium, ikke fabrikken."
             }
           ],
           "seeChain": null
