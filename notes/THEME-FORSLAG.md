@@ -245,3 +245,10 @@ Kun `theme`/`themeStatus`/`themeFrom`/`themeNote` i portfolio.json, begge klasse
 - **Opendoor markeret usikker** (`themeDoubt`, `themeAlt: andet`): iBuyer, der selv ejer boliger på lager; Platforme-temaet dækker ellers markedspladser uden eget lager. Beslutningslisten er nu 22 (18 + Opendoor-aktien og 3 warrants).
 - themes.json (PMINDI) genberegnet: Platforme 41 → 45, Software 49 → 48, Compute 18 → 19, Andet 35 → 31 (vægt 6,27 %, samme som main's synkede tal). Forslag i alt 87 (80 fra Andet).
 - NDI-linse: Cipher "Compute (forslag)", Opendoor "Platforme (forslag)" + usikker-tekst.
+
+## Multi-tag Compute for datacenter-omstillere (lane-B c24, 2026-10-16)
+Family office-persona: "Tagfejl (fx Cipher Mining = Software)". Cipher var allerede flyttet (compute, forslag).
+Fem lignende navne med NDI-linse i AI-compute led 2 (datacentre) har nu **multi-tag compute** (forslag i `multi-tags.json`).
+**Primært tema er uændret**, fordi det er NDI's eget tag (NDI har selv CoreWeave/Nebius/IREN under Energi):
+Core Scientific (software), Applied Digital (software), WhiteFiber (software), TeraWulf (platforms), IREN/Iris Energy (energy).
+Ikke rørt: Bitdeer, CleanSpark, Bit Digital, Galaxy. De er stadig mest mining/krypto. NDI-beslutning: skal primærtemaet for datacenter-omstillere være Software/Platforme, Energi eller Compute?
