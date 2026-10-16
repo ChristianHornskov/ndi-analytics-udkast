@@ -73,10 +73,10 @@
  <p class="lede">De fleste fondssider sorterer aktier i 11 faste sektorer, fx teknologi, industri og forbrugsgoder. Hvert selskab får én kasse. NDI Analytics sorterer i stedet efter <a href="../om-data.html#g-tema">temaer</a> og led i <a href="../vaerdikaeder.html">værdikæder</a>, fordi et teknologiselskab ofte hører til flere steder på én gang.</p>
 
  <section class="panel sp" aria-labelledby="sk-box">
-  <h2 id="sk-box">Én kasse med 151 selskaber</h2>
-  <p>Pr. 1. juni 2026 lå 151 af PMINDI’s 345 selskaber i sektoren teknologi. Tilsammen ca. 38&nbsp;% af fonden. Som kasse siger det kun, at fonden ejer meget teknologi. Det vidste man i forvejen. Deler man den samme kasse op efter NDI’s temaer, ser man, hvilke dele af teknologien pengene ligger i.</p>
+  <h2 id="sk-box">Én kasse med <span data-sk="tech">151</span> selskaber</h2>
+  <p>Pr. 1. juni 2026 lå <span data-sk="tech">151</span> af PMINDI’s <span data-sk="n">345</span> selskaber i sektoren teknologi. Tilsammen ca. <span data-sk="techw">38</span>&nbsp;% af fonden. Som kasse siger det kun, at fonden ejer meget teknologi. Det vidste man i forvejen. Deler man den samme kasse op efter NDI’s temaer, ser man, hvilke dele af teknologien pengene ligger i.</p>
   <div class="split" role="img" aria-label="Sektoren teknologi med 151 selskaber delt op efter NDI-tema: chips 52, software 42, optik og netværk 23, compute 18, energi 10, quantum 5, platforme 1.">
-   <div class="one"><span>Sektoren teknologi</span><span>151 selskaber</span></div>
+   <div class="one"><span>Sektoren teknologi</span><span><span data-sk="tech">151</span> selskaber</span></div>
    <div class="down" aria-hidden="true">↓</div>
    <div class="many">
     <span style="flex:52;background:var(--cyan)">Chips 52</span>
@@ -101,8 +101,8 @@
  </section>
 
  <section class="panel sp" aria-labelledby="sk-rev" style="margin-top:14px">
-  <h2 id="sk-rev">Den anden vej: ét tema, syv sektorer</h2>
-  <p>Temaet energi rummer 37 selskaber. I sektorlisterne er de spredt ud over syv kasser. Strøm til et datacenter kan komme fra et elselskab, en producent af brændselsceller, et batterifirma eller en softwareplatform, der styrer nettet. Set fra en sektorliste er det fire forskellige brancher. Set fra værdikæden er det samme flaskehals: der skal være strøm, før et datacenter kan bruges.</p>
+  <h2 id="sk-rev">Den anden vej: ét tema, <span data-sk="ek">syv</span> sektorer</h2>
+  <p>Temaet energi rummer <span data-sk="en">37</span> selskaber. I sektorlisterne er de spredt ud over <span data-sk="ek">syv</span> kasser. Strøm til et datacenter kan komme fra et elselskab, en producent af brændselsceller, et batterifirma eller en softwareplatform, der styrer nettet. Set fra en sektorliste er det fire forskellige brancher. Set fra værdikæden er det samme flaskehals: der skal være strøm, før et datacenter kan bruges.</p>
   <div class="src7" role="img" aria-label="Temaet energi med 37 selskaber fordelt på sektorer: industri 11, teknologi 10, forsyning 8, forbrugsgoder 4, energi 2, kommunikation 1, finans 1.">
    <div class="row"><span>Industri</span><span class="bar" style="width:100%"></span><span class="v">11</span></div>
    <div class="row"><span>Teknologi</span><span class="bar" style="width:90.9%"></span><span class="v">10</span></div>
@@ -175,6 +175,44 @@
   }
   bs.forEach(function(b){b.addEventListener('click',function(){show(+b.dataset.i);});});
 })();
+</script>
+<script type="module">
+// Begge opdelinger tælles fra portfolio.json, så de følger med, når temaer bliver gennemgået. HTML'en står som reserve.
+import { daTheme } from '../js/data.js';
+try {
+  const pf = await fetch('../data/portfolio.json').then((r) => r.ok ? r.json() : null);
+  const A = pf?.funds?.find((f) => f.id === 'pmindi')?.positions;
+  if (A?.length) {
+    const ord = ['nul', 'ét', 'to', 'tre', 'fire', 'fem', 'seks', 'syv', 'otte', 'ni', 'ti', 'elleve', 'tolv'];
+    const set = (k, v) => document.querySelectorAll(`[data-sk="${k}"]`).forEach((e) => { e.textContent = v; });
+    const SLUG = { chips: 'chips', software: 'software', platforms: 'platforms', energy: 'energi', connect: 'optik-netvaerk', physical: 'fysisk-tech', 'energy-resources': 'energiressourcer', space: 'spacetech', compute: 'compute', quantum: 'quantum' };
+    const SHORT = { connect: 'Optik' };
+    const COLORS = ['var(--cyan)', 'var(--yellow)', '#8fb8c9', '#d9c9a3', '#9fc7a0', '#c9a3c9', '#b0a8d9', '#a3c9c4', '#c9b3a3'];
+    const esc = (t) => String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;');
+    const tech = A.filter((p) => p.sector === 'Technology');
+    const tc = {}; tech.forEach((p) => { tc[p.theme] = (tc[p.theme] || 0) + 1; });
+    const rows = Object.entries(tc).sort((x, y) => y[1] - x[1] || daTheme(x[0]).localeCompare(daTheme(y[0]), 'da'));
+    set('tech', tech.length); set('n', A.length); set('techw', Math.round(tech.reduce((x, p) => x + (p.weight || 0), 0)));
+    const split = document.querySelector('.split');
+    if (split && rows.length) {
+      split.setAttribute('aria-label', `Sektoren teknologi med ${tech.length} selskaber delt op efter NDI-tema: ${rows.map(([t, n]) => `${daTheme(t).toLowerCase().replace('&', 'og')} ${n}`).join(', ')}.`);
+      split.querySelector('.many').innerHTML = rows.map(([t, n], i) => `<span style="flex:${n};background:${COLORS[i % COLORS.length]}">${n >= 18 ? `${esc(SHORT[t] || daTheme(t))} ${n}` : n >= 8 ? n : ''}</span>`).join('');
+      split.querySelector('ul.k').innerHTML = rows.map(([t, n], i) => `<li><i style="background:${COLORS[i % COLORS.length]}"></i>${SLUG[t] ? `<a href="../tema.html?slug=${SLUG[t]}">${esc(daTheme(t))}</a>` : esc(daTheme(t))} ${n}</li>`).join('');
+    }
+    const SEC = { Industrials: 'Industri', Technology: 'Teknologi', Utilities: 'Forsyning', 'Consumer Cyclical': 'Forbrugsgoder', Energy: 'Olie, gas, uran', 'Communication Services': 'Kommunikation', 'Financial Services': 'Finans', 'Basic Materials': 'Råvarer', Healthcare: 'Sundhed', 'Real Estate': 'Ejendomme', 'Consumer Defensive': 'Dagligvarer' };
+    const ARIA = { Energy: 'energi' };
+    const en = A.filter((p) => p.theme === 'energy');
+    const ec = {}; en.forEach((p) => { const k = p.sector || 'Uden sektor'; ec[k] = (ec[k] || 0) + 1; });
+    const er = Object.entries(ec).sort((x, y) => y[1] - x[1]);
+    const box = document.querySelector('.src7');
+    if (box && er.length) {
+      const mx = er[0][1];
+      box.setAttribute('aria-label', `Temaet energi med ${en.length} selskaber fordelt på sektorer: ${er.map(([k, n]) => `${(ARIA[k] || SEC[k] || k).toLowerCase()} ${n}`).join(', ')}.`);
+      box.innerHTML = er.map(([k, n]) => `<div class="row"><span>${esc(SEC[k] || k)}</span><span class="bar" style="width:${+(n / mx * 100).toFixed(1)}%"></span><span class="v">${n}</span></div>`).join('');
+      set('en', en.length); set('ek', ord[er.length] || er.length);
+    }
+  }
+} catch (e) { /* tallene i HTML'en bliver stående */ }
 </script>
 </body>
 </html>

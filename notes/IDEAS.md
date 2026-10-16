@@ -93,3 +93,9 @@ Offentlige (ikke-fortrolige) idéer spejles evt. på `docs/ideer.html`.
 - app.js delår-badge → `om-data.html#g-delaar`. drawdown.html «(delår)» samme.
 - vaerdikaeder: led «Serverinfrastruktur», «Elproduktion», «Simulering og software» → `#g-servere`, `#g-elproduktion`, `#g-simulering`.
 - value-chains.json: «—» i ndi-tekster (fx «Se citat nedenfor — kun som citat», «ASML ... — som caseforståelse») → punktum eller komma (Vidensbot punkt 10).
+
+## 06:59 CEST lane-C · temaantal bør regnes live
+- **Problem (set i nat):** ideer.html (6 billeder), ordlistens temaposter og lær/sektorer har temaantal og -vægte skrevet direkte i HTML'en. Når lane-B ændrer temaer eller forslag i portfolio.json, bliver de forældede. Kl. 06:49 sagde siderne 229 / 85, men data sagde 227 / 87.
+- **Forslag til Codex:** en lille fælles hjælper (fx `themeStats(fund)` i js/data.js), der giver antal, vægt og forslag pr. tema plus sektor-matrix. ideer #h-tf/#h-mx/#h-pr/#h-kl/#h-stk/#h-dr kan så tegnes fra den, som risici.html `#sortering` allerede gør. Alternativt et precheck-trin, der sammenligner tallene i ideer med portfolio.json.
+- **Lav indsats, stor tillidsgevinst:** familiekontoret tjekker netop sådanne tal på tværs af sider.
+- **Status 07:01:** lane-C har gjort #h-tf, #h-pr, #h-stk og #h-kl levende i ideer.html (inline modul, statiske tal som reserve, testet med ændret data via route-mock). Varmekortet #h-mx blev levende kl. 07:03. Venn #h-dr blev levende 07:05. lær/sektorer blev levende 07:08. Kun ordlistens temaposter (antal i tekst) er stadig statiske.
