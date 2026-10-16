@@ -256,6 +256,19 @@
     .kv-keys dt{font-size:15px;color:var(--text);font-weight:700}
     .kv-keys dd{margin:2px 0 0;font-size:13px;color:var(--muted);line-height:1.45}
     .kv figcaption{font-size:12px;color:var(--faint);margin-top:12px;line-height:1.5}
+    .lens{background:#0b171d;border:1px solid var(--line);border-radius:14px;padding:16px;margin:0;display:grid;gap:10px;grid-template-columns:1fr}
+    .lens .eye{justify-self:center;width:170px;height:170px;border-radius:50%;border:3px solid var(--cyan);box-shadow:0 0 0 8px rgba(158,207,214,.10),inset 0 0 0 1px var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:14px}
+    .lens .eye b{font-size:20px;color:var(--text)}
+    .lens .eye span{font-size:12px;color:var(--muted);line-height:1.4;margin-top:4px}
+    .lens .eye a{font-size:12px;margin-top:6px}
+    .lens .qq{list-style:none;margin:0;padding:0;display:contents}
+    .lens .qq li{border:1px solid var(--line);border-left:3px solid var(--cyan);border-radius:6px;padding:9px 11px;background:var(--panel);font-size:13px;line-height:1.45;color:var(--muted)}
+    .lens .qq li b{display:block;color:var(--text);font-size:12px;letter-spacing:.03em;text-transform:uppercase;margin-bottom:2px}
+    .lens .qq li strong{color:var(--text);font-weight:600}
+    .lens .qq li .ai{display:inline-block;font-size:11px;color:var(--yellow);border:1px solid var(--yellow);border-radius:3px;padding:0 4px;margin-left:4px;vertical-align:1px}
+    .lens figcaption{font-size:12px;color:var(--faint);line-height:1.5;grid-column:1/-1}
+    @media(min-width:720px){.lens{grid-template-columns:1fr 190px 1fr;grid-template-areas:"a eye b" "c eye d" "e e e" "cap cap cap";align-items:center}
+      .lens .eye{grid-area:eye}.lens .qq li:nth-child(1){grid-area:a}.lens .qq li:nth-child(2){grid-area:b}.lens .qq li:nth-child(3){grid-area:c}.lens .qq li:nth-child(4){grid-area:d}.lens .qq li:nth-child(5){grid-area:e;justify-self:center;max-width:420px}.lens figcaption{grid-area:cap}}
   </style>
 </head>
 <body>
@@ -304,8 +317,8 @@
 
 
     <nav class="idea-toc" aria-label="Billeder på siden">
-      <p class="lbl">13 billeder på siden</p>
-      <ol><li><a href="#h-flod">Flodsystemet på ét billede</a></li><li><a href="#h-vs">Én kasse eller flere temaer</a></li><li><a href="#h-mx">Samme 345 selskaber, to sorteringer</a></li><li><a href="#h-wk">Vægt er ikke kurs</a></li><li><a href="#h-tf">Fra «Andet» til tema</a></li><li><a href="#h-pr">345 aktier, én prik hver</a></li><li><a href="#h-kv">Hvor mange selskaber er halvdelen?</a></li><li><a href="#h-uw">Fald fra top som episoder</a></li><li><a href="#h-ur">Tre ure på samme side</a></li><li><a href="#h-lag">Hvad står der i tallet?</a></li><li><a href="#h-kl">To klasser, samme temaer</a></li><li><a href="#h-stk">Lag på lag</a></li><li><a href="#h-hus">Bygget som et hus</a></li></ol>
+      <p class="lbl">14 billeder på siden</p>
+      <ol><li><a href="#h-flod">Flodsystemet på ét billede</a></li><li><a href="#h-vs">Én kasse eller flere temaer</a></li><li><a href="#h-mx">Samme 345 selskaber, to sorteringer</a></li><li><a href="#h-wk">Vægt er ikke kurs</a></li><li><a href="#h-tf">Fra «Andet» til tema</a></li><li><a href="#h-pr">345 aktier, én prik hver</a></li><li><a href="#h-kv">Hvor mange selskaber er halvdelen?</a></li><li><a href="#h-uw">Fald fra top som episoder</a></li><li><a href="#h-ur">Tre ure på samme side</a></li><li><a href="#h-lag">Hvad står der i tallet?</a></li><li><a href="#h-kl">To klasser, samme temaer</a></li><li><a href="#h-stk">Lag på lag</a></li><li><a href="#h-ln">Hvorfor ejer vi den?</a></li><li><a href="#h-hus">Bygget som et hus</a></li></ol>
     </nav>
 
     <section class="idea-sec" aria-labelledby="h-flod">
@@ -667,6 +680,22 @@
           <div class="an"><dt><a href="tema.html?slug=andet">Andet</a> · 31 · 6,3 %</dt><dd>Selskaber uden primært tema endnu. De står uden for stakken, indtil de er gennemgået.</dd></div>
         </dl>
         <figcaption>Tal: antal selskaber · vægt i procent af PMINDI pr. 1. jun 2026 fra den offentlige, forsinkede beholdning. Gul = de lag, NDI har nummereret som flaskehalse. Datacentre er NDI’s anden flaskehals, men er ikke et eget tema. Rækkefølgen er en skitse af en tankegang, ikke en officiel model, og den viser eksponering, ikke en anbefaling eller dagens fordeling. <a href="temaer.html">Temaer →</a> · <a href="om-data.html#g-chips-tema">Ordliste: temaerne</a></figcaption>
+      </figure>
+    </section>
+
+    <section class="idea-sec" aria-labelledby="h-ln">
+      <h2 id="h-ln">Hvorfor ejer vi den?</h2>
+      <p class="sub">Spørgsmålet er ikke «bliver det her vinderen?», men «hvilken del af udviklingen giver det fonden?». Fem faste spørgsmål, som vi kalder NDI-linsen, lagt rundt om ét selskab. Eksemplet er ASML, fordi det står ved en af de dæmninger, <a href="#h-flod">flodsystemet</a> handler om.</p>
+      <figure class="lens">
+        <div class="eye"><b>ASML</b><span>Chips · 0,22&nbsp;% af PMINDI<br>pr. 1. jun 2026</span><a href="selskab.html?isin=USN070592100">Selskabssiden →</a></div>
+        <ol class="qq">
+          <li><b>Hvilket tema?</b><strong>Chips.</strong> Den del af teknologien, selskabet hører til.</li>
+          <li><b>Hvad ejer man?</b><strong>Litografimaskiner</strong>, som overfører kredsløbsmønstre til siliciumskiver.<span class="ai">AI-udkast</span></li>
+          <li><b>Hvor i kæden?</b><strong>AI-compute, led 4:</strong> udstyr og litografi. En flaskehals: de mest avancerede chips kan ikke laves uden <a href="om-data.html#g-euv">EUV</a>.</li>
+          <li><b>Hvor modent?</b><strong>Ikke klassificeret.</strong> NDI har endnu ikke sat en <a href="laer/livscyklus.html">modenhedsgrad</a>. Vi gætter ikke.</li>
+          <li><b>Hold øje med</b><strong>Eksportregler og kundernes investeringer.</strong> Forhold, der kan ændre billedet, ikke en prognose.<span class="ai">AI-udkast</span></li>
+        </ol>
+        <figcaption>Selv et selskab ved en flaskehals er en lille position. Fonden ejer udviklingen bredt i stedet for at satse på, hvem der vinder, og du kan tabe penge. Linsen forklarer, hvorfor selskabet passer ind. Den er ikke en karakter, et kursmål eller en anbefaling. Vægten er fra den offentlige, forsinkede beholdning pr. 1. jun 2026 og er ikke dagens fordeling. Felter mærket AI-udkast afventer NDI-gennemgang. <a href="laer/saadan-taenker-vi.html#tv-hv">Sådan tænker vi →</a> · <a href="ndi-perspektiv.html">Alle selskaber med linse →</a> · <a href="om-data.html#g-ndi-linse">Ordliste: NDI-linse</a></figcaption>
       </figure>
     </section>
 

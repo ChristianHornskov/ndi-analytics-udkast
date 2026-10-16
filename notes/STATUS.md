@@ -1675,3 +1675,14 @@ Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er
 - Coordinator-loop 2026-10-16 02:12:29 CEST: CONFLICT merge origin/lane-R (ahead 3) — aborted, not pushed
 
 - Coordinator (manual) 2026-10-16 02:14:18 : Leo 02:00 UX MUSTs (dividends comma, Max DD→Største fald, ÅOP-aften-frase væk, AI-udkast kun ved tekst, vaerdikaeder ≥12px mobil) + SHOULDs (menu 44px, life-strip collapse, tema wrap) + FO (andet 6,27 % synket, klasser-forskel, KID-omkostning, Mangler-fra-NDI-boks) + privat 02:07 (Sådan tænker vi-links, færre forslag-badges, vurder-afkast uden Nasdaq). Compliance: KID RIY, Fulgt konto, kan tabe, chartMarkers uden @MadsC007.
+
+## Fra Claude lane-C (compliance MUST 6 + KID-omkostning på invester + ideer «Hvorfor ejer vi den?») · 02:18 CEST 16/10 (wall-clock)
+- Merget origin/main (e402f15) ind i lane-C (STATUS-konflikt løst, begge sider bevaret).
+- Compliance MUST 6 (cyklus 25): skyderteksten på `laer/risikoklasse.html` siger nu «målt efter KID-metoden» og, for klasse 5, «Et simpelt udsvingstal over 30 % betyder ikke, at klassen er forkert» (både uden JS og i scriptet).
+- Compliance MUST 9 / PERSONA-privat «hvad koster det mig?»: `invester.html` trin 4 begynder med KID'ets samlede årlige omkostning 2,79 % (PMINDI) / 2,85 % (PMINDIAKK) ved 5 år, et tænkt eksempel (100.000 kr. → ca. 2.790 kr. om året, før kurtage og depot) og direkte links til begge KID. Trin 5 slutter med «Du kan tabe penge». Ordlisten `#g-omkostninger` har samme tal.
+- UX SHOULD (cyklus 25): `laer/indre-vaerdi.html` «værdien pr. andel gør ikke (bortset fra små tillæg og fradrag ved køb og salg, se omkostninger)».
+- `ideer.html` ny form nr. 15 «Hvorfor ejer vi den?» (`#h-ln`, IDESPEJDER #3/#8): NDI-linsens fem spørgsmål lagt rundt om en cirkel med ASML (Chips, 0,22 % af PMINDI pr. 1. jun 2026, fra portfolio.json; tekster fra unique-metrics.json, AI-udkast mærket). Billedtekst: «lille position», «du kan tabe penge», «ikke en karakter, et kursmål eller en anbefaling». Indholdsfortegnelse 14 billeder. HANDOFF demo: femten former.
+- Test: lokal server, 375/1280 på ideer, invester, om-data, risikoklasse, indre-vaerdi, kort: 0 konsolfejl, 0 h-overflow, én h1, 0 døde ankre. precheck: se push.
+- **Til fakta-ejer (main):** `fakta.html:245` læser `A.costs.kidRiy5y`, men feltet findes ikke i `docs/data/fund-facts.json`, og `omkostninger.html` har intet `#kid-omkostning`-anker. Linjen viser derfor ikke tallet. Enten tilføjes feltet + ankeret, eller teksten skrives statisk som på invester.
+- **NB:** 2,79/2,85 kommer fra compliance-review (KID læst af reviewer), ikke fra en datafil. HANDOFF har allerede «bekræft kilde/dato» som åbent spørgsmål til NDI.
+- Branch `lane-C` klar til merge. Næste: UX-review 04:00.
