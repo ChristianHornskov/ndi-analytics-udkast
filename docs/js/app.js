@@ -321,7 +321,7 @@ function renderEntre(root) {
       <h2 style="font-size:18px;margin-bottom:8px">Sådan tænker vi (kort)</h2>
       <ol style="color:var(--muted);font-size:14px;line-height:1.55;padding-left:20px;display:grid;gap:8px">
         <li>Teknologi er drivkraften — retningen kan skimtes, vinderne kan ikke udpeges sikkert. <a href="laer/saadan-taenker-vi.html">Sådan tænker vi →</a></li>
-        <li>Vi vælger <strong style="color:var(--text)">udviklingen frem for vinderen</strong>: bred spredning, ikke én “vinderaktie”. Møntspillet (+50/−40) og variance drag: <a href="laer/variance-drag.html">CAGR og gennemsnit →</a></li>
+        <li>Vi vælger <strong style="color:var(--text)">udviklingen frem for vinderen</strong>: bred spredning, ikke én “vinderaktie”. Eksempel: 100 kr. → +50 % → −40 % = 90 kr. — store udsving æder afkastet. <a href="laer/variance-drag.html">CAGR og gennemsnit →</a></li>
         <li>Store kursudsving er et grundvilkår i tech. Fald kan være store og vare længe. <a href="drawdown.html?fund=${state.fund}">Største fald →</a></li>
         <li>P/E er ikke vores hovedværktøj for vækstvirksomheder, der investerer tungt i fremtiden. <a href="laer/pe-forklaring.html">Hvad P/E fortæller →</a></li>
         <li>Fonden er tænkt med lang horisont. Bogens råd til privatpersoner og fondens forvaltning er ikke det samme: <a href="laer/rebalancering.html">Bogen og fonden →</a></li>
@@ -416,14 +416,16 @@ function renderFonden(root) {
       ${periodSeg}
     </div>
     <section class="panel">
-      <div class="metrics">
+      <div class="metrics metrics-returns">
         <div class="metric"><div class="label">Totalafkast siden start ${gl('total')}</div><strong>${fmtPct(totAll)}</strong><small>Fra første NAV ${fmtDate(rows[0]?.d)} · DKK</small></div>
-        <div class="metric"><div class="label">Gns. årligt afkast (CAGR) ${gl('cagr')}</div><strong>${fmtPct(c)}</strong><small>Efter løbende omkostninger</small></div>
+        <div class="metric"><div class="label">Gns. årligt afkast ${gl('cagr')}</div><strong>${fmtPct(c)}</strong><small>Efter løbende omkostninger</small></div>
+      </div>
+      ${warnHtml()}
+      <div class="metrics metrics-more">
         <div class="metric"><div class="label">År til dato ${gl('ytd')}</div><strong>${fmtPct(ytd)}</strong><small>Pr. ${fmtDate(asOfPerf)} · delår, afventer Fundmarket-godkendelse</small></div>
         <div class="metric"><div class="label">Største fald ${gl('drawdown')}</div><strong class="neg">${fmtPct(maxDrawdown(rows)?.dd)}</strong><small><a href="drawdown.html?fund=${state.fund}">Middel/median →</a></small></div>
         <div class="metric"><div class="label">Risikoindikator (KID) ${gl('sri')}</div><strong>5 / 7</strong><small>Anbefalet ejertid 5 år</small></div>
       </div>
-      ${warnHtml()}
       <p class="note-fundmarket">Fonden har intet fast benchmark.</p>
       <p style="font-size:13px;color:var(--muted);margin:8px 0">Graf: ${periodLabel}</p>
       <div class="chart-wrap" id="perf-chart"></div>
@@ -459,7 +461,7 @@ function renderFonden(root) {
     </section>
     <section class="panel">
       <h2 style="font-size:18px;margin-bottom:8px">Omkostninger (kort)</h2>
-      <p style="font-size:13px;color:var(--muted);line-height:1.55">Afkasttal er efter fondens løbende omkostninger. Egne kurtage-/platformgebyrer og skat er ikke med. Tallene (løbende, porteføljetransaktion, emission/indløsning, intet resultathonorar) ligger på Fundmarket og er samlet på omkostningssiden.</p>
+      <p style="font-size:13px;color:var(--muted);line-height:1.55">Afkasttal er efter fondens løbende omkostninger. Egne kurtage-/platformgebyrer og skat er ikke med. KID «samlede omkostninger» (RIY, 5 år): <strong style="color:var(--text)">2,79 %</strong> (PMINDI) / <strong style="color:var(--text)">2,85 %</strong> (PMINDIAKK) pr. år. Intet resultathonorar.</p>
       <p style="margin-top:10px"><a class="outline-btn small" href="omkostninger.html">Omkostninger med tal →</a>
       <a class="outline-btn small" style="margin-left:8px" href="fakta.html">Fakta →</a>
       <a class="outline-btn small" style="margin-left:8px" href="om-data.html">Om data →</a></p>
@@ -889,7 +891,7 @@ function emptyScreener(fund) {
     <strong>Ingen af fondens ${fund.positions.length} selskaber matcher ${active || 'filtrene'}</strong>
     ${qOnly ? `<span>Søgningen alene giver ${qOnly} ${qOnly === 1 ? 'selskab' : 'selskaber'} - prøv at fjerne tema-, status-, modenheds- eller linsefilteret.</span>` : ''}
     ${state.linse ? `<span>NDI-linsen findes for ${fund.positions.filter(hasLens).length} af fondens ${fund.positions.length} selskaber. Et selskab uden linse er ikke vurderet dårligere - vi har bare ikke skrevet den endnu.</span>` : ''}
-    <span>Level 1 viser kun selskaber, fonden ejede pr. ${fmtDate(fund.positionsAsOf || DATA.portfolio.asOf)}. Et selskab, der ikke er med, er ikke et signal - se <a href="laer/faq-mangler-aktie.html">Hvorfor mangler aktie X?</a></span>
+    <span>Listen viser kun selskaber, fonden ejede pr. ${fmtDate(fund.positionsAsOf || DATA.portfolio.asOf)}. Et selskab, der ikke er med, er ikke et signal — se <a href="laer/faq-mangler-aktie.html">Hvorfor mangler aktie X?</a></span>
     <div class="row">
       ${state.q ? '<button type="button" class="outline-btn small" data-clear-q>Ryd søgning</button>' : ''}
       ${state.linse ? '<button type="button" class="outline-btn small" data-linse>Vis også uden NDI-linse</button>' : ''}
@@ -949,7 +951,7 @@ function renderUdforsk(root) {
     <a class="back" href="?view=entre&fund=${state.fund}" data-nav="entre">← Entré</a>
     <p class="eyebrow">UDFORSK TECH</p>
     <h1>Screener · NDI-linse</h1>
-    <p class="lede">Level 1: kun selskaber i porteføljen. Hvert selskab har ét primært tema; ${Object.keys(DATA.multiTags?.byIsin || {}).length} udvalgte selskaber har flere (multi-tag). Sortér på navn, vægt eller tema. Søgningen dækker også NDI-linsens tekst (fx “foundry”, “kobber”, “solceller”).</p>
+    <p class="lede">Kun selskaber i porteføljen. Hvert selskab har ét primært tema; ${Object.keys(DATA.multiTags?.byIsin || {}).length} udvalgte har flere temaer. Sortér på navn, vægt eller tema. Søgningen dækker også NDI-linsens tekst (fx “foundry”, “kobber”, “solceller”).</p>
     <p class="band">Informationen er generel - ikke en personlig anbefaling. Segmenter = eksponering.</p>
     ${fundToolbar({ screener: false })}
     <div class="filters">
@@ -957,7 +959,7 @@ function renderUdforsk(root) {
       <button type="button" class="outline-btn small" id="reset-filters">Nulstil</button>
       <button type="button" class="outline-btn small" id="copy-link">Kopiér link til denne liste</button>
       <button type="button" class="outline-btn small" id="csv-export">Download CSV (filtreret)</button>
-      <button type="button" class="outline-btn small" data-open="dlg-follow">Følg tema (stub)</button>
+      <!-- Følg tema stub skjult indtil tilmelding er aktiv -->
     </div>
     <div class="filters" role="group" aria-label="Filtrér på tema">
       ${themes.map((t) => `<button type="button" class="control ${state.tags.includes(t)?'active':''}" data-tag="${t}" aria-pressed="${state.tags.includes(t)}">${daTheme(t)}</button>`).join('')}

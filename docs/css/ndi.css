@@ -507,7 +507,7 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
 .site-header .brand+.nav{margin-left:auto}
 @media (max-width:560px){
   .nav{flex-wrap:wrap;overflow:visible;gap:2px 14px;order:2}
-  .nav a,.nav .nav-text{min-height:36px}
+  .nav a,.nav .nav-text{min-height:44px}
   .header-invest{order:1;flex:0 0 auto}
 }
 @media (max-width:360px){
@@ -941,9 +941,18 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
 }
 
 
-/* Fonden mobile: keep hist-warn on first screen with big return figures */
+/* Fonden mobile: hist-warn beside big return figures */
 @media (max-width: 800px) {
   .fonden-lede{font-size:13px;margin-bottom:10px;line-height:1.4}
-  .panel > .metrics + .eyebrow{margin-top:10px}
-  .panel > .warn-hist{font-size:13px;line-height:1.4;margin:6px 0 8px}
+}
+
+/* Fonden: hist-warn sits between big return figures and secondary KPIs */
+.metrics-returns{margin-bottom:0}
+.metrics-more{margin-top:4px}
+@media (max-width: 800px) {
+  .metrics-returns{margin-bottom:4px}
+  .metrics-returns + .eyebrow{margin-top:8px}
+  .metrics-returns + .eyebrow + .warn-hist,
+  .panel > .metrics-returns ~ .warn-hist{font-size:13px;line-height:1.4;margin:4px 0 10px}
+  .metrics-more{margin-top:8px;padding-top:4px;border-top:1px solid #829da022}
 }
