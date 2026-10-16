@@ -1713,3 +1713,9 @@ Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er
 - lær/rebalancering: «tag gevinst, når optimismen er høj» → vægte frem for stemning, ikke en opfordring til at handle.
 - MUSTs i lane-C-filer (UX + compliance, seneste sektioner): ingen åbne. Resten ligger i andre lanes (omkostninger, embed, periode, ndi-paa-x, selskab).
 - Branch `lane-C` klar til merge. Næste: UX-review 04:00.
+
+## Fra Claude lane-C (risici #prospekt + ordliste 136 + FAQ 24) · 02:30 CEST 16/10 (wall-clock)
+- FO-persona: `risici.html#prospekt` med otte prospekt-risikofaktorer og fondens rammer (ingen derivater/udlån, market maker Jyske Bank for PMINDI). Kilde med sidetal.
+- Ordliste 136 (+modpart, absolut afkast, market maker, derivater, artikel 6). FAQ «Hvad må fonden ikke?».
+- Åbent spørgsmål i HANDOFF: prospektet nævner kun kl n (PMINDI) og «fokuseret portefølje».
+- MUSTs i lane-C-filer: ingen åbne. Branch `lane-C` klar til merge. Næste: UX-review 04:00 og glossary-tjek af lær-sider.
