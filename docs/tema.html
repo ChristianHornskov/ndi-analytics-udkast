@@ -159,7 +159,7 @@
  if (tk === 'andet' || ws.length < 2 || !(sum > 0)) return '';
  const OP = [1, 0.8, 0.62, 0.48, 0.36];
  const top = ws.slice(0, 5);
- const restN = ws.length - top.length;
+ const restN = list.length - top.length; // inkl. restpositioner med vægt ca. 0, så tallet stemmer med "Selskaber i temaet"
  const restW = ws.slice(5).reduce((s2, p) => s2 + p.weight, 0);
  const topShare = top.reduce((s2, p) => s2 + p.weight, 0) / sum * 100;
  const segs = top.map((p, i) => ({ label: displayName(p), href: `selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}`, w: p.weight, op: OP[i], multi: p.theme !== tk }));

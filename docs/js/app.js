@@ -47,6 +47,13 @@ function sanitizeMaturity() {
   state.maturity = state.maturity.filter((m) => known.has(m));
   return before !== state.maturity.join(',');
 }
+// Samme for ?tags=: et ukendt/stavet forkert tema giver ellers 0 resultater uden forklaring. Behold kun temaer, som findes i data.
+function sanitizeTags() {
+  const known = new Set(DATA.portfolio.funds.flatMap((f) => f.positions.flatMap((p) => tagsFor(p, DATA.multiTags))));
+  const before = state.tags.join(',');
+  state.tags = state.tags.filter((t) => known.has(t));
+  return before !== state.tags.join(',');
+}
 
 function weightSpark(isin, fundId) {
   // Kun fondens vægt pr. kvartalssnapshot (≤ cutoff) - aldrig aktiekurs. Søjler fra nul pr. række,
@@ -1264,12 +1271,12 @@ async function main() {
     $('#app').innerHTML = `<p class="warn">Data kunne ikke hentes (${err.message}). Genindlæs siden.</p>`;
     return;
   }
-  if (sanitizeMaturity()) writeUrl(true);
+  if (sanitizeMaturity() | sanitizeTags()) writeUrl(true);
   fillKidFooter();
   document.addEventListener('click', onClick);
   document.addEventListener('input', onInput);
   wireKeyboard();
-  window.addEventListener('popstate', () => { readUrl(); if (sanitizeMaturity()) writeUrl(true); paint(); });
+  window.addEventListener('popstate', () => { readUrl(); if (sanitizeMaturity() | sanitizeTags()) writeUrl(true); paint(); });
   window.addEventListener('resize', () => markHscroll($('#app')));
   // [data-open] håndteres af onClick-delegering (tidligere dobbelt listener → to dialoger)
   paint();
