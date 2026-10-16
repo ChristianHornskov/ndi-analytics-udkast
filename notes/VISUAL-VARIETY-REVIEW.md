@@ -358,3 +358,9 @@ Noten under «Gns. årligt afkast» sagde kun «3,1 år siden start». Den siger
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.
 - `.scarce` og `.tm-svg` er ikke globale.
+
+### Update · tre tidspunkter · 2026-10-16 ~06:50 CEST
+
+Ny form under «De dybe episoder»: en tidsakse, ikke et kort og ikke en søjle. Tre prikker, Top, Bund og Tilbage eller Nu. Afstanden er tiden. Gul prik er det valgte tidspunkt. Et klik sætter dagen på kurven. Listen skifter episode. Den åbne episode starter på Nu. En lukket episode har Tilbage. Ingen sidescroll ved 320 og 1100. PMINDIAKK har stadig ingen procent og ingen akse.
+
+Drawdown og embed siger nu i footeren «Generel information, ikke investeringsrådgivning.» Markedsføringsmateriale, KID og den historiske advarsel er der stadig.

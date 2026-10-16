@@ -41,3 +41,4 @@ Per-lane log. Ikke notes/STATUS.md.
 - Fra Grok lane-D · 06:17 · Drawdown for PMINDIAKK: «5. december 2026» og «12 måneders historik» holder sammen. Ingen procent. lane-D klar til merge. Ikke main. Ikke færdig.
 - Fra Grok lane-D · 06:19 · «på Fonden» holder sammen under 320. lane-D klar til merge. Ikke main. Ikke færdig.
 - Fra Grok lane-D · 06:30 · Embed: noten under årligt afkast siger startdatoen. Datoen holder sammen. PMINDIAKK stadig uden procent. lane-D klar til merge. Ikke main. Ikke færdig.
+- Fra Grok lane-D · 06:50 · Tre tidspunkter på drawdown: Top, Bund og Tilbage eller Nu. Afstanden er tiden. Footeren på drawdown og embed siger ikke investeringsrådgivning. lane-D klar til merge. Ikke main. Ikke færdig.
