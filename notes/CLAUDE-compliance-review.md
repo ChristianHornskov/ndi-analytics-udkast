@@ -958,3 +958,26 @@ Ikke juridisk rådgivning. Live ved 375 på 28 URL'er med regex-flag og kontekst
 
 ### Prioritet
 **1** (BREAKING) → **2** (ÅTD-forbehold, nu 4 steder) → **3** (footer) → **5** (KID/SRI på drawdown/periode/embed) → **6** → **4**.
+
+## 2026-10-16 02:55 CEST · cyklus 38 (main `3e25f16`, intet docs-delta; live = main)
+
+Ikke juridisk rådgivning. Live stikprøve ved 375: 8 selskabssider, 11 temasider, sammenlign, kort og 404-sider, med regex-flag og kontekst. Rådgivningsord kun i negationer ("Ikke en anbefaling eller en bevidst overvægt", "anbefalet investeringshorisont 5 år ifølge KID") ✅. "køb" kun i Carvana-profilen ("køb og salg af brugte biler") ✅. Ingen kursmål, "garanteret" eller "sikkert afkast". Tabsadvarsel, KID og SRI 23/23 (undtagelse: sidekort uden SRI, OK) ✅.
+
+### MUST
+1. **Tredjeparts-indhold ved fondens produkter er mere udbredt end rapporteret i 32–37.** `matchPosts` (`docs/js/x-feed.js:365`) knytter fulgte konti til **alle** selskaber i et tema:
+   - @BullTheoryio "BREAKING … $100 billion … stake would be worth $260 billion" står på alle 44 platforme-sider (bekræftet på Carvana og Opendoor A/Z) + temasiden.
+   - @FundaAI "repricing of credit risk … pressure on neoclouds" og @MelvinInvests står på chips, energi og compute (bekræftet på SUESS MicroTec og 3 temasider).
+   - Mærket "ikke NDI's holdning" står der. Men værdi- og spekulationsudsagn om tredjeparter, placeret ved siden af fondens SRI- og KID-blok, kan opfattes som NDI-kurateret markedsføring. Det er kurateret af sitet ("Udvalgte opslag").
+   - **Fix:** tema-træf kun for husets konti (`isHouse`). Ticker-træf fra fulgte konti kun hvis NDI har godkendt opslaget. Dette sammen med `app.js:479` lukker MUST 1 fra cyklus 30–37.
+2–4. Uændret fra cyklus 37: ÅTD +4,0 % uden ens forbehold (fonden/periode/embed/drawdown), "Markedsføringsmateriale"-footer på produktsider og nyhedsarkiv "Placeholder"/ingen tabsadvarsel.
+
+### SHOULD (nyt)
+5. **AI- og maskinel mærkning er forkert på selskabssiderne:** `selskab.html:106` siger "Manuel klassifikation i udkastet", men alle 345 er `maturityStatus: "forslag"` (maskinelt fra GICS, afventer NDI). Et maskinelt forslag præsenteret som manuelt er det modsatte af korrekt mærkning. Ret til "Maskinelt forslag, afventer NDI-gennemgang".
+6. **Sammenlign (PMINDI vs. PMINDIAKK) viser ingen omkostninger.** Når to andelsklasser sammenlignes, bør KID-omkostningerne (2,79 % / 2,85 %, 5 år) stå side om side. Siden har "giver ikke rådgivning" og KID-henvisning ✅.
+7. Uændret: KID/SRI på drawdown, periode og embed. CAGR uden periode og ingen omkostnings-KPI på fonden. Interne noter på kundesider. "kl n". Godkendelsesflag for medarbejderopslag.
+
+### Tjekliste (stikprøve)
+Ikke-rådgivning ✅ · tabsadvarsel ✅ · historisk afkast ≠ fremtid ✅ · KID/SRI ✅ (SRI "gælder fonden som helhed") · beholdning 1. jun. 2026 forsinket ✅ · ingen live-handler ✅ · Mads-handelssprog 0 ✅ · AI/maskinel mærkning ✗ selskab (SHOULD 5) · omkostninger ✗ sammenlign (SHOULD 6).
+
+### Prioritet
+**1** (X-tematræf + chartMarkers, ét samlet fix) → ÅTD-forbehold → footer → **5** → KID/SRI-huller → **6**.

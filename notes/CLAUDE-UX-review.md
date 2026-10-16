@@ -912,3 +912,29 @@ Pages (00:47:36 GMT) = main. Playwright kørte live ved 375 på 28 URL'er og ved
 - **Privat 55+:** ideer på mobil er nu overskuelig. Drawdown-siden hedder stadig "Drawdown" øverst, så fagord-indsatsen ses ikke dér, hvor de lander fra fonden.
 - **Familiekontor:** de tre drivkræfter er klart sourcet (ugebrev 19. jan 2026) og skitse-mærket ✅. FO vil stadig se omkostningstallet på fonden.
 - **Idéspejder:** Venn er et godt "ét billede"-svar på "hvad tror NDI på?".
+
+## 2026-10-16 02:55 CEST · cyklus 38 (main `3e25f16`, intet docs-delta siden cyklus 37, live = main)
+
+Pages (00:47:36 GMT) = main. Denne cyklus dækker det, 32–37 ikke stikprøvede: **8 selskabssider** (top, midt, warrants, mindste), **alle 11 temasider**, sammenlign, kort og to 404-tilfælde. Playwright kørte live ved 375. Resultat: 0 pageerrors og 0 vandret overflow.
+
+### Nyt ✅
+- `tema.html?slug=findesikke` viser "Temaet findes ikke", og `selskab.html?isin=XX…` viser "Selskabet findes ikke i beholdningen". Fallback-fejlen fra cyklus 35 er lukket.
+- Alle temasider og selskabssider har tabsadvarsel, KID-link, SRI 5/7 med "gælder fonden som helhed – ikke X alene" og forsinket-mærket ✅.
+
+### MUST
+- **Tredjeparts-"BREAKING" er ikke kun på SoftBank. Den står på alle 44 platforme-selskaber og på `tema.html?slug=platforms`.** Stikprøven viser "BREAKING: SoftBank is seeking to raise up to $100 billion …" (@BullTheoryio) på Carvana og begge Opendoor-warrants med "Vist fordi: platforme". De andre fulgte konti følger samme mønster: @FundaAI ("$ORCL and $CRWV face a repricing of credit risk") og @MelvinInvests står på alle chips-, energi- og compute-sider, fx SUESS MicroTec. Det er altså ikke kun graf-markørerne (`app.js:479`). **Rettelsen sidder i `docs/js/x-feed.js:365` `matchPosts`:** tema-træf skal kun gælde husets konti. Tilføj `if (!nameHit && !isHouse(p)) continue;` før `hits.push`. `isHouse` findes allerede (linje 308).
+
+### SHOULD (nyt)
+1. **Livscyklus har nu en fjerde formulering.** `selskab.html:106` siger "**Manuel** klassifikation i udkastet" for alle 345, men data siger `maturityStatus: "forslag"` / "forslag fra offentlig GICS-industry/tema — afventer NDI-gennemgang" for alle 345. Den direkte modsiger data. Brug `maturityStatus === 'forslag'` → "Maskinelt forslag, afventer NDI-gennemgang. Ikke en rating."
+2. **Tomme profiler:** kun 98 af 345 selskaber har en profil i `company-profiles.json`. De øvrige ~247 sider viser "Profiltekst mangler endnu" og "Rolle i værdikæden –", "Produkter –" og "Kunder –". Skjul de tre tomme felter, når profilen mangler, og vis i stedet ét link: "Se temaet Platforme".
+3. **Warrants som selskaber:** "Opendoor Tech Warrant Series A/Z" har vægt 0,00 %, egen side (4.257 px) og tom profil. 10 positioner har vægt < 0,005 %. Grupper dem under moderselskabet ("Opendoor (inkl. warrants)"), eller vis dem kun i fuld liste.
+4. **Rå navne er udbredt:** 187 af 345 navne har Bloomberg-suffiks/forkortelser ("Sea Sp ADR" som h1, "SUESS MicroTec N", "Southern Co/The", "Lumentum Hldngs"). h1 på en selskabsside er det første, en privatinvestor ser. Det er udvidelsen af SHOULD fra cyklus 35.
+5. **Sammenlign nævner ikke omkostningsforskellen** (KID ca. 2,79 % vs. 2,85 % ved 5 år). FO spørger først om den, når de vælger mellem to klasser. Tilføj én linje i hvert kort.
+
+### Nice
+- Engelske X-citater står uoversat. Det er fint som citat, men et "(engelsk opslag)"-mærke eller en dansk resumelinje vil hjælpe 55+.
+
+### Persona-linser
+- **Privat 55+:** hvis de klikker på Carvana fra top-10, er det første eksterne opslag "BREAKING … $100 billion". Det er uro, ikke information. De tomme "–"-felter får sitet til at virke ufærdigt.
+- **Familiekontor:** "Manuel klassifikation" over for data "forslag" er den slags inkonsistens, de fanger. Sammenlign uden omkostninger er en tabt chance.
+- **Visuel variation:** temasiderne har ens struktur, men 3–6k px hver er acceptabelt. Selskabssider uden profil er mest X-panel og fondstekst.
