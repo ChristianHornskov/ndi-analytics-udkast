@@ -346,6 +346,10 @@ Sætningen under navnet var 24–28 px, samme størrelse som et afkasttal. «må
 
 På PMINDIAKK stod «2026.» for sig selv ved 440 og 460, skilt fra «5. december». «12» stod for enden af linjen og «måneders» på den næste. «12 måneders historik» og «5. december 2026» holder nu sammen. Ingen procent. Ingen sidescroll. Ingen konsolfejl.
 
+### Update · på Fonden · 2026-10-16 ~06:19 CEST
+
+Under 320 stod «Fonden.» alene efter «største fald på». «på Fonden» holder nu sammen ved 300 og 310. Fra 320 er sætningen én linje. Ingen sidescroll. Ingen konsolfejl.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.
