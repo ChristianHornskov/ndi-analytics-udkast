@@ -331,7 +331,6 @@ function renderEntre(root) {
         <a class="outline-btn small" href="omkostninger.html">Omkostninger</a>
         <a class="outline-btn small" href="laer/index.html">Alle lær-sider</a>
       </p>
-      ${warnHtml()}
     </section>`;
 }
 
@@ -436,8 +435,7 @@ function renderFonden(root) {
     </section>
     <section class="panel">
       <h2 style="font-size:18px;margin-bottom:6px">Afkast pr. kalenderår</h2>
-      <p style="font-size:12px;color:var(--muted);margin-bottom:8px">Afsluttede år + delår fra start (*). Ingen 1- eller 3-måneders fremhævning.</p>
-      ${warnHtml()}
+      <p style="font-size:12px;color:var(--muted);margin-bottom:8px">Afsluttede år + delår fra start (*). Ingen 1- eller 3-måneders fremhævning. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast.</p>
       ${hscroll(`<div class="table-wrap"><table class="data" style="min-width:0"><thead><tr><th>År</th><th>Afkast</th><th>Periode</th><th></th></tr></thead><tbody>${yearTableDeep}</tbody></table></div>`, 'Rul til siden for flere kolonner.')}
       <p style="margin-top:12px"><a class="outline-btn small" href="drawdown.html?fund=${state.fund}">Åbn drawdown-side →</a>
       <a class="outline-btn small" href="periode.html?fund=${state.fund}&year=YTD" style="margin-left:8px">YTD dyb side →</a>
@@ -446,8 +444,7 @@ function renderFonden(root) {
     </section>
     <section class="panel">
       <h2 style="font-size:18px;margin-bottom:6px">Månedlige afkast</h2>
-      <p style="font-size:12px;color:var(--muted);margin-bottom:8px">${state.calFull ? 'Hele historikken' : 'Seneste op til 36 måneder'} · røde måneder er synlige med vilje</p>
-      ${warnHtml()}
+      <p style="font-size:12px;color:var(--muted);margin-bottom:8px">${state.calFull ? 'Hele historikken' : 'Seneste op til 36 måneder'} · røde måneder er synlige med vilje · historisk afkast er ikke en pålidelig indikator for fremtidigt afkast</p>
       ${hscroll('<div id="calendar"></div>', 'Rul til siden for alle måneder.')}
       <p style="margin-top:12px"><button type="button" class="outline-btn" id="cal-toggle">${state.calFull ? 'Vis seneste 3 år' : 'Se hele historikken (ét klik)'}</button>
       <span style="display:block;margin-top:8px;font-size:12px;color:var(--muted)">Fuld historik er altid ét klik væk.</span></p>
@@ -456,8 +453,7 @@ function renderFonden(root) {
     <section class="panel">
       <h2 style="font-size:18px;margin-bottom:8px">Eksempel: 100.000 kr. siden start</h2>
       <p style="font-size:13px;color:var(--muted);line-height:1.55;margin-bottom:10px">Hvis du havde investeret 100.000 kr. ved første NAV (${fmtDate(rows[0]?.d)}) og geninvesteret udbytte, ville beløbet pr. ${fmtDate(asOfPerf)} være ca. <strong style="color:var(--text)">${totAll!=null ? (100000 * (1 + totAll/100)).toLocaleString('da-DK',{maximumFractionDigits:0}) : '-'} kr.</strong> (totalafkast ${fmtPct(totAll)}). Efter fondens løbende omkostninger, før skat og egne handelsomkostninger.</p>
-      <p class="band">Eksemplet starter ved første NAV (ikke stiftelsesdato). Det er ikke et gunstigt valg af dato midt i en stigning. Regneeksempel, ikke en prognose. <span class="src">ÅTD og 100.000 kr.-eksemplet afventer Fundmarket-godkendelse.</span></p>
-      ${warnHtml()}
+      <p class="band">Eksemplet starter ved første NAV (ikke stiftelsesdato). Det er ikke et gunstigt valg af dato midt i en stigning. Regneeksempel, ikke en prognose. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. <span class="src">ÅTD og 100.000 kr.-eksemplet afventer Fundmarket-godkendelse.</span></p>
     </section>
     <section class="panel">
       <h2 style="font-size:18px;margin-bottom:8px">Omkostninger (kort)</h2>
