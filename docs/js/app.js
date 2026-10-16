@@ -679,8 +679,8 @@ function forslagCell(p) {
   const before = s.to === 'andet' ? 'intet NDI-tema passede endnu' : `før: ${shiftFromLabel(s.from)}`;
   const d = themeDoubt(p);
   const doubt = d ? ` <span class="badge badge-doubt" style="background:transparent;border:1px dashed var(--yellow);color:var(--yellow)" title="Usikkert forslag: ${esc(d.why)}">usikkert</span>` : '';
-  const doubtNote = d ? `<br><small class="doubt-note" style="color:var(--muted)">usikkert: ${esc(d.why)}${d.alt ? ` · alternativ: ${doubtAltLabel(d.alt)}` : ''}</small>` : '';
-  return ` <span class="badge badge-draft" title="Temaet er et forslag fra udkastet og afventer NDI-gennemgang · ${before}">forslag</span>${doubt}<br><small class="shift-note" style="color:var(--muted)">${before}</small>${doubtNote}`;
+  const doubtNote = d ? `<small class="doubt-note" style="color:var(--muted);display:block;margin-left:auto;white-space:normal;max-width:36ch;line-height:1.35;text-align:left">usikkert: ${esc(d.why)}${d.alt ? ` · alternativ: ${doubtAltLabel(d.alt)}` : ''}</small>` : '';
+  return ` <span class="badge badge-draft" title="Temaet er et forslag fra udkastet og afventer NDI-gennemgang · ${before}">forslag</span>${doubt}<small class="shift-note" style="color:var(--muted);display:block;margin-left:auto;white-space:normal;max-width:36ch;line-height:1.35;text-align:left">${before}</small>${doubtNote}`;
 }
 const esc = (x) => String(x ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
@@ -751,7 +751,7 @@ function hitNote(p) {
   const h = HITS.get(p.isin);
   if (h?.via !== 'linse') return '';
   const e = (x) => String(x).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-  return `<br><small class="hit-note" style="color:var(--muted)">Match i <a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${state.fund}#ndi-linse">NDI-linsen</a> · ${e(h.label)}: ${e(h.value)}</small>`;
+  return `<br><small class="hit-note" style="color:var(--muted);display:inline-block;white-space:normal;max-width:36ch;line-height:1.35;text-align:left">Match i <a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${state.fund}#ndi-linse">NDI-linsen</a> · ${e(h.label)}: ${e(h.value)}</small>`;
 }
 
 // Sorteret på tema: overskriftsrække pr. primært tema (antal selskaber i den filtrerede liste, ingen vægtsum).

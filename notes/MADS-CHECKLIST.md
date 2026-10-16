@@ -78,6 +78,7 @@ Kilder: slack_ny_graf_2026-10-15.md, vision.txt, mads_tankemodel.md, investering
 | lane-B c9 | Temaforslag runde 2: 32 Andet → tema ud fra kædeplads (themeFrom/forslag), themes.json genberegnet, linse-tags opdateret; selskab.html forslag-mærke | lane-B |
 | lane-B c10 | NDI-linse 217 → 269 (+52): fuld dækning i Energi/Chips/Compute/Fysisk/Energiressourcer/SpaceTech/Quantum; ærlige tag-noter | lane-B |
 | lane-B c11 | NDI-linse 269 → 310 (+41 Software/Optik/Platforme); temaforslag runde 3 (Infleqtion → Quantum; ASP Isotopes, Neo → Energiressourcer); themes.json genberegnet | lane-B |
+| lane-B c17 | Mobil-læsbarhed af temagennemgang: forslag/usikkert/før/linse-match-noter ombrydes (td nowrap gav 933-1674 px brede tabeller på 375 px) i screener, A-Z og tema.html; NDI-linse-led for Planet Labs/Intuitive Machines rettet til kædens faktiske led | lane-B |
 | lane-B c12 | Søge-/sorteringsparitet: fælles `searchPosition` (multi-tag + NDI-linse-tekst, hit-note), tema-grupper i screener, A-Z `status=`-filter + filter-bevarende links | lane-B |
 | lane-B c13 | Tema-hub/tema-side polish: søg/sortér/temastatus på tema.html, multi-tag-tal på hub, navne i små temaer (Quantum/SpaceTech), præcist forslag-banner | lane-B |
 | lane-B c14 | NDI-linse 310 → 332 (+22 Andet-navne); tema Andet: 'Hvad ligger i Andet?' (tæt på et led / ædelmetaller / sundhed / restpositioner / øvrige) | lane-B |

@@ -4607,8 +4607,8 @@
         },
         {
           "label": "Plads i værdikæden",
-          "value": "Rum-kæden · led 2: tjenester fra rummet",
-          "hint": "Observation som løbende tjeneste fra kredsløb. Placeringen er pædagogisk.",
+          "value": "Rum-kæden · led 2: satellitkommunikation",
+          "hint": "Jordobservation: data fra egne satellitter sendt ned og solgt som løbende tjeneste. Kæden har ikke et eget observations-led, så den står ved satellitterne. Placeringen er pædagogisk.",
           "href": "vaerdikaeder.html?isin=US72703X1063#kap-rum"
         },
         {
@@ -4641,8 +4641,8 @@
         },
         {
           "label": "Plads i værdikæden",
-          "value": "Rum-kæden · led 1: transport",
-          "hint": "Transport til og landing på Månen; bygger ikke selv raketter. Placeringen er pædagogisk.",
+          "value": "Rum-kæden · led 1: opsendelse (månelandere)",
+          "hint": "Transport til og landing på Månen; bygger ikke selv raketter, men hører til i kædens første led om at komme ud i rummet. Placeringen er pædagogisk.",
           "href": "vaerdikaeder.html?isin=US46125A1007#kap-rum"
         },
         {
