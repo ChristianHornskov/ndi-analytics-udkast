@@ -2,7 +2,11 @@
 import { toPercentSeries, fmtPct, fmtDate } from './data.js';
 
 export function renderChart(container, rows, events = [], opts = {}) {
-  const series = toPercentSeries(rows);
+  let series = toPercentSeries(rows);
+  if (opts.basis === 'price' && rows.length && rows[0].price) {
+    const b0 = rows[0].price;
+    series = series.map((s) => ({ ...s, v: ((s.price / b0) - 1) * 100 }));
+  }
   container.innerHTML = '';
   const wrap = document.createElement('div');
   wrap.className = 'chart-inner';
@@ -60,11 +64,17 @@ export function renderChart(container, rows, events = [], opts = {}) {
     if (i == null) continue;
     const prev = placed.get(i);
     // Prefer non-x markers on same day; else keep first
+    if (e.kind === 'div') { placed.set('div' + i, { ...e, _i: i }); continue; }
     if (prev && prev.kind !== 'x' && e.kind === 'x') continue;
     if (!prev || (prev.kind === 'x' && e.kind !== 'x')) placed.set(i, e);
   }
-  const marks = [...placed.entries()].map(([i, e]) => {
+  const marks = [...placed.entries()].map(([k, e]) => {
+    const i = e._i != null ? e._i : k;
     const s = series[i];
+    if (e.kind === 'div') {
+      const tipD = (e.title || '').replace(/"/g, '&quot;');
+      return `<g class="evt-div"><line x1="${x(i)}" x2="${x(i)}" y1="${pad.t}" y2="${H - pad.b}"/><text x="${x(i)}" y="${pad.t + 12}" text-anchor="middle">U</text><title>${tipD}</title></g>`;
+    }
     const cls = e.kind === 'x' ? 'evt-x' : (e.kind === 'peak' ? 'evt-peak' : 'evt-dip');
     const title = (e.title || '').replace(/"/g, '&quot;');
     const tip = `${title}${e.text ? ' — ' + String(e.text).slice(0, 80).replace(/"/g, '&quot;') : ''}`;
@@ -92,22 +102,43 @@ export function renderChart(container, rows, events = [], opts = {}) {
   if (cmp) {
     const lg = document.createElement('p');
     lg.className = 'chart-legend';
-    lg.innerHTML = '<span class="lg-fund"></span> Fonden (totalafkast, DKK) <span class="lg-cmp"></span> Nasdaq-100 (kursindeks uden udbytte, omregnet til DKK)';
+    lg.innerHTML = '<span class="lg-fund"></span> Fonden (' + (opts.basis === 'price' ? 'kurs uden udbytte' : 'totalafkast') + ', DKK) <span class="lg-cmp"></span> Nasdaq-100 (kursindeks uden udbytte, omregnet til DKK)';
     wrap.insertBefore(lg, svg);
   }
 
-  svg.addEventListener('mousemove', (ev) => {
-    const rect = svg.getBoundingClientRect();
-    const px = ((ev.clientX - rect.left) / rect.width) * W;
-    const i = Math.round(((px - pad.l) / (W - pad.l - pad.r)) * (series.length - 1));
+  // Tooltip: mus, berøring og piletaster (graf-v2-paritet)
+  svg.setAttribute('tabindex', '0');
+  let cur = series.length - 1;
+  const cursor = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+  cursor.setAttribute('class', 'cursor'); cursor.setAttribute('y1', pad.t); cursor.setAttribute('y2', H - pad.b); cursor.style.display = 'none';
+  svg.appendChild(cursor);
+  const show = (i) => {
     if (i < 0 || i >= series.length) return;
+    cur = i; cursor.style.display = ''; cursor.setAttribute('x1', x(i)); cursor.setAttribute('x2', x(i));
+    readAt(i);
+  };
+  svg.addEventListener('keydown', (ev) => {
+    const step = ev.shiftKey ? 20 : 1;
+    if (ev.key === 'ArrowLeft') { ev.preventDefault(); show(Math.max(0, cur - step)); }
+    else if (ev.key === 'ArrowRight') { ev.preventDefault(); show(Math.min(series.length - 1, cur + step)); }
+    else if (ev.key === 'Home') { ev.preventDefault(); show(0); }
+    else if (ev.key === 'End') { ev.preventDefault(); show(series.length - 1); }
+  });
+  svg.addEventListener('touchmove', (ev) => { const t = ev.touches[0]; if (t) pick(t.clientX); }, { passive: true });
+  function pick(clientX) {
+    const rect = svg.getBoundingClientRect();
+    const px = ((clientX - rect.left) / rect.width) * W;
+    show(Math.round(((px - pad.l) / (W - pad.l - pad.r)) * (series.length - 1)));
+  }
+  svg.addEventListener('mousemove', (ev) => pick(ev.clientX));
+  function readAt(i) {
     const s = series[i];
-    const e = placed.get(i) || evMap.get(s.d);
+    const e = placed.get(i) || placed.get('div' + i) || evMap.get(s.d);
     let extra = '';
     if (e) {
       extra = ` · ${e.title}`;
       if (e.kind === 'x' && e.url) extra += ' (klik markør → X)';
     }
     readout.textContent = `${fmtDate(s.d)}: Fonden ${fmtPct(s.v)}${cmpTxt(i)}` + extra;
-  });
+  }
 }
