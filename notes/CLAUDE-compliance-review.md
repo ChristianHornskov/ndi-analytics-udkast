@@ -1589,3 +1589,7 @@ Rettelse: c62-headeren "08:10" var forkert. Den blev skrevet før 08:08.
 ## 2026-10-16 08:25 CEST · lane-R cyklus 69 (freeze-tjek)
 - Live-grep på 7 sider: tab- og rådgivningsadvarsel findes på alle 7, og KID/PRIIP findes på index. "anbefal*" er kun KID's "anbefalet holdeperiode". "overvægt" på risici er kun negation. Der er 0 hits på "garanteret" og "øger eksponering".
 - ÅOP/løbende omkostninger står på invester, omkostninger og om-data. ✅ Ingen nye MUST. main er uændret (5838748).
+
+## 2026-10-16 08:27 CEST · lane-R cyklus 70 (freeze-tjek)
+- Live-grep på index, risici, invester, omkostninger, selskab og tema: tabsadvarsel findes på alle 6. Der er 0 hits på "garanteret" og "øger eksponering". ÅOP står på invester og omkostninger.
+- Status er uændret: **M1** og **ÅOP på index/selskab** er MUST; **S-T1** (tema.html har 0 "rådgivning"-hits) og **S-K4** er SHOULD. Ingen nye MUST.

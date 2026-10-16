@@ -1596,3 +1596,6 @@ Nyt: omkostnings-lineal (omkostninger og fakta), X-månedsmatrix og Udforsk/Fond
 ## 2026-10-16 08:25 CEST · lane-R cyklus 69 (sidste freeze-tjek før 08:30)
 - main 5838748 er uændret siden cyklus 67/68, og der er 0 docs-ændringer. Live-sider (index, risici, invester, omkostninger, drawdown, om-data, selskab SoftBank) svarer 200.
 - **MUST:** ingen nye. **SHOULD/Nice:** uændret fra tidligere sektioner (ingen nye features under freeze).
+
+## 2026-10-16 08:27 CEST · lane-R cyklus 70 (sidste freeze-tjek)
+- main 5838748 er uændret, og der er 0 docs-ændringer siden c66. **MUST/SHOULD/Nice:** uændret (se c66–c69). Ingen nye fund.
