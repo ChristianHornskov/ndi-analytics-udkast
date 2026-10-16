@@ -33,6 +33,8 @@
  .node .more{font-size:12px;margin-top:4px}
  .node .tag{display:inline-block;font-size:10px;letter-spacing:.4px;border:1px solid var(--line);border-radius:999px;padding:1px 7px;margin-left:6px;vertical-align:2px;color:var(--muted)}
  .node .press{font-size:12px;line-height:1.4;margin-top:6px;color:var(--text)}
+ .node .shift{font-size:12px;line-height:1.45;margin-top:6px;padding-left:8px;border-left:2px solid #829da066;color:var(--muted)}
+ .node .shift b{color:var(--text);font-weight:600}
  .node .press .pt{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.4px;border-radius:4px;padding:0 5px;margin-right:6px;background:#2a4650;color:var(--text)}
  .node .press.lv-dam .pt{background:var(--yellow);color:#0b171d}
  .node .press.lv-early .pt{background:transparent;color:var(--yellow);box-shadow:inset 0 0 0 1px var(--yellow)}
@@ -216,6 +218,7 @@
  <h3>${num[l.id]}. ${esc(l.label)}${l.kind === 'ndi' ? '<span class="tag" title="NDI har skrevet om leddet">NDI</span>' : ''}</h3>
  <p>${esc(l.blurb)}</p>
  ${pressLine(l)}
+ ${l.shift ? `<p class="shift"><b>Hvad ændrer sig:</b> ${esc(l.shift)}</p>` : ''}
  <p class="meta"><b>${l.count}</b> selskaber · ca. ${pct(l.weightSum.toFixed(1))} % af fonden (forsinket)</p>
  ${alsoLine(l)}
  <p class="hit-why"></p>
