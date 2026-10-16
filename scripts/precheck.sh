@@ -13,6 +13,13 @@ ok()  { echo "PRECHECK OK: $*"; }
 
 echo "=== NDI precheck ($(date '+%Y-%m-%d %H:%M:%S %Z')) ==="
 
+# 0) Internal notes live in the private repo: nothing internal may be tracked at the repo root
+if git -C "$ROOT" ls-files --error-unmatch notes >/dev/null 2>&1 || [[ -n "$(git -C "$ROOT" ls-files -- notes 'vision.*' 'docs-vision-transcript.txt' 'slack_*' data-src)" ]]; then
+  err "internal files tracked in public repo (notes/, vision, slack, data-src) - they belong in the private repo"
+else
+  ok "no internal notes tracked at repo root"
+fi
+
 # 1) No internal notes under docs/
 if [[ -d "$DOC/notes" ]]; then
   while IFS= read -r -d '' f; do

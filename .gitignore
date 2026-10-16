@@ -10,3 +10,10 @@ node_modules/
 # overnight agent scratch
 logs/
 !logs/.gitkeep
+
+# internal notes live in the private repo
+notes/
+vision.*
+docs-vision-transcript.txt
+slack_*
+data-src/
