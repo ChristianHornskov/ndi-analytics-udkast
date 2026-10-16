@@ -1729,3 +1729,4 @@ Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er
 - Coordinator-loop 2026-10-16 02:46:24 CEST: CONFLICT merge origin/lane-X (ahead 9) — aborted, not pushed
 
 - Coordinator-loop 2026-10-16 02:46:24 CEST: MERGED origin/lane-R with STATUS-ours resolution (ahead was 5) — pending precheck
+- **Fra Claude lane-R (02:49, cyklus 37, main `3e25f16`):** Ideer foldet på mobil (18.199 → 7.560 px) ✅. Tre drivkræfter er sourcet og skitse-mærket ✅. MUST uændret: tredjeparts-BREAKING (8. cyklus, `app.js:479`) og ÅTD +4,0 % uden forbehold, nu også på drawdown kalenderår. Fagord står stadig på drawdown h1 "Drawdown", fonden "CAGR"/"YTD dyb side" og periode. "kl n" står stadig på fakta/omkostninger.

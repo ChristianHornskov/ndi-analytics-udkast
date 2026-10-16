@@ -926,3 +926,35 @@ Ikke juridisk rådgivning. Main er uændret, så fokus er nyt: **dokumentlinks v
 
 ### Prioritet
 **1** (BREAKING) → **2** (ÅTD-forbehold) → **3** (footer) → **5/6** (SRI + omkostninger i KPI-rækken, periode ved CAGR) → **4** (nyhedsarkiv) → **7**.
+
+## 2026-10-16 02:49 CEST · cyklus 37 (main `3e25f16`, docs-delta: ideer, drawdown, lær-fagord, tre drivkræfter; live = main)
+
+Ikke juridisk rådgivning. Live ved 375 på 28 URL'er med regex-flag og kontekst-grep. "overvægt"-hits er fortsat negationer. Ingen "øger eksponering", "garanteret", "køb/sælg nu" eller "bedste tip". Ingen 1m/3m på PMINDI. PMINDIAKK har ingen afkasttal ✅.
+
+### Nyt indhold gennemgået ✅
+- **Tre drivkræfter (ideer `#h-dr`, lær/Sådan tænker vi `#tv-dr`):** kilden er angivet (NDI ugebrev uge 3, 19. jan 2026). Teksten siger "Mads' syn på retningen, ikke en prognose", "siger ikke, hvilke selskaber der klarer sig godt, og du kan tabe penge". Placeringen er mærket "NDI Analytics' skitse, ikke NDI's egen opdeling". Vægtene er "pr. 1. jun 2026, offentlig, forsinket beholdning". Ingen handelssprog ✅. "Fonden ejer udviklingen bredt i stedet for at satse på, hvem der vinder" er en strategibeskrivelse, ikke rådgivning ✅.
+- **ASML "mulig flaskehals":** står sammen med "lille position … ikke en karakter, et kursmål eller en anbefaling" ✅.
+- **Ordliste "Årlig omkostningsmæssig konsekvens (KID)" ca. 2,79 % ved 5 år:** svarer til KID-tallet fra cyklus 31 ✅. Det er et godt opslag at linke til fra fondens KPI'er.
+- **Drawdown kalenderår:** 2023 "delår", 2026 "til dato" ✅ (lukker delvist cyklus 24 MUST 10 på denne side).
+
+### MUST (uændret)
+1. **Tredjeparts-"BREAKING" ved fondens afkastgraf og på SoftBank** (8. cyklus): "BREAKING: SoftBank is seeking to raise up to $100 billion …" og "BREAKING: Nvidia … backstop $250 BILLION" fra @BullTheoryio, vist sammen med fondens afkast. Fix: `docs/js/app.js:479` (filtrer `chartMarkers` til @InvestNewdeal) og selskabspanelets match.
+2. **ÅTD +4,0 % uden forbehold:** fonden har "afventer Fundmarket-godkendelse". Periode ("YTD: +4,0 %"), embed og nu **drawdown kalenderår "2026 +4,0 % til dato"** har ikke forbeholdet. Gør det ens på alle 4 eller fjern det overalt.
+3. "Markedsføringsmateriale"/prospekt-footer mangler på produktsiderne (fonden, portefølje, udforsk, fakta, omkostninger, selskab, periode, drawdown, embed, selskaber, sammenlign).
+4. Nyhedsarkiv: 0 × "kan tabe" og "Placeholder".
+
+### SHOULD
+5. **Drawdown, periode og embed: ingen KID-link og ingen SRI** (flag kid=0/sri=0 live). Drawdown viser −35,8 % og kalenderårsafkast. Tilføj den samme KID/SRI 5/7-linje, som risici har.
+6. Fonden: CAGR +26,4 % uden periode i underlabel, og omkostningstallet står ikke i KPI-rækken (cyklus 36 SHOULD 5/6).
+7. Interne noter på kundeside: fonden "compliance-beslutning, ikke et datamangel" (stadig live) og omkostninger "Tomme felter = udfyldes af NDI".
+8. "kl n" i produktnavn på fakta/omkostninger. Det er ikke compliance, men produktnavnet bør matche KID'et ("NewDeal Invest", andelsklasse PMINDI).
+9. Uændret: godkendelsesflag pr. opslag for NDI-medarbejderkonti (ndi-paa-x). Modenhed "klassificeret" vs. "maskinelt forslag". Prospekt-fakta på risici `#prospekt` skal verificeres af NDI.
+
+### Tjekliste (live)
+- Ikke-rådgivning ✅ (fonden i footer). Tabsadvarsel 27/28 (nyhedsarkiv ✗). Historisk afkast ≠ fremtid 28/28 ✅.
+- KID/SRI ✅ på fonden, PMINDIAKK, portefølje, udforsk, risici, fakta, sammenlign, selskab, tema, invester, lær. ✗ drawdown, periode, embed, selskaber, vaerdikaeder, temaer.
+- Omkostninger: KID-RIY 2,79/2,85 % på invester, fakta, omkostninger og nu ordlisten ✅. Fonden ✗ (SHOULD 6).
+- Beholdning asOf 2026-06-01 ✅. Ingen live-handler. Nasdaq kun negativt ✅. AI-udkast mærket ✅. Mads-handelssprog 0 ✅.
+
+### Prioritet
+**1** (BREAKING) → **2** (ÅTD-forbehold, nu 4 steder) → **3** (footer) → **5** (KID/SRI på drawdown/periode/embed) → **6** → **4**.

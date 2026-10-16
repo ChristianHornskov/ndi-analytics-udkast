@@ -879,3 +879,36 @@ Alle centrale dokumenter svarer 200 live: KID PMINDI/PMINDIAKK (`priip_ipm140b`/
 - **Privat (55+):** sitet er teknisk tilgængeligt (skip-link, alt, labels). Den reelle barriere på mobil er de små chips. På desktop ser fonden rolig og overskuelig ud, men fire grønne afkasttal i stor skrift kommer før risikoen.
 - **Familiekontor:** på desktop leder de efter et omkostningstal i KPI-rækken, og der er plads til det. KID- og prospektlinks virker og peger på de rigtige PDF'er ✅.
 - **Visuel variation:** desktop er luftigt og ensartet. Der er ingen ny træthed. Trætheden er fortsat længden på mobil.
+
+## 2026-10-16 02:49 CEST · cyklus 37 (main `3e25f16`, docs-delta siden `04e1c9a`: ideer-foldning, drawdown, fagord ud af overskrifter, tre drivkræfter)
+
+Pages (00:47:36 GMT) = main. Playwright kørte live ved 375 på 28 URL'er og ved 1280 på ideer og drawdown.
+
+### Nyt ✅
+- **Ideer på mobil er foldet:** 375 = 7.560 px (før 18.199). 11 sektioner som `<details>`. "Fold alle ud" er 44 px. Dybe links folder ud: `#h-dr` åbner og lander ved y=112. Desktop er åben, og knappen hedder "Fold alle sammen". Det er den største forbedring af mobil-træthed i nattens løb.
+- **Venn "Tre drivkræfter, ét overlap"** er læsbar ved 375 (SVG 317 px). Den er mærket "NDI Analytics' skitse … ikke NDI's egen opdeling", og alle vægte har datoen 1. jun 2026. Den er også et nyt billede, så variationen er god.
+- **Drawdown:** episoder har tal på de dybe prikker. Den valgte episode er gul på kurven. 0 SVG-tekster under 10 px. Kalenderår mærker 2023 "delår" og 2026 "til dato" ✅.
+- Lær/ordliste: "CAGR" er ude af overskrifterne ("Hvorfor det årlige afkast er lavere end gennemsnittet"). Ordlisten har 142 begreber, med nye "Årlig omkostningsmæssig konsekvens (KID)" og "Øjebliksbillede".
+
+### MUST
+- (uændret, 8. cyklus) **Tredjeparts-"BREAKING"** (@BullTheoryio) under fondens graf og på SoftBank. Se compliance.
+
+### SHOULD (nyt)
+1. **Fagord-oprydningen er halv.** Commit `1beebba` fjernede CAGR/drawdown fra lær, men de mest besøgte flader har dem stadig:
+   - drawdown `h1` "**Drawdown** · PMINDI" og kicker "FONDAFKAST · DRAWDOWN". Skriv "Fald fra top · PMINDI", som sidekortet allerede kalder siden.
+   - fonden KPI "Gns. årligt afkast (**CAGR**)", "Grafmarkører: … drawdown (rød)" og "Åbn drawdown-side → **YTD dyb side**".
+   - entré: "Møntspillet (+50/−40) og variance drag: CAGR og gennemsnit".
+   - periode: "Drawdown", "CAGR (hele serien)", "YTD: +4,0 %". Embed: "CAGR · 3,1 år siden start".
+   - Privat 55+ møder fagordene på fonden, før de når lær.
+2. **"kl n"** er rettet på invester, men står stadig på fakta (3×) og omkostninger (2×) ("NewDeal Invest, kl n (PMINDI)"). Skriv "andelsklasse PMINDI".
+3. **Drawdown "Under vand" ved 375:** etiketterne "tilbage", "top" og "nu −23 %" sidder tæt i højre side. Forklaringen under grafen er 8 linjer plus 4 linjer. Det er meget tekst til én graf på mobil. Fold "Bredden er tiden …" ind i en `<details>` "Sådan læser du grafen".
+4. Fra cyklus 36, stadig åbent: touch-mål på 17–18 px på udforsk/portefølje. Omkostningstal som 6. KPI-kort på fonden. Entré "Modenhed: 345 selskaber klassificeret (udkast)".
+
+### Nice
+- Venn: "Quantum 0,9 % · forslag" er det eneste tema med "forslag". Forklar det i figurteksten ("forslag = tema endnu ikke bekræftet af NDI"), ellers ligner det en tastefejl.
+- Ideer ved 1280 er 10.961 px med alle 11 åbne. Overvej også at folde efter de første 3 på desktop.
+
+### Persona-linser
+- **Privat 55+:** ideer på mobil er nu overskuelig. Drawdown-siden hedder stadig "Drawdown" øverst, så fagord-indsatsen ses ikke dér, hvor de lander fra fonden.
+- **Familiekontor:** de tre drivkræfter er klart sourcet (ugebrev 19. jan 2026) og skitse-mærket ✅. FO vil stadig se omkostningstallet på fonden.
+- **Idéspejder:** Venn er et godt "ét billede"-svar på "hvad tror NDI på?".
