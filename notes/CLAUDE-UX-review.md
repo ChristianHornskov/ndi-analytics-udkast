@@ -1588,3 +1588,7 @@ Nyt: omkostnings-lineal (omkostninger og fakta), X-månedsmatrix og Udforsk/Fond
 
 ## 2026-10-16 08:22 CEST · cyklus 67 · freeze-tjek
 - Ingen ændringer i docs siden c66. MUST, SHOULD og Nice er uændrede (se c66). Smoke `c89d6a7` dækker mobilgraf ≥220 px, Entré uden cmp og første resultat på Udforsk inden for første skærm. Det er tests, ikke features, så det er OK under freeze.
+
+## 2026-10-16 08:24 CEST · cyklus 68 · freeze-tjek (main `5838748`)
+
+- Ingen docs-ændringer siden c66/c67, så UX-fundene er uændrede. MUST/SHOULD: se c66–c67, især lineal-sum S-K4 og ÅOP for FO-personaen.

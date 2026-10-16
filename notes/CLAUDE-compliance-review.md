@@ -1578,3 +1578,10 @@ Rettelse: c62-headeren "08:10" var forkert. Den blev skrevet før 08:08.
 - Live: index, drawdown, risici, invester og om-data giver 200.
 - MUST er uændret: **M1** (ndi-paa-x BREAKING-lead) og **ÅOP mangler** (FO). SHOULD er uændret: **S-K4** (lineal-sum 2,13/2,21 % står ved siden af KID 2,79/2,85 %) og **S-T1** (tema.html har stadig 0 "rådgivning"-hits). Øvrige åbne punkter er som i c66.
 - Det her er sidste lane-R-commit før 08:30-stoppet.
+
+## 2026-10-16 08:24 CEST · cyklus 68 · freeze-tjek (main `5838748`)
+
+- main er uændret siden c67. lane-R ligger 7 commits foran origin/main, så der er ikke rebaset, kun merget (allerede up to date).
+- Live = main pr. md5 (risici `6269fce8`, index `b4d8d49a`). Last-Modified er 06:20:59 GMT.
+- Live-grep: tab-advarsel og KID/PRIIP findes på index, drawdown, risici, invester og om-data. "overvægt" på risici er kun negation ("ikke bevidste overvægte og ikke anbefalinger"). Der er 0 hits på "garanteret" og "bedste tip".
+- MUST er uændret: **M1** og **ÅOP mangler**. SHOULD er uændret: **S-K4** og **S-T1** (tema.html har stadig 0 "rådgivning"-hits).
