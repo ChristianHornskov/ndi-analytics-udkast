@@ -47,6 +47,13 @@ function sanitizeMaturity() {
   state.maturity = state.maturity.filter((m) => known.has(m));
   return before !== state.maturity.join(',');
 }
+// Samme for ?tags=: et ukendt/stavet forkert tema giver ellers 0 resultater uden forklaring. Behold kun temaer, som findes i data.
+function sanitizeTags() {
+  const known = new Set(DATA.portfolio.funds.flatMap((f) => f.positions.flatMap((p) => tagsFor(p, DATA.multiTags))));
+  const before = state.tags.join(',');
+  state.tags = state.tags.filter((t) => known.has(t));
+  return before !== state.tags.join(',');
+}
 
 function weightSpark(isin, fundId) {
   // Kun fondens vægt pr. kvartalssnapshot (≤ cutoff) - aldrig aktiekurs. Søjler fra nul pr. række,
@@ -878,7 +885,7 @@ function viaLens(list) {
 function warrantNote(p, fund) {
   const par = warrantParent(p, fund.positions);
   if (!par) return '';
-  const link = par.isin ? `<a href="selskab.html?isin=${encodeURIComponent(par.isin)}&fund=${fund.id}">${par.name}</a>` : par.name;
+  const link = par.isin ? `<a href="selskab.html?isin=${encodeURIComponent(par.isin)}&fund=${fund.id}">${displayName(par)}</a>` : displayName(par);
   return `<br><small style="color:var(--muted);display:inline-block;white-space:normal;max-width:36ch;line-height:1.35;text-align:left">Warrant (tegningsret) på ${link} - ikke et selvstændigt selskab</small>`;
 }
 function hitNote(p) {
@@ -1020,7 +1027,7 @@ function renderUdforsk(root) {
     </details>
     <div class="chips" id="chips"></div>
     <p style="font-size:12px;color:var(--muted)" id="filter-status">${list.length} ${list.length === 1 ? 'resultat' : 'resultater'}${viaLens(list)} · udkast-klassifikation</p>
-    <p class="uf-machine-note" style="font-size:12px;color:var(--muted);margin:-6px 0 8px">Tema og modenhed er maskinelle <span class="badge badge-draft">forslag</span> ud fra offentlig branche/tema og afventer NDI.</p>
+    <p class="uf-machine-note" style="font-size:12px;color:var(--muted);margin:-6px 0 8px">Tema og modenhed er maskinelle <span class="badge badge-draft">forslag</span> ud fra offentlig branche/tema og afventer NDI.${list.some(hasLens) ? ' <span aria-hidden="true">◉</span> = NDI-linse: faste spørgsmål om, hvad selskabet giver porteføljen (udkast, ikke en karakter). <a href="laer/saadan-taenker-vi.html#tv-hv">Hvad er det?</a>' : ''}</p>
     ${list.length ? positionsTable(list, fund) : emptyScreener(fund)}
     ${warnHtml()}`;
 
@@ -1264,12 +1271,12 @@ async function main() {
     $('#app').innerHTML = `<p class="warn">Data kunne ikke hentes (${err.message}). Genindlæs siden.</p>`;
     return;
   }
-  if (sanitizeMaturity()) writeUrl(true);
+  if (sanitizeMaturity() | sanitizeTags()) writeUrl(true);
   fillKidFooter();
   document.addEventListener('click', onClick);
   document.addEventListener('input', onInput);
   wireKeyboard();
-  window.addEventListener('popstate', () => { readUrl(); if (sanitizeMaturity()) writeUrl(true); paint(); });
+  window.addEventListener('popstate', () => { readUrl(); if (sanitizeMaturity() | sanitizeTags()) writeUrl(true); paint(); });
   window.addEventListener('resize', () => markHscroll($('#app')));
   // [data-open] håndteres af onClick-delegering (tidligere dobbelt listener → to dialoger)
   paint();
