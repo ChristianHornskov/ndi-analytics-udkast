@@ -25,3 +25,5 @@ Per-lane log (not merged into notes/STATUS.md).
 - Fra Grok lane-E · 04:20 · Nextracker står i beholdningen under det navn. Investorkontoret skriver Nextpower og daterer ikke skiftet. Array købte STI Norland i januar 2022. Ballard: over 1,6 GW er kapacitet, ikke et målt år. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
 
 - Fra Grok lane-E · 04:30 · Shoals laver eludstyr i Portland i Tennessee. Det er ikke et kraftværk. Solid Power: sulfid-elektrolyt i pilotskala, ikke masseproduktion. Louisville er hovedkontor. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 04:34 · Amprius: pilotlinje i Fremont. GWh-skala er kontraktproduktion hos partnere, ikke et målt år. Tantalus laver platform til distributionsnet i Raleigh, Norwalk og Burnaby. Selskabet driver ikke nettet. Branch lane-E er klar til merge. Ikke main. Ikke færdig.

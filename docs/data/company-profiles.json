@@ -1382,6 +1382,54 @@
     }
    ]
   },
+  "US03214Q1085": {
+   "name": "Amprius Technologies",
+   "theme": "energy",
+   "summary": "Laver battericeller med siliciumanode. Adressen er 1180 Page Ave i Fremont i Californien. Siden skriver, at fremstilling i kWh-skala begyndte i 2016, og at salg begyndte i 2018. I 2024 nævner siden en udvidelse i MWh-skala og GWh-skala som kontraktproduktion hos partnere. Pilotlinjen er ikke partnernes linjer.",
+   "watch": "Hvad der laves på pilotlinjen i Fremont, og hvad partnere laver. GWh-skala på siden er ikke et målt år.",
+   "source": "https://amprius.com/about/",
+   "products": "Battericeller med siliciumanode. Ikke et lager i drift.",
+   "customers": "Siden nævner luftfart, robotter og elbiler. Den nævner ikke en navngiven leverance i denne tekst.",
+   "role": "Celler. Pilotlinje og kontraktproduktion er ikke det samme.",
+   "narrative": [
+    "Amprius skriver, at adressen er 1180 Page Ave i Fremont i Californien. Siden skriver, at selskabet er stiftet i 2008, at designet af siliciumanoden var færdigt i 2014, at fremstilling i kWh-skala begyndte i 2016, og at salg begyndte i 2018. Børsnoteringen på NYSE er skrevet som 2022.",
+    "Samme side skriver, at en udvidelse i MWh-skala blev sat i gang i 2024, og at GWh-skala er kontraktproduktion hos partnere. Produktionssiden har et afsnit, der hedder Fremont Pilot Production, ved siden af et afsnit om partnere. Pilotlinjen er ikke det samme som partnernes linjer. Ordene highest og state-of-the-art er ikke taget med. Det er ikke et lager i drift."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Om selskabet",
+     "url": "https://amprius.com/about/"
+    },
+    {
+     "label": "Produktion",
+     "url": "https://amprius.com/manufacturing/"
+    }
+   ]
+  },
+  "CA87601F1062": {
+   "name": "Tantalus Systems",
+   "theme": "energy",
+   "summary": "Laver en platform til distributionsnet hos elselskaber. Produkterne på siden er TRUConnect, TRUFlex, TRUGrid, TRUSync og TRUSense. Kontorer står i Raleigh, Norwalk og Burnaby. Selskabet driver ikke nettet.",
+   "watch": "Om platformen sidder hos elselskaberne, eller om selskabet selv driver nettet. Siden siger, at kunderne er elselskaber.",
+   "source": "https://tantalus.com/offices/",
+   "products": "TRUConnect, TRUFlex, TRUGrid, TRUSync og TRUSense. Ikke et kraftværk.",
+   "customers": "Elselskaber. Teksten nævner ikke et navngivet selskab.",
+   "role": "Udstyr og software til nettet. Driver ikke nettet.",
+   "narrative": [
+    "Tantalus skriver, at selskabet hjælper elselskaber med at modernisere distributionsnettet med data fra apparater på nettet. Produkterne på siden er TRUConnect AMI, TRUFlex, TRUGrid Automation, TRUSync og TRUSense Gateway. Det er udstyr og software. Selskabet driver ikke nettet.",
+    "Kontorsiden skriver tre adresser. I USA: 1130 Situs Court, Suite 230, i Raleigh i North Carolina, og 140 Rowayton Avenue i Norwalk i Connecticut. I Canada: 3555 Gilmore Way, Suite 200, i Burnaby i British Columbia. En overskrift om omsætning den 5. august 2026 er ikke taget med."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Kontorer",
+     "url": "https://tantalus.com/offices/"
+    },
+    {
+     "label": "Forside",
+     "url": "https://tantalus.com/"
+    }
+   ]
+  },
   "CA64046G1063": {
    "name": "Neo Performance Materials",
    "theme": "energy-resources",
