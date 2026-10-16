@@ -24,14 +24,23 @@
   .not-that .rail b{flex:1;height:2px;background:var(--line)}
   .not-that .live{color:var(--muted);line-height:1.6;margin:0}
   .not-that .print-all{display:none}
+  .chain-map{border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:12px 0 0}
+  .chain-map h3{font-size:16px;margin:0 0 6px}
+  .chain-map .nodes{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:8px 0}
+  .chain-map button{appearance:none;font:inherit;color:var(--text);background:transparent;border:1px solid var(--line);border-radius:8px;min-height:44px;min-width:44px;padding:8px 14px;cursor:pointer}
+  .chain-map button[aria-pressed="true"]{border-color:var(--cyan)}
+  .chain-map .edge{flex:1;min-width:24px;height:2px;background:var(--line)}
+  .chain-map .live{color:var(--muted);line-height:1.6;margin:0}
+  .chain-map .print-all{display:none}
   @media print {
    .skip, .site-header .nav { display: none; }
    details, details > p { display: block !important; }
    details > summary { font-weight: 600; }
-   .tri details,.not-that{break-inside:avoid;border-color:#333}
-   .not-that .stops,.not-that .rail,.not-that .live{display:none}
-   .not-that .print-all{display:block;color:#111}
-   .not-that .print-all p{margin:4px 0}
+   .chain-map button{border-color:#333}
+   .not-that .stops,.not-that .rail,.not-that .live,.chain-map .nodes,.chain-map .live{display:none}
+   .not-that .print-all,.chain-map .print-all{display:block;color:#111}
+   .not-that .print-all p,.chain-map .print-all p{margin:4px 0}
+   .tri details,.not-that,.chain-map{break-inside:avoid;border-color:#333}
    .not-that button{border-color:#333}
    body, .site-footer { background: #fff; color: #111; }
   }
@@ -144,7 +153,7 @@
  <p style="color:var(--muted);margin:8px 0 0">Talen skriver, at flåden også har kul, naturgas og olie. Brandon Shores var planlagt lukket 1. juni 2025 og kører videre efter en pålidelighedsaftale. Det er ikke en lille reaktor under udvikling.</p>
  <p style="color:var(--muted);margin:8px 0 0">Nano Nuclear skriver, at ansøgningen om byggetilladelse til KRONOS er til behandling. Den er ikke givet. Formel behandling begyndte 23. juni 2026, efter beholdningen. Det er ikke et værk i drift.</p>
  <p style="color:var(--muted);margin:8px 0 0">ProPetro skriver, at arbejdet er trykpumpning i Permian-bassinet. Det er service til boringer, ikke et kraftværk. Selskabet står ikke på elproduktion.</p>
- <p style="color:var(--muted);margin:8px 0 0">Terra Innovatum skriver, at konceptet SOLO er fra 2018. Det er ikke et værk i drift.</p>
+ <p style="color:var(--muted);margin:8px 0 0">Terra Innovatum skriver, at konceptet SOLO er fra 2018, og at datoerne afhænger af godkendelse fra USNRC. Forsiden, læst 16. oktober 2026, skriver 1 MW elektrisk og både 5 MW og 4 MW termisk. De to termiske tal står på samme side. Teknologisiden skriver 1 MWe og 5 MWth med mål om 2028. Det er en plan, ikke et værk i drift. En kube på 10 gange 10 meter og en container på 2,4 gange 2,4 gange 12 meter er ikke samme mål.</p>
  <p style="color:var(--muted);margin:8px 0 0">Rolls-Royce skrev 15. juni 2026, at Videberg Kraft har valgt selskabet til tre små reaktorer på Sveriges vestkyst. Det er efter beholdningen og ikke et værk i drift. Atomkraft er ikke hele selskabet.</p>
  <p style="color:var(--muted);margin:8px 0 0">Terrestrial Energy skriver, at IMSR er specificeret til 390 MWe netto eller 822 MWt netto, og at brændslet er lavt beriget uran under 5 % U-235. De første anlæg er sat til begyndelsen af 2030'erne. Det er en forventning, ikke et værk i drift.</p>
  <p style="color:var(--muted);margin:8px 0 0">Expand Energy skrev 16. september 2026, at handlen med Twin Eagle er gennemført. Det er efter beholdningen. Twin Eagle er et marketingselskab, ikke en mine.</p>
@@ -217,6 +226,23 @@
  <p class="eyebrow" style="margin:0">KONCEPT · KÆDE</p>
  <h2 style="font-size:18px;margin:4px 0">Rumfart og satellitter</h2>
  <p style="color:var(--muted);margin:0">Koncept. Arkivet indeholder ikke ugebrevet. Opsendelse, satellitter og beregning i rummet er skilt ad på <a href="vaerdikaeder.html">værdikædesiden</a>. SpaceX er omtalt i formidlingen og indgår ikke i beholdningen pr. 1. juni 2026. Musk-citatet står kun som citat.</p>
+ <section class="chain-map" data-open="launch" aria-label="Tre led i rumkæden">
+ <h3>Tre led</h3>
+ <p style="color:var(--muted);line-height:1.6;margin:0">Kortet viser tre led. Et klik viser ét eksempel. Det er ikke en rute, et selskab selv flyver.</p>
+ <div class="nodes" role="group" aria-label="Vælg et led">
+ <button type="button" data-stop="launch" aria-pressed="true">Opsendelse</button>
+ <span class="edge" aria-hidden="true"></span>
+ <button type="button" data-stop="sat" aria-pressed="false">Satellit</button>
+ <span class="edge" aria-hidden="true"></span>
+ <button type="button" data-stop="compute" aria-pressed="false">Rum og compute</button>
+ </div>
+ <p class="live" aria-live="polite"></p>
+ <div class="print-all">
+ <p data-stop="launch">Opsendelse. Rocket Lab skriver, at HASTE er et suborbitalt testfartøj. Det er ikke en orbital opsendelse. Neutron er stadig under udvikling.</p>
+ <p data-stop="sat">Satellit. York skriver, at 21 satellitter er opsendt til Tranche 1. Selskabet sender ikke selv raketten op.</p>
+ <p data-stop="compute">Rum og compute. Redwire og York bygger udstyr og satellitkroppe. Ingen af dem driver beregning i kredsløb.</p>
+ </div>
+ </section>
  <p style="color:var(--muted);margin:8px 0 0">Neutron og Eclipse er ikke fløjet i beskrivelserne. Starfighters skriver, at flåden er syv F-104, og at flyene kan bære nyttelast til 45.000 fod. Forsiden skriver, at en opsendelsestilladelse fra FAA er undervejs. STARLAUNCH 1 er ikke en orbital rute. Howmet skriver tre forskellige ting. De står i kortet under.</p>
  <div style="border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:10px 0 0">
  <p style="margin:0 0 6px;font-weight:600">Howmet · tre ting siden selv skriver</p>
@@ -277,7 +303,7 @@
  </footer>
  <script>
  (function () {
-  var box = document.querySelector(".not-that");
+ function bindPicker(box) {
   if (!box) return;
   var live = box.querySelector(".live");
   var map = {};
@@ -296,7 +322,10 @@
   box.querySelectorAll("button[data-stop]").forEach(function (b) {
    b.addEventListener("click", function () { show(b.getAttribute("data-stop")); });
   });
-  show(box.getAttribute("data-open") || "plant");
+  var first = box.querySelector("button[data-stop]");
+  show(box.getAttribute("data-open") || (first ? first.getAttribute("data-stop") : ""));
+ }
+ document.querySelectorAll(".not-that, .chain-map").forEach(bindPicker);
  })();
  </script>
 </body>
