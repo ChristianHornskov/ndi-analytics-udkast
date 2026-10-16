@@ -1137,20 +1137,20 @@
   "US35671D8570": {
    "name": "Freeport-McMoRan",
    "theme": "energy-resources",
-   "summary": "Driver kobberminedrift. Siden nævner Cerro Verde, El Abra og Grasberg. Det er ikke et elselskab.",
-   "watch": "Drift af minerne, kobberpriser og lokale tilladelser.",
-   "source": "https://www.fcx.com/",
-   "products": "Kobber og andre metaller fra samme miner.",
-   "customers": "Industrikunder.",
-   "role": "Råstof til elnet, elektronik og byggeri.",
+   "summary": "Driver kobberminer. Selskabet skriver, at Morenci i Arizona er et åbent brud i drift siden 1939, og at Freeport har 72 % af minen. Det er ikke et elselskab.",
+   "watch": "Om kapacitetstallet er det, anlægget maler. Teksten er ikke et elselskab.",
+   "source": "https://www.fcx.com/operations/united-states",
+   "products": "Kobber fra Morenci. To koncentratorer kan male 132.000 ton malm i døgnet. Ikke et elselskab.",
+   "customers": "Industrikunder. Teksten nævner ikke en navngiven leverance fra Morenci.",
+   "role": "Morenci er et åbent brud i drift siden 1939. Freeport har 72 %.",
    "narrative": [
-    "Freeport-McMoRan udvinder kobber. Siden nævner Cerro Verde og El Abra i Sydamerika og Grasberg i Indonesien.",
-    "Det er miner i denne beskrivelse, ikke et elselskab."
+    "Freeport skriver, at Morenci er et åbent kobberbrud, som har været i drift siden 1939. Minen ligger i Greenlee County i Arizona, cirka 50 miles nordøst for Safford. Selskabet skriver, at det har 72 % af minen. Sumitomo Metal Mining Arizona har 15 %, og SMM Morenci har 13 %. To koncentratorer kan male 132.000 ton malm i døgnet. Det er selskabets kapacitetstal, ikke en målt dagsproduktion. Miles er ikke regnet om. Det er en mine, ikke et elselskab.",
+    "Menuen nævner også andre anlæg, blandt andet Grasberg, Cerro Verde og El Abra. Denne tekst beskriver ikke de anlæg."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets side",
-     "url": "https://www.fcx.com/"
+     "label": "USA, Morenci",
+     "url": "https://www.fcx.com/operations/united-states"
     }
    ]
   },

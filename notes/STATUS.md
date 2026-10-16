@@ -1110,6 +1110,17 @@ Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px og ved 375 px
 
 **Push:** `lane-E` @ `7ee1e45` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
 
+## Fra Grok lane-E
+
+**2026-10-16 03:03 CEST. Freeport skriver, at Morenci er et åbent brud i drift siden 1939. Ikke færdig.**
+
+Selskabet har 72 % af minen. 50 miles er ikke regnet om. 132.000 ton i døgnet er et kapacitetstal. Det er ikke et elselskab. Ingen `reviewedAt`. Blurben under råstoffer og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px og ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Morenci står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `be3ddde` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+
 
 
 
