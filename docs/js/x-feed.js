@@ -286,7 +286,7 @@ article.x-card.is-film .x-why{margin:6px 0 0;font-size:11px}
 @media(max-width:700px){
   .x-lane.is-film .x-grid{grid-template-columns:1fr 1fr}
 }
-.x-no-direct{border:1px dashed #89aeb488;border-radius:16px;padding:16px 16px 14px;background:#0b171d}
+.x-no-direct{border:1px dashed #89aeb488;border-radius:16px;padding:16px 16px 14px;margin:0 0 12px;background:#0b171d}
 .x-no-direct .k{margin:0 0 6px;color:var(--text);font-weight:650;font-size:16px}
 .x-no-direct p{margin:0;color:var(--muted);line-height:1.45;font-size:14px}
 article.x-card.is-slip{border-color:#345860;box-shadow:inset 3px 0 0 #9ecfd6,0 14px 34px rgba(0,0,0,.22);background:linear-gradient(180deg,#16303a 0%,#102228 100%)}
@@ -301,6 +301,12 @@ button.x-pick:hover time{text-decoration:underline;text-underline-offset:3px}
 button.x-pick:focus-visible{outline:2px solid #f5ee9e;outline-offset:3px}
 .x-lane-h .x-lane-hint,.x-lane-n{color:var(--faint);font-size:12px;font-weight:400;letter-spacing:0}
 .x-stage.x-picked{margin-top:10px}
+.x-by-when{margin-left:auto;display:flex;flex-direction:column;align-items:flex-end;justify-content:center;gap:2px;min-width:0}
+article.x-card.is-quote .x-by-when time,article.x-card.is-slip .x-by-when time{margin-left:0;font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-size:16px;font-weight:500;letter-spacing:-.3px;line-height:1;color:#f5ee9e}
+.x-now{font-style:normal;font-size:10px;letter-spacing:.7px;text-transform:uppercase;font-weight:700;line-height:1.15;color:#f5ee9e;white-space:nowrap}
+.x-door kbd{font-family:inherit;font-size:10px;font-weight:650;letter-spacing:0;line-height:1.2;border:1px solid #345860;border-bottom-width:2px;border-radius:4px;padding:0 4px;margin-left:6px;color:#f5ee9e;background:#0b171d}
+article.x-card.is-lead:focus{outline:none}
+article.x-card.is-lead:focus-visible{outline:2px solid #f5ee9e;outline-offset:3px}
 `;
   document.head.appendChild(s);
 }
@@ -587,6 +593,16 @@ function markTerm(hit) {
   return (hit.reasons || []).find((r) => /^(SoftBank|NVDA)$/i.test(String(r))) || '';
 }
 
+/** 1-based place in a date-desc series. Null when there is only one post. */
+export function xPlace(posts, leadId) {
+  const list = (posts || []).filter(Boolean);
+  if (list.length < 2) return null;
+  const ordered = [...list].sort((a, b) => String(b.created_at || '').localeCompare(String(a.created_at || '')));
+  const i = ordered.findIndex((p) => String(p.id) === String(leadId));
+  if (i < 0) return null;
+  return { i: i + 1, n: ordered.length };
+}
+
 export function xScoreHtml(items) {
   const cells = (items || []).map((it) => {
     const n = Number(it.n) || 0;
@@ -703,7 +719,7 @@ export function xCard(p, opt = {}) {
       : `<span>${esc(when.year)}</span>`;
     if (!opt.pickable) return { film: `${time}${year}`, rail: `<div class="x-rail-when">${time}${year}</div>` };
     const label = `Vis opslaget fra ${fmtXDate(p.created_at)} som citat`;
-    const btn = `<button type="button" class="x-pick ${mode === 'film' ? 'x-film-when' : 'x-rail-when'}" data-x-pick aria-label="${esc(label)}">${time}${year}</button>`;
+    const btn = `<button type="button" class="x-pick ${mode === 'film' ? 'x-film-when' : 'x-rail-when'}" data-x-pick aria-keyshortcuts="ArrowLeft ArrowRight" aria-label="${esc(label)}">${time}${year}</button>`;
     return { film: btn, rail: btn };
   };
   if (opt.rail && opt.rail !== 'film') {
@@ -741,9 +757,18 @@ export function xCard(p, opt = {}) {
   ${because ? `<p class="x-why">${because}</p>` : (why || '')}
 </article>`;
   }
+  const shownWhen = () => {
+    const time = `<time datetime="${esc(p.created_at)}">${esc(fmtXDate(p.created_at))}</time>`;
+    if (!opt.dated) return time;
+    const n = Number(opt.place?.n);
+    const i = Number(opt.place?.i);
+    const place = n > 1 && i > 0 ? ` · ${i} af ${n}` : '';
+    return `<span class="x-by-when">${time}<i class="x-now">Denne dato${place}</i></span>`;
+  };
+  const currentAttr = opt.lead && opt.dated ? ' aria-current="true"' : '';
   if (opt.lead && isTickerSlip(p.text)) {
     const slipCls = ['x-card', 'panel', 'is-lead', 'is-slip', opt.hitKind === 'direct' ? 'is-direct' : ''].filter(Boolean).join(' ');
-    return `<article class="${slipCls}"${idAttr}>
+    return `<article class="${slipCls}"${idAttr}${currentAttr}>
   <p class="kicker" style="color:var(--brand);font-size:11px;font-weight:700;letter-spacing:1.4px;margin:0">KORT OPSLAG</p>
   <p class="x-slip">${highlight(p.text, opt.query)}</p>
   <div class="x-by">
@@ -752,14 +777,14 @@ export function xCard(p, opt = {}) {
       <strong>${esc(p.name || p.username)}</strong>
       <span>@${esc(p.username)}</span>
     </div>
-    <time datetime="${esc(p.created_at)}">${esc(fmtXDate(p.created_at))}</time>
+    ${shownWhen()}
   </div>
   ${why}
   ${foot}
 </article>`;
   }
   if (opt.lead) {
-    return `<article class="${cls}"${idAttr}>
+    return `<article class="${cls}"${idAttr}${currentAttr}>
   <blockquote class="x-quote">
     <span class="x-qmark" aria-hidden="true">„</span>
     ${text}
@@ -770,7 +795,7 @@ export function xCard(p, opt = {}) {
       <strong>${esc(p.name || p.username)}</strong>
       <span>@${esc(p.username)}</span>
     </div>
-    <time datetime="${esc(p.created_at)}">${esc(fmtXDate(p.created_at))}</time>
+    ${shownWhen()}
   </div>
   ${why}
   ${foot}
@@ -856,18 +881,18 @@ export function xSaysPanel(pack, { tickers = [], themes = [], limit = 4, title =
   const leadKind = 'direct';
   const restDirect = view.direct.slice(1);
   const restTheme = view.theme;
-  const lane = (kind, hits, mode) => {
+  const lane = (kind, hits, mode, leadKind = 'direct') => {
     if (!hits.length) return '';
     const film = mode === 'film';
     const rail = mode === 'rail';
-    const pickable = kind === 'direct' && (film || rail);
+    const pickable = kind === leadKind && (film || rail);
     const kicker = kind === 'theme'
-      ? (film ? 'Andre datoer · tema' : 'Tema')
-      : (film || rail) ? 'Andre datoer' : 'Øvrige direkte træf';
+      ? ((film || (rail && leadKind === 'theme')) ? 'Andre datoer · tema' : 'Tema')
+      : ((film || rail) ? 'Andre datoer' : 'Øvrige direkte træf');
     const hint = kind === 'direct'
       ? 'Nævner selskab eller ticker.'
       : 'Rammer temaet. Ikke en ticker fra udsnittet.';
-    const note = pickable ? 'Klik en dato. ' : '';
+    const note = pickable ? 'Klik en dato, eller brug piletasterne. ' : '';
     const cards = hits.map((h) => xCard(h.post, {
       reasons: h.reasons,
       hitKind: kind,
@@ -880,39 +905,42 @@ export function xSaysPanel(pack, { tickers = [], themes = [], limit = 4, title =
   <div class="x-grid">${cards}</div>
 </div>`;
   };
-  const packLane = (kind, hits, allowBeside) => {
+  const packLane = (kind, hits, allowBeside, leadKind = 'direct') => {
     if (!hits.length) return { beside: '', below: '' };
-    if (hits.length >= 3) return { beside: '', below: lane(kind, hits, 'film') };
-    if (allowBeside) return { beside: lane(kind, hits, 'rail'), below: '' };
-    return { beside: '', below: lane(kind, hits) };
+    if (hits.length >= 3) return { beside: '', below: lane(kind, hits, 'film', leadKind) };
+    if (allowBeside) return { beside: lane(kind, hits, 'rail', leadKind), below: '' };
+    return { beside: '', below: lane(kind, hits, '', leadKind) };
   };
   let stage;
   let belowLane;
   if (!view.direct.length) {
     const who = singleCompanyName(tickers);
-    const nameBit = who ? esc(who) : 'selskabet';
-    const film = view.theme.length >= 3;
-    const cards = view.theme.map((h) => xCard(h.post, {
-      reasons: h.reasons,
-      hitKind: 'theme',
-      query: markTerm(h),
-      rail: film ? 'film' : false,
-      pickable: film,
-    })).join('');
-    stage = `<div class="x-stage x-no-direct">
-  <p class="k">Ingen NDI-opslag nævner ${who ? esc(who) : 'navnet'}</p>
-  <p>Panelet er kun NDI-konti. ${view.theme.length ? `Kortene nedenfor deler tema. De nævner ikke ${nameBit}.` : ''}</p>
+    const name = who ? esc(who) : '';
+    const leadHit = view.theme[0];
+    const restThemeOnly = view.theme.slice(1);
+    const place = xPlace(view.theme.map((h) => h.post), leadHit.post.id);
+    const notice = `<div class="x-stage x-no-direct">
+  <p class="k">Ingen NDI-opslag nævner ${who ? name : 'navnet'}</p>
+  <p>Panelet er kun NDI-konti. Citatet deler tema.${who ? ` Det nævner ikke ${name}.` : ' Det nævner ikke en ticker fra udsnittet.'}</p>
 </div>`;
-    belowLane = view.theme.length ? `<div class="x-lane is-theme${film ? ' is-film' : ''}">
-  <p class="x-lane-h"><span class="x-lane-k">Samme tema</span><span class="x-lane-hint">${who ? `Nævner ikke ${esc(who)}.` : 'Nævner ikke selskabet eller tickeren.'}${film ? ' Klik en dato.' : ''}</span><span class="x-lane-n">${view.theme.length}</span></p>
-  <div class="x-grid">${cards}</div>
-</div>` : '';
+    const quote = `<div class="x-stage">${xCard(leadHit.post, {
+      reasons: leadHit.reasons,
+      lead: true,
+      hitKind: 'theme',
+      query: '',
+      dated: restThemeOnly.length > 0,
+      place: restThemeOnly.length ? place : null,
+    })}</div>`;
+    belowLane = restThemeOnly.length ? lane('theme', restThemeOnly, 'film', 'theme') : '';
+    stage = notice + quote;
   } else {
     const quote = `<div class="x-stage">${xCard(leadHit.post, {
       reasons: leadHit.reasons,
       lead: true,
       hitKind: leadKind,
       query: markTerm(leadHit),
+      dated: restDirect.length > 0,
+      place: restDirect.length ? xPlace([leadHit.post, ...restDirect.map((h) => h.post)], leadHit.post.id) : null,
     })}</div>`;
     const directPacked = packLane('direct', restDirect, true);
     const themePacked = packLane('theme', restTheme, !restDirect.length);
@@ -944,6 +972,15 @@ function bindXPick() {
     if (!btn) return;
     e.preventDefault();
     promoteCard(btn.closest('article.x-card'));
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+    if (e.altKey || e.metaKey || e.ctrlKey || e.shiftKey) return;
+    const ae = document.activeElement;
+    if (!ae || ae.closest('input, textarea, select, [contenteditable="true"]')) return;
+    const scope = ae.closest('#x-grid, section.x-says');
+    if (!scope) return;
+    if (cyclePick(scope, e.key === 'ArrowRight' ? 1 : -1)) e.preventDefault();
   });
 }
 
@@ -981,16 +1018,19 @@ function promoteCard(card) {
   }
   const stageHost = lead ? lead.closest('.x-stage') : ensurePickedStage(lane);
   if (!stageHost) return;
+  const sorted = pool
+    .map((id) => cardMeta.get(id))
+    .filter(Boolean)
+    .sort((a, b) => String(b.post.created_at || '').localeCompare(String(a.post.created_at || '')));
+  const place = xPlace([next.post, ...sorted.map((m) => m.post)], next.post.id);
   stageHost.innerHTML = xCard(next.post, {
     reasons: next.reasons,
     lead: true,
     hitKind: next.hitKind,
     query: next.query,
+    dated: true,
+    place,
   });
-  const sorted = pool
-    .map((id) => cardMeta.get(id))
-    .filter(Boolean)
-    .sort((a, b) => String(b.post.created_at || '').localeCompare(String(a.post.created_at || '')));
   const grid = lane.querySelector('.x-grid');
   if (grid) {
     grid.innerHTML = sorted.map((m) => xCard(m.post, {
@@ -1023,5 +1063,37 @@ function promoteCard(card) {
     live.setAttribute('aria-live', 'polite');
     document.body.appendChild(live);
   }
-  live.textContent = `Citatet viser nu opslaget fra ${fmtXDate(next.post.created_at)}.`;
+  const where = place && place.n > 1 ? ` Dato ${place.i} af ${place.n}.` : '';
+  live.textContent = `Citatet viser nu opslaget fra ${fmtXDate(next.post.created_at)}.${where}`;
+  const quoteNow = stageHost.querySelector('article');
+  if (quoteNow) {
+    quoteNow.dispatchEvent(new CustomEvent('ndi-x-pick', { bubbles: true, detail: { id: next.post.id } }));
+  }
+}
+
+function cyclePick(scope, dir) {
+  const lead = scope.querySelector('article.is-lead');
+  if (!lead) return false;
+  const kind = leadKindOf(lead);
+  const lane = [...scope.querySelectorAll('.x-lane')].find((el) => {
+    if (!el.querySelector('[data-x-pick]')) return false;
+    const laneKind = el.classList.contains('is-theme') ? 'theme' : 'direct';
+    return laneKind === kind;
+  });
+  if (!lane) return false;
+  const ids = [
+    lead.getAttribute('data-x-id'),
+    ...[...lane.querySelectorAll('article.x-card[data-x-id]')].map((a) => a.getAttribute('data-x-id')),
+  ];
+  const items = ids.map((id) => cardMeta.get(id)).filter(Boolean);
+  items.sort((a, b) => String(b.post.created_at || '').localeCompare(String(a.post.created_at || '')));
+  const cur = items.findIndex((m) => String(m.post.id) === lead.getAttribute('data-x-id'));
+  if (cur < 0) return false;
+  const next = items[cur + (dir > 0 ? 1 : -1)];
+  if (!next) return false;
+  const id = String(next.post.id).replace(/"/g, '');
+  const card = lane.querySelector(`article.x-card[data-x-id="${id}"]`);
+  if (!card) return false;
+  promoteCard(card);
+  return true;
 }
