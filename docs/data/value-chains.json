@@ -117,7 +117,7 @@
     {
       "id": "ai-compute",
       "title": "AI-compute",
-      "why": "Mads beskriver AI-værdikæden som et flodsystem: når én dæmning (flaskehals) letter, flytter presset. Efterspørgslen kommer i stigende grad fra bunden — først agentisk AI, snart fysisk AI.",
+      "why": "Mads beskriver AI-værdikæden som et flodsystem: når én dæmning (flaskehals) letter, flytter presset. Efterspørgslen kommer i stigende grad fra bunden — først fra AI-agenter, der selv udfører opgaver (agentisk AI), og snart fra fysisk AI som robotter.",
       "source": "BLOG 30. marts 2026",
       "links": [
         {
@@ -879,7 +879,7 @@
     {
       "id": "physical",
       "title": "Robotik & fysisk AI",
-      "why": "Når AI får krop, bliver det til robotter, selvkørende biler, droner og automatiserede fabrikker. NDI ser det som næste store fase efter chatbots og copilots.",
+      "why": "Når AI får krop, bliver det til robotter, selvkørende biler, droner og automatiserede fabrikker. NDI ser det som næste store fase efter chatbots og AI-hjælpere i de programmer, man allerede bruger (copilots).",
       "source": "BLOG 7. okt 2024 · BOG s. 40–43",
       "links": [
         {
@@ -1062,7 +1062,7 @@
     {
       "id": "energy",
       "title": "Energi & elektrificering",
-      "why": "AI, robotter og elbiler kræver meget mere strøm. NDI ser energi som den første flaskehals i AI-udbygningen og som en del af kapløbet om strøm. Eksemplerne er valgt efter forretning, ikke efter den største vægt i temaet. Gas på elproduktion er brændsel, ikke en metalmine. Navnene under atomkraft og SMR er ikke beskrevet som værker i kommerciel drift.",
+      "why": "AI, robotter og elbiler kræver meget mere strøm. NDI ser energi som den første flaskehals i AI-udbygningen og som en del af kapløbet om strøm. Eksemplerne er valgt efter forretning, ikke efter den største vægt i temaet. Gasselskaberne under elproduktion leverer brændsel. De er ikke miner. Navnene under atomkraft og SMR er ikke beskrevet som værker i kommerciel drift.",
       "source": "BLOG 30. marts 2026 · 7. juli 2025 · 10. august 2026",
       "exampleRule": "PMINDI pr. 2026-06-01. Et selskab kan stå på mere end ét led. weightSum er summen af de navngivne eksempler, ikke temaets samlede vægt i themes.json.",
       "omitted": [
@@ -1896,7 +1896,7 @@
     {
       "id": "space",
       "title": "Rumfart & satellitter",
-      "why": "Opsendelser, satellitter og kommunikation fra rummet. NDI beskriver, at prisen på at komme i kredsløb er faldet kraftigt, og at det åbner markeder som satellitinternet og på sigt beregning i rummet. Eksemplerne er valgt efter forretning. SpaceX indgår ikke i beholdningen pr. 1. juni 2026. Leddet rum og compute er infrastruktur, ikke et datacenter i kredsløb.",
+      "why": "Opsendelser, satellitter og kommunikation fra rummet. NDI beskriver, at prisen på at komme i kredsløb er faldet kraftigt, og at det åbner markeder som satellitinternet og på sigt beregning i rummet. Eksemplerne er valgt efter forretning. SpaceX indgår ikke i beholdningen pr. 1. juni 2026. I leddet \"Rum og compute\" er eksemplerne i dag udstyr og satellitter, ikke et datacenter i kredsløb.",
       "source": "BLOG 23. juni 2024 · 12. oktober 2026",
       "exampleRule": "PMINDI pr. 2026-06-01. SpaceX (profil findes) er ikke i snapshottet. weightSum er summen af de navngivne eksempler.",
       "omitted": [
