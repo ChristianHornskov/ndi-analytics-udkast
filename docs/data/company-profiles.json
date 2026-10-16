@@ -1186,6 +1186,62 @@
     }
    ]
   },
+  "US0126531013": {
+   "name": "Albemarle",
+   "theme": "energy-resources",
+   "summary": "Laver lithium og brom. Selskabet skriver, at Silver Peak i Nevada og Salar de Atacama i Chile er i drift. Kings Mountain i North Carolina er en mine, selskabet søger at genåbne. Den er ikke i drift.",
+   "watch": "Om Kings Mountain bliver genåbnet. Silver Peak og Salar de Atacama står som drift. En ejerandel i Australien er ikke læst.",
+   "source": "https://www.albemarle.com/us/en/what-we-offer/reliable-supply/lithium-resources-processing",
+   "products": "Lithium fra saltvand og fra hårde bjergarter, og brom. Kings Mountain er ikke en mine i drift.",
+   "customers": "Kunder til batterimaterialer og til andre kemikalier. Teksten nævner ikke en navngiven leverance.",
+   "role": "Lithium i drift i Nevada og Chile. Kings Mountain er ikke en mine i drift.",
+   "narrative": [
+    "Albemarle skriver, at Silver Peak i Nevada og Salar de Atacama i Chile er i drift. Silver Peak laver lithiumkarbonat og lithiumhydroxid af saltvand i solbassiner. Siden skriver, at produktionen begyndte for mere end 50 år siden, og daterer ikke tallet. Hovedsædet ligger i Charlotte i North Carolina. Selskabet skriver også, at det laver brom.",
+    "Kings Mountain i North Carolina står på en liste over aktiviteter. Anlægssiden skriver, at minen stod stille fra begyndelsen af 1990'erne, og at selskabet søger at genåbne den som et åbent brud. Det er ikke en mine i drift. Lithiumsiden nævner Talison Lithium ved Greenbushes og Wodgina i Western Australia under aktiviteter. En ejerandel er ikke læst på siden. Direkte udvinding i Chile er beskrevet som et arbejde, der er i gang, ikke som drift. Ordene om at være den eneste, den første og blandt de største er ikke taget med."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Lithium",
+     "url": "https://www.albemarle.com/us/en/what-we-offer/reliable-supply/lithium-resources-processing"
+    },
+    {
+     "label": "Silver Peak",
+     "url": "https://www.albemarle.com/us/en/silver-peak"
+    },
+    {
+     "label": "Kings Mountain",
+     "url": "https://www.albemarle.com/us/en/kings-mountain"
+    }
+   ]
+  },
+  "US53224K3023": {
+   "name": "Lightbridge",
+   "theme": "energy-resources",
+   "summary": "Udvikler metalliske brændselsstave til atomreaktorer. Hovedsædet ligger i Reston i Virginia. Det er ikke et værk i drift. Adgangen til en testreaktor i Idaho er dateret 9. september 2026 og ligger efter beholdningen.",
+   "watch": "Om testen i Idaho bliver gennemført. Adgangen er ikke et kraftværk, og teksten siger ikke, at bestrålingen er sket.",
+   "source": "https://www.ltbridge.com/",
+   "products": "Lightbridge Fuel, metalliske stave med en kerne af uran og zirkonium. Ikke et kraftværk.",
+   "customers": "Ingen driftkunder i denne beskrivelse. Testen er endnu ikke gennemført i teksten.",
+   "role": "Brændsel under udvikling. Ikke et anlæg i drift.",
+   "narrative": [
+    "Lightbridge skriver, at selskabet udvikler metalliske brændselsstave, Lightbridge Fuel, til nuværende og kommende reaktorer. Brændselskernen er en legering af uran og zirkonium. Hovedsædet ligger på 11710 Plaza America Drive i Reston i Virginia. Det er ikke en reaktor.",
+    "Selskabet skrev 9. september 2026, at det har fået adgang til loop-anlægget ved Advanced Test Reactor på Idaho National Laboratory. Aftalen er Project Task Statement nr. 2 under en forskningsaftale med Battelle Energy Alliance. Meddelelsen siger, at selskabet skal teste beklædte stave af beriget uran-zirkonium. Testen er ikke gennemført i teksten. Datoen ligger efter beholdningen pr. 1. juni 2026. Det er en testreaktor, ikke et kraftværk. Ordene om lavere pris og om at være førende er ikke taget med."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.ltbridge.com/"
+    },
+    {
+     "label": "Brændslet",
+     "url": "https://www.ltbridge.com/lightbridge-fuel"
+    },
+    {
+     "label": "Idaho, 9. september 2026",
+     "url": "https://www.ltbridge.com/news-media/press-releases/detail/481/lightbridge-secures-access-to-idaho-national-laboratorys-advanced-test-reactor-loop-facility-to-irradiate-clad-lightbridge-fuel-rodlets-under-prototypic-commercial-reactor-conditions"
+    }
+   ]
+  },
   "CA87261Y1060": {
    "name": "The Metals Company",
    "theme": "energy-resources",
@@ -1603,6 +1659,82 @@
     {
      "label": "Selskabets side",
      "url": "https://www.he360.com/"
+    }
+   ]
+  },
+  "US8485603067": {
+   "name": "Spire Global",
+   "theme": "space",
+   "summary": "Designer, bygger og driver egne satellitter og leverer data fra dem. Fabrikken ligger i Glasgow. Selskabet opsender ikke selv raketterne. En demonstrator, HyMS, blev sendt op i januar 2026. NOAA forlængede 4. august 2026 en aftale om at vurdere dataene. Det er efter beholdningen og ikke en ny konstellation.",
+   "watch": "Om vurderingen for NOAA bliver til en fast dataleverance. Forlængelsen 4. august 2026 er ikke en ny konstellation.",
+   "source": "https://spire.com/",
+   "products": "Data fra egne satellitter, blandt andet vejr og radiosignaler, og satellitter bygget for kunder på platformen LEMUR.",
+   "customers": "Offentlige og private kunder til data eller en satellitplatform.",
+   "role": "Satellitdata og satellitbygning. Ikke en raket.",
+   "narrative": [
+    "Spire skriver, at selskabet selv designer, bygger og driver en satellitkonstellation, jordstationer og software, og at kunderne er både offentlige og private. Siden om rumtjenester skriver, at fabrikken ligger i Glasgow, og at mere end 175 satellitter er sendt op. Siden daterer ikke tallet. Den er læst 16. oktober 2026. Selskabet skriver, at opsendelsen sker gennem partnere. Selskabet opsender ikke selv raketterne.",
+    "Meddelelsen af 4. august 2026 siger, at NOAA har forlænget en aftale om at vurdere data fra Hyperspectral Microwave Sounder, HyMS. Demonstratoren blev sendt op i januar 2026. Opsendelsen ligger før beholdningen pr. 1. juni 2026. Forlængelsen ligger efter. Det er en vurdering af data, ikke en ny konstellation. Beløbet i overskriften er ikke taget med."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://spire.com/"
+    },
+    {
+     "label": "Rumtjenester",
+     "url": "https://spire.com/space-services/"
+    },
+    {
+     "label": "NOAA, 4. august 2026",
+     "url": "https://spire.com/press-release/spire-global-awarded-3-million-noaa-contract-extension-for-hyperspectral-microwave-sounder-data/"
+    }
+   ]
+  },
+  "US46269C1027": {
+   "name": "Iridium Communications",
+   "theme": "space",
+   "summary": "Driver et satellitnet til tale, data og position. Selskabet skriver, at den første satellit blev sendt op i 1997, at nettet var i fuld drift i 1998, og at en udskiftning blev færdig i 2019. Nettet ligger i lav bane omkring 780 km. Det er ikke billeder af Jorden.",
+   "watch": "Om nettet bliver ved med at levere tale og data. Udskiftningen i 2019 er gennemført i teksten.",
+   "source": "https://www.iridium.com/network/",
+   "products": "Tale, data og position via satellitter i lav bane. Ikke billeder af Jorden.",
+   "customers": "Kunder til søs, i luften og på land, herunder offentlige brugere.",
+   "role": "Satellitnet til tale og data. Ikke en billedsatellit.",
+   "narrative": [
+    "Iridium skriver, at den første satellit blev sendt op i 1997, at nettet var i fuld drift i 1998, og at en udskiftning af satellitterne blev færdig i 2019. Selskabet skriver, at udskiftningen skete uden at afbryde tjenesten. Nettet ligger i lav bane omkring 780 km. Selskabet skriver, at satellitterne styres fra Leesburg i Virginia.",
+    "Tjenesterne er tale, data og position. Det er ikke en satellit, der tager billeder af Jorden, og selskabet sender ikke en raket op i denne beskrivelse. Kilometerne står på siden og er ikke regnet om."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Nettet",
+     "url": "https://www.iridium.com/network/"
+    },
+    {
+     "label": "Selskabet",
+     "url": "https://www.iridium.com/company"
+    }
+   ]
+  },
+  "US09263B2079": {
+   "name": "BlackSky",
+   "theme": "space",
+   "summary": "Tager billeder af Jorden fra satellitter i lav bane og analyserer dem på platformen Spectra. Selskabet skrev 14. september 2026, at den femte Gen-3 tog de første billeder mindre end 20 timer efter opsendelsen. Datoen ligger efter beholdningen. Gen-2 er stadig en del af konstellationen.",
+   "watch": "Om flere Gen-3 kommer i kredsløb. De første billeder fra den femte er efter beholdningen. Teksten siger ikke, at alle planlagte satellitter er oppe.",
+   "source": "https://blacksky.com/",
+   "products": "Billeder og analyse fra egen konstellation. Gen-3 er specificeret til 35 cm.",
+   "customers": "Kunder, der bestiller billeder, herunder forsvar og efterretning ifølge selskabet.",
+   "role": "Billedsatellitter. Ikke en raket og ikke et datacenter.",
+   "narrative": [
+    "BlackSky skriver, at selskabet ejer og driver en konstellation i lav bane, og at platformen Spectra bruges til at bestille billeder og til analyse. Hovedsædet i meddelelsen er Herndon i Virginia. Selskabet skriver, at Gen-3 er specificeret til 35 cm. Ordene om at være de bedste og om pris er ikke taget med.",
+    "Selskabet skrev 14. september 2026, at den femte Gen-3 tog de første billeder mindre end 20 timer efter opsendelsen. Billedet er dateret 11. september 2026. Begge datoer ligger efter beholdningen pr. 1. juni 2026. Selskabet skriver, at Gen-2 stadig er en del af konstellationen, og at flere Gen-3 er planlagt i kredsløb inden udgangen af 2026. Det er en plan. Teksten siger ikke, at alle planlagte satellitter er oppe. Motivet på billedet er ikke gengivet. Det er ikke en raket og ikke et datacenter."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://blacksky.com/"
+    },
+    {
+     "label": "Gen-3, 14. september 2026",
+     "url": "https://blacksky.com/press-releases/blackskys-fifth-gen-3-attains-first-light-in-hours-expanding-constellation-capacity-and-decision-making-speed-for-customers/"
     }
    ]
   },
