@@ -225,6 +225,6 @@ Sider: ideer, kort, om-data, invester, risici, ndi-perspektiv, laer/*.
 - Historisk tidslinje i flodsystem-sprog. Navngivne selskaber (Intel, TSMC, Nvidia, Amazon, Google, OpenAI-produktet ChatGPT) står kun som historiske milepæle, uden vægte og uden links til selskabssider, og med «At et selskab er nævnt, er ikke en anbefaling».
 - **Bed Vidensbot/NDI tjekke:** (1) årstallene (2019 EUV i masseproduktion, 2023 chipmangel inkl. avanceret pakning, 2024 datacentre, 2025 strøm). De sidste tre er forenklede perioder, ikke enkeltbegivenheder. (2) Er tredelingen «chippen → regnekraft → forsyning» i tråd med Mads' flodsystem (ugebrev 30. marts 2026)? (3) Er «NDI kalder energi den første dæmning» korrekt gengivet?
 
-## 06:08 CEST lane-C · ideer `#h-cs` «Hvor tjener teknologien pengene?»
+## 06:04 CEST lane-C · ideer `#h-cs` «Hvor tjener teknologien pengene?»
 - Tal til efterprøvning før live: Amazon 10-K for 2024: net sales ca. 638,0 mia. USD, heraf AWS ca. 107,6 mia. (ca. 17 %). Operating income ca. 68,6 mia. USD, heraf AWS ca. 39,8 mia. (ca. 58 %).
 - Vidensbot-linje: «værdikæde frem for sektor». Pengene lander i et led (cloud), ikke i det selskabsnavn, folk kender. Ingen handelssprog. Amazon er ikke i beholdningen, og det står ved figuren.

@@ -142,7 +142,7 @@ Tal at have klar: første NAV PMINDI 22. sep 2023, PMINDIAKK 5. dec 2025, behold
 Fællesprospektet (opdateret 24.10.2025) nævner under NewDeal Invest KL kun andelsklassen «kl n» (PMINDI) og skriver «Afdelingen er udloddende». PMINDIAKK har eget KID. Christian/Fundmarket: findes der et nyere prospekt eller tillæg, der omfatter AKK-klassen? Indtil da siger `risici.html#prospekt` kun «afdelingen» og market maker-linjen kun «PMINDI». Prospektet skriver også «fokuseret portefølje», mens sitet beskriver flere hundrede små positioner. Det bør NDI selv afstemme. Jeg har ikke ændret noget af den grund.
 
 ### 02:41 CEST lane-C · ideer foldet på mobil
-- Demo: åbn `ideer.html` på telefon (375). 4 billeder står åbne, derefter «Fold alle ud» + 11 foldede overskrifter. Tryk «Tre drivkræfter, ét overlap» i indholdsfortegnelsen → sektionen folder ud. På desktop er alt åbent som før.
+- Demo: åbn `ideer.html` på telefon (375). 4 billeder står åbne, derefter «Fold alle ud» + 13 foldede overskrifter («Hvorfor ejer vi den?» står også åben). Tjekket 06:08. Tryk «Tre drivkræfter, ét overlap» i indholdsfortegnelsen → sektionen folder ud. På desktop er alt åbent som før.
 - Risici: "Sharpe" er ikke længere underlabel (kun i ordlisten). Invester-kilde: "andelsklasse PMINDI" i stedet for "kl n".
 
 ### 02:43 CEST lane-C · fagord ud af overskrifterne
@@ -181,4 +181,4 @@ Fællesprospektet (opdateret 24.10.2025) nævner under NewDeal Invest KL kun and
 - Lær: 19 døre (Tankegangen fik «Fra chip til datacenter»). NDI-perspektiv-grupperne er opdateret i Demo-detaljer pkt. 11.
 - `ideer.html` på telefon: 30 temalinks i tabeller/rækker var 19 px høje. Nu er de mindst 24 px (WCAG 2.5.8).
 - 06:03 Ordliste 149: «Warrant (tegningsret)» og «Forkortede navne i beholdningen» («Sp ADR», «N», «/The»). Svar til cyklus 38 SHOULD 3–4: forklarer Opendoor-warrants og råbeholdningsnavne uden at røre data. Selskabssiden kan linke til `om-data.html#g-warrant` / `#g-raanavne` (lane med selskab.html).
-- 06:08 ideer form 19 «Hvor tjener teknologien pengene?» (IDESPEJDER #13, common size). Sig: «Man skal se, hvilket led pengene lander i, ikke hvad selskabet hedder.» Tjek før live: Amazon 10-K 2024 (638 / 108 / 69 / 40 mia. USD).
+- 06:04 ideer form 19 «Hvor tjener teknologien pengene?» (IDESPEJDER #13, common size). Sig: «Man skal se, hvilket led pengene lander i, ikke hvad selskabet hedder.» Tjek før live: Amazon 10-K 2024 (638 / 108 / 69 / 40 mia. USD).
