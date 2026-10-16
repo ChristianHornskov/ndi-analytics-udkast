@@ -97,6 +97,7 @@
     .vc-facts mark{background:none;color:inherit;padding:0 4px;border-radius:4px;white-space:nowrap}
     .vc-facts mark.aft{border:1px solid #f5ee9e88;color:#f5ee9e}
     .vc-facts mark.bef{border:1px solid #829da066}
+    .vc-facts mark.plan{border:1px dashed #c9a0dc99;color:#c9a0dc}
     .vc-more{font-size:12px;background:none;border:0;color:var(--brand);cursor:pointer;padding:4px 0;text-decoration:underline}
     .vc-hint{font-size:12px;color:var(--muted);margin-top:8px}
     .space-pane{display:none;margin:4px 0 18px}
@@ -2036,8 +2037,9 @@
       ).join('') : '';
       view.innerHTML = '';
       ch.links.forEach((l, i) => {
-        const markWhen = (t) => esc(t).replace(/(efter|før) beholdningen( pr\. 1\. juni 2026)?/g, (m, w) => `<mark class="${w === 'efter' ? 'aft' : 'bef'}">${m}</mark>`);
-        const factsBox = (l) => l.facts?.length ? `<details class="vc-facts"><summary>Hvad selskaberne selv skriver (${l.facts.length})</summary><ul>${l.facts.map(f => { const k = f.indexOf(': '); return `<li>${k > 0 ? `<b>${esc(f.slice(0, k))}</b>: ${markWhen(f.slice(k + 2))}` : markWhen(f)}</li>`; }).join('')}</ul><p class="src" style="margin-top:6px"><mark class="aft">efter beholdningen</mark> = nyt siden 1. juni 2026 og ikke afspejlet i tallene ovenfor. Gengivet fra selskabernes egne sider og meddelelser. Ikke NDI's vurdering og ikke en anbefaling.</p></details>` : '';
+        const markWhen = (t) => esc(t).replace(/(efter|før) beholdningen( pr\. 1\. juni 2026)?/g, (m, w) => `<mark class="${w === 'efter' ? 'aft' : 'bef'}">${m}</mark>`)
+          .replace(/\b(er en plan|er et projekt|er ikke fløjet|ikke fløjet)\b/g, '<mark class="plan">$1</mark>');
+        const factsBox = (l) => l.facts?.length ? `<details class="vc-facts"><summary>Hvad selskaberne selv skriver (${l.facts.length})</summary><ul>${l.facts.map(f => { const k = f.indexOf(': '); return `<li>${k > 0 ? `<b>${esc(f.slice(0, k))}</b>: ${markWhen(f.slice(k + 2))}` : markWhen(f)}</li>`; }).join('')}</ul><p class="src" style="margin-top:6px"><mark class="aft">efter beholdningen</mark> = nyt siden 1. juni 2026 og ikke afspejlet i tallene ovenfor. <mark class="plan">er en plan</mark> = endnu ikke i drift. Gengivet fra selskabernes egne sider og meddelelser. Ikke NDI's vurdering og ikke en anbefaling.</p></details>` : '';
         if (i) {
           const ar = document.createElement('div');
           ar.className = 'vc-arrow'; ar.setAttribute('aria-hidden', 'true');
