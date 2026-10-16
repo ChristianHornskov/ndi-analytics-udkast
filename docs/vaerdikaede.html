@@ -223,7 +223,7 @@
  <p class="meta"><b>${l.count}</b> selskaber · ca. ${pct(l.weightSum.toFixed(1))} % af fonden (forsinket)</p>
  ${alsoLine(l)}
  <p class="hit-why"></p>
- ${top.length ? `<details><summary>Største positioner i leddet (${top.length} af ${l.count})</summary><ol>${top.map(c => `<li><a href="selskab.html?isin=${encodeURIComponent(c.isin)}&fund=${fundId}">${esc(c.name)}</a> · vægt ${pct(c.w)} %</li>`).join('')}</ol></details>` : ''}
+ ${top.length ? `<details><summary>Største selskaber i leddet efter vægt (${top.length} af ${l.count})</summary><ol>${top.map(c => `<li><a href="selskab.html?isin=${encodeURIComponent(c.isin)}&fund=${fundId}">${esc(c.name)}</a> · vægt ${pct(c.w)} %</li>`).join('')}</ol></details>` : ''}
  <p class="more"><a href="vaerdikaeder.html?kaede=ai-compute#lk-${esc(l.id)}">Hvorfor NDI følger leddet →</a>${see}</p>
  </div>
  </article>`;
