@@ -176,7 +176,8 @@
               "forslag": true
             }
           ],
-          "seeChain": null
+          "seeChain": null,
+          "shift": "I USA får datacentre i stigende grad lov til at bygge deres egen strøm (BLOG 30. marts 2026). NDI skriver, at ét års chipproduktion potentielt kan kræve strøm svarende til omkring to tredjedele af USA's installerede kapacitet (BLOG 10. august 2026)."
         },
         {
           "id": "datacenter",
@@ -635,7 +636,8 @@
               "forslag": false
             }
           ],
-          "seeChain": null
+          "seeChain": null,
+          "shift": "NDI skriver, at AI-økonomien er begyndt at finansiere sig selv (BLOG 12. oktober 2026)."
         },
         {
           "id": "data",
@@ -750,7 +752,8 @@
               "forslag": false
             }
           ],
-          "seeChain": null
+          "seeChain": null,
+          "shift": "I 2024 var NDI forsigtig, fordi softwareselskaber var dyrt prissat (BLOG 2. juni 2024). I 2026 gælder tvivlen selve forretningsmodellen, fordi AI kan true den (BLOG 13. april 2026)."
         },
         {
           "id": "agents",
