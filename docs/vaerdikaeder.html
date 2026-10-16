@@ -571,7 +571,7 @@
       </div>
       <div id="viz-host"></div>
       <div class="viz-legend" id="viz-legend"></div>
-      <p class="band">Areal / bue ≈ vægt i forsinket snapshot. Eksponering, ikke anbefaling. Klik et tema.</p>
+      <p class="band">Areal / bue ≈ vægt i den forsinkede beholdning. Eksponering, ikke anbefaling. Klik et tema.</p>
     </section>
 
     <section class="chapter" id="kap-kaeder">
@@ -896,7 +896,7 @@
     document.getElementById('phil-flod-src').textContent = pack.philosophy?.flodSource || '';
     document.getElementById('compliance-band').textContent = pack.compliance || '';
     document.getElementById('counts-note').textContent = pack.countsNote || '';
-    document.getElementById('tm-asof').textContent = `Forsinket snapshot, pr. ${fmtDate(pack.asOf)}. ${pack.note || ''}`;
+    document.getElementById('tm-asof').textContent = `Forsinket beholdning pr. ${fmtDate(pack.asOf)}. ${(pack.note || '').replace(/^Forsinket beholdning\.\s*/, '')}`;
     document.getElementById('theme-note').textContent = pack.themeNote || '';
 
     // Dams
