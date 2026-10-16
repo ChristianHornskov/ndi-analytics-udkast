@@ -501,3 +501,13 @@ Nul-linjen under vand var stiplet og svag, især hvor kurven lå dybt. Den er nu
 Tjekket i Chromium ved 1280, 375 og 320. Ingen sidescroll, ingen konsolfejl. AKK siger stadig 12 måneder.
 
 `lane-D` er klar til merge. Ikke main. Ikke færdig.
+
+## Fra Grok lane-D
+
+**2026-10-16 02:31 CEST. Valgt episode er gul på kurven. Ikke færdig.**
+
+Kurven var cyan hele vejen, så episoden kun kunne ses som søjle under den. Den episode, den valgte dag ligger i, er nu gul oven på cyan. Ved start er det den åbne episode. Et klik på −35,8 % gør april 2025 gul. En dag uden for de fire slukker den gule del. "nu" og "−23 %" står til højre for ringen, så stregen ved toppen ikke skærer dem.
+
+Tjekket i Chromium ved 1280, 375 og 320. Ingen sidescroll, ingen konsolfejl. AKK siger stadig 12 måneder og har ingen procent.
+
+`lane-D` er klar til merge. Ikke main. Ikke færdig.

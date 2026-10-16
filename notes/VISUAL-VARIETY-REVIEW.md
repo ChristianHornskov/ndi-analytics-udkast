@@ -132,6 +132,12 @@ Den åbne søjle er gul og valgt fra start. Den lyse kant var 1,25 px og forsvan
 
 Nul-linjen var en svag stiplet streg og forsvandt, hvor kurven lå under vand. Den er nu lys og hel, tegnet oven på fyldet, og tallet 0 har samme farve. Stregen ved 10 % under nul er stadig brand og tykkere. Nøglen siger "0 % er toppen". "-36 %" og "nu -23 %" er uændrede. Et klik på søjlen for 8. apr. 2025 sætter udlæsningen til −35,8 %. Ingen tekst uden for svg'en. Ingen sidescroll ved 1280, 375 og 320. Ingen konsolfejl. AKK siger stadig 12 måneder og har ingen procent.
 
+### Update · valgt episode på kurven · 2026-10-16 ~02:31 CEST
+
+Kurven var cyan hele vejen. Den episode, den valgte dag ligger i, er nu gul oven på cyan. Ved start er det den åbne episode, fra 2. jun. 2026 til 14. okt. 2026. Et klik på −35,8 % gør bunden i april 2025 gul og slukker den åbne strækning. En dag uden for de fire, 17. nov. 2023, slukker den gule del og rækken. Nøglen har "Valgt episode".
+
+"nu" og "−23 %" står til højre for ringen, på to linjer. Stregen ved toppen skærer dem ikke. De står inden for svg'en ved 1280, 375 og 320. "-36 %" er uændret. Ingen sidescroll. Ingen konsolfejl. AKK siger stadig 12 måneder og har ingen procent.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.
