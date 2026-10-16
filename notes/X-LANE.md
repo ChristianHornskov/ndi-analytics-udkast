@@ -4,6 +4,13 @@
 **Branch:** lane-X  
 **Deadline:** keep until 08:30, polish, report 08:45, demo 09:00.
 
+## Denne nat (2026-10-16) · toogtyvende pas
+
+Ingen nye X-kald. `callCountNote` beholder 30/min og 1000/day, noten om ét søgekald 2026-10-15, og at der ikke er kaldt 2026-10-16. Tilføjet: toogtyvende pas, stadig ingen kald. Filen har 19 opslag. Browseren kalder ikke X. Ingen embed. Ingen secrets. Ingen nye opslag. NewDeal Invest i ét ord. Tal kun fra `fund-facts.json` og `risk-stats.json`. 802 dage er kalenderafstanden fra 25. sep. 2023 til 5. dec. 2025. Højre ende er sidens dato, 16. okt. 2026. Linjen er tid, ikke en kurs og ikke et afkast. KID ved 5 år er 2,79 % og 2,85 %. Porteføljetransaktion er 0,64 % og 0,72 %. Det er ikke et ÅOP.
+
+- `docs/fakta.html` og `docs/omkostninger.html`: klasselinje. Udgangspunktet er Start. PMINDI 25. sep. 2023, PMINDIAKK 5. dec. 2025, «802 dage» imellem. Tasten L går til Form: udloddende og akkumulerende, begge UCITS. Næste L går til Ens: UCITS, Artikel 6, Benchmark: Nej, Børsnoteret, SRI 5 af 7, Horisont 5 år. `?linje=same` åbner stemplerne. Udskrift viser de tre sætninger og skjuler knapperne. På omkostninger 1280 starter «Ca. 2,8 % om året» stadig først, og 802 dage står ved 697–723. På fakta 1280 står 80 kr. ved 339–386, og 32,46 %, 0,89 og -35,82 % ved 760–796. Overflow er 0 på 1280 og 390. «Historisk afkast» og Markedsføringsmateriale er med.
+- `docs/js/x-feed.js` og `docs/ndi-paa-x.html`: emnekort på forsiden og i den tomme tilstand. Cirklerne er 12, 10, 5, 0, 1, 3, 3 og 2. Quantum er en tom ring. Et klik på Chips / AI giver «10 af 19 opslag · 5 direkte · 5 tema», og kortet træder til side. SoftBank er 3 direkte, byline 643–698, uden emnekort, overflow 0. Nvidia er 5 direkte. Tom tilstand `?f=quantum&who=curated` siger «Ingen opslag», «2 filtre», Quantum «0 opslag» og labelen. Overflow er 0 på 1280, på 390 og på chips ved 900. Ingen X-embed.
+
 ## Denne nat (2026-10-16) · enogtyvende pas
 
 Ingen nye X-kald. `callCountNote` beholder 30/min og 1000/day, noten om ét søgekald 2026-10-15, og at der ikke er kaldt 2026-10-16. Tilføjet: enogtyvende pas, stadig ingen kald. Filen har 19 opslag. Browseren kalder ikke X. Ingen embed. Ingen secrets. Ingen nye opslag. NewDeal Invest i ét ord. Tal kun fra `fund-facts.json` og `risk-stats.json`. KID ved 5 år er 2,79 % og 2,85 %. KID ved 1 år er 2,63 % og 2,71 %. Begge ligger over skalaen 0 til 2 % og er ikke tegnet på den. Porteføljetransaktion er 0,64 % og 0,72 %, forskel 0,08 procentpoint, 80 kr. på 100.000 kr. Øvrige løbende er 1,49 % i begge, 1.490 kr. Det er ikke et ÅOP.

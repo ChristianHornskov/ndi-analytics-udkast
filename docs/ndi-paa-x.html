@@ -29,7 +29,7 @@
  </footer>
  <noscript><p style="max-width:1180px;margin:0 auto;padding:0 20px 24px;color:#aac0c7">Siden læser kun den statiske fil. Slå JavaScript til for at se kortene. Browseren kalder ikke X.</p></noscript>
  <script type="module">
- import { loadXPosts, xCard, fmtXDate, highlightHtml, X_LABEL, X_FILTERS, postInFilter, postMatchesQuery, postWho, feedHitKind, archiveHit, xScoreHtml, xPlace, xWhoBarHtml, xWhoDoorHtml, xSpineHtml, xAtlasHtml, xVoicesHtml } from './js/x-feed.js';
+ import { loadXPosts, xCard, fmtXDate, highlightHtml, X_LABEL, X_FILTERS, postInFilter, postMatchesQuery, postWho, feedHitKind, archiveHit, xScoreHtml, xPlace, xWhoBarHtml, xWhoDoorHtml, xSpineHtml, xAtlasHtml, xVoicesHtml, xSkyHtml } from './js/x-feed.js';
  const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
  const main = document.getElementById('main');
  const pack = await loadXPosts();
@@ -298,12 +298,14 @@
  jump: true,
  label: 'Datoer i snapshotet. Fyldt prik er i filteret. Åben prik er udenfor filteret.',
  });
+ const skyPosts = posts.filter((p) => postWho(p, state.who) && postMatchesQuery(p, state.q));
+ const skyBlock = (!leadOn || !list.length) ? xSkyHtml(skyPosts, { active: state.f }) : '';
  if (!list.length) {
  const emptySpine = xSpineHtml(posts, {
  hotIds: new Set(),
  label: 'Ingen prik er i filteret. Linjen er hele snapshotet.',
  });
- grid.innerHTML = `<div class="x-empty x-stage">
+ grid.innerHTML = `${skyBlock}<div class="x-empty x-stage">
  <p class="x-zero" aria-hidden="true">0</p>
  <p class="k">Ingen opslag i filteret</p>
  ${voiceBlock}
@@ -323,7 +325,7 @@
  const house = list.filter((p) => postWho(p, 'house'));
  const curated = list.filter((p) => postWho(p, 'curated'));
  const other = list.filter((p) => !postWho(p, 'house') && !postWho(p, 'curated'));
- grid.innerHTML = homeLane('is-curated', curated, 'Konti NDI følger', "Udvalgte offentlige opslag — ikke NDI's holdning")
+ grid.innerHTML = skyBlock + homeLane('is-curated', curated, 'Konti NDI følger', "Udvalgte offentlige opslag — ikke NDI's holdning")
  + homeLane('is-house', house, 'NDI-konti', 'InvestNewdeal, Mads, Jesper og Christian')
  + homeLane('is-rest', other, 'Andre opslag', 'Hverken en NDI-konto eller mærket fra listen over fulgte konti');
  } else if (!direct.length && !theme.length) {
