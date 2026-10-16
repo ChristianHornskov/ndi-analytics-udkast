@@ -13,7 +13,15 @@ export function renderChart(container, rows, events = [], opts = {}) {
     return;
   }
   const W = 1000, H = 410, pad = { l: 52, r: 24, t: 20, b: 36 };
-  const vs = series.map((s) => s.v);
+  // Valgfri sammenligningslinje (Nasdaq-100), rebaseret til periodens første fondsdato
+  let cmp = null;
+  if (Array.isArray(opts.compare) && opts.compare.length) {
+    const m = new Map(opts.compare.map(([d, v]) => [d, v]));
+    let base = null, last = null;
+    cmp = series.map((s) => { const v = m.get(s.d); if (v != null) last = v; if (base == null && last != null) base = last; return base ? ((last / base) - 1) * 100 : null; });
+    if (cmp.filter((v) => v != null).length < 2) cmp = null;
+  }
+  const vs = series.map((s) => s.v).concat(cmp ? cmp.filter((v) => v != null) : []);
   let min = Math.min(0, ...vs), max = Math.max(0, ...vs);
   const span = max - min || 1;
   min -= span * 0.06; max += span * 0.06;
@@ -21,6 +29,7 @@ export function renderChart(container, rows, events = [], opts = {}) {
   const y = (v) => pad.t + (1 - (v - min) / (max - min)) * (H - pad.t - pad.b);
   const path = series.map((s, i) => `${i ? 'L' : 'M'}${x(i).toFixed(1)},${y(s.v).toFixed(1)}`).join(' ');
   const zeroY = y(0);
+  const cmpPath = cmp ? cmp.map((v, i) => v == null ? '' : `${i && cmp[i - 1] != null ? 'L' : 'M'}${x(i).toFixed(1)},${y(v).toFixed(1)}`).join(' ') : '';
 
   const evMap = new Map((events || []).map((e) => [e.d, e]));
   const yTicks = 5;
@@ -71,14 +80,21 @@ export function renderChart(container, rows, events = [], opts = {}) {
   svg.setAttribute('role', 'img');
   svg.setAttribute('aria-label', opts.label || 'Afkastgraf');
   svg.innerHTML = `${grid}<line class="zero" x1="${pad.l}" x2="${W - pad.r}" y1="${zeroY}" y2="${zeroY}"/>` +
-    `<path class="fund" d="${path}"/>${marks}${xLabels}`;
+    (cmpPath ? `<path class="cmp" d="${cmpPath}"/>` : '') + `<path class="fund" d="${path}"/>${marks}${xLabels}`;
   wrap.appendChild(svg);
 
   const readout = document.createElement('p');
   readout.className = 'chart-readout';
   const last = series[series.length - 1];
-  readout.textContent = `${fmtDate(last.d)}: ${fmtPct(last.v)} siden periodens start`;
+  const cmpTxt = (i) => (cmp && cmp[i] != null) ? ` · ${opts.compareName || 'Sammenligning'} ${fmtPct(cmp[i])}` : '';
+  readout.textContent = `${fmtDate(last.d)}: Fonden ${fmtPct(last.v)} siden periodens start${cmpTxt(series.length - 1)}`;
   wrap.appendChild(readout);
+  if (cmp) {
+    const lg = document.createElement('p');
+    lg.className = 'chart-legend';
+    lg.innerHTML = '<span class="lg-fund"></span> Fonden (totalafkast, DKK) <span class="lg-cmp"></span> Nasdaq-100 (kursindeks uden udbytte, omregnet til DKK)';
+    wrap.insertBefore(lg, svg);
+  }
 
   svg.addEventListener('mousemove', (ev) => {
     const rect = svg.getBoundingClientRect();
@@ -92,6 +108,6 @@ export function renderChart(container, rows, events = [], opts = {}) {
       extra = ` · ${e.title}`;
       if (e.kind === 'x' && e.url) extra += ' (klik markør → X)';
     }
-    readout.textContent = `${fmtDate(s.d)}: ${fmtPct(s.v)}` + extra;
+    readout.textContent = `${fmtDate(s.d)}: Fonden ${fmtPct(s.v)}${cmpTxt(i)}` + extra;
   });
 }
