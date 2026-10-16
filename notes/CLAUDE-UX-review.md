@@ -765,3 +765,29 @@ Pages (00:22:23 GMT) = main `3e4ec15` ✅. Lag fra cyklus 31 er indhentet: live 
 - **Privat (55+):** omkostninger og fakta er nu rolige og ærlige ✅. Det største ro-brud er stadig engelske "BREAKING"-opslag på fonden og SoftBank.
 - **Familiekontor:** omkostnings-MUST er dækket live ✅. Det næste, de vil stille spørgsmål ved, er interne hjælpetekster ("Tomme felter = udfyldes af NDI", "Mangler fra NDI", "kl n"), som får produktet til at virke ufærdigt.
 - **Visuel variation:** ingen ændring. Problemet er længde på mobil, ikke ensformighed.
+
+## 2026-10-16 02:31 CEST · cyklus 33 (main `3e4ec15`, intet docs-delta siden cyklus 31; live = main)
+
+Pages (00:22:23 GMT) = main. Sidste docs-commit er `5843694`. Playwright live ved 375 på 21 URL'er (inkl. periode, drawdown, embed, sammenlign, kort, ideer, laer/laes-grafen og SoftBank via `?isin=JP3436100006`): 0 pageerrors, 0 vandret overflow, én h1 overalt ✅. Fokus i denne cyklus er de "dybe sider", som tidligere cyklusser kun har skimmet.
+
+### MUST
+- **Fonden + SoftBank: tredjeparts-"BREAKING" (uændret, 4. cyklus i træk).** Fonden viser nu @BullTheoryio "BREAKING: SoftBank … $100 billion" og "BREAKING: Nvidia is in talks to backstop $250 BILLION in financing for OpenAI" under hovedgrafen. **Ny detalje:** På SoftBank står Nvidia/OpenAI-opslaget med etiketten "DIREKTE TRÆF · Vist fordi: SoftBank". Opslaget nævner ikke SoftBank i den viste tekst, så matchningen ser forkert ud for brugeren. **Ret:** `chartMarkers` → kun @InvestNewdeal. Fold X-panelet sammen på selskab/tema.
+- **Nyhedsarkiv: "Placeholder:" ×8 er synligt, og "du kan tabe" mangler (0 hits).** Uændret fra cyklus 32.
+
+### SHOULD
+- **`periode.html` har ikke fået fondens rettelser.** Fonden har "2023 delår" og "afventer Fundmarket-godkendelse" ved ÅTD. Periode viser "2023: +16,7 %" uden delår og "YTD: +4,0 %"/"2026: +4,0 %" uden forbehold. Sprog: "YTD" og "CAGR (hele serien)" på en dansk side, hvor resten siger "År til dato". Navigationen viser "← Fonden / Drawdown / ← Fonden" (dobbelt tilbage-link). Der er 10 tekster under 12 px.
+- **`drawdown.html`: h1 er "Drawdown · PMINDI".** Resten af sitet siger "Største fald" (ordliste, chips, embed "Se største fald →"). "Under vand" er også jargon. Forslag til h1: "Største fald fra top · PMINDI". Indholdet er ellers ærligt og godt: "Lige nu … −23,4 % under toppen fra 2. jun. 2026" giver privat-personaen det rigtige billede.
+- **Embed:** "Gns. årligt afkast (CAGR) +26,4 % · CAGR · 3,1 år siden start". CAGR står to gange. Skriv "Gns. pr. år siden start (3,1 år)".
+- **Fonden, grafforklaring:** "Grafmarkører: udbytte (gul), drawdown (rød)". Skriv "største fald (rød)".
+- **Risici:** "Afkast pr. udsving 0,89 · Sharpe, uden rente trukket fra". Det er godt forklaret. Men "Sharpe" bør kun stå i ordlisten, ikke som underlabel.
+- Højder ved 375 er uændrede: udforsk 28.282 (1.050 tekster under 12 px), vaerdikaeder 15.593, ideer 14.377, fonden 6.565, fakta 6.379 px. Tema (chips) har 111 tekster under 12 px.
+- Fra cyklus 32, stadig åbne: internt sprog på omkostninger ("Tomme felter = udfyldes af NDI", "marketingmateriale skal …"), "kl n" (invester ×1, fakta ×3, omkostninger ×2), "kvartalsrapport" på fonden, "datamangel", "Dyb →", livscyklus uden `<button>`.
+
+### Nice
+- "Central Information Dokument" står stadig i footeren (bl.a. SoftBank-siden).
+- Ideer (14.377 px) bruger PROBLEM/SVAR/DATA/TONE-kort. Det er god variation, men de er lange på mobil. Fold dem efter de første 3.
+
+### Persona-linser
+- **Privat (55+):** drawdown-siden er ærlig og rolig ("−23 % under toppen nu"). Ordet "Drawdown" i overskriften og "YTD/CAGR" på periode er dog uden for deres ordforråd. Engelske BREAKING-opslag er stadig det største ro-brud.
+- **Familiekontor:** de vil bemærke, at periode og fonden ikke siger det samme om 2023/ÅTD. Inkonsistens mellem sider svækker tilliden mere end selve tallet.
+- **Visuel variation:** ingen ændring. Træthed skyldes længde på mobil, ikke ensformighed.

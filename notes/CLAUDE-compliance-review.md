@@ -809,3 +809,33 @@ Ikke juridisk rådgivning. Jeg har kørt live ved 375 på 22 sider og grep efter
 - PMINDI: ingen 1m/3m-chips ✅. PMINDIAKK: "Afkast vises efter 12 måneder" (cyklus 29) ✅. Nasdaq nævnes kun negativt ("vi tegner ikke … fx Nasdaq") ✅. Se SHOULD om formulering.
 - AI-mærkning: "AI-udkast"-badge på selskabs-/perspektivtekster ✅. Risici har "Tekst markeret AI-…" ✅.
 - Ingen trading-sprog fra Mads-ugebreve ✅.
+
+## 2026-10-16 02:31 CEST · cyklus 33 (main `3e4ec15`, live = main, intet docs-delta)
+
+Ikke juridisk rådgivning. Live ved 375 på 21 URL'er plus kontekst-grep af alle hits på rådgivnings- og handelsord. Alle "anbefal*/overvægt/køb/sælg/eksponering" er negationer ("ikke en anbefaling", "ikke bevidste overvægte", "ikke som købsanbefaling") eller procesbeskrivelser (invester: "hvordan man typisk køber andele … Ikke rådgivning om, om du bør"). Ingen "øger eksponering", "garanteret" eller "bedste tip". "sikkert" står kun som "vinderne kan ikke udpeges sikkert" ✅.
+
+### MUST (blocker)
+1. **Tredjeparts-"BREAKING" ved fondens afkastgraf og på SoftBank** (åben siden cyklus 30). Der er nu 2 × @BullTheoryio under fondens graf: SoftBank-kapitalrejsning på $100 mia. og Nvidia-backstop på $250 mia. for OpenAI. SoftBank-siden mærker Nvidia/OpenAI-opslaget "DIREKTE TRÆF · Vist fordi: SoftBank", så NDI aktivt kobler et rygte til en beholdning. **Ret:** `chartMarkers` → kun NDI-egne konti. Fjern eller fold tredjepartspanelet på selskab/tema (MAR art. 20-hensyn, jf. cyklus 29).
+2. **Nyhedsarkiv mangler tabsadvarsel** (åben fra cyklus 32). Tilføj "Du kan tabe en del af eller hele din investering".
+3. **ÅTD +4,0 % "afventer Fundmarket-godkendelse"** står stadig synligt på fonden. **Nyt:** periode og embed viser det samme ÅTD **uden** forbeholdet. Enten er tallet godkendt, og så skal forbeholdet væk, eller også er det ikke, og så skal det væk alle tre steder.
+
+### SHOULD
+4. **Delperioder på `periode.html`:** "2023: +16,7 %" (22.9.–31.12.2023) står som helt kalenderår uden "delår", selvom fonden er rettet (cyklus 29). "2026"/"YTD" er også delår. Jf. MiFID-delegeret forordning 2017/565 art. 44(4): historiske resultater for hele 12-månedersperioder. Mærk "delår" som på fonden.
+5. **Embed (`embed/chart.html`)** har stadig 0 KID-links, ingen SRI og ingen "markedsføringsmateriale". Den viser CAGR +26,4 % over 3,1 år (åben siden cyklus 24).
+6. **Periode** mangler KID-link, SRI og "ikke rådgivning". Den har kun den korte tabslinje. Siden kan nås direkte (fra kort), så den er en selvstændig side med afkasttal.
+7. Fra cyklus 32: "compliance-beslutning, ikke et datamangel" (fonden, Nasdaq). "kvartalsrapport" vs. snapshot pr. 1. jun. 2026. Interne noter på omkostninger.
+8. "Markedsføringsmateriale"-mærkning: kun på ndi-paa-x (uændret).
+
+### Tjekliste (live)
+- Ikke-rådgivning: ✅ på alle produktsider (periode/drawdown/embed har kun tabs- og historiklinjen).
+- Tabsadvarsel: ✅ 20/21 (nyhedsarkiv ✗).
+- Historisk afkast ≠ fremtid: ✅ 21/21.
+- KID/SRI 5/7: ✅ fonden, portefølje, risici, fakta, omkostninger, sammenlign, selskab, tema. ✗ embed, periode, drawdown.
+- Omkostninger: KID-RIY 2,79 %/2,85 % (5 år) live på fakta og omkostninger ✅. ÅOP er forklaret som ikke-ÅOP ✅. Persona- og FO-MUST er dækket.
+- Beholdning forsinket pr. 1. jun. 2026 ✅ (portefølje, SoftBank, vaerdikaeder, temaer). Ingen live-handler.
+- PMINDIAKK (`?fund=PMINDIAKK`): ingen afkasttal, "kan tabe" ×3 ✅. PMINDI: ingen 1m/3m ✅ (udforsk-hit på "3m" er et ISIN-fragment). Nasdaq kun som "vi tegner ikke …" og Nasdaq Copenhagen-notering ✅.
+- AI-mærkning: SoftBank "AI-udkast" ×9 ✅. vaerdikaeder "Tekst inspireret af NDI ugebreve / Vidensbot" ✅.
+- Ingen Mads-trading-sprog ✅.
+
+### Prioritet
+**1** (BREAKING + "Vist fordi: SoftBank") → **3** (ÅTD-forbehold inkonsistent på 3 sider) → **2** (nyhedsarkiv-tab) → **4/5/6** (periode/embed delår + KID).
