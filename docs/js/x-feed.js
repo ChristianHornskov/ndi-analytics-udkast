@@ -285,6 +285,15 @@ article.x-card.is-film .x-why{margin:6px 0 0;font-size:11px}
 @media(max-width:700px){
   .x-lane.is-film .x-grid{grid-template-columns:1fr 1fr}
 }
+.x-no-direct{border:1px dashed #89aeb488;border-radius:16px;padding:16px 16px 14px;background:#0b171d}
+.x-no-direct .k{margin:0 0 6px;color:var(--text);font-weight:650;font-size:16px}
+.x-no-direct p{margin:0;color:var(--muted);line-height:1.45;font-size:14px}
+article.x-card.is-slip{border-color:#345860;box-shadow:inset 3px 0 0 #9ecfd6,0 14px 34px rgba(0,0,0,.22);background:linear-gradient(180deg,#16303a 0%,#102228 100%)}
+article.x-card.is-slip .x-slip{margin:0;font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-size:clamp(26px,3vw,40px);font-weight:500;letter-spacing:-.8px;line-height:1.05;color:#f5ee9e}
+article.x-card.is-slip .x-slip .x-mark{font-size:.72em;vertical-align:2px}
+article.x-card.is-slip .x-by{display:flex;gap:10px;align-items:center;margin-top:14px;padding-top:12px;border-top:1px solid #345860}
+article.x-card.is-slip .x-by time{margin-left:auto}
+article.x-card.is-slip .x-foot{margin-top:10px}
 `;
   document.head.appendChild(s);
 }
@@ -521,21 +530,37 @@ export function arrangeHits(ranked, limit, { reserveTheme = false } = {}) {
   };
 }
 
-/** Feed badge. Query uses the same ticker match as the company panel. */
-export function feedHitKind(p, { q = '', f = 'all' } = {}) {
+/**
+ * Archive page only (ndi-paa-x). Product panels stay on matchPosts, which is
+ * house-only. A third-party tag match is tema in the archive, never on selskab/tema.
+ */
+export function archiveHit(p, { q = '', f = 'all' } = {}) {
   const query = String(q || '').trim();
   if (query) {
-    const hit = matchPosts({ posts: [p] }, { tickers: [query] })[0];
-    if (hit?.score >= 2) return 'direct';
-    if (hit) return 'theme';
-    return '';
+    const hit = matchPosts({ posts: [p] }, { tickers: [query], houseOnly: false })[0];
+    if (!hit) return { kind: '', reasons: [] };
+    return { kind: hit.score >= 2 ? 'direct' : 'theme', reasons: hit.reasons || [] };
   }
-  if (!f || f === 'all' || f === 'ndi') return '';
+  if (!f || f === 'all' || f === 'ndi') return { kind: '', reasons: [] };
   const themes = f === 'chips' ? ['chips', 'ai'] : [f];
   const tickers = f === 'chips' ? ['NVDA'] : [];
-  const hit = matchPosts({ posts: [p] }, { tickers, themes })[0];
-  if (!hit) return '';
-  return hit.score >= 2 ? 'direct' : 'theme';
+  const hit = matchPosts({ posts: [p] }, { tickers, themes, houseOnly: false })[0];
+  if (hit?.score >= 2) return { kind: 'direct', reasons: hit.reasons || [] };
+  if (hit) return { kind: 'theme', reasons: hit.reasons || [] };
+  const tags = (p.tags || []).map((t) => String(t).toLowerCase());
+  const labs = [];
+  for (const t of themes) {
+    if (!tags.includes(t)) continue;
+    const lab = THEME_DA[t] || t;
+    if (!labs.includes(lab)) labs.push(lab);
+  }
+  if (!labs.length) return { kind: '', reasons: [] };
+  return { kind: 'theme', reasons: labs.slice(0, 3) };
+}
+
+/** Feed badge on ndi-paa-x. Not used by selskab/tema panels. */
+export function feedHitKind(p, opt = {}) {
+  return archiveHit(p, opt).kind;
 }
 
 function markTerm(hit) {
@@ -596,6 +621,12 @@ function highlightTerms(q) {
 
 export function highlightHtml(text, q) {
   return highlight(text, q);
+}
+
+function isTickerSlip(text) {
+  const words = String(text || '').trim().split(/\s+/).filter(Boolean);
+  if (!words.length || words.length > 6) return false;
+  return words.every((w) => /^\$?[A-Za-z][A-Za-z0-9.]{0,11}$/.test(w));
 }
 
 function highlight(text, q) {
@@ -673,6 +704,23 @@ export function xCard(p, opt = {}) {
   </div>
   ${text}
   ${because ? `<p class="x-why">${because}</p>` : (why || '')}
+</article>`;
+  }
+  if (opt.lead && isTickerSlip(p.text)) {
+    const slipCls = ['x-card', 'panel', 'is-lead', 'is-slip', opt.hitKind === 'direct' ? 'is-direct' : ''].filter(Boolean).join(' ');
+    return `<article class="${slipCls}">
+  <p class="kicker" style="color:var(--brand);font-size:11px;font-weight:700;letter-spacing:1.4px;margin:0">KORT OPSLAG</p>
+  <p class="x-slip">${highlight(p.text, opt.query)}</p>
+  <div class="x-by">
+    <span class="x-ava" style="background:${avatarColor(p.username)}" aria-hidden="true">${esc(initials(p))}</span>
+    <div class="x-who">
+      <strong>${esc(p.name || p.username)}</strong>
+      <span>@${esc(p.username)}</span>
+    </div>
+    <time datetime="${esc(p.created_at)}">${esc(fmtXDate(p.created_at))}</time>
+  </div>
+  ${why}
+  ${foot}
 </article>`;
   }
   if (opt.lead) {
@@ -769,24 +817,17 @@ export function xSaysPanel(pack, { tickers = [], themes = [], limit = 4, title =
   const nLabel = ranked.length > shown
     ? `Viser ${bits.join(' og ')} · ${ranked.length} i alt`
     : bits.join(' og ');
-  const leadHit = view.direct[0] || view.theme[0];
-  const leadKind = view.direct.length ? 'direct' : 'theme';
-  const restDirect = view.direct.length ? view.direct.slice(1) : [];
-  const restTheme = view.direct.length ? view.theme : view.theme.slice(1);
-  const quote = `<div class="x-stage">${xCard(leadHit.post, {
-    reasons: leadHit.reasons,
-    lead: true,
-    hitKind: leadKind,
-    query: markTerm(leadHit),
-  })}</div>`;
+  const leadHit = view.direct[0];
+  const leadKind = 'direct';
+  const restDirect = view.direct.slice(1);
+  const restTheme = view.theme;
   const lane = (kind, hits, mode) => {
     if (!hits.length) return '';
     const film = mode === 'film';
     const rail = mode === 'rail';
-    const quotedTheme = !view.direct.length;
-    const kicker = film || rail
-      ? (kind === 'direct' ? 'Andre datoer' : 'Andre datoer · tema')
-      : kind === 'direct' ? 'Øvrige direkte træf' : (quotedTheme ? 'Øvrige tema' : 'Tema');
+    const kicker = kind === 'theme'
+      ? (film ? 'Andre datoer · tema' : 'Tema')
+      : (film || rail) ? 'Andre datoer' : 'Øvrige direkte træf';
     const hint = kind === 'direct'
       ? 'Nævner selskab eller ticker.'
       : 'Rammer temaet. Ikke en ticker fra udsnittet.';
@@ -807,22 +848,46 @@ export function xSaysPanel(pack, { tickers = [], themes = [], limit = 4, title =
     if (allowBeside) return { beside: lane(kind, hits, 'rail'), below: '' };
     return { beside: '', below: lane(kind, hits) };
   };
-  const directPacked = packLane('direct', restDirect, true);
-  const themePacked = packLane('theme', restTheme, !restDirect.length);
-  const sideLane = directPacked.beside || themePacked.beside;
-  const belowLane = directPacked.below + themePacked.below;
-  const stage = sideLane
-    ? `<div class="x-split"><div class="x-split-main">${quote}</div><div class="x-split-side">${sideLane}</div></div>`
-    : quote;
+  let stage;
+  let belowLane;
+  if (!view.direct.length) {
+    const film = view.theme.length >= 3;
+    const cards = view.theme.map((h) => xCard(h.post, {
+      reasons: h.reasons,
+      hitKind: 'theme',
+      query: markTerm(h),
+      rail: film ? 'film' : false,
+    })).join('');
+    stage = `<div class="x-stage x-no-direct">
+  <p class="k">Ingen NDI-opslag nævner navnet</p>
+  <p>Panelet er kun NDI-konti. ${view.theme.length ? 'Kortene nedenfor deler tema. De nævner ikke selskabet.' : ''}</p>
+</div>`;
+    belowLane = view.theme.length ? `<div class="x-lane is-theme${film ? ' is-film' : ''}">
+  <p class="x-lane-h"><span class="x-lane-k">Samme tema</span><span>Nævner ikke selskabet eller tickeren. ${view.theme.length}</span></p>
+  <div class="x-grid">${cards}</div>
+</div>` : '';
+  } else {
+    const quote = `<div class="x-stage">${xCard(leadHit.post, {
+      reasons: leadHit.reasons,
+      lead: true,
+      hitKind: leadKind,
+      query: markTerm(leadHit),
+    })}</div>`;
+    const directPacked = packLane('direct', restDirect, true);
+    const themePacked = packLane('theme', restTheme, !restDirect.length);
+    const sideLane = directPacked.beside || themePacked.beside;
+    belowLane = directPacked.below + themePacked.below;
+    stage = sideLane
+      ? `<div class="x-split"><div class="x-split-main">${quote}</div><div class="x-split-side">${sideLane}</div></div>`
+      : quote;
+  }
   const miss = view.direct.length && !view.theme.length && themeLeft > 0
     ? '<p class="x-miss">Kun direkte træf i dette udsnit. Opslag, der bare deler tema, er udeladt, så navnet står først.</p>'
-    : !view.direct.length
-      ? `<p class="x-miss">Ingen opslag i udsnittet nævner selskabet eller tickeren. ${restTheme.length ? 'Kortene er tema.' : 'Kortet er tema.'}</p>`
-      : '';
+    : '';
   return `<section class="panel x-says" id="hvad-siger-x">
   <div class="x-says-h"><h2 class="panel-h">${esc(title)}</h2>${score}</div>
   <p class="sr-only">${esc(nLabel)}</p>
-  <p class="band">${esc(X_LABEL)}. Snapshot ${snap}.</p>
+  <p class="band">Kun NDI-konti i dette panel. I feedet: ${esc(X_LABEL)}. Snapshot ${snap}.</p>
   ${stage}
   ${belowLane}
   ${miss}

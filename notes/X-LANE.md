@@ -4,6 +4,15 @@
 **Branch:** lane-X  
 **Deadline:** keep until 08:30, polish, report 08:45, demo 09:00.
 
+## Denne nat (2026-10-16) · tolvte pas
+
+Ingen nye X-kald. `callCountNote` beholder 30/min og 1000/day, noten om ét søgekald 2026-10-15, og at der ikke er kaldt 2026-10-16. Tilføjet: tolvte poleringspas, stadig ingen kald. Filen har 20 opslag. Den tidligere note sagde 21. Browseren kalder ikke X. Ingen embed. Ingen secrets. NewDeal Invest i ét ord. Tal kun fra `fund-facts.json` og `risk-stats.json`. KID 2,79 % er 2.790 kr. og 2,85 % er 2.850 kr. på 100.000 kr. Forskellen er 60 kr. 80 kr. er 720 − 640. De to tal er ikke det samme og ikke et ÅOP.
+
+- `docs/js/x-feed.js` og `docs/ndi-paa-x.html`: arkivet klassificerer igen tredjepart. Panelet på selskab og tema er stadig kun NDI-konti. SoftBank-søgning er 3 direkte, ordet markeret, skinne 10. okt. og 27. jul. Nvidia-søgning er 6 direkte, film med fem datoer. Chips / AI er 6 direkte og 5 tema. Labelen står øverst: «Udvalgte offentlige opslag — ikke NDI's holdning». Tom tilstand siger 0, «Aktivt: Quantum · konti NDI følger» og labelen. Nulstil giver 20 af 20.
+- Paneler via `#hvad-siger-x`: SoftBank er 0 direkte og 3 tema. Ingen BullTheory, FundaAI eller BREAKING. Teksten siger, at ingen NDI-opslag nævner navnet. Nvidia er 1 direkte og 1 tema. Det direkte opslag er «$NVDA $SE $HIMS» som kort opslag, ikke et citat. Chips-tema er samme 1 og 1. Båndet siger, at labelen hører til i feedet.
+- `docs/fakta.html`: første blik er KID 2,79 % / 2,85 % og 60 kr. ved siden af 80 kr., med ≠ imellem. SRI 5 af 7 har 7 streger og 1 tændt i striben. Risikotallet 32,46 %, 0,89 og −35,82 % er i første skærm på 1280. Bund 8. apr. 2025. Top 18. feb. 2025. «Ikke et ÅOP.»
+- `docs/omkostninger.html`: samme to kort og samme ≠. På 390 står KID, ≠ og 80 kr. i første skærm. Kronerfelterne og «Linjerne er ikke lagt sammen» er beholdt. Ingen sum.
+
 ## Denne nat (2026-10-16) · ellevte pas
 
 Ingen nye X-kald. `callCountNote` beholder 30/min og 1000/day, noten om ét søgekald 2026-10-15, og at der ikke er kaldt 2026-10-16. Tilføjet: ellevte poleringspas, stadig ingen kald. 21 opslag uændret. Browseren kalder ikke X. Ingen embed. Ingen secrets. NewDeal Invest i ét ord. Tal kun fra `fund-facts.json` og `risk-stats.json`. 80 kr. er 720 − 640 på 100.000 kr. 60 kr. er 2.850 − 2.790, altså KID 2,85 % minus 2,79 % af 100.000 kr. 1.490 kr. er 1,49 % af 100.000 kr. 250 kr. er 0,25 % af 100.000 kr. KID står før postsatserne. De to tal er ikke det samme og ikke et ÅOP.
@@ -105,6 +114,8 @@ Ingen nye X-kald. `callCountNote` beholder 30/min og 1000/day, noten om ét søg
 «Udvalgte offentlige opslag — ikke NDI's holdning»
 
 ## Verifikation
+
+Tolvte pas, headless Chrome mod denne worktree (port 8911): overflow 0 på NDI på X (forside, SoftBank, Nvidia, Chips / AI, tom tilstand) ved 1280×800, på Chips / AI ved 900×800, på forsiden og SoftBank ved 390×844. Fakta og omkostninger overflow 0 ved 1280×800 og 390×844. Forsiden: døre 3 direkte, 6 direkte, 6 direkte og 5 tema, «20 af 20». SoftBank: 3 direkte, ordet markeret, skinne 10. okt. (slutter 584) og 27. jul. (slutter 706), byline 606–661, fod 726–758. På 390 er byline 591–646 og fod 710–776. Nvidia: 6 direkte, film 11. okt., 28. sep., 17. sep., 13. aug. og 27. jul., fod 695–727. Chips: 6 og 5, fod 695–727. På 900 er chips-foden 692–724. Tom tilstand: 0, Quantum og konti NDI følger, labelen. Klik: SoftBank-døren giver 3 direkte, nulstil giver 20 af 20. Fakta 1280: KID 302–436, 80 kr. 337–384, striben 444–532, risikotal 672–775. SRI-striben har 7 streger og 1 tændt. Fakta 390: KID 370–531, 80 kr. 618–657, striben 715–798. Omkostninger 1280: KID og 80 kr. 307–451. Omkostninger 390: KID 399–527, ≠ 537–569, 80 kr. 616–655. Paneler: SoftBank 0 direkte og 3 tema, ingen tredjepart. Nvidia og chips 1 direkte og 1 tema, kort opslag, ingen tredjepart. Ingen sidefejl. Ingen X-embed.
 
 Ellevte pas, headless Chrome mod denne worktree (port 8901): overflow 0 på NDI på X (forside, SoftBank, Nvidia, Chips / AI, tom tilstand) ved 1280×800, på Chips / AI ved 900×800, på forsiden og SoftBank ved 390×844. Fakta og omkostninger overflow 0 ved 1280×800 og 390×844. SoftBank: 3 direkte, ordet markeret, skinne 10. okt. (481) og 27. jul. (602), byline 606–661, fod 726–758. Nvidia: 6 direkte, film med fem datoer, fod 695–727. Chips: 6 og 5, to filmrækker, fod 695–727. På 900 er chips-foden 740–772. Fakta: 80 kr. 302–461, SRI 7 streger og 1 tændt, risikotal 615–718, bund 8. apr. 2025, top 18. feb. 2025, søjle 0–100 %. Omkostninger: KID og 80 kr. 307–451, kronerfelter 1.490 / 640 / 80 / 720 / 250, «Linjerne er ikke lagt sammen.» Mobil: 80 kr. 685–821 efter KID. Paneler uændrede i tælling. SoftBank-tallet top 185, header 64. Klik: Quantum slår fra, afsender slår fra, nulstil giver 21 af 21. Ingen sidefejl. Ingen X-embed.
 
