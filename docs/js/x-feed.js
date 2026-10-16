@@ -351,6 +351,38 @@ article.x-card.is-quote .x-by-when time,article.x-card.is-slip .x-by-when time{m
 .x-door kbd{font-family:inherit;font-size:10px;font-weight:650;letter-spacing:0;line-height:1.2;border:1px solid #345860;border-bottom-width:2px;border-radius:4px;padding:0 4px;margin-left:6px;color:#f5ee9e;background:#0b171d}
 article.x-card.is-lead:focus{outline:none}
 article.x-card.is-lead:focus-visible{outline:2px solid #f5ee9e;outline-offset:3px}
+article.x-card.is-flash{box-shadow:inset 3px 0 0 #f5ee9e,0 0 0 1px #f5ee9e}
+.x-spine{display:grid;grid-template-columns:auto minmax(0,1fr) auto;column-gap:10px;row-gap:4px;align-items:center;min-width:0}
+.x-spine.is-home{margin:0 0 12px}
+#x-grid > .x-spine,.x-says > .x-spine{grid-column:1 / -1;margin:0 0 2px}
+#x-grid > .x-spine .x-spine-track,.x-says > .x-spine .x-spine-track{height:18px}
+#x-grid > .x-empty{grid-column:1 / -1}
+.x-spine-end{font-size:11px;color:var(--faint);white-space:nowrap;font-variant-numeric:tabular-nums}
+.x-spine-track{position:relative;height:28px;min-width:0}
+.x-spine-track::before{content:"";position:absolute;left:9px;right:9px;top:50%;height:2px;margin-top:-1px;border-radius:99px;background:#24383f}
+.x-spine-dot{position:absolute;top:calc(50% + var(--lane, 0) * 6px);left:calc(9px + (100% - 18px) * var(--p));width:18px;height:18px;margin:0;padding:0;border:0;border-radius:50%;transform:translate(-50%,-50%);background:transparent;z-index:1}
+.x-spine-dot::after{content:"";position:absolute;left:50%;top:50%;width:9px;height:9px;border-radius:50%;transform:translate(-50%,-50%);background:#617d84}
+a.x-spine-dot{text-decoration:none}
+.x-spine-dot.is-house::after{background:#9ecfd6}
+.x-spine-dot.is-curated:not(.is-ghost)::after{background:#f5ee9e}
+.x-spine-dot.is-ghost::after{width:7px;height:7px;background:transparent;box-shadow:inset 0 0 0 1.5px #617d84}
+.x-spine-dot.is-ghost.is-curated::after{box-shadow:inset 0 0 0 1.5px #f5ee9e}
+.x-spine-dot.is-now{z-index:2}
+.x-spine-dot.is-now::after{width:11px;height:11px;box-shadow:0 0 0 2px #050a0f,0 0 0 4px #f5ee9e}
+button.x-spine-dot:focus-visible,a.x-spine-dot:focus-visible{outline:2px solid #f5ee9e;outline-offset:2px}
+button.x-spine-dot:hover::after,a.x-spine-dot:hover::after{transform:translate(-50%,-50%) scale(1.15)}
+.x-spine-key{grid-column:1 / -1;display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:0;font-size:11px;line-height:1.3;color:var(--faint)}
+.x-spine-key i{width:8px;height:8px;border-radius:50%;display:inline-block;flex:none}
+.x-spine-key i.is-house{background:#9ecfd6}
+.x-spine-key i.is-curated{background:#f5ee9e;margin-left:8px}
+body.x-focused .x-spine.is-home{display:none}
+@media(max-width:700px){
+  .x-spine-end{font-size:10px}
+  .x-spine{column-gap:6px}
+}
+@media(prefers-reduced-motion:reduce){
+  button.x-spine-dot:hover::after,a.x-spine-dot:hover::after{transform:translate(-50%,-50%)}
+}
 `;
   document.head.appendChild(s);
 }
@@ -720,6 +752,99 @@ export function xWhoDoorHtml(posts) {
   return `<span class="x-door-who">Hvem · ${bits.join(' · ')}<span class="sr-only"> ${esc(say)}</span></span>`;
 }
 
+/**
+ * Proportional date line. Filled dots are in the view. Open dots are context.
+ * Ghost links go to the archive. They carry a date, not an account name or a quote.
+ */
+export function xSpineHtml(posts, opt = {}) {
+  const dots = [];
+  const hotIds = opt.hotIds || null;
+  const pickIds = opt.pickIds || null;
+  const leadId = String(opt.leadId || '');
+  for (const p of posts || []) {
+    const t = Date.parse(p?.created_at || '');
+    if (Number.isNaN(t)) continue;
+    const id = String(p.id || '');
+    const hot = !hotIds || hotIds.has(id);
+    dots.push({
+      t,
+      id,
+      hot,
+      lead: Boolean(id) && id === leadId,
+      house: isHouse(p),
+      curated: p.curatedFrom === 'mads_following',
+      pick: Boolean(pickIds && id && pickIds.has(id)),
+      jump: Boolean(opt.jump && hot && id),
+      href: '',
+    });
+  }
+  for (const g of opt.ghosts || []) {
+    const t = Date.parse(g?.created_at || '');
+    if (Number.isNaN(t)) continue;
+    dots.push({
+      t,
+      id: String(g.id || ''),
+      hot: false,
+      lead: false,
+      house: false,
+      curated: g.curated !== false,
+      pick: false,
+      jump: false,
+      href: g.href || '',
+    });
+  }
+  if (dots.length < 2) return '';
+  const min = Math.min(...dots.map((d) => d.t));
+  const max = Math.max(...dots.map((d) => d.t));
+  const span = Math.max(max - min, 1);
+  for (const d of dots) d.p = (d.t - min) / span;
+  const byP = [...dots].sort((a, b) => a.p - b.p || Number(a.lead) - Number(b.lead));
+  let prev = -1;
+  let lane = 0;
+  for (const d of byP) {
+    if (prev >= 0 && d.p - prev < 0.04) lane = lane === 0 ? 1 : lane === 1 ? -1 : 0;
+    else lane = 0;
+    d.lane = lane;
+    prev = d.p;
+  }
+  const paint = [...dots.filter((d) => !d.lead), ...dots.filter((d) => d.lead)];
+  const html = paint.map((d) => {
+    const style = `--p:${d.p.toFixed(4)};--lane:${d.lane}`;
+    const when = fmtXDate(new Date(d.t).toISOString());
+    const cls = [
+      'x-spine-dot',
+      d.house ? 'is-house' : '',
+      d.curated && !d.house ? 'is-curated' : '',
+      d.hot ? '' : 'is-ghost',
+      d.lead ? 'is-now' : '',
+    ].filter(Boolean).join(' ');
+    const current = d.lead ? ' aria-current="true"' : '';
+    if (d.href) {
+      return `<a class="${cls}" style="${style}" href="${esc(d.href)}"${current} aria-label="${esc(when)}. I feedet, ikke her."></a>`;
+    }
+    if (d.hot && d.pick && d.id) {
+      return `<button type="button" class="${cls}" style="${style}" data-x-spine="${esc(d.id)}"${current} aria-label="${esc(when)}"></button>`;
+    }
+    if (d.hot && d.jump && d.id) {
+      return `<button type="button" class="${cls}" style="${style}" data-x-jump="${esc(d.id)}"${current} aria-label="${esc(when)}"></button>`;
+    }
+    return `<span class="${cls}" style="${style}" aria-hidden="true"></span>`;
+  }).join('');
+  const y0 = fmtXDate(new Date(min).toISOString());
+  const y1 = fmtXDate(new Date(max).toISOString());
+  const key = opt.home
+    ? '<p class="x-spine-key"><i class="is-house"></i>NDI-konti<i class="is-curated"></i>konti NDI følger</p>'
+    : (opt.key ? `<p class="x-spine-key">${esc(opt.key)}</p>` : '');
+  const hotN = dots.filter((d) => d.hot).length;
+  return `<div class="x-spine${opt.home ? ' is-home' : ''}" role="group" aria-label="${esc(opt.label || 'Datoer')}">
+    <span class="x-spine-end">${esc(y0)}</span>
+    <div class="x-spine-track">${html}</div>
+    <span class="x-spine-end">${esc(y1)}</span>
+    ${key}
+    <span class="sr-only">${hotN} fyldte af ${dots.length} på linjen.</span>
+  </div>`;
+}
+
 export function xScoreHtml(items) {
   const cells = (items || []).map((it) => {
     const n = Number(it.n) || 0;
@@ -803,7 +928,7 @@ export function xCard(p, opt = {}) {
       query: opt.query || '',
     });
   }
-  const idAttr = p?.id ? ` data-x-id="${esc(p.id)}"` : '';
+  const idAttr = p?.id ? ` id="xpost-${esc(p.id)}" data-x-id="${esc(p.id)}"` : '';
   const reasons = opt.reasons || [];
   const hitTerms = highlightTerms(opt.query).map((t) => t.toLowerCase());
   const tagCls = (label) => (hitTerms.includes(String(label).toLowerCase()) ? ' tag is-hit' : ' tag');
@@ -956,8 +1081,8 @@ function feedHref({ tickers = [], themes = [] } = {}) {
  */
 /** Followed and other accounts the feed would show and this panel will not. */
 function feedContrast(pack, { tickers = [], themes = [] } = {}) {
-  const none = { n: 0, sentence: '' };
   const href = feedHref({ tickers, themes });
+  const none = { n: 0, sentence: '', href, posts: [] };
   let q = '';
   let f = '';
   try {
@@ -990,13 +1115,38 @@ function feedContrast(pack, { tickers = [], themes = [] } = {}) {
     const theme = f && f !== 'all' ? (THEME_DA[f] || f) : '';
     sentence = theme ? `${from}, ligger på temaet ${theme}. De vises ikke her.` : `${from}. De vises ikke her.`;
   }
-  return { n, sentence };
+  return { n, sentence, href, posts: use };
 }
 
 function xFeedAsideHtml(n) {
   const v = Number(n) || 0;
   if (!v) return '';
   return `<div class="x-feed-aside"><b>${v}</b><span>i feedet</span><small>ikke her</small></div>`;
+}
+
+function ghostHref(base, id) {
+  const href = base || 'ndi-paa-x.html';
+  const join = href.includes('?') ? '&' : '?';
+  return `${href}${join}id=${encodeURIComponent(id)}`;
+}
+
+/** Date line for the panel. Open dots are feed-only. No account names, no quotes. */
+function panelSpineHtml(shownPosts, contrast, { leadId = '', pickPosts = [] } = {}) {
+  const ghosts = (contrast?.posts || []).map((p) => ({
+    id: p.id,
+    created_at: p.created_at,
+    curated: p.curatedFrom === 'mads_following',
+    href: ghostHref(contrast.href, p.id),
+  }));
+  const pickIds = new Set((pickPosts || []).map((p) => String(p.id || '')));
+  return xSpineHtml(shownPosts, {
+    leadId,
+    pickIds,
+    jump: true,
+    ghosts,
+    key: contrast?.n ? 'Fyldt prik er i panelet. Åben prik er i feedet, ikke her.' : '',
+    label: 'Datoer. Panelet er kun NDI-konti. Åbne prikker er i feedet, ikke her.',
+  });
 }
 
 /**
@@ -1028,9 +1178,11 @@ export function xSaysPanel(pack, { tickers = [], themes = [], limit = 4, title =
   const score = xScoreHtml(scoreItems);
   if (!shown) {
     if (!showEmpty) return '';
+    const emptySpine = panelSpineHtml([], contrast);
     return `<section class="panel x-says" id="hvad-siger-x">
   <div class="x-says-h"><h2 class="panel-h">${esc(title)}</h2><div class="x-says-tools">${xScoreHtml([{ n: 0, label: 'direkte', mod: 'is-direct' }, { n: 0, label: 'tema', mod: 'is-theme' }])}${aside}</div></div>
   <p class="band">${esc(X_LABEL)}. Snapshot ${snap}.${contrast.sentence ? ` ${esc(contrast.sentence)}` : ''}</p>
+  ${emptySpine}
   <div class="x-empty">
     <p class="x-zero" aria-hidden="true">0</p>
     <p class="k">Ingen opslag i udsnittet</p>
@@ -1121,10 +1273,15 @@ export function xSaysPanel(pack, { tickers = [], themes = [], limit = 4, title =
   const miss = view.direct.length && !view.theme.length && themeLeft > 0
     ? '<p class="x-miss">Kun direkte træf i dette udsnit. Opslag, der bare deler tema, er udeladt, så navnet står først.</p>'
     : '';
+  const shownPosts = [...view.direct, ...view.theme].map((h) => h.post);
+  const seriesPosts = (view.direct.length ? view.direct : view.theme).map((h) => h.post);
+  const spineLead = seriesPosts[0];
+  const spine = panelSpineHtml(shownPosts, contrast, { leadId: spineLead?.id || '', pickPosts: seriesPosts });
   return `<section class="panel x-says" id="hvad-siger-x">
   <div class="x-says-h"><h2 class="panel-h">${esc(title)}</h2><div class="x-says-tools">${score}${aside}</div></div>
   <p class="sr-only">${esc(nLabel)}</p>
   <p class="band">Kun NDI-konti i dette panel. I feedet: ${esc(X_LABEL)}. Snapshot ${snap}.${contrast.sentence ? ` ${esc(contrast.sentence)}` : ''}</p>
+  ${spine}
   ${stage}
   ${belowLane}
   ${miss}
@@ -1136,6 +1293,29 @@ function bindXPick() {
   if (typeof document === 'undefined' || document.documentElement.dataset.xPickBound) return;
   document.documentElement.dataset.xPickBound = '1';
   document.addEventListener('click', (e) => {
+    const jump = e.target.closest('[data-x-jump]');
+    if (jump) {
+      const id = jump.getAttribute('data-x-jump');
+      const card = id && document.getElementById(`xpost-${id}`);
+      if (!card) return;
+      e.preventDefault();
+      card.classList.add('is-flash');
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      card.scrollIntoView({ block: 'nearest', behavior: reduce ? 'auto' : 'smooth' });
+      window.setTimeout(() => card.classList.remove('is-flash'), 900);
+      return;
+    }
+    const spine = e.target.closest('[data-x-spine]');
+    if (spine) {
+      e.preventDefault();
+      const id = spine.getAttribute('data-x-spine');
+      const scope = spine.closest('#x-grid, section.x-says') || document;
+      const sel = typeof CSS !== 'undefined' && CSS.escape ? CSS.escape(id) : String(id).replace(/"/g, '');
+      const cards = [...scope.querySelectorAll(`article.x-card[data-x-id="${sel}"]`)];
+      const card = cards.find((el) => el.closest('.x-lane')) || null;
+      if (card) promoteCard(card);
+      return;
+    }
     const btn = e.target.closest('[data-x-pick]');
     if (!btn) return;
     e.preventDefault();
@@ -1233,6 +1413,19 @@ function promoteCard(card) {
   }
   const where = place && place.n > 1 ? ` Dato ${place.i} af ${place.n}.` : '';
   live.textContent = `Citatet viser nu opslaget fra ${fmtXDate(next.post.created_at)}.${where}`;
+  const spineScope = stageHost.closest('#x-grid, section.x-says');
+  if (spineScope && nextId) {
+    spineScope.querySelectorAll('.x-spine-dot.is-now').forEach((el) => {
+      el.classList.remove('is-now');
+      el.removeAttribute('aria-current');
+    });
+    const sel = typeof CSS !== 'undefined' && CSS.escape ? CSS.escape(nextId) : String(nextId).replace(/"/g, '');
+    const dot = spineScope.querySelector(`[data-x-spine="${sel}"]`);
+    if (dot) {
+      dot.classList.add('is-now');
+      dot.setAttribute('aria-current', 'true');
+    }
+  }
   const quoteNow = stageHost.querySelector('article');
   if (quoteNow) {
     quoteNow.dispatchEvent(new CustomEvent('ndi-x-pick', { bubbles: true, detail: { id: next.post.id } }));
