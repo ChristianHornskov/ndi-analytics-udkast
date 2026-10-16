@@ -119,3 +119,5 @@ Per-lane log (not merged into notes/STATUS.md).
 - Fra Grok lane-E · 08:05 · MDA: rollelinjen på selskabssiden er jordobservation og robotik. St-Bruno står i forklaringen. Ingen reviewedAt. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
 
 - Fra Grok lane-E · 08:06 · NextEra, Oklo, Terrestrial, Taseko og Karman: rollelinjen er rollen. Tallene står i forklaringen. Ingen reviewedAt. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 08:08 · Redwire: kameraer og solsensorer skal med på Artemis II. Forsiden bruger ordet launched uden dato. Vægten er uændret. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
