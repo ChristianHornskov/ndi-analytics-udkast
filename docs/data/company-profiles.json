@@ -1609,15 +1609,15 @@
   "CA55293N1096": {
    "name": "MDA Space",
    "theme": "space",
-   "summary": "Bygger satellitter, rumrobotik og systemer til geodata. Selskabet præsenterede 10. september 2026 satellitten Aurora Black. Det er ikke en konstellation i drift og ikke et datacenter.",
-   "watch": "Satellitordrer og robotprogrammer.",
-   "source": "https://mda.space/",
-   "products": "Satellitter, robotarme og geodata.",
+   "summary": "Bygger satellitter, rumrobotik og systemer til geodata. Selskabet skrev 16. september 2026, at Chorus er tre satellitter, og at de to nye ikke er sendt op. Aurora Black er præsenteret 10. september 2026. Det er ikke et datacenter.",
+   "watch": "Om de to nye Chorus-satellitter bliver sendt op. Sent i 2026 er en plan. De er ikke i kredsløb.",
+   "source": "https://mda.space/article/mda-space-announces-end-to-end-mda-chorus-product-portfolio-in-advance-of-constellation-launch",
+   "products": "Satellitter, robotarme og geodata. Chorus er billeder af Jorden.",
    "customers": "Rumagenturer, satellitoperatører og forsvar.",
-   "role": "Satellitter og robotik.",
+   "role": "Jordobservation og robotik. De to nye Chorus-satellitter er ikke sendt op.",
    "narrative": [
     "MDA bygger satellitter og rumrobotik og arbejder med geodata. Selskabet skrev 10. september 2026, at det præsenterede Aurora Black, en softwaredefineret satellit til forsvarskommunikation.",
-    "Datoen ligger efter beholdningen pr. 1. juni 2026. Præsentationen er ikke en konstellation i drift. Chorus er stadig omtalt, før konstellationen er sendt op. Det er ikke et datacenter."
+    "Datoen for Aurora Black ligger efter beholdningen pr. 1. juni 2026. Præsentationen er ikke en konstellation i drift. Selskabet skrev 16. september 2026, at Chorus er tre satellitter: to nye, en i X-bånd og en i C-bånd, plus RADARSAT-2, som allerede er i kredsløb. Opsendelsen af de nye er sat til sent i 2026. Det er en plan. De to nye er ikke sendt op. Meddelelsen ligger efter beholdningen. Det er ikke et datacenter."
    ],
    "narrativeSources": [
     {
@@ -1627,6 +1627,10 @@
     {
      "label": "Aurora Black, 10. september 2026",
      "url": "https://mda.space/article/mda-space-unveils-mda-aurora-black-a-defence-focused-software-defined-satellite"
+    },
+    {
+     "label": "Chorus, 16. september 2026",
+     "url": "https://mda.space/article/mda-space-announces-end-to-end-mda-chorus-product-portfolio-in-advance-of-constellation-launch"
     }
    ]
   },

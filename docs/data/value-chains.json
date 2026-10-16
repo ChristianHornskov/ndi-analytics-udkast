@@ -1690,7 +1690,7 @@
           "id": "satcom",
           "icon": "📡",
           "label": "Satellitkommunikation",
-          "blurb": "Satellitter i drift eller under bygning: kommunikation, billeder af Jorden, radiosignaler og de platforme, satellitterne bygges på. Redwire leverer dele og sender ikke selv op. Selskabet skrev 1. april 2026, at kameraer skal med på Artemis II. Meddelelsen siger ikke, at flyvningen er gennemført. York bygger platforme til kunden og skriver, at det koordinerer opsendelseslogistik. Det er ikke det samme som selv at sende raketten op. MDA omtaler Chorus, før konstellationen er sendt op. MDA præsenterede 10. september 2026 Aurora Black. Det er efter beholdningen og ikke en konstellation i drift. Satellogic sætter fuld drift af Merlin til andet halvår 2027. Det er ikke en tjeneste i fuld drift. Planet nævner SuperDove, SkySat, Pelican, Tanager og Owl. Owl er omtalt som næste generation.",
+          "blurb": "Satellitter i drift eller under bygning: kommunikation, billeder af Jorden, radiosignaler og de platforme, satellitterne bygges på. Redwire leverer dele og sender ikke selv op. Selskabet skrev 1. april 2026, at kameraer skal med på Artemis II. Meddelelsen siger ikke, at flyvningen er gennemført. York bygger platforme til kunden og skriver, at det koordinerer opsendelseslogistik. Det er ikke det samme som selv at sende raketten op. MDA skrev 16. september 2026, at Chorus er tre satellitter. To er nye, en i X-bånd og en i C-bånd. Selskabet skriver, at RADARSAT-2 allerede er i kredsløb. Opsendelsen af de nye er sat til sent i 2026. Det er en plan. De to nye er ikke sendt op. Meddelelsen ligger efter beholdningen. MDA præsenterede 10. september 2026 Aurora Black. Det er efter beholdningen og ikke en konstellation i drift. Satellogic sætter fuld drift af Merlin til andet halvår 2027. Det er ikke en tjeneste i fuld drift. Planet nævner SuperDove, SkySat, Pelican, Tanager og Owl. Owl er omtalt som næste generation.",
           "ndi": "Starlink er i en AI-selskabsprofil beskrevet som en løbende tjeneste, ikke kun en opsendelse. Det er et udkast, ikke NDI's færdige tekst. SpaceX indgår ikke i beholdningen pr. 1. juni 2026.",
           "themes": [
             "space"
@@ -1744,7 +1744,7 @@
               "w": 0.16,
               "sym": "MDA.TO",
               "forslag": false,
-              "role": "Satellitter og rumrobotik. Aurora Black er præsenteret 10. september 2026, ikke en konstellation i drift."
+              "role": "Chorus er tre satellitter. De to nye er ikke sendt op. Aurora Black er præsenteret 10. september 2026."
             },
             {
               "isin": "US72703X1063",
@@ -1761,7 +1761,7 @@
           "id": "space-compute",
           "icon": "✦",
           "label": "Rum og compute",
-          "blurb": "På sigt kan beregning ligge i rummet. I beholdningen pr. 1. juni 2026 er eksemplerne infrastruktur, robotik og satellitplatforme. Ingen af dem er et datacenter i kredsløb. Voyager omtaler Starlab som et stationsprojekt. Det er ikke en station i drift. Selskabet skrev 8. september 2026, at GOEX ved Camp Minden i Louisiana igen producerer sortkrudt. Det er efter beholdningen, og det er ikke en rumstation.",
+          "blurb": "På sigt kan beregning ligge i rummet. I beholdningen pr. 1. juni 2026 er eksemplerne infrastruktur, robotik og satellitplatforme. Ingen af dem er et datacenter i kredsløb. Voyager omtaler Starlab som et stationsprojekt. Det er ikke en station i drift. Selskabet skrev 8. september 2026, at GOEX ved Camp Minden i Louisiana igen producerer sortkrudt. Det er efter beholdningen, og det er ikke en rumstation. MDA skrev 16. september 2026, at Chorus er billeder af Jorden. De to nye satellitter er ikke sendt op. Det er ikke et datacenter.",
           "ndi": "Udsagnet om SpaceX og størrelsen af økonomien er Elon Musks og står kun som citat. Det er ikke NDI's forventning (ugebrev 12. oktober 2026).",
           "themes": [
             "space"
@@ -1799,7 +1799,7 @@
               "w": 0.16,
               "sym": "MDA.TO",
               "forslag": false,
-              "role": "Rumrobotik. Ikke et datacenter."
+              "role": "Chorus er billeder af Jorden. De to nye satellitter er ikke sendt op. Ikke et datacenter."
             }
           ],
           "seeChain": null

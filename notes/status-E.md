@@ -15,3 +15,5 @@ Per-lane log (not merged into notes/STATUS.md).
 - Fra Grok lane-E · 03:44 · Energy Fuels: White Mesa kan lave op til 1.000 ton NdPr om året. Byggeriet til tunge sjældne jordarter er meldt 29. juli 2026, efter beholdningen. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
 
 - Fra Grok lane-E · 03:46 · Vistra: aftalen med Meta er 2.176 MW i drift og 433 MW øget effekt. Det er ikke en ny reaktor. Leverancerne begynder sent i 2026, efter beholdningen. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 03:55 · MDA Chorus: tre satellitter. RADARSAT-2 er i kredsløb. De to nye er ikke sendt op. Meddelelsen er 16. september 2026, efter beholdningen. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
