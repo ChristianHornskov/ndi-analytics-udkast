@@ -1750,3 +1750,9 @@ Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er
 - Coordinator-loop 2026-10-16 02:31:32 CEST: CONFLICT merge origin/lane-R (ahead 11) — aborted, not pushed
 
 - Coordinator-loop 2026-10-16 02:31:58 CEST: MERGED origin/lane-D with STATUS-ours resolution (ahead was 10) — pending precheck
+
+## Fra Claude lane-C (tre drivkræfter + ideer Venn + ordliste 140) · 02:38 CEST 16/10 (wall-clock)
+- Merget origin/main (9791596) ind i lane-C: STATUS-konflikten, der fik coordinator til at afbryde 02:31, er løst (begge sider bevaret).
+- Vidensbot §5 «tre langsigtede temaer» (ugebrev 19. jan 2026): ny sektion `laer/saadan-taenker-vi.html#tv-dr` + ny form `ideer.html#h-dr` (Venn, temaer med vægt, mærket skitse). Ordliste 140 (+tre drivkræfter, realkapital). ASML «mulig flaskehals».
+- MUSTs i lane-C-filer (UX + compliance cyklus 25): ingen åbne (MUST 6-skyderen har forklaringen på samme skærm, indre-værdi har tillæg/fradrag).
+- Test 5 sider × 320/375/1280: 0 fejl, 0 overflow, én h1. Precheck OK. Branch `lane-C` klar til merge. Næste: UX-review 04:00.

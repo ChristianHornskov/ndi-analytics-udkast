@@ -205,3 +205,8 @@ Sider: ideer, kort, om-data, invester, risici, ndi-perspektiv, laer/*.
 ## lane-C · 02:40 16/10 · ideer «Hvorfor ejer vi den?» (ASML) + KID-omkostning
 - ASML-linsen bruger kun unique-metrics.json-tekster («Litografimaskiner», «AI-compute · led 4», «Eksportregler og kundernes investeringer») og vægten 0,22 % fra portfolio.json pr. 1. jun 2026. Ingen kurs, ingen prognose. To felter mærket AI-udkast. **Bed Vidensbot tjekke:** er «En flaskehals: de mest avancerede chips kan ikke laves uden EUV» i tråd med flodsystem-sproget (dæmning), eller skal det være «en mulig flaskehals» som i value-chains.json?
 - KID-omkostning 2,79/2,85 % på invester: tal fra compliance-review. **Bed NDI bekræfte** tal og KID-dato.
+
+## lane-C · 02:38 16/10 · tre drivkræfter (BLOG 19. jan 2026)
+- Lær «Sådan tænker vi» + ideer `#h-dr`: kun ugebrevets egne udsagn i almindeligt dansk. Udeladt: «relativt enkelt at skabe gode langsigtede afkast», «strukturel fordel», «positionerer sig korrekt». Tilføjet: «ikke en prognose … siger ikke, hvilke selskaber der klarer sig godt, og du kan tabe penge».
+- **Bed Vidensbot tjekke:** (1) er «drivkræfter» ok i stedet for ugebrevets «investeringstemaer»? (2) er det i tråd med Mads at lægge Chips i alle tre cirkler og Energi i AI ∩ realkapital? (3) må «Cold War 2.0» gengives som «en ny kold krig» på en fondsside?
+- ASML: «En flaskehals» → «En mulig flaskehals» (som value-chains.json).

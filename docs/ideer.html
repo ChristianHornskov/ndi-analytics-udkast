@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
   <title>Idéer · NDI Analytics</title>
- <meta name="description" content="Femten billeder om NDI Analytics: flodsystemet, flere temaer pr. selskab, hvor mange selskaber der er halvdelen af fonden, og hvorfor vi ejer et selskab. Ikke rådgivning.">
+ <meta name="description" content="Seksten billeder om NDI Analytics: flodsystemet, flere temaer pr. selskab, hvor mange selskaber der er halvdelen af fonden, og hvorfor vi ejer et selskab. Ikke rådgivning.">
   <link rel="stylesheet" href="css/ndi.css">
   <!-- og:start -->
  <meta property="og:type" content="website">
  <meta property="og:site_name" content="NDI Analytics (udkast)">
  <meta property="og:locale" content="da_DK">
  <meta property="og:title" content="Idéer · NDI Analytics">
- <meta property="og:description" content="Femten billeder om NDI Analytics: flodsystemet, flere temaer pr. selskab, hvor mange selskaber der er halvdelen af fonden, og hvorfor vi ejer et selskab. Ikke rådgivning.">
+ <meta property="og:description" content="Seksten billeder om NDI Analytics: flodsystemet, flere temaer pr. selskab, hvor mange selskaber der er halvdelen af fonden, og hvorfor vi ejer et selskab. Ikke rådgivning.">
  <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/ideer.html">
  <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
  <meta property="og:image:width" content="1200">
@@ -261,6 +261,18 @@
     .kv-keys dt{font-size:15px;color:var(--text);font-weight:700}
     .kv-keys dd{margin:2px 0 0;font-size:13px;color:var(--muted);line-height:1.45}
     .kv figcaption{font-size:12px;color:var(--faint);margin-top:12px;line-height:1.5}
+    .dr{background:#0b171d;border:1px solid var(--line);border-radius:14px;padding:14px;margin:0;display:grid;gap:14px;grid-template-columns:1fr}
+    @media(min-width:760px){.dr{grid-template-columns:minmax(0,400px) 1fr;align-items:center}}
+    .dr svg{width:100%;max-width:400px;height:auto;justify-self:center;display:block}
+    .dr svg text{font:11px var(--font);fill:var(--text);text-anchor:middle}
+    .dr svg text.w{fill:var(--muted);font-size:10.5px}
+    .dr svg text.lab{font-weight:700;font-size:12px;letter-spacing:.3px}
+    .dr-key{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+    .dr-key li{border-left:3px solid var(--cyan);padding:2px 0 2px 10px;color:var(--muted);font-size:14px;line-height:1.5}
+    .dr-key li.k2{border-left-color:var(--yellow)}
+    .dr-key li.k3{border-left-color:var(--neg)}
+    .dr-key strong{display:block;color:var(--text)}
+    .dr figcaption{grid-column:1/-1}
     .lens{background:#0b171d;border:1px solid var(--line);border-radius:14px;padding:16px;margin:0;display:grid;gap:10px;grid-template-columns:1fr}
     .lens .eye{justify-self:center;width:170px;height:170px;border-radius:50%;border:3px solid var(--cyan);box-shadow:0 0 0 8px rgba(158,207,214,.10),inset 0 0 0 1px var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:14px}
     .lens .eye b{font-size:20px;color:var(--text)}
@@ -338,8 +350,8 @@
 
 
     <nav class="idea-toc" aria-label="Billeder på siden">
-      <p class="lbl">15 billeder på siden</p>
-      <ol><li><a href="#h-flod">Flodsystemet på ét billede</a></li><li><a href="#h-vs">Én kasse eller flere temaer</a></li><li><a href="#h-mx">Samme 345 selskaber, to sorteringer</a></li><li><a href="#h-wk">Vægt er ikke kurs</a></li><li><a href="#h-tf">Fra «Andet» til tema</a></li><li><a href="#h-pr">345 aktier, én prik hver</a></li><li><a href="#h-kv">Hvor mange selskaber er halvdelen?</a></li><li><a href="#h-lc">Hvor på bakken ligger vægten?</a></li><li><a href="#h-uw">Fald fra top som episoder</a></li><li><a href="#h-ur">Tre ure på samme side</a></li><li><a href="#h-lag">Hvad står der i tallet?</a></li><li><a href="#h-kl">To klasser, samme temaer</a></li><li><a href="#h-stk">Lag på lag</a></li><li><a href="#h-ln">Hvorfor ejer vi den?</a></li><li><a href="#h-hus">Bygget som et hus</a></li></ol>
+      <p class="lbl">16 billeder på siden</p>
+      <ol><li><a href="#h-flod">Flodsystemet på ét billede</a></li><li><a href="#h-vs">Én kasse eller flere temaer</a></li><li><a href="#h-mx">Samme 345 selskaber, to sorteringer</a></li><li><a href="#h-wk">Vægt er ikke kurs</a></li><li><a href="#h-tf">Fra «Andet» til tema</a></li><li><a href="#h-pr">345 aktier, én prik hver</a></li><li><a href="#h-kv">Hvor mange selskaber er halvdelen?</a></li><li><a href="#h-lc">Hvor på bakken ligger vægten?</a></li><li><a href="#h-uw">Fald fra top som episoder</a></li><li><a href="#h-ur">Tre ure på samme side</a></li><li><a href="#h-lag">Hvad står der i tallet?</a></li><li><a href="#h-kl">To klasser, samme temaer</a></li><li><a href="#h-stk">Lag på lag</a></li><li><a href="#h-dr">Tre drivkræfter, ét overlap</a></li><li><a href="#h-ln">Hvorfor ejer vi den?</a></li><li><a href="#h-hus">Bygget som et hus</a></li></ol>
     </nav>
 
     <section class="idea-sec" aria-labelledby="h-flod">
@@ -741,6 +753,39 @@
       </figure>
     </section>
 
+    <section class="idea-sec" aria-labelledby="h-dr">
+      <h2 id="h-dr">Tre drivkræfter, ét overlap</h2>
+      <p class="sub">I januar 2026 skrev Mads Christiansen om tre store udviklinger, som NDI vil bruge til at forklare sine investeringer de næste ti år: AI, et skift mod fabrikker og infrastruktur, og en ny kold krig mellem Kina og Vesten. Lægger man fondens temaer ind i tre cirkler, ser man, at de fleste temaer berører mere end én af dem. Chips står i midten.</p>
+      <figure class="dr">
+        <svg viewBox="0 0 400 380" role="img" aria-labelledby="dr-t dr-d">
+          <title id="dr-t">Tre drivkræfter som tre overlappende cirkler med fondens temaer</title>
+          <desc id="dr-d">Cirklerne hedder AI, realkapital og ny kold krig. Kun i AI: platforme 16,7 procent, software 11,6, optik og netværk 8,3 og compute 6,8. AI og realkapital: energi 9,3 og fysisk tech 7,9. AI og ny kold krig: quantum 0,9, forslag. Realkapital og ny kold krig: energiressourcer 6,0 og SpaceTech 4,9. Alle tre: chips 13,3 procent. Andet, 6,3 procent, står uden for cirklerne.</desc>
+          <circle cx="145" cy="145" r="110" style="fill:var(--cyan);fill-opacity:.10;stroke:var(--cyan);stroke-width:1.5"/>
+          <circle cx="255" cy="145" r="110" style="fill:var(--yellow);fill-opacity:.08;stroke:var(--yellow);stroke-width:1.5"/>
+          <circle cx="200" cy="240" r="110" style="fill:var(--neg);fill-opacity:.10;stroke:var(--neg);stroke-width:1.5"/>
+          <text class="lab" x="70" y="24" style="fill:var(--cyan)">1 · AI</text>
+          <text class="lab" x="330" y="24" style="fill:var(--yellow)">2 · REALKAPITAL</text>
+          <text class="lab" x="200" y="370" style="fill:var(--neg-ink)">3 · NY KOLD KRIG</text>
+          <text x="84" y="88">Platforme</text><text class="w" x="84" y="100">16,7 %</text>
+          <text x="84" y="116">Software</text><text class="w" x="84" y="128">11,6 %</text>
+          <text x="84" y="144">Optik &amp; netværk</text><text class="w" x="84" y="156">8,3 %</text>
+          <text x="84" y="172">Compute</text><text class="w" x="84" y="184">6,8 %</text>
+          <text x="200" y="76">Energi</text><text class="w" x="200" y="88">9,3 %</text>
+          <text x="200" y="106">Fysisk tech</text><text class="w" x="200" y="118">7,9 %</text>
+          <text x="200" y="176" style="font-weight:700">Chips</text><text class="w" x="200" y="189">13,3 %</text>
+          <text x="142" y="222">Quantum</text><text class="w" x="142" y="234">0,9 % · forslag</text>
+          <text x="272" y="200">Energi-</text><text x="272" y="212">ressourcer</text><text class="w" x="272" y="224">6,0 %</text>
+          <text x="270" y="240">SpaceTech</text><text class="w" x="270" y="251">4,9 %</text>
+        </svg>
+        <ol class="dr-key">
+          <li><strong>1 · AI gør intelligens billigere</strong>Ugebrevet sammenligner med elektriciteten for 100 år siden. Det giver vækst hos dem, der leverer AI, men er også en risiko: selskaber, der ikke tager AI til sig, kan miste deres plads, uanset hvor længe de har klaret sig godt. Ugebrevet kalder AI modvind for en del software.</li>
+          <li class="k2"><strong>2 · Fra finansielle aktiver til realkapital</strong>Vesten, især USA, bygger igen fabrikker, energi og infrastruktur. Realkapital er de fysiske ting, der producerer noget.</li>
+          <li class="k3"><strong>3 · En ny kold krig</strong>Rivaliseringen mellem Kina og Vesten betyder, at handelspolitik, tilskud og <a href="om-data.html#g-eksportregler">eksportregler</a> i højere grad styrer, hvor pengene går hen.</li>
+        </ol>
+        <figcaption>Drivkræfterne er fra NDI ugebrev uge 3, 19. januar 2026 («De tre overordnede investeringstemaer for de næste 10 år»). Placeringen af temaerne i cirklerne er NDI Analytics’ skitse ud fra ugebrevets ord, ikke NDI’s egen opdeling. Tal: vægt i procent af PMINDI pr. 1. jun 2026 fra den offentlige, forsinkede beholdning, det primære tema én gang pr. selskab. Andet (6,3 %) står uden for cirklerne. Drivkræfterne er Mads’ syn på retningen, ikke en prognose. De siger ikke, hvilke selskaber der klarer sig godt, og du kan tabe penge. <a href="laer/saadan-taenker-vi.html#tv-dr">Sådan tænker vi →</a> · <a href="#h-stk">Samme temaer som lag ↑</a> · <a href="om-data.html#g-drivkraefter">Ordliste: tre drivkræfter</a></figcaption>
+      </figure>
+    </section>
+
     <section class="idea-sec" aria-labelledby="h-ln">
       <h2 id="h-ln">Hvorfor ejer vi den?</h2>
       <p class="sub">Spørgsmålet er ikke «bliver det her vinderen?», men «hvilken del af udviklingen giver det fonden?». Fem faste spørgsmål, som vi kalder NDI-linsen, lagt rundt om ét selskab. Eksemplet er ASML, fordi det står ved en af de dæmninger, <a href="#h-flod">flodsystemet</a> handler om.</p>
@@ -749,7 +794,7 @@
         <ol class="qq">
           <li><b>Hvilket tema?</b><strong>Chips.</strong> Den del af teknologien, selskabet hører til.</li>
           <li><b>Hvad ejer man?</b><strong>Litografimaskiner</strong>, som overfører kredsløbsmønstre til siliciumskiver.<span class="ai">AI-udkast</span></li>
-          <li><b>Hvor i kæden?</b><strong>AI-compute, led 4:</strong> udstyr og litografi. En flaskehals: de mest avancerede chips kan ikke laves uden <a href="om-data.html#g-euv">EUV</a>.</li>
+          <li><b>Hvor i kæden?</b><strong>AI-compute, led 4:</strong> udstyr og litografi. En mulig flaskehals: de mest avancerede chips kan ikke laves uden <a href="om-data.html#g-euv">EUV</a>.</li>
           <li><b>Hvor modent?</b><strong>Ikke klassificeret.</strong> NDI har endnu ikke sat en <a href="laer/livscyklus.html">modenhedsgrad</a>. Vi gætter ikke.</li>
           <li><b>Hold øje med</b><strong>Eksportregler og kundernes investeringer.</strong> Forhold, der kan ændre billedet, ikke en prognose.<span class="ai">AI-udkast</span></li>
         </ol>
