@@ -156,3 +156,10 @@ Fællesprospektet (opdateret 24.10.2025) nævner under NewDeal Invest KL kun and
 
 ### 02:55 CEST lane-C · lær «Fra chip til datacenter»
 - Ny side `docs/laer/tidslinje.html` (12 milepæle, filter pr. dæmning). Demo: Lær → Tankegangen → «Fra chip til datacenter», klik «Energi». Årstallene skal tjekkes af NDI før live (se VIDENSBOT-live-check).
+
+
+## Åbent: Modenhed / livscyklus (Vidensbot 03:00 · Leo)
+
+- UI skal sige **forslag**, aldrig «klassificeret», indtil NDI har godkendt.
+- **Mads’ input på modenhed** mangler stadig: hvem sætter præ-revenue → value, og er heuristikken fra offentlig industri OK som midlertidigt forslag?
+- Codex/Christian: aftal proces med Mads før modenhedsfiltre præsenteres som andet end forslag.

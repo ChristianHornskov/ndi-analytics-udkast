@@ -910,7 +910,8 @@
     (pack.quotes || []).forEach(q => {
       const d = document.createElement('blockquote');
       d.className = 'quote';
-      d.innerHTML = `<p style="margin:0"><q>${esc(q.text)}</q></p><footer class="src">Kilde: ${esc(q.attribution)}. ${esc(q.note)}</footer>`;
+      d.innerHTML = `<p style="margin:0"><q>${esc(q.text)}</q></p><footer class="src">
+ <p class="eyebrow" style="margin-bottom:4px">Markedsføringsmateriale</p>Kilde: ${esc(q.attribution)}. ${esc(q.note)}</footer>`;
       qh.appendChild(d);
     });
 

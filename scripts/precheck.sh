@@ -121,6 +121,68 @@ else
   ok "docs/js has no forbidden per-stock field reads"
 fi
 
+# --- Vidensbot 03:00 compliance guards ---
+if [[ -f "$DOC/data/x-posts.json" ]]; then
+  if rg -n 'Begge er også i \$PMINDI|også i \$PMINDI' "$DOC/data/x-posts.json" >/dev/null 2>&1; then
+    err "x-posts.json contains holdings-disclosure post (\$PMINDI)"
+    rg -n 'Begge er også i \$PMINDI|også i \$PMINDI' "$DOC/data/x-posts.json" >&2 || true
+  else
+    ok "x-posts.json has no \$PMINDI holdings-disclosure posts"
+  fi
+  if ! python3 - <<'PY'
+import json, re, sys
+x=json.load(open("docs/data/x-posts.json"))
+bad=[]
+for m in x.get("chartMarkers") or []:
+    title=m.get("title") or ""
+    url=m.get("url") or ""
+    mt=re.search(r"@([A-Za-z0-9_]+)", title)
+    mu=re.search(r"x\.com/([^/]+)/", url)
+    who=(mt.group(1) if mt else "") or (mu.group(1) if mu else "")
+    if who.lower() != "investnewdeal":
+        bad.append(who or title)
+if bad:
+    print("bad chartMarkers:", bad)
+    sys.exit(1)
+PY
+  then
+    err "chartMarkers contains authors other than @InvestNewdeal"
+  else
+    ok "chartMarkers are @InvestNewdeal only"
+  fi
+fi
+
+if [[ -f "$DOC/data/portfolio.json" ]]; then
+  if ! python3 - <<'PY'
+import json, sys
+pf=json.load(open("docs/data/portfolio.json"))
+for f in pf.get("funds") or []:
+    if f.get("id")=="pmindiakk" and (f.get("data") or []):
+        print("pmindiakk still has", len(f["data"]), "series points")
+        sys.exit(1)
+PY
+  then
+    err "pmindiakk still has NAV/price series in portfolio.json"
+  else
+    ok "pmindiakk has no price series in portfolio.json"
+  fi
+fi
+
+if [[ -f "$DOC/js/app.js" ]]; then
+  if ! rg -n "investnewdeal" "$DOC/js/app.js" >/dev/null 2>&1; then
+    err "app.js missing InvestNewdeal chart-marker author filter"
+  else
+    ok "app.js mentions investnewdeal chart filter"
+  fi
+fi
+if [[ -f "$DOC/js/x-feed.js" ]]; then
+  if ! rg -n "houseOnly|isHouse\(p\)" "$DOC/js/x-feed.js" >/dev/null 2>&1; then
+    err "x-feed.js matchPosts missing house-only guard"
+  else
+    ok "x-feed.js has house-only matchPosts guard"
+  fi
+fi
+
 if [[ "$FAIL" -ne 0 ]]; then
   echo "=== PRECHECK FAILED — do not push ===" >&2
   exit 1

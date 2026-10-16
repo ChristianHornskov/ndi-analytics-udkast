@@ -209,7 +209,7 @@ function fundSeg() {
 }
 
 function warnHtml() {
-  return `<p class="warn" role="note">${WARN_HIST}</p>`;
+  return `<p class="eyebrow" style="margin-bottom:6px">MARKEDSFØRINGSMATERIALE</p><p class="warn" role="note">${WARN_HIST}</p>`;
 }
 
 /** Vandret scroll. Hint og fade vises kun, når indholdet er bredere end feltet. */
@@ -271,7 +271,7 @@ function renderEntre(root) {
       <a class="door" href="?view=portefolje&fund=${state.fund}" data-nav="portefolje">
         <span class="door-q">2 · Hvad ejer fonden?</span>
         <strong>Porteføljen</strong>
-        <span>Forsinket snapshot fordelt på NDI-temaer.${nMat ? ` Modenhed: ${nMat} selskaber klassificeret (udkast).` : ' Modenhed er ikke klassificeret endnu.'}</span>
+        <span>Forsinket snapshot fordelt på NDI-temaer.${nMat ? ` Modenhed: ${nMat} selskaber med <span class="badge badge-draft">forslag</span>.` : ' Modenhed er endnu ikke sat (forslag mangler).'}</span>
         <span class="go">Se beholdninger →</span>
       </a>
       <a class="door" href="?view=udforsk&fund=${state.fund}" data-nav="udforsk">
@@ -335,22 +335,19 @@ function renderFonden(root) {
   const posAsOf = fund.positionsAsOf || DATA.portfolio.asOf;
   const nav = lastNav(rows);
 
-  // PMINDIAKK: ingen afkast før 12 mdr. historik
+  // PMINDIAKK: Leo 03:00 — skjul NAV og kursserie indtil 5. dec. 2026
   if (isAkk) {
     root.innerHTML = `
       <a class="back" href="?view=entre&fund=${state.fund}" data-nav="entre">← Entré</a>
-      <p class="eyebrow">FONDEN</p>
+      <p class="eyebrow">FONDEN · MARKEDSFØRINGSMATERIALE</p>
       <h1>${fund.short}</h1>
       <p class="lede">Akkumulerende andelsklasse · ISIN ${fund.isin}</p>
       <div class="toolbar">
         ${fundSeg()}
       </div>
       <section class="panel">
-        <div class="metrics">
-          <div class="metric"><div class="label">Seneste NAV</div><strong>${nav ? nav.price.toFixed(2).replace('.', ',') : '-'}</strong><small>Pr. ${fmtDate(nav?.d)} · DKK</small></div>
-          <div class="metric metric-wide"><div class="label">Afkast</div><strong>Vises efter 12 måneder</strong><small>Klassen har endnu ikke 12 måneders historik</small></div>
-        </div>
-        <p class="band">Afkasthistorik for PMINDIAKK vises, når klassen har 12 måneders historik (fra december 2026). Klassen følger samme overordnede strategi som PMINDI.</p>
+        <p class="band" style="font-size:16px;color:var(--text);line-height:1.55"><strong>Ny andelsklasse, kurs vises efter 12 måneder.</strong></p>
+        <p style="color:var(--muted);line-height:1.55">Kurs og afkast for PMINDIAKK vises fra 5. december 2026. Klassen følger samme overordnede strategi som PMINDI. Der vises ingen NAV og ingen kursserie før da.</p>
         ${warnHtml()}
         <p class="note-fundmarket">Fonden har intet fast benchmark.</p>
       </section>
@@ -403,7 +400,7 @@ function renderFonden(root) {
 
   root.innerHTML = `
     <a class="back" href="?view=entre&fund=${state.fund}" data-nav="entre">← Entré</a>
-    <p class="eyebrow">FONDEN</p>
+    <p class="eyebrow">FONDEN · MARKEDSFØRINGSMATERIALE</p>
     <h1>${fund.short || fund.id.toUpperCase()}</h1>
     <p class="lede">Udloddende andelsklasse. Totalafkast i DKK efter fondens løbende omkostninger, før skat og egne handelsomkostninger. Afkast pr. ${fmtDate(asOfPerf)}. Beholdning nedenfor er et forsinket snapshot, pr. ${fmtDate(posAsOf)}.</p>
     <div class="toolbar">
@@ -414,12 +411,12 @@ function renderFonden(root) {
       <div class="metrics">
         <div class="metric"><div class="label">Totalafkast siden start ${gl('total')}</div><strong>${fmtPct(totAll)}</strong><small>Fra første NAV ${fmtDate(rows[0]?.d)} · DKK</small></div>
         <div class="metric"><div class="label">Gns. årligt afkast (CAGR) ${gl('cagr')}</div><strong>${fmtPct(c)}</strong><small>Efter løbende omkostninger</small></div>
-        <div class="metric"><div class="label">År til dato ${gl('ytd')}</div><strong>${fmtPct(ytd)}</strong><small>Pr. ${fmtDate(asOfPerf)}</small></div>
+        <div class="metric"><div class="label">År til dato ${gl('ytd')}</div><strong>${fmtPct(ytd)}</strong><small>Pr. ${fmtDate(asOfPerf)} · delår, afventer Fundmarket-godkendelse</small></div>
         <div class="metric"><div class="label">Største fald ${gl('drawdown')}</div><strong class="neg">${fmtPct(maxDrawdown(rows)?.dd)}</strong><small><a href="drawdown.html?fund=${state.fund}">Middel/median →</a></small></div>
         <div class="metric"><div class="label">Risikoindikator (KID) ${gl('sri')}</div><strong>5 / 7</strong><small>Anbefalet ejertid 5 år</small></div>
       </div>
       ${warnHtml()}
-      <p class="note-fundmarket">Fonden har intet fast benchmark. Vi tegner ikke en sammenligningskurve (fx Nasdaq) — det er en compliance-beslutning, ikke et datamangel.</p>
+      <p class="note-fundmarket">Fonden har intet fast benchmark.</p>
       <p style="font-size:13px;color:var(--muted);line-height:1.55;margin:8px 0">Sådan kan du selv vurdere afkastet ${fmtPct(totAll)} siden start: se <a href="drawdown.html?fund=${state.fund}">største fald</a> (hvor dybt kurven har dykket), udsvingene på <a href="risici.html#tal">Risici</a>, og om din horisont matcher KID’ets 5 år. Læs også <a href="laer/laes-grafen.html">Sådan læser du grafen</a> og <a href="laer/variance-drag.html">hvad udsving koster</a>. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast.</p>
       <p style="font-size:13px;color:var(--muted);margin:8px 0">Graf: ${periodLabel}</p>
       <div class="chart-wrap" id="perf-chart"></div>
@@ -486,7 +483,14 @@ function renderFonden(root) {
   });
   const xMarks = (DATA.xPosts?.chartMarkers || []).filter((e) => {
     if (!sliced.length) return false;
-    return e.d >= sliced[0].d && e.d <= sliced[sliced.length - 1].d;
+    if (e.d < sliced[0].d || e.d > sliced[sliced.length - 1].d) return false;
+    // Vidensbot 03:00: fondsgrafen må kun vise @InvestNewdeal
+    const title = String(e.title || '');
+    const url = String(e.url || '');
+    const who = ((title.match(/@([A-Za-z0-9_]+)/) || [])[1]
+      || (url.match(/x\.com\/([^/]+)\//) || [])[1]
+      || '').toLowerCase();
+    return who === 'investnewdeal';
   });
   const ddMark = maxDrawdown(sliced);
   const ddEvts = [];
@@ -512,7 +516,7 @@ function renderFonden(root) {
     const xLis = xMarks.map((e) => `<li><strong style="color:var(--text)">${fmtDate(e.d)}</strong>. ${e.title}${e.url ? ` · <a href="${e.url}" rel="noopener" target="_blank">X ↗</a>` : ''}<br><span style="font-size:12px">${e.text || ''}</span></li>`).join('');
     box.innerHTML = `<h2 style="font-size:16px;margin-bottom:8px">Kontekst i perioden</h2>
       ${fundLis ? `<p style="font-size:12px;color:var(--muted);margin-bottom:4px">Dokumenterede fondsbegivenheder</p><ul style="color:var(--muted);line-height:1.55;padding-left:18px">${fundLis}</ul>` : ''}
-      ${xLis ? `<p style="font-size:12px;color:var(--muted);margin:10px 0 4px">Udvalgte offentlige X-opslag — ikke NDI's holdning</p><ul style="color:var(--muted);line-height:1.55;padding-left:18px">${xLis}</ul>` : ''}
+      ${xLis ? `<p style="font-size:12px;color:var(--muted);margin:10px 0 4px">X-opslag fra @InvestNewdeal (fondens konto)</p><ul style="color:var(--muted);line-height:1.55;padding-left:18px">${xLis}</ul>` : ''}
       <p style="font-size:11px;color:var(--muted);margin-top:8px">Grafmarkører: udbytte (gul), drawdown (rød), X (cyan — klik åbner opslaget). <a href="ndi-paa-x.html">NDI på X →</a></p>`;
     $('#perf-chart', root)?.closest('section')?.after(box);
   } else if (ddEvts.length) {
@@ -635,15 +639,15 @@ function renderLivscyklus(fund) {
   const empty = classified === 0;
   const curve = `<div class="life-body">
     <p class="life-intro">Pædagogisk model fra bogen: selskaber bevæger sig typisk fra præ-revenue mod value. Det er <strong>ikke en officiel NDI-rating</strong> og ikke en anbefaling.</p>
-    <div class="life-scroll"><svg class="life-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="Livscykluskurve. ${summary}. ${unknown} ikke klassificeret.">
+    <div class="life-scroll"><svg class="life-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="Livscykluskurve. ${summary}. ${unknown} uden forslag.">
       <path class="life-curve" d="${path}"/>${nodes}
     </svg></div>
     <ol class="life-legend" aria-hidden="true">${stages.map((st) => `<li><strong>${st.label}</strong><span>${byStage[st.id].length || '-'}</span></li>`).join('')}</ol>
   </div>`;
   const nForslag = (fund.positions || []).filter((p) => p.maturityStatus === 'forslag' && byStage[p.maturity]).length;
   const foot = empty
-    ? `Ingen af fondens ${fund.positions.length} selskaber er klassificeret endnu.`
-    : `${classified} af ${fund.positions.length} selskaber er placeret${nForslag ? ` (<span class="badge badge-draft">forslag</span> fra offentlig industri/tema — afventer NDI)` : ' (manuel klassifikation)'}. ${unknown ? unknown + ' mangler.' : ''}`;
+    ? `Ingen af fondens ${fund.positions.length} selskaber har et modenheds<strong>forslag</strong> endnu.`
+    : `${classified} af ${fund.positions.length} selskaber har et modenheds<span class="badge badge-draft">forslag</span> (heuristik — afventer NDI). ${unknown ? unknown + ' uden forslag.' : ''}`;
   return `<section class="panel life-strip${empty ? ' is-empty' : ''}">
     <div class="life-head"><h2>Livscyklus</h2><span class="badge badge-draft" title="Heuristik — afventer NDI">udkast</span></div>
     ${curve}
@@ -917,7 +921,7 @@ function maturityFilterHtml(fund) {
   const n = maturityCounts(fund);
   const total = Object.values(n).reduce((a, b) => a + b, 0);
   if (!total) {
-    return `<p class="mat-pending" style="font-size:12px;color:var(--muted);margin:6px 0">Modenhed (præ-revenue → value): <strong style="color:var(--text)">ikke klassificeret endnu</strong> for nogen af fondens ${fund.positions.length} selskaber, så der er intet modenhedsfilter. <a href="laer/livscyklus.html">Om livscyklus →</a></p>`;
+    return `<p class="mat-pending" style="font-size:12px;color:var(--muted);margin:6px 0">Modenhed (præ-revenue → value): <strong style="color:var(--text)">ingen forslag endnu</strong> for nogen af fondens ${fund.positions.length} selskaber, så der er intet modenhedsfilter. <a href="laer/livscyklus.html">Om livscyklus →</a></p>`;
   }
   const nForslag = (fund.positions || []).filter((p) => p.maturityStatus === 'forslag' && p.maturity in MATURITY_LABELS).length;
   const btns = Object.keys(MATURITY_LABELS).filter((m) => n[m]).map((m) => [m, daMatPlain(m)]).map(([m, label]) =>

@@ -43,7 +43,7 @@
  <a class="back" href="index.html?view=fonden&fund=pmindiakk">← Fonden</a>
  <p class="eyebrow">FONDAFKAST · FALD FRA TOP</p>
  <h1>Fald fra top · ${fund.short}</h1>
- <p class="lede">Fald fra top for PMINDIAKK vises efter 12 måneders historik. Klassen følger samme overordnede strategi som PMINDI.</p>
+ <p class="lede">Ny andelsklasse. Fald fra top for PMINDIAKK vises efter 12 måneders historik. Ingen NAV eller graf før 5. december 2026. Klassen følger samme overordnede strategi som PMINDI.</p>
  ${meta?.funds?.pmindiakk?.priip ? `<p class="src">Risikoindikator (SRI) ${meta.funds.pmindiakk.priip.risk_class} af ${meta.funds.pmindiakk.priip.risk_scale_max} ifølge KID. Gælder fonden som helhed. <a href="${meta.funds.pmindiakk.priip.url}">Læs KID ↗</a></p>` : ''}
  <p class="link-row"><a href="sammenlign.html">Sammenlign andelsklasser →</a></p>
  <p class="warn">${WARN_HIST}</p>`;
@@ -273,8 +273,6 @@
  const longNote = longest && !longest.recoveredD ? 'stadig åben' : 'fra top til genopretning';
  const priip = meta?.funds?.[fund.id]?.priip;
  const sriLine = priip ? `<p class="src">Risikoindikator (SRI) ${priip.risk_class} af ${priip.risk_scale_max} ifølge KID. Gælder fonden som helhed, ikke det enkelte fald. <a href="${priip.url}">Læs KID ↗</a></p>` : '';
- const ytdCaveat = years.some((y) => !y.partial && y.to.slice(5) !== '12-31') ? ' År til dato afventer Fundmarket-godkendelse.' : '';
-
  main.innerHTML = `
  <a class="back" href="index.html?view=fonden&fund=${fundId}">← Fonden</a>
  <p class="eyebrow">FONDAFKAST · FALD FRA TOP</p>
@@ -309,7 +307,8 @@
  <ol class="ep-ledger">${ledger}</ol>
  <h2 class="h-section">Kalenderår</h2>
  <div class="year-rail">${yearCells}</div>
- <p class="src">${yearLine}${openYear && openYear !== deepYear ? ` ${openYear} er året, serien stadig ligger under vand.` : ''} Søjlen er årets afkast.${ytdCaveat}</p>
+ <p class="src">${yearLine}${openYear && openYear !== deepYear ? ` ${openYear} er året, serien stadig ligger under vand.` : ''} Søjlen er årets afkast.</p>
+ <p class="src">ÅTD er et delår og afventer Fundmarket-godkendelse.</p>
  <p class="link-row"><a href="periode.html?fund=${fundId}&year=YTD">År til dato →</a> · <a href="sammenlign.html">Sammenlign andelsklasser →</a> · <a href="om-data.html#g-drawdown">Ordliste: fald fra top</a></p>
  <p class="src">Middel og median er over episoder fra top til bund. De er ikke et gennemsnit af hver dag under vand. Max er det samme tal som største fald på Fonden.</p>
  <p class="warn">${WARN_HIST}</p>`;

@@ -456,6 +456,10 @@ button.legend {
 }
 
 .metric:first-child { grid-row: span 2; justify-content: center; border-top-color: var(--cyan); }
+.metrics-row.is-gated .metrics-grid { grid-template-columns: 1fr; }
+.metrics-row.is-gated .metric:first-child { grid-row: auto; justify-content: flex-start; border-top-color: var(--yellow); }
+.metrics-row.is-gated .metric:not(:first-child) { display: none; }
+.metrics-row.is-gated .metric:first-child strong { font-size: 28px; color: var(--muted); letter-spacing: 0; }
 .metric:nth-child(3) { border-top-color: var(--yellow); }
 .metric-dd { grid-column: 1 / -1; border-top-color: var(--neg); }
 

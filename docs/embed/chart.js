@@ -154,26 +154,33 @@
       const id = FUNDS[state.fund] || 'pmindi';
       dd.href = `../drawdown.html?fund=${id}`;
       dd.textContent = state.fund === 'PMINDIAKK'
-        ? 'Drawdown vises efter 12 måneder →'
+        ? 'Fald fra top vises efter 12 måneder →'
         : 'Se største fald →';
     }
   }
 
   function updateMetrics() {
+    const row = document.querySelector('.metrics-row');
+    const totalLabel = document.querySelector('.metric:first-child .metric-label');
     if (isAkk()) {
+      row?.classList.add('is-gated');
+      if (totalLabel) totalLabel.textContent = 'Kurs og afkast';
       const set = (id, text) => { const el = document.getElementById(id); if (el) el.textContent = text; };
-      set('fund-return', 'Vises efter 12 måneder');
+      set('fund-return', 'Ny andelsklasse, kurs vises efter 12 måneder');
       set('metric-total', '-');
       set('metric-cagr', '-');
       set('metric-ytd', '-');
       set('metric-dd', '-');
       const note = document.getElementById('metric-total-note');
-      if (note) note.textContent = 'Afkast vises efter 12 måneder';
-      set('metric-cagr-note', 'Vises efter 12 måneder');
-      set('metric-ytd-note', 'Vises efter 12 måneder');
-      set('metric-dd-note', 'Vises efter 12 måneder');
+      const gate = 'Ny andelsklasse, kurs vises efter 12 måneder';
+      if (note) note.textContent = gate;
+      set('metric-cagr-note', gate);
+      set('metric-ytd-note', gate);
+      set('metric-dd-note', gate);
       return;
     }
+    row?.classList.remove('is-gated');
+    if (totalLabel) totalLabel.textContent = 'Totalafkast';
 
     const fund = fundRecord();
     const points = fund.data;
@@ -194,7 +201,7 @@
     $('#metric-cagr-note').textContent = annual == null
       ? `Historik ${number.format(years)} år · vises efter ét års data`
       : `${number.format(years)} år siden start`;
-    $('#metric-ytd-note').textContent = `Fra 1. jan. ${last.d.slice(0, 4)} til ${fmtDate(last.d)}. Afventer Fundmarket-godkendelse.`;
+    $('#metric-ytd-note').textContent = `Fra 1. jan. ${last.d.slice(0, 4)} til ${fmtDate(last.d)}. Delår, afventer Fundmarket-godkendelse.`;
     $('#metric-dd-note').textContent = `Bund ${fmtDate(dd.trough)} · fra en top i perioden`;
     $('#metric-cagr').classList.toggle('smaller', annual == null);
   }
@@ -232,11 +239,14 @@
     $('#performance-chart').innerHTML = '';
     $('#chart-readout').textContent = '';
     $('#legend-fund').textContent = state.fund;
-    $('#fund-return').textContent = 'Vises efter 12 måneder';
-    $('#updated').textContent = `Seneste kursdato: ${fmtDate(fund.data.at(-1).d)}`;
-    $('#source-label').textContent = `${fund.short} · første NAV ${fmtDate(fund.inception || fund.data[0].d)}`;
+    $('#fund-return').textContent = 'Ny andelsklasse, kurs vises efter 12 måneder';
+    const started = fund?.inception ? fmtDate(fund.inception) : '';
+    $('#updated').textContent = started
+      ? `Klassen startede ${started}. Kursen vises efter 12 måneder.`
+      : 'Kursen vises efter 12 måneder.';
+    $('#source-label').textContent = `${fund?.short || state.fund} · ingen kurs i grafen endnu`;
     $('#chart-context').hidden = true;
-    $('#chart-pointe').textContent = 'PMINDIAKK: afkast og graf vises, når klassen har 12 måneders historik. Klassen følger samme overordnede strategi som PMINDI.';
+    $('#chart-pointe').textContent = 'Ny andelsklasse, kurs vises efter 12 måneder. Ingen NAV eller graf før 5. december 2026.';
     $('#chart-loading').hidden = true;
     state.series = [];
     state.geometry = null;
@@ -589,9 +599,8 @@
       if (!response.ok) throw new Error('Grafdata kunne ikke indlæses.');
       payload = await response.json();
       if (!payload?.funds?.length) throw new Error('Datasættet er tomt.');
-      for (const fund of payload.funds) {
-        if (!Array.isArray(fund.data) || fund.data.length < 2) throw new Error('Afkastserien er ufuldstændig.');
-      }
+      const pmindi = payload.funds.find((f) => f.id === 'pmindi' || f.short === 'PMINDI');
+      if (!pmindi || lacksReturns(pmindi)) throw new Error('Afkastserien er ufuldstændig.');
       state.ready = true;
       try {
         const metaRes = await fetch(new URL('../data/fund-meta.json', location.href), { cache: 'no-store' });

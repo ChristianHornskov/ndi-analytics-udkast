@@ -1,4 +1,5 @@
 /** NDI Analytics - static data loader (no live pipeline). */
+export const WARN_MARKETING = 'Markedsføringsmateriale.';
 export const WARN_HIST =
   'Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.';
 
@@ -21,7 +22,7 @@ export const THEME_LABELS = {
   energy: 'Energi',
   'energy-resources': 'Energiressourcer',
   quantum: 'Quantum',
-  andet: 'Andet / uklassificeret',
+  andet: 'Andet / uden tema',
 };
 
 let cache = null;
@@ -199,7 +200,7 @@ export function daMatPlain(m) { return MATURITY_PLAIN[m] || daMat(m); }
 
 // Modenhed for ét selskab, ærligt mærket: maskinelt forslag (maturityStatus=forslag) eller manuel klassifikation.
 export function maturityView(p) {
-  if (!(p?.maturity in MATURITY_LABELS)) return { set: false, forslag: false, value: 'Ikke klassificeret', hint: 'NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.' };
+  if (!(p?.maturity in MATURITY_LABELS)) return { set: false, forslag: false, value: 'Intet forslag', hint: 'NDI har endnu ikke sat et modenhedsforslag. Vi gætter ikke.' };
   const forslag = p.maturityStatus === 'forslag';
   return forslag
     ? { set: true, forslag, value: `${daMatPlain(p.maturity)} (forslag)`, hint: 'Maskinelt forslag ud fra offentlig branche og tema. Afventer NDI-gennemgang. Pædagogisk fase, ikke en rating.' }
