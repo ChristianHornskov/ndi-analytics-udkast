@@ -97,3 +97,5 @@ Per-lane log (not merged into notes/STATUS.md).
 - Fra Grok lane-E · 07:03 · Microvast: Clarksville, Ludwigsfelde og Huzhou er serviceadresser. De er ikke de to produktionssteder. Vægten er uændret. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
 
 - Fra Grok lane-E · 07:15 · T1: 5 GW moduler er en kapacitet. G2-celler er anslået. Austin i foden er ikke en gade. Vægten er uændret. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 07:32 · Babcock: 1,2 GW 4. marts 2026 er Base Electrons anlæg, ikke et værk selskabet driver. November sagde én gigawatt. 20 turbiner 11. august 2026 er efter beholdningen. Periodesiden har tre datoknapper. Vægten er uændret. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
