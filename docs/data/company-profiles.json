@@ -1266,6 +1266,74 @@
     }
    ]
   },
+  "US65290E1010": {
+   "name": "Nextracker",
+   "theme": "energy",
+   "summary": "Laver soltrackere, effektelektronik og styringssoftware til store solparker. Beholdningen pr. 1. juni 2026 står under navnet Nextracker. Investorkontoret, læst 16. oktober 2026, skriver, at selskabet nu hedder Nextpower. Siden daterer ikke navneskiftet. Hovedkontoret ligger i Fremont i Californien. Det er udstyr, ikke et kraftværk.",
+   "watch": "Om siden senere daterer navneskiftet fra Nextracker til Nextpower. Denne tekst har ikke den dato.",
+   "source": "https://investors.nextpower.com/",
+   "products": "Soltrackere, effektelektronik og styringssoftware. Ikke et kraftværk.",
+   "customers": "Teksten nævner ikke en navngiven solpark.",
+   "role": "Udstyr til store solparker. Ikke et elselskab.",
+   "narrative": [
+    "Nextracker står i beholdningen pr. 1. juni 2026 under det navn. Investorkontoret, læst 16. oktober 2026, skriver, at selskabet tidligere hed Nextracker, og at det nu hedder Nextpower. Siden daterer ikke navneskiftet. Hovedkontoret ligger på 6200 Paseo Padre Pkwy i Fremont i Californien. Ticker er NXT.",
+    "Samme side skriver, at selskabet laver soltrackere, effektelektronik og styringssoftware. Det er udstyr til store solparker, ikke et kraftværk. Omsætning og andre beløb på siden er ikke taget med."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Investorkontor",
+     "url": "https://investors.nextpower.com/"
+    }
+   ]
+  },
+  "US04271T1007": {
+   "name": "Array Technologies",
+   "theme": "energy",
+   "summary": "Laver stativer, der drejer solpaneler i store solparker, og softwaren SmarTrack. Produkterne omfatter DuraTrack, STI H250 og OmniTrack. Adressen er i Albuquerque i New Mexico. Selskabet skriver, at det købte STI Norland i januar 2022. Det er udstyr, ikke et kraftværk.",
+   "watch": "Hvad der er stativer i drift, og hvad der er software ovenpå. Købet af STI Norland er januar 2022, før beholdningen.",
+   "source": "https://arraytechinc.com/about-us/our-story/",
+   "products": "DuraTrack, STI H250, OmniTrack og SmarTrack. Ikke et kraftværk.",
+   "customers": "Kunder til store solparker. Teksten nævner ikke en navngiven park.",
+   "role": "Stativer. Ikke et elselskab.",
+   "narrative": [
+    "Array Technologies skriver, at det laver stativer til store solparker. Produkterne på siden er DuraTrack, STI H250 og OmniTrack. SmarTrack er en dataplatform til samme anlæg. Adressen er 701 Atrisco Vista Blvd i Albuquerque i New Mexico. Siden skriver, at selskabets historie er over 30 år, og at produktionen begyndte i USA.",
+    "Selskabet skriver, at det købte STI Norland i januar 2022. Siden siger, at der derefter var produktion, design og ingeniørarbejde på tre kontinenter. Ordene largest og leading er ikke taget med. Det er udstyr, ikke et kraftværk."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Historie",
+     "url": "https://arraytechinc.com/about-us/our-story/"
+    },
+    {
+     "label": "DuraTrack",
+     "url": "https://arraytechinc.com/products/duratrack/"
+    }
+   ]
+  },
+  "CA0585861085": {
+   "name": "Ballard Power Systems",
+   "theme": "energy",
+   "summary": "Laver brændselsceller. Hovedkontoret ligger i Burnaby i Canada, og der er fabrik i Bend i Oregon. FCmove er moduler til køretøjer. FCwave er et skab til skibe og stationær brug. FCgen er stakke. GeoPura HPU er en generator på brint. Over 1,6 GW er en kapacitet, ikke et målt år. Det er ikke et kraftværk.",
+   "watch": "Om 1,6 GW er kapacitet eller et målt år. Siden skriver, at anlæggene kan lave den mængde. Den skriver ikke et års produktion.",
+   "source": "https://www.ballard.com/our-company/",
+   "products": "FCmove, FCwave, FCgen og GeoPura HPU. Ikke et kraftværk.",
+   "customers": "Siden nævner busser, lastbiler, skibe, tog og reservekraft. Den nævner ikke en navngiven kunde.",
+   "role": "Brændselsceller. Ikke et elselskab.",
+   "narrative": [
+    "Ballard skriver, at hovedkontoret ligger i Burnaby i Canada, og at anlæg i Nordamerika og Europa dækker over 22.000 m². Der er også fabrik i Bend i Oregon. Siden skriver, at anlæggene kan lave over 1,6 GW MEA og brændselscellestakke. Det er en kapacitet, ikke et målt år. Siden skriver også, at der til dato er leveret brændselscelleprodukter for 1,3 GW. Det er ikke et enkelt år. Priser på siden er ikke taget med.",
+    "FCmove er moduler til tunge køretøjer. FCwave er et skab til skibe og stationær brug. FCgen er PEM-stakke til køretøjer og stationær brug. GeoPura HPU er en generator på brint. Siden nævner busser, lastbiler, skibe, tog, kraftproduktion og materiel. Det er ikke et kraftværk."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabet",
+     "url": "https://www.ballard.com/our-company/"
+    },
+    {
+     "label": "Produkter",
+     "url": "https://www.ballard.com/"
+    }
+   ]
+  },
   "CA64046G1063": {
    "name": "Neo Performance Materials",
    "theme": "energy-resources",
