@@ -9,10 +9,23 @@
   .period-span .track{position:relative;height:14px;border-radius:7px;background:#0b171d;border:1px solid var(--line);margin:12px 0 6px}
   .period-span .mark{position:absolute;top:0;bottom:0;border-radius:7px;background:var(--cyan)}
   .period-span .scale{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin:0}
+  .period-pair .pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px}
+  .period-pair .pair-card{border:1px solid var(--line);border-radius:8px;padding:12px}
+  .period-pair .pair-card.is-on{border-color:var(--cyan)}
+  .period-pair .pair-name{margin:4px 0;font-weight:600;color:var(--text)}
+  .period-pair .pair-pct{margin:0;font-size:22px}
+  .period-pair .pair-card .pair-pct.pos{color:var(--pos-ink)}
+  .period-pair .pair-card .pair-pct.neg{color:var(--neg-ink)}
+  .period-pair .pair-when{margin:4px 0 8px;color:var(--muted);font-size:13px}
+  .period-pair .pair-card p{color:var(--muted);font-size:13px;line-height:1.5;margin:0}
+  @media (max-width:640px){
+   .period-pair .pair{grid-template-columns:1fr}
+  }
   @media print {
-   .period-span{break-inside:avoid}
+   .period-span,.period-pair{break-inside:avoid}
    .period-span .track{background:#eee;border-color:#333}
    .period-span .mark{background:#333}
+   .period-pair .pair-card{border-color:#333}
    .site-footer{color:#111}
   }
  </style>
@@ -97,6 +110,26 @@
  if (row) { label = row.year + (row.partial?' (delår)':''); pct = row.ret; from = row.from; to = row.to; }
  }
  const firstNav = fund.data[0].d;
+ const lastNav = fund.data[fund.data.length - 1].d;
+ const annual = cagr(fund.data);
+ const onSeries = year === 'all' || year === 'start';
+ function periodPair() {
+  if (pct == null || !from || !to || annual == null) return '';
+  const seriesHref = `periode.html?fund=${fundId}&year=all`;
+  const ytdHref = `periode.html?fund=${fundId}&year=YTD`;
+  const leftName = onSeries ? 'Siden første NAV, samlet' : label;
+  const leftText = onSeries
+   ? 'Det er afkastet fra første NAV til sidste punkt i serien. Det er ikke et gennemsnit pr. år.'
+   : 'Det er afkastet i den valgte periode. Det er ikke et gennemsnit pr. år, og det er ikke hele serien.';
+  const rightText = 'Gennemsnittet pr. år bruger hele serien, fra første NAV til sidste punkt. Tallet skifter ikke, når du vælger et enkelt år eller år til dato. Det er ikke den valgte periode omregnet til et helt år.';
+  const leftLink = onSeries
+   ? `<p style="margin-top:8px"><a href="${ytdHref}">Vis år til dato</a></p>`
+   : '';
+  const rightLink = onSeries
+   ? ''
+   : `<p style="margin-top:8px"><a href="${seriesHref}">Vis siden første NAV</a></p>`;
+  return `<section class="panel period-pair" aria-label="To tal og to perioder"><h2 style="font-size:16px;margin-bottom:8px">To tal, to perioder</h2><p style="color:var(--muted);line-height:1.6;margin:0">Kortene er fondens tal. Det venstre følger den periode, siden viser. Det højre er et gennemsnit pr. år for hele serien. De er ikke det samme tal, og ingen af dem siger noget om det næste år.</p><div class="pair"><article class="pair-card is-on"><p class="eyebrow" style="margin:0">Valgt periode</p><p class="pair-name">${leftName}</p><p class="pair-pct ${(pct || 0) >= 0 ? 'pos' : 'neg'}">${fmtPct(pct)}</p><p class="pair-when">${fmtDate(from)} → ${fmtDate(to)}</p><p>${leftText}</p>${leftLink}</article><article class="pair-card"><p class="eyebrow" style="margin:0">Hele serien</p><p class="pair-name">Gennemsnit pr. år siden første NAV</p><p class="pair-pct ${annual >= 0 ? 'pos' : 'neg'}">${fmtPct(annual)}</p><p class="pair-when">${fmtDate(firstNav)} → ${fmtDate(lastNav)}</p><p>${rightText}</p>${rightLink}</article></div></section>`;
+ }
  const chips = [
  `<a class="tag" href="periode.html?fund=${fundId}&year=all">Siden første NAV: ${fmtPct(periodReturn(fund.data))}</a>`,
  `<a class="tag" href="periode.html?fund=${fundId}&year=YTD">År til dato: ${fmtPct(ytd)}</a>`,
@@ -105,15 +138,16 @@
  document.title = `${label} · ${fund.short} · NDI`;
  document.getElementById('main').innerHTML = `
  <a class="back" href="index.html?view=fonden&fund=${fundId}&periode=${year==='YTD'?'ytd':year==='all'?'all':'year:'+year}">← Fonden</a>
- <p class="eyebrow">PERIODE · DYB SIDE</p>
+ <p class="eyebrow">PERIODE</p>
  <h1>${fund.short} · ${label}</h1>
  <div class="kpi-grid">
  <div class="kpi"><span class="label">Afkast</span><strong class="${(pct||0)>=0?'pos':'neg'}">${fmtPct(pct)}</strong></div>
  <div class="kpi"><span class="label">Fra → til</span><strong style="font-size:16px">${fmtDate(from)} → ${fmtDate(to)}</strong></div>
  <div class="kpi"><span class="label">Gennemsnitligt årligt afkast siden ${fmtDate(firstNav)}</span><strong>${fmtPct(cagr(fund.data))}</strong></div>
  </div>
- <p class="band">År til dato afventer Fundmarket-godkendelse. Tallet er ikke et helt års afkast.</p>
+ ${(year === 'YTD' || year === 'ytd') ? '<p class="band">År til dato afventer Fundmarket-godkendelse. Tallet er ikke et helt års afkast.</p>' : ''}
  ${periodSpan(from, to, year)}
+ ${periodPair()}
  ${sriHtml}
  <section class="panel">
  <h2 style="font-size:16px;margin-bottom:8px">Kontekst</h2>
