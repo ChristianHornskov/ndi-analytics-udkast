@@ -388,3 +388,7 @@ Ny form i embed, under udlæsningen. En streg med stop. Afstanden er tiden. Star
 ### Update · hele forløbet · 2026-10-16 ~07:28 CEST
 
 Ny form på drawdown, over de tre tidspunkter. Fire streger på én linje. Bredden er tiden fra 22. sep. 2023 til 14. okt. 2026. Den åbne er gul. Et klik hopper til bunden. Sætningen siger −26,8 % for den åbne, og −16,7 %, −35,8 % og −26,6 % for de lukkede. De tre tidspunkter følger med. På 300 px er hver streg mindst 44 px. Ingen sidescroll. Ingen konsolfejl. PMINDIAKK har ingen linje og ingen procent.
+
+### Update · KID-tallet · 2026-10-16 ~07:32 CEST
+
+KID-parret på sammenlign kan vælges. PMINDI er ca. 2,79 %. PMINDIAKK er ca. 2,85 %. Sætningen nævner klassen. For PMINDIAKK står også, at kursen vises efter 12 måneder, fra 5. dec. 2026. Den valgte har en gul streg. Knapperne er over 44 px. Ingen sidescroll ved 300–1100. Ingen konsolfejl. På papir bliver begge tal.
