@@ -69,10 +69,16 @@ merge_lane() {
     echo "COORD-HOLD present — skip merge $branch"
     return 0
   fi
-  if ! git diff --quiet || ! git diff --cached --quiet; then
-    echo "dirty tree — skip merge $branch (will not stash over WIP)"
-    log_status "SKIP origin/$branch — dirty working tree (no auto-stash)"
-    return 0
+  # Never let a dirty tree block merges: auto-commit notes/ WIP, stash the rest.
+  if ! git diff --quiet || ! git diff --cached --quiet || [ -n "$(git ls-files --others --exclude-standard)" ]; then
+    echo "dirty tree — auto-commit notes/ then stash remainder"
+    git add notes/ 2>/dev/null || true
+    if ! git diff --cached --quiet; then
+      git commit -m "notes: coordinator auto-commit before merge $(date +%H:%M)" 2>/dev/null || true
+    fi
+    if ! git diff --quiet || ! git diff --cached --quiet || [ -n "$(git ls-files --others --exclude-standard)" ]; then
+      git stash push -u -m "coordinator-loop auto-stash $(date +%s)" || true
+    fi
   fi
 
   # Record tip before merge for revert
