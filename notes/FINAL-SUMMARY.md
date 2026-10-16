@@ -26,7 +26,7 @@ Static Danish site (`docs/`, GitHub Pages) for NewDeal Invest PMINDI / PMINDIAKK
 
 ## Tests
 - `scripts/precheck.sh` (run before every push): data cutoffs, no per-stock fields, X compliance (house-only, @InvestNewdeal markers, no $PMINDI holdings, no 13 Aug ticker post), AKK no series, Danish maturity labels, no internal agent comments in docs/.
-- `scripts/smoke.mjs`: 27 URLs × 1280/375 + Nasdaq on/off and rolling/top-5 checks at both widths = 58 checks — HTTP 200, no JS errors, no advice wording, no notes leak, Markedsføring+KID footer. Last: 58/0 (07:58). Precheck now allows Nasdaq only with the exact label, off by default, and never called a benchmark.
+- `scripts/smoke.mjs`: 27 URLs × 1280/375 + Nasdaq on/off and rolling/top-5 checks at both widths = 58 checks — HTTP 200, no JS errors, no advice wording, no notes leak, Markedsføring+KID footer. Last: 59/0 (08:20). Precheck now allows Nasdaq only with the exact label, off by default, and never called a benchmark.
 - `scripts/jargon-sweep.mjs`: rendered-text scan for internal jargon. Clean (only glossary/NDI's own "Flodsystem").
 
 ## Open questions – Christian
@@ -52,3 +52,9 @@ _Updated 2026-10-16 07:21 CEST — HEAD 160de10_
 - 07:53 (Leo 07:50): (5) rolling 12-month total return, (6) table of the 5 deepest drawdowns (peak/trough/recovered), (7) staleness warning when return data is >3 days old [4b67fa6]. Generator: `scripts/build-nasdaq-compare.py`. HANDOFF-CODEX updated.
 - Deliberately left out (needs a decision): 1 md/3 mdr, the "100.000 kr." illustration, 52-week highs.
 - Show URL: https://christianhornskov.github.io/ndi-analytics-udkast/?view=fonden&cmp=nasdaq
+
+## UX 08:00 fixes (allowed despite freeze) [dce1a0e]
+- MUST 1 Udforsk mobile: the intro, info box and copy/CSV buttons moved into "Om listen" below the list. The first result ends at 763 px on a 375×812 screen.
+- MUST 2 Fonden mobile chart: the viewBox now matches the real width, so the chart is 305×240 px with 11 px axis text. The Nasdaq line is stronger (orange #f0b45a, 2,6 px, dashed). End labels read "Fonden +104,8 %" / "Nasdaq +94,5 %" (desktop: "Nasdaq-100").
+- SHOULD: cmp/visning only go into the URL on Fonden, so the Entré link stays clean. "Dyb →" is now "Se året i detaljer".
+- Smoke regression added (ux-0800-mobile). Freeze from 08:20.

@@ -77,6 +77,17 @@ for (const width of [1280, 375]) {
   const ddN = await pg.locator('#rullende-og-nedture tbody tr').count();
   const r12 = await pg.locator('#rullende-og-nedture .r12 path.fund').count();
   results.push({ width, path: 'rolling12+top5dd', status: 200, err: (ddN === 5 && r12 === 1) ? '' : `dd rows=${ddN} r12=${r12}`, footerOk: true });
+  if (width === 375) {
+    await pg.goto(BASE + '/?view=fonden&cmp=nasdaq', { waitUntil: 'networkidle' });
+    await pg.waitForSelector('#perf-chart .end-cmp', { timeout: 5000 }).catch(() => {});
+    const chartH = await pg.evaluate(() => document.querySelector('#perf-chart svg')?.getBoundingClientRect().height || 0);
+    const ends = await pg.locator('#perf-chart .end-fund, #perf-chart .end-cmp').count();
+    const backHref = await pg.locator('a.back').first().getAttribute('href');
+    await pg.goto(BASE + '/?view=udforsk', { waitUntil: 'networkidle' });
+    const rowBottom = await pg.evaluate(() => document.querySelector('table tbody tr')?.getBoundingClientRect().bottom || 9999);
+    const okM = chartH >= 220 && ends === 2 && !/cmp=/.test(backHref || '') && rowBottom <= 812;
+    results.push({ width, path: 'ux-0800-mobile', status: 200, err: okM ? '' : `chartH=${chartH} ends=${ends} back=${backHref} udforskRow=${rowBottom}`, footerOk: true });
+  }
   results.push({ width, path: 'nasdaq-compare', status: 200, err: ok ? '' : `nasdaq: off=${offCmp} on=${onCmp} labelVisible=${labelVisible} label="${label.trim()}"`, footerOk: true });
   await ctx.close();
 }
