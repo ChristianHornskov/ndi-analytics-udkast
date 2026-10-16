@@ -105,3 +105,5 @@ Per-lane log (not merged into notes/STATUS.md).
 - Fra Grok lane-E · 07:45 · Terra Innovatum: forsiden skriver både 5 MW og 4 MW termisk. 2028 er en plan, der kræver godkendelse. Arkivet har et kort med tre led. Vægten er uændret. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
 
 - Fra Grok lane-E · 07:48 · Solaris: stiftet 2014. Elnet er fordeling. GESA 6. juli 2026 er service og ligger efter beholdningen. Arkivet har to kort for de to led. Vægten er uændret. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 07:50 · Redwire: 43 PIL-BOX er 11. marts 2026. 54 er efter hjemkomst 17. juni 2026. Jacksonville er på jorden. Ikke et datacenter. Vægten er uændret. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
