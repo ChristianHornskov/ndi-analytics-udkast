@@ -2404,6 +2404,50 @@
      "url": "https://corporate.solaredge.com/en"
     }
    ]
+  },
+  "US78397Q1094": {
+   "name": "SES AI",
+   "theme": "energy",
+   "summary": "Udvikler litium-metal-batterier og materialer. Hovedkontoret ligger i Woburn i Massachusetts. Anlægget i Shanghai er pilotskala og blev færdigt i 2023. Chungju i Sydkorea er et supplement. Teksten siger ikke, at produktionen er et målt år. Det er ikke et lager i drift.",
+   "watch": "Om pilotskala i Shanghai bliver læst som et målt år. Siden daterer ikke et års tal for celler på 50 Ah og 100 Ah.",
+   "source": "https://www.ses.ai/about",
+   "products": "Litium-metal-celler og elektrolyt. Også en platform til materialer. Ikke et kraftværk.",
+   "customers": "Siden nævner biler, byluftfart og droner. Den nævner ikke en navngiven leverance med et tal.",
+   "role": "Celler. Shanghai er pilotskala. Ikke et lager i drift.",
+   "narrative": [
+    "SES AI skriver, at selskabet er stiftet i 2012, og at det er noteret på NYSE under SES. Hovedkontoret ligger på 35 Cabot Road i Woburn i Massachusetts. Siden skriver, at arbejdet dér er forskning, Molecular Universe og en elektrolytfabrik i lille skala. Selskabet nævner også drift i Shanghai og Seoul.",
+    "Anlægget SES Shanghai Giga i Jiading blev færdigt i 2023. Det er sat til 300.000 kvadratfod. Adressen er 1699 Fuhai Road. Siden kalder det pilotskala for litium-metal-celler og materialer. Chungju ligger på 117-12 Megapolliseu 1-ro i Daesowon-myeon. Siden skriver, at anlægget er et supplement i produktionen af celler på 50 Ah og 100 Ah. Teksten siger ikke, at det er et målt år. Ordene largest og most advanced er ikke taget med. Det er ikke et lager i drift."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Om selskabet",
+     "url": "https://www.ses.ai/about"
+    },
+    {
+     "label": "Kontakt",
+     "url": "https://www.ses.ai/contact-us"
+    }
+   ]
+  },
+  "US2935941078": {
+   "name": "Enovix",
+   "theme": "energy",
+   "summary": "Laver litium-ion-celler med siliciumanode, blandet silicium og grafit. Stiftet i Silicon Valley i 2007. Fabrikker står i Sydkorea og i Malaysia. USA er hovedkontor og udvikling. Det er ikke et lager i drift.",
+   "watch": "Om Fab2 bliver læst som et målt år. Siden kalder det høj volumen, og linjerne er tegnet til at kunne skaleres. Punkterne for 2026 har kun årstal.",
+   "source": "https://www.enovix.com/about",
+   "products": "Celler med siliciumanode og celler med blandet silicium og grafit. Ikke et kraftværk.",
+   "customers": "Siden nævner forbrugerelektronik, droner og industri. Den nævner ikke en navngiven leverance med et tal.",
+   "role": "Battericeller. Fabrikkerne er ikke i USA. Ikke et lager i drift.",
+   "narrative": [
+    "Enovix skriver, at selskabet er stiftet i Silicon Valley i 2007, og at arkitekturen med siliciumanode i tre dimensioner er fra 2012. Selskabet blev noteret på NASDAQ i 2021 under ENVX. De første kommercielle forsendelser til bærbart udstyr er sat til 2022. Routejade, med batteriproduktion i Sydkorea, blev købt i 2023. Fab2 i Malaysia åbnede i 2024.",
+    "Siden kalder USA hovedkontor og udviklingssted. Sydkorea er fremstilling af blandet silicium og grafit, med coating af elektroder og celler, på flere anlæg, selskabet ejer. Fab2 i Malaysia er skrevet som et anlæg med høj volumen til siliciumanoder. Linjerne er tegnet til at kunne skaleres. Det er ikke et målt år. En gadeadresse stod ikke på de læste sider og er ikke opfundet. Punkterne for 2026, herunder MX og den første forsendelse af AI-1-celler, har kun årstal. Teksten siger ikke, at de ligger før beholdningen pr. 1. juni 2026. En fordobling af kapaciteten i 2027 er en plan."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Om selskabet",
+     "url": "https://www.enovix.com/about"
+    }
+   ]
   }
  },
  "media": [
