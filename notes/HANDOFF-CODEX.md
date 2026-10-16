@@ -191,6 +191,7 @@ Fællesprospektet (opdateret 24.10.2025) nævner under NewDeal Invest KL kun and
 - `ndi-perspektiv.html`: livscyklus beskrives som et maskinelt forslag, der afventer NDI. «Til value» er ændret til «til moden».
 - `invester.html` trin 4: omkostningsafsnittet læses roligere. `risici.html`: CAGR linker til ordlisten. `kort.html`: Idéer-døren er opdateret.
 - Demo-tallene ovenfor er tjekket mod siderne kl. 06:00: lær 19 døre, NDI-perspektiv 333, FAQ 27, ordliste 151, ideer 13 foldede på mobil.
+- **Efter main 06:31** (danske modenhedsnavne, Udforsk-overskrift): *Livscyklus* (lær) bruger nu de samme fem navne i skitsen som Udforsk-filteret. Ordlisten fører med «Udforsk (screener)». `ndi-perspektiv.html` viser rensede navne (SiTime, IQE, Wix.com …) via sidens `displayName()`, og selskabslinks er nu 24 px høje. Demo-trin 3 og 5 er rettet. Tal i ideer er gentjekket mod portfolio.json.
 
 **Skal tjekkes før live:** Amazon-tallene fra 10-K 2024 (se VIDENSBOT-live-check) og årstallene på tidslinjen.
 
