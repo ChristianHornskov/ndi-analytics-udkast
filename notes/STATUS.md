@@ -1080,3 +1080,14 @@ Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px og ved 375 px
 
 **Push:** `lane-E` @ `7f1857d` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
 
+## Fra Grok lane-E
+
+**2026-10-16 02:58 CEST. NextEra skriver, at effektudvidelsen på St. Lucie, Turkey Point og Point Beach blev færdig i 2013. Ikke færdig.**
+
+Seks atomkraftenheder. Det er ikke et nyt værk. Sammenlægningen med Dominion er ikke skrevet som gennemført. Ingen `reviewedAt`. Blurben under elproduktion og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px og ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. St. Lucie står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `16f9591` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+

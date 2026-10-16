@@ -282,6 +282,10 @@ St. Gabriel i Louisiana er flydende brint sammen med Olin gennem Hidrogenii. Kom
 
 Aftalen af 1. april 2025 siger, at Bloom og Conagra vil bruge brændselsceller på Conagras fabrikker i Troy og Archbold i Ohio. Før beholdningen. Ikke skrevet som celler, der allerede kører. Ikke et klassisk kraftværk. Megawatt, kapitalramme, leader og leading er ikke kopieret. AI-udkast uden gennemgangsdato. Elproduktions-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
 
+## NextEra · 2026-10-16 02:58 CEST
+
+Om-siden har overskriften 2013 og skriver, at effektudvidelsen på St. Lucie, Turkey Point og Point Beach omfattede seks atomkraftenheder. Før beholdningen. Ikke et nyt værk. Ikke en lille reaktor under udvikling. Florida Power & Light har mere end 6 millioner tilslutninger. Forsiden siger, at sammenlægningen med Dominion ikke er gennemført i teksten. Largest, industry-leading, multi-billion og U.S. history er ikke kopieret. Overskrifter om Google Cloud, Meta og Symmetry er ikke brugt. AI-udkast uden gennemgangsdato. Elproduktions-blurben og arkivet siger grænsen. Vægten 0,39 er uændret. Chromium ved 375 px. Kæden er også tjekket ved 1280 px og ved 375 px. "tjekket mod kilden" er ikke med. St. Lucie står. Ingen konsolfejl. Ingen vandret scroll.
+
 ## MP Materials · 2026-10-16 02:57 CEST
 
 Anlægssiden skriver, at Mountain Pass Mine and Processing Facility ligger på 67750 Bailey Road i Mountain Pass i Californien, og at Independence Magnet Manufacturing Facility ligger på 13840 Independence Parkway i Fort Worth i Texas. Hovedsædet i Las Vegas er ikke minen. Om-siden skriver, at Mountain Pass blev genstartet i 2017. Før beholdningen. Siderne daterer ikke en mængde. Ikke et chipværk. Only, champion, world's richest, world's strongest, unmatched, leadership og full supply chain er ikke kopieret. AI-udkast uden gennemgangsdato. Råstof-blurben og arkivet siger grænsen. Vægten 0,26 er uændret. Chromium ved 375 px. Kæden er også tjekket ved 1280 px og ved 375 px. "tjekket mod kilden" er ikke med. Fort Worth står. Ingen konsolfejl. Ingen vandret scroll.

@@ -509,19 +509,23 @@
   "US65339F1012": {
    "name": "NextEra Energy",
    "theme": "energy",
-   "summary": "Amerikansk energikoncern med regulerede elselskaber og elproduktion fra blandt andet sol, vind, gas og atomkraft.",
-   "watch": "Tilladelser, nettilslutning, brændsel og udbygning af ny produktion.",
-   "source": "https://www.nexteraenergy.com/",
-   "products": "El til kunder i regulerede områder og strøm fra egne anlæg.",
-   "customers": "Husholdninger, virksomheder og aftagere af strøm.",
-   "role": "Elproduktion og distribution i den klassiske energikæde.",
+   "summary": "Elselskab med atomkraft, gas, sol og vind. Selskabet skriver, at en effektudvidelse på St. Lucie, Turkey Point og Point Beach blev færdig i 2013. Det er ikke et nyt værk.",
+   "watch": "Om sammenlægningen med Dominion bliver gennemført. Teksten siger ikke, at den er sket. Udvidelsen i 2013 er ikke et nyt værk.",
+   "source": "https://www.nexteraenergy.com/about-us.html",
+   "products": "El fra blandt andet St. Lucie, Turkey Point og Point Beach. Udvidelsen i 2013 er ikke et nyt værk.",
+   "customers": "Husholdninger og virksomheder, herunder Florida Power & Light. Teksten nævner mere end 6 millioner tilslutninger.",
+   "role": "Eksisterende elproduktion. Udvidelsen i 2013 er ikke et nyt værk.",
    "narrative": [
-    "NextEra Energy ejer Florida Power & Light, som leverer el i Florida. Selskabet skriver, at Florida Power & Light har mere end 6 millioner tilslutninger.",
-    "Koncernen producerer også selv strøm fra sol, vind, gas og atomkraft i drift. Derfor står den på elproduktion og ikke som udvikler af små reaktorer. Temaet i snapshottet er et forslag. Forsiden skriver, at NextEra og Dominion Energy skal lægges sammen. Teksten siger ikke, at sammenlægningen er gennemført."
+    "NextEra skriver, at en effektudvidelse på atomkraftværkerne St. Lucie, Turkey Point og Point Beach blev færdig i 2013 og omfattede seks enheder. Datoen ligger før beholdningen pr. 1. juni 2026. Det er en udvidelse af eksisterende enheder, ikke et nyt værk. Selskabet skriver også, at Florida Power & Light har mere end 6 millioner tilslutninger.",
+    "Koncernen producerer strøm fra sol, vind, gas og atomkraft. Derfor står den på elproduktion og ikke som udvikler af små reaktorer. Temaet i snapshottet er et forslag. Forsiden skriver, at NextEra og Dominion Energy skal lægges sammen. Teksten siger ikke, at sammenlægningen er gennemført."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets side",
+     "label": "Om selskabet, 2013",
+     "url": "https://www.nexteraenergy.com/about-us.html"
+    },
+    {
+     "label": "Selskabets forside",
      "url": "https://www.nexteraenergy.com/"
     }
    ]
