@@ -251,8 +251,8 @@
 
     const direction = verbFor(periodReturn);
     const pointe = periodReturn === 0 || Math.abs(periodReturn) < 0.05
-      ? `${state.fund} er ${direction} fra ${fmtDate(first.date)} til ${fmtDate(last.date)}, pr. ${fmtDate(last.date)}.`
-      : `${state.fund} er ${direction} ${pct(Math.abs(periodReturn))} fra ${fmtDate(first.date)} til ${fmtDate(last.date)}, pr. ${fmtDate(last.date)}.`;
+      ? `${state.fund} er ${direction} fra ${fmtDate(first.date)} til ${fmtDate(last.date)}.`
+      : `${state.fund} er ${direction} ${pct(Math.abs(periodReturn))} fra ${fmtDate(first.date)} til ${fmtDate(last.date)}.`;
     $('#chart-pointe').textContent = pointe;
 
     const svg = $('#performance-chart');
@@ -284,9 +284,9 @@
     for (let tick = lower; tick <= upper + step / 2; tick += step) {
       const pos = y(tick);
       const text = Number.isInteger(tick) ? String(tick) : number.format(tick);
-      const zero = Math.abs(tick) < 0.001 ? ' zero-line' : '';
-      parts.push(`<line class="axis-grid${zero}" x1="${left}" x2="${width - right}" y1="${pos}" y2="${pos}"/>`);
-      parts.push(`<text x="${left - 10}" y="${pos + 4}" text-anchor="end" style="font-size:${mobile ? 10 : Math.max(10, width / 78)}px">${text} %</text>`);
+      const zero = Math.abs(tick) < 0.001;
+      parts.push(`<line class="axis-grid${zero ? ' zero-line' : ''}" x1="${left}" x2="${width - right}" y1="${pos}" y2="${pos}"/>`);
+      parts.push(`<text${zero ? ' class="zero-tick"' : ''} x="${left - 10}" y="${pos + 4}" text-anchor="end" style="font-size:${mobile ? 10 : Math.max(10, width / 78)}px">${text} %</text>`);
     }
 
     const tickCount = mobile ? 3 : 5;

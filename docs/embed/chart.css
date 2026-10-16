@@ -147,8 +147,13 @@ b, strong { font-weight: 700; }
   box-shadow: inset 0 0 0 1px #8ba8b11a;
 }
 
+.class-card { position: relative; padding-right: 108px; }
 .class-card.selected { background: var(--selected); }
 .class-card:hover { border-color: var(--cyan); background: #203941; }
+.class-mark { position: absolute; right: 14px; top: 50%; width: 78px; height: 28px; transform: translateY(-50%); pointer-events: none; }
+.class-card[data-fund="PMINDI"] .class-mark { color: var(--brand); }
+.class-card[data-fund="PMINDIAKK"] .class-mark { color: var(--cyan); }
+.class-mark rect, .class-mark path { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linejoin: round; stroke-linecap: round; }
 
 .class-title {
   font-size: 16px;
@@ -283,10 +288,15 @@ button.legend {
 }
 
 .chart-container .zero-line {
-  stroke: #78949b;
-  stroke-width: .8;
-  stroke-dasharray: 4 4;
-  opacity: .65;
+  stroke: var(--brand);
+  stroke-width: 2;
+  opacity: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+.chart-container text.zero-tick {
+  fill: var(--brand);
+  font-weight: 700;
 }
 
 .chart-container .fund-path {
@@ -559,7 +569,8 @@ button.legend {
   .data-source { justify-content: flex-start; }
 
   .class-options { grid-template-columns: 1fr; gap: 8px; }
-  .class-card { min-height: 0; padding: 13px 14px; }
+  .class-card { min-height: 0; padding: 13px 96px 13px 14px; }
+  .class-mark { width: 70px; right: 12px; }
 
   .chart-toolbar {
     flex-wrap: wrap;
