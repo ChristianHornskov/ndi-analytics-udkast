@@ -86,8 +86,9 @@
   .risk-metrics .metric:first-child{border-left:0;padding-left:0}
   .risk-official{border:1px dashed #89aeb488;border-radius:14px;padding:14px;background:#0b171d;min-width:0}
   .risk-official .label{font-size:11px;color:var(--muted);margin-bottom:8px}
-  .dd-track{height:12px;border-radius:99px;background:#0b171d;border:1px solid #2a424a;overflow:hidden;margin-top:2px}
+  .dd-track{position:relative;height:14px;border-radius:99px;background:#0b171d;border:1px solid #2a424a;overflow:hidden;margin-top:2px}
   .dd-track i{display:block;height:100%;background:var(--neg);border-radius:99px}
+  .dd-cap{position:absolute;right:8px;top:0;height:100%;display:flex;align-items:center;font-size:9px;letter-spacing:.7px;text-transform:uppercase;color:#9eb4ba;pointer-events:none}
   .empty-note{border:1px dashed #89aeb488;border-radius:14px;padding:22px 16px;color:var(--muted)}
   @media(max-width:800px){
     .fact-grid,.org,.team,.tax-grid,.kv,.risk-split,.risk-metrics,.glance-board,.glance-board.is-three,.dd-dates{grid-template-columns:1fr}
@@ -250,7 +251,7 @@
  <div class="metric"><div class="label">Sharpe (rf = 0)</div><strong>${num(risk.sharpeRf0)}</strong><small>Beregnet · ikke Fundmarket</small></div>
  <div class="metric"><div class="label">Max drawdown</div><strong class="neg">${pct(risk.maxDrawdownPct)}</strong><small>Beregnet · ikke Fundmarket</small></div>
  </div>
- <div class="dd-track" role="img" aria-label="Max drawdown ${pct(risk.maxDrawdownPct)} på en skala fra 0 til 100 procent"><i style="width:${ddWidth}%"></i></div>
+ <div class="dd-track" role="img" aria-label="Max drawdown ${pct(risk.maxDrawdownPct)} på en skala fra 0 til 100 procent"><i style="width:${ddWidth}%"></i>${ddWidth <= 78 ? '<span class="dd-cap">0–100 %</span>' : ''}</div>
  <div class="dd-dates">
  <article><span class="k">Bund i filen</span><strong>${daDate(risk.maxDdTrough) || 'ikke oplyst'}</strong><small>Søjlen er den absolutte størrelse på en skala fra 0 til 100 %. Den er ikke forstørret.</small></article>
  <article class="${peakAfterTrough ? 'is-odd' : ''}"><span class="k">${peakAfterTrough ? 'Topfeltet i filen' : 'Top i filen'}</span><strong>${daDate(risk.maxDdPeak) || 'ikke oplyst'}</strong><small>${peakAfterTrough ? 'Datoen ligger efter bunden og er ikke tegnet som start på faldet.' : 'Datoen står i risk-stats.json.'}</small></article>

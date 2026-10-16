@@ -271,9 +271,10 @@
  } else if (!leadOn) {
  const [newest, ...rest] = list;
  const stageMod = postWho(newest, 'house') ? 'is-house' : (postWho(newest, 'curated') ? 'is-curated' : 'is-rest');
+ const coverQuery = postMatchesQuery(newest, 'SoftBank') ? 'SoftBank' : (postMatchesQuery(newest, 'NVDA') ? 'NVDA' : '');
  const stage = `<div class="x-lane ${stageMod}">
  <p class="x-lane-h"><span class="x-lane-k">Seneste opslag</span><span>${esc(X_LABEL)}</span></p>
- <div class="x-stage">${xCard(newest, { lead: true })}</div>
+ <div class="x-stage">${xCard(newest, { lead: true, query: coverQuery })}</div>
  </div>`;
  const house = rest.filter((p) => postWho(p, 'house'));
  const curated = rest.filter((p) => postWho(p, 'curated'));

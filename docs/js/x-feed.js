@@ -94,6 +94,7 @@ article.x-card.is-quote .x-foot{margin-top:10px}
 .x-spot{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:4px 0 16px}
 .x-door{text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:8px;min-height:208px;padding:16px 16px 14px;border-radius:16px;border:1px solid #345860;background:radial-gradient(90% 80% at 100% 0%,rgba(158,207,214,.13),transparent 52%),#0d1c22}
 .x-door:hover{border-color:var(--cyan);background:#132a32}
+.x-door:focus-visible{outline:2px solid #f5ee9e;outline-offset:3px}
 .x-door.is-on{border-color:var(--cyan);box-shadow:inset 0 -2px 0 var(--yellow)}
 .x-door.is-on .x-door-n{color:#f5ee9e}
 .x-door .k{font-size:11px;letter-spacing:1.4px;color:var(--brand);font-weight:700}
@@ -126,7 +127,10 @@ article.x-card.is-quote .x-foot{margin-top:10px}
 .x-score-n.is-zero b{color:var(--faint);font-weight:500}
 .x-says-h .x-score-n.is-out b,.x-says-h .x-score-n.is-all b{color:var(--faint);font-size:22px;font-family:inherit;font-weight:500}
 .x-asof{color:var(--faint);font-size:12px;line-height:1.35;padding-bottom:2px;max-width:42ch}
+.x-says-h{flex-wrap:wrap}
 .x-says-h .x-score-n b{font-size:clamp(22px,2.6vw,30px);line-height:1}
+.x-says-h .x-score-n.is-direct:not(.is-zero) b{font-size:clamp(36px,4vw,48px);line-height:.85}
+.x-says-h .x-score-n.is-theme:not(.is-zero) b{font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-weight:500;font-size:clamp(28px,3vw,36px);line-height:.85;color:#c5d6db}
 .x-active{margin-top:8px}
 .x-active:empty{display:none}
 .x-empty{border:1px dashed #89aeb488;border-radius:16px;padding:28px 18px;text-align:center;background:#89aeb40a}
@@ -214,9 +218,10 @@ body.x-focused .x-label{margin:0 0 8px}
   .x-door{transition:none}
 }
 body.x-focused .x-door-score{gap:8px;align-items:baseline}
-body.x-focused .x-door-score span{flex-direction:row;gap:4px;align-items:baseline}
-body.x-focused .x-door-score b,.body.x-focused .x-door-score b.is-theme{font-family:inherit;font-size:13px;font-weight:600;letter-spacing:0;line-height:1;color:var(--muted)}
-body.x-focused .x-door-score i{margin-top:0;font-size:11px;letter-spacing:0;text-transform:none}
+body.x-focused .x-door-score span{flex-direction:row;gap:4px;align-items:baseline;white-space:nowrap}
+body.x-focused .x-door-score b{font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-size:26px;font-weight:500;letter-spacing:-1px;line-height:1;color:#f5ee9e}
+body.x-focused .x-door-score b.is-theme{font-size:20px;color:#9eb4ba}
+body.x-focused .x-door-score i{margin-top:0;font-size:9px;letter-spacing:.5px;text-transform:uppercase;color:var(--faint)}
 @media(min-width:900px){
   body.x-focused .x-spot{margin-bottom:4px}
   body.x-focused .x-door{padding:8px 12px 7px}
@@ -263,9 +268,10 @@ body.x-home .x-footwarn{order:9}
 body.x-home .x-footlinks{order:10}
 body.x-home .x-intro{order:11}
 body.x-home .x-door-score{gap:8px;align-items:baseline}
-body.x-home .x-door-score span{flex-direction:row;gap:4px;align-items:baseline}
-body.x-home .x-door-score b,body.x-home .x-door-score b.is-theme{font-family:inherit;font-size:13px;font-weight:600;letter-spacing:0;line-height:1;color:var(--muted)}
-body.x-home .x-door-score i{margin-top:0;font-size:11px;letter-spacing:0;text-transform:none}
+body.x-home .x-door-score span{flex-direction:row;gap:4px;align-items:baseline;white-space:nowrap}
+body.x-home .x-door-score b{font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-size:26px;font-weight:500;letter-spacing:-1px;line-height:1;color:#f5ee9e}
+body.x-home .x-door-score b.is-theme{font-size:20px;color:#9eb4ba}
+body.x-home .x-door-score i{margin-top:0;font-size:9px;letter-spacing:.5px;text-transform:uppercase;color:var(--faint)}
 @media(min-width:900px){
   body.x-home .x-spot{margin-bottom:4px}
   body.x-home .x-door{padding:8px 12px 7px}
@@ -296,6 +302,8 @@ body.x-home .x-door-score i{margin-top:0;font-size:11px;letter-spacing:0;text-tr
   body.x-home .x-door-top{flex-direction:column;align-items:flex-start;gap:2px}
   body.x-home .x-door-top strong{font-size:13px;letter-spacing:-.2px}
   body.x-home .x-door-score{margin-left:0;max-width:100%;flex-wrap:wrap;gap:0 6px}
+  body.x-home .x-door-score b{font-size:20px}
+  body.x-home .x-door-score b.is-theme{font-size:16px}
   body.x-home h1{font-size:22px}
   body.x-home #x-grid{order:6}
   body.x-home .x-tools{order:7;position:static;background:transparent;border-bottom:0;backdrop-filter:none}

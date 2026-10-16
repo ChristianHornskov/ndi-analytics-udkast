@@ -70,6 +70,7 @@
   .delta-key i.b{background:#f5ee9e}
   .delta-zoom{margin-top:12px;padding-top:12px;border-top:1px dashed #345860}
   .delta-zoom .k{font-size:11px;letter-spacing:1.2px;font-weight:700;color:var(--brand);margin:0 0 8px}
+  .delta-kr{position:absolute;top:-15px;transform:translateX(-50%);font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-size:13px;font-weight:500;letter-spacing:-.3px;color:#f5ee9e;white-space:nowrap;line-height:1;pointer-events:none}
   .receipt-bridge{display:flex;flex-direction:row;align-items:center;justify-content:center;gap:10px;text-align:center;min-width:0;margin:0;padding:12px 10px;border:1px solid #f5ee9e55;border-radius:14px;background:radial-gradient(80% 90% at 50% 0%,rgba(245,238,158,.16),transparent 68%),#0b171d}
   .receipt-bridge b{color:#f5ee9e;font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-size:28px;font-weight:500;letter-spacing:-.8px;font-variant-numeric:tabular-nums;line-height:1}
   .receipt-bridge span{color:var(--faint);font-size:11px;letter-spacing:.8px;text-transform:uppercase;white-space:nowrap}
@@ -181,9 +182,10 @@
  const zoomBlock = zoom ? (() => {
  const left = zMark(loTx, zoom.z0, zoom.z1);
  const right = zMark(hiTx, zoom.z0, zoom.z1);
+ const gapMid = left + (right - left) / 2;
  return `<div class="delta-zoom">
  <p class="k">Udsnit, forstørret · ${pct2(zoom.z0)} til ${pct2(zoom.z1)}</p>
- <div class="delta-track" role="img" aria-label="Forstørret udsnit fra ${pct2(zoom.z0)} til ${pct2(zoom.z1)}. PMINDI ${pct(a.portfolioTransaction)} og PMINDIAKK ${pct(b.portfolioTransaction)}. Afstanden på figuren er større end på skalaen 0 til ${pct(SCALE)}. Forskellen er stadig ${pp(Math.abs(dTx))}.">${gapBar(left, right - left)}<i class="a" style="left:${zMark(a.portfolioTransaction, zoom.z0, zoom.z1)}%"></i><i class="b" style="left:${zMark(b.portfolioTransaction, zoom.z0, zoom.z1)}%"></i></div>
+ <div class="delta-track" role="img" aria-label="Forstørret udsnit fra ${pct2(zoom.z0)} til ${pct2(zoom.z1)}. PMINDI ${pct(a.portfolioTransaction)} og PMINDIAKK ${pct(b.portfolioTransaction)}. Afstanden på figuren er større end på skalaen 0 til ${pct(SCALE)}. Forskellen er stadig ${pp(Math.abs(dTx))}, ${krGapTxt} på 100.000 kr.">${gapBar(left, right - left)}<em class="delta-kr" style="left:${gapMid}%">${krGapTxt}</em><i class="a" style="left:${zMark(a.portfolioTransaction, zoom.z0, zoom.z1)}%"></i><i class="b" style="left:${zMark(b.portfolioTransaction, zoom.z0, zoom.z1)}%"></i></div>
  <div class="delta-ends" aria-hidden="true"><span>${pct2(zoom.z0)}</span><span>${pct2(zoom.z1)}</span></div>
  </div>`;
  })() : '';
