@@ -6,6 +6,7 @@ export const X_LABEL = "Udvalgte offentlige opslag — ikke NDI's holdning";
 const AVATAR = ['#9ecfd6', '#89aeb4', '#d5e4e7', '#e7d4d8', '#b7d4dc'];
 const STOP = new Set(['GROUP', 'HOLDINGS', 'HOLDING', 'INC', 'CORP', 'LTD', 'PLC', 'CLASS', 'THE', 'AND', 'ADR']);
 const HOUSE = /^(InvestNewdeal|CHornskov|MadsC007|jesper_baek)$/;
+const cardMeta = new Map();
 
 /** So 9984.T / SoftBank Group and NVDA / Nvidia hit the same posts on selskab and tema. */
 const ALIAS = {
@@ -294,6 +295,12 @@ article.x-card.is-slip .x-slip .x-mark{font-size:.72em;vertical-align:2px}
 article.x-card.is-slip .x-by{display:flex;gap:10px;align-items:center;margin-top:14px;padding-top:12px;border-top:1px solid #345860}
 article.x-card.is-slip .x-by time{margin-left:auto}
 article.x-card.is-slip .x-foot{margin-top:10px}
+button.x-pick{display:block;width:100%;margin:0;padding:0;border:0;background:transparent;color:inherit;font:inherit;text-align:left;cursor:pointer;border-radius:8px}
+button.x-pick.x-rail-when{width:auto}
+button.x-pick:hover time{text-decoration:underline;text-underline-offset:3px}
+button.x-pick:focus-visible{outline:2px solid #f5ee9e;outline-offset:3px}
+.x-lane-h .x-lane-hint,.x-lane-n{color:var(--faint);font-size:12px;font-weight:400;letter-spacing:0}
+.x-stage.x-picked{margin-top:10px}
 `;
   document.head.appendChild(s);
 }
@@ -321,6 +328,7 @@ function followPanelHash() {
   else watch();
 }
 followPanelHash();
+bindXPick();
 
 export async function loadXPosts() {
   ensureXStyles();
@@ -435,6 +443,17 @@ function tickerFamilyHit(postTickers, wantT) {
     if (!labels.includes(label)) labels.push(label);
   }
   return labels;
+}
+
+function singleCompanyName(tickers) {
+  const raw = (tickers || []).map((t) => String(t || '').trim()).filter(Boolean);
+  if (!raw.length || raw.length > 3) return '';
+  const set = expandTickers(raw);
+  const soft = ['SOFTBANK', '9984.T', '9984', 'SFTBY'].some((k) => set.has(k));
+  const nv = set.has('NVDA') || set.has('NVIDIA');
+  if (soft && !nv) return 'SoftBank';
+  if (nv && !soft) return 'NVDA';
+  return '';
 }
 
 function textNameHit(text, wantT) {
@@ -643,6 +662,15 @@ function highlight(text, q) {
 
 export function xCard(p, opt = {}) {
   ensureXStyles();
+  if (p?.id) {
+    cardMeta.set(String(p.id), {
+      post: p,
+      reasons: opt.reasons || [],
+      hitKind: opt.hitKind || '',
+      query: opt.query || '',
+    });
+  }
+  const idAttr = p?.id ? ` data-x-id="${esc(p.id)}"` : '';
   const reasons = opt.reasons || [];
   const hitTerms = highlightTerms(opt.query).map((t) => t.toLowerCase());
   const tagCls = (label) => (hitTerms.includes(String(label).toLowerCase()) ? ' tag is-hit' : ' tag');
@@ -667,17 +695,25 @@ export function xCard(p, opt = {}) {
     ${tags}
   </p>`;
   const text = `<p class="x-text">${highlight(p.text, opt.query)}</p>`;
-  if (opt.rail && opt.rail !== 'film') {
+  const whenControl = (mode) => {
     const when = fmtXParts(p.created_at);
+    const time = `<time datetime="${esc(p.created_at)}">${esc(when.label)}</time>`;
+    const year = mode === 'film'
+      ? `<span class="x-film-y">${esc(when.year)}</span>`
+      : `<span>${esc(when.year)}</span>`;
+    if (!opt.pickable) return { film: `${time}${year}`, rail: `<div class="x-rail-when">${time}${year}</div>` };
+    const label = `Vis opslaget fra ${fmtXDate(p.created_at)} som citat`;
+    const btn = `<button type="button" class="x-pick ${mode === 'film' ? 'x-film-when' : 'x-rail-when'}" data-x-pick aria-label="${esc(label)}">${time}${year}</button>`;
+    return { film: btn, rail: btn };
+  };
+  if (opt.rail && opt.rail !== 'film') {
+    const when = whenControl('rail');
     const hitTags = [
       ...(p.tickers || []).slice(0, 4).filter((t) => hitTerms.includes(String(t).toLowerCase())).map((t) => `<a class="tag is-hit" href="${esc(tickerHref(t))}">${esc(t)}</a>`),
       ...(p.tags || []).slice(0, 3).filter((t) => hitTerms.includes(String(t).toLowerCase())).map((t) => `<a class="tag is-hit" href="${esc(tagHref(t))}">${esc(t)}</a>`),
     ].join('');
-    return `<article class="${cls} is-rail">
-  <div class="x-rail-when">
-    <time datetime="${esc(p.created_at)}">${esc(when.label)}</time>
-    <span>${esc(when.year)}</span>
-  </div>
+    return `<article class="${cls} is-rail"${idAttr}>
+  ${when.rail}
   <span class="x-dot" aria-hidden="true"></span>
   <div class="x-rail-body">
     <header class="x-rail-who"><strong>${esc(p.name || p.username)}</strong><span>@${esc(p.username)}</span></header>
@@ -693,11 +729,10 @@ export function xCard(p, opt = {}) {
 </article>`;
   }
   if (opt.rail === 'film') {
-    const when = fmtXParts(p.created_at);
+    const when = whenControl('film');
     const badge = curated || house;
-    return `<article class="${cls} is-film">
-  <time datetime="${esc(p.created_at)}">${esc(when.label)}</time>
-  <span class="x-film-y">${esc(when.year)}</span>
+    return `<article class="${cls} is-film"${idAttr}>
+  ${when.film}
   <div class="x-film-top">
     <a class="x-film-who" href="${esc(p.url)}" rel="noopener noreferrer" target="_blank">${esc(p.name || p.username)}</a>
     ${badge}
@@ -708,7 +743,7 @@ export function xCard(p, opt = {}) {
   }
   if (opt.lead && isTickerSlip(p.text)) {
     const slipCls = ['x-card', 'panel', 'is-lead', 'is-slip', opt.hitKind === 'direct' ? 'is-direct' : ''].filter(Boolean).join(' ');
-    return `<article class="${slipCls}">
+    return `<article class="${slipCls}"${idAttr}>
   <p class="kicker" style="color:var(--brand);font-size:11px;font-weight:700;letter-spacing:1.4px;margin:0">KORT OPSLAG</p>
   <p class="x-slip">${highlight(p.text, opt.query)}</p>
   <div class="x-by">
@@ -724,7 +759,7 @@ export function xCard(p, opt = {}) {
 </article>`;
   }
   if (opt.lead) {
-    return `<article class="${cls}">
+    return `<article class="${cls}"${idAttr}>
   <blockquote class="x-quote">
     <span class="x-qmark" aria-hidden="true">„</span>
     ${text}
@@ -741,7 +776,7 @@ export function xCard(p, opt = {}) {
   ${foot}
 </article>`;
   }
-  return `<article class="${cls}">
+  return `<article class="${cls}"${idAttr}>
   <header class="x-top">
     <span class="x-ava" style="background:${avatarColor(p.username)}" aria-hidden="true">${esc(initials(p))}</span>
     <div class="x-who">
@@ -825,20 +860,23 @@ export function xSaysPanel(pack, { tickers = [], themes = [], limit = 4, title =
     if (!hits.length) return '';
     const film = mode === 'film';
     const rail = mode === 'rail';
+    const pickable = kind === 'direct' && (film || rail);
     const kicker = kind === 'theme'
       ? (film ? 'Andre datoer · tema' : 'Tema')
       : (film || rail) ? 'Andre datoer' : 'Øvrige direkte træf';
     const hint = kind === 'direct'
       ? 'Nævner selskab eller ticker.'
       : 'Rammer temaet. Ikke en ticker fra udsnittet.';
+    const note = pickable ? 'Klik en dato. ' : '';
     const cards = hits.map((h) => xCard(h.post, {
       reasons: h.reasons,
       hitKind: kind,
       query: markTerm(h),
       rail: film ? 'film' : rail,
+      pickable,
     })).join('');
     return `<div class="x-lane ${kind === 'direct' ? 'is-direct' : 'is-theme'}${film ? ' is-film' : ''}${rail ? ' is-rail' : ''}">
-  <p class="x-lane-h"><span class="x-lane-k">${kicker}</span><span>${hint}</span></p>
+  <p class="x-lane-h"><span class="x-lane-k">${kicker}</span><span class="x-lane-hint">${note}${hint}</span></p>
   <div class="x-grid">${cards}</div>
 </div>`;
   };
@@ -851,19 +889,22 @@ export function xSaysPanel(pack, { tickers = [], themes = [], limit = 4, title =
   let stage;
   let belowLane;
   if (!view.direct.length) {
+    const who = singleCompanyName(tickers);
+    const nameBit = who ? esc(who) : 'selskabet';
     const film = view.theme.length >= 3;
     const cards = view.theme.map((h) => xCard(h.post, {
       reasons: h.reasons,
       hitKind: 'theme',
       query: markTerm(h),
       rail: film ? 'film' : false,
+      pickable: film,
     })).join('');
     stage = `<div class="x-stage x-no-direct">
-  <p class="k">Ingen NDI-opslag nævner navnet</p>
-  <p>Panelet er kun NDI-konti. ${view.theme.length ? 'Kortene nedenfor deler tema. De nævner ikke selskabet.' : ''}</p>
+  <p class="k">Ingen NDI-opslag nævner ${who ? esc(who) : 'navnet'}</p>
+  <p>Panelet er kun NDI-konti. ${view.theme.length ? `Kortene nedenfor deler tema. De nævner ikke ${nameBit}.` : ''}</p>
 </div>`;
     belowLane = view.theme.length ? `<div class="x-lane is-theme${film ? ' is-film' : ''}">
-  <p class="x-lane-h"><span class="x-lane-k">Samme tema</span><span>Nævner ikke selskabet eller tickeren. ${view.theme.length}</span></p>
+  <p class="x-lane-h"><span class="x-lane-k">Samme tema</span><span class="x-lane-hint">${who ? `Nævner ikke ${esc(who)}.` : 'Nævner ikke selskabet eller tickeren.'}${film ? ' Klik en dato.' : ''}</span><span class="x-lane-n">${view.theme.length}</span></p>
   <div class="x-grid">${cards}</div>
 </div>` : '';
   } else {
@@ -893,4 +934,94 @@ export function xSaysPanel(pack, { tickers = [], themes = [], limit = 4, title =
   ${miss}
   <p class="link-row" style="margin-top:12px"><a class="outline-btn small" href="${more}">Flere opslag i feedet →</a></p>
 </section>`;
+}
+
+function bindXPick() {
+  if (typeof document === 'undefined' || document.documentElement.dataset.xPickBound) return;
+  document.documentElement.dataset.xPickBound = '1';
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-x-pick]');
+    if (!btn) return;
+    e.preventDefault();
+    promoteCard(btn.closest('article.x-card'));
+  });
+}
+
+function leadKindOf(lead) {
+  if (!lead) return '';
+  return lead.classList.contains('is-direct') ? 'direct' : 'theme';
+}
+
+function ensurePickedStage(lane) {
+  const prev = lane.previousElementSibling;
+  if (prev && prev.classList.contains('x-stage') && !prev.classList.contains('x-no-direct')) return prev;
+  const stage = document.createElement('div');
+  stage.className = 'x-stage x-picked';
+  lane.parentNode.insertBefore(stage, lane);
+  return stage;
+}
+
+function promoteCard(card) {
+  if (!card || typeof document === 'undefined') return;
+  const nextId = card.getAttribute('data-x-id');
+  const next = cardMeta.get(nextId);
+  const lane = card.closest('.x-lane');
+  if (!next || !lane) return;
+  const mode = lane.classList.contains('is-film') ? 'film' : (lane.classList.contains('is-rail') ? 'rail' : '');
+  if (!mode) return;
+  const scope = card.closest('#x-grid, section.x-says') || document;
+  const lead = scope.querySelector('article.is-lead');
+  const nextKind = next.hitKind || (lane.classList.contains('is-theme') ? 'theme' : 'direct');
+  if (lead && nextKind !== leadKindOf(lead)) return;
+  const ids = [...lane.querySelectorAll('article.x-card[data-x-id]')].map((a) => a.getAttribute('data-x-id'));
+  const pool = ids.filter((id) => id !== nextId);
+  if (lead) {
+    const prevId = lead.getAttribute('data-x-id');
+    if (prevId && prevId !== nextId && !pool.includes(prevId)) pool.push(prevId);
+  }
+  const stageHost = lead ? lead.closest('.x-stage') : ensurePickedStage(lane);
+  if (!stageHost) return;
+  stageHost.innerHTML = xCard(next.post, {
+    reasons: next.reasons,
+    lead: true,
+    hitKind: next.hitKind,
+    query: next.query,
+  });
+  const sorted = pool
+    .map((id) => cardMeta.get(id))
+    .filter(Boolean)
+    .sort((a, b) => String(b.post.created_at || '').localeCompare(String(a.post.created_at || '')));
+  const grid = lane.querySelector('.x-grid');
+  if (grid) {
+    grid.innerHTML = sorted.map((m) => xCard(m.post, {
+      reasons: m.reasons,
+      hitKind: m.hitKind,
+      query: m.query,
+      rail: mode,
+      pickable: true,
+    })).join('');
+  }
+  const nEl = lane.querySelector('.x-lane-n');
+  if (nEl) nEl.textContent = String(sorted.length);
+  const quote = stageHost.querySelector('article');
+  if (quote) {
+    quote.setAttribute('tabindex', '-1');
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const by = quote.querySelector('.x-by') || quote;
+    const r = by.getBoundingClientRect();
+    if (r.top < 56 || r.bottom > window.innerHeight - 12) {
+      quote.scrollIntoView({ block: 'nearest', behavior: reduce ? 'auto' : 'smooth' });
+    }
+    quote.focus({ preventScroll: true });
+  }
+  let live = document.getElementById('x-pick-live');
+  if (!live) {
+    live = document.createElement('p');
+    live.id = 'x-pick-live';
+    live.className = 'sr-only';
+    live.setAttribute('role', 'status');
+    live.setAttribute('aria-live', 'polite');
+    document.body.appendChild(live);
+  }
+  live.textContent = `Citatet viser nu opslaget fra ${fmtXDate(next.post.created_at)}.`;
 }
