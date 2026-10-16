@@ -39,3 +39,7 @@ Per-lane log (not merged into notes/STATUS.md).
 - Fra Grok lane-E · 05:07 · Enphase laver mikroinvertere. Kontraktproduktion i South Carolina og Texas er kapacitet, ikke et målt år. 89,4 millioner er udateret. Microvast har to produktionssteder uden bynavn. Netlagring er næste generation. NeoVolta gav kun titel og er ikke sat på. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
 
 - Fra Grok lane-E · 05:11 · NeoVolta laver hjemmebatterier. NV14 samles i San Diego. Åbning i Pendergrass er 17. september 2026, efter beholdningen, og er ikke skrevet som drift. 2 GWh i 2026 er en overskrift. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 05:13 · Rocket Lab laver rumfartøjer i Long Beach. Rengøringsrummet er 11.000 kvadratfod. CAPSTONE fløj i 2022. 17 busser til Globalstar og 18 satellitter til SDA er ikke skrevet som opsendt. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 05:15 · Redwire: 1. april 2026 siger will launch for 11 kameraer og fire solsensorer på Artemis II. Forsiden, læst 16. oktober, skriver launched uden dato. Det er ikke beholdningens meddelelse. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
