@@ -1393,20 +1393,28 @@
   "US31816X1063": {
    "name": "Firefly Aerospace",
    "theme": "space",
-   "summary": "Udvikler og opsender løfteraketter og har en månelander.",
-   "watch": "Om opsendelserne lykkes, og om der er nok kunder til raketten og landeren.",
+   "summary": "Opsender raketten Alpha og har landet Blue Ghost på Månen. Selskabet skriver, at Mission 1 landede 2. marts 2025. Eclipse er ikke fløjet i denne tekst.",
+   "watch": "Om Eclipse bliver sendt op, og om de næste Blue Ghost-missioner lander. Mission 1 er gennemført.",
    "source": "https://fireflyspace.com/",
-   "products": "Løfteraketter og månelandere.",
-   "customers": "Kunder, der skal have nyttelast i rummet eller til Månen.",
-   "role": "Opsendelse og transport væk fra Jorden.",
+   "products": "Alpha, månelanderen Blue Ghost og orbitalfartøjet Elytra. Eclipse er under udvikling.",
+   "customers": "NASA var kunden på Blue Ghost Mission 1. Forsiden nævner kommende Alpha-opgaver. Teksten siger ikke, at de er fløjet.",
+   "role": "Alpha og Blue Ghost. Eclipse er ikke fløjet.",
    "narrative": [
-    "Firefly opsender raketten Alpha og bygger månelanderen Blue Ghost. Selskabet skriver, at Blue Ghost er landet på Månen og har arbejdet der.",
-    "En større raket, Eclipse, bygges sammen med Northrop Grumman. Denne beskrivelse omfatter ikke, at Eclipse har fløjet. Firefly står på opsendelse."
+    "Firefly skriver, at Blue Ghost Mission 1, Ghost Riders in the Sky, lettede 15. januar 2025 og landede 2. marts 2025 i Mare Crisium nær Mons Latreille. Kunden var NASA. Siden skriver, at landeren arbejdede i mere end 14 døgn på overfladen, heraf 346 timer i dagslys, og lidt over 5 timer ind i månenatten. Datoerne ligger før beholdningen pr. 1. juni 2026.",
+    "Alpha er 31,7 m lang. Siden sætter nyttelasten til 1.030 kg til en lav bane i 300 km og til 630 kg til en solsynkron bane i 500 km. Næsekeglen er 2,2 m i diameter. Brændstoffet er LOX og RP-1. Siden nævner Esrange i Sverige som et sted, raketten kan sendes op fra. Teksten siger ikke, at en opsendelse derfra er gennemført. Eclipse udvikles sammen med Northrop Grumman. Siden sætter nyttelasten til 16.300 kg til lav bane og skriver, at den første opsendelse skal ske fra Virginia. Raketten er ikke fløjet i denne tekst. Elytra beskrives som et orbitalfartøj i tre udgaver, Dawn, Dusk og Dark. Teksten siger ikke, at de er i kredsløb, og det er ikke et datacenter."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets side",
-     "url": "https://fireflyspace.com/"
+     "label": "Alpha",
+     "url": "https://fireflyspace.com/alpha/"
+    },
+    {
+     "label": "Eclipse",
+     "url": "https://fireflyspace.com/eclipse/"
+    },
+    {
+     "label": "Blue Ghost Mission 1",
+     "url": "https://fireflyspace.com/missions/blue-ghost-mission-1/"
     }
    ]
   },
