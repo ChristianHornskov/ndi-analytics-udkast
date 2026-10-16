@@ -12,7 +12,7 @@
   <meta property="og:site_name" content="NDI Analytics (udkast)">
   <meta property="og:locale" content="da_DK">
   <meta property="og:title" content="Teknologiske værdikæder · NDI Analytics">
-  <meta property="og:description" content="AI-compute, robotik, energi, rum og quantum som flodsystem med flaskehalse. Eksponering, ikke anbefaling.">
+  <meta property="og:description" content="AI-compute, robotik, energi, rum og quantum som en flod med flaskehalse. Eksponering, ikke anbefaling.">
   <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/vaerdikaeder.html">
   <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
   <!-- og:end -->
@@ -97,6 +97,7 @@
     .vc-facts mark{background:none;color:inherit;padding:0 4px;border-radius:4px;white-space:nowrap}
     .vc-facts mark.aft{border:1px solid #f5ee9e88;color:#f5ee9e}
     .vc-facts mark.bef{border:1px solid #829da066}
+    .vc-facts mark.plan{border:1px dashed #c9a0dc99;color:#c9a0dc}
     .vc-more{font-size:12px;background:none;border:0;color:var(--brand);cursor:pointer;padding:4px 0;text-decoration:underline}
     .vc-hint{font-size:12px;color:var(--muted);margin-top:8px}
     .space-pane{display:none;margin:4px 0 18px}
@@ -528,12 +529,12 @@
     </nav>
   </header>
   <main id="main">
-    <p class="eyebrow">TECH · VÆRDIKÆDER · FLODSYSTEM</p>
+    <p class="eyebrow">TEKNOLOGI · VÆRDIKÆDER</p>
     <h1>Hvor sidder fonden i teknologien?</h1>
 
     <nav class="chapter-nav" aria-label="Afsnit">
-      <a href="#kap-flod">Flodsystem</a>
-      <a href="#kap-treemap">Treemap</a>
+      <a href="#kap-flod">Dæmninger</a>
+      <a href="#kap-treemap">Temaer</a>
       <a href="#kap-kaeder">Kæder</a>
       <a href="#kap-timeline">Tidslinje</a>
       <a href="#kap-flaskehalse">Flaskehalse</a>
@@ -545,9 +546,10 @@
       <div>
         <p class="lede" id="phil-lede">Indlæser…</p>
         <p class="band" id="compliance-band"></p>
+        <p class="src" style="margin-top:6px"><span class="vc-kind" style="margin-right:6px">AI-udkast</span>Teksterne er sammenfattet med AI ud fra NDI's ugebreve, bogen og selskabernes egne sider. De afventer NDI-gennemgang. Afsnit mærket NDI har kilde. <a href="om-data.html#g-ai-udkast">Om AI-udkast →</a></p>
       </div>
       <aside class="vc-callout">
-        <strong>Flodsystemet</strong>
+        <strong>Kæden som en flod</strong>
         <span id="phil-flod"></span>
         <p class="src" id="phil-flod-src" style="margin-top:8px"></p>
       </aside>
@@ -565,12 +567,12 @@
       <h2>Tema-eksponering</h2>
       <p class="src" id="tm-asof"></p>
       <div class="viz-toggle" role="group" aria-label="Tema-visualisering">
-        <button type="button" class="control active" id="viz-tm" aria-pressed="true">Treemap</button>
-        <button type="button" class="control" id="viz-sb" aria-pressed="false">Sunburst</button>
+        <button type="button" class="control active" id="viz-tm" aria-pressed="true">Felter</button>
+        <button type="button" class="control" id="viz-sb" aria-pressed="false">Ringe</button>
       </div>
       <div id="viz-host"></div>
       <div class="viz-legend" id="viz-legend"></div>
-      <p class="band">Areal / bue ≈ vægt i forsinket snapshot. Eksponering, ikke anbefaling. Klik et tema.</p>
+      <p class="band">Areal / bue ≈ vægt i den forsinkede beholdning. Eksponering, ikke anbefaling. Klik et tema.</p>
     </section>
 
     <section class="chapter" id="kap-kaeder">
@@ -833,7 +835,7 @@
         </details>
       </div>
 
-      <p class="anno" id="chain-tip">Klik et led for selskaber. Hvert led fortæller, hvad det er, og hvorfor NDI følger det. Mange led i AI og rum fortæller også, hvad der ændrer sig, og i rum og energi kan du folde ud, hvad selskaberne selv skriver.</p>
+      <p class="anno" id="chain-tip">Klik et led for selskaber. Hvert led fortæller, hvad det er, og hvorfor NDI følger det. På mange led står også, hvad der ændrer sig. I rum og energi kan du folde ud, hvad selskaberne selv skriver.</p>
       <div class="sm" id="chain-sm" aria-label="Største led i den forsinkede beholdning"></div>
       <div class="vc-chain" id="chain-view" role="tabpanel" aria-labelledby="chain-tabs"></div>
       <div class="route-slot" data-slot="chain-view"></div>
@@ -870,10 +872,10 @@
     <section class="chapter panel" id="kap-filosofi">
       <h2>NDI-blikket (kort)</h2>
       <div class="sm">
-        <div class="sm-card"><div class="lab">Princip</div><div class="num" style="font-size:16px;line-height:1.35;color:var(--text)">Udvikling &gt; vinder</div><p class="src">Retning kan diskuteres. Ikke den ene aktie.</p></div>
+        <div class="sm-card"><div class="lab">Princip</div><div class="num" style="font-size:16px;line-height:1.35;color:var(--text)">Vælg udviklingen, ikke vinderen</div><p class="src">Retningen kan man se. Den ene vinder kan man ikke udpege. Mads' overskrift, ugebrev 7. september 2026.</p></div>
         <div class="sm-card"><div class="lab">Princip</div><div class="num" style="font-size:16px;line-height:1.35;color:var(--text)">Hele kæden</div><p class="src">Råstoffer, energi og infrastruktur tæller med.</p></div>
-        <div class="sm-card"><div class="lab">Princip</div><div class="num" style="font-size:16px;line-height:1.35;color:var(--text)">Knaphed</div><p class="src">El, wafers, optik, folk.</p></div>
-        <div class="sm-card"><div class="lab">Princip</div><div class="num" style="font-size:16px;line-height:1.35;color:var(--text)">Forsinket sandhed</div><p class="src">Offentligt snapshot, ikke live handler.</p></div>
+        <div class="sm-card"><div class="lab">Princip</div><div class="num" style="font-size:16px;line-height:1.35;color:var(--text)">Knaphed</div><p class="src">Strøm, siliciumskiver, optik og folk.</p></div>
+        <div class="sm-card"><div class="lab">Princip</div><div class="num" style="font-size:16px;line-height:1.35;color:var(--text)">Forsinket sandhed</div><p class="src">Offentlig beholdning pr. 1. juni 2026, ikke dagens handler.</p></div>
       </div>
       <aside class="vc-callout" style="margin-top:14px">
         <strong>Eksempel på multi-rolle:</strong>
@@ -895,7 +897,7 @@
     document.getElementById('phil-flod-src').textContent = pack.philosophy?.flodSource || '';
     document.getElementById('compliance-band').textContent = pack.compliance || '';
     document.getElementById('counts-note').textContent = pack.countsNote || '';
-    document.getElementById('tm-asof').textContent = `Forsinket snapshot, pr. ${fmtDate(pack.asOf)}. ${pack.note || ''}`;
+    document.getElementById('tm-asof').textContent = `Forsinket beholdning pr. ${fmtDate(pack.asOf)}. ${(pack.note || '').replace(/^Forsinket beholdning\.\s*/, '')}`;
     document.getElementById('theme-note').textContent = pack.themeNote || '';
 
     // Dams
@@ -2035,8 +2037,9 @@
       ).join('') : '';
       view.innerHTML = '';
       ch.links.forEach((l, i) => {
-        const markWhen = (t) => esc(t).replace(/(efter|før) beholdningen( pr\. 1\. juni 2026)?/g, (m, w) => `<mark class="${w === 'efter' ? 'aft' : 'bef'}">${m}</mark>`);
-        const factsBox = (l) => l.facts?.length ? `<details class="vc-facts"><summary>Hvad selskaberne selv skriver (${l.facts.length})</summary><ul>${l.facts.map(f => { const k = f.indexOf(': '); return `<li>${k > 0 ? `<b>${esc(f.slice(0, k))}</b>: ${markWhen(f.slice(k + 2))}` : markWhen(f)}</li>`; }).join('')}</ul><p class="src" style="margin-top:6px"><mark class="aft">efter beholdningen</mark> = nyt siden 1. juni 2026 og ikke afspejlet i tallene ovenfor. Gengivet fra selskabernes egne sider og meddelelser. Ikke NDI's vurdering og ikke en anbefaling.</p></details>` : '';
+        const markWhen = (t) => esc(t).replace(/(efter|før) beholdningen( pr\. 1\. juni 2026)?/g, (m, w) => `<mark class="${w === 'efter' ? 'aft' : 'bef'}">${m}</mark>`)
+          .replace(/\b(er en plan|er et projekt|er ikke fløjet|ikke fløjet)\b/g, '<mark class="plan">$1</mark>');
+        const factsBox = (l) => l.facts?.length ? `<details class="vc-facts"><summary>Hvad selskaberne selv skriver (${l.facts.length})</summary><ul>${l.facts.map(f => { const k = f.indexOf(': '); return `<li>${k > 0 ? `<b>${esc(f.slice(0, k))}</b>: ${markWhen(f.slice(k + 2).replace(/^([^,.:]{2,40}?) (skriver|skrev)\b/, (m, n, v) => f.slice(0, k).startsWith(n) ? `selskabet ${v}` : m))}` : markWhen(f)}</li>`; }).join('')}</ul><p class="src" style="margin-top:6px"><mark class="aft">efter beholdningen</mark> = nyt siden 1. juni 2026 og ikke afspejlet i tallene ovenfor. <mark class="plan">er en plan</mark> = endnu ikke i drift. Gengivet fra selskabernes egne sider og meddelelser. Ikke NDI's vurdering og ikke en anbefaling.</p></details>` : '';
         if (i) {
           const ar = document.createElement('div');
           ar.className = 'vc-arrow'; ar.setAttribute('aria-hidden', 'true');
