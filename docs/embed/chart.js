@@ -203,7 +203,7 @@
     $('#metric-cagr-note').textContent = annual == null
       ? `Historik ${number.format(years)} år · vises efter ét års data`
       : `${number.format(years)} år siden start`;
-    $('#metric-ytd-note').textContent = `Fra 1. jan. ${last.d.slice(0, 4)} til ${fmtDate(last.d)}. Delår, afventer Fundmarket-godkendelse.`;
+    $('#metric-ytd-note').innerHTML = `Fra 1. jan. ${last.d.slice(0, 4)} til <span class="keep">${fmtDate(last.d)}</span>. Delår, afventer <span class="keep">Fundmarket-godkendelse.</span>`;
     $('#metric-dd-note').textContent = `Bund ${fmtDate(dd.trough)} · fra en top i perioden`;
     const well = document.getElementById('metric-dd-well');
     if (well) {
@@ -284,8 +284,8 @@
 
     const context = [];
     if (state.truncated) context.push('Viser den tilgængelige historik i den valgte periode.');
-    if (state.period === 'ytd') context.push('År til dato afventer Fundmarket-godkendelse.');
-    $('#chart-context').textContent = context.join(' ');
+    if (state.period === 'ytd') context.push('År til dato afventer <span class="keep">Fundmarket-godkendelse.</span>');
+    $('#chart-context').innerHTML = context.join(' ');
     $('#chart-context').hidden = !context.length;
 
     const direction = verbFor(periodReturn);

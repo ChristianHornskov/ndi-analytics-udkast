@@ -128,12 +128,12 @@
  <p class="cmp-big"><strong>${shared}</strong> af ${(b.positions || []).length} selskaber i PMINDIAKK findes også <span class="cmp-when">i PMINDI</span>${onlyB ? `. ${onlyB} findes kun i PMINDIAKK` : ''}.</p>
  <p class="cmp-legend"><span><span class="cmp-key a" aria-hidden="true"></span>I begge${onlyB ? '' : '. Hele bjælken'}</span>${onlyB ? `<span><span class="cmp-key b" aria-hidden="true"></span>Kun i PMINDIAKK</span>` : ''}</p>
  <div class="cmp-sharebar" role="img" aria-label="${shared} af ${(b.positions || []).length} selskaber i PMINDIAKK findes også i PMINDI"><span class="a" style="width:${Math.round((shared / Math.max(1, (b.positions || []).length)) * 100)}%"></span>${onlyB ? `<span class="b" style="width:${Math.max(1, Math.round((onlyB / Math.max(1, (b.positions || []).length)) * 100))}%"></span>` : ''}</div>
- <p class="src">Forsinket beholdning pr. ${posAsOf}. PMINDI har ${(a.positions || []).length} positioner. Små forskelle i antal og vægt skyldes, at klasserne har forskellig størrelse og pengestrømme. Det er ikke to forskellige strategier.</p>
+ <p class="src">Forsinket beholdning pr. ${posAsOf}. PMINDI har ${(a.positions || []).length} positioner. Små forskelle i antal og vægt skyldes, at klasserne har forskellig størrelse og pengestrømme. Det er ikke <span class="cmp-when">to forskellige strategier.</span></p>
  </section>
 
  <section class="panel" aria-labelledby="th-h">
  <h2 class="panel-h" id="th-h">Samme NDI-linse</h2>
- <p class="src" style="margin-bottom:10px">Vægt pr. tema i hver klasse (primært tema). Største forskel: ca. ${gapLabel} procentpoint${gapNames.length ? `, i ${esc(gapNames.join(' og '))}` : ''}. Rækken har en gul kant. Eksponering, ikke anbefaling.</p>
+ <p class="src" style="margin-bottom:10px">Vægt pr. tema i hver klasse (primært tema). Største forskel: ca. ${gapLabel} procentpoint${gapNames.length ? `, i ${esc(gapNames.join(' og '))}` : ''}. Rækken har en gul kant. Eksponering, <span class="cmp-when">ikke anbefaling.</span></p>
  <p class="cmp-legend"><span><span class="cmp-key a" aria-hidden="true"></span>PMINDI</span><span><span class="cmp-key b" aria-hidden="true"></span>PMINDIAKK</span></p>
  <ul class="cmp-themes">${themeRows}</ul>
  <p class="link-row chip-links" style="margin-top:10px"><a href="temaer.html">Alle temaer →</a> · <a href="om-data.html#g-akk">Hvad betyder akkumulerende?</a></p>
