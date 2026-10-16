@@ -196,3 +196,8 @@ Sider: ideer, kort, om-data, invester, risici, ndi-perspektiv, laer/*.
 - Volatilitet/Sharpe/største fald på risici.html (Leo MUST fra main) er nu mærket «regnet af NDI Analytics … ikke tal fra KID’et» og forklarer, at PRIIPs-klassen har egen metode. Ingen sammenligning med indeks. Historisk-advarslen står på siden.
 - Ny ordlistepost Sharpe: «siger intet om fremtiden», ændrer sig med startdagen. **Bed Vidensbot tjekke:** er Sharpe på en fondsside markedsføring af afkast (compliancepunkt 1), og skal den så kun vises sammen med de officielle tal?
 - Interne udtryk fjernet fra synlig tekst (udkast, udfyldes af NDI, feltnavne).
+
+## lane-C · 02:35 16/10 · ordliste 124 (EUV, DRAM/NAND, Edge-AI, træning/brug, bitcoin-mining)
+- Kun forklaringer af ord, ingen selskabsvurderinger eller udsigter. EUV: «kun én leverandør (ASML)» står allerede i value-chains.json (hint), og leddet kaldes «en mulig flaskehals», som på værdikæden.
+- Bitcoin-mining: «Indtjeningen fra mining følger bitcoinprisen og er derfor en anden risiko end AI-hosting. Eksponering, ikke en anbefaling.» **Bed Vidensbot tjekke:** er det ok at nævne bitcoin i ordlisten på en UCITS-fondsside, når ordet kun forklarer, hvad nogle beholdninger laver (unique-metrics.json)?
+- Træning/brug: «kan med tiden kræve mere regnekraft samlet end træningen» er en generel beskrivelse, ikke en prognose for selskaber. **Til review:** skal sætningen blødes op eller have kilde (NDI-ugebrev)?

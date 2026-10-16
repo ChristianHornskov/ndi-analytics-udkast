@@ -1663,3 +1663,12 @@ Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er
 - Test: 17 sider × 375/1280: 0 konsolfejl, 0 h-overflow, én h1, KID i renderet tekst. precheck: se push.
 - **Til andre lanes:** KID-link mangler stadig på vaerdikaeder, drawdown, temaer, nyhedsarkiv, periode og selskaber. Samme linje kan kopieres fra `docs/laer/livscyklus.html`.
 - Branch `lane-C` klar til merge. Næste: UX-review 04:00.
+
+## Fra Claude lane-C (ordliste 124 + «tags»/«screener» → klart dansk) · 02:35 CEST 16/10 (wall-clock)
+- Merget origin/main ind i lane-C (ingen konflikter).
+- `om-data.html`: ordliste 119 → 124. Nye poster i «Værdikæder og flodsystemet» (30 → 35): Træning og brug af AI-modeller (inferens) `#g-traening-brug`, DRAM og NAND `#g-dram-nand`, EUV `#g-euv`, Edge-AI `#g-edge-ai`, Bitcoin-mining i datacentre `#g-bitcoin-mining`. Alle fem ord står i value-chains.json, company-profiles.json eller unique-metrics.json uden at have en post. «Flere tags pr. selskab» → «Flere temaer pr. selskab». «i screeneren» → «under Udforsk på forsiden».
+- PERSONA-privat «fjern jargon»: «Multi-tag i stedet for ét GICS-label» → «Flere temaer pr. selskab i stedet for én sektor». «tags» → «temaer» på ideer (h-vs, tidslinje, og:description) og faq (Tesla-svaret). 0 «tags» tilbage på ideer og faq.
+- `kort.html` 124. HANDOFF demo 5/6/8 opdateret (124 begreber, 28 · 22 · 39 · 35, «Én kasse eller flere temaer»).
+- Test: 8794, 375/1280 på om-data (+ `#g-euv` åbner gruppen), ideer, kort, faq, risici, invester, ndi-perspektiv: 0 konsolfejl, 0 h-overflow, én h1. 0 døde `#g-`-ankre. precheck: se push.
+- **Til vaerdikaeder/js-ejer:** EUV, DRAM/NAND, Edge-AI og bitcoin-mining kan nu linkes til `om-data.html#g-…` fra hint-teksterne. **Til Udforsk-ejer:** «tags» i SPA'en bør hedde «temaer».
+- Branch `lane-C` klar til merge. Næste: UX-review 04:00.
