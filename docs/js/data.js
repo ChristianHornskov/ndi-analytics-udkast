@@ -4,11 +4,11 @@ export const WARN_HIST =
   'Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.';
 
 export const MATURITY_LABELS = {
-  prerevenue: 'Præ-revenue',
-  preprofit: 'Præ-profit',
-  highgrowth: 'High growth',
-  garp: 'GARP',
-  value: 'Value',
+  prerevenue: 'Før omsætning',
+  preprofit: 'Før overskud',
+  highgrowth: 'Høj vækst',
+  garp: 'Vækst med overskud',
+  value: 'Moden',
 };
 
 export const THEME_LABELS = {
