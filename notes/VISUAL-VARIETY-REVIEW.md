@@ -184,6 +184,10 @@ På 390 px er nøglen under kurven et gitter, to og to. Sidste linje, «Højde e
 
 −26,6 % og −26,8 % ligger to pixel fra hinanden på aksen. Tallene stod i samme søjle, så det nederste læstes som om det hørte til den øverste prik. Nu ender −26,6 % til venstre for sin prik, og −26,8 % starter til højre for den åbne. −16,7 % og −35,8 % bliver over deres prikker. Ingen tal rammer hinanden eller kanten af svg'en, ved 390. Ingen sidescroll.
 
+### Update · prikkerne er foldet · 2026-10-16 ~03:46 CEST
+
+Under prikkerne står én sætning: hver prik er et fald, gul er det dybeste, hul gul er åben, median og middel står under aksen. Resten ligger i «Sådan læser du prikkerne», lukket, 44 px høj. Et klik åbner grænsen ved 10 % og at prikkerne til højre står i listen. Ingen sidescroll ved 390. Ingen konsolfejl.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.

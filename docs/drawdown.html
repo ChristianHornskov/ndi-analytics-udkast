@@ -283,7 +283,8 @@
  const anno = open
  ? `Lige nu, pr. ${fmtDate(rows[rows.length - 1].d)}, ligger serien ${fmtPct(nowU)} under toppen fra ${fmtDate(open.peakD)}. Bund i den episode var ${fmtPct(open.dd)} den ${fmtDate(open.troughD)}.`
  : '';
- const depthCap = `Hver prik er ét fald fra top til bund. ${eps.length} i alt. Gul prik er det dybeste fald.${open ? ' Hul gul prik er den åbne episode.' : ''} Median og middel står under aksen.${usedGate ? ' Stregen ved 10 % under nul er den samme grænse som på kurven. Prikker til højre for den har tal og står i listen.' : ''}`;
+ const depthLead = `Hver prik er ét fald fra top til bund. ${eps.length} i alt. Gul prik er det dybeste fald.${open ? ' Hul gul prik er den åbne episode.' : ''} Median og middel står under aksen.`;
+ const depthMore = usedGate ? 'Stregen ved 10 % under nul er den samme grænse som på kurven. Prikker til højre for den har tal og står i listen.' : '';
  const longest = deep.length ? deep.reduce((a, b) => (spanDays(a) >= spanDays(b) ? a : b)) : null;
  const longDays = longest ? spanDays(longest) : 0;
  const longNote = longest && !longest.recoveredD ? 'stadig åben' : 'fra top til genopretning';
@@ -317,7 +318,7 @@
  </ul>
  <p class="share-row"><button type="button" class="outline-btn" id="share-chart">Del grafen</button><span id="share-note" class="src" hidden></span></p>
  <h2 class="h-section">Hvor dybe er faldene?</h2>
- <figure class="figure plain">${depthPlot()}<figcaption>${depthCap}</figcaption></figure>
+ <figure class="figure plain">${depthPlot()}<figcaption><p>${depthLead}</p>${depthMore ? `<details class="more"><summary>Sådan læser du prikkerne</summary><p>${depthMore}</p></details>` : ''}</figcaption></figure>
  <h2 class="h-section">De dybe episoder</h2>
  <p class="src" style="margin-top:0">${usedGate ? 'Episoder dybere end 10 %.' : 'De dybeste episoder.'} De øvrige ${eps.length - deep.length} er med i middel, median og prikkerne. Vælg en episode, eller klik søjlen, for at se bunden på kurven.</p>
  <ol class="ep-ledger">${ledger}</ol>
