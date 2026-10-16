@@ -203,12 +203,38 @@
   "US05614L2097": {
    "name": "Babcock & Wilcox",
    "theme": "energy",
-   "summary": "Leverer teknologi og service til energiproduktion og industrielle anlæg. Forretningen omfatter blandt andet kedler, forbrændingssystemer og emissionsbehandling.",
-   "watch": "Projektgennemførelse, finansiering og efterspørgsel fra energi- og industrikunder.",
-   "source": "https://www.babcock.com/",
-   "products": "Udstyr og service til energiproduktion og industri, blandt andet kedler og systemer til emissionsbehandling.",
-   "customers": "Energi- og industrivirksomheder.",
-   "role": "Den fysiske energi- og anlægsinfrastruktur, som blandt andet databehandling er afhængig af.",
+   "summary": "Laver kedler og står for design og byggeri. Meddelelsen af 4. marts 2026 er 1,2 GW for Base Electron, som skal eje anlæggene. Det er ikke et kraftværk, Babcock & Wilcox driver. 20 turbiner af 11. august 2026 ligger efter beholdningen.",
+   "watch": "Om 1,2 GW bliver læst som et værk i drift. Meddelelsen af 4. november 2025 siger én gigawatt og nævner også fire anlæg på 300 MW. Levering er sat til udgangen af 2028. Turbinerne af 11. august 2026 er efter beholdningen.",
+   "source": "https://www.babcock.com/home/about/corporate/news/babcock-and-wilcox-receives-full-notice-to-proceed-on-24-billion-power-generation-project-for-base-electron-to-supply-power-to-applied-digital-ai-factory-campuses",
+   "products": "Kedler, dele og design-byggeri. Aftalen af 4. marts 2026 omfatter fire kedler på 300 MW fyret med naturgas. Ikke et kraftværk selskabet driver.",
+   "customers": "Base Electron er skrevet som den uafhængige producent, der skal udvikle og eje anlæggene. Applied Digital er nævnt som modtager af strømmen under særskilte aftaler.",
+   "role": "Kedler. 1,2 GW er Base Electrons anlæg, ikke et værk Babcock & Wilcox driver.",
+   "narrative": [
+    "Babcock & Wilcox skriver, at hovedkontoret ligger på 1200 E Market St, Ste 650, i Akron i Ohio, og at Chanute Manufacturing ligger på 1700 S Washington i Chanute i Kansas. Det er kontor og fremstilling, ikke et kraftværk. Selskabet skrev 4. november 2025, at en begrænset igangsættelse gjaldt ét projekt om én gigawatt, og at planen var fire anlæg på 300 MW med mål om drift i 2028. Samme tekst siger, at selskabet har designet og installeret kedler med mere end 400 GW installeret kapacitet på andres kraftværker og industrianlæg. Det er ikke værker, selskabet driver.",
+    "Selskabet skrev 4. marts 2026, at den fulde igangsættelse er en design- og byggeaftale om 1,2 GW med fire naturgasfyrede kedler på 300 MW og dampturbiner. Base Electron er skrevet som den uafhængige producent, der udvikler og ejer anlæggene. Meddelelsen af 8. januar 2026 sætter levering til udgangen af 2028. De tre datoer ligger før beholdningen pr. 1. juni 2026. Teksten siger ikke, at anlægget er i drift. November-teksten siger én gigawatt, og marts-teksten siger 1,2 GW. De to tekster bruger ikke samme tal. Meddelelsen af 11. august 2026 om 20 dampturbiner på 50 MW, i alt 1 GW, til programmet FastPower ligger efter beholdningen og er ikke et værk i drift. Den ekstra 1,2 GW er en mulighed, Base Electron vurderer."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Kontakt, hovedkontor og Chanute",
+     "url": "https://www.babcock.com/contact-us"
+    },
+    {
+     "label": "Begrænset igangsættelse 4. november 2025",
+     "url": "https://www.babcock.com/home/about/corporate/news/babcock-and-wilcox-announces-ai-data-center-power-generation-solution-and-signs-lntp-with-applied-digital-to-design-and-install-one-gigawatt-of-electric-power"
+    },
+    {
+     "label": "Meddelelse 8. januar 2026",
+     "url": "https://www.babcock.com/home/about/corporate/news/babcock-and-wilcox-selects-siemens-energy-to-supply-steam-turbine-generator-sets-for-applied-digital-data-center-power-project"
+    },
+    {
+     "label": "Fuld igangsættelse 4. marts 2026",
+     "url": "https://www.babcock.com/home/about/corporate/news/babcock-and-wilcox-receives-full-notice-to-proceed-on-24-billion-power-generation-project-for-base-electron-to-supply-power-to-applied-digital-ai-factory-campuses"
+    },
+    {
+     "label": "Meddelelse 11. august 2026",
+     "url": "https://www.babcock.com/home/about/corporate/news/babcock-and-wilcox-signs-agreement-with-siemens-energy-to-commence-work-on-20-steam-turbines-for-data-center-power-generation"
+    }
+   ],
    "reviewedAt": "2026-10-08"
   },
   "DE0006450000": {
@@ -247,12 +273,22 @@
   "US35834F1049": {
    "name": "T1 Energy",
    "theme": "energy",
-   "summary": "Arbejder med amerikansk produktion af solenergiudstyr. Selskabets aktiviteter omfatter produktion af solcellemoduler og opbygning af forsyningskæder.",
-   "watch": "Kapitalbehov, industripolitik, told og priser på solenergiudstyr.",
+   "summary": "Laver solcellemoduler. Fabrikssiden sætter G1_Dallas til 5 GW moduler om året. Det er en kapacitet, ikke et målt år. G2-celler er anslået og ikke i drift. Foden skriver Austin, Texas, uden gade.",
+   "watch": "Om 5 GW bliver læst som årets produktion. G2 er anslået cellekapacitet, ikke et anlæg i drift. Koordinaterne for G1 og G2 begynder med samme tal.",
    "source": "https://t1energy.com/manufacturing/",
-   "products": "Solcellemoduler og aktiviteter inden for den amerikanske forsyningskæde til solenergi.",
-   "customers": "Kunder i markedet for solenergianlæg.",
-   "role": "Industriel produktion af udstyr, der omdanner sollys til elektricitet.",
+   "products": "Solcellemoduler. G1 er sat til 5 GW om året og omkring 12.000 paneler i døgnet uden dato. G2 er anslået 5 GW celler om året. Ikke et kraftværk.",
+   "customers": "Siden navngiver ikke en køber af modulerne.",
+   "role": "Moduler. 5 GW er en kapacitet. G2-celler er anslået. Austin i foden er ikke en gade.",
+   "narrative": [
+    "Fabrikssiden, læst 16. oktober 2026, sætter G1_Dallas til 5 GW solcellemoduler om året og omkring 12.000 paneler i døgnet. 5 GW er en kapacitet. Paneletallet er ikke dateret. G2 er sat til anslået 5 GW celler om året og et mål om 90 procent genbrug af vand. Teksten siger next up om solceller fra en ny fabrik uden for Austin. Det er ikke celler i drift.",
+    "Samme side skriver koordinater for G1_Dallas, 32,60157 nord og 96,70376 vest, og for G2_Austin, 32,60210 nord og 96,70345 vest. Begge begynder med 32,60 nord og 96,70 vest. En overskrift er ikke en by. Foden skriver T1 Energy Inc. og Austin, Texas, USA, uden gade. Ordene advanced, cutting-edge og future er ikke taget med."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Fabrikker",
+     "url": "https://t1energy.com/manufacturing/"
+    }
+   ],
    "reviewedAt": "2026-10-08"
   },
   "IL0010823792": {
