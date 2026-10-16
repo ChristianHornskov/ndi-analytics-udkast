@@ -374,3 +374,5 @@ T1 Energy og Babcock & Wilcox har en kort rollelinje igen, både i kæden og på
 MDA Space har også en kort rollelinje i kæden. Satellitter: satellitter til billeder af Jorden. Rum og compute: jordobservation, og kontrolcenteret er på jorden. Datoerne, X-bånd, C-bånd og produktnavnene står i faktateksten. Vægten 0,16 er uændret. Profilens rollelinje på selskabssiden er uændret.
 
 Profilens rollelinje for MDA Space er derefter også kortet til jordobservation og robotik. St-Bruno, 11. august 2026 og de to nye satellitter står i resuméet og i forklaringen. Ingen `reviewedAt`, så siden siger ikke, at teksten er tjekket mod kilden. AI-udkast-badgen bliver.
+
+NextEra, Oklo, Terrestrial Energy, Taseko og Karman har en kort rollelinje på selskabssiden. NextEra er et elselskab med atomkraft, gas, sol og vind. Oklo udvikler små atomkraftanlæg. Terrestrial Energy er et reaktordesign. Taseko er en kobber- og molybdænmine. Karman laver dele til løfteraketter og missiler. Dominion, Groves, 390 MWe, Florence og Huntington Beach står i resumé eller forklaring. Ingen `reviewedAt`. AI-udkast-badgen bliver. Vægtene er uændrede.
