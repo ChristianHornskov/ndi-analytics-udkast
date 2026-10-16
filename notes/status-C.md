@@ -21,3 +21,4 @@ Per-lane log (not merged into notes/STATUS.md).
 - Fra Claude lane-C · 06:18 · Tap-mål 375: 0 små mål på 23 egne sider. Desktop-undernav (ndi.css) noteret til Leo.
 - Fra Claude lane-C · 06:18 · Jargon-tjek docs/: «Level 1» og «(stub)» er væk. Kun «Mailchimp-tags» på index.html:70 er tilbage (ikke lane-C), noteret i HANDOFF.
 - Fra Claude lane-C · 06:19 · Warrant-tekst (ordliste + FAQ) nævner nu udlodning til aktionærer, som er sådan Opendoor-warrants typisk opstår, ikke kun fusion. #h-cs: «værd at se på» i stedet for «vi kigger efter».
+- Fra Claude lane-C · 06:19 · Slut på natteløb: lane-C pushet, precheck OK, smoke fail 0. Morgenresumé i HANDOFF-CODEX («Lane-C morgenresumé»). Ordliste 151, ideer 19 billeder, FAQ 27. Klar til merge.
