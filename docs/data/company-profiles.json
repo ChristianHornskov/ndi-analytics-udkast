@@ -1489,7 +1489,8 @@
    "role": "Muligt råstof til batterier. Ikke drift.",
    "narrative": [
     "The Metals Company undersøger metalnoduler på havbunden. Nodulerne indeholder blandt andet nikkel, kobber og kobolt.",
-    "Selskabet skrev i maj 2026, at Allseas skal gøre et opsamlingssystem færdigt, og at prøvekørsel ventes at begynde i fjerde kvartal 2027. I august 2026 lagde NOAA en ansøgning frem. Ansøgningen er ikke en tilladelse, og der er ingen produktion i denne beskrivelse."
+    "Selskabet skrev 11. maj 2026, at det har underskrevet en kontrakt med Allseas om udviklingsarbejde og kommerciel produktion af det første opsamlingssystem. Kontraktens titel er ikke drift. Selskabet venter idriftsættelse i fjerde kvartal 2027. En prøvekørsel i 2022 løftede 3.000 ton. Navneskiltet er 3,0 millioner våde ton om året og er ikke et målt år. Underleverancer ventes i tredje kvartal 2026, efter beholdningen, og er ikke tildelt i teksten.",
+    "NOAA offentliggjorde 19. august 2026 ansøgningen i Federal Register. Datoen ligger efter beholdningen pr. 1. juni 2026. Offentliggørelsen er et opslag, ikke en tilladelse. NOAA skrev fuld overensstemmelse 28. april 2026, før beholdningen. De næste skridt i meddelelsen er certificering, miljøredegørelse og en endelig afgørelse. Der er ingen produktion i denne beskrivelse."
    ],
    "narrativeSources": [
     {
@@ -1497,11 +1498,11 @@
      "url": "https://metals.co/"
     },
     {
-     "label": "Aftale med Allseas, maj 2026",
+     "label": "Aftale med Allseas, 11. maj 2026",
      "url": "https://metals.co/tmc-and-allseas-sign-commercial-agreement-first-offshore-nodule/"
     },
     {
-     "label": "Ansøgning offentliggjort, august 2026",
+     "label": "Ansøgning offentliggjort, 19. august 2026",
      "url": "https://metals.co/noaa-publishes-tmc-usas-consolidated-application-exploration/"
     }
    ]
