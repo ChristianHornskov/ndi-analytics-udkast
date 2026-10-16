@@ -22,3 +22,4 @@ Per-lane log. Ikke notes/STATUS.md.
 - Fra Grok lane-D · 04:36 · Hver temasøjle siger PMINDI eller AKK. Listen kan læses uden tegnforklaringen. lane-D klar til merge. Ikke main. Ikke færdig.
 - Fra Grok lane-D · 04:37 · Valgt klasse i embed har gul overkant. Kort-knapper på sammenlign er 44 px. lane-D klar til merge. Ikke main. Ikke færdig.
 - Fra Grok lane-D · 04:39 · «← Fonden» er 44 px, så linket kan rammes. lane-D klar til merge. Ikke main. Ikke færdig.
+- Fra Grok lane-D · 04:40 · PMINDIAKK-linket er en chip på 44 px under 640. Ingen procent. lane-D klar til merge. Ikke main. Ikke færdig.

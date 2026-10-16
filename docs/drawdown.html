@@ -45,7 +45,7 @@
  <h1>Fald fra top · ${fund.short}</h1>
  <p class="lede">Ny andelsklasse. Fald fra top for PMINDIAKK vises efter 12 måneders historik. Ingen NAV eller graf før 5. december 2026. Klassen følger samme overordnede strategi som PMINDI.</p>
  ${meta?.funds?.pmindiakk?.priip ? `<p class="src">Risikoindikator (SRI) ${meta.funds.pmindiakk.priip.risk_class} af ${meta.funds.pmindiakk.priip.risk_scale_max} ifølge KID. Gælder fonden som helhed. <a href="${meta.funds.pmindiakk.priip.url}">Læs KID ↗</a></p>` : ''}
- <p class="link-row"><a href="sammenlign.html">Sammenlign andelsklasser →</a></p>
+ <p class="link-row chip-links"><a href="sammenlign.html">Sammenlign andelsklasser →</a></p>
  <p class="warn">${WARN_HIST}</p>`;
  } else if (!fund.data?.length) {
  main.innerHTML = `<p class="muted">Ingen serie.</p>`;

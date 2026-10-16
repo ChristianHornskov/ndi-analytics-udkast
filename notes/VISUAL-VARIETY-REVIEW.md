@@ -260,6 +260,10 @@ Det valgte klassekort i embed har gul overkant, `#f5ee9e`. Et klik flytter kante
 
 «← Fonden» på drawdown var 19 px høj. Den er 44 px ved 1280, 390 og 320, med 16 px luft ned til øjenbrynet. PMINDIAKK har ingen procent. Forsiden og om-data scroller ikke sidelæns ved 320. Ingen konsolfejl.
 
+### Update · AKK-link er en chip · 2026-10-16 ~04:40 CEST
+
+På PMINDIAKK var «Sammenlign andelsklasser» en tekstlinje. Under 640 px er den en chip, 44 px høj. På 1280 er den 22 px, uden pille. Siden har ingen procent. Ingen sidescroll. Ingen konsolfejl.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.
