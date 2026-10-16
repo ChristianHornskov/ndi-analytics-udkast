@@ -235,7 +235,8 @@
               "forslag": false
             }
           ],
-          "seeChain": null
+          "seeChain": null,
+          "shift": "NDI skriver: \"Er datacentret fremtidens fabrik, bliver det strategisk afgørende, om intelligensen produceres i Vesten eller i Kina\" (BLOG 27. juli 2026)."
         },
         {
           "id": "chipdesign",
@@ -406,7 +407,8 @@
               "forslag": false
             }
           ],
-          "seeChain": null
+          "seeChain": null,
+          "shift": "Chipfabrikker i Vesten er blevet et strategisk tema hos NDI: \"Vi skal bygge kraftværker, elnet, datacentre, chipfabrikker, robotfabrikker, forsvarsindustri og rum-infrastruktur\" (BLOG 24. august 2026)."
         },
         {
           "id": "memory",
@@ -463,7 +465,8 @@
               "forslag": false
             }
           ],
-          "seeChain": null
+          "seeChain": null,
+          "shift": "NDI så \"nye vækstlommer længere nede i værdikæden\" i hukommelse (BLOG 6. oktober 2025). I 2026 nævnes hukommelse som et af de steder, hvor der allerede er begyndende flaskehalse (BLOG 30. marts 2026)."
         },
         {
           "id": "optics",
@@ -520,7 +523,8 @@
               "forslag": true
             }
           ],
-          "seeChain": null
+          "seeChain": null,
+          "shift": "NDI skriver, at efterspørgslen efter regnekraft understøtter \"hele værdikæden omkring AI, fra chips og memory til optiske interconnects, datacentre og energi\" (BLOG 29. juni 2026)."
         },
         {
           "id": "servers",
