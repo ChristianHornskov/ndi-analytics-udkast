@@ -1094,3 +1094,27 @@ Live-sweep på 50 URL'er ved 375: **0 pageerrors og 0 vandret overflow**. Live h
 - **Privat 55+:** navnene ser nu professionelle ud i listerne. Den svageste oplevelse er stadig "Profiltekst mangler" på nr. 4–7.
 - **Familiekontor:** top-10-summen (11,9 %) og "Beholdningsnavn" i CSV giver mere tillid til dataene.
 - **Idéspejder:** #9 (fakta vs. vurdering) er uændret næste. Profiler efter vægt er stadig det, der giver mest pr. time.
+
+## 2026-10-16 06:45 CEST · cyklus 44 (main `24e1fce`, ingen docs-delta siden cyklus 43; live = main)
+
+Live-sweep på 50 URL'er ved 375: **0 pageerrors og 0 vandret overflow**. Tiny-tal og sidehøjder er identiske med cyklus 43 på alle 50 URL'er, så live er uændret, og Pages er ikke forsinket.
+
+### MUST
+- Ingen UX-blokere.
+
+### SHOULD (åbne, uændret fra cyklus 43, i prioriteret rækkefølge)
+1. `vaerdikaeder.html` bruger ikke `displayName()`. "Power Solutions Internationa" og "Lpkf Laser & Electronics Se" står i fælles-listen (3×).
+2. Store/små bogstaver i h1 på selskabssider står i rå form: Sitime Corp, Iqe Plc, Wix.Com Ltd, SoFi Tech, Chemours Co, United States Antimony Corp. Løsning: `NAME_FIX`.
+3. `omkostninger.html:356` "Tast 1 eller 5." er en tastaturgenvej i den synlige tekst og virker ikke på mobil.
+4. 5–6 af top-10/15 viser "Profiltekst mangler endnu" (Lumentum, SiTime, Poet, Wix, MercadoLibre, SoFi).
+5. "Dyb"/"YTD dyb side" og "kvartalssnapshot" er jargon (cyklus 41).
+6. Touch-mål under 24 px er uændrede: udforsk 698, ndi-perspektiv 418, selskaber 382.
+
+### Ny (UX-side af en compliance-SHOULD)
+- Footeren på `drawdown.html`, `embed/chart.html` og `periode.html` har ingen "Generel information, ikke investeringsrådgivning". Se compliance cyklus 44 SHOULD 7. Embed er den side, der deles uden for sitet, så footeren skal kunne stå alene.
+
+### Nice
+- Temasiderne har stadig ingen figur.
+
+### Persona-linser
+Uændret fra cyklus 43. Det, der giver mest pr. time, er stadig (a) `displayName` i værdikæder og `NAME_FIX` for h1, som er én lille ændring, og (b) profiler for top-10 efter vægt.

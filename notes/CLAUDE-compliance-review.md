@@ -1111,3 +1111,30 @@ Ikke juridisk rådgivning. 50 URL'er ved 375. Basis-tjeklisten er som i cyklus 4
 
 ### Prioritet
 **1** → **2** → **3** + **4** + **5** (rene tekstrettelser, ét commit) → **6**.
+
+## 2026-10-16 06:45 CEST · cyklus 44 (main `24e1fce`, ingen docs-delta siden cyklus 43; live = main)
+
+Ikke juridisk rådgivning. Denne cyklus var en dybere kontrol i kilden (`docs/**` html/js/json) ud over live-sweepet på 50 URL'er.
+
+### Kildescan
+- **Rådgivningsagtigt sprog** (køb nu/sælg/anbefal*/garanter*/sikker afkast/bedste tip/kursmål/upside/risikofri/øger eksponering/overvægt/undervægt): alle hits er beskrivende ("selskabet sælger …"), KID-terminologi ("anbefalet investeringsperiode") eller negationer ("ikke en anbefaling", "ikke bevidste overvægte"). Undtagelsen er `laer/hvorfor-mange-aktier.html`: "en stor overvægt i én branche øger variansen". Det er generel pædagogik om spredning, ikke trading-sprog ✅.
+- **Benchmark/Nasdaq:** "Nasdaq" står kun som noteringssted i selskabsprofiler. Overalt står "intet fast benchmark" (`fund-facts.json` "benchmark": "Nej") ✅.
+- **asOf:** beholdningsdatoer (`asOf`/`positionsAsOf`/`holdingsAsOf`) er alle 2026-06-01. 2026-10-14/15 i `fund-meta`, `latest` og `risk-stats` er NAV-/afkastserier, ikke beholdning ✅.
+- **Meta-beskrivelser:** alle HTML-sider er `noindex`. Ingen description lover afkast eller "vindere" ✅.
+
+### MUST
+- **Ingen åbne MUST-blokere.**
+
+### Ny SHOULD
+7. **Ikke-rådgivning mangler i footeren på `drawdown.html`, `embed/chart.html` og `periode.html`.** De tre sider har "Markedsføringsmateriale", prospekt- og KID-links, "Historisk afkast er ikke en pålidelig indikator" og tabsadvarslen, men ingen synlig "Generel information, ikke investeringsrådgivning". Det samme gælder live (tekst-længde uændret siden cyklus 41). Det blev noteret som et faktum i cyklus 26–28 ("kun tab+historik"), men blev aldrig rejst som et punkt. Det er vigtigst for **embed**, fordi grafen er beregnet til at blive delt og indlejret uden for sitet. Dens eneste "ikke rådgivning" står i `og:description`, som brugeren ikke ser. Rettelse: tilføj "Generel information, ikke investeringsrådgivning." til footerens anden linje på de tre sider. Det er den samme formulering som på fonden og om-data.
+
+### SHOULD (åbne, uændret fra cyklus 43)
+1. "Gns. årligt afkast" står uden periode ("siden start 22. sep. 2023"): `js/app.js:420`, `periode.html:113`.
+2. Værdikæder er ikke AI-mærket (`vaerdikaeder.html`, `vaerdikaede.html`).
+3. "Central Information Dokument" står i `js/data.js:283` og er synlig i KID-footeren på bl.a. drawdown → "Dokument med central information (KID)".
+4. "kvartalssnapshot": `js/app.js:359/428/758` og `selskab.html:202`.
+5. Intern sætning på `omkostninger.html:372`: "Det er det tal, marketingmateriale skal gengive ærligt".
+6. Rå eller afkortede selskabsnavne (UX SHOULD 1–2).
+
+### Prioritet
+**7** (tre footere, én linje hver) + **3** + **4** + **5** samlet i ét tekst-commit → **1** → **2** → **6**.
