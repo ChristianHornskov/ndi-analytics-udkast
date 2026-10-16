@@ -167,7 +167,7 @@
     .mn-bridge::before{content:"⇄ ";color:var(--yellow);font-weight:700}
     .a-pane{display:none;margin:4px 0 18px;border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:linear-gradient(180deg,#0e2027,#0b171d)}
     .a-pane.on{display:block}
-    #a-pane,#e-pane,#p-pane,#sp-map,#sp-cost,#sp-trip,#sp-money,#sp-risk,#e-risk,#sp-bands,#sp-quiz,#e-quiz,#sp-alt,#q-hz,#q-lad,#q-risk,#q-links,#q-cold,#q-quiz,#q-br,#eflow,#q-gl,#gloss-wrap,#p-gloss-wrap,#e-gloss-wrap,#phases,#p-loop,#p-risk,#p-quiz,#a-risk,#a-quiz,#a-gloss-wrap{scroll-margin-top:110px}
+    #a-pane,#e-pane,#chain-tip,#chain-bridges,#p-pane,#sp-map,#sp-cost,#sp-trip,#sp-money,#sp-risk,#sp-web,#e-risk,#sp-bands,#sp-quiz,#e-quiz,#sp-alt,#q-hz,#q-lad,#q-risk,#q-links,#q-cold,#q-quiz,#q-br,#eflow,#q-gl,#gloss-wrap,#space-pane,#p-gloss-wrap,#e-gloss-wrap,#phases,#p-loop,#p-risk,#p-quiz,#a-risk,#a-quiz,#a-gloss-wrap{scroll-margin-top:110px}
     /* Robotik: sanse-tænke-handle-løkke (kun denne side) */
     .p-links{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px;padding:0;list-style:none}
     .p-links a{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;text-decoration:none;color:var(--text);border:1px solid var(--line);border-radius:999px;padding:4px 11px;background:#0b171d}
@@ -193,6 +193,22 @@
     .sp-route a:hover,.sp-route a:focus-visible{border-color:var(--yellow)}
     .sp-route .no{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:#16323b;font-size:12px}
     .sp-route small{display:block;color:var(--muted);font-size:11px}
+    .sp-route a[aria-current]{border-color:var(--yellow);box-shadow:inset 0 -2px 0 var(--yellow)}
+    .sp-route a[aria-current] .no{background:var(--yellow);color:#0b171d}
+    .sp-route a.done .no{box-shadow:0 0 0 1.5px var(--cyan)}
+    /* Rum: "Stop N af 9" nederst i hvert stop */
+    .sp-next{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;margin-top:12px;padding:8px 10px;border:1px dashed var(--line);border-radius:10px;background:#08131a;font-size:12.5px;color:var(--muted)}
+    .sp-learn>.sp-next{grid-column:1/-1;margin-top:0}
+    .sp-next .pips{display:flex;gap:3px;margin-right:2px}
+    .sp-next .pips i{width:8px;height:8px;border-radius:50%;background:#1b3640}
+    .sp-next .pips i.d{background:var(--cyan)}
+    .sp-next .pips i.c{background:var(--yellow)}
+    .sp-next .at{color:var(--text)}
+    .sp-next .go{display:flex;flex-wrap:wrap;gap:6px;margin-left:auto}
+    .sp-next a{display:inline-flex;align-items:center;gap:5px;min-height:32px;padding:3px 10px;border:1px solid var(--line);border-radius:999px;text-decoration:none;color:var(--text);background:#0b171d}
+    .sp-next a:hover,.sp-next a:focus-visible{border-color:var(--yellow)}
+    .sp-next a.nx{border-color:var(--brand)}
+    @media(max-width:600px){.sp-next .go{margin-left:0;width:100%}.sp-next a.nx{order:-1;flex:1 1 100%;justify-content:center}.sp-next a.pv,.sp-next a.up{flex:1 1 0;justify-content:center}}
     .bands{margin:0}
     .sp-learn>.gloss-wrap{grid-column:1/-1}
     .bands h3{font-size:15px;color:var(--cyan);margin:0 0 4px}
@@ -231,7 +247,7 @@
     .qz-score:empty{display:none}
     .risk{margin-top:16px;border:1px solid var(--line);border-left:3px solid var(--yellow);border-radius:12px;padding:12px 14px;background:linear-gradient(180deg,#14201f,#0b171d)}
     .risk h3{font-size:15px;color:var(--yellow);margin:0 0 4px}
-    .tr{margin:18px 0 6px}
+    .tr{margin-top:16px;border:1px solid var(--line);border-left:3px dotted var(--cyan);border-radius:12px;padding:12px 14px;background:linear-gradient(180deg,#0e2027,#0b171d)}
     .tr h3{font-size:15px;color:var(--cyan);margin:0 0 4px}
     .tr-wrap{display:grid;gap:12px;margin-top:10px}
     @media(min-width:900px){.tr-wrap{grid-template-columns:minmax(0,5fr) minmax(0,6fr);align-items:start}}
@@ -283,6 +299,24 @@
     .e-where .rk-strip .cur{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:8px;font-size:14px;border:2px solid var(--yellow);background:#2a2a14;box-shadow:0 0 0 3px rgba(255,214,0,.12)}
     .ew-t{margin:0;font-size:12.5px;color:var(--muted)}
     .ew-t b{color:var(--yellow);font-weight:600}
+    .vc-brief{margin:8px 0 2px;padding:8px 10px;border-radius:10px;background:#11262d;border-left:4px solid #3c5f68;display:grid;gap:6px}
+    .vc-brief.lv-dam{border-left-color:var(--yellow)}
+    .vc-brief.lv-early{border-left-style:dashed;border-left-color:var(--yellow)}
+    .vc-brief.lv-next{border-left-color:var(--cyan)}
+    .vb-row{margin:0;display:grid;grid-template-columns:24px 1fr;gap:8px;align-items:start;font-size:13px;line-height:1.45;color:var(--text)}
+    .vb-i{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#1a3a44;font-size:12px}
+    .vc-brief.lv-dam .vb-row.why .vb-i{background:var(--yellow);color:#0b171d}
+    .vb-row b{display:block;font-size:10.5px;letter-spacing:.5px;text-transform:uppercase;color:var(--muted)}
+    .vc-brief.lv-dam .vb-row.why b,.vc-brief.lv-early .vb-row.why b{color:var(--yellow)}
+    .vc-brief.lv-next .vb-row.why b{color:var(--cyan)}
+    .vb-row .src{display:block;font-size:11px;margin-top:1px}
+    .sp-hub .rk-strip{margin:3px 0 4px;width:fit-content;max-width:100%}
+    .sp-hub .rk-strip.trip::after{content:"↺";margin-left:6px;font-size:13px;color:#4a6a74}
+    .sp-hub .mn-chips{margin-top:6px}
+    .f-hub .mn-chips{margin-top:2px}
+    .mk{outline:2px solid var(--yellow);outline-offset:2px;box-shadow:0 0 0 6px rgba(255,214,0,.12)}
+    @media(prefers-reduced-motion:no-preference){.mk{animation:mk-pulse 1.2s ease-out 2}}
+    @keyframes mk-pulse{0%{box-shadow:0 0 0 0 rgba(255,214,0,.45)}100%{box-shadow:0 0 0 10px rgba(255,214,0,0)}}
     .rk-strip.flow::after{content:"→ datacenter";margin-left:6px;font-size:11px;color:#4a6a74;white-space:nowrap}
     /* AI-floden: 13 led i strimlen, så prikkerne er mindre og floden bølger */
     .rk-strip.river{flex-wrap:nowrap;padding-bottom:2px}
@@ -335,6 +369,8 @@
     .a-pane h3{font-size:15px;color:var(--cyan);margin:0 0 4px}
     .rv-host svg{display:block;width:100%;height:auto;margin:10px 0 4px}
     .rv-host a:focus-visible circle{stroke:var(--text);stroke-width:3}
+    .rv-host a.mk{outline:none;box-shadow:none;animation:none}
+    .rv-host a.mk circle{stroke:var(--yellow);stroke-width:5;filter:drop-shadow(0 0 6px rgba(255,214,0,.7))}
     .rv-flow{animation:rvflow 2.4s linear infinite}
     @keyframes rvflow{to{stroke-dashoffset:-36}}
     @media (prefers-reduced-motion:reduce){.rv-flow{animation:none}}
@@ -444,6 +480,8 @@
     .br .br-t small{font-weight:400;color:var(--muted)}
     .br .br-d{font-size:12.5px;line-height:1.45;color:var(--muted)}
     .br .br-n{color:var(--yellow);font-weight:700}
+    .br .br-go{grid-column:2;font-size:12px;color:var(--cyan);text-decoration:underline;text-underline-offset:2px}
+    a.br:hover .br-go,a.br:focus-visible .br-go{color:var(--yellow)}
     @media(min-width:960px){
       .vc-chain.horiz{display:flex;align-items:stretch;gap:0;overflow-x:auto;padding-bottom:8px;scroll-snap-type:x mandatory}
       .vc-chain.horiz .vc-arrow{padding:0 6px;align-self:center;flex:0 0 auto;transform:rotate(-90deg)}
@@ -762,6 +800,7 @@
       <div class="e-pane" id="e-pane" aria-label="Energi forklaret">
         <h3 id="ef-title"></h3>
         <p class="src" id="ef-lede"></p>
+        <nav class="sp-route" id="e-route" aria-label="Energi-fanens stop" hidden></nav>
         <ul class="p-links" id="e-links" aria-label="Spring til" hidden></ul>
         <ol class="eflow" id="eflow" aria-label="Strømmens vej fra råstof til datacenter"></ol>
         <p class="e-fact" id="ef-fact"></p>
@@ -789,7 +828,9 @@
       <p class="anno" id="chain-tip">Klik et led for selskaber. Hvert led har tre dele: hvad det er, hvorfor NDI følger det, og hvad der ændrer sig.</p>
       <div class="sm" id="chain-sm" aria-label="Største led i den forsinkede beholdning"></div>
       <div class="vc-chain" id="chain-view" role="tabpanel" aria-labelledby="chain-tabs"></div>
+      <div class="route-slot" data-slot="chain-view"></div>
       <div class="bridges" id="chain-bridges" aria-live="polite"></div>
+      <div class="route-slot" data-slot="chain-bridges"></div>
       <p class="src" id="mapping-note"></p>
       <p class="band" id="theme-note"></p>
     </section>
@@ -1046,7 +1087,7 @@
     function renderGloss(ch, ids) {
       const [listId, noteId, countId, wrapId] = ids;
       document.getElementById(listId).innerHTML = (ch?.glossary || []).map(g =>
-        `<div><dt>${esc(g.term)}</dt><dd>${esc(g.t)}${glossLink(g)}</dd></div>`).join('');
+        `<div${g.link ? ` data-lks="${esc(g.link)}"` : ''}><dt>${esc(g.term)}</dt><dd>${esc(g.t)}${glossLink(g)}</dd></div>`).join('');
       document.getElementById(noteId).textContent = ch?.glossaryNote || '';
       if (ch?.glossary?.length) document.getElementById(countId).textContent = `${ch.glossary.length} ord, der gør kæden lettere at læse`;
       if (matchMedia('(min-width: 900px)').matches) document.getElementById(wrapId).open = true;
@@ -1076,6 +1117,7 @@
       document.getElementById('sp-cost').hidden = false;
     })(sp?.costStory);
     // Følg én satellit: seks trin gennem rumkæden (baggrund; antal og navne fra beholdningen)
+    let tripGo = null; // sættes af renderTrip; bruges af ledkortenes rejse-strimmel
     (function renderTrip(t) {
       if (!t?.steps?.length) return;
       const steps = t.steps;
@@ -1140,6 +1182,7 @@
       document.getElementById('trip-lede').textContent = t.lede;
       document.getElementById('trip-note').textContent = t.note || '';
       show(0);
+      tripGo = show;
       document.getElementById('sp-trip').hidden = false;
     })(sp?.trip);
     // Hvordan tjener kæden penge: én gang, løbende, endnu tidligt (vores forenkling; antal fra beholdningen)
@@ -1164,7 +1207,7 @@
       document.getElementById('mn-h').textContent = m.title;
       document.getElementById('mn-lede').textContent = m.lede;
       document.getElementById('mn-lanes').innerHTML = m.lanes.map(x =>
-        `<div class="mn-lane ${esc(x.key)}"><h4><span class="ic" aria-hidden="true">${x.icon}</span>${esc(x.k)}</h4>${sketch(x.pulse)}<p>${esc(x.t)}</p>`
+        `<div class="mn-lane ${esc(x.key)}" data-lks="${esc(x.links.join(' '))}"><h4><span class="ic" aria-hidden="true">${x.icon}</span>${esc(x.k)}</h4>${sketch(x.pulse)}<p>${esc(x.t)}</p>`
         + `<ul class="mn-chips" aria-label="Led i sporet">${x.links.map(chip).join('')}</ul>`
         + (x.ndi ? `<p class="mn-ndi"><span class="tag">NDI</span>${esc(x.ndi.t)} <span class="src">Kilde: ${esc(x.ndi.src)}</span></p>` : '')
         + `</div>`).join('');
@@ -1184,7 +1227,7 @@
       document.getElementById('bd-lede').textContent = b.lede;
       const list = document.getElementById('bd-list');
       list.innerHTML = b.items.map(x =>
-        `<li data-band="${esc(x.key)}"><span class="pin" aria-hidden="true">${x.icon}</span><h4>${esc(x.k)}<small>${esc(x.km)}</small></h4><p>${esc(x.t)}</p>`
+        `<li data-band="${esc(x.key)}" data-lks="${esc(x.links.join(' '))}"><span class="pin" aria-hidden="true">${x.icon}</span><h4>${esc(x.k)}<small>${esc(x.km)}</small></h4><p>${esc(x.t)}</p>`
         + `<ul class="mn-chips" aria-label="Led i ${esc(x.k.toLowerCase())}">${x.links.map(chip).join('')}</ul></li>`).join('');
       // Fremhæv det tilsvarende bånd på højdeskalaen
       const zone = (k, on) => document.querySelectorAll(`#alt-host [data-zone="${k}"]`).forEach(z => z.classList.toggle('on', on));
@@ -1207,7 +1250,7 @@
       $('lede').textContent = z.lede;
       list.innerHTML = z.items.map((x, i) => {
         const href = x.sec.startsWith('lk-') ? `#${esc(x.sec)}" data-open="${esc(x.sec.slice(3))}` : `?kaede=${c}#${esc(x.sec)}" data-sec="${c}:${esc(x.sec)}`;
-        return `<li><fieldset><legend>${esc(x.q)}</legend><div class="qz-opts">`
+        return `<li${x.sec.startsWith('lk-') ? ` data-lks="${esc(x.sec.slice(3))}"` : ''}><fieldset><legend>${esc(x.q)}</legend><div class="qz-opts">`
           + x.a.map((a, j) => `<button type="button" data-q="${i}" data-a="${j}">${esc(a)}</button>`).join('')
           + `</div></fieldset><p class="qz-why" id="${p}-why-${i}" aria-live="polite" hidden><b></b> ${esc(x.why)} <a href="${href}">${esc(x.more)} →</a></p></li>`;
       }).join('');
@@ -1231,14 +1274,49 @@
       return true;
     }
     renderQuiz(sp?.quiz, 'space', 'qz', 'sp-quiz');
-    // Rum: læse-rute øverst i fanen
-    (function renderRoute(r) {
+    // Læse-rute øverst i en lang fane (rum og energi) og en stop-bjælke nederst i hvert stop
+    const routeSlots = {};
+    function renderRoute(r, c, navId, upId, name) {
       if (!r?.stops?.length) return;
-      const nav = document.getElementById('sp-route');
-      nav.innerHTML = `<span class="lbl">${esc(r.label)}</span>` + r.stops.filter(s => document.getElementById(s.id)).map((s, i) =>
-        `<a href="?kaede=space#${esc(s.id)}" data-sec="space:${esc(s.id)}"><span class="no" aria-hidden="true">${s.icon}</span><span>${i + 1}. ${esc(s.k)}<small>${esc(s.t)}</small></span></a>`).join('');
+      const nav = document.getElementById(navId);
+      const stops = r.stops.filter(s => { const el = document.getElementById(s.id); return el && !el.hidden; }), n = stops.length;
+      if (n < 2) return;
+      nav.innerHTML = `<span class="lbl">${esc(r.label)}</span>` + stops.map((s, i) =>
+        `<a href="?kaede=${c}#${esc(s.id)}" data-sec="${c}:${esc(s.id)}"><span class="no" aria-hidden="true">${s.icon}</span><span>${i + 1}. ${esc(s.k)}<small>${esc(s.t)}</small></span></a>`).join('');
       nav.hidden = false;
-    })(sp?.route);
+      const go = (s, cls, txt) => `<a class="${cls}" href="?kaede=${c}#${esc(s.id)}" data-sec="${c}:${esc(s.id)}">${txt}</a>`;
+      stops.forEach((s, i) => {
+        const el = document.getElementById(s.id), prev = stops[i - 1], next = stops[i + 1];
+        const foot = document.createElement('nav');
+        foot.className = 'sp-next';
+        foot.setAttribute('aria-label', `${name}, stop ${i + 1} af ${n}`);
+        foot.innerHTML = `<span class="pips" aria-hidden="true">${stops.map((_, j) => `<i class="${j < i ? 'd' : j === i ? 'c' : ''}"></i>`).join('')}</span>`
+          + `<span class="at">Stop ${i + 1} af ${n}: ${s.icon} ${esc(s.k)}</span><span class="go">`
+          + (prev ? go(prev, 'pv', `← ${esc(prev.k)}`) : '')
+          + (next ? go(next, 'nx', `Næste: <span aria-hidden="true">${next.icon}</span> ${esc(next.k)} →`) : go({ id: upId }, 'nx', '✓ Ruten er slut. Op til starten ↑'))
+          + (next ? go({ id: upId }, 'up', '↑ Ruten') : '') + '</span>';
+        // Ledkort og broer er fælles for alle faner og bygges på ny ved hvert faneskift, så deres bjælke står i en plads under dem
+        if (s.foot) { (routeSlots[s.foot] ||= {})[c] = foot; return; }
+        if (el.tagName === 'DETAILS') el.after(foot); else el.append(foot);
+      });
+      // "Du er her": stoppet, der fylder læsefeltet, lyser op i ruten øverst
+      if ('IntersectionObserver' in window) {
+        const chips = [...nav.querySelectorAll('a')];
+        const seen = new Set();
+        const io = new IntersectionObserver((es) => {
+          if (active() !== c) return;
+          es.forEach(e => { if (e.isIntersecting) seen.add(e.target.id); });
+          const vis = stops.filter(s => { const t = document.getElementById(s.id).getBoundingClientRect(), b = document.getElementById(s.foot || s.id).getBoundingClientRect(); return b.height && t.top < innerHeight * .45 && b.bottom > innerHeight * .2; });
+          const cur = vis.length ? vis[vis.length - 1].id : null;
+          chips.forEach((a, j) => {
+            const id = stops[j].id;
+            if (id === cur) a.setAttribute('aria-current', 'location'); else a.removeAttribute('aria-current');
+            a.classList.toggle('done', seen.has(id) && id !== cur);
+          });
+        }, { rootMargin: '-20% 0px -55% 0px' });
+        stops.forEach(s => [s.id, s.foot].forEach(id => id && io.observe(document.getElementById(id))));
+      }
+    }
     // Hvad kan gå galt (baggrund; NDI-linjer med kilde). Lille kæde-strimmel viser, hvilke led der rammes
     function renderRisks(r, links, ids, o = {}) {
       if (!r?.items?.length) return false;
@@ -1255,7 +1333,7 @@
       document.getElementById(hId).textContent = r.title;
       document.getElementById(ledeId).textContent = r.lede;
       document.getElementById(gridId).innerHTML = r.items.map(x =>
-        `<div class="rk-card"><h4><span class="ic" aria-hidden="true">${x.icon}</span>${esc(x.k)}</h4><p>${esc(x.t)}</p>`
+        `<div class="rk-card" data-lks="${esc(x.links.join(' '))}"><h4><span class="ic" aria-hidden="true">${x.icon}</span>${esc(x.k)}</h4><p>${esc(x.t)}</p>`
         + strip(x.links) + `<p class="rk-hits">Rammer især: ${names(x.links)}</p>`
         + (x.ndi ? `<p class="rk-ndi"><span class="tag">NDI</span>${esc(x.ndi.t)} <span class="src">Kilde: ${esc(x.ndi.src)}</span></p>` : '')
         + `</div>`).join('');
@@ -1301,7 +1379,7 @@
       document.getElementById('tr-h').textContent = T.title;
       document.getElementById('tr-lede').textContent = T.lede || '';
       const cards = document.getElementById('tr-cards');
-      cards.innerHTML = items.map(x => `<article class="tr-card" data-i="${x.i}" tabindex="0" style="--c:${COL[x.cid] || '#2a4650'}">`
+      cards.innerHTML = items.map(x => `<article class="tr-card" data-i="${x.i}" data-lks="${esc(x.from)} ${esc(x.to)}" tabindex="0" style="--c:${COL[x.cid] || '#2a4650'}">`
         + `<h4><span class="ic" aria-hidden="true">${x.icon}</span>${esc(x.k)}<span class="tr-tag${x.kind === 'ndi' ? ' ndi' : ''}">${x.kind === 'ndi' ? 'NDI' : 'baggrund'}</span></h4>`
         + `<p class="tr-path"><b>${esc(x.fl.short || x.fl.label)}</b> (rum) → <b>${esc(x.dst.short || x.dst.label)}</b> (${esc(x.ch.title)})</p>`
         + `<p>${esc(x.t)}</p>`
@@ -1457,7 +1535,7 @@
       const [cid, lid] = (b.to || '').split(':');
       const ch = pack.chains.find(c => c.id === cid);
       const href = b.href || `?kaede=${esc(cid)}#lk-${esc(lid)}`;
-      return `<a class="br" href="${href}"${b.to ? ` data-hop="${esc(b.to)}"` : ''}><span class="br-ico" aria-hidden="true">${b.icon || '◆'}</span><span class="br-t">${esc(b.label)}${ch ? ` <small>· ${esc(ch.title)}</small>` : ''} <small>· ${kindTxt(b.kind)}</small></span><span class="br-d">${esc(b.t)}</span></a>`;
+      return `<a class="br" href="${href}"${b.to ? ` data-hop="${esc(b.to)}" data-lks="${esc(b.to)}"` : ''}><span class="br-ico" aria-hidden="true">${b.icon || '◆'}</span><span class="br-t">${esc(b.label)}${ch ? ` <small>· ${esc(ch.title)}</small>` : ''} <small>· ${kindTxt(b.kind)}</small></span><span class="br-d">${esc(b.t)}</span><span class="br-go">${ch ? `Hop til ${esc(ch.links.find(l => l.id === lid)?.short || b.label)} →` : `Læs ${esc(b.label)} →`}</span></a>`;
     };
     const qc = pack.chains.find(c => c.id === 'quantum');
     document.getElementById('q-bridges').innerHTML = (qc?.bridges || []).map(brCard).join('');
@@ -1491,8 +1569,12 @@
     // Energi: hvad kan gå galt, strimlen følger strømmens vej (råstof → lagring → datacenter)
     if (en) renderRisks(en.risks, en.links, ['erk-h', 'erk-lede', 'erk-grid', 'erk-note', 'e-risk'], { flow: true, aria: 'Strømmens vej fra råstof til lagring' });
     renderQuiz(en?.quiz, 'energy', 'eqz', 'e-quiz');
-    // Energi: genveje under indledningen (kun til sektioner, der faktisk vises)
+    // Ruterne bygges, når alle fanens sektioner står (skjulte sektioner springes over)
+    renderRoute(sp?.route, 'space', 'sp-route', 'space-pane', 'Rum-ruten');
+    renderRoute(en?.route, 'energy', 'e-route', 'e-pane', 'Energi-ruten');
+    // Energi: genveje under indledningen (kun til sektioner, der faktisk vises), hvis fanen ikke har en rute
     (function renderELinks() {
+      if (!document.getElementById('e-route').hidden) return;
       const n = (k) => en?.[k]?.items?.length ? ` (${en[k].items.length})` : '';
       const items = [['eflow', '🔌', 'Strømmens vej'], ['e-risk', '⚠', 'Hvad kan gå galt?' + n('risks')], ['e-quiz', '✓', 'Tjek dig selv' + n('quiz')], ['e-gloss-wrap', '📖', 'Energi-ordbog']]
         .filter(([id]) => { const el = document.getElementById(id); return el && !el.hidden && el.children.length; });
@@ -1527,6 +1609,75 @@
       return `<div class="vc-sec e-where"><h4>Hvor i strømvejen <span class="vc-kind" title="Generel baggrundsviden, ikke Mads' synspunkt">baggrund</span></h4>`
         + `<ol class="rk-strip flow" aria-label="Strømmens vej fra råstof til datacenter">${items}</ol>`
         + `<p class="ew-t">Trin <b>${pos + 1}</b> af ${steps.length}. ${esc(st.where || '')}${also}${next} <a href="?kaede=energy#eflow" data-sec="energy:eflow">Se hele vejen →</a></p></div>`;
+    }
+
+    // Find leddet igen: usikkerheder, quiz og ordbog i egen fane, plus tråde og broer fra rum og kvante.
+    // Kun henvisninger til sider og afsnit, der allerede findes; ingen ny tekst at kildebelægge
+    const HUB_SECS = {
+      'ai-compute': { risk: 'a-risk', quiz: 'a-quiz', gloss: 'a-gloss-wrap', map: 'a-pane' },
+      energy: { risk: 'e-risk', quiz: 'e-quiz', gloss: 'e-gloss-wrap' },
+      physical: { risk: 'p-risk', quiz: 'p-quiz', gloss: 'p-gloss-wrap' },
+      quantum: { risk: 'q-risk', quiz: 'q-quiz', gloss: 'q-gl' },
+      space: { risk: 'sp-risk', quiz: 'sp-quiz', gloss: 'gloss-wrap' },
+    };
+    function hubChips(l, ch, kinds = ['map', 'risk', 'quiz', 'gloss', 'web', 'q']) {
+      const S = HUB_SECS[ch.id] || {};
+      const shown = (id) => { const el = id && document.getElementById(id); return el && !el.hidden; };
+      const out = [];
+      const add = (cid, sec, ic, k, t, mark) => out.push(`<li><a href="?kaede=${esc(cid)}#${esc(sec)}" data-sec="${esc(cid)}:${esc(sec)}"${mark ? ` data-mark="${esc(mark)}"` : ''} title="${esc(t)}"><span aria-hidden="true">${ic}</span>${k}</a></li>`);
+      const nm = (x) => esc(x.short || x.label);
+      if (kinds.includes('map') && S.map && shown(S.map)) {
+        const i = rvLinks.indexOf(l);
+        if (i >= 0) add(ch.id, S.map, '🌊', `Led <b>${i + 1}</b> af ${rvLinks.length} i floden`, `Flodkortet: ${l.label}, ${rvSub(l)}`, l.id);
+      }
+      const rk = (ch.risks?.items || []).filter(x => x.links.includes(l.id));
+      if (kinds.includes('risk') && rk.length && shown(S.risk)) add(ch.id, S.risk, '⚠', `<b>${rk.length}</b> af ${ch.risks.items.length} usikkerheder`, `Usikkerheder, der rammer leddet: ${rk.map(x => x.k).join(', ')}`, l.id);
+      const qz = (ch.quiz?.items || []).filter(x => x.sec === `lk-${l.id}`);
+      if (kinds.includes('quiz') && qz.length && shown(S.quiz)) add(ch.id, S.quiz, '✓', `${qz.length === 1 ? 'Ét spørgsmål' : qz.length + ' spørgsmål'} i Tjek dig selv`, `Spørgsmål: ${qz.map(x => x.q).join(' ')}`, l.id);
+      const gl = (ch.glossary || []).filter(g => g.link === l.id).map(g => g.term.split(' · ')[0]);
+      if (kinds.includes('gloss') && gl.length && document.getElementById(S.gloss)) add(ch.id, S.gloss, '📖', gl.length <= 2 ? esc(gl.join(' · ')) : `<b>${gl.length}</b> ord i ordbogen`, `Ordbogen: ${gl.join(', ')}`, l.id);
+      const key = `${ch.id}:${l.id}`;
+      const th = ch.id === 'space' ? [] : (sp?.threads?.items || []).filter(x => x.to === key);
+      if (kinds.includes('web') && th.length && shown('sp-web')) add('space', 'sp-web', '🛰', `Tråd fra rummet: ${th.map(x => nm(linkOf('space', x.from) || {})).join(' og ')}`, `Rummet og de andre kæder: ${th.map(x => x.k).join(', ')}`, key);
+      const qb = ch.id === 'quantum' ? [] : (qc?.bridges || []).filter(b => b.to === key);
+      if (kinds.includes('q') && qb.length && document.getElementById('q-br')) add('quantum', 'q-br', '⚛', 'Kvante møder leddet', `Hvor kvante møder kæden: ${qb.map(b => b.t).join(' ')}`, key);
+      return out.join('');
+    }
+    function findHub(l, ch) {
+      if (l.neighbour || ch.id === 'space') return '';
+      const list = hubChips(l, ch);
+      return list ? `<div class="vc-sec f-hub"><h4>Find leddet igen</h4><ul class="mn-chips" aria-label="Find leddet andre steder på siden">${list}</ul></div>` : '';
+    }
+
+    // Rum: hvor leddet optræder i rum-fanen (rejsen, pengene, usikkerheder, tråde, højde). Kun henvisninger til siden selv
+    function spaceHub(l) {
+      if (!sp || l.neighbour) return '';
+      const steps = sp.trip?.steps || [];
+      const on = steps.map((x, i) => (x.link === l.id || x.also === l.id) ? i : -1).filter(i => i >= 0);
+      const strip = steps.map((x, i) => {
+        const me = on.includes(i);
+        return `<li><a href="?kaede=space#sp-trip" data-trip="${i}" class="${me ? 'hit' : ''}" title="Trin ${i + 1}: ${esc(x.k)}" aria-label="Trin ${i + 1}, ${esc(x.k)}${me ? ', leddet er med her' : ''}. Vis trinnet"><span aria-hidden="true">${x.icon}</span></a></li>`;
+      }).join('');
+      const nr = (a) => a.length > 1 ? a.slice(0, -1).join(', ') + ' og ' + a[a.length - 1] : String(a[0]);
+      const tripT = on.length
+        ? `Satellittens rejse, trin <b>${nr(on.map(i => i + 1))}</b> af ${steps.length}: ${on.map(i => esc(steps[i].k.toLowerCase())).join(', ')}.`
+        : `Rejsen følger én internetsatellit, så ${esc((l.short || l.label).toLowerCase())} er ikke med på den.`;
+      const chips = [];
+      const lane = sp.money?.lanes?.find(x => x.links.includes(l.id));
+      if (lane) chips.push(['sp-money', lane.icon, lane.k, `Penge: ${lane.k.toLowerCase()}`]);
+      const rk = (sp.risks?.items || []).filter(x => x.links.includes(l.id));
+      if (rk.length) chips.push(['sp-risk', '⚠', `${rk.length} af ${sp.risks.items.length} usikkerheder`, `Usikkerheder, der rammer leddet: ${rk.map(x => x.k).join(', ')}`]);
+      const th = (sp.threads?.items || []).filter(x => x.from === l.id);
+      if (th.length) chips.push(['sp-web', '🧶', `${th.length === 1 ? 'Én tråd' : th.length + ' tråde'} til andre kæder`, `Tråde: ${th.map(x => x.k).join(', ')}`]);
+      const bd = (sp.bands?.items || []).filter(x => x.links.includes(l.id));
+      if (bd.length) chips.push(['sp-bands', '📏', bd.map(x => x.k).join(' · '), `Højde: ${bd.map(x => x.k).join(', ')}`]);
+      const list = chips.filter(([sec]) => document.getElementById(sec)).map(([sec, ic, k, t]) =>
+        `<li><a href="?kaede=space#${sec}" data-sec="space:${sec}" data-mark="${esc(l.id)}" title="${esc(t)}"><span aria-hidden="true">${ic}</span>${esc(k)}</a></li>`).join('')
+        + hubChips(l, sp, ['quiz', 'gloss']);
+      return `<div class="vc-sec sp-hub"><h4>Leddet i rum-fanen</h4>`
+        + `<ol class="rk-strip flow trip" aria-label="En satellits rejse i ${steps.length} trin">${strip}</ol>`
+        + `<p class="ew-t">${tripT}</p>`
+        + (list ? `<ul class="mn-chips" aria-label="Find leddet i fanen">${list}</ul>` : '') + `</div>`;
     }
 
     // Kvante: tidshorisont som gengivet udsagn med kilde (ikke NDI-prognose)
@@ -1629,7 +1780,10 @@
         .filter(([id]) => { const el = document.getElementById(id); return el && !el.hidden && el.children.length; });
       const ul = document.getElementById('q-links');
       if (items.length < 2) return;
-      ul.innerHTML = items.map(([id, ic, k]) => `<li><a href="?kaede=quantum#${id}" data-sec="quantum:${id}"><span aria-hidden="true">${ic}</span>${esc(k)}</a></li>`).join('');
+      // Tråden fra rumkæden (kvantenøgler via satellit) står i rum-fanen; linket fremhæver den
+      const sat = sp?.threads?.items?.some(x => x.to === 'quantum:q-core');
+      ul.innerHTML = items.map(([id, ic, k]) => `<li><a href="?kaede=quantum#${id}" data-sec="quantum:${id}"><span aria-hidden="true">${ic}</span>${esc(k)}</a></li>`).join('')
+        + (sat ? `<li><a href="?kaede=space#sp-web" data-sec="space:sp-web" data-mark="quantum:q-core"><span aria-hidden="true">🛰</span>Kvante og rummet</a></li>` : '');
       ul.hidden = false;
     })();
     // AI: flodkort over de 13 led med NDI's pres-mærker (kilde pr. mærke)
@@ -1646,7 +1800,7 @@
       const stroke = { dam: 'var(--yellow)', early: 'var(--yellow)', source: 'var(--cyan)', open: '#829da0' }[lv] || 'var(--brand)';
       const txt = (lv === 'dam' || lv === 'source') ? '#0b171d' : lv === 'open' ? 'var(--muted)' : 'var(--text)';
       const lab = `Led ${i + 1}, ${l.label}: ${rvSub(l)}. ${l.count} selskaber.`;
-      return `<a href="#lk-${esc(l.id)}" data-open="${esc(l.id)}" aria-label="${esc(lab)}"><title>${esc(lab)}</title>`
+      return `<a href="#lk-${esc(l.id)}" data-open="${esc(l.id)}" data-lks="${esc(l.id)}" aria-label="${esc(lab)}"><title>${esc(lab)}</title>`
         + `<circle cx="${x}" cy="${y}" r="13" fill="${fill}" stroke="${stroke}" stroke-width="2.5"${lv === 'open' ? ' stroke-dasharray="4 3"' : ''}/>`
         + `<text x="${x}" y="${y + 4.5}" text-anchor="middle" font-size="12" font-weight="700" fill="${txt}">${i + 1}</text></a>`;
     }
@@ -1764,7 +1918,7 @@
         + `<div class="br-grid">${list.map(p => {
           const n = p.names.length;
           const more = n > 3 ? ` og ${n - 3} til` : '';
-          return `<a class="br" href="?kaede=${esc(p.c.id)}#lk-${esc(p.l.id)}" data-hop="${esc(p.c.id)}:${esc(p.l.id)}"><span class="br-ico" aria-hidden="true">${p.src.icon || '◆'}</span><span class="br-t">${esc(p.src.short || p.src.label)} ⇄ ${esc(p.l.short || p.l.label)} <small>· ${esc(p.c.title)}</small></span><span class="br-d"><span class="br-n">${n}</span> fælles: ${esc(p.names.slice(0, 3).join(', '))}${more}</span></a>`;
+          return `<a class="br" href="?kaede=${esc(p.c.id)}#lk-${esc(p.l.id)}" data-hop="${esc(p.c.id)}:${esc(p.l.id)}"><span class="br-ico" aria-hidden="true">${p.src.icon || '◆'}</span><span class="br-t">${esc(p.src.short || p.src.label)} ⇄ ${esc(p.l.short || p.l.label)} <small>· ${esc(p.c.title)}</small></span><span class="br-d"><span class="br-n">${n}</span> fælles: ${esc(p.names.slice(0, 3).join(', '))}${more}</span><span class="br-go">Hop til ${esc(p.l.short || p.l.label)} →</span></a>`;
         }).join('')}</div><p class="src" style="margin-top:6px">${esc(pack.bridgesNote || '')}</p>`;
     }
 
@@ -1815,6 +1969,20 @@
       svg.appendChild(ar);
       host.innerHTML = '';
       host.appendChild(svg);
+    }
+
+    // Kort fortalt: hvad leddet gør, og hvorfor det presser (rum: hvordan det betales). Data i links[].brief, w.i kan give eget ikon
+    const BRIEF_I = { dam: '!', early: '⏳', note: '✎', next: '➜', open: '·' };
+    const BRIEF_KIND = { ndi: ['NDI', ' ndi', 'Mads\' eller bogens synspunkt med kilde'], baggrund: ['baggrund', '', 'Generel baggrundsviden, ikke Mads\' synspunkt'], tolkning: ['vores tolkning', '', 'Vores tolkning, ikke Mads\' synspunkt'] };
+    function briefBox(l) {
+      const b = l.brief;
+      if (!b || !b.does) return '';
+      const w = b.why || {};
+      const lv = BRIEF_I[w.level] ? w.level : 'open';
+      const kd = BRIEF_KIND[w.kind] || BRIEF_KIND.baggrund;
+      const why = w.t ? `<p class="vb-row why"><span class="vb-i" aria-hidden="true">${esc(w.i || BRIEF_I[lv])}</span><span><b>${esc(w.k || 'Pres')}</b>${esc(w.t)} <span class="vc-kind${kd[1]}" title="${esc(kd[2])}">${esc(kd[0])}</span>${w.src ? `<span class="src">Kilde: ${esc(w.src)}</span>` : ''}${w.sec ? ` <a href="?kaede=${esc(w.sec.split(':')[0])}#${esc(w.sec.split(':')[1])}" data-sec="${esc(w.sec)}">${esc(w.secT || 'Se mere')} →</a>` : ''}</span></p>` : '';
+      return `<div class="vc-brief lv-${lv}" role="group" aria-label="Kort fortalt om ${esc(l.short || l.label)}">`
+        + `<p class="vb-row"><span class="vb-i" aria-hidden="true">⚙</span><span><b>Gør</b>${esc(b.does)}</span></p>${why}</div>`;
     }
 
     // Pres-mærke på kortet: samme mærke som i flodkortet, med kilde eller "tolkning"
@@ -1882,10 +2050,12 @@
           <div class="vc-ico" aria-hidden="true">${l.icon || '◆'}</div>
           <div>
             <h3><span class="src" style="font-weight:400">${l.neighbour ? 'Nabo' : 'Led ' + (i + 1)} · </span>${esc(l.label)}</h3>
+            ${briefBox(l)}
             <div class="vc-sec"><h4>Hvad er det</h4><p>${esc(l.blurb)}</p></div>
             <div class="vc-sec"><h4>Hvorfor følger NDI det ${kindTag}</h4><p>${esc(l.ndi || '')}</p>${l.src ? `<div class="vc-srcline">Kilde: ${esc(l.src)}</div>` : ''}${pressLine(l)}</div>
             ${l.shift ? `<div class="vc-sec"><h4>Hvad ændrer sig</h4><p>${esc(l.shift)}</p></div>` : ''}
             ${id === 'energy' ? whereLine(l) : ''}
+            ${id === 'space' ? spaceHub(l) : findHub(l, ch)}
             <div class="vc-num"><b>${l.count}</b> selskaber · ca. <b>${pct(l.weightSum)}</b> af PMINDI pr. ${fmtDate(pack.asOf)}</div>
             <div class="vc-bar" aria-hidden="true"><i style="width:${Math.min(100, (l.weightSum / max) * 100).toFixed(1)}%"></i></div>
             <div class="vc-hint">${l.count ? 'Klik for at se selskaberne' : ''}</div>
@@ -1912,6 +2082,7 @@
         el.addEventListener('keydown', e => { if (e.target === el && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); toggle(); } });
         view.appendChild(el);
       });
+      document.querySelectorAll('.route-slot').forEach(sl => sl.replaceChildren(...(routeSlots[sl.dataset.slot]?.[id] ? [routeSlots[sl.dataset.slot][id]] : [])));
       if (opts.push !== false) {
         const u = new URL(location.href);
         u.searchParams.set('kaede', id);
@@ -1961,14 +2132,24 @@
       }
       const hp = e.target.closest('[data-hop]');
       if (hp) { e.preventDefault(); const [c, l] = hp.dataset.hop.split(':'); if (linkOf(c, l)) go(c, l); return; }
+      const tp = e.target.closest('[data-trip]');
+      if (tp && tripGo) { e.preventDefault(); render('space'); history.replaceState(null, '', `${location.pathname}?kaede=space#sp-trip`); tripGo(+tp.dataset.trip); document.getElementById('sp-trip').scrollIntoView({ block: 'start' }); document.getElementById(`trip-t${tp.dataset.trip}`)?.focus({ preventScroll: true }); return; }
       const sc = e.target.closest('[data-sec]');
-      if (sc) { e.preventDefault(); const [c, sec] = sc.dataset.sec.split(':'); render(c); history.replaceState(null, '', `${location.pathname}${location.search}#${sec}`); const el = document.getElementById(sec); if (el?.tagName === 'DETAILS') el.open = true; el?.scrollIntoView({ block: 'start' }); return; }
+      if (sc) { e.preventDefault(); const [c, sec] = sc.dataset.sec.split(':'); render(c); history.replaceState(null, '', `${location.pathname}${location.search}#${sec}`); const el = document.getElementById(sec); if (el?.tagName === 'DETAILS') el.open = true; const hit = sc.dataset.mark && el ? markIn(el, sc.dataset.mark) : null; if (hit) hit.scrollIntoView({ block: 'center' }); else el?.scrollIntoView({ block: 'start' }); return; }
       const dm = e.target.closest('[data-dam]');
       if (dm) { e.preventDefault(); go('ai-compute', dm.dataset.dam); return; }
       const o = e.target.closest('[data-open]');
       if (o) { e.preventDefault(); go(active(), o.dataset.open); }
     });
     const active = () => tabs.querySelector('button.active')?.dataset.id;
+    // Fremhæv kort i en sektion, der handler om et bestemt led (fx usikkerheder for Opsendelse)
+    function markIn(el, id) {
+      const hit = [...el.querySelectorAll('[data-lks]')].filter(x => x.dataset.lks.split(' ').includes(id));
+      el.querySelectorAll('.mk').forEach(x => x.classList.remove('mk'));
+      hit.forEach(x => x.classList.add('mk'));
+      setTimeout(() => hit.forEach(x => x.classList.remove('mk')), 4000);
+      return hit[0] || null;
+    }
 
     const layV = document.getElementById('lay-vert');
     const layH = document.getElementById('lay-horiz');
@@ -1987,10 +2168,14 @@
     // Deep link til ét led (fx fra vaerdikaede.html): ?kaede=ai-compute#lk-memory
     const startLink = location.hash.startsWith('#lk-') ? decodeURIComponent(location.hash.slice(4)) : '';
     if (startLink && document.getElementById(`lk-${startLink}`)) go(startChain, startLink);
-    // Deep link til en forklaring i en fane, fx ?kaede=energy#e-pane eller ?kaede=space#sp-cost
-    const startSec = !startLink && /^#[a-z][\w-]*$/.test(location.hash) ? document.querySelector(`#kap-kaeder ${location.hash}`) : null;
+    // Deep link til en forklaring i en fane eller et kapitel, fx ?kaede=energy#e-pane, ?kaede=space#kap-kaeder eller #kap-rum.
+    // Siden bygges først, når data er hentet, så browserens eget hop lander forkert; vi hopper igen, når indholdet står
+    const startSec = !startLink && /^#[a-z][\w-]*$/.test(location.hash) ? document.getElementById(location.hash.slice(1)) : null;
     if (startSec?.tagName === 'DETAILS') startSec.open = true;
-    if (startSec && startSec.offsetParent !== null) requestAnimationFrame(() => startSec.scrollIntoView({ block: 'start' }));
+    // ?mark=ai-compute:cloud fremhæver de kort i afsnittet, der handler om leddet (fx fra vaerdikaede.html)
+    const startMark = startSec && startSec.offsetParent !== null ? new URLSearchParams(location.search).get('mark') : '';
+    const startHit = startMark ? markIn(startSec, startMark) : null;
+    if (startSec && startSec.offsetParent !== null) requestAnimationFrame(() => startHit ? startHit.scrollIntoView({ block: 'center' }) : startSec.scrollIntoView({ block: 'start' }));
   </script>
 </body>
 </html>

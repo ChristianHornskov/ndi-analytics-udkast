@@ -38,6 +38,9 @@
  .node .press.lv-early .pt{background:transparent;color:var(--yellow);box-shadow:inset 0 0 0 1px var(--yellow)}
  .node .press.lv-source .pt{background:var(--cyan);color:#0b171d}
  .node .press .src{margin-left:4px;font-size:11px}
+ .node .also{font-size:12px;line-height:1.4;margin-top:6px;display:flex;flex-wrap:wrap;gap:2px 12px;color:var(--muted)}
+ .node .also>span{flex-basis:100%}
+ .node .also a{min-height:28px;display:inline-flex;align-items:center;gap:4px}
  .chain-tools{display:grid;gap:10px;max-width:720px;margin-top:16px}
  .chain-tools .row{display:flex;flex-wrap:wrap;gap:6px}
  .chain-tools input{width:100%;background:#0b171d;border:1px solid var(--line);border-radius:8px;padding:10px 12px;color:var(--text);min-height:44px;font:inherit}
@@ -150,6 +153,12 @@
  const riskA = (c) => c.risks?.items?.length && RISK[c.id] ? `<a class="oc-gl" href="vaerdikaeder.html?kaede=${esc(c.id)}#${RISK[c.id]}"><span aria-hidden="true">⚠</span> Hvad kan gå galt? ${c.risks.items.length} usikkerheder →</a>` : '';
  // Tråde til andre kæder (kun rum har sektionen)
  const webA = (c) => c.id === 'space' && c.threads?.items?.length ? `<a class="oc-gl" href="vaerdikaeder.html?kaede=space#sp-web"><span aria-hidden="true">🧶</span> Rummet og de andre kæder: ${c.threads.items.length} tråde →</a>` : '';
+ // Ekstra forklaringer, der kun findes på én kæde (kvantetrappen, kvantebroerne, robotternes løkke)
+ const EXTRA = {
+ quantum: (c) => [c.ladder?.steps?.length && ['q-lad', '🪜', `Kvantetrappen: hvor langt er feltet? ${c.ladder.steps.length} trin`], c.bridges?.length && ['q-br', '🔗', `Hvor kvante møder kæden: ${c.bridges.length} broer`]],
+ physical: (c) => [c.loop?.title && ['p-loop', '🔁', c.loop.title]],
+ };
+ const extraA = (c) => (EXTRA[c.id]?.(c) || []).filter(Boolean).map(([id, i, t]) => `<a class="oc-gl" href="vaerdikaeder.html?kaede=${esc(c.id)}#${id}"><span aria-hidden="true">${i}</span> ${esc(t)} →</a>`).join('');
  // Tjek dig selv (kun hvor siden har sektionen)
  const QUIZ = { space: 'sp-quiz', energy: 'e-quiz', quantum: 'q-quiz', physical: 'p-quiz' };
  const quizA = (c) => c.quiz?.items?.length && QUIZ[c.id] ? `<a class="oc-gl" href="vaerdikaeder.html?kaede=${esc(c.id)}#${QUIZ[c.id]}"><span aria-hidden="true">✓</span> Tjek dig selv: ${c.quiz.items.length} spørgsmål →</a>` : '';
@@ -158,7 +167,7 @@
  const first = ls[0];
  const cos = new Set(ls.flatMap(l => l.companies.map(x => x.isin))).size;
  const lr = LEARN[c.id]?.(c);
- return `<article class="oc"><span class="oc-ico" aria-hidden="true">${c.icon || first?.icon || '◆'}</span><h3>${esc(c.title)}</h3><p>${esc(firstSentence(c.why))}</p><span class="oc-n">${ls.length} led · ${cos} selskaber pr. ${fmtDate(pack.asOf)}</span>${first ? `<a href="vaerdikaeder.html?kaede=${esc(c.id)}#lk-${esc(first.id)}">Start ved ${esc(first.short || first.label)} →</a>` : ''}${lr ? `<a class="oc-learn" href="vaerdikaeder.html?kaede=${esc(c.id)}#${lr[0]}"><span aria-hidden="true">${lr[1]}</span> ${esc(lr[2])} →</a>` : ''}${riskA(c)}${webA(c)}${quizA(c)}${glossA(c)}</article>`;
+ return `<article class="oc"><span class="oc-ico" aria-hidden="true">${c.icon || first?.icon || '◆'}</span><h3>${esc(c.title)}</h3><p>${esc(firstSentence(c.why))}</p><span class="oc-n">${ls.length} led · ${cos} selskaber pr. ${fmtDate(pack.asOf)}</span>${first ? `<a href="vaerdikaeder.html?kaede=${esc(c.id)}#lk-${esc(first.id)}">Start ved ${esc(first.short || first.label)} →</a>` : ''}${lr ? `<a class="oc-learn" href="vaerdikaeder.html?kaede=${esc(c.id)}#${lr[0]}"><span aria-hidden="true">${lr[1]}</span> ${esc(lr[2])} →</a>` : ''}${extraA(c)}${riskA(c)}${webA(c)}${quizA(c)}${glossA(c)}</article>`;
  }).join('');
 
  // Fem dæmninger → grupper af led (samme dæmninger som på vaerdikaeder.html)
@@ -187,6 +196,13 @@
  const s = p.src === 'tolkning' ? '<span class="src">(vores tolkning)</span>' : `<span class="src">Kilde: ${esc(p.src)}</span>`;
  return `<p class="press lv-${esc(p.level)}"><span class="pt">${esc(tag)}</span>${esc(p.t)}${s}</p>`;
  };
+ // Andre kæder rører leddet: tråde fra rummet og kvantebroer, der peger på et AI-led (samme data som på vaerdikaeder.html)
+ const also = {};
+ const sp = pack.chains.find(c => c.id === 'space');
+ const qu = pack.chains.find(c => c.id === 'quantum');
+ (sp?.threads?.items || []).forEach(t => { const [c, l] = (t.to || '').split(':'); if (c === 'ai-compute') (also[l] ||= []).push({ i: '🛰', ch: 'Rum', k: t.k + (t.quote ? ' (citat med kilde)' : ''), sec: 'space', id: 'sp-web', mark: t.to }); });
+ (qu?.bridges || []).forEach(b => { const [c, l] = (b.to || '').split(':'); if (c === 'ai-compute' && b.k) (also[l] ||= []).push({ i: '⚛', ch: 'Kvante', k: b.k, sec: 'quantum', id: 'q-br', mark: b.to }); });
+ const alsoLine = (l) => also[l.id] ? `<p class="also"><span>Andre kæder rører leddet (faglige tråde):</span>${also[l.id].map(x => `<a href="vaerdikaeder.html?kaede=${x.sec}&amp;mark=${encodeURIComponent(x.mark)}#${x.id}"><span aria-hidden="true">${x.i}</span> ${esc(x.ch)}: ${esc(x.k)} →</a>`).join('')}</p>` : '';
  const river = document.getElementById('river');
  river.innerHTML = GROUPS.map(g => {
  const ls = g.ids.map(id => byId[id]).filter(Boolean);
@@ -201,6 +217,7 @@
  <p>${esc(l.blurb)}</p>
  ${pressLine(l)}
  <p class="meta"><b>${l.count}</b> selskaber · ca. ${pct(l.weightSum.toFixed(1))} % af fonden (forsinket)</p>
+ ${alsoLine(l)}
  <p class="hit-why"></p>
  ${top.length ? `<details><summary>Største positioner i leddet (${top.length} af ${l.count})</summary><ol>${top.map(c => `<li><a href="selskab.html?isin=${encodeURIComponent(c.isin)}&fund=${fundId}">${esc(c.name)}</a> · vægt ${pct(c.w)} %</li>`).join('')}</ol></details>` : ''}
  <p class="more"><a href="vaerdikaeder.html?kaede=ai-compute#lk-${esc(l.id)}">Hvorfor NDI følger leddet →</a>${see}</p>

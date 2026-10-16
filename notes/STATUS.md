@@ -1751,3 +1751,14 @@ Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er
 - Coordinator-loop 2026-10-16 02:59:58 CEST: CONFLICT merge origin/lane-X (ahead 10) — aborted, not pushed
 
 - Coordinator-loop 2026-10-16 02:59:58 CEST: MERGED origin/lane-R with STATUS-ours resolution (ahead was 2) — pending precheck
+
+### Appended from lane-A merge 2026-10-16 03:03:00 CEST
+- bc25797 vaerdikaeder: energi-fanen får læse-rute i seks stop (strømmens vej, usikkerheder, quiz, ordbog, ledkort, broer) med 'Stop N af 6' nederst i hvert stop; renderRoute fælles for rum og energi, bygges når alle sektioner står
+- 9a3a5fe vaerdikaeder: kvante- og robotikkortet på den enkle side linker direkte til kvantetrappen, kvantebroerne og robotløkken; 'Broer til andre kæder' viser 'Hop til …'
+- 3dca5bd vaerdikaeder: krydslinks fra AI-led til rum-tråde og kvantebroer på den enkle side (?mark= fremhæver kortet ved landing), kvantebroer viser 'Hop til …'
+- e3adf06 vaerdikaeder: rum-fanen får 'Stop N af 9' nederst i hvert stop (fremskridtsprikker, forrige/næste, op til ruten), ruten markerer 'du er her' og læste stop; '↑ Ruten' lander synligt under kapitelmenuen
+- 8f4d2e6 vaerdikaeder: deep links til kapitler (#kap-kaeder, #kap-rum, #kap-flod) lander rigtigt efter data er hentet; 'Led N af 13 i floden' lyser knuden op på flodkortet; ramme om 'Rummet og de andre kæder'
+- 29c4dba vaerdikaeder: 'Kort fortalt' på 8 rum-ledkort (Gør + Penge med pengesporets ikon, Starlink-linje med kilde, compute i rummet kun via citatet), rum-blurbs uden gentagelse, note uden overvægt-sprog
+- 720854e vaerdikaeder: 'Kort fortalt' på 9 ledkort i energi, robotik og kvante (Gør + pres med niveau, mærke og kilde), strammere energi-blurbs, kvante 'Se trappen'
+- d5f65f0 vaerdikaeder: 'Find leddet igen' på alle 22 ledkort uden for rum (plads i floden, usikkerheder, quiz, ordbog, tråd fra rummet, kvante møder leddet) med gul fremhævning ved hop; rum-hub får quiz og ordbog; data-lks på quiz, ordbog og kvantebroer
+- aff0942 vaerdikaeder: rum-ledkort 'Leddet i rum-fanen' (rejse-strimmel i 6 trin med klik til trinnet, piller til penge/usikkerheder/tråde/højde der fremhæver kortene), kvante-genvej til kvantetråden, scroll-margin for #sp-web
