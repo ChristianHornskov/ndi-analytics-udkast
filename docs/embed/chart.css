@@ -789,6 +789,34 @@ button.legend {
   .warn { font-size: 12px; }
 }
 
+.print-mast { display: none; margin: 0; }
+.print-row { margin: 14px 0 0; }
+.print-row .outline-button { min-height: 44px; }
+
+@media print {
+  body { background: #fff; color: #111; }
+  .print-mast { display: block; margin: 0 0 12px; font-size: 12px; line-height: 1.45; color: #333; }
+  .panel { background: #fff; color: #111; border-color: #ccc; }
+  .print-row, .skip, .chart-tooltip, .chart-slider, .embed-cta, .chart-loading { display: none !important; }
+  .class-card, .metric, .legend, .bench-note, .chart-pointe, .chart-readout, .chart-context, .foot, .stops-say, .class-title, .class-subtitle, .metric-label, .metric small, .embed-legal, .embed-legal strong, .eyebrow, .chart-heading h1 { color: #111; }
+  .class-card { background: #fff; border-color: #999; }
+  .class-card.selected { background: #fff; border-top-color: #111; }
+  .metric { background: #fff; }
+  .metric strong, .metric strong.accent, .legend strong { color: #111; }
+  .warn { color: #333; background: #f6f6f6; border-left-color: #111; }
+  .chart-container svg text { fill: #333; }
+  .chart-container .axis-grid { stroke: #bbb; }
+  .chart-container .zero-line, .chart-container .fund-path { stroke: #1d4e56; }
+  .chart-container text.zero-tick { fill: #1d4e56; }
+  .chart-container .end-label.pos { fill: #1d4e56; }
+  .chart-container .end-label.neg, .chart-container .trough-label, .chart-container .trough-dot { fill: #6d3038; }
+  .stop { color: #333; }
+  .stop[aria-pressed=true] { color: #111; }
+  .stops-track::before { background: #1d4e56; }
+  .embed-legal { color: #333; border-top-color: #ccc; }
+  .metric, .class-card, .stops { break-inside: avoid; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     transition: none !important;

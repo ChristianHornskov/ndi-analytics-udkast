@@ -380,3 +380,7 @@ Ny form i embed, under udlæsningen. En streg med stop. Afstanden er tiden. Star
 ### Update · udskrift af sammenlign · 2026-10-16 ~07:20 CEST
 
 «Udskriv» står under indledningen og er 44 px. På skærmen er masten skjult. På papir er knappen væk. Kortene er hvide med mørk tekst. PMINDI har 126,52 (14. okt. 2026). PMINDIAKK har Ingen kurs. KID-parret er ca. 2,79 % og ca. 2,85 %. Udbyttets vej og tidslinjen følger med. Øverst og i footeren står markedsføringsmateriale, ikke investeringsrådgivning og den historiske advarsel. Ingen sidescroll ved 320, 390 og 1100. Ingen konsolfejl.
+
+### Update · udskrift af embed · 2026-10-16 ~07:22 CEST
+
+«Udskriv» står under nøgletallene og er 44 px. Den står ikke i rækken med Del grafen. På papir er knappen og opfordringen væk. Mast og footer har markedsføringsmateriale, ikke investeringsrådgivning og den historiske advarsel. År til dato beholder −10,0 %. PMINDIAKK har knappen, teksten om 12 måneder og 5. december 2026, og ingen procent. Ingen sidescroll ved 320, 390 og 1100. Ingen konsolfejl.

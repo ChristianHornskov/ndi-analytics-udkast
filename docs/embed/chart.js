@@ -623,6 +623,7 @@
     if (period) selectPeriod(period.dataset.period);
   });
 
+  $('#print-sheet')?.addEventListener('click', () => { window.print(); });
   $('#share-chart')?.addEventListener('click', async () => {
     const note = $('#share-note');
     const pointe = $('#chart-pointe')?.textContent?.trim() || `${state.fund}, totalafkast.`;
