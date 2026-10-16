@@ -1083,3 +1083,31 @@ Tabsadvarsel ✅ · historisk afkast ≠ fremtid ✅ · KID-link ✅ · ikke-rå
 
 ### Prioritet
 Uændret: **1** → **2** → **3** + **4** → **5**.
+
+## 2026-10-16 06:27 CEST · cyklus 43 (main `24e1fce`, docs-delta 24 filer siden `6c06c90`; live = main)
+
+Ikke juridisk rådgivning. 50 URL'er ved 375. Basis-tjeklisten er som i cyklus 42: tabsadvarsel, historisk ≠ fremtid, KID-link, ikke-rådgivning, SRI 5/7 med "gælder fonden som helhed", beholdning pr. 1. jun. 2026 (forsinket), "overvægt" kun som negation (13 sider) og intet køb/sælg-, garanti- eller tipsprog ✅.
+
+### Delta gennemgået
+- **`js/app.js` livscyklus:** "maskinelt ud fra offentlig branche og tema, afventer NDI-gennemgang" plus "ikke en officiel NDI-rating og ikke en anbefaling". Det er tydelig AI/maskin-mærkning ✅.
+- **Top-10-sum** ("udgør tilsammen 11,9 %"): et faktuelt, forsinket tal med "Eksponering, ikke anbefaling" ✅.
+- **Ordliste "Resultathonorar"** og omkostninger "Ingen af klasserne betaler resultathonorar, ifølge Fundmarket". Det har kilde og stemmer med KID-teksten "Resultathonorar: Nej" ✅.
+- **Ideer #h-cs:** "Derfor kigger vi efter" er blevet til "værd at se på". NDI tilskrives ikke længere en arbejdsgang, og det er bedre ✅.
+- **NDI på X, datolinje:** "Udvalgte offentlige opslag — ikke NDI's holdning … Du kan tabe penge" står over linjen ✅. De to "BREAKING:"-opslag fra @BullTheoryio (tredjepart) er uændrede og mærket "FULGT KONTO". Det er acceptabelt, fordi de er tydeligt tredjepart. Der er ingen nye X-kald (`callCountNote`).
+- **Drawdown PMINDIAKK:** "vises efter 12 måneders historik. Ingen NAV eller graf før 5. december 2026" ✅. Der er ingen 1m/3m på PMINDI og ingen Nasdaq-benchmark ✅.
+
+### MUST
+- **Ingen åbne MUST-blokere.**
+
+### SHOULD (åbne, uændret, verificeret i kode på `24e1fce`)
+1. "Gns. årligt afkast" uden "siden start 22. sep. 2023": `js/app.js:420` og `periode.html:113` ("Gennemsnitligt årligt afkast" under YTD).
+2. Værdikæder er ikke AI-mærket (`vaerdikaeder.html`, `vaerdikaede.html`). Der er stadig 0 forekomster af "AI-udkast"/"maskinel" i sidernes tekst.
+3. "Central Information Dokument" står i `js/data.js:283` → "Dokument med central information (KID)".
+4. "kvartalssnapshot": `js/app.js:359`, `:428`, `:758` og `selskab.html:202` → "snapshot pr. 1. jun. 2026".
+5. Intern sætning, nu på `omkostninger.html:372`: "Det er det tal, marketingmateriale skal gengive ærligt".
+
+### Ny SHOULD (lav)
+6. Selskabsnavne i rå form ("Iqe Plc", "Sitime Corp") og den afkortede "Power Solutions Internationa" på `vaerdikaeder.html` (se UX SHOULD 1–2). Korrekte navne hører til "klar og ikke vildledende".
+
+### Prioritet
+**1** → **2** → **3** + **4** + **5** (rene tekstrettelser, ét commit) → **6**.
