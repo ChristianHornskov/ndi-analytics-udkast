@@ -389,7 +389,7 @@
 
 
     <nav class="idea-toc" aria-label="Billeder på siden">
-      <p class="lbl">16 billeder på siden</p>
+      <p class="lbl" id="toc-n">18 billeder på siden</p>
       <ol><li><a href="#h-flod">Flodsystemet på ét billede</a></li><li><a href="#h-vs">Én kasse eller flere temaer</a></li><li><a href="#h-mx">Samme 345 selskaber, to sorteringer</a></li><li><a href="#h-wk">Vægt er ikke kurs</a></li><li><a href="#h-tf">Fra «Andet» til tema</a></li><li><a href="#h-pr">345 aktier, én prik hver</a></li><li><a href="#h-kv">Hvor mange selskaber er halvdelen?</a></li><li><a href="#h-lc">Hvor på bakken ligger vægten?</a></li><li><a href="#h-uw">Fald fra top som episoder</a></li><li><a href="#h-ur">Tre ure på samme side</a></li><li><a href="#h-lag">Hvad står der i tallet?</a></li><li><a href="#h-kl">To klasser, samme temaer</a></li><li><a href="#h-stk">Lag på lag</a></li><li><a href="#h-dr">Tre drivkræfter, ét overlap</a></li><li><a href="#h-ln">Hvorfor ejer vi den?</a></li><li><a href="#h-kd">Hvem står bag tallet?</a></li><li><a href="#h-cs">Hvor tjener teknologien pengene?</a></li><li><a href="#h-hus">Bygget som et hus</a></li></ol>
     </nav>
 
@@ -926,6 +926,7 @@
   (function(){
     var f=[].slice.call(document.querySelectorAll('details.fold')),b=document.getElementById('fold-all');
     function sync(){var all=f.every(function(d){return d.open});b.textContent=all?'Fold alle sammen':'Fold alle ud';b.setAttribute('aria-expanded',all)}
+    (function(){var n=document.querySelectorAll('.idea-toc li').length,l=document.getElementById('toc-n');if(l&&n)l.textContent=n+' billeder på siden'})();
     function openHash(){var t=location.hash&&document.getElementById(location.hash.slice(1));var d=t&&t.closest('details.fold');if(d){d.open=true;t.scrollIntoView()}}
     if(window.matchMedia('(min-width:860px)').matches)f.forEach(function(d){d.open=true});
     f.forEach(function(d){d.addEventListener('toggle',sync)});
