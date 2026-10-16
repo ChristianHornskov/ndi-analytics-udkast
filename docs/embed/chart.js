@@ -203,7 +203,7 @@
     $('#metric-cagr-note').innerHTML = annual == null
       ? `Historik ${number.format(years)} år · vises efter ét års data`
       : `${number.format(years)} år siden start <span class="keep">${fmtDate(first.d)}</span>`;
-    $('#metric-ytd-note').innerHTML = `Fra 1. jan. ${last.d.slice(0, 4)} til <span class="keep">${fmtDate(last.d)}</span>. Delår, afventer <span class="keep">Fundmarket-godkendelse.</span>`;
+    $('#metric-ytd-note').innerHTML = `Fra 1. jan. ${last.d.slice(0, 4)} til <span class="keep">${fmtDate(last.d)}</span>. <span class="keep">Delår, afventer</span> <span class="keep">Fundmarket-godkendelse.</span>`;
     $('#metric-dd-note').textContent = `Bund ${fmtDate(dd.trough)} · fra en top i perioden`;
     const well = document.getElementById('metric-dd-well');
     if (well) {
@@ -257,6 +257,8 @@
       : 'Kursen vises efter <span class="keep">12 måneder.</span>';
     $('#source-label').textContent = `${fund?.short || state.fund} · ingen kurs i grafen endnu`;
     $('#chart-context').hidden = true;
+    const stops = $('#chart-stops');
+    if (stops) stops.hidden = true;
     $('#chart-pointe').innerHTML = 'Ny andelsklasse, kurs vises efter <span class="keep">12 måneder.</span> Ingen NAV eller graf før <span class="keep">5. december 2026.</span>';
     $('#chart-loading').hidden = true;
     state.series = [];
@@ -365,6 +367,7 @@
 
     state.geometry = { x, y, left, plotWidth, width, height, t0, t1 };
     $('#chart-slider').max = String(series.length - 1);
+    renderStops();
     const index = state.selectedDate ? nearest(series, state.selectedDate) : series.length - 1;
     setPoint(index, false);
     $('#chart-loading').hidden = true;
@@ -397,6 +400,94 @@
     }
   }
 
+  function chartStops(series) {
+    const last = series.length - 1;
+    let lowI = 0;
+    for (let i = 1; i < series.length; i++) {
+      if (series[i].value < series[lowI].value) lowI = i;
+    }
+    const stops = [{ i: 0, kind: 'start', name: 'Start' }];
+    if (lowI > 0 && lowI < last && series[lowI].value < -0.05) {
+      stops.push({ i: lowI, kind: 'low', name: 'Laveste' });
+    }
+    if (last > 0) stops.push({ i: last, kind: 'end', name: 'Seneste' });
+    return stops;
+  }
+
+  function renderStops() {
+    const box = $('#chart-stops');
+    const track = $('#stops-track');
+    if (!box || !track) return;
+    const series = state.series;
+    if (!series || series.length < 2) {
+      box.hidden = true;
+      return;
+    }
+    const all = chartStops(series);
+    const paint = (stops) => {
+      const last = series.length - 1;
+      track.innerHTML = stops.map((s, n) => {
+        const at = last === 0 ? 0 : (s.i / last) * 100;
+        const edge = n === 0 ? ' edge-start' : n === stops.length - 1 ? ' edge-end' : '';
+        const kind = s.kind === 'start' ? '' : ` ${s.kind}`;
+        return `<button type="button" class="stop${kind}${edge}" data-i="${s.i}" data-kind="${s.kind}" style="left:${at.toFixed(2)}%" aria-pressed="false"><span class="stop-dot" aria-hidden="true"></span><span class="stop-name">${s.name}</span></button>`;
+      }).join('');
+    };
+    paint(all);
+    box.hidden = false;
+    if (all.some((s) => s.kind === 'low') && (namesOverlap() || hitOverlap())) {
+      if (!hitOverlap()) track.querySelector('.stop.low')?.classList.add('raise');
+      if (namesOverlap() || hitOverlap()) paint(all.filter((s) => s.kind !== 'low'));
+    }
+  }
+
+  function boxesOverlap(nodes, gap) {
+    for (let i = 0; i < nodes.length; i++) {
+      for (let j = i + 1; j < nodes.length; j++) {
+        const a = nodes[i].getBoundingClientRect();
+        const b = nodes[j].getBoundingClientRect();
+        if (a.width && b.width && a.left < b.right + gap && b.left < a.right + gap && a.top < b.bottom + 2 && b.top < a.bottom + 2) return true;
+      }
+    }
+    return false;
+  }
+
+  function namesOverlap() {
+    return boxesOverlap($$('#stops-track .stop-name'), 8);
+  }
+
+  function hitOverlap() {
+    return boxesOverlap($$('#stops-track .stop'), 2);
+  }
+
+  function syncStops(index) {
+    const say = $('#stops-say');
+    const buttons = $$('#stops-track .stop');
+    if (!buttons.length) {
+      if (say) say.textContent = '';
+      return;
+    }
+    let kind = '';
+    buttons.forEach((btn) => {
+      const on = Number(btn.dataset.i) === index;
+      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+      if (on) kind = btn.dataset.kind || '';
+    });
+    if (!say) return;
+    const p = state.series[index];
+    if (!p) { say.textContent = ''; return; }
+    const when = `<span class="keep">${fmtDate(p.date)}</span>`;
+    if (kind === 'start') {
+      say.innerHTML = `Start ${when}. Kurven sættes til <span class="keep">0 %.</span>`;
+    } else if (kind === 'low') {
+      say.innerHTML = `Laveste punkt ${when} er <span class="keep">${pct(p.value, true)}</span>. Det er kurvens laveste punkt <span class="keep">i perioden.</span>`;
+    } else if (kind === 'end') {
+      say.innerHTML = `Seneste punkt ${when}. Afstanden fra start <span class="keep">er tiden.</span>`;
+    } else {
+      say.innerHTML = 'Afstanden <span class="keep">er tiden.</span>';
+    }
+  }
+
   function setPoint(index, showTooltip) {
     const p = state.series[index];
     if (!p || !state.geometry) return;
@@ -411,6 +502,7 @@
     const tone = toneOf(p.value);
     $('#chart-readout').innerHTML = `<span class="date">${fmtDate(p.date)}</span> · ${state.fund}: <span class="${tone}">${value}</span>`;
     $('#chart-slider').setAttribute('aria-valuetext', `${fmtDate(p.date)}, ${state.fund}: ${value}`);
+    syncStops(index);
     const tooltip = $('#chart-tooltip');
     tooltip.hidden = !showTooltip;
     if (showTooltip) {
@@ -513,6 +605,14 @@
     const i = Number(event.target.value);
     state.selectedDate = state.series[i].date;
     setPoint(i, true);
+  });
+  $('#stops-track')?.addEventListener('click', (event) => {
+    const btn = event.target.closest('.stop');
+    if (!btn || !state.series.length) return;
+    const index = Number(btn.dataset.i);
+    if (!state.series[index]) return;
+    state.selectedDate = state.series[index].date;
+    setPoint(index, false);
   });
   $('#chart-slider').addEventListener('blur', () => { $('#chart-tooltip').hidden = true; });
 

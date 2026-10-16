@@ -372,3 +372,7 @@ Drawdown og embed siger nu i footeren «Generel information, ikke investeringsr�
 ### Update · udbyttets vej · 2026-10-16 ~07:00 CEST
 
 Ny form på sammenlign, under KID-parret og over tidslinjen. «Samme selskaber» står til venstre. To ruter: pil «Ud til dig» med gul streg, når den er valgt, og sløjfe «Bliver i fonden» med cyan streg. Sætningen skifter. PMINDI udbetaler til dig og ejer de samme selskaber som PMINDIAKK. PMINDIAKK lader udbyttet blive i fonden. Kursen vises efter 12 måneder, fra 5. dec. 2026. Ingen ny procent. Knapperne er 44 px. Ingen enkeltord på egen linje ved 300–1100. Ingen sidescroll. Ingen konsolfejl. På papir bliver ruterne.
+
+### Update · stop på kurven · 2026-10-16 ~07:15 CEST
+
+Ny form i embed, under udlæsningen. En streg med stop. Afstanden er tiden. Start sætter kurven til 0 % den 22. sep. 2023. Seneste er 14. okt. 2026. Laveste vises, når ordet har plads. På år til dato er det −10,0 % den 30. mar. 2026, og prikken får en gul ring. På hele perioden ligger det laveste punkt for tæt på starten, så det udelades. PMINDIAKK har ingen stop og ingen procent. Knapperne er 44 px. Ingen sidescroll ved 300–1100. Ingen konsolfejl. «til dig» og «en endelig investeringsbeslutning» holder sammen. «Delår, afventer» holder sammen.
