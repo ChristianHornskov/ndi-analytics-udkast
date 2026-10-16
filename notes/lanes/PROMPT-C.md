@@ -38,3 +38,7 @@ UX checkpoints 00/02/04/06. Read IDESPEJDER + PERSONA-* each cycle.
 
 ## Reviewer MUSTs (lane R)
 Every cycle: read notes/CLAUDE-UX-review.md and notes/CLAUDE-compliance-review.md (latest ## section). Fix any MUST that falls in YOUR owned files. Do not edit other lanes' files.
+
+
+## LEO FREEZE 08:00
+From 08:00 CEST: no new features. Only bug fixes, tests, footer/warning checks in owned files. Stop committing at 08:30.
