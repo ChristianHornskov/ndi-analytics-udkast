@@ -334,3 +334,5 @@ Satellogic stod allerede på satellitter. Vægten er 0,17. Summen på leddet er 
 Opsendelse og satellitter har korte blurbs igen. Howmet, Karman, Planet og Satellogic står i `facts`, ikke i blurben. Vægtene er uændrede.
 
 Nyhedsarkivet har tre kort under energifolden: kapacitet, målt år og dato efter 1. juni 2026. Eksemplerne er Ballard over 1,6 GW, Antero 24 millioner tønder LPG i 2025 og Karmans køb af Walker 28. august 2026. Kortene gentager grænser, der allerede står i teksten. De er ikke en anbefaling.
+
+Periodesiden har også bjælken "Hvor i serien siden første NAV?". Den markerer den valgte periode på hele serien fra første NAV til sidste punkt. Årstal på bjælken er 1. januar. For PMINDI er første NAV 22. sep. 2023. Det er datoer, ikke et afkast. PMINDIAKK har ingen bjælke.
