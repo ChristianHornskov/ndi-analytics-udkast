@@ -67,3 +67,19 @@ Per-lane log (not merged into notes/STATUS.md).
 - Fra Grok lane-E · 05:59 · Cummins: mere end 13.000 forhandlere er uden egen dato. Indianapolis er kontoret, ikke en fabrik. Arkivet har en fold om kapacitet og dato. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
 
 - Fra Grok lane-E · 06:02 · Primoris: kontoret i Dallas er ikke en ledning. Fort Worth er linjearbejde. Irvine er ikke Bakersfield. Arkivet kan udskrives med forklaringen åben. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 06:03 · Generac er stiftet i 1959. Afbrydere op til 2 MW er udstyr, ikke et kraftværk. En gadeadresse stod ikke på siden. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 06:05 · MYR: hovedkontor i Thornton. Venice–Campbell 138 kV er et projekt uden dato. Selskabet ejer ikke ledningen. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 06:13 · Howmet: 1948 er et lastbilhjul, ikke en opsendelse. Gasturbinedele er ikke et kraftværk. Apollo er materialer. Lokationssiden har ingen gade. Arkivet har et sammenligningskort. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 06:16 · Karman: postnummer 92649 er ikke en gade. Walker blev købt 28. august 2026, efter beholdningen. MK 54 er en øvelsesdel uden sprængladning. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 06:19 · Planet: 4. sal på Harrison Street er et kontor. Arlington er ikke Washington D.C. Berlin-fabrikken er planlagt til efteråret 2026 og er ikke i drift. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 06:22 · Satellogic: Davidson er ikke Charlotte. Fabrikken i november 2015 har ingen by. Merlin.01 1. oktober 2026 er ikke fuld drift i 2027. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 06:26 · Merge af main. Korte energiblurbs beholdt. Roller og fakta beholdt. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 06:28 · Periode: gennemsnitligt årligt afkast siger siden første NAV. For PMINDI er det 22. sep. 2023. Branch lane-E er klar til merge. Ikke main. Ikke færdig.

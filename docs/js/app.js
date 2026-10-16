@@ -983,9 +983,9 @@ function renderUdforsk(root) {
   root.innerHTML = `
     <a class="back" href="?view=entre&fund=${state.fund}" data-nav="entre">← Entré</a>
     <p class="eyebrow">UDFORSK TECH</p>
-    <h1>Screener · NDI-linse</h1>
-    <p class="lede">Kun selskaber i porteføljen. Hvert selskab har ét primært tema; ${nMulti} udvalgte har flere temaer. Sortér på navn, vægt eller tema. Søgningen dækker også NDI-linsens tekst (fx “foundry”, “kobber”, “solceller”).</p>
-    <p class="band">Informationen er generel - ikke en personlig anbefaling. Segmenter = eksponering.</p>
+    <h1>Udforsk porteføljen</h1>
+    <p class="lede uf-lede">Kun selskaber i porteføljen. Hvert selskab har ét primært tema; ${nMulti} udvalgte har flere temaer. Sortér på navn, vægt eller tema. Søgningen dækker også NDI-linsens tekst (fx “foundry”, “kobber”, “solceller”).</p>
+    <p class="band uf-band">Informationen er generel - ikke en personlig anbefaling. Segmenter = eksponering.</p>
     ${fundToolbar({ screener: false })}
     <div class="filters">
       <input type="search" id="q" placeholder="Søg navn, ticker, ISIN, tema eller fx “kobber”…" value="${state.q.replace(/"/g,'&quot;')}" aria-label="Søg">
@@ -994,6 +994,8 @@ function renderUdforsk(root) {
       <button type="button" class="outline-btn small" id="csv-export">Download CSV (filtreret)</button>
       <!-- Følg tema stub skjult indtil tilmelding er aktiv -->
     </div>
+    <details class="udforsk-filters" id="udforsk-filters">
+    <summary class="outline-btn small">Filtre (tema, status, modenhed) <span class="muted">· ${state.tags.length + state.maturity.length + (state.status?1:0) + (state.linse?1:0) + (state.skift?1:0)} aktive</span></summary>
     <div class="filters" role="group" aria-label="Filtrér på tema">
       ${themes.map((t) => `<button type="button" class="control ${state.tags.includes(t)?'active':''}" data-tag="${t}" aria-pressed="${state.tags.includes(t)}" title="${tagCount[t].prim} med ${daTheme(t)} som primært tema${tagCount[t].multi ? ` + ${tagCount[t].multi} som ekstra tema` : ''}">${daTheme(t)} <small style="opacity:.75">${tagCount[t].prim}${tagCount[t].multi ? ` +${tagCount[t].multi}` : ''}</small></button>`).join('')}
     </div>
@@ -1003,11 +1005,13 @@ function renderUdforsk(root) {
     ${shiftPanelHtml(fund)}
     ${lensFilterHtml(fund)}
     ${maturityFilterHtml(fund)}
+    </details>
     <div class="chips" id="chips"></div>
     <p style="font-size:12px;color:var(--muted)" id="filter-status">${list.length} ${list.length === 1 ? 'resultat' : 'resultater'}${viaLens(list)} · udkast-klassifikation</p>
     ${list.length ? positionsTable(list, fund) : emptyScreener(fund)}
     ${warnHtml()}`;
 
+  const uf = $('#udforsk-filters', root); if (uf && window.matchMedia('(min-width: 801px)').matches) uf.open = true;
   const chips = $('#chips', root);
   const parts = [
     ...state.tags.map((t) => ({ k: 'tag', v: t, label: daTheme(t) })),

@@ -976,3 +976,8 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
 
 .lens-mark{display:inline-block;margin-left:4px;font-size:11px;color:var(--muted);text-decoration:none;opacity:.75}
 .lens-mark:hover,.lens-mark:focus{color:var(--cyan);opacity:1}
+
+.udforsk-filters{margin:8px 0}
+.udforsk-filters>summary{list-style:none;cursor:pointer;display:inline-flex;min-height:44px;align-items:center}
+.udforsk-filters>summary::-webkit-details-marker{display:none}
+@media(max-width:800px){.uf-lede{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:13px}.uf-band{font-size:12px;padding:6px 10px;margin:6px 0}#copy-link,#csv-export{display:none}}

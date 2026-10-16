@@ -35,24 +35,6 @@
       "label": "Fra NDI-relateret konto (udkast / markedsføring)"
     },
     {
-      "id": "2087874479141589021",
-      "username": "InvestNewdeal",
-      "name": "NewDeal Invest",
-      "text": "$NVDA $SE $HIMS",
-      "created_at": "2026-08-13T12:10:41.000Z",
-      "url": "https://x.com/InvestNewdeal/status/2087874479141589021",
-      "tags": [
-        "chips",
-        "platforms"
-      ],
-      "tickers": [
-        "NVDA",
-        "SE",
-        "HIMS"
-      ],
-      "label": "Fra NDI-relateret konto (udkast / markedsføring)"
-    },
-    {
       "id": "2072602813142630625",
       "username": "InvestNewdeal",
       "name": "NewDeal Invest",
@@ -369,7 +351,6 @@
       "2081548645808402539"
     ],
     "chips": [
-      "2087874479141589021",
       "2110388749947261403",
       "2110628812753158432",
       "2100358110254952615",
@@ -379,7 +360,6 @@
       "2081548645808402539"
     ],
     "platforms": [
-      "2087874479141589021",
       "2028884313425506598",
       "1918304252847440315",
       "2110628812753158432",
@@ -418,7 +398,6 @@
       "2081548645808402539"
     ],
     "NVDA": [
-      "2087874479141589021",
       "2100358110254952615",
       "2109335734767571448",
       "2110381882529718623",
@@ -426,12 +405,9 @@
       "2081548645808402539"
     ],
     "SE": [
-      "2087874479141589021",
       "2028884313425506598"
     ],
-    "HIMS": [
-      "2087874479141589021"
-    ],
+    "HIMS": [],
     "PMINDI": [
       "2072602813142630625",
       "2013306008832008498"
@@ -480,14 +456,6 @@
       "source": "X · NDI-relateret konto (udkast / markedsføring — kan være NDI-holdning)"
     },
     {
-      "d": "2026-08-13",
-      "title": "X · @InvestNewdeal",
-      "text": "",
-      "url": "https://x.com/InvestNewdeal/status/2087874479141589021",
-      "kind": "x",
-      "source": "X · NDI-relateret konto (udkast / markedsføring — kan være NDI-holdning)"
-    },
-    {
       "d": "2026-07-02",
       "title": "X · @InvestNewdeal",
       "text": "Performance-opdatering efter Q2 2026 — offentlige totalafkasttal for NewDeal Invest-fondene (Fundmarket).",
@@ -512,5 +480,5 @@
       "source": "X · NDI-relateret konto (udkast / markedsføring — kan være NDI-holdning)"
     }
   ],
-  "callCountNote": "Hentet via x MCP get_users_by_usernames + get_users_posts (4 konti). Limits: 30/min, 1000/day. Lane X 2026-10-15: ét søgekald efter SoftBank hos konti fra mads_following (BullTheoryio). Lane X 2026-10-16: ingen nye kald. Andet poleringspas samme dag: stadig ingen nye kald. Tredje poleringspas samme dag: stadig ingen nye kald. Fjerde poleringspas samme dag: stadig ingen nye kald. Femte poleringspas samme dag: stadig ingen nye kald. Sjette poleringspas samme dag: stadig ingen nye kald. Syvende poleringspas samme dag: stadig ingen nye kald. Ottende poleringspas samme dag: stadig ingen nye kald. Niende poleringspas samme dag: stadig ingen nye kald. Tiende poleringspas samme dag: stadig ingen nye kald. Ellevte poleringspas samme dag: stadig ingen nye kald. 21 opslag uændret. Browseren kalder ikke X. Tolvte poleringspas samme dag: stadig ingen nye kald. Filen har 20 opslag. Browseren kalder ikke X. Trettende poleringspas samme dag: stadig ingen nye kald. Filen har 20 opslag. Et indeks-id uden opslag er fjernet (quantum, IONQ, QBTS). Browseren kalder ikke X. Fjortende poleringspas samme dag: stadig ingen nye kald. Filen har 20 opslag. Browseren kalder ikke X. Femtende poleringspas samme dag: stadig ingen nye kald. Filen har 20 opslag. Browseren kalder ikke X. Sekstende poleringspas samme dag: stadig ingen nye kald. Filen har 20 opslag. Browseren kalder ikke X. Opdelingen NDI og fulgte konti er tælling i den statiske fil, ikke et nyt kald. Syttende poleringspas samme dag: stadig ingen nye kald. Filen har 20 opslag. Browseren kalder ikke X. Attende poleringspas samme dag: stadig ingen nye kald. Filen har 20 opslag. Browseren kalder ikke X. Søjler og filterstreger er tegnet af tallene i filen, ikke et nyt kald."
+  "callCountNote": "Hentet via x MCP get_users_by_usernames + get_users_posts (4 konti). Limits: 30/min, 1000/day. Lane X 2026-10-15: ét søgekald efter SoftBank hos konti fra mads_following (BullTheoryio). Lane X 2026-10-16: ingen nye kald. Andet poleringspas samme dag: stadig ingen nye kald. Tredje poleringspas samme dag: stadig ingen nye kald. Fjerde poleringspas samme dag: stadig ingen nye kald. Femte poleringspas samme dag: stadig ingen nye kald. Sjette poleringspas samme dag: stadig ingen nye kald. Syvende poleringspas samme dag: stadig ingen nye kald. Ottende poleringspas samme dag: stadig ingen nye kald. Niende poleringspas samme dag: stadig ingen nye kald. Tiende poleringspas samme dag: stadig ingen nye kald. Ellevte poleringspas samme dag: stadig ingen nye kald. 21 opslag uændret. Browseren kalder ikke X. Tolvte poleringspas samme dag: stadig ingen nye kald. Filen har 20 opslag. Browseren kalder ikke X. Trettende poleringspas samme dag: stadig ingen nye kald. Filen har 20 opslag. Et indeks-id uden opslag er fjernet (quantum, IONQ, QBTS). Browseren kalder ikke X. Fjortende poleringspas samme dag: stadig ingen nye kald. Filen har 20 opslag. Browseren kalder ikke X. Femtende poleringspas samme dag: stadig ingen nye kald. Filen har 20 opslag. Browseren kalder ikke X. Sekstende poleringspas samme dag: stadig ingen nye kald. Filen har 20 opslag. Browseren kalder ikke X. Opdelingen NDI og fulgte konti er tælling i den statiske fil, ikke et nyt kald. Syttende poleringspas samme dag: stadig ingen nye kald. Filen har 20 opslag. Browseren kalder ikke X. Attende poleringspas samme dag: stadig ingen nye kald. Filen har 20 opslag. Browseren kalder ikke X. Søjler og filterstreger er tegnet af tallene i filen, ikke et nyt kald. Nittende poleringspas samme dag: stadig ingen nye kald. Filen har 20 opslag. Browseren kalder ikke X. Datolinjen er tegnet af datoerne i filen, ikke et nyt kald."
 }
