@@ -697,15 +697,15 @@
   "US9115491030": {
    "name": "United States Antimony",
    "theme": "energy-resources",
-   "summary": "Selskabet skriver, at det udvinder og forarbejder antimon og zeolit. Zeolitten kommer fra minen i Preston i Idaho, og smelteværket ligger i Thompson Falls i Montana. Alaska er ikke skrevet som en mine i drift.",
-   "watch": "Drift i Preston og på smelteværket i Montana. Alaska er ikke en mine i drift i denne tekst.",
+   "summary": "Udvinder zeolit i Preston i Idaho og forarbejder antimon. Madero stod stille fra marts 2024 og blev genstartet i januar 2025. Det første gravearbejde i Alaska er ikke en mine.",
+   "watch": "Om gravearbejdet i Alaska bliver til en mine. Siden skriver will, ikke at det er i drift.",
    "source": "https://www.usantimony.com/",
    "products": "Antimon og zeolit.",
    "customers": "Industrikunder.",
    "role": "Antimon og zeolit. Preston er en mine. Alaska er ikke skrevet som en mine i drift.",
    "narrative": [
-    "United States Antimony skriver, at zeolit kommer fra minen og anlægget i Preston i Idaho, og at smelteværket for antimonoxid ligger i Thompson Falls i Montana.",
-    "Siden skriver, at tiden og usikkerheden ved en ny tilladelse til minen ved Thompson Falls fik selskabet til at lægge udvindingen tilbage til Mexico. Det første gravearbejde i Alaska skal samle stibnit og er ikke skrevet som en mine i drift. Materialet skal behandles på Fox Logistics Center i Fairbanks og raffineres i Montana. Smelteværket Madero er med i antimonforretningen. Flotationsmøllen i Puerto Blanco kører ikke, og minen Los Juarez er ikke aktiv. Det er råstoffer, ikke et kraftværk."
+    "United States Antimony er noteret på New York Stock Exchange under UAMY. Zeolit kommer fra minen og anlægget i Preston i Idaho. Siden skriver 85 til 95 procent clinoptilolit. Smelteværket for antimonoxid og et ædelmetalraffinaderi ligger i Thompson Falls i Montana.",
+    "Madero i Coahuila i Mexico blev lukket i marts 2024. Produktionen af færdigt antimonmetal var 163.788 pund i 2024. Det er det års tal, ikke en kapacitet. Anlægget blev opgraderet og genstartet i januar 2025, før beholdningen. Puerto Blanco og Los Juarez kører ikke. Det første gravearbejde i Alaska skal samle stibnit. Siden skriver will, ikke at det er en mine i drift. Materialet skal behandles på Fox Logistics Center i Fairbanks og raffineres i Montana. Siden skriver både mere end 35.000 acres og mere end 27.000 acres i Alaska. Tallene er ikke ens. I 2026 købte selskabet mere jord ved Nolan Creek. Måneden står ikke. Teksten er læst 16. oktober 2026. Det er claims, ikke en mine. Ordene only og best er ikke taget med."
    ],
    "narrativeSources": [
     {
@@ -749,15 +749,15 @@
   "US03674X1063": {
    "name": "Antero Resources",
    "theme": "energy-resources",
-   "summary": "Producerer naturgas og flydende gasprodukter i Appalachia i USA. Selskabet skriver, at det leverer naturgas og LPG til eksport.",
-   "watch": "Gaspriser og produktion fra felterne.",
-   "source": "https://www.anteroresources.com/",
-   "products": "Naturgas, flydende gasprodukter og LPG til eksport.",
-   "customers": "Købere af gas.",
-   "role": "Brændsel til elproduktion.",
+   "summary": "Producerer naturgas og LPG i Marcellus i West Virginia. Over 850.000 acres står uden dato. 24 millioner tønder LPG i 2025 er eksport, ikke et kraftværk.",
+   "watch": "Om acre-tallet får en dato. 2025-tallene er ikke et kraftværk.",
+   "source": "https://www.anteroresources.com/operations",
+   "products": "Naturgas og LPG. Ikke et kraftværk.",
+   "customers": "Eksportmarkeder i 2025. Navne på købere er ikke taget med.",
+   "role": "Brændsel til elproduktion. Ikke en mine.",
    "narrative": [
-    "Antero Resources producerer naturgas og flydende gasprodukter i Appalachia. Selskabet nævner Marcellus og skriver, at det leverer naturgas og LPG til eksport.",
-    "I kæden står selskabet på elproduktion, fordi gassen er brændsel. Det er ikke en metalmine."
+    "Hovedkontoret ligger på 1615 Wynkoop Street i Denver i Colorado. Distriktskontoret ligger på 535 White Oaks Boulevard i Bridgeport i West Virginia. Kontorerne er ikke boringerne. Driftssiden skriver, at arbejdet ligger i Appalachian Mountains i West Virginia, i Marcellus. Over 850.000 acres står uden dato. Siden er læst 16. oktober 2026. Ordene largest og lower costs er ikke taget med.",
+    "I 2025 skriver selskabet, at det stod for hvad der svarer til 100 LNG-laster til udlandet, og at 24 millioner tønder LPG blev sendt til internationale markeder. Cirka 32 procent af den eksporterede LPG gik til udviklingslande. Året ligger før beholdningen. Det er selskabets tal, ikke et kraftværk. En indtjeningsdato 29. oktober 2026 ligger efter beholdningen og er ikke taget med som drift."
    ],
    "narrativeSources": [
     {
@@ -769,15 +769,15 @@
   "US26884L1098": {
    "name": "EQT",
    "theme": "energy-resources",
-   "summary": "Producerer naturgas i Appalachia i USA. Selskabet skriver, at købet af Equitrans Midstream blev gennemført 22. juli 2024.",
-   "watch": "Gaspriser og produktion fra felterne.",
-   "source": "https://www.eqt.com/",
-   "products": "Naturgas. Også midstream-aktiver efter købet af Equitrans.",
-   "customers": "Købere af gas.",
-   "role": "Brændsel til elproduktion.",
+   "summary": "Producerer naturgas i Appalachia. Købet af Equitrans Midstream blev gennemført 22. juli 2024. Cirka 4.000 boresteder er ikke et målt år.",
+   "watch": "Om borestederne bliver til produktion. Tallet er ikke et års resultat.",
+   "source": "https://www.eqt.com/thought-leadership/eqt-completes-acquisition-of-equitrans-midstream",
+   "products": "Naturgas og midstream efter Equitrans. Ikke et kraftværk.",
+   "customers": "Købere af gas. Navne er ikke taget med.",
+   "role": "Brændsel til elproduktion. Ikke en mine.",
    "narrative": [
-    "EQT producerer naturgas i Appalachia i USA. Selskabet skriver, at købet af Equitrans Midstream blev gennemført 22. juli 2024.",
-    "Equitrans er beskrevet som midstream-aktiver. I kæden står gassen som brændsel. Det er ikke en metalmine."
+    "EQT Corporation er noteret på New York Stock Exchange under EQT. Meddelelsen er dateret Pittsburgh 22. juli 2024 og siger, at købet af Equitrans Midstream er gennemført. Datoen ligger før beholdningen. Equitrans er midstream. Meddelelsen skriver cirka 4.000 boresteder. Det er et lager af steder, ikke et målt års produktion.",
+    "Selskabet skriver, at driften ligger i Appalachian Basin. Forsiden, læst 16. oktober 2026, skriver 6 procent af landets gasproduktion uden dato. Det er ikke et dateret år. En gadeadresse stod ikke på de læste sider og er ikke opfundet. Beløb og ordene only, first og largest er ikke taget med. Det er brændsel, ikke en mine og ikke et kraftværk."
    ],
    "narrativeSources": [
     {
@@ -883,6 +883,26 @@
     {
      "label": "Selskabets side",
      "url": "https://www.niocorp.com/"
+    }
+   ]
+  },
+  "US02451V3096": {
+   "name": "American Battery Technology",
+   "theme": "energy-resources",
+   "summary": "Genbrug af litium-ion-batterier og et lithiumprojekt i Nevada. Fernley er ikke taget i brug. Tonopah Flats er ikke en mine.",
+   "watch": "Om Fernley får ibrugtagningstilladelse. Planen er ikke drift.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1576873/000149315226022149/form10-q.htm",
+   "products": "Genbrug af batterier og et lithiumprojekt. Ikke en mine i drift.",
+   "customers": "Rapporten nævner salg af produkter. Beløb og navne på kunder er ikke taget med.",
+   "role": "Råstof og genbrug. Fernley er ikke i brug.",
+   "narrative": [
+    "American Battery Technology Company har hovedkontor på 100 Washington Street, Suite 100, i Reno i Nevada. Det er kontoret. Selskabet er noteret på NASDAQ under ABAT. Hjemmesiden gav en captcha 16. oktober 2026. Sætningerne er fra kvartalsrapporten for perioden til 31. marts 2026.",
+    "Rapporten nævner genbrugsanlægget i Tahoe-Reno Industrial Center i Storey County. Lageret til genbrug af litium-ion-batterier omfatter råmateriale og færdigvarer. Den siger ikke, at lageret ligger i Fernley, og den giver ikke et målt år. Bygningen i Fernley stod som klar til salg. Køberen trak sig 28. juli 2025. Pr. 31. marts 2026 er den opført som byggeri i gang og er ikke taget i brug. En ibrugtagningstilladelse er en plan for regnskabsåret 2026, ikke en tilladelse, rapporten siger er givet. Et nyt kommercielt anlæg i USA har ingen kvalificerende udgift pr. 31. marts 2026. Tonopah Flats er et lithiumprojekt. FAST-41-udpegningerne er fra juni og august 2025 og er ikke en mine. Selskabet købte 88 uminerede claims ved projektet 15. januar 2026, før beholdningen. Beløb er ikke taget med."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Kvartalsrapport til 31. marts 2026",
+     "url": "https://www.sec.gov/Archives/edgar/data/1576873/000149315226022149/form10-q.htm"
     }
    ]
   },

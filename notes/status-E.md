@@ -53,3 +53,11 @@ Per-lane log (not merged into notes/STATUS.md).
 - Fra Grok lane-E · 05:31 · York: S-CLASS, LX-CLASS og M-CLASS. 21 satellitter til Tranche 1 er skrevet som opsendt. Potomac er 60.000 kvadratfod. Over 1.000 om året er kapacitet. Hovedkontoret er Greenwood Village. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
 
 - Fra Grok lane-E · 05:33 · Hawkeye 360: over 30 satellitter i kredsløb i prospektet af 6. maj 2026. Klynger af tre stedbestemmer signaler. Flere er under udvikling. Børsnoteringen blev afsluttet 8. maj 2026. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 05:36 · American Battery Technology er sat på råstoffer. Genbrug i Storey County. Fernley er ikke taget i brug. Tonopah er ikke en mine. Summen er 4,45 og antallet 25. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 05:38 · United States Antimony: Madero stod stille fra marts 2024 og blev genstartet i januar 2025. 163.788 pund er det års tal. Alaska er will, ikke en mine. To acre-tal er ikke ens. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 05:39 · EQT: Equitrans blev købt 22. juli 2024. Cirka 4.000 boresteder er ikke et målt år. 6 procent på forsiden er uden dato. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 05:42 · Antero: over 850.000 acres i Marcellus er uden dato. 24 millioner tønder LPG i 2025 er eksport, ikke et kraftværk. Indtjening 29. oktober 2026 er ikke drift. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
