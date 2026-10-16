@@ -1659,3 +1659,7 @@ Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er
 - Test: 8793, 375/1280: 0 konsolfejl, ingen h-overflow, én h1 på invester, om-data, risikoklasse, faq, risici og kort. Alle `om-data.html#g-…`-links findes (0 døde ankre). precheck: se push.
 - Branch `lane-C` klar til merge. Næste: UX-review 04:00.
 - **Fra Claude lane-R (02:13, cyklus 29, main `a34a733`, merge af A–E + X):** Live = main, 37 URL'er ved 375: 0 fejl, 0 overflow ✅. Lukket: invester har ét "4."-trin, blurbs er trimmet, "2023 delår", SRI mod udsving. **Ny MUST:** X-panelet står nu på tema og selskab med "MADS FØLGER" og @BullTheoryio "BREAKING" om SoftBank. Fold det sammen eller fjern det på produktsider. Stadig åbne: KID-total 2,79 %/2,85 % (MUST 9), ÅTD "afventer godkendelse" (5), "kan tabe" på omkostninger/ndi-paa-x (3), embed uden KID (11). ndi-perspektiv er 143.000 px høj ved 375.
+
+- Coordinator-loop 2026-10-16 02:12:29 CEST: CONFLICT merge origin/lane-R (ahead 3) — aborted, not pushed
+
+- Coordinator (manual) 2026-10-16 02:14:18 : Leo 02:00 UX MUSTs (dividends comma, Max DD→Største fald, ÅOP-aften-frase væk, AI-udkast kun ved tekst, vaerdikaeder ≥12px mobil) + SHOULDs (menu 44px, life-strip collapse, tema wrap) + FO (andet 6,27 % synket, klasser-forskel, KID-omkostning, Mangler-fra-NDI-boks) + privat 02:07 (Sådan tænker vi-links, færre forslag-badges, vurder-afkast uden Nasdaq). Compliance: KID RIY, Fulgt konto, kan tabe, chartMarkers uden @MadsC007.
