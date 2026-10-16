@@ -3869,7 +3869,7 @@
           "seeChain": null,
           "shift": "NVIDIAs direktør sagde i januar 2025, at nyttige kvantecomputere sandsynligvis ligger omkring 20 år ude (gengivet i BLOG 13. januar 2025). Det er hans udsagn, ikke NDI's forventning. Se tidshorisonten i kvante-fanen.",
           "kind": "ndi",
-          "src": "BLOG 2. juni 2025 · 7. juli 2025 · 21. juli 2025",
+          "src": "BLOG 2. juni 2025 · 7. juli 2025 · 21. juli 2025 · selskabernes egne sider (QCi, D-Wave, Rigetti, IonQ)",
           "brief": {
             "does": "Bygger computere, der regner med qubits i stedet for almindelige bits.",
             "why": {
@@ -3880,7 +3880,13 @@
               "sec": "quantum:q-lad",
               "secT": "Se trappen"
             }
-          }
+          },
+          "facts": [
+            "Quantum Computing Inc: Quantum Computing Inc skriver, at selskabet bygger kvantemaskiner, der regner med lys (fotoner), og at det har sin egen fabrik til optiske chips af tyndfilm-lithiumniobat i Tempe, Arizona. Fabrikken blev færdigbygget i marts 2025.",
+            "D-Wave Quantum Inc: D-Wave skriver, at selskabet bygger kvantemaskiner til kvanteudglødning. De løser optimeringsopgaver, fx at finde den bedste rute eller plan. Kunderne lejer tid på maskinerne via skytjenesten Leap. Selskabet udvikler også en fuld (gate-baseret) kvantecomputer, men den er under udvikling og sælges ikke endnu.",
+            "Rigetti Computing Inc: Rigetti skriver, at selskabet bygger kvantechips med superledende qubits i sin egen chipfabrik, Fab-1, i Fremont, Californien. Den slags chips skal køles ned tæt på det absolutte nulpunkt for at virke. Maskinerne kan lejes over skyen.",
+            "IonQ: IonQ skriver, at selskabet bygger kvantecomputere med fangede ioner, dvs. enkelte atomer, der holdes svævende af elektriske felter og styres med laser. Maskinerne kan lejes gennem de store skytjenester (Amazon, Microsoft og Google)."
+          ]
         }
       ],
       "bridges": [
