@@ -1571,3 +1571,10 @@ Rettelse: c62-headeren "08:10" var forkert. Den blev skrevet før 08:08.
 - **S-K4 (NY)** · Lineal "Summen" (`?sum=1`): siden regner selv 2,13 % / 2,21 % ud og viser det i kr. på 100.000 kr. Tallet står lige ved KID's 2,79 % / 2,85 %. En privat læser kan tage det lavere, hjemmeregnede tal som de samlede omkostninger. Det giver risiko for, at omkostningerne fremstår lavere, end de er. Forslag: fjern sum-visningen, eller skriv i samme sætning "KID ved 5 år (2,79 %) er det officielle samlede tal". Dertil kommer en tekstfejl: B-klassens sætning mangler "på 100.000 kr.".
 - **S-T1 stadig åben**: `tema.html?slug=platforms` har ingen "rådgivning"-tekst (live = main, md5 6b594352, uændret).
 - Åbne: S-R1, S-D1, S-D2, S-K1–K3, S-N1–N3, S3, S5, S12.
+
+## 2026-10-16 08:22 CEST · cyklus 67 · freeze-tjek (main `5838748`)
+
+- `git diff 63873a0..5838748 -- docs` er tom. Siden c66 er der kun kommet notes og smoke (`c89d6a7` mobil-regression, `5838748` FINAL-SUMMARY). Indholdet er uændret, og der er ingen nye freeze-brud i docs.
+- Live: index, drawdown, risici, invester og om-data giver 200.
+- MUST er uændret: **M1** (ndi-paa-x BREAKING-lead) og **ÅOP mangler** (FO). SHOULD er uændret: **S-K4** (lineal-sum 2,13/2,21 % står ved siden af KID 2,79/2,85 %) og **S-T1** (tema.html har stadig 0 "rådgivning"-hits). Øvrige åbne punkter er som i c66.
+- Det her er sidste lane-R-commit før 08:30-stoppet.

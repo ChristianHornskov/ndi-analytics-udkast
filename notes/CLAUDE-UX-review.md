@@ -1585,3 +1585,6 @@ Nyt: omkostnings-lineal (omkostninger og fakta), X-månedsmatrix og Udforsk/Fond
 
 ### Nice
 - Tasterne G og M er korrekt slået fra i input-felter. ✅
+
+## 2026-10-16 08:22 CEST · cyklus 67 · freeze-tjek
+- Ingen ændringer i docs siden c66. MUST, SHOULD og Nice er uændrede (se c66). Smoke `c89d6a7` dækker mobilgraf ≥220 px, Entré uden cmp og første resultat på Udforsk inden for første skærm. Det er tests, ikke features, så det er OK under freeze.
