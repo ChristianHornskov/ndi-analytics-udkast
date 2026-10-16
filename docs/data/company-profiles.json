@@ -1895,20 +1895,24 @@
   "US4202011056": {
    "name": "Hawkeye 360",
    "theme": "space",
-   "summary": "Driver satellitter, der opfanger radiosignaler og bruger dem til at stedbestemme kilden.",
-   "watch": "Satellitternes drift og kundernes brug af signaldata.",
-   "source": "https://www.he360.com/",
-   "products": "Radiosignaldata fra rummet.",
-   "customers": "Offentlige og private kunder med brug for stedbestemmelse af radiosignaler.",
-   "role": "Satellittjeneste.",
+   "summary": "Driver satellitter, der opfanger radiosignaler og stedbestemmer kilden. Prospektet af 6. maj 2026 skriver over 30 satellitter i kredsløb. Flere klynger er under udvikling.",
+   "watch": "Om de næste klynger kommer i kredsløb. Tallet over 30 er prospektets tal, ikke et års tal.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1750704/000162828026032207/hawkeye360424b4.htm",
+   "products": "Radiosignaldata fra klynger af tre satellitter. Ikke en raket.",
+   "customers": "Prospektet nævner den amerikanske stat og allierede. Beløb er ikke taget med.",
+   "role": "Satellittjeneste. Sender ikke selv raketten op.",
    "narrative": [
-    "Hawkeye 360 driver satellitter, der opfanger radiosignaler, og bruger dem til at stedbestemme kilden.",
-    "Det er en satellittjeneste, ikke en raket."
+    "HawkEye 360, Inc. er stiftet i 2015. Hovedkontoret ligger på 450 Springpark Place, Suite 500, i Herndon i Virginia. Selskabet ejer ikke ejendommen. Prospektet af 6. maj 2026 skriver, at aktien er godkendt til New York Stock Exchange under HAWK. Meddelelsen 8. maj 2026 siger, at børsnoteringen blev afsluttet. Datoen ligger før beholdningen. Pr. 31. december 2025 var der 395 fuldtidsansatte og 8 deltidsansatte.",
+    "Prospektet skriver over 30 satellitter i kredsløb og flere klynger under udvikling. Over et dusin klynger er sat i drift. En klynge er tre satellitter og bruges til at stedbestemme radiosignaler. Block 3 er under udrulning og er ikke hele flåden. Selskabet køber opsendelse hos andre. Det sender ikke selv raketten op. Hjemmesiden gav 403 den 16. oktober 2026. Sætningerne er fra prospektet og meddelelsen. Ordene trusted, disrupted og unprecedented er ikke taget med."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets side",
-     "url": "https://www.he360.com/"
+     "label": "Prospekt, 6. maj 2026",
+     "url": "https://www.sec.gov/Archives/edgar/data/1750704/000162828026032207/hawkeye360424b4.htm"
+    },
+    {
+     "label": "Børsnotering afsluttet, 8. maj 2026",
+     "url": "https://www.sec.gov/Archives/edgar/data/1750704/000162828026032901/hawkeye360-closing8xk.htm"
     }
    ]
   },

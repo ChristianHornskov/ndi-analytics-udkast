@@ -51,3 +51,5 @@ Per-lane log (not merged into notes/STATUS.md).
 - Fra Grok lane-E · 05:29 · Intuitive Machines: IM-1 landede i februar 2024. IM-2 i marts 2025 havde landingsafvigelser. IM-3 er ikke fløjet. Lanteris er på satellitter, købt 13. januar 2026. 18 SDA-platforme er ikke skrevet som opsendt. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
 
 - Fra Grok lane-E · 05:31 · York: S-CLASS, LX-CLASS og M-CLASS. 21 satellitter til Tranche 1 er skrevet som opsendt. Potomac er 60.000 kvadratfod. Over 1.000 om året er kapacitet. Hovedkontoret er Greenwood Village. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 05:33 · Hawkeye 360: over 30 satellitter i kredsløb i prospektet af 6. maj 2026. Klynger af tre stedbestemmer signaler. Flere er under udvikling. Børsnoteringen blev afsluttet 8. maj 2026. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
