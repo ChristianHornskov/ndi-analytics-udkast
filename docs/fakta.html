@@ -71,7 +71,7 @@
   .tax-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
   .tax-grid h3{font-size:14px;margin-bottom:6px}
   .tax-grid p{color:var(--muted);line-height:1.55;font-size:14px}
-  .risk-stage{margin:0 0 14px;scroll-margin-top:84px;padding-top:14px;padding-bottom:14px}
+  .risk-stage{margin:0 0 14px;scroll-margin-top:84px;padding-top:8px;padding-bottom:12px}
   .risk-metrics{margin:0 0 6px}
   .risk-stage .risk-metrics strong{font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-size:32px;letter-spacing:-.7px;font-weight:500}
   .dd-inline b{font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-weight:500;font-size:16px;letter-spacing:-.3px;color:#f5ee9e}
@@ -89,7 +89,11 @@
   .fact-hero{display:grid;grid-template-columns:1fr;gap:10px;align-items:stretch;margin:0 0 8px}
   .band.glance{margin:2px 0 0}
   .fact-hero.is-pair{grid-template-columns:minmax(0,1.2fr) auto minmax(210px,.78fr)}
-  .fact-hero article{border-radius:16px;padding:12px 14px 10px;min-width:0}
+  .fact-hero article{display:flex;flex-direction:column;border-radius:16px;padding:12px 14px 10px;min-width:0}
+  .match-rail{width:168px;max-width:100%;align-self:flex-start;height:6px;margin-top:auto;border-radius:99px;background:#0b171d;box-shadow:inset 0 0 0 1px #2a424a;overflow:hidden;flex:0 0 auto}
+  .match-rail i{display:block;height:6px;border-radius:99px;background:#89aeb4}
+  .fact-hero-gap .match-rail i,.fact-hero.is-same .match-rail i{background:#f5ee9e}
+  .fact-hero.is-same .match-rail{box-shadow:0 0 12px rgba(245,238,158,.45), inset 0 0 0 1px #2a424a}
   .fact-hero-kid{border:1px solid #345860;background:linear-gradient(180deg,#16303a,#11252c)}
   .fact-hero-gap{border:1px solid #f5ee9e55;background:radial-gradient(90% 90% at 100% 0%,rgba(245,238,158,.12),transparent 50%),linear-gradient(180deg,#16303a,#11252c)}
   .fact-hero-nums{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:10px;align-items:end}
@@ -281,6 +285,8 @@
  : `${h ? h.gap : ''} og ${krGapTxt} er ikke samme beløb.`,
  };
  };
+ const railBase = Math.max(txGapN, ...kidHorizons.map((h) => h.gapN), 1);
+ const railPct = (n) => Math.round(Math.max(0, Math.min(100, (Number(n) / railBase) * 100)) * 10) / 10;
  const startBridge = bridgeCopy(heroStart);
  const kidSwitch = kidHorizons.length > 1 ? `<div class="kid-switch" role="group" aria-label="KID-horisont">${kidHorizons.map((h) => `<button type="button" data-kid="${h.y}" aria-pressed="${heroStart && h.y === heroStart.y ? 'true' : 'false'}" aria-keyshortcuts="${h.y}" aria-label="Vis KID ved ${h.y} år. Forskellen er ${h.gap}.">${h.y} år <b>${h.gap}</b></button>`).join('')}</div>` : '';
  const heroKid = heroStart ? `<article class="fact-hero-kid" id="kid-hero">
@@ -290,6 +296,7 @@
  <div class="mid"><span>forskel</span><em data-kid-gap>${heroStart.gap}</em><small data-kid-eq>${heroStart.eq ? `${heroStart.eq}<br>` : ''}ikke postsatserne</small></div>
  <div><span>PMINDIAKK</span><b data-kid-b>${heroStart.pctB}</b><small data-kid-kb>${heroStart.krB} på 100.000 kr.</small></div>
  </div>
+ <div class="match-rail" aria-hidden="true"><i data-rail="kid" style="width:${railPct(heroStart.gapN)}%"></i></div>
  <p class="fact-hero-note sr-only">${kidNote}</p>
  </article>` : '';
  const heroGap = dTx === 0 ? '' : `<article class="fact-hero-gap">
@@ -297,10 +304,11 @@
  <p class="gap-kr">${krGapTxt}</p>
  <p class="gap-sub"><b>${pct(A.costs.portfolioTransaction)}</b> PMINDI · <b>${pct(B.costs.portfolioTransaction)}</b> PMINDIAKK</p>
  <p class="gap-eq">${txEq}</p>
- <p class="gap-note">på 100.000 kr. Ikke et ÅOP.</p>
+ <p class="gap-note">på 100.000 kr. Søjlerne deler skala. Ikke et ÅOP.</p>
+ <div class="match-rail" aria-hidden="true"><i data-rail="tx" style="width:${railPct(txGapN)}%"></i></div>
  </article>`;
  const heroNeq = heroKid && heroGap ? `<p class="fact-neq" aria-live="polite"><span class="mark" data-bridge-mark aria-hidden="true">${startBridge.mark}</span><span class="word" data-bridge-word>${startBridge.word}</span><span class="sr-only" data-bridge-sr>${startBridge.sr}</span></p>` : '';
- const hero = `<div class="fact-hero${heroKid && heroGap ? ' is-pair' : ''}${startBridge.same ? ' is-same' : ''}" id="blik">${heroKid}${heroNeq}${heroGap}</div>`;
+ const hero = `<div class="fact-hero${heroKid && heroGap ? ' is-pair' : ''}${startBridge.same ? ' is-same' : ''}" id="blik" data-rail-base="${railBase}">${heroKid}${heroNeq}${heroGap}</div>`;
  const strip = `<ul class="fact-strip">
  <li><span class="k">SRI</span><strong>${sameSri ? `${A.sri} af ${A.sriMax}` : `${A.sri} / ${B.sri}`}</strong>${sriMeter}</li>
  <li><span class="k">Horisont</span><strong>${sameHorizon ? `${A.horizonYears} år` : `${A.horizonYears} / ${B.horizonYears} år`}</strong></li>
@@ -450,6 +458,10 @@
  const copy = bridgeCopy(h);
  if (hero) {
  hero.classList.toggle('is-same', copy.same);
+ const kidRail = hero.querySelector('[data-rail="kid"]');
+ const txRail = hero.querySelector('[data-rail="tx"]');
+ if (kidRail) kidRail.style.width = railPct(h.gapN) + '%';
+ if (txRail) txRail.style.width = railPct(txGapN) + '%';
  const mark = hero.querySelector('[data-bridge-mark]');
  const word = hero.querySelector('[data-bridge-word]');
  const sr = hero.querySelector('[data-bridge-sr]');
