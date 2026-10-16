@@ -1930,7 +1930,7 @@
           "id": "launch",
           "icon": "🚀",
           "label": "Opsendelse",
-          "blurb": "Raketter og fartøjer, der bringer satellitter og udstyr væk fra Jorden, og selskaber, der laver dele til dem. Nogle programmer flyver allerede. Andre er stadig under udvikling. Flere af selskaberne her sender ikke selv noget op. De leverer motorer, metaldele eller beskyttelse til det, raketten bærer. Howmet skriver, at et smedet aluminiumshjul til lastbiler er fra 1948. Dele til industrielle gasturbiner er ikke et kraftværk. Forsvars- og rumsiden skriver materialer til Apollo og rumfærgen. Det er ikke en opsendelse, selskabet selv flyver. Lokationssiden nævner lande og ikke en gade. Karman skriver hovedkontor i Huntington Beach. Postnummer 92649 er ikke en gade. Købet af Walker blev gennemført 28. august 2026, efter beholdningen. MK 54 er en øvelsesdel uden sprængladning, ikke en opsendelse.",
+          "blurb": "Raketter og fartøjer, der bringer satellitter og udstyr væk fra Jorden, og selskaber, der laver dele til dem. Nogle programmer flyver allerede. Andre er stadig under udvikling. Flere af selskaberne her sender ikke selv noget op. De leverer motorer, metaldele eller beskyttelse til det, raketten bærer.",
           "ndi": "SpaceX er brugt som illustration i NDI's formidling om opsendelser (ugebrev 23. juni 2024). Selskabet indgår ikke i beholdningen pr. 1. juni 2026. Luftfartsselskaberne i SpaceTech-temaet (Merlin, Archer og Airo Group) står ikke her. BWX Technologies og Rolls-Royce står under atomkraft i energikæden.",
           "themes": [
             "space"

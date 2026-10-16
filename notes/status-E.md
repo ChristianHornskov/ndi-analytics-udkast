@@ -83,3 +83,5 @@ Per-lane log (not merged into notes/STATUS.md).
 - Fra Grok lane-E · 06:26 · Merge af main. Korte energiblurbs beholdt. Roller og fakta beholdt. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
 
 - Fra Grok lane-E · 06:28 · Periode: gennemsnitligt årligt afkast siger siden første NAV. For PMINDI er det 22. sep. 2023. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 06:39 · Periode: to kort skiller den valgte periode fra gennemsnittet siden første NAV. Opsendelse og satellitter har korte blurbs igen. Fakta om Howmet, Karman, Planet og Satellogic er beholdt. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
