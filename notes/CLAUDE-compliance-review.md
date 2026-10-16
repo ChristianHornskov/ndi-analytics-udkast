@@ -1543,3 +1543,16 @@ Rettelse: c62-headeren "08:10" var forkert. Den blev skrevet før 08:08.
 ### SHOULD
 - **S-T1 stadig åben**: `tema.html?slug=platforms` og `?slug=optik-netvaerk` live har ingen "rådgivning"-tekst i DOM'en (textContent). Tab- og historisk-linjen er der.
 - Åbne: S-R1, S-D1, S-D2, S-K1–K3, S-N1–N3, S3, S5, S12.
+
+## 2026-10-16 08:15 CEST · cyklus 65 · freeze-tjek (main `fa5a811`)
+
+- Diff 1f8ec72..fa5a811 i docs: sweep for garanter/sikker/køb/anbefal/overvægt/eksponering giver 0 nye hits. Rollerne har kun mistet forbehold, der stadig står i facts/kilder. Redwire "will launch" er nu oversat til "skal med på" (planudsagn, ikke en påstand om, at flyvningen er gennemført). ✅
+- MDA: det nye kontrolcenter (11. august 2026) er markeret "efter beholdningen" både i nyhedsarkiv og i profilen. Kilden er linket (mda.space). ✅ Ingen live-handler.
+- 23 live-URL'er @375 (cache-bust): rådgivning-, tab- og historisk-linjen findes på 21/23. "overvægt"-hits er fortsat kun negationer.
+
+### MUST
+- Uændret: **M1** (ndi-paa-x knude/lead) og **ÅOP mangler**.
+
+### SHOULD
+- **S-T1 stadig åben**: der er ingen "rådgivning"-tekst på `tema.html?slug=platforms` og `?slug=optik-netvaerk` (live = main, md5 6b594352). Det er en footer-fix, så den er tilladt under freeze, hvis den ejende lane når det før 08:30.
+- Åbne: S-R1, S-D1, S-D2, S-K1–K3, S-N1–N3, S3, S5, S12.

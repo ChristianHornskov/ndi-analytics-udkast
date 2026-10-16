@@ -29,3 +29,4 @@ Per-lane log (not merged into notes/STATUS.md).
 - Fra Claude lane-R · 08:10 · cyklus 62 (slut-tjek ved freeze): main a81c67c uændret, live = main (14 sider md5), footer på 20/20, ordsweep rent; samlet åben liste: MUST M1 + ÅOP, SHOULD S-R1/S-D1/S-D2/S-K1–3/S-N1–3
 - Fra Claude lane-R · 08:08 · cyklus 63 (freeze-verifikation): main a81c67c uændret, live = main; 24 URL live 0 fejl/overflow; ny SHOULD S-T1 tema.html-footer mangler 'ingen investeringsrådgivning'+tab-linje; MUST M1 + ÅOP uændret
 - Fra Claude lane-R · 08:12 · cyklus 64 (freeze-tjek): main 1f8ec72 (value-chains revisionsnoter fjernet, drawdown rolige år) ren i ordsweep; live = main på 27 filer (value-chains halter på Pages); 20 URL @375 0 fejl/overflow; S-T1 stadig åben; MUST M1 + ÅOP uændret
+- Fra Claude lane-R · 08:15 · cyklus 65 freeze-tjek: main fa5a811, live=main, 0 overflow/0 fejl på 23 URL'er; S-T1 (tema-footer uden rådgivningslinje) stadig åben

@@ -1554,3 +1554,19 @@ Ingen nye UX-ændringer på main siden c61. Live-sweep på 24 URL'er gav 0 fejl 
 
 ### Nice
 - Ingen nye.
+
+## 2026-10-16 08:15 CEST · cyklus 65 · freeze-tjek (main `fa5a811`, docs = `075956e`)
+
+Nyt siden c64: a11y aria-sort på `th` (app.js, selskaber.html), anker-hop efter asynkron render (selskab.html), Chorus-kort `.sky` i nyhedsarkiv (committet 07:58, altså før freeze) og kortere rollelinjer i value-chains/company-profiles. Live = main pr. md5 på alle 7 ændrede filer.
+
+### MUST
+- Ingen nye. 23 live-URL'er @375 har 0 overflow og 0 pageerrors.
+
+### SHOULD
+- Rollelinjerne er nu korte ("Solcellemoduler.", "Reaktordesign."). Forbeholdene om "efter beholdningen" står stadig i facts. Det er lettere at læse for privat-personaen. ✅ Behold det.
+- `.sky` (nyhedsarkiv) stabler til 1 kolonne @375 (3×279 px), og den stiplede kant markerer "plan". Det er godt. Men det er endnu et bokset kort-idiom på en side, der allerede har mange (tri, two-led, not-that, chain-map). Det bidrager til U-V1-fatigue.
+- Anker-fix verificeret: `selskab.html?isin=CA55293N1096#ndi-linse` lander 112 px fra toppen, og et ugyldigt anker (`#%E0bad`) kaster ikke en fejl. ✅
+- Åbne: U-V1, U-X1, U-T1/S-T1 (tema-footer).
+
+### Nice
+- Ingen nye.
