@@ -282,6 +282,10 @@ På 390 stod «Del grafen» alene under de to andre knapper. Under 438 px tager 
 
 KID-tallet sad i samme liste som ISIN og NAV. Nu står ca. 2,79 % og ca. 2,85 % under kortene. PMINDI har brand-streg, PMINDIAKK cyan-streg, og procenten er i tekstfarve. På 1280 og 700 ligger hvert tal i samme x som sit kort. På 390 og 320 står de to tal ved siden af hinanden, mens kortene stables. Noten er «Årlig omkostning i KID. Før kurtage og depot.» Kortene har ingen procent. AKK-drawdown har ingen procent. Ingen sidescroll. Ingen konsolfejl.
 
+### Update · dybde ved episoden · 2026-10-16 ~05:18 CEST
+
+Listen havde kun et tal for dybden. Nu står en tynd søjle ved procenten. −16,7 % er 13 px, −35,8 % er 28 px, −26,6 % og −26,8 % er 21 px. Den åbne er gul. Varighedsbjælken er stadig vandret. Et klik på den åbne hopper til 29. jul. 2026. På 320 står «-23,4 %» samlet, og datoerne knækker ikke efter dagstallet. Ingen sidescroll ved 1280, 390 og 320. PMINDIAKK har ingen procent og ingen søjle. Ingen konsolfejl.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.

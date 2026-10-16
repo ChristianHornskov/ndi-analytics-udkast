@@ -717,13 +717,16 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
 .quiet-stats small{display:block;font-size:11px;color:var(--faint);font-weight:400}
 .ep-ledger{list-style:none;margin:0;padding:0}
 .ep-ledger li{border-top:1px solid var(--line)}
-.ep-jump{display:grid;grid-template-columns:96px minmax(0,1fr);gap:4px 14px;align-items:center;width:100%;padding:12px 8px;text-align:left;background:transparent;border:0;border-radius:8px;color:inherit}
+.ep-jump{display:grid;grid-template-columns:118px minmax(0,1fr);gap:4px 14px;align-items:center;width:100%;padding:12px 8px;text-align:left;background:transparent;border:0;border-radius:8px;color:inherit}
 .ep-jump:hover{background:var(--selected)}
 .ep-jump[aria-pressed=true]{box-shadow:inset 3px 0 0 var(--yellow)}
-.ep-ledger .depth{font-size:20px;font-weight:650;letter-spacing:-.4px;color:var(--neg-ink);font-variant-numeric:tabular-nums}
+.ep-ledger .depth{display:flex;align-items:flex-end;gap:8px;font-size:20px;font-weight:650;letter-spacing:-.4px;color:var(--neg-ink);font-variant-numeric:tabular-nums}
+.ep-stem{display:block;width:4px;flex:none;border-radius:3px 3px 0 0;background:var(--neg-ink)}
 .ep-ledger li.open .depth{color:var(--yellow)}
+.ep-ledger li.open .ep-stem{background:var(--yellow)}
 .ep-ledger .meta{font-size:13px;color:var(--muted);line-height:1.45}
-.ep-ledger .meta strong{color:var(--text);font-weight:600}
+.ep-pct{white-space:nowrap}
+.ep-ledger .meta strong{color:var(--text);font-weight:600;white-space:nowrap}
 .dur{display:block;height:10px;margin-top:10px;border-radius:99px;background:var(--ink);border:1px solid var(--line);max-width:min(100%,520px);overflow:hidden}
 .dur span{display:block;height:100%;border-radius:99px;background:var(--brand)}
 .ep-ledger li.open .dur span{background:var(--yellow)}
@@ -805,7 +808,9 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
   .anno{color:#333}
   .figure figcaption,.hero-stat .when,.ep-ledger .meta{color:#333}
   .hero-stat .num,.ep-ledger .depth{color:#6d3038}
+  .ep-stem{background:#6d3038}
   .ep-ledger li.open .depth{color:#111}
+  .ep-ledger li.open .ep-stem{background:#333}
   .figure text,.figure .tick,.figure .uw-label,.figure .uw-span-lab,.figure .dot-lab{fill:#333}
   .figure .uw-plate{fill:#fff}
   .figure .uw-water{stroke:#111}
