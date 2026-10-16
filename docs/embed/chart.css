@@ -141,8 +141,7 @@ b, strong { font-weight: 700; }
   text-align: left;
   padding: 14px 14px 13px 15px;
   display: grid;
-  grid-template-columns: minmax(0, max-content) 88px;
-  justify-content: start;
+  grid-template-columns: minmax(0, 1fr) 88px;
   column-gap: 16px;
   align-items: center;
   min-width: 0;
@@ -153,9 +152,9 @@ b, strong { font-weight: 700; }
 .class-card.selected { background: var(--selected); border-top-color: var(--yellow); }
 .class-card:hover { border-color: var(--cyan); background: #203941; }
 .class-card.selected:hover { border-top-color: var(--yellow); }
-.class-mark { position: static; width: 88px; height: 28px; grid-column: 2; grid-row: 1 / span 2; justify-self: end; pointer-events: none; }
+.class-mark { position: static; width: 88px; height: 28px; grid-column: 2; grid-row: 1; justify-self: end; align-self: center; pointer-events: none; }
 .class-title { grid-column: 1; grid-row: 1; }
-.class-subtitle { grid-column: 1; grid-row: 2; }
+.class-subtitle { grid-column: 1 / -1; grid-row: 2; }
 .class-card[data-fund="PMINDI"] .class-mark { color: var(--brand); }
 .class-card[data-fund="PMINDIAKK"] .class-mark { color: var(--cyan); }
 .class-mark rect, .class-mark path { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linejoin: round; stroke-linecap: round; }
@@ -433,21 +432,27 @@ button.legend {
   line-height: 1.55;
   margin: 4px 0 18px;
 }
+.keep { white-space: nowrap; }
 
 .metrics-row {
   display: grid;
-  grid-template-columns: minmax(0, 1.7fr) minmax(220px, .9fr);
-  grid-template-areas: "cards warn" "dd dd";
-  gap: 18px;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr) minmax(180px, .8fr);
+  grid-template-areas: "total cagr warn" "total ytd ytd" "dd dd dd";
+  gap: 10px;
   align-items: stretch;
   padding-top: 16px;
   border-top: 1px solid var(--line);
 }
 
-.metrics-grid { grid-area: cards; display: grid; grid-template-columns: 1.25fr 1fr; gap: 10px; }
-.warn { grid-area: warn; }
+.metric-total { grid-area: total; }
+.metric-cagr { grid-area: cagr; }
+.metric-ytd { grid-area: ytd; }
 .metric-dd { grid-area: dd; }
-.metrics-row.is-gated { grid-template-areas: "cards warn"; }
+.warn { grid-area: warn; }
+.metrics-row.is-gated {
+  grid-template-columns: minmax(0, 1.7fr) minmax(220px, .9fr);
+  grid-template-areas: "total warn";
+}
 
 .metric {
   padding: 12px 14px;
@@ -460,12 +465,11 @@ button.legend {
   min-width: 0;
 }
 
-.metric:first-child { grid-row: span 2; justify-content: center; border-top-color: var(--cyan); }
-.metrics-row.is-gated .metrics-grid { grid-template-columns: 1fr; }
-.metrics-row.is-gated .metric:first-child { grid-row: auto; justify-content: flex-start; border-top-color: var(--yellow); }
-.metrics-row.is-gated .metric:not(:first-child) { display: none; }
-.metrics-row.is-gated .metric:first-child strong { font-size: 28px; color: var(--muted); letter-spacing: 0; }
-.metric:nth-child(3) { border-top-color: var(--yellow); }
+.metric-total { justify-content: center; border-top-color: var(--cyan); }
+.metrics-row.is-gated .metric-total { justify-content: flex-start; border-top-color: var(--yellow); }
+.metrics-row.is-gated .metric:not(.metric-total) { display: none; }
+.metrics-row.is-gated .metric-total strong { font-size: 28px; color: var(--muted); letter-spacing: 0; }
+.metric-ytd { border-top-color: var(--yellow); }
 .metric-dd { border-top-color: var(--neg); }
 .dd-row { display: flex; align-items: center; gap: 14px; }
 /* Søjlen er faldet som andel af toppen. Fuld søjle er −100 %. Tallet er facit. */
@@ -503,8 +507,8 @@ button.legend {
   font-variant-numeric: tabular-nums;
 }
 
-.metric:first-child strong { font-size: 36px; }
-.metric:not(:first-child) strong { font-size: 22px; }
+.metric-total strong { font-size: 36px; }
+.metric:not(.metric-total) strong { font-size: 22px; }
 .metric strong.accent { color: var(--cyan); }
 .metric strong.smaller { font-size: 18px; letter-spacing: -.3px; }
 
@@ -658,7 +662,7 @@ button.legend {
   .data-source { justify-content: flex-start; }
 
   .class-options { grid-template-columns: 1fr; gap: 8px; }
-  .class-card { min-height: 0; padding: 13px 12px 13px 14px; grid-template-columns: minmax(0, max-content) 78px; column-gap: 12px; }
+  .class-card { min-height: 0; padding: 13px 12px 13px 14px; grid-template-columns: minmax(0, 1fr) 78px; column-gap: 12px; }
   .class-mark { width: 78px; }
 
   .chart-toolbar {
@@ -692,13 +696,16 @@ button.legend {
   .bench-note { font-size: 11px; }
   .embed-cta { align-items: flex-start; }
 
-  .metrics-row { grid-template-columns: 1fr; grid-template-areas: "cards" "dd" "warn"; gap: 14px; }
-  .metrics-row.is-gated { grid-template-areas: "cards" "warn"; }
-  .metrics-grid { grid-template-columns: 1fr 1fr; align-items: start; }
-  .metric:first-child { grid-column: 1 / -1; grid-row: auto; }
+  .metrics-row {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "total total" "cagr ytd" "dd dd" "warn warn";
+    gap: 10px;
+    align-items: start;
+  }
+  .metrics-row.is-gated { grid-template-columns: 1fr; grid-template-areas: "total" "warn"; }
   .metric-label { margin-bottom: 6px; }
-  .metric:first-child strong { font-size: 32px; }
-  .metric:not(:first-child) strong { font-size: 22px; }
+  .metric-total strong { font-size: 32px; }
+  .metric:not(.metric-total) strong { font-size: 22px; }
   .warn { font-size: 12px; }
 }
 

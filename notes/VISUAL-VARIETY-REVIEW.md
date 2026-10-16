@@ -290,6 +290,22 @@ Listen havde kun et tal for dybden. Nu står en tynd søjle ved procenten. −16
 
 Kortet «Største fald» stoppede ved nøgletallene, så der var et hul til højre under advarslen. Nu går kortet i fuld bredde. På 1100 og 700 er højrekanten den samme som advarslens. På 390 og 320 står advarslen under kortet. År til dato har stadig gul kant. PMINDIAKK viser ét gult kort og en streg, ingen procent. Ingen sidescroll. Ingen konsolfejl.
 
+### Update · år til dato går ind under advarslen · 2026-10-16 ~05:24 CEST
+
+Advarslen er kortere end kortstakken, så der var luft ved siden af «År til dato». Nu står advarslen ved siden af «Gns. årligt afkast», og «År til dato» går ind under den. På 1100 og 700 deler totalafkast og år til dato bund. Højrekanten er den samme som advarslen og som «Største fald». Ingen overlap. På 320 er det årlige kort 96 px og år til dato 142 px. Forbeholdet trækker ikke det andet kort med. PMINDIAKK har ét gult kort og ingen procent. Ingen sidescroll. Ingen konsolfejl.
+
+### Update · klassesætningen holder sammen · 2026-10-16 ~05:26 CEST
+
+På 700 og 800 stod «dig.» og «fonden.» alene på sidste linje, fordi mærket tog bredden fra sætningen. Mærket står nu ved siden af navnet. Sætningen har hele kortets bredde. På 1100, 800, 700, 390 og 320 er den én linje. Navn og mærke rammer ikke hinanden. Gul overkant følger det valgte kort. Ingen sidescroll. Ingen konsolfejl.
+
+### Update · datoen holder sammen · 2026-10-16 ~05:28 CEST
+
+På 320 stod «top.» alene under udlæsningen, og «14.» blev skilt fra «okt. 2026» i sætningen under embed-grafen. «fald?» stod alene i opfordringen. Nu holder datoen sammen, «løbende top» holder sammen, og «store fald» holder sammen. På 390 er sætningen under grafen én linje. År til dato har samme dato-sammenhold. Ingen sidescroll. Ingen konsolfejl.
+
+### Update · «siden start» holder sammen · 2026-10-16 ~05:30 CEST
+
+På 320 blev citatet delt, så «start». stod alene. Nu holder «siden start» sammen, og punktummet bliver på samme linje. På 390 holdt «PMINDI.» alene. Nu står «i PMINDI.» samlet. Ingen sidescroll. Ingen konsolfejl.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.
