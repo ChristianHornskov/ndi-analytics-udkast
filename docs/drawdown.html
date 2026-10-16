@@ -26,6 +26,7 @@
  <a class="brand" href="index.html"><img src="assets/mark.svg" width="34" height="27" alt=""><span>NewDeal Invest</span></a>
  <nav class="nav"><a href="index.html?view=fonden">← Fonden</a><a href="om-data.html#g-drawdown">Ordliste</a></nav>
  </header>
+ <p class="print-mast">NewDeal Invest. Udskrift. Markedsføringsmateriale. Generel information, <span class="ep-pct">ikke investeringsrådgivning.</span> Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast.</p>
  <main id="main"><p class="muted">Henter…</p></main>
  <footer class="site-footer"><p><strong>Markedsføringsmateriale.</strong> Læs <a href="https://fundmarket.dk/wp-content/uploads/Faellesprospekt-for-afdelinger-og-andelsklasser-i-Investeringsforeningen-Portfoliomanager-opdateret-24.10.2025.pdf" rel="noopener" target="_blank">prospektet ↗</a> og KID for <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm140b" rel="noopener" target="_blank">PMINDI ↗</a> eller <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm145b" rel="noopener" target="_blank">PMINDIAKK ↗</a>, før du træffer en endelig investeringsbeslutning.</p><p>Udkast / noindex. Generel information, <span class="ep-pct">ikke investeringsrådgivning.</span> Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan <span class="ep-pct">tabe penge.</span></p><p data-kid-footer></p></footer>
  <script type="module">
@@ -46,6 +47,7 @@
  <p class="lede">Ny andelsklasse. Fald fra top for PMINDIAKK vises efter <span class="ep-pct">12 måneders historik.</span> Ingen NAV eller graf før <span class="ep-pct">5. december 2026.</span> Klassen følger samme overordnede strategi <span class="ep-pct">som PMINDI.</span></p>
  ${meta?.funds?.pmindiakk?.priip ? `<p class="src">Risikoindikator (SRI) ${meta.funds.pmindiakk.priip.risk_class} af ${meta.funds.pmindiakk.priip.risk_scale_max} ifølge KID. Gælder fonden som helhed. <a href="${meta.funds.pmindiakk.priip.url}"><span class="ep-pct">Læs KID ↗</span></a></p>` : ''}
  <p class="link-row chip-links"><a href="sammenlign.html">Sammenlign andelsklasser →</a></p>
+ <p class="share-row"><button type="button" class="outline-btn" id="print-sheet">Udskriv</button></p>
  <p class="warn">${WARN_HIST}</p>`;
  } else if (!fund.data?.length) {
  main.innerHTML = `<p class="muted">Ingen serie.</p>`;
@@ -343,7 +345,7 @@
  <figure class="figure">${underwater()}<figcaption><p>0 % er på toppen. Kurven er afstanden til den løbende top, <span class="ep-pct">dag for dag.</span></p><ul class="uw-key"><li><i class="k-zero" aria-hidden="true"></i>0 % er toppen</li><li><i class="k-dot" aria-hidden="true"></i>Dybeste bund</li><li><i class="k-ring" aria-hidden="true"></i>Seneste dag</li><li><i class="k-pick" aria-hidden="true"></i>Valgt dag</li><li><i class="k-ep" aria-hidden="true"></i>Valgt episode</li>${usedGate ? '<li><i class="k-gate" aria-hidden="true"></i>10 % under nul</li>' : ''}<li><i class="k-span" aria-hidden="true"></i><i class="k-span open" aria-hidden="true"></i>Højde er dybde. Gul er åben</li></ul><details class="more"><summary>Sådan læser du grafen</summary><p>Bredden er tiden. Den gule del af kurven er den episode, den valgte dag ligger i. Et klik på søjlen hopper til bunden.${open ? ' Ordet top er starten på den åbne episode.' : ''}${recovery ? ' Ordet tilbage er dagen, det dybeste fald nåede <span class="ep-pct">sin top igen.</span>' : ''}</p></details></figcaption><div class="uw-scrub" style="--uw-pad:${(padL / W * 100).toFixed(3)}%;--uw-plot:${((W - padL - padR) / W * 100).toFixed(3)}%"><p id="uw-read" aria-live="polite"><span class="ep-pct">${fmtDate(uw[uw.length - 1].d)}</span>: ${fmtPct(uw[uw.length - 1].u)} under den <span class="ep-pct">løbende top</span>.</p><label class="sr-only" for="uw-slider">Vælg dag i serien</label><input id="uw-slider" type="range" min="0" max="${uw.length - 1}" value="${uw.length - 1}" aria-valuemin="0" aria-valuemax="${uw.length - 1}" aria-valuetext="${fmtDate(uw[uw.length - 1].d)}: ${fmtPct(uw[uw.length - 1].u)} under den løbende top."></div></figure>
  ${well || `<ul class="stat-strip" aria-label="Nøgletal under grafen"><li class="now"><span>Nu under vand</span><strong>${fmtPct(nowU)}</strong><small>pr. ${fmtDate(rows[rows.length - 1].d)}</small></li><li><span>Dybe episoder</span><strong>${deep.length}</strong><small>${usedGate ? 'dybere end 10 %' : 'de dybeste'}</small></li><li><span>Længste</span><strong>${longDays} dage</strong><small>${longNote}</small></li></ul>`}
  ${peakShare}
- <p class="share-row"><button type="button" class="outline-btn" id="share-chart">Del grafen</button><span id="share-note" class="src" hidden></span></p>
+ <p class="share-row"><button type="button" class="outline-btn" id="share-chart">Del grafen</button><button type="button" class="outline-btn" id="print-sheet">Udskriv</button><span id="share-note" class="src" hidden></span></p>
  <h2 class="h-section">Hvor dybe er faldene?</h2>
  <figure class="figure plain">${depthPlot()}<figcaption><p>${depthLead}</p>${depthMore ? `<details class="more"><summary>Sådan læser du prikkerne</summary><p>${depthMore}</p></details>` : ''}</figcaption></figure>
  <h2 class="h-section">De dybe episoder</h2>
@@ -533,6 +535,7 @@
  }
  });
  }
+ document.getElementById('print-sheet')?.addEventListener('click', () => { window.print(); });
  </script>
 </body>
 </html>

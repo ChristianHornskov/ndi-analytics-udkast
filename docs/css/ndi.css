@@ -790,6 +790,7 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
 .peak-days figcaption strong{color:var(--text);font-weight:650;font-variant-numeric:tabular-nums}
 .share-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin:0 0 16px}
 .share-row .outline-btn{min-height:44px}
+.print-mast{display:none;margin:0}
 .share-row .src{margin:0;overflow-wrap:anywhere}
 .figure details.more summary{min-height:44px;display:flex;align-items:center}
 .cmp-time,.cmp-share{margin:6px 0 4px}
@@ -861,6 +862,14 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
   .ep-stop i{background:#fff;box-shadow:inset 0 0 0 2px #1d4e56}
   .ep-stop[aria-pressed=true] i{background:#111;box-shadow:none}
   .ep-path-say{color:#111;border-left-color:#111}
+  .print-mast{display:block;margin:0 0 12px;font-size:12px;line-height:1.45;color:#333}
+  .share-row,.uw-scrub input,.skip,.back{display:none !important}
+  .dur{background:#fff;border-color:#ccc}
+  .dur span{background:#1d4e56}
+  .ep-ledger li.open .dur span{background:#333}
+  .ep-jump{display:grid !important;background:transparent !important;color:#111 !important;box-shadow:none !important}
+  .ep-stop{display:block !important}
+  .hero-stat,.ep-ledger li,.year-rail a{break-inside:avoid}
 }
 
 /* UX-inspiration top5: tabular nums + calm motion + as-of */
