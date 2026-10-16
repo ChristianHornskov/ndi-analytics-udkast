@@ -286,6 +286,10 @@ KID-tallet sad i samme liste som ISIN og NAV. Nu står ca. 2,79 % og ca. 2,85 % 
 
 Listen havde kun et tal for dybden. Nu står en tynd søjle ved procenten. −16,7 % er 13 px, −35,8 % er 28 px, −26,6 % og −26,8 % er 21 px. Den åbne er gul. Varighedsbjælken er stadig vandret. Et klik på den åbne hopper til 29. jul. 2026. På 320 står «-23,4 %» samlet, og datoerne knækker ikke efter dagstallet. Ingen sidescroll ved 1280, 390 og 320. PMINDIAKK har ingen procent og ingen søjle. Ingen konsolfejl.
 
+### Update · største fald i fuld bredde · 2026-10-16 ~05:21 CEST
+
+Kortet «Største fald» stoppede ved nøgletallene, så der var et hul til højre under advarslen. Nu går kortet i fuld bredde. På 1100 og 700 er højrekanten den samme som advarslens. På 390 og 320 står advarslen under kortet. År til dato har stadig gul kant. PMINDIAKK viser ét gult kort og en streg, ingen procent. Ingen sidescroll. Ingen konsolfejl.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.
