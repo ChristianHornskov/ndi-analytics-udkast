@@ -1089,16 +1089,16 @@
           "id": "gen",
           "icon": "⚡",
           "label": "Elproduktion",
-          "blurb": "Gas, sol, vind, gasturbiner og kraftværker, også anlæg tæt på datacentre. Listen er selskaber, der producerer strøm, leverer brændsel til produktionen eller laver udstyret. NextEra skriver, at en effektudvidelse på St. Lucie, Turkey Point og Point Beach blev færdig i 2013 og omfattede seks atomkraftenheder. Det er ikke et nyt værk. Southern skriver, at Plant Vogtle har fire enheder i drift og leverer strøm til mere end 1 million hjem og virksomheder i Georgia. Siden daterer ikke tallet. Det er ikke en lille reaktor under udvikling. Comstock, Antero, EQT og Expand leverer gas som brændsel. Comstock skriver, at jordpositionen i Western Haynesville i det østlige Texas er mere end 535.000 netto-acres, og at gasproduktionen er certificeret efter MiQ-standarden. Siden daterer ikke tallet. Det er brændsel, ikke en mine. Antero skriver, at det leverer naturgas og LPG til eksport. EQT skriver, at købet af Equitrans Midstream blev gennemført 22. juli 2024. Expand Energy skrev 16. september 2026, at handlen med Twin Eagle er gennemført. Det er efter beholdningen. Twin Eagle er et marketingselskab, ikke en mine. T1 Energy laver solcellemoduler. Cummins skriver, at forretningen er delt i komponenter, motorer, distribution, kraftsystemer og Accelera. Det er ikke et elselskab. Generac skriver, at det laver reservegeneratorer til hjemmet, bærbare generatorer, sol og batterilagring og ladere til elbiler. Ingen af dem er elselskaber. Babcock & Wilcox leverer kedler og service. GE Vernova skriver, at gassiden viser turbinerne 9HA, 7HA og LM2500, og at dampkraft til atomkraft understøtter mere end 80 anlæg i Amerika. Cirka 85 GW er den installerede base hos selskabet og hos andre leverandører. Selskabet driver ikke værkerne. Bloom skrev 1. april 2025, at cellerne skal bruges på Conagras fabrikker i Troy og Archbold i Ohio. Det er en aftale, og teksten siger ikke, at cellerne allerede kører. Plug skrev 22. april 2026, at anlægget i St. Gabriel i Louisiana har lavet flydende brint siden 23. april 2025. Det er et fælles anlæg med Olin og ligger før beholdningen. Det er ikke et elselskab, og teksten siger ikke, at hvert anlæg kører. Solaris skrev 6. juli 2026, at det har købt GESA. Det er efter beholdningen og er service, ikke et kraftværk i drift. Talen skriver, at flåden også har kul, naturgas og olie. Brandon Shores var planlagt lukket 1. juni 2025 og kører videre efter en pålidelighedsaftale. Det er ikke en lille reaktor under udvikling. Vistra skrev 9. januar 2026, at aftaler med Meta dækker 2.176 MW atomkraft i drift og 433 MW øget effekt på Perry, Davis-Besse og Beaver Valley. Det er ikke en ny reaktor. Leverancerne begynder sent i 2026, efter beholdningen.",
-          "ndi": "NDI har skrevet om gas, gasturbiner, sol, vind og producenter tæt på datacentre (ugebrev 30. marts 2026). CoreWeave, Nebius og IREN er med i energitemaet som datacentre. De står ikke her. ProPetro skriver, at arbejdet er trykpumpning i Permian-bassinet. Det er service til boringer og står ikke her. Vistra skrev 9. januar 2026, at 2.176 MW er værker i drift, og at 433 MW er øget effekt. Det er ikke en ny reaktor.",
+          "blurb": "Gas, sol, vind, gasturbiner og kraftværker, også anlæg tæt på datacentre. Listen er selskaber, der producerer strøm, leverer brændsel til produktionen eller laver udstyret. NextEra skriver, at en effektudvidelse på St. Lucie, Turkey Point og Point Beach blev færdig i 2013 og omfattede seks atomkraftenheder. Det er ikke et nyt værk. Southern skriver, at Plant Vogtle har fire enheder i drift og leverer strøm til mere end 1 million hjem og virksomheder i Georgia. Siden daterer ikke tallet. Det er ikke en lille reaktor under udvikling. Comstock, Antero, EQT og Expand leverer gas som brændsel. Comstock skriver, at jordpositionen i Western Haynesville i det østlige Texas er mere end 535.000 netto-acres, og at gasproduktionen er certificeret efter MiQ-standarden. Siden daterer ikke tallet. Det er brændsel, ikke en mine. Antero skriver, at det leverer naturgas og LPG til eksport. EQT skriver, at købet af Equitrans Midstream blev gennemført 22. juli 2024. Expand Energy skrev 16. september 2026, at handlen med Twin Eagle er gennemført. Det er efter beholdningen. Twin Eagle er et marketingselskab, ikke en mine. T1 Energy laver solcellemoduler. Cummins skriver, at forretningen er delt i komponenter, motorer, distribution, kraftsystemer og Accelera. Det er ikke et elselskab. Generac skriver, at det laver reservegeneratorer til hjemmet, bærbare generatorer, sol og batterilagring og ladere til elbiler. Ingen af dem er elselskaber. Babcock & Wilcox leverer kedler og service. GE Vernova skriver, at gassiden viser turbinerne 9HA, 7HA og LM2500, og at dampkraft til atomkraft understøtter mere end 80 anlæg i Amerika. Cirka 85 GW er den installerede base hos selskabet og hos andre leverandører. Selskabet driver ikke værkerne. Bloom skrev 1. april 2025, at cellerne skal bruges på Conagras fabrikker i Troy og Archbold i Ohio. Det er en aftale, og teksten siger ikke, at cellerne allerede kører. Plug skrev 22. april 2026, at anlægget i St. Gabriel i Louisiana har lavet flydende brint siden 23. april 2025. Det er et fælles anlæg med Olin og ligger før beholdningen. Det er ikke et elselskab, og teksten siger ikke, at hvert anlæg kører. Solaris skrev 6. juli 2026, at det har købt GESA. Det er efter beholdningen og er service, ikke et kraftværk i drift. Talen skriver, at flåden også har kul, naturgas og olie. Brandon Shores var planlagt lukket 1. juni 2025 og kører videre efter en pålidelighedsaftale. Det er ikke en lille reaktor under udvikling. Vistra skrev 9. januar 2026, at aftaler med Meta dækker 2.176 MW atomkraft i drift og 433 MW øget effekt på Perry, Davis-Besse og Beaver Valley. Det er ikke en ny reaktor. Leverancerne begynder sent i 2026, efter beholdningen. First Solar skriver, at modulerne er tyndfilm af cadmiumtellurid, i serierne 6 og 7. Siden om fabrikker nævner Perrysburg og Walbridge i Ohio, Trinity i Alabama, New Iberia i Louisiana, Sriperumbudur i Tamil Nadu, Kulim i Malaysia og Cu Chi i Ho Chi Minh City. Hovedsædet ligger i Phoenix i Arizona. Produktionssiden skriver, at fem fabrikker i USA tilsammen er anslået til mere end 17 GW, når de er i fuld drift. Tallet er ikke årets produktion. Det er moduler, ikke et kraftværk. Nextracker står i beholdningen under det navn. Investorkontoret, læst 16. oktober 2026, skriver, at selskabet nu hedder Nextpower, og at det laver soltrackere, effektelektronik og styringssoftware. Siden daterer ikke navneskiftet. Hovedkontoret ligger på 6200 Paseo Padre Pkwy i Fremont i Californien. Det er udstyr, ikke et kraftværk. Array Technologies skriver, at det laver stativer til store solparker, blandt andet DuraTrack, STI H250 og OmniTrack, og softwaren SmarTrack. Adressen er 701 Atrisco Vista Blvd i Albuquerque i New Mexico. Selskabet skriver, at det købte STI Norland i januar 2022. Ordene largest og leading er ikke taget med. Det er udstyr, ikke et kraftværk. Ballard skriver, at hovedkontoret ligger i Burnaby i Canada, og at der er fabrik i Bend i Oregon. FCmove er moduler til køretøjer. FCwave er et skab til skibe og stationær brug. FCgen er stakke. GeoPura HPU er en generator på brint. Siden skriver, at anlæggene kan lave over 1,6 GW MEA og brændselscellestakke. Det er en kapacitet, ikke et målt år. Priser på siden er ikke taget med. Det er ikke et kraftværk. Shoals skriver, at selskabet tegner og fremstiller eludstyr, som samler strømmen i solparker, batterilagring og datacentre. Om-siden skriver, at det har stået på i 30 år. Adressen er 1500 Shoals Way i Portland i Tennessee. Produkterne omfatter Big Lead Assembly, samlebokse, afbrydere og kabelstyring. Siden skriver, at komponenterne testes på fabrikken. Det er udstyr, ikke et kraftværk. Canadian Solar skriver, at selskabet er stiftet i 2001 i Canada, og at det har været noteret på NASDAQ siden 2006. Hovedkontoret ligger på 4273 King Street East, Suite 102, i Kitchener i Ontario. Siden skriver, at selskabet laver solcellemoduler og batterilagring, og at det udvikler store sol- og lagerprojekter. Næsten 180 GW moduler er leveret over 25 år. Det er ikke et enkelt år. Kontaktsiden nævner Recurrent Energy i San Francisco, Austin og New York. Det er kontorer, ikke kraftværker. Ordene largest og leading er ikke taget med. Det er ikke skrevet som et elselskab, der driver værkerne. SolarEdge skriver, at selskabet blev registreret i Delaware i 2006. Investorkontoret skriver, at systemet består af optimizers, invertere og en overvågningsplatform i skyen, til boliger, erhverv og mindre solparker. Om-siden nævner også lagring, ladning af elbiler og nettjenester. Selskabet skrev 2. juni 2025, at den 250.000. inverter var lavet hos Flex i Austin i Texas. Datoen ligger før beholdningen. Tallet er en tæller, ikke et års tal. Ordene leader og revolutionized er ikke taget med. Det er udstyr, ikke et kraftværk. Tigo skriver, at selskabet er stiftet i 2007, og at det laver Flex MLPE, optimizers, invertere og batterier til boliger. Hovedkontoret ligger på 983 University Ave., Suite B, i Los Gatos i Californien. Siden skriver, at det stadig ligger i Silicon Valley. Ordene leader og maximize er ikke taget med. Det er udstyr, ikke et kraftværk. Sunrun skriver, at selskabet er dannet i 2007, og at det leverer solservice til boliger. Over 1 million kunder er afrundet og gælder pr. august 2024, før beholdningen. Servicen er solgt i 22 stater, Washington D.C. og Puerto Rico. Aftalerne er skrevet som 20 eller 25 år. Adresserne 600 California Street, Suite 1800, i San Francisco og 1800 Ashton Blvd i Lehi står under corporate locations. Det er service hos kunden, ikke et kraftværk.",
+          "ndi": "NDI har skrevet om gas, gasturbiner, sol, vind og producenter tæt på datacentre (ugebrev 30. marts 2026). CoreWeave, Nebius og IREN er med i energitemaet som datacentre. De står ikke her. ProPetro skriver, at arbejdet er trykpumpning i Permian-bassinet. Det er service til boringer og står ikke her. Vistra skrev 9. januar 2026, at 2.176 MW er værker i drift, og at 433 MW er øget effekt. Det er ikke en ny reaktor. First Solar laver tyndfilmsmoduler. Fem fabrikker i USA er anslået til mere end 17 GW, når de er i fuld drift. Tallet er ikke årets produktion. Det er ikke et kraftværk. Nextracker står i beholdningen under det navn. Investorkontoret skriver, at selskabet nu hedder Nextpower. Siden daterer ikke navneskiftet. Det er soltrackere, ikke et kraftværk. Array Technologies laver stativer. Købet af STI Norland i januar 2022 er ikke et kraftværk. Ballard laver brændselsceller i Burnaby og Bend. Over 1,6 GW er en kapacitet, ikke et målt år. Shoals laver eludstyr til solparker i Portland i Tennessee. Det er ikke et kraftværk. Canadian Solar laver moduler og udvikler projekter. Næsten 180 GW er over 25 år, ikke et enkelt år. Det er ikke et elselskab. SolarEdge laver invertere og optimizers. 250.000 i Austin er en tæller fra 2. juni 2025, ikke et kraftværk. Tigo laver MLPE og optimizers i Los Gatos. Det er udstyr, ikke et kraftværk. Sunrun leverer solservice til boliger. Kundetallet er afrundet pr. august 2024. Det er ikke et kraftværk.",
           "themes": [
             "energy",
             "energy-resources",
             "physical",
             "andet"
           ],
-          "weightSum": 5.41,
-          "count": 16,
+          "weightSum": 6.49,
+          "count": 25,
           "companies": [
             {
               "isin": "US05614L2097",
@@ -1213,6 +1213,14 @@
               "role": "Aftale med Meta: 2.176 MW i drift og 433 MW øget effekt. Ikke en ny reaktor."
             },
             {
+              "isin": "US65290E1010",
+              "name": "Nextracker",
+              "w": 0.14,
+              "sym": "NXT",
+              "forslag": true,
+              "role": "Soltrackere og styringssoftware. Investorkontoret skriver, at selskabet nu hedder Nextpower. Siden daterer ikke navneskiftet. Ikke et kraftværk."
+            },
+            {
               "isin": "US87422Q1094",
               "name": "Talen Energy",
               "w": 0.12,
@@ -1221,12 +1229,76 @@
               "role": "Værker i drift. Susquehanna er atomkraft. Også kul, gas og olie. Brandon Shores kører videre efter en planlagt lukning."
             },
             {
+              "isin": "US3364331070",
+              "name": "First Solar",
+              "w": 0.12,
+              "sym": "FSLR",
+              "forslag": true,
+              "role": "Tyndfilmsmoduler. Fabrikker i Ohio, Alabama og Louisiana. Mere end 17 GW er et skøn ved fuld drift, ikke årets produktion."
+            },
+            {
               "isin": "US72919P2020",
               "name": "Plug Power",
               "w": 0.11,
               "sym": "PLUG",
               "forslag": true,
               "role": "St. Gabriel er flydende brint sammen med Olin siden 23. april 2025. Ikke et elselskab."
+            },
+            {
+              "isin": "US04271T1007",
+              "name": "Array Technologies",
+              "w": 0.1,
+              "sym": "ARRY",
+              "forslag": true,
+              "role": "Stativer til store solparker. STI Norland blev købt i januar 2022. Ikke et kraftværk."
+            },
+            {
+              "isin": "CA0585861085",
+              "name": "Ballard Power Systems",
+              "w": 0.06,
+              "sym": "BLDP",
+              "forslag": true,
+              "role": "Brændselsceller i Burnaby og Bend. FCmove, FCwave og FCgen. Over 1,6 GW er en kapacitet, ikke et målt år."
+            },
+            {
+              "isin": "US82489W1071",
+              "name": "Shoals Technologies",
+              "w": 0.04,
+              "sym": "SHLS",
+              "forslag": true,
+              "role": "Eludstyr til solparker, lagre og datacentre. Adresse i Portland i Tennessee. Ikke et kraftværk."
+            },
+            {
+              "isin": "CA1366351098",
+              "name": "Canadian Solar",
+              "w": 0.19,
+              "sym": "CSIQ",
+              "forslag": true,
+              "role": "Moduler og store projekter. Næsten 180 GW er over 25 år, ikke et enkelt år. Ikke et elselskab."
+            },
+            {
+              "isin": "US83417M1045",
+              "name": "SolarEdge",
+              "w": 0.18,
+              "sym": "SEDG",
+              "forslag": true,
+              "role": "Invertere og optimizers. 250.000 i Austin er en tæller fra 2025, ikke et års tal. Ikke et kraftværk."
+            },
+            {
+              "isin": "US88675P1030",
+              "name": "Tigo Energy",
+              "w": 0.15,
+              "sym": "TYGO",
+              "forslag": true,
+              "role": "MLPE og optimizers siden 2007. Også invertere og batterier. Adresse i Los Gatos. Ikke et kraftværk."
+            },
+            {
+              "isin": "US86771W1053",
+              "name": "Sunrun",
+              "w": 0.1,
+              "sym": "RUN",
+              "forslag": true,
+              "role": "Solservice til boliger siden 2007. Over 1 million kunder er afrundet pr. august 2024. Ikke et kraftværk."
             }
           ],
           "seeChain": null
@@ -1316,14 +1388,14 @@
           "id": "grid",
           "icon": "⌒",
           "label": "Elnet, transformere og transmission",
-          "blurb": "Strømmen skal fra kraftværk til datacenter. Det kræver ledninger, transformerstationer og selskaber, der bygger og udstyrer nettet. Quanta, Primoris og MYR Group bygger nettet. De producerer ikke strømmen. Quanta skriver, at West Fort McMurray-projektet i Alberta omfatter over 310 miles 500 kV-ledning og stationerne Livock og Thickwood Hills. Siden kalder det et projekt. Quanta ejer ikke ledningen. MYR skriver, at arbejdet også dækker kommercielle og industrielle anlæg og vedvarende energi. Primoris skriver, at rødderne går tilbage til ARB i Bakersfield i 1960, og at selskabet også bygger infrastruktur frem til datacentre. Det ejer ikke strømmen og ikke datacentret. GE Vernova skriver, at GIS-udstyr dækker fra 50 kV til 800 kV, og at afbrydere til generatorer dækker installationer op til 1.500 MW. Det er udstyr. Selskabet driver ikke værkerne. Solaris leverer strøm tæt på store forbrugere. Selskabet skrev 6. juli 2026, at det har købt GESA. Det er efter beholdningen og er service, ikke et kraftværk i drift.",
-          "ndi": "NDI har skrevet om mangel på transformere, køling og transmissionskapacitet (ugebrev 10. august 2026). Køling hører med i flaskehalsen. Selskaber, der alene laver ventilation, står ikke på dette led.",
+          "blurb": "Strømmen skal fra kraftværk til datacenter. Det kræver ledninger, transformerstationer og selskaber, der bygger og udstyrer nettet. Quanta, Primoris og MYR Group bygger nettet. De producerer ikke strømmen. Quanta skriver, at West Fort McMurray-projektet i Alberta omfatter over 310 miles 500 kV-ledning og stationerne Livock og Thickwood Hills. Siden kalder det et projekt. Quanta ejer ikke ledningen. MYR skriver, at arbejdet også dækker kommercielle og industrielle anlæg og vedvarende energi. Primoris skriver, at rødderne går tilbage til ARB i Bakersfield i 1960, og at selskabet også bygger infrastruktur frem til datacentre. Det ejer ikke strømmen og ikke datacentret. GE Vernova skriver, at GIS-udstyr dækker fra 50 kV til 800 kV, og at afbrydere til generatorer dækker installationer op til 1.500 MW. Det er udstyr. Selskabet driver ikke værkerne. Solaris leverer strøm tæt på store forbrugere. Selskabet skrev 6. juli 2026, at det har købt GESA. Det er efter beholdningen og er service, ikke et kraftværk i drift. Tantalus skriver, at det laver en platform til distributionsnet, med TRUConnect, TRUFlex, TRUGrid, TRUSync og TRUSense. Kontorer står i Raleigh i North Carolina, Norwalk i Connecticut og Burnaby i Canada. Det er udstyr og software. Selskabet driver ikke nettet.",
+          "ndi": "NDI har skrevet om mangel på transformere, køling og transmissionskapacitet (ugebrev 10. august 2026). Køling hører med i flaskehalsen. Selskaber, der alene laver ventilation, står ikke på dette led. Tantalus er software og udstyr til distributionsnet. Selskabet driver ikke nettet.",
           "themes": [
             "energy",
             "physical"
           ],
-          "weightSum": 1.39,
-          "count": 5,
+          "weightSum": 1.55,
+          "count": 6,
           "companies": [
             {
               "isin": "US83418M1036",
@@ -1364,6 +1436,14 @@
               "sym": "MYRG",
               "forslag": true,
               "role": "Bygger transmission, industri og vedvarende energi. Ejer ikke strømmen."
+            },
+            {
+              "isin": "CA87601F1062",
+              "name": "Tantalus Systems",
+              "w": 0.16,
+              "sym": "GRID.TO",
+              "forslag": true,
+              "role": "Platform til distributionsnet. Kontorer i Raleigh, Norwalk og Burnaby. Driver ikke nettet."
             }
           ],
           "seeChain": null
@@ -1372,15 +1452,15 @@
           "id": "storage",
           "icon": "🔋",
           "label": "Energilagring og batterier",
-          "blurb": "Batterier og andre lagre, der kan gemme strøm og aflevere den senere. Lithium til batterierne står under råstoffer. QuantumScape er et batteridesign til køretøjer og nævner også QS PowerBlock til datacentre. Det er ikke masseproduktion og ikke et lager i drift. Fluence leverer batterisystemer og software til nettet og nævner platformen Smartstack. Det er ikke et kraftværk, og teksten siger ikke, at selskabet selv laver cellerne. Eos skriver, at fremstilling af Z3 begyndte i august 2023 på Eos Ingenuity Park i Turtle Creek i Pennsylvania. Det er batterier, ikke en mine og ikke et kraftværk.",
-          "ndi": "NDI nævner batterier som del af energiflaskehalsen (ugebrev 30. marts 2026). Tesla er med, fordi koncernen også laver batterilagring.",
+          "blurb": "Batterier og andre lagre, der kan gemme strøm og aflevere den senere. Lithium til batterierne står under råstoffer. QuantumScape er et batteridesign til køretøjer og nævner også QS PowerBlock til datacentre. Det er ikke masseproduktion og ikke et lager i drift. Fluence leverer batterisystemer og software til nettet og nævner platformen Smartstack. Det er ikke et kraftværk, og teksten siger ikke, at selskabet selv laver cellerne. Eos skriver, at fremstilling af Z3 begyndte i august 2023 på Eos Ingenuity Park i Turtle Creek i Pennsylvania. Det er batterier, ikke en mine og ikke et kraftværk. Solid Power skriver, at det udvikler faststofbatterier og leverer sulfid-elektrolyt og celleteknologi til partnere. Elektrolytsiden skriver, at elektrolytten laves i pilotskala, og at store celler testes på en linje, selskabet kalder skalerbar. Det er ikke masseproduktion. Hovedkontoret ligger på 486 S. Pierce Ave. i Louisville i Colorado. Siden nævner også 14902 Grant Street i Thornton i Colorado. Ordene leading, most advanced og only er ikke taget med. Det er ikke et lager i drift. Amprius skriver, at det laver battericeller med siliciumanode. Adressen er 1180 Page Ave i Fremont i Californien. Siden skriver, at selskabet er stiftet i 2008, at fremstilling i kWh-skala begyndte i 2016, og at salg begyndte i 2018. I 2024 satte siden en udvidelse i MWh-skala i gang og nævner GWh-skala som kontraktproduktion hos partnere. Produktionssiden har et afsnit, der hedder Fremont Pilot Production. Pilotlinjen er ikke det samme som partnernes linjer. Det er ikke et lager i drift. Electrovaya skriver, at fabrikken i Jamestown i New York er 137.000 kvadratfod, og at hovedkontoret i Mississauga i Ontario er 65.000 kvadratfod og samler lavspændingssystemer. Faststof står under Electrovaya Labs og er udvikling, ikke den samme tekst som fabrikken. Et beløb for kapacitet er ikke taget med. Det er ikke et lager i drift. Canadian Solar skriver, at datterselskabet e-STORAGE pr. 30. juni 2026 havde sendt over 23 GWh batterilagring. Datoen ligger efter beholdningen pr. 1. juni 2026. Tallet er en samlet leverance, ikke et enkelt år. Et beløb for ordrebeholdning er ikke taget med. Det er systemer, ikke et lager, selskabet selv driver. SES AI skriver, at selskabet er stiftet i 2012, og at hovedkontoret ligger på 35 Cabot Road i Woburn i Massachusetts. Anlægget i Jiading i Shanghai blev færdigt i 2023 og er sat til 300.000 kvadratfod. Siden kalder det pilotskala for litium-metal-celler og materialer. Adressen er 1699 Fuhai Road. Chungju i Sydkorea er det nyeste anlæg og er skrevet som et supplement i produktionen af celler på 50 Ah og 100 Ah. Teksten siger ikke, at det er et målt år. Ordene largest og most advanced er ikke taget med. Det er ikke et lager i drift. Enovix skriver, at selskabet er stiftet i Silicon Valley i 2007, og at det blev noteret på NASDAQ i 2021 under ENVX. De første kommercielle forsendelser til bærbart udstyr er sat til 2022. Routejade i Sydkorea blev købt i 2023. Fab2 i Malaysia åbnede i 2024. Siden kalder det et anlæg med høj volumen, og linjerne er tegnet til at kunne skaleres. Det er ikke et målt år. USA er hovedkontor og udvikling, ikke fabrikken. Punkterne for 2026 har kun årstal. Teksten siger ikke, at de ligger før beholdningen. En fordobling i 2027 er en plan. Sunrun skriver, at der er installeret 4,6 GWh tilknyttet lagerkapacitet pr. 30. juni 2026. Datoen ligger efter beholdningen pr. 1. juni 2026. Siden kalder det batterier hos kunderne, koblet sammen. Beløb fra kvartalet er ikke taget med. Det er ikke et kraftværk.",
+          "ndi": "NDI nævner batterier som del af energiflaskehalsen (ugebrev 30. marts 2026). Tesla er med, fordi koncernen også laver batterilagring. Solid Power er elektrolyt i pilotskala, ikke masseproduktion. Amprius har en pilotlinje i Fremont. GWh-skala på siden er kontraktproduktion hos partnere, ikke et målt år. Electrovaya: Jamestown er fabrikken. Faststof i Mississauga er et laboratorium. Canadian Solar står også her via e-STORAGE. Over 23 GWh er dateret 30. juni 2026, efter beholdningen, og er ikke et enkelt år. SES AI laver litium-metal-celler. Shanghai er pilotskala. Chungju er ikke skrevet som et målt år. Enovix laver celler med siliciumanode i Sydkorea og i Malaysia. USA er udvikling. Det er ikke et lager i drift. Sunrun står også her. 4,6 GWh er pr. 30. juni 2026, efter beholdningen, og er batterier hos kunderne.",
           "themes": [
             "energy",
             "physical",
             "andet"
           ],
-          "weightSum": 1.95,
-          "count": 4,
+          "weightSum": 2.86,
+          "count": 11,
           "companies": [
             {
               "isin": "US34379V1035",
@@ -1399,6 +1479,22 @@
               "role": "Batterilagring ved siden af biler og software"
             },
             {
+              "isin": "US03214Q1085",
+              "name": "Amprius Technologies",
+              "w": 0.21,
+              "sym": "AMPX",
+              "forslag": true,
+              "role": "Celler med siliciumanode. Pilotlinje i Fremont. GWh-skala er kontraktproduktion hos partnere."
+            },
+            {
+              "isin": "US83422N1054",
+              "name": "Solid Power",
+              "w": 0.21,
+              "sym": "SLDP",
+              "forslag": true,
+              "role": "Sulfid-elektrolyt i pilotskala. Store celler testes. Ikke masseproduktion og ikke et lager i drift."
+            },
+            {
               "isin": "US74767V1098",
               "name": "QuantumScape",
               "w": 0.2,
@@ -1413,6 +1509,46 @@
               "sym": "EOSE",
               "forslag": true,
               "role": "Z3 fremstilles i Turtle Creek siden august 2023. Ikke en mine og ikke et kraftværk."
+            },
+            {
+              "isin": "CA28617B6061",
+              "name": "Electrovaya",
+              "w": 0.05,
+              "sym": "ELVA",
+              "forslag": true,
+              "role": "Fabrik i Jamestown. Lavspænding samles i Mississauga. Faststof er et laboratorium, ikke fabrikken."
+            },
+            {
+              "isin": "CA1366351098",
+              "name": "Canadian Solar",
+              "w": 0.19,
+              "sym": "CSIQ",
+              "forslag": true,
+              "role": "e-STORAGE: over 23 GWh pr. 30. juni 2026. Efter beholdningen. Ikke et enkelt år."
+            },
+            {
+              "isin": "US78397Q1094",
+              "name": "SES AI",
+              "w": 0.1,
+              "sym": "SES",
+              "forslag": true,
+              "role": "Litium-metal-celler. Shanghai er pilotskala fra 2023. Chungju er et supplement. Ikke et lager i drift."
+            },
+            {
+              "isin": "US2935941078",
+              "name": "Enovix",
+              "w": 0.05,
+              "sym": "ENVX",
+              "forslag": true,
+              "role": "Siliciumanoder. Sydkorea og Fab2 i Malaysia. 2026-punkterne er kun årstal. Ikke et lager i drift."
+            },
+            {
+              "isin": "US86771W1053",
+              "name": "Sunrun",
+              "w": 0.1,
+              "sym": "RUN",
+              "forslag": true,
+              "role": "Batterier hos kunderne. 4,6 GWh er pr. 30. juni 2026, efter beholdningen. Ikke et kraftværk."
             }
           ],
           "seeChain": null
@@ -1421,13 +1557,13 @@
           "id": "materials",
           "icon": "🪨",
           "label": "Kritiske råstoffer",
-          "blurb": "Kobber, lithium, sjældne jordarter, uran, antimon og wolfram indgår i chips, elnet, batterier og reaktorer. Gasproducenter står under elproduktion. Lynas skriver, at Mt Weld ligger 35 km syd for Laverton, og at anlægget i Kalgoorlie laver et blandet karbonat af koncentratet. Selskabet skriver, at karbonatet skal viderebehandles i Gebeng i Malaysia. Det er mine og forarbejdning, ikke et kraftværk. Almonty skriver, at Beralt ejer 100 % af wolframminen Panasqueira i Covilha i Portugal, med tilladelse til 2052. Level 4 er ikke skrevet som drift. MP Materials skriver, at minen og forarbejdningen ligger i Mountain Pass i Californien, og at magnetfabrikken ligger i Fort Worth i Texas. Om-siden skriver, at Mountain Pass blev genstartet i 2017. Det er ikke et chipværk. Freeport skriver, at Morenci i Arizona er et åbent brud i drift siden 1939, og at selskabet har 72 % af minen. Det er ikke et elselskab. Standard Lithium skriver, at fase 1 i South West Arkansas er sat til 22.500 ton lithiumkarbonat om året, med mål om kommerciel produktion i 2029. Selskabet har 55 %, og Equinor har 45 %. Det er et mål, ikke en stor mine. Northern Dynasty skrev 26. juni 2026, at mundtlige indlæg om at trække et veto fra EPA tilbage blev holdt 25. juni 2026. Det er efter beholdningen. Der er ingen afgørelse og ingen mine i drift. Centrus skriver, at berigning begyndte i slutningen af 2023 på American Centrifuge Plant i Piketon i Ohio. Det er før beholdningen. Aftalen med Antares af 17. september 2026 ligger efter beholdningen og er ikke en levering, der allerede er sket. Det er brændsel, ikke et kraftværk. The Metals Company skriver, at prøvekørsel ventes at begynde i fjerde kvartal 2027. Aftalen og ansøgningen er ikke produktion. Ivanhoe Electric skriver, at Santa Cruz i Arizona og Tintic i Utah er projekter. Et studie dateret 23. september 2026 ligger efter beholdningen pr. 1. juni 2026 og er ikke en mine i drift. USA Rare Earth daterer 4. september 2026 en overskrift om Serra Verde Group. Den ligger efter beholdningen, og Texas er ikke beskrevet som en mine i drift. Critical Metals skrev 5. oktober 2026, at Grønland har godkendt planer for Tanbreez. Driftstilladelser mangler før byggeri, og meddelelsen er efter beholdningen. Ero skriver, at Xavantina er en guldmine i Mato Grosso. Siden skriver, at Vale Base Metals ejer Furnas, og at Ero har en ret til at optjene en andel. Det er ikke en mine i drift. United States Antimony skriver, at zeolit kommer fra minen i Preston i Idaho. Det første gravearbejde i Alaska er ikke skrevet som en mine i drift. Southern Copper skriver, at Tía María i Arequipa er et kobberprojekt. Tilladelser til byggeri er ikke en mine i drift. Trilogy skrev 21. september 2026, at et varsel om miljøredegørelse for Arctic i Alaska er udsendt. Det er efter beholdningen. Det er ikke en tilladelse og ikke en mine i drift. Taseko skriver, at Gibraltar i British Columbia kan behandle 85.000 tons i døgnet. Florence lavede det første kobber i februar 2026. Meldingen om kommerciel produktion er fra 9. oktober 2026 og ligger efter beholdningen. Capstone skriver, at produktionen i 2025 var 225.000 ton kobber. Mantoverde i Chile er sat til 32.000 ton malm i døgnet. Santo Domingo er et projekt, ikke en mine. Sigma Lithium skriver, at Grota do Cirilo i Minas Gerais er sat til 270.000 ton lithiumkoncentrat om året. Fase 1 gik i drift i 2023. Fase 2 er ikke produktion. Energy Fuels skrev 29. juli 2026, at White Mesa Mill i Utah kan lave op til 1.000 ton NdPr-oxid om året, og at et byggeri til tunge sjældne jordarter er gået i gang. Meddelelsen ligger efter beholdningen. Det er ikke et kraftværk. Albemarle skriver, at Silver Peak i Nevada og Salar de Atacama i Chile er i drift. Silver Peak laver lithiumkarbonat og lithiumhydroxid af saltvand i solbassiner. Siden skriver, at produktionen begyndte for mere end 50 år siden, og daterer ikke tallet. Kings Mountain i North Carolina står på en liste over aktiviteter, men anlægssiden skriver, at minen stod stille fra begyndelsen af 1990'erne, og at selskabet søger at genåbne den. Det er ikke en mine i drift. Lithiumsiden nævner også Greenbushes og Wodgina i Western Australia. En ejerandel er ikke læst. Direkte udvinding i Chile er beskrevet som et arbejde, der er i gang, ikke som drift. Selskabet skriver også, at det laver brom.",
-          "ndi": "NDI regner råstoffer med i teknologien, og en råstofanalyse skal også tage geopolitik med (ugebreve 1. september 2025 og 21. september 2026). Flere navne er projekter uden minedrift. Andre driver miner, blandt andet Mountain Pass og Gibraltar. Northern Dynasty skrev 26. juni 2026, at mundtlige indlæg om at trække et veto fra EPA tilbage blev holdt 25. juni 2026. Det er efter beholdningen. Der er ingen afgørelse og ingen mine. Lithium Americas skriver, at Thacker Pass bygges, med mål om industriel skala sent i 2027, og at byggeriet begyndte i begyndelsen af 2023. Centret i Reno er et laboratorium, ikke minen. Ingen af de to er i fuld drift. Standard Lithium skriver, at fase 1 i South West Arkansas er et mål på 22.500 ton om året i 2029, og at et demonstrationsanlæg ved El Dorado behandler saltvand. Det er ikke en stor mine. Almonty skrev 23. september 2026, at Sangdong i Sydkorea har produceret wolfram for første gang siden 1993. Valtreixal er et projekt. Meddelelsen ligger efter beholdningen pr. 1. juni 2026. Taseko skriver, at Gibraltar i British Columbia er en kobber- og molybdænmine med en kapacitet på 85.000 tons i døgnet. Florence lavede det første kobber i februar 2026. Selskabet skrev 9. oktober 2026, at produktionen er kommerciel. Den meddelelse ligger efter beholdningen. Yellowhead, Aley og New Prosperity er ikke miner i drift i denne tekst. Capstone skriver, at produktionen i 2025 var 225.000 ton kobber. Mantoverde havde kommerciel produktion på sulfidmøllen i september 2024. Santo Domingo er et projekt. Selskabet skrev 21. september 2026, at det har en aftale om at sælge Cozamin. Den meddelelse ligger efter beholdningen. Sigma Lithium skriver, at navneskiltet på Grota do Cirilo er 270.000 ton koncentrat om året, og at fase 1 gik i drift i 2023. Fase 2 er et mål på 520.000 ton og er ikke produktion. Energy Fuels skrev 29. juli 2026, at White Mesa i Utah har kapacitet til op til 1.000 ton NdPr-oxid om året. Byggeriet til terbium og dysprosium er ikke drift. Meddelelsen ligger efter beholdningen. Profilen siger, hvad der er drift, og hvad der er projekt. Albemarle skriver, at Silver Peak i Nevada og Salar de Atacama i Chile er i drift. Kings Mountain er ikke en mine i drift. Greenbushes og Wodgina er nævnt under aktiviteter, og en ejerandel er ikke læst.",
+          "blurb": "Kobber, lithium, sjældne jordarter, uran, antimon og wolfram indgår i chips, elnet, batterier og reaktorer. Gasproducenter står under elproduktion. Lynas skriver, at Mt Weld ligger 35 km syd for Laverton, og at anlægget i Kalgoorlie laver et blandet karbonat af koncentratet. Selskabet skriver, at karbonatet skal viderebehandles i Gebeng i Malaysia. Det er mine og forarbejdning, ikke et kraftværk. Almonty skriver, at Beralt ejer 100 % af wolframminen Panasqueira i Covilha i Portugal, med tilladelse til 2052. Level 4 er ikke skrevet som drift. MP Materials skriver, at minen og forarbejdningen ligger i Mountain Pass i Californien, og at magnetfabrikken ligger i Fort Worth i Texas. Om-siden skriver, at Mountain Pass blev genstartet i 2017. Det er ikke et chipværk. Freeport skriver, at Morenci i Arizona er et åbent brud i drift siden 1939, og at selskabet har 72 % af minen. Det er ikke et elselskab. Standard Lithium skriver, at fase 1 i South West Arkansas er sat til 22.500 ton lithiumkarbonat om året, med mål om kommerciel produktion i 2029. Selskabet har 55 %, og Equinor har 45 %. Det er et mål, ikke en stor mine. Northern Dynasty skrev 26. juni 2026, at mundtlige indlæg om at trække et veto fra EPA tilbage blev holdt 25. juni 2026. Det er efter beholdningen. Der er ingen afgørelse og ingen mine i drift. Centrus skriver, at berigning begyndte i slutningen af 2023 på American Centrifuge Plant i Piketon i Ohio. Det er før beholdningen. Aftalen med Antares af 17. september 2026 ligger efter beholdningen og er ikke en levering, der allerede er sket. Det er brændsel, ikke et kraftværk. The Metals Company skriver, at prøvekørsel ventes at begynde i fjerde kvartal 2027. Aftalen og ansøgningen er ikke produktion. Ivanhoe Electric skriver, at Santa Cruz i Arizona og Tintic i Utah er projekter. Et studie dateret 23. september 2026 ligger efter beholdningen pr. 1. juni 2026 og er ikke en mine i drift. USA Rare Earth daterer 4. september 2026 en overskrift om Serra Verde Group. Den ligger efter beholdningen, og Texas er ikke beskrevet som en mine i drift. Critical Metals skrev 5. oktober 2026, at Grønland har godkendt planer for Tanbreez. Driftstilladelser mangler før byggeri, og meddelelsen er efter beholdningen. Ero skriver, at Xavantina er en guldmine i Mato Grosso. Siden skriver, at Vale Base Metals ejer Furnas, og at Ero har en ret til at optjene en andel. Det er ikke en mine i drift. United States Antimony skriver, at zeolit kommer fra minen i Preston i Idaho. Det første gravearbejde i Alaska er ikke skrevet som en mine i drift. Southern Copper skriver, at Tía María i Arequipa er et kobberprojekt. Tilladelser til byggeri er ikke en mine i drift. Trilogy skrev 21. september 2026, at et varsel om miljøredegørelse for Arctic i Alaska er udsendt. Det er efter beholdningen. Det er ikke en tilladelse og ikke en mine i drift. Taseko skriver, at Gibraltar i British Columbia kan behandle 85.000 tons i døgnet. Florence lavede det første kobber i februar 2026. Meldingen om kommerciel produktion er fra 9. oktober 2026 og ligger efter beholdningen. Capstone skriver, at produktionen i 2025 var 225.000 ton kobber. Mantoverde i Chile er sat til 32.000 ton malm i døgnet. Santo Domingo er et projekt, ikke en mine. Sigma Lithium skriver, at Grota do Cirilo i Minas Gerais er sat til 270.000 ton lithiumkoncentrat om året. Fase 1 gik i drift i 2023. Fase 2 er ikke produktion. Energy Fuels skrev 29. juli 2026, at White Mesa Mill i Utah kan lave op til 1.000 ton NdPr-oxid om året, og at et byggeri til tunge sjældne jordarter er gået i gang. Meddelelsen ligger efter beholdningen. Det er ikke et kraftværk. Albemarle skriver, at Silver Peak i Nevada og Salar de Atacama i Chile er i drift. Silver Peak laver lithiumkarbonat og lithiumhydroxid af saltvand i solbassiner. Siden skriver, at produktionen begyndte for mere end 50 år siden, og daterer ikke tallet. Kings Mountain i North Carolina står på en liste over aktiviteter, men anlægssiden skriver, at minen stod stille fra begyndelsen af 1990'erne, og at selskabet søger at genåbne den. Det er ikke en mine i drift. Lithiumsiden nævner også Greenbushes og Wodgina i Western Australia. En ejerandel er ikke læst. Direkte udvinding i Chile er beskrevet som et arbejde, der er i gang, ikke som drift. Selskabet skriver også, at det laver brom. Neo skriver, at Magnequench laver bundne pulvere og magneter af neodym, jern og bor, med anlæg i Tianjin og Chuzhou i Kina og i Korat i Thailand. Selskabet skrev 14. september 2026, at magnetfabrikken i Estland er i kommerciel produktion og har sendt de første mængder til en kunde, der laver trækmotorer. Datoen ligger efter beholdningen. Fase 1A er sat til cirka 2.000 ton om året. Det er et navneskilt, ikke et målt år. Fase 1B til cirka 5.000 ton er under projektering. Selskabet skrev 13. oktober 2026, at EU har udpeget moderniseringen Silmet 2.0 af separationsanlægget i Sillamäe som et strategisk projekt. Det er efter beholdningen og ikke en gennemført udvidelse. Det er ikke en mine. ASP Isotopes skriver, at selskabet er stiftet i 2021, og at rødderne går tilbage til et berigningsprogram i Sydafrika i 1980'erne. Det er noteret på NASDAQ under ASPI. Den ene del beriger stabile isotoper til medicin og halvledere. PET Labs i Sydafrika er nuklearmedicin. Selskabet købte 51 % i november 2023. Quantum Leap Energy er skrevet som udvikling og produktion af fremtidige brændsler, herunder HALEU og lithium-6 og lithium-7. Teksten siger ikke, at et anlæg er i drift. Det er ikke et kraftværk og ikke en mine.",
+          "ndi": "NDI regner råstoffer med i teknologien, og en råstofanalyse skal også tage geopolitik med (ugebreve 1. september 2025 og 21. september 2026). Flere navne er projekter uden minedrift. Andre driver miner, blandt andet Mountain Pass og Gibraltar. Northern Dynasty skrev 26. juni 2026, at mundtlige indlæg om at trække et veto fra EPA tilbage blev holdt 25. juni 2026. Det er efter beholdningen. Der er ingen afgørelse og ingen mine. Lithium Americas skriver, at Thacker Pass bygges, med mål om industriel skala sent i 2027, og at byggeriet begyndte i begyndelsen af 2023. Centret i Reno er et laboratorium, ikke minen. Ingen af de to er i fuld drift. Standard Lithium skriver, at fase 1 i South West Arkansas er et mål på 22.500 ton om året i 2029, og at et demonstrationsanlæg ved El Dorado behandler saltvand. Det er ikke en stor mine. Almonty skrev 23. september 2026, at Sangdong i Sydkorea har produceret wolfram for første gang siden 1993. Valtreixal er et projekt. Meddelelsen ligger efter beholdningen pr. 1. juni 2026. Taseko skriver, at Gibraltar i British Columbia er en kobber- og molybdænmine med en kapacitet på 85.000 tons i døgnet. Florence lavede det første kobber i februar 2026. Selskabet skrev 9. oktober 2026, at produktionen er kommerciel. Den meddelelse ligger efter beholdningen. Yellowhead, Aley og New Prosperity er ikke miner i drift i denne tekst. Capstone skriver, at produktionen i 2025 var 225.000 ton kobber. Mantoverde havde kommerciel produktion på sulfidmøllen i september 2024. Santo Domingo er et projekt. Selskabet skrev 21. september 2026, at det har en aftale om at sælge Cozamin. Den meddelelse ligger efter beholdningen. Sigma Lithium skriver, at navneskiltet på Grota do Cirilo er 270.000 ton koncentrat om året, og at fase 1 gik i drift i 2023. Fase 2 er et mål på 520.000 ton og er ikke produktion. Energy Fuels skrev 29. juli 2026, at White Mesa i Utah har kapacitet til op til 1.000 ton NdPr-oxid om året. Byggeriet til terbium og dysprosium er ikke drift. Meddelelsen ligger efter beholdningen. Profilen siger, hvad der er drift, og hvad der er projekt. Albemarle skriver, at Silver Peak i Nevada og Salar de Atacama i Chile er i drift. Kings Mountain er ikke en mine i drift. Greenbushes og Wodgina er nævnt under aktiviteter, og en ejerandel er ikke læst. Neo skrev 14. september 2026, at magnetfabrikken i Estland er i kommerciel produktion. Det er efter beholdningen. Silmet 2.0 i Sillamäe er en udpegning, ikke en gennemført udvidelse. Det er ikke en mine. ASP Isotopes beriger isotoper. HALEU er skrevet som fremtidigt brændsel, ikke som et værk i drift.",
           "themes": [
             "energy-resources"
           ],
-          "weightSum": 4.05,
-          "count": 22,
+          "weightSum": 4.3,
+          "count": 24,
           "companies": [
             {
               "isin": "US9115491030",
@@ -1518,6 +1654,14 @@
               "role": "White Mesa i Utah: op til 1.000 ton NdPr om året. Byggeriet er efter beholdningen. Ikke et kraftværk."
             },
             {
+              "isin": "CA64046G1063",
+              "name": "Neo Performance Materials",
+              "w": 0.17,
+              "sym": "NEO.TO",
+              "forslag": true,
+              "role": "Magneter og sjældne jordarter. Estland er meldt i kommerciel produktion 14. september 2026, efter beholdningen. Ikke en mine."
+            },
+            {
               "isin": "CA0203987072",
               "name": "Almonty Industries",
               "w": 0.15,
@@ -1604,6 +1748,14 @@
               "sym": "ERO",
               "forslag": false,
               "role": "Kobber i Bahia og Pará. Guldmine i Mato Grosso. Furnas ejes af Vale og er ikke i drift."
+            },
+            {
+              "isin": "US00218A1051",
+              "name": "ASP Isotopes",
+              "w": 0.08,
+              "sym": "ASPI",
+              "forslag": true,
+              "role": "Berigning af isotoper. HALEU er skrevet som fremtidigt brændsel. Ikke et værk i drift."
             }
           ],
           "seeChain": null

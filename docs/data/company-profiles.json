@@ -1242,6 +1242,242 @@
     }
    ]
   },
+  "US3364331070": {
+   "name": "First Solar",
+   "theme": "energy",
+   "summary": "Laver tyndfilmsmoduler af cadmiumtellurid, i serierne 6 og 7. Fabrikker står i Ohio, Alabama, Louisiana, Indien, Malaysia og Vietnam. Fem fabrikker i USA er anslået til mere end 17 GW, når de er i fuld drift. Tallet er ikke årets produktion. Det er moduler, ikke et kraftværk.",
+   "watch": "Om de fem amerikanske fabrikker når det anslåede tal. Mere end 17 GW er ikke årets produktion.",
+   "source": "https://www.firstsolar.com/Technology/Manufacturing",
+   "products": "Solcellemoduler i serie 6 og 7. Også genbrug af moduler. Ikke et kraftværk.",
+   "customers": "Kunder til store solanlæg og til mindre anlæg. Teksten nævner ikke en navngiven leverance.",
+   "role": "Moduler. Ikke et elselskab.",
+   "narrative": [
+    "First Solar skriver, at modulerne er tyndfilm af cadmiumtellurid, i serierne 6 og 7. Siden om fabrikker nævner Perrysburg og Walbridge i Ohio, Trinity i Alabama og New Iberia i Louisiana. Den nævner også Sriperumbudur i Tamil Nadu, Kulim i Malaysia og Cu Chi i Ho Chi Minh City. Hovedsædet ligger på 4300 E Camelback Road i Phoenix i Arizona. En genbrugsenhed er nævnt i Frankfurt (Oder).",
+    "Produktionssiden skriver, at selskabet er grundlagt i Ohio, og at fem fabrikker i USA tilsammen er anslået til mere end 17 GW, når de er i fuld drift. Tallet er ikke årets produktion. Beløb, arbejdspladser og ordene leading og largest er ikke taget med. Det er moduler, ikke et kraftværk."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Fabrikker",
+     "url": "https://www.firstsolar.com/About-Us/Locations"
+    },
+    {
+     "label": "Produktion",
+     "url": "https://www.firstsolar.com/Technology/Manufacturing"
+    }
+   ]
+  },
+  "US65290E1010": {
+   "name": "Nextracker",
+   "theme": "energy",
+   "summary": "Laver soltrackere, effektelektronik og styringssoftware til store solparker. Beholdningen pr. 1. juni 2026 står under navnet Nextracker. Investorkontoret, læst 16. oktober 2026, skriver, at selskabet nu hedder Nextpower. Siden daterer ikke navneskiftet. Hovedkontoret ligger i Fremont i Californien. Det er udstyr, ikke et kraftværk.",
+   "watch": "Om siden senere daterer navneskiftet fra Nextracker til Nextpower. Denne tekst har ikke den dato.",
+   "source": "https://investors.nextpower.com/",
+   "products": "Soltrackere, effektelektronik og styringssoftware. Ikke et kraftværk.",
+   "customers": "Teksten nævner ikke en navngiven solpark.",
+   "role": "Udstyr til store solparker. Ikke et elselskab.",
+   "narrative": [
+    "Nextracker står i beholdningen pr. 1. juni 2026 under det navn. Investorkontoret, læst 16. oktober 2026, skriver, at selskabet tidligere hed Nextracker, og at det nu hedder Nextpower. Siden daterer ikke navneskiftet. Hovedkontoret ligger på 6200 Paseo Padre Pkwy i Fremont i Californien. Ticker er NXT.",
+    "Samme side skriver, at selskabet laver soltrackere, effektelektronik og styringssoftware. Det er udstyr til store solparker, ikke et kraftværk. Omsætning og andre beløb på siden er ikke taget med."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Investorkontor",
+     "url": "https://investors.nextpower.com/"
+    }
+   ]
+  },
+  "US04271T1007": {
+   "name": "Array Technologies",
+   "theme": "energy",
+   "summary": "Laver stativer, der drejer solpaneler i store solparker, og softwaren SmarTrack. Produkterne omfatter DuraTrack, STI H250 og OmniTrack. Adressen er i Albuquerque i New Mexico. Selskabet skriver, at det købte STI Norland i januar 2022. Det er udstyr, ikke et kraftværk.",
+   "watch": "Hvad der er stativer i drift, og hvad der er software ovenpå. Købet af STI Norland er januar 2022, før beholdningen.",
+   "source": "https://arraytechinc.com/about-us/our-story/",
+   "products": "DuraTrack, STI H250, OmniTrack og SmarTrack. Ikke et kraftværk.",
+   "customers": "Kunder til store solparker. Teksten nævner ikke en navngiven park.",
+   "role": "Stativer. Ikke et elselskab.",
+   "narrative": [
+    "Array Technologies skriver, at det laver stativer til store solparker. Produkterne på siden er DuraTrack, STI H250 og OmniTrack. SmarTrack er en dataplatform til samme anlæg. Adressen er 701 Atrisco Vista Blvd i Albuquerque i New Mexico. Siden skriver, at selskabets historie er over 30 år, og at produktionen begyndte i USA.",
+    "Selskabet skriver, at det købte STI Norland i januar 2022. Siden siger, at der derefter var produktion, design og ingeniørarbejde på tre kontinenter. Ordene largest og leading er ikke taget med. Det er udstyr, ikke et kraftværk."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Historie",
+     "url": "https://arraytechinc.com/about-us/our-story/"
+    },
+    {
+     "label": "DuraTrack",
+     "url": "https://arraytechinc.com/products/duratrack/"
+    }
+   ]
+  },
+  "CA0585861085": {
+   "name": "Ballard Power Systems",
+   "theme": "energy",
+   "summary": "Laver brændselsceller. Hovedkontoret ligger i Burnaby i Canada, og der er fabrik i Bend i Oregon. FCmove er moduler til køretøjer. FCwave er et skab til skibe og stationær brug. FCgen er stakke. GeoPura HPU er en generator på brint. Over 1,6 GW er en kapacitet, ikke et målt år. Det er ikke et kraftværk.",
+   "watch": "Om 1,6 GW er kapacitet eller et målt år. Siden skriver, at anlæggene kan lave den mængde. Den skriver ikke et års produktion.",
+   "source": "https://www.ballard.com/our-company/",
+   "products": "FCmove, FCwave, FCgen og GeoPura HPU. Ikke et kraftværk.",
+   "customers": "Siden nævner busser, lastbiler, skibe, tog og reservekraft. Den nævner ikke en navngiven kunde.",
+   "role": "Brændselsceller. Ikke et elselskab.",
+   "narrative": [
+    "Ballard skriver, at hovedkontoret ligger i Burnaby i Canada, og at anlæg i Nordamerika og Europa dækker over 22.000 m². Der er også fabrik i Bend i Oregon. Siden skriver, at anlæggene kan lave over 1,6 GW MEA og brændselscellestakke. Det er en kapacitet, ikke et målt år. Siden skriver også, at der til dato er leveret brændselscelleprodukter for 1,3 GW. Det er ikke et enkelt år. Priser på siden er ikke taget med.",
+    "FCmove er moduler til tunge køretøjer. FCwave er et skab til skibe og stationær brug. FCgen er PEM-stakke til køretøjer og stationær brug. GeoPura HPU er en generator på brint. Siden nævner busser, lastbiler, skibe, tog, kraftproduktion og materiel. Det er ikke et kraftværk."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabet",
+     "url": "https://www.ballard.com/our-company/"
+    },
+    {
+     "label": "Produkter",
+     "url": "https://www.ballard.com/"
+    }
+   ]
+  },
+  "US82489W1071": {
+   "name": "Shoals Technologies",
+   "theme": "energy",
+   "summary": "Tegner og fremstiller eludstyr, som samler strømmen i solparker, batterilagring og datacentre. Om-siden skriver, at det har stået på i 30 år. Adressen er 1500 Shoals Way i Portland i Tennessee. Det er udstyr, ikke et kraftværk.",
+   "watch": "Om udstyret står i solparker, i batterilagring eller ved datacentre. Selskabet driver ikke værkerne.",
+   "source": "https://www.shoals.com/en/about/",
+   "products": "Big Lead Assembly, samlebokse, afbrydere og kabelstyring. Også udstyr til batterilagring og datacentre. Ikke et kraftværk.",
+   "customers": "Teksten nævner ejere af solparker, udviklere og datacentre. Den nævner ikke et navngivet anlæg.",
+   "role": "Eludstyr. Ikke et elselskab.",
+   "narrative": [
+    "Shoals skriver, at selskabet tegner og fremstiller eludstyr til solparker, batterilagring og datacentre. Om-siden skriver, at det har stået på i 30 år. Adressen er 1500 Shoals Way i Portland i Tennessee. Telefonen på siden er 615.451.1400.",
+    "Produkterne på siden er Big Lead Assembly, homeruns, samlebokse, afbrydere, overgangskasser og kabelstyring. Siden skriver, at komponenterne testes på fabrikken. Det er udstyr. Selskabet driver ikke solparken, lageret eller datacentret."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Om selskabet",
+     "url": "https://www.shoals.com/en/about/"
+    },
+    {
+     "label": "Kontakt",
+     "url": "https://shoals.com/en/contact-us/"
+    }
+   ]
+  },
+  "US83422N1054": {
+   "name": "Solid Power",
+   "theme": "energy",
+   "summary": "Udvikler faststofbatterier. Selskabet skriver, at det leverer celleteknologi til partnere og sulfid-elektrolyt til andre, der arbejder med faststof. Elektrolytten laves i pilotskala. Det er ikke masseproduktion og ikke et lager i drift.",
+   "watch": "Om pilotskala bliver til en leverance i volumen. Siden, læst 16. oktober 2026, kalder produktionen pilotskala.",
+   "source": "https://www.solidpowerbattery.com/sulfide-solid-electrolytes/default.aspx",
+   "products": "Sulfid-elektrolyt og celleteknologi til faststofbatterier. Ikke et lager i drift.",
+   "customers": "Siden skriver partnere. Den nævner ikke et navngivet bilmærke.",
+   "role": "Faststof under udvikling. Ikke masseproduktion.",
+   "narrative": [
+    "Solid Power skriver, at det udvikler faststofbatterier, og at forretningen har to spor: celleteknologi til partnere og sulfid-elektrolyt til andre, der arbejder med faststof. Hovedkontoret ligger på 486 S. Pierce Ave., Suite E, i Louisville i Colorado. Siden nævner også 14902 Grant Street, Unit 120-140, i Thornton i Colorado. Ordene industry-leading og lower costs er ikke taget med.",
+    "Elektrolytsiden skriver, at den faste elektrolyt erstatter den flydende elektrolyt og separatoren i et lithium-ion-batteri. Samme side skriver, at elektrolytten laves i pilotskala, og at store celler testes på en linje, selskabet kalder skalerbar. Det er ikke masseproduktion. Ordene most advanced og only er ikke taget med. Det er ikke et lager i drift."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabet",
+     "url": "https://www.solidpowerbattery.com/about/company-profile/default.aspx"
+    },
+    {
+     "label": "Elektrolyt",
+     "url": "https://www.solidpowerbattery.com/sulfide-solid-electrolytes/default.aspx"
+    }
+   ]
+  },
+  "US03214Q1085": {
+   "name": "Amprius Technologies",
+   "theme": "energy",
+   "summary": "Laver battericeller med siliciumanode. Adressen er 1180 Page Ave i Fremont i Californien. Siden skriver, at fremstilling i kWh-skala begyndte i 2016, og at salg begyndte i 2018. I 2024 nævner siden en udvidelse i MWh-skala og GWh-skala som kontraktproduktion hos partnere. Pilotlinjen er ikke partnernes linjer.",
+   "watch": "Hvad der laves på pilotlinjen i Fremont, og hvad partnere laver. GWh-skala på siden er ikke et målt år.",
+   "source": "https://amprius.com/about/",
+   "products": "Battericeller med siliciumanode. Ikke et lager i drift.",
+   "customers": "Siden nævner luftfart, robotter og elbiler. Den nævner ikke en navngiven leverance i denne tekst.",
+   "role": "Celler. Pilotlinje og kontraktproduktion er ikke det samme.",
+   "narrative": [
+    "Amprius skriver, at adressen er 1180 Page Ave i Fremont i Californien. Siden skriver, at selskabet er stiftet i 2008, at designet af siliciumanoden var færdigt i 2014, at fremstilling i kWh-skala begyndte i 2016, og at salg begyndte i 2018. Børsnoteringen på NYSE er skrevet som 2022.",
+    "Samme side skriver, at en udvidelse i MWh-skala blev sat i gang i 2024, og at GWh-skala er kontraktproduktion hos partnere. Produktionssiden har et afsnit, der hedder Fremont Pilot Production, ved siden af et afsnit om partnere. Pilotlinjen er ikke det samme som partnernes linjer. Ordene highest og state-of-the-art er ikke taget med. Det er ikke et lager i drift."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Om selskabet",
+     "url": "https://amprius.com/about/"
+    },
+    {
+     "label": "Produktion",
+     "url": "https://amprius.com/manufacturing/"
+    }
+   ]
+  },
+  "CA87601F1062": {
+   "name": "Tantalus Systems",
+   "theme": "energy",
+   "summary": "Laver en platform til distributionsnet hos elselskaber. Produkterne på siden er TRUConnect, TRUFlex, TRUGrid, TRUSync og TRUSense. Kontorer står i Raleigh, Norwalk og Burnaby. Selskabet driver ikke nettet.",
+   "watch": "Om platformen sidder hos elselskaberne, eller om selskabet selv driver nettet. Siden siger, at kunderne er elselskaber.",
+   "source": "https://tantalus.com/offices/",
+   "products": "TRUConnect, TRUFlex, TRUGrid, TRUSync og TRUSense. Ikke et kraftværk.",
+   "customers": "Elselskaber. Teksten nævner ikke et navngivet selskab.",
+   "role": "Udstyr og software til nettet. Driver ikke nettet.",
+   "narrative": [
+    "Tantalus skriver, at selskabet hjælper elselskaber med at modernisere distributionsnettet med data fra apparater på nettet. Produkterne på siden er TRUConnect AMI, TRUFlex, TRUGrid Automation, TRUSync og TRUSense Gateway. Det er udstyr og software. Selskabet driver ikke nettet.",
+    "Kontorsiden skriver tre adresser. I USA: 1130 Situs Court, Suite 230, i Raleigh i North Carolina, og 140 Rowayton Avenue i Norwalk i Connecticut. I Canada: 3555 Gilmore Way, Suite 200, i Burnaby i British Columbia. En overskrift om omsætning den 5. august 2026 er ikke taget med."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Kontorer",
+     "url": "https://tantalus.com/offices/"
+    },
+    {
+     "label": "Forside",
+     "url": "https://tantalus.com/"
+    }
+   ]
+  },
+  "CA28617B6061": {
+   "name": "Electrovaya",
+   "theme": "energy",
+   "summary": "Laver lithium-ion-batterisystemer. Siden sætter fabrikken i Jamestown i New York til 137.000 kvadratfod og hovedkontoret i Mississauga i Ontario til 65.000 kvadratfod. Mississauga samler lavspændingssystemer. Faststof ligger i Electrovaya Labs og er udvikling, ikke fabrikken.",
+   "watch": "Hvad fabrikken i Jamestown leverer, og hvad laboratoriet i Mississauga stadig udvikler. Siden giver ikke et års tal for celler.",
+   "source": "https://electrovaya.com/our-facilities/",
+   "products": "Infinity-moduler til lav og høj spænding, batterilagring, udstyr i lufthavne og truckbatterier. Faststof er udvikling.",
+   "customers": "Siden nævner industrielle kunder til lavspændingssystemer. Den nævner ikke et navngivet selskab.",
+   "role": "Batterisystemer. Faststof er ikke fabrikken.",
+   "narrative": [
+    "Electrovaya skriver, at fabrikken i Jamestown i New York er 137.000 kvadratfod, og at den skal levere lithium-ion-celler fra USA. Siden kalder anlægget en gigafactory. Et beløb for kapacitet og ordene groundbreaking og low-cost er ikke taget med. Teksten giver ikke et års tal for celler.",
+    "Hovedkontoret i Mississauga i Ontario er sat til 65.000 kvadratfod. Siden skriver, at det er ingeniørarbejde og samling af lavspændingssystemer. Electrovaya Labs samme sted udvikler faststofbatterier og en coating uden opløsningsmiddel. Det er udvikling, ikke den samme tekst som fabrikken i Jamestown. Det er ikke et lager i drift."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Anlæg",
+     "url": "https://electrovaya.com/our-facilities/"
+    }
+   ]
+  },
+  "CA64046G1063": {
+   "name": "Neo Performance Materials",
+   "theme": "energy-resources",
+   "summary": "Laver magnetpulver og magneter af neodym, jern og bor og forarbejder sjældne jordarter. Magnequench har anlæg i Tianjin, Chuzhou og Korat. Selskabet skrev 14. september 2026, at magnetfabrikken i Estland er i kommerciel produktion. Datoen ligger efter beholdningen. Det er ikke en mine.",
+   "watch": "Om flere programmer i Estland kommer i produktion. Meldingen 14. september 2026 ligger efter beholdningen. Silmet 2.0 er ikke en gennemført udvidelse.",
+   "source": "https://www.neomaterials.com/neo-advances-commercial-production-magnet-facility/",
+   "products": "Bundne magnetpulvere og sintrede magneter. Separationsanlæg i Sillamäe. Ikke en mine.",
+   "customers": "En kunde, der laver trækmotorer, er nævnt i meddelelsen af 14. september 2026. Navnet står ikke i teksten.",
+   "role": "Magneter og sjældne jordarter. Ikke en mine.",
+   "narrative": [
+    "Neo skriver, at Magnequench laver bundne pulvere og magneter af neodym, jern og bor, med anlæg i Tianjin og Chuzhou i Kina og i Korat i Thailand. Pulverne bruges blandt andet i motorer og apparater. Ordene om at være førende og om at have mere kapacitet end resten af branchen er ikke taget med.",
+    "Selskabet skrev 14. september 2026, at magnetfabrikken i Estland er i kommerciel produktion og har sendt de første mængder til en kunde, der laver trækmotorer til elbiler. Datoen ligger efter beholdningen pr. 1. juni 2026. Fase 1A er sat til cirka 2.000 ton om året. Det er et navneskilt, ikke et målt år. Fase 1B til cirka 5.000 ton er under projektering. Et mål på 20.000 ton er ikke taget med. Selskabet skrev 13. oktober 2026, at EU har udpeget moderniseringen Silmet 2.0 af separationsanlægget i Sillamäe i Estland som et strategisk projekt. Det er efter beholdningen. Udpegningen er ikke en gennemført udvidelse. Det er ikke en mine."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Magnequench",
+     "url": "https://www.neomaterials.com/magnequench/"
+    },
+    {
+     "label": "Estland, 14. september 2026",
+     "url": "https://www.neomaterials.com/neo-advances-commercial-production-magnet-facility/"
+    },
+    {
+     "label": "Silmet, 13. oktober 2026",
+     "url": "https://www.neomaterials.com/neos-european-separation-facility-named-a-strategic-project-under-eu-critical-raw-materials-act/"
+    }
+   ]
+  },
   "CA87261Y1060": {
    "name": "The Metals Company",
    "theme": "energy-resources",
@@ -2114,6 +2350,170 @@
     {
      "label": "Selskabets side",
      "url": "https://www.quantumscape.com/"
+    }
+   ]
+  },
+  "CA1366351098": {
+   "name": "Canadian Solar",
+   "theme": "energy",
+   "summary": "Laver solcellemoduler og batterilagring og udvikler store sol- og lagerprojekter. Hovedkontoret ligger i Kitchener i Ontario. Næsten 180 GW moduler er leveret over 25 år, ikke et enkelt år. e-STORAGE havde pr. 30. juni 2026 sendt over 23 GWh. Datoen ligger efter beholdningen. Det er ikke et elselskab.",
+   "watch": "Om næsten 180 GW bliver læst som et enkelt år. Siden skriver, at det er leveret over 25 år. Over 23 GWh er dateret 30. juni 2026, efter beholdningen.",
+   "source": "https://www.canadiansolar.com/aboutus/",
+   "products": "Solcellemoduler, invertere og batterilagring. Recurrent Energy er nævnt som kontorer. Ikke et kraftværk.",
+   "customers": "Siden skriver, at kunderne findes i mange lande. Den nævner ikke et navngivet elselskab.",
+   "role": "Moduler og lager-systemer. Ikke et elselskab.",
+   "narrative": [
+    "Canadian Solar skriver, at selskabet er stiftet i 2001 i Canada, og at det har været noteret på NASDAQ siden 2006. Hovedkontoret ligger på 4273 King Street East, Suite 102, i Kitchener i Ontario. Siden skriver, at selskabet laver solcellemoduler, leverer sol og batterilagring og udvikler store sol- og lagerprojekter. Næsten 180 GW moduler er leveret over 25 år. Det er ikke et enkelt år. Kontaktsiden nævner Recurrent Energy i San Francisco, Austin og New York. Det er kontorer, ikke kraftværker.",
+    "Datterselskabet e-STORAGE havde pr. 30. juni 2026 sendt over 23 GWh batterilagring. Datoen ligger efter beholdningen pr. 1. juni 2026. Tallet er en samlet leverance, ikke et enkelt år. Et beløb for ordrebeholdning er ikke taget med. Ordene largest, leading og bankable er ikke taget med. Det er ikke skrevet som et elselskab, der driver værkerne."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Om selskabet",
+     "url": "https://www.canadiansolar.com/aboutus/"
+    },
+    {
+     "label": "Kontakt",
+     "url": "https://www.canadiansolar.com/contactus/"
+    }
+   ]
+  },
+  "US83417M1045": {
+   "name": "SolarEdge",
+   "theme": "energy",
+   "summary": "Laver optimizers, invertere og en overvågningsplatform til solanlæg. Selskabet blev registreret i Delaware i 2006. Den 250.000. inverter hos Flex i Austin er dateret 2. juni 2025. Tallet er en tæller, ikke et års tal. Det er udstyr, ikke et kraftværk.",
+   "watch": "Om 250.000 invertere bliver læst som et års tal. Meddelelsen er en tæller pr. 2. juni 2025, før beholdningen.",
+   "source": "https://investors.solaredge.com/",
+   "products": "Optimizers, invertere og overvågning. Om-siden nævner også lagring, ladning og nettjenester. Ikke et kraftværk.",
+   "customers": "Boliger, erhverv og mindre solparker. Teksten nævner ikke en navngiven park.",
+   "role": "Udstyr til solanlæg. Ikke et elselskab.",
+   "narrative": [
+    "Investorkontoret skriver, at SolarEdge blev registreret i Delaware i 2006, og at selskabet er noteret på NASDAQ under SEDG. Systemet består af optimizers, invertere og en overvågningsplatform i skyen. Det dækker boliger, erhverv og mindre solparker. Om-siden skriver, at produkterne siden 2006 også omfatter lagring, ladning af elbiler, nettjenester og software til energistyring.",
+    "Selskabet skrev 2. juni 2025, at den 250.000. inverter var lavet hos Flex i Austin i Texas. Datoen ligger før beholdningen pr. 1. juni 2026. Tallet er en tæller, ikke et års tal. En gadeadresse for hovedkontoret stod ikke på de læste sider og er ikke opfundet. Ordene leader og revolutionized er ikke taget med. Det er udstyr, ikke et kraftværk."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Investorkontor",
+     "url": "https://investors.solaredge.com/"
+    },
+    {
+     "label": "Om selskabet",
+     "url": "https://corporate.solaredge.com/en/about-us"
+    },
+    {
+     "label": "Forside",
+     "url": "https://corporate.solaredge.com/en"
+    }
+   ]
+  },
+  "US78397Q1094": {
+   "name": "SES AI",
+   "theme": "energy",
+   "summary": "Udvikler litium-metal-batterier og materialer. Hovedkontoret ligger i Woburn i Massachusetts. Anlægget i Shanghai er pilotskala og blev færdigt i 2023. Chungju i Sydkorea er et supplement. Teksten siger ikke, at produktionen er et målt år. Det er ikke et lager i drift.",
+   "watch": "Om pilotskala i Shanghai bliver læst som et målt år. Siden daterer ikke et års tal for celler på 50 Ah og 100 Ah.",
+   "source": "https://www.ses.ai/about",
+   "products": "Litium-metal-celler og elektrolyt. Også en platform til materialer. Ikke et kraftværk.",
+   "customers": "Siden nævner biler, byluftfart og droner. Den nævner ikke en navngiven leverance med et tal.",
+   "role": "Celler. Shanghai er pilotskala. Ikke et lager i drift.",
+   "narrative": [
+    "SES AI skriver, at selskabet er stiftet i 2012, og at det er noteret på NYSE under SES. Hovedkontoret ligger på 35 Cabot Road i Woburn i Massachusetts. Siden skriver, at arbejdet dér er forskning, Molecular Universe og en elektrolytfabrik i lille skala. Selskabet nævner også drift i Shanghai og Seoul.",
+    "Anlægget SES Shanghai Giga i Jiading blev færdigt i 2023. Det er sat til 300.000 kvadratfod. Adressen er 1699 Fuhai Road. Siden kalder det pilotskala for litium-metal-celler og materialer. Chungju ligger på 117-12 Megapolliseu 1-ro i Daesowon-myeon. Siden skriver, at anlægget er et supplement i produktionen af celler på 50 Ah og 100 Ah. Teksten siger ikke, at det er et målt år. Ordene largest og most advanced er ikke taget med. Det er ikke et lager i drift."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Om selskabet",
+     "url": "https://www.ses.ai/about"
+    },
+    {
+     "label": "Kontakt",
+     "url": "https://www.ses.ai/contact-us"
+    }
+   ]
+  },
+  "US2935941078": {
+   "name": "Enovix",
+   "theme": "energy",
+   "summary": "Laver litium-ion-celler med siliciumanode, blandet silicium og grafit. Stiftet i Silicon Valley i 2007. Fabrikker står i Sydkorea og i Malaysia. USA er hovedkontor og udvikling. Det er ikke et lager i drift.",
+   "watch": "Om Fab2 bliver læst som et målt år. Siden kalder det høj volumen, og linjerne er tegnet til at kunne skaleres. Punkterne for 2026 har kun årstal.",
+   "source": "https://www.enovix.com/about",
+   "products": "Celler med siliciumanode og celler med blandet silicium og grafit. Ikke et kraftværk.",
+   "customers": "Siden nævner forbrugerelektronik, droner og industri. Den nævner ikke en navngiven leverance med et tal.",
+   "role": "Battericeller. Fabrikkerne er ikke i USA. Ikke et lager i drift.",
+   "narrative": [
+    "Enovix skriver, at selskabet er stiftet i Silicon Valley i 2007, og at arkitekturen med siliciumanode i tre dimensioner er fra 2012. Selskabet blev noteret på NASDAQ i 2021 under ENVX. De første kommercielle forsendelser til bærbart udstyr er sat til 2022. Routejade, med batteriproduktion i Sydkorea, blev købt i 2023. Fab2 i Malaysia åbnede i 2024.",
+    "Siden kalder USA hovedkontor og udviklingssted. Sydkorea er fremstilling af blandet silicium og grafit, med coating af elektroder og celler, på flere anlæg, selskabet ejer. Fab2 i Malaysia er skrevet som et anlæg med høj volumen til siliciumanoder. Linjerne er tegnet til at kunne skaleres. Det er ikke et målt år. En gadeadresse stod ikke på de læste sider og er ikke opfundet. Punkterne for 2026, herunder MX og den første forsendelse af AI-1-celler, har kun årstal. Teksten siger ikke, at de ligger før beholdningen pr. 1. juni 2026. En fordobling af kapaciteten i 2027 er en plan."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Om selskabet",
+     "url": "https://www.enovix.com/about"
+    }
+   ]
+  },
+  "US88675P1030": {
+   "name": "Tigo Energy",
+   "theme": "energy",
+   "summary": "Laver Flex MLPE, optimizers, invertere og batterier til solanlæg. Stiftet i 2007. Hovedkontoret ligger i Los Gatos i Californien. Det er udstyr, ikke et kraftværk.",
+   "watch": "Om MLPE bliver læst som et solkraftværk. Siden beskriver udstyr på modulniveau og software til overvågning.",
+   "source": "https://www.tigoenergy.com/about",
+   "products": "Flex MLPE, optimizers, invertere og batterier til boliger. Ikke et kraftværk.",
+   "customers": "Installatører og ejere af solanlæg. Teksten nævner ikke en navngiven park.",
+   "role": "Udstyr til solanlæg. Ikke et elselskab.",
+   "narrative": [
+    "Tigo skriver, at selskabet er stiftet i 2007, og at det laver Flex MLPE og optimizers sammen med software i skyen til overvågning og styring. Produkterne kan slukke på modulniveau. Selskabet laver også invertere og batterier til boliger med sol og lager.",
+    "Hovedkontoret ligger på 983 University Ave., Suite B, i Los Gatos i Californien. Siden skriver, at det stadig ligger i Silicon Valley, og at der er kontorer andre steder. Ordene leader og maximize er ikke taget med. Det er udstyr, ikke et kraftværk."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Om selskabet",
+     "url": "https://www.tigoenergy.com/about"
+    },
+    {
+     "label": "Kontakt",
+     "url": "https://www.tigoenergy.com/contacts"
+    }
+   ]
+  },
+  "US86771W1053": {
+   "name": "Sunrun",
+   "theme": "energy",
+   "summary": "Leverer solservice og batterier til boliger. Stiftet i 2007. Over 1 million kunder er afrundet og gælder pr. august 2024. 4,6 GWh tilknyttet lager er pr. 30. juni 2026, efter beholdningen. Det er ikke et kraftværk.",
+   "watch": "Om 4,6 GWh bliver læst som beholdningen pr. 1. juni 2026. Tallet er pr. 30. juni 2026. Kundetallet er afrundet pr. august 2024.",
+   "source": "https://investors.sunrun.com/",
+   "products": "Solservice til boliger og batterier hos kunden. Ikke et kraftværk.",
+   "customers": "Boligejere. Siden skriver 22 stater, Washington D.C. og Puerto Rico. Den nævner ikke et navngivet elselskab som ejer af værket.",
+   "role": "Solservice og batterier hos kunden. Ikke et elselskab.",
+   "narrative": [
+    "Sunrun skriver, at selskabet er dannet i 2007, og at det leverer solservice til boliger. Over 1 million kunder er afrundet og gælder pr. august 2024, før beholdningen. Servicen er solgt i 22 stater, Washington D.C. og Puerto Rico. Aftalerne er skrevet som 20 eller 25 år. Adresserne 600 California Street, Suite 1800, i San Francisco og 1800 Ashton Blvd i Lehi står under corporate locations.",
+    "Siden skriver, at der er installeret 4,6 GWh tilknyttet lagerkapacitet pr. 30. juni 2026. Datoen ligger efter beholdningen pr. 1. juni 2026. Det er batterier hos kunderne. Beløb fra kvartalet og ordene largest og pioneer er ikke taget med. Det er ikke et kraftværk."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Investorkontor",
+     "url": "https://investors.sunrun.com/"
+    }
+   ]
+  },
+  "US00218A1051": {
+   "name": "ASP Isotopes",
+   "theme": "energy-resources",
+   "summary": "Beriger isotoper. Stiftet i 2021. En del er stabile isotoper til medicin og halvledere. PET Labs er nuklearmedicin i Sydafrika. Quantum Leap Energy er skrevet som fremtidigt brændsel, herunder HALEU. Teksten siger ikke, at et anlæg er i drift.",
+   "watch": "Om HALEU bliver læst som et værk i drift. Siden skriver fremtidige brændsler og siger ikke, at et anlæg kører.",
+   "source": "https://aspisotopes.com/our-company/",
+   "products": "Berigning af stabile isotoper. Nuklearmedicin via PET Labs. Udvikling af brændsel. Ikke et kraftværk.",
+   "customers": "Siden nævner medicin og halvledere som markeder. Den nævner ikke en navngiven leverance.",
+   "role": "Isotoper og brændsel under udvikling. Ikke en mine.",
+   "narrative": [
+    "ASP Isotopes skriver, at selskabet er stiftet i 2021, og at rødderne går tilbage til et berigningsprogram i Sydafrika i 1980'erne. Det er noteret på NASDAQ under ASPI. Den ene del beriger stabile isotoper til medicin og halvledere. To metoder er nævnt: en aerodynamisk proces og en proces med laser.",
+    "PET Labs i Sydafrika er nuklearmedicin. Selskabet købte 51 % i november 2023, før beholdningen. Quantum Leap Energy er skrevet som udvikling og produktion af fremtidige brændsler, herunder HALEU og lithium-6 og lithium-7. Selskaberne er i Delaware og i Storbritannien. Teksten siger ikke, at et anlæg er i drift. Ordene leader og indispensable er ikke taget med. Det er ikke et kraftværk og ikke en mine."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabet",
+     "url": "https://aspisotopes.com/our-company/"
+    },
+    {
+     "label": "Forside",
+     "url": "https://aspisotopes.com/"
     }
    ]
   }

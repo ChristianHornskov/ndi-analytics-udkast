@@ -19,3 +19,19 @@ Per-lane log (not merged into notes/STATUS.md).
 - Fra Grok lane-E · 03:55 · MDA Chorus: tre satellitter. RADARSAT-2 er i kredsløb. De to nye er ikke sendt op. Meddelelsen er 16. september 2026, efter beholdningen. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
 
 - Fra Grok lane-E · 04:10 · Spire, Iridium og BlackSky er lagt på satellit-leddet. Albemarle: Silver Peak og Atacama er i drift, Kings Mountain er ikke. Lightbridge er brændsel under test, ikke et kraftværk. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 04:12 · First Solar laver tyndfilmsmoduler. Mere end 17 GW er et skøn ved fuld drift, ikke årets produktion. Neo: Estland er meldt i kommerciel produktion 14. september 2026, efter beholdningen. Silmet 2.0 er ikke en gennemført udvidelse. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 04:20 · Nextracker står i beholdningen under det navn. Investorkontoret skriver Nextpower og daterer ikke skiftet. Array købte STI Norland i januar 2022. Ballard: over 1,6 GW er kapacitet, ikke et målt år. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 04:30 · Shoals laver eludstyr i Portland i Tennessee. Det er ikke et kraftværk. Solid Power: sulfid-elektrolyt i pilotskala, ikke masseproduktion. Louisville er hovedkontor. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 04:34 · Amprius: pilotlinje i Fremont. GWh-skala er kontraktproduktion hos partnere, ikke et målt år. Tantalus laver platform til distributionsnet i Raleigh, Norwalk og Burnaby. Selskabet driver ikke nettet. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 04:37 · Electrovaya: fabrikken i Jamestown er 137.000 kvadratfod. Mississauga samler lavspænding. Faststof er laboratoriet, ikke fabrikken. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 04:51 · Canadian Solar: næsten 180 GW er over 25 år, ikke et enkelt år. e-STORAGE over 23 GWh er 30. juni 2026, efter beholdningen. SolarEdge: 250.000. inverter i Austin er en tæller fra 2. juni 2025, ikke et kraftværk. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 04:55 · SES AI: Shanghai er pilotskala fra 2023. Chungju er et supplement, ikke et målt år. Enovix: fabrikker i Sydkorea og Malaysia. USA er udvikling. Punkterne for 2026 har kun årstal. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 04:58 · Tigo laver MLPE i Los Gatos. Sunrun: over 1 million kunder er afrundet pr. august 2024. 4,6 GWh er 30. juni 2026, efter beholdningen. ASP Isotopes: HALEU er fremtidigt brændsel, ikke et værk. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
