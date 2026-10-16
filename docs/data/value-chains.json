@@ -347,6 +347,9 @@
               "sym": "APLD",
               "theme": "software"
             }
+          ],
+          "facts": [
+            "IREN (tidl. Iris Energy): IREN skriver, at det selv ejer og driver datacentre, der er bygget til regnekraft, som bruger meget strøm på lidt plads. Selskabet skriver også, at det har sikret over 5 GW strøm fordelt på 8 steder i Nordamerika, Europa og Australien. De største anlæg i Sweetwater (Texas) og Oklahoma er under opførelse eller i udvikling, så en stor del af kapaciteten er en plan. Ifølge siden dækker '100 % vedvarende energi' også købte certifikater (RECs). Siden er læst i oktober 2026, altså efter beholdningen."
           ]
         },
         {
@@ -491,6 +494,9 @@
               "sym": "ARM",
               "theme": "chips"
             }
+          ],
+          "facts": [
+            "Nvidia: Nvidia skriver, at det var pioner inden for accelereret computing, og at det laver chips, systemer og software til det, Nvidia kalder fremtidens AI-fabrikker. Nvidia designer chippene, men ejer ikke selv chipfabrikkerne. Derfor hænger leddet sammen med Foundry længere nede."
           ]
         },
         {
@@ -776,6 +782,10 @@
               "sym": "LRCX",
               "theme": "chips"
             }
+          ],
+          "facts": [
+            "Soitec: Soitec kalder sig en førende leverandør af halvledermaterialer. Selskabet laver de skiver, chips bygges på (konstruerede substrater), med en teknik, det kalder Smart Cut. Det nævner steder i bl.a. Bernin i Frankrig og Singapore og har en skiveplatform til fotonik, altså lys på chip.",
+            "FormFactor: FormFactor skriver, at mikroskopiske nåle (MEMS-prober) er kernen i selskabets probekort. Kortene tester chips, mens de stadig sidder på siliciumskiven. Hukommelse (DRAM og flash) er et af de store anvendelsesområder."
           ]
         },
         {
@@ -893,6 +903,9 @@
               "sym": "TSM",
               "theme": "chips"
             }
+          ],
+          "facts": [
+            "GlobalFoundries: GlobalFoundries kalder sig producent af essentielle halvledere til AI, fra skyen til den fysiske verden. Selskabet nævner fabrikker i bl.a. Malta i staten New York, Dresden og Singapore. Det fremstiller chips efter andres design og designer ikke selv AI-processorerne."
           ]
         },
         {
@@ -1024,6 +1037,10 @@
               "sym": "SIMO",
               "theme": "chips"
             }
+          ],
+          "facts": [
+            "SK Hynix: SK Hynix skrev i september 2025, at det som det første havde gjort udviklingen af HBM4 færdig og var klar til masseproduktion. HBM er lag af hukommelseschips stablet oven på hinanden tæt ved processoren, så data ikke skal rejse langt.",
+            "Micron Technology: Micron skriver, at HBM stabler flere hukommelseschips lodret, og at Micron er i masseproduktion af HBM4 med 12 lag og 36 GB pr. stak. Produktsiden er læst i oktober 2026 og kan beskrive forhold efter beholdningen pr. 1. juni 2026."
           ]
         },
         {
@@ -1232,6 +1249,9 @@
               "sym": "LUMN",
               "theme": "connect"
             }
+          ],
+          "facts": [
+            "Lumentum: Lumentum skriver, at det leverer teknologi til de store datacentre og selv står for produktionen hele vejen fra materiale til modul. Produktsiden viser lasere, transceivere til 1,6 terabit pr. sekund og en optisk omskifter (OCS), der sender lyset videre uden først at gøre det til elektricitet."
           ]
         },
         {
@@ -1356,6 +1376,10 @@
               "sym": "FLEX",
               "theme": "connect"
             }
+          ],
+          "facts": [
+            "Super Micro Computer: Supermicro kalder sig leverandør af 'Rack-Scale Total IT Solutions', altså færdige serverskabe med servere, lager og netværk samlet på forhånd. Selskabet fremhæver væskekøling direkte på chippen (DLC) og skriver, at det designer, udvikler og producerer i USA med hovedsæde i San Jose i Californien. Selve chippene køber selskabet hos andre, fx i Chipdesign-leddet ovenfor.",
+            "Celestica: Celestica skriver, at det udvikler, designer og producerer 'rygraden' i AI og cloud. Selskabet tilbyder design, produktion, forsyningskæde og samling af hele serverskabe (rack-integration)."
           ]
         },
         {
@@ -1460,6 +1484,9 @@
               "sym": "BABA",
               "theme": "platforms"
             }
+          ],
+          "facts": [
+            "CoreWeave: CoreWeave kalder sig 'The Essential Cloud for AI' og skriver, at det har over 50 aktive datacentre i USA og Europa. Selskabet lejer regnekraft ud og designer ikke selv chippene. Tallet er fra siden i oktober 2026, altså efter beholdningen."
           ]
         },
         {
@@ -1563,6 +1590,10 @@
               "sym": "RBRK",
               "theme": "software"
             }
+          ],
+          "facts": [
+            "Innodata: Innodata kalder sig et globalt data engineering-selskab. Det laver store mængder træningsdata til AI-modeller, tester modellerne for sikkerhed og fejl og bruger fagfolk til at rette svarene, når modellen tager fejl eller finder på noget (hallucinationer).",
+            "Snowflake: Snowflake beskriver sin platform som en 'Data Cloud', hvor virksomheder samler data, der ellers ligger spredt, deler dem sikkert og kører analyser og AI på dem. Selskabet lejer platformen ud og ejer ikke selv dataene."
           ]
         },
         {
@@ -1736,6 +1767,9 @@
               "sym": "FTNT",
               "theme": "software"
             }
+          ],
+          "facts": [
+            "Cloudflare: Cloudflare driver et netværk, der sidder mellem internettets brugere og hjemmesider. Selskabet skriver, at AI-modeller i tjenesten Workers AI kører 'close to users in 200+ cities', altså tæt på brugeren i stedet for i ét stort datacenter. Det tilbyder også værktøjer til at bygge AI-agenter. Siden er læst i oktober 2026."
           ]
         },
         {
@@ -2364,6 +2398,9 @@
               "sym": "NOD.OL",
               "theme": "chips"
             }
+          ],
+          "facts": [
+            "Ambarella: Ambarella kalder sine chips 'AI Vision Processors For Edge Applications' og skriver, at de gør kameraer klogere ved at trække brugbare data ud af videoen. Analysen sker i selve apparatet og ikke i skyen. Robotter står på siden som et anvendelsesområde sammen med industri og overvågning. Siden er læst i oktober 2026."
           ]
         },
         {
@@ -2451,6 +2488,9 @@
               "sym": "IOT",
               "theme": "software"
             }
+          ],
+          "facts": [
+            "Unity Software: Unity er kendt for 3D-motoren bag mange computerspil. Til industrien skriver selskabet, at det laver 'real-time 3D'-kopier af fysiske anlæg (digitale tvillinger), så fejl kan findes, før de koster noget i virkeligheden. Det skriver også, at det kan hjælpe med at 'deploy robotics systems faster'. Siden er læst i oktober 2026."
           ]
         },
         {
@@ -2622,6 +2662,11 @@
               "sym": "AIRO",
               "theme": "space"
             }
+          ],
+          "facts": [
+            "Symbotic: Symbotic kalder sine systemer 'complete, end-to-end warehouse automation solutions', altså robotlagre, hvor robotter henter og stabler varerne. Walmart står på siden med en udtalelse fra direktøren for Walmart U.S.",
+            "Serve Robotics: Serve Robotics bygger små leveringsrobotter, der kører på fortovet blandt fodgængere og bringer mad ud det sidste stykke vej. Uber Eats er den samarbejdspartner, der er nævnt på siden.",
+            "Aurora Innovation: Aurora udvikler software, der kan køre lastbiler uden fører. Selskabet skriver, at anden generation af systemet kører kunders gods 'with nobody behind the wheel', og at den førerløse kommercielle kørsel startede i Texas i maj 2025."
           ]
         }
       ],
@@ -5100,7 +5145,7 @@
           "kind": "ndi",
           "short": "Rum og compute",
           "brief": {
-            "does": "Vil placere regnekraft i kredsløb, hvor der er sol og kulde.",
+            "does": "Vil placere regnekraft i kredsløb, hvor solen skinner næsten hele tiden og kan give strøm.",
             "why": {
               "k": "Penge",
               "i": "⏳",
@@ -5389,7 +5434,7 @@
             "id": "sp-risk",
             "icon": "⚠",
             "k": "Kan gå galt",
-            "t": "seks usikkerheder"
+            "t": "syv usikkerheder"
           },
           {
             "id": "sp-web",
@@ -5465,6 +5510,14 @@
             "links": [
               "launch",
               "satcom",
+              "space-compute"
+            ]
+          },
+          {
+            "icon": "🌡",
+            "k": "Varmen skal væk",
+            "t": "Rummet er koldt, men der er ingen luft til at køle med. Varmen fra chippene kan kun slippe væk som stråling, så et datacenter i kredsløb skal have store køleflader ud over solpanelerne. Det gør det tungere og dyrere at sende op.",
+            "links": [
               "space-compute"
             ]
           },
