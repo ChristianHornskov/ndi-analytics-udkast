@@ -66,3 +66,30 @@ Offentlige (ikke-fortrolige) idéer spejles evt. på `docs/ideer.html`.
 - **Kun NDI:** Faktisk vægtfordeling i snapshot.
 - **Bygges:** weightProfileNote i portefølje.
 - **Status:** building.
+
+## lane-C 00:40 — til beslutning (Mads/compliance)
+- FAQ «Er AI en boble?»: kunne citere Mads (BLOG 4. maj 2026, «compute-mangel … det modsatte af en boble») tydeligt mærket som NDI's vurdering. Ikke lavet: markedsvurdering på en læreside kræver ja fra compliance.
+
+## lane-C ~00:55 — til data-lane (unique-metrics.json, ikke min fil)
+- NDI-linsen er ujævn: Tesla/Nvidia/SoftBank/Meta/Quantum×4/Arm har 4–5 felter, mens Poet, Fluence, Apple, AMD og Broadcom kun har ét felt («NDI-linse» eller «Plads i kæden»). På `ndi-perspektiv.html` ser de halvfærdige ud ved siden af. Forslag: enten fem felter til alle (AI-udkast-mærket) eller skjul de tynde rækker til de er gennemgået.
+- Feltnavnene varierer («NDI-tag» / «NDI-tags» / «NDI-linse» / «Plads i kæden» / «Plads i værdikæden»). Legenden på siden forklarer fem faste felter — data bør følge dem.
+
+## Til beslutning (lane-C, 00:41 16/10)
+- «tags» bruges stadig som fagord (NDI-tags, multi-tag). Dansk alternativ: «mærker». Kræver samme ord i js/ og vaerdikaeder (andre lanes), ellers bliver sproget ujævnt. Ikke ændret.
+
+## lane-C ~01:25 — til data-lane (unique-metrics.json, ikke min fil)
+- Synlig tekst på ndi-perspektiv.html bryder Vidensbot pkt. 10: semikolon i Tesla-hint («Placeringen er pædagogisk; Tesla bygger …») og tankestreg i Rigetti-/Quantum-hint («regnekraft — ikke erstatning …») og Arm-hint («økosystem — ikke egen foundry»). Forslag: punktum/komma.
+- Ordlisten har ingen post for temaet «Energi» (kun energiressourcer, elnet, SMR, energilagring). Kan tilføjes, hvis Leo vil have alle 11 temaer i ordlisten.
+
+## lane-C ~01:40 — til js-ejer
+- `docs/js/faq-search.js` l. 93 og 96: “${q}” → «${q}» så tælleren følger husstilen.
+
+## lane-C 01:20 16/10 — til js-ejer (app.js, ikke min fil)
+- `docs/js/app.js` ~l. 403: «Vi laver ikke nye ÅOP-beregninger i dette udkast.» Kan nu linke `om-data.html#g-aaop`, og «skat» i samme sætning kan linke `#g-skat`.
+- Graf-tooltips/tekst i app.js bruger «max drawdown i perioden». Resten af siden siger «Største fald» / «fald fra top». Forslag: «største fald i perioden».
+- Mulig næste form på ideer: «Energi» mangler som ordlistepost (kun energiressourcer, elnet, SMR, lagring).
+
+## lane-C 01:32 16/10 — til js-/værdikæde-ejer
+- app.js delår-badge → `om-data.html#g-delaar`. drawdown.html «(delår)» samme.
+- vaerdikaeder: led «Serverinfrastruktur», «Elproduktion», «Simulering og software» → `#g-servere`, `#g-elproduktion`, `#g-simulering`.
+- value-chains.json: «—» i ndi-tekster (fx «Se citat nedenfor — kun som citat», «ASML ... — som caseforståelse») → punktum eller komma (Vidensbot punkt 10).

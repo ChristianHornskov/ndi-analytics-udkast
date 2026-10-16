@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="da">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+ <meta name="robots" content="noindex,nofollow">
+ <title>Valuta: aktien og kronen · NDI Analytics</title>
+ <meta name="description" content="Fonden opgøres i kroner, men de fleste selskaber handles i dollar. Sådan påvirker valutakursen afkastet, og hvor selskaberne hører hjemme.">
+ <link rel="stylesheet" href="../css/ndi.css">
+ <!-- og:start -->
+ <meta property="og:type" content="website">
+ <meta property="og:site_name" content="NDI Analytics (udkast)">
+ <meta property="og:locale" content="da_DK">
+ <meta property="og:title" content="Valuta: aktien og kronen · NDI Analytics">
+ <meta property="og:description" content="Fonden opgøres i kroner, men de fleste selskaber handles i dollar. Sådan påvirker valutakursen afkastet, og hvor selskaberne hører hjemme.">
+ <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/laer/valuta.html">
+ <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
+ <meta property="og:image:width" content="1200">
+ <meta property="og:image:height" content="630">
+ <meta property="og:image:alt" content="NDI Analytics - udkast. Gå på opdagelse i porteføljen.">
+ <meta name="twitter:card" content="summary_large_image">
+ <!-- og:end -->
+<style>
+  .vx h2{font-size:18px;margin:0 0 8px}
+  .vx p{color:var(--muted);line-height:1.6;margin:0 0 10px}
+  .vx p strong{color:var(--text)}
+  .vx .src{font-size:13px;color:var(--faint);margin:8px 0 0}
+  .eq{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:stretch;gap:8px;margin:12px 0 6px}
+  .eq > div{background:var(--panel-2);border-radius:12px;padding:12px;color:var(--muted);font-size:13px;line-height:1.4;border-top:3px solid var(--line)}
+  .eq b{display:block;color:var(--text);font-size:22px;font-variant-numeric:tabular-nums;margin:2px 0}
+  .eq .op{align-self:center;color:var(--faint);font-size:22px;font-weight:600;background:none;padding:0;border:0}
+  .eq .a{border-top-color:var(--cyan)}
+  .eq .c{border-top-color:var(--yellow)}
+  .eq .r{border-top-color:var(--text)}
+  .eq.alt b{font-size:18px}
+  .try{display:grid;gap:10px;margin-top:8px}
+  .try label{color:var(--text);font-weight:600}
+  .try input[type=range]{width:100%;accent-color:var(--yellow)}
+  .out{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .out > div{background:var(--panel-2);border-radius:10px;padding:10px 12px;color:var(--muted);font-size:13px;line-height:1.4}
+  .out b{display:block;color:var(--text);font-size:20px;font-variant-numeric:tabular-nums}
+  .geo{display:grid;gap:8px;margin:12px 0 4px}
+  .geo .row{display:grid;grid-template-columns:150px 1fr 96px;align-items:center;gap:10px;font-size:14px;color:var(--muted)}
+  .geo .bar{height:18px;border-radius:4px;background:var(--cyan)}
+  .geo .row.us .bar{background:var(--yellow)}
+  .geo .v{text-align:right;color:var(--text);font-variant-numeric:tabular-nums}
+  .geo .v small{display:block;color:var(--faint);font-size:12px}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:6px}
+  .two > div{background:var(--panel-2);border-radius:12px;padding:14px;line-height:1.5;color:var(--muted);font-size:14px}
+  .two h3{margin:0 0 6px;font-size:15px;color:var(--text)}
+  .two .yes{border-top:3px solid var(--cyan)}
+  .two .no{border-top:3px solid var(--yellow)}
+  @media (max-width:640px){
+   .eq{gap:4px}
+   .eq > div{padding:8px;font-size:12px}
+   .eq b,.eq.alt b{font-size:16px}
+   .eq .op{font-size:16px}
+   .eq .d{display:none}
+   .out{grid-template-columns:1fr 1fr}.out > div:last-child{grid-column:1/-1}
+   .geo .row{grid-template-columns:96px 1fr 72px;font-size:13px}
+   .two{grid-template-columns:1fr}
+  }
+ </style>
+</head>
+<body>
+ <a class="skip" href="#main">Gå til indhold</a>
+ <header class="site-header">
+ <a class="brand" href="../index.html"><img src="../assets/mark.svg" width="34" height="27" alt=""><span>NewDeal Invest</span></a>
+ <nav class="nav"><a href="index.html">← Lær</a><a href="../om-data.html#g-valuta">Ordliste</a></nav>
+ </header>
+ <main id="main">
+ <p class="eyebrow">LÆR</p>
+ <h1>Valuta: aktien og kronen</h1>
+ <p class="lede">Fonden opgøres i kroner, men de fleste af selskaberne handles i dollar. Afkastet i kroner er derfor to bevægelser lagt sammen: aktiens og valutaens.</p>
+
+ <section class="panel vx" aria-labelledby="vx-to">
+  <h2 id="vx-to">To bevægelser i ét tal</h2>
+  <p>Et tænkt eksempel: En amerikansk aktie stiger 10&nbsp;% i dollar. I samme periode falder dollaren 5&nbsp;% over for kronen. For en dansk investor er gevinsten så ikke 10&nbsp;%, men 1,10 × 0,95 = 1,045. Altså <strong>+4,5&nbsp;%</strong> i kroner.</p>
+  <div class="eq" role="img" aria-label="Aktien plus 10 procent i dollar, gange dollaren minus 5 procent mod kronen, giver plus 4,5 procent i kroner.">
+   <div class="a">Aktien i dollar<b>+10&nbsp;%</b><span class="d">det, selskabet og markedet gør</span></div>
+   <div class="op" aria-hidden="true">×</div>
+   <div class="c">Dollaren mod kronen<b>−5&nbsp;%</b><span class="d">det, valutakursen gør</span></div>
+   <div class="op" aria-hidden="true">=</div>
+   <div class="r">I kroner<b>+4,5&nbsp;%</b><span class="d">det, du ser i fonden</span></div>
+  </div>
+  <div class="eq alt" role="img" aria-label="Omvendt: aktien plus 10 procent og dollaren plus 5 procent giver plus 15,5 procent i kroner.">
+   <div class="a">Aktien i dollar<b>+10&nbsp;%</b></div>
+   <div class="op" aria-hidden="true">×</div>
+   <div class="c">Dollaren mod kronen<b>+5&nbsp;%</b></div>
+   <div class="op" aria-hidden="true">=</div>
+   <div class="r">I kroner<b>+15,5&nbsp;%</b></div>
+  </div>
+  <p class="src">Tænkt eksempel med runde tal. Handler ikke om en bestemt aktie eller om fonden.</p>
+ </section>
+
+ <section class="panel vx" aria-labelledby="vx-try" style="margin-top:14px">
+  <h2 id="vx-try">Prøv selv</h2>
+  <p>Du har 1.000&nbsp;kr. i en tænkt amerikansk aktie. Skru på de to bevægelser og se resultatet i kroner.</p>
+  <div class="try">
+   <label for="vx-a">Aktien i dollar: <span id="vx-av">+10</span>&nbsp;%</label>
+   <input id="vx-a" type="range" min="-30" max="30" step="5" value="10">
+   <label for="vx-c">Dollaren mod kronen: <span id="vx-cv">−5</span>&nbsp;%</label>
+   <input id="vx-c" type="range" min="-20" max="20" step="5" value="-5">
+   <div class="out" aria-live="polite">
+    <div>Værdi i kroner<b id="vx-end">1.045&nbsp;kr.</b></div>
+    <div>Afkast i kroner<b id="vx-pct">+4,5&nbsp;%</b></div>
+    <div>Heraf valuta (ca.)<b id="vx-fx">−5,5&nbsp;pp</b></div>
+   </div>
+  </div>
+  <p class="src">Uden JavaScript: +10&nbsp;% og −5&nbsp;% giver 1.045&nbsp;kr. +10&nbsp;% og +5&nbsp;% giver 1.155&nbsp;kr. 0&nbsp;% og −10&nbsp;% giver 900&nbsp;kr. «Heraf valuta» er forskellen mellem afkastet i kroner og afkastet i dollar, målt i procentpoint (pp).</p>
+ </section>
+
+ <section class="panel vx" aria-labelledby="vx-geo" style="margin-top:14px">
+  <h2 id="vx-geo">Hvor er fondens selskaber registreret?</h2>
+  <p>De to første bogstaver i et <a href="../om-data.html#g-isin">ISIN</a> er en landekode. I PMINDI pr. 1. juni 2026 har <strong>253 af 345</strong> positioner en amerikansk ISIN. De udgør <strong>67,6&nbsp;%</strong> af fonden og handles i dollar.</p>
+  <div class="geo" role="img" aria-label="PMINDI pr. 1. juni 2026 efter ISIN-landekode, procent af fonden: USA 67,6 procent (253 positioner), Canada 4,6 (25), Caymanøerne 4,3 (18), Japan 3,1 (7), Israel 2,2 (6), Tyskland 2,0 (6), 15 andre landekoder 8,3 (30).">
+   <div class="row us"><span>USA</span><span class="bar" style="width:100%"></span><span class="v">67,6&nbsp;%<small>253 pos.</small></span></div>
+   <div class="row"><span>Canada</span><span class="bar" style="width:6.7%"></span><span class="v">4,6&nbsp;%<small>25 pos.</small></span></div>
+   <div class="row"><span>Caymanøerne</span><span class="bar" style="width:6.4%"></span><span class="v">4,3&nbsp;%<small>18 pos.</small></span></div>
+   <div class="row"><span>Japan</span><span class="bar" style="width:4.6%"></span><span class="v">3,1&nbsp;%<small>7 pos.</small></span></div>
+   <div class="row"><span>Israel</span><span class="bar" style="width:3.2%"></span><span class="v">2,2&nbsp;%<small>6 pos.</small></span></div>
+   <div class="row"><span>Tyskland</span><span class="bar" style="width:2.9%"></span><span class="v">2,0&nbsp;%<small>6 pos.</small></span></div>
+   <div class="row"><span>15 andre</span><span class="bar" style="width:12.3%"></span><span class="v">8,3&nbsp;%<small>30 pos.</small></span></div>
+  </div>
+  <p class="src">Kilde: fondens forsinkede beholdning pr. 1. juni 2026 (PMINDI). Procent af fonden. De viste positioner udgør tilsammen 91,9&nbsp;%. Vægte og antal kan have ændret sig siden, se <a href="forsinket-beholdning.html">Hvorfor er beholdningen forsinket?</a></p>
+  <p style="margin-top:10px">Landekoden fortæller, hvor værdipapiret er registreret. Det er ikke altid den valuta, aktien handles i. Mange selskaber fra for eksempel Israel, Canada og Caymanøerne er noteret i New York og handles også i dollar. Derfor er dollarandelen <strong>mindst</strong> to tredjedele, sandsynligvis mere. Resten fordeler sig på blandt andet yen og euro.</p>
+ </section>
+
+ <section class="panel vx" aria-labelledby="vx-krone" style="margin-top:14px">
+  <h2 id="vx-krone">Hvorfor det især er dollaren</h2>
+  <p>Kronen er bundet tæt til euroen (<a href="../om-data.html#g-fastkurs">fastkurspolitikken</a>). Selskaber, der handles i euro, giver derfor kun små valutaudsving i kroner. Over for dollar og yen svinger kronen frit, ligesom euroen gør.</p>
+  <p>For en teknologifond er det dollaren, der fylder. Mange af de største selskaber i fondens <a href="../vaerdikaeder.html">værdikæder</a>, fra chipdesign til cloud, er amerikanske.</p>
+ </section>
+
+ <section class="panel vx" aria-labelledby="vx-ndi" style="margin-top:14px">
+  <h2 id="vx-ndi">Hvad det betyder for de tal, vi viser</h2>
+  <div class="two">
+   <div class="yes"><h3>Det viser vi</h3>Fondens afkast i kroner. Valutaen er allerede regnet med, både når den hjælper, og når den trækker ned. Det er det tal, du som dansk investor får.</div>
+   <div class="no"><h3>Det viser vi ikke</h3>Afkastet delt op i aktie og valuta. Gæt på, hvor dollaren går hen. Valuta er ikke noget, siden vurderer.</div>
+  </div>
+  <p style="margin-top:12px">Valuta kan trække afkastet begge veje, og over en enkelt periode kan den fylde mere end aktierne. KID'et nævner valutarisiko som en af fondens vigtigste risici. Se <a href="../risici.html">Risici ved fonden</a> og <a href="../om-data.html#g-valuta">valutarisiko</a> i ordlisten.</p>
+  <p style="margin-top:10px">Siden forklarer et begreb. Den siger ikke noget om, hvordan du selv skal investere.</p>
+ </section>
+ <script>
+ (function(){
+  var a=document.getElementById('vx-a'), c=document.getElementById('vx-c'); if(!a||!c) return;
+  var f=function(n,d){return n.toLocaleString('da-DK',{minimumFractionDigits:d,maximumFractionDigits:d})};
+  var sg=function(n){return n<0?'−':(n>0?'+':'')};
+  var pct=function(n){return sg(n)+f(Math.abs(n),1)+' %'};
+  function upd(){
+   var ra=+a.value/100, rc=+c.value/100, end=1000*(1+ra)*(1+rc), r=(end/1000-1)*100;
+   document.getElementById('vx-av').textContent=sg(+a.value)+Math.abs(+a.value);
+   document.getElementById('vx-cv').textContent=sg(+c.value)+Math.abs(+c.value);
+   document.getElementById('vx-end').textContent=f(end,0)+' kr.';
+   document.getElementById('vx-pct').textContent=pct(r);
+   var fx=r-ra*100; document.getElementById('vx-fx').textContent=sg(fx)+f(Math.abs(fx),1)+' pp';
+  }
+  a.addEventListener('input',upd); c.addEventListener('input',upd); upd();
+ })();
+ </script>
+ <p class="warn">Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.</p>
+ <p class="band">Generel information. Ikke investeringsrådgivning.</p>
+ </main>
+ <footer class="site-footer">
+ <p><strong>Markedsføringsmateriale.</strong> Læs <a href="https://fundmarket.dk/wp-content/uploads/Faellesprospekt-for-afdelinger-og-andelsklasser-i-Investeringsforeningen-Portfoliomanager-opdateret-24.10.2025.pdf" rel="noopener" target="_blank">prospektet ↗</a> og KID for <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm140b" rel="noopener" target="_blank">PMINDI ↗</a> eller <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm145b" rel="noopener" target="_blank">PMINDIAKK ↗</a>, før du træffer en endelig investeringsbeslutning.</p>
+ <p>Udkast / noindex. Ikke den officielle side og ingen investeringsrådgivning. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering. <a href="../om-data.html">Data og ordliste</a>.</p>
+ </footer>
+</body>
+</html>

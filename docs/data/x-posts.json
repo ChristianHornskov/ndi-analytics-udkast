@@ -1,0 +1,598 @@
+{
+  "snapshotAt": "2026-10-15T21:46:29Z",
+  "note": "Statisk snapshot af udvalgte offentlige X-opslag. Ikke NDI's holdning. Ingen secrets. Egne UI-kort — ingen X-embed.",
+  "accounts": [
+    {
+      "username": "InvestNewdeal",
+      "name": "NewDeal Invest"
+    },
+    {
+      "username": "MadsC007",
+      "name": "Mads Christiansen"
+    },
+    {
+      "username": "jesper_baek",
+      "name": "Jesper Bæk"
+    },
+    {
+      "username": "CHornskov",
+      "name": "Christian Hornskov"
+    }
+  ],
+  "posts": [
+    {
+      "id": "2106390787793498165",
+      "username": "InvestNewdeal",
+      "name": "NewDeal Invest",
+      "text": "Kvartalswebinar Q3, resultater og opdatering på mikro, makro, AI og geopolitik",
+      "created_at": "2026-10-03T14:27:53.000Z",
+      "url": "https://x.com/InvestNewdeal/status/2106390787793498165",
+      "tags": [
+        "ndi",
+        "ai"
+      ],
+      "tickers": [],
+      "label": "Fra NDI-relateret konto (udkast / markedsføring)"
+    },
+    {
+      "id": "2087874479141589021",
+      "username": "InvestNewdeal",
+      "name": "NewDeal Invest",
+      "text": "$NVDA $SE $HIMS",
+      "created_at": "2026-08-13T12:10:41.000Z",
+      "url": "https://x.com/InvestNewdeal/status/2087874479141589021",
+      "tags": [
+        "chips",
+        "platforms"
+      ],
+      "tickers": [
+        "NVDA",
+        "SE",
+        "HIMS"
+      ],
+      "label": "Fra NDI-relateret konto (udkast / markedsføring)"
+    },
+    {
+      "id": "2072602813142630625",
+      "username": "InvestNewdeal",
+      "name": "NewDeal Invest",
+      "text": "Performance-opdatering efter Q2 2026 — offentlige totalafkasttal for NewDeal Invest-fondene (Fundmarket).",
+      "created_at": "2026-07-02T08:46:32.000Z",
+      "url": "https://x.com/InvestNewdeal/status/2072602813142630625",
+      "tags": [
+        "ndi"
+      ],
+      "tickers": [
+        "PMINDI"
+      ],
+      "label": "Fra NDI-relateret konto (udkast / markedsføring)",
+      "complianceNote": "Omskrevet i snapshot: undgår \"rådgiver\"-formulering på grafmarkør."
+    },
+    {
+      "id": "2028884313425506598",
+      "username": "InvestNewdeal",
+      "name": "NewDeal Invest",
+      "text": "NewDeal Invest Fund manager Mads Christiansen comments on $SE earnings.",
+      "created_at": "2026-03-03T17:24:49.000Z",
+      "url": "https://x.com/InvestNewdeal/status/2028884313425506598",
+      "tags": [
+        "platforms"
+      ],
+      "tickers": [
+        "SE"
+      ],
+      "label": "Fra NDI-relateret konto (udkast / markedsføring)"
+    },
+    {
+      "id": "2016558534171738574",
+      "username": "InvestNewdeal",
+      "name": "NewDeal Invest",
+      "text": "NewDeal Invests akkumulerende fond PMINDIAKK er nu børsnoteret hos Nasdaq Copenhagen",
+      "created_at": "2026-01-28T17:06:35.000Z",
+      "url": "https://x.com/InvestNewdeal/status/2016558534171738574",
+      "tags": [
+        "ndi"
+      ],
+      "tickers": [
+        "PMINDIAKK"
+      ],
+      "label": "Fra NDI-relateret konto (udkast / markedsføring)"
+    },
+    {
+      "id": "2013306008832008498",
+      "username": "InvestNewdeal",
+      "name": "NewDeal Invest",
+      "text": "$PMINDI betaler udbytte 38,00 kr./andel.",
+      "created_at": "2026-01-19T17:42:12.000Z",
+      "url": "https://x.com/InvestNewdeal/status/2013306008832008498",
+      "tags": [
+        "ndi"
+      ],
+      "tickers": [
+        "PMINDI"
+      ],
+      "label": "Fra NDI-relateret konto (udkast / markedsføring)"
+    },
+    {
+      "id": "2110388749947261403",
+      "username": "MadsC007",
+      "name": "Mads Christiansen",
+      "text": "Believing that we can compete by simply using AI, without producing the chips ourselves… is incredibly naive. Europe needs to make the full…",
+      "created_at": "2026-10-14T15:14:21.000Z",
+      "url": "https://x.com/MadsC007/status/2110388749947261403",
+      "tags": [
+        "chips",
+        "ai",
+        "europe"
+      ],
+      "tickers": [],
+      "label": "Fra NDI-relateret konto (udkast / markedsføring)"
+    },
+    {
+      "id": "2110494122285191370",
+      "username": "MadsC007",
+      "name": "Mads Christiansen",
+      "text": "Denne EU-kommisionær mener at Europa skal udvikle egne systemer som alternativ til Starshield…",
+      "created_at": "2026-10-14T22:13:04.000Z",
+      "url": "https://x.com/MadsC007/status/2110494122285191370",
+      "tags": [
+        "space"
+      ],
+      "tickers": [],
+      "label": "Fra NDI-relateret konto (udkast / markedsføring)"
+    },
+    {
+      "id": "2109979767407509867",
+      "username": "MadsC007",
+      "name": "Mads Christiansen",
+      "text": "Listening to Bloomberg about AI is like asking a BWM sales rep for facts about Tesla cars",
+      "created_at": "2026-10-13T12:09:12.000Z",
+      "url": "https://x.com/MadsC007/status/2109979767407509867",
+      "tags": [
+        "ai",
+        "physical"
+      ],
+      "tickers": [
+        "TSLA"
+      ],
+      "label": "Fra NDI-relateret konto (udkast / markedsføring)"
+    },
+    {
+      "id": "2110478406294880346",
+      "username": "MadsC007",
+      "name": "Mads Christiansen",
+      "text": "Meget godt billede af det industrielle boom USA er midt i",
+      "created_at": "2026-10-14T21:10:37.000Z",
+      "url": "https://x.com/MadsC007/status/2110478406294880346",
+      "tags": [
+        "physical",
+        "energy"
+      ],
+      "tickers": [],
+      "label": "Fra NDI-relateret konto (udkast / markedsføring)"
+    },
+    {
+      "id": "2109729412589523271",
+      "username": "jesper_baek",
+      "name": "Jesper Bæk",
+      "text": "Teslas succes er bevis… Det lykkedes ikke at gøre elbilen til allemandseje, fordi den var grøn - men fordi de lavede den bedste bil.",
+      "created_at": "2026-10-12T19:34:23.000Z",
+      "url": "https://x.com/jesper_baek/status/2109729412589523271",
+      "tags": [
+        "physical",
+        "energy"
+      ],
+      "tickers": [
+        "TSLA"
+      ],
+      "label": "Fra NDI-relateret konto (udkast / markedsføring)"
+    },
+    {
+      "id": "2110465338420674785",
+      "username": "jesper_baek",
+      "name": "Jesper Bæk",
+      "text": "Unity Spark integrates directly with Google Play Games…",
+      "created_at": "2026-10-14T20:18:41.000Z",
+      "url": "https://x.com/jesper_baek/status/2110465338420674785",
+      "tags": [
+        "software"
+      ],
+      "tickers": [
+        "U"
+      ],
+      "label": "Fra NDI-relateret konto (udkast / markedsføring)"
+    },
+    {
+      "id": "1920549372925808643",
+      "username": "CHornskov",
+      "name": "Christian Hornskov",
+      "text": "kvantecomputere er andet og mere end kun $IonQ… Begge er også i $PMINDI.",
+      "created_at": "2025-05-08T18:40:27.000Z",
+      "url": "https://x.com/CHornskov/status/1920549372925808643",
+      "tags": [
+        "quantum"
+      ],
+      "tickers": [
+        "IONQ",
+        "QBTS",
+        "PMINDI"
+      ],
+      "label": "Fra NDI-relateret konto (udkast / markedsføring)"
+    },
+    {
+      "id": "1918304252847440315",
+      "username": "CHornskov",
+      "name": "Christian Hornskov",
+      "text": "$UPST Upstart har indgået et 1-års samarbejde med OnePay…",
+      "created_at": "2025-05-02T13:59:08.000Z",
+      "url": "https://x.com/CHornskov/status/1918304252847440315",
+      "tags": [
+        "platforms"
+      ],
+      "tickers": [
+        "UPST"
+      ],
+      "label": "Fra NDI-relateret konto (udkast / markedsføring)"
+    },
+    {
+      "id": "2110628812753158432",
+      "username": "FundaAI",
+      "name": "FUNDA",
+      "text": "$ORCL and $CRWV face a repricing of credit risk, along with SoftBank in Japan. Higher credit risk premiums → potentially higher costs on new financing → pressure on neoclouds’ purchasing power.",
+      "created_at": "2026-10-15T07:08:17.000Z",
+      "url": "https://x.com/FundaAI/status/2110628812753158432",
+      "tags": [
+        "platforms",
+        "chips"
+      ],
+      "tickers": [
+        "ORCL",
+        "CRWV",
+        "SoftBank",
+        "9984.T",
+        "9984"
+      ],
+      "label": "Fra en konto NDI følger — ikke NDI’s holdning",
+      "curatedFrom": "mads_following"
+    },
+    {
+      "id": "2100358110254952615",
+      "username": "MilkRoadAI",
+      "name": "Milk Road AI",
+      "text": "Jensen Huang just mapped out the chain of companies needed to power the AI revolution. AI is becoming a new industrial system that requires manufacturing, infrastructure, energy, financing and an enormous supply chain.",
+      "created_at": "2026-09-16T22:56:10.000Z",
+      "url": "https://x.com/MilkRoadAI/status/2100358110254952615",
+      "tags": [
+        "chips",
+        "ai",
+        "energy"
+      ],
+      "tickers": [
+        "NVDA"
+      ],
+      "label": "Fra en konto NDI følger — ikke NDI’s holdning",
+      "curatedFrom": "mads_following"
+    },
+    {
+      "id": "2109335734767571448",
+      "username": "MilkRoadAI",
+      "name": "Milk Road AI",
+      "text": "Jensen Huang committed $1B to put AI in the hands of America’s scientists (Genesis Mission). Nvidia gave the most at $1B among 11 companies pledging $2.4B.",
+      "created_at": "2026-10-11T17:30:03.000Z",
+      "url": "https://x.com/MilkRoadAI/status/2109335734767571448",
+      "tags": [
+        "chips",
+        "ai"
+      ],
+      "tickers": [
+        "NVDA"
+      ],
+      "label": "Fra en konto NDI følger — ikke NDI’s holdning",
+      "curatedFrom": "mads_following"
+    },
+    {
+      "id": "2110381882529718623",
+      "username": "MelvinInvests",
+      "name": "Melvin",
+      "text": "People are forgetting how important companies like $CRWV and $NBIS are to the AI ecosystem, especially $NVDA — and what Jensen Huang announced on partnerships.",
+      "created_at": "2026-10-14T14:47:04.000Z",
+      "url": "https://x.com/MelvinInvests/status/2110381882529718623",
+      "tags": [
+        "chips",
+        "compute"
+      ],
+      "tickers": [
+        "NVDA",
+        "CRWV",
+        "NBIS"
+      ],
+      "label": "Fra en konto NDI følger — ikke NDI’s holdning",
+      "curatedFrom": "mads_following"
+    },
+    {
+      "id": "2104529180071461332",
+      "username": "BullTheoryio",
+      "name": "Bull Theory",
+      "text": "Nvidia launches AI safety tools that can stop AI agents from carrying out cyberattacks. Jensen Huang says this is an engineering…",
+      "created_at": "2026-09-28T11:10:31.000Z",
+      "url": "https://x.com/BullTheoryio/status/2104529180071461332",
+      "tags": [
+        "chips",
+        "ai",
+        "software"
+      ],
+      "tickers": [
+        "NVDA"
+      ],
+      "label": "Fra en konto NDI følger — ikke NDI’s holdning",
+      "curatedFrom": "mads_following"
+    },
+    {
+      "id": "2108845669687640090",
+      "username": "BullTheoryio",
+      "name": "Bull Theory",
+      "text": "BREAKING: SoftBank is seeking to raise up to $100 billion from Gulf investors to expand its AI investments. SoftBank has already invested $64.6 billion in OpenAI. At a $2 trillion valuation, its stake would be worth $260 billion.",
+      "created_at": "2026-10-10T09:02:42.000Z",
+      "url": "https://x.com/BullTheoryio/status/2108845669687640090",
+      "tags": [
+        "platforms",
+        "ai"
+      ],
+      "tickers": [
+        "SoftBank",
+        "9984.T",
+        "9984"
+      ],
+      "label": "Fra en konto NDI følger — ikke NDI’s holdning",
+      "curatedFrom": "mads_following"
+    },
+    {
+      "id": "2081548645808402539",
+      "username": "BullTheoryio",
+      "name": "Bull Theory",
+      "text": "BREAKING: Nvidia is in talks to backstop $250 BILLION in financing for OpenAI. The guarantee would let OpenAI lease a 10-gigawatt data center in southern Ohio, built by SoftBank. … Nvidia is also separately weighing another $350 BILLION to fund OpenAI's chip purchases.",
+      "created_at": "2026-07-27T01:14:05.000Z",
+      "url": "https://x.com/BullTheoryio/status/2081548645808402539",
+      "tags": [
+        "chips",
+        "ai",
+        "platforms"
+      ],
+      "tickers": [
+        "NVDA",
+        "SoftBank",
+        "9984.T",
+        "9984"
+      ],
+      "label": "Fra en konto NDI følger — ikke NDI’s holdning",
+      "curatedFrom": "mads_following"
+    }
+  ],
+  "byTheme": {
+    "ndi": [
+      "2106390787793498165",
+      "2072602813142630625",
+      "2016558534171738574",
+      "2013306008832008498"
+    ],
+    "ai": [
+      "2106390787793498165",
+      "2110388749947261403",
+      "2109979767407509867",
+      "2100358110254952615",
+      "2109335734767571448",
+      "2104529180071461332",
+      "2108845669687640090",
+      "2081548645808402539"
+    ],
+    "chips": [
+      "2087874479141589021",
+      "2110388749947261403",
+      "2110628812753158432",
+      "2100358110254952615",
+      "2109335734767571448",
+      "2110381882529718623",
+      "2104529180071461332",
+      "2081548645808402539"
+    ],
+    "platforms": [
+      "2087874479141589021",
+      "2028884313425506598",
+      "1918304252847440315",
+      "2110628812753158432",
+      "2108845669687640090",
+      "2081548645808402539"
+    ],
+    "europe": [
+      "2110388749947261403"
+    ],
+    "space": [
+      "2110494122285191370"
+    ],
+    "physical": [
+      "2109979767407509867",
+      "2110478406294880346",
+      "2109729412589523271"
+    ],
+    "energy": [
+      "2110478406294880346",
+      "2109729412589523271",
+      "2100358110254952615"
+    ],
+    "software": [
+      "2110465338420674785",
+      "2104529180071461332"
+    ],
+    "quantum": [
+      "1920549372925808643"
+    ],
+    "compute": [
+      "2110381882529718623"
+    ]
+  },
+  "byTicker": {
+    "9984": [
+      "2110628812753158432",
+      "2108845669687640090",
+      "2081548645808402539"
+    ],
+    "NVDA": [
+      "2087874479141589021",
+      "2100358110254952615",
+      "2109335734767571448",
+      "2110381882529718623",
+      "2104529180071461332",
+      "2081548645808402539"
+    ],
+    "SE": [
+      "2087874479141589021",
+      "2028884313425506598"
+    ],
+    "HIMS": [
+      "2087874479141589021"
+    ],
+    "PMINDI": [
+      "2072602813142630625",
+      "2013306008832008498",
+      "1920549372925808643"
+    ],
+    "PMINDIAKK": [
+      "2016558534171738574"
+    ],
+    "TSLA": [
+      "2109979767407509867",
+      "2109729412589523271"
+    ],
+    "U": [
+      "2110465338420674785"
+    ],
+    "IONQ": [
+      "1920549372925808643"
+    ],
+    "QBTS": [
+      "1920549372925808643"
+    ],
+    "UPST": [
+      "1918304252847440315"
+    ],
+    "ORCL": [
+      "2110628812753158432"
+    ],
+    "CRWV": [
+      "2110628812753158432",
+      "2110381882529718623"
+    ],
+    "SoftBank": [
+      "2110628812753158432",
+      "2108845669687640090",
+      "2081548645808402539"
+    ],
+    "9984.T": [
+      "2110628812753158432",
+      "2108845669687640090",
+      "2081548645808402539"
+    ],
+    "NBIS": [
+      "2110381882529718623"
+    ]
+  },
+  "chartMarkers": [
+    {
+      "d": "2026-10-15",
+      "title": "X · @FundaAI",
+      "text": "$ORCL and $CRWV face a repricing of credit risk, along with SoftBank in Japan. Higher credit risk premiums → potentially",
+      "url": "https://x.com/FundaAI/status/2110628812753158432",
+      "kind": "x",
+      "source": "X (udvalgt offentligt opslag — ikke NDI’s holdning)"
+    },
+    {
+      "d": "2026-10-12",
+      "title": "X · @jesper_baek",
+      "text": "Teslas succes er bevis… Det lykkedes ikke at gøre elbilen til allemandseje, fordi den var grøn - men fordi de lavede den",
+      "url": "https://x.com/jesper_baek/status/2109729412589523271",
+      "kind": "x",
+      "source": "X · NDI-relateret konto (udkast / markedsføring — kan være NDI-holdning)"
+    },
+    {
+      "d": "2026-10-11",
+      "title": "X · @MilkRoadAI",
+      "text": "Jensen Huang committed $1B to put AI in the hands of America’s scientists (Genesis Mission). Nvidia gave the most at $1B",
+      "url": "https://x.com/MilkRoadAI/status/2109335734767571448",
+      "kind": "x",
+      "source": "X (udvalgt offentligt opslag — ikke NDI’s holdning)"
+    },
+    {
+      "d": "2026-10-10",
+      "title": "X · @BullTheoryio",
+      "text": "BREAKING: SoftBank is seeking to raise up to $100 billion from Gulf investors to expand its AI investments. SoftBank has",
+      "url": "https://x.com/BullTheoryio/status/2108845669687640090",
+      "kind": "x",
+      "source": "X (udvalgt offentligt opslag — ikke NDI’s holdning)"
+    },
+    {
+      "d": "2026-10-03",
+      "title": "X · @InvestNewdeal",
+      "text": "Kvartalswebinar Q3, resultater og opdatering på mikro, makro, AI og geopolitik",
+      "url": "https://x.com/InvestNewdeal/status/2106390787793498165",
+      "kind": "x",
+      "source": "X · NDI-relateret konto (udkast / markedsføring — kan være NDI-holdning)"
+    },
+    {
+      "d": "2026-09-28",
+      "title": "X · @BullTheoryio",
+      "text": "Nvidia launches AI safety tools that can stop AI agents from carrying out cyberattacks. Jensen Huang says this is an eng",
+      "url": "https://x.com/BullTheoryio/status/2104529180071461332",
+      "kind": "x",
+      "source": "X (udvalgt offentligt opslag — ikke NDI’s holdning)"
+    },
+    {
+      "d": "2026-09-16",
+      "title": "X · @MilkRoadAI",
+      "text": "Jensen Huang just mapped out the chain of companies needed to power the AI revolution. AI is becoming a new industrial s",
+      "url": "https://x.com/MilkRoadAI/status/2100358110254952615",
+      "kind": "x",
+      "source": "X (udvalgt offentligt opslag — ikke NDI’s holdning)"
+    },
+    {
+      "d": "2026-08-13",
+      "title": "X · @InvestNewdeal",
+      "text": "$NVDA $SE $HIMS",
+      "url": "https://x.com/InvestNewdeal/status/2087874479141589021",
+      "kind": "x",
+      "source": "X · NDI-relateret konto (udkast / markedsføring — kan være NDI-holdning)"
+    },
+    {
+      "d": "2026-07-27",
+      "title": "X · @BullTheoryio",
+      "text": "BREAKING: Nvidia is in talks to backstop $250 BILLION in financing for OpenAI. The guarantee would let OpenAI lease a 10",
+      "url": "https://x.com/BullTheoryio/status/2081548645808402539",
+      "kind": "x",
+      "source": "X (udvalgt offentligt opslag — ikke NDI’s holdning)"
+    },
+    {
+      "d": "2026-07-02",
+      "title": "X · @InvestNewdeal",
+      "text": "Performance-opdatering efter Q2 2026 — offentlige totalafkasttal for NewDeal Invest-fondene (Fundmarket).",
+      "url": "https://x.com/InvestNewdeal/status/2072602813142630625",
+      "kind": "x",
+      "source": "X · NDI-relateret konto (udkast / markedsføring — kan være NDI-holdning)"
+    },
+    {
+      "d": "2026-03-03",
+      "title": "X · @InvestNewdeal",
+      "text": "NewDeal Invest Fund manager Mads Christiansen comments on $SE earnings.",
+      "url": "https://x.com/InvestNewdeal/status/2028884313425506598",
+      "kind": "x",
+      "source": "X · NDI-relateret konto (udkast / markedsføring — kan være NDI-holdning)"
+    },
+    {
+      "d": "2026-01-28",
+      "title": "X · @InvestNewdeal",
+      "text": "NewDeal Invests akkumulerende fond PMINDIAKK er nu børsnoteret hos Nasdaq Copenhagen",
+      "url": "https://x.com/InvestNewdeal/status/2016558534171738574",
+      "kind": "x",
+      "source": "X · NDI-relateret konto (udkast / markedsføring — kan være NDI-holdning)"
+    }
+  ],
+  "callCountNote": "Hentet via x MCP get_users_by_usernames + get_users_posts (4 konti). Limits: 30/min, 1000/day. Lane X 2026-10-15: ét søgekald efter SoftBank hos konti fra mads_following (BullTheoryio). Browseren kalder ikke X."
+}

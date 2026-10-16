@@ -4,6 +4,7 @@
  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
  <meta name="robots" content="noindex,nofollow">
  <title>NDI-perspektiv · NDI Analytics</title>
+ <meta name="description" content="Hvorfor ejer fonden netop disse selskaber? Kort forklaret pr. selskab og samlet i temaer: hvad ejer man, og hvor i værdikæden ligger selskabet. Generel information, ikke rådgivning.">
  <link rel="stylesheet" href="css/ndi.css">
  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
  <!-- og:start -->
@@ -11,7 +12,7 @@
  <meta property="og:site_name" content="NDI Analytics (udkast)">
  <meta property="og:locale" content="da_DK">
  <meta property="og:title" content="NDI-perspektiv · NDI Analytics">
- <meta property="og:description" content="NDI Analytics - klikbart udkast. Fonden, porteføljen og tech-temaer set gennem NDI&#x27;s linse. Generel information, ikke rådgivning.">
+ <meta property="og:description" content="Hvorfor ejer fonden netop disse selskaber? Kort forklaret pr. selskab og samlet i temaer: hvad ejer man, og hvor i værdikæden ligger selskabet. Generel information, ikke rådgivning.">
  <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/ndi-perspektiv.html">
  <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
  <meta property="og:image:width" content="1200">
@@ -19,6 +20,38 @@
  <meta property="og:image:alt" content="NDI Analytics - udkast. Gå på opdagelse i porteføljen.">
  <meta name="twitter:card" content="summary_large_image">
  <!-- og:end -->
+<style>
+ .lens-m{margin-bottom:6px}
+ table.lens-table{min-width:0}
+ table.lens-table td,table.lens-table th{white-space:normal;text-align:left;vertical-align:top;line-height:1.5}
+ table.lens-table td:first-child{width:24%;font-weight:600}
+ @media(max-width:700px){
+  table.lens-table thead{display:none}
+  table.lens-table tr{display:block;border-bottom:1px solid var(--line);padding:6px 0}
+  table.lens-table td{display:block;width:auto!important;border:0;padding:6px 12px;position:static}
+  table.lens-table td:first-child{font-size:15px}
+ }
+ .lens-hint{display:block;color:var(--muted);font-size:13px;line-height:1.45;margin:2px 0 6px}
+ .lens-legend dl{display:grid;gap:8px;color:var(--muted);font-size:14px;line-height:1.5}
+ @media(min-width:760px){.lens-legend dl{grid-template-columns:1fr 1fr}}
+ .lens-legend dt{color:var(--text);font-weight:600}
+ .lens-tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:14px 0 6px}
+ .lens-tools input{flex:1;min-width:200px;background:#0b171d;border:1px solid var(--line);border-radius:8px;padding:10px 12px;color:var(--text);min-height:44px}
+ .lens-count{color:var(--muted);font-size:14px}
+ .lens-jump{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 14px;padding:0;list-style:none}
+ .lens-jump a{display:inline-block;border:1px solid var(--line);border-radius:99px;padding:6px 12px;font-size:14px;text-decoration:none;min-height:32px}
+ details.lens-grp{border:1px solid var(--line);border-radius:10px;margin:10px 0;padding:0 14px}
+ details.lens-grp>summary{cursor:pointer;padding:14px 0;font-weight:600;font-size:17px;list-style-position:inside;min-height:44px}
+ details.lens-grp>summary .lens-n{color:var(--muted);font-weight:400;font-size:14px;margin-left:6px}
+ .lens-grp p.lens-gintro{color:var(--muted);font-size:14px;line-height:1.5;margin:0 0 10px}
+ .lens-co{border-top:1px solid var(--line);padding:12px 0}
+ .lens-co h3{font-size:16px;margin:0 0 4px}
+ .lens-co .lens-line{font-size:15px;line-height:1.5;margin:2px 0}
+ .lens-co .lens-line span.k{color:var(--muted)}
+ .lens-co details summary{cursor:pointer;color:var(--brand);font-size:14px;min-height:32px;padding:6px 0}
+ .lens-tag-f{font-size:12px;color:var(--muted);border:1px dashed var(--line);border-radius:99px;padding:1px 8px;margin-left:6px;white-space:nowrap}
+ .lens-co[hidden],.lens-grp[hidden]{display:none}
+</style>
 </head>
 <body>
  <a class="skip" href="#main">Gå til indhold</a>
@@ -27,22 +60,105 @@
  <nav class="nav"><a href="index.html">← Entré</a><a href="vaerdikaeder.html">Værdikæder</a><a href="laer/index.html">Lær</a></nav>
  </header>
  <main id="main"><p style="color:var(--muted)">Henter…</p></main>
+ <footer class="site-footer">
+ <p><strong>Markedsføringsmateriale.</strong> Læs <a href="https://fundmarket.dk/wp-content/uploads/Faellesprospekt-for-afdelinger-og-andelsklasser-i-Investeringsforeningen-Portfoliomanager-opdateret-24.10.2025.pdf" rel="noopener" target="_blank">prospektet ↗</a> og KID for <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm140b" rel="noopener" target="_blank">PMINDI ↗</a> eller <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm145b" rel="noopener" target="_blank">PMINDIAKK ↗</a>, før du træffer en endelig investeringsbeslutning.</p>
+ <p>Udkast / noindex. Ikke den officielle side og ingen investeringsrådgivning. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering. <a href="om-data.html">Data og ordliste</a>.</p>
+ </footer>
  <script type="module">
  const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
  const AI_BADGE = '<span class="badge" title="Tekst genereret med AI - udkast">AI-udkast</span>';
  const pack = await fetch('data/unique-metrics.json').then(r => r.json());
- const rows = Object.entries(pack.byIsin||{}).map(([isin,v]) => `
- <tr>
- <td><a href="selskab.html?isin=${encodeURIComponent(isin)}">${esc(v.name)}</a></td>
- <td>${(v.metrics||[]).map(m => `<strong>${esc(m.label)}:</strong> ${esc(m.value)}${m.ai ? ` ${AI_BADGE}` : ''}`).join('<br>')}</td>
- </tr>`).join('');
+ const GROUP_INTRO = {
+  'Chips': 'Selskaber, der designer eller fremstiller chips, eller leverer udstyret til at lave dem.',
+  'Software': 'Programmer og tjenester, som virksomheder og forbrugere bruger oven på computerkraften.',
+  'Platforme': 'Store digitale platforme, hvor mange brugere og kunder mødes.',
+  'Energi': 'Strøm, lagring og net. Datacentre bruger meget strøm, så energi er en dæmning i flodsystemet.',
+  'Energiressourcer': 'Råstoffer som kobber, lithium og uran, som elnettet og batterier bygger på.',
+  'Fysisk tech': 'Teknologi, man kan røre ved: robotter, køretøjer, maskiner og komponenter.',
+  'Optik & netværk': 'Kabler, lasere og netværksudstyr, der flytter data mellem chips og datacentre.',
+  'SpaceTech': 'Satellitter, opsendelse og data fra rummet.',
+  'Compute': 'Den rå computerkraft: servere, datacentre og cloud.',
+  'Connect': 'Forbindelser: mobilnet, satellitforbindelser og udstyr, der kobler ting sammen.',
+  'Quantum': 'Kvantecomputere. Et ungt område, hvor temaet stadig er et forslag.',
+  'Andet / uklassificeret': 'Selskaber, NDI endnu ikke har sat i et tema. Vi gætter ikke.'
+ };
+ const tagOf = (v) => (v.metrics || []).find(m => /^NDI-tag/.test(m.label));
+ const primary = (t) => {
+  if (!t) return 'Andet / uklassificeret';
+  const v = String(t.value || '').replace(/\s*\(forslag\)\s*/i, '').trim();
+  if (/^andet/i.test(v)) return 'Andet / uklassificeret';
+  const first = v.split('+')[0].trim();
+  const m = { 'chips': 'Chips', 'connect': 'Connect', 'compute': 'Compute', 'fysisk': 'Fysisk tech', 'fysisk tech': 'Fysisk tech', 'energi': 'Energi', 'platforme': 'Platforme' };
+  return m[first.toLowerCase()] || first;
+ };
+ const groups = new Map();
+ for (const [isin, v] of Object.entries(pack.byIsin || {})) {
+  const g = primary(tagOf(v));
+  if (!groups.has(g)) groups.set(g, []);
+  groups.get(g).push([isin, v]);
+ }
+ const order = [...groups.entries()].sort((a, b) => (a[0].startsWith('Andet') - b[0].startsWith('Andet')) || b[1].length - a[1].length);
+ const slug = (g) => 'lg-' + g.toLowerCase().replace(/[^a-zæøå0-9]+/g, '-').replace(/-+$/, '');
+ const val = (m) => m.href ? `<a href="${esc(m.href)}">${esc(m.value)}</a>` : esc(m.value);
+ const card = ([isin, v]) => {
+  const ms = v.metrics || [];
+  const by = (l) => ms.find(m => m.label === l);
+  const tag = tagOf(v), own = by('Hvad ejer man?'), place = by('Plads i værdikæden'), watch = by('Hold øje med');
+  const forslag = tag && /forslag/i.test(tag.value);
+  const extra = ms.filter(m => m !== tag && m !== own && m !== place && m !== watch && !(m.label === 'Livscyklus' && /ikke klassificeret/i.test(m.value)));
+  const detail = [tag, own, place, watch, ...extra].filter(m => m && (m.hint || m === watch || extra.includes(m))).map(m =>
+   `<div class="lens-m"><strong>${esc(m.label)}${/\?$/.test(m.label) ? '' : ':'}</strong> ${m === own || m === place ? '' : `${val(m)}${m.ai ? ` ${AI_BADGE}` : ''}`}${m.hint ? `<span class="lens-hint">${esc(m.hint)}</span>` : ''}</div>`).join('');
+  const hay = [v.name, ...ms.map(m => m.value)].join(' ').toLowerCase();
+  return `<article class="lens-co" data-q="${esc(hay)}">
+   <h3><a href="selskab.html?isin=${encodeURIComponent(isin)}">${esc(v.name)}</a>${tag ? ` <span class="lens-tag-f" title="${forslag ? 'Temaet er et forslag og afventer NDI-gennemgang' : 'NDI-tema'}">${esc(tag.value)}</span>` : ''}</h3>
+   ${own ? `<p class="lens-line"><span class="k">Hvad ejer man?</span> ${esc(own.value)}${own.ai ? ` ${AI_BADGE}` : ''}</p>` : ''}
+   ${place ? `<p class="lens-line"><span class="k">Plads i værdikæden:</span> ${val(place)}</p>` : ''}
+   ${detail ? `<details><summary>Hvorfor ejer vi den? Mere fra linsen</summary>${detail}</details>` : ''}
+  </article>`;
+ };
+ const total = order.reduce((n, [, l]) => n + l.length, 0);
+ const forslagN = order.reduce((n, [, l]) => n + l.filter(([, v]) => /forslag/i.test(tagOf(v)?.value || '')).length, 0);
  document.getElementById('main').innerHTML = `
  <p class="eyebrow">NDI-PERSPEKTIV · UDKAST</p>
  <h1>NDI-linsen på udvalgte selskaber</h1>
  <p class="lede">${esc(pack.note || 'Kvalitativ linse, udkast. Ingen kurser, afkast eller nøgletal.')}</p>
- <p class="band">Eksponering og pædagogik, ikke anbefaling. Åbn et selskab for forklaringer og links til <a href="vaerdikaede.html">værdikæden</a> og <a href="temaer.html">temaerne</a>.</p>
- <div class="table-wrap"><table class="data"><thead><tr><th>Selskab</th><th>NDI-linse</th></tr></thead><tbody>${rows}</tbody></table></div>
+ <p class="band">Eksponering og pædagogik, ikke anbefaling. Vi vælger udviklingen, ikke vinderen: linsen forklarer, hvad et selskab giver andel i, ikke om det bliver en god investering. Åbn et selskab for <a href="vaerdikaede.html">værdikæden</a> og <a href="temaer.html">temaerne</a>, eller læs <a href="laer/saadan-taenker-vi.html#tv-hv">Hvorfor ejer vi den?</a></p>
+ <section class="panel lens-legend">
+ <h2 style="font-size:16px;margin-bottom:6px">Hvad linsen spørger om</h2>
+ <p style="color:var(--muted);line-height:1.55;margin-bottom:8px">NDI ser ikke først på P/E. Det første spørgsmål er, hvilken teknologi og hvilket led i værdikæden et selskab giver eksponering mod. Vi ser AI-værdikæden som et <a href="om-data.html#g-flodsystem">flodsystem</a>, hvor efterspørgslen presser på en række <a href="om-data.html#g-daemning">dæmninger</a>: <a href="om-data.html#g-energi">energi</a>, datacentre, halvledere, cloud og apps.</p>
+ <dl>
+ <div><dt>NDI-tags</dt><dd>Temaer selskabet hører til. Et selskab kan have flere tags (fx Tesla). Står der «forslag», afventer temaet NDI's gennemgang (${forslagN} af ${total} selskaber).</dd></div>
+ <div><dt>Hvad ejer man?</dt><dd>Hvad aktionæren reelt får andel i: produkter, platforme eller ejerandele. For en investeringskoncern som SoftBank Group ser linsen på <a href="om-data.html#g-indre-vaerdi">indre værdi</a> og gæld.</dd></div>
+ <div><dt>Plads i værdikæden</dt><dd>Hvilket led (dæmning) selskabet ligger ved. Klik for at se kæden.</dd></div>
+ <div><dt>Hold øje med</dt><dd>Forhold, der kan ændre billedet, fx <a href="om-data.html#g-kundekoncentration">kundekoncentration</a>, <a href="om-data.html#g-kapitalbehov">kapitalbehov</a> eller <a href="om-data.html#g-eksportregler">eksportregler</a>. Ikke en prognose og ikke en anbefaling.</dd></div>
+ <div><dt>Livscyklus</dt><dd><a href="om-data.html#g-modenhed">Modenhed</a> fra før omsætning til value. NDI har ikke sat livscyklus for nogen selskaber endnu, så feltet er udeladt nedenfor. Vi gætter ikke.</dd></div>
+ </dl>
+ </section>
+ <h2 style="margin-top:22px">${total} selskaber i ${order.length} temaer</h2>
+ <div class="lens-tools">
+  <label for="lens-q" class="lens-count">Find et selskab eller et ord</label>
+  <input id="lens-q" type="search" placeholder="Fx Tesla, kobber eller optik" autocomplete="off">
+  <span class="lens-count" id="lens-hits" aria-live="polite"></span>
+ </div>
+ <ul class="lens-jump" aria-label="Spring til tema">${order.map(([g, l]) => `<li><a href="#${slug(g)}">${esc(g)} · ${l.length}</a></li>`).join('')}</ul>
+ ${order.map(([g, l]) => `<details class="lens-grp" id="${slug(g)}"><summary>${esc(g)}<span class="lens-n">${l.length} selskaber</span></summary>${GROUP_INTRO[g] ? `<p class="lens-gintro">${esc(GROUP_INTRO[g])}</p>` : ''}${l.sort((a, b) => a[1].name.localeCompare(b[1].name, 'da')).map(card).join('')}</details>`).join('')}
+ <p class="band" style="margin-top:18px">Generel information, ikke rådgivning. Før du investerer, så læs dokumentet med central information (KID) for den andelsklasse, du overvejer: <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm140b" rel="noopener" target="_blank">KID for PMINDI ↗</a> eller <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm145b" rel="noopener" target="_blank">KID for PMINDIAKK ↗</a>. Se også <a href="invester.html">Sådan investerer du</a>.</p>
  <p class="warn">Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.</p>`;
+ const q = document.getElementById('lens-q'), hits = document.getElementById('lens-hits');
+ const grps = [...document.querySelectorAll('details.lens-grp')];
+ const run = () => {
+  const t = q.value.trim().toLowerCase();
+  let n = 0;
+  for (const g of grps) {
+   let k = 0;
+   for (const c of g.querySelectorAll('.lens-co')) { const ok = !t || c.dataset.q.includes(t); c.hidden = !ok; if (ok) k++; }
+   g.hidden = k === 0; g.open = !!t && k > 0; n += k;
+  }
+  hits.textContent = t ? (n ? `${n} selskaber passer` : 'Ingen selskaber passer. Prøv et andet ord.') : '';
+ };
+ q.addEventListener('input', run);
+ const openHash = () => { const el = location.hash && document.getElementById(location.hash.slice(1)); if (el && el.tagName === 'DETAILS') el.open = true; };
+ addEventListener('hashchange', openHash); openHash();
  </script>
 </body>
 </html>

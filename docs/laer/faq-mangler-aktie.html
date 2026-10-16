@@ -4,13 +4,14 @@
  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
  <meta name="robots" content="noindex,nofollow">
  <title>Hvorfor mangler aktie X? · NDI Analytics</title>
+ <meta name="description" content="Mangler et selskab i porteføljen? Måske står det under et andet navn, eller beholdningen er forsinket. Fravær er aldrig en vurdering af selskabet.">
  <link rel="stylesheet" href="../css/ndi.css">
  <!-- og:start -->
  <meta property="og:type" content="website">
  <meta property="og:site_name" content="NDI Analytics (udkast)">
  <meta property="og:locale" content="da_DK">
  <meta property="og:title" content="Hvorfor mangler aktie X? · NDI Analytics">
- <meta property="og:description" content="Brugere spørger ofte, hvorfor et bestemt selskab ikke er i porteføljen.">
+ <meta property="og:description" content="Mangler et selskab i porteføljen? Måske står det under et andet navn, eller beholdningen er forsinket. Fravær er aldrig en vurdering af selskabet.">
  <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/laer/faq-mangler-aktie.html">
  <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
  <meta property="og:image:width" content="1200">
@@ -18,6 +19,27 @@
  <meta property="og:image:alt" content="NDI Analytics - udkast. Gå på opdagelse i porteføljen.">
  <meta name="twitter:card" content="summary_large_image">
  <!-- og:end -->
+<style>
+  .sp h2{font-size:18px;margin:0 0 8px}
+  .sp p{color:var(--muted);line-height:1.6;margin:0 0 10px}
+  .sp .src{font-size:13px;color:var(--faint);margin:8px 0 0}
+  .look{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 4px}
+  .look input{flex:1;min-width:180px;padding:10px 12px;border-radius:8px;border:1px solid var(--line);background:var(--panel-2);color:var(--text);font:inherit}
+  .steps{list-style:none;counter-reset:s;margin:12px 0 0;padding:0;display:grid;gap:8px}
+  .steps li{counter-increment:s;display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;color:var(--muted);line-height:1.5}
+  .steps li::before{content:counter(s);display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--yellow);color:#111;font-weight:700;font-size:14px}
+  .steps strong{color:var(--text)}
+  .fun{display:grid;gap:6px;margin:14px 0 4px;justify-items:center}
+  .fun > div{box-sizing:border-box;padding:10px 14px;border-radius:10px;background:var(--panel-2);border:1px solid var(--line);text-align:center;color:var(--muted);font-size:14px;line-height:1.4}
+  .fun b{display:block;color:var(--text);font-size:15px}
+  .fun .last{border:2px solid var(--yellow)}
+  .fun .arr{border:0;background:none;padding:0;color:var(--faint);font-size:14px}
+  .why{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px}
+  .why > div{background:var(--panel-2);border-radius:12px;padding:14px;line-height:1.5;color:var(--muted);font-size:14px;border-top:3px solid var(--cyan)}
+  .why h3{margin:0 0 4px;font-size:15px;color:var(--text)}
+  .not{margin:12px 0 0;padding:12px 16px;border-left:3px solid var(--yellow);background:var(--panel-2);border-radius:0 10px 10px 0;color:var(--text);line-height:1.5}
+  @media (max-width:640px){.why{grid-template-columns:1fr}.fun > div{width:100% !important}}
+ </style>
 </head>
 <body>
  <a class="skip" href="#main">Gå til indhold</a>
@@ -28,14 +50,55 @@
  <main id="main">
  <p class="eyebrow">LÆR</p>
  <h1>Hvorfor mangler aktie X?</h1>
- 
-<p class="lede">Brugere spørger ofte, hvorfor et bestemt selskab ikke er i porteføljen.</p>
-<section class="panel" style="color:var(--muted);line-height:1.6;display:grid;gap:12px">
-<p>Typiske grunde: selskabet er for småt eller illikvidt til fondens rammer, det passer ikke til den ønskede spredning, eller det vurderes ikke at give den eksponering, fonden søger i værdikæden.</p>
-<p>NDI Analytics viser kun selskaber i den offentlige beholdning, som er forsinket (se <a href="forsinket-beholdning.html">Forsinket beholdning</a>). Et selskab kan derfor være købt eller solgt siden. Fravær er ikke en anbefaling om at købe eller undgå noget.</p>
-</section>
+ <p class="lede">Brugere spørger ofte, hvorfor et bestemt selskab ikke er i porteføljen. Nogle gange er det der alligevel under et andet navn. Andre gange er der en god grund til, at det mangler. Fravær er aldrig en vurdering af selskabet.</p>
+
+ <section class="panel sp" aria-labelledby="fm-look">
+  <h2 id="fm-look">Først: er det der under et andet navn?</h2>
+  <form class="look" action="../selskaber.html" method="get" role="search">
+   <label for="fm-q" class="sr-only">Søg selskab</label>
+   <input id="fm-q" name="q" placeholder="Navn, ticker eller ISIN" autocomplete="off">
+   <button class="cta" type="submit">Søg i selskaber</button>
+  </form>
+  <ol class="steps">
+   <li><span><strong>Prøv flere navne.</strong> Navnene står, som de er noteret, ofte forkortet. Facebook hedder Meta Platforms, og TSMC står som «Taiwan Semi Sp ADR» med tickeren TSM. Søg på et kort stykke af navnet eller på tickeren.</span></li>
+   <li><span><strong>Tjek datoen.</strong> Vi viser beholdningen pr. <strong>1. juni 2026</strong>. Er selskabet købt senere, står det ikke her endnu. Se <a href="forsinket-beholdning.html">Hvorfor er beholdningen forsinket?</a></span></li>
+   <li><span><strong>Tjek andelsklassen.</strong> De to klasser har samme strategi, men ikke helt de samme beholdninger. Se <a href="../om-data.html#g-andelsklasse">andelsklasse</a> i ordlisten.</span></li>
+  </ol>
+ </section>
+
+ <section class="panel sp" aria-labelledby="fm-fun" style="margin-top:14px">
+  <h2 id="fm-fun">Fra alle børsnoterede selskaber til porteføljen</h2>
+  <p>Tænk på det som en tragt. Et selskab skal igennem flere lag for at ende i fonden, og det kan falde fra på hvert lag.</p>
+  <div class="fun" role="img" aria-label="Tragt i fire lag: alle børsnoterede selskaber, teknologi i bred forstand, kan handles i fondens størrelse, porteføljen. Pr. 1. juni 2026 havde PMINDI 345 positioner.">
+   <div style="width:100%"><b>Alle børsnoterede selskaber</b>Titusindvis af selskaber verden over</div>
+   <div class="arr" aria-hidden="true">▼</div>
+   <div style="width:84%"><b>Teknologi i bred forstand</b>Hele værdikæden, fra energi og råstoffer til software</div>
+   <div class="arr" aria-hidden="true">▼</div>
+   <div style="width:68%"><b>Kan handles i fondens størrelse</b>Nok omsætning i aktien til at købe og sælge (likviditet)</div>
+   <div class="arr" aria-hidden="true">▼</div>
+   <div class="last" style="width:52%"><b>Porteføljen</b>PMINDI 1. juni 2026: 345 positioner</div>
+  </div>
+  <p class="src">Lagene er en forenkling til forklaring, ikke fondens formelle udvælgelsesproces. Antal positioner fra fondens forsinkede beholdning.</p>
+ </section>
+
+ <section class="panel sp" aria-labelledby="fm-why" style="margin-top:14px">
+  <h2 id="fm-why">Typiske grunde</h2>
+  <div class="why">
+   <div><h3>For lille</h3>Selskabet er for lille, eller aktien handles for lidt, til at fonden kan købe og sælge den i den størrelse, den har brug for.</div>
+   <div><h3>Uden for feltet</h3>Fonden investerer i teknologi og i hele værdikæden bag den, se <a href="../vaerdikaeder.html">Værdikæder</a>. Et selskab uden for det felt hører ikke hjemme her.</div>
+   <div><h3>Købt eller solgt siden</h3>Beholdningen er forsinket. Et selskab kan være kommet ind eller ud efter 1. juni 2026.</div>
+   <div><h3>Mange, men ikke alle</h3>Fonden ejer bredt, fordi vi ikke kan pege på vinderne. Bredt er ikke det samme som alt. Se <a href="hvorfor-mange-aktier.html">Hvorfor så mange aktier?</a></div>
+  </div>
+  <p class="not">At et selskab mangler, betyder ikke, at det er dårligt, dyrt eller noget, man bør undgå. Og at et selskab er med, betyder ikke, at det er godt eller billigt. Siden viser eksponering, ikke anbefalinger.</p>
+  <p class="src" style="margin-top:10px">Grunden «for lille» er nævnt af fondschef Mads Christiansen. Fonden offentliggør ikke begrundelser for enkelte selskaber. Se <a href="../om-data.html#g-likviditet">likviditet</a> og <a href="../om-data.html#g-ticker">ticker</a> i ordlisten.</p>
+ </section>
+ <p class="band" style="margin-top:16px">Generel information, ikke rådgivning. Før du investerer, så læs dokumentet med central information (KID) for den andelsklasse, du overvejer: <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm140b" rel="noopener" target="_blank">KID for PMINDI ↗</a> eller <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm145b" rel="noopener" target="_blank">KID for PMINDIAKK ↗</a>.</p>
  <p class="warn">Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.</p>
  <p class="band">Generel information. Ikke investeringsrådgivning.</p>
  </main>
+ <footer class="site-footer">
+ <p><strong>Markedsføringsmateriale.</strong> Læs <a href="https://fundmarket.dk/wp-content/uploads/Faellesprospekt-for-afdelinger-og-andelsklasser-i-Investeringsforeningen-Portfoliomanager-opdateret-24.10.2025.pdf" rel="noopener" target="_blank">prospektet ↗</a> og KID for <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm140b" rel="noopener" target="_blank">PMINDI ↗</a> eller <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm145b" rel="noopener" target="_blank">PMINDIAKK ↗</a>, før du træffer en endelig investeringsbeslutning.</p>
+ <p>Udkast / noindex. Ikke den officielle side og ingen investeringsrådgivning. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering. <a href="../om-data.html">Data og ordliste</a>.</p>
+ </footer>
 </body>
 </html>

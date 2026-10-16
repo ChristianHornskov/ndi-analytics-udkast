@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="da">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+ <meta name="robots" content="noindex,nofollow">
+ <title>Sådan læser du grafen · NDI Analytics</title>
+ <meta name="description" content="Fem ting at kigge efter i fondens graf: startdag, top og bund, udbytte, kalenderår og seneste kurs. Og hvorfor startdagen kan ændre billedet.">
+ <link rel="stylesheet" href="../css/ndi.css">
+ <!-- og:start -->
+ <meta property="og:type" content="website">
+ <meta property="og:site_name" content="NDI Analytics (udkast)">
+ <meta property="og:locale" content="da_DK">
+ <meta property="og:title" content="Sådan læser du grafen · NDI Analytics">
+ <meta property="og:description" content="Fem ting at kigge efter i fondens graf: startdag, top og bund, udbytte, kalenderår og seneste kurs. Og hvorfor startdagen kan ændre billedet.">
+ <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/laer/laes-grafen.html">
+ <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
+ <meta property="og:image:width" content="1200">
+ <meta property="og:image:height" content="630">
+ <meta property="og:image:alt" content="NDI Analytics - udkast. Gå på opdagelse i porteføljen.">
+ <meta name="twitter:card" content="summary_large_image">
+ <!-- og:end -->
+ <style>
+  .sp h2{font-size:18px;margin:0 0 8px}
+  .sp p{color:var(--muted);line-height:1.6;margin:0 0 10px}
+  .sp p strong{color:var(--text)}
+  .sp .src{font-size:13px;color:var(--faint);margin:8px 0 0}
+  .gfig{margin:6px 0 0}
+  .gfig svg{display:block;width:100%;height:auto}
+  .gfig .ax{stroke:var(--line);stroke-width:1}
+  .gfig .yr{stroke:var(--line);stroke-width:1;stroke-dasharray:3 4}
+  .gfig .tot{fill:none;stroke:var(--cyan);stroke-width:2.5;stroke-linejoin:round}
+  .gfig .kurs{fill:none;stroke:var(--faint);stroke-width:1.6;stroke-dasharray:5 4;stroke-linejoin:round}
+  .gfig .dd{fill:var(--neg);opacity:.35}
+  .gfig .pin circle{fill:var(--yellow)}
+  .gfig .pin text{fill:#0b171d;font-size:13px;font-weight:700;text-anchor:middle}
+  .gfig .lbl{fill:var(--faint);font-size:11px}
+  .gfig figcaption{font-size:13px;color:var(--faint);margin-top:6px;line-height:1.5}
+  .key{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--muted);margin:8px 0 0}
+  .key i{display:inline-block;width:18px;height:0;border-top:2.5px solid var(--cyan);vertical-align:4px;margin-right:6px}
+  .key i.k{border-top:1.6px dashed var(--faint)}
+  .key i.d{height:10px;border:0;background:var(--neg);opacity:.45;vertical-align:-1px}
+  .five{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:10px}
+  .five li{display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;color:var(--muted);line-height:1.5;font-size:15px}
+  .five .n{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--yellow);color:#0b171d;font-weight:700;font-size:14px}
+  .five strong{color:var(--text)}
+  .try{display:grid;gap:10px;margin-top:8px}
+  .try label{color:var(--text);font-weight:600}
+  .try input[type=range]{width:100%;accent-color:var(--yellow)}
+  .res{background:var(--panel-2);border-radius:10px;padding:12px 14px;color:var(--muted);line-height:1.5}
+  .res b{color:var(--text);font-size:20px;font-variant-numeric:tabular-nums}
+  #lg-mini .seg{fill:none;stroke:var(--yellow);stroke-width:3;stroke-linejoin:round}
+  #lg-mini .rest{fill:none;stroke:var(--faint);opacity:.55;stroke-width:2;stroke-linejoin:round}
+  #lg-mini .dot{fill:var(--yellow)}
+  .pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px}
+  .pair div{background:var(--panel-2);border-radius:10px;padding:12px;color:var(--muted);font-size:14px;line-height:1.5}
+  .pair h3{font-size:15px;margin:0 0 4px;color:var(--text)}
+  .pair .no{border-top:3px solid var(--faint)}
+  .pair .yes{border-top:3px solid var(--yellow)}
+  .pair ul{margin:4px 0 0;padding-left:18px}
+  @media (max-width:640px){
+   .pair{grid-template-columns:1fr}
+   .gfig .lbl{font-size:13px}
+  }
+ </style>
+</head>
+<body>
+ <a class="skip" href="#main">Gå til indhold</a>
+ <header class="site-header">
+ <a class="brand" href="../index.html"><img src="../assets/mark.svg" width="34" height="27" alt=""><span>NewDeal Invest</span></a>
+ <nav class="nav"><a href="index.html">← Lær</a></nav>
+ </header>
+ <main id="main">
+ <p class="eyebrow">LÆR</p>
+ <h1>Sådan læser du grafen</h1>
+ <p class="lede">Grafen på <a href="../index.html?view=fonden">Fonden</a> viser en lang streg. Før du læser noget ud af den, er det værd at vide, hvor stregen starter, hvad den regner med, og hvorfor vi ikke viser de korte perioder.</p>
+
+ <section class="panel sp" aria-labelledby="lg-five">
+  <h2 id="lg-five">Fem ting at kigge efter</h2>
+  <p>Kurven er tænkt. Den ligner en teknologifond over tre år, men tallene er ikke fondens.</p>
+  <figure class="gfig">
+   <svg viewBox="0 0 600 236" role="img" aria-labelledby="lg-svg-t">
+    <title id="lg-svg-t">Tænkt graf over tre år med fem nummererede punkter: startdag, top, bund efter et fald på 30 procent, kalenderår og seneste kurs. En stiplet linje for andelskursen ligger under totalafkastet efter hvert udbytte.</title>
+    <line class="ax" x1="24" y1="210" x2="576" y2="210"/>
+    <line class="yr" x1="210" y1="20" x2="210" y2="210"/>
+    <line class="yr" x1="390" y1="20" x2="390" y2="210"/>
+    <text class="lbl" x="120" y="226" text-anchor="middle">År 1</text>
+    <text class="lbl" x="300" y="226" text-anchor="middle">År 2</text>
+    <text class="lbl" x="480" y="226" text-anchor="middle">År 3</text>
+    <polygon class="dd" points="195,96 210,96 225,96 240,96 255,96 270,96 285,96 285,195.8 270,183.9 255,167.2 240,148.2 225,126.9 210,107.9"/>
+    <polyline class="kurs" points="30,186.2 45,176.8 60,164.9 75,172.0 90,157.8 105,143.5 120,150.6 135,136.4 150,119.8 165,129.2 180,112.6 195,96.0 210,122.9 225,141.0 240,161.4 255,179.5 270,195.3 285,206.6 300,199.8 315,190.8 330,179.5 345,188.5 360,174.9 375,161.4 390,163.1 405,152.3 420,160.9 435,145.9 450,132.9 465,120.0 480,128.6 495,113.5 510,100.6 525,109.2 540,94.2 555,83.4 570,74.8"/>
+    <polyline class="tot" points="30,186.2 45,176.8 60,164.9 75,172.0 90,157.8 105,143.5 120,150.6 135,136.4 150,119.8 165,129.2 180,112.6 195,96.0 210,107.9 225,126.9 240,148.2 255,167.2 270,183.9 285,195.8 300,188.6 315,179.1 330,167.2 345,176.8 360,162.5 375,148.2 390,136.4 405,124.5 420,134.0 435,117.4 450,103.1 465,88.9 480,98.4 495,81.8 510,67.5 525,77.0 540,60.4 555,48.5 570,39.0"/>
+    <g class="pin"><circle cx="30" cy="166" r="11"/><text x="30" y="171">1</text></g>
+    <g class="pin"><circle cx="195" cy="76" r="11"/><text x="195" y="81">2</text></g>
+    <g class="pin"><circle cx="255" cy="122" r="11"/><text x="255" y="127">3</text></g>
+    <g class="pin"><circle cx="390" cy="32" r="11"/><text x="390" y="37">4</text></g>
+    <g class="pin"><circle cx="570" cy="19" r="11"/><text x="570" y="24">5</text></g>
+   </svg>
+   <div class="key" aria-hidden="true"><span><i></i>Totalafkast (udbytte geninvesteret)</span><span><i class="k"></i>Andelskurs (falder på ex-dato)</span><span><i class="d"></i>Fald fra top</span></div>
+   <figcaption>Tænkt eksempel. Ikke fondens tal og ingen prognose.</figcaption>
+  </figure>
+  <ol class="five">
+   <li><span class="n">1</span><span><strong>Hvor starter stregen?</strong> Fondens graf starter ved første <a href="../om-data.html#g-nav">NAV</a>, ikke en dag, vi har valgt, fordi den ser god ud. Den akkumulerende klasse har ingen graf, før den har 12 måneders historik.</span></li>
+   <li><span class="n">2</span><span><strong>Toppen er ikke din startdag.</strong> Kom du ind her, har du et andet forløb end grafen. Tallene på siden regner fra fondens start, ikke fra din handel.</span></li>
+   <li><span class="n">3</span><span><strong>Det røde er et fald fra top.</strong> I eksemplet ca. −30&nbsp;% på et halvt år. Fondens egne fald, hvor dybe og hvor lange, står på <a href="../drawdown.html">Fald fra top</a>. Se også <a href="../om-data.html#g-drawdown">drawdown</a> i ordlisten.</span></li>
+   <li><span class="n">4</span><span><strong>Kalenderår er hele perioder.</strong> Tabellen under grafen viser hvert kalenderår for sig. Det første år er ofte et <a href="../om-data.html#g-delaar">delår</a> og har en stjerne.</span></li>
+   <li><span class="n">5</span><span><strong>Den blå streg er totalafkast.</strong> For den udloddende klasse falder andelskursen med <a href="../om-data.html#g-udbytte">udbyttet</a> på ex-dato (den stiplede streg). Totalafkastet regner, som om udbyttet var geninvesteret. Det er den, du skal læse. Se <a href="udbytte-vs-akk.html">Udbytte eller akkumulerende?</a></span></li>
+  </ol>
+  <p class="src" style="margin-top:12px">Alle tal på Fonden er i kroner, efter fondens <a href="../om-data.html#g-omkostninger">løbende omkostninger</a> og før skat og dine egne handelsomkostninger. Fonden har intet fast <a href="../om-data.html#g-benchmark">benchmark</a>, så grafen står alene.</p>
+ </section>
+
+ <section class="panel sp" aria-labelledby="lg-try" style="margin-top:14px">
+  <h2 id="lg-try">Prøv selv: flyt startdagen</h2>
+  <p>Samme tænkte kurve, samme slutdag. Træk i skyderen og se, hvad afkastet bliver, når man starter et andet sted.</p>
+  <div class="try">
+   <label for="lg-s">Start i måned <span id="lg-sv">0</span> af 36</label>
+   <input id="lg-s" type="range" min="0" max="35" step="1" value="0" aria-describedby="lg-out">
+   <svg id="lg-mini" viewBox="0 0 600 120" aria-hidden="true"><polyline class="rest" points=""/><polyline class="seg" points=""/><circle class="dot" r="5" cx="30" cy="0"/></svg>
+   <p class="res" id="lg-out" aria-live="polite">Fra måned 0 til måned 36: <b>+62&nbsp;%</b> i alt, ca. 17,4&nbsp;% pr. år.</p>
+  </div>
+  <p class="src">Uden JavaScript: fra start +62&nbsp;%, fra toppen i måned 11 +17&nbsp;%, fra bunden i måned 17 +69&nbsp;%. Tre måneder fra toppen giver −16&nbsp;%, tre måneder fra bunden +13&nbsp;%. Samme kurve hele vejen.</p>
+  <p>Det er derfor, Fonden viser <strong>siden start</strong>, <strong>år til dato</strong> og <strong>hele kalenderår</strong>, men ikke 1 eller 3 måneder. En kort periode kan vise næsten hvad som helst, alt efter hvor den starter. Det gælder også, når andre sider viser en teknologifond over få måneder.</p>
+ </section>
+
+ <section class="panel sp" aria-labelledby="lg-tal" style="margin-top:14px">
+  <h2 id="lg-tal">Tallene over grafen</h2>
+  <div class="pair">
+   <div class="yes"><h3>Hvad de siger</h3><ul>
+    <li><strong>Totalafkast siden start:</strong> hele stykket fra første NAV til seneste. <a href="../om-data.html#g-total">Ordliste</a></li>
+    <li><strong>CAGR:</strong> det samme omregnet til et jævnt tal pr. år. <a href="variance-drag.html">CAGR og gennemsnit</a></li>
+    <li><strong>Største fald (max drawdown):</strong> den dybeste vej fra en top til den følgende bund.</li>
+    <li><strong>Risikoindikator 5 af 7:</strong> fra KID. <a href="risikoklasse.html">Hvad klassen betyder</a></li>
+   </ul></div>
+   <div class="no"><h3>Hvad de ikke siger</h3><ul>
+    <li>Hvad der sker fremover. Historisk afkast er ikke en pålidelig indikator.</li>
+    <li>Hvordan det er gået for dig. Det afhænger af, hvornår du købte og solgte.</li>
+    <li>Hvordan én aktie i fonden har klaret sig. Det viser vi ikke.</li>
+    <li>Om fonden passer til dig. Se <a href="../invester.html">Sådan investerer du</a>.</li>
+   </ul></div>
+  </div>
+  <p style="margin-top:12px">NDI tænker i lange forløb. Udsving er et grundvilkår for teknologi, og et godt eller dårligt kvartal siger lidt om, hvordan det går over fem år. Se <a href="saadan-taenker-vi.html">Sådan tænker vi</a>.</p>
+ </section>
+ <script>
+ (function(){
+  var s=document.getElementById('lg-s'); if(!s) return;
+  var V=[100,104,109,106,112,118,115,121,128,124,131,138,133,125,116,108,101,96,99,103,108,104,110,116,121,126,122,129,135,141,137,144,150,146,153,158,162];
+  var X=function(i){return 30+i*15}, Y=function(v){return (110-(v-90)*100/80).toFixed(1)};
+  var pts=function(a,b){var o=[];for(var i=a;i<=b;i++)o.push(X(i)+','+Y(V[i]));return o.join(' ')};
+  var m=document.getElementById('lg-mini');
+  m.querySelector('.rest').setAttribute('points',pts(0,36));
+  var f=function(n,d){return n.toLocaleString('da-DK',{minimumFractionDigits:d,maximumFractionDigits:d})};
+  function upd(){
+   var a=+s.value, n=36-a, r=V[36]/V[a]-1, c=Math.pow(1+r,12/n)-1;
+   document.getElementById('lg-sv').textContent=a;
+   m.querySelector('.seg').setAttribute('points',pts(a,36));
+   var d=m.querySelector('.dot'); d.setAttribute('cx',X(a)); d.setAttribute('cy',Y(V[a]));
+   var tot=(r>=0?'+':'−')+f(Math.abs(r)*100,0)+'&nbsp;%';
+   var txt='Fra måned '+a+' til måned 36: <b>'+tot+'</b> i alt';
+   txt+= n>=12 ? ', ca. '+f(c*100,1)+'&nbsp;% pr. år.' : '. Under et år, så vi regner det ikke om til et tal pr. år.';
+   if(a===11) txt+=' Du startede på toppen.';
+   if(a===17) txt+=' Du startede i bunden.';
+   document.getElementById('lg-out').innerHTML=txt;
+  }
+  s.addEventListener('input',upd); upd();
+ })();
+ </script>
+ <p class="warn">Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.</p>
+ <p class="band">Generel information. Ikke investeringsrådgivning.</p>
+ </main>
+ <footer class="site-footer">
+ <p><strong>Markedsføringsmateriale.</strong> Læs <a href="https://fundmarket.dk/wp-content/uploads/Faellesprospekt-for-afdelinger-og-andelsklasser-i-Investeringsforeningen-Portfoliomanager-opdateret-24.10.2025.pdf" rel="noopener" target="_blank">prospektet ↗</a> og KID for <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm140b" rel="noopener" target="_blank">PMINDI ↗</a> eller <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm145b" rel="noopener" target="_blank">PMINDIAKK ↗</a>, før du træffer en endelig investeringsbeslutning.</p>
+ <p>Udkast / noindex. Ikke den officielle side og ingen investeringsrådgivning. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering. <a href="../om-data.html">Data og ordliste</a>.</p>
+ </footer>
+</body>
+</html>

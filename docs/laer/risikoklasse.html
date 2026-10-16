@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="da">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+ <meta name="robots" content="noindex,nofollow">
+ <title>Risikoklasse 5: hvad tallet betyder · NDI Analytics</title>
+ <meta name="description" content="Risikoklassen i KID er et mål for udsving på en skala fra 1 til 7. Træk i skyderen og se, hvad klassen betyder, og hvad den ikke siger.">
+ <link rel="stylesheet" href="../css/ndi.css">
+ <!-- og:start -->
+ <meta property="og:type" content="website">
+ <meta property="og:site_name" content="NDI Analytics (udkast)">
+ <meta property="og:locale" content="da_DK">
+ <meta property="og:title" content="Risikoklasse 5: hvad tallet betyder · NDI Analytics">
+ <meta property="og:description" content="Risikoklassen i KID er et mål for udsving på en skala fra 1 til 7. Træk i skyderen og se, hvad klassen betyder, og hvad den ikke siger.">
+ <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/laer/risikoklasse.html">
+ <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
+ <meta property="og:image:width" content="1200">
+ <meta property="og:image:height" content="630">
+ <meta property="og:image:alt" content="NDI Analytics - udkast. Gå på opdagelse i porteføljen.">
+ <meta name="twitter:card" content="summary_large_image">
+ <!-- og:end -->
+ <style>
+  .sp h2{font-size:18px;margin:0 0 8px}
+  .sp p{color:var(--muted);line-height:1.6;margin:0 0 10px}
+  .sp p strong{color:var(--text)}
+  .sp .src{font-size:13px;color:var(--faint);margin:8px 0 0}
+  .try{display:grid;gap:10px;margin-top:8px}
+  .try label{color:var(--text);font-weight:600}
+  .try input[type=range]{width:100%;accent-color:var(--yellow)}
+  .scale{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin:6px 0 2px}
+  .scale span{text-align:center;padding:8px 0;border-radius:6px;border:1px solid var(--line);color:var(--muted);font-size:15px;font-variant-numeric:tabular-nums;transition:background .15s}
+  .scale span.on{background:var(--yellow);border-color:var(--yellow);color:#0b171d;font-weight:700}
+  .scale span.fund{box-shadow:inset 0 0 0 2px var(--cyan)}
+  .scale-legend{display:flex;justify-content:space-between;font-size:12px;color:var(--faint)}
+  .res{background:var(--panel-2);border-radius:10px;padding:12px 14px;color:var(--muted);line-height:1.5}
+  .res b{color:var(--text);font-size:20px;font-variant-numeric:tabular-nums}
+  .chain{list-style:none;margin:12px 0 6px;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .chain li{position:relative;background:var(--panel-2);border-radius:10px;padding:12px;font-size:14px;line-height:1.45;color:var(--muted)}
+  .chain li strong{display:block;color:var(--text);margin-bottom:2px}
+  .chain li:not(:last-child)::after{content:"→";position:absolute;right:-11px;top:14px;color:var(--faint);font-size:16px}
+  .chain li.end{border-top:3px solid var(--yellow)}
+  .bands{width:100%;border-collapse:collapse;font-size:14px;margin:8px 0 4px;font-variant-numeric:tabular-nums}
+  .bands th,.bands td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--line);color:var(--muted)}
+  .bands th{color:var(--faint);font-weight:400;font-size:12px}
+  .bands td:first-child{color:var(--text);font-weight:700;width:3.5em}
+  .bands tr.fund td{background:var(--panel-2);color:var(--text)}
+  .bands tr.fund td:first-child{box-shadow:inset 3px 0 0 var(--yellow)}
+  .bands .bar{display:block;height:8px;border-radius:4px;background:var(--cyan);opacity:.75;min-width:3px}
+  .bands tr.fund .bar{background:var(--yellow);opacity:1}
+  .not{margin:6px 0 0;padding-left:18px;color:var(--muted);line-height:1.6}
+  @media (max-width:640px){
+   .chain{grid-template-columns:1fr;gap:10px}
+   .chain li:not(:last-child)::after{content:"↓";right:auto;left:16px;top:auto;bottom:-15px}
+   .bands .wide{display:none}
+   .scale span{padding:7px 0;font-size:14px}
+  }
+ </style>
+</head>
+<body>
+ <a class="skip" href="#main">Gå til indhold</a>
+ <header class="site-header">
+ <a class="brand" href="../index.html"><img src="../assets/mark.svg" width="34" height="27" alt=""><span>NewDeal Invest</span></a>
+ <nav class="nav"><a href="index.html">← Lær</a></nav>
+ </header>
+ <main id="main">
+ <p class="eyebrow">LÆR</p>
+ <h1>Risikoklasse 5: hvad tallet betyder</h1>
+ <p class="lede">Begge andelsklasser står i risikoklasse 5 på en skala fra 1 til 7 i KID. Tallet er ikke en mavefornemmelse. Det er et mål for, hvor meget kursen har svinget, oversat til en skala efter faste EU-regler.</p>
+
+ <section class="panel sp" aria-labelledby="rk-chain">
+  <h2 id="rk-chain">Fra udsving til klasse</h2>
+  <p>Klassen hedder i KID «risikoindikator» (på engelsk SRI). Den bygger på to ting: hvor meget kursen svinger, og risikoen for, at den, der har udstedt produktet, ikke kan betale.</p>
+  <ol class="chain">
+   <li><strong>Kursudsving efter KID-metoden</strong>Hvor meget kursen har svinget i en årrække (som udgangspunkt 5 år), regnet om til et tal pr. år. Metoden giver ekstra vægt til store fald, så tallet er ikke det samme som et simpelt udsvingstal.</li>
+   <li><strong>Markedsrisiko 1 til 7</strong>Udsvinget placeres i et af syv faste intervaller.</li>
+   <li><strong>Kreditrisiko</strong>Kan udstederen betale? For en aktiefond som denne er det normalt ikke det, der trækker op.</li>
+   <li class="end"><strong>Risikoindikator</strong>Det samlede tal, der står i KID. For fonden: 5.</li>
+  </ol>
+  <p class="src">Reglerne står i EU's <a href="../om-data.html#g-priips">PRIIPs</a>-regler (delegeret forordning 2017/653, bilag II). Forenklet her. KID-dokumentet for hver andelsklasse er det, der gælder.</p>
+ </section>
+
+ <section class="panel sp" aria-labelledby="rk-try" style="margin-top:14px">
+  <h2 id="rk-try">Prøv selv: hvor store udsving giver hvilken klasse?</h2>
+  <p>Træk i skyderen. Tallet er udsving pr. år, målt efter KID-metoden. Skalaen viser den markedsrisiko-klasse, udsvinget ville give. Et simpelt udsvingstal kan ikke sættes direkte ind her, se «Hvad klassen ikke siger» nedenfor. Fondens klasse er markeret med en blå kant.</p>
+  <div class="try">
+   <label for="rk-v">Udsving pr. år: <span id="rk-vv">25</span>&nbsp;%</label>
+   <input id="rk-v" type="range" min="0" max="100" step="1" value="25" aria-describedby="rk-out">
+   <div class="scale" id="rk-scale" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span class="on fund">5</span><span>6</span><span>7</span></div>
+   <div class="scale-legend" aria-hidden="true"><span>Lavere risiko</span><span>Højere risiko</span></div>
+   <p class="res" id="rk-out" aria-live="polite">Udsving på 25&nbsp;% pr. år giver <b>klasse 5</b> (middel-høj). Klassen dækker udsving fra 20 til 30&nbsp;% pr. år, målt efter KID-metoden. Det er fondens klasse. Et simpelt udsvingstal over 30&nbsp;% betyder ikke, at klassen er forkert.</p>
+  </div>
+  <p class="src">Uden JavaScript: 3&nbsp;% giver klasse 2, 15&nbsp;% giver klasse 4, 25&nbsp;% giver klasse 5, 40&nbsp;% giver klasse 6. Tænkte tal. Skyderen viser reglen, ikke fondens egen beregning.</p>
+ </section>
+
+ <section class="panel sp" aria-labelledby="rk-bands" style="margin-top:14px">
+  <h2 id="rk-bands">De syv intervaller</h2>
+  <p>Intervallerne er ikke lige brede. Klasse 6 spænder over 50 procentpoint, klasse 5 over 10. Derfor siger to fonde i samme klasse ikke nødvendigvis det samme.</p>
+  <table class="bands">
+   <caption class="sr-only">Markedsrisiko-klasser og de udsving pr. år, de dækker</caption>
+   <thead><tr><th scope="col">Klasse</th><th scope="col">Udsving pr. år (KID-metoden)</th><th scope="col">Beskrivelse i KID</th><th scope="col" class="wide" style="width:30%"><span class="sr-only">Bredde af intervallet</span></th></tr></thead>
+   <tbody>
+    <tr><td>1</td><td>under 0,5&nbsp;%</td><td>laveste</td><td class="wide"><span class="bar" style="width:1%"></span></td></tr>
+    <tr><td>2</td><td>0,5 til 5&nbsp;%</td><td>lav</td><td class="wide"><span class="bar" style="width:9%"></span></td></tr>
+    <tr><td>3</td><td>5 til 12&nbsp;%</td><td>lav til middel</td><td class="wide"><span class="bar" style="width:14%"></span></td></tr>
+    <tr><td>4</td><td>12 til 20&nbsp;%</td><td>middel</td><td class="wide"><span class="bar" style="width:16%"></span></td></tr>
+    <tr class="fund"><td>5</td><td>20 til 30&nbsp;%</td><td>middel-høj · <strong>fonden</strong></td><td class="wide"><span class="bar" style="width:20%"></span></td></tr>
+    <tr><td>6</td><td>30 til 80&nbsp;%</td><td>næsthøjeste</td><td class="wide"><span class="bar" style="width:100%"></span></td></tr>
+    <tr><td>7</td><td>over 80&nbsp;%</td><td>højeste</td><td class="wide"><span class="bar" style="width:40%;background:repeating-linear-gradient(90deg,var(--cyan) 0 6px,transparent 6px 10px)"></span></td></tr>
+   </tbody>
+  </table>
+  <p class="src">Bjælken viser intervallets bredde. Klasse 7 har ingen øvre grænse. Ordene i tredje kolonne følger standardteksten i KID, forenklet. Fondens KID anbefaler en <a href="../om-data.html#g-investeringsperiode">investeringsperiode</a> på mindst 5 år.</p>
+ </section>
+
+ <section class="panel sp" aria-labelledby="rk-not" style="margin-top:14px">
+  <h2 id="rk-not">Hvad klassen ikke siger</h2>
+  <ul class="not">
+   <li><strong>Den er ikke en garanti.</strong> Klassen bygger på udsving, der har været. Fremtidens udsving kan blive større, og klassen kan ændre sig.</li>
+   <li><strong>Den siger ikke, hvor dybt det kan gå.</strong> Et tal for udsving pr. år viser ikke, hvor langt fondens kurs faldt fra top til bund, eller hvor længe det varede. Det ser du under <a href="../drawdown.html">Fald fra top</a>.</li>
+   <li><strong>Den fanger ikke alt.</strong> At næsten alle selskaber er teknologi, og at mange handles i dollar, står som selvstændige risici i KID. Se <a href="../risici.html">Risici ved fonden</a>, <a href="../om-data.html#g-koncentration">koncentrationsrisiko</a> og <a href="valuta.html">Valuta</a>.</li>
+   <li><strong>Den er ikke det samme som et simpelt udsvingstal.</strong> KID’et regner udsvinget efter EU’s egen metode og periode. Regner man selv udsvinget på fondens kurser, kan man få et andet tal, og et simpelt tal over 30&nbsp;% betyder ikke i sig selv, at klassen er forkert. Se <a href="../om-data.html#g-kid-udsving">udsving efter KID-metoden</a>. NDI Analytics’ eget tal står under <a href="../risici.html#tal">Udsving og fald i tal</a>.</li>
+   <li><strong>Klasse 1 er ikke risikofri.</strong> Den laveste klasse betyder lavest målte udsving, ikke at man ikke kan tabe penge.</li>
+  </ul>
+  <p style="margin-top:10px">Udsving er et grundvilkår for teknologiaktier. Hvorfor de også trækker det årlige afkast ned, står i <a href="variance-drag.html">CAGR og gennemsnit</a>. Hvorfor fonden spreder på mange selskaber, står i <a href="hvorfor-mange-aktier.html">Hvorfor så mange aktier?</a></p>
+  <p>Siden forklarer et begreb. Den siger ikke noget om, hvorvidt fonden passer til dig. Læs KID for den andelsklasse, du overvejer, se <a href="../invester.html">Sådan investerer du</a>. Se også <a href="../om-data.html#g-sri">risikoindikator</a> og <a href="../om-data.html#g-udsving">udsving</a> i ordlisten.</p>
+ </section>
+ <script>
+ (function(){
+  var v=document.getElementById('rk-v'); if(!v) return;
+  var B=[[0,0.5,'laveste'],[0.5,5,'lav'],[5,12,'lav til middel'],[12,20,'middel'],[20,30,'middel-høj'],[30,80,'næsthøjeste'],[80,Infinity,'højeste']];
+  var cells=document.querySelectorAll('#rk-scale span');
+  var f=function(n){return n.toLocaleString('da-DK',{maximumFractionDigits:1})};
+  function upd(){
+   var x=+v.value, k=0;
+   while(k<6 && x>=B[k][1]) k++;
+   document.getElementById('rk-vv').textContent=f(x);
+   cells.forEach(function(c,i){c.classList.toggle('on',i===k)});
+   var b=B[k], span=k===0?'under 0,5 % pr. år':k===6?'over 80 % pr. år':'fra '+f(b[0])+' til '+f(b[1])+' % pr. år';
+   document.getElementById('rk-out').innerHTML='Udsving på '+f(x)+'&nbsp;% pr. år giver <b>klasse '+(k+1)+'</b> ('+b[2]+'). Klassen dækker udsving '+span+', målt efter KID-metoden.'+(k===4?' Det er fondens klasse. Et simpelt udsvingstal over 30&nbsp;% betyder ikke, at klassen er forkert.':'');
+  }
+  v.addEventListener('input',upd); upd();
+ })();
+ </script>
+ <p class="warn">Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.</p>
+ <p class="band">Generel information. Ikke investeringsrådgivning.</p>
+ </main>
+ <footer class="site-footer">
+ <p><strong>Markedsføringsmateriale.</strong> Læs <a href="https://fundmarket.dk/wp-content/uploads/Faellesprospekt-for-afdelinger-og-andelsklasser-i-Investeringsforeningen-Portfoliomanager-opdateret-24.10.2025.pdf" rel="noopener" target="_blank">prospektet ↗</a> og KID for <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm140b" rel="noopener" target="_blank">PMINDI ↗</a> eller <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm145b" rel="noopener" target="_blank">PMINDIAKK ↗</a>, før du træffer en endelig investeringsbeslutning.</p>
+ <p>Udkast / noindex. Ikke den officielle side og ingen investeringsrådgivning. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering. <a href="../om-data.html">Data og ordliste</a>.</p>
+ </footer>
+</body>
+</html>

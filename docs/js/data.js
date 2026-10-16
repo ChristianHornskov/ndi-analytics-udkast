@@ -28,7 +28,7 @@ let cache = null;
 
 export async function loadAll() {
   if (cache) return cache;
-  const [portfolio, latest, context, multiTags] = await Promise.all([
+  const [portfolio, latest, context, multiTags, xPosts] = await Promise.all([
     fetch('data/portfolio.json').then((r) => {
       if (!r.ok) throw new Error('portfolio.json');
       return r.json();
@@ -36,8 +36,9 @@ export async function loadAll() {
     fetch('data/latest.json').then((r) => (r.ok ? r.json() : null)).catch(() => null),
     fetch('data/context-events.json').then((r) => (r.ok ? r.json() : { events: [] })).catch(() => ({ events: [] })),
     fetch('data/multi-tags.json').then((r) => (r.ok ? r.json() : { byIsin: {} })).catch(() => ({ byIsin: {} })),
+    fetch('data/x-posts.json').then((r) => (r.ok ? r.json() : null)).catch(() => null),
   ]);
-  cache = { portfolio, latest, context, multiTags };
+  cache = { portfolio, latest, context, multiTags, xPosts };
   return cache;
 }
 
@@ -185,6 +186,25 @@ export function fmtDate(iso) {
 
 export function daTheme(t) { return THEME_LABELS[t] || t; }
 export function daMat(m) { return MATURITY_LABELS[m] || m; }
+
+// Livscyklus i almindeligt dansk (samme ord som ideer.html/laer). Kun etiketter - ingen tal.
+export const MATURITY_PLAIN = {
+  prerevenue: 'Før omsætning',
+  preprofit: 'Før overskud',
+  highgrowth: 'Høj vækst',
+  garp: 'Vækst med overskud',
+  value: 'Moden',
+};
+export function daMatPlain(m) { return MATURITY_PLAIN[m] || daMat(m); }
+
+// Modenhed for ét selskab, ærligt mærket: maskinelt forslag (maturityStatus=forslag) eller manuel klassifikation.
+export function maturityView(p) {
+  if (!(p?.maturity in MATURITY_LABELS)) return { set: false, forslag: false, value: 'Ikke klassificeret', hint: 'NDI har endnu ikke sat en modenhedsgrad. Vi gætter ikke.' };
+  const forslag = p.maturityStatus === 'forslag';
+  return forslag
+    ? { set: true, forslag, value: `${daMatPlain(p.maturity)} (forslag)`, hint: 'Maskinelt forslag ud fra offentlig branche og tema. Afventer NDI-gennemgang. Pædagogisk fase, ikke en rating.' }
+    : { set: true, forslag, value: daMatPlain(p.maturity), hint: 'Manuel klassifikation i udkastet. Pædagogisk fase, ikke en rating.' };
+}
 
 
 /** Tags der ikke må vises offentligt før compliance-review (UX §0.2). */

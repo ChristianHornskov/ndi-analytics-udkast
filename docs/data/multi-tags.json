@@ -144,6 +144,19 @@
         "compute"
       ],
       "note": "forslag quantum; compute som bi-tag"
+    },
+    "US17253J1060": {
+      "tags": [
+        "compute",
+        "energy"
+      ],
+      "why": "Forslag: Cipher Digital bygger energitung HPC/AI-datacenterkapacitet (compute) med rødder i bitcoin-mining/power (energy). Offentlig 10-Q 2026. Afventer NDI-gennemgang."
+    },
+    "US6837121036": {
+      "tags": [
+        "platforms"
+      ],
+      "why": "Forslag: Opendoor er en digital proptech-/iBuyer-platform. Offentlig 10-K. Afventer NDI-gennemgang."
     }
   }
 }

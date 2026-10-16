@@ -47,9 +47,12 @@
  const ta = byTheme(a), tb = byTheme(b);
  const keys = [...new Set([...Object.keys(ta), ...Object.keys(tb)])].sort((x, y) => (ta[y] || 0) - (ta[x] || 0));
  const max = Math.max(...keys.flatMap((k) => [ta[k] || 0, tb[k] || 0]), 0.01);
- const maxDiff = Math.max(...keys.map((k) => Math.abs((ta[k] || 0) - (tb[k] || 0))));
+ const diffOf = (k) => Math.abs((ta[k] || 0) - (tb[k] || 0));
+ const maxDiff = Math.max(...keys.map(diffOf));
+ const gapLabel = n1(maxDiff);
+ const gapNames = keys.filter((k) => n1(diffOf(k)) === gapLabel).map((k) => daTheme(k));
  const bar = (v, cls, label) => `<span class="cmp-line ${cls}"><span class="sr-only">${label}: </span><span class="cmp-bar" aria-hidden="true"><span style="width:${Math.round((v / max) * 100)}%"></span></span><span class="cmp-v">${n1(v)} %</span></span>`;
- const themeRows = keys.map((k) => `<li><span class="cmp-name">${esc(daTheme(k))}</span>
+ const themeRows = keys.map((k) => `<li${n1(diffOf(k)) === gapLabel ? ' class="cmp-gap"' : ''}><span class="cmp-name">${esc(daTheme(k))}</span>
  <span class="cmp-pair">${bar(ta[k], 'a', 'PMINDI')}${bar(tb[k], 'b', 'PMINDIAKK')}</span></li>`).join('');
  const navA = lastNav(a.data), navB = lastNav(b.data);
  const firstA = a.data?.[0]?.d || a.inception, firstB = b.data?.[0]?.d || b.inception;
@@ -66,6 +69,7 @@
  <section class="cmp-card a" aria-labelledby="c-a">
  <p class="cmp-tag">Udloddende</p>
  <h2 id="c-a">PMINDI</h2>
+ <svg class="cmp-mark" viewBox="0 0 100 36" aria-hidden="true" focusable="false"><rect x="1.5" y="14.5" width="32" height="16" rx="3"/><path d="M33.5 22.5 H78"/><path d="M72 17.5 L80 22.5 L72 27.5"/></svg>
  <p class="cmp-flow">Udbytte <span aria-hidden="true">→</span> <strong>udbetales til dig</strong></p>
  <dl>
  <div><dt>ISIN</dt><dd>${esc(a.isin)}</dd></div>
@@ -78,19 +82,20 @@
  <section class="cmp-card b" aria-labelledby="c-b">
  <p class="cmp-tag">Akkumulerende</p>
  <h2 id="c-b">PMINDIAKK</h2>
+ <svg class="cmp-mark" viewBox="0 0 100 36" aria-hidden="true" focusable="false"><rect x="1.5" y="14.5" width="32" height="16" rx="3"/><path d="M33.5 22.5 H62 C80 22.5 80 6.5 62 6.5 H18.5 V10"/><path d="M13 8.5 L18.5 16 L24 8.5"/></svg>
  <p class="cmp-flow">Udbytte <span aria-hidden="true">→</span> <strong>geninvesteres i fonden</strong></p>
  <dl>
  <div><dt>ISIN</dt><dd>${esc(b.isin)}</dd></div>
  <div><dt>Første NAV</dt><dd>${fmtDate(firstB)}</dd></div>
  <div><dt>Seneste NAV</dt><dd>${navB ? n2(navB.price) : '-'} <small>(${fmtDate(navB?.d)})</small></dd></div>
- <div><dt>Afkast</dt><dd><strong>Vises efter 12 måneder</strong> <small>(fra ${fmtDate(gateIso)})</small></dd></div>
+ <div><dt>Afkast</dt><dd><strong>Vises efter 12 måneder</strong><small class="cmp-from">fra ${fmtDate(gateIso)}</small></dd></div>
  </dl>
  <a class="outline-btn" href="index.html?view=fonden&fund=pmindiakk">Se PMINDIAKK →</a>
  </section>
  </div>
 
- <section class="panel cmp-timeline" aria-labelledby="tl-h">
- <h2 class="panel-h" id="tl-h">Tidslinje</h2>
+ <section class="cmp-time" aria-labelledby="tl-h">
+ <h2 class="h-section" id="tl-h">Tidslinje</h2>
  <ol class="tl">
  <li><time datetime="${firstA}">${fmtDate(firstA)}</time><span>PMINDI: første NAV. Herfra regnes "siden start".</span></li>
  <li><time datetime="${firstB}">${fmtDate(firstB)}</time><span>PMINDIAKK: første NAV. Samme portefølje, udbyttet bliver i fonden.</span></li>
@@ -98,20 +103,22 @@
  </ol>
  </section>
 
- <section class="panel" aria-labelledby="ov-h">
- <h2 class="panel-h" id="ov-h">Samme selskaber</h2>
+ <section class="cmp-share" aria-labelledby="ov-h">
+ <h2 class="h-section" id="ov-h">Samme selskaber</h2>
  <p class="cmp-big"><strong>${shared}</strong> af ${(b.positions || []).length} selskaber i PMINDIAKK findes også i PMINDI${onlyB ? `. ${onlyB} findes kun i PMINDIAKK` : ''}.</p>
+ ${onlyB ? `<p class="cmp-legend"><span><span class="cmp-key a" aria-hidden="true"></span>I begge</span><span><span class="cmp-key b" aria-hidden="true"></span>Kun i PMINDIAKK</span></p><div class="cmp-sharebar" role="img" aria-label="${shared} af ${(b.positions || []).length} i begge klasser"><span class="a" style="width:${Math.round((shared / Math.max(1, (b.positions || []).length)) * 100)}%"></span><span class="b" style="width:${Math.round((onlyB / Math.max(1, (b.positions || []).length)) * 100)}%"></span></div>` : ''}
  <p class="src">Forsinket beholdning pr. ${posAsOf}. PMINDI har ${(a.positions || []).length} positioner. Små forskelle i antal og vægt skyldes, at klasserne har forskellig størrelse og pengestrømme. Det er ikke to forskellige strategier.</p>
  </section>
 
  <section class="panel" aria-labelledby="th-h">
  <h2 class="panel-h" id="th-h">Samme NDI-linse</h2>
- <p class="src" style="margin-bottom:10px">Vægt pr. tema i hver klasse (primært tema). Største forskel: ca. ${n1(maxDiff)} procentpoint. Eksponering, ikke anbefaling.</p>
+ <p class="src" style="margin-bottom:10px">Vægt pr. tema i hver klasse (primært tema). Største forskel: ca. ${gapLabel} procentpoint${gapNames.length ? `, i ${esc(gapNames.join(' og '))}` : ''}. Rækken har en gul kant. Eksponering, ikke anbefaling.</p>
  <p class="cmp-legend"><span><span class="cmp-key a" aria-hidden="true"></span>PMINDI</span><span><span class="cmp-key b" aria-hidden="true"></span>PMINDIAKK</span></p>
  <ul class="cmp-themes">${themeRows}</ul>
  <p class="link-row" style="margin-top:10px"><a href="temaer.html">Alle temaer →</a> · <a href="om-data.html#g-akk">Hvad betyder akkumulerende?</a></p>
  </section>
 
+ <p class="link-row cmp-links"><a href="drawdown.html">Drawdown (PMINDI) →</a> · <a href="vaerdikaeder.html">Værdikæder →</a> · <a href="laer/udbytte-vs-akk.html">Udbytte eller akkumulerende →</a></p>
  <p class="band">Hvilken klasse der passer, afhænger af din egen situation, fx skat og om du vil have udbytte udbetalt. Siden giver ikke rådgivning. Læs KID for begge klasser under <a href="risici.html">Risici / KID</a>.</p>
  <p class="warn">${WARN_HIST}</p>`;
  </script>

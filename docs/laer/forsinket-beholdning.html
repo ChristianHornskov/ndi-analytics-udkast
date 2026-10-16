@@ -4,13 +4,14 @@
  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
  <meta name="robots" content="noindex,nofollow">
  <title>Forsinket beholdning · NDI Analytics</title>
+ <meta name="description" content="Beholdningen vises med forsinkelse, ikke live. Sådan læser du de to datoer: hvornår afkastet er opgjort, og hvornår beholdningen er fra.">
  <link rel="stylesheet" href="../css/ndi.css">
  <!-- og:start -->
  <meta property="og:type" content="website">
  <meta property="og:site_name" content="NDI Analytics (udkast)">
  <meta property="og:locale" content="da_DK">
  <meta property="og:title" content="Forsinket beholdning · NDI Analytics">
- <meta property="og:description" content="NDI Analytics viser den forsinkede snapshot. Ikke en live positionsfeed.">
+ <meta property="og:description" content="Beholdningen vises med forsinkelse, ikke live. Sådan læser du de to datoer: hvornår afkastet er opgjort, og hvornår beholdningen er fra.">
  <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/laer/forsinket-beholdning.html">
  <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
  <meta property="og:image:width" content="1200">
@@ -18,6 +19,29 @@
  <meta property="og:image:alt" content="NDI Analytics - udkast. Gå på opdagelse i porteføljen.">
  <meta name="twitter:card" content="summary_large_image">
  <!-- og:end -->
+<style>
+  .fb h2{font-size:18px;margin:0 0 8px}
+  .fb p{color:var(--muted);line-height:1.6;margin:0 0 10px}
+  .fb .src{font-size:13px;color:var(--faint);margin:8px 0 0}
+  .tl{list-style:none;margin:14px 0 4px;padding:0;display:grid;grid-template-columns:repeat(3,1fr);position:relative}
+  .tl::before{content:"";position:absolute;left:8px;right:8px;top:9px;height:2px;background:var(--line)}
+  .tl li{position:relative;padding:28px 10px 0 0;font-size:14px;color:var(--muted);line-height:1.45}
+  .tl li::before{content:"";position:absolute;left:0;top:2px;width:16px;height:16px;border-radius:50%;background:var(--panel);border:2px solid var(--cyan)}
+  .tl li.snap::before{background:var(--yellow);border-color:var(--yellow)}
+  .tl b{display:block;color:var(--text);font-size:15px}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .two > div{background:var(--panel-2);border-radius:12px;padding:14px;line-height:1.5;color:var(--muted);font-size:14px}
+  .two h3{margin:0 0 6px;font-size:15px;color:var(--text)}
+  .two ul{margin:0;padding-left:18px;display:grid;gap:4px}
+  .two .yes{border-top:3px solid var(--cyan)}
+  .two .no{border-top:3px solid var(--yellow)}
+  @media (max-width:640px){
+   .two{grid-template-columns:1fr}
+   .tl{grid-template-columns:1fr;gap:14px}
+   .tl::before{left:8px;right:auto;top:8px;bottom:8px;width:2px;height:auto}
+   .tl li{padding:0 0 0 28px}
+  }
+ </style>
 </head>
 <body>
  <a class="skip" href="#main">Gå til indhold</a>
@@ -28,14 +52,39 @@
  <main id="main">
  <p class="eyebrow">LÆR</p>
  <h1>Hvorfor er beholdningen forsinket?</h1>
- <p class="lede">NDI Analytics viser den forsinkede snapshot. Ikke en live positionsfeed.</p>
- <section class="panel" style="color:var(--muted);line-height:1.6;display:grid;gap:12px">
- <p>Danske UCITS-fonde offentliggør typisk beholdninger med forsinkelse. I dette udkast er seneste snapshot <strong style="color:var(--text)">1. juni 2026</strong>.</p>
- <p>Det betyder, at vægte og selskaber kan have ændret sig siden. Vi viser ikke daglige “movers”, og vi gætter ikke på aktuelle kursafkast pr. aktie.</p>
- <p>Afkastdata for fonden (NAV/totalafkast) kan have en nyere dato end beholdningen. Det fremgår af datostemplerne på siderne.</p>
- <p><a href="../selskaber.html">Se forsinket beholdning →</a> · <a href="../om-data.html">Om data →</a></p>
+ <p class="lede">NDI Analytics viser et forsinket øjebliksbillede af beholdningen. Ikke et live billede af, hvad fonden ejer i dag.</p>
+
+ <section class="panel fb" aria-labelledby="fb-dates">
+  <h2 id="fb-dates">To datoer, to formål</h2>
+  <ol class="tl">
+   <li class="snap"><b>1. juni 2026</b>Beholdning: hvilke selskaber og hvilke vægte. Seneste øjebliksbillede i udkastet.</li>
+   <li><b>Seneste kurs</b>Afkast for fonden (totalafkast, CAGR). Opdateres oftere og har sin egen dato på forsiden.</li>
+   <li><b>I dag</b>Fonden kan have justeret vægte og selskaber siden da.</li>
+  </ol>
+  <p class="src">Hver side viser sin egen dato. Står der «pr. 1. juni 2026», gælder tallet beholdningen på den dag.</p>
  </section>
+
+ <section class="panel fb" aria-labelledby="fb-why" style="margin-top:14px">
+  <h2 id="fb-why">Hvorfor ikke dagsaktuelt?</h2>
+  <p>Danske UCITS-fonde offentliggør typisk deres beholdning med forsinkelse. En almindelig begrundelse er, at det beskytter fondens investorer: når fonden justerer en position, skal andre ikke kunne se det og handle før den.</p>
+  <p>Det passer også til formålet med NDI Analytics. Siden skal vise, hvordan porteføljen er bygget, og hvilke <a href="../vaerdikaeder.html">værdikæder</a> og <a href="livscyklus.html">faser</a> den giver eksponering mod. Den skal ikke være en kursskærm. Med flere hundrede små positioner ændrer billedet sig sjældent meget fra måned til måned, se <a href="hvorfor-mange-aktier.html">Hvorfor så mange aktier?</a></p>
+ </section>
+
+ <section class="panel fb" aria-labelledby="fb-what" style="margin-top:14px">
+  <h2 id="fb-what">Hvad du finder her, og hvad du ikke finder</h2>
+  <div class="two">
+   <div class="yes"><h3>Det viser vi</h3><ul><li>Selskaber og vægte pr. beholdningsdato</li><li>Temaer, værdikæder og modenhed</li><li>Fondens samlede afkast med dato</li></ul></div>
+   <div class="no"><h3>Det viser vi ikke</h3><ul><li>Hvad fonden køber eller sælger i dag</li><li>Daglige «movers» eller kursafkast pr. aktie</li><li>Gæt på aktuelle vægte</li></ul></div>
+  </div>
+  <p style="margin-top:12px">Mangler et selskab, kan det være købt efter 1. juni 2026, eller fonden ejer det ikke, for eksempel fordi det er for lille. Se <a href="faq-mangler-aktie.html">Hvorfor mangler aktie X?</a></p>
+  <p><a href="../selskaber.html">Se den forsinkede beholdning →</a> · <a href="../om-data.html#g-forsinket">Ordliste →</a> · <a href="../om-data.html">Om data →</a></p>
+ </section>
+ <p class="band" style="margin-top:16px">Generel information, ikke rådgivning. Før du investerer, så læs dokumentet med central information (KID) for den andelsklasse, du overvejer: <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm140b" rel="noopener" target="_blank">KID for PMINDI ↗</a> eller <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm145b" rel="noopener" target="_blank">KID for PMINDIAKK ↗</a>.</p>
  <p class="warn">Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.</p>
  </main>
+ <footer class="site-footer">
+ <p><strong>Markedsføringsmateriale.</strong> Læs <a href="https://fundmarket.dk/wp-content/uploads/Faellesprospekt-for-afdelinger-og-andelsklasser-i-Investeringsforeningen-Portfoliomanager-opdateret-24.10.2025.pdf" rel="noopener" target="_blank">prospektet ↗</a> og KID for <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm140b" rel="noopener" target="_blank">PMINDI ↗</a> eller <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm145b" rel="noopener" target="_blank">PMINDIAKK ↗</a>, før du træffer en endelig investeringsbeslutning.</p>
+ <p>Udkast / noindex. Ikke den officielle side og ingen investeringsrådgivning. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering. <a href="../om-data.html">Data og ordliste</a>.</p>
+ </footer>
 </body>
 </html>

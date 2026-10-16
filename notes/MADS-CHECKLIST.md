@@ -23,7 +23,7 @@ Kilder: slack_ny_graf_2026-10-15.md, vision.txt, mads_tankemodel.md, investering
 
 ## Klassifikation (Mads 14/10 + møde)
 - [x] Tema-tags (ikke GICS som hoved) + multi-tag
-- [~] Modenhedsgrader (UI klar, data tom — manuel klassifikation mangler). Lane-B c4: UI ærlig + datadrevet - filter/chips/entré-tekst/selskab-kort vises kun ud fra `portfolio.json` `maturity`; stale `?mat=` normaliseres væk
+- [~] Modenhedsgrader (UI klar, data tom — manuel klassifikation mangler). Lane-B c4: UI ærlig + datadrevet - filter/chips/entré-tekst/selskab-kort vises kun ud fra `portfolio.json` `maturity`; stale `?mat=` normaliseres væk; c19: main har nu maskinelle modenhedsforslag (maturityStatus=forslag, GICS-heuristik) for alle 345 - selskab.html sagde fejlagtigt "Manuel klassifikation" og "High growth" i NDI-linsen; nu almindeligt dansk (Før omsætning/Før overskud/Høj vækst/Vækst med overskud/Moden) + "(forslag)" + "Maskinelt forslag … afventer NDI-gennemgang"; screener-filter siger "345 af 345 placeret - alle som forslag" (manuel kun når data siger det)
 - [ ] Market cap-lag — blokeret natten over (ingen mcap i portfolio.json; kræver kilde)
 - [ ] Produktkategori-lag — blokeret natten over (ingen produktkatalog-data)
 - [~] Tema: reindustrialisering USA — dækket pædagogisk via physical/energy/rum (ingen separat tag; legacy deferred)
@@ -48,6 +48,24 @@ Kilder: slack_ny_graf_2026-10-15.md, vision.txt, mads_tankemodel.md, investering
 - [x] Tidslinje over teknologiske skift
 - [x] Hvorfor NDI sidder hvor den gør (callout + filosofi-kapitel; led-blurbs)
 - [x] SVG-treemap + sunburst tema-eksponering; visual-variety pass + Grok review
+- [x] Rumkæde-pædagogik: rum-ordbog (10 ord) + logaritmisk højdeskala (ISS → Månen) på rum-fanen (lane-A)
+- [x] Broer mellem kæder (fælles selskaber, beregnet), robotik-faser (BLOG 7. okt 2024) og faglige broer for kvante (lane-A)
+- [x] vaerdikaede.html: indgangskort til de fire andre kæder (lane-A)
+- [x] Rum: "Hvorfor er det blevet billigere at komme op?" (før/nu + årsagskæde, baggrund; kun NDI-tallet 90 % med kilde) og robot-ordbog med 9 ord (lane-A)
+- [x] Energi-fane: "Fra råstof til regnekraft" (strømmens vej med NDI-mærker for pres og kilde pr. mærke) + energi-ordbog 13 ord; kvante: tidshorisont som gengivet NVIDIA-udsagn med kilde; vaerdikaede.html: én forklaring pr. kæde (lane-A)
+- [x] AI-fane: flodkort over de 13 led i Mads' rækkefølge med NDI-pres-mærke og kilde pr. led (dæmning, begyndende, del af halvlederne, ingen tydelig flaskehals, efterspørgsel); samme mærker på vaerdikaede.html (lane-A)
+- [x] Rum: "Følg én satellit fra fabrik til tjeneste" (6 trin med SVG-scene, trinknapper og tastatur; antal og eksempelnavne pr. led pr. 1. juni 2026; baggrund) + AI-flodkort: sidespor til kvante; robotik-komponenter uden ordet eksponering (lane-A)
+- [x] Energi-strømvej: "Det ændrer sig" pr. station (4 med NDI-kilde, elnet mærket baggrund); kvante-ordbog med 10 ord (baggrund) + deep-link `?kaede=quantum#q-gl` (lane-A)
+- [x] Rum: "Hvordan tjener rumkæden penge?" (én gang / løbende / endnu tidligt, med antal pr. led og NDI-linjen om Starlink som løbende tjeneste; baggrund) + vaerdikaede.html: ordbogs-link pr. kæde (lane-A)
+- [x] Rum: "Hvad kan gå galt?" (6 usikkerheder med kæde-strimmel over ramte led; 2 NDI-linjer med kilde, resten baggrund) + læse-rute "Rum i syv stop"; kvante-horisont med hop til AI-floden (lane-A)
+- [x] Energi: "Hvad kan gå galt i energikæden?" (6 usikkerheder med strømvej-strimmel; 4 NDI-linjer med kilde, resten baggrund) + energi-ledkort uden aktiesprog, råstoffer inkl. gas og uran; vaerdikaede.html: usikkerheds-link pr. kæde (lane-A)
+- [x] Rum: "Hvem arbejder hvor højt?" (5 højdebånd fra jorden til Månen med led og antal pr. 1. juni 2026, fremhæver båndet på højdeskalaen; baggrund) + "Tjek dig selv" med 5 spørgsmål og link til forklaringen; læse-rute nu 8 stop; vaerdikaede.html: link til spørgsmålene (lane-A)
+- [x] Energi: "Tjek dig selv" med 5 spørgsmål (første flaskehals, elnet, lagring, råstoffer og geopolitik, SMR); 3 med NDI-kilde, resten baggrund; svar-link åbner leddet; quiz-koden er fælles for rum og energi; vaerdikaede.html: quiz-link på energikortet (lane-A)
+- [x] Kvante: "Hvorfor skal en kvantechip være så kold?" (termometer på logaritmisk skala fra stuetemperatur til kryostat ca. 0,01 K, årsagskæde med ordbogs-link, bro til energi via elnet; baggrund) + "Tjek dig selv" med 4 spørgsmål (NVIDIA-udsagnet som hans, ikke NDI's); vaerdikaede.html: quiz-link på kvantekortet; adressen følger hop og afsnit (lane-A)
+- [x] Robotik: "Sanse, tænke, handle" (cirkulær løkke i 4 trin, hvert trin åbner sit led, "Tænke" hopper til fysisk AI; baggrund) + "Hvad kan gå galt i robotkæden?" (6 usikkerheder, 2 NDI-linjer med kilde) + "Tjek dig selv" med 4 spørgsmål + genveje øverst i fanen; korte navne på robotled; vaerdikaede.html: usikkerheds- og quiz-link på robotkortet (lane-A)
+- [x] AI-flod: "Hvad kan gå galt i AI-floden?" (6 usikkerheder med en mini-flod over alle 13 led i Mads' rækkefølge; 5 NDI-linjer med kilde, resten baggrund) + "Tjek dig selv" med 5 spørgsmål, alle med NDI-kilde + AI-ordbog med 12 ord + genveje øverst i flodkortet; vaerdikaede.html: links til usikkerheder, spørgsmål og ordbog (lane-A)
+- [x] Energi: "Hvor i strømvejen" på hvert ledkort (5 trin fra råstof til datacenter, leddet fremhævet, hop til AI-floden; baggrund) + led i strømmens rækkefølge + genveje i energi-fanen (lane-A)
+- [x] Rum: "Rummet og de andre kæder" (trådediagram med 7 tråde fra 5 rum-led til led i AI, energi, robotik og kvante; hop til leddet, Musk-udsagnet kun via citatet med kilde; resten baggrund) + 6. quizspørgsmål + læse-rute "Rum i ni stop"; vaerdikaede.html: trådelink på rumkortet (lane-A)
 
 ## Formidling / filosofi
 - [x] Variance drag / CAGR ≠ gennemsnit (lær)
@@ -78,6 +96,7 @@ Kilder: slack_ny_graf_2026-10-15.md, vision.txt, mads_tankemodel.md, investering
 | lane-B c9 | Temaforslag runde 2: 32 Andet → tema ud fra kædeplads (themeFrom/forslag), themes.json genberegnet, linse-tags opdateret; selskab.html forslag-mærke | lane-B |
 | lane-B c10 | NDI-linse 217 → 269 (+52): fuld dækning i Energi/Chips/Compute/Fysisk/Energiressourcer/SpaceTech/Quantum; ærlige tag-noter | lane-B |
 | lane-B c11 | NDI-linse 269 → 310 (+41 Software/Optik/Platforme); temaforslag runde 3 (Infleqtion → Quantum; ASP Isotopes, Neo → Energiressourcer); themes.json genberegnet | lane-B |
+| lane-B c19 | Merge origin/main → lane-B (portfolio-konflikter felt for felt); forslag-mærker kun i gennemgangstilstand (Leo 02:07); ærlig modenhed: forslag ≠ manuel, dansk; Opendoor usikker | lane-B |
 | lane-B c18 | Mobil: kompakt tema-linje + sortér-knaprække i screener, ISIN/tema under navnet i A-Z; Ghl = Grab Holdings (linse 333, Software → Platforme forslag) | lane-B |
 | lane-B c17 | Mobil-læsbarhed af temagennemgang: forslag/usikkert/før/linse-match-noter ombrydes (td nowrap gav 933-1674 px brede tabeller på 375 px) i screener, A-Z og tema.html; NDI-linse-led for Planet Labs/Intuitive Machines rettet til kædens faktiske led | lane-B |
 | lane-B c12 | Søge-/sorteringsparitet: fælles `searchPosition` (multi-tag + NDI-linse-tekst, hit-note), tema-grupper i screener, A-Z `status=`-filter + filter-bevarende links | lane-B |

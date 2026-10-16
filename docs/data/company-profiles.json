@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-13",
+ "updatedAt": "2026-10-15",
  "profiles": {
   "US7960508882": {
    "name": "Samsung Electronics",
@@ -441,6 +441,1432 @@
    "watch": "Brugeraktivitet, moderation, annonceindtægter, datalicenser og afhængighed af søgetrafik.",
    "source": "https://investor.redditinc.com/",
    "reviewedAt": "2026-10-08"
+  },
+  "US34379V1035": {
+   "name": "Fluence Energy",
+   "theme": "energy",
+   "summary": "Leverer batterisystemer og software, der lagrer strøm på elnettet og afleverer den igen.",
+   "watch": "Projekternes størrelse, forsyning af battericeller og kundernes investeringer i elnet.",
+   "source": "https://fluenceenergy.com/",
+   "products": "Batterisystemer til elnettet og tilhørende software.",
+   "customers": "Elselskaber, projektudviklere og store elforbrugere.",
+   "role": "Lagring mellem elproduktion og forbrug.",
+   "narrative": [
+    "Fluence leverer batterisystemer og software til elnettet. Systemerne lagrer strøm og sender den ud igen.",
+    "Fluence er ikke et kraftværk. Denne beskrivelse siger heller ikke, at selskabet selv fremstiller battericellerne. I kæden står selskabet på batterier."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://fluenceenergy.com/"
+    }
+   ]
+  },
+  "US83418M1036": {
+   "name": "Solaris Energy Infrastructure",
+   "theme": "energy",
+   "summary": "Leverer strømproduktion og fordeling tæt på store forbrugere. Selskabet skrev 6. juli 2026, at det har købt GESA, som er service til kraftværker. Datoen ligger efter beholdningen. Det er ikke et kraftværk i drift.",
+   "watch": "Kontrakter med store strømforbrugere, adgang til udstyr og den ældre olieforretning ved siden af.",
+   "source": "https://www.solaris-energy.com/",
+   "products": "Anlæg, der producerer og fordeler strøm tæt på forbrugeren, plus service.",
+   "customers": "Datacentre, industri og energikunder.",
+   "role": "Strøm ved siden af store forbrugere, ikke et klassisk elselskab alene.",
+   "narrative": [
+    "Solaris skriver, at selskabet er stiftet i 2014, og at det leverer produktion og fordeling af strøm til datacentre, energi, erhverv og industri. Selskabet skrev 6. juli 2026, at det har købt Global Energy Services Alliance, GESA.",
+    "GESA er beskrevet som service til kraftværker, sammensat af Baseload Power og Pro-Per Energy Services. Datoen ligger efter beholdningen pr. 1. juni 2026. Det er service, ikke et kraftværk i drift. I kæden står Solaris både på elproduktion og på elnet."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.solaris-energy.com/"
+    },
+    {
+     "label": "GESA, 6. juli 2026",
+     "url": "https://ir.solaris-energy.com/news/2026/07-06-2026-120016135"
+    }
+   ]
+  },
+  "US74347M1080": {
+   "name": "ProPetro",
+   "theme": "energy",
+   "summary": "Leverer trykpumpning til olie- og gasboringer i Permian-bassinet. Det er service, ikke et kraftværk og ikke en mine.",
+   "watch": "Aktivitet i Permian-bassinet. Selskabet driver ikke et kraftværk.",
+   "source": "https://www.propetroservices.com/",
+   "products": "Trykpumpning og tilknyttet service på boresteder.",
+   "customers": "Selskaber, der udvinder olie og gas.",
+   "role": "Serviceled i gas- og olieforsyningen, ikke elproduktion.",
+   "narrative": [
+    "ProPetro skriver, at selskabet laver trykpumpning og tilknyttet service i Permian-bassinet for selskaber, der leder efter og udvinder olie og gas.",
+    "Det er service på boresteder. Selskabet driver ikke et kraftværk og ikke en mine. I kæden står det ikke på elproduktion."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.propetroservices.com/"
+    }
+   ]
+  },
+  "US65339F1012": {
+   "name": "NextEra Energy",
+   "theme": "energy",
+   "summary": "Amerikansk energikoncern med regulerede elselskaber og elproduktion fra blandt andet sol, vind, gas og atomkraft.",
+   "watch": "Tilladelser, nettilslutning, brændsel og udbygning af ny produktion.",
+   "source": "https://www.nexteraenergy.com/",
+   "products": "El til kunder i regulerede områder og strøm fra egne anlæg.",
+   "customers": "Husholdninger, virksomheder og aftagere af strøm.",
+   "role": "Elproduktion og distribution i den klassiske energikæde.",
+   "narrative": [
+    "NextEra Energy ejer Florida Power & Light, som leverer el i Florida. Selskabet skriver, at Florida Power & Light har mere end 6 millioner tilslutninger.",
+    "Koncernen producerer også selv strøm fra sol, vind, gas og atomkraft i drift. Derfor står den på elproduktion og ikke som udvikler af små reaktorer. Temaet i snapshottet er et forslag. Forsiden skriver, at NextEra og Dominion Energy skal lægges sammen. Teksten siger ikke, at sammenlægningen er gennemført."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.nexteraenergy.com/"
+    }
+   ]
+  },
+  "US8425871071": {
+   "name": "Southern Company",
+   "theme": "energy",
+   "summary": "Reguleret elselskab i det sydøstlige USA. Produktionen omfatter blandt andet atomkraft og gas.",
+   "watch": "Drift af kraftværker, brændsel, regulering og investeringer i nettet.",
+   "source": "https://www.southerncompany.com/",
+   "products": "El og i dele af koncernen også gas til slutkunder.",
+   "customers": "Kunder i selskabets forsyningsområder.",
+   "role": "Eksisterende elproduktion, herunder store atomkraftværker, ikke en SMR-udvikler.",
+   "narrative": [
+    "Southern Company er et reguleret elselskab. Det ejer blandt andet Georgia Power, Alabama Power og Mississippi Power.",
+    "Selskabet skriver, at atomkraftværket Vogtle leverer strøm til mere end 1 million hjem og virksomheder i Georgia. Det er værker i drift. Southern er ikke en udvikler af små reaktorer."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.southerncompany.com/"
+    }
+   ]
+  },
+  "NL0015002Q12": {
+   "name": "Terra Innovatum",
+   "theme": "energy",
+   "summary": "Udvikler mikroreaktoren SOLO. Selskabet skriver, at konceptet er fra 2018. Denne tekst beskriver ikke et værk i drift.",
+   "watch": "Om designet bliver godkendt og bygget. Teksten beskriver ikke et værk i drift.",
+   "source": "https://www.terrainnovatum.com/",
+   "products": "En mikroreaktor, der er tiltænkt strøm og varme tæt på forbrugeren.",
+   "customers": "Industri, datacentre og andre store forbrugere, hvis anlægget bliver bygget.",
+   "role": "Udvikling af små reaktorer. Ikke elproduktion i drift.",
+   "narrative": [
+    "Terra Innovatum skriver, at konceptet til mikroreaktoren SOLO er fra 2018. Siden beskriver et anlæg under udvikling.",
+    "Det er ikke et værk i drift. Reaktoren er tiltænkt strøm tæt på forbrugeren, hvis den bliver bygget og godkendt."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.terrainnovatum.com/"
+    }
+   ]
+  },
+  "US92840M1027": {
+   "name": "Vistra",
+   "theme": "energy",
+   "summary": "Producerer strøm i USA, blandt andet fra gas og atomkraft, og sælger el til kunder.",
+   "watch": "Kraftværkernes drift, brændselspriser og efterspørgsel efter strøm.",
+   "source": "https://www.vistracorp.com/",
+   "products": "Elproduktion og salg af el.",
+   "customers": "Elkunder og aftagere på engrosmarkedet.",
+   "role": "Elproduktion, herunder eksisterende atomkraft.",
+   "narrative": [
+    "Vistra producerer strøm og sælger el, blandt andet gennem TXU Energy.",
+    "Forsiden skriver, at selskabet har 20-årige aftaler med Meta om mere end 2.600 MW fra tre atomkraftværker. Heraf er 2.176 MW produktion i drift, og 433 MW er øget effekt på værkerne. Det er ikke et program for små nye reaktorer. Teksten siger ikke, at en ny reaktor er bygget."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.vistracorp.com/"
+    },
+    {
+     "label": "Aftale med Meta 9. januar 2026",
+     "url": "https://investor.vistracorp.com/2026-01-09-Vistra-and-Meta-Announce-Agreements-to-Support-Nuclear-Plants-in-PJM-and-Add-New-Nuclear-Generation-to-the-Grid"
+    }
+   ]
+  },
+  "US02156V1098": {
+   "name": "Oklo",
+   "theme": "energy",
+   "summary": "Udvikler små atomkraftanlæg. Selskabet skrev 6. august 2026, at testreaktoren Groves nåede en kædereaktion ved lav effekt. Det er efter beholdningen. Det er ikke et kommercielt kraftværk og ikke salg af isotoper.",
+   "watch": "Om testreaktoren forbliver en test, og om Aurora bliver et værk. Teksten beskriver ikke salg af isotoper.",
+   "source": "https://oklo.com/",
+   "products": "En testreaktor og planer om kraftværker. Ikke salg af isotoper.",
+   "customers": "Store elforbrugere, hvis kraftværkerne bliver bygget.",
+   "role": "Testreaktor efter beholdningen. Ikke et kommercielt kraftværk og ikke salg af isotoper.",
+   "narrative": [
+    "Oklo skrev 6. august 2026, at testreaktoren Groves nåede en kontrolleret kædereaktion ved lav effekt. Datoen ligger efter beholdningen pr. 1. juni 2026. Meddelelsen af 13. oktober 2026 siger, at reaktoren ligger i Texas. Det er en testreaktor. Teksten beskriver ikke et kommercielt kraftværk og ikke salg af isotoper.",
+    "Selskabet skrev 11. juni 2026, at en foreløbig sikkerhedsanalyse for Aurora ved Idaho National Laboratory er godkendt. Det er ikke et værk i drift. Selskabet skrev 13. oktober 2026, at Groves-2 Forge er et planlagt pilotanlæg. Det er ikke bygget. NDI har skrevet, at tidslinjer for den slags anlæg er usikre. Teksten her er en beskrivelse af selskabet, ikke en vurdering af aktien."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://oklo.com/"
+    },
+    {
+     "label": "Groves, 6. august 2026",
+     "url": "https://oklo.com/newsroom/oklos-groves-reactor-achieves-first-criticality-in-under-a-year"
+    },
+    {
+     "label": "Aurora, 11. juni 2026",
+     "url": "https://oklo.com/newsroom/u-s-department-of-energy-approves-preliminary-documented-safety-analysis-for-aurora-powerhouse-a"
+    },
+    {
+     "label": "Groves-2, 13. oktober 2026",
+     "url": "https://oklo.com/newsroom/oklo-to-advance-groves-2-forge-as-part-of-u-s-department-of-energys-nuclear-energy-launch-pad-se"
+    }
+   ]
+  },
+  "US87422Q1094": {
+   "name": "Talen Energy",
+   "theme": "energy",
+   "summary": "Producerer strøm i USA fra atomkraft, kul, naturgas og olie. Susquehanna er atomkraftværket. Siden skriver, at Brandon Shores kører videre efter en planlagt lukning. Det er ikke en udvikler af små reaktorer.",
+   "watch": "Drift af værkerne og aftalen om Brandon Shores.",
+   "source": "https://www.talenenergy.com/",
+   "products": "El fra egne kraftværker.",
+   "customers": "Aftagere af strøm. Selskabet skriver, at det leverer til Amazon ved Susquehanna.",
+   "role": "Værker i drift, herunder atomkraft, kul, naturgas og olie. Ikke en udvikler af små reaktorer.",
+   "narrative": [
+    "Talen skriver, at flåden omfatter atomkraftværket Susquehanna i Pennsylvania og også værker på kul, naturgas og olie. Selskabet skriver, at det leverer strøm til Amazon ved Susquehanna.",
+    "Siden skriver, at Brandon Shores var planlagt lukket 1. juni 2025, og at værket kører videre til 31. maj 2031 efter en pålidelighedsaftale. Brunner Island kan bruge både kul og naturgas. Selskabet skriver, at kul på Brunner Island skal stoppe inden udgangen af 2028. Det er ikke sket i denne tekst. Talen driver værker. Det er ikke en udvikler af små reaktorer."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.talenenergy.com/"
+    },
+    {
+     "label": "Porteføljen",
+     "url": "https://www.talenenergy.com/our-portfolio/"
+    }
+   ]
+  },
+  "US8814541020": {
+   "name": "Terrestrial Energy",
+   "theme": "energy",
+   "summary": "Udvikler en reaktor, der bruger smeltet salt (IMSR). Denne tekst beskriver ikke et anlæg i drift.",
+   "watch": "Godkendelser og om designet bliver bygget.",
+   "source": "https://www.terrestrialenergy.com/",
+   "products": "En reaktortype under udvikling.",
+   "customers": "Ingen driftkunder i denne beskrivelse.",
+   "role": "Udvikling af en anden type lille reaktor.",
+   "narrative": [
+    "Terrestrial Energy udvikler reaktoren IMSR. Den bruger smeltet salt.",
+    "Denne beskrivelse omfatter ikke et anlæg i drift."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.terrestrialenergy.com/"
+    }
+   ]
+  },
+  "US2057683029": {
+   "name": "Comstock Resources",
+   "theme": "energy-resources",
+   "summary": "Producerer naturgas i USA, især i Haynesville.",
+   "watch": "Gaspriser, boreresultater og hvor meget felterne kan levere.",
+   "source": "https://www.comstockresources.com/",
+   "products": "Naturgas.",
+   "customers": "Købere af gas til industri, kraftværker og videre distribution.",
+   "role": "Brændsel til elproduktion, ikke et kraftværk.",
+   "narrative": [
+    "Comstock Resources producerer naturgas i Haynesville, i Louisiana og i det østlige Texas.",
+    "I kæden står selskabet på elproduktion, fordi gassen er brændsel til kraftværker. Det er ikke en metalmine."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.comstockresources.com/"
+    }
+   ]
+  },
+  "US9115491030": {
+   "name": "United States Antimony",
+   "theme": "energy-resources",
+   "summary": "Selskabet skriver, at det udvinder og forarbejder antimon og zeolit. Zeolitten kommer fra minen i Preston i Idaho, og smelteværket ligger i Thompson Falls i Montana. Alaska er ikke skrevet som en mine i drift.",
+   "watch": "Drift i Preston og på smelteværket i Montana. Alaska er ikke en mine i drift i denne tekst.",
+   "source": "https://www.usantimony.com/",
+   "products": "Antimon og zeolit.",
+   "customers": "Industrikunder.",
+   "role": "Antimon og zeolit. Preston er en mine. Alaska er ikke skrevet som en mine i drift.",
+   "narrative": [
+    "United States Antimony skriver, at zeolit kommer fra minen og anlægget i Preston i Idaho, og at smelteværket for antimonoxid ligger i Thompson Falls i Montana.",
+    "Siden skriver, at tiden og usikkerheden ved en ny tilladelse til minen ved Thompson Falls fik selskabet til at lægge udvindingen tilbage til Mexico. Det første gravearbejde i Alaska skal samle stibnit og er ikke skrevet som en mine i drift. Materialet skal behandles på Fox Logistics Center i Fairbanks og raffineres i Montana. Smelteværket Madero er med i antimonforretningen. Flotationsmøllen i Puerto Blanco kører ikke, og minen Los Juarez er ikke aktiv. Det er råstoffer, ikke et kraftværk."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.usantimony.com/"
+    },
+    {
+     "label": "Driften",
+     "url": "https://usantimony.com/operations/"
+    }
+   ]
+  },
+  "US15643U1043": {
+   "name": "Centrus Energy",
+   "theme": "energy-resources",
+   "summary": "Arbejder med berigelse af uran, så det kan bruges som brændsel i reaktorer. Det er ikke et kraftværk og ikke en mine.",
+   "watch": "Tilladelser, teknisk drift af berigelse og ordrer på brændsel.",
+   "source": "https://www.centrusenergy.com/",
+   "products": "Uranbrændsel og berigelse.",
+   "customers": "Reaktoroperatører og programmer, der har brug for beriget uran.",
+   "role": "Brændsel til atomkraft. Står under råstoffer, ikke som reaktorudvikler.",
+   "narrative": [
+    "Centrus leverer beriget uran som brændsel til atomkraftværker. Selskabet skriver, at det udvider berigningen af lavt beriget uran og af HALEU til nyere reaktortyper.",
+    "Centrus er ikke et kraftværk og ikke en mine. I kæden står selskabet under råstoffer."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.centrusenergy.com/"
+    }
+   ]
+  },
+  "US03674X1063": {
+   "name": "Antero Resources",
+   "theme": "energy-resources",
+   "summary": "Producerer naturgas og flydende gasprodukter i Appalachia i USA. Selskabet skriver, at det leverer naturgas og LPG til eksport.",
+   "watch": "Gaspriser og produktion fra felterne.",
+   "source": "https://www.anteroresources.com/",
+   "products": "Naturgas, flydende gasprodukter og LPG til eksport.",
+   "customers": "Købere af gas.",
+   "role": "Brændsel til elproduktion.",
+   "narrative": [
+    "Antero Resources producerer naturgas og flydende gasprodukter i Appalachia. Selskabet nævner Marcellus og skriver, at det leverer naturgas og LPG til eksport.",
+    "I kæden står selskabet på elproduktion, fordi gassen er brændsel. Det er ikke en metalmine."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.anteroresources.com/"
+    }
+   ]
+  },
+  "US26884L1098": {
+   "name": "EQT",
+   "theme": "energy-resources",
+   "summary": "Producerer naturgas i Appalachia i USA. Selskabet skriver, at købet af Equitrans Midstream blev gennemført 22. juli 2024.",
+   "watch": "Gaspriser og produktion fra felterne.",
+   "source": "https://www.eqt.com/",
+   "products": "Naturgas. Også midstream-aktiver efter købet af Equitrans.",
+   "customers": "Købere af gas.",
+   "role": "Brændsel til elproduktion.",
+   "narrative": [
+    "EQT producerer naturgas i Appalachia i USA. Selskabet skriver, at købet af Equitrans Midstream blev gennemført 22. juli 2024.",
+    "Equitrans er beskrevet som midstream-aktiver. I kæden står gassen som brændsel. Det er ikke en metalmine."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.eqt.com/"
+    },
+    {
+     "label": "Meddelelse 22. juli 2024",
+     "url": "https://www.eqt.com/thought-leadership/eqt-completes-acquisition-of-equitrans-midstream"
+    }
+   ]
+  },
+  "US1651677353": {
+   "name": "Expand Energy",
+   "theme": "energy-resources",
+   "summary": "Producerer naturgas i USA. Selskabet er dannet ved en sammenlægning af Chesapeake og Southwestern. Det skrev 16. september 2026, at handlen med Twin Eagle er gennemført. Datoen ligger efter beholdningen.",
+   "watch": "Gaspriser og samlingen af de to forretninger.",
+   "source": "https://www.expandenergy.com/",
+   "products": "Naturgas. Twin Eagle er et marketingselskab.",
+   "customers": "Købere af gas.",
+   "role": "Brændsel til elproduktion.",
+   "narrative": [
+    "Expand Energy producerer naturgas i USA. Selskabet er dannet ved en sammenlægning af Chesapeake og Southwestern. Det skrev 16. september 2026, at handlen med Twin Eagle er gennemført, og at Twin Eagle bliver et datterselskab.",
+    "Datoen ligger efter beholdningen pr. 1. juni 2026. Twin Eagle er beskrevet som et marketingselskab. I kæden står gassen som brændsel. Det er ikke en metalmine."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.expandenergy.com/"
+    },
+    {
+     "label": "Twin Eagle, 16. september 2026",
+     "url": "https://www.expandenergy.com/2026/09/16/expand-energy-and-twin-eagle-transaction-closes-combined-organization-creates-north-americas-leading-integrated-natural-gas-company/"
+    }
+   ]
+  },
+  "CA8265991023": {
+   "name": "Sigma Lithium",
+   "theme": "energy-resources",
+   "summary": "Producerer lithiumkoncentrat i Brasilien. Selskabet nævner Jequitinhonha-dalen. Det er råstof til batterier, ikke et batteriselskab.",
+   "watch": "Drift af anlægget, lithiumpriser og kvaliteten af koncentratet.",
+   "source": "https://sigmalithiumcorp.com/",
+   "narrative": [
+    "Sigma Lithium producerer lithiumkoncentrat i Brasilien. Selskabet nævner Jequitinhonha-dalen, og det skrev 17. april 2023, at produktionen var gået i gang.",
+    "Datoen ligger før beholdningen pr. 1. juni 2026. Det er råstof til batterier, ikke et batteriselskab og ikke et kraftværk."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://sigmalithiumcorp.com/"
+    }
+   ],
+   "products": "Lithiumkoncentrat.",
+   "customers": "Videreforarbejdning til batterimaterialer.",
+   "role": "Råstof til batterier, ikke et færdigt lagersystem."
+  },
+  "US5533681012": {
+   "name": "MP Materials",
+   "theme": "energy-resources",
+   "summary": "Udvinder sjældne jordarter ved Mountain Pass i USA og arbejder med videre forarbejdning, herunder magneter.",
+   "watch": "Produktion, forarbejdning uden for minen og efterspørgsel efter magneter.",
+   "source": "https://mpmaterials.com/",
+   "products": "Sjældne jordarter og produkter længere fremme i kæden.",
+   "customers": "Industri, der bruger sjældne jordarter i magneter og elektronik.",
+   "role": "Råstof til elektronik, motorer og forsvar. Ikke et chipværk.",
+   "narrative": [
+    "MP Materials udvinder sjældne jordarter ved Mountain Pass i Californien. Selskabet skriver, at magneter fremstilles på anlægget Independence i Texas.",
+    "Det er en mine med videre forarbejdning i denne beskrivelse, ikke et projekt uden drift og ikke et chipværk."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://mpmaterials.com/"
+    }
+   ]
+  },
+  "CA6544846091": {
+   "name": "NioCorp",
+   "theme": "energy-resources",
+   "summary": "Udvikler et projekt i Nebraska med blandt andet niobium. Denne tekst beskriver ikke en mine i drift.",
+   "watch": "Finansiering, tilladelser og om minen bliver bygget.",
+   "source": "https://www.niocorp.com/",
+   "products": "Et mineprojekt, ikke en igangværende produktion.",
+   "customers": "Ingen driftkunder i denne beskrivelse.",
+   "role": "Råstofprojekt.",
+   "narrative": [
+    "NioCorp udvikler et projekt i Nebraska med blandt andet niobium.",
+    "Denne tekst beskriver ikke en mine i drift."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.niocorp.com/"
+    }
+   ]
+  },
+  "VGG2662B1031": {
+   "name": "Critical Metals",
+   "theme": "energy-resources",
+   "summary": "Arbejder med Tanbreez i Grønland og med Wolfsberg i Kärnten i Østrig. Selskabet skrev 5. oktober 2026, at Grønland har godkendt mine- og lukningsplaner. De sidste driftstilladelser mangler før byggeri. Det er ikke en mine i drift.",
+   "watch": "Tilladelser før byggeri i Grønland, og om Wolfsberg bliver til en mine.",
+   "source": "https://www.criticalmetalscorp.com/",
+   "products": "Projekter i sjældne jordarter og lithium. Ikke miner i drift.",
+   "customers": "Ingen driftkunder i denne beskrivelse.",
+   "role": "Råstofprojekt, ikke produktion.",
+   "narrative": [
+    "Critical Metals arbejder med sjældne jordarter i projektet Tanbreez i Grønland. Selskabet skrev 5. oktober 2026, at Grønlands regering har godkendt mineplanen og lukningsplanen, og at planerne rækker til september 2050. Selskabet skriver, at de sidste driftstilladelser mangler, før byggeriet kan gå i gang. Datoen ligger efter beholdningen pr. 1. juni 2026.",
+    "Siden nævner også lithiumprojektet Wolfsberg i Kärnten i Østrig. Et studie af projektet er ikke en mine i drift. En aftale med BMW og et planlagt raffinaderi i Saudi-Arabien er heller ikke drift."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.criticalmetalscorp.com/"
+    },
+    {
+     "label": "Tanbreez, 5. oktober 2026",
+     "url": "https://www.criticalmetalscorp.com/critical-metals-corp-nasdaq-crml-announces-receipt-of-formal-greenland-government-mining-approvals-for-the-tanbreez-mine-valid-through-the-year-2050/"
+    },
+    {
+     "label": "Wolfsberg",
+     "url": "https://criticalmetalscorp.com/projects/wolfsberg-lithium-project/"
+    }
+   ]
+  },
+  "AU000000LYC6": {
+   "name": "Lynas Rare Earths",
+   "theme": "energy-resources",
+   "summary": "Udvinder sjældne jordarter og forarbejder dem. Minen ligger i Australien, og forarbejdning sker også andre steder.",
+   "watch": "Drift af mine og forarbejdning, og reglerne for de anlæg, der skiller metallerne ad.",
+   "source": "https://lynasrareearths.com/",
+   "products": "Sjældne jordarter.",
+   "customers": "Industrikunder.",
+   "role": "Råstof og forarbejdning.",
+   "narrative": [
+    "Lynas udvinder sjældne jordarter og forarbejder dem. Minen ligger i Australien.",
+    "Det er råstof og forarbejdning, ikke et kraftværk."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://lynasrareearths.com/"
+    }
+   ]
+  },
+  "CA53681J1030": {
+   "name": "Lithium Americas",
+   "theme": "energy-resources",
+   "summary": "Udvikler lithiumprojektet Thacker Pass i det nordlige Nevada. Selskabet skriver, at byggeriet begyndte i begyndelsen af 2023, og at centret i Reno er et laboratorium. Denne tekst beskriver ikke en mine i fuld drift.",
+   "watch": "Byggeriet på Thacker Pass og om målet i 2027 bliver til drift. Centret i Reno er ikke minen.",
+   "source": "https://www.lithiumamericas.com/",
+   "products": "Lithiumprojektet Thacker Pass. Laboratoriet i Reno er ikke minen.",
+   "customers": "Videreforarbejdning, hvis produktionen kommer i gang.",
+   "role": "Thacker Pass er under byggeri. Centret i Reno er et laboratorium, ikke minen.",
+   "narrative": [
+    "Lithium Americas skriver, at byggeriet på Thacker Pass i det nordlige Nevada begyndte i begyndelsen af 2023. Datoen ligger før beholdningen. Målet er stadig industriel skala sent i 2027. Det er byggeri og et mål, ikke en mine i fuld drift.",
+    "Selskabet skriver, at Lithium Technical Development Center i Reno er et laboratorium og et pilotanlæg, som afprøver processen fra malmen. Det er ikke minen."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.lithiumamericas.com/"
+    }
+   ]
+  },
+  "US91733P1075": {
+   "name": "USA Rare Earth",
+   "theme": "energy-resources",
+   "summary": "Selskabet skriver, at aktiviteterne spænder over USA, Storbritannien og Brasilien, og at det vil udvinde og forarbejde i Texas og i Brasilien. En overskrift dateret 4. september 2026 om Serra Verde Group ligger efter beholdningen. Texas er ikke beskrevet som en mine i drift.",
+   "watch": "Om projektet og magnetplanerne bliver til drift.",
+   "source": "https://www.usare.com/",
+   "products": "Planer om sjældne jordarter og magneter.",
+   "customers": "Ingen driftkunder i denne beskrivelse.",
+   "role": "Råstofprojekt.",
+   "narrative": [
+    "USA Rare Earth skriver, at aktiviteterne spænder over USA, Storbritannien og Brasilien, og at et anlæg i Frankrig er planlagt. Selskabet vil udvinde og forarbejde i Texas og i Brasilien. Magneter nævnes i Oklahoma, og South Carolina står som planlagt.",
+    "Forsiden daterer 4. september 2026 en overskrift om, at sammenlægningen med Serra Verde Group er gennemført. Datoen ligger efter beholdningen pr. 1. juni 2026. Texas er ikke beskrevet som en mine i drift."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.usare.com/"
+    }
+   ]
+  },
+  "CA2926717083": {
+   "name": "Energy Fuels",
+   "theme": "energy-resources",
+   "summary": "Selskabet skriver, at det fremstiller oxider af sjældne jordarter på et anlæg i USA. Siden nævner White Mesa Mill med uran, sjældne jordarter og vanadium. Det er ikke et kraftværk.",
+   "watch": "Uranpriser, møllens drift og mængden af materiale, der bliver forarbejdet.",
+   "source": "https://www.energyfuels.com/",
+   "products": "Uran, sjældne jordarter og vanadium.",
+   "customers": "Selskaber, der laver reaktorbrændsel, og industrikunder.",
+   "role": "Råstof til atomkraft.",
+   "narrative": [
+    "Energy Fuels skriver, at det fremstiller oxider af sjældne jordarter på et anlæg i USA. Siden nævner White Mesa Mill med uran, sjældne jordarter og vanadium.",
+    "Selskabet skriver, at titan, zirkonmineraler og medicinske isotoper er produkter, det er i gang med at tilføje. Det er ikke et kraftværk."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.energyfuels.com/"
+    }
+   ]
+  },
+  "CA0203987072": {
+   "name": "Almonty Industries",
+   "theme": "energy-resources",
+   "summary": "Arbejder med wolframminer og wolframprojekter. Wolfram bruges i hårde legeringer og industri.",
+   "watch": "Drift af minerne og prisen på wolfram.",
+   "source": "https://almonty.com/",
+   "products": "Wolfram.",
+   "customers": "Industrikunder.",
+   "role": "Råstof til industri, ikke elproduktion.",
+   "narrative": [
+    "Almonty arbejder med wolfram. Selskabet nævner minerne Panasqueira og Los Santos. Valtreixal er et projekt.",
+    "Selskabet skrev 23. september 2026, at Sangdong i Sydkorea har produceret wolfram for første gang siden 1993. Meddelelsen ligger efter beholdningen pr. 1. juni 2026. Selskabet er ikke et kraftværk."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://almonty.com/"
+    },
+    {
+     "label": "Meddelelse 23. september 2026",
+     "url": "https://almonty.com/almonty-marks-first-tungsten-production-at-sangdong-since-1993/"
+    }
+   ]
+  },
+  "US46578C1080": {
+   "name": "Ivanhoe Electric",
+   "theme": "energy-resources",
+   "summary": "Udvikler projekter i USA. Selskabet skriver, at Santa Cruz er et kobberprojekt i Arizona, og at Tintic er et kobber- og guldprojekt i Utah. Teksten beskriver ikke en mine i drift.",
+   "watch": "Undersøgelser, tilladelser og om minen bliver bygget.",
+   "source": "https://www.ivanhoeelectric.com/",
+   "products": "Kobberprojekt i Arizona og kobber- og guldprojekt i Utah.",
+   "customers": "Ingen driftkunder i denne beskrivelse.",
+   "role": "Råstofprojekt til elnet og elektronik.",
+   "narrative": [
+    "Ivanhoe Electric skriver, at Santa Cruz er et kobberprojekt i Arizona, og at Tintic er et kobber- og guldprojekt i Utah. Selskabet bruger målesystemet Typhoon til efterforskning.",
+    "Selskabet udgav 23. september 2026 et studie af Santa Cruz. Datoen ligger efter beholdningen pr. 1. juni 2026. Studiet er ikke en mine i drift."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.ivanhoeelectric.com/"
+    },
+    {
+     "label": "Studie af Santa Cruz",
+     "url": "https://ivanhoeelectric.com/news/2026-preliminary-feasibility-study-for-the-santa-cruz-copper-project-in-arizona-confirms-high-grade-low-cost-project-with/"
+    }
+   ]
+  },
+  "CA8536061010": {
+   "name": "Standard Lithium",
+   "theme": "energy-resources",
+   "summary": "Udvikler projekter, der henter lithium ud af saltvand i Arkansas. Denne tekst beskriver demonstrationsskala, ikke en stor mine.",
+   "watch": "Om demonstrationen kan blive til kommerciel produktion.",
+   "source": "https://www.standardlithium.com/",
+   "products": "Lithiumprojekter.",
+   "customers": "Ingen stor kommerciel kundebase i denne beskrivelse.",
+   "role": "Råstof til batterier.",
+   "narrative": [
+    "Standard Lithium skriver, at et demonstrationsanlæg ved El Dorado i Arkansas behandler saltvand.",
+    "Projekterne i Arkansas og i Texas er ikke beskrevet som en stor mine i drift."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.standardlithium.com/"
+    },
+    {
+     "label": "Demonstrationsanlæg",
+     "url": "https://www.standardlithium.com/technology/demonstration-plant/"
+    }
+   ]
+  },
+  "CA89621C1059": {
+   "name": "Trilogy Metals",
+   "theme": "energy-resources",
+   "summary": "Udvikler kobberprojekter i Alaska. Denne tekst beskriver ikke en mine i drift.",
+   "watch": "Tilladelser, adgang til området og om en mine bliver bygget.",
+   "source": "https://trilogymetals.com/",
+   "products": "Kobberprojekter.",
+   "customers": "Ingen driftkunder i denne beskrivelse.",
+   "role": "Råstofprojekt.",
+   "narrative": [
+    "Trilogy Metals arbejder med efterforskning og udvikling af Arctic og Bornite i Alaska. Det er kobberprojekter.",
+    "Selskabet kalder arbejdet efterforskning og udvikling. Denne tekst beskriver ikke en mine i drift."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://trilogymetals.com/"
+    }
+   ]
+  },
+  "CA8765111064": {
+   "name": "Taseko Mines",
+   "theme": "energy-resources",
+   "summary": "Driver kobberminedrift, blandt andet Gibraltar-minen i Canada.",
+   "watch": "Drift af minen, kobberpriser og øvrige projekter.",
+   "source": "https://www.tasekomines.com/",
+   "products": "Kobber.",
+   "customers": "Smelteværker og industrikunder.",
+   "role": "Råstof til elnet og elektronik.",
+   "narrative": [
+    "Taseko driver kobberminen Gibraltar i Canada. Forsiden bruger også navnet Trekor Metals.",
+    "Selskabet skrev 9. oktober 2026, at Florence Copper er gået i kommerciel produktion. Meddelelsen ligger efter beholdningen pr. 1. juni 2026. Yellowhead er i en godkendelsesproces. Aley står som projekt. New Prosperity står ikke som mine på siden."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.tasekomines.com/"
+    },
+    {
+     "label": "Florence Copper 9. oktober 2026",
+     "url": "https://www.tasekomines.com/trekor-talks/florence-copper-begins-commercial-production-the-first-new-us-copper-source-in-nearly-two-decades"
+    }
+   ]
+  },
+  "CA14071L1085": {
+   "name": "Capstone Copper",
+   "theme": "energy-resources",
+   "summary": "Driver kobberminedrift. Selskabet skriver, at produktionen i 2025 var 225.000 ton kobber. Santo Domingo er et projekt, ikke en mine i drift.",
+   "watch": "Drift af minerne og kobberpriser.",
+   "source": "https://capstonecopper.com/",
+   "products": "Kobber.",
+   "customers": "Smelteværker og industrikunder.",
+   "role": "Råstof.",
+   "narrative": [
+    "Capstone skriver, at selskabet producerede 225.000 ton kobber i 2025. Siden nævner Mantos Blancos, Cozamin, Pinto Valley og Mantoverde.",
+    "Santo Domingo er beskrevet som et projekt, ikke som en mine i drift. Selskabet er ikke et kraftværk."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://capstonecopper.com/"
+    }
+   ]
+  },
+  "US35671D8570": {
+   "name": "Freeport-McMoRan",
+   "theme": "energy-resources",
+   "summary": "Driver kobberminedrift. Siden nævner Cerro Verde, El Abra og Grasberg. Det er ikke et elselskab.",
+   "watch": "Drift af minerne, kobberpriser og lokale tilladelser.",
+   "source": "https://www.fcx.com/",
+   "products": "Kobber og andre metaller fra samme miner.",
+   "customers": "Industrikunder.",
+   "role": "Råstof til elnet, elektronik og byggeri.",
+   "narrative": [
+    "Freeport-McMoRan udvinder kobber. Siden nævner Cerro Verde og El Abra i Sydamerika og Grasberg i Indonesien.",
+    "Det er miner i denne beskrivelse, ikke et elselskab."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.fcx.com/"
+    }
+   ]
+  },
+  "CA87261Y1060": {
+   "name": "The Metals Company",
+   "theme": "energy-resources",
+   "summary": "Undersøger metalnoduler på havbunden. Nodulerne indeholder blandt andet nikkel, kobber og kobolt. Denne tekst beskriver ikke produktion.",
+   "watch": "Tilladelser til havbunden og om indsamling nogensinde bliver tilladt i kommerciel skala.",
+   "source": "https://metals.co/",
+   "products": "Et havbundsprojekt, ikke en mine i drift.",
+   "customers": "Ingen produktion at sælge i denne beskrivelse.",
+   "role": "Muligt råstof til batterier. Ikke drift.",
+   "narrative": [
+    "The Metals Company undersøger metalnoduler på havbunden. Nodulerne indeholder blandt andet nikkel, kobber og kobolt.",
+    "Selskabet skrev i maj 2026, at Allseas skal gøre et opsamlingssystem færdigt, og at prøvekørsel ventes at begynde i fjerde kvartal 2027. I august 2026 lagde NOAA en ansøgning frem. Ansøgningen er ikke en tilladelse, og der er ingen produktion i denne beskrivelse."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://metals.co/"
+    },
+    {
+     "label": "Aftale med Allseas, maj 2026",
+     "url": "https://metals.co/tmc-and-allseas-sign-commercial-agreement-first-offshore-nodule/"
+    },
+    {
+     "label": "Ansøgning offentliggjort, august 2026",
+     "url": "https://metals.co/noaa-publishes-tmc-usas-consolidated-application-exploration/"
+    }
+   ]
+  },
+  "CA66510M2040": {
+   "name": "Northern Dynasty Minerals",
+   "theme": "energy-resources",
+   "summary": "Ejeren af Pebble-projektet i Alaska, et kobber- og guldprojekt. Denne tekst beskriver ikke en mine i drift.",
+   "watch": "Om projektet får tilladelse. Det har været omstridt i mange år.",
+   "source": "https://northerndynastyminerals.com/",
+   "products": "Et mineprojekt.",
+   "customers": "Ingen driftkunder i denne beskrivelse.",
+   "role": "Råstofprojekt uden drift.",
+   "narrative": [
+    "Northern Dynasty ejer Pebble-projektet i Alaska. Det er et kobber- og guldprojekt, og der er ingen mine i drift.",
+    "Projektet har i årevis manglet de tilladelser, en mine kræver. Profilen beskriver projektet."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://northerndynastyminerals.com/"
+    }
+   ]
+  },
+  "US84265V1052": {
+   "name": "Southern Copper",
+   "theme": "energy-resources",
+   "summary": "Driver minedrift i Peru og Mexico. Selskabet skriver, at de vigtigste produkter er kobber, molybdæn, sølv og zink. Siden om Tía María skriver, at det er et kobberprojekt i Arequipa, ikke en mine i drift.",
+   "watch": "Drift af minerne. Tía María er et projekt, ikke en mine i drift.",
+   "source": "https://www.southerncoppercorp.com/",
+   "products": "Kobber, molybdæn, sølv og zink. Tía María er et projekt.",
+   "customers": "Industrikunder.",
+   "role": "Kobber i drift. Tía María i Arequipa er et projekt, ikke en mine i drift.",
+   "narrative": [
+    "Southern Copper skriver, at de vigtigste produkter er kobber, molybdæn, sølv og zink, og at selskabet er en del af Grupo México.",
+    "Siden om Tía María skriver, at det er et kobberprojekt i Cocachacra i provinsen Islay i Arequipa. Projektet har to forekomster, La Tapada og Tía María. Siden skriver, at der er tilladelser til at bygge projektet. Det er ikke en mine i drift. Det er heller ikke et kraftværk."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.southerncoppercorp.com/"
+    },
+    {
+     "label": "Tía María",
+     "url": "https://southerncoppercorp.com/tiamaria/"
+    }
+   ]
+  },
+  "CA2960061091": {
+   "name": "Ero Copper",
+   "theme": "energy-resources",
+   "summary": "Driver kobberminer i Brasilien og guldminen Xavantina. Selskabet skriver, at Vale Base Metals ejer Furnas, og at Ero har en ret til at optjene en andel. Det er ikke en mine i drift.",
+   "watch": "Drift på Caraíba, Tucumã og Xavantina. Furnas er et projekt.",
+   "source": "https://www.ero.com/",
+   "products": "Kobberkoncentrat og guld.",
+   "customers": "Smelteværker og raffinaderier.",
+   "role": "Kobber og guld i Brasilien. Furnas er ikke en mine i drift.",
+   "narrative": [
+    "Ero skriver, at Caraíba i Bahia er et kobberkompleks, og at Tucumã i Pará er en kobbermine. Selskabet skriver, at kommerciel produktion på Tucumã blev nået 1. juli 2025. Datoen ligger før beholdningen.",
+    "Xavantina i Mato Grosso er beskrevet som en underjordisk guldmine med eget anlæg. Furnas er et kobber- og guldprojekt. Siden skriver, at Vale Base Metals ejer det, og at Ero har en ret til at optjene en andel på 60 % efter en aftale fra juli 2024. Det er ikke en mine i drift. Et forstudie fra februar 2026 ligger før beholdningen og er foreløbigt. Siden kalder det ikke en reserve."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.ero.com/"
+    },
+    {
+     "label": "Caraíba",
+     "url": "https://www.ero.com/what-we-do/caraiba-operations/"
+    },
+    {
+     "label": "Tucumã",
+     "url": "https://www.ero.com/what-we-do/tucuma-operation/"
+    },
+    {
+     "label": "Xavantina",
+     "url": "https://www.ero.com/what-we-do/xavantina-operations/"
+    },
+    {
+     "label": "Furnas",
+     "url": "https://www.ero.com/what-we-do/furnas-project/"
+    }
+   ]
+  },
+  "US85529M1045": {
+   "name": "Starfighters Space",
+   "theme": "space",
+   "summary": "Flyver en flåde af supersoniske F-104-fly og udvikler et program til at sende nyttelast fra luften. Orbital opsendelse er under udvikling i denne beskrivelse, ikke en etableret rutetjeneste.",
+   "watch": "Om testflyvninger fører til en opsendelse, og om kunderne er der.",
+   "source": "https://ir.starfightersspace.com/",
+   "products": "Flyvning med supersoniske fly og et luftopsendelsesprogram.",
+   "customers": "Kunder til testflyvning og, hvis programmet lykkes, til opsendelse.",
+   "role": "Tidligt opsendelsesled. Ikke en satellitoperatør.",
+   "narrative": [
+    "Starfighters Space skriver, at selskabet flyver supersoniske F-104-fly fra Kennedy Space Center. Flyene kan bruges som første trin til luftopsendelse.",
+    "Selskabet skrev 13. oktober 2026, at STARLAUNCH 1 er et suborbitalt udviklingsfartøj. Den planlagte flyvning i december er med raketten under vingen. Det er ikke en orbital rute, og det er ikke en gennemført opsendelse."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets investorkside",
+     "url": "https://ir.starfightersspace.com/"
+    },
+    {
+     "label": "Meddelelse 13. oktober 2026",
+     "url": "https://ir.starfightersspace.com/news-events/press-releases/detail/122/starfighters-space-advances-starlaunch-1-toward-planned-december-flight"
+    }
+   ]
+  },
+  "US5901061003": {
+   "name": "Merlin",
+   "theme": "space",
+   "summary": "Udvikler software til eksisterende fly. Selskabet skriver, at produktet hedder Merlin Pilot, og at et samarbejde om C-130J har autonomi som mål. Det er luftfart, ikke satellitter, og ikke Satellogics satellit af samme navn.",
+   "watch": "Om samarbejdet om C-130J bliver til drift. Selskabet står ikke som satellitoperatør.",
+   "source": "https://merlinlabs.com/",
+   "products": "Software til autonom flyvning, herunder Merlin Pilot.",
+   "customers": "Den amerikanske specialoperationskommando er nævnt som samarbejdspartner.",
+   "role": "Luftfart. Står ikke som eksempel på opsendelse eller satellitter.",
+   "narrative": [
+    "Merlin skriver, at Merlin Pilot er software til autonom flyvning, lavet så den kan tilpasses fly, der allerede er i drift. Selskabet skriver, at det samarbejder med den amerikanske specialoperationskommando om C-130J. Målet er længere rækkevidde på ruter, der flyves ofte. Det er et mål, ikke en flåde, der allerede flyver med softwaren.",
+    "Det er luftfart. Selskabet står ikke som eksempel på opsendelse eller satellitter. Navnet Merlin er også en satellit hos Satellogic. Det er et andet selskab. Snapshottet har selskabet under SpaceTech."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://merlinlabs.com/"
+    }
+   ]
+  },
+  "US05605H1005": {
+   "name": "BWX Technologies",
+   "theme": "space",
+   "summary": "Fremstiller reaktorer til flåden i Lynchburg. Project Pele er et design, ikke et værk i drift. Selskabet skrev 3. august 2026, at det har aftalt at sælge medicinforretningen. Aftalen er ikke gennemført. Datoen ligger efter beholdningen.",
+   "watch": "Om salgsaftalen bliver gennemført, og om Project Pele forbliver et design.",
+   "source": "https://www.bwxt.com/",
+   "products": "Flådereaktorer, komponenter og TRISO-brændsel.",
+   "customers": "Den amerikanske flåde og udviklere af reaktorer.",
+   "role": "Leverandør til atomkraft. Ikke et civilt værk og ikke en opsendelse.",
+   "narrative": [
+    "BWX Technologies skriver, at fabrikken i Lynchburg i Virginia fremstiller reaktorer til ubåde og hangarskibe. Siden skriver, at reaktorerne bruges i ubådsklasserne Ohio, Virginia, Seawolf og Los Angeles og i hangarskibsklasserne Nimitz og Ford. Columbia-klassen er under bygning. Teksten siger, at selskabet har leveret komponenter, ikke at båden er i tjeneste.",
+    "Selskabet skriver, at det fremstiller TRISO-brændsel til avancerede reaktorer. Det er brændsel, ikke et kraftværk i drift. Project Pele er et transportabelt system, som selskabet har designet. Det er ikke et værk i kommerciel drift. Selskabet skrev 3. august 2026, at det har indgået en endelig aftale om at sælge medicinforretningen til Nordic Capital. Aftalen afventer myndighedsgodkendelse og ventes afsluttet inden udgangen af 2026. Datoen ligger efter beholdningen pr. 1. juni 2026. Salget er ikke gennemført. Snapshottet har selskabet under SpaceTech. Forretningen er atomkraft, ikke opsendelse af satellitter."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.bwxt.com/"
+    },
+    {
+     "label": "Flåden",
+     "url": "https://www.bwxt.com/sectors/defense-space/sea/naval-nuclear-propulsion/"
+    },
+    {
+     "label": "TRISO",
+     "url": "https://www.bwxt.com/sectors/nuclear-fuel/triso/"
+    },
+    {
+     "label": "Project Pele",
+     "url": "https://www.bwxt.com/sectors/defense-space/land/project-pele/"
+    },
+    {
+     "label": "Medicinforretningen, 3. august 2026",
+     "url": "https://www.bwxtmedical.com/bwxt-selling-medical-business-to-nordic-capital-in-transaction-valued-at-up-to-800-million/"
+    }
+   ]
+  },
+  "US4859241048": {
+   "name": "Karman Space & Defense",
+   "theme": "space",
+   "summary": "Laver dele til løfteraketter og missiler. Selskabet skriver, at det beskytter nyttelast, laver mellemtrin og samler raketmotorer. Det sender ikke selv satellitter op.",
+   "watch": "Ordrer fra de store programmer og evnen til at levere dele til tiden.",
+   "source": "https://www.karman-sd.com/",
+   "products": "Beskyttelse af nyttelast, mellemtrin og raketmotorer.",
+   "customers": "Forsvars- og rumprogrammer.",
+   "role": "Komponenter til opsendelse.",
+   "narrative": [
+    "Karman skriver, at selskabet beskytter nyttelast og har udstyr til at skille den fra fartøjet. Siden nævner også aerodynamiske mellemtrin, raketmotorer og affyringsudstyr.",
+    "Det er dele og udstyr. Selskabet sender ikke selv satellitter op. I kæden står det som leverandør af dele til opsendelse."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.karman-sd.com/"
+    }
+   ]
+  },
+  "GB00B63H8491": {
+   "name": "Rolls-Royce",
+   "theme": "space",
+   "summary": "Fremstiller flymotorer og kraftsystemer. Koncernen udvikler også en lille modulær reaktor. Atomkraft er ikke hele selskabet. Snapshottet har aktien under SpaceTech.",
+   "watch": "Flytrafik, service af motorer og om reaktorprogrammet bliver bygget.",
+   "source": "https://www.rolls-royce.com/",
+   "products": "Flymotorer, kraftsystemer og et reaktorprogram under udvikling.",
+   "customers": "Flyselskaber, forsvar og, hvis reaktoren bliver bygget, elforbrugere.",
+   "role": "Motorkoncern med et SMR-program. Ikke en opsender.",
+   "narrative": [
+    "Rolls-Royce fremstiller flymotorer og kraftsystemer. Koncernen har også et program for en lille modulær reaktor. Atomkraft er ikke hele selskabet.",
+    "I juni 2026 skrev selskabet, at Rolls-Royce SMR er valgt til et projekt i Sverige. Valget er ikke et værk i drift. Selskabet sender ikke selv satellitter op."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.rolls-royce.com/"
+    }
+   ]
+  },
+  "US31816X1063": {
+   "name": "Firefly Aerospace",
+   "theme": "space",
+   "summary": "Udvikler og opsender løfteraketter og har en månelander.",
+   "watch": "Om opsendelserne lykkes, og om der er nok kunder til raketten og landeren.",
+   "source": "https://fireflyspace.com/",
+   "products": "Løfteraketter og månelandere.",
+   "customers": "Kunder, der skal have nyttelast i rummet eller til Månen.",
+   "role": "Opsendelse og transport væk fra Jorden.",
+   "narrative": [
+    "Firefly opsender raketten Alpha og bygger månelanderen Blue Ghost. Selskabet skriver, at Blue Ghost er landet på Månen og har arbejdet der.",
+    "En større raket, Eclipse, bygges sammen med Northrop Grumman. Denne beskrivelse omfatter ikke, at Eclipse har fløjet. Firefly står på opsendelse."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://fireflyspace.com/"
+    }
+   ]
+  },
+  "US75776W1036": {
+   "name": "Redwire",
+   "theme": "space",
+   "summary": "Leverer dele til satellitter og rumfartøjer. Selskabet skrev 1. april 2026, at kameraer og solsensorer skal med på Artemis II. Meddelelsen siger ikke, at flyvningen er gennemført. Det er ikke et datacenter og ikke en opsender.",
+   "watch": "Ordrer til satellitprogrammer og om aktiviteterne i rummet bliver til en forretning.",
+   "source": "https://redwirespace.com/",
+   "products": "Dele til satellitter, kameraer og solsensorer.",
+   "customers": "Satellitbyggere og rumprogrammer.",
+   "role": "Infrastruktur til satellitter. Ikke en opsender og ikke et orbitalt datacenter.",
+   "narrative": [
+    "Redwire skriver, at selskabet fremstiller og tester kamerasystemet til Orion på Artemis I til V. Selskabet skrev 1. april 2026, at systemet til Artemis II har 11 kameraer, og at udstyret skal med på flyvningen.",
+    "Datoen ligger før beholdningen pr. 1. juni 2026. Meddelelsen beskriver ikke flyvningen som gennemført. Selskabet sender ikke selv raketten op og driver ikke et datacenter i kredsløb."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://redwirespace.com/"
+    },
+    {
+     "label": "Artemis II, 1. april 2026",
+     "url": "https://rdw.com/newsroom/redwires-advanced-imaging-and-navigation-technology-will-enable-nasas-historic-artemis-ii-mission/"
+    }
+   ]
+  },
+  "US9870841007": {
+   "name": "York Space Systems",
+   "theme": "space",
+   "summary": "Bygger satellitplatforme til offentlige og private kunder. Selskabet skriver, at det også koordinerer opsendelseslogistik. Det er ikke det samme som selv at sende raketten op, og selskabet driver ikke et datacenter i rummet.",
+   "watch": "Levering af satellitter og kundernes programmer.",
+   "source": "https://www.yorkspacesystems.com/",
+   "products": "Satellitplatforme og opsendelseslogistik.",
+   "customers": "Offentlige og private kunder, der skal bruge en satellit.",
+   "role": "Bygger satellitten. Driver den ikke som en forbrugertjeneste.",
+   "narrative": [
+    "York skriver, at selskabet designer og fremstiller satellitplatforme, og at platformen bærer kundens udstyr. Siden siger også, at selskabet koordinerer opsendelseslogistik fra design til levering.",
+    "Logistikken er ikke det samme som selv at sende raketten op. Selskabet driver ikke et datacenter i rummet."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.yorkspacesystems.com/"
+    }
+   ]
+  },
+  "US4432011082": {
+   "name": "Howmet Aerospace",
+   "theme": "space",
+   "summary": "Laver metaldele til flymotorer og flyskrog. Selskabet skriver, at det også laver smedede hjul til lastbiler og busser. Det sender ikke raketter op.",
+   "watch": "Produktion til fly og til lastbiler. Selskabet sender ikke op.",
+   "source": "https://www.howmet.com/",
+   "products": "Dele til flyskrog og flymotorer. Smedede hjul og chassis til lastbiler og busser.",
+   "customers": "Fly- og motorproducenter og producenter af lastbiler og busser.",
+   "role": "Dele til fly, rumfart og tung transport. Ikke en opsendelse.",
+   "narrative": [
+    "Howmet skriver, at det laver dele til flyskrog og flymotorer, og at det også laver smedede hjul og chassis til lastbiler og busser.",
+    "Det er dele. Selskabet sender ikke raketter op. Snapshottet har aktien under SpaceTech."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.howmet.com/"
+    },
+    {
+     "label": "Markeder",
+     "url": "https://www.howmet.com/markets-and-product-lines/"
+    }
+   ]
+  },
+  "US7731211089": {
+   "name": "Rocket Lab",
+   "theme": "space",
+   "summary": "Opsender små satellitter med Electron og bygger rumfartøjer. Selskabet skriver, at HASTE er et suborbitalt testfartøj og ikke en orbital opsendelse. Neutron er under udvikling.",
+   "watch": "Flyvninger med Electron og HASTE, og om Neutron flyver. HASTE er ikke en orbital rute.",
+   "source": "https://rocketlabcorp.com/",
+   "products": "Electron til små satellitter, det suborbitale testfartøj HASTE og rumfartøjer. Neutron er under udvikling.",
+   "customers": "Kunder med små satellitter, kunder til suborbitale test og kunder, der køber rumfartøjer.",
+   "role": "Electron er orbital. HASTE er suborbital. Neutron er ikke fløjet.",
+   "narrative": [
+    "Rocket Lab skriver, at Electron sender små satellitter op, og at HASTE er et suborbitalt testfartøj bygget ud fra Electron. Siden siger, at HASTE flyver fra Wallops i Virginia. Det sætter ikke satellitter i kredsløb.",
+    "Neutron er en større raket under udvikling. Den første flyvning med Neutron er ikke gennemført i denne beskrivelse. I kæden står selskabet både på opsendelse og på satellitter."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://rocketlabcorp.com/"
+    },
+    {
+     "label": "HASTE",
+     "url": "https://www.rocketlabusa.com/launch/haste/"
+    },
+    {
+     "label": "Neutron",
+     "url": "https://rocketlabcorp.com/launch/neutron/"
+    }
+   ]
+  },
+  "US80401C1009": {
+   "name": "Satellogic",
+   "theme": "space",
+   "summary": "Driver satellitter, der tager billeder af Jorden. Satellitterne hedder NewSat. Forsiden sætter fuld drift af Merlin til andet halvår 2027.",
+   "watch": "Satellitternes drift og kundernes brug af billederne.",
+   "source": "https://satellogic.com/",
+   "products": "Billeder fra satellitterne NewSat. Merlin er ikke i fuld drift i denne tekst.",
+   "customers": "Offentlige og private kunder, der skal se Jorden ovenfra.",
+   "role": "Satellittjeneste, ikke en raket.",
+   "narrative": [
+    "Satellogic driver satellitter, der tager billeder af Jorden. Satellitterne hedder NewSat. Forsiden sætter fuld drift af Merlin til andet halvår 2027.",
+    "Andet halvår 2027 ligger efter beholdningen pr. 1. juni 2026. Merlin er ikke beskrevet som en tjeneste i fuld drift. Selskabet opsender ikke selv raketterne i denne beskrivelse."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://satellogic.com/"
+    }
+   ]
+  },
+  "US92892B1035": {
+   "name": "Voyager Technologies",
+   "theme": "space",
+   "summary": "Arbejder med ruminfrastruktur og forsvarsteknologi. Starlab er et projekt om en kommerciel rumstation. Denne tekst beskriver ikke en station i drift og ikke et datacenter i kredsløb.",
+   "watch": "Om stationsprojektet bliver bygget, og ordrer i forsvarsforretningen.",
+   "source": "https://voyagertechnologies.com/",
+   "products": "Ruminfrastruktur, forsvarsteknologi og et stationsprojekt.",
+   "customers": "Rumprogrammer og forsvarskunder.",
+   "role": "Infrastruktur i rummet. Ikke beregning som forretning.",
+   "narrative": [
+    "Voyager arbejder med ruminfrastruktur og forsvarsteknologi. Starlab er et projekt om en rumstation.",
+    "Denne beskrivelse omfatter ikke en station i drift og ikke et datacenter i kredsløb."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://voyagertechnologies.com/"
+    }
+   ]
+  },
+  "US4202011056": {
+   "name": "Hawkeye 360",
+   "theme": "space",
+   "summary": "Driver satellitter, der opfanger radiosignaler og bruger dem til at stedbestemme kilden.",
+   "watch": "Satellitternes drift og kundernes brug af signaldata.",
+   "source": "https://www.he360.com/",
+   "products": "Radiosignaldata fra rummet.",
+   "customers": "Offentlige og private kunder med brug for stedbestemmelse af radiosignaler.",
+   "role": "Satellittjeneste.",
+   "narrative": [
+    "Hawkeye 360 driver satellitter, der opfanger radiosignaler, og bruger dem til at stedbestemme kilden.",
+    "Det er en satellittjeneste, ikke en raket."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.he360.com/"
+    }
+   ]
+  },
+  "CA55293N1096": {
+   "name": "MDA Space",
+   "theme": "space",
+   "summary": "Bygger satellitter, rumrobotik og systemer til geodata. Selskabet præsenterede 10. september 2026 satellitten Aurora Black. Det er ikke en konstellation i drift og ikke et datacenter.",
+   "watch": "Satellitordrer og robotprogrammer.",
+   "source": "https://mda.space/",
+   "products": "Satellitter, robotarme og geodata.",
+   "customers": "Rumagenturer, satellitoperatører og forsvar.",
+   "role": "Satellitter og robotik.",
+   "narrative": [
+    "MDA bygger satellitter og rumrobotik og arbejder med geodata. Selskabet skrev 10. september 2026, at det præsenterede Aurora Black, en softwaredefineret satellit til forsvarskommunikation.",
+    "Datoen ligger efter beholdningen pr. 1. juni 2026. Præsentationen er ikke en konstellation i drift. Chorus er stadig omtalt, før konstellationen er sendt op. Det er ikke et datacenter."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://mda.space/"
+    },
+    {
+     "label": "Aurora Black, 10. september 2026",
+     "url": "https://mda.space/article/mda-space-unveils-mda-aurora-black-a-defence-focused-software-defined-satellite"
+    }
+   ]
+  },
+  "US46125A1007": {
+   "name": "Intuitive Machines",
+   "theme": "space",
+   "summary": "Bygger månelandere og rumfartøjer og leverer udstyr til Månen.",
+   "watch": "Om landingerne lykkes, og om kunderne bliver ved med at betale for flere flyvninger.",
+   "source": "https://www.intuitivemachines.com/",
+   "products": "Månelandere og rumfartøjer.",
+   "customers": "Kunder, der skal have udstyr til Månen, herunder offentlige programmer.",
+   "role": "Transport til Månen, ikke en satellit i kredsløb om Jorden.",
+   "narrative": [
+    "Intuitive Machines bygger månelandere og rumfartøjer og leverer udstyr til Månen.",
+    "Selskabet står på opsendelse som transport væk fra Jorden. Det er ikke en satellit, der tager billeder af Jorden."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.intuitivemachines.com/"
+    }
+   ]
+  },
+  "US03945R1023": {
+   "name": "Archer Aviation",
+   "theme": "space",
+   "summary": "Udvikler elektriske luftfartøjer, der letter og lander lodret. Det er luftfart, ikke rumfart. Snapshottet har selskabet under SpaceTech.",
+   "watch": "Godkendelse af fartøjet og om der kommer en rutetjeneste.",
+   "source": "https://www.archer.com/",
+   "products": "Elektriske lodrette fly under udvikling.",
+   "customers": "Planlagte ruter i byer, hvis fartøjet bliver godkendt.",
+   "role": "Luftfart. Står ikke som eksempel på opsendelse eller satellitter."
+  },
+  "US72703X1063": {
+   "name": "Planet Labs",
+   "theme": "space",
+   "summary": "Driver satellitter, der tager billeder af Jorden. Siden nævner SuperDove, SkySat, Pelican, Tanager og Owl. Owl er omtalt som næste generation. Selskabet opsender ikke selv raketterne.",
+   "watch": "Satellitternes drift og kundernes abonnementer på billeder.",
+   "source": "https://www.planet.com/",
+   "products": "Satellitbilleder og data.",
+   "customers": "Offentlige myndigheder, virksomheder inden for landbrug, kortlægning og forsikring.",
+   "role": "Satellittjeneste.",
+   "narrative": [
+    "Planet driver satellitter, der tager billeder af Jorden. Selskabet sælger billederne og analyser af dem. Siden nævner SuperDove, SkySat, Pelican, Tanager og Owl. Owl er omtalt som næste generation.",
+    "Teksten kalder ikke Owl en særskilt flåde i drift. Planet opsender ikke selv raketterne i denne beskrivelse."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.planet.com/"
+    }
+   ]
+  },
+  "US0094221068": {
+   "name": "Airo Group",
+   "theme": "space",
+   "summary": "Udvikler droner og avionik. Siden nævner RQ-35 Heidrun, RQ-70, JC250 og JX250. Det er luftfart, ikke satellitter.",
+   "watch": "Om platformene bliver leveret. Selskabet står ikke som satellitoperatør.",
+   "source": "https://www.theairogroup.com/",
+   "products": "Droner, herunder RQ-35 Heidrun, RQ-70, JC250 og JX250, plus avionik og træning.",
+   "customers": "Militære, offentlige og kommercielle kunder.",
+   "role": "Luftfart. Står ikke som eksempel på opsendelse eller satellitter.",
+   "narrative": [
+    "Airo skriver, at selskabet leverer til militære, offentlige og kommercielle kunder. Siden nævner platformene RQ-35 Heidrun, RQ-70, JC250 og JX250.",
+    "Det er luftfart. Selskabet står ikke som eksempel på opsendelse eller satellitter. Snapshottet har selskabet under SpaceTech."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.theairogroup.com/"
+    }
+   ]
+  },
+  "US2310211063": {
+   "name": "Cummins",
+   "theme": "physical",
+   "summary": "Fremstiller motorer og generatorer. Selskabet skriver, at forretningen er delt i komponenter, motorer, distribution, kraftsystemer og Accelera. Det er ikke et elselskab.",
+   "watch": "Efterspørgsel efter motorer og generatorer. Selskabet er ikke et elselskab.",
+   "source": "https://investor.cummins.com/",
+   "products": "Motorer, generatorer, komponenter, kraftsystemer og Accelera.",
+   "customers": "Lastbilproducenter, industri og kunder, der skal bruge strøm på stedet.",
+   "role": "Udstyr til elproduktion i lille skala, ikke et elselskab.",
+   "narrative": [
+    "Cummins skriver, at forretningen har fem dele: komponenter, motorer, distribution, kraftsystemer og Accelera. Distribution er selskabets egen del, ikke et elnet.",
+    "Selskabet skriver, at det har hovedsæde i Columbus i Indiana, og at det er stiftet i 1919. I kæden står det på elproduktion, fordi generatorerne kan lave strøm. Det er ikke et elselskab."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets investorkside",
+     "url": "https://investor.cummins.com/"
+    }
+   ]
+  },
+  "US67079K1007": {
+   "name": "NuScale Power",
+   "theme": "physical",
+   "summary": "Udvikler små modulære reaktorer. Denne tekst beskriver ikke et anlæg i kommerciel drift. Snapshottet har selskabet under fysisk tech.",
+   "watch": "Godkendelser og om en kunde faktisk bygger det første værk.",
+   "source": "https://www.nuscalepower.com/",
+   "products": "Et reaktordesign og tilhørende tjenester.",
+   "customers": "Forsyningsselskaber og store forbrugere, hvis et værk bliver bygget.",
+   "role": "Udvikling af SMR.",
+   "narrative": [
+    "NuScale udvikler en lille reaktor, som selskabet kalder NuScale Power Module. Selskabet skriver, at det amerikanske nukleare tilsyn, NRC, har godkendt designet, og angiver en effekt på 77 MW pr. modul.",
+    "Godkendelsen er ikke et værk i kommerciel drift. Denne tekst siger ikke, at et anlæg leverer strøm. Selskabet omtaler et program sammen med TVA på op til 6 GW. Det er udvikling, ikke et værk i drift."
+   ],
+   "narrativeSources": [
+    {
+     "label": "NuScale Power Module",
+     "url": "https://www.nuscalepower.com/products/nuscale-power-module"
+    },
+    {
+     "label": "Program med TVA",
+     "url": "https://interactive.nuscalepower.com/tva-program"
+    }
+   ]
+  },
+  "US74762E1029": {
+   "name": "Quanta Services",
+   "theme": "physical",
+   "summary": "Bygger og vedligeholder elnet og anden energiinfrastruktur, herunder ledninger og stationer.",
+   "watch": "Ordrer fra elselskaber og adgang til mandskab og udstyr.",
+   "source": "https://www.quantaservices.com/",
+   "products": "Anlægsarbejde på elnet og energiinfrastruktur.",
+   "customers": "Elselskaber og andre ejere af net.",
+   "role": "Bygger nettet. Producerer ikke strømmen.",
+   "narrative": [
+    "Quanta Services bygger og vedligeholder elnet. Arbejdet dækker ledninger, transformerstationer og distributionsnet. Selskabet arbejder også på kraftværker.",
+    "Quanta ejer ikke strømmen. I kæden står selskabet på elnet. Temaet i snapshottet er et forslag."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Elnet",
+     "url": "https://www.quantaservices.com/capabilities/electric-power/"
+    }
+   ]
+  },
+  "US36828A1016": {
+   "name": "GE Vernova",
+   "theme": "physical",
+   "summary": "Leverer udstyr til elproduktion og elnet, blandt andet gasturbiner, vindmøller og udstyr til atomkraft og transformere. Snapshottet har selskabet under fysisk tech.",
+   "watch": "Ordrer på turbiner og netudstyr, og evnen til at levere.",
+   "source": "https://www.gevernova.com/",
+   "products": "Kraftværksudstyr og netudstyr.",
+   "customers": "Elselskaber og industri.",
+   "role": "Udstyr til både produktion og net.",
+   "narrative": [
+    "GE Vernova leverer udstyr til elproduktion og til elnettet. Det er blandt andet gasturbiner, vindmøller og udstyr til atomkraft og til nettet.",
+    "Selskabet driver ikke de værker, udstyret står i. I kæden står selskabet derfor både på elproduktion og på elnet."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.gevernova.com/"
+    }
+   ]
+  },
+  "US55405W1045": {
+   "name": "MYR Group",
+   "theme": "physical",
+   "summary": "Bygger elektriske anlæg i USA og Canada. Selskabet skriver, at arbejdet dækker transmission, kommercielle og industrielle anlæg og vedvarende energi. Selskabet ejer ikke strømmen.",
+   "watch": "Ordrer fra elselskaber og mandskab.",
+   "source": "https://www.myrgroup.com/",
+   "products": "El-entrepriser, herunder transmission og vedvarende energi.",
+   "customers": "Elselskaber og store elforbrugere.",
+   "role": "Bygger nettet.",
+   "narrative": [
+    "MYR Group bygger elektriske anlæg i USA og Canada. Selskabet skriver, at arbejdet dækker transmission, kommercielle og industrielle anlæg og vedvarende energi.",
+    "Selskabet ejer ikke strømmen. I kæden står det på elnet."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.myrgroup.com/"
+    }
+   ]
+  },
+  "US3687361044": {
+   "name": "Generac",
+   "theme": "physical",
+   "summary": "Fremstiller reservegeneratorer til hjem og virksomheder. Selskabet skriver også, at det har bærbare generatorer, sol og batterilagring og ladere til elbiler. Det er ikke et elselskab.",
+   "watch": "Efterspørgsel efter reservestrøm og forsyning af motorer.",
+   "source": "https://www.generac.com/",
+   "products": "Reservegeneratorer, bærbare generatorer, sol, batterilagring og ladere til elbiler.",
+   "customers": "Husholdninger, installatører og virksomheder.",
+   "role": "Lokal reservestrøm, ikke et elnet.",
+   "narrative": [
+    "Generac skriver, at en hjemmegenerator giver strøm under et udfald, og at selskabet har bærbare generatorer. Siden nævner også sol, batterilagring og ladere til elbiler.",
+    "Det er udstyr hos kunden. Selskabet er ikke et elselskab og ikke en mine."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.generac.com/"
+    }
+   ]
+  },
+  "US74164F1030": {
+   "name": "Primoris Services",
+   "theme": "physical",
+   "summary": "Bygger infrastruktur til el, energi og rørledninger.",
+   "watch": "Ordrer på anlæg og udførelse af projekterne.",
+   "source": "https://www.primoriscorp.com/",
+   "products": "Anlægsarbejde på energiinfrastruktur.",
+   "customers": "Elselskaber, energiselskaber og industri.",
+   "role": "Bygger infrastrukturen. Ejer den ikke.",
+   "narrative": [
+    "Primoris bygger infrastruktur til el, energi og rørledninger.",
+    "Selskabet producerer ikke selv strømmen. I kæden står det på elnet."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.primoriscorp.com/"
+    }
+   ]
+  },
+  "US63010H1086": {
+   "name": "Nano Nuclear Energy",
+   "theme": "physical",
+   "summary": "Udvikler meget små atomreaktorer. University of Illinois indsendte 31. marts 2026 en ansøgning om byggetilladelse til KRONOS. Den er til behandling og ikke givet. Det er ikke et anlæg i drift.",
+   "watch": "Om behandlingen fører til en tilladelse. Byggeriet er ikke gået i gang.",
+   "source": "https://nanonuclearenergy.com/",
+   "products": "KRONOS, ZEUS og LOKI. Design under udvikling.",
+   "customers": "Ingen driftkunder i denne beskrivelse.",
+   "role": "Ansøgning om byggetilladelse er til behandling. Ikke et værk i drift.",
+   "narrative": [
+    "Nano Nuclear skriver, at University of Illinois indsendte ansøgningen om KRONOS 31. marts 2026, at tilsynet tog den til behandling 18. maj 2026, og at den formelle behandling begyndte 23. juni 2026. De to første datoer ligger før beholdningen. Den 23. juni ligger efter.",
+    "Ansøgningen er ikke en byggetilladelse, og byggeriet er ikke gået i gang. Selskabet skriver, at en offentlig tidsplan peger på en endelig sikkerhedsvurdering i september 2027, og at selskabet derfor ser en mulighed for at begynde byggeri i andet halvår 2027. Det er en forventning, ikke et værk i drift. ZEUS og LOKI er nævnt som design under udvikling."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://nanonuclearenergy.com/"
+    },
+    {
+     "label": "KRONOS, 13. oktober 2026",
+     "url": "https://nanonuclearenergy.com/nano-nuclears-kronos-mmr-program-advancing-through-us-nrc-review-with-the-university-of-illinois-urbana-champaign/"
+    }
+   ]
+  },
+  "US0937121079": {
+   "name": "Bloom Energy",
+   "theme": "andet",
+   "summary": "Leverer brændselsceller, der laver strøm på stedet hos kunden. Snapshottet har selskabet under Andet, med et temaforslag.",
+   "watch": "Driftsikkerhed hos kunderne og om nye anlæg bliver bestilt.",
+   "source": "https://www.bloomenergy.com/",
+   "products": "Brændselsceller og service.",
+   "customers": "Virksomheder og datacentre, der vil have strøm på egen grund.",
+   "role": "Elproduktion hos kunden, ikke et klassisk kraftværk.",
+   "narrative": [
+    "Bloom Energy leverer brændselsceller, der laver strøm hos kunden.",
+    "Det er elproduktion på stedet, ikke et klassisk kraftværk. Snapshottet har selskabet under Andet, med et temaforslag."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.bloomenergy.com/"
+    }
+   ]
+  },
+  "US72919P2020": {
+   "name": "Plug Power",
+   "theme": "andet",
+   "summary": "Leverer brændselsceller og udstyr til brint. Snapshottet har selskabet under Andet, med et temaforslag.",
+   "watch": "Om brintanlæggene kører, og om kunderne fortsat bestiller udstyret.",
+   "source": "https://www.plugpower.com/",
+   "products": "Brændselsceller, elektrolyse og brintudstyr.",
+   "customers": "Industri og transport, der bruger brint.",
+   "role": "Brint og brændselsceller i energikæden.",
+   "narrative": [
+    "Plug Power leverer brændselsceller og udstyr til brint.",
+    "Snapshottet har selskabet under Andet, med et temaforslag. Teksten beskriver udstyret. Den siger ikke, at hvert anlæg kører."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.plugpower.com/"
+    }
+   ]
+  },
+  "US29415C1018": {
+   "name": "Eos Energy",
+   "theme": "andet",
+   "summary": "Udvikler zinkbaserede batterier til lagring af strøm på elnettet. Snapshottet har selskabet under Andet, med et temaforslag.",
+   "watch": "Om batterierne bliver leveret og holder i drift hos kunderne.",
+   "source": "https://www.eose.com/",
+   "products": "Batterisystemer til elnettet.",
+   "customers": "Elselskaber og projektudviklere.",
+   "role": "Lagring, ikke råstof.",
+   "narrative": [
+    "Eos laver zinkbaserede batterier til lagring på elnettet. Selskabet skriver, at systemerne fremstilles i USA.",
+    "Det er lagring, ikke en mine og ikke et kraftværk. Snapshottet har selskabet under Andet, med et temaforslag."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.eose.com/"
+    }
+   ]
+  },
+  "US74767V1098": {
+   "name": "QuantumScape",
+   "theme": "andet",
+   "summary": "Udvikler faststof-batterier, især til køretøjer. Denne tekst beskriver ikke masseproduktion. Snapshottet har selskabet under Andet, med et temaforslag.",
+   "watch": "Om teknologien kan produceres i mængde, og om en bilproducent tager den i brug.",
+   "source": "https://www.quantumscape.com/",
+   "products": "Et batteridesign under udvikling.",
+   "customers": "Bilproducenter, hvis produktionen kommer i gang.",
+   "role": "Batteriteknologi, ikke et lagersystem i drift på elnettet.",
+   "narrative": [
+    "QuantumScape udvikler faststof-batterier til køretøjer. Selskabet omtaler batteriet QSE-5.",
+    "Denne tekst beskriver ikke masseproduktion og ikke et lager på elnettet. Snapshottet har selskabet under Andet, med et temaforslag."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabets side",
+     "url": "https://www.quantumscape.com/"
+    }
+   ]
   }
  },
  "media": [

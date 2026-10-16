@@ -4,6 +4,7 @@
  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
  <meta name="robots" content="noindex,nofollow">
  <title>Sådan investerer du · NDI Analytics</title>
+ <meta name="description" content="Sådan køber man typisk andele i en dansk investeringsfond: depot, de to andelsklasser, hvad det koster ifølge KID, og hvem der gør hvad. Generel information, ikke rådgivning.">
  <link rel="stylesheet" href="css/ndi.css">
  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
  <!-- og:start -->
@@ -11,7 +12,7 @@
  <meta property="og:site_name" content="NDI Analytics (udkast)">
  <meta property="og:locale" content="da_DK">
  <meta property="og:title" content="Sådan investerer du · NDI Analytics">
- <meta property="og:description" content="Dette er generel information om, hvordan man typisk køber andele i en dansk investeringsfond. Ikke rådgivning om, om du bør investere.">
+ <meta property="og:description" content="Sådan køber man typisk andele i en dansk investeringsfond: depot, de to andelsklasser, hvad det koster ifølge KID, og hvem der gør hvad. Generel information, ikke rådgivning.">
  <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/invester.html">
  <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
  <meta property="og:image:width" content="1200">
@@ -19,6 +20,18 @@
  <meta property="og:image:alt" content="NDI Analytics - udkast. Gå på opdagelse i porteføljen.">
  <meta name="twitter:card" content="summary_large_image">
  <!-- og:end -->
+ <style>
+  .flow{list-style:none;margin:12px 0 6px;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .flow li{position:relative;background:var(--panel-2);border-radius:10px;padding:12px;font-size:14px;line-height:1.45;color:var(--muted)}
+  .flow li .k{display:block;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--faint);margin-bottom:2px}
+  .flow li strong{display:block;color:var(--text);margin-bottom:4px}
+  .flow li:not(:last-child)::after{content:"→";position:absolute;right:-12px;top:14px;color:var(--faint);font-size:16px}
+  .flow li.you{border-top:3px solid var(--yellow)}
+  .flow-side{margin-top:10px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .flow-side div{border-left:2px solid var(--line);padding-left:12px;color:var(--muted);font-size:14px;line-height:1.5}
+  .flow-side strong{color:var(--text)}
+  @media (max-width:720px){.flow,.flow-side{grid-template-columns:1fr}.flow li:not(:last-child)::after{content:"↓";right:auto;left:16px;top:auto;bottom:-15px}}
+ </style>
 </head>
 <body>
  <a class="skip" href="#main">Gå til indhold</a>
@@ -33,30 +46,66 @@
  <div class="doors doors-stack">
  <div class="door" style="cursor:default">
  <strong>1. Forstå produktet</strong>
- <span>Læs prospekt, central investorinformation og risici. Se <a href="om-data.html">data &amp; ordliste</a> og <a href="laer/index.html">lær-sektionen</a>.</span>
+ <span>Læs <a href="fakta.html">fakta</a>, KID (dokument med central information) og <a href="risici.html">risici</a>. Læs også <a href="https://fundmarket.dk/wp-content/uploads/Faellesprospekt-for-afdelinger-og-andelsklasser-i-Investeringsforeningen-Portfoliomanager-opdateret-24.10.2025.pdf" rel="noopener" target="_blank">prospektet ↗</a> (Fundmarkets fællesprospekt). Se <a href="om-data.html">data &amp; ordliste</a> og <a href="laer/index.html">lær-sektionen</a>.</span>
  </div>
  <div class="door" style="cursor:default">
  <strong>2. Udbytte eller akkumulering</strong>
  <span>PMINDI udbetaler udbytte. PMINDIAKK geninvesterer. <a href="sammenlign.html">Sammenlign fondene →</a></span>
  </div>
  <div class="door" style="cursor:default">
- <strong>3. Depot / platform</strong>
- <span>Fonde handles typisk via bank, pension eller handelsplatform der tilbyder danske UCITS. Udbuddet varierer. ISIN DK0062499810 / DK0064642623 kan bruges til at finde fonden.</span>
+ <strong>3. Depot hos bank eller handelsplatform</strong>
+ <span>Danske investeringsfonde købes typisk gennem et depot i en bank eller på en handelsplatform. Udbuddet varierer fra sted til sted. Søg på ISIN DK0062499810 (PMINDI) eller DK0064642623 (PMINDIAKK) for at finde fonden.</span>
  </div>
  <div class="door" style="cursor:default">
- <strong>4. Ordre &amp; omkostninger</strong>
- <span>Kurs, kurtage og eventuelle platformgebyrer afhænger af din bank/platform. NDI Analytics viser ikke live kurser i v1.</span>
+ <strong>4. Køb og omkostninger</strong>
+ <span id="koster"><strong style="color:var(--text)">Hvad koster det?</strong> KID’et opgør de samlede årlige omkostninger til ca. <strong style="color:var(--text)">2,79&nbsp;%</strong> for PMINDI og <strong style="color:var(--text)">2,85&nbsp;%</strong> for PMINDIAKK, hvis du holder fonden i 5 år. Tænkt eksempel: har du 100.000&nbsp;kr. i fonden, svarer 2,79&nbsp;% til ca. 2.790&nbsp;kr. om året, før din egen kurtage og dit depot. Det præcise tal og forudsætningerne står i <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm140b" rel="noopener" target="_blank">KID for PMINDI ↗</a> og <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm145b" rel="noopener" target="_blank">KID for PMINDIAKK ↗</a>. Se også de enkelte <a href="omkostninger.html">omkostningsposter</a> (Fundmarket). Kurs, <a href="om-data.html#g-kurtage">kurtage</a> og eventuelle platformgebyrer afhænger af din bank eller platform. Afkasttallene på siden er efter fondens <a href="om-data.html#g-omkostninger">løbende omkostninger</a> og <a href="om-data.html#g-skat">før skat</a>. NDI Analytics viser ikke aktuelle kurser.</span>
  </div>
  <div class="door" style="cursor:default">
- <strong>5. Opfølgning</strong>
- <span>Afkastfanen, kontekstgrafen og den forsinkede beholdning viser fondens udvikling og sammensætning. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast.</span>
+ <strong>5. Følg med over tid</strong>
+ <span>Forsiden viser fondens afkast over tid og den forsinkede beholdning viser, hvad fonden ejede pr. 1. juni 2026. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe penge.</span>
  </div>
  </div>
- <p class="band">NewDeal Invest yder ikke individuel investeringsrådgivning på denne side. Tal med din bank eller rådgiver, hvis du er i tvivl.</p>
+ <section class="panel" id="hvem" aria-labelledby="hvem-h">
+ <h2 id="hvem-h" style="font-size:16px;margin-bottom:6px">Hvor ligger pengene, og hvem gør hvad?</h2>
+ <p style="color:var(--muted);line-height:1.55">Når du køber en andel, ejer du en lille del af fonden, ikke aktierne direkte. Fire led er med undervejs. Navnene står i Fundmarkets offentlige oplysninger om fonden.</p>
+ <ol class="flow">
+  <li class="you"><span class="k">1 · Dig</span><strong>Dit <a href="om-data.html#g-depot">depot</a></strong>Andelene ligger i dit depot hos din bank eller platform, sammen med dine andre værdipapirer.</li>
+  <li><span class="k">2 · Foreningen</span><strong>Investeringsforeningen PortfolioManager</strong>Fonden er en <a href="om-data.html#g-forening">afdeling</a> i foreningen. Nye andele <a href="om-data.html#g-udstedelse">udstedes og indløses</a> til fondens indre værdi.</li>
+  <li><span class="k">3 · Forvalter</span><strong>Fundmarket A/S</strong><a href="om-data.html#g-forvaltningsselskab">Forvaltningsselskabet</a> (IFS) har ansvaret for fonden og er under tilsyn af Finanstilsynet.</li>
+  <li><span class="k">4 · Depotbank</span><strong>Danske Bank A/S</strong><a href="om-data.html#g-depotbank">Depotbanken</a> opbevarer fondens værdipapirer, adskilt fra forvalterens egne penge.</li>
+ </ol>
+ <div class="flow-side">
+  <div><strong>NDIIR ApS (NewDeal Invest)</strong> er <a href="om-data.html#g-raadgiver">investeringsrådgiver</a>. Holdet bag rådgiver om, hvilke selskaber fonden ejer. Fondschef og medstifter er Mads Christiansen. <a href="fakta.html#hold">Porteføljeholdet →</a></div>
+  <div><strong>For professionelle og familiekontorer:</strong> CVR-numre, adresser og revision står på <a href="fakta.html#organisation">Fakta · Organisation</a>. Regler for tegning og indløsning står i prospektet.</div>
+ </div>
+ <p class="src">Kilde: Fundmarket (produktsiden for NewDeal Invest, kl n) og newdealinvest.dk, hentet 15. okt. 2026. Prospektet er det gældende dokument.</p>
+ </section>
+ <section class="panel" style="margin-top:20px">
+ <h2 style="font-size:16px;margin-bottom:6px">Tre spørgsmål før du investerer</h2>
+ <p style="color:var(--muted);line-height:1.55;margin-bottom:10px">Ikke en test og ikke rådgivning. Bare de spørgsmål, KID'et og NDI's måde at tænke på selv lægger op til.</p>
+ <ol style="color:var(--muted);line-height:1.6;padding-left:1.3rem;display:grid;gap:10px">
+ <li><strong style="color:var(--text)">Har du tid?</strong> KID'et anbefaler mindst 5 års <a href="om-data.html#g-investeringsperiode">investeringsperiode</a>. NDI tænker i lange forløb, ikke i måneder. <a href="laer/saadan-taenker-vi.html">Sådan tænker vi →</a></li>
+ <li><strong style="color:var(--text)">Kan du holde til store fald undervejs?</strong> Fonden er i <a href="laer/risikoklasse.html">risikoklasse 5 af 7</a>, og teknologiaktier kan falde meget og længe. <a href="drawdown.html">Se fald fra top →</a></li>
+ <li><strong style="color:var(--text)">Passer en bred teknologifond til dig?</strong> Fonden ejer flere hundrede selskaber tæt på ligevægt. Den er ikke et bud på én vinder, men en eksponering mod hele værdikæden. NDI ser kæden som et <a href="om-data.html#g-flodsystem">flodsystem</a>: når én flaskehals letter, flytter presset videre, og fonden ejer hele kæden i stedet for at gætte på den næste. <a href="laer/hvorfor-mange-aktier.html">Hvorfor så mange aktier? →</a></li>
+ </ol>
+ </section>
+ <section class="panel">
+ <h2 style="font-size:16px;margin-bottom:8px">Dokumenter for begge andelsklasser</h2>
+ <div class="table-wrap"><table class="data"><thead><tr><th>Andelsklasse</th><th>ISIN</th><th>KID</th></tr></thead><tbody>
+ <tr><td>PMINDI (udloddende)</td><td>DK0062499810</td><td><a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm140b" rel="noopener" target="_blank">KID ↗</a></td></tr>
+ <tr><td>PMINDIAKK (akkumulerende)</td><td>DK0064642623</td><td><a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm145b" rel="noopener" target="_blank">KID ↗</a></td></tr>
+ </tbody></table></div>
+ <p style="color:var(--muted);font-size:13px;margin-top:8px">Eksterne PDF'er hos Fundmarket. Prospektet findes samme sted. KID og prospekt er de gældende dokumenter.</p>
+ </section>
+ <p class="band">NewDeal Invest yder ikke individuel investeringsrådgivning på denne side. Siden er <a href="om-data.html#g-generel">generel information</a>. Tal med din bank eller rådgiver, hvis du er i tvivl.</p>
  <p class="warn">Du kan tabe en del af eller hele din investering. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast.</p>
- <p><a class="outline-btn" href="risici.html">Læs risici / KID →</a>
+ <p><a class="outline-btn" href="risici.html">Læs risici / KID →</a></p>
  <p style="margin-top:12px"><a class="cta" href="https://newdealinvest.dk" rel="noopener" target="_blank">newdealinvest.dk →</a></p>
  <p class="link-row"><a href="vaerdikaeder.html">Forstå kæderne først →</a></p>
 </main>
+ <footer class="site-footer">
+ <p><strong>Markedsføringsmateriale.</strong> Læs <a href="https://fundmarket.dk/wp-content/uploads/Faellesprospekt-for-afdelinger-og-andelsklasser-i-Investeringsforeningen-Portfoliomanager-opdateret-24.10.2025.pdf" rel="noopener" target="_blank">prospektet ↗</a> og KID for <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm140b" rel="noopener" target="_blank">PMINDI ↗</a> eller <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm145b" rel="noopener" target="_blank">PMINDIAKK ↗</a>, før du træffer en endelig investeringsbeslutning.</p>
+ <p>Udkast / noindex. Ikke den officielle side og ingen investeringsrådgivning. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering. <a href="om-data.html">Data og ordliste</a>.</p>
+ </footer>
 </body>
 </html>

@@ -35,11 +35,35 @@ export function renderChart(container, rows, events = [], opts = {}) {
     `<text x="${x(i)}" y="${H - 10}" text-anchor="middle">${fmtDate(series[i].d)}</text>`
   ).join('');
 
-  const marks = series.map((s, i) => {
-    const e = evMap.get(s.d);
-    if (!e) return '';
-    const cls = e.kind === 'peak' ? 'evt-peak' : 'evt-dip';
-    return `<circle class="${cls}" cx="${x(i)}" cy="${y(s.v)}" r="5"><title>${e.title}</title></circle>`;
+  // Map events onto nearest trading day when exact date missing (weekends / holidays)
+  const dateIdx = new Map(series.map((s, i) => [s.d, i]));
+  const placed = new Map();
+  for (const e of (events || [])) {
+    let i = dateIdx.get(e.d);
+    if (i == null) {
+      // nearest prior trading day within 5 calendar days
+      for (let back = 1; back <= 5 && i == null; back++) {
+        const d = new Date(e.d + 'T12:00:00Z');
+        d.setUTCDate(d.getUTCDate() - back);
+        i = dateIdx.get(d.toISOString().slice(0, 10));
+      }
+    }
+    if (i == null) continue;
+    const prev = placed.get(i);
+    // Prefer non-x markers on same day; else keep first
+    if (prev && prev.kind !== 'x' && e.kind === 'x') continue;
+    if (!prev || (prev.kind === 'x' && e.kind !== 'x')) placed.set(i, e);
+  }
+  const marks = [...placed.entries()].map(([i, e]) => {
+    const s = series[i];
+    const cls = e.kind === 'x' ? 'evt-x' : (e.kind === 'peak' ? 'evt-peak' : 'evt-dip');
+    const title = (e.title || '').replace(/"/g, '&quot;');
+    const tip = `${title}${e.text ? ' — ' + String(e.text).slice(0, 80).replace(/"/g, '&quot;') : ''}`;
+    if (e.kind === 'x' && e.url) {
+      const href = String(e.url).replace(/"/g, '&quot;');
+      return `<a href="${href}" target="_blank" rel="noopener"><circle class="${cls}" cx="${x(i)}" cy="${y(s.v)}" r="5.5"><title>${tip}</title></circle></a>`;
+    }
+    return `<circle class="${cls}" cx="${x(i)}" cy="${y(s.v)}" r="5"><title>${tip}</title></circle>`;
   }).join('');
 
   const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
@@ -62,7 +86,12 @@ export function renderChart(container, rows, events = [], opts = {}) {
     const i = Math.round(((px - pad.l) / (W - pad.l - pad.r)) * (series.length - 1));
     if (i < 0 || i >= series.length) return;
     const s = series[i];
-    const e = evMap.get(s.d);
-    readout.textContent = `${fmtDate(s.d)}: ${fmtPct(s.v)}` + (e ? ` · ${e.title}` : '');
+    const e = placed.get(i) || evMap.get(s.d);
+    let extra = '';
+    if (e) {
+      extra = ` · ${e.title}`;
+      if (e.kind === 'x' && e.url) extra += ' (klik markør → X)';
+    }
+    readout.textContent = `${fmtDate(s.d)}: ${fmtPct(s.v)}` + extra;
   });
 }

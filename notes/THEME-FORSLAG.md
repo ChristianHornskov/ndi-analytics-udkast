@@ -141,6 +141,10 @@ Forslag der stadig står i `andet` har intet `themeFrom` (ingen flytning). Kun k
 Bruges af temaer.html-banneret ("44 lå før i Andet. Desuden er 4 flyttet fra Compute til det nye tema Quantum")
 og som "før: X" i forslag-badges. Ved godkendelse: slet `themeStatus` + `themeFrom` sammen.
 
+## 2026-10-16 ~00:35 CEST · MUST-rettelser (koordinator)
+- **Cipher Mining (CIFR)** software → **compute** (forslag). Offentlig SEC/10-Q: HPC/AI-datacentre + bitcoin-mining-arv (Cipher Digital). Multi-tag compute+energy.
+- **Opendoor (+ warrants)** andet → **platforms** (forslag). Offentlig 10-K: digital iBuyer/proptech-platform.
+- **Modenhed:** alle 345 sat til maturityStatus=forslag via GICS-industry→fase-heuristik (prerevenue/preprofit/highgrowth/garp/value). Afventer NDI-gennemgang.
 
 ## Runde 2: Andet → tema ud fra plads i værdikæden (lane-B c9, 2026-10-16)
 32 positioner i Andet med en klar plads i en af værdikæderne (de fleste allerede placeret af NDI-linsen) har fået et foreslået primært tema.
@@ -233,3 +237,11 @@ Kun `theme`/`themeStatus`/`themeFrom`/`themeNote` i portfolio.json, begge klasse
 **Rettet:** "Ghl" (KYG4124C1096, ticker GRAB) = **Grab Holdings** (Sydøstasiatisk superapp: kørsel, levering, betalinger/digitale banker). Software → Platforme (forslag, themeFrom software), samme type som Sea. Ny NDI-linse (AI-compute led 12: forbrugerapplikationer), hvor NDI-tag-hint forklarer at "Ghl" i beholdningslisten er Grab. Navnet i portfolio.json er IKKE ændret (kildedata) - det bør rettes i datakilden.
 
 **Stadig uden linse (bevidst):** Sharonai Holdings (SHAZ), Swarmer (SWMR), Keel Infrastructure (KEEL) - usikker viden om forretningen; CSLM (SPAC); vægt-0-positioner. Til opfølgning: value-chains.json (ikke lane-B's fil) viser stadig "Ghl" uden forslag-mærke som eksempel i AI-compute led 10-12.
+
+## Merge med main + koordinatorens runde (lane-B c19, 2026-10-16 ~03:00)
+- origin/main merget ind i lane-B (koordinatoren kunne ikke merge lane-B pga. 40 konflikter i portfolio.json). Tema-felterne blev flettet felt for felt pr. (klasse, ISIN, navn); main's maturity-felter beholdt.
+- **Beholdt fra main (bevidst, 02cebde):** Cipher Mining software → compute (forslag, nu `themeFrom: software`); Opendoor + 3 warrants andet → platforms (forslag).
+- **Gendannet fra lane-B (main havde en ældre lane-B-kopi, ikke en beslutning):** Infleqtion → quantum (runde 3), Neo Performance + ASP Isotopes → energy-resources (runde 3).
+- **Opendoor markeret usikker** (`themeDoubt`, `themeAlt: andet`): iBuyer, der selv ejer boliger på lager; Platforme-temaet dækker ellers markedspladser uden eget lager. Beslutningslisten er nu 22 (18 + Opendoor-aktien og 3 warrants).
+- themes.json (PMINDI) genberegnet: Platforme 41 → 45, Software 49 → 48, Compute 18 → 19, Andet 35 → 31 (vægt 6,27 %, samme som main's synkede tal). Forslag i alt 87 (80 fra Andet).
+- NDI-linse: Cipher "Compute (forslag)", Opendoor "Platforme (forslag)" + usikker-tekst.

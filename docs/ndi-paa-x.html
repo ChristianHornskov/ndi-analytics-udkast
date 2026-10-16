@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="da">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+ <meta name="robots" content="noindex,nofollow">
+ <title>NDI på X · NDI Analytics</title>
+ <link rel="stylesheet" href="css/ndi.css">
+ <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+ <meta property="og:type" content="website">
+ <meta property="og:site_name" content="NDI Analytics (udkast)">
+ <meta property="og:locale" content="da_DK">
+ <meta property="og:title" content="NDI på X · NDI Analytics">
+ <meta property="og:description" content="Udvalgte offentlige X-opslag om NewDeal Invest, temaer og beholdninger. Ikke NDI's holdning.">
+ <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/ndi-paa-x.html">
+ <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
+ <meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+ <a class="skip" href="#main">Gå til indhold</a>
+ <header class="site-header">
+ <a class="brand" href="index.html"><img src="assets/mark.svg" width="34" height="27" alt=""><span>NewDeal Invest</span></a>
+ <nav class="nav"><a href="index.html">← Entré</a><a href="fakta.html">Fakta</a><a href="nyhedsarkiv.html">Nyhedsarkiv</a></nav>
+ </header>
+ <main id="main"><p style="color:var(--muted)">Henter X-snapshot…</p></main>
+ <footer class="site-footer">
+ <p>Udkast / noindex. NDI-konti er markedsføring/udkast. Tredjepart er ikke NDI's holdning. Du kan tabe penge. Ikke investeringsrådgivning.</p>
+ </footer>
+ <noscript><p style="max-width:1180px;margin:0 auto;padding:0 20px 24px;color:#aac0c7">Siden læser kun den statiske fil. Slå JavaScript til for at se kortene. Browseren kalder ikke X.</p></noscript>
+ <script type="module">
+ import { loadXPosts, xCard, fmtXDate, highlightHtml, X_LABEL, X_FILTERS, postInFilter, postMatchesQuery, postWho, feedHitKind, xScoreHtml, matchPosts } from './js/x-feed.js';
+ const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+ const main = document.getElementById('main');
+ const pack = await loadXPosts();
+ const missing = `<p class="eyebrow">X · SNAPSHOT</p>
+ <h1>NDI på X</h1>
+ <div class="x-empty">
+ <p class="k">Snapshot mangler</p>
+ <p>Feedet læser kun den statiske fil data/x-posts.json. Browseren kalder ikke X.</p>
+ </div>`;
+ if (!pack?.posts?.length) {
+ main.innerHTML = missing;
+ } else {
+ const posts = [...pack.posts].sort((a, b) => (b.created_at || '').localeCompare(a.created_at || ''));
+ const house = (pack.accounts || []).map((a) => '@' + a.username).join(' · ');
+ const curatedN = posts.filter((p) => p.curatedFrom === 'mads_following').length;
+ const softPost = posts.find((p) => postMatchesQuery(p, 'SoftBank'));
+ const nvPost = posts.find((p) => postMatchesQuery(p, 'NVDA'));
+ const chipsPosts = posts.filter((p) => postInFilter(p, 'chips'));
+ const chipsPost = chipsPosts.find((p) => p !== softPost && p !== nvPost) || chipsPosts[0];
+ const excerpt = (p) => {
+ const t = String(p?.text || '').replace(/\s+/g, ' ').trim();
+ if (t.length <= 150) return t;
+ const cut = t.slice(0, 150);
+ const sp = cut.lastIndexOf(' ');
+ return (sp > 90 ? cut.slice(0, sp) : cut).trim() + '…';
+ };
+ const splitOf = (list, kindOf) => {
+ let direct = 0;
+ let theme = 0;
+ for (const p of list) {
+ const k = kindOf(p);
+ if (k === 'direct') direct += 1;
+ else if (k === 'theme') theme += 1;
+ }
+ return { direct, theme };
+ };
+ const scoreOf = (split, total) => {
+ const cell = (n, label, theme) => `<span><b${theme ? ' class="is-theme"' : ''}>${n}</b><i>${label}</i></span>`;
+ if (split.direct && split.theme) return `<span class="x-door-score">${cell(split.direct, 'direkte')}${cell(split.theme, 'tema', true)}</span>`;
+ if (split.direct) return `<span class="x-door-score">${cell(split.direct, 'direkte')}</span>`;
+ if (split.theme) return `<span class="x-door-score">${cell(split.theme, 'tema', true)}</span>`;
+ return `<span class="x-door-score">${cell(total, 'opslag')}</span>`;
+ };
+ const softList = posts.filter((p) => postMatchesQuery(p, 'SoftBank'));
+ const nvList = posts.filter((p) => postMatchesQuery(p, 'NVDA'));
+ const softScore = scoreOf(splitOf(softList, (p) => feedHitKind(p, { q: 'SoftBank' })), softList.length);
+ const nvScore = scoreOf(splitOf(nvList, (p) => feedHitKind(p, { q: 'NVDA' })), nvList.length);
+ const chipsScore = scoreOf(splitOf(chipsPosts, (p) => feedHitKind(p, { f: 'chips' })), chipsPosts.length);
+ const door = (spot, href, jump, v, kicker, title, score, post, byKind, kind) => `<a class="x-door is-${kind}" href="${href}" data-jump="${jump}" data-v="${esc(v)}" data-spot="${spot}">
+ <span class="k">${kicker}</span>
+ <span class="x-door-top"><strong>${title}</strong>${score}</span>
+ ${post ? `<span class="x-door-q">${highlightHtml(excerpt(post), v === 'chips' ? 'chips' : v)}</span><span class="x-door-by">${byKind} · @${esc(post.username)} · ${esc(fmtXDate(post.created_at))}</span>` : '<span class="x-door-q">Ingen opslag i snapshotet.</span>'}
+ </a>`;
+
+ const read = () => {
+ const u = new URL(location.href);
+ return { f: u.searchParams.get('f') || 'all', q: u.searchParams.get('q') || '', who: u.searchParams.get('who') || 'all' };
+ };
+ const write = (st) => {
+ const u = new URL(location.href);
+ if (st.f && st.f !== 'all') u.searchParams.set('f', st.f); else u.searchParams.delete('f');
+ if (st.q) u.searchParams.set('q', st.q); else u.searchParams.delete('q');
+ if (st.who && st.who !== 'all') u.searchParams.set('who', st.who); else u.searchParams.delete('who');
+ history.replaceState(null, '', u);
+ };
+ let state = read();
+ const apply = (list) => list.filter((p) => postInFilter(p, state.f) && postWho(p, state.who) && postMatchesQuery(p, state.q));
+ const reasonsFor = (p) => {
+ const q = state.q.trim();
+ const themes = !q && state.f && state.f !== 'all' && state.f !== 'ndi'
+ ? (state.f === 'chips' ? ['chips', 'ai'] : [state.f])
+ : [];
+ const tickers = q ? [q] : (state.f === 'chips' ? ['NVDA'] : []);
+ if (!tickers.length && !themes.length) return [];
+ return matchPosts({ posts: [p] }, { tickers, themes })[0]?.reasons || [];
+ };
+ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+ main.innerHTML = `
+ <p class="eyebrow">X · STATISK SNAPSHOT</p>
+ <h1>NDI på X</h1>
+ <p class="lede x-intro">${posts.length} offentlige opslag i et fast udsnit. Egne kort. Ingen X-embed, og browseren kalder ikke X.</p>
+ <p class="warn x-label">NDI-konti (@InvestNewdeal m.fl.) er markedsføring/udkast og kan være NDI’s holdning. Opslag fra fulgte konti er tredjepart — ikke NDI’s holdning.</p>
+ <p class="band x-snap">Snapshot ${esc(fmtXDate(pack.snapshotAt))}. NDI-konti: ${esc(house)}.${curatedN ? ` ${curatedN} opslag er fra konti, som NDI følger (ikke NDI’s holdning).` : ''} Du kan tabe penge.</p>
+
+ <div class="x-spot" id="spor" aria-label="Genveje til demo">
+ ${door('soft', 'ndi-paa-x.html?q=SoftBank', 'q', 'SoftBank', 'SELSKAB · DIREKTE', 'SoftBank', softScore, softPost, 'Seneste', 'direct')}
+ ${door('nv', 'ndi-paa-x.html?q=NVDA', 'q', 'NVDA', 'SELSKAB · DIREKTE', 'Nvidia', nvScore, nvPost, 'Seneste', 'direct')}
+ ${door('chips', 'ndi-paa-x.html?f=chips', 'f', 'chips', 'TEMA', 'Chips / AI', chipsScore, chipsPost, 'Eksempel', 'theme')}
+ </div>
+ <p class="link-row x-jumps" style="margin-top:-2px">
+ <a class="outline-btn small" href="selskab.html?isin=JP3436100006&fund=pmindi#hvad-siger-x">SoftBank på selskabssiden →</a>
+ <a class="outline-btn small" href="selskab.html?isin=US67066G1040&fund=pmindi#hvad-siger-x">Nvidia på selskabssiden →</a>
+ <a class="outline-btn small" href="tema.html?slug=chips&fund=pmindi#hvad-siger-x">Tema: chips →</a>
+ <a class="outline-btn small" href="tema.html?slug=platforms&fund=pmindi#hvad-siger-x">Tema: platforme →</a>
+ </p>
+
+ <div class="x-tools" id="x-tools">
+ <div class="filters">
+ <label class="sr-only" for="x-q">Søg i opslag, konti og tickers</label>
+ <input id="x-q" type="search" placeholder="Søg, fx SoftBank, NVDA, PMINDI" autocomplete="off" aria-controls="x-grid" value="">
+ </div>
+ <div class="x-filters" id="x-f" role="toolbar" aria-label="Filtrer på tema"></div>
+ <div class="x-filters" id="x-who" role="toolbar" aria-label="Filtrer på afsender">
+ <button type="button" class="control" data-who="all">Alle afsendere</button>
+ <button type="button" class="control" data-who="house">NDI-konti</button>
+ <button type="button" class="control" data-who="curated">Konti NDI følger</button>
+ </div>
+ <p class="x-live" id="x-live" role="status" aria-live="polite"></p>
+ <div class="x-active chips" id="x-active"></div>
+ </div>
+ <div class="x-grid" id="x-grid"></div>
+ <p class="warn x-footwarn" style="margin-top:20px">Du kan tabe penge. Opslagene kan være forældede, ufuldstændige eller subjektive. De er ikke investeringsrådgivning og erstatter ikke KID eller prospekt. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast.</p>
+ <p class="link-row x-footlinks">
+ <a class="outline-btn" href="fakta.html">Fakta →</a>
+ <a class="outline-btn" href="omkostninger.html">Omkostninger →</a>
+ <a class="outline-btn" href="nyhedsarkiv.html">Nyhedsarkiv →</a>
+ </p>`;
+
+ const grid = document.getElementById('x-grid');
+ const live = document.getElementById('x-live');
+ const active = document.getElementById('x-active');
+ const qInput = document.getElementById('x-q');
+ qInput.value = state.q;
+
+ const paintFilters = () => {
+ const bar = document.getElementById('x-f');
+ bar.innerHTML = X_FILTERS.map((f) => {
+ const n = posts.filter((p) => postInFilter(p, f.id) && postWho(p, state.who) && postMatchesQuery(p, state.q)).length;
+ const on = state.f === f.id;
+ return `<button type="button" class="control${on ? ' active' : ''}${n === 0 ? ' is-zero' : ''}" data-f="${f.id}" aria-pressed="${on}">${f.label}<span class="x-count">${n}</span></button>`;
+ }).join('');
+ document.querySelectorAll('[data-who]').forEach((b) => {
+ const on = b.getAttribute('data-who') === state.who;
+ b.classList.toggle('active', on);
+ b.setAttribute('aria-pressed', on ? 'true' : 'false');
+ });
+ const qn = state.q.trim().toLowerCase();
+ const onSoft = state.f === 'all' && ['softbank', '9984.t', '9984', 'sftby'].includes(qn);
+ const onNv = state.f === 'all' && ['nvda', 'nvidia'].includes(qn);
+ const onChips = state.f === 'chips' && !qn;
+ document.querySelectorAll('[data-spot]').forEach((a) => {
+ const id = a.getAttribute('data-spot');
+ const on = (id === 'soft' && onSoft) || (id === 'nv' && onNv) || (id === 'chips' && onChips);
+ a.classList.toggle('is-on', on);
+ if (on) a.setAttribute('aria-current', 'true');
+ else a.removeAttribute('aria-current');
+ });
+ };
+
+ const chip = (label, key) => `<span class="chip">${esc(label)} <button type="button" data-clear="${key}" aria-label="Fjern ${esc(label)}">×</button></span>`;
+
+ const render = () => {
+ paintFilters();
+ const list = apply(posts);
+ const bits = [];
+ if (state.q.trim()) bits.push(chip('Søgning: ' + state.q.trim(), 'q'));
+ const fLabel = X_FILTERS.find((f) => f.id === state.f);
+ if (state.f !== 'all' && fLabel) bits.push(chip(fLabel.label, 'f'));
+ if (state.who === 'house') bits.push(chip('NDI-konti', 'who'));
+ if (state.who === 'curated') bits.push(chip('Konti NDI følger', 'who'));
+ active.innerHTML = bits.join('');
+ const focused = bits.length ? ` · ${bits.length === 1 ? 'ét filter' : bits.length + ' filtre'}` : '';
+ const leadOn = Boolean(state.q.trim() || state.f !== 'all');
+ document.body.classList.toggle('x-focused', leadOn);
+ const direct = [];
+ const theme = [];
+ const restHits = [];
+ if (leadOn) {
+ for (const p of list) {
+ const k = feedHitKind(p, { q: state.q, f: state.f });
+ if (k === 'direct') direct.push(p);
+ else if (k === 'theme') theme.push(p);
+ else restHits.push(p);
+ }
+ }
+ const splitBits = [];
+ if (direct.length) splitBits.push(`${direct.length} direkte`);
+ if (theme.length) splitBits.push(`${theme.length} tema`);
+ const split = splitBits.length ? ` · ${splitBits.join(' · ')}` : '';
+ live.textContent = list.length
+ ? `${list.length} af ${posts.length} opslag${split}${focused}`
+ : `Ingen opslag${focused}`;
+ const markQ = state.q.trim() || (state.f === 'chips' ? 'NVDA' : '');
+ const laneOf = (kind, cards) => {
+ if (!cards.length) return '';
+ const q = state.q.trim();
+ let hint = kind === 'direct' ? 'Nævner navnet eller tickeren.' : 'Rammer temaet. Ikke en ticker fra udsnittet.';
+ if (!q && state.f === 'chips' && kind === 'direct') hint = 'Ticker NVDA i opslaget.';
+ if (!q && state.f === 'chips' && kind === 'theme') hint = 'Chips eller AI, uden NVDA-ticker.';
+ const quotedTheme = !direct.length;
+ const kicker = kind === 'direct' ? 'Øvrige direkte træf' : (quotedTheme ? 'Øvrige tema' : 'Tema');
+ const body = cards.map((p) => xCard(p, { query: markQ, hitKind: kind, reasons: reasonsFor(p) })).join('');
+ return `<div class="x-lane ${kind === 'direct' ? 'is-direct' : 'is-theme'}">
+ <p class="x-lane-h"><span class="x-lane-k">${kicker}</span><span>${hint} · ${cards.length}</span></p>
+ <div class="x-grid">${body}</div>
+ </div>`;
+ };
+ const homeLane = (mod, cards, kicker, hint) => {
+ if (!cards.length) return '';
+ return `<div class="x-lane ${mod}">
+ <p class="x-lane-h"><span class="x-lane-k">${kicker}</span><span>${hint} · ${cards.length}</span></p>
+ <div class="x-grid">${cards.map((p) => xCard(p, { query: state.q })).join('')}</div>
+ </div>`;
+ };
+ const picked = [];
+ if (state.q.trim()) picked.push('søgning «' + state.q.trim() + '»');
+ if (state.f !== 'all' && fLabel) picked.push(fLabel.label);
+ if (state.who === 'house') picked.push('NDI-konti');
+ if (state.who === 'curated') picked.push('konti NDI følger');
+ const pickedLine = picked.length ? ` Aktivt: ${picked.join(' · ')}.` : '';
+ const scoreItems = [];
+ if (leadOn && list.length) {
+ if (direct.length || theme.length) {
+ const themeFilter = !state.q.trim() && state.f !== 'all' && state.f !== 'ndi';
+ if (direct.length || themeFilter) scoreItems.push({ n: direct.length, label: 'direkte', mod: 'is-direct' });
+ if (theme.length || themeFilter) scoreItems.push({ n: theme.length, label: 'tema', mod: 'is-theme' });
+ } else {
+ scoreItems.push({ n: list.length, label: 'opslag', mod: 'is-direct' });
+ }
+ }
+ const scoreBar = scoreItems.length
+ ? `<div class="x-score-bar">${xScoreHtml(scoreItems)}<span class="x-asof">Snapshot ${esc(fmtXDate(pack.snapshotAt))}</span></div>`
+ : '';
+ live.classList.toggle('is-echo', scoreItems.length > 0);
+ active.classList.toggle('is-echo', leadOn);
+ if (!list.length) {
+ grid.innerHTML = `<div class="x-empty x-stage">
+ <p class="x-zero" aria-hidden="true">0</p>
+ <p class="k">Ingen opslag i filteret</p>
+ <p>Ingen af de ${posts.length} opslag i snapshotet rammer det valgte.${pickedLine} Prøv et spor, eller nulstil.</p>
+ <p>${esc(X_LABEL)}.</p>
+ <div class="x-suggest">
+ <button type="button" class="outline-btn small" data-jump="q" data-v="SoftBank" data-clear-who>SoftBank</button>
+ <button type="button" class="outline-btn small" data-jump="q" data-v="NVDA" data-clear-who>Nvidia</button>
+ <button type="button" class="outline-btn small" data-jump="f" data-v="chips" data-clear-who>Chips / AI</button>
+ <button type="button" class="outline-btn small" data-jump="reset">Nulstil</button>
+ </div>
+ </div>`;
+ } else if (!leadOn) {
+ const house = list.filter((p) => postWho(p, 'house'));
+ const curated = list.filter((p) => postWho(p, 'curated'));
+ const other = list.filter((p) => !postWho(p, 'house') && !postWho(p, 'curated'));
+ grid.innerHTML = homeLane('is-curated', curated, 'Konti NDI følger', "Udvalgte offentlige opslag — ikke NDI's holdning")
+ + homeLane('is-house', house, 'NDI-konti', 'InvestNewdeal, Mads, Jesper og Christian')
+ + homeLane('is-rest', other, 'Andre opslag', 'Hverken en NDI-konto eller mærket fra listen over fulgte konti');
+ } else if (!direct.length && !theme.length) {
+ const [first, ...tail] = list;
+ grid.innerHTML = scoreBar + `<div class="x-stage">${xCard(first, { query: markQ, lead: true, reasons: reasonsFor(first) })}</div>`
+ + (tail.length ? `<div class="x-grid" style="grid-column:1/-1">${tail.map((p) => xCard(p, { query: markQ })).join('')}</div>` : '');
+ } else {
+ const leadPost = direct[0] || theme[0];
+ const leadKind = direct.length ? 'direct' : 'theme';
+ const restDirect = direct.length ? direct.slice(1) : [];
+ const restTheme = direct.length ? theme : theme.slice(1);
+ grid.innerHTML = scoreBar + `<div class="x-stage">${xCard(leadPost, { query: markQ, lead: true, hitKind: leadKind, reasons: reasonsFor(leadPost) })}</div>`
+ + laneOf('direct', restDirect)
+ + laneOf('theme', restTheme)
+ + (restHits.length ? `<div class="x-grid" style="grid-column:1/-1">${restHits.map((p) => xCard(p, { query: state.q })).join('')}</div>` : '');
+ }
+ };
+
+ const revealHits = (smooth) => {
+ const lead = document.querySelector('#x-grid .is-quote .x-by') || document.querySelector('#x-grid .x-empty .k');
+ if (!lead) return;
+ const r = lead.getBoundingClientRect();
+ const viewBottom = window.innerHeight - 12;
+ if (r.top >= 56 && r.bottom <= viewBottom) return;
+ const behavior = smooth && !reduceMotion ? 'smooth' : 'auto';
+ const quote = lead.closest('article') || lead.closest('.x-empty') || lead;
+ const top = quote.getBoundingClientRect().top;
+ let delta = 0;
+ if (r.bottom > viewBottom) delta = r.bottom - viewBottom;
+ if (top - delta < 56) delta = top - 56;
+ if (Math.abs(delta) < 2) return;
+ window.scrollBy({ top: delta, behavior });
+ };
+ const applyJump = (el, scroll) => {
+ const mode = el.getAttribute('data-jump');
+ const v = el.getAttribute('data-v') || '';
+ const clearWho = el.hasAttribute('data-clear-who');
+ if (mode === 'reset') state = { f: 'all', q: '', who: 'all' };
+ else if (mode === 'q') state = { f: 'all', q: v, who: clearWho ? 'all' : state.who };
+ else if (mode === 'f') state = { ...state, f: v, q: '', who: clearWho ? 'all' : state.who };
+ qInput.value = state.q;
+ write(state);
+ render();
+ if (mode === 'reset') qInput.focus();
+ else if (scroll) revealHits(true);
+ };
+
+ main.addEventListener('click', (e) => {
+ const clr = e.target.closest('[data-clear]');
+ if (clr) {
+ const k = clr.getAttribute('data-clear');
+ if (k === 'q') { state = { ...state, q: '' }; qInput.value = ''; }
+ if (k === 'f') state = { ...state, f: 'all' };
+ if (k === 'who') state = { ...state, who: 'all' };
+ write(state);
+ render();
+ return;
+ }
+ const jump = e.target.closest('[data-jump]');
+ if (jump) {
+ const plain = e.button === 0 && !e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey;
+ if (jump.tagName === 'A' && !plain) return;
+ if (jump.tagName === 'A') e.preventDefault();
+ applyJump(jump, true);
+ return;
+ }
+ const f = e.target.closest('[data-f]');
+ const w = e.target.closest('[data-who]');
+ if (f) {
+ const id = f.getAttribute('data-f');
+ state = { ...state, f: state.f === id && id !== 'all' ? 'all' : id };
+ write(state);
+ render();
+ } else if (w) {
+ const id = w.getAttribute('data-who');
+ state = { ...state, who: state.who === id && id !== 'all' ? 'all' : id };
+ write(state);
+ render();
+ }
+ });
+ qInput.addEventListener('input', () => {
+ state = { ...state, q: qInput.value };
+ write(state);
+ render();
+ });
+ render();
+ if (state.q.trim() || state.f !== 'all') revealHits(false);
+ }
+ </script>
+</body>
+</html>

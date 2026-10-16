@@ -12,8 +12,8 @@
         "Platforme"
       ],
       "themeKey": "platforms",
-      "count": 41,
-      "weightSum": 16.52,
+      "count": 45,
+      "weightSum": 17.16,
       "companies": [
         {
           "isin": "US81141R1005",
@@ -50,6 +50,12 @@
           "name": "Coinbase Glb",
           "weight": 0.81,
           "symbol": "COIN"
+        },
+        {
+          "isin": "US6837121036",
+          "name": "Opendoor Tech",
+          "weight": 0.64,
+          "symbol": "OPEN"
         },
         {
           "isin": "US12047B1052",
@@ -260,6 +266,24 @@
           "name": "Farfetch Ltd",
           "weight": 0.0,
           "symbol": "FTCHQ"
+        },
+        {
+          "isin": "US6837121374",
+          "name": "Opendoor Tech Warrant Series A",
+          "weight": 0.0,
+          "symbol": "OPENL"
+        },
+        {
+          "isin": "US6837121291",
+          "name": "Opendoor Tech Warrant Series K",
+          "weight": 0.0,
+          "symbol": "OPENW"
+        },
+        {
+          "isin": "US6837121457",
+          "name": "Opendoor Tech Warrant Series Z",
+          "weight": 0.0,
+          "symbol": "OPENZ"
         }
       ]
     },
@@ -614,20 +638,14 @@
         "Platforme"
       ],
       "themeKey": "software",
-      "count": 49,
-      "weightSum": 11.63,
+      "count": 48,
+      "weightSum": 10.85,
       "companies": [
         {
           "isin": "IL0011301780",
           "name": "Wix.Com Ltd",
           "weight": 0.96,
           "symbol": "WIX"
-        },
-        {
-          "isin": "US17253J1060",
-          "name": "Cipher Mining Inc",
-          "weight": 0.78,
-          "symbol": "CIFR"
         },
         {
           "isin": "US69608A1088",
@@ -919,15 +937,9 @@
       "problem": "Selskaber der endnu ikke har fået et primært NDI-tema i udkastet. Eksponering, ikke anbefaling.",
       "chain": [],
       "themeKey": "andet",
-      "count": 35,
-      "weightSum": 6.91,
+      "count": 31,
+      "weightSum": 6.27,
       "companies": [
-        {
-          "isin": "US6837121036",
-          "name": "Opendoor Tech",
-          "weight": 0.64,
-          "symbol": "OPEN"
-        },
         {
           "isin": "US4330001060",
           "name": "Hims Hers Health Inc",
@@ -1107,24 +1119,6 @@
           "name": "Abcellera Biologics Inc",
           "weight": 0.0,
           "symbol": "ABCL"
-        },
-        {
-          "isin": "US6837121374",
-          "name": "Opendoor Tech Warrant Series A",
-          "weight": 0.0,
-          "symbol": "OPENL"
-        },
-        {
-          "isin": "US6837121291",
-          "name": "Opendoor Tech Warrant Series K",
-          "weight": 0.0,
-          "symbol": "OPENW"
-        },
-        {
-          "isin": "US6837121457",
-          "name": "Opendoor Tech Warrant Series Z",
-          "weight": 0.0,
-          "symbol": "OPENZ"
         },
         {
           "isin": "US83571B1008",
@@ -1504,14 +1498,20 @@
         "Software"
       ],
       "themeKey": "compute",
-      "count": 18,
-      "weightSum": 6.05,
+      "count": 19,
+      "weightSum": 6.83,
       "companies": [
         {
           "isin": "FR0013227113",
           "name": "Soitec",
           "weight": 0.85,
           "symbol": "SOI.PA"
+        },
+        {
+          "isin": "US17253J1060",
+          "name": "Cipher Mining Inc",
+          "weight": 0.78,
+          "symbol": "CIFR"
         },
         {
           "isin": "US67066G1040",
