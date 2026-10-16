@@ -314,6 +314,14 @@ I footeren blev parentesen delt, så «(ISIN» eller «2026)» stod alene. Hele 
 
 På drawdown ved 320 stod «↗» alene efter «Læs KID», «-23,4 %.» alene under den åbne episode, «2. jun.» skilt fra «2026» i brøndens note, og «godkendelse.» skilt fra Fundmarket. De fire holder nu sammen. PMINDIAKK har stadig ingen procent. I embed står «tabe penge.» samlet ved 480. Ingen konsolfejl.
 
+### Update · ét ord alene · 2026-10-16 ~05:45 CEST
+
+Fra 400 til 800 stod «afkast.» alene under årssøjlerne. «kurven.» stod alene fra 420 til 820, og «igen.» stod alene i læsevejledningen. De står nu med ordet foran. «dag for dag», «under aksen», «i listen» og «disse dage» holder også sammen.
+
+Den gule note delte «29. jul.» fra «2026» ved 400. Datoen er nu én linje. På 400 er de tre linjer hele sætninger, og den sidste er «29. jul. 2026.»
+
+På sammenlign stod «KID.» alene fra 540 til 1040, fordi linket knækkede ved skråstregen. «Risici / KID» holder sammen. «i fonden», «12 måneder» og «klassens afkast» holder sammen. På AKK-siden holder «som PMINDI» sammen. Ingen procent dér. Ingen sidescroll fra 320 til 1100. Ingen konsolfejl. Ingen nowrap-sætning stikker ud af sin forælder.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.
