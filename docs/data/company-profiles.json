@@ -2352,6 +2352,58 @@
      "url": "https://www.quantumscape.com/"
     }
    ]
+  },
+  "CA1366351098": {
+   "name": "Canadian Solar",
+   "theme": "energy",
+   "summary": "Laver solcellemoduler og batterilagring og udvikler store sol- og lagerprojekter. Hovedkontoret ligger i Kitchener i Ontario. Næsten 180 GW moduler er leveret over 25 år, ikke et enkelt år. e-STORAGE havde pr. 30. juni 2026 sendt over 23 GWh. Datoen ligger efter beholdningen. Det er ikke et elselskab.",
+   "watch": "Om næsten 180 GW bliver læst som et enkelt år. Siden skriver, at det er leveret over 25 år. Over 23 GWh er dateret 30. juni 2026, efter beholdningen.",
+   "source": "https://www.canadiansolar.com/aboutus/",
+   "products": "Solcellemoduler, invertere og batterilagring. Recurrent Energy er nævnt som kontorer. Ikke et kraftværk.",
+   "customers": "Siden skriver, at kunderne findes i mange lande. Den nævner ikke et navngivet elselskab.",
+   "role": "Moduler og lager-systemer. Ikke et elselskab.",
+   "narrative": [
+    "Canadian Solar skriver, at selskabet er stiftet i 2001 i Canada, og at det har været noteret på NASDAQ siden 2006. Hovedkontoret ligger på 4273 King Street East, Suite 102, i Kitchener i Ontario. Siden skriver, at selskabet laver solcellemoduler, leverer sol og batterilagring og udvikler store sol- og lagerprojekter. Næsten 180 GW moduler er leveret over 25 år. Det er ikke et enkelt år. Kontaktsiden nævner Recurrent Energy i San Francisco, Austin og New York. Det er kontorer, ikke kraftværker.",
+    "Datterselskabet e-STORAGE havde pr. 30. juni 2026 sendt over 23 GWh batterilagring. Datoen ligger efter beholdningen pr. 1. juni 2026. Tallet er en samlet leverance, ikke et enkelt år. Et beløb for ordrebeholdning er ikke taget med. Ordene largest, leading og bankable er ikke taget med. Det er ikke skrevet som et elselskab, der driver værkerne."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Om selskabet",
+     "url": "https://www.canadiansolar.com/aboutus/"
+    },
+    {
+     "label": "Kontakt",
+     "url": "https://www.canadiansolar.com/contactus/"
+    }
+   ]
+  },
+  "US83417M1045": {
+   "name": "SolarEdge",
+   "theme": "energy",
+   "summary": "Laver optimizers, invertere og en overvågningsplatform til solanlæg. Selskabet blev registreret i Delaware i 2006. Den 250.000. inverter hos Flex i Austin er dateret 2. juni 2025. Tallet er en tæller, ikke et års tal. Det er udstyr, ikke et kraftværk.",
+   "watch": "Om 250.000 invertere bliver læst som et års tal. Meddelelsen er en tæller pr. 2. juni 2025, før beholdningen.",
+   "source": "https://investors.solaredge.com/",
+   "products": "Optimizers, invertere og overvågning. Om-siden nævner også lagring, ladning og nettjenester. Ikke et kraftværk.",
+   "customers": "Boliger, erhverv og mindre solparker. Teksten nævner ikke en navngiven park.",
+   "role": "Udstyr til solanlæg. Ikke et elselskab.",
+   "narrative": [
+    "Investorkontoret skriver, at SolarEdge blev registreret i Delaware i 2006, og at selskabet er noteret på NASDAQ under SEDG. Systemet består af optimizers, invertere og en overvågningsplatform i skyen. Det dækker boliger, erhverv og mindre solparker. Om-siden skriver, at produkterne siden 2006 også omfatter lagring, ladning af elbiler, nettjenester og software til energistyring.",
+    "Selskabet skrev 2. juni 2025, at den 250.000. inverter var lavet hos Flex i Austin i Texas. Datoen ligger før beholdningen pr. 1. juni 2026. Tallet er en tæller, ikke et års tal. En gadeadresse for hovedkontoret stod ikke på de læste sider og er ikke opfundet. Ordene leader og revolutionized er ikke taget med. Det er udstyr, ikke et kraftværk."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Investorkontor",
+     "url": "https://investors.solaredge.com/"
+    },
+    {
+     "label": "Om selskabet",
+     "url": "https://corporate.solaredge.com/en/about-us"
+    },
+    {
+     "label": "Forside",
+     "url": "https://corporate.solaredge.com/en"
+    }
+   ]
   }
  },
  "media": [
