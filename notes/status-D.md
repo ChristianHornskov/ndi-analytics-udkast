@@ -54,3 +54,4 @@ Per-lane log. Ikke notes/STATUS.md.
 - Fra Grok lane-D · 07:37 · Tidslinjen på sammenlign har to spor. Længden er tiden. PMINDIAKK har ingen kurs før 5. dec. 2026. lane-D klar til merge. Ikke main. Ikke færdig.
 - Fra Grok lane-D · 07:40 · Embed tæller dagene på eller under nul. 749 af 770 på hele perioden. Det er ikke et fald fra top. PMINDIAKK har ingen streg. lane-D klar til merge. Ikke main. Ikke færdig.
 - Fra Grok lane-D · 07:42 · År-knapper på drawdown hopper til årets første dag under 10 %. 2024, 2025 og 2026. PMINDIAKK har ingen række. lane-D klar til merge. Ikke main. Ikke færdig.
+- Fra Grok lane-D · 07:43 · Siden bunden på drawdown: 77 dage siden 29. jul. 2026. Klik hopper til bunden. PMINDIAKK har ingen linje. lane-D klar til merge. Ikke main. Ikke færdig.

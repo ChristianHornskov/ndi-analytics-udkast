@@ -412,3 +412,7 @@ Ny form i embed, under stoppene. En tynd streg. Brand er dagene på eller over n
 ### Update · år under 10 % · 2026-10-16 ~07:42 CEST
 
 Ny række på drawdown, under hoppet til første dag. Tre knapper: 2024, 2025 og 2026. Et klik hopper til årets første dag mindst 10 % under toppen. 2024 lander 2. aug. 2024 på −13,8 %. 2025 lander 25. feb. 2025 på −12,2 %. 2026 lander 2. jan. 2026 på −14,7 %. 2023 har ingen knap. Knapperne er 44 px og står på én række ved 300 px. Den valgte har en gul streg. Ingen sidescroll. Ingen konsolfejl. På papir er knapperne væk, og etiketten bliver. PMINDIAKK har ingen række og ingen procent.
+
+### Update · siden bunden · 2026-10-16 ~07:43 CEST
+
+Ny linje på drawdown, under år-knapperne. Knappen hopper til bunden 29. jul. 2026. Udlæsningen siger −26,8 %. Ved siden af står 77 dage siden den dato, og at serien ikke er tilbage på den top. Tallet er dage, ikke en ny procent. Knappen er 44 px. Ingen sidescroll ved 300–1100. Ingen konsolfejl. På papir er knappen væk, og sætningen bliver. PMINDIAKK har ingen linje, ingen procent, og teksten om 5. december 2026.
