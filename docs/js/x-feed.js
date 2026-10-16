@@ -538,7 +538,8 @@ body.x-archive main{display:flex;flex-direction:column}
 .x-months-top{display:flex;justify-content:space-between;gap:8px 12px;align-items:baseline;flex-wrap:wrap;margin:0 0 4px}
 .x-months-top .k{margin:0;font-size:11px;letter-spacing:1.4px;color:var(--brand);font-weight:700}
 .x-months-top p{margin:0;font-size:13px;line-height:1.35;color:var(--text);max-width:70ch}
-.x-months-row{display:flex;flex-wrap:wrap;gap:4px}
+.x-months-row{display:flex;flex-wrap:wrap;gap:4px;align-items:flex-end}
+.x-mo-year{display:flex;align-items:flex-end;min-height:34px;padding:0 2px 3px;font-size:11px;letter-spacing:.2px;color:var(--faint);font-variant-numeric:tabular-nums}
 .x-mo{appearance:none;display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:44px;min-height:34px;padding:2px 5px;border:1px solid #345860;border-radius:10px;background:#0b171d;color:var(--muted);font:inherit;line-height:1.1}
 .x-mo b{font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-size:15px;font-weight:500;color:#f5ee9e;line-height:1}
 .x-mo i{font-style:normal;font-size:10px;letter-spacing:.2px;color:var(--faint);margin-top:2px}
@@ -553,6 +554,7 @@ body.x-focused .x-months-top,body.x-focused .x-months-foot{display:none}
 body.x-focused .x-months{margin:0 0 4px;padding:0;border:0;background:transparent;border-radius:0}
 body.x-focused .x-mo{min-height:26px;min-width:36px;padding:1px 4px}
 body.x-focused .x-mo b{font-size:13px}
+body.x-focused .x-mo-year{min-height:26px;padding-bottom:1px;font-size:10px}
 @media(prefers-reduced-motion:reduce){
   button.x-atlas-dot:hover::after{transform:translate(-50%,-50%)}
 }
@@ -1136,9 +1138,11 @@ export function xMonthHtml(posts, { active = '' } = {}) {
     const key = y + '-' + String(m).padStart(2, '0');
     const n = counts.get(key) || 0;
     const short = MONTH_SHORT[m - 1];
-    const showYear = prevYear !== y;
-    prevYear = y;
-    const face = showYear ? `${short} ${String(y).slice(2)}` : short;
+    if (prevYear !== y) {
+      cells.push(`<span class="x-mo-year">${y}</span>`);
+      prevYear = y;
+    }
+    const face = short;
     const long = monthStamp(key);
     if (!n) {
       cells.push(`<span class="x-mo is-zero"><i>${esc(face)}</i><b>0</b><span class="sr-only">${esc(long)}, 0 opslag</span></span>`);

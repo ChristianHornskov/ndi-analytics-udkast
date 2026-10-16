@@ -199,12 +199,7 @@
   .meet-tick{position:absolute;top:3px;width:2px;height:12px;border-radius:1px;transform:translateX(-50%);background:#9ecfd6}
   .meet-tick.is-tx{background:#f5ee9e}
   .meet-tick.is-kid{top:1px;width:3px;height:16px;background:#f5ee9e}
-  .meet-tick.is-sum{top:1px;width:0;height:16px;background:transparent;border-left:2px dashed #f5ee9e}
   .meet-val{font-size:12px;color:var(--cyan);font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
-  .meet-lane.is-ghost{display:none}
-  .meet-lane.is-ghost .meet-name{color:var(--faint)}
-  .meet-lane.is-ghost .meet-val{color:#f5ee9e}
-  .meet.is-sum .meet-lane.is-ghost{display:grid}
   .meet-scale{margin-top:2px;font-size:11px;color:var(--faint)}
   .meet-scale span:nth-child(2){display:flex;justify-content:space-between}
   .meet-foot{margin:8px 0 0;font-size:12px;line-height:1.45;color:var(--faint)}
@@ -214,7 +209,6 @@
     .life-print,.meet-print{display:block;margin-top:8px;font-size:12px;line-height:1.45}
     .life-print p,.meet-print p{margin:0 0 4px}
     .life-stamps{display:flex}
-    .meet-lane.is-ghost{display:grid}
   }
   #kid-omkostning tr.is-on td:first-child{box-shadow:inset 3px 0 0 #f5ee9e;color:var(--text)}
   .kr-chips{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;list-style:none;padding:8px 0 0;margin:8px 0 0;border-top:1px solid #345860}
@@ -268,7 +262,7 @@
  <footer class="site-footer">
  <p class="eyebrow" style="margin-bottom:4px">Markedsføringsmateriale</p>
  <p data-kid-footer>Dokument med central information (KID): <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm140b">PMINDI ↗</a> · <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm145b">PMINDIAKK ↗</a>. Prospekt: <a href="https://fundmarket.dk/wp-content/uploads/Faellesprospekt-for-afdelinger-og-andelsklasser-i-Investeringsforeningen-Portfoliomanager-opdateret-24.10.2025.pdf">Fællesprospekt ↗</a>.</p>
- <p>Udkast / noindex. KID-omkostningsindikator + Fundmarket-postsatser. Ikke et ÅOP. Du kan tabe penge. Ikke rådgivning.</p>
+ <p>Udkast / noindex. KID-omkostningsindikator + Fundmarket-postsatser. Ikke et ÅOP. Du kan tabe penge. Ikke rådgivning. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast.</p>
  </footer>
  <script type="module">
  const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -691,28 +685,19 @@
  const kidAr = Number(a.kidRiy5y);
  const kidBr = Number(b.kidRiy5y);
  const meetOk = [onA, onB, txAr, txBr, kidAr, kidBr].every((n) => Number.isFinite(n));
- const sumAr = Number((onA + txAr).toFixed(2));
- const sumBr = Number((onB + txBr).toFixed(2));
  const meetTicks = (vals, cls) => [...new Set(vals.map((n) => Number(n).toFixed(2)))].map((n) => `<i class="meet-tick ${cls}" style="left:${meetAt(n)}%" title="${rate2(n)}"></i>`).join('');
  const pairTxt = (x, y) => rate2(x) === rate2(y) ? rate2(x) : `${rate2(x)} · ${rate2(y)}`;
- const plainSay = `Øvrige løbende står ved ${pairTxt(onA, onB)}. Porteføljetransaktion står ved ${pairTxt(txAr, txBr)}. KID ved 5 år står ved ${pairTxt(kidAr, kidBr)}. Linealen lægger dem ikke sammen.`;
- const sumSay = `${rate2(onA)} + ${rate2(txAr)} er ${rate2(sumAr)}, ${kr(sumAr)} på 100.000 kr. KID ved 5 år er ${rate2(kidAr)}, ${kr(kidAr)} De mødes ikke. ${rate2(onB)} + ${rate2(txBr)} er ${rate2(sumBr)}, ${kr(sumBr)} KID er ${rate2(kidBr)}, ${kr(kidBr)} De mødes ikke. Summen er regnet på siden. Den står ikke hos Fundmarket, og den er ikke et ÅOP.`;
- const wantSum = new URL(location.href).searchParams.get('sum') === '1';
- const meetHtml = meetOk ? `<section class="meet${wantSum ? ' is-sum' : ''}" id="lineal" data-plain="${esc(plainSay)}" data-sumsay="${esc(sumSay)}">
- <div class="meet-top"><p class="kicker">LINEAL</p><p data-meet-say>${esc(wantSum ? sumSay : plainSay)}</p></div>
- <div class="meet-ask" role="group" aria-label="Hvad linealen viser">
- <button type="button" data-sum="0" aria-pressed="${wantSum ? 'false' : 'true'}" aria-keyshortcuts="g">Tallene<kbd>G</kbd></button>
- <button type="button" data-sum="1" aria-pressed="${wantSum ? 'true' : 'false'}" aria-keyshortcuts="g">Summen<kbd>G</kbd></button>
- </div>
- <div class="meet-chart" role="img" aria-label="${esc(wantSum ? sumSay : plainSay)}">
+ const plainSay = `Øvrige løbende står ved ${pairTxt(onA, onB)}. Porteføljetransaktion står ved ${pairTxt(txAr, txBr)}. KID ved 5 år står ved ${pairTxt(kidAr, kidBr)}. KID ved 5 år er den officielle samlede omkostningsindikator. Linealen lægger ikke postsatserne sammen.`;
+ const meetHtml = meetOk ? `<section class="meet" id="lineal">
+ <div class="meet-top"><p class="kicker">LINEAL</p><p>${esc(plainSay)}</p></div>
+ <div class="meet-chart" role="img" aria-label="${esc(plainSay)}">
  <div class="meet-lane"><span class="meet-name">Øvrige løbende</span><div class="meet-track">${meetTicks([onA, onB], 'is-post')}</div><span class="meet-val">${pairTxt(onA, onB)}</span></div>
  <div class="meet-lane"><span class="meet-name">Porteføljetransaktion</span><div class="meet-track">${meetTicks([txAr, txBr], 'is-tx')}</div><span class="meet-val">${pairTxt(txAr, txBr)}</span></div>
  <div class="meet-lane"><span class="meet-name">KID ved 5 år</span><div class="meet-track">${meetTicks([kidAr, kidBr], 'is-kid')}</div><span class="meet-val">${pairTxt(kidAr, kidBr)}</span></div>
- <div class="meet-lane is-ghost"><span class="meet-name">Sum på siden</span><div class="meet-track">${meetTicks([sumAr, sumBr], 'is-sum')}</div><span class="meet-val">${pairTxt(sumAr, sumBr)}</span></div>
  </div>
  <div class="meet-scale" aria-hidden="true"><span></span><span><i>0 %</i><i>4 %</i></span><span></span></div>
- <p class="meet-foot">Skalaen går fra 0 til 4 %, så KID ved 5 år kan stå på den. 4 % er ikke et tal fra fonden. Summen er øvrige løbende plus porteføljetransaktion, regnet på siden. Emission og indløsning er ikke med, fordi de er lofter. Linjerne er ikke lagt sammen i KID, og ingen af tallene er et ÅOP. <a href="fakta.html?sum=1#lineal">Samme lineal på fakta →</a></p>
- <div class="meet-print"><p>${esc(plainSay)}</p><p>${esc(sumSay)}</p></div>
+ <p class="meet-foot">Skalaen går fra 0 til 4 %, så KID ved 5 år kan stå på den. 4 % er ikke et tal fra fonden. Siden viser ikke en sum af postsatserne. Emission og indløsning er lofter og er ikke med. Ingen af tallene er et ÅOP. <a href="fakta.html#lineal">Samme lineal på fakta →</a></p>
+ <div class="meet-print"><p>${esc(plainSay)}</p></div>
  </section>` : '';
  const plainLead = `<section class="panel" style="margin-bottom:14px">
  <p style="font-size:18px;color:var(--text);line-height:1.45;margin:0">Ca. <strong>2,8&nbsp;% om året</strong> — det er KID’s samlede omkostningsindikator ved 5 år (PMINDI <strong>${pct(a.kidRiy5y)}</strong> / PMINDIAKK <strong>${pct(b.kidRiy5y)}</strong>). På 100.000&nbsp;kr. svarer det til ca. <strong>${kr(a.kidRiy5y)}</strong> / <strong>${kr(b.kidRiy5y)}</strong> om året. Hertil kommer din banks kurtage og depot. Intet resultathonorar. Du kan tabe penge.</p>
@@ -774,7 +759,7 @@
 
  <section class="panel">
  <h2 class="panel-h">Regneeksempel på 100.000 kr.</h2>
- <p class="lede" style="margin-bottom:12px">Hver linje er satsen ganget med 100.000 kr. og afrundet til hele kroner. Linjerne er ikke lagt sammen. Summen er ikke et ÅOP. Kurtage, depot og skat er ikke med.</p>
+ <p class="lede" style="margin-bottom:12px">Hver linje er satsen ganget med 100.000 kr. og afrundet til hele kroner. Linjerne er ikke lagt sammen. Siden viser ikke en sum. Kurtage, depot og skat er ikke med.</p>
  <div class="receipts">
  <article class="receipt">
  <p class="kicker">${esc(A.isin)}</p>
@@ -953,22 +938,11 @@
  };
  const wantLife = new URL(location.href).searchParams.get('linje');
  if (wantLife) pickLife(wantLife);
- const pickSum = (on, push) => {
- const root = document.getElementById('lineal');
- if (!root) return;
- root.classList.toggle('is-sum', on);
- root.querySelector('[data-sum="0"]')?.setAttribute('aria-pressed', on ? 'false' : 'true');
- root.querySelector('[data-sum="1"]')?.setAttribute('aria-pressed', on ? 'true' : 'false');
- const say = root.querySelector('[data-meet-say]');
- if (say) say.textContent = on ? (root.dataset.sumsay || '') : (root.dataset.plain || '');
- const chart = root.querySelector('.meet-chart');
- if (chart) chart.setAttribute('aria-label', say ? say.textContent : '');
- if (!push) return;
+ if (new URL(location.href).searchParams.get('sum') === '1') {
  const u = new URL(location.href);
- if (on) u.searchParams.set('sum', '1');
- else u.searchParams.delete('sum');
+ u.searchParams.delete('sum');
  history.replaceState(null, '', u);
- };
+ }
  main.addEventListener('click', (e) => {
  const venn = e.target.closest('[data-venn]');
  if (venn && venn.closest('#klasselinje')) {
@@ -983,11 +957,6 @@
  const ask = e.target.closest('[data-ask]');
  if (ask && ask.closest('#satskort')) {
  pickAsk(ask.getAttribute('data-ask'));
- return;
- }
- const sumBtn = e.target.closest('#lineal [data-sum]');
- if (sumBtn) {
- pickSum(sumBtn.getAttribute('data-sum') === '1', true);
  return;
  }
  const peg = e.target.closest('[data-peg]');
@@ -1044,14 +1013,6 @@
  if (!next) return;
  pickLife(next.getAttribute('data-life'));
  }
- root.scrollIntoView({ block: 'nearest' });
- return;
- }
- if (e.key === 'g') {
- const root = document.getElementById('lineal');
- if (!root) return;
- e.preventDefault();
- pickSum(!root.classList.contains('is-sum'), true);
  root.scrollIntoView({ block: 'nearest' });
  return;
  }
