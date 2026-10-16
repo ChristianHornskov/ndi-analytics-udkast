@@ -809,23 +809,23 @@
           <text class="lab" x="70" y="24" style="fill:var(--cyan)">1 · AI</text>
           <text class="lab" x="330" y="24" style="fill:var(--yellow)">2 · REALKAPITAL</text>
           <text class="lab" x="200" y="370" style="fill:var(--neg-ink)">3 · NY KOLD KRIG</text>
-          <text x="84" y="88">Platforme</text><text class="w" x="84" y="100">17,2 %</text>
-          <text x="84" y="116">Software</text><text class="w" x="84" y="128">10,9 %</text>
-          <text x="84" y="144">Optik &amp; netværk</text><text class="w" x="84" y="156">7,8 %</text>
-          <text x="84" y="172">Compute</text><text class="w" x="84" y="184">6,8 %</text>
-          <text x="200" y="76">Energi</text><text class="w" x="200" y="88">9,3 %</text>
-          <text x="200" y="106">Fysisk tech</text><text class="w" x="200" y="118">7,9 %</text>
-          <text x="200" y="176" style="font-weight:700">Chips</text><text class="w" x="200" y="189">13,3 %</text>
-          <text x="142" y="222">Quantum</text><text class="w" x="142" y="234">1,1 % · forslag</text>
-          <text x="272" y="200">Energi-</text><text x="272" y="212">ressourcer</text><text class="w" x="272" y="224">6,5 %</text>
-          <text x="270" y="240">SpaceTech</text><text class="w" x="270" y="251">4,9 %</text>
+          <text x="84" y="88">Platforme</text><text class="w" data-t="platforms" x="84" y="100">17,2 %</text>
+          <text x="84" y="116">Software</text><text class="w" data-t="software" x="84" y="128">10,9 %</text>
+          <text x="84" y="144">Optik &amp; netværk</text><text class="w" data-t="connect" x="84" y="156">7,8 %</text>
+          <text x="84" y="172">Compute</text><text class="w" data-t="compute" x="84" y="184">6,8 %</text>
+          <text x="200" y="76">Energi</text><text class="w" data-t="energy" x="200" y="88">9,3 %</text>
+          <text x="200" y="106">Fysisk tech</text><text class="w" data-t="physical" x="200" y="118">7,9 %</text>
+          <text x="200" y="176" style="font-weight:700">Chips</text><text class="w" data-t="chips" x="200" y="189">13,3 %</text>
+          <text x="142" y="222">Quantum</text><text class="w" data-t="quantum" x="142" y="234">1,1 % · forslag</text>
+          <text x="272" y="200">Energi-</text><text x="272" y="212">ressourcer</text><text class="w" data-t="energy-resources" x="272" y="224">6,5 %</text>
+          <text x="270" y="240">SpaceTech</text><text class="w" data-t="space" x="270" y="251">4,9 %</text>
         </svg>
         <ol class="dr-key">
           <li><strong>1 · AI gør intelligens billigere</strong>Indlægget sammenligner med elektriciteten for 100 år siden. Det giver vækst hos dem, der leverer AI, men er også en risiko: selskaber, der ikke tager AI til sig, kan miste deres plads, uanset hvor længe de har klaret sig godt. Indlægget kalder AI modvind for en del software.</li>
           <li class="k2"><strong>2 · Fra finansielle aktiver til realkapital</strong>Vesten, især USA, bygger igen fabrikker, energi og infrastruktur. Realkapital er de fysiske ting, der producerer noget.</li>
           <li class="k3"><strong>3 · En ny kold krig</strong>Rivaliseringen mellem Kina og Vesten betyder, at handelspolitik, tilskud og <a href="om-data.html#g-eksportregler">eksportregler</a> i højere grad styrer, hvor pengene går hen.</li>
         </ol>
-        <figcaption>Drivkræfterne er fra NDI-indlæg 19. januar 2026 («De tre overordnede investeringstemaer for de næste 10 år»). Placeringen af temaerne i cirklerne er NDI Analytics’ skitse ud fra indlæggets ord, ikke NDI’s egen opdeling. Tal: vægt i procent af PMINDI pr. 1. jun 2026 fra den offentlige, forsinkede beholdning, det primære tema én gang pr. selskab. Andet (6,3 %) står uden for cirklerne. Drivkræfterne er Mads’ syn på retningen, ikke en prognose. De siger ikke, hvilke selskaber der klarer sig godt, og du kan tabe penge. <a href="laer/saadan-taenker-vi.html#tv-dr">Sådan tænker vi →</a> · <a href="#h-stk">Samme temaer som lag ↑</a> · <a href="om-data.html#g-drivkraefter">Ordliste: tre drivkræfter</a></figcaption>
+        <figcaption>Drivkræfterne er fra NDI-indlæg 19. januar 2026 («De tre overordnede investeringstemaer for de næste 10 år»). Placeringen af temaerne i cirklerne er NDI Analytics’ skitse ud fra indlæggets ord, ikke NDI’s egen opdeling. Tal: vægt i procent af PMINDI pr. 1. jun 2026 fra den offentlige, forsinkede beholdning, det primære tema én gang pr. selskab. Andet (<span id="dr-an">6,3</span> %) står uden for cirklerne. Drivkræfterne er Mads’ syn på retningen, ikke en prognose. De siger ikke, hvilke selskaber der klarer sig godt, og du kan tabe penge. <a href="laer/saadan-taenker-vi.html#tv-dr">Sådan tænker vi →</a> · <a href="#h-stk">Samme temaer som lag ↑</a> · <a href="om-data.html#g-drivkraefter">Ordliste: tre drivkræfter</a></figcaption>
       </figure>
     </details>
 
@@ -1009,6 +1009,16 @@
         const ord = ['nul', 'ét', 'to', 'tre', 'fire', 'fem', 'seks', 'syv', 'otte', 'ni', 'ti', 'elleve'];
         const set = (id, v) => { const e = document.getElementById(id); if (e) e.textContent = v; };
         set('mx-tech', tot[0]); set('mx-n', sum(tot)); const kk = order.filter((t) => m[t][0]).length; set('mx-k', ord[kk] || kk);
+      }
+      // Venn: vægt pr. tema i de tre cirkler
+      const dr = document.querySelector('#h-dr')?.closest('details, section');
+      if (dr) {
+        const W = (t) => nf(a[t]?.w || 0);
+        const qAll2 = A.filter((p) => p.theme === 'quantum'), qF = qAll2.length && qAll2.every((p) => p.themeStatus === 'forslag');
+        dr.querySelectorAll('text.w[data-t]').forEach((el) => { const t = el.dataset.t; el.textContent = `${W(t)} %` + (t === 'quantum' && qF ? ' · forslag' : ''); });
+        const an2 = document.getElementById('dr-an'); if (an2) an2.textContent = W('andet');
+        const d = document.getElementById('dr-d');
+        if (d) d.textContent = `Cirklerne hedder AI, realkapital og ny kold krig. Kun i AI: platforme ${W('platforms')} procent, software ${W('software')}, optik og netværk ${W('connect')} og compute ${W('compute')}. AI og realkapital: energi ${W('energy')} og fysisk tech ${W('physical')}. AI og ny kold krig: quantum ${W('quantum')}${qF ? ', forslag' : ''}. Realkapital og ny kold krig: energiressourcer ${W('energy-resources')} og SpaceTech ${W('space')}. Alle tre: chips ${W('chips')} procent. Andet, ${W('andet')} procent, står uden for cirklerne.`;
       }
       // To klasser: prik pr. klasse på en skala til 18 %
       const kl = document.querySelector('ul.kl-rows');
