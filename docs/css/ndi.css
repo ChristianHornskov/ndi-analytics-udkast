@@ -725,7 +725,8 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
 .year-rail a.yr-open:hover{border-top-color:var(--cyan)}
 .year-rail .yr-mark{font-size:11px;line-height:1.2;color:var(--yellow)}
 .year-rail .yr-open .yr-mark{color:var(--cyan)}
-.year-rail .yr-bar{display:block;width:min(72%,92px);max-width:none;align-self:end;border-radius:4px 4px 0 0;background:var(--brand);margin-bottom:0}
+.year-rail .yr-track{display:flex;align-items:flex-end;align-self:stretch;width:100%;border-bottom:1px solid var(--faint)}
+.year-rail .yr-bar{display:block;width:min(72%,92px);max-width:none;border-radius:4px 4px 0 0;background:var(--brand);margin-bottom:0}
 .year-rail .yr-bar.neg{background:var(--neg)}
 .year-rail .yr-y{font-size:12px;color:var(--muted)}
 .year-rail .yr-r{font-size:16px;font-variant-numeric:tabular-nums}
@@ -808,6 +809,7 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
   .figure .uw-span.open.on{stroke:#fff}
   .figure text.uw-up{fill:#1d4e56}
   .year-rail .yr-mark{color:#333}
+  .year-rail .yr-track{border-bottom-color:#ccc}
   .year-rail a.yr-deep{border-top-color:#111}
   .year-rail a.yr-open{border-top-color:#1d4e56}
   .year-rail .yr-open .yr-mark{color:#1d4e56}

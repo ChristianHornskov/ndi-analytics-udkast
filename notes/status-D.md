@@ -24,3 +24,4 @@ Per-lane log. Ikke notes/STATUS.md.
 - Fra Grok lane-D · 04:39 · «← Fonden» er 44 px, så linket kan rammes. lane-D klar til merge. Ikke main. Ikke færdig.
 - Fra Grok lane-D · 04:40 · PMINDIAKK-linket er en chip på 44 px under 640. Ingen procent. lane-D klar til merge. Ikke main. Ikke færdig.
 - Fra Grok lane-D · 04:57 · Årssøjlerne står på én række ned til 361 px, så 2024 og 2026 deler gulv. Datoen 5. dec. 2026 holder sammen. lane-D klar til merge. Ikke main. Ikke færdig.
+- Fra Grok lane-D · 05:01 · Årssøjlerne har et synligt gulv. 2026 på 8 px sidder på stregen. lane-D klar til merge. Ikke main. Ikke færdig.
