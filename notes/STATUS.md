@@ -1659,3 +1659,5 @@ Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er
 - Coordinator-loop 2026-10-16 02:12:29 CEST: CONFLICT merge origin/lane-R (ahead 3) — aborted, not pushed
 
 - Coordinator (manual) 2026-10-16 02:14:18 : Leo 02:00 UX MUSTs (dividends comma, Max DD→Største fald, ÅOP-aften-frase væk, AI-udkast kun ved tekst, vaerdikaeder ≥12px mobil) + SHOULDs (menu 44px, life-strip collapse, tema wrap) + FO (andet 6,27 % synket, klasser-forskel, KID-omkostning, Mangler-fra-NDI-boks) + privat 02:07 (Sådan tænker vi-links, færre forslag-badges, vurder-afkast uden Nasdaq). Compliance: KID RIY, Fulgt konto, kan tabe, chartMarkers uden @MadsC007.
+
+- Lead 2026-10-16 02:18:04 CEST: Leo 02:00/02:07 fixes on main (e402f15/5843694). Coord hardened (no auto-stash). Monitor+loop running. Queued lane merges R/A/B/C/D/E/X.
