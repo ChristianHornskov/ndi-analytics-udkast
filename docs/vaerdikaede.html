@@ -136,7 +136,7 @@
  const links = ai.links.filter(l => !l.neighbour);
 
  document.getElementById('chain-asof').textContent =
- `Antal og vægte viser PMINDI's beholdning pr. ${fmtDate(pack.asOf)} (forsinket). Vægt er summen af de tilordnede selskabers vægt i fonden. Ingen kurser, afkast eller nøgletal pr. aktie. Temaer er eksponering, ikke anbefaling.`;
+ `Antal og vægte viser PMINDI's beholdning pr. ${fmtDate(pack.asOf)} (forsinket). Vægt er summen af de tilordnede selskabers vægt i fonden. Ingen kurser, afkast eller nøgletal pr. aktie. Temaer er eksponering, ikke anbefaling.` + (pack.placedNote ? ' ' + pack.placedNote : '');
  document.getElementById('flod').textContent = pack.philosophy?.flod || ai.why;
  document.getElementById('mapping-note').textContent = pack.mappingNote || '';
 
@@ -212,7 +212,9 @@
  const ls = g.ids.map(id => byId[id]).filter(Boolean);
  if (!ls.length) return '';
  return `<p class="dam-head">${esc(g.label)}${g.hint ? `<span>${esc(g.hint)}</span>` : ''}</p><div class="chain">${ls.map(l => {
- const top = l.companies.slice(0, 5);
+ // NDI-linsens plads pr. selskab går forud for temaets liste, som flere led deler (fx chips)
+ const pin = l.placed?.length ? l.placed : null;
+ const top = (pin || l.companies).slice(0, 5);
  const see = l.seeChain ? ` · <a href="vaerdikaeder.html?kaede=${esc(l.seeChain)}#kap-kaeder">Åbn ${esc(pack.chains.find(c => c.id === l.seeChain)?.title || l.seeChain)}-kæden →</a>` : '';
  return `<article class="node" id="led-${esc(l.id)}" data-link="${esc(l.id)}">
  <div class="ico" aria-hidden="true">${esc(l.icon || '•')}<b>${num[l.id]}</b></div>
@@ -221,10 +223,10 @@
  <p>${esc(l.blurb)}</p>
  ${pressLine(l)}
  ${l.shift ? `<p class="shift"><b>Hvad ændrer sig:</b> ${esc(l.shift)}</p>` : ''}
- <p class="meta"><b>${l.count}</b> selskaber · ca. ${pct(l.weightSum.toFixed(1))} % af fonden (forsinket)</p>
+ <p class="meta">${pin ? `<b>${pin.length}</b> placeret i netop leddet · ` : ''}<b>${l.count}</b> selskaber i ${pin ? 'temaet' : 'leddet'} · ca. ${pct(l.weightSum.toFixed(1))} % af fonden (forsinket)</p>
  ${alsoLine(l)}
  <p class="hit-why"></p>
- ${top.length ? `<details><summary>Største selskaber i leddet efter vægt (${top.length} af ${l.count})</summary><ol>${top.map(c => `<li><a href="selskab.html?isin=${encodeURIComponent(c.isin)}&fund=${fundId}">${esc(coName(c))}</a> · vægt ${pct(c.w)} %</li>`).join('')}</ol></details>` : ''}
+ ${top.length ? `<details><summary>${pin ? `Placeret i netop leddet ifølge NDI-linsen, største efter vægt (${top.length} af ${pin.length})` : `Største selskaber i leddet efter vægt (${top.length} af ${l.count})`}</summary><ol>${top.map(c => `<li><a href="selskab.html?isin=${encodeURIComponent(c.isin)}&fund=${fundId}">${esc(coName(c))}</a> · vægt ${pct(c.w)} %</li>`).join('')}</ol></details>` : ''}
  <p class="more"><a href="vaerdikaeder.html?kaede=ai-compute#lk-${esc(l.id)}">Hvorfor NDI følger leddet →</a>${see}</p>
  </div>
  </article>`;
@@ -236,6 +238,7 @@
  const cos = new Map();
  const add = (isin, name) => { const e = cos.get(isin) || { isin, name: coName({ name }), raw: name, tags: new Set(), links: new Set() }; cos.set(isin, e); return e; };
  links.forEach(l => l.companies.forEach(c => { const e = add(c.isin, c.name); e.links.add(l.id); if (c.theme) e.tags.add(c.theme); }));
+ links.forEach(l => (l.placed || []).forEach(c => { const e = add(c.isin, c.name); e.links.add(l.id); (e.pin ||= new Set()).add(l.id); if (c.theme) e.tags.add(c.theme); }));
  (themes.themes || []).forEach(t => (t.companies || []).forEach(c => add(c.isin, c.name).tags.add(t.themeKey || t.slug)));
  Object.entries(multi.byIsin || {}).forEach(([isin, m]) => { const e = cos.get(isin); if (e) { (m.tags || []).forEach(t => e.tags.add(t)); e.why = m.why; } });
  const list = [...cos.values()].sort((a, b) => a.name.localeCompare(b.name, 'da'));
@@ -276,7 +279,7 @@
  nodes.forEach(el => {
  const hit = co.links.has(el.dataset.link);
  el.classList.toggle('hit', hit);
- el.querySelector('.hit-why').textContent = hit ? `${co.name} er tilordnet dette led` : '';
+ el.querySelector('.hit-why').textContent = hit ? (co.pin?.has(el.dataset.link) ? `NDI-linsen placerer ${co.name} i netop dette led` : `${co.name} er tilordnet dette led via sit tema`) : '';
  const d = el.querySelector('details'); if (d) d.open = false;
  });
  setFiltering(true);
@@ -284,7 +287,7 @@
  const n = co.links.size;
  const other = pack.chains.filter(c => c.id !== 'ai-compute' && c.links.some(l => l.companies.some(x => x.isin === co.isin)));
  status.innerHTML = `<a href="selskab.html?isin=${encodeURIComponent(co.isin)}&fund=${fundId}">${esc(co.name)}</a>: ` +
- (n ? `${n} led i AI-kæden (${[...co.links].map(id => `${num[id]}. ${esc(byId[id].label)}`).join(', ')})` : 'ingen led i AI-kæden') +
+ (n ? `${n} led i AI-kæden (${[...co.links].sort((a, b) => (co.pin?.has(b) ? 1 : 0) - (co.pin?.has(a) ? 1 : 0)).map(id => `${num[id]}. ${esc(byId[id].label)}${co.pin?.has(id) ? ' ◉ NDI-linsen' : ''}`).join(', ')})` : 'ingen led i AI-kæden') +
  (other.length ? ` · også i ${other.map(c => `<a href="vaerdikaeder.html?kaede=${esc(c.id)}#kap-kaeder">${esc(c.title)}</a>`).join(', ')}` : '') +
  (co.why ? `. ${esc(co.why)}` : '.') + ' Eksponering, ikke anbefaling.';
  }

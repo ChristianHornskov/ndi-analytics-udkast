@@ -89,6 +89,11 @@
     .vc-cos .chip{display:inline-block;margin:3px 6px 3px 0;font-size:12px;padding:3px 8px;border:1px solid var(--line);border-radius:999px;text-decoration:none;background:#0f2028}
     .vc-cos .chip small{color:var(--muted)}
     .vc-cos .chip.other{border-style:dashed}
+    .vc-cos .chip.placed{border-color:var(--cyan);background:#0f2a30}
+    .vc-cos .chip.placed small i{font-style:normal;color:var(--yellow)}
+    .vc-grp{margin:2px 0 0;font-size:12px;color:var(--muted)}
+    .vc-grp b{color:var(--text,inherit);font-weight:600}
+    .vc-grp .pin{color:var(--cyan);margin-right:4px}
     .vc-facts{margin-top:10px;font-size:13px}
     .vc-facts summary{cursor:pointer;color:var(--brand);font-size:12px}
     .vc-facts ul{margin:6px 0 0;padding-left:18px;color:var(--muted);line-height:1.5}
@@ -2012,6 +2017,12 @@
       return `<p class="vc-press lv-${esc(p.level)}"><span class="tag">${esc(rvSub(l))}</span>${esc(p.t)}${s}</p>`;
     }
 
+    // "Placeret i netop dette led": NDI-linsens plads i værdikæden pr. selskab (ikke hele temaet)
+    function placedChips(l, all) {
+      const list = all ? l.placed : l.placed.slice(0, SHOW);
+      return list.map(c => `<a class="chip placed" href="selskab.html?isin=${encodeURIComponent(c.isin)}&fund=${fund}">${esc(coName(c))} <small>${pct(c.w)}${c.partial ? ' · <i>delvist</i>' : ''}</small></a>`).join('');
+    }
+
     function companyChips(l, ch, all) {
       const own = chainTheme[ch.id];
       const list = all ? l.companies : l.companies.slice(0, SHOW);
@@ -2065,8 +2076,17 @@
         const kindTag = l.kind === 'baggrund'
           ? '<span class="vc-kind" title="Generel baggrundsviden, ikke Mads\' synspunkt">baggrund</span>'
           : '<span class="vc-kind ndi" title="Mads\' eller bogens synspunkt med kilde">NDI</span>';
+        // Kun i AI- og robotkæden deler flere led ét temas liste; energi og rum er allerede valgt efter forretning
+        const np = (id === 'ai-compute' || id === 'physical') ? (l.placed?.length || 0) : 0;
+        const twins = ch.links.filter(x => x !== l && x.count && (x.themes || []).join() === (l.themes || []).join()).map(x => x.short || x.label);
+        const placedHtml = np
+          ? `<p class="vc-grp"><span class="pin" aria-hidden="true">◉</span><b>Placeret i netop dette led</b> · ${np} selskaber ifølge NDI-linsen</p><div class="chips" data-grp="placed">${placedChips(l, false)}</div>${np > SHOW ? `<button type="button" class="vc-more" data-more="placed">Vis alle ${np} →</button>` : ''}`
+          : '';
+        const themeHead = np || twins.length
+          ? `<p class="vc-grp"><b>Hele temaet${l.themes?.length ? ' ' + esc(l.themes.map(daTheme).join(' + ')) : ''}</b> · ${l.count} selskaber${twins.length ? `, deles med ${esc(twins.join(', '))}` : ''}</p>`
+          : '';
         const cosHtml = l.count
-          ? `<div class="chips">${companyChips(l, ch, false)}</div>${l.count > SHOW ? `<button type="button" class="vc-more" data-more="1">Vis alle ${l.count} →</button>` : ''}`
+          ? `${placedHtml}${themeHead}<div class="chips" data-grp="theme">${companyChips(l, ch, false)}</div>${l.count > SHOW ? `<button type="button" class="vc-more" data-more="theme">Vis alle ${l.count} →</button>` : ''}${np ? `<p class="src" style="margin-top:6px">${esc(pack.placedNote || '')}</p>` : ''}`
           : '<p class="src">Ingen selskaber i den forsinkede beholdning er tilordnet dette led.</p>';
         el.innerHTML = `
           <div class="vc-ico" aria-hidden="true">${l.icon || '◆'}</div>
@@ -2078,7 +2098,7 @@
             ${l.shift ? `<div class="vc-sec"><h4>Hvad ændrer sig</h4><p>${esc(l.shift)}</p></div>` : ''}
             ${id === 'energy' ? whereLine(l) : ''}
             ${id === 'space' ? spaceHub(l) : findHub(l, ch)}
-            <div class="vc-num"><b>${l.count}</b> selskaber · ca. <b>${pct(l.weightSum)}</b> af PMINDI pr. ${fmtDate(pack.asOf)}</div>
+            <div class="vc-num">${np ? `<b>${np}</b> placeret i leddet · ` : ''}<b>${l.count}</b> selskaber i ${twins.length ? 'hele temaet' : 'leddet'} · ca. <b>${pct(l.weightSum)}</b> af PMINDI pr. ${fmtDate(pack.asOf)}</div>
             <div class="vc-bar" aria-hidden="true"><i style="width:${Math.min(100, (l.weightSum / max) * 100).toFixed(1)}%"></i></div>
             <div class="vc-hint">${l.count ? 'Klik for at se selskaberne' : ''}</div>
             <div class="vc-cos">${cosHtml}${factsBox(l)}${see}</div>
@@ -2094,7 +2114,7 @@
           const more = e.target.closest('[data-more]');
           if (more) {
             e.stopPropagation();
-            el.querySelector('.chips').innerHTML = companyChips(l, ch, true);
+            el.querySelector(`.chips[data-grp="${more.dataset.more}"]`).innerHTML = more.dataset.more === 'placed' ? placedChips(l, true) : companyChips(l, ch, true);
             more.remove();
             return;
           }
