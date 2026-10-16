@@ -114,10 +114,24 @@ article.x-card.is-quote .x-foot{margin-top:10px}
   .x-tools{position:sticky;top:64px;z-index:25;padding:8px 0 10px;background:#050a0ff2;backdrop-filter:blur(12px);border-bottom:1px solid #16262c}
 }
 .x-filters{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+.x-filters .control{display:inline-flex;flex-direction:column;align-items:stretch;justify-content:center;gap:3px;padding-top:4px;padding-bottom:5px;line-height:1.15}
+.x-filters .x-flab{display:flex;align-items:baseline}
 .x-filters .x-count{margin-left:6px;color:var(--faint);font-weight:500;font-variant-numeric:tabular-nums}
 .x-filters .control.is-zero{opacity:.5}
 .x-filters .control[aria-pressed="true"]{background:#203e47;color:#fff;border-color:#9ecfd6;box-shadow:inset 0 -2px 0 #f5ee9e;font-weight:600}
-.x-live{font-size:13px;color:var(--muted);margin:8px 0 0;font-variant-numeric:tabular-nums}
+.x-meter{display:block;height:3px;width:52px;max-width:100%;border-radius:99px;background:#0b171d;overflow:hidden;border:1px solid #24383f}
+.x-meter i{display:block;height:100%;background:#617d84;border-radius:99px}
+.x-filters .control[aria-pressed="true"] .x-meter i{background:#f5ee9e}
+.x-filters .control.is-zero .x-meter i{width:0 !important}
+.x-empty-meter{display:flex;align-items:center;justify-content:center;gap:10px;margin:12px 0 0;color:var(--faint);font-size:13px;font-variant-numeric:tabular-nums}
+.x-empty-meter .x-meter{width:120px}
+.x-says-h{flex-wrap:wrap}
+.x-says-tools{display:flex;align-items:flex-end;gap:10px;margin-left:auto}
+.x-feed-aside{display:flex;flex-direction:column;align-items:flex-end;min-width:68px;padding:6px 10px 5px;border:1px dashed #f5ee9e66;border-radius:12px;background:#f5ee9e0d}
+.x-feed-aside b{font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-size:28px;font-weight:500;line-height:.85;letter-spacing:-.6px;color:#f5ee9e;font-variant-numeric:tabular-nums}
+.x-feed-aside span{margin-top:4px;font-size:10px;letter-spacing:.6px;text-transform:uppercase;color:var(--muted)}
+.x-feed-aside small{font-size:10px;letter-spacing:.4px;text-transform:uppercase;color:var(--faint)}
+.x-live{font-size:13px;color:var(--muted);margin:2px 0 0;font-variant-numeric:tabular-nums}
 .x-score-bar{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:flex-start;gap:10px 18px;margin:2px 0 10px;min-width:0;padding-left:12px;box-shadow:inset 3px 0 0 #f5ee9e}
 .x-score{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:flex-end;min-width:0}
 .x-score-n{min-width:44px}
@@ -237,6 +251,9 @@ body.x-focused .x-label{margin:0 0 8px}
   article.x-card.is-quote .x-foot,article.x-card.is-slip .x-foot{margin-top:8px}
   .x-prov .x-score-n{min-width:54px;padding:5px 8px 4px}
   .x-prov .x-score-n b{font-size:22px}
+  .x-feed-aside{min-width:56px;padding:4px 8px 4px}
+  .x-feed-aside b{font-size:22px}
+  .x-meter{width:40px}
 }
 @media(prefers-reduced-motion:reduce){
   .x-door{transition:none}
@@ -937,7 +954,9 @@ function feedHref({ tickers = [], themes = [] } = {}) {
  * Posts from accounts NDI follows that the feed would show and this panel will not.
  * No account names and no post text. House-only panels stay house-only.
  */
-function feedContrastSentence(pack, { tickers = [], themes = [] } = {}) {
+/** Followed and other accounts the feed would show and this panel will not. */
+function feedContrast(pack, { tickers = [], themes = [] } = {}) {
+  const none = { n: 0, sentence: '' };
   const href = feedHref({ tickers, themes });
   let q = '';
   let f = '';
@@ -946,9 +965,9 @@ function feedContrastSentence(pack, { tickers = [], themes = [] } = {}) {
     q = u.searchParams.get('q') || '';
     f = u.searchParams.get('f') || '';
   } catch {
-    return '';
+    return none;
   }
-  if (!q && !f) return '';
+  if (!q && !f) return none;
   const posts = (pack?.posts || []).filter((p) => (
     !revealsHoldings(p.text)
     && !isHouse(p)
@@ -956,19 +975,28 @@ function feedContrastSentence(pack, { tickers = [], themes = [] } = {}) {
     && postMatchesQuery(p, q)
   ));
   const use = q ? posts.filter((p) => feedHitKind(p, { q, f: f || 'all' }) === 'direct') : posts;
-  if (!use.length) return '';
+  if (!use.length) return none;
   const split = xWhoSplit(use);
   const n = split.curated + split.other;
-  if (!n) return '';
+  if (!n) return none;
   let from;
   if (split.other && split.curated) from = `${n} opslag i feedet fra andre konti`;
   else if (split.other) from = n === 1 ? '1 opslag i feedet fra en anden konto' : `${n} opslag i feedet fra andre konti`;
   else from = n === 1 ? '1 opslag i feedet fra en konto, som NDI følger' : `${n} opslag i feedet fra konti, som NDI følger`;
   const name = singleCompanyName(tickers) || singleCompanyName([q]);
-  if (name) return `${from}, nævner ${name}. De vises ikke her.`;
-  const theme = f && f !== 'all' ? (THEME_DA[f] || f) : '';
-  if (theme) return `${from}, ligger på temaet ${theme}. De vises ikke her.`;
-  return `${from}. De vises ikke her.`;
+  let sentence;
+  if (name) sentence = `${from}, nævner ${name}. De vises ikke her.`;
+  else {
+    const theme = f && f !== 'all' ? (THEME_DA[f] || f) : '';
+    sentence = theme ? `${from}, ligger på temaet ${theme}. De vises ikke her.` : `${from}. De vises ikke her.`;
+  }
+  return { n, sentence };
+}
+
+function xFeedAsideHtml(n) {
+  const v = Number(n) || 0;
+  if (!v) return '';
+  return `<div class="x-feed-aside"><b>${v}</b><span>i feedet</span><small>ikke her</small></div>`;
 }
 
 /**
@@ -985,7 +1013,8 @@ export function xSaysPanel(pack, { tickers = [], themes = [], limit = 4, title =
   const shown = view.direct.length + view.theme.length;
   const snap = esc(fmtXDate(pack.snapshotAt) || String(pack.snapshotAt || '').slice(0, 10));
   const more = feedHref({ tickers, themes });
-  const contrast = feedContrastSentence(pack, { tickers, themes });
+  const contrast = feedContrast(pack, { tickers, themes });
+  const aside = xFeedAsideHtml(contrast.n);
   const directAll = ranked.filter((h) => h.score >= 2).length;
   const themeAll = ranked.filter((h) => h.score < 2).length;
   const themeLeft = themeAll - view.theme.length;
@@ -1000,8 +1029,8 @@ export function xSaysPanel(pack, { tickers = [], themes = [], limit = 4, title =
   if (!shown) {
     if (!showEmpty) return '';
     return `<section class="panel x-says" id="hvad-siger-x">
-  <div class="x-says-h"><h2 class="panel-h">${esc(title)}</h2>${xScoreHtml([{ n: 0, label: 'direkte', mod: 'is-direct' }, { n: 0, label: 'tema', mod: 'is-theme' }])}</div>
-  <p class="band">${esc(X_LABEL)}. Snapshot ${snap}.${contrast ? ` ${esc(contrast)}` : ''}</p>
+  <div class="x-says-h"><h2 class="panel-h">${esc(title)}</h2><div class="x-says-tools">${xScoreHtml([{ n: 0, label: 'direkte', mod: 'is-direct' }, { n: 0, label: 'tema', mod: 'is-theme' }])}${aside}</div></div>
+  <p class="band">${esc(X_LABEL)}. Snapshot ${snap}.${contrast.sentence ? ` ${esc(contrast.sentence)}` : ''}</p>
   <div class="x-empty">
     <p class="x-zero" aria-hidden="true">0</p>
     <p class="k">Ingen opslag i udsnittet</p>
@@ -1093,9 +1122,9 @@ export function xSaysPanel(pack, { tickers = [], themes = [], limit = 4, title =
     ? '<p class="x-miss">Kun direkte træf i dette udsnit. Opslag, der bare deler tema, er udeladt, så navnet står først.</p>'
     : '';
   return `<section class="panel x-says" id="hvad-siger-x">
-  <div class="x-says-h"><h2 class="panel-h">${esc(title)}</h2>${score}</div>
+  <div class="x-says-h"><h2 class="panel-h">${esc(title)}</h2><div class="x-says-tools">${score}${aside}</div></div>
   <p class="sr-only">${esc(nLabel)}</p>
-  <p class="band">Kun NDI-konti i dette panel. I feedet: ${esc(X_LABEL)}. Snapshot ${snap}.${contrast ? ` ${esc(contrast)}` : ''}</p>
+  <p class="band">Kun NDI-konti i dette panel. I feedet: ${esc(X_LABEL)}. Snapshot ${snap}.${contrast.sentence ? ` ${esc(contrast.sentence)}` : ''}</p>
   ${stage}
   ${belowLane}
   ${miss}

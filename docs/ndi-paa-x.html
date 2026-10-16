@@ -155,12 +155,18 @@
  bar.innerHTML = X_FILTERS.map((f) => {
  const n = posts.filter((p) => postInFilter(p, f.id) && postWho(p, state.who) && postMatchesQuery(p, state.q)).length;
  const on = state.f === f.id;
- return `<button type="button" class="control${on ? ' active' : ''}${n === 0 ? ' is-zero' : ''}" data-f="${f.id}" aria-pressed="${on}">${f.label}<span class="x-count">${n}</span></button>`;
+ const share = posts.length ? Math.round((n / posts.length) * 1000) / 10 : 0;
+ return `<button type="button" class="control${on ? ' active' : ''}${n === 0 ? ' is-zero' : ''}" data-f="${f.id}" aria-pressed="${on}"><span class="x-flab">${f.label}<span class="x-count">${n}</span></span><span class="x-meter" aria-hidden="true"><i style="width:${share}%"></i></span></button>`;
  }).join('');
+ const whoLabel = { all: 'Alle afsendere', house: 'NDI-konti', curated: 'Konti NDI følger' };
  document.querySelectorAll('[data-who]').forEach((b) => {
- const on = b.getAttribute('data-who') === state.who;
+ const id = b.getAttribute('data-who');
+ const on = id === state.who;
  b.classList.toggle('active', on);
  b.setAttribute('aria-pressed', on ? 'true' : 'false');
+ const n = posts.filter((p) => postWho(p, id) && postInFilter(p, state.f) && postMatchesQuery(p, state.q)).length;
+ const share = posts.length ? Math.round((n / posts.length) * 1000) / 10 : 0;
+ b.innerHTML = `<span class="x-flab">${whoLabel[id] || id}<span class="x-count">${n}</span></span><span class="x-meter" aria-hidden="true"><i style="width:${share}%"></i></span>`;
  });
  const qn = state.q.trim().toLowerCase();
  const onSoft = state.f === 'all' && ['softbank', '9984.t', '9984', 'sftby'].includes(qn);
@@ -272,6 +278,7 @@
  <p class="x-zero" aria-hidden="true">0</p>
  <p class="k">Ingen opslag i filteret</p>
  <p>Ingen af de ${posts.length} opslag i snapshotet rammer det valgte.${pickedLine} Prøv et spor, eller nulstil.</p>
+ <p class="x-empty-meter"><span class="x-meter" aria-hidden="true"><i style="width:0%"></i></span><span>0 af ${posts.length}</span></p>
  <p>Tasterne 1, 2 og 3 åbner SoftBank, Nvidia og Chips / AI.</p>
  <p>${esc(X_LABEL)}.</p>
  <div class="x-suggest">

@@ -9,3 +9,4 @@ Per-lane log (not merged into notes/STATUS.md).
 - Fra Grok lane-X · 04:43 · KID ved 1 år lyser «samme beløb», når begge er 80 kr. X-datoer viser 1 af N. SoftBank-panelet åbner på NDI-opslaget og siger, at navnet ikke er nævnt.
 - Fra Grok lane-X · 05:03 · X-sporet viser hvem der har skrevet opslagene: SoftBank er 0 NDI og 3 fulgte konti, Nvidia er 1 og 5. Panelet siger, at de fulgte opslag bliver i feedet. KID ved 1 år lyser samme 80 kr. på fakta og omkostninger.
 - Fra Grok lane-X · 05:20 · X-sporet samler tallet, hvem og sætningen. Fakta viser 49 dage ved siden af −35,82 %. KID ved 1 år gør de to 80 kr. lige store.
+- Fra Grok lane-X · 05:39 · KID og postsatsen har søjler på samme skala (60 kr. kort, 80 kr. lige lange). X-filtre viser andel. Panelet tæller opslag i feedet, som ikke vises her.
