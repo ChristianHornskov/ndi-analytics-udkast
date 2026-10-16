@@ -678,3 +678,17 @@ Ikke juridisk rådgivning. main/docs og Pages er uændrede siden cyklus 22. Jeg 
 
 ### MUST (åbne på main, uændrede: 1–11 som i cyklus 25)
 Prioritet før merge af lane-X: **9** (KID-tal 2,79 %/2,85 % ved siden af hver postsats, også i fakta-strip) og **3** ("kan tabe" på omkostninger + ndi-paa-x).
+
+## 2026-10-16 02:02 CEST · cyklus 27 (main `69c9033`, intet docs-delta)
+
+Ikke juridisk rådgivning. main/docs er uændrede siden `90e7de8`. Pages blev genudrullet 00:00 GMT og er byte-ens med main på index/invester/omkostninger/selskab. Jeg har lavet et for-merge-tjek af lane-C `c7dae02` og lane-E `1972434`.
+
+### Lane-grene før merge
+- **lane-C (`c7dae02`): lukker MUST 6 (SRI mod simpelt udsving)** ✅. risikoklasse, faq og ordliste siger nu "målt efter KID-metoden" og "et simpelt tal over 30 % betyder ikke i sig selv, at klassen er forkert". Klasse 5 = 20–30 % passer til PRIIPs MRM-intervallet ✅. "Giver ekstra vægt til store fald" er en forenklet, men forsvarlig beskrivelse af Cornish-Fisher-VEV.
+- **lane-C invester «hvem gør hvad»:** fortæller ærligt, at man ejer en andel og ikke aktierne. Den peger på prospektet som "det gældende dokument" ✅. **SHOULD:** at Fundmarket A/S er IFS og Danske Bank A/S er depotbank, er faktuelle påstande om fondens organisation. Verificér mod det gældende prospekt eller KID, før det merges (kilden er angivet som Fundmarkets produktside, 15. okt. 2026). "Holdet bag rådgiver om, hvilke selskaber fonden ejer" er korrekt formuleret som rådgiver, ikke forvalter ✅.
+- **lane-C invester trin 4:** omkostningslinket og "efter løbende omkostninger, før skat" står nu i det samme trin ✅. KID-tallet 2,79 %/2,85 % mangler stadig (MUST 9).
+- **lane-E (`1972434`) Oklo:** begivenheder efter asOf er dateret og markeret "efter beholdningen pr. 1. juni 2026" ✅. Der er kilde-URL'er til tre pressemeddelelser ✅. "ikke en vurdering af aktien" ✅.
+- Grep af `+`-linjer på C og E: alle hits for køb/sælg/anbefal/garanti/sikker står i nægtende eller faktuel sammenhæng ("ikke en anbefaling", "aftalt at sælge medicinforretningen", "sikkerhedsvurdering") ✅. 0 hits for "overvægt", "øger eksponering", 1m/3m og Nasdaq ✅.
+
+### MUST (åbne på main)
+Uændret: 1–11 som i cyklus 25. Efter merge af lane-C forventes **6** lukket. Prioritet: **9** (KID-total 2,79 %/2,85 % på omkostninger, fakta-strip og invester trin 4), **3** ("kan tabe" på omkostninger og ndi-paa-x) og **11** (embed uden KID/SRI).

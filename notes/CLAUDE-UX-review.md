@@ -602,3 +602,24 @@ main/docs og Pages er uændrede (Last-Modified 23:49 GMT). Live-regression ved 3
 ### Persona-linser
 - **Privat:** lane-C giver nu svar på "hvorfor to klasser?" og "hvorfor koster udsving?" ✅. Omkostninger svarer stadig ikke på "hvad koster det om året?".
 - **Familiekontor:** "Ens i begge"-strippen er nyttig til at sammenligne klasserne, men uden KID-totalen kan den ikke bruges i DD.
+
+## 2026-10-16 02:02 CEST · cyklus 27 (main `69c9033`, intet docs-delta)
+
+main/docs er uændrede siden `90e7de8`: `69c9033` indeholder kun notes. Pages blev genudrullet kl. 00:00 GMT, og index, invester, omkostninger og selskab er byte-ens med main ✅. Bemærk: `fonden.html` findes ikke (live 404). "Fonden" i opgavelisten svarer til `fakta.html`. Persona-, krav- og idéfilerne er uændrede. Fokus er de nye lane-commits: C `c7dae02` og E `1972434`.
+
+### MUST
+- **Invester tre "4."-trin: lukkes af lane-C `c7dae02`** ✅. Ét trin "4. Køb og omkostninger" samler omkostningslinket, kurtage og "efter løbende omkostninger, før skat". Merge, så er det løst på main.
+- Uændret på main: selskab "AI-udkast" over et tomt felt. Omkostninger mangler KID-tallet 2,79 %/2,85 %.
+
+### SHOULD (lane-grene)
+- **lane-C invester «Hvor ligger pengene, og hvem gør hvad?»** (depot → forening → Fundmarket → Danske Bank, NDIIR som rådgiver). Det er præcis det, persona privat og familiekontor spørger om ("hvem passer på mine penge?") ✅. Mobil: `.flow` går til 1 kolonne ≤720 px, og pilen skifter til ↓ ✅. To små ting: (a) "Opbevarer fondens værdipapirer, adskilt fra forvalterens egne penge" bør hedde "adskilt fra forvalterens og bankens egne aktiver". (b) "kl n" i kildelinjen ligner en intern forkortelse. Skriv "andelsklassen kl. n" eller "PMINDIAKK/PMINDI".
+- **lane-C SRI-tekster** (risikoklasse, faq, ordliste "Udsving efter KID-metoden"): nu skelnes der klart mellem simpelt udsving og KID-udsving ✅. Ordlisten er på 119 begreber. "Afkast og risiko" har 28 begreber og er lang at scrolle ved 375, men den er foldbar ✅.
+- **lane-E Oklo:** "ikke salg af isotoper" står 4 gange i én selskabsboks (summary, watch, products, role), og ingen læser har spurgt om isotoper. Det virker defensivt og forvirrende for persona privat. Sig det én gang eller fjern det. "Det er efter beholdningen" er uklart. Skriv "Det skete efter beholdningsdatoen 1. juni 2026".
+
+### Nice
+- lane-X `callCountNote` (log-støj i en offentlig datafil) er uændret.
+
+### Persona-linser
+- **Privat:** lane-C svarer nu på "hvor ligger mine penge?" og "hvorfor er udsvinget højere end klassen?" ✅. "Hvad koster det mig om året?" er stadig ubesvaret på main.
+- **Familiekontor:** flow-diagrammet med forening, IFS og depotbank plus link til fakta#organisation dækker de første DD-spørgsmål ✅. KID-omkostningstotalen mangler stadig.
+- **Visuel variation:** `.flow` er en ny, rolig form (fire trin med pile). Den giver ingen træthed.
