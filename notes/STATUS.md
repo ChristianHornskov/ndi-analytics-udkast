@@ -909,3 +909,13 @@ Det er batterier til nettet, ikke et kraftværk. Teksten siger ikke, at selskabe
 Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Smartstack står. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `13554f0` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 02:14 CEST. Plug skrev, at anlægget i St. Gabriel har lavet flydende brint siden 23. april 2025. Ikke færdig.**
+
+Meddelelsen er fra 22. april 2026. Begge datoer ligger før beholdningen. Det er et fælles anlæg med Olin, ikke et elselskab. Teksten siger ikke, at hvert anlæg kører. Ton, effektivitet og kundenavne er ikke taget med. Ingen `reviewedAt`. Blurben under elproduktion og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. St. Gabriel står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `321370e` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

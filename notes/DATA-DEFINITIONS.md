@@ -95,7 +95,7 @@ Taseko skrev 9. oktober 2026, at Florence Copper er gået i kommerciel produktio
 
 SMR-leddet siger, at NuScale skriver, at et program sammen med TVA kan blive op til 6 GW, og at det er udvikling, ikke et værk i drift. Kilden er programsiden, som taler om at udvikle og idriftsætte kapacitet, ikke om et værk, der allerede kører. Ordene historic, largest og proven er ikke taget med. De øvrige SMR-navne er stadig ikke beskrevet som kommerciel drift.
 
-Konceptkortene i nyhedsarkivet er delt i korte afsnit, så grænserne kan læses hver for sig. Energikortet har toogtyve afsnit. Rumkortet har tretten. Indholdet er det samme som på kæden. Neutron-siden sagde 16. oktober 2026 stadig, at første flyvning ligger foran. Sætningen om, at Neutron ikke er fløjet, er ikke ændret.
+Konceptkortene i nyhedsarkivet er delt i korte afsnit, så grænserne kan læses hver for sig. Energikortet har treogtyve afsnit. Rumkortet har tretten. Indholdet er det samme som på kæden. Neutron-siden sagde 16. oktober 2026 stadig, at første flyvning ligger foran. Sætningen om, at Neutron ikke er fløjet, er ikke ændret.
 
 MP Materials skriver, at magneter fremstilles på anlægget Independence i Texas, og at udvindingen er ved Mountain Pass. Ordene om verdens rigeste forekomst og verdens stærkeste magnet er ikke taget med. Firefly gav 403 samme nat. Eclipse er derfor ikke omskrevet.
 
@@ -176,6 +176,8 @@ Voyager skrev 8. september 2026, at anlægget GOEX ved Camp Minden i Louisiana i
 QuantumScape nævner QSE-5 til køretøjer og QS PowerBlock til datacentre. Teksten beskriver ikke masseproduktion og ikke et lager i drift. Formuleringen om branchens første anodeløse celle er ikke taget med. Adressen i San Jose er ikke brugt som en fabrik i drift. Vægtene er uændrede.
 
 Fluence nævner platformen Smartstack. Det er et batterisystem til nettet, ikke et kraftværk. Teksten siger ikke, at selskabet selv laver cellerne. Ordene market-leading og et tal om 30 procent højere tæthed er ikke taget med. AI-compute-listen er ikke ændret. Vægtene er uændrede.
+
+Plug skrev 22. april 2026, at anlægget i St. Gabriel i Louisiana har lavet flydende brint siden 23. april 2025. Begge datoer ligger før beholdningen pr. 2026-06-01. Anlægget ejes sammen med Olin gennem Hidrogenii. Siden nævner også Woodbine i Georgia og Charleston i Tennessee. Det er brint, ikke et elselskab. Teksten siger ikke, at hvert anlæg kører. Ton pr. dag, trailer-tal, effektivitet og kundenavne er ikke taget med. Ordet leading er ikke taget med. Vægtene er uændrede.
 
 ## År til dato på periodesiden
 

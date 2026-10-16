@@ -1815,20 +1815,24 @@
   "US72919P2020": {
    "name": "Plug Power",
    "theme": "andet",
-   "summary": "Leverer brændselsceller og udstyr til brint. Snapshottet har selskabet under Andet, med et temaforslag.",
-   "watch": "Om brintanlæggene kører, og om kunderne fortsat bestiller udstyret.",
+   "summary": "Leverer brændselsceller og udstyr til brint. Selskabet skrev 22. april 2026, at anlægget i St. Gabriel i Louisiana har lavet flydende brint siden 23. april 2025. Det er et fælles anlæg med Olin, ikke et elselskab.",
+   "watch": "Drift på anlægget i St. Gabriel. Teksten siger ikke, at hvert anlæg kører.",
    "source": "https://www.plugpower.com/",
-   "products": "Brændselsceller, elektrolyse og brintudstyr.",
+   "products": "Brændselsceller, elektrolyse og flydende brint. St. Gabriel er et fælles anlæg med Olin.",
    "customers": "Industri og transport, der bruger brint.",
-   "role": "Brint og brændselsceller i energikæden.",
+   "role": "Brintanlæg i St. Gabriel sammen med Olin. Ikke et elselskab. Teksten siger ikke, at hvert anlæg kører.",
    "narrative": [
-    "Plug Power leverer brændselsceller og udstyr til brint.",
-    "Snapshottet har selskabet under Andet, med et temaforslag. Teksten beskriver udstyret. Den siger ikke, at hvert anlæg kører."
+    "Plug skrev 22. april 2026, at selskabet og Olin gennem det fælles selskab Hidrogenii har et anlæg til flydende brint i St. Gabriel i Louisiana. Siden skriver, at kommerciel drift begyndte 23. april 2025, da den første tankvogn blev fyldt. Begge datoer ligger før beholdningen pr. 1. juni 2026.",
+    "Siden nævner også anlæg i Woodbine i Georgia og Charleston i Tennessee. Det er brint, ikke et elselskab. Teksten siger ikke, at hvert anlæg kører. Snapshottet har selskabet under Andet, med et temaforslag."
    ],
    "narrativeSources": [
     {
      "label": "Selskabets side",
      "url": "https://www.plugpower.com/"
+    },
+    {
+     "label": "St. Gabriel, 22. april 2026",
+     "url": "https://www.plugpower.com/one-year-strong-plug-and-olins-louisiana-hydrogen-plant/"
     }
    ]
   },
