@@ -51,7 +51,7 @@
  const maxDiff = Math.max(...keys.map(diffOf));
  const gapLabel = n1(maxDiff);
  const gapNames = keys.filter((k) => n1(diffOf(k)) === gapLabel).map((k) => daTheme(k));
- const bar = (v, cls, label) => `<span class="cmp-line ${cls}"><span class="sr-only">${label}: </span><span class="cmp-bar" aria-hidden="true"><span style="width:${Math.round((v / max) * 100)}%"></span></span><span class="cmp-v">${n1(v)} %</span></span>`;
+ const bar = (v, cls, label) => `<span class="cmp-line ${cls}"><span class="sr-only">${label}: </span><span class="cmp-bar" aria-hidden="true"><span style="width:${((v / max) * 100).toFixed(2)}%"></span></span><span class="cmp-v">${n1(v)} %</span></span>`;
  const themeRows = keys.map((k) => `<li${n1(diffOf(k)) === gapLabel ? ' class="cmp-gap"' : ''}><span class="cmp-name">${esc(daTheme(k))}</span>
  <span class="cmp-pair">${bar(ta[k], 'a', 'PMINDI')}${bar(tb[k], 'b', 'PMINDIAKK')}</span></li>`).join('');
  const navA = lastNav(a.data), navB = lastNav(b.data);

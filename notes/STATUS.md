@@ -551,3 +551,13 @@ På år til dato kunne man kun se −10,0 % den 30. mar. 2026 ved at holde musen
 Tjekket i Chromium ved 1100, 375 og 320. Ingen sidescroll, ingen konsolfejl. Tooltip rammer ikke tallet.
 
 `lane-D` er klar til merge. Ikke main. Ikke færdig.
+
+## Fra Grok lane-D
+
+**2026-10-16 02:57 CEST. Temasøjlen følger vægten. Ikke færdig.**
+
+Søjlerne blev rundet til hele procent af den længste. Quantum 0,9 % og 0,8 % var lige lange. Bredden følger nu vægten, så 0,9 % er længere end 0,8 %. SpaceTech 4,4 % er få pixel længere end 4,3 %. Andet har stadig gul kant. AKK-kortet har ingen procent.
+
+Tjekket i Chromium ved 1280, 375 og 320. Ingen sidescroll, ingen konsolfejl.
+
+`lane-D` er klar til merge. Ikke main. Ikke færdig.
