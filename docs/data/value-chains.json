@@ -1345,7 +1345,8 @@
             "Tigo Energy: Tigo skriver, at selskabet er stiftet i 2007, og at det laver Flex MLPE, optimizers, invertere og batterier til boliger. Siden skriver, at det stadig ligger i Silicon Valley. Det er udstyr, ikke et kraftværk.",
             "Sunrun: Sunrun skriver, at selskabet er dannet i 2007, og at det leverer solservice til boliger. Over 1 million kunder er afrundet og gælder pr. august 2024, før beholdningen. Servicen er solgt i 22 stater, Washington D.C. og Puerto Rico. Aftalerne er skrevet som 20 eller 25 år. Det er service hos kunden, ikke et kraftværk.",
             "Enphase Energy: Enphase skriver, at selskabet er stiftet i 2006 i Californien, og at det laver mikroinvertere. Kontraktproduktion i USA begyndte i 2023. Produktionssiden skriver, at der sendes fra kontraktfabrikker i South Carolina og Texas, og at Texas også har linjer til IQ-batterier. Kapaciteten pr. anlæg er 5 millioner mikroinvertere i kvartalet. Batterikapaciteten i USA er 65 MWh i kvartalet. Det er kapacitet, ikke et målt år. Tidslinjen siger mere end 73 millioner mikroinvertere i 2024 og mere end 4 millioner systemer i 2025. Begge ligger før beholdningen. Om-siden skriver omkring 89,4 millioner mikroinvertere og omkring 5,3 millioner systemer uden dato. Siden er læst 16. oktober 2026, så de to tal er ikke beholdningens tal. Det er udstyr, ikke et kraftværk."
-          ]
+          ],
+          "shift": "I USA får datacentre i stigende grad lov til at bygge deres egen strøm (BLOG 30. marts 2026). NDI har skrevet om energiudbygning via LNG, olie, atomkraft og fission (BLOG 1. september 2025)."
         },
         {
           "id": "smr",
@@ -1646,7 +1647,8 @@
             "Microvast: Microvast skriver, at det laver celler, moduler, pakker og lagringssystemer, og at det selv laver katode, anode og elektrolyt. Kemierne på siden er NMC, LFP og LTO. Selskabet skriver, at det har to produktionssteder, og at de er ISO 14001. Byerne er ikke navngivet. Siden skriver 20 års driftserfaring. Det er ikke et stiftelsesår. Drift i USA, Kina og Tyskland er ikke de to steder. Siden om fremtidig lagring til nettet er skrevet som næste generation, ikke som et lager i drift.",
             "NeoVolta: NeoVolta skriver, at selskabet er stiftet i 2018 i Poway i Californien af Brent Willson, og at det laver batterier til boliger. NV14 er et system med hybrid-inverter og litium-jern-fosfat. Siden skriver 14 kWh, 14,3 kWh og 14,4 kWh. Tallene er ikke ens. FAQ skriver, at NV14 samles og testes i San Diego, og at nogle komponenter kommer fra udlandet. Om-siden viser Pendergrass i Georgia og overskriften 2 GWh i 2026. Det er ikke et målt år. En side indbyder til åbning af et nyt produktionsanlæg i Pendergrass den 17. september 2026. Datoen ligger efter beholdningen. Teksten siger ikke, at anlægget er i drift. Det er batterier hos kunden, ikke et lager, selskabet driver.",
             "Tesla: Tesla er med, fordi koncernen også laver batterilagring."
-          ]
+          ],
+          "shift": "NDI har skrevet om ny amerikansk told på kinesiske batterikomponenter i forbindelse med batteriværdikæden (BLOG 21. juli 2025)."
         },
         {
           "id": "materials",
