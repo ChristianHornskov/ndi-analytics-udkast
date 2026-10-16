@@ -1478,3 +1478,25 @@ Main flyttede f6d6b4b → ffda4c8 (lane-B displayName i warrant-/risikolinjer + 
 
 ### Nice
 - Den rullende graf har ingen tooltip/readout pr. punkt og ingen `aria-live`. Den har kun et samlet readout. Ok for udkast.
+
+## 2026-10-16 07:57 CEST · cyklus 60 · freeze-tjek: embed dage over/under nul, drawdown år-/bund-hop, sammenlign klasse-spor (main `f2c83d5`, live = main pr. md5 på embed/chart.js, drawdown, sammenlign, vaerdikaeder)
+
+Nyt siden c59 (`41a61c6`): embed har "dage på/over vs. under nul" + "Første dag under nul" + en livsbjælke (hele perioden vs. ÅTD). Drawdown har "Første dag under 10 %", knapper for hvert år og "Siden bunden" (dage). Sammenlign har klasse-spor (PMINDI/PMINDIAKK). Værdikæder/nyhedsarkiv har flere faktarettelser og nye klik-kort ("Hvad er det ikke?", "Solaris på to led", "Tre led").
+
+Testet lokalt (git archive af main, port 8960) @375 og @1280: 0 pageerrors, 0 overflow, 0 nye klikmål under 24 px.
+- Embed PMINDI: "749 af 770 dage lå på eller over nul. Nul er første dag i perioden." Ved ÅTD: 161/197, og "Under nul" giver "36 af 197 … afstanden til periodens start, ikke et fald fra top". ✅ Forbeholdet er godt.
+- Embed/drawdown med fund=PMINDIAKK: ingen dag-split, livsbjælke, år-hop eller bund-hop. ✅ AKK-gaten holder.
+- Drawdown: "267 af 770 dage lå mindst 10 % under den løbende top", "2026: 135 dage …", "77 dage siden 29. jul. 2026. Serien er ikke tilbage på den top." Ærlig og neutral formulering. ✅
+- Sammenlign: AKK-sporet siger "eksisteret i 313 dage. Kursen vises efter 12 måneder, fra 5. dec. 2026". Ingen afkast. ✅
+
+### MUST
+- Ingen.
+
+### SHOULD
+1. NY · Embed-livsbjælken skriver ved ÅTD: "Delår, afventer Fundmarket-godkendelse." En privat investor kan læse det som om tallene ikke er godkendte eller er foreløbige. Det er uklart, hvad der afventer hvad. Skriv i stedet fx "Delårstal fra Fundmarket pr. <dato>", eller fjern sætningen.
+2. NY · Embed dag-split står som standard på "På eller over nul" (749/770 ≈ 97 %). Det er samme mønster som c59 S-R1, hvor den gunstige andel bliver vist først. Se compliance S-D1.
+3. Åbne fra c59: den rullende sektion bør sige "siden start", og stale-advarslen bør linke til Fundmarket. Åbne fra c58: S-K1/S-K2. Åbne fra c57: SHOULD 1–3.
+
+### Nice
+- Nyhedsarkiv "Hvad er det ikke?" (Kraftværk/Mine/Opsendelse/Kontor) er sjov, men et visuelt mønster mere at lære (variety-træthed). Overvej at samle klik-kortene på én side under ét fælles mønster.
+- Embed .day-track har aria-hidden. Tallene står i #day-say, men den har ingen aria-live, så skærmlæsere hører ikke skiftet over/under.

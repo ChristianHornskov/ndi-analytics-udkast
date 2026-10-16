@@ -1461,3 +1461,20 @@ Uændret.
 
 ### ÅOP
 Uændret.
+
+## 2026-10-16 07:57 CEST · cyklus 60 · freeze-tjek (main `f2c83d5`)
+
+Gennemgået: embed dag-split/livsbjælke, drawdown år-/bund-hop, sammenlign klasse-spor, nyhedsarkiv/værdikæder-rettelser.
+
+- PMINDIAKK: der vises ingen afkast eller dag-tællinger før 12 m (embed, drawdown, sammenlign siger kun "313 dage", og kursen vises fra 5. dec. 2026). ✅
+- Ingen nye 1m/3m. Ingen Nasdaq-benchmarkpåstand i de nye blokke. ✅
+- Nyhedsarkiv: "Det er selskabernes egne ord, ikke en anbefaling" og "Datoen ligger efter beholdningen" står eksplicit. ✅ Der er ingen køb/sælg/overvægt/eksponering/garanti-ord i diffen.
+- Footer (rådgivning/tab/historisk) findes på embed, drawdown og sammenlign. ✅
+
+### MUST
+- Ingen.
+
+### SHOULD
+- **S-D1 (NY)** · Embed viser som standard "749 af 770 dage lå på eller over nul". Ligesom S-R1 (97 % positive dage) fremhæver det en gunstig historisk statistik. Den afhænger desuden helt af startdatoen ("nul er første dag"). Forbeholdet står der, men standardvisningen er den gunstige side. Forslag: vis begge tal i samme sætning (fx "749 dage over, 21 under"), eller start på en neutral visning. Tilføj "Historisk udvikling er ingen garanti for fremtidigt afkast" tæt på tallet, fordi embeds kan blive vist uden for sitet.
+- **S-D2 (NY)** · "Delår, afventer Fundmarket-godkendelse" (embed ÅTD) kan læses som om tallene er ikke-godkendte eller foreløbige. Hvis ÅTD-tal ikke er endelige, bør de ikke vises i et embed. Hvis de er endelige, skal sætningen væk eller omformuleres.
+- Åbne: S-R1, S-K1/S-K2, S-N1–N3, M1 (status som i c59).
