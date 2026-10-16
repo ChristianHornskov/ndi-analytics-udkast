@@ -378,3 +378,5 @@ Profilens rollelinje for MDA Space er derefter også kortet til jordobservation 
 NextEra, Oklo, Terrestrial Energy, Taseko og Karman har en kort rollelinje på selskabssiden. NextEra er et elselskab med atomkraft, gas, sol og vind. Oklo udvikler små atomkraftanlæg. Terrestrial Energy er et reaktordesign. Taseko er en kobber- og molybdænmine. Karman laver dele til løfteraketter og missiler. Dominion, Groves, 390 MWe, Florence og Huntington Beach står i resumé eller forklaring. Ingen `reviewedAt`. AI-udkast-badgen bliver. Vægtene er uændrede.
 
 Redwire på satellitter har rollelinjen kameraer og solsensorer til Orion. Vægten er uændret 0,27. Summen på leddet er uændret 1,95. Meddelelsen 1. april 2026 siger, at udstyret skal med på Artemis II. Forsiden bruger det engelske ord launched uden dato. Den sætning er ikke meddelelsen fra 1. april. Ingen `reviewedAt`. AI-udkast-badgen bliver.
+
+Meddelelsen 11. august 2026 siger, at St-Bruno-de-Montarville ligger på den sydlige bred af Montreal. Teksten siger det sådan. Den siger ikke blot syd for byen.
