@@ -176,7 +176,7 @@
               "forslag": true
             }
           ],
-          "seeChain": null,
+          "seeChain": "energy",
           "shift": "I USA får datacentre i stigende grad lov til at bygge deres egen strøm (NDI-indlæg 30. marts 2026). NDI skriver, at ét års chipproduktion potentielt kan kræve strøm svarende til omkring to tredjedele af USA's installerede kapacitet (NDI-indlæg 10. august 2026).",
           "src": "NDI-indlæg 30. marts 2026 · 10. august 2026",
           "kind": "ndi",
@@ -194,6 +194,9 @@
               "sym": "CMI",
               "theme": "physical"
             }
+          ],
+          "facts": [
+            "Cummins: Cummins skrev 12. november 2025 i artiklen 'Powering Growth: Cummins' Solutions for Data Center Backup Power' om nødstrøm til datacentre, altså generatorer, der overtager, hvis elnettet svigter. Det er ikke et elselskab, men en leverandør af reservestrøm."
           ]
         },
         {
@@ -2400,7 +2403,8 @@
             }
           ],
           "facts": [
-            "Ambarella: Ambarella kalder sine chips 'AI Vision Processors For Edge Applications' og skriver, at de gør kameraer klogere ved at trække brugbare data ud af videoen. Analysen sker i selve apparatet og ikke i skyen. Robotter står på siden som et anvendelsesområde sammen med industri og overvågning. Siden er læst i oktober 2026."
+            "Ambarella: Ambarella kalder sine chips 'AI Vision Processors For Edge Applications' og skriver, at de gør kameraer klogere ved at trække brugbare data ud af videoen. Analysen sker i selve apparatet og ikke i skyen. Robotter står på siden som et anvendelsesområde sammen med industri og overvågning. Siden er læst i oktober 2026.",
+            "Texas Instruments: Texas Instruments har en side om humanoide robotter, altså robotter med menneskelig form. Selskabet skriver, at det leverer 'comprehensive system-level solutions' til dem, blandt andet chips, der styrer strømmen til robottens motorer. Siden er læst i oktober 2026."
           ]
         },
         {
@@ -4070,7 +4074,7 @@
               "w": 0.15,
               "sym": "ALM",
               "forslag": false,
-              "role": "Panasqueira i Portugal har tilladelse til 2052. Level 4 er ikke skrevet som drift."
+              "role": "Panasqueira i Portugal har tilladelse til 2052."
             },
             {
               "isin": "US02451V3096",
@@ -4172,7 +4176,7 @@
           "seeChain": null,
           "facts": [
             "Lynas Rare Earths: Lynas skriver, at Mt Weld ligger 35 km syd for Laverton, og at anlægget i Kalgoorlie laver et blandet karbonat af koncentratet. Selskabet skriver, at karbonatet skal viderebehandles i Gebeng i Malaysia. Det er mine og forarbejdning, ikke et kraftværk.",
-            "Almonty Industries: Almonty skriver, at Beralt ejer 100 % af wolframminen Panasqueira i Covilha i Portugal, med tilladelse til 2052. Level 4 er ikke skrevet som drift. Almonty skrev 23. september 2026, at Sangdong i Sydkorea har produceret wolfram for første gang siden 1993. Valtreixal er et projekt. Meddelelsen om Sangdong ligger efter beholdningen pr. 1. juni 2026.",
+            "Almonty Industries: Almonty skriver, at Beralt ejer 100 % af wolframminen Panasqueira i Covilha i Portugal, med tilladelse til 2052. Almonty skrev 23. september 2026, at Sangdong i Sydkorea har produceret wolfram for første gang siden 1993. Valtreixal er et projekt. Meddelelsen om Sangdong ligger efter beholdningen pr. 1. juni 2026.",
             "MP Materials: MP Materials skriver, at minen og forarbejdningen ligger i Mountain Pass i Californien, og at magnetfabrikken ligger i Fort Worth i Texas. Om-siden skriver, at Mountain Pass blev genstartet i 2017. Det er ikke et chipværk.",
             "Freeport-McMoRan: Freeport skriver, at Morenci i Arizona er et åbent brud i drift siden 1939, og at selskabet har 72 % af minen. Det er ikke et elselskab.",
             "Standard Lithium: Standard Lithium skriver, at fase 1 i South West Arkansas er sat til 22.500 ton lithiumkarbonat om året, med mål om kommerciel produktion i 2029. Selskabet har 55 %, og Equinor har 45 %. Det er et mål, ikke en stor mine.",
@@ -5133,7 +5137,7 @@
               "role": "Chorus er billeder af Jorden. De to nye satellitter er ikke sendt op. Ikke et datacenter."
             }
           ],
-          "seeChain": null,
+          "seeChain": "ai-compute",
           "facts": [
             "Voyager Technologies: Starlab er et projekt til en rumstation. Det er ikke en station i drift. Selskabet skrev 8. september 2026, at et anlæg i Louisiana igen producerer sortkrudt. Det er efter beholdningen og har ikke med rummet at gøre.",
             "MDA Space: Chorus er satellitter til billeder af Jorden, ikke et datacenter. De to nye er ikke sendt op.",
@@ -5230,6 +5234,11 @@
           "term": "Radarsatellit (SAR)",
           "t": "Jordobservation med radar i stedet for kamera. Radar ser gennem skyer og om natten.",
           "link": "satcom"
+        },
+        {
+          "term": "Køleflade (radiator)",
+          "t": "En stor plade, der sender varme ud i rummet som stråling. I vakuum er der ingen luft at blæse varmen væk med, så computere i kredsløb skal have køleflader. Jo mere regnekraft, jo større skal de være.",
+          "link": "space-compute"
         }
       ],
       "glossaryNote": "Ordbogen og højderne er generel baggrundsviden, ikke NDI's synspunkter. Højderne er omtrentlige.",
@@ -5452,7 +5461,7 @@
             "id": "gloss-wrap",
             "icon": "◇",
             "k": "Ordbog",
-            "t": "10 ord"
+            "t": "11 ord"
           },
           {
             "id": "sp-quiz",
@@ -5728,7 +5737,7 @@
             "to": "ai-compute:datacenter",
             "icon": "✦",
             "k": "Datacentre i kredsløb?",
-            "t": "Idéen er at sætte computerkraft i kredsløb, hvor der er sol hele tiden. Mads har gengivet Elon Musks påstand om SpaceX og compute i rummet. Det er Musks udsagn, ikke NDI's forventning og ikke en prognose.",
+            "t": "Idéen er at sætte computerkraft i kredsløb, hvor solen skinner næsten hele tiden. Mads har gengivet Elon Musks påstand om SpaceX og compute i rummet (NDI-indlæg 12. oktober 2026). Det er Musks udsagn, ikke NDI's forventning og ikke en prognose.",
             "kind": "ndi",
             "src": "NDI-indlæg 12. oktober 2026",
             "quote": true
@@ -5756,7 +5765,7 @@
           "icon": "⚛",
           "label": "Kvantecomputing",
           "blurb": "Computere, der bruger kvantefysik til at løse bestemte typer problemer langt hurtigere. Teknologien er stadig tidlig.",
-          "ndi": "Nævnt som accelererende segment med politisk medvind og store udsving i kurserne — og som eksempel på teknologier med usikre indtægter.",
+          "ndi": "Nævnt som et område i hurtig vækst med politisk opbakning, hvor kurserne svinger meget — og som eksempel på teknologier, hvor det er usikkert, hvornår der kommer indtægter.",
           "themes": [
             "quantum"
           ],
@@ -5797,7 +5806,7 @@
           "kind": "ndi",
           "src": "NDI-indlæg 2. juni 2025 · 7. juli 2025 · 21. juli 2025 · selskabernes egne sider (QCi, D-Wave, Rigetti, IonQ)",
           "brief": {
-            "does": "Bygger computere, der regner med qubits i stedet for almindelige bits.",
+            "does": "Bygger computere, der regner med qubits (kvantebits, der kan være 0 og 1 på samme tid) i stedet for almindelige bits.",
             "why": {
               "k": "Endnu tidligt",
               "t": "Feltet står på trin 2 og 3 af fem: maskinerne laver mange fejl, og man lejer tid på dem over skyen.",
@@ -6241,5 +6250,5 @@
   "countsNote": "Forsinket beholdning pr. 2026-06-01 (PMINDI, antal selskaber pr. tema): platforme 40, chips 53, software 51, andet / uklassificeret 67, optik & netværk 30, fysisk tech 24, compute 18, quantum 4, energi 15, energiressourcer 25, spacetech 18. Brug antal i brødtekst, ikke vægte, når du citerer oversigten.",
   "mappingNote": "Hvilke selskaber der står under hvert led, er et redaktionelt udkast ud fra selskabets forretning. Det er ikke NDI's officielle klassifikation og kan indeholde fejl. Et selskab kan stå i flere led. Vægte er fra den forsinkede beholdning pr. 1. juni 2026 (PMINDI).",
   "bridgesNote": "Broer viser led i andre kæder, som deler selskaber med denne kæde i den forsinkede beholdning pr. 1. juni 2026. Ét selskab kan have flere roller. Tilordningen er et redaktionelt udkast.",
-  "placedNote": "'Placeret i netop dette led' bygger på NDI-linsens felt 'Plads i værdikæden' for det enkelte selskab. Placeringen er pædagogisk og kvalitativ. Vægte er fra den forsinkede beholdning i PMINDI pr. 1. juni 2026 og er ikke en anbefaling."
+  "placedNote": "'Placeret i netop dette led' bygger på NDI's egen placering af hvert enkelt selskab i værdikæden. Placeringen er pædagogisk og kvalitativ. Vægte er fra den forsinkede beholdning i PMINDI pr. 1. juni 2026 og er ikke en anbefaling."
 }

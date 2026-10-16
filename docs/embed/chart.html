@@ -56,6 +56,14 @@
  </div>
  </div>
 
+ <div class="life-bit" id="life-bit" hidden>
+  <div class="life-bit-rail">
+   <button type="button" class="life-bit-all" data-period="all" aria-label="Hele perioden" aria-pressed="true"></button>
+   <button type="button" class="life-bit-ytd" id="life-bit-ytd" data-period="ytd" aria-label="År til dato" aria-pressed="false"></button>
+  </div>
+  <p class="life-bit-say" id="life-bit-say"></p>
+ </div>
+
  <div class="chart-legends">
  <div class="legend">
  <span id="legend-fund">PMINDI</span>
@@ -76,6 +84,15 @@
  <div class="stops" id="chart-stops" hidden>
   <div class="stops-track" id="stops-track" role="group" aria-label="Stop på kurven"></div>
   <p class="stops-say" id="stops-say"></p>
+ </div>
+ <div class="day-split" id="day-split" hidden>
+  <div class="day-track" aria-hidden="true"><i class="over" id="day-over-bar"></i><i class="under" id="day-under-bar"></i></div>
+  <div class="day-picks" role="group" aria-label="Dage på og under nul">
+   <button type="button" data-side="over" aria-pressed="true">På eller <span class="keep">over nul</span></button>
+   <button type="button" class="under" data-side="under" aria-pressed="false"><span class="keep">Under nul</span></button>
+  </div>
+  <p class="day-say" id="day-say"></p>
+  <p class="day-hop"><button type="button" id="first-below" hidden>Første dag <span class="keep">under nul</span></button></p>
  </div>
  <p class="chart-context" id="chart-context" hidden></p>
  <p class="chart-pointe" id="chart-pointe"></p>
