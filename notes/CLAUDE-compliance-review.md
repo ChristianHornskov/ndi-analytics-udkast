@@ -1478,3 +1478,21 @@ Gennemgået: embed dag-split/livsbjælke, drawdown år-/bund-hop, sammenlign kla
 - **S-D1 (NY)** · Embed viser som standard "749 af 770 dage lå på eller over nul". Ligesom S-R1 (97 % positive dage) fremhæver det en gunstig historisk statistik. Den afhænger desuden helt af startdatoen ("nul er første dag"). Forbeholdet står der, men standardvisningen er den gunstige side. Forslag: vis begge tal i samme sætning (fx "749 dage over, 21 under"), eller start på en neutral visning. Tilføj "Historisk udvikling er ingen garanti for fremtidigt afkast" tæt på tallet, fordi embeds kan blive vist uden for sitet.
 - **S-D2 (NY)** · "Delår, afventer Fundmarket-godkendelse" (embed ÅTD) kan læses som om tallene er ikke-godkendte eller foreløbige. Hvis ÅTD-tal ikke er endelige, bør de ikke vises i et embed. Hvis de er endelige, skal sætningen væk eller omformuleres.
 - Åbne: S-R1, S-K1/S-K2, S-N1–N3, M1 (status som i c59).
+
+## 2026-10-16 08:05 CEST · cyklus 61 · freeze-tjek (main `a81c67c`, live = main)
+
+Gennemgået: fakta/omkostninger Kryds (Venn), ndi-paa-x knude-filter (soft-nv / soft-chips / nv-chips), selskaber fund-sanering og nasdaq-compare.json-label.
+
+- Kryds: hver visning siger "ikke en kurs, ikke et afkast", "KID er ikke en postsats og ikke et ÅOP", og felterne stammer fra fund-facts.json. SRI 5 af 7 og horisont 5 år står ens i begge klasser. Der vises ingen afkast for PMINDIAKK. ✅
+- nasdaq-compare.json: "kursindeks (uden udbytte)" og "vises kun som sammenligning, ikke som fondens benchmark" står i datafilen. ✅ S-N1 (totalafkast vs. kursindeks) er stadig åben.
+- Ordsweep på 23 sider: hits er kun negationer ("ikke en anbefaling", "ikke en bevidst overvægt") og KID-ordet "anbefalet/anbefaler … investeringsperiode". ✅
+- Footer (rådgivning/tab/historisk) findes på alle testede sider. ✅
+
+### MUST (før go-live, uændret, men skærpet)
+- **M1** · Knude-filteret på ndi-paa-x (`?knot=soft-nv`) gør et tredjepartsopslag fra @BullTheoryio ("BREAKING … $250 BILLION …") til lead-kort med "DIREKTE TRÆF"-mærke. Forbeholdet "ikke NDI's holdning" står på siden. Men et kurateret, fremhævet hype-opslag om to beholdninger kan stadig opfattes som NDI-markedsføring (vildledning, MiFID art. 44). Fjern tredjepartskonti fra knuder og lead, eller drop knude-funktionen før go-live.
+
+### SHOULD
+- Åbne: S-D1, S-D2, S-R1, S-K1/S-K2, S-N1–N3 (som i c60).
+
+### ÅOP
+Uændret. Kryds-figuren siger eksplicit "ikke et ÅOP". ÅOP-tal mangler stadig.

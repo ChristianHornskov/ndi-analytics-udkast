@@ -1500,3 +1500,18 @@ Testet lokalt (git archive af main, port 8960) @375 og @1280: 0 pageerrors, 0 ov
 ### Nice
 - Nyhedsarkiv "Hvad er det ikke?" (Kraftværk/Mine/Opsendelse/Kontor) er sjov, men et visuelt mønster mere at lære (variety-træthed). Overvej at samle klik-kortene på én side under ét fælles mønster.
 - Embed .day-track har aria-hidden. Tallene står i #day-say, men den har ingen aria-live, så skærmlæsere hører ikke skiftet over/under.
+
+## 2026-10-16 08:05 CEST · cyklus 61 · freeze-tjek: Klasselinje "Kryds" (Venn), ndi-paa-x knude-filter, fund-sanering (main `a81c67c`, live = main pr. md5 på 6 filer)
+
+Testet lokalt på 21 sider @375 og @1280 (42 + 4 kombinationer). 0 vandret overflow. Footer findes på alle sider.
+
+### MUST
+- Ingen.
+
+### SHOULD
+- **U-V1** · Kryds/Venn på fakta og omkostninger er korrekt: 10 ens felter, 5 kun PMINDI og 5 kun PMINDIAKK. Knapperne er 200×200 og 128×128 @375, så de er gode tap-mål. Men det er endnu et visuelt idiom på de to sider (linje, søjler, og nu cirkler). Det bidrager til visual-variety-fatigue. Privat-personaen får ikke ny viden ud over chip-listen. Overvej at vise chip-listen som standard og cirklerne kun i `?linje=cross`.
+- **U-X1** · `ndi-paa-x?knot=soft-nv` viser 1 opslag. Lead-kortet er tredjeparts "BREAKING: Nvidia … $250 BILLION … built by SoftBank" med mærket "DIREKTE TRÆF · Vist fordi: SoftBank · NVDA". Knuden løfter dermed det mest hype-prægede tredjepartsopslag op som lead. Se compliance M1.
+
+### Nice
+- `selskaber.html?fund=<x>` falder nu stille tilbage til pmindi. ✅ Filtertælleren siger "1 aktivt" i ental. ✅
+- `x-posts.json` callCountNote er en log over 23 "poleringspas". Den vises ikke på siden (grep i js/html giver 0), men bør trimmes før go-live.
