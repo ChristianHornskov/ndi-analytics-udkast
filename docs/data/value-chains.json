@@ -2965,7 +2965,7 @@
               "w": 0.6,
               "sym": "BW",
               "forslag": false,
-              "role": "Kedler og design-byggeri. 1,2 GW 4. marts 2026 er Base Electrons anlæg. 20 turbiner 11. august 2026 er efter beholdningen."
+              "role": "Kedler og design-byggeri til kraftværker."
             },
             {
               "isin": "US2057683029",
@@ -2981,7 +2981,7 @@
               "w": 0.58,
               "sym": "TE",
               "forslag": false,
-              "role": "5 GW moduler om året er en kapacitet. G2-celler er anslået. Austin i foden er ikke en gade."
+              "role": "Solcellemoduler."
             },
             {
               "isin": "US83418M1036",
@@ -4904,7 +4904,7 @@
               "w": 0.27,
               "sym": "RDW",
               "forslag": false,
-              "role": "11 kameraer til Artemis II. 1. april 2026 siger will launch, ikke at flyvningen er fløjet. Forsiden uden dato skriver launched. Ikke en opsender."
+              "role": "Kameraer og solsensorer til Orion."
             },
             {
               "isin": "US8485603067",
@@ -4952,7 +4952,7 @@
               "w": 0.16,
               "sym": "MDA.TO",
               "forslag": false,
-              "role": "Chorus er tre satellitter. De to nye er ikke sendt op. Aurora Black er præsenteret 10. september 2026."
+              "role": "Satellitter til billeder af Jorden."
             },
             {
               "isin": "US46125A1007",
@@ -5134,13 +5134,13 @@
               "w": 0.16,
               "sym": "MDA.TO",
               "forslag": false,
-              "role": "Chorus er billeder af Jorden. De to nye satellitter er ikke sendt op. Ikke et datacenter."
+              "role": "Jordobservation. Kontrolcenter på jorden."
             }
           ],
           "seeChain": "ai-compute",
           "facts": [
             "Voyager Technologies: Starlab er et projekt til en rumstation. Det er ikke en station i drift. Selskabet skrev 8. september 2026, at et anlæg i Louisiana igen producerer sortkrudt. Det er efter beholdningen og har ikke med rummet at gøre.",
-            "MDA Space: Chorus er satellitter til billeder af Jorden, ikke et datacenter. De to nye er ikke sendt op.",
+            "MDA Space: Meddelelsen 11. august 2026, læst 16. oktober 2026, skriver, at kontrolcenteret for Chorus åbnede i St-Bruno-de-Montarville i Quebec, på den sydlige bred af Montreal. Det er et anlæg på jorden. Datoen ligger efter beholdningen. Samme tekst sætter opsendelsen til sent i 2026 og kommerciel drift til tidligt i 2027. Begge er planer. Siden sætter billedbredden til 700 km og opløsningen under en meter, når konstellationen er sat i drift. Det er ikke sket. C-bånd er beskrevet som det brede billede og X-bånd som det tætte. Meddelelsen 16. september 2026 skriver, at Chorus er tre satellitter. To er nye, en i X-bånd og en i C-bånd. RADARSAT-2 er allerede i kredsløb. De to nye er ikke sendt op. Samme tekst nævner COMMAND, COMMAND PRO og INTELLIGENCE. De er produkter til at søge, styre og læse billeder. De er ikke satellitter. COMMAND PRO nævner en jordstation hos kunden. Det er ikke et datacenter i kredsløb.",
             "Redwire: Jacksonville-siden, læst 16. oktober 2026, kalder anlægget hovedkontor og skriver to adresser, 8226 Philips Highway, Suite 101, og 1000 Riverside Avenue, Suite 600. Siden skriver 37.000 kvadratfod og 37.247 kvadratfod. De to tal er ikke ens. Siden daterer dem ikke. Det er et anlæg på jorden. Arbejdsområderne nævner fremstilling i rummet. Det er ikke et datacenter i kredsløb. Meddelelsen 11. marts 2026 skriver 43 PIL-BOX. Datoen ligger før beholdningen. En senere tekst skriver, at undersøgelserne kom tilbage 17. juni 2026, og at det markerer 54 PIL-BOX fløjet til dato. Den dato ligger efter beholdningen. De to tællinger er ikke samme tal. PIL-BOX er udstyr til krystaller, ikke et datacenter.",
             "York Space Systems: Harbinger er et kontrolcenter på jorden. Potomac er samling og test. Ingen af dem er et datacenter i kredsløb."
           ],
