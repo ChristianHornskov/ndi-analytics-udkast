@@ -2448,6 +2448,74 @@
      "url": "https://www.enovix.com/about"
     }
    ]
+  },
+  "US88675P1030": {
+   "name": "Tigo Energy",
+   "theme": "energy",
+   "summary": "Laver Flex MLPE, optimizers, invertere og batterier til solanlæg. Stiftet i 2007. Hovedkontoret ligger i Los Gatos i Californien. Det er udstyr, ikke et kraftværk.",
+   "watch": "Om MLPE bliver læst som et solkraftværk. Siden beskriver udstyr på modulniveau og software til overvågning.",
+   "source": "https://www.tigoenergy.com/about",
+   "products": "Flex MLPE, optimizers, invertere og batterier til boliger. Ikke et kraftværk.",
+   "customers": "Installatører og ejere af solanlæg. Teksten nævner ikke en navngiven park.",
+   "role": "Udstyr til solanlæg. Ikke et elselskab.",
+   "narrative": [
+    "Tigo skriver, at selskabet er stiftet i 2007, og at det laver Flex MLPE og optimizers sammen med software i skyen til overvågning og styring. Produkterne kan slukke på modulniveau. Selskabet laver også invertere og batterier til boliger med sol og lager.",
+    "Hovedkontoret ligger på 983 University Ave., Suite B, i Los Gatos i Californien. Siden skriver, at det stadig ligger i Silicon Valley, og at der er kontorer andre steder. Ordene leader og maximize er ikke taget med. Det er udstyr, ikke et kraftværk."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Om selskabet",
+     "url": "https://www.tigoenergy.com/about"
+    },
+    {
+     "label": "Kontakt",
+     "url": "https://www.tigoenergy.com/contacts"
+    }
+   ]
+  },
+  "US86771W1053": {
+   "name": "Sunrun",
+   "theme": "energy",
+   "summary": "Leverer solservice og batterier til boliger. Stiftet i 2007. Over 1 million kunder er afrundet og gælder pr. august 2024. 4,6 GWh tilknyttet lager er pr. 30. juni 2026, efter beholdningen. Det er ikke et kraftværk.",
+   "watch": "Om 4,6 GWh bliver læst som beholdningen pr. 1. juni 2026. Tallet er pr. 30. juni 2026. Kundetallet er afrundet pr. august 2024.",
+   "source": "https://investors.sunrun.com/",
+   "products": "Solservice til boliger og batterier hos kunden. Ikke et kraftværk.",
+   "customers": "Boligejere. Siden skriver 22 stater, Washington D.C. og Puerto Rico. Den nævner ikke et navngivet elselskab som ejer af værket.",
+   "role": "Solservice og batterier hos kunden. Ikke et elselskab.",
+   "narrative": [
+    "Sunrun skriver, at selskabet er dannet i 2007, og at det leverer solservice til boliger. Over 1 million kunder er afrundet og gælder pr. august 2024, før beholdningen. Servicen er solgt i 22 stater, Washington D.C. og Puerto Rico. Aftalerne er skrevet som 20 eller 25 år. Adresserne 600 California Street, Suite 1800, i San Francisco og 1800 Ashton Blvd i Lehi står under corporate locations.",
+    "Siden skriver, at der er installeret 4,6 GWh tilknyttet lagerkapacitet pr. 30. juni 2026. Datoen ligger efter beholdningen pr. 1. juni 2026. Det er batterier hos kunderne. Beløb fra kvartalet og ordene largest og pioneer er ikke taget med. Det er ikke et kraftværk."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Investorkontor",
+     "url": "https://investors.sunrun.com/"
+    }
+   ]
+  },
+  "US00218A1051": {
+   "name": "ASP Isotopes",
+   "theme": "energy-resources",
+   "summary": "Beriger isotoper. Stiftet i 2021. En del er stabile isotoper til medicin og halvledere. PET Labs er nuklearmedicin i Sydafrika. Quantum Leap Energy er skrevet som fremtidigt brændsel, herunder HALEU. Teksten siger ikke, at et anlæg er i drift.",
+   "watch": "Om HALEU bliver læst som et værk i drift. Siden skriver fremtidige brændsler og siger ikke, at et anlæg kører.",
+   "source": "https://aspisotopes.com/our-company/",
+   "products": "Berigning af stabile isotoper. Nuklearmedicin via PET Labs. Udvikling af brændsel. Ikke et kraftværk.",
+   "customers": "Siden nævner medicin og halvledere som markeder. Den nævner ikke en navngiven leverance.",
+   "role": "Isotoper og brændsel under udvikling. Ikke en mine.",
+   "narrative": [
+    "ASP Isotopes skriver, at selskabet er stiftet i 2021, og at rødderne går tilbage til et berigningsprogram i Sydafrika i 1980'erne. Det er noteret på NASDAQ under ASPI. Den ene del beriger stabile isotoper til medicin og halvledere. To metoder er nævnt: en aerodynamisk proces og en proces med laser.",
+    "PET Labs i Sydafrika er nuklearmedicin. Selskabet købte 51 % i november 2023, før beholdningen. Quantum Leap Energy er skrevet som udvikling og produktion af fremtidige brændsler, herunder HALEU og lithium-6 og lithium-7. Selskaberne er i Delaware og i Storbritannien. Teksten siger ikke, at et anlæg er i drift. Ordene leader og indispensable er ikke taget med. Det er ikke et kraftværk og ikke en mine."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabet",
+     "url": "https://aspisotopes.com/our-company/"
+    },
+    {
+     "label": "Forside",
+     "url": "https://aspisotopes.com/"
+    }
+   ]
   }
  },
  "media": [

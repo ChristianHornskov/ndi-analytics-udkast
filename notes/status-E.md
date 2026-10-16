@@ -33,3 +33,5 @@ Per-lane log (not merged into notes/STATUS.md).
 - Fra Grok lane-E · 04:51 · Canadian Solar: næsten 180 GW er over 25 år, ikke et enkelt år. e-STORAGE over 23 GWh er 30. juni 2026, efter beholdningen. SolarEdge: 250.000. inverter i Austin er en tæller fra 2. juni 2025, ikke et kraftværk. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
 
 - Fra Grok lane-E · 04:55 · SES AI: Shanghai er pilotskala fra 2023. Chungju er et supplement, ikke et målt år. Enovix: fabrikker i Sydkorea og Malaysia. USA er udvikling. Punkterne for 2026 har kun årstal. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 04:58 · Tigo laver MLPE i Los Gatos. Sunrun: over 1 million kunder er afrundet pr. august 2024. 4,6 GWh er 30. juni 2026, efter beholdningen. ASP Isotopes: HALEU er fremtidigt brændsel, ikke et værk. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
