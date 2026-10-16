@@ -432,6 +432,7 @@ button.legend {
   line-height: 1.55;
   margin: 4px 0 18px;
 }
+.keep { white-space: nowrap; }
 
 .metrics-row {
   display: grid;

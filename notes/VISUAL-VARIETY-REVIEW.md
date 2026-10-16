@@ -298,6 +298,10 @@ Advarslen er kortere end kortstakken, så der var luft ved siden af «År til da
 
 På 700 og 800 stod «dig.» og «fonden.» alene på sidste linje, fordi mærket tog bredden fra sætningen. Mærket står nu ved siden af navnet. Sætningen har hele kortets bredde. På 1100, 800, 700, 390 og 320 er den én linje. Navn og mærke rammer ikke hinanden. Gul overkant følger det valgte kort. Ingen sidescroll. Ingen konsolfejl.
 
+### Update · datoen holder sammen · 2026-10-16 ~05:28 CEST
+
+På 320 stod «top.» alene under udlæsningen, og «14.» blev skilt fra «okt. 2026» i sætningen under embed-grafen. «fald?» stod alene i opfordringen. Nu holder datoen sammen, «løbende top» holder sammen, og «store fald» holder sammen. På 390 er sætningen under grafen én linje. År til dato har samme dato-sammenhold. Ingen sidescroll. Ingen konsolfejl.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.

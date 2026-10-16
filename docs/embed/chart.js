@@ -289,10 +289,11 @@
     $('#chart-context').hidden = !context.length;
 
     const direction = verbFor(periodReturn);
+    const keep = (s) => `<span class="keep">${s}</span>`;
     const pointe = periodReturn === 0 || Math.abs(periodReturn) < 0.05
-      ? `${state.fund} er ${direction} fra ${fmtDate(first.date)} til ${fmtDate(last.date)}.`
-      : `${state.fund} er ${direction} ${pct(Math.abs(periodReturn))} fra ${fmtDate(first.date)} til ${fmtDate(last.date)}.`;
-    $('#chart-pointe').textContent = pointe;
+      ? `${state.fund} er ${direction} fra ${keep(fmtDate(first.date))} til ${keep(fmtDate(last.date))}.`
+      : `${state.fund} er ${direction} ${pct(Math.abs(periodReturn))} fra ${keep(fmtDate(first.date))} til ${keep(fmtDate(last.date))}.`;
+    $('#chart-pointe').innerHTML = pointe;
 
     const svg = $('#performance-chart');
     const box = $('#chart-container');
