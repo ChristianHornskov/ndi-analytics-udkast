@@ -20,7 +20,14 @@ const state = {
   linse: false, // kun selskaber med kvalitativ NDI-linse (unique-metrics.json); samme URL som A-Z: linse=1
   q: '',
   calFull: false,
+  cmp: false, // valgfri Nasdaq-100-sammenligningslinje (URL cmp=nasdaq)
 };
+let NASDAQ = null;
+async function loadNasdaq() {
+  if (NASDAQ) return NASDAQ;
+  try { const r = await fetch('data/nasdaq-compare.json', { cache: 'no-cache' }); NASDAQ = r.ok ? await r.json() : { data: [] }; } catch (_) { NASDAQ = { data: [] }; }
+  return NASDAQ;
+}
 
 let DATA = null;
 let MONTHS = null;
@@ -85,6 +92,7 @@ function readUrl() {
   state.fund = (u.searchParams.get('fund') || 'pmindi').toLowerCase();
   state.view = u.searchParams.get('view') || 'entre';
   state.period = u.searchParams.get('periode') || 'all';
+  state.cmp = u.searchParams.get('cmp') === 'nasdaq';
   // Interne tags (legacy/Trump) må aldrig ende i chips eller URL - UX §0.2, INTERNAL-TAGS.md
   state.tags = publicTags((u.searchParams.get('tags') || '').split(',').filter(Boolean));
   state.maturity = (u.searchParams.get('mat') || '').split(',').filter(Boolean);
@@ -109,6 +117,7 @@ function writeUrl(replace = false) {
     else u.searchParams.set(k, v);
   };
   set('fund', state.fund, 'pmindi');
+  set('cmp', state.cmp ? 'nasdaq' : '', '');
   set('view', state.view, 'entre');
   set('periode', state.period, 'all');
   set('tags', state.tags.join(','), '');
@@ -450,7 +459,9 @@ function renderFonden(root) {
         <div class="metric"><div class="label">Største fald ${gl('drawdown')}</div><strong class="neg">${fmtPct(maxDrawdown(rows)?.dd)}</strong><small><a href="drawdown.html?fund=${state.fund}">Middel/median →</a></small></div>
         <div class="metric"><div class="label">Risikoindikator (KID) ${gl('sri')}</div><strong>5 / 7</strong><small>Anbefalet ejertid 5 år</small></div>
       </div>
-      <p class="note-fundmarket">Fonden har intet fast benchmark; vi viser derfor ingen sammenligningskurve. Beholdningen er et forsinket snapshot pr. ${fmtDate(posAsOf)} (seneste offentlige Fundmarket-rapport) og ikke dagsaktuel.</p>
+      <p class="note-fundmarket">Fonden har intet fast benchmark. Beholdningen er et forsinket snapshot pr. ${fmtDate(posAsOf)} (seneste offentlige Fundmarket-rapport) og ikke dagsaktuel.</p>
+      <div class="cmp-row"><label class="cmp-toggle"><input type="checkbox" id="cmp-nasdaq" ${state.cmp ? 'checked' : ''}> Vis Nasdaq-100 som sammenligning</label></div>
+      <p class="cmp-label" id="cmp-label" ${state.cmp ? '' : 'hidden'}>Nasdaq vises kun som sammenligning, ikke som fondens benchmark. Historisk afkast er ingen garanti.</p>
       <p style="font-size:13px;color:var(--muted);margin:8px 0">Graf: ${periodLabel}</p>
       <div class="chart-wrap" id="perf-chart"></div>
       <p class="chart-takeaway" id="chart-takeaway" style="font-size:14px;color:var(--text);margin:8px 0 4px;line-height:1.45"></p>
@@ -527,7 +538,11 @@ function renderFonden(root) {
   }
   const xMarksSafe = xMarks.map((e) => ({ ...e, text: stripCashtags(e.text) }));
   const evts = [...ctxEvts, ...ddEvts, ...xMarksSafe];
-  renderChart($('#perf-chart', root), sliced, evts, { label: 'Totalafkast' });
+  const drawPerf = (cmpRows) => renderChart($('#perf-chart', root), sliced, evts, { label: 'Totalafkast', compare: cmpRows, compareName: 'Nasdaq-100' });
+  drawPerf(null);
+  if (state.cmp) loadNasdaq().then((nq) => { if (state.cmp && $('#perf-chart', root)) drawPerf(nq.data || []); });
+  const cmpBox = $('#cmp-nasdaq', root);
+  if (cmpBox) cmpBox.addEventListener('change', () => { state.cmp = cmpBox.checked; writeUrl(true); paint(); });
   const take = $('#chart-takeaway', root);
   if (take && sliced.length >= 2) {
     const first = sliced[0], last = sliced[sliced.length - 1];
