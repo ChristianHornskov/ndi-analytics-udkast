@@ -213,16 +213,20 @@
  ? `${list.length} af ${posts.length} opslag${split}${focused}`
  : `Ingen opslag${focused}`;
  const markQ = state.q.trim() || (state.f === 'chips' ? 'NVDA' : '');
- const laneOf = (kind, cards) => {
+ const laneOf = (kind, cards, mode) => {
  if (!cards.length) return '';
+ const film = mode === 'film';
+ const rail = mode === 'rail';
  const q = state.q.trim();
  let hint = kind === 'direct' ? 'Nævner navnet eller tickeren.' : 'Rammer temaet. Ikke en ticker fra udsnittet.';
  if (!q && state.f === 'chips' && kind === 'direct') hint = 'Ticker NVDA i opslaget.';
  if (!q && state.f === 'chips' && kind === 'theme') hint = 'Chips eller AI, uden NVDA-ticker.';
  const quotedTheme = !direct.length;
- const kicker = kind === 'direct' ? 'Øvrige direkte træf' : (quotedTheme ? 'Øvrige tema' : 'Tema');
- const body = cards.map((p) => xCard(p, { query: markQ, hitKind: kind, reasons: reasonsFor(p) })).join('');
- return `<div class="x-lane ${kind === 'direct' ? 'is-direct' : 'is-theme'}">
+ const kicker = film || rail
+ ? (kind === 'direct' ? 'Andre datoer' : 'Andre datoer · tema')
+ : kind === 'direct' ? 'Øvrige direkte træf' : (quotedTheme ? 'Øvrige tema' : 'Tema');
+ const body = cards.map((p) => xCard(p, { query: markQ, hitKind: kind, reasons: reasonsFor(p), rail: film ? 'film' : rail })).join('');
+ return `<div class="x-lane ${kind === 'direct' ? 'is-direct' : 'is-theme'}${film ? ' is-film' : ''}${rail ? ' is-rail' : ''}">
  <p class="x-lane-h"><span class="x-lane-k">${kicker}</span><span>${hint} · ${cards.length}</span></p>
  <div class="x-grid">${body}</div>
  </div>`;
@@ -284,9 +288,22 @@
  const leadKind = direct.length ? 'direct' : 'theme';
  const restDirect = direct.length ? direct.slice(1) : [];
  const restTheme = direct.length ? theme : theme.slice(1);
- grid.innerHTML = scoreBar + `<div class="x-stage">${xCard(leadPost, { query: markQ, lead: true, hitKind: leadKind, reasons: reasonsFor(leadPost) })}</div>`
- + laneOf('direct', restDirect)
- + laneOf('theme', restTheme)
+ const packLane = (kind, hits, allowBeside) => {
+ if (!hits.length) return { beside: '', below: '' };
+ if (hits.length >= 3) return { beside: '', below: laneOf(kind, hits, 'film') };
+ if (allowBeside) return { beside: laneOf(kind, hits, 'rail'), below: '' };
+ return { beside: '', below: laneOf(kind, hits) };
+ };
+ const directPacked = packLane('direct', restDirect, true);
+ const themePacked = packLane('theme', restTheme, !restDirect.length);
+ const sideLane = directPacked.beside || themePacked.beside;
+ const belowLane = directPacked.below + themePacked.below;
+ const quote = `<div class="x-stage">${xCard(leadPost, { query: markQ, lead: true, hitKind: leadKind, reasons: reasonsFor(leadPost) })}</div>`;
+ const stage = sideLane
+ ? `<div class="x-split"><div class="x-split-main">${quote}</div><div class="x-split-side">${sideLane}</div></div>`
+ : quote;
+ grid.innerHTML = scoreBar + stage
+ + belowLane
  + (restHits.length ? `<div class="x-grid" style="grid-column:1/-1">${restHits.map((p) => xCard(p, { query: state.q })).join('')}</div>` : '');
  }
  };

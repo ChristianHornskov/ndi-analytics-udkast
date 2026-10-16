@@ -1045,20 +1045,24 @@
   "CA8536061010": {
    "name": "Standard Lithium",
    "theme": "energy-resources",
-   "summary": "Udvikler projekter, der henter lithium ud af saltvand i Arkansas. Denne tekst beskriver demonstrationsskala, ikke en stor mine.",
-   "watch": "Om demonstrationen kan blive til kommerciel produktion.",
+   "summary": "Udvikler lithium fra saltvand. Selskabet skriver, at fase 1 i South West Arkansas er sat til 22.500 ton lithiumkarbonat om året, og at målet for kommerciel produktion er 2029. Det er et mål, ikke en stor mine i drift.",
+   "watch": "Om målet i 2029 bliver til drift. Fase 1 er en kapacitet, ikke en produktion, der er i gang.",
    "source": "https://www.standardlithium.com/",
-   "products": "Lithiumprojekter.",
+   "products": "Et mål om 22.500 ton lithiumkarbonat om året i fase 1. Ikke en stor mine.",
    "customers": "Ingen stor kommerciel kundebase i denne beskrivelse.",
-   "role": "Råstof til batterier.",
+   "role": "Fase 1 er et mål til 2029. Ikke en stor mine i drift.",
    "narrative": [
-    "Standard Lithium skriver, at et demonstrationsanlæg ved El Dorado i Arkansas behandler saltvand.",
-    "Projekterne i Arkansas og i Texas er ikke beskrevet som en stor mine i drift."
+    "Standard Lithium skriver, at South West Arkansas er et projekt sammen med Equinor. Standard Lithium har 55 %, og Equinor har 45 %. Selskabet kalder samarbejdet Smackover Lithium. Projektet ligger i det sydlige Arkansas, cirka 24 km vest for Magnolia og cirka 11 km syd for Lewisville. Selskabet skriver, at fase 1 er sat til 22.500 ton batterikvalitets lithiumkarbonat om året, og at målet for første kommercielle produktion er 2029. Siden skriver, at byggeriet ventes at begynde i 2026, kort efter en endelig investeringsbeslutning. Teksten siger ikke, at beslutningen er truffet, og den siger ikke, at byggeriet er i gang. Forsiden opgør ressourcen til 1,2 Mt LCE som målt og indikeret. Det er en ressource, ikke en produktion.",
+    "Et demonstrationsanlæg ved LANXESS South Plant nær El Dorado i Arkansas behandler saltvand. Forsiden skriver, at anlægget har været i drift i 5 år eller mere. Siden skriver, at anlægget siden 2020 har behandlet cirka 40 millioner gallons saltvand. Gallons er selskabets eget mål og er ikke regnet om. Anlægget er ikke fase 1 og ikke en stor mine."
    ],
    "narrativeSources": [
     {
      "label": "Selskabets side",
      "url": "https://www.standardlithium.com/"
+    },
+    {
+     "label": "South West Arkansas",
+     "url": "https://www.standardlithium.com/projects/smackover/south-west-arkansas/"
     },
     {
      "label": "Demonstrationsanlæg",
@@ -1093,23 +1097,27 @@
   "CA8765111064": {
    "name": "Taseko Mines",
    "theme": "energy-resources",
-   "summary": "Driver kobberminedrift, blandt andet Gibraltar-minen i Canada.",
-   "watch": "Drift af minen, kobberpriser og øvrige projekter.",
-   "source": "https://www.tasekomines.com/",
-   "products": "Kobber.",
-   "customers": "Smelteværker og industrikunder.",
-   "role": "Råstof til elnet og elektronik.",
+   "summary": "Driver Gibraltar, en kobber- og molybdænmine i British Columbia. Siden skriver, at Florence lavede det første kobber i februar 2026. Meldingen om kommerciel produktion er fra 9. oktober 2026 og ligger efter beholdningen.",
+   "watch": "Om Gibraltar kører, og hvordan første kobber i februar 2026 skal læses ved siden af meldingen i oktober.",
+   "source": "https://www.trekormetals.com/properties/gibraltar-mine/",
+   "products": "Kobber og molybdæn fra Gibraltar. Florence er sat til 85 millioner pund kobberkatode om året. Det er en kapacitet, ikke en målt årsproduktion.",
+   "customers": "Siden navngiver ikke en kunde på Gibraltar.",
+   "role": "Gibraltar er i drift. Florence havde første kobber i februar 2026. Oktober-meldingen ligger efter beholdningen.",
    "narrative": [
-    "Taseko driver kobberminen Gibraltar i Canada. Forsiden bruger også navnet Trekor Metals.",
-    "Selskabet skrev 9. oktober 2026, at Florence Copper er gået i kommerciel produktion. Meddelelsen ligger efter beholdningen pr. 1. juni 2026. Yellowhead er i en godkendelsesproces. Aley står som projekt. New Prosperity står ikke som mine på siden."
+    "Siden bruger navnet Trekor Metals. Taseko skriver, at selskabet ejer og driver Gibraltar, en kobber- og molybdænmine i det sydlige centrale British Columbia, i Cariboo-Chilcotin. Kapaciteten er 85.000 tons malm i døgnet. Siden siger tons, og tallet er ikke regnet om. Gennemsnittet over minens levetid er 130 millioner pund kobber om året. Det er et gennemsnit i selskabets tekst, ikke et målt år. Siden skriver, at minen har kørt uafbrudt i selskabets eje i mere end 20 år, og at den ventes at kunne producere til mindst 2044. 2044 er selskabets forventning.",
+    "Florence Copper ligger syd for Phoenix i Florence i Arizona. Siden skriver, at det første kobber blev lavet i februar 2026, og at byggeriet af anlægget til kommerciel produktion begyndte i januar 2024. Begge datoer ligger før beholdningen pr. 1. juni 2026. Kapaciteten er 85 millioner pund kobberkatode om året, og minens levetid er sat til 22 år. Pund er ikke regnet om. Selskabet skrev 9. oktober 2026, at produktionen er kommerciel. Den meddelelse ligger efter beholdningen. Yellowhead, Aley og New Prosperity er ikke miner i drift i denne tekst."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets side",
-     "url": "https://www.tasekomines.com/"
+     "label": "Gibraltar",
+     "url": "https://www.trekormetals.com/properties/gibraltar-mine/"
     },
     {
-     "label": "Florence Copper 9. oktober 2026",
+     "label": "Florence Copper",
+     "url": "https://www.trekormetals.com/properties/florence-copper/"
+    },
+    {
+     "label": "Florence, 9. oktober 2026",
      "url": "https://www.tasekomines.com/trekor-talks/florence-copper-begins-commercial-production-the-first-new-us-copper-source-in-nearly-two-decades"
     }
    ]
@@ -1389,20 +1397,28 @@
   "US31816X1063": {
    "name": "Firefly Aerospace",
    "theme": "space",
-   "summary": "Udvikler og opsender løfteraketter og har en månelander.",
-   "watch": "Om opsendelserne lykkes, og om der er nok kunder til raketten og landeren.",
+   "summary": "Opsender raketten Alpha og har landet Blue Ghost på Månen. Selskabet skriver, at Mission 1 landede 2. marts 2025. Eclipse er ikke fløjet i denne tekst.",
+   "watch": "Om Eclipse bliver sendt op, og om de næste Blue Ghost-missioner lander. Mission 1 er gennemført.",
    "source": "https://fireflyspace.com/",
-   "products": "Løfteraketter og månelandere.",
-   "customers": "Kunder, der skal have nyttelast i rummet eller til Månen.",
-   "role": "Opsendelse og transport væk fra Jorden.",
+   "products": "Alpha, månelanderen Blue Ghost og orbitalfartøjet Elytra. Eclipse er under udvikling.",
+   "customers": "NASA var kunden på Blue Ghost Mission 1. Forsiden nævner kommende Alpha-opgaver. Teksten siger ikke, at de er fløjet.",
+   "role": "Alpha og Blue Ghost. Eclipse er ikke fløjet.",
    "narrative": [
-    "Firefly opsender raketten Alpha og bygger månelanderen Blue Ghost. Selskabet skriver, at Blue Ghost er landet på Månen og har arbejdet der.",
-    "En større raket, Eclipse, bygges sammen med Northrop Grumman. Denne beskrivelse omfatter ikke, at Eclipse har fløjet. Firefly står på opsendelse."
+    "Firefly skriver, at Blue Ghost Mission 1, Ghost Riders in the Sky, lettede 15. januar 2025 og landede 2. marts 2025 i Mare Crisium nær Mons Latreille. Kunden var NASA. Siden skriver, at landeren arbejdede i mere end 14 døgn på overfladen, heraf 346 timer i dagslys, og lidt over 5 timer ind i månenatten. Datoerne ligger før beholdningen pr. 1. juni 2026.",
+    "Alpha er 31,7 m lang. Siden sætter nyttelasten til 1.030 kg til en lav bane i 300 km og til 630 kg til en solsynkron bane i 500 km. Næsekeglen er 2,2 m i diameter. Brændstoffet er LOX og RP-1. Siden nævner Esrange i Sverige som et sted, raketten kan sendes op fra. Teksten siger ikke, at en opsendelse derfra er gennemført. Eclipse udvikles sammen med Northrop Grumman. Siden sætter nyttelasten til 16.300 kg til lav bane og skriver, at den første opsendelse skal ske fra Virginia. Raketten er ikke fløjet i denne tekst. Elytra beskrives som et orbitalfartøj i tre udgaver, Dawn, Dusk og Dark. Teksten siger ikke, at de er i kredsløb, og det er ikke et datacenter."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets side",
-     "url": "https://fireflyspace.com/"
+     "label": "Alpha",
+     "url": "https://fireflyspace.com/alpha/"
+    },
+    {
+     "label": "Eclipse",
+     "url": "https://fireflyspace.com/eclipse/"
+    },
+    {
+     "label": "Blue Ghost Mission 1",
+     "url": "https://fireflyspace.com/missions/blue-ghost-mission-1/"
     }
    ]
   },

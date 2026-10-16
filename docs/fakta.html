@@ -30,6 +30,10 @@
   .glance-tile.is-diff{border-color:#f5ee9e88;box-shadow:inset 3px 0 0 var(--yellow)}
   .glance-tile .k{font-size:11px;letter-spacing:.6px;color:var(--brand);font-weight:700;margin-bottom:8px;line-height:1.35}
   .glance-tile strong{display:block;font-size:22px;font-weight:500;letter-spacing:-.4px;color:var(--cyan);font-variant-numeric:tabular-nums;line-height:1.15}
+  .glance-tile.is-gap strong{font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-size:40px;font-weight:500;letter-spacing:-1px;color:#f5ee9e;line-height:.95}
+  .sri-mini{display:flex;gap:3px;margin-top:8px}
+  .sri-mini i{width:10px;height:18px;border-radius:2px;background:#0b171d;border:1px solid #345860;display:block}
+  .sri-mini i.on{background:#f5ee9e;border-color:#f5ee9e}
   .glance-pair{display:flex;flex-wrap:wrap;gap:4px 12px}
   .glance-pair b{font-weight:500;font-size:20px}
   .glance-flag{display:inline-block;margin-top:8px;font-size:10px;letter-spacing:.8px;text-transform:uppercase;color:var(--faint)}
@@ -40,7 +44,7 @@
   .dd-dates article{background:#0b171d;border:1px solid #2a424a;border-radius:12px;padding:10px 12px;min-width:0}
   .dd-dates article.is-odd{border-style:dashed;border-color:#f5ee9e66}
   .dd-dates .k{display:block;font-size:11px;color:var(--muted);margin-bottom:4px}
-  .dd-dates strong{display:block;font-size:15px;font-weight:600;letter-spacing:-.2px}
+  .dd-dates strong{display:block;font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-size:22px;font-weight:500;letter-spacing:-.4px}
   .dd-dates small{display:block;color:var(--muted);font-size:12px;line-height:1.4;margin-top:4px}
   .fact-card .sri{margin:12px 0 4px}
   .fact-card .sri span{flex:1;width:auto;height:38px;font-variant-numeric:tabular-nums}
@@ -63,18 +67,20 @@
   .tax-grid h3{font-size:14px;margin-bottom:6px}
   .tax-grid p{color:var(--muted);line-height:1.55;font-size:14px}
   .risk-stage{margin:0 0 14px;scroll-margin-top:84px}
-  .risk-stage .risk-metrics strong{font-size:32px;letter-spacing:-.7px;font-weight:500}
+  .risk-stage .risk-metrics strong{font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-size:32px;letter-spacing:-.7px;font-weight:500}
   .risk-split{display:grid;grid-template-columns:1.45fr .8fr;gap:14px;align-items:start}
   .risk-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:4px 0 12px}
   .risk-metrics .metric{padding:4px 12px;border-left:1px solid #829da02a}
   .risk-metrics .metric:first-child{border-left:0;padding-left:0}
   .risk-official{border:1px dashed #89aeb488;border-radius:14px;padding:14px;background:#0b171d;min-width:0}
   .risk-official .label{font-size:11px;color:var(--muted);margin-bottom:8px}
-  .dd-track{height:10px;border-radius:99px;background:#0b171d;border:1px solid #2a424a;overflow:hidden}
-  .dd-track i{display:block;height:100%;background:var(--neg);border-radius:99px}
+  .dd-track{position:relative;height:22px;border-radius:99px;background:#0b171d;border:1px solid #2a424a;overflow:hidden;margin-top:6px}
+  .dd-track i{display:block;height:100%;background:linear-gradient(90deg,#8f5c66,var(--neg));border-radius:99px}
+  .dd-cap{position:absolute;right:10px;top:0;height:100%;display:flex;align-items:center;font-size:10px;letter-spacing:.8px;text-transform:uppercase;color:#c5d6db;pointer-events:none}
   .empty-note{border:1px dashed #89aeb488;border-radius:14px;padding:22px 16px;color:var(--muted)}
   @media(max-width:800px){
     .fact-grid,.org,.team,.tax-grid,.kv,.risk-split,.risk-metrics,.glance-board,.dd-dates{grid-template-columns:1fr}
+    .glance-tile.is-gap strong{font-size:36px}
     .risk-metrics .metric{border-left:0;padding-left:0;margin-bottom:12px}
   }
   @media(max-width:800px) and (min-width:560px){
@@ -160,19 +166,36 @@
  const glanceVisible = onlyFour
  ? `Porteføljetransaktion er den eneste forskel i de fire tal: ${pct(A.costs.portfolioTransaction)} i PMINDI og ${pct(B.costs.portfolioTransaction)} i PMINDIAKK.`
  : glance;
- const tile = (kicker, valueHtml, same, detail) => `<article class="glance-tile${same ? '' : ' is-diff'}">
+ const krOf = (rate) => Math.round(100000 * Number(rate) / 100);
+ const krTxt = (n) => {
+ const v = Math.round(Number(n));
+ const s = String(Math.abs(v)).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+ return (v < 0 ? '-' : '') + s + ' kr.';
+ };
+ const krGapTxt = krTxt(Math.abs(krOf(B.costs.portfolioTransaction) - krOf(A.costs.portfolioTransaction)));
+ const tile = (kicker, valueHtml, same, detail, extra = '', mod = '') => `<article class="glance-tile${same ? '' : ' is-diff'}${mod}">
  <p class="k">${kicker}</p>
  <strong>${valueHtml}</strong>
+ ${extra}
  <span class="glance-flag">${same ? 'Ens' : 'Forskel'}</span>
  <p>${detail}</p>
  </article>`;
  const pair = (a, b) => `<span class="glance-pair"><b>${a}</b><b>${b}</b></span>`;
- const glanceBoard = [
- tile('SRI', sameSri ? `${A.sri} af ${A.sriMax}` : pair(`${A.sri} af ${A.sriMax}`, `${B.sri} af ${B.sriMax}`), sameSri, sameSri ? 'Begge klasser.' : 'PMINDI · PMINDIAKK.'),
- tile('HORISONT', sameHorizon ? `${A.horizonYears} år` : pair(`${A.horizonYears} år`, `${B.horizonYears} år`), sameHorizon, sameHorizon ? 'Begge klasser.' : 'PMINDI · PMINDIAKK.'),
- tile('ØVRIGE LØBENDE', sameOngoing ? pct(A.costs.otherOngoing) : pair(pct(A.costs.otherOngoing), pct(B.costs.otherOngoing)), sameOngoing, sameOngoing ? 'Begge klasser. Fundmarket.' : 'PMINDI · PMINDIAKK.'),
- tile('PORTEFØLJETRANSAKTION', dTx === 0 ? pct(A.costs.portfolioTransaction) : pair(pct(A.costs.portfolioTransaction), pct(B.costs.portfolioTransaction)), dTx === 0, dTx === 0 ? 'Begge klasser.' : `PMINDI · PMINDIAKK · ${String(Math.abs(dTx)).replace('.', ',')} procentpoint.`),
- ].join('');
+ const sriMeter = sameSri
+ ? `<span class="sri-mini" aria-hidden="true">${Array.from({ length: A.sriMax }, (_, i) => `<i class="${i + 1 === A.sri ? 'on' : ''}"></i>`).join('')}</span>`
+ : '';
+ const sriTile = tile('SRI', sameSri ? `${A.sri} af ${A.sriMax}` : pair(`${A.sri} af ${A.sriMax}`, `${B.sri} af ${B.sriMax}`), sameSri, sameSri ? 'Begge klasser.' : 'PMINDI · PMINDIAKK.', sriMeter);
+ const horizonTile = tile('HORISONT', sameHorizon ? `${A.horizonYears} år` : pair(`${A.horizonYears} år`, `${B.horizonYears} år`), sameHorizon, sameHorizon ? 'Begge klasser.' : 'PMINDI · PMINDIAKK.');
+ const ongoingTile = tile('ØVRIGE LØBENDE', sameOngoing ? pct(A.costs.otherOngoing) : pair(pct(A.costs.otherOngoing), pct(B.costs.otherOngoing)), sameOngoing, sameOngoing ? 'Begge klasser. Fundmarket.' : 'PMINDI · PMINDIAKK.');
+ const txTile = tile(
+ 'PORTEFØLJETRANSAKTION',
+ dTx === 0 ? pct(A.costs.portfolioTransaction) : krGapTxt,
+ dTx === 0,
+ dTx === 0 ? 'Begge klasser.' : `${pct(A.costs.portfolioTransaction)} PMINDI · ${pct(B.costs.portfolioTransaction)} PMINDIAKK · på 100.000 kr. Ikke et ÅOP.`,
+ '',
+ dTx === 0 ? '' : ' is-gap'
+ );
+ const glanceBoard = (onlyFour ? [txTile, sriTile, horizonTile, ongoingTile] : [sriTile, horizonTile, ongoingTile, txTile]).join('');
  const klasse = (cl, txDiff) => `
  <article class="fact-card">
  <p class="kicker">${cl.distributing ? 'UDLODDENDE' : 'AKKUMULERENDE'} · ${esc(cl.productType)}</p>
@@ -214,7 +237,7 @@
  <div class="metric"><div class="label">Sharpe (rf = 0)</div><strong>${num(risk.sharpeRf0)}</strong><small>Beregnet · ikke Fundmarket</small></div>
  <div class="metric"><div class="label">Største fald</div><strong class="neg">${pct(risk.maxDrawdownPct)}</strong><small>Beregnet · ikke Fundmarket</small></div>
  </div>
- <div class="dd-track" role="img" aria-label="Største fald ${pct(risk.maxDrawdownPct)} på en skala fra 0 til 100 procent"><i style="width:${ddWidth}%"></i></div>
+ <div class="dd-track" role="img" aria-label="Største fald ${pct(risk.maxDrawdownPct)} på en skala fra 0 til 100 procent"><i style="width:${ddWidth}%"></i><span class="dd-cap" aria-hidden="true">0–100 %</span></div>
  <div class="dd-dates">
  <article><span class="k">Bund i filen</span><strong>${daDate(risk.maxDdTrough) || 'ikke oplyst'}</strong><small>Søjlen er den absolutte størrelse på en skala fra 0 til 100 %. Den er ikke forstørret.</small></article>
  <article class="${peakAfterTrough ? 'is-odd' : ''}"><span class="k">${peakAfterTrough ? 'Topfeltet i filen' : 'Top i filen'}</span><strong>${daDate(risk.maxDdPeak) || 'ikke oplyst'}</strong><small>${peakAfterTrough ? 'Datoen ligger efter bunden og er ikke tegnet som start på faldet.' : 'Datoen står i risk-stats.json.'}</small></article>
