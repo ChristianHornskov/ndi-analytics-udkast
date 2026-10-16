@@ -23,16 +23,29 @@
   .life-map .tick{position:absolute;top:0;bottom:0;width:1px;background:var(--muted)}
   .life-map .tick i{position:absolute;top:22px;left:50%;transform:translateX(-50%);font-style:normal;font-size:11px;color:var(--muted);white-space:nowrap}
   .life-map .scale{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin:0}
+  .date-roles .stops{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+  .date-roles button{appearance:none;font:inherit;color:var(--text);background:transparent;border:1px solid var(--line);border-radius:8px;min-height:44px;padding:8px 14px;cursor:pointer}
+  .date-roles button[aria-pressed="true"]{border-color:var(--cyan)}
+  .date-roles .rail{display:flex;align-items:center;max-width:280px;margin:4px 0 8px}
+  .date-roles .rail i{width:12px;height:12px;border-radius:50%;border:2px solid var(--muted);display:block;flex:none}
+  .date-roles .rail i.on{background:var(--cyan);border-color:var(--cyan)}
+  .date-roles .rail b{flex:1;height:2px;background:var(--line)}
+  .date-roles .live{color:var(--muted);line-height:1.6;margin:0}
+  .date-roles .print-all{display:none}
   @media (max-width:640px){
    .period-pair .pair{grid-template-columns:1fr}
    .life-map .scale span:nth-child(2){flex-basis:100%}
   }
   @media print {
-   .period-span,.period-pair,.life-map{break-inside:avoid}
+   .period-span,.period-pair,.life-map,.date-roles{break-inside:avoid}
    .period-span .track,.life-map .track{background:#eee;border-color:#333}
    .period-span .mark{background:#333}
    .life-map .mark{background:#ddd;border-color:#333}
    .period-pair .pair-card{border-color:#333}
+   .date-roles .stops,.date-roles .rail,.date-roles .live{display:none}
+   .date-roles .print-all{display:block;color:#111}
+   .date-roles .print-all p{margin:4px 0}
+   .date-roles button{border-color:#333}
    .site-footer{color:#111}
   }
  </style>
@@ -96,8 +109,38 @@
    : `Slutpunktet er ${fmtDate(to)}. Året er ikke slut i serien.${anchor}${lateStart} Det er et delår, ikke et helt års afkast.`;
   return `<section class="panel period-span" aria-label="Periodens datoer"><h2 style="font-size:16px;margin-bottom:8px">Hvor langt hen på året?</h2><p style="color:var(--muted);line-height:1.6">${note} Fonden, ikke en enkelt aktie.</p><div class="track" role="img" aria-label="Kalenderåret ${y}. Perioden vises fra ${fmtDate(markFrom)} til ${fmtDate(to)}."><div class="mark" style="left:${left.toFixed(1)}%;width:${width.toFixed(1)}%"></div></div><p class="scale"><span>1. jan. ${y}</span><span>${fmtDate(markFrom)} → ${fmtDate(to)}</span><span>31. dec. ${y}</span></p></section>`;
  }
+ function bindDateRoles(root) {
+  const box = root.querySelector('.date-roles');
+  if (!box) return;
+  const live = box.querySelector('.live');
+  const dots = box.querySelectorAll('.rail i');
+  const buttons = box.querySelectorAll('button[data-stop]');
+  const texts = {};
+  box.querySelectorAll('.print-all p').forEach((p) => { texts[p.dataset.stop] = p.textContent; });
+  const show = (id) => {
+   buttons.forEach((b) => b.setAttribute('aria-pressed', b.dataset.stop === id ? 'true' : 'false'));
+   dots.forEach((d) => d.classList.toggle('on', d.dataset.stop === id));
+   if (live) live.textContent = texts[id] || '';
+  };
+  buttons.forEach((b) => b.addEventListener('click', () => show(b.dataset.stop)));
+  show(box.dataset.open || 'from');
+ }
+ function dateRoles(lines, open) {
+  const order = ['first', 'from', 'to'];
+  const labels = { first: 'Første NAV', from: 'Udgangspunkt', to: 'Sidste punkt' };
+  const buttons = order.map((id) => `<button type="button" data-stop="${id}" aria-pressed="false">${labels[id]}</button>`).join('');
+  const dots = order.map((id, i) => `${i ? '<b></b>' : ''}<i data-stop="${id}"></i>`).join('');
+  const printed = order.map((id) => `<p data-stop="${id}">${lines[id]}</p>`).join('');
+  return `<section class="panel date-roles" data-open="${open}" aria-label="Tre datoer, tre roller"><h2 style="font-size:16px;margin-bottom:8px">Tre datoer, tre roller</h2><p style="color:var(--muted);line-height:1.6;margin:0">Knapperne viser, hvilken dato der gør hvad. Det er fondens datoer, ikke en enkelt aktie, og ikke en prognose.</p><div class="stops" role="group" aria-label="Vælg en dato">${buttons}</div><div class="rail" aria-hidden="true">${dots}</div><p class="live" aria-live="polite"></p><div class="print-all">${printed}</div></section>`;
+ }
  if (fund.id === 'pmindiakk') {
- document.getElementById('main').innerHTML = `<p class="eyebrow">PERIODE</p><h1>${fund.short}</h1><section class="panel"><p style="color:var(--muted)">Afkast vises efter 12 måneder.</p><p style="color:var(--muted)">Der er ingen datobjælke, fordi klassen ikke viser afkast endnu.</p></section>${sriHtml}<p class="warn">${WARN_HIST}</p><p class="src">År til dato er et delår og afventer Fundmarket-godkendelse som markedsføringsangivelse. Klassen viser ikke afkast endnu.</p>`;
+ const akkRoles = dateRoles({
+  first: 'Klassen viser ikke afkast endnu. Derfor er der ingen datobjælke og intet første punkt at markere.',
+  from: 'År til dato er et delår. Tallet afventer Fundmarket-godkendelse og vises ikke her.',
+  to: 'Et sidste punkt kræver en serie. Klassen viser ikke den serie endnu.'
+ }, 'from');
+ document.getElementById('main').innerHTML = `<p class="eyebrow">PERIODE</p><h1>${fund.short}</h1><section class="panel"><p style="color:var(--muted)">Afkast vises efter 12 måneder.</p><p style="color:var(--muted)">Der er ingen datobjælke, fordi klassen ikke viser afkast endnu.</p></section>${akkRoles}${sriHtml}<p class="warn">${WARN_HIST}</p><p class="src">År til dato er et delår og afventer Fundmarket-godkendelse som markedsføringsangivelse. Klassen viser ikke afkast endnu.</p>`;
+ bindDateRoles(document.getElementById('main'));
  } else {
  const years = calendarYearReturns(fund.data);
  const ytd = ytdReturn(fund.data);
@@ -164,6 +207,22 @@
    : `<p style="margin-top:8px"><a href="${seriesHref}">Vis siden første NAV</a></p>`;
   return `<section class="panel period-pair" aria-label="To tal og to perioder"><h2 style="font-size:16px;margin-bottom:8px">To tal, to perioder</h2><p style="color:var(--muted);line-height:1.6;margin:0">Kortene er fondens tal. Det venstre følger den periode, siden viser. Det højre er et gennemsnit pr. år for hele serien. De er ikke det samme tal, og ingen af dem siger noget om det næste år.</p><div class="pair"><article class="pair-card is-on"><p class="eyebrow" style="margin:0">Valgt periode</p><p class="pair-name">${leftName}</p><p class="pair-pct ${(pct || 0) >= 0 ? 'pos' : 'neg'}">${fmtPct(pct)}</p><p class="pair-when">${fmtDate(from)} → ${fmtDate(to)}</p><p>${leftText}</p>${leftLink}</article><article class="pair-card"><p class="eyebrow" style="margin:0">Hele serien</p><p class="pair-name">Gennemsnit pr. år siden første NAV</p><p class="pair-pct ${annual >= 0 ? 'pos' : 'neg'}">${fmtPct(annual)}</p><p class="pair-when">${fmtDate(firstNav)} → ${fmtDate(lastNav)}</p><p>${rightText}</p>${rightLink}</article></div></section>`;
  }
+ function roleLines() {
+  if (!from || !to || !firstNav || !lastNav) return null;
+  const ytdMode = year === 'YTD' || year === 'ytd';
+  const sameStart = from === firstNav;
+  const first = `Første NAV er ${fmtDate(firstNav)}. Serien begynder her. Et enkelt år på siden kan starte senere. Datoen er ikke et afkast.`;
+  const fromLine = sameStart
+   ? `Udgangspunktet for den valgte periode er samme dato som første NAV, ${fmtDate(from)}. Det er periodens start. Det er ikke et gennemsnit pr. år.`
+   : ytdMode
+    ? `Udgangspunktet for år til dato er ${fmtDate(from)}. Metoden bruger sidste punkt i året før, når det findes. Det er ikke 1. januar, og det er ikke et helt års afkast.`
+    : `Udgangspunktet for perioden er ${fmtDate(from)}. Det er starten på den valgte periode. Det er ikke nødvendigvis 1. januar, og det er ikke hele serien.`;
+  const toLine = to === lastNav
+   ? `Sidste punkt er ${fmtDate(to)}. Det er også seriens sidste punkt. Datoen er allerede målt. Den siger ikke noget om det næste år.`
+   : `Sidste punkt i den valgte periode er ${fmtDate(to)}. Serien selv slutter ${fmtDate(lastNav)}. Punktet er en dato, der allerede er målt. Det siger ikke noget om det næste år.`;
+  return { first, from: fromLine, to: toLine };
+ }
+ const roleBox = (() => { const lines = roleLines(); return lines ? dateRoles(lines, 'from') : ''; })();
  const chips = [
  `<a class="tag" href="periode.html?fund=${fundId}&year=all">Siden første NAV: ${fmtPct(periodReturn(fund.data))}</a>`,
  `<a class="tag" href="periode.html?fund=${fundId}&year=YTD">År til dato: ${fmtPct(ytd)}</a>`,
@@ -182,6 +241,7 @@
  ${(year === 'YTD' || year === 'ytd') ? '<p class="band">År til dato afventer Fundmarket-godkendelse. Tallet er ikke et helt års afkast.</p>' : ''}
  ${periodSpan(from, to, year)}
  ${seriesMap()}
+ ${roleBox}
  ${periodPair()}
  ${sriHtml}
  <section class="panel">
@@ -200,6 +260,7 @@
  <p style="font-size:11px;color:var(--muted);margin-top:8px">Kun dokumenterede fondsbegivenheder.</p></section>`;
  })()}
  <p class="warn">${WARN_HIST}</p>`;
+ bindDateRoles(document.getElementById('main'));
  }
  </script>
 </body>
