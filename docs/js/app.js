@@ -677,9 +677,12 @@ function renderLivscyklus(fund) {
 
 function renderPortefolje(root) {
   const fund = fundById(DATA.portfolio, state.fund);
-  const all = filterPositions(fund);
-  const top10 = all.slice(0, 10);
-  const more = all.slice(10, 80);
+  // Udvalget er altid efter vægt (overskriften lover det); sorteringsknapperne styrer kun rækkefølgen i tabellen.
+  const byWeight = sortPositions(filterPositions(fund), 'weight', 'desc');
+  const top10 = sortPositions(byWeight.slice(0, 10), state.sort, state.dir);
+  const more = sortPositions(byWeight.slice(10, 80), state.sort, state.dir);
+  const top10All = sortPositions(fund.positions, 'weight', 'desc').slice(0, 10);
+  const top10Sum = top10All.reduce((s, p) => s + (p.weight || 0), 0);
   root.innerHTML = `
     <a class="back" href="?view=entre&fund=${state.fund}" data-nav="entre">← Entré</a>
     <p class="eyebrow">PORTEFØLJEN</p>
@@ -691,7 +694,7 @@ function renderPortefolje(root) {
     ${renderLivscyklus(fund)}
     <section class="panel">
       <h2 style="font-size:16px;margin-bottom:6px">Top 10 efter vægt</h2>
-      <p class="src" style="margin-bottom:10px">pr. ${fmtDate(fund.positionsAsOf || DATA.portfolio.asOf)} · forsinket snapshot. Eksponering, ikke anbefaling.</p>
+      <p class="src" style="margin-bottom:10px">pr. ${fmtDate(fund.positionsAsOf || DATA.portfolio.asOf)} · forsinket snapshot. De 10 største udgør tilsammen ${top10Sum.toFixed(1).replace('.', ',')} % af ${fund.short} (${fund.positions.length} selskaber i alt). Eksponering, ikke anbefaling.</p>
       ${positionsTable(top10, fund)}
     </section>
     <details class="panel" style="padding:12px 16px">
