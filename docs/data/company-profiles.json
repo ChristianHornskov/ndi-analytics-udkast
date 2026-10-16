@@ -821,22 +821,26 @@
   "CA8265991023": {
    "name": "Sigma Lithium",
    "theme": "energy-resources",
-   "summary": "Producerer lithiumkoncentrat i Brasilien. Selskabet nævner Jequitinhonha-dalen. Det er råstof til batterier, ikke et batteriselskab.",
-   "watch": "Drift af anlægget, lithiumpriser og kvaliteten af koncentratet.",
-   "source": "https://sigmalithiumcorp.com/",
+   "summary": "Udvinder lithium fra hårdt bjerg i Minas Gerais. Selskabet skriver, at Grota do Cirilo er sat til 270.000 ton koncentrat om året. Fase 2 er ikke produktion.",
+   "watch": "Om fase 2 bliver til drift. Navneskiltet på 270.000 ton er en kapacitet, ikke et målt år.",
+   "source": "https://sigmalithiumcorp.com/operations/",
+   "products": "Lithiumkoncentrat. Fase 1 er sat til 270.000 ton om året. Fase 2 er et mål på 520.000 ton og er ikke produktion.",
+   "customers": "Siden navngiver ikke en kunde.",
+   "role": "Koncentrat fra Grota do Cirilo. Ikke et batteriselskab.",
    "narrative": [
-    "Sigma Lithium producerer lithiumkoncentrat i Brasilien. Selskabet nævner Jequitinhonha-dalen, og det skrev 17. april 2023, at produktionen var gået i gang.",
-    "Datoen ligger før beholdningen pr. 1. juni 2026. Det er råstof til batterier, ikke et batteriselskab og ikke et kraftværk."
+    "Sigma Lithium skriver, at selskabet ejer 100 % af Grota do Cirilo i Minas Gerais i Brasilien. Det er udvinding af lithium i hårdt bjerg og et anlæg, der laver koncentrat. Forsiden nævner Jequitinhonha-dalen. Siden skriver, at driften er sat til 1,5 million ton om året, og at navneskiltet for lithiumkoncentrat er 270.000 ton om året. Siden siger tonnes. Tallene er ikke regnet om. Det er kapacitet, ikke en målt årsproduktion. Fase 1 blev sat i drift i 2023. Knuser og anlæg var sat i drift i maj 2023. Første skib gik i juli 2023, og siden skriver, at der var fem skibe det år. Første kommercielle produktion var nået i august 2023. I december 2023 kørte anlægget på navneskiltet i en måned. Datoerne ligger før beholdningen pr. 1. juni 2026.",
+    "Siden skriver, at bestyrelsen i 2024 godkendte byggeriet af fase 2, og at jordarbejdet var færdigt i 2025. Begge dele ligger før beholdningen. Siden, læst 16. oktober 2026, skriver, at udvidelsen stadig er i gang. Målet er et navneskilt på 520.000 ton koncentrat om året. Det er et mål, ikke produktion. En teknisk rapport af 15. januar 2025 sætter målte og indikerede ressourcer til 93,2 millioner ton med 1,40 % lithiumoxid. Reserverne er sat til 76,4 millioner ton med 1,29 % lithiumoxid. Det er ressource og reserve, ikke et års udbytte. Det er ikke et batteriselskab."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets side",
+     "label": "Driften, Grota do Cirilo",
+     "url": "https://sigmalithiumcorp.com/operations/"
+    },
+    {
+     "label": "Forsiden, Jequitinhonha",
      "url": "https://sigmalithiumcorp.com/"
     }
-   ],
-   "products": "Lithiumkoncentrat.",
-   "customers": "Videreforarbejdning til batterimaterialer.",
-   "role": "Råstof til batterier, ikke et færdigt lagersystem."
+   ]
   },
   "US5533681012": {
    "name": "MP Materials",
