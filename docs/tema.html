@@ -38,7 +38,8 @@
  import { loadXPosts, xSaysPanel } from './js/x-feed.js';
  const u = new URL(location.href);
  const key = u.searchParams.get('slug') || 'chips';
- const fundId = u.searchParams.get('fund') || 'pmindi';
+ // fund indsættes i href'er - kun [a-z0-9-]
+ const fundId = (u.searchParams.get('fund') || 'pmindi').toLowerCase().replace(/[^a-z0-9-]/g, '') || 'pmindi';
   // Samme whitelist som screener/A-Z: kun navn/vægt (tema er fast her) og temastatus. Ingen tal pr. aktie.
  const SORTS = { weight: 'Vægt', name: 'Navn A-Z' };
  const sort = SORTS[u.searchParams.get('sort')] ? u.searchParams.get('sort') : 'weight';

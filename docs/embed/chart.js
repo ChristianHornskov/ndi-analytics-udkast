@@ -259,6 +259,10 @@
     $('#chart-context').hidden = true;
     const stops = $('#chart-stops');
     if (stops) stops.hidden = true;
+    const days = $('#day-split');
+    if (days) days.hidden = true;
+    const bit = $('#life-bit');
+    if (bit) bit.hidden = true;
     $('#chart-pointe').innerHTML = 'Ny andelsklasse, kurs vises efter <span class="keep">12 måneder.</span> Ingen NAV eller graf før <span class="keep">5. december 2026.</span>';
     $('#chart-loading').hidden = true;
     state.series = [];
@@ -368,6 +372,8 @@
     state.geometry = { x, y, left, plotWidth, width, height, t0, t1 };
     $('#chart-slider').max = String(series.length - 1);
     renderStops();
+    renderDaySplit();
+    renderLifeBit();
     const index = state.selectedDate ? nearest(series, state.selectedDate) : series.length - 1;
     setPoint(index, false);
     $('#chart-loading').hidden = true;
@@ -458,6 +464,97 @@
 
   function hitOverlap() {
     return boxesOverlap($$('#stops-track .stop'), 2);
+  }
+
+  function renderLifeBit() {
+    const box = $('#life-bit');
+    if (!box) return;
+    const all = fundRecord()?.data;
+    if (isAkk() || !all || all.length < 2) {
+      box.hidden = true;
+      return;
+    }
+    const ytd = periodSlice(all, 'ytd').points;
+    if (!ytd || ytd.length < 2) {
+      box.hidden = true;
+      return;
+    }
+    const t0 = timestamp(all[0].d);
+    const t1 = timestamp(all[all.length - 1].d);
+    const span = Math.max(1, t1 - t0);
+    const left = ((timestamp(ytd[0].d) - t0) / span) * 100;
+    const width = ((timestamp(ytd[ytd.length - 1].d) - timestamp(ytd[0].d)) / span) * 100;
+    box.hidden = false;
+    box.dataset.from = fmtDate(all[0].d);
+    box.dataset.to = fmtDate(all[all.length - 1].d);
+    box.dataset.ytdFrom = fmtDate(ytd[0].d);
+    box.dataset.ytdTo = fmtDate(ytd[ytd.length - 1].d);
+    const ytdBtn = $('#life-bit-ytd');
+    const rail = box.querySelector('.life-bit-rail');
+    const minPct = rail && rail.clientWidth ? (44 / rail.clientWidth) * 100 : 12;
+    let w = Math.max(width, minPct);
+    let l = left;
+    if (l + w > 100) l = Math.max(0, 100 - w);
+    if (ytdBtn) {
+      ytdBtn.style.left = `${l.toFixed(2)}%`;
+      ytdBtn.style.width = `${w.toFixed(2)}%`;
+    }
+    paintLifeBit();
+  }
+
+  function paintLifeBit() {
+    const box = $('#life-bit');
+    const say = $('#life-bit-say');
+    if (!box || box.hidden || !say) return;
+    const ytdOn = state.period === 'ytd';
+    $$('#life-bit button').forEach((btn) => btn.setAttribute('aria-pressed', String(btn.dataset.period === state.period)));
+    const when = (d) => `<span class="keep">${d}</span>`;
+    say.innerHTML = ytdOn
+      ? `År til dato frem til ${when(box.dataset.ytdTo)}. <span class="keep">Delår, afventer</span> <span class="keep">Fundmarket-godkendelse.</span>`
+      : `Hele perioden fra ${when(box.dataset.from)} til ${when(box.dataset.to)}. Den gule del er <span class="keep">år til dato.</span>`;
+  }
+
+  function renderDaySplit() {
+    const box = $('#day-split');
+    if (!box) return;
+    const series = state.series;
+    if (!series || series.length < 2) {
+      box.hidden = true;
+      return;
+    }
+    const over = series.filter((p) => p.value >= 0).length;
+    const under = series.length - over;
+    box.hidden = false;
+    box.dataset.over = String(over);
+    box.dataset.under = String(under);
+    box.dataset.n = String(series.length);
+    const overBar = $('#day-over-bar');
+    const underBar = $('#day-under-bar');
+    if (overBar) overBar.style.flexGrow = String(over);
+    if (underBar) underBar.style.flexGrow = String(under);
+    const first = series.findIndex((p) => p.value < 0);
+    const hop = $('#first-below');
+    if (hop) {
+      hop.hidden = first < 0;
+      if (first >= 0) hop.dataset.i = String(first);
+    }
+    paintDaySplit(box.dataset.side || 'over');
+  }
+
+  function paintDaySplit(side) {
+    const box = $('#day-split');
+    const say = $('#day-say');
+    if (!box || box.hidden) return;
+    const use = side === 'under' ? 'under' : 'over';
+    box.dataset.side = use;
+    $$('#day-split button').forEach((btn) => btn.setAttribute('aria-pressed', String(btn.dataset.side === use)));
+    if (!say) return;
+    const n = box.dataset.n;
+    if (use === 'under') {
+      say.innerHTML = `${box.dataset.under} af ${n} dage lå <span class="keep">under nul.</span> Det er afstanden til periodens start, <span class="keep">ikke et fald</span> <span class="keep">fra top.</span>`;
+    } else {
+      say.innerHTML = `${box.dataset.over} af ${n} dage lå på eller <span class="keep">over nul.</span> Nul er første dag <span class="keep">i perioden.</span>`;
+    }
   }
 
   function syncStops(index) {
@@ -605,6 +702,19 @@
     const i = Number(event.target.value);
     state.selectedDate = state.series[i].date;
     setPoint(i, true);
+  });
+  $('#day-split')?.addEventListener('click', (event) => {
+    const btn = event.target.closest('button[data-side]');
+    if (!btn) return;
+    paintDaySplit(btn.dataset.side);
+  });
+  $('#first-below')?.addEventListener('click', () => {
+    const hop = $('#first-below');
+    const index = Number(hop?.dataset.i);
+    if (!state.series[index]) return;
+    state.selectedDate = state.series[index].date;
+    setPoint(index, false);
+    paintDaySplit('under');
   });
   $('#stops-track')?.addEventListener('click', (event) => {
     const btn = event.target.closest('.stop');
