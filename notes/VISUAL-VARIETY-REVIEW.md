@@ -92,6 +92,46 @@ Søjlerne under kurven var lige høje. Højden er nu dybden, bredden er stadig t
 
 De to sammenlign-kort er stadig et par, med samme felter. Forskellen er tegnet: PMINDI har en pil ud af kassen. PMINDIAKK har et loop, der vender tilbage i kassen. Ingen tredje kasse. Ét panel. AKK-kortet har ingen afkastprocent. "fra 5. dec. 2026" står på sin egen linje. Gul kant på Andet. Link til drawdown er der. Ingen sidescroll ved 1280, 375 og 320. Ingen konsolfejl.
 
+### Update · nøgle under kurven · 2026-10-16 ~01:28 CEST
+
+Forklaringen under underwater var ét afsnit. Den er nu en linje, en nøgle og en kort sætning. Nøglen har dybeste bund, seneste dag, valgt dag, stregen ved 10 % under nul, og de to søjler (højde er dybde, gul er åben). Svg-beskrivelsen har stadig den fulde tekst. Et klik på −35,8 % sætter udlæsningen til 8. apr. 2025. Ingen sidescroll ved 1280, 375 og 320. Ingen konsolfejl.
+
+### Update · embed-kort og sætning · 2026-10-16 ~01:34 CEST
+
+Klasse-kortene i embed havde tom plads til højre. PMINDI har nu pilen ud. PMINDIAKK har loopet tilbage. Teksten rammer ikke mærket, ved 1280, 375 og 320. Sætningen under grafen sagde slutdatoen to gange ("til 14. okt. 2026, pr. 14. okt. 2026"). Den siger den én gang. Hele perioden er stadig +104,8 %. År til dato er +4,0 %. PMINDIAKK har tom svg, ingen procent, og linket siger at drawdown vises efter 12 måneder. Ingen sidescroll. Ingen konsolfejl.
+
+### Update · grænse i prikkerne · 2026-10-16 ~01:40 CEST
+
+Prikfordelingen havde ingen grænse. En brand-streg står nu ved 10 % under nul, samme grænse som på kurven. Tallet −10 har samme farve. 4 af 41 prikker ligger til højre for stregen. Den gule prik er blandt dem. De øvrige ligger i bunken til venstre. Median og middel er uændrede, −2,8 % og −5,2 %. Ingen tekst uden for svg'en. Ingen sidescroll ved 1280, 375 og 320. Ingen konsolfejl.
+
+### Update · året under vand · 2026-10-16 ~01:32 CEST
+
+2026 i årssøjlerne sagde kun "til dato" og +4,0 %. Serien ligger stadig under vand i det år. Søjlen har nu cyan kant og teksten "Under vand". 2025 har stadig gul kant og "Dybeste fald", og søjlen er stadig +15,2 %. Søjlerne i samme række deler bundlinje ved 1280, 375 og 320. Teksten siger, at 2026 er året serien stadig ligger under vand, og at søjlen er årets afkast. Ingen sidescroll. Ingen konsolfejl.
+
+### Update · tallene skæres ikke · 2026-10-16 ~01:44 CEST
+
+Den gule streg for toppen gik gennem "nu -23 %". Streken ned til bunden gik gennem "-36 %". Begge tal står nu på en plade i samme farve som baggrunden. Stregerne stopper bag tallet og fortsætter over og under. Tallene er de samme. Ringen og den gule prik er fri af pladen. Et klik på søjlen for 8. apr. 2025 sætter udlæsningen til −35,8 %. En dag uden for de fire, 20. okt. 2023, slukker kant og række. Ingen tekst uden for svg'en. Ingen sidescroll ved 1280, 375 og 320. Ingen konsolfejl. AKK siger stadig 12 måneder og har ingen procent.
+
+### Update · 0 % er brand · 2026-10-16 ~01:51 CEST
+
+0 %-linjen i embed var en tynd stiplet streg i samme familie som gitteret. Den er nu brand, 2 px, og tallet 0 % har samme farve. De andre gitterlinjer er uændrede. Hele perioden er stadig +104,8 %, CAGR +26,4 %, år til dato +4,0 %. Sætningen siger slutdatoen én gang. 5. feb. 2026 er −6,9 %. Prik, udlæsning og tooltip er rosa, og tooltip rammer ikke sluttallet. PMINDIAKK har tom svg, ingen procent, og linket siger at drawdown vises efter 12 måneder. Ingen tekst uden for svg'en. Ingen sidescroll ved 1100, 375 og 320. Ingen konsolfejl.
+
+### Update · årstal tæt på søjlerne · 2026-10-16 ~01:53 CEST
+
+Der var et tomt bånd mellem søjlerne og årstallene. Årstallene står nu 12 enheder under den højeste søjle. Kurven, søjlerne og tallene har samme sted som før. "-36 %" og "nu -23 %" er uændrede. Et klik på søjlen for 8. apr. 2025 sætter udlæsningen til −35,8 %. Ingen tekst uden for svg'en. Ingen sidescroll ved 1280, 375 og 320. Ingen konsolfejl. AKK siger stadig 12 måneder og har ingen procent.
+
+### Update · temasøjler fylder rækken · 2026-10-16 ~01:55 CEST
+
+På bred skærm stoppede temasøjlerne ved 560 px, og panelet havde et tomt felt til højre. Søjlerne fylder nu rækken. De to søjler i en række har samme spor, så de deler skala. Tallene er de samme. Platforme er 16,0 % og 14,7 %. Andet / uklassificeret er 11,6 % og 13,2 %, og rækken har stadig gul kant. På 800, 375 og 320 er bredden som før, fordi loftet ikke bandt. Ét panel. Link til drawdown er der. Ingen sidescroll. Ingen konsolfejl.
+
+### Update · lys kant på den gule søjle · 2026-10-16 ~02:06 CEST
+
+Den åbne søjle er gul og valgt fra start. Den lyse kant var 1,25 px og forsvandt mod det gule. Den er nu 3 px, så den ses mod baggrunden. En valgt søjle i brand er stadig 1,25 px. Et klik på søjlen for 8. apr. 2025 sætter udlæsningen til −35,8 %, og den gule søjle mister kanten. Ingen sidescroll ved 320. Ingen konsolfejl.
+
+### Update · stregen ved nul er lys · 2026-10-16 ~02:15 CEST
+
+Nul-linjen var en svag stiplet streg og forsvandt, hvor kurven lå under vand. Den er nu lys og hel, tegnet oven på fyldet, og tallet 0 har samme farve. Stregen ved 10 % under nul er stadig brand og tykkere. Nøglen siger "0 % er toppen". "-36 %" og "nu -23 %" er uændrede. Et klik på søjlen for 8. apr. 2025 sætter udlæsningen til −35,8 %. Ingen tekst uden for svg'en. Ingen sidescroll ved 1280, 375 og 320. Ingen konsolfejl. AKK siger stadig 12 måneder og har ingen procent.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.
