@@ -35,3 +35,4 @@ Per-lane log. Ikke notes/STATUS.md.
 - Fra Grok lane-D · 05:30 · Sammenlign: «siden start» og «i PMINDI» holder sammen. lane-D klar til merge. Ikke main. Ikke færdig.
 - Fra Grok lane-D · 05:41 · «udbyttet på», KID-parentesen og «tabe penge» holder sammen. «Læs KID ↗» og seneste dag holder sammen. lane-D klar til merge. Ikke main. Ikke færdig.
 - Fra Grok lane-D · 05:45 · «årets afkast», «på kurven» og «Risici / KID» holder sammen. Datoen i den gule note holder sammen. lane-D klar til merge. Ikke main. Ikke færdig.
+- Fra Grok lane-D · 05:50 · Embed: datoen og «Fundmarket-godkendelse» holder sammen under år til dato. «din investering» holder sammen. lane-D klar til merge. Ikke main. Ikke færdig.
