@@ -269,3 +269,7 @@ GOEX ved Camp Minden i Louisiana producerer igen sortkrudt ifølge meddelelsen a
 ## QuantumScape · 2026-10-16 02:10 CEST
 
 QSE-5 til køretøjer og QS PowerBlock til datacentre. Ikke masseproduktion. Ikke et lager i drift. First og anode-less er ikke kopieret. Adressen i San Jose er ikke brugt som en fabrik. AI-udkast uden gennemgangsdato. Energilagrings-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Fluence · 2026-10-16 02:12 CEST
+
+Smartstack er en platform til batterier på nettet. Ikke et kraftværk. Teksten siger ikke, at selskabet laver cellerne. Market-leading og 30 procent er ikke kopieret. AI-compute-listen er ikke rørt. AI-udkast uden gennemgangsdato. Energilagrings-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.

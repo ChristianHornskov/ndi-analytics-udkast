@@ -899,3 +899,13 @@ QSE-5 er stadig nævnt til køretøjer. QS PowerBlock er ikke et lager i drift, 
 Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. QS PowerBlock står. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `040120f` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 02:12 CEST. Fluence nævner platformen Smartstack. Ikke færdig.**
+
+Det er batterier til nettet, ikke et kraftværk. Teksten siger ikke, at selskabet selv laver cellerne. Market-leading og 30 procent er ikke taget med. AI-compute-listen er ikke ændret. Ingen `reviewedAt`. Blurben under energilagring og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Smartstack står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `13554f0` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

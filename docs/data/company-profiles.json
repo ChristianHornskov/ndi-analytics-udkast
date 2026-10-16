@@ -445,14 +445,14 @@
   "US34379V1035": {
    "name": "Fluence Energy",
    "theme": "energy",
-   "summary": "Leverer batterisystemer og software, der lagrer strøm på elnettet og afleverer den igen.",
-   "watch": "Projekternes størrelse, forsyning af battericeller og kundernes investeringer i elnet.",
+   "summary": "Leverer batterisystemer og software, der lagrer strøm på elnettet og afleverer den igen. Siden nævner platformen Smartstack. Det er ikke et kraftværk, og teksten siger ikke, at selskabet selv laver cellerne.",
+   "watch": "Projekternes størrelse og forsyning af battericeller. Smartstack er ikke et kraftværk.",
    "source": "https://fluenceenergy.com/",
-   "products": "Batterisystemer til elnettet og tilhørende software.",
+   "products": "Batterisystemer til elnettet, herunder Smartstack, og tilhørende software.",
    "customers": "Elselskaber, projektudviklere og store elforbrugere.",
-   "role": "Lagring mellem elproduktion og forbrug.",
+   "role": "Batterisystemer til nettet. Smartstack er ikke et kraftværk, og teksten siger ikke, at selskabet laver cellerne.",
    "narrative": [
-    "Fluence leverer batterisystemer og software til elnettet. Systemerne lagrer strøm og sender den ud igen.",
+    "Fluence leverer batterisystemer og software til elnettet. Siden nævner platformen Smartstack. Systemerne lagrer strøm og sender den ud igen.",
     "Fluence er ikke et kraftværk. Denne beskrivelse siger heller ikke, at selskabet selv fremstiller battericellerne. I kæden står selskabet på batterier."
    ],
    "narrativeSources": [
