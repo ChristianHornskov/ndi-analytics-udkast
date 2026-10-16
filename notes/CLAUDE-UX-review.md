@@ -678,3 +678,29 @@ main har fået lane A, B, C, D og E samt X-panel på tema (`a34a733`, 26 docs-fi
 - **Privat:** den nye "Sådan læser du grafen" og "Indre værdi" besvarer præcis de begynderspørgsmål, persona-filen stiller ✅. X-panelet med "BREAKING" på SoftBank er det modsatte af den rolige tone, personaen ønsker.
 - **Familiekontor:** vil spørge, hvorfor tredjepartsrygter står på en produktside, og hvem der kuraterer dem. Kræver stadig KID-omkostningstotal og ÅOP.
 - **Visuel variation:** vaerdikaeder er nu siden med flest former. Risikoen er træthed ved 375 px, ikke ensformighed. Andre sider er fine.
+
+## 2026-10-16 02:17 CEST · cyklus 30 (main `e402f15`, docs-delta: "Leo 02:00/02:07 UX+FO + KID costs / X scrub")
+
+Pages (00:15:49 GMT) = main `e402f15`. Jeg har kørt Playwright live ved 375 på 24 URL'er: 0 pageerrors, 0 vandret overflow og én h1 på alle sider ✅. Merge af origin/main ind i lane-R gav konflikt i `notes/STATUS.md`. Jeg har løst den ved at beholde begge sider, og der er ingen docs-ændringer. Coordinator-loopet havde allerede afbrudt sin egen merge af lane-R kl. 02:12 af samme grund.
+
+### MUST
+- **Fakta siger nu "KID'ets årlige omkostningsmæssige konsekvens er *ikke oplyst* for PMINDI og *ikke oplyst* for PMINDIAKK"** (live, `fakta.html:245`). Ny boks "Omkostningsniveau (kort)" læser `costs.kidRiy5y`, men feltet findes ikke i `data/fund-facts.json` (0 hits i hele docs/). `pct()` falder derfor tilbage til "ikke oplyst". Linket "Se opstillingen →" går til `omkostninger.html#kid-omkostning`, men det anker findes ikke, og omkostninger.html er uændret i `e402f15`. For en familiekontor-læser er det værre end ingenting: siden påstår, at KID'et ikke oplyser tallet. **Ret:** tilføj `kidRiy5y: 2.79 / 2.85` (med KID-dato) i fund-facts, og byg sektionen `#kid-omkostning` på omkostninger. Bemærk: `HANDOFF-CODEX.md` og STATUS siger "KID RIY på omkostninger" er landet. Det passer ikke med main.
+- **"AI-udkast" over tomt felt: lukket** ✅. Badgen vises nu kun, når der er tekst (`selskab.html`).
+- Invester har ét "4."-trin (lukket i cyklus 29) ✅.
+
+### SHOULD
+- **Fonden: tredjeparts-"BREAKING" i graf-listen.** Commit-beskeden siger "drop @MadsC007 chartMarkers", men de 14 `chartMarkers` indeholder nu @BullTheoryio "BREAKING: SoftBank is seeking to raise up to $100 billion …" og "BREAKING: Nvidia … backstop $250 BILLION". De vises under fondens hovedgraf (`?view=fonden`). Det er fondens vigtigste side. Begræns markørerne til @InvestNewdeal (webinarer, børsnotering) eller fjern X fra grafen.
+- **Fonden: "det er en compliance-beslutning, ikke et datamangel"** ved benchmark-teksten. Det er internt sprog på en kundeside, og "et datamangel" skal være "en datamangel". Skriv bare: "Fonden har intet fast benchmark, så vi tegner ikke en sammenligningskurve."
+- **Fakta "Mangler fra NDI"** er god som intern tjekliste ✅ (erstatter spredte "udfyldes"-pills). Men på en offentlig fakta-side ser "Revision / auditor" under "Mangler fra NDI" amatøragtigt ud for et familiekontor. Skjul boksen bag `?intern=1`, eller formulér den som "Oplysninger, der følger".
+- **Livscyklus-strip foldet ind på mobil** ✅ med "Vis kurve". Overskriften er klikbar, men det er ikke en `<button>` (ingen `aria-expanded`, ikke tastatur-fokusérbar). Lav den om til en knap.
+- **Udforsk ved 375:** 1.052 synlige tekstelementer under 12 px (tabelceller og tags), og siden er 28.282 px høj. vaerdikaeder er nu nede på 6 elementer under 12 px ✅ (rettet i denne commit). Udforsk er det næste sted for samme ≥12 px-regel.
+- **Entréen:** "Sådan tænker vi" og "Omkostninger · du kan tabe penge" som egne døre ✅. Kortteksten "KID-tal og Fundmarket-postsatser" lover KID-tal, som omkostninger ikke viser endnu (se MUST).
+- Udbytte "38,9 kr." / "38,0 kr." har nu komma ✅. "Max drawdown" er blevet til "Største fald" på fonden og fakta ✅. Den gamle term står stadig i `laer/laes-grafen.html` (1 hit).
+
+### Nice
+- ndi-perspektiv er uændret 143.436 px ved 375. `index.html`/`js/data.js` skriver stadig "Central Information Dokument".
+
+### Persona-linser
+- **Privat (55+):** fonden er roligere (Største fald, links til Sådan tænker vi, "sådan kan du selv vurdere afkastet") ✅. Men "BREAKING: $250 BILLION" i fondens graf-liste skaber uro og ligner nyhedsstrøm. Det strider mod "rolig, langsigtet".
+- **Familiekontor:** "To klasser, samme strategi" svarer på DD-spørgsmålet om forskelle i beholdning ✅. Omkostningsniveau "ikke oplyst" er den mest skadelige enkeltlinje på sitet lige nu.
+- **Visuel variation:** der er ingen nye former. "Mangler fra NDI" er én liste i stedet for spredte pills, hvilket giver mindre støj ✅.

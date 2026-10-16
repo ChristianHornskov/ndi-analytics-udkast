@@ -733,3 +733,29 @@ Ikke juridisk rådgivning. Pages (00:09:59 GMT) svarer til main `a34a733`. Jeg h
 
 ### Prioritet
 **2** (X-panel på produktsider, ny flade) → **9** (KID-total) → **5** (ÅTD uden godkendelse) → **3** ("kan tabe" på omkostninger/ndi-paa-x) → **11** (embed KID/SRI) → **1** (mærkning).
+
+## 2026-10-16 02:17 CEST · cyklus 30 (main `e402f15`, docs-delta)
+
+Ikke juridisk rådgivning. Pages (00:15:49 GMT) = main `e402f15`. Jeg har kørt Playwright live ved 375 på 24 URL'er med tekst-tælling og grep i docs/.
+
+### Status pr. MUST
+1. **"Markedsføringsmateriale"-mærkning:** 0 hits på alle 24 sider. **Åben.**
+2. **Tredjepartsopslag / "MADS FØLGER": uændret på tema/selskab og nu også på fonden.** SoftBank-selskabssiden har "MADS FØLGER" ×3 + 2× "BREAKING" (@BullTheoryio). tema energi har "MADS FØLGER" ×2. ndi-paa-x har ×10. **Nyt:** `chartMarkers` i `x-posts.json` er skiftet fra @MadsC007 til bl.a. @BullTheoryio-opslag med "BREAKING". De vises under fondens hovedgraf på `?view=fonden` (BREAKING ×2). Det betyder, at tredjepartsrygter om navngivne beholdninger (SoftBank-kapitalrejsning, Nvidia-garanti) nu står direkte ved fondens afkastgraf. **Højeste prioritet.** Begræns grafmarkører til NDI's egne konti, og fjern "BREAKING"/"MADS FØLGER" fra produktsider.
+3. **"kan tabe":** omkostninger 0, ndi-paa-x 0 (live re-verificeret). **Åben.** Entré-kortet lover "du kan tabe penge" på omkostninger, men siden har det ikke.
+4. **PMINDIAKK før 12 mdr.:** ingen afkasttal ✅. NAV-niveau er uændret og afventer Christians beslutning.
+5. **ÅTD +4,0 % og 100.000 kr.-eksempel "afventer Fundmarket-godkendelse"** står stadig på fonden (ÅTD ×4). **Åben.**
+6. SRI mod udsving: lukket ✅.
+7. **`chartMarkers` @MadsC007:** fjernet ✅, men erstattet af et værre problem (se 2).
+8. Offentligt repo: Christians beslutning.
+9. **KID-omkostningstal: regression i præsentation.** fakta viser nu "KID'ets årlige omkostningsmæssige konsekvens er **ikke oplyst** for PMINDI og **ikke oplyst** for PMINDIAKK ved 5 år", fordi `costs.kidRiy5y` mangler i `fund-facts.json`. Det er faktuelt forkert (KID'et oplyser 2,79 %/2,85 %) og kan læses som manglende PRIIP-oplysning. omkostninger.html er uændret: 0 hits for 2,79/2,85, og ankret `#kid-omkostning` findes ikke. `HANDOFF-CODEX.md` påstår, at "KID RIY på omkostninger" er landet. **Det er ikke sandt på main.** Ret data og omkostningssektion, eller fjern fakta-boksen, indtil tallet er der.
+10. Delperioder: "2023*" med "delår" ✅. "2026"-chip og ÅTD er stadig delår uden mærkning (SHOULD).
+11. **Embed uden KID/SRI:** KID-links 0. **Åben.**
+
+### Nyt OK ✅
+- "Største fald" i stedet for "Max drawdown" på fonden og fakta. AI-badge vises kun ved tekst (selskab). Der er ikke længere en tom "AI-udkast" ✅.
+- Benchmark: "Fonden har intet fast benchmark. Vi tegner ikke en sammenligningskurve (fx Nasdaq)" ✅ (ingen benchmark-claim). **SHOULD:** "det er en compliance-beslutning" er intern begrundelse på en kundeside. Fjern halvdelen.
+- "Sådan kan du selv vurdere afkastet +104,8 %" henviser til største fald, risici og horisont. Der er intet rådgivningssprog ✅.
+- 0 hits for "overvægt" i handelsbetydning, "øger eksponering", 1m/3m på PMINDI, "garanteret", "bedste" og "sælg nu" ✅. Beholdning pr. 1. jun. 2026 (forsinket) står på selskab, portefølje og fonden ✅.
+
+### Prioritet
+**2** (X-tredjepart ved fondens graf + produktsider) → **9** (fakta "ikke oplyst" + manglende KID-tal på omkostninger) → **5** (ÅTD uden godkendelse) → **3** → **11** → **1**.
