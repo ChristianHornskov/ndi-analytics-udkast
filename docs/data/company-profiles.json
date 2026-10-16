@@ -1706,20 +1706,37 @@
   "US4859241048": {
    "name": "Karman Space & Defense",
    "theme": "space",
-   "summary": "Laver dele til løfteraketter og missiler. Selskabet skriver, at det beskytter nyttelast, laver mellemtrin og samler raketmotorer. Det sender ikke selv satellitter op.",
-   "watch": "Ordrer fra de store programmer og evnen til at levere dele til tiden.",
-   "source": "https://www.karman-sd.com/",
-   "products": "Beskyttelse af nyttelast, mellemtrin og raketmotorer.",
-   "customers": "Forsvars- og rumprogrammer.",
-   "role": "Komponenter til opsendelse.",
+   "summary": "Laver dele til løfteraketter og missiler og sender ikke selv satellitter op. Meddelelsen skriver hovedkontor i Huntington Beach. Kontaktsiden viser postnummer 92649 og ikke en gade. Købet af Walker blev gennemført 28. august 2026, efter beholdningen. MK 54 er en øvelsesdel uden sprængladning.",
+   "watch": "Om øvelsesdelen til MK 54 bliver sat i flåden. Kontrakten 22. juli 2026 er efter beholdningen og er ikke en opsendelse.",
+   "source": "https://karman-sd.com/contact/",
+   "products": "Beskyttelse af nyttelast, mellemtrin og raketmotorer. Walker er missildele. MK 54 Fleet Exercise Section er en øvelsesdel uden sprængladning.",
+   "customers": "Meddelelsen 22. juli 2026 nævner Northrop Grumman og den amerikanske flåde. Beløbet er ikke taget med.",
+   "role": "Hovedkontor i Huntington Beach uden gade. Walker er efter beholdningen. MK 54 er en øvelsesdel, ikke en opsendelse.",
    "narrative": [
-    "Karman skriver, at selskabet beskytter nyttelast og har udstyr til at skille den fra fartøjet. Siden nævner også aerodynamiske mellemtrin, raketmotorer og affyringsudstyr.",
-    "Det er dele og udstyr. Selskabet sender ikke selv satellitter op. I kæden står det som leverandør af dele til opsendelse."
+    "Kontaktsiden, læst 16. oktober 2026, skriver hovedkontor i Huntington Beach i Californien og postnummer 92649. Gaden står ikke. Samme postnummer står to gange. Listen skriver Skagit, og postnummerlinjen skriver Mount Vernon, WA 98273. Lokationssiden nævner byer, herunder Horsham i Pennsylvania, og ikke en gade. Det er steder, ikke en opsendelse.",
+    "Meddelelsen 11. september 2026 skriver, at købet af Walker Precision Engineering blev gennemført 28. august 2026. Datoen ligger efter beholdningen pr. 1. juni 2026. Walker arbejder i Skotland, England og Polen. Overskriften skriver 25 missilprogrammer. Brødteksten skriver mere end 25. Tallene er ikke ens. Det er missildele, ikke en opsendelse. Meddelelsen skriver NYSE: KRMN. Mere end 130 programmer og over 80 hovedleverandører står uden egen dato.",
+    "Meddelelsen 22. juli 2026 skriver, at Northrop Grumman har givet en kontrakt på Proof of Manufacture til MK 54 Fleet Exercise Section. Øvelsesdelen erstatter sprængladningen. Teksten siger, at flåden endnu ikke har fået den. Datoen ligger efter beholdningen. Beløbet er ikke taget med. Det er ikke en opsendelse. Meddelelsen 14. juli 2026 skriver, at anlægget i Horsham skal udvides. Teksten siger will. Det er ikke et målt år. Beløbet er ikke taget med. Ordene leader og next-generation er ikke taget med."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets side",
-     "url": "https://www.karman-sd.com/"
+     "label": "Kontakt",
+     "url": "https://karman-sd.com/contact/"
+    },
+    {
+     "label": "Lokationer",
+     "url": "https://karman-sd.com/company/locations/"
+    },
+    {
+     "label": "Walker, 11. september 2026",
+     "url": "https://karman-sd.com/news/karman-space-defense-completes-walker-acquisition/"
+    },
+    {
+     "label": "MK 54, 22. juli 2026",
+     "url": "https://karman-sd.com/news/karman-space-defense-awarded-northrop-grumman-contract-mk54/"
+    },
+    {
+     "label": "Horsham, 14. juli 2026",
+     "url": "https://karman-sd.com/news/karman-space-defense-expands-pennsylvania-facility-to-respond-to-nations-need-to-strengthen-maritime-defense-industrial-base/"
     }
    ]
   },

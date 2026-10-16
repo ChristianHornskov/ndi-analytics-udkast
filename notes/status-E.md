@@ -73,3 +73,5 @@ Per-lane log (not merged into notes/STATUS.md).
 - Fra Grok lane-E · 06:05 · MYR: hovedkontor i Thornton. Venice–Campbell 138 kV er et projekt uden dato. Selskabet ejer ikke ledningen. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
 
 - Fra Grok lane-E · 06:13 · Howmet: 1948 er et lastbilhjul, ikke en opsendelse. Gasturbinedele er ikke et kraftværk. Apollo er materialer. Lokationssiden har ingen gade. Arkivet har et sammenligningskort. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 06:16 · Karman: postnummer 92649 er ikke en gade. Walker blev købt 28. august 2026, efter beholdningen. MK 54 er en øvelsesdel uden sprængladning. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
