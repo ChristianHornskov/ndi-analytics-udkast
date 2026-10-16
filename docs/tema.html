@@ -152,6 +152,30 @@
  </tbody></table></div>
  <p class="src">Navnene i hver gruppe står efter vægt. Se også <a href="om-data.html#g-temaforslag">hvordan temaforslag laves</a>.</p>
  </section>` : '';
+ // Figur: hvor ligger vægten i temaet? Kun vægte fra den forsinkede beholdning (samme tal som tabellen) - ingen kurser eller afkast pr. aktie
+ const pct = (x) => (x || 0).toFixed(1).replace('.', ',');
+ const weightFig = (() => {
+ const ws = list.filter((p) => p.weight > 0);
+ if (tk === 'andet' || ws.length < 2 || !(sum > 0)) return '';
+ const OP = [1, 0.8, 0.62, 0.48, 0.36];
+ const top = ws.slice(0, 5);
+ const restN = ws.length - top.length;
+ const restW = ws.slice(5).reduce((s2, p) => s2 + p.weight, 0);
+ const topShare = top.reduce((s2, p) => s2 + p.weight, 0) / sum * 100;
+ const segs = top.map((p, i) => ({ label: displayName(p), href: `selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}`, w: p.weight, op: OP[i], multi: p.theme !== tk }));
+ if (restN) segs.push({ label: `${restN} ${restN === 1 ? 'øvrigt' : 'øvrige'}`, w: restW, rest: true });
+ const bar = segs.map((g) => `<span style="display:block;flex:0 0 ${(g.w / sum * 100).toFixed(2)}%;min-width:2px;height:100%;background:${g.rest ? 'var(--muted)' : 'var(--brand)'};opacity:${g.rest ? 0.3 : g.op};border-right:2px solid var(--panel)"></span>`).join('');
+ const sw = (g) => `<span aria-hidden="true" style="display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-1px;margin-right:6px;background:${g.rest ? 'var(--muted)' : 'var(--brand)'};opacity:${g.rest ? 0.3 : g.op}"></span>`;
+ const legend = segs.map((g) => `<li style="padding:2px 0;display:flex;flex-wrap:wrap;align-items:center;gap:2px 8px;justify-content:space-between;border-bottom:1px solid var(--line)"><span>${sw(g)}${g.rest ? esc(g.label) : `<a href="${g.href}" style="display:inline-block;padding:4px 0">${esc(g.label)}</a>${g.multi ? ' <small style="color:var(--muted)">(ekstra tema)</small>' : ''}`}</span><span style="white-space:nowrap;color:var(--muted);margin-left:auto">${pct(g.w / sum * 100)} % af temaet · ${w(g.w)} % af fonden</span></li>`).join('');
+ const summary = `De ${top.length} største udgør ${pct(topShare)} % af temaets vægt${restN ? `, de ${restN} øvrige ${pct(100 - topShare)} %` : ''}.`;
+ return `<section class="panel">
+ <h2 class="panel-h">Hvor ligger vægten i temaet?</h2>
+ <p style="margin:0 0 10px">${summary} Temaet fylder ca. ${w(sum)} % af ${esc(fund.short)}.</p>
+ <div role="img" aria-label="${esc(`Vægtfordeling i ${theme.title}: ${summary}`)}" style="display:flex;height:22px;border-radius:6px;overflow:hidden;background:var(--panel-2)">${bar}</div>
+ <ul style="list-style:none;margin:10px 0 0;padding:0;font-size:14px">${legend}</ul>
+ <p class="src">Vægte i den forsinkede beholdning pr. ${posAsOf}. Ekstra temaer tæller med, så temaer overlapper. Figuren viser eksponering, ikke en anbefaling, og den siger intet om kursudvikling.</p>
+ </section>`;
+ })();
  const vchain = chainForTheme(vc.chains, tk);
  const others = td.themes.filter((t) => t.slug !== theme.slug);
  const rows = shown.map((p) => {
@@ -177,6 +201,8 @@
  <div class="metric"><div class="label">Med NDI-linse</div><strong>${nLens} af ${list.length}</strong><small>Kvalitativ beskrivelse (udkast), ikke en rating</small></div>
  </div>
  <p class="band">Temaet viser <strong>eksponering</strong> i fondens forsinkede beholdning. Ikke en anbefaling eller en bevidst overvægt.</p>
+
+ ${weightFig}
 
  ${andetPanel}
 
