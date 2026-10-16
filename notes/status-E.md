@@ -125,3 +125,5 @@ Per-lane log (not merged into notes/STATUS.md).
 - Fra Grok lane-E · 08:09 · MDA: St-Bruno-de-Montarville ligger på den sydlige bred af Montreal. Vægten er uændret. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
 
 - Fra Grok lane-E · 08:10 · Antimony og Karman: will er skrevet som noget, der skal ske. Børsnavnet er ude af første sætning. Vægtene er uændrede. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 08:23 · Microvast: Clarksville, Ludwigsfelde og Huzhou er kundeservice, ikke de to produktionssteder. QS PowerBlock er et referencedesign, og adressen i San Jose er ikke en fabrik. Vægtene er uændrede. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
