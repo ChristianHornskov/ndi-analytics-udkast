@@ -5,7 +5,7 @@ OWN files only:
 - docs/js/data.js (only if needed for themeProposals / safe helpers — no per-stock returns)
 - docs/temaer.html, docs/tema.html, docs/selskaber.html, docs/selskab.html
 - docs/data/themes.json, docs/data/multi-tags.json, docs/data/unique-metrics.json, docs/data/portfolio.json (themeStatus forslag only)
-- notes/MADS-CHECKLIST.md, notes/THEME-FORSLAG.md, notes/STATUS.md (append lane-B)
+- notes/MADS-CHECKLIST.md, notes/THEME-FORSLAG.md, notes/status-B.md (append only)
 
 DO NOT touch: docs/css/ndi.css, docs/vaerdikaeder.html, docs/data/value-chains.json, ideer.html, HANDOFF-CODEX.md
 
@@ -18,7 +18,18 @@ Skip market-cap/product-category without data.
 
 Commit on lane-B. Continuous cycles to 06:30. Never idle.
 
-HARD RULE (Leo): Before EVERY git push run `bash scripts/precheck.sh` (must exit 0). Prefer `bash scripts/push.sh origin lane-X` then tell STATUS the branch is ready to merge — OR commit on lane branch only and do NOT push main. Precheck FAILS if docs/ has internal notes (only docs/notes stub allowed), raw data.json, holdings/company-months after 2026-06-01, daily moves (d1), or per-stock returns/P/S/P/E/52w — or if docs/js reads those fields. Internal docs only in /notes. Never force-push. Quality > speed. Never claim done. When cycle finishes: commit on YOUR lane branch, append STATUS "Fra Claude/Grok lane-X", then START THE NEXT checklist item immediately — no idle gaps until 06:30 CEST.
+
+## ANTI-CONFLICT (Leo 03:00 — mandatory)
+1. **Do NOT write to notes/STATUS.md.** Append only to `notes/status-B.md` (create if missing). One short bullet per cycle: "Fra Claude lane-B · HH:MM · <what shipped>".
+2. **Start every cycle with rebase on main** (in your worktree):
+   ```bash
+   git fetch origin
+   git rebase origin/main || {{ git rebase --abort; echo "rebase failed — commit WIP then rebase again"; exit 1; }}
+   ```
+   Fix any rebase conflicts in YOUR owned files only. Never edit other lanes' files to "win" a rebase.
+3. Push with `bash scripts/push.sh origin lane-B` (or equivalent) after precheck. Do not push main.
+
+HARD RULE (Leo): Before EVERY git push run `bash scripts/precheck.sh` (must exit 0). Prefer `bash scripts/push.sh origin lane-X` then tell notes/status-B.md the branch is ready to merge — OR commit on lane branch only and do NOT push main. Precheck FAILS if docs/ has internal notes (only docs/notes stub allowed), raw data.json, holdings/company-months after 2026-06-01, daily moves (d1), or per-stock returns/P/S/P/E/52w — or if docs/js reads those fields. Internal docs only in /notes. Never force-push. Quality > speed. Never claim done. When cycle finishes: commit on YOUR lane branch, append notes/status-B.md, then START THE NEXT checklist item immediately — no idle gaps until 06:30 CEST.
 
 
 ## IDESPEJDER Top5 + PERSONA (23:42)

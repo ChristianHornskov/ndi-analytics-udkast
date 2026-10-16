@@ -45,19 +45,19 @@ ensure_loops() {
   for L in A B C; do
     if ! pgrep -af "PROMPT-$L.md" | grep -v grep >/dev/null; then
       echo "RESTART Claude lane-$L $(date)"
-      nohup bash -c "cd '$ROOT'; while true; do echo \"==== \$(date) start cycle ====\" >> logs/lane-$L-claude.out; claude -p --dangerously-skip-permissions --permission-mode bypassPermissions --output-format text \"\$(cat notes/lanes/PROMPT-$L.md) ADDITIONAL: Continuous overnight loop. One high-impact commit on lane-$L, push origin lane-$L.\" </dev/null >> logs/lane-$L-claude.out 2>&1; echo \"==== \$(date) cycle exit \$? ====\" >> logs/lane-$L-claude.out; sleep 5; done" >/dev/null 2>&1 &
+      nohup bash -c "cd '$ROOT'; while true; do echo \"==== \$(date) start cycle ====\" >> logs/lane-$L-claude.out; claude -p --dangerously-skip-permissions --permission-mode bypassPermissions --output-format text \"\$(cat $ROOT/notes/lanes/PROMPT-$L.md) ADDITIONAL: Continuous overnight loop. One high-impact commit on lane-$L, push origin lane-$L.\" </dev/null >> logs/lane-$L-claude.out 2>&1; echo \"==== \$(date) cycle exit \$? ====\" >> logs/lane-$L-claude.out; sleep 5; done" >/dev/null 2>&1 &
     fi
   done
   for L in D E X; do
     WT=/workspace/ndi-wt-$L
     if ! pgrep -af "ndi-wt-$L" | grep -v grep >/dev/null; then
       echo "RESTART Grok lane-$L $(date)"
-      nohup bash -c "cd '$WT'; while true; do echo \"==== \$(date) start cycle ====\" >> $ROOT/logs/lane-$L-grok.out; grok --cwd '$WT' --always-approve --output-format plain --prompt-file notes/lanes/PROMPT-$L.md </dev/null >> $ROOT/logs/lane-$L-grok.out 2>&1; echo \"==== \$(date) cycle exit \$? ====\" >> $ROOT/logs/lane-$L-grok.out; sleep 5; done" >/dev/null 2>&1 &
+      nohup bash -c "cd '$WT'; while true; do echo \"==== \$(date) start cycle ====\" >> $ROOT/logs/lane-$L-grok.out; grok --cwd '$WT' --always-approve --output-format plain --prompt-file $ROOT/notes/lanes/PROMPT-$L.md </dev/null >> $ROOT/logs/lane-$L-grok.out 2>&1; echo \"==== \$(date) cycle exit \$? ====\" >> $ROOT/logs/lane-$L-grok.out; sleep 5; done" >/dev/null 2>&1 &
     fi
   done
   if ! pgrep -af 'PROMPT-R' | grep -v grep >/dev/null; then
     echo "RESTART Reviewer R $(date)"
-    nohup bash -c "cd /workspace/ndi-wt-R; while true; do echo \"==== \$(date) start cycle ====\" >> $ROOT/logs/lane-R-claude.out; claude -p --dangerously-skip-permissions --permission-mode bypassPermissions --output-format text \"\$(cat notes/lanes/PROMPT-R.md) ADDITIONAL: One review cycle, commit lane-R, push.\" </dev/null >> $ROOT/logs/lane-R-claude.out 2>&1; echo \"==== \$(date) cycle exit \$? ====\" >> $ROOT/logs/lane-R-claude.out; sleep 75; done" >/dev/null 2>&1 &
+    nohup bash -c "cd /workspace/ndi-wt-R; while true; do echo \"==== \$(date) start cycle ====\" >> $ROOT/logs/lane-R-claude.out; claude -p --dangerously-skip-permissions --permission-mode bypassPermissions --output-format text \"\$(cat $ROOT/notes/lanes/PROMPT-R.md) ADDITIONAL: One review cycle, commit lane-R, push.\" </dev/null >> $ROOT/logs/lane-R-claude.out 2>&1; echo \"==== \$(date) cycle exit \$? ====\" >> $ROOT/logs/lane-R-claude.out; sleep 75; done" >/dev/null 2>&1 &
   fi
 }
 

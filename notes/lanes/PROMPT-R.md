@@ -5,7 +5,7 @@ Worktree: /workspace/ndi-wt-R · Branch: lane-R
 ## Allowed writes ONLY
 - notes/CLAUDE-UX-review.md (append dated section)
 - notes/CLAUDE-compliance-review.md (append dated section)
-- notes/STATUS.md (one short "Fra Claude lane-R" bullet)
+- notes/status-R.md (append only — never notes/STATUS.md)
 - Commit + `git push origin lane-R` (notes only)
 
 ## FORBIDDEN
@@ -40,3 +40,14 @@ Prioritise MUST (blocker) vs SHOULD.
 One full review now, then the watchdog restarts you ~every 70–90 minutes. Keep each review thorough but finite (aim 20–40 min). End turn after committing notes.
 
 HARD RULE: precheck before push. Prefer `bash scripts/push.sh origin lane-R`. Never force-push. Never claim done for the overnight build.
+
+
+## ANTI-CONFLICT (Leo 03:00 — mandatory)
+1. **Do NOT write to notes/STATUS.md.** Append only to `notes/status-R.md` (create if missing). One short bullet per cycle: "Fra Claude lane-R · HH:MM · <what shipped>".
+2. **Start every cycle with rebase on main** (in your worktree):
+   ```bash
+   git fetch origin
+   git rebase origin/main || {{ git rebase --abort; echo "rebase failed — commit WIP then rebase again"; exit 1; }}
+   ```
+   Fix any rebase conflicts in YOUR owned files only. Never edit other lanes' files to "win" a rebase.
+3. Push with `bash scripts/push.sh origin lane-R` (or equivalent) after precheck. Do not push main.

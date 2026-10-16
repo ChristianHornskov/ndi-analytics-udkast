@@ -15,3 +15,7 @@ Keep lanes until **08:30 CEST**. Final polish 08:30–08:45. Report to parent at
 Owns FO fakta/omkostninger polish + NDI på X feed/panels/chart markers.
 Static JSON only. Label: udvalgte offentlige opslag, ikke NDI's holdning.
 Merge after D/A/E/B/C when ready; FO/X files mostly non-overlapping.
+
+
+## 2026-10-16 03:05 — status files
+Lanes write `notes/status-<lane>.md` only. Rebase on `origin/main` each cycle. Coordinator merges product files; STATUS.md is lead-owned.
