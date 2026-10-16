@@ -19,6 +19,18 @@
  <meta property="og:image:alt" content="NDI Analytics - udkast. Gå på opdagelse i porteføljen.">
  <meta name="twitter:card" content="summary_large_image">
  <!-- og:end -->
+ <style>
+  .flow{list-style:none;margin:12px 0 6px;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .flow li{position:relative;background:var(--panel-2);border-radius:10px;padding:12px;font-size:14px;line-height:1.45;color:var(--muted)}
+  .flow li .k{display:block;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--faint);margin-bottom:2px}
+  .flow li strong{display:block;color:var(--text);margin-bottom:4px}
+  .flow li:not(:last-child)::after{content:"→";position:absolute;right:-12px;top:14px;color:var(--faint);font-size:16px}
+  .flow li.you{border-top:3px solid var(--yellow)}
+  .flow-side{margin-top:10px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .flow-side div{border-left:2px solid var(--line);padding-left:12px;color:var(--muted);font-size:14px;line-height:1.5}
+  .flow-side strong{color:var(--text)}
+  @media (max-width:720px){.flow,.flow-side{grid-template-columns:1fr}.flow li:not(:last-child)::after{content:"↓";right:auto;left:16px;top:auto;bottom:-15px}}
+ </style>
 </head>
 <body>
  <a class="skip" href="#main">Gå til indhold</a>
@@ -44,20 +56,29 @@
  <span>Danske investeringsfonde købes typisk gennem et depot i en bank eller på en handelsplatform. Udbuddet varierer fra sted til sted. Søg på ISIN DK0062499810 (PMINDI) eller DK0064642623 (PMINDIAKK) for at finde fonden.</span>
  </div>
  <div class="door" style="cursor:default">
- <strong>4. Ordre &amp; omkostninger</strong>
- <span>Se fondens <a href="omkostninger.html">officielle omkostningstal</a> (Fundmarket). Kurs, kurtage og depotgebyrer afhænger af din bank/platform. NDI Analytics viser ikke live kurser i v1.</span>
-
-<strong>4. Køb og omkostninger</strong>
- <span>Kurs, <a href="om-data.html#g-kurtage">kurtage</a> og eventuelle platformgebyrer afhænger af din bank eller platform. NDI Analytics viser ikke aktuelle kurser.</span>
-
-<strong>4. Køb og omkostninger</strong>
- <span>Kurs, <a href="om-data.html#g-kurtage">kurtage</a> og eventuelle platformgebyrer afhænger af din bank eller platform. Afkasttallene på siden er efter fondens <a href="om-data.html#g-omkostninger">løbende omkostninger</a> og <a href="om-data.html#g-skat">før skat</a>. NDI Analytics viser ikke aktuelle kurser.</span>
+ <strong>4. Køb og omkostninger</strong>
+ <span>Se fondens <a href="omkostninger.html">officielle omkostningstal</a> (Fundmarket). Kurs, <a href="om-data.html#g-kurtage">kurtage</a> og eventuelle platformgebyrer afhænger af din bank eller platform. Afkasttallene på siden er efter fondens <a href="om-data.html#g-omkostninger">løbende omkostninger</a> og <a href="om-data.html#g-skat">før skat</a>. NDI Analytics viser ikke aktuelle kurser.</span>
  </div>
  <div class="door" style="cursor:default">
  <strong>5. Følg med over tid</strong>
  <span>Forsiden viser fondens afkast over tid og den forsinkede beholdning viser, hvad fonden ejede pr. 1. juni 2026. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast.</span>
  </div>
  </div>
+ <section class="panel" id="hvem" aria-labelledby="hvem-h">
+ <h2 id="hvem-h" style="font-size:16px;margin-bottom:6px">Hvor ligger pengene, og hvem gør hvad?</h2>
+ <p style="color:var(--muted);line-height:1.55">Når du køber en andel, ejer du en lille del af fonden, ikke aktierne direkte. Fire led er med undervejs. Navnene står i Fundmarkets offentlige oplysninger om fonden.</p>
+ <ol class="flow">
+  <li class="you"><span class="k">1 · Dig</span><strong>Dit <a href="om-data.html#g-depot">depot</a></strong>Andelene ligger i dit depot hos din bank eller platform, sammen med dine andre værdipapirer.</li>
+  <li><span class="k">2 · Foreningen</span><strong>Investeringsforeningen PortfolioManager</strong>Fonden er en afdeling i foreningen. Nye andele <a href="om-data.html#g-udstedelse">udstedes og indløses</a> til fondens indre værdi.</li>
+  <li><span class="k">3 · Forvalter</span><strong>Fundmarket A/S</strong>Forvaltningsselskabet (IFS) har ansvaret for fonden og er under tilsyn af Finanstilsynet.</li>
+  <li><span class="k">4 · Depotbank</span><strong>Danske Bank A/S</strong>Opbevarer fondens værdipapirer, adskilt fra forvalterens egne penge.</li>
+ </ol>
+ <div class="flow-side">
+  <div><strong>NDIIR ApS (NewDeal Invest)</strong> er investeringsrådgiver. Holdet bag rådgiver om, hvilke selskaber fonden ejer. Fondschef og medstifter er Mads Christiansen. <a href="fakta.html#hold">Porteføljeholdet →</a></div>
+  <div><strong>For professionelle og familiekontorer:</strong> CVR-numre, adresser og revision står på <a href="fakta.html#organisation">Fakta · Organisation</a>. Regler for tegning og indløsning står i prospektet.</div>
+ </div>
+ <p class="src">Kilde: Fundmarket (produktsiden for NewDeal Invest, kl n) og newdealinvest.dk, hentet 15. okt. 2026. Prospektet er det gældende dokument.</p>
+ </section>
  <section class="panel" style="margin-top:20px">
  <h2 style="font-size:16px;margin-bottom:6px">Tre spørgsmål før du investerer</h2>
  <p style="color:var(--muted);line-height:1.55;margin-bottom:10px">Ikke en test og ikke rådgivning. Bare de spørgsmål, KID'et og NDI's måde at tænke på selv lægger op til.</p>

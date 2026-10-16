@@ -167,3 +167,32 @@ Sider: ideer, kort, om-data, invester, risici, ndi-perspektiv, laer/*.
 - Temavægte er aggregater pr. tema (ingen enkeltaktier, ingen kurser, ingen afkast), fra den offentlige beholdning pr. 1. jun 2026. Vægt i % af fonden, som i rapporten (summer 91,9 % / 90,0 %). Teksten forklarer ikke, hvad resten er, fordi det ikke står i datafilen. **Til review:** skal resten (kontanter m.m.) nævnes?
 - «Forskellen mellem klasserne ligger derfor især i udbyttet» er en beskrivelse af eksponering, ikke en anbefaling af en klasse. udbytte-vs-akk siger fortsat «afhænger af din situation».
 - Energi (tema): NDI kalder energi den første dæmning (samme som elnet-posten og ugebrevets flodsystem). «Temaet viser eksponering, ikke en anbefaling.» Ingen udsigter.
+
+## lane-C · 01:27 16/10 · «Lag på lag» + fire tema-poster
+- Stakken er formuleret som «en skitse af en tankegang, ikke en officiel model», og knyttet til flodsystemet med ugebrevets egen pointe (datacenter ↔ strøm). Kun aggregater pr. tema (antal, vægt), ingen enkeltaktier, kurser eller afkast. «Viser eksponering, ikke en anbefaling eller dagens fordeling.»
+- Chips-posten: «det tema med flest selskaber, når «Andet» ikke tælles med». Ingen vurdering af temaets udsigter.
+- **Til review:** er rækkefølgen energiressourcer → energi → chips → compute → optik → software → platforme i tråd med NDI's eget billede, eller skal optik ligge under compute? Datacentre (NDI's 2. flaskehals) har intet eget tema, hvilket figurteksten siger.
+
+## lane-C · 01:30 16/10 · ideer «Hvor mange selskaber er halvdelen?» + Fundmarket
+- Kun aggregater af de offentlige vægte pr. 1. jun 2026 (ingen navne, kurser eller afkast). Tal regnet efter i portfolio.json: PMINDI 345 positioner, sum 91,94 %; kumuleret 26 → 25,3 %, 76 → 50,3 %, 160 → 75,2 % af aktievægten. 76 største = 46,3 % af fonden. PMINDIAKK: 88 af 320 til halvdelen.
+- Formuleret som spredning/koncentration («bred, men ikke flad»), ingen vurdering af, om fordelingen er god eller dårlig. «Viser koncentration og spredning, ikke en anbefaling.»
+- Fundmarket-posten beskriver kun, hvad der ligger der, og at de officielle dokumenter åbnes der. Ingen omtale af handel via Fundmarket. **Til review:** er «platform» det rigtige ord for Fundmarket i NDI's egen sprogbrug?
+
+## lane-C note 01:32 CEST 16/10 (Claude)
+- Ordliste 114: nye poster Delår, Serverinfrastruktur, Elproduktion, Simulering og software. Ingen afkast- eller handelssprog; «Leddet viser eksponering, ikke en anbefaling».
+- Åbent (ikke lane-C-fil): tankestreger i value-chains.json «ndi»-felter. Sendt til ejer via IDEAS.
+
+## lane-C · 01:36 16/10 · lær «Indre værdi: hvad en andel er værd»
+- Kun tænkte tal (fond på 100 mio. kr., 1 mio. andele). Ingen af fondens NAV-niveauer, ingen afkast, intet handelsprog. Datoer (første NAV 22. sep 2023 / 5. dec 2025) som andre steder på siden.
+- «Udstedelse og indløsning» beskrevet generelt: «sker til den indre værdi … Vilkårene står i prospektet». **Bed Vidensbot tjekke:** har fonden emissionstillæg/indløsningsfradrag, der bør nævnes som ord (ikke satser)? Siden nævner bevidst ikke tillæg, kun kurtage og spread.
+- «Indre værdi» i ordlisten har nu to betydninger (fond / investeringskoncern). SoftBank-betydningen er uændret i ordlyd.
+
+## 01:55 CEST 16/10 lane-C · laer/laes-grafen.html
+- Afsnit 5 «Sådan læser du grafen» (andelsklasser, udbytte, CAGR, maksimalt fald, hvorfor korte perioder misleder): **dækket** af ny side.
+- Compliancepunkt 1 (hele perioder, ingen gunstig startdag) og 7 (udbytte/andelskurs): forklaret med tænkt kurve, mærket «ikke fondens tal og ingen prognose». Advarsel + «Generel information» nederst.
+- Ingen handelsord, ingen fondstal på siden (kun tænkte tal), ingen semikolon/tankestreg i synlig tekst.
+
+## lane-C · 01:55 16/10 (wall-clock) · risici «Udsving og fald i tal» + Sharpe
+- Volatilitet/Sharpe/største fald på risici.html (Leo MUST fra main) er nu mærket «regnet af NDI Analytics … ikke tal fra KID’et» og forklarer, at PRIIPs-klassen har egen metode. Ingen sammenligning med indeks. Historisk-advarslen står på siden.
+- Ny ordlistepost Sharpe: «siger intet om fremtiden», ændrer sig med startdagen. **Bed Vidensbot tjekke:** er Sharpe på en fondsside markedsføring af afkast (compliancepunkt 1), og skal den så kun vises sammen med de officielle tal?
+- Interne udtryk fjernet fra synlig tekst (udkast, udfyldes af NDI, feltnavne).

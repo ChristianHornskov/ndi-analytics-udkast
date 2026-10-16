@@ -1325,6 +1325,40 @@ Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke me
 - Test: 8763, 375/1280 på 5 sider: 0 konsolfejl, ingen h-overflow, 0 døde ankre. precheck: se push.
 - Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) på hele lane-C-fladen ved 375 px.
 
+## Fra Claude lane-C (ideer: lag på lag + ordliste 109) · 01:27 CEST 16/10 (wall-clock)
+- `ideer.html`: trettende form «Lag på lag» (temaerne som stak fra jord til skærm, bredde = vægt i PMINDI, gul = NDI's flaskehalse; fysisk tech, SpaceTech, Quantum, Andet ved siden af). og:description fulgt med.
+- `om-data.html`: ordliste 109 (Chips, Compute, Optik &amp; netværk, Fysisk tech som temaer). Alle elleve temaer har nu en post. Tællere 24 · 20 · 38 · 27. Flodsystem-posten → `#h-stk`. `laer/saadan-taenker-vi.html` → `#h-stk`. `kort.html` 109.
+- Notes: HANDOFF trin 6 (tretten former, «Lag på lag»), trin 7 (109), UX-review, VIDENSBOT-live-check.
+- **Til tema-ejer:** temaer/tema kan linke temanavn → ordlistepost (liste i UX-review).
+- Test: 8763, 375/1280 på 3 sider: 0 konsolfejl, ingen h-overflow, 0 døde ankre. precheck: se push.
+- Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) på hele lane-C-fladen ved 375 px.
+
+## Fra Claude lane-C (ideer: hvor mange selskaber er halvdelen? + ordliste 110) · 01:30 CEST 16/10 (wall-clock)
+- `ideer.html`: fjortende form «Hvor mange selskaber er halvdelen?» (`#h-kv`): kumuleret vægtkurve for PMINDI pr. 1. jun 2026 mod ligevægt. 26 / 76 / 160 selskaber = ¼ / ½ / ¾ af aktievægten (ligevægt: 173). PMINDIAKK: 88 af 320. og:description fulgt med.
+- `om-data.html`: ordliste 110 (Fundmarket), «Fonden og andelsklasser» 21. Koncentrationsrisiko → `#h-kv`. `lær/hvorfor-mange-aktier` → `#h-kv`. `kort.html` 110 + ideer-beskrivelse.
+- Notes: HANDOFF trin 6 (fjorten former, `#h-kv`), trin 7 (110), UX-review, VIDENSBOT-live-check.
+- Test: 8763, 375/1280 på 4 sider: 0 konsolfejl, ingen h-overflow, 0 døde links/ankre. precheck: OK.
+- Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) på hele lane-C-fladen ved 375 px.
+
+## Fra Claude lane-C (ordliste 114: led + delår) · 01:32 CEST 16/10 (wall-clock)
+- `om-data.html`: ordliste 110 → 114 (Delår, Serverinfrastruktur, Elproduktion, Simulering og software). Tællere 25 · 21 · 38 · 30. Alle led i value-chains.json har nu en ordlistepost eller dækkes af en.
+- `ideer.html` «Tre ure»: 2023 som delår, link til ordlisten. `kort.html` 114. HANDOFF trin 7: 114.
+- **Til js-/værdikæde-ejer:** links til nye poster + tankestreger i value-chains.json (IDEAS).
+- Test: 8793, 375/1280 på 3 sider: 0 konsolfejl, ingen h-overflow, 0 døde ankre. precheck: se push.
+- Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) på hele lane-C-fladen ved 375 px.
+
+## Fra Claude lane-C (lær: Indre værdi + ordliste 115) · 01:36 CEST 16/10 (wall-clock)
+- Ny `laer/indre-vaerdi.html` (kæde + tre skydere + bjælker, tænkte tal): formue ÷ andele, nye penge flytter ikke andelen, udbytte flytter penge ikke værdi, to betydninger af «indre værdi».
+- Lær-hub 4 · 4 · 4 · 4 (mangler-aktie → Slå op). Ordliste 115 (Udstedelse og indløsning), Indre værdi to betydninger, NAV → siden. FAQ 17 korte svar. kort, udbytte-vs-akk, HANDOFF trin 7–8.
+- Test: 8763, 375/1280 på 6 sider: 0 konsolfejl, ingen h-overflow, 0 døde links/ankre. precheck: OK.
+- Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) på hele lane-C-fladen ved 375 px.
+
+## Fra Claude lane-C (lær: Sådan læser du grafen + ordliste 116) · 01:55 CEST 16/10 (wall-clock)
+- Ny `laer/laes-grafen.html`: annoteret tænkt graf (5 numre: startdag, top, fald fra top, kalenderår/delår, totalafkast vs andelskurs) + skyder «flyt startdagen» (samme kurve: +62 / +17 / +69 %) + siger/siger ikke. Opfylder Vidensbot afsnit 5 «Sådan læser du grafen» og compliancepunkt 1 (hele perioder, ingen gunstig startdag).
+- Lær-hub 4 · 5 · 4 · 4. Ordliste 116 (Startdag), Afkast og risiko 26. FAQ 18 korte svar. kort, variance-drag, HANDOFF trin 7–8.
+- **Til js-ejer:** app.js nøgletal «Max drawdown» kunne linke `laer/laes-grafen.html` under grafen («Sådan læser du grafen →»), og etiketten bør hedde «Største fald» som resten af sitet.
+- Test: 8763, 375/1280 på 6 sider: 0 konsolfejl, ingen h-overflow, 0 døde links/ankre. Skyder testet (11/17/30). precheck: se push.
+- Branch `lane-C` klar til merge. Næste: UX-review 02:00 (wall-clock) på hele lane-C-fladen ved 375 px.
 - Coordinator-loop 2026-10-16 01:26:18 CEST: CONFLICT merge origin/lane-R (ahead 1) — aborted, not pushed
 - **Fra Claude lane-R (01:48, cyklus 18, main `299e7a2`):** ndi-paa-x er stadig tom (`feedHitKind`, 5. cyklus). Linse 310, men kun 98 profiler (215 stubs). "MADS FØLGER" står nu på 5 sider (+tema energi). ÅOP/før skat er nu i ordlisten ✅, men der er stadig intet KID-omkostningstal. SRI-vs-vol og de øvrige MUST er åbne.
 - **Fra Claude lane-R (01:40, cyklus 19, main `3103bf8`):** ndi-paa-x virker igen ✅ (0 konsolfejl på 23×2 sider). Ny MUST-flade: ndi-paa-x har "MADS FØLGER" ×10 og mangler "kan tabe". Idéer «To klasser»: forklar 345 mod 320 selskaber, og nævn omkostningsforskellen (0,64/0,72 %). SRI-vs-vol, stubs (215/310) og KID-omkostningstal er stadig åbne.
@@ -1594,3 +1628,30 @@ Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er
 - **tema.html?slug=andet:** nyt panel "Hvad ligger i Andet?" (kun uden filtre): grupper med antal + navne efter vægt - *Tæt på et led i værdikæderne* (Fermi, American Resources, Tempus AI, Idaho Strategic, Perpetua - med linsens plads, fx "delvist tæt på Energi led 5 (kritiske råstoffer)"), *Ædelmetaller*, *Sundhed og bioteknologi*, *Restpositioner (vægt ca. 0)*, *Forbrug, ejendomme, kemi m.m.* Teksten siger at grupperingen er et udkast og ikke ændrer data. Gruppering ud fra branche + linse; ingen tal pr. aktie.
 - **Dækning:** PMINDI Andet 6/35 → 28/35 med linse; A-Z "NDI-linse (332)". Kandidatliste i notes/THEME-FORSLAG.md ("Andet-kandidater").
 - Test: precheck exit 0. smoke 52/52 fail 0 (egen port). Playwright: tema andet (begge klasser, 5 grupper), andet&q=sølv (panel skjult, 4 via linse), chips uændret, Fermi + Perpetua selskabssider rendrer linsen; 0 konsolfejl. Branch `lane-B` klar til merge-review. Næste: screener-tom-tilstand/forslag-mærker eller tvivlsomme forslag (Chemours/Arkema/Solstice) som NDI-beslutningsliste.
+
+## Fra Claude lane-C (main-merge + temaal regnet om + risici i klart sprog + ordliste 117) · 01:56 CEST 16/10 (wall-clock)
+- Merget origin/main ind i lane-C (STATUS-konflikt løst, begge sider bevaret). Branch er nu 0 bagud for main på merge-tidspunktet.
+- `ideer.html`: fem former regnet om fra portfolio.json efter lane-B's temaforslag (Andet 31, forslag 85, tema 229; Energi 37). Forslag-teksten nævner værdikæder og flyt mellem temaer.
+- `risici.html`: «Udsving og fald i tal» og «Hvor langt er sorteringen i temaer?» uden interne ord; sortering tælles fra portfolio.json. Risikokort-links 25 px.
+- `om-data.html`: ordliste 117 (Sharpe), temaantal opdateret. `laer/risikoklasse.html`: «ikke det samme som et simpelt udsvingstal». `kort.html` 117, tankestreg væk.
+- HANDOFF: «Demo-detaljer» skrevet om til nuværende tilstand (fjorten former med ankre, 117 begreber, 17 lær-døre, Max drawdown-etiketten). UX-review 02:00 skrevet.
+- **Til data-ejer:** risk-stats.json `classification` er forældet (63/116). **Til js-ejer:** «Max drawdown» → «Største fald».
+- Test: 8763, 375/1280: 0 konsolfejl, ingen h-overflow, 0 døde links/ankre på 21 sider. precheck: se push.
+- Branch `lane-C` klar til merge. Næste: UX-review 04:00; «tre langsigtede temaer» (BLOG 19. jan 2026) mangler kildetekst, ikke skrevet.
+
+## Fra Claude lane-C (reviewer-MUST «To klasser» + møntspil + «Hvorfor ejer vi den?» + ordliste 118) · 02:10 CEST 16/10 (wall-clock)
+- `ideer.html` «To klasser, samme temaer» (UX/compliance cyklus 19–20): forklarer 345 mod 320 (hver klasse har sin egen beholdning; PMINDIAKK startede 5. dec. 2025; alle 320 findes i PMINDI), nævner «en lille forskel i omkostningerne til handel i porteføljen» med link til omkostninger, «ingen tema» → «intet tema».
+- `ideer.html`: indholdsfortegnelse «13 billeder på siden» med ankre (UX SHOULD fra cyklus 18–20).
+- `laer/saadan-taenker-vi.html` (PERSONA-privat + IDESPEJDER #3/#8): ny sektion «Vi vælger udviklingen, ikke vinderen» med møntspil 100 → +50 % → 150 → −40 % → 90 kr. som søjler + «kan tabe penge»; ny sektion «Hvorfor ejer vi den?» med NDI-linsens fem spørgsmål i klart dansk (Tesla-eksempel fra unique-metrics.json), «ikke en karakter, kursmål eller anbefaling», AI-udkast nævnt.
+- `om-data.html`: ordliste 118 (NDI-linse); andelsklasse-posten forklarer 345/320. Lær-hub og kort: «multi-tag»/«Screener» erstattet med klart dansk; møntspil nævnt i døre.
+- Test: 8793, 375/1280: 0 konsolfejl, ingen h-overflow på ideer, saadan-taenker-vi, om-data. precheck exit 0.
+- **Til forside-ejer:** PERSONA-privat ønsker møntspillet og «Vi vælger udviklingen, ikke vinderen» direkte på forsiden; tekst og søjle-mønster kan genbruges fra `laer/saadan-taenker-vi.html#tv-vu`.
+- Branch `lane-C` klar til merge. Næste: UX-review 04:00.
+
+## Fra Claude lane-C (reviewer-MUST invester + SRI kontra udsving + «Hvor ligger pengene?» + ordliste 119) · 02:00 CEST 16/10 (wall-clock)
+- Merget origin/main ind i lane-C (STATUS-konflikt løst, begge sider bevaret).
+- `invester.html` (UX cyklus 21): tre «trin 4» → ét (omkostningslink bevaret). Ny sektion `#hvem` «Hvor ligger pengene, og hvem gør hvad?»: fire led som pilekæde (dit depot → Investeringsforeningen PortfolioManager → Fundmarket A/S (IFS) → Danske Bank A/S (depotbank)) + NDIIR som rådgiver med Mads Christiansen + linje til familiekontorer om CVR/revision/prospekt. Kilde: fund-facts.json (Fundmarket, 15. okt.). Svarer på PERSONA-FO «intet om depositar» og PERSONA-privat «hvem træffer beslutningerne».
+- Compliance MUST 6 (SRI 5 kontra udsving 32,46 %) i mine filer: `laer/risikoklasse.html` (kæde, skyder og tabel siger nu «efter KID-metoden», og et simpelt tal over 30 % betyder ikke, at klassen er forkert), `laer/faq.html`, og ordlisten `g-sri` og `g-udsving`. Ny ordliste-post 119 `#g-kid-udsving`. Afkast og risiko: 28 begreber. Kort 119.
+- **Til js-ejer:** `docs/js/data.js:251` og `docs/index.html:47/88` siger stadig «Central Information Dokument» → «dokument med central information (KID)». **Til fakta-ejer:** samme SRI-forklaring (link `om-data.html#g-kid-udsving`) ved udsving 32,46 % på fakta.
+- Test: 8793, 375/1280: 0 konsolfejl, ingen h-overflow, én h1 på invester, om-data, risikoklasse, faq, risici og kort. Alle `om-data.html#g-…`-links findes (0 døde ankre). precheck: se push.
+- Branch `lane-C` klar til merge. Næste: UX-review 04:00.

@@ -28,7 +28,7 @@
  @media(min-width:760px){.risk-grid{grid-template-columns:1fr 1fr}}
  .risk-card{border:1px solid var(--line);border-radius:12px;padding:14px 16px;color:var(--muted);line-height:1.55;font-size:14px}
  .risk-card strong{display:block;color:var(--text);font-size:15px;margin-bottom:4px}
- .risk-card a{white-space:nowrap}
+ .risk-card a{white-space:nowrap;display:inline-block;padding:3px 0}
  .how-use{border-left:4px solid var(--yellow)}
  .how-use ul{color:var(--muted);line-height:1.6;padding-left:1.2rem;display:grid;gap:6px}
 </style>
@@ -64,11 +64,11 @@
  ${klasse(a)}
  </section>
  <section class="panel" id="tal">
- <h2 style="font-size:16px;margin-bottom:8px">Risikotal (beregnet i udkastet)</h2>
+ <h2 style="font-size:16px;margin-bottom:8px">Udsving og fald i tal</h2>
  <div id="risk-stats"><p style="color:var(--muted)">Henter…</p></div>
  </section>
- <section class="panel">
- <h2 style="font-size:16px;margin-bottom:8px">Klassifikation (forsinket beholdning)</h2>
+ <section class="panel" id="sortering">
+ <h2 style="font-size:16px;margin-bottom:8px">Hvor langt er sorteringen i temaer?</h2>
  <div id="risk-class"><p style="color:var(--muted)">Henter…</p></div>
  </section>
  <section class="panel">
@@ -109,29 +109,43 @@
  <a class="outline-btn" style="margin-left:8px" href="kort.html">Sidekort →</a></p>`;
 
  const rs = await fetch('data/risk-stats.json').then(r => r.ok ? r.json() : null).catch(() => null);
- const pct = (n) => n == null ? '—' : String(n).replace('.', ',') + ' %';
+ const pct = (n) => n == null ? '–' : (Math.round(n * 10) / 10).toFixed(1).replace('.', ',').replace('-', '−') + ' %';
+ const dk1 = (n) => (Math.round(n * 10) / 10).toFixed(1).replace('.', ',');
  if (rs) {
+   const placeholder = !rs.officialVolSharpe || /udfyld/i.test(rs.officialVolSharpe);
    document.getElementById('risk-stats').innerHTML = `
+   <p style="color:var(--muted);line-height:1.55;margin-bottom:10px">Regnet af NDI Analytics ud fra PMINDI’s totalafkast fra første NAV til ${fmtDate(rs.asOf)}. Det er ikke tal fra KID’et.</p>
    <div class="metrics">
-     <div class="metric"><div class="label">Volatilitet (ann.)</div><strong>${pct(rs.volatilityAnnPct)}</strong><small>Beregnet · rf-uafhængig</small></div>
-     <div class="metric"><div class="label">Sharpe (rf=0)</div><strong>${String(rs.sharpeRf0).replace('.', ',')}</strong><small>Beregnet i udkastet</small></div>
-     <div class="metric"><div class="label">Max drawdown</div><strong class="neg">${pct(rs.maxDrawdownPct)}</strong><small>${fmtDate(rs.maxDdPeak)} → ${fmtDate(rs.maxDdTrough)}</small></div>
+     <div class="metric"><div class="label">Udsving pr. år</div><strong>${pct(rs.volatilityAnnPct)}</strong><small>Volatilitet. <a href="om-data.html#g-udsving">Ordliste →</a></small></div>
+     <div class="metric"><div class="label">Afkast pr. udsving</div><strong>${String(rs.sharpeRf0).replace('.', ',')}</strong><small>Sharpe, uden rente trukket fra. <a href="om-data.html#g-sharpe">Ordliste →</a></small></div>
+     <div class="metric"><div class="label">Største fald fra top</div><strong class="neg">${pct(rs.maxDrawdownPct)}</strong><small>${fmtDate(rs.maxDdPeak)} til ${fmtDate(rs.maxDdTrough)}</small></div>
    </div>
-   <p class="band" style="margin-top:12px">Officielt Fundmarket-tal for vol/Sharpe: <em>${rs.officialVolSharpe}</em>. ${rs.officialVolSharpeNote || ''}</p>
-   <p class="src">${rs.method} <a href="drawdown.html">Drawdown-side →</a> · <a href="fakta.html">Fakta →</a> · <a href="omkostninger.html">Omkostninger →</a></p>`;
-   const c = rs.classification || {};
-   document.getElementById('risk-class').innerHTML = `
-   <ul style="color:var(--muted);line-height:1.55;padding-left:1.2rem;display:grid;gap:6px">
-     <li>Positioner i snapshot: <strong style="color:var(--text)">${c.positions ?? '—'}</strong></li>
-     <li>Temaforslag (afventer gennemgang): <strong style="color:var(--text)">${c.themeForslag ?? '—'}</strong></li>
-     <li>«Andet»: <strong style="color:var(--text)">${c.andetCount ?? '—'}</strong> selskaber · ca. ${String(c.andetWeight ?? '').replace('.', ',')} % vægt</li>
-     <li>Modenhed klassificeret: <strong style="color:var(--text)">${c.maturityClassified ?? 0}</strong> (udkast — ofte 0 indtil NDI udfylder)</li>
-     <li>Tema-metadækning: <strong style="color:var(--text)">${String(c.coverageMeta ?? '').replace('.', ',')} %</strong> — ${c.coverageMetaNote || ''}</li>
-   </ul>
-   <p class="src" style="margin-top:10px">Beholdning pr. ${fmtDate(rs.holdingsAsOf)}. <a href="om-data.html#g-temaforslag">Om temaforslag →</a></p>`;
+   <p style="color:var(--muted);line-height:1.55;margin-top:12px"><strong style="color:var(--text)">Hvorfor passer tallet ikke med risikoklassen?</strong> Risikoklassen i KID’et regnes efter EU’s regler (<a href="om-data.html#g-priips">PRIIPs</a>) med deres egen metode og periode. Tallet her er et simpelt mål for de udsving, fonden har haft. Det kan ikke bruges til at regne klassen ud, og det siger ikke, hvor store udsvingene bliver fremover. <a href="laer/risikoklasse.html">Hvad klassen betyder →</a></p>
+   <p class="src">${placeholder ? 'Fundmarket viser ikke udsving og Sharpe på fondens produktside (tjekket 15. okt. 2026).' : `Officielle tal fra Fundmarket: ${rs.officialVolSharpe}.`} <a href="drawdown.html">Fald fra top →</a> · <a href="fakta.html">Fakta →</a> · <a href="omkostninger.html">Omkostninger →</a></p>`;
  } else {
-   document.getElementById('risk-stats').innerHTML = '<p style="color:var(--muted)">Risk-stats mangler.</p>';
-   document.getElementById('risk-class').innerHTML = '<p style="color:var(--muted)">—</p>';
+   document.getElementById('risk-stats').innerHTML = '<p style="color:var(--muted)">Tallene kunne ikke hentes. <a href="drawdown.html">Fald fra top →</a></p>';
+ }
+
+ const pf = await fetch('data/portfolio.json').then(r => r.ok ? r.json() : null).catch(() => null);
+ const pos = pf?.funds?.find(f => f.id === 'pmindi')?.positions;
+ if (pos?.length) {
+   const n = pos.length;
+   const andet = pos.filter(x => x.theme === 'andet');
+   const forslag = pos.filter(x => x.theme !== 'andet' && x.themeStatus === 'forslag');
+   const tema = n - andet.length - forslag.length;
+   const w = (xs) => dk1(xs.reduce((s, x) => s + (x.weight || 0), 0));
+   const matForslag = pos.filter(x => x.maturityStatus === 'forslag').length;
+   document.getElementById('risk-class').innerHTML = `
+   <p style="color:var(--muted);line-height:1.55;margin-bottom:8px">Temaer og modenhed er NDI’s egen sortering. Den er ikke færdig, og det er godt at vide, når man læser temasiderne.</p>
+   <ul style="color:var(--muted);line-height:1.55;padding-left:1.2rem;display:grid;gap:6px">
+     <li><strong style="color:var(--text)">${tema}</strong> af ${n} selskaber har et NDI-tema.</li>
+     <li><strong style="color:var(--text)">${forslag.length}</strong> har et <a href="om-data.html#g-temaforslag">temaforslag</a>, som porteføljeholdet ikke har gennemgået endnu (ca. ${w(forslag)} % af fonden).</li>
+     <li><strong style="color:var(--text)">${andet.length}</strong> står i «Andet» uden tema (ca. ${w(andet)} % af fonden).</li>
+     <li>Modenhed: <strong style="color:var(--text)">${matForslag}</strong> af ${n} har et forslag, ${n - matForslag ? `${n - matForslag} er gennemgået` : 'ingen er gennemgået endnu'}. <a href="om-data.html#g-modenhed">Ordliste →</a></li>
+   </ul>
+   <p class="src" style="margin-top:10px">PMINDI, beholdning pr. ${fmtDate(pf.asOf)}. <a href="ideer.html#h-tf">Fra «Andet» til tema →</a></p>`;
+ } else {
+   document.getElementById('risk-class').innerHTML = '<p style="color:var(--muted)">Beholdningen kunne ikke hentes. <a href="temaer.html">Temaer →</a></p>';
  }
 
  </script>
