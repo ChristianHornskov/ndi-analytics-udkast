@@ -6,7 +6,7 @@
     "pmindi": {
       "priip": {
         "url": "https://node-api.fundmarket.dk/funds/documents/priip_ipm140b",
-        "product": "NewDeal Invest, kl n",
+        "product": "NewDeal Invest",
         "isin": "DK0062499810",
         "production_date": "2026-08-14",
         "risk_class": 5,
@@ -63,7 +63,7 @@
     "pmindiakk": {
       "priip": {
         "url": "https://node-api.fundmarket.dk/funds/documents/priip_ipm145b",
-        "product": "NewDeal Invest Akk., kl n",
+        "product": "NewDeal Invest Akk.",
         "isin": "DK0064642623",
         "production_date": "2026-08-14",
         "risk_class": 5,

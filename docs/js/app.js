@@ -286,7 +286,7 @@ function renderEntre(root) {
         <span class="door-q">3 · Hvilke selskaber er det?</span>
         <strong>Udforsk tech</strong>
         <span>Find porteføljens selskaber efter tema, navn eller ISIN - uden de klassiske sektorkasser.</span>
-        <span class="go">Åbn screener →</span>
+        <span class="go">Åbn Udforsk →</span>
       </a>
     </div>
     <p class="doors-h"><span class="doors-step">Forstå linsen</span> Hvordan NDI ser tech</p>
@@ -667,7 +667,7 @@ function renderLivscyklus(fund) {
   const nForslag = (fund.positions || []).filter((p) => p.maturityStatus === 'forslag' && byStage[p.maturity]).length;
   const foot = empty
     ? `Ingen af fondens ${fund.positions.length} selskaber har et modenheds<strong>forslag</strong> endnu.`
-    : `${classified} af ${fund.positions.length} selskaber har et modenheds<span class="badge badge-draft">forslag</span> (heuristik — afventer NDI). ${unknown ? unknown + ' uden forslag.' : ''}`;
+    : `${classified} af ${fund.positions.length} selskaber har et modenheds<span class="badge badge-draft">forslag</span> (foreløbigt skøn — afventer NDI). ${unknown ? unknown + ' uden forslag.' : ''}`;
   return `<section class="panel life-strip${empty ? ' is-empty' : ''}">
     <div class="life-head"><h2>Livscyklus</h2><span class="badge badge-draft" title="Heuristik — afventer NDI">udkast</span></div>
     ${curve}
@@ -725,14 +725,14 @@ function weightProfileNote(fund) {
     ? `Bred spredning: ${tenths >= 10 ? 'næsten alle' : `ca. ${tenths} ud af 10`} positioner vejer mellem ca. 0,05 % og 1 %, og ${over1 <= 10 ? 'kun få' : over1} vejer mere end 1 %. Vægtene ligger forholdsvis tæt, men fonden er ikke ligevægtet. `
     : '';
   const cash = Math.max(0, 100 - sum);
-  const cashTxt = Number.isFinite(sum) ? ` Kontantandel ca. <strong style="color:var(--text)">${cash.toFixed(1).replace('.', ',')} %</strong> (100 − aktievægte; forsinket snapshot).` : '';
+  const cashTxt = ' Resten er bl.a. kontanter; officiel kontantandel afventer Fundmarket.';
   return `<p class="note-weights" style="font-size:13px;color:var(--muted);line-height:1.55">${spread}Aktievægtene i snapshottet summerer til ca. ${Math.round(sum)} %.${cashTxt} <a href="laer/hvorfor-mange-aktier.html">Hvorfor så mange aktier?</a></p>`;
 }
 
 // UX 22:00 SHOULD 1: på Udforsk er man allerede i screeneren, så knappen udelades dér
 function fundToolbar({ screener = true } = {}) {
   return `<div class="toolbar">${fundSeg()}${screener ? `
-    <a class="outline-btn small" href="?view=udforsk&fund=${state.fund}">Åbn screener</a>` : ''}</div>`;
+    <a class="outline-btn small" href="?view=udforsk&fund=${state.fund}">Åbn Udforsk</a>` : ''}</div>`;
 }
 
 function positionsTable(list, fund) {
@@ -786,8 +786,8 @@ function forslagCell(p) {
   if (!s) return '';
   const before = s.to === 'andet' ? 'intet NDI-tema passede endnu' : `før: ${shiftFromLabel(s.from)}`;
   const d = themeDoubt(p);
-  const doubt = d ? ` <span class="badge badge-doubt" style="background:transparent;border:1px dashed var(--yellow);color:var(--yellow)" title="Usikkert forslag: ${esc(d.why)}">usikkert</span>` : '';
-  const doubtNote = d ? `<small class="doubt-note" style="color:var(--muted);display:block;margin-left:auto;white-space:normal;max-width:36ch;line-height:1.35;text-align:left">usikkert: ${esc(d.why)}${d.alt ? ` · alternativ: ${doubtAltLabel(d.alt)}` : ''}</small>` : '';
+  const doubt = d ? ` <span class="badge badge-doubt" style="background:transparent;border:1px dashed var(--yellow);color:var(--yellow)" title="Usikkert forslag: ${esc(d.why)}">til gennemgang</span>` : '';
+  const doubtNote = d ? `<small class="doubt-note" style="color:var(--muted);display:block;margin-left:auto;white-space:normal;max-width:36ch;line-height:1.35;text-align:left">til gennemgang: ${esc(d.why)}${d.alt ? ` · alternativ: ${doubtAltLabel(d.alt)}` : ''}</small>` : '';
   return ` <span class="badge badge-draft" title="Temaet er et forslag fra udkastet og afventer NDI-gennemgang · ${before}">forslag</span>${doubt}<small class="shift-note" style="color:var(--muted);display:block;margin-left:auto;white-space:normal;max-width:36ch;line-height:1.35;text-align:left">${before}</small>${doubtNote}`;
 }
 const esc = (x) => String(x ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -831,9 +831,9 @@ function doubtRowHtml(fund) {
   const alts = {};
   for (const p of all) { const a = doubtAltLabel(themeDoubt(p).alt) || 'uden alternativ'; alts[a] = (alts[a] || 0) + 1; }
   const altTxt = Object.entries(alts).sort((a, b) => b[1] - a[1]).map(([a, k]) => `${k} → ${a}`).join(', ');
-  return `<div class="filters" role="group" aria-label="NDI-beslutningsliste" style="margin:10px 0 0;padding-top:10px;border-top:1px solid var(--line, rgba(255,255,255,.08))">
+  return `<div class="filters" role="group" aria-label="Forslag til gennemgang" style="margin:10px 0 0;padding-top:10px;border-top:1px solid var(--line, rgba(255,255,255,.08))">
       <button type="button" class="control ${state.tvivl ? 'active' : ''}" data-tvivl aria-pressed="${state.tvivl}">Kun usikre forslag <small>(${n})</small></button>
-      <small style="color:var(--muted);align-self:center"><span class="badge badge-doubt" style="background:transparent;border:1px dashed var(--yellow);color:var(--yellow)">usikkert</span> = ${all.length} forslag, hvor udkastet selv er i tvivl - NDI's beslutningsliste. Hver række viser hvorfor og et alternativ (${altTxt}).</small>
+      <small style="color:var(--muted);align-self:center"><span class="badge badge-doubt" style="background:transparent;border:1px dashed var(--yellow);color:var(--yellow)">til gennemgang</span> = ${all.length} forslag, hvor udkastet selv er i tvivl – afventer porteføljeholdets gennemgang. Hver række viser hvorfor og et alternativ (${altTxt}).</small>
     </div>`;
 }
 

@@ -67,7 +67,7 @@
  <h1>Temaet findes ikke</h1><p class="lede">Vælg et tema herunder.</p>
  <p class="link-row">${td.themes.map((t) => `<a class="tag" href="tema.html?slug=${t.slug}&fund=${fundId}">${esc(t.title)}</a>`).join(' ')}</p>`;
  } else {
- // Selskaber beregnes fra den forsinkede beholdning (primært tema + manuelle multi-tags), ikke themes.json-udsnittet
+ // Selskaber beregnes fra den forsinkede beholdning (primært tema + ekstra temaer), ikke themes.json-udsnittet
  const fund = fundById(data.portfolio, fundId);
  const tk = theme.themeKey;
  const list = fund.positions
@@ -116,8 +116,8 @@
  for (const p of list) if (p.theme === tk && p.themeStatus === 'forslag') { const f0 = p.themeFrom || 'andet'; fromCounts[f0] = (fromCounts[f0] || 0) + 1; }
  // Usikre forslag (themeDoubt) i temaet → NDI-beslutningslisten i screeneren
  const nDoubt = tk === 'andet' ? 0 : list.filter((p) => p.theme === tk && themeDoubt(p)).length;
- const doubtTxt = nDoubt ? ` <a href="index.html?view=udforsk${fund.id !== 'pmindi' ? `&fund=${fund.id}` : ''}&tags=${encodeURIComponent(tk)}&status=forslag&tvivl=1" title="Forslag, udkastet selv er i tvivl om - med begrundelse og alternativ">${nDoubt} ${nDoubt === 1 ? 'forslag er markeret usikkert' : 'forslag er markeret usikre'}</a>.` : '';
- const fromTxt = Object.keys(fromCounts).length ? ' Før forslaget: ' + Object.entries(fromCounts).sort((a, b) => b[1] - a[1]).map(([k, n]) => `<a href="index.html?view=udforsk${fund.id !== 'pmindi' ? `&fund=${fund.id}` : ''}&status=forslag&skift=${encodeURIComponent(`${k}~${tk}`)}" title="Gennemgå dette temaskift i screeneren">${n} i ${esc(k === 'andet' ? 'Andet' : daTheme(k))}</a>`).join(', ') + '.' : '';
+ const doubtTxt = nDoubt ? ` <a href="index.html?view=udforsk${fund.id !== 'pmindi' ? `&fund=${fund.id}` : ''}&tags=${encodeURIComponent(tk)}&status=forslag&tvivl=1" title="Forslag, udkastet selv er i tvivl om - med begrundelse og alternativ">${nDoubt} ${nDoubt === 1 ? 'forslag afventer gennemgang' : 'forslag afventer gennemgang'}</a>.` : '';
+ const fromTxt = Object.keys(fromCounts).length ? ' Før forslaget: ' + Object.entries(fromCounts).sort((a, b) => b[1] - a[1]).map(([k, n]) => `<a href="index.html?view=udforsk${fund.id !== 'pmindi' ? `&fund=${fund.id}` : ''}&status=forslag&skift=${encodeURIComponent(`${k}~${tk}`)}" title="Se dette temaskift i Udforsk">${n} i ${esc(k === 'andet' ? 'Andet' : daTheme(k))}</a>`).join(', ') + '.' : '';
  const posAsOf = fmtDate(fund.positionsAsOf || td.positionsAsOf);
  const keyToSlug = Object.fromEntries(td.themes.map((t) => [t.title.toLowerCase(), t.slug]));
  const chain = (theme.chain || []).map((c) => {
@@ -157,7 +157,7 @@
  const rows = shown.map((p) => {
  const multi = p.theme !== tk;
  return `<tr>
- <td><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}">${esc(p.name)}</a>${multi ? ` <span class="tag" title="Primært tema: ${esc(daTheme(p.theme))}">også ${esc(daTheme(p.theme))}</span>` : ''}${!multi && p.themeStatus === 'forslag' && tk !== 'andet' ? ` <span class="badge badge-draft" title="Forslag, afventer gennemgang${p.themeFrom && p.themeFrom !== 'andet' ? ` · før: ${esc(daTheme(p.themeFrom))}` : ' · før: Andet'}">forslag</span>` : ''}${lensOf(p) ? ` <a class="badge" href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}#ndi-linse" title="Kvalitativ NDI-linse: rolle, plads i værdikæden og forhold at holde øje med (udkast)" aria-label="NDI-linse for ${esc(p.name)}">NDI-linse</a>` : ''}${hitNote(p)}${!multi && p.themeStatus === 'forslag' && tk !== 'andet' ? `<br><small style="color:var(--muted);display:inline-block;white-space:normal;max-width:36ch;line-height:1.35;text-align:left">før: ${esc(p.themeFrom && p.themeFrom !== 'andet' ? daTheme(p.themeFrom) : 'Andet')}</small>` : ''}${!multi && themeDoubt(p) ? `<br><small style="color:var(--muted);display:inline-block;white-space:normal;max-width:36ch;line-height:1.35;text-align:left"><span class="badge" style="background:transparent;border:1px dashed var(--yellow);color:var(--yellow)">usikkert</span> ${esc(themeDoubt(p).why)}${themeDoubt(p).alt ? ` · alternativ: ${esc(doubtAltLabel(themeDoubt(p).alt))}` : ''}</small>` : ''}</td>
+ <td><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}">${esc(p.name)}</a>${multi ? ` <span class="tag" title="Primært tema: ${esc(daTheme(p.theme))}">også ${esc(daTheme(p.theme))}</span>` : ''}${!multi && p.themeStatus === 'forslag' && tk !== 'andet' ? ` <span class="badge badge-draft" title="Forslag, afventer gennemgang${p.themeFrom && p.themeFrom !== 'andet' ? ` · før: ${esc(daTheme(p.themeFrom))}` : ' · før: Andet'}">forslag</span>` : ''}${lensOf(p) ? ` <a class="badge" href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}#ndi-linse" title="Kvalitativ NDI-linse: rolle, plads i værdikæden og forhold at holde øje med (udkast)" aria-label="NDI-linse for ${esc(p.name)}">NDI-linse</a>` : ''}${hitNote(p)}${!multi && p.themeStatus === 'forslag' && tk !== 'andet' ? `<br><small style="color:var(--muted);display:inline-block;white-space:normal;max-width:36ch;line-height:1.35;text-align:left">før: ${esc(p.themeFrom && p.themeFrom !== 'andet' ? daTheme(p.themeFrom) : 'Andet')}</small>` : ''}${!multi && themeDoubt(p) ? `<br><small style="color:var(--muted);display:inline-block;white-space:normal;max-width:36ch;line-height:1.35;text-align:left"><span class="badge" style="background:transparent;border:1px dashed var(--yellow);color:var(--yellow)">til gennemgang</span> ${esc(themeDoubt(p).why)}${themeDoubt(p).alt ? ` · alternativ: ${esc(doubtAltLabel(themeDoubt(p).alt))}` : ''}</small>` : ''}</td>
  <td class="hide-sm-cell">${p.role ? esc(p.role) : lensOwn(p) ? `${esc(lensOwn(p))} <small style="color:var(--muted)" title="Fra NDI-linsen, AI-udkast der afventer NDI-gennemgang">(linse, udkast)</small>` : '<span style="color:var(--muted)">–</span>'}</td>
  <td>${w(p.weight)}</td>
  </tr>`;
@@ -172,7 +172,7 @@
  ${data.portfolio.funds.map((f) => `<a class="control ${f.id === fund.id ? 'active' : ''}" ${f.id === fund.id ? 'aria-current="true"' : ''} href="${temaHref({ fund: f.id })}">${esc(f.short)}</a>`).join('')}
  </div>
  <div class="metrics" style="margin-top:14px">
- <div class="metric"><div class="label">Selskaber i temaet</div><strong>${list.length}</strong><small>${nMulti ? `${list.length - nMulti} med temaet som primært + ${nMulti} via multi-tag · ` : ''}${esc(fund.short)} · beholdning pr. ${posAsOf} (forsinket)</small></div>
+ <div class="metric"><div class="label">Selskaber i temaet</div><strong>${list.length}</strong><small>${nMulti ? `${list.length - nMulti} med temaet som primært + ${nMulti} som ekstra tema · ` : ''}${esc(fund.short)} · beholdning pr. ${posAsOf} (forsinket)</small></div>
  <div class="metric"><div class="label">Samlet vægt</div><strong>ca. ${w(sum)} %</strong><small>Inkl. selskaber med flere temaer</small></div>
  <div class="metric"><div class="label">Med NDI-linse</div><strong>${nLens} af ${list.length}</strong><small>Kvalitativ beskrivelse (udkast), ikke en rating</small></div>
  </div>

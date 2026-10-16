@@ -173,7 +173,6 @@
      <li><strong style="color:var(--text)">${forslag.length}</strong> har et <a href="om-data.html#g-temaforslag">temaforslag</a>, som porteføljeholdet ikke har gennemgået endnu (ca. ${w(forslag)} % af fonden).</li>
      <li><strong style="color:var(--text)">${andet.length}</strong> står i «Andet» uden tema (ca. ${w(andet)} % af fonden).</li>
      <li>Temadækning (antal, ikke-Andet): <strong style="color:var(--text)">${dk1(coverPct)} %</strong> — det er det tal UI bruger (ikke et ældre vægt-felt på 96,59 %).</li>
-     <li>Kontantandel ca. <strong style="color:var(--text)">${dk1(cashPct)} %</strong> (100 − aktievægte i snapshottet).</li>
      <li>Modenhed: <strong style="color:var(--text)">${matForslag}</strong> af ${n} har et forslag, ${n - matForslag ? `${n - matForslag} er gennemgået` : 'ingen er gennemgået endnu'}. <a href="om-data.html#g-modenhed">Ordliste →</a></li>
    </ul>
    <p class="src" style="margin-top:10px">PMINDI, beholdning pr. ${fmtDate(pf.asOf)}. <a href="ideer.html#h-tf">Fra «Andet» til tema →</a></p>`;

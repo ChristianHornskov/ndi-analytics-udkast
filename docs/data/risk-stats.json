@@ -20,8 +20,6 @@
     "coverageMetaNote": "Tema-metadækning efter ANTAL: (positioner uden theme=andet) / alle = 91,01 %. fund-meta.classificationCoverage 96,59 % er et ældre VÆGT-baseret felt og bruges ikke i UI. andetWeight = sum af weight hvor theme=andet. Modenhed = forslag (maturityStatus=forslag).",
     "maturityForslag": 345,
     "equityWeightSum": 91.94,
-    "cashWeight": 8.06,
-    "cashWeightNote": "Kontantandel ca. 8.06 % = 100 − sum af aktievægte (91.94 %) i forsinket PMINDI-snapshot. Ikke dagsaktuelt; Fundmarket kan vise anden kontantandel på en anden dato.",
     "coverageUi": 91.01
   }
 }

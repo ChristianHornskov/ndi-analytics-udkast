@@ -3,7 +3,7 @@
   "association": {
     "name": "Investeringsforeningen PortfolioManager",
     "source": "https://fundmarket.dk/newdeal-invest-kl-n/",
-    "sourceLabel": "Fundmarket – NewDeal Invest, kl n"
+    "sourceLabel": "Fundmarket – NewDeal Invest"
   },
   "ifs": {
     "name": "Fundmarket A/S",
@@ -53,7 +53,7 @@
   ],
   "classes": {
     "pmindi": {
-      "label": "NewDeal Invest, kl n (PMINDI)",
+      "label": "NewDeal Invest (PMINDI)",
       "isin": "DK0062499810",
       "legalInception": "2023-09-25",
       "distributing": true,
@@ -82,7 +82,7 @@
       "fundmarketUrl": "https://fundmarket.dk/newdeal-invest-kl-n/"
     },
     "pmindiakk": {
-      "label": "NewDeal Invest Akk, kl n (PMINDIAKK)",
+      "label": "NewDeal Invest Akk. (PMINDIAKK)",
       "isin": "DK0064642623",
       "legalInception": "2025-12-05",
       "distributing": false,
