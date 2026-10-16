@@ -428,3 +428,7 @@ Main lagde en Nasdaq-række med klassen `.cmp-row`. Temarækken på sammenlign b
 ### Update · dage pr. år · 2026-10-16 ~07:49 CEST
 
 År-rækken på drawdown siger nu også et dagtal. 2024 har 16 dage, 2025 har 116, 2026 har 135. Tilsammen 267, samme tal som hele serien. Et klik hopper stadig til årets første dag under 10 %. Sætningen har ingen ny procent. Knapperne er 44 px. Ingen sidescroll ved 320 og 1100. Ingen konsolfejl. På papir er knapperne væk, og dagtallet bliver. PMINDIAKK har ingen række og ingen procent.
+
+### Update · første dag under nul · 2026-10-16 ~07:51 CEST
+
+Ny knap i embed, under dagtallet. Et klik sætter kurvens første dag under nul. På hele perioden er det 3. okt. 2023, og udlæsningen siger −1,9 %. På år til dato er det 4. feb. 2026, og udlæsningen siger −2,0 %. Det er afstanden til periodens start, ikke et fald fra top. Knappen er 44 px. Ingen sidescroll. Ingen konsolfejl. På papir er knappen væk. PMINDIAKK har ingen knap og ingen procent.

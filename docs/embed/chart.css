@@ -512,6 +512,19 @@ button.legend {
   border-left: 3px solid var(--brand);
   padding: 2px 0 2px 10px;
 }
+.day-hop { margin: 8px 0 0; }
+.day-hop button {
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1.5px solid var(--line);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+.day-hop button:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }
 .life-bit { margin: 0 0 12px; }
 .life-bit-rail { position: relative; height: 44px; }
 .life-bit-all, .life-bit-ytd {
@@ -878,7 +891,7 @@ button.legend {
   .stop { color: #333; }
   .stop[aria-pressed=true] { color: #111; }
   .stops-track::before { background: #1d4e56; }
-  .day-picks { display: none !important; }
+  .day-picks, .day-hop { display: none !important; }
   .day-say { color: #111; border-left-color: #111; }
   .day-track { background: #fff; border: 1px solid #ccc; }
   .day-track .over { background: #1d4e56; print-color-adjust: exact; }

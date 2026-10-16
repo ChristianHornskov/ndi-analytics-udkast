@@ -532,6 +532,12 @@
     const underBar = $('#day-under-bar');
     if (overBar) overBar.style.flexGrow = String(over);
     if (underBar) underBar.style.flexGrow = String(under);
+    const first = series.findIndex((p) => p.value < 0);
+    const hop = $('#first-below');
+    if (hop) {
+      hop.hidden = first < 0;
+      if (first >= 0) hop.dataset.i = String(first);
+    }
     paintDaySplit(box.dataset.side || 'over');
   }
 
@@ -701,6 +707,14 @@
     const btn = event.target.closest('button[data-side]');
     if (!btn) return;
     paintDaySplit(btn.dataset.side);
+  });
+  $('#first-below')?.addEventListener('click', () => {
+    const hop = $('#first-below');
+    const index = Number(hop?.dataset.i);
+    if (!state.series[index]) return;
+    state.selectedDate = state.series[index].date;
+    setPoint(index, false);
+    paintDaySplit('under');
   });
   $('#stops-track')?.addEventListener('click', (event) => {
     const btn = event.target.closest('.stop');
