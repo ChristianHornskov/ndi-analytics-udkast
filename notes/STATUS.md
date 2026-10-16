@@ -849,3 +849,13 @@ Byggeriet på Thacker Pass begyndte i begyndelsen af 2023, før beholdningen. M�
 Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Reno står. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `af67076` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 01:59 CEST. Oklo skrev, at testreaktoren Groves nåede en kædereaktion ved lav effekt. Ikke færdig.**
+
+Datoen er 6. august 2026, efter beholdningen. Meddelelsen af 13. oktober 2026 siger, at reaktoren ligger i Texas. Det er ikke et kommercielt kraftværk og ikke salg af isotoper. Aurora er en sikkerhedsanalyse fra 11. juni 2026, ikke et værk i drift. Groves-2 er ikke bygget. Ingen `reviewedAt`. Blurben under atomkraft og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Groves står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `29388e6` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

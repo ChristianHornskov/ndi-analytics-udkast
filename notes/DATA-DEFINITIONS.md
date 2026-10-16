@@ -95,7 +95,7 @@ Taseko skrev 9. oktober 2026, at Florence Copper er gået i kommerciel produktio
 
 SMR-leddet siger, at NuScale skriver, at et program sammen med TVA kan blive op til 6 GW, og at det er udvikling, ikke et værk i drift. Kilden er programsiden, som taler om at udvikle og idriftsætte kapacitet, ikke om et værk, der allerede kører. Ordene historic, largest og proven er ikke taget med. De øvrige SMR-navne er stadig ikke beskrevet som kommerciel drift.
 
-Konceptkortene i nyhedsarkivet er delt i korte afsnit, så grænserne kan læses hver for sig. Energikortet har atten afsnit. Rumkortet har elleve. Indholdet er det samme som på kæden. Neutron-siden sagde 16. oktober 2026 stadig, at første flyvning ligger foran. Sætningen om, at Neutron ikke er fløjet, er ikke ændret.
+Konceptkortene i nyhedsarkivet er delt i korte afsnit, så grænserne kan læses hver for sig. Energikortet har nitten afsnit. Rumkortet har elleve. Indholdet er det samme som på kæden. Neutron-siden sagde 16. oktober 2026 stadig, at første flyvning ligger foran. Sætningen om, at Neutron ikke er fløjet, er ikke ændret.
 
 MP Materials skriver, at magneter fremstilles på anlægget Independence i Texas, og at udvindingen er ved Mountain Pass. Ordene om verdens rigeste forekomst og verdens stærkeste magnet er ikke taget med. Firefly gav 403 samme nat. Eclipse er derfor ikke omskrevet.
 
@@ -164,6 +164,8 @@ United States Antimony skriver, at zeolit kommer fra minen og anlægget i Presto
 Selskabet Merlin skriver, at Merlin Pilot er software til fly, der allerede er i drift, og at et samarbejde med den amerikanske specialoperationskommando om C-130J har længere rækkevidde som mål. Det er ikke en flåde, der allerede flyver med softwaren. Navnet Merlin er også en satellit hos Satellogic. Det er et andet selskab. Beløbet 105 millioner dollars, tallet om hundredvis af timer og formuleringen om de næste 100 år er ikke taget med. Selskabet står ikke som eksempel på opsendelse. Vægtene er uændrede.
 
 Lithium Americas skriver, at byggeriet på Thacker Pass i det nordlige Nevada begyndte i begyndelsen af 2023. Datoen ligger før beholdningen pr. 2026-06-01. Målet om industriel skala sent i 2027 er uændret og er ikke en mine i fuld drift. Selskabet skriver, at Lithium Technical Development Center i Reno er et laboratorium og et pilotanlæg, som afprøver processen. Det er ikke minen. Ordene world's largest og unmatched er ikke taget med. Børsnavne og en ISO-certificering af laboratoriet er ikke brugt som en tilladelse til minen. Vægtene er uændrede.
+
+Oklo skrev 6. august 2026, at testreaktoren Groves nåede en kontrolleret kædereaktion ved lav effekt. Datoen ligger efter beholdningen pr. 2026-06-01. Meddelelsen af 13. oktober 2026 siger, at reaktoren ligger i Texas. Det er en testreaktor, ikke et kommercielt kraftværk og ikke salg af isotoper. Aurora ved Idaho National Laboratory har en foreløbig sikkerhedsanalyse godkendt 11. juni 2026. Det er ikke et værk i drift. Groves-2 Forge er et planlagt pilotanlæg fra 13. oktober 2026 og er ikke bygget. Ordene first, leading og NYSE er ikke taget med. Citater fra politikere er ikke taget med. Vægtene er uændrede.
 
 ## År til dato på periodesiden
 

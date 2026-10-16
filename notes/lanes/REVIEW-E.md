@@ -247,3 +247,7 @@ Merlin Pilot er software til fly, der allerede er i drift. Samarbejde med den am
 ## Lithium Americas · 2026-10-16 01:57 CEST
 
 Thacker Pass i det nordlige Nevada. Byggeriet begyndte i begyndelsen af 2023, før beholdningen. Målet sent i 2027 er ikke fuld drift. Reno-centret er et laboratorium og et pilotanlæg, ikke minen. World's largest, unmatched, børsnavne og ISO er ikke kopieret som en mine. AI-udkast uden gennemgangsdato. NDI-blikket og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Oklo · 2026-10-16 01:59 CEST
+
+Groves er en testreaktor. Selskabet skrev 6. august 2026, at den nåede en kædereaktion ved lav effekt. Efter beholdningen. Texas står i meddelelsen af 13. oktober 2026. Ikke et kommercielt kraftværk. Ikke salg af isotoper. Aurora ved Idaho National Laboratory er en foreløbig sikkerhedsanalyse af 11. juni 2026, ikke et værk. Groves-2 Forge er et planlagt pilotanlæg og er ikke bygget. First, leading, NYSE og politiker-citater er ikke kopieret. AI-udkast uden gennemgangsdato. Atomkraft-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.

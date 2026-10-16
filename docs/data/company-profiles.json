@@ -593,20 +593,32 @@
   "US02156V1098": {
    "name": "Oklo",
    "theme": "energy",
-   "summary": "Udvikler små atomkraftanlæg. Denne tekst beskriver ikke et kommercielt anlæg i drift.",
-   "watch": "Godkendelser, brændsel og om det første anlæg bliver bygget.",
+   "summary": "Udvikler små atomkraftanlæg. Selskabet skrev 6. august 2026, at testreaktoren Groves nåede en kædereaktion ved lav effekt. Det er efter beholdningen. Det er ikke et kommercielt kraftværk og ikke salg af isotoper.",
+   "watch": "Om testreaktoren forbliver en test, og om Aurora bliver et værk. Teksten beskriver ikke salg af isotoper.",
    "source": "https://oklo.com/",
-   "products": "Små atomkraftanlæg under udvikling.",
-   "customers": "Store elforbrugere, hvis anlæggene bliver bygget.",
-   "role": "Udvikling af små reaktorer.",
+   "products": "En testreaktor og planer om kraftværker. Ikke salg af isotoper.",
+   "customers": "Store elforbrugere, hvis kraftværkerne bliver bygget.",
+   "role": "Testreaktor efter beholdningen. Ikke et kommercielt kraftværk og ikke salg af isotoper.",
    "narrative": [
-    "Oklo udvikler små atomkraftanlæg. Denne beskrivelse omfatter ikke et kommercielt værk i drift.",
-    "Om anlægget bliver bygget, afhænger af godkendelser. NDI har skrevet, at tidslinjer for den slags anlæg er usikre. Teksten her er en beskrivelse af selskabet, ikke en vurdering af aktien."
+    "Oklo skrev 6. august 2026, at testreaktoren Groves nåede en kontrolleret kædereaktion ved lav effekt. Datoen ligger efter beholdningen pr. 1. juni 2026. Meddelelsen af 13. oktober 2026 siger, at reaktoren ligger i Texas. Det er en testreaktor. Teksten beskriver ikke et kommercielt kraftværk og ikke salg af isotoper.",
+    "Selskabet skrev 11. juni 2026, at en foreløbig sikkerhedsanalyse for Aurora ved Idaho National Laboratory er godkendt. Det er ikke et værk i drift. Selskabet skrev 13. oktober 2026, at Groves-2 Forge er et planlagt pilotanlæg. Det er ikke bygget. NDI har skrevet, at tidslinjer for den slags anlæg er usikre. Teksten her er en beskrivelse af selskabet, ikke en vurdering af aktien."
    ],
    "narrativeSources": [
     {
      "label": "Selskabets side",
      "url": "https://oklo.com/"
+    },
+    {
+     "label": "Groves, 6. august 2026",
+     "url": "https://oklo.com/newsroom/oklos-groves-reactor-achieves-first-criticality-in-under-a-year"
+    },
+    {
+     "label": "Aurora, 11. juni 2026",
+     "url": "https://oklo.com/newsroom/u-s-department-of-energy-approves-preliminary-documented-safety-analysis-for-aurora-powerhouse-a"
+    },
+    {
+     "label": "Groves-2, 13. oktober 2026",
+     "url": "https://oklo.com/newsroom/oklo-to-advance-groves-2-forge-as-part-of-u-s-department-of-energys-nuclear-energy-launch-pad-se"
     }
    ]
   },
