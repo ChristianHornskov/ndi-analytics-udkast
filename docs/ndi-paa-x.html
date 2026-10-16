@@ -28,7 +28,7 @@
  </footer>
  <noscript><p style="max-width:1180px;margin:0 auto;padding:0 20px 24px;color:#aac0c7">Siden læser kun den statiske fil. Slå JavaScript til for at se kortene. Browseren kalder ikke X.</p></noscript>
  <script type="module">
- import { loadXPosts, xCard, fmtXDate, highlightHtml, X_LABEL, X_FILTERS, postInFilter, postMatchesQuery, postWho, feedHitKind, xScoreHtml, matchPosts } from './js/x-feed.js';
+ import { loadXPosts, xCard, fmtXDate, highlightHtml, X_LABEL, X_FILTERS, postInFilter, postMatchesQuery, postWho, feedHitKind, archiveHit, xScoreHtml } from './js/x-feed.js';
  const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
  const main = document.getElementById('main');
  const pack = await loadXPosts();
@@ -96,22 +96,14 @@
  };
  let state = read();
  const apply = (list) => list.filter((p) => postInFilter(p, state.f) && postWho(p, state.who) && postMatchesQuery(p, state.q));
- const reasonsFor = (p) => {
- const q = state.q.trim();
- const themes = !q && state.f && state.f !== 'all' && state.f !== 'ndi'
- ? (state.f === 'chips' ? ['chips', 'ai'] : [state.f])
- : [];
- const tickers = q ? [q] : (state.f === 'chips' ? ['NVDA'] : []);
- if (!tickers.length && !themes.length) return [];
- return matchPosts({ posts: [p] }, { tickers, themes })[0]?.reasons || [];
- };
+ const reasonsFor = (p) => archiveHit(p, { q: state.q, f: state.f }).reasons;
  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
  main.innerHTML = `
  <p class="eyebrow">X · STATISK SNAPSHOT</p>
  <h1>NDI på X</h1>
  <p class="lede x-intro">${posts.length} offentlige opslag i et fast udsnit. Egne kort. Ingen X-embed, og browseren kalder ikke X.</p>
- <p class="warn x-label">NDI-konti (@InvestNewdeal m.fl.) er markedsføring/udkast og kan være NDI’s holdning. Opslag fra fulgte konti er tredjepart — ikke NDI’s holdning.</p>
+ <p class="warn x-label">${esc(X_LABEL)}. NDI-konti er markedsføring/udkast og kan være NDI's holdning. Opslag fra andre konti er tredjepart.</p>
  <p class="band x-snap">Snapshot ${esc(fmtXDate(pack.snapshotAt))}. NDI-konti: ${esc(house)}.${curatedN ? ` ${curatedN} opslag er fra konti, som NDI følger (ikke NDI’s holdning).` : ''} Du kan tabe penge.</p>
 
  <div class="x-spot" id="spor" aria-label="Genveje til demo">
