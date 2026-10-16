@@ -749,7 +749,7 @@
 
     <details class="idea-sec fold" aria-labelledby="h-kl">
       <summary><h2 id="h-kl">To klasser, samme temaer</h2><span class="more" aria-hidden="true"></span></summary>
-      <p class="sub">PMINDI og PMINDIAKK er to andelsklasser med samme tankegang. Den ene udbetaler udbytte, den anden lader det blive i fonden. Hver klasse har sin egen beholdning. PMINDIAKK startede 5. december 2025 og havde pr. 1. juni 2026 320 selskaber, PMINDI 345. Alle 320 findes også i PMINDI. Lægger man temaerne side om side, ligger prikkerne tæt: intet tema skiller sig mere end 2 procentpoint ud. Forskellen mellem klasserne ligger derfor især i udbyttet og i en lille forskel i omkostningerne til handel i porteføljen, ikke i hvilke teknologier de giver eksponering mod. <a href="omkostninger.html">Omkostninger side om side →</a></p>
+      <p class="sub">PMINDI og PMINDIAKK er to andelsklasser med samme tankegang. Den ene udbetaler udbytte, den anden lader det blive i fonden. Hver klasse har sin egen beholdning. PMINDIAKK startede 5. december 2025 og havde pr. 1. juni 2026 320 selskaber, PMINDI 345. Alle 320 findes også i PMINDI. Lægger man temaerne side om side, ligger prikkerne tæt: intet tema skiller sig mere end <span id="kl-pp">2</span> procentpoint ud. Forskellen mellem klasserne ligger derfor især i udbyttet og i en lille forskel i omkostningerne til handel i porteføljen, ikke i hvilke teknologier de giver eksponering mod. <a href="omkostninger.html">Omkostninger side om side →</a></p>
       <figure class="kl">
         <p class="kl-key"><span><i class="k1"></i>PMINDI (udloddende), 345 selskaber</span><span><i class="k2"></i>PMINDIAKK (akkumulerende), 320 selskaber</span></p>
         <ul class="kl-rows">
@@ -965,6 +965,47 @@
       const qAll = pos.filter((p) => p.theme === 'quantum'), qFo = qAll.filter((p) => p.themeStatus === 'forslag');
       const ord = ['nul', 'ét', 'to', 'tre', 'fire', 'fem', 'seks', 'syv', 'otte', 'ni', 'ti'];
       document.getElementById('tf-sub').textContent = `De ${fo.length} forslag fordelt på temaer.` + (qAll.length && qFo.length === qAll.length ? ` Alle ${ord[qAll.length] || qAll.length} selskaber i Quantum er forslag, fordi temaet er nyt.` : '');
+    }
+  } catch (e) { /* tallene i HTML'en bliver stående */ }
+  // Samme optælling for «345 aktier, én prik hver», «Lag på lag» og «To klasser».
+  try {
+    const pf = await fetch('data/portfolio.json').then((r) => r.ok ? r.json() : null);
+    const A = pf?.funds?.find((f) => f.id === 'pmindi')?.positions, K = pf?.funds?.find((f) => f.id === 'pmindiakk')?.positions;
+    if (A?.length) {
+      const SLUG = { chips: 'chips', software: 'software', platforms: 'platforms', energy: 'energi', connect: 'optik-netvaerk', physical: 'fysisk-tech', 'energy-resources': 'energiressourcer', space: 'spacetech', compute: 'compute', quantum: 'quantum', andet: 'andet' };
+      const NAME = (t) => t === 'andet' ? 'Andet' : daTheme(t);
+      const esc = (t) => String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;');
+      const nf = (x) => x.toFixed(1).replace('.', ',');
+      const agg = (ps) => { const c = {}; (ps || []).forEach((p) => { const o = c[p.theme] || (c[p.theme] = { n: 0, w: 0 }); o.n += 1; o.w += p.weight || 0; }); return c; };
+      const a = agg(A), k = agg(K);
+      const th = Object.keys(a).filter((t) => SLUG[t]);
+      const link = (t) => `<a href="tema.html?slug=${SLUG[t]}">${esc(NAME(t))}</a>`;
+      // Prikker: én firkant pr. selskab
+      const pr = document.querySelector('ul.pr-rows');
+      if (pr) pr.innerHTML = [...th.filter((t) => t !== 'andet').sort((x, y) => a[y].n - a[x].n || a[y].w - a[x].w), ...(a.andet ? ['andet'] : [])]
+        .map((t) => `<li${t === 'andet' ? ' class="an"' : ''}>${link(t)}<span class="sq" aria-hidden="true">${'<i></i>'.repeat(a[t].n)}</span><em>${a[t].n} · ${nf(a[t].w)} %</em></li>`).join('');
+      // Lag på lag: bredde i forhold til det største lag i stakken
+      const stk = document.querySelector('#h-stk')?.closest('details, section');
+      if (stk) {
+        const lis = [...stk.querySelectorAll('li')].filter((li) => li.querySelector('.bar'));
+        const key = (el) => Object.keys(SLUG).find((t) => el.querySelector(`a[href="tema.html?slug=${SLUG[t]}"]`));
+        const mx = Math.max(...lis.map((li) => a[key(li)]?.w || 0)) || 1;
+        lis.forEach((li) => { const t = key(li); if (!a[t]) return; li.querySelector('.bar i').style.width = (a[t].w / mx * 100).toFixed(1) + '%'; li.querySelector('em').textContent = `${a[t].n} · ${nf(a[t].w)} %`; });
+        stk.querySelectorAll('dt').forEach((dt) => { const t = key(dt); if (a[t]) dt.innerHTML = `${link(t)} · ${a[t].n} · ${nf(a[t].w)} %`; });
+      }
+      // To klasser: prik pr. klasse på en skala til 18 %
+      const kl = document.querySelector('ul.kl-rows');
+      if (kl && K?.length) {
+        const P = (x) => (Math.min(x, 18) / 18 * 100).toFixed(1) + '%';
+        let maxd = 0;
+        const rows = th.sort((x, y) => a[y].w - a[x].w).map((t) => {
+          const x = a[t].w, y = k[t]?.w || 0, lo = Math.min(x, y); maxd = Math.max(maxd, Math.abs(x - y));
+          return `<li${t === 'andet' ? ' class="an"' : ''}>${link(t)}<span class="kl-tr" aria-hidden="true"><span class="ln" style="left:${P(lo)};width:${P(Math.abs(x - y))}"></span><span class="d1" style="left:${P(x)}"></span><span class="d2" style="left:${P(y)}"></span></span><em>${nf(x)} · ${nf(y)}</em></li>`;
+        });
+        const head = kl.querySelector('li.kl-h');
+        kl.innerHTML = (head ? head.outerHTML : '') + rows.join('');
+        const pp = document.getElementById('kl-pp'); if (pp) pp.textContent = String(Math.ceil(maxd));
+      }
     }
   } catch (e) { /* tallene i HTML'en bliver stående */ }
   </script>
