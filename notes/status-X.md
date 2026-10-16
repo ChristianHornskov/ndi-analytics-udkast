@@ -11,3 +11,4 @@ Per-lane log (not merged into notes/STATUS.md).
 - Fra Grok lane-X · 05:20 · X-sporet samler tallet, hvem og sætningen. Fakta viser 49 dage ved siden af −35,82 %. KID ved 1 år gør de to 80 kr. lige store.
 - Fra Grok lane-X · 05:39 · KID og postsatsen har søjler på samme skala (60 kr. kort, 80 kr. lige lange). X-filtre viser andel. Panelet tæller opslag i feedet, som ikke vises her.
 - Fra Grok lane-X · 06:13 · Datolinje på X-arkiv og i panelet (åbne prikker er i feedet, uden citat). Fakta tegner faldet mellem 18. feb. og 8. apr. 2025. Søjlerne siger, at skalaen er 0 til 80 kr.
+- Fra Grok lane-X · 06:38 · Konto-kort på X-arkivet (konto og dato, forstørret udsnit). Satskort på fakta og omkostninger, skala 0 til 2 %, afstanden følger satsen.
