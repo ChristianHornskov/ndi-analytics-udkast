@@ -65,6 +65,9 @@
  .oc a.oc-gl{font-size:12px;color:var(--muted)}
  .oc a.oc-gl span{color:var(--yellow)}
  .oc a.oc-learn{border-top:1px dashed var(--line);padding-top:6px;margin-top:2px;color:var(--text)}
+ /* tap-mål ≥24 px (UX c47 SHOULD 8): links der står alene på en linje */
+ .node details li a,.node .more a,.oc > a,main .link-row a,main .lede > a:only-child{display:inline-flex;align-items:center;min-height:26px;min-width:26px}
+ .node details ol{line-height:1.45}
  @media(max-width:600px){.river{padding-left:18px}.dam-head::before{left:-18px;width:12px}.node{grid-template-columns:36px 1fr;padding:12px;gap:10px}.ico{width:36px;height:36px;font-size:15px}}
  </style>
  <!-- og:start -->
@@ -226,7 +229,7 @@
  <p class="meta">${pin ? `<b>${pin.length}</b> placeret i netop leddet · ` : ''}<b>${l.count}</b> selskaber i ${pin ? 'temaet' : 'leddet'} · ca. ${pct(l.weightSum.toFixed(1))} % af fonden (forsinket)</p>
  ${alsoLine(l)}
  <p class="hit-why"></p>
- ${top.length ? `<details><summary>${pin ? `Placeret i netop leddet ifølge NDI-linsen, største efter vægt (${top.length} af ${pin.length})` : `Største selskaber i leddet efter vægt (${top.length} af ${l.count})`}</summary><ol>${top.map(c => `<li><a href="selskab.html?isin=${encodeURIComponent(c.isin)}&fund=${fundId}">${esc(coName(c))}</a> · vægt ${pct(c.w)} %</li>`).join('')}</ol></details>` : ''}
+ ${top.length ? `<details><summary>${pin ? `Placeret i netop leddet ifølge NDI-linsen, største efter vægt (${top.length} af ${pin.length})` : `Største selskaber i leddet efter vægt (${top.length} af ${l.count})`}</summary><ol>${top.map(c => `<li><a href="selskab.html?isin=${encodeURIComponent(c.isin)}&fund=${fundId}">${esc(coName(c))}</a> · vægt&nbsp;${pct(c.w)}&nbsp;%</li>`).join('')}</ol></details>` : ''}
  <p class="more"><a href="vaerdikaeder.html?kaede=ai-compute#lk-${esc(l.id)}">Hvorfor NDI følger leddet →</a>${see}</p>
  </div>
  </article>`;
