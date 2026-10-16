@@ -34,7 +34,7 @@
  const year = new URL(location.href).searchParams.get('year') || 'YTD';
  const fund = fundById(portfolio, fundId);
  if (fund.id === 'pmindiakk') {
- document.getElementById('main').innerHTML = `<p class="eyebrow">PERIODE</p><h1>${fund.short}</h1><section class="panel"><p style="color:var(--muted)">Afkast vises efter 12 måneder.</p></section><p class="warn">${WARN_HIST}</p>`;
+ document.getElementById('main').innerHTML = `<p class="eyebrow">PERIODE</p><h1>${fund.short}</h1><section class="panel"><p style="color:var(--muted)">Afkast vises efter 12 måneder.</p></section><p class="warn">${WARN_HIST}<p class="src" style="margin-top:8px">ÅTD er et delår (ikke et helt kalenderår) og afventer Fundmarket-godkendelse som markedsføringsangivelse.</p></p>`;
  } else {
  const years = calendarYearReturns(fund.data);
  const ytd = ytdReturn(fund.data);

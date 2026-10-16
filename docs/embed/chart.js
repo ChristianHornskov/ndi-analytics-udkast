@@ -162,14 +162,14 @@
   function updateMetrics() {
     if (isAkk()) {
       const set = (id, text) => { const el = document.getElementById(id); if (el) el.textContent = text; };
-      set('fund-return', 'Vises efter 12 måneder');
+      set('fund-return', 'Ny andelsklasse, kurs vises efter 12 måneder');
       set('metric-total', '-');
       set('metric-cagr', '-');
       set('metric-ytd', '-');
       const note = document.getElementById('metric-total-note');
       if (note) note.textContent = 'Afkast vises efter 12 måneder';
-      set('metric-cagr-note', 'Vises efter 12 måneder');
-      set('metric-ytd-note', 'Vises efter 12 måneder');
+      set('metric-cagr-note', 'Ny andelsklasse, kurs vises efter 12 måneder');
+      set('metric-ytd-note', 'Ny andelsklasse, kurs vises efter 12 måneder');
       return;
     }
 
@@ -189,7 +189,7 @@
     $('#metric-cagr-note').textContent = annual == null
       ? `Historik ${number.format(years)} år · vises efter ét års data`
       : `CAGR · ${number.format(years)} år siden start`;
-    $('#metric-ytd-note').textContent = `Fra 1. jan. ${last.d.slice(0, 4)} til ${fmtDate(last.d)}`;
+    $('#metric-ytd-note').textContent = `Fra 1. jan. ${last.d.slice(0, 4)} til ${fmtDate(last.d)} · delår, afventer Fundmarket-godkendelse`;
     $('#metric-cagr').classList.toggle('smaller', annual == null);
   }
 
@@ -214,11 +214,11 @@
     $('#performance-chart').innerHTML = '';
     $('#chart-readout').textContent = '';
     $('#legend-fund').textContent = state.fund;
-    $('#fund-return').textContent = 'Vises efter 12 måneder';
+    $('#fund-return').textContent = 'Ny andelsklasse, kurs vises efter 12 måneder';
     $('#updated').textContent = `Seneste kursdato: ${fmtDate(fund.data.at(-1).d)}`;
     $('#source-label').textContent = `${fund.short} · første NAV ${fmtDate(fund.inception || fund.data[0].d)}`;
     $('#chart-context').hidden = true;
-    $('#chart-pointe').textContent = 'PMINDIAKK: afkast og graf vises, når klassen har 12 måneders historik. Klassen følger samme overordnede strategi som PMINDI.';
+    $('#chart-pointe').textContent = 'Ny andelsklasse, kurs vises efter 12 måneder. Ingen NAV eller graf før 5. december 2026.';
     $('#chart-loading').hidden = true;
     state.series = [];
     state.geometry = null;

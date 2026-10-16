@@ -27,7 +27,8 @@
  <nav class="nav"><a href="index.html?view=fonden">← Fonden</a><a href="om-data.html#g-drawdown">Ordliste</a></nav>
  </header>
  <main id="main"><p class="muted">Henter…</p></main>
- <footer class="site-footer"><p>Udkast / noindex. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast.</p></footer>
+ <footer class="site-footer">
+ <p class="eyebrow" style="margin-bottom:4px">Markedsføringsmateriale</p><p>Udkast / noindex. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast.</p></footer>
  <script type="module">
  import { loadAll, fundById, maxDrawdown, drawdownSummary, calendarYearReturns, WARN_HIST, fmtDate, fmtPct } from './js/data.js';
  const { portfolio } = await loadAll();
@@ -282,6 +283,7 @@
  <h2 class="h-section">Kalenderår</h2>
  <div class="year-rail">${yearCells}</div>
  <p class="src">${yearLine}${openYear && openYear !== deepYear ? ` ${openYear} er året, serien stadig ligger under vand.` : ''} Søjlen er årets afkast.</p>
+ <p class="src">ÅTD er et delår og afventer Fundmarket-godkendelse.</p>
  <p class="link-row"><a href="periode.html?fund=${fundId}&year=YTD">År til dato →</a> · <a href="sammenlign.html">Sammenlign andelsklasser →</a> · <a href="om-data.html#g-drawdown">Ordliste: drawdown</a></p>
  <p class="src">Middel og median er over episoder fra top til bund. De er ikke et gennemsnit af hver dag under vand. Max er det samme tal som største fald på Fonden.</p>
  <p class="warn">${WARN_HIST}</p>`;

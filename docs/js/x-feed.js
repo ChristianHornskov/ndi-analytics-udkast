@@ -274,7 +274,12 @@ export async function loadXPosts() {
   try {
     const r = await fetch('data/x-posts.json');
     if (!r.ok) return null;
-    return await r.json();
+    const pack = await r.json();
+    const posts = (pack.posts || []).filter((p) => !revealsHoldings(p.text));
+    const chartMarkers = (pack.chartMarkers || []).filter(
+      (m) => chartMarkerIsInvestNewdeal(m) && !revealsHoldings(m.text),
+    );
+    return { ...pack, posts, chartMarkers };
   } catch {
     return null;
   }
@@ -307,6 +312,27 @@ function avatarColor(username) {
 
 function isHouse(p) {
   return HOUSE.test(p?.username || '');
+}
+
+/** Posts that disclose fund holdings (e.g. "også i $PMINDI") must not ship. */
+export function revealsHoldings(text) {
+  const t = String(text || '');
+  if (/ogs[aå] i \$PMINDI/i.test(t)) return true;
+  if (/begge er ogs[aå] i \$PMINDI/i.test(t)) return true;
+  if (/\$PMINDI/i.test(t) && /(holder|beholdning|vi ejer|i fonden|position(?:en|erne)?)/i.test(t)) return true;
+  return false;
+}
+
+export function isInvestNewdeal(p) {
+  return String(p?.username || '').toLowerCase() === 'investnewdeal';
+}
+
+export function chartMarkerIsInvestNewdeal(m) {
+  const title = String(m?.title || '');
+  const url = String(m?.url || '');
+  const fromTitle = (title.match(/@([A-Za-z0-9_]+)/) || [])[1] || '';
+  const fromUrl = (url.match(/x\.com\/([^/]+)\//) || [])[1] || '';
+  return String(fromTitle || fromUrl).toLowerCase() === 'investnewdeal';
 }
 
 function expandTickers(list) {
@@ -361,21 +387,28 @@ function textNameHit(text, wantT) {
   return labels;
 }
 
-/** Ranked hits for selskab/tema. Ticker and name beat a theme-only match. */
-export function matchPosts(pack, { tickers = [], themes = [] } = {}) {
+/** Ranked hits for selskab/tema on fund pages.
+ * Compliance (Vidensbot 03:00): ONLY house accounts. Theme matches only apply to house.
+ * Third-party accounts never appear on fond/selskab/tema panels. */
+export function matchPosts(pack, { tickers = [], themes = [], houseOnly = true } = {}) {
   const wantT = expandTickers(tickers);
   const wantTh = expandThemes(themes);
   const hits = [];
   for (const p of pack?.posts || []) {
+    if (revealsHoldings(p.text)) continue;
+    if (houseOnly && !isHouse(p)) continue;
     const fromTicker = tickerFamilyHit(p.tickers, wantT);
     const fromText = fromTicker.length ? [] : textNameHit(p.text, wantT);
     const nameHit = fromTicker.length || fromText.length;
+    // Theme matches: house accounts only (even if houseOnly is later relaxed)
     const themeLabels = [];
-    for (const tag of p.tags || []) {
-      const key = String(tag).toLowerCase();
-      if (!wantTh.has(key)) continue;
-      const lab = THEME_DA[key] || key;
-      if (!themeLabels.includes(lab)) themeLabels.push(lab);
+    if (isHouse(p)) {
+      for (const tag of p.tags || []) {
+        const key = String(tag).toLowerCase();
+        if (!wantTh.has(key)) continue;
+        const lab = THEME_DA[key] || key;
+        if (!themeLabels.includes(lab)) themeLabels.push(lab);
+      }
     }
     if (!nameHit && !themeLabels.length) continue;
     const reasons = [...(fromTicker.length ? fromTicker : fromText), ...themeLabels].slice(0, 3);

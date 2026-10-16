@@ -87,7 +87,7 @@
       "id": "2016558534171738574",
       "username": "InvestNewdeal",
       "name": "NewDeal Invest",
-      "text": "NewDeal Invests akkumulerende fond PMINDIAKK er nu børsnoteret hos Nasdaq Copenhagen",
+      "text": "NewDeal Invests akkumulerende fond PMINDIAKK er nu børsnoteret hos børsen i København",
       "created_at": "2026-01-28T17:06:35.000Z",
       "url": "https://x.com/InvestNewdeal/status/2016558534171738574",
       "tags": [
@@ -199,23 +199,6 @@
       ],
       "tickers": [
         "U"
-      ],
-      "label": "Fra NDI-relateret konto (udkast / markedsføring)"
-    },
-    {
-      "id": "1920549372925808643",
-      "username": "CHornskov",
-      "name": "Christian Hornskov",
-      "text": "kvantecomputere er andet og mere end kun $IonQ… Begge er også i $PMINDI.",
-      "created_at": "2025-05-08T18:40:27.000Z",
-      "url": "https://x.com/CHornskov/status/1920549372925808643",
-      "tags": [
-        "quantum"
-      ],
-      "tickers": [
-        "IONQ",
-        "QBTS",
-        "PMINDI"
       ],
       "label": "Fra NDI-relateret konto (udkast / markedsføring)"
     },
@@ -498,38 +481,6 @@
   },
   "chartMarkers": [
     {
-      "d": "2026-10-15",
-      "title": "X · @FundaAI",
-      "text": "$ORCL and $CRWV face a repricing of credit risk, along with SoftBank in Japan. Higher credit risk premiums → potentially",
-      "url": "https://x.com/FundaAI/status/2110628812753158432",
-      "kind": "x",
-      "source": "X (udvalgt offentligt opslag — ikke NDI’s holdning)"
-    },
-    {
-      "d": "2026-10-12",
-      "title": "X · @jesper_baek",
-      "text": "Teslas succes er bevis… Det lykkedes ikke at gøre elbilen til allemandseje, fordi den var grøn - men fordi de lavede den",
-      "url": "https://x.com/jesper_baek/status/2109729412589523271",
-      "kind": "x",
-      "source": "X · NDI-relateret konto (udkast / markedsføring — kan være NDI-holdning)"
-    },
-    {
-      "d": "2026-10-11",
-      "title": "X · @MilkRoadAI",
-      "text": "Jensen Huang committed $1B to put AI in the hands of America’s scientists (Genesis Mission). Nvidia gave the most at $1B",
-      "url": "https://x.com/MilkRoadAI/status/2109335734767571448",
-      "kind": "x",
-      "source": "X (udvalgt offentligt opslag — ikke NDI’s holdning)"
-    },
-    {
-      "d": "2026-10-10",
-      "title": "X · @BullTheoryio",
-      "text": "BREAKING: SoftBank is seeking to raise up to $100 billion from Gulf investors to expand its AI investments. SoftBank has",
-      "url": "https://x.com/BullTheoryio/status/2108845669687640090",
-      "kind": "x",
-      "source": "X (udvalgt offentligt opslag — ikke NDI’s holdning)"
-    },
-    {
       "d": "2026-10-03",
       "title": "X · @InvestNewdeal",
       "text": "Kvartalswebinar Q3, resultater og opdatering på mikro, makro, AI og geopolitik",
@@ -538,36 +489,12 @@
       "source": "X · NDI-relateret konto (udkast / markedsføring — kan være NDI-holdning)"
     },
     {
-      "d": "2026-09-28",
-      "title": "X · @BullTheoryio",
-      "text": "Nvidia launches AI safety tools that can stop AI agents from carrying out cyberattacks. Jensen Huang says this is an eng",
-      "url": "https://x.com/BullTheoryio/status/2104529180071461332",
-      "kind": "x",
-      "source": "X (udvalgt offentligt opslag — ikke NDI’s holdning)"
-    },
-    {
-      "d": "2026-09-16",
-      "title": "X · @MilkRoadAI",
-      "text": "Jensen Huang just mapped out the chain of companies needed to power the AI revolution. AI is becoming a new industrial s",
-      "url": "https://x.com/MilkRoadAI/status/2100358110254952615",
-      "kind": "x",
-      "source": "X (udvalgt offentligt opslag — ikke NDI’s holdning)"
-    },
-    {
       "d": "2026-08-13",
       "title": "X · @InvestNewdeal",
       "text": "$NVDA $SE $HIMS",
       "url": "https://x.com/InvestNewdeal/status/2087874479141589021",
       "kind": "x",
       "source": "X · NDI-relateret konto (udkast / markedsføring — kan være NDI-holdning)"
-    },
-    {
-      "d": "2026-07-27",
-      "title": "X · @BullTheoryio",
-      "text": "BREAKING: Nvidia is in talks to backstop $250 BILLION in financing for OpenAI. The guarantee would let OpenAI lease a 10",
-      "url": "https://x.com/BullTheoryio/status/2081548645808402539",
-      "kind": "x",
-      "source": "X (udvalgt offentligt opslag — ikke NDI’s holdning)"
     },
     {
       "d": "2026-07-02",
@@ -588,7 +515,7 @@
     {
       "d": "2026-01-28",
       "title": "X · @InvestNewdeal",
-      "text": "NewDeal Invests akkumulerende fond PMINDIAKK er nu børsnoteret hos Nasdaq Copenhagen",
+      "text": "NewDeal Invests akkumulerende fond PMINDIAKK er nu børsnoteret hos børsen i København",
       "url": "https://x.com/InvestNewdeal/status/2016558534171738574",
       "kind": "x",
       "source": "X · NDI-relateret konto (udkast / markedsføring — kan være NDI-holdning)"
