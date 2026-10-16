@@ -1019,3 +1019,13 @@ Valget ligger efter beholdningen pr. 1. juni 2026 og er ikke et værk i drift. V
 Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Videberg står. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `bdec96d` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 02:50 CEST. Lynas skriver, at anlægget i Kalgoorlie laver et blandet karbonat fra Mt Weld. Ikke færdig.**
+
+Mt Weld ligger 35 km syd for Laverton. Koncentratanlægget blev taget i brug i 2011. Karbonatet skal viderebehandles i Gebeng. Produktionen i Malaysia begyndte i 2012. Kalgoorlie-siden daterer ikke starten. Det er mine og forarbejdning, ikke et kraftværk. Ingen `reviewedAt`. Blurben under råstoffer og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Kalgoorlie står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `1aeff9c` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

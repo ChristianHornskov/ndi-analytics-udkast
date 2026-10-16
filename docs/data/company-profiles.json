@@ -901,20 +901,24 @@
   "AU000000LYC6": {
    "name": "Lynas Rare Earths",
    "theme": "energy-resources",
-   "summary": "Udvinder sjældne jordarter og forarbejder dem. Minen ligger i Australien, og forarbejdning sker også andre steder.",
-   "watch": "Drift af mine og forarbejdning, og reglerne for de anlæg, der skiller metallerne ad.",
+   "summary": "Udvinder og forarbejder sjældne jordarter. Selskabet skriver, at Mt Weld ligger 35 km syd for Laverton, og at anlægget i Kalgoorlie laver et blandet karbonat, som skal viderebehandles i Gebeng i Malaysia. Det er mine og forarbejdning, ikke et kraftværk.",
+   "watch": "Om anlægget i Kalgoorlie kører i den skala, siden beskriver. Siden daterer ikke starten. Det er ikke et kraftværk.",
    "source": "https://lynasrareearths.com/",
-   "products": "Sjældne jordarter.",
-   "customers": "Industrikunder.",
-   "role": "Råstof og forarbejdning.",
+   "products": "Koncentrat fra Mt Weld, blandet karbonat fra Kalgoorlie og viderebehandling i Gebeng. Ikke et kraftværk.",
+   "customers": "Industrikunder. Teksten nævner ikke navngivne kunder.",
+   "role": "Mine og forarbejdning. Kalgoorlie laver karbonat. Ikke et kraftværk.",
    "narrative": [
-    "Lynas udvinder sjældne jordarter og forarbejder dem. Minen ligger i Australien.",
-    "Det er råstof og forarbejdning, ikke et kraftværk."
+    "Lynas skriver, at minen Mt Weld ligger 35 km syd for Laverton i Western Australia, og at koncentratanlægget blev taget i brug i 2011, 1,5 km fra minen. På anlægget i Kalgoorlie blandes koncentratet med koncentreret svovlsyre og knækkes i en roterovn. Ovnen er 110 m lang og 6 m høj. Selskabet skriver, at processen giver et blandet karbonat, MREC, som skal viderebehandles i Gebeng i Malaysia. Om-siden skriver, at produktionen i Malaysia begyndte i 2012. Årstallene ligger før beholdningen pr. 1. juni 2026. Det er mine og forarbejdning, ikke et kraftværk.",
+    "Siden om Kalgoorlie daterer ikke, hvornår anlægget begyndte. En compliance-rapport beskriver aktiviteter fra 1. januar 2025 til 31. december 2025. Perioden ligger før beholdningen. Restprodukter køres tilbage til depoter ved Mt Weld under Ministerial Statement 1216. Det er ikke en ny minetilladelse i denne tekst. Om-siden nævner neodym, praseodym, lanthan, cerium, dysprosium, terbium og samarium. Teksten siger ikke, at hvert produkt kommer fra Gebeng."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets side",
-     "url": "https://lynasrareearths.com/"
+     "label": "Om Lynas",
+     "url": "https://lynasrareearths.com/about-us/"
+    },
+    {
+     "label": "Kalgoorlie",
+     "url": "https://lynasrareearths.com/kalgoorlie-western-australia/"
     }
    ]
   },
