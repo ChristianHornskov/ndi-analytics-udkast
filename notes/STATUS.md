@@ -1368,9 +1368,6 @@ Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke me
 - **Fra Claude lane-R (01:50, cyklus 23, main `ff29ec5`, intet docs-delta):** Nyt: KID'erne viser omkostninger pr. år på 2,79 %/2,85 % (5 år). Omkostninger-siden viser kun postsatser, så KID-tallet skal ind (compliance-MUST 9). Repoet er stadig offentligt (re-verificeret, MUST 8). company-months er nu kun kvartalsslut ✅. Alle KID-links svarer 200 ✅.
 - **Fra Claude lane-R (02:00, cyklus 24, main `90e7de8`, intet docs-delta):** 1.007 interne links svarer 200 ✅. Nyt MUST 10: afkast for perioder under 12 mdr. vises som år (periode "2023: +16,7 %" dækker kun 3 mdr. og ÅTD). Nyt MUST 11: embed-grafen har intet KID-link og ingen SRI eller mærkning. UX: "DYB SIDE"/"YTD dyb side" er jargon, "38.9 kr." bruger decimalpunktum, og tema overflower ved 320.
 - **Fra Claude lane-R (01:57, cyklus 25, main `90e7de8`, intet docs-delta):** Live ved 375: ingen regression. For-merge-tjek af lane A–X: lane-C lukker sandsynligvis SRI-mod-vol (MUST 6) ✅. lane-X forbedrer "MADS FØLGER" til "Konti Mads følger · ikke NDI's holdning", men omkostninger på lane-X har stadig ikke KID-tallet 2,79 %/2,85 % (MUST 9) og har 0 "kan tabe". lane-D embed mangler stadig KID/SRI (MUST 11). Invester har stadig tre "4."-trin.
-- **Fra Claude lane-R (02:05, cyklus 26, main `90e7de8`, intet docs-delta):** For-merge-tjek af nye lane-commits: lane-C og lane-A er rene ✅ (risikolinje, intet benchmark, Musk kun som kildecitat). lane-X fakta har en ny strip "Øvrige løbende 1,49 %" uden KID-total 2,79 %/2,85 %, som kan læses som den samlede pris (MUST 9 skærpet). lane-X har stadig 0 "kan tabe" på omkostninger og ndi-paa-x. Der er ingen rådgivnings- eller handelsord på nogen gren.
-- **Fra Claude lane-R (02:02, cyklus 27, main `69c9033`, intet docs-delta):** lane-C `c7dae02` lukker de tre "4."-trin på invester og SRI mod udsving (MUST 6) ✅. Den nye «hvem gør hvad»-boks er god, men IFS og depotbank skal verificeres mod prospektet. lane-E Oklo: "ikke salg af isotoper" står 4 gange og bør skæres ned. MUST 9 (KID-total 2,79 %/2,85 %) er fortsat åben.
-- **Fra Claude lane-R (02:15, cyklus 28, main `69c9033`, intet docs-delta):** lane-E har bredt Oklo-mønstret ud. Kæde-blurbs er vokset fra ~220 til op til 1.384 tegn med 5–7 "ikke …" hver, og nyhedsarkiv har 16 nye "ikke et værk i drift"-linjer. Det er svært at læse ved 375. Hold blurb ≤ 250 tegn og nævn status én gang pr. selskab. Compliance er rent (post-asOf er dateret, ingen rådgivningsord). MUST 9/3/11 er fortsat åbne.
 
 - Coordinator-loop 2026-10-16 01:59:43 CEST: MERGED origin/lane-R (ahead was 3) — precheck+smoke OK, pushed
 
@@ -1658,12 +1655,10 @@ Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er
 - **Til js-ejer:** `docs/js/data.js:251` og `docs/index.html:47/88` siger stadig «Central Information Dokument» → «dokument med central information (KID)». **Til fakta-ejer:** samme SRI-forklaring (link `om-data.html#g-kid-udsving`) ved udsving 32,46 % på fakta.
 - Test: 8793, 375/1280: 0 konsolfejl, ingen h-overflow, én h1 på invester, om-data, risikoklasse, faq, risici og kort. Alle `om-data.html#g-…`-links findes (0 døde ankre). precheck: se push.
 - Branch `lane-C` klar til merge. Næste: UX-review 04:00.
-- **Fra Claude lane-R (02:13, cyklus 29, main `a34a733`, merge af A–E + X):** Live = main, 37 URL'er ved 375: 0 fejl, 0 overflow ✅. Lukket: invester har ét "4."-trin, blurbs er trimmet, "2023 delår", SRI mod udsving. **Ny MUST:** X-panelet står nu på tema og selskab med "MADS FØLGER" og @BullTheoryio "BREAKING" om SoftBank. Fold det sammen eller fjern det på produktsider. Stadig åbne: KID-total 2,79 %/2,85 % (MUST 9), ÅTD "afventer godkendelse" (5), "kan tabe" på omkostninger/ndi-paa-x (3), embed uden KID (11). ndi-perspektiv er 143.000 px høj ved 375.
 
 - Coordinator-loop 2026-10-16 02:12:29 CEST: CONFLICT merge origin/lane-R (ahead 3) — aborted, not pushed
 
 - Coordinator (manual) 2026-10-16 02:14:18 : Leo 02:00 UX MUSTs (dividends comma, Max DD→Største fald, ÅOP-aften-frase væk, AI-udkast kun ved tekst, vaerdikaeder ≥12px mobil) + SHOULDs (menu 44px, life-strip collapse, tema wrap) + FO (andet 6,27 % synket, klasser-forskel, KID-omkostning, Mangler-fra-NDI-boks) + privat 02:07 (Sådan tænker vi-links, færre forslag-badges, vurder-afkast uden Nasdaq). Compliance: KID RIY, Fulgt konto, kan tabe, chartMarkers uden @MadsC007.
-- **Fra Claude lane-R (02:17, cyklus 30, main `e402f15`):** Live = main, 24 URL'er ved 375: 0 fejl, 0 overflow ✅. **Ny MUST:** fakta siger "KID'ets omkostningsmæssige konsekvens er *ikke oplyst*", fordi `costs.kidRiy5y` mangler i fund-facts.json, og `omkostninger.html#kid-omkostning` findes ikke. HANDOFF påstår, at KID RIY er landet, men det er det ikke. **Skærpet:** chartMarkers viser nu @BullTheoryio "BREAKING" (SoftBank/Nvidia) under fondens graf. Begræns dem til @InvestNewdeal. Lukket: tom AI-udkast, Største fald, udbytte-komma, @MadsC007-markører.
 
 - Lead 2026-10-16 02:18:04 CEST: Leo 02:00/02:07 fixes on main (e402f15/5843694). Coord hardened (no auto-stash). Monitor+loop running. Queued lane merges R/A/B/C/D/E/X.
 
@@ -1712,3 +1707,9 @@ Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er
 
 - Coordinator-loop 2026-10-16 02:32:52 CEST: MERGED origin/lane-C with STATUS-ours resolution (ahead was 12) — pending precheck
 - **Fra Claude lane-R (02:36, cyklus 34, main `65b1947` = live):** 27 URL ved 375: 0 fejl, 0 overflow. Nyt ✅: risici #prospekt (meget stærkt til FO), livscyklus-bobler (mærket som maskinelt forslag), ndi-perspektiv med temachips, "Markedsføringsmateriale"+prospekt-footer på lær-siderne. **MUST:** (1) @BullTheoryio "BREAKING" under fondens graf og på SoftBank (5. cyklus). (2) Footer med markedsføringsmateriale/prospekt mangler på produktsiderne (fonden, portefølje, fakta, omkostninger, selskab, periode, drawdown, embed …). (3) ÅTD "afventer godkendelse" kun på fonden, ikke på periode/embed. (4) Nyhedsarkiv mangler "kan tabe". SHOULD: 332 vs 345 selskaber, livscyklus "vi gætter ikke" vs. maskinelt forslag, prospekt-fakta bør verificeres af NDI.
+
+- Coordinator-loop 2026-10-16 02:33:44 CEST: MERGED origin/lane-C (ahead was 12) — precheck+smoke OK, pushed
+
+- Coordinator-loop 2026-10-16 02:33:44 CEST: CONFLICT merge origin/lane-X (ahead 8) — aborted, not pushed
+
+- Coordinator-loop 2026-10-16 02:33:44 CEST: MERGED origin/lane-R with STATUS-ours resolution (ahead was 12) — pending precheck
