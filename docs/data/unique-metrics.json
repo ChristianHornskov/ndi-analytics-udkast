@@ -1399,9 +1399,9 @@
       "name": "Iris Energy (IREN)",
       "metrics": [
         {
-          "label": "NDI-tag",
-          "value": "Energi",
-          "hint": "Primært tema: Energi. Eksponering, ikke rating."
+          "label": "NDI-tags",
+          "value": "Energi + compute (forslag)",
+          "hint": "Primært tema: Energi. Compute er foreslået som ekstra tema (multi-tag) og afventer NDI-gennemgang. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -6295,9 +6295,9 @@
       "name": "Core Scientific",
       "metrics": [
         {
-          "label": "NDI-tag",
-          "value": "Software",
-          "hint": "Primært tema: Software. Temaet i data er Software, men forretningen er datacentre. Eksponering, ikke rating."
+          "label": "NDI-tags",
+          "value": "Software + compute (forslag)",
+          "hint": "Primært tema: Software. Temaet i data er Software, men forretningen er datacentre. Compute er foreslået som ekstra tema (multi-tag) og afventer NDI-gennemgang. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -6329,9 +6329,9 @@
       "name": "Applied Digital",
       "metrics": [
         {
-          "label": "NDI-tag",
-          "value": "Software",
-          "hint": "Primært tema: Software. Temaet i data er Software, men forretningen er datacentre. Eksponering, ikke rating."
+          "label": "NDI-tags",
+          "value": "Software + compute (forslag)",
+          "hint": "Primært tema: Software. Temaet i data er Software, men forretningen er datacentre. Compute er foreslået som ekstra tema (multi-tag) og afventer NDI-gennemgang. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -6363,9 +6363,9 @@
       "name": "TeraWulf",
       "metrics": [
         {
-          "label": "NDI-tag",
-          "value": "Platforme",
-          "hint": "Primært tema: Platforme. Temaet i data er Platforme, men forretningen er mining og datacentre. Eksponering, ikke rating."
+          "label": "NDI-tags",
+          "value": "Platforme + compute (forslag)",
+          "hint": "Primært tema: Platforme. Temaet i data er Platforme, men forretningen er mining og datacentre. Compute er foreslået som ekstra tema (multi-tag) og afventer NDI-gennemgang. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
@@ -9627,9 +9627,9 @@
       "name": "WhiteFiber",
       "metrics": [
         {
-          "label": "NDI-tag",
-          "value": "Software",
-          "hint": "Primært tema: Software. Forretningen er datacentre, tættere på Compute. Eksponering, ikke rating."
+          "label": "NDI-tags",
+          "value": "Software + compute (forslag)",
+          "hint": "Primært tema: Software. Forretningen er datacentre, tættere på Compute. Compute er foreslået som ekstra tema (multi-tag) og afventer NDI-gennemgang. Eksponering, ikke rating."
         },
         {
           "label": "Hvad ejer man?",
