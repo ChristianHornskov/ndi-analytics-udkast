@@ -518,37 +518,18 @@ Hele lane-C-fladen ved 375 px: ideer, kort, om-data, invester, risici, ndi-persp
 1. ~~`risici.html` «årlige afkast (CAGR)» uden link~~. Rettet i samme runde: CAGR linker nu til `om-data.html#g-cagr`.
 2. `ndi-perspektiv.html`: «Andet / uklassificeret 27» er højere end de 6 fra kl. 02:30. Det kommer af lane-B's temaforslag. Tjek, at lead-teksten ikke lover færre.
 
-## 06:00 CEST
-**Live:** https://christianhornskov.github.io/ndi-analytics-udkast/ · Screenshots: `notes/ux-screens/06-desktop-*.png`, `06-mobile-*.png` · Viewport: 1280 + 375 · Runde: natlig UX-review (Grok Bot) · Pages last-modified 04:07 UTC (**06:07 CEST**).
+## 06:06 CEST lane-C · ndi-perspektiv: livscyklus-formulering
+- `ndi-perspektiv.html`: forklaringen af livscyklus siger nu «kun et maskinelt forslag, som afventer NDI's gennemgang», ikke bare «ikke sat». Det passer med `maturityStatus: forslag` (samme uoverensstemmelse som cyklus 38 SHOULD 1 på selskab.html).
+- **Til Leo (ikke lane-C's fil):** `docs/data/unique-metrics.json` `note` siger «Quantum-metrics er forslag» (engelsk fagord) og «Livscyklus er ikke klassificeret for nogen selskaber endnu». Forslag: «Quantum-temaet er et forslag. Livscyklus findes kun som maskinelt forslag og afventer NDI's gennemgang.»
 
-**Perspektiver:** privatinvestor (55+, mobil først) + institutionel/family office (desktop, sporbarhed, mærkning).
+## 06:13 CEST lane-C · fagord i andre lanes' UI (læst live lokalt, 1280, 12 sider)
+Ordlisten (lane-C) dækker nu ordene. Teksten i UI'et ligger hos andre lanes, så det følgende er **forslag til Leo**:
+1. `fakta.html:415`: hullet vises som «**Revision / auditor**», og ved siden af står «Officiel volatilitet / Sharpe». Engelsk og intern huller-tone på en produktside. Forslag: «Revisor: oplyses i årsrapporten» (link) eller skjul feltet, indtil navnet er kendt.
+2. `vaerdikaeder.html:877`: «multi-tagges også energi». Forslag: «hører også til temaet energi».
+3. `js/app.js:441`: knaptekst «**YTD** dyb side». Forslag: «År til dato i detaljer» (ÅTD bruges andre steder, så det bør være ens).
+4. Livscyklus-tællere på Udforsk: «High growth · GARP · Value» på engelsk. Ordlisten forklarer dem (#g-high-growth, #g-garp, #g-value), men plain dansk ville være «Høj vækst · Vækst med overskud · Moden», som ideer `#h-lc` allerede bruger.
+5. «screener» står i UI på tema/selskab («Åbn i screeneren →»). Ordliste-opslag `#g-screener` er tilføjet. Forslag: kald den «Udforsk» i knapteksten, som i nav.
 
-### Løst siden 04:00 CEST
-- **(mobil)** 04:00 MUST 1: Fonden — historisk-afkast-advarsel er synlig i første viewport (375×812) sammen med **+104,8 %** / **+26,4 %**. Warn ligger mellem `metrics-returns` og `metrics-more`; gul warn-stripe ca. y=743–792 i `06-mobile-fonden.png`.
-- **(desktop + mobil)** 04:00 MUST 2: ChartMarker-tekst `$NVDA $SE $HIMS` er væk (tom `text` på 13. aug.-markøren). Live anvender også `stripCashtags` før graf/kontekstliste. Synlig ticker-label på graffen er væk.
-- **(desktop + mobil)** 04:00 MUST 3: `temaer.html` har `footer.site-footer` med **Markedsføringsmateriale** + KID/prospekt-links (verificeret i live HTML).
-- **(desktop + mobil)** 04:00 SHOULD: «Følg tema (stub)» skjult; Udforsk-lede uden «Level 1»; KPI-label «Gns. årligt afkast» + `info-btn` (ikke synlig «CAGR»); nav `min-height: 44px` i CSS ≤800 px.
-- **(desktop + mobil)** Fonden «Omkostninger (kort)» viser KID RIY **2,79 % / 2,85 %**. X-kontekst under graf: kun @InvestNewdeal. Palet respekteret.
-
-### MUST
-1. **(desktop + mobil)** Porteføljens livscyklus-kurve bruger stadig engelske labels (**Præ-revenue**, **Præ-profit**, **High growth**, **GARP**, **Value**), mens Udforsk-filtre og `daMatPlain` siger **Før omsætning / Før overskud / Høj vækst / Vækst med overskud / Moden**. Samme begreb, to sprog → forvirring hos privatinvestor og «ufærdigt»-signal hos institutionel. Brug `daMatPlain` (eller samme danske streng) på kurve, legend og intro. [konsistens K1, persona-privat, lane-C jargon-rens, inspiration §1 Stripe hierarki via ord — ikke jargon]
-2. **(desktop + mobil)** Residual af 04:00 MUST 2: cyan X-markør **13. aug. 2026** har tom `text`, men URL peger stadig på opslaget der kun er `$NVDA $SE $HIMS`. Klik fra graffen/kontekstlisten åbner ticker-picks ved siden af afkastkurven. Skjul markører med tom tekst efter `stripCashtags`, eller fjern dem fra `chartMarkers`. [brief «ingen rådgivning», tillid, R2]
-3. **(mobil)** Udforsk: første viewport er stadig kun søgning + chip-væg — **ingen rækker/resultater** synlige (`06-mobile-udforsk.png`). Analytiker- og privatrejse «find et selskab» kræver scroll før første signal. Fold sekundære filtre (temaforslag / linse / modenhed) bag «Flere filtre», eller sticky resultat-preview under søgning. [inspiration §4 Things/Robinhood, brief brugerrejser, 04:00 SHOULD 2 eskaleret]
-
-### SHOULD
-1. **(desktop + mobil)** Årstabel-link **«Dyb →»** / knap **«YTD dyb side →»** er intern jargon (Claude lane-R flaggede også). Omskriv til «Se året →» / «ÅTD i detaljer →». [scanbarhed, minimize jargon]
-2. **(mobil)** Fonden: datostempel gentaget (global linje + lede) — støj i første viewport. [04:00 SHOULD 7]
-3. **(desktop)** Selskabsside: reduceret header vs. fuld SPA-nav — dobbelt «tilbage»-mønster. [04:00 SHOULD 5]
-4. **(desktop + mobil)** Tom Aug-13-markør bør ikke tælle som «kontekst» i listen under graffen (tom brødtekst under titel). Samme fix som MUST 2.
-5. **(mobil)** Temaer: lang side med mange gul-«forslag»-badges; overvej én statuslinje øverst (04:00 COULD 2) så hub ikke føles som fejl-liste.
-
-### COULD
-1. Chart-takeaway gentager procent tæt på warn — hold takeaway kort; warn forbliver i synsfelt ved scroll til graf (Stripe + advarsel).
-2. Entré-døre: «forslag»-tætheden er ærlig; én samlet statuschip kan erstatte badge pr. dør.
-3. Tabular nums er på plads i metrics; spot-tjek screener-vægtkolonne efter filter.
-
-### Top-3 MUST (til Leo)
-1. Livscyklus-kurve: engelske labels → danske (`daMatPlain`).
-2. Tom X-markør 13. aug. linker stadig til `$NVDA $SE $HIMS`-opslag — skjul/fjern.
-3. Mobil Udforsk: resultater under fold; fold filtre / preview.
-
+## 06:18 CEST lane-C · tap-mål, slutstatus
+- **375:** 0 links eller knapper under 24 px på alle 23 lane-C-sider (ideer, kort, om-data, invester, risici, ndi-perspektiv og 17 lær-sider). Ved 06:00 var der 30+ på ideer.
+- **1280:** kun den fælles undernav `nav.nav a` er 19 px høj. Den styles i `docs/css/ndi.css`, som ikke er lane-C's fil. Den består sandsynligvis WCAG 2.5.8's undtagelse for afstand, fordi der er mellemrum mellem links. Forslag til CSS-lanen: `nav.nav a{padding:3px 0}`, så den er robust.

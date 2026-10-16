@@ -341,6 +341,7 @@
     .cs-key i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
     /* Mål for tryk (WCAG 2.5.8): temalinks i tabeller og rækker mindst 24 px høje */
     .pr-rows li>a,.kl-rows li>a,.stk-rows li>a,th[scope=row]>a{display:inline-block;min-height:24px;line-height:24px}
+    .eye>a{display:inline-block;min-height:24px;line-height:24px} /* mål for tryk ≥24 px */
   </style>
 </head>
 <body>
@@ -389,7 +390,7 @@
 
 
     <nav class="idea-toc" aria-label="Billeder på siden">
-      <p class="lbl">16 billeder på siden</p>
+      <p class="lbl" id="toc-n">18 billeder på siden</p>
       <ol><li><a href="#h-flod">Flodsystemet på ét billede</a></li><li><a href="#h-vs">Én kasse eller flere temaer</a></li><li><a href="#h-mx">Samme 345 selskaber, to sorteringer</a></li><li><a href="#h-wk">Vægt er ikke kurs</a></li><li><a href="#h-tf">Fra «Andet» til tema</a></li><li><a href="#h-pr">345 aktier, én prik hver</a></li><li><a href="#h-kv">Hvor mange selskaber er halvdelen?</a></li><li><a href="#h-lc">Hvor på bakken ligger vægten?</a></li><li><a href="#h-uw">Fald fra top som episoder</a></li><li><a href="#h-ur">Tre ure på samme side</a></li><li><a href="#h-lag">Hvad står der i tallet?</a></li><li><a href="#h-kl">To klasser, samme temaer</a></li><li><a href="#h-stk">Lag på lag</a></li><li><a href="#h-dr">Tre drivkræfter, ét overlap</a></li><li><a href="#h-ln">Hvorfor ejer vi den?</a></li><li><a href="#h-kd">Hvem står bag tallet?</a></li><li><a href="#h-cs">Hvor tjener teknologien pengene?</a></li><li><a href="#h-hus">Bygget som et hus</a></li></ol>
     </nav>
 
@@ -873,7 +874,7 @@
 
     <details class="idea-sec fold" aria-labelledby="h-cs">
       <summary><h2 id="h-cs">Hvor tjener teknologien pengene?</h2><span class="more" aria-hidden="true"></span></summary>
-      <p class="sub">Et selskab kan være kendt for én ting og tjene pengene på en anden. Amazon er et godt eksempel: de fleste kender netbutikken, men cloud-delen AWS, der lejer regnekraft ud til andre, står for en lille del af salget og over halvdelen af driftsresultatet. Derfor kigger vi efter, hvilket led i <a href="om-data.html#g-vaerdikaede">værdikæden</a> pengene faktisk lander i, og ikke kun på, hvad selskabet hedder.</p>
+      <p class="sub">Et selskab kan være kendt for én ting og tjene pengene på en anden. Amazon er et godt eksempel: de fleste kender netbutikken, men cloud-delen AWS, der lejer regnekraft ud til andre, står for en lille del af salget og over halvdelen af driftsresultatet. Derfor er det værd at se på, hvilket led i <a href="om-data.html#g-vaerdikaede">værdikæden</a> pengene faktisk lander i, og ikke kun på, hvad selskabet hedder.</p>
       <figure class="cs" role="img" aria-label="Amazon 2024: AWS udgør ca. 17 procent af omsætningen og ca. 58 procent af driftsresultatet.">
         <div class="cs-row"><strong>Omsætning</strong><div class="cs-bar" aria-hidden="true"><span class="aws" style="width:17%">17 %</span><span class="rest">Resten af Amazon 83 %</span></div></div>
         <div class="cs-row"><strong>Driftsresultat</strong><div class="cs-bar" aria-hidden="true"><span class="aws" style="width:58%">AWS 58 %</span><span class="rest">42 %</span></div></div>
@@ -926,6 +927,7 @@
   (function(){
     var f=[].slice.call(document.querySelectorAll('details.fold')),b=document.getElementById('fold-all');
     function sync(){var all=f.every(function(d){return d.open});b.textContent=all?'Fold alle sammen':'Fold alle ud';b.setAttribute('aria-expanded',all)}
+    (function(){var n=document.querySelectorAll('.idea-toc li').length,l=document.getElementById('toc-n');if(l&&n)l.textContent=n+' billeder på siden'})();
     function openHash(){var t=location.hash&&document.getElementById(location.hash.slice(1));var d=t&&t.closest('details.fold');if(d){d.open=true;t.scrollIntoView()}}
     if(window.matchMedia('(min-width:860px)').matches)f.forEach(function(d){d.open=true});
     f.forEach(function(d){d.addEventListener('toggle',sync)});

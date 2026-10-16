@@ -157,6 +157,41 @@
         "platforms"
       ],
       "why": "Forslag: Opendoor er en digital proptech-/iBuyer-platform. Offentlig 10-K. Afventer NDI-gennemgang."
+    },
+    "US21874A1060": {
+      "tags": [
+        "software",
+        "compute"
+      ],
+      "why": "Forslag: Core Scientific omstiller tidligere bitcoin-mining-anlæg til datacentre for AI/HPC-kunder (NDI-linsen: AI-compute · led 2). Primært tema uændret. Afventer NDI-gennemgang."
+    },
+    "US0381692070": {
+      "tags": [
+        "software",
+        "compute"
+      ],
+      "why": "Forslag: Applied Digital bygger og udlejer datacentre til AI-beregning (NDI-linsen: AI-compute · led 2). Primært tema uændret. Afventer NDI-gennemgang."
+    },
+    "KYG961151035": {
+      "tags": [
+        "software",
+        "compute"
+      ],
+      "why": "Forslag: WhiteFiber driver AI-cloud og HPC-datacentre (NDI-linsen: AI-compute · led 2). Primært tema uændret. Afventer NDI-gennemgang."
+    },
+    "US88080T1043": {
+      "tags": [
+        "platforms",
+        "compute"
+      ],
+      "why": "Forslag: TeraWulf har bitcoin-mining og bygger datacentre til AI/HPC-kunder (NDI-linsen: AI-compute · led 2). Primært tema uændret. Afventer NDI-gennemgang."
+    },
+    "AU0000185993": {
+      "tags": [
+        "energy",
+        "compute"
+      ],
+      "why": "Forslag: IREN har datacentre med egen strømadgang og leverer også AI-cloud (NDI-linsen: AI-compute · led 2). Primært tema Energi uændret. Afventer NDI-gennemgang."
     }
   }
 }

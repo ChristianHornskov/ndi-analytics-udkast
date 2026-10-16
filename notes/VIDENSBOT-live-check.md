@@ -225,6 +225,10 @@ Sider: ideer, kort, om-data, invester, risici, ndi-perspektiv, laer/*.
 - Historisk tidslinje i flodsystem-sprog. Navngivne selskaber (Intel, TSMC, Nvidia, Amazon, Google, OpenAI-produktet ChatGPT) står kun som historiske milepæle, uden vægte og uden links til selskabssider, og med «At et selskab er nævnt, er ikke en anbefaling».
 - **Bed Vidensbot/NDI tjekke:** (1) årstallene (2019 EUV i masseproduktion, 2023 chipmangel inkl. avanceret pakning, 2024 datacentre, 2025 strøm). De sidste tre er forenklede perioder, ikke enkeltbegivenheder. (2) Er tredelingen «chippen → regnekraft → forsyning» i tråd med Mads' flodsystem (ugebrev 30. marts 2026)? (3) Er «NDI kalder energi den første dæmning» korrekt gengivet?
 
-## 06:08 CEST lane-C · ideer `#h-cs` «Hvor tjener teknologien pengene?»
+## 06:04 CEST lane-C · ideer `#h-cs` «Hvor tjener teknologien pengene?»
 - Tal til efterprøvning før live: Amazon 10-K for 2024: net sales ca. 638,0 mia. USD, heraf AWS ca. 107,6 mia. (ca. 17 %). Operating income ca. 68,6 mia. USD, heraf AWS ca. 39,8 mia. (ca. 58 %).
 - Vidensbot-linje: «værdikæde frem for sektor». Pengene lander i et led (cloud), ikke i det selskabsnavn, folk kender. Ingen handelssprog. Amazon er ikke i beholdningen, og det står ved figuren.
+
+## 06:17 CEST lane-C · tidslinjens årstal selvtjekket
+- Claude har tjekket `laer/tidslinje.html` ud fra egen viden (ikke opslag): 1971 Intel 4004 · 1987 TSMC · 1999 GeForce 256 · 2006 AWS (S3/EC2) · 2007 CUDA (annonceret nov. 2006, frigivet 2007) · 2012 AlexNet · 2017 transformeren («Attention Is All You Need») · 2019 EUV i masseproduktion (TSMC N7+) · 2022 ChatGPT (30. nov.). Ingen fejl fundet.
+- 2023–2025 er tendenser, ikke enkeltbegivenheder («ikke chips / plads / strøm nok»). De bør læses af NDI, så de passer med ugebrevenes formuleringer.

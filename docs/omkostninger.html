@@ -73,6 +73,7 @@
   .cost-hero.is-same [data-kid-gap],.cost-hero.is-same .gap-kr{text-shadow:0 0 16px rgba(245,238,158,.55)}
   .cost-hero article{display:flex;flex-direction:column;border-radius:16px;padding:14px 16px 12px;min-width:0}
   .match-rail{width:168px;max-width:100%;align-self:flex-start;height:6px;margin-top:auto;border-radius:99px;background:#0b171d;box-shadow:inset 0 0 0 1px #2a424a;overflow:hidden;flex:0 0 auto}
+  .rail-key{grid-column:1 / -1;margin:0;font-size:11px;line-height:1.35;color:var(--faint)}
   .match-rail i{display:block;height:6px;border-radius:99px;background:#89aeb4}
   .cost-hero-gap .match-rail i,.cost-hero.is-same .match-rail i{background:#f5ee9e}
   .cost-hero.is-same .match-rail{box-shadow:0 0 12px rgba(245,238,158,.45), inset 0 0 0 1px #2a424a}
@@ -289,6 +290,7 @@
  <p class="gap-note">på 100.000 kr. Søjlerne deler skala. Ikke et ÅOP.</p>
  <div class="match-rail" aria-hidden="true"><i data-rail="tx" style="width:${railPct(txGapN)}%"></i></div>
  </article>`}
+ ${dTx === 0 ? '' : `<p class="rail-key">Søjlerne deler skalaen 0 til ${String(railBase).replace(/\B(?=(\d{3})+(?!\d))/g, '.')} kr. Længden følger kronerne.</p>`}
  </div>
  <p class="band">${h1 && h5 ? `KID ved 5 år er ${h5.krA} og ${h5.krB} Forskellen er ${h5.gap} KID ved 1 år er ${h1.krA} og ${h1.krB} Forskellen er ${h1.gap} ` : `KID på 100.000 kr. er ${kr(a.kidRiy5y)} og ${kr(b.kidRiy5y)} `}${dTx === 0 ? 'Porteføljetransaktion er ens.' : `Forskellen i porteføljetransaktion er ${krGapTxt}`} ${sameKr ? 'KID ved 1 år og postsatsen rammer samme beløb. Det er ikke det samme tal.' : 'De to tal er ikke det samme.'} Linjerne er ikke lagt sammen, og ingen af dem er et ÅOP.</p>`;
  const zoomBlock = zoom ? (() => {
@@ -351,7 +353,7 @@
  </section>`;
  const detailOpen = Boolean(wantH) || (typeof location !== 'undefined' && location.hash === '#blik');
  const detailHero = `<details class="cost-details"${detailOpen ? ' open' : ''} style="margin-bottom:14px">
- <summary style="cursor:pointer;color:var(--cyan);font-size:14px;padding:8px 0">For de nysgerrige: klasseforskel og postsatser</summary>
+ <summary style="cursor:pointer;color:var(--cyan);font-size:14px;padding:8px 0">For de nysgerrige: klasseforskel og postsatser. Tast 1 eller 5.</summary>
  <p class="lede" style="margin-top:8px">Nedenfor: KID-tal side om side og Fundmarkets postsatser. Postsatserne er <strong style="color:var(--text)">ikke et ÅOP</strong> og må ikke læses som et billigere alternativ til KID-tallet.</p>
  ${hero}
  </details>`;

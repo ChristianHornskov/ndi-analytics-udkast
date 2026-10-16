@@ -362,19 +362,36 @@ export function themeDoubt(p) {
   return { why: p.themeDoubt, alt: p.themeAlt || '' };
 }
 // Læsbart visningsnavn til overskrifter. Beholdningsnavnet (p.name) er depotbankens forkortede navn
-// ("Sea Sp ADR", "SUESS MicroTec N", "Southern Co/The"); det bevares til søgning, sortering og som "beholdningsnavn".
+// ("Sea Sp ADR", "SUESS MicroTec N", "Southern Co/The" → "Southern Co"); det bevares til søgning, sortering og som "beholdningsnavn".
 // Kun sikre omskrivninger: kendte forkortelser, ADR som parentes, tysk "N" (navneaktie) fjernes.
 const NAME_FIX = {
   'Sea Sp ADR': 'Sea Limited (ADR)', 'Infineon Technolo N': 'Infineon Technologies', 'Taiwan Semi Sp ADR': 'TSMC (ADR)',
   'Silicon Mot Sp ADR': 'Silicon Motion (ADR)', 'Himax Tech Sp ADR': 'Himax Technologies (ADR)',
-  'CrwdStrik Hldg': 'CrowdStrike Holdings', 'Cslm Digital Asset Acqu - A': 'CSLM Digital Asset Acquisition (A-aktie)',
+  'CrwdStrik Hldg': 'CrowdStrike Holdings', 'Cslm Digital Asset Acqu - A': 'CSLM Digital Asset Acquisition',
+  'Advanced Micro D': 'Advanced Micro Devices (AMD)', 'United Microelectron-Sp Adr': 'United Microelectronics (ADR)',
+  'Aehr Test System': 'Aehr Test Systems', 'Applied Material': 'Applied Materials', 'ASML Hold NY Reg': 'ASML Holding',
+  'Alibaba Grp Sp ADS': 'Alibaba Group (ADR)', 'Aurora Innovtn': 'Aurora Innovation', 'Bitmine Immersion Technologi': 'Bitmine Immersion Technologies',
+  'Cadence Design': 'Cadence Design Systems', 'Coinbase Glb': 'Coinbase Global', 'Howmet Aerspc': 'Howmet Aerospace',
+  'Lattice Semicond': 'Lattice Semiconductor', 'Navitas Semicond': 'Navitas Semiconductor', 'Nordic Semicondu': 'Nordic Semiconductor',
+  'Palantir Tchnl': 'Palantir Technologies', 'Palo Alto Net': 'Palo Alto Networks', 'Renesas Electro': 'Renesas Electronics',
+  'Robinhood Mkts': 'Robinhood Markets', 'Texas Instrument': 'Texas Instruments', 'Tower Semicon In': 'Tower Semiconductor',
+  'Lynas Rare': 'Lynas Rare Earths', 'Meituan Dianpi-B': 'Meituan', 'Pinduoduo Sp ADS': 'PDD Holdings (ADR)',
+  'Li Auto Sp ADS': 'Li Auto (ADR)', 'Kaspi Sp GDR-Reg S': 'Kaspi.kz (GDR)', 'Keysight Technologies In': 'Keysight Technologies',
+  'Macom Technology Solutions H': 'MACOM Technology Solutions', 'Idaho Strategic Resources In': 'Idaho Strategic Resources',
+  'Neo Performance Materials In': 'Neo Performance Materials', 'International Workplace Grou': 'International Workplace Group',
+  'Power Solutions Internationa': 'Power Solutions International', 'Solaris Energy Infrastructur': 'Solaris Energy Infrastructure',
+  'Figure Technology Solut-Cl A': 'Figure Technology Solutions', 'Asm Int': 'ASM International', 'Crdo': 'Credo Technology',
+  'Prosus Rg-N': 'Prosus', 'Huber + Suhner Ag-Reg': 'Huber + Suhner',
 };
 export function displayName(p) {
   const raw = (p?.name || '').trim();
   if (NAME_FIX[raw]) return NAME_FIX[raw];
-  let n = raw.replace(/^(.*)\/The$/, 'The $1');
-  const adr = /\s+(Sp\s+)?ADR$/i.test(n);
-  n = n.replace(/\s+(Sp\s+)?ADR$/i, '').replace(/(\s|-)N$/, '').replace(/\bHld(n)?gs?\b/g, 'Holdings');
+  let n = raw.replace(/\/The$/, '').replace(/\s*\/\s*(Us|Delaware)$/i, '');
+  const adr = /(\s+Sp)?[\s-]+ADR$/i.test(n);
+  n = n.replace(/(\s+Sp)?[\s-]+ADR$/i, '')
+    .replace(/\s*-\s*(Cl(ass)?\s*)?A$/i, '') // aktieklasse A
+    .replace(/(\s|-)N$/, '').replace(/\s+Br$/, '') // tysk navneaktie / ihændehaver
+    .replace(/\bHld(n)?gs?\b/g, 'Holdings').trim();
   return adr ? `${n} (ADR)` : n;
 }
 // Warrants (tegningsretter) ligger som egne positioner med ~0 % vægt, men er ikke selvstændige selskaber.
@@ -417,7 +434,7 @@ const fold = (s) => String(s ?? '').toLocaleLowerCase('da');
 export function searchPosition(p, q, multiTags, lensByIsin) {
   const needle = fold(q).trim();
   if (!needle) return { via: 'alle' };
-  if ([p.name, p.symbol, p.isin].some((x) => fold(x).includes(needle))) return { via: 'navn' };
+  if ([p.name, displayName(p), p.symbol, p.isin].some((x) => fold(x).includes(needle))) return { via: 'navn' };
   const tags = tagsFor(p, multiTags);
   const tagHit = tags.find((t) => fold(daTheme(t)).includes(needle) || fold(t).includes(needle));
   if (tagHit) return { via: 'tema', value: daTheme(tagHit) };
