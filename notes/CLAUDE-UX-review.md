@@ -1257,3 +1257,18 @@ Main har ikke flyttet sig siden c48. Jeg har kørt et nyt sweep på 50 URL'er ve
 
 ### Persona-linser
 Uændret fra c48. Privat: mobil er tap-bar på udforsk/portefølje. FO: AKK-omkostninger er det eneste synlige hul.
+
+## 2026-10-16 07:03 CEST · cyklus 50 (main `83c64d0` uændret; live = main)
+
+Der er ingen docs-delta siden c48. Live md5 = main på de kontrollerede filer, og nøglesiderne svarer 200. Fundene fra c48/c49 (50 URL'er @375, 0 fejl/overflow) gælder uændret.
+
+### MUST
+- Ingen.
+
+### SHOULD (åbne, uændret)
+- PMINDIAKK-fondsvisningen mangler en omkostningslinje. Det er både en persona- og FO-MUST og et compliance-punkt (SHOULD 9).
+- Værdikæder har stadig små tap-mål (<24px) @375, jf. c47.
+- Drawdown og embed mangler en synlig ikke-rådgivningslinje (compliance-SHOULD 7).
+
+### Nice
+- Uændret fra c46 (blandede Inc/Ltd-suffikser, "1 selskaber passer").

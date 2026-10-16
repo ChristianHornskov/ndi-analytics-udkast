@@ -1251,3 +1251,19 @@ Ikke juridisk rådgivning. Der er ingen docs-delta siden c48. Sweep 50 URL'er (c
 
 ### Prioritet før freeze (08:00)
 Rækkefølge: 9 → 7 → 3 → 5. Alle fire er små rettelser af tekst eller advarsler og må laves efter 08:00 som fejlrettelser. Stop-commit er 08:30.
+
+## 2026-10-16 07:03 CEST · cyklus 50 (main `83c64d0` uændret; live = main)
+
+Ikke juridisk rådgivning. Der er ingen docs-delta siden c48/c49. Live md5 = lokal for index, drawdown, omkostninger, embed/chart og js/app.js. Nøglesider (/, selskab SoftBank, temaer, invester, om-data, risici, værdikæder) svarer 200. Fonden er en `?view=`-rute og ikke en fil, så `fonden.html` 404 er forventet. Ordsweep i docs/: "overvægt" findes kun som negation ("Ikke en anbefaling eller en bevidst overvægt", temaer:152 og tema:179), og "anbefaling" kun i "Ikke en anbefaling". Der er 0 forekomster af garanti, "øger eksponering", 1 md/3 md eller Nasdaq-benchmark. PMINDIAKK-grenen (`js/app.js:346`) viser stadig ingen NAV/kurs før 5. dec. 2026 ✅.
+
+### MUST
+- **Ingen åbne MUST-blokere.**
+
+### SHOULD (åbne, genverificeret i kilden pr. `83c64d0`)
+9. `js/app.js:346–367` PMINDIAKK-visningen mangler omkostningsindikatoren (2,85 %, grep 0 hits i app.js).
+7. `drawdown.html` har 0× "rådgivning", og `embed/chart.html` har den kun i `og:description`. Begge mangler en synlig ikke-rådgivningslinje.
+3. `index.html:89` "Se Central Information Dokument" → "Se KID'et (Central Information) før du investerer".
+5. `omkostninger.html:458` "Det er det tal, marketingmateriale skal gengive ærligt" er en intern formulering.
+
+### Freeze-note
+Alle fire er tekst- og advarselsrettelser og må laves efter 08:00 som fejlrettelser. Stop-commit er 08:30. Lane-R retter dem ikke (read-only), så de skal tages af ejer-lanerne.
