@@ -28,7 +28,7 @@
  </header>
  <main id="main"><p style="color:var(--muted)">Henter temaer…</p></main>
  <script type="module">
- import { fmtDate, loadAll, fundById, themeProposals, daTheme, WARN_HIST, chainForTheme, chainHref, tagsFor, themeDoubt, doubtAltLabel } from './js/data.js';
+ import { fmtDate, loadAll, fundById, themeProposals, daTheme, WARN_HIST, chainForTheme, chainHref, tagsFor, themeDoubt, doubtAltLabel, displayName } from './js/data.js';
  const u = new URL(location.href);
  const [data, all, vc, um] = await Promise.all([
  fetch('data/themes.json').then((r) => r.json()),
@@ -53,9 +53,9 @@
  // Multi-tag: tema-siden tæller også selskaber med temaet som ekstra tag (fx Nvidia i Compute).
  // Hubben viser primært tema (vægte summerer til 100 %) og nævner ekstra temaer separat, så tallene stemmer med tema-siden.
  const multi = {};
- for (const p of fund.positions || []) for (const t of tagsFor(p, all.multiTags)) if (t !== p.theme) (multi[t] ||= []).push(p.name);
+ for (const p of fund.positions || []) for (const t of tagsFor(p, all.multiTags)) if (t !== p.theme) (multi[t] ||= []).push(displayName(p));
  // Små temaer: vis hvem der er der (kun navne efter vægt, ingen tal pr. aktie)
- const topNames = (k, n = 5) => (fund.positions || []).filter((p) => p.theme === k).sort((a, b) => (b.weight || 0) - (a.weight || 0)).slice(0, n).map((p) => p.name);
+ const topNames = (k, n = 5) => (fund.positions || []).filter((p) => p.theme === k).sort((a, b) => (b.weight || 0) - (a.weight || 0)).slice(0, n).map((p) => displayName(p));
  // Største tema først; Andet altid sidst, så det ikke ligner et rigtigt tema
  const themes = (data.themes || []).map((t) => ({ ...t, ...(agg[t.themeKey] || { count: 0, weight: 0, forslag: 0, lens: 0 }) }))
  .sort((a, b) => (a.themeKey === 'andet') - (b.themeKey === 'andet') || b.weight - a.weight);
@@ -106,7 +106,7 @@
  const k = `${daTheme(p.theme)} → ${alt === 'andet' ? 'Andet' : doubtAltLabel(alt) || '?'}`;
  (doubtGroups[k] ||= []).push(p);
  }
- const doubtTxt = doubts.length ? `<details style="margin-top:8px"><summary style="cursor:pointer;color:var(--muted);font-size:13px">${doubts.length} temaforslag er afventer gennemgang</summary><p style="margin-top:6px;font-size:13px;color:var(--muted)">${Object.entries(doubtGroups).sort((a, b) => b[1].length - a[1].length).map(([k, ps]) => `<span title="${esc(ps.map((p) => p.name).join(', '))}">${esc(k)} (${ps.length})</span>`).join(' · ')}</p></details>` : '';
+ const doubtTxt = doubts.length ? `<details style="margin-top:8px"><summary style="cursor:pointer;color:var(--muted);font-size:13px">${doubts.length} temaforslag afventer gennemgang</summary><p style="margin-top:6px;font-size:13px;color:var(--muted)">${Object.entries(doubtGroups).sort((a, b) => b[1].length - a[1].length).map(([k, ps]) => `<span title="${esc(ps.map((p) => displayName(p)).join(', '))}">${esc(k)} (${ps.length})</span>`).join(' · ')}</p></details>` : '';
  const review = prop.total ? `<section class="review-banner" aria-labelledby="rv-h">
  <p class="rv-kicker"><span class="badge badge-draft">FORSLAG</span> Afventer gennemgang</p>
  <h2 id="rv-h">${prop.moved} ${prop.moved === 1 ? 'selskab har' : 'selskaber har'} fået et forslag til NDI-tema</h2>

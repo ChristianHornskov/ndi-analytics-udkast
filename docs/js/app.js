@@ -649,7 +649,7 @@ function renderLivscyklus(fund) {
     const dots = list.map((p, i) => {
       const t = Math.min(0.99, Math.max(0.01, st.t + ((i % 9) - 4) * 0.012));
       const r = Math.max(2.5, Math.sqrt(p.weight || 0) * 2.4);
-      return `<circle class="life-co" cx="${px(t).toFixed(1)}" cy="${(py(t) - 10 - Math.floor(i / 9) * 7).toFixed(1)}" r="${r.toFixed(1)}"><title>${p.name} · ${(p.weight ?? 0).toFixed(2).replace('.', ',')} %</title></circle>`;
+      return `<circle class="life-co" cx="${px(t).toFixed(1)}" cy="${(py(t) - 10 - Math.floor(i / 9) * 7).toFixed(1)}" r="${r.toFixed(1)}"><title>${displayName(p)} · ${(p.weight ?? 0).toFixed(2).replace('.', ',')} %</title></circle>`;
     }).join('');
     return `${dots}<circle class="life-node" cx="${px(st.t)}" cy="${py(st.t).toFixed(1)}" r="7"/>
       <text class="life-lbl" x="${px(st.t)}" y="${H - 26}" text-anchor="middle">${st.label}</text>

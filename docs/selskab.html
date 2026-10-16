@@ -128,7 +128,7 @@
  .sort((a, b) => (b.weight || 0) - (a.weight || 0) || a.name.localeCompare(b.name, 'da')),
  })).filter((g) => g.peers.length);
  const PEER_MAX = 10;
- const ledPeersHtml = ledPeers.length ? `<div class="lens-peers" style="margin-top:14px">${ledPeers.map((g) => `<p class="link-row"><span class="muted" style="font-size:12px">Andre med NDI-linse i ${esc(ledLabel(g.k))}:</span> ${g.peers.slice(0, PEER_MAX).map((x) => `<a class="tag" href="selskab.html?isin=${encodeURIComponent(x.isin)}&fund=${fundId}">${esc(x.name)}</a>`).join(' ')}${g.peers.length > PEER_MAX ? ` <span class="muted">+ ${g.peers.length - PEER_MAX} flere</span>` : ''}</p>`).join('')}<p class="src">Nabolag i værdikæden ud fra linsens placering - ikke en sammenligning eller rangering. Kun selskaber med NDI-linse i ${esc(fund.short)}.</p></div>` : '';
+ const ledPeersHtml = ledPeers.length ? `<div class="lens-peers" style="margin-top:14px">${ledPeers.map((g) => `<p class="link-row"><span class="muted" style="font-size:12px">Andre med NDI-linse i ${esc(ledLabel(g.k))}:</span> ${g.peers.slice(0, PEER_MAX).map((x) => `<a class="tag" href="selskab.html?isin=${encodeURIComponent(x.isin)}&fund=${fundId}">${esc(displayName(x))}</a>`).join(' ')}${g.peers.length > PEER_MAX ? ` <span class="muted">+ ${g.peers.length - PEER_MAX} flere</span>` : ''}</p>`).join('')}<p class="src">Nabolag i værdikæden ud fra linsens placering - ikke en sammenligning eller rangering. Kun selskaber med NDI-linse i ${esc(fund.short)}.</p></div>` : '';
  const shownName = displayName(p);
  document.title = `${shownName} · NDI Analytics`;
 
@@ -233,7 +233,7 @@
  <section class="panel">
  <h2 class="panel-h">Andre i ${esc(daTheme(p.theme))} (forsinket beholdning)</h2>
  <div class="table-wrap"><table class="data" style="min-width:0"><thead><tr><th>Navn</th><th>Vægt %</th></tr></thead><tbody>
- ${sameTheme.slice(0, 8).map((x) => `<tr><td><a href="selskab.html?isin=${encodeURIComponent(x.isin)}&fund=${fundId}">${esc(x.name)}</a></td><td>${w(x.weight)}</td></tr>`).join('') || '<tr><td colspan="2">-</td></tr>'}
+ ${sameTheme.slice(0, 8).map((x) => `<tr><td><a href="selskab.html?isin=${encodeURIComponent(x.isin)}&fund=${fundId}">${esc(displayName(x))}</a></td><td>${w(x.weight)}</td></tr>`).join('') || '<tr><td colspan="2">-</td></tr>'}
  </tbody></table></div>
  <p class="link-row" style="margin-top:10px">${sameTheme.length > 8 ? `<a href="${temaHref}">Alle ${sameTheme.length + 1} i temaet →</a> · ` : ''}<a href="selskaber.html?fund=${fundId}">Alle selskaber A-Z →</a> · <a href="vaerdikaede.html">AI-værdikæden →</a></p>
  </section>`;
