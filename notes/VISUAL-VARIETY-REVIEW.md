@@ -306,6 +306,14 @@ På 320 stod «top.» alene under udlæsningen, og «14.» blev skilt fra «okt.
 
 På 320 blev citatet delt, så «start». stod alene. Nu holder «siden start» sammen, og punktummet bliver på samme linje. På 390 holdt «PMINDI.» alene. Nu står «i PMINDI.» samlet. Ingen sidescroll. Ingen konsolfejl.
 
+### Update · linjer der knækker forkert · 2026-10-16 ~05:41 CEST
+
+På 480 og 500 stod «på» alene under overskriften på sammenlign. Nu står «udbyttet på» samlet. På 320 og 390 er det stadig to hele linjer. Fra 540 er overskriften én linje.
+
+I footeren blev parentesen delt, så «(ISIN» eller «2026)» stod alene. Hele parentesen er nu én linje, på sammenlign, drawdown, forsiden, risici og omkostninger. Ingen sidescroll ved 320, 400, 480 og 1100. «penge.» stod alene omkring 400 og 420. Nu står «tabe penge.» samlet.
+
+På drawdown ved 320 stod «↗» alene efter «Læs KID», «-23,4 %.» alene under den åbne episode, «2. jun.» skilt fra «2026» i brøndens note, og «godkendelse.» skilt fra Fundmarket. De fire holder nu sammen. PMINDIAKK har stadig ingen procent. I embed står «tabe penge.» samlet ved 480. Ingen konsolfejl.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.

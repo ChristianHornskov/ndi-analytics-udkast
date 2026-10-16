@@ -44,7 +44,7 @@
  <p class="eyebrow">FONDAFKAST · FALD FRA TOP</p>
  <h1>Fald fra top · ${fund.short}</h1>
  <p class="lede">Ny andelsklasse. Fald fra top for PMINDIAKK vises efter 12 måneders historik. Ingen NAV eller graf før 5. december 2026. Klassen følger samme overordnede strategi som PMINDI.</p>
- ${meta?.funds?.pmindiakk?.priip ? `<p class="src">Risikoindikator (SRI) ${meta.funds.pmindiakk.priip.risk_class} af ${meta.funds.pmindiakk.priip.risk_scale_max} ifølge KID. Gælder fonden som helhed. <a href="${meta.funds.pmindiakk.priip.url}">Læs KID ↗</a></p>` : ''}
+ ${meta?.funds?.pmindiakk?.priip ? `<p class="src">Risikoindikator (SRI) ${meta.funds.pmindiakk.priip.risk_class} af ${meta.funds.pmindiakk.priip.risk_scale_max} ifølge KID. Gælder fonden som helhed. <a href="${meta.funds.pmindiakk.priip.url}"><span class="ep-pct">Læs KID ↗</span></a></p>` : ''}
  <p class="link-row chip-links"><a href="sammenlign.html">Sammenlign andelsklasser →</a></p>
  <p class="warn">${WARN_HIST}</p>`;
  } else if (!fund.data?.length) {
@@ -259,7 +259,7 @@
  const days = spanDays(e);
  const openRow = !e.recoveredD;
  const tail = openRow
- ? `${days} dage siden toppen. Stadig åben. Seneste dag <span class="ep-pct">${fmtPct(nowU)}</span>.`
+ ? `${days} dage siden toppen. Stadig åben. <span class="ep-pct">Seneste dag ${fmtPct(nowU)}.</span>`
  : `Tilbage på toppen <strong>${fmtDate(e.recoveredD)}</strong>. ${days} dage fra top til genopretning.`;
  const w = Math.max(8, Math.round((days / maxSpan) * 100));
  const stem = Math.max(8, Math.round((Math.abs(e.dd) / deepMax) * 28));
@@ -309,7 +309,7 @@
  : share < 1
  ? 'Under 1 % af vejen fra bunden tilbage til toppen er tilbagelagt.'
  : `${share} % af vejen fra bunden tilbage til toppen er tilbagelagt.`;
- const note = `Brønden er den åbne episode. 0 er toppen ${fmtDate(open.peakD)}. Bunden var ${fmtPct(floor)} den ${fmtDate(open.troughD)}. Prikken er i dag, ${fmtPct(nowU)}. ${shareText}`;
+ const note = `Brønden er den åbne episode. 0 er toppen <span class="ep-pct">${fmtDate(open.peakD)}</span>. Bunden var ${fmtPct(floor)} den <span class="ep-pct">${fmtDate(open.troughD)}</span>. Prikken er i dag, <span class="ep-pct">${fmtPct(nowU)}</span>. ${shareText}`;
  const svg = `<svg viewBox="0 0 112 150" width="112" height="150" role="img" aria-labelledby="well-note"><defs><linearGradient id="wellFill" x1="0" y1="${top}" x2="0" y2="${bot}" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#f5ee9e" stop-opacity="0.55"/><stop offset="100%" stop-color="#e5b3ba"/></linearGradient><clipPath id="wellClip"><rect x="${x}" y="${top}" width="${w}" height="${waterH.toFixed(1)}" rx="7"/></clipPath></defs><rect class="well-track" x="${x}" y="${top}" width="${w}" height="${bot - top}" rx="7"/><rect x="${x}" y="${top}" width="${w}" height="${bot - top}" fill="url(#wellFill)" clip-path="url(#wellClip)"/><circle class="well-now" cx="${x + w / 2}" cy="${yNow.toFixed(1)}" r="5"/><text class="well-zero" x="${x + w + 10}" y="18">0</text><text class="well-nu" x="${x + w + 10}" y="${nuY.toFixed(1)}">nu</text><text class="well-floor" x="${x}" y="142">${fmtPct(floor)}</text></svg>`;
  return `<div class="under-row"><ul class="stat-strip" aria-label="Nøgletal under grafen"><li class="now"><span>Nu under vand</span><strong>${fmtPct(nowU)}</strong><small>pr. ${fmtDate(rows[rows.length - 1].d)}</small></li><li><span>Dybe episoder</span><strong>${deep.length}</strong><small>${usedGate ? 'dybere end 10 %' : 'de dybeste'}</small></li><li><span>Længste</span><strong>${longDays} dage</strong><small>${longNote}</small></li></ul><figure class="depth-well">${svg}</figure></div><p class="src well-note" id="well-note">${note}</p>`;
  })();
@@ -319,7 +319,7 @@
  ? `<figure class="peak-days"><p class="peak-key"><span class="on">På toppen</span><span>Under den løbende top</span></p><div class="peak-track" aria-hidden="true"><span style="--peak:${((peakDays / dayN) * 100).toFixed(1)}%"></span></div><figcaption><strong>${peakDays}</strong> af ${dayN} dage ligger på den løbende top. De øvrige ${underDays} ligger under den. Middel og median tæller episoder fra top til bund, ikke disse dage.</figcaption></figure>`
  : '';
  const priip = meta?.funds?.[fund.id]?.priip;
- const sriLine = priip ? `<p class="src">Risikoindikator (SRI) ${priip.risk_class} af ${priip.risk_scale_max} ifølge KID. Gælder fonden som helhed, ikke det enkelte fald. <a href="${priip.url}">Læs KID ↗</a></p>` : '';
+ const sriLine = priip ? `<p class="src">Risikoindikator (SRI) ${priip.risk_class} af ${priip.risk_scale_max} ifølge KID. Gælder fonden som helhed, ikke det enkelte fald. <a href="${priip.url}"><span class="ep-pct">Læs KID ↗</span></a></p>` : '';
  main.innerHTML = `
  <a class="back" href="index.html?view=fonden&fund=${fundId}">← Fonden</a>
  <p class="eyebrow">FONDAFKAST · FALD FRA TOP</p>
@@ -352,7 +352,7 @@
  <h2 class="h-section">Kalenderår</h2>
  <div class="year-rail">${yearCells}</div>
  <p class="src">${yearLine}${openYear && openYear !== deepYear ? ` ${openYear} er året, serien stadig ligger under vand.` : ''} Søjlen er årets afkast.</p>
- <p class="src">ÅTD er et delår og afventer Fundmarket-godkendelse.</p>
+ <p class="src">ÅTD er et delår og afventer <span class="ep-pct">Fundmarket-godkendelse</span>.</p>
  <p class="link-row chip-links"><a href="periode.html?fund=${fundId}&year=YTD">År til dato →</a> · <a href="sammenlign.html">Sammenlign andelsklasser →</a> · <a href="om-data.html#g-drawdown">Ordliste: fald fra top</a></p>
  <p class="src">${peakShare ? 'Max er det samme tal som største fald på Fonden.' : 'Middel og median er over episoder fra top til bund. De er ikke et gennemsnit af hver dag under vand. Max er det samme tal som største fald på Fonden.'}</p>
  <p class="warn">${WARN_HIST}</p>`;
