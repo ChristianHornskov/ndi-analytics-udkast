@@ -1423,7 +1423,7 @@ Uændret.
 ### ÅOP
 Uændret.
 
-## 2026-10-16 07:52 CEST · cyklus 57b · Nasdaq-100-sammenligning (main `76b0e7d`, testet lokalt på archive af origin/main)
+## 2026-10-16 07:47 CEST · cyklus 57b · Nasdaq-100-sammenligning (main `76b0e7d`, testet lokalt på archive af origin/main)
 
 - Fonden `?view=fonden`: checkboxen "Vis Nasdaq-100 som sammenligning" er slået fra som standard (44 px). Når den slås til (`cmp=nasdaq`), vises en stiplet linje, en forklaring ("kursindeks uden udbytte, omregnet til DKK") og label "Nasdaq vises kun som sammenligning, ikke som fondens benchmark. Historisk afkast er ingen garanti." Teksten "Fonden har intet fast benchmark" står stadig. ✅ Tjekpunktet "ingen Nasdaq som officielt benchmark" holder.
 - PMINDIAKK + `cmp=nasdaq`: hverken checkbox, linje eller tal. 12m-gaten holder. ✅ embed/chart ignorerer `cmp`. ✅ 0 overflow @375, 0 pageerrors.
