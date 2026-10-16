@@ -791,3 +791,33 @@ Pages (00:22:23 GMT) = main. Sidste docs-commit er `5843694`. Playwright live ve
 - **Privat (55+):** drawdown-siden er ærlig og rolig ("−23 % under toppen nu"). Ordet "Drawdown" i overskriften og "YTD/CAGR" på periode er dog uden for deres ordforråd. Engelske BREAKING-opslag er stadig det største ro-brud.
 - **Familiekontor:** de vil bemærke, at periode og fonden ikke siger det samme om 2023/ÅTD. Inkonsistens mellem sider svækker tilliden mere end selve tallet.
 - **Visuel variation:** ingen ændring. Træthed skyldes længde på mobil, ikke ensformighed.
+
+## 2026-10-16 02:36 CEST · cyklus 34 (main `65b1947`, live = main)
+
+Pages (00:33:44 GMT) har samme md5 som main på risici, ndi-perspektiv, ideer, drawdown og embed/chart.js. Docs-delta siden cyklus 33: 26 filer (lane-C/D-merges). Det nye er risici `#prospekt`, ideer `#h-lc` (livscyklus-bobler), ndi-perspektiv (temagrupper og søgning), footer med "Markedsføringsmateriale" på lær-siderne, ordliste 138 og flere drawdown-/embed-finjusteringer. Playwright live ved 375 på 27 URL'er: 0 pageerrors, 0 vandret overflow, én h1 overalt ✅.
+
+### MUST
+- **Fonden + SoftBank: tredjeparts-"BREAKING" (uændret, 5. cyklus i træk).** Der er 2 × @BullTheoryio under fondens graf. SoftBank viser "DIREKTE TRÆF · Vist fordi: SoftBank" på Nvidia/OpenAI-opslaget. **Ret:** `chartMarkers` → kun @InvestNewdeal.
+- **Nyhedsarkiv:** "Placeholder" står 8 gange, og "tabe" står 0 gange (uændret). Skjul siden fra kort/nav, indtil den har indhold, eller fyld den.
+
+### SHOULD
+- **Livscyklus siger to modsatte ting.** ndi-perspektiv: "NDI har ikke sat livscyklus for nogen selskaber endnu … Vi gætter ikke." Ideer `#h-lc` viser derimod en fordeling på faser (55,5 % høj vækst osv.) som "maskinelt forslag". Begge dele er ærlige hver for sig, men læst efter hinanden lyder det som et selvmodsigende udsagn. Skriv på perspektiv: "NDI har ikke sat livscyklus. Et maskinelt forslag ud fra branchekoder ses på Idéer →".
+- **Antal selskaber:** ndi-perspektiv siger "332 selskaber i 12 temaer", mens ideer, portefølje og ordliste siger 345 (PMINDI) / 320 (PMINDIAKK). 332 er antallet af profiler, ikke af beholdninger. Skriv "332 af fondens 345 selskaber har en profil", ellers spørger familiekontoret, hvilket tal der er rigtigt.
+- **ndi-perspektiv, livscyklus-feltet:** "Modenhed fra før omsætning til value". "value" er en rest fra den engelske skala. Commit `c0468bb` har ellers omdøbt den til "moden".
+- **Drawdown:** h1 er stadig "Drawdown · PMINDI". Der er stadig dobbelt "← Fonden" (header og brødtekst). Grafen og episodelisten er blevet pænere (nøgle under kurven, årstal, gul åben episode). Teksten er rolig og ærlig ✅.
+- **Periode:** uændret fra cyklus 33 ("2023: +16,7 %" uden delår, "YTD", "CAGR", dobbelt "← Fonden").
+- **Fra cyklus 32/33, stadig åbne:** "kl n" (invester ×1, fakta ×3, omkostninger ×2), "Tomme felter = udfyldes af NDI" og "marketingmateriale skal gengive ærligt" (omkostninger), "kvartalsrapport" og "datamangel" (fonden), "Grafmarkører: … drawdown (rød)", "Sharpe" som underlabel på risici, embed "CAGR" ×2.
+
+### Positivt (nyt)
+- **Risici `#prospekt`** er det bedste stykke familiekontor-indhold på sitet. Det giver otte prospekt-risici i almindeligt dansk, rammer (ingen derivater, ingen udlån, intet benchmark, absolut afkast), market maker og "prospektets ordlyd gælder". Hvert punkt har et ordliste-link.
+- **Ideer `#h-lc`** er en ny visuel form (bobler på en bakke) med tydelig "FORSLAG, IKKE NDI'S VURDERING" og "du kan tabe penge". God variation.
+- **ndi-perspektiv** er gået fra en meget lang liste til 12 temachips med søgning (3.007 px ved 375). Det er en stor mobilforbedring.
+
+### Nice
+- Ideer er vokset til 16.688 px ved 375 (fra 14.377). Fold kortene efter de første 3–4, eller giv siden en indholdsfortegnelse med spring.
+- "Central Information Dokument" i footeren på fonden/SoftBank/sammenlign. Lær-siderne siger nu korrekt "KID". Ensret.
+
+### Persona-linser
+- **Privat (55+):** risici-prospektafsnittet og livscyklus-bakken er forståelige. "Drawdown", "YTD" og "CAGR" er stadig de ord, de snubler over. Det engelske BREAKING-opslag under fondens graf er stadig det største ro-brud.
+- **Familiekontor:** `#prospekt` med sidetal-kilde rammer dem præcist. De vil dog fange 332/345 og livscyklus "vi gætter ikke" vs. "maskinelt forslag". Det er små inkonsistenser, men de tæller.
+- **Visuel variation:** forbedret (bobler, chips). Træthed skyldes længde på ideer/udforsk/vaerdikaeder, ikke ensformighed.

@@ -839,3 +839,34 @@ Ikke juridisk rådgivning. Live ved 375 på 21 URL'er plus kontekst-grep af alle
 
 ### Prioritet
 **1** (BREAKING + "Vist fordi: SoftBank") → **3** (ÅTD-forbehold inkonsistent på 3 sider) → **2** (nyhedsarkiv-tab) → **4/5/6** (periode/embed delår + KID).
+
+## 2026-10-16 02:36 CEST · cyklus 34 (main `65b1947`, live = main)
+
+Ikke juridisk rådgivning. Kørt live ved 375 på 27 URL'er, med kontekst-grep af alle hits på rådgivnings- og handelsord. Alle "anbefal*/overvægt/køb/sælg/eksponering" er negationer ("ikke anbefalinger eller bevidste overvægte", "ikke en opfordring til at købe eller sælge") eller procesbeskrivelser. Det gælder også risici: "Fonden må ikke aktivt købe unoterede aktier". FAQ: "Hvorfor sælger fonden noget, der er steget? For at holde spredningen" er en generel rebalanceringsforklaring, ikke en konkret handel ✅. "garanti" står kun som "Den er ikke en garanti" (risikoklasse) ✅. "sikker" står kun som "usikkert" og "sikkerhedsanalyse" ✅.
+
+### MUST (blocker)
+1. **Tredjeparts-"BREAKING" ved fondens afkastgraf og på SoftBank** (åben siden cyklus 30, uændret). @BullTheoryio "SoftBank … $100 billion" og "Nvidia … backstop $250 BILLION … OpenAI" vises under fondens graf. På SoftBank står "DIREKTE TRÆF · Vist fordi: SoftBank". **Ret:** `chartMarkers` → kun NDI-egne konti. Fold/filtrér tredjepartspanelet på selskab/tema.
+2. **"Markedsføringsmateriale" + prospekt-henvisning er kun delvist rullet ud.** Fremskridt: lane-C (`fb525dd`) har sat footeren "Markedsføringsmateriale. Læs prospektet og KID … før du træffer en endelig investeringsbeslutning" på risici, invester, om-data, kort, ideer, ndi-perspektiv, ndi-paa-x og alle lær-sider ✅. Den formulering matcher ESMA-retningslinjerne for markedsføringsmateriale (forordning 2019/1156 art. 4) godt. **Mangler** på netop produktsiderne med afkasttal: fonden (`/` og `?view=fonden`), portefølje, udforsk, fakta, omkostninger, sammenlign, selskab, tema, temaer, vaerdikaeder, drawdown, periode og embed. Footeren på fakta/omkostninger/sammenlign er kortere og har hverken "markedsføringsmateriale" eller prospektlink. **Ret:** genbrug lane-C-footeren på app-/produktsiderne.
+3. **ÅTD +4,0 % "afventer Fundmarket-godkendelse"** står synligt på fonden, mens periode ("YTD: +4,0 %", "2026: +4,0 %") og embed ("År til dato +4,0 %") viser tallet uden forbehold (uændret).
+4. **Nyhedsarkiv:** 0 × "tabe" og 8 × "Placeholder" (uændret).
+
+### SHOULD
+5. **Periode:** "2023: +16,7 %" uden "delår", "YTD" og "CAGR". Den mangler også KID, SRI og ikke-rådgivning (uændret). Det samme gælder **drawdown**: 0 × KID.
+6. **Embed:** 0 × KID, 0 × SRI og 0 × "markedsføringsmateriale". CAGR +26,4 % over 3,1 år (åben siden cyklus 24).
+7. **Risici `#prospekt` (nyt):** godt indhold, og "prospektets ordlyd gælder" står der ✅. Jeg har ikke tjekket ordlyden mod prospekt-PDF'en i denne cyklus. NDI/Fundmarket bør bekræfte de konkrete faktapåstande før lancering ("markedsværdi på mindst 500 mio. kr.", depotselskab Danske Bank A/S, market maker Jyske Bank A/S, "ingen derivater/udlån", artikel 6). Fejl i rammer fra prospektet er et vildledningsspørgsmål, ikke kun redaktionelt.
+8. **Livscyklus-forslag (ideer `#h-lc`):** "FORSLAG, IKKE NDI'S VURDERING", "maskinelt forslag ud fra offentlige branchekoder" og "du kan tabe penge" er korrekt mærket ✅. ndi-perspektiv siger samtidig "Vi gætter ikke". Det er ikke compliance-kritisk, men det bør ensrettes (se UX).
+9. **Fra cyklus 32/33, stadig åbne:** "compliance-beslutning, ikke et datamangel" (Nasdaq, fonden). "seneste offentlige kvartalsrapport" vs. snapshot 1. jun. 2026 (fonden). "det tal, marketingmateriale skal gengive ærligt" og "Tomme felter = udfyldes af NDI" (omkostninger). Fakta-opsummeringen nævner 1,49 % før KID-tallet. `x-posts.json` har "Omskrevet i snapshot" uden UI-mærkning.
+
+### Tjekliste (live)
+- Ikke-rådgivning: ✅ på alle produktsider. Periode, drawdown og embed har kun tabs- og historiklinjen.
+- Tabsadvarsel: ✅ 26/27 (nyhedsarkiv ✗).
+- Historisk afkast ≠ fremtid: ✅ 27/27.
+- KID/SRI 5/7 (KID 14. aug. 2026): ✅ fonden, portefølje, udforsk, risici, fakta, omkostninger, sammenlign, selskab, tema og alle lær-sider. ✗ embed, periode, drawdown.
+- Omkostninger: KID-RIY 2,79/2,85 % (5 år) på fakta, omkostninger, invester og FAQ ✅. Det er forklaret, at det ikke er ÅOP ✅. Persona- og FO-MUST er dækket.
+- Beholdning forsinket pr. 1. jun. 2026 ✅ (portefølje, ideer, vaerdikaeder, temaer, SoftBank). Ingen live-handler.
+- PMINDIAKK: ingen afkast før 12 mdr. ✅ (uændret siden cyklus 29). PMINDI: ingen 1m/3m ✅. "3m" i udforsk er et ISIN-fragment. Nasdaq står kun som "vi tegner ikke …" og Nasdaq Copenhagen-notering ✅.
+- AI-mærkning: ndi-perspektiv "Felter markeret AI-udkast … afventer NDI-gennemgang" ✅, SoftBank "AI-udkast" ✅, ideer-livscyklus "maskinelt forslag" ✅.
+- Ingen Mads-trading-sprog ✅.
+
+### Prioritet
+**1** (BREAKING) → **2** (footer med markedsføringsmateriale/prospekt på produktsiderne, så den matcher lær-siderne) → **3** (ÅTD-forbehold på 3 sider) → **4** (nyhedsarkiv) → **5/6** (periode/drawdown/embed KID + delår) → **7** (verificér prospekt-fakta).
