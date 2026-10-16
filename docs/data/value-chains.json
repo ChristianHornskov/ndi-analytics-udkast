@@ -1827,8 +1827,8 @@
           "id": "launch",
           "icon": "🚀",
           "label": "Opsendelse",
-          "blurb": "Kapacitet til at sende satellitter og andet udstyr væk fra jorden, og selskaber der leverer dele til fartøjerne. Nogle programmer er i drift. Andre er stadig under udvikling. Starfighters skriver, at flåden er syv F-104, og at flyene kan bære nyttelast til 45.000 fod. Forsiden skriver, at en opsendelsestilladelse fra FAA er undervejs. STARLAUNCH 1 er et suborbitalt udviklingsfartøj og ikke en orbital rute. Howmet skriver, at det laver metaldele til fly og også smedede hjul til lastbiler og busser. Det sender ikke selv op. Karman skriver, at det beskytter nyttelast, laver mellemtrin og samler raketmotorer. Det sender ikke selv satellitter op. Intuitive Machines skriver, at IM-1 landede i februar 2024. IM-2 blev afsluttet i marts 2025 og havde landingsafvigelser. IM-3 er ikke fløjet. Rocket Lab skriver, at HASTE er et suborbitalt testfartøj fra Wallops i Virginia. Det er ikke en orbital opsendelse af satellitter. Firefly skriver, at Alpha er 31,7 m lang og sat til 1.030 kg til en lav bane i 300 km. Blue Ghost Mission 1 landede 2. marts 2025. Eclipse er ikke fløjet.",
-          "ndi": "SpaceX er brugt som illustration i NDI's formidling om opsendelser (ugebrev 23. juni 2024). Selskabet indgår ikke i beholdningen pr. 1. juni 2026. Merlin, Archer og Airo Group er luftfart i SpaceTech-temaet og står ikke her. Airo nævner RQ-35 Heidrun, RQ-70, JC250 og JX250. Det er ikke satellitter. Selskabet Merlin skriver, at Merlin Pilot er software til fly, der allerede er i drift, og nævner et samarbejde om C-130J. Målet er autonomi. Det er ikke Satellogics satellit af samme navn. BWX Technologies og Rolls-Royce står under atomkraft. Neutron hos Rocket Lab og Eclipse hos Firefly er ikke fløjet i beskrivelserne. Firefly skriver, at Blue Ghost Mission 1 landede 2. marts 2025 i Mare Crisium. Datoen ligger før beholdningen.",
+          "blurb": "Raketter og fartøjer, der bringer satellitter og udstyr væk fra Jorden, og selskaber, der laver dele til dem. Nogle programmer flyver allerede. Andre er stadig under udvikling. Flere af selskaberne her sender ikke selv noget op. De leverer motorer, metaldele eller beskyttelse til det, raketten bærer.",
+          "ndi": "SpaceX er brugt som illustration i NDI's formidling om opsendelser (ugebrev 23. juni 2024). Selskabet indgår ikke i beholdningen pr. 1. juni 2026. Luftfartsselskaberne i SpaceTech-temaet (Merlin, Archer og Airo Group) står ikke her. BWX Technologies og Rolls-Royce står under atomkraft i energikæden.",
           "themes": [
             "space"
           ],
@@ -1884,14 +1884,23 @@
               "role": "IM-1 landede i februar 2024. IM-2 i marts 2025 havde landingsafvigelser. IM-3 er ikke fløjet."
             }
           ],
-          "seeChain": null
+          "seeChain": null,
+          "facts": [
+            "Rocket Lab: HASTE er et testfartøj, der flyver op og ned igen fra Wallops i Virginia. Det sætter ikke satellitter i kredsløb. Den store raket Neutron er ikke fløjet.",
+            "Firefly Aerospace: raketten Alpha er 31,7 m lang og sat til 1.030 kg til en lav bane i 300 km. Månelanderen Blue Ghost landede 2. marts 2025. Raketten Eclipse er ikke fløjet.",
+            "Intuitive Machines: IM-1 landede på Månen i februar 2024. IM-2 blev afsluttet i marts 2025 med afvigelser ved landingen. IM-3 er ikke fløjet.",
+            "Starfighters Space: en flåde på syv F-104-fly, der kan bære last til 45.000 fod. STARLAUNCH 1 er et udviklingsfartøj, ikke en rute til kredsløb. En opsendelsestilladelse fra den amerikanske luftfartsmyndighed er undervejs.",
+            "Karman Space & Defense: beskytter lasten, laver mellemtrin og samler raketmotorer. Sender ikke selv satellitter op.",
+            "Howmet Aerospace: metaldele til fly og smedede hjul til lastbiler og busser. Sender ikke selv noget op.",
+            "Navneforveksling: selskabet Merlin laver software, der skal kunne flyve fly selv. Det er ikke Satellogics satellit af samme navn."
+          ]
         },
         {
           "id": "satcom",
           "icon": "📡",
           "label": "Satellitkommunikation",
-          "blurb": "Satellitter i drift eller under bygning: kommunikation, billeder af Jorden, radiosignaler og de platforme, satellitterne bygges på. Redwire skriver, at det laver og tester kamerasystemet til Orion på Artemis I til V, via Lockheed Martin. Meddelelsen 1. april 2026 siger, at 11 kameraer og fire solsensorer will launch på Artemis II. Den siger ikke, at flyvningen er gennemført. Datoen ligger før beholdningen. Solsensorerne kørte på Artemis I. Forsiden, læst 16. oktober 2026, skriver launched uden dato. Det er ikke beholdningens meddelelse. Adressen er 8226 Philips Highway, Suite 101, i Jacksonville. Selskabet sender ikke selv op. Ordet leader er ikke taget med. York skriver, at platformene hedder S-CLASS, LX-CLASS og M-CLASS, og at 21 satellitter er opsendt til Tranche 1. Selskabet koordinerer opsendelseslogistik. Det er ikke det samme som selv at sende raketten op. MDA skrev 16. september 2026, at Chorus er tre satellitter. To er nye, en i X-bånd og en i C-bånd. Selskabet skriver, at RADARSAT-2 allerede er i kredsløb. Opsendelsen af de nye er sat til sent i 2026. Det er en plan. De to nye er ikke sendt op. Meddelelsen ligger efter beholdningen. MDA præsenterede 10. september 2026 Aurora Black. Det er efter beholdningen og ikke en konstellation i drift. Satellogic sætter fuld drift af Merlin til andet halvår 2027. Det er ikke en tjeneste i fuld drift. Planet nævner SuperDove, SkySat, Pelican, Tanager og Owl. Owl er omtalt som næste generation. Spire skriver, at selskabet selv designer, bygger og driver en satellitkonstellation, og at fabrikken ligger i Glasgow. Siden om rumtjenester skriver, at mere end 175 satellitter er sendt op. Siden daterer ikke tallet. Selskabet opsender ikke selv raketterne. En demonstrator, HyMS, blev sendt op i januar 2026, før beholdningen. NOAA forlængede 4. august 2026 en aftale om at vurdere dataene. Det er efter beholdningen og ikke en ny konstellation. Iridium skriver, at den første satellit blev sendt op i 1997, at nettet var i fuld drift i 1998, og at en udskiftning af satellitterne blev færdig i 2019. Nettet ligger i lav bane omkring 780 km. Det er tale, data og position. Det er ikke billeder af Jorden. BlackSky skriver, at Spectra er platformen til billeder og analyse, og at selskabet driver en konstellation i lav bane. Selskabet skrev 14. september 2026, at den femte Gen-3 tog de første billeder mindre end 20 timer efter opsendelsen. Billedet er dateret 11. september 2026. Begge datoer ligger efter beholdningen. Selskabet skriver, at Gen-2 stadig er en del af konstellationen. Teksten siger ikke, at alle planlagte Gen-3 er i kredsløb. Rocket Lab skriver, at rumfartøjerne laves i Spacecraft Production Complex i Long Beach i Californien. Rengøringsrummet er 11.000 kvadratfod. Siden nævner test i termisk vakuum, vibration og elektromagnetisk forenelighed. CAPSTONE blev sendt op med Electron i 2022 til en bane om Månen. Datoen ligger før beholdningen. Den første Pioneer til Varda blev sendt op i juni 2023 og kom tilbage i februar 2024. Det er før beholdningen. Lightning er valgt til 17 busser til Globalstars nye satellitter i lav bane. SDA-kontrakten dækker 18 satellitter i Tranche 2. Ingen af de to er skrevet som opsendt. Et beløb i kontrakten og ordet leading er ikke taget med. Intuitive Machines købte Lanteris 13. januar 2026. Palo Alto er design. San Jose samler og tester. Rapporten skriver 18 platforme til SDA Tranche 2 Tracking Layer, valgt i 2024. De er ikke skrevet som opsendt. Ordene leader og most popular er ikke taget med. Hawkeye 360 skriver i prospektet af 6. maj 2026, at over 30 satellitter er i kredsløb, og at flere klynger er under udvikling. Klynger af tre bruges til stedbestemmelse af radiosignaler. Selskabet sender ikke selv raketten op.",
-          "ndi": "Starlink er i en AI-selskabsprofil beskrevet som en løbende tjeneste, ikke kun en opsendelse. Det er et udkast, ikke NDI's færdige tekst. SpaceX indgår ikke i beholdningen pr. 1. juni 2026. Spire, Iridium og BlackSky indgår i beholdningen pr. 1. juni 2026. Spire skriver, at satellitterne bygges i Glasgow, og at selskabet ikke selv sender raketten op. Iridium skriver, at nettet var i fuld drift i 1998. BlackSky skrev 14. september 2026, at den femte Gen-3 tog de første billeder. Det er efter beholdningen. Rocket Lab laver også rumfartøjer i Long Beach. CAPSTONE fløj i 2022. 17 busser til Globalstar og 18 satellitter til SDA er ikke skrevet som opsendt.",
+          "blurb": "Satellitter, der er i kredsløb eller under bygning. Nogle sender tale og data, nogle tager billeder af Jorden, og nogle opfanger radiosignaler. Hertil kommer selskaber, der bygger selve satellitkroppen, som udstyret sættes på. En satellit i drift kan sælge data eller forbindelse i årevis, så længe den virker.",
+          "ndi": "Starlink er i en AI-selskabsprofil beskrevet som en løbende tjeneste, ikke kun en opsendelse. Det er et udkast, ikke NDI's færdige tekst. SpaceX indgår ikke i beholdningen pr. 1. juni 2026. Spire, Iridium og BlackSky indgår i beholdningen pr. 1. juni 2026.",
           "themes": [
             "space"
           ],
@@ -1987,13 +1996,26 @@
               "role": "Billeder fra lav bane. Femte Gen-3 tog de første billeder 11. september 2026, efter beholdningen. Gen-2 er stadig med."
             }
           ],
-          "seeChain": null
+          "seeChain": null,
+          "facts": [
+            "Iridium Communications: den første satellit blev sendt op i 1997, nettet var i fuld drift i 1998, og satellitterne var skiftet ud i 2019. Nettet ligger i ca. 780 km højde og bruges til tale, data og position, ikke billeder.",
+            "Spire Global: designer, bygger og driver sine egne satellitter fra en fabrik i Glasgow. Mere end 175 er sendt op (tallet er ikke dateret). Selskabet sender ikke selv raketterne op.",
+            "Planet Labs: satellitfamilierne hedder SuperDove, SkySat, Pelican og Tanager. Owl er omtalt som næste generation.",
+            "BlackSky: driver satellitter i lav bane og sælger billeder og analyse. Den femte Gen-3 tog sine første billeder under 20 timer efter opsendelsen (meddelt 14. september 2026, efter beholdningen). Ikke alle planlagte Gen-3 er i kredsløb.",
+            "Hawkeye 360: over 30 satellitter i kredsløb ifølge prospektet af 6. maj 2026. Tre satellitter flyver sammen for at finde ud af, hvor et radiosignal kommer fra.",
+            "Satellogic: fuld drift af Merlin-satellitterne er sat til andet halvår 2027. Det er en plan.",
+            "MDA Space: Chorus er tre satellitter, der tager billeder af Jorden. RADARSAT-2 er allerede i kredsløb. De to nye er sat til opsendelse sent i 2026 (meddelt 16. september 2026, efter beholdningen). Aurora Black blev præsenteret 10. september 2026 og er ikke i drift.",
+            "York Space Systems: bygger satellitkroppe i tre størrelser. 21 satellitter er sendt op til det amerikanske forsvars første hold (Tranche 1). York planlægger opsendelserne, men sender ikke selv raketten op.",
+            "Rocket Lab: bygger og tester rumfartøjer i Long Beach i Californien. CAPSTONE fløj til en bane om Månen i 2022. Selskabet er valgt til 17 satellitkroppe til Globalstar og 18 satellitter til det amerikanske forsvar. Ingen af dem er skrevet som opsendt.",
+            "Intuitive Machines: købte Lanteris 13. januar 2026, som bygger satellitkroppe. 18 af dem til det amerikanske forsvar er valgt, men ikke skrevet som opsendt.",
+            "Redwire: laver og tester kameraerne til NASAs Orion-kapsel via Lockheed Martin. Meddelelsen fra 1. april 2026 siger, at 11 kameraer og fire solsensorer skal med på Artemis II. Den siger ikke, at flyvningen er gennemført. Redwire sender ikke selv op."
+          ]
         },
         {
           "id": "space-compute",
           "icon": "✦",
           "label": "Rum og compute",
-          "blurb": "På sigt kan beregning ligge i rummet. I beholdningen pr. 1. juni 2026 er eksemplerne infrastruktur, robotik og satellitplatforme. Ingen af dem er et datacenter i kredsløb. Voyager omtaler Starlab som et stationsprojekt. Det er ikke en station i drift. Selskabet skrev 8. september 2026, at GOEX ved Camp Minden i Louisiana igen producerer sortkrudt. Det er efter beholdningen, og det er ikke en rumstation. MDA skrev 16. september 2026, at Chorus er billeder af Jorden. De to nye satellitter er ikke sendt op. Det er ikke et datacenter.",
+          "blurb": "Tanken er, at computere på sigt også kan stå i rummet. I beholdningen pr. 1. juni 2026 er eksemplerne infrastruktur, robotik og satellitplatforme. Ingen af dem er et datacenter i kredsløb.",
           "ndi": "Udsagnet om SpaceX og størrelsen af økonomien er Elon Musks og står kun som citat. Det er ikke NDI's forventning (ugebrev 12. oktober 2026).",
           "themes": [
             "space"
@@ -2034,7 +2056,12 @@
               "role": "Chorus er billeder af Jorden. De to nye satellitter er ikke sendt op. Ikke et datacenter."
             }
           ],
-          "seeChain": null
+          "seeChain": null,
+          "facts": [
+            "Voyager Technologies: Starlab er et projekt til en rumstation. Det er ikke en station i drift. Selskabet skrev 8. september 2026, at et anlæg i Louisiana igen producerer sortkrudt. Det er efter beholdningen og har ikke med rummet at gøre.",
+            "MDA Space: Chorus er satellitter til billeder af Jorden, ikke et datacenter. De to nye er ikke sendt op.",
+            "Redwire og York Space Systems: bygger udstyr og satellitkroppe. Ingen af dem driver beregning i kredsløb."
+          ]
         }
       ]
     },
