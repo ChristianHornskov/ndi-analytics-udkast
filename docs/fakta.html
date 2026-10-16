@@ -29,6 +29,9 @@
   .ens-strip .k{color:var(--brand);font-size:11px;font-weight:700;letter-spacing:1.2px}
   .ens-strip b{color:var(--text);font-weight:600;margin-right:4px}
   .ens-strip a{margin-left:auto;white-space:nowrap}
+  .sri-mini{display:inline-flex;gap:2px;margin-left:8px;vertical-align:-2px}
+  .sri-mini i{width:7px;height:14px;border-radius:2px;background:#0b171d;border:1px solid #345860;display:block}
+  .sri-mini i.on{background:#f5ee9e;border-color:#f5ee9e}
   .glance-board{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:0 0 8px}
   .glance-board.is-three{grid-template-columns:repeat(3,minmax(0,1fr))}
   main .lede{margin-bottom:12px}
@@ -198,8 +201,11 @@
  ].join('');
  const txTile = tile('PORTEFØLJETRANSAKTION', dTx === 0 ? pct(A.costs.portfolioTransaction) : pair(pct(A.costs.portfolioTransaction), pct(B.costs.portfolioTransaction)), dTx === 0, dTx === 0 ? 'Begge klasser.' : `PMINDI · PMINDIAKK · ${String(Math.abs(dTx)).replace('.', ',')} procentpoint. ${krGapTxt} på 100.000 kr. Ikke et ÅOP.`);
  const glanceBoard = dTx === 0 ? sameTiles + txTile : sameTiles;
+ const sriMeter = sameSri
+ ? `<span class="sri-mini" aria-hidden="true">${Array.from({ length: A.sriMax }, (_, i) => `<i class="${i + 1 === A.sri ? 'on' : ''}"></i>`).join('')}</span>`
+ : '';
  const ensStrip = onlyFour
- ? `<p class="ens-strip" id="blik"><span class="k">Ens i begge</span><span><b>SRI</b> ${A.sri} af ${A.sriMax}</span><span><b>Horisont</b> ${A.horizonYears} år</span><span><b>Øvrige løbende</b> ${pct(A.costs.otherOngoing)}</span><a href="omkostninger.html#forskel">Se søjlerne →</a></p>`
+ ? `<p class="ens-strip" id="blik"><span class="k">Ens i begge</span><span><b>SRI</b> ${A.sri} af ${A.sriMax}${sriMeter}</span><span><b>Horisont</b> ${A.horizonYears} år</span><span><b>Øvrige løbende</b> ${pct(A.costs.otherOngoing)}</span><a href="omkostninger.html#forskel">Se søjlerne →</a></p>`
  : '';
  const ppTxt = String(Math.abs(dTx)).replace('.', ',') + ' procentpoint';
  const poster = dTx === 0 ? '' : `<section class="fact-delta" id="forskel-kort">

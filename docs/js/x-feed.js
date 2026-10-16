@@ -309,6 +309,17 @@ body.x-home .x-door-score i{margin-top:0;font-size:9px;letter-spacing:.5px;text-
   body.x-home .x-tools{order:7;position:static;background:transparent;border-bottom:0;backdrop-filter:none}
   body.x-home .x-jumps{order:8}
 }
+.x-split{display:flex;flex-direction:column;gap:0;min-width:0}
+#x-grid > .x-split{grid-column:1 / -1}
+.x-split-main,.x-split-side{min-width:0}
+.x-split-side .x-lane{margin-top:0;border-left:0;padding-left:0}
+.x-split-side .x-text{display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+@media(min-width:980px){
+  #x-grid > .x-split,.x-says > .x-split{display:grid;grid-template-columns:minmax(0,1.38fr) minmax(270px,.84fr);gap:0 16px;align-items:start}
+  .x-split-side .x-grid{grid-template-columns:1fr}
+  .x-split-side .x-card{box-shadow:none}
+  .x-says > .x-split{margin-top:4px}
+}
 `;
   document.head.appendChild(s);
 }
@@ -746,13 +757,17 @@ export function xSaysPanel(pack, { tickers = [], themes = [], limit = 4, title =
     : !view.direct.length
       ? `<p class="x-miss">Ingen opslag i udsnittet nævner selskabet eller tickeren. ${restTheme.length ? 'Kortene er tema.' : 'Kortet er tema.'}</p>`
       : '';
+  const sideLane = lane('direct', restDirect) || lane('theme', restTheme);
+  const belowLane = restDirect.length && restTheme.length ? lane('theme', restTheme) : '';
+  const stage = sideLane
+    ? `<div class="x-split"><div class="x-split-main">${quote}</div><div class="x-split-side">${sideLane}</div></div>`
+    : quote;
   return `<section class="panel x-says" id="hvad-siger-x">
   <div class="x-says-h"><h2 class="panel-h">${esc(title)}</h2>${score}</div>
   <p class="sr-only">${esc(nLabel)}</p>
   <p class="band">${esc(X_LABEL)}. Snapshot ${snap}.</p>
-  ${quote}
-  ${lane('direct', restDirect)}
-  ${lane('theme', restTheme)}
+  ${stage}
+  ${belowLane}
   ${miss}
   <p class="link-row" style="margin-top:12px"><a class="outline-btn small" href="${more}">Flere opslag i feedet →</a></p>
 </section>`;

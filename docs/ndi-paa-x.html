@@ -292,10 +292,14 @@
  const leadKind = direct.length ? 'direct' : 'theme';
  const restDirect = direct.length ? direct.slice(1) : [];
  const restTheme = direct.length ? theme : theme.slice(1);
- grid.innerHTML = scoreBar + `<div class="x-stage">${xCard(leadPost, { query: markQ, lead: true, hitKind: leadKind, reasons: reasonsFor(leadPost) })}</div>`
- + laneOf('direct', restDirect)
- + laneOf('theme', restTheme)
- + (restHits.length ? `<div class="x-grid" style="grid-column:1/-1">${restHits.map((p) => xCard(p, { query: state.q })).join('')}</div>` : '');
+ const stageHtml = `<div class="x-stage">${xCard(leadPost, { query: markQ, lead: true, hitKind: leadKind, reasons: reasonsFor(leadPost) })}</div>`;
+ const sideHtml = laneOf('direct', restDirect) || laneOf('theme', restTheme);
+ const belowHtml = restDirect.length && restTheme.length ? laneOf('theme', restTheme) : '';
+ const tailHtml = restHits.length ? `<div class="x-grid" style="grid-column:1/-1">${restHits.map((p) => xCard(p, { query: state.q })).join('')}</div>` : '';
+ const split = sideHtml
+ ? `${scoreBar}<div class="x-split"><div class="x-split-main">${stageHtml}</div><div class="x-split-side">${sideHtml}</div></div>`
+ : scoreBar + stageHtml;
+ grid.innerHTML = split + belowHtml + tailHtml;
  }
  };
 
