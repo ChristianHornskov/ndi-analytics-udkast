@@ -5,6 +5,17 @@
  <meta name="robots" content="noindex,nofollow">
  <title>Periode · NDI Analytics</title>
  <link rel="stylesheet" href="css/ndi.css">
+ <style>
+  .period-span .track{position:relative;height:14px;border-radius:7px;background:#0b171d;border:1px solid var(--line);margin:12px 0 6px}
+  .period-span .mark{position:absolute;top:0;bottom:0;border-radius:7px;background:var(--cyan)}
+  .period-span .scale{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin:0}
+  @media print {
+   .period-span{break-inside:avoid}
+   .period-span .track{background:#eee;border-color:#333}
+   .period-span .mark{background:#333}
+   .site-footer{color:#111}
+  }
+ </style>
  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
  <!-- og:start -->
  <meta property="og:type" content="website">
@@ -42,8 +53,31 @@
  const sriHtml = priip
   ? `<p class="band">Risikoindikator <strong>${priip.risk_class}</strong> af ${priip.risk_scale_max} ifølge KID (pr. ${fmtDate(priip.production_date)}). Anbefalet tid ${priip.recommended_holding_years} år. Tallet gælder fonden som helhed, ikke en enkelt periode. <a href="risici.html">Risici</a>.</p><p class="src">${kidFooterHtml(meta)}</p>`
   : '';
+ function periodSpan(from, to, mode) {
+  if (!from || !to) return '';
+  if (mode === 'all' || mode === 'start') {
+   return `<section class="panel period-span"><h2 style="font-size:16px;margin-bottom:8px">Perioden er ikke ét kalenderår</h2><p style="color:var(--muted);line-height:1.6">Bjælken er ikke tegnet. Perioden går fra ${fmtDate(from)} til ${fmtDate(to)} og kan dække flere år. Det er datoer for fonden, ikke et afkast og ikke en enkelt aktie.</p></section>`;
+  }
+  const y = to.slice(0, 4);
+  const yearStart = `${y}-01-01`;
+  const start = Date.parse(yearStart + 'T00:00:00Z');
+  const end = Date.parse(`${y}-12-31T00:00:00Z`);
+  const markFrom = from < yearStart ? yearStart : from;
+  const a = Date.parse(markFrom + 'T00:00:00Z');
+  const b = Date.parse(to + 'T00:00:00Z');
+  const left = Math.max(0, Math.min(100, ((a - start) / (end - start)) * 100));
+  const right = Math.max(left, Math.min(100, ((b - start) / (end - start)) * 100));
+  const width = Math.max(1.5, right - left);
+  const anchor = from < yearStart ? ` Udgangspunktet i serien er ${fmtDate(from)}, ikke 1. januar.` : '';
+  const lateStart = markFrom !== yearStart ? ` Markeringen starter ${fmtDate(markFrom)}, ikke 1. januar.` : '';
+  const done = to.slice(5) === '12-31';
+  const note = done
+   ? `Slutpunktet er 31. december ${y}.${anchor}${lateStart} Markeringen er datoer, ikke et afkast.`
+   : `Slutpunktet er ${fmtDate(to)}. Året er ikke slut i serien.${anchor}${lateStart} Det er et delår, ikke et helt års afkast.`;
+  return `<section class="panel period-span" aria-label="Periodens datoer"><h2 style="font-size:16px;margin-bottom:8px">Hvor langt hen på året?</h2><p style="color:var(--muted);line-height:1.6">${note} Fonden, ikke en enkelt aktie.</p><div class="track" role="img" aria-label="Kalenderåret ${y}. Perioden vises fra ${fmtDate(markFrom)} til ${fmtDate(to)}."><div class="mark" style="left:${left.toFixed(1)}%;width:${width.toFixed(1)}%"></div></div><p class="scale"><span>1. jan. ${y}</span><span>${fmtDate(markFrom)} → ${fmtDate(to)}</span><span>31. dec. ${y}</span></p></section>`;
+ }
  if (fund.id === 'pmindiakk') {
- document.getElementById('main').innerHTML = `<p class="eyebrow">PERIODE</p><h1>${fund.short}</h1><section class="panel"><p style="color:var(--muted)">Afkast vises efter 12 måneder.</p></section>${sriHtml}<p class="warn">${WARN_HIST}</p><p class="src">År til dato er et delår og afventer Fundmarket-godkendelse som markedsføringsangivelse. Klassen viser ikke afkast endnu.</p>`;
+ document.getElementById('main').innerHTML = `<p class="eyebrow">PERIODE</p><h1>${fund.short}</h1><section class="panel"><p style="color:var(--muted)">Afkast vises efter 12 måneder.</p><p style="color:var(--muted)">Der er ingen datobjælke, fordi klassen ikke viser afkast endnu.</p></section>${sriHtml}<p class="warn">${WARN_HIST}</p><p class="src">År til dato er et delår og afventer Fundmarket-godkendelse som markedsføringsangivelse. Klassen viser ikke afkast endnu.</p>`;
  } else {
  const years = calendarYearReturns(fund.data);
  const ytd = ytdReturn(fund.data);
@@ -79,6 +113,7 @@
  <div class="kpi"><span class="label">Gennemsnitligt årligt afkast</span><strong>${fmtPct(cagr(fund.data))}</strong></div>
  </div>
  <p class="band">År til dato afventer Fundmarket-godkendelse. Tallet er ikke et helt års afkast.</p>
+ ${periodSpan(from, to, year)}
  ${sriHtml}
  <section class="panel">
  <h2 style="font-size:16px;margin-bottom:8px">Kontekst</h2>
