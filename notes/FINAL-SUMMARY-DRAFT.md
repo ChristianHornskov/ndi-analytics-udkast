@@ -50,3 +50,12 @@ See notes/HANDOFF-CODEX.md + notes/X-LANE.md + notes/THEME-FORSLAG.md
 - Manual merge wave: A (vaerdikaeder), E (profiles/nyhedsarkiv), X (kept KID/Fulgt konto), D (visual).
 - Structural fix: `notes/status-{A–E,R,X}.md` + rebase instruction in all PROMPTs; watchdog reads ROOT prompts.
 - Smoke 52 fail 0. Coordinator detached. Report 08:45.
+
+
+## Vidensbot 03:00 compliance (2026-10-16 03:21 CEST) · HEAD dc59d99
+1. Fondsgraf: kun @InvestNewdeal chartMarkers (+ app.js filter + loadXPosts).
+2. matchPosts house-only; CHornskov «Begge er også i $PMINDI» fjernet; revealsHoldings.
+3. PMINDIAKK: data[] tømt; UI/embed «Ny andelsklasse, kurs vises efter 12 måneder».
+4. Nasdaq-sammenligningsnote væk; ÅTD-caveats på periode/drawdown/embed.
+5. Markedsføringsmateriale på produktsider; nyhedsarkiv tab-advarsel; modenhed=forslag; HANDOFF Mads.
+6. precheck guards for 1–3. Smoke 52/0.
