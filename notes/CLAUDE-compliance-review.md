@@ -1349,3 +1349,25 @@ Ikke juridisk rådgivning. Delta mod `85704e3`: drawdown, sammenlign, embed/char
 
 ### ÅOP
 Uændret: "Ikke et ÅOP" + KID-RIY. FO-ønsket om ÅOP er stadig åbent til afklaring med compliance.
+
+## 2026-10-16 07:37 CEST · cyklus 54 · freeze-tjek (main `f6d6b4b`, uændret; live = main)
+
+Ikke juridisk rådgivning. Der er ingen docs-delta siden c53. Footer- og advarselstjek på live for 20 nøgle-URL'er (375 px, cache-bust): index (PMINDI+AKK), selskaber, kort, vaerdikaeder, drawdown, risici, selskab SoftBank, temaer, invester, om-data, omkostninger, fakta, sammenlign, ndi-paa-x, ndi-perspektiv, periode, ideer, nyhedsarkiv og embed/chart.
+
+### Verificeret
+- Alle 20 sider har ikke-rådgivning ✅, tab af kapital ✅ og historisk afkast ≠ fremtid ✅.
+- Ordsweep (garanti/sikker gevinst/køb nu/øger eksponering/bedste tip): 0 hits. "overvægt" findes i 8 forekomster i kilden (risici, tema, temaer, value-chains, laer/*). Alle er negationer ("ikke bevidste overvægte") eller pædagogik om spredning ✅.
+- AI-mærkning er synlig, hvor der er AI-tekst (vaerdikaeder, risici, selskab, om-data, ndi-perspektiv, ideer) ✅.
+
+### MUST
+- **M1 (fra c53) er stadig åben før go-live:** ndi-paa-x kuraterer tredjepartsopslag om beholdninger. Det blokerer ikke for noindex-udkastet, men det er en ikke-trivial indholdsbeslutning, så den bør tages af Leo/compliance og ikke indføres under freeze.
+
+### SHOULD (åbne, genverificeret i kilden ved `f6d6b4b`)
+- S3 index.html:89 "Se Central Information Dokument" → "Se KID'et (Central Information) før du investerer".
+- S5 omkostninger.html:606 "marketingmateriale skal gengive ærligt" er en intern formulering.
+- S11 medarbejderkonti som NDI-markedsføring (samtykke + review).
+- S12 ndi-paa-x.html:110 selvmodsigende mærkning.
+- S3, S5 og S12 er rene tekstrettelser. De kan gå ind som bugfix 08:00–08:30.
+
+### ÅOP
+Uændret. "Ikke et ÅOP" + KID-RIY. FO-ønsket om ÅOP afklares med compliance.

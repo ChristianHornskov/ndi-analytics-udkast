@@ -1367,3 +1367,19 @@ Fuld live-sweep af 50 URL'er (375 px) og delta-check af de nye komponenter. 0 pa
 
 ### Nice
 - Engelsksprogede tredjepartsopslag (FundaAI, Bull Theory) uden dansk resumé er tunge for privat-personaen. FO-personaen er ok med det.
+
+## 2026-10-16 07:37 CEST · cyklus 54 · freeze-tjek (main `f6d6b4b`, uændret siden c53; live = main, md5 ok på 10 nøglesider)
+
+Sidste cyklus før LEO FREEZE kl. 08:00. Live-sweep af 20 nøgle-URL'er på 375 px med cache-bust: 0 pageerrors, 0 vandret overflow. Rådgivnings-, tab- og historik-linjen er til stede på alle 20.
+
+### MUST
+- Ingen.
+
+### SHOULD (uændret fra c53 — kun tekst/CSS, kan laves som bugfix efter 08:00)
+1. ndi-paa-x: 102 tap-mål < 24 px (`.x-atlas-dot`, `a.tag`).
+2. ndi-paa-x: rå engelske slugs som tags. Brug displayName.
+3. ndi-paa-x.html:110: selvmodsigende label ("ikke NDI's holdning" … "kan være NDI's holdning"). Står stadig i kilden.
+4. index.html:89 KID-ordlyd og omkostninger.html:606 intern formulering. Begge står stadig i kilden.
+
+### Nice
+- Uændret (engelske tredjepartsopslag uden dansk resumé).
