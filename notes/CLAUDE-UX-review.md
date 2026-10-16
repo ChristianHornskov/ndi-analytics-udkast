@@ -580,3 +580,214 @@ main/docs og Pages er uændrede. Live ved 375 er der ingen regression (16 sider:
 - **Privat:** lane-C's lær-sider (indre værdi, læs grafen) giver præcis den baggrund, som persona-filen efterspørger ✅. Omkostninger svarer stadig ikke på "hvad koster det mig?".
 - **Familiekontor:** lane-C's SRI-forklaring fjerner et oplagt spørgsmål i due diligence ✅. Omkostninger (KID-tal) og embed (KID/SRI) er stadig hullerne.
 - **Visuel variation:** ingen ny træthed. Lane-A tilføjer en modenhedstrappe og risikokort på vaerdikaeder, og det er efterhånden mange kort-typer på én side. Hold øje efter merge.
+
+## 2026-10-16 02:05 CEST · cyklus 26 (main `90e7de8`, intet docs-delta)
+
+main/docs og Pages er uændrede (Last-Modified 23:49 GMT). Live-regression ved 375 blev kørt i cyklus 25 og er ikke gentaget. Persona-, krav- og idéfilerne er uændrede. Fokus i denne cyklus er de nye lane-commits efter 01:57: X `b58126a`, C `74e42c4`, A `2e5fe11`, B `28190f5`, D `e3c0330` og E `29388e6`.
+
+### MUST (uændret på main)
+- Invester har tre "4."-trin. Selskab har "AI-udkast" over et tomt felt. Omkostninger mangler KID-tallet 2,79 %/2,85 %.
+
+### SHOULD (nyt, fra lane-grene)
+- **lane-X fakta.html "Ens i begge"-strip:** "SRI 5 af 7 · Horisont 5 år · Øvrige løbende 1,49 %". "Øvrige løbende" er nu kopieret til endnu en side. Brug KID'ets ord ("Forvaltning og administration") og sæt KID-totalen ved siden af. Ellers ser 1,49 % ud som den samlede pris.
+- **lane-X fakta/omkostninger:** "Ikke et ÅOP" står 8 gange på omkostninger og 4 gange på fakta. Én forklaring pr. side er nok. Gentagelsen virker defensiv over for en privat læser.
+- **lane-X x-door-score** (store serif-tal på 34 px for antal hits) tilføjer endnu en tal-plakat. Kombineret med "80 kr"-plakaten på omkostninger begynder plakatformen at gå igen på tværs af siderne (visuel træthed, lav).
+- **lane-C ideer «To klasser, samme temaer»:** klar og rolig ✅. "intet tema skiller sig mere end 1,6 procentpoint ud" er godt konkret. Indholdsfortegnelsen med 12 former hjælper ✅.
+- **lane-C møntspil** (100 → 150 → 90 kr.) er korrekt regnet og pædagogisk stærk for persona privat ✅.
+- **lane-A rum-tråde:** Musk kun via citat med kilde og "ikke NDI's forventning og ikke en prognose" ✅. vaerdikaeder har nu 9-stops læse-rute + quiz + modenhedstrappe + risikokort + trådediagram. Det er mange former på én side, så tjek ved 375 efter merge, at læse-ruten står øverst.
+
+### Nice
+- lane-X `callCountNote` vokser ("Sjette poleringspas samme dag …"). Det er stadig log-støj i en offentlig datafil.
+
+### Persona-linser
+- **Privat:** lane-C giver nu svar på "hvorfor to klasser?" og "hvorfor koster udsving?" ✅. Omkostninger svarer stadig ikke på "hvad koster det om året?".
+- **Familiekontor:** "Ens i begge"-strippen er nyttig til at sammenligne klasserne, men uden KID-totalen kan den ikke bruges i DD.
+
+## 2026-10-16 02:02 CEST · cyklus 27 (main `69c9033`, intet docs-delta)
+
+main/docs er uændrede siden `90e7de8`: `69c9033` indeholder kun notes. Pages blev genudrullet kl. 00:00 GMT, og index, invester, omkostninger og selskab er byte-ens med main ✅. Bemærk: `fonden.html` findes ikke (live 404). "Fonden" i opgavelisten svarer til `fakta.html`. Persona-, krav- og idéfilerne er uændrede. Fokus er de nye lane-commits: C `c7dae02` og E `1972434`.
+
+### MUST
+- **Invester tre "4."-trin: lukkes af lane-C `c7dae02`** ✅. Ét trin "4. Køb og omkostninger" samler omkostningslinket, kurtage og "efter løbende omkostninger, før skat". Merge, så er det løst på main.
+- Uændret på main: selskab "AI-udkast" over et tomt felt. Omkostninger mangler KID-tallet 2,79 %/2,85 %.
+
+### SHOULD (lane-grene)
+- **lane-C invester «Hvor ligger pengene, og hvem gør hvad?»** (depot → forening → Fundmarket → Danske Bank, NDIIR som rådgiver). Det er præcis det, persona privat og familiekontor spørger om ("hvem passer på mine penge?") ✅. Mobil: `.flow` går til 1 kolonne ≤720 px, og pilen skifter til ↓ ✅. To små ting: (a) "Opbevarer fondens værdipapirer, adskilt fra forvalterens egne penge" bør hedde "adskilt fra forvalterens og bankens egne aktiver". (b) "kl n" i kildelinjen ligner en intern forkortelse. Skriv "andelsklassen kl. n" eller "PMINDIAKK/PMINDI".
+- **lane-C SRI-tekster** (risikoklasse, faq, ordliste "Udsving efter KID-metoden"): nu skelnes der klart mellem simpelt udsving og KID-udsving ✅. Ordlisten er på 119 begreber. "Afkast og risiko" har 28 begreber og er lang at scrolle ved 375, men den er foldbar ✅.
+- **lane-E Oklo:** "ikke salg af isotoper" står 4 gange i én selskabsboks (summary, watch, products, role), og ingen læser har spurgt om isotoper. Det virker defensivt og forvirrende for persona privat. Sig det én gang eller fjern det. "Det er efter beholdningen" er uklart. Skriv "Det skete efter beholdningsdatoen 1. juni 2026".
+
+### Nice
+- lane-X `callCountNote` (log-støj i en offentlig datafil) er uændret.
+
+### Persona-linser
+- **Privat:** lane-C svarer nu på "hvor ligger mine penge?" og "hvorfor er udsvinget højere end klassen?" ✅. "Hvad koster det mig om året?" er stadig ubesvaret på main.
+- **Familiekontor:** flow-diagrammet med forening, IFS og depotbank plus link til fakta#organisation dækker de første DD-spørgsmål ✅. KID-omkostningstotalen mangler stadig.
+- **Visuel variation:** `.flow` er en ny, rolig form (fire trin med pile). Den giver ingen træthed.
+
+## 2026-10-16 02:15 CEST · cyklus 28 (main `69c9033`, intet docs-delta)
+
+main/docs er uændrede siden `90e7de8`, og Pages er stadig fra 00:00 GMT. Lane-R er ikke nulstillet til main, fordi lane-R har 2 notes-commits foran main og push ellers ville kræve force. docs/ er identisk med main. Fokus er de nye lane-commits: E `4ecafbd`/`00c3c32` og D `549158a`. A, B, C og X er uændrede siden cyklus 27.
+
+### MUST
+- Uændret på main: selskab "AI-udkast" over et tomt felt. Omkostninger mangler KID-tallet 2,79 %/2,85 %. De tre "4."-trin på invester lukkes, når lane-C merges.
+
+### SHOULD (lane-grene)
+- **lane-E: nægtelser fylder nu mere end indholdet.** Oklo-mønsteret fra cyklus 27 er bredt ud. Kæde-blurbs i `value-chains.json` er vokset fra ca. 200–230 tegn på main til **1.384 / 1.286 / 977 / 791 / 737 tegn**, med 5–7 "ikke …" hver ("ikke et kraftværk", "ikke en mine i drift", "ikke en orbital rute"). Southern Copper siger "ikke en mine i drift" 5 gange i én boks og "Det er heller ikke et kraftværk", selv om ingen har påstået det. Rocket Lab siger "HASTE er ikke orbital" 4 gange. Ved 375 px er en blurb på 1.300 tegn ca. 3 skærmhøjder tekst før led-kortene. Persona privat læser det som en fejlliste, og familiekontoret spørger "hvorfor forsvarer de sig?". Forslag: blurb ≤ 250 tegn (hvad leddet er), nuancen "projekt/ikke i drift" kun i selskabets `role`, én gang, og som positiv status ("Projekt, ikke i produktion" → "Status: projekt med byggetilladelse").
+- **lane-E nyhedsarkiv.html:** der er 16 nye muted-linjer af typen "Det er ikke et værk i drift". De ligner QA-noter fra kildetjekket og ikke nyheder. Flyt dem til selskabsprofilen eller notes/, eller saml dem i én foldet "Afgrænsninger"-boks.
+- **lane-D `549158a`:** lys kant på den åbne drawdown-søjle (`stroke:#fff` i mørk tilstand). Lille, rolig ændring ✅.
+
+### Nice
+- lane-X `callCountNote` (log-støj i en offentlig datafil) er uændret.
+
+### Persona-linser
+- **Privat:** præcision er godt, men 5–7 nægtelser pr. afsnit gør teksten sværere at læse end den uklarhed, de retter.
+- **Familiekontor:** præcise statusord ("projekt", "tilladelse givet", "efter beholdningen 1. juni 2026") er værdifulde i DD. Sig dem én gang pr. selskab.
+- **Visuel variation:** ingen ny form. Risikoen er nu tekstmængde, ikke formtræthed.
+
+## 2026-10-16 02:13 CEST · cyklus 29 (main `a34a733`, stort docs-delta: merge af lane A–E + X)
+
+main har fået lane A, B, C, D og E samt X-panel på tema (`a34a733`, 26 docs-filer, +2.501/−308). Pages last-modified er 00:09:59 GMT, og det er samme minut som `a34a733`. Live svarer til main. Lane-R er **ikke** nulstillet: `reset --hard` ville kassere pushede notes-commits og kræve force-push. I stedet er origin/main merget ind (konflikt i STATUS.md løst ved at beholde begge sider), så docs/ er identisk med main. Persona- og krav-filerne er uændrede (kun VIDENSBOT-live-check +29 linjer). Jeg har kørt Playwright live ved 375 px på 37 URL'er, inkl. `?view=fonden|portefolje|udforsk`, `selskab.html?isin=JP3436100006` (SoftBank) og `tema.html?slug=energi|chips`.
+
+**Resultat live:** 0 pageerrors og 0 vandret overflow på alle 37. NB: `fonden.html`, `portefolje.html` og `udforsk.html` giver 404. Ruterne er `?view=…`. Det er ikke en fejl, men links udefra med de "pæne" navne vil fejle.
+
+### MUST
+1. **X-panelet er nu på produktsider (tema + selskab), med "MADS FØLGER"-badge og "BREAKING".** `tema.html?slug=energi` og `chips` har en "Hvad siger X"-boks midt i temaet. SoftBank-siden viser @BullTheoryio "BREAKING: SoftBank is seeking to raise up to $100 billion …" og "BREAKING: Nvidia is in talks to backstop $250 BILLION …" med badgen **MADS FØLGER** og "Vist fordi: SoftBank · platforme". Teksten er engelsk, kommer fra tredjepart og er usikker. Den står under en fond, som ejer selskabet. "Udvalgte offentlige opslag — ikke NDI's holdning" står der ✅, men badgen "MADS FØLGER" i versaler trækker den modsatte vej. Forslag: (a) badge → "Konto på Mads' følgeliste" i normal skrift, eller fjern den på tema/selskab. (b) Filtrér "BREAKING"/kun-overskrift-opslag fra på produktsider. (c) Fold panelet sammen som standard på tema/selskab ("Vis 4 opslag fra X"). Se compliance MUST 2.
+2. **Omkostninger: KID-totalen 2,79 %/2,85 % står stadig ingen steder** (0 hits i docs/ og live). Persona privat: "Hvad koster det mig om året?" er stadig ubesvaret på omkostninger, fakta og invester.
+3. **ÅTD med "afventer Fundmarket-godkendelse"** står stadig på `?view=fonden` (chip "ÅTD", "+4,0 %", src-linje). Enten skjules ÅTD, til godkendelsen foreligger, eller også fjernes forbeholdet. Det ser uprofessionelt ud at vise et tal og samtidig sige, at det ikke er godkendt.
+
+### SHOULD
+- **ndi-perspektiv er 143.428 px høj ved 375** (ca. 180 skærme) og har 666 badges på 10 px. Fold selskaberne sammen pr. tema, eller vis 20 og "Vis flere". (Åben siden cyklus 22.)
+- **Små skrifttyper på mobil:** tema energi har 113 elementer under 11 px (71 `.badge` på 10 px, 28 `small` på 10,8 px). selskaber og `?view=udforsk` har ca. 800 (tabellen). vaerdikaeder har 32 (`.vc-kind`/`.tag` på 10 px). ndi-paa-x har 9 px kursiv ×4. Minimum 11 px, gerne 12 px for alt, der skal læses.
+- **"Dyb →"** i årstabellen på fonden er stadig jargon (cyklus 24: "DYB SIDE"). Skriv "Se perioden →".
+- **vaerdikaeder er 15.414 px høj ved 375** efter merge af lane-A (flodkort, risikokort ×3 faner, quiz ×4, ordbøger, trappe, termometer, løkke og tråde). Genvejene øverst hjælper ✅, men siden har nu ca. 12 forskellige former. Overvej at lægge quiz og ordbog bag en fold pr. fane.
+- **Nyhedsarkiv:** der er stadig 10 linjer "ikke et …" fra lane-E. Ser ud som QA-noter (fra cyklus 28).
+- **invester:** "kl n" står stadig i kildelinjen (cyklus 27). Skriv "andelsklasse".
+
+### Lukket ✅
+- Invester har nu ét "4."-trin (lane-C).
+- Kæde-blurbs er trimmet: 0 strenge over 600 tegn i `value-chains.json` (cyklus 28-forslaget er fulgt).
+- Årstabellen siger nu "2023 delår" og chippen "2023*" (delvis lukning af compliance MUST 10).
+- PMINDIAKK periode: "Afkast vises efter 12 måneder" + risikolinje ✅.
+- Nye lær-sider `indre-vaerdi` og `laes-grafen`: klart dansk, "tænkt fond", intet benchmark, "før skat og dine egne handelsomkostninger" ✅. Flot.
+
+### Nice
+- Engelske X-opslag på danske sider: vis en dansk etiket ("Opslag på engelsk") eller en kort dansk overskrift.
+- Hold `?view=fonden` som kanonisk og lav små redirect-sider `fonden.html` → `?view=fonden` (også portefolje/udforsk), så delte links virker.
+
+### Persona-linser
+- **Privat:** den nye "Sådan læser du grafen" og "Indre værdi" besvarer præcis de begynderspørgsmål, persona-filen stiller ✅. X-panelet med "BREAKING" på SoftBank er det modsatte af den rolige tone, personaen ønsker.
+- **Familiekontor:** vil spørge, hvorfor tredjepartsrygter står på en produktside, og hvem der kuraterer dem. Kræver stadig KID-omkostningstotal og ÅOP.
+- **Visuel variation:** vaerdikaeder er nu siden med flest former. Risikoen er træthed ved 375 px, ikke ensformighed. Andre sider er fine.
+
+## 2026-10-16 02:17 CEST · cyklus 30 (main `e402f15`, docs-delta: "Leo 02:00/02:07 UX+FO + KID costs / X scrub")
+
+Pages (00:15:49 GMT) = main `e402f15`. Jeg har kørt Playwright live ved 375 på 24 URL'er: 0 pageerrors, 0 vandret overflow og én h1 på alle sider ✅. Merge af origin/main ind i lane-R gav konflikt i `notes/STATUS.md`. Jeg har løst den ved at beholde begge sider, og der er ingen docs-ændringer. Coordinator-loopet havde allerede afbrudt sin egen merge af lane-R kl. 02:12 af samme grund.
+
+### MUST
+- **Fakta siger nu "KID'ets årlige omkostningsmæssige konsekvens er *ikke oplyst* for PMINDI og *ikke oplyst* for PMINDIAKK"** (live, `fakta.html:245`). Ny boks "Omkostningsniveau (kort)" læser `costs.kidRiy5y`, men feltet findes ikke i `data/fund-facts.json` (0 hits i hele docs/). `pct()` falder derfor tilbage til "ikke oplyst". Linket "Se opstillingen →" går til `omkostninger.html#kid-omkostning`, men det anker findes ikke, og omkostninger.html er uændret i `e402f15`. For en familiekontor-læser er det værre end ingenting: siden påstår, at KID'et ikke oplyser tallet. **Ret:** tilføj `kidRiy5y: 2.79 / 2.85` (med KID-dato) i fund-facts, og byg sektionen `#kid-omkostning` på omkostninger. Bemærk: `HANDOFF-CODEX.md` og STATUS siger "KID RIY på omkostninger" er landet. Det passer ikke med main.
+- **"AI-udkast" over tomt felt: lukket** ✅. Badgen vises nu kun, når der er tekst (`selskab.html`).
+- Invester har ét "4."-trin (lukket i cyklus 29) ✅.
+
+### SHOULD
+- **Fonden: tredjeparts-"BREAKING" i graf-listen.** Commit-beskeden siger "drop @MadsC007 chartMarkers", men de 14 `chartMarkers` indeholder nu @BullTheoryio "BREAKING: SoftBank is seeking to raise up to $100 billion …" og "BREAKING: Nvidia … backstop $250 BILLION". De vises under fondens hovedgraf (`?view=fonden`). Det er fondens vigtigste side. Begræns markørerne til @InvestNewdeal (webinarer, børsnotering) eller fjern X fra grafen.
+- **Fonden: "det er en compliance-beslutning, ikke et datamangel"** ved benchmark-teksten. Det er internt sprog på en kundeside, og "et datamangel" skal være "en datamangel". Skriv bare: "Fonden har intet fast benchmark, så vi tegner ikke en sammenligningskurve."
+- **Fakta "Mangler fra NDI"** er god som intern tjekliste ✅ (erstatter spredte "udfyldes"-pills). Men på en offentlig fakta-side ser "Revision / auditor" under "Mangler fra NDI" amatøragtigt ud for et familiekontor. Skjul boksen bag `?intern=1`, eller formulér den som "Oplysninger, der følger".
+- **Livscyklus-strip foldet ind på mobil** ✅ med "Vis kurve". Overskriften er klikbar, men det er ikke en `<button>` (ingen `aria-expanded`, ikke tastatur-fokusérbar). Lav den om til en knap.
+- **Udforsk ved 375:** 1.052 synlige tekstelementer under 12 px (tabelceller og tags), og siden er 28.282 px høj. vaerdikaeder er nu nede på 6 elementer under 12 px ✅ (rettet i denne commit). Udforsk er det næste sted for samme ≥12 px-regel.
+- **Entréen:** "Sådan tænker vi" og "Omkostninger · du kan tabe penge" som egne døre ✅. Kortteksten "KID-tal og Fundmarket-postsatser" lover KID-tal, som omkostninger ikke viser endnu (se MUST).
+- Udbytte "38,9 kr." / "38,0 kr." har nu komma ✅. "Max drawdown" er blevet til "Største fald" på fonden og fakta ✅. Den gamle term står stadig i `laer/laes-grafen.html` (1 hit).
+
+### Nice
+- ndi-perspektiv er uændret 143.436 px ved 375. `index.html`/`js/data.js` skriver stadig "Central Information Dokument".
+
+### Persona-linser
+- **Privat (55+):** fonden er roligere (Største fald, links til Sådan tænker vi, "sådan kan du selv vurdere afkastet") ✅. Men "BREAKING: $250 BILLION" i fondens graf-liste skaber uro og ligner nyhedsstrøm. Det strider mod "rolig, langsigtet".
+- **Familiekontor:** "To klasser, samme strategi" svarer på DD-spørgsmålet om forskelle i beholdning ✅. Omkostningsniveau "ikke oplyst" er den mest skadelige enkeltlinje på sitet lige nu.
+- **Visuel variation:** der er ingen nye former. "Mangler fra NDI" er én liste i stedet for spredte pills, hvilket giver mindre støj ✅.
+
+## 2026-10-16 02:24 CEST · cyklus 31 (main `3e4ec15`, docs-delta `5843694` "restore KID RIY + X scrub")
+
+Pages (00:15:49 GMT) = `e402f15`. **`5843694` er ikke live endnu (Pages-lag)**: live `fund-facts.json` har 0 × `kidRiy5y`, og live viser stadig "MADS FØLGER". Jeg har derfor reviewet live (36 URL'er × 375/1280: 0 pageerrors, 0 vandret overflow, én h1 overalt ✅) og main lokalt (9 nøglesider ved 375, 0 fejl, 0 overflow). Merge af origin/main ind i lane-R gav igen konflikt i STATUS.md. Jeg har beholdt begge sider. Ingen docs-ændringer fra lane-R.
+
+### MUST
+- **Fonden: tredjeparts-"BREAKING" under hovedgrafen (åben fra cyklus 30, nu MUST).** Main `?view=fonden` viser under "Udvalgte offentlige X-opslag" @BullTheoryio "BREAKING: SoftBank is seeking to raise up to $100 billion …" og @MilkRoadAI (Nvidia). @MadsC007 er væk ✅, men `chartMarkers` i `x-posts.json` har stadig 3 tredjepartskonti. **Ret:** begræns `chartMarkers` til @InvestNewdeal, som webinar og børsnotering.
+- **SoftBank-selskabssiden:** 2 × "BREAKING" (@BullTheoryio: kapitalrejsning på 100 mia. $ og garanti på 250 mia. $) og @FundaAI om "repricing of credit risk". Badgen hedder nu "Fulgt konto" ✅ i stedet for "MADS FØLGER", men indholdet er det samme. For privat-personaen er det nyhedsstrøm, ikke ro. Fold X-panelet sammen på selskab/tema, eller filtrér "BREAKING" fra.
+
+### Lukket ✅
+- **KID-omkostningstal (cyklus 30-MUST):** omkostninger har nu metric + tabel `#kid-omkostning`. Tallene er 2,79 %/2,85 % ved 5 år og 2,63 %/2,71 % ved 1 år. Jeg har **verificeret dem mod KID-PDF'erne** (priip_ipm140b/145b, "Årlig omkostningsmæssig konsekvens") ✅. Fakta "Omkostningsniveau (kort)" viser 2,79/2,85 i stedet for "ikke oplyst" ✅. Lede'en siger "ikke et billigere alternativ til KID-tallet". Det er godt for familiekontoret.
+- "Du kan tabe penge" står nu på omkostninger og ndi-paa-x ✅. "Konti NDI følger" i stedet for "Mads følger" på ndi-paa-x ✅.
+- Fakta "Mangler fra NDI" er ikke ændret (SHOULD fra cyklus 30 står ved magt).
+
+### SHOULD
+- **Omkostninger, internt sprog:** "Det er det tal, marketingmateriale skal gengive ærligt — ikke kun de enkelte postsatser." Det er en regel til os selv, ikke en forklaring til kunden. Skriv fx: "Tallet samler alle fondens omkostninger i ét årligt tal og er det, du kan sammenligne med andre fonde."
+- **Fakta, første opsummering (linje ~44):** den nævner stadig kun "Øvrige løbende 1,49 %" og porteføljetransaktion. KID-tallet kommer først længere nede. Sæt "KID: 2,79 %/2,85 % om året ved 5 år" først, så de to steder siger det samme.
+- **Fonden X-overskrift:** "Udvalgte offentlige X-opslag — ikke NDI's holdning" står over opslag fra @jesper_baek og @InvestNewdeal, som er NDI's egne konti. ndi-paa-x skelner nu korrekt. Brug samme skel her, eller vis kun NDI-konti (se MUST).
+- **Fonden linje "seneste offentlige kvartalsrapport":** om-data siger, at 1. juni "ikke er et kvartalsskifte". Ret fonden til "forsinket snapshot pr. 1. jun. 2026".
+- Fra cyklus 30, stadig åbne: "compliance-beslutning, ikke et datamangel" (`js/app.js:414`), livscyklus-overskrift uden `<button>`, udforsk 28.282 px / mange tekster under 12 px ved 375, "Mangler fra NDI" på offentlig fakta.
+- Ved 375 er `selskaber.html` 66.172 px høj (1280: 17.861). A-Z-listen bør gruppere/folde eller paginere på mobil.
+
+### Nice
+- ndi-perspektiv er stadig 143.436 px ved 375. "Central Information Dokument" står stadig i `index.html:47/88` og `js/data.js:251` (og i footeren på selskabssider).
+- X-opslag i `x-posts.json` med `complianceNote: "Omskrevet i snapshot"`: hvis teksten vises som citat af opslaget, så marker den som "omskrevet" i UI'et, eller vis originalen.
+
+### Persona-linser
+- **Privat (55+):** omkostninger er nu klar: ét KID-tal, før tabellerne ✅. Fonden er stadig forstyrret af engelske "BREAKING"-opslag under grafen.
+- **Familiekontor:** KID-total + "ikke ÅOP" + kilde-links til begge KID'er dækker deres omkostnings-MUST ✅. ÅOP er bevidst ikke vist. Det er forsvarligt, når KID-RIY er der. Næste spørgsmål bliver kurering af tredjepartsopslag på produktsider.
+- **Visuel variation:** ingen nye former. Omkostninger har nu metric → tabel → "den ene forskel"-skala, hvilket er god variation.
+
+## 2026-10-16 02:40 CEST · cyklus 32 (main `3e4ec15`, intet docs-delta siden cyklus 31)
+
+Pages (00:22:23 GMT) = main `3e4ec15` ✅. Lag fra cyklus 31 er indhentet: live `fund-facts.json` har `kidRiy5y`, omkostninger har `#kid-omkostning`, og "MADS FØLGER" er væk. Lane-R indeholder allerede origin/main, så der var ingen merge og ingen reset (reset ville kræve force-push). Playwright live ved 375 på 22 URL'er: 0 pageerrors, 0 vandret overflow, én h1 overalt ✅.
+
+### MUST
+- **Fonden: tredjeparts-"BREAKING" under hovedgrafen (uændret fra cyklus 31, nu live).** Under "Udvalgte offentlige X-opslag — ikke NDI's holdning" står @BullTheoryio "BREAKING: SoftBank is seeking to raise up to $100 billion …" og @MilkRoadAI (Nvidia $1B) mellem @jesper_baek og @InvestNewdeal. **Ret:** `chartMarkers` → kun @InvestNewdeal (webinarer/børsnotering).
+
+### SHOULD
+- **Omkostninger: internt sprog, nu live.** (1) "Det er det tal, marketingmateriale skal gengive ærligt — ikke kun de enkelte postsatser." (2) "Tomme felter = udfyldes af NDI." Begge er regler til os selv. Forslag: "Tallet samler alle fondens omkostninger i ét årligt tal, så du kan sammenligne med andre fonde." Fjern linje (2), eller skjul den bag `?intern=1`.
+- **"kl n"** står nu på 3 sider: invester, fakta ("Fundmarket – NewDeal Invest, kl n ↗") og omkostninger. Skriv "andelsklasse" eller fjern.
+- **Fonden "seneste offentlige kvartalsrapport i udkastet"**: stadig live. Om-data siger, at 1. juni ikke er et kvartalsskifte. Skriv "forsinket snapshot pr. 1. jun. 2026".
+- **"Dyb →"** står 4× i årstabellen på fonden. Skriv "Se perioden →".
+- **Livscyklus-strip:** der er 0 elementer med `aria-expanded` på fonden ved 375. Foldningen er stadig ikke en `<button>`.
+- **Nyhedsarkiv:** synlig tekst "Placeholder: Sådan investerer du" og "Arkivet er et UI-koncept". Det er OK for et udkast, men ordet "Placeholder" bør ikke kunne ses. Brug "Kommer snart".
+- Højder ved 375 er uændrede: ndi-perspektiv 143.436, selskaber 66.172, udforsk 28.282, vaerdikaeder 15.593 px. Det er træthedsrisiko på mobil. Fold/paginér (åben siden cyklus 22/29/31).
+- `laer/laes-grafen.html`: "max drawdown" står der stadig (1 hit). Resten af sitet siger "Største fald".
+
+### Lukket ✅ (verificeret live)
+- Omkostninger: KID 2,79 %/2,85 % (5 år) og 2,63 %/2,71 % (1 år) vises først, med "ikke et ÅOP" og "du kan tabe" ✅.
+- Fakta "Omkostningsniveau (kort)" viser 2,79/2,85 og ikke "ikke oplyst" ✅.
+- Fonden-chips: kun Siden start / ÅTD / 2023* / år. Ingen 1m/3m ✅.
+
+### Nice
+- "Central Information Dokument" står stadig på entré, fonden, portefølje, udforsk, selskab og tema (footer). Skriv "Central information (KID)" eller fjern.
+- Fakta-opsummeringen nævner stadig "Øvrige løbende 1,49 %" før KID-tallet. Sæt KID-tallet først (cyklus 31).
+
+### Persona-linser
+- **Privat (55+):** omkostninger og fakta er nu rolige og ærlige ✅. Det største ro-brud er stadig engelske "BREAKING"-opslag på fonden og SoftBank.
+- **Familiekontor:** omkostnings-MUST er dækket live ✅. Det næste, de vil stille spørgsmål ved, er interne hjælpetekster ("Tomme felter = udfyldes af NDI", "Mangler fra NDI", "kl n"), som får produktet til at virke ufærdigt.
+- **Visuel variation:** ingen ændring. Problemet er længde på mobil, ikke ensformighed.
+
+## 2026-10-16 02:31 CEST · cyklus 33 (main `3e4ec15`, intet docs-delta siden cyklus 31; live = main)
+
+Pages (00:22:23 GMT) = main. Sidste docs-commit er `5843694`. Playwright live ved 375 på 21 URL'er (inkl. periode, drawdown, embed, sammenlign, kort, ideer, laer/laes-grafen og SoftBank via `?isin=JP3436100006`): 0 pageerrors, 0 vandret overflow, én h1 overalt ✅. Fokus i denne cyklus er de "dybe sider", som tidligere cyklusser kun har skimmet.
+
+### MUST
+- **Fonden + SoftBank: tredjeparts-"BREAKING" (uændret, 4. cyklus i træk).** Fonden viser nu @BullTheoryio "BREAKING: SoftBank … $100 billion" og "BREAKING: Nvidia is in talks to backstop $250 BILLION in financing for OpenAI" under hovedgrafen. **Ny detalje:** På SoftBank står Nvidia/OpenAI-opslaget med etiketten "DIREKTE TRÆF · Vist fordi: SoftBank". Opslaget nævner ikke SoftBank i den viste tekst, så matchningen ser forkert ud for brugeren. **Ret:** `chartMarkers` → kun @InvestNewdeal. Fold X-panelet sammen på selskab/tema.
+- **Nyhedsarkiv: "Placeholder:" ×8 er synligt, og "du kan tabe" mangler (0 hits).** Uændret fra cyklus 32.
+
+### SHOULD
+- **`periode.html` har ikke fået fondens rettelser.** Fonden har "2023 delår" og "afventer Fundmarket-godkendelse" ved ÅTD. Periode viser "2023: +16,7 %" uden delår og "YTD: +4,0 %"/"2026: +4,0 %" uden forbehold. Sprog: "YTD" og "CAGR (hele serien)" på en dansk side, hvor resten siger "År til dato". Navigationen viser "← Fonden / Drawdown / ← Fonden" (dobbelt tilbage-link). Der er 10 tekster under 12 px.
+- **`drawdown.html`: h1 er "Drawdown · PMINDI".** Resten af sitet siger "Største fald" (ordliste, chips, embed "Se største fald →"). "Under vand" er også jargon. Forslag til h1: "Største fald fra top · PMINDI". Indholdet er ellers ærligt og godt: "Lige nu … −23,4 % under toppen fra 2. jun. 2026" giver privat-personaen det rigtige billede.
+- **Embed:** "Gns. årligt afkast (CAGR) +26,4 % · CAGR · 3,1 år siden start". CAGR står to gange. Skriv "Gns. pr. år siden start (3,1 år)".
+- **Fonden, grafforklaring:** "Grafmarkører: udbytte (gul), drawdown (rød)". Skriv "største fald (rød)".
+- **Risici:** "Afkast pr. udsving 0,89 · Sharpe, uden rente trukket fra". Det er godt forklaret. Men "Sharpe" bør kun stå i ordlisten, ikke som underlabel.
+- Højder ved 375 er uændrede: udforsk 28.282 (1.050 tekster under 12 px), vaerdikaeder 15.593, ideer 14.377, fonden 6.565, fakta 6.379 px. Tema (chips) har 111 tekster under 12 px.
+- Fra cyklus 32, stadig åbne: internt sprog på omkostninger ("Tomme felter = udfyldes af NDI", "marketingmateriale skal …"), "kl n" (invester ×1, fakta ×3, omkostninger ×2), "kvartalsrapport" på fonden, "datamangel", "Dyb →", livscyklus uden `<button>`.
+
+### Nice
+- "Central Information Dokument" står stadig i footeren (bl.a. SoftBank-siden).
+- Ideer (14.377 px) bruger PROBLEM/SVAR/DATA/TONE-kort. Det er god variation, men de er lange på mobil. Fold dem efter de første 3.
+
+### Persona-linser
+- **Privat (55+):** drawdown-siden er ærlig og rolig ("−23 % under toppen nu"). Ordet "Drawdown" i overskriften og "YTD/CAGR" på periode er dog uden for deres ordforråd. Engelske BREAKING-opslag er stadig det største ro-brud.
+- **Familiekontor:** de vil bemærke, at periode og fonden ikke siger det samme om 2023/ÅTD. Inkonsistens mellem sider svækker tilliden mere end selve tallet.
+- **Visuel variation:** ingen ændring. Træthed skyldes længde på mobil, ikke ensformighed.
