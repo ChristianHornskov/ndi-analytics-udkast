@@ -4070,7 +4070,7 @@
               "w": 0.15,
               "sym": "ALM",
               "forslag": false,
-              "role": "Panasqueira i Portugal har tilladelse til 2052. Level 4 er ikke skrevet som drift."
+              "role": "Panasqueira i Portugal har tilladelse til 2052."
             },
             {
               "isin": "US02451V3096",
@@ -4172,7 +4172,7 @@
           "seeChain": null,
           "facts": [
             "Lynas Rare Earths: Lynas skriver, at Mt Weld ligger 35 km syd for Laverton, og at anlægget i Kalgoorlie laver et blandet karbonat af koncentratet. Selskabet skriver, at karbonatet skal viderebehandles i Gebeng i Malaysia. Det er mine og forarbejdning, ikke et kraftværk.",
-            "Almonty Industries: Almonty skriver, at Beralt ejer 100 % af wolframminen Panasqueira i Covilha i Portugal, med tilladelse til 2052. Level 4 er ikke skrevet som drift. Almonty skrev 23. september 2026, at Sangdong i Sydkorea har produceret wolfram for første gang siden 1993. Valtreixal er et projekt. Meddelelsen om Sangdong ligger efter beholdningen pr. 1. juni 2026.",
+            "Almonty Industries: Almonty skriver, at Beralt ejer 100 % af wolframminen Panasqueira i Covilha i Portugal, med tilladelse til 2052. Almonty skrev 23. september 2026, at Sangdong i Sydkorea har produceret wolfram for første gang siden 1993. Valtreixal er et projekt. Meddelelsen om Sangdong ligger efter beholdningen pr. 1. juni 2026.",
             "MP Materials: MP Materials skriver, at minen og forarbejdningen ligger i Mountain Pass i Californien, og at magnetfabrikken ligger i Fort Worth i Texas. Om-siden skriver, at Mountain Pass blev genstartet i 2017. Det er ikke et chipværk.",
             "Freeport-McMoRan: Freeport skriver, at Morenci i Arizona er et åbent brud i drift siden 1939, og at selskabet har 72 % af minen. Det er ikke et elselskab.",
             "Standard Lithium: Standard Lithium skriver, at fase 1 i South West Arkansas er sat til 22.500 ton lithiumkarbonat om året, med mål om kommerciel produktion i 2029. Selskabet har 55 %, og Equinor har 45 %. Det er et mål, ikke en stor mine.",
@@ -6241,5 +6241,5 @@
   "countsNote": "Forsinket beholdning pr. 2026-06-01 (PMINDI, antal selskaber pr. tema): platforme 40, chips 53, software 51, andet / uklassificeret 67, optik & netværk 30, fysisk tech 24, compute 18, quantum 4, energi 15, energiressourcer 25, spacetech 18. Brug antal i brødtekst, ikke vægte, når du citerer oversigten.",
   "mappingNote": "Hvilke selskaber der står under hvert led, er et redaktionelt udkast ud fra selskabets forretning. Det er ikke NDI's officielle klassifikation og kan indeholde fejl. Et selskab kan stå i flere led. Vægte er fra den forsinkede beholdning pr. 1. juni 2026 (PMINDI).",
   "bridgesNote": "Broer viser led i andre kæder, som deler selskaber med denne kæde i den forsinkede beholdning pr. 1. juni 2026. Ét selskab kan have flere roller. Tilordningen er et redaktionelt udkast.",
-  "placedNote": "'Placeret i netop dette led' bygger på NDI-linsens felt 'Plads i værdikæden' for det enkelte selskab. Placeringen er pædagogisk og kvalitativ. Vægte er fra den forsinkede beholdning i PMINDI pr. 1. juni 2026 og er ikke en anbefaling."
+  "placedNote": "'Placeret i netop dette led' bygger på NDI's egen placering af hvert enkelt selskab i værdikæden. Placeringen er pædagogisk og kvalitativ. Vægte er fra den forsinkede beholdning i PMINDI pr. 1. juni 2026 og er ikke en anbefaling."
 }

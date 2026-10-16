@@ -2099,7 +2099,7 @@
         const np = (id === 'ai-compute' || id === 'physical') ? (l.placed?.length || 0) : 0;
         const twins = ch.links.filter(x => x !== l && x.count && (x.themes || []).join() === (l.themes || []).join()).map(x => x.short || x.label);
         const placedHtml = np
-          ? `<p class="vc-grp"><span class="pin" aria-hidden="true">◉</span><b>Placeret i netop dette led</b> · ${np} selskaber ifølge NDI-linsen</p><div class="chips" data-grp="placed">${placedChips(l, false)}</div>${np > SHOW ? `<button type="button" class="vc-more" data-more="placed">Vis alle ${np} →</button>` : ''}`
+          ? `<p class="vc-grp"><span class="pin" aria-hidden="true">◉</span><b>Placeret i netop dette led</b> · ${np} ${np === 1 ? 'selskab' : 'selskaber'} ifølge NDI's egen placering</p><div class="chips" data-grp="placed">${placedChips(l, false)}</div>${np > SHOW ? `<button type="button" class="vc-more" data-more="placed">Vis alle ${np} →</button>` : ''}`
           : '';
         const themeHead = np || twins.length
           ? `<p class="vc-grp"><b>Hele temaet${l.themes?.length ? ' ' + esc(l.themes.map(daTheme).join(' + ')) : ''}</b> · ${l.count} selskaber${twins.length ? `, deles med ${esc(twins.join(', '))}` : ''}</p>`
