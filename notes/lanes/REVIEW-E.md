@@ -282,6 +282,10 @@ St. Gabriel i Louisiana er flydende brint sammen med Olin gennem Hidrogenii. Kom
 
 Aftalen af 1. april 2025 siger, at Bloom og Conagra vil bruge brændselsceller på Conagras fabrikker i Troy og Archbold i Ohio. Før beholdningen. Ikke skrevet som celler, der allerede kører. Ikke et klassisk kraftværk. Megawatt, kapitalramme, leader og leading er ikke kopieret. AI-udkast uden gennemgangsdato. Elproduktions-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
 
+## Centrus · 2026-10-16 02:44 CEST
+
+Berigning begyndte i slutningen af 2023 på American Centrifuge Plant i Piketon i Ohio. Før beholdningen. HALEU-tilladelsen fra Nuclear Regulatory Commission er med. Ordet first og "siden 1954" er ikke kopieret. AC100M stilles op efter en aftale med energiministeriet. Teksten siger ikke fuld skala. Aftalen med Antares er 17. september 2026, efter beholdningen, og er ikke en levering. Antares' projekter er ikke værker i drift. Trusted, most advanced, NYSE og forudbetalinger er ikke kopieret. AI-udkast uden gennemgangsdato. Råstof-blurben og arkivet siger grænsen. Vægtene er uændrede. Chromium ved 375 px. Kæden er også tjekket ved 1280 px. "tjekket mod kilden" er ikke med. Piketon står. Ingen konsolfejl. Ingen vandret scroll.
+
 ## Comstock · 2026-10-16 02:40 CEST
 
 Siden om selskabet siger mere end 535.000 netto-acres i Western Haynesville i det østlige Texas. Gasproduktionen er certificeret efter MiQ-standarden. Siden daterer ikke tallet, så det er ikke knyttet til beholdningen 1. juni 2026. Leading, premier, lowest, high-return, top tier og 3.300 boresteder er ikke kopieret. En sætning om datacenter-efterspørgsel er ikke læst som et ejet datacenter. Stadig brændsel, ikke en mine. AI-udkast uden gennemgangsdato. Elproduktions-blurben og arkivet siger grænsen. Vægtene er uændrede. Chromium ved 375 px. Kæden er også tjekket ved 1280 px. "tjekket mod kilden" er ikke med. 535.000 står. Ingen konsolfejl. Ingen vandret scroll.

@@ -717,20 +717,28 @@
   "US15643U1043": {
    "name": "Centrus Energy",
    "theme": "energy-resources",
-   "summary": "Arbejder med berigelse af uran, så det kan bruges som brændsel i reaktorer. Det er ikke et kraftværk og ikke en mine.",
-   "watch": "Tilladelser, teknisk drift af berigelse og ordrer på brændsel.",
-   "source": "https://www.centrusenergy.com/",
-   "products": "Uranbrændsel og berigelse.",
-   "customers": "Reaktoroperatører og programmer, der har brug for beriget uran.",
-   "role": "Brændsel til atomkraft. Står under råstoffer, ikke som reaktorudvikler.",
+   "summary": "Beriger uran til brændsel. Selskabet skriver, at berigning begyndte i slutningen af 2023 på American Centrifuge Plant i Piketon i Ohio. Det er ikke et kraftværk og ikke en mine.",
+   "watch": "Om berigningen i Piketon forbliver brændsel. Aftalen med Antares er ikke en levering, der allerede er sket.",
+   "source": "https://www.centrusenergy.com/contact/piketon-ohio/",
+   "products": "Beriget uran, herunder HALEU. Centrifuger af typen AC100M i Piketon.",
+   "customers": "Det amerikanske energiministerium og aftagere af brændsel. Antares er en aftale fra 17. september 2026, ikke en levering.",
+   "role": "Brændsel fra Piketon. Ikke et kraftværk og ikke en mine.",
    "narrative": [
-    "Centrus leverer beriget uran som brændsel til atomkraftværker. Selskabet skriver, at det udvider berigningen af lavt beriget uran og af HALEU til nyere reaktortyper.",
-    "Centrus er ikke et kraftværk og ikke en mine. I kæden står selskabet under råstoffer."
+    "Centrus skriver, at berigning af uran begyndte i slutningen af 2023 på American Centrifuge Plant i Piketon i Ohio. Datoen ligger før beholdningen pr. 1. juni 2026. Selskabet skriver, at anlægget har en tilladelse fra Nuclear Regulatory Commission til produktion af HALEU, og at centrifuger af typen AC100M stilles op efter en aftale med det amerikanske energiministerium. Teksten siger ikke, at anlægget kører i fuld skala. Det er brændsel, ikke et kraftværk.",
+    "Centrus skrev 17. september 2026, at selskabet har indgået en flerårig aftale om at levere HALEU til Antares. Leveringerne skal begynde inden udgangen af årtiet. Datoen ligger efter beholdningen. Aftalen er ikke en levering, der allerede er sket. Antares' reaktorprojekter er ikke skrevet som værker i drift. Centrus sender ikke selv satellitter op."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets side",
-     "url": "https://www.centrusenergy.com/"
+     "label": "Piketon",
+     "url": "https://www.centrusenergy.com/contact/piketon-ohio/"
+    },
+    {
+     "label": "HALEU",
+     "url": "https://www.centrusenergy.com/what-we-do/nuclear-fuel/high-assay-low-enriched-uranium/"
+    },
+    {
+     "label": "Antares, 17. september 2026",
+     "url": "https://www.centrusenergy.com/news/centrus-and-antares-sign-multi-year-haleu-supply-contract/"
     }
    ]
   },

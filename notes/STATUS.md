@@ -969,3 +969,13 @@ Gasproduktionen er certificeret efter MiQ-standarden. Siden daterer ikke tallet,
 Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. 535.000 står. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `21ff175` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 02:44 CEST. Centrus skriver, at berigning begyndte i slutningen af 2023 i Piketon. Ikke færdig.**
+
+Anlægget er American Centrifuge Plant i Ohio. Datoen ligger før beholdningen. HALEU-tilladelsen er med, uden ordet first. Aftalen med Antares er 17. september 2026, efter beholdningen, og er ikke en levering. Det er brændsel, ikke et kraftværk. Ingen `reviewedAt`. Blurben under råstoffer og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Piketon står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `6115d81` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
