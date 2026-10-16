@@ -2395,6 +2395,9 @@
               "sym": "NOD.OL",
               "theme": "chips"
             }
+          ],
+          "facts": [
+            "Ambarella: Ambarella kalder sine chips 'AI Vision Processors For Edge Applications' og skriver, at de gør kameraer klogere ved at trække brugbare data ud af videoen. Analysen sker i selve apparatet og ikke i skyen. Robotter står på siden som et anvendelsesområde sammen med industri og overvågning. Siden er læst i oktober 2026."
           ]
         },
         {
@@ -2482,6 +2485,9 @@
               "sym": "IOT",
               "theme": "software"
             }
+          ],
+          "facts": [
+            "Unity Software: Unity er kendt for 3D-motoren bag mange computerspil. Til industrien skriver selskabet, at det laver 'real-time 3D'-kopier af fysiske anlæg (digitale tvillinger), så fejl kan findes, før de koster noget i virkeligheden. Det skriver også, at det kan hjælpe med at 'deploy robotics systems faster'. Siden er læst i oktober 2026."
           ]
         },
         {
@@ -2653,6 +2659,11 @@
               "sym": "AIRO",
               "theme": "space"
             }
+          ],
+          "facts": [
+            "Symbotic: Symbotic kalder sine systemer 'complete, end-to-end warehouse automation solutions', altså robotlagre, hvor robotter henter og stabler varerne. Walmart står på siden med en udtalelse fra direktøren for Walmart U.S.",
+            "Serve Robotics: Serve Robotics bygger små leveringsrobotter, der kører på fortovet blandt fodgængere og bringer mad ud det sidste stykke vej. Uber Eats er den samarbejdspartner, der er nævnt på siden.",
+            "Aurora Innovation: Aurora udvikler software, der kan køre lastbiler uden fører. Selskabet skriver, at anden generation af systemet kører kunders gods 'with nobody behind the wheel', og at den førerløse kommercielle kørsel startede i Texas i maj 2025."
           ]
         }
       ],
