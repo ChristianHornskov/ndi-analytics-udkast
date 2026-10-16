@@ -314,6 +314,21 @@
     .idea-sec.fold[open]>summary{margin-bottom:8px}
     .fold-bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;margin:32px 0 4px;font-size:13px;color:var(--muted)}
     .fold-bar button{font:inherit;font-size:13px;color:var(--cyan);background:none;border:1px solid var(--line);border-radius:8px;padding:8px 12px;min-height:44px;cursor:pointer}
+    .stp{display:grid;gap:14px;margin:0}
+    @media(min-width:760px){.stp{grid-template-columns:1fr 1fr}}
+    .stp-k{position:relative;background:#0b171d;border:2px solid var(--cyan);border-radius:12px;padding:14px 14px 12px;font-size:13px;color:var(--muted);line-height:1.5}
+    .stp-k.ber{border-style:double;border-width:4px}
+    .stp-k.ndi{border-color:var(--yellow)}
+    .stp-k.ai{border:2px dashed var(--faint)}
+    .stp-m{display:inline-block;font:700 11px var(--font);letter-spacing:.8px;text-transform:uppercase;color:var(--cyan);border:2px solid currentColor;border-radius:6px;padding:3px 8px;transform:rotate(-2deg);margin-bottom:10px}
+    .stp-k.ndi .stp-m{color:var(--yellow)}
+    .stp-k.ai .stp-m{color:var(--faint);border-style:dashed}
+    .stp-k dl{display:grid;grid-template-columns:auto 1fr;gap:4px 10px;margin:0 0 8px}
+    .stp-k dt{color:var(--faint);font-size:12px}
+    .stp-k dd{margin:0;color:var(--text)}
+    .stp-k ul{margin:0;padding-left:18px}
+    .stp-k li{margin:2px 0}
+    .stp figcaption{grid-column:1/-1;font-size:12px;color:var(--faint);line-height:1.5}
   </style>
 </head>
 <body>
@@ -363,7 +378,7 @@
 
     <nav class="idea-toc" aria-label="Billeder på siden">
       <p class="lbl">16 billeder på siden</p>
-      <ol><li><a href="#h-flod">Flodsystemet på ét billede</a></li><li><a href="#h-vs">Én kasse eller flere temaer</a></li><li><a href="#h-mx">Samme 345 selskaber, to sorteringer</a></li><li><a href="#h-wk">Vægt er ikke kurs</a></li><li><a href="#h-tf">Fra «Andet» til tema</a></li><li><a href="#h-pr">345 aktier, én prik hver</a></li><li><a href="#h-kv">Hvor mange selskaber er halvdelen?</a></li><li><a href="#h-lc">Hvor på bakken ligger vægten?</a></li><li><a href="#h-uw">Fald fra top som episoder</a></li><li><a href="#h-ur">Tre ure på samme side</a></li><li><a href="#h-lag">Hvad står der i tallet?</a></li><li><a href="#h-kl">To klasser, samme temaer</a></li><li><a href="#h-stk">Lag på lag</a></li><li><a href="#h-dr">Tre drivkræfter, ét overlap</a></li><li><a href="#h-ln">Hvorfor ejer vi den?</a></li><li><a href="#h-hus">Bygget som et hus</a></li></ol>
+      <ol><li><a href="#h-flod">Flodsystemet på ét billede</a></li><li><a href="#h-vs">Én kasse eller flere temaer</a></li><li><a href="#h-mx">Samme 345 selskaber, to sorteringer</a></li><li><a href="#h-wk">Vægt er ikke kurs</a></li><li><a href="#h-tf">Fra «Andet» til tema</a></li><li><a href="#h-pr">345 aktier, én prik hver</a></li><li><a href="#h-kv">Hvor mange selskaber er halvdelen?</a></li><li><a href="#h-lc">Hvor på bakken ligger vægten?</a></li><li><a href="#h-uw">Fald fra top som episoder</a></li><li><a href="#h-ur">Tre ure på samme side</a></li><li><a href="#h-lag">Hvad står der i tallet?</a></li><li><a href="#h-kl">To klasser, samme temaer</a></li><li><a href="#h-stk">Lag på lag</a></li><li><a href="#h-dr">Tre drivkræfter, ét overlap</a></li><li><a href="#h-ln">Hvorfor ejer vi den?</a></li><li><a href="#h-kd">Hvem står bag tallet?</a></li><li><a href="#h-hus">Bygget som et hus</a></li></ol>
     </nav>
 
     <section class="idea-sec" aria-labelledby="h-flod">
@@ -815,6 +830,34 @@
         <figcaption>Selv et selskab ved en flaskehals er en lille position. Fonden ejer udviklingen bredt i stedet for at satse på, hvem der vinder, og du kan tabe penge. Linsen forklarer, hvorfor selskabet passer ind. Den er ikke en karakter, et kursmål eller en anbefaling. Vægten er fra den offentlige, forsinkede beholdning pr. 1. jun 2026 og er ikke dagens fordeling. Felter mærket AI-udkast afventer NDI-gennemgang. <a href="laer/saadan-taenker-vi.html#tv-hv">Sådan tænker vi →</a> · <a href="ndi-perspektiv.html">Alle selskaber med linse →</a> · <a href="om-data.html#g-ndi-linse">Ordliste: NDI-linse</a></figcaption>
       </figure>
     </section>
+
+    <details class="idea-sec fold" aria-labelledby="h-kd">
+      <summary><h2 id="h-kd">Hvem står bag tallet?</h2><span class="more" aria-hidden="true"></span></summary>
+      <p class="sub">Ikke alle tal og tekster på siden er af samme slags. Nogle har andre offentliggjort, nogle har vi regnet ud fra dem, nogle er NDI's egen inddeling, og nogle er maskinskrevne udkast. Skitse: hvert tal kunne bære et lille stempel, så du kan se, hvor sikkert det er.</p>
+      <figure class="stp">
+        <div class="stp-k">
+          <span class="stp-m">Offentliggjort af andre</span>
+          <dl><dt>Hvem</dt><dd>Fundmarket og fondens <a href="om-data.html#g-kid">KID</a></dd><dt>Hvornår</dt><dd>Dato står ved tallet</dd></dl>
+          <ul><li>Fondens afkastserie (<a href="om-data.html#g-total">totalafkast</a>)</li><li><a href="om-data.html#g-sri">Risikoindikator</a> 5 af 7</li><li><a href="om-data.html#g-omkostninger">Løbende omkostninger</a> og <a href="om-data.html#g-riy">KID-omkostningstal</a></li><li>Beholdningen pr. 1. juni 2026 (<a href="om-data.html#g-forsinket">forsinket</a>)</li></ul>
+        </div>
+        <div class="stp-k ber">
+          <span class="stp-m">Regnet ud af NDI Analytics</span>
+          <dl><dt>Ud fra</dt><dd>Tallene i det første stempel</dd><dt>Kan afvige</dt><dd>Efter <a href="om-data.html#g-startdag">startdag</a> og metode</dd></dl>
+          <ul><li><a href="om-data.html#g-cagr">Afkast pr. år</a>, <a href="om-data.html#g-ytd">år til dato</a> og kalenderår</li><li><a href="om-data.html#g-dd-episoder">Fald fra top</a> og <a href="om-data.html#g-sharpe">afkast pr. udsving</a></li><li>100.000 kr.-eksemplet</li><li><a href="om-data.html#g-vaegt">Vægt</a> pr. tema (summen af beholdningen)</li></ul>
+        </div>
+        <div class="stp-k ndi">
+          <span class="stp-m">NDI's egen inddeling</span>
+          <dl><dt>Hvem</dt><dd>NDI, ud fra bogen og ugebrevene</dd><dt>Er ikke</dt><dd>En karakter eller en anbefaling</dd></dl>
+          <ul><li><a href="om-data.html#g-tema">Temaer</a> i stedet for de klassiske sektorer</li><li><a href="om-data.html#g-vaerdikaede">Værdikæder</a> og <a href="om-data.html#g-led">led</a></li><li><a href="om-data.html#g-flodsystem">Flodsystemet</a> og dæmningerne</li><li><a href="om-data.html#g-modenhed">Modenhed</a> (grov, ikke officiel)</li></ul>
+        </div>
+        <div class="stp-k ai">
+          <span class="stp-m">AI-udkast</span>
+          <dl><dt>Hvem</dt><dd>En maskine, endnu ikke godkendt af et menneske</dd><dt>Mærket</dt><dd>Ja, ved teksten</dd></dl>
+          <ul><li>Flere tekster på selskabssiderne, bl.a. dele af <a href="om-data.html#g-ndi-linse">NDI-linsen</a></li><li>Afkast, omkostninger og risikoindikator kommer ikke herfra, men fra de to første stempler</li></ul>
+        </div>
+        <figcaption>Fire slags stempler, fra det mest faste (offentliggjort) til det mest foreløbige (udkast). Rammen skifter fra hel til stiplet. Skitse, ikke færdig funktion. Se <a href="om-data.html#g-ai-udkast">AI-udkast</a> og <a href="laer/forsinket-beholdning.html">Hvorfor beholdningen er forsinket</a>.</figcaption>
+      </figure>
+    </details>
 
     <details class="idea-sec fold" aria-labelledby="h-hus">
       <summary><h2 id="h-hus">Bygget som et hus</h2><span class="more" aria-hidden="true"></span></summary>

@@ -439,3 +439,10 @@ Hele lane-C-fladen ved 375 px: ideer, kort, om-data, invester, risici, ndi-persp
 - Krypto-opslaget siger «i den forsinkede beholdning … beskriver selskabernes forretning, ikke en anbefaling». Ingen påstand om, hvad fonden må eje (ikke verificeret mod prospekt).
 - 0 brudte #-ankre, 0 dublet-id'er i om-data. kort-døren: 142 → 147 begreber.
 - Reviewer-MUSTs (cyklus 33: BREAKING/X, nyhedsarkiv-tab, ÅTD-forbehold på fonden/periode/embed) ligger alle uden for lane-C-filer. Intet at rette her.
+
+## 02:58 CEST lane-C checkpoint (Claude) · ideer: «Hvem står bag tallet?» (form 18)
+- Ny form `ideer.html#h-kd` (IDESPEJDER #20, «konfidensmærke på hvert tal»): fire kildestempler i 2 × 2 på desktop og én kolonne på mobil. Offentliggjort af andre (Fundmarket/KID: afkastserie, SRI, omkostninger, beholdning pr. 1. jun. 2026), regnet ud af NDI Analytics (afkast pr. år, ÅTD, fald fra top, afkast pr. udsving, 100.000 kr., vægt pr. tema), NDI's egen inddeling (temaer, værdikæder, flodsystem, modenhed) og AI-udkast (dele af NDI-linsen). Rammen går fra hel (cyan) over dobbelt og gul til stiplet. Ingen nye tal. Alle punkter linker til ordlisten.
+- Persona-linse: privat 55+ får svar på «kan jeg stole på det her?» uden fagord. Familiekontoret får sporbarhed (kilde → beregning → vurdering → udkast).
+- Foldet på mobil ligesom de andre billeder efter de fire første. Dybt link `#h-kd` folder ud.
+- Test (Playwright, lokal 8833) på ideer, om-data, lær-indeks og kort ved 320/375/1280: én h1, 0 overflow, 0 pageerrors. Stemplerne er 292/347/563 px brede.
+- Reviewer cyklus 33: ingen MUST i lane-C-filer. 04:00-checkpointet følger.

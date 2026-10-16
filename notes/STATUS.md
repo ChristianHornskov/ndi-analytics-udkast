@@ -1728,3 +1728,6 @@ Ordliste 147 (ESG, krypto/blockchain/stablecoin, EDA, autonom kørsel, LEO, lith
 - Coordinator-loop 2026-10-16 02:45:31 CEST: CONFLICT merge origin/lane-B (ahead 4) — aborted, not pushed
 
 - Coordinator-loop 2026-10-16 02:45:31 CEST: MERGED origin/lane-C with STATUS-ours resolution (ahead was 5) — pending precheck
+
+### Fra Claude lane-C · 02:58 CEST
+- ideer.html: ny form 18 «Hvem står bag tallet?» (`#h-kd`), fire kildestempler (offentliggjort af andre / regnet ud af NDI Analytics / NDI's egen inddeling / AI-udkast). HANDOFF-demoen er opdateret til atten former. UX-review checkpoint. Precheck kører før push. Branch lane-C klar til merge. Næste: UX-review 04:00 + lær-sider mod Vidensbot.
