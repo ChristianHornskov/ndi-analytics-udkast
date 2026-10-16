@@ -954,7 +954,7 @@
       bar.setAttribute('aria-label', `Af ${pos.length} aktier står ${an.length} i Andet, ${fo.length} har et temaforslag, og ${te.length} har et tema.`);
       [['a', an], ['f', fo], ['t', te]].forEach(([k, xs]) => {
         const sp = bar.querySelector('.' + k); sp.style.flex = String(xs.length); sp.textContent = xs.length;
-        fig.querySelector(`.tf-flow li.${k} .n`).textContent = `${xs.length} selskaber · ca. ${w(xs)} % af fonden`;
+        fig.querySelector(`.tf-flow li.${k} .n`).textContent = `${xs.length} ${xs.length === 1 ? "selskab" : "selskaber"} · ca. ${w(xs)} % af fonden`;
       });
       const by = {};
       fo.forEach((p) => { by[p.theme] = (by[p.theme] || 0) + 1; });
