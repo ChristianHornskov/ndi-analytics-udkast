@@ -1334,6 +1334,54 @@
     }
    ]
   },
+  "US82489W1071": {
+   "name": "Shoals Technologies",
+   "theme": "energy",
+   "summary": "Tegner og fremstiller eludstyr, som samler strømmen i solparker, batterilagring og datacentre. Om-siden skriver, at det har stået på i 30 år. Adressen er 1500 Shoals Way i Portland i Tennessee. Det er udstyr, ikke et kraftværk.",
+   "watch": "Om udstyret står i solparker, i batterilagring eller ved datacentre. Selskabet driver ikke værkerne.",
+   "source": "https://www.shoals.com/en/about/",
+   "products": "Big Lead Assembly, samlebokse, afbrydere og kabelstyring. Også udstyr til batterilagring og datacentre. Ikke et kraftværk.",
+   "customers": "Teksten nævner ejere af solparker, udviklere og datacentre. Den nævner ikke et navngivet anlæg.",
+   "role": "Eludstyr. Ikke et elselskab.",
+   "narrative": [
+    "Shoals skriver, at selskabet tegner og fremstiller eludstyr til solparker, batterilagring og datacentre. Om-siden skriver, at det har stået på i 30 år. Adressen er 1500 Shoals Way i Portland i Tennessee. Telefonen på siden er 615.451.1400.",
+    "Produkterne på siden er Big Lead Assembly, homeruns, samlebokse, afbrydere, overgangskasser og kabelstyring. Siden skriver, at komponenterne testes på fabrikken. Det er udstyr. Selskabet driver ikke solparken, lageret eller datacentret."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Om selskabet",
+     "url": "https://www.shoals.com/en/about/"
+    },
+    {
+     "label": "Kontakt",
+     "url": "https://shoals.com/en/contact-us/"
+    }
+   ]
+  },
+  "US83422N1054": {
+   "name": "Solid Power",
+   "theme": "energy",
+   "summary": "Udvikler faststofbatterier. Selskabet skriver, at det leverer celleteknologi til partnere og sulfid-elektrolyt til andre, der arbejder med faststof. Elektrolytten laves i pilotskala. Det er ikke masseproduktion og ikke et lager i drift.",
+   "watch": "Om pilotskala bliver til en leverance i volumen. Siden, læst 16. oktober 2026, kalder produktionen pilotskala.",
+   "source": "https://www.solidpowerbattery.com/sulfide-solid-electrolytes/default.aspx",
+   "products": "Sulfid-elektrolyt og celleteknologi til faststofbatterier. Ikke et lager i drift.",
+   "customers": "Siden skriver partnere. Den nævner ikke et navngivet bilmærke.",
+   "role": "Faststof under udvikling. Ikke masseproduktion.",
+   "narrative": [
+    "Solid Power skriver, at det udvikler faststofbatterier, og at forretningen har to spor: celleteknologi til partnere og sulfid-elektrolyt til andre, der arbejder med faststof. Hovedkontoret ligger på 486 S. Pierce Ave., Suite E, i Louisville i Colorado. Siden nævner også 14902 Grant Street, Unit 120-140, i Thornton i Colorado. Ordene industry-leading og lower costs er ikke taget med.",
+    "Elektrolytsiden skriver, at den faste elektrolyt erstatter den flydende elektrolyt og separatoren i et lithium-ion-batteri. Samme side skriver, at elektrolytten laves i pilotskala, og at store celler testes på en linje, selskabet kalder skalerbar. Det er ikke masseproduktion. Ordene most advanced og only er ikke taget med. Det er ikke et lager i drift."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Selskabet",
+     "url": "https://www.solidpowerbattery.com/about/company-profile/default.aspx"
+    },
+    {
+     "label": "Elektrolyt",
+     "url": "https://www.solidpowerbattery.com/sulfide-solid-electrolytes/default.aspx"
+    }
+   ]
+  },
   "CA64046G1063": {
    "name": "Neo Performance Materials",
    "theme": "energy-resources",

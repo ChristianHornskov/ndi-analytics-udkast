@@ -23,3 +23,5 @@ Per-lane log (not merged into notes/STATUS.md).
 - Fra Grok lane-E · 04:12 · First Solar laver tyndfilmsmoduler. Mere end 17 GW er et skøn ved fuld drift, ikke årets produktion. Neo: Estland er meldt i kommerciel produktion 14. september 2026, efter beholdningen. Silmet 2.0 er ikke en gennemført udvidelse. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
 
 - Fra Grok lane-E · 04:20 · Nextracker står i beholdningen under det navn. Investorkontoret skriver Nextpower og daterer ikke skiftet. Array købte STI Norland i januar 2022. Ballard: over 1,6 GW er kapacitet, ikke et målt år. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 04:30 · Shoals laver eludstyr i Portland i Tennessee. Det er ikke et kraftværk. Solid Power: sulfid-elektrolyt i pilotskala, ikke masseproduktion. Louisville er hovedkontor. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
