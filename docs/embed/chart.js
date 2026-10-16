@@ -249,14 +249,15 @@
     $('#performance-chart').innerHTML = '';
     $('#chart-readout').textContent = '';
     $('#legend-fund').textContent = state.fund;
-    $('#fund-return').textContent = 'Ny andelsklasse, kurs vises efter 12 måneder';
     const started = fund?.inception ? fmtDate(fund.inception) : '';
-    $('#updated').textContent = started
-      ? `Klassen startede ${started}. Kursen vises efter 12 måneder.`
-      : 'Kursen vises efter 12 måneder.';
+    document.querySelector('.legend')?.classList.add('is-sentence');
+    $('#fund-return').innerHTML = 'Ny andelsklasse, kurs vises efter <span class="keep">12 måneder</span>';
+    $('#updated').innerHTML = started
+      ? `Klassen startede ${started}. Kursen vises efter <span class="keep">12 måneder.</span>`
+      : 'Kursen vises efter <span class="keep">12 måneder.</span>';
     $('#source-label').textContent = `${fund?.short || state.fund} · ingen kurs i grafen endnu`;
     $('#chart-context').hidden = true;
-    $('#chart-pointe').textContent = 'Ny andelsklasse, kurs vises efter 12 måneder. Ingen NAV eller graf før 5. december 2026.';
+    $('#chart-pointe').innerHTML = 'Ny andelsklasse, kurs vises efter <span class="keep">12 måneder.</span> Ingen NAV eller graf før <span class="keep">5. december 2026.</span>';
     $('#chart-loading').hidden = true;
     state.series = [];
     state.geometry = null;
@@ -266,6 +267,7 @@
   function renderChart() {
     if (!state.ready) return;
     if (isAkk()) { renderAkkGate(); return; }
+    document.querySelector('.legend')?.classList.remove('is-sentence');
     $('.chart-toolbar').hidden = false;
     $('#chart-container').hidden = false;
     const fund = fundRecord();
