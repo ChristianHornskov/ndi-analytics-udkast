@@ -533,3 +533,43 @@ Ordlisten (lane-C) dækker nu ordene. Teksten i UI'et ligger hos andre lanes, s�
 ## 06:18 CEST lane-C · tap-mål, slutstatus
 - **375:** 0 links eller knapper under 24 px på alle 23 lane-C-sider (ideer, kort, om-data, invester, risici, ndi-perspektiv og 17 lær-sider). Ved 06:00 var der 30+ på ideer.
 - **1280:** kun den fælles undernav `nav.nav a` er 19 px høj. Den styles i `docs/css/ndi.css`, som ikke er lane-C's fil. Den består sandsynligvis WCAG 2.5.8's undtagelse for afstand, fordi der er mellemrum mellem links. Forslag til CSS-lanen: `nav.nav a{padding:3px 0}`, så den er robust.
+
+## 06:00 CEST
+**Live:** https://christianhornskov.github.io/ndi-analytics-udkast/ · Screenshots: `notes/ux-screens/06-desktop-*.png`, `06-mobile-*.png` · Viewport: 1280 + 375 · Runde: natlig UX-review (Grok Bot) · Pages last-modified 04:07 UTC (**06:07 CEST**).
+
+**Perspektiver:** privatinvestor (55+, mobil først) + institutionel/family office (desktop, sporbarhed, mærkning).
+
+### Løst siden 04:00 CEST
+- **(mobil)** 04:00 MUST 1: Fonden — historisk-afkast-advarsel er synlig i første viewport (375×812) sammen med **+104,8 %** / **+26,4 %**. Warn ligger mellem `metrics-returns` og `metrics-more`; gul warn-stripe ca. y=743–792 i `06-mobile-fonden.png`.
+- **(desktop + mobil)** 04:00 MUST 2: ChartMarker-tekst `$NVDA $SE $HIMS` er væk (tom `text` på 13. aug.-markøren). Live anvender også `stripCashtags` før graf/kontekstliste. Synlig ticker-label på graffen er væk.
+- **(desktop + mobil)** 04:00 MUST 3: `temaer.html` har `footer.site-footer` med **Markedsføringsmateriale** + KID/prospekt-links (verificeret i live HTML).
+- **(desktop + mobil)** 04:00 SHOULD: «Følg tema (stub)» skjult; Udforsk-lede uden «Level 1»; KPI-label «Gns. årligt afkast» + `info-btn` (ikke synlig «CAGR»); nav `min-height: 44px` i CSS ≤800 px.
+- **(desktop + mobil)** Fonden «Omkostninger (kort)» viser KID RIY **2,79 % / 2,85 %**. X-kontekst under graf: kun @InvestNewdeal. Palet respekteret.
+
+### MUST
+1. **(desktop + mobil)** Porteføljens livscyklus-kurve bruger stadig engelske labels (**Præ-revenue**, **Præ-profit**, **High growth**, **GARP**, **Value**), mens Udforsk-filtre og `daMatPlain` siger **Før omsætning / Før overskud / Høj vækst / Vækst med overskud / Moden**. Samme begreb, to sprog → forvirring hos privatinvestor og «ufærdigt»-signal hos institutionel. Brug `daMatPlain` (eller samme danske streng) på kurve, legend og intro. [konsistens K1, persona-privat, lane-C jargon-rens, inspiration §1 Stripe hierarki via ord — ikke jargon]
+2. **(desktop + mobil)** Residual af 04:00 MUST 2: cyan X-markør **13. aug. 2026** har tom `text`, men URL peger stadig på opslaget der kun er `$NVDA $SE $HIMS`. Klik fra graffen/kontekstlisten åbner ticker-picks ved siden af afkastkurven. Skjul markører med tom tekst efter `stripCashtags`, eller fjern dem fra `chartMarkers`. [brief «ingen rådgivning», tillid, R2]
+3. **(mobil)** Udforsk: første viewport er stadig kun søgning + chip-væg — **ingen rækker/resultater** synlige (`06-mobile-udforsk.png`). Analytiker- og privatrejse «find et selskab» kræver scroll før første signal. Fold sekundære filtre (temaforslag / linse / modenhed) bag «Flere filtre», eller sticky resultat-preview under søgning. [inspiration §4 Things/Robinhood, brief brugerrejser, 04:00 SHOULD 2 eskaleret]
+
+### SHOULD
+1. **(desktop + mobil)** Årstabel-link **«Dyb →»** / knap **«YTD dyb side →»** er intern jargon (Claude lane-R flaggede også). Omskriv til «Se året →» / «ÅTD i detaljer →». [scanbarhed, minimize jargon]
+2. **(mobil)** Fonden: datostempel gentaget (global linje + lede) — støj i første viewport. [04:00 SHOULD 7]
+3. **(desktop)** Selskabsside: reduceret header vs. fuld SPA-nav — dobbelt «tilbage»-mønster. [04:00 SHOULD 5]
+4. **(desktop + mobil)** Tom Aug-13-markør bør ikke tælle som «kontekst» i listen under graffen (tom brødtekst under titel). Samme fix som MUST 2.
+5. **(mobil)** Temaer: lang side med mange gul-«forslag»-badges; overvej én statuslinje øverst (04:00 COULD 2) så hub ikke føles som fejl-liste.
+
+### COULD
+1. Chart-takeaway gentager procent tæt på warn — hold takeaway kort; warn forbliver i synsfelt ved scroll til graf (Stripe + advarsel).
+2. Entré-døre: «forslag»-tætheden er ærlig; én samlet statuschip kan erstatte badge pr. dør.
+3. Tabular nums er på plads i metrics; spot-tjek screener-vægtkolonne efter filter.
+
+### Top-3 MUST (til Leo)
+1. Livscyklus-kurve: engelske labels → danske (`daMatPlain`).
+2. Tom X-markør 13. aug. linker stadig til `$NVDA $SE $HIMS`-opslag — skjul/fjern.
+3. Mobil Udforsk: resultater under fold; fold filtre / preview.
+
+
+## 06:20 CEST lane-C · 06:00-MUSTs mod lane-C-sider
+- Tjekket alle 23 lane-C-sider (ideer, kort, om-data, invester, risici, ndi-perspektiv, lær/*) for de tre 06:00-MUSTs og SHOULD 1: ingen «High growth», «Præ-revenue», «Præ-profit», «YTD», «Dyb →», «Level 1» eller «(stub)». 
+- De tre top-MUSTs (livscyklus-kurve labels, tom X-markør 13. aug., mobil Udforsk-fold) ligger i `docs/js/*` og `index.html`, som ikke er lane-C's filer → til Leo/lane-A/B.
+- lane-C er merget med origin/main (merge, ikke rebase, så pushede commits ikke omskrives). Precheck OK.

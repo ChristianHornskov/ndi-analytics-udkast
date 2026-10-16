@@ -65,6 +65,7 @@
  <p>Udkast / noindex. Ikke den officielle side og ingen investeringsrådgivning. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering. <a href="om-data.html">Data og ordliste</a>.</p>
  </footer>
  <script type="module">
+ import { displayName } from './js/data.js';
  const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
  const AI_BADGE = '<span class="badge" title="Tekst genereret med AI - udkast">AI-udkast</span>';
  const pack = await fetch('data/unique-metrics.json').then(r => r.json());
@@ -108,9 +109,9 @@
   const extra = ms.filter(m => m !== tag && m !== own && m !== place && m !== watch && !(m.label === 'Livscyklus' && /ikke klassificeret/i.test(m.value)));
   const detail = [tag, own, place, watch, ...extra].filter(m => m && (m.hint || m === watch || extra.includes(m))).map(m =>
    `<div class="lens-m"><strong>${esc(m.label)}${/\?$/.test(m.label) ? '' : ':'}</strong> ${m === own || m === place ? '' : `${val(m)}${m.ai ? ` ${AI_BADGE}` : ''}`}${m.hint ? `<span class="lens-hint">${esc(m.hint)}</span>` : ''}</div>`).join('');
-  const hay = [v.name, ...ms.map(m => m.value)].join(' ').toLowerCase();
+  const hay = [v.name, displayName(v), ...ms.map(m => m.value)].join(' ').toLowerCase();
   return `<article class="lens-co" data-q="${esc(hay)}">
-   <h3><a href="selskab.html?isin=${encodeURIComponent(isin)}">${esc(v.name)}</a>${tag ? ` <span class="lens-tag-f" title="${forslag ? 'Temaet er et forslag og afventer NDI-gennemgang' : 'NDI-tema'}">${esc(tag.value)}</span>` : ''}</h3>
+   <h3><a href="selskab.html?isin=${encodeURIComponent(isin)}">${esc(displayName(v))}</a>${tag ? ` <span class="lens-tag-f" title="${forslag ? 'Temaet er et forslag og afventer NDI-gennemgang' : 'NDI-tema'}">${esc(tag.value)}</span>` : ''}</h3>
    ${own ? `<p class="lens-line"><span class="k">Hvad ejer man?</span> ${esc(own.value)}${own.ai ? ` ${AI_BADGE}` : ''}</p>` : ''}
    ${place ? `<p class="lens-line"><span class="k">Plads i værdikæden:</span> ${val(place)}</p>` : ''}
    ${detail ? `<details><summary>Hvorfor ejer vi den? Mere fra linsen</summary>${detail}</details>` : ''}
@@ -141,7 +142,7 @@
   <span class="lens-count" id="lens-hits" aria-live="polite"></span>
  </div>
  <ul class="lens-jump" aria-label="Spring til tema">${order.map(([g, l]) => `<li><a href="#${slug(g)}">${esc(g)} · ${l.length}</a></li>`).join('')}</ul>
- ${order.map(([g, l]) => `<details class="lens-grp" id="${slug(g)}"><summary>${esc(g)}<span class="lens-n">${l.length} selskaber</span></summary>${GROUP_INTRO[g] ? `<p class="lens-gintro">${esc(GROUP_INTRO[g])}</p>` : ''}${l.sort((a, b) => a[1].name.localeCompare(b[1].name, 'da')).map(card).join('')}</details>`).join('')}
+ ${order.map(([g, l]) => `<details class="lens-grp" id="${slug(g)}"><summary>${esc(g)}<span class="lens-n">${l.length} selskaber</span></summary>${GROUP_INTRO[g] ? `<p class="lens-gintro">${esc(GROUP_INTRO[g])}</p>` : ''}${l.sort((a, b) => displayName(a[1]).localeCompare(displayName(b[1]), 'da')).map(card).join('')}</details>`).join('')}
  <p class="band" style="margin-top:18px">Generel information, ikke rådgivning. Før du investerer, så læs dokumentet med central information (KID) for den andelsklasse, du overvejer: <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm140b" rel="noopener" target="_blank">KID for PMINDI ↗</a> eller <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm145b" rel="noopener" target="_blank">KID for PMINDIAKK ↗</a>. Se også <a href="invester.html">Sådan investerer du</a>.</p>
  <p class="warn">Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.</p>`;
  const q = document.getElementById('lens-q'), hits = document.getElementById('lens-hits');
