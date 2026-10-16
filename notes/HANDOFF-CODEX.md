@@ -142,7 +142,7 @@ Tal at have klar: første NAV PMINDI 22. sep 2023, PMINDIAKK 5. dec 2025, behold
 Fællesprospektet (opdateret 24.10.2025) nævner under NewDeal Invest KL kun andelsklassen «kl n» (PMINDI) og skriver «Afdelingen er udloddende». PMINDIAKK har eget KID. Christian/Fundmarket: findes der et nyere prospekt eller tillæg, der omfatter AKK-klassen? Indtil da siger `risici.html#prospekt` kun «afdelingen» og market maker-linjen kun «PMINDI». Prospektet skriver også «fokuseret portefølje», mens sitet beskriver flere hundrede små positioner. Det bør NDI selv afstemme. Jeg har ikke ændret noget af den grund.
 
 ### 02:41 CEST lane-C · ideer foldet på mobil
-- Demo: åbn `ideer.html` på telefon (375). 4 billeder står åbne, derefter «Fold alle ud» + 13 foldede overskrifter («Hvorfor ejer vi den?» står også åben). Tjekket 06:08. Tryk «Tre drivkræfter, ét overlap» i indholdsfortegnelsen → sektionen folder ud. På desktop er alt åbent som før.
+- Demo: åbn `ideer.html` på telefon (375). 6 af 19 billeder står åbne (de 4 første, «Hvorfor ejer vi den?» og citaterne til sidst). 13 er foldet, og «Fold alle ud» åbner dem. Tjekket 07:30. Tryk «Tre drivkræfter, ét overlap» i indholdsfortegnelsen → sektionen folder ud. På desktop er alt åbent som før.
 - Risici: "Sharpe" er ikke længere underlabel (kun i ordlisten). Invester-kilde: "andelsklasse PMINDI" i stedet for "kl n".
 
 ### 02:43 CEST lane-C · fagord ud af overskrifterne
