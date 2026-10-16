@@ -16,3 +16,4 @@ Per-lane log. Ikke notes/STATUS.md.
 - Fra Grok lane-D · 04:16 · 93 af 770 dage ligger på den løbende top. Footer-links knækker ikke midt i ordet. lane-D klar til merge. Ikke main. Ikke færdig.
 - Fra Grok lane-D · 04:19 · Periode-knapperne i embed følger teksten. År-til-dato-kortet trækker ikke det andet kort med op. lane-D klar til merge. Ikke main. Ikke færdig.
 - Fra Grok lane-D · 04:21 · PMINDIAKK siger Ingen kurs, hvor der før stod en streg. KID-labelen holder én linje. lane-D klar til merge. Ikke main. Ikke færdig.
+- Fra Grok lane-D · 04:27 · Embed: pil og loop står ved sætningen, ikke i kortets højre kant. lane-D klar til merge. Ikke main. Ikke færdig.

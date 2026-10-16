@@ -236,6 +236,10 @@ På 390 er kortet for gns. årligt afkast 96 px. År til dato er 127 px, fordi f
 
 PMINDIAKK havde en bindestreg på 4 px ud for Seneste NAV. Feltet siger nu «Ingen kurs». Det er ikke en procent. KID er stadig ca. 2,85 %. På 320 står «KID, 5 år» på én linje, og værdien bryder under den. Ingen række overlapper. PMINDI har stadig 126,52 (14. okt. 2026). Ingen sidescroll ved 1280, 390 og 320. Ingen konsolfejl.
 
+### Update · mærket følger sætningen · 2026-10-16 ~04:27 CEST
+
+På 1100 stod pilen og loopet i højre kant af kortet, med et tomt felt imellem. De står nu 16 px efter sætningen. Teksten rammer ikke mærket, ved 1100, 700, 390 og 320. På 320 bryder sætningen, og mærket står ved siden af. Et klik på PMINDIAKK vælger kortet. Svg'en er tom, og der er ingen procent. Ingen sidescroll. Ingen konsolfejl.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.
