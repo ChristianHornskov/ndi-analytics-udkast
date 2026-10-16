@@ -366,3 +366,10 @@ Hele lane-C-fladen ved 375 px: ideer, kort, om-data, invester, risici, ndi-persp
 - app.js nøgletal hedder stadig «Max drawdown». Resten af sitet siger «Største fald (fra top)».
 ### Test
 - 8763, 375/1280: risici, ideer, om-data, kort, lær/risikoklasse: 0 konsolfejl, ingen h-overflow. Screenshots af `#tal` og de fem Idéer-former gennemset på 375.
+
+## 02:15 CEST lane-C checkpoint (Claude) · NDI-perspektiv foldet sammen + KID på alle lær-sider
+- **ndi-perspektiv (UX SHOULD cyklus 19–22: «ca. 192.000 tegn, 53 × afventer, fold sammen»):** Én lang tabel med 310 rækker er erstattet af 12 temagrupper som `<details>` med antal, en kort sætning i klart dansk pr. tema, temachips med ankre (`#lg-chips` osv. åbner gruppen) og et søgefelt, der filtrerer på navn og linse-tekst og åbner de grupper, der passer. Hvert selskab viser navn, tema-mærke (stiplet = forslag), «Hvad ejer man?» og «Plads i værdikæden». Forklaringer og «Hold øje med» ligger under «Hvorfor ejer vi den? Mere fra linsen». Livscyklus («Ikke klassificeret» ×309) er udeladt pr. række og forklaret én gang. Synlig tekst: ca. 2.500 tegn ved åbning (før ca. 192.000), «afventer» ×2 (før 53).
+- **Persona-privat:** «Vi vælger udviklingen, ikke vinderen» står i båndet øverst og linker til «Hvorfor ejer vi den?» i *Sådan tænker vi*.
+- **Compliance SHOULD (KID-link mangler i renderet tekst):** ndi-perspektiv og de 7 lær-sider uden KID (faq-mangler-aktie, forsinket-beholdning, hvorfor-mange-aktier, livscyklus, pe-forklaring, udbytte-vs-akk, variance-drag) har nu linjen «Generel information, ikke rådgivning. Før du investerer, så læs dokumentet med central information (KID) …» med direkte Fundmarket-links til PMINDI og PMINDIAKK. Den officielle titel bruges (jf. SHOULD om «Central Information Dokument»).
+- Test (Playwright, lokal server): 17 sider × 375/1280: 0 konsolfejl, 0 h-overflow, én h1, KID i renderet tekst overalt. Søgning «kobber» → 7 selskaber. `#lg-chips` åbner gruppen.
+- **Åbent (ikke mine filer):** vaerdikaeder, drawdown, temaer, nyhedsarkiv, periode og selskaber mangler stadig KID-link. Selskab: «AI-udkast» over tomt felt.

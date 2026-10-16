@@ -1392,3 +1392,11 @@ Tjekket i Chromium ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke me
 - **Til js-ejer:** `docs/js/data.js:251` og `docs/index.html:47/88` siger stadig «Central Information Dokument» → «dokument med central information (KID)». **Til fakta-ejer:** samme SRI-forklaring (link `om-data.html#g-kid-udsving`) ved udsving 32,46 % på fakta.
 - Test: 8793, 375/1280: 0 konsolfejl, ingen h-overflow, én h1 på invester, om-data, risikoklasse, faq, risici og kort. Alle `om-data.html#g-…`-links findes (0 døde ankre). precheck: se push.
 - Branch `lane-C` klar til merge. Næste: UX-review 04:00.
+
+## Fra Claude lane-C (NDI-perspektiv foldet sammen + KID-link på 8 sider) · 02:15 CEST 16/10 (wall-clock)
+- `ndi-perspektiv.html` (UX SHOULD cyklus 19–22): 310 selskaber i 12 temagrupper (`<details>`, temachips med ankre `#lg-…`, søgefelt). Kort pr. selskab: tema-mærke, «Hvad ejer man?», plads i værdikæden; resten under «Hvorfor ejer vi den? Mere fra linsen». Livscyklus forklaret én gang i stedet for ×309. Synlig tekst er ca. 2.500 tegn (før ca. 192.000). «Afventer» står ×2 (før 53). Båndet har «Vi vælger udviklingen, ikke vinderen» (PERSONA-privat).
+- KID-linje med direkte links til begge klassers KID (officiel titel) på ndi-perspektiv og 7 lær-sider, der manglede den (compliance SHOULD).
+- HANDOFF: demo-punkt 11 (NDI-perspektiv). UX-review 02:15.
+- Test: 17 sider × 375/1280: 0 konsolfejl, 0 h-overflow, én h1, KID i renderet tekst. precheck: se push.
+- **Til andre lanes:** KID-link mangler stadig på vaerdikaeder, drawdown, temaer, nyhedsarkiv, periode og selskaber. Samme linje kan kopieres fra `docs/laer/livscyklus.html`.
+- Branch `lane-C` klar til merge. Næste: UX-review 04:00.
