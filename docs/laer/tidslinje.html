@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="da">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+ <meta name="robots" content="noindex,nofollow">
+ <title>Fra chip til datacenter: en tidslinje · NDI Analytics</title>
+ <meta name="description" content="Tolv milepæle fra den første mikroprocessor til AI-datacentre, der mangler strøm. Tidslinjen viser, hvordan flaskehalsen har flyttet sig fra led til led i flodsystemet.">
+ <link rel="stylesheet" href="../css/ndi.css">
+ <!-- og:start -->
+ <meta property="og:type" content="website">
+ <meta property="og:site_name" content="NDI Analytics (udkast)">
+ <meta property="og:locale" content="da_DK">
+ <meta property="og:title" content="Fra chip til datacenter: en tidslinje · NDI Analytics">
+ <meta property="og:description" content="Tolv milepæle fra den første mikroprocessor til AI-datacentre, der mangler strøm. Tidslinjen viser, hvordan flaskehalsen har flyttet sig fra led til led i flodsystemet.">
+ <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/laer/tidslinje.html">
+ <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
+ <meta property="og:image:width" content="1200">
+ <meta property="og:image:height" content="630">
+ <meta property="og:image:alt" content="NDI Analytics - udkast. Gå på opdagelse i porteføljen.">
+ <meta name="twitter:card" content="summary_large_image">
+ <!-- og:end -->
+<style>
+  .sp h2{font-size:18px;margin:0 0 8px}
+  .sp p{color:var(--muted);line-height:1.6;margin:0 0 10px}
+  .sp .src{font-size:13px;color:var(--faint);margin:8px 0 0}
+  .pick{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 4px}
+  .pick button{font:inherit;font-size:14px;padding:7px 12px;border-radius:999px;border:1px solid var(--line);background:var(--panel-2);color:var(--text);cursor:pointer;min-height:36px;display:inline-flex;align-items:center;gap:7px}
+  .pick button i{display:inline-block;width:10px;height:10px;border-radius:50%}
+  .pick button[aria-pressed="true"]{background:var(--text);color:#0b171d;border-color:var(--text);font-weight:600}
+  .pick button:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+  .tl{list-style:none;margin:14px 0 0;padding:0 0 0 22px;position:relative}
+  .tl::before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:var(--line)}
+  .tl li{position:relative;margin:0 0 14px;padding:10px 14px;border-radius:10px;background:var(--panel-2);transition:opacity .2s}
+  .tl li::before{content:"";position:absolute;left:-21px;top:16px;width:12px;height:12px;border-radius:50%;background:var(--d);box-shadow:0 0 0 3px var(--panel)}
+  .tl .y{font-variant-numeric:tabular-nums;font-weight:700;color:var(--text);margin-right:8px}
+  .tl .t{color:var(--text);font-weight:600}
+  .tl .d{display:block;color:var(--muted);font-size:14px;line-height:1.5;margin-top:4px}
+  .tl .tag{display:inline-block;margin-top:6px;font-size:12px;padding:2px 8px;border-radius:999px;background:var(--slate);color:var(--muted);box-shadow:inset 0 0 0 1px var(--line)}
+  .tl .tag::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--d);margin-right:6px;vertical-align:0}
+  .tl li.dim{opacity:.28}
+  .d-chip{--d:var(--cyan)} .d-cloud{--d:var(--yellow)} .d-app{--d:#c79bf2} .d-dc{--d:#7fd1a8} .d-en{--d:#f2a37f}
+  .shift{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:12px 0 4px}
+  .shift > div{background:var(--panel-2);border-radius:12px;padding:12px 14px;font-size:14px;color:var(--muted);line-height:1.5;border-top:3px solid var(--d)}
+  .shift strong{display:block;color:var(--text);margin-bottom:2px}
+  .shift .when{font-size:12px;letter-spacing:.06em;color:var(--faint)}
+  .not{margin:8px 0 0;padding-left:18px;color:var(--muted);line-height:1.6}
+  @media (max-width:640px){ .shift{grid-template-columns:1fr} }
+ </style>
+</head>
+<body>
+ <a class="skip" href="#main">Gå til indhold</a>
+ <header class="site-header">
+ <a class="brand" href="../index.html"><img src="../assets/mark.svg" width="34" height="27" alt=""><span>NewDeal Invest</span></a>
+ <nav class="nav"><a href="index.html">← Lær</a></nav>
+ </header>
+ <main id="main">
+ <p class="eyebrow">LÆR</p>
+ <h1>Fra chip til datacenter: en tidslinje</h1>
+ <p class="lede">NDI ser AI-udbygningen som et <a href="../om-data.html#g-flodsystem">flodsystem</a>. Efterspørgslen er vandet, og flaskehalsene er dæmningerne. Tidslinjen viser tolv milepæle over 50 år. Den viser også, at dæmningen, der holder vandet tilbage, ikke har ligget samme sted hele tiden.</p>
+
+ <section class="panel sp" aria-labelledby="tl-h">
+  <h2 id="tl-h">Tolv milepæle</h2>
+  <p>Vælg en dæmning for at se, hvornår den har været i spil. Farven ved hver milepæl viser leddet.</p>
+  <div class="pick" role="group" aria-label="Fremhæv en dæmning">
+   <button type="button" data-d="" aria-pressed="true">Alle</button>
+   <button type="button" data-d="d-chip" aria-pressed="false" class="d-chip"><i style="background:var(--d)"></i>Halvledere</button>
+   <button type="button" data-d="d-cloud" aria-pressed="false" class="d-cloud"><i style="background:var(--d)"></i>Cloud og modeller</button>
+   <button type="button" data-d="d-app" aria-pressed="false" class="d-app"><i style="background:var(--d)"></i>Apps</button>
+   <button type="button" data-d="d-dc" aria-pressed="false" class="d-dc"><i style="background:var(--d)"></i>Datacentre</button>
+   <button type="button" data-d="d-en" aria-pressed="false" class="d-en"><i style="background:var(--d)"></i>Energi</button>
+  </div>
+  <p class="src" id="tl-live" aria-live="polite">Viser alle tolv milepæle.</p>
+  <ol class="tl" id="tl">
+   <li class="d-chip"><span class="y">1971</span><span class="t">Hele processoren på én chip</span><span class="d">Intel 4004 samler en computers regneenhed på én chip. Fra nu af bestemmer chippen, hvor meget en computer kan regne.</span><span class="tag">Halvledere</span></li>
+   <li class="d-chip"><span class="y">1987</span><span class="t">Fabrik og design bliver to ting</span><span class="d">TSMC starter som ren kontraktproducent (<a href="../om-data.html#g-foundry">foundry</a>). Det gør det muligt at designe chips uden egen fabrik (<a href="../om-data.html#g-fabless">fabless</a>).</span><span class="tag">Halvledere</span></li>
+   <li class="d-chip"><span class="y">1999</span><span class="t">Grafikprocessoren</span><span class="d">Nvidia lancerer GeForce 256 og kalder den en GPU. Den er bygget til at regne mange små opgaver på én gang. Se <a href="../om-data.html#g-gpu">GPU</a>.</span><span class="tag">Halvledere</span></li>
+   <li class="d-cloud"><span class="y">2006</span><span class="t">Regnekraft til leje</span><span class="d">Amazon Web Services lancerer lagerplads og servere, man lejer over nettet. Man behøver ikke længere eje sit eget serverrum. Se <a href="../om-data.html#g-cloud">cloud</a>.</span><span class="tag">Cloud og modeller</span></li>
+   <li class="d-chip"><span class="y">2007</span><span class="t">GPU'en kan bruges til andet end grafik</span><span class="d">Med CUDA kan programmører bruge grafikprocessoren til almindelige beregninger. Chippen og softwaren hænger nu sammen.</span><span class="tag">Halvledere</span></li>
+   <li class="d-cloud"><span class="y">2012</span><span class="t">AI-modeller lærer på GPU'er</span><span class="d">Billedmodellen AlexNet vinder en kendt konkurrence. Den er trænet på to grafikkort. Det viser, at mere regnekraft giver bedre modeller.</span><span class="tag">Cloud og modeller</span></li>
+   <li class="d-cloud"><span class="y">2017</span><span class="t">Transformeren</span><span class="d">Forskere hos Google beskriver en ny modelopbygning, transformeren. Den er grundlaget for de store sprogmodeller, og den kan bruge næsten ubegrænset regnekraft.</span><span class="tag">Cloud og modeller</span></li>
+   <li class="d-chip"><span class="y">2019</span><span class="t">EUV i masseproduktion</span><span class="d">De første chips produceret med <a href="../om-data.html#g-euv">EUV-maskiner</a> kommer på markedet. Der er kun én leverandør af maskinerne.</span><span class="tag">Halvledere</span></li>
+   <li class="d-app"><span class="y">2022</span><span class="t">AI for alle</span><span class="d">ChatGPT lanceres i november og får hurtigt millioner af brugere. Efterspørgslen efter regnekraft til at køre modellerne vokser markant.</span><span class="tag">Apps</span></li>
+   <li class="d-chip"><span class="y">2023</span><span class="t">Der er ikke chips nok</span><span class="d">AI-chips, stablet <a href="../om-data.html#g-hbm">hukommelse (HBM)</a> og avanceret pakning bliver det, der begrænser udbygningen. Køberne venter på levering.</span><span class="tag">Halvledere</span></li>
+   <li class="d-dc"><span class="y">2024</span><span class="t">Der er ikke plads og køling nok</span><span class="d">Store cloudselskaber bygger datacentre i hidtil uset skala. AI-racks bruger så meget strøm, at <a href="../om-data.html#g-datacenter">væskekøling</a> bliver mere udbredt.</span><span class="tag">Datacentre</span></li>
+   <li class="d-en"><span class="y">2025</span><span class="t">Der er ikke strøm nok</span><span class="d">Adgang til strøm og tilslutning til <a href="../om-data.html#g-elnet">elnettet</a> bliver et af de store spørgsmål for nye datacentre. NDI kalder energi den første dæmning.</span><span class="tag">Energi</span></li>
+  </ol>
+  <p class="src">Årstallene er offentligt kendte milepæle i branchens historie. Tidslinjen er en forenkling: mange andre selskaber og opfindelser har været med. At et selskab er nævnt, er ikke en anbefaling.</p>
+ </section>
+
+ <section class="panel sp" aria-labelledby="tl-shift" style="margin-top:14px">
+  <h2 id="tl-shift">Flaskehalsen flytter sig</h2>
+  <p>Læst ovenfra og ned ændrer spørgsmålet sig. Først handlede det om, hvad en chip kunne. Derefter om, hvor meget regnekraft man kunne skaffe. Nu handler det i høj grad om strøm og bygninger.</p>
+  <div class="shift">
+   <div class="d-chip"><span class="when">1971–2019</span><strong>Kan vi lave chippen?</strong>Design, fabrikker og maskiner. Halvledere er dæmningen.</div>
+   <div class="d-cloud"><span class="when">2006–2022</span><strong>Kan vi regne nok?</strong>Cloud og modeller gør regnekraft til noget, alle kan bruge.</div>
+   <div class="d-en"><span class="when">2023–</span><strong>Kan vi forsyne det?</strong>Chips, datacentre og strøm skal bygges ud på samme tid.</div>
+  </div>
+  <p style="margin-top:12px">Det er flodsystemets pointe: når én dæmning letter, flytter presset videre til den næste. Ingen ved på forhånd, hvilken dæmning der holder vandet tilbage om fem år. Derfor ejer fonden mange led i kæden og ikke kun det led, der er mest omtalt lige nu. Vi vælger udviklingen, ikke vinderen.</p>
+  <p class="src">Flodsystemet og de fem dæmninger: NDI ugebrev, 30. marts 2026. Se <a href="../vaerdikaeder.html#kap-flod">flodsystemet på værdikæder-siden</a> og <a href="../om-data.html#g-daemning">dæmning</a> i ordlisten.</p>
+ </section>
+
+ <section class="panel sp" aria-labelledby="tl-not" style="margin-top:14px">
+  <h2 id="tl-not">Hvad tidslinjen ikke siger</h2>
+  <ul class="not">
+   <li><strong>Den er ikke en prognose.</strong> At strøm er en flaskehals i dag, siger ikke, hvor længe det varer, eller hvad der kommer bagefter. Værdikæder-siden har en <a href="../vaerdikaeder.html#kap-timeline">tidslinje fremad</a>, og den er også et udsagn, ikke en prognose.</li>
+   <li><strong>Den siger ikke, hvem der tjener pengene.</strong> Et selskab kan stå bag en vigtig opfindelse og alligevel klare sig dårligt som investering. Se <a href="hvorfor-mange-aktier.html">Hvorfor så mange aktier?</a></li>
+   <li><strong>Den beskriver ikke fondens handler.</strong> Hvilke led fonden ejer, står under <a href="../temaer.html">Temaer</a> og <a href="../vaerdikaeder.html">Værdikæder</a>, med beholdningen pr. 1. juni 2026.</li>
+  </ul>
+  <p style="margin-top:10px">Siden forklarer en tankegang. Den siger ikke noget om, hvordan du selv skal investere. Se også <a href="sektorer.html">Hvorfor ikke de 11 sektorer?</a> og <a href="saadan-taenker-vi.html">Sådan tænker vi</a>.</p>
+ </section>
+ <p class="band" style="margin-top:16px">Generel information, ikke rådgivning. Før du investerer, så læs dokumentet med central information (KID) for den andelsklasse, du overvejer: <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm140b" rel="noopener" target="_blank">KID for PMINDI ↗</a> eller <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm145b" rel="noopener" target="_blank">KID for PMINDIAKK ↗</a>.</p>
+ <p class="warn">Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering.</p>
+ <p class="band">Generel information. Ikke investeringsrådgivning.</p>
+ </main>
+ <footer class="site-footer">
+ <p><strong>Markedsføringsmateriale.</strong> Læs <a href="https://fundmarket.dk/wp-content/uploads/Faellesprospekt-for-afdelinger-og-andelsklasser-i-Investeringsforeningen-Portfoliomanager-opdateret-24.10.2025.pdf" rel="noopener" target="_blank">prospektet ↗</a> og KID for <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm140b" rel="noopener" target="_blank">PMINDI ↗</a> eller <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm145b" rel="noopener" target="_blank">PMINDIAKK ↗</a>, før du træffer en endelig investeringsbeslutning.</p>
+ <p>Udkast / noindex. Ikke den officielle side og ingen investeringsrådgivning. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele din investering. <a href="../om-data.html">Data og ordliste</a>.</p>
+ </footer>
+<script>
+(function(){
+  var bs=document.querySelectorAll('.pick button'), items=document.querySelectorAll('#tl li'), live=document.getElementById('tl-live');
+  function show(d,label){
+    var n=0;
+    items.forEach(function(li){var on=!d||li.classList.contains(d);li.classList.toggle('dim',!on);if(on)n++;});
+    bs.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.d===d?'true':'false');});
+    live.textContent=d?(label+': '+n+' af 12 milepæle fremhævet.'):'Viser alle tolv milepæle.';
+  }
+  bs.forEach(function(b){b.addEventListener('click',function(){show(b.dataset.d,b.textContent.trim());});});
+})();
+</script>
+</body>
+</html>

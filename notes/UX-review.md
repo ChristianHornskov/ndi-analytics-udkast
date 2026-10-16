@@ -433,3 +433,29 @@ Hele lane-C-fladen ved 375 px: ideer, kort, om-data, invester, risici, ndi-persp
 - Handelsords-sweep i lane-C-filer: 0 hits uden negation eller procesbetydning.
 - Test (Playwright, lokal 8839, 375): 11 sider, én h1, 0 overflow, 0 pageerrors, 0 hits på "max drawdown|underwater".
 - Ikke mine filer, stadig åbne: BREAKING/chartMarkers (js), nyhedsarkiv-tabsadvarsel, periode/drawdown "YTD/CAGR/Drawdown" i h1, embed-KID.
+
+## 02:46 CEST lane-C checkpoint (Claude) · ordliste 147: ord fra data uden forklaring
+- Scannede sidetekst + docs/data/*.json for fagord uden opslag. Nye: ESG (fakta viser «ESG: Artikel 6» uden forklaring), kryptoaktiver/blockchain/stablecoin (Coinbase-profil m.fl.), chipdesign-software (EDA, fra value-chains), autonom kørsel, lavt kredsløb (LEO). Lithium føjet til kritiske råstoffer (12 hits i data).
+- Krypto-opslaget siger «i den forsinkede beholdning … beskriver selskabernes forretning, ikke en anbefaling». Ingen påstand om, hvad fonden må eje (ikke verificeret mod prospekt).
+- 0 brudte #-ankre, 0 dublet-id'er i om-data. kort-døren: 142 → 147 begreber.
+- Reviewer-MUSTs (cyklus 33: BREAKING/X, nyhedsarkiv-tab, ÅTD-forbehold på fonden/periode/embed) ligger alle uden for lane-C-filer. Intet at rette her.
+
+## 02:58 CEST lane-C checkpoint (Claude) · ideer: «Hvem står bag tallet?» (form 18)
+- Ny form `ideer.html#h-kd` (IDESPEJDER #20, «konfidensmærke på hvert tal»): fire kildestempler i 2 × 2 på desktop og én kolonne på mobil. Offentliggjort af andre (Fundmarket/KID: afkastserie, SRI, omkostninger, beholdning pr. 1. jun. 2026), regnet ud af NDI Analytics (afkast pr. år, ÅTD, fald fra top, afkast pr. udsving, 100.000 kr., vægt pr. tema), NDI's egen inddeling (temaer, værdikæder, flodsystem, modenhed) og AI-udkast (dele af NDI-linsen). Rammen går fra hel (cyan) over dobbelt og gul til stiplet. Ingen nye tal. Alle punkter linker til ordlisten.
+- Persona-linse: privat 55+ får svar på «kan jeg stole på det her?» uden fagord. Familiekontoret får sporbarhed (kilde → beregning → vurdering → udkast).
+- Foldet på mobil ligesom de andre billeder efter de fire første. Dybt link `#h-kd` folder ud.
+- Test (Playwright, lokal 8833) på ideer, om-data, lær-indeks og kort ved 320/375/1280: én h1, 0 overflow, 0 pageerrors. Stemplerne er 292/347/563 px brede.
+- Reviewer cyklus 33: ingen MUST i lane-C-filer. 04:00-checkpointet følger.
+
+## 03:05 CEST lane-C checkpoint (Claude) · ny lær-side «Hvorfor ikke de 11 sektorer?»
+- Vidensbot §5 nævnte «Hvorfor vi ikke bruger de 11 sektorer» med Tesla-eksemplet (mødet 27:36) som egen tekst. Det fandtes kun som matrix på Idéer og som FAQ-svar. Nu er det en lær-side med tre forskellige former: en kasse, der splittes (teknologi 151 → seks temaer), søjler den anden vej (energi 37 ← syv sektorer) og «Vælg et selskab» med seks knapper (aria-pressed, aria-live).
+- Fair over for sektorer: «Det er sektorer gode til» (fælles standard, må gerne stå) mod «Det kan de ikke». Det svarer til MC 27:17: «GICS må gerne vises, men ikke som hovedinddeling».
+- Playwright 375/1280: 0 pageerrors, 0 overflow, én h1, 0 tekster under 12 px (segmenttekst gjort transparent på mobil i stedet for font-size 0). Højde 3.667 px ved 375.
+- Linket fra lær-index (Tankegangen, nu 5 døre), kort, ordliste `#g-gics` og FAQ «Hvorfor står Tesla ikke bare som bilselskab?».
+- Tal fra portfolio.json pr. 1. jun. 2026 (antal pr. sektor × tema, ingen kurser/afkast). Sektorer er offentlige opslag, der svarer til den klassiske inddeling. Det står i kildelinjen.
+
+## 02:55 CEST lane-C checkpoint (Claude) · ny lær-side «Fra chip til datacenter: en tidslinje»
+- Vidensbot §5 «Datacenter og chiptidslinje» (59:37) var ikke dækket. Værdikæder har kun en tidslinje fremad (2025–2045). Den nye `laer/tidslinje.html` ser tilbage: 12 milepæle 1971–2025 (4004, TSMC/foundry, GPU, AWS, CUDA, AlexNet, transformer, EUV, ChatGPT, chipmangel, datacentre, strøm). Hver milepæl er farvet efter flodsystemets dæmning, og knapper fremhæver én dæmning ad gangen (aria-pressed og aria-live).
+- Tre kort under tidslinjen: «Kan vi lave chippen? → Kan vi regne nok? → Kan vi forsyne det?» De ender i «Vi vælger udviklingen, ikke vinderen». Afsnittet «Hvad tidslinjen ikke siger» dækker: ikke en prognose, ikke hvem der tjener pengene, ikke fondens handler.
+- Links fra lær-oversigten (Tankegangen), kort, ordlisten (dæmning) og FAQ (nyt kort svar «Hvorfor flytter flaskehalsen sig?»). Ideer-meta er rettet fra «Seksten» til «Atten billeder».
+- Playwright 375/1280: ingen vandret overflow, 0 JS-fejl, 0 knapper under 24 px, filteret virker (Energi: 1 af 12).
