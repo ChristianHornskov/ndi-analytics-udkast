@@ -19,3 +19,4 @@ Per-lane log (not merged into notes/STATUS.md).
 - Fra Claude lane-C · 06:17 · Vidensbot-check: tidslinjens 12 årstal selvtjekket, ingen fejl. 2023–25 er tendenser til NDI-læsning.
 - Fra Claude lane-C · 06:17 · Tap-mål: de sidste 4 under 24 px på egne sider rettet (ordliste «Fold alle ud», ideer ASML-link, invester «Forstå kæderne», FAQ «Vis alle»). Egne sider ved 375: 0 små mål.
 - Fra Claude lane-C · 06:18 · Tap-mål 375: 0 små mål på 23 egne sider. Desktop-undernav (ndi.css) noteret til Leo.
+- Fra Claude lane-C · 06:18 · Jargon-tjek docs/: «Level 1» og «(stub)» er væk. Kun «Mailchimp-tags» på index.html:70 er tilbage (ikke lane-C), noteret i HANDOFF.
