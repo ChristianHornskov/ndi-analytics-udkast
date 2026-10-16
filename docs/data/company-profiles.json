@@ -886,6 +886,26 @@
     }
    ]
   },
+  "US02451V3096": {
+   "name": "American Battery Technology",
+   "theme": "energy-resources",
+   "summary": "Genbrug af litium-ion-batterier og et lithiumprojekt i Nevada. Fernley er ikke taget i brug. Tonopah Flats er ikke en mine.",
+   "watch": "Om Fernley får ibrugtagningstilladelse. Planen er ikke drift.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1576873/000149315226022149/form10-q.htm",
+   "products": "Genbrug af batterier og et lithiumprojekt. Ikke en mine i drift.",
+   "customers": "Rapporten nævner salg af produkter. Beløb og navne på kunder er ikke taget med.",
+   "role": "Råstof og genbrug. Fernley er ikke i brug.",
+   "narrative": [
+    "American Battery Technology Company har hovedkontor på 100 Washington Street, Suite 100, i Reno i Nevada. Det er kontoret. Selskabet er noteret på NASDAQ under ABAT. Hjemmesiden gav en captcha 16. oktober 2026. Sætningerne er fra kvartalsrapporten for perioden til 31. marts 2026.",
+    "Rapporten nævner genbrugsanlægget i Tahoe-Reno Industrial Center i Storey County. Lageret til genbrug af litium-ion-batterier omfatter råmateriale og færdigvarer. Den siger ikke, at lageret ligger i Fernley, og den giver ikke et målt år. Bygningen i Fernley stod som klar til salg. Køberen trak sig 28. juli 2025. Pr. 31. marts 2026 er den opført som byggeri i gang og er ikke taget i brug. En ibrugtagningstilladelse er en plan for regnskabsåret 2026, ikke en tilladelse, rapporten siger er givet. Et nyt kommercielt anlæg i USA har ingen kvalificerende udgift pr. 31. marts 2026. Tonopah Flats er et lithiumprojekt. FAST-41-udpegningerne er fra juni og august 2025 og er ikke en mine. Selskabet købte 88 uminerede claims ved projektet 15. januar 2026, før beholdningen. Beløb er ikke taget med."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Kvartalsrapport til 31. marts 2026",
+     "url": "https://www.sec.gov/Archives/edgar/data/1576873/000149315226022149/form10-q.htm"
+    }
+   ]
+  },
   "VGG2662B1031": {
    "name": "Critical Metals",
    "theme": "energy-resources",
