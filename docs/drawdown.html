@@ -100,7 +100,9 @@
  yearUnder.push({ y, d: u.d });
  }
  }
- const yearHop = yearUnder.length ? `<div class="year-hop" role="group" aria-label="Første dag under 10 procent i året"><span class="src">Første dag i året under <span class="ep-pct">10 %</span></span>${yearUnder.map((y) => `<button type="button" class="outline-btn" data-date="${y.d}" data-n="${yearN.get(y.y)}" aria-pressed="false">${y.y}</button>`).join('')}<p class="year-say" id="year-say"></p></div>` : '';
+ const quietYears = usedGate ? [...new Set(uw.map((u) => u.d.slice(0, 4)))].filter((y) => !yearN.has(y)) : [];
+ const quietHop = quietYears.length ? `<span class="src">${quietYears.join(' og ')} havde ingen dag mindst <span class="ep-pct">10 %</span> under den <span class="ep-pct">løbende top</span>.</span>` : '';
+ const yearHop = yearUnder.length ? `<div class="year-hop" role="group" aria-label="Første dag under 10 procent i året"><span class="src">Første dag i året under <span class="ep-pct">10 %</span></span>${yearUnder.map((y) => `<button type="button" class="outline-btn" data-date="${y.d}" data-n="${yearN.get(y.y)}" aria-pressed="false">${y.y}</button>`).join('')}${quietHop}<p class="year-say" id="year-say"></p></div>` : '';
  const sinceN = open ? Math.round((Date.parse(rows[rows.length - 1].d + 'T12:00:00Z') - Date.parse(open.troughD + 'T12:00:00Z')) / 86400000) : null;
  const sinceBund = open && sinceN != null ? `<p class="since-bund"><button type="button" class="outline-btn" id="since-bund" data-date="${open.troughD}" aria-pressed="false">Siden bunden</button><span class="src"><span class="ep-pct">${sinceN} dage</span> siden <span class="ep-pct">${fmtDate(open.troughD)}</span>. Serien er ikke tilbage <span class="ep-pct">på den top.</span></span></p>` : '';
  if (!deep.length) deep = [...eps].sort((a, b) => a.dd - b.dd).slice(0, 3).sort((a, b) => a.peakD.localeCompare(b.peakD));

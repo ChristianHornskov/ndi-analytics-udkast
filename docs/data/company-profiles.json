@@ -222,7 +222,7 @@
    "source": "https://www.babcock.com/home/about/corporate/news/babcock-and-wilcox-receives-full-notice-to-proceed-on-24-billion-power-generation-project-for-base-electron-to-supply-power-to-applied-digital-ai-factory-campuses",
    "products": "Kedler, dele og design-byggeri. Aftalen af 4. marts 2026 omfatter fire kedler på 300 MW fyret med naturgas. Ikke et kraftværk selskabet driver.",
    "customers": "Base Electron er skrevet som den uafhængige producent, der skal udvikle og eje anlæggene. Applied Digital er nævnt som modtager af strømmen under særskilte aftaler.",
-   "role": "Kedler. 1,2 GW er Base Electrons anlæg, ikke et værk Babcock & Wilcox driver.",
+   "role": "Kedler og design-byggeri til kraftværker.",
    "narrative": [
     "Babcock & Wilcox skriver, at hovedkontoret ligger på 1200 E Market St, Ste 650, i Akron i Ohio, og at Chanute Manufacturing ligger på 1700 S Washington i Chanute i Kansas. Det er kontor og fremstilling, ikke et kraftværk. Selskabet skrev 4. november 2025, at en begrænset igangsættelse gjaldt ét projekt om én gigawatt, og at planen var fire anlæg på 300 MW med mål om drift i 2028. Samme tekst siger, at selskabet har designet og installeret kedler med mere end 400 GW installeret kapacitet på andres kraftværker og industrianlæg. Det er ikke værker, selskabet driver.",
     "Selskabet skrev 4. marts 2026, at den fulde igangsættelse er en design- og byggeaftale om 1,2 GW med fire naturgasfyrede kedler på 300 MW og dampturbiner. Base Electron er skrevet som den uafhængige producent, der udvikler og ejer anlæggene. Meddelelsen af 8. januar 2026 sætter levering til udgangen af 2028. De tre datoer ligger før beholdningen pr. 1. juni 2026. Teksten siger ikke, at anlægget er i drift. November-teksten siger én gigawatt, og marts-teksten siger 1,2 GW. De to tekster bruger ikke samme tal. Meddelelsen af 11. august 2026 om 20 dampturbiner på 50 MW, i alt 1 GW, til programmet FastPower ligger efter beholdningen og er ikke et værk i drift. Den ekstra 1,2 GW er en mulighed, Base Electron vurderer."
@@ -292,7 +292,7 @@
    "source": "https://t1energy.com/manufacturing/",
    "products": "Solcellemoduler. G1 er sat til 5 GW om året og omkring 12.000 paneler i døgnet uden dato. G2 er anslået 5 GW celler om året. Ikke et kraftværk.",
    "customers": "Siden navngiver ikke en køber af modulerne.",
-   "role": "Moduler. 5 GW er en kapacitet. G2-celler er anslået. Austin i foden er ikke en gade.",
+   "role": "Solcellemoduler.",
    "narrative": [
     "Fabrikssiden, læst 16. oktober 2026, sætter G1_Dallas til 5 GW solcellemoduler om året og omkring 12.000 paneler i døgnet. 5 GW er en kapacitet. Paneletallet er ikke dateret. G2 er sat til anslået 5 GW celler om året og et mål om 90 procent genbrug af vand. Teksten siger next up om solceller fra en ny fabrik uden for Austin. Det er ikke celler i drift.",
     "Samme side skriver koordinater for G1_Dallas, 32,60157 nord og 96,70376 vest, og for G2_Austin, 32,60210 nord og 96,70345 vest. Begge begynder med 32,60 nord og 96,70 vest. En overskrift er ikke en by. Foden skriver T1 Energy Inc. og Austin, Texas, USA, uden gade. Ordene advanced, cutting-edge og future er ikke taget med."
@@ -564,7 +564,7 @@
    "source": "https://newsroom.nexteraenergy.com/2026-05-18-NextEra-Energy-and-Dominion-Energy-to-Combine,-Creating-the-Worlds-Largest-Regulated-Electric-Utility-Business-and-North-Americas-Premier-Energy-Infrastructure-Platform-Benefiting-Customers?l=12",
    "products": "El fra St. Lucie, Turkey Point og Point Beach efter udvidelsen i 2013. Gas i Texas og Pennsylvania er udvikling, ikke værker.",
    "customers": "Florida Power & Light. Mere end 6 millioner tilslutninger på forsiden er uden dato. Cirka 12 millioner mennesker står i meddelelsen 18. maj 2026. De to tal er ikke det samme.",
-   "role": "Eksisterende elproduktion. Aftalen med Dominion er ikke lukket. 10 GW gas er ikke værker.",
+   "role": "Elselskab med atomkraft, gas, sol og vind.",
    "narrative": [
     "Selskabet er noteret på New York Stock Exchange under NEE. Hovedkontoret ligger i Juno Beach i Florida. En gadeadresse stod ikke i de læste meddelelser og er ikke opfundet. Om-siden skriver, at udvidelsen i 2013 på St. Lucie, Turkey Point og Point Beach omfattede seks atomkraftenheder. Det er ikke et nyt værk. Forsiden, læst 16. oktober 2026, skriver mere end 6 millioner tilslutninger og omkring 12 millioner mennesker i Florida. Meddelelsen 18. maj 2026 skriver cirka 12 millioner mennesker. Tilslutninger og mennesker er ikke det samme. Forsidens tal har ingen dato. Ordene largest, leading og premier er ikke taget med.",
     "Selskabet skrev 18. maj 2026, at det har indgået en endelig aftale med Dominion Energy om at lægge selskaberne sammen. Aftalen er ikke gennemført. Lukning ventes om 12 til 18 måneder og afventer godkendelser, blandt andet fra aktionærer, FERC og NRC samt tilsyn i Virginia, North Carolina og South Carolina. Aftaledatoen ligger før beholdningen pr. 1. juni 2026. Lukningen ligger efter. 10 millioner tilslutninger og 110 GW står som det samlede selskab, hvis aftalen lukkes. Det er ikke driften i dag, og 110 GW er ikke et målt år. To hovedkontorer i Juno Beach og Richmond er planen, hvis aftalen lukkes. Selskabet skrev 20. marts 2026, at en godkendelse dækker udvikling af op til 10 GW gasfyret produktion i Texas og Pennsylvania. Teksten siger, at det afventer endelige dokumenter, byggeri og idriftsættelse. Tæt på 30 hubs er projekter på forskellige stadier. Omkring 40 er et mål. Det er ikke værker i drift. Beløb er ikke taget med."
@@ -664,7 +664,7 @@
    "source": "https://oklo.com/",
    "products": "En testreaktor og planer om kraftværker. Ikke salg af isotoper.",
    "customers": "Store elforbrugere, hvis kraftværkerne bliver bygget.",
-   "role": "Testreaktor efter beholdningen. Ikke et kommercielt kraftværk og ikke salg af isotoper.",
+   "role": "Udvikler små atomkraftanlæg.",
    "narrative": [
     "Oklo skrev 6. august 2026, at testreaktoren Groves nåede en kontrolleret kædereaktion ved lav effekt. Datoen ligger efter beholdningen pr. 1. juni 2026. Meddelelsen af 13. oktober 2026 siger, at reaktoren ligger i Texas. Det er en testreaktor. Teksten beskriver ikke et kommercielt kraftværk og ikke salg af isotoper.",
     "Selskabet skrev 11. juni 2026, at en foreløbig sikkerhedsanalyse for Aurora ved Idaho National Laboratory er godkendt. Det er ikke et værk i drift. Selskabet skrev 13. oktober 2026, at Groves-2 Forge er et planlagt pilotanlæg. Det er ikke bygget. NDI har skrevet, at tidslinjer for den slags anlæg er usikre. Teksten her er en beskrivelse af selskabet, ikke en vurdering af aktien."
@@ -720,7 +720,7 @@
    "source": "https://www.terrestrialenergy.com/",
    "products": "Et reaktordesign, IMSR. Ikke et anlæg i drift.",
    "customers": "Ingen driftkunder i denne beskrivelse.",
-   "role": "Design specificeret til 390 MWe netto. Ikke et anlæg i drift.",
+   "role": "Reaktordesign.",
    "narrative": [
     "Terrestrial Energy skriver, at IMSR er specificeret til 390 MWe netto eller 822 MWt netto, og at brændslet er lavt beriget uran under 5 % U-235. Varmen er specificeret til 585 grader. Selskabet skriver, at de første anlæg skal bygges, godkendes og tages i brug i begyndelsen af 2030'erne. Det er selskabets egen tidsplan. Der er ikke et anlæg i drift.",
     "Kernenheden er designet til syv år og skal derefter skiftes. Det er stadig et design. NDI har skrevet, at tidslinjer for den slags anlæg er usikre. Teksten her er en beskrivelse af selskabet, ikke en vurdering af aktien."
@@ -760,14 +760,14 @@
    "name": "United States Antimony",
    "theme": "energy-resources",
    "summary": "Udvinder zeolit i Preston i Idaho og forarbejder antimon. Madero stod stille fra marts 2024 og blev genstartet i januar 2025. Det første gravearbejde i Alaska er ikke en mine.",
-   "watch": "Om gravearbejdet i Alaska bliver til en mine. Siden skriver will, ikke at det er i drift.",
+   "watch": "Om gravearbejdet i Alaska bliver til en mine. Siden skriver det som noget, der skal ske, ikke som drift.",
    "source": "https://www.usantimony.com/",
    "products": "Antimon og zeolit.",
    "customers": "Industrikunder.",
-   "role": "Antimon og zeolit. Preston er en mine. Alaska er ikke skrevet som en mine i drift.",
+   "role": "Antimon og zeolit.",
    "narrative": [
-    "United States Antimony er noteret på New York Stock Exchange under UAMY. Zeolit kommer fra minen og anlægget i Preston i Idaho. Siden skriver 85 til 95 procent clinoptilolit. Smelteværket for antimonoxid og et ædelmetalraffinaderi ligger i Thompson Falls i Montana.",
-    "Madero i Coahuila i Mexico blev lukket i marts 2024. Produktionen af færdigt antimonmetal var 163.788 pund i 2024. Det er det års tal, ikke en kapacitet. Anlægget blev opgraderet og genstartet i januar 2025, før beholdningen. Puerto Blanco og Los Juarez kører ikke. Det første gravearbejde i Alaska skal samle stibnit. Siden skriver will, ikke at det er en mine i drift. Materialet skal behandles på Fox Logistics Center i Fairbanks og raffineres i Montana. Siden skriver både mere end 35.000 acres og mere end 27.000 acres i Alaska. Tallene er ikke ens. I 2026 købte selskabet mere jord ved Nolan Creek. Måneden står ikke. Teksten er læst 16. oktober 2026. Det er claims, ikke en mine. Ordene only og best er ikke taget med."
+    "Zeolit kommer fra minen og anlægget i Preston i Idaho. Siden skriver 85 til 95 procent clinoptilolit. Smelteværket for antimonoxid og et ædelmetalraffinaderi ligger i Thompson Falls i Montana.",
+    "Madero i Coahuila i Mexico blev lukket i marts 2024. Produktionen af færdigt antimonmetal var 163.788 pund i 2024. Det er det års tal, ikke en kapacitet. Anlægget blev opgraderet og genstartet i januar 2025, før beholdningen. Puerto Blanco og Los Juarez kører ikke. Det første gravearbejde i Alaska skal samle stibnit. Siden skriver gravearbejdet som noget, der skal ske, ikke som en mine i drift. Materialet skal behandles på Fox Logistics Center i Fairbanks og raffineres i Montana. Siden skriver både mere end 35.000 acres og mere end 27.000 acres i Alaska. Tallene er ikke ens. I 2026 købte selskabet mere jord ved Nolan Creek. Måneden står ikke. Teksten er læst 16. oktober 2026. Siden kalder det claims. Det er ikke en mine. Ordene only og best er ikke taget med."
    ],
    "narrativeSources": [
     {
@@ -1192,7 +1192,7 @@
    "source": "https://www.trekormetals.com/properties/gibraltar-mine/",
    "products": "Kobber og molybdæn fra Gibraltar. Florence er sat til 85 millioner pund kobberkatode om året. Det er en kapacitet, ikke en målt årsproduktion.",
    "customers": "Siden navngiver ikke en kunde på Gibraltar.",
-   "role": "Gibraltar er i drift. Florence havde første kobber i februar 2026. Oktober-meldingen ligger efter beholdningen.",
+   "role": "Kobber- og molybdænmine.",
    "narrative": [
     "Siden bruger navnet Trekor Metals. Taseko skriver, at selskabet ejer og driver Gibraltar, en kobber- og molybdænmine i det sydlige centrale British Columbia, i Cariboo-Chilcotin. Kapaciteten er 85.000 tons malm i døgnet. Siden siger tons, og tallet er ikke regnet om. Gennemsnittet over minens levetid er 130 millioner pund kobber om året. Det er et gennemsnit i selskabets tekst, ikke et målt år. Siden skriver, at minen har kørt uafbrudt i selskabets eje i mere end 20 år, og at den ventes at kunne producere til mindst 2044. 2044 er selskabets forventning.",
     "Florence Copper ligger syd for Phoenix i Florence i Arizona. Siden skriver, at det første kobber blev lavet i februar 2026, og at byggeriet af anlægget til kommerciel produktion begyndte i januar 2024. Begge datoer ligger før beholdningen pr. 1. juni 2026. Kapaciteten er 85 millioner pund kobberkatode om året, og minens levetid er sat til 22 år. Pund er ikke regnet om. Selskabet skrev 9. oktober 2026, at produktionen er kommerciel. Den meddelelse ligger efter beholdningen. Yellowhead, Aley og New Prosperity er ikke miner i drift i denne tekst."
@@ -1765,11 +1765,11 @@
    "source": "https://karman-sd.com/contact/",
    "products": "Beskyttelse af nyttelast, mellemtrin og raketmotorer. Walker er missildele. MK 54 Fleet Exercise Section er en øvelsesdel uden sprængladning.",
    "customers": "Meddelelsen 22. juli 2026 nævner Northrop Grumman og den amerikanske flåde. Beløbet er ikke taget med.",
-   "role": "Hovedkontor i Huntington Beach uden gade. Walker er efter beholdningen. MK 54 er en øvelsesdel, ikke en opsendelse.",
+   "role": "Dele til løfteraketter og missiler.",
    "narrative": [
     "Kontaktsiden, læst 16. oktober 2026, skriver hovedkontor i Huntington Beach i Californien og postnummer 92649. Gaden står ikke. Samme postnummer står to gange. Listen skriver Skagit, og postnummerlinjen skriver Mount Vernon, WA 98273. Lokationssiden nævner byer, herunder Horsham i Pennsylvania, og ikke en gade. Det er steder, ikke en opsendelse.",
-    "Meddelelsen 11. september 2026 skriver, at købet af Walker Precision Engineering blev gennemført 28. august 2026. Datoen ligger efter beholdningen pr. 1. juni 2026. Walker arbejder i Skotland, England og Polen. Overskriften skriver 25 missilprogrammer. Brødteksten skriver mere end 25. Tallene er ikke ens. Det er missildele, ikke en opsendelse. Meddelelsen skriver NYSE: KRMN. Mere end 130 programmer og over 80 hovedleverandører står uden egen dato.",
-    "Meddelelsen 22. juli 2026 skriver, at Northrop Grumman har givet en kontrakt på Proof of Manufacture til MK 54 Fleet Exercise Section. Øvelsesdelen erstatter sprængladningen. Teksten siger, at flåden endnu ikke har fået den. Datoen ligger efter beholdningen. Beløbet er ikke taget med. Det er ikke en opsendelse. Meddelelsen 14. juli 2026 skriver, at anlægget i Horsham skal udvides. Teksten siger will. Det er ikke et målt år. Beløbet er ikke taget med. Ordene leader og next-generation er ikke taget med."
+    "Meddelelsen 11. september 2026 skriver, at købet af Walker Precision Engineering blev gennemført 28. august 2026. Datoen ligger efter beholdningen pr. 1. juni 2026. Walker arbejder i Skotland, England og Polen. Overskriften skriver 25 missilprogrammer. Brødteksten skriver mere end 25. Tallene er ikke ens. Det er missildele, ikke en opsendelse. Mere end 130 programmer og over 80 hovedleverandører står uden egen dato.",
+    "Meddelelsen 22. juli 2026 skriver, at Northrop Grumman har givet en kontrakt på Proof of Manufacture til MK 54 Fleet Exercise Section. Øvelsesdelen erstatter sprængladningen. Teksten siger, at flåden endnu ikke har fået den. Datoen ligger efter beholdningen. Beløbet er ikke taget med. Det er ikke en opsendelse. Meddelelsen 14. juli 2026 skriver, at anlægget i Horsham skal udvides. Teksten skriver udvidelsen som noget, der skal ske. Det er ikke et målt år. Beløbet er ikke taget med. Ordene leader og next-generation er ikke taget med."
    ],
    "narrativeSources": [
     {
@@ -1845,15 +1845,15 @@
   "US75776W1036": {
    "name": "Redwire",
    "theme": "space",
-   "summary": "Laver kameraer og solsensorer til Orion. Meddelelsen 1. april 2026 siger, at udstyret will launch på Artemis II, og ikke at flyvningen er fløjet. Forsiden uden dato skriver launched. Det er ikke en opsender.",
+   "summary": "Laver kameraer og solsensorer til Orion. Meddelelsen 1. april 2026 siger, at udstyret skal med på Artemis II, og ikke at flyvningen er gennemført. Forsiden uden dato bruger det engelske ord launched. Det er ikke en opsender.",
    "watch": "Om forsiden læses som om Artemis II var fløjet, og om 43 og 54 PIL-BOX læses som samme tal. 54 er efter beholdningen.",
    "source": "https://redwirespace.com/",
    "products": "Kameraer og solsensorer til Orion. PIL-BOX er udstyr til krystaller. Ikke en raket og ikke et datacenter.",
    "customers": "Lockheed Martin til kameraerne og Airbus til solsensorerne. Siden nævner NASA's Orion.",
    "role": "Kameraer, solsensorer og PIL-BOX. Ikke en opsender og ikke et datacenter.",
    "narrative": [
-    "Redwire skrev 1. april 2026 i Jacksonville, at optik og solsensorer will launch med Orion på Artemis II. Kamerasystemet er 11 kameraer, heraf trådløse kameraer på de fire solpaneler. Fire solsensorer til det europæiske servicemodul leveres via Airbus. Selskabet skriver, at sensorerne kørte på Artemis I. Produktionen og testen af kamerasystemet til Artemis I til V sker via Lockheed Martin.",
-    "Datoen ligger før beholdningen pr. 1. juni 2026. Meddelelsen siger ikke, at Artemis II er fløjet. Forsiden, læst 16. oktober 2026, skriver launched uden dato. Den sætning er ikke meddelelsen fra 1. april. Adressen i sidefoden er 8226 Philips Highway, Suite 101, Jacksonville, FL 32256. Samme meddelelse skriver cirka 1.400 medarbejdere. Ordet leader er ikke taget med. Selskabet sender ikke selv raketten op.",
+    "Redwire skrev 1. april 2026 i Jacksonville, at optik og solsensorer skal med på Artemis II sammen med Orion. Kamerasystemet er 11 kameraer, heraf trådløse kameraer på de fire solpaneler. Fire solsensorer til det europæiske servicemodul leveres via Airbus. Selskabet skriver, at sensorerne kørte på Artemis I. Produktionen og testen af kamerasystemet til Artemis I til V sker via Lockheed Martin.",
+    "Datoen ligger før beholdningen pr. 1. juni 2026. Meddelelsen siger ikke, at Artemis II er fløjet. Forsiden, læst 16. oktober 2026, bruger det engelske ord launched uden dato. Den sætning er ikke meddelelsen fra 1. april. Adressen i sidefoden er 8226 Philips Highway, Suite 101, Jacksonville, FL 32256. Samme meddelelse skriver cirka 1.400 medarbejdere. Ordet leader er ikke taget med. Selskabet sender ikke selv raketten op.",
     "Jacksonville-siden, læst 16. oktober 2026, kalder anlægget hovedkontor og skriver også 1000 Riverside Avenue, Suite 600. Siden skriver 37.000 kvadratfod og 37.247 kvadratfod. De to tal er ikke ens. Siden daterer dem ikke. Det er et anlæg på jorden. Meddelelsen 11. marts 2026 skriver 43 PIL-BOX. En tekst om undersøgelser, der kom tilbage 17. juni 2026, skriver 54 PIL-BOX fløjet til dato. Den dato ligger efter beholdningen. De to tællinger er ikke samme tal. PIL-BOX er udstyr til krystaller, ikke et datacenter."
    ],
    "narrativeSources": [
@@ -2129,15 +2129,16 @@
   "CA55293N1096": {
    "name": "MDA Space",
    "theme": "space",
-   "summary": "Bygger satellitter, rumrobotik og systemer til geodata. Selskabet skrev 16. september 2026, at Chorus er tre satellitter, og at de to nye ikke er sendt op. Aurora Black er præsenteret 10. september 2026. Det er ikke et datacenter.",
-   "watch": "Om de to nye Chorus-satellitter bliver sendt op. Sent i 2026 er en plan. De er ikke i kredsløb.",
+   "summary": "Bygger satellitter, rumrobotik og systemer til geodata. Selskabet skrev 16. september 2026, at Chorus er tre satellitter, og at de to nye ikke er sendt op. Kontrolcenteret i St-Bruno-de-Montarville åbnede 11. august 2026. Det er på jorden. Aurora Black er præsenteret 10. september 2026. Det er ikke et datacenter.",
+   "watch": "Om de to nye Chorus-satellitter bliver sendt op. Sent i 2026 er en plan. Kommerciel drift tidligt i 2027 er også en plan.",
    "source": "https://mda.space/article/mda-space-announces-end-to-end-mda-chorus-product-portfolio-in-advance-of-constellation-launch",
-   "products": "Satellitter, robotarme og geodata. Chorus er billeder af Jorden.",
+   "products": "Satellitter, robotarme og geodata. Chorus er billeder af Jorden. COMMAND er software, ikke en satellit.",
    "customers": "Rumagenturer, satellitoperatører og forsvar.",
-   "role": "Jordobservation og robotik. De to nye Chorus-satellitter er ikke sendt op.",
+   "role": "Jordobservation og robotik.",
    "narrative": [
     "MDA bygger satellitter og rumrobotik og arbejder med geodata. Selskabet skrev 10. september 2026, at det præsenterede Aurora Black, en softwaredefineret satellit til forsvarskommunikation.",
-    "Datoen for Aurora Black ligger efter beholdningen pr. 1. juni 2026. Præsentationen er ikke en konstellation i drift. Selskabet skrev 16. september 2026, at Chorus er tre satellitter: to nye, en i X-bånd og en i C-bånd, plus RADARSAT-2, som allerede er i kredsløb. Opsendelsen af de nye er sat til sent i 2026. Det er en plan. De to nye er ikke sendt op. Meddelelsen ligger efter beholdningen. Det er ikke et datacenter."
+    "Datoen for Aurora Black ligger efter beholdningen pr. 1. juni 2026. Præsentationen er ikke en konstellation i drift. Selskabet skrev 16. september 2026, at Chorus er tre satellitter: to nye, en i X-bånd og en i C-bånd, plus RADARSAT-2, som allerede er i kredsløb. Opsendelsen af de nye er sat til sent i 2026. Det er en plan. De to nye er ikke sendt op. Meddelelsen ligger efter beholdningen. Det er ikke et datacenter.",
+    "Meddelelsen 11. august 2026 skriver, at kontrolcenteret for Chorus åbnede i St-Bruno-de-Montarville i Quebec, på den sydlige bred af Montreal. Det er et anlæg på jorden. Datoen ligger efter beholdningen. Samme tekst sætter opsendelsen til sent i 2026 og kommerciel drift til tidligt i 2027. Begge er planer. Siden sætter billedbredden til 700 km og opløsningen under en meter, når konstellationen er sat i drift. Det er ikke sket. C-bånd er beskrevet som det brede billede og X-bånd som det tætte. Meddelelsen 16. september 2026 nævner COMMAND, COMMAND PRO og INTELLIGENCE. De er produkter til at søge, styre og læse billeder. De er ikke satellitter. COMMAND PRO nævner en jordstation hos kunden. Det er ikke et datacenter i kredsløb."
    ],
    "narrativeSources": [
     {
@@ -2151,6 +2152,10 @@
     {
      "label": "Chorus, 16. september 2026",
      "url": "https://mda.space/article/mda-space-announces-end-to-end-mda-chorus-product-portfolio-in-advance-of-constellation-launch"
+    },
+    {
+     "label": "Kontrolcenter, 11. august 2026",
+     "url": "https://mda.space/article/mda-space-opens-mda-chorus-control-centre-in-quebec"
     }
    ]
   },

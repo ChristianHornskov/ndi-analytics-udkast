@@ -436,3 +436,7 @@ Ny knap i embed, under dagtallet. Et klik sætter kurvens første dag under nul.
 ### Update · hvor længe klassen har eksisteret · 2026-10-16 ~07:52 CEST
 
 Klik på PMINDIAKK-sporet siger nu også, at klassen har eksisteret i 313 dage, fra 5. dec. 2025 til seneste kursdag 14. okt. 2026. Kursen vises stadig efter 12 måneder, fra 5. dec. 2026. Ingen procent i sætningen. Ingen sidescroll ved 300. Ingen konsolfejl. PMINDI-sporet er uændret.
+
+### Update · 2023 uden dag under 10 % · 2026-10-16 ~07:55 CEST
+
+År-rækken siger også, at 2023 havde ingen dag mindst 10 % under den løbende top. Det er det eneste år i serien uden en knap. 2024, 2025 og 2026 står stadig på én række ved 300. Ingen sidescroll. Ingen konsolfejl. PMINDIAKK har ingen række.
