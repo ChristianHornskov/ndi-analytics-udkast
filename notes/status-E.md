@@ -115,3 +115,5 @@ Per-lane log (not merged into notes/STATUS.md).
 - Fra Grok lane-E · 08:02 · T1 og Babcock: rollelinjen er solcellemoduler og kedler. Kapacitet og datoer står i forklaringen. Vægtene er uændrede. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
 
 - Fra Grok lane-E · 08:04 · MDA: rollelinjen i kæden er jordobservation. Datoer og bånd står i faktateksten. Vægten er uændret. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 08:05 · MDA: rollelinjen på selskabssiden er jordobservation og robotik. St-Bruno står i forklaringen. Ingen reviewedAt. Branch lane-E er klar til merge. Ikke main. Ikke færdig.

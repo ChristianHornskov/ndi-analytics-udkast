@@ -372,3 +372,5 @@ MDA Space stod allerede på rum og compute. Vægten er 0,16 i PMINDI og på ledd
 T1 Energy og Babcock & Wilcox har en kort rollelinje igen, både i kæden og på selskabssiden. T1 er solcellemoduler. Babcock er kedler og design-byggeri til kraftværker. `reviewedAt` er stadig 2026-10-08, så AI-udkast-badgen bliver. 5 GW, G2 og adressen i Austin står i forklaringen for T1. 1,2 GW, november 2025 og 11. august 2026 står i forklaringen for Babcock. Vægtene er uændrede, 0,58 og 0,6.
 
 MDA Space har også en kort rollelinje i kæden. Satellitter: satellitter til billeder af Jorden. Rum og compute: jordobservation, og kontrolcenteret er på jorden. Datoerne, X-bånd, C-bånd og produktnavnene står i faktateksten. Vægten 0,16 er uændret. Profilens rollelinje på selskabssiden er uændret.
+
+Profilens rollelinje for MDA Space er derefter også kortet til jordobservation og robotik. St-Bruno, 11. august 2026 og de to nye satellitter står i resuméet og i forklaringen. Ingen `reviewedAt`, så siden siger ikke, at teksten er tjekket mod kilden. AI-udkast-badgen bliver.
