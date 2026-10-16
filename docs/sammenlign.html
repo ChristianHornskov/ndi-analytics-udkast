@@ -59,7 +59,7 @@
  <span class="cmp-pair">${bar(ta[k], 'a', 'PMINDI')}${bar(tb[k], 'b', 'PMINDIAKK')}</span></li>`).join('');
  const navA = lastNav(a.data), navB = lastNav(b.data);
  const firstA = a.data?.[0]?.d || a.inception, firstB = b.data?.[0]?.d || b.inception;
- const navCell = (nav) => (nav ? `${n2(nav.price)} <small>(${fmtDate(nav.d)})</small>` : '-');
+ const navCell = (nav) => (nav ? `${n2(nav.price)} <small>(${fmtDate(nav.d)})</small>` : '<span class="cmp-empty">Ingen kurs</span>');
  // AKK-gate: afkast først efter 12 måneders historik fra første NAV
  const gate = new Date(firstB); gate.setFullYear(gate.getFullYear() + 1);
  const gateIso = gate.toISOString().slice(0, 10);
