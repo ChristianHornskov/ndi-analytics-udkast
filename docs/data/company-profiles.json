@@ -821,22 +821,26 @@
   "CA8265991023": {
    "name": "Sigma Lithium",
    "theme": "energy-resources",
-   "summary": "Producerer lithiumkoncentrat i Brasilien. Selskabet nævner Jequitinhonha-dalen. Det er råstof til batterier, ikke et batteriselskab.",
-   "watch": "Drift af anlægget, lithiumpriser og kvaliteten af koncentratet.",
-   "source": "https://sigmalithiumcorp.com/",
+   "summary": "Udvinder lithium fra hårdt bjerg i Minas Gerais. Selskabet skriver, at Grota do Cirilo er sat til 270.000 ton koncentrat om året. Fase 2 er ikke produktion.",
+   "watch": "Om fase 2 bliver til drift. Navneskiltet på 270.000 ton er en kapacitet, ikke et målt år.",
+   "source": "https://sigmalithiumcorp.com/operations/",
+   "products": "Lithiumkoncentrat. Fase 1 er sat til 270.000 ton om året. Fase 2 er et mål på 520.000 ton og er ikke produktion.",
+   "customers": "Siden navngiver ikke en kunde.",
+   "role": "Koncentrat fra Grota do Cirilo. Ikke et batteriselskab.",
    "narrative": [
-    "Sigma Lithium producerer lithiumkoncentrat i Brasilien. Selskabet nævner Jequitinhonha-dalen, og det skrev 17. april 2023, at produktionen var gået i gang.",
-    "Datoen ligger før beholdningen pr. 1. juni 2026. Det er råstof til batterier, ikke et batteriselskab og ikke et kraftværk."
+    "Sigma Lithium skriver, at selskabet ejer 100 % af Grota do Cirilo i Minas Gerais i Brasilien. Det er udvinding af lithium i hårdt bjerg og et anlæg, der laver koncentrat. Forsiden nævner Jequitinhonha-dalen. Siden skriver, at driften er sat til 1,5 million ton om året, og at navneskiltet for lithiumkoncentrat er 270.000 ton om året. Siden siger tonnes. Tallene er ikke regnet om. Det er kapacitet, ikke en målt årsproduktion. Fase 1 blev sat i drift i 2023. Knuser og anlæg var sat i drift i maj 2023. Første skib gik i juli 2023, og siden skriver, at der var fem skibe det år. Første kommercielle produktion var nået i august 2023. I december 2023 kørte anlægget på navneskiltet i en måned. Datoerne ligger før beholdningen pr. 1. juni 2026.",
+    "Siden skriver, at bestyrelsen i 2024 godkendte byggeriet af fase 2, og at jordarbejdet var færdigt i 2025. Begge dele ligger før beholdningen. Siden, læst 16. oktober 2026, skriver, at udvidelsen stadig er i gang. Målet er et navneskilt på 520.000 ton koncentrat om året. Det er et mål, ikke produktion. En teknisk rapport af 15. januar 2025 sætter målte og indikerede ressourcer til 93,2 millioner ton med 1,40 % lithiumoxid. Reserverne er sat til 76,4 millioner ton med 1,29 % lithiumoxid. Det er ressource og reserve, ikke et års udbytte. Det er ikke et batteriselskab."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets side",
+     "label": "Driften, Grota do Cirilo",
+     "url": "https://sigmalithiumcorp.com/operations/"
+    },
+    {
+     "label": "Forsiden, Jequitinhonha",
      "url": "https://sigmalithiumcorp.com/"
     }
-   ],
-   "products": "Lithiumkoncentrat.",
-   "customers": "Videreforarbejdning til batterimaterialer.",
-   "role": "Råstof til batterier, ikke et færdigt lagersystem."
+   ]
   },
   "US5533681012": {
    "name": "MP Materials",
@@ -977,19 +981,23 @@
   "CA2926717083": {
    "name": "Energy Fuels",
    "theme": "energy-resources",
-   "summary": "Selskabet skriver, at det fremstiller oxider af sjældne jordarter på et anlæg i USA. Siden nævner White Mesa Mill med uran, sjældne jordarter og vanadium. Det er ikke et kraftværk.",
-   "watch": "Uranpriser, møllens drift og mængden af materiale, der bliver forarbejdet.",
-   "source": "https://www.energyfuels.com/",
-   "products": "Uran, sjældne jordarter og vanadium.",
-   "customers": "Selskaber, der laver reaktorbrændsel, og industrikunder.",
-   "role": "Råstof til atomkraft.",
+   "summary": "Driver White Mesa Mill i Utah. Selskabet skrev 29. juli 2026, at møllen kan lave op til 1.000 ton NdPr-oxid om året, og at et byggeri til tunge sjældne jordarter er gået i gang. Meddelelsen ligger efter beholdningen. Det er ikke et kraftværk.",
+   "watch": "Om byggeriet bliver til drift. 1.000 ton er en kapacitet, ikke et målt år.",
+   "source": "https://investors.energyfuels.com/2026-07-29-Commercial-Scale-Heavy-Rare-Earth-Plant-Now-Under-Construction-in-Utah",
+   "products": "Uran og sjældne jordarter fra White Mesa. Op til 1.000 ton NdPr-oxid om året er en kapacitet. Udvidelsen er ikke i drift.",
+   "customers": "Selskabet skriver, at urankoncentrat sælges til atomværker. Teksten navngiver ikke et værk.",
+   "role": "White Mesa i Utah. Ikke et kraftværk.",
    "narrative": [
-    "Energy Fuels skriver, at det fremstiller oxider af sjældne jordarter på et anlæg i USA. Siden nævner White Mesa Mill med uran, sjældne jordarter og vanadium.",
-    "Selskabet skriver, at titan, zirkonmineraler og medicinske isotoper er produkter, det er i gang med at tilføje. Det er ikke et kraftværk."
+    "Energy Fuels skriver, at White Mesa Mill ligger i Utah. Selskabet skrev 29. juli 2026, at møllen har en kommerciel kapacitet på op til 1.000 ton adskilt NdPr-oxid om året. Siden siger tonnes. Tallet er ikke regnet om. Det er en kapacitet, ikke et målt år. Samme meddelelse siger, at byggeriet af en udvidelse er gået i gang, så møllen også kan lave oxider af tunge sjældne jordarter. Udvidelsen er tegnet til op til cirka 20 ton terbium og 120 ton dysprosium om året. Det er et design, ikke en produktion. Selskabet venter, at de to oxider kan sættes i drift i fjerde kvartal 2027. Det er en plan. Meddelelsen ligger efter beholdningen pr. 1. juni 2026.",
+    "Forsiden skriver, at konventionelle miner kan producere op til 8 millioner pund uran om året. Siden daterer ikke tallet. Pund er ikke regnet om. Det er et loft, ikke et målt år. Selskabet skriver, at møllen også kan lave vanadiumoxid, når markedet tilsiger det. Teksten siger ikke, at det kører hele tiden. Titan, zirkon og medicinske isotoper er ikke skrevet som produktion. Det er ikke et kraftværk."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets side",
+     "label": "White Mesa, 29. juli 2026",
+     "url": "https://investors.energyfuels.com/2026-07-29-Commercial-Scale-Heavy-Rare-Earth-Plant-Now-Under-Construction-in-Utah"
+    },
+    {
+     "label": "Forsiden",
      "url": "https://www.energyfuels.com/"
     }
    ]
@@ -1125,20 +1133,40 @@
   "CA14071L1085": {
    "name": "Capstone Copper",
    "theme": "energy-resources",
-   "summary": "Driver kobberminedrift. Selskabet skriver, at produktionen i 2025 var 225.000 ton kobber. Santo Domingo er et projekt, ikke en mine i drift.",
-   "watch": "Drift af minerne og kobberpriser.",
-   "source": "https://capstonecopper.com/",
-   "products": "Kobber.",
-   "customers": "Smelteværker og industrikunder.",
-   "role": "Råstof.",
+   "summary": "Driver kobberminer i Chile, Arizona og Mexico. Selskabet skriver, at produktionen i 2025 var 225.000 ton kobber. Santo Domingo er et projekt, ikke en mine i drift.",
+   "watch": "Om byggeriet på Mantoverde bliver færdigt, og om salget af Cozamin lukker. Færdigdatoen og salgsaftalen ligger efter beholdningen.",
+   "source": "https://capstonecopper.com/operations/mantoverde/",
+   "products": "Kobber fra miner i drift. Mantoverde er sat til 32.000 ton malm i døgnet. Det er en kapacitet. Santo Domingo er ikke en mine.",
+   "customers": "Siden navngiver ikke en kunde.",
+   "role": "Miner i drift. 225.000 ton kobber i 2025. Santo Domingo er et projekt.",
    "narrative": [
-    "Capstone skriver, at selskabet producerede 225.000 ton kobber i 2025. Siden nævner Mantos Blancos, Cozamin, Pinto Valley og Mantoverde.",
-    "Santo Domingo er beskrevet som et projekt, ikke som en mine i drift. Selskabet er ikke et kraftværk."
+    "Capstone skriver, at produktionen i 2025 var 225.000 ton kobber. Siden siger tonnes. Tallet er ikke regnet om. Pinto Valley i Arizona er en åben mine, som selskabet ejer 100 % af. Koncentratoren er sat til 60.000 ton malm i døgnet, og katodeanlægget er sat til 11.000 ton om året. Begge tal er kapacitet, ikke en målt produktion. Mantoverde ligger i Atacama i Chile, 56 km sydøst for Chañaral. Selskabet har 70 %, og Mitsubishi Materials har 30 %. Sulfidmøllen er sat til 32.000 ton malm i døgnet, og katodekapaciteten er sat til 60.000 ton om året. Første koncentrat kom i juni 2024, og kommerciel produktion blev meldt i september 2024. Begge datoer ligger før beholdningen pr. 1. juni 2026.",
+    "Siden skriver, at en udvidelse fra 32.000 til 45.000 ton malm i døgnet blev besluttet i tredje kvartal 2025. Beslutningen ligger før beholdningen. Siden, læst 16. oktober 2026, skriver, at byggeriet er i gang, og at det ventes færdigt i tredje kvartal 2026. Færdigdatoen ligger efter beholdningen. Mantos Blancos i Antofagasta er en åben mine, som selskabet ejer 100 % af. Santo Domingo ligger cirka 35 km nordøst for Mantoverde. Det er et projekt. Et studie sætter de første syv år til 106.000 ton kobber om året. Det er et tal i studiet, ikke en produktion. Selskabet skrev 21. september 2026, at det har en aftale om at sælge Cozamin. Handlen ventes lukket i fjerde kvartal 2026, hvis vilkårene bliver opfyldt. Den meddelelse ligger efter beholdningen. Cozamin er ikke solgt i denne tekst."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets side",
+     "label": "Forsiden, 225.000 ton i 2025",
      "url": "https://capstonecopper.com/"
+    },
+    {
+     "label": "Mantoverde",
+     "url": "https://capstonecopper.com/operations/mantoverde/"
+    },
+    {
+     "label": "Pinto Valley",
+     "url": "https://capstonecopper.com/operations/pinto-valley/"
+    },
+    {
+     "label": "Driften og Santo Domingo",
+     "url": "https://capstonecopper.com/operations/"
+    },
+    {
+     "label": "Santo Domingo",
+     "url": "https://capstonecopper.com/operations/santo-domingo/"
+    },
+    {
+     "label": "Cozamin, 21. september 2026",
+     "url": "https://capstonecopper.com/news/capstone-copper-announces-sale-of-cozamin-for-total-consideration-of-up-to-385-million/"
     }
    ]
   },
