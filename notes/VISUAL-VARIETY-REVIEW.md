@@ -432,3 +432,7 @@ Main lagde en Nasdaq-række med klassen `.cmp-row`. Temarækken på sammenlign b
 ### Update · første dag under nul · 2026-10-16 ~07:51 CEST
 
 Ny knap i embed, under dagtallet. Et klik sætter kurvens første dag under nul. På hele perioden er det 3. okt. 2023, og udlæsningen siger −1,9 %. På år til dato er det 4. feb. 2026, og udlæsningen siger −2,0 %. Det er afstanden til periodens start, ikke et fald fra top. Knappen er 44 px. Ingen sidescroll. Ingen konsolfejl. På papir er knappen væk. PMINDIAKK har ingen knap og ingen procent.
+
+### Update · hvor længe klassen har eksisteret · 2026-10-16 ~07:52 CEST
+
+Klik på PMINDIAKK-sporet siger nu også, at klassen har eksisteret i 313 dage, fra 5. dec. 2025 til seneste kursdag 14. okt. 2026. Kursen vises stadig efter 12 måneder, fra 5. dec. 2026. Ingen procent i sætningen. Ingen sidescroll ved 300. Ingen konsolfejl. PMINDI-sporet er uændret.

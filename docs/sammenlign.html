@@ -70,6 +70,7 @@
  const spanAt = (iso) => Math.max(0, Math.min(100, ((Date.parse(iso + 'T12:00:00Z') - spanT0) / Math.max(1, spanT1 - spanT0)) * 100));
  const nowAt = spanAt(nowIso);
  const bAt = spanAt(firstB);
+ const bothN = Math.round((Date.parse(nowIso + 'T12:00:00Z') - Date.parse(firstB + 'T12:00:00Z')) / 86400000);
  const w = (n) => n.toFixed(2);
  const posAsOf = fmtDate(a.positionsAsOf || portfolio.asOf);
  const riyTxt = (id) => {
@@ -212,7 +213,7 @@
  const spanNote = document.getElementById('span-say');
  const spanSay = {
  a: 'PMINDI har første NAV <span class="cmp-when">' + fmtDate(firstA) + '</span>. Seneste kursdag er <span class="cmp-when">' + fmtDate(nowIso) + '</span>. Afkastet vises <span class="cmp-when">på Fonden.</span>',
- b: 'PMINDIAKK startede <span class="cmp-when">' + fmtDate(firstB) + '</span>. Kursen vises efter <span class="cmp-when">12 måneder</span>, fra <span class="cmp-when">' + fmtDate(gateIso) + '</span>.'
+ b: 'PMINDIAKK startede <span class="cmp-when">' + fmtDate(firstB) + '</span>. Klassen har eksisteret i <span class="cmp-when">' + bothN + ' dage.</span> Kursen vises efter <span class="cmp-when">12 måneder</span>, fra <span class="cmp-when">' + fmtDate(gateIso) + '</span>.'
  };
  const paintSpan = (lane) => {
  document.querySelectorAll('.span-lane').forEach((btn) => btn.setAttribute('aria-pressed', String(btn.dataset.lane === lane)));
