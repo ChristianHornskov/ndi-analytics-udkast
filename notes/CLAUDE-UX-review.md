@@ -1419,3 +1419,24 @@ Main flyttede f6d6b4b → ffda4c8 (lane-B displayName i warrant-/risikolinjer + 
 
 ### Nice
 - Uændret.
+
+## 2026-10-16 07:46 CEST · cyklus 57 · freeze-tjek (main `13b77f0`, live = main på alle 7 ændrede filer, md5)
+
+Ændringer siden c56: lane-C ordliste +5 (MW/GW, LNG, HALEU, brændselscelle, faststofbatteri; 159 begreber), temaantal i ordlisten tælles nu fra portfolio.json, modenhed vises nu som maskinelt forslag (ASML-linse, livscyklus, FAQ), ental/flertal-rettelser, risici uden udviklersprog.
+
+- om-data: alle 14 `data-gc/gf` tal regnes live og passer med den statiske reserve (87/345/31, chips 54/49, compute 19/16, optik 28/27, fysisk 27/27, energi 37/37/28). ✅
+- Portefølje-livscyklus: 345 af 345 har et forslag, og kurven forklares i én linje: "maskinelt ud fra offentlig branche og tema, afventer NDI-gennemgang". ✅ SoftBank-siden viser "Moden (forslag)" med samme forklaring og "ikke en rating". ✅
+- risici: "Temadækning … det tal UI bruger" er erstattet af almindeligt dansk. ✅
+- 22-URL live-sweep @375 (c54 + livscyklus + faq): 0 overflow og 0 pageerrors. Rådgivnings-, tab- og historiklinjen findes på alle. "overvægt" er de kendte negerede hits.
+
+### MUST
+- Ingen.
+
+### SHOULD
+1. Delvist rettet · T1 Energy-rollen er ryddet op (ingen faktatjek-tekst). Babcock & Wilcox har stadig `role` = "Kedler og design-byggeri. 1,2 GW 4. marts 2026 er Base Electrons anlæg. 20 turbiner 11. august 2026 er efter beholdningen…" i value-chains.json. Behold kun "Kedler og design-byggeri til kraftværker" og lad facts[] bære datoerne.
+2. NY · selskab.html viser stadig label "NDI-tag" (fx SoftBank: "NDI-tag Platforme"). Det kommer fra unique-metrics.json (333 labels). ndi-perspektiv oversætter allerede via `da()` til "NDI-tema". Det samme bør ske på selskabssiden, så ordet er ens overalt. Ren visningstekst.
+3. Livscyklus på Portefølje: alle 345 placeringer er nu maskinelle. Mærkningen står kun i én linje under kurven. Overvej "(forslag)" i tooltip pr. prik, som på selskabssiden. Persona privat læser ellers "Høj vækst 186" som NDI's egen vurdering.
+4–6. Uændret: ndi-paa-x tap-mål/slugs/label :110, index:89, omkostninger:606.
+
+### Nice
+- Uændret.

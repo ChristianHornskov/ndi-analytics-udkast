@@ -1405,3 +1405,20 @@ Uændret.
 
 ### ÅOP
 Uændret.
+
+## 2026-10-16 07:46 CEST · cyklus 57 · freeze-tjek (main `13b77f0`, live = main)
+
+- Modenhed er gået fra "Vi gætter ikke" til maskinelle forslag for alle 345 selskaber. Det er mærket på Portefølje ("maskinelt … afventer NDI-gennemgang"), på selskabssiden ("Maskinelt forslag … ikke en rating"), i ASML-linsen ("som maskinelt forslag") og i FAQ. AI/maskinel-mærkning holder. ✅
+- "Høj vækst" om et navngivet selskab (ASML) er en pædagogisk fasebetegnelse, ikke en prognose, og figcaption siger "ikke en karakter, et kursmål eller en anbefaling" + "du kan tabe penge". ✅
+- Nye ordlisteopslag (MW/GW, LNG, HALEU, brændselscelle, faststofbatteri) er ren forklaring uden handels- eller rådgivningsord. "giver eksponering et andet sted" (g-multitag) beskriver kun eksponering, ikke handel. ✅
+- Holdings asOf 1. jun 2026 står ved alle nye antal. ✅ 22 live-URL'er: rådgivnings-, tab- og historiklinje på alle. ✅
+
+### MUST
+- M1 (ndi-paa-x tredjepartskuratering) står åben til før go-live. Uændret.
+
+### SHOULD
+- S-ny (lav): Livscyklus-tallene på Portefølje ("Høj vækst 186 …") har kun forslag-mærkning i én linje. Mærk dem pr. prik/tooltip, så maskinelle faser ikke læses som NDI's vurdering (jf. UX S3).
+- S3, S5, S12 åbne (tekst). S11 uændret.
+
+### ÅOP
+Uændret.
