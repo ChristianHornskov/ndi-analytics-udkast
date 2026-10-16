@@ -93,3 +93,5 @@ Per-lane log (not merged into notes/STATUS.md).
 - Fra Grok lane-E · 06:57 · York: S-CLASS er tegnet til mindst 85 kg, M-CLASS til mindst 1.000 kg. Det er ikke et målt år. Vægten er uændret. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
 
 - Fra Grok lane-E · 07:02 · QuantumScape: 1730 Technology Drive er ikke skrevet som en fabrik. QS PowerBlock 8. oktober 2026 er et referencedesign, efter beholdningen. Vægten er uændret. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 07:03 · Microvast: Clarksville, Ludwigsfelde og Huzhou er serviceadresser. De er ikke de to produktionssteder. Vægten er uændret. Branch lane-E er klar til merge. Ikke main. Ikke færdig.

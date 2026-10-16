@@ -2671,14 +2671,14 @@
   "US59516C1062": {
    "name": "Microvast",
    "theme": "energy",
-   "summary": "Laver litium-ion-celler, moduler, pakker og lagringssystemer. To produktionssteder er ikke navngivet med by. Hovedkontoret ligger i Houston. Siden om netlagring er næste generation. Det er ikke et lager i drift.",
-   "watch": "Om to produktionssteder bliver læst som et lager i drift. Siden navngiver ikke byerne. 20 år er driftserfaring, ikke et stiftelsesår.",
+   "summary": "Laver litium-ion-celler, moduler, pakker og lagringssystemer. To produktionssteder er ikke navngivet med by. Supportsiden er kundeservice og skriver adresser i Clarksville, Ludwigsfelde og Huzhou. Det er ikke bevis for, at en fabrik kører. Hovedkontoret ligger i Houston. Det er ikke et lager i drift.",
+   "watch": "Om en serviceadresse bliver læst som et produktionssted. Om-siden navngiver stadig ikke de to steder. 20 år er driftserfaring, ikke et stiftelsesår.",
    "source": "https://microvast.com/company/",
    "products": "Celler, moduler, pakker og lagringssystemer. Katode, anode og elektrolyt. Ikke et kraftværk.",
    "customers": "Siden nævner transport, tungt udstyr og lagring. Den navngiver ikke en kunde.",
-   "role": "Celler og systemer. Ikke et lager i drift.",
+   "role": "Celler og systemer. Serviceadresser er ikke de to produktionssteder. Ikke et lager i drift.",
    "narrative": [
-    "Microvast skriver, at selskabet er vertikalt integreret, og at det selv laver katode, anode og elektrolyt samt celler, moduler, pakker og lagringssystemer. Kemierne på siden er NMC, LFP og LTO. Selskabet skriver, at alle produktionssteder er ISO 14001. Om-siden skriver to produktionssteder. Byerne er ikke navngivet. Drift i USA, Kina og Tyskland er ikke de to steder.",
+    "Microvast skriver, at selskabet er vertikalt integreret, og at det selv laver katode, anode og elektrolyt samt celler, moduler, pakker og lagringssystemer. Kemierne på siden er NMC, LFP og LTO. Selskabet skriver, at alle produktionssteder er ISO 14001. Om-siden skriver to produktionssteder. Byerne er ikke navngivet. Drift i USA, Kina og Tyskland er ikke de to steder. Supportsiden, læst 16. oktober 2026, er kundeservice. Den skriver 780 International Blvd i Clarksville, An der Eichspitze 8 i Ludwigsfelde og No 2198, Hongfeng Road i Huzhou. Det er serviceadresser. De er ikke bevis for, at en fabrik kører. Ordet leader er ikke taget med.",
     "Hovedkontoret ligger på 2929 Briarpark Drive i Houston i Texas. Siden skriver cirka 2.000 medarbejdere og 20 års driftserfaring. Begge tal er uden dato, og 20 år er ikke et stiftelsesår. Siden om fremtidig lagring til nettet er skrevet som næste generation. Den siger ikke, at et lager er i drift. Ordene leader, safest, highest og maximize er ikke taget med."
    ],
    "narrativeSources": [
@@ -2693,6 +2693,10 @@
     {
      "label": "Kontakt",
      "url": "https://microvast.com/contact/"
+    },
+    {
+     "label": "Kundeservice",
+     "url": "https://microvast.com/contact/support"
     },
     {
      "label": "Lagring",
