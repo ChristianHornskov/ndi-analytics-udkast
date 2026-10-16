@@ -494,3 +494,10 @@ Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaede.html, va
 3. **Kvantebroerne viser nu, at de er links:** "Hop til Cloud →", "Hop til Udstyr →", "Læs Sådan tænker vi →" osv. Før var hele kortet et link uden synligt tegn. Kvantebroerne i value-chains.json har fået en kort `k` (fx "Kvante lejes over skyen") til brug på den enkle side.
 Tjek: Playwright på 1280 og 375 med 0 sidefejl og ingen sidescroll. Cloud → kvante markerer 1 bro (413/446 px), Datacentre → rum markerer 1 tråd-kort, og bro-hop åbner `#lk-cloud`. smoke.mjs fail 0 (egen server på 8841). Precheck PASSED. Grep efter handelssprog og tankestreger i diff giver 0 hits.
 Næste: energi- og robotik-led på vaerdikaede.html kan få samme linje fra rum-trådene (Lagring, Robotter), og "Broer til andre kæder" kan få samme "Hop til"-tegn. Ikke færdig.
+
+## Fra Claude lane-A · 2026-10-16 ~03:20 CEST (kvante og robotik direkte fra den enkle side, broer viser "Hop til")
+Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaede.html, vaerdikaeder.html og notes.
+1. **vaerdikaede.html, "Fire andre kæder":** Kvantekortet linker nu direkte til kvantetrappen ("🪜 Kvantetrappen: hvor langt er feltet? 5 trin →", `#q-lad`) og til broerne ("🔗 Hvor kvante møder kæden: 5 broer →", `#q-br`). Robotikkortet linker til løkken ("🔁 Sanse, tænke, handle …", `#p-loop`). Teksten bygges af `ladder`, `bridges` og `loop` i value-chains.json, så der er ingen ny påstand at kildebelægge.
+2. **vaerdikaeder.html, "Broer til andre kæder":** Hvert brokort viser nu "Hop til <led> →" ligesom kvantebroerne. Før var hele kortet et link uden synligt tegn.
+Tjek: Playwright på 1280 og 375 med 0 sidefejl og ingen sidescroll. `#q-lad`, `#q-br` og `#p-loop` lander på 194 px (1280) og 222 px (375) med sektionen synlig. Broer: rum 1, energi 6, robotik 6 og AI 6 "Hop til". smoke.mjs 52/52 fail 0 (egen server på 8841). Precheck PASSED. Grep efter handelssprog og tankestreger i diff giver 0 hits.
+Næste: energi-fanen er 17.100 px på mobil og har ingen læse-rute som rummet. Den kan få en kort rute med stop-bjælker. Ikke færdig.

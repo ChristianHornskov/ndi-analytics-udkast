@@ -1897,7 +1897,7 @@
         + `<div class="br-grid">${list.map(p => {
           const n = p.names.length;
           const more = n > 3 ? ` og ${n - 3} til` : '';
-          return `<a class="br" href="?kaede=${esc(p.c.id)}#lk-${esc(p.l.id)}" data-hop="${esc(p.c.id)}:${esc(p.l.id)}"><span class="br-ico" aria-hidden="true">${p.src.icon || '◆'}</span><span class="br-t">${esc(p.src.short || p.src.label)} ⇄ ${esc(p.l.short || p.l.label)} <small>· ${esc(p.c.title)}</small></span><span class="br-d"><span class="br-n">${n}</span> fælles: ${esc(p.names.slice(0, 3).join(', '))}${more}</span></a>`;
+          return `<a class="br" href="?kaede=${esc(p.c.id)}#lk-${esc(p.l.id)}" data-hop="${esc(p.c.id)}:${esc(p.l.id)}"><span class="br-ico" aria-hidden="true">${p.src.icon || '◆'}</span><span class="br-t">${esc(p.src.short || p.src.label)} ⇄ ${esc(p.l.short || p.l.label)} <small>· ${esc(p.c.title)}</small></span><span class="br-d"><span class="br-n">${n}</span> fælles: ${esc(p.names.slice(0, 3).join(', '))}${more}</span><span class="br-go">Hop til ${esc(p.l.short || p.l.label)} →</span></a>`;
         }).join('')}</div><p class="src" style="margin-top:6px">${esc(pack.bridgesNote || '')}</p>`;
     }
 
