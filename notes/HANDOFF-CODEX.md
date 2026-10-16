@@ -183,3 +183,17 @@ Fællesprospektet (opdateret 24.10.2025) nævner under NewDeal Invest KL kun and
 - 06:03 Ordliste 149: «Warrant (tegningsret)» og «Forkortede navne i beholdningen» («Sp ADR», «N», «/The»). Svar til cyklus 38 SHOULD 3–4: forklarer Opendoor-warrants og råbeholdningsnavne uden at røre data. Selskabssiden kan linke til `om-data.html#g-warrant` / `#g-raanavne` (lane med selskab.html).
 - 06:04 ideer form 19 «Hvor tjener teknologien pengene?» (IDESPEJDER #13, common size). Sig: «Man skal se, hvilket led pengene lander i, ikke hvad selskabet hedder.» Tjek før live: Amazon 10-K 2024 (638 / 108 / 69 / 40 mia. USD).
 - 06:05 FAQ 27 korte svar: «Hvorfor ser navnene i listen så mærkelige ud?» og «Hvorfor står der warrants med 0 % vægt?» → ordliste #g-raanavne / #g-warrant. Søg «warrant» giver svar + ordliste.
+
+## Lane-C morgenresumé (06:11 CEST, til Christian/Codex)
+**Nyt siden 04:00, alt på `lane-C` og pushet:**
+- `ideer.html` har nu **19 billeder**. Nyt: «Hvor tjener teknologien pengene?» (`#h-cs`, Amazon 2024: AWS ca. 17 % af omsætningen og ca. 58 % af driftsresultatet). Temalinks på mobil er nu mindst 24 px høje.
+- **Ordliste 149** med gruppetal, der tælles på siden. Nye opslag: warrant og forkortede navne i beholdningen. **FAQ 27** med to nye svar, der linker til dem.
+- `ndi-perspektiv.html`: livscyklus beskrives som et maskinelt forslag, der afventer NDI. «Til value» er ændret til «til moden».
+- `invester.html` trin 4: omkostningsafsnittet læses roligere. `risici.html`: CAGR linker til ordlisten. `kort.html`: Idéer-døren er opdateret.
+- Demo-tallene ovenfor er tjekket mod siderne kl. 06:00: lær 19 døre, NDI-perspektiv 333, FAQ 27, ordliste 149, ideer 13 foldede på mobil.
+
+**Skal tjekkes før live:** Amazon-tallene fra 10-K 2024 (se VIDENSBOT-live-check) og årstallene på tidslinjen.
+
+**Uden for lane-C, til Leo:** `index.html:89` «Central Information Dokument» bør hedde «dokument med central investorinformation (KID)». `data/unique-metrics.json` `note` siger «Quantum-metrics» og «Livscyklus er ikke klassificeret», men data siger forslag.
+
+**Note:** To sessioner skrev til lane-C omkring 06:05–06:10, og der kom dobbelte commits på invester-rettelsen. Indholdet er det samme, og ingen force-push.
