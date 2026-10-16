@@ -1389,3 +1389,92 @@ Ikke juridisk rådgivning. Der er ingen docs-delta.
 
 ### ÅOP
 Uændret.
+
+## 2026-10-16 07:42 CEST · cyklus 56 · freeze-tjek (main `ffda4c8`; ændrede filer testet lokalt, Pages lagger)
+
+- periode "Tre datoer, tre roller": hver tekst siger "ikke en prognose" / "siger ikke noget om det næste år" — past ≠ future holder. ✅ PMINDIAKK-varianten viser ingen afkast og ingen 1m/3m (0 procenttal). ✅ YTD markeret som afventende Fundmarket-godkendelse. ✅
+- Nye faktatekster (B&W, T1) skelner planer/kapacitet fra drift og daterer før/efter beholdningen. Ingen handels- eller rådgivningsord. ✅
+- selskab.html: "anbefalet investeringshorisont" er KID-ordlyd fra PRIIP — ok.
+- Ordsweep: kun negerede "ikke bevidste overvægte" — ok.
+
+### MUST
+- M1 (ndi-paa-x tredjepartskuratering) åben før go-live. Uændret.
+
+### SHOULD
+- S3, S5, S12 åbne (tekst). S11 uændret.
+
+### ÅOP
+Uændret.
+
+## 2026-10-16 07:46 CEST · cyklus 57 · freeze-tjek (main `13b77f0`, live = main)
+
+- Modenhed er gået fra "Vi gætter ikke" til maskinelle forslag for alle 345 selskaber. Det er mærket på Portefølje ("maskinelt … afventer NDI-gennemgang"), på selskabssiden ("Maskinelt forslag … ikke en rating"), i ASML-linsen ("som maskinelt forslag") og i FAQ. AI/maskinel-mærkning holder. ✅
+- "Høj vækst" om et navngivet selskab (ASML) er en pædagogisk fasebetegnelse, ikke en prognose, og figcaption siger "ikke en karakter, et kursmål eller en anbefaling" + "du kan tabe penge". ✅
+- Nye ordlisteopslag (MW/GW, LNG, HALEU, brændselscelle, faststofbatteri) er ren forklaring uden handels- eller rådgivningsord. "giver eksponering et andet sted" (g-multitag) beskriver kun eksponering, ikke handel. ✅
+- Holdings asOf 1. jun 2026 står ved alle nye antal. ✅ 22 live-URL'er: rådgivnings-, tab- og historiklinje på alle. ✅
+
+### MUST
+- M1 (ndi-paa-x tredjepartskuratering) står åben til før go-live. Uændret.
+
+### SHOULD
+- S-ny (lav): Livscyklus-tallene på Portefølje ("Høj vækst 186 …") har kun forslag-mærkning i én linje. Mærk dem pr. prik/tooltip, så maskinelle faser ikke læses som NDI's vurdering (jf. UX S3).
+- S3, S5, S12 åbne (tekst). S11 uændret.
+
+### ÅOP
+Uændret.
+
+## 2026-10-16 07:47 CEST · cyklus 57b · Nasdaq-100-sammenligning (main `76b0e7d`, testet lokalt på archive af origin/main)
+
+- Fonden `?view=fonden`: checkboxen "Vis Nasdaq-100 som sammenligning" er slået fra som standard (44 px). Når den slås til (`cmp=nasdaq`), vises en stiplet linje, en forklaring ("kursindeks uden udbytte, omregnet til DKK") og label "Nasdaq vises kun som sammenligning, ikke som fondens benchmark. Historisk afkast er ingen garanti." Teksten "Fonden har intet fast benchmark" står stadig. ✅ Tjekpunktet "ingen Nasdaq som officielt benchmark" holder.
+- PMINDIAKK + `cmp=nasdaq`: hverken checkbox, linje eller tal. 12m-gaten holder. ✅ embed/chart ignorerer `cmp`. ✅ 0 overflow @375, 0 pageerrors.
+
+### SHOULD (før go-live)
+- S-N1 · Skæv sammenligning: fonden vises som **totalafkast** og Nasdaq-100 som **kursindeks uden udbytte** (^NDX). Over perioden 2023-09 → 2026-10 er udbytte på ca. 0,7 %/år udeladt, så Nasdaq ser ca. 2 procentpoint lavere ud. Readout viser "Fonden +104,8 % · Nasdaq-100 +94,5 %". Det er mærket, men en fair præsentation (MiFID art. 44 / ESMA-retningslinjer om sammenligninger) kræver sammenlignelige grundlag. Brug Nasdaq-100 Total Return (XNDX), eller skriv i labelen, hvilken vej forskellen trækker ("uden udbytte, derfor lidt for lavt").
+- S-N2 · Datakilde/licens: Yahoo Finance-dagslukkekurser og navnet Nasdaq-100 i offentlig markedsføring kræver normalt en licens fra Nasdaq. Få det afklaret, eller brug en licenseret kilde, før siden bliver offentlig.
+- S-N3 · Labelen vises kun, når checkboxen er slået til. Det er ok, men readoutet "Nasdaq-100 +94,5 %" står uden "ikke benchmark" i samme linje. Overvej at gentage "(sammenligning)" i readoutet, så et screenshot ikke fjerner forbeholdet.
+
+## 2026-10-16 07:50 CEST · cyklus 58 · Kurs/Totalafkast + udbytte-U (main `0e08feb`, live = main pr. md5)
+
+- Kurs/Totalafkast-knapperne (44 px @375) er sat til Totalafkast som standard. Kurs-tilstanden har en forklaring ("uden udbytte … falder med udbyttet på ex-datoen"). Grafens data stemmer med udbyttet: 185,13 → 147,40 den 22. jan. 2025 (38,9 kr.) og 174,28 → 133,04 den 20. jan. 2026 (38,0 kr.). ✅
+- U-markører kun ved de 2 bekræftede ex-datoer. Teksten er faktuel ("Udbytte ex-dato …: 38,9 kr. pr. andel"). ✅
+- PMINDIAKK med `visning=kurs&cmp=nasdaq`: ingen knapper, ingen U-markører, ingen tal. 12m-gaten holder. ✅ 0 overflow @375/1280, 0 pageerrors.
+- Nasdaq stadig slået fra som standard, med label. "Intet fast benchmark" står uændret. ✅
+
+### SHOULD (før go-live)
+- S-K1 · Tal, der ikke passer sammen, i Kurs-tilstand: grafen og readoutet viser "Fonden +26,5 %", men overskriften lige under (#chart-takeaway) siger stadig "Fonden steg +104,8 % i den valgte periode". Det samme gælder "afkastet +104,8 % siden start". Tallet er det korrekte totalafkast, men det står uden mærkning ved siden af et andet tal. Skriv "Totalafkastet steg …" i takeaway, eller lad teksten følge den valgte visning.
+- S-K2 · Kurs + Nasdaq er skævt den anden vej: "Fonden +26,5 % · Nasdaq-100 +94,5 %". Fondens kurs er reduceret med ca. 77 kr. udbytte, mens Nasdaq-indekset kun mister ca. 0,7 % om året. Fonden ser derfor markant dårligere ud end sit egentlige afkast. Det er ikke ulovligt til fondens fordel, men det er ikke en fair sammenligning (samme princip som S-N1). Skjul Nasdaq i Kurs-tilstand, eller tilføj "fondens kurs er reduceret med udbetalt udbytte" i labelen.
+- S-K3 (lav) · U-tooltip: tilføj "Tidligere udbytte er ingen garanti for fremtidigt udbytte" (ex-datoer og beløb kan læses som en fast udlodning).
+- S-N1, S-N2, S-N3 (Nasdaq TR/licens/readout) åbne. M1 uændret. S3, S5, S12 åbne.
+
+### ÅOP
+Uændret.
+
+## 2026-10-16 07:54 CEST · cyklus 59 · rullende 12m, 5 dybeste fald, stale-advarsel (main `41a61c6`, testet lokalt på archive + live md5 = main)
+
+- Rullende 12m og nedture regnes på totalafkast i DKK efter løbende omkostninger, og det står i teksten. Fald-tabellen viser også det åbne fald ("Ikke genvundet endnu", -26,8 %). Seneste 12m (-14,8 %) står lige så tydeligt som bedste (+72,5 %). Fremstillingen er afbalanceret. ✅ Advarslen om historisk afkast/tab står direkte under sektionen. ✅
+- PMINDIAKK: ingen rullende tal og ingen fald. 12m-gaten holder. ✅ Ingen 1m/3m på PMINDI. ✅
+- Datafriskhed: advarslen vises, når afkastdata er mere end 3 dage gamle. Det styrker kravet om "ingen live trades/kurser". ✅
+
+### SHOULD (før go-live)
+- S-R1 (NY) · "Positivt i 97 % af de målte dage": de rullende 12-måneders vinduer overlapper næsten helt, så tallet ser ud som en sandsynlighed for et positivt år. Det kan læses som et løfte om gevinst (MiFID art. 44 stk. 2: et retvisende billede). Fjern sætningen, eller tilføj "overlappende perioder. Det siger ikke noget om sandsynligheden fremover".
+- S-K1, S-K2, S-K3, S-N1, S-N2, S-N3 er åbne. M1 er uændret. S3, S5 og S12 er åbne.
+
+### ÅOP
+Uændret.
+
+## 2026-10-16 07:57 CEST · cyklus 60 · freeze-tjek (main `f2c83d5`)
+
+Gennemgået: embed dag-split/livsbjælke, drawdown år-/bund-hop, sammenlign klasse-spor, nyhedsarkiv/værdikæder-rettelser.
+
+- PMINDIAKK: der vises ingen afkast eller dag-tællinger før 12 m (embed, drawdown, sammenlign siger kun "313 dage", og kursen vises fra 5. dec. 2026). ✅
+- Ingen nye 1m/3m. Ingen Nasdaq-benchmarkpåstand i de nye blokke. ✅
+- Nyhedsarkiv: "Det er selskabernes egne ord, ikke en anbefaling" og "Datoen ligger efter beholdningen" står eksplicit. ✅ Der er ingen køb/sælg/overvægt/eksponering/garanti-ord i diffen.
+- Footer (rådgivning/tab/historisk) findes på embed, drawdown og sammenlign. ✅
+
+### MUST
+- Ingen.
+
+### SHOULD
+- **S-D1 (NY)** · Embed viser som standard "749 af 770 dage lå på eller over nul". Ligesom S-R1 (97 % positive dage) fremhæver det en gunstig historisk statistik. Den afhænger desuden helt af startdatoen ("nul er første dag"). Forbeholdet står der, men standardvisningen er den gunstige side. Forslag: vis begge tal i samme sætning (fx "749 dage over, 21 under"), eller start på en neutral visning. Tilføj "Historisk udvikling er ingen garanti for fremtidigt afkast" tæt på tallet, fordi embeds kan blive vist uden for sitet.
+- **S-D2 (NY)** · "Delår, afventer Fundmarket-godkendelse" (embed ÅTD) kan læses som om tallene er ikke-godkendte eller foreløbige. Hvis ÅTD-tal ikke er endelige, bør de ikke vises i et embed. Hvis de er endelige, skal sætningen væk eller omformuleres.
+- Åbne: S-R1, S-K1/S-K2, S-N1–N3, M1 (status som i c59).
