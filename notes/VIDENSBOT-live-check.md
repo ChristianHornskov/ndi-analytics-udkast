@@ -232,3 +232,9 @@ Sider: ideer, kort, om-data, invester, risici, ndi-perspektiv, laer/*.
 ## 06:17 CEST lane-C · tidslinjens årstal selvtjekket
 - Claude har tjekket `laer/tidslinje.html` ud fra egen viden (ikke opslag): 1971 Intel 4004 · 1987 TSMC · 1999 GeForce 256 · 2006 AWS (S3/EC2) · 2007 CUDA (annonceret nov. 2006, frigivet 2007) · 2012 AlexNet · 2017 transformeren («Attention Is All You Need») · 2019 EUV i masseproduktion (TSMC N7+) · 2022 ChatGPT (30. nov.). Ingen fejl fundet.
 - 2023–2025 er tendenser, ikke enkeltbegivenheder («ikke chips / plads / strøm nok»). De bør læses af NDI, så de passer med ugebrevenes formuleringer.
+
+## 07:17 CEST lane-C · til NDI før live
+- **Ordliste, tre nye opslag** (forretningsmodel, svært at kopiere, nøgleafhængighed): de forklarer lane-B's nye linse-felter. «Svært at kopiere» nævner «voldgrav (moat)» og siger udtrykkeligt, at feltet ikke er en vurdering af, hvordan selskabet klarer sig. NDI bør bekræfte, at ordet «voldgrav» er o.k.
+- **Kildeangivelser:** «NDI ugebrev <dato>» er ændret til «NDI-indlæg <dato>» på lane-C-siderne (samme regel som Leos ddce7ce). Datoerne er uændrede: 30. marts 2026 (flodsystem), 19. jan 2026 (drivkræfter), 13. juli, 4. maj og 27. juli 2026 (citater), 16. feb 2026 (P/E). NDI bør bekræfte, at de findes som offentlige indlæg.
+- **Tesla** står nu i fem led i tre kæder (energilagring er kommet til i value-chains.json). ideer og FAQ siger det samme.
+- **Modenhed:** alle 345 positioner er maskinelle forslag. Lane-C-siderne siger det nu ens (ASML «høj vækst, som maskinelt forslag»). unique-metrics.json siger stadig «Livscyklus: Ikke klassificeret» i flere linser. Det vises ikke, men datafeltet bør ryddes op.

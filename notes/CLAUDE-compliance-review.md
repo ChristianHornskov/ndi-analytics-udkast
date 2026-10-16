@@ -1267,3 +1267,125 @@ Ikke juridisk rådgivning. Der er ingen docs-delta siden c48/c49. Live md5 = lok
 
 ### Freeze-note
 Alle fire er tekst- og advarselsrettelser og må laves efter 08:00 som fejlrettelser. Stop-commit er 08:30. Lane-R retter dem ikke (read-only), så de skal tages af ejer-lanerne.
+
+## 2026-10-16 07:15 CEST · cyklus 51 (main `83c64d0` uændret; live = main)
+
+Ikke juridisk rådgivning. Der er ingen docs-delta. Ny live-sweep af 50 URL'er: hits og flags er identiske med c48b. "overvægt" står kun i negationen "Ikke en anbefaling eller en bevidst overvægt", og "afventer" er ÅTD/Fundmarket-forbeholdet. Radg-miss på fonden, udforsk, om-data, periode, selskaber og AKK er falske negative ("rådgivning" findes i teksten). Det er kun drawdown og embed/chart, der reelt har 0 synlige forekomster.
+
+### MUST
+- **Ingen åbne MUST-blokere.**
+
+### SHOULD (åbne, genverificeret pr. `83c64d0`)
+9. PMINDIAKK-visningen viser ingen omkostningsindikator (live-tekst: 0× "omkostning"). 2,85 % findes kun i PMINDI-grenen (`js/app.js:460`).
+7. `drawdown.html` (0× "rådgivning") og `embed/chart.html` (kun i `og:description`, 0× i den synlige tekst) mangler en ikke-rådgivningslinje.
+3. `index.html:89` "Se Central Information Dokument".
+5. `omkostninger.html:458` "Det er det tal, marketingmateriale skal gengive ærligt".
+
+### Freeze-note
+Freeze starter kl. 08:00. Alle fire er tekst- og advarselsrettelser og må laves som fejlrettelser indtil stop-commit kl. 08:30. Ejer-lanerne skal tage dem, da lane-R er read-only.
+
+## 2026-10-16 07:18 CEST · cyklus 51b (main `91328f6`; live = main)
+
+Ikke juridisk rådgivning. **Korrektion til c51:** main flyttede til `91328f6` under cyklussen. Denne sektion erstatter statuslisten i c51.
+
+### Lukket
+- **SHOULD 9 lukket.** PMINDIAKK-visningen viser KID-RIY 2,85 % (og 2,79 % for PMINDI) via `costPanel(true)`. Live-flaget "okon" er nu 1. NAV/kurs er stadig skjult før 5. dec. 2026 ✅.
+- **SHOULD 7 lukket.**
+  - `drawdown.html` har nu en footer med "Generel information, ikke investeringsrådgivning … Du kan tabe penge" plus en print-mast, som kun vises ved udskrift (`.print-mast` `display:none` på skærm).
+  - `embed/chart.html` har synlig tekst: "Generel information, ikke investeringsrådgivning".
+  - Live-flaget "radg" er 1 på begge sider.
+- **AI-mærkning:** `unique-metrics.json` har 73 nye felter af typen Forretningsmodel/Svært at kopiere. Alle har `ai: true` og vises med "AI-udkast" på selskabssiderne (fx SoFi). Ordsweep: "sælger"/"køber" bruges kun beskrivende om selskabernes forretning (0 køb/sælg-opfordringer). Der er ingen anbefaling, garanti, overvægt eller eksponeringssprog.
+- Modenhed er nu omdøbt til "maskinelt forslag" i stedet for klassifikation/rating (`9c23bc8`). Det mindsker indtrykket af en vurdering ✅.
+
+### MUST
+- **Ingen åbne MUST-blokere.**
+
+### SHOULD (åbne pr. `91328f6`)
+3. `index.html:89` "Se Central Information Dokument" → "Se KID'et (Central Information) før du investerer".
+5. `omkostninger.html:458` "Det er det tal, marketingmateriale skal gengive ærligt" er en intern formulering.
+
+### Freeze-note
+De to resterende punkter er rene tekstrettelser, som kan laves før 08:30.
+
+## 2026-10-16 07:23 CEST · cyklus 52 (main `85704e3`; live = main)
+
+Ikke juridisk rådgivning. Delta mod `91328f6`: fakta, omkostninger, ndi-paa-x (lane-X).
+
+### Verificeret
+- omkostninger/fakta: ny KID-plade viser KID-RIY 2,79 % / 2,85 % (5 år), mærket "ikke tegnet" og "Ikke et ÅOP". Footer: "Du kan tabe penge. Ikke rådgivning." 0 hits på garanti/sikker gevinst/overvægt/købsopfordring.
+- ndi-paa-x (fresh load): "ikke NDI's holdning", rådgivning, tab og historik-advarsel er til stede.
+- Fonden PMINDI/PMINDIAKK: "intet fast benchmark" (ingen Nasdaq-benchmarkpåstand). Beholdning pr. 1. jun. 2026 (≤ 2026-06-01) ✅. Ingen 1m/3m-hits i fonden-tekst ✅.
+- Ordsweep 50 URL'er: "anbefal*" optræder kun som negation eller KID's "anbefalet ejertid". "overvægt" står kun i "ikke bevidste overvægte" ✅.
+
+### MUST
+- **Ingen åbne MUST-blokere.**
+
+### SHOULD (åbne pr. `85704e3`, genverificeret i kilden)
+3. `index.html:89` "Se Central Information Dokument" → "Se KID'et (Central Information) før du investerer".
+5. `omkostninger.html:606` (var :458) "Det er det tal, marketingmateriale skal gengive ærligt" er en intern formulering.
+10. **Ny (drift):** en stale modul-cache efter deploy kan give en blank `ndi-paa-x.html` (se UX c52). Hvis siden render tom, forsvinder dens advarsels-/ikke-holdning-linjer også. Lav risiko og kortvarigt (≤ 10 min).
+
+### ÅOP
+Bevidst fravalgt med "Ikke et ÅOP"-mærkning. Omkostningsoplysningen hviler på KID-RIY + OCF/postsatser. FO-personaens ÅOP-ønske er stadig uopfyldt. Afklar med compliance, om ÅOP skal med (ikke en blokering for et udkast).
+
+## 2026-10-16 07:34 CEST · cyklus 53 (main `f6d6b4b`; live = main)
+
+Ikke juridisk rådgivning. Delta mod `85704e3`: drawdown, sammenlign, embed/chart (lane-A/D). Første fulde indholdsgennemgang af ndi-paa-x, efter at siden nu renderer live.
+
+### Verificeret
+- embed/chart: ny print-mast "Markedsføringsmateriale. Generel information, ikke investeringsrådgivning. Historisk afkast er ikke en pålidelig indikator…" ✅. PMINDIAKK-gate ("Ingen NAV eller graf før 5. december 2026") holder i både embed og drawdown, og der vises ingen %-tal ✅.
+- sammenlign: KID-omkostning pr. klasse er tydeligt klasse-mærket ved klik ("PMINDI, ca. 2,79 % om året ved 5 år i KID. Før kurtage og depot.") ✅.
+- 50-URL ordsweep: uændret. Ingen garanti/sikker/køb-opfordring. "overvægt" står kun som "ikke en bevidst overvægt" ✅. Footers med tab/rådgivning/historik er til stede på alle 50 ✅.
+
+### MUST (før offentliggørelse; ikke en blokering for noindex-udkast)
+- **M1 · ndi-paa-x kuraterer tredjepartsopslag om fondens beholdninger.** 7 opslag fra fulgte konti (@BullTheoryio, @FundaAI, @MelvinInvests, @MilkRoadAI) handler om SoftBank, Nvidia, Oracle, CoreWeave og Nebius. Alle fem er i portfolio.json. Flere er ensidigt positive/spekulative, fx "BREAKING: … At a $2 trillion valuation, its stake would be worth $260 billion" og "People are forgetting how important companies like $CRWV and $NBIS are…". Når en forvalter selv udvælger og viser dem på sit markedsføringssite, bliver det formentlig forvalterens markedsføringsmateriale (krav om korrekt, klar, ikke-vildledende og afbalanceret; jf. ESMA's retningslinjer for markedsføringsmateriale/CBDF), uanset mærkningen "ikke NDI's holdning". Anbefaling til teamet: fjern fulgte-konto-opslag om beholdninger før go-live, eller lad compliance godkende hvert opslag.
+
+### SHOULD
+- **S11 · Medarbejderes private konti som "NDI-konti = markedsføring".** @MadsC007, @jesper_baek og @CHornskov bliver erklæret som NDI-markedsføring. Det kræver medarbejdernes samtykke og compliance-review af hvert opslag. Indholdet er meningspræget om beholdninger: TSLA "de lavede den bedste bil", "Listening to Bloomberg about AI is like asking a BWM sales rep…", og UPST fra 2025. Der er ikke fundet handelssprog (øger/overvægt/køb/sælg = 0) ✅, men opslagene er ensidige uden risikobalance i selve kortet.
+- **S12 · Selvmodsigende mærkning** (ndi-paa-x.html:110): "ikke NDI's holdning" efterfulgt af "kan være NDI's holdning". Uklar for detailinvestor. Se UX c53 SHOULD 3.
+- **S13 · "Performance-opdatering efter Q2 2026"** (@InvestNewdeal, 2. jul.) linker afkast ud til X/Fundmarket uden tal på kortet. Ok i sig selv, men kortet bør bære historik-advarslen inline eller ligge under footer-advarslen (det gør det i dag via fælles footer — acceptabelt).
+- Stående: S3 index.html:89 KID-ordlyd. S5 omkostninger.html:606 intern formulering.
+- Lukket: S10 (stale modul-cache, ndi-paa-x renderer nu).
+
+### ÅOP
+Uændret: "Ikke et ÅOP" + KID-RIY. FO-ønsket om ÅOP er stadig åbent til afklaring med compliance.
+
+## 2026-10-16 07:37 CEST · cyklus 54 · freeze-tjek (main `f6d6b4b`, uændret; live = main)
+
+Ikke juridisk rådgivning. Der er ingen docs-delta siden c53. Footer- og advarselstjek på live for 20 nøgle-URL'er (375 px, cache-bust): index (PMINDI+AKK), selskaber, kort, vaerdikaeder, drawdown, risici, selskab SoftBank, temaer, invester, om-data, omkostninger, fakta, sammenlign, ndi-paa-x, ndi-perspektiv, periode, ideer, nyhedsarkiv og embed/chart.
+
+### Verificeret
+- Alle 20 sider har ikke-rådgivning ✅, tab af kapital ✅ og historisk afkast ≠ fremtid ✅.
+- Ordsweep (garanti/sikker gevinst/køb nu/øger eksponering/bedste tip): 0 hits. "overvægt" findes i 8 forekomster i kilden (risici, tema, temaer, value-chains, laer/*). Alle er negationer ("ikke bevidste overvægte") eller pædagogik om spredning ✅.
+- AI-mærkning er synlig, hvor der er AI-tekst (vaerdikaeder, risici, selskab, om-data, ndi-perspektiv, ideer) ✅.
+
+### MUST
+- **M1 (fra c53) er stadig åben før go-live:** ndi-paa-x kuraterer tredjepartsopslag om beholdninger. Det blokerer ikke for noindex-udkastet, men det er en ikke-trivial indholdsbeslutning, så den bør tages af Leo/compliance og ikke indføres under freeze.
+
+### SHOULD (åbne, genverificeret i kilden ved `f6d6b4b`)
+- S3 index.html:89 "Se Central Information Dokument" → "Se KID'et (Central Information) før du investerer".
+- S5 omkostninger.html:606 "marketingmateriale skal gengive ærligt" er en intern formulering.
+- S11 medarbejderkonti som NDI-markedsføring (samtykke + review).
+- S12 ndi-paa-x.html:110 selvmodsigende mærkning.
+- S3, S5 og S12 er rene tekstrettelser. De kan gå ind som bugfix 08:00–08:30.
+
+### ÅOP
+Uændret. "Ikke et ÅOP" + KID-RIY. FO-ønsket om ÅOP afklares med compliance.
+
+## 2026-10-16 07:41 CEST · cyklus 55 · freeze-tjek (main `f6d6b4b`, uændret; live = main)
+
+Ikke juridisk rådgivning. Der er ingen docs-delta.
+
+### Verificeret
+- Ordsweep i docs (garanteret/sikker gevinst/køb nu/sælg nu/øger eksponering/bedste tip/anbefaler vi): 0 hits ✅.
+- Beholdningsdata `portfolio.json` har asOf 2026-06-01 (≤ grænsen) ✅. Filerne med asOf i oktober er NAV/meta (fund-meta, latest, risk-stats). Det er ikke beholdninger.
+- Live = main (md5) på 11 nøglesider, så footer-advarslerne fra c54 gælder fortsat.
+
+### MUST
+- M1 (ndi-paa-x tredjepartskuratering) er åben før go-live. Det er en beslutning til Leo/compliance, ikke en freeze-rettelse.
+
+### SHOULD
+- S3 (index.html:89), S5 (omkostninger.html:606) og S12 (ndi-paa-x.html:110) er stadig åbne. Alle tre er rene tekstrettelser til bugfix-vinduet 08:00–08:30. S11 er uændret.
+
+### ÅOP
+Uændret.
