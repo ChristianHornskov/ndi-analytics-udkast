@@ -92,7 +92,8 @@
  // NDI-linse-links: label efter mål; tema-links følger valgt andelsklasse.
  const lensLinkLabel = (href) => href.startsWith('vaerdikaede') ? 'Se i værdikæden' : href.startsWith('tema.html') ? 'Se temaet' : href.startsWith('laer/livscyklus') ? 'Om livscyklus' : 'Læs mere';
  const lensHref = (href) => href.startsWith('tema.html') && !/[?&]fund=/.test(href) ? `${href}${href.includes('?') ? '&' : '?'}fund=${fundId}` : href;
- const AI_NOTE = pr
+ const hasProfileText = !!(f('summary') || f('role') || f('watch') || (pr?.narrative || []).length);
+ const AI_NOTE = !hasProfileText ? '' : pr
  ? `Udkast: beskrivelserne på siden er genereret med AI${pr.reviewedAt ? ` og tjekket mod kilden ${fmtDate(pr.reviewedAt)}` : ''}. Afventer NDI's endelige gennemgang.`
  : 'Udkast: kort beskrivelse genereret med AI og ikke gennemgået af NDI.';
  const sameTheme = fund.positions.filter((x) => x.theme === p.theme && x.isin !== p.isin).sort((a, b) => (b.weight || 0) - (a.weight || 0));
@@ -137,10 +138,10 @@
  ${switched ? `<p class="band">Selskabet indgår ikke i den valgte klasse, så siden viser ${esc(fund.short)}.</p>` : ''}
 
  <section class="panel">
- <h2 class="panel-h brand">Hvilket problem løser det? ${AI_BADGE}</h2>
+ <h2 class="panel-h brand">Hvilket problem løser det?${f('summary') ? ` ${AI_BADGE}` : ''}</h2>
  ${f('summary') ? `<p class="prose">${esc(f('summary'))}</p>` : `<p class="empty-state">Profiltekst mangler endnu for dette selskab (NDI-linse kan stadig findes nedenfor).</p>`}
  ${pr?.source ? `<p class="src">Kilde: ${ext(pr.source, host(pr.source))}${pr.reviewedAt ? ` · tjekket mod kilden ${fmtDate(pr.reviewedAt)}` : ''}</p>` : ''}
- <p class="src">${AI_NOTE} Generel information. Ikke en anbefaling.</p>
+ ${AI_NOTE ? `<p class="src">${AI_NOTE} Generel information. Ikke en anbefaling.</p>` : `<p class="src">Generel information. Ikke en anbefaling.</p>`}
  </section>
 
  ${narrative.length ? `<section class="panel">
@@ -153,7 +154,7 @@
  </section>` : ''}
 
  <section class="panel">
- <h2 class="panel-h brand">Rolle i værdikæden ${AI_BADGE}</h2>
+ <h2 class="panel-h brand">Rolle i værdikæden${(f('role') || f('products') || f('customers')) ? ` ${AI_BADGE}` : ''}</h2>
  <p class="prose muted">${esc(f('role') || '-')}</p>
  <dl class="facts">
  <dt>Produkter</dt><dd>${esc(f('products') || '-')}</dd>
@@ -200,7 +201,7 @@
  </section>`;
  })()}
  <section class="panel">
- <h2 class="panel-h">Hold øje med ${AI_BADGE}</h2>
+ <h2 class="panel-h">Hold øje med${f('watch') ? ` ${AI_BADGE}` : ''}</h2>
  <p class="prose muted">${esc(f('watch') || '-')}</p>
  <p class="src">Forhold der kan påvirke selskabet. Ikke en prognose eller vurdering af aktien.</p>
  </section>

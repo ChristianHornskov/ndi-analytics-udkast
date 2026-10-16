@@ -13,11 +13,11 @@
   "classification": {
     "positions": 345,
     "themeForslag": 116,
-    "andetCount": 63,
-    "andetWeight": 10.97,
+    "andetCount": 31,
+    "andetWeight": 6.27,
     "maturityClassified": 345,
-    "coverageMeta": 96.59,
-    "coverageMetaNote": "Tema-metadækning; modenhed er forslag (maturityStatus=forslag), ikke manuel NDI-rating.",
+    "coverageMeta": 91.01,
+    "coverageMetaNote": "Tema-metadækning (ikke-Andet); modenhed er forslag (maturityStatus=forslag), ikke manuel NDI-rating. andetWeight = sum af position.weight hvor theme=andet i portfolio.json (PMINDI).",
     "maturityForslag": 345
   }
 }

@@ -1672,3 +1672,6 @@ Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er
 - Test: 8794, 375/1280 på om-data (+ `#g-euv` åbner gruppen), ideer, kort, faq, risici, invester, ndi-perspektiv: 0 konsolfejl, 0 h-overflow, én h1. 0 døde `#g-`-ankre. precheck: se push.
 - **Til vaerdikaeder/js-ejer:** EUV, DRAM/NAND, Edge-AI og bitcoin-mining kan nu linkes til `om-data.html#g-…` fra hint-teksterne. **Til Udforsk-ejer:** «tags» i SPA'en bør hedde «temaer».
 - Branch `lane-C` klar til merge. Næste: UX-review 04:00.
+- Coordinator-loop 2026-10-16 02:12:29 CEST: CONFLICT merge origin/lane-R (ahead 3) — aborted, not pushed
+
+- Coordinator (manual) 2026-10-16 02:14:18 : Leo 02:00 UX MUSTs (dividends comma, Max DD→Største fald, ÅOP-aften-frase væk, AI-udkast kun ved tekst, vaerdikaeder ≥12px mobil) + SHOULDs (menu 44px, life-strip collapse, tema wrap) + FO (andet 6,27 % synket, klasser-forskel, KID-omkostning, Mangler-fra-NDI-boks) + privat 02:07 (Sådan tænker vi-links, færre forslag-badges, vurder-afkast uden Nasdaq). Compliance: KID RIY, Fulgt konto, kan tabe, chartMarkers uden @MadsC007.

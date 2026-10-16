@@ -277,7 +277,9 @@ function renderEntre(root) {
     <nav class="doors-sub doors-sub-3" aria-label="Forstå linsen">
       <a href="temaer.html?fund=${state.fund}"><strong>Temaer${prop.moved ? ` <span class="badge badge-draft" title="Forslag, afventer gennemgang">${prop.moved} forslag</span>` : ''}</strong><span>Fra chips til software - hvad hvert tema dækker</span></a>
       <a href="vaerdikaeder.html"><strong>Teknologiske værdikæder</strong><span>Flodsystem: AI, robotik, energi, rum, quantum</span></a>
-      <a href="laer/index.html"><strong>Lær</strong><span>Sådan tænker vi, livscyklus, P/E og FAQ</span></a>
+      <a href="laer/saadan-taenker-vi.html"><strong>Sådan tænker vi</strong><span>Møntspil, udviklingen frem for vinderen, bogen vs fonden</span></a>
+      <a href="omkostninger.html"><strong>Omkostninger</strong><span>KID-tal og Fundmarket-postsatser — du kan tabe penge</span></a>
+      <a href="laer/index.html"><strong>Lær</strong><span>Livscyklus, P/E, variance drag og FAQ</span></a>
     </nav>
     <a class="why-card" href="ideer.html"><strong>Hvorfor NDI Analytics?</strong><span>Idéerne bag udkastet: multi-tag, værdikæden og forsinket beholdning som et bevidst valg.</span><span class="go" aria-hidden="true">→</span></a>
     <p class="more-links">Også i udkastet:
@@ -302,12 +304,17 @@ function renderEntre(root) {
     <section class="panel" style="margin-top:18px">
       <h2 style="font-size:18px;margin-bottom:8px">Sådan tænker vi (kort)</h2>
       <ol style="color:var(--muted);font-size:14px;line-height:1.55;padding-left:20px;display:grid;gap:8px">
-        <li>Teknologi er drivkraften - retningen kan skimtes, vinderne kan ikke udpeges sikkert.</li>
-        <li>Derfor bred spredning på tværs af værdikæden, ikke én “vinderaktie”.</li>
-        <li>Store kursudsving er et grundvilkår i tech. Fald kan være store og vare længe.</li>
-        <li>P/E er ikke vores hovedværktøj for vækstvirksomheder, der investerer tungt i fremtiden.</li>
-        <li>Fonden er tænkt med lang horisont. Historisk afkast siger ikke, hvad der sker fremover.</li>
+        <li>Teknologi er drivkraften — retningen kan skimtes, vinderne kan ikke udpeges sikkert. <a href="laer/saadan-taenker-vi.html">Sådan tænker vi →</a></li>
+        <li>Vi vælger <strong style="color:var(--text)">udviklingen frem for vinderen</strong>: bred spredning, ikke én “vinderaktie”. Møntspillet (+50/−40) og variance drag: <a href="laer/variance-drag.html">CAGR og gennemsnit →</a></li>
+        <li>Store kursudsving er et grundvilkår i tech. Fald kan være store og vare længe. <a href="drawdown.html?fund=${state.fund}">Største fald →</a></li>
+        <li>P/E er ikke vores hovedværktøj for vækstvirksomheder, der investerer tungt i fremtiden. <a href="laer/pe-forklaring.html">Hvad P/E fortæller →</a></li>
+        <li>Fonden er tænkt med lang horisont. Bogens råd til privatpersoner og fondens forvaltning er ikke det samme: <a href="laer/rebalancering.html">Bogen og fonden →</a></li>
       </ol>
+      <p class="link-row" style="margin-top:12px">
+        <a class="outline-btn small" href="laer/saadan-taenker-vi.html">Sådan tænker vi</a>
+        <a class="outline-btn small" href="omkostninger.html">Omkostninger</a>
+        <a class="outline-btn small" href="laer/index.html">Alle lær-sider</a>
+      </p>
       ${warnHtml()}
     </section>`;
 }
@@ -400,11 +407,12 @@ function renderFonden(root) {
         <div class="metric"><div class="label">Totalafkast siden start ${gl('total')}</div><strong>${fmtPct(totAll)}</strong><small>Fra første NAV ${fmtDate(rows[0]?.d)} · DKK</small></div>
         <div class="metric"><div class="label">Gns. årligt afkast (CAGR) ${gl('cagr')}</div><strong>${fmtPct(c)}</strong><small>Efter løbende omkostninger</small></div>
         <div class="metric"><div class="label">År til dato ${gl('ytd')}</div><strong>${fmtPct(ytd)}</strong><small>Pr. ${fmtDate(asOfPerf)}</small></div>
-        <div class="metric"><div class="label">Max drawdown ${gl('drawdown')}</div><strong class="neg">${fmtPct(maxDrawdown(rows)?.dd)}</strong><small><a href="drawdown.html?fund=${state.fund}">Middel/median →</a></small></div>
+        <div class="metric"><div class="label">Største fald ${gl('drawdown')}</div><strong class="neg">${fmtPct(maxDrawdown(rows)?.dd)}</strong><small><a href="drawdown.html?fund=${state.fund}">Middel/median →</a></small></div>
         <div class="metric"><div class="label">Risikoindikator (KID) ${gl('sri')}</div><strong>5 / 7</strong><small>Anbefalet ejertid 5 år</small></div>
       </div>
       ${warnHtml()}
-      <p class="note-fundmarket">Fonden har intet fast benchmark.</p>
+      <p class="note-fundmarket">Fonden har intet fast benchmark. Vi tegner ikke en sammenligningskurve (fx Nasdaq) — det er en compliance-beslutning, ikke et datamangel.</p>
+      <p style="font-size:13px;color:var(--muted);line-height:1.55;margin:8px 0">Sådan kan du selv vurdere afkastet ${fmtPct(totAll)} siden start: se <a href="drawdown.html?fund=${state.fund}">største fald</a> (hvor dybt kurven har dykket), udsvingene på <a href="risici.html#tal">Risici</a>, og om din horisont matcher KID’ets 5 år. Læs også <a href="laer/laes-grafen.html">Sådan læser du grafen</a> og <a href="laer/variance-drag.html">hvad udsving koster</a>. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast.</p>
       <p style="font-size:13px;color:var(--muted);margin:8px 0">Graf: ${periodLabel}</p>
       <div class="chart-wrap" id="perf-chart"></div>
       <p class="chart-takeaway" id="chart-takeaway" style="font-size:14px;color:var(--text);margin:8px 0 4px;line-height:1.45"></p>
@@ -478,7 +486,7 @@ function renderFonden(root) {
     ddEvts.push({ d: ddMark.peakD, kind: 'peak', title: 'Top før største fald', chartOnly: true });
   }
   if (ddMark?.troughD && sliced.some((r) => r.d === ddMark.troughD)) {
-    ddEvts.push({ d: ddMark.troughD, kind: 'dip', title: `Bund (max drawdown ${fmtPct(ddMark.dd)})`, chartOnly: true });
+    ddEvts.push({ d: ddMark.troughD, kind: 'dip', title: `Bund (største fald ${fmtPct(ddMark.dd)})`, chartOnly: true });
   }
   const evts = [...ctxEvts, ...ddEvts, ...xMarks];
   renderChart($('#perf-chart', root), sliced, evts, { label: 'Totalafkast' });
@@ -503,7 +511,7 @@ function renderFonden(root) {
     const note = document.createElement('p');
     note.className = 'src';
     note.style.marginTop = '6px';
-    note.innerHTML = `Grafmarkering: top/bund for max drawdown i perioden (${fmtPct(ddMark.dd)}). <a href="drawdown.html?fund=${state.fund}">Drawdown-side →</a>`;
+    note.innerHTML = `Grafmarkering: top/bund for største fald i perioden (${fmtPct(ddMark.dd)}). <a href="drawdown.html?fund=${state.fund}">Drawdown-side →</a>`;
     $('#perf-chart', root)?.closest('section')?.appendChild(note);
   }
 
@@ -627,7 +635,7 @@ function renderLivscyklus(fund) {
     ? `Ingen af fondens ${fund.positions.length} selskaber er klassificeret endnu.`
     : `${classified} af ${fund.positions.length} selskaber er placeret${nForslag ? ` (<span class="badge badge-draft">forslag</span> fra offentlig industri/tema — afventer NDI)` : ' (manuel klassifikation)'}. ${unknown ? unknown + ' mangler.' : ''}`;
   return `<section class="panel life-strip${empty ? ' is-empty' : ''}">
-    <div class="life-head"><h2>Livscyklus</h2><span class="badge badge-draft">UDKAST</span></div>
+    <div class="life-head"><h2>Livscyklus</h2><span class="badge badge-draft" title="Heuristik — afventer NDI">udkast</span></div>
     ${curve}
     <p class="life-note">${foot} <a href="laer/livscyklus.html">Læs om livscyklus →</a></p>
   </section>`;
@@ -658,6 +666,18 @@ function renderPortefolje(root) {
     </details>
     <p class="src" style="margin-top:10px">Kilde: Fundmarket-beholdning (forsinket). Åbn <a href="?view=udforsk&fund=${state.fund}">Udforsk</a> for søgning og filtre. Tomme/ældre felter er markeret — ikke skjult.</p>
     <p class="band" style="font-size:11px">Ingen P/S, P/E eller kursafkast pr. aktie i denne version. Tema-tags er udkast.</p>`;
+  // Mobil: livscyklus-kurven er skjult som standard, så tabellen ikke skubbes ned.
+  root.querySelector('.life-head')?.addEventListener('click', () => {
+    root.querySelector('.life-strip')?.classList.toggle('is-open');
+  });
+  const lh = root.querySelector('.life-head');
+  if (lh && !lh.querySelector('.life-toggle-hint')) {
+    const hint = document.createElement('small');
+    hint.className = 'life-toggle-hint';
+    hint.style.cssText = 'color:var(--muted);font-size:12px;margin-left:auto';
+    hint.textContent = 'Vis kurve';
+    lh.appendChild(hint);
+  }
 }
 
 // Kvalitativ beskrivelse af vægtfordelingen i det forsinkede snapshot. Afrundet, ingen falsk præcision.
@@ -688,7 +708,7 @@ function positionsTable(list, fund) {
   </tr></thead><tbody>${list.map((p, i) => `${themeGroupRow(list, i)}<tr>
     <td><a href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}">${p.name}</a>${hasLens(p) ? ` <a class="badge" href="selskab.html?isin=${encodeURIComponent(p.isin)}&fund=${fund.id}#ndi-linse" title="Kvalitativ NDI-linse: rolle, plads i værdikæden og forhold at holde øje med (udkast)" aria-label="NDI-linse for ${p.name}">NDI-linse</a>` : ''} ${weightSpark(p.isin, fund.id)}<br><small style="color:var(--muted)">${p.isin}</small>${hitNote(p)}</td>
     <td>${(p.weight ?? 0).toFixed(2).replace('.', ',')}</td>
-    <td>${tagsFor(p, DATA.multiTags).map((t) => `<a class="tag" href="tema.html?slug=${encodeURIComponent(t)}&fund=${fund.id}">${daTheme(t)}</a>`).join(' ')}${p.themeStatus==='forslag'?` <span class="badge badge-draft" title="Temaet er et forslag fra udkastet og afventer NDI-gennemgang · før: ${p.themeFrom ? daTheme(p.themeFrom) : 'Andet'}">forslag</span>`:''}</td>
+    <td>${tagsFor(p, DATA.multiTags).map((t) => `<a class="tag" href="tema.html?slug=${encodeURIComponent(t)}&fund=${fund.id}">${daTheme(t)}</a>`).join(' ')}</td>
   </tr>`).join('')}</tbody></table></div>`, 'Rul til siden for flere kolonner.') +
   `<p style="font-size:11px;color:var(--muted);margin-top:8px">Kun vægt og tema. De små søjler ved navnet er selskabets <strong style="color:var(--text)">vægt i fonden</strong> pr. kvartalssnapshot frem til ${fmtDate(MONTHS?.cutoff || fund.positionsAsOf)}. Ikke aktiekurs. Ingen kursafkast pr. aktie i v1. Beholdning er forsinket.</p>`;
 }
