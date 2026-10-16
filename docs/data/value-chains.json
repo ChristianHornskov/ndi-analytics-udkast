@@ -1378,7 +1378,7 @@
             }
           ],
           "facts": [
-            "Super Micro Computer: Supermicro kalder sig leverandør af 'Rack-Scale Total IT Solutions', altså færdige serverskabe med servere, lager og netværk samlet på forhånd. Selskabet fremhæver væskekøling direkte på chippen (DLC) og skriver, at det designer, udvikler og producerer i USA med hovedsæde i San Jose i Californien. Chippene køber det hos andre, fx Chipdesign-leddet ovenfor.",
+            "Super Micro Computer: Supermicro kalder sig leverandør af 'Rack-Scale Total IT Solutions', altså færdige serverskabe med servere, lager og netværk samlet på forhånd. Selskabet fremhæver væskekøling direkte på chippen (DLC) og skriver, at det designer, udvikler og producerer i USA med hovedsæde i San Jose i Californien. Selve chippene køber selskabet hos andre, fx i Chipdesign-leddet ovenfor.",
             "Celestica: Celestica skriver, at det udvikler, designer og producerer 'rygraden' i AI og cloud. Selskabet tilbyder design, produktion, forsyningskæde og samling af hele serverskabe (rack-integration)."
           ]
         },
