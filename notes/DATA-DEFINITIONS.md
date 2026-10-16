@@ -95,7 +95,7 @@ Taseko skrev 9. oktober 2026, at Florence Copper er gået i kommerciel produktio
 
 SMR-leddet siger, at NuScale skriver, at et program sammen med TVA kan blive op til 6 GW, og at det er udvikling, ikke et værk i drift. Kilden er programsiden, som taler om at udvikle og idriftsætte kapacitet, ikke om et værk, der allerede kører. Ordene historic, largest og proven er ikke taget med. De øvrige SMR-navne er stadig ikke beskrevet som kommerciel drift.
 
-Konceptkortene i nyhedsarkivet er delt i korte afsnit, så grænserne kan læses hver for sig. Energikortet har tyve afsnit. Rumkortet har elleve. Indholdet er det samme som på kæden. Neutron-siden sagde 16. oktober 2026 stadig, at første flyvning ligger foran. Sætningen om, at Neutron ikke er fløjet, er ikke ændret.
+Konceptkortene i nyhedsarkivet er delt i korte afsnit, så grænserne kan læses hver for sig. Energikortet har tyve afsnit. Rumkortet har tolv. Indholdet er det samme som på kæden. Neutron-siden sagde 16. oktober 2026 stadig, at første flyvning ligger foran. Sætningen om, at Neutron ikke er fløjet, er ikke ændret.
 
 MP Materials skriver, at magneter fremstilles på anlægget Independence i Texas, og at udvindingen er ved Mountain Pass. Ordene om verdens rigeste forekomst og verdens stærkeste magnet er ikke taget med. Firefly gav 403 samme nat. Eclipse er derfor ikke omskrevet.
 
@@ -168,6 +168,8 @@ Lithium Americas skriver, at byggeriet på Thacker Pass i det nordlige Nevada be
 Oklo skrev 6. august 2026, at testreaktoren Groves nåede en kontrolleret kædereaktion ved lav effekt. Datoen ligger efter beholdningen pr. 2026-06-01. Meddelelsen af 13. oktober 2026 siger, at reaktoren ligger i Texas. Det er en testreaktor, ikke et kommercielt kraftværk og ikke salg af isotoper. Aurora ved Idaho National Laboratory har en foreløbig sikkerhedsanalyse godkendt 11. juni 2026. Det er ikke et værk i drift. Groves-2 Forge er et planlagt pilotanlæg fra 13. oktober 2026 og er ikke bygget. Ordene first, leading og NYSE er ikke taget med. Citater fra politikere er ikke taget med. Vægtene er uændrede.
 
 Southern Copper skriver, at Tía María er et kobberprojekt i Cocachacra i provinsen Islay i Arequipa. Forekomsterne hedder La Tapada og Tía María. Siden skriver, at der er tilladelser til at bygge projektet. Det er ikke en mine i drift. Ordene world-class, first og primer er ikke taget med. Obligationens beløb og rente er ikke taget med. Vægtene er uændrede.
+
+Rocket Lab skriver, at HASTE er et suborbitalt testfartøj bygget ud fra Electron, og at det flyver fra Wallops i Virginia. Det sætter ikke satellitter i kredsløb. Neutron er stadig under udvikling, og den første flyvning er ikke gennemført i teksten. Tal for nyttelast, ordet largest og en overskrift om Iridium er ikke taget med. Lynas og NioCorp gav ikke en læsbar side samme nat. Intuitive Machines endte i en omdirigering. De tre er ikke omskrevet. Vægtene er uændrede.
 
 ## År til dato på periodesiden
 

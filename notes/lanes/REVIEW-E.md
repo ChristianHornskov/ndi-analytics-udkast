@@ -255,3 +255,9 @@ Groves er en testreaktor. Selskabet skrev 6. august 2026, at den nåede en kæde
 ## Southern Copper · 2026-10-16 02:01 CEST
 
 Tía María er et kobberprojekt i Cocachacra, Islay, Arequipa. To forekomster, La Tapada og Tía María. Tilladelser til byggeri er ikke en mine i drift. World-class, first, primer og obligationens beløb er ikke kopieret. AI-udkast uden gennemgangsdato. Råstof-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
+
+## Rocket Lab · 2026-10-16 02:06 CEST
+
+HASTE er et suborbitalt testfartøj bygget ud fra Electron. Wallops i Virginia. Ikke en orbital opsendelse. Neutron er stadig under udvikling. 700 kg, largest og Iridium-overskriften er ikke kopieret. AI-udkast uden gennemgangsdato. Opsendelses-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
+
+Lynas svarede tomt. NioCorp gav 403. Intuitive Machines endte i en omdirigering. Ingen ny sætning dér.

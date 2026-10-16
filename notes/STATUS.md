@@ -869,3 +869,13 @@ Projektet ligger i Cocachacra i provinsen Islay i Arequipa. Forekomsterne hedder
 Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Tía María står. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `1972434` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 02:06 CEST. Rocket Lab skriver, at HASTE er et suborbitalt testfartøj. Ikke færdig.**
+
+Det flyver fra Wallops i Virginia og sætter ikke satellitter i kredsløb. Electron er den orbitale raket. Neutron er stadig under udvikling. Nyttelast-tal og en overskrift om Iridium er ikke taget med. Ingen `reviewedAt`. Blurben under opsendelse og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. HASTE står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `4ecafbd` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

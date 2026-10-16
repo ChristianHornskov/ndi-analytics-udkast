@@ -1441,20 +1441,24 @@
   "US7731211089": {
    "name": "Rocket Lab",
    "theme": "space",
-   "summary": "Opsender små satellitter og bygger rumfartøjer og dele til dem. En større raket er under udvikling.",
-   "watch": "Hvor ofte raketterne flyver, og om rumfartøjsforretningen vokser ved siden af opsendelsen.",
+   "summary": "Opsender små satellitter med Electron og bygger rumfartøjer. Selskabet skriver, at HASTE er et suborbitalt testfartøj og ikke en orbital opsendelse. Neutron er under udvikling.",
+   "watch": "Flyvninger med Electron og HASTE, og om Neutron flyver. HASTE er ikke en orbital rute.",
    "source": "https://rocketlabcorp.com/",
-   "products": "Opsendelse og rumfartøjer.",
-   "customers": "Kunder med små satellitter og kunder, der køber rumfartøjer.",
-   "role": "Både opsendelse og satellitplatforme.",
+   "products": "Electron til små satellitter, det suborbitale testfartøj HASTE og rumfartøjer. Neutron er under udvikling.",
+   "customers": "Kunder med små satellitter, kunder til suborbitale test og kunder, der køber rumfartøjer.",
+   "role": "Electron er orbital. HASTE er suborbital. Neutron er ikke fløjet.",
    "narrative": [
-    "Rocket Lab sender små satellitter op med raketten Electron og bygger rumfartøjer og dele til dem.",
-    "En større raket, Neutron, er under udvikling. Den første flyvning med Neutron er ikke gennemført i denne beskrivelse. I kæden står selskabet både på opsendelse og på satellitter."
+    "Rocket Lab skriver, at Electron sender små satellitter op, og at HASTE er et suborbitalt testfartøj bygget ud fra Electron. Siden siger, at HASTE flyver fra Wallops i Virginia. Det sætter ikke satellitter i kredsløb.",
+    "Neutron er en større raket under udvikling. Den første flyvning med Neutron er ikke gennemført i denne beskrivelse. I kæden står selskabet både på opsendelse og på satellitter."
    ],
    "narrativeSources": [
     {
      "label": "Selskabets side",
      "url": "https://rocketlabcorp.com/"
+    },
+    {
+     "label": "HASTE",
+     "url": "https://www.rocketlabusa.com/launch/haste/"
     },
     {
      "label": "Neutron",
