@@ -511,3 +511,13 @@ Kurven var cyan hele vejen, så episoden kun kunne ses som søjle under den. Den
 Tjekket i Chromium ved 1280, 375 og 320. Ingen sidescroll, ingen konsolfejl. AKK siger stadig 12 måneder og har ingen procent.
 
 `lane-D` er klar til merge. Ikke main. Ikke færdig.
+
+## Fra Grok lane-D
+
+**2026-10-16 02:40 CEST. Rosa under nul i embed. Ikke færdig.**
+
+På år til dato lignede feltet under nul en grå plet. Det er nu samme rosa som prik, udlæsning og tooltip, og stærkest i bunden af faldet. Tallene er uændrede: +104,8 %, +26,4 % og +4,0 %. 20. feb. 2026 er −2,5 %. PMINDIAKK har stadig tom svg og ingen procent.
+
+Tjekket i Chromium ved 1100, 375 og 320. Ingen sidescroll, ingen konsolfejl.
+
+`lane-D` er klar til merge. Ikke main. Ikke færdig.
