@@ -1306,3 +1306,24 @@ Ikke juridisk rådgivning. **Korrektion til c51:** main flyttede til `91328f6` u
 
 ### Freeze-note
 De to resterende punkter er rene tekstrettelser, som kan laves før 08:30.
+
+## 2026-10-16 07:23 CEST · cyklus 52 (main `85704e3`; live = main)
+
+Ikke juridisk rådgivning. Delta mod `91328f6`: fakta, omkostninger, ndi-paa-x (lane-X).
+
+### Verificeret
+- omkostninger/fakta: ny KID-plade viser KID-RIY 2,79 % / 2,85 % (5 år), mærket "ikke tegnet" og "Ikke et ÅOP". Footer: "Du kan tabe penge. Ikke rådgivning." 0 hits på garanti/sikker gevinst/overvægt/købsopfordring.
+- ndi-paa-x (fresh load): "ikke NDI's holdning", rådgivning, tab og historik-advarsel er til stede.
+- Fonden PMINDI/PMINDIAKK: "intet fast benchmark" (ingen Nasdaq-benchmarkpåstand). Beholdning pr. 1. jun. 2026 (≤ 2026-06-01) ✅. Ingen 1m/3m-hits i fonden-tekst ✅.
+- Ordsweep 50 URL'er: "anbefal*" optræder kun som negation eller KID's "anbefalet ejertid". "overvægt" står kun i "ikke bevidste overvægte" ✅.
+
+### MUST
+- **Ingen åbne MUST-blokere.**
+
+### SHOULD (åbne pr. `85704e3`, genverificeret i kilden)
+3. `index.html:89` "Se Central Information Dokument" → "Se KID'et (Central Information) før du investerer".
+5. `omkostninger.html:606` (var :458) "Det er det tal, marketingmateriale skal gengive ærligt" er en intern formulering.
+10. **Ny (drift):** en stale modul-cache efter deploy kan give en blank `ndi-paa-x.html` (se UX c52). Hvis siden render tom, forsvinder dens advarsels-/ikke-holdning-linjer også. Lav risiko og kortvarigt (≤ 10 min).
+
+### ÅOP
+Bevidst fravalgt med "Ikke et ÅOP"-mærkning. Omkostningsoplysningen hviler på KID-RIY + OCF/postsatser. FO-personaens ÅOP-ønske er stadig uopfyldt. Afklar med compliance, om ÅOP skal med (ikke en blokering for et udkast).

@@ -1320,3 +1320,26 @@ Der er ingen docs-delta siden c48. Live md5 = lokal for index, drawdown, omkostn
 ### Persona-linser
 - Privat: AKK-køberen ser nu sine omkostninger direkte i fondsvisningen ✅.
 - FO: alle 73 nye felter af typen Forretningsmodel/Svært at kopiere er mærket AI-udkast og skrevet som beskrivelse, ikke vurdering ✅.
+
+## 2026-10-16 07:23 CEST · cyklus 52 (main `85704e3`, docs-delta mod `91328f6`: 5 filer — fakta, omkostninger, ndi-paa-x, x-feed.js, x-posts.json (lane-X); live = main)
+
+Live md5 = main for alle 5 filer. Live-sweep af 50 URL'er @375 (/tmp/laneR/c52): 0 overflow. Én sidefejl, som er forbigående (se nedenfor). De øvrige 49 er identiske med c51b (tiny/h/flags).
+
+### MUST
+- Ingen.
+
+### SHOULD
+- **Ny (drift): cache-skævhed mellem HTML og ES-moduler efter deploy.** Første sweep fik `ndi-paa-x.html` tom (h=800, h1 tom) med "x-feed.js does not provide an export named 'xSkyHtml'". HTML'en var ny, mens `js/x-feed.js` kom fra CDN/browser-cache (Pages `cache-control: max-age=600`). En ny kontekst med `?cb=` loader fint (h=7802, 0 fejl). Effekt: en tilbagevendende besøgende kan få en blank side i op til ca. 10 min efter hver lane-X-deploy. Forslag efter freeze: versionér modul-imports (`./js/x-feed.js?v=<sha>`) eller hold eksportnavne bagudkompatible. Ikke en blokering til morgen-demo, men det er værd at genindlæse før demo.
+- `ndi-perspektiv.html` 493 tap-mål < 24 px er stadig åben (fra c51b).
+- `omkostninger.html:588` "Tast 1 eller 5." står stadig i summary (linjenr. flyttet fra 441).
+
+### Lukket / verificeret ny delta
+- **omkostninger: ny "Hvor er KID?"-knap** (`data-ask=kid`, 115×32 px @375, ok tap-mål). Den viser 2,79 % / 2,85 % "KID ved 5 år · ikke tegnet" over skalaen. Det er ærligt: KID'et tegnes ikke på postsatsskalaen og blandes ikke sammen med den. 0 overflow, tiny 6.
+- **fakta: klasse-tidslinje** @375: 0 overflow, tiny 11, 0 JS-fejl.
+
+### Nice
+- omkostninger: "Ikke et ÅOP." står 4–5 gange i forskellige tilstande. Det er korrekt, men gentagelsen trætter. Ét fast sted ved overskriften ville være nok.
+
+### Persona-linser
+- Privat: KID-knappen svarer direkte på "hvad koster det i alt?" ✅.
+- FO: tydelig adskillelse af KID-RIY og postsatser ✅. ÅOP er stadig ikke angivet (bevidst, "Ikke et ÅOP"). Se compliance.
