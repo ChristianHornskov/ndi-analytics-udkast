@@ -439,7 +439,7 @@
  const shareBtn = document.getElementById('share-chart');
  const shareNote = document.getElementById('share-note');
  shareBtn?.addEventListener('click', async () => {
- const text = `Fald fra top, ${fund.short}. Dybeste fald ${fmtPct(sum.max)} fra ${fmtDate(dd.peakD)} til ${fmtDate(dd.troughD)}. ${location.href}\nHistorisk afkast er ikke en pålidelig indikator for fremtidigt afkast.`;
+ const text = `Fald fra top, ${fund.short}. Dybeste fald ${fmtPct(sum.max)} fra ${fmtDate(dd.peakD)} til ${fmtDate(dd.troughD)}. Lige nu ${fmtPct(nowU)} under toppen pr. ${fmtDate(rows[rows.length - 1].d)}. ${location.href}\nHistorisk afkast er ikke en pålidelig indikator for fremtidigt afkast.`;
  let ok = false;
  try {
  await navigator.clipboard.writeText(text);

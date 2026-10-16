@@ -188,6 +188,10 @@ På 390 px er nøglen under kurven et gitter, to og to. Sidste linje, «Højde e
 
 Under prikkerne står én sætning: hver prik er et fald, gul er det dybeste, hul gul er åben, median og middel står under aksen. Resten ligger i «Sådan læser du prikkerne», lukket, 44 px høj. Et klik åbner grænsen ved 10 % og at prikkerne til højre står i listen. Ingen sidescroll ved 390. Ingen konsolfejl.
 
+### Update · Del grafen siger også nu · 2026-10-16 ~03:46 CEST
+
+Sætningen er «Fald fra top, PMINDI. Dybeste fald -35,8 % fra 18. feb. 2025 til 8. apr. 2025. Lige nu -23,4 % under toppen pr. 14. okt. 2026.» plus adressen og advarslen. Når udklipsholderen er lukket, står sætningen selv under knappen. Ingen sidescroll ved 320.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.
