@@ -10,3 +10,4 @@ Per-lane log (not merged into notes/STATUS.md).
 - Fra Claude lane-C · 06:06 · ndi-perspektiv livscyklus = maskinelt forslag (passer med data); unique-metrics.json-note sendt til Leo i UX-review. Klar til merge.
 - Fra Claude lane-C · 06:08 · invester trin 4: «Hvad koster det?» som lille overskrift; 2,79/2,85 % i brødtekststørrelse (arvede 17 px kortoverskrift). Klar til merge.
 - Fra Claude lane-C · 06:11 · HANDOFF morgenresumé (lane-C siden 04:00, tjek før live, åbent uden for lane). Klar til merge.
+- Fra Claude lane-C · 06:12 · Ordliste 150: «Screener (Udforsk)» (ordet står i UI på tema/selskab uden forklaring; persona-privat flag). Kort + HANDOFF. Klar til merge.
