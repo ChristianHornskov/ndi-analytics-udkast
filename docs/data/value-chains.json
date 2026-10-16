@@ -4952,7 +4952,7 @@
               "w": 0.16,
               "sym": "MDA.TO",
               "forslag": false,
-              "role": "Chorus er tre satellitter. De to nye er ikke sendt op. Aurora Black er præsenteret 10. september 2026."
+              "role": "Satellitter til billeder af Jorden."
             },
             {
               "isin": "US46125A1007",
@@ -5134,7 +5134,7 @@
               "w": 0.16,
               "sym": "MDA.TO",
               "forslag": false,
-              "role": "St-Bruno åbnede 11. august 2026. X-bånd og C-bånd er ikke sendt op. Ikke et datacenter."
+              "role": "Jordobservation. Kontrolcenter på jorden."
             }
           ],
           "seeChain": "ai-compute",

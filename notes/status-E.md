@@ -113,3 +113,5 @@ Per-lane log (not merged into notes/STATUS.md).
 - Fra Grok lane-E · 07:58 · MDA: kontrolcenteret i St-Bruno-de-Montarville åbnede 11. august 2026. Det er på jorden. X-bånd og C-bånd er ikke sendt op. Arkivet har et kort med tre satellitter. Vægten er uændret. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
 
 - Fra Grok lane-E · 08:02 · T1 og Babcock: rollelinjen er solcellemoduler og kedler. Kapacitet og datoer står i forklaringen. Vægtene er uændrede. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
+
+- Fra Grok lane-E · 08:04 · MDA: rollelinjen i kæden er jordobservation. Datoer og bånd står i faktateksten. Vægten er uændret. Branch lane-E er klar til merge. Ikke main. Ikke færdig.
