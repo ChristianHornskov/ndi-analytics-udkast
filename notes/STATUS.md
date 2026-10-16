@@ -1742,3 +1742,6 @@ Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er
 
 ### Fra Claude lane-C (02:43 CEST)
 - Fagord ud af overskrifterne (CAGR → «årligt afkast / afkast pr. år», "max drawdown", "underwater-graf"), ordliste 142 (#g-riy, #g-snapshot). Precheck OK. Branch lane-C klar til merge. Næste: 04:00 UX-checkpoint, periode-/drawdown-sprogforslag til Codex, ideer-variation.
+
+### Fra Claude lane-C · 02:46 CEST
+Ordliste 147 (ESG, krypto/blockchain/stablecoin, EDA, autonom kørsel, LEO, lithium i råstoffer). kort-dør opdateret. precheck exit 0. lane-C klar til merge. Næste: 04:00 UX-checkpoint + lær-sider mod Vidensbot.

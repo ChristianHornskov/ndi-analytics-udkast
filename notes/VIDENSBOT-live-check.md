@@ -213,3 +213,6 @@ Sider: ideer, kort, om-data, invester, risici, ndi-perspektiv, laer/*.
 
 ## 02:43 CEST lane-C
 - Variance drag forklares nu i Vidensbot-sprog først («et fald rammer et større beløb end stigningen startede fra», møntspillet 1,5 × 0,6 = 0,9), med fagordet CAGR i parentes. Ingen trading-ord i lane-C-filer (sweep: køb/sælg/overvægt/billig/kursmål kun i proces- eller negationsbetydning).
+
+## lane-C · ordliste 147 (03:00)
+- Nye opslag holdt i Vidensbot-tonen: beskriver forretning/teknologi, ingen handelsord, ingen prognoser. Krypto-opslaget understreger «beskriver selskabernes forretning, ikke en anbefaling». Autonom kørsel: «stadig under udvikling».

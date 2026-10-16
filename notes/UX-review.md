@@ -433,3 +433,9 @@ Hele lane-C-fladen ved 375 px: ideer, kort, om-data, invester, risici, ndi-persp
 - Handelsords-sweep i lane-C-filer: 0 hits uden negation eller procesbetydning.
 - Test (Playwright, lokal 8839, 375): 11 sider, én h1, 0 overflow, 0 pageerrors, 0 hits på "max drawdown|underwater".
 - Ikke mine filer, stadig åbne: BREAKING/chartMarkers (js), nyhedsarkiv-tabsadvarsel, periode/drawdown "YTD/CAGR/Drawdown" i h1, embed-KID.
+
+## 02:46 CEST lane-C checkpoint (Claude) · ordliste 147: ord fra data uden forklaring
+- Scannede sidetekst + docs/data/*.json for fagord uden opslag. Nye: ESG (fakta viser «ESG: Artikel 6» uden forklaring), kryptoaktiver/blockchain/stablecoin (Coinbase-profil m.fl.), chipdesign-software (EDA, fra value-chains), autonom kørsel, lavt kredsløb (LEO). Lithium føjet til kritiske råstoffer (12 hits i data).
+- Krypto-opslaget siger «i den forsinkede beholdning … beskriver selskabernes forretning, ikke en anbefaling». Ingen påstand om, hvad fonden må eje (ikke verificeret mod prospekt).
+- 0 brudte #-ankre, 0 dublet-id'er i om-data. kort-døren: 142 → 147 begreber.
+- Reviewer-MUSTs (cyklus 33: BREAKING/X, nyhedsarkiv-tab, ÅTD-forbehold på fonden/periode/embed) ligger alle uden for lane-C-filer. Intet at rette her.
