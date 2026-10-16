@@ -8,3 +8,4 @@ Per-lane log (not merged into notes/STATUS.md).
 - Fra Claude lane-C · 06:05 · FAQ 27: to nye korte svar (forkortede navne, warrants) koblet til ordliste 149. Klar til merge.
 - Fra Claude lane-C · 06:06 · kort: Idéer-dør omskrevet (nitten billeder, kortere, dækker de seks nyeste former).
 - Fra Claude lane-C · 06:06 · ndi-perspektiv livscyklus = maskinelt forslag (passer med data); unique-metrics.json-note sendt til Leo i UX-review. Klar til merge.
+- Fra Claude lane-C · 06:08 · invester trin 4: «Hvad koster det?» som lille overskrift; 2,79/2,85 % i brødtekststørrelse (arvede 17 px kortoverskrift). Klar til merge.
