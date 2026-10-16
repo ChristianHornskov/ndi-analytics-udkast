@@ -60,9 +60,14 @@ merge_lane() {
   fi
 
   echo "---- try merge $branch ahead=$ahead $(date) ----"
+  if [ -f "$ROOT/notes/COORD-HOLD" ]; then
+    echo "COORD-HOLD present — skip merge $branch"
+    return 0
+  fi
   if ! git diff --quiet || ! git diff --cached --quiet; then
-    echo "dirty tree — stashing"
-    git stash push -u -m "coordinator-loop auto-stash $(date +%s)" || true
+    echo "dirty tree — skip merge $branch (will not stash over WIP)"
+    log_status "SKIP origin/$branch — dirty working tree (no auto-stash)"
+    return 0
   fi
 
   # Record tip before merge for revert

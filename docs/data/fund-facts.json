@@ -72,7 +72,11 @@
         "performanceFee": false,
         "performanceFeeText": "Afdelingen betaler ikke resultathonorar",
         "note": "Forventede samlede omkostninger i indeværende regnskabsår (Fundmarket).",
-        "source": "https://fundmarket.dk/newdeal-invest-kl-n/"
+        "source": "https://fundmarket.dk/newdeal-invest-kl-n/",
+        "kidRiy1y": 2.63,
+        "kidRiy5y": 2.79,
+        "kidRiyNote": "Årlig omkostningsmæssig konsekvens ifølge KID (PRIIP-omkostningsindikator). Ved anbefalet periode 5 år / ved 1 år. Før kurtage og depot hos din bank. Ikke det samme som postsatserne nedenfor.",
+        "kidRiySource": "KID / Fundmarket (PRIIP)"
       },
       "kidUrl": "https://node-api.fundmarket.dk/funds/documents/priip_ipm140b",
       "fundmarketUrl": "https://fundmarket.dk/newdeal-invest-kl-n/"
@@ -97,7 +101,11 @@
         "performanceFee": false,
         "performanceFeeText": "Afdelingen betaler ikke resultathonorar",
         "note": "Forventede samlede omkostninger i indeværende regnskabsår (Fundmarket).",
-        "source": "https://fundmarket.dk/newdeal-invest-akk-kl-n/"
+        "source": "https://fundmarket.dk/newdeal-invest-akk-kl-n/",
+        "kidRiy1y": 2.71,
+        "kidRiy5y": 2.85,
+        "kidRiyNote": "Årlig omkostningsmæssig konsekvens ifølge KID (PRIIP-omkostningsindikator). Ved anbefalet periode 5 år / ved 1 år. Før kurtage og depot hos din bank. Ikke det samme som postsatserne nedenfor.",
+        "kidRiySource": "KID / Fundmarket (PRIIP)"
       },
       "kidUrl": "https://node-api.fundmarket.dk/funds/documents/priip_ipm145b",
       "fundmarketUrl": "https://fundmarket.dk/newdeal-invest-akk-kl-n/"
