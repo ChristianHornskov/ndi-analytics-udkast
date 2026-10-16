@@ -159,7 +159,7 @@
    for (const c of g.querySelectorAll('.lens-co')) { const ok = !t || c.dataset.q.includes(t); c.hidden = !ok; if (ok) k++; }
    g.hidden = k === 0; g.open = !!t && k > 0; n += k;
   }
-  hits.textContent = t ? (n ? `${n} selskaber passer` : 'Ingen selskaber passer. Prøv et andet ord.') : '';
+  hits.textContent = t ? (n ? `${n} ${n === 1 ? "selskab passer" : "selskaber passer"}` : 'Ingen selskaber passer. Prøv et andet ord.') : '';
  };
  q.addEventListener('input', run);
  const openHash = () => { const el = location.hash && document.getElementById(location.hash.slice(1)); if (el && el.tagName === 'DETAILS') el.open = true; };
