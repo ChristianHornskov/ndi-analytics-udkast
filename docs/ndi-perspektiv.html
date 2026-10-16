@@ -101,7 +101,7 @@
  const order = [...groups.entries()].sort((a, b) => (a[0].startsWith('Andet') - b[0].startsWith('Andet')) || b[1].length - a[1].length);
  const slug = (g) => 'lg-' + g.toLowerCase().replace(/[^a-zæøå0-9]+/g, '-').replace(/-+$/, '');
  // Datafeltets ord → sidens ord (samme som Udforsk efter 06:31). Data ændres ikke.
- const da = (t) => String(t ?? '').replace(/^NDI-tags$/, 'NDI-temaer').replace(/\s*\(multi-tag\)/gi, '').replace(/Multi-tag: /g, 'To temaer: ').replace(/Multi-tag\./g, 'Flere temaer.').replace(/ikke rating/g, 'ikke en karakter').replace(/\bConnect\b/g, 'Optik & netværk').replace(/\bconnect\b/g, 'optik & netværk');
+ const da = (t) => String(t ?? '').replace(/^NDI-tags$/, 'NDI-temaer').replace(/^NDI-tag$/, 'NDI-tema').replace(/manuelt tag /g, 'manuelt tema ').replace(/(\w)-tag\b/g, '$1-tema').replace(/\s*\(multi-tag\)/gi, '').replace(/Multi-tag: /g, 'To temaer: ').replace(/Multi-tag\./g, 'Flere temaer.').replace(/ikke rating/g, 'ikke en karakter').replace(/\bConnect\b/g, 'Optik & netværk').replace(/\bconnect\b/g, 'optik & netværk');
  const LABEL_G = { 'Forretningsmodel': 'g-forretningsmodel', 'Svært at kopiere': 'g-svaert-kopiere', 'Nøgleafhængighed': 'g-noegleafhaengighed', 'Hold øje med': 'g-hold-oeje', 'Livscyklus': 'g-modenhed' };
  const val = (m) => m.href ? `<a href="${esc(m.href)}">${esc(da(m.value))}</a>` : esc(da(m.value));
  const card = ([isin, v]) => {
