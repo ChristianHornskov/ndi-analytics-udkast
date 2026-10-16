@@ -28,7 +28,7 @@
  </header>
  <main id="main"><p style="color:var(--muted)">Henter temaer…</p></main>
  <script type="module">
- import { fmtDate, loadAll, fundById, themeProposals, daTheme, WARN_HIST, chainForTheme, chainHref } from './js/data.js';
+ import { fmtDate, loadAll, fundById, themeProposals, daTheme, WARN_HIST, chainForTheme, chainHref, tagsFor } from './js/data.js';
  const u = new URL(location.href);
  const [data, all, vc, um] = await Promise.all([
  fetch('data/themes.json').then((r) => r.json()),
@@ -50,6 +50,12 @@
  if ((um.byIsin || {})[p.isin]) a.lens++; // NDI-linse (kvalitativ tekst) findes
  if (p.themeStatus === 'forslag') a.forslag++;
  }
+ // Multi-tag: tema-siden tæller også selskaber med temaet som ekstra tag (fx Nvidia i Compute).
+ // Hubben viser primært tema (vægte summerer til 100 %) og nævner multi-tags separat, så tallene stemmer med tema-siden.
+ const multi = {};
+ for (const p of fund.positions || []) for (const t of tagsFor(p, all.multiTags)) if (t !== p.theme) (multi[t] ||= []).push(p.name);
+ // Små temaer: vis hvem der er der (kun navne efter vægt, ingen tal pr. aktie)
+ const topNames = (k, n = 5) => (fund.positions || []).filter((p) => p.theme === k).sort((a, b) => (b.weight || 0) - (a.weight || 0)).slice(0, n).map((p) => p.name);
  // Største tema først; Andet altid sidst, så det ikke ligner et rigtigt tema
  const themes = (data.themes || []).map((t) => ({ ...t, ...(agg[t.themeKey] || { count: 0, weight: 0, forslag: 0, lens: 0 }) }))
  .sort((a, b) => (a.themeKey === 'andet') - (b.themeKey === 'andet') || b.weight - a.weight);
@@ -74,22 +80,29 @@
  <span>${esc(t.problem)}</span>
  ${ch ? `<span>Værdikæde: <a href="${chainHref(t.themeKey)}">${esc(ch.title)}</a></span>` : ''}
  ${t.lens ? `<span>NDI-linse: <a href="tema.html?slug=${encodeURIComponent(t.slug)}&fund=${fund.id}&linse=1" title="Kvalitativ beskrivelse (udkast), ikke en rating">${t.lens} af ${t.count} selskaber</a></span>` : ''}
+ ${(multi[t.themeKey] || []).length ? `<span title="${esc(multi[t.themeKey].join(', '))}">+${multi[t.themeKey].length} med temaet som ekstra tag (multi-tag) - tælles med på temasiden</span>` : ''}
  <a class="go" href="tema.html?slug=${encodeURIComponent(t.slug)}&fund=${fund.id}">${t.count ? `${t.count} ${t.count === 1 ? 'selskab' : 'selskaber'} · ca. ${pct(t.weight)} %` : `Ingen selskaber i ${esc(fund.short)}`} →</a>
  </div>`;
  }).join('');
 
  // Forslag-banner: skelner mellem "flyttet ud af Andet" og "flyttet fra et andet NDI-tema"
- const retagTxt = prop.retagged.map((r, i) => `${r.n} ${i ? '' : prop.fromAndet ? 'flyttet ' : 'er flyttet '}fra ${esc(daTheme(r.from))} til ${isNew({ themeKey: r.to, ...(agg[r.to] || {}) }) ? 'det nye tema ' : ''}<a href="tema.html?slug=${encodeURIComponent((data.themes.find((t) => t.themeKey === r.to) || {}).slug || r.to)}&fund=${fund.id}">${esc(daTheme(r.to))}</a>`);
+ // Grupperet pr. måltema: "4 fra Compute og 1 fra Software er flyttet til det nye tema Quantum"
  const andList = (xs) => (xs.length > 1 ? `${xs.slice(0, -1).join(', ')} og ${xs[xs.length - 1]}` : xs[0] || '');
+ const byTo = {};
+ for (const r of prop.retagged) (byTo[r.to] ||= []).push(r);
+ const retagTxt = Object.entries(byTo).map(([to, rs]) => {
+ const toLink = `<a href="tema.html?slug=${encodeURIComponent((data.themes.find((t) => t.themeKey === to) || {}).slug || to)}&fund=${fund.id}">${esc(daTheme(to))}</a>`;
+ return `${andList(rs.map((r) => `${r.n} fra ${esc(daTheme(r.from))}`))} er flyttet til ${isNew({ themeKey: to, ...(agg[to] || {}) }) ? 'det nye tema ' : ''}${toLink}`;
+ });
  const movedTxt = [
  prop.fromAndet ? `${prop.fromAndet} lå før i <em>Andet</em>.` : '',
- retagTxt.length ? `${prop.fromAndet ? 'Desuden er ' : ''}${andList(retagTxt)}.` : '',
+ retagTxt.length ? `${prop.fromAndet ? 'Desuden: ' : ''}${andList(retagTxt)}.` : '',
  ].filter(Boolean).join(' ');
  const review = prop.total ? `<section class="review-banner" aria-labelledby="rv-h">
  <p class="rv-kicker"><span class="badge badge-draft">FORSLAG</span> Afventer gennemgang</p>
  <h2 id="rv-h">${prop.moved} ${prop.moved === 1 ? 'selskab har' : 'selskaber har'} fået et forslag til NDI-tema</h2>
  <p>${movedTxt}
- Forslagene bygger på offentlige ISIN-opslag og selskabets branche.${prop.open ? ` ${prop.open} ${prop.open === 1 ? 'selskab står' : 'selskaber står'} stadig i Andet, fordi ingen NDI-linse passede godt nok.` : ''} Porteføljeholdet gennemgår alle temaer, også de ældre, før noget bliver endeligt.</p>
+ Forslagene bygger på offentlige ISIN-opslag, selskabets branche og dets plads i værdikæderne.${prop.open ? ` ${prop.open} ${prop.open === 1 ? 'selskab står' : 'selskaber står'} stadig i Andet, fordi intet NDI-tema passede godt nok (fx guld/sølv, sundhed, forbrug).` : ''} Porteføljeholdet gennemgår alle temaer, også de ældre, før noget bliver endeligt.</p>
  <p class="src" style="margin-top:6px">Tal for ${esc(fund.short)} · beholdning pr. ${posAsOf} (forsinket).</p>
  <p class="link-row"><a href="om-data.html#g-temaforslag">Sådan sættes temaerne →</a> <a href="index.html?view=udforsk&fund=${fund.id}&status=forslag">Se alle forslag i screeneren →</a>${prop.open ? ` <a href="tema.html?slug=andet&fund=${fund.id}">Se hvad der er tilbage i Andet →</a>` : ''}</p>
  </section>` : '';
@@ -98,12 +111,14 @@
  const small = real.filter((t) => t.count && (isNew(t) || (vc.chains || []).some((c) => c.id === t.themeKey && t.weight < 5)));
  const spotlight = small.length ? `<section class="panel" aria-labelledby="sm-h" style="margin-bottom:18px">
  <h2 id="sm-h" class="panel-h">Små temaer med egen værdikæde</h2>
- <p style="font-size:13px;color:var(--muted);margin-bottom:10px">Lav vægt betyder ikke, at temaet er uvigtigt for linsen - kun at eksponeringen i beholdningen er lille.</p>
+ <p style="font-size:13px;color:var(--muted);margin-bottom:10px">Lav vægt betyder ikke, at temaet er uvigtigt for linsen - kun at eksponeringen i beholdningen er lille. Navnene står efter vægt (største først) og er eksponering, ikke anbefalinger.</p>
  <ul style="display:grid;gap:8px;list-style:none;padding:0;margin:0">${small.map((t) => {
  const ch = chainFor(t.themeKey);
  return `<li><a href="tema.html?slug=${encodeURIComponent(t.slug)}&fund=${fund.id}"><strong>${esc(t.title)}</strong></a>${propChip(t)}
  <span style="color:var(--muted);font-size:13px"> · ${t.count} ${t.count === 1 ? 'selskab' : 'selskaber'} · ca. ${pct(t.weight)} %</span>
- ${ch ? ` · <a href="${chainHref(t.themeKey)}">Kæden "${esc(ch.title)}" →</a>` : ''}</li>`;
+ ${ch ? ` · <a href="${chainHref(t.themeKey)}">Kæden "${esc(ch.title)}" →</a>` : ''}
+ <br><span style="font-size:13px">${esc(t.count > 5 ? topNames(t.themeKey).join(', ') : andList(topNames(t.themeKey)))}${t.count > 5 ? ` … <a href="tema.html?slug=${encodeURIComponent(t.slug)}&fund=${fund.id}">+${t.count - 5} flere</a>` : ''}</span>
+ <span style="color:var(--muted);font-size:12px"> · NDI-linse på ${t.lens} af ${t.count}</span></li>`;
  }).join('')}</ul>
  </section>` : '';
 
