@@ -887,7 +887,9 @@
     <p class="link-row"><a href="vaerdikaede.html">Klassisk AI-kæde →</a> · <a href="temaer.html">Temaer →</a> · <a href="?kaede=space#kap-kaeder" data-goto="space">Rumkæden →</a> · <a href="?kaede=quantum#kap-kaeder" data-goto="quantum">Kvantekæden →</a> · <a href="tema.html?slug=space&amp;fund=pmindi">SpaceTech-tema →</a> · <a href="laer/saadan-taenker-vi.html">Sådan tænker vi →</a></p>
   </main>
   <script type="module">
-    import { daTheme, fmtDate } from './js/data.js';
+    import { daTheme, fmtDate, displayName } from './js/data.js';
+    // Læsbart navn (depotbankens forkortelser rettet, selskabsform med versaler); ISIN er nøglen
+    const coName = (c) => displayName(c).replace(/ (Ag|Se|Nv|Sa|Asa|Ab|Oyj)$/, (m, s) => ' ' + s.toUpperCase());
     const esc = (s) => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
     const pack = await fetch('data/value-chains.json').then(r => r.json());
     const fund = 'pmindi';
@@ -1166,7 +1168,7 @@
       const who = (l) => {
         if (!l) return '';
         if (!l.count) return `<p class="who">${esc(l.short || l.label)}: ingen selskaber i beholdningen er tilordnet leddet.</p>`;
-        const names = l.companies.slice(0, 3).map(c => `<a href="selskab.html?isin=${encodeURIComponent(c.isin)}&fund=${fund}">${esc(c.name)}</a>`).join(', ');
+        const names = l.companies.slice(0, 3).map(c => `<a href="selskab.html?isin=${encodeURIComponent(c.isin)}&fund=${fund}">${esc(coName(c))}</a>`).join(', ');
         return `<p class="who">Led: <b>${esc(l.short || l.label)}</b> · ${l.count} selskaber pr. ${asOf}, fx ${names}. <a href="#lk-${esc(l.id)}" data-open="${esc(l.id)}">Se leddet →</a></p>`;
       };
       let cur = 0;
@@ -1923,7 +1925,7 @@
         const k = `${src.id}|${c.id}:${l.id}`;
         if (!pairs.has(k)) pairs.set(k, { src, c, l, names: [] });
         const p = pairs.get(k);
-        if (!p.names.includes(co.name)) p.names.push(co.name);
+        if (!p.names.includes(coName(co))) p.names.push(coName(co));
       })));
       const list = [...pairs.values()].sort((a, b) => b.names.length - a.names.length).slice(0, 6);
       if (!list.length) {
@@ -2015,7 +2017,7 @@
       const list = all ? l.companies : l.companies.slice(0, SHOW);
       return list.map(c => {
         const other = own && c.theme !== own;
-        return `<a class="chip${other ? ' other' : ''}" href="selskab.html?isin=${encodeURIComponent(c.isin)}&fund=${fund}">${esc(c.name)} <small>${pct(c.w)}${other ? ' · tema ' + esc(daTheme(c.theme)) : ''}${c.forslag ? ' · forslag' : ''}</small></a>`;
+        return `<a class="chip${other ? ' other' : ''}" href="selskab.html?isin=${encodeURIComponent(c.isin)}&fund=${fund}">${esc(coName(c))} <small>${pct(c.w)}${other ? ' · tema ' + esc(daTheme(c.theme)) : ''}${c.forslag ? ' · forslag' : ''}</small></a>`;
       }).join('');
     }
 
