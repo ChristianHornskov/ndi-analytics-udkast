@@ -1108,3 +1108,5 @@ div.cmp-row{margin:10px 0 2px}.cmp-toggle{font-size:14px;cursor:pointer;display:
 .cmp-row .seg{display:inline-flex;gap:4px;margin-right:12px}
 .chart-wrap svg:focus-visible{outline:2px solid var(--yellow);outline-offset:2px}.chart-wrap .cursor{stroke:#cfe0e3;stroke-width:1;opacity:.5}
 .chart-wrap .cursor{pointer-events:none}
+.stale-warn{font-size:13px;color:var(--text);background:rgba(211,143,136,.14);border-left:3px solid #d38f88;padding:6px 10px;margin:6px 0}
+#rullende-og-nedture td,#rullende-og-nedture th{white-space:nowrap}.chart-wrap.r12 svg{min-height:160px}

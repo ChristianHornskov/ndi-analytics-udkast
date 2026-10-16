@@ -185,6 +185,41 @@ export function maxDrawdown(rows) {
   return { dd: best.dd * 100, peakD: best.peakD, troughD: best.troughD };
 }
 
+/** De n dybeste, ikke-overlappende nedture (top → bund → genvundet). dd i % */
+export function topDrawdowns(rows, n = 5) {
+  if (!rows?.length) return [];
+  const eps = [];
+  let peak = rows[0], trough = null;
+  for (const r of rows) {
+    if (r.total >= peak.total) {
+      if (trough && trough.total < peak.total) eps.push({ peakD: peak.d, troughD: trough.d, recD: r.d, dd: (trough.total / peak.total - 1) * 100 });
+      peak = r; trough = null;
+    } else if (!trough || r.total < trough.total) trough = r;
+  }
+  if (trough && trough.total < peak.total) eps.push({ peakD: peak.d, troughD: trough.d, recD: null, dd: (trough.total / peak.total - 1) * 100 });
+  return eps.sort((a, b) => a.dd - b.dd).slice(0, n);
+}
+
+/** Rullende 12-måneders totalafkast: for hver dato med ≥ 12 mdr. historik, afkast fra nærmeste dato ≤ 1 år før. */
+export function rolling12(rows) {
+  const out = [];
+  let j = 0;
+  for (let i = 0; i < rows.length; i++) {
+    const d = new Date(rows[i].d + 'T12:00:00Z'); d.setUTCFullYear(d.getUTCFullYear() - 1);
+    const lim = d.toISOString().slice(0, 10);
+    if (rows[0].d > lim) continue;
+    while (j + 1 < rows.length && rows[j + 1].d <= lim) j++;
+    out.push({ d: rows[i].d, v: (rows[i].total / rows[j].total - 1) * 100 });
+  }
+  return out;
+}
+
+/** Dage mellem ISO-dato og i dag (kalenderdage) */
+export function daysOld(iso, now = new Date()) {
+  if (!iso) return null;
+  return Math.floor((now - new Date(iso + 'T12:00:00Z')) / 86400000);
+}
+
 export function fmtPct(n, digits = 1) {
   if (n == null || Number.isNaN(n)) return '-';
   const sign = n > 0 ? '+' : '';

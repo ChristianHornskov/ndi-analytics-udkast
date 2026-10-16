@@ -216,6 +216,9 @@ if [ -f "$DOC/data/nasdaq-compare.json" ]; then
   python3 -c "import json,sys;d=json.load(open('$DOC/data/nasdaq-compare.json'));sys.exit(0 if d.get('data') and all(len(p)==2 for p in d['data']) else 1)" && ok "nasdaq-compare.json index-only series" || err "nasdaq-compare.json malformed"
 fi
 
+# Datafriskhed: daysOld-logik (advarsel > 3 dage)
+if node --input-type=module -e "import {daysOld} from '$DOC/js/data.js'; const n=new Date('2026-10-16T08:00:00Z'); process.exit(daysOld('2026-10-11',n)===4 && daysOld('2026-10-14',n)===1 ? 0 : 1)" 2>/dev/null; then ok "staleness helper (>3 dage)"; else err "staleness helper broken"; fi
+if rg -q 'stale-warn' "$DOC/js/app.js"; then ok "Fonden has staleness warning"; else err "Fonden staleness warning missing"; fi
 if [[ "$FAIL" -ne 0 ]]; then
   echo "=== PRECHECK FAILED — do not push ===" >&2
   exit 1
