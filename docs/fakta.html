@@ -156,7 +156,7 @@
  <main id="main"><p style="color:var(--muted)">Henter…</p></main>
  <footer class="site-footer">
  <p class="eyebrow" style="margin-bottom:4px">Markedsføringsmateriale</p>
- <p data-kid-footer>Central Information Dokument (KID): <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm140b">PMINDI ↗</a> · <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm145b">PMINDIAKK ↗</a>. Prospekt: <a href="https://fundmarket.dk/wp-content/uploads/Faellesprospekt-for-afdelinger-og-andelsklasser-i-Investeringsforeningen-Portfoliomanager-opdateret-24.10.2025.pdf">Fællesprospekt ↗</a>.</p>
+ <p data-kid-footer>Dokument med central information (KID): <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm140b">PMINDI ↗</a> · <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm145b">PMINDIAKK ↗</a>. Prospekt: <a href="https://fundmarket.dk/wp-content/uploads/Faellesprospekt-for-afdelinger-og-andelsklasser-i-Investeringsforeningen-Portfoliomanager-opdateret-24.10.2025.pdf">Fællesprospekt ↗</a>.</p>
  <p>Udkast / noindex. Generel information fra offentlige kilder. Ikke rådgivning. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast.</p>
  </footer>
  <script type="module">
@@ -309,7 +309,7 @@
  const klasse = (cl, txDiff) => `
  <article class="fact-card">
  <p class="kicker">${cl.distributing ? 'UDLODDENDE' : 'AKKUMULERENDE'} · ${esc(cl.productType)}</p>
- <h2>${esc(cl.label)}</h2>
+ <h2>${esc(cl.distributing === false || (cl.isin||"").includes("464") ? "PMINDIAKK" : "PMINDI")}</h2><p class="src" style="margin:0 0 8px">${esc(cl.label)}</p>
  <div class="isin-row">
  <div><span class="k" style="display:block;font-size:11px;color:var(--muted);margin-bottom:3px">ISIN</span><code>${esc(cl.isin)}</code></div>
  <button type="button" class="outline-btn small" data-copy="${esc(cl.isin)}">Kopiér ISIN</button>

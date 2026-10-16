@@ -129,7 +129,7 @@
  <main id="main"><p style="color:var(--muted)">Henter…</p></main>
  <footer class="site-footer">
  <p class="eyebrow" style="margin-bottom:4px">Markedsføringsmateriale</p>
- <p data-kid-footer>Central Information Dokument (KID): <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm140b">PMINDI ↗</a> · <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm145b">PMINDIAKK ↗</a>. Prospekt: <a href="https://fundmarket.dk/wp-content/uploads/Faellesprospekt-for-afdelinger-og-andelsklasser-i-Investeringsforeningen-Portfoliomanager-opdateret-24.10.2025.pdf">Fællesprospekt ↗</a>.</p>
+ <p data-kid-footer>Dokument med central information (KID): <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm140b">PMINDI ↗</a> · <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm145b">PMINDIAKK ↗</a>. Prospekt: <a href="https://fundmarket.dk/wp-content/uploads/Faellesprospekt-for-afdelinger-og-andelsklasser-i-Investeringsforeningen-Portfoliomanager-opdateret-24.10.2025.pdf">Fællesprospekt ↗</a>.</p>
  <p>Udkast / noindex. KID-omkostningsindikator + Fundmarket-postsatser. Ikke et ÅOP. Du kan tabe penge. Ikke rådgivning.</p>
  </footer>
  <script type="module">
@@ -328,7 +328,7 @@
  const c = cl.costs;
  return `<article class="cost-card">
  <p class="kicker">${esc(cl.isin)}</p>
- <h2>${esc(cl.label)}</h2>
+ <h2>${esc(cl.distributing === false || (cl.isin||"").includes("464") ? "PMINDIAKK" : "PMINDI")}</h2><p class="src" style="margin:0 0 8px">${esc(cl.label)}</p>
  <p style="color:var(--muted);font-size:14px;line-height:1.5">${cl.distributing ? 'Udloddende' : 'Akkumulerende'} klasse. Resultathonorar: <strong style="color:var(--text)">${c.performanceFee ? 'Ja' : 'Nej'}</strong>. ${esc(c.performanceFeeText)}</p>
  <p class="src">${esc(c.note)}</p>
  <p class="link-row" style="margin-top:12px">
