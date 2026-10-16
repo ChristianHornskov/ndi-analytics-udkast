@@ -48,6 +48,8 @@
   .dd-dates small{display:block;color:var(--muted);font-size:12px;line-height:1.4;margin-top:4px}
   .dd-dates.is-path{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:stretch}
   .dd-arrow{margin:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;color:#f5ee9e;font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-size:28px;line-height:1}
+  .dd-slope{display:block;width:72px;height:28px}
+  .rail-key{grid-column:1 / -1;margin:0;font-size:11px;line-height:1.35;color:var(--faint)}
   .dd-days{display:flex;flex-direction:column;align-items:center;gap:1px}
   .dd-days b{font-size:22px;font-weight:500;letter-spacing:-.4px;line-height:1;color:#f5ee9e}
   .dd-days i{font-style:normal;font-size:10px;letter-spacing:.7px;text-transform:uppercase;color:var(--faint)}
@@ -308,7 +310,8 @@
  <div class="match-rail" aria-hidden="true"><i data-rail="tx" style="width:${railPct(txGapN)}%"></i></div>
  </article>`;
  const heroNeq = heroKid && heroGap ? `<p class="fact-neq" aria-live="polite"><span class="mark" data-bridge-mark aria-hidden="true">${startBridge.mark}</span><span class="word" data-bridge-word>${startBridge.word}</span><span class="sr-only" data-bridge-sr>${startBridge.sr}</span></p>` : '';
- const hero = `<div class="fact-hero${heroKid && heroGap ? ' is-pair' : ''}${startBridge.same ? ' is-same' : ''}" id="blik" data-rail-base="${railBase}">${heroKid}${heroNeq}${heroGap}</div>`;
+ const railKey = heroKid && heroGap ? `<p class="rail-key">Søjlerne deler skalaen 0 til ${krTxt(railBase)} Længden følger kronerne.</p>` : '';
+ const hero = `<div class="fact-hero${heroKid && heroGap ? ' is-pair' : ''}${startBridge.same ? ' is-same' : ''}" id="blik" data-rail-base="${railBase}">${heroKid}${heroNeq}${heroGap}${railKey}</div>`;
  const strip = `<ul class="fact-strip">
  <li><span class="k">SRI</span><strong>${sameSri ? `${A.sri} af ${A.sriMax}` : `${A.sri} / ${B.sri}`}</strong>${sriMeter}</li>
  <li><span class="k">Horisont</span><strong>${sameHorizon ? `${A.horizonYears} år` : `${A.horizonYears} / ${B.horizonYears} år`}</strong></li>
@@ -354,8 +357,9 @@
  const spanDays = !peakAfterTrough && risk?.maxDdPeak && risk?.maxDdTrough ? daysBetween(risk.maxDdPeak, risk.maxDdTrough) : null;
  const topCard = `<article class="${peakAfterTrough ? 'is-odd' : ''}"><span class="k">${peakAfterTrough ? 'Topfeltet i filen' : 'Top i filen'}</span><strong>${daDate(risk?.maxDdPeak) || 'ikke oplyst'}</strong><small>${peakAfterTrough ? 'Datoen ligger efter bunden og er ikke tegnet som start på faldet.' : 'Datoen står i risk-stats.json.'}</small></article>`;
  const botCard = `<article><span class="k">Bund i filen</span><strong>${daDate(risk?.maxDdTrough) || 'ikke oplyst'}</strong><small>Søjlen er den absolutte størrelse på en skala fra 0 til 100 %. Den er ikke forstørret.</small></article>`;
+ const fallSlope = `<svg class="dd-slope" viewBox="0 0 72 28" aria-hidden="true"><line x1="4" y1="5" x2="68" y2="23" stroke="#f5ee9e" stroke-width="1.5" stroke-linecap="round"/><circle cx="4" cy="5" r="3" fill="#f5ee9e"/><circle cx="68" cy="23" r="3" fill="#c98a94"/></svg>`;
  const fallArrow = spanDays > 0
- ? `<p class="dd-arrow"><span class="dd-days"><b>${spanDays}</b><i>dage</i></span><span class="sr-only">Kalenderafstand mellem de to datoer i risk-stats.json. Ikke et Fundmarket-tal.</span><span aria-hidden="true">→</span></p>`
+ ? `<p class="dd-arrow">${fallSlope}<span class="dd-days"><b>${spanDays}</b><i>dage</i></span><span class="sr-only">Kalenderafstand mellem de to datoer i risk-stats.json. Hældningen er kun de to punkter, ikke en daglig kurve. Ikke et Fundmarket-tal.</span></p>`
  : `<p class="dd-arrow" aria-hidden="true">→</p>`;
  const dateRow = peakAfterTrough
  ? `<div class="dd-dates">${botCard}${topCard}</div>`
