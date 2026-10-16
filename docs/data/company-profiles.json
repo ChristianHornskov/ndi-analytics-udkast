@@ -749,15 +749,15 @@
   "US03674X1063": {
    "name": "Antero Resources",
    "theme": "energy-resources",
-   "summary": "Producerer naturgas og flydende gasprodukter i Appalachia i USA. Selskabet skriver, at det leverer naturgas og LPG til eksport.",
-   "watch": "Gaspriser og produktion fra felterne.",
-   "source": "https://www.anteroresources.com/",
-   "products": "Naturgas, flydende gasprodukter og LPG til eksport.",
-   "customers": "Købere af gas.",
-   "role": "Brændsel til elproduktion.",
+   "summary": "Producerer naturgas og LPG i Marcellus i West Virginia. Over 850.000 acres står uden dato. 24 millioner tønder LPG i 2025 er eksport, ikke et kraftværk.",
+   "watch": "Om acre-tallet får en dato. 2025-tallene er ikke et kraftværk.",
+   "source": "https://www.anteroresources.com/operations",
+   "products": "Naturgas og LPG. Ikke et kraftværk.",
+   "customers": "Eksportmarkeder i 2025. Navne på købere er ikke taget med.",
+   "role": "Brændsel til elproduktion. Ikke en mine.",
    "narrative": [
-    "Antero Resources producerer naturgas og flydende gasprodukter i Appalachia. Selskabet nævner Marcellus og skriver, at det leverer naturgas og LPG til eksport.",
-    "I kæden står selskabet på elproduktion, fordi gassen er brændsel. Det er ikke en metalmine."
+    "Hovedkontoret ligger på 1615 Wynkoop Street i Denver i Colorado. Distriktskontoret ligger på 535 White Oaks Boulevard i Bridgeport i West Virginia. Kontorerne er ikke boringerne. Driftssiden skriver, at arbejdet ligger i Appalachian Mountains i West Virginia, i Marcellus. Over 850.000 acres står uden dato. Siden er læst 16. oktober 2026. Ordene largest og lower costs er ikke taget med.",
+    "I 2025 skriver selskabet, at det stod for hvad der svarer til 100 LNG-laster til udlandet, og at 24 millioner tønder LPG blev sendt til internationale markeder. Cirka 32 procent af den eksporterede LPG gik til udviklingslande. Året ligger før beholdningen. Det er selskabets tal, ikke et kraftværk. En indtjeningsdato 29. oktober 2026 ligger efter beholdningen og er ikke taget med som drift."
    ],
    "narrativeSources": [
     {
