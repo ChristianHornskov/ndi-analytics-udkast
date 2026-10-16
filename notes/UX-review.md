@@ -380,3 +380,10 @@ Hele lane-C-fladen ved 375 px: ideer, kort, om-data, invester, risici, ndi-persp
 - Compliance MUST 10 i mine filer: ordlisten `#g-ytd` siger nu, at ÅTD er et delår og ikke kan sammenlignes direkte med hele år. FAQ «Hvorfor er 2023 ikke et helt år?». FAQ-svaret om 3 måneder nævner ikke længere «år til dato» som noget, fonden fremhæver.
 - PERSONA-privat (#1 omkostninger, #6 referencepunkt, #3 hvem) + FO MUST 2 (skat): fem nye/omskrevne korte svar i FAQ. Skattesvaret er bevidst generelt (ingen skatteregler, «spørg din bank, revisor eller rådgiver»).
 - Test: 10 sider × 375/1280: 0 konsolfejl, 0 h-overflow, én h1. FAQ-søgning «sammenligne» giver 8 træf.
+
+## 02:24 CEST lane-C checkpoint (Claude) · footer med markedsføringsmærkning på 21 sider
+- Compliance MUST 1 (blocker, cyklus 3 → 25): lane-C-siderne havde slet ingen footer. Nu har alle 21 en `site-footer`: **«Markedsføringsmateriale.»** + direkte links til fællesprospektet og begge KID + «Udkast / noindex … Du kan tabe en del af eller hele din investering» + link til ordlisten.
+- Invester trin 1 linker direkte til prospektet (før: «Prospektlink findes på faktasiden»).
+- Tjek af UX MUST «tre 4.-trin» på invester: lukket på lane-C (trin 1–5, ét «4. Køb og omkostninger» med KID-tallet).
+- Jargon-tjek på lane-C-sider: 0 «Level 1», «screener», «multi-tag», «Max DD». «max drawdown» kun i parentes efter «Største fald» på læs-grafen.
+- Test 375/1280 × 21 sider: 0 konsolfejl, 0 overflow, én h1, footer 12px med mærkningen.

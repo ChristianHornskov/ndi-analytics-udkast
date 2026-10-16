@@ -63,6 +63,7 @@ Klikbart dansk udkast af "stedet man researcher tech-aktier i Danmark" (Mads). S
 - [ ] Fjern noindex når klar til indeks.
 - [ ] GA4 / tracking efter brand-site beslutning.
 - [ ] Juridisk review (KID-links, risikotekst, marketingproces).
+- [ ] **Markedsføringsmærkning (compliance MUST 1):** lane-C-siderne (ideer, kort, om-data, invester, risici, ndi-perspektiv, 15 × laer/) har nu en `footer.site-footer` med «Markedsføringsmateriale. Læs prospektet og KID for PMINDI/PMINDIAKK, før du træffer en endelig investeringsbeslutning» og direkte links. Forside, fonden, omkostninger, vaerdikaeder, selskab, embed m.fl. (andre lanes) mangler stadig den linje. Christian/Fundmarket: bekræft, at sitet skal mærkes som markedsføring (reviewer anser det som blocker).
 
 ## Smokes (seneste overnight)
 Se notes/STATUS.md. Forvent: smoke-quality ~108, smoke-cycle3 ~82+, precheck PASS.

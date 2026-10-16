@@ -1698,3 +1698,12 @@ Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er
 - Lead 2026-10-16 02:18:04 CEST: Leo 02:00/02:07 fixes on main (e402f15/5843694). Coord hardened (no auto-stash). Monitor+loop running. Queued lane merges R/A/B/C/D/E/X.
 
 - Lead 2026-10-16 02:18:12 CEST: lane R/A/B/C CONFLICT on STATUS (and app.js for B) — aborted; coordinator continues.
+
+## Fra Claude lane-C (compliance MUST 1: markedsføringsmærkning i footer på 21 sider) · 02:24 CEST 16/10 (wall-clock)
+- Merget origin/main (3e4ec15) ind i lane-C (STATUS-konflikt løst, begge sider bevaret).
+- Alle 21 lane-C-sider (ideer, kort, om-data, invester, risici, ndi-perspektiv, 15 × laer/) har nu `footer.site-footer`: «Markedsføringsmateriale. Læs prospektet og KID for PMINDI eller PMINDIAKK, før du træffer en endelig investeringsbeslutning» (direkte links) + udkast/noindex, historisk afkast, «Du kan tabe en del af eller hele din investering». Før: ingen footer på disse sider.
+- `invester.html` trin 1 linker direkte til fællesprospektet.
+- UX MUST «tre 4.-trin på invester» er allerede lukket på lane-C.
+- Test 21 sider × 375/1280: 0 konsolfejl, 0 overflow, én h1, footer til stede. precheck: se push.
+- **Til andre lanes / main:** samme footerlinje mangler på index, fonden, omkostninger, vaerdikaeder, selskab(er), temaer, drawdown, periode, nyhedsarkiv, sammenlign, ndi-paa-x og embed. Kan kopieres fra `docs/invester.html` (husk `../` i undermapper). Christian/Fundmarket bør bekræfte mærkningen (HANDOFF «Før live»).
+- Branch `lane-C` klar til merge. Næste: UX-review 04:00.
