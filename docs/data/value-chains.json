@@ -3754,6 +3754,49 @@
     ],
     "done": "Du har svaret på alle fem.",
     "note": "Spørgsmålene er vores egne og skal gøre siden lettere at læse. De tester ikke viden om enkelte selskaber og er ikke en anbefaling."
+   },
+   "route": {
+    "label": "Energi i seks stop",
+    "stops": [
+     {
+      "id": "eflow",
+      "icon": "🔌",
+      "k": "Strømmens vej",
+      "t": "fem trin"
+     },
+     {
+      "id": "e-risk",
+      "icon": "⚠",
+      "k": "Kan gå galt",
+      "t": "seks usikkerheder"
+     },
+     {
+      "id": "e-quiz",
+      "icon": "✓",
+      "k": "Tjek dig selv",
+      "t": "fem spørgsmål"
+     },
+     {
+      "id": "e-gloss-wrap",
+      "icon": "📖",
+      "k": "Ordbog",
+      "t": "13 ord"
+     },
+     {
+      "id": "chain-tip",
+      "foot": "chain-view",
+      "icon": "🔗",
+      "k": "Leddene",
+      "t": "fem led og selskaberne"
+     },
+     {
+      "id": "chain-bridges",
+      "foot": "chain-bridges",
+      "icon": "⇄",
+      "k": "Broer",
+      "t": "fælles selskaber"
+     }
+    ]
    }
   },
   {

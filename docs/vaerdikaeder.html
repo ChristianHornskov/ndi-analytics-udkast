@@ -167,7 +167,7 @@
     .mn-bridge::before{content:"⇄ ";color:var(--yellow);font-weight:700}
     .a-pane{display:none;margin:4px 0 18px;border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:linear-gradient(180deg,#0e2027,#0b171d)}
     .a-pane.on{display:block}
-    #a-pane,#e-pane,#p-pane,#sp-map,#sp-cost,#sp-trip,#sp-money,#sp-risk,#sp-web,#e-risk,#sp-bands,#sp-quiz,#e-quiz,#sp-alt,#q-hz,#q-lad,#q-risk,#q-links,#q-cold,#q-quiz,#q-br,#eflow,#q-gl,#gloss-wrap,#space-pane,#p-gloss-wrap,#e-gloss-wrap,#phases,#p-loop,#p-risk,#p-quiz,#a-risk,#a-quiz,#a-gloss-wrap{scroll-margin-top:110px}
+    #a-pane,#e-pane,#chain-tip,#chain-bridges,#p-pane,#sp-map,#sp-cost,#sp-trip,#sp-money,#sp-risk,#sp-web,#e-risk,#sp-bands,#sp-quiz,#e-quiz,#sp-alt,#q-hz,#q-lad,#q-risk,#q-links,#q-cold,#q-quiz,#q-br,#eflow,#q-gl,#gloss-wrap,#space-pane,#p-gloss-wrap,#e-gloss-wrap,#phases,#p-loop,#p-risk,#p-quiz,#a-risk,#a-quiz,#a-gloss-wrap{scroll-margin-top:110px}
     /* Robotik: sanse-tænke-handle-løkke (kun denne side) */
     .p-links{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px;padding:0;list-style:none}
     .p-links a{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;text-decoration:none;color:var(--text);border:1px solid var(--line);border-radius:999px;padding:4px 11px;background:#0b171d}
@@ -790,6 +790,7 @@
       <div class="e-pane" id="e-pane" aria-label="Energi forklaret">
         <h3 id="ef-title"></h3>
         <p class="src" id="ef-lede"></p>
+        <nav class="sp-route" id="e-route" aria-label="Energi-fanens stop" hidden></nav>
         <ul class="p-links" id="e-links" aria-label="Spring til" hidden></ul>
         <ol class="eflow" id="eflow" aria-label="Strømmens vej fra råstof til datacenter"></ol>
         <p class="e-fact" id="ef-fact"></p>
@@ -817,7 +818,9 @@
       <p class="anno" id="chain-tip">Klik et led for selskaber. Hvert led har tre dele: hvad det er, hvorfor NDI følger det, og hvad der ændrer sig.</p>
       <div class="sm" id="chain-sm" aria-label="Største led i den forsinkede beholdning"></div>
       <div class="vc-chain" id="chain-view" role="tabpanel" aria-labelledby="chain-tabs"></div>
+      <div class="route-slot" data-slot="chain-view"></div>
       <div class="bridges" id="chain-bridges" aria-live="polite"></div>
+      <div class="route-slot" data-slot="chain-bridges"></div>
       <p class="src" id="mapping-note"></p>
       <p class="band" id="theme-note"></p>
     </section>
@@ -1261,26 +1264,29 @@
       return true;
     }
     renderQuiz(sp?.quiz, 'space', 'qz', 'sp-quiz');
-    // Rum: læse-rute øverst i fanen
-    (function renderRoute(r) {
+    // Læse-rute øverst i en lang fane (rum og energi) og en stop-bjælke nederst i hvert stop
+    const routeSlots = {};
+    function renderRoute(r, c, navId, upId, name) {
       if (!r?.stops?.length) return;
-      const nav = document.getElementById('sp-route');
-      nav.innerHTML = `<span class="lbl">${esc(r.label)}</span>` + r.stops.filter(s => document.getElementById(s.id)).map((s, i) =>
-        `<a href="?kaede=space#${esc(s.id)}" data-sec="space:${esc(s.id)}"><span class="no" aria-hidden="true">${s.icon}</span><span>${i + 1}. ${esc(s.k)}<small>${esc(s.t)}</small></span></a>`).join('');
+      const nav = document.getElementById(navId);
+      const stops = r.stops.filter(s => { const el = document.getElementById(s.id); return el && !el.hidden; }), n = stops.length;
+      if (n < 2) return;
+      nav.innerHTML = `<span class="lbl">${esc(r.label)}</span>` + stops.map((s, i) =>
+        `<a href="?kaede=${c}#${esc(s.id)}" data-sec="${c}:${esc(s.id)}"><span class="no" aria-hidden="true">${s.icon}</span><span>${i + 1}. ${esc(s.k)}<small>${esc(s.t)}</small></span></a>`).join('');
       nav.hidden = false;
-      // Nederst i hvert stop: hvor er jeg, og hvad er det næste stop?
-      const stops = r.stops.filter(s => document.getElementById(s.id)), n = stops.length;
-      const go = (s, cls, txt) => `<a class="${cls}" href="?kaede=space#${esc(s.id)}" data-sec="space:${esc(s.id)}">${txt}</a>`;
+      const go = (s, cls, txt) => `<a class="${cls}" href="?kaede=${c}#${esc(s.id)}" data-sec="${c}:${esc(s.id)}">${txt}</a>`;
       stops.forEach((s, i) => {
         const el = document.getElementById(s.id), prev = stops[i - 1], next = stops[i + 1];
         const foot = document.createElement('nav');
         foot.className = 'sp-next';
-        foot.setAttribute('aria-label', `Rum-ruten, stop ${i + 1} af ${n}`);
+        foot.setAttribute('aria-label', `${name}, stop ${i + 1} af ${n}`);
         foot.innerHTML = `<span class="pips" aria-hidden="true">${stops.map((_, j) => `<i class="${j < i ? 'd' : j === i ? 'c' : ''}"></i>`).join('')}</span>`
           + `<span class="at">Stop ${i + 1} af ${n}: ${s.icon} ${esc(s.k)}</span><span class="go">`
           + (prev ? go(prev, 'pv', `← ${esc(prev.k)}`) : '')
-          + (next ? go(next, 'nx', `Næste: <span aria-hidden="true">${next.icon}</span> ${esc(next.k)} →`) : go({ id: 'space-pane' }, 'nx', '✓ Ruten er slut. Op til starten ↑'))
-          + (next ? go({ id: 'space-pane' }, 'up', '↑ Ruten') : '') + '</span>';
+          + (next ? go(next, 'nx', `Næste: <span aria-hidden="true">${next.icon}</span> ${esc(next.k)} →`) : go({ id: upId }, 'nx', '✓ Ruten er slut. Op til starten ↑'))
+          + (next ? go({ id: upId }, 'up', '↑ Ruten') : '') + '</span>';
+        // Ledkort og broer er fælles for alle faner og bygges på ny ved hvert faneskift, så deres bjælke står i en plads under dem
+        if (s.foot) { (routeSlots[s.foot] ||= {})[c] = foot; return; }
         if (el.tagName === 'DETAILS') el.after(foot); else el.append(foot);
       });
       // "Du er her": stoppet, der fylder læsefeltet, lyser op i ruten øverst
@@ -1288,8 +1294,9 @@
         const chips = [...nav.querySelectorAll('a')];
         const seen = new Set();
         const io = new IntersectionObserver((es) => {
+          if (active() !== c) return;
           es.forEach(e => { if (e.isIntersecting) seen.add(e.target.id); });
-          const vis = stops.filter(s => { const b = document.getElementById(s.id).getBoundingClientRect(); return b.height && b.top < innerHeight * .45 && b.bottom > innerHeight * .2; });
+          const vis = stops.filter(s => { const t = document.getElementById(s.id).getBoundingClientRect(), b = document.getElementById(s.foot || s.id).getBoundingClientRect(); return b.height && t.top < innerHeight * .45 && b.bottom > innerHeight * .2; });
           const cur = vis.length ? vis[vis.length - 1].id : null;
           chips.forEach((a, j) => {
             const id = stops[j].id;
@@ -1297,9 +1304,9 @@
             a.classList.toggle('done', seen.has(id) && id !== cur);
           });
         }, { rootMargin: '-20% 0px -55% 0px' });
-        stops.forEach(s => io.observe(document.getElementById(s.id)));
+        stops.forEach(s => [s.id, s.foot].forEach(id => id && io.observe(document.getElementById(id))));
       }
-    })(sp?.route);
+    }
     // Hvad kan gå galt (baggrund; NDI-linjer med kilde). Lille kæde-strimmel viser, hvilke led der rammes
     function renderRisks(r, links, ids, o = {}) {
       if (!r?.items?.length) return false;
@@ -1552,8 +1559,12 @@
     // Energi: hvad kan gå galt, strimlen følger strømmens vej (råstof → lagring → datacenter)
     if (en) renderRisks(en.risks, en.links, ['erk-h', 'erk-lede', 'erk-grid', 'erk-note', 'e-risk'], { flow: true, aria: 'Strømmens vej fra råstof til lagring' });
     renderQuiz(en?.quiz, 'energy', 'eqz', 'e-quiz');
-    // Energi: genveje under indledningen (kun til sektioner, der faktisk vises)
+    // Ruterne bygges, når alle fanens sektioner står (skjulte sektioner springes over)
+    renderRoute(sp?.route, 'space', 'sp-route', 'space-pane', 'Rum-ruten');
+    renderRoute(en?.route, 'energy', 'e-route', 'e-pane', 'Energi-ruten');
+    // Energi: genveje under indledningen (kun til sektioner, der faktisk vises), hvis fanen ikke har en rute
     (function renderELinks() {
+      if (!document.getElementById('e-route').hidden) return;
       const n = (k) => en?.[k]?.items?.length ? ` (${en[k].items.length})` : '';
       const items = [['eflow', '🔌', 'Strømmens vej'], ['e-risk', '⚠', 'Hvad kan gå galt?' + n('risks')], ['e-quiz', '✓', 'Tjek dig selv' + n('quiz')], ['e-gloss-wrap', '📖', 'Energi-ordbog']]
         .filter(([id]) => { const el = document.getElementById(id); return el && !el.hidden && el.children.length; });
@@ -2061,6 +2072,7 @@
         el.addEventListener('keydown', e => { if (e.target === el && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); toggle(); } });
         view.appendChild(el);
       });
+      document.querySelectorAll('.route-slot').forEach(sl => sl.replaceChildren(...(routeSlots[sl.dataset.slot]?.[id] ? [routeSlots[sl.dataset.slot][id]] : [])));
       if (opts.push !== false) {
         const u = new URL(location.href);
         u.searchParams.set('kaede', id);

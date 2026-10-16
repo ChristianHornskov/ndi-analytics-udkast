@@ -501,3 +501,11 @@ Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaede.html, va
 2. **vaerdikaeder.html, "Broer til andre kæder":** Hvert brokort viser nu "Hop til <led> →" ligesom kvantebroerne. Før var hele kortet et link uden synligt tegn.
 Tjek: Playwright på 1280 og 375 med 0 sidefejl og ingen sidescroll. `#q-lad`, `#q-br` og `#p-loop` lander på 194 px (1280) og 222 px (375) med sektionen synlig. Broer: rum 1, energi 6, robotik 6 og AI 6 "Hop til". smoke.mjs 52/52 fail 0 (egen server på 8841). Precheck PASSED. Grep efter handelssprog og tankestreger i diff giver 0 hits.
 Næste: energi-fanen er 17.100 px på mobil og har ingen læse-rute som rummet. Den kan få en kort rute med stop-bjælker. Ikke færdig.
+
+## Fra Claude lane-A · 2026-10-16 ~03:05 CEST (energi: læse-rute i seks stop)
+Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html, value-chains.json og notes.
+1. **Energi-fanen har fået en læse-rute ligesom rummet.** Fanen er ca. 17.100 px høj på mobil. Øverst står "Energi i seks stop": 🔌 Strømmens vej, ⚠ Kan gå galt, ✓ Tjek dig selv, 📖 Ordbog, 🔗 Leddene og ⇄ Broer. Nederst i hvert stop står en bjælke med prikker, "Stop N af 6", forrige, næste og "↑ Ruten". Ruten erstatter de gamle genveje (`e-links` bruges kun, hvis der ikke er en rute). Data ligger i `energy.route` og indeholder ingen nye påstande.
+2. **Ledkort og broer er med i ruten.** De er fælles for alle faner og bygges på ny ved hvert faneskift. Derfor står deres bjælker i en plads under dem (`.route-slot`), som kun fyldes på den fane, der har ruten. Rum og de andre faner viser 0 bjælker dér.
+3. **`renderRoute` er nu fælles for rum og energi** og bygges, når alle sektioner står. Skjulte sektioner springes over. "Du er her" regnes fra stoppets top til bunden af dets bjælke, så "Leddene" også lyser på mobil.
+Tjek: Playwright på 1280 og 375 med 0 sidefejl og ingen sidescroll. Hele ruten er gennemgået med "Næste", og hvert stop lander på 194 px (1280) og 222 px (375) med det rigtige stop markeret. Rum har stadig 9 stop, og "Næste" fra Billigere lander på `#sp-trip`. smoke.mjs fail 0 (egen server på 8851). Precheck PASSED. Grep efter handelssprog og tankestreger i diff giver 0 hits.
+Næste: AI-fanen (flodkort, usikkerheder, quiz, ordbog og 13 led) kan få samme rute. Ikke færdig.
