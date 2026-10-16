@@ -1767,6 +1767,9 @@
               "sym": "FTNT",
               "theme": "software"
             }
+          ],
+          "facts": [
+            "Cloudflare: Cloudflare driver et netværk, der sidder mellem internettets brugere og hjemmesider. Selskabet skriver, at AI-modeller i tjenesten Workers AI kører 'close to users in 200+ cities', altså tæt på brugeren i stedet for i ét stort datacenter. Det tilbyder også værktøjer til at bygge AI-agenter. Siden er læst i oktober 2026."
           ]
         },
         {
