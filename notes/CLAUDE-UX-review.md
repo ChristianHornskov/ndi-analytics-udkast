@@ -1570,3 +1570,18 @@ Nyt siden c64: a11y aria-sort på `th` (app.js, selskaber.html), anker-hop efter
 
 ### Nice
 - Ingen nye.
+
+## 2026-10-16 08:19 CEST · cyklus 66 · freeze-tjek (main `63873a0`)
+
+Nyt: omkostnings-lineal (omkostninger og fakta), X-månedsmatrix og Udforsk/Fonden-mobil (`dce1a0e`). Lineal og matrix kom ind efter 08:00-freeze (`d809393`).
+
+### MUST
+- Ingen nye. 15 live-URL'er @375 har 0 overflow og 0 pageerrors. `#lineal` er 347 px bred og scroller ikke vandret. `.x-months-row` er 321/321 px og scroller ikke vandret.
+
+### SHOULD
+- **U-K4** · Lineal: der er to knapper med samme tast (G). "Summen" viser et tal, som ingen officiel kilde har (se S-K4 i compliance-reviewet). FO-personaen vil spørge, hvorfor den sum overhovedet vises. Privat-personaen vil læse 2,13 % som "prisen". Det enkleste er at beholde kun "Tallene".
+- **U-X2** · Månedsmatrixen @375: cellen "jan 26" efterfulgt af tallet "2" er tvetydig. "26" læses let som et antal. Matrixen har 18 celler, og 13 af dem er 0. Den er mest tom luft, og den lægger et nyt idiom oven på knude, atlas, sky og weave. Det bidrager til U-V1-fatigue. Tast M virker (→ `?mo=2026-10`, 11 kort).
+- Åbne: U-V1, U-X1, U-T1/S-T1.
+
+### Nice
+- Tasterne G og M er korrekt slået fra i input-felter. ✅

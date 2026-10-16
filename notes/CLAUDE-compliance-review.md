@@ -1556,3 +1556,18 @@ Rettelse: c62-headeren "08:10" var forkert. Den blev skrevet før 08:08.
 ### SHOULD
 - **S-T1 stadig åben**: der er ingen "rådgivning"-tekst på `tema.html?slug=platforms` og `?slug=optik-netvaerk` (live = main, md5 6b594352). Det er en footer-fix, så den er tilladt under freeze, hvis den ejende lane når det før 08:30.
 - Åbne: S-R1, S-D1, S-D2, S-K1–K3, S-N1–N3, S3, S5, S12.
+
+## 2026-10-16 08:19 CEST · cyklus 66 · freeze-tjek (main `63873a0`)
+
+- Nyt i docs siden c65 (`fa5a811`): lane-X `d809393` (08:10) tilføjer en omkostnings-**LINEAL** (`#lineal`, `?sum=1`) på omkostninger.html og fakta.html og en **månedsmatrix** på ndi-paa-x.html (`xMonthHtml`, tast M). Derudover `dce1a0e` (UX på Udforsk og Fonden, mobilgraf). Live = main pr. md5 på 11 filer. ✅
+- **Proces:** `d809393` er en ny feature, committet efter LEO FREEZE 08:00. Det er ikke en bugfix. Coordinator bør tage stilling til, om den skal blive.
+- Lineal, indhold: øvrige løbende 1,49 %, porteføljetransaktion 0,64/0,72 %, KID ved 5 år 2,79/2,85 %. Teksten siger tydeligt "ikke et ÅOP", "står ikke hos Fundmarket" og "4 % er ikke et tal fra fonden". ✅ Ærligt mærket.
+- 15 live-URL'er @375 (cache-bust): 0 pageerrors, 0 overflow. Rådgivning-, tab- og historisk-linjen findes på 14/15. "anbefal*"-hits er "anbefalet holdeperiode" (KID) eller negationer. "overvægt" er kun negation. ✅ M1-indholdet er uændret (x-posts.json ændrer kun callCountNote).
+
+### MUST
+- Uændret: **M1** (ndi-paa-x knude/lead løfter tredjeparts-BREAKING frem) og **ÅOP mangler** (FO-persona MUST).
+
+### SHOULD
+- **S-K4 (NY)** · Lineal "Summen" (`?sum=1`): siden regner selv 2,13 % / 2,21 % ud og viser det i kr. på 100.000 kr. Tallet står lige ved KID's 2,79 % / 2,85 %. En privat læser kan tage det lavere, hjemmeregnede tal som de samlede omkostninger. Det giver risiko for, at omkostningerne fremstår lavere, end de er. Forslag: fjern sum-visningen, eller skriv i samme sætning "KID ved 5 år (2,79 %) er det officielle samlede tal". Dertil kommer en tekstfejl: B-klassens sætning mangler "på 100.000 kr.".
+- **S-T1 stadig åben**: `tema.html?slug=platforms` har ingen "rådgivning"-tekst (live = main, md5 6b594352, uændret).
+- Åbne: S-R1, S-D1, S-D2, S-K1–K3, S-N1–N3, S3, S5, S12.
