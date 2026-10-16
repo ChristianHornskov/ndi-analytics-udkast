@@ -759,3 +759,30 @@ Ikke juridisk rådgivning. Pages (00:15:49 GMT) = main `e402f15`. Jeg har kørt 
 
 ### Prioritet
 **2** (X-tredjepart ved fondens graf + produktsider) → **9** (fakta "ikke oplyst" + manglende KID-tal på omkostninger) → **5** (ÅTD uden godkendelse) → **3** → **11** → **1**.
+
+## 2026-10-16 02:24 CEST · cyklus 31 (main `3e4ec15`, docs-delta `5843694`)
+
+Ikke juridisk rådgivning. Pages (00:15:49 GMT) = `e402f15`, og `5843694` er ikke live endnu. Status nedenfor gælder **main** (lokal Playwright ved 375 + grep). Jeg har krydstjekket KID-tal mod Fundmarket-PDF'erne.
+
+### Status pr. MUST
+1. **"Markedsføringsmateriale"-mærkning:** kun ndi-paa-x ("NDI-konti er markedsføring/udkast"). Fonden, fakta og omkostninger har 0. **Åben.**
+2. **Tredjepartsopslag på produktsider: delvis.** "MADS FØLGER" → "Fulgt konto"/"Konti NDI følger" ✅ (fjerner koblingen til forvalterens rådgiver). Men `chartMarkers` viser stadig @BullTheoryio "BREAKING: SoftBank … $100 billion" og @MilkRoadAI under fondens afkastgraf. SoftBank-selskabssiden har 2 × "BREAKING" og @FundaAI "repricing of credit risk" ved siden af fondens beholdning. **Åben, højeste prioritet.** Grafmarkører kun fra @InvestNewdeal. Ingen tredjepartsrygter om navngivne beholdninger på selskab/tema (MAR art. 20-hensyn, som i cyklus 29).
+3. **"kan tabe":** omkostninger (lede, footer, warn) ✅ og ndi-paa-x (snap-bånd, footwarn, footer) ✅. **Lukket på main** (live efter Pages).
+4. PMINDIAKK før 12 mdr.: ingen afkast ✅. NAV-niveau afventer Christians beslutning.
+5. **ÅTD +4,0 % og 100.000 kr.-eksempel "afventer Fundmarket-godkendelse"** står stadig på fonden (sætningen er synlig for kunden). **Åben.** Vis ikke tal, der eksplicit afventer godkendelse. Skjul dem, eller få godkendelsen.
+6. SRI mod udsving: lukket ✅.
+7. @MadsC007-chartMarkers: lukket ✅ (se 2 for erstatningen).
+8. Offentligt repo: Christians beslutning.
+9. **KID-omkostningsindikator: lukket ✅.** omkostninger `#kid-omkostning` og fakta viser 2,79 %/2,85 % (5 år) og 2,63 %/2,71 % (1 år). Det stemmer med KID-PDF'erne (priip_ipm140b og priip_ipm145b, "Årlig omkostningsmæssig konsekvens"), og der er link til begge KID'er. Det står eksplicit, at postsatser ≠ ÅOP og ikke er et billigere alternativ. **SHOULD:** sætningen "det tal, marketingmateriale skal gengive ærligt" er intern compliance-begrundelse på en kundeside. Fjern den. **SHOULD:** fakta-opsummeringen øverst nævner kun 1,49 % (postsats). Sæt KID-tallet først for konsistens (ESMA-retningslinjerne for markedsføring: omkostninger må ikke fremstilles lavere end i KID).
+10. Delperioder: "2023 delår" ✅. "2026"/ÅTD er delår uden mærkning (SHOULD).
+11. **Embed (`embed/chart.html`):** "kan tabe" ✅ og "historisk" ✅, men KID-link 0 og SRI 0. **Åben.**
+
+### Nyt
+- **SHOULD:** `x-posts.json` har et opslag med `complianceNote: "Omskrevet i snapshot"`. Et omskrevet opslag, der vises som opslagets tekst med "Åbn på X ↗", er ikke en tro gengivelse. Marker "omskrevet/resumé" i UI'et, eller brug originalteksten.
+- **SHOULD:** fonden siger "seneste offentlige kvartalsrapport" om beholdningen, men om-data siger, at 1. juni ikke er et kvartalsskifte. Hold forsinkelsesformuleringen ens ("forsinket snapshot pr. 1. jun. 2026").
+- Beholdning asOf: alle beholdningsfiler har 2026-06-01 ✅. Afkast er pr. 14./15. okt. 2026 ✅. Ingen live-handler.
+- 0 hits for "øger eksponering", "garanteret", "sikker investering", "køb nu"/"sælg nu" og "bedste". "overvægt" står kun i nægtende form ✅. "anbefal…" står kun som "ikke en anbefaling" eller "KID anbefaler 5 år" ✅. Ingen 1m/3m på PMINDI ✅. Nasdaq nævnes kun som "vi tegner ikke en sammenligningskurve (fx Nasdaq)" og i @InvestNewdeal-børsnoteringsopslaget ✅.
+- AI-mærkning: uændret ✅ (ndi-perspektiv og selskab "AI-udkast" kun ved tekst).
+
+### Prioritet
+**2** (tredjeparts-"BREAKING" ved fondens graf + SoftBank) → **5** (ÅTD "afventer godkendelse" vist) → **11** (embed KID/SRI) → **1** (mærkning) → SHOULD: intern "marketingmateriale"-sætning, fakta-opsummering med KID først.

@@ -704,3 +704,33 @@ Pages (00:15:49 GMT) = main `e402f15`. Jeg har kørt Playwright live ved 375 på
 - **Privat (55+):** fonden er roligere (Største fald, links til Sådan tænker vi, "sådan kan du selv vurdere afkastet") ✅. Men "BREAKING: $250 BILLION" i fondens graf-liste skaber uro og ligner nyhedsstrøm. Det strider mod "rolig, langsigtet".
 - **Familiekontor:** "To klasser, samme strategi" svarer på DD-spørgsmålet om forskelle i beholdning ✅. Omkostningsniveau "ikke oplyst" er den mest skadelige enkeltlinje på sitet lige nu.
 - **Visuel variation:** der er ingen nye former. "Mangler fra NDI" er én liste i stedet for spredte pills, hvilket giver mindre støj ✅.
+
+## 2026-10-16 02:24 CEST · cyklus 31 (main `3e4ec15`, docs-delta `5843694` "restore KID RIY + X scrub")
+
+Pages (00:15:49 GMT) = `e402f15`. **`5843694` er ikke live endnu (Pages-lag)**: live `fund-facts.json` har 0 × `kidRiy5y`, og live viser stadig "MADS FØLGER". Jeg har derfor reviewet live (36 URL'er × 375/1280: 0 pageerrors, 0 vandret overflow, én h1 overalt ✅) og main lokalt (9 nøglesider ved 375, 0 fejl, 0 overflow). Merge af origin/main ind i lane-R gav igen konflikt i STATUS.md. Jeg har beholdt begge sider. Ingen docs-ændringer fra lane-R.
+
+### MUST
+- **Fonden: tredjeparts-"BREAKING" under hovedgrafen (åben fra cyklus 30, nu MUST).** Main `?view=fonden` viser under "Udvalgte offentlige X-opslag" @BullTheoryio "BREAKING: SoftBank is seeking to raise up to $100 billion …" og @MilkRoadAI (Nvidia). @MadsC007 er væk ✅, men `chartMarkers` i `x-posts.json` har stadig 3 tredjepartskonti. **Ret:** begræns `chartMarkers` til @InvestNewdeal, som webinar og børsnotering.
+- **SoftBank-selskabssiden:** 2 × "BREAKING" (@BullTheoryio: kapitalrejsning på 100 mia. $ og garanti på 250 mia. $) og @FundaAI om "repricing of credit risk". Badgen hedder nu "Fulgt konto" ✅ i stedet for "MADS FØLGER", men indholdet er det samme. For privat-personaen er det nyhedsstrøm, ikke ro. Fold X-panelet sammen på selskab/tema, eller filtrér "BREAKING" fra.
+
+### Lukket ✅
+- **KID-omkostningstal (cyklus 30-MUST):** omkostninger har nu metric + tabel `#kid-omkostning`. Tallene er 2,79 %/2,85 % ved 5 år og 2,63 %/2,71 % ved 1 år. Jeg har **verificeret dem mod KID-PDF'erne** (priip_ipm140b/145b, "Årlig omkostningsmæssig konsekvens") ✅. Fakta "Omkostningsniveau (kort)" viser 2,79/2,85 i stedet for "ikke oplyst" ✅. Lede'en siger "ikke et billigere alternativ til KID-tallet". Det er godt for familiekontoret.
+- "Du kan tabe penge" står nu på omkostninger og ndi-paa-x ✅. "Konti NDI følger" i stedet for "Mads følger" på ndi-paa-x ✅.
+- Fakta "Mangler fra NDI" er ikke ændret (SHOULD fra cyklus 30 står ved magt).
+
+### SHOULD
+- **Omkostninger, internt sprog:** "Det er det tal, marketingmateriale skal gengive ærligt — ikke kun de enkelte postsatser." Det er en regel til os selv, ikke en forklaring til kunden. Skriv fx: "Tallet samler alle fondens omkostninger i ét årligt tal og er det, du kan sammenligne med andre fonde."
+- **Fakta, første opsummering (linje ~44):** den nævner stadig kun "Øvrige løbende 1,49 %" og porteføljetransaktion. KID-tallet kommer først længere nede. Sæt "KID: 2,79 %/2,85 % om året ved 5 år" først, så de to steder siger det samme.
+- **Fonden X-overskrift:** "Udvalgte offentlige X-opslag — ikke NDI's holdning" står over opslag fra @jesper_baek og @InvestNewdeal, som er NDI's egne konti. ndi-paa-x skelner nu korrekt. Brug samme skel her, eller vis kun NDI-konti (se MUST).
+- **Fonden linje "seneste offentlige kvartalsrapport":** om-data siger, at 1. juni "ikke er et kvartalsskifte". Ret fonden til "forsinket snapshot pr. 1. jun. 2026".
+- Fra cyklus 30, stadig åbne: "compliance-beslutning, ikke et datamangel" (`js/app.js:414`), livscyklus-overskrift uden `<button>`, udforsk 28.282 px / mange tekster under 12 px ved 375, "Mangler fra NDI" på offentlig fakta.
+- Ved 375 er `selskaber.html` 66.172 px høj (1280: 17.861). A-Z-listen bør gruppere/folde eller paginere på mobil.
+
+### Nice
+- ndi-perspektiv er stadig 143.436 px ved 375. "Central Information Dokument" står stadig i `index.html:47/88` og `js/data.js:251` (og i footeren på selskabssider).
+- X-opslag i `x-posts.json` med `complianceNote: "Omskrevet i snapshot"`: hvis teksten vises som citat af opslaget, så marker den som "omskrevet" i UI'et, eller vis originalen.
+
+### Persona-linser
+- **Privat (55+):** omkostninger er nu klar: ét KID-tal, før tabellerne ✅. Fonden er stadig forstyrret af engelske "BREAKING"-opslag under grafen.
+- **Familiekontor:** KID-total + "ikke ÅOP" + kilde-links til begge KID'er dækker deres omkostnings-MUST ✅. ÅOP er bevidst ikke vist. Det er forsvarligt, når KID-RIY er der. Næste spørgsmål bliver kurering af tredjepartsopslag på produktsider.
+- **Visuel variation:** ingen nye former. Omkostninger har nu metric → tabel → "den ene forskel"-skala, hvilket er god variation.

@@ -1668,3 +1668,4 @@ Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er
 - Lead 2026-10-16 02:18:04 CEST: Leo 02:00/02:07 fixes on main (e402f15/5843694). Coord hardened (no auto-stash). Monitor+loop running. Queued lane merges R/A/B/C/D/E/X.
 
 - Lead 2026-10-16 02:18:12 CEST: lane R/A/B/C CONFLICT on STATUS (and app.js for B) — aborted; coordinator continues.
+- **Fra Claude lane-R (02:24, cyklus 31, main `3e4ec15`):** Pages er stadig på `e402f15`, så `5843694` er ikke live endnu. På main er KID-RIY **lukket** ✅: 2,79/2,85 % (5 år) og 2,63/2,71 % (1 år), verificeret mod KID-PDF. "Kan tabe" på omkostninger/ndi-paa-x ✅. **Stadig MUST:** chartMarkers under fondens graf viser @BullTheoryio "BREAKING" (SoftBank $100 mia.), og SoftBank-siden har 2× BREAKING. Begræns til @InvestNewdeal. ÅTD "afventer Fundmarket-godkendelse" er stadig synlig. Embed mangler KID-link. SHOULD: fjern "det tal, marketingmateriale skal gengive ærligt" fra omkostninger.
