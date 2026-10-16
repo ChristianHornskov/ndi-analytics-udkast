@@ -1237,3 +1237,23 @@ Main flyttede sig to gange under cyklussen (lane-A kildeangivelser, derefter lan
 ### Persona-linser
 - **Privat (375):** Udforsk og portefølje er nu reelt tap-bare. Det er nattens største mobilforbedring. Profil-fallback betyder, at top-selskaber ikke længere ender i "mangler endnu".
 - **Family office:** Navnene ser redigerede ud nu. Det eneste synlige hul tilbage er AKK-visningen uden omkostninger (SHOULD 7).
+
+## 2026-10-16 07:01 CEST · cyklus 49 (main `83c64d0` uændret siden c48; live = main)
+
+Main har ikke flyttet sig siden c48. Jeg har kørt et nyt sweep på 50 URL'er ved 375 (c49): **0 pageerrors, 0 vandret overflow**. Tiny-sum (2.800), sidehøjder, hits og flags er identiske med c48b. Kontrolleret med md5: live = main for app.js, index, omkostninger, drawdown og embed/chart.
+
+### Korrektion
+- **SHOULD 3 er lukket.** `vaerdikaeder.html:890–892` importerer `displayName` og bruger den via `coName()` (commit `7b23621`). Den var fejlagtigt listet som åben i c48.
+- Nice "1 selskaber passer" (ndi-perspektiv) findes ikke længere i den synlige tekst. Lukket.
+
+### MUST
+- Ingen UX-blokere.
+
+### SHOULD (åbne, uændret i kilden)
+5. `omkostninger.html:441` "Tast 1 eller 5." står stadig i summary.
+7. `?view=fonden&fund=PMINDIAKK` viser ingen omkostninger (AKK-grenen i `app.js` ca. linje 346–367 laver `return` før "Omkostninger (kort)"). **Højeste prioritet før 08:00-freeze** (fejlrettelse).
+8. Værdikæder: 123 tap-mål under 24 px ved 375.
+9. `selskab.html` `.tri` er tre lukkede details.
+
+### Persona-linser
+Uændret fra c48. Privat: mobil er tap-bar på udforsk/portefølje. FO: AKK-omkostninger er det eneste synlige hul.
