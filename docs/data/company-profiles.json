@@ -1242,6 +1242,58 @@
     }
    ]
   },
+  "US3364331070": {
+   "name": "First Solar",
+   "theme": "energy",
+   "summary": "Laver tyndfilmsmoduler af cadmiumtellurid, i serierne 6 og 7. Fabrikker står i Ohio, Alabama, Louisiana, Indien, Malaysia og Vietnam. Fem fabrikker i USA er anslået til mere end 17 GW, når de er i fuld drift. Tallet er ikke årets produktion. Det er moduler, ikke et kraftværk.",
+   "watch": "Om de fem amerikanske fabrikker når det anslåede tal. Mere end 17 GW er ikke årets produktion.",
+   "source": "https://www.firstsolar.com/Technology/Manufacturing",
+   "products": "Solcellemoduler i serie 6 og 7. Også genbrug af moduler. Ikke et kraftværk.",
+   "customers": "Kunder til store solanlæg og til mindre anlæg. Teksten nævner ikke en navngiven leverance.",
+   "role": "Moduler. Ikke et elselskab.",
+   "narrative": [
+    "First Solar skriver, at modulerne er tyndfilm af cadmiumtellurid, i serierne 6 og 7. Siden om fabrikker nævner Perrysburg og Walbridge i Ohio, Trinity i Alabama og New Iberia i Louisiana. Den nævner også Sriperumbudur i Tamil Nadu, Kulim i Malaysia og Cu Chi i Ho Chi Minh City. Hovedsædet ligger på 4300 E Camelback Road i Phoenix i Arizona. En genbrugsenhed er nævnt i Frankfurt (Oder).",
+    "Produktionssiden skriver, at selskabet er grundlagt i Ohio, og at fem fabrikker i USA tilsammen er anslået til mere end 17 GW, når de er i fuld drift. Tallet er ikke årets produktion. Beløb, arbejdspladser og ordene leading og largest er ikke taget med. Det er moduler, ikke et kraftværk."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Fabrikker",
+     "url": "https://www.firstsolar.com/About-Us/Locations"
+    },
+    {
+     "label": "Produktion",
+     "url": "https://www.firstsolar.com/Technology/Manufacturing"
+    }
+   ]
+  },
+  "CA64046G1063": {
+   "name": "Neo Performance Materials",
+   "theme": "energy-resources",
+   "summary": "Laver magnetpulver og magneter af neodym, jern og bor og forarbejder sjældne jordarter. Magnequench har anlæg i Tianjin, Chuzhou og Korat. Selskabet skrev 14. september 2026, at magnetfabrikken i Estland er i kommerciel produktion. Datoen ligger efter beholdningen. Det er ikke en mine.",
+   "watch": "Om flere programmer i Estland kommer i produktion. Meldingen 14. september 2026 ligger efter beholdningen. Silmet 2.0 er ikke en gennemført udvidelse.",
+   "source": "https://www.neomaterials.com/neo-advances-commercial-production-magnet-facility/",
+   "products": "Bundne magnetpulvere og sintrede magneter. Separationsanlæg i Sillamäe. Ikke en mine.",
+   "customers": "En kunde, der laver trækmotorer, er nævnt i meddelelsen af 14. september 2026. Navnet står ikke i teksten.",
+   "role": "Magneter og sjældne jordarter. Ikke en mine.",
+   "narrative": [
+    "Neo skriver, at Magnequench laver bundne pulvere og magneter af neodym, jern og bor, med anlæg i Tianjin og Chuzhou i Kina og i Korat i Thailand. Pulverne bruges blandt andet i motorer og apparater. Ordene om at være førende og om at have mere kapacitet end resten af branchen er ikke taget med.",
+    "Selskabet skrev 14. september 2026, at magnetfabrikken i Estland er i kommerciel produktion og har sendt de første mængder til en kunde, der laver trækmotorer til elbiler. Datoen ligger efter beholdningen pr. 1. juni 2026. Fase 1A er sat til cirka 2.000 ton om året. Det er et navneskilt, ikke et målt år. Fase 1B til cirka 5.000 ton er under projektering. Et mål på 20.000 ton er ikke taget med. Selskabet skrev 13. oktober 2026, at EU har udpeget moderniseringen Silmet 2.0 af separationsanlægget i Sillamäe i Estland som et strategisk projekt. Det er efter beholdningen. Udpegningen er ikke en gennemført udvidelse. Det er ikke en mine."
+   ],
+   "narrativeSources": [
+    {
+     "label": "Magnequench",
+     "url": "https://www.neomaterials.com/magnequench/"
+    },
+    {
+     "label": "Estland, 14. september 2026",
+     "url": "https://www.neomaterials.com/neo-advances-commercial-production-magnet-facility/"
+    },
+    {
+     "label": "Silmet, 13. oktober 2026",
+     "url": "https://www.neomaterials.com/neos-european-separation-facility-named-a-strategic-project-under-eu-critical-raw-materials-act/"
+    }
+   ]
+  },
   "CA87261Y1060": {
    "name": "The Metals Company",
    "theme": "energy-resources",
