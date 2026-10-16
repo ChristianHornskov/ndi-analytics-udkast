@@ -282,6 +282,10 @@ St. Gabriel i Louisiana er flydende brint sammen med Olin gennem Hidrogenii. Kom
 
 Aftalen af 1. april 2025 siger, at Bloom og Conagra vil bruge brændselsceller på Conagras fabrikker i Troy og Archbold i Ohio. Før beholdningen. Ikke skrevet som celler, der allerede kører. Ikke et klassisk kraftværk. Megawatt, kapitalramme, leader og leading er ikke kopieret. AI-udkast uden gennemgangsdato. Elproduktions-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
 
+## GE Vernova · 2026-10-16 02:56 CEST
+
+Gassiden viser turbinerne 9HA, 7HA og LM2500. Atomkraftsiden siger, at dampkraft understøtter mere end 80 anlæg i Amerika, og at cirka 85 GW er den installerede base hos selskabet og hos andre leverandører. Tallet dækker også andres udstyr. Selskabet driver ikke værkerne. Forsiden siger cirka 85.000 mennesker i cirka 100 lande. World-leading er ikke kopieret. AI-udkast uden gennemgangsdato. Elproduktions-blurben og arkivet siger grænsen. Elnet-blurben er uændret på den korte sætning. Vægtene er uændrede. Chromium ved 375 px. Kæden er også tjekket ved 1280 px. "tjekket mod kilden" er ikke med. 9HA står. Ingen konsolfejl. Ingen vandret scroll.
+
 ## Quanta · 2026-10-16 02:52 CEST
 
 Elsiden beskriver West Fort McMurray i det nordlige centrale Alberta: over 310 miles 500 kV-ledning, udvidelse af Livock og anlæg af Thickwood Hills. Siden kalder det et projekt. Ikke ejer af ledningen. Ikke skrevet som drift. Miles er ikke regnet om. Houston er hovedsædet. Largest og world-class er ikke kopieret. Gateway West på 150 miles er udeladt, fordi siden ikke siger, om linjen er i drift. AI-udkast uden gennemgangsdato. Elnet-blurben og arkivet siger grænsen. Vægtene er uændrede. Chromium ved 375 px. Kæden er også tjekket ved 1280 px. "tjekket mod kilden" er ikke med. Fort McMurray står. Ingen konsolfejl. Ingen vandret scroll.

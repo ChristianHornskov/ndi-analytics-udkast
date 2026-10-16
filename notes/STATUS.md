@@ -999,3 +999,13 @@ Siden kalder det et projekt med stationerne Livock og Thickwood Hills. Quanta ej
 Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Fort McMurray står. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `a2d824f` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 02:56 CEST. GE Vernova skriver, at gassiden viser turbinerne 9HA, 7HA og LM2500. Ikke færdig.**
+
+Dampkraft til atomkraft understøtter mere end 80 anlæg i Amerika. Cirka 85 GW er den installerede base hos selskabet og hos andre leverandører. Selskabet driver ikke værkerne. World-leading er ikke taget med. Ingen `reviewedAt`. Blurben under elproduktion og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. 9HA står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `57169d9` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

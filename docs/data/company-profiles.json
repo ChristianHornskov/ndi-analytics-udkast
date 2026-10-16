@@ -1711,19 +1711,27 @@
   "US36828A1016": {
    "name": "GE Vernova",
    "theme": "physical",
-   "summary": "Leverer udstyr til elproduktion og elnet, blandt andet gasturbiner, vindmøller og udstyr til atomkraft og transformere. Snapshottet har selskabet under fysisk tech.",
-   "watch": "Ordrer på turbiner og netudstyr, og evnen til at levere.",
-   "source": "https://www.gevernova.com/",
-   "products": "Kraftværksudstyr og netudstyr.",
+   "summary": "Leverer udstyr til elproduktion og elnet. Gassiden viser turbinerne 9HA, 7HA og LM2500. Siden om atomkraft skriver, at dampkraft understøtter mere end 80 anlæg i Amerika. Selskabet driver ikke værkerne.",
+   "watch": "Om tallene er udstyr i andres anlæg. Teksten beskriver ikke værker, selskabet selv driver.",
+   "source": "https://www.gevernova.com/gas-power",
+   "products": "Gasturbiner, blandt andet 9HA, 7HA og LM2500, og dampturbiner til atomkraft. Ikke værker i egen drift.",
    "customers": "Elselskaber og industri.",
-   "role": "Udstyr til både produktion og net.",
+   "role": "Udstyr til både produktion og net. Driver ikke værkerne.",
    "narrative": [
-    "GE Vernova leverer udstyr til elproduktion og til elnettet. Det er blandt andet gasturbiner, vindmøller og udstyr til atomkraft og til nettet.",
-    "Selskabet driver ikke de værker, udstyret står i. I kæden står selskabet derfor både på elproduktion og på elnet."
+    "GE Vernova skriver, at gassiden viser turbiner, blandt andet H-klassen 9HA og 7HA og den aeroderivative LM2500. Siden om atomkraft skriver, at dampkraft understøtter mere end 80 anlæg i Amerika, og at den installerede base af dampturbiner og generatorer hos selskabet og hos andre leverandører er cirka 85 GW. Tallet dækker også andres udstyr.",
+    "Forsiden skriver, at selskabet er cirka 85.000 mennesker i cirka 100 lande. Selskabet driver ikke de værker, udstyret står i. I kæden står det både på elproduktion og på elnet."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets side",
+     "label": "Gas",
+     "url": "https://www.gevernova.com/gas-power"
+    },
+    {
+     "label": "Atomkraft",
+     "url": "https://www.gevernova.com/nuclear-power"
+    },
+    {
+     "label": "Forsiden",
      "url": "https://www.gevernova.com/"
     }
    ]
