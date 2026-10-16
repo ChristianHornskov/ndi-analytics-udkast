@@ -417,3 +417,10 @@ Hele lane-C-fladen ved 375 px: ideer, kort, om-data, invester, risici, ndi-persp
 - Ordliste 138 → 140: Tre drivkræfter, Realkapital. Lær-indeks: «Sådan tænker vi» ≈ 5 min.
 - Test (Playwright, lokal 8833): ideer, sådan-tænker-vi, om-data, kort, lær-indeks × 320/375/1280: scrollWidth = viewport, én h1, 0 døde ankre, 0 konsolfejl. Venn-tekster flyttet, så de ikke krydser cirkelkanterne (screenshot 375/1280). Ved 375 er SVG-teksten ca. 9 px: læsbar, men lille. Teksten står også i `<desc>` og i listen under.
 - **Til Christian/NDI:** må temaerne placeres i Mads' tre drivkræfter på en offentlig side, når det er vores skitse? Hvis nej: fjern `#h-dr` (én sektion + én TOC-linje). Lær-sektionen kan blive stående uden eksempler.
+
+## 02:41 CEST lane-C checkpoint (Claude) · ideer foldet på mobil + to reviewer-SHOULDs
+- **ideer.html (lane R cyklus 33, Nice: "fold efter de første 3"):** de første fire billeder (flodsystem, én kasse/flere temaer, to sorteringer, vægt ≠ kurs), «Hvorfor ejer vi den?» og citaterne står åbne. De øvrige 11 billeder er nu native `<details>` med overskriften som summary ("Vis ▾"/"Skjul ▴", 44 px trykflade) og en «Fold alle ud»-knap. Fra 860 px er alt foldet ud som før. Indholdsfortegnelse og dybe links (fx `ideer.html#h-lc`) folder målet ud. Højde ved 375: **18.199 → 7.560 px**. 0 pageerrors, 0 vandret overflow ved 375/1280 (Playwright lokalt).
+- **risici.html (SHOULD):** "Sharpe" er fjernet som underlabel → "Gns. afkast delt med udsving, uden rente trukket fra" + ordlistelink. Kilde-linjen siger "afkast pr. udsving" i stedet for "Sharpe". Ordet står kun i ordlisten.
+- **invester.html (SHOULD "kl n"):** kilde-linjen siger nu "andelsklasse PMINDI".
+- Persona-privat: "hvem træffer beslutningerne" er dækket (invester «hvem gør hvad» → fakta#hold, Mads Christiansen navngivet). Bogen er nævnt på 5 lær-sider.
+- Ikke mine filer, stadig åbne MUSTs: BREAKING/chartMarkers (js), nyhedsarkiv-tabsadvarsel, periode/embed delår + KID.

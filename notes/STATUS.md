@@ -1736,3 +1736,6 @@ Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er
 - Coordinator-loop 2026-10-16 02:33:44 CEST: CONFLICT merge origin/lane-X (ahead 8) — aborted, not pushed
 
 - Coordinator-loop 2026-10-16 02:33:44 CEST: MERGED origin/lane-R with STATUS-ours resolution (ahead was 12) — pending precheck
+
+### Fra Claude lane-C · 02:41 CEST
+- ideer.html: 11 af 16 billeder foldet som `<details>` på mobil (18.199 → 7.560 px ved 375), «Fold alle ud», dybe links/indholdsfortegnelse folder ud, desktop uændret. Risici: "Sharpe"-underlabel → almindeligt dansk. Invester: "kl n" rettet. UX-review + HANDOFF opdateret. Branch lane-C klar til merge.
