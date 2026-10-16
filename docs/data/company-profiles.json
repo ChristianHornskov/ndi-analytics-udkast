@@ -2015,17 +2015,22 @@
   "US46125A1007": {
    "name": "Intuitive Machines",
    "theme": "space",
-   "summary": "Bygger månelandere og rumfartøjer og leverer udstyr til Månen.",
-   "watch": "Om landingerne lykkes, og om kunderne bliver ved med at betale for flere flyvninger.",
-   "source": "https://www.intuitivemachines.com/",
-   "products": "Månelandere og rumfartøjer.",
-   "customers": "Kunder, der skal have udstyr til Månen, herunder offentlige programmer.",
-   "role": "Transport til Månen, ikke en satellit i kredsløb om Jorden.",
+   "summary": "Bygger månelandere og rumfartøjer. IM-1 landede i februar 2024. IM-2 i marts 2025 havde landingsafvigelser. Lanteris, købt 13. januar 2026, laver satellitter.",
+   "watch": "Om IM-3 flyver. Målet sent i 2026 er ikke en gennemført flyvning.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1844452/000162828026019865/lunr-20251231.htm",
+   "products": "Månelandere og satellitter. IM-3 er ikke fløjet.",
+   "customers": "NASA er nævnt på månemissionerne. Beløb er ikke taget med.",
+   "role": "Transport til Månen og satellitproduktion. Ikke en billedkonstellation i drift.",
    "narrative": [
-    "Intuitive Machines bygger månelandere og rumfartøjer og leverer udstyr til Månen.",
-    "Selskabet står på opsendelse som transport væk fra Jorden. Det er ikke en satellit, der tager billeder af Jorden."
+    "Intuitive Machines er stiftet i 2013 og noteret på NASDAQ under LUNR. Hovedkontoret ligger på 13467 Columbia Shuttle Street i Houston. Rapporten skriver, at det er et lejet anlæg ved Houston Spaceport på Ellington Airport, færdigt sent i 2023. I juli 2025 lejede selskabet mere plads samme sted. Det er leje, ikke et nyt værk.",
+    "Årsrapporten for 2025 skriver, at NASA-kontrakten til IM-1 blev tildelt i juni 2019 og afsluttet i februar 2024 efter en landing på Månen. IM-2 blev tildelt i oktober 2020 og afsluttet i marts 2025. Samme rapport skriver landingsafvigelser, så ikke alle milepæle blev nået. Det er ikke en fejlfri landing. IM-3 blev tildelt i november 2021. Rapporten sigter mod et vindue sent i 2026, og tidslinjen løber til marts 2027. Flyvningen er ikke gennemført. Beløb er ikke taget med.",
+    "Selskabet købte Lanteris 13. januar 2026, før beholdningen. Palo Alto er design og programstyring. San Jose samler, integrerer og tester. Rapporten skriver, at Lanteris fik SDA Tranche 1 Tracking Layer i 2022, før købet, og at selskabet i 2024 blev valgt til 18 yderligere platforme til Tranche 2. De er ikke skrevet som opsendt. Ordene leader og most popular er ikke taget med. Hjemmesiden endte i en omdirigering til sig selv 16. oktober 2026. Sætningerne er fra årsrapporten."
    ],
    "narrativeSources": [
+    {
+     "label": "Årsrapport for 2025",
+     "url": "https://www.sec.gov/Archives/edgar/data/1844452/000162828026019865/lunr-20251231.htm"
+    },
     {
      "label": "Selskabets side",
      "url": "https://www.intuitivemachines.com/"
