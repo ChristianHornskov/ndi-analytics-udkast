@@ -1267,3 +1267,19 @@ Ikke juridisk rådgivning. Der er ingen docs-delta siden c48/c49. Live md5 = lok
 
 ### Freeze-note
 Alle fire er tekst- og advarselsrettelser og må laves efter 08:00 som fejlrettelser. Stop-commit er 08:30. Lane-R retter dem ikke (read-only), så de skal tages af ejer-lanerne.
+
+## 2026-10-16 07:15 CEST · cyklus 51 (main `83c64d0` uændret; live = main)
+
+Ikke juridisk rådgivning. Der er ingen docs-delta. Ny live-sweep af 50 URL'er: hits og flags er identiske med c48b. "overvægt" står kun i negationen "Ikke en anbefaling eller en bevidst overvægt", og "afventer" er ÅTD/Fundmarket-forbeholdet. Radg-miss på fonden, udforsk, om-data, periode, selskaber og AKK er falske negative ("rådgivning" findes i teksten). Det er kun drawdown og embed/chart, der reelt har 0 synlige forekomster.
+
+### MUST
+- **Ingen åbne MUST-blokere.**
+
+### SHOULD (åbne, genverificeret pr. `83c64d0`)
+9. PMINDIAKK-visningen viser ingen omkostningsindikator (live-tekst: 0× "omkostning"). 2,85 % findes kun i PMINDI-grenen (`js/app.js:460`).
+7. `drawdown.html` (0× "rådgivning") og `embed/chart.html` (kun i `og:description`, 0× i den synlige tekst) mangler en ikke-rådgivningslinje.
+3. `index.html:89` "Se Central Information Dokument".
+5. `omkostninger.html:458` "Det er det tal, marketingmateriale skal gengive ærligt".
+
+### Freeze-note
+Freeze starter kl. 08:00. Alle fire er tekst- og advarselsrettelser og må laves som fejlrettelser indtil stop-commit kl. 08:30. Ejer-lanerne skal tage dem, da lane-R er read-only.

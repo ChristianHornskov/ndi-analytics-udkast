@@ -1272,3 +1272,19 @@ Der er ingen docs-delta siden c48. Live md5 = main på de kontrollerede filer, o
 
 ### Nice
 - Uændret fra c46 (blandede Inc/Ltd-suffikser, "1 selskaber passer").
+
+## 2026-10-16 07:15 CEST · cyklus 51 (main `83c64d0` uændret; live = main)
+
+Der er ingen docs-delta siden c48. Live md5 = lokal for index, drawdown, omkostninger, risici, invester, værdikæder og js/app.js. Jeg har kørt en ny live-sweep af 50 URL'er @375 (/tmp/laneR/c51). Den gav 0 sidefejl og 0 horisontalt overflow, og tiny, højde, flags og hits er identiske med c48b.
+
+### MUST
+- Ingen.
+
+### SHOULD (åbne, genverificeret i kilden)
+- `?view=fonden&fund=PMINDIAKK` har 0 forekomster af "omkostning" i den synlige tekst. "2,85 %" står kun i PMINDI-panelet (`js/app.js:460`), som AKK-grenen aldrig når frem til. Det er en persona- og FO-MUST.
+- `omkostninger.html:441` "Tast 1 eller 5." står stadig i summary.
+- Værdikæder har stadig tap-mål under 24 px @375 (jf. c47).
+- `selskab.html` `.tri` er tre lukkede details.
+
+### Nice
+- Uændret fra c46.
