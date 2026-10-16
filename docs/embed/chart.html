@@ -22,6 +22,7 @@
 </head>
 <body>
  <a class="skip" href="#chart-title">Gå til graf</a>
+ <p class="print-mast">NewDeal Invest. Udskrift. Markedsføringsmateriale. Generel information, <span class="keep">ikke investeringsrådgivning.</span> Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast.</p>
  <main class="embed">
  <section class="panel" aria-labelledby="chart-title">
  <header class="chart-heading">
@@ -39,7 +40,7 @@
  <button class="class-card selected" type="button" role="radio" data-fund="PMINDI" aria-checked="true">
  <svg class="class-mark" viewBox="0 0 100 36" aria-hidden="true" focusable="false"><rect x="1.5" y="14.5" width="32" height="16" rx="3"/><path d="M33.5 22.5 H78"/><path d="M72 17.5 L80 22.5 L72 27.5"/></svg>
  <span class="class-title"><span class="checkmark" aria-hidden="true">✓</span>PMINDI</span>
- <span class="class-subtitle">Udbyttebetalende. Udbytte udbetales til dig.</span>
+ <span class="class-subtitle">Udbyttebetalende. Udbytte udbetales <span class="keep">til dig.</span></span>
  </button>
  <button class="class-card" type="button" role="radio" data-fund="PMINDIAKK" aria-checked="false">
  <svg class="class-mark" viewBox="0 0 100 36" aria-hidden="true" focusable="false"><rect x="1.5" y="14.5" width="32" height="16" rx="3"/><path d="M33.5 22.5 H62 C80 22.5 80 6.5 62 6.5 H18.5 V10"/><path d="M13 8.5 L18.5 16 L24 8.5"/></svg>
@@ -72,6 +73,10 @@
  </div>
 
  <p class="chart-readout" id="chart-readout" aria-live="polite"></p>
+ <div class="stops" id="chart-stops" hidden>
+  <div class="stops-track" id="stops-track" role="group" aria-label="Stop på kurven"></div>
+  <p class="stops-say" id="stops-say"></p>
+ </div>
  <p class="chart-context" id="chart-context" hidden></p>
  <p class="chart-pointe" id="chart-pointe"></p>
 
@@ -106,6 +111,7 @@
 
  <p class="foot">Afkastet er i danske kroner og efter fondens løbende omkostninger, før skat og egne handelsomkostninger. Totalafkast forudsætter geninvesteret udbytte. <span class="keep">Kilde: Fundmarket.</span></p>
  <p class="sri-line" id="sri-line" hidden></p>
+ <p class="print-row"><button type="button" class="outline-button" id="print-sheet">Udskriv</button></p>
  </section>
  
  <div class="embed-cta">
@@ -120,7 +126,7 @@
  </div>
 
  <footer class="embed-legal">
- <p><strong>Markedsføringsmateriale.</strong> Læs <a href="https://fundmarket.dk/wp-content/uploads/Faellesprospekt-for-afdelinger-og-andelsklasser-i-Investeringsforeningen-Portfoliomanager-opdateret-24.10.2025.pdf" rel="noopener" target="_blank">prospektet ↗</a> og KID for <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm140b" rel="noopener" target="_blank">PMINDI ↗</a> eller <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm145b" rel="noopener" target="_blank">PMINDIAKK ↗</a>, før du træffer en endelig investeringsbeslutning.</p>
+ <p><strong>Markedsføringsmateriale.</strong> Læs <a href="https://fundmarket.dk/wp-content/uploads/Faellesprospekt-for-afdelinger-og-andelsklasser-i-Investeringsforeningen-Portfoliomanager-opdateret-24.10.2025.pdf" rel="noopener" target="_blank">prospektet ↗</a> og KID for <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm140b" rel="noopener" target="_blank">PMINDI ↗</a> eller <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm145b" rel="noopener" target="_blank">PMINDIAKK ↗</a>, før du træffer <span class="keep">en endelig investeringsbeslutning.</span></p>
  <p>Udkast. Generel information, <span class="keep">ikke investeringsrådgivning.</span> Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan <span class="keep">tabe penge.</span></p>
  </footer>
 
