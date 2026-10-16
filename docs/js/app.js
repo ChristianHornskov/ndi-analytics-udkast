@@ -334,6 +334,23 @@ function renderEntre(root) {
     </section>`;
 }
 
+// Omkostninger (kort): samme blok i PMINDI- og PMINDIAKK-visningen, klassens eget KID-tal først
+function costPanel(isAkk) {
+  const own = isAkk ? 'PMINDIAKK' : 'PMINDI';
+  const other = isAkk ? 'PMINDI' : 'PMINDIAKK';
+  const pct = c => `<strong style="color:var(--text)">${c === 'PMINDI' ? '2,79' : '2,85'} %</strong> (${c})`;
+  const intro = isAkk
+    ? 'Kursen beregnes efter fondens løbende omkostninger. Egne kurtage-/platformgebyrer og skat er ikke med.'
+    : 'Afkasttal er efter fondens løbende omkostninger. Egne kurtage-/platformgebyrer og skat er ikke med.';
+  return `<section class="panel">
+      <h2 style="font-size:18px;margin-bottom:8px">Omkostninger (kort)</h2>
+      <p style="font-size:13px;color:var(--muted);line-height:1.55">${intro} KID «samlede omkostninger» (RIY, 5 år): ${pct(own)} / ${pct(other)} pr. år. Intet resultathonorar.</p>
+      <p style="margin-top:10px"><a class="outline-btn small" href="omkostninger.html">Omkostninger med tal →</a>
+      <a class="outline-btn small" style="margin-left:8px" href="fakta.html">Fakta →</a>
+      <a class="outline-btn small" style="margin-left:8px" href="om-data.html">Om data →</a></p>
+    </section>`;
+}
+
 function renderFonden(root) {
   const fund = fundById(DATA.portfolio, state.fund);
   const rows = fund.data;
@@ -363,7 +380,8 @@ function renderFonden(root) {
         <p style="color:var(--muted);font-size:13px;line-height:1.55">Risikoindikator <strong style="color:var(--text)">5</strong> på en skala fra 1 til 7 (KID). Anbefalet ejertid 5 år. Du kan tabe en del af eller hele din investering. Se KID-links i footeren.</p>
         <p style="margin-top:12px"><button type="button" class="outline-btn small" data-open="dlg-invest">Sådan investerer du · Kopiér ISIN</button>
       <a class="outline-btn small" style="margin-left:8px" href="risici.html">Risici / KID →</a></p>
-      </section>`;
+      </section>
+      ${costPanel(true)}`;
     return;
   }
 
@@ -455,13 +473,7 @@ function renderFonden(root) {
       <p style="font-size:13px;color:var(--muted);line-height:1.55;margin-bottom:10px">Hvis du havde investeret 100.000 kr. ved første NAV (${fmtDate(rows[0]?.d)}) og geninvesteret udbytte, ville beløbet pr. ${fmtDate(asOfPerf)} være ca. <strong style="color:var(--text)">${totAll!=null ? (100000 * (1 + totAll/100)).toLocaleString('da-DK',{maximumFractionDigits:0}) : '-'} kr.</strong> (totalafkast ${fmtPct(totAll)}). Efter fondens løbende omkostninger, før skat og egne handelsomkostninger.</p>
       <p class="band">Eksemplet starter ved første NAV (ikke stiftelsesdato). Det er ikke et gunstigt valg af dato midt i en stigning. Regneeksempel, ikke en prognose. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. <span class="src">ÅTD og 100.000 kr.-eksemplet afventer Fundmarket-godkendelse.</span></p>
     </section>
-    <section class="panel">
-      <h2 style="font-size:18px;margin-bottom:8px">Omkostninger (kort)</h2>
-      <p style="font-size:13px;color:var(--muted);line-height:1.55">Afkasttal er efter fondens løbende omkostninger. Egne kurtage-/platformgebyrer og skat er ikke med. KID «samlede omkostninger» (RIY, 5 år): <strong style="color:var(--text)">2,79 %</strong> (PMINDI) / <strong style="color:var(--text)">2,85 %</strong> (PMINDIAKK) pr. år. Intet resultathonorar.</p>
-      <p style="margin-top:10px"><a class="outline-btn small" href="omkostninger.html">Omkostninger med tal →</a>
-      <a class="outline-btn small" style="margin-left:8px" href="fakta.html">Fakta →</a>
-      <a class="outline-btn small" style="margin-left:8px" href="om-data.html">Om data →</a></p>
-    </section>
+    ${costPanel(false)}
 
     <section class="panel">
       <h2 style="font-size:18px;margin-bottom:8px">Det skete i porteføljen</h2>
