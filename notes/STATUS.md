@@ -486,3 +486,11 @@ Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaeder.html og
 Alt bygges ud fra `route.stops`, så der er ingen ny tekst at kildebelægge.
 Tjek: Playwright på 1280 og 375 med 0 sidefejl og ingen sidescroll. 9 bjælker. "Næste" fra Billigere lander på `#sp-trip` (194/222 px), "↑ Ruten" lander med ruten synlig på 194 px, og Ordbog → Tjek dig selv lander på 194/222 px. smoke.mjs 52/52 fail 0 (egen server på 8817). Precheck PASSED. Grep efter handelssprog og tankestreger i diff giver 0 hits.
 Næste: energi- og kvantefanen kan få samme stop-bjælker, hvis de får en rute, og kvante (kort) på vaerdikaede.html kan linke direkte til kvantetrappen. Ikke færdig.
+
+## Fra Claude lane-A · 2026-10-16 ~03:10 CEST (krydslinks: AI-led ⇄ rum og kvante)
+Branch `lane-A` er klar til merge. Kun egne filer er rørt: vaerdikaede.html, vaerdikaeder.html, value-chains.json og notes.
+1. **vaerdikaede.html: "Andre kæder rører leddet (faglige tråde)" på 5 AI-led.** Linjen bygges af rum-trådene og kvantebroerne, der peger på et AI-led. Det gælder Datacentre (🛰 Datacentre i kredsløb? (citat med kilde)), Chipdesign (🛰 + ⚛), Udstyr (⚛), Cloud (🛰 + ⚛) og Data (🛰). Musk gengives ikke på siden. Linket fører til tråd-kortet med citat og kilde.
+2. **Nyt deep link-parameter `?mark=<kæde:led>`** på vaerdikaeder.html. Det fremhæver de kort i målafsnittet, der handler om leddet (gul kant i 4 s), og ruller det første til midten. Eksempler: `?kaede=quantum&mark=ai-compute:cloud#q-br` og `?kaede=space&mark=ai-compute:datacenter#sp-web`.
+3. **Kvantebroerne viser nu, at de er links:** "Hop til Cloud →", "Hop til Udstyr →", "Læs Sådan tænker vi →" osv. Før var hele kortet et link uden synligt tegn. Kvantebroerne i value-chains.json har fået en kort `k` (fx "Kvante lejes over skyen") til brug på den enkle side.
+Tjek: Playwright på 1280 og 375 med 0 sidefejl og ingen sidescroll. Cloud → kvante markerer 1 bro (413/446 px), Datacentre → rum markerer 1 tråd-kort, og bro-hop åbner `#lk-cloud`. smoke.mjs fail 0 (egen server på 8841). Precheck PASSED. Grep efter handelssprog og tankestreger i diff giver 0 hits.
+Næste: energi- og robotik-led på vaerdikaede.html kan få samme linje fra rum-trådene (Lagring, Robotter), og "Broer til andre kæder" kan få samme "Hop til"-tegn. Ikke færdig.

@@ -480,6 +480,8 @@
     .br .br-t small{font-weight:400;color:var(--muted)}
     .br .br-d{font-size:12.5px;line-height:1.45;color:var(--muted)}
     .br .br-n{color:var(--yellow);font-weight:700}
+    .br .br-go{grid-column:2;font-size:12px;color:var(--cyan);text-decoration:underline;text-underline-offset:2px}
+    a.br:hover .br-go,a.br:focus-visible .br-go{color:var(--yellow)}
     @media(min-width:960px){
       .vc-chain.horiz{display:flex;align-items:stretch;gap:0;overflow-x:auto;padding-bottom:8px;scroll-snap-type:x mandatory}
       .vc-chain.horiz .vc-arrow{padding:0 6px;align-self:center;flex:0 0 auto;transform:rotate(-90deg)}
@@ -1516,7 +1518,7 @@
       const [cid, lid] = (b.to || '').split(':');
       const ch = pack.chains.find(c => c.id === cid);
       const href = b.href || `?kaede=${esc(cid)}#lk-${esc(lid)}`;
-      return `<a class="br" href="${href}"${b.to ? ` data-hop="${esc(b.to)}" data-lks="${esc(b.to)}"` : ''}><span class="br-ico" aria-hidden="true">${b.icon || '◆'}</span><span class="br-t">${esc(b.label)}${ch ? ` <small>· ${esc(ch.title)}</small>` : ''} <small>· ${kindTxt(b.kind)}</small></span><span class="br-d">${esc(b.t)}</span></a>`;
+      return `<a class="br" href="${href}"${b.to ? ` data-hop="${esc(b.to)}" data-lks="${esc(b.to)}"` : ''}><span class="br-ico" aria-hidden="true">${b.icon || '◆'}</span><span class="br-t">${esc(b.label)}${ch ? ` <small>· ${esc(ch.title)}</small>` : ''} <small>· ${kindTxt(b.kind)}</small></span><span class="br-d">${esc(b.t)}</span><span class="br-go">${ch ? `Hop til ${esc(ch.links.find(l => l.id === lid)?.short || b.label)} →` : `Læs ${esc(b.label)} →`}</span></a>`;
     };
     const qc = pack.chains.find(c => c.id === 'quantum');
     document.getElementById('q-bridges').innerHTML = (qc?.bridges || []).map(brCard).join('');
@@ -2148,7 +2150,10 @@
     // Siden bygges først, når data er hentet, så browserens eget hop lander forkert; vi hopper igen, når indholdet står
     const startSec = !startLink && /^#[a-z][\w-]*$/.test(location.hash) ? document.getElementById(location.hash.slice(1)) : null;
     if (startSec?.tagName === 'DETAILS') startSec.open = true;
-    if (startSec && startSec.offsetParent !== null) requestAnimationFrame(() => startSec.scrollIntoView({ block: 'start' }));
+    // ?mark=ai-compute:cloud fremhæver de kort i afsnittet, der handler om leddet (fx fra vaerdikaede.html)
+    const startMark = startSec && startSec.offsetParent !== null ? new URLSearchParams(location.search).get('mark') : '';
+    const startHit = startMark ? markIn(startSec, startMark) : null;
+    if (startSec && startSec.offsetParent !== null) requestAnimationFrame(() => startHit ? startHit.scrollIntoView({ block: 'center' }) : startSec.scrollIntoView({ block: 'start' }));
   </script>
 </body>
 </html>

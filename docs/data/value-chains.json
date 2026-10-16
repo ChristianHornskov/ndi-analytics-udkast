@@ -4908,28 +4908,32 @@
      "to": "ai-compute:cloud",
      "label": "Cloud og modeller",
      "t": "De fleste kvantecomputere bruges i dag over skyen. Man lejer tid på maskinen i stedet for at eje den.",
-     "kind": "baggrund"
+     "kind": "baggrund",
+     "k": "Kvante lejes over skyen"
     },
     {
      "icon": "◇",
      "to": "ai-compute:chipdesign",
      "label": "Chipdesign",
      "t": "En kvantecomputer har brug for almindelige chips og computere ved siden af til at styre den og rette fejl.",
-     "kind": "baggrund"
+     "kind": "baggrund",
+     "k": "Almindelige chips styrer kvantechippen"
     },
     {
      "icon": "⚙",
      "to": "ai-compute:equipment",
      "label": "Udstyr til chipfabrikker",
      "t": "Mange kvantechips bygges med teknikker fra chipindustrien, men skal køles ned tæt på det absolutte nulpunkt.",
-     "kind": "baggrund"
+     "kind": "baggrund",
+     "k": "Kvantechips bygges med chipteknik"
     },
     {
      "icon": "⚡",
      "to": "energy:grid",
      "label": "Elnet",
      "t": "Kryostaten og computerne ved siden af kører på strøm fra elnettet. En kvantecomputer bruger dog langt mindre strøm end et stort AI-datacenter.",
-     "kind": "baggrund"
+     "kind": "baggrund",
+     "k": "Kryostaten kører på strøm fra nettet"
     },
     {
      "icon": "∑",
