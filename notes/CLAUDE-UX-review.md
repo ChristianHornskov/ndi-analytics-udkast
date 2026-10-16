@@ -623,3 +623,23 @@ main/docs er uændrede siden `90e7de8`: `69c9033` indeholder kun notes. Pages bl
 - **Privat:** lane-C svarer nu på "hvor ligger mine penge?" og "hvorfor er udsvinget højere end klassen?" ✅. "Hvad koster det mig om året?" er stadig ubesvaret på main.
 - **Familiekontor:** flow-diagrammet med forening, IFS og depotbank plus link til fakta#organisation dækker de første DD-spørgsmål ✅. KID-omkostningstotalen mangler stadig.
 - **Visuel variation:** `.flow` er en ny, rolig form (fire trin med pile). Den giver ingen træthed.
+
+## 2026-10-16 02:15 CEST · cyklus 28 (main `69c9033`, intet docs-delta)
+
+main/docs er uændrede siden `90e7de8`, og Pages er stadig fra 00:00 GMT. Lane-R er ikke nulstillet til main, fordi lane-R har 2 notes-commits foran main og push ellers ville kræve force. docs/ er identisk med main. Fokus er de nye lane-commits: E `4ecafbd`/`00c3c32` og D `549158a`. A, B, C og X er uændrede siden cyklus 27.
+
+### MUST
+- Uændret på main: selskab "AI-udkast" over et tomt felt. Omkostninger mangler KID-tallet 2,79 %/2,85 %. De tre "4."-trin på invester lukkes, når lane-C merges.
+
+### SHOULD (lane-grene)
+- **lane-E: nægtelser fylder nu mere end indholdet.** Oklo-mønsteret fra cyklus 27 er bredt ud. Kæde-blurbs i `value-chains.json` er vokset fra ca. 200–230 tegn på main til **1.384 / 1.286 / 977 / 791 / 737 tegn**, med 5–7 "ikke …" hver ("ikke et kraftværk", "ikke en mine i drift", "ikke en orbital rute"). Southern Copper siger "ikke en mine i drift" 5 gange i én boks og "Det er heller ikke et kraftværk", selv om ingen har påstået det. Rocket Lab siger "HASTE er ikke orbital" 4 gange. Ved 375 px er en blurb på 1.300 tegn ca. 3 skærmhøjder tekst før led-kortene. Persona privat læser det som en fejlliste, og familiekontoret spørger "hvorfor forsvarer de sig?". Forslag: blurb ≤ 250 tegn (hvad leddet er), nuancen "projekt/ikke i drift" kun i selskabets `role`, én gang, og som positiv status ("Projekt, ikke i produktion" → "Status: projekt med byggetilladelse").
+- **lane-E nyhedsarkiv.html:** der er 16 nye muted-linjer af typen "Det er ikke et værk i drift". De ligner QA-noter fra kildetjekket og ikke nyheder. Flyt dem til selskabsprofilen eller notes/, eller saml dem i én foldet "Afgrænsninger"-boks.
+- **lane-D `549158a`:** lys kant på den åbne drawdown-søjle (`stroke:#fff` i mørk tilstand). Lille, rolig ændring ✅.
+
+### Nice
+- lane-X `callCountNote` (log-støj i en offentlig datafil) er uændret.
+
+### Persona-linser
+- **Privat:** præcision er godt, men 5–7 nægtelser pr. afsnit gør teksten sværere at læse end den uklarhed, de retter.
+- **Familiekontor:** præcise statusord ("projekt", "tilladelse givet", "efter beholdningen 1. juni 2026") er værdifulde i DD. Sig dem én gang pr. selskab.
+- **Visuel variation:** ingen ny form. Risikoen er nu tekstmængde, ikke formtræthed.

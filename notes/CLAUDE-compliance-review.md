@@ -692,3 +692,16 @@ Ikke juridisk rådgivning. main/docs er uændrede siden `90e7de8`. Pages blev ge
 
 ### MUST (åbne på main)
 Uændret: 1–11 som i cyklus 25. Efter merge af lane-C forventes **6** lukket. Prioritet: **9** (KID-total 2,79 %/2,85 % på omkostninger, fakta-strip og invester trin 4), **3** ("kan tabe" på omkostninger og ndi-paa-x) og **11** (embed uden KID/SRI).
+
+## 2026-10-16 02:15 CEST · cyklus 28 (main `69c9033`, intet docs-delta)
+
+Ikke juridisk rådgivning. main/docs og Pages er uændrede (Pages 00:00 GMT). Jeg har lavet et for-merge-tjek af lane-E `4ecafbd`/`00c3c32` og lane-D `549158a`.
+
+### Lane-grene før merge
+- **lane-E:** begivenheder efter asOf er dateret og markeret "efter beholdningen" (Solaris/GESA 6. jul., BWXT 3. aug., Oklo 6. aug., Nano Nuclear 23. jun.) ✅. Kilde-URL'er til Tía María og HASTE ✅. Grep af `+`-linjer: "købt GESA", "aftalt at sælge medicinforretningen", "sikkerhedsanalyse" og "sikkerhedsvurdering" er faktuelle virksomhedshandlinger og ikke rådgivning ✅. 0 hits for "overvægt", "øger eksponering", 1m/3m og Nasdaq ✅.
+- **SHOULD (lane-E):** de mange nægtelser ("ikke en mine i drift", "ikke et kraftværk") er ikke et compliance-problem i sig selv. Men gentagne afgrænsninger på en markedsføringsside kan læses som svar på påstande, der aldrig er fremsat. Hold det faktuelt og kortfattet. Et udsagn som "Tilladelser til byggeri er ikke en mine i drift" er korrekt, men skal kunne kildebelægges ordret ("Siden skriver …") ✅.
+- **lane-E nyhedsarkiv:** nye linjer om selskabsbegivenheder efter 1. juni 2026 er nyheder om selskaberne og ikke om fondens handler ✅. Der står intet om, at fonden har købt eller solgt.
+- **lane-D `549158a`:** kun CSS, ingen tekst. MUST 11 (embed uden KID/SRI) er uændret.
+
+### MUST (åbne på main)
+Uændret: 1–11 som i cyklus 25. **6** lukkes ved merge af lane-C. Prioritet: **9** (KID-total 2,79 %/2,85 % på omkostninger, fakta-strip og invester trin 4), **3** ("kan tabe" på omkostninger og ndi-paa-x) og **11** (embed uden KID/SRI).
