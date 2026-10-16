@@ -1009,3 +1009,28 @@ Ikke-rådgivning ✅ (alle footere; "Ingen anbefaling om at købe eller sælge" 
 
 ### Prioritet
 Ingen blokere. **2** (AI-mærkning værdikæder) → **4** (periode på CAGR) → **1** (KID-betegnelse) → **3**.
+
+## 2026-10-16 06:10 CEST · cyklus 40 (main `5bdb064`, docs-delta 15 filer siden `e9ea004`; live = main)
+
+Ikke juridisk rådgivning. Live sweep ved 375 på 32 URL'er med regex-flag og kontekst, plus Python-scan af `docs/**` (html/js/json) for handels- og rådgivningssprog.
+
+### Tjekliste
+Ikke-rådgivning ✅ (alle footere) · tabsadvarsel 32/32 ✅ · historisk afkast ≠ fremtid 32/32 ✅ · KID-links ✅ · SRI 5/7 på produkt- og afkastsider ✅ · beholdning `asOf 2026-06-01` (forsinket) ✅. `fund-meta` 2026-10-15 og `risk-stats` 2026-10-14 er NAV/meta, ikke beholdning ✅ · ingen live-handler ✅ · PMINDIAKK: "Afkast vises efter 12 måneder", ingen kurs og ingen periodebjælke ✅ · 1m/3m: kode findes i `data.js:57`, men vises ikke ("Ingen 1- eller 3-måneders fremhævning") ✅ · Nasdaq kun som noteringssted i profiler, intet benchmark-krav ✅ · "overvægt" kun i negationer og i lær ("en stor overvægt i én branche øger variansen", pædagogisk, OK) ✅ · ingen "garanteret/sikkert afkast/køb nu/bedste tip/øger eksponering" ✅ · omkostninger (KID-RIY 2,79/2,85 %, "ikke et ÅOP") ✅ · AI-mærkning: selskab ✅ ("genereret med AI og tjekket mod kilden 8. okt. 2026"), værdikæder ✗ (uændret).
+
+### Nyt i delta ✅
+- Warrants mærkes som "tegningsret på moderselskab - ikke et selvstændigt selskab". Det fjerner risikoen for, at en 0,00 %-position fremstår som en investering i et selskab ✅.
+- `displayName` bevarer "Beholdningsnavn: …" ved siden af visningsnavnet. Sporbarheden til Fundmarket-beholdningen er intakt ✅.
+- Værdikæder: "En dato efter 1. juni 2026 er ikke beholdningens tal. Noterne er selskabernes egne ord. De er ikke en anbefaling." Det er et godt forbehold mod at blande nyere selskabsdata med beholdningsdatoen ✅.
+
+### MUST
+- **Ingen åbne MUST-blokere.**
+
+### SHOULD
+1. **Værdikæder er stadig ikke AI-mærket** (cyklus 39 SHOULD 2). Selskabssiderne har "genereret med AI og tjekket mod kilden". Værdikædeteksterne bliver rettet commit for commit (Primoris, Cummins, NextEra i dette delta) uden noget mærke. Tilføj én linje: "Teksten er et AI-assisteret udkast ud fra selskabernes egne kilder og gennemgås af NDI."
+2. **Afkast uden periode, nu to steder:** fonden "Gns. årligt afkast +26,4 %" (uændret) og nyt på `periode.html` (ÅTD-visning): "Gennemsnitligt årligt afkast +26,4 %" står direkte under "År til dato +4,0 %" og "31. dec. 2025 → 14. okt. 2026". Læseren kan tro, at 26,4 % gælder perioden. Afkasttal skal angive den periode, de dækker. Skriv "Gns. årligt afkast siden start (22. sep. 2023)", eller skjul KPI'en på år/ÅTD-visninger.
+3. **KID-betegnelse:** "Central Information Dokument" står stadig i footeren på mindst 9 sider (entré, fonden-AKK, portefølje, drawdown, periode, sammenlign, selskab, tema, temaer). Den danske PRIIP-betegnelse er "Dokument med central information". Fakta/omkostninger bruger den allerede.
+4. **"Kvartalssnapshot"** (fonden: "Beholdningen er et forsinket kvartalssnapshot (seneste offentlige Fundmarket-rapport)") modsiger om-data (1. jun. er ikke et kvartalsskifte). Ret til "forsinket snapshot pr. 1. jun. 2026", så datogrundlaget er korrekt beskrevet.
+5. Uændret: intern sætning på omkostninger ("Det er det tal, marketingmateriale skal gengive ærligt").
+
+### Prioritet
+Ingen blokere. **2** (periode på gns. årligt afkast, nu også periode-siden) → **1** (AI-mærke værdikæder) → **3** → **4** → **5**.

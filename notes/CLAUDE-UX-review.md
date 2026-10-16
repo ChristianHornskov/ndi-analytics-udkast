@@ -970,3 +970,36 @@ Live Playwright-sweep ved 375 px på 32 sider (entré, fonden ±AKK, portefølje
 - **Privat 55+:** entré → fonden er rolig. Omkostningstallet står på entréen, og tabsadvarslen er synlig over folden ved 375 (screenshot). Tabellen med "Dyb/YTD" er det eneste sted, de falder af.
 - **Familiekontor:** omkostningssiden er nu stærk (KID vs. postsatser, ikke-ÅOP-forbehold). Tre forskellige "forslag"-tal på entré/portefølje/temaer er den inkonsistens, de spørger til.
 - **Visuel variation:** omkostningssiden (skala + forstørret udsnit) og X-klyngerne bryder kort-mønsteret godt. Fonden ved 375 er 5,8k px, og selskaber.html er 37k px. Det er acceptabelt for A–Z, men der bør være et hop-til-bogstav øverst. Det findes allerede ✅.
+
+## 2026-10-16 06:10 CEST · cyklus 40 (main `5bdb064`, docs-delta siden `e9ea004`: 15 docs-filer; live 06:05 CEST = main)
+
+Live Playwright ved 375 på 32 URL'er (entré, fonden ±AKK, portefølje, udforsk, værdikæder, værdikæde, drawdown, risici, SoftBank, Sea, Southern, SUESS, Opendoor Warrant A, temaer, tema platforms, invester, om-data, fakta, omkostninger, sammenlign, periode ×4, nyhedsarkiv, selskaber, ideer, kort, ndi-på-x, ndi-perspektiv, embed). **0 pageerrors og 0 vandret overflow.**
+
+### Lukket siden cyklus 39 ✅
+- **Rå navne i h1 (selskabsside):** `displayName()` giver "Sea Limited (ADR)", "The Southern Co" og "SUESS MicroTec". "Beholdningsnavn: Sea Sp ADR" står i meta. Det er godt. Titlen følger med.
+- **Tomme profilfelter:** "Rolle –/Produkter –/Kunder –" er væk. I stedet står én linje: "Rolle, produkter og kunder er ikke beskrevet endnu … Se NDI-linsen nedenfor → · Se temaet Chips →" ✅.
+- **Warrants:** selskabssiden og screeneren siger "Warrant (tegningsret) på Opendoor Tech - ikke et selvstændigt selskab" med link til moderselskabet ✅.
+- Drawdown og embed: ordombrydning ved 375 er rettet (`ep-pct`).
+
+### MUST
+- Ingen nye UX-blokere.
+
+### SHOULD (nyt)
+1. **Visningsnavnet bruges kun i h1.** Screener/udforsk, top-10, "Andre med NDI-linse i …" og "Andre i Platforme" viser stadig "Sea Sp ADR", "Lumentum Hldngs", "Southern Co/The", "Seagate Hldgs", "Lpkf Laser & Electronics Se", "Formfactor Inc" og "Iqe Plc". Så privat 55+ ser to navne for samme selskab, når de klikker fra listen til siden. Brug `displayName()` i alle lister (søgning på `p.name` kan blive). Udvid reglerne med "… Se" → fjern (SE = Societas Europaea), "Inc"/"Plc"/"Corp" bevares, men ret versaler ("Iqe" → "IQE", "Formfactor" → "FormFactor") via `NAME_FIX` eller profilens navn. "The Southern Co" bør hedde "Southern Company".
+2. **Warrant-siden er stadig en fuld selskabsside (3.949 px).** Under warrant-båndet følger "Hvilket problem løser det? Profiltekst mangler endnu for dette selskab", temaforslag med "iBuyer …"-tvivl, modenhed "Høj vækst (forslag)", "Vægt over tid 0,00 % → 0,00 %" og "Hold øje med -". En warrant har ingen livscyklus og intet problem, den løser. Vis kun båndet, vægten, ISIN og et link til moderselskabet. Skjul resten, når `warrantParent(p)` er sand.
+3. **"Hold øje med -"** er en tom stub på selskaber uden `watch` (`selskab.html:208`). Skjul panelet som de andre tomme felter.
+4. **Gentagelse i Southern-profilen:** "Ikke en lille reaktor under udvikling" står 4 gange (problem, kort fortalt, rolle, produkter), og "Plant Vogtle har fire enheder i drift" 3 gange. Det læses som en maskine, der gentager sig. Ét forbehold er nok.
+5. **Periode: "PERIODE · DYB SIDE"** i kickeren og "Dyb →"/"YTD dyb side →" på fonden står stadig (SHOULD 1 fra cyklus 39). Skriv "PERIODE · I DETALJER".
+6. **Periode-bjælken:** skalaen viser "1. jan. 2026" to gange (venstre ende og markeringens label), mens teksten siger "Udgangspunktet i serien er 31. dec. 2025, ikke 1. januar". Det er tre datoer for ét startpunkt. Vis kun "1. jan." og "31. dec." som skala og markeringen som "→ 14. okt.". På `year=all` er "Bjælken er ikke tegnet" en sætning om noget, der ikke er der. Drop sektionen eller skriv "Perioden dækker flere år (22. sep. 2023 → 14. okt. 2026)".
+7. **Periode YTD-visningen** viser "Gennemsnitligt årligt afkast +26,4 %" lige under "År til dato +4,0 %" uden at sige, at 26,4 % gælder siden start. Det ligner årets tal. Se compliance SHOULD 2.
+8. Uændret fra 39: "22 temaforslag **er afventer** gennemgang" (temaer), "CAGR og gennemsnit →" (entré), "Central Information Dokument" (footer på fonden-AKK, portefølje, drawdown, periode, sammenlign, selskab, tema), "forsinket **kvartalssnapshot**" (fonden) og "Vægt over tid (kvartalssnapshots)" (selskab), selvom om-data siger, at 1. jun. ikke er et kvartalsskifte.
+
+### Nice
+- Touch-mål: udforsk har 697 links/knapper under 24 px høje (WCAG 2.2 AA 2.5.8), og ndi-perspektiv har 418. Uændret siden cyklus 36.
+- Værdikæder (11,9k px) har nye `<details open>` "Kapacitet, målt år og dato efter beholdningen". Den er god, men åben som standard. Luk den på mobil, så kæden kommer før metoden.
+
+### Persona-linser
+- **Privat 55+:** selskabssiden er nu ren (læsbart navn, ingen "–"). Bruddet ligger i listen: "Sea Sp ADR" i screeneren og "Sea Limited (ADR)" på siden.
+- **Familiekontor:** warrant-mærket er korrekt og præcist. En warrant-side med "Modenhed: Høj vækst" vil de stadig undre sig over.
+- **Idéspejder:** "Andre med NDI-linse i led 4" er en god sidegang, men de rå navne ("Iqe Plc", "Axt Inc") gør den mindre indbydende.
+- **Visuel variation:** periode-bjælken er en ny figurtype (godt). Selskabssider er nu kortere, når profilen mangler (SUESS 4,6k px).
