@@ -1529,3 +1529,17 @@ Rettelse: c62-headeren "08:10" var forkert. Den blev skrevet før 08:08.
 ### SHOULD
 - **S-T1 (NY)** · `tema.html?slug=…`: footeren siger "ikke en anbefaling" og "historisk afkast …", men den siger ikke "ingen investeringsrådgivning" og har ikke tab-linjen. Tab-linjen (WARN_HIST) står kun i brødteksten nederst. De andre 23 sider har alle tre i footeren. Forslag: brug samme footer-tekst som de øvrige sider, så teksten også står der, hvis brødteksten ikke renderer.
 - Åbne: S-R1, S-D1, S-D2, S-K1–K3, S-N1–N3, S3, S5, S12.
+
+## 2026-10-16 08:12 CEST · cyklus 64 · freeze-tjek (main `1f8ec72`, ny siden c63: lane-A/lane-D freeze-bugfixes)
+
+- Nyt på main siden `a81c67c`: kun `docs/data/value-chains.json` (de interne revisionsnoter er fjernet fra facts/role-tekster) og `docs/drawdown.html` (år uden en dag på ≥10 % under top, fx "2023 havde ingen dag …"). Diff-sweep for garanter/sikker/køb/overvægt/eksponering/anbefal: kun neutrale hits ("købte Routejade", "Købet af Walker … efter beholdningen"). Rest-sweep efter "rettet/tidligere stod/revision/korrigeret" i value-chains.json på main gav 0 hits. ✅ Det nye drawdown-udsagn er beskrivende og historisk, ikke et løfte. ✅
+- Live = main på 27 filer (alle html, js, portfolio.json, x-posts.json) for c63-indholdet. `value-chains.json` halter på Pages (md5 ≠ main ved 08:12, normal CDN-forsinkelse), og `drawdown.html` er allerede live. ✅
+- 20 live-URL'er @375 (cache-bust): 0 fejl, 0 overflow. Rådgivning-, tab- og historisk-linjen er på 20/20. ✅
+- ÅOP: omkostninger.html skriver stadig "Ikke et ÅOP" alle steder, og der er intet ÅOP-tal. Teksten er ærlig, men tallet mangler fortsat.
+
+### MUST
+- Uændret: **M1** (ndi-paa-x knude/lead løfter tredjeparts-BREAKING frem) og **ÅOP mangler** (FO-persona MUST).
+
+### SHOULD
+- **S-T1 stadig åben**: `tema.html?slug=platforms` og `?slug=optik-netvaerk` live har ingen "rådgivning"-tekst i DOM'en (textContent). Tab- og historisk-linjen er der.
+- Åbne: S-R1, S-D1, S-D2, S-K1–K3, S-N1–N3, S3, S5, S12.

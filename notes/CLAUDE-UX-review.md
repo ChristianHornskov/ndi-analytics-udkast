@@ -1541,3 +1541,16 @@ Ingen nye UX-ændringer på main siden c61. Live-sweep på 24 URL'er gav 0 fejl 
 ### SHOULD
 - U-T1 · `tema.html` har en kortere footer end resten af sitet (se compliance S-T1). Footeren bør være ens overalt, så den ikke ser ud som en anden side.
 - Åbne som i c61/c62 (U-V1 Venn-fatigue, U-X1).
+
+## 2026-10-16 08:12 CEST · cyklus 64 · freeze-tjek (main `1f8ec72`)
+
+### MUST
+- Ingen nye. 20 live-URL'er @375 har 0 overflow og 0 pageerrors. De 4 ekstra URL'er (2× tema, vaerdikaede, laer) har også 0 overflow.
+
+### SHOULD
+- vaerdikaeder-facts (lane-A/D freeze-fix) lyder nu som forklaringer, ikke som interne revisionsnoter. Det er godt for privat-personaen. Behold tonen.
+- drawdown: år-rækken nævner nu de rolige år ("… havde ingen dag mindst 10 % under den løbende top"). Det giver kontekst. Tjek efter Pages-deploy, at linjen ikke brydes uheldigt mellem knapperne @375.
+- Åbne fra tidligere: U-V1 (Venn-fatigue), U-X1, S-T1 (tema-footer).
+
+### Nice
+- Ingen nye.
