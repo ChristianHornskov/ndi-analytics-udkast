@@ -274,6 +274,10 @@ På sammenlign holder «5. dec. 2026» sammen, når forklaringen skifter linje. 
 
 Søjlerne delte bund, men gulvet var usynligt. Hver søjle står nu i et spor på 72 px med en streg i bunden. Stregen er længere end søjlen. På 1280, 390 og 361 ligger alle fire bunde på samme linje. 2024 er 64 px. 2026 er 8 px og sidder på stregen. 2025 har gul overkant. 2026 har cyan, og «til dato» er gul. På 320 er det to rækker, og hver række deler gulv. Ingen sidescroll. Ingen konsolfejl.
 
+### Update · Del grafen står ikke alene · 2026-10-16 ~05:07 CEST
+
+På 390 stod «Del grafen» alene under de to andre knapper. Under 438 px tager «Undersøg porteføljen mere» sin egen række. «Se største fald» og «Del grafen» står ved siden af hinanden, 44 px høje, og de følger teksten. På 440 og 1100 er alle tre stadig på én linje. PMINDIAKK har den lange knap «Fald fra top vises efter 12 måneder». På 320 står den alene, og «Del grafen» under den, fordi de to ikke kan være på samme række. Ingen procent. Ingen sidescroll. Ingen konsolfejl.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.
