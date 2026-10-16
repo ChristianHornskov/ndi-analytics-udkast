@@ -1058,3 +1058,5 @@ Main er uændret, og live-teksten er byte-identisk med cyklus 41 på alle 32 bas
 - **Privat 55+:** klikker de på nr. 4 i top-10 (Lumentum), får de en side, der først siger "mangler endnu" og nederst "Hold øje med -". Det er det svageste indtryk på sitet lige nu.
 - **Familiekontor:** de afkortede navne (\"…Internationa\") undergraver tilliden til datakvaliteten mere end noget andet, de ser i listen.
 - **Idéspejder:** #9 (fakta vs. vurdering) er stadig næste. Profiler efter vægt (SHOULD 1) er en dataopgave, ikke en idé, men har størst effekt pr. time.
+
+> **Addendum (efter merge):** main er under cyklussen rykket til `23ad292` (13 docs-filer). `af96c18` "selskab: skjul tomt 'Hold øje med'-panel" ser ud til at løse SHOULD 2 ovenfor, og `0f32f90`/`a4d1848` berører top-10 og visningsnavne. KID-betegnelse, "kvartalssnapshot" og "Gns. årligt afkast" er uændrede i grep. Hele deltaet gennemgås live i cyklus 43.
