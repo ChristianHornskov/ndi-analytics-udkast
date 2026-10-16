@@ -622,15 +622,16 @@ function sortPositions(list, sort, dirName) {
 }
 
 function renderLivscyklus(fund) {
-  // Pædagogisk kurve (bogen: præ-revenue → value). Prikker = selskaber MED manuel modenhed;
-  // uklassificerede placeres ikke - vi gætter ikke i UI (lær/livscyklus.html).
+  // Pædagogisk kurve (bogen: præ-revenue → value). Prikker = selskaber med en modenhed i data
+  // (i dag maskinelle forslag, maturityStatus=forslag); uden modenhed placeres ikke (lær/livscyklus.html).
+  // Etiketter i almindeligt dansk (MATURITY_PLAIN), samme ord som selskab.html og screenerens filter.
   const stages = [
-    { id: 'prerevenue', label: 'Præ-revenue', t: 0.07 },
-    { id: 'preprofit', label: 'Præ-profit', t: 0.29 },
-    { id: 'highgrowth', label: 'High growth', t: 0.5 },
-    { id: 'garp', label: 'GARP', t: 0.71 },
-    { id: 'value', label: 'Value', t: 0.93 },
-  ];
+    { id: 'prerevenue', t: 0.07 },
+    { id: 'preprofit', t: 0.29 },
+    { id: 'highgrowth', t: 0.5 },
+    { id: 'garp', t: 0.71 },
+    { id: 'value', t: 0.93 },
+  ].map((st) => ({ ...st, label: daMatPlain(st.id) }));
   const W = 720, H = 190, L = 24, R = 24, TOP = 26, BOT = 54;
   const px = (t) => L + t * (W - L - R);
   const py = (t) => H - BOT - (H - BOT - TOP) / (1 + Math.exp(-9 * (t - 0.5)));
@@ -658,7 +659,7 @@ function renderLivscyklus(fund) {
   const summary = stages.map((st) => `${st.label}: ${byStage[st.id].length}`).join(', ');
   const empty = classified === 0;
   const curve = `<div class="life-body">
-    <p class="life-intro">Pædagogisk model fra bogen: selskaber bevæger sig typisk fra præ-revenue mod value. Det er <strong>ikke en officiel NDI-rating</strong> og ikke en anbefaling.</p>
+    <p class="life-intro">Pædagogisk model fra bogen: selskaber bevæger sig typisk fra før omsætning mod moden. Det er <strong>ikke en officiel NDI-rating</strong> og ikke en anbefaling.</p>
     <div class="life-scroll"><svg class="life-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="Livscykluskurve. ${summary}. ${unknown} uden forslag.">
       <path class="life-curve" d="${path}"/>${nodes}
     </svg></div>
@@ -667,7 +668,7 @@ function renderLivscyklus(fund) {
   const nForslag = (fund.positions || []).filter((p) => p.maturityStatus === 'forslag' && byStage[p.maturity]).length;
   const foot = empty
     ? `Ingen af fondens ${fund.positions.length} selskaber har et modenheds<strong>forslag</strong> endnu.`
-    : `${classified} af ${fund.positions.length} selskaber har et modenheds<span class="badge badge-draft">forslag</span> (foreløbigt skøn — afventer NDI). ${unknown ? unknown + ' uden forslag.' : ''}`;
+    : `${classified} af ${fund.positions.length} selskaber har et modenheds<span class="badge badge-draft">forslag</span> (maskinelt ud fra offentlig branche og tema, afventer NDI-gennemgang). ${unknown ? unknown + ' uden forslag.' : ''}`;
   return `<section class="panel life-strip${empty ? ' is-empty' : ''}">
     <div class="life-head"><h2>Livscyklus</h2><span class="badge badge-draft" title="Heuristik — afventer NDI">udkast</span></div>
     ${curve}
