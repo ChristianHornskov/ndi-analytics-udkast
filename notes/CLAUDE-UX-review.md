@@ -1515,3 +1515,18 @@ Testet lokalt på 21 sider @375 og @1280 (42 + 4 kombinationer). 0 vandret overf
 ### Nice
 - `selskaber.html?fund=<x>` falder nu stille tilbage til pmindi. ✅ Filtertælleren siger "1 aktivt" i ental. ✅
 - `x-posts.json` callCountNote er en log over 23 "poleringspas". Den vises ikke på siden (grep i js/html giver 0), men bør trimmes før go-live.
+
+## 2026-10-16 08:10 CEST · cyklus 62 · slut-tjek ved freeze (main `a81c67c` uændret, live = main)
+
+Intet nyt produktindhold siden c61. Live = main pr. md5 på 14 sider, og footer findes på alle 20 sider.
+
+### MUST
+- Ingen nye. (Compliance M1 og manglende ÅOP gælder også som UX-blokkere for FO-personaen.)
+
+### SHOULD (samlet, åbne)
+- U-V1 Venn-fatigue på fakta/omkostninger · U-X1 knude-lead på ndi-paa-x.
+- c60: tekst i livsbjælken "afventer Fundmarket-godkendelse" · dag-split viser den gunstige side som standard.
+- c59: rullende sektion bør sige "siden start", og stale-advarslen bør linke til Fundmarket · c58 S-K1/S-K2 · c57 SHOULD 1–3.
+
+### Nice
+- Saml klik-kort-mønstrene (nyhedsarkiv, Kryds) under ét idiom · aria-live på embed #day-say · trim callCountNote i x-posts.json.

@@ -1496,3 +1496,21 @@ Gennemgået: fakta/omkostninger Kryds (Venn), ndi-paa-x knude-filter (soft-nv / 
 
 ### ÅOP
 Uændret. Kryds-figuren siger eksplicit "ikke et ÅOP". ÅOP-tal mangler stadig.
+
+## 2026-10-16 08:10 CEST · cyklus 62 · slut-tjek ved freeze (main `a81c67c` uændret siden c61, live = main)
+
+Main er ikke flyttet siden c61. Live md5 = main på 14 sider (index, vaerdikaeder, drawdown, risici, temaer, invester, om-data, fakta, omkostninger, sammenlign, ndi-paa-x, selskab, selskaber). Alle 20 html-sider i docs/ har en footer med rådgivning, tab og historisk afkast.
+
+- Ordsweep (øger eksponering/overvægt/garanteret/bedste tip/køb nu/sælg nu) i html/js/json: hits er kun negationer og et pædagogisk afsnit i `laer/hvorfor-mange-aktier.html` ("en stor overvægt i én branche øger variansen"). Det beskriver diversifikation og er ikke handelssprog om fonden. ✅
+- asOf: beholdningsfilerne er 2026-06-01. 2026-10-14/15 findes kun i kurs- og statistikfiler (latest, risk-stats, fund-meta, nasdaq-compare). Ingen live trades. ✅
+
+### Samlet åben liste før go-live
+**MUST**
+- **M1** · ndi-paa-x knude/lead løfter tredjeparts-hype ("BREAKING … $250 BILLION") om beholdninger frem (c61).
+- **ÅOP** · ÅOP/samlede omkostninger i kr. mangler stadig. Kryds siger korrekt "ikke et ÅOP", men tallet skal findes (persona + FO MUST).
+
+**SHOULD**
+- S-R1 "97 % positive dage" (overlappende vinduer) · S-D1 embed "749 af 770 dage over nul" som standard · S-D2 "afventer Fundmarket-godkendelse".
+- S-K1 takeaway følger ikke Kurs/Totalafkast · S-K2 Kurs vs. Nasdaq er skævt · S-K3 udbytte-forbehold i U-tooltip.
+- S-N1 totalafkast vs. kursindeks · S-N2 Yahoo/Nasdaq-licens · S-N3 forbehold i readout.
+- S3, S5, S12 (ældre, åbne).
