@@ -1212,3 +1212,58 @@ Ikke juridisk rådgivning. Delta: 9 filer, heraf value-chains.json +2.151 linjer
 
 ### Prioritet før freeze (08:00)
 9 + 7 + 3 + 5 + 1 er små tekst- og blokrettelser og falder alle under "bug fixes/footer/warning checks".
+
+## 2026-10-16 06:57 CEST · cyklus 48 (main `83c64d0`; live = main)
+
+Ikke juridisk rådgivning. Delta siden `4f52bd6` er 17 filer: lane-A/C kildeangivelser (ugebrev/BLOG/BOG → "NDI-indlæg <dato>", "NDI's bog"), invester (IFS-forkortelse fjernet), fonden CAGR-label, udforsk maskinel-note, `displayName`, profil-fallback og unique-metrics (+132 linjer, nye felter "Forretningsmodel"/"Svært at kopiere" med `ai: true`). Sweep 2× 50 URL'er: `hits` uændret, "overvægt" kun som negation, intet nyt købs-, sælg-, garanti-, trading-, Nasdaq- eller 1m/3m-sprog. 0 forekomster af "NDI ugebrev|BLOG" i docs/.
+
+### MUST
+- **Ingen åbne MUST-blokere.**
+
+### Lukket ✅
+- **SHOULD 1:** "Gns. årligt afkast siden start" med periode `<første NAV> - <asOf>` og "efter løbende omkostninger".
+- **SHOULD 6:** Rå selskabsnavne er rettet (WORD_FIX).
+- **SHOULD 8:** Maskinel-forbeholdet på udforsk er synligt uden klik.
+- **Kildeangivelse (lane-A's MUST):** Det er konsistent på tværs af siderne nu (ideer, om-data, laer/tidslinje, laer/saadan-taenker-vi og værdikæder).
+- **Profil-fallback:** Teksten er tydeligt mærket "AI-udkast" og "Kort udkast fra NDI-linsen (AI, afventer NDI-gennemgang)" ✅. "Svært at kopiere" har "Beskrivelse, ikke en vurdering" (Tesla). Moat-sprog kan læses som en kvalitetsvurdering, så **hold øje med**, at negationen står på alle nye `Svært at kopiere`-felter (stikprøve: Tesla ✅).
+
+### SHOULD (åbne, uændret i kilden pr. `83c64d0`)
+3. `index.html:89` "Se Central Information Dokument" (bør være "Central Information" / "KID" konsekvent).
+5. `omkostninger.html:458` "Det er det tal, marketingmateriale skal gengive ærligt" (intern formulering).
+7. `drawdown.html` (0× "rådgivning") og `embed/chart.html` (kun `og:description`) har ingen synlig ikke-rådgivningslinje.
+9. PMINDIAKK-visningen af fonden viser ingen omkostningsindikator (2,85 %).
+
+### Prioritet før freeze (08:00)
+9 + 7 + 3 + 5 er fortsat fire små tekst- og blokrettelser. De falder alle under "bug fixes/footer/warning checks" efter 08:00.
+
+## 2026-10-16 07:01 CEST · cyklus 49 (main `83c64d0` uændret; live = main)
+
+Ikke juridisk rådgivning. Der er ingen docs-delta siden c48. Sweep 50 URL'er (c49): hits og flags er identiske med c48b. Intet nyt købs-, sælg-, garanti-, trading-, Nasdaq-benchmark- eller 1m/3m-sprog. PMINDIAKK viser stadig ingen NAV/kurs før 5. dec. 2026 ✅.
+
+### MUST
+- **Ingen åbne MUST-blokere.**
+
+### SHOULD (åbne, verificeret i kilden pr. `83c64d0`)
+3. `index.html:89` "Se Central Information Dokument" → "Se KID'et (Central Information) før du investerer".
+5. `omkostninger.html:458` "Det er det tal, marketingmateriale skal gengive ærligt" (intern formulering, fjern eller omskriv).
+7. `drawdown.html` (0× "rådgivning") og `embed/chart.html` (kun `og:description`) mangler en synlig ikke-rådgivningslinje.
+9. PMINDIAKK-fondsvisningen mangler omkostningsindikatoren (2,85 %).
+
+### Prioritet før freeze (08:00)
+Rækkefølge: 9 → 7 → 3 → 5. Alle fire er små rettelser af tekst eller advarsler og må laves efter 08:00 som fejlrettelser. Stop-commit er 08:30.
+
+## 2026-10-16 07:03 CEST · cyklus 50 (main `83c64d0` uændret; live = main)
+
+Ikke juridisk rådgivning. Der er ingen docs-delta siden c48/c49. Live md5 = lokal for index, drawdown, omkostninger, embed/chart og js/app.js. Nøglesider (/, selskab SoftBank, temaer, invester, om-data, risici, værdikæder) svarer 200. Fonden er en `?view=`-rute og ikke en fil, så `fonden.html` 404 er forventet. Ordsweep i docs/: "overvægt" findes kun som negation ("Ikke en anbefaling eller en bevidst overvægt", temaer:152 og tema:179), og "anbefaling" kun i "Ikke en anbefaling". Der er 0 forekomster af garanti, "øger eksponering", 1 md/3 md eller Nasdaq-benchmark. PMINDIAKK-grenen (`js/app.js:346`) viser stadig ingen NAV/kurs før 5. dec. 2026 ✅.
+
+### MUST
+- **Ingen åbne MUST-blokere.**
+
+### SHOULD (åbne, genverificeret i kilden pr. `83c64d0`)
+9. `js/app.js:346–367` PMINDIAKK-visningen mangler omkostningsindikatoren (2,85 %, grep 0 hits i app.js).
+7. `drawdown.html` har 0× "rådgivning", og `embed/chart.html` har den kun i `og:description`. Begge mangler en synlig ikke-rådgivningslinje.
+3. `index.html:89` "Se Central Information Dokument" → "Se KID'et (Central Information) før du investerer".
+5. `omkostninger.html:458` "Det er det tal, marketingmateriale skal gengive ærligt" er en intern formulering.
+
+### Freeze-note
+Alle fire er tekst- og advarselsrettelser og må laves efter 08:00 som fejlrettelser. Stop-commit er 08:30. Lane-R retter dem ikke (read-only), så de skal tages af ejer-lanerne.

@@ -1207,3 +1207,68 @@ Main flyttede sig under cyklussen (lane-A værdikæder/kvante, lane-E fact-check
 ### Persona-linser
 - **Privat (375):** Periode-kortene er nu den bedste forklaring af CAGR vs. periode på sitet. Omkostninger svarer direkte på "hvad koster det" i første linje.
 - **Family office:** Omkostningsbilledet er nu komplet og ærligt (KID-RIY, postsatser, "ikke et ÅOP"). Det eneste hul er AKK-visningen (SHOULD 7).
+
+## 2026-10-16 06:57 CEST · cyklus 48 (main `83c64d0`, docs-delta 17 filer siden `4f52bd6`; live = main)
+
+Main flyttede sig to gange under cyklussen (lane-A kildeangivelser, derefter lane-B/C/E: `displayName` WORD_FIX, udforsk/ndi-perspektiv tap-mål, profil-fallback, unique-metrics +132 linjer). Jeg har kørt to sweeps på 50 URL'er ved 375 (c48, c48b). Begge gav **0 pageerrors og 0 vandret overflow**. Kontrolleret med md5: live = main for app.js, data.js, selskab, ideer, om-data, vaerdikaeder, vaerdikaede og value-chains.json.
+
+### Lukket ✅ (verificeret live)
+- **SHOULD 1 (udforsk tiny):** 698 → **20**. Rækkelinks har nu min-height 24. Portefølje 166 → 6, ndi-perspektiv 418 → 85.
+- **SHOULD 2 (maskinel-forbehold i lukket details):** `.uf-machine-note` står nu synligt over tabellen ("Tema og modenhed er maskinelle forslag … afventer NDI").
+- **SHOULD 4 (rå versaler):** h1 viser nu SiTime, IQE, Wix.com, SoftBank Group og Lumentum Holdings. WORD_FIX + fjernet Inc/Corp/Ltd i `displayName()` lukker også Nice-punktet om blandede suffikser.
+- **SHOULD 6 (manglende profiler):** Selskaber uden profil viser nu linsens "Hvad ejer man?" med AI-udkast-mærke og "En længere profiltekst mangler endnu" (fx Lumentum: "Lasere og optiske komponenter …"). Det er ikke længere et tomt felt.
+- **Fonden:** CAGR-kortet hedder nu "Gns. årligt afkast siden start" og har en dato-periode.
+- **Kildeangivelser:** "NDI ugebrev"/"BLOG"/"BOG" står ikke længere nogen steder i docs/ (0 hits). Mads introduceres som NDI's stifter på værdikæder.
+
+### MUST
+- Ingen UX-blokere.
+
+### SHOULD (åbne)
+3. `vaerdikaeder.html` bruger stadig ikke `displayName()`.
+5. `omkostninger.html:441` "Tast 1 eller 5." står stadig i summary.
+7. `?view=fonden&fund=PMINDIAKK` viser ingen omkostninger (`app.js` AKK-grenen returnerer før "Omkostninger (kort)").
+8. Værdikæder: 123 tap-mål under 24 px ved 375 (uændret fra c47).
+9. **Ny (lille):** `selskab.html` `.tri` er tre lukkede `<details>` ("Kapacitet / Målt år / Efter 1. juni 2026"). På en selskabsside, der allerede er 4.300–6.000 px ved 375, bliver det endnu en klikflade. Overvej én sætning frem for tre foldere.
+
+### Nice
+- "Chemours Co" og "SoFi Tech" (Co bevares bevidst i WORD_FIX, men giver et ujævnt indtryk ved siden af "SiTime").
+- Temasider stadig uden figur.
+
+### Persona-linser
+- **Privat (375):** Udforsk og portefølje er nu reelt tap-bare. Det er nattens største mobilforbedring. Profil-fallback betyder, at top-selskaber ikke længere ender i "mangler endnu".
+- **Family office:** Navnene ser redigerede ud nu. Det eneste synlige hul tilbage er AKK-visningen uden omkostninger (SHOULD 7).
+
+## 2026-10-16 07:01 CEST · cyklus 49 (main `83c64d0` uændret siden c48; live = main)
+
+Main har ikke flyttet sig siden c48. Jeg har kørt et nyt sweep på 50 URL'er ved 375 (c49): **0 pageerrors, 0 vandret overflow**. Tiny-sum (2.800), sidehøjder, hits og flags er identiske med c48b. Kontrolleret med md5: live = main for app.js, index, omkostninger, drawdown og embed/chart.
+
+### Korrektion
+- **SHOULD 3 er lukket.** `vaerdikaeder.html:890–892` importerer `displayName` og bruger den via `coName()` (commit `7b23621`). Den var fejlagtigt listet som åben i c48.
+- Nice "1 selskaber passer" (ndi-perspektiv) findes ikke længere i den synlige tekst. Lukket.
+
+### MUST
+- Ingen UX-blokere.
+
+### SHOULD (åbne, uændret i kilden)
+5. `omkostninger.html:441` "Tast 1 eller 5." står stadig i summary.
+7. `?view=fonden&fund=PMINDIAKK` viser ingen omkostninger (AKK-grenen i `app.js` ca. linje 346–367 laver `return` før "Omkostninger (kort)"). **Højeste prioritet før 08:00-freeze** (fejlrettelse).
+8. Værdikæder: 123 tap-mål under 24 px ved 375.
+9. `selskab.html` `.tri` er tre lukkede details.
+
+### Persona-linser
+Uændret fra c48. Privat: mobil er tap-bar på udforsk/portefølje. FO: AKK-omkostninger er det eneste synlige hul.
+
+## 2026-10-16 07:03 CEST · cyklus 50 (main `83c64d0` uændret; live = main)
+
+Der er ingen docs-delta siden c48. Live md5 = main på de kontrollerede filer, og nøglesiderne svarer 200. Fundene fra c48/c49 (50 URL'er @375, 0 fejl/overflow) gælder uændret.
+
+### MUST
+- Ingen.
+
+### SHOULD (åbne, uændret)
+- PMINDIAKK-fondsvisningen mangler en omkostningslinje. Det er både en persona- og FO-MUST og et compliance-punkt (SHOULD 9).
+- Værdikæder har stadig små tap-mål (<24px) @375, jf. c47.
+- Drawdown og embed mangler en synlig ikke-rådgivningslinje (compliance-SHOULD 7).
+
+### Nice
+- Uændret fra c46 (blandede Inc/Ltd-suffikser, "1 selskaber passer").
