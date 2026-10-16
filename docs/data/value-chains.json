@@ -491,6 +491,9 @@
               "sym": "ARM",
               "theme": "chips"
             }
+          ],
+          "facts": [
+            "Nvidia: Nvidia skriver, at det var pioner inden for accelereret computing, og at det laver chips, systemer og software til det, Nvidia kalder fremtidens AI-fabrikker. Nvidia designer chippene, men ejer ikke selv chipfabrikkerne. Derfor hænger leddet sammen med Foundry længere nede."
           ]
         },
         {
@@ -776,6 +779,10 @@
               "sym": "LRCX",
               "theme": "chips"
             }
+          ],
+          "facts": [
+            "Soitec: Soitec kalder sig en førende leverandør af halvledermaterialer. Selskabet laver de skiver, chips bygges på (konstruerede substrater), med en teknik, det kalder Smart Cut. Det nævner steder i bl.a. Bernin i Frankrig og Singapore og har en skiveplatform til fotonik, altså lys på chip.",
+            "FormFactor: FormFactor skriver, at mikroskopiske nåle (MEMS-prober) er kernen i selskabets probekort. Kortene tester chips, mens de stadig sidder på siliciumskiven. Hukommelse (DRAM og flash) er et af de store anvendelsesområder."
           ]
         },
         {
@@ -893,6 +900,9 @@
               "sym": "TSM",
               "theme": "chips"
             }
+          ],
+          "facts": [
+            "GlobalFoundries: GlobalFoundries kalder sig producent af essentielle halvledere til AI, fra skyen til den fysiske verden. Selskabet nævner fabrikker i bl.a. Malta i staten New York, Dresden og Singapore. Det fremstiller chips efter andres design og designer ikke selv AI-processorerne."
           ]
         },
         {
@@ -1024,6 +1034,10 @@
               "sym": "SIMO",
               "theme": "chips"
             }
+          ],
+          "facts": [
+            "SK Hynix: SK Hynix skrev i september 2025, at det som det første havde gjort udviklingen af HBM4 færdig og var klar til masseproduktion. HBM er lag af hukommelseschips stablet oven på hinanden tæt ved processoren, så data ikke skal rejse langt.",
+            "Micron Technology: Micron skriver, at HBM stabler flere hukommelseschips lodret, og at Micron er i masseproduktion af HBM4 med 12 lag og 36 GB pr. stak. Produktsiden er læst i oktober 2026 og kan beskrive forhold efter beholdningen pr. 1. juni 2026."
           ]
         },
         {
@@ -1232,6 +1246,9 @@
               "sym": "LUMN",
               "theme": "connect"
             }
+          ],
+          "facts": [
+            "Lumentum: Lumentum skriver, at det leverer teknologi til de store datacentre og selv står for produktionen hele vejen fra materiale til modul. Produktsiden viser lasere, transceivere til 1,6 terabit pr. sekund og en optisk omskifter (OCS), der sender lyset videre uden først at gøre det til elektricitet."
           ]
         },
         {
@@ -1460,6 +1477,9 @@
               "sym": "BABA",
               "theme": "platforms"
             }
+          ],
+          "facts": [
+            "CoreWeave: CoreWeave kalder sig 'The Essential Cloud for AI' og skriver, at det har over 50 aktive datacentre i USA og Europa. Selskabet lejer regnekraft ud og designer ikke selv chippene. Tallet er fra siden i oktober 2026, altså efter beholdningen."
           ]
         },
         {
