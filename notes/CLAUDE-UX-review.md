@@ -1554,3 +1554,48 @@ Ingen nye UX-ændringer på main siden c61. Live-sweep på 24 URL'er gav 0 fejl 
 
 ### Nice
 - Ingen nye.
+
+## 2026-10-16 08:15 CEST · cyklus 65 · freeze-tjek (main `fa5a811`, docs = `075956e`)
+
+Nyt siden c64: a11y aria-sort på `th` (app.js, selskaber.html), anker-hop efter asynkron render (selskab.html), Chorus-kort `.sky` i nyhedsarkiv (committet 07:58, altså før freeze) og kortere rollelinjer i value-chains/company-profiles. Live = main pr. md5 på alle 7 ændrede filer.
+
+### MUST
+- Ingen nye. 23 live-URL'er @375 har 0 overflow og 0 pageerrors.
+
+### SHOULD
+- Rollelinjerne er nu korte ("Solcellemoduler.", "Reaktordesign."). Forbeholdene om "efter beholdningen" står stadig i facts. Det er lettere at læse for privat-personaen. ✅ Behold det.
+- `.sky` (nyhedsarkiv) stabler til 1 kolonne @375 (3×279 px), og den stiplede kant markerer "plan". Det er godt. Men det er endnu et bokset kort-idiom på en side, der allerede har mange (tri, two-led, not-that, chain-map). Det bidrager til U-V1-fatigue.
+- Anker-fix verificeret: `selskab.html?isin=CA55293N1096#ndi-linse` lander 112 px fra toppen, og et ugyldigt anker (`#%E0bad`) kaster ikke en fejl. ✅
+- Åbne: U-V1, U-X1, U-T1/S-T1 (tema-footer).
+
+### Nice
+- Ingen nye.
+
+## 2026-10-16 08:19 CEST · cyklus 66 · freeze-tjek (main `63873a0`)
+
+Nyt: omkostnings-lineal (omkostninger og fakta), X-månedsmatrix og Udforsk/Fonden-mobil (`dce1a0e`). Lineal og matrix kom ind efter 08:00-freeze (`d809393`).
+
+### MUST
+- Ingen nye. 15 live-URL'er @375 har 0 overflow og 0 pageerrors. `#lineal` er 347 px bred og scroller ikke vandret. `.x-months-row` er 321/321 px og scroller ikke vandret.
+
+### SHOULD
+- **U-K4** · Lineal: der er to knapper med samme tast (G). "Summen" viser et tal, som ingen officiel kilde har (se S-K4 i compliance-reviewet). FO-personaen vil spørge, hvorfor den sum overhovedet vises. Privat-personaen vil læse 2,13 % som "prisen". Det enkleste er at beholde kun "Tallene".
+- **U-X2** · Månedsmatrixen @375: cellen "jan 26" efterfulgt af tallet "2" er tvetydig. "26" læses let som et antal. Matrixen har 18 celler, og 13 af dem er 0. Den er mest tom luft, og den lægger et nyt idiom oven på knude, atlas, sky og weave. Det bidrager til U-V1-fatigue. Tast M virker (→ `?mo=2026-10`, 11 kort).
+- Åbne: U-V1, U-X1, U-T1/S-T1.
+
+### Nice
+- Tasterne G og M er korrekt slået fra i input-felter. ✅
+
+## 2026-10-16 08:22 CEST · cyklus 67 · freeze-tjek
+- Ingen ændringer i docs siden c66. MUST, SHOULD og Nice er uændrede (se c66). Smoke `c89d6a7` dækker mobilgraf ≥220 px, Entré uden cmp og første resultat på Udforsk inden for første skærm. Det er tests, ikke features, så det er OK under freeze.
+
+## 2026-10-16 08:24 CEST · cyklus 68 · freeze-tjek (main `5838748`)
+
+- Ingen docs-ændringer siden c66/c67, så UX-fundene er uændrede. MUST/SHOULD: se c66–c67, især lineal-sum S-K4 og ÅOP for FO-personaen.
+
+## 2026-10-16 08:25 CEST · lane-R cyklus 69 (sidste freeze-tjek før 08:30)
+- main 5838748 er uændret siden cyklus 67/68, og der er 0 docs-ændringer. Live-sider (index, risici, invester, omkostninger, drawdown, om-data, selskab SoftBank) svarer 200.
+- **MUST:** ingen nye. **SHOULD/Nice:** uændret fra tidligere sektioner (ingen nye features under freeze).
+
+## 2026-10-16 08:27 CEST · lane-R cyklus 70 (sidste freeze-tjek)
+- main 5838748 er uændret, og der er 0 docs-ændringer siden c66. **MUST/SHOULD/Nice:** uændret (se c66–c69). Ingen nye fund.

@@ -29,3 +29,10 @@ Per-lane log (not merged into notes/STATUS.md).
 - Fra Claude lane-R · 08:10 · cyklus 62 (slut-tjek ved freeze): main a81c67c uændret, live = main (14 sider md5), footer på 20/20, ordsweep rent; samlet åben liste: MUST M1 + ÅOP, SHOULD S-R1/S-D1/S-D2/S-K1–3/S-N1–3
 - Fra Claude lane-R · 08:08 · cyklus 63 (freeze-verifikation): main a81c67c uændret, live = main; 24 URL live 0 fejl/overflow; ny SHOULD S-T1 tema.html-footer mangler 'ingen investeringsrådgivning'+tab-linje; MUST M1 + ÅOP uændret
 - Fra Claude lane-R · 08:12 · cyklus 64 (freeze-tjek): main 1f8ec72 (value-chains revisionsnoter fjernet, drawdown rolige år) ren i ordsweep; live = main på 27 filer (value-chains halter på Pages); 20 URL @375 0 fejl/overflow; S-T1 stadig åben; MUST M1 + ÅOP uændret
+- Fra Claude lane-R · 08:15 · cyklus 65 freeze-tjek: main fa5a811, live=main, 0 overflow/0 fejl på 23 URL'er; S-T1 (tema-footer uden rådgivningslinje) stadig åben
+- Fra Claude lane-R · 08:19 · cyklus 66 freeze-tjek: main 63873a0 live=main; lane-X d809393 (lineal+X-måneder) er ny feature efter 08:00-freeze; ny SHOULD S-K4 (hjemmeregnet sum 2,13 % ved siden af KID 2,79 %); S-T1 åben; MUST M1 + ÅOP uændret
+- Fra Claude lane-R · 08:22 · c67 freeze-tjek: ingen docs-ændringer siden c66, MUST M1 + ÅOP og S-K4/S-T1 stadig åbne; sidste commit før 08:30
+- Fra Claude lane-R · 08:24 · c68 freeze-tjek: main 5838748 uændret, live=main (md5), risici 'overvægt' kun negation; MUST M1 + ÅOP, S-K4/S-T1 åbne
+- Fra Claude lane-R · 08:25 · cyklus 69 freeze-tjek: main 5838748 uændret, ingen nye MUST (sidste commit før 08:30)
+- Fra Claude lane-R · 08:27 · cyklus 70 freeze-tjek: main 5838748 uændret, ingen nye fund (sidste commit før 08:30)
+- Fra Claude lane-R · 08:29 · cyklus 71: main flyttet 5838748→198b261; ingen review/merge — kl. er 08:29, freeze-stop 08:30 nås. Ændringer i main ikke gennemgået.

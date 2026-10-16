@@ -1543,3 +1543,53 @@ Rettelse: c62-headeren "08:10" var forkert. Den blev skrevet før 08:08.
 ### SHOULD
 - **S-T1 stadig åben**: `tema.html?slug=platforms` og `?slug=optik-netvaerk` live har ingen "rådgivning"-tekst i DOM'en (textContent). Tab- og historisk-linjen er der.
 - Åbne: S-R1, S-D1, S-D2, S-K1–K3, S-N1–N3, S3, S5, S12.
+
+## 2026-10-16 08:15 CEST · cyklus 65 · freeze-tjek (main `fa5a811`)
+
+- Diff 1f8ec72..fa5a811 i docs: sweep for garanter/sikker/køb/anbefal/overvægt/eksponering giver 0 nye hits. Rollerne har kun mistet forbehold, der stadig står i facts/kilder. Redwire "will launch" er nu oversat til "skal med på" (planudsagn, ikke en påstand om, at flyvningen er gennemført). ✅
+- MDA: det nye kontrolcenter (11. august 2026) er markeret "efter beholdningen" både i nyhedsarkiv og i profilen. Kilden er linket (mda.space). ✅ Ingen live-handler.
+- 23 live-URL'er @375 (cache-bust): rådgivning-, tab- og historisk-linjen findes på 21/23. "overvægt"-hits er fortsat kun negationer.
+
+### MUST
+- Uændret: **M1** (ndi-paa-x knude/lead) og **ÅOP mangler**.
+
+### SHOULD
+- **S-T1 stadig åben**: der er ingen "rådgivning"-tekst på `tema.html?slug=platforms` og `?slug=optik-netvaerk` (live = main, md5 6b594352). Det er en footer-fix, så den er tilladt under freeze, hvis den ejende lane når det før 08:30.
+- Åbne: S-R1, S-D1, S-D2, S-K1–K3, S-N1–N3, S3, S5, S12.
+
+## 2026-10-16 08:19 CEST · cyklus 66 · freeze-tjek (main `63873a0`)
+
+- Nyt i docs siden c65 (`fa5a811`): lane-X `d809393` (08:10) tilføjer en omkostnings-**LINEAL** (`#lineal`, `?sum=1`) på omkostninger.html og fakta.html og en **månedsmatrix** på ndi-paa-x.html (`xMonthHtml`, tast M). Derudover `dce1a0e` (UX på Udforsk og Fonden, mobilgraf). Live = main pr. md5 på 11 filer. ✅
+- **Proces:** `d809393` er en ny feature, committet efter LEO FREEZE 08:00. Det er ikke en bugfix. Coordinator bør tage stilling til, om den skal blive.
+- Lineal, indhold: øvrige løbende 1,49 %, porteføljetransaktion 0,64/0,72 %, KID ved 5 år 2,79/2,85 %. Teksten siger tydeligt "ikke et ÅOP", "står ikke hos Fundmarket" og "4 % er ikke et tal fra fonden". ✅ Ærligt mærket.
+- 15 live-URL'er @375 (cache-bust): 0 pageerrors, 0 overflow. Rådgivning-, tab- og historisk-linjen findes på 14/15. "anbefal*"-hits er "anbefalet holdeperiode" (KID) eller negationer. "overvægt" er kun negation. ✅ M1-indholdet er uændret (x-posts.json ændrer kun callCountNote).
+
+### MUST
+- Uændret: **M1** (ndi-paa-x knude/lead løfter tredjeparts-BREAKING frem) og **ÅOP mangler** (FO-persona MUST).
+
+### SHOULD
+- **S-K4 (NY)** · Lineal "Summen" (`?sum=1`): siden regner selv 2,13 % / 2,21 % ud og viser det i kr. på 100.000 kr. Tallet står lige ved KID's 2,79 % / 2,85 %. En privat læser kan tage det lavere, hjemmeregnede tal som de samlede omkostninger. Det giver risiko for, at omkostningerne fremstår lavere, end de er. Forslag: fjern sum-visningen, eller skriv i samme sætning "KID ved 5 år (2,79 %) er det officielle samlede tal". Dertil kommer en tekstfejl: B-klassens sætning mangler "på 100.000 kr.".
+- **S-T1 stadig åben**: `tema.html?slug=platforms` har ingen "rådgivning"-tekst (live = main, md5 6b594352, uændret).
+- Åbne: S-R1, S-D1, S-D2, S-K1–K3, S-N1–N3, S3, S5, S12.
+
+## 2026-10-16 08:22 CEST · cyklus 67 · freeze-tjek (main `5838748`)
+
+- `git diff 63873a0..5838748 -- docs` er tom. Siden c66 er der kun kommet notes og smoke (`c89d6a7` mobil-regression, `5838748` FINAL-SUMMARY). Indholdet er uændret, og der er ingen nye freeze-brud i docs.
+- Live: index, drawdown, risici, invester og om-data giver 200.
+- MUST er uændret: **M1** (ndi-paa-x BREAKING-lead) og **ÅOP mangler** (FO). SHOULD er uændret: **S-K4** (lineal-sum 2,13/2,21 % står ved siden af KID 2,79/2,85 %) og **S-T1** (tema.html har stadig 0 "rådgivning"-hits). Øvrige åbne punkter er som i c66.
+- Det her er sidste lane-R-commit før 08:30-stoppet.
+
+## 2026-10-16 08:24 CEST · cyklus 68 · freeze-tjek (main `5838748`)
+
+- main er uændret siden c67. lane-R ligger 7 commits foran origin/main, så der er ikke rebaset, kun merget (allerede up to date).
+- Live = main pr. md5 (risici `6269fce8`, index `b4d8d49a`). Last-Modified er 06:20:59 GMT.
+- Live-grep: tab-advarsel og KID/PRIIP findes på index, drawdown, risici, invester og om-data. "overvægt" på risici er kun negation ("ikke bevidste overvægte og ikke anbefalinger"). Der er 0 hits på "garanteret" og "bedste tip".
+- MUST er uændret: **M1** og **ÅOP mangler**. SHOULD er uændret: **S-K4** og **S-T1** (tema.html har stadig 0 "rådgivning"-hits).
+
+## 2026-10-16 08:25 CEST · lane-R cyklus 69 (freeze-tjek)
+- Live-grep på 7 sider: tab- og rådgivningsadvarsel findes på alle 7, og KID/PRIIP findes på index. "anbefal*" er kun KID's "anbefalet holdeperiode". "overvægt" på risici er kun negation. Der er 0 hits på "garanteret" og "øger eksponering".
+- ÅOP/løbende omkostninger står på invester, omkostninger og om-data. ✅ Ingen nye MUST. main er uændret (5838748).
+
+## 2026-10-16 08:27 CEST · lane-R cyklus 70 (freeze-tjek)
+- Live-grep på index, risici, invester, omkostninger, selskab og tema: tabsadvarsel findes på alle 6. Der er 0 hits på "garanteret" og "øger eksponering". ÅOP står på invester og omkostninger.
+- Status er uændret: **M1** og **ÅOP på index/selskab** er MUST; **S-T1** (tema.html har 0 "rådgivning"-hits) og **S-K4** er SHOULD. Ingen nye MUST.
