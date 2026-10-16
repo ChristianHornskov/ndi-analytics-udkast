@@ -96,7 +96,14 @@
  const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
  const main = document.getElementById('main');
  const isGap = (s) => String(s || '').trim().toLowerCase() === 'udfyldes af ndi';
- const show = (s) => isGap(s) ? '<span class="gap-pill">udfyldes af NDI</span>' : esc(s);
+ const gaps = [];
+ const show = (s, label) => {
+   if (isGap(s)) {
+     if (label) gaps.push(label);
+     return '<span class="muted">—</span>';
+   }
+   return esc(s);
+ };
  const num = (n) => {
  if (n == null || Number.isNaN(Number(n))) return 'ikke oplyst';
  const neg = Number(n) < 0;
@@ -204,9 +211,9 @@
  <div class="risk-metrics">
  <div class="metric"><div class="label">Volatilitet (ann.)</div><strong>${pct(risk.volatilityAnnPct)}</strong><small>Beregnet · ikke Fundmarket</small></div>
  <div class="metric"><div class="label">Sharpe (rf = 0)</div><strong>${num(risk.sharpeRf0)}</strong><small>Beregnet · ikke Fundmarket</small></div>
- <div class="metric"><div class="label">Max drawdown</div><strong class="neg">${pct(risk.maxDrawdownPct)}</strong><small>Beregnet · ikke Fundmarket</small></div>
+ <div class="metric"><div class="label">Største fald</div><strong class="neg">${pct(risk.maxDrawdownPct)}</strong><small>Beregnet · ikke Fundmarket</small></div>
  </div>
- <div class="dd-track" role="img" aria-label="Max drawdown ${pct(risk.maxDrawdownPct)} på en skala fra 0 til 100 procent"><i style="width:${ddWidth}%"></i></div>
+ <div class="dd-track" role="img" aria-label="Største fald ${pct(risk.maxDrawdownPct)} på en skala fra 0 til 100 procent"><i style="width:${ddWidth}%"></i></div>
  <div class="dd-dates">
  <article><span class="k">Bund i filen</span><strong>${daDate(risk.maxDdTrough) || 'ikke oplyst'}</strong><small>Søjlen er den absolutte størrelse på en skala fra 0 til 100 %. Den er ikke forstørret.</small></article>
  <article class="${peakAfterTrough ? 'is-odd' : ''}"><span class="k">${peakAfterTrough ? 'Topfeltet i filen' : 'Top i filen'}</span><strong>${daDate(risk.maxDdPeak) || 'ikke oplyst'}</strong><small>${peakAfterTrough ? 'Datoen ligger efter bunden og er ikke tegnet som start på faldet.' : 'Datoen står i risk-stats.json.'}</small></article>
@@ -214,7 +221,7 @@
  </div>
  <aside class="risk-official">
  <div class="label">Officielt vol/Sharpe</div>
- <p style="margin-bottom:8px">${show(risk.officialVolSharpe)}</p>
+ <p style="margin-bottom:8px">${show(risk.officialVolSharpe, 'Officiel volatilitet / Sharpe')}</p>
  <p class="src" style="margin:0">${esc(risk.officialVolSharpeNote || '')}</p>
  </aside>
  </div>
@@ -229,22 +236,32 @@
  <p class="sr-only">${glance}</p>
  <p class="band glance">${glanceVisible} <a href="omkostninger.html${dTx !== 0 ? '#forskel' : ''}" style="white-space:nowrap">Se søjlerne →</a></p>
  ${riskBlock}
+ <section class="panel" id="klasser-forskel">
+ <h2 class="panel-h">To klasser, samme strategi</h2>
+ <p style="color:var(--muted);line-height:1.55">PMINDI og PMINDIAKK følger samme overordnede strategi, men beholdningerne er ikke byte-for-byte ens. Den akkumulerende klasse er nyere (juridisk start 5. dec. 2025), så den har haft kortere tid til at fylde positioner, og små forskelle i vægt opstår ved udstedelse, indløsning og rebalancering. Tallene på denne side er forsinkede snapshots — ikke dagens fordeling. <a href="sammenlign.html">Sammenlign klasserne →</a> · <a href="laer/udbytte-vs-akk.html">Udbytte eller akkumulerende? →</a></p>
+ </section>
+ <section class="panel" id="omkostningsniveau">
+ <h2 class="panel-h">Omkostningsniveau (kort)</h2>
+ <p style="color:var(--muted);line-height:1.55">KID’ets årlige omkostningsmæssige konsekvens er <strong style="color:var(--text)">${pct(A.costs.kidRiy5y)}</strong> for PMINDI og <strong style="color:var(--text)">${pct(B.costs.kidRiy5y)}</strong> for PMINDIAKK ved 5 år (før din kurtage og dit depot). Postsatserne hos Fundmarket (øvrige løbende ${pct(A.costs.otherOngoing)} m.m.) er enkeltdele — ikke et billigere alternativ til KID-tallet. <a href="omkostninger.html#kid-omkostning">Se opstillingen →</a></p>
+ </section>
  <div class="fact-grid" id="klasser">
  ${klasse(A, dTx !== 0)}
  ${klasse(B, dTx !== 0)}
  </div>
 
+
  <section class="panel" id="organisation">
  <h2 class="panel-h">Organisation</h2>
  <div class="org">
- ${org('Investeringsforening', show(facts.association.name), '')}
- ${org('IFS (forvalter)', show(facts.ifs.name), `CVR ${esc(facts.ifs.cvr)} · FT ${esc(facts.ifs.ft)}<br>${esc(facts.ifs.address)}`)}
- ${org('Investeringsrådgiver', show(facts.advisor.name), `CVR ${esc(facts.advisor.cvr)}<br>${esc(facts.advisor.address)}`)}
- ${org('Depotbank', show(facts.depositary.name), esc(facts.depositary.role || ''))}
- <article class="span-2"><span class="k">Revision</span><strong>${show(facts.auditor.name)}</strong><p>${esc(facts.auditor.note || '')}</p></article>
+ ${org('Investeringsforening', show(facts.association.name, 'Investeringsforeningens navn'), '')}
+ ${org('IFS (forvalter)', show(facts.ifs.name, 'IFS (forvalter)'), `CVR ${esc(facts.ifs.cvr)} · FT ${esc(facts.ifs.ft)}<br>${esc(facts.ifs.address)}`)}
+ ${org('Investeringsrådgiver', show(facts.advisor.name, 'Investeringsrådgiver'), `CVR ${esc(facts.advisor.cvr)}<br>${esc(facts.advisor.address)}`)}
+ ${org('Depotbank', show(facts.depositary.name, 'Depotbank'), esc(facts.depositary.role || ''))}
+ <article class="span-2"><span class="k">Revision</span><strong>${show(facts.auditor.name, 'Revision / auditor')}</strong><p>${esc(facts.auditor.note || '')}</p></article>
  </div>
  <p class="src" style="margin-top:12px">Kilder: <a href="${esc(facts.association.source)}" rel="noopener noreferrer" target="_blank">${esc(facts.association.sourceLabel)} ↗</a> · <a href="${esc(facts.prospectusUrl)}" rel="noopener noreferrer" target="_blank">Fællesprospekt ↗</a></p>
  </section>
+ ${gaps.length ? `<section class="panel" id="mangler-ndi"><h2 class="panel-h">Mangler fra NDI</h2><p class="src" style="margin-bottom:8px">Én samlet liste over felter, der endnu ikke er udfyldt fra NDI. Ingen spredte «udfyldes»-mærker på siden.</p><ul style="color:var(--muted);line-height:1.55;padding-left:1.2rem">${[...new Set(gaps)].map((g) => `<li>${esc(g)}</li>`).join('')}</ul></section>` : ''}
 
  <section class="panel" id="hold">
  <h2 class="panel-h">Porteføljehold</h2>

@@ -120,3 +120,18 @@ Tal fra beholdningen er PMINDI pr. 1. jun 2026 efter lane-B's temaforslag (main)
 Tal at have klar: første NAV PMINDI 22. sep 2023, PMINDIAKK 5. dec 2025, beholdning pr. 1. jun 2026, KID pr. 14. aug 2026. Alle tænkte eksempler på lær-siderne står som tænkte.
 
 Åbne spørgsmål: market cap/produkt/modenhed (alle 345 modenheder er forslag), gennemgang af 85 temaforslag, privat repo vs Pages, Fundmarket på ÅTD/100k, officielle tal for udsving/Sharpe.
+
+
+## Åbne spørgsmål til Codex / Christian (2026-10-16 ~02:15 CEST · Leo FO + privat)
+
+**Ikke tilføjet i dette overnight-build (compliance):**
+- **Sammenligningskurve / benchmark-kurve** (fx Nasdaq) mod fondens totalafkast. Beslutningen står: ingen benchmark-kurve i UI. Behov for eventuelt senere: neutral «sådan vurderer du selv»-tekst er på Fonden; en egentlig kurve kræver eksplicit beslutning fra Christian + compliance.
+- **Nasdaq-kurve:** må **ikke** tilføjes uden den beslutning.
+
+**Mangler / udestår (data fra NDI eller Fundmarket):**
+- **AUM** (formue under forvaltning) — ikke i Fundmarket-snapshot som brugbart felt i udkastet.
+- **Auditor / revision** — `fund-facts.json` har `auditor.name = udfyldes af NDI` (samlet i «Mangler fra NDI» på fakta.html).
+- **Officiel volatilitet / Sharpe** — kun beregnede tal i risk-stats; officielle Fundmarket-tal mangler.
+- Evt. samlet KID-omkostningstal bekræftet af NDI (vi gengiver 2,79 % / 2,85 % ved 5 år fra KID som marketingkrav; bekræft kilde/dato).
+
+**Allerede landet i UI ( overnight):** KID RIY på omkostninger; «andet»-vægt synket fra portfolio.json; to-klasser-beholdningsforklaring; «Mangler fra NDI»-boks.

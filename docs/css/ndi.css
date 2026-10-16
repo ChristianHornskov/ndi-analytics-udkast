@@ -748,3 +748,46 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
   background: color-mix(in srgb, var(--panel, #121820) 80%, transparent);
   padding: 14px 16px; border-radius: 10px; color: var(--muted); line-height: 1.5;
 }
+
+
+/* Leo 02:00 mobile polish */
+@media (max-width: 800px) {
+  .nav a, .nav button, .nav .nav-text {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+  /* Lifecycle must not push the portfolio table: collapse chart behind summary on narrow screens */
+  .life-strip .life-body {
+    display: none;
+  }
+  .life-strip.is-open .life-body {
+    display: block;
+  }
+  .life-strip .life-head {
+    cursor: pointer;
+  }
+  .life-strip .life-note {
+    margin-top: 6px;
+  }
+  /* Tema column: allow wrap, don't clip tags at 375 */
+  table.data {
+    min-width: 0;
+  }
+  table.data th:nth-child(3),
+  table.data td:nth-child(3) {
+    white-space: normal;
+    max-width: 42vw;
+    word-break: break-word;
+  }
+  table.data .tag {
+    font-size: 11px;
+    margin: 1px;
+  }
+  .metric small {
+    font-size: 11px;
+  }
+  .note-fundmarket {
+    font-size: 12px;
+  }
+}
