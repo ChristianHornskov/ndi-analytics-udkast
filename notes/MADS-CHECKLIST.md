@@ -62,6 +62,7 @@ Kilder: slack_ny_graf_2026-10-15.md, vision.txt, mads_tankemodel.md, investering
 - [x] AI-flod: "Hvad kan gå galt i AI-floden?" (6 usikkerheder med en mini-flod over alle 13 led i Mads' rækkefølge; 5 NDI-linjer med kilde, resten baggrund) + "Tjek dig selv" med 5 spørgsmål, alle med NDI-kilde + AI-ordbog med 12 ord + genveje øverst i flodkortet; vaerdikaede.html: links til usikkerheder, spørgsmål og ordbog (lane-A)
 - [x] Energi: "Hvor i strømvejen" på hvert ledkort (5 trin fra råstof til datacenter, leddet fremhævet, hop til AI-floden; baggrund) + led i strømmens rækkefølge + genveje i energi-fanen (lane-A)
 - [x] Rum: "Rummet og de andre kæder" (trådediagram med 7 tråde fra 5 rum-led til led i AI, energi, robotik og kvante; hop til leddet, Musk-udsagnet kun via citatet med kilde; resten baggrund) + 6. quizspørgsmål + læse-rute "Rum i ni stop"; vaerdikaede.html: trådelink på rumkortet (lane-A)
+- [x] Rum: "Leddet i rum-fanen" på hvert rum-ledkort (rejse-strimmel i 6 trin med klik til trinnet + piller til penge, usikkerheder, tråde og højde, som fremhæver de relevante kort); kvante-genvej til tråden "Kvantenøgler via satellit"; `#sp-web` lander under menuen (lane-A)
 
 ## Formidling / filosofi
 - [x] Variance drag / CAGR ≠ gennemsnit (lær)
