@@ -20,6 +20,7 @@ const state = {
   linse: false, // kun selskaber med kvalitativ NDI-linse (unique-metrics.json); samme URL som A-Z: linse=1
   q: '',
   calFull: false,
+  basis: 'total', // total | price (URL visning=kurs)
   cmp: false, // valgfri Nasdaq-100-sammenligningslinje (URL cmp=nasdaq)
 };
 let NASDAQ = null;
@@ -93,6 +94,7 @@ function readUrl() {
   state.view = u.searchParams.get('view') || 'entre';
   state.period = u.searchParams.get('periode') || 'all';
   state.cmp = u.searchParams.get('cmp') === 'nasdaq';
+  state.basis = u.searchParams.get('visning') === 'kurs' ? 'price' : 'total';
   // Interne tags (legacy/Trump) må aldrig ende i chips eller URL - UX §0.2, INTERNAL-TAGS.md
   state.tags = publicTags((u.searchParams.get('tags') || '').split(',').filter(Boolean));
   state.maturity = (u.searchParams.get('mat') || '').split(',').filter(Boolean);
@@ -118,6 +120,7 @@ function writeUrl(replace = false) {
   };
   set('fund', state.fund, 'pmindi');
   set('cmp', state.cmp ? 'nasdaq' : '', '');
+  set('visning', state.basis === 'price' ? 'kurs' : '', '');
   set('view', state.view, 'entre');
   set('periode', state.period, 'all');
   set('tags', state.tags.join(','), '');
@@ -460,7 +463,8 @@ function renderFonden(root) {
         <div class="metric"><div class="label">Risikoindikator (KID) ${gl('sri')}</div><strong>5 / 7</strong><small>Anbefalet ejertid 5 år</small></div>
       </div>
       <p class="note-fundmarket">Fonden har intet fast benchmark. Beholdningen er et forsinket snapshot pr. ${fmtDate(posAsOf)} (seneste offentlige Fundmarket-rapport) og ikke dagsaktuel.</p>
-      <div class="cmp-row"><label class="cmp-toggle"><input type="checkbox" id="cmp-nasdaq" ${state.cmp ? 'checked' : ''}> Vis Nasdaq-100 som sammenligning</label></div>
+      <div class="cmp-row"><span class="seg" role="group" aria-label="Afkast eller kurs"><button type="button" class="control${state.basis === 'total' ? ' active' : ''}" data-basis="total" aria-pressed="${state.basis === 'total'}">Totalafkast</button><button type="button" class="control${state.basis === 'price' ? ' active' : ''}" data-basis="price" aria-pressed="${state.basis === 'price'}">Kurs</button></span> <label class="cmp-toggle"><input type="checkbox" id="cmp-nasdaq" ${state.cmp ? 'checked' : ''}> Vis Nasdaq-100 som sammenligning</label></div>
+      <p class="basis-note" style="font-size:12px;color:var(--muted);margin:2px 0">${state.basis === 'price' ? 'Kurs: andelskursens udvikling uden udbytte. Kursen falder med udbyttet på ex-datoen (U).' : 'Totalafkast: som om udbyttet blev geninvesteret. U markerer ex-datoen for udbytte.'}</p>
       <p class="cmp-label" id="cmp-label" ${state.cmp ? '' : 'hidden'}>Nasdaq vises kun som sammenligning, ikke som fondens benchmark. Historisk afkast er ingen garanti.</p>
       <p style="font-size:13px;color:var(--muted);margin:8px 0">Graf: ${periodLabel}</p>
       <div class="chart-wrap" id="perf-chart"></div>
@@ -537,11 +541,13 @@ function renderFonden(root) {
     ddEvts.push({ d: ddMark.troughD, kind: 'dip', title: `Bund (største fald ${fmtPct(ddMark.dd)})`, chartOnly: true });
   }
   const xMarksSafe = xMarks.map((e) => ({ ...e, text: stripCashtags(e.text) }));
-  const evts = [...ctxEvts, ...ddEvts, ...xMarksSafe];
-  const drawPerf = (cmpRows) => renderChart($('#perf-chart', root), sliced, evts, { label: 'Totalafkast', compare: cmpRows, compareName: 'Nasdaq-100' });
+  const divEvts = (fund.dividends || []).filter((dv) => sliced.some((r) => r.d >= dv.exDate) && dv.exDate >= (sliced[0]?.d || '')).map((dv) => ({ d: dv.exDate, kind: 'div', title: `Udbytte ex-dato ${fmtDate(dv.exDate)}: ${String(dv.amount).replace('.', ',')} kr. pr. andel`, chartOnly: true }));
+  const evts = [...ctxEvts, ...ddEvts, ...xMarksSafe, ...divEvts];
+  const drawPerf = (cmpRows) => renderChart($('#perf-chart', root), sliced, evts, { label: state.basis === 'price' ? 'Kurs' : 'Totalafkast', basis: state.basis, compare: cmpRows, compareName: 'Nasdaq-100' });
   drawPerf(null);
   if (state.cmp) loadNasdaq().then((nq) => { if (state.cmp && $('#perf-chart', root)) drawPerf(nq.data || []); });
   const cmpBox = $('#cmp-nasdaq', root);
+  root.querySelectorAll('[data-basis]').forEach((b) => b.addEventListener('click', () => { state.basis = b.getAttribute('data-basis'); writeUrl(true); paint(); }));
   if (cmpBox) cmpBox.addEventListener('change', () => { state.cmp = cmpBox.checked; writeUrl(true); paint(); });
   const take = $('#chart-takeaway', root);
   if (take && sliced.length >= 2) {
