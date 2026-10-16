@@ -180,6 +180,10 @@ PMINDIAKK har ingen kurspunkter i data. Embed loader stadig PMINDI. Klassen vise
 
 På 390 px er nøglen under kurven et gitter, to og to. Sidste linje, «Højde er dybde. Gul er åben», går hele vejen og er én linje. På 1280 er nøglen stadig én række. «nu» står over «−23 %», med luft imellem, og rammer ikke «top» eller søjletallene. Ingen tekst uden for svg'en. Ingen sidescroll. Ingen konsolfejl i den måling.
 
+### Update · to næsten lige dybe prikker · 2026-10-16 ~03:44 CEST
+
+−26,6 % og −26,8 % ligger to pixel fra hinanden på aksen. Tallene stod i samme søjle, så det nederste læstes som om det hørte til den øverste prik. Nu ender −26,6 % til venstre for sin prik, og −26,8 % starter til højre for den åbne. −16,7 % og −35,8 % bliver over deres prikker. Ingen tal rammer hinanden eller kanten af svg'en, ved 390. Ingen sidescroll.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.

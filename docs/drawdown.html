@@ -196,7 +196,7 @@
  const plotW = W - padL - padR;
  const xOf = v => padL + (Math.min(yMax, -v) / yMax) * plotW;
  const lanes = [-26, -16, -6, 4, 14];
- const labs = [];
+ const labeled = [];
  const dots = eps.map((e, i) => {
  const isMax = Math.abs(e.dd - sum.max) < 0.001;
  const isOpen = !e.recoveredD;
@@ -204,11 +204,27 @@
  const cy = 64 + lanes[i % lanes.length];
  const cx = xOf(e.dd);
  if (usedGate && e.dd <= -10) {
- const lab = isMax ? 'dot-lab max' : isOpen ? 'dot-lab open' : 'dot-lab';
- labs.push(`<text class="${lab}" x="${cx.toFixed(1)}" y="${(cy - 11).toFixed(1)}" text-anchor="middle">${fmtPct(e.dd, 1)}</text>`);
+ labeled.push({ cx, cy, text: fmtPct(e.dd, 1), lab: isMax ? 'dot-lab max' : isOpen ? 'dot-lab open' : 'dot-lab' });
  }
  return `<circle class="${cls}" cx="${cx.toFixed(1)}" cy="${cy}" r="${isMax || isOpen ? 4 : 3.1}"><title>${fmtDate(e.peakD)} til ${fmtDate(e.troughD)}: ${fmtPct(e.dd)}</title></circle>`;
  });
+ const placed = [];
+ for (const it of labeled) {
+ let x = it.cx, y = it.cy - 12, anchor = 'middle';
+ const near = placed.find((o) => Math.abs(o.cx - it.cx) < 46);
+ if (near) {
+ const goLeft = it.cx <= near.cx;
+ if (goLeft) {
+ x = it.cx - 7; y = it.cy - 3; anchor = 'end';
+ near.x = near.cx + 7; near.y = near.cy - 3; near.anchor = 'start';
+ } else {
+ near.x = near.cx - 7; near.y = near.cy - 3; near.anchor = 'end';
+ x = it.cx + 7; y = it.cy - 3; anchor = 'start';
+ }
+ }
+ placed.push({ ...it, x, y, anchor });
+ }
+ const labs = placed.map((p) => `<text class="${p.lab}" x="${p.x.toFixed(1)}" y="${p.y.toFixed(1)}" text-anchor="${p.anchor}">${p.text}</text>`);
  const medX = xOf(sum.median).toFixed(1);
  const meanX = xOf(sum.mean).toFixed(1);
  const gateX = usedGate && yMax >= 10 ? xOf(-10).toFixed(1) : null;
