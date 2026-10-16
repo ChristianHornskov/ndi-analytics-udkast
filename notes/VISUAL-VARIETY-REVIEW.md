@@ -368,3 +368,7 @@ Drawdown og embed siger nu i footeren «Generel information, ikke investeringsr�
 ### Update · udskrift · 2026-10-16 ~06:55 CEST
 
 «Udskriv» står ved siden af «Del grafen». På skærmen er den 44 px. På papir er knapperne væk. Episodelisten og de tre tidspunkter bliver. Øverst står «NewDeal Invest. Udskrift» med markedsføringsmateriale og ikke rådgivning. Footer med KID og den historiske advarsel følger med. PMINDIAKK har også knappen og stadig ingen procent. Ingen sidescroll på skærmen.
+
+### Update · udbyttets vej · 2026-10-16 ~07:00 CEST
+
+Ny form på sammenlign, under KID-parret og over tidslinjen. «Samme selskaber» står til venstre. To ruter: pil «Ud til dig» med gul streg, når den er valgt, og sløjfe «Bliver i fonden» med cyan streg. Sætningen skifter. PMINDI udbetaler til dig og ejer de samme selskaber som PMINDIAKK. PMINDIAKK lader udbyttet blive i fonden. Kursen vises efter 12 måneder, fra 5. dec. 2026. Ingen ny procent. Knapperne er 44 px. Ingen enkeltord på egen linje ved 300–1100. Ingen sidescroll. Ingen konsolfejl. På papir bliver ruterne.
