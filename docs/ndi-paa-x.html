@@ -29,7 +29,7 @@
  </footer>
  <noscript><p style="max-width:1180px;margin:0 auto;padding:0 20px 24px;color:#aac0c7">Siden læser kun den statiske fil. Slå JavaScript til for at se kortene. Browseren kalder ikke X.</p></noscript>
  <script type="module">
- import { loadXPosts, xCard, fmtXDate, highlightHtml, X_LABEL, X_FILTERS, postInFilter, postMatchesQuery, postWho, feedHitKind, archiveHit, xScoreHtml, xPlace } from './js/x-feed.js';
+ import { loadXPosts, xCard, fmtXDate, highlightHtml, X_LABEL, X_FILTERS, postInFilter, postMatchesQuery, postWho, feedHitKind, archiveHit, xScoreHtml, xPlace, xWhoBarHtml, xWhoDoorHtml } from './js/x-feed.js';
  const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
  const main = document.getElementById('main');
  const pack = await loadXPosts();
@@ -78,9 +78,10 @@
  const softScore = scoreOf(splitOf(softList, (p) => feedHitKind(p, { q: 'SoftBank' })), softList.length);
  const nvScore = scoreOf(splitOf(nvList, (p) => feedHitKind(p, { q: 'NVDA' })), nvList.length);
  const chipsScore = scoreOf(splitOf(chipsPosts, (p) => feedHitKind(p, { f: 'chips' })), chipsPosts.length);
- const door = (spot, href, jump, v, kicker, title, score, post, byKind, kind, key) => `<a class="x-door is-${kind}" href="${href}" data-jump="${jump}" data-v="${esc(v)}" data-spot="${spot}" aria-keyshortcuts="${esc(key)}">
+ const door = (spot, href, jump, v, kicker, title, score, post, byKind, kind, key, whoHtml) => `<a class="x-door is-${kind}" href="${href}" data-jump="${jump}" data-v="${esc(v)}" data-spot="${spot}" aria-keyshortcuts="${esc(key)}">
  <span class="k">${kicker}<kbd>${esc(key)}</kbd></span>
  <span class="x-door-top"><strong>${title}</strong>${score}</span>
+ ${whoHtml || ''}
  ${post ? `<span class="x-door-q">${highlightHtml(excerpt(post), v === 'chips' ? 'chips' : v)}</span><span class="x-door-by">${byKind} · @${esc(post.username)} · ${esc(fmtXDate(post.created_at))}</span>` : '<span class="x-door-q">Ingen opslag i snapshotet.</span>'}
  </a>`;
 
@@ -110,9 +111,9 @@
  <p class="band x-snap">Snapshot ${esc(fmtXDate(pack.snapshotAt))}. NDI-konti: ${esc(house)}.${curatedN ? ` ${curatedN} opslag er fra konti, som NDI følger (ikke NDI’s holdning).` : ''} Du kan tabe penge.</p>
 
  <div class="x-spot" id="spor" aria-label="Genveje til demo">
- ${door('soft', 'ndi-paa-x.html?q=SoftBank', 'q', 'SoftBank', 'SELSKAB · DIREKTE', 'SoftBank', softScore, softPost, 'Seneste', 'direct', '1')}
- ${door('nv', 'ndi-paa-x.html?q=NVDA', 'q', 'NVDA', 'SELSKAB · DIREKTE', 'Nvidia', nvScore, nvPost, 'Seneste', 'direct', '2')}
- ${door('chips', 'ndi-paa-x.html?f=chips', 'f', 'chips', 'TEMA', 'Chips / AI', chipsScore, chipsPost, 'Eksempel', 'theme', '3')}
+ ${door('soft', 'ndi-paa-x.html?q=SoftBank', 'q', 'SoftBank', 'SELSKAB · DIREKTE', 'SoftBank', softScore, softPost, 'Seneste', 'direct', '1', xWhoDoorHtml(softList))}
+ ${door('nv', 'ndi-paa-x.html?q=NVDA', 'q', 'NVDA', 'SELSKAB · DIREKTE', 'Nvidia', nvScore, nvPost, 'Seneste', 'direct', '2', xWhoDoorHtml(nvList))}
+ ${door('chips', 'ndi-paa-x.html?f=chips', 'f', 'chips', 'TEMA', 'Chips / AI', chipsScore, chipsPost, 'Eksempel', 'theme', '3', xWhoDoorHtml(chipsPosts))}
  </div>
  <p class="link-row x-jumps" style="margin-top:-2px">
  <a class="outline-btn small" href="selskab.html?isin=JP3436100006&fund=pmindi#hvad-siger-x">SoftBank på selskabssiden →</a>
@@ -252,8 +253,17 @@
  scoreItems.push({ n: list.length, label: 'opslag', mod: 'is-direct' });
  }
  }
+ const whoPosts = direct.length ? direct : list;
+ const whoBar = scoreItems.length
+ ? xWhoBarHtml(whoPosts, {
+ q: state.q.trim(),
+ scope: direct.length ? 'direct' : 'all',
+ snap: fmtXDate(pack.snapshotAt),
+ caption: direct.length && theme.length ? 'kun de direkte' : '',
+ })
+ : '';
  const scoreBar = scoreItems.length
- ? `<div class="x-score-bar">${xScoreHtml(scoreItems)}<span class="x-asof">Snapshot ${esc(fmtXDate(pack.snapshotAt))}</span></div>`
+ ? `<div class="x-score-bar">${xScoreHtml(scoreItems)}${whoBar}</div>`
  : '';
  live.classList.toggle('is-echo', scoreItems.length > 0);
  active.classList.toggle('is-echo', leadOn);
