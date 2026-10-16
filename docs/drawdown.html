@@ -182,8 +182,8 @@
  parts.push(`<text class="uw-label uw-max-label" x="${lx.toFixed(1)}" y="${Math.max(12, ty - 7)}" text-anchor="middle">${fmtPct(trough.u, 0)}</text>`);
  parts.push(`<circle class="uw-now" cx="${nx.toFixed(1)}" cy="${ny.toFixed(1)}" r="3.4"/>`);
  const nowX = (nx + 8).toFixed(1);
- const nowTop = Math.max(14, ny - 4);
- parts.push(`<text class="uw-label uw-now-label" text-anchor="start"><tspan x="${nowX}" y="${nowTop.toFixed(1)}">nu</tspan><tspan x="${nowX}" y="${(nowTop + 11).toFixed(1)}">${fmtPct(last.u, 0)}</tspan></text>`);
+ const nowTop = Math.max(16, ny - 10);
+ parts.push(`<text class="uw-label uw-now-label" text-anchor="start"><tspan x="${nowX}" y="${nowTop.toFixed(1)}">nu</tspan><tspan x="${nowX}" y="${(nowTop + 14).toFixed(1)}">${fmtPct(last.u, 0)}</tspan></text>`);
  const barSay = usedGate
  ? `${deep.length} søjler mellem kurven og årstallene er episoder dybere end 10 %. Højden er dybden, bredden er tiden. Tallet over søjlen er dybden. Det dybeste fald har tallet ved prikken. Stregen ved 10 % under nul er grænsen for de søjler.`
  : `${deep.length} søjler mellem kurven og årstallene er de dybeste episoder. Højden er dybden, bredden er tiden. Tallet over søjlen er dybden.`;

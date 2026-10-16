@@ -747,6 +747,8 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
   .ep-jump{grid-template-columns:1fr;gap:2px}
   .hero-stat .num{font-size:46px}
   .stat-strip{grid-template-columns:1fr}
+  .uw-key{display:grid;grid-template-columns:1fr 1fr;gap:8px 12px}
+  .uw-key li:last-child{grid-column:1 / -1}
 }
 @media print{
   .figure{background:#fff;border-color:#ccc;break-inside:avoid}
@@ -771,6 +773,7 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
   .year-rail a.yr-deep{border-top-color:#111}
   .year-rail a.yr-open{border-top-color:#1d4e56}
   .year-rail .yr-open .yr-mark{color:#1d4e56}
+  .year-rail .yr-open .yr-note{color:#333}
   .stat-strip li{background:#fff;border:1px solid #ccc}
   .stat-strip strong,.stat-strip li.now strong{color:#111}
 }

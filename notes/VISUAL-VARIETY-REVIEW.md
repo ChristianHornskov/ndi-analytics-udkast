@@ -176,6 +176,10 @@ Embed under grafen: totalafkast +104,8 % er det høje kort. Ved siden af står +
 
 PMINDIAKK har ingen kurspunkter i data. Embed loader stadig PMINDI. Klassen viser ét gult kort, «Kurs og afkast», med en streg og sætningen om 12 måneder. De tre andre kort er skjult. Grafen er skjult. Teksten siger ingen NAV eller graf før 5. december 2026. Linket hedder «Fald fra top vises efter 12 måneder». Ingen procent. På PMINDI er de fire kort tilbage: +104,8 %, +26,4 %, +4,0 % med delår-forbeholdet, og −35,8 %. På år til dato er største fald −26,8 %. Drawdown AKK har ingen procent og samme dato. Sammenlign siger «Klassen startede 5. dec. 2025», seneste NAV er en streg, og KID 5 år er ca. 2,85 %. «til dato» på 2026-søjlen er gul. Ingen tekst i de to svg'er rammer en anden, målt hver for sig. Ingen sidescroll. Ingen konsolfejl.
 
+### Update · nøgle i to kolonner · 2026-10-16 ~03:41 CEST
+
+På 390 px er nøglen under kurven et gitter, to og to. Sidste linje, «Højde er dybde. Gul er åben», går hele vejen og er én linje. På 1280 er nøglen stadig én række. «nu» står over «−23 %», med luft imellem, og rammer ikke «top» eller søjletallene. Ingen tekst uden for svg'en. Ingen sidescroll. Ingen konsolfejl i den måling.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.
