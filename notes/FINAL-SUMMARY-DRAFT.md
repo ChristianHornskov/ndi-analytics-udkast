@@ -82,3 +82,6 @@ See notes/HANDOFF-CODEX.md + notes/X-LANE.md + notes/THEME-FORSLAG.md
 - Entre: Mads + Jesper navngivet; Flodsystem/multi-tag blødt; NDI-linse → ◉
 - Temaer: usikker-liste foldet; FO 05:00 + UX 04:00 stadig på main
 - Smoke 52/0 · precheck inkl. internal-comment guard
+
+
+## → Full final summary: notes/FINAL-SUMMARY.md (kept current)
