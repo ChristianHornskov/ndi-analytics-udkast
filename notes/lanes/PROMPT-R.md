@@ -51,3 +51,7 @@ HARD RULE: precheck before push. Prefer `bash scripts/push.sh origin lane-R`. Ne
    ```
    Fix any rebase conflicts in YOUR owned files only. Never edit other lanes' files to "win" a rebase.
 3. Push with `bash scripts/push.sh origin lane-R` (or equivalent) after precheck. Do not push main.
+
+
+## LEO FREEZE 08:00
+From 08:00 CEST: no new features. Only bug fixes, tests, footer/warning checks in owned files. Stop committing at 08:30.

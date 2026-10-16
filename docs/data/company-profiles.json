@@ -1706,20 +1706,37 @@
   "US4859241048": {
    "name": "Karman Space & Defense",
    "theme": "space",
-   "summary": "Laver dele til løfteraketter og missiler. Selskabet skriver, at det beskytter nyttelast, laver mellemtrin og samler raketmotorer. Det sender ikke selv satellitter op.",
-   "watch": "Ordrer fra de store programmer og evnen til at levere dele til tiden.",
-   "source": "https://www.karman-sd.com/",
-   "products": "Beskyttelse af nyttelast, mellemtrin og raketmotorer.",
-   "customers": "Forsvars- og rumprogrammer.",
-   "role": "Komponenter til opsendelse.",
+   "summary": "Laver dele til løfteraketter og missiler og sender ikke selv satellitter op. Meddelelsen skriver hovedkontor i Huntington Beach. Kontaktsiden viser postnummer 92649 og ikke en gade. Købet af Walker blev gennemført 28. august 2026, efter beholdningen. MK 54 er en øvelsesdel uden sprængladning.",
+   "watch": "Om øvelsesdelen til MK 54 bliver sat i flåden. Kontrakten 22. juli 2026 er efter beholdningen og er ikke en opsendelse.",
+   "source": "https://karman-sd.com/contact/",
+   "products": "Beskyttelse af nyttelast, mellemtrin og raketmotorer. Walker er missildele. MK 54 Fleet Exercise Section er en øvelsesdel uden sprængladning.",
+   "customers": "Meddelelsen 22. juli 2026 nævner Northrop Grumman og den amerikanske flåde. Beløbet er ikke taget med.",
+   "role": "Hovedkontor i Huntington Beach uden gade. Walker er efter beholdningen. MK 54 er en øvelsesdel, ikke en opsendelse.",
    "narrative": [
-    "Karman skriver, at selskabet beskytter nyttelast og har udstyr til at skille den fra fartøjet. Siden nævner også aerodynamiske mellemtrin, raketmotorer og affyringsudstyr.",
-    "Det er dele og udstyr. Selskabet sender ikke selv satellitter op. I kæden står det som leverandør af dele til opsendelse."
+    "Kontaktsiden, læst 16. oktober 2026, skriver hovedkontor i Huntington Beach i Californien og postnummer 92649. Gaden står ikke. Samme postnummer står to gange. Listen skriver Skagit, og postnummerlinjen skriver Mount Vernon, WA 98273. Lokationssiden nævner byer, herunder Horsham i Pennsylvania, og ikke en gade. Det er steder, ikke en opsendelse.",
+    "Meddelelsen 11. september 2026 skriver, at købet af Walker Precision Engineering blev gennemført 28. august 2026. Datoen ligger efter beholdningen pr. 1. juni 2026. Walker arbejder i Skotland, England og Polen. Overskriften skriver 25 missilprogrammer. Brødteksten skriver mere end 25. Tallene er ikke ens. Det er missildele, ikke en opsendelse. Meddelelsen skriver NYSE: KRMN. Mere end 130 programmer og over 80 hovedleverandører står uden egen dato.",
+    "Meddelelsen 22. juli 2026 skriver, at Northrop Grumman har givet en kontrakt på Proof of Manufacture til MK 54 Fleet Exercise Section. Øvelsesdelen erstatter sprængladningen. Teksten siger, at flåden endnu ikke har fået den. Datoen ligger efter beholdningen. Beløbet er ikke taget med. Det er ikke en opsendelse. Meddelelsen 14. juli 2026 skriver, at anlægget i Horsham skal udvides. Teksten siger will. Det er ikke et målt år. Beløbet er ikke taget med. Ordene leader og next-generation er ikke taget med."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets side",
-     "url": "https://www.karman-sd.com/"
+     "label": "Kontakt",
+     "url": "https://karman-sd.com/contact/"
+    },
+    {
+     "label": "Lokationer",
+     "url": "https://karman-sd.com/company/locations/"
+    },
+    {
+     "label": "Walker, 11. september 2026",
+     "url": "https://karman-sd.com/news/karman-space-defense-completes-walker-acquisition/"
+    },
+    {
+     "label": "MK 54, 22. juli 2026",
+     "url": "https://karman-sd.com/news/karman-space-defense-awarded-northrop-grumman-contract-mk54/"
+    },
+    {
+     "label": "Horsham, 14. juli 2026",
+     "url": "https://karman-sd.com/news/karman-space-defense-expands-pennsylvania-facility-to-respond-to-nations-need-to-strengthen-maritime-defense-industrial-base/"
     }
    ]
   },
@@ -1822,24 +1839,33 @@
   "US4432011082": {
    "name": "Howmet Aerospace",
    "theme": "space",
-   "summary": "Laver metaldele til flymotorer og flyskrog. Selskabet skriver, at det også laver smedede hjul til lastbiler og busser. Det sender ikke raketter op.",
-   "watch": "Produktion til fly og til lastbiler. Selskabet sender ikke op.",
-   "source": "https://www.howmet.com/",
-   "products": "Dele til flyskrog og flymotorer. Smedede hjul og chassis til lastbiler og busser.",
-   "customers": "Fly- og motorproducenter og producenter af lastbiler og busser.",
-   "role": "Dele til fly, rumfart og tung transport. Ikke en opsendelse.",
+   "summary": "Laver dele til flymotorer, flyskrog og industrielle gasturbiner. Om-siden daterer et smedet aluminiumshjul til lastbiler til 1948. Forsvars- og rumsiden skriver materialer til Apollo og rumfærgen. Det er dele, ikke en opsendelse. Lokationssiden nævner lande og ikke en gade.",
+   "watch": "1948 er et produktår for et hjul, ikke en fabrik og ikke en opsendelse. Gasturbinedele er ikke et kraftværk.",
+   "source": "https://www.howmet.com/about-us/",
+   "products": "Dele til flymotorer og industrielle gasturbiner: airfoils, ringe, skiver og smedegods. Befæstelse til fly. Smedet aluminiumshjul til lastbiler, dateret 1948.",
+   "customers": "Fly- og motorproducenter. Siden nævner Pratt & Whitney og F-35 uden en dateret kontrakt. Lastbiler til hjulene.",
+   "role": "1948 er et lastbilhjul. Gasturbine og Apollo er dele. Ikke en opsendelse.",
    "narrative": [
-    "Howmet skriver, at det laver dele til flyskrog og flymotorer, og at det også laver smedede hjul og chassis til lastbiler og busser.",
-    "Det er dele. Selskabet sender ikke raketter op. Snapshottet har aktien under SpaceTech."
+    "Om-siden, læst 16. oktober 2026, skriver, at selskabet laver dele til flymotorer og industrielle gasturbiner, herunder airfoils, ringe, skiver og smedegods. Den nævner vakuumsmeltede superlegeringer, bearbejdning, belægninger og hot isostatic pressing. Det er dele. Selskabet driver ikke kraftværket.",
+    "Samme side daterer et smedet aluminiumshjul til lastbiler til 1948. Det er et produkt, ikke en fabrik og ikke en opsendelse. Befæstelse sidder fra næse til hale på fly og på flymotorer. Flysiden nævner Flite-Tite som befæstelse. Det er ikke et fly, selskabet selv flyver.",
+    "Forsvars- og rumsiden skriver, at materialer var med på Apollo og rumfærgen, og at løsningerne dækker løfteraketter, fremdrift og kapsler. Selskabet sender ikke selv op. En korttekst nævner F-35 og en motor hos Pratt & Whitney. Den daterer ikke en kontrakt. Lokationssiden lister lande og fire forretningsdele og viser ikke en gade. Ordene world-class, market-leading, number one, leader, first, largest og most advanced er ikke taget med."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets side",
-     "url": "https://www.howmet.com/"
+     "label": "Om selskabet",
+     "url": "https://www.howmet.com/about-us/"
     },
     {
-     "label": "Markeder",
-     "url": "https://www.howmet.com/markets-and-product-lines/"
+     "label": "Forsvar og rum",
+     "url": "https://www.howmet.com/defense/"
+    },
+    {
+     "label": "Fly",
+     "url": "https://www.howmet.com/aerospace/"
+    },
+    {
+     "label": "Lokationer",
+     "url": "https://www.howmet.com/locations/"
     }
    ]
   },
@@ -1879,19 +1905,28 @@
   "US80401C1009": {
    "name": "Satellogic",
    "theme": "space",
-   "summary": "Driver satellitter, der tager billeder af Jorden. Satellitterne hedder NewSat. Forsiden sætter fuld drift af Merlin til andet halvår 2027.",
-   "watch": "Satellitternes drift og kundernes brug af billederne.",
-   "source": "https://satellogic.com/",
-   "products": "Billeder fra satellitterne NewSat. Merlin er ikke i fuld drift i denne tekst.",
-   "customers": "Offentlige og private kunder, der skal se Jorden ovenfra.",
-   "role": "Satellittjeneste, ikke en raket.",
+   "summary": "Tager billeder af Jorden med satellitterne NewSat. Kortet siger Charlotte, og gaden er i Davidson. Tidslinjen skriver en fabrik færdig i november 2015 uden by. Merlin.01 blev sendt op 1. oktober 2026 med SpaceX. Fuld drift er stadig andet halvår 2027. Selskabet sender ikke selv raketten op.",
+   "watch": "Om Merlin er i fuld drift. Opsendelsen 1. oktober 2026 er efter beholdningen og er ikke fuld drift.",
+   "source": "https://satellogic.com/company/contact-us/",
+   "products": "NewSat er billedsatellitter. Merlin.01 er en opsendelse 1. oktober 2026. Fuld drift af Merlin er sat til andet halvår 2027.",
+   "customers": "Tidslinjen nævner en kommerciel kontrakt i oktober 2018 uden kundenavn.",
+   "role": "Davidson er ikke Charlotte. Fabrikken i 2015 har ingen by. Merlin.01 er ikke fuld drift.",
    "narrative": [
-    "Satellogic driver satellitter, der tager billeder af Jorden. Satellitterne hedder NewSat. Forsiden sætter fuld drift af Merlin til andet halvår 2027.",
-    "Andet halvår 2027 ligger efter beholdningen pr. 1. juni 2026. Merlin er ikke beskrevet som en tjeneste i fuld drift. Selskabet opsender ikke selv raketterne i denne beskrivelse."
+    "Kontaktsiden, læst 16. oktober 2026, skriver Charlotte og gaden 210 Delburg St. i Davidson i North Carolina. Davidson er ikke Charlotte. Det er et kontor, ikke en satellit. Buenos Aires er 1. sal på Scalabrini Ortiz 3333. Córdoba er 5. sal på Av. Hipólito Yrigoyen 146. Montevideo er suite 324 i Zonamerica. De er kontorer.",
+    "Tidslinjen på om-siden daterer stiftelsen til juli 2010. Den skriver, at en fabrik stod færdig i november 2015, og den nævner ikke byen. Kontorerne er ikke den fabrik. Samme tidslinje skriver, at selskabet blev noteret på Nasdaq den 26. januar 2022 under SATL. Det er en notering, ikke en satellit. Ordet first er ikke taget med.",
+    "Tidslinjen skriver, at Merlin.01, NewSat 56, 57 og 64 blev sendt op 1. oktober 2026 med SpaceX fra Vandenberg. Datafeltet siger 2. oktober. Begge datoer ligger efter beholdningen pr. 1. juni 2026. Forsiden sætter fuld drift af Merlin til andet halvår 2027. En opsendelse er ikke fuld drift. NewSat 53 og 54 er skrevet som 30. marts 2026 i sætningen og 31. marts i datafeltet. Det ligger før beholdningen. Selskabet sender ikke selv raketten op."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets side",
+     "label": "Kontakt",
+     "url": "https://satellogic.com/company/contact-us/"
+    },
+    {
+     "label": "Om selskabet",
+     "url": "https://satellogic.com/company/about-satellogic/"
+    },
+    {
+     "label": "Forsiden",
      "url": "https://satellogic.com/"
     }
    ]
@@ -2086,20 +2121,33 @@
   "US72703X1063": {
    "name": "Planet Labs",
    "theme": "space",
-   "summary": "Driver satellitter, der tager billeder af Jorden. Siden nævner SuperDove, SkySat, Pelican, Tanager og Owl. Owl er omtalt som næste generation. Selskabet opsender ikke selv raketterne.",
-   "watch": "Satellitternes drift og kundernes abonnementer på billeder.",
-   "source": "https://www.planet.com/",
-   "products": "Satellitbilleder og data.",
-   "customers": "Offentlige myndigheder, virksomheder inden for landbrug, kortlægning og forsikring.",
-   "role": "Satellittjeneste.",
+   "summary": "Tager billeder af Jorden med SuperDove, SkySat, Pelican og Tanager. Owl er næste generation og er ikke skrevet som en flåde i drift. Kontoret ligger på 4. sal i San Francisco. Fabrikken i Berlin er planlagt til efteråret 2026 og er ikke i drift. Selskabet opsender ikke selv.",
+   "watch": "Om fabrikken i Berlin åbner. Artiklen 21. september 2026 er efter beholdningen og beskriver ikke en fabrik i drift.",
+   "source": "https://www.planet.com/locations/",
+   "products": "Billeder fra SuperDove, SkySat, Pelican og Tanager. Owl er næste generation. Pelican i Berlin er en plan. Siden siger ikke, at den satellit er bygget.",
+   "customers": "Siden nævner offentlige og private kunder til billeder. En navngiven kontrakt står ikke på de læste sider.",
+   "role": "Kontor på 4. sal i San Francisco. Arlington er ikke Washington D.C. Berlin-fabrikken er ikke åbnet.",
    "narrative": [
-    "Planet driver satellitter, der tager billeder af Jorden. Selskabet sælger billederne og analyser af dem. Siden nævner SuperDove, SkySat, Pelican, Tanager og Owl. Owl er omtalt som næste generation.",
-    "Teksten kalder ikke Owl en særskilt flåde i drift. Planet opsender ikke selv raketterne i denne beskrivelse."
+    "Lokationssiden, læst 16. oktober 2026, skriver Planet Labs PBC på 645 Harrison St., Floor 4, i San Francisco. Det er et kontor, ikke en satellit. Kontaktsiden kalder et kontor Washington D.C. Adressen er 2101 Wilson Blvd #1201 i Arlington i Virginia. Arlington er ikke Washington D.C. Telefonnumre er ikke taget med.",
+    "Samme side har to adresser i Berlin: Kurfürstendamm 22 og Berlin Decks, Friedrich-Krause-Ufer 16-21. Artiklen 21. september 2026 skriver, at satellitfabrikken i Berlin er planlagt til at åbne i efteråret. Den nævner ikke gaden. Et Pelican-billede er dateret 26. juni 2026. Begge datoer ligger efter beholdningen pr. 1. juni 2026. Billedet er ikke en produktionsstart. En rendering af Pelican er ikke en bygget satellit. Mere end 150 personer i Berlin og omkring 70 flere roller frem til 2027 er ikke et målt år. RapidEye i 2015 i Brandenburg er et tidligere køb, ikke fabrikken.",
+    "Konstellationssiden skriver, at selskabet designer, bygger, samler og tester satellitter selv, og at hundredvis er sendt op siden 2013 gennem partnere. Tallet er ikke et talt år. Selskabet opsender ikke selv raketterne. Nyeste satellitter har NVIDIA Jetson om bord. Det er behandling på satellitten, ikke et datacenter i kredsløb. Owl er stadig næste generation. Ordene pioneering, unprecedented og next-generation er ikke taget med, ud over sidens eget navn på Owl."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets side",
-     "url": "https://www.planet.com/"
+     "label": "Lokationer",
+     "url": "https://www.planet.com/locations/"
+    },
+    {
+     "label": "Kontakt",
+     "url": "https://www.planet.com/contact/"
+    },
+    {
+     "label": "Konstellationer",
+     "url": "https://www.planet.com/constellations/"
+    },
+    {
+     "label": "Berlin, 21. september 2026",
+     "url": "https://www.planet.com/pulse/planet-s-next-chapter-in-germany-expanding-our-european-operations-with-satellite-manufacturing/"
     }
    ]
   },
@@ -2227,40 +2275,48 @@
   "US55405W1045": {
    "name": "MYR Group",
    "theme": "physical",
-   "summary": "Bygger elektriske anlæg i USA og Canada. Selskabet skriver, at arbejdet dækker transmission, kommercielle og industrielle anlæg og vedvarende energi. Selskabet ejer ikke strømmen.",
-   "watch": "Ordrer fra elselskaber og mandskab.",
-   "source": "https://www.myrgroup.com/",
-   "products": "El-entrepriser, herunder transmission og vedvarende energi.",
-   "customers": "Elselskaber og store elforbrugere.",
-   "role": "Bygger nettet.",
+   "summary": "Bygger elektriske anlæg i USA og Canada. Hovedkontoret i Thornton er ikke en ledning. Venice–Campbell 138 kV er et projekt uden dato.",
+   "watch": "Om et projektnavn bliver læst som ejerskab. Siden daterer ikke projekterne.",
+   "source": "https://myrgroup.com/about/",
+   "products": "Byggeri af transmission, distribution og industrielt elarbejde. Ikke ejerskab af strømmen.",
+   "customers": "Kunder i USA og Canada. Navne på ejere af anlæggene er ikke taget med.",
+   "role": "Bygger nettet. Ejer ikke ledningen.",
    "narrative": [
-    "MYR Group bygger elektriske anlæg i USA og Canada. Selskabet skriver, at arbejdet dækker transmission, kommercielle og industrielle anlæg og vedvarende energi.",
-    "Selskabet ejer ikke strømmen. I kæden står det på elnet."
+    "Om-siden, læst 16. oktober 2026, skriver, at MYR Group har været i gang siden 1891, og at selskabet er noteret på NASDAQ under MYRG. Hovedkontoret ligger på 12121 Grant St, Suite #610, i Thornton i Colorado. Det er et kontor, ikke en ledning. Mere end 9.000 medarbejdere står uden dato. Datterselskaber laver transmission, distribution og industrielt elarbejde i USA og Canada. De ejer ikke strømmen. Ordene leader, largest og top five er ikke taget med.",
+    "Forsiden nævner projekter uden dato. Venice to Campbell er en 138 kV-krydsning af Mississippi. Aeolus, Anticline og Jim Bridger er stationsarbejde. Battle Mountain Solar & Storage er et projektnavn, ikke et lager selskabet driver. Edmonton Valley er letbane. Iowa Derecho er beredskab. Ingen af dem er skrevet som anlæg, selskabet ejer. Telefonnummeret er ikke taget med."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets side",
-     "url": "https://www.myrgroup.com/"
+     "label": "Om selskabet",
+     "url": "https://myrgroup.com/about/"
+    },
+    {
+     "label": "Kontakt",
+     "url": "https://myrgroup.com/contact/"
+    },
+    {
+     "label": "Forside",
+     "url": "https://myrgroup.com/"
     }
    ]
   },
   "US3687361044": {
    "name": "Generac",
    "theme": "physical",
-   "summary": "Fremstiller reservegeneratorer til hjem og virksomheder. Selskabet skriver også, at det har bærbare generatorer, sol og batterilagring og ladere til elbiler. Det er ikke et elselskab.",
-   "watch": "Efterspørgsel efter reservestrøm og forsyning af motorer.",
-   "source": "https://www.generac.com/",
-   "products": "Reservegeneratorer, bærbare generatorer, sol, batterilagring og ladere til elbiler.",
-   "customers": "Husholdninger, installatører og virksomheder.",
-   "role": "Lokal reservestrøm, ikke et elnet.",
+   "summary": "Fremstiller reservegeneratorer. Stiftet i 1959. Afbrydere til reservestrøm er sat til anvendelser op til 2 MW. Det er udstyr, ikke et kraftværk.",
+   "watch": "Om 2 MW bliver læst som et kraftværk. Tallet er afbryderens anvendelse, ikke et målt år.",
+   "source": "https://www.generac.com/about/",
+   "products": "Bærbare generatorer og generatorer til bolig, erhverv og industri. Afbrydere. Mobile generatorer på trailer.",
+   "customers": "Husholdninger, installatører og virksomheder. Navne er ikke taget med.",
+   "role": "Udstyr til reservestrøm. Ikke et elselskab.",
    "narrative": [
-    "Generac skriver, at en hjemmegenerator giver strøm under et udfald, og at selskabet har bærbare generatorer. Siden nævner også sol, batterilagring og ladere til elbiler.",
-    "Det er udstyr hos kunden. Selskabet er ikke et elselskab og ikke en mine."
+    "Om-siden, læst 16. oktober 2026, skriver, at Generac er stiftet i 1959. Selskabet laver bærbare generatorer og generatorer til bolig, erhverv og industri. Manuelle og fuldautomatiske afbrydere er til reservestrøm i anvendelser op til 2 MW. Det er udstyr, ikke et kraftværk og ikke et målt år. Generac Mobile er lysmaster og mobile generatorer på trailer. Det er heller ikke et kraftværk. En gadeadresse stod ikke på de læste sider og er ikke opfundet. Siden siger ikke, at selskabet er noteret på en navngiven børs.",
+    "Forsiden skriver since 1959 i en tillidssætning. Den er ikke en fabrik. Ordene first, leading, widest, pioneered og trusted er ikke taget med. Højtryksrensere står på om-siden og er ikke elnettet. Det er udstyr hos kunden. Selskabet er ikke et elselskab og ikke en mine."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets side",
-     "url": "https://www.generac.com/"
+     "label": "Om selskabet",
+     "url": "https://www.generac.com/about/"
     }
    ]
   },
