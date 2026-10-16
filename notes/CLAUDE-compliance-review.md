@@ -1327,3 +1327,25 @@ Ikke juridisk rådgivning. Delta mod `91328f6`: fakta, omkostninger, ndi-paa-x (
 
 ### ÅOP
 Bevidst fravalgt med "Ikke et ÅOP"-mærkning. Omkostningsoplysningen hviler på KID-RIY + OCF/postsatser. FO-personaens ÅOP-ønske er stadig uopfyldt. Afklar med compliance, om ÅOP skal med (ikke en blokering for et udkast).
+
+## 2026-10-16 07:34 CEST · cyklus 53 (main `f6d6b4b`; live = main)
+
+Ikke juridisk rådgivning. Delta mod `85704e3`: drawdown, sammenlign, embed/chart (lane-A/D). Første fulde indholdsgennemgang af ndi-paa-x, efter at siden nu renderer live.
+
+### Verificeret
+- embed/chart: ny print-mast "Markedsføringsmateriale. Generel information, ikke investeringsrådgivning. Historisk afkast er ikke en pålidelig indikator…" ✅. PMINDIAKK-gate ("Ingen NAV eller graf før 5. december 2026") holder i både embed og drawdown, og der vises ingen %-tal ✅.
+- sammenlign: KID-omkostning pr. klasse er tydeligt klasse-mærket ved klik ("PMINDI, ca. 2,79 % om året ved 5 år i KID. Før kurtage og depot.") ✅.
+- 50-URL ordsweep: uændret. Ingen garanti/sikker/køb-opfordring. "overvægt" står kun som "ikke en bevidst overvægt" ✅. Footers med tab/rådgivning/historik er til stede på alle 50 ✅.
+
+### MUST (før offentliggørelse; ikke en blokering for noindex-udkast)
+- **M1 · ndi-paa-x kuraterer tredjepartsopslag om fondens beholdninger.** 7 opslag fra fulgte konti (@BullTheoryio, @FundaAI, @MelvinInvests, @MilkRoadAI) handler om SoftBank, Nvidia, Oracle, CoreWeave og Nebius. Alle fem er i portfolio.json. Flere er ensidigt positive/spekulative, fx "BREAKING: … At a $2 trillion valuation, its stake would be worth $260 billion" og "People are forgetting how important companies like $CRWV and $NBIS are…". Når en forvalter selv udvælger og viser dem på sit markedsføringssite, bliver det formentlig forvalterens markedsføringsmateriale (krav om korrekt, klar, ikke-vildledende og afbalanceret; jf. ESMA's retningslinjer for markedsføringsmateriale/CBDF), uanset mærkningen "ikke NDI's holdning". Anbefaling til teamet: fjern fulgte-konto-opslag om beholdninger før go-live, eller lad compliance godkende hvert opslag.
+
+### SHOULD
+- **S11 · Medarbejderes private konti som "NDI-konti = markedsføring".** @MadsC007, @jesper_baek og @CHornskov bliver erklæret som NDI-markedsføring. Det kræver medarbejdernes samtykke og compliance-review af hvert opslag. Indholdet er meningspræget om beholdninger: TSLA "de lavede den bedste bil", "Listening to Bloomberg about AI is like asking a BWM sales rep…", og UPST fra 2025. Der er ikke fundet handelssprog (øger/overvægt/køb/sælg = 0) ✅, men opslagene er ensidige uden risikobalance i selve kortet.
+- **S12 · Selvmodsigende mærkning** (ndi-paa-x.html:110): "ikke NDI's holdning" efterfulgt af "kan være NDI's holdning". Uklar for detailinvestor. Se UX c53 SHOULD 3.
+- **S13 · "Performance-opdatering efter Q2 2026"** (@InvestNewdeal, 2. jul.) linker afkast ud til X/Fundmarket uden tal på kortet. Ok i sig selv, men kortet bør bære historik-advarslen inline eller ligge under footer-advarslen (det gør det i dag via fælles footer — acceptabelt).
+- Stående: S3 index.html:89 KID-ordlyd. S5 omkostninger.html:606 intern formulering.
+- Lukket: S10 (stale modul-cache, ndi-paa-x renderer nu).
+
+### ÅOP
+Uændret: "Ikke et ÅOP" + KID-RIY. FO-ønsket om ÅOP er stadig åbent til afklaring med compliance.

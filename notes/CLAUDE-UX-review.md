@@ -1343,3 +1343,27 @@ Live md5 = main for alle 5 filer. Live-sweep af 50 URL'er @375 (/tmp/laneR/c52):
 ### Persona-linser
 - Privat: KID-knappen svarer direkte på "hvad koster det i alt?" ✅.
 - FO: tydelig adskillelse af KID-RIY og postsatser ✅. ÅOP er stadig ikke angivet (bevidst, "Ikke et ÅOP"). Se compliance.
+
+## 2026-10-16 07:34 CEST · cyklus 53 (main `f6d6b4b`, docs-delta mod `85704e3`: drawdown, sammenlign, embed/chart, ndi.css, vaerdikaeder + value-chains (lane-A/D); live = main, md5 verificeret)
+
+Fuld live-sweep af 50 URL'er (375 px) og delta-check af de nye komponenter. 0 pageerrors og 0 overflow.
+
+### Løst siden c52
+- **ndi-paa-x renderer nu live** (c52-drift var CDN-cache): h1 "NDI på X", 19 opslag, 7802 px, 0 fejl. Drift-SHOULD 10 lukkes.
+
+### Delta verificeret (live, 375 px)
+- **embed/chart PMINDI:** ny stop-række "Start/Seneste" (44 px knapper). "Laveste" droppes ved overlap på 375, som designet. Ny Udskriv-knap + print-mast med rådgivnings-/historik-linje ✅. **PMINDIAKK:** ingen stops, 0 %-tal ✅.
+- **drawdown:** ny livstidsbånd med 4 dybe episoder (44 px). Klik giver "−16,7 % fra 16. jul. 2024 til bund 7. aug. 2024" ✅. AKK: 0 episoder, 0 %-tal ✅.
+- **sammenlign:** KID-omkostningspar er nu knapper (min-height 44), og klik siger hvilken klasse tallet gælder ✅ (lukker c51-forvekslingsrisikoen).
+
+### MUST
+- Ingen nye.
+
+### SHOULD
+1. **ndi-paa-x, tap-mål:** 102 elementer < 24 px på 375. Det er 32 `.x-atlas-dot` (16×16, absolut placeret, kan ligge oven i hinanden ved samme dato) og ca. 70 `a.tag` (h=16). WCAG 2.5.8 spacing-undtagelsen holder ikke, når prikkerne overlapper. Fix: ::before-hit-area 24 px eller collapse af samme-dags-prikker. Tags: padding til ≥ 24 px.
+2. **ndi-paa-x, rå engelske slugs som tags:** "physical", "platforms", "energy", "ndi", "europe", "ai" står ved siden af danske emnenavne ("Fysisk tech", "Platforme"). Jargon/inkonsistens for privat-personaen. Brug displayName fra temaerne.
+3. **ndi-paa-x, selvmodsigende label øverst:** "Udvalgte offentlige opslag — ikke NDI's holdning. NDI-konti … kan være NDI's holdning." (ndi-paa-x.html:110). Første sætning burde kun gælde fulgte konti: "Opslag fra konti NDI følger er ikke NDI's holdning."
+4. Stående fra c52: index.html:89 KID-ordlyd og omkostninger.html:606 intern formulering (se compliance).
+
+### Nice
+- Engelsksprogede tredjepartsopslag (FundaAI, Bull Theory) uden dansk resumé er tunge for privat-personaen. FO-personaen er ok med det.
