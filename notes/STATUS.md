@@ -1801,3 +1801,5 @@ Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er
 - Coordinator-loop 2026-10-16 03:08:42 CEST: MERGED origin/lane-D (ahead was 1) — precheck+smoke OK, pushed
 
 - Lead 2026-10-16 03:20:52 CEST: Vidensbot 03:00 compliance — chart @InvestNewdeal only; holdings post removed; matchPosts house-only; AKK series cleared + UI text; Nasdaq scrubbed; ÅTD caveats; Markedsføringsmateriale; maturity=forslag; precheck guards.
+
+- Coordinator-loop 2026-10-16 03:33:06 CEST: CONFLICT merge origin/lane-D (ahead 2) — aborted, not pushed
