@@ -328,6 +328,14 @@ På 320 blev «14.» skilt fra «okt. 2026» i noten under år til dato, og «go
 
 Advarslen lod «investering.» stå alene ved 640 og 700. Nu står «din investering.» samlet. På 320 er sidste linje den samme sætning. Ingen sidescroll. Ingen konsolfejl. PMINDIAKK har stadig ét kort og ingen procent.
 
+### Update · de sidste enkelte ord · 2026-10-16 ~05:52 CEST
+
+«genopretning.» stod alene i episodelisten fra 320 til 640. «tilbagelagt.» stod alene i brøndens note fra 360 til 1000. «enkeltaktier.» stod alene i ledeteksten fra 520. De tre holder nu sammen med ordet foran.
+
+På sammenlign stod «anbefaling.» alene fra 480 til 880, og «strategier.» alene fra 560. «ikke anbefaling» og «to forskellige strategier» holder sammen.
+
+Advarslen lod «investering.» stå alene fra 400 til 760. Sidste linje er nu «din investering.» I embed holder «Kilde: Fundmarket» sammen fra 320 til 880. Ingen sidescroll ved 320, 400 og 700. PMINDIAKK har ingen procent. Ingen konsolfejl.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.

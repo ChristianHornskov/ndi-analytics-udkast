@@ -170,7 +170,7 @@ button:disabled{cursor:not-allowed;opacity:.5}
 .outline-btn{transition:background .18s,border-color .18s}
 
 /* Compliance-komponenter: Jespers warn-hist-look på eksisterende .warn/.band */
-.warn{display:flex;gap:10px;align-items:flex-start;color:#d9d4a6;border-left-color:#f5ee9e99;background:#f5ee9e08;border-radius:0 7px 7px 0;font-size:12.5px}
+.warn{display:flex;gap:10px;align-items:flex-start;color:#d9d4a6;border-left-color:#f5ee9e99;background:#f5ee9e08;border-radius:0 7px 7px 0;font-size:12.5px;text-wrap:pretty}
 .warn::before{content:"!";flex:none;display:grid;place-items:center;width:17px;height:17px;border-radius:50%;border:1px solid #f5ee9e99;font-size:11px;font-weight:700;margin-top:1px}
 .band{border-color:#89aeb488;background:#89aeb40a}
 .band strong{color:var(--text);font-weight:600}

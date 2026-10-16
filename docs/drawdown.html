@@ -260,7 +260,7 @@
  const openRow = !e.recoveredD;
  const tail = openRow
  ? `${days} dage siden toppen. Stadig åben. <span class="ep-pct">Seneste dag ${fmtPct(nowU)}.</span>`
- : `Tilbage på toppen <strong>${fmtDate(e.recoveredD)}</strong>. ${days} dage fra top til genopretning.`;
+ : `Tilbage på toppen <strong>${fmtDate(e.recoveredD)}</strong>. ${days} dage fra top <span class="ep-pct">til genopretning.</span>`;
  const w = Math.max(8, Math.round((days / maxSpan) * 100));
  const stem = Math.max(8, Math.round((Math.abs(e.dd) / deepMax) * 28));
  return `<li class="${openRow ? 'open' : ''}"><button type="button" class="ep-jump" data-date="${e.troughD}" aria-pressed="false"><span class="depth"><i class="ep-stem" style="height:${stem}px" aria-hidden="true"></i><span>${fmtPct(e.dd)}</span></span><span class="meta"><strong>${fmtDate(e.peakD)}</strong> til bund <strong>${fmtDate(e.troughD)}</strong>. ${tail}<span class="dur" aria-hidden="true"><span style="width:${w}%"></span></span></span></button></li>`;
@@ -308,7 +308,7 @@
  ? 'Vejen tilbage til toppen er ikke begyndt.'
  : share < 1
  ? 'Under 1 % af vejen fra bunden tilbage til toppen er tilbagelagt.'
- : `${share} % af vejen fra bunden tilbage til toppen er tilbagelagt.`;
+ : `${share} % af vejen fra bunden tilbage til toppen <span class="ep-pct">er tilbagelagt.</span>`;
  const note = `Brønden er den åbne episode. 0 er toppen <span class="ep-pct">${fmtDate(open.peakD)}</span>. Bunden var ${fmtPct(floor)} den <span class="ep-pct">${fmtDate(open.troughD)}</span>. Prikken er i dag, <span class="ep-pct">${fmtPct(nowU)}</span>. ${shareText}`;
  const svg = `<svg viewBox="0 0 112 150" width="112" height="150" role="img" aria-labelledby="well-note"><defs><linearGradient id="wellFill" x1="0" y1="${top}" x2="0" y2="${bot}" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#f5ee9e" stop-opacity="0.55"/><stop offset="100%" stop-color="#e5b3ba"/></linearGradient><clipPath id="wellClip"><rect x="${x}" y="${top}" width="${w}" height="${waterH.toFixed(1)}" rx="7"/></clipPath></defs><rect class="well-track" x="${x}" y="${top}" width="${w}" height="${bot - top}" rx="7"/><rect x="${x}" y="${top}" width="${w}" height="${bot - top}" fill="url(#wellFill)" clip-path="url(#wellClip)"/><circle class="well-now" cx="${x + w / 2}" cy="${yNow.toFixed(1)}" r="5"/><text class="well-zero" x="${x + w + 10}" y="18">0</text><text class="well-nu" x="${x + w + 10}" y="${nuY.toFixed(1)}">nu</text><text class="well-floor" x="${x}" y="142">${fmtPct(floor)}</text></svg>`;
  return `<div class="under-row"><ul class="stat-strip" aria-label="Nøgletal under grafen"><li class="now"><span>Nu under vand</span><strong>${fmtPct(nowU)}</strong><small>pr. ${fmtDate(rows[rows.length - 1].d)}</small></li><li><span>Dybe episoder</span><strong>${deep.length}</strong><small>${usedGate ? 'dybere end 10 %' : 'de dybeste'}</small></li><li><span>Længste</span><strong>${longDays} dage</strong><small>${longNote}</small></li></ul><figure class="depth-well">${svg}</figure></div><p class="src well-note" id="well-note">${note}</p>`;
@@ -324,7 +324,7 @@
  <a class="back" href="index.html?view=fonden&fund=${fundId}">← Fonden</a>
  <p class="eyebrow">FONDAFKAST · FALD FRA TOP</p>
  <h1>Fald fra top · ${fund.short}</h1>
- <p class="lede">Fald fra top i fondens totalafkast-serie (NAV total). Fondniveau. Ikke enkeltaktier.</p>
+ <p class="lede">Fald fra top i fondens totalafkast-serie (NAV total). Fondniveau. <span class="ep-pct">Ikke enkeltaktier.</span></p>
  ${sriLine}
  <div class="hero-stat">
  <div>
