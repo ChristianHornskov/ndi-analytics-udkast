@@ -3754,7 +3754,7 @@
               "w": 0.2,
               "sym": "QS",
               "forslag": true,
-              "role": "QSE-5 og QS PowerBlock er design. Ikke masseproduktion og ikke et lager i drift."
+              "role": "QSE-5 er et design. QS PowerBlock er et referencedesign fra 8. oktober 2026. Adressen i San Jose er ikke en fabrik."
             },
             {
               "isin": "US29415C1018",
@@ -3810,7 +3810,7 @@
               "w": 0.1,
               "sym": "MVST",
               "forslag": true,
-              "role": "Celler, moduler og lagringssystemer. To produktionssteder uden bynavn. Ikke et lager i drift."
+              "role": "Celler og systemer. Serviceadresser i Clarksville og Huzhou er ikke de to produktionssteder. Ikke et lager i drift."
             },
             {
               "isin": "US6406551068",
@@ -3823,7 +3823,7 @@
           ],
           "seeChain": null,
           "facts": [
-            "QuantumScape: QuantumScape er et batteridesign til køretøjer og nævner også QS PowerBlock til datacentre. Det er ikke masseproduktion og ikke et lager i drift.",
+            "QuantumScape: selskabet skriver, at det er stiftet i 2010, og at separatoren er keramik. Foden på forsiden, læst 16. oktober 2026, skriver 1730 Technology Drive i San Jose. Teksten siger ikke, at adressen er en fabrik. Meddelelsen 8. oktober 2026 i San Jose præsenterer QS PowerBlock som et referencedesign til rack i datacentre. Datoen ligger efter beholdningen. Det er ikke et lager i drift og ikke masseproduktion.",
             "Fluence Energy: Fluence leverer batterisystemer og software til nettet og nævner platformen Smartstack. Det er ikke et kraftværk, og teksten siger ikke, at selskabet selv laver cellerne.",
             "Eos Energy: Eos skriver, at fremstilling af Z3 begyndte i august 2023 på Eos Ingenuity Park i Turtle Creek i Pennsylvania. Det er batterier, ikke en mine og ikke et kraftværk.",
             "Solid Power: Solid Power skriver, at det udvikler faststofbatterier og leverer sulfid-elektrolyt og celleteknologi til partnere. Elektrolytsiden skriver, at elektrolytten laves i pilotskala, og at store celler testes på en linje, selskabet kalder skalerbar. Det er ikke masseproduktion. Det er ikke et lager i drift.",
@@ -3833,7 +3833,7 @@
             "SES AI: SES AI skriver, at selskabet er stiftet i 2012 i Massachusetts. Anlægget i Jiading i Shanghai blev færdigt i 2023 og er sat til 300.000 kvadratfod. Siden kalder det pilotskala for litium-metal-celler og materialer. Chungju i Sydkorea er det nyeste anlæg og er skrevet som et supplement i produktionen af celler på 50 Ah og 100 Ah. Teksten siger ikke, at det er et målt år. Det er ikke et lager i drift.",
             "Enovix: Enovix skriver, at selskabet er stiftet i Silicon Valley i 2007, og at det blev noteret på NASDAQ i 2021 under ENVX. De første kommercielle forsendelser til bærbart udstyr er sat til 2022. Routejade i Sydkorea blev købt i 2023. Fab2 i Malaysia åbnede i 2024. Siden kalder det et anlæg med høj volumen, og linjerne er tegnet til at kunne skaleres. Det er ikke et målt år. USA er hovedkontor og udvikling, ikke fabrikken. Punkterne for 2026 har kun årstal. Teksten siger ikke, at de ligger før beholdningen. En fordobling i 2027 er en plan.",
             "Sunrun: Sunrun skriver, at der er installeret 4,6 GWh tilknyttet lagerkapacitet pr. 30. juni 2026. Datoen ligger efter beholdningen pr. 1. juni 2026. Siden kalder det batterier hos kunderne, koblet sammen. Det er ikke et kraftværk.",
-            "Microvast: Microvast skriver, at det laver celler, moduler, pakker og lagringssystemer, og at det selv laver katode, anode og elektrolyt. Kemierne på siden er NMC, LFP og LTO. Selskabet skriver, at det har to produktionssteder, og at de er ISO 14001. Byerne er ikke navngivet. Siden skriver 20 års driftserfaring. Det er ikke et stiftelsesår. Drift i USA, Kina og Tyskland er ikke de to steder. Siden om fremtidig lagring til nettet er skrevet som næste generation, ikke som et lager i drift.",
+            "Microvast: Microvast skriver, at det laver celler, moduler, pakker og lagringssystemer, og at det selv laver katode, anode og elektrolyt. Kemierne på siden er NMC, LFP og LTO. Selskabet skriver, at det har to produktionssteder, og at de er ISO 14001. Byerne er ikke navngivet. Supportsiden, læst 16. oktober 2026, er kundeservice og skriver 780 International Blvd i Clarksville, An der Eichspitze 8 i Ludwigsfelde og Hongfeng Road 2198 i Huzhou. Det er serviceadresser, ikke bevis for, at en fabrik kører. Siden skriver 20 års driftserfaring. Det er ikke et stiftelsesår. Drift i USA, Kina og Tyskland er ikke de to steder. Siden om fremtidig lagring til nettet er skrevet som næste generation, ikke som et lager i drift.",
             "NeoVolta: NeoVolta skriver, at selskabet er stiftet i 2018 i Poway i Californien af Brent Willson, og at det laver batterier til boliger. NV14 er et system med hybrid-inverter og litium-jern-fosfat. Siden skriver 14 kWh, 14,3 kWh og 14,4 kWh. Tallene er ikke ens. FAQ skriver, at NV14 samles og testes i San Diego, og at nogle komponenter kommer fra udlandet. Om-siden viser Pendergrass i Georgia og overskriften 2 GWh i 2026. Det er ikke et målt år. En side indbyder til åbning af et nyt produktionsanlæg i Pendergrass den 17. september 2026. Datoen ligger efter beholdningen. Teksten siger ikke, at anlægget er i drift. Det er batterier hos kunden, ikke et lager, selskabet driver.",
             "Tesla: Tesla er med, fordi koncernen også laver batterilagring."
           ],
@@ -4967,7 +4967,7 @@
             "Hawkeye 360: over 30 satellitter i kredsløb ifølge prospektet af 6. maj 2026. Tre satellitter flyver sammen for at finde ud af, hvor et radiosignal kommer fra.",
             "Satellogic: fuld drift af Merlin-satellitterne er sat til andet halvår 2027. Det er en plan.",
             "MDA Space: Chorus er tre satellitter, der tager billeder af Jorden. RADARSAT-2 er allerede i kredsløb. De to nye er sat til opsendelse sent i 2026 (meddelt 16. september 2026, efter beholdningen). Aurora Black blev præsenteret 10. september 2026 og er ikke i drift.",
-            "York Space Systems: bygger satellitkroppe i tre størrelser. 21 satellitter er sendt op til det amerikanske forsvars første hold (Tranche 1). York planlægger opsendelserne, men sender ikke selv raketten op.",
+            "York Space Systems: bygger satellitkroppe i tre størrelser. Platformsiden, læst 16. oktober 2026, sætter S-CLASS til mindst 85 kg nyttelast og 500 W spids, som kan udvides til 1 kW. LX-CLASS er sat til mindst 300 kg og 1,5 kW spids. M-CLASS er sat til mindst 1.000 kg og 8 kW spids. Det er det, platformen er tegnet til, ikke et målt år. 21 satellitter er sendt op til det amerikanske forsvars første hold (Tranche 1). York planlægger opsendelserne, men sender ikke selv raketten op.",
             "Rocket Lab: bygger og tester rumfartøjer i Long Beach i Californien. CAPSTONE fløj til en bane om Månen i 2022. Selskabet er valgt til 17 satellitkroppe til Globalstar og 18 satellitter til det amerikanske forsvar. Ingen af dem er skrevet som opsendt.",
             "Intuitive Machines: købte Lanteris 13. januar 2026, som bygger satellitkroppe. 18 af dem til det amerikanske forsvar er valgt, men ikke skrevet som opsendt.",
             "Redwire: laver og tester kameraerne til NASAs Orion-kapsel via Lockheed Martin. Meddelelsen fra 1. april 2026 siger, at 11 kameraer og fire solsensorer skal med på Artemis II. Den siger ikke, at flyvningen er gennemført. Redwire sender ikke selv op."

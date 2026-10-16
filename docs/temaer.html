@@ -76,12 +76,12 @@
  const cards = themes.map((t) => {
  const ch = t.themeKey !== 'andet' && chainFor(t.themeKey);
  return `<div class="door" style="position:relative">
- <strong><a href="tema.html?slug=${encodeURIComponent(t.slug)}&fund=${fund.id}" style="color:inherit;text-decoration:none">${esc(t.title)}</a>${propChip(t)}</strong>
+ <strong><a href="tema.html?slug=${encodeURIComponent(t.slug)}&fund=${fund.id}" style="color:inherit;text-decoration:none;display:inline-block;padding:3px 0;min-height:24px">${esc(t.title)}</a>${propChip(t)}</strong>
  <span>${esc(t.problem)}</span>
- ${ch ? `<span>Værdikæde: <a href="${chainHref(t.themeKey)}">${esc(ch.title)}</a></span>` : ''}
- ${t.lens ? `<span>NDI-linse: <a href="tema.html?slug=${encodeURIComponent(t.slug)}&fund=${fund.id}&linse=1" title="Kvalitativ beskrivelse (udkast), ikke en rating">${t.lens} af ${t.count} selskaber</a></span>` : ''}
+ ${ch ? `<span>Værdikæde: <a style="display:inline-block;padding:3px 0;min-height:24px" href="${chainHref(t.themeKey)}">${esc(ch.title)}</a></span>` : ''}
+ ${t.lens ? `<span>NDI-linse: <a href="tema.html?slug=${encodeURIComponent(t.slug)}&fund=${fund.id}&linse=1" style="display:inline-block;padding:3px 0;min-height:24px" title="Kvalitativ beskrivelse (udkast), ikke en rating">${t.lens} af ${t.count} selskaber</a></span>` : ''}
  ${(multi[t.themeKey] || []).length ? `<span title="${esc(multi[t.themeKey].join(', '))}">+${multi[t.themeKey].length} har temaet som ekstra tema - tælles med på temasiden</span>` : ''}
- <a class="go" href="tema.html?slug=${encodeURIComponent(t.slug)}&fund=${fund.id}">${t.count ? `${t.count} ${t.count === 1 ? 'selskab' : 'selskaber'} · ca. ${pct(t.weight)} %` : `Ingen selskaber i ${esc(fund.short)}`} →</a>
+ <a class="go" style="display:inline-block;padding:3px 0;min-height:24px" href="tema.html?slug=${encodeURIComponent(t.slug)}&fund=${fund.id}">${t.count ? `${t.count} ${t.count === 1 ? 'selskab' : 'selskaber'} · ca. ${pct(t.weight)} %` : `Ingen selskaber i ${esc(fund.short)}`} →</a>
  </div>`;
  }).join('');
 
@@ -124,9 +124,9 @@
  <p style="font-size:13px;color:var(--muted);margin-bottom:10px">Lav vægt betyder ikke, at temaet er uvigtigt for linsen - kun at eksponeringen i beholdningen er lille. Navnene står efter vægt (største først) og er eksponering, ikke anbefalinger.</p>
  <ul style="display:grid;gap:8px;list-style:none;padding:0;margin:0">${small.map((t) => {
  const ch = chainFor(t.themeKey);
- return `<li><a href="tema.html?slug=${encodeURIComponent(t.slug)}&fund=${fund.id}"><strong>${esc(t.title)}</strong></a>${propChip(t)}
+ return `<li><a style="display:inline-block;padding:3px 0;min-height:24px" href="tema.html?slug=${encodeURIComponent(t.slug)}&fund=${fund.id}"><strong>${esc(t.title)}</strong></a>${propChip(t)}
  <span style="color:var(--muted);font-size:13px"> · ${t.count} ${t.count === 1 ? 'selskab' : 'selskaber'} · ca. ${pct(t.weight)} %</span>
- ${ch ? ` · <a href="${chainHref(t.themeKey)}">Kæden "${esc(ch.title)}" →</a>` : ''}
+ ${ch ? ` · <a style="display:inline-block;padding:3px 0;min-height:24px" href="${chainHref(t.themeKey)}">Kæden "${esc(ch.title)}" →</a>` : ''}
  <br><span style="font-size:13px">${esc(t.count > 5 ? topNames(t.themeKey).join(', ') : andList(topNames(t.themeKey)))}${t.count > 5 ? ` … <a href="tema.html?slug=${encodeURIComponent(t.slug)}&fund=${fund.id}">+${t.count - 5} flere</a>` : ''}</span>
  <span style="color:var(--muted);font-size:12px"> · NDI-linse på ${t.lens} af ${t.count}</span></li>`;
  }).join('')}</ul>
