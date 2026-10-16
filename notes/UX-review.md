@@ -529,3 +529,7 @@ Ordlisten (lane-C) dækker nu ordene. Teksten i UI'et ligger hos andre lanes, s�
 3. `js/app.js:441`: knaptekst «**YTD** dyb side». Forslag: «År til dato i detaljer» (ÅTD bruges andre steder, så det bør være ens).
 4. Livscyklus-tællere på Udforsk: «High growth · GARP · Value» på engelsk. Ordlisten forklarer dem (#g-high-growth, #g-garp, #g-value), men plain dansk ville være «Høj vækst · Vækst med overskud · Moden», som ideer `#h-lc` allerede bruger.
 5. «screener» står i UI på tema/selskab («Åbn i screeneren →»). Ordliste-opslag `#g-screener` er tilføjet. Forslag: kald den «Udforsk» i knapteksten, som i nav.
+
+## 06:18 CEST lane-C · tap-mål, slutstatus
+- **375:** 0 links eller knapper under 24 px på alle 23 lane-C-sider (ideer, kort, om-data, invester, risici, ndi-perspektiv og 17 lær-sider). Ved 06:00 var der 30+ på ideer.
+- **1280:** kun den fælles undernav `nav.nav a` er 19 px høj. Den styles i `docs/css/ndi.css`, som ikke er lane-C's fil. Den består sandsynligvis WCAG 2.5.8's undtagelse for afstand, fordi der er mellemrum mellem links. Forslag til CSS-lanen: `nav.nav a{padding:3px 0}`, så den er robust.
