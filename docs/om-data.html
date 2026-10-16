@@ -5,13 +5,14 @@
  <meta name="viewport" content="width=device-width, initial-scale=1">
  <meta name="robots" content="noindex,nofollow">
  <title>Om data & begreber · NDI Analytics</title>
+ <meta name="description" content="Ordliste i almindeligt dansk og datakilder: hvad betyder risikoklasse, indre værdi, udbytte, forsinket beholdning og værdikæde, og hvor kommer tallene fra?">
  <link rel="stylesheet" href="css/ndi.css">
  <!-- og:start -->
  <meta property="og:type" content="website">
  <meta property="og:site_name" content="NDI Analytics (udkast)">
  <meta property="og:locale" content="da_DK">
  <meta property="og:title" content="Om data &amp; begreber · NDI Analytics">
- <meta property="og:description" content="Kort ordliste og datakilder til udkastet.">
+ <meta property="og:description" content="Ordliste i almindeligt dansk og datakilder: hvad betyder risikoklasse, indre værdi, udbytte, forsinket beholdning og værdikæde, og hvor kommer tallene fra?">
  <meta property="og:url" content="https://christianhornskov.github.io/ndi-analytics-udkast/om-data.html">
  <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
  <meta property="og:image:width" content="1200">
@@ -59,13 +60,13 @@
  <dl style="color:var(--muted);display:grid;gap:12px">
  <div id="g-total"><dt style="color:var(--text)">Totalafkast</dt><dd>Afkast inkl. geninvesteret udbytte, efter fondens løbende omkostninger, i DKK. Det er den blå streg i fondens graf. Se <a href="laer/laes-grafen.html">Sådan læser du grafen</a>.</dd></div>
  <div id="g-cagr"><dt style="color:var(--text)">CAGR</dt><dd>Gennemsnitligt årligt afkast (geometrisk) over perioden. Ligger under et simpelt gennemsnit af årsafkast, når afkastet svinger. Se <a href="laer/variance-drag.html">CAGR og gennemsnit</a>.</dd></div>
- <div id="g-ytd"><dt style="color:var(--text)">År til dato (ÅTD)</dt><dd>Afkast fra sidste handelsdag i forrige kalenderår til seneste dato.</dd></div>
+ <div id="g-ytd"><dt style="color:var(--text)">År til dato (ÅTD)</dt><dd>Afkast fra sidste handelsdag i forrige kalenderår til seneste dato. Det er et <a href="#g-delaar">delår</a>, ikke et helt års afkast, og kan ikke sammenlignes direkte med de hele kalenderår.</dd></div>
  <div id="g-maaned"><dt style="color:var(--text)">Månedsafkast (kalender)</dt><dd>Fondens afkast måned for måned. Viser, at gode og dårlige måneder skiftes, og at et enkelt fald sjældent er hele historien.</dd></div>
  <div id="g-delaar"><dt style="color:var(--text)">Delår</dt><dd>Et kalenderår, som afkastserien ikke dækker helt. For PMINDI er 2023 et delår, fordi serien starter ved <a href="#g-foerste-nav">første NAV</a> 22. september 2023. Afkastet for et delår er ikke omregnet til et helt år og kan derfor ikke sammenlignes direkte med de hele år ved siden af.</dd></div>
  <div id="g-foerste-nav"><dt style="color:var(--text)">Første NAV</dt><dd>Datoen for første indre værdi i afkastserien. Alle "siden start"-tal og 100.000-kr.-eksemplet er beregnet herfra. Ikke nødvendigvis samme dato som juridisk stiftelse.</dd></div>
  <div id="g-100k"><dt style="color:var(--text)">100.000 kr.-eksemplet</dt><dd>Hvad 100.000 kr. investeret ved første NAV ville være vokset eller faldet til, efter løbende omkostninger. Et regneeksempel på historik, ikke en forventning. Handelsomkostninger og skat er ikke medregnet.</dd></div>
  <div id="g-startdag"><dt style="color:var(--text)">Startdag</dt><dd>Den dag, et afkast regnes fra. Samme fond kan vise meget forskellige tal alt efter startdag, især over korte perioder. Fonden viser derfor siden start, år til dato og hele kalenderår, ikke 1 eller 3 måneder. Se <a href="laer/laes-grafen.html">Sådan læser du grafen</a>.</dd></div>
- <div id="g-benchmark"><dt style="color:var(--text)">Benchmark</dt><dd>Et indeks, et afkast måles op mod. Fonden har intet fast benchmark, så udkastet sammenligner ikke med et indeks.</dd></div>
+ <div id="g-benchmark"><dt style="color:var(--text)">Benchmark</dt><dd>Et indeks, et afkast måles op mod. Fonden har intet fast benchmark, så udkastet sammenligner ikke med et indeks. Vil du selv sammenligne med en anden fond, så brug samme periode, samme valuta og afkast efter omkostninger, og se også på de største fald. Se <a href="laer/faq.html?q=sammenligne">FAQ</a>.</dd></div>
  <div id="g-udsving"><dt style="color:var(--text)">Udsving (volatilitet)</dt><dd>Hvor meget afkastet svinger fra periode til periode. Store udsving betyder både større fald og større stigninger undervejs. Udsvinget er også grundlaget for <a href="#g-sri">risikoklassen</a> i KID, men KID’et regner det efter sin egen metode, så de to tal er ikke ens.</dd></div>
  <div id="g-sharpe"><dt style="color:var(--text)">Sharpe (afkast pr. udsving)</dt><dd>Afkastet delt med <a href="#g-udsving">udsvinget</a>. Jo højere tal, jo mere afkast har fonden givet for hvert procentpoint udsving i den målte periode. NDI Analytics trækker ingen risikofri rente fra. Tallet ændrer sig med <a href="#g-startdag">startdagen</a> og siger intet om fremtiden. Se <a href="risici.html#tal">Udsving og fald i tal</a>.</dd></div>
  <div id="g-variance-drag"><dt style="color:var(--text)">Variance drag</dt><dd>Effekten af, at udsving trækker det årlige (geometriske) afkast ned i forhold til et simpelt gennemsnit. Se <a href="laer/variance-drag.html">CAGR og gennemsnit</a>.</dd></div>

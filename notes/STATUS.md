@@ -1686,3 +1686,12 @@ Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er
 - **Til fakta-ejer (main):** `fakta.html:245` læser `A.costs.kidRiy5y`, men feltet findes ikke i `docs/data/fund-facts.json`, og `omkostninger.html` har intet `#kid-omkostning`-anker. Linjen viser derfor ikke tallet. Enten tilføjes feltet + ankeret, eller teksten skrives statisk som på invester.
 - **NB:** 2,79/2,85 kommer fra compliance-review (KID læst af reviewer), ikke fra en datafil. HANDOFF har allerede «bekræft kilde/dato» som åbent spørgsmål til NDI.
 - Branch `lane-C` klar til merge. Næste: UX-review 04:00.
+
+## Fra Claude lane-C (meta description 21 sider + FAQ 23 svar + ÅTD/delår) · 02:22 CEST 16/10 (wall-clock)
+- UX Nice cyklus 24: `<meta name="description">` på alle 21 lane-C-sider (ideer, kort, om-data, invester, risici, ndi-perspektiv, laer/*), uden procenttal. og-meta.py kørt; kun egne filer committet. **Til andre lanes:** kør `python3 scripts/og-meta.py` efter at have givet egne sider en description (fonden/omkostninger/drawdown mangler stadig).
+- UX SHOULD cyklus 24: kort «ÅTD dyb side» → «Afkast pr. kalenderår», link til 2025.
+- Compliance MUST 10 (mine filer): ordliste ÅTD = delår; FAQ «Hvorfor er 2023 ikke et helt år?».
+- FAQ 18 → 23 korte svar: omkostning (KID 2,79/2,85 %, anker `invester.html#koster`), skat (generelt), delår, benchmark/sammenligning, hvem træffer beslutningerne. Ordliste `#g-benchmark` fik «sådan sammenligner du selv».
+- **Til periode-ejer:** `periode.html` default er stadig `year=YTD` og viser «YTD:»-chip (MUST 10 / UX cyklus 24).
+- Test: 10 sider × 375/1280: 0 konsolfejl, 0 overflow, én h1. precheck: se push.
+- Branch `lane-C` klar til merge. Næste: UX-review 04:00.

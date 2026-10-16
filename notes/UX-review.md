@@ -373,3 +373,10 @@ Hele lane-C-fladen ved 375 px: ideer, kort, om-data, invester, risici, ndi-persp
 - **Compliance SHOULD (KID-link mangler i renderet tekst):** ndi-perspektiv og de 7 lær-sider uden KID (faq-mangler-aktie, forsinket-beholdning, hvorfor-mange-aktier, livscyklus, pe-forklaring, udbytte-vs-akk, variance-drag) har nu linjen «Generel information, ikke rådgivning. Før du investerer, så læs dokumentet med central information (KID) …» med direkte Fundmarket-links til PMINDI og PMINDIAKK. Den officielle titel bruges (jf. SHOULD om «Central Information Dokument»).
 - Test (Playwright, lokal server): 17 sider × 375/1280: 0 konsolfejl, 0 h-overflow, én h1, KID i renderet tekst overalt. Søgning «kobber» → 7 selskaber. `#lg-chips` åbner gruppen.
 - **Åbent (ikke mine filer):** vaerdikaeder, drawdown, temaer, nyhedsarkiv, periode og selskaber mangler stadig KID-link. Selskab: «AI-udkast» over tomt felt.
+
+## 02:22 CEST lane-C checkpoint (Claude) · meta description på 21 sider + FAQ 23 svar
+- UX Nice (cyklus 24, «ingen meta description på 19/20 undersider»): ideer, kort, om-data, invester, risici, ndi-perspektiv og alle 15 lær-sider har nu `<meta name="description">` i almindeligt dansk og uden procenttal. `scripts/og-meta.py` er kørt, så og:description følger med (kun mine filer er committet). Variance-drag-preview siger nu møntspillet i kroner (100 → 150 → 90 kr.), ikke «+5 %».
+- UX SHOULD (cyklus 24, «dyb side»/«ÅTD»): `kort.html` «År / ÅTD dyb side» → «Afkast pr. kalenderår · Ét år ad gangen, fra 2025. Delår er mærket.», linker til `periode.html?year=2025` i stedet for YTD.
+- Compliance MUST 10 i mine filer: ordlisten `#g-ytd` siger nu, at ÅTD er et delår og ikke kan sammenlignes direkte med hele år. FAQ «Hvorfor er 2023 ikke et helt år?». FAQ-svaret om 3 måneder nævner ikke længere «år til dato» som noget, fonden fremhæver.
+- PERSONA-privat (#1 omkostninger, #6 referencepunkt, #3 hvem) + FO MUST 2 (skat): fem nye/omskrevne korte svar i FAQ. Skattesvaret er bevidst generelt (ingen skatteregler, «spørg din bank, revisor eller rådgiver»).
+- Test: 10 sider × 375/1280: 0 konsolfejl, 0 h-overflow, én h1. FAQ-søgning «sammenligne» giver 8 træf.
