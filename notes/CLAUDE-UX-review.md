@@ -1150,3 +1150,33 @@ Live-sweep på 50 URL'er ved 375: **0 pageerrors og 0 vandret overflow.** Live e
 ### Persona-linser
 - **Privat (375):** Udforsk er markant roligere nu. Den største tilbageværende friktion er de små tap-mål i listen (punkt 1).
 - **Family office:** De mærker hurtigst forsvinden af "maskinelt"-forbeholdet fra udforsk (punkt 2). Det skal være synligt uden klik.
+
+## 2026-10-16 06:42 CEST · cyklus 46 (main `ffed556`, docs-delta 4 filer siden `b6dfcba`; live = main)
+
+Live-sweep på 50 URL'er ved 375: **0 pageerrors, 0 vandret overflow.** Live har nu både lane-B (`b6dfcba`) og lane-C (`53fa358`, `247f815`, `03722d7`). Eneste ændringer mod c45: selskabssider +17 px (ny tekst "Vægt i fonden over tid … ikke aktiekurs"), ideer +1 tiny (19. TOC-link), udforsk +16 px.
+
+### Verificeret live ✅
+- `ndi-perspektiv.html`: 333 kort bruger nu `displayName()`. Ingen "Sp ADR", "/The" eller "Hldngs" tilbage. Søgning på "taiwan" finder TSMC via det rensede navn (lane-R SHOULD 6, delvist).
+- `laer/livscyklus.html`: skitsen siger nu "Vækst med overskud" og "Moden", samme fem navne som Udforsk-filteret. GARP/value står kun som `<small>`-forklaring. 0 overflow ved 375.
+- `om-data.html#g-screener` hedder nu "Udforsk (screener)" og matcher h1 "Udforsk porteføljen".
+- KID-footer på selskab og udforsk: "Dokument med central information (KID, …)" ✅.
+
+### MUST
+- Ingen UX-blokere.
+
+### SHOULD (åbne, uændret i kilden)
+1. Udforsk tiny 698 (række-link h18 + ◉ h16). Rettelse som i c45.
+2. Forbeholdet om maskinel klassifikation på udforsk står kun i lukket `<details>` på mobil (compliance SHOULD 8).
+3. `vaerdikaeder.html` bruger stadig ikke `displayName()` (0 forekomster).
+4. Rå versaler: h1 på selskabssider (Sitime Corp, Iqe Plc, Wix.Com Ltd) og nu også synligt i ndi-perspektiv ("WEBTOON"). `NAME_FIX` er én fælles rettelse begge steder.
+5. `omkostninger.html:356` "Tast 1 eller 5." står stadig i summary.
+6. 5–6 af top-10/15 har "Profiltekst mangler endnu".
+
+### Nice
+- ndi-perspektiv: blandede selskabssuffikser i samme liste ("ACM Research", "Advantest" ved siden af "Ambiq Micro Inc", "Alpha and Omega Semiconductor Ltd"). Navnene kommer fra forskellige kilder. Overvej at fjerne Inc/Corp/Ltd i `displayName()` til visning.
+- ndi-perspektiv søgetæller: "1 selskaber passer" → "1 selskab passer".
+- Temasiderne har stadig ingen figur.
+
+### Persona-linser
+- **Privat (375):** Livscyklus og Udforsk taler nu samme sprog, uden GARP/value i figuren. Godt for begynderen. Største friktion er stadig små tap-mål (1).
+- **Family office:** De lægger mærke til, at forbeholdet "maskinelt, afventer NDI" ikke er synligt uden klik (2). Det samme gælder ujævne navne i ndi-perspektiv (Nice), som virker uredigeret.

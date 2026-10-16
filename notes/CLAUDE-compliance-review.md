@@ -1171,3 +1171,21 @@ Ikke juridisk rådgivning. Delta siden addendum c44: `cfb03ab` er nu live, og la
 
 ### Prioritet
 **8** + **7** (to footer-linjer) + **3/4/5** og resten af **1** samlet i ét tekst-commit. Det er bugfix/tekst og falder inden for freeze-reglen efter 08:00.
+
+## 2026-10-16 06:42 CEST · cyklus 46 (main `ffed556`; live = main)
+
+Ikke juridisk rådgivning. Delta: ideer TOC (+1 link), livscyklus (danske modenhedsnavne), ndi-perspektiv (`displayName`), om-data (screener-ordliste). Den sidste beskriver Udforsk som "viser, hvad fonden ejer, og sorterer ikke efter, hvad der er godt at købe". Det er en god ikke-rådgivningsformulering ✅. Ingen nye købs-, sælg-, garanti-, trading-, Nasdaq- eller 1m/3m-ord i delta eller i sweepet (50 URL'er, `hits` tomme).
+
+### MUST
+- **Ingen åbne MUST-blokere.** ndi-perspektiv har fortsat ikke-rådgivning, KID-links for begge klasser, historik- og tabsadvarsel samt AI-udkast-mærker. Livscyklus siger "pædagogisk model, ikke en officiel rating" ✅.
+
+### SHOULD (åbne, uændret i kilden pr. `ffed556`)
+1. `js/app.js:420` "Gns. årligt afkast" uden periode i labelen.
+3. `index.html:89` "Se Central Information Dokument" (resten af footeren er rettet).
+5. `omkostninger.html:372` intern sætning "Det er det tal, marketingmateriale skal gengive ærligt".
+6. Rå selskabsnavne (UX SHOULD 3/4).
+7. `drawdown.html` (0× "rådgivning") og `embed/chart.html` (kun i `og:description`) mangler en synlig ikke-rådgivningslinje.
+8. Udforsk på mobil: forbeholdet om maskinel klassifikation står bag en lukket `<details>`.
+
+### Prioritet før freeze (08:00)
+7 + 8 + 3 + 5 er rene tekstrettelser i ét commit, og 1 er én label. Alt falder inden for "footer/warning checks" efter 08:00.
