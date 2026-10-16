@@ -1180,3 +1180,30 @@ Live-sweep på 50 URL'er ved 375: **0 pageerrors, 0 vandret overflow.** Live har
 ### Persona-linser
 - **Privat (375):** Livscyklus og Udforsk taler nu samme sprog, uden GARP/value i figuren. Godt for begynderen. Største friktion er stadig små tap-mål (1).
 - **Family office:** De lægger mærke til, at forbeholdet "maskinelt, afventer NDI" ikke er synligt uden klik (2). Det samme gælder ujævne navne i ndi-perspektiv (Nice), som virker uredigeret.
+
+## 2026-10-16 06:49 CEST · cyklus 47 (main `4f52bd6`, docs-delta 9 filer siden `ffed556`; live = main)
+
+Main flyttede sig under cyklussen (lane-A værdikæder/kvante, lane-E fact-checks, lane-X fakta/omkostninger/periode/ndi-paa-x). Jeg har derfor kørt to sweeps på 50 URL'er ved 375. Begge gav **0 pageerrors og 0 vandret overflow.** Kontrolleret med md5: live = main for omkostninger, fakta, periode og x-feed.js.
+
+Ændringer mod c46: vaerdikaeder +6.963 px og tiny 18 → 121; vaerdikaede?id=ai-compute +1.629 px; ndi-paa-x tiny 82 → 102; fakta/omkostninger/periode +500–630 px.
+
+### Verificeret live ✅
+- `value-chains.json`: space har 21 nøgler igen (ai-compute 11, physical 14, energy 14, quantum 15). Pædagogikblokkene fra merge-tabet kl. 03 er tilbage og renderer.
+- `periode.html`: "To tal, to perioder". Kortene "År til dato +4,0 % (31. dec. 2025 → 14. okt. 2026)" og "Gennemsnit pr. år siden første NAV +26,4 %" står side om side med teksten "ingen af dem siger noget om det næste år". Klart for privatpersonaen.
+- `omkostninger.html`: åbner nu med "Ca. 2,8 % om året … KID 2,79 % / 2,85 % … ca. 2.790 kr. / 2.850 kr. på 100.000 kr." og har en ny peg-figur over postsatser, hvor den eneste forskel er porteføljetransaktion (0,08 pp = 80 kr.). Det lukker FO-personaens gamle omkostnings-MUST på omkostninger og fakta.
+- `fakta.html`: KID 1 år/5 år i kroner (80 kr. / 60 kr.) med "ikke det samme tal". Pædagogisk stærkt, men læs SHOULD 8.
+
+### MUST
+- Ingen UX-blokere.
+
+### SHOULD
+1–6 uændret fra c46 (udforsk tiny, forbehold i lukket details, displayName i vaerdikaeder, rå versaler, "Tast 1 eller 5", manglende profiler).
+7. **Ny: `?view=fonden&fund=PMINDIAKK` viser ingen omkostninger.** `js/app.js:346–367` returnerer før blokken "Omkostninger (kort)" (`app.js:459`). Den, der vælger AKK, ser altså ikke 2,85 %, mens PMINDI-visningen viser "2,79 % (PMINDI) / 2,85 % (PMINDIAKK)". Ret: genbrug den samme omkostningssektion i AKK-grenen. Det er tilladt efter freeze som en fejlrettelse.
+8. **Værdikæder: 121 tap-mål under 24 px ved 375** (før 18): 61 tekstlinks på h20, 17 `a.hit` h20, 13+1 SVG-links i riverMap (h23/h12) og 5 `a.src` h17. Det kommer af de gendannede pædagogikblokke og er ikke en regression i logik. Fakta/omkostninger bliver tunge: fakta har nu tre måder at sige "80 kr. vs. 60 kr. er ikke samme tal". Overvej at bevare én.
+
+### Nice
+- Temasider stadig uden figur. ndi-perspektiv "1 selskaber passer".
+
+### Persona-linser
+- **Privat (375):** Periode-kortene er nu den bedste forklaring af CAGR vs. periode på sitet. Omkostninger svarer direkte på "hvad koster det" i første linje.
+- **Family office:** Omkostningsbilledet er nu komplet og ærligt (KID-RIY, postsatser, "ikke et ÅOP"). Det eneste hul er AKK-visningen (SHOULD 7).
