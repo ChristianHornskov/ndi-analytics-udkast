@@ -200,6 +200,20 @@ Sætningen er «Fald fra top, PMINDI. Dybeste fald -35,8 % fra 18. feb. 2025 til
 
 Feltet under kurven er 44 px højt. Knapperne er stadig 18 px, sporet er stadig tyndt. På sidste dag, 14. okt. 2026, møder knappens midte stregen (afstand 0). Udlæsningen er −23,4 %. Ingen sidescroll ved 390.
 
+### Update · brønd ved nøgletallene · 2026-10-16 ~04:00 CEST
+
+Under kurven står de tre kort, og til højre en brønd for den åbne episode. 0 er toppen 2. jun. 2026. Bunden var −26,8 % den 29. jul. 2026. Prikken er i dag, −23,4 %. Teksten siger, at 13 % af vejen fra bunden tilbage til toppen er tilbagelagt. «0», «nu» og «−26,8 %» rammer ikke hinanden eller prikken, og de står inden for svg'en. På 390 og 320 står brønden til venstre og kortene til højre. Ingen sidescroll. Ingen konsolfejl.
+
+Et klik på −35,8 % sætter udlæsningen på 8. apr. 2025. De 16 tekster i kurven rammer ikke hinanden og står inden for svg'en. Fyldet under kurven er `#e5b3ba`, samme rosa som embed, svagt ved nul og stærkere i dybet.
+
+Embed på 390 og 320: totalafkast i fuld bredde, +26,4 % og år til dato side om side, største fald i fuld bredde. Søjlen ved −35,8 % fylder omkring en tredjedel. Fuld søjle er −100 %. På år til dato er største fald −26,8 %, og søjlen er kortere. PMINDIAKK er ét gult kort, søjlen er skjult, svg'en er tom, og der er ingen procent. «CAGR» står ikke i kortet. Ingen sidescroll. Ingen konsolfejl.
+
+### Update · årssøjler og varighed · 2026-10-16 ~04:06 CEST
+
+Årssøjlerne deler bundlinje. På 1280 ligger alle fire bunde på samme linje. På 390 og 320 deler de to i samme række bund. 2024 er 64 px høj og 92 px bred. 2026 er 8 px høj. Søjlen er stadig årets afkast: 2025 er +15,2 % med gul kant og teksten Dybeste fald. 2026 er +4,0 % med cyan kant, Under vand, og til dato i gult. Ingen sidescroll.
+
+Varighedsbjælken under de fire episoder bruger samme skala. 208 dage er den længste. 87 dage er under halvdelen. 189 dage ligger tæt på 208, fordi faldene er det. Den åbne er gul. Et klik på −35,8 % sætter stadig udlæsningen på 8. apr. 2025. Ingen konsolfejl.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.

@@ -706,19 +706,19 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
 .ep-ledger li.open .depth{color:var(--yellow)}
 .ep-ledger .meta{font-size:13px;color:var(--muted);line-height:1.45}
 .ep-ledger .meta strong{color:var(--text);font-weight:600}
-.dur{display:block;height:8px;margin-top:8px;border-radius:99px;background:var(--ink);border:1px solid var(--line);max-width:320px;overflow:hidden}
+.dur{display:block;height:10px;margin-top:10px;border-radius:99px;background:var(--ink);border:1px solid var(--line);max-width:min(100%,520px);overflow:hidden}
 .dur span{display:block;height:100%;border-radius:99px;background:var(--brand)}
 .ep-ledger li.open .dur span{background:var(--yellow)}
 .year-rail{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:8px 0 8px;align-items:stretch}
-.year-rail a{display:flex;flex-direction:column;justify-content:flex-end;gap:3px;min-height:128px;text-decoration:none;color:var(--text);padding:8px 8px 10px;border-top:1px solid var(--line)}
+.year-rail a{display:grid;grid-template-rows:minmax(1.2em,auto) 72px auto auto auto;align-content:start;justify-items:start;gap:3px;text-decoration:none;color:var(--text);padding:8px 8px 10px;border-top:1px solid var(--line)}
 .year-rail a:hover{border-top-color:var(--cyan);background:var(--selected)}
 .year-rail a.yr-deep{border-top-color:var(--yellow)}
 .year-rail a.yr-deep:hover{border-top-color:var(--yellow)}
 .year-rail a.yr-open{border-top-color:var(--cyan)}
 .year-rail a.yr-open:hover{border-top-color:var(--cyan)}
-.year-rail .yr-mark{min-height:1.2em;font-size:11px;line-height:1.2;color:var(--yellow)}
+.year-rail .yr-mark{font-size:11px;line-height:1.2;color:var(--yellow)}
 .year-rail .yr-open .yr-mark{color:var(--cyan)}
-.year-rail .yr-bar{display:block;width:100%;max-width:36px;border-radius:4px 4px 0 0;background:var(--brand);margin-bottom:6px}
+.year-rail .yr-bar{display:block;width:min(72%,92px);max-width:none;align-self:end;border-radius:4px 4px 0 0;background:var(--brand);margin-bottom:0}
 .year-rail .yr-bar.neg{background:var(--neg)}
 .year-rail .yr-y{font-size:12px;color:var(--muted)}
 .year-rail .yr-r{font-size:16px;font-variant-numeric:tabular-nums}
@@ -732,6 +732,17 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
 .stat-strip strong{display:block;margin-top:6px;font-size:26px;font-weight:650;letter-spacing:-.5px;color:var(--text);font-variant-numeric:tabular-nums;line-height:1.05}
 .stat-strip li.now strong{color:var(--yellow);font-size:clamp(28px,4vw,34px)}
 .stat-strip small{display:block;margin-top:4px;font-size:12px;color:var(--faint);line-height:1.35;font-weight:400}
+.under-row{display:grid;grid-template-columns:minmax(0,1fr) 112px;gap:4px 18px;align-items:center;margin:2px 0 4px}
+.under-row .stat-strip{margin:0}
+.depth-well{margin:0;display:flex;justify-content:center}
+.depth-well svg{display:block;overflow:visible}
+.depth-well .well-track{fill:#0b171d;stroke:var(--line);stroke-width:1}
+.depth-well .well-now{fill:var(--ink);stroke:var(--yellow);stroke-width:2}
+.depth-well text{font-family:inherit;font-size:12px}
+.depth-well .well-zero{fill:var(--text)}
+.depth-well .well-nu{fill:var(--yellow)}
+.depth-well .well-floor{fill:var(--neg-ink)}
+.well-note{margin-top:0}
 .share-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin:0 0 16px}
 .share-row .outline-btn{min-height:44px}
 .share-row .src{margin:0;overflow-wrap:anywhere}
@@ -747,6 +758,9 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
   .ep-jump{grid-template-columns:1fr;gap:2px}
   .hero-stat .num{font-size:46px}
   .stat-strip{grid-template-columns:1fr}
+  .under-row{grid-template-columns:112px minmax(0,1fr);gap:8px 12px}
+  .under-row .stat-strip{order:2}
+  .depth-well{order:1}
   .uw-key{display:grid;grid-template-columns:1fr 1fr;gap:8px 12px}
   .uw-key li:last-child{grid-column:1 / -1}
 }
@@ -776,6 +790,9 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
   .year-rail .yr-open .yr-note{color:#333}
   .stat-strip li{background:#fff;border:1px solid #ccc}
   .stat-strip strong,.stat-strip li.now strong{color:#111}
+  .depth-well .well-track{fill:#fff;stroke:#999}
+  .depth-well .well-now{fill:#fff;stroke:#111}
+  .depth-well .well-zero,.depth-well .well-nu,.depth-well .well-floor{fill:#111}
 }
 
 /* UX-inspiration top5: tabular nums + calm motion + as-of */

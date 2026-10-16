@@ -177,6 +177,8 @@
       set('metric-cagr-note', gate);
       set('metric-ytd-note', gate);
       set('metric-dd-note', gate);
+      const gatedWell = document.getElementById('metric-dd-well');
+      if (gatedWell) gatedWell.hidden = true;
       return;
     }
     row?.classList.remove('is-gated');
@@ -203,6 +205,14 @@
       : `${number.format(years)} år siden start`;
     $('#metric-ytd-note').textContent = `Fra 1. jan. ${last.d.slice(0, 4)} til ${fmtDate(last.d)}. Delår, afventer Fundmarket-godkendelse.`;
     $('#metric-dd-note').textContent = `Bund ${fmtDate(dd.trough)} · fra en top i perioden`;
+    const well = document.getElementById('metric-dd-well');
+    if (well) {
+      if (dd.max < -0.05) {
+        well.hidden = false;
+        const depth = Math.min(100, Math.max(4, Math.round(-dd.max)));
+        well.style.setProperty('--dd', depth + '%');
+      } else well.hidden = true;
+    }
     $('#metric-cagr').classList.toggle('smaller', annual == null);
   }
 
