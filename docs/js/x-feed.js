@@ -383,6 +383,56 @@ body.x-focused .x-spine.is-home{display:none}
 @media(prefers-reduced-motion:reduce){
   button.x-spine-dot:hover::after,a.x-spine-dot:hover::after{transform:translate(-50%,-50%)}
 }
+.x-atlas{margin:0 0 14px;padding:12px 12px 10px;border:1px solid #345860;border-radius:16px;background:radial-gradient(120% 80% at 0% 0%,rgba(158,207,214,.1),transparent 46%),#0d1c22;min-width:0}
+.x-atlas.is-home{margin:0 0 12px}
+.x-atlas-top{display:flex;justify-content:space-between;gap:8px 14px;align-items:baseline;flex-wrap:wrap;margin:0 0 8px}
+.x-atlas-top .k{margin:0;font-size:11px;letter-spacing:1.4px;color:var(--brand);font-weight:700}
+.x-atlas-top p{margin:0;color:var(--faint);font-size:12px;line-height:1.35}
+.x-atlas-context{display:grid;grid-template-columns:auto minmax(0,1fr) auto;column-gap:8px;align-items:center;margin:0 0 6px}
+.x-atlas-end{font-size:11px;color:var(--faint);font-variant-numeric:tabular-nums;white-space:nowrap}
+.x-atlas-line,.x-atlas-plot{position:relative;min-width:0}
+.x-atlas-line{height:16px}
+.x-atlas-line::before,.x-atlas-plot::before{content:"";position:absolute;left:8px;right:8px;top:50%;height:2px;margin-top:-1px;border-radius:99px;background:#24383f}
+.x-atlas-zoom,.x-atlas-out{margin:0 0 6px;font-size:12px;color:var(--muted);line-height:1.35}
+.x-atlas-band{margin:8px 0 2px;font-size:10px;letter-spacing:1.1px;text-transform:uppercase;color:var(--faint);font-weight:700}
+.x-atlas-band:first-child{margin-top:0}
+.x-atlas-row{display:grid;grid-template-columns:minmax(0,118px) minmax(0,1fr);gap:8px;align-items:center}
+.x-atlas.is-compact .x-atlas-row{grid-template-columns:minmax(0,92px) minmax(0,1fr);gap:6px}
+.x-atlas-name{appearance:none;width:100%;display:flex;gap:4px;align-items:baseline;border:0;background:transparent;color:var(--muted);font:inherit;font-size:12px;line-height:1.2;text-align:left;padding:2px 0;cursor:pointer;min-width:0}
+.x-atlas-name span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.x-atlas-name b{flex:none;font-weight:500;color:var(--faint);font-variant-numeric:tabular-nums}
+.x-atlas-row.is-house .x-atlas-name{color:#c5e6ea}
+.x-atlas-row.is-curated .x-atlas-name{color:#f5ee9e}
+.x-atlas-name[aria-pressed="true"]{color:var(--text);box-shadow:inset 2px 0 0 #f5ee9e;padding-left:6px}
+.x-atlas-name:hover{color:var(--text)}
+.x-atlas-dot{position:absolute;width:16px;height:16px;margin:0;padding:0;border:0;border-radius:50%;background:transparent;transform:translate(-50%,-50%);top:calc(50% + var(--lane, 0) * 8px);left:calc(8px + (100% - 16px) * var(--p));z-index:1}
+.x-atlas-line .x-atlas-dot{top:50%}
+.x-atlas-dot::after{content:"";position:absolute;left:50%;top:50%;width:8px;height:8px;border-radius:50%;transform:translate(-50%,-50%);background:#617d84}
+.x-atlas-dot.is-house::after{background:#9ecfd6}
+.x-atlas-dot.is-curated::after{background:#f5ee9e}
+.x-atlas-dot.is-ghost::after{width:7px;height:7px;background:transparent;box-shadow:inset 0 0 0 1.5px #617d84}
+.x-atlas-dot.is-ghost.is-house::after{box-shadow:inset 0 0 0 1.5px #9ecfd6}
+.x-atlas-dot.is-ghost.is-curated::after{box-shadow:inset 0 0 0 1.5px #f5ee9e}
+.x-atlas-dot.is-now{z-index:3}
+.x-atlas-dot.is-now::after{width:10px;height:10px;box-shadow:0 0 0 2px #0d1c22,0 0 0 3.5px #f5ee9e}
+button.x-atlas-dot{cursor:pointer}
+button.x-atlas-dot:focus-visible,.x-atlas-name:focus-visible{outline:2px solid #f5ee9e;outline-offset:2px}
+button.x-atlas-dot:hover::after{transform:translate(-50%,-50%) scale(1.15)}
+.x-atlas-key{display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center;margin:8px 0 0;font-size:11px;line-height:1.35;color:var(--faint)}
+.x-atlas-key i{width:8px;height:8px;border-radius:50%;display:inline-block;flex:none}
+.x-atlas-key i.is-house{background:#9ecfd6}
+.x-atlas-key i.is-curated{background:#f5ee9e}
+.x-atlas-key i.is-ghost{background:transparent;box-shadow:inset 0 0 0 1.5px #f5ee9e}
+#x-grid > .x-split .x-atlas{margin:0 0 10px}
+@media(max-width:700px){
+  .x-atlas{padding:10px}
+  .x-atlas-row,.x-atlas.is-compact .x-atlas-row{grid-template-columns:minmax(0,86px) minmax(0,1fr)}
+  .x-atlas-name{font-size:11px}
+  .x-atlas-end{font-size:10px}
+}
+@media(prefers-reduced-motion:reduce){
+  button.x-atlas-dot:hover::after{transform:translate(-50%,-50%)}
+}
 `;
   document.head.appendChild(s);
 }
@@ -842,6 +892,213 @@ export function xSpineHtml(posts, opt = {}) {
     <span class="x-spine-end">${esc(y1)}</span>
     ${key}
     <span class="sr-only">${hotN} fyldte af ${dots.length} på linjen.</span>
+  </div>`;
+}
+
+const HOUSE_ORDER = ['InvestNewdeal', 'MadsC007', 'jesper_baek', 'CHornskov'];
+const ATLAS_DAY = 86400000;
+
+function atlasSource(posts) {
+  const out = [];
+  for (const p of posts || []) {
+    const t = Date.parse(p?.created_at || '');
+    if (Number.isNaN(t) || !p?.id) continue;
+    out.push({
+      t,
+      id: String(p.id),
+      username: String(p.username || ''),
+      house: isHouse(p),
+      curated: p.curatedFrom === 'mads_following',
+    });
+  }
+  return out;
+}
+
+function atlasLanes(dots) {
+  const byDay = new Map();
+  for (const d of dots) {
+    const key = new Date(d.t).toISOString().slice(0, 10);
+    if (!byDay.has(key)) byDay.set(key, []);
+    byDay.get(key).push(d);
+  }
+  let maxAbs = 0;
+  for (const arr of byDay.values()) {
+    arr.sort((a, b) => a.t - b.t || a.id.localeCompare(b.id));
+    const n = arr.length;
+    arr.forEach((d, i) => {
+      d.lane = n === 1 ? 0 : i - (n - 1) / 2;
+      maxAbs = Math.max(maxAbs, Math.abs(d.lane));
+    });
+  }
+  return maxAbs;
+}
+
+function atlasPlace(dots, min, max) {
+  const span = max - min;
+  if (!(span > ATLAS_DAY / 24)) {
+    for (const d of dots) d.p = 0.5;
+    return;
+  }
+  for (const d of dots) d.p = Math.min(1, Math.max(0, (d.t - min) / span));
+}
+
+function atlasCluster(all) {
+  const fullMin = Math.min(...all.map((d) => d.t));
+  const fullMax = Math.max(...all.map((d) => d.t));
+  const sorted = [...all].sort((a, b) => b.t - a.t);
+  const cluster = [sorted[0]];
+  for (let i = 1; i < sorted.length; i++) {
+    if (cluster[cluster.length - 1].t - sorted[i].t > 21 * ATLAS_DAY) break;
+    cluster.push(sorted[i]);
+  }
+  const cMin = Math.min(...cluster.map((d) => d.t));
+  const cMax = Math.max(...cluster.map((d) => d.t));
+  if (cluster.length >= 4 && (cMax - cMin) < (fullMax - fullMin) * 0.55) {
+    return { min: cMin, max: cMax, zoom: true };
+  }
+  return { min: fullMin, max: fullMax, zoom: false };
+}
+
+function atlasHotWindow(hot, all) {
+  const fullMin = Math.min(...all.map((d) => d.t));
+  const fullMax = Math.max(...all.map((d) => d.t));
+  if (!hot.length) return { min: fullMin, max: fullMax, zoom: false };
+  let min = Math.min(...hot.map((d) => d.t));
+  let max = Math.max(...hot.map((d) => d.t));
+  if (max - min < ATLAS_DAY) {
+    min -= ATLAS_DAY;
+    max += ATLAS_DAY;
+  }
+  const zoom = (max - min) < (fullMax - fullMin) * 0.85;
+  return { min, max, zoom };
+}
+
+/**
+ * Account × date map. Dots are posts in the static file.
+ * Filled dots are in the current filter. Open dots are context.
+ * The zoom is the same dates, drawn on a shorter span.
+ */
+export function xAtlasHtml(posts, opt = {}) {
+  const all = atlasSource(posts);
+  if (!all.length) return '';
+  const hotIds = opt.hotIds || null;
+  const leadId = String(opt.leadId || '');
+  const who = String(opt.who || 'all');
+  for (const d of all) {
+    d.hot = !hotIds || hotIds.has(d.id);
+    d.lead = Boolean(leadId) && d.id === leadId && d.hot;
+  }
+  const byUser = new Map();
+  for (const d of all) {
+    if (!byUser.has(d.username)) byUser.set(d.username, []);
+    byUser.get(d.username).push(d);
+  }
+  const users = [...byUser.keys()].sort((a, b) => {
+    const ar = HOUSE_ORDER.indexOf(a);
+    const br = HOUSE_ORDER.indexOf(b);
+    const ai = ar === -1 ? 99 : ar;
+    const bi = br === -1 ? 99 : br;
+    if (ai !== bi) return ai - bi;
+    return a.localeCompare(b);
+  });
+  const hot = all.filter((d) => d.hot);
+  const fullMin = Math.min(...all.map((d) => d.t));
+  const fullMax = Math.max(...all.map((d) => d.t));
+  let win = opt.home ? atlasCluster(all) : atlasHotWindow(hot, all);
+  if (opt.home && hot.length && hot.length < all.length) {
+    const inside = hot.every((d) => d.t >= win.min && d.t <= win.max);
+    if (!inside) win = atlasHotWindow(hot, all);
+  }
+  const inWin = (d) => d.t >= win.min && d.t <= win.max;
+  let rowUsers = users.filter((u) => byUser.get(u).some(inWin));
+  if (opt.rows === 'hot') rowUsers = rowUsers.filter((u) => byUser.get(u).some((d) => d.hot));
+  if (!rowUsers.length) rowUsers = users.filter((u) => byUser.get(u).some((d) => d.hot));
+  if (!rowUsers.length) rowUsers = users;
+
+  const paint = (dots, { line = false } = {}) => {
+    const ordered = [...dots.filter((d) => !d.lead), ...dots.filter((d) => d.lead)];
+    return ordered.map((d) => {
+      const style = `--p:${d.p.toFixed(4)};--lane:${line ? 0 : d.lane}`;
+      const when = fmtXDate(new Date(d.t).toISOString());
+      const cls = [
+        'x-atlas-dot',
+        d.house ? 'is-house' : d.curated ? 'is-curated' : '',
+        d.hot ? '' : 'is-ghost',
+        d.lead ? 'is-now' : '',
+      ].filter(Boolean).join(' ');
+      const where = d.hot ? '' : '. Uden for filteret';
+      const label = `@${d.username}, ${when}${where}`;
+      const current = d.lead ? ' aria-current="true"' : '';
+      if (d.hot && d.id && opt.pick) {
+        return `<button type="button" class="${cls}" style="${style}" data-x-spine="${esc(d.id)}"${current} aria-label="${esc(label)}"></button>`;
+      }
+      if (d.hot && d.id) {
+        return `<button type="button" class="${cls}" style="${style}" data-x-jump="${esc(d.id)}"${current} aria-label="${esc(label)}"></button>`;
+      }
+      return `<span class="${cls}" style="${style}" title="${esc(label)}"></span>`;
+    }).join('');
+  };
+
+  const context = all.map((d) => ({ ...d, p: 0, lane: 0 }));
+  atlasPlace(context, fullMin, fullMax);
+  const rows = rowUsers.map((u) => {
+    const dots = byUser.get(u).filter(inWin).map((d) => ({ ...d }));
+    atlasPlace(dots, win.min, win.max);
+    const maxAbs = atlasLanes(dots);
+    const sample = byUser.get(u)[0];
+    const kind = sample.house ? 'is-house' : sample.curated ? 'is-curated' : '';
+    const on = who === u;
+    const total = byUser.get(u).length;
+    const mark = total === dots.length ? String(dots.length) : `${dots.length}/${total}`;
+    const h = 22 + Math.ceil(maxAbs) * 14;
+    return `<div class="x-atlas-row ${kind}" data-atlas-user="${esc(u)}">
+      <button type="button" class="x-atlas-name" data-atlas-who="${esc(u)}" aria-pressed="${on ? 'true' : 'false'}" aria-label="${esc(`Filtrér på @${u}. ${dots.length} i udsnittet, ${total} i snapshotet`)}"><span>@${esc(u)}</span><b>${mark}</b></button>
+      <div class="x-atlas-plot" style="height:${h}px">${paint(dots)}</div>
+    </div>`;
+  });
+  let banded = '';
+  let band = '';
+  for (let i = 0; i < rowUsers.length; i++) {
+    const sample = byUser.get(rowUsers[i])[0];
+    const next = sample.house ? 'house' : 'curated';
+    if (next !== band) {
+      band = next;
+      banded += `<p class="x-atlas-band">${next === 'house' ? 'NDI-konti' : 'Konti NDI følger'}</p>`;
+    }
+    banded += rows[i];
+  }
+  const outside = users.filter((u) => !byUser.get(u).some(inWin));
+  const outsideLine = win.zoom && outside.length
+    ? `<p class="x-atlas-out">Før udsnittet: ${outside.map((u) => {
+      const list = byUser.get(u);
+      const last = [...list].sort((a, b) => b.t - a.t)[0];
+      const when = fmtXDate(new Date(last.t).toISOString());
+      return `@${esc(u)}, ${list.length} opslag, senest ${esc(when)}`;
+    }).join('. ')}.</p>`
+    : '';
+  const houseHot = hot.filter((d) => d.house).length;
+  const noHouse = opt.rows === 'hot' && hot.length && houseHot === 0
+    ? ' Ingen NDI-konto har en prik i filteret.'
+    : '';
+  const zoomLine = win.zoom
+    ? `<p class="x-atlas-zoom">Udsnit ${esc(fmtXDate(new Date(win.min).toISOString()))} til ${esc(fmtXDate(new Date(win.max).toISOString()))}, forstørret. Samme datoer som linjen.${esc(noHouse)}</p>`
+    : (noHouse ? `<p class="x-atlas-zoom">${esc(noHouse.trim())}</p>` : '');
+  const y0 = fmtXDate(new Date(fullMin).toISOString());
+  const y1 = fmtXDate(new Date(fullMax).toISOString());
+  const hotN = all.filter((d) => d.hot).length;
+  const cls = `x-atlas${opt.home ? ' is-home' : ''}${opt.compact ? ' is-compact' : ''}`;
+  return `<div class="${cls}" data-atlas="1" role="group" aria-label="${esc(opt.label || 'Konto-kort. ' + X_LABEL)}">
+    <div class="x-atlas-top"><p class="k">Konto-kort</p><p>Prikken følger datoen.</p></div>
+    <div class="x-atlas-context">
+      <span class="x-atlas-end">${esc(y0)}</span>
+      <div class="x-atlas-line">${paint(context, { line: true })}</div>
+      <span class="x-atlas-end">${esc(y1)}</span>
+    </div>
+    ${zoomLine}
+    ${banded}
+    ${outsideLine}
+    <p class="x-atlas-key"><i class="is-house"></i>NDI-konti<i class="is-curated"></i>konti NDI følger<i class="is-ghost"></i>uden for filteret. ${esc(X_LABEL)}.</p>
+    <span class="sr-only">${hotN} fyldte af ${all.length} på kortet. ${rowUsers.length} konti i udsnittet.</span>
   </div>`;
 }
 
@@ -1313,7 +1570,20 @@ function bindXPick() {
       const sel = typeof CSS !== 'undefined' && CSS.escape ? CSS.escape(id) : String(id).replace(/"/g, '');
       const cards = [...scope.querySelectorAll(`article.x-card[data-x-id="${sel}"]`)];
       const card = cards.find((el) => el.closest('.x-lane')) || null;
-      if (card) promoteCard(card);
+      const lane = card ? card.closest('.x-lane') : null;
+      const lead = scope.querySelector('article.is-lead');
+      const laneKind = lane && lane.classList.contains('is-theme') ? 'theme' : 'direct';
+      const leadKind = !lead ? laneKind : (lead.classList.contains('is-direct') ? 'direct' : lead.classList.contains('is-theme') ? 'theme' : '');
+      if (card && lane && lane.querySelector('[data-x-pick]') && (!leadKind || laneKind === leadKind)) {
+        promoteCard(card);
+        return;
+      }
+      const any = cards[0];
+      if (!any) return;
+      any.classList.add('is-flash');
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      any.scrollIntoView({ block: 'nearest', behavior: reduce ? 'auto' : 'smooth' });
+      window.setTimeout(() => any.classList.remove('is-flash'), 900);
       return;
     }
     const btn = e.target.closest('[data-x-pick]');
@@ -1415,16 +1685,15 @@ function promoteCard(card) {
   live.textContent = `Citatet viser nu opslaget fra ${fmtXDate(next.post.created_at)}.${where}`;
   const spineScope = stageHost.closest('#x-grid, section.x-says');
   if (spineScope && nextId) {
-    spineScope.querySelectorAll('.x-spine-dot.is-now').forEach((el) => {
+    spineScope.querySelectorAll('.x-spine-dot.is-now, .x-atlas-dot.is-now').forEach((el) => {
       el.classList.remove('is-now');
       el.removeAttribute('aria-current');
     });
     const sel = typeof CSS !== 'undefined' && CSS.escape ? CSS.escape(nextId) : String(nextId).replace(/"/g, '');
-    const dot = spineScope.querySelector(`[data-x-spine="${sel}"]`);
-    if (dot) {
+    spineScope.querySelectorAll(`[data-x-spine="${sel}"], .x-atlas-dot[data-x-jump="${sel}"]`).forEach((dot) => {
       dot.classList.add('is-now');
       dot.setAttribute('aria-current', 'true');
-    }
+    });
   }
   const quoteNow = stageHost.querySelector('article');
   if (quoteNow) {
