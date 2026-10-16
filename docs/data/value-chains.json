@@ -5230,6 +5230,11 @@
           "term": "Radarsatellit (SAR)",
           "t": "Jordobservation med radar i stedet for kamera. Radar ser gennem skyer og om natten.",
           "link": "satcom"
+        },
+        {
+          "term": "Køleflade (radiator)",
+          "t": "En stor plade, der sender varme ud i rummet som stråling. I vakuum er der ingen luft at blæse varmen væk med, så computere i kredsløb skal have køleflader. Jo mere regnekraft, jo større skal de være.",
+          "link": "space-compute"
         }
       ],
       "glossaryNote": "Ordbogen og højderne er generel baggrundsviden, ikke NDI's synspunkter. Højderne er omtrentlige.",
@@ -5452,7 +5457,7 @@
             "id": "gloss-wrap",
             "icon": "◇",
             "k": "Ordbog",
-            "t": "10 ord"
+            "t": "11 ord"
           },
           {
             "id": "sp-quiz",
