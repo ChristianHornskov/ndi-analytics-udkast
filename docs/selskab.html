@@ -107,6 +107,8 @@
  const matHint = mv.hint;
  const lensMetrics = (uniquePack?.byIsin?.[p.isin]?.metrics || []).map((m) =>
  m.label === 'Livscyklus' ? { ...m, value: matValue, hint: matHint } : m);
+ // Uden profiltekst: vis linsens "Hvad ejer man?" (AI-udkast) øverst i stedet for et tomt felt.
+ const lensWhat = f('summary') ? null : lensMetrics.find((m) => m.label === 'Hvad ejer man?' && m.value);
  // Andre i samme led: udledt af linsens "Plads i værdikæden" (fx "AI-compute · led 4", "Energi led 4 + robotik led 3").
  // Kun selskaber med linse i den valgte klasse; pædagogisk nabolag, ikke en sammenligning eller rangering.
  const CHAIN_NAMES = [['ai', /^ai-compute/i, 'AI-compute'], ['energy', /^energi/i, 'Energi'], ['physical', /^robotik/i, 'Robotik'], ['space', /^rum/i, 'Rum']];
@@ -142,8 +144,9 @@
  ${switched ? `<p class="band">Selskabet indgår ikke i den valgte klasse, så siden viser ${esc(fund.short)}.</p>` : ''}
 
  <section class="panel">
- <h2 class="panel-h brand">Hvilket problem løser det?${f('summary') ? ` ${AI_BADGE}` : ''}</h2>
- ${f('summary') ? `<p class="prose">${esc(f('summary'))}</p>` : `<p class="empty-state">Profiltekst mangler endnu for dette selskab.${lensMetrics.length ? ' NDI-linsen nedenfor beskriver, hvad man ejer.' : ''}</p>`}
+ <h2 class="panel-h brand">Hvilket problem løser det?${f('summary') || lensWhat ? ` ${AI_BADGE}` : ''}</h2>
+ ${f('summary') ? `<p class="prose">${esc(f('summary'))}</p>` : lensWhat ? `<p class="prose"><strong>${esc(lensWhat.value)}.</strong> ${esc(lensWhat.hint || '')}</p>
+ <p class="src">Kort udkast fra <a href="#ndi-linse">NDI-linsen</a> (AI, afventer NDI-gennemgang). En længere profiltekst mangler endnu.</p>` : `<p class="empty-state">Profiltekst mangler endnu for dette selskab.${lensMetrics.length ? ' NDI-linsen nedenfor beskriver, hvad man ejer.' : ''}</p>`}
  ${pr?.source ? `<p class="src">Kilde: ${ext(pr.source, host(pr.source))}${pr.reviewedAt ? ` · tjekket mod kilden ${fmtDate(pr.reviewedAt)}` : ''}</p>` : ''}
  ${AI_NOTE ? `<p class="src">${AI_NOTE} Generel information. Ikke en anbefaling.</p>` : `<p class="src">Generel information. Ikke en anbefaling.</p>`}
  </section>
