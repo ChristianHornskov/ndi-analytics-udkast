@@ -1069,3 +1069,14 @@ Level 4 er ikke skrevet som drift. Det er en mine, ikke et kraftværk. Sangdong-
 Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px og ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Panasqueira står. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `4431d82` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 02:57 CEST. MP Materials skriver, at magnetfabrikken ligger i Fort Worth, og at Mountain Pass blev genstartet i 2017. Ikke færdig.**
+
+Adresserne står på anlægssiden. Hovedsædet i Las Vegas er ikke minen. Siderne daterer ikke en mængde. Det er ikke et chipværk. Ingen `reviewedAt`. Blurben under råstoffer og arkivet siger grænsen.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px og ved 375 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Fort Worth står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `7f1857d` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+

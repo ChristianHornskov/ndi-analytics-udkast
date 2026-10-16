@@ -833,20 +833,24 @@
   "US5533681012": {
    "name": "MP Materials",
    "theme": "energy-resources",
-   "summary": "Udvinder sjældne jordarter ved Mountain Pass i USA og arbejder med videre forarbejdning, herunder magneter.",
-   "watch": "Produktion, forarbejdning uden for minen og efterspørgsel efter magneter.",
-   "source": "https://mpmaterials.com/",
-   "products": "Sjældne jordarter og produkter længere fremme i kæden.",
-   "customers": "Industri, der bruger sjældne jordarter i magneter og elektronik.",
-   "role": "Råstof til elektronik, motorer og forsvar. Ikke et chipværk.",
+   "summary": "Udvinder sjældne jordarter ved Mountain Pass i Californien og fremstiller magneter i Fort Worth i Texas. Selskabet skriver, at Mountain Pass blev genstartet i 2017. Siderne daterer ikke en aktuel mængde. Det er ikke et chipværk.",
+   "watch": "Om fabrikken i Fort Worth kører i en skala, siden ikke angiver. Teksten er ikke et chipværk.",
+   "source": "https://www.mpmaterials.com/facilities/",
+   "products": "Sjældne jordarter fra Mountain Pass og magneter i Fort Worth. Ikke et chipværk.",
+   "customers": "Industri, der bruger sjældne jordarter i magneter. Teksten nævner ikke en navngiven leverance.",
+   "role": "Mine i Mountain Pass og magneter i Fort Worth. Ikke et chipværk.",
    "narrative": [
-    "MP Materials udvinder sjældne jordarter ved Mountain Pass i Californien. Selskabet skriver, at magneter fremstilles på anlægget Independence i Texas.",
-    "Det er en mine med videre forarbejdning i denne beskrivelse, ikke et projekt uden drift og ikke et chipværk."
+    "MP Materials skriver, at Mountain Pass Mine and Processing Facility ligger på 67750 Bailey Road i Mountain Pass i Californien. Selskabet skriver, at Independence Magnet Manufacturing Facility ligger på 13840 Independence Parkway i Fort Worth i Texas. Om-siden skriver, at Mountain Pass blev genstartet i 2017. Datoen ligger før beholdningen pr. 1. juni 2026. Siderne daterer ikke en aktuel mængde. Det er en mine og en magnetfabrik, ikke et chipværk.",
+    "Hovedsædet ligger på 1700 S Pavilion Center Drive, ottende etage, i Las Vegas i Nevada. Hovedsædet er ikke minen. Teksten siger ikke, at fabrikken i Fort Worth kører i en bestemt skala."
    ],
    "narrativeSources": [
     {
-     "label": "Selskabets side",
-     "url": "https://mpmaterials.com/"
+     "label": "Anlæg",
+     "url": "https://www.mpmaterials.com/facilities/"
+    },
+    {
+     "label": "Om selskabet",
+     "url": "https://www.mpmaterials.com/about/"
     }
    ]
   },
