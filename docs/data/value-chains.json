@@ -1356,14 +1356,14 @@
           "id": "grid",
           "icon": "⌒",
           "label": "Elnet, transformere og transmission",
-          "blurb": "Strømmen skal fra kraftværk til datacenter. Det kræver ledninger, transformerstationer og selskaber, der bygger og udstyrer nettet. Quanta, Primoris og MYR Group bygger nettet. De producerer ikke strømmen. Quanta skriver, at West Fort McMurray-projektet i Alberta omfatter over 310 miles 500 kV-ledning og stationerne Livock og Thickwood Hills. Siden kalder det et projekt. Quanta ejer ikke ledningen. MYR skriver, at arbejdet også dækker kommercielle og industrielle anlæg og vedvarende energi. Primoris skriver, at rødderne går tilbage til ARB i Bakersfield i 1960, og at selskabet også bygger infrastruktur frem til datacentre. Det ejer ikke strømmen og ikke datacentret. GE Vernova skriver, at GIS-udstyr dækker fra 50 kV til 800 kV, og at afbrydere til generatorer dækker installationer op til 1.500 MW. Det er udstyr. Selskabet driver ikke værkerne. Solaris leverer strøm tæt på store forbrugere. Selskabet skrev 6. juli 2026, at det har købt GESA. Det er efter beholdningen og er service, ikke et kraftværk i drift.",
-          "ndi": "NDI har skrevet om mangel på transformere, køling og transmissionskapacitet (ugebrev 10. august 2026). Køling hører med i flaskehalsen. Selskaber, der alene laver ventilation, står ikke på dette led.",
+          "blurb": "Strømmen skal fra kraftværk til datacenter. Det kræver ledninger, transformerstationer og selskaber, der bygger og udstyrer nettet. Quanta, Primoris og MYR Group bygger nettet. De producerer ikke strømmen. Quanta skriver, at West Fort McMurray-projektet i Alberta omfatter over 310 miles 500 kV-ledning og stationerne Livock og Thickwood Hills. Siden kalder det et projekt. Quanta ejer ikke ledningen. MYR skriver, at arbejdet også dækker kommercielle og industrielle anlæg og vedvarende energi. Primoris skriver, at rødderne går tilbage til ARB i Bakersfield i 1960, og at selskabet også bygger infrastruktur frem til datacentre. Det ejer ikke strømmen og ikke datacentret. GE Vernova skriver, at GIS-udstyr dækker fra 50 kV til 800 kV, og at afbrydere til generatorer dækker installationer op til 1.500 MW. Det er udstyr. Selskabet driver ikke værkerne. Solaris leverer strøm tæt på store forbrugere. Selskabet skrev 6. juli 2026, at det har købt GESA. Det er efter beholdningen og er service, ikke et kraftværk i drift. Tantalus skriver, at det laver en platform til distributionsnet, med TRUConnect, TRUFlex, TRUGrid, TRUSync og TRUSense. Kontorer står i Raleigh i North Carolina, Norwalk i Connecticut og Burnaby i Canada. Det er udstyr og software. Selskabet driver ikke nettet.",
+          "ndi": "NDI har skrevet om mangel på transformere, køling og transmissionskapacitet (ugebrev 10. august 2026). Køling hører med i flaskehalsen. Selskaber, der alene laver ventilation, står ikke på dette led. Tantalus er software og udstyr til distributionsnet. Selskabet driver ikke nettet.",
           "themes": [
             "energy",
             "physical"
           ],
-          "weightSum": 1.39,
-          "count": 5,
+          "weightSum": 1.55,
+          "count": 6,
           "companies": [
             {
               "isin": "US83418M1036",
@@ -1404,6 +1404,14 @@
               "sym": "MYRG",
               "forslag": true,
               "role": "Bygger transmission, industri og vedvarende energi. Ejer ikke strømmen."
+            },
+            {
+              "isin": "CA87601F1062",
+              "name": "Tantalus Systems",
+              "w": 0.16,
+              "sym": "GRID.TO",
+              "forslag": true,
+              "role": "Platform til distributionsnet. Kontorer i Raleigh, Norwalk og Burnaby. Driver ikke nettet."
             }
           ],
           "seeChain": null
@@ -1412,15 +1420,15 @@
           "id": "storage",
           "icon": "🔋",
           "label": "Energilagring og batterier",
-          "blurb": "Batterier og andre lagre, der kan gemme strøm og aflevere den senere. Lithium til batterierne står under råstoffer. QuantumScape er et batteridesign til køretøjer og nævner også QS PowerBlock til datacentre. Det er ikke masseproduktion og ikke et lager i drift. Fluence leverer batterisystemer og software til nettet og nævner platformen Smartstack. Det er ikke et kraftværk, og teksten siger ikke, at selskabet selv laver cellerne. Eos skriver, at fremstilling af Z3 begyndte i august 2023 på Eos Ingenuity Park i Turtle Creek i Pennsylvania. Det er batterier, ikke en mine og ikke et kraftværk. Solid Power skriver, at det udvikler faststofbatterier og leverer sulfid-elektrolyt og celleteknologi til partnere. Elektrolytsiden skriver, at elektrolytten laves i pilotskala, og at store celler testes på en linje, selskabet kalder skalerbar. Det er ikke masseproduktion. Hovedkontoret ligger på 486 S. Pierce Ave. i Louisville i Colorado. Siden nævner også 14902 Grant Street i Thornton i Colorado. Ordene leading, most advanced og only er ikke taget med. Det er ikke et lager i drift.",
-          "ndi": "NDI nævner batterier som del af energiflaskehalsen (ugebrev 30. marts 2026). Tesla er med, fordi koncernen også laver batterilagring. Solid Power er elektrolyt i pilotskala, ikke masseproduktion.",
+          "blurb": "Batterier og andre lagre, der kan gemme strøm og aflevere den senere. Lithium til batterierne står under råstoffer. QuantumScape er et batteridesign til køretøjer og nævner også QS PowerBlock til datacentre. Det er ikke masseproduktion og ikke et lager i drift. Fluence leverer batterisystemer og software til nettet og nævner platformen Smartstack. Det er ikke et kraftværk, og teksten siger ikke, at selskabet selv laver cellerne. Eos skriver, at fremstilling af Z3 begyndte i august 2023 på Eos Ingenuity Park i Turtle Creek i Pennsylvania. Det er batterier, ikke en mine og ikke et kraftværk. Solid Power skriver, at det udvikler faststofbatterier og leverer sulfid-elektrolyt og celleteknologi til partnere. Elektrolytsiden skriver, at elektrolytten laves i pilotskala, og at store celler testes på en linje, selskabet kalder skalerbar. Det er ikke masseproduktion. Hovedkontoret ligger på 486 S. Pierce Ave. i Louisville i Colorado. Siden nævner også 14902 Grant Street i Thornton i Colorado. Ordene leading, most advanced og only er ikke taget med. Det er ikke et lager i drift. Amprius skriver, at det laver battericeller med siliciumanode. Adressen er 1180 Page Ave i Fremont i Californien. Siden skriver, at selskabet er stiftet i 2008, at fremstilling i kWh-skala begyndte i 2016, og at salg begyndte i 2018. I 2024 satte siden en udvidelse i MWh-skala i gang og nævner GWh-skala som kontraktproduktion hos partnere. Produktionssiden har et afsnit, der hedder Fremont Pilot Production. Pilotlinjen er ikke det samme som partnernes linjer. Det er ikke et lager i drift.",
+          "ndi": "NDI nævner batterier som del af energiflaskehalsen (ugebrev 30. marts 2026). Tesla er med, fordi koncernen også laver batterilagring. Solid Power er elektrolyt i pilotskala, ikke masseproduktion. Amprius har en pilotlinje i Fremont. GWh-skala på siden er kontraktproduktion hos partnere, ikke et målt år.",
           "themes": [
             "energy",
             "physical",
             "andet"
           ],
-          "weightSum": 2.16,
-          "count": 5,
+          "weightSum": 2.37,
+          "count": 6,
           "companies": [
             {
               "isin": "US34379V1035",
@@ -1437,6 +1445,14 @@
               "sym": "TSLA",
               "forslag": false,
               "role": "Batterilagring ved siden af biler og software"
+            },
+            {
+              "isin": "US03214Q1085",
+              "name": "Amprius Technologies",
+              "w": 0.21,
+              "sym": "AMPX",
+              "forslag": true,
+              "role": "Celler med siliciumanode. Pilotlinje i Fremont. GWh-skala er kontraktproduktion hos partnere."
             },
             {
               "isin": "US83422N1054",
