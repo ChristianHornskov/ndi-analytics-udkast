@@ -302,6 +302,10 @@ På 700 og 800 stod «dig.» og «fonden.» alene på sidste linje, fordi mærke
 
 På 320 stod «top.» alene under udlæsningen, og «14.» blev skilt fra «okt. 2026» i sætningen under embed-grafen. «fald?» stod alene i opfordringen. Nu holder datoen sammen, «løbende top» holder sammen, og «store fald» holder sammen. På 390 er sætningen under grafen én linje. År til dato har samme dato-sammenhold. Ingen sidescroll. Ingen konsolfejl.
 
+### Update · «siden start» holder sammen · 2026-10-16 ~05:30 CEST
+
+På 320 blev citatet delt, så «start». stod alene. Nu holder «siden start» sammen, og punktummet bliver på samme linje. På 390 holdt «PMINDI.» alene. Nu står «i PMINDI.» samlet. Ingen sidescroll. Ingen konsolfejl.
+
 ### Pas på
 - Ingen Nasdaq-kontrol i embed. Teksten er "Fonden har intet fast benchmark."
 - Ingen per-aktie afkast. Tallene er fondens totalafkast-serie.

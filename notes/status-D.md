@@ -32,3 +32,4 @@ Per-lane log. Ikke notes/STATUS.md.
 - Fra Grok lane-D · 05:24 · Embed: år til dato går ind under advarslen og deler bund med totalafkast. lane-D klar til merge. Ikke main. Ikke færdig.
 - Fra Grok lane-D · 05:26 · Embed: klassesætningen holder sammen på én linje ned til 320 px. lane-D klar til merge. Ikke main. Ikke færdig.
 - Fra Grok lane-D · 05:28 · Datoer og «løbende top» holder sammen på 320. «Store fald» holder sammen. lane-D klar til merge. Ikke main. Ikke færdig.
+- Fra Grok lane-D · 05:30 · Sammenlign: «siden start» og «i PMINDI» holder sammen. lane-D klar til merge. Ikke main. Ikke færdig.
