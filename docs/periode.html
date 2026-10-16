@@ -79,9 +79,11 @@
  import { loadAll, fundById, calendarYearReturns, ytdReturn, periodReturn, cagr, WARN_HIST, fmtPct, fmtDate, loadFundMeta, kidFooterHtml } from './js/data.js';
  const { portfolio, context } = await loadAll();
  const meta = await loadFundMeta();
- const fundId = new URL(location.href).searchParams.get('fund') || 'pmindi';
- const year = new URL(location.href).searchParams.get('year') || 'YTD';
- const fund = fundById(portfolio, fundId);
+ const params = new URL(location.href).searchParams;
+ const fund = fundById(portfolio, params.get('fund') || 'pmindi');
+ const fundId = fund.id;
+ const rawYear = params.get('year') || 'YTD';
+ const year = /^(YTD|ytd|all|start|\d{4})$/.test(rawYear) ? rawYear : 'YTD';
  const priip = meta?.funds?.[fundId]?.priip;
  const sriHtml = priip
   ? `<p class="band">Risikoindikator <strong>${priip.risk_class}</strong> af ${priip.risk_scale_max} ifølge KID (pr. ${fmtDate(priip.production_date)}). Anbefalet tid ${priip.recommended_holding_years} år. Tallet gælder fonden som helhed, ikke en enkelt periode. <a href="risici.html">Risici</a>.</p><p class="src">${kidFooterHtml(meta)}</p>`
@@ -144,6 +146,7 @@
  } else {
  const years = calendarYearReturns(fund.data);
  const ytd = ytdReturn(fund.data);
+ let known = true;
  let label = year, pct = null, from = '', to = '';
  if (year === 'YTD' || year === 'ytd') {
  label = 'År til dato'; pct = ytd;
@@ -161,7 +164,7 @@
   const openYear = row.to && row.to.slice(5) !== '12-31';
   label = row.year + ((row.partial || openYear) ? ' (delår)' : '');
   pct = row.ret; from = row.from; to = row.to;
- }
+ } else { known = false; label = `Året ${year} står ikke i serien`; }
  }
  const firstNav = fund.data[0].d;
  const lastNav = fund.data[fund.data.length - 1].d;
@@ -236,12 +239,9 @@
   return `<a class="tag" href="periode.html?fund=${fundId}&year=${c.year}">${name}: ${fmtPct(c.ret)}</a>`;
  })
  ].join(' ');
- document.title = `${label} · ${fund.short} · NDI`;
- document.getElementById('main').innerHTML = `
- <a class="back" href="index.html?view=fonden&fund=${fundId}&periode=${year==='YTD'?'ytd':year==='all'?'all':'year:'+year}">← Fonden</a>
- <p class="eyebrow">PERIODE</p>
- <h1>${fund.short} · ${label}</h1>
- <div class="kpi-grid">
+ const backPeriod = (!known || year === 'YTD' || year === 'ytd') ? 'ytd' : (year === 'all' || year === 'start') ? 'all' : ('year:' + year);
+ const head = known
+  ? `<div class="kpi-grid">
  <div class="kpi"><span class="label">Afkast</span><strong class="${(pct||0)>=0?'pos':'neg'}">${fmtPct(pct)}</strong></div>
  <div class="kpi"><span class="label">Fra → til</span><strong style="font-size:16px">${fmtDate(from)} → ${fmtDate(to)}</strong></div>
  <div class="kpi"><span class="label">Gennemsnitligt årligt afkast siden ${fmtDate(firstNav)}</span><strong>${fmtPct(cagr(fund.data))}</strong></div>
@@ -250,7 +250,14 @@
  ${periodSpan(from, to, year)}
  ${seriesMap()}
  ${roleBox}
- ${periodPair()}
+ ${periodPair()}`
+  : `<section class="panel"><p style="color:var(--muted);line-height:1.6">Året ${year} står ikke i serien. Vælg en periode nedenfor. Det er datoer for fonden, ikke et afkast.</p></section>`;
+ document.title = `${label} · ${fund.short} · NDI`;
+ document.getElementById('main').innerHTML = `
+ <a class="back" href="index.html?view=fonden&fund=${fundId}&periode=${backPeriod}">← Fonden</a>
+ <p class="eyebrow">PERIODE</p>
+ <h1>${fund.short} · ${label}</h1>
+ ${head}
  ${sriHtml}
  <section class="panel">
  <h2 style="font-size:16px;margin-bottom:8px">Kontekst</h2>
@@ -261,6 +268,7 @@
  <div style="display:flex;flex-wrap:wrap;gap:8px">${chips}</div>
  </section>
  ${(() => {
+ if (!known) return '';
  const evts = (context?.events || []).filter(e => from && to && e.d >= from && e.d <= to);
  if (!evts.length) return `<section class="panel"><h2 style="font-size:16px;margin-bottom:8px">Dokumenterede begivenheder</h2><p style="color:var(--muted);font-size:13px">Ingen dokumenterede udbytte-events i denne periode.</p></section>`;
  return `<section class="panel"><h2 style="font-size:16px;margin-bottom:8px">Dokumenterede begivenheder</h2>
