@@ -176,7 +176,7 @@
               "forslag": true
             }
           ],
-          "seeChain": null,
+          "seeChain": "energy",
           "shift": "I USA får datacentre i stigende grad lov til at bygge deres egen strøm (NDI-indlæg 30. marts 2026). NDI skriver, at ét års chipproduktion potentielt kan kræve strøm svarende til omkring to tredjedele af USA's installerede kapacitet (NDI-indlæg 10. august 2026).",
           "src": "NDI-indlæg 30. marts 2026 · 10. august 2026",
           "kind": "ndi",
@@ -5137,7 +5137,7 @@
               "role": "Chorus er billeder af Jorden. De to nye satellitter er ikke sendt op. Ikke et datacenter."
             }
           ],
-          "seeChain": null,
+          "seeChain": "ai-compute",
           "facts": [
             "Voyager Technologies: Starlab er et projekt til en rumstation. Det er ikke en station i drift. Selskabet skrev 8. september 2026, at et anlæg i Louisiana igen producerer sortkrudt. Det er efter beholdningen og har ikke med rummet at gøre.",
             "MDA Space: Chorus er satellitter til billeder af Jorden, ikke et datacenter. De to nye er ikke sendt op.",
@@ -5765,7 +5765,7 @@
           "icon": "⚛",
           "label": "Kvantecomputing",
           "blurb": "Computere, der bruger kvantefysik til at løse bestemte typer problemer langt hurtigere. Teknologien er stadig tidlig.",
-          "ndi": "Nævnt som accelererende segment med politisk medvind og store udsving i kurserne — og som eksempel på teknologier med usikre indtægter.",
+          "ndi": "Nævnt som et område i hurtig vækst med politisk opbakning, hvor kurserne svinger meget — og som eksempel på teknologier, hvor det er usikkert, hvornår der kommer indtægter.",
           "themes": [
             "quantum"
           ],
@@ -5806,7 +5806,7 @@
           "kind": "ndi",
           "src": "NDI-indlæg 2. juni 2025 · 7. juli 2025 · 21. juli 2025 · selskabernes egne sider (QCi, D-Wave, Rigetti, IonQ)",
           "brief": {
-            "does": "Bygger computere, der regner med qubits i stedet for almindelige bits.",
+            "does": "Bygger computere, der regner med qubits (kvantebits, der kan være 0 og 1 på samme tid) i stedet for almindelige bits.",
             "why": {
               "k": "Endnu tidligt",
               "t": "Feltet står på trin 2 og 3 af fem: maskinerne laver mange fejl, og man lejer tid på dem over skyen.",
