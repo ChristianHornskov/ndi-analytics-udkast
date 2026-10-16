@@ -101,6 +101,8 @@
  }
  const order = [...groups.entries()].sort((a, b) => (a[0].startsWith('Andet') - b[0].startsWith('Andet')) || b[1].length - a[1].length);
  const slug = (g) => 'lg-' + g.toLowerCase().replace(/[^a-zæøå0-9]+/g, '-').replace(/-+$/, '');
+ // Datafeltets ord → sidens ord (samme som Udforsk efter 06:31). Data ændres ikke.
+ const da = (t) => String(t ?? '').replace(/^NDI-tags$/, 'NDI-temaer').replace(/\s*\(multi-tag\)/gi, '').replace(/Multi-tag: /g, 'To temaer: ').replace(/Multi-tag\./g, 'Flere temaer.').replace(/ikke rating/g, 'ikke en karakter');
  const val = (m) => m.href ? `<a href="${esc(m.href)}">${esc(m.value)}</a>` : esc(m.value);
  const card = ([isin, v]) => {
   const ms = v.metrics || [];
@@ -109,7 +111,7 @@
   const forslag = tag && /forslag/i.test(tag.value);
   const extra = ms.filter(m => m !== tag && m !== own && m !== place && m !== watch && !(m.label === 'Livscyklus' && /ikke klassificeret/i.test(m.value)));
   const detail = [tag, own, place, watch, ...extra].filter(m => m && (m.hint || m === watch || extra.includes(m))).map(m =>
-   `<div class="lens-m"><strong>${esc(m.label)}${/\?$/.test(m.label) ? '' : ':'}</strong> ${m === own || m === place ? '' : `${val(m)}${m.ai ? ` ${AI_BADGE}` : ''}`}${m.hint ? `<span class="lens-hint">${esc(m.hint)}</span>` : ''}</div>`).join('');
+   `<div class="lens-m"><strong>${esc(da(m.label))}${/\?$/.test(m.label) ? '' : ':'}</strong> ${m === own || m === place ? '' : `${val(m)}${m.ai ? ` ${AI_BADGE}` : ''}`}${m.hint ? `<span class="lens-hint">${esc(da(m.hint))}</span>` : ''}</div>`).join('');
   const hay = [v.name, displayName(v), ...ms.map(m => m.value)].join(' ').toLowerCase();
   return `<article class="lens-co" data-q="${esc(hay)}">
    <h3><a href="selskab.html?isin=${encodeURIComponent(isin)}">${esc(displayName(v))}</a>${tag ? ` <span class="lens-tag-f" title="${forslag ? 'Temaet er et forslag og afventer NDI-gennemgang' : 'NDI-tema'}">${esc(tag.value)}</span>` : ''}</h3>
