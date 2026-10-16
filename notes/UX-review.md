@@ -521,3 +521,11 @@ Hele lane-C-fladen ved 375 px: ideer, kort, om-data, invester, risici, ndi-persp
 ## 06:06 CEST lane-C · ndi-perspektiv: livscyklus-formulering
 - `ndi-perspektiv.html`: forklaringen af livscyklus siger nu «kun et maskinelt forslag, som afventer NDI's gennemgang», ikke bare «ikke sat». Det passer med `maturityStatus: forslag` (samme uoverensstemmelse som cyklus 38 SHOULD 1 på selskab.html).
 - **Til Leo (ikke lane-C's fil):** `docs/data/unique-metrics.json` `note` siger «Quantum-metrics er forslag» (engelsk fagord) og «Livscyklus er ikke klassificeret for nogen selskaber endnu». Forslag: «Quantum-temaet er et forslag. Livscyklus findes kun som maskinelt forslag og afventer NDI's gennemgang.»
+
+## 06:13 CEST lane-C · fagord i andre lanes' UI (læst live lokalt, 1280, 12 sider)
+Ordlisten (lane-C) dækker nu ordene. Teksten i UI'et ligger hos andre lanes, så det følgende er **forslag til Leo**:
+1. `fakta.html:415`: hullet vises som «**Revision / auditor**», og ved siden af står «Officiel volatilitet / Sharpe». Engelsk og intern huller-tone på en produktside. Forslag: «Revisor: oplyses i årsrapporten» (link) eller skjul feltet, indtil navnet er kendt.
+2. `vaerdikaeder.html:877`: «multi-tagges også energi». Forslag: «hører også til temaet energi».
+3. `js/app.js:441`: knaptekst «**YTD** dyb side». Forslag: «År til dato i detaljer» (ÅTD bruges andre steder, så det bør være ens).
+4. Livscyklus-tællere på Udforsk: «High growth · GARP · Value» på engelsk. Ordlisten forklarer dem (#g-high-growth, #g-garp, #g-value), men plain dansk ville være «Høj vækst · Vækst med overskud · Moden», som ideer `#h-lc` allerede bruger.
+5. «screener» står i UI på tema/selskab («Åbn i screeneren →»). Ordliste-opslag `#g-screener` er tilføjet. Forslag: kald den «Udforsk» i knapteksten, som i nav.
