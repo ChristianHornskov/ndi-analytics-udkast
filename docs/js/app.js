@@ -1014,7 +1014,7 @@ function renderUdforsk(root) {
       <!-- Følg tema stub skjult indtil tilmelding er aktiv -->
     </div>
     <details class="udforsk-filters" id="udforsk-filters">
-    <summary class="outline-btn small">Filtre (tema, status, modenhed) <span class="muted">· ${state.tags.length + state.maturity.length + (state.status?1:0) + (state.linse?1:0) + (state.skift?1:0)} aktive</span></summary>
+    <summary class="outline-btn small">Filtre (tema, status, modenhed) <span class="muted">· ${(n => n === 1 ? '1 aktivt' : `${n} aktive`)(state.tags.length + state.maturity.length + (state.status?1:0) + (state.linse?1:0) + (state.skift?1:0))}</span></summary>
     <div class="filters" role="group" aria-label="Filtrér på tema">
       ${themes.map((t) => `<button type="button" class="control ${state.tags.includes(t)?'active':''}" data-tag="${t}" aria-pressed="${state.tags.includes(t)}" title="${tagCount[t].prim} med ${daTheme(t)} som primært tema${tagCount[t].multi ? ` + ${tagCount[t].multi} som ekstra tema` : ''}">${daTheme(t)} <small style="opacity:.75">${tagCount[t].prim}${tagCount[t].multi ? ` +${tagCount[t].multi}` : ''}</small></button>`).join('')}
     </div>
