@@ -35,24 +35,6 @@
       "label": "Fra NDI-relateret konto (udkast / markedsføring)"
     },
     {
-      "id": "2087874479141589021",
-      "username": "InvestNewdeal",
-      "name": "NewDeal Invest",
-      "text": "$NVDA $SE $HIMS",
-      "created_at": "2026-08-13T12:10:41.000Z",
-      "url": "https://x.com/InvestNewdeal/status/2087874479141589021",
-      "tags": [
-        "chips",
-        "platforms"
-      ],
-      "tickers": [
-        "NVDA",
-        "SE",
-        "HIMS"
-      ],
-      "label": "Fra NDI-relateret konto (udkast / markedsføring)"
-    },
-    {
       "id": "2072602813142630625",
       "username": "InvestNewdeal",
       "name": "NewDeal Invest",
@@ -369,7 +351,6 @@
       "2081548645808402539"
     ],
     "chips": [
-      "2087874479141589021",
       "2110388749947261403",
       "2110628812753158432",
       "2100358110254952615",
@@ -379,7 +360,6 @@
       "2081548645808402539"
     ],
     "platforms": [
-      "2087874479141589021",
       "2028884313425506598",
       "1918304252847440315",
       "2110628812753158432",
@@ -418,7 +398,6 @@
       "2081548645808402539"
     ],
     "NVDA": [
-      "2087874479141589021",
       "2100358110254952615",
       "2109335734767571448",
       "2110381882529718623",
@@ -426,12 +405,9 @@
       "2081548645808402539"
     ],
     "SE": [
-      "2087874479141589021",
       "2028884313425506598"
     ],
-    "HIMS": [
-      "2087874479141589021"
-    ],
+    "HIMS": [],
     "PMINDI": [
       "2072602813142630625",
       "2013306008832008498"
@@ -476,14 +452,6 @@
       "title": "X · @InvestNewdeal",
       "text": "Kvartalswebinar Q3, resultater og opdatering på mikro, makro, AI og geopolitik",
       "url": "https://x.com/InvestNewdeal/status/2106390787793498165",
-      "kind": "x",
-      "source": "X · NDI-relateret konto (udkast / markedsføring — kan være NDI-holdning)"
-    },
-    {
-      "d": "2026-08-13",
-      "title": "X · @InvestNewdeal",
-      "text": "",
-      "url": "https://x.com/InvestNewdeal/status/2087874479141589021",
       "kind": "x",
       "source": "X · NDI-relateret konto (udkast / markedsføring — kan være NDI-holdning)"
     },
