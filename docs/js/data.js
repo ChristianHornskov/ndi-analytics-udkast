@@ -361,6 +361,22 @@ export function themeDoubt(p) {
   if (p?.themeStatus !== 'forslag' || !p.themeDoubt) return null;
   return { why: p.themeDoubt, alt: p.themeAlt || '' };
 }
+// Læsbart visningsnavn til overskrifter. Beholdningsnavnet (p.name) er depotbankens forkortede navn
+// ("Sea Sp ADR", "SUESS MicroTec N", "Southern Co/The"); det bevares til søgning, sortering og som "beholdningsnavn".
+// Kun sikre omskrivninger: kendte forkortelser, ADR som parentes, tysk "N" (navneaktie) fjernes.
+const NAME_FIX = {
+  'Sea Sp ADR': 'Sea Limited (ADR)', 'Infineon Technolo N': 'Infineon Technologies', 'Taiwan Semi Sp ADR': 'TSMC (ADR)',
+  'Silicon Mot Sp ADR': 'Silicon Motion (ADR)', 'Himax Tech Sp ADR': 'Himax Technologies (ADR)',
+  'CrwdStrik Hldg': 'CrowdStrike Holdings', 'Cslm Digital Asset Acqu - A': 'CSLM Digital Asset Acquisition (A-aktie)',
+};
+export function displayName(p) {
+  const raw = (p?.name || '').trim();
+  if (NAME_FIX[raw]) return NAME_FIX[raw];
+  let n = raw.replace(/^(.*)\/The$/, 'The $1');
+  const adr = /\s+(Sp\s+)?ADR$/i.test(n);
+  n = n.replace(/\s+(Sp\s+)?ADR$/i, '').replace(/(\s|-)N$/, '').replace(/\bHld(n)?gs?\b/g, 'Holdings');
+  return adr ? `${n} (ADR)` : n;
+}
 // Warrants (tegningsretter) ligger som egne positioner med ~0 % vægt, men er ikke selvstændige selskaber.
 // Moderselskabet findes ud fra navnet før "Warrant" (fx "Opendoor Tech Warrant Series A" → "Opendoor Tech").
 export function warrantParent(p, positions = []) {
