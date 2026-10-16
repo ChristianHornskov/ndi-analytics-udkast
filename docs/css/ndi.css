@@ -732,6 +732,17 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
 .stat-strip strong{display:block;margin-top:6px;font-size:26px;font-weight:650;letter-spacing:-.5px;color:var(--text);font-variant-numeric:tabular-nums;line-height:1.05}
 .stat-strip li.now strong{color:var(--yellow);font-size:clamp(28px,4vw,34px)}
 .stat-strip small{display:block;margin-top:4px;font-size:12px;color:var(--faint);line-height:1.35;font-weight:400}
+.under-row{display:grid;grid-template-columns:minmax(0,1fr) 112px;gap:4px 18px;align-items:center;margin:2px 0 4px}
+.under-row .stat-strip{margin:0}
+.depth-well{margin:0;display:flex;justify-content:center}
+.depth-well svg{display:block;overflow:visible}
+.depth-well .well-track{fill:#0b171d;stroke:var(--line);stroke-width:1}
+.depth-well .well-now{fill:var(--ink);stroke:var(--yellow);stroke-width:2}
+.depth-well text{font-family:inherit;font-size:12px}
+.depth-well .well-zero{fill:var(--text)}
+.depth-well .well-nu{fill:var(--yellow)}
+.depth-well .well-floor{fill:var(--neg-ink)}
+.well-note{margin-top:0}
 .share-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin:0 0 16px}
 .share-row .outline-btn{min-height:44px}
 .share-row .src{margin:0;overflow-wrap:anywhere}
@@ -747,6 +758,9 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
   .ep-jump{grid-template-columns:1fr;gap:2px}
   .hero-stat .num{font-size:46px}
   .stat-strip{grid-template-columns:1fr}
+  .under-row{grid-template-columns:112px minmax(0,1fr);gap:8px 12px}
+  .under-row .stat-strip{order:2}
+  .depth-well{order:1}
   .uw-key{display:grid;grid-template-columns:1fr 1fr;gap:8px 12px}
   .uw-key li:last-child{grid-column:1 / -1}
 }
@@ -776,6 +790,9 @@ h2.panel-h,h2.panel-h.brand{display:block;flex:none;min-height:0;align-items:uns
   .year-rail .yr-open .yr-note{color:#333}
   .stat-strip li{background:#fff;border:1px solid #ccc}
   .stat-strip strong,.stat-strip li.now strong{color:#111}
+  .depth-well .well-track{fill:#fff;stroke:#999}
+  .depth-well .well-now{fill:#fff;stroke:#111}
+  .depth-well .well-zero,.depth-well .well-nu,.depth-well .well-floor{fill:#111}
 }
 
 /* UX-inspiration top5: tabular nums + calm motion + as-of */

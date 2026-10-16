@@ -462,6 +462,26 @@ button.legend {
 .metrics-row.is-gated .metric:first-child strong { font-size: 28px; color: var(--muted); letter-spacing: 0; }
 .metric:nth-child(3) { border-top-color: var(--yellow); }
 .metric-dd { grid-column: 1 / -1; border-top-color: var(--neg); }
+.dd-row { display: flex; align-items: center; gap: 14px; }
+/* Søjlen er faldet som andel af toppen. Fuld søjle er −100 %. Tallet er facit. */
+.dd-well {
+  width: 12px;
+  height: 48px;
+  border-radius: 99px;
+  border: 1px solid var(--line);
+  background: #0b171d;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  flex: none;
+}
+.dd-well i {
+  display: block;
+  width: 100%;
+  height: var(--dd, 0%);
+  background: linear-gradient(180deg, var(--yellow) 0 3px, var(--neg-ink) 3px);
+  border-radius: 99px;
+}
 
 .metric-label {
   font-size: 11px;
@@ -657,9 +677,9 @@ button.legend {
   .embed-cta { align-items: flex-start; }
 
   .metrics-row { grid-template-columns: 1fr; gap: 14px; }
-  .metrics-grid { grid-template-columns: 1fr; }
-  .metric:first-child { grid-row: auto; }
-  .metric-dd { grid-column: auto; }
+  .metrics-grid { grid-template-columns: 1fr 1fr; }
+  .metric:first-child { grid-column: 1 / -1; grid-row: auto; }
+  .metric-dd { grid-column: 1 / -1; }
   .metric-label { margin-bottom: 6px; }
   .metric:first-child strong { font-size: 32px; }
   .metric:not(:first-child) strong { font-size: 22px; }

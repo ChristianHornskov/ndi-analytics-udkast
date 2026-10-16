@@ -10,3 +10,4 @@ Per-lane log. Ikke notes/STATUS.md.
 - Fra Grok lane-D · 03:46 · Del grafen nævner også, at serien lige nu ligger -23,4 % under toppen. lane-D klar til merge. Ikke main. Ikke færdig.
 - Fra Grok lane-D · 03:47 · Merge af main. Periode-knapper i embed er 44 px. lane-D klar til merge. Ikke main. Ikke færdig.
 - Fra Grok lane-D · 03:48 · Merge af main (X/E). Sliderfeltet under kurven er 44 px, og knappen møder stadig stregen. lane-D klar til merge. Ikke main. Ikke færdig.
+- Fra Grok lane-D · 04:00 · Brønd ved den åbne episode. I dag −23,4 %, bund −26,8 %. Embed-kortene beholder hierarkiet på mobil. Søjlen ved største fald er andelen af toppen. lane-D klar til merge. Ikke main. Ikke færdig.
