@@ -161,6 +161,27 @@
   .life.is-same .life-stamps{display:flex}
   .life-stamps span{border:1px solid #345860;border-radius:999px;padding:3px 8px;font-size:12px;color:var(--cyan);background:#0b171d}
   .life-foot{margin:8px 0 0;font-size:12px;line-height:1.45;color:var(--faint)}
+  .life.is-cross .life-plot,.life.is-cross .life-ends{display:none}
+  .life-venn{display:none;margin-top:4px}
+  .life.is-cross .life-venn{display:block}
+  .venn-stage{display:grid;grid-template-columns:minmax(0,1fr) 128px minmax(0,1fr);align-items:center;min-height:148px}
+  .venn-wing,.venn-lens{appearance:none;font:inherit;color:inherit;cursor:pointer;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;text-align:center}
+  .venn-wing{position:relative;z-index:1;width:min(100%,168px);aspect-ratio:1;border:1px solid #345860;background:#0b171d;padding:12px}
+  .venn-wing.is-a{justify-self:end;margin-right:-36px}
+  .venn-wing.is-b{justify-self:start;margin-left:-36px}
+  .venn-wing .k{font-size:10px;letter-spacing:.7px;text-transform:uppercase;font-weight:700;color:var(--brand)}
+  .venn-wing b{font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-size:32px;font-weight:500;letter-spacing:-.8px;line-height:.9;color:#9ecfd6}
+  .venn-wing.is-b b{color:#f5ee9e}
+  .venn-wing span{font-size:11px;color:var(--faint)}
+  .venn-lens{position:relative;z-index:2;width:128px;height:128px;border:0;background:radial-gradient(circle at 40% 32%,#fbf6c8,#f5ee9e 58%,#c9b84a);color:#1c1604;box-shadow:0 0 0 6px #0d1c22}
+  .venn-lens .k{font-size:10px;letter-spacing:.8px;text-transform:uppercase;font-weight:700;color:#3d3810}
+  .venn-lens b{font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-size:36px;font-weight:500;letter-spacing:-1px;line-height:.9}
+  .venn-lens span{font-size:11px;color:#3d3810}
+  .venn-wing[aria-pressed="true"]{box-shadow:0 0 0 2px #f5ee9e}
+  .venn-lens[aria-pressed="true"]{box-shadow:0 0 0 6px #0d1c22,0 0 0 8px #f5ee9e}
+  .venn-wing:focus-visible,.venn-lens:focus-visible{outline:2px solid #f5ee9e;outline-offset:3px}
+  .venn-list{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;list-style:none;padding:0;margin:10px 0 0}
+  .venn-list li{border:1px solid #345860;border-radius:999px;padding:3px 8px;font-size:12px;line-height:1.35;color:var(--cyan);background:#0b171d}
   .life-print{display:none}
   @media print{
     .life-ask,.life-note{display:none}
@@ -201,6 +222,9 @@
     .life-lane,.life-bridge,.life-ends{grid-template-columns:86px minmax(0,1fr)}
     .life-when,.life-bridge > :last-child,.life-ends > :last-child{display:none}
     .life-bridge-track b{font-size:16px}
+    .venn-stage{grid-template-columns:1fr;min-height:0;gap:8px;justify-items:center}
+    .venn-wing.is-a,.venn-wing.is-b{margin:0}
+    .venn-wing{width:min(100%,200px)}
   }
  </style>
 </head>
@@ -545,6 +569,38 @@
  const startNote = `PMINDI har juridisk start ${da(aIso)}. PMINDIAKK har juridisk start ${da(bIso)}. Der er ${gap} dage imellem. ${pageEnd ? `Højre ende er sidens dato, ${da(pageIso)}.` : `Højre ende er ${da(max)}.`} Linjen er kalendertid, ikke en kurs og ikke et afkast.`;
  const formNote = `PMINDI er ${formOf(A)}. PMINDIAKK er ${formOf(B)}.${A.productType && A.productType === B.productType ? ` Begge er ${A.productType}.` : ''} Forskellen her er formen. Den er ikke en kurs og ikke en omkostning.`;
  const sameNote = sameBits.length ? `Ens i begge klasser: ${sameBits.join(', ')}. Felterne står i fund-facts.json.` : 'Ingen af de viste stamfelter er ens.';
+ const capWord = (s) => s ? s.charAt(0).toUpperCase() + s.slice(1) : s;
+ const sameFields = [...sameBits];
+ if (sameOngoing) sameFields.push('Øvrige løbende ' + pct(A.costs.otherOngoing));
+ if (sameEntry) {
+ sameFields.push('Emission maks. ' + pct(A.costs.entry));
+ sameFields.push('Indløsning maks. ' + pct(A.costs.exit));
+ }
+ if (!A.costs.performanceFee && !B.costs.performanceFee) sameFields.push('Resultathonorar: Nej');
+ const onlyA = [];
+ const onlyB = [];
+ const formA = formOf(A);
+ const formB = formOf(B);
+ if (formA !== formB) { onlyA.push(capWord(formA)); onlyB.push(capWord(formB)); }
+ if (aIso !== bIso) { onlyA.push('Juridisk start ' + da(aIso)); onlyB.push('Juridisk start ' + da(bIso)); }
+ if (Number(A.costs.portfolioTransaction) !== Number(B.costs.portfolioTransaction)) {
+ onlyA.push('Porteføljetransaktion ' + pct(A.costs.portfolioTransaction));
+ onlyB.push('Porteføljetransaktion ' + pct(B.costs.portfolioTransaction));
+ }
+ if (Number(A.costs.kidRiy5y) !== Number(B.costs.kidRiy5y)) {
+ onlyA.push('KID ved 5 år ' + pct(A.costs.kidRiy5y));
+ onlyB.push('KID ved 5 år ' + pct(B.costs.kidRiy5y));
+ }
+ if (Number(A.costs.kidRiy1y) !== Number(B.costs.kidRiy1y)) {
+ onlyA.push('KID ved 1 år ' + pct(A.costs.kidRiy1y));
+ onlyB.push('KID ved 1 år ' + pct(B.costs.kidRiy1y));
+ }
+ const chipsOf = (arr) => arr.map((s) => `<li>${esc(s)}</li>`).join('');
+ const crossNote = sameFields.length
+ ? `I midten er ${sameFields.length} felter ens: ${sameFields.join(', ')}. Figuren lægger ikke felterne sammen. Den er ikke en kurs og ikke et afkast.`
+ : 'Ingen af de viste felter er ens i begge klasser.';
+ const noteA = `Kun PMINDI: ${onlyA.join(', ')}. KID er ikke en postsats og ikke et ÅOP.`;
+ const noteB = `Kun PMINDIAKK: ${onlyB.join(', ')}. KID er ikke en postsats og ikke et ÅOP.`;
  const lane = (name, form, atPct, when, mod) => `<div class="life-lane${mod}">
  <span class="life-name">${name}<small class="life-form">${esc(form)}</small></span>
  <span class="life-track" aria-hidden="true"><i class="life-run" style="left:${atPct}%;width:${round1(100 - atPct)}%"></i><b class="life-dot" style="left:${atPct}%"></b></span>
@@ -561,12 +617,14 @@
  const mid = round1((aAt + bAt) / 2);
  const stamps = sameBits.map((s) => `<span>${esc(s)}</span>`).join('');
  const sameBtn = sameBits.length ? `<button type="button" role="radio" data-life="same" aria-checked="false" tabindex="-1" data-note="${esc(sameNote)}">Ens</button>` : '';
+ const crossBtn = `<button type="button" role="radio" data-life="cross" aria-checked="false" tabindex="-1" aria-keyshortcuts="c" data-note="${esc(crossNote)}">Kryds<kbd>C</kbd></button>`;
  return `<section class="life is-start" id="klasselinje" data-life="start">
  <div class="life-top"><p class="kicker">KLASSELINJE</p>
  <div class="life-ask" role="radiogroup" aria-label="Hvad klasselinjen viser">
  <button type="button" role="radio" data-life="start" aria-checked="true" aria-keyshortcuts="l" data-note="${esc(startNote)}">Start<kbd>L</kbd></button>
  <button type="button" role="radio" data-life="form" aria-checked="false" tabindex="-1" data-note="${esc(formNote)}">Form</button>
  ${sameBtn}
+ ${crossBtn}
  </div></div>
  <div class="life-plot" role="img" aria-label="${esc(startNote)}">
  ${first}
@@ -576,8 +634,18 @@
  <div class="life-ends" aria-hidden="true"><span></span><span class="life-scale"><i>${esc(da(min))}</i><i>${esc(da(max))}${pageEnd ? ' · sidens dato' : ''}</i></span><span></span></div>
  <p class="life-note" data-life-note>${esc(startNote)}</p>
  <div class="life-stamps">${stamps}</div>
- <p class="life-foot">Juridisk start, form og de ens felter står i fund-facts.json. Linjen er kalendertid. Den er ikke en kurs, ikke et afkast og ikke en omkostning. <a href="fakta.html#klasselinje">Samme linje på fakta →</a></p>
- <div class="life-print"><p>${esc(startNote)}</p><p>${esc(formNote)}</p><p>${esc(sameNote)}</p></div>
+ <div class="life-venn">
+ <div class="venn-stage" role="group" aria-label="${esc(crossNote)}">
+ <button type="button" class="venn-wing is-a" data-venn="a" aria-pressed="false" data-note="${esc(noteA)}" aria-label="Kun PMINDI, ${onlyA.length} felter"><span class="k">Kun PMINDI</span><b>${onlyA.length}</b><span>felter</span></button>
+ <button type="button" class="venn-lens" data-venn="lens" aria-pressed="true" data-note="${esc(crossNote)}" aria-label="Begge klasser, ${sameFields.length} ens felter"><span class="k">Begge</span><b>${sameFields.length}</b><span>ens</span></button>
+ <button type="button" class="venn-wing is-b" data-venn="b" aria-pressed="false" data-note="${esc(noteB)}" aria-label="Kun PMINDIAKK, ${onlyB.length} felter"><span class="k">Kun PMINDIAKK</span><b>${onlyB.length}</b><span>felter</span></button>
+ </div>
+ <ul class="venn-list" data-venn-list="lens">${chipsOf(sameFields)}</ul>
+ <ul class="venn-list" data-venn-list="a" hidden>${chipsOf(onlyA)}</ul>
+ <ul class="venn-list" data-venn-list="b" hidden>${chipsOf(onlyB)}</ul>
+ </div>
+ <p class="life-foot">Juridisk start, form og de ens felter står i fund-facts.json. Linjen er kalendertid. Den er ikke en kurs, ikke et afkast og ikke en omkostning. Tasten C åbner krydset. <a href="?linje=cross#klasselinje">Kryds →</a> <a href="fakta.html?linje=cross#klasselinje">Samme kryds på fakta →</a></p>
+ <div class="life-print"><p>${esc(startNote)}</p><p>${esc(formNote)}</p><p>${esc(sameNote)}</p><p>${esc(crossNote)} ${esc(noteA)} ${esc(noteB)}</p></div>
  </section>`;
  })();
  const plainLead = `<section class="panel" style="margin-bottom:14px">
@@ -773,6 +841,22 @@
  const pegId = id === 'same' ? board.getAttribute('data-same-peg') : board.getAttribute('data-split-peg');
  if (pegId) pickPeg(pegId);
  };
+ const pickVenn = (id) => {
+ const root = document.getElementById('klasselinje');
+ if (!root) return;
+ const buttons = [...root.querySelectorAll('[data-venn]')];
+ const btn = buttons.find((b) => b.getAttribute('data-venn') === id) || buttons.find((b) => b.getAttribute('data-venn') === 'lens');
+ if (!btn) return;
+ buttons.forEach((b) => b.setAttribute('aria-pressed', b === btn ? 'true' : 'false'));
+ const which = btn.getAttribute('data-venn');
+ root.querySelectorAll('[data-venn-list]').forEach((ul) => {
+ ul.hidden = ul.getAttribute('data-venn-list') !== which;
+ });
+ const note = root.querySelector('[data-life-note]');
+ if (note) note.textContent = btn.getAttribute('data-note') || '';
+ const stage = root.querySelector('.venn-stage');
+ if (stage) stage.setAttribute('aria-label', btn.getAttribute('data-note') || '');
+ };
  const pickLife = (id) => {
  const root = document.getElementById('klasselinje');
  if (!root) return;
@@ -784,6 +868,7 @@
  root.classList.toggle('is-start', mode === 'start');
  root.classList.toggle('is-form', mode === 'form');
  root.classList.toggle('is-same', mode === 'same');
+ root.classList.toggle('is-cross', mode === 'cross');
  buttons.forEach((b) => {
  const on = b === btn;
  b.setAttribute('aria-checked', on ? 'true' : 'false');
@@ -793,6 +878,7 @@
  if (note) note.textContent = btn.getAttribute('data-note') || '';
  const plot = root.querySelector('.life-plot');
  if (plot) plot.setAttribute('aria-label', btn.getAttribute('data-note') || '');
+ if (mode === 'cross') pickVenn('lens');
  const u = new URL(location.href);
  if (mode === 'start') u.searchParams.delete('linje');
  else u.searchParams.set('linje', mode);
@@ -801,6 +887,11 @@
  const wantLife = new URL(location.href).searchParams.get('linje');
  if (wantLife) pickLife(wantLife);
  main.addEventListener('click', (e) => {
+ const venn = e.target.closest('[data-venn]');
+ if (venn && venn.closest('#klasselinje')) {
+ pickVenn(venn.getAttribute('data-venn'));
+ return;
+ }
  const life = e.target.closest('[data-life]');
  if (life && life.closest('#klasselinje')) {
  pickLife(life.getAttribute('data-life'));
@@ -847,15 +938,24 @@
  if (e.altKey || e.metaKey || e.ctrlKey || e.shiftKey) return;
  const ae = document.activeElement;
  if (ae && ae.closest('input, textarea, select, [contenteditable="true"]')) return;
- if (e.key === 'l') {
+ if (e.key === 'l' || e.key === 'c') {
  const root = document.getElementById('klasselinje');
  if (!root) return;
+ e.preventDefault();
+ if (e.key === 'c' && root.dataset.life === 'cross') {
+ const order = ['lens', 'a', 'b'];
+ const cur = root.querySelector('[data-venn][aria-pressed="true"]');
+ const i = Math.max(0, order.indexOf(cur && cur.getAttribute('data-venn')));
+ pickVenn(order[(i + 1) % order.length]);
+ } else if (e.key === 'c') {
+ pickLife('cross');
+ } else {
  const buttons = [...root.querySelectorAll('[data-life]')];
  const i = Math.max(0, buttons.findIndex((b) => b.getAttribute('aria-checked') === 'true'));
  const next = buttons[(i + 1) % buttons.length];
  if (!next) return;
- e.preventDefault();
  pickLife(next.getAttribute('data-life'));
+ }
  root.scrollIntoView({ block: 'nearest' });
  return;
  }

@@ -15,7 +15,7 @@
  <meta property="og:image" content="https://christianhornskov.github.io/ndi-analytics-udkast/assets/og-card.png">
  <meta name="twitter:card" content="summary_large_image">
 </head>
-<body>
+<body class="x-archive">
  <a class="skip" href="#main">Gå til indhold</a>
  <header class="site-header">
  <a class="brand" href="index.html"><img src="assets/mark.svg" width="34" height="27" alt=""><span>NewDeal Invest</span></a>
@@ -29,7 +29,7 @@
  </footer>
  <noscript><p style="max-width:1180px;margin:0 auto;padding:0 20px 24px;color:#aac0c7">Siden læser kun den statiske fil. Slå JavaScript til for at se kortene. Browseren kalder ikke X.</p></noscript>
  <script type="module">
- import { loadXPosts, xCard, fmtXDate, highlightHtml, X_LABEL, X_FILTERS, postInFilter, postMatchesQuery, postWho, feedHitKind, archiveHit, xScoreHtml, xPlace, xWhoBarHtml, xWhoDoorHtml, xSpineHtml, xAtlasHtml, xVoicesHtml, xSkyHtml } from './js/x-feed.js';
+ import { loadXPosts, xCard, fmtXDate, highlightHtml, X_LABEL, X_FILTERS, postInFilter, postMatchesQuery, postWho, feedHitKind, archiveHit, xScoreHtml, xPlace, xWhoBarHtml, xWhoDoorHtml, xSpineHtml, xAtlasHtml, xVoicesHtml, xSkyHtml, xWeaveHtml, xKnotMap } from './js/x-feed.js';
  const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
  const main = document.getElementById('main');
  const pack = await loadXPosts();
@@ -85,9 +85,11 @@
  ${post ? `<span class="x-door-q">${highlightHtml(excerpt(post), v === 'chips' ? 'chips' : v)}</span><span class="x-door-by">${byKind} · @${esc(post.username)} · ${esc(fmtXDate(post.created_at))}</span>` : '<span class="x-door-q">Ingen opslag i snapshotet.</span>'}
  </a>`;
 
+ const KNOTS = new Set(['soft-nv', 'soft-chips', 'nv-chips']);
  const read = () => {
  const u = new URL(location.href);
- return { f: u.searchParams.get('f') || 'all', q: u.searchParams.get('q') || '', who: u.searchParams.get('who') || 'all', id: u.searchParams.get('id') || '' };
+ const knot = u.searchParams.get('knot') || '';
+ return { f: u.searchParams.get('f') || 'all', q: u.searchParams.get('q') || '', who: u.searchParams.get('who') || 'all', id: u.searchParams.get('id') || '', knot: KNOTS.has(knot) ? knot : '' };
  };
  const write = (st) => {
  const u = new URL(location.href);
@@ -95,11 +97,19 @@
  if (st.q) u.searchParams.set('q', st.q); else u.searchParams.delete('q');
  if (st.who && st.who !== 'all') u.searchParams.set('who', st.who); else u.searchParams.delete('who');
  if (st.id) u.searchParams.set('id', st.id); else u.searchParams.delete('id');
+ if (st.knot && KNOTS.has(st.knot)) u.searchParams.set('knot', st.knot); else u.searchParams.delete('knot');
  history.replaceState(null, '', u);
  };
  let state = read();
  let focusPicked = Boolean(state.id);
- const apply = (list) => list.filter((p) => postInFilter(p, state.f) && postWho(p, state.who) && postMatchesQuery(p, state.q));
+ const knotScope = () => xKnotMap(posts.filter((p) => postWho(p, state.who)));
+ const apply = (list) => {
+ let out = list.filter((p) => postInFilter(p, state.f) && postWho(p, state.who) && postMatchesQuery(p, state.q));
+ if (!state.knot) return out;
+ const bridge = knotScope().bridges.find((b) => b.id === state.knot);
+ const ids = new Set((bridge?.posts || []).map((p) => String(p.id)));
+ return out.filter((p) => ids.has(String(p.id)));
+ };
  const reasonsFor = (p) => archiveHit(p, { q: state.q, f: state.f }).reasons;
  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -170,9 +180,10 @@
  b.innerHTML = `<span class="x-flab">${whoLabel[id] || id}<span class="x-count">${n}</span></span><span class="x-meter" aria-hidden="true"><i style="width:${share}%"></i></span>`;
  });
  const qn = state.q.trim().toLowerCase();
- const onSoft = state.f === 'all' && ['softbank', '9984.t', '9984', 'sftby'].includes(qn);
- const onNv = state.f === 'all' && ['nvda', 'nvidia'].includes(qn);
- const onChips = state.f === 'chips' && !qn;
+ const knot = state.knot || '';
+ const onSoft = (state.f === 'all' && ['softbank', '9984.t', '9984', 'sftby'].includes(qn)) || knot.startsWith('soft');
+ const onNv = (state.f === 'all' && ['nvda', 'nvidia'].includes(qn)) || knot.includes('nv');
+ const onChips = (state.f === 'chips' && !qn) || knot.includes('chips');
  document.querySelectorAll('[data-spot]').forEach((a) => {
  const id = a.getAttribute('data-spot');
  const on = (id === 'soft' && onSoft) || (id === 'nv' && onNv) || (id === 'chips' && onChips);
@@ -187,7 +198,7 @@
  const render = () => {
  paintFilters();
  const list = apply(posts);
- const topic = posts.filter((p) => postInFilter(p, state.f) && postMatchesQuery(p, state.q));
+ const topicBase = posts.filter((p) => postInFilter(p, state.f) && postMatchesQuery(p, state.q) && postWho(p, state.who));
  const bits = [];
  if (state.q.trim()) bits.push(chip('Søgning: ' + state.q.trim(), 'q'));
  const fLabel = X_FILTERS.find((f) => f.id === state.f);
@@ -196,9 +207,13 @@
  else if (state.who === 'curated') bits.push(chip('Konti NDI følger', 'who'));
  else if (state.who && state.who !== 'all') bits.push(chip('@' + state.who, 'who'));
  active.innerHTML = bits.join('');
+ const knotMap = knotScope();
+ const knotBridge = state.knot ? knotMap.bridges.find((b) => b.id === state.knot) : null;
+ const topic = state.knot ? (knotBridge?.posts || []) : topicBase;
  const focused = bits.length ? ` · ${bits.length === 1 ? 'ét filter' : bits.length + ' filtre'}` : '';
- const leadOn = Boolean(state.q.trim() || state.f !== 'all');
- const voiceBlock = (leadOn && topic.length) ? xVoicesHtml(topic, { q: state.q.trim(), who: state.who }) : '';
+ const leadOn = Boolean(state.q.trim() || state.f !== 'all' || state.knot);
+ const knotQ = state.knot === 'nv-chips' ? 'NVDA' : (state.knot === 'soft-nv' || state.knot === 'soft-chips' ? 'SoftBank' : state.q.trim());
+ const voiceBlock = (leadOn && topic.length) ? xVoicesHtml(topic, { q: knotQ, who: state.who }) : '';
  document.body.classList.toggle('x-focused', leadOn);
  const direct = [];
  const theme = [];
@@ -215,10 +230,12 @@
  if (direct.length) splitBits.push(`${direct.length} direkte`);
  if (theme.length) splitBits.push(`${theme.length} tema`);
  const split = splitBits.length ? ` · ${splitBits.join(' · ')}` : '';
+ const knotBit = knotBridge ? ` · ${knotBridge.sentence.replace(/\.$/, '')}` : '';
  live.textContent = list.length
- ? `${list.length} af ${posts.length} opslag${split}${focused}`
- : `Ingen opslag${focused}`;
- const markQ = state.q.trim() || (state.f === 'chips' ? 'NVDA' : '');
+ ? `${list.length} af ${posts.length} opslag${knotBridge ? '' : split}${knotBit}${focused}`
+ : `Ingen opslag${knotBit}${focused}`;
+ const markQ = state.knot === 'soft-nv' ? 'SoftBank|NVDA' : state.knot === 'soft-chips' ? 'SoftBank' : state.knot === 'nv-chips' ? 'NVDA' : (state.q.trim() || (state.f === 'chips' ? 'NVDA' : ''));
+ const knotReasons = state.knot === 'soft-nv' ? ['SoftBank', 'NVDA'] : state.knot === 'soft-chips' ? ['SoftBank', 'Chips / AI'] : state.knot === 'nv-chips' ? ['NVDA', 'Chips / AI'] : null;
  const laneOf = (kind, cards, mode) => {
  if (!cards.length) return '';
  const film = mode === 'film';
@@ -253,9 +270,12 @@
  if (state.who === 'house') picked.push('NDI-konti');
  else if (state.who === 'curated') picked.push('konti NDI følger');
  else if (state.who && state.who !== 'all') picked.push('@' + state.who);
+ if (knotBridge) picked.push(knotBridge.sentence.replace(/\.$/, ''));
  const pickedLine = picked.length ? ` Aktivt: ${picked.join(' · ')}.` : '';
  const scoreItems = [];
- if (leadOn && list.length) {
+ if (state.knot && list.length) {
+ scoreItems.push({ n: list.length, label: 'fælles', mod: 'is-direct' });
+ } else if (leadOn && list.length) {
  if (direct.length || theme.length) {
  const themeFilter = !state.q.trim() && state.f !== 'all' && state.f !== 'ndi';
  if (direct.length || themeFilter) scoreItems.push({ n: direct.length, label: 'direkte', mod: 'is-direct' });
@@ -267,10 +287,10 @@
  const whoPosts = direct.length ? direct : list;
  const whoBar = scoreItems.length
  ? xWhoBarHtml(whoPosts, {
- q: state.q.trim(),
+ q: knotQ,
  scope: direct.length ? 'direct' : 'all',
  snap: fmtXDate(pack.snapshotAt),
- caption: direct.length && theme.length ? 'kun de direkte' : '',
+ caption: state.knot ? 'i krydset' : (direct.length && theme.length ? 'kun de direkte' : ''),
  })
  : '';
  const scoreBar = scoreItems.length
@@ -284,12 +304,15 @@
  label: `${X_LABEL}. Konto og dato i snapshotet.`,
  ...extra,
  });
+ const qHot = state.q.trim().toLowerCase();
+ const weaveHot = state.knot ? '' : (state.f === 'all' && ['softbank', '9984.t', '9984', 'sftby'].includes(qHot) ? 'soft' : state.f === 'all' && ['nvda', 'nvidia'].includes(qHot) ? 'nv' : state.f === 'chips' && !qHot ? 'chips' : '');
+ const weaveHtml = xWeaveHtml(posts.filter((p) => postWho(p, state.who)), { active: state.knot, hot: weaveHot });
  const homeSlot = document.getElementById('x-spine-home');
  if (homeSlot) {
- homeSlot.innerHTML = leadOn ? '' : atlasOf(list, {
+ homeSlot.innerHTML = weaveHtml + (leadOn ? '' : atlasOf(list, {
  home: true,
  leadId: list[0]?.id || '',
- });
+ }));
  }
  const trackSpine = (leadId, series) => xSpineHtml(posts, {
  leadId: leadId || '',
@@ -312,7 +335,7 @@
  ${emptySpine}
  <p>Ingen af de ${posts.length} opslag i snapshotet rammer det valgte.${pickedLine} Prøv et spor, eller nulstil.</p>
  <p class="x-empty-meter"><span class="x-meter" aria-hidden="true"><i style="width:0%"></i></span><span>0 af ${posts.length}</span></p>
- <p>Tasterne 1, 2 og 3 åbner SoftBank, Nvidia og Chips / AI.</p>
+ <p>Tasterne 1, 2 og 3 åbner SoftBank, Nvidia og Chips / AI. Tast 4 åbner krydset.</p>
  <p>${esc(X_LABEL)}.</p>
  <div class="x-suggest">
  <button type="button" class="outline-btn small" data-jump="q" data-v="SoftBank" data-clear-who>SoftBank</button>
@@ -329,10 +352,13 @@
  + homeLane('is-house', house, 'NDI-konti', 'InvestNewdeal, Mads, Jesper og Christian')
  + homeLane('is-rest', other, 'Andre opslag', 'Hverken en NDI-konto eller mærket fra listen over fulgte konti');
  } else if (!direct.length && !theme.length) {
- const [first, ...tail] = list;
+ const pickedLead = state.id ? list.find((p) => p.id === state.id) : null;
+ const first = pickedLead || list[0];
+ const tail = list.filter((p) => p !== first);
+ const why = knotReasons || reasonsFor(first);
  const atlas = atlasOf(list, { compact: true, pick: false, leadId: first?.id || '', rows: 'hot' });
- grid.innerHTML = trackSpine(first?.id, null) + scoreBar + `<div class="x-split"><div class="x-split-main"><div class="x-stage">${xCard(first, { query: markQ, lead: true, reasons: reasonsFor(first) })}</div></div><div class="x-split-side">${voiceBlock}${atlas}</div></div>`
- + (tail.length ? `<div class="x-grid" style="grid-column:1/-1">${tail.map((p) => xCard(p, { query: markQ })).join('')}</div>` : '');
+ grid.innerHTML = trackSpine(first?.id, null) + scoreBar + `<div class="x-split"><div class="x-split-main"><div class="x-stage">${xCard(first, { query: markQ, lead: true, hitKind: state.knot ? 'direct' : '', reasons: why })}</div></div><div class="x-split-side">${voiceBlock}${atlas}</div></div>`
+ + (tail.length ? `<div class="x-grid" style="grid-column:1/-1">${tail.map((p) => xCard(p, { query: markQ, hitKind: state.knot ? 'direct' : '', reasons: knotReasons || reasonsFor(p) })).join('')}</div>` : '');
  } else {
  const pickFrom = (arr, id) => {
  if (!id) return { lead: arr[0], rest: arr.slice(1) };
@@ -398,9 +424,9 @@
  const mode = el.getAttribute('data-jump');
  const v = el.getAttribute('data-v') || '';
  const clearWho = el.hasAttribute('data-clear-who');
- if (mode === 'reset') state = { f: 'all', q: '', who: 'all' };
- else if (mode === 'q') state = { f: 'all', q: v, who: clearWho ? 'all' : state.who };
- else if (mode === 'f') state = { ...state, f: v, q: '', who: clearWho ? 'all' : state.who };
+ if (mode === 'reset') state = { f: 'all', q: '', who: 'all', knot: '' };
+ else if (mode === 'q') state = { f: 'all', q: v, who: clearWho ? 'all' : state.who, knot: '' };
+ else if (mode === 'f') state = { ...state, f: v, q: '', who: clearWho ? 'all' : state.who, id: '', knot: '' };
  qInput.value = state.q;
  write(state);
  render();
@@ -419,12 +445,22 @@
  const ae = document.activeElement;
  if (ae && ae.closest('input, textarea, select, [contenteditable="true"]')) return;
  if (e.key === 'Escape') {
- if (!(state.q.trim() || state.f !== 'all' || state.who !== 'all' || state.id)) return;
+ if (!(state.q.trim() || state.f !== 'all' || state.who !== 'all' || state.id || state.knot)) return;
  e.preventDefault();
- state = { f: 'all', q: '', who: 'all', id: '' };
+ state = { f: 'all', q: '', who: 'all', id: '', knot: '' };
  qInput.value = '';
  write(state);
  render();
+ return;
+ }
+ if (e.key === '4') {
+ e.preventDefault();
+ const on = state.knot === 'soft-nv';
+ state = { f: 'all', q: '', who: state.who, id: '', knot: on ? '' : 'soft-nv' };
+ qInput.value = '';
+ write(state);
+ render();
+ if (!on) revealHits(true);
  return;
  }
  const spot = { '1': 'soft', '2': 'nv', '3': 'chips' }[e.key];
@@ -442,11 +478,22 @@
  write(state);
  });
  main.addEventListener('click', (e) => {
+ const knotBtn = e.target.closest('[data-knot]');
+ if (knotBtn) {
+ const id = knotBtn.getAttribute('data-knot');
+ const on = state.knot === id;
+ state = { f: 'all', q: '', who: state.who, id: '', knot: on ? '' : id };
+ qInput.value = '';
+ write(state);
+ render();
+ if (!on) revealHits(true);
+ return;
+ }
  const clr = e.target.closest('[data-clear]');
  if (clr) {
  const k = clr.getAttribute('data-clear');
- if (k === 'q') { state = { ...state, q: '' }; qInput.value = ''; }
- if (k === 'f') state = { ...state, f: 'all' };
+ if (k === 'q') { state = { ...state, q: '', knot: '' }; qInput.value = ''; }
+ if (k === 'f') state = { ...state, f: 'all', knot: '' };
  if (k === 'who') state = { ...state, who: 'all' };
  write(state);
  render();
@@ -480,7 +527,7 @@
  const w = e.target.closest('[data-who]');
  if (f) {
  const id = f.getAttribute('data-f');
- state = { ...state, f: state.f === id && id !== 'all' ? 'all' : id };
+ state = { ...state, f: state.f === id && id !== 'all' ? 'all' : id, knot: '' };
  write(state);
  render();
  } else if (w) {
@@ -491,7 +538,7 @@
  }
  });
  qInput.addEventListener('input', () => {
- state = { ...state, q: qInput.value };
+ state = { ...state, q: qInput.value, knot: '' };
  write(state);
  render();
  });
