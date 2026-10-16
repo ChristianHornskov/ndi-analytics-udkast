@@ -424,11 +424,47 @@ button.x-atlas-dot:hover::after{transform:translate(-50%,-50%) scale(1.15)}
 .x-atlas-key i.is-curated{background:#f5ee9e}
 .x-atlas-key i.is-ghost{background:transparent;box-shadow:inset 0 0 0 1.5px #f5ee9e}
 #x-grid > .x-split .x-atlas{margin:0 0 10px}
+.x-voices{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0 0 10px}
+.x-voice{appearance:none;display:flex;flex-direction:column;align-items:flex-start;width:100%;text-align:left;border:1px solid #345860;border-radius:14px;background:#0b171d;color:inherit;font:inherit;padding:8px 10px 9px;min-width:0}
+button.x-voice{cursor:pointer}
+.x-voice.is-house{box-shadow:inset 3px 0 0 #9ecfd6}
+.x-voice.is-curated{box-shadow:inset 3px 0 0 #f5ee9e}
+.x-voice.is-zero{border-style:dashed}
+.x-voice[aria-pressed="true"]{background:#f5ee9e14}
+.x-voice .k{display:block;font-size:10px;letter-spacing:1.1px;text-transform:uppercase;color:var(--brand);font-weight:700}
+.x-voice b{display:block;font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-size:32px;font-weight:500;letter-spacing:-.8px;line-height:.9;color:var(--text);margin:3px 0 4px}
+.x-voice.is-zero b{color:#f5ee9e}
+.x-voice p{margin:0;font-size:12px;line-height:1.35;color:var(--muted)}
+.x-voice small{display:block;margin-top:5px;font-size:11px;line-height:1.35;color:var(--faint)}
+.x-voice:focus-visible{outline:2px solid #f5ee9e;outline-offset:2px}
+.x-voices-other{margin:-2px 0 10px;font-size:12px;line-height:1.35;color:var(--muted)}
+.x-says .x-split-side .x-voice{margin:0}
 @media(max-width:700px){
   .x-atlas{padding:10px}
   .x-atlas-row,.x-atlas.is-compact .x-atlas-row{grid-template-columns:minmax(0,86px) minmax(0,1fr)}
   .x-atlas-name{font-size:11px}
   .x-atlas-end{font-size:10px}
+  .x-voices{grid-template-columns:1fr}
+  .x-voice b{font-size:28px}
+}
+#x-grid > .x-sky,.x-empty .x-sky{grid-column:1 / -1}
+.x-sky{margin:0 0 4px;padding:10px 12px 12px;border:1px solid #345860;border-radius:16px;background:radial-gradient(80% 90% at 100% 0%,rgba(245,238,158,.07),transparent 42%),#0d1c22}
+.x-sky-top{display:flex;justify-content:space-between;gap:8px 12px;align-items:baseline;flex-wrap:wrap;margin:0 0 8px}
+.x-sky-top .k{margin:0;font-size:11px;letter-spacing:1.2px;font-weight:700;color:var(--brand)}
+.x-sky-top p{margin:0;font-size:12px;line-height:1.35;color:var(--faint)}
+.x-sky-row{display:flex;flex-wrap:wrap;gap:8px 6px;align-items:flex-end}
+.x-sky-node{appearance:none;border:0;background:transparent;color:inherit;font:inherit;display:flex;flex-direction:column;align-items:center;gap:2px;cursor:pointer;width:78px;padding:2px 0 0}
+.x-sky-node i{display:block;border-radius:50%;background:radial-gradient(circle at 35% 30%,#e7f3f5,#9ecfd6 46%,#1a4552);box-shadow:inset 0 -6px 10px rgba(5,16,20,.28),0 0 0 1px #0c1c22}
+.x-sky-node.is-zero i{background:transparent;box-shadow:inset 0 0 0 1.5px #617d84}
+.x-sky-node b{font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-size:15px;font-weight:500;letter-spacing:-.3px;line-height:1;color:var(--text);margin-top:2px}
+.x-sky-node.is-zero b{color:#f5ee9e}
+.x-sky-node span{font-size:11px;line-height:1.2;color:var(--muted);text-align:center}
+.x-sky-node[aria-pressed="true"] span{color:#f5ee9e}
+.x-sky-node[aria-pressed="true"] i{box-shadow:0 0 0 2px #f5ee9e}
+.x-sky-node:focus-visible{outline:2px solid #f5ee9e;outline-offset:2px}
+@media(max-width:700px){
+  .x-sky-node{width:68px}
+  .x-sky-row{gap:6px 2px}
 }
 @media(prefers-reduced-motion:reduce){
   button.x-atlas-dot:hover::after{transform:translate(-50%,-50%)}
@@ -800,6 +836,79 @@ export function xWhoDoorHtml(posts) {
   if (split.other) bits.push(b(split.other, 'andre'));
   const say = xWhoSentence(split, { scope: 'all' });
   return `<span class="x-door-who">Hvem · ${bits.join(' · ')}<span class="sr-only"> ${esc(say)}</span></span>`;
+}
+
+function clipVoice(text, n = 72) {
+  const t = String(text || '').replace(/\s+/g, ' ').trim();
+  if (t.length <= n) return t;
+  const cut = t.slice(0, n);
+  const sp = cut.lastIndexOf(' ');
+  return ((sp > 40 ? cut.slice(0, sp) : cut).trim()) + '…';
+}
+
+/**
+ * Two voices in one filter: NDI accounts, and accounts NDI follows.
+ * Counts and the newest line come from the posts passed in. No network.
+ * The followed column carries X_LABEL. Used on the archive, not on house-only panels.
+ */
+export function xVoicesHtml(posts, { q = '', who = 'all' } = {}) {
+  const list = posts || [];
+  if (!list.length) return '';
+  const name = singleCompanyName([q]);
+  const byDate = (arr) => [...arr].sort((a, b) => String(b.created_at || '').localeCompare(String(a.created_at || '')));
+  const house = byDate(list.filter((p) => isHouse(p)));
+  const curated = byDate(list.filter((p) => p.curatedFrom === 'mads_following'));
+  const otherN = list.length - house.length - curated.length;
+  const cell = (kind, arr) => {
+    const id = kind === 'house' ? 'house' : 'curated';
+    const pressed = who === id;
+    const label = kind === 'house' ? 'NDI-konti' : 'Konti NDI følger';
+    let line;
+    if (!arr.length) {
+      if (kind === 'house') line = name ? `Ingen NDI-opslag nævner ${name}.` : 'Ingen NDI-opslag i filteret.';
+      else line = name ? `Ingen opslag fra konti, som NDI følger, nævner ${name}.` : 'Ingen opslag fra konti, som NDI følger, i filteret.';
+    } else {
+      const newest = arr[0];
+      line = `${clipVoice(newest.text)} · @${newest.username} · ${fmtXDate(newest.created_at)}`;
+    }
+    const small = kind === 'curated'
+      ? X_LABEL
+      : (arr.length ? 'Kan være NDI’s holdning.' : 'Selskab og tema viser kun NDI-konti.');
+    return `<button type="button" class="x-voice is-${kind}${arr.length ? '' : ' is-zero'}" data-voice="${id}" aria-pressed="${pressed ? 'true' : 'false'}">
+      <span class="k">${esc(label)}</span>
+      <b>${arr.length}</b>
+      <p>${esc(line)}</p>
+      <small>${esc(small)}</small>
+    </button>`;
+  };
+  const say = xWhoSentence(xWhoSplit(list), { name, scope: 'all' });
+  const other = otherN > 0 ? `<p class="x-voices-other">${otherN === 1 ? '1 er fra en anden konto.' : `${otherN} er fra andre konti.`}</p>` : '';
+  return `<div class="x-voices" role="group" aria-label="${esc(say)} ${esc(X_LABEL)}">${cell('house', house)}${cell('curated', curated)}</div>${other}`;
+}
+
+/**
+ * Theme map for the archive. Circle size follows the count in the posts passed in.
+ * A zero is an empty ring. No network. The label stays on the card.
+ */
+export function xSkyHtml(posts, { active = 'all' } = {}) {
+  const list = posts || [];
+  if (!list.length) return '';
+  const filters = X_FILTERS.filter((f) => f.id !== 'all');
+  const nodes = filters.map((f) => ({ ...f, n: list.filter((p) => postInFilter(p, f.id)).length }));
+  const max = Math.max(...nodes.map((f) => f.n), 1);
+  const btns = nodes.map((f) => {
+    const on = active === f.id;
+    const size = f.n === 0 ? 22 : Math.round(22 + (f.n / max) * 34);
+    const zero = f.n === 0 ? ' is-zero' : '';
+    const word = f.n === 1 ? 'opslag' : 'opslag';
+    return `<button type="button" class="x-sky-node${zero}" data-f="${esc(f.id)}" aria-pressed="${on ? 'true' : 'false'}" aria-label="${esc(f.label)}, ${f.n} ${word}"><i style="width:${size}px;height:${size}px" aria-hidden="true"></i><b>${f.n}</b><span>${esc(f.label)}</span></button>`;
+  }).join('');
+  const zeros = nodes.filter((f) => f.n === 0).map((f) => f.label);
+  const zeroLine = zeros.length ? ` Tomme emner: ${zeros.join(', ')}.` : '';
+  return `<div class="x-sky" role="group" aria-label="Emnekort. ${esc(X_LABEL)}">
+    <div class="x-sky-top"><p class="k">Emnekort</p><p>Cirklen følger antallet i det viste udsnit.${esc(zeroLine)} ${esc(X_LABEL)}.</p></div>
+    <div class="x-sky-row">${btns}</div>
+  </div>`;
 }
 
 /**
@@ -1496,9 +1605,14 @@ export function xSaysPanel(pack, { tickers = [], themes = [], limit = 4, title =
     const leadHit = view.theme[0];
     const restThemeOnly = view.theme.slice(1);
     const place = xPlace(view.theme.map((h) => h.post), leadHit.post.id);
-    const notice = `<div class="x-stage x-no-direct">
-  <p class="k">Ingen NDI-opslag nævner ${who ? name : 'navnet'}</p>
-  <p>Panelet er kun NDI-konti. Citatet deler tema.${who ? ` Det nævner ikke ${name}.` : ' Det nævner ikke en ticker fra udsnittet.'}</p>
+    const seatLine = who
+      ? `Ingen NDI-opslag nævner ${name}. Citatet deler tema og nævner ikke ${name}.`
+      : 'Ingen NDI-opslag er et direkte træf. Citatet deler tema og nævner ikke en ticker fra udsnittet.';
+    const emptySeat = `<div class="x-voice is-house is-zero" role="note">
+  <span class="k">Direkte</span>
+  <b>0</b>
+  <p>${seatLine}</p>
+  <small>Panelet er kun NDI-konti.</small>
 </div>`;
     const quote = `<div class="x-stage">${xCard(leadHit.post, {
       reasons: leadHit.reasons,
@@ -1509,7 +1623,7 @@ export function xSaysPanel(pack, { tickers = [], themes = [], limit = 4, title =
       place: restThemeOnly.length ? place : null,
     })}</div>`;
     belowLane = restThemeOnly.length ? lane('theme', restThemeOnly, 'film', 'theme') : '';
-    stage = notice + quote;
+    stage = `<div class="x-split"><div class="x-split-main">${quote}</div><div class="x-split-side">${emptySeat}</div></div>`;
   } else {
     const quote = `<div class="x-stage">${xCard(leadHit.post, {
       reasons: leadHit.reasons,

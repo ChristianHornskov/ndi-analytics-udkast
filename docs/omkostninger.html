@@ -117,6 +117,57 @@
   .peg-ends .peg-scale{grid-column:2;display:flex;justify-content:space-between;font-size:11px;color:var(--faint)}
   .peg-note{margin:0;font-size:14px;line-height:1.45;color:var(--text)}
   .peg-foot{margin:6px 0 0;font-size:12px;line-height:1.45;color:var(--faint)}
+  .peg-board{position:relative}
+  .peg-ask{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 8px}
+  .peg-ask button{appearance:none;border:1px solid #345860;background:#0b171d;color:var(--muted);border-radius:999px;padding:4px 10px;font:inherit;font-size:12px;cursor:pointer;min-height:32px;display:inline-flex;align-items:center;gap:6px}
+  .peg-ask button kbd{font:inherit;font-size:10px;letter-spacing:.4px;color:var(--faint);border:1px solid #345860;border-radius:4px;padding:0 4px}
+  .peg-ask button[aria-checked="true"]{border-color:#f5ee9e88;color:var(--text);box-shadow:inset 0 -2px 0 #f5ee9e}
+  .peg-ask button:focus-visible{outline:2px solid #f5ee9e;outline-offset:2px}
+  .peg-board.is-kid .peg-row{opacity:.4}
+  .peg-board.is-kid .peg-note{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  .peg-over{margin:2px 0 8px}
+  .peg-over-row{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1.15fr);gap:8px;align-items:center}
+  .peg-over-scale{height:16px;border-radius:99px;background:#0b171d;box-shadow:inset 0 0 0 1px #2a424a;display:flex;align-items:center;justify-content:space-between;padding:0 8px;font-size:11px;color:var(--faint)}
+  .peg-over-break{font-size:10px;letter-spacing:.6px;text-transform:uppercase;color:#f5ee9e;border-bottom:2px dashed #f5ee9e88;padding:0 2px 2px;white-space:nowrap}
+  .peg-over-off{display:flex;flex-wrap:wrap;gap:2px 8px;align-items:baseline;background:#0b171d;border:1px dashed #f5ee9e88;border-radius:12px;padding:6px 10px;min-width:0}
+  .peg-over-off b{font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-size:22px;font-weight:500;color:#f5ee9e;letter-spacing:-.4px}
+  .peg-over-off i{flex-basis:100%;font-style:normal;font-size:11px;color:var(--faint)}
+  .peg-over-say{margin:6px 0 0;font-size:14px;line-height:1.45;color:var(--text)}
+  .life{margin:0 0 14px;padding:12px 14px 12px;border:1px solid #345860;border-radius:16px;background:radial-gradient(80% 90% at 0% 0%,rgba(158,207,214,.1),transparent 46%),#0d1c22;scroll-margin-top:84px}
+  .life-top{display:flex;justify-content:space-between;gap:8px 12px;align-items:center;flex-wrap:wrap;margin:0 0 8px}
+  .life-top .kicker{margin:0}
+  .life-ask{display:flex;flex-wrap:wrap;gap:6px}
+  .life-ask button{appearance:none;border:1px solid #345860;background:#0b171d;color:var(--muted);border-radius:999px;padding:4px 10px;font:inherit;font-size:12px;cursor:pointer;min-height:32px;display:inline-flex;align-items:center;gap:6px}
+  .life-ask button kbd{font:inherit;font-size:10px;letter-spacing:.4px;color:var(--faint);border:1px solid #345860;border-radius:4px;padding:0 4px}
+  .life-ask button[aria-checked="true"]{border-color:#f5ee9e88;color:var(--text);box-shadow:inset 0 -2px 0 #f5ee9e}
+  .life-ask button:focus-visible{outline:2px solid #f5ee9e;outline-offset:2px}
+  .life-lane,.life-bridge,.life-ends{display:grid;grid-template-columns:104px minmax(0,1fr) auto;gap:8px;align-items:center}
+  .life-name{font-size:12px;font-weight:600;color:#9ecfd6;line-height:1.15}
+  .life-lane.is-b .life-name{color:#f5ee9e}
+  .life-form{display:block;font-weight:500;font-size:11px;color:var(--faint)}
+  .life.is-form .life-form{color:#f5ee9e}
+  .life-track,.life-bridge-track{position:relative;height:22px;margin:0 6px}
+  .life-run{position:absolute;top:50%;height:3px;transform:translateY(-50%);border-radius:99px;background:#9ecfd6}
+  .life-lane.is-b .life-run{background:#f5ee9e}
+  .life-dot{position:absolute;top:50%;width:12px;height:12px;margin:0;border-radius:50%;transform:translate(-50%,-50%);background:#9ecfd6;border:2px solid #0c1c22;z-index:1}
+  .life-lane.is-b .life-dot{background:#f5ee9e}
+  .life-when{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+  .life-bridge-track i{position:absolute;top:50%;height:0;border-top:1px dashed #f5ee9e88}
+  .life-bridge-track b{position:absolute;top:50%;transform:translate(-50%,-50%);font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;font-size:18px;font-weight:500;letter-spacing:-.3px;color:#f5ee9e;background:#0d1c22;padding:0 5px;white-space:nowrap}
+  .life.is-form .life-bridge-track b,.life.is-same .life-bridge-track b{color:var(--muted)}
+  .life-scale{display:flex;justify-content:space-between;gap:8px;font-size:11px;color:var(--faint)}
+  .life-note{margin:8px 0 0;font-size:14px;line-height:1.45;color:var(--text)}
+  .life-stamps{display:none;flex-wrap:wrap;gap:6px;margin:8px 0 0}
+  .life.is-same .life-stamps{display:flex}
+  .life-stamps span{border:1px solid #345860;border-radius:999px;padding:3px 8px;font-size:12px;color:var(--cyan);background:#0b171d}
+  .life-foot{margin:8px 0 0;font-size:12px;line-height:1.45;color:var(--faint)}
+  .life-print{display:none}
+  @media print{
+    .life-ask,.life-note{display:none}
+    .life-print{display:block;margin-top:8px;font-size:12px;line-height:1.45}
+    .life-print p{margin:0 0 4px}
+    .life-stamps{display:flex}
+  }
   #kid-omkostning tr.is-on td:first-child{box-shadow:inset 3px 0 0 #f5ee9e;color:var(--text)}
   .kr-chips{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;list-style:none;padding:8px 0 0;margin:8px 0 0;border-top:1px solid #345860}
   .kr-chips li{background:#0b171d;border:1px solid #345860;border-radius:12px;padding:8px 10px 7px;min-width:0}
@@ -145,6 +196,11 @@
     .peg-val{text-align:left}
     .peg-ends{grid-template-columns:1fr;padding:0}
     .peg-ends .peg-scale{grid-column:1}
+    .peg-over-row{grid-template-columns:1fr}
+    .peg-over-off b{font-size:20px}
+    .life-lane,.life-bridge,.life-ends{grid-template-columns:86px minmax(0,1fr)}
+    .life-when,.life-bridge > :last-child,.life-ends > :last-child{display:none}
+    .life-bridge-track b{font-size:16px}
   }
  </style>
 </head>
@@ -422,17 +478,108 @@
  },
  ];
  const pegStart = pegItems.find((it) => Number(it.a) !== Number(it.b)) || pegItems[0];
+ const samePeg = pegItems.find((it) => Number(it.a) === Number(it.b)) || pegStart;
  const kidOver = h5 && (Number(a.kidRiy5y) > pegScale || Number(b.kidRiy5y) > pegScale);
  const feeBit = feeNo ? ' Ingen af klasserne betaler resultathonorar, ifølge Fundmarket.' : '';
- const pegBoard = `<section class="peg-board" id="satskort">
- <div class="peg-top"><p class="kicker">POSTSATSER</p><p>Én skala, 0 til ${pct(pegScale)}. Afstanden følger satsen.</p></div>
+ const kidBits = [];
+ if (h5) kidBits.push(`KID ved 5 år er ${h5.pctA} og ${h5.pctB}`);
+ if (h1) kidBits.push(`KID ved 1 år er ${h1.pctA} og ${h1.pctB}`);
+ const kidPlateNote = kidBits.length
+ ? `${kidBits.join('. ')}. ${kidOver ? 'Tallene ligger over skalaen og er ikke tegnet.' : 'Tallene er ikke tegnet på postsatsskalaen.'} Det er et andet tal end postsatserne. Ikke et ÅOP.`
+ : '';
+ const kidPair = h5 || h1;
+ const kidPlate = kidPlateNote ? `<div class="peg-over" hidden>
+ <div class="peg-over-row" aria-hidden="true">
+ <span class="peg-over-scale"><i>0 %</i><i>${pct(pegScale)}</i></span>
+ <span class="peg-over-break">skalaen stopper</span>
+ <span class="peg-over-off"><b>${kidPair.pctA}</b><b>${kidPair.pctB}</b><i>KID ved ${kidPair.y} år · ikke tegnet</i></span>
+ </div>
+ </div>` : '';
+ const askKid = kidPlateNote ? `<button type="button" role="radio" data-ask="kid" aria-checked="false" tabindex="-1" aria-keyshortcuts="k">Hvor er KID?<kbd>K</kbd></button>` : '';
+ const pegBoard = `<section class="peg-board" id="satskort" data-split-peg="${pegStart.id}" data-same-peg="${samePeg.id}">
+ <div class="peg-top"><p class="kicker">POSTSATSER</p><p>Én skala, 0 til ${pct(pegScale)}. Afstanden følger satsen. KID er ikke på skalaen.</p></div>
+ <div class="peg-ask" role="radiogroup" aria-label="Hvad tallet svarer på">
+ <button type="button" role="radio" class="is-on" data-ask="split" aria-checked="true" aria-keyshortcuts="s">Hvad skiller?<kbd>S</kbd></button>
+ <button type="button" role="radio" data-ask="same" aria-checked="false" tabindex="-1" aria-keyshortcuts="e">Hvad er ens?<kbd>E</kbd></button>
+ ${askKid}
+ </div>
  <div role="radiogroup" aria-label="Postsatser på én skala">
- ${pegItems.map((it) => `<button type="button" class="peg-row${it.id === pegStart.id ? ' is-on' : ''}" role="radio" data-peg="${it.id}" tabindex="${it.id === pegStart.id ? '0' : '-1'}" aria-checked="${it.id === pegStart.id ? 'true' : 'false'}" data-note="${esc(it.note)}"><span class="peg-name">${esc(it.label)}</span><span class="peg-track" aria-hidden="true">${pegDots(it.a, it.b)}</span><span class="peg-val">${pegVal(it.a, it.b)}</span></button>`).join('')}
+ ${pegItems.map((it) => `<button type="button" class="peg-row${it.id === pegStart.id ? ' is-on' : ''}" role="radio" data-peg="${it.id}" data-differ="${Number(it.a) !== Number(it.b) ? '1' : '0'}" tabindex="${it.id === pegStart.id ? '0' : '-1'}" aria-checked="${it.id === pegStart.id ? 'true' : 'false'}" data-note="${esc(it.note)}"><span class="peg-name">${esc(it.label)}</span><span class="peg-track" aria-hidden="true">${pegDots(it.a, it.b)}</span><span class="peg-val">${pegVal(it.a, it.b)}</span></button>`).join('')}
  </div>
  <div class="peg-ends" aria-hidden="true"><span class="peg-scale"><i>0 %</i><i>${pct(pegScale)}</i></span></div>
+ ${kidPlate}
+ <p class="sr-only" data-kid-note>${esc(kidPlateNote)}</p>
  <p class="peg-note" data-peg-note aria-live="polite">${esc(pegStart.note)}</p>
  <p class="peg-foot">${h5 ? `KID ved 5 år er ${h5.pctA} og ${h5.pctB}. ${kidOver ? 'Tallet ligger over skalaen og er et andet tal end postsatserne.' : 'Det er et andet tal end postsatserne.'}` : ''}${feeBit} Linjerne er ikke lagt sammen. <a href="fakta.html#satskort">Samme kort på fakta →</a></p>
  </section>`;
+ const lifeHtml = (() => {
+ const iso = (v) => String(v || '').slice(0, 10);
+ const aIso = iso(A.legalInception);
+ const bIso = iso(B.legalInception);
+ if (!/^\d{4}-\d{2}-\d{2}$/.test(aIso) || !/^\d{4}-\d{2}-\d{2}$/.test(bIso)) return '';
+ const pageIso = '2026-10-16';
+ const da = (s) => {
+ const d = new Date(s + 'T12:00:00');
+ if (Number.isNaN(d.getTime())) return s;
+ return d.toLocaleDateString('da-DK', { year: 'numeric', month: 'short', day: 'numeric' });
+ };
+ const t = (s) => new Date(s + 'T12:00:00').getTime();
+ const days = (x, y) => Math.round((t(y) - t(x)) / 86400000);
+ const round1 = (n) => Math.round(Number(n) * 10) / 10;
+ const min = aIso < bIso ? aIso : bIso;
+ const max = [aIso, bIso, pageIso].sort().at(-1);
+ const span = Math.max(t(max) - t(min), 1);
+ const at = (s) => round1(((t(s) - t(min)) / span) * 100);
+ const aAt = at(aIso);
+ const bAt = at(bIso);
+ const gap = Math.abs(days(aIso, bIso));
+ const pageEnd = max === pageIso;
+ const formOf = (cl) => cl.distributing ? 'udloddende' : 'akkumulerende';
+ const sameBits = [];
+ if (A.productType && A.productType === B.productType) sameBits.push(String(A.productType));
+ if (A.esg && A.esg === B.esg) sameBits.push(String(A.esg));
+ if (A.benchmark && A.benchmark === B.benchmark) sameBits.push('Benchmark: ' + A.benchmark);
+ if (A.listed === B.listed) sameBits.push(A.listed ? 'Børsnoteret' : 'Ikke børsnoteret');
+ if (A.sri === B.sri && A.sriMax === B.sriMax) sameBits.push(`SRI ${A.sri} af ${A.sriMax}`);
+ if (A.horizonYears === B.horizonYears) sameBits.push(`Horisont ${A.horizonYears} år`);
+ const startNote = `PMINDI har juridisk start ${da(aIso)}. PMINDIAKK har juridisk start ${da(bIso)}. Der er ${gap} dage imellem. ${pageEnd ? `Højre ende er sidens dato, ${da(pageIso)}.` : `Højre ende er ${da(max)}.`} Linjen er kalendertid, ikke en kurs og ikke et afkast.`;
+ const formNote = `PMINDI er ${formOf(A)}. PMINDIAKK er ${formOf(B)}.${A.productType && A.productType === B.productType ? ` Begge er ${A.productType}.` : ''} Forskellen her er formen. Den er ikke en kurs og ikke en omkostning.`;
+ const sameNote = sameBits.length ? `Ens i begge klasser: ${sameBits.join(', ')}. Felterne står i fund-facts.json.` : 'Ingen af de viste stamfelter er ens.';
+ const lane = (name, form, atPct, when, mod) => `<div class="life-lane${mod}">
+ <span class="life-name">${name}<small class="life-form">${esc(form)}</small></span>
+ <span class="life-track" aria-hidden="true"><i class="life-run" style="left:${atPct}%;width:${round1(100 - atPct)}%"></i><b class="life-dot" style="left:${atPct}%"></b></span>
+ <span class="life-when">${esc(when)}</span>
+ </div>`;
+ const first = aIso <= bIso
+ ? lane('PMINDI', formOf(A), aAt, da(aIso), '')
+ : lane('PMINDIAKK', formOf(B), bAt, da(bIso), ' is-b');
+ const second = aIso <= bIso
+ ? lane('PMINDIAKK', formOf(B), bAt, da(bIso), ' is-b')
+ : lane('PMINDI', formOf(A), aAt, da(aIso), '');
+ const bridgeL = Math.min(aAt, bAt);
+ const bridgeW = round1(Math.abs(bAt - aAt));
+ const mid = round1((aAt + bAt) / 2);
+ const stamps = sameBits.map((s) => `<span>${esc(s)}</span>`).join('');
+ const sameBtn = sameBits.length ? `<button type="button" role="radio" data-life="same" aria-checked="false" tabindex="-1" data-note="${esc(sameNote)}">Ens</button>` : '';
+ return `<section class="life is-start" id="klasselinje" data-life="start">
+ <div class="life-top"><p class="kicker">KLASSELINJE</p>
+ <div class="life-ask" role="radiogroup" aria-label="Hvad klasselinjen viser">
+ <button type="button" role="radio" data-life="start" aria-checked="true" aria-keyshortcuts="l" data-note="${esc(startNote)}">Start<kbd>L</kbd></button>
+ <button type="button" role="radio" data-life="form" aria-checked="false" tabindex="-1" data-note="${esc(formNote)}">Form</button>
+ ${sameBtn}
+ </div></div>
+ <div class="life-plot" role="img" aria-label="${esc(startNote)}">
+ ${first}
+ <div class="life-bridge" aria-hidden="true"><span></span><span class="life-bridge-track"><i style="left:${bridgeL}%;width:${bridgeW}%"></i><b style="left:${mid}%">${gap} dage</b></span><span></span></div>
+ ${second}
+ </div>
+ <div class="life-ends" aria-hidden="true"><span></span><span class="life-scale"><i>${esc(da(min))}</i><i>${esc(da(max))}${pageEnd ? ' · sidens dato' : ''}</i></span><span></span></div>
+ <p class="life-note" data-life-note>${esc(startNote)}</p>
+ <div class="life-stamps">${stamps}</div>
+ <p class="life-foot">Juridisk start, form og de ens felter står i fund-facts.json. Linjen er kalendertid. Den er ikke en kurs, ikke et afkast og ikke en omkostning. <a href="fakta.html#klasselinje">Samme linje på fakta →</a></p>
+ <div class="life-print"><p>${esc(startNote)}</p><p>${esc(formNote)}</p><p>${esc(sameNote)}</p></div>
+ </section>`;
+ })();
  const plainLead = `<section class="panel" style="margin-bottom:14px">
  <p style="font-size:18px;color:var(--text);line-height:1.45;margin:0">Ca. <strong>2,8&nbsp;% om året</strong> — det er KID’s samlede omkostningsindikator ved 5 år (PMINDI <strong>${pct(a.kidRiy5y)}</strong> / PMINDIAKK <strong>${pct(b.kidRiy5y)}</strong>). På 100.000&nbsp;kr. svarer det til ca. <strong>${kr(a.kidRiy5y)}</strong> / <strong>${kr(b.kidRiy5y)}</strong> om året. Hertil kommer din banks kurtage og depot. Intet resultathonorar. Du kan tabe penge.</p>
  </section>`;
@@ -447,6 +594,7 @@
  <h1>Hvad koster fonden?</h1>
  ${plainLead}
  ${pegBoard}
+ ${lifeHtml}
  ${detailHero}
  <div class="metrics">
  <div class="metric"><div class="label">KID · årlig konsekvens (1 år)</div><strong>${pct(a.kidRiy1y)} / ${pct(b.kidRiy1y)}</strong><small>${h1 ? `forskel ${h1.gap}${sameKr ? ' · samme beløb som postsatsen' : ''} · ikke det samme tal` : 'PMINDI / PMINDIAKK · KID'}</small></div>
@@ -582,6 +730,20 @@
  document.getElementById('blik')?.scrollIntoView({ block: 'nearest' });
  return true;
  };
+ const setAsk = (id) => {
+ const board = document.getElementById('satskort');
+ if (!board) return;
+ board.querySelectorAll('[data-ask]').forEach((b) => {
+ const on = b.getAttribute('data-ask') === id;
+ b.classList.toggle('is-on', on);
+ b.setAttribute('aria-checked', on ? 'true' : 'false');
+ b.tabIndex = on ? 0 : -1;
+ });
+ const kid = id === 'kid';
+ board.classList.toggle('is-kid', kid);
+ const over = board.querySelector('.peg-over');
+ if (over) over.hidden = !kid;
+ };
  const pickPeg = (id) => {
  const board = document.getElementById('satskort');
  if (!board) return;
@@ -596,8 +758,59 @@
  });
  const note = board.querySelector('[data-peg-note]');
  if (note) note.textContent = btn.getAttribute('data-note') || '';
+ setAsk(btn.getAttribute('data-differ') === '1' ? 'split' : 'same');
  };
+ const pickAsk = (id) => {
+ const board = document.getElementById('satskort');
+ if (!board) return;
+ if (id === 'kid') {
+ setAsk('kid');
+ const note = board.querySelector('[data-peg-note]');
+ const src = board.querySelector('[data-kid-note]');
+ if (note && src) note.textContent = src.textContent || '';
+ return;
+ }
+ const pegId = id === 'same' ? board.getAttribute('data-same-peg') : board.getAttribute('data-split-peg');
+ if (pegId) pickPeg(pegId);
+ };
+ const pickLife = (id) => {
+ const root = document.getElementById('klasselinje');
+ if (!root) return;
+ const buttons = [...root.querySelectorAll('[data-life]')];
+ const btn = buttons.find((b) => b.getAttribute('data-life') === id) || buttons[0];
+ if (!btn) return;
+ const mode = btn.getAttribute('data-life');
+ root.dataset.life = mode;
+ root.classList.toggle('is-start', mode === 'start');
+ root.classList.toggle('is-form', mode === 'form');
+ root.classList.toggle('is-same', mode === 'same');
+ buttons.forEach((b) => {
+ const on = b === btn;
+ b.setAttribute('aria-checked', on ? 'true' : 'false');
+ b.tabIndex = on ? 0 : -1;
+ });
+ const note = root.querySelector('[data-life-note]');
+ if (note) note.textContent = btn.getAttribute('data-note') || '';
+ const plot = root.querySelector('.life-plot');
+ if (plot) plot.setAttribute('aria-label', btn.getAttribute('data-note') || '');
+ const u = new URL(location.href);
+ if (mode === 'start') u.searchParams.delete('linje');
+ else u.searchParams.set('linje', mode);
+ history.replaceState(null, '', u);
+ };
+ const wantLife = new URL(location.href).searchParams.get('linje');
+ if (wantLife) pickLife(wantLife);
  main.addEventListener('click', (e) => {
+ const life = e.target.closest('[data-life]');
+ if (life && life.closest('#klasselinje')) {
+ pickLife(life.getAttribute('data-life'));
+ return;
+ }
+ const ask = e.target.closest('[data-ask]');
+ if (ask && ask.closest('#satskort')) {
+ pickAsk(ask.getAttribute('data-ask'));
+ return;
+ }
  const peg = e.target.closest('[data-peg]');
  if (peg && peg.closest('#satskort')) {
  pickPeg(peg.getAttribute('data-peg'));
@@ -609,8 +822,19 @@
  openPair();
  });
  main.addEventListener('keydown', (e) => {
+ const lifeBtn = e.target.closest && e.target.closest('#klasselinje [data-life]');
+ if (lifeBtn && (e.key === 'ArrowLeft' || e.key === 'ArrowRight')) {
+ const buttons = [...document.querySelectorAll('#klasselinje [data-life]')];
+ const i = buttons.indexOf(lifeBtn);
+ const next = buttons[i + (e.key === 'ArrowRight' ? 1 : -1)];
+ if (!next) return;
+ e.preventDefault();
+ pickLife(next.getAttribute('data-life'));
+ next.focus();
+ return;
+ }
  if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
- if (!e.target.closest || !e.target.closest('#satskort')) return;
+ if (!e.target.closest || !e.target.closest('#satskort [data-peg]')) return;
  const buttons = [...document.querySelectorAll('#satskort [data-peg]')];
  const i = buttons.findIndex((b) => b.getAttribute('aria-checked') === 'true');
  const next = buttons[i + (e.key === 'ArrowDown' ? 1 : -1)];
@@ -621,9 +845,29 @@
  });
  window.addEventListener('keydown', (e) => {
  if (e.altKey || e.metaKey || e.ctrlKey || e.shiftKey) return;
- if (e.key !== '1' && e.key !== '5') return;
  const ae = document.activeElement;
  if (ae && ae.closest('input, textarea, select, [contenteditable="true"]')) return;
+ if (e.key === 'l') {
+ const root = document.getElementById('klasselinje');
+ if (!root) return;
+ const buttons = [...root.querySelectorAll('[data-life]')];
+ const i = Math.max(0, buttons.findIndex((b) => b.getAttribute('aria-checked') === 'true'));
+ const next = buttons[(i + 1) % buttons.length];
+ if (!next) return;
+ e.preventDefault();
+ pickLife(next.getAttribute('data-life'));
+ root.scrollIntoView({ block: 'nearest' });
+ return;
+ }
+ const askKey = { s: 'split', e: 'same', k: 'kid' }[e.key];
+ if (askKey) {
+ const askBtn = document.querySelector(`#satskort [data-ask="${askKey}"]`);
+ if (!askBtn) return;
+ e.preventDefault();
+ pickAsk(askKey);
+ return;
+ }
+ if (e.key !== '1' && e.key !== '5') return;
  if (!document.querySelector(`#kid-hero [data-kid="${e.key}"]`)) return;
  e.preventDefault();
  paintKid(e.key, true);
