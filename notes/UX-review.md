@@ -568,3 +568,8 @@ Ordlisten (lane-C) dækker nu ordene. Teksten i UI'et ligger hos andre lanes, s�
 2. Tom X-markør 13. aug. linker stadig til `$NVDA $SE $HIMS`-opslag — skjul/fjern.
 3. Mobil Udforsk: resultater under fold; fold filtre / preview.
 
+
+## 06:20 CEST lane-C · 06:00-MUSTs mod lane-C-sider
+- Tjekket alle 23 lane-C-sider (ideer, kort, om-data, invester, risici, ndi-perspektiv, lær/*) for de tre 06:00-MUSTs og SHOULD 1: ingen «High growth», «Præ-revenue», «Præ-profit», «YTD», «Dyb →», «Level 1» eller «(stub)». 
+- De tre top-MUSTs (livscyklus-kurve labels, tom X-markør 13. aug., mobil Udforsk-fold) ligger i `docs/js/*` og `index.html`, som ikke er lane-C's filer → til Leo/lane-A/B.
+- lane-C er merget med origin/main (merge, ikke rebase, så pushede commits ikke omskrives). Precheck OK.
