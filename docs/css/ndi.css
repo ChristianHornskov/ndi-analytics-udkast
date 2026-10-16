@@ -300,8 +300,9 @@ details.more[open] summary{margin-bottom:8px}
 .chain-row .tag{font-size:12px;padding:4px 10px}
 .fund-switch{display:flex;gap:6px;margin:14px 0 4px}
 .fund-switch .control{text-decoration:none;display:inline-flex;align-items:center}
-.kid-meta{color:var(--faint)}
+.kid-meta{color:var(--faint);white-space:nowrap}
 .site-footer p+p{margin-top:8px}
+.site-footer p{text-wrap:pretty}
 @media (max-width:900px){.doors-sub{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){
   .site-header{flex-wrap:nowrap}

@@ -81,8 +81,8 @@
  </aside>` : '';
  document.getElementById('main').innerHTML = `
  <p class="eyebrow">SAMMENLIGN ANDELSKLASSER</p>
- <h1>Én portefølje, to måder at få udbyttet på</h1>
- <p class="lede">PMINDI og PMINDIAKK investerer efter samme strategi i de samme selskaber. Forskellen er, hvad der sker med udbyttet: det udbetales til dig, eller det bliver i fonden.</p>
+ <h1>Én portefølje, to måder at få <span class="cmp-when">udbyttet på</span></h1>
+ <p class="lede">PMINDI og PMINDIAKK investerer efter samme strategi i de samme selskaber. Forskellen er, hvad der sker med udbyttet: det udbetales til dig, eller det bliver <span class="cmp-when">i fonden.</span></p>
 
  <div class="cmp-cards">
  <section class="cmp-card a" aria-labelledby="c-a">
@@ -102,12 +102,12 @@
  <p class="cmp-tag">Akkumulerende</p>
  <h2 id="c-b">PMINDIAKK</h2>
  <svg class="cmp-mark" viewBox="0 0 100 36" aria-hidden="true" focusable="false"><rect x="1.5" y="14.5" width="32" height="16" rx="3"/><path d="M33.5 22.5 H62 C80 22.5 80 6.5 62 6.5 H18.5 V10"/><path d="M13 8.5 L18.5 16 L24 8.5"/></svg>
- <p class="cmp-flow">Udbytte <span aria-hidden="true">→</span> <strong>geninvesteres i fonden</strong></p>
+ <p class="cmp-flow">Udbytte <span aria-hidden="true">→</span> <strong>geninvesteres <span class="cmp-when">i fonden</span></strong></p>
  <dl>
  <div><dt>ISIN</dt><dd>${esc(b.isin)}</dd></div>
  <div><dt>${navB ? 'Første NAV' : 'Klassen startede'}</dt><dd>${fmtDate(firstB)}</dd></div>
  <div><dt>Seneste NAV</dt><dd>${navCell(navB)}</dd></div>
- <div><dt>Afkast</dt><dd><strong>Ny andelsklasse</strong><small class="cmp-from">kurs vises efter 12 måneder, fra <span class="cmp-when">${fmtDate(gateIso)}</span></small></dd></div>
+ <div><dt>Afkast</dt><dd><strong>Ny andelsklasse</strong><small class="cmp-from">kurs vises efter <span class="cmp-when">12 måneder</span>, fra <span class="cmp-when">${fmtDate(gateIso)}</span></small></dd></div>
  </dl>
  <a class="outline-btn" href="index.html?view=fonden&fund=pmindiakk">Se PMINDIAKK →</a>
  </section>
@@ -118,8 +118,8 @@
  <h2 class="h-section" id="tl-h">Tidslinje</h2>
  <ol class="tl">
  <li><time datetime="${firstA}">${fmtDate(firstA)}</time><span>PMINDI: første NAV. Herfra regnes <span class="cmp-when">"siden start"</span>.</span></li>
- <li><time datetime="${firstB}">${fmtDate(firstB)}</time><span>PMINDIAKK starter. Samme portefølje, udbyttet bliver i fonden. Kursen vises efter 12 måneder.</span></li>
- <li class="future"><time datetime="${gateIso}">${fmtDate(gateIso)}</time><span>Ingen NAV eller graf før den dato. Først da vises klassens afkast.</span></li>
+ <li><time datetime="${firstB}">${fmtDate(firstB)}</time><span>PMINDIAKK starter. Samme portefølje, udbyttet bliver i fonden. Kursen vises efter <span class="cmp-when">12 måneder.</span></span></li>
+ <li class="future"><time datetime="${gateIso}">${fmtDate(gateIso)}</time><span>Ingen NAV eller graf før den dato. Først da vises <span class="cmp-when">klassens afkast.</span></span></li>
  </ol>
  </section>
 
@@ -140,7 +140,7 @@
  </section>
 
  <p class="link-row cmp-links chip-links"><a href="drawdown.html">Fald fra top (PMINDI) →</a> · <a href="vaerdikaeder.html">Værdikæder →</a> · <a href="laer/udbytte-vs-akk.html">Udbytte eller akkumulerende →</a></p>
- <p class="band">Hvilken klasse der passer, afhænger af din egen situation, fx skat og om du vil have udbytte udbetalt. Siden giver ikke rådgivning. Læs KID for begge klasser under <a href="risici.html">Risici / KID</a>.</p>
+ <p class="band">Hvilken klasse der passer, afhænger af din egen situation, fx skat og om du vil have udbytte udbetalt. Siden giver ikke rådgivning. Læs KID for begge klasser under <a href="risici.html" class="cmp-when">Risici / KID</a>.</p>
  <p class="warn">${WARN_HIST}</p>`;
  </script>
 </body>
