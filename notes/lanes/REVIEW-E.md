@@ -282,6 +282,10 @@ St. Gabriel i Louisiana er flydende brint sammen med Olin gennem Hidrogenii. Kom
 
 Aftalen af 1. april 2025 siger, at Bloom og Conagra vil bruge brændselsceller på Conagras fabrikker i Troy og Archbold i Ohio. Før beholdningen. Ikke skrevet som celler, der allerede kører. Ikke et klassisk kraftværk. Megawatt, kapitalramme, leader og leading er ikke kopieret. AI-udkast uden gennemgangsdato. Elproduktions-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.
 
+## Terrestrial Energy · 2026-10-16 02:30 CEST
+
+Teknologisiden specificerer IMSR til 390 MWe netto eller 822 MWt netto. Brændslet er lavt beriget uran under 5 % U-235. Varmen er 585 grader. De første anlæg er sat til begyndelsen af 2030'erne. Det er selskabets tidsplan, ikke et værk i drift. Kernenheden er designet til syv år. Most, capital-efficient, 44 % og 32 % er ikke kopieret. Ikke blandet sammen med Terra Innovatum. AI-udkast uden gennemgangsdato. Atomkraft-blurben og arkivet siger grænsen. Vægtene er uændrede. Chromium ved 375 px. Kæden er også tjekket ved 1280 px. "tjekket mod kilden" er ikke med. 390 MWe står. Syv år ligger bag "Læs hele forklaringen". Ingen konsolfejl. Ingen vandret scroll.
+
 ## Trilogy · 2026-10-16 02:26 CEST
 
 Varsel af 21. september 2026 om miljøredegørelse for Arctic i Ambler-distriktet. Efter beholdningen. Starter høringen. Ikke en tilladelse. Ikke en mine. Ambler Metals ejes sammen med South32. Bornite er stadig et projekt. High-grade, flagship og tidsplanen er ikke kopieret. AI-udkast uden gennemgangsdato. Råstof-blurben og arkivet siger grænsen. Chromium ved 375 px og kæden ved 1280 px. Ingen konsolfejl. Ingen vandret scroll.

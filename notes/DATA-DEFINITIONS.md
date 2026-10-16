@@ -183,6 +183,8 @@ Bloom skrev 1. april 2025, at selskabet og Conagra vil bruge brændselsceller p�
 
 Trilogy skrev 21. september 2026, at U.S. Army Corps of Engineers har udsendt et varsel om en miljøredegørelse for Arctic-projektet i Ambler-distriktet i Alaska. Datoen ligger efter beholdningen pr. 2026-06-01. Varslet starter høringen. Det er ikke en tilladelse og ikke en mine i drift. Arctic føres videre i Ambler Metals sammen med South32. Bornite er stadig et projekt. Ordene high-grade og flagship er ikke taget med. Tidsplanen frem mod en afgørelse er ikke taget med. Vægtene er uændrede.
 
+Terrestrial Energy skriver, at IMSR er specificeret til 390 MWe netto eller 822 MWt netto, og at brændslet er lavt beriget uran under 5 % U-235. Varmen er specificeret til 585 grader. Selskabet skriver, at de første anlæg skal bygges, godkendes og tages i brug i begyndelsen af 2030'erne. Det er selskabets egen tidsplan. Kernenheden er designet til syv år og skal derefter skiftes. Det er et design, ikke et anlæg i drift. Ordene most og capital-efficient er ikke taget med. Et tal om 44 % virkningsgrad og et tal om 32 % mindre affald er ikke taget med. Kilden er `https://www.terrestrialenergy.com/technology`, læst 16. oktober 2026. Vægtene er uændrede. Selskabet er ikke blandet sammen med Terra Innovatum.
+
 ## År til dato på periodesiden
 
 `ytdReturn` i `data.js` bruger sidste punkt i året før som udgangspunkt, ikke 1. januar. For PMINDI pr. 2026-10-14 er det 2025-12-31, ikke 2026-01-02. `periode.html` viser den samme dato i "Fra → til". Kalenderår bruger samme base (`calendarYearReturns`).

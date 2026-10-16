@@ -1235,7 +1235,7 @@
           "id": "smr",
           "icon": "◉",
           "label": "Atomkraft og SMR",
-          "blurb": "Nogle navne udvikler små reaktorer, der kan placeres tættere på forbruget. Ingen af dem beskrives her som et anlæg i kommerciel drift. NuScale skriver, at et program sammen med TVA kan blive op til 6 GW. Det er udvikling, ikke et værk i drift. BWX Technologies skriver, at fabrikken i Lynchburg fremstiller reaktorer til flåden. Project Pele er et design, ikke et værk i drift. Aftalen af 3. august 2026 om salg af medicinforretningen er ikke gennemført og ligger efter beholdningen. Rolls-Royce er en motorkoncern med et reaktorprogram ved siden af. Nano Nuclear skriver, at ansøgningen om byggetilladelse til KRONOS er til behandling. Den er ikke givet. Formel behandling begyndte 23. juni 2026, efter beholdningen. Terra Innovatum skriver, at konceptet SOLO er fra 2018. Det er ikke et værk i drift. Oklo skrev 6. august 2026, at testreaktoren Groves nåede en kædereaktion ved lav effekt. Det er efter beholdningen. Det er ikke et kraftværk i drift og ikke salg af isotoper.",
+          "blurb": "Nogle navne udvikler små reaktorer, der kan placeres tættere på forbruget. Ingen af dem beskrives her som et anlæg i kommerciel drift. NuScale skriver, at et program sammen med TVA kan blive op til 6 GW. Det er udvikling, ikke et værk i drift. BWX Technologies skriver, at fabrikken i Lynchburg fremstiller reaktorer til flåden. Project Pele er et design, ikke et værk i drift. Aftalen af 3. august 2026 om salg af medicinforretningen er ikke gennemført og ligger efter beholdningen. Rolls-Royce er en motorkoncern med et reaktorprogram ved siden af. Nano Nuclear skriver, at ansøgningen om byggetilladelse til KRONOS er til behandling. Den er ikke givet. Formel behandling begyndte 23. juni 2026, efter beholdningen. Terra Innovatum skriver, at konceptet SOLO er fra 2018. Det er ikke et værk i drift. Terrestrial Energy skriver, at IMSR er specificeret til 390 MWe netto eller 822 MWt netto, og at brændslet er lavt beriget uran under 5 % U-235. De første anlæg er sat til begyndelsen af 2030'erne. Det er en forventning, ikke et anlæg i drift. Oklo skrev 6. august 2026, at testreaktoren Groves nåede en kædereaktion ved lav effekt. Det er efter beholdningen. Det er ikke et kraftværk i drift og ikke salg af isotoper.",
           "ndi": "NDI har skrevet om energiudbygning via atomkraft, og om at tidslinjer og indtægter er usikre (ugebreve 27. januar 2025, 23. juni 2025 og 21. juli 2025). Store elselskaber med eksisterende atomkraft står under elproduktion.",
           "themes": [
             "space",
@@ -1299,7 +1299,7 @@
               "w": 0.05,
               "sym": "IMSR",
               "forslag": true,
-              "role": "Reaktor med smeltet salt under udvikling. Ikke et anlæg i drift."
+              "role": "IMSR er specificeret til 390 MWe netto. Første anlæg er sat til 2030'erne. Ikke et anlæg i drift."
             }
           ],
           "seeChain": null

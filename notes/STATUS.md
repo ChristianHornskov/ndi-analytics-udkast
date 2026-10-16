@@ -939,3 +939,13 @@ Meddelelsen er fra 21. september 2026, efter beholdningen. Varslet starter høri
 Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. Arctic står. Ingen konsolfejl. Ingen vandret scroll.
 
 **Push:** `lane-E` @ `635db12` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.
+
+## Fra Grok lane-E
+
+**2026-10-16 02:32 CEST. Terrestrial Energy skriver, at IMSR er specificeret til 390 MWe netto. Ikke færdig.**
+
+Tallet er selskabets eget design, ikke et anlæg i drift. Alternativet er 822 MWt netto. Brændslet er lavt beriget uran under 5 % U-235. De første anlæg er sat til begyndelsen af 2030'erne. Det er selskabets tidsplan. Kernenheden er designet til syv år. Most, capital-efficient, 44 % og 32 % er ikke taget med. Ingen `reviewedAt`. Blurben under atomkraft og arkivet siger grænsen. Selskabet er ikke blandet sammen med Terra Innovatum.
+
+Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er med. "tjekket mod kilden" er ikke med. 390 MWe står. Ingen konsolfejl. Ingen vandret scroll.
+
+**Push:** `lane-E` @ `09ac89c` er pushet efter precheck. Dette commit kan merges bagefter. Ikke main. Ikke færdig.

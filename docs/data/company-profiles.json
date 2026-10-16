@@ -649,20 +649,24 @@
   "US8814541020": {
    "name": "Terrestrial Energy",
    "theme": "energy",
-   "summary": "Udvikler en reaktor, der bruger smeltet salt (IMSR). Denne tekst beskriver ikke et anlæg i drift.",
-   "watch": "Godkendelser og om designet bliver bygget.",
+   "summary": "Udvikler reaktoren IMSR med smeltet salt. Selskabet specificerer 390 MWe netto eller 822 MWt netto og brændsel under 5 % U-235. De første anlæg er sat til begyndelsen af 2030'erne. Det er ikke et anlæg i drift.",
+   "watch": "Om designet bliver godkendt og bygget. Teksten beskriver ikke et anlæg i drift.",
    "source": "https://www.terrestrialenergy.com/",
-   "products": "En reaktortype under udvikling.",
+   "products": "Et reaktordesign, IMSR. Ikke et anlæg i drift.",
    "customers": "Ingen driftkunder i denne beskrivelse.",
-   "role": "Udvikling af en anden type lille reaktor.",
+   "role": "Design specificeret til 390 MWe netto. Ikke et anlæg i drift.",
    "narrative": [
-    "Terrestrial Energy udvikler reaktoren IMSR. Den bruger smeltet salt.",
-    "Denne beskrivelse omfatter ikke et anlæg i drift."
+    "Terrestrial Energy skriver, at IMSR er specificeret til 390 MWe netto eller 822 MWt netto, og at brændslet er lavt beriget uran under 5 % U-235. Varmen er specificeret til 585 grader. Selskabet skriver, at de første anlæg skal bygges, godkendes og tages i brug i begyndelsen af 2030'erne. Det er selskabets egen tidsplan. Der er ikke et anlæg i drift.",
+    "Kernenheden er designet til syv år og skal derefter skiftes. Det er stadig et design. NDI har skrevet, at tidslinjer for den slags anlæg er usikre. Teksten her er en beskrivelse af selskabet, ikke en vurdering af aktien."
    ],
    "narrativeSources": [
     {
      "label": "Selskabets side",
      "url": "https://www.terrestrialenergy.com/"
+    },
+    {
+     "label": "IMSR, teknologisiden",
+     "url": "https://www.terrestrialenergy.com/technology"
     }
    ]
   },
