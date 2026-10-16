@@ -1797,3 +1797,5 @@ Tjekket i Chromium ved 375 px. Kæden er også tjekket ved 1280 px. AI-udkast er
 - 3d3d41f Sammenlign: søjlebredden følger vægten
 
 - Lead 2026-10-16 03:08:38 : Manual merges A/E/X/D landed (smoke 52/0). Lanes now use notes/status-<lane>.md + rebase-on-main. A/B/C/X/R rebased to main; D/E reset to main. Coord+watchdog+monitor running. Leo 02:00/02:07 UX/FO still on main.
+
+- Coordinator-loop 2026-10-16 03:08:42 CEST: MERGED origin/lane-D (ahead was 1) — precheck+smoke OK, pushed
