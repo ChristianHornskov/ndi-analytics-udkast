@@ -1,0 +1,56 @@
+/* tokens.css – Alt-tekst til fælles energiside "Strømmens vej" (runde 2, 23.10.2026)
+   Palet = Jespers brandpalet (STYLEGUIDE.md) + Billedstils mørke flader. Kontrast målt mod --bg. */
+@font-face{font-family:"Manrope";font-weight:200 800;font-display:swap;src:url("fonts/manrope-latin.woff2") format("woff2")}
+@font-face{font-family:"DM Sans";font-weight:100 900;font-display:swap;src:url("fonts/dmsans-latin.woff2") format("woff2")}
+
+:root{
+  /* Farver */
+  --bg:#050a0f;          /* side-baggrund (brand sort) */
+  --panel:#0b161d;       /* kort, faktabokse, tabeller */
+  --deep:#12262e;        /* dyb teal: skygger, billedgradient */
+  --line:#313a4a;        /* skillelinjer og rammer (kun pynt, 1,7:1) */
+  --text:#e6e8ed;        /* brødtekst 16,2:1 */
+  --mute:#b9c0cc;        /* sekundær tekst, kilder 10,9:1 – brug ALDRIG lysere grå end denne til tekst */
+  --teal:#89aeb4;        /* primær: links, kickers, led-numre, data-lys 8,3:1 */
+  --gold:#f5ee9e;        /* accent: ÉT element pr. skærm (stort tal / "strøm"-ord) 16,7:1 */
+  --on-gold:#050a0f;     /* tekst på guld-flade */
+  --focus:#f5ee9e;       /* fokusring */
+
+  /* Strømlinjen (Critiquitos scroll-element) */
+  --wire-off:#313a4a;
+  --wire-on:linear-gradient(180deg,#89aeb4 0%,#89aeb4 70%,#f5ee9e 100%);
+  --wire-w:3px;
+  --wire-glow:0 0 12px rgba(245,238,158,.45);
+
+  /* Typografi */
+  --font-head:"Manrope",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --font-body:"DM Sans",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --font-data:ui-monospace,"SF Mono",Menlo,Consolas,monospace; /* kun små etiketter/kønummer-stil */
+  --fs-body:1.0625rem;                    /* 17 px mobil */
+  --fs-small:.9375rem;                    /* 15 px – mindste tekst på siden */
+  --fs-kicker:.8125rem;                   /* 13 px, VERSALER, letter-spacing .08em, fed */
+  --fs-h1:clamp(2.25rem,7.5vw,3.75rem);   /* 36 → 60 px */
+  --fs-h2:clamp(1.625rem,4.6vw,2.375rem); /* 26 → 38 px */
+  --fs-h3:1.1875rem;                      /* 19 px */
+  --fs-stat:clamp(2.5rem,9vw,4rem);       /* tal i toppen: 40 → 64 px */
+  --lh-body:1.6; --lh-head:1.12;
+  --measure:40rem;                        /* maks. linjelængde for tekst (ca. 70 tegn) */
+
+  /* Afstande (4-px skala) */
+  --s1:.25rem; --s2:.5rem; --s3:.75rem; --s4:1rem; --s5:1.5rem; --s6:2rem; --s7:3rem; --s8:4.5rem; --s9:6rem;
+  --gutter:1.25rem;                       /* sidemargin mobil (20 px) */
+  --section:var(--s8);                    /* luft mellem sektioner mobil (72 px) */
+  --radius:14px; --radius-s:10px;
+  --tap:44px;                             /* mindste trykflade */
+  --maxw:72rem;                           /* 1152 px indholdsbredde desktop */
+}
+@media (min-width:60rem){ /* 960 px og op – desktop-rytme */
+  :root{--fs-body:1.125rem;--gutter:3rem;--section:var(--s9)}
+}
+@media (prefers-reduced-motion:reduce){
+  :root{--wire-glow:none}
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+/* Fokus – må ikke overskrives */
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:4px}

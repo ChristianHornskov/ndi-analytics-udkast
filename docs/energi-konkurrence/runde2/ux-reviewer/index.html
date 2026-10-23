@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Følg strømmen · Energi og elnet · NewDeal Invest</title>
+<meta name="description" content="AI kører på strøm. Følg kablet fra brændsel til datacenter, og se hvor de 69 energiselskaber i NewDeal Invest sidder undervejs.">
+
+<style>
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:100 900;font-display:swap;src:url('fonts/font-1.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:100 900;font-display:swap;src:url('fonts/font-0.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:200 800;font-display:swap;src:url('fonts/font-3.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:200 800;font-display:swap;src:url('fonts/font-2.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}
+:root{--bg:#050a0f;--ink:#e6e8ed;--mute:#a7afbd;--line:#313a4a;--teal:#89aeb4;--gold:#f5ee9e;--card:#0b141c;--p:0}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 'DM Sans',system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:'Manrope','DM Sans',sans-serif;line-height:1.1;margin:0;letter-spacing:-.02em}
+a{color:var(--teal)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:1rem;top:-4rem;z-index:50;background:var(--gold);color:#050a0f;padding:.6rem 1rem;border-radius:6px;font-weight:600;text-decoration:none}
+.skip:focus{top:1rem}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{max-width:1120px;margin:0 auto;padding:0 clamp(1.1rem,4vw,2.5rem)}
+
+/* top bar + meter */
+.top{position:sticky;top:0;z-index:20;background:rgba(5,10,15,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:1rem;min-height:52px}
+.brand{font-weight:600;letter-spacing:.02em;white-space:nowrap}
+.brand span{color:var(--mute);font-weight:400}
+.meter{margin-left:auto;display:flex;align-items:center;gap:.75rem;font-size:.875rem;color:var(--mute);min-width:0}
+.meter b{color:var(--ink);font-variant-numeric:tabular-nums;font-weight:600}
+.meter .tr{width:clamp(70px,16vw,180px);height:6px;border-radius:3px;background:var(--line);overflow:hidden;flex:none}
+.meter .fill{display:block;height:100%;width:100%;background:linear-gradient(90deg,var(--teal),var(--gold));transform-origin:left;transform:scaleX(var(--m,0));transition:transform .6s ease}
+.meter .lbl{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* hero */
+.hero{position:relative;min-height:min(92vh,860px);display:flex;align-items:flex-end;overflow:hidden;isolation:isolate}
+.hero picture,.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(5,10,15,.15) 0%,rgba(5,10,15,.55) 45%,#050a0f 92%)}
+.hero .wrap{padding-bottom:clamp(2.5rem,7vw,5rem);padding-top:8rem}
+.kick{color:var(--teal);font-weight:600;font-size:.875rem;letter-spacing:.12em;text-transform:uppercase;margin:0 0 .8rem}
+.hero h1{font-size:clamp(2.9rem,9vw,6.5rem);font-weight:700;max-width:12ch}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.lead{font-size:clamp(1.15rem,2.2vw,1.45rem);line-height:1.5;max-width:36ch;margin:1.2rem 0 0;color:var(--ink)}
+.facts{display:flex;flex-wrap:wrap;gap:1.2rem 2.6rem;margin:2.2rem 0 0;padding:0;list-style:none}
+.facts li{display:flex;flex-direction:column}
+.facts b{font:700 clamp(2rem,5vw,3rem)/1 'Manrope',sans-serif;font-variant-numeric:tabular-nums}
+.facts span{color:var(--mute);font-size:.95rem;margin-top:.35rem}
+.cue{display:inline-flex;align-items:center;gap:.5rem;margin-top:2.4rem;color:var(--ink);text-decoration:none;border:1px solid var(--line);padding:.7rem 1.1rem;border-radius:999px;font-weight:600}
+.cue:hover{border-color:var(--teal)}
+.cue svg{width:18px;height:18px}
+
+/* why */
+.why{padding:clamp(3rem,8vw,6rem) 0 1rem}
+.why .wrap{display:grid;gap:2rem;grid-template-columns:1fr}
+.why h2{font-size:clamp(1.8rem,4vw,2.8rem);max-width:18ch}
+.why p{max-width:52ch;margin:.9rem 0 0;color:var(--mute)}
+.why p strong{color:var(--ink)}
+.bolt{color:var(--gold);font-weight:700}
+.flow{display:grid;grid-template-columns:repeat(6,1fr);align-items:center;gap:.25rem;margin-top:.5rem}
+.flow .n{display:flex;flex-direction:column;align-items:center;gap:.45rem;font-size:.82rem;color:var(--mute);text-align:center}
+.flow .n .ic{width:44px;height:44px;color:var(--teal)}
+.flow .n:last-child .ic{color:var(--gold)}
+@media (min-width:860px){.why .wrap{grid-template-columns:1fr 1.1fr;align-items:end}}
+
+/* journey */
+.journey{position:relative;padding:2rem 0 3rem}
+.journey .wrap{position:relative}
+.wire{position:absolute;top:0;bottom:0;left:calc(clamp(1.1rem,4vw,2.5rem) + 27px);width:3px;background:var(--line);border-radius:2px}
+.wire i{position:absolute;inset:0 0 auto 0;height:100%;background:linear-gradient(180deg,var(--teal),var(--gold));transform-origin:top;transform:scaleY(var(--p));border-radius:2px}
+.wire b{position:absolute;left:50%;top:calc(var(--p)*100%);width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 6px rgba(245,238,158,.15),0 0 24px 6px rgba(245,238,158,.45)}
+.stop{position:relative;padding:clamp(3rem,9vh,6rem) 0 clamp(2rem,6vh,4rem) 84px}
+.node{position:absolute;left:0;top:clamp(3rem,9vh,6rem);width:57px;height:57px;border-radius:50%;background:var(--bg);border:2px solid var(--line);display:grid;place-items:center;color:var(--mute);transition:border-color .5s,color .5s,box-shadow .5s}
+.node .ic{width:30px;height:30px}
+.stop.on .node{border-color:var(--teal);color:var(--ink);box-shadow:0 0 0 6px rgba(137,174,180,.12)}
+.stop h2{font-size:clamp(2rem,5vw,3.4rem);max-width:16ch}
+.stop .sub{font-size:clamp(1.1rem,2vw,1.3rem);max-width:44ch;margin:1rem 0 0;color:var(--mute)}
+.stat{display:flex;flex-wrap:wrap;align-items:baseline;gap:.4rem 1.6rem;margin:1.6rem 0 1.2rem}
+.stat b{font:700 clamp(2.4rem,6vw,3.8rem)/1 'Manrope',sans-serif;font-variant-numeric:tabular-nums}
+.stat span{color:var(--mute)}
+.stat .w b{color:var(--teal)}
+.strip{display:flex;flex-wrap:wrap;gap:.45rem;margin:0;padding:0;list-style:none}
+.strip li{width:40px;height:40px;border-radius:10px;background:#e6e8ed;display:grid;place-items:center;overflow:hidden}
+.strip li.dk,.co .lg.dk{background:#1b2633}
+.strip li img{width:28px;height:28px;object-fit:contain}
+.mono{font:700 .82rem/1 'Manrope',sans-serif;color:#0b141c}
+details{margin-top:1.1rem;border-top:1px solid var(--line)}
+summary{cursor:pointer;list-style:none;padding:.9rem 0;font-weight:600;color:var(--ink);display:flex;align-items:center;gap:.6rem;min-height:44px}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"";width:9px;height:9px;border-right:2px solid var(--teal);border-bottom:2px solid var(--teal);transform:rotate(-45deg);transition:transform .25s}
+details[open] summary::before{transform:rotate(45deg)}
+.cos{list-style:none;margin:.2rem 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:.6rem}
+.co{display:flex;gap:.8rem;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:.8rem .9rem}
+.co .lg{flex:none;width:40px;height:40px;border-radius:10px;background:#e6e8ed;display:grid;place-items:center;overflow:hidden}
+.co .lg img{width:28px;height:28px;object-fit:contain}
+.co .tx{display:flex;flex-direction:column;min-width:0}
+.co b{font-weight:600;line-height:1.3}
+.co .tx span{color:var(--mute);font-size:.95rem;line-height:1.45;margin-top:.15rem}
+.co em{font-style:normal;color:var(--teal);font-size:.875rem;margin-top:.3rem}
+.co.dc b::after{content:" ⚡";color:var(--gold)}
+.bub{display:none}
+@media (min-width:980px){.bub{display:block;position:absolute;right:0;top:clamp(3rem,9vh,6rem);width:220px;height:220px}
+ .bub .b{fill:rgba(137,174,180,.16);stroke:#89aeb4;stroke-width:1.5;transform-origin:120px 120px;transform:scale(.2);transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+ .stop.on .bub .b{transform:scale(1)}
+ .bub text{fill:#e6e8ed;font:700 26px Manrope,sans-serif}
+ #stop-2 .bub{top:clamp(3rem,9vh,6rem)}}
+@media (min-width:980px) and (prefers-reduced-motion:reduce){.bub .b{transform:none}}
+/* fork for production */
+.lanes{display:grid;gap:1rem;margin-top:1.8rem;grid-template-columns:1fr}
+.lane{border:1px solid var(--line);border-radius:16px;padding:1.2rem;background:linear-gradient(180deg,rgba(137,174,180,.06),transparent 60%)}
+.lane header{display:flex;align-items:center;gap:.8rem}
+.lane header .ic{width:38px;height:38px;color:var(--teal);flex:none}
+.lane h3{font-size:1.3rem}
+.lane .stat{margin:1rem 0 .9rem}
+.lane .stat b{font-size:2.3rem}
+.lane .cos{grid-template-columns:1fr}
+.fork{display:block;width:100%;height:46px;margin-top:1.6rem;color:var(--teal)}
+@media (min-width:980px){.lanes{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:979px){.fork{display:none}}
+/* end */
+.endst{padding:clamp(3rem,9vh,6rem) 0 2rem 84px;position:relative}
+.endst .node{border-color:var(--gold);color:var(--gold)}
+.endst h2{font-size:clamp(2rem,5vw,3.4rem);max-width:18ch}
+.endst p{color:var(--mute);max-width:46ch;font-size:1.15rem}
+/* chain bar */
+.chain{padding:clamp(3rem,8vw,5rem) 0;border-top:1px solid var(--line)}
+.chain h2,.cross h2{font-size:clamp(1.8rem,4vw,2.6rem);max-width:20ch}
+.chain p,.cross p{color:var(--mute);max-width:52ch}
+.bar{display:flex;height:64px;border-radius:12px;overflow:hidden;margin:2rem 0 1.2rem;gap:3px}
+.seg{display:block;transform-origin:left;transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+.s-fuel{background:#4f6b72}.s-prod{background:var(--teal)}.s-grid{background:#c9d6d8}.s-bat{background:#6e8f95}.s-util{background:var(--gold)}
+.legend{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.8rem 1.4rem}
+.legend li{display:grid;grid-template-columns:14px 1fr;column-gap:.6rem;align-items:center}
+.legend .dot{width:14px;height:14px;border-radius:4px;grid-row:span 2}
+.legend b{font-weight:600}
+.legend span{color:var(--mute);font-variant-numeric:tabular-nums;grid-column:2}
+.cross{padding:0 0 clamp(3rem,8vw,5rem)}
+/* sources + footer */
+.src{border-top:1px solid var(--line);padding:2.5rem 0;color:var(--mute);font-size:.95rem}
+.src h2{font-size:1.1rem;color:var(--ink);margin-bottom:.6rem}
+.src ul{margin:.4rem 0 0;padding-left:1.1rem}
+.src li{margin:.25rem 0}
+footer{border-top:1px solid var(--line);padding:2rem 0 3rem;color:var(--mute);font-size:.9rem}
+footer p{max-width:70ch;margin:.5rem 0}
+/* reveal */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+.js-off .rv{opacity:1;transform:none}
+@media (max-width:600px){
+  body{font-size:1rem}
+  .wire{left:calc(1.1rem + 19px)}
+  .stop,.endst{padding-left:58px}
+  .node{width:41px;height:41px}.node .ic{width:22px;height:22px}
+  .meter .lbl{display:none}
+  .flow{grid-template-columns:repeat(3,1fr);row-gap:1.2rem}.flow .n{font-size:.82rem}.flow .n .ic{width:36px;height:36px}
+  .cos{grid-template-columns:1fr}
+  .brand span{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+  .rv{opacity:1;transform:none}
+}
+/* runde 2 */
+.hero{min-height:min(94vh,880px)}
+.art{position:absolute;inset:0;z-index:-2}
+.art picture{display:block;width:100%;height:100%}
+.art img.bg{position:static;width:100%;height:100%;object-fit:cover;animation:blackout 3.2s ease .6s 1 both}
+@keyframes blackout{0%,30%{filter:none}33%{filter:brightness(.12) saturate(0)}36%{filter:brightness(.7)}39%{filter:brightness(.08) saturate(0)}78%{filter:brightness(.08) saturate(0)}100%{filter:none}}
+.hero .kick time{color:var(--gold)}
+.lead.l2{margin-top:.8rem;color:var(--ink)}
+.hsrc{font-size:.85rem;color:var(--mute);margin:.9rem 0 0;max-width:52ch}
+.hsrc a{color:var(--teal)}
+.q{margin:1.6rem 0 0;padding:0 0 0 1.1rem;border-left:3px solid var(--gold)}
+.q p{margin:0;font:600 clamp(1.25rem,2.6vw,1.6rem)/1.35 'Manrope',sans-serif;color:var(--ink);max-width:30ch}
+.q p.qda{font:400 1rem/1.5 'DM Sans',sans-serif;color:var(--mute);margin-top:.5rem}
+.q footer{border:0;padding:0;margin-top:.6rem;font-size:.85rem;color:var(--mute)}
+.nums{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:.8rem}
+.num{border:1px solid var(--line);border-radius:16px;padding:1.1rem 1.2rem;background:linear-gradient(160deg,rgba(137,174,180,.09),rgba(5,10,15,0) 70%)}
+.num b{display:flex;align-items:baseline;gap:.4rem;font:700 clamp(2.8rem,8vw,4rem)/1 'Manrope',sans-serif;font-variant-numeric:tabular-nums;color:var(--ink)}
+.num b small{font-size:1.1rem;color:var(--teal);font-weight:600}
+.num p{margin:.6rem 0 .5rem;color:var(--ink);max-width:40ch}
+.num cite{font-style:normal;font-size:.85rem;color:var(--mute)}
+.bridge{max-width:60ch;color:var(--mute)}
+.bridge strong{color:var(--ink)}
+@media (min-width:860px){.why .wrap{grid-template-columns:1fr 1fr;align-items:start}.nums{grid-template-columns:1fr 1fr}.why .wrap>.rv:first-child{grid-column:1/-1}.why .nums{grid-column:1/-1;grid-template-columns:repeat(4,1fr)}.bridge{grid-column:1}.why .flow{grid-column:2;align-self:center}}
+.share{padding:clamp(3rem,8vw,5.5rem) 0 1rem;border-top:1px solid var(--line);margin-top:2rem}
+.share h2{font-size:clamp(1.8rem,4vw,2.8rem);max-width:20ch}
+.share p{max-width:56ch;color:var(--mute)}
+.share p strong{color:var(--ink)}
+.sgrid{display:grid;gap:2rem;grid-template-columns:1fr;margin-top:1.6rem}
+.lines{list-style:none;margin:0;padding:0;display:grid;gap:.45rem}
+.ln{display:grid;grid-template-columns:minmax(0,11rem) 1fr 4.6rem;align-items:center;gap:.7rem;font-size:.9rem;color:var(--mute)}
+.ln .br{height:10px;background:rgba(49,58,74,.6);border-radius:5px;overflow:hidden}
+.ln .br i{display:block;height:100%;width:calc(var(--w)*100%);background:#4f6b72;border-radius:5px;transform-origin:left;transition:transform 1.1s cubic-bezier(.2,.7,.2,1)}
+.lines.rv:not(.in) .br i{transform:scaleX(0)}
+.ln .v{text-align:right;font-variant-numeric:tabular-nums}
+.ln.en{color:var(--ink);font-weight:600}
+.ln.en .br{height:16px;border-radius:8px}
+.ln.en .br i{background:linear-gradient(90deg,var(--teal),var(--gold))}
+.kpis{list-style:none;margin:0;padding:0;display:grid;gap:.8rem}
+.kpis li{border:1px solid var(--line);border-radius:14px;padding:1rem 1.1rem;display:flex;flex-direction:column}
+.kpis b{font:700 clamp(1.9rem,5vw,2.5rem)/1.05 'Manrope',sans-serif;font-variant-numeric:tabular-nums}
+.kpis span{color:var(--mute);margin-top:.3rem;font-size:.95rem}
+.note{font-size:.85rem}
+@media (max-width:600px){.ln{grid-template-columns:minmax(0,1fr) 4.2rem;row-gap:.2rem}.ln .nm{grid-column:1}.ln .v{grid-column:2;grid-row:1}.ln .br{grid-column:1/-1}}
+@media (min-width:860px){.sgrid{grid-template-columns:1.5fr 1fr;align-items:start}}
+.snag{margin:1.4rem 0 .4rem;max-width:56ch;border:1px solid rgba(245,238,158,.35);border-radius:14px;padding:.9rem 1.1rem;background:rgba(245,238,158,.04)}
+.snag .sh{margin:0 0 .3rem;font-weight:700;color:var(--gold);font-size:.85rem;letter-spacing:.08em;text-transform:uppercase}
+.snag p{margin:0;color:var(--ink)}
+.snag .cite{margin-top:.5rem;font-size:.85rem;color:var(--mute)}
+.newsrow{margin-top:2rem}
+.nh{font-weight:700;color:var(--teal);font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;margin:0 0 .7rem}
+.ngrid{display:grid;gap:.8rem;grid-template-columns:1fr}
+@media (min-width:980px){.ngrid{grid-template-columns:repeat(3,1fr)}.ngrid.one{grid-template-columns:minmax(0,560px)}}
+.news{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:12px;padding:1rem 1.1rem;display:flex;flex-direction:column}
+.news .nd{margin:0;font-size:.85rem;color:var(--mute);font-variant-numeric:tabular-nums}
+.news .nd time{color:var(--gold);font-weight:600}
+.news h3{font-size:1.15rem;margin:.45rem 0 .35rem;line-height:1.25}
+.news p{margin:0;color:var(--mute);font-size:.95rem}
+.news a{margin-top:.7rem;font-size:.875rem;display:inline-block;padding:.35rem 0;min-height:24px}
+.nn{font-size:.85rem;color:var(--mute);margin:.7rem 0 0}
+.back{border-left:3px solid var(--gold);padding-left:1.1rem;margin-bottom:3rem;max-width:60ch}
+.back .bk{font:600 clamp(1.25rem,2.6vw,1.6rem)/1.4 'Manrope',sans-serif;margin:0}
+.legend small{font-size:.8rem}
+@media (max-width:699px){
+  .hero{display:block;min-height:0}
+  .art{position:relative;inset:auto}
+  .hero .art picture{position:static;height:auto}
+  .art img.bg{display:block}
+  .art img.bg{height:auto;aspect-ratio:3/4;object-fit:contain}
+  .hero::after{top:0;bottom:auto;height:calc(100vw*1.3333);background:linear-gradient(180deg,rgba(5,10,15,.05) 0%,rgba(5,10,15,.1) 30%,rgba(5,10,15,.85) 62%,#050a0f 100%)}
+  .hero .wrap{position:relative;margin-top:calc(-100vw*.5);padding-top:0;padding-bottom:2.5rem}
+  .hero h1{font-size:3.2rem}
+}
+@media (prefers-reduced-motion:reduce){.art img.bg{animation:none}.lines.rv .br i{transform:none}}
+
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Spring til indholdet</a>
+<div class="top" role="region" aria-label="Fremdrift">
+  <div class="wrap">
+    <div class="brand">NewDeal Invest <span>· Tema: Energi</span></div>
+    <div class="meter" aria-live="polite">
+      <span class="lbl" id="mlbl">Strøm fulgt gennem PMINDI</span>
+      <b id="mval">0,00&nbsp;%</b>
+      <span class="tr" aria-hidden="true"><span class="fill"></span></span>
+    </div>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="art">
+    <picture>
+      <source media="(min-width:700px)" srcset="img/linje-03-energi-desktop-1600x900.webp" width="1600" height="900">
+      <img class="bg" src="img/linje-03-energi-mobil-780x1040.webp" alt="" width="780" height="1040" fetchpriority="high">
+    </picture>
+  </div>
+  <div class="wrap">
+    <p class="kick"><time datetime="2025-04-28T12:33+02:00">Mandag 28. april 2025 · kl. 12.33</time></p>
+    <h1>Så gik <em>strømmen</em>.</h1>
+    <p class="lead">Hele det spanske og portugisiske fastland mistede strømmen på én gang. Den værste strømafbrydelse i Europa i over 20 år, skriver de europæiske elnetoperatørers organisation, ENTSO-E.</p>
+    <p class="lead l2">Uden strøm regner ingen server – heller ikke dem, der kører AI. Følg kablet fra brændslet til stikket, og se hvor fondens 69 energiselskaber sidder undervejs.</p>
+    <p class="hsrc">Kilde: <a href="https://www.entsoe.eu/publications/blackout/28-april-2025-iberian-blackout/" target="_blank" rel="noopener">ENTSO-E, ekspertpanelets rapport om 28. april 2025</a> (offentliggjort 20.03.2026)</p>
+    <ul class="facts" role="list">
+      <li><b data-to="16.96" data-d="2">16,96&nbsp;%</b><span>af PMINDI i energi og elnet</span></li>
+      <li><b data-to="69" data-d="0">69</b><span>selskaber</span></li>
+      <li><b data-to="5" data-d="0">5</b><span>stop fra brændsel til forsyning</span></li>
+    </ul>
+    <a class="cue" href="#why-h">Følg kablet <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+<section class="why" aria-labelledby="why-h">
+  <div class="wrap">
+    <div class="rv">
+      <p class="kick">Den røde tråd</p>
+      <h2 id="why-h">AI er bygget af chips. Den kører på strøm.</h2>
+      <blockquote class="q"><p lang="en">“There is no AI without energy – specifically electricity for data centres.”</p><p class="qda">Der findes ingen AI uden energi – især strøm til datacentre.</p><footer>Det Internationale Energiagentur (IEA), <a href="https://www.iea.org/reports/energy-and-ai" target="_blank" rel="noopener">Energy and AI</a>, 10.04.2025</footer></blockquote>
+      <p>Serverne kan stå klar, længe før strømmen gør. Fire tal med kilde viser, hvorfor strømmen er blevet det langsomme led.</p>
+    </div>
+    <ol class="nums" role="list">
+      <li class="num rv"><b><span data-to="415" data-d="0">415</span><small>TWh</small></b><p>brugte verdens datacentre i 2024. Det er omkring 1,5&nbsp;% af alt elforbrug, og forbruget er vokset ca. 12&nbsp;% om året siden 2017.</p><cite><a href="https://www.iea.org/reports/energy-and-ai/executive-summary" target="_blank" rel="noopener">IEA, Energy and AI</a> · 10.04.2025</cite></li>
+      <li class="num rv"><b><span data-to="21" data-d="0">21</span><small>%</small></b><p>af Irlands målte elforbrug gik til datacentre i 2023. I 2015 var det 5&nbsp;%.</p><cite><a href="https://www.cso.ie/en/releasesandpublications/ep/p-dcmec/datacentresmeteredelectricityconsumption2023/" target="_blank" rel="noopener">CSO, Irlands statistikbureau</a> · 23.07.2024</cite></li>
+      <li class="num rv"><b><span data-to="120" data-d="0">120</span><small>uger</small></b><p>var den gennemsnitlige leveringstid på en krafttransformer i 2024. I 2021 var den omkring 50 uger.</p><cite><a href="https://www.woodmac.com/news/opinion/supply-shortages-and-an-inflexible-market-give-rise-to-high-power-transformer-lead-times/" target="_blank" rel="noopener">Wood Mackenzie</a> · 02.04.2024</cite></li>
+      <li class="num rv"><b><span>4–8</span><small>år</small></b><p>tager det at bygge en ny højspændingsledning i avancerede økonomier. Ventetiden på transformere og kabler er fordoblet på tre år.</p><cite><a href="https://www.iea.org/reports/energy-and-ai/executive-summary" target="_blank" rel="noopener">IEA, Energy and AI</a> · 10.04.2025</cite></li>
+    </ol>
+    <p class="bridge rv">Hvert tal handler om et led i samme kæde: strømmen skal skaffes, laves, flyttes, gemmes og leveres. <strong>NewDeal Invest ejer selskaber i alle fem led.</strong> Hos 9 af de 69 nævner fondens klassifikation datacentre direkte. Du kan genkende dem på <span class="bolt" aria-label="lyn">⚡</span> undervejs.</p>
+    <div class="flow rv" role="img" aria-label="Kæden i fem stop: brændsel, produktion, elnet, lagring, forsyning og til sidst datacentret.">
+      <div class="n"><svg class="ic" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M32 6c6 10 16 16 16 30a16 16 0 0 1-32 0c0-8 5-12 8-18 2 6 4 8 7 9-2-9 0-15 1-21z"/></g></svg>Brændsel</div>
+      <div class="n"><svg class="ic" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="32" cy="32" r="7"/><path d="M32 25V6M38 36l16 10M26 36L10 46"/><path d="M32 39v19"/></g></svg>Produktion</div>
+      <div class="n"><svg class="ic" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M32 4l-14 56M32 4l14 56M20 18h24M16 30h32M24 18l16 12M40 18L24 30M12 60h40"/></g></svg>Elnet</div>
+      <div class="n"><svg class="ic" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="14" y="12" width="36" height="46" rx="5"/><path d="M26 6h12v6"/><path d="M34 22l-8 14h12l-8 14"/></g></svg>Lagring</div>
+      <div class="n"><svg class="ic" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 30L32 10l24 20"/><path d="M14 26v30h36V26"/><path d="M28 56V42h8v14"/></g></svg>Forsyning</div>
+      <div class="n"><svg class="ic" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="12" y="8" width="40" height="14" rx="3"/><rect x="12" y="26" width="40" height="14" rx="3"/><rect x="12" y="44" width="40" height="14" rx="3"/><path d="M20 15h2M20 33h2M20 51h2"/></g></svg>Datacenter</div>
+    </div>
+  </div>
+</section>
+
+<section class="share" aria-labelledby="share-h">
+  <div class="wrap">
+    <div class="rv">
+      <p class="kick">Hvor meget af fonden?</p>
+      <h2 id="share-h">Derfor ligger der kraftværker i en teknologifond.</h2>
+      <p>NewDeal Invest deler fonden op i 12 linjer. Energi og elnet er den næststørste: <strong>16,96&nbsp;% af PMINDI</strong> pr. 16.10.2026. Kun chips og halvledere vejer mere.</p>
+    </div>
+    <div class="sgrid">
+      <ol class="lines rv" role="list" aria-label="Fondens 12 linjer efter vægt i PMINDI pr. 16.10.2026"><li class="ln"><span class="nm">Chips og halvledere</span><span class="br" aria-hidden="true"><i style="--w:1.0000"></i></span><span class="v">24,31&nbsp;%</span></li><li class="ln en"><span class="nm">Energi og elnet</span><span class="br" aria-hidden="true"><i style="--w:0.6977"></i></span><span class="v">16,96&nbsp;%</span></li><li class="ln"><span class="nm">Datacentre, netværk og cloud</span><span class="br" aria-hidden="true"><i style="--w:0.5179"></i></span><span class="v">12,59&nbsp;%</span></li><li class="ln"><span class="nm">Digitale platforme</span><span class="br" aria-hidden="true"><i style="--w:0.4344"></i></span><span class="v">10,56&nbsp;%</span></li><li class="ln"><span class="nm">Robotik og AI i den fysiske verden</span><span class="br" aria-hidden="true"><i style="--w:0.2974"></i></span><span class="v">7,23&nbsp;%</span></li><li class="ln"><span class="nm">Råstoffer og materialer</span><span class="br" aria-hidden="true"><i style="--w:0.2752"></i></span><span class="v">6,69&nbsp;%</span></li><li class="ln"><span class="nm">Space</span><span class="br" aria-hidden="true"><i style="--w:0.2464"></i></span><span class="v">5,99&nbsp;%</span></li><li class="ln"><span class="nm">Fintech og betalinger</span><span class="br" aria-hidden="true"><i style="--w:0.2147"></i></span><span class="v">5,22&nbsp;%</span></li><li class="ln"><span class="nm">Krypto</span><span class="br" aria-hidden="true"><i style="--w:0.1674"></i></span><span class="v">4,07&nbsp;%</span></li><li class="ln"><span class="nm">AI- og forretningssoftware</span><span class="br" aria-hidden="true"><i style="--w:0.0967"></i></span><span class="v">2,35&nbsp;%</span></li><li class="ln"><span class="nm">Sundhed og biotek</span><span class="br" aria-hidden="true"><i style="--w:0.0728"></i></span><span class="v">1,77&nbsp;%</span></li><li class="ln"><span class="nm">Kvante</span><span class="br" aria-hidden="true"><i style="--w:0.0646"></i></span><span class="v">1,57&nbsp;%</span></li></ol>
+      <ul class="kpis rv" role="list">
+        <li><b>16.960&nbsp;kr.</b><span>af hver 100.000&nbsp;kr. i PMINDI lå i energiselskaber</span></li>
+        <li><b>69</b><span>selskaber deler de 16,96&nbsp;%</span></li>
+        <li><b>0,87&nbsp;%</b><span>er den største enkeltvægt i energi (Babcock &amp; Wilcox). De ti største fylder tilsammen 6,01&nbsp;%.</span></li>
+      </ul>
+    </div>
+    <p class="note rv">Vægte i PMINDI (udloddende klasse) pr. 16.10.2026. Hvert selskab tæller kun i sin primære linje. Kontanter og enkelte uklassificerede positioner er ikke med.</p>
+  </div>
+</section>
+
+<div class="journey" id="journey">
+ <div class="wrap">
+  <div class="wire" aria-hidden="true"><i></i><b></b></div>
+
+  <section class="stop" id="stop-1" data-i="0" data-l="Brændsel" aria-labelledby="h1s">
+    <div class="node"><svg class="ic" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M32 6c6 10 16 16 16 30a16 16 0 0 1-32 0c0-8 5-12 8-18 2 6 4 8 7 9-2-9 0-15 1-21z"/></g></svg></div>
+    <svg class="bub" viewBox="0 0 240 240" aria-hidden="true" focusable="false"><circle cx="120" cy="120" r="118" fill="none" stroke="#313a4a" stroke-dasharray="3 6"/><circle class="b" cx="120" cy="120" r="71.1"/><text x="120" y="128" text-anchor="middle">3,11 %</text></svg>
+    <p class="kick">Stop 1 · Brændsel</p>
+    <h2 id="h1s" class="rv">Først skal der være noget at brænde – eller spalte.</h2>
+    <p class="sub rv">Gas skal hentes op og sendes gennem rør. Uran skal beriges, før det kan bruges i en reaktor. Her begynder kæden.</p>
+    <div class="stat rv"><span><b>12</b> selskaber</span><span class="w"><b>3,11 %</b> af PMINDI</span></div>
+    <div class="rv"><ul class="strip" aria-hidden="true"><li class=""><img src="logos/US1651677353.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class=""><span class="mono" aria-hidden="true">CR</span></li><li class=""><img src="logos/US74347M1080.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class="dk"><img src="logos/US03674X1063.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class="dk"><img src="logos/US00218A1051.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class="dk"><img src="logos/US49456B1017.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class=""><img src="logos/US92837L1098.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class=""><img src="logos/US15643U1043.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class="dk"><img src="logos/US26884L1098.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class=""><img src="logos/US6420451089.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class=""><img src="logos/US75281A1097.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class="dk"><img src="logos/CA1363851017.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li></ul></div>
+    <details class="rv"><summary>Se de 12 selskaber og hvad de laver</summary><ul class="cos" role="list"><li class="co"><span class="lg"><img src="logos/US1651677353.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>Expand Energy</b><span>Stor amerikansk naturgasproducent.</span></span></li><li class="co"><span class="lg"><span class="mono" aria-hidden="true">CR</span></span><span class="tx"><b>Comstock Resources</b><span>Naturgasproducent (Haynesville).</span></span></li><li class="co"><span class="lg"><img src="logos/US74347M1080.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>ProPetro</b><span>Serviceydelser til olie- og gasboring.</span></span></li><li class="co"><span class="lg dk"><img src="logos/US03674X1063.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>Antero Resources</b><span>Naturgasproducent.</span></span></li><li class="co"><span class="lg dk"><img src="logos/US00218A1051.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>ASP Isotopes</b><span>Isotopberigelse til kernekraft og medicin.</span></span></li><li class="co"><span class="lg dk"><img src="logos/US49456B1017.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>Kinder Morgan</b><span>Gasrørledninger.</span></span></li><li class="co"><span class="lg"><img src="logos/US92837L1098.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>Vista Energy</b><span>Olie og gas i Argentina.</span></span></li><li class="co"><span class="lg"><img src="logos/US15643U1043.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>Centrus Energy</b><span>Uranberigelse og HALEU.</span></span></li><li class="co"><span class="lg dk"><img src="logos/US26884L1098.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>EQT</b><span>Naturgasproducent.</span></span></li><li class="co"><span class="lg"><img src="logos/US6420451089.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>Atlas Energy Solutions</b><span>Frac-sand og strøm.</span></span></li><li class="co"><span class="lg"><img src="logos/US75281A1097.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>Range Resources</b><span>Naturgasproducent.</span></span></li><li class="co"><span class="lg dk"><img src="logos/CA1363851017.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>Canadian Natural Resources</b><span>Olie og gas.</span></span></li></ul></details>
+  </section>
+
+  <section class="stop" id="stop-2" data-i="1" data-l="Produktion" aria-labelledby="h2s">
+    <div class="node"><svg class="ic" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="32" cy="32" r="7"/><path d="M32 25V6M38 36l16 10M26 36L10 46"/><path d="M32 39v19"/></g></svg></div>
+    <svg class="bub" viewBox="0 0 240 240" aria-hidden="true" focusable="false"><circle cx="120" cy="120" r="118" fill="none" stroke="#313a4a" stroke-dasharray="3 6"/><circle class="b" cx="120" cy="120" r="110.0"/><text x="120" y="128" text-anchor="middle">7,45 %</text></svg>
+    <p class="kick">Stop 2 · Produktion</p>
+    <h2 id="h2s" class="rv">Så skal strømmen laves. Tre veje fører frem.</h2>
+    <p class="sub rv">Turbiner og brændselsceller, kernekraft og sol. Det største stop på rejsen: 30 selskaber og 7,45 % af fonden (3,12 + 0,91 + 3,42).</p>
+    <aside class="snag rv" aria-label="Hvor det kan gå i stå"><p class="sh">Hvor det kan gå i stå</p><p>Nye gasturbiner har leveringstider på flere år, og det kan skubbe nye gaskraftværker til efter 2030, skriver IEA.</p><p class="cite"><a href="https://www.iea.org/reports/energy-and-ai/executive-summary" target="_blank" rel="noopener">IEA, Energy and AI</a> · 10.04.2025</p></aside>
+    <svg class="fork rv" viewBox="0 0 300 46" preserveAspectRatio="none" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" vector-effect="non-scaling-stroke"><path d="M150 0 V12 M150 12 C150 30 50 20 50 46 M150 12 V46 M150 12 C150 30 250 20 250 46" vector-effect="non-scaling-stroke"/></g></svg>
+    <div class="lanes">
+      <article class="lane rv" aria-labelledby="l1">
+        <header><svg class="ic" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="32" cy="32" r="7"/><path d="M32 25V6M38 36l16 10M26 36L10 46"/><path d="M32 39v19"/></g></svg><h3 id="l1">Gas, turbiner og brændselsceller</h3></header>
+        <div class="stat"><span><b>13</b> selskaber</span><span class="w"><b>3,12 %</b></span></div>
+        <ul class="strip" aria-hidden="true"><li class=""><img src="logos/US05614L2097.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class=""><img src="logos/US73933G2021.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class=""><img src="logos/CA0585861085.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class="dk"><img src="logos/US2960131058.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class=""><img src="logos/GB00B63H8491.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class="dk"><img src="logos/US0937121079.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class=""><img src="logos/US36828A1016.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class=""><span class="mono" aria-hidden="true">FL</span></li><li class=""><span class="mono" aria-hidden="true">PP</span></li><li class=""><span class="mono" aria-hidden="true">FL</span></li><li class=""><img src="logos/US83418M1036.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class="dk"><img src="logos/US1491231015.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class=""><img src="logos/US2310211063.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li></ul>
+        <details><summary>Se selskaberne</summary><ul class="cos" role="list"><li class="co dc"><span class="lg"><img src="logos/US05614L2097.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>Babcock &amp; Wilcox</b><span>Kedler og kraftværksteknologi, også til strøm til datacentre.</span></span></li><li class="co dc"><span class="lg"><img src="logos/US73933G2021.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>Power Solutions International</b><span>Motorer og strømsystemer, bl.a. til datacentre.</span></span></li><li class="co"><span class="lg"><img src="logos/CA0585861085.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>Ballard Power Systems</b><span>Brændselsceller med brint.</span></span></li><li class="co dc"><span class="lg dk"><img src="logos/US2960131058.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>Erock</b><span>Gasbaseret lokal strøm til datacentre.</span></span></li><li class="co"><span class="lg"><img src="logos/GB00B63H8491.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>Rolls-Royce</b><span>Flymotorer, strømsystemer og SMR.</span></span></li><li class="co dc"><span class="lg dk"><img src="logos/US0937121079.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>Bloom Energy</b><span>Brændselsceller til datacentre.</span></span></li><li class="co"><span class="lg"><img src="logos/US36828A1016.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>GE Vernova</b><span>Gasturbiner, vind og elnet.</span></span></li><li class="co"><span class="lg"><span class="mono" aria-hidden="true">FL</span></span><span class="tx"><b>Fluor</b><span>Ingeniør og byggeri, ejer i NuScale.</span></span></li><li class="co"><span class="lg"><span class="mono" aria-hidden="true">PP</span></span><span class="tx"><b>Plug Power</b><span>Brint og elektrolyse.</span></span></li><li class="co"><span class="lg"><span class="mono" aria-hidden="true">FL</span></span><span class="tx"><b>Flowserve</b><span>Pumper, ventiler.</span></span></li><li class="co dc"><span class="lg"><img src="logos/US83418M1036.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>Solaris Energy Infrastructure</b><span>Mobil strøm til datacentre.</span></span></li><li class="co"><span class="lg dk"><img src="logos/US1491231015.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>Caterpillar</b><span>Maskiner og gasgeneratorer.</span></span></li><li class="co"><span class="lg"><img src="logos/US2310211063.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>Cummins</b><span>Motorer og generatorer.</span></span></li></ul></details>
+      </article>
+      <article class="lane rv" aria-labelledby="l2">
+        <header><svg class="ic" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="32" cy="32" r="4"/><ellipse cx="32" cy="32" rx="24" ry="9"/><ellipse cx="32" cy="32" rx="24" ry="9" transform="rotate(60 32 32)"/><ellipse cx="32" cy="32" rx="24" ry="9" transform="rotate(-60 32 32)"/></g></svg><h3 id="l2">Kernekraft og små reaktorer</h3></header>
+        <div class="stat"><span><b>8</b> selskaber</span><span class="w"><b>0,91 %</b></span></div>
+        <ul class="strip" aria-hidden="true"><li class=""><span class="mono" aria-hidden="true">BT</span></li><li class="dk"><img src="logos/US02156V1098.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class=""><img src="logos/US63010H1086.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class=""><img src="logos/US60471A1016.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class=""><img src="logos/US67079K1007.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class=""><img src="logos/US53224K3023.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class=""><img src="logos/NL0015002Q12.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class="dk"><img src="logos/US8814541020.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li></ul>
+        <details><summary>Se selskaberne</summary><ul class="cos" role="list"><li class="co"><span class="lg"><span class="mono" aria-hidden="true">BT</span></span><span class="tx"><b>BWX Technologies</b><span>Kernekraftkomponenter og brændsel.</span></span></li><li class="co dc"><span class="lg dk"><img src="logos/US02156V1098.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>Oklo</b><span>Små reaktorer til datacentre.</span></span></li><li class="co"><span class="lg"><img src="logos/US63010H1086.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>Nano Nuclear Energy</b><span>Mikroreaktorer.</span></span></li><li class="co"><span class="lg"><img src="logos/US60471A1016.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>Mirion Technologies</b><span>Strålingsmåling.</span></span></li><li class="co"><span class="lg"><img src="logos/US67079K1007.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>NuScale Power</b><span>SMR.</span></span></li><li class="co"><span class="lg"><img src="logos/US53224K3023.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>Lightbridge</b><span>Kernebrændsel.</span></span></li><li class="co"><span class="lg"><img src="logos/NL0015002Q12.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>Terra Innovatum</b><span>Mikroreaktorer.</span></span></li><li class="co"><span class="lg dk"><img src="logos/US8814541020.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>Terrestrial Energy</b><span>Smeltesaltreaktorer.</span></span></li></ul></details>
+      </article>
+      <article class="lane rv" aria-labelledby="l3">
+        <header><svg class="ic" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="32" cy="24" r="8"/><path d="M32 6v4M32 38v4M14 24h4M46 24h4M19 11l3 3M45 11l-3 3"/><path d="M12 58l6-14h28l6 14z"/><path d="M22 44l-2 14M42 44l2 14M15 51h34"/></g></svg><h3 id="l3">Sol</h3></header>
+        <div class="stat"><span><b>9</b> selskaber</span><span class="w"><b>3,42 %</b></span></div>
+        <ul class="strip" aria-hidden="true"><li class="dk"><img src="logos/US35834F1049.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class=""><img src="logos/US83417M1045.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class=""><img src="logos/US29355A1079.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class=""><span class="mono" aria-hidden="true">FS</span></li><li class="dk"><img src="logos/US86771W1053.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class=""><img src="logos/US88675P1030.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class=""><img src="logos/US65290E1010.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class=""><img src="logos/CA1366351098.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class="dk"><img src="logos/US04271T1007.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li></ul>
+        <details><summary>Se selskaberne</summary><ul class="cos" role="list"><li class="co"><span class="lg dk"><img src="logos/US35834F1049.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>T1 Energy</b><span>Produktion af solcellemoduler i USA.</span></span></li><li class="co"><span class="lg"><img src="logos/US83417M1045.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>SolarEdge</b><span>Invertere og strømoptimering til solceller.</span></span></li><li class="co"><span class="lg"><img src="logos/US29355A1079.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>Enphase Energy</b><span>Mikroinvertere og batterier til solceller.</span></span></li><li class="co"><span class="lg"><span class="mono" aria-hidden="true">FS</span></span><span class="tx"><b>First Solar</b><span>Tyndfilms-solcellemoduler.</span></span></li><li class="co"><span class="lg dk"><img src="logos/US86771W1053.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>Sunrun</b><span>Solceller og batterier til boliger.</span></span></li><li class="co"><span class="lg"><img src="logos/US88675P1030.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>Tigo Energy</b><span>Sikkerhed og optimering til solceller.</span></span></li><li class="co"><span class="lg"><img src="logos/US65290E1010.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>Nextracker</b><span>Solcelle-trackere.</span></span></li><li class="co"><span class="lg"><img src="logos/CA1366351098.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>Canadian Solar</b><span>Solcellemoduler og batterilagring.</span></span></li><li class="co"><span class="lg dk"><img src="logos/US04271T1007.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>Array Technologies</b><span>Solcelle-trackere.</span></span></li></ul></details>
+      </article>
+    </div>
+  <div class="newsrow"><p class="nh rv">Nyt fra selskaberne ved dette stop</p><div class="ngrid"><article class="news rv"><p class="nd"><time datetime="2026-03-04">04.03.2026</time> · Babcock &amp; Wilcox</p><h3>1,2 GW gaskraft til AI-datacentre</h3><p>Selskabet har fået endeligt klarsignal til et projekt til 2,4 mia. dollar: fire gasfyrede kedler med dampturbiner, der skal levere strøm til Applied Digitals AI-datacentre.</p><a href="https://www.babcock.com/home/about/corporate/news/babcock-and-wilcox-receives-full-notice-to-proceed-on-24-billion-power-generation-project-for-base-electron-to-supply-power-to-applied-digital-ai-factory-campuses" target="_blank" rel="noopener">Kilde: Babcock &amp; Wilcox, pressemeddelelse<span class="sr"> (åbner i nyt vindue)</span></a></article><article class="news rv"><p class="nd"><time datetime="2026-06-15">15.06.2026</time> · Rolls-Royce</p><h3>Små reaktorer til Sveriges vestkyst</h3><p>Rolls-Royce SMR er valgt af Videberg Kraft til at levere tre små modulære reaktorer. Det bliver Sveriges første nye kernekraftværk i over 40 år, oplyser selskabet.</p><a href="https://www.rolls-royce.com/media/press-releases/2026/15-06-2026-rr-smr-selected-to-deliver-swedens-first-new-nuclear-power-for-over-40-years.aspx" target="_blank" rel="noopener">Kilde: Rolls-Royce, pressemeddelelse<span class="sr"> (åbner i nyt vindue)</span></a></article><article class="news rv"><p class="nd"><time datetime="2026-08-06">06.08.2026</time> · Oklo</p><h3>Testreaktor kritisk på under et år</h3><p>Oklos Groves-testreaktor i Texas har nået første kritikalitet, altså en kontrolleret kædereaktion ved lav effekt, mindre end et år efter byggestart.</p><a href="https://oklo.com/newsroom/oklos-groves-reactor-achieves-first-criticality-in-under-a-year" target="_blank" rel="noopener">Kilde: Oklo, pressemeddelelse<span class="sr"> (åbner i nyt vindue)</span></a></article></div><p class="nn rv">Selskabernes egne meddelelser, gengivet kort. De er ikke en vurdering af selskaberne.</p></div>
+  </section>
+
+  <section class="stop" id="stop-3" data-i="2" data-l="Elnet" aria-labelledby="h3s">
+    <div class="node"><svg class="ic" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M32 4l-14 56M32 4l14 56M20 18h24M16 30h32M24 18l16 12M40 18L24 30M12 60h40"/></g></svg></div>
+    <svg class="bub" viewBox="0 0 240 240" aria-hidden="true" focusable="false"><circle cx="120" cy="120" r="118" fill="none" stroke="#313a4a" stroke-dasharray="3 6"/><circle class="b" cx="120" cy="120" r="46.3"/><text x="120" y="128" text-anchor="middle">1,32 %</text></svg>
+    <p class="kick">Stop 3 · Elnet</p>
+    <h2 id="h3s" class="rv">Så skal den flyttes.</h2>
+    <p class="sub rv">Strøm er kun nyttig, når den når frem. Master, kabler og stationer skal bygges og holdes kørende – fra solparken til byen.</p>
+    <aside class="snag rv" aria-label="Hvor det kan gå i stå"><p class="sh">Hvor det kan gå i stå</p><p>En ny højspændingsledning tager 4–8 år at bygge i avancerede økonomier, og ventetiden på transformere og kabler er fordoblet på tre år (IEA). En stor krafttransformer havde i 2024 en gennemsnitlig leveringstid på 120 uger (Wood Mackenzie).</p><p class="cite"><a href="https://www.iea.org/reports/energy-and-ai/executive-summary" target="_blank" rel="noopener">IEA</a> · 10.04.2025 og <a href="https://www.woodmac.com/news/opinion/supply-shortages-and-an-inflexible-market-give-rise-to-high-power-transformer-lead-times/" target="_blank" rel="noopener">Wood Mackenzie</a> · 02.04.2024</p></aside>
+    <div class="stat rv"><span><b>7</b> selskaber</span><span class="w"><b>1,32 %</b> af PMINDI</span></div>
+    <div class="rv"><ul class="strip" aria-hidden="true"><li class=""><img src="logos/US55405W1045.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class=""><img src="logos/US82489W1071.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class=""><img src="logos/US74762E1029.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class=""><span class="mono" aria-hidden="true">IT</span></li><li class=""><span class="mono" aria-hidden="true">PS</span></li><li class="dk"><img src="logos/CA87601F1062.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class=""><img src="logos/US8807791038.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li></ul></div>
+    <details class="rv"><summary>Se de 7 selskaber og hvad de laver</summary><ul class="cos" role="list"><li class="co"><span class="lg"><img src="logos/US55405W1045.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>MYR Group</b><span>Entreprenør for transmission og eldistribution.</span></span></li><li class="co"><span class="lg"><img src="logos/US82489W1071.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>Shoals Technologies</b><span>Elektriske systemer til solparker.</span></span></li><li class="co dc"><span class="lg"><img src="logos/US74762E1029.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>Quanta Services</b><span>Netbygning og strøm til datacentre.</span></span></li><li class="co"><span class="lg"><span class="mono" aria-hidden="true">IT</span></span><span class="tx"><b>ITT</b><span>Pumper og komponenter.</span></span></li><li class="co"><span class="lg"><span class="mono" aria-hidden="true">PS</span></span><span class="tx"><b>Primoris Services</b><span>Infrastrukturentreprenør.</span></span></li><li class="co"><span class="lg dk"><img src="logos/CA87601F1062.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>Tantalus Systems</b><span>Smart grid.</span></span></li><li class="co"><span class="lg"><img src="logos/US8807791038.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>Terex</b><span>Maskiner, forsyningsbiler.</span></span></li></ul></details>
+  </section>
+
+  <section class="stop" id="stop-4" data-i="3" data-l="Lagring" aria-labelledby="h4s">
+    <div class="node"><svg class="ic" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="14" y="12" width="36" height="46" rx="5"/><path d="M26 6h12v6"/><path d="M34 22l-8 14h12l-8 14"/></g></svg></div>
+    <svg class="bub" viewBox="0 0 240 240" aria-hidden="true" focusable="false"><circle cx="120" cy="120" r="118" fill="none" stroke="#313a4a" stroke-dasharray="3 6"/><circle class="b" cx="120" cy="120" r="73.0"/><text x="120" y="128" text-anchor="middle">3,28 %</text></svg>
+    <p class="kick">Stop 4 · Lagring og reservestrøm</p>
+    <h2 id="h4s" class="rv">Så skal den gemmes til senere.</h2>
+    <p class="sub rv">Solen følger døgnet, forbruget følger os. Batterier og generatorer bygger bro, når de to ikke passer sammen.</p>
+    <aside class="snag rv" aria-label="Hvorfor balancen betyder noget"><p class="sh">Hvorfor balancen betyder noget</p><p>Den 28. april 2025 var det ikke mangel på strøm, der slukkede lyset i Spanien og Portugal. Ifølge ENTSO-E's ekspertpanel spillede mange faktorer sammen, blandt andet svingninger, huller i styringen af spændingen og frakoblinger af produktion, der fulgte efter hinanden.</p><p class="cite"><a href="https://www.entsoe.eu/publications/blackout/28-april-2025-iberian-blackout/" target="_blank" rel="noopener">ENTSO-E, ekspertpanelets rapport</a> · 20.03.2026</p></aside>
+    <div class="stat rv"><span><b>11</b> selskaber</span><span class="w"><b>3,28 %</b> af PMINDI</span></div>
+    <div class="rv"><ul class="strip" aria-hidden="true"><li class=""><img src="logos/US2935941078.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class=""><img src="logos/US34379V1035.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class=""><img src="logos/US3687361044.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class="dk"><img src="logos/US78397Q1094.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class=""><img src="logos/US74767V1098.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class="dk"><img src="logos/US83422N1054.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class=""><img src="logos/US03214Q1085.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class=""><img src="logos/US29415C1018.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class=""><img src="logos/CA28617B6061.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class=""><span class="mono" aria-hidden="true">MI</span></li><li class=""><img src="logos/US6406551068.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li></ul></div>
+    <details class="rv"><summary>Se de 11 selskaber og hvad de laver</summary><ul class="cos" role="list"><li class="co"><span class="lg"><img src="logos/US2935941078.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>Enovix</b><span>Silicium-anode lithium-ion-batterier.</span></span></li><li class="co"><span class="lg"><img src="logos/US34379V1035.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>Fluence Energy</b><span>Batterilagring til elnettet.</span></span></li><li class="co dc"><span class="lg"><img src="logos/US3687361044.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>Generac</b><span>Generatorer og reservestrøm, også til datacentre.</span></span></li><li class="co"><span class="lg dk"><img src="logos/US78397Q1094.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>SES AI</b><span>Lithium-metal-batterier og AI til materialeforskning.</span></span></li><li class="co"><span class="lg"><img src="logos/US74767V1098.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>QuantumScape</b><span>Solid-state-batterier til elbiler.</span></span></li><li class="co"><span class="lg dk"><img src="logos/US83422N1054.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>Solid Power</b><span>Solid-state-elektrolytter til batterier.</span></span></li><li class="co"><span class="lg"><img src="logos/US03214Q1085.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>Amprius Technologies</b><span>Batterier til droner og luftfart.</span></span></li><li class="co"><span class="lg"><img src="logos/US29415C1018.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>Eos Energy</b><span>Zinkbatterier til nettet.</span></span></li><li class="co"><span class="lg"><img src="logos/CA28617B6061.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>Electrovaya</b><span>Batterier til industri.</span></span></li><li class="co"><span class="lg"><span class="mono" aria-hidden="true">MI</span></span><span class="tx"><b>Microvast</b><span>Batterier.</span></span></li><li class="co"><span class="lg"><img src="logos/US6406551068.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>NeoVolta</b><span>Boligbatterier.</span></span></li></ul></details>
+  </section>
+
+  <section class="stop" id="stop-5" data-i="4" data-l="Forsyning" aria-labelledby="h5s">
+    <div class="node"><svg class="ic" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 30L32 10l24 20"/><path d="M14 26v30h36V26"/><path d="M28 56V42h8v14"/></g></svg></div>
+    <svg class="bub" viewBox="0 0 240 240" aria-hidden="true" focusable="false"><circle cx="120" cy="120" r="118" fill="none" stroke="#313a4a" stroke-dasharray="3 6"/><circle class="b" cx="120" cy="120" r="54.1"/><text x="120" y="128" text-anchor="middle">1,80 %</text></svg>
+    <p class="kick">Stop 5 · Forsyning</p>
+    <h2 id="h5s" class="rv">Til sidst bliver den leveret.</h2>
+    <p class="sub rv">Elproducenter og forsyningsselskaber samler kæden og sælger strømmen videre – til boliger, fabrikker og datacentre.</p>
+    <div class="stat rv"><span><b>9</b> selskaber</span><span class="w"><b>1,80 %</b> af PMINDI</span></div>
+    <div class="rv"><ul class="strip" aria-hidden="true"><li class=""><img src="logos/US92840M1027.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class=""><span class="mono" aria-hidden="true">NE</span></li><li class=""><img src="logos/US87422Q1094.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class=""><img src="logos/US2333311072.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class=""><span class="mono" aria-hidden="true">CE</span></li><li class=""><span class="mono" aria-hidden="true">AE</span></li><li class=""><img src="logos/US3379321074.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class=""><img src="logos/US8425871071.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li><li class=""><img src="logos/US18539C2044.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></li></ul></div>
+    <details class="rv"><summary>Se de 9 selskaber og hvad de laver</summary><ul class="cos" role="list"><li class="co"><span class="lg"><img src="logos/US92840M1027.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>Vistra</b><span>Elproducent med gas- og kernekraft.</span></span></li><li class="co"><span class="lg"><span class="mono" aria-hidden="true">NE</span></span><span class="tx"><b>NextEra Energy</b><span>Elforsyning og sol/vind.</span></span></li><li class="co dc"><span class="lg"><img src="logos/US87422Q1094.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>Talen Energy</b><span>Kernekraft og strøm til datacentre.</span></span></li><li class="co"><span class="lg"><img src="logos/US2333311072.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>DTE Energy</b><span>Forsyningsselskab.</span></span></li><li class="co"><span class="lg"><span class="mono" aria-hidden="true">CE</span></span><span class="tx"><b>CMS Energy</b><span>Forsyningsselskab.</span></span></li><li class="co"><span class="lg"><span class="mono" aria-hidden="true">AE</span></span><span class="tx"><b>American Electric Power</b><span>Forsyning og transmission.</span></span></li><li class="co"><span class="lg"><img src="logos/US3379321074.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>FirstEnergy</b><span>Forsyning og transmission.</span></span></li><li class="co"><span class="lg"><img src="logos/US8425871071.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>Southern Company</b><span>Forsyningsselskab.</span></span></li><li class="co"><span class="lg"><img src="logos/US18539C2044.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="tx"><b>Clearway Energy</b><span>Vedvarende elproduktion.</span></span></li></ul></details>
+    <div class="newsrow"><p class="nh rv">Nyt fra selskaberne ved dette stop</p><div class="ngrid one"><article class="news rv"><p class="nd"><time datetime="2026-01-09">09.01.2026</time> · Vistra</p><h3>Kernekraft på 20-årige aftaler til Meta</h3><p>Vistra har indgået 20-årige elkøbsaftaler om mere end 2.600 MW fra tre kernekraftværker, som skal understøtte Metas aktiviteter i regionen. Leverancerne begynder ifølge selskabet sidst i 2026.</p><a href="https://investor.vistracorp.com/2026-01-09-Vistra-and-Meta-Announce-Agreements-to-Support-Nuclear-Plants-in-PJM-and-Add-New-Nuclear-Generation-to-the-Grid" target="_blank" rel="noopener">Kilde: Vistra, pressemeddelelse<span class="sr"> (åbner i nyt vindue)</span></a></article></div></div>
+  </section>
+
+  <section class="endst" aria-labelledby="hend">
+    <div class="node"><svg class="ic" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="12" y="8" width="40" height="14" rx="3"/><rect x="12" y="26" width="40" height="14" rx="3"/><rect x="12" y="44" width="40" height="14" rx="3"/><path d="M20 15h2M20 33h2M20 51h2"/></g></svg></div>
+    <p class="kick">Endestation</p>
+    <h2 id="hend" class="rv">Stikket sidder i et datacenter.</h2>
+    <p class="rv">Her ender kablet. I 2024 brugte verdens datacentre omkring 415&nbsp;TWh strøm (<a href="https://www.iea.org/reports/energy-and-ai/executive-summary" target="_blank" rel="noopener">IEA</a>). Herfra tager resten af fonden over: chips, datacentre og software.</p>
+  </section>
+ </div>
+</div>
+
+<section class="chain" aria-labelledby="chain-h">
+  <div class="wrap">
+    <div class="back rv"><p class="kick"><time datetime="2025-04-28T12:33+02:00">Tilbage til kl. 12.33</time></p><p class="bk">Den dag manglede Spanien og Portugal ikke strøm. Balancen i nettet gik tabt. Strøm er en kæde, og den holder kun, når alle led holder. Det er hele den kæde, energitemaet handler om.</p></div>
+    <h2 id="chain-h" class="rv">Hele kablet på én linje: 16,96&nbsp;% af PMINDI.</h2>
+    <p class="rv">Sådan fordeler energidelen af fonden sig på de fem stop. Produktion fylder mest. Tallene summer: 3,11 + 7,45 + 1,32 + 3,28 + 1,80 = 16,96.</p>
+    <div class="bar rv" role="img" aria-label="Fordeling: brændsel 3,11 %, produktion 7,45 %, elnet 1,32 %, lagring 3,28 %, forsyning 1,80 %."><span class="seg s-fuel" style="flex:3.110"><span class="sr">Brændsel: 3,11 %</span></span><span class="seg s-prod" style="flex:7.450"><span class="sr">Produktion: 7,45 %</span></span><span class="seg s-grid" style="flex:1.320"><span class="sr">Elnet: 1,32 %</span></span><span class="seg s-bat" style="flex:3.280"><span class="sr">Lagring: 3,28 %</span></span><span class="seg s-util" style="flex:1.800"><span class="sr">Forsyning: 1,80 %</span></span></div>
+    <ul class="legend" role="list"><li><i class="dot s-fuel" aria-hidden="true"></i><b>Brændsel</b><span>3,11 %</span></li><li><i class="dot s-prod" aria-hidden="true"></i><b>Produktion</b><span>7,45 % <small>(gas 3,12 · kerne 0,91 · sol 3,42)</small></span></li><li><i class="dot s-grid" aria-hidden="true"></i><b>Elnet</b><span>1,32 %</span></li><li><i class="dot s-bat" aria-hidden="true"></i><b>Lagring</b><span>3,28 %</span></li><li><i class="dot s-util" aria-hidden="true"></i><b>Forsyning</b><span>1,80 %</span></li></ul>
+  </div>
+</section>
+
+<section class="cross" aria-labelledby="cross-h">
+  <div class="wrap">
+    <h2 id="cross-h" class="rv">Strømmen krydser andre temaer.</h2>
+    <p class="rv">8 selskaber hører hjemme i et andet tema, men har også en fod i energi. De tæller med i deres hovedtema.</p>
+    <details class="rv"><summary>Se de 8 selskaber</summary><ul class="cos" role="list"><li class="co"><span class="lg"><img src="logos/US88160R1014.webp" alt="" width="28" height="28" loading="lazy"></span><span class="tx"><b>Tesla</b><span>Elbiler, batterilagring og robot-/selvkørende AI.</span><em>Hovedtema: Robotik og AI i den fysiske verden</em></span></li><li class="co"><span class="lg dk"><img src="logos/AU0000185993.webp" alt="" width="28" height="28" loading="lazy"></span><span class="tx"><b>IREN (Iris Energy)</b><span>Bitcoin-miner der omstiller til AI-cloud på egen strøm.</span><em>Hovedtema: Datacentre, netværk og cloud</em></span></li><li class="co"><span class="lg"><span class="mono" aria-hidden="true">EF</span></span><span class="tx"><b>Energy Fuels</b><span>Uran og sjældne jordarter.</span><em>Hovedtema: Råstoffer og materialer</em></span></li><li class="co"><span class="lg"><img src="logos/US3149111086.webp" alt="" width="28" height="28" loading="lazy"></span><span class="tx"><b>Fermi</b><span>Energi- og datacentercampus i Texas.</span><em>Hovedtema: Datacentre, netværk og cloud</em></span></li><li class="co"><span class="lg"><img src="logos/JP3407400005.webp" alt="" width="28" height="28" loading="lazy"></span><span class="tx"><b>Sumitomo Electric</b><span>Kabler, fiber og elnetkomponenter.</span><em>Hovedtema: Datacentre, netværk og cloud</em></span></li><li class="co"><span class="lg"><img src="logos/US46982L1089.webp" alt="" width="28" height="28" loading="lazy"></span><span class="tx"><b>Jacobs Solutions</b><span>Ingeniørdesign af infrastruktur og datacentre.</span><em>Hovedtema: Datacentre, netværk og cloud</em></span></li><li class="co"><span class="lg"><img src="logos/BG1100003166.webp" alt="" width="28" height="28" loading="lazy"></span><span class="tx"><b>Shelly</b><span>Smart-home-relæer og IoT-enheder.</span><em>Hovedtema: Robotik og AI i den fysiske verden</em></span></li><li class="co"><span class="lg dk"><img src="logos/SG9999000020.webp" alt="" width="28" height="28" loading="lazy"></span><span class="tx"><b>Flex</b><span>Kontraktproduktion og strøm/køling.</span><em>Hovedtema: Datacentre, netværk og cloud</em></span></li></ul></details>
+  </div>
+</section>
+
+<section class="src" aria-labelledby="src-h">
+  <div class="wrap">
+    <h2 id="src-h">Kilder og metode</h2>
+    <ul>
+      <li>Beholdning og vægte: PMINDI’s positioner pr. 16.10.2026 (NewDeal Invest). Procenter er andele af hele PMINDI med to decimaler, så delene summer til helheden.</li>
+      <li>Linjer og stop: NewDeal Invests klassifikation af fondens selskaber pr. 16.10.2026. Beskrivelserne af selskaberne er klassifikationens korte begrundelser.</li>
+      <li>ENTSO-E: <a href="https://www.entsoe.eu/publications/blackout/28-april-2025-iberian-blackout/" target="_blank" rel="noopener">28 April 2025 Blackout</a>. Ekspertpanelets slutrapport, 20.03.2026.</li>
+      <li>IEA: <a href="https://www.iea.org/reports/energy-and-ai/executive-summary" target="_blank" rel="noopener">Energy and AI, Executive summary</a>, 10.04.2025.</li>
+      <li>CSO Irland: <a href="https://www.cso.ie/en/releasesandpublications/ep/p-dcmec/datacentresmeteredelectricityconsumption2023/" target="_blank" rel="noopener">Data Centres Metered Electricity Consumption 2023</a>, 23.07.2024.</li>
+      <li>Wood Mackenzie: <a href="https://www.woodmac.com/news/opinion/supply-shortages-and-an-inflexible-market-give-rise-to-high-power-transformer-lead-times/" target="_blank" rel="noopener">Supply shortages … high power transformer lead times</a>, 02.04.2024.</li>
+      <li>Selskabsnyheder: <a href="https://investor.vistracorp.com/2026-01-09-Vistra-and-Meta-Announce-Agreements-to-Support-Nuclear-Plants-in-PJM-and-Add-New-Nuclear-Generation-to-the-Grid" target="_blank" rel="noopener">Vistra</a> (09.01.2026), <a href="https://www.babcock.com/home/about/corporate/news/babcock-and-wilcox-receives-full-notice-to-proceed-on-24-billion-power-generation-project-for-base-electron-to-supply-power-to-applied-digital-ai-factory-campuses" target="_blank" rel="noopener">Babcock &amp; Wilcox</a> (04.03.2026), <a href="https://www.rolls-royce.com/media/press-releases/2026/15-06-2026-rr-smr-selected-to-deliver-swedens-first-new-nuclear-power-for-over-40-years.aspx" target="_blank" rel="noopener">Rolls-Royce</a> (15.06.2026), <a href="https://oklo.com/newsroom/oklos-groves-reactor-achieves-first-criticality-in-under-a-year" target="_blank" rel="noopener">Oklo</a> (06.08.2026).</li>
+      <li>Alle eksterne kilder er læst 23.10.2026. Illustration: NewDeal Invest. Logoer tilhører de enkelte selskaber.</li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>NewDeal Invest</strong></p>
+    <p>Siden beskriver indholdet af fonden og er ikke investeringsrådgivning eller en opfordring til at købe eller sælge. Investering i fonden indebærer risiko, og du kan tabe hele det investerede beløb. Risikoindikatoren i fondens central information (KID) er 5 på en skala fra 1 til 7. Historiske afkast er ingen garanti for fremtidige afkast.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var cums=[3.11, 10.56, 11.88, 15.16, 16.96], total=cums[cums.length-1];
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var root=document.documentElement, mval=document.getElementById('mval'), mlbl=document.getElementById('mlbl'), fill=document.querySelector('.meter .fill');
+  function fmt(x){return x.toFixed(2).replace('.',',')+'\u00a0%';}
+  var shown=0, target=0, raf=0;
+  function tick(){var d=target-shown; shown=Math.abs(d)<0.01?target:shown+d*0.15; mval.textContent=fmt(shown); if(shown!==target){raf=requestAnimationFrame(tick);}else{raf=0;}}
+  function setMeter(v,label){target=v; fill.parentNode.parentNode.style.setProperty('--m',(v/total).toFixed(4)); if(label){mlbl.textContent='Strøm fulgt til: '+label;} if(reduce){shown=v;mval.textContent=fmt(v);} else if(!raf){raf=requestAnimationFrame(tick);} }
+  // reveal
+  var rv=document.querySelectorAll('.rv');
+  if(reduce||!('IntersectionObserver' in window)){rv.forEach(function(e){e.classList.add('in');});}
+  else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -8% 0px'});rv.forEach(function(e){io.observe(e);});}
+  // stops -> meter
+  var stops=[].slice.call(document.querySelectorAll('.stop'));
+  var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var i=+e.target.dataset.i; stops.forEach(function(s,j){if(j<=i)s.classList.add('on');}); setMeter(cums[i],e.target.dataset.l);}});},{rootMargin:'-45% 0px -45% 0px'});
+  stops.forEach(function(s){so.observe(s);});
+  // wire progress
+  var j=document.getElementById('journey');
+  function prog(){var r=j.getBoundingClientRect(),vh=window.innerHeight; var p=(vh*0.5-r.top)/r.height; p=Math.max(0,Math.min(1,p)); j.style.setProperty('--p',p.toFixed(4)); if(p>=0.98){setMeter(total,'Endestation');}}
+  window.addEventListener('scroll',function(){requestAnimationFrame(prog);},{passive:true}); window.addEventListener('resize',prog); prog();
+  // count-up numbers
+  function cu(el){var to=+el.dataset.to,d=+el.dataset.d||0,suf=el.textContent.indexOf('%')>-1?'\u00a0%':'';if(reduce||!to)return;var t0=null;function f(ts){if(!t0)t0=ts;var k=Math.min(1,(ts-t0)/1400);k=1-Math.pow(1-k,3);var v=to*k;el.textContent=(d?v.toFixed(d).replace('.',','):Math.round(v).toLocaleString('da-DK'))+suf;if(k<1)requestAnimationFrame(f);}requestAnimationFrame(f);}
+  var cus=document.querySelectorAll('[data-to]');
+  if('IntersectionObserver' in window){var co=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){cu(e.target);co.unobserve(e.target);}});},{threshold:.6});cus.forEach(function(e){co.observe(e);});}
+  // skip link focus
+  document.querySelector('.skip').addEventListener('click',function(){setTimeout(function(){document.getElementById('main').focus();},0);});
+})();
+</script>
+</body>
+</html>
