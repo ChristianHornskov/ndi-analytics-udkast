@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Energi: Følg strømmen fra undergrunden til AI · NewDeal Invest</title>
+<meta name="description" content="Fire led, én kilowatttime: Sådan når strømmen frem til et datacenter, hvem der tjener penge undervejs, og hvordan NewDeal Invest fordeler sig i kæden.">
+<style>
+:root{--bg:#050a0f;--tx:#e6e8ed;--mut:#b9c0cc;--teal:#89aeb4;--gold:#f5ee9e;--line:#313a4a;--card:#0b141c}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--tx);font:1.0625rem/1.65 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--teal);text-underline-offset:3px}
+a:hover{color:var(--tx)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:1rem;top:-4rem;background:var(--gold);color:#050a0f;padding:.75rem 1rem;font-weight:700;z-index:10;border-radius:6px}
+.skip:focus{top:1rem}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+header.top{background:#050a0f;border-bottom:1px solid var(--line);padding:.9rem 1.25rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+header.top img{height:34px;width:auto;display:block}
+header.top p{margin:0;font-size:.875rem;color:var(--mut)}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1.25rem}
+.hero{position:relative}
+.hero figure{margin:0}
+.hero img{width:100%;height:auto;max-height:62vh;object-fit:cover;display:block}
+.hero .lead{max-width:46rem;margin:0 auto;padding:2rem 1.25rem 0}
+.kicker{color:var(--teal);font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:.8125rem;margin:0 0 .5rem}
+h1{font-size:clamp(2rem,6vw,3.25rem);line-height:1.1;margin:0 0 1rem;letter-spacing:-.01em}
+h2{font-size:clamp(1.5rem,4vw,2rem);line-height:1.2;margin:0 0 .75rem}
+h3{font-size:1.125rem;margin:1.5rem 0 .5rem;color:var(--teal)}
+.ingress{font-size:1.25rem;color:var(--tx);margin:0 0 1rem}
+.alt-shown{margin:1rem 1.25rem 0;max-width:46rem;font-size:.9375rem;color:var(--mut);border-left:3px solid var(--teal);padding:.25rem 0 .25rem .9rem}
+@media (min-width:48rem){.alt-shown{margin:1rem auto 0;padding-left:.9rem}}
+.alt-shown b{color:var(--tx)}
+.headlines{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.25rem 1.25rem 1rem;margin:2rem 0}
+.headlines h2{font-size:1.125rem;margin:0 0 .25rem}
+.headlines p{margin:0 0 .75rem;color:var(--mut);font-size:.9375rem}
+.headlines ol{margin:0;padding-left:1.4rem}
+.headlines li{margin:.35rem 0}
+.headlines li{min-height:44px;display:list-item}.headlines a{padding:.45rem 0;line-height:1.5}
+section{padding:2.5rem 0;border-top:1px solid var(--line)}
+/* Kæden: en ledning der løber ned gennem de fire led */
+.chain{position:relative;padding-left:2.25rem}
+.chain::before{content:"";position:absolute;left:.7rem;top:2.9rem;bottom:2.5rem;width:3px;background:linear-gradient(var(--teal),var(--line))}
+.led{position:relative}
+.led .dot{position:absolute;left:-2.25rem;top:2.65rem;width:1.75rem;height:1.75rem;border-radius:50%;background:var(--bg);border:3px solid var(--teal);display:grid;place-items:center;font-size:.8rem;font-weight:800;color:var(--teal)}
+.led .num{color:var(--teal);font-weight:700;font-size:.875rem;margin:0 0 .25rem;letter-spacing:.04em}
+.see{background:rgba(137,174,180,.09);border:1px solid rgba(137,174,180,.35);border-radius:12px;padding:1rem 1.1rem;margin:1rem 0}
+.see p{margin:0}
+.see .lbl{display:block;font-size:.8125rem;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.3rem}
+.see em{font-style:normal}
+.infund{display:flex;flex-wrap:wrap;gap:.75rem 1.5rem;align-items:baseline;margin:1.25rem 0 .5rem}
+.big{font-size:2.25rem;font-weight:800;line-height:1;color:var(--tx)}
+.big small{font-size:1rem;font-weight:600;color:var(--mut)}
+.bar{height:10px;background:var(--line);border-radius:6px;overflow:hidden;margin:.25rem 0 1rem}
+.bar span{display:block;height:100%;background:var(--teal)}
+details{border:1px solid var(--line);border-radius:10px;margin:.75rem 0;background:var(--card)}
+summary{cursor:pointer;padding:.8rem 1rem;min-height:44px;font-weight:600}
+details[open] summary{border-bottom:1px solid var(--line)}
+details ul{margin:0;padding:.75rem 1rem .75rem 2.1rem}
+details li{margin:.4rem 0}
+.w{color:var(--mut);font-variant-numeric:tabular-nums;white-space:nowrap}
+.ask{color:var(--mut);font-size:.9375rem}
+.ask b{color:var(--tx)}
+.fact{border-left:4px solid var(--gold);padding:.5rem 0 .5rem 1rem;margin:1.25rem 0}
+.fact .big{color:var(--gold)}
+.fact p{margin:.4rem 0}
+.src{font-size:.875rem;color:var(--mut)}
+/* Tidslinje */
+.timeline{list-style:none;margin:1.5rem 0;padding:0;position:relative}
+.timeline li{position:relative;padding:0 0 1.4rem 2rem}
+.timeline li::before{content:"";position:absolute;left:.35rem;top:.45rem;width:.8rem;height:.8rem;border-radius:50%;background:var(--teal)}
+.timeline li::after{content:"";position:absolute;left:.68rem;top:1.4rem;bottom:0;width:2px;background:var(--line)}
+.timeline li:last-child::after{display:none}
+.timeline li.future::before{background:var(--bg);border:2px dashed var(--teal)}
+.timeline time,.timeline .when{display:block;font-weight:700;color:var(--teal)}
+.gap{display:grid;grid-template-columns:1fr;gap:.25rem;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1rem;margin:1rem 0}
+.gap p{margin:0}
+/* Tabel */
+.tablewrap{overflow-x:auto;margin:1rem 0}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+caption{text-align:left;color:var(--mut);font-size:.9375rem;padding-bottom:.5rem}
+th,td{padding:.6rem .5rem;border-bottom:1px solid var(--line);text-align:right;vertical-align:middle}
+th:first-child,td:first-child{text-align:left}
+thead th{font-size:.875rem;color:var(--mut);font-weight:600}
+tfoot td,tfoot th{font-weight:800;border-bottom:none}
+.cellbar{display:inline-block;height:8px;background:var(--teal);border-radius:4px;vertical-align:middle;margin-left:.4rem}
+.questions{counter-reset:q;list-style:none;padding:0;margin:1rem 0}
+.questions li{counter-increment:q;position:relative;padding:.75rem 0 .75rem 3rem;border-bottom:1px solid var(--line)}
+.questions li::before{content:counter(q);position:absolute;left:0;top:.7rem;width:2rem;height:2rem;border-radius:50%;border:2px solid var(--teal);color:var(--teal);display:grid;place-items:center;font-weight:800}
+dl.gloss{margin:1rem 0}
+dl.gloss dt{font-weight:700;margin-top:1rem}
+dl.gloss dd{margin:.2rem 0 0;color:var(--mut)}
+footer{border-top:1px solid var(--line);padding:2rem 0 3rem;color:var(--mut);font-size:.9375rem}
+footer h2{font-size:1.25rem;color:var(--tx)}
+.risk{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1rem 1.1rem;color:var(--tx)}
+.risk p{margin:.4rem 0}
+.access{font-size:.875rem;color:var(--mut)}
+@media (max-width:30rem){table{font-size:.875rem}th,td{padding:.5rem .25rem}.cellbar{display:none}}
+@media (min-width:60rem){body{font-size:1.125rem}.chain{padding-left:3rem}.led .dot{left:-3rem}.chain::before{left:1.05rem}}
+</style>
+</head>
+<body>
+<a class="skip" href="#historien">Spring til historien</a>
+<header class="top">
+  <a href="#historien"><img src="ndi-logo.png" alt="NewDeal Invest" width="2048" height="754"></a>
+  <p>Tema: Energi</p>
+</header>
+
+<main id="historien">
+  <div class="hero">
+    <figure>
+      <img src="elnet-quebec.webp" width="1200" height="727"
+        alt="Højspændingsmaster i en lang række over et snedækket landskab ved solnedgang. En snescooter kører under ledningerne. Billedet viser, hvor langt strømmen skal transporteres, før den når frem til et datacenter.">
+      <figcaption class="sr">Foto: Wilfredor, CC0, Wikimedia Commons.</figcaption>
+    </figure>
+    <p class="alt-shown" aria-hidden="true"><b>Sådan lyder billedet for en skærmlæser:</b> Højspændingsmaster i en lang række over et snedækket landskab ved solnedgang. En snescooter kører under ledningerne. Billedet viser, hvor langt strømmen skal transporteres, før den når frem til et datacenter. <br>Foto: Wilfredor, CC0, Wikimedia Commons. Elnet i Québec City, Canada.</p>
+    <div class="lead">
+      <p class="kicker">Energi · første led i AI-kæden</p>
+      <h1>Følg strømmen: fra undergrunden til et AI-svar</h1>
+      <p class="ingress">Hver gang en chip i et datacenter regner, bruger den strøm. Den strøm har været igennem fire led, før den kom frem. Hvert led er sin egen forretning med sine egne flaskehalse.</p>
+      <p>Vi har skrevet siden, så den kan læses med øjnene, høres med en skærmlæser og skimmes på telefonen. Hvert led starter med en <strong>synstolkning</strong>: en kort beskrivelse af, hvad du ville se, hvis du stod der selv.</p>
+
+      <nav class="headlines" aria-labelledby="kort-h">
+        <h2 id="kort-h">Historien i otte overskrifter</h2>
+        <p>Har du kun 20 sekunder? Læs overskrifterne. De fortæller historien alene.</p>
+        <ol>
+          <li><a href="#led-1">Strømmen begynder som gas og uran i undergrunden</a></li>
+          <li><a href="#led-2">Kraftværker, solceller og reaktorer laver strømmen</a></li>
+          <li><a href="#led-3">Elnettet er det led, hvor ventetiden ofte er længst</a></li>
+          <li><a href="#led-4">Batterier og generatorer holder strømmen, når nettet svigter</a></li>
+          <li><a href="#ordre">En ordre er ikke det samme som en indtægt</a></li>
+          <li><a href="#fordeling">Fonden ejer selskaber i alle fire led</a></li>
+          <li><a href="#spoergsmaal">Fem spørgsmål, der gør energinyheder lettere at læse</a></li>
+          <li><a href="#ord">Ord og risiko, du bør kende</a></li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="chain">
+
+      <section class="led" id="led-1" aria-labelledby="led-1-h">
+        <span class="dot" aria-hidden="true">1</span>
+        <p class="num">Led 1 af 4 · Brændsel</p>
+        <h2 id="led-1-h">Strømmen begynder som gas og uran i undergrunden</h2>
+        <div class="see"><p><span class="lbl">Synstolkning</span><em>Et borefelt på en flad slette. Rør går ned i jorden og videre ud i lange rørledninger. Et andet sted står en hal fuld af centrifuger, der beriger uran, så et atomkraftværk kan bruge det.</em></p></div>
+        <p>Før der kan laves strøm, skal brændslet hentes op og flyttes. Gas pumpes op og sendes gennem rørledninger. Uran skal beriges, før en reaktor kan bruge det.</p>
+        <h3>Sådan tjener selskaberne penge</h3>
+        <p>De sælger brændslet eller ydelser omkring det, fx boring og rørledninger. Indtjeningen følger i høj grad prisen på gas og uran. Det gør leddet følsomt over for råvarepriser.</p>
+        <div class="infund">
+          <p class="big">3,11 % <small>af PMINDI</small></p>
+          <p>12 selskaber i fonden</p>
+        </div>
+        <div class="bar" aria-hidden="true"><span style="width:18.3%"></span></div>
+        <details>
+          <summary>Eksempler fra fonden i dette led</summary>
+          <ul>
+            <li><strong>Expand Energy</strong>: producerer naturgas i USA. <span class="w">0,66 %</span></li>
+            <li><strong>Comstock Resources</strong>: producerer naturgas i Haynesville i Louisiana og det østlige Texas. <span class="w">0,52 %</span></li>
+            <li><strong>Kinder Morgan</strong>: driver rørledninger til gas. <span class="w">0,22 %</span></li>
+            <li><strong>Centrus Energy</strong>: beriger uran til brændsel. <span class="w">0,18 %</span></li>
+          </ul>
+        </details>
+        <p class="ask"><b>Værd at holde øje med:</b> Hvordan påvirker prisen på gas og uran selskabernes indtjening?</p>
+      </section>
+
+      <section class="led" id="led-2" aria-labelledby="led-2-h">
+        <span class="dot" aria-hidden="true">2</span>
+        <p class="num">Led 2 af 4 · Producér</p>
+        <h2 id="led-2-h">Kraftværker, solceller og reaktorer laver strømmen</h2>
+        <div class="see"><p><span class="lbl">Synstolkning</span><em>En turbinehal, hvor gas driver en generator. Udenfor en mark med rækker af solpaneler, der langsomt drejer efter solen. På en tegnestue ligger tegningerne til en lille atomreaktor, der endnu ikke er bygget.</em></p></div>
+        <p>Det er det største led i fonden. Her findes både dem, der sælger udstyret, og dem, der ejer kraftværkerne og sælger strømmen. Gas, sol, brændselsceller og atomkraft står side om side.</p>
+        <h3>Sådan tjener selskaberne penge</h3>
+        <p>Nogle sælger udstyr som turbiner, kedler og solcellemoduler. Andre ejer kraftværkerne og sælger strømmen. Flere af atomkraftselskaberne er stadig ved at udvikle deres første reaktorer.</p>
+        <div class="infund">
+          <p class="big">9,25 % <small>af PMINDI</small></p>
+          <p>39 selskaber i fonden</p>
+        </div>
+        <div class="bar" aria-hidden="true"><span style="width:54.5%"></span></div>
+        <details>
+          <summary>Eksempler fra fonden i dette led</summary>
+          <ul>
+            <li><strong>Babcock &amp; Wilcox</strong>: laver kedler og står for design og byggeri af kraftværker. <span class="w">0,87 %</span></li>
+            <li><strong>T1 Energy</strong>: laver solcellemoduler. <span class="w">0,77 %</span></li>
+            <li><strong>SolarEdge</strong>: laver invertere og styring til solanlæg. <span class="w">0,56 %</span></li>
+            <li><strong>Vistra</strong>: producerer strøm i USA, blandt andet fra gas og atomkraft. <span class="w">0,31 %</span></li>
+            <li><strong>Oklo</strong>: udvikler små atomkraftanlæg. <span class="w">0,17 %</span></li>
+          </ul>
+        </details>
+        <p class="ask"><b>Værd at holde øje med:</b> Sælger selskabet udstyret, eller ejer det værket? Det er to meget forskellige forretninger.</p>
+      </section>
+
+      <section class="led" id="led-3" aria-labelledby="led-3-h">
+        <span class="dot" aria-hidden="true">3</span>
+        <p class="num">Led 3 af 4 · Tilslut</p>
+        <h2 id="led-3-h">Elnettet er det led, hvor ventetiden ofte er længst</h2>
+        <div class="see"><p><span class="lbl">Synstolkning</span><em>En transformerstation bag et hegn: grå kasser på størrelse med en lastbil, forbundet med tykke kabler. Højspændingsmaster fører ledningerne videre mod horisonten, ligesom på billedet øverst.</em></p></div>
+        <p>Strømmen skal fra kraftværket frem til datacentre, fabrikker og hjem. Det kræver elnet, transformere og kabler.</p>
+        <div class="fact">
+          <p class="big">op til 4 år</p>
+          <p>Så lang tid kunne det tage at få leveret en stor transformer i 2024. Kabler tog to til tre år. Det er næsten dobbelt så lang tid som i 2021. Tallene kommer fra en rundspørge i branchen og siger ikke, hvordan det ser ud i dag.</p>
+          <p class="src">Kilde: <a href="https://www.iea.org/reports/building-the-future-transmission-grid/executive-summary">IEA: Building the Future Transmission Grid</a>, feb. 2025.</p>
+        </div>
+        <h3>Sådan tjener selskaberne penge</h3>
+        <p>Entreprenører bygger og vedligeholder elnettet for elselskaberne og bliver betalt pr. projekt. Andre sælger eludstyr og styring til nettet.</p>
+        <div class="infund">
+          <p class="big">1,32 % <small>af PMINDI</small></p>
+          <p>7 selskaber i fonden</p>
+        </div>
+        <div class="bar" aria-hidden="true"><span style="width:7.8%"></span></div>
+        <details>
+          <summary>Eksempler fra fonden i dette led</summary>
+          <ul>
+            <li><strong>MYR Group</strong>: bygger elektriske anlæg i USA og Canada. <span class="w">0,52 %</span></li>
+            <li><strong>Shoals Technologies</strong>: laver eludstyr, der samler strømmen i solparker, batterilagre og datacentre. <span class="w">0,22 %</span></li>
+            <li><strong>Quanta Services</strong>: bygger og vedligeholder elnet. <span class="w">0,16 %</span></li>
+          </ul>
+        </details>
+        <p class="ask"><b>Værd at holde øje med:</b> Er efterspørgslen knyttet til ét stort projekt eller til mange kunder?</p>
+      </section>
+
+      <section class="led" id="led-4" aria-labelledby="led-4-h">
+        <span class="dot" aria-hidden="true">4</span>
+        <p class="num">Led 4 af 4 · Lagr og sikr</p>
+        <h2 id="led-4-h">Batterier og generatorer holder strømmen, når nettet svigter</h2>
+        <div class="see"><p><span class="lbl">Synstolkning</span><em>Hvide containere på række ved siden af et datacenter. Indeni står stativer med batterier. Bag bygningen står en reservegenerator klar til at starte, hvis nettet falder ud.</em></p></div>
+        <p>Et datacenter må ikke gå i stå. Batterier gemmer strømmen, til der er brug for den. Generatorer holder driften i gang, hvis nettet svigter.</p>
+        <h3>Sådan tjener selskaberne penge</h3>
+        <p>De sælger batterisystemer, battericeller og generatorer. Flere af batteriselskaberne arbejder stadig på at gøre ny batteriteknologi klar til stor produktion.</p>
+        <div class="infund">
+          <p class="big">3,28 % <small>af PMINDI</small></p>
+          <p>11 selskaber i fonden</p>
+        </div>
+        <div class="bar" aria-hidden="true"><span style="width:19.3%"></span></div>
+        <details>
+          <summary>Eksempler fra fonden i dette led</summary>
+          <ul>
+            <li><strong>Enovix</strong>: laver litium-ion-celler med siliciumanode. <span class="w">0,63 %</span></li>
+            <li><strong>Fluence Energy</strong>: leverer batterisystemer og software, der lagrer strøm på elnettet. <span class="w">0,53 %</span></li>
+            <li><strong>Generac</strong>: fremstiller reservegeneratorer. <span class="w">0,51 %</span></li>
+          </ul>
+        </details>
+        <p class="ask"><b>Værd at holde øje med:</b> Er teknologien i stor produktion, eller er den stadig på vej?</p>
+      </section>
+    </div>
+
+    <section id="ordre" aria-labelledby="ordre-h">
+      <p class="kicker">Et eksempel fra fonden</p>
+      <h2 id="ordre-h">En ordre er ikke det samme som en indtægt</h2>
+      <p>Energinyheder handler ofte om store aftaler. Men der kan gå år fra en aftale bliver underskrevet, til et kraftværk leverer strøm. Babcock &amp; Wilcox, som fonden ejer, er et konkret eksempel.</p>
+      <div class="fact">
+        <p class="big">2,4 mia. USD</p>
+        <p>Værdien af Babcock &amp; Wilcox' byggeaftale om fire gasfyrede kraftværker på hver 300 megawatt til datacenterselskabet Applied Digital. Beløbet er værdien af byggeaftalen, ikke kundens samlede investering.</p>
+      </div>
+      <ol class="timeline" aria-label="Tidslinje for aftalen">
+        <li><time datetime="2025-11">November 2025</time>Aftalen begynder som en foreløbig startordre (på engelsk en <span lang="en">limited notice to proceed</span>).</li>
+        <li><time datetime="2026-08-10">10. august 2026</time>Selskabet beskriver aftalen i sin kvartalsrapport for 2. kvartal 2026.</li>
+        <li class="future"><span class="when">2030 (selskabets plan)</span>Værkerne skal efter planen først levere strøm kommercielt.</li>
+      </ol>
+      <div class="gap"><p><strong>Læg mærke til afstanden.</strong> Fra startordre til planlagt strøm går der omkring fire år. I den tid kan materialepriser, finansiering og tilladelser ændre sig.</p></div>
+      <p class="src">Kilde: <a href="https://www.sec.gov/Archives/edgar/data/1630805/000163080526000068/bw-20260630.htm">Babcock &amp; Wilcox: kvartalsrapport (10-Q), 2. kvartal 2026</a>, 10. aug. 2026.</p>
+    </section>
+
+    <section id="fordeling" aria-labelledby="fordeling-h">
+      <h2 id="fordeling-h">Fonden ejer selskaber i alle fire led</h2>
+      <p>Energi og elnet fylder 16,96 % af den udloddende fond PMINDI og 17,07 % af den akkumulerende fond PMINDIAKK. Fonden spreder sig over hele kæden, fra gasproducenter til batterifabrikker. Det er et bevidst valg: Man ved ikke på forhånd, hvilket led der bliver flaskehalsen, og hvem der ender med at tjene pengene.</p>
+      <div class="tablewrap" role="region" aria-labelledby="tab-cap" tabindex="0">
+        <table>
+          <caption id="tab-cap">Vægt i procent af hele fonden og antal selskaber pr. led, opgjort 16. oktober 2026</caption>
+          <thead>
+            <tr><th scope="col">Led</th><th scope="col">PMINDI</th><th scope="col">Antal<span class="sr"> selskaber</span></th><th scope="col">PMINDIAKK</th><th scope="col">Antal<span class="sr"> selskaber</span></th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">1. Brændsel</th><td>3,11 %<span class="cellbar" style="width:31px" aria-hidden="true"></span></td><td>12</td><td>3,07 %</td><td>11</td></tr>
+            <tr><th scope="row">2. Producér</th><td>9,25 %<span class="cellbar" style="width:92px" aria-hidden="true"></span></td><td>39</td><td>9,48 %</td><td>39</td></tr>
+            <tr><th scope="row">3. Tilslut</th><td>1,32 %<span class="cellbar" style="width:13px" aria-hidden="true"></span></td><td>7</td><td>1,62 %</td><td>7</td></tr>
+            <tr><th scope="row">4. Lagr og sikr</th><td>3,28 %<span class="cellbar" style="width:33px" aria-hidden="true"></span></td><td>11</td><td>2,90 %</td><td>11</td></tr>
+          </tbody>
+          <tfoot>
+            <tr><th scope="row">Energi i alt</th><td>16,96 %</td><td>69</td><td>17,07 %</td><td>68</td></tr>
+          </tfoot>
+        </table>
+      </div>
+      <p class="src">Kilde: NewDeal Invests positionsdata pr. 16. oktober 2026. Selskaberne er placeret i det led, der passer bedst til deres hovedforretning. Forsyningsselskaber, der både producerer og transporterer strøm, står under Producér. Vægtene ændrer sig løbende.</p>
+    </section>
+
+    <section id="spoergsmaal" aria-labelledby="spoergsmaal-h">
+      <h2 id="spoergsmaal-h">Fem spørgsmål, der gør energinyheder lettere at læse</h2>
+      <p>Næste gang du læser om en stor energiaftale, kan du tage disse spørgsmål med:</p>
+      <ol class="questions">
+        <li><strong>Hvilket led handler det om?</strong> Brændsel, produktion, elnet eller lagring har vidt forskellige forretninger.</li>
+        <li><strong>Hvornår bliver ordren til en leverance og en betaling?</strong> En startordre er ikke en færdig handel.</li>
+        <li><strong>Hvem bærer risikoen for dyrere materialer og forsinkelser?</strong> Det står ofte i kontrakten, ikke i overskriften.</li>
+        <li><strong>Er efterspørgslen knyttet til ét projekt eller mange kunder?</strong> Én stor kunde kan være en styrke og en sårbarhed på samme tid.</li>
+        <li><strong>Er tallet en kapacitet eller en måling?</strong> En fabrik, der kan lave 5 GW om året, har ikke nødvendigvis lavet det.</li>
+      </ol>
+    </section>
+
+    <section id="ord" aria-labelledby="ord-h">
+      <h2 id="ord-h">Ord og risiko, du bør kende</h2>
+      <dl class="gloss">
+        <dt>Kilowatttime (kWh)</dt><dd>Den mængde energi, et apparat på 1.000 watt bruger på en time.</dd>
+        <dt>Megawatt og gigawatt (MW og GW)</dt><dd>Mål for, hvor meget strøm et anlæg kan levere på én gang. 1 GW er 1.000 MW.</dd>
+        <dt>Transformer</dt><dd>Udstyr, der ændrer spændingen, så strømmen kan sendes langt og bruges sikkert, når den når frem.</dd>
+        <dt>Brændselscelle</dt><dd>Laver strøm ud fra fx gas eller brint ved en kemisk proces i stedet for forbrænding.</dd>
+        <dt>SMR (små modulære reaktorer)</dt><dd>Mindre atomreaktorer, der kan bygges i moduler. Mange af dem er stadig på tegnebrættet.</dd>
+        <dt>Ordrebog</dt><dd>De aftaler, et selskab har fået, men endnu ikke leveret. Den er ikke det samme som indtjening.</dd>
+      </dl>
+      <h3>Risici i energileddet</h3>
+      <ul>
+        <li>En stor ordrebog er ikke det samme som indtjening. Kraftværker og elnet tager år at bygge, og forsinkelser flytter betalingerne.</li>
+        <li>Energipriser, finansiering og politiske beslutninger kan ændre regnestykket for både dem, der sælger, og dem, der køber.</li>
+      </ul>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <h2>Vigtigt at vide</h2>
+    <div class="risk">
+      <p>Denne side er information om, hvad fondene ejer. Den er ikke investeringsrådgivning og ikke en opfordring til at købe eller sælge. Siden indeholder ingen prognoser.</p>
+      <p>Begge fonde har risikoklasse 5 på en skala fra 1 til 7 i det centrale informationsdokument (KID). Du kan tabe penge. Læs KID for <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm140b">PMINDI (DK0062499810)</a> og <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm145b">PMINDIAKK (DK0064642623)</a>.</p>
+    </div>
+    <p>Fondene: Investeringsforeningen PortfolioManager, afdeling NewDeal Invest, kl. n, og afdeling NewDeal Invest Akk., kl. n.</p>
+    <p>Foto øverst: <a href="https://commons.wikimedia.org/wiki/File:Electricity_pylons_at_sunset_in_Quebec_City.jpg">Højspændingsmaster i Québec City</a>, Wilfredor, CC0, Wikimedia Commons.</p>
+    <p class="access">Tilgængelighed: Siden kan bruges med tastatur og skærmlæser. Overskrifterne fortæller historien i rækkefølge, alle tal står som tekst, og grafiske bjælker er kun en ekstra hjælp til øjet.</p>
+  </div>
+</footer>
+</body>
+</html>

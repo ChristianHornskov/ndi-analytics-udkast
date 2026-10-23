@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Energi: det langsomste led · NewDeal Invest</title>
+<style>
+:root{--bg:#050a0f;--tx:#e6e8ed;--mut:#a9b0bc;--teal:#89aeb4;--gold:#f5ee9e;--line:#313a4a;--card:#0c141c}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--tx);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;overflow-x:hidden}
+a{color:var(--teal)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px solid var(--line);gap:12px;flex-wrap:wrap}
+header.top img{height:30px;width:auto;display:block}
+header.top span{font-size:13px;color:var(--mut);letter-spacing:.08em;text-transform:uppercase}
+.eyebrow{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);font-weight:600}
+h1{font-size:clamp(32px,5.4vw,58px);line-height:1.08;margin:.3em 0 .4em;letter-spacing:-.02em;max-width:17ch}
+h2{font-size:clamp(25px,3.4vw,36px);line-height:1.15;margin:0 0 .5em;letter-spacing:-.01em}
+h3{font-size:19px;margin:1.2em 0 .3em}
+p{margin:.5em 0 .9em;max-width:68ch}
+.lede{font-size:clamp(18px,2vw,21px);color:#cfd4dc;max-width:60ch}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.tldr{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+.tldr div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px}
+.tldr b{display:block;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);margin-bottom:6px}
+.tldr strong{font-size:30px;display:block;line-height:1.1;margin-bottom:6px}
+.tldr p{font-size:15px;margin:0;color:#cfd4dc}
+sup a{text-decoration:none;font-size:12px;padding:0 2px}
+/* chain */
+.chain{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin:26px 0 10px;position:relative}
+.node{position:relative;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 12px 12px;margin:0 9px;cursor:pointer;color:var(--tx);text-align:left;font:inherit;min-height:44px;transition:border-color .15s,transform .15s}
+.node:hover,.node:focus-visible{border-color:var(--teal);outline:none;transform:translateY(-2px)}
+.node[aria-current="true"]{border-color:var(--teal);box-shadow:0 0 0 1px var(--teal) inset}
+.node:not(:last-child)::after{content:"";position:absolute;right:-19px;top:50%;width:18px;height:2px;background:var(--teal)}
+.node .nr{font-size:12px;color:var(--mut);letter-spacing:.1em}
+.node .nm{display:block;font-weight:700;font-size:18px;margin:2px 0}
+.node .sh{display:block;font-size:13px;color:var(--mut);line-height:1.35;min-height:2.7em}
+.node .w{display:block;margin-top:10px;font-size:13px}
+.node .bar{display:block}
+.node .bar i{display:block}
+.bar{height:6px;background:#1a2430;border-radius:3px;overflow:hidden;margin-top:4px}
+.bar i{display:block;height:100%;background:var(--teal)}
+.node.pinch{border-color:var(--gold)}
+.node.pinch .flag{position:absolute;top:-11px;left:10px;background:var(--gold);color:#111;font-size:11px;font-weight:700;padding:2px 7px;border-radius:10px;letter-spacing:.04em}
+.legend{font-size:14px;color:var(--mut)}
+.switch{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;margin:6px 0 0}
+.switch button{background:none;border:0;color:var(--tx);padding:10px 16px;font:inherit;font-size:14px;cursor:pointer;min-height:44px}
+.switch button[aria-pressed="true"]{background:var(--teal);color:#051014;font-weight:700}
+/* stations */
+.station{padding:44px 0;border-bottom:1px dashed var(--line);scroll-margin-top:10px}
+.station:last-child{border-bottom:0}
+.st-head{display:flex;gap:16px;align-items:baseline;flex-wrap:wrap}
+.st-head .big{font-size:56px;font-weight:800;color:#1f2b38;line-height:1}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
+.box h3{margin-top:0;font-size:15px;letter-spacing:.08em;text-transform:uppercase;color:var(--teal)}
+.box p{font-size:16px}
+.box.gold{border-color:#6d6a45}
+.box.gold h3{color:var(--gold)}
+.num{font-weight:700;color:#fff}
+details{border:1px solid var(--line);border-radius:12px;margin:14px 0;background:#08111a}
+summary{cursor:pointer;padding:14px 18px;font-weight:600;list-style:none;min-height:44px;display:flex;justify-content:space-between;gap:10px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:22px;color:var(--teal);line-height:1}
+details[open] summary::after{content:"–"}
+details .in{padding:0 18px 16px}
+.sub{margin:14px 0 4px;font-size:14px;color:var(--mut);text-transform:uppercase;letter-spacing:.08em}
+ul.cos{list-style:none;margin:0;padding:0}
+ul.cos li{display:grid;grid-template-columns:minmax(0,1fr) 110px;gap:4px 14px;padding:10px 0;border-top:1px solid #1a2430}
+ul.cos .nm{font-weight:650}
+ul.cos .tk{color:var(--mut);font-size:13px;margin-left:6px}
+ul.cos .rl{grid-column:1/2;font-size:15px;color:#cfd4dc}
+ul.cos .wt{grid-row:1/3;grid-column:2;text-align:right;font-size:14px}
+ul.cos .wt .bar{margin-left:auto;width:100%}
+.tag{display:inline-block;font-size:11px;border:1px solid var(--gold);color:var(--gold);border-radius:8px;padding:0 6px;margin-left:6px;vertical-align:2px;white-space:nowrap}
+ul.notes{margin:0;padding-left:18px;font-size:15px}
+ul.notes li{margin:6px 0}
+ul.notes b{color:#fff}
+/* ladder */
+.ladder{margin:20px 0}
+.rung{display:grid;grid-template-columns:minmax(0,230px) minmax(0,1fr);gap:12px;align-items:center;padding:7px 0;border-top:1px solid #1a2430}
+.rung .lb{font-size:14px;line-height:1.3}
+.rung .lb small{display:block;color:var(--mut);font-size:12px}
+.rung .track{position:relative;height:22px;background:#0e1822;border-radius:4px}
+.rung .track i{position:absolute;left:0;top:0;bottom:0;background:var(--teal);border-radius:4px;min-width:3px}
+.rung.calc .track i{background:var(--gold)}
+.rung.calc .track span{color:#111}
+.rung .track span{position:absolute;right:6px;top:1px;font-size:12px;color:#fff;font-weight:600}
+.axis{display:grid;grid-template-columns:minmax(0,230px) minmax(0,1fr);gap:12px;font-size:11px;color:var(--mut)}
+.axis div:last-child{display:flex;justify-content:space-between}
+.calcbox{display:flex;flex-wrap:wrap;gap:14px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:18px 0}
+.calcbox input{width:120px;font:inherit;background:#050a0f;color:#fff;border:1px solid var(--line);border-radius:8px;padding:10px;min-height:44px}
+.calcbox .res{font-size:18px}
+.calcbox button{background:none;border:1px solid var(--line);color:var(--tx);border-radius:999px;padding:8px 14px;font:inherit;font-size:14px;cursor:pointer;min-height:44px}
+/* time */
+.time .rung .track i{background:#4a6267}
+.time .rung .track b{position:absolute;top:0;bottom:0;background:var(--teal);border-radius:4px}
+/* stack */
+.stack{display:flex;height:34px;border-radius:6px;overflow:hidden;margin:16px 0 8px}
+.stack i{display:block;height:100%;border-right:2px solid var(--bg)}
+.stack-l{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:14px}
+.stack-l span::before{content:"";display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;background:var(--c)}
+ol.q{padding-left:22px}
+ol.q li{margin:8px 0}
+.src{font-size:14px;color:#c4cad3}
+.src li{margin:8px 0}
+.disc{font-size:14px;color:var(--mut);padding:30px 0 50px}
+footer .wrap{border-top:1px solid var(--line)}
+@media (max-width:820px){
+ .tldr{grid-template-columns:1fr}
+ .chain{grid-template-columns:1fr;gap:16px}
+ .node{margin:0}
+ .node:not(:last-child)::after{right:auto;left:28px;top:auto;bottom:-17px;width:2px;height:16px}
+ .node .sh{min-height:0}
+ .cols{grid-template-columns:1fr;gap:14px}
+ .rung,.axis{grid-template-columns:minmax(0,1fr)}
+ .axis div:first-child{display:none}
+ ul.cos li{grid-template-columns:minmax(0,1fr) 78px}
+ .st-head .big{font-size:40px}
+ body{font-size:16px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top"><img src="assets/v4-lab/assets/ndi-logo.png" alt="NewDeal Invest"><span>Tema · Energi</span></header>
+
+<section style="border-bottom:0;padding-bottom:20px">
+<span class="eyebrow">Energi, set fra et ingeniørbord</span>
+<h1>Et system er aldrig hurtigere end sit langsomste led.</h1>
+<p class="lede">Mangler AI strøm? Det er det forkerte spørgsmål. Spørg i stedet, hvilket led mellem brændslet og serveren der tager længst tid at udbygge. Denne side følger strømmen gennem fem led: Hvad sker der fysisk, hvor går det i stå, og hvilke af fondens selskaber sidder hvor?</p>
+<div class="tldr">
+ <div><b>Behovet</b><strong>≈ 47 GW</strong><p>Så meget trak verdens datacentre i gennemsnit, døgnet rundt, i 2024. Tallet er 415 TWh (ca. 1,5 % af verdens elforbrug) omregnet: 415.000 GWh ÷ 8.760 timer.<sup><a href="#k1">[1]</a></sup></p></div>
+ <div><b>Det langsomme led</b><strong>op til 4 år</strong><p>Så lang tid kunne det tage at få leveret en stor transformer i 2024 (IEA's rundspørge blandt førende aktører i branchen). Det er næsten dobbelt så lang tid som i 2021. I USA tog det typisk 5 år fra et anlæg søgte om nettilslutning, til det var i drift, for anlæg bygget i 2023.<sup><a href="#k2">[2]</a><a href="#k3">[3]</a></sup></p></div>
+ <div><b>Fonden</b><strong id="tl-w">16,96 %</strong><p><span id="tl-n">69</span> selskaber har energi som hovedtema i <span class="fundname">PMINDI</span>. De sidder i fire af de fem led. Leddet med de længste dokumenterede ventetider, nettet, har den mindste andel. Vægten siger noget om fondens fordeling, ikke om, hvor vigtigt leddet er for systemet.</p></div>
+</div>
+</section>
+
+<section id="kaeden" style="padding-top:30px">
+<span class="eyebrow">Kæden · klik på et led</span>
+<h2>Fra brændsel til server på fem led</h2>
+<p class="legend">Procenten under hvert led er fondens andel af formuen i selskaber med det led som hovedtema. Kilde: datagrundlagets snapshot pr. 16. oktober 2026.</p>
+<div class="switch" role="group" aria-label="Vælg afdeling"><button data-fund="wN" aria-pressed="true">PMINDI (udloddende)</button><button data-fund="wA" aria-pressed="false">PMINDIAKK (akkumulerende)</button></div>
+<div class="chain" id="chain"></div>
+<div id="stations"></div>
+<details><summary>Selskaber i andre temaer, hvor energi er bitema</summary><div class="in"><p>De her selskaber har et andet hovedtema i datagrundlaget og indgår derfor ikke i procenterne ovenfor. Vi nævner dem, fordi energi er en del af det, de laver.</p><ul class="cos" id="bi"></ul></div></details>
+</section>
+
+<section id="skala">
+<span class="eyebrow">Regnestykket</span>
+<h2>Skalastigen: fra en afbryder på 2 MW til 47 GW</h2>
+<p>Energi (TWh om året) og effekt (MW) bliver ofte blandet sammen. Effekt er det, nettet og værkerne skal kunne levere i hvert øjeblik. Herunder står tallene fra datagrundlaget og kilderne på samme logaritmiske skala, i megawatt. Hvert trin på aksen er en faktor 10.</p>
+<div class="ladder" id="ladder"></div>
+<div class="axis"><div></div><div><span>1 MW</span><span>10</span><span>100</span><span>1.000</span><span>10.000</span><span>100.000 MW</span></div></div>
+<div class="calcbox">
+ <label for="twh">Regn selv: TWh om året</label>
+ <input id="twh" type="number" min="0" step="1" value="415" inputmode="decimal">
+ <span class="res" id="res"></span>
+ <button data-twh="415">Verden 2024 (IEA)</button><button data-twh="176">USA 2023 (LBNL)</button>
+</div>
+<details><summary>Hvad regnestykket ikke siger</summary><div class="in">
+<ul class="notes">
+<li><b>Gennemsnit er ikke spidslast.</b> Nettet skal dimensioneres efter det højeste træk og ikke efter gennemsnittet, så den nødvendige kapacitet er større end tallet.</li>
+<li><b>Et værk kører ikke 100 % af tiden.</b> Vedligehold og drift betyder, at et værk på 300 MW leverer mindre end 300 MW i gennemsnit over året. "Antal værker" er derfor et mindstetal.</li>
+<li><b>MWt er ikke MWe.</b> Terra Innovatums SOLO angives i termisk effekt, 4 til 5 MW. Terrestrial Energy angiver både 390 MWe og 822 MWt. Forholdet er ca. 47 % (vores division) og viser varmekraftens termodynamiske loft: Under halvdelen af varmen bliver til el.</li>
+<li><b>Kapacitet er ikke produktion.</b> Datagrundlaget skelner gennemgående mellem fabrikskapacitet (fx T1 Energys 5 GW moduler om året) og målt produktion. Kapaciteten fortæller, hvad der kan laves, ikke hvad der blev lavet.</li>
+</ul></div></details>
+</section>
+
+<section id="tid" class="time">
+<span class="eyebrow">Tidskonstanterne</span>
+<h2>Det, der tager tid, er det, der begrænser</h2>
+<p>En ingeniør spørger om tidskonstanter: Hvor længe tager det at ændre leddet? Her er de dokumenterede ventetider, vi har kunnet efterprøve. Den lyse del af en bjælke viser et spænd.</p>
+<div class="ladder" id="timeladder"></div>
+<div class="axis"><div></div><div><span>0 år</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6 år</span></div></div>
+<details><summary>Kø er ikke kapacitet: det næste lag</summary><div class="in">
+<p>Ved udgangen af 2023 søgte ca. <span class="num">2.600 GW</span> produktion og lager om at blive koblet på det amerikanske net. Sol og vind alene udgjorde over 1.400 GW af køen, hvilket er mere end hele den installerede amerikanske kraftværkspark.<sup><a href="#k3">[3]</a></sup> Det lyder som rigelig ny strøm. Men af den kapacitet, der søgte om tilslutning fra 2000 til 2018, var kun <span class="num">14 %</span> bygget ved udgangen af 2023.<sup><a href="#k3">[3]</a></sup></p>
+<p>Lektien gælder også på selskabsniveau: En ordre, en ansøgning eller en kø er en hensigt, ikke et anlæg i drift. Datagrundlaget skriver derfor fx om Babcock &amp; Wilcox, at aftalen gælder anlæg, som kunden skal eje, og ikke et kraftværk, selskabet selv driver.</p>
+<p>IEA registrerede i 2024 <span class="num">1.650 GW</span> sol- og vindprojekter i fremskreden udvikling, der ventede på nettilslutning, og peger på tilladelser som den primære årsag til forsinkelser i nye ledninger i de udviklede økonomier. Leverancer af kabler og transformere er ved at blive en begrænsning ved siden af.<sup><a href="#k2">[2]</a></sup></p>
+</div></details>
+</section>
+
+<section id="vaegte">
+<span class="eyebrow">Sådan læser du fondens tal</span>
+<h2>Hvad <span id="vw-total">16,96 %</span> består af</h2>
+<p>Energitemaet fordelt på datagrundlagets syv underområder. Skift afdeling øverst i kæden for at se forskellen.</p>
+<div class="stack" id="stack" aria-hidden="true"></div>
+<div class="stack-l" id="stackl"></div>
+<details><summary>Fire ting, tallet ikke er</summary><div class="in"><ul class="notes">
+<li><b>Ikke et øjebliksbillede af i dag.</b> Det er et dateret snapshot (16. oktober 2026) fra datagrundlaget. Beholdningen ændrer sig.</li>
+<li><b>Ikke en rangordning.</b> En lille vægt betyder ikke, at leddet er uvigtigt, og en stor vægt betyder ikke, at det er vigtigst.</li>
+<li><b>Ikke en enkelt klassificering af virkeligheden.</b> Hvert selskab har ét hovedtema. GE Vernova står fx under elproduktion, men sælger også netudstyr fra 50 til 800 kV ifølge datagrundlaget.</li>
+<li><b>Ikke forvalterens begrundelse.</b> Placeringen i kæden er vores redaktionelle forklaring ud fra selskabernes egne beskrivelser og ikke fondens officielle begrundelse for den enkelte investering.</li>
+</ul></div></details>
+</section>
+
+<section id="spoergsmaal">
+<span class="eyebrow">Værktøjskassen</span>
+<h2>Tre spørgsmål, der skiller påstand fra mekanisme</h2>
+<ol class="q">
+<li><b>Hvornår bliver ordren til en leverance og en betaling?</b> En turbineordre er ikke det samme som indtægt fra et færdigt kraftværk.</li>
+<li><b>Hvem bærer risikoen for dyrere materialer og forsinkelser?</b> Tid, finansiering og tilladelser betyder meget, og priserne på kabler og transformere er steget kraftigt.<sup><a href="#k2">[2]</a></sup></li>
+<li><b>Er efterspørgslen knyttet til ét projekt eller mange kunder?</b> Et enkelt stort projekt er en enkelt risiko.</li>
+</ol>
+<p>Og et fjerde, til selskaberne markeret <span class="tag">Udvikling/pilot</span>: Hvilken teknisk milepæl mangler, før der er et produkt i stor skala? Datagrundlaget markerer, når et selskab beskriver et design, en pilotlinje eller en testreaktor og ikke et anlæg i drift.</p>
+</section>
+
+<section id="kilder">
+<span class="eyebrow">Kilder og metode</span>
+<h2>Hvor tallene kommer fra</h2>
+<ol class="src">
+<li id="k1">IEA (2025): <a href="https://www.iea.org/reports/energy-and-ai/executive-summary">Energy and AI, Executive summary</a>. 415 TWh og ca. 1,5 % af verdens elforbrug i 2024. Fordeling USA 45 %, Kina 25 %, Europa 15 %. Ca. 12 % vækst om året siden 2017. Omregningen til GW er vores egen.</li>
+<li id="k2">IEA (feb. 2025): <a href="https://www.iea.org/reports/building-the-future-transmission-grid/executive-summary">Building the Future Transmission Grid, Executive summary</a>. Leveringstider for transformere og kabler, priser og 1.650 GW projekter, der venter på nettilslutning.</li>
+<li id="k3">Lawrence Berkeley National Laboratory (apr. 2024): <a href="https://eta-publications.lbl.gov/publications/queued-2024-edition-characteristics">Queued Up: 2024 Edition</a>. Tilslutningskøer i USA ved udgangen af 2023.</li>
+<li id="k4">Lawrence Berkeley National Laboratory (dec. 2024): <a href="https://datacenters.lbl.gov/publications/2024-lbnl-data-center-energy-usage-report">2024 United States Data Center Energy Usage Report</a>. 176 TWh og 4,4 % af USA's elforbrug i 2023, 1,9 % i 2018.</li>
+<li id="k5">Babcock &amp; Wilcox: <a href="https://www.sec.gov/Archives/edgar/data/1630805/000163080526000068/bw-20260630.htm">kvartalsrapport (10-Q), 2. kvartal 2026</a>, 10. aug. 2026. Aftalen om fire gasfyrede værker à 300 MW til Applied Digital. Gengivet som i NewDeal Invests datagrundlag.</li>
+<li id="k6">Selskabsbeskrivelser, temaer og vægte: NewDeal Invests interne datagrundlag (V5, snapshot 16. oktober 2026), som bygger på selskabernes egne sider og meddelelser. Datoer efter beholdningsdatoen er markeret i beskrivelserne.</li>
+</ol>
+<p class="src">Fysikken (tab i ledninger, varmekraftens loft, at serverstrøm ender som varme) er almindelig lærebogsviden. Vi har udeladt fremskrivninger af det fremtidige elforbrug, selv om kilderne indeholder dem, fordi siden ikke giver prognoser.</p>
+</section>
+</div>
+<footer><div class="wrap disc"><p><b>Ansvarsfraskrivelse.</b> Siden er information og ikke investeringsrådgivning. Den opfordrer ikke til at købe eller sælge og giver ingen prognoser. Omtalen af et selskab er ikke en anbefaling. Historiske tal er ingen garanti for fremtiden, og en investering i fonden kan falde i værdi. Læs fondens dokument med central information (KID), før du investerer. Selskabsdata er et dateret snapshot og kan være ændret. © NewDeal Invest.</p></div></footer>
+
+<script>
+const COS=[{"isin": "US88160R1014", "n": "Tesla", "t": "TSLA", "l": "fysisk-ai", "s": "ev", "land": "USA", "wN": 1.55, "wA": 1.74, "role": "Producerer elbiler, batterilagring og energiprodukter.", "notes": ["Megapack er batteriudstyr.", "10.000 enheder om året i Lathrop er en kapacitet, ikke et målt år."], "dev": false, "bi": true}, {"isin": "US05614L2097", "n": "Babcock & Wilcox", "t": "BW", "l": "energi", "s": "generation", "land": "USA", "wN": 0.87, "wA": 0.55, "role": "Laver kedler og står for design og byggeri.", "notes": ["Meddelelsen af 4. marts 2026 er 1,2 GW for Base Electron, som skal eje anlæggene.", "Det er ikke et kraftværk, Babcock & Wilcox driver.", "20 turbiner af 11. august 2026 ligger efter beholdningen."], "dev": false, "bi": false}, {"isin": "US35834F1049", "n": "T1 Energy", "t": "TE", "l": "energi", "s": "solar", "land": "USA", "wN": 0.77, "wA": 0.72, "role": "Laver solcellemoduler.", "notes": ["Fabrikssiden sætter G1_Dallas til 5 GW moduler om året.", "Det er en kapacitet, ikke et målt år.", "G2-celler er anslået og ikke i drift."], "dev": false, "bi": false}, {"isin": "US1651677353", "n": "Expand Energy", "t": "EXE", "l": "energi", "s": "fuel", "land": "USA", "wN": 0.66, "wA": 0.64, "role": "Producerer naturgas i USA.", "notes": ["Selskabet er dannet ved en sammenlægning af Chesapeake og Southwestern.", "Det skrev 16. september 2026, at handlen med Twin Eagle er gennemført.", "Datoen ligger efter beholdningen."], "dev": false, "bi": false}, {"isin": "AU0000185993", "n": "Iris Energy", "t": "IREN", "l": "datacenter", "s": "gpu-cloud", "land": "Australien", "wN": 0.65, "wA": 0.52, "role": "Driver datacenteraktiviteter inden for blandt andet AI-cloud og bitcoin-mining.", "notes": ["Strømforsyning og fysisk datacenterkapacitet er centrale dele af forretningen."], "dev": false, "bi": true}, {"isin": "US2935941078", "n": "Enovix", "t": "ENVX", "l": "energi", "s": "backup-storage", "land": "USA", "wN": 0.63, "wA": 0.47, "role": "Laver litium-ion-celler med siliciumanode, blandet silicium og grafit.", "notes": ["Fabrikker står i Sydkorea og i Malaysia.", "Det er ikke et lager i drift."], "dev": false, "bi": false}, {"isin": "US83417M1045", "n": "SolarEdge", "t": "SEDG", "l": "energi", "s": "solar", "land": "Israel", "wN": 0.56, "wA": 0.48, "role": "Laver optimizers, invertere og en overvågningsplatform til solanlæg.", "notes": ["Den 250.000. inverter hos Flex i Austin er dateret 2. juni 2025.", "Tallet er en tæller, ikke et års tal.", "Det er udstyr, ikke et kraftværk."], "dev": false, "bi": false}, {"isin": "US34379V1035", "n": "Fluence Energy", "t": "FLNC", "l": "energi", "s": "backup-storage", "land": "USA", "wN": 0.53, "wA": 0.5, "role": "Leverer batterisystemer og software, der lagrer strøm på elnettet og afleverer den igen.", "notes": ["Siden nævner platformen Smartstack.", "Det er ikke et kraftværk, og teksten siger ikke, at selskabet selv laver cellerne."], "dev": false, "bi": false}, {"isin": "US2057683029", "n": "Comstock Resources", "t": "CRK", "l": "energi", "s": "fuel", "land": "USA", "wN": 0.52, "wA": 0.52, "role": "Producerer naturgas i Haynesville, i Louisiana og i det østlige Texas.", "notes": ["Selskabet skriver, at jordpositionen i Western Haynesville er mere end 535.000 netto-acres, og at gassen er certificeret efter MiQ-standarden.", "Det er brændsel, ikke en mine."], "dev": false, "bi": false}, {"isin": "US55405W1045", "n": "MYR Group", "t": "MYRG", "l": "energi", "s": "grid", "land": "USA", "wN": 0.52, "wA": 0.55, "role": "Bygger elektriske anlæg i USA og Canada.", "notes": ["Venice–Campbell 138 kV er et projekt uden dato."], "dev": false, "bi": false}, {"isin": "US3687361044", "n": "Generac", "t": "GNRC", "l": "energi", "s": "backup-storage", "land": "USA", "wN": 0.51, "wA": 0.48, "role": "Fremstiller reservegeneratorer.", "notes": ["Afbrydere til reservestrøm er sat til anvendelser op til 2 MW.", "Det er udstyr, ikke et kraftværk."], "dev": false, "bi": false}, {"isin": "US78397Q1094", "n": "SES AI", "t": "SES", "l": "energi", "s": "backup-storage", "land": "USA", "wN": 0.44, "wA": 0.33, "role": "Udvikler litium-metal-batterier og materialer.", "notes": ["Anlægget i Shanghai er pilotskala og blev færdigt i 2023.", "Chungju i Sydkorea er et supplement.", "Det er ikke et lager i drift."], "dev": true, "bi": false}, {"isin": "US73933G2021", "n": "Power Solutions International", "t": "PSIX", "l": "energi", "s": "generation", "land": "USA", "wN": 0.43, "wA": 0.34, "role": "Laver motorer og strømsystemer, bl.a. til datacentre.", "notes": [], "dev": false, "bi": false}, {"isin": "US74767V1098", "n": "QuantumScape", "t": "QS", "l": "energi", "s": "backup-storage", "land": "USA", "wN": 0.42, "wA": 0.34, "role": "Udvikler faststof-batterier og er stiftet i 2010.", "notes": ["QS PowerBlock blev præsenteret 8. oktober 2026 som et referencedesign.", "Datoen ligger efter beholdningen.", "Det er ikke masseproduktion og ikke et lager i drift."], "dev": true, "bi": false}, {"isin": "US29355A1079", "n": "Enphase Energy", "t": "ENPH", "l": "energi", "s": "solar", "land": "USA", "wN": 0.4, "wA": 0.41, "role": "Laver mikroinvertere til solanlæg.", "notes": ["Kontraktproduktion i South Carolina og Texas er kapacitet, ikke et målt år.", "Det er udstyr, ikke et kraftværk."], "dev": false, "bi": false}, {"isin": "US3364331070", "n": "First Solar", "t": "FSLR", "l": "energi", "s": "solar", "land": "USA", "wN": 0.39, "wA": 0.47, "role": "Laver tyndfilmsmoduler af cadmiumtellurid, i serierne 6 og 7.", "notes": ["Fabrikker står i Ohio, Alabama, Louisiana, Indien, Malaysia og Vietnam.", "Fem fabrikker i USA er anslået til mere end 17 GW, når de er i fuld drift.", "Tallet er ikke årets produktion.", "Det er moduler, ikke et kraftværk."], "dev": false, "bi": false}, {"isin": "US86771W1053", "n": "Sunrun", "t": "RUN", "l": "energi", "s": "solar", "land": "USA", "wN": 0.36, "wA": 0.49, "role": "Leverer solservice og batterier til boliger.", "notes": ["Over 1 million kunder er afrundet og gælder pr. august 2024.", "4,6 GWh tilknyttet lager er pr.", "30. juni 2026, efter beholdningen.", "Det er ikke et kraftværk."], "dev": false, "bi": false}, {"isin": "US88675P1030", "n": "Tigo Energy", "t": "TYGO", "l": "energi", "s": "solar", "land": "USA", "wN": 0.34, "wA": 0.23, "role": "Laver Flex MLPE, optimizers, invertere og batterier til solanlæg.", "notes": ["Det er udstyr, ikke et kraftværk."], "dev": false, "bi": false}, {"isin": "CA0585861085", "n": "Ballard Power Systems", "t": "BLDP", "l": "energi", "s": "generation", "land": "Canada", "wN": 0.33, "wA": 0.23, "role": "Laver brændselsceller.", "notes": ["FCmove er moduler til køretøjer.", "FCwave er et skab til skibe og stationær brug.", "FCgen er stakke.", "GeoPura HPU er en generator på brint.", "Over 1,6 GW er en kapacitet, ikke et målt år.", "Det er ikke et kraftværk."], "dev": false, "bi": false}, {"isin": "US74347M1080", "n": "ProPetro", "t": "PUMP", "l": "energi", "s": "fuel", "land": "USA", "wN": 0.32, "wA": 0.3, "role": "Leverer trykpumpning til olie- og gasboringer i Permian-bassinet.", "notes": ["Det er service, ikke et kraftværk og ikke en mine."], "dev": false, "bi": false}, {"isin": "CA2926717083", "n": "Energy Fuels", "t": "EFR.TO", "l": "raastoffer", "s": "rare-earths", "land": "USA", "wN": 0.31, "wA": 0.29, "role": "Driver White Mesa Mill i Utah.", "notes": ["Selskabet skrev 29. juli 2026, at møllen kan lave op til 1.000 ton NdPr-oxid om året, og at et byggeri til tunge sjældne jordarter er gået i gang.", "Meddelelsen ligger efter beholdningen.", "Det er ikke et kraftværk."], "dev": false, "bi": true}, {"isin": "US92840M1027", "n": "Vistra", "t": "VST", "l": "energi", "s": "utility", "land": "USA", "wN": 0.31, "wA": 0.44, "role": "Producerer strøm i USA, blandt andet fra gas og atomkraft.", "notes": ["Selskabet skrev 9. januar 2026, at aftaler med Meta dækker 2.176 MW i drift og 433 MW øget effekt.", "Det er ikke en ny reaktor."], "dev": false, "bi": false}, {"isin": "US3149111086", "n": "Fermi", "t": "FRMI", "l": "datacenter", "s": "dc-build", "land": "USA", "wN": 0.3, "wA": 0.33, "role": "Udvikler et område til energi og datacentre i Texas.", "notes": [], "dev": false, "bi": true}, {"isin": "JP3407400005", "n": "Sumitomo Electric Industries", "t": "5802.T", "l": "datacenter", "s": "copper-optics", "land": "Japan", "wN": 0.3, "wA": 0.27, "role": "Laver kabler, fiber og dele til elnettet.", "notes": [], "dev": false, "bi": true}, {"isin": "US03674X1063", "n": "Antero Resources", "t": "AR", "l": "energi", "s": "fuel", "land": "USA", "wN": 0.29, "wA": 0.35, "role": "Producerer naturgas og LPG i Marcellus i West Virginia.", "notes": ["Over 850.000 acres står uden dato.", "24 millioner tønder LPG i 2025 er eksport, ikke et kraftværk."], "dev": false, "bi": false}, {"isin": "US2960131058", "n": "Erock", "t": "EROC", "l": "energi", "s": "generation", "land": "USA", "wN": 0.27, "wA": 0.21, "role": "Leverer lokal strøm fra gas til datacentre.", "notes": [], "dev": false, "bi": false}, {"isin": "US46982L1089", "n": "Jacobs Solutions", "t": "J", "l": "datacenter", "s": "dc-build", "land": "USA", "wN": 0.27, "wA": 0.17, "role": "Ingeniørfirma, der tegner infrastruktur og datacentre.", "notes": [], "dev": false, "bi": true}, {"isin": "GB00B63H8491", "n": "Rolls-Royce", "t": "RR.L", "l": "energi", "s": "generation", "land": "Storbritannien", "wN": 0.25, "wA": 0.26, "role": "Fremstiller flymotorer og kraftsystemer.", "notes": ["Selskabet skrev 15. juni 2026, at Videberg Kraft har valgt Rolls-Royce SMR til tre små reaktorer på Sveriges vestkyst.", "Det er efter beholdningen og ikke et værk i drift.", "Atomkraft er ikke hele selskabet."], "dev": false, "bi": false}, {"isin": "US65339F1012", "n": "NextEra Energy", "t": "NEE", "l": "energi", "s": "utility", "land": "USA", "wN": 0.24, "wA": 0.19, "role": "Elselskab med atomkraft, gas, sol og vind.", "notes": ["Udvidelsen i 2013 omfattede seks enheder.", "Aftalen med Dominion 18. maj 2026 er ikke lukket.", "Op til 10 GW gas er udvikling, ikke værker."], "dev": false, "bi": false}, {"isin": "US83422N1054", "n": "Solid Power", "t": "SLDP", "l": "energi", "s": "backup-storage", "land": "USA", "wN": 0.24, "wA": 0.17, "role": "Udvikler faststofbatterier.", "notes": ["Selskabet skriver, at det leverer celleteknologi til partnere og sulfid-elektrolyt til andre, der arbejder med faststof.", "Elektrolytten laves i pilotskala.", "Det er ikke masseproduktion og ikke et lager i drift."], "dev": true, "bi": false}, {"isin": "US87422Q1094", "n": "Talen Energy", "t": "TLN", "l": "energi", "s": "utility", "land": "USA", "wN": 0.24, "wA": 0.21, "role": "Producerer strøm i USA fra atomkraft, kul, naturgas og olie.", "notes": ["Susquehanna er atomkraftværket.", "Siden skriver, at Brandon Shores kører videre efter en planlagt lukning.", "Det er ikke en udvikler af små reaktorer."], "dev": false, "bi": false}, {"isin": "US65290E1010", "n": "Nextracker (nu Nextpower)", "t": "NXT", "l": "energi", "s": "solar", "land": "USA", "wN": 0.23, "wA": 0.55, "role": "Laver soltrackere, effektelektronik og styringssoftware til store solparker.", "notes": ["1. juni 2026 står under navnet Nextracker.", "Det er udstyr, ikke et kraftværk."], "dev": false, "bi": false}, {"isin": "US00218A1051", "n": "ASP Isotopes", "t": "ASPI", "l": "energi", "s": "fuel", "land": "USA", "wN": 0.22, "wA": 0.38, "role": "Beriger isotoper.", "notes": ["En del er stabile isotoper til medicin og halvledere.", "PET Labs er nuklearmedicin i Sydafrika.", "Quantum Leap Energy er skrevet som fremtidigt brændsel, herunder HALEU.", "Teksten siger ikke, at et anlæg er i drift."], "dev": false, "bi": false}, {"isin": "US49456B1017", "n": "Kinder Morgan", "t": "KMI", "l": "energi", "s": "fuel", "land": "USA", "wN": 0.22, "wA": 0.18, "role": "Driver rørledninger til gas.", "notes": [], "dev": false, "bi": false}, {"isin": "US82489W1071", "n": "Shoals Technologies", "t": "SHLS", "l": "energi", "s": "grid", "land": "USA", "wN": 0.22, "wA": 0.31, "role": "Tegner og fremstiller eludstyr, som samler strømmen i solparker, batterilagring og datacentre.", "notes": ["Det er udstyr, ikke et kraftværk."], "dev": false, "bi": false}, {"isin": "US0937121079", "n": "Bloom Energy", "t": "BE", "l": "energi", "s": "generation", "land": "USA", "wN": 0.21, "wA": 0.37, "role": "Leverer brændselsceller, der laver strøm på stedet hos kunden.", "notes": ["Selskabet skrev 1. april 2025, at cellerne skal bruges på Conagras fabrikker i Troy og Archbold i Ohio.", "Det er en aftale, og teksten siger ikke, at cellerne allerede kører."], "dev": false, "bi": false}, {"isin": "BG1100003166", "n": "Shelly", "t": "SLYG.DE", "l": "fysisk-ai", "s": "iot", "land": "Bulgarien", "wN": 0.21, "wA": 0.18, "role": "Laver smarte relæer og enheder til hjemmet.", "notes": [], "dev": false, "bi": true}, {"isin": "CA1366351098", "n": "Canadian Solar", "t": "CSIQ", "l": "energi", "s": "solar", "land": "Canada", "wN": 0.2, "wA": 0.16, "role": "Laver solcellemoduler og batterilagring og udvikler store sol- og lagerprojekter.", "notes": ["Næsten 180 GW moduler er leveret over 25 år, ikke et enkelt år. e-STORAGE havde pr.", "30. juni 2026 sendt over 23 GWh.", "Datoen ligger efter beholdningen.", "Det er ikke et elselskab."], "dev": false, "bi": false}, {"isin": "US2333311072", "n": "DTE Energy", "t": "DTE", "l": "energi", "s": "utility", "land": "USA", "wN": 0.2, "wA": 0.16, "role": "Forsyningsselskab, der leverer strøm.", "notes": [], "dev": false, "bi": false}, {"isin": "US92837L1098", "n": "Vista Energy", "t": "VIST", "l": "energi", "s": "fuel", "land": "Mexico", "wN": 0.2, "wA": 0.16, "role": "Producerer olie og gas i Argentina.", "notes": [], "dev": false, "bi": false}, {"isin": "US05605H1005", "n": "BWX Technologies", "t": "BWXT", "l": "energi", "s": "nuclear", "land": "USA", "wN": 0.19, "wA": 0.18, "role": "Fremstiller reaktorer til flåden i Lynchburg.", "notes": ["Project Pele er et design, ikke et værk i drift.", "Selskabet skrev 3. august 2026, at det har aftalt at sælge medicinforretningen.", "Aftalen er ikke gennemført.", "Datoen ligger efter beholdningen."], "dev": false, "bi": false}, {"isin": "US1258961002", "n": "CMS Energy", "t": "CMS", "l": "energi", "s": "utility", "land": "USA", "wN": 0.19, "wA": 0.17, "role": "Forsyningsselskab, der leverer strøm.", "notes": [], "dev": false, "bi": false}, {"isin": "US36828A1016", "n": "GE Vernova", "t": "GEV", "l": "energi", "s": "generation", "land": "USA", "wN": 0.19, "wA": 0.26, "role": "Leverer udstyr til elnet og elproduktion.", "notes": ["Netsiden skriver, at GIS-udstyr dækker fra 50 kV til 800 kV.", "Gassiden viser turbinerne 9HA, 7HA og LM2500.", "Selskabet driver ikke værkerne."], "dev": false, "bi": false}, {"isin": "US0255371017", "n": "American Electric Power", "t": "AEP", "l": "energi", "s": "utility", "land": "USA", "wN": 0.18, "wA": 0.16, "role": "Forsyningsselskab, der leverer og transporterer strøm.", "notes": [], "dev": false, "bi": false}, {"isin": "US15643U1043", "n": "Centrus Energy", "t": "LEU", "l": "energi", "s": "fuel", "land": "USA", "wN": 0.18, "wA": 0.19, "role": "Beriger uran til brændsel.", "notes": ["Selskabet skriver, at berigning begyndte i slutningen af 2023 på American Centrifuge Plant i Piketon i Ohio.", "Det er ikke et kraftværk og ikke en mine."], "dev": false, "bi": false}, {"isin": "US3379321074", "n": "FirstEnergy", "t": "FE", "l": "energi", "s": "utility", "land": "USA", "wN": 0.18, "wA": 0.16, "role": "Forsyningsselskab, der leverer og transporterer strøm.", "notes": [], "dev": false, "bi": false}, {"isin": "US03214Q1085", "n": "Amprius", "t": "AMPX", "l": "energi", "s": "backup-storage", "land": "USA", "wN": 0.17, "wA": 0.25, "role": "Laver battericeller med siliciumanode.", "notes": ["Siden skriver, at fremstilling i kWh-skala begyndte i 2016, og at salg begyndte i 2018.", "I 2024 nævner siden en udvidelse i MWh-skala og GWh-skala som kontraktproduktion hos partnere.", "Pilotlinjen er ikke partnernes linjer."], "dev": false, "bi": false}, {"isin": "US04271T1007", "n": "Array Technologies", "t": "ARRY", "l": "energi", "s": "solar", "land": "USA", "wN": 0.17, "wA": 0.29, "role": "Laver stativer, der drejer solpaneler i store solparker, og softwaren SmarTrack.", "notes": ["Produkterne omfatter DuraTrack, STI H250 og OmniTrack.", "Selskabet skriver, at det købte STI Norland i januar 2022.", "Det er udstyr, ikke et kraftværk."], "dev": false, "bi": false}, {"isin": "US26884L1098", "n": "EQT", "t": "EQT", "l": "energi", "s": "fuel", "land": "USA", "wN": 0.17, "wA": 0.12, "role": "Producerer naturgas i Appalachia.", "notes": ["Købet af Equitrans Midstream blev gennemført 22. juli 2024.", "Cirka 4.000 boresteder er ikke et målt år."], "dev": false, "bi": false}, {"isin": "US02156V1098", "n": "Oklo", "t": "OKLO", "l": "energi", "s": "nuclear", "land": "USA", "wN": 0.17, "wA": 0.18, "role": "Udvikler små atomkraftanlæg.", "notes": ["Selskabet skrev 6. august 2026, at testreaktoren Groves nåede en kædereaktion ved lav effekt.", "Det er efter beholdningen.", "Det er ikke et kommercielt kraftværk og ikke salg af isotoper."], "dev": true, "bi": false}, {"isin": "US74762E1029", "n": "Quanta Services", "t": "PWR", "l": "energi", "s": "grid", "land": "USA", "wN": 0.16, "wA": 0.17, "role": "Bygger og vedligeholder elnet.", "notes": ["Selskabet skriver, at West Fort McMurray-projektet i Alberta omfatter over 310 miles 500 kV-ledning og stationerne Livock og Thickwood Hills.", "Quanta ejer ikke ledningen."], "dev": false, "bi": false}, {"isin": "US8425871071", "n": "Southern Company", "t": "SO", "l": "energi", "s": "utility", "land": "USA", "wN": 0.16, "wA": 0.1, "role": "Reguleret elselskab.", "notes": ["Selskabet skriver, at Plant Vogtle har fire enheder i drift og leverer strøm til mere end 1 million hjem og virksomheder i Georgia.", "Det er ikke en lille reaktor under udvikling."], "dev": false, "bi": false}, {"isin": "US6420451089", "n": "Atlas Energy Solutions", "t": "AESI", "l": "energi", "s": "fuel", "land": "USA", "wN": 0.15, "wA": 0.14, "role": "Leverer sand til olie- og gasudvinding og leverer strøm.", "notes": [], "dev": false, "bi": false}, {"isin": "US63010H1086", "n": "Nano Nuclear Energy", "t": "NNE", "l": "energi", "s": "nuclear", "land": "USA", "wN": 0.15, "wA": 0.19, "role": "Udvikler meget små atomreaktorer.", "notes": ["University of Illinois indsendte 31. marts 2026 en ansøgning om byggetilladelse til KRONOS.", "Den er til behandling og ikke givet.", "Det er ikke et anlæg i drift."], "dev": true, "bi": false}, {"isin": "US29415C1018", "n": "Eos Energy Enterprises", "t": "EOSE", "l": "energi", "s": "backup-storage", "land": "USA", "wN": 0.14, "wA": 0.16, "role": "Laver zinkbatterier til elnettet.", "notes": ["Selskabet skriver, at fremstilling af Z3 begyndte i august 2023 på Eos Ingenuity Park i Turtle Creek i Pennsylvania.", "Det er batterier, ikke en mine og ikke et kraftværk."], "dev": false, "bi": false}, {"isin": "SG9999000020", "n": "Flex", "t": "FLEX", "l": "datacenter", "s": "servers", "land": "USA", "wN": 0.14, "wA": 0.11, "role": "Producerer elektronik for andre og laver strøm- og køleudstyr.", "notes": [], "dev": false, "bi": true}, {"isin": "US45073V1089", "n": "ITT", "t": "ITT", "l": "energi", "s": "grid", "land": "USA", "wN": 0.13, "wA": 0.14, "role": "Laver pumper og komponenter.", "notes": [], "dev": false, "bi": false}, {"isin": "US60471A1016", "n": "Mirion Technologies", "t": "MIR", "l": "energi", "s": "nuclear", "land": "USA", "wN": 0.12, "wA": 0.12, "role": "Laver udstyr, der måler stråling.", "notes": [], "dev": false, "bi": false}, {"isin": "US74164F1030", "n": "Primoris Services", "t": "PRIM", "l": "energi", "s": "grid", "land": "USA", "wN": 0.12, "wA": 0.16, "role": "Bygger elnet, rørledninger og infrastruktur frem til datacentre.", "notes": [], "dev": false, "bi": false}, {"isin": "US3434121022", "n": "Fluor", "t": "FLR", "l": "energi", "s": "generation", "land": "USA", "wN": 0.11, "wA": 0.13, "role": "Ingeniør- og byggefirma, der ejer en andel af NuScale.", "notes": [], "dev": false, "bi": false}, {"isin": "US72919P2020", "n": "Plug Power", "t": "PLUG", "l": "energi", "s": "generation", "land": "USA", "wN": 0.11, "wA": 0.15, "role": "Leverer brændselsceller og udstyr til brint.", "notes": ["Selskabet skrev 22. april 2026, at anlægget i St.", "Gabriel i Louisiana har lavet flydende brint siden 23. april 2025.", "Det er et fælles anlæg med Olin, ikke et elselskab."], "dev": false, "bi": false}, {"isin": "US75281A1097", "n": "Range Resources", "t": "RRC", "l": "energi", "s": "fuel", "land": "USA", "wN": 0.11, "wA": 0.09, "role": "Producerer naturgas.", "notes": [], "dev": false, "bi": false}, {"isin": "US18539C2044", "n": "Clearway Energy", "t": "CWEN", "l": "energi", "s": "utility", "land": "USA", "wN": 0.1, "wA": 0.07, "role": "Producerer strøm fra vedvarende energi.", "notes": [], "dev": false, "bi": false}, {"isin": "US34354P1057", "n": "Flowserve", "t": "FLS", "l": "energi", "s": "generation", "land": "USA", "wN": 0.1, "wA": 0.1, "role": "Laver pumper og ventiler.", "notes": [], "dev": false, "bi": false}, {"isin": "US67079K1007", "n": "Nuscale Power", "t": "SMR", "l": "energi", "s": "nuclear", "land": "USA", "wN": 0.1, "wA": 0.13, "role": "Udvikler små modulære reaktorer.", "notes": ["Selskabet skriver, at modulet er en cylinder på 76 fod gange 15 fod og vejer omkring 700 tons.", "Det er et design, ikke et værk i drift."], "dev": true, "bi": false}, {"isin": "US83418M1036", "n": "Solaris Energy Infrastructure", "t": "SEI", "l": "energi", "s": "generation", "land": "USA", "wN": 0.1, "wA": 0.12, "role": "Leverer strømproduktion og fordeling tæt på store forbrugere.", "notes": ["Selskabet skrev 6. juli 2026, at det har købt GESA, som er service til kraftværker.", "Datoen ligger efter beholdningen.", "Det er ikke et kraftværk i drift."], "dev": false, "bi": false}, {"isin": "CA87601F1062", "n": "Tantalus Systems", "t": "GRID.TO", "l": "energi", "s": "grid", "land": "Canada", "wN": 0.1, "wA": 0.19, "role": "Laver en platform til distributionsnet hos elselskaber.", "notes": ["Produkterne på siden er TRUConnect, TRUFlex, TRUGrid, TRUSync og TRUSense.", "Selskabet driver ikke nettet."], "dev": false, "bi": false}, {"isin": "CA28617B6061", "n": "Electrovaya", "t": "ELVA", "l": "energi", "s": "backup-storage", "land": "Canada", "wN": 0.09, "wA": 0.05, "role": "Laver lithium-ion-batterisystemer.", "notes": ["Siden sætter fabrikken i Jamestown i New York til 137.000 kvadratfod og hovedkontoret i Mississauga i Ontario til 65.000 kvadratfod.", "Mississauga samler lavspændingssystemer.", "Faststof ligger i Electrovaya Labs og er udvikling, ikke fabrikken."], "dev": false, "bi": false}, {"isin": "US59516C1062", "n": "Microvast", "t": "MVST", "l": "energi", "s": "backup-storage", "land": "USA", "wN": 0.09, "wA": 0.11, "role": "Laver litium-ion-celler, moduler, pakker og lagringssystemer.", "notes": ["To produktionssteder er ikke navngivet med by.", "Det er ikke bevis for, at en fabrik kører.", "Det er ikke et lager i drift."], "dev": false, "bi": false}, {"isin": "US1491231015", "n": "Caterpillar", "t": "CAT", "l": "energi", "s": "generation", "land": "USA", "wN": 0.08, "wA": 0.11, "role": "Laver maskiner og gasgeneratorer.", "notes": [], "dev": false, "bi": false}, {"isin": "US53224K3023", "n": "Lightbridge", "t": "LTBR", "l": "energi", "s": "nuclear", "land": "USA", "wN": 0.08, "wA": 0.19, "role": "Udvikler metalliske brændselsstave til atomreaktorer.", "notes": ["Det er ikke et værk i drift.", "Adgangen til en testreaktor i Idaho er dateret 9. september 2026 og ligger efter beholdningen."], "dev": true, "bi": false}, {"isin": "CA1363851017", "n": "Canadian Natural Resources", "t": "CNQ.TO", "l": "energi", "s": "fuel", "land": "Canada", "wN": 0.07, "wA": 0, "role": "Producerer olie og gas.", "notes": [], "dev": false, "bi": false}, {"isin": "US2310211063", "n": "Cummins", "t": "CMI", "l": "energi", "s": "generation", "land": "USA", "wN": 0.07, "wA": 0.08, "role": "Fremstiller motorer og generatorer.", "notes": ["Fem dele: komponenter, motorer, distribution, kraftsystemer og Accelera.", "Mere end 13.000 forhandlere står uden egen dato.", "Det er ikke et elselskab."], "dev": false, "bi": false}, {"isin": "US8807791038", "n": "Terex", "t": "TEX", "l": "energi", "s": "grid", "land": "USA", "wN": 0.07, "wA": 0.1, "role": "Laver maskiner og arbejdskøretøjer, bl.a. til elselskaber.", "notes": [], "dev": false, "bi": false}, {"isin": "NL0015002Q12", "n": "Terra Innovatum", "t": "NKLR", "l": "energi", "s": "nuclear", "land": "Italien", "wN": 0.05, "wA": 0.06, "role": "Udvikler mikroreaktoren SOLO.", "notes": ["Selskabet skriver, at konceptet er fra 2018.", "Forsiden skriver både 4 MW og 5 MW termisk.", "Denne tekst beskriver ikke et værk i drift."], "dev": true, "bi": false}, {"isin": "US8814541020", "n": "Terrestrial Energy", "t": "IMSR", "l": "energi", "s": "nuclear", "land": "USA", "wN": 0.05, "wA": 0.06, "role": "Udvikler reaktoren IMSR med smeltet salt.", "notes": ["Selskabet specificerer 390 MWe netto eller 822 MWt netto og brændsel under 5 % U-235.", "De første anlæg er sat til begyndelsen af 2030'erne.", "Det er ikke et anlæg i drift."], "dev": true, "bi": false}, {"isin": "US6406551068", "n": "NeoVolta", "t": "NEOV", "l": "energi", "s": "backup-storage", "land": "USA", "wN": 0.02, "wA": 0.04, "role": "Laver batterier til boliger.", "notes": ["NV14 samles i San Diego.", "Et nyt anlæg i Pendergrass har en indbydelse til åbning 17. september 2026, efter beholdningen.", "Det er ikke et lager i drift."], "dev": false, "bi": false}];
+const SEG={fuel:'Brændsel: gas, uran og isotoper',solar:'Sol: moduler, invertere og trackere',generation:'Varmekraft, motorer og brændselsceller',nuclear:'Kernekraft og små reaktorer',utility:'Elproducenter og forsyning',grid:'Elnet og netbyggeri','backup-storage':'Batterier, lagring og reservestrøm'};
+const SEGC={fuel:'#9f886a',solar:'#f5ee9e',generation:'#b49c87',nuclear:'#a39ab7',utility:'#6e9fa9',grid:'#89aeb4','backup-storage':'#96b1a0'};
+const NODES=[
+{id:'braendsel',nm:'Brændsel',sh:'Gas og uran ind i systemet',segs:['fuel'],
+ phys:'Et gaskraftværk omsætter kemisk energi til varme og varmen til el. Et kernekraftværk gør det samme med fission. I begge tilfælde skal brændslet hentes op og transporteres, og uran skal også beriges, før det kan bruges. Solceller springer leddet over, fordi lyset er brændslet.',
+ neck:'Her er begrænsningen typisk logistik og forarbejdning: boring, rørledninger og berigningskapacitet. Vi har ikke fundet et efterprøvet, samlet flaskehalstal for leddet, så vi viser intet.',
+ money:'Selskaberne sælger brændslet eller ydelser omkring det, fx boring og rørledninger. Indtjeningen følger i høj grad prisen på gas og uran.'},
+{id:'omsaetning',nm:'Omsætning',sh:'Varme, lys og kemi bliver til el',segs:['solar','generation','utility','nuclear'],
+ phys:'Der er tre grundprincipper. <b>Varme</b> driver en turbine og en generator (gas, kul og kernekraft). <b>Lys</b> rammer en halvleder og giver jævnstrøm, som en inverter laver om til vekselstrøm (sol). <b>Kemi</b> giver jævnstrøm direkte i en brændselscelle. Varmekraft kan køre døgnet rundt, men har et termodynamisk loft. Sol har intet brændsel, men leverer kun, når solen skinner.',
+ neck:'Byggetid. Babcock &amp; Wilcox har en aftale om fire gasfyrede værker à <span class="num">300 MW</span> til Applied Digital. Den begyndte som en foreløbig startordre i november 2025, og værkerne skal efter planen først levere strøm kommercielt i 2030. Beløbet, <span class="num">2,4 mia. USD</span>, er byggeaftalens værdi.<sup><a href="#k5">[5]</a></sup> Flere af kernekraftselskaberne har endnu ikke et anlæg i drift.',
+ money:'Nogle sælger udstyret, fx turbiner, kedler og solcellemoduler. Andre ejer kraftværkerne og sælger strømmen. Flere af atomkraftselskaberne er stadig ved at udvikle deres første reaktorer.'},
+{id:'net',nm:'Net',sh:'Transport og spændingstilpasning',segs:['grid'],pinch:true,
+ phys:'Strøm skal produceres i det øjeblik, den bruges, og transporteres ved høj spænding. Tabet i en ledning vokser med strømmen i anden (P = I²R). Dobbelt spænding giver halv strøm ved samme effekt og en fjerdedel af tabet. Transformere skifter spændingen undervejs: op ved værket og ned ved forbrugeren. Uden transformere er der intet net.',
+ neck:'Leveringstiden. Store transformere: <span class="num">op til 4 år</span>. Kabler: <span class="num">2 til 3 år</span>. Jævnstrømskabler: <span class="num">over 5 år</span>. Leveringstiderne er næsten fordoblet siden 2021, og ifølge samme rundspørge er prisen på store transformere steget ca. 75 %.<sup><a href="#k2">[2]</a></sup> I USA tog det typisk <span class="num">5 år</span> fra en ansøgning om nettilslutning til drift for anlæg bygget i 2023. I 2008 var det under 2 år.<sup><a href="#k3">[3]</a></sup>',
+ money:'Entreprenører bygger og vedligeholder elnettet for elselskaberne og bliver betalt pr. projekt. Andre sælger eludstyr og styring til nettet.'},
+{id:'buffer',nm:'Buffer',sh:'Lager og reservestrøm',segs:['backup-storage'],
+ phys:'Nettet har næsten intet lager i sig selv, så balancen skal holdes sekund for sekund. Et batteri flytter <b>energi</b> i tid (kWh). En generator leverer <b>effekt</b>, når nettet svigter (kW). Det er to forskellige opgaver. Lager til nettet handler om timer og pris. Reservestrøm til et datacenter handler om sekunder og oppetid.',
+ neck:'Teknologisk modenhed. Flere af battericelleselskaberne i leddet beskriver ifølge datagrundlaget pilotlinjer, faststofdesign eller produktion hos partnere og ikke stor egenproduktion. For dem er den næste milepæl at gå fra pilot til fabrik.',
+ money:'Selskaberne sælger batterisystemer, battericeller og generatorer. Flere af batteriselskaberne arbejder stadig på at gøre ny batteriteknologi klar til stor produktion.'},
+{id:'last',nm:'Last',sh:'Datacentret, der trækker strømmen',segs:[],
+ phys:'En server omdanner stort set al den strøm, den trækker, til varme. Derfor følger kølingen med strømmen: Hver watt, der kommer ind, skal fjernes igen. Verdens datacentre brugte ca. <span class="num">415 TWh</span> i 2024, og forbruget er vokset ca. 12 % om året siden 2017.<sup><a href="#k1">[1]</a></sup> I USA var det <span class="num">176 TWh</span> i 2023, svarende til 4,4 % af landets elforbrug mod 1,9 % i 2018.<sup><a href="#k4">[4]</a></sup>',
+ neck:'Koncentrationen. 1,5 % af verdens el lyder ikke af meget. Men ifølge IEA kan et AI-datacenter trække lige så meget som en aluminiumssmelter, og næsten halvdelen af USA\'s datacenterkapacitet ligger i fem regionale klynger.<sup><a href="#k1">[1]</a></sup> Nettet skal bære lasten lokalt og ikke i gennemsnit.',
+ money:'Datacentrene er kunden for de fire led før. Fondens datacenterselskaber er et selvstændigt tema og indgår ikke i energiprocenten. I datagrundlaget har datacentertemaet <span class="dcw"></span> af formuen i <span class="fundname">PMINDI</span>.'}
+];
+const FUNDS={wN:{name:'PMINDI',total:16.96,n:69,dc:12.59},wA:{name:'PMINDIAKK',total:17.07,n:68,dc:12.34}};
+let F='wN';
+const fmt=v=>v.toLocaleString('da-DK',{minimumFractionDigits:2,maximumFractionDigits:2});
+const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;');
+const main=COS.filter(c=>!c.bi);
+const segW=s=>main.filter(c=>c.s===s).reduce((a,c)=>a+c[F],0);
+const nodeW=n=>n.segs.reduce((a,s)=>a+segW(s),0);
+const nodeN=n=>main.filter(c=>n.segs.includes(c.s)&&c[F]>0).length;
+function coLi(c){return `<li><div><span class="nm">${esc(c.n)}</span><span class="tk">${esc(c.t)} · ${esc(c.land)}</span>${c.dev?'<span class="tag">Udvikling/pilot</span>':''}</div><div class="rl">${esc(c.role)}</div><div class="wt">${c[F]>0?fmt(c[F])+' %':'ikke i afd.'}<div class="bar"><i style="width:${Math.min(100,c[F]/0.9*100)}%"></i></div></div></li>`}
+function render(){
+ const max=Math.max(...NODES.map(nodeW));
+ document.getElementById('chain').innerHTML=NODES.map((n,i)=>{const w=nodeW(n);return `<button class="node${n.pinch?' pinch':''}" data-go="${n.id}">${n.pinch?'<span class="flag">Længste ventetid</span>':''}<span class="nr">LED ${i+1}</span><span class="nm">${n.nm}</span><span class="sh">${n.sh}</span><span class="w">${n.segs.length?fmt(w)+' % · '+nodeN(n)+' selskaber':'Uden for energitemaet'}<span class="bar"><i style="width:${w/max*100}%"></i></span></span></button>`}).join('');
+ document.getElementById('stations').innerHTML=NODES.map((n,i)=>{
+  const list=n.segs.map(s=>{const cs=main.filter(c=>c.s===s&&(c.wN>0||c.wA>0)).sort((a,b)=>b[F]-a[F]);return `<div class="sub">${SEG[s]} · ${fmt(segW(s))} %</div><ul class="cos">${cs.map(coLi).join('')}</ul>`}).join('');
+  const nums=main.filter(c=>n.segs.includes(c.s)&&c.notes.length).sort((a,b)=>b[F]-a[F]).map(c=>`<li><b>${esc(c.n)}:</b> ${esc(c.notes.join(' '))}</li>`).join('');
+  const dev=main.filter(c=>n.segs.includes(c.s)&&c.dev);
+  return `<article class="station" id="${n.id}"><div class="st-head"><span class="big">0${i+1}</span><div><span class="eyebrow">Led ${i+1}</span><h2>${n.nm}</h2></div></div>
+  <div class="cols"><div class="box"><h3>Fysikken</h3><p>${n.phys}</p></div><div class="box gold"><h3>Hvor det går i stå</h3><p>${n.neck}</p></div></div>
+  <div class="box" style="margin-top:14px"><h3>Hvordan pengene flyder</h3><p>${n.money}</p></div>
+  ${n.segs.length?`<details><summary>Fondens selskaber i leddet: ${nodeN(n)} stk., ${fmt(nodeW(n))} % ${dev.length?'· '+dev.length+' markeret udvikling/pilot':''}</summary><div class="in">${list}<p class="legend">Første sætning i hvert selskabs beskrivelse i datagrundlaget. Procent = andel af ${FUNDS[F].name}s formue.</p></div></details>`:''}
+  ${nums?`<details><summary>Selskabernes egne tal, og hvad de ikke betyder</summary><div class="in"><p class="legend">Datagrundlaget skriver tallene med forbehold: kapacitet frem for produktion, aftale frem for drift, dato før eller efter beholdningen. Forbeholdene er en del af informationen.</p><ul class="notes">${nums}</ul></div></details>`:''}
+  </article>`}).join('');
+ document.getElementById('bi').innerHTML=COS.filter(c=>c.bi).sort((a,b)=>b[F]-a[F]).map(coLi).join('');
+ const f=FUNDS[F];
+ document.getElementById('tl-w').textContent=fmt(f.total)+' %';document.getElementById('tl-n').textContent=f.n;
+ document.getElementById('vw-total').textContent=fmt(f.total)+' %';
+ document.querySelectorAll('.fundname').forEach(e=>e.textContent=f.name);
+ document.querySelectorAll('.dcw').forEach(e=>e.textContent=fmt(f.dc)+' %');
+ const segs=Object.keys(SEG).sort((a,b)=>segW(b)-segW(a));
+ document.getElementById('stack').innerHTML=segs.map(s=>`<i style="width:${segW(s)/f.total*100}%;background:${SEGC[s]}"></i>`).join('');
+ document.getElementById('stackl').innerHTML=segs.map(s=>`<span style="--c:${SEGC[s]}">${SEG[s]}: ${fmt(segW(s))} %</span>`).join('');
+ document.querySelectorAll('[data-fund]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.fund===F));
+}
+document.addEventListener('click',e=>{
+ const g=e.target.closest('[data-go]');if(g){const el=document.getElementById(g.dataset.go);document.querySelectorAll('.node').forEach(n=>n.setAttribute('aria-current',n===g));el.querySelectorAll('details').forEach(d=>d.open=true);el.scrollIntoView({behavior:'smooth',block:'start'});}
+ const fb=e.target.closest('[data-fund]');if(fb){F=fb.dataset.fund;const open=[...document.querySelectorAll('#stations details')].map(d=>d.open);render();document.querySelectorAll('#stations details').forEach((d,i)=>d.open=open[i]);}
+ const tb=e.target.closest('[data-twh]');if(tb){document.getElementById('twh').value=tb.dataset.twh;calc();}
+});
+// ladder (log scale, MW)
+const L=[
+ ['Generac: afbryder til reservestrøm','op til 2 MW · datagrundlag',2],
+ ['Terra Innovatum SOLO','4–5 MW termisk · datagrundlag',5],
+ ['Ét gasværk, B&amp;W/Applied Digital','300 MW · 10-Q [5]',300],
+ ['Terrestrial Energy IMSR','390 MWe netto · datagrundlag',390],
+ ['Fire værker, B&amp;W/Applied Digital','4 × 300 MW · 10-Q [5]',1200],
+ ['Vistra: aftaler med Meta','2.176 MW i drift · datagrundlag',2176],
+ ['USA\'s datacentre 2023, gennemsnit','176 TWh ÷ 8.760 h · LBNL [4]',176e6/8760,1],
+ ['Verdens datacentre 2024, gennemsnit','415 TWh ÷ 8.760 h · IEA [1]',415e6/8760,1]];
+const pos=mw=>Math.max(0,Math.log10(mw)/5*100);
+document.getElementById('ladder').innerHTML=L.map(([a,b,v,c])=>`<div class="rung${c?' calc':''}"><div class="lb">${a}<small>${b}</small></div><div class="track"><i style="width:${pos(v)}%"></i><span>${Math.round(v).toLocaleString('da-DK')} MW</span></div></div>`).join('');
+function calc(){const t=parseFloat(document.getElementById('twh').value)||0;const gw=t*1000/8760;document.getElementById('res').innerHTML=`= <b>${gw.toLocaleString('da-DK',{maximumFractionDigits:1})} GW</b> i gennemsnit ≈ ${Math.ceil(gw*1000/300).toLocaleString('da-DK')} værker à 300 MW, der kører uafbrudt`;}
+document.getElementById('twh').addEventListener('input',calc);calc();
+// time ladder (years); [label, source, from, to]
+const T=[
+ ['Kabler','2024 · IEA [2]',2,3],
+ ['Stor transformer','op til 4 år, 2024 · IEA [2]',0,4],
+ ['Jævnstrømskabler','over 5 år, 2024 · IEA [2]',5,5.5],
+ ['Nettilslutning i USA, 2008','under 2 år · LBNL [3]',0,2],
+ ['Nettilslutning i USA, 2023','median ca. 5 år · LBNL [3]',0,5],
+ ['B&amp;W-værker: startordre til planlagt drift','nov. 2025 til 2030 · 10-Q [5]',4.1,5.1]];
+document.getElementById('timeladder').innerHTML=T.map(([a,b,f,t])=>`<div class="rung"><div class="lb">${a}<small>${b}</small></div><div class="track"><i style="width:${f/6*100}%"></i>${t>f&&f>0?`<b style="left:${f/6*100}%;width:${(t-f)/6*100}%"></b>`:''}${f===0?`<i style="width:${t/6*100}%"></i>`:''}</div></div>`).join('');
+render();
+</script>
+</body>
+</html>

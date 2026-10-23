@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Energi og elnet · NewDeal Invest</title>
+<style>
+:root{--teal:#89aeb4;--gul:#f5ee9e;--sort:#050a0f;--hvid:#e6e8ed;--graa:#313a4a;--dim:#a9b0bc}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--sort);color:var(--hvid);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--teal)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+header.top{background:#000;border-bottom:1px solid var(--graa)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+header.top img{height:28px}
+header.top span{color:var(--dim);font-size:14px}
+.hero{position:relative;min-height:600px;display:flex;align-items:flex-end;background:url(energy.webp) center/cover no-repeat}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,10,15,.35) 0%,rgba(5,10,15,.75) 55%,var(--sort) 100%)}
+.hero .wrap{position:relative;padding-bottom:48px;padding-top:120px}
+.kicker{color:var(--teal);text-transform:uppercase;letter-spacing:.12em;font-size:13px;font-weight:600}
+h1{font-size:clamp(34px,6vw,64px);line-height:1.05;margin:.25em 0 .35em;max-width:14ch}
+h1 em{font-style:normal;color:var(--gul)}
+.lede{font-size:clamp(17px,2.1vw,21px);max-width:58ch;color:#d5d9e0}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:32px;max-width:820px}
+.stat{border:1px solid var(--graa);background:rgba(5,10,15,.7);border-radius:12px;padding:16px}
+.stat b{display:block;font-size:34px;line-height:1.1;color:var(--teal)}
+.stat span{font-size:14px;color:var(--dim)}
+.src{font-size:12.5px;color:var(--dim);margin-top:10px}
+section{padding:64px 0;border-top:1px solid rgba(49,58,74,.6)}
+h2{font-size:clamp(26px,3.6vw,38px);line-height:1.15;margin:0 0 .4em}
+h3{margin:0 0 .3em;font-size:19px}
+.intro{max-width:64ch;color:#d5d9e0;font-size:17.5px}
+.kort{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:start}
+.kort ol{margin:0;padding-left:1.2em;font-size:18px}
+.kort li{margin:.45em 0}
+.vej{display:grid;gap:10px}
+.vej a{display:block;border:1px solid var(--graa);border-radius:12px;padding:14px 16px;text-decoration:none;color:var(--hvid);min-height:44px}
+.vej a b{color:var(--teal)}
+.vej a:hover{border-color:var(--teal)}
+.kunder{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:26px}
+.kunde{background:rgba(49,58,74,.35);border:1px solid var(--graa);border-radius:14px;padding:16px;font-size:14.5px}
+.kunde .ikon{font-size:26px}
+.kunde h3{font-size:17px;margin:.2em 0 .5em}
+.kunde p{margin:.4em 0}
+.kunde.ai{border-color:var(--teal)}
+.kunde small{color:var(--dim)}
+.pointe{margin-top:22px;font-size:18px;max-width:64ch;border-left:3px solid var(--teal);padding-left:14px}
+.kaede{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-top:26px}
+.led{border:1px solid var(--graa);border-radius:12px;padding:14px 12px;position:relative;font-size:14px}
+.led .nr{color:var(--teal);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.led h3{font-size:15.5px;margin:.3em 0}
+.led .tal{font-size:17px;font-weight:700}
+.led .bar{height:6px;background:var(--graa);border-radius:4px;margin:8px 0}
+.led .bar i{display:block;height:100%;background:var(--teal);border-radius:4px}
+.led p{color:var(--dim);margin:.3em 0 0}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:26px 0 18px}
+.tabs button{min-height:44px;padding:0 18px;border-radius:999px;border:1px solid var(--graa);background:transparent;color:var(--hvid);font:inherit;cursor:pointer}
+.tabs button[aria-selected=true]{background:var(--teal);color:var(--sort);border-color:var(--teal);font-weight:600}
+.race{display:none}
+.race.on{display:block}
+.race .q{font-size:22px;margin:0 0 6px}
+.race .sum{color:var(--dim);margin:0 0 16px}
+.deltagere{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.deltager{border:1px solid var(--graa);border-radius:12px;padding:14px;font-size:14px;display:flex;flex-direction:column;gap:6px}
+.deltager .spor{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--teal)}
+.deltager b{font-size:16px}
+.deltager .v{margin-top:auto;display:flex;align-items:center;gap:8px;color:var(--dim);font-size:13px}
+.deltager .v i{flex:1;height:5px;background:var(--graa);border-radius:3px;position:relative;overflow:hidden}
+.deltager .v i s{position:absolute;inset:0 auto 0 0;background:var(--teal)}
+.omkring{margin-top:14px;font-size:14.5px;color:var(--dim)}
+.ide{margin-top:26px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.ide div{background:rgba(137,174,180,.08);border:1px solid rgba(137,174,180,.35);border-radius:12px;padding:16px;font-size:15px}
+.ide b{color:var(--gul)}
+.tid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+.fakta{border:1px solid var(--graa);border-radius:14px;padding:20px}
+.fakta .stor{font-size:44px;font-weight:700;color:var(--teal);line-height:1}
+.fakta p{margin:.6em 0}
+.fakta .kilde{font-size:12.5px;color:var(--dim)}
+.risiko{margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.risiko ul{margin:0;padding-left:1.1em}
+.risiko li{margin:.5em 0}
+.skala{display:flex;gap:6px;margin:10px 0}
+.skala span{flex:1;height:34px;border-radius:6px;border:1px solid var(--graa);display:grid;place-items:center;font-size:14px;color:var(--dim)}
+.skala span.on{background:var(--teal);color:var(--sort);font-weight:700;border-color:var(--teal)}
+.filter{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0 12px}
+.filter button{min-height:40px;padding:0 14px;border-radius:999px;border:1px solid var(--graa);background:transparent;color:var(--hvid);font:inherit;font-size:14px;cursor:pointer}
+.filter button[aria-pressed=true]{border-color:var(--teal);color:var(--teal)}
+#sog{width:100%;max-width:360px;min-height:44px;border-radius:10px;border:1px solid var(--graa);background:#0b131b;color:var(--hvid);font:inherit;padding:0 14px}
+table{width:100%;border-collapse:collapse;font-size:14.5px}
+th{text-align:left;color:var(--dim);font-weight:500;font-size:13px;border-bottom:1px solid var(--graa);padding:8px 6px}
+td{border-bottom:1px solid rgba(49,58,74,.6);padding:9px 6px;vertical-align:top}
+td.w{white-space:nowrap;text-align:right;font-variant-numeric:tabular-nums}
+td .m{display:inline-block;height:6px;background:var(--teal);border-radius:3px;vertical-align:middle;margin-right:6px}
+td.ledn{color:var(--dim);white-space:nowrap}
+.andre{margin-top:28px;font-size:14.5px}
+.andre ul{padding-left:1.1em;columns:2}
+footer{padding:40px 0 60px;border-top:1px solid var(--graa);font-size:13.5px;color:var(--dim)}
+footer h3{color:var(--hvid);font-size:15px}
+footer li{margin:.35em 0}
+@media (max-width:900px){
+ .kunder{grid-template-columns:1fr 1fr}
+ .kaede{grid-template-columns:1fr 1fr}
+ .deltagere{grid-template-columns:1fr 1fr}
+ .kort,.tid,.risiko,.ide{grid-template-columns:1fr}
+}
+@media (max-width:520px){
+ .wrap{padding:0 16px}
+ .hero{min-height:560px}
+ .stats{grid-template-columns:1fr;gap:8px}
+ .stat{display:flex;align-items:baseline;gap:12px;padding:12px 14px}
+ .stat b{font-size:26px;min-width:84px}
+ .kunder,.deltagere{grid-template-columns:1fr}
+ .kaede{grid-template-columns:1fr}
+ td.ledn,th.ledn{display:none}
+ td .m{display:none}
+ table{font-size:14px;table-layout:fixed}
+ td{overflow-wrap:anywhere}
+ th:first-child{width:34%}
+ th:last-child{width:66px}
+ .andre ul{columns:1}
+ section{padding:48px 0}
+}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><img src="ndi-logo.png" alt="NewDeal Invest"><span>Tema · Energi og elnet</span></div></header>
+
+<div class="hero"><div class="wrap">
+ <div class="kicker">Tema · Energi og elnet</div>
+ <h1>Ingen ved, hvilken strøm der <em>vinder</em>.</h1>
+ <p class="lede">Batterier, små atomreaktorer, solceller, gas og brændselsceller kæmper om at levere fremtidens strøm. NewDeal Invest forsøger ikke at gætte vinderen. Fonden ejer mange af kandidaterne på én gang, hver med en lille vægt.</p>
+ <div class="stats">
+  <div class="stat"><b>69</b><span>energiselskaber i fonden</span></div>
+  <div class="stat"><b>17,0 %</b><span>af fonden. Næststørste tema efter chips</span></div>
+  <div class="stat"><b>0,87 %</b><span>vejer den største enkelte energiposition</span></div>
+ </div>
+ <p class="src">Vægte for NewDeal Invest kl. n (PMINDI) pr. 16. oktober 2026. Alle tal på siden gælder den dato.</p>
+</div></div>
+
+<section id="kort"><div class="wrap kort">
+ <div>
+  <div class="kicker">Kort fortalt</div>
+  <h2>Tre ting at tage med</h2>
+  <ol>
+   <li><b>Strøm er ikke kun til AI.</b> Den skal også bruges i hjem, fabrikker, biler og i selve elnettet.</li>
+   <li><b>Fonden ejer hele kæden.</b> Fra gas og uran over kraftværker og elnet til batterier.</li>
+   <li><b>Hvor teknologierne konkurrerer, vælger fonden ikke.</b> Den ejer flere af dem side om side. Det er fondens idé: vælg udviklingen, ikke vinderen.</li>
+  </ol>
+ </div>
+ <nav class="vej" aria-label="Vælg din vej gennem siden">
+  <a href="#kunder"><b>Vil du have overblikket?</b><br>Start med, hvem der bruger strømmen.</a>
+  <a href="#kaploeb"><b>Vil du se teknologien?</b><br>Gå til de tre kapløb uden facit.</a>
+  <a href="#alle"><b>Vil du se tallene?</b><br>Alle 69 selskaber med vægt og beskrivelse.</a>
+ </nav>
+</div></section>
+
+<section id="kunder"><div class="wrap">
+ <div class="kicker">1 · Hvem skal bruge strømmen?</div>
+ <h2>AI er én kunde. Der er mange flere.</h2>
+ <p class="intro">Det er nemt at fortælle energi som en historie om datacentre. De bruger meget strøm, og det er en vigtig del af historien. Men fondens energiselskaber leverer også til helt almindelige hjem, til fabrikker, til transport og til elnettet selv. Eksemplerne her kommer fra fondens egne selskabsbeskrivelser.</p>
+ <div class="kunder">
+  <div class="kunde"><div class="ikon" aria-hidden="true">🏠</div><h3>Hjemmet</h3>
+   <p><b>Sunrun</b> leverer solservice og batterier til boliger.</p>
+   <p><b>Enphase</b> laver mikroinvertere til solanlæg.</p>
+   <p><b>NeoVolta</b> laver batterier til boliger.</p></div>
+  <div class="kunde"><div class="ikon" aria-hidden="true">🏭</div><h3>Fabrikken</h3>
+   <p><b>Bloom Energy</b> skrev 1. april 2025, at selskabets brændselsceller skal bruges på Conagras fabrikker i Ohio.</p>
+   <p><b>Cummins</b> og <b>Caterpillar</b> laver motorer og generatorer.</p></div>
+  <div class="kunde"><div class="ikon" aria-hidden="true">🔌</div><h3>Elnettet</h3>
+   <p><b>Fluence</b> lagrer strøm på elnettet og afleverer den igen.</p>
+   <p><b>Eos</b> laver zinkbatterier til elnettet.</p>
+   <p><b>Quanta Services</b> bygger og vedligeholder elnet.</p></div>
+  <div class="kunde"><div class="ikon" aria-hidden="true">🚚</div><h3>Transport</h3>
+   <p><b>Tesla</b> producerer elbiler og batterilagring.</p>
+   <p><b>Ballard</b> laver brændselscellemoduler til køretøjer og et skab til skibe.</p></div>
+  <div class="kunde ai"><div class="ikon" aria-hidden="true">🖥️</div><h3>Datacentret</h3>
+   <p><b>Vistra</b> skrev 9. januar 2026, at aftaler med Meta dækker 2.176 MW.</p>
+   <p><b>Erock</b> leverer lokal strøm fra gas til datacentre.</p>
+   <p><b>Babcock &amp; Wilcox</b> har en aftale om fire gaskraftværker til Applied Digital. <small>(Se afsnit 4)</small></p></div>
+ </div>
+ <p class="pointe">Strøm er det, alt andet kører på. Derfor står energi her som sit eget tema og ikke som en fodnote til AI.</p>
+</div></section>
+
+<section id="kaede"><div class="wrap">
+ <div class="kicker">2 · Fra brændsel til stikkontakt</div>
+ <h2>Fonden ejer alle led i kæden</h2>
+ <p class="intro">Strøm skal hentes op, laves, sendes ud og gemmes. Fonden ejer selskaber i alle led. Ingen led vejer over 3,5 % af fonden, og ingen enkelt energiposition vejer over 0,9 %.</p>
+ <div class="kaede" id="kaedeListe"></div>
+</div></section>
+
+<section id="kaploeb"><div class="wrap">
+ <div class="kicker">3 · Tre kapløb uden facit</div>
+ <h2>Her vælger fonden ikke én vinder</h2>
+ <p class="intro">Inden for energi findes der flere tekniske svar på det samme spørgsmål. Mange af dem er stadig på vej fra laboratorium og tegnebræt til fabrik. Fonden ejer flere bud side om side. Vælg et kapløb.</p>
+ <div class="tabs" role="tablist" id="tabs"></div>
+ <div id="races"></div>
+ <div class="ide">
+  <div><b>Retningen</b> er til at se: verden skal bruge mere strøm og lagre mere af den.</div>
+  <div><b>Vinderen</b> er ikke til at se. Mange af teknologierne er endnu ikke i drift eller i masseproduktion.</div>
+  <div><b>Derfor</b> mange små positioner. Slår én af disse teknologier igennem, er den med i porteføljen. Går det skidt for en anden, vejer den kun lidt.</div>
+ </div>
+ <p class="src">Idéen bygger på NewDeal Invests investeringsfilosofi: retningen i teknologien kan forudsiges, vinderne kan ikke, og derfor spredes pengene på mange selskaber med små vægte. Spredning er ikke en garanti. Hele temaet kan falde på samme tid.</p>
+</div></section>
+
+<section id="tid"><div class="wrap">
+ <div class="kicker">4 · Det tager tid</div>
+ <h2>Strøm bygges i år, ikke i kvartaler</h2>
+ <p class="intro">Kraftværker, transformere og kabler kan ikke bestilles fra den ene dag til den anden. Det er godt at vide, når man læser om store ordrer.</p>
+ <div class="tid">
+  <div class="fakta"><div class="stor">op til 4 år</div>
+   <p>Så lang var ventetiden på en stor transformer i 2024. Kabler tog 2 til 3 år, næsten dobbelt så lang tid som i 2021.</p>
+   <p class="kilde">Kilde: IEA, <a href="https://www.iea.org/reports/building-the-future-transmission-grid/executive-summary">Building the Future Transmission Grid</a>, februar 2025.</p></div>
+  <div class="fakta"><div class="stor">2030</div>
+   <p>Babcock &amp; Wilcox' aftale om fire gaskraftværker på hver 300 MW til Applied Digital er på 2,4 mia. USD. Den startede i november 2025 som en begrænset igangsætning. Kommerciel strøm er planlagt i 2030.</p>
+   <p class="kilde">Kilde: Babcock &amp; Wilcox, <a href="https://www.sec.gov/Archives/edgar/data/1630805/000163080526000068/bw-20260630.htm">kvartalsrapport 10-Q for 2. kvartal 2026</a>, 10. august 2026.</p></div>
+ </div>
+ <div class="risiko">
+  <div class="fakta"><h3>Det kan gå galt</h3>
+   <ul>
+    <li>En stor ordrebog er ikke det samme som indtjening. Kraftværker og elnet tager år at bygge, og forsinkelser flytter betalingerne.</li>
+    <li>Energipriser, finansiering og politiske beslutninger kan ændre regnestykket for både dem, der sælger, og dem, der køber.</li>
+    <li>Flere af atomkraft- og batteriselskaberne udvikler stadig deres første produkter. Det står i fondens egne beskrivelser af selskaberne.</li>
+   </ul></div>
+  <div class="fakta"><h3>Fondens risiko</h3>
+   <div class="skala" aria-label="Risikoklasse 5 ud af 7"><span>1</span><span>2</span><span>3</span><span>4</span><span class="on">5</span><span>6</span><span>7</span></div>
+   <p>Fonden er i risikoklasse 5 på en skala fra 1 til 7. Kursen kan svinge meget, og du kan tabe penge.</p>
+   <p class="kilde"><a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm140b">Central investorinformation (KID)</a> for NewDeal Invest kl. n.</p></div>
+ </div>
+</div></section>
+
+<section id="alle"><div class="wrap">
+ <div class="kicker">5 · Alle selskaber</div>
+ <h2>De 69 energiselskaber</h2>
+ <p class="intro">Hele listen med vægt i fonden og én linje om, hvad selskabet laver. Sorteret efter vægt. Vægten viser, hvor stor en del af fonden selskabet udgjorde 16. oktober 2026.</p>
+ <div class="filter" id="filter"></div>
+ <input id="sog" type="search" placeholder="Søg efter selskab eller ord, fx batteri" aria-label="Søg i listen">
+ <table><thead><tr><th>Selskab</th><th class="ledn">Led</th><th>Hvad det laver</th><th style="text-align:right">Vægt</th></tr></thead><tbody id="liste"></tbody></table>
+ <p class="src" id="antal"></p>
+ <div class="andre"><h3>Energi rører også andre temaer</h3>
+  <p>Otte selskaber har et andet hovedtema i fonden, men arbejder også med energi:</p>
+  <ul id="andre"></ul></div>
+</div></section>
+
+<footer><div class="wrap">
+ <h3>Kilder og forbehold</h3>
+ <ul>
+  <li>Vægte, antal og selskabsbeskrivelser: NewDeal Invests porteføljedata og selskabsprofiler for kl. n (PMINDI), pr. 16. oktober 2026. Profilerne bygger på selskabernes egne sider og meddelelser.</li>
+  <li>Transformer og kabler: IEA, Building the Future Transmission Grid, februar 2025. Babcock &amp; Wilcox: 10-Q for 2. kvartal 2026.</li>
+  <li>Foto: Matthew T Rader, Transmission towers at sunset in East Texas, Wikimedia Commons, CC BY-SA 4.0.</li>
+  <li>Selskaberne nævnes for at forklare temaet. Det er ikke en anbefaling af det enkelte selskab og ikke et udsagn om, hvem der klarer sig godt.</li>
+  <li>Siden er information og ikke investeringsrådgivning. Investering i fonden kan give tab. Læs den centrale investorinformation før du investerer. Investeringsforeningen PortfolioManager, afdeling NewDeal Invest, kl. n.</li>
+ </ul>
+</div></footer>
+
+<script>
+const DATA=[{"n": "Tesla", "s": "ev", "l": "fysisk-ai", "d": "Producerer elbiler, batterilagring og energiprodukter.", "w": 1.55}, {"n": "Babcock & Wilcox", "s": "generation", "l": "energi", "d": "Laver kedler og står for design og byggeri.", "w": 0.87}, {"n": "T1 Energy", "s": "solar", "l": "energi", "d": "Laver solcellemoduler.", "w": 0.77}, {"n": "Expand Energy", "s": "fuel", "l": "energi", "d": "Producerer naturgas i USA.", "w": 0.66}, {"n": "Iris Energy", "s": "gpu-cloud", "l": "datacenter", "d": "Driver datacenteraktiviteter inden for blandt andet AI-cloud og bitcoin-mining.", "w": 0.65}, {"n": "Enovix", "s": "backup-storage", "l": "energi", "d": "Laver litium-ion-celler med siliciumanode, blandet silicium og grafit.", "w": 0.63}, {"n": "SolarEdge", "s": "solar", "l": "energi", "d": "Laver optimizers, invertere og en overvågningsplatform til solanlæg.", "w": 0.56}, {"n": "Fluence Energy", "s": "backup-storage", "l": "energi", "d": "Leverer batterisystemer og software, der lagrer strøm på elnettet og afleverer den igen.", "w": 0.53}, {"n": "Comstock Resources", "s": "fuel", "l": "energi", "d": "Producerer naturgas i Haynesville, i Louisiana og i det østlige Texas.", "w": 0.52}, {"n": "MYR Group", "s": "grid", "l": "energi", "d": "Bygger elektriske anlæg i USA og Canada.", "w": 0.52}, {"n": "Generac", "s": "backup-storage", "l": "energi", "d": "Fremstiller reservegeneratorer.", "w": 0.51}, {"n": "SES AI", "s": "backup-storage", "l": "energi", "d": "Udvikler litium-metal-batterier og materialer.", "w": 0.44}, {"n": "Power Solutions International", "s": "generation", "l": "energi", "d": "Laver motorer og strømsystemer, blandt andet til datacentre.", "w": 0.43}, {"n": "QuantumScape", "s": "backup-storage", "l": "energi", "d": "Udvikler faststof-batterier og er stiftet i 2010.", "w": 0.42}, {"n": "Enphase Energy", "s": "solar", "l": "energi", "d": "Laver mikroinvertere til solanlæg.", "w": 0.4}, {"n": "First Solar", "s": "solar", "l": "energi", "d": "Laver tyndfilmsmoduler af cadmiumtellurid, i serierne 6 og 7.", "w": 0.39}, {"n": "Sunrun", "s": "solar", "l": "energi", "d": "Leverer solservice og batterier til boliger.", "w": 0.36}, {"n": "Tigo Energy", "s": "solar", "l": "energi", "d": "Laver Flex MLPE, optimizers, invertere og batterier til solanlæg.", "w": 0.34}, {"n": "Ballard Power Systems", "s": "generation", "l": "energi", "d": "Laver brændselsceller.", "w": 0.33}, {"n": "ProPetro", "s": "fuel", "l": "energi", "d": "Leverer trykpumpning til olie- og gasboringer i Permian-bassinet.", "w": 0.32}, {"n": "Energy Fuels", "s": "rare-earths", "l": "raastoffer", "d": "Driver White Mesa Mill i Utah.", "w": 0.31}, {"n": "Vistra", "s": "utility", "l": "energi", "d": "Producerer strøm i USA, blandt andet fra gas og atomkraft.", "w": 0.31}, {"n": "Fermi", "s": "dc-build", "l": "datacenter", "d": "Udvikler et område til energi og datacentre i Texas.", "w": 0.3}, {"n": "Sumitomo Electric", "s": "copper-optics", "l": "datacenter", "d": "Laver kabler, fiber og dele til elnettet.", "w": 0.3}, {"n": "Antero Resources", "s": "fuel", "l": "energi", "d": "Producerer naturgas og LPG i Marcellus i West Virginia.", "w": 0.29}, {"n": "Erock", "s": "generation", "l": "energi", "d": "Leverer lokal strøm fra gas til datacentre.", "w": 0.27}, {"n": "Jacobs Solutions", "s": "dc-build", "l": "datacenter", "d": "Ingeniørfirma, der tegner infrastruktur og datacentre.", "w": 0.27}, {"n": "Rolls-Royce", "s": "generation", "l": "energi", "d": "Fremstiller flymotorer og kraftsystemer.", "w": 0.25}, {"n": "NextEra Energy", "s": "utility", "l": "energi", "d": "Elselskab med atomkraft, gas, sol og vind.", "w": 0.24}, {"n": "Solid Power", "s": "backup-storage", "l": "energi", "d": "Udvikler faststofbatterier.", "w": 0.24}, {"n": "Talen Energy", "s": "utility", "l": "energi", "d": "Producerer strøm i USA fra atomkraft, kul, naturgas og olie.", "w": 0.24}, {"n": "Nextracker", "s": "solar", "l": "energi", "d": "Laver soltrackere, effektelektronik og styringssoftware til store solparker.", "w": 0.23}, {"n": "ASP Isotopes", "s": "fuel", "l": "energi", "d": "Beriger isotoper.", "w": 0.22}, {"n": "Kinder Morgan", "s": "fuel", "l": "energi", "d": "Driver rørledninger til gas.", "w": 0.22}, {"n": "Shoals Technologies", "s": "grid", "l": "energi", "d": "Tegner og fremstiller eludstyr, som samler strømmen i solparker, batterilagring og datacentre.", "w": 0.22}, {"n": "Bloom Energy", "s": "generation", "l": "energi", "d": "Leverer brændselsceller, der laver strøm på stedet hos kunden.", "w": 0.21}, {"n": "Shelly", "s": "iot", "l": "fysisk-ai", "d": "Laver smarte relæer og enheder til hjemmet.", "w": 0.21}, {"n": "Canadian Solar", "s": "solar", "l": "energi", "d": "Laver solcellemoduler og batterilagring og udvikler store sol- og lagerprojekter.", "w": 0.2}, {"n": "DTE Energy", "s": "utility", "l": "energi", "d": "Forsyningsselskab, der leverer strøm.", "w": 0.2}, {"n": "Vista Energy", "s": "fuel", "l": "energi", "d": "Producerer olie og gas i Argentina.", "w": 0.2}, {"n": "BWX Technologies", "s": "nuclear", "l": "energi", "d": "Fremstiller reaktorer til flåden i Lynchburg.", "w": 0.19}, {"n": "CMS Energy", "s": "utility", "l": "energi", "d": "Forsyningsselskab, der leverer strøm.", "w": 0.19}, {"n": "GE Vernova", "s": "generation", "l": "energi", "d": "Leverer udstyr til elnet og elproduktion.", "w": 0.19}, {"n": "American Electric Power", "s": "utility", "l": "energi", "d": "Forsyningsselskab, der leverer og transporterer strøm.", "w": 0.18}, {"n": "Centrus Energy", "s": "fuel", "l": "energi", "d": "Beriger uran til brændsel.", "w": 0.18}, {"n": "FirstEnergy", "s": "utility", "l": "energi", "d": "Forsyningsselskab, der leverer og transporterer strøm.", "w": 0.18}, {"n": "Amprius", "s": "backup-storage", "l": "energi", "d": "Laver battericeller med siliciumanode.", "w": 0.17}, {"n": "Array Technologies", "s": "solar", "l": "energi", "d": "Laver stativer, der drejer solpaneler i store solparker, og softwaren SmarTrack.", "w": 0.17}, {"n": "EQT", "s": "fuel", "l": "energi", "d": "Producerer naturgas i Appalachia.", "w": 0.17}, {"n": "Oklo", "s": "nuclear", "l": "energi", "d": "Udvikler små atomkraftanlæg.", "w": 0.17}, {"n": "Quanta Services", "s": "grid", "l": "energi", "d": "Bygger og vedligeholder elnet.", "w": 0.16}, {"n": "Southern Company", "s": "utility", "l": "energi", "d": "Reguleret elselskab.", "w": 0.16}, {"n": "Atlas Energy Solutions", "s": "fuel", "l": "energi", "d": "Leverer sand til olie- og gasudvinding og leverer strøm.", "w": 0.15}, {"n": "Nano Nuclear Energy", "s": "nuclear", "l": "energi", "d": "Udvikler meget små atomreaktorer.", "w": 0.15}, {"n": "Eos Energy", "s": "backup-storage", "l": "energi", "d": "Laver zinkbatterier til elnettet.", "w": 0.14}, {"n": "Flex", "s": "servers", "l": "datacenter", "d": "Producerer elektronik for andre og laver strøm- og køleudstyr.", "w": 0.14}, {"n": "ITT", "s": "grid", "l": "energi", "d": "Laver pumper og komponenter.", "w": 0.13}, {"n": "Mirion Technologies", "s": "nuclear", "l": "energi", "d": "Laver udstyr, der måler stråling.", "w": 0.12}, {"n": "Primoris", "s": "grid", "l": "energi", "d": "Bygger elnet, rørledninger og infrastruktur frem til datacentre.", "w": 0.12}, {"n": "Fluor", "s": "generation", "l": "energi", "d": "Ingeniør- og byggefirma, der ejer en andel af NuScale.", "w": 0.11}, {"n": "Plug Power", "s": "generation", "l": "energi", "d": "Leverer brændselsceller og udstyr til brint.", "w": 0.11}, {"n": "Range Resources", "s": "fuel", "l": "energi", "d": "Producerer naturgas.", "w": 0.11}, {"n": "Clearway Energy", "s": "utility", "l": "energi", "d": "Producerer strøm fra vedvarende energi.", "w": 0.1}, {"n": "Flowserve", "s": "generation", "l": "energi", "d": "Laver pumper og ventiler.", "w": 0.1}, {"n": "NuScale Power", "s": "nuclear", "l": "energi", "d": "Udvikler små modulære reaktorer.", "w": 0.1}, {"n": "Solaris Energy Infrastructure", "s": "generation", "l": "energi", "d": "Leverer strømproduktion og fordeling tæt på store forbrugere.", "w": 0.1}, {"n": "Tantalus Systems", "s": "grid", "l": "energi", "d": "Laver en platform til distributionsnet hos elselskaber.", "w": 0.1}, {"n": "Electrovaya", "s": "backup-storage", "l": "energi", "d": "Laver lithium-ion-batterisystemer.", "w": 0.09}, {"n": "Microvast", "s": "backup-storage", "l": "energi", "d": "Laver litium-ion-celler, moduler, pakker og lagringssystemer.", "w": 0.09}, {"n": "Caterpillar", "s": "generation", "l": "energi", "d": "Laver maskiner og gasgeneratorer.", "w": 0.08}, {"n": "Lightbridge", "s": "nuclear", "l": "energi", "d": "Udvikler metalliske brændselsstave til atomreaktorer.", "w": 0.08}, {"n": "Canadian Natural Resources", "s": "fuel", "l": "energi", "d": "Producerer olie og gas.", "w": 0.07}, {"n": "Cummins", "s": "generation", "l": "energi", "d": "Fremstiller motorer og generatorer.", "w": 0.07}, {"n": "Terex", "s": "grid", "l": "energi", "d": "Laver maskiner og arbejdskøretøjer, blandt andet til elselskaber.", "w": 0.07}, {"n": "Terra Innovatum", "s": "nuclear", "l": "energi", "d": "Udvikler mikroreaktoren SOLO.", "w": 0.05}, {"n": "Terrestrial Energy", "s": "nuclear", "l": "energi", "d": "Udvikler reaktoren IMSR med smeltet salt.", "w": 0.05}, {"n": "NeoVolta", "s": "backup-storage", "l": "energi", "d": "Laver batterier til boliger.", "w": 0.02}];
+const fmt=v=>v.toLocaleString('da-DK',{minimumFractionDigits:2,maximumFractionDigits:2})+' %';
+const by=n=>DATA.find(e=>e.n===n);
+const LED=[
+ ['fuel','Brændsel','Naturgas, rørledninger og beriget uran.'],
+ ['generation','Elproduktion','Kedler, turbiner, motorer og brændselsceller.'],
+ ['nuclear','Kernekraft','Store værker og små modulære reaktorer, mange stadig på tegnebrættet.'],
+ ['solar','Sol','Moduler, elektronik og stativer, der drejer panelerne.'],
+ ['utility','Forsyning','Elselskaber, der fører strømmen ud til hjem, fabrikker og datacentre.'],
+ ['grid','Elnet','Selskaber, der bygger og udstyrer elnettet.'],
+ ['backup-storage','Lagring','Batterier til nettet og hjemmet samt reservestrøm.']];
+const E=DATA.filter(e=>e.l==='energi');
+const kaede=document.getElementById('kaedeListe');
+LED.forEach(([k,navn,txt],i)=>{const g=E.filter(e=>e.s===k);const w=g.reduce((a,e)=>a+e.w,0);
+ kaede.insertAdjacentHTML('beforeend',`<div class="led"><div class="nr">Led ${i+1}</div><h3>${navn}</h3><div class="tal">${g.length} selskaber</div><div class="bar"><i style="width:${w/3.5*100}%"></i></div><div>${fmt(w)} af fonden</div><p>${txt}</p></div>`)});
+const RACES=[
+ {id:'batteri',navn:'Batterier',q:'Hvilken batterikemi bliver standard?',d:[
+  ['Enovix','Siliciumanode','Litium-ion-celler med en anode af silicium og grafit.'],
+  ['Amprius','Siliciumanode','Battericeller med siliciumanode. Salget begyndte i 2018 ifølge selskabet.'],
+  ['SES AI','Litium-metal','Anlægget i Shanghai er i pilotskala.'],
+  ['QuantumScape','Faststof','Udvikler faststofbatterier. Ikke i masseproduktion.'],
+  ['Solid Power','Faststof','Leverer celleteknologi og elektrolyt. Elektrolytten laves i pilotskala.'],
+  ['Eos Energy','Zink','Zinkbatterier til elnettet. Fremstillingen begyndte i august 2023.'],
+  ['Microvast','Litium-ion','Celler, moduler, pakker og lagringssystemer.'],
+  ['Electrovaya','Litium-ion','Lithium-ion-batterisystemer.']],
+  omkring:'Rundt om kapløbet: Fluence leverer batterisystemer til elnettet, NeoVolta batterier til boliger og Generac reservegeneratorer.'},
+ {id:'reaktor',navn:'Små atomreaktorer',q:'Hvilket reaktordesign når først frem?',d:[
+  ['Oklo','Små anlæg','Testreaktoren Groves nåede en kædereaktion ved lav effekt, skrev selskabet 6. august 2026.'],
+  ['NuScale Power','Modulær reaktor','Modulet vejer omkring 700 tons. Et design, ikke et værk i drift.'],
+  ['Nano Nuclear Energy','Meget små reaktorer','Ansøgning om byggetilladelse til KRONOS blev indsendt 31. marts 2026 og er ikke givet.'],
+  ['Terrestrial Energy','Smeltet salt','Reaktoren IMSR. De første anlæg er sat til begyndelsen af 2030\u2019erne.'],
+  ['Terra Innovatum','Mikroreaktor','Mikroreaktoren SOLO. Konceptet er fra 2018.'],
+  ['Rolls-Royce','SMR','Videberg Kraft har valgt Rolls-Royce SMR til tre små reaktorer i Sverige, skrev selskabet 15. juni 2026.'],
+  ['BWX Technologies','Flådereaktorer','Laver reaktorer til flåden. Project Pele er et design, ikke et værk i drift.'],
+  ['Fluor','Ejer en andel','Ingeniør- og byggefirma, der ejer en andel af NuScale.']],
+  omkring:'Rundt om kapløbet: Centrus beriger uran, Lightbridge udvikler brændselsstave, ASP Isotopes beriger isotoper, og Mirion måler stråling.'},
+ {id:'sol',navn:'Sol',q:'Hvilket modul, hvilken elektronik og hvilket stativ?',d:[
+  ['T1 Energy','Modul','Laver solcellemoduler.'],
+  ['First Solar','Modul, tyndfilm','Tyndfilmsmoduler af cadmiumtellurid.'],
+  ['Canadian Solar','Modul og lager','Solcellemoduler, batterilagring og store projekter.'],
+  ['SolarEdge','Elektronik','Optimizers, invertere og overvågning.'],
+  ['Enphase Energy','Elektronik','Mikroinvertere, en lille inverter pr. panel.'],
+  ['Tigo Energy','Elektronik','Optimizers, invertere og batterier.'],
+  ['Nextracker','Stativ','Soltrackere og styringssoftware til store solparker.'],
+  ['Array Technologies','Stativ','Stativer, der drejer panelerne efter solen.']],
+  omkring:'Rundt om kapløbet: Sunrun sælger sol og batterier direkte til boliger, og Shoals laver eludstyret, der samler strømmen i solparker.'}];
+const tabs=document.getElementById('tabs'),races=document.getElementById('races');
+RACES.forEach((r,i)=>{const ws=r.d.map(x=>by(x[0]).w);const sum=ws.reduce((a,b)=>a+b,0),max=Math.max(...ws);
+ tabs.insertAdjacentHTML('beforeend',`<button role="tab" id="t-${r.id}" aria-controls="r-${r.id}" aria-selected="${i===0}">${r.navn}</button>`);
+ races.insertAdjacentHTML('beforeend',`<div class="race${i===0?' on':''}" role="tabpanel" id="r-${r.id}" aria-labelledby="t-${r.id}"><p class="q">${r.q}</p><p class="sum">${r.d.length} bud i fonden, samlet ${fmt(sum)} af fonden. Det største bud vejer ${fmt(max)}.</p><div class="deltagere">${r.d.map(([n,spor,t])=>{const w=by(n).w;return `<div class="deltager"><span class="spor">${spor}</span><b>${n}</b><span>${t}</span><span class="v"><i><s style="width:${w/0.9*100}%"></s></i>${fmt(w)}</span></div>`}).join('')}</div><p class="omkring">${r.omkring}</p></div>`)});
+tabs.addEventListener('click',ev=>{const b=ev.target.closest('button');if(!b)return;
+ tabs.querySelectorAll('button').forEach(x=>x.setAttribute('aria-selected',x===b));
+ races.querySelectorAll('.race').forEach(x=>x.classList.toggle('on',x.id===b.getAttribute('aria-controls')))});
+const navn=Object.fromEntries(LED.map(x=>[x[0],x[1]]));
+const filter=document.getElementById('filter');let valgt='alle';
+[['alle','Alle']].concat(LED.map(x=>[x[0],x[1]])).forEach(([k,n])=>filter.insertAdjacentHTML('beforeend',`<button data-k="${k}" aria-pressed="${k==='alle'}">${n}</button>`));
+const sog=document.getElementById('sog');
+function tegn(){const q=sog.value.trim().toLowerCase();
+ const rows=E.filter(e=>(valgt==='alle'||e.s===valgt)&&(!q||(e.n+' '+e.d).toLowerCase().includes(q)));
+ document.getElementById('liste').innerHTML=rows.map(e=>`<tr><td><b>${e.n}</b></td><td class="ledn">${navn[e.s]}</td><td>${e.d}</td><td class="w"><span class="m" style="width:${e.w/0.9*48}px"></span>${fmt(e.w)}</td></tr>`).join('');
+ const w=rows.reduce((a,e)=>a+e.w,0);
+ document.getElementById('antal').textContent=`Viser ${rows.length} af 69 selskaber, samlet ${fmt(w)} af fonden.`}
+filter.addEventListener('click',ev=>{const b=ev.target.closest('button');if(!b)return;valgt=b.dataset.k;
+ filter.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));tegn()});
+sog.addEventListener('input',tegn);tegn();
+const TEMA={'fysisk-ai':'Robotik og AI i den fysiske verden','datacenter':'Datacentre, netværk og cloud','raastoffer':'Råstoffer og materialer'};
+document.getElementById('andre').innerHTML=DATA.filter(e=>e.l!=='energi').map(e=>`<li><b>${e.n}</b> (${fmt(e.w)}, tema: ${TEMA[e.l]}). ${e.d}</li>`).join('');
+</script>
+</body>
+</html>

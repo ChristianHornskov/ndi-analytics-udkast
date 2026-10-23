@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Følg strømmen · Energi i NewDeal Invest</title>
+<style>
+:root{--ink:#16202a;--soft:#4a5560;--paper:#f6f2ea;--line:#d9d1c3;--acc:#c8551b;
+--c1:#7a5c3e;--c2:#c8551b;--c3:#d9a21b;--c4:#5b6fa8;--c5:#2f7d6d;--c6:#8a4f9e;--c7:#16202a}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+h1,h2,h3,.serif{font-family:Georgia,"Times New Roman",serif;font-weight:normal}
+a{color:inherit}
+sup{font-size:.62em;line-height:0;margin-left:1px}
+sup a{color:var(--soft);text-decoration:none}
+sup a:hover{color:var(--acc)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+/* rail */
+.rail{position:sticky;top:0;z-index:5;background:rgba(246,242,234,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.rail .wrap{display:flex;align-items:center;gap:6px;height:52px;overflow-x:auto;scrollbar-width:none}
+.rail .wrap::-webkit-scrollbar{display:none}
+.rail .brand{font-family:Georgia,serif;font-size:15px;white-space:nowrap;margin-right:10px;text-decoration:none}
+.rail .stops{display:flex;align-items:center;flex:1;gap:0}
+.rail .stops a{display:flex;align-items:center;gap:6px;text-decoration:none;font-size:13px;color:var(--soft);white-space:nowrap;padding:4px 8px;border-radius:20px;position:relative}
+.rail .stops a+a::before{content:"";position:absolute;left:-8px;width:10px;height:1px;background:var(--line)}
+.rail .stops a i{font-style:normal;width:20px;height:20px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;font-size:11px}
+.rail .stops a.on{color:var(--ink);background:#fff}
+.rail .stops a.on i{background:var(--acc);border-color:var(--acc);color:#fff}
+.rail .stops a.done i{background:var(--ink);border-color:var(--ink);color:#fff}
+/* hero */
+.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:end;padding:56px 0 40px}
+.hero .over{letter-spacing:.14em;text-transform:uppercase;font-size:12px;color:var(--acc);margin:0 0 14px}
+.hero h1{font-size:clamp(40px,6vw,68px);line-height:1.02;margin:0 0 22px}
+.hero .lead{font-size:20px;color:var(--soft);max-width:34em;margin:0 0 18px}
+.hero figure{margin:0;position:relative}
+.hero img{width:100%;height:auto;max-height:440px;object-fit:cover;border-radius:4px;display:block}
+.hero figcaption{font-size:12px;color:var(--soft);margin-top:6px}
+.fakta{display:flex;gap:28px;flex-wrap:wrap;margin-top:22px;padding-top:18px;border-top:1px solid var(--line)}
+.fakta div b{display:block;font-family:Georgia,serif;font-weight:normal;font-size:34px;line-height:1}
+.fakta div span{font-size:13px;color:var(--soft)}
+/* toc */
+.toc{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;padding:40px 0 28px;border-top:2px solid var(--ink)}
+.toc h2{font-size:30px;margin:0 0 10px}
+.toc p{color:var(--soft);margin:0 0 12px}
+.toc ol{list-style:none;margin:0;padding:0}
+.toc li a{display:flex;align-items:baseline;gap:14px;text-decoration:none;padding:10px 0;border-bottom:1px dotted var(--line)}
+.toc li a:hover .tt{color:var(--acc)}
+.toc .n{font-family:Georgia,serif;font-size:22px;width:22px;color:var(--acc)}
+.toc .tt{font-family:Georgia,serif;font-size:19px}
+.toc .tt small{display:block;font-family:-apple-system,"Segoe UI",Roboto,sans-serif;font-size:14px;color:var(--soft)}
+.toc .dots{flex:1}
+.toc .pg{font-size:13px;color:var(--soft);white-space:nowrap}
+.bar{display:flex;height:58px;border-radius:4px;overflow:hidden;margin:18px 0 6px}
+.bar .seg{display:flex;flex-direction:column;justify-content:center;padding:0 8px;color:#fff;text-decoration:none;font-size:12px;min-width:0;overflow:hidden}
+.bar .seg span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar .seg b{font-weight:600;white-space:nowrap}
+.s1{--k:var(--c1)}.s2{--k:var(--c2)}.s3{--k:var(--c3)}.s4{--k:var(--c4)}.s5{--k:var(--c5)}.s6{--k:var(--c6)}.s7{--k:var(--c7)}
+.bar .seg{background:var(--k)}
+.barnote{font-size:13px;color:var(--soft)}
+/* prolog */
+.prolog{padding:40px 0;border-top:1px solid var(--line)}
+.prolog .cols{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px}
+.prolog h2{font-size:30px;margin:0}
+.prolog p{margin:0 0 14px;font-size:18px}
+/* kapitler */
+.kap{padding:56px 0 48px;border-top:1px solid var(--line)}
+.kaphead{border-left:4px solid var(--k);padding-left:18px;margin-bottom:26px}
+.kick{margin:0 0 6px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--k)}
+.s3 .kick{color:#9a7108}
+.kap h2{font-size:clamp(28px,3.6vw,40px);line-height:1.12;margin:0;max-width:22em}
+.kapgrid{display:grid;grid-template-columns:1.3fr .7fr;gap:48px}
+.kerne{font-family:Georgia,serif;font-size:23px;line-height:1.4;margin:0 0 22px}
+.pts{list-style:none;padding:0;margin:0;counter-reset:p}
+.pts li{position:relative;padding:0 0 16px 34px;margin-bottom:16px;border-bottom:1px solid var(--line)}
+.pts li:last-child{border-bottom:0}
+.pts li::before{counter-increment:p;content:counter(p);position:absolute;left:0;top:2px;width:22px;height:22px;border-radius:50%;background:var(--k);color:#fff;font-size:12px;display:grid;place-items:center}
+.pts b{font-weight:600}
+.her{background:#fff;border:1px solid var(--line);border-top:4px solid var(--k);border-radius:4px;padding:18px 18px 12px;align-self:start}
+.her h3{font-size:19px;margin:0 0 4px}
+.her .meta{font-size:13px;color:var(--soft);margin:0 0 12px}
+.chips{list-style:none;margin:0;padding:0;font-size:14px}
+.chips li{display:flex;justify-content:space-between;gap:10px;padding:5px 0;border-top:1px solid #eee7da}
+.chips li b{font-weight:500;color:var(--soft);font-variant-numeric:tabular-nums;white-space:nowrap}
+.chips i{font-style:normal;font-size:11px;color:var(--soft);border:1px solid var(--line);border-radius:10px;padding:0 6px;margin-left:4px;white-space:nowrap}
+.side{margin:-18px -18px 14px}
+.side img{width:100%;height:180px;object-fit:cover;display:block}
+/* epilog */
+.epilog{background:var(--ink);color:#f3efe6;padding:64px 0}
+.epilog .kick{color:#f0a070}
+.epilog h2{font-size:clamp(28px,3.6vw,40px);margin:0 0 12px}
+.epilog .intro{font-size:19px;color:#c9cfd6;max-width:40em;margin:0 0 30px}
+.noegle{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.noegle div{border:1px solid #39444f;border-radius:4px;padding:18px}
+.noegle .par{font-family:Georgia,serif;font-size:22px;line-height:1.2;margin:0 0 10px}
+.noegle .par em{font-style:normal;color:#f0a070;display:block;font-size:14px;font-family:-apple-system,"Segoe UI",sans-serif;letter-spacing:.08em;text-transform:uppercase;margin:4px 0}
+.noegle p{margin:0;font-size:15px;color:#c9cfd6}
+.spm{margin-top:34px;display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;border-top:1px solid #39444f;padding-top:28px}
+.spm h3{font-size:24px;margin:0}
+.spm ol{margin:0;padding-left:20px}
+.spm li{margin-bottom:8px}
+/* kilder */
+.kilder{padding:36px 0 56px;font-size:13px;color:var(--soft)}
+.kilder h2{font-size:20px;color:var(--ink);margin:0 0 10px}
+.kilder ol{padding-left:20px;margin:0 0 16px}
+.kilder li{margin-bottom:6px}
+.risiko{border-top:1px solid var(--line);padding-top:14px;margin-top:10px}
+@media (max-width:860px){
+ body{font-size:16px}
+ .wrap{padding:0 18px}
+ .hero,.toc,.prolog .cols,.kapgrid,.spm{grid-template-columns:1fr;gap:24px}
+ .hero{padding:28px 0 24px}
+ .hero figure{order:-1}
+ .hero img{max-height:220px}
+ .hero .lead{font-size:18px}
+ .fakta{gap:12px;flex-wrap:nowrap}.fakta div{flex:1}.fakta div b{font-size:24px}.fakta div span{font-size:12px;display:block;line-height:1.3}
+ .noegle{grid-template-columns:1fr 1fr}
+ .kerne{font-size:20px}
+ .kap{padding:40px 0 32px}
+ .bar{height:auto;flex-direction:column}
+ .bar .seg{flex:none!important;flex-direction:row;justify-content:space-between;padding:8px 10px}
+ .rail .brand{display:none}
+ .rail .stops a span{display:none}
+ .rail .stops a.on span{display:inline}
+}
+@media (max-width:520px){.noegle{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav class="rail" aria-label="Kapitler"><div class="wrap"><a class="brand" href="#top">NewDeal Invest · Energi</a><div class="stops"><a href="#kilde" data-k="kilde"><i>1</i><span>Kilden</span></a><a href="#maskiner" data-k="maskiner"><i>2</i><span>Maskinerne</span></a><a href="#sol" data-k="sol"><i>3</i><span>Solen</span></a><a href="#atom" data-k="atom"><i>4</i><span>Atomet</span></a><a href="#net" data-k="net"><i>5</i><span>Nettet</span></a><a href="#lager" data-k="lager"><i>6</i><span>Lageret</span></a><a href="#forbrug" data-k="forbrug"><i>7</i><span>Forbrugeren</span></a></div></div></nav>
+<header class="wrap" id="top">
+ <div class="hero">
+  <div>
+   <p class="over">NewDeal Invest · Tema: energi og elnet</p>
+   <h1>Følg strømmen</h1>
+   <p class="lead">En historie i syv korte kapitler: fra gassen og uranen i undergrunden, gennem maskinerne og ledningerne, til datacentret, der bruger strømmen. Undervejs ser du, hvor fondens selskaber sidder.</p>
+   <div class="fakta">
+    <div><b>69</b><span>selskaber i temaet (PMINDI)</span></div>
+    <div><b>16,96 %</b><span>af PMINDI · 17,07 % af PMINDIAKK</span></div>
+    <div><b>7</b><span>led fra kilde til forbruger</span></div>
+   </div>
+  </div>
+  <figure><img src="energi-hoejspaendingsmast.webp" alt="Højspændingsmast og elledninger mod en mørk aftenhimmel" width="660" height="990"><figcaption>Kapitel 5 handler om ledningerne.</figcaption></figure>
+ </div>
+</header>
+
+<section class="wrap toc" aria-label="Indhold">
+ <div>
+  <h2>Indhold</h2>
+  <p>Hvert kapitel har ét budskab og et par punkter, så du kan læse det hele på ti minutter eller springe direkte til det led, du er nysgerrig på.</p>
+  <p>Ud for hvert kapitel ser du, hvor stor en del af fonden der ligger i netop det led.</p>
+ </div>
+ <ol><li><a href="#kilde"><span class="n">1</span><span class="tt">Kilden<small>Gassen og uranen, før de bliver til strøm</small></span><span class="dots"></span><span class="pg">3,11 %</span></a></li><li><a href="#maskiner"><span class="n">2</span><span class="tt">Maskinerne<small>Hvor brændsel bliver til strøm</small></span><span class="dots"></span><span class="pg">3,12 %</span></a></li><li><a href="#sol"><span class="n">3</span><span class="tt">Solen<small>Udstyret bag panelet</small></span><span class="dots"></span><span class="pg">3,42 %</span></a></li><li><a href="#atom"><span class="n">4</span><span class="tt">Atomet<small>Den lange vej fra tegning til kraftværk</small></span><span class="dots"></span><span class="pg">0,91 %</span></a></li><li><a href="#net"><span class="n">5</span><span class="tt">Nettet<small>Vejen fra kraftværk til stikkontakt</small></span><span class="dots"></span><span class="pg">3,12 %</span></a></li><li><a href="#lager"><span class="n">6</span><span class="tt">Lageret<small>Strøm, der gemmes til senere</small></span><span class="dots"></span><span class="pg">3,28 %</span></a></li><li><a href="#forbrug"><span class="n">7</span><span class="tt">Forbrugeren<small>Datacentret banker på</small></span><span class="dots"></span><span class="pg">på tværs</span></a></li>
+  <li><a href="#noegle"><span class="n">→</span><span class="tt">Efterskrift<small>Fire skelnen, der gør dig klogere på næste energinyhed</small></span><span class="dots"></span><span class="pg">læsenøgle</span></a></li>
+ </ol>
+</section>
+
+<section class="wrap prolog" aria-label="Forord">
+ <div class="cols">
+  <h2 class="serif">Forord: Hvorfor en teknologifond følger strømmen</h2>
+  <div>
+   <p>Energi og elnet er det næststørste af fondens tolv temaer. Kun chips fylder mere (24,31 % mod energiens 16,96 %), og datacentre følger efter med 12,59 %.<sup><a href="#k1">1</a></sup></p>
+   <p>En chip arbejder kun, når den får strøm. Og strømmen skal produceres, transporteres og ofte gemmes, før den når frem. Hvert led er en branche for sig med egne selskaber og egne flaskehalse.<sup><a href="#k4">4</a></sup></p>
+   <p>Sådan fordeler energiens 16,96 % sig på kædens første seks led:</p>
+   <div class="bar" role="img" aria-label="Fordeling af energitemaet på seks led"><a href="#kilde" class="seg s1" style="flex:3.11" title="Kilden: 3,11 %"><span>Kilden</span><b>3,11 %</b></a><a href="#maskiner" class="seg s2" style="flex:3.12" title="Maskinerne: 3,12 %"><span>Maskinerne</span><b>3,12 %</b></a><a href="#sol" class="seg s3" style="flex:3.42" title="Solen: 3,42 %"><span>Solen</span><b>3,42 %</b></a><a href="#atom" class="seg s4" style="flex:0.91" title="Atomet: 0,91 %"><span>Atomet</span><b>0,91 %</b></a><a href="#net" class="seg s5" style="flex:3.12" title="Nettet: 3,12 %"><span>Nettet</span><b>3,12 %</b></a><a href="#lager" class="seg s6" style="flex:3.28" title="Lageret: 3,28 %"><span>Lageret</span><b>3,28 %</b></a></div>
+   <p class="barnote">Andel af PMINDI pr. 16. oktober 2026. Klik på et led for at springe til kapitlet. Kapitel 7 går på tværs af leddene.</p>
+  </div>
+ </div>
+</section>
+
+<main class="wrap">
+<section class="kap s1" id="kilde">
+ <div class="kaphead"><p class="kick">Kapitel 1 · Kilden</p><h2>Kilden: gassen og uranen, før de bliver til strøm</h2></div>
+ <div class="kapgrid">
+  <div class="tekst">
+   <p class="kerne">Før der er strøm, er der brændsel. Nogen skal hente det op af jorden, flytte det og gøre det klar.</p>
+   <ul class="pts"><li><b>Naturgas fra felter i USA.</b> Expand Energy (dannet ved en sammenlægning af Chesapeake og Southwestern), Comstock i Haynesville, Antero i Marcellus samt EQT og Range i Appalachia producerer naturgas.<sup><a href="#k1">1</a></sup></li><li><b>Gassen skal frem.</b> Kinder Morgan driver rørledninger og lagre, der flytter naturgas fra felterne til kraftværker, industri og eksport.<sup><a href="#k3">3</a></sup></li><li><b>Boringerne kræver hjælpere.</b> Atlas leverer sand, der holder sprækker i undergrunden åbne, så gassen kan strømme ud. ProPetro står for trykpumpning i Permian-bassinet.<sup><a href="#k1">1</a>,<a href="#k3">3</a></sup></li><li><b>Atomkraft kræver beriget brændsel.</b> Det er et forarbejdet brændsel. Centrus skriver, at selskabet begyndte at berige uran i Piketon i Ohio i slutningen af 2023. ASP Isotopes beriger isotoper, bl.a. til medicin og halvledere.<sup><a href="#k1">1</a></sup></li></ul>
+  </div>
+  <aside class="her">
+   <h3>Her sidder fondens selskaber</h3><p class="meta"><b>12 selskaber</b> · 3,11 % af PMINDI · 3,07 % af PMINDIAKK<sup><a href="#k1">1</a></sup></p>
+   <ul class="chips"><li><span>Expand Energy</span><b>0,66 %</b></li>
+<li><span>Comstock Resources</span><b>0,52 %</b></li>
+<li><span>ProPetro</span><b>0,32 %</b></li>
+<li><span>Antero Resources</span><b>0,29 %</b></li>
+<li><span>ASP Isotopes</span><b>0,22 %</b></li>
+<li><span>Kinder Morgan</span><b>0,22 %</b></li>
+<li><span>Vista Energy</span><b>0,20 %</b></li>
+<li><span>Centrus Energy</span><b>0,18 %</b></li>
+<li><span>EQT</span><b>0,17 %</b></li>
+<li><span>Atlas Energy Solutions</span><b>0,15 %</b></li>
+<li><span>Range Resources</span><b>0,11 %</b></li>
+<li><span>Canadian Natural Resources</span><b>0,07 %</b></li></ul>
+  </aside>
+ </div>
+</section>
+<section class="kap s2" id="maskiner">
+ <div class="kaphead"><p class="kick">Kapitel 2 · Maskinerne</p><h2>Maskinerne: hvor brændsel bliver til strøm</h2></div>
+ <div class="kapgrid">
+  <div class="tekst">
+   <p class="kerne">De fleste af fondens selskaber i dette led bygger maskinerne. Det er kunderne, der ejer og driver kraftværket.</p>
+   <ul class="pts"><li><b>Turbiner og netudstyr.</b> GE Vernova viser gasturbinerne 9HA, 7HA og LM2500 og udstyr til elnettet, men driver ikke værkerne.<sup><a href="#k1">1</a></sup></li><li><b>Kedler og byggeri.</b> Babcock & Wilcox meddelte 4. marts 2026 et projekt på 1,2 GW (gigawatt, en milliard watt) for Base Electron. Anlæggene skal ejes af Base Electron.<sup><a href="#k1">1</a></sup></li><li><b>Strøm lige der, hvor den skal bruges.</b> Caterpillar, Cummins og Power Solutions International laver motorer og generatorer til fx datacentre og industri, når nettet svigter eller ikke rækker.<sup><a href="#k3">3</a></sup></li><li><b>Brændselsceller er en anden vej.</b> Bloom Energy leverer brændselsceller, der laver strøm hos kunden. Ballard laver celler til køretøjer, skibe og stationær brug og en generator, der kører på brint. Plug Power har lavet flydende brint i Louisiana siden april 2025.<sup><a href="#k1">1</a></sup></li></ul>
+  </div>
+  <aside class="her">
+   <h3>Her sidder fondens selskaber</h3><p class="meta"><b>13 selskaber</b> · 3,12 % af PMINDI · 2,91 % af PMINDIAKK<sup><a href="#k1">1</a></sup></p>
+   <ul class="chips"><li><span>Babcock &amp; Wilcox</span><b>0,87 %</b></li>
+<li><span>Power Solutions International</span><b>0,43 %</b></li>
+<li><span>Ballard Power</span><b>0,33 %</b></li>
+<li><span>ERock</span><b>0,27 %</b></li>
+<li><span>Rolls-Royce</span><b>0,25 %</b></li>
+<li><span>Bloom Energy</span><b>0,21 %</b></li>
+<li><span>GE Vernova</span><b>0,19 %</b></li>
+<li><span>Fluor</span><b>0,11 %</b></li>
+<li><span>Plug Power</span><b>0,11 %</b></li>
+<li><span>Flowserve</span><b>0,10 %</b></li>
+<li><span>Solaris Energy Infrastructure</span><b>0,10 %</b></li>
+<li><span>Caterpillar</span><b>0,08 %</b></li>
+<li><span>Cummins</span><b>0,07 %</b></li></ul>
+  </aside>
+ </div>
+</section>
+<section class="kap s3" id="sol">
+ <div class="kaphead"><p class="kick">Kapitel 3 · Solen</p><h2>Solen: udstyret bag panelet</h2></div>
+ <div class="kapgrid">
+  <div class="tekst">
+   <p class="kerne">Sol er det største led af energitemaet i fonden, målt på andel. Selskaberne laver udstyret til solparker og hustage.</p>
+   <ul class="pts"><li><b>Panelerne.</b> First Solar laver tyndfilmsmoduler med fabrikker i USA, Indien, Malaysia og Vietnam. T1 Energy og Canadian Solar laver også solcellemoduler.<sup><a href="#k1">1</a></sup></li><li><b>Stativer, der drejer efter solen.</b> Nextracker (som nu hedder Nextpower) og Array Technologies laver stativer og software, der drejer panelerne i store solparker.<sup><a href="#k1">1</a>,<a href="#k5">5</a></sup></li><li><b>Elektronikken, der gør solstrøm brugbar.</b> Strømmen fra panelet skal omformes, før elnettet kan bruge den. Det gør en inverter. Enphase laver mikroinvertere, og SolarEdge og Tigo laver optimizers og invertere.<sup><a href="#k1">1</a>,<a href="#k5">5</a></sup></li><li><b>Helt ude hos familien.</b> Sunrun leverer solservice og batterier til boliger og havde over 1 million kunder pr. august 2024.<sup><a href="#k1">1</a></sup></li></ul>
+  </div>
+  <aside class="her">
+   <h3>Her sidder fondens selskaber</h3><p class="meta"><b>9 selskaber</b> · 3,42 % af PMINDI · 3,80 % af PMINDIAKK<sup><a href="#k1">1</a></sup></p>
+   <ul class="chips"><li><span>T1 Energy</span><b>0,77 %</b></li>
+<li><span>SolarEdge</span><b>0,56 %</b></li>
+<li><span>Enphase Energy</span><b>0,40 %</b></li>
+<li><span>First Solar</span><b>0,39 %</b></li>
+<li><span>Sunrun</span><b>0,36 %</b></li>
+<li><span>Tigo Energy</span><b>0,34 %</b></li>
+<li><span>Nextracker (Nextpower)</span><b>0,23 %</b></li>
+<li><span>Canadian Solar</span><b>0,20 %</b></li>
+<li><span>Array Technologies</span><b>0,17 %</b></li></ul>
+  </aside>
+ </div>
+</section>
+<section class="kap s4" id="atom">
+ <div class="kaphead"><p class="kick">Kapitel 4 · Atomet</p><h2>Atomet: den lange vej fra tegning til kraftværk</h2></div>
+ <div class="kapgrid">
+  <div class="tekst">
+   <p class="kerne">Her er meget stadig tegninger, test og ansøgninger. Når du læser om atomkraft, så tjek, om der står design eller værk i drift.</p>
+   <ul class="pts"><li><b>De store værker kører allerede.</b> Kernekraft giver strøm døgnet rundt. Southern Company skriver, at Plant Vogtle har fire enheder i drift. Talen Energy ejer atomkraftværket Susquehanna. Begge selskaber er elselskaber og hører til kapitel 5.<sup><a href="#k1">1</a>,<a href="#k5">5</a></sup></li><li><b>De små reaktorer er mest på tegnebrættet.</b> SMR (små modulære reaktorer) bygges i moduler. NuScales modul er en cylinder på 76 × 15 fod og vejer omkring 700 tons, og det er stadig et design.<sup><a href="#k1">1</a>,<a href="#k5">5</a></sup></li><li><b>Ét skridt ad gangen.</b> Oklo skrev 6. august 2026, at testreaktoren Groves nåede en kædereaktion ved lav effekt, altså en test og ikke et kommercielt værk. For Nano Nuclears reaktor KRONOS blev der 31. marts 2026 søgt om byggetilladelse, og den er til behandling.<sup><a href="#k1">1</a></sup></li><li><b>Selskaberne rundt om reaktoren.</b> BWX Technologies fremstiller reaktorer til flåden. Mirion laver udstyr, der måler stråling. Lightbridge udvikler brændselsstave.<sup><a href="#k1">1</a>,<a href="#k3">3</a></sup></li></ul>
+  </div>
+  <aside class="her">
+   <h3>Her sidder fondens selskaber</h3><p class="meta"><b>8 selskaber</b> · 0,91 % af PMINDI · 1,11 % af PMINDIAKK<sup><a href="#k1">1</a></sup></p>
+   <ul class="chips"><li><span>BWX Technologies</span><b>0,19 %</b></li>
+<li><span>Oklo</span><b>0,17 %</b></li>
+<li><span>Nano Nuclear Energy</span><b>0,15 %</b></li>
+<li><span>Mirion</span><b>0,12 %</b></li>
+<li><span>NuScale Power</span><b>0,10 %</b></li>
+<li><span>Lightbridge</span><b>0,08 %</b></li>
+<li><span>Terra Innovatum Global</span><b>0,05 %</b></li>
+<li><span>Terrestrial Energy</span><b>0,05 %</b></li></ul>
+  </aside>
+ </div>
+</section>
+<section class="kap s5" id="net">
+ <div class="kaphead"><p class="kick">Kapitel 5 · Nettet</p><h2>Nettet: vejen fra kraftværk til stikkontakt</h2></div>
+ <div class="kapgrid">
+  <div class="tekst">
+   <p class="kerne">Strøm skal transporteres hele vejen frem, og nettet skal hele tiden balancere forbrug og produktion.</p>
+   <ul class="pts"><li><b>Elselskaberne.</b> AEP og FirstEnergy driver transmissionsnet (lange afstande) og distributionsnet (den lokale fordeling). DTE og CMS forsyner Michigan. NextEra har atomkraft, gas, sol og vind. Clearway leverer strøm fra vind, sol og batterier på lange kontrakter.<sup><a href="#k1">1</a>,<a href="#k3">3</a></sup></li><li><b>Dem, der bygger nettet.</b> Quanta bygger og vedligeholder elnet, fx mere end 310 miles 500 kV-ledning i Alberta (kV er spænding i tusinder volt). Quanta ejer ikke ledningen. MYR Group og Primoris bygger elanlæg og infrastruktur helt frem til datacentre.<sup><a href="#k1">1</a></sup></li><li><b>Udstyr og værktøj.</b> Shoals laver udstyr, der samler strømmen i solparker, batterilagre og datacentre. Tantalus laver en platform til elselskabernes lokale net. Terex laver lifte og køretøjer til arbejde på luftledninger.<sup><a href="#k1">1</a>,<a href="#k3">3</a></sup></li></ul>
+  </div>
+  <aside class="her">
+   <h3>Her sidder fondens selskaber</h3><p class="meta"><b>16 selskaber</b> · 3,12 % af PMINDI · 3,28 % af PMINDIAKK<sup><a href="#k1">1</a></sup></p>
+   <ul class="chips"><li><span>MYR Group</span><b>0,52 %</b></li>
+<li><span>Vistra</span><b>0,31 %</b></li>
+<li><span>NextEra Energy</span><b>0,24 %</b></li>
+<li><span>Talen Energy</span><b>0,24 %</b></li>
+<li><span>Shoals Technologies</span><b>0,22 %</b></li>
+<li><span>DTE Energy</span><b>0,20 %</b></li>
+<li><span>CMS Energy</span><b>0,19 %</b></li>
+<li><span>American Electric Power</span><b>0,18 %</b></li>
+<li><span>FirstEnergy</span><b>0,18 %</b></li>
+<li><span>Quanta Services</span><b>0,16 %</b></li>
+<li><span>Southern Company</span><b>0,16 %</b></li>
+<li><span>ITT</span><b>0,13 %</b></li>
+<li><span>Primoris Services</span><b>0,12 %</b></li>
+<li><span>Clearway Energy</span><b>0,10 %</b></li>
+<li><span>Tantalus</span><b>0,10 %</b></li>
+<li><span>Terex</span><b>0,07 %</b></li></ul>
+  </aside>
+ </div>
+</section>
+<section class="kap s6" id="lager">
+ <div class="kaphead"><p class="kick">Kapitel 6 · Lageret</p><h2>Lageret: strøm, der gemmes til senere</h2></div>
+ <div class="kapgrid">
+  <div class="tekst">
+   <p class="kerne">Uden et lager skal strømmen bruges i samme øjeblik, den bliver lavet. Batterier og reservestrøm flytter strømmen i tid.</p>
+   <ul class="pts"><li><b>Batterier på elnettet.</b> Fluence leverer batterisystemer og software, der gemmer strøm på nettet og sender den ud igen. Eos laver zinkbatterier og begyndte produktionen af Z3 i august 2023.<sup><a href="#k1">1</a></sup></li><li><b>Når strømmen går.</b> Generac fremstiller reservegeneratorer, med afbrydere til reservestrøm op til 2 MW.<sup><a href="#k1">1</a></sup></li><li><b>Næste generation er stadig i laboratoriet.</b> QuantumScape og Solid Power udvikler faststofbatterier, SES AI udvikler litium-metal-batterier, og Enovix og Amprius laver celler med siliciumanode. Datasættet beskriver dem som udvikling eller pilotskala, ikke masseproduktion.<sup><a href="#k1">1</a></sup></li><li><b>Også i hjemmet.</b> NeoVolta laver batterier til boliger.<sup><a href="#k1">1</a></sup></li></ul>
+  </div>
+  <aside class="her">
+   <h3>Her sidder fondens selskaber</h3><p class="meta"><b>11 selskaber</b> · 3,28 % af PMINDI · 2,90 % af PMINDIAKK<sup><a href="#k1">1</a></sup></p>
+   <ul class="chips"><li><span>Enovix</span><b>0,63 %</b></li>
+<li><span>Fluence Energy</span><b>0,53 %</b></li>
+<li><span>Generac</span><b>0,51 %</b></li>
+<li><span>SES AI</span><b>0,44 %</b></li>
+<li><span>QuantumScape</span><b>0,42 %</b></li>
+<li><span>Solid Power</span><b>0,24 %</b></li>
+<li><span>Amprius</span><b>0,17 %</b></li>
+<li><span>Eos Energy</span><b>0,14 %</b></li>
+<li><span>Electrovaya</span><b>0,09 %</b></li>
+<li><span>Microvast</span><b>0,09 %</b></li>
+<li><span>NeoVolta</span><b>0,02 %</b></li></ul>
+  </aside>
+ </div>
+</section>
+<section class="kap s7" id="forbrug">
+ <div class="kaphead"><p class="kick">Kapitel 7 · Forbrugeren</p><h2>Forbrugeren: datacentret banker på</h2></div>
+ <div class="kapgrid">
+  <div class="tekst">
+   <p class="kerne">En stor ny kunde i kæden er datacentret, og nogle af selskaberne bringer strømmen helt hen til døren.</p>
+   <ul class="pts"><li><b>Lange aftaler med store kunder.</b> Vistra skrev 9. januar 2026, at aftaler med Meta dækker 2.176 MW fra værker i drift og 433 MW øget effekt.<sup><a href="#k1">1</a></sup></li><li><b>Strøm på stedet.</b> ERock opstiller og driver gasdrevne strømanlæg til datacentre, når nettet ikke rækker. Solaris leverer strøm tæt på store forbrugere.<sup><a href="#k1">1</a>,<a href="#k3">3</a></sup></li><li><b>Energi og datacenter samme sted.</b> Hos IREN (Iris Energy) er strømforsyning og fysisk datacenterkapacitet centrale dele af forretningen. Fermi udvikler et område til energi og datacentre i Texas.<sup><a href="#k1">1</a></sup></li><li><b>Helt inde i bygningen.</b> Flex laver strøm- og køleudstyr. Jacobs tegner infrastruktur og datacentre. Begge hører til fondens datacenter-tema, men arbejder også med energi.<sup><a href="#k1">1</a></sup></li></ul>
+  </div>
+  <aside class="her"><figure class="side"><img src="datacentre-serverraekker.webp" alt="Gang i et datacenter mellem lange rækker af servere" loading="lazy" width="660" height="990"></figure>
+   <h3>Her sidder fondens selskaber</h3><p class="meta"><b>15 selskaber</b>, hvor datasættet kobler energi og datacentre. De fleste er allerede talt med i kapitel 1-6. Andelen er pr. selskab i PMINDI.<sup><a href="#k1">1</a></sup></p>
+   <ul class="chips"><li><span>IREN (Iris Energy) <i>datacenter-tema</i></span><b>0,65 %</b></li>
+<li><span>Generac</span><b>0,51 %</b></li>
+<li><span>Power Solutions International</span><b>0,43 %</b></li>
+<li><span>Fermi <i>datacenter-tema</i></span><b>0,30 %</b></li>
+<li><span>Sumitomo Electric <i>datacenter-tema</i></span><b>0,30 %</b></li>
+<li><span>ERock</span><b>0,27 %</b></li>
+<li><span>Jacobs Solutions <i>datacenter-tema</i></span><b>0,27 %</b></li>
+<li><span>Talen Energy</span><b>0,24 %</b></li>
+<li><span>Bloom Energy</span><b>0,21 %</b></li>
+<li><span>Oklo</span><b>0,17 %</b></li>
+<li><span>Quanta Services</span><b>0,16 %</b></li>
+<li><span>Flex <i>datacenter-tema</i></span><b>0,14 %</b></li>
+<li><span>Solaris Energy Infrastructure</span><b>0,10 %</b></li>
+<li><span>Caterpillar</span><b>0,08 %</b></li>
+<li><span>Cummins</span><b>0,07 %</b></li></ul>
+  </aside>
+ </div>
+</section></main>
+
+<section class="epilog" id="noegle">
+ <div class="wrap">
+  <p class="kick">Efterskrift · Læsenøglen</p>
+  <h2>Fire skelnen, der gør dig klogere på næste energinyhed</h2>
+  <p class="intro">Når fondens selskabstekster bliver skrevet, går de samme fire skelnen igen og igen. De er værd at have med, næste gang du læser en overskrift om energi.<sup><a href="#k1">1</a>,<a href="#k4">4</a></sup></p>
+  <div class="noegle">
+   <div><p class="par">Kapacitet<em>er ikke det samme som</em>produktion</p><p>T1 Energys fabrik er sat til 5 GW moduler om året. Det er, hvad fabrikken kan lave, ikke et år, der er målt.</p></div>
+   <div><p class="par">Design<em>er ikke det samme som</em>drift</p><p>NuScales modul er tegnet helt ned til omkring 700 tons, men det er stadig et design. Oklos test er en test.</p></div>
+   <div><p class="par">Bygger<em>er ikke det samme som</em>ejer</p><p>Quanta bygger ledningen uden at eje den. GE Vernova leverer turbinen, og kunden driver værket.</p></div>
+   <div><p class="par">Ordre<em>er ikke det samme som</em>betaling</p><p>En ordre på en turbine giver ikke det samme som indtægt fra et færdigt kraftværk. Tid, finansiering og tilladelser betyder meget.</p></div>
+  </div>
+  <div class="spm">
+   <h3 class="serif">Tre spørgsmål at stille</h3>
+   <ol>
+    <li>Hvornår bliver ordren til en leverance og en betaling?</li>
+    <li>Hvem bærer risikoen for dyrere materialer og forsinkelser?</li>
+    <li>Er efterspørgslen knyttet til ét projekt eller mange kunder?<sup><a href="#k4">4</a></sup></li>
+   </ol>
+  </div>
+ </div>
+</section>
+
+<footer class="wrap kilder" aria-label="Kilder">
+ <h2 class="serif">Kilder</h2>
+ <ol>
+  <li id="k1">NewDeal Invests datasæt over fondens selskaber (data.json og map-entry.json, samlet i v5/reused-data.json), positioner pr. 16. oktober 2026: temaer, led, andele for PMINDI og PMINDIAKK og korte selskabsbeskrivelser med datoer fra selskabernes egne sider. Datoer efter positionsdatoen er markeret i selskabsbeskrivelserne.</li>
+  <li id="k2">Billeder: NewDeal Invests billedbibliotek (v5/photos/bot), temabilleder for energi og datacentre.</li>
+  <li id="k3">NewDeal Invests selskabstekster (udkast) med selskabernes egne sider som kilde: <a href="https://www.kindermorgan.com/">Kinder Morgan</a>, <a href="https://atlas.energy/">Atlas Energy Solutions</a>, <a href="https://www.caterpillar.com/">Caterpillar</a>, <a href="https://www.psiengines.com/">Power Solutions International</a>, <a href="https://www.erock.com/">ERock</a>, <a href="https://www.aep.com/">AEP</a>, <a href="https://www.firstenergycorp.com/fehome.html">FirstEnergy</a>, <a href="https://www.cmsenergy.com/">CMS Energy</a>, <a href="https://www.dteenergy.com/">DTE Energy</a>, <a href="https://investor.clearwayenergy.com/">Clearway</a>, <a href="https://www.terex.com/">Terex</a>, <a href="https://www.mirion.com/">Mirion</a>.</li>
+  <li id="k4">NewDeal Invests redaktionelle ramme for temaet energi (v5/editorial.mjs): opdelingen i producenter, net og udstyrsleverandører og de tre spørgsmål.</li>
+  <li id="k5">Forklaringer af leddene sol, kernekraft og forsyning fra datasættets beskrivelse af hvert led (v5/reused-data.json, stations).</li>
+ </ol>
+ <p>Andelene viser, hvor stor en del af fonden et selskab eller et led udgjorde på datoen. De ændrer sig løbende. Siden beskriver, hvad selskaberne laver, og er ikke investeringsrådgivning.</p>
+ <p class="risiko">Risiko: Fonden har risikoklasse 5 på en skala fra 1 til 7. Værdien kan svinge meget, og du kan tabe penge.</p>
+</footer>
+
+<script>
+(function(){
+ var links=[].slice.call(document.querySelectorAll('.rail .stops a'));
+ var ids=links.map(function(a){return a.dataset.k});
+ function upd(){
+  var y=window.scrollY+window.innerHeight*0.35, cur=-1;
+  ids.forEach(function(id,i){var el=document.getElementById(id); if(el && el.offsetTop<=y) cur=i;});
+  links.forEach(function(a,i){a.classList.toggle('on',i===cur);a.classList.toggle('done',i<cur);});
+  if(cur>=0){var on=links[cur],box=on.parentNode.parentNode; if(on.offsetLeft<box.scrollLeft||on.offsetLeft>box.scrollLeft+box.clientWidth-80) box.scrollLeft=on.offsetLeft-40;}
+ }
+ window.addEventListener('scroll',upd,{passive:true}); upd();
+})();
+</script>
+</body>
+</html>
