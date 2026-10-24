@@ -1,0 +1,626 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<script>document.documentElement.classList.add('js')</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="img/ndi-logo.webp" type="image/webp">
+<title>Robotter &amp; fysisk AI: når computeren skal kunne handle · NewDeal Invest</title>
+<meta name="description" content="Temaet Robotter &amp; fysisk AI i NewDeal Invests fond: hvilke dele af maskinerne selskaberne laver, og hvor meget hver del fylder.">
+<link rel="preload" href="fonts/font-3.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/font-1.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:100 900;font-display:swap;src:url('fonts/font-1.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:100 900;font-display:swap;src:url('fonts/font-0.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:200 800;font-display:swap;src:url('fonts/font-3.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:200 800;font-display:swap;src:url('fonts/font-2.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}
+:root{--bg:#050a0f;--ink:#e6e8ed;--mute:#aebbc7;--a:#b49c87;--line:#313a4a;--card:#0b141c;--surf:#0f1a22;--fokus:#e4d6c2;--x:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10'%3E%3Cpath d='M0 5h10M5 0v10' stroke='%23b49c87' stroke-opacity='.6'/%3E%3C/svg%3E")}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 'DM Sans',system-ui,sans-serif;overflow-x:clip}
+a{color:inherit}button{font:inherit;color:inherit;cursor:pointer}img{max-width:100%}
+h1,h2,h3{font-family:Manrope,'DM Sans',sans-serif;font-weight:500;line-height:1.18;letter-spacing:-.04em;margin:0}
+p{margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding:0 18px}
+.eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--a);font-weight:600;margin:0 0 12px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+a:focus-visible,button:focus-visible,summary:focus-visible,iframe:focus-visible{outline:3px solid var(--fokus);outline-offset:3px}
+.skip{position:absolute;left:12px;top:-60px;background:var(--a);color:var(--bg);padding:12px 16px;border-radius:5px;z-index:60;font-weight:600}
+.skip:focus{top:12px}
+.top{position:sticky;top:0;z-index:40;background:#000;border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px}
+.top img{width:130px;height:auto;display:block}
+.top span{font-size:11px;letter-spacing:.14em;color:var(--a);font-weight:600;text-transform:uppercase;text-align:right}
+.prog{position:absolute;left:0;bottom:-1px;height:2px;width:100%;background:var(--a);transform-origin:left;transform:scaleX(var(--p,0))}
+section{scroll-margin-top:64px}
+h2{font-size:clamp(28px,7vw,42px);max-width:22ch}
+.lead{font-size:18px;color:var(--mute);max-width:58ch}
+.die{position:relative;background:linear-gradient(rgba(49,58,74,.28) 1px,transparent 1px) 0 0/20px 20px,linear-gradient(90deg,rgba(49,58,74,.28) 1px,transparent 1px) 0 0/20px 20px,var(--card);border:1px solid var(--line);border-radius:12px}
+.die::after{content:"";position:absolute;inset:7px;pointer-events:none;background:var(--x) left top/10px 10px no-repeat,var(--x) right top/10px 10px no-repeat,var(--x) left bottom/10px 10px no-repeat,var(--x) right bottom/10px 10px no-repeat}
+/* video-facade */
+.vid{margin:.8rem 0 .9rem;max-width:560px}
+.vid-ramme{position:relative;aspect-ratio:16/9;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:#000}
+.vid-ramme iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vid-play{position:absolute;inset:0;width:100%;height:100%;padding:0;border:0;background:#000;display:block}
+.vid-play img{width:100%;height:100%;object-fit:cover;display:block;opacity:.8;filter:grayscale(.9) contrast(1.05)}
+.vid-play::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,10,15,0) 40%,rgba(5,10,15,.55));z-index:1}
+.vid-ikon{position:absolute;z-index:2;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:var(--ink);box-shadow:0 4px 24px rgba(0,0,0,.5)}
+.vid-ikon::after{content:"";position:absolute;left:26px;top:20px;border-style:solid;border-width:12px 0 12px 19px;border-color:transparent transparent transparent var(--bg)}
+.vid-play:hover .vid-ikon{background:#fff}
+.vid-play:focus-visible{outline:3px solid var(--fokus);outline-offset:-3px}
+.vid-tid{position:absolute;z-index:2;right:8px;bottom:8px;background:rgba(0,0,0,.8);color:#fff;font-size:13px;padding:2px 8px;border-radius:4px}
+.vid figcaption{font-size:13px;color:var(--mute);margin-top:8px;line-height:1.5}
+.vid figcaption b{color:var(--ink);font-weight:600;display:block}
+.vid figcaption a{display:inline-flex;align-items:center;min-height:44px;color:var(--a);font-weight:600}
+/* X */
+.xs{padding:40px 0;border-top:1px solid var(--line)}
+.xs-liste{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:12px}
+.xp{padding:4px 14px 10px;min-width:0;overflow:hidden}
+.xp-delt{font-size:13px;color:var(--a);font-weight:600;padding-top:10px}
+.xp-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.xp-trin a{display:inline-flex;align-items:center;min-height:44px;color:var(--a);font-size:13px;font-weight:600;letter-spacing:.02em;text-underline-offset:3px}
+.xp-trin a::before{content:"";width:8px;height:8px;border-radius:2px;background:var(--a);margin-right:8px}
+.xp-dato{font-size:13px;color:var(--mute);font-variant-numeric:tabular-nums}
+.xp-fra{font-size:14px;color:var(--mute);margin-top:-6px}
+.xp-fra b{color:var(--ink);font-weight:600}
+.xp-k{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--a);font-weight:600;margin-right:4px}
+.xp-forkl{font-size:15px;line-height:1.5;margin-top:6px}
+.xp-ord{font-size:14px;color:var(--mute);margin-top:6px}
+.xp-knapper{display:flex;flex-wrap:wrap;align-items:center;gap:0 18px;margin-top:6px}
+.xp-vis{min-height:44px;padding:0 16px;border-radius:10px;border:1px solid var(--a);background:var(--surf);color:var(--ink);font:inherit;font-weight:600;cursor:pointer}
+.xp-vis:hover{background:#15242e}
+.xp-link{display:inline-flex;align-items:center;min-height:44px;color:var(--a);font-weight:600;text-underline-offset:3px}
+.xp-embed:empty{display:none}.xp-embed:focus{outline:none}.xp-embed:focus-visible{outline:3px solid var(--fokus);outline-offset:3px}
+.xp blockquote.twitter-tweet{margin:10px 0 4px;font-size:14px;color:var(--mute)}
+.xp .twitter-tweet-rendered,.xp iframe{max-width:100%!important;min-width:0!important}
+.xp .twitter-tweet-rendered{margin:10px 0 4px!important}
+.js .xs:not(.alle) .ekstra{display:none}
+.x-mere{margin-top:14px;min-height:44px;padding:0 18px;border-radius:10px;border:1px solid var(--a);background:transparent;color:var(--ink);font:inherit;font-weight:600;cursor:pointer}
+.x-mere:hover{background:var(--surf)}
+.xs-note{margin-top:18px;font-size:14px;color:var(--mute);max-width:70ch}
+/* 7 kilder */
+.kilder-s{padding:10px 0 20px;border-top:1px solid var(--line)}
+.kilder summary{min-height:56px;display:flex;align-items:center;justify-content:space-between;gap:12px;cursor:pointer;list-style:none;font-weight:600}
+.kilder summary::-webkit-details-marker{display:none}
+.kilder summary::after{content:"＋";color:var(--a)}.kilder[open] summary::after{content:"−"}
+.kilder ul{margin:0 0 18px;padding-left:18px;font-size:14px;color:var(--mute);display:grid;gap:14px;max-width:80ch}
+.kilder a{color:var(--a);text-underline-offset:3px;overflow-wrap:anywhere;display:inline-block;padding:13px 0;margin:-13px 0}
+.kilder p{font-size:14px;color:var(--mute);max-width:80ch;margin:0 0 14px}
+.kilder h3{font-size:16px;margin:18px 0 10px;letter-spacing:-.01em}
+.kid{display:inline-flex!important;align-items:center;min-height:44px;margin:6px 0 4px!important;padding:0!important;font-weight:600}
+footer{border-top:1px solid var(--line);padding:22px 0 64px;font-size:13px;color:var(--mute)}
+footer p{max-width:80ch}footer p+p{margin-top:8px}/* ---- Robotter & fysisk AI: eget greb (synsfelt, lidar-ringe, punktsky) ---- */
+html{scroll-padding-top:72px}
+.rg{display:inline-block;width:11px;height:11px;margin-right:8px;vertical-align:-1px;border-radius:50%;border:2px solid var(--a);box-shadow:0 0 0 3px rgba(180,156,135,.18)}
+.s{padding:36px 0;position:relative}
+.note{font-size:13px;color:var(--mute);margin-top:10px;max-width:62ch}
+.smal{color:var(--mute);max-width:58ch}
+/* scanlinje mellem hero og fonden */
+.scan{height:36px;position:relative;overflow:hidden;border-top:1px solid var(--line);background:url(fra-billedstil/grafik/fysisk-ai-moenster-punktsky.svg) 0 0/96px 96px repeat-x}
+.scan::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--bg),rgba(5,10,15,.2) 30%,rgba(5,10,15,.2) 70%,var(--bg))}
+.scan::after{content:"";position:absolute;left:50%;top:0;width:min(60%,520px);height:100%;transform:translateX(-50%);background:radial-gradient(ellipse at 50% 0,rgba(180,156,135,.28),rgba(180,156,135,0) 70%)}
+/* hero */
+.hero{position:relative;padding:0 0 30px}
+.hero-bill{margin:0;position:relative;background:var(--card)}
+.hero-bill img{display:block;width:100%;height:auto;aspect-ratio:2/1;object-fit:cover;object-position:50% 40%}
+.hero-bill::after{content:"";position:absolute;inset:auto 0 0 0;height:40%;background:linear-gradient(180deg,rgba(5,10,15,0),var(--bg));pointer-events:none}
+.hero-tekst{position:relative;margin-top:-76px}
+.hero h1{font-size:clamp(40px,11vw,72px);letter-spacing:-.05em;line-height:1.02}
+.hero h1 span{display:block;font-size:clamp(20px,5.4vw,30px);letter-spacing:-.03em;color:var(--a);margin-top:10px;line-height:1.2}
+.hero .lead{margin-top:16px;color:var(--ink);font-size:18px}
+.ikke{display:flex;gap:12px;align-items:flex-start;margin-top:14px;color:var(--mute);max-width:58ch;font-size:15px}
+.ikke svg{flex:0 0 28px;width:28px;height:28px;color:var(--a);margin-top:2px}
+.kred{font-size:12px;color:var(--mute);margin-top:12px}
+@media (min-width:900px){
+ .hero{padding:0}
+ .hero-bill img{aspect-ratio:2/1;max-height:640px}
+ .hero-bill::after{inset:0;height:auto;background:linear-gradient(90deg,var(--bg) 0,rgba(5,10,15,.9) 38%,rgba(5,10,15,0) 64%),linear-gradient(180deg,rgba(5,10,15,0) 72%,var(--bg))}
+ .hero-tekst{position:absolute;inset:0;margin:0 auto;display:flex;flex-direction:column;justify-content:center;padding-bottom:16px}
+ .hero-tekst>*{max-width:520px}
+}
+/* fonden: 100 prikker */
+.fonden-top{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px;align-items:center;margin-top:18px}
+.tal{font-family:Manrope,sans-serif;font-weight:500;font-size:clamp(56px,16vw,112px);letter-spacing:-.05em;line-height:1;color:var(--a)}
+.tal small{font-size:.45em;margin-left:4px;letter-spacing:0}
+.tal-t{font-size:16px;margin-top:6px}
+.prikker{margin:0}
+.prik-g{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(10,11px);gap:5px}
+.prik-g li{width:11px;height:11px;border-radius:50%;border:1px solid #4a5566}
+.prik-g li.on{background:var(--a);border-color:var(--a);box-shadow:0 0 6px rgba(180,156,135,.45)}
+.prik-g li.del{border-color:var(--a);background:conic-gradient(var(--a) 0 23%,transparent 23%)}
+.prikker figcaption{font-size:12px;color:var(--mute);margin-top:8px;max-width:20ch;line-height:1.4}
+.fakta{list-style:none;margin:22px 0 0;padding:0;display:grid;border-top:1px solid var(--line)}
+.fakta li{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);font-size:15px;color:var(--mute)}
+.fakta b{color:var(--ink);font-weight:600;text-align:right;font-variant-numeric:tabular-nums}
+.brod{margin-top:14px;color:var(--mute);max-width:58ch}
+@media (min-width:600px){.prik-g{grid-template-columns:repeat(10,16px);gap:8px}.prik-g li{width:16px;height:16px}}
+@media (min-width:900px){.fonden-g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:start}.fonden-g .fakta{margin-top:24px}}
+/* mest hjul og propeller */
+.vaegt p+p{margin-top:12px}
+.vaegt p{max-width:62ch;color:var(--mute)}
+.vaegt-g>div>p:first-of-type{color:var(--ink);font-size:17px}
+.vaegt-g{display:grid;gap:20px;margin-top:16px}
+.vaegt .k{display:block;font-size:13px;margin-top:10px;color:var(--mute)}
+.vaegt .k a{color:var(--a);display:inline-flex;align-items:center;min-height:44px;text-underline-offset:3px}
+.mod{margin:0;border:1px solid var(--line);border-radius:12px;background:var(--card);padding:14px 16px}
+.mod dt{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--a);font-weight:600}
+.mod dd{margin:4px 0 12px;color:var(--ink);font-size:15px}
+.mod dd:last-child{margin-bottom:0}
+@media (min-width:900px){.vaegt-g{grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:48px;align-items:start}}
+/* hovedfiguren */
+.cq-wrap{border-top:1px solid var(--line)}
+#cq-fa{border-top:0}
+/* set nærmere: videoer pr. del */
+.naermere-g{display:grid;gap:22px;margin-top:14px}
+.del-k{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--a);margin:0 0 6px}
+.del-k svg{width:20px;height:20px}
+.vid-kilde{position:absolute;z-index:2;left:8px;top:8px;background:rgba(0,0,0,.78);color:#fff;font-size:12px;font-weight:600;padding:2px 8px;border-radius:4px}
+.vid-play img{filter:sepia(.25) saturate(.8) contrast(1.05)}
+.sm-l{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.sm{display:grid;grid-template-columns:148px minmax(0,1fr);gap:14px;align-items:start;border-top:1px solid var(--line);padding-top:14px}
+.sm .vid{margin:0}
+.sm .vid figcaption{display:none}
+.sm .vid-ikon{width:40px;height:40px;margin:-20px 0 0 -20px}
+.sm .vid-ikon::after{left:16px;top:12px;border-width:8px 0 8px 12px}
+.sm .vid-kilde{display:none}
+.sm .vid-tid{font-size:12px;padding:1px 6px;right:5px;bottom:5px}
+.sm-t{font-size:14px;color:var(--mute);line-height:1.5}
+.sm-t b{display:block;color:var(--ink);font-weight:600;font-size:15px}
+.selsk{display:inline-block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--bg);background:var(--a);padding:2px 7px;border-radius:4px;margin:4px 0 2px}
+.mere{margin-top:4px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.mere summary{min-height:52px;display:flex;align-items:center;justify-content:space-between;gap:12px;cursor:pointer;list-style:none;font-weight:600}
+.mere summary::-webkit-details-marker{display:none}
+.mere summary::after{content:"＋";color:var(--a)}.mere[open] summary::after{content:"−"}
+.mere-in{padding:2px 0 12px}
+.sweep{margin:0}.sweep img{display:block;width:100%;max-width:480px;height:auto;border-radius:12px;border:1px solid var(--line)}
+.sweep figcaption{font-size:13px;color:var(--mute);margin-top:8px;max-width:52ch}
+@media (min-width:900px){.naermere-g{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:48px;align-items:start}.sm{grid-template-columns:200px minmax(0,1fr)}}
+/* selskaberne uden for tegningen: punktsky-baggrund */
+.prik-s{border-top:1px solid var(--line);overflow:hidden}
+.prik-s::before{content:"";position:absolute;inset:0;background:url(fra-billedstil/grafik/fysisk-ai-moenster-punktsky.svg) 0 0/96px 96px;opacity:.45;pointer-events:none;-webkit-mask-image:linear-gradient(180deg,#000,transparent 70%);mask-image:linear-gradient(180deg,#000,transparent 70%)}
+.prik-s .wrap{position:relative}
+.ud-g{display:grid;gap:26px;margin-top:16px}
+.ud h3{display:flex;align-items:center;gap:10px;font-size:20px;letter-spacing:-.02em}
+.ud h3 svg{width:28px;height:28px;color:var(--a);flex:0 0 28px}
+.ud>p{color:var(--mute);margin-top:8px;max-width:58ch;font-size:15px}
+.fod{list-style:none;margin:12px 0 0;padding:0;border-top:1px solid var(--line)}
+.fod li{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:12px;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.fod li b{font-weight:600}
+.fod li span{grid-column:1;font-size:13px;color:var(--mute)}
+.fod li i{grid-column:2;grid-row:1/3;align-self:center;font-style:normal;font-variant-numeric:tabular-nums;color:var(--ink);font-weight:600}
+.js .ud:not(.alle) .ekstra{display:none}
+.vis-alle{margin-top:12px;min-height:44px;padding:0 18px;border-radius:10px;border:1px solid var(--a);background:transparent;color:var(--ink);font:inherit;font-weight:600;cursor:pointer}
+.vis-alle:hover{background:var(--surf)}
+.tvaers{margin-top:26px;font-size:14px;color:var(--mute);max-width:70ch;border-left:2px dotted var(--a);padding-left:12px}
+@media (min-width:900px){.ud-g{max-width:760px}}
+/* set udefra */
+.lead-s{color:var(--mute);max-width:62ch;margin-top:10px}
+@media (min-width:900px){.xs-liste{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;align-items:start}}
+.xp{position:relative;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+.xp-trin span{display:inline-flex;align-items:center;min-height:44px;color:var(--a);font-size:13px;font-weight:600;letter-spacing:.02em}
+.xp-trin span::before{content:"";width:9px;height:9px;border-radius:50%;border:2px solid var(--a);margin-right:8px;box-sizing:border-box}
+.xp-egne{font-size:13px;color:var(--ink);margin-top:6px;padding:4px 8px;border:1px dashed var(--a);border-radius:6px;display:inline-block}
+/* risiko */
+.risk{padding:20px 20px 16px;border-left:3px solid var(--a);max-width:760px;background:var(--card);border-radius:0 12px 12px 0}
+.risk h2{font-size:clamp(24px,6vw,32px);max-width:none}
+.risk ul{margin:14px 0 0;padding:0;list-style:none;display:grid;gap:14px}
+.risk li{color:var(--mute);max-width:66ch;padding-left:20px;position:relative}
+.risk li::before{content:"";position:absolute;left:0;top:.45em;width:10px;height:10px;border-radius:50%;border:2px solid var(--a);box-sizing:border-box}
+.risk li b{color:var(--ink);font-weight:600}
+.risk .k{display:block;font-size:13px;margin-top:2px}
+.risk .k a{color:var(--a);text-underline-offset:3px;display:inline;padding:14px 6px;margin:0 -6px}
+/* videre */
+.videre-g{display:grid;gap:20px;margin-top:16px;align-items:center}
+.graf{margin:0}.graf img{display:block;width:100%;max-width:520px;height:auto}
+.graf figcaption{font-size:12px;color:var(--mute);margin-top:6px}
+.videre-g p{color:var(--mute);max-width:58ch}
+.naboer{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:10px}
+.naboer a{display:flex;flex-direction:column;justify-content:center;min-height:56px;padding:10px 44px 10px 16px;border:1px solid var(--line);border-radius:12px;background:var(--card);text-decoration:none;font-weight:600;position:relative}
+.naboer a::after{content:"→";position:absolute;right:16px;top:50%;transform:translateY(-50%);color:var(--a)}
+.naboer a:hover{border-color:var(--a)}
+.naboer a span{font-weight:400;font-size:14px;color:var(--mute)}
+.naboer .nl{display:flex;flex-direction:column;justify-content:center;min-height:56px;padding:10px 16px;border:1px solid var(--line);border-radius:12px;background:var(--card);font-weight:600}.naboer .nl span{font-weight:400;font-size:14px;color:var(--mute)}
+.naboer .ingen{font-size:14px;color:var(--mute);padding:4px 2px}
+@media (min-width:900px){.s{padding:64px 0}.videre-g{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:48px}}
+@media (min-width:860px){.wrap{padding:0 28px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+.ikh2{display:flex;align-items:center;gap:10px}.ikh2 svg{width:32px;height:32px;flex:0 0 32px;color:var(--a)}
+.tidl{margin-top:10px;font-size:15px;color:var(--mute)}.tidl b{color:var(--ink);font-weight:600}
+.ud+.ud{border-top:1px solid var(--line);padding-top:18px}
+@media (min-width:900px){.ud+.ud{border-top:0;padding-top:0}}
+.fakta-t{margin-top:18px;font-size:17px;max-width:46ch}
+@media (max-width:599px){.graf{display:none}}
+h3.cq-fa__h3{font-weight:500}
+p.fakta-t a,p.tvaers a,p.cq-fa__ptx a{padding:14px 0}
+
+</style>
+</head>
+<body>
+<a class="skip" href="#indhold">Spring til indholdet</a>
+<header class="top"><div class="wrap"><img src="img/ndi-logo.webp" alt="NewDeal Invest" width="130" height="48"><span>Tema · Robotter &amp; fysisk AI</span></div><div class="prog" aria-hidden="true"></div></header>
+<main id="indhold" tabindex="-1">
+
+<section class="cq-hero-fa" aria-labelledby="h1">
+<style>.cq-hero-fa{--cq-hero-fa-bg:var(--bg,#050a0f);--cq-hero-fa-ink:var(--ink,#e6e8ed);--cq-hero-fa-mute:var(--mute,#aebbc7);--cq-hero-fa-line:var(--line,#313a4a);--cq-hero-fa-card:var(--card,#0b141c);--cq-hero-fa-a:#b49c87;
+position:relative;padding:28px 0 32px;border-bottom:1px solid var(--cq-hero-fa-line);color:var(--cq-hero-fa-ink);font-family:'DM Sans',system-ui,sans-serif}
+.cq-hero-fa *{box-sizing:border-box}
+.cq-hero-fa__in{max-width:1180px;margin:0 auto;padding:0 18px;display:grid;grid-template-columns:minmax(0,1fr) 104px;column-gap:14px;align-items:start}
+.cq-hero-fa h1{grid-column:1;grid-row:1;font-family:Manrope,'DM Sans',sans-serif;font-weight:500;font-size:clamp(40px,11vw,72px);letter-spacing:-.05em;line-height:1.02;margin:0}
+.cq-hero-fa h1 span{display:block;font-size:clamp(20px,5.4vw,30px);letter-spacing:-.03em;color:var(--cq-hero-fa-a);margin-top:10px;line-height:1.2}
+.cq-hero-fa__tekst{grid-column:1/-1;grid-row:2}
+.cq-hero-fa__lead{font-size:18px;line-height:1.6;color:var(--cq-hero-fa-ink);max-width:54ch;margin:14px 0 0}
+.cq-hero-fa__fig{grid-column:2;grid-row:1;margin:4px 0 0}
+.cq-hero-fa__sigte{position:relative;aspect-ratio:1/1;background:var(--cq-hero-fa-card);overflow:hidden;border-radius:4px}
+.cq-hero-fa__sigte img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 62%}
+.cq-hero-fa__sigte::before,.cq-hero-fa__sigte::after{content:"";position:absolute;inset:6px;pointer-events:none}
+.cq-hero-fa__sigte::before{background:linear-gradient(var(--cq-hero-fa-a),var(--cq-hero-fa-a)) 0 0/14px 2px no-repeat,linear-gradient(var(--cq-hero-fa-a),var(--cq-hero-fa-a)) 0 0/2px 14px no-repeat,linear-gradient(var(--cq-hero-fa-a),var(--cq-hero-fa-a)) 100% 0/14px 2px no-repeat,linear-gradient(var(--cq-hero-fa-a),var(--cq-hero-fa-a)) 100% 0/2px 14px no-repeat,linear-gradient(var(--cq-hero-fa-a),var(--cq-hero-fa-a)) 0 100%/14px 2px no-repeat,linear-gradient(var(--cq-hero-fa-a),var(--cq-hero-fa-a)) 0 100%/2px 14px no-repeat,linear-gradient(var(--cq-hero-fa-a),var(--cq-hero-fa-a)) 100% 100%/14px 2px no-repeat,linear-gradient(var(--cq-hero-fa-a),var(--cq-hero-fa-a)) 100% 100%/2px 14px no-repeat}
+.cq-hero-fa__sigte::after{inset:0;background:linear-gradient(90deg,transparent,rgba(180,156,135,.55),transparent) 0 58%/100% 1px no-repeat}
+.cq-hero-fa__kred{font-size:12px;line-height:1.5;color:var(--cq-hero-fa-mute);margin:10px 0 0}
+.cq-hero-fa__fig .cq-hero-fa__kred{display:none}
+@media (min-width:900px){
+ .cq-hero-fa{padding:56px 0 64px}
+ .cq-hero-fa__in{padding:0 28px;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);column-gap:48px;align-items:center}
+ .cq-hero-fa__fig{grid-column:1;grid-row:1/3;margin:0}
+ .cq-hero-fa__sigte{aspect-ratio:4/3;border-radius:8px}
+ .cq-hero-fa__sigte::before{inset:14px;background-size:28px 2px,2px 28px,28px 2px,2px 28px,28px 2px,2px 28px,28px 2px,2px 28px}
+ .cq-hero-fa h1{grid-column:2;grid-row:1;align-self:end}
+ .cq-hero-fa__tekst{grid-column:2;grid-row:2;align-self:start}
+ .cq-hero-fa__fig .cq-hero-fa__kred{display:block}
+ .cq-hero-fa__tekst .cq-hero-fa__kred{display:none}
+}
+@keyframes cq-hero-fa-scan{from{background-position:0 0}to{background-position:0 58%}}
+@media (prefers-reduced-motion:no-preference){
+ .cq-hero-fa__sigte::after{animation:cq-hero-fa-scan 1.5s cubic-bezier(.3,.6,.3,1) .3s both}
+}
+@media (prefers-reduced-motion:reduce){
+ .cq-hero-fa__sigte::after{animation:none;background-position:0 58%}
+}</style>
+<div class="cq-hero-fa__in">
+<h1 id="h1">Robotter &amp; fysisk AI<span>Når computeren skal kunne handle</span></h1>
+<figure class="cq-hero-fa__fig">
+<div class="cq-hero-fa__sigte"><picture><source media="(max-width:899px)" srcset="fra-billedstil/billeder/fysisk-ai-hero-synsfelt-mobil.webp"><img src="fra-billedstil/billeder/fysisk-ai-hero-synsfelt-bred.webp" alt="Tegning: en maskine ser omgivelserne som prikker, og synsfeltet foran lyser op." width="1440" height="720" fetchpriority="high"></picture></div>
+<figcaption class="cq-hero-fa__kred">Illustration: NewDeal Invest.</figcaption>
+</figure>
+<div class="cq-hero-fa__tekst">
+<p class="cq-hero-fa__lead">Når kunstig intelligens skal gøre noget i den fysiske verden, skal maskinen kunne se omgivelserne, beslutte hvad den gør, og så bevæge sig. Temaet samler de selskaber i fonden, der laver maskinerne eller dele af dem.</p>
+<p class="cq-hero-fa__kred" aria-hidden="true">Illustration: NewDeal Invest.</p>
+</div>
+</div>
+</section>
+
+<div class="scan" aria-hidden="true"></div>
+
+<section class="s" id="fonden" aria-labelledby="fonden-h"><div class="wrap">
+<p class="eyebrow"><span class="rg" aria-hidden="true"></span>Fonden</p>
+<h2 id="fonden-h">Godt 7 kroner af hver 100</h2>
+<div class="fonden-g">
+<div>
+<div class="fonden-top">
+<div><p class="tal">7,23<small>%</small></p><p class="tal-t">af fonden ligger i temaet Robotter &amp; fysisk AI.</p></div>
+<figure class="prikker" aria-labelledby="prik-t"><ul class="prik-g" aria-hidden="true"><li class="on"></li><li class="on"></li><li class="on"></li><li class="on"></li><li class="on"></li><li class="on"></li><li class="on"></li><li class="del"></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul><figcaption id="prik-t">Hver prik er 1 % af fonden. Godt 7 prikker lyser.</figcaption></figure>
+</div>
+</div>
+<div>
+<p class="fakta-t">Temaet har 27 af fondens 373 selskaber og er det femte største af fondens 12 temaer. Kun <a href="../chips/index.html">Chips og halvledere</a>, Energi og elnet, <a href="../datacenter/index.html">Datacentre</a> samt <a href="../platforme/index.html">Platformsøkonomi</a> er større. Temaerne er NewDeal Invests egen opdeling af fondens selskaber.</p>
+<p class="ikke"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20.5L14.5 6.25A13 13 0 0 1 21 17.5z" stroke-dasharray="2 2.25"/><path d="M12.5 12.25a1.75 1.75 0 1 1 2.5 1.6c-.6.3-.75.65-.75 1.15" stroke-width="1"/><circle cx="14.25" cy="17" r=".6" fill="currentColor" stroke="none"/></svg><span>Siden viser, hvilke dele det er, og hvor meget hver del fylder. Den kan ikke vise, hvor meget af selskabernes omsætning der kommer fra AI, for det kan ikke opgøres.</span></p>
+<p class="note">Alle procenter på siden er andele af hele fonden, afdelingen PMINDI (NewDeal Invest klasse n, den udloddende andelsklasse, der udbetaler udbytte) pr. 16.10.2026.</p>
+</div>
+</div>
+</div></section>
+
+<section class="s vaegt" id="vaegt" aria-labelledby="vaegt-h"><div class="wrap">
+<p class="eyebrow"><span class="rg" aria-hidden="true"></span>Hvad der vejer mest</p>
+<h2 id="vaegt-h">Mest hjul og propeller</h2>
+<div class="vaegt-g">
+<div>
+<p>Mange tænker på menneskelignende robotter, når de hører om robotter og AI. I fonden ser det anderledes ud. Biler, droner og fly står for omkring tre femtedele af temaet. Tesla alene er omkring en femtedel. Teslas samlede omsætning (biler, energi og tjenester) var i 2025 omkring fem gange så stor som værdien af alle de industrirobotter, der blev sat op i verden samme år, ifølge brancheforeningen IFR.</p>
+<details class="mere"><summary>Læs mere</summary><div class="mere-in">
+<p>Robotterne er den mindste del, under en tiendedel af temaet. Tesla oplyser i sin årsrapport for 2025, at robotten Optimus er under udvikling. Skalselskabet Churchill Capital Corp XI har annonceret en sammenlægning med Agility Robotics, som laver menneskelignende robotter, men den er ikke gennemført. Et skalselskab er et selskab uden egen drift, som er oprettet for at gå sammen med et andet.</p>
+<p>Ford og General Motors er med, fordi de laver elbiler og systemer, der hjælper føreren, men de fleste af Fords biler kører stadig på benzin eller diesel. Ford er alligevel temaets næststørste selskab med 0,75 % af fonden. 16 af de 27 selskaber fylder hver mindre end 0,20 % af fonden.</p>
+</div></details>
+</div>
+</div>
+</div></section>
+
+<div class="wrap cq-wrap">
+<section class="cq-fa" id="cq-fa" aria-labelledby="cq-fa-h">
+<style>.cq-fa{--cq-fa-ink:var(--ink,#e6e8ed);--cq-fa-mute:var(--mute,#aebbc7);--cq-fa-line:var(--line,#313a4a);--cq-fa-surf:var(--surf,#0f1a22);--cq-fa-card:var(--card,#0b141c);--cq-fa-focus:var(--fokus,#cde0e2);
+--cq-fa-a:#b49c87;--cq-fa-pick:#211d1a;color:var(--cq-fa-ink);font-family:'DM Sans',system-ui,sans-serif;padding:clamp(1.5rem,6vw,4.5rem) 0;scroll-margin-top:4.5rem;border-top:1px solid var(--cq-fa-line)}
+.cq-fa *{box-sizing:border-box}
+.cq-fa__sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.cq-fa__cos{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:6px}
+.cq-fa--js .cq-fa__cos:not(.cq-fa--open)>li:nth-child(n+6){display:none}
+.cq-fa__co{width:100%;min-height:48px;display:grid;grid-template-columns:28px minmax(0,1fr) auto;align-items:center;gap:8px;padding:6px 9px;border:1px solid var(--cq-fa-line);border-radius:9px;background:var(--cq-fa-surf);color:var(--cq-fa-ink);font:inherit;font-size:.88rem;line-height:1.25;text-align:left;cursor:pointer}
+.cq-fa__co:hover,.cq-fa__co[aria-pressed=true]{border-color:var(--cq-fa-a)}
+.cq-fa__co[aria-pressed=true]{background:var(--cq-fa-pick)}
+.cq-fa__lg{width:28px;height:28px;border-radius:6px;background:#fff;display:grid;place-items:center;overflow:hidden;flex:0 0 auto}
+.cq-fa__lg img{width:24px;height:24px;object-fit:contain;display:block}
+.cq-fa__ini{font:700 .75rem/1 Manrope,sans-serif;color:#050a0f}
+.cq-fa__nm{min-width:0;overflow-wrap:anywhere}
+.cq-fa__cw{font-variant-numeric:tabular-nums;color:var(--cq-fa-mute);font-size:.82rem;white-space:nowrap}
+.cq-fa__all{margin-top:6px;min-height:44px;min-width:44px;padding:0 14px;border-radius:9px;border:1px solid var(--cq-fa-line);background:transparent;color:var(--cq-fa-ink);font:inherit;font-size:.9rem;cursor:pointer}
+.cq-fa__all:hover{border-color:var(--cq-fa-a)}
+.cq-fa__info{min-height:4.6rem;margin:8px 0;padding:.6rem .75rem;border-radius:10px;background:var(--cq-fa-surf);border:1px solid var(--cq-fa-line);display:flex;gap:.7rem;align-items:flex-start;font-size:.9rem}
+.cq-fa__hint{margin:0;color:var(--cq-fa-mute);align-self:center}
+.cq-fa__ih{margin:0 0 .1rem;font-weight:700}
+.cq-fa__ih span{font-weight:500;color:var(--cq-fa-mute);margin-left:.35rem;font-variant-numeric:tabular-nums}
+.cq-fa__ig{margin:0 0 .15rem;font-size:.76rem;color:var(--cq-fa-mute);text-transform:uppercase;letter-spacing:.05em}
+.cq-fa__id{margin:0;line-height:1.45}
+.cq-fa__ia{margin:.25rem 0 0;font-size:.82rem;color:var(--cq-fa-mute)}
+.cq-fa button:focus-visible,.cq-fa a:focus-visible{outline:3px solid var(--cq-fa-focus);outline-offset:2px}
+
+.cq-fa__in{max-width:1180px;margin:0 auto}
+.cq-fa__rg{display:inline-block;box-sizing:border-box;width:11px;height:11px;margin-right:8px;vertical-align:-1px;border-radius:50%;border:2px solid var(--cq-fa-a);box-shadow:0 0 0 3px rgba(180,156,135,.18)}
+.cq-fa__kick{margin:0 0 12px;color:var(--cq-fa-a);text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:600}
+.cq-fa__h2{font-family:Manrope,'DM Sans',sans-serif;font-weight:500;font-size:clamp(1.65rem,4.6vw,2.5rem);line-height:1.14;letter-spacing:-.03em;margin:0}
+.cq-fa__date{margin:.45rem 0 0;font-size:13px;font-weight:400;color:var(--cq-fa-mute)}
+.cq-fa__date span{display:inline-block;width:.6rem;height:.6rem;border-radius:2px;background:var(--cq-fa-a);margin-right:.45rem}
+.cq-fa__lead{max-width:46rem;color:var(--cq-fa-mute);font-size:1rem;line-height:1.55;margin:.8rem 0 .4rem}
+.cq-fa__stage{display:grid;gap:10px;align-items:center}
+.cq-fa__fig{margin:0;border:1px solid var(--cq-fa-line);border-radius:14px;background:var(--cq-fa-card);padding:6px 4px 2px}
+.cq-fa__svg{display:block;width:100%;height:auto;max-height:340px}
+.cq-fa__gr{stroke:var(--cq-fa-line);stroke-width:2}
+.cq-fa__body{fill:var(--cq-fa-surf);stroke:#5d6878;stroke-width:2;stroke-dasharray:6 5}
+.cq-fa__body line{stroke-dasharray:none;stroke:#5d6878;stroke-width:3}
+.cq-fa__wire path{fill:none;stroke:#7c6e62;stroke-width:1.6;stroke-dasharray:2 4}
+.cq-fa__sh{fill:rgba(180,156,135,.32);stroke:var(--cq-fa-a);stroke-width:2}
+.cq-fa__shs{fill:none;stroke:rgba(180,156,135,.32);stroke-linejoin:round}
+.cq-fa__sho{fill:none;stroke:var(--cq-fa-a);stroke-linejoin:round}.cq-fa__shc{fill:none;stroke:var(--cq-fa-card);stroke-linejoin:round}
+.cq-fa__pt.cq-fa--on .cq-fa__sho{stroke:var(--cq-fa-ink)}
+.cq-fa__ln{fill:none;stroke:var(--cq-fa-a);stroke-width:2;stroke-linecap:round}
+.cq-fa__hub{fill:var(--cq-fa-a)}
+.cq-fa__pt,.cq-fa__lb{cursor:pointer}
+.cq-fa__lb{fill:var(--cq-fa-ink);font:600 24px 'DM Sans',sans-serif;paint-order:stroke;stroke:var(--cq-fa-card);stroke-width:5px;stroke-linejoin:round}
+.cq-fa__pt{transition:opacity .25s}
+.cq-fa[data-sel] .cq-fa__pt{opacity:.4}
+.cq-fa[data-sel] .cq-fa__pt.cq-fa--on{opacity:1}
+.cq-fa__pt.cq-fa--on .cq-fa__sh{fill:rgba(180,156,135,.75);stroke:var(--cq-fa-ink)}
+.cq-fa__pt.cq-fa--on .cq-fa__shs{stroke:rgba(180,156,135,.75)}
+.cq-fa__pt.cq-fa--on .cq-fa__ln{stroke:var(--cq-fa-ink)}
+.cq-fa__lb.cq-fa--on{fill:var(--cq-fa-a)}
+.cq-fa__key{margin:.45rem .4rem .35rem;font-size:.8rem;line-height:1.4;color:var(--cq-fa-mute);display:flex;flex-wrap:wrap;gap:.2rem 1rem}
+.cq-fa__key span{display:inline-flex;align-items:center;gap:.4rem}
+.cq-fa__k1{width:12px;height:12px;border-radius:3px;background:rgba(180,156,135,.32);border:2px solid var(--cq-fa-a)}
+.cq-fa__k2{width:14px;height:10px;border-radius:3px;border:2px dashed #5d6878}
+.cq-fa__parts{list-style:none;margin:0;padding:0;display:grid;gap:8px;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:1fr}
+.cq-fa__parts>li{display:flex;min-width:0}
+.cq-fa__part{width:100%;min-height:76px;display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto 1fr;align-items:center;align-content:start;gap:.1rem .5rem;padding:.55rem .65rem;border:1px solid var(--cq-fa-line);border-radius:10px;background:var(--cq-fa-card);color:var(--cq-fa-ink);font:inherit;text-align:left;cursor:pointer}
+.cq-fa__part:hover{border-color:var(--cq-fa-a)}
+.cq-fa__part[aria-expanded=true]{border-color:var(--cq-fa-a);box-shadow:inset 0 0 0 1px var(--cq-fa-a);background:var(--cq-fa-pick)}
+.cq-fa__pi{width:22px;height:22px;color:var(--cq-fa-a)}
+.cq-fa__pn{font:600 .92rem/1.2 Manrope,sans-serif;min-width:0;grid-column:1/-1;grid-row:2;margin-top:.2rem;text-wrap:balance;hyphens:manual}
+.cq-fa__pw{font:600 .92rem Manrope,sans-serif;font-variant-numeric:tabular-nums;white-space:nowrap;grid-column:2;grid-row:1;justify-self:end}
+.cq-fa__ps{grid-column:1/-1;grid-row:3;align-self:start;font-size:13px;line-height:1.3;color:var(--cq-fa-mute)}
+.cq-fa__h3:focus{outline:none}.cq-fa__h3:focus-visible{outline:3px solid var(--cq-fa-focus);outline-offset:3px}
+.cq-fa__panel{margin-top:10px;border:1px solid var(--cq-fa-a);border-radius:12px;background:var(--cq-fa-card);padding:.8rem .85rem .4rem;scroll-margin-top:5rem}
+.cq-fa__ph{display:flex;align-items:center;gap:.8rem}
+.cq-fa__phi{flex:none;width:2.6rem;height:2.6rem;padding:.45rem;border-radius:8px;background:rgba(180,156,135,.18);color:var(--cq-fa-a)}
+.cq-fa__ph>div{flex:1;min-width:0}
+.cq-fa__h3{margin:0;font:500 1.1rem/1.25 Manrope,sans-serif}
+.cq-fa__pm{margin:.15rem 0 0;font-size:.84rem;color:var(--cq-fa-mute)}
+.cq-fa__close{min-height:44px;min-width:44px;padding:0 12px;border-radius:9px;border:1px solid var(--cq-fa-line);background:transparent;color:var(--cq-fa-ink);font:inherit;font-size:.88rem;cursor:pointer}
+.cq-fa__close:hover{border-color:var(--cq-fa-a)}
+.cq-fa__ptx{margin:.7rem 0 .3rem;font-size:.92rem;line-height:1.5;max-width:52rem}
+.cq-fa__ptx+.cq-fa__cos{margin-top:.6rem}
+.cq-fa__cos{grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
+.cq-fa__fact{margin:1rem 0 0;font-size:.95rem;line-height:1.5;max-width:50rem}
+.cq-fa__concl{margin:.5rem .4rem 0}
+.cq-fa__concl b{font-weight:600}
+.cq-fa__fact b{font-weight:600}
+.cq-fa__note{margin:.5rem 0 0;font-size:.84rem;line-height:1.5;color:var(--cq-fa-mute);max-width:50rem}
+.cq-fa--js .cq-fa__pt{transition:opacity .25s,transform .6s cubic-bezier(.3,.7,.2,1) calc(var(--i)*90ms);transform-box:fill-box;transform-origin:center}
+.cq-fa--arm .cq-fa__pt{transform:scale(0)}
+@media (min-width:640px){.cq-fa__parts{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (min-width:1000px){.cq-fa__stage{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:16px}.cq-fa__parts{grid-template-columns:repeat(2,minmax(0,1fr))}.cq-fa__part{min-height:88px}.cq-fa__svg{max-height:400px}}
+@media (prefers-reduced-motion:reduce){.cq-fa--js .cq-fa__pt{transition:none}.cq-fa--arm .cq-fa__pt{transform:none}}
+</style>
+<div class="cq-fa__in">
+<p class="cq-fa__kick"><span class="cq-fa__rg" aria-hidden="true"></span>Øjne, hjerne og hjul</p>
+<h2 class="cq-fa__h2" id="cq-fa-h">Maskinen, del for del</h2>
+<p class="cq-fa__date"><span aria-hidden="true"></span>Andel af hele fonden, afdelingen PMINDI pr. 16.10.2026</p>
+<p class="cq-fa__lead">Tegningen viser én maskine med seks dele. Jo større en del er, jo mere fylder den i fonden. Tryk på en del for at se selskaberne.</p>
+<div class="cq-fa__stage"><figure class="cq-fa__fig"><svg class="cq-fa__svg" viewBox="0 0 600 420" aria-hidden="true" focusable="false">
+<line class="cq-fa__gr" x1="10" y1="404" x2="590" y2="404"/>
+<g class="cq-fa__body"><line x1="175" y1="200" x2="175" y2="127"/><line x1="435" y1="200" x2="435" y2="127"/><line x1="470" y1="250" x2="489" y2="250"/>
+<rect x="140" y="200" width="330" height="100" rx="18"/></g>
+<g class="cq-fa__wire"><path d="M330 245H300V200M454 236H470M360 275V300M330 230H175V200M300 245H156"/></g>
+<g class="cq-fa__pt" data-part="nerver" style="--i:2"><rect class="cq-fa__sh" x="330" y="216" width="124" height="58.7" rx="4"/><path class="cq-fa__ln" d="M344 232h40v14h30M344 261h56v-12h40"/></g><text class="cq-fa__lb" x="322" y="252" text-anchor="end" data-part="nerver">Nerver</text>
+<g class="cq-fa__pt" data-part="arme" style="--i:5"><path class="cq-fa__sho" d="M150 214L104.9 168.9L84.6 212.5" stroke-width="26"/><path class="cq-fa__shc" d="M150 214L104.9 168.9L84.6 212.5" stroke-width="22"/><path class="cq-fa__shs" d="M150 214L104.9 168.9L84.6 212.5" stroke-width="22"/><path class="cq-fa__sho" d="M150 300L120 392" stroke-width="26"/><path class="cq-fa__shc" d="M150 300L120 392" stroke-width="22"/><path class="cq-fa__shs" d="M150 300L120 392" stroke-width="22"/><rect class="cq-fa__sh" x="100.0" y="392.0" width="40" height="8" rx="2"/><path class="cq-fa__ln" d="M72.6 220.5l-5 15M94.6 222.5l4 15"/></g><text class="cq-fa__lb" x="10" y="120" text-anchor="start" data-part="arme">Arme og ben</text>
+<g class="cq-fa__pt" data-part="hjerne" style="--i:4"><rect class="cq-fa__sh" x="265.3" y="120.5" width="79.5" height="79.5" rx="10"/><path class="cq-fa__ln" d="M285.1 144.4v31.8M305 136.4v47.7M324.9 144.4v31.8"/></g><text class="cq-fa__lb" x="305" y="111" text-anchor="middle" data-part="hjerne">Hjerne</text>
+<g class="cq-fa__pt" data-part="prop" style="--i:1"><circle class="cq-fa__sh" cx="175" cy="77.0" r="49.8"/><path class="cq-fa__ln" d="M134.1 77.0H215.9M175.0 36.1V117.9"/><circle class="cq-fa__hub" cx="175" cy="77.0" r="5"/><circle class="cq-fa__sh" cx="435" cy="77.0" r="49.8"/><path class="cq-fa__ln" d="M394.1 77.0H475.9M435.0 36.1V117.9"/><circle class="cq-fa__hub" cx="435" cy="77.0" r="5"/></g><text class="cq-fa__lb" x="305" y="40" text-anchor="middle" data-part="prop">Propeller og vinger</text>
+<g class="cq-fa__pt" data-part="oejne" style="--i:3"><circle class="cq-fa__sh" cx="522" cy="215.9" r="32.6"/><circle class="cq-fa__hub" cx="530" cy="215.9" r="11.7"/><circle class="cq-fa__sh" cx="522" cy="284.1" r="32.6"/><circle class="cq-fa__hub" cx="530" cy="284.1" r="11.7"/></g><text class="cq-fa__lb" x="522" y="341" text-anchor="middle" data-part="oejne">Øjne</text>
+<g class="cq-fa__pt" data-part="hjul" style="--i:0"><circle class="cq-fa__sh" cx="215" cy="344.0" r="60.0"/><circle class="cq-fa__ln" cx="215" cy="344.0" r="27.0"/><circle class="cq-fa__hub" cx="215" cy="344.0" r="6"/><circle class="cq-fa__sh" cx="395" cy="344.0" r="60.0"/><circle class="cq-fa__ln" cx="395" cy="344.0" r="27.0"/><circle class="cq-fa__hub" cx="395" cy="344.0" r="6"/></g><text class="cq-fa__lb" x="305" y="390" text-anchor="middle" data-part="hjul">Hjul</text>
+</svg>
+<p class="cq-fa__fact cq-fa__concl"><b>Hjul og propeller fylder mere end øjne, hjerne, nerver, arme og ben tilsammen.</b></p>
+<figcaption class="cq-fa__key"><span><i class="cq-fa__k1" aria-hidden="true"></i>Delens areal svarer til andelen af fonden</span><span><i class="cq-fa__k2" aria-hidden="true"></i>Den stiplede krop er kun tegning og viser ingen andel</span></figcaption></figure>
+<ul class="cq-fa__parts" aria-label="Maskinens seks dele"><li><button type="button" class="cq-fa__dx cq-fa__part" aria-expanded="false" aria-controls="cq-fa-p-hjul" data-grp="fa" data-part="hjul">
+<svg class="cq-fa__pi" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/></g></svg><span class="cq-fa__pn" aria-hidden="true">Hjul</span><span class="cq-fa__pw" aria-hidden="true">2,58 %</span><span class="cq-fa__ps" aria-hidden="true">Elbiler og biler med førerassistance · 5 selskaber</span><span class="cq-fa__sr">Hjul. Elbiler og biler med førerassistance. 5 selskaber, 2,58 % af fonden.</span></button></li><li><button type="button" class="cq-fa__dx cq-fa__part" aria-expanded="false" aria-controls="cq-fa-p-prop" data-grp="fa" data-part="prop">
+<svg class="cq-fa__pi" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M5 12h14M12 5v14"/></g></svg><span class="cq-fa__pn" aria-hidden="true">Propeller og vinger</span><span class="cq-fa__pw" aria-hidden="true">1,78 %</span><span class="cq-fa__ps" aria-hidden="true">Droner og elektrisk luftfart · 7 selskaber</span><span class="cq-fa__sr">Propeller og vinger. Droner og elektrisk luftfart. 7 selskaber, 1,78 % af fonden.</span></button></li><li><button type="button" class="cq-fa__dx cq-fa__part" aria-expanded="false" aria-controls="cq-fa-p-nerver" data-grp="fa" data-part="nerver">
+<svg class="cq-fa__pi" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M6 10h5v3h4"/></g></svg><span class="cq-fa__pn" aria-hidden="true">Nerver</span><span class="cq-fa__pw" aria-hidden="true">0,83 %</span><span class="cq-fa__ps" aria-hidden="true">Små computere og smarte enheder · 3 selskaber</span><span class="cq-fa__sr">Nerver. Små computere og smarte enheder. 3 selskaber, 0,83 % af fonden.</span></button></li><li><button type="button" class="cq-fa__dx cq-fa__part" aria-expanded="false" aria-controls="cq-fa-p-oejne" data-grp="fa" data-part="oejne">
+<svg class="cq-fa__pi" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4.5"/><circle cx="12" cy="17" r="4.5"/></g></svg><span class="cq-fa__pn" aria-hidden="true">Øjne</span><span class="cq-fa__pw" aria-hidden="true">0,76 %</span><span class="cq-fa__ps" aria-hidden="true">Sensorer og lidar · 4 selskaber</span><span class="cq-fa__sr">Øjne. Sensorer og lidar. 4 selskaber, 0,76 % af fonden.</span></button></li><li><button type="button" class="cq-fa__dx cq-fa__part" aria-expanded="false" aria-controls="cq-fa-p-hjerne" data-grp="fa" data-part="hjerne">
+<svg class="cq-fa__pi" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 8v8M12 7v10M15 8v8"/></g></svg><span class="cq-fa__pn" aria-hidden="true">Hjerne</span><span class="cq-fa__pw" aria-hidden="true">0,72 %</span><span class="cq-fa__ps" aria-hidden="true">Selvkørende kørsel · 5 selskaber</span><span class="cq-fa__sr">Hjerne. Selvkørende kørsel. 5 selskaber, 0,72 % af fonden.</span></button></li><li><button type="button" class="cq-fa__dx cq-fa__part" aria-expanded="false" aria-controls="cq-fa-p-arme" data-grp="fa" data-part="arme">
+<svg class="cq-fa__pi" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 9L13 4L8 9l2 3"/><path d="M13 4L9 20M6 20h7"/></g></svg><span class="cq-fa__pn" aria-hidden="true">Arme og ben</span><span class="cq-fa__pw" aria-hidden="true">0,56 %</span><span class="cq-fa__ps" aria-hidden="true">Robotter · 3 selskaber</span><span class="cq-fa__sr">Arme og ben. Robotter. 3 selskaber, 0,56 % af fonden.</span></button></li></ul></div>
+<div class="cq-fa__panel cq-fa__scope" id="cq-fa-p-hjul" role="region" aria-label="Hjul" hidden>
+<div class="cq-fa__ph"><svg class="cq-fa__phi" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/></g></svg><div><h3 class="cq-fa__h3">Hjul</h3><p class="cq-fa__pm">Elbiler og biler med førerassistance · 5 selskaber · 2,58 % af fonden</p></div>
+<button type="button" class="cq-fa__close" data-for="cq-fa-p-hjul">Luk<span class="cq-fa__sr"> Hjul</span></button></div>
+<p class="cq-fa__ptx">Biler, der kører på strøm, og som ofte har systemer, der hjælper føreren med at styre og bremse. Det er den største del af temaet. Tesla leverede omkring 1,64 mio. biler i 2025, ca. 13 gange så mange som de nye elbiler, der blev indregistreret i Danmark samme år.</p>
+<ul class="cq-fa__cos" id="cq-fa-l-hjul" data-top="5"><li><button type="button" class="cq-fa__co" aria-pressed="false" data-d="Elbiler, energilagring og solenergi. Arbejder på selvkørende biler og robottaxaer og på robotten Optimus." data-g="Hjul · Elbiler og biler med førerassistance"><span class="cq-fa__lg"><img src="fra-critiquito/logos/tesla.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-fa__nm">Tesla</span><span class="cq-fa__cw">1,55 %</span></button></li><li><button type="button" class="cq-fa__co" aria-pressed="false" data-d="Lastbiler, SUV&#x27;er og personbiler (Ford og Lincoln), herunder elbiler og førerassistancen BlueCruise." data-g="Hjul · Elbiler og biler med førerassistance"><span class="cq-fa__lg"><img src="fra-critiquito/logos/ford-motor.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-fa__nm">Ford Motor</span><span class="cq-fa__cw">0,75 %</span></button></li><li><button type="button" class="cq-fa__co" aria-pressed="false" data-d="Lastbiler og personbiler, herunder elbiler og førerassistancen Super Cruise." data-g="Hjul · Elbiler og biler med førerassistance"><span class="cq-fa__lg"><img src="fra-critiquito/logos/general-motors.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-fa__nm">General Motors</span><span class="cq-fa__cw">0,12 %</span></button></li><li><button type="button" class="cq-fa__co" aria-pressed="false" data-d="Smarte elbiler i premiumklassen, en del med en lille benzinmotor, der lader batteriet op." data-g="Hjul · Elbiler og biler med førerassistance"><span class="cq-fa__lg"><img src="fra-critiquito/logos/li-auto.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-fa__nm">Li Auto</span><span class="cq-fa__cw">0,12 %</span></button></li><li><button type="button" class="cq-fa__co" aria-pressed="false" data-d="Elektriske pickupper, SUV&#x27;er og varebiler." data-g="Hjul · Elbiler og biler med førerassistance"><span class="cq-fa__lg"><img src="fra-critiquito/logos/rivian.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-fa__nm">Rivian</span><span class="cq-fa__cw">0,04 %</span></button></li></ul><div class="cq-fa__info" aria-live="polite"><p class="cq-fa__hint">Tryk på et selskab for at se, hvad det laver.</p></div></div><div class="cq-fa__panel cq-fa__scope" id="cq-fa-p-prop" role="region" aria-label="Propeller og vinger" hidden>
+<div class="cq-fa__ph"><svg class="cq-fa__phi" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M5 12h14M12 5v14"/></g></svg><div><h3 class="cq-fa__h3">Propeller og vinger</h3><p class="cq-fa__pm">Droner og elektrisk luftfart · 7 selskaber · 1,78 % af fonden</p></div>
+<button type="button" class="cq-fa__close" data-for="cq-fa-p-prop">Luk<span class="cq-fa__sr"> Propeller og vinger</span></button></div>
+<p class="cq-fa__ptx">Flest selskaber ligger her. Droner, elektriske lufttaxaer, der letter lodret, og software, der kan overtage pilotens opgaver i et fly. Flere af selskaberne har kunder i forsvaret. Ifølge Archers kvartalsrapport pr. 30.06.2026 flyver lufttaxaen ikke med betalende passagerer. Selskabet arbejder på at få flyet godkendt. Om satellitter og raketter kan du læse på siden <a href="../space/index.html">Rumfart</a>.</p>
+<ul class="cq-fa__cos" id="cq-fa-l-prop" data-top="5"><li><button type="button" class="cq-fa__co" aria-pressed="false" data-d="AI-software, der overtager pilotens opgaver i fly, så de kan flyve med færre piloter eller helt uden (Merlin Pilot)." data-g="Propeller og vinger · Droner og elektrisk luftfart"><span class="cq-fa__lg"><img src="fra-critiquito/logos/merlin.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-fa__nm">Merlin</span><span class="cq-fa__cw">0,59 %</span></button></li><li><button type="button" class="cq-fa__co" aria-pressed="false" data-d="Elektriske lufttaxaer, der letter lodret, og passagerflyvning gennem datterselskabet Blade." data-g="Propeller og vinger · Droner og elektrisk luftfart"><span class="cq-fa__lg"><img src="fra-critiquito/logos/joby-aviation.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-fa__nm">Joby Aviation</span><span class="cq-fa__cw">0,45 %</span></button></li><li><button type="button" class="cq-fa__co" aria-pressed="false" data-d="Udvikler det elektriske lufttaxafly Midnight til civile kunder og forsvar." data-g="Propeller og vinger · Droner og elektrisk luftfart"><span class="cq-fa__lg"><img src="fra-critiquito/logos/archer-aviation.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-fa__nm">Archer Aviation</span><span class="cq-fa__cw">0,21 %</span></button></li><li><button type="button" class="cq-fa__co" aria-pressed="false" data-d="Droner og autonome systemer (Ondas Autonomous Systems) til forsvar, sikkerhed og kritisk infrastruktur." data-g="Propeller og vinger · Droner og elektrisk luftfart"><span class="cq-fa__lg"><img src="fra-critiquito/logos/ondas-holdings.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-fa__nm">Ondas Holdings</span><span class="cq-fa__cw">0,20 %</span></button></li><li><button type="button" class="cq-fa__co" aria-pressed="false" data-d="Dronekomponenter og droner, hovedsæde i Orlando." data-g="Propeller og vinger · Droner og elektrisk luftfart"><span class="cq-fa__lg"><img src="fra-critiquito/logos/unusual-machines.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-fa__nm">Unusual Machines</span><span class="cq-fa__cw">0,17 %</span></button></li><li><button type="button" class="cq-fa__co" aria-pressed="false" data-d="Software, der koordinerer mange droner som en sværm." data-g="Propeller og vinger · Droner og elektrisk luftfart" data-a="Software &amp; AI"><span class="cq-fa__lg"><img src="fra-critiquito/logos/swarmer.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-fa__nm">Swarmer</span><span class="cq-fa__cw">0,13 %</span></button></li><li><button type="button" class="cq-fa__co" aria-pressed="false" data-d="Droner, flyelektronik, pilottræning og elektrisk luftfart til forsvar og civil luftfart, bl.a. droneafdeling med ansatte i Danmark." data-g="Propeller og vinger · Droner og elektrisk luftfart" data-a="Rumfart"><span class="cq-fa__lg"><img src="fra-critiquito/logos/airo-group.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-fa__nm">AIRO Group</span><span class="cq-fa__cw">0,03 %</span></button></li></ul><button type="button" class="cq-fa__all" aria-expanded="false" aria-controls="cq-fa-l-prop" data-n="7">Vis alle (7)</button><div class="cq-fa__info" aria-live="polite"><p class="cq-fa__hint">Tryk på et selskab for at se, hvad det laver.</p></div></div><div class="cq-fa__panel cq-fa__scope" id="cq-fa-p-nerver" role="region" aria-label="Nerver" hidden>
+<div class="cq-fa__ph"><svg class="cq-fa__phi" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M6 10h5v3h4"/></g></svg><div><h3 class="cq-fa__h3">Nerver</h3><p class="cq-fa__pm">Små computere og smarte enheder · 3 selskaber · 0,83 % af fonden</p></div>
+<button type="button" class="cq-fa__close" data-for="cq-fa-p-nerver">Luk<span class="cq-fa__sr"> Nerver</span></button></div>
+<p class="cq-fa__ptx">Små computere og enheder i hjem og industri, der måler, styrer og sender data videre. Den største er Raspberry Pi, som laver små computere på ét printkort. Som nerverne i en krop sender de signaler videre.</p>
+<ul class="cq-fa__cos" id="cq-fa-l-nerver" data-top="5"><li><button type="button" class="cq-fa__co" aria-pressed="false" data-d="Små computere på ét printkort, computermoduler og chips til industri, til producenter, der bygger dem ind i egne produkter, og til hobby og undervisning." data-g="Nerver · Forbundne enheder" data-a="Chips og halvledere"><span class="cq-fa__lg"><img src="fra-critiquito/logos/raspberry-pi-holdings.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-fa__nm">Raspberry Pi Holdings</span><span class="cq-fa__cw">0,60 %</span></button></li><li><button type="button" class="cq-fa__co" aria-pressed="false" data-d="Smarte kontakter og målere til hjem og bygninger, som kan styres over internettet." data-g="Nerver · Forbundne enheder"><span class="cq-fa__lg"><img src="fra-critiquito/logos/shelly-group.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-fa__nm">Shelly Group</span><span class="cq-fa__cw">0,21 %</span></button></li><li><button type="button" class="cq-fa__co" aria-pressed="false" data-d="AI, der regner direkte i apparatet, og små enheder til industrien, der sender data over internettet, bl.a. til ubemandede systemer, der opfylder amerikanske forsvarskrav." data-g="Nerver · Forbundne enheder"><span class="cq-fa__lg"><img src="fra-critiquito/logos/lantronix.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-fa__nm">Lantronix</span><span class="cq-fa__cw">0,02 %</span></button></li></ul><div class="cq-fa__info" aria-live="polite"><p class="cq-fa__hint">Tryk på et selskab for at se, hvad det laver.</p></div></div><div class="cq-fa__panel cq-fa__scope" id="cq-fa-p-oejne" role="region" aria-label="Øjne" hidden>
+<div class="cq-fa__ph"><svg class="cq-fa__phi" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4.5"/><circle cx="12" cy="17" r="4.5"/></g></svg><div><h3 class="cq-fa__h3">Øjne</h3><p class="cq-fa__pm">Sensorer og lidar · 4 selskaber · 0,76 % af fonden</p></div>
+<button type="button" class="cq-fa__close" data-for="cq-fa-p-oejne">Luk<span class="cq-fa__sr"> Øjne</span></button></div>
+<p class="cq-fa__ptx">Sensorer måler omgivelserne. Lidar måler afstand med laserlys, som sendes ud og kastes tilbage fra ting, så maskinen får et billede af det, der er rundt om den. Ét selskab laver sonar og robotter til brug under vand. Om chipsene inde i sensorerne kan du læse på siden <a href="../chips/index.html">Chips og halvledere</a>.</p>
+<ul class="cq-fa__cos" id="cq-fa-l-oejne" data-top="5"><li><button type="button" class="cq-fa__co" aria-pressed="false" data-d="Lidar på en chip, der måler både afstand og hastighed." data-g="Øjne · Sensorer og lidar"><span class="cq-fa__lg"><img src="fra-critiquito/logos/aeva-technologies.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-fa__nm">Aeva Technologies</span><span class="cq-fa__cw">0,37 %</span></button></li><li><button type="button" class="cq-fa__co" aria-pressed="false" data-d="Lidar til biler, industri og forsvar." data-g="Øjne · Sensorer og lidar"><span class="cq-fa__lg"><img src="fra-critiquito/logos/microvision.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-fa__nm">Microvision</span><span class="cq-fa__cw">0,18 %</span></button></li><li><button type="button" class="cq-fa__co" aria-pressed="false" data-d="Lidar og sensorer til fysisk AI. Fusionerede med Velodyne i 2023." data-g="Øjne · Sensorer og lidar"><span class="cq-fa__lg"><img src="fra-critiquito/logos/ouster.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-fa__nm">Ouster</span><span class="cq-fa__cw">0,13 %</span></button></li><li><button type="button" class="cq-fa__co" aria-pressed="false" data-d="Sonar og optiske sensorer, batterier og undervandsrobotter til militære og civile kunder." data-g="Øjne · Sensorer og lidar"><span class="cq-fa__lg"><img src="fra-critiquito/logos/kraken-robotics.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-fa__nm">Kraken Robotics</span><span class="cq-fa__cw">0,08 %</span></button></li></ul><div class="cq-fa__info" aria-live="polite"><p class="cq-fa__hint">Tryk på et selskab for at se, hvad det laver.</p></div></div><div class="cq-fa__panel cq-fa__scope" id="cq-fa-p-hjerne" role="region" aria-label="Hjerne" hidden>
+<div class="cq-fa__ph"><svg class="cq-fa__phi" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 8v8M12 7v10M15 8v8"/></g></svg><div><h3 class="cq-fa__h3">Hjerne</h3><p class="cq-fa__pm">Selvkørende kørsel · 5 selskaber · 0,72 % af fonden</p></div>
+<button type="button" class="cq-fa__close" data-for="cq-fa-p-hjerne">Luk<span class="cq-fa__sr"> Hjerne</span></button></div>
+<p class="cq-fa__ptx">Software, der tolker det, øjnene ser, og vælger, hvad køretøjet skal gøre, fx bremse eller dreje. Tre af selskaberne har base i Kina. Flere kører med robottaxaer og selvkørende lastbiler.</p>
+<ul class="cq-fa__cos" id="cq-fa-l-hjerne" data-top="5"><li><button type="button" class="cq-fa__co" aria-pressed="false" data-d="Selvkørende robottaxaer og -lastbiler, base i Guangzhou." data-g="Hjerne · Selvkørende kørsel"><span class="cq-fa__lg"><img src="fra-critiquito/logos/pony-ai.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-fa__nm">Pony AI</span><span class="cq-fa__cw">0,25 %</span></button></li><li><button type="button" class="cq-fa__co" aria-pressed="false" data-d="AI-teknologi til selvkørende køretøjer, især lastbiler." data-g="Hjerne · Selvkørende kørsel"><span class="cq-fa__lg"><img src="fra-critiquito/logos/kodiak-ai.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-fa__nm">Kodiak AI</span><span class="cq-fa__cw">0,17 %</span></button></li><li><button type="button" class="cq-fa__co" aria-pressed="false" data-d="Selvkørende robottaxaer, -busser og -varebiler i mere end 40 byer." data-g="Hjerne · Selvkørende kørsel"><span class="cq-fa__lg"><img src="fra-critiquito/logos/weride.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-fa__nm">WeRide</span><span class="cq-fa__cw">0,12 %</span></button></li><li><button type="button" class="cq-fa__co" aria-pressed="false" data-d="Chips og software til førerassistance og selvkørsel. Bilområdet stod for 94,6 % af omsætningen i 2025." data-g="Hjerne · Selvkørende kørsel" data-a="Chips og halvledere"><span class="cq-fa__lg"><img src="fra-critiquito/logos/horizon-robotics.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-fa__nm">Horizon Robotics</span><span class="cq-fa__cw">0,10 %</span></button></li><li><button type="button" class="cq-fa__co" aria-pressed="false" data-d="Aurora Driver: selvkørende lastbiler, hovedsæde i Pittsburgh." data-g="Hjerne · Selvkørende kørsel"><span class="cq-fa__lg"><img src="fra-critiquito/logos/aurora-innovation.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-fa__nm">Aurora Innovation</span><span class="cq-fa__cw">0,08 %</span></button></li></ul><div class="cq-fa__info" aria-live="polite"><p class="cq-fa__hint">Tryk på et selskab for at se, hvad det laver.</p></div></div><div class="cq-fa__panel cq-fa__scope" id="cq-fa-p-arme" role="region" aria-label="Arme og ben" hidden>
+<div class="cq-fa__ph"><svg class="cq-fa__phi" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 9L13 4L8 9l2 3"/><path d="M13 4L9 20M6 20h7"/></g></svg><div><h3 class="cq-fa__h3">Arme og ben</h3><p class="cq-fa__pm">Robotter · 3 selskaber · 0,56 % af fonden</p></div>
+<button type="button" class="cq-fa__close" data-for="cq-fa-p-arme">Luk<span class="cq-fa__sr"> Arme og ben</span></button></div>
+<p class="cq-fa__ptx">Robotter, der flytter kasser på lagre eller kører varer ud på fortovet. I 2025 blev der sat omkring 1.650 nye industrirobotter op i verden hver dag, men selskaberne i denne del laver ikke de klassiske robotarme til fabrikker. Det gør Teradyne, som ejer Universal Robots i Odense. Teradyne tælles under Chips og halvledere, se Også med en fod.</p>
+<ul class="cq-fa__cos" id="cq-fa-l-arme" data-top="5"><li><button type="button" class="cq-fa__co" aria-pressed="false" data-d="Robotstyret automation af lagre og distributionscentre." data-g="Arme og ben · Robotter"><span class="cq-fa__lg"><img src="fra-critiquito/logos/symbotic.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-fa__nm">Symbotic</span><span class="cq-fa__cw">0,35 %</span></button></li><li><button type="button" class="cq-fa__co" aria-pressed="false" data-d="Selvkørende robotter, der leverer mad og varer på fortovet." data-g="Arme og ben · Robotter"><span class="cq-fa__lg"><img src="fra-critiquito/logos/serve-robotics.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-fa__nm">Serve Robotics</span><span class="cq-fa__cw">0,13 %</span></button></li><li><button type="button" class="cq-fa__co" aria-pressed="false" data-d="Skalselskab (SPAC) uden egen drift. Har annonceret en sammenlægning med Agility Robotics, der laver humanoide robotter. Sammenlægningen er ikke gennemført." data-g="Arme og ben · Robotter"><span class="cq-fa__lg"><img src="fra-critiquito/logos/churchill-capital-corp-xi.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-fa__nm">Churchill Capital Corp XI</span><span class="cq-fa__cw">0,08 %</span></button></li></ul><div class="cq-fa__info" aria-live="polite"><p class="cq-fa__hint">Tryk på et selskab for at se, hvad det laver.</p></div></div>
+
+</div>
+<script>(function(){var R=document.getElementById('cq-fa');if(!R||R.dataset.on)return;R.dataset.on='1';R.classList.add('cq-fa--js');
+var fine=window.matchMedia&&matchMedia('(hover: hover) and (pointer: fine)').matches;
+function show(btn){var sc=btn.closest('.cq-fa__scope')||R,inf=sc.querySelector('.cq-fa__info');if(!inf)return;inf.textContent='';
+inf.appendChild(btn.querySelector('.cq-fa__lg').cloneNode(true));var w=document.createElement('div');
+function el(t,c,x){var e=document.createElement(t);e.className=c;e.textContent=x;w.appendChild(e);return e}
+var g=btn.dataset.g,h3=sc.querySelector('.cq-fa__h3');if(h3&&g.indexOf(h3.textContent+' · ')===0)g=g.slice(h3.textContent.length+3);el('p','cq-fa__ig',g);var h=el('p','cq-fa__ih',btn.querySelector('.cq-fa__nm').textContent);var s=document.createElement('span');s.textContent=btn.querySelector('.cq-fa__cw').textContent+' af afdelingen PMINDI pr. 16.10.2026';h.appendChild(s);
+el('p','cq-fa__id',btn.dataset.d);if(btn.dataset.a){var ia=el('p','cq-fa__ia','');var TL={'Chips og halvledere':'../chips/index.html','Rumfart':'../space/index.html','Software & AI':'../software/index.html'};ia.appendChild(document.createTextNode(btn.querySelector('.cq-fa__nm').textContent+' laver også noget, der hører til temaet '));var tl=TL[btn.dataset.a];var ta=document.createElement(tl?'a':'span');if(tl)ta.href=tl;ta.textContent=btn.dataset.a;ia.appendChild(ta);ia.appendChild(document.createTextNode('. I fondens opdeling tælles selskabet kun med her.'))}inf.appendChild(w)}
+R.querySelectorAll('.cq-fa__co').forEach(function(b){b.addEventListener('click',function(){var sc=b.closest('.cq-fa__scope')||R;sc.querySelectorAll('.cq-fa__co[aria-pressed=true]').forEach(function(o){if(o!==b)o.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');show(b)});
+b.addEventListener('focus',function(){show(b)});if(fine)b.addEventListener('mouseenter',function(){show(b)})});
+function setAll(a,o){var l=document.getElementById(a.getAttribute('aria-controls'));l.classList.toggle('cq-fa--open',o);a.setAttribute('aria-expanded',o);a.textContent=o?'Vis færre':'Vis alle ('+a.dataset.n+')'}
+R.querySelectorAll('.cq-fa__all').forEach(function(a){a.addEventListener('click',function(){var o=a.getAttribute('aria-expanded')!=='true';setAll(a,o);if(o){var l=document.getElementById(a.getAttribute('aria-controls')),f=l.children[5];if(f)f.querySelector('button').focus()}})});
+function setDx(b,o){var t=document.getElementById(b.getAttribute('aria-controls'));b.setAttribute('aria-expanded',o);t.hidden=!o;
+ if(o&&b.dataset.grp)R.querySelectorAll('.cq-fa__dx[data-grp="'+b.dataset.grp+'"]').forEach(function(x){if(x!==b&&x.getAttribute('aria-expanded')==='true')setDx(x,false)});
+ R.dispatchEvent(new CustomEvent('cq:dx',{detail:{btn:b,open:o}}))}
+R.cqSetDx=setDx;
+R.querySelectorAll('.cq-fa__dx').forEach(function(b){setDx(b,b.dataset.open==='1');b.addEventListener('click',function(){setDx(b,b.getAttribute('aria-expanded')!=='true')})});
+R.addEventListener('keydown',function(e){if(e.key!=='Escape'&&e.key!=='Esc')return;var n=document.activeElement;
+ if(n&&n.getAttribute&&n.getAttribute('aria-expanded')==='true'){e.preventDefault();if(n.classList.contains('cq-fa__all'))setAll(n,false);else setDx(n,false);return}
+ while(n&&n!==R){if(n.id){var b=R.querySelector('[aria-controls="'+n.id+'"][aria-expanded="true"]');if(b){e.preventDefault();if(b.classList.contains('cq-fa__all'))setAll(b,false);else setDx(b,false);b.focus();return}}n=n.parentNode}});
+})();
+(function(){var R=document.getElementById('cq-fa');var rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+R.querySelectorAll('.cq-fa__close').forEach(function(c){c.addEventListener('click',function(){var b=R.querySelector('[aria-controls="'+c.dataset.for+'"]');R.cqSetDx(b,false);b.focus()})});
+R.querySelectorAll('svg [data-part]').forEach(function(el){el.addEventListener('click',function(){R.querySelector('.cq-fa__part[data-part="'+el.dataset.part+'"]').click()})});
+function sync(){var o=R.querySelector('.cq-fa__part[aria-expanded="true"]');var id=o?o.dataset.part:'';if(id)R.setAttribute('data-sel',id);else R.removeAttribute('data-sel');
+R.querySelectorAll('svg [data-part]').forEach(function(el){el.classList.toggle('cq-fa--on',el.dataset.part===id)})}
+R.addEventListener('cq:dx',function(e){sync();if(!e.detail.open||!e.detail.btn.classList.contains('cq-fa__part'))return;var p=document.getElementById(e.detail.btn.getAttribute('aria-controls'));var r=p.getBoundingClientRect();if(r.top>window.innerHeight-80)p.scrollIntoView({block:'nearest',behavior:rm?'auto':'smooth'});var h=p.querySelector('.cq-fa__h3');if(h){h.tabIndex=-1;h.focus({preventScroll:true})}});
+if(!rm&&'IntersectionObserver' in window){R.classList.add('cq-fa--arm');var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){setTimeout(function(){R.classList.remove('cq-fa--arm')},150);io.disconnect()}},{threshold:.35});io.observe(R.querySelector('.cq-fa__svg'))}})();</script>
+</section>
+</div>
+
+<section class="s" id="naermere" aria-labelledby="naermere-h"><div class="wrap">
+<p class="eyebrow"><span class="rg" aria-hidden="true"></span>Delene, set nærmere</p>
+<h2 id="naermere-h">Hvordan får en robot øje på verden?</h2>
+<div class="naermere-g">
+<div>
+<p class="del-k"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.75 8.5h5.5v7h-5.5z"/><path d="M3.75 10.5h5.5" stroke-width="1"/><path d="M12.25 8.25a6 6 0 0 1 0 7.5M15.25 6.25a9.5 9.5 0 0 1 0 11.5M18.25 4.25a13 13 0 0 1 0 15.5" stroke-width="1.25"/></svg>Øjne</p>
+<p class="smal">En lidar måler afstand med laserlys og tegner omgivelserne som prikker. TED-Ed forklarer, hvordan en selvkørende bil ser. Videoerne er ikke fondens holdning.</p>
+<figure class="vid"><div class="vid-ramme" data-yt="PRg5RNU_JLk" data-title="Video: How do self-driving cars “see”? Sajan Saini (TED-Ed)"><button type="button" class="vid-play" aria-label="Afspil video fra TED-Ed: Hvordan ser en selvkørende bil? (5 min. 24 sek., på engelsk). Videoen hentes fra YouTube."><picture><source media="(max-width:599px)" srcset="fra-billedstil/billeder/fysisk-ai-plakat-PRg5RNU_JLk-mobil.webp"><img src="fra-billedstil/billeder/fysisk-ai-plakat-PRg5RNU_JLk-bred.webp" alt="" width="1280" height="720" loading=lazy></picture><span class="vid-kilde" aria-hidden="true">TED-Ed</span><span class="vid-ikon" aria-hidden="true"></span><span class="vid-tid" aria-hidden="true">5:24</span></button></div><figcaption><b>TED-Ed: How do self-driving cars “see”?</b>TED-Ed, 2019, på engelsk. Den nævner kort chips til lidar.</figcaption></figure>
+</div>
+<div>
+<ul class="sm-l" role="list">
+<li class="sm"><div class="vid"><div class="vid-ramme" data-yt="N6--id0Up7c" data-title="Video: Exclusive: Ride-Along Inside Aurora's Self-Driving Semitruck (CNBC)"><button type="button" class="vid-play" aria-label="Afspil video fra CNBC: Med i en førerløs lastbil (3 min. 35 sek., på engelsk). Videoen hentes fra YouTube."><picture><source media="(max-width:599px)" srcset="fra-billedstil/billeder/fysisk-ai-plakat-N6--id0Up7c-mobil.webp"><img src="fra-billedstil/billeder/fysisk-ai-plakat-N6--id0Up7c-bred.webp" alt="" width="1280" height="720" loading=lazy></picture><span class="vid-kilde" aria-hidden="true">CNBC</span><span class="vid-ikon" aria-hidden="true"></span><span class="vid-tid" aria-hidden="true">3:35</span></button></div></div><p class="sm-t"><span class="del-k"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.25V14"/><path d="M12 14L6.25 6.5M12 14l5.75-7.5" stroke-width="1"/><path d="M17.75 6.5l-.25 2.75M17.75 6.5l-2.6.9"/><circle cx="12" cy="14" r="1.5" fill="currentColor"/><rect x="4" y="2.75" width="4.5" height="3" rx=".75" stroke-width="1"/></svg>Hjerne</span><b>Med i en førerløs lastbil</b>CNBC, 2026, på engelsk. En reporter kører med i en selvkørende lastbil i Texas.</p></li>
+<li class="sm"><div class="vid"><div class="vid-ramme" data-yt="MgNEyEwrjaw" data-title="Video: Symbotic: End to End System (Symbotic)"><button type="button" class="vid-play" aria-label="Afspil video fra Symbotic: Små robotter på et lager (0 min. 55 sek., på engelsk). Videoen hentes fra YouTube."><picture><source media="(max-width:599px)" srcset="fra-billedstil/billeder/fysisk-ai-plakat-MgNEyEwrjaw-mobil.webp"><img src="fra-billedstil/billeder/fysisk-ai-plakat-MgNEyEwrjaw-bred.webp" alt="" width="1280" height="720" loading=lazy></picture><span class="vid-kilde" aria-hidden="true">Symbotic</span><span class="vid-ikon" aria-hidden="true"></span><span class="vid-tid" aria-hidden="true">0:55</span></button></div></div><p class="sm-t"><span class="del-k"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.75 20.25h9.5"/><path d="M7 20.25v-3.5l4-5.5 5 1.5" /><circle cx="11" cy="11.25" r="1.25"/><path d="M16 12.75l2.75-1.75M16 12.75l2.75 1.5" /><rect x="17" y="15.75" width="4.25" height="4.5" rx=".75" stroke-width="1"/></svg>Arme og ben</span><span class="selsk">Selskabets egen video</span><b>Små robotter på et lager</b>Symbotic, 2025, på engelsk. Symbotic er et af fondens selskaber.</p></li>
+</ul>
+<details class="mere">
+<summary>Læs mere: sådan opfatter en robot et nyt sted</summary>
+<div class="mere-in">
+<ul class="sm-l" role="list">
+<li class="sm"><div class="vid"><div class="vid-ramme" data-yt="MhRd0vvdaj0" data-title="Video: Explained: How Humanoid Robots Perceive the World (Agility)"><button type="button" class="vid-play" aria-label="Afspil video fra Agility: Sådan opfatter en robot omgivelserne (4 min. 0 sek., på engelsk). Videoen hentes fra YouTube."><picture><source media="(max-width:599px)" srcset="fra-billedstil/billeder/fysisk-ai-plakat-MhRd0vvdaj0-mobil.webp"><img src="fra-billedstil/billeder/fysisk-ai-plakat-MhRd0vvdaj0-bred.webp" alt="" width="1280" height="720" loading=lazy></picture><span class="vid-kilde" aria-hidden="true">Agility</span><span class="vid-ikon" aria-hidden="true"></span><span class="vid-tid" aria-hidden="true">4:00</span></button></div></div><p class="sm-t"><span class="selsk">Selskabets egen video</span><b>Sådan opfatter en robot omgivelserne</b>Agility, 2023, på engelsk. Agility Robotics er ikke selv i fonden.</p></li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+</div></section>
+
+<section class="s prik-s" id="selskaber" aria-labelledby="selskaber-h"><div class="wrap">
+<p class="eyebrow"><span class="rg" aria-hidden="true"></span>Uden for tegningen</p>
+<h2 id="selskaber-h" class="ikh2"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="5.75" width="13" height="7" rx="2" stroke-width="1" stroke-dasharray="1.5 2.25"/><rect x="3.25" y="9.75" width="13" height="7" rx="2"/><circle cx="6.5" cy="19" r="1.75"/><circle cx="13" cy="19" r="1.75"/></svg>Også med en fod i fysisk AI</h2>
+<div class="ud-g">
+<div class="ud" id="fod-boks">
+<p>Disse selskaber hører først og fremmest til et andet tema, men laver også noget til maskinerne, fx batterier eller chips. De tælles med under deres eget hovedtema, ikke her.</p>
+<ul class="fod" id="fod-liste"><li><b>Enovix</b><span>Hovedtema: Energi og elnet</span><i>0,63 %<span class="sr"> af fonden</span></i></li><li><b>SES AI</b><span>Hovedtema: Energi og elnet</span><i>0,44 %<span class="sr"> af fonden</span></i></li><li><b>QuantumScape</b><span>Hovedtema: Energi og elnet</span><i>0,42 %<span class="sr"> af fonden</span></i></li><li><b>onsemi</b><span>Hovedtema: Chips og halvledere</span><i>0,35 %<span class="sr"> af fonden</span></i></li><li><b>Ballard Power Systems</b><span>Hovedtema: Energi og elnet</span><i>0,33 %<span class="sr"> af fonden</span></i></li><li class=ekstra><b>Solid Power</b><span>Hovedtema: Energi og elnet</span><i>0,24 %<span class="sr"> af fonden</span></i></li><li class=ekstra><b>Renesas Electronics</b><span>Hovedtema: Chips og halvledere</span><i>0,23 %<span class="sr"> af fonden</span></i></li><li class=ekstra><b>Uber</b><span>Hovedtema: Platformsøkonomi</span><i>0,20 %<span class="sr"> af fonden</span></i></li><li class=ekstra><b>MP Materials</b><span>Hovedtema: Råstoffer</span><i>0,20 %<span class="sr"> af fonden</span></i></li><li class=ekstra><b>IPG Photonics</b><span>Hovedtema: Datacentre</span><i>0,18 %<span class="sr"> af fonden</span></i></li><li class=ekstra><b>Amprius Technologies</b><span>Hovedtema: Energi og elnet</span><i>0,17 %<span class="sr"> af fonden</span></i></li><li class=ekstra><b>Infineon Technologies</b><span>Hovedtema: Chips og halvledere</span><i>0,14 %<span class="sr"> af fonden</span></i></li><li class=ekstra><b>Nordic Semiconductor</b><span>Hovedtema: Chips og halvledere</span><i>0,11 %<span class="sr"> af fonden</span></i></li><li class=ekstra><b>Microvast</b><span>Hovedtema: Energi og elnet</span><i>0,09 %<span class="sr"> af fonden</span></i></li><li class=ekstra><b>Ambarella</b><span>Hovedtema: Chips og halvledere</span><i>0,07 %<span class="sr"> af fonden</span></i></li><li class=ekstra><b>Teradyne</b><span>Hovedtema: Chips og halvledere</span><i>0,04 %<span class="sr"> af fonden</span></i></li><li class=ekstra><b>Samsara</b><span>Hovedtema: Software &amp; AI</span><i>0,04 %<span class="sr"> af fonden</span></i></li></ul>
+<button type="button" class="vis-alle" id="fod-mere" aria-expanded="false" aria-controls="fod-liste" hidden>Vis alle (17)</button>
+<p class="note">De 17 selskaber fylder tilsammen 3,88 % af hele fonden, afdelingen PMINDI pr. 16.10.2026.</p>
+</div>
+</div>
+<p class="tvaers">Seks af selskaberne på tegningen laver også noget, der hører til et andet tema: Tesla og Shelly (Energi og elnet), Raspberry Pi og Horizon Robotics (<a href="../chips/index.html">Chips og halvledere</a>), AIRO Group (<a href="../space/index.html">Rumfart</a>) og Swarmer (<a href="../software/index.html">Software &amp; AI</a>). I fondens opdeling tælles de kun med her.</p>
+</div></section>
+
+<section class="s xs" id="x-opslag" aria-labelledby="h-x"><div class="wrap">
+<p class="eyebrow"><span class="rg" aria-hidden="true"></span>Set udefra</p>
+<h2 id="h-x">Maskinerne i nyhederne</h2>
+<p class="lead-s">Her er udvalgte opslag og videoer fra medier og selskaber. De er ikke fondens holdning. „Kort fortalt“ er vores danske gengivelse. Opslaget hentes først fra X, når du trykker på „Vis opslaget“.</p>
+<ul class="xs-liste" id="x-liste" role="list">
+<li class="xp" data-url="https://twitter.com/wallstengine/status/2113003032162005327" data-team-post="https://x.com/MadsC007/status/2113283257576108122"><p class="xp-delt">Delt af Mads Christiansen fra teamet bag NewDeal Invest</p><div class="xp-top"><p class="xp-trin"><span>Robotter</span></p><p class="xp-dato"><time datetime="2026-10-21">21.10.2026</time></p></div><p class="xp-fra"><b>Wall St Engine</b> <span>@wallstengine · på engelsk</span></p><p class="xp-forkl"><span class="xp-k">Kort fortalt</span> Ifølge Wall St Engine oplyser Tesla, at de første Optimus-robotter i produktionskvalitet nu kommer fra produktionslinjer på fabrikken i Fremont. Ifølge opslaget er produktionen stadig i en tidlig fase, og Tesla har ikke oplyst mængder eller en tidsplan.</p><div class="xp-knapper"><button type="button" class="xp-vis" hidden>Vis opslaget<span class="sr"> fra Wall St Engine</span></button><a class="xp-link" href="https://twitter.com/wallstengine/status/2113003032162005327" rel="noopener" target="_blank">Se opslaget på X<span class="sr"> (åbner i nyt vindue)</span></a></div><div class="xp-embed" tabindex="-1" role="group" aria-label="Opslag fra Wall St Engine på X"></div></li><li class="xp ekstra" data-url="https://twitter.com/Reuters/status/2113644140709769620"><div class="xp-top"><p class="xp-trin"><span>Selvkørende kørsel</span></p><p class="xp-dato"><time datetime="2026-10-23">23.10.2026</time></p></div><p class="xp-fra"><b>Reuters</b> <span>@Reuters · på engelsk</span></p><p class="xp-forkl"><span class="xp-k">Kort fortalt</span> Ifølge Reuters tester det kinesiske selskab Baidu en førerløs taxa i Londons gader. Baidu er ikke blandt fondens selskaber.</p><div class="xp-knapper"><button type="button" class="xp-vis" hidden>Vis opslaget<span class="sr"> fra Reuters</span></button><a class="xp-link" href="https://twitter.com/Reuters/status/2113644140709769620" rel="noopener" target="_blank">Se opslaget på X<span class="sr"> (åbner i nyt vindue)</span></a></div><div class="xp-embed" tabindex="-1" role="group" aria-label="Opslag fra Reuters på X"></div></li><li class="xp ekstra" data-url="https://twitter.com/theinformation/status/2112529372292755945"><div class="xp-top"><p class="xp-trin"><span>Robotter</span></p><p class="xp-dato"><time datetime="2026-10-20">20.10.2026</time></p></div><p class="xp-fra"><b>The Information</b> <span>@theinformation · på engelsk</span></p><p class="xp-forkl"><span class="xp-k">Kort fortalt</span> Ifølge The Information oplyser Agility Robotics, at selskabets nye menneskelignende robot Digit kan arbejde 20 timer i døgnet med opladningspauser på ni minutter, fordi den bruger batterier fra Nyobolt.</p><p class="xp-egne">Tallene er Agility Robotics' egne.</p><div class="xp-knapper"><button type="button" class="xp-vis" hidden>Vis opslaget<span class="sr"> fra The Information</span></button><a class="xp-link" href="https://twitter.com/theinformation/status/2112529372292755945" rel="noopener" target="_blank">Se opslaget på X<span class="sr"> (åbner i nyt vindue)</span></a></div><div class="xp-embed" tabindex="-1" role="group" aria-label="Opslag fra The Information på X"></div></li><li class="xp ekstra" data-url="https://twitter.com/Reuters/status/2112803572123377927"><div class="xp-top"><p class="xp-trin"><span>Droner</span></p><p class="xp-dato"><time datetime="2026-10-21">21.10.2026</time></p></div><p class="xp-fra"><b>Reuters</b> <span>@Reuters · på engelsk</span></p><p class="xp-forkl"><span class="xp-k">Kort fortalt</span> Ifølge Reuters vil private og statslige selskaber i Europa, der driver kritisk infrastruktur, styrke deres forsvar mod droner. Reuters skriver, at nogle forsyningsselskaber beder om lov til selv at skyde droner ned, og at regeringer fra Paris til Berlin følger sagen.</p><div class="xp-knapper"><button type="button" class="xp-vis" hidden>Vis opslaget<span class="sr"> fra Reuters</span></button><a class="xp-link" href="https://twitter.com/Reuters/status/2112803572123377927" rel="noopener" target="_blank">Se opslaget på X<span class="sr"> (åbner i nyt vindue)</span></a></div><div class="xp-embed" tabindex="-1" role="group" aria-label="Opslag fra Reuters på X"></div></li><li class="xp ekstra" data-url="https://twitter.com/NVIDIARobotics/status/2112854462708519013"><div class="xp-top"><p class="xp-trin"><span>Robotter</span></p><p class="xp-dato"><time datetime="2026-10-21">21.10.2026</time></p></div><p class="xp-fra"><b>NVIDIA Robotics</b> <span>@NVIDIARobotics · på engelsk</span></p><p class="xp-forkl"><span class="xp-k">Kort fortalt</span> NVIDIA annoncerer nye værktøjer til at udvikle robotter. Samtidig viser Agile Robots en menneskelignende robot til forskning. Ifølge NVIDIA er robotten bygget på NVIDIAs software og computer til robotter, så forskere kan udvikle, træne og afprøve robottens færdigheder ét sted. Opslaget er NVIDIAs egen meddelelse. NVIDIA er blandt fondens selskaber og hører til temaet <a href="../chips/index.html">Chips og halvledere</a>. Agile Robots er ikke blandt fondens selskaber.</p><div class="xp-knapper"><button type="button" class="xp-vis" hidden>Vis opslaget<span class="sr"> fra NVIDIA Robotics</span></button><a class="xp-link" href="https://twitter.com/NVIDIARobotics/status/2112854462708519013" rel="noopener" target="_blank">Se opslaget på X<span class="sr"> (åbner i nyt vindue)</span></a></div><div class="xp-embed" tabindex="-1" role="group" aria-label="Opslag fra NVIDIA Robotics på X"></div></li>
+</ul>
+<button type="button" class="x-mere" id="x-mere" aria-expanded="false" aria-controls="x-liste" hidden>Vis 4 opslag mere</button>
+<p class="xs-note">Opslagene er udvalgt af teamet bag NewDeal Invest. Afsenderne og de nævnte selskaber står ikke bag denne side, og opslagene er ikke fondens vurdering.</p>
+</div></section>
+
+<section class="s" id="risiko" aria-labelledby="risiko-h"><div class="wrap">
+<div class="risk">
+<h2 id="risiko-h">Det skal man vide om temaet</h2>
+<ul>
+<li><b>En demonstration er ikke drift.</b> En maskine, der virker i et forsøg, skal også virke sikkert hver dag, før den giver omsætning. Teslas robot Optimus er under udvikling.<span class="k">Kilde: <a href="https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952/tsla-20251231.htm" rel="noopener" target="_blank">Tesla, årsrapport (10-K) 2025<span class="sr"> (åbner i nyt vindue)</span></a></span></li>
+<li><b>Godkendelse.</b> Selvkørende biler, droner og lufttaxaer skal godkendes, og reglerne er forskellige fra land til land. Archers lufttaxa skal fx godkendes af den amerikanske luftfartsmyndighed FAA.<span class="k">Kilde: <a href="https://www.sec.gov/Archives/edgar/data/1824502/000182450226000019/achr-20251231.htm" rel="noopener" target="_blank">Archer Aviation, årsrapport (10-K) 2025<span class="sr"> (åbner i nyt vindue)</span></a></span></li>
+<li><b>Få selskaber fylder meget.</b> Tesla er temaets største selskab med 1,55 % af fonden, omkring en femtedel af temaet, og også fondens største selskab. De fem største selskaber i temaet fylder tilsammen 3,94 % af fonden, over halvdelen af temaet. Temaet afhænger derfor meget af, hvordan det går for få selskaber.<span class="k">Kilde: afdelingen PMINDI pr. 16.10.2026, se <a href="#kilder">Kilder</a></span></li>
+<li><b>Grænsetilfælde.</b> Nogle selskaber er kun delvist fysisk AI. Ford laver mest almindelige biler, Churchill har ingen egen drift, og Archer har pr. 30.06.2026 ingen væsentlig omsætning. Siden følger NewDeal Invests opdeling af fondens selskaber.<span class="k">Kilder: <a href="https://www.sec.gov/Archives/edgar/data/37996/000003799626000015/f-20251231.htm" rel="noopener" target="_blank">Ford, årsrapport (10-K) 2025<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/2074973/000121390026109077/ea0308496-8k425_church11.htm" rel="noopener" target="_blank">Churchill, 8-K<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1824502/000182450226000019/achr-20251231.htm" rel="noopener" target="_blank">Archer, 10-K<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1824502/000182450226000059/achr-20260630.htm" rel="noopener" target="_blank">Archer, 10-Q pr. 30.06.2026<span class="sr"> (åbner i nyt vindue)</span></a></span></li>
+</ul>
+</div>
+</div></section>
+
+<section class="s" id="videre" aria-labelledby="videre-h"><div class="wrap">
+<p class="eyebrow"><span class="rg" aria-hidden="true"></span>Videre</p>
+<h2 id="videre-h">Det, maskinerne er bygget af</h2>
+<div class="videre-g">
+<figure class="graf"><img src="fra-billedstil/grafik/fysisk-ai-overgang-naboer.svg" alt="Maskinen i midten med en chip, et softwarevindue og et batteri ude til siden" width="480" height="140" loading="lazy"><figcaption>Illustration: NewDeal Invest.</figcaption></figure>
+<div>
+<p>Maskinerne har brug for chips, strøm, materialer og datacentre. De har deres egne temaer i fonden.</p>
+<ul class="naboer">
+<li><a href="../chips/index.html">Chips og halvledere <span>Chips til sensorer og beslutninger</span></a></li>
+<li><a href="../raastoffer/index.html">Råstoffer <span>Magneter og metaller til motorer</span></a></li>
+<li><a href="../datacenter/index.html">Datacentre <span>Hvor modellerne trænes</span></a></li>
+<li><a href="../software/index.html">Software &amp; AI <span>Programmer til virksomheder og AI</span></a></li>
+<li><a href="../space/index.html">Rumfart er også et tema i fonden.</a></li>
+</ul>
+</div>
+</div>
+</div></section>
+
+<section class="kilder-s" id="kilder" aria-labelledby="h-kilder"><div class="wrap">
+<details class="kilder">
+<summary><h2 id="h-kilder" style="font-size:18px;letter-spacing:-.01em;font-weight:600">Kilder og kreditering</h2></summary>
+<ul>
+<li>Andele: afdelingen PMINDI pr. 16.10.2026 (fondens data). Temaer og dele: NewDeal Invests egen opdeling af fondens selskaber. Hvad selskaberne laver, bygger på deres egne årsrapporter.</li>
+<li>Teslas omsætning 2025 og robotten Optimus: <a href="https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952/tsla-20251231.htm" rel="noopener" target="_blank">Tesla, årsrapport (10-K) 2025<span class="sr"> (åbner i nyt vindue)</span></a>. Nye elbiler indregistreret i Danmark i 2025: Danmarks Statistik, <a href="https://www.statbank.dk/BIL51" rel="noopener" target="_blank">tabel BIL51<span class="sr"> (åbner i nyt vindue)</span></a>.</li>
+<li>Værdien af alle industrirobotter, der blev sat op i verden, 18,6 mia. USD (2025), og omkring 1.650 nye industrirobotter om dagen: brancheforeningen IFR, <a href="https://ifr.org/img/worldrobotics/Executive_Summary_WR_2026_-_Industrial_Robots.pdf" rel="noopener" target="_blank">IFR, World Robotics 2026, Executive Summary<span class="sr"> (åbner i nyt vindue)</span></a> og <a href="https://ifr.org/ifr-press-releases/news/five-million-robots-now-operate-in-factories-globally/" rel="noopener" target="_blank">IFR, pressemeddelelse<span class="sr"> (åbner i nyt vindue)</span></a>.</li>
+<li>Churchill Capital Corp XI og Agility Robotics: <a href="https://www.sec.gov/Archives/edgar/data/2074973/000121390026109077/ea0308496-8k425_church11.htm" rel="noopener" target="_blank">meddelelse til det amerikanske finanstilsyn SEC (8-K)<span class="sr"> (åbner i nyt vindue)</span></a> og <a href="https://www.sec.gov/Archives/edgar/data/2074973/000121390026111719/ea0309402-425_churchill11.htm" rel="noopener" target="_blank">meddelelse (425)<span class="sr"> (åbner i nyt vindue)</span></a>. Archer Aviation: <a href="https://www.sec.gov/Archives/edgar/data/1824502/000182450226000019/achr-20251231.htm" rel="noopener" target="_blank">årsrapport (10-K) 2025<span class="sr"> (åbner i nyt vindue)</span></a> og <a href="https://www.sec.gov/Archives/edgar/data/1824502/000182450226000059/achr-20260630.htm" rel="noopener" target="_blank">kvartalsrapport (10-Q) pr. 30.06.2026<span class="sr"> (åbner i nyt vindue)</span></a>. Ford og General Motors: <a href="https://www.sec.gov/Archives/edgar/data/37996/000003799626000015/f-20251231.htm" rel="noopener" target="_blank">årsrapport (10-K) 2025 for Ford<span class="sr"> (åbner i nyt vindue)</span></a> og <a href="https://www.sec.gov/Archives/edgar/data/1467858/000146785826000013/gm-20251231.htm" rel="noopener" target="_blank">for General Motors<span class="sr"> (åbner i nyt vindue)</span></a>.</li>
+</ul>
+<h3>Kreditering</h3>
+<p>Tegninger, ikoner og videoplakater. Illustration: NewDeal Invest. Der er ingen fotos på siden.</p>
+<p>Videoerne er fra TED-Ed, CNBC, Symbotic og Agility og vises fra YouTube, først når du trykker på dem. Opslagene er fra X. Logoer tilhører de enkelte selskaber og viser kun, hvilke selskaber fonden ejer aktier i. Afsenderne og selskaberne står ikke bag denne side, og der er intet samarbejde med dem.</p>
+<p><a class="kid" href="https://node-api.fundmarket.dk/funds/documents/priip_ipm140b" rel="noopener" target="_blank">Dokument med central information (KID)<span class="sr"> (åbner i nyt vindue)</span></a></p>
+</details>
+</div></section>
+</main>
+<footer><div class="wrap">
+<p>Siden beskriver indholdet af fonden og er ikke investeringsrådgivning. Omtalen af et selskab er ikke en anbefaling.</p>
+<p>Risikoindikatoren i fondens Dokument med central information (KID) er 5 på en skala fra 1 til 7. Historiske afkast er ingen garanti for fremtidige afkast. Du kan tabe hele eller dele af det investerede beløb.</p>
+</div></footer>
+<script>
+(function(){
+var pr=document.querySelector('.prog');
+function prog(){var h=document.documentElement,m=h.scrollHeight-innerHeight;pr.style.setProperty('--p',m>0?(scrollY/m).toFixed(3):0)}
+addEventListener('scroll',prog,{passive:true});prog();
+/* X-facade: intet hentes fra X før klik; widgets.js indlæses én gang */
+function twl(){if(window.twttr&&window.twttr.widgets)return;window.twttr=(function(d){var t=window.twttr||{};if(t._e)return t;t._e=[];t.ready=function(f){t._e.push(f)};var j=d.createElement('script');j.id='twitter-wjs';j.async=true;j.src='https://platform.twitter.com/widgets.js';j.charset='utf-8';d.body.appendChild(j);return t})(document)}
+[].forEach.call(document.querySelectorAll('.xp[data-url]'),function(li){var b=li.querySelector('.xp-vis'),em=li.querySelector('.xp-embed');b.hidden=false;
+ b.addEventListener('click',function(){if(em.firstChild)return;var q=document.createElement('blockquote');q.className='twitter-tweet';q.setAttribute('data-theme','dark');q.setAttribute('data-dnt','true');q.setAttribute('data-conversation','none');q.setAttribute('data-lang','da');
+ var a=document.createElement('a');a.href=li.dataset.url;a.textContent='Opslaget hentes fra X …';q.appendChild(a);em.appendChild(q);b.hidden=true;em.focus({preventScroll:true});
+ twl();window.twttr.ready(function(t){t.widgets.load(em)})})});
+/* fold: X ("Vis N opslag mere") og "Også med en fod" ("Vis alle (17)") */
+function fold(box,btn,luk,fokus){if(!box||!btn)return;var tx=btn.textContent;btn.hidden=false;btn.addEventListener('click',function(){var o=btn.getAttribute('aria-expanded')!=='true';btn.setAttribute('aria-expanded',String(o));box.classList.toggle('alle',o);btn.textContent=o?luk:tx;if(o){var f=box.querySelector(fokus);if(f){f.tabIndex=-1;f.focus({preventScroll:true})}}})}
+fold(document.querySelector('.xs'),document.getElementById('x-mere'),'Vis færre','.ekstra .xp-fra b');
+fold(document.getElementById('fod-boks'),document.getElementById('fod-mere'),'Vis færre','.ekstra b');
+/* video-facade: YouTube (nocookie) hentes først ved klik */
+[].forEach.call(document.querySelectorAll('.vid-ramme[data-yt]'),function(r){var b=r.querySelector('.vid-play');b.addEventListener('click',function(){var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+r.dataset.yt+'?autoplay=1&rel=0&playsinline=1';f.title=r.dataset.title;f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.setAttribute('allowfullscreen','');f.referrerPolicy='strict-origin-when-cross-origin';r.replaceChild(f,b);f.focus()})});
+})();
+
+/* Anker ind i en lukket <details> (fx risiko -> Kilder): fold op og hop */
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="#"]');if(!a)return;var t=document.getElementById(a.getAttribute('href').slice(1));if(!t)return;var d=t.closest('details')||(t.querySelector&&t.querySelector('details'));if(d&&!d.open){d.open=true;}});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 160" width="240" height="160" fill="none" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Tegnes: en chip tegnes som et mønster af baner"><title>Tegnes: en chip tegnes som et mønster af baner</title>
+<rect width="240" height="160" rx="12" fill="#0b141c"/>
+<g stroke="#313a4a" stroke-width="1" opacity=".55"><path d="M20 0V160"/><path d="M40 0V160"/><path d="M60 0V160"/><path d="M80 0V160"/><path d="M100 0V160"/><path d="M120 0V160"/><path d="M140 0V160"/><path d="M160 0V160"/><path d="M180 0V160"/><path d="M200 0V160"/><path d="M220 0V160"/><path d="M0 20H240"/><path d="M0 40H240"/><path d="M0 60H240"/><path d="M0 80H240"/><path d="M0 100H240"/><path d="M0 120H240"/><path d="M0 140H240"/></g>
+<g stroke="#89aeb4" stroke-width="1" opacity=".55"><path d="M7 12h10M12 7v10"/><path d="M223 12h10M228 7v10"/><path d="M7 148h10M12 143v10"/><path d="M223 148h10M228 143v10"/></g>
+<g stroke="#89aeb4" stroke-width="2"><rect x="62" y="28" width="104" height="104" rx="6"/>
+<g stroke-width="1.5"><path d="M78 48h26v20h24M78 64h12v28h40M104 112V84h36V48M150 70h-10v30h-24v14"/></g>
+<g fill="#89aeb4" stroke="none"><circle cx="128" cy="68" r="3"/><circle cx="130" cy="92" r="3"/><circle cx="140" cy="48" r="3"/><circle cx="116" cy="114" r="3"/></g>
+<path d="M150 136l38-38 9 9-38 38h-9z" stroke="#e6e8ed"/><path d="M180 106l9 9" stroke="#e6e8ed" stroke-width="1.5"/></g></svg>

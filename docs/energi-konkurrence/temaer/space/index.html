@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:,">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rumfart: op, ned og ud · NewDeal Invest</title>
+<meta name="description" content="Hvad selskaberne sender op i rummet, hvad der kommer ned igen, og hvad der rækker længere ud. Rumfart i fonden, afdelingen PMINDI pr. 16.10.2026.">
+<link rel="preload" href="fonts/font-1.woff2" as="font" type="font/woff2" crossorigin>
+<style>@font-face{font-family:'DM Sans';font-style:normal;font-weight:100 900;font-display:swap;src:url('fonts/font-1.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:100 900;font-display:swap;src:url('fonts/font-0.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:200 800;font-display:swap;src:url('fonts/font-3.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:200 800;font-display:swap;src:url('fonts/font-2.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}
+:root{--bg:#050a0f;--ink:#e6e8ed;--mute:#aebbc7;--teal:#7c92b0;--tl:#a9b9d0;--line:#313a4a;--card:#0b141c;--surf:#0f1a22;--fokus:#d3dcea;--dyb:#111a27}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 'DM Sans',system-ui,sans-serif;overflow-x:hidden}
+img,svg{max-width:100%;height:auto;display:block}
+a{color:var(--tl);text-underline-offset:3px}
+a:hover{color:var(--ink)}
+:focus-visible{outline:3px solid var(--fokus);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:Manrope,'DM Sans',sans-serif;font-weight:500;line-height:1.15;letter-spacing:-.04em;margin:0}
+h2{font-size:clamp(28px,7vw,42px);margin:.2rem 0 1rem}
+.risiko h2{font-size:clamp(22px,5.4vw,28px)}
+.kilder a.mal44{display:inline-flex;align-items:center;min-height:44px}
+p{margin:0 0 1rem}
+.wrap{width:min(1120px,100% - 2.5rem);margin:0 auto}
+.smal{max-width:44rem}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-999px;top:8px;z-index:50;background:var(--ink);color:var(--bg);padding:.7rem 1rem;border-radius:6px}
+.skip:focus{left:8px}
+.eyebrow{font:600 11px/1.3 'DM Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--tl);margin:0 0 .6rem}
+.mute{color:var(--mute)}
+.kort{background:var(--card);border:1px solid var(--line);border-radius:12px}
+.top{position:sticky;top:0;z-index:40;background:#000;border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px}
+.top img{width:130px;height:auto;display:block}
+.top span{font-size:11px;letter-spacing:.14em;color:var(--tl);font-weight:600;text-transform:uppercase;text-align:right}
+.prog{position:absolute;left:0;bottom:-1px;height:2px;width:100%;background:var(--teal);transform-origin:0 50%;transform:scaleX(var(--p,0))}
+.kred{font-size:.8rem;color:var(--mute);margin:.4rem 0 0}
+section.s{padding:clamp(2.5rem,7vw,4.5rem) 0;border-top:1px solid var(--line);scroll-margin-top:4.5rem}
+/* fonden */
+.fonden-g{display:grid;gap:1.25rem;grid-template-columns:minmax(0,1fr)}
+@media(min-width:880px){.fonden-g{grid-template-columns:minmax(0,5fr) minmax(0,6fr);align-items:start}}
+.stor .tal{font:800 clamp(3.4rem,13vw,5.6rem)/1 Manrope,sans-serif;color:var(--ink);margin:0 0 .3rem;letter-spacing:-.03em}
+.stor .tal small{font-size:.45em;color:var(--tl);margin-left:.1em}
+.fakta{list-style:none;margin:1rem 0 0;padding:0;display:grid;gap:.5rem}
+.fakta li{display:flex;justify-content:space-between;gap:1rem;border-top:1px solid var(--line);padding-top:.5rem;font-size:.95rem}
+.fakta b{font-weight:600;text-align:right}
+.note{font-size:.85rem;color:var(--mute);margin:.9rem 0 0}
+/* grebet */
+.greb-g{display:grid;gap:1.5rem}
+@media(min-width:880px){.greb-g{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center}}
+.graf{margin:0;padding:1rem}
+.graf img{width:100%}
+.graf figcaption{font-size:.85rem;color:var(--mute);margin-top:.6rem}
+/* fod */
+.fod{list-style:none;margin:1.2rem 0 0;padding:0;display:grid;gap:.5rem;grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
+.fod li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.1rem .8rem;padding:.65rem .85rem;border:1px solid var(--line);border-radius:10px;background:var(--surf);font-size:.95rem}
+.fod li b{font-weight:600}
+.fod li>span{grid-column:1;font-size:.82rem;color:var(--mute)}
+.fod li i{font-style:normal;grid-column:2;grid-row:1/3;align-self:center;font-weight:400;font-size:.85rem;color:var(--mute)}
+.js .fod:not(.alle){display:none}
+.knap{display:inline-flex;align-items:center;gap:.5rem;min-height:44px;padding:.55rem 1rem;border:1px solid var(--teal);border-radius:999px;background:transparent;color:var(--ink);font:600 .95rem 'DM Sans',sans-serif;cursor:pointer;margin-top:.9rem}
+.knap:hover{background:var(--dyb)}
+.knap[hidden]{display:none}
+.binder{margin-top:1.5rem}
+/* set udefra */
+.udefra-g{display:grid;gap:1.5rem}
+@media(min-width:960px){.udefra-g{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);align-items:start}}
+.vid{margin:0}
+.vid-ramme{position:relative;aspect-ratio:16/9;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:#000}
+.vid-ramme iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vid-play{position:absolute;inset:0;width:100%;height:100%;padding:0;border:0;background:#000;display:block;cursor:pointer}
+.vid-play img{width:100%;height:100%;object-fit:cover}
+.vid-ikon{position:absolute;z-index:2;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:#fff;box-shadow:0 4px 24px rgba(0,0,0,.5)}
+.vid-ikon::after{content:"";position:absolute;left:26px;top:20px;border-style:solid;border-width:12px 0 12px 19px;border-color:transparent transparent transparent #050a0f}
+.vid-tid{position:absolute;z-index:2;right:8px;bottom:8px;background:rgba(0,0,0,.8);color:#fff;font-size:13px;padding:2px 8px;border-radius:4px}
+.vid-kilde{position:absolute;z-index:2;left:8px;top:8px;background:rgba(0,0,0,.82);color:#fff;font-size:13px;font-weight:600;padding:3px 9px;border-radius:4px}
+.vid figcaption{font-size:.9rem;color:var(--mute);margin-top:.7rem}
+.vid figcaption b{color:var(--ink);font-weight:600}
+.xs{list-style:none;margin:0;padding:0;display:grid;gap:.8rem}
+.xp{padding:1rem 1.1rem}
+.js .xs:not(.alle) .x-mere{display:none}
+.xp-top{display:flex;justify-content:space-between;align-items:center;gap:.6rem;flex-wrap:wrap}
+.xp-top p{margin:0}
+.xp-trin a{display:inline-flex;align-items:center;min-height:44px;font-size:.85rem;font-weight:600}
+.xp-dato{font-size:.85rem;color:var(--mute)}
+.xp-fra{margin:.2rem 0 .4rem}
+.xp-fra span{color:var(--mute);font-size:.88rem}
+.xp-forkl{font-size:.95rem}
+.xp-k{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--tl);margin-right:.3rem}
+.xp-knapper{display:flex;flex-wrap:wrap;gap:.4rem 1rem;align-items:center}
+.xp-vis{min-height:44px;padding:.5rem .95rem;border:1px solid var(--teal);border-radius:999px;background:transparent;color:var(--ink);font:600 .9rem 'DM Sans',sans-serif;cursor:pointer}
+.xp-vis[hidden]{display:none}
+.xp-link{display:inline-flex;align-items:center;min-height:44px;font-size:.9rem}
+.xp-embed:not(:empty){margin-top:.6rem}
+.xnote{font-size:.85rem;color:var(--mute);margin-top:.9rem}
+/* risiko */
+.risiko{padding:1.4rem 1.5rem;border-left:4px solid var(--teal)}
+.risiko ul{margin:0;padding-left:1.1rem;display:grid;gap:.75rem}
+.risiko li b{font-weight:700}
+.risiko a{display:inline}
+.js .risiko:not(.aaben) .eks{display:none}
+/* videre */
+.videre-g{display:grid;gap:1.5rem}
+@media(min-width:880px){.videre-g{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center}}
+.cta{list-style:none;margin:0;padding:0;display:grid;gap:.6rem}
+.cta a{display:flex;justify-content:space-between;align-items:center;gap:1rem;min-height:56px;padding:.8rem 1.1rem;border:1px solid var(--teal);border-radius:12px;color:var(--ink);text-decoration:none;font-weight:600;background:var(--surf)}
+.cta a:hover{background:var(--dyb)}
+.cta a span{color:var(--mute);font-weight:400;font-size:.88rem}
+.cta .nl{display:flex;justify-content:space-between;align-items:center;gap:1rem;min-height:56px;padding:.8rem 1.1rem;border:1px solid var(--teal);border-radius:12px;color:var(--ink);font-weight:600;background:var(--surf)}.cta .nl span{color:var(--mute);font-weight:400;font-size:.88rem}
+.cta .ingen{padding:.3rem 0 0;color:var(--mute);font-size:.85rem}
+/* kilder */
+.kilder{font-size:.9rem;color:var(--mute)}
+section.s.kilder{padding:.6rem 0 1.2rem}
+.kilder summary{min-height:56px;display:flex;align-items:center;justify-content:space-between;gap:12px;cursor:pointer;list-style:none}
+.kilder summary::-webkit-details-marker{display:none}
+.kilder summary::after{content:"＋";color:var(--tl);font-size:1.1rem}
+.kilder-d[open] summary::after{content:"−"}
+.kilder summary h2{font-size:18px;letter-spacing:-.01em;font-weight:600;margin:0;color:var(--ink)}
+.kilder-d>ul:last-child{margin-bottom:1rem}
+.kilder h3{font-size:1.05rem;color:var(--ink);margin:1.4rem 0 .5rem}
+.kilder ul{padding-left:1.1rem;margin:0;display:grid;gap:.35rem}
+.kilder a{display:inline}
+footer{border-top:1px solid var(--line);padding:2rem 0 3rem;font-size:.88rem;color:var(--mute)}
+footer .kid{display:inline-flex;align-items:center;min-height:44px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+/* hero: himlen uden billede, tre retninger som indgang */
+.hero{position:relative;border-bottom:1px solid var(--line);background:radial-gradient(120% 70% at 85% 0,#16233a 0,transparent 60%),radial-gradient(90% 60% at 50% 120%,#0f1a22 0,transparent 70%);overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(1.2px 1.2px at 12% 22%,#5d6878 50%,transparent 51%),radial-gradient(1.2px 1.2px at 64% 14%,#5d6878 50%,transparent 51%),radial-gradient(1.5px 1.5px at 82% 38%,#6b7789 50%,transparent 51%),radial-gradient(1px 1px at 38% 8%,#5d6878 50%,transparent 51%),radial-gradient(1px 1px at 92% 70%,#5d6878 50%,transparent 51%);pointer-events:none}
+.hero-tekst{position:relative;padding:clamp(2.6rem,9vw,5.5rem) 0 clamp(2rem,5vw,3.5rem)}
+.hero h1{font-size:clamp(40px,11vw,72px);margin:0 0 1rem}
+.hero .lead{font-size:clamp(1.15rem,2.4vw,1.35rem);max-width:38rem}
+.hero .lead+p{max-width:40rem;color:var(--mute)}
+.ret{list-style:none;margin:1.4rem 0 0;padding:0;display:grid;gap:.5rem;max-width:40rem}
+@media(min-width:700px){.ret{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.ret a{display:flex;align-items:center;gap:.7rem;min-height:56px;padding:.6rem .9rem;border:1px solid var(--line);border-radius:12px;background:rgba(11,20,28,.8);color:var(--ink);text-decoration:none;line-height:1.25}
+.ret a:hover{border-color:var(--teal)}
+.ret svg{width:26px;height:26px;flex:none;color:var(--teal)}
+.ret b{display:block;font-weight:600}
+.ret span span{display:block;font-size:.85rem;color:var(--mute)}
+/* fonden */
+.stor{padding:1.5rem}
+.stor .tal{font:800 clamp(3.4rem,13vw,5.6rem)/1 Manrope,sans-serif;color:var(--ink);margin:0 0 .3rem;letter-spacing:-.03em}
+.stor .tal small{font-size:.45em;color:var(--tl);margin-left:.1em}
+/* pengene: hvor omsætningen kommer fra */
+.penge-g{display:grid;gap:1.5rem}
+@media(min-width:880px){.penge-g{grid-template-columns:minmax(0,6fr) minmax(0,5fr);align-items:start}}
+.seg{padding:1.2rem 1.3rem;margin:0 0 1rem}
+.seg h3{font-size:1.15rem;margin:0 0 .2rem}
+.seg .mute{font-size:.88rem;margin:0 0 .7rem}
+.seg-bar{display:flex;height:16px;border-radius:8px;overflow:hidden;background:var(--line);gap:2px}
+.seg-bar i{display:block;height:100%;background:#4a5566}
+.seg-bar i.ned{background:var(--teal)}
+.seg-l{list-style:none;margin:.7rem 0 0;padding:0;display:grid;gap:.35rem;font-size:.92rem}
+.seg-l li{display:grid;grid-template-columns:12px minmax(0,1fr) auto;gap:.6rem;align-items:center}
+.seg-l li::before{content:"";width:12px;height:12px;border-radius:3px;background:#4a5566}
+.seg-l li.ned::before{background:var(--teal)}
+.seg-l b{font-weight:500;text-align:right;white-space:nowrap}
+.penge-g>div:only-child{grid-column:1/-1;max-width:44rem}
+.foto{margin:0}
+.foto img{width:100%;max-width:600px;border-radius:10px;border:1px solid var(--line)}
+.foto figcaption{font-size:.85rem;color:var(--mute);margin-top:.5rem}
+.flere{margin-top:1.4rem;border-top:1px solid var(--line)}
+.flere summary{min-height:56px;display:flex;align-items:center;justify-content:space-between;gap:12px;cursor:pointer;list-style:none;font-weight:600}
+.flere summary::-webkit-details-marker{display:none}
+.flere summary::after{content:"＋";color:var(--tl);font-size:1.1rem}
+.flere[open] summary::after{content:"−"}
+.flere-g{display:grid;gap:1.4rem;padding:.4rem 0 1rem}
+@media(min-width:700px){.flere-g{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.vid-mrk{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--tl);margin-right:.35rem}
+
+/* lille UX-runde: kun afstande på mobil */
+@media(max-width:599px){main .s{padding:2rem 0}#fonden{padding-bottom:1.25rem}#risiko{padding-top:1.25rem}.penge-g,.udefra-g{gap:1.25rem}}
+</style>
+</head>
+<body>
+<a class="skip" href="#indhold">Spring til indholdet</a>
+<header class="top"><div class="wrap"><img src="img/ndi-logo.webp" alt="NewDeal Invest" width="155" height="57"><span>Tema · Rumfart</span></div><i class="prog" aria-hidden="true"></i></header>
+<main id="indhold" tabindex="-1">
+<section class="hero" aria-labelledby="h1">
+<div class="wrap hero-tekst">
+<h1 id="h1">Op, ned og ud</h1>
+<p class="lead">Hvad selskaberne sender op i rummet, hvad der kommer ned igen, og hvad der rækker længere ud.</p>
+<p>Temaet samler selskaber i fonden, der bygger raketter og satellitter, og selskaber, der bruger satellitter til at tage billeder af Jorden eller skabe forbindelse. Ét selskab har Månen som sit hovedområde. Siden viser, hvor meget hver del fylder i fonden. Hvor stor en del af hvert selskabs omsætning der kommer fra rumfart, kan ikke opgøres for alle. For SpaceX og Rocket Lab står det længere nede.</p>
+<ul class="ret" aria-label="Gå til en retning i tegningen">
+<li><a href="#cq-rum" data-dir="op"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V5M6 11l6-6 6 6"/></g></svg>
+<span><b>Op</b><span>Det, der skal op</span></span></a></li>
+<li><a href="#cq-rum" data-dir="ned"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v15M6 13l6 6 6-6"/></g></svg>
+<span><b>Ned</b><span>Det, der kommer ned igen</span></span></a></li>
+<li><a href="#cq-rum" data-dir="ud"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19L18 6M10 6h8v8"/><circle cx="20" cy="4" r="1.5"/></g></svg>
+<span><b>Ud</b><span>Det, der rækker længere ud</span></span></a></li>
+</ul>
+</div>
+</section>
+
+<section class="s" id="fonden" aria-labelledby="fonden-h"><div class="wrap">
+<p class="eyebrow">Fonden</p>
+<h2 id="fonden-h">Knap 6 kroner af hver 100</h2>
+<div class="fonden-g">
+<div class="stor kort">
+<p class="tal">5,99<small>%</small></p>
+<p>af fonden ligger i rumfart.</p>
+<ul class="fakta"><li><span>Selskaber</span><b>18 af fondens 373</b></li><li><span>Største selskab i temaet</span><b>SpaceX 1,38 % af fonden</b></li><li><span>Plads blandt fondens 12 temaer, målt på andel</span><b>Nr. 7</b></li></ul>
+<p class="note">Alle procenter på siden er andele af hele fonden, afdelingen PMINDI (NewDeal Invest klasse n, den udloddende andelsklasse, der udbetaler udbytte) pr. 16.10.2026.</p>
+</div>
+<div>
+<p>Temaerne er NewDeal Invests egen opdeling af fondens selskaber.</p>
+</div>
+</div>
+</div></section>
+
+<div class="wrap"><section class="cq-rum" id="cq-rum" aria-labelledby="cq-rum-h">
+<style>.cq-rum{--cq-rum-ink:var(--ink,#e6e8ed);--cq-rum-mute:var(--mute,#aebbc7);--cq-rum-line:var(--line,#313a4a);--cq-rum-surf:var(--surf,#0f1a22);--cq-rum-card:var(--card,#0b141c);--cq-rum-focus:var(--fokus,#cde0e2);
+--cq-rum-a:#7c92b0;--cq-rum-pick:#141d29;color:var(--cq-rum-ink);font-family:'DM Sans',system-ui,sans-serif;padding:clamp(1.5rem,6vw,4.5rem) 0;scroll-margin-top:4.5rem;border-top:1px solid var(--cq-rum-line)}
+.cq-rum *{box-sizing:border-box}
+.cq-rum__sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.cq-rum__cos{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:6px}
+.cq-rum--js .cq-rum__cos:not(.cq-rum--open)>li:nth-child(n+6){display:none}
+.cq-rum__co{width:100%;min-height:48px;display:grid;grid-template-columns:28px minmax(0,1fr) auto;align-items:center;gap:8px;padding:6px 9px;border:1px solid var(--cq-rum-line);border-radius:9px;background:var(--cq-rum-surf);color:var(--cq-rum-ink);font:inherit;font-size:.88rem;line-height:1.25;text-align:left;cursor:pointer}
+.cq-rum__co:hover,.cq-rum__co[aria-pressed=true]{border-color:var(--cq-rum-a)}
+.cq-rum__co[aria-pressed=true]{background:var(--cq-rum-pick)}
+.cq-rum__lg{width:28px;height:28px;border-radius:6px;background:#fff;display:grid;place-items:center;overflow:hidden;flex:0 0 auto}
+.cq-rum__lg img{width:24px;height:24px;object-fit:contain;display:block}
+.cq-rum__ini{font:700 .75rem/1 Manrope,sans-serif;color:#050a0f}
+.cq-rum__nm{min-width:0;overflow-wrap:anywhere}
+.cq-rum__cw{font-variant-numeric:tabular-nums;color:var(--cq-rum-mute);font-size:.82rem;white-space:nowrap}
+.cq-rum__all{margin-top:6px;min-height:44px;min-width:44px;padding:0 14px;border-radius:9px;border:1px solid var(--cq-rum-line);background:transparent;color:var(--cq-rum-ink);font:inherit;font-size:.9rem;cursor:pointer}
+.cq-rum__all:hover{border-color:var(--cq-rum-a)}
+.cq-rum__info{min-height:4.6rem;margin:8px 0;padding:.6rem .75rem;border-radius:10px;background:var(--cq-rum-surf);border:1px solid var(--cq-rum-line);display:flex;gap:.7rem;align-items:flex-start;font-size:.9rem}
+.cq-rum__hint{margin:0;color:var(--cq-rum-mute);align-self:center}
+.cq-rum__ih{margin:0 0 .1rem;font-weight:700}
+.cq-rum__ih span{font-weight:500;color:var(--cq-rum-mute);margin-left:.35rem;font-variant-numeric:tabular-nums}
+.cq-rum__ig{margin:0 0 .15rem;font-size:.76rem;color:var(--cq-rum-mute);text-transform:uppercase;letter-spacing:.05em}
+.cq-rum__id{margin:0;line-height:1.45}
+.cq-rum__ia{margin:.25rem 0 0;font-size:.82rem;color:var(--cq-rum-mute)}
+.cq-rum button:focus-visible,.cq-rum a:focus-visible{outline:3px solid var(--cq-rum-focus);outline-offset:2px}
+
+.cq-rum__in{max-width:1180px;margin:0 auto}
+.cq-rum__kick{margin:0 0 .45rem;color:var(--cq-rum-a);text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:600}
+.cq-rum__h2{font-family:Manrope,'DM Sans',sans-serif;font-weight:500;font-size:clamp(28px,7vw,42px);line-height:1.14;letter-spacing:-.03em;margin:0}
+.cq-rum__date{margin:.45rem 0 0;font-size:.84rem;font-weight:600}
+.cq-rum__date span{display:inline-block;width:.6rem;height:.6rem;border-radius:2px;background:var(--cq-rum-a);margin-right:.45rem}
+.cq-rum__lead{max-width:46rem;color:var(--cq-rum-mute);font-size:1rem;line-height:1.55;margin:.8rem 0 .4rem}
+.cq-rum__stage{display:grid;gap:10px;align-items:start}
+.cq-rum__fig{margin:0;border:1px solid var(--cq-rum-line);border-radius:14px;background:var(--cq-rum-card);padding:0 0 2px;overflow:hidden}
+.cq-rum__svg{display:block;width:100%;height:auto;max-height:380px}
+.cq-rum__stars{fill:#5d6878}
+.cq-rum__earth{fill:var(--cq-rum-surf);stroke:var(--cq-rum-a);stroke-width:2}
+.cq-rum__moon{fill:none;stroke:var(--cq-rum-mute);stroke-width:2}.cq-rum__cr{fill:none;stroke:var(--cq-rum-mute);stroke-width:1.5}
+.cq-rum__sat rect{fill:none;stroke:#5d6878;stroke-width:1.6}.cq-rum__sat path{stroke:#5d6878;stroke-width:1.6}
+.cq-rum__pl{fill:var(--cq-rum-mute);font:600 17px 'DM Sans',sans-serif}
+.cq-rum__dl{fill:var(--cq-rum-ink);font:500 24px Manrope,sans-serif}
+.cq-rum__band{fill:var(--cq-rum-a);stroke:var(--cq-rum-card);stroke-width:1.6;cursor:pointer;transition:opacity .25s}
+.cq-rum__head{fill:var(--cq-rum-a);transition:opacity .25s}
+.cq-rum__hit{fill:transparent;cursor:pointer}
+.cq-rum[data-sel] .cq-rum__band{opacity:.3}
+.cq-rum[data-sel] .cq-rum__band.cq-rum--on{opacity:1;fill:var(--cq-rum-ink)}
+.cq-rum[data-sel] .cq-rum__head{opacity:.3}
+.cq-rum__key{margin:.45rem .7rem .35rem;font-size:.8rem;line-height:1.4;color:var(--cq-rum-mute);display:flex;flex-wrap:wrap;gap:.2rem 1rem}
+.cq-rum__key span{display:inline-flex;align-items:center;gap:.4rem}
+.cq-rum__k1{width:16px;height:12px;background:var(--cq-rum-a);box-shadow:inset 0 -4px 0 0 var(--cq-rum-card),inset 0 -5px 0 0 var(--cq-rum-a)}
+.cq-rum__dirs{display:grid;gap:8px}
+.cq-rum__dir{border:1px solid var(--cq-rum-line);border-radius:12px;background:var(--cq-rum-card);padding:.55rem .55rem .5rem}
+.cq-rum__dh{display:flex;align-items:center;gap:.5rem;padding:0 .15rem}
+.cq-rum__di{flex:none;width:22px;height:22px;color:var(--cq-rum-a)}
+.cq-rum__dn{margin:0;font:500 1.1rem/1.2 Manrope,sans-serif}
+.cq-rum__dm{margin:0 0 0 auto;font-size:.84rem;color:var(--cq-rum-mute);white-space:nowrap}
+.cq-rum__ds{margin:.1rem .15rem .4rem;font-size:.82rem;color:var(--cq-rum-mute)}
+.cq-rum__gl{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.cq-rum__gb{width:100%;min-height:48px;display:grid;grid-template-columns:24px 1fr auto;align-items:center;gap:0 .55rem;padding:.4rem .6rem;border:1px solid var(--cq-rum-line);border-radius:9px;background:transparent;color:var(--cq-rum-ink);font:inherit;text-align:left;cursor:pointer}
+.cq-rum__gb:hover{border-color:var(--cq-rum-a)}
+.cq-rum__gb[aria-expanded=true]{border-color:var(--cq-rum-a);box-shadow:inset 0 0 0 1px var(--cq-rum-a);background:var(--cq-rum-pick)}
+.cq-rum__sw{grid-row:1/3;display:flex;align-items:center;justify-content:center;height:24px}
+.cq-rum__sw i{display:block;height:20px;background:var(--cq-rum-a)}
+.cq-rum__gi{grid-row:1/3;width:22px;height:22px;color:var(--cq-rum-a)}
+.cq-rum__gn{font:600 .9rem/1.25 Manrope,sans-serif;min-width:0}
+.cq-rum__gw{font:600 .9rem Manrope,sans-serif;font-variant-numeric:tabular-nums;white-space:nowrap}
+.cq-rum__gs{grid-column:2/-1;font-size:.76rem;color:var(--cq-rum-mute)}
+.cq-rum__panel{margin-top:8px;border:1px solid var(--cq-rum-a);border-radius:12px;background:var(--cq-rum-card);padding:.8rem .85rem .4rem;scroll-margin-top:5rem}
+.cq-rum__ph{display:flex;align-items:center;gap:.8rem}
+.cq-rum__pi{flex:none;width:2.4rem;height:2.4rem;padding:.4rem;border-radius:8px;background:rgba(124,146,176,.16);color:var(--cq-rum-a)}
+.cq-rum__ph>div{flex:1;min-width:0}
+.cq-rum__h3{margin:0;font:500 1.1rem/1.25 Manrope,sans-serif}
+.cq-rum__pm{margin:.15rem 0 0;font-size:.84rem;color:var(--cq-rum-mute)}
+.cq-rum__close{min-height:44px;min-width:44px;padding:0 12px;border-radius:9px;border:1px solid var(--cq-rum-line);background:transparent;color:var(--cq-rum-ink);font:inherit;font-size:.88rem;cursor:pointer}
+.cq-rum__close:hover{border-color:var(--cq-rum-a)}
+.cq-rum__ptx{margin:.7rem 0 .3rem;font-size:.92rem;line-height:1.5;max-width:52rem}
+.cq-rum__ptx+.cq-rum__cos{margin-top:.6rem}
+.cq-rum__cos{grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
+.cq-rum--js .cq-rum__ar{transition:opacity .7s ease}
+.cq-rum--arm .cq-rum__ar{opacity:0}
+@media (max-width:639px){.cq-rum__pl{font-size:25px}.cq-rum__dl{font-size:32px}}
+
+@media (min-width:1000px){.cq-rum__stage{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:16px}.cq-rum__fig{position:sticky;top:5rem}.cq-rum__dirs{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.cq-rum--js .cq-rum__ar,.cq-rum__band,.cq-rum__head{transition:none}.cq-rum--arm .cq-rum__ar{opacity:1}}
+</style>
+<div class="cq-rum__in">
+<p class="cq-rum__kick">Rumfart</p>
+<h2 class="cq-rum__h2" id="cq-rum-h">Tre retninger på én himmel</h2>
+<p class="cq-rum__date"><span aria-hidden="true"></span>Andel af hele fonden, afdelingen PMINDI pr. 16.10.2026</p>
+<p class="cq-rum__lead">Tegningen viser tre retninger. Jo tykkere en pil er, jo mere fylder den i fonden. Tryk på en gruppe for at se selskaberne.</p>
+<div class="cq-rum__stage"><figure class="cq-rum__fig"><svg class="cq-rum__svg" viewBox="0 0 520 360" aria-hidden="true" focusable="false">
+<g class="cq-rum__stars"><circle cx="30" cy="40" r="1.6"/><circle cx="190" cy="30" r="1.6"/><circle cx="330" cy="46" r="1.6"/><circle cx="220" cy="140" r="1.6"/><circle cx="40" cy="170" r="1.6"/><circle cx="360" cy="150" r="1.6"/><circle cx="500" cy="170" r="1.6"/><circle cx="180" cy="210" r="1.6"/><circle cx="400" cy="240" r="1.6"/><circle cx="500" cy="250" r="1.6"/></g>
+<circle class="cq-rum__earth" cx="260" cy="900" r="620"/><text class="cq-rum__pl" x="260" y="322" text-anchor="middle">Jorden</text>
+<circle class="cq-rum__moon" cx="452" cy="64" r="30"/><circle class="cq-rum__cr" cx="443" cy="58" r="6"/><circle class="cq-rum__cr" cx="462" cy="73" r="4"/><text class="cq-rum__pl" x="412" y="52" text-anchor="end">Månen</text>
+<g class="cq-rum__sat"><rect x="250" y="66" width="24" height="16" rx="2"/><path d="M250 74h-22M274 74h22"/><rect x="214" y="68" width="14" height="12"/><rect x="296" y="68" width="14" height="12"/></g>
+<g class="cq-rum__ar" data-dir="op" transform="translate(112.0 293.9) rotate(-90.00)"><rect class="cq-rum__band" data-g="launch" x="0" y="-25.06" width="201.9" height="31.22"/><rect class="cq-rum__band" data-g="satellite-bus" x="0" y="6.16" width="201.9" height="10.50"/><rect class="cq-rum__band" data-g="payload" x="0" y="16.66" width="201.9" height="6.02"/><rect class="cq-rum__band" data-g="launch-parts" x="0" y="22.68" width="201.9" height="2.38"/><path class="cq-rum__head" d="M201.9 -35.1L227.9 0L201.9 35.1Z"/></g><g class="cq-rum__ar" data-dir="ned" transform="translate(262.0 92.0) rotate(90.00)"><rect class="cq-rum__band" data-g="earth-observation" x="0" y="-13.51" width="158.0" height="19.88"/><rect class="cq-rum__band" data-g="sat-connectivity" x="0" y="6.37" width="158.0" height="7.14"/><path class="cq-rum__head" d="M158.0 -23.5L184.0 0L158.0 23.5Z"/></g><g class="cq-rum__ar" data-dir="ud" transform="translate(372.0 284.2) rotate(-75.27)"><rect class="cq-rum__band" data-g="lunar" x="0" y="-3.36" width="170.7" height="6.72"/><path class="cq-rum__head" d="M170.7 -13.4L196.7 0L170.7 13.4Z"/><rect class="cq-rum__hit" x="0" y="-15.0" width="196.7" height="30.0" data-g="lunar"/></g>
+<text class="cq-rum__dl" x="149" y="120">Op</text>
+<text class="cq-rum__dl" x="288" y="190">Ned</text>
+<text class="cq-rum__dl" x="416" y="190">Ud</text>
+</svg>
+<figcaption class="cq-rum__key"><span><i class="cq-rum__k1" aria-hidden="true"></i>Pilens tykkelse svarer til andelen af fonden. Hver stribe er en gruppe.</span></figcaption></figure>
+<div class="cq-rum__dirs"><div class="cq-rum__dir" data-dir="op"><div class="cq-rum__dh"><svg class="cq-rum__di" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V5M6 11l6-6 6 6"/></g></svg><h3 class="cq-rum__dn">Op</h3><p class="cq-rum__dm">10 selskaber · 3,58 %</p></div><p class="cq-rum__ds">Det, der skal op</p><ul class="cq-rum__gl" aria-label="Op: grupper"><li><button type="button" class="cq-rum__dx cq-rum__gb" aria-label="Opsendelse. 4 selskaber, 2,23 % af fonden. Vis selskaberne" aria-expanded="false" aria-controls="cq-rum-p-launch" data-grp="rum" data-g="launch"><span class="cq-rum__sw" aria-hidden="true"><i style="width:15.6px"></i></span><span class="cq-rum__gn">Opsendelse</span><span class="cq-rum__gw">2,23 %</span><span class="cq-rum__gs">4 selskaber</span><span class="cq-rum__sr">Vis selskaberne</span></button></li><li><button type="button" class="cq-rum__dx cq-rum__gb" aria-label="Satellitter og platforme. 2 selskaber, 0,75 % af fonden. Vis selskaberne" aria-expanded="false" aria-controls="cq-rum-p-satellite-bus" data-grp="rum" data-g="satellite-bus"><span class="cq-rum__sw" aria-hidden="true"><i style="width:5.2px"></i></span><span class="cq-rum__gn">Satellitter og platforme</span><span class="cq-rum__gw">0,75 %</span><span class="cq-rum__gs">2 selskaber</span><span class="cq-rum__sr">Vis selskaberne</span></button></li><li><button type="button" class="cq-rum__dx cq-rum__gb" aria-label="Udstyr om bord og rumsystemer. 2 selskaber, 0,43 % af fonden. Vis selskaberne" aria-expanded="false" aria-controls="cq-rum-p-payload" data-grp="rum" data-g="payload"><span class="cq-rum__sw" aria-hidden="true"><i style="width:3px"></i></span><span class="cq-rum__gn">Udstyr om bord og rumsystemer</span><span class="cq-rum__gw">0,43 %</span><span class="cq-rum__gs">2 selskaber</span><span class="cq-rum__sr">Vis selskaberne</span></button></li><li><button type="button" class="cq-rum__dx cq-rum__gb" aria-label="Raketdele og motorer. 2 selskaber, 0,17 % af fonden. Vis selskaberne" aria-expanded="false" aria-controls="cq-rum-p-launch-parts" data-grp="rum" data-g="launch-parts"><span class="cq-rum__sw" aria-hidden="true"><i style="width:3px"></i></span><span class="cq-rum__gn">Raketdele og motorer</span><span class="cq-rum__gw">0,17 %</span><span class="cq-rum__gs">2 selskaber</span><span class="cq-rum__sr">Vis selskaberne</span></button></li></ul><div class="cq-rum__panel cq-rum__scope" id="cq-rum-p-launch" role="region" aria-label="Opsendelse" hidden>
+<div class="cq-rum__ph"><svg class="cq-rum__pi" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V5M6 11l6-6 6 6"/></g></svg><div><h3 class="cq-rum__h3">Opsendelse</h3><p class="cq-rum__pm">Op · 4 selskaber · 2,23 % af fonden</p></div>
+<button type="button" class="cq-rum__close" data-for="cq-rum-p-launch">Luk<span class="cq-rum__sr"> Opsendelse</span></button></div>
+<p class="cq-rum__ptx">En raket bringer satellitter og udstyr op i kredsløb om Jorden. I USA var der i FAA's regnskabsår 2025, fra oktober 2024 til september 2025, 195 opsendelser med tilladelse fra luftfartsmyndigheden FAA, knap 4 om ugen. SpaceX stod for omkring 4 af hver 5. Rocket Lab og Firefly står også på FAA's liste. Firefly landede i 2025 et fartøj på Månen. Starfighters Space flyver i dag med F-104, jagerfly, der kan flyve hurtigere end lyden, for kunder, der har brug for den slags flyvninger. Selskabet skriver i sit prospekt, at det senere vil sende raketter op fra fly. Det gør det ikke i dag.</p>
+<ul class="cq-rum__cos" id="cq-rum-l-launch" data-top="5"><li><button type="button" class="cq-rum__co" aria-pressed="false" data-d="Opsendelse (Falcon, Dragon, Starship), satellitbredbånd via Starlink og en AI-del fra sammenlægningen med xAI." data-g="Op · Opsendelse" data-a="Datacentre"><span class="cq-rum__lg"><img src="fra-critiquito/logos/spacex.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-rum__nm">SpaceX</span><span class="cq-rum__cw">1,38 %</span></button></li><li><button type="button" class="cq-rum__co" aria-pressed="false" data-d="Opsendelse samt design, komponenter og bygning af rumfartøjer." data-g="Op · Opsendelse"><span class="cq-rum__lg"><img src="fra-critiquito/logos/rocket-lab.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-rum__nm">Rocket Lab</span><span class="cq-rum__cw">0,35 %</span></button></li><li><button type="button" class="cq-rum__co" aria-pressed="false" data-d="Specialflyvninger med syv F-104-overlydsfly fra Kennedy Space Center." data-g="Op · Opsendelse"><span class="cq-rum__lg"><img src="fra-critiquito/logos/starfighters-space.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-rum__nm">Starfighters Space</span><span class="cq-rum__cw">0,27 %</span></button></li><li><button type="button" class="cq-rum__co" aria-pressed="false" data-d="Rum- og forsvarsteknologi: opsendelse, transport og drift i rummet for forsvar, stat og kommercielle kunder." data-g="Op · Opsendelse"><span class="cq-rum__lg"><img src="fra-critiquito/logos/firefly-aerospace.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-rum__nm">Firefly Aerospace</span><span class="cq-rum__cw">0,23 %</span></button></li></ul><div class="cq-rum__info" aria-live="polite"><p class="cq-rum__hint">Tryk på et selskab for at se, hvad det laver.</p></div></div><div class="cq-rum__panel cq-rum__scope" id="cq-rum-p-satellite-bus" role="region" aria-label="Satellitter og platforme" hidden>
+<div class="cq-rum__ph"><svg class="cq-rum__pi" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V5M6 11l6-6 6 6"/></g></svg><div><h3 class="cq-rum__h3">Satellitter og platforme</h3><p class="cq-rum__pm">Op · 2 selskaber · 0,75 % af fonden</p></div>
+<button type="button" class="cq-rum__close" data-for="cq-rum-p-satellite-bus">Luk<span class="cq-rum__sr"> Satellitter og platforme</span></button></div>
+<p class="cq-rum__ptx">En satellit består af en platform med strøm, styring og radio og det udstyr, den skal bruge. Selskaberne bygger satellitter og dele til dem.</p>
+<ul class="cq-rum__cos" id="cq-rum-l-satellite-bus" data-top="5"><li><button type="button" class="cq-rum__co" aria-pressed="false" data-d="Bygger hele satellitsystemer og dele til dem til kommunikationsnet i lav, mellemhøj og høj bane om Jorden." data-g="Op · Satellitter og platforme"><span class="cq-rum__lg"><img src="fra-critiquito/logos/mda-space.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-rum__nm">MDA Space</span><span class="cq-rum__cw">0,40 %</span></button></li><li><button type="button" class="cq-rum__co" aria-pressed="false" data-d="Rum- og forsvarsleverandør, der står for hele missioner: design af satellitten, montering af det udstyr, den skal bære, opsendelse og drift." data-g="Op · Satellitter og platforme"><span class="cq-rum__lg"><span class="cq-rum__ini" aria-hidden="true">YS</span></span><span class="cq-rum__nm">York Space Systems</span><span class="cq-rum__cw">0,35 %</span></button></li></ul><div class="cq-rum__info" aria-live="polite"><p class="cq-rum__hint">Tryk på et selskab for at se, hvad det laver.</p></div></div><div class="cq-rum__panel cq-rum__scope" id="cq-rum-p-payload" role="region" aria-label="Udstyr om bord og rumsystemer" hidden>
+<div class="cq-rum__ph"><svg class="cq-rum__pi" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V5M6 11l6-6 6 6"/></g></svg><div><h3 class="cq-rum__h3">Udstyr om bord og rumsystemer</h3><p class="cq-rum__pm">Op · 2 selskaber · 0,43 % af fonden</p></div>
+<button type="button" class="cq-rum__close" data-for="cq-rum-p-payload">Luk<span class="cq-rum__sr"> Udstyr om bord og rumsystemer</span></button></div>
+<p class="cq-rum__ptx">Udstyr og systemer til rumfartøjer, både til forskning og forsvar.</p>
+<ul class="cq-rum__cos" id="cq-rum-l-payload" data-top="5"><li><button type="button" class="cq-rum__co" aria-pressed="false" data-d="Udstyr og systemer til rumfart og forsvar." data-g="Op · Udstyr om bord og rumsystemer"><span class="cq-rum__lg"><img src="fra-critiquito/logos/redwire.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-rum__nm">Redwire</span><span class="cq-rum__cw">0,27 %</span></button></li><li><button type="button" class="cq-rum__co" aria-pressed="false" data-d="Teknologi til forsvar og rumfart, til national sikkerhed, forskning i rummet og kommerciel rumfart." data-g="Op · Udstyr om bord og rumsystemer"><span class="cq-rum__lg"><img src="fra-critiquito/logos/voyager-technologies.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-rum__nm">Voyager Technologies</span><span class="cq-rum__cw">0,16 %</span></button></li></ul><div class="cq-rum__info" aria-live="polite"><p class="cq-rum__hint">Tryk på et selskab for at se, hvad det laver.</p></div></div><div class="cq-rum__panel cq-rum__scope" id="cq-rum-p-launch-parts" role="region" aria-label="Raketdele og motorer" hidden>
+<div class="cq-rum__ph"><svg class="cq-rum__pi" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V5M6 11l6-6 6 6"/></g></svg><div><h3 class="cq-rum__h3">Raketdele og motorer</h3><p class="cq-rum__pm">Op · 2 selskaber · 0,17 % af fonden</p></div>
+<button type="button" class="cq-rum__close" data-for="cq-rum-p-launch-parts">Luk<span class="cq-rum__sr"> Raketdele og motorer</span></button></div>
+<p class="cq-rum__ptx">Dele til raketter, satellitter og fly. Det største af de to laver mest dele til jetmotorer og fly. Om materialerne kan du læse på siden <a href="../raastoffer/index.html">Råstoffer</a>.</p>
+<ul class="cq-rum__cos" id="cq-rum-l-launch-parts" data-top="5"><li><button type="button" class="cq-rum__co" aria-pressed="false" data-d="Dele til jetmotorer, bolte og andre samlingsdele samt dele til flyenes bærende konstruktion, til luftfart og transport." data-g="Op · Raketdele og motorer"><span class="cq-rum__lg"><img src="fra-critiquito/logos/howmet-aerospace.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-rum__nm">Howmet Aerospace</span><span class="cq-rum__cw">0,13 %</span></button></li><li><button type="button" class="cq-rum__co" aria-pressed="false" data-d="Systemer til løfteraketter, satellitter, rumfartøjer, missilforsvar, meget hurtige missiler (hypersoniske systemer) og droner." data-g="Op · Raketdele og motorer"><span class="cq-rum__lg"><img src="fra-critiquito/logos/karman.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-rum__nm">Karman Holdings</span><span class="cq-rum__cw">0,04 %</span></button></li></ul><div class="cq-rum__info" aria-live="polite"><p class="cq-rum__hint">Tryk på et selskab for at se, hvad det laver.</p></div></div></div><div class="cq-rum__dir" data-dir="ned"><div class="cq-rum__dh"><svg class="cq-rum__di" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v15M6 13l6 6 6-6"/></g></svg><h3 class="cq-rum__dn">Ned</h3><p class="cq-rum__dm">7 selskaber · 1,93 %</p></div><p class="cq-rum__ds">Det, der kommer ned igen</p><ul class="cq-rum__gl" aria-label="Ned: grupper"><li><button type="button" class="cq-rum__dx cq-rum__gb" aria-label="Billeder og data om Jorden. 5 selskaber, 1,42 % af fonden. Vis selskaberne" aria-expanded="false" aria-controls="cq-rum-p-earth-observation" data-grp="rum" data-g="earth-observation"><span class="cq-rum__sw" aria-hidden="true"><i style="width:9.9px"></i></span><span class="cq-rum__gn">Billeder og data om Jorden</span><span class="cq-rum__gw">1,42 %</span><span class="cq-rum__gs">5 selskaber</span><span class="cq-rum__sr">Vis selskaberne</span></button></li><li><button type="button" class="cq-rum__dx cq-rum__gb" aria-label="Forbindelse fra rummet. 2 selskaber, 0,51 % af fonden. Vis selskaberne" aria-expanded="false" aria-controls="cq-rum-p-sat-connectivity" data-grp="rum" data-g="sat-connectivity"><span class="cq-rum__sw" aria-hidden="true"><i style="width:3.6px"></i></span><span class="cq-rum__gn">Forbindelse fra rummet</span><span class="cq-rum__gw">0,51 %</span><span class="cq-rum__gs">2 selskaber</span><span class="cq-rum__sr">Vis selskaberne</span></button></li></ul><div class="cq-rum__panel cq-rum__scope" id="cq-rum-p-earth-observation" role="region" aria-label="Billeder og data om Jorden" hidden>
+<div class="cq-rum__ph"><svg class="cq-rum__pi" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v15M6 13l6 6 6-6"/></g></svg><div><h3 class="cq-rum__h3">Billeder og data om Jorden</h3><p class="cq-rum__pm">Ned · 5 selskaber · 1,42 % af fonden</p></div>
+<button type="button" class="cq-rum__close" data-for="cq-rum-p-earth-observation">Luk<span class="cq-rum__sr"> Billeder og data om Jorden</span></button></div>
+<p class="cq-rum__ptx">Satellitter tager billeder og opfanger signaler fra Jorden. Planet Labs skriver, at dets satellitter fotograferer Jordens landområder hver dag. HawkEye 360 opfanger radiosignaler for forsvaret i USA og i lande, som USA samarbejder med om forsvar.</p>
+<ul class="cq-rum__cos" id="cq-rum-l-earth-observation" data-top="5"><li><button type="button" class="cq-rum__co" aria-pressed="false" data-d="Har bygget, opsendt og driver hundredvis af satellitter, der fotograferer Jordens landområder hver dag." data-g="Ned · Billeder og data om Jorden"><span class="cq-rum__lg"><img src="fra-critiquito/logos/planet-labs.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-rum__nm">Planet Labs</span><span class="cq-rum__cw">0,53 %</span></button></li><li><button type="button" class="cq-rum__co" aria-pressed="false" data-d="Satellitbilleder i realtid og analyse. Selskabet overvåger ofte vigtige steder, anlæg og begivenheder." data-g="Ned · Billeder og data om Jorden"><span class="cq-rum__lg"><img src="fra-critiquito/logos/blacksky-technology.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-rum__nm">BlackSky Technology</span><span class="cq-rum__cw">0,39 %</span></button></li><li><button type="button" class="cq-rum__co" aria-pressed="false" data-d="Jordobservation: designer, bygger og driver egne satellitsystemer." data-g="Ned · Billeder og data om Jorden"><span class="cq-rum__lg"><img src="fra-critiquito/logos/satellogic.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-rum__nm">Satellogic</span><span class="cq-rum__cw">0,22 %</span></button></li><li><button type="button" class="cq-rum__co" aria-pressed="false" data-d="Data, analyse og rumtjenester fra selskabets egen flåde af små satellitter, der observerer Jorden." data-g="Ned · Billeder og data om Jorden"><span class="cq-rum__lg"><img src="fra-critiquito/logos/spire-global.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-rum__nm">Spire Global</span><span class="cq-rum__cw">0,17 %</span></button></li><li><button type="button" class="cq-rum__co" aria-pressed="false" data-d="Signalefterretning (radiosignaler) fra satellitter til USA&#x27;s forsvar og allierede." data-g="Ned · Billeder og data om Jorden"><span class="cq-rum__lg"><img src="fra-critiquito/logos/hawkeye-360.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-rum__nm">HawkEye 360</span><span class="cq-rum__cw">0,11 %</span></button></li></ul><div class="cq-rum__info" aria-live="polite"><p class="cq-rum__hint">Tryk på et selskab for at se, hvad det laver.</p></div></div><div class="cq-rum__panel cq-rum__scope" id="cq-rum-p-sat-connectivity" role="region" aria-label="Forbindelse fra rummet" hidden>
+<div class="cq-rum__ph"><svg class="cq-rum__pi" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v15M6 13l6 6 6-6"/></g></svg><div><h3 class="cq-rum__h3">Forbindelse fra rummet</h3><p class="cq-rum__pm">Ned · 2 selskaber · 0,51 % af fonden</p></div>
+<button type="button" class="cq-rum__close" data-for="cq-rum-p-sat-connectivity">Luk<span class="cq-rum__sr"> Forbindelse fra rummet</span></button></div>
+<p class="cq-rum__ptx">Satellitter sender tale og data til steder, hvor der ikke er mobilmaster. AST SpaceMobile bygger et mobilnet i rummet, som almindelige telefoner kan bruge direkte. Om net og datacentre på Jorden kan du læse på siden <a href="../datacenter/index.html">Datacentre</a>.</p>
+<ul class="cq-rum__cos" id="cq-rum-l-sat-connectivity" data-top="5"><li><button type="button" class="cq-rum__co" aria-pressed="false" data-d="Bygger et mobilbredbåndsnet i rummet, som almindelige smartphones kan bruge direkte." data-g="Ned · Forbindelse fra rummet"><span class="cq-rum__lg"><img src="fra-critiquito/logos/ast-spacemobile.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-rum__nm">AST SpaceMobile</span><span class="cq-rum__cw">0,49 %</span></button></li><li><button type="button" class="cq-rum__co" aria-pressed="false" data-d="Tale og data via satellitter over hele Jorden. Satellitterne sender også signaler, der kan bruges til at bestemme sted og præcis tid." data-g="Ned · Forbindelse fra rummet"><span class="cq-rum__lg"><img src="fra-critiquito/logos/iridium.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-rum__nm">Iridium Communications</span><span class="cq-rum__cw">0,02 %</span></button></li></ul><div class="cq-rum__info" aria-live="polite"><p class="cq-rum__hint">Tryk på et selskab for at se, hvad det laver.</p></div></div></div><div class="cq-rum__dir" data-dir="ud"><div class="cq-rum__dh"><svg class="cq-rum__di" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19L18 6M10 6h8v8"/><circle cx="20" cy="4" r="1.5"/></g></svg><h3 class="cq-rum__dn">Ud</h3><p class="cq-rum__dm">1 selskab · 0,48 %</p></div><p class="cq-rum__ds">Det, der rækker længere ud</p><ul class="cq-rum__gl" aria-label="Ud: grupper"><li><button type="button" class="cq-rum__dx cq-rum__gb" aria-label="Månen. 1 selskab, 0,48 % af fonden. Vis selskaberne" aria-expanded="false" aria-controls="cq-rum-p-lunar" data-grp="rum" data-g="lunar"><span class="cq-rum__sw" aria-hidden="true"><i style="width:3.4px"></i></span><span class="cq-rum__gn">Månen</span><span class="cq-rum__gw">0,48 %</span><span class="cq-rum__gs">1 selskab</span><span class="cq-rum__sr">Vis selskaberne</span></button></li></ul><div class="cq-rum__panel cq-rum__scope" id="cq-rum-p-lunar" role="region" aria-label="Månen" hidden>
+<div class="cq-rum__ph"><svg class="cq-rum__pi" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19L18 6M10 6h8v8"/><circle cx="20" cy="4" r="1.5"/></g></svg><div><h3 class="cq-rum__h3">Månen</h3><p class="cq-rum__pm">Ud · 1 selskab · 0,48 % af fonden</p></div>
+<button type="button" class="cq-rum__close" data-for="cq-rum-p-lunar">Luk<span class="cq-rum__sr"> Månen</span></button></div>
+<p class="cq-rum__ptx">Intuitive Machines bygger fartøjer, der lander på Månen, og har sendt dem dertil for NASA. Selskabet arbejder også med udstyr og tjenester til aktivitet i rummet ud over Jorden. Det ejer desuden en virksomhed, der bygger kommunikationssatellitter.</p>
+<ul class="cq-rum__cos" id="cq-rum-l-lunar" data-top="5"><li><button type="button" class="cq-rum__co" aria-pressed="false" data-d="Infrastruktur og tjenester i rummet med fokus på varig aktivitet ud over Jorden. Datterselskabet Lanteris bygger kommunikationssatellitter til kommercielle kunder. Satellitterne kredser i høj bane om Jorden." data-g="Ud · Månen"><span class="cq-rum__lg"><img src="fra-critiquito/logos/intuitive-machines.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-rum__nm">Intuitive Machines</span><span class="cq-rum__cw">0,48 %</span></button></li></ul><div class="cq-rum__info" aria-live="polite"><p class="cq-rum__hint">Tryk på et selskab for at se, hvad det laver.</p></div></div></div></div></div>
+</div>
+<script>(function(){var R=document.getElementById('cq-rum');if(!R||R.dataset.on)return;R.dataset.on='1';R.classList.add('cq-rum--js');
+var fine=window.matchMedia&&matchMedia('(hover: hover) and (pointer: fine)').matches;
+function show(btn){var sc=btn.closest('.cq-rum__scope')||R,inf=sc.querySelector('.cq-rum__info');if(!inf)return;inf.textContent='';
+inf.appendChild(btn.querySelector('.cq-rum__lg').cloneNode(true));var w=document.createElement('div');
+function el(t,c,x){var e=document.createElement(t);e.className=c;e.textContent=x;w.appendChild(e);return e}
+el('p','cq-rum__ig',btn.dataset.g);var h=el('p','cq-rum__ih',btn.querySelector('.cq-rum__nm').textContent);var s=document.createElement('span');s.textContent=btn.querySelector('.cq-rum__cw').textContent+' af fonden';h.appendChild(s);
+el('p','cq-rum__id',btn.dataset.d);if(btn.dataset.a)el('p','cq-rum__ia',btn.querySelector('.cq-rum__nm').textContent+' laver også noget, der hører til temaet '+btn.dataset.a+'. I fondens opdeling tælles selskabet kun med her.');inf.appendChild(w)}
+R.querySelectorAll('.cq-rum__co').forEach(function(b){b.addEventListener('click',function(){var sc=b.closest('.cq-rum__scope')||R;sc.querySelectorAll('.cq-rum__co[aria-pressed=true]').forEach(function(o){if(o!==b)o.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');show(b)});
+b.addEventListener('focus',function(){show(b)});if(fine)b.addEventListener('mouseenter',function(){show(b)})});
+function setAll(a,o){var l=document.getElementById(a.getAttribute('aria-controls'));l.classList.toggle('cq-rum--open',o);a.setAttribute('aria-expanded',o);a.textContent=o?'Vis færre':'Vis alle ('+a.dataset.n+')'}
+R.querySelectorAll('.cq-rum__all').forEach(function(a){a.addEventListener('click',function(){var o=a.getAttribute('aria-expanded')!=='true';setAll(a,o);if(o){var l=document.getElementById(a.getAttribute('aria-controls')),f=l.children[5];if(f)f.querySelector('button').focus()}})});
+function setDx(b,o){var t=document.getElementById(b.getAttribute('aria-controls'));b.setAttribute('aria-expanded',o);t.hidden=!o;
+ if(o&&b.dataset.grp)R.querySelectorAll('.cq-rum__dx[data-grp="'+b.dataset.grp+'"]').forEach(function(x){if(x!==b&&x.getAttribute('aria-expanded')==='true')setDx(x,false)});
+ R.dispatchEvent(new CustomEvent('cq:dx',{detail:{btn:b,open:o}}))}
+R.cqSetDx=setDx;
+R.querySelectorAll('.cq-rum__dx').forEach(function(b){setDx(b,b.dataset.open==='1');b.addEventListener('click',function(){setDx(b,b.getAttribute('aria-expanded')!=='true')})});
+R.addEventListener('keydown',function(e){if(e.key!=='Escape'&&e.key!=='Esc')return;var n=document.activeElement;
+ if(n&&n.getAttribute&&n.getAttribute('aria-expanded')==='true'){e.preventDefault();if(n.classList.contains('cq-rum__all'))setAll(n,false);else setDx(n,false);return}
+ while(n&&n!==R){if(n.id){var b=R.querySelector('[aria-controls="'+n.id+'"][aria-expanded="true"]');if(b){e.preventDefault();if(b.classList.contains('cq-rum__all'))setAll(b,false);else setDx(b,false);b.focus();return}}n=n.parentNode}});
+})();
+(function(){var R=document.getElementById('cq-rum');var rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+R.querySelectorAll('.cq-rum__close').forEach(function(c){c.addEventListener('click',function(){var b=R.querySelector('[aria-controls="'+c.dataset.for+'"]');R.cqSetDx(b,false);b.focus()})});
+R.querySelectorAll('svg [data-g]').forEach(function(el){el.addEventListener('click',function(){R.querySelector('.cq-rum__gb[data-g="'+el.dataset.g+'"]').click()})});
+function sync(){var o=R.querySelector('.cq-rum__gb[aria-expanded="true"]');var id=o?o.dataset.g:'';if(id)R.setAttribute('data-sel',id);else R.removeAttribute('data-sel');
+R.querySelectorAll('svg .cq-rum__band').forEach(function(el){el.classList.toggle('cq-rum--on',el.dataset.g===id)})}
+R.addEventListener('cq:dx',function(e){sync();if(!e.detail.open||!e.detail.btn.classList.contains('cq-rum__gb'))return;var p=document.getElementById(e.detail.btn.getAttribute('aria-controls'));var r=p.getBoundingClientRect();if(r.top>window.innerHeight-80)p.scrollIntoView({block:'nearest',behavior:rm?'auto':'smooth'})});
+if(!rm&&'IntersectionObserver' in window){R.classList.add('cq-rum--arm');var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){setTimeout(function(){R.classList.remove('cq-rum--arm')},150);io.disconnect()}},{threshold:.35});io.observe(R.querySelector('.cq-rum__svg'))}})();</script>
+</section>
+</div>
+
+<section class="s" id="penge" aria-labelledby="penge-h"><div class="wrap">
+<p class="eyebrow">Op og ned</p>
+<h2 id="penge-h">Mest op, men omsætningen kommer ofte fra andet end raketter</h2>
+<div class="penge-g">
+<div>
+<p>Omkring tre femtedele af temaet ligger i det, der skal op: raketter, raketdele, satellitter og udstyr om bord. Temaets største selskab er SpaceX, som alene er under en fjerdedel af temaet.</p>
+<p>SpaceX blev grundlagt i 2002. Selskabet har tre dele: rumfart med raketterne Falcon og Starship og rumkapslen Dragon, forbindelse via Starlink og en AI-del. Det står i selskabets prospekt fra juni 2026. Et prospekt er et dokument med fakta om selskabet til nye investorer.</p>
+<p>SpaceX står under Opsendelse, men omkring 6 af hver 10 dollars i omsætning kom fra forbindelse via Starlink, ikke fra raketter. Omsætningen var 18.674 mio. USD i 2025. Det svarer i størrelse til ca. 4 % af Danmarks BNP. Starlink havde 8,9 mio. abonnenter ved udgangen af 2025, omtrent dobbelt så mange som året før.</p>
+<p>AI-delen kom til, da SpaceX overtog selskabet xAI i februar 2026. Tallene for 2025 er regnet, som om xAI og det sociale medie X havde hørt til SpaceX hele året. Over halvdelen af AI-delens omsætning i 2025 var annoncer på X. SpaceX laver derfor også noget, der hører til temaet <a href="../datacenter/index.html">Datacentre</a>. I fondens opdeling tælles selskabet kun med her.</p>
+<p>Rocket Lab er kendt for sine raketter, men omkring to tredjedele af selskabets omsætning i 2025 kom fra at bygge rumfartøjer og dele.</p>
+<figure class="foto"><img src="fra-billedstil/billeder/space-foto-marker-fra-rummet-bred.webp" alt="Runde marker i Kansas set fra en satellit." width="600" height="400" loading="lazy"><figcaption>Det, der kommer ned igen: marker i Kansas, set fra en satellit. Foto: NASA/USGS Landsat, offentligt domæne.</figcaption></figure>
+</div>
+<div id="s3-bjaelker">
+<div class="seg kort">
+<h3>SpaceX’ omsætning i 2025</h3>
+<p class="mute">18.674 mio. USD fordelt på selskabets tre dele</p>
+<div class="seg-bar" aria-hidden="true"><i style="width:21.9%"></i><i class="ned" style="width:61%"></i><i style="width:17.1%"></i></div>
+<ul class="seg-l"><li><span>Rumfart: opsendelser, Dragon og Starship</span><b>4.086 mio.</b></li><li class="ned"><span>Forbindelse: Starlink</span><b>11.387 mio.</b></li><li><span>AI</span><b>3.201 mio.</b></li></ul>
+</div>
+<div class="seg kort">
+<h3>Rocket Labs omsætning i 2025</h3>
+<p class="mute">601,8 mio. USD fordelt på selskabets to dele</p>
+<div class="seg-bar" aria-hidden="true"><i style="width:33.1%"></i><i class="ned" style="width:66.9%"></i></div>
+<ul class="seg-l"><li><span>Opsendelser</span><b>199,0 mio.</b></li><li class="ned"><span>Rumfartøjer og dele</span><b>402,8 mio.</b></li></ul>
+</div>
+<p class="note">Beløb i mio. USD fra <a href="https://www.sec.gov/Archives/edgar/data/1181412/000162828026042639/spaceexplorationtechnologi.htm" rel="noopener" target="_blank">SpaceX’ prospekt<span class="sr"> (åbner i nyt vindue)</span></a> og <a href="https://www.sec.gov/Archives/edgar/data/1819994/000181999426000013/rklb-20251231.htm" rel="noopener" target="_blank">Rocket Labs årsrapport<span class="sr"> (åbner i nyt vindue)</span></a>. Andele af temaet og af omsætningen er beregnet af NewDeal Invest. AI-delen omfatter også annoncer på X for 1.844 mio. USD. BNP: <a href="https://www.statbank.dk/NAN1" rel="noopener" target="_blank">Danmarks Statistik<span class="sr"> (åbner i nyt vindue)</span></a>.</p>
+</div>
+</div>
+</div></section>
+
+<section class="s" id="fod" aria-labelledby="fod-h"><div class="wrap">
+<p class="eyebrow">Naboerne</p>
+<h2 id="fod-h">Også med en fod i rumfart</h2>
+<p class="smal">Disse to selskaber hører først og fremmest til et andet tema, men laver også noget til rumfart. De tælles med under deres eget hovedtema, ikke her.</p>
+<ul class="fod alle" id="fod-liste"><li><b>Rolls-Royce Holdings</b><span>Hovedtema: Energi og elnet</span><i>0,25 %<span class="sr"> af fonden</span></i></li><li><b>AIRO Group Holdings</b><span>Hovedtema: Robotter &amp; fysisk AI</span><i>0,03 %<span class="sr"> af fonden</span></i></li></ul>
+<p class="note">SpaceX laver også noget, der hører til temaet <a href="../datacenter/index.html">Datacentre</a>. I fondens opdeling tælles selskabet kun med her.</p>
+</div></section>
+
+<section class="s" id="udefra" aria-labelledby="udefra-h"><div class="wrap">
+<p class="eyebrow">Set udefra</p>
+<h2 id="udefra-h">Marker, raketter og nyheder</h2>
+<p class="smal mute">Her er udvalgte opslag og videoer fra medier, rumorganisationer og selskaber. De er ikke fondens holdning.</p>
+<div class="udefra-g">
+<div>
+<figure class="vid"><div class="vid-ramme" data-yt="coxigfTyrdI" data-title="Video: It takes six days for ESA satellites to map every field in the world (DW News)"><button type="button" class="vid-play" aria-label="Afspil video fra DW News: Hvordan satellitter kortlægger verdens marker (5 min. 4 sek., på engelsk, fra 2022). Videoen hentes fra YouTube."><picture><source media="(max-width:599px)" srcset="fra-billedstil/billeder/space-plakat-coxigfTyrdI-mobil.webp"><img src="fra-billedstil/billeder/space-plakat-coxigfTyrdI-bred.webp" alt="" width="1280" height="720" loading="lazy"></picture><span class="vid-kilde" aria-hidden="true">DW News</span><span class="vid-ikon" aria-hidden="true"></span><span class="vid-tid" aria-hidden="true">5:04</span></button></div>
+<figcaption><b>Det, der kommer ned: DW News viser, hvordan satellitter kortlægger verdens marker, og hvordan data bruges i landbruget.</b> Indslaget er optaget ved ESA’s konference om satellitter, der holder øje med Jorden, Living Planet Symposium. Video fra 27.05.2022, 5:04, på engelsk: “It takes six days for ESA satellites to map every field in the world”. Kilde: DW News. <a href="https://www.youtube.com/watch?v=coxigfTyrdI" rel="noopener" target="_blank">Se på YouTube<span class="sr"> (åbner i nyt vindue)</span></a></figcaption></figure>
+<figure class="vid"><div class="vid-ramme" data-yt="1i5Mm7fDKQU" data-title="Video: What is a Satellite? (NASA)"><button type="button" class="vid-play" aria-label="Afspil video fra Learn With NASA: What is a Satellite? (2 min. 49 sek., på engelsk). Videoen hentes fra YouTube."><picture><source media="(max-width:599px)" srcset="fra-billedstil/billeder/space-plakat-1i5Mm7fDKQU-mobil.webp"><img src="fra-billedstil/billeder/space-plakat-1i5Mm7fDKQU-bred.webp" alt="" width="1280" height="720" loading="lazy"></picture><span class="vid-kilde" aria-hidden="true">NASA</span><span class="vid-ikon" aria-hidden="true"></span><span class="vid-tid" aria-hidden="true">2:49</span></button></div>
+<figcaption><b>Op: NASA’s undervisningskanal forklarer kort, hvad en satellit er.</b> Video fra 23.04.2026, 2:49, på engelsk. Kilde: Learn With NASA. <a href="https://www.youtube.com/watch?v=1i5Mm7fDKQU" rel="noopener" target="_blank">Se på YouTube<span class="sr"> (åbner i nyt vindue)</span></a></figcaption></figure>
+</div>
+<div>
+<ul class="xs" id="x-liste"><li class="xp kort" data-url="https://twitter.com/RocketLab/status/2113543139462189240"><div class="xp-top"><p class="xp-trin"><a href="#cq-rum" data-g="launch">Hører til: Op · Opsendelse</a></p><p class="xp-dato"><time datetime="2026-10-23">23.10.2026</time></p></div><p class="xp-fra"><b>Rocket Lab</b> <span>@RocketLab · på engelsk</span></p><p class="xp-forkl"><span class="xp-k">Selskabets eget opslag</span> <span class="xp-k">Kort fortalt</span> Rocket Lab oplyser, at selskabets raket Electron har sat alle tre HAWK-satellitter til kunden HawkEye 360 i kredsløb.</p><div class="xp-knapper"><button type="button" class="xp-vis" hidden>Vis opslaget<span class="sr"> fra Rocket Lab</span></button><a class="xp-link" href="https://twitter.com/RocketLab/status/2113543139462189240" rel="noopener" target="_blank">Se opslaget på X<span class="sr"> (åbner i nyt vindue)</span></a></div><div class="xp-embed" tabindex="-1" role="group" aria-label="Opslag fra Rocket Lab på X"></div></li><li class="xp kort x-mere" data-url="https://twitter.com/NASASpaceflight/status/2113907865060819060"><div class="xp-top"><p class="xp-trin"><a href="#cq-rum" data-g="launch">Hører til: Op · Opsendelse</a></p><p class="xp-dato"><time datetime="2026-10-24">24.10.2026</time></p></div><p class="xp-fra"><b>NASASpaceflight</b> <span>@NASASpaceflight · rumfartsmedie · på engelsk</span></p><p class="xp-forkl"><span class="xp-k">Kort fortalt</span> Ifølge NASASpaceflight har Booster 22, det nederste trin af en Starship-raket, forladt hallen, hvor den blev samlet, og skal køres ud til det område, hvor raketterne sendes op, for at blive testet.</p><div class="xp-knapper"><button type="button" class="xp-vis" hidden>Vis opslaget<span class="sr"> fra NASASpaceflight</span></button><a class="xp-link" href="https://twitter.com/NASASpaceflight/status/2113907865060819060" rel="noopener" target="_blank">Se opslaget på X<span class="sr"> (åbner i nyt vindue)</span></a></div><div class="xp-embed" tabindex="-1" role="group" aria-label="Opslag fra NASASpaceflight på X"></div></li><li class="xp kort x-mere" data-url="https://twitter.com/WSJ/status/2113014030235234780"><div class="xp-top"><p class="xp-trin"><a href="#cq-rum" data-g="launch">Hører til: SpaceX under Opsendelse</a></p><p class="xp-dato"><time datetime="2026-10-21">21.10.2026</time></p></div><p class="xp-fra"><b>The Wall Street Journal</b> <span>@WSJ · på engelsk</span></p><p class="xp-forkl"><span class="xp-k">Kort fortalt</span> Politikere fra begge partier i den amerikanske Kongres kræver en undersøgelse af Elon Musk, efter at The Wall Street Journal har beskrevet, at SpaceX-chefen begrænsede Ukraines adgang til Starlink.</p><div class="xp-knapper"><button type="button" class="xp-vis" hidden>Vis opslaget<span class="sr"> fra The Wall Street Journal</span></button><a class="xp-link" href="https://twitter.com/WSJ/status/2113014030235234780" rel="noopener" target="_blank">Se opslaget på X<span class="sr"> (åbner i nyt vindue)</span></a></div><div class="xp-embed" tabindex="-1" role="group" aria-label="Opslag fra The Wall Street Journal på X"></div></li><li class="xp kort x-mere" data-url="https://twitter.com/Reuters/status/2112418534802555247"><div class="xp-top"><p class="xp-trin"><a href="#cq-rum" data-dir="ud">Hører til: Ud</a></p><p class="xp-dato"><time datetime="2026-10-20">20.10.2026</time></p></div><p class="xp-fra"><b>Reuters</b> <span>@Reuters · på engelsk</span></p><p class="xp-forkl"><span class="xp-k">Kort fortalt</span> Ifølge Reuters har Japan sendt et ubemandet rumfartøj af sted mod Mars-månen Phobos. Reuters skriver, at missionen har til formål at blive den første, der henter prøver fra den lille måne tilbage til Jorden.</p><div class="xp-knapper"><button type="button" class="xp-vis" hidden>Vis opslaget<span class="sr"> fra Reuters</span></button><a class="xp-link" href="https://twitter.com/Reuters/status/2112418534802555247" rel="noopener" target="_blank">Se opslaget på X<span class="sr"> (åbner i nyt vindue)</span></a></div><div class="xp-embed" tabindex="-1" role="group" aria-label="Opslag fra Reuters på X"></div></li></ul>
+<button type="button" class="knap" id="x-mere" aria-expanded="false" aria-controls="x-liste" hidden>Vis 3 opslag mere</button>
+<p class="xnote">Opslagene er udvalgt af teamet bag NewDeal Invest. Afsenderne og de nævnte selskaber står ikke bag denne side, og opslagene er ikke fondens vurdering. NASASpaceflight er et uafhængigt medie og ikke NASA.</p>
+</div>
+</div>
+</div></section>
+
+<section class="s" id="risiko" aria-labelledby="risiko-h"><div class="wrap">
+<div class="risiko kort">
+<h2 id="risiko-h">Det skal man vide om temaet</h2>
+<ul id="risiko-liste"><li><b>Forsvar fylder.</b> <span class="eks">Seks af selskaberne beskriver sig selv som rum- og forsvarsselskaber. Deres kunder er ofte stater og militær, og den slags kontrakter kan ændre sig (selskabernes egne beskrivelser: <a href="https://www.sec.gov/Archives/edgar/data/2086587/000162828026019923/yorkspacesystemsinc10-k.htm" rel="noopener" target="_blank">York Space Systems<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1819810/000181981026000029/rdw-20251231.htm" rel="noopener" target="_blank">Redwire<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1860160/000119312526116309/fly-20251231.htm" rel="noopener" target="_blank">Firefly Aerospace<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1788060/000162828026016543/voyg-20251231.htm" rel="noopener" target="_blank">Voyager Technologies<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1750704/000162828026032207/hawkeye360424b4.htm" rel="noopener" target="_blank">HawkEye 360<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/2040127/000204012726000014/krmn-20251231.htm" rel="noopener" target="_blank">Karman Holdings<span class="sr"> (åbner i nyt vindue)</span></a>).</span></li><li><b>Få store selskaber.</b> <span class="eks">SpaceX er temaets største selskab med 1,38 % af fonden, under en fjerdedel af temaet. De fem største selskaber, SpaceX, Planet Labs, AST SpaceMobile, Intuitive Machines og MDA Space, er tilsammen 3,28 % af fonden, over halvdelen af temaet. Temaet afhænger derfor meget af, hvordan det går for få selskaber (afdelingen PMINDI pr. 16.10.2026).</span></li><li><b>Grænsetilfælde.</b> <span class="eks">Nogle selskaber er kun delvist rumfart. Ét laver mest dele til fly, ét sender i dag ikke raketter op, og temaets største selskab har også en AI-del (<a href="https://www.sec.gov/Archives/edgar/data/4281/000000428126000012/hwm-20251231.htm" rel="noopener" target="_blank">Howmet Aerospace, årsrapport 2025<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1947016/000106299326004648/forms1a.htm" rel="noopener" target="_blank">Starfighters Space, prospekt<span class="sr"> (åbner i nyt vindue)</span></a> og <a href="https://www.sec.gov/Archives/edgar/data/1181412/000162828026042639/spaceexplorationtechnologi.htm" rel="noopener" target="_blank">SpaceX, prospekt<span class="sr"> (åbner i nyt vindue)</span></a>).</span></li></ul>
+<button type="button" class="knap" id="risiko-eks" aria-expanded="false" aria-controls="risiko-liste" hidden>Se forklaring og kilder</button>
+<p class="note eks">Kilder: selskabernes egne årsrapporter og prospekter, linket ved hvert punkt.</p>
+</div>
+</div></section>
+
+<section class="s" id="videre" aria-labelledby="videre-h"><div class="wrap smal">
+<p class="eyebrow">Videre</p>
+<h2 id="videre-h">Det hænger sammen</h2>
+<p>Siden fortæller ikke om net og datacentre på Jorden, om materialerne i raketterne eller om droner og fly. Det gør andre af fondens temaer.</p>
+<ul class="cta">
+<li><a href="../datacenter/index.html">Datacentre <span>Net og datacentre på Jorden</span></a></li>
+<li><a href="../raastoffer/index.html">Råstoffer <span>Materialerne i raketterne</span></a></li>
+<li><a href="../fysisk-ai/index.html">Droner og fly hører til fondens tema Robotter &amp; fysisk AI.</a></li>
+</ul>
+</div></section>
+
+<section class="s kilder" id="kilder" aria-labelledby="kilder-h"><div class="wrap">
+<details class="kilder-d" id="kilder-d">
+<summary><h2 id="kilder-h">Kilder og kreditering</h2></summary>
+<h3>Tal</h3>
+<ul>
+<li>Andele: afdelingen PMINDI pr. 16.10.2026 (fondens data). Temaer og grupper: NewDeal Invests egen opdeling.</li>
+<li>SpaceX: <a href="https://www.sec.gov/Archives/edgar/data/1181412/000162828026042639/spaceexplorationtechnologi.htm" rel="noopener" target="_blank">prospekt af 12.06.2026<span class="sr"> (åbner i nyt vindue)</span></a> (dokumenttype 424B4 hos det amerikanske finanstilsyn SEC), regnskabsåret 2025.</li>
+<li>Opsendelser: <a href="https://www.faa.gov/data_research/aviation/aerospace_forecasts/2026_Commercial_Space_2.pdf" rel="noopener" target="_blank">FAA, Commercial Space, FY 2025 Results<span class="sr"> (åbner i nyt vindue)</span></a>. Kun opsendelser med licens fra FAA i finansåret 2025 (01.10.2024 til 30.09.2025), kun de faktiske tal.</li>
+<li>Rocket Lab: <a class="mal44" href="https://www.sec.gov/Archives/edgar/data/1819994/000181999426000013/rklb-20251231.htm" rel="noopener" target="_blank">årsrapport 2025<span class="sr"> (åbner i nyt vindue)</span></a>.</li>
+<li>Danmarks BNP 2025: <a href="https://www.statbank.dk/NAN1" rel="noopener" target="_blank">Danmarks Statistik, NAN1<span class="sr"> (åbner i nyt vindue)</span></a>.</li>
+<li>Hvad selskaberne laver: selskabernes egne beskrivelser i <a href="https://www.sec.gov/Archives/edgar/data/1181412/000162828026042639/spaceexplorationtechnologi.htm" rel="noopener" target="_blank">SpaceX (prospekt)<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1836833/000119312526119957/pl-20260131.htm" rel="noopener" target="_blank">Planet Labs (årsrapport)<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1780312/000178031226000006/asts-20251231.htm" rel="noopener" target="_blank">AST SpaceMobile (årsrapport)<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1844452/000162828026019865/lunr-20251231.htm" rel="noopener" target="_blank">Intuitive Machines (årsrapport)<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1857047/000110465926025809/tm266080d2_ex4-3.htm" rel="noopener" target="_blank">MDA Space (ledelsesberetning)<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1753539/000175353926000032/bksy-20251231.htm" rel="noopener" target="_blank">BlackSky Technology (årsrapport)<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1819994/000181999426000013/rklb-20251231.htm" rel="noopener" target="_blank">Rocket Lab (årsrapport)<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/2086587/000162828026019923/yorkspacesystemsinc10-k.htm" rel="noopener" target="_blank">York Space Systems (årsrapport)<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1947016/000106299326004648/forms1a.htm" rel="noopener" target="_blank">Starfighters Space (prospekt)<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1819810/000181981026000029/rdw-20251231.htm" rel="noopener" target="_blank">Redwire (årsrapport)<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1860160/000119312526116309/fly-20251231.htm" rel="noopener" target="_blank">Firefly Aerospace (årsrapport)<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1874315/000187431526000013/satl-20251231.htm" rel="noopener" target="_blank">Satellogic (årsrapport)<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1816017/000119312526116169/spir-20251231.htm" rel="noopener" target="_blank">Spire Global (årsrapport)<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1788060/000162828026016543/voyg-20251231.htm" rel="noopener" target="_blank">Voyager Technologies (årsrapport)<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/4281/000000428126000012/hwm-20251231.htm" rel="noopener" target="_blank">Howmet Aerospace (årsrapport)<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1750704/000162828026032207/hawkeye360424b4.htm" rel="noopener" target="_blank">HawkEye 360 (prospekt)<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/2040127/000204012726000014/krmn-20251231.htm" rel="noopener" target="_blank">Karman Holdings (årsrapport)<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1418819/000141881926000009/irdm-20251231.htm" rel="noopener" target="_blank">Iridium Communications (årsrapport)<span class="sr"> (åbner i nyt vindue)</span></a>.</li>
+</ul>
+<h3>Billeder, video og opslag</h3>
+<ul>
+<li>Tegninger, ikoner og videoplakater. Illustration: NewDeal Invest.</li>
+<li>Foto af marker i Kansas: NASA/USGS Landsat, <a href="https://commons.wikimedia.org/wiki/File:Landsat_sees_crops_in_Kansas.jpg" rel="noopener" target="_blank">“Landsat sees crops in Kansas”<span class="sr"> (åbner i nyt vindue)</span></a>, Wikimedia Commons, offentligt domæne (beskåret).</li>
+<li>Videoer: DW News (27.05.2022) og Learn With NASA (23.04.2026), YouTube. Videoerne hentes først, når du klikker.</li>
+<li>Opslag: Rocket Lab, NASASpaceflight, The Wall Street Journal og Reuters på X. Opslagene vises kun, hvis du klikker.</li>
+<li>Logoer tilhører de enkelte selskaber.</li>
+</ul>
+</details>
+</div></section>
+</main>
+<footer><div class="wrap">
+<p>Siden beskriver indholdet af fonden og er ikke investeringsrådgivning. Omtalen af et selskab er ikke en anbefaling.</p>
+<p>Risikoindikatoren i fondens Dokument med central information (KID) er 5 på en skala fra 1 til 7. Historiske afkast er ingen garanti for fremtidige afkast. Du kan tabe hele eller dele af det investerede beløb.</p>
+</div></footer>
+<script>(function(){
+document.documentElement.classList.add('js');
+var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var pr=document.querySelector('.prog');
+function prog(){var h=document.documentElement,m=h.scrollHeight-innerHeight;pr.style.setProperty('--p',m>0?(scrollY/m).toFixed(3):0)}
+addEventListener('scroll',prog,{passive:true});prog();
+/* X: ét opslag synligt, tre bag knap */
+var xl=document.getElementById('x-liste'),xm=document.getElementById('x-mere');
+if(xl&&xm){xm.hidden=false;xm.addEventListener('click',function(){var o=xm.getAttribute('aria-expanded')!=='true';xm.setAttribute('aria-expanded',String(o));xl.classList.toggle('alle',o);xm.textContent=o?'Vis færre':'Vis 3 opslag mere';if(o){var f=xl.querySelector('.x-mere');if(f){f.tabIndex=-1;f.focus({preventScroll:true})}}})}
+/* X-facade: intet hentes fra X før klik; widgets.js indlæses én gang */
+function twl(){if(window.twttr&&window.twttr.widgets)return;window.twttr=(function(d){var t=window.twttr||{};if(t._e)return t;t._e=[];t.ready=function(f){t._e.push(f)};var j=d.createElement('script');j.id='twitter-wjs';j.async=true;j.src='https://platform.twitter.com/widgets.js';j.charset='utf-8';d.body.appendChild(j);return t})(document)}
+[].forEach.call(document.querySelectorAll('.xp[data-url]'),function(li){var b=li.querySelector('.xp-vis'),em=li.querySelector('.xp-embed');b.hidden=false;
+ b.addEventListener('click',function(){if(em.firstChild)return;var q=document.createElement('blockquote');q.className='twitter-tweet';q.setAttribute('data-theme','dark');q.setAttribute('data-dnt','true');q.setAttribute('data-conversation','none');q.setAttribute('data-lang','da');
+ var a=document.createElement('a');a.href=li.dataset.url;a.textContent='Opslaget hentes fra X …';q.appendChild(a);em.appendChild(q);b.hidden=true;em.focus({preventScroll:true});
+ twl();window.twttr.ready(function(t){t.widgets.load(em)})})});
+/* retninger og "Hører til": gå til retningen eller åbn gruppen i tegningen */
+var R=document.getElementById('cq-rum');
+function gaaTil(e,a){if(!R)return;var b=null;
+ if(a.dataset.g){b=R.querySelector('.cq-rum__gb[data-g="'+a.dataset.g+'"]');if(b&&R.cqSetDx)R.cqSetDx(b,true)}
+ else if(a.dataset.dir){b=R.querySelector('.cq-rum__dir[data-dir="'+a.dataset.dir+'"] .cq-rum__gb')}
+ if(!b)return;e.preventDefault();var k=b.closest('.cq-rum__dir')||b;k.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});b.focus({preventScroll:true})}
+[].forEach.call(document.querySelectorAll('.ret a[data-dir],.xp-trin a[data-g],.xp-trin a[data-dir]'),function(a){a.addEventListener('click',function(e){gaaTil(e,a)})});
+/* risiko: forklaring og kilder bag knap */
+var rk=document.querySelector('.risiko'),rx=document.getElementById('risiko-eks');
+if(rk&&rx){rx.hidden=false;rx.addEventListener('click',function(){var o=rx.getAttribute('aria-expanded')!=='true';rx.setAttribute('aria-expanded',String(o));rk.classList.toggle('aaben',o);rx.textContent=o?'Skjul forklaring og kilder':'Se forklaring og kilder'})}
+/* kilder: åbn den foldede liste, når der linkes til den */
+var kd=document.getElementById('kilder-d');
+[].forEach.call(document.querySelectorAll('a[href="#kilder"]'),function(a){a.addEventListener('click',function(){if(kd)kd.open=true})});
+/* video-facade: YouTube (nocookie) hentes først ved klik */
+[].forEach.call(document.querySelectorAll('.vid-ramme[data-yt]'),function(r){var b=r.querySelector('.vid-play');b.addEventListener('click',function(){var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+r.dataset.yt+'?autoplay=1&rel=0&playsinline=1';f.title=r.dataset.title;f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.setAttribute('allowfullscreen','');f.referrerPolicy='strict-origin-when-cross-origin';r.replaceChild(f,b);f.focus()})});
+})();
+</script>
+</body>
+</html>

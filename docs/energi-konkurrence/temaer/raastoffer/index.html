@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<script>document.documentElement.classList.add('js')</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="img/ndi-logo.webp" type="image/webp">
+<title>Råstoffer: materialerne bag teknologien · NewDeal Invest</title>
+<meta name="description" content="Temaet Råstoffer i NewDeal Invests fond: hvilke materialer selskaberne bryder, forarbejder eller fremstiller, og hvor meget temaet fylder.">
+<link rel="preload" href="fonts/font-3.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/font-1.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:100 900;font-display:swap;src:url('fonts/font-1.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:100 900;font-display:swap;src:url('fonts/font-0.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:200 800;font-display:swap;src:url('fonts/font-3.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:200 800;font-display:swap;src:url('fonts/font-2.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}
+:root{--bg:#050a0f;--ink:#e6e8ed;--mute:#aebbc7;--a:#9f886a;--line:#313a4a;--card:#0b141c;--surf:#0f1a22;--fokus:#e4d6c2;--x:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10'%3E%3Cpath d='M0 5h10M5 0v10' stroke='%239f886a' stroke-opacity='.6'/%3E%3C/svg%3E")}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 'DM Sans',system-ui,sans-serif;overflow-x:clip}
+a{color:inherit}button{font:inherit;color:inherit;cursor:pointer}img{max-width:100%}
+h1,h2,h3{font-family:Manrope,'DM Sans',sans-serif;font-weight:500;line-height:1.18;letter-spacing:-.04em;margin:0}
+p{margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding:0 18px}
+.eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--a);font-weight:600;margin:0 0 12px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+a:focus-visible,button:focus-visible,summary:focus-visible,iframe:focus-visible{outline:3px solid var(--fokus);outline-offset:3px}
+.skip{position:absolute;left:12px;top:-60px;background:var(--a);color:var(--bg);padding:12px 16px;border-radius:5px;z-index:60;font-weight:600}
+.skip:focus{top:12px}
+.top{position:sticky;top:0;z-index:40;background:#000;border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px}
+.top img{width:130px;height:auto;display:block}
+.top span{font-size:11px;letter-spacing:.14em;color:var(--a);font-weight:600;text-transform:uppercase;text-align:right}
+.prog{position:absolute;left:0;bottom:-1px;height:2px;width:100%;background:var(--a);transform-origin:left;transform:scaleX(var(--p,0))}
+section{scroll-margin-top:64px}
+h2{font-size:clamp(28px,7vw,42px);max-width:22ch}
+.lead{font-size:18px;color:var(--mute);max-width:58ch}
+.die{position:relative;background:linear-gradient(rgba(49,58,74,.28) 1px,transparent 1px) 0 0/20px 20px,linear-gradient(90deg,rgba(49,58,74,.28) 1px,transparent 1px) 0 0/20px 20px,var(--card);border:1px solid var(--line);border-radius:12px}
+.die::after{content:"";position:absolute;inset:7px;pointer-events:none;background:var(--x) left top/10px 10px no-repeat,var(--x) right top/10px 10px no-repeat,var(--x) left bottom/10px 10px no-repeat,var(--x) right bottom/10px 10px no-repeat}
+/* video-facade */
+.vid{margin:.8rem 0 .9rem;max-width:560px}
+.vid-ramme{position:relative;aspect-ratio:16/9;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:#000}
+.vid-ramme iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vid-play{position:absolute;inset:0;width:100%;height:100%;padding:0;border:0;background:#000;display:block}
+.vid-play img{width:100%;height:100%;object-fit:cover;display:block;opacity:.8;filter:grayscale(.9) contrast(1.05)}
+.vid-play::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,10,15,0) 40%,rgba(5,10,15,.55));z-index:1}
+.vid-ikon{position:absolute;z-index:2;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:var(--ink);box-shadow:0 4px 24px rgba(0,0,0,.5)}
+.vid-ikon::after{content:"";position:absolute;left:26px;top:20px;border-style:solid;border-width:12px 0 12px 19px;border-color:transparent transparent transparent var(--bg)}
+.vid-play:hover .vid-ikon{background:#fff}
+.vid-play:focus-visible{outline:3px solid var(--fokus);outline-offset:-3px}
+.vid-tid{position:absolute;z-index:2;right:8px;bottom:8px;background:rgba(0,0,0,.8);color:#fff;font-size:13px;padding:2px 8px;border-radius:4px}
+.vid figcaption{font-size:13px;color:var(--mute);margin-top:8px;line-height:1.5}
+.vid figcaption b{color:var(--ink);font-weight:600;display:block}
+.vid figcaption a{display:inline-flex;align-items:center;min-height:44px;color:var(--a);font-weight:600}
+/* 5 X */
+.xs{padding:40px 0;border-top:1px solid var(--line)}
+.xs-liste{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:12px}
+.xp{padding:4px 14px 10px;min-width:0;overflow:hidden}
+.xp-delt{font-size:13px;color:var(--a);font-weight:600;padding-top:10px}
+.xp-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.xp-trin a{display:inline-flex;align-items:center;min-height:44px;color:var(--a);font-size:13px;font-weight:600;letter-spacing:.02em;text-underline-offset:3px}
+.xp-trin a::before{content:"";width:8px;height:8px;border-radius:2px;background:var(--a);margin-right:8px}
+.xp-dato{font-size:13px;color:var(--mute);font-variant-numeric:tabular-nums}
+.xp-fra{font-size:14px;color:var(--mute);margin-top:-6px}
+.xp-fra b{color:var(--ink);font-weight:600}
+.xp-k{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--a);font-weight:600;margin-right:4px}
+.xp-forkl{font-size:15px;line-height:1.5;margin-top:6px}
+.xp-ord{font-size:14px;color:var(--mute);margin-top:6px}
+.xp-knapper{display:flex;flex-wrap:wrap;align-items:center;gap:0 18px;margin-top:6px}
+.xp-vis{min-height:44px;padding:0 16px;border-radius:10px;border:1px solid var(--a);background:var(--surf);color:var(--ink);font:inherit;font-weight:600;cursor:pointer}
+.xp-vis:hover{background:#15242e}
+.xp-link{display:inline-flex;align-items:center;min-height:44px;color:var(--a);font-weight:600;text-underline-offset:3px}
+.xp-embed:empty{display:none}.xp-embed:focus{outline:none}.xp-embed:focus-visible{outline:3px solid var(--fokus);outline-offset:3px}
+.xp blockquote.twitter-tweet{margin:10px 0 4px;font-size:14px;color:var(--mute)}
+.xp .twitter-tweet-rendered,.xp iframe{max-width:100%!important;min-width:0!important}
+.xp .twitter-tweet-rendered{margin:10px 0 4px!important}
+.js .xs:not(.alle) .ekstra{display:none}
+.x-mere{margin-top:14px;min-height:44px;padding:0 18px;border-radius:10px;border:1px solid var(--a);background:transparent;color:var(--ink);font:inherit;font-weight:600;cursor:pointer}
+.x-mere:hover{background:var(--surf)}
+.xs-note{margin-top:18px;font-size:14px;color:var(--mute);max-width:70ch}
+/* 7 kilder */
+.kilder-s{padding:10px 0 20px;border-top:1px solid var(--line)}
+.kilder summary{min-height:56px;display:flex;align-items:center;justify-content:space-between;gap:12px;cursor:pointer;list-style:none;font-weight:600}
+.kilder summary::-webkit-details-marker{display:none}
+.kilder summary::after{content:"＋";color:var(--a)}.kilder[open] summary::after{content:"−"}
+.kilder ul{margin:0 0 18px;padding-left:18px;font-size:14px;color:var(--mute);display:grid;gap:14px;max-width:80ch}
+.kilder a{color:var(--a);text-underline-offset:3px;overflow-wrap:anywhere;display:inline-block;padding:13px 0;margin:-13px 0}
+.kilder p{font-size:14px;color:var(--mute);max-width:80ch;margin:0 0 14px}
+.kilder h3{font-size:16px;margin:18px 0 10px;letter-spacing:-.01em}
+.kid{display:inline-flex!important;align-items:center;min-height:44px;margin:6px 0 4px!important;padding:0!important;font-weight:600}
+footer{border-top:1px solid var(--line);padding:22px 0 64px;font-size:13px;color:var(--mute)}
+footer p{max-width:80ch}footer p+p{margin-top:8px}/* ---- Råstoffer: eget greb (jordlag, boreprøve, sekskanter) ---- */
+html{scroll-padding-top:72px}
+.hx{display:inline-block;width:10px;height:11px;margin-right:8px;vertical-align:-1px;background:var(--a);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+.s{padding:44px 0;position:relative}
+.note{font-size:13px;color:var(--mute);margin-top:10px;max-width:62ch}
+.jordlag{height:40px;background:url(fra-billedstil/grafik/raastoffer-moenster-jordlag.svg) 0 -8px/96px 96px repeat-x;border-top:1px solid var(--line);opacity:.9}
+/* hero */
+.hero{position:relative;padding:0 0 34px}
+.hero-bill{margin:0;position:relative;background:var(--card)}
+.hero-bill img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
+.hero-bill::after{content:"";position:absolute;inset:auto 0 0 0;height:45%;background:linear-gradient(180deg,rgba(5,10,15,0),var(--bg));pointer-events:none}
+.hero-tekst{position:relative;margin-top:-92px}
+.hero h1{font-size:clamp(40px,11vw,72px);letter-spacing:-.05em;line-height:1.02}
+.hero h1 span{display:block;font-size:clamp(20px,5.4vw,30px);letter-spacing:-.03em;color:var(--a);margin-top:10px;line-height:1.2}
+.hero .lead{margin-top:18px;color:var(--ink);font-size:18px}
+.hero-mer{margin-top:12px;color:var(--mute);max-width:58ch}
+.kred{font-size:12px;color:var(--mute);margin-top:14px}
+@media (min-width:900px){
+ .hero{padding:0;min-height:0}
+ .hero-bill img{aspect-ratio:2/1;max-height:640px}
+ .hero-bill::after{inset:0;height:auto;background:linear-gradient(90deg,var(--bg) 0,rgba(5,10,15,.88) 40%,rgba(5,10,15,0) 66%),linear-gradient(180deg,rgba(5,10,15,0) 70%,var(--bg))}
+ .hero-tekst{position:absolute;inset:0;margin:0 auto;display:flex;flex-direction:column;justify-content:center;padding-bottom:20px}
+ .hero-tekst>*{max-width:520px}
+}
+/* fonden */
+.fonden-g{display:grid;gap:30px;margin-top:20px}
+.tal{font-family:Manrope,sans-serif;font-weight:500;font-size:clamp(64px,18vw,112px);letter-spacing:-.05em;line-height:1;color:var(--a)}
+.tal small{font-size:.45em;margin-left:4px;letter-spacing:0}
+.tal-t{font-size:17px;margin-top:6px}
+.fakta{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:0;border-top:1px solid var(--line)}
+.fakta li{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:11px 0;border-bottom:1px solid var(--line);font-size:15px;color:var(--mute)}
+.fakta b{color:var(--ink);font-weight:600;text-align:right;font-variant-numeric:tabular-nums}
+.brod{margin-top:16px;color:var(--mute);max-width:58ch}
+.kerne{margin:0}
+.kerne figcaption{font-family:Manrope,sans-serif;font-size:18px;letter-spacing:-.02em;margin-bottom:14px}
+.kerne-l{list-style:none;margin:0;padding:0;position:relative}
+.kerne-l::before{content:"";position:absolute;left:0;top:-14px;width:72px;height:14px;border:1px solid var(--line);border-bottom:0;border-radius:36px 36px 0 0/12px 12px 0 0;background:#0f1a22}
+.kerne-l li{display:grid;grid-template-columns:72px minmax(0,1fr) auto;column-gap:14px;align-items:center;font-size:14px;color:var(--mute)}
+.kerne-l .lag{height:calc(var(--w)*5.2px);min-height:28px;border-left:1px solid var(--line);border-right:1px solid var(--line);background:repeating-linear-gradient(170deg,rgba(255,255,255,.035) 0 3px,transparent 3px 9px),#18222c;border-bottom:1px solid #05090d}
+.kerne-l li:nth-child(2) .lag{background-color:#1d2731}.kerne-l li:nth-child(3) .lag{background-color:#222b33}.kerne-l li:nth-child(4) .lag{background-color:#262e35}.kerne-l li:nth-child(5) .lag{background-color:#2b3137}
+.kerne-l .nv{border-bottom:1px dashed var(--line);padding-bottom:3px}
+.kerne-l b{color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap}
+.kerne-l .rs .lag{background:repeating-linear-gradient(160deg,rgba(5,10,15,.18) 0 2px,transparent 2px 7px),var(--a);border-color:var(--a);border-radius:0 0 4px 4px;box-shadow:0 0 0 3px rgba(159,136,106,.18)}
+.kerne-l .rs .nv,.kerne-l .rs b{color:var(--a);font-weight:700;border-color:var(--a)}
+@media (min-width:900px){.fonden-g{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:start}.kerne{padding-top:8px}}
+/* grundstofkortet i sidens ramme */
+.cq-wrap{border-top:1px solid var(--line)}
+#cq-rs{border-top:0}
+/* nærmere */
+.naermere-g{display:grid;gap:24px;margin-top:16px}
+.smal{color:var(--mute);max-width:58ch}
+.foto{margin:0}
+.foto img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:12px;border:1px solid var(--line);background:var(--card)}
+.foto figcaption{font-size:13px;color:var(--mute);margin-top:8px;line-height:1.5;max-width:60ch}
+.foto a{color:var(--a);display:inline-block;padding:14px 0;margin:-14px 0}
+.mere{margin-top:6px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.mere summary{min-height:52px;display:flex;align-items:center;justify-content:space-between;gap:12px;cursor:pointer;list-style:none;font-weight:600}
+.mere summary::-webkit-details-marker{display:none}
+.mere summary::after{content:"＋";color:var(--a)}.mere[open] summary::after{content:"−"}
+.mere-in{padding:2px 0 8px}.mere-in>p{color:var(--mute);font-size:15px;max-width:58ch}
+.selsk span{display:inline-block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--bg);background:var(--a);padding:3px 8px;border-radius:4px;margin-bottom:8px}
+.vid-kilde{position:absolute;z-index:2;left:8px;top:8px;background:rgba(0,0,0,.78);color:#fff;font-size:12px;font-weight:600;padding:2px 8px;border-radius:4px}
+.vid-play img{filter:sepia(.35) saturate(.7) contrast(1.05)}
+@media (min-width:900px){.naermere-g{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:48px;align-items:start}.foto{margin-top:6px}}
+/* set udefra */
+.udefra-g{display:grid;gap:8px;margin-top:12px}
+.lead-s{color:var(--mute);max-width:58ch}
+.xs .vid{margin-bottom:0}
+@media (min-width:900px){.udefra-g{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:start}
+ .xs-liste{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;align-items:start}
+ .xs-liste>.xp:last-child:nth-child(odd){grid-column:1/-1}}
+.xp{position:relative;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+.xp-trin a::before{border-radius:0;width:9px;height:10px;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+/* risiko */
+.risk{padding:20px 20px 16px;border-left:3px solid var(--a);max-width:780px}
+.risk h2{font-size:clamp(24px,6vw,32px);max-width:none}
+.risk ul{margin:14px 0 0;padding:0;list-style:none;display:grid;gap:14px}
+.risk li{color:var(--mute);max-width:66ch;padding-left:18px;position:relative}
+.risk li::before{content:"";position:absolute;left:0;top:.55em;width:8px;height:9px;background:var(--a);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+.risk li b{color:var(--ink);font-weight:600}
+.risk a{color:var(--a);text-underline-offset:3px;display:inline-block;padding:12px 0;margin:-12px 0}
+/* videre */
+.videre-g{display:grid;gap:22px;margin-top:16px;align-items:center}
+.graf{margin:0}.graf img{display:block;width:100%;max-width:520px;height:auto}
+.graf figcaption{font-size:12px;color:var(--mute);margin-top:6px}
+.videre-g p{color:var(--mute);max-width:58ch}
+.naboer{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:10px}
+.naboer a{display:flex;flex-direction:column;justify-content:center;min-height:56px;padding:10px 44px 10px 16px;border:1px solid var(--line);border-radius:12px;background:var(--card);text-decoration:none;font-weight:600;position:relative}
+.naboer a::after{content:"→";position:absolute;right:16px;top:50%;transform:translateY(-50%);color:var(--a)}
+.naboer a:hover{border-color:var(--a)}
+.naboer a span{font-weight:400;font-size:14px;color:var(--mute)}
+.naboer .nl{display:flex;flex-direction:column;justify-content:center;min-height:56px;padding:10px 16px;border:1px solid var(--line);border-radius:12px;background:var(--card);font-weight:600}.naboer .nl span{font-weight:400;font-size:14px;color:var(--mute)}
+.naboer .ingen{font-size:14px;color:var(--mute);padding:4px 2px}
+@media (min-width:900px){.s{padding:64px 0}.videre-g{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:48px}}
+@media (min-width:860px){.wrap{padding:0 28px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+.risk .k{display:block;font-size:13px;margin-top:4px}
+.risk .k a{display:inline;padding:14px 6px;margin:0 -6px}
+.note a{padding:14px 0}
+
+</style>
+</head>
+<body>
+<a class="skip" href="#indhold">Spring til indholdet</a>
+<header class="top"><div class="wrap"><img src="img/ndi-logo.webp" alt="NewDeal Invest" width="130" height="48"><span>Tema · Råstoffer</span></div><div class="prog" aria-hidden="true"></div></header>
+<main id="indhold" tabindex="-1">
+
+<section class="cq-hero-ra" aria-labelledby="h1">
+<style>.cq-hero-ra{--cq-hero-ra-bg:var(--bg,#050a0f);--cq-hero-ra-ink:var(--ink,#e6e8ed);--cq-hero-ra-mute:var(--mute,#aebbc7);--cq-hero-ra-line:var(--line,#313a4a);--cq-hero-ra-card:var(--card,#0b141c);--cq-hero-ra-a:#9f886a;
+position:relative;padding:24px 0 26px;border-bottom:1px solid var(--cq-hero-ra-line);color:var(--cq-hero-ra-ink);font-family:'DM Sans',system-ui,sans-serif}
+.cq-hero-ra *{box-sizing:border-box}
+.cq-hero-ra__in{max-width:1180px;margin:0 auto;padding:0 18px;display:grid;gap:18px}
+.cq-hero-ra h1{font-family:Manrope,'DM Sans',sans-serif;font-weight:500;font-size:clamp(40px,11vw,72px);letter-spacing:-.05em;line-height:1.02;margin:0}
+.cq-hero-ra h1 span{display:block;font-size:clamp(20px,5.4vw,30px);letter-spacing:-.03em;color:var(--cq-hero-ra-a);margin-top:8px;line-height:1.2}
+.cq-hero-ra__lead{font-size:18px;line-height:1.6;color:var(--cq-hero-ra-ink);max-width:54ch;margin:14px 0 0}
+.cq-hero-ra__fig{margin:0}
+.cq-hero-ra__snit{position:relative;overflow:hidden;border-radius:8px;border:1px solid var(--cq-hero-ra-line);background:var(--cq-hero-ra-card);aspect-ratio:2/1}
+.cq-hero-ra__snit img{position:absolute;display:block;max-width:none;height:auto;width:225%;left:-18.75%;top:-12.5%}
+.cq-hero-ra__skakt{position:absolute;left:32.8%;width:9.5%;top:10.6%;height:78.1%;border:1px solid var(--cq-hero-ra-line);border-radius:3px 3px 8px 8px;background:rgba(11,20,28,.94);overflow:hidden}
+.cq-hero-ra__fyld{position:absolute;left:0;right:0;bottom:0;height:25%;background:rgba(159,136,106,.28);border-left:3px solid var(--cq-hero-ra-a);border-top:1px solid var(--cq-hero-ra-a);transform-origin:50% 100%}
+.cq-hero-ra__kred{font-size:12px;line-height:1.5;color:var(--cq-hero-ra-mute);margin:8px 0 0}
+@media (min-width:900px){
+ .cq-hero-ra{padding:56px 0 64px}
+ .cq-hero-ra__in{padding:0 28px;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:48px;align-items:center}
+ .cq-hero-ra__lead{margin-top:18px}
+ .cq-hero-ra__snit{aspect-ratio:5/4}
+ .cq-hero-ra__snit img{position:static;width:100%;height:100%;object-fit:cover;object-position:62% 50%}
+ .cq-hero-ra__skakt{left:38%;width:72px;top:-1px;height:65%;border-top:0;border-radius:0 0 10px 10px}
+ .cq-hero-ra__fyld{height:22%;background:rgba(159,136,106,.16);border-left-width:5px}
+}
+@keyframes cq-hero-ra-fyld{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@media (prefers-reduced-motion:no-preference){
+ .cq-hero-ra__fyld{animation:cq-hero-ra-fyld .7s cubic-bezier(.2,.7,.2,1) .25s both}
+}
+@media (prefers-reduced-motion:reduce){
+ .cq-hero-ra__fyld{animation:none;transform:none}
+}</style>
+<div class="cq-hero-ra__in">
+<div class="cq-hero-ra__tekst">
+<h1 id="h1">Råstoffer<span>Materialerne bag teknologien</span></h1>
+<p class="cq-hero-ra__lead">En magnet, et kabel og et batteri begynder med et materiale fra jorden eller fra en fabrik. Turen går ned til materialerne og til de selskaber i fonden, der bryder, forarbejder eller fremstiller dem. Nogle producerer allerede, andre er stadig projekter.</p>
+</div>
+<figure class="cq-hero-ra__fig">
+<div class="cq-hero-ra__snit">
+<picture><source media="(max-width:899px)" srcset="fra-billedstil/billeder/raastoffer-hero-jordsnit-bred.webp"><img src="fra-billedstil/billeder/raastoffer-hero-jordsnit-mobil.webp" alt="Snit gennem jorden med lag og en lysende åre af krystaller" width="720" height="900" fetchpriority="high"></picture>
+<span class="cq-hero-ra__skakt" aria-hidden="true"><span class="cq-hero-ra__fyld"></span></span>
+</div>
+<figcaption class="cq-hero-ra__kred">Illustration: NewDeal Invest.</figcaption>
+</figure>
+</div>
+</section>
+
+<div class="jordlag" aria-hidden="true"></div>
+
+<section class="s" id="fonden" aria-labelledby="fonden-h"><div class="wrap">
+<p class="eyebrow"><span class="hx" aria-hidden="true"></span>Fonden</p>
+<h2 id="fonden-h">Knap 7 kroner af hver 100</h2>
+<div class="fonden-g">
+<div class="stor">
+<p class="tal">6,69<small>%</small></p>
+<p class="tal-t">af fonden ligger i temaet Råstoffer.</p>
+<ul class="fakta"><li><span>Selskaber</span><b>36 af fondens 373</b></li><li><span>Plads blandt fondens 12 temaer</span><b>Nr. 6</b></li><li><span>Største selskab i temaet</span><b>Ero Copper 0,53 % af fonden</b></li></ul>
+<p class="hero-mer">Siden viser, hvilke materialer det er, og om selskaberne allerede producerer eller stadig er et projekt. Den kan ikke vise, hvor meget af materialerne der ender i kunstig intelligens, for det kan ikke opgøres.</p>
+<p class="note">Andele af hele fonden, afdelingen PMINDI (NewDeal Invest klasse n, den udloddende andelsklasse, der udbetaler udbytte) pr. 16.10.2026.</p>
+<p class="brod">Temaerne er NewDeal Invests egen opdeling af fondens selskaber. Pengene er fordelt på mange små andele. De fem største selskaber fylder tilsammen 1,97 % af fonden, under en tredjedel af temaet.</p>
+</div>
+<figure class="kerne">
+<figcaption id="kerne-t">Fondens seks største temaer, som lag i en boreprøve</figcaption>
+<ol class="kerne-l" aria-labelledby="kerne-t"><li style="--w:24.31"><span class="lag" aria-hidden="true"></span><span class="nv">Chips og halvledere</span><b>24,31 %</b></li><li style="--w:16.96"><span class="lag" aria-hidden="true"></span><span class="nv">Energi og elnet</span><b>16,96 %</b></li><li style="--w:12.59"><span class="lag" aria-hidden="true"></span><span class="nv">Datacentre</span><b>12,59 %</b></li><li style="--w:10.56"><span class="lag" aria-hidden="true"></span><span class="nv">Platformsøkonomi</span><b>10,56 %</b></li><li style="--w:7.23"><span class="lag" aria-hidden="true"></span><span class="nv">Robotter &amp; fysisk AI</span><b>7,23 %</b></li><li class=rs style="--w:6.69"><span class="lag" aria-hidden="true"></span><span class="nv">Råstoffer</span><b>6,69 %</b></li></ol>
+<p class="note">Andel af hele fonden, afdelingen PMINDI pr. 16.10.2026. Fondens seks andre temaer er mindre.</p>
+</figure>
+</div>
+</div></section>
+
+<div class="wrap cq-wrap">
+<section class="cq-rs" id="cq-rs" aria-labelledby="cq-rs-h">
+<style>.cq-rs{--cq-rs-ink:var(--ink,#e6e8ed);--cq-rs-mute:var(--mute,#aebbc7);--cq-rs-line:var(--line,#313a4a);--cq-rs-surf:var(--surf,#0f1a22);--cq-rs-card:var(--card,#0b141c);--cq-rs-focus:var(--fokus,#cde0e2);
+--cq-rs-a:#9f886a;--cq-rs-pick:#1f1d1c;color:var(--cq-rs-ink);font-family:'DM Sans',system-ui,sans-serif;padding:clamp(1.5rem,6vw,4.5rem) 0;scroll-margin-top:4.5rem;border-top:1px solid var(--cq-rs-line)}
+.cq-rs *{box-sizing:border-box}
+.cq-rs__sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.cq-rs__cos{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:6px}
+.cq-rs--js .cq-rs__cos:not(.cq-rs--open)>li:nth-child(n+6){display:none}
+.cq-rs__co{width:100%;min-height:48px;display:grid;grid-template-columns:28px minmax(0,1fr) auto;align-items:center;gap:8px;padding:6px 9px;border:1px solid var(--cq-rs-line);border-radius:9px;background:var(--cq-rs-surf);color:var(--cq-rs-ink);font:inherit;font-size:.88rem;line-height:1.25;text-align:left;cursor:pointer}
+.cq-rs__co:hover,.cq-rs__co[aria-pressed=true]{border-color:var(--cq-rs-a)}
+.cq-rs__co[aria-pressed=true]{background:var(--cq-rs-pick)}
+.cq-rs__lg{width:28px;height:28px;border-radius:6px;background:#fff;display:grid;place-items:center;overflow:hidden;flex:0 0 auto}
+.cq-rs__lg img{width:24px;height:24px;object-fit:contain;display:block}
+.cq-rs__ini{font:700 .75rem/1 Manrope,sans-serif;color:#050a0f}
+.cq-rs__nm{min-width:0;overflow-wrap:anywhere}
+.cq-rs__cw{font-variant-numeric:tabular-nums;color:var(--cq-rs-mute);font-size:.82rem;white-space:nowrap}
+.cq-rs__all{margin-top:6px;min-height:44px;min-width:44px;padding:0 14px;border-radius:9px;border:1px solid var(--cq-rs-line);background:transparent;color:var(--cq-rs-ink);font:inherit;font-size:.9rem;cursor:pointer}
+.cq-rs__all:hover{border-color:var(--cq-rs-a)}
+.cq-rs__info{min-height:4.6rem;margin:8px 0;padding:.6rem .75rem;border-radius:10px;background:var(--cq-rs-surf);border:1px solid var(--cq-rs-line);display:flex;gap:.7rem;align-items:flex-start;font-size:.9rem}
+.cq-rs__hint{margin:0;color:var(--cq-rs-mute);align-self:center}
+.cq-rs__ih{margin:0 0 .1rem;font-weight:700}
+.cq-rs__ih span{font-weight:500;color:var(--cq-rs-mute);margin-left:.35rem;font-variant-numeric:tabular-nums}
+.cq-rs__ig{margin:0 0 .15rem;font-size:.76rem;color:var(--cq-rs-mute);text-transform:uppercase;letter-spacing:.05em}
+.cq-rs__id{margin:0;line-height:1.45}
+.cq-rs__ia{margin:.25rem 0 0;font-size:.82rem;color:var(--cq-rs-mute)}
+.cq-rs button:focus-visible,.cq-rs a:focus-visible{outline:3px solid var(--cq-rs-focus);outline-offset:2px}
+
+.cq-rs__in{max-width:1180px;margin:0 auto}
+.cq-rs__hx{display:inline-block;width:10px;height:11px;margin-right:8px;vertical-align:-1px;background:var(--cq-rs-a);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+.cq-rs__kick{margin:0 0 12px;color:var(--cq-rs-a);text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:600}
+.cq-rs__h2{font-family:Manrope,'DM Sans',sans-serif;font-weight:500;font-size:clamp(1.65rem,4.6vw,2.5rem);line-height:1.14;letter-spacing:-.03em;margin:0}
+.cq-rs__date{margin:.45rem 0 0;font-size:.84rem;font-weight:600}
+.cq-rs__date span{display:inline-block;width:.6rem;height:.6rem;border-radius:2px;background:var(--cq-rs-a);margin-right:.45rem}
+.cq-rs__lead{max-width:46rem;color:var(--cq-rs-mute);font-size:1rem;line-height:1.55;margin:.8rem 0 .7rem}
+.cq-rs__key{display:flex;flex-wrap:wrap;gap:.3rem 1.1rem;margin:0 0 .9rem;font-size:.84rem;color:var(--cq-rs-mute)}
+.cq-rs__key span{display:inline-flex;align-items:center;gap:.4rem}
+.cq-rs__kf{width:14px;height:14px;border-radius:2px;border:1px solid var(--cq-rs-line);border-left:0;background:linear-gradient(to top,rgba(159,136,106,.16) 0 55%,#9f886a 55% calc(55% + 2px),var(--cq-rs-card) 0);box-shadow:inset 3px 0 0 var(--cq-rs-a)}
+.cq-rs__tiles{list-style:none;margin:0;padding:0;display:grid;gap:8px;grid-template-columns:repeat(2,minmax(0,1fr))}
+.cq-rs__tile{position:relative;overflow:hidden;width:100%;min-height:168px;display:grid;grid-template-columns:1fr auto;grid-template-rows:auto 1fr auto auto auto;align-items:start;gap:0 .4rem;padding:.55rem .65rem .6rem .85rem;border:1px solid var(--cq-rs-line);border-radius:10px;background:var(--cq-rs-card);color:var(--cq-rs-ink);font:inherit;text-align:left;cursor:pointer;isolation:isolate}
+.cq-rs__tile:hover{border-color:var(--cq-rs-a)}
+.cq-rs__tile[aria-expanded=true]{border-color:var(--cq-rs-a);box-shadow:inset 0 0 0 1px var(--cq-rs-a)}
+.cq-rs__fill{position:absolute;left:0;right:0;bottom:0;height:calc(var(--f)*100%);background:rgba(159,136,106,.16);border-left:5px solid var(--cq-rs-a);border-top:2px solid #9f886a;z-index:-1;transform-origin:bottom}
+.cq-rs__tn{font:600 .95rem Manrope,sans-serif;font-variant-numeric:tabular-nums}
+.cq-rs__tw{font:600 .95rem Manrope,sans-serif;font-variant-numeric:tabular-nums;text-align:right}
+.cq-rs__sym{grid-column:1/-1;align-self:center;display:flex;gap:.3em;font:600 2.6rem/1 Manrope,sans-serif;letter-spacing:-.02em;margin:.35rem 0 .2rem}
+.cq-rs__sym--2{font-size:2.2rem}.cq-rs__sym--3{font-size:1.75rem}
+.cq-rs__nosym{display:block;width:2.4rem;height:2.4rem;border:2px dashed var(--cq-rs-mute);border-radius:6px}
+.cq-rs__tl{grid-column:1/-1;font-size:.84rem;line-height:1.25;font-weight:600}
+.cq-rs__tic{width:1.1em;height:1.1em;vertical-align:-.2em;margin-right:.3em;color:var(--cq-rs-a)}
+.cq-rs__pic{flex:none;width:2.2rem;height:2.2rem;color:var(--cq-rs-a)}
+.cq-rs__tnote{grid-column:1/-1;font-size:.76rem;color:var(--cq-rs-mute);line-height:1.3}
+.cq-rs__dots{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:4px;margin-top:.45rem}
+.cq-rs__dot{width:11px;height:11px;border-radius:50%;background:var(--cq-rs-ink);border:2px solid var(--cq-rs-ink);display:block}
+.cq-rs__dot--p{background:transparent}
+.cq-rs__dot.cq-rs__dot--u,.cq-rs__st.cq-rs__st--u,.cq-rs__kd.cq-rs__kd--u{background:transparent;border-style:dashed}
+.cq-rs__kd{width:11px;height:11px;border-radius:50%;background:var(--cq-rs-ink);border:2px solid var(--cq-rs-ink)}.cq-rs__kd--p{background:transparent}
+.cq-rs__slot{grid-column:1/-1;min-width:0}.cq-rs__slot>.cq-rs__panel{margin:2px 0 6px}
+.cq-rs__h3:focus{outline:none}.cq-rs__h3:focus-visible{outline:3px solid var(--cq-rs-focus);outline-offset:3px}
+.cq-rs__panel{margin-top:10px;border:1px solid var(--cq-rs-a);border-radius:12px;background:var(--cq-rs-card);padding:.8rem .85rem .4rem;scroll-margin-top:5rem}
+.cq-rs__ph{display:flex;align-items:center;gap:.8rem}
+.cq-rs__psym{min-width:3rem;height:3rem;padding:0 .4rem;display:grid;place-items:center;border-radius:8px;background:rgba(159,136,106,.2);border-top:2px solid var(--cq-rs-a);font:600 1.2rem Manrope,sans-serif;white-space:nowrap}
+.cq-rs__ph>div{flex:1;min-width:0}
+.cq-rs__h3{margin:0;font:500 1.1rem/1.25 Manrope,sans-serif}
+.cq-rs__pm{margin:.15rem 0 0;font-size:.84rem;color:var(--cq-rs-mute)}
+.cq-rs__close{min-height:44px;min-width:44px;padding:0 12px;border-radius:9px;border:1px solid var(--cq-rs-line);background:transparent;color:var(--cq-rs-ink);font:inherit;font-size:.88rem;cursor:pointer}
+.cq-rs__close:hover{border-color:var(--cq-rs-a)}
+.cq-rs__ptx{margin:.7rem 0 .3rem;font-size:.92rem;line-height:1.5;max-width:52rem}
+.cq-rs__pex{margin:0 0 .6rem;font-size:.86rem;line-height:1.45;color:var(--cq-rs-mute);max-width:52rem}
+.cq-rs__ptx+.cq-rs__cos{margin-top:.6rem}
+.cq-rs__cos{grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
+.cq-rs__st{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--cq-rs-ink);border:2px solid var(--cq-rs-ink);margin-right:.4rem;vertical-align:.05em}
+.cq-rs__st--p{background:transparent}
+.cq-rs__fact{margin:1rem 0 0;font-size:.95rem;line-height:1.5;max-width:50rem}
+.cq-rs__fact b{font-weight:600}
+.cq-rs__known{margin:.5rem 0 0;font-size:.9rem;line-height:1.5;color:var(--cq-rs-mute);max-width:50rem}
+.cq-rs__known b{color:var(--cq-rs-ink);font-weight:600}
+.cq-rs__note{margin:.5rem 0 0;font-size:.84rem;line-height:1.5;color:var(--cq-rs-mute);max-width:50rem}
+.cq-rs--js .cq-rs__fill{transition:transform .7s cubic-bezier(.3,.7,.2,1) calc(var(--i)*60ms)}
+.cq-rs--js .cq-rs__dot{transition:opacity .35s ease calc(var(--d)*60ms + 200ms)}
+.cq-rs--arm .cq-rs__fill{transform:scaleY(0)}.cq-rs--arm .cq-rs__dot{opacity:0}
+@media (min-width:640px){.cq-rs__tiles{grid-template-columns:repeat(3,minmax(0,1fr))}.cq-rs__tile{min-height:180px}}
+@media (min-width:1080px){.cq-rs__tiles{grid-template-columns:repeat(6,minmax(0,1fr))}.cq-rs__tile{min-height:200px}.cq-rs__sym{font-size:3rem}.cq-rs__sym--2{font-size:2.5rem}.cq-rs__sym--3{font-size:2rem}}
+@media (prefers-reduced-motion:reduce){.cq-rs--js .cq-rs__fill,.cq-rs--js .cq-rs__dot{transition:none}.cq-rs--arm .cq-rs__fill{transform:none}.cq-rs--arm .cq-rs__dot{opacity:1}}
+</style>
+<div class="cq-rs__in">
+<p class="cq-rs__kick"><span class="cq-rs__hx" aria-hidden="true"></span>Grundstofkortet</p>
+<h2 class="cq-rs__h2" id="cq-rs-h">Hvad teknologien er lavet af</h2>
+<p class="cq-rs__date"><span aria-hidden="true"></span>Andel af hele fonden, afdelingen PMINDI pr. 16.10.2026</p>
+<p class="cq-rs__lead">De 36 selskaber fordeler sig på seks materialer, sat op som felterne i det periodiske system. Tallet øverst til venstre er antal selskaber. Fyldet nedefra viser andelen af fonden. Tryk på et felt for at se selskaberne.</p>
+<p class="cq-rs__key" aria-hidden="true"><span><i class="cq-rs__kd"></i>i drift</span><span><i class="cq-rs__kd cq-rs__kd--p"></i>projekt, endnu ikke i produktion</span><span><i class="cq-rs__kd cq-rs__kd--u"></i>ejerandel i et andet selskab</span><span><i class="cq-rs__kf"></i>andel af fonden</span></p>
+<ul class="cq-rs__tiles"><li class="cq-rs__ti" style="--f:1.0000;--i:0"><button type="button" class="cq-rs__dx cq-rs__tile" aria-expanded="false" aria-controls="cq-rs-p-rare-earths" data-grp="rs">
+<span class="cq-rs__fill" aria-hidden="true"></span><span class="cq-rs__tn" aria-hidden="true">7</span><span class="cq-rs__tw" aria-hidden="true">1,45 %</span>
+<span class="cq-rs__sym" aria-hidden="true"><span>Nd</span></span>
+<span class="cq-rs__tl" aria-hidden="true"><svg class="cq-rs__tic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5.25 19.25V11a6.75 6.75 0 0 1 13.5 0v8.25h-4.5V11a2.25 2.25 0 0 0-4.5 0v8.25z"/><path d="M5.25 16.25h4.5M14.25 16.25h4.5" stroke-width="1"/><path d="M2.75 4.75l1.5 1.25M21.25 4.75l-1.5 1.25M12 1.75v1.5" stroke-width="1"/></svg>Sjældne jordarter og magneter</span><span class="cq-rs__tnote" aria-hidden="true">fx neodym</span>
+<span class="cq-rs__dots" aria-hidden="true"><i class="cq-rs__dot" style="--d:0"></i><i class="cq-rs__dot" style="--d:1"></i><i class="cq-rs__dot cq-rs__dot--p" style="--d:2"></i><i class="cq-rs__dot" style="--d:3"></i><i class="cq-rs__dot cq-rs__dot--u" style="--d:4"></i><i class="cq-rs__dot cq-rs__dot--p" style="--d:5"></i><i class="cq-rs__dot" style="--d:6"></i></span>
+<span class="cq-rs__sr">Sjældne jordarter og magneter, symbol Nd. 7 selskaber: 4 i drift, 2 projekter og 1 med en ejerandel i et andet selskab. 1,45 % af fonden. Vis selskaberne</span></button></li><li class="cq-rs__ti" style="--f:0.9310;--i:1"><button type="button" class="cq-rs__dx cq-rs__tile" aria-expanded="false" aria-controls="cq-rs-p-copper" data-grp="rs">
+<span class="cq-rs__fill" aria-hidden="true"></span><span class="cq-rs__tn" aria-hidden="true">8</span><span class="cq-rs__tw" aria-hidden="true">1,35 %</span>
+<span class="cq-rs__sym" aria-hidden="true"><span>Cu</span></span>
+<span class="cq-rs__tl" aria-hidden="true"><svg class="cq-rs__tic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.75 12H6M18 12h3.25"/><ellipse cx="7.0" cy="12" rx="1.6" ry="6.5"/><ellipse cx="9.5" cy="12" rx="1.6" ry="6.5"/><ellipse cx="12.0" cy="12" rx="1.6" ry="6.5"/><ellipse cx="14.5" cy="12" rx="1.6" ry="6.5"/><ellipse cx="17.0" cy="12" rx="1.6" ry="6.5"/></svg>Kobber</span>
+<span class="cq-rs__dots" aria-hidden="true"><i class="cq-rs__dot" style="--d:0"></i><i class="cq-rs__dot" style="--d:1"></i><i class="cq-rs__dot" style="--d:2"></i><i class="cq-rs__dot" style="--d:3"></i><i class="cq-rs__dot" style="--d:4"></i><i class="cq-rs__dot cq-rs__dot--p" style="--d:5"></i><i class="cq-rs__dot cq-rs__dot--p" style="--d:6"></i><i class="cq-rs__dot cq-rs__dot--p" style="--d:7"></i></span>
+<span class="cq-rs__sr">Kobber, symbol Cu. 8 selskaber, 5 i drift, 3 projekter. 1,35 % af fonden. Vis selskaberne</span></button></li><li class="cq-rs__ti" style="--f:0.8414;--i:2"><button type="button" class="cq-rs__dx cq-rs__tile" aria-expanded="false" aria-controls="cq-rs-p-chemicals" data-grp="rs">
+<span class="cq-rs__fill" aria-hidden="true"></span><span class="cq-rs__tn" aria-hidden="true">5</span><span class="cq-rs__tw" aria-hidden="true">1,22 %</span>
+<span class="cq-rs__sym" aria-hidden="true"><span class="cq-rs__nosym"></span></span>
+<span class="cq-rs__tl" aria-hidden="true"><svg class="cq-rs__tic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.25 2.75h5.5M10 2.75v6.1L4.6 18.2a2 2 0 0 0 1.75 3.05h11.3a2 2 0 0 0 1.75-3.05L14 8.85V2.75"/><path d="M6.9 14.5h10.2" stroke-width="1"/><circle cx="10.5" cy="17.5" r=".9" fill="currentColor" stroke="none"/><circle cx="13.75" cy="18.75" r=".7" fill="currentColor" stroke="none"/></svg>Kemi og specialmaterialer</span><span class="cq-rs__tnote" aria-hidden="true">intet symbol</span>
+<span class="cq-rs__dots" aria-hidden="true"><i class="cq-rs__dot" style="--d:0"></i><i class="cq-rs__dot" style="--d:1"></i><i class="cq-rs__dot" style="--d:2"></i><i class="cq-rs__dot" style="--d:3"></i><i class="cq-rs__dot" style="--d:4"></i></span>
+<span class="cq-rs__sr">Kemi og specialmaterialer, intet grundstofsymbol. 5 selskaber, 5 i drift. 1,22 % af fonden. Vis selskaberne</span></button></li><li class="cq-rs__ti" style="--f:0.7655;--i:3"><button type="button" class="cq-rs__dx cq-rs__tile" aria-expanded="false" aria-controls="cq-rs-p-precious" data-grp="rs">
+<span class="cq-rs__fill" aria-hidden="true"></span><span class="cq-rs__tn" aria-hidden="true">6</span><span class="cq-rs__tw" aria-hidden="true">1,11 %</span>
+<span class="cq-rs__sym cq-rs__sym--2" aria-hidden="true"><span>Au</span><span>Ag</span></span>
+<span class="cq-rs__tl" aria-hidden="true"><svg class="cq-rs__tic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 19.25l2-5.5h6l2 5.5zM10.5 19.25l2-5.5h6l2 5.5z"/><path d="M7 13.75l2-5.5h6l2 5.5" /><path d="M19.5 3.25v2.5M18.25 4.5h2.5" stroke-width="1"/></svg>Guld og sølv</span>
+<span class="cq-rs__dots" aria-hidden="true"><i class="cq-rs__dot" style="--d:0"></i><i class="cq-rs__dot" style="--d:1"></i><i class="cq-rs__dot" style="--d:2"></i><i class="cq-rs__dot" style="--d:3"></i><i class="cq-rs__dot" style="--d:4"></i><i class="cq-rs__dot" style="--d:5"></i></span>
+<span class="cq-rs__sr">Guld og sølv, symbol Au Ag. 6 selskaber, 6 i drift. 1,11 % af fonden. Vis selskaberne</span></button></li><li class="cq-rs__ti" style="--f:0.5517;--i:4"><button type="button" class="cq-rs__dx cq-rs__tile" aria-expanded="false" aria-controls="cq-rs-p-critical-minerals" data-grp="rs">
+<span class="cq-rs__fill" aria-hidden="true"></span><span class="cq-rs__tn" aria-hidden="true">4</span><span class="cq-rs__tw" aria-hidden="true">0,80 %</span>
+<span class="cq-rs__sym cq-rs__sym--3" aria-hidden="true"><span>Sb</span><span>Nb</span><span>W</span></span>
+<span class="cq-rs__tl" aria-hidden="true"><svg class="cq-rs__tic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 21.25L5.25 18V9.5L8.5 4l3.25 5.5V18z"/><path d="M5.25 9.5h6.5" stroke-width="1"/><path d="M15.5 21.25l-2.75-2.5v-6.5l2.75-4 2.75 4v6.5z"/><path d="M12.75 12.25h5.5" stroke-width="1"/><path d="M2.75 21.25h18.5"/></svg>Andre kritiske mineraler</span><span class="cq-rs__tnote" aria-hidden="true">antimon, niobium, wolfram</span>
+<span class="cq-rs__dots" aria-hidden="true"><i class="cq-rs__dot" style="--d:0"></i><i class="cq-rs__dot cq-rs__dot--p" style="--d:1"></i><i class="cq-rs__dot" style="--d:2"></i><i class="cq-rs__dot cq-rs__dot--p" style="--d:3"></i></span>
+<span class="cq-rs__sr">Andre kritiske mineraler, symbol Sb Nb W. 4 selskaber, 2 i drift, 2 projekter. 0,80 % af fonden. Vis selskaberne</span></button></li><li class="cq-rs__ti" style="--f:0.5241;--i:5"><button type="button" class="cq-rs__dx cq-rs__tile" aria-expanded="false" aria-controls="cq-rs-p-battery-metals" data-grp="rs">
+<span class="cq-rs__fill" aria-hidden="true"></span><span class="cq-rs__tn" aria-hidden="true">6</span><span class="cq-rs__tw" aria-hidden="true">0,76 %</span>
+<span class="cq-rs__sym" aria-hidden="true"><span>Li</span></span>
+<span class="cq-rs__tl" aria-hidden="true"><svg class="cq-rs__tic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="6.75" y="4.75" width="10.5" height="16.5" rx="2"/><path d="M10 2.75h4v2h-4z"/><path d="M9.25 15h5.5M9.25 18h5.5" stroke-width="1"/><path d="M12.5 7.75l-2 3.5h3l-2 3" stroke-width="1"/></svg>Lithium og batterimetaller</span>
+<span class="cq-rs__dots" aria-hidden="true"><i class="cq-rs__dot" style="--d:0"></i><i class="cq-rs__dot" style="--d:1"></i><i class="cq-rs__dot" style="--d:2"></i><i class="cq-rs__dot cq-rs__dot--p" style="--d:3"></i><i class="cq-rs__dot cq-rs__dot--p" style="--d:4"></i><i class="cq-rs__dot cq-rs__dot--p" style="--d:5"></i></span>
+<span class="cq-rs__sr">Lithium og batterimetaller, symbol Li. 6 selskaber, 3 i drift, 3 projekter. 0,76 % af fonden. Vis selskaberne</span></button></li></ul>
+<div class="cq-rs__panel cq-rs__scope" id="cq-rs-p-rare-earths" role="region" aria-label="Sjældne jordarter og magneter">
+<div class="cq-rs__ph"><svg class="cq-rs__pic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5.25 19.25V11a6.75 6.75 0 0 1 13.5 0v8.25h-4.5V11a2.25 2.25 0 0 0-4.5 0v8.25z"/><path d="M5.25 16.25h4.5M14.25 16.25h4.5" stroke-width="1"/><path d="M2.75 4.75l1.5 1.25M21.25 4.75l-1.5 1.25M12 1.75v1.5" stroke-width="1"/></svg><span class="cq-rs__psym" aria-hidden="true">Nd</span><div><h3 class="cq-rs__h3">Sjældne jordarter og magneter</h3><p class="cq-rs__pm">7 selskaber: 4 i drift, 2 projekter og 1 med en ejerandel i et andet selskab · 1,45 % af fonden</p></div>
+<button type="button" class="cq-rs__close" data-for="cq-rs-p-rare-earths">Luk<span class="cq-rs__sr"> Sjældne jordarter og magneter</span></button></div>
+<p class="cq-rs__ptx">Sjældne jordarter er en gruppe grundstoffer, der ikke er specielt sjældne, men svære at skille fra hinanden. De bruges mest til magneter, fx i elmotorer. Kina stod for godt to tredjedele af verdens mineproduktion af sjældne jordarter i 2025. I feltet er der både selskaber med miner, selskaber, der skiller stofferne ad, og et selskab, der laver selve magneterne.</p><p class="cq-rs__pex">Nd er symbolet for neodym, én af de sjældne jordarter. NdPr er neodym og praseodym, to sjældne jordarter, der bruges i magneter.</p>
+<ul class="cq-rs__cos" id="cq-rs-l-rare-earths" data-top="5"><li><button type="button" class="cq-rs__co" aria-pressed="false" data-d="Bryder sjældne jordarter ved Mt Weld i Western Australia og fremstiller separerede oxider i Malaysia." data-g="Sjældne jordarter og magneter · I drift"><span class="cq-rs__lg"><span class="cq-rs__ini" aria-hidden="true">LR</span></span><span class="cq-rs__nm"><i class="cq-rs__st" aria-hidden="true"></i>Lynas Rare Earths<span class="cq-rs__sr"> (i drift)</span></span><span class="cq-rs__cw">0,34 %</span></button></li><li><button type="button" class="cq-rs__co" aria-pressed="false" data-d="Producerer sjældne jordarter, siden 2024 også NdPr, der bruges i magneter. Bryder også uran." data-g="Sjældne jordarter og magneter · I drift"><span class="cq-rs__lg"><span class="cq-rs__ini" aria-hidden="true">EF</span></span><span class="cq-rs__nm"><i class="cq-rs__st" aria-hidden="true"></i>Energy Fuels<span class="cq-rs__sr"> (i drift)</span></span><span class="cq-rs__cw">0,31 %</span></button></li><li><button type="button" class="cq-rs__co" aria-pressed="false" data-d="Leder efter og vurderer projekter: sjældne jordarter til magneter (Tanbreez i Grønland) og lithium (Wolfsberg i Østrig). Ikke i produktion." data-g="Sjældne jordarter og magneter · Projekt, endnu ikke i produktion"><span class="cq-rs__lg"><span class="cq-rs__ini" aria-hidden="true">CM</span></span><span class="cq-rs__nm"><i class="cq-rs__st cq-rs__st--p" aria-hidden="true"></i>Critical Metals<span class="cq-rs__sr"> (projekt)</span></span><span class="cq-rs__cw">0,29 %</span></button></li><li><button type="button" class="cq-rs__co" aria-pressed="false" data-d="Ejer og driver minen og forarbejdningsanlægget Mountain Pass i Californien. Største producent af sjældne jordarter på den vestlige halvkugle ifølge selskabet." data-g="Sjældne jordarter og magneter · I drift" data-a="Robotter &amp; fysisk AI"><span class="cq-rs__lg"><img src="fra-critiquito/logos/mp-materials.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-rs__nm"><i class="cq-rs__st" aria-hidden="true"></i>MP Materials<span class="cq-rs__sr"> (i drift)</span></span><span class="cq-rs__cw">0,20 %</span></button></li><li><button type="button" class="cq-rs__co" aria-pressed="false" data-d="Har tidligere tjent penge på kul til stålværker. Selskabet ReElement arbejder med sjældne jordarter. Kuldelen og ReElement har siden december 2025 ikke været med i American Resources' regnskab." data-g="Sjældne jordarter og magneter · Har udskilt sine aktiviteter i kul og sjældne jordarter og ejer nu 19 % af ReElement Technologies. Ingen omsætning i 2025."><span class="cq-rs__lg"><span class="cq-rs__ini" aria-hidden="true">AR</span></span><span class="cq-rs__nm"><i class="cq-rs__st cq-rs__st--u" aria-hidden="true"></i>American Resources<span class="cq-rs__sr"> (ejerandel i et andet selskab)</span></span><span class="cq-rs__cw">0,16 %</span></button></li><li><button type="button" class="cq-rs__co" aria-pressed="false" data-d="Tidligt stadie: sjældne jordarter, oxider, metaller og magneter. Forekomsten Round Top i Texas og en magnetfabrik i Stillwater under opbygning." data-g="Sjældne jordarter og magneter · Projekt, endnu ikke i produktion"><span class="cq-rs__lg"><span class="cq-rs__ini" aria-hidden="true">UR</span></span><span class="cq-rs__nm"><i class="cq-rs__st cq-rs__st--p" aria-hidden="true"></i>USA Rare Earth<span class="cq-rs__sr"> (projekt)</span></span><span class="cq-rs__cw">0,10 %</span></button></li><li><button type="button" class="cq-rs__co" aria-pressed="false" data-d="Laver magnetpulver og magneter af neodym-jern-bor og forarbejder sjældne jordarter." data-g="Sjældne jordarter og magneter · I drift"><span class="cq-rs__lg"><span class="cq-rs__ini" aria-hidden="true">NP</span></span><span class="cq-rs__nm"><i class="cq-rs__st" aria-hidden="true"></i>Neo Performance Materials<span class="cq-rs__sr"> (i drift)</span></span><span class="cq-rs__cw">0,05 %</span></button></li></ul><button type="button" class="cq-rs__all" aria-expanded="false" aria-controls="cq-rs-l-rare-earths" data-n="7">Vis alle (7)</button><div class="cq-rs__info" aria-live="polite"><p class="cq-rs__hint">Tryk på et selskab for at se, hvad det laver.</p></div></div><div class="cq-rs__panel cq-rs__scope" id="cq-rs-p-copper" role="region" aria-label="Kobber">
+<div class="cq-rs__ph"><svg class="cq-rs__pic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.75 12H6M18 12h3.25"/><ellipse cx="7.0" cy="12" rx="1.6" ry="6.5"/><ellipse cx="9.5" cy="12" rx="1.6" ry="6.5"/><ellipse cx="12.0" cy="12" rx="1.6" ry="6.5"/><ellipse cx="14.5" cy="12" rx="1.6" ry="6.5"/><ellipse cx="17.0" cy="12" rx="1.6" ry="6.5"/></svg><span class="cq-rs__psym" aria-hidden="true">Cu</span><div><h3 class="cq-rs__h3">Kobber</h3><p class="cq-rs__pm">8 selskaber · 1,35 % af fonden · 5 i drift, 3 projekter</p></div>
+<button type="button" class="cq-rs__close" data-for="cq-rs-p-copper">Luk<span class="cq-rs__sr"> Kobber</span></button></div>
+<p class="cq-rs__ptx">Kobber leder strøm og varme godt. Feltet rummer temaets største selskab, Ero Copper, og Freeport-McMoRan, der ifølge selskabet selv er en af verdens største kobberproducenter blandt noterede selskaber. Freeport-McMoRan omsatte for omkring 172 mia. kr. i 2025. Det svarer i størrelse til ca. 5,5 % af Danmarks BNP. Tre af de otte er stadig projekter i USA, to af dem i Alaska.</p>
+<ul class="cq-rs__cos" id="cq-rs-l-copper" data-top="5"><li><button type="button" class="cq-rs__co" aria-pressed="false" data-d="Kobber- og guldproducent med drift i Brasilien. Hovedaktivitet er salg af kobberkoncentrat fra Caraíba og Tucumã." data-g="Kobber · I drift"><span class="cq-rs__lg"><span class="cq-rs__ini" aria-hidden="true">EC</span></span><span class="cq-rs__nm"><i class="cq-rs__st" aria-hidden="true"></i>Ero Copper<span class="cq-rs__sr"> (i drift)</span></span><span class="cq-rs__cw">0,53 %</span></button></li><li><button type="button" class="cq-rs__co" aria-pressed="false" data-d="International metalvirksomhed med kobber som hovedmetal. En af verdens største kobberproducenter blandt noterede selskaber ifølge selskabet." data-g="Kobber · I drift"><span class="cq-rs__lg"><span class="cq-rs__ini" aria-hidden="true">FM</span></span><span class="cq-rs__nm"><i class="cq-rs__st" aria-hidden="true"></i>Freeport-McMoRan<span class="cq-rs__sr"> (i drift)</span></span><span class="cq-rs__cw">0,24 %</span></button></li><li><button type="button" class="cq-rs__co" aria-pressed="false" data-d="Kobbermineselskab i Nord- og Sydamerika med minerne Pinto Valley, Cozamin, Mantos Blancos og Mantoverde." data-g="Kobber · I drift"><span class="cq-rs__lg"><span class="cq-rs__ini" aria-hidden="true">CC</span></span><span class="cq-rs__nm"><i class="cq-rs__st" aria-hidden="true"></i>Capstone Copper<span class="cq-rs__sr"> (i drift)</span></span><span class="cq-rs__cw">0,20 %</span></button></li><li><button type="button" class="cq-rs__co" aria-pressed="false" data-d="Integreret kobberproducent med miner, smelteværker og raffinaderier i Peru og Mexico. Også molybdæn, zink og sølv." data-g="Kobber · I drift"><span class="cq-rs__lg"><span class="cq-rs__ini" aria-hidden="true">SC</span></span><span class="cq-rs__nm"><i class="cq-rs__st" aria-hidden="true"></i>Southern Copper<span class="cq-rs__sr"> (i drift)</span></span><span class="cq-rs__cw">0,14 %</span></button></li><li><button type="button" class="cq-rs__co" aria-pressed="false" data-d="Kobberminen Gibraltar i British Columbia og Florence Copper i Arizona, som er ved at blive sat i kommerciel drift." data-g="Kobber · I drift"><span class="cq-rs__lg"><span class="cq-rs__ini" aria-hidden="true">TM</span></span><span class="cq-rs__nm"><i class="cq-rs__st" aria-hidden="true"></i>Trekor Metals<span class="cq-rs__sr"> (i drift)</span></span><span class="cq-rs__cw">0,09 %</span></button></li><li><button type="button" class="cq-rs__co" aria-pressed="false" data-d="Leder efter og udvikler mineralprojekterne Upper Kobuk (Arctic og Bornite) i Alaska, ejet ligeligt med South32." data-g="Kobber · Projekt, endnu ikke i produktion"><span class="cq-rs__lg"><span class="cq-rs__ini" aria-hidden="true">TM</span></span><span class="cq-rs__nm"><i class="cq-rs__st cq-rs__st--p" aria-hidden="true"></i>Trilogy Metals<span class="cq-rs__sr"> (projekt)</span></span><span class="cq-rs__cw">0,06 %</span></button></li><li><button type="button" class="cq-rs__co" aria-pressed="false" data-d="Leder efter og udvikler kobber og andre kritiske metaller i USA." data-g="Kobber · Projekt, endnu ikke i produktion"><span class="cq-rs__lg"><span class="cq-rs__ini" aria-hidden="true">IE</span></span><span class="cq-rs__nm"><i class="cq-rs__st cq-rs__st--p" aria-hidden="true"></i>Ivanhoe Electric<span class="cq-rs__sr"> (projekt)</span></span><span class="cq-rs__cw">0,05 %</span></button></li><li><button type="button" class="cq-rs__co" aria-pressed="false" data-d="Leder efter metaller og har endnu ingen mine. Hovedaktivet er Pebble, et kobber-guld-molybdæn-sølv-rhenium-projekt i det sydvestlige Alaska." data-g="Kobber · Projekt, endnu ikke i produktion"><span class="cq-rs__lg"><span class="cq-rs__ini" aria-hidden="true">ND</span></span><span class="cq-rs__nm"><i class="cq-rs__st cq-rs__st--p" aria-hidden="true"></i>Northern Dynasty Minerals<span class="cq-rs__sr"> (projekt)</span></span><span class="cq-rs__cw">0,04 %</span></button></li></ul><button type="button" class="cq-rs__all" aria-expanded="false" aria-controls="cq-rs-l-copper" data-n="8">Vis alle (8)</button><div class="cq-rs__info" aria-live="polite"><p class="cq-rs__hint">Tryk på et selskab for at se, hvad det laver.</p></div></div><div class="cq-rs__panel cq-rs__scope" id="cq-rs-p-chemicals" role="region" aria-label="Kemi og specialmaterialer">
+<div class="cq-rs__ph"><svg class="cq-rs__pic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.25 2.75h5.5M10 2.75v6.1L4.6 18.2a2 2 0 0 0 1.75 3.05h11.3a2 2 0 0 0 1.75-3.05L14 8.85V2.75"/><path d="M6.9 14.5h10.2" stroke-width="1"/><circle cx="10.5" cy="17.5" r=".9" fill="currentColor" stroke="none"/><circle cx="13.75" cy="18.75" r=".7" fill="currentColor" stroke="none"/></svg><div><h3 class="cq-rs__h3">Kemi og specialmaterialer</h3><p class="cq-rs__pm">5 selskaber · 1,22 % af fonden · 5 i drift</p></div>
+<button type="button" class="cq-rs__close" data-for="cq-rs-p-chemicals">Luk<span class="cq-rs__sr"> Kemi og specialmaterialer</span></button></div>
+<p class="cq-rs__ptx">Det eneste felt uden mine og uden grundstofsymbol. Her bliver materialet lavet på fabrikker: kølemidler, hvidt farvepigment (titandioxid), lim, belægninger og særlige plasttyper. Alle fem er i drift.</p><p class="cq-rs__pex">Ét af dem, Solstice Advanced Materials, laver også materialer til chipfremstilling. Om chipfremstilling kan du læse på siden <a href="../chips/index.html">Chips og halvledere</a>.</p>
+<ul class="cq-rs__cos" id="cq-rs-l-chemicals" data-top="5"><li><button type="button" class="cq-rs__co" aria-pressed="false" data-d="Laver kemikalier og plastmaterialer, bl.a. polyurethan, der bruges til skum og isolering, og lim." data-g="Kemi og specialmaterialer · I drift"><span class="cq-rs__lg"><span class="cq-rs__ini" aria-hidden="true">HU</span></span><span class="cq-rs__nm"><i class="cq-rs__st" aria-hidden="true"></i>Huntsman<span class="cq-rs__sr"> (i drift)</span></span><span class="cq-rs__cw">0,36 %</span></button></li><li><button type="button" class="cq-rs__co" aria-pressed="false" data-d="Laver særlige plasttyper og kemikalier, der bruges i fx biler, elektronik, maling og lim." data-g="Kemi og specialmaterialer · I drift"><span class="cq-rs__lg"><span class="cq-rs__ini" aria-hidden="true">CE</span></span><span class="cq-rs__nm"><i class="cq-rs__st" aria-hidden="true"></i>Celanese<span class="cq-rs__sr"> (i drift)</span></span><span class="cq-rs__cw">0,28 %</span></button></li><li><button type="button" class="cq-rs__co" aria-pressed="false" data-d="Kemi: kølemidler, titandioxidpigment og industrielle fluorpolymerer." data-g="Kemi og specialmaterialer · I drift" data-a="Datacentre"><span class="cq-rs__lg"><img src="fra-critiquito/logos/chemours.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-rs__nm"><i class="cq-rs__st" aria-hidden="true"></i>Chemours<span class="cq-rs__sr"> (i drift)</span></span><span class="cq-rs__cw">0,23 %</span></button></li><li><button type="button" class="cq-rs__co" aria-pressed="false" data-d="Specialmaterialer (lim, avancerede materialer, belægninger) stod for 85 % af salget i 1. halvår 2026." data-g="Kemi og specialmaterialer · I drift"><span class="cq-rs__lg"><span class="cq-rs__ini" aria-hidden="true">AR</span></span><span class="cq-rs__nm"><i class="cq-rs__st" aria-hidden="true"></i>Arkema<span class="cq-rs__sr"> (i drift)</span></span><span class="cq-rs__cw">0,20 %</span></button></li><li><button type="button" class="cq-rs__co" aria-pressed="false" data-d="Materialevirksomhed med bl.a. kølemidler og halvledermaterialer." data-g="Kemi og specialmaterialer · I drift" data-a="Chips og halvledere"><span class="cq-rs__lg"><img src="fra-critiquito/logos/solstice-advanced-materials.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-rs__nm"><i class="cq-rs__st" aria-hidden="true"></i>Solstice Advanced Materials<span class="cq-rs__sr"> (i drift)</span></span><span class="cq-rs__cw">0,15 %</span></button></li></ul><div class="cq-rs__info" aria-live="polite"><p class="cq-rs__hint">Tryk på et selskab for at se, hvad det laver.</p></div></div><div class="cq-rs__panel cq-rs__scope" id="cq-rs-p-precious" role="region" aria-label="Guld og sølv">
+<div class="cq-rs__ph"><svg class="cq-rs__pic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 19.25l2-5.5h6l2 5.5zM10.5 19.25l2-5.5h6l2 5.5z"/><path d="M7 13.75l2-5.5h6l2 5.5" /><path d="M19.5 3.25v2.5M18.25 4.5h2.5" stroke-width="1"/></svg><span class="cq-rs__psym" aria-hidden="true">Au Ag</span><div><h3 class="cq-rs__h3">Guld og sølv</h3><p class="cq-rs__pm">6 selskaber · 1,11 % af fonden · 6 i drift</p></div>
+<button type="button" class="cq-rs__close" data-for="cq-rs-p-precious">Luk<span class="cq-rs__sr"> Guld og sølv</span></button></div>
+<p class="cq-rs__ptx">Guld og sølv er ædelmetaller. De seks selskaber bryder dem i miner, og alle er i drift. Sølv bruges også i elektronik og solceller. Ifølge USGS, den amerikanske geologiske myndighed, gik omkring 25 % af USA's forbrug af sølv i 2025 til el og elektronik og 15 % til solceller. Ellers siger feltet mest om metallerne selv.</p>
+<ul class="cq-rs__cos" id="cq-rs-l-precious" data-top="5"><li><button type="button" class="cq-rs__co" aria-pressed="false" data-d="Sølv og guld fra fire producerende miner i Mexico. Driften i guldminen Jerritt Canyon i Nevada blev midlertidigt indstillet i 2023." data-g="Guld og sølv · I drift"><span class="cq-rs__lg"><span class="cq-rs__ini" aria-hidden="true">FM</span></span><span class="cq-rs__nm"><i class="cq-rs__st" aria-hidden="true"></i>First Majestic Silver<span class="cq-rs__sr"> (i drift)</span></span><span class="cq-rs__cw">0,28 %</span></button></li><li><button type="button" class="cq-rs__co" aria-pressed="false" data-d="Sølv og guld fra miner i Mexico, Peru, Canada, Argentina, Brasilien, Chile og Bolivia." data-g="Guld og sølv · I drift"><span class="cq-rs__lg"><span class="cq-rs__ini" aria-hidden="true">PA</span></span><span class="cq-rs__nm"><i class="cq-rs__st" aria-hidden="true"></i>Pan American Silver<span class="cq-rs__sr"> (i drift)</span></span><span class="cq-rs__cw">0,27 %</span></button></li><li><button type="button" class="cq-rs__co" aria-pressed="false" data-d="Producerer sølv, guld, bly, zink og kobber. Kalder sig Nordamerikas største sølvproducent." data-g="Guld og sølv · I drift"><span class="cq-rs__lg"><span class="cq-rs__ini" aria-hidden="true">HM</span></span><span class="cq-rs__nm"><i class="cq-rs__st" aria-hidden="true"></i>Hecla Mining<span class="cq-rs__sr"> (i drift)</span></span><span class="cq-rs__cw">0,26 %</span></button></li><li><button type="button" class="cq-rs__co" aria-pressed="false" data-d="Producerer guld i Golden Chest-minen i Idaho. Ejer også arealer med sjældne jordarter." data-g="Guld og sølv · I drift"><span class="cq-rs__lg"><span class="cq-rs__ini" aria-hidden="true">IS</span></span><span class="cq-rs__nm"><i class="cq-rs__st" aria-hidden="true"></i>Idaho Strategic Resources<span class="cq-rs__sr"> (i drift)</span></span><span class="cq-rs__cw">0,15 %</span></button></li><li><button type="button" class="cq-rs__co" aria-pressed="false" data-d="Primært guldproducent. Guld var 19.304 af 22.669 mio. USD i salg i 2025." data-g="Guld og sølv · I drift"><span class="cq-rs__lg"><span class="cq-rs__ini" aria-hidden="true">NE</span></span><span class="cq-rs__nm"><i class="cq-rs__st" aria-hidden="true"></i>Newmont<span class="cq-rs__sr"> (i drift)</span></span><span class="cq-rs__cw">0,11 %</span></button></li><li><button type="button" class="cq-rs__co" aria-pressed="false" data-d="Producent af ædelmetaller. Guld og sølv var hele omsætningen i 2025." data-g="Guld og sølv · I drift"><span class="cq-rs__lg"><span class="cq-rs__ini" aria-hidden="true">CM</span></span><span class="cq-rs__nm"><i class="cq-rs__st" aria-hidden="true"></i>Coeur Mining<span class="cq-rs__sr"> (i drift)</span></span><span class="cq-rs__cw">0,04 %</span></button></li></ul><button type="button" class="cq-rs__all" aria-expanded="false" aria-controls="cq-rs-l-precious" data-n="6">Vis alle (6)</button><div class="cq-rs__info" aria-live="polite"><p class="cq-rs__hint">Tryk på et selskab for at se, hvad det laver.</p></div></div><div class="cq-rs__panel cq-rs__scope" id="cq-rs-p-critical-minerals" role="region" aria-label="Andre kritiske mineraler">
+<div class="cq-rs__ph"><svg class="cq-rs__pic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 21.25L5.25 18V9.5L8.5 4l3.25 5.5V18z"/><path d="M5.25 9.5h6.5" stroke-width="1"/><path d="M15.5 21.25l-2.75-2.5v-6.5l2.75-4 2.75 4v6.5z"/><path d="M12.75 12.25h5.5" stroke-width="1"/><path d="M2.75 21.25h18.5"/></svg><span class="cq-rs__psym" aria-hidden="true">Sb Nb W</span><div><h3 class="cq-rs__h3">Andre kritiske mineraler</h3><p class="cq-rs__pm">4 selskaber · 0,80 % af fonden · 2 i drift, 2 projekter</p></div>
+<button type="button" class="cq-rs__close" data-for="cq-rs-p-critical-minerals">Luk<span class="cq-rs__sr"> Andre kritiske mineraler</span></button></div>
+<p class="cq-rs__ptx">Antimon (Sb), niobium (Nb) og wolfram (W). Et råstof kaldes kritisk, når det er vigtigt, og forsyningen kan være usikker. Temaets næststørste selskab, United States Antimony, er her. To af de fire er projekter.</p>
+<ul class="cq-rs__cos" id="cq-rs-l-critical-minerals" data-top="5"><li><button type="button" class="cq-rs__co" aria-pressed="false" data-d="Bryder, forarbejder og leverer antimon og ædelmetaller (Montana og Mexico) samt zeolit (Idaho)." data-g="Andre kritiske mineraler · I drift"><span class="cq-rs__lg"><span class="cq-rs__ini" aria-hidden="true">US</span></span><span class="cq-rs__nm"><i class="cq-rs__st" aria-hidden="true"></i>United States Antimony<span class="cq-rs__sr"> (i drift)</span></span><span class="cq-rs__cw">0,43 %</span></button></li><li><button type="button" class="cq-rs__co" aria-pressed="false" data-d="Udvikler via datterselskabet ECRC et projekt, der kan give niobium, scandium, titan og sjældne jordarter, hvis det bliver bygget." data-g="Andre kritiske mineraler · Projekt, endnu ikke i produktion"><span class="cq-rs__lg"><span class="cq-rs__ini" aria-hidden="true">NI</span></span><span class="cq-rs__nm"><i class="cq-rs__st cq-rs__st--p" aria-hidden="true"></i>NioCorp<span class="cq-rs__sr"> (projekt)</span></span><span class="cq-rs__cw">0,27 %</span></button></li><li><button type="button" class="cq-rs__co" aria-pressed="false" data-d="Wolfram: ejer gennem datterselskabet Almonty Korea Tungsten Sangdong-minen i Sydkorea." data-g="Andre kritiske mineraler · I drift"><span class="cq-rs__lg"><span class="cq-rs__ini" aria-hidden="true">AI</span></span><span class="cq-rs__nm"><i class="cq-rs__st" aria-hidden="true"></i>Almonty Industries<span class="cq-rs__sr"> (i drift)</span></span><span class="cq-rs__cw">0,05 %</span></button></li><li><button type="button" class="cq-rs__co" aria-pressed="false" data-d="Udvikler Stibnite Gold Project i Idaho med guld, sølv og antimon. Ikke i produktion." data-g="Andre kritiske mineraler · Projekt, endnu ikke i produktion"><span class="cq-rs__lg"><span class="cq-rs__ini" aria-hidden="true">PR</span></span><span class="cq-rs__nm"><i class="cq-rs__st cq-rs__st--p" aria-hidden="true"></i>Perpetua Resources<span class="cq-rs__sr"> (projekt)</span></span><span class="cq-rs__cw">0,05 %</span></button></li></ul><div class="cq-rs__info" aria-live="polite"><p class="cq-rs__hint">Tryk på et selskab for at se, hvad det laver.</p></div></div><div class="cq-rs__panel cq-rs__scope" id="cq-rs-p-battery-metals" role="region" aria-label="Lithium og batterimetaller">
+<div class="cq-rs__ph"><svg class="cq-rs__pic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="6.75" y="4.75" width="10.5" height="16.5" rx="2"/><path d="M10 2.75h4v2h-4z"/><path d="M9.25 15h5.5M9.25 18h5.5" stroke-width="1"/><path d="M12.5 7.75l-2 3.5h3l-2 3" stroke-width="1"/></svg><span class="cq-rs__psym" aria-hidden="true">Li</span><div><h3 class="cq-rs__h3">Lithium og batterimetaller</h3><p class="cq-rs__pm">6 selskaber · 0,76 % af fonden · 3 i drift, 3 projekter</p></div>
+<button type="button" class="cq-rs__close" data-for="cq-rs-p-battery-metals">Luk<span class="cq-rs__sr"> Lithium og batterimetaller</span></button></div>
+<p class="cq-rs__ptx">Lithium er et metal, som især bruges i batterier. Feltet rummer også et selskab, der genbruger gamle batterier, og et, der vil hente metalklumper op fra havbunden. Tre af de seks er projekter.</p>
+<ul class="cq-rs__cos" id="cq-rs-l-battery-metals" data-top="5"><li><button type="button" class="cq-rs__co" aria-pressed="false" data-d="Driver lithiumminer i Grota do Cirilo i Minas Gerais, Brasilien." data-g="Lithium og batterimetaller · I drift"><span class="cq-rs__lg"><span class="cq-rs__ini" aria-hidden="true">SL</span></span><span class="cq-rs__nm"><i class="cq-rs__st" aria-hidden="true"></i>Sigma Lithium<span class="cq-rs__sr"> (i drift)</span></span><span class="cq-rs__cw">0,20 %</span></button></li><li><button type="button" class="cq-rs__co" aria-pressed="false" data-d="Omdanner råstoffer, bl.a. lithium, til ingredienser for transport, energi, kommunikation og sundhed." data-g="Lithium og batterimetaller · I drift"><span class="cq-rs__lg"><span class="cq-rs__ini" aria-hidden="true">AL</span></span><span class="cq-rs__nm"><i class="cq-rs__st" aria-hidden="true"></i>Albemarle<span class="cq-rs__sr"> (i drift)</span></span><span class="cq-rs__cw">0,18 %</span></button></li><li><button type="button" class="cq-rs__co" aria-pressed="false" data-d="Producent af kritiske mineraler, bl.a. ved genbrug af lithium-ion-batterier." data-g="Lithium og batterimetaller · I drift"><span class="cq-rs__lg"><span class="cq-rs__ini" aria-hidden="true">AB</span></span><span class="cq-rs__nm"><i class="cq-rs__st" aria-hidden="true"></i>American Battery Technology<span class="cq-rs__sr"> (i drift)</span></span><span class="cq-rs__cw">0,11 %</span></button></li><li><button type="button" class="cq-rs__co" aria-pressed="false" data-d="Udvikler lithiumforekomsten Thacker Pass i det nordlige Nevada." data-g="Lithium og batterimetaller · Projekt, endnu ikke i produktion"><span class="cq-rs__lg"><span class="cq-rs__ini" aria-hidden="true">LA</span></span><span class="cq-rs__nm"><i class="cq-rs__st cq-rs__st--p" aria-hidden="true"></i>Lithium Americas<span class="cq-rs__sr"> (projekt)</span></span><span class="cq-rs__cw">0,11 %</span></button></li><li><button type="button" class="cq-rs__co" aria-pressed="false" data-d="Udvikler lithium fra saltvand (brine) i USA. Har endnu ikke kommerciel produktion." data-g="Lithium og batterimetaller · Projekt, endnu ikke i produktion"><span class="cq-rs__lg"><span class="cq-rs__ini" aria-hidden="true">SL</span></span><span class="cq-rs__nm"><i class="cq-rs__st cq-rs__st--p" aria-hidden="true"></i>Standard Lithium<span class="cq-rs__sr"> (projekt)</span></span><span class="cq-rs__cw">0,10 %</span></button></li><li><button type="button" class="cq-rs__co" aria-pressed="false" data-d="Udvikler indsamling og forarbejdning af metalklumper (noduler) fra havbunden i Clarion-Clipperton-zonen i Stillehavet." data-g="Lithium og batterimetaller · Projekt, endnu ikke i produktion"><span class="cq-rs__lg"><span class="cq-rs__ini" aria-hidden="true">TT</span></span><span class="cq-rs__nm"><i class="cq-rs__st cq-rs__st--p" aria-hidden="true"></i>TMC the metals company<span class="cq-rs__sr"> (projekt)</span></span><span class="cq-rs__cw">0,06 %</span></button></li></ul><button type="button" class="cq-rs__all" aria-expanded="false" aria-controls="cq-rs-l-battery-metals" data-n="6">Vis alle (6)</button><div class="cq-rs__info" aria-live="polite"><p class="cq-rs__hint">Tryk på et selskab for at se, hvad det laver.</p></div></div>
+<p class="cq-rs__fact"><b>Ti af de 36 er projekter, der endnu ikke producerer.</b> Tilsammen står de for 1,13 % af fonden.</p>
+<p class="cq-rs__known"><b>Store navne i branchen fylder lidt:</b> Newmont 0,11 %, Albemarle 0,18 % og Freeport-McMoRan 0,24 % af fonden.</p>
+</div>
+<script>(function(){var R=document.getElementById('cq-rs');if(!R||R.dataset.on)return;R.dataset.on='1';R.classList.add('cq-rs--js');
+var fine=window.matchMedia&&matchMedia('(hover: hover) and (pointer: fine)').matches;
+function show(btn){var sc=btn.closest('.cq-rs__scope')||R,inf=sc.querySelector('.cq-rs__info');if(!inf)return;inf.textContent='';
+inf.appendChild(btn.querySelector('.cq-rs__lg').cloneNode(true));var w=document.createElement('div');
+function el(t,c,x){var e=document.createElement(t);e.className=c;e.textContent=x;w.appendChild(e);return e}
+el('p','cq-rs__ig',btn.dataset.g);var h=el('p','cq-rs__ih',btn.querySelector('.cq-rs__nm').textContent);var s=document.createElement('span');s.textContent=btn.querySelector('.cq-rs__cw').textContent+' af afdelingen PMINDI pr. 16.10.2026';h.appendChild(s);
+el('p','cq-rs__id',btn.dataset.d);if(btn.dataset.a){var ia=el('p','cq-rs__ia','');var nn=btn.querySelector('.cq-rs__nm').childNodes[1].textContent;var TL={'Datacentre':'../datacenter/index.html','Chips og halvledere':'../chips/index.html','Robotter & fysisk AI':'../fysisk-ai/index.html'};ia.appendChild(document.createTextNode(nn+' laver også noget, der hører til temaet '));var tl=TL[btn.dataset.a];var ta=document.createElement(tl?'a':'span');if(tl)ta.href=tl;ta.textContent=btn.dataset.a;ia.appendChild(ta);ia.appendChild(document.createTextNode('. I fondens opdeling tælles selskabet kun med her.'))}inf.appendChild(w)}
+R.querySelectorAll('.cq-rs__co').forEach(function(b){b.addEventListener('click',function(){var sc=b.closest('.cq-rs__scope')||R;sc.querySelectorAll('.cq-rs__co[aria-pressed=true]').forEach(function(o){if(o!==b)o.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');show(b)});
+b.addEventListener('focus',function(){show(b)});if(fine)b.addEventListener('mouseenter',function(){show(b)})});
+function setAll(a,o){var l=document.getElementById(a.getAttribute('aria-controls'));l.classList.toggle('cq-rs--open',o);a.setAttribute('aria-expanded',o);a.textContent=o?'Vis færre':'Vis alle ('+a.dataset.n+')'}
+R.querySelectorAll('.cq-rs__all').forEach(function(a){a.addEventListener('click',function(){var o=a.getAttribute('aria-expanded')!=='true';setAll(a,o);if(o){var l=document.getElementById(a.getAttribute('aria-controls')),f=l.children[5];if(f)f.querySelector('button').focus()}})});
+function setDx(b,o){var t=document.getElementById(b.getAttribute('aria-controls'));b.setAttribute('aria-expanded',o);t.hidden=!o;
+ if(o&&b.dataset.grp)R.querySelectorAll('.cq-rs__dx[data-grp="'+b.dataset.grp+'"]').forEach(function(x){if(x!==b&&x.getAttribute('aria-expanded')==='true')setDx(x,false)});
+ R.dispatchEvent(new CustomEvent('cq:dx',{detail:{btn:b,open:o}}))}
+R.cqSetDx=setDx;
+R.querySelectorAll('.cq-rs__dx').forEach(function(b){setDx(b,b.dataset.open==='1');b.addEventListener('click',function(){setDx(b,b.getAttribute('aria-expanded')!=='true')})});
+R.addEventListener('keydown',function(e){if(e.key!=='Escape'&&e.key!=='Esc')return;var n=document.activeElement;
+ if(n&&n.getAttribute&&n.getAttribute('aria-expanded')==='true'){e.preventDefault();if(n.classList.contains('cq-rs__all'))setAll(n,false);else setDx(n,false);return}
+ while(n&&n!==R){if(n.id){var b=R.querySelector('[aria-controls="'+n.id+'"][aria-expanded="true"]');if(b){e.preventDefault();if(b.classList.contains('cq-rs__all'))setAll(b,false);else setDx(b,false);b.focus();return}}n=n.parentNode}});
+})();
+(function(){var R=document.getElementById('cq-rs');var rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+R.querySelectorAll('.cq-rs__close').forEach(function(c){c.addEventListener('click',function(){var b=R.querySelector('[aria-controls="'+c.dataset.for+'"]');R.cqSetDx(b,false);b.focus()})});
+var U=R.querySelector('.cq-rs__tiles'),S=document.createElement('li'),cur=null,home={};S.className='cq-rs__slot';S.setAttribute('role','none');R.querySelectorAll('.cq-rs__tile').forEach(function(b){var p=document.getElementById(b.getAttribute('aria-controls'));home[p.id]={par:p.parentNode,nx:p.nextSibling};var h=p.querySelector('.cq-rs__h3');if(h)h.tabIndex=-1});function cols(){return getComputedStyle(U).gridTemplateColumns.split(' ').filter(Boolean).length||1}function place(){if(!cur)return;var li=[].slice.call(U.children).filter(function(x){return x!==S}),k=li.indexOf(cur.closest('li')),c=cols(),e=Math.min(li.length-1,Math.floor(k/c)*c+c-1);if(S.previousSibling!==li[e])U.insertBefore(S,li[e].nextSibling)}R.addEventListener('cq:dx',function(e){var b=e.detail.btn;if(!b.classList.contains('cq-rs__tile'))return;var p=document.getElementById(b.getAttribute('aria-controls'));if(e.detail.open){cur=b;S.appendChild(p);place()}else{if(p.parentNode===S){var o=home[p.id];o.par.insertBefore(p,o.nx&&o.nx.parentNode===o.par?o.nx:null)}if(cur===b){cur=null;if(S.parentNode)S.parentNode.removeChild(S)}}});R.querySelectorAll('.cq-rs__tile').forEach(function(b){b.addEventListener('click',function(){if(b.getAttribute('aria-expanded')!=='true')return;var p=document.getElementById(b.getAttribute('aria-controls')),h=p.querySelector('.cq-rs__h3')||p;h.focus({preventScroll:true});var r=p.getBoundingClientRect();if(r.top<0||r.top>window.innerHeight-120)p.scrollIntoView({block:'start',behavior:rm?'auto':'smooth'})})});var rz;window.addEventListener('resize',function(){cancelAnimationFrame(rz);rz=requestAnimationFrame(place)});R.querySelectorAll('.cq-rs__dx[aria-expanded="true"]').forEach(function(b){if(b.classList.contains('cq-rs__tile'))R.dispatchEvent(new CustomEvent('cq:dx',{detail:{btn:b,open:true}}))});
+if(!rm&&'IntersectionObserver' in window){R.classList.add('cq-rs--arm');var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){setTimeout(function(){R.classList.remove('cq-rs--arm')},150);io.disconnect()}},{threshold:.35});io.observe(R.querySelector('.cq-rs__tiles'))}})();</script>
+</section>
+</div>
+
+<section class="s" id="naermere" aria-labelledby="naermere-h"><div class="wrap">
+<p class="eyebrow"><span class="hx" aria-hidden="true"></span>Feltet Nd, set nærmere</p>
+<h2 id="naermere-h">Hvad er sjældne jordarter?</h2>
+<div class="naermere-g">
+<div>
+<p class="smal">Sjældne jordarter er temaets største felt. Videoen fra Reuters forklarer, hvad stofferne er, hvad de bruges til, og hvorfor de er svære at skille fra hinanden.</p>
+<figure class="vid"><div class="vid-ramme" data-yt="1iNpON9ckTg" data-title="Video: What are rare earth elements and why are they important? (Reuters)"><button type="button" class="vid-play" aria-label="Afspil video fra Reuters: Hvad er sjældne jordarter, og hvorfor er de vigtige? (3 min. 56 sek., på engelsk). Videoen hentes fra YouTube."><picture><source media="(max-width:599px)" srcset="fra-billedstil/billeder/raastoffer-plakat-1iNpON9ckTg-mobil.webp"><img src="fra-billedstil/billeder/raastoffer-plakat-1iNpON9ckTg-bred.webp" alt="" width="1280" height="720" loading="lazy"></picture><span class="vid-kilde" aria-hidden="true">Reuters</span><span class="vid-ikon" aria-hidden="true"></span><span class="vid-tid" aria-hidden="true">3:56</span></button></div><figcaption><b>Reuters: What are rare earth elements and why are they important?</b>Reuters, 2025, på engelsk. Videoen begynder med et nyhedsklip fra februar 2025. Den er ikke fondens holdning.</figcaption></figure>
+<details class="mere">
+<summary>Læs mere: sådan bliver en magnet lavet</summary>
+<div class="mere-in">
+<p class="selsk"><span>Selskabets egen video</span></p>
+<p>MP Materials er et af fondens selskaber. I videoen viser selskabet selv, hvordan malm fra minen Mountain Pass bliver til magneter. Videoen er fra 2023 og er selskabets egen fremstilling, ikke fondens.</p>
+<figure class="vid"><div class="vid-ramme" data-yt="vXqOcZDNSfg" data-title="Video: Rare Earth Magnets - HOW they're made (MP Materials)"><button type="button" class="vid-play" aria-label="Afspil video fra MP Materials: Sådan bliver magneter af sjældne jordarter lavet (4 min. 39 sek., på engelsk). Videoen hentes fra YouTube."><picture><source media="(max-width:599px)" srcset="fra-billedstil/billeder/raastoffer-plakat-vXqOcZDNSfg-mobil.webp"><img src="fra-billedstil/billeder/raastoffer-plakat-vXqOcZDNSfg-bred.webp" alt="" width="1280" height="720" loading="lazy"></picture><span class="vid-kilde" aria-hidden="true">MP Materials</span><span class="vid-ikon" aria-hidden="true"></span><span class="vid-tid" aria-hidden="true">4:39</span></button></div><figcaption><b>MP Materials: Rare Earth Magnets - HOW they're made</b>MP Materials, 2023, på engelsk. Selskabets egen video.</figcaption></figure>
+</div>
+</details>
+</div>
+<figure class="foto"><picture><img src="fra-billedstil/billeder/raastoffer-foto-sjaeldne-jordarter-bred.webp" alt="Seks små bunker af pulver i hvide, grå, gule og sorte nuancer" width="600" height="400" loading="lazy"></picture><figcaption>Hvilke materialer begynder teknologien med? Her er seks sjældne jordarter som oxidpulver: praseodym, cerium, lanthan, neodym, samarium og gadolinium. Foto: Peggy Greb, USDA Agricultural Research Service, offentligt domæne, <a href="https://commons.wikimedia.org/wiki/File:Rareearthoxides.jpg" rel="noopener" target="_blank">Wikimedia Commons<span class="sr"> (åbner i nyt vindue)</span></a>.</figcaption></figure>
+</div>
+</div></section>
+
+<section class="s xs" id="x-opslag" aria-labelledby="h-x"><div class="wrap">
+<p class="eyebrow"><span class="hx" aria-hidden="true"></span>Set udefra</p>
+<h2 id="h-x">Råstofferne i nyhederne</h2>
+<div class="udefra-g">
+<div>
+<p class="lead-s">Her er udvalgte opslag og videoer fra medier, myndigheder og andre. De er ikke fondens holdning. „Kort fortalt“ er vores danske gengivelse. Opslaget hentes først fra X, når du trykker på „Vis opslaget“.</p>
+</div>
+<figure class="vid"><div class="vid-ramme" data-yt="7IRetOI4WJg" data-title="Video: Rock / Paper / Science: Understanding critical raw materials (British Geological Survey)"><button type="button" class="vid-play" aria-label="Afspil video fra British Geological Survey: Hvad er kritiske råstoffer? (1 min. 46 sek., på engelsk). Videoen hentes fra YouTube."><picture><source media="(max-width:599px)" srcset="fra-billedstil/billeder/raastoffer-plakat-7IRetOI4WJg-mobil.webp"><img src="fra-billedstil/billeder/raastoffer-plakat-7IRetOI4WJg-bred.webp" alt="" width="1280" height="720" loading="lazy"></picture><span class="vid-kilde" aria-hidden="true">British Geological Survey</span><span class="vid-ikon" aria-hidden="true"></span><span class="vid-tid" aria-hidden="true">1:46</span></button></div><figcaption><b>British Geological Survey: Understanding critical raw materials</b>British Geological Survey, 2026, på engelsk. Hvorfor nogle råstoffer kaldes kritiske.</figcaption></figure>
+</div>
+<ul class="xs-liste" id="x-liste" role="list">
+<li class="xp" data-url="https://twitter.com/business/status/2085874907544539280" data-team-post="https://x.com/MadsC007/status/2086398604365676921"><p class="xp-delt">Delt af Mads Christiansen fra teamet bag NewDeal Invest</p><div class="xp-top"><p class="xp-trin"><a href="#cq-rs">Hører til: Grundstofkortet</a></p><p class="xp-dato"><time datetime="2026-08-08">08.08.2026</time></p></div><p class="xp-fra"><b>Bloomberg</b> <span>@business · på engelsk</span></p><p class="xp-forkl"><span class="xp-k">Kort fortalt</span> Ifølge Bloomberg fremhævede præsident Donald Trump på et møde med ledere fra mineindustrien amerikanske investeringer på 3 mia. USD i udvinding af kritiske mineraler. Mødet skulle ifølge mediet gøre USA mindre afhængigt af forsyningskæder, som Kina dominerer.</p><div class="xp-knapper"><button type="button" class="xp-vis" hidden>Vis opslaget<span class="sr"> fra Bloomberg</span></button><a class="xp-link" href="https://twitter.com/business/status/2085874907544539280" rel="noopener" target="_blank">Se opslaget på X<span class="sr"> (åbner i nyt vindue)</span></a></div><div class="xp-embed" tabindex="-1" role="group" aria-label="Opslag fra Bloomberg på X"></div></li><li class="xp ekstra" data-url="https://twitter.com/elonmusk/status/2095720611695759704" data-team-post="https://x.com/MadsC007/status/2095805409890070540"><p class="xp-delt">Delt af Mads Christiansen fra teamet bag NewDeal Invest</p><div class="xp-top"><p class="xp-trin"><a href="#cq-rs-p-rare-earths" data-felt="rare-earths">Hører til: Sjældne jordarter</a></p><p class="xp-dato"><time datetime="2026-09-04">04.09.2026</time></p></div><p class="xp-fra"><b>Elon Musk</b> <span>@elonmusk · på engelsk</span></p><p class="xp-forkl"><span class="xp-k">Kort fortalt</span> Elon Musk, topchef i Tesla, skriver, at motoren i Cybercab, Teslas selvkørende taxa, ikke bruger sjældne jordartsmetaller, men har samme rækkevidde. Ifølge ham var det meget svært at opnå. Det er Teslas egen oplysning. Tesla er blandt fondens selskaber pr. 16.10.2026 og hører til temaet Robotter &amp; fysisk AI.</p><div class="xp-knapper"><button type="button" class="xp-vis" hidden>Vis opslaget<span class="sr"> fra Elon Musk</span></button><a class="xp-link" href="https://twitter.com/elonmusk/status/2095720611695759704" rel="noopener" target="_blank">Se opslaget på X<span class="sr"> (åbner i nyt vindue)</span></a></div><div class="xp-embed" tabindex="-1" role="group" aria-label="Opslag fra Elon Musk på X"></div></li><li class="xp ekstra" data-url="https://twitter.com/Reuters/status/2113515777013764368"><div class="xp-top"><p class="xp-trin"><a href="#cq-rs-p-rare-earths" data-felt="rare-earths">Hører til: Sjældne jordarter</a></p><p class="xp-dato"><time datetime="2026-10-23">23.10.2026</time></p></div><p class="xp-fra"><b>Reuters</b> <span>@Reuters · på engelsk</span></p><p class="xp-forkl"><span class="xp-k">Kort fortalt</span> Ifølge Reuters har bilproducenten General Motors (GM) opsagt en aftale med en ny amerikansk fabrik til magneter af sjældne jordarter. Reuters skriver, at oplysningen stammer fra dokumenter. General Motors er blandt fondens selskaber pr. 16.10.2026 og hører til temaet Robotter &amp; fysisk AI.</p><div class="xp-knapper"><button type="button" class="xp-vis" hidden>Vis opslaget<span class="sr"> fra Reuters</span></button><a class="xp-link" href="https://twitter.com/Reuters/status/2113515777013764368" rel="noopener" target="_blank">Se opslaget på X<span class="sr"> (åbner i nyt vindue)</span></a></div><div class="xp-embed" tabindex="-1" role="group" aria-label="Opslag fra Reuters på X"></div></li><li class="xp ekstra" data-url="https://twitter.com/mining/status/2112943099345322356"><div class="xp-top"><p class="xp-trin"><a href="#risiko">Hører til: Risikoen få lande</a></p><p class="xp-dato"><time datetime="2026-10-21">21.10.2026</time></p></div><p class="xp-fra"><b>MINING.COM</b> <span>@mining · på engelsk</span></p><p class="xp-forkl"><span class="xp-k">Kort fortalt</span> Ifølge MINING.COM har Ghanas præsident John Mahama oplyst, at landet planlægger at forbyde eksport af uforarbejdede mineraler som mangan, bauxit, jern og lithium senest i 2030. Mediet skriver, at forbuddet skal indføres gradvist med lovgivning og krav om forarbejdning i landet.</p><div class="xp-knapper"><button type="button" class="xp-vis" hidden>Vis opslaget<span class="sr"> fra MINING.COM</span></button><a class="xp-link" href="https://twitter.com/mining/status/2112943099345322356" rel="noopener" target="_blank">Se opslaget på X<span class="sr"> (åbner i nyt vindue)</span></a></div><div class="xp-embed" tabindex="-1" role="group" aria-label="Opslag fra MINING.COM på X"></div></li>
+</ul>
+<button type="button" class="x-mere" id="x-mere" aria-expanded="false" aria-controls="x-liste" hidden>Vis 3 opslag mere</button>
+<p class="xs-note">Opslagene er udvalgt af teamet bag NewDeal Invest. Afsenderne og de nævnte selskaber står ikke bag denne side, og opslagene er ikke fondens vurdering.</p>
+</div></section>
+
+<section class="s" id="risiko" aria-labelledby="risiko-h"><div class="wrap">
+<div class="risk">
+<h2 id="risiko-h">Det skal man vide om temaet</h2>
+<ul>
+<li><b>Priserne svinger.</b> Selskabernes indtægter afhænger af materialer, hvis pris kan ændre sig meget. Ifølge USGS var lithiumpriserne høje fra 2021 til begyndelsen af 2023, og i 2025 skar nogle producenter ned eller udskød projekter, fordi priserne var lave.<span class="k">Kilde: <a href="https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-lithium.pdf" rel="noopener" target="_blank">USGS, Mineral Commodity Summaries 2026: Lithium<span class="sr"> (åbner i nyt vindue)</span></a></span></li>
+<li><b>Projekter er endnu ikke miner.</b> En del af selskaberne har ingen produktion endnu, kun et projekt. Et projekt skal have penge og tilladelser, før det kan bygges, og indtil da tjener selskabet ikke penge på metallet. Det er ikke sikkert, at et projekt bliver bygget.<span class="k">Kilde: selskabernes egne årsrapporter, se <a href="#kilde-projekter">Kilder</a></span></li>
+<li id="faa-lande"><b>Få lande.</b> Produktionen af flere af materialerne er samlet i få lande. Ifølge USGS strammede Kina i april 2025 sin eksportkontrol med sjældne jordarter.<span class="k">Kilde: <a href="https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths.pdf" rel="noopener" target="_blank">USGS, Mineral Commodity Summaries 2026: Rare Earths<span class="sr"> (åbner i nyt vindue)</span></a></span></li>
+</ul>
+</div>
+</div></section>
+
+<section class="s" id="videre" aria-labelledby="videre-h"><div class="wrap">
+<p class="eyebrow"><span class="hx" aria-hidden="true"></span>Videre</p>
+<h2 id="videre-h">Hvor materialerne ender</h2>
+<div class="videre-g">
+<figure class="graf"><img src="fra-billedstil/grafik/raastoffer-overgang-naboer.svg" alt="Råstoffet i midten bliver til chips, til strøm og elnet og til motorer i robotter" width="480" height="140" loading="lazy"><figcaption>Illustration: NewDeal Invest.</figcaption></figure>
+<div>
+<p>Materialerne bliver til chips, kabler, batterier og motorer, som har deres egne temaer i fonden.</p>
+<ul class="naboer">
+<li><a href="../chips/index.html">Chips og halvledere <span>Materialer til chipfabrikker</span></a></li>
+<li><a href="../datacenter/index.html">Datacentre <span>Køling og forbindelser</span></a></li>
+<li><a href="../fysisk-ai/index.html">Robotter &amp; fysisk AI <span>Magneter til motorer i maskinerne</span></a></li>
+</ul>
+<p class="note">Fire af selskaberne laver også noget, der hører til et andet tema: Energy Fuels (Energi og elnet), Chemours (<a href="../datacenter/index.html">Datacentre</a>), Solstice Advanced Materials (<a href="../chips/index.html">Chips og halvledere</a>) og MP Materials (<a href="../fysisk-ai/index.html">Robotter &amp; fysisk AI</a>). I fondens opdeling tælles de kun med her.</p>
+</div>
+</div>
+</div></section>
+
+<section class="kilder-s" id="kilder" aria-labelledby="h-kilder"><div class="wrap">
+<details class="kilder">
+<summary><h2 id="h-kilder" style="font-size:18px;letter-spacing:-.01em;font-weight:600">Kilder og kreditering</h2></summary>
+<ul>
+<li>Andele: afdelingen PMINDI pr. 16.10.2026 (fondens data). Temaer og felter: NewDeal Invests egen opdeling af fondens selskaber. Hvilke selskaber der er i drift, og hvilke der er projekter, bygger på selskabernes egne årsrapporter og hjemmesider.</li>
+<li id="kilde-projekter">Projekter: selskabernes egne årsrapporter, fx NioCorp, <a href="https://www.sec.gov/Archives/edgar/data/1512228/000119312526402806/nb-20260630.htm" rel="noopener" target="_blank">10-K for regnskabsåret til 30.06.2026<span class="sr"> (åbner i nyt vindue)</span></a>, der skriver, at projektet kun giver metaller, "if and when developed", og USA Rare Earth, <a href="https://www.sec.gov/Archives/edgar/data/1970622/000197062226000021/usar-20251231.htm" rel="noopener" target="_blank">10-K 2025<span class="sr"> (åbner i nyt vindue)</span></a>.</li>
+<li id="kilde-arec">American Resources: American Resources Corporation, <a href="https://www.sec.gov/Archives/edgar/data/1590715/000147793226003317/arec_10k.htm" rel="noopener" target="_blank">Annual Report on Form 10-K for regnskabsåret til 31.12.2025<span class="sr"> (åbner i nyt vindue)</span></a>, indleveret til SEC 20.05.2026.</li>
+<li>At sjældne jordarter er svære at skille fra hinanden: Reuters, <a href="https://www.youtube-nocookie.com/embed/1iNpON9ckTg" rel="noopener" target="_blank">What are rare earth elements and why are they important?<span class="sr"> (åbner i nyt vindue)</span></a> (video, 2025).</li>
+<li>Hvornår et råstof kaldes kritisk: British Geological Survey, <a href="https://www.youtube-nocookie.com/embed/7IRetOI4WJg" rel="noopener" target="_blank">Understanding critical raw materials<span class="sr"> (åbner i nyt vindue)</span></a> (video, 2026).</li>
+<li>Sjældne jordarter, Kinas andel af mineproduktionen i 2025 og eksportkontrollen: <a href="https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths.pdf" rel="noopener" target="_blank">USGS, Mineral Commodity Summaries 2026: Rare Earths<span class="sr"> (åbner i nyt vindue)</span></a>.</li>
+<li>Lithium i batterier og lithiumpriser: <a href="https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-lithium.pdf" rel="noopener" target="_blank">USGS, Mineral Commodity Summaries 2026: Lithium<span class="sr"> (åbner i nyt vindue)</span></a>.</li>
+<li>Sølvs anvendelse i USA 2025: <a href="https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-silver.pdf" rel="noopener" target="_blank">USGS, Mineral Commodity Summaries 2026: Silver<span class="sr"> (åbner i nyt vindue)</span></a>.</li>
+<li>Kobber leder strøm og varme: <a href="https://pubs.usgs.gov/fs/2009/3031/FS2009-3031.pdf" rel="noopener" target="_blank">USGS, Fact Sheet 2009-3031<span class="sr"> (åbner i nyt vindue)</span></a>.</li>
+<li>Titandioxid som hvidt farvepigment: <a href="https://www.sec.gov/Archives/edgar/data/1627223/000119312526065201/cc-20251231.htm" rel="noopener" target="_blank">Chemours, årsrapport (10-K) 2025<span class="sr"> (åbner i nyt vindue)</span></a>.</li>
+<li>Freeport-McMoRans omsætning 2025: <a href="https://www.sec.gov/Archives/edgar/data/831259/000083125926000012/fcx-20251231.htm" rel="noopener" target="_blank">Freeport-McMoRan, årsrapport (10-K) 2025<span class="sr"> (åbner i nyt vindue)</span></a>. Danmarks BNP 2025, 3.118,5 mia. kr.: Danmarks Statistik, <a href="https://www.statbank.dk/NAN1" rel="noopener" target="_blank">tabel NAN1<span class="sr"> (åbner i nyt vindue)</span></a>. Omregnet til kroner med Nationalbankens årsgennemsnit for 2025, <a href="https://www.statbank.dk/DNVALA" rel="noopener" target="_blank">tabel DNVALA<span class="sr"> (åbner i nyt vindue)</span></a>. Omregninger og sammenligninger er vores egne beregninger.</li>
+</ul>
+<h3>Kreditering</h3>
+<p>Tegninger, ikoner og videoplakater. Illustration: NewDeal Invest. Fotoet af de sjældne jordarter: Peggy Greb, USDA Agricultural Research Service, offentligt domæne, <a href="https://commons.wikimedia.org/wiki/File:Rareearthoxides.jpg" rel="noopener" target="_blank">Wikimedia Commons<span class="sr"> (åbner i nyt vindue)</span></a> (beskåret).</p>
+<p>Videoerne er fra Reuters, British Geological Survey og MP Materials og vises fra YouTube, først når du trykker på dem. Opslagene er fra X. Logoer tilhører de enkelte selskaber og viser kun, hvilke selskaber fonden ejer aktier i. Afsenderne og selskaberne står ikke bag denne side, og der er intet samarbejde med dem.</p>
+<p><a class="kid" href="https://node-api.fundmarket.dk/funds/documents/priip_ipm140b" rel="noopener" target="_blank">Dokument med central information (KID)<span class="sr"> (åbner i nyt vindue)</span></a></p>
+</details>
+</div></section>
+</main>
+<footer><div class="wrap">
+<p>Siden beskriver indholdet af fonden og er ikke investeringsrådgivning. Omtalen af et selskab er ikke en anbefaling.</p>
+<p>Risikoindikatoren i fondens Dokument med central information (KID) er 5 på en skala fra 1 til 7. Historiske afkast er ingen garanti for fremtidige afkast. Du kan tabe hele eller dele af det investerede beløb.</p>
+</div></footer>
+<script>
+(function(){
+var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var pr=document.querySelector('.prog');
+function prog(){var h=document.documentElement,m=h.scrollHeight-innerHeight;pr.style.setProperty('--p',m>0?(scrollY/m).toFixed(3):0)}
+addEventListener('scroll',prog,{passive:true});prog();
+/* X-facade: intet hentes fra X før klik; widgets.js indlæses én gang */
+function twl(){if(window.twttr&&window.twttr.widgets)return;window.twttr=(function(d){var t=window.twttr||{};if(t._e)return t;t._e=[];t.ready=function(f){t._e.push(f)};var j=d.createElement('script');j.id='twitter-wjs';j.async=true;j.src='https://platform.twitter.com/widgets.js';j.charset='utf-8';d.body.appendChild(j);return t})(document)}
+[].forEach.call(document.querySelectorAll('.xp[data-url]'),function(li){var b=li.querySelector('.xp-vis'),em=li.querySelector('.xp-embed');b.hidden=false;
+ b.addEventListener('click',function(){if(em.firstChild)return;var q=document.createElement('blockquote');q.className='twitter-tweet';q.setAttribute('data-theme','dark');q.setAttribute('data-dnt','true');q.setAttribute('data-conversation','none');q.setAttribute('data-lang','da');
+ var a=document.createElement('a');a.href=li.dataset.url;a.textContent='Opslaget hentes fra X …';q.appendChild(a);em.appendChild(q);b.hidden=true;em.focus({preventScroll:true});
+ twl();window.twttr.ready(function(t){t.widgets.load(em)})})});
+/* "Hører til": åbn feltet i grundstofkortet */
+var R=document.getElementById('cq-rs');
+[].forEach.call(document.querySelectorAll('.xp-trin a[data-felt]'),function(a){a.addEventListener('click',function(e){var t=R&&R.querySelector('[aria-controls="cq-rs-p-'+a.dataset.felt+'"]');if(!t||!R.cqSetDx)return;e.preventDefault();R.cqSetDx(t,true);var p=document.getElementById('cq-rs-p-'+a.dataset.felt),h=p&&p.querySelector('h3');if(h){h.tabIndex=-1;p.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});h.focus({preventScroll:true})}})});
+/* X: ét opslag synligt, resten bag knappen "Vis N opslag mere" */
+var xs=document.querySelector('.xs'),xm=document.getElementById('x-mere');
+if(xs&&xm){var tx=xm.textContent;xm.hidden=false;xm.addEventListener('click',function(){var o=xm.getAttribute('aria-expanded')!=='true';xm.setAttribute('aria-expanded',String(o));xs.classList.toggle('alle',o);xm.textContent=o?'Vis færre':tx;if(o){var f=xs.querySelector('.ekstra .xp-fra b');if(f){f.tabIndex=-1;f.focus({preventScroll:true})}}})}
+/* video-facade: YouTube (nocookie) hentes først ved klik */
+[].forEach.call(document.querySelectorAll('.vid-ramme[data-yt]'),function(r){var b=r.querySelector('.vid-play');b.addEventListener('click',function(){var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+r.dataset.yt+'?autoplay=1&rel=0&playsinline=1';f.title=r.dataset.title;f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.setAttribute('allowfullscreen','');f.referrerPolicy='strict-origin-when-cross-origin';r.replaceChild(f,b);f.focus()})});
+})();
+
+/* Anker ind i en lukket <details> (fx risiko -> Kilder): fold op og hop */
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="#"]');if(!a)return;var t=document.getElementById(a.getAttribute('href').slice(1));if(!t)return;var d=t.closest('details');if(d&&!d.open){d.open=true;}});
+
+</script>
+</body>
+</html>

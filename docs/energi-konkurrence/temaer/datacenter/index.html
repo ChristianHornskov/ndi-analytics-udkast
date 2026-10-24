@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:,">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Datacentre: mellem maskinerne · NewDeal Invest</title>
+<meta name="description" content="Omtrent hver ottende krone i fonden ligger i selskaber, der bygger, udstyrer eller driver datacentre. Mest i forbindelserne mellem maskinerne.">
+<link rel="preload" href="fonts/font-1.woff2" as="font" type="font/woff2" crossorigin>
+<style>@font-face{font-family:'DM Sans';font-style:normal;font-weight:100 900;font-display:swap;src:url('fonts/font-1.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:100 900;font-display:swap;src:url('fonts/font-0.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:200 800;font-display:swap;src:url('fonts/font-3.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:200 800;font-display:swap;src:url('fonts/font-2.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}
+:root{--bg:#050a0f;--ink:#e6e8ed;--mute:#aebbc7;--teal:#6e9fa9;--tl:#8fbac3;--line:#313a4a;--card:#0b141c;--surf:#0f1a22;--fokus:#cde0e2}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 'DM Sans',system-ui,sans-serif;overflow-x:hidden}
+img,svg{max-width:100%;height:auto;display:block}
+a{color:var(--tl);text-underline-offset:3px}
+a:hover{color:var(--ink)}
+:focus-visible{outline:3px solid var(--fokus);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:Manrope,'DM Sans',sans-serif;font-weight:500;line-height:1.15;letter-spacing:-.04em;margin:0}
+h2{font-size:clamp(1.6rem,4.4vw,2.4rem);margin:.2rem 0 1rem}
+p{margin:0 0 1rem}
+.wrap{width:min(1120px,100% - 2.5rem);margin:0 auto}
+.smal{max-width:44rem}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-999px;top:8px;z-index:50;background:var(--ink);color:var(--bg);padding:.7rem 1rem;border-radius:6px}
+.skip:focus{left:8px}
+.eyebrow{font:600 11px/1.3 'DM Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--tl);margin:0 0 .6rem}
+.mute{color:var(--mute)}
+.kort{background:var(--card);border:1px solid var(--line);border-radius:12px}
+.top{position:sticky;top:0;z-index:40;background:#000;border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px}
+.top img{width:130px;height:auto;display:block}
+.top span{font-size:11px;letter-spacing:.14em;color:var(--tl);font-weight:600;text-transform:uppercase;text-align:right}
+.prog{position:absolute;left:0;bottom:-1px;height:2px;width:100%;background:var(--teal);transform-origin:0 50%;transform:scaleX(var(--p,0))}
+/* hero: egen tegning i fuld bredde */
+.hero{position:relative;border-bottom:1px solid var(--line)}
+.hero-bill{margin:0;position:relative}
+.hero-bill img{width:100%;max-height:640px;object-fit:cover}
+.hero-bill::after{content:"";position:absolute;inset:auto 0 0 0;height:55%;background:linear-gradient(transparent,var(--bg));pointer-events:none}
+.hero-tekst{position:relative;margin-top:clamp(-9rem,-12vw,-3rem);z-index:2;padding-bottom:clamp(2rem,5vw,3.5rem)}
+.hero h1{font-size:clamp(2.4rem,8vw,4.6rem);margin:0 0 1.1rem}
+.hero .lead{font-size:clamp(1.1rem,2.3vw,1.3rem);max-width:40rem}
+.hero .lead+p,.hero .hero-tal+p{max-width:40rem;color:var(--mute)}
+.hero-tal{margin:0 0 1.2rem;padding:1rem 1.2rem;max-width:520px;border-color:var(--teal);background:#0f2128;display:flex;align-items:baseline;gap:.4rem 1rem;flex-wrap:wrap}
+.hero-tal strong{font:500 clamp(2.4rem,9vw,3.4rem)/1 Manrope,sans-serif;letter-spacing:-.04em}
+.hero-tal>span{color:var(--mute);font-size:.95rem}
+.hero-dato{flex-basis:100%;margin:0;font-size:.8rem;color:var(--mute)}
+.hero-tal b{display:block;color:var(--ink);font-weight:600}
+@media(min-width:900px){.hero-bill::before{content:"";position:absolute;inset:40% 0 0 0;z-index:1;background:linear-gradient(90deg,var(--bg) 0,rgba(5,10,15,.8) 38%,transparent 66%);pointer-events:none}}
+.hero-cta{display:inline-flex;align-items:center;gap:10px;min-height:48px;margin:0 0 1rem;padding:0 20px;border:1px solid var(--teal);border-radius:999px;color:var(--ink);text-decoration:none;font-weight:600}
+.hero-cta::after{content:"→";color:var(--teal)}
+.hero-cta:hover{background:#0f2128;color:var(--ink)}
+.kred{font-size:.8rem;color:var(--mute);margin:.4rem 0 0}
+section.s{padding:clamp(1.75rem,7vw,4.5rem) 0;border-top:1px solid var(--line);scroll-margin-top:4.5rem}
+/* fonden */
+.fonden-g{display:grid;gap:1.25rem;grid-template-columns:minmax(0,1fr)}
+@media(min-width:880px){.fonden-g{grid-template-columns:minmax(0,5fr) minmax(0,6fr);align-items:start}}
+.stor{padding:1.5rem;background:var(--card) url('fra-billedstil/grafik/datacenter-moenster-rack.svg') 0 0/96px 96px;position:relative;overflow:hidden}
+.stor::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--card) 35%,rgba(11,20,28,.75));pointer-events:none}
+.stor>*{position:relative}
+.stor .tal{font:800 clamp(3.4rem,13vw,5.6rem)/1 Manrope,sans-serif;color:var(--ink);margin:0 0 .3rem;letter-spacing:-.03em}
+.stor .tal small{font-size:.45em;color:var(--tl);margin-left:.1em}
+.fakta{list-style:none;margin:1rem 0 0;padding:0;display:grid;gap:.5rem}
+.fakta li{display:flex;justify-content:space-between;gap:1rem;border-top:1px solid var(--line);padding-top:.5rem;font-size:.95rem}
+.fakta b{font-weight:600;text-align:right}
+.note{font-size:.85rem;color:var(--mute);margin:.9rem 0 0}
+.capex{padding:1.25rem 1.5rem;margin-top:1.25rem}
+.capex .ct{font:700 clamp(1.6rem,5vw,2.1rem)/1.1 Manrope,sans-serif;margin:.2rem 0 .5rem}
+.temabar{margin:1.2rem 0 0;padding:0;list-style:none;display:grid;gap:.45rem}
+.temabar li{display:grid;grid-template-columns:minmax(0,11rem) minmax(0,1fr) 3.6rem;gap:.6rem;align-items:center;font-size:.9rem}
+.temabar i{display:block;height:10px;border-radius:5px;background:var(--line)}
+.temabar i span{display:block;height:100%;border-radius:5px;background:#4a5566}
+.temabar .dc i span{background:var(--teal)}
+.temabar .dc{font-weight:600}
+.temabar b{text-align:right;font-weight:500}
+@media(max-width:480px){.temabar li{grid-template-columns:minmax(0,1fr) 3.4rem}.temabar i{grid-column:1/-1;grid-row:2}}
+/* grebet */
+.greb-g{display:grid;gap:1.5rem}
+@media(min-width:880px){.greb-g{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center}}
+.graf{margin:0;padding:1rem}
+.graf img{width:100%}
+.graf figcaption{font-size:.85rem;color:var(--mute);margin-top:.6rem}
+/* tilføjelse i Critiquitos zoom: rack-fotoet */
+.dc-foto{margin:.4rem 0 1rem;max-width:600px}
+.dc-foto img{width:100%;border-radius:10px;border:1px solid var(--line)}
+.dc-foto figcaption{font-size:.82rem;color:var(--mute);margin-top:.45rem}
+/* fod */
+.fod{list-style:none;margin:1.2rem 0 0;padding:0;display:grid;gap:.5rem;grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
+.fod li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.1rem .8rem;padding:.65rem .85rem;border:1px solid var(--line);border-radius:10px;background:var(--surf);font-size:.95rem}
+.fod li b{font-weight:600}
+.fod li>span{grid-column:1;font-size:.82rem;color:var(--mute)}
+.fod li i{font-style:normal;grid-column:2;grid-row:1/3;align-self:center;font-weight:400;font-size:.85rem;color:var(--mute)}
+.js .fod:not(.alle) li:nth-child(n+2){display:none}
+.knap{display:inline-flex;align-items:center;gap:.5rem;min-height:44px;padding:.55rem 1rem;border:1px solid var(--teal);border-radius:999px;background:transparent;color:var(--ink);font:600 .95rem 'DM Sans',sans-serif;cursor:pointer;margin-top:.9rem}
+.knap:hover{background:#0f2128}
+.knap[hidden]{display:none}
+.binder{margin-top:1.5rem}
+/* set udefra */
+.udefra-g{display:grid;gap:1.5rem}
+@media(min-width:960px){.udefra-g{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);align-items:start}}
+.vid{margin:0}
+.vid-ramme{position:relative;aspect-ratio:16/9;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:#000}
+.vid-ramme iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vid-play{position:absolute;inset:0;width:100%;height:100%;padding:0;border:0;background:#000;display:block;cursor:pointer}
+.vid-play img{width:100%;height:100%;object-fit:cover}
+.vid-ikon{position:absolute;z-index:2;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:#fff;box-shadow:0 4px 24px rgba(0,0,0,.5)}
+.vid-ikon::after{content:"";position:absolute;left:26px;top:20px;border-style:solid;border-width:12px 0 12px 19px;border-color:transparent transparent transparent #050a0f}
+.vid-tid{position:absolute;z-index:2;right:8px;bottom:8px;background:rgba(0,0,0,.8);color:#fff;font-size:13px;padding:2px 8px;border-radius:4px}
+.vid-kilde{position:absolute;z-index:2;left:8px;top:8px;background:rgba(0,0,0,.82);color:#fff;font-size:13px;font-weight:600;padding:3px 9px;border-radius:4px}
+.vid figcaption{font-size:.9rem;color:var(--mute);margin-top:.7rem}
+.vid figcaption b{color:var(--ink);font-weight:600}
+.xs{list-style:none;margin:0;padding:0;display:grid;gap:.8rem}
+.xp{padding:1rem 1.1rem}
+.js .xs:not(.alle) .x-mere{display:none}
+.xp-top{display:flex;justify-content:space-between;align-items:center;gap:.6rem;flex-wrap:wrap}
+.xp-top p{margin:0}
+.xp-trin a{display:inline-flex;align-items:center;min-height:44px;font-size:.85rem;font-weight:600}
+.xp-dato{font-size:.85rem;color:var(--mute)}
+.xp-fra{margin:.2rem 0 .4rem}
+.xp-fra span{color:var(--mute);font-size:.88rem}
+.xp-forkl{font-size:.95rem}
+.xp-k{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--tl);margin-right:.3rem}
+.xp-knapper{display:flex;flex-wrap:wrap;gap:.4rem 1rem;align-items:center}
+.xp-vis{min-height:44px;padding:.5rem .95rem;border:1px solid var(--teal);border-radius:999px;background:transparent;color:var(--ink);font:600 .9rem 'DM Sans',sans-serif;cursor:pointer}
+.xp-vis[hidden]{display:none}
+.xp-link{display:inline-flex;align-items:center;min-height:44px;font-size:.9rem}
+.xp-embed:not(:empty){margin-top:.6rem}
+.xnote{font-size:.85rem;color:var(--mute);margin-top:.9rem}
+/* risiko */
+.risiko{padding:1.4rem 1.5rem;border-left:4px solid var(--teal)}
+.risiko ul{margin:0;padding-left:1.1rem;display:grid;gap:.75rem}
+.risiko li b{font-weight:700}
+.risiko a{display:inline}
+.js .risiko:not(.aaben) .eks{display:none}
+/* videre */
+.videre-g{display:grid;gap:1.5rem}
+@media(min-width:880px){.videre-g{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center}}
+.cta{list-style:none;margin:0;padding:0;display:grid;gap:.6rem}
+.cta a{display:flex;justify-content:space-between;align-items:center;gap:1rem;min-height:56px;padding:.8rem 1.1rem;border:1px solid var(--teal);border-radius:12px;color:var(--ink);text-decoration:none;font-weight:600;background:var(--surf)}
+.cta a:hover{background:#0f2128}
+.cta a span{color:var(--mute);font-weight:400;font-size:.88rem}
+.cta .nl{display:flex;justify-content:space-between;align-items:center;gap:1rem;min-height:56px;padding:.8rem 1.1rem;border:1px solid var(--teal);border-radius:12px;color:var(--ink);font-weight:600;background:var(--surf)}.cta .nl span{color:var(--mute);font-weight:400;font-size:.88rem}
+.cta .ingen{padding:.3rem 0 0;color:var(--mute);font-size:.85rem}
+/* kilder */
+.kilder{font-size:.9rem;color:var(--mute)}
+section.s.kilder{padding:.6rem 0 1.2rem}
+.kilder summary{min-height:56px;display:flex;align-items:center;justify-content:space-between;gap:12px;cursor:pointer;list-style:none}
+.kilder summary::-webkit-details-marker{display:none}
+.kilder summary::after{content:"＋";color:var(--tl);font-size:1.1rem}
+.kilder-d[open] summary::after{content:"−"}
+.kilder summary h2{font-size:18px;letter-spacing:-.01em;font-weight:600;margin:0;color:var(--ink)}
+.kilder-d>ul:last-child{margin-bottom:1rem}
+.kilder h3{font-size:1.05rem;color:var(--ink);margin:1.4rem 0 .5rem}
+.kilder ul{padding-left:1.1rem;margin:0;display:grid;gap:.35rem}
+.kilder a{display:inline}
+footer{border-top:1px solid var(--line);padding:2rem 0 3rem;font-size:.88rem;color:var(--mute)}
+footer .kid{display:inline-flex;align-items:center;min-height:44px}
+@media(max-width:599px){section.s{padding:1.5rem 0}.fonden-g,.greb-g,.udefra-g,.videre-g{gap:1rem}footer{padding-top:1.5rem;padding-bottom:2rem}.cq-dc{padding-top:1rem;padding-bottom:1rem}.hero-tal{margin-bottom:.75rem}.capex{margin-top:.75rem;padding-top:1rem;padding-bottom:1rem}main p{margin-bottom:.75rem}main h2{margin-bottom:.75rem}.eyebrow{margin-bottom:.4rem}.stor.kort,.risiko.kort{padding-top:1rem;padding-bottom:1rem}figure.graf.kort{padding-top:.75rem;padding-bottom:.75rem}p.note{margin-top:.6rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#indhold">Spring til indholdet</a>
+<header class="top"><div class="wrap"><img src="img/ndi-logo.webp" alt="NewDeal Invest" width="155" height="57"><span>Tema · Datacentre</span></div><i class="prog" aria-hidden="true"></i></header>
+<main id="indhold" tabindex="-1">
+<section class="hero" aria-labelledby="h1">
+<figure class="hero-bill"><picture><source media="(max-width:599px)" srcset="fra-billedstil/grafik/datacenter-hero-mellem-maskinerne-mobil.svg"><img src="fra-billedstil/grafik/datacenter-hero-mellem-maskinerne.svg" alt="Mange servere i rækker, bundet sammen af kabler og lys" width="1440" height="720" fetchpriority="high"></picture></figure>
+<div class="wrap hero-tekst">
+<h1 id="h1">Mellem maskinerne</h1>
+<p class="lead">Når du bruger en AI eller en app, sker arbejdet i et datacenter: en stor hal fuld af computere, der kaldes servere. En stor AI-beregning er for stor til én computer. Tusindvis af servere skal arbejde sammen, som var de én maskine, og det kræver forbindelser, en bygning og nogen til at drive den.</p>
+<div class="hero-tal kort"><strong>7,08 %</strong><span>af fonden ligger i forbindelserne: kabler, lasere og netværk</span><p class="hero-dato">Andel af hele fonden, afdelingen PMINDI pr. 16.10.2026</p></div>
+<p>Strømmen og chippen har hver deres tema. Her handler det om alt det imellem.</p>
+<a class="hero-cta" href="#cq-dc">Se, hvor pengene ligger</a>
+<p class="kred">Illustration: NewDeal Invest.</p>
+</div>
+</section>
+
+<section class="s" id="fonden" aria-labelledby="fonden-h"><div class="wrap">
+<p class="eyebrow">Fonden</p>
+<h2 id="fonden-h">Hver ottende krone</h2>
+<div class="fonden-g">
+<div class="stor kort">
+<p class="tal">12,59<small>%</small></p>
+<p>af fonden ligger i datacentre, netværk og cloud.</p>
+<ul class="fakta"><li><span>Selskaber</span><b>47 af fondens 373</b></li><li><span>Største selskab i temaet</span><b>Sivers Semiconductors 1,01 % af fonden (laver bl.a. lasere)</b></li><li><span>Plads blandt fondens 12 temaer</span><b>Nr. 3</b></li></ul>
+<p class="note">Andel af hele fonden, afdelingen PMINDI pr. 16.10.2026</p>
+</div>
+<div>
+<p>Datacentre er et af de 12 temaer, NewDeal Invest deler fondens selskaber op i. Selskaberne i temaet bygger, udstyrer eller driver datacentre. Intet enkelt selskab fylder meget, så pengene er spredt på mange selskaber.</p>
+<ul class="temabar" aria-label="Fondens tre største temaer, andel af fonden">
+<li><span>Chips og halvledere</span><i aria-hidden="true"><span style="width:100%"></span></i><b>24,31 %</b></li>
+<li><span>Energi og elnet</span><i aria-hidden="true"><span style="width:69.8%"></span></i><b>16,96 %</b></li>
+<li class="dc"><span>Datacentre</span><i aria-hidden="true"><span style="width:51.8%"></span></i><b>12,59 %</b></li>
+</ul>
+<div class="capex kort">
+<p class="eyebrow">Der bygges meget</p>
+<p class="ct">ca. 409 mia. USD</p>
+<p>Amazon, Microsoft, Alphabet og Meta investerede i deres seneste regnskabsår tilsammen ca. 409 mia. USD i bygninger og udstyr. Det er omkring 2.707 mia. kr. eller omkring 87 % af Danmarks BNP i 2025, altså værdien af alt, der blev produceret i Danmark det år. Beløbet dækker mere end datacentre.</p>
+<p class="note">Kilde: selskabernes årsrapporter, omregnet med Nationalbankens gennemsnitskurs for 2025. Alphabet er ikke blandt fondens selskaber. Se <a href="#kilder">Kilder</a>.</p>
+</div>
+</div>
+</div>
+</div></section>
+
+<section class="s" id="greb" aria-labelledby="greb-h"><div class="wrap">
+<p class="eyebrow">Hovedgrebet</p>
+<h2 id="greb-h">Det, der binder maskinerne sammen</h2>
+<div class="greb-g">
+<div>
+<p>Inde i en server løber data som elektriske signaler i kobber. Men når tusindvis af servere skal arbejde sammen, er afstandene for lange til kobber alene. Så sendes data som lys gennem tynde glastråde, der kaldes fiber. Lasere og optiske moduler laver de elektriske signaler om til lys og tilbage igen, og netværksudstyr sørger for, at data kommer frem til den rigtige server.</p>
+<p>I fonden er forbindelserne den største del af temaet. Mere end halvdelen af pengene i temaet ligger dér. Temaets største selskab, Sivers Semiconductors, er et af dem.</p>
+</div>
+<div>
+<figure class="graf kort"><img src="fra-billedstil/grafik/datacenter-lys-i-fiber.svg" alt="Signalet går fra server til server som lys i en fiber" width="960" height="320"><figcaption>Fra elektrisk signal til lys og tilbage igen. Illustration: NewDeal Invest.</figcaption></figure>
+</div>
+</div>
+</div></section>
+
+<div class="wrap"><section class="cq-dc" id="cq-dc" aria-labelledby="cq-dc-h">
+<style>.cq-dc{--cq-dc-ink:var(--ink,#e6e8ed);--cq-dc-mute:var(--mute,#aebbc7);--cq-dc-line:var(--line,#313a4a);--cq-dc-surf:var(--surf,#0f1a22);--cq-dc-card:var(--card,#0b141c);--cq-dc-focus:var(--fokus,#cde0e2);
+--cq-dc-a:#6e9fa9;--cq-dc-pick:#13262c;color:var(--cq-dc-ink);font-family:'DM Sans',system-ui,sans-serif;padding:clamp(1.5rem,6vw,4.5rem) 0;scroll-margin-top:4.5rem;border-top:1px solid var(--cq-dc-line)}
+.cq-dc *{box-sizing:border-box}
+.cq-dc__sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.cq-dc__cos{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:6px}
+.cq-dc--js .cq-dc__cos:not(.cq-dc--open)>li:nth-child(n+6){display:none}
+.cq-dc__co{width:100%;min-height:48px;display:grid;grid-template-columns:28px minmax(0,1fr) auto;align-items:center;gap:8px;padding:6px 9px;border:1px solid var(--cq-dc-line);border-radius:9px;background:var(--cq-dc-surf);color:var(--cq-dc-ink);font:inherit;font-size:.88rem;line-height:1.25;text-align:left;cursor:pointer}
+.cq-dc__co:hover,.cq-dc__co[aria-pressed=true]{border-color:var(--cq-dc-a)}
+.cq-dc__co[aria-pressed=true]{background:var(--cq-dc-pick)}
+.cq-dc__lg{width:28px;height:28px;border-radius:6px;background:#fff;display:grid;place-items:center;overflow:hidden;flex:0 0 auto}
+.cq-dc__lg img{width:24px;height:24px;object-fit:contain;display:block}
+.cq-dc__ini{font:700 .75rem/1 Manrope,sans-serif;color:#050a0f}
+.cq-dc__nm{min-width:0;overflow-wrap:anywhere}
+.cq-dc__cw{font-variant-numeric:tabular-nums;color:var(--cq-dc-mute);font-size:.82rem;white-space:nowrap}
+.cq-dc__all{margin-top:6px;min-height:44px;min-width:44px;padding:0 14px;border-radius:9px;border:1px solid var(--cq-dc-line);background:transparent;color:var(--cq-dc-ink);font:inherit;font-size:.9rem;cursor:pointer}
+.cq-dc__all:hover{border-color:var(--cq-dc-a)}
+.cq-dc__info{min-height:4.6rem;margin:8px 0;padding:.6rem .75rem;border-radius:10px;background:var(--cq-dc-surf);border:1px solid var(--cq-dc-line);display:flex;gap:.7rem;align-items:flex-start;font-size:.9rem}
+.cq-dc__hint{margin:0;color:var(--cq-dc-mute);align-self:center}.cq-dc__hint--top{margin:0 0 .6rem}.cq-dc__info:empty{min-height:0;margin:0;padding:0;border:0}
+.cq-dc__ih{margin:0 0 .1rem;font-weight:700}
+.cq-dc__ih span{font-weight:500;color:var(--cq-dc-mute);margin-left:.35rem;font-variant-numeric:tabular-nums}
+.cq-dc__ig{margin:0 0 .15rem;font-size:.76rem;color:var(--cq-dc-mute);text-transform:uppercase;letter-spacing:.05em}
+.cq-dc__id{margin:0;line-height:1.45}
+.cq-dc__ia{margin:.25rem 0 0;font-size:.82rem;color:var(--cq-dc-mute)}
+.cq-dc button:focus-visible,.cq-dc a:focus-visible{outline:3px solid var(--cq-dc-focus);outline-offset:2px}
+
+.cq-dc__in{max-width:1180px;margin:0 auto}
+.cq-dc__kick{margin:0 0 .45rem;color:var(--cq-dc-a);text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:600}
+.cq-dc__h2{font-family:Manrope,'DM Sans',sans-serif;font-weight:500;font-size:clamp(1.65rem,4.6vw,2.5rem);line-height:1.14;letter-spacing:-.03em;margin:0}
+.cq-dc__date{margin:.45rem 0 0;font-size:.84rem;font-weight:600;color:var(--cq-dc-ink)}
+.cq-dc__date span{display:inline-block;width:.6rem;height:.6rem;border-radius:2px;background:var(--cq-dc-a);margin-right:.45rem}
+.cq-dc__lead{max-width:44rem;color:var(--cq-dc-mute);font-size:1rem;line-height:1.55;margin:.8rem 0 1.1rem}
+.cq-dc__grid{display:grid;gap:1rem}
+.cq-dc__fig{margin:0;max-width:340px;width:100%;justify-self:center}
+.cq-dc__svg{display:block;width:100%;height:auto;overflow:hidden;border-radius:12px}
+.cq-dc__zoom{transform-origin:200px 200px;transition:transform .8s cubic-bezier(.3,.7,.2,1)}
+.cq-dc--arm .cq-dc__zoom{transform:scale(1.27);transition:none}
+.cq-dc__ring{cursor:pointer}
+.cq-dc__h{fill:#6e9fa9;fill-opacity:.22;stroke:#6e9fa9;stroke-width:1;stroke-dasharray:5 4}
+.cq-dc__f{fill:#6e9fa9;stroke:#9cc3cb;stroke-width:1.5}
+.cq-dc__m{fill:#0b141c;stroke:#cde0e2;stroke-width:1.5}
+.cq-dc__fib line{stroke:#0b141c;stroke-opacity:.38;stroke-width:1.4}
+.cq-dc__fl{fill:#6e9fa9}
+.cq-dc__slot rect{fill:#20363c}
+
+.cq-dc__tl{font:600 14px 'DM Sans',sans-serif}
+.cq-dc__tl--h{fill:#e6e8ed}.cq-dc__tl--f{fill:#050a0f;font-size:16px}.cq-dc__tl--m{fill:#e6e8ed;font-size:13px}
+.cq-dc__tb{font:600 28px Manrope,sans-serif;fill:#050a0f}
+.cq-dc__ts{font:600 15px Manrope,sans-serif;fill:#cde0e2}
+.cq-dc__ring.cq-dc--hi .cq-dc__h,.cq-dc__ring.cq-dc--hi .cq-dc__m{stroke:#f2f5f7;stroke-width:3}
+.cq-dc__ring.cq-dc--hi .cq-dc__f{stroke:#f2f5f7;stroke-width:3}
+.cq-dc__zl{display:flex;justify-content:space-between;gap:.5rem;font-size:.8rem;color:var(--cq-dc-mute);margin:.5rem 2px 0}
+.cq-dc__lag{border:1px solid var(--cq-dc-line);border-radius:12px;background:var(--cq-dc-card);margin:0 0 8px}
+.cq-dc__lagh,.cq-dc__lhh{margin:0;font:inherit}
+.cq-dc__lagb,.cq-dc__lb2{width:100%;min-height:56px;display:flex;flex-wrap:wrap;align-items:center;gap:.15rem .6rem;padding:.55rem .8rem;background:transparent;border:0;color:var(--cq-dc-ink);font:inherit;text-align:left;cursor:pointer;border-radius:12px}
+.cq-dc__lagn{font:600 1.1rem Manrope,sans-serif}
+.cq-dc__lagw{font:600 1.1rem Manrope,sans-serif;font-variant-numeric:tabular-nums;color:var(--cq-dc-ink)}
+.cq-dc__lagc{color:var(--cq-dc-mute);font-size:.86rem}
+@media (max-width:440px){.cq-dc__lagb{gap:.15rem .45rem;padding:.5rem .6rem}.cq-dc__lagn,.cq-dc__lagw{font-size:1.02rem}.cq-dc__lagc{font-size:.82rem}.cq-dc__lb2{gap:.1rem .45rem}}
+.cq-dc__chev{margin-left:auto;width:.6rem;height:.6rem;border-right:2px solid var(--cq-dc-mute);border-bottom:2px solid var(--cq-dc-mute);transform:rotate(45deg);transition:transform .2s}
+[aria-expanded=true]>.cq-dc__chev{transform:rotate(-135deg)}
+.cq-dc__sw{width:1.75rem;height:1.75rem;border-radius:6px;flex:0 0 auto;display:grid;place-items:center}
+.cq-dc__ic{display:block;flex:0 0 auto}.cq-dc__ic--grp{width:1.2rem;height:1.2rem}.cq-dc__ic--led{width:1.1rem;height:1.1rem;margin-right:-.15rem;color:var(--cq-dc-a);align-self:center}
+.cq-dc__sw--m{background:#0b141c;border:2px solid #cde0e2;color:#cde0e2}.cq-dc__sw--f{background:#6e9fa9;color:#050a0f}.cq-dc__sw--h{background:#1c2b31;border:1px dashed #6e9fa9;color:#9fc3ca}
+.cq-dc__lagp{padding:0 .8rem .7rem}
+.cq-dc__lagx{margin:0 0 .5rem;color:var(--cq-dc-mute);font-size:.92rem;line-height:1.5}
+.cq-dc__led{border-top:1px solid var(--cq-dc-line)}
+.cq-dc__lb2{min-height:48px;padding:.4rem 0;border-radius:6px}
+.cq-dc__lh{margin:.5rem 0 .2rem;display:flex;flex-wrap:wrap;gap:.1rem .6rem;align-items:baseline}
+.cq-dc__ln{font-weight:600}
+.cq-dc__lm{color:var(--cq-dc-mute);font-size:.86rem;font-variant-numeric:tabular-nums}
+.cq-dc__lx{margin:0 0 .5rem;font-size:.88rem;line-height:1.45;color:var(--cq-dc-mute)}
+.cq-dc__lbody{padding-bottom:.5rem}
+.cq-dc__known{margin:.9rem 0 0;font-size:.9rem;line-height:1.5;color:var(--cq-dc-mute);max-width:46rem}
+.cq-dc__known b{color:var(--cq-dc-ink);font-weight:600}
+.cq-dc__note{margin:.5rem 0 0;font-size:.84rem;line-height:1.5;color:var(--cq-dc-mute);max-width:46rem}
+.cq-dc__lags .cq-dc__cos{grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
+@media (min-width:900px){.cq-dc__fig{max-width:440px}.cq-dc__grid{grid-template-columns:minmax(0,440px) minmax(0,1fr);gap:2rem;align-items:start}.cq-dc__fig{position:sticky;top:5rem}}
+@media (prefers-reduced-motion:reduce){.cq-dc__zoom,.cq-dc__chev{transition:none}.cq-dc--arm .cq-dc__zoom{transform:none}}
+</style>
+<div class="cq-dc__in">
+<p class="cq-dc__kick">Selskaberne</p>
+<h2 class="cq-dc__h2" id="cq-dc-h">Zoom ud fra én server</h2>
+<p class="cq-dc__date"><span aria-hidden="true"></span>Andel af hele fonden, afdelingen PMINDI pr. 16.10.2026</p>
+<p class="cq-dc__lead">I midten står én server. Zoom ud, og den bliver til tusindvis af servere i en hal, forbundet med kabler, lys og netværk. Hver flade er tegnet efter, hvor stor en del af fonden laget fylder.</p>
+<div class="cq-dc__grid">
+<figure class="cq-dc__fig"><svg class="cq-dc__svg" viewBox="0 0 400 400" aria-hidden="true" focusable="false">
+<g class="cq-dc__zoom">
+<g class="cq-dc__ring" data-lag="h"><rect class="cq-dc__h" x="10.0" y="10.0" width="380.0" height="380.0" rx="10"/>
+<text class="cq-dc__tl cq-dc__tl--h" x="200" y="31.0" text-anchor="middle">Hallen og driften · 4,00 %</text></g>
+<g class="cq-dc__ring" data-lag="f"><rect class="cq-dc__f" x="43.1" y="43.1" width="313.9" height="313.9" rx="8"/><g class="cq-dc__fib"><line x1="143.6" y1="134.2" x2="65.5" y2="43.1"/><line x1="143.6" y1="265.8" x2="65.5" y2="356.9"/><line x1="134.2" y1="143.6" x2="43.1" y2="65.5"/><line x1="265.8" y1="143.6" x2="356.9" y2="65.5"/><line x1="162.4" y1="134.2" x2="110.3" y2="43.1"/><line x1="162.4" y1="265.8" x2="110.3" y2="356.9"/><line x1="134.2" y1="162.4" x2="43.1" y2="110.3"/><line x1="265.8" y1="162.4" x2="356.9" y2="110.3"/><line x1="181.2" y1="134.2" x2="155.2" y2="43.1"/><line x1="181.2" y1="265.8" x2="155.2" y2="356.9"/><line x1="134.2" y1="181.2" x2="43.1" y2="155.2"/><line x1="265.8" y1="181.2" x2="356.9" y2="155.2"/><line x1="200.0" y1="134.2" x2="200.0" y2="43.1"/><line x1="200.0" y1="265.8" x2="200.0" y2="356.9"/><line x1="134.2" y1="200.0" x2="43.1" y2="200.0"/><line x1="265.8" y1="200.0" x2="356.9" y2="200.0"/><line x1="218.8" y1="134.2" x2="244.8" y2="43.1"/><line x1="218.8" y1="265.8" x2="244.8" y2="356.9"/><line x1="134.2" y1="218.8" x2="43.1" y2="244.8"/><line x1="265.8" y1="218.8" x2="356.9" y2="244.8"/><line x1="237.6" y1="134.2" x2="289.7" y2="43.1"/><line x1="237.6" y1="265.8" x2="289.7" y2="356.9"/><line x1="134.2" y1="237.6" x2="43.1" y2="289.7"/><line x1="265.8" y1="237.6" x2="356.9" y2="289.7"/><line x1="256.4" y1="134.2" x2="334.5" y2="43.1"/><line x1="256.4" y1="265.8" x2="334.5" y2="356.9"/><line x1="134.2" y1="256.4" x2="43.1" y2="334.5"/><line x1="265.8" y1="256.4" x2="356.9" y2="334.5"/></g>
+<rect class="cq-dc__fl" x="108" y="59.1" width="184" height="62" rx="8"/>
+<text class="cq-dc__tl cq-dc__tl--f" x="200" y="81.1" text-anchor="middle">Forbindelserne</text>
+<text class="cq-dc__tb cq-dc__tb--f" x="200" y="111.1" text-anchor="middle">7,08 %</text></g>
+<g class="cq-dc__ring" data-lag="m"><rect class="cq-dc__m" x="134.2" y="134.2" width="131.6" height="131.6" rx="6"/><g class="cq-dc__slot"><rect x="148.2" y="180.2" width="103.6" height="7" rx="2"/><rect x="148.2" y="192.2" width="103.6" height="7" rx="2"/><rect x="148.2" y="204.2" width="103.6" height="7" rx="2"/><rect x="148.2" y="216.2" width="103.6" height="7" rx="2"/><rect x="148.2" y="228.2" width="103.6" height="7" rx="2"/></g>
+<text class="cq-dc__tl cq-dc__tl--m" x="200" y="154.2" text-anchor="middle">Maskinerne</text>
+<text class="cq-dc__ts" x="200" y="172.2" text-anchor="middle">1,51 %</text></g>
+</g></svg>
+<figcaption class="cq-dc__sr">Tre firkanter inden i hinanden. I midten Maskinerne med 1,51 % af fonden. Rundt om Forbindelserne med 7,08 %, den største flade. Yderst Hallen og driften med 4,00 %. I alt 12,59 % fordelt på 47 selskaber.</figcaption>
+<p class="cq-dc__zl" aria-hidden="true"><span>I alt 12,59 % · 47 selskaber</span></p></figure>
+<div class="cq-dc__lags"><p class="cq-dc__hint cq-dc__hint--top">Tryk på et selskab for at se, hvad det laver.</p><div class="cq-dc__lag cq-dc__scope" data-lag="f"><h3 class="cq-dc__lagh"><button type="button" class="cq-dc__dx cq-dc__lagb" aria-expanded="false" aria-controls="cq-dc-p-f" data-grp="lag" data-lag="f" data-open="1"><span class="cq-dc__sw cq-dc__sw--f" aria-hidden="true"><svg class="cq-dc__ic cq-dc__ic--grp" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.25" y="5.25" width="4.5" height="13.5" rx="1"/><rect x="17.25" y="5.25" width="4.5" height="13.5" rx="1"/><path d="M6.75 8.5h10.5M6.75 15.5h10.5"/><path d="M6.75 12h1.5M10.25 12h1.5M13.75 12h1.5" stroke-width="1.5"/></svg></span><span class="cq-dc__lagn">Forbindelserne</span><span class="cq-dc__lagw">7,08 %</span><span class="cq-dc__lagc">24 selskaber</span><span class="cq-dc__chev" aria-hidden="true"></span></button></h3><div class="cq-dc__lagp" id="cq-dc-p-f"><p class="cq-dc__lagx">Kablerne, lyset og netværket, der binder serverne sammen.</p><div class="cq-dc__led"><h4 class="cq-dc__lhh"><button type="button" class="cq-dc__dx cq-dc__lb2" aria-expanded="false" aria-controls="cq-dc-b-lasere" data-grp="f"><svg class="cq-dc__ic cq-dc__ic--led" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.25" y="7.25" width="10" height="9.5" rx="1.5"/><path d="M5 10.25h4.5M5 13.75h2.5" stroke-width="1"/><circle cx="12.25" cy="12" r="1.25" fill="currentColor" stroke="none"/><path d="M14.5 12h1.5M18 12h1.5M21.25 12h.5"/><path d="M15 8.5l5-1.5M15 15.5l5 1.5" stroke-width="1"/></svg><span class="cq-dc__ln">Lasere og optiske moduler</span><span class="cq-dc__lm">4,46 % · 12 selskaber</span><span class="cq-dc__chev" aria-hidden="true"></span></button></h4><div class="cq-dc__lbody" id="cq-dc-b-lasere"><p class="cq-dc__lx">En laser laver lys, der kan tændes og slukkes meget hurtigt, og sådan sendes data gennem fiber. Et optisk modul, også kaldet en transceiver, sidder i hver ende af fiberen. Fotonik betyder teknik, der arbejder med lys.</p><ul class="cq-dc__cos" id="cq-dc-l-lasere" data-top="5"><li><button type="button" class="cq-dc__co" aria-pressed="false" data-d="Laver kraftige lasere til lysforbindelser, bl.a. i AI-datacentre. Laver også chips til trådløs kommunikation." data-g="Lasere og optiske moduler"><span class="cq-dc__lg"><img src="fra-critiquito/logos/sivers-semiconductors.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-dc__nm">Sivers Semiconductors</span><span class="cq-dc__cw">1,01 %</span></button></li><li><button type="button" class="cq-dc__co" aria-pressed="false" data-d="Laver udstyr til fibernet, bl.a. til datacentre, kabel-tv, tele og internet til hjemmet." data-g="Lasere og optiske moduler"><span class="cq-dc__lg"><img src="fra-critiquito/logos/applied-optoelectronics.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-dc__nm">Applied Optoelectronics</span><span class="cq-dc__cw">0,54 %</span></button></li><li><button type="button" class="cq-dc__co" aria-pressed="false" data-d="Producerer optiske og elektroniske komponenter for andre. Produkter til datacentre var 47,9 % af omsætningen i regnskabsåret 2026." data-g="Lasere og optiske moduler"><span class="cq-dc__lg"><img src="fra-critiquito/logos/fabrinet.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-dc__nm">Fabrinet</span><span class="cq-dc__cw">0,54 %</span></button></li><li><button type="button" class="cq-dc__co" aria-pressed="false" data-d="Udvikler en teknik, der samler lyskomponenter på én chip. Den første anvendelse er optiske moduler til datacentre." data-g="Lasere og optiske moduler"><span class="cq-dc__lg"><img src="fra-critiquito/logos/poet-technologies.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-dc__nm">POET Technologies</span><span class="cq-dc__cw">0,54 %</span></button></li><li><button type="button" class="cq-dc__co" aria-pressed="false" data-d="Designer og producerer chips til industri og forsvar, datacentre og tele." data-g="Lasere og optiske moduler" data-a="Chips og halvledere"><span class="cq-dc__lg"><img src="fra-critiquito/logos/macom.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-dc__nm">MACOM</span><span class="cq-dc__cw">0,46 %</span></button></li><li><button type="button" class="cq-dc__co" aria-pressed="false" data-d="Udvikler særlige plastmaterialer, der kan styre lys i optiske komponenter." data-g="Lasere og optiske moduler"><span class="cq-dc__lg"><img src="fra-critiquito/logos/lightwave-logic.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-dc__nm">Lightwave Logic</span><span class="cq-dc__cw">0,29 %</span></button></li><li><button type="button" class="cq-dc__co" aria-pressed="false" data-d="Laver lys- og sensorløsninger. Optik til datacentre er på prototypestadiet." data-g="Lasere og optiske moduler" data-a="Chips og halvledere"><span class="cq-dc__lg"><img src="fra-critiquito/logos/ams-osram.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-dc__nm">ams OSRAM</span><span class="cq-dc__cw">0,27 %</span></button></li><li><button type="button" class="cq-dc__co" aria-pressed="false" data-d="Laver kraftige lasere, især til forsvar og luftfart." data-g="Lasere og optiske moduler"><span class="cq-dc__lg"><img src="fra-critiquito/logos/nlight.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-dc__nm">nLight</span><span class="cq-dc__cw">0,27 %</span></button></li><li><button type="button" class="cq-dc__co" aria-pressed="false" data-d="Laver optiske produkter. Den største del af omsætningen kommer fra komponenter, der bl.a. leveres til cloud-datacentre og AI-selskaber." data-g="Lasere og optiske moduler"><span class="cq-dc__lg"><img src="fra-critiquito/logos/lumentum.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-dc__nm">Lumentum</span><span class="cq-dc__cw">0,22 %</span></button></li><li><button type="button" class="cq-dc__co" aria-pressed="false" data-d="Laver fiberlasere, især til bearbejdning af materialer." data-g="Lasere og optiske moduler" data-a="Robotter &amp; fysisk AI"><span class="cq-dc__lg"><img src="fra-critiquito/logos/ipg-photonics.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-dc__nm">IPG Photonics</span><span class="cq-dc__cw">0,18 %</span></button></li><li><button type="button" class="cq-dc__co" aria-pressed="false" data-d="Chips til bl.a. netværk i datacentre, til industri og til mobilnet." data-g="Lasere og optiske moduler" data-a="Chips og halvledere"><span class="cq-dc__lg"><img src="fra-critiquito/logos/semtech.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-dc__nm">Semtech</span><span class="cq-dc__cw">0,11 %</span></button></li><li><button type="button" class="cq-dc__co" aria-pressed="false" data-d="Laver lasere, optiske moduler og materialer til datacentre, kommunikation og industri." data-g="Lasere og optiske moduler"><span class="cq-dc__lg"><img src="fra-critiquito/logos/coherent.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-dc__nm">Coherent</span><span class="cq-dc__cw">0,03 %</span></button></li></ul><button type="button" class="cq-dc__all" aria-expanded="false" aria-controls="cq-dc-l-lasere" data-n="12">Vis alle (12)</button></div></div><div class="cq-dc__led"><h4 class="cq-dc__lhh"><button type="button" class="cq-dc__dx cq-dc__lb2" aria-expanded="false" aria-controls="cq-dc-b-kabler" data-grp="f"><svg class="cq-dc__ic cq-dc__ic--led" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.25" y="9.25" width="4" height="5.5" rx="1"/><path d="M6.25 12C11 12 12 5.5 18.5 5.5M6.25 12h12.25M6.25 12C11 12 12 18.5 18.5 18.5"/><circle cx="20" cy="5.5" r="1.5"/><circle cx="20" cy="12" r="1.5"/><circle cx="20" cy="18.5" r="1.5"/></svg><span class="cq-dc__ln">Kabler, fiber og stik</span><span class="cq-dc__lm">1,39 % · 4 selskaber</span><span class="cq-dc__chev" aria-hidden="true"></span></button></h4><div class="cq-dc__lbody" id="cq-dc-b-kabler"><p class="cq-dc__lx">Kobberkabler forbinder det, der står tæt på hinanden, og fiberkabler bærer lyset over længere afstand. Stikkene holder forbindelsen præcis og tæt. Selskaberne leverer også til andre kunder end datacentre.</p><ul class="cq-dc__cos" id="cq-dc-l-kabler" data-top="5"><li><button type="button" class="cq-dc__co" aria-pressed="false" data-d="Leverer forbindelser med fiber og radiosignaler, bl.a. til datacentre." data-g="Kabler, fiber og stik"><span class="cq-dc__lg"><img src="fra-critiquito/logos/huber-suhner.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-dc__nm">Huber+Suhner</span><span class="cq-dc__cw">0,75 %</span></button></li><li><button type="button" class="cq-dc__co" aria-pressed="false" data-d="Laver bl.a. optiske stik og komponenter til datacentre. Selskabet laver også dele til biler." data-g="Kabler, fiber og stik" data-a="Energi og elnet"><span class="cq-dc__lg"><img src="fra-critiquito/logos/sumitomo-electric-industries.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-dc__nm">Sumitomo Electric Industries</span><span class="cq-dc__cw">0,30 %</span></button></li><li><button type="button" class="cq-dc__co" aria-pressed="false" data-d="Glas og materialer. Optisk kommunikation var det største forretningsområde i 2025 med en omsætning på 6.274 mio. USD." data-g="Kabler, fiber og stik"><span class="cq-dc__lg"><span class="cq-dc__ini" aria-hidden="true">CO</span></span><span class="cq-dc__nm">Corning</span><span class="cq-dc__cw">0,27 %</span></button></li><li><button type="button" class="cq-dc__co" aria-pressed="false" data-d="Stik, kabler, fiberforbindelser, antenner og sensorer." data-g="Kabler, fiber og stik"><span class="cq-dc__lg"><img src="fra-critiquito/logos/amphenol.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-dc__nm">Amphenol</span><span class="cq-dc__cw">0,07 %</span></button></li></ul></div></div><div class="cq-dc__led"><h4 class="cq-dc__lhh"><button type="button" class="cq-dc__dx cq-dc__lb2" aria-expanded="false" aria-controls="cq-dc-b-net" data-grp="f"><svg class="cq-dc__ic cq-dc__ic--led" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="5" r="2"/><circle cx="18" cy="5" r="2"/><rect x="2.75" y="14.25" width="18.5" height="6" rx="1.5"/><path d="M6 7v7.25M18 7v7.25M7.5 6.5l9 7.75M16.5 6.5l-9 7.75"/><circle cx="6.5" cy="17.25" r=".8" fill="currentColor" stroke="none"/><circle cx="10" cy="17.25" r=".8" fill="currentColor" stroke="none"/><circle cx="13.5" cy="17.25" r=".8" fill="currentColor" stroke="none"/><circle cx="17" cy="17.25" r=".8" fill="currentColor" stroke="none"/></svg><span class="cq-dc__ln">Netværk og forbindelseschips</span><span class="cq-dc__lm">1,23 % · 8 selskaber</span><span class="cq-dc__chev" aria-hidden="true"></span></button></h4><div class="cq-dc__lbody" id="cq-dc-b-net"><p class="cq-dc__lx">Netværket bestemmer, hvor data skal hen, i hallen og mellem datacentre. Andre selskaber laver udstyr, der måler og tester forbindelserne. Forbindelseschips får mange chips i samme system til at arbejde som én stor computer.</p><ul class="cq-dc__cos" id="cq-dc-l-net" data-top="5"><li><button type="button" class="cq-dc__co" aria-pressed="false" data-d="Netværksudstyr, software og service til netværk. Én cloududbyder stod for omkring 18 % af omsætningen." data-g="Netværk og forbindelseschips"><span class="cq-dc__lg"><img src="fra-critiquito/logos/ciena.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-dc__nm">Ciena</span><span class="cq-dc__cw">0,30 %</span></button></li><li><button type="button" class="cq-dc__co" aria-pressed="false" data-d="Laver kabler, optiske moduler og chips til meget hurtige forbindelser." data-g="Netværk og forbindelseschips" data-a="Chips og halvledere"><span class="cq-dc__lg"><img src="fra-critiquito/logos/credo.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-dc__nm">Credo</span><span class="cq-dc__cw">0,27 %</span></button></li><li><button type="button" class="cq-dc__co" aria-pressed="false" data-d="Fibernet og netværkstjenester til virksomheder." data-g="Netværk og forbindelseschips"><span class="cq-dc__lg"><img src="fra-critiquito/logos/lumen.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-dc__nm">Lumen</span><span class="cq-dc__cw">0,22 %</span></button></li><li><button type="button" class="cq-dc__co" aria-pressed="false" data-d="Test- og måleudstyr til netværk samt optiske produkter. Datacentre er ét af flere markeder." data-g="Netværk og forbindelseschips"><span class="cq-dc__lg"><img src="fra-critiquito/logos/viavi-solutions.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-dc__nm">Viavi Solutions</span><span class="cq-dc__cw">0,16 %</span></button></li><li><button type="button" class="cq-dc__co" aria-pressed="false" data-d="Netværksudstyr, bl.a. til AI hos store cloududbydere." data-g="Netværk og forbindelseschips" data-a="Software &amp; AI"><span class="cq-dc__lg"><span class="cq-dc__ini" aria-hidden="true">CS</span></span><span class="cq-dc__nm">Cisco Systems</span><span class="cq-dc__cw">0,09 %</span></button></li><li><button type="button" class="cq-dc__co" aria-pressed="false" data-d="Test- og måleudstyr, bl.a. til forbindelserne i og mellem datacentre." data-g="Netværk og forbindelseschips"><span class="cq-dc__lg"><img src="fra-critiquito/logos/keysight-technologies.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-dc__nm">Keysight Technologies</span><span class="cq-dc__cw">0,09 %</span></button></li><li><button type="button" class="cq-dc__co" aria-pressed="false" data-d="Forbindelseschips, der får mange chips i samme system til at arbejde sammen." data-g="Netværk og forbindelseschips" data-a="Chips og halvledere"><span class="cq-dc__lg"><img src="fra-critiquito/logos/astera-labs.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-dc__nm">Astera Labs</span><span class="cq-dc__cw">0,07 %</span></button></li><li><button type="button" class="cq-dc__co" aria-pressed="false" data-d="Netværksudstyr og software til datacentre, også til AI." data-g="Netværk og forbindelseschips"><span class="cq-dc__lg"><img src="fra-critiquito/logos/arista-networks.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-dc__nm">Arista Networks</span><span class="cq-dc__cw">0,03 %</span></button></li></ul><button type="button" class="cq-dc__all" aria-expanded="false" aria-controls="cq-dc-l-net" data-n="8">Vis alle (8)</button></div></div><div class="cq-dc__info" aria-live="polite"></div></div></div><div class="cq-dc__lag cq-dc__scope" data-lag="h"><h3 class="cq-dc__lagh"><button type="button" class="cq-dc__dx cq-dc__lagb" aria-expanded="false" aria-controls="cq-dc-p-h" data-grp="lag" data-lag="h"><span class="cq-dc__sw cq-dc__sw--h" aria-hidden="true"><svg class="cq-dc__ic cq-dc__ic--grp" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.75 5.25h18.5"/><path d="M7.25 5.25v4M12 5.25v4M16.75 5.25v4" stroke-width="1"/><rect x="5.25" y="9.25" width="4" height="11" rx=".75"/><rect x="10" y="9.25" width="4" height="11" rx=".75"/><rect x="14.75" y="9.25" width="4" height="11" rx=".75"/><path d="M2.75 20.25h18.5"/></svg></span><span class="cq-dc__lagn">Hallen og driften</span><span class="cq-dc__lagw">4,00 %</span><span class="cq-dc__lagc">15 selskaber</span><span class="cq-dc__chev" aria-hidden="true"></span></button></h3><div class="cq-dc__lagp" id="cq-dc-p-h"><p class="cq-dc__lagx">Bygningen, kølingen og dem, der driver hallen og lejer regnekraften ud.</p><div class="cq-dc__led"><h4 class="cq-dc__lhh"><button type="button" class="cq-dc__dx cq-dc__lb2" aria-expanded="false" aria-controls="cq-dc-b-drift" data-grp="h"><svg class="cq-dc__ic cq-dc__ic--led" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18.5h10.25a4 4 0 0 0 .4-7.98A5.5 5.5 0 0 0 7.05 9.3 4.6 4.6 0 0 0 7 18.5z"/><path d="M8.75 13.25h5M8.75 15.75h5" stroke-width="1"/><circle cx="16" cy="13.25" r=".8" fill="currentColor" stroke="none"/><circle cx="16" cy="15.75" r=".8" fill="currentColor" stroke="none"/></svg><span class="cq-dc__ln">Datacenterdrift og cloud</span><span class="cq-dc__lm">3,13 % · 11 selskaber</span><span class="cq-dc__chev" aria-hidden="true"></span></button></h4><div class="cq-dc__lbody" id="cq-dc-b-drift"><p class="cq-dc__lx">Cloud betyder, at man lejer regnekraft og lager over nettet i stedet for at eje sine egne servere. Oracle og Microsoft er store udbydere, hvor cloud er en del af en stor softwareforretning. Flere af de øvrige kommer fra bitcoin-mining, altså at bruge computere og strøm til at registrere bitcoin-transaktioner mod betaling i bitcoin. Nu bruger de deres strøm og bygninger til AI.</p><ul class="cq-dc__cos" id="cq-dc-l-drift" data-top="5"><li><button type="button" class="cq-dc__co" aria-pressed="false" data-d="Ejer og driver datacentre og lejer regnekraft ud til AI. Driver stadig bitcoin-mining i dele af sine datacentre, mens de lægges om." data-g="Datacenterdrift og cloud" data-a="Krypto, Energi og elnet"><span class="cq-dc__lg"><img src="fra-critiquito/logos/iris-energy.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-dc__nm">IREN</span><span class="cq-dc__cw">0,65 %</span></button></li><li><button type="button" class="cq-dc__co" aria-pressed="false" data-d="Forretningssoftware og cloud. Oracles cloud leverer regnekraft, lager og netværk." data-g="Datacenterdrift og cloud" data-a="Software &amp; AI"><span class="cq-dc__lg"><img src="fra-critiquito/logos/oracle.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-dc__nm">Oracle</span><span class="cq-dc__cw">0,56 %</span></button></li><li><button type="button" class="cq-dc__co" aria-pressed="false" data-d="Bygger og driver datacentre og lejer plads ud til store AI-beregninger. Har også bitcoin-mining." data-g="Datacenterdrift og cloud" data-a="Krypto"><span class="cq-dc__lg"><img src="fra-critiquito/logos/core-scientific.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-dc__nm">Core Scientific</span><span class="cq-dc__cw">0,37 %</span></button></li><li><button type="button" class="cq-dc__co" aria-pressed="false" data-d="Er ved at lægge om fra bitcoin-mining til datacentre med lejeaftaler." data-g="Datacenterdrift og cloud" data-a="Krypto"><span class="cq-dc__lg"><img src="fra-critiquito/logos/cipher-mining.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-dc__nm">Cipher Digital</span><span class="cq-dc__cw">0,34 %</span></button></li><li><button type="button" class="cq-dc__co" aria-pressed="false" data-d="Ejer datacentre og lejer regnekraft til AI ud som cloudtjeneste." data-g="Datacenterdrift og cloud"><span class="cq-dc__lg"><img src="fra-critiquito/logos/whitefiber.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-dc__nm">WhiteFiber</span><span class="cq-dc__cw">0,26 %</span></button></li><li><button type="button" class="cq-dc__co" aria-pressed="false" data-d="Cloud bygget til AI: træning og brug af AI-modeller på egen software og egne servere." data-g="Datacenterdrift og cloud"><span class="cq-dc__lg"><img src="fra-critiquito/logos/coreweave.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-dc__nm">CoreWeave</span><span class="cq-dc__cw">0,25 %</span></button></li><li><button type="button" class="cq-dc__co" aria-pressed="false" data-d="Australsk udbyder af regnekraft til AI via cloud." data-g="Datacenterdrift og cloud"><span class="cq-dc__lg"><img src="fra-critiquito/logos/sharonai.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-dc__nm">SharonAI</span><span class="cq-dc__cw">0,23 %</span></button></li><li><button type="button" class="cq-dc__co" aria-pressed="false" data-d="Cloud til AI med regnekraft, software og tjenester til at træne og bruge AI-modeller." data-g="Datacenterdrift og cloud"><span class="cq-dc__lg"><img src="fra-critiquito/logos/nebius.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-dc__nm">Nebius</span><span class="cq-dc__cw">0,22 %</span></button></li><li><button type="button" class="cq-dc__co" aria-pressed="false" data-d="Software, cloud og AI. Microsofts cloud, Azure, leverer regnekraft, netværk og lager fra selskabets datacentre." data-g="Datacenterdrift og cloud" data-a="Software &amp; AI"><span class="cq-dc__lg"><img src="fra-critiquito/logos/microsoft.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-dc__nm">Microsoft</span><span class="cq-dc__cw">0,11 %</span></button></li><li><button type="button" class="cq-dc__co" aria-pressed="false" data-d="Driver datacentre til AI og andre store beregninger. Udlejning af regnekraft var 31,9 af 44,8 mio. USD i omsætning i 2. kvartal 2026." data-g="Datacenterdrift og cloud" data-a="Krypto"><span class="cq-dc__lg"><img src="fra-critiquito/logos/terawulf.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-dc__nm">TeraWulf</span><span class="cq-dc__cw">0,09 %</span></button></li><li><button type="button" class="cq-dc__co" aria-pressed="false" data-d="Designer, bygger og driver datacentre til AI og andre store beregninger. CoreWeave lejer kapacitet." data-g="Datacenterdrift og cloud"><span class="cq-dc__lg"><img src="fra-critiquito/logos/applied-digital.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-dc__nm">Applied Digital</span><span class="cq-dc__cw">0,05 %</span></button></li></ul><button type="button" class="cq-dc__all" aria-expanded="false" aria-controls="cq-dc-l-drift" data-n="11">Vis alle (11)</button></div></div><div class="cq-dc__led"><h4 class="cq-dc__lhh"><button type="button" class="cq-dc__dx cq-dc__lb2" aria-expanded="false" aria-controls="cq-dc-b-byg" data-grp="h"><svg class="cq-dc__ic cq-dc__ic--led" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.75 9.5L12 4l9.25 5.5"/><path d="M4.75 8.5v12h14.5v-12"/><circle cx="12" cy="14.5" r="3.75"/><path d="M12 14.5c0-1.6 1-2.6 2.2-2.4M12 14.5c-1.4.8-2.8.4-3.1-.8M12 14.5c1.4.8 1.6 2.2.6 3" stroke-width="1"/></svg><span class="cq-dc__ln">Byggeri og køling</span><span class="cq-dc__lm">0,87 % · 4 selskaber</span><span class="cq-dc__chev" aria-hidden="true"></span></button></h4><div class="cq-dc__lbody" id="cq-dc-b-byg"><p class="cq-dc__lx">Før den første server tændes, skal der være en bygning, el og køling. Serverne laver meget varme, og kølingen leder den væk. Selskaberne her er ingeniørfirmaer og entreprenører, der tegner, bygger og installerer.</p><ul class="cq-dc__cos" id="cq-dc-l-byg" data-top="5"><li><button type="button" class="cq-dc__co" aria-pressed="false" data-d="Udvikler et område til energi og datacentre i Texas." data-g="Byggeri og køling" data-a="Energi og elnet"><span class="cq-dc__lg"><img src="fra-critiquito/logos/fermi.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-dc__nm">Fermi</span><span class="cq-dc__cw">0,30 %</span></button></li><li><button type="button" class="cq-dc__co" aria-pressed="false" data-d="Ingeniør- og rådgivningsfirma inden for infrastruktur." data-g="Byggeri og køling" data-a="Energi og elnet"><span class="cq-dc__lg"><img src="fra-critiquito/logos/jacobs-solutions.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-dc__nm">Jacobs Solutions</span><span class="cq-dc__cw">0,27 %</span></button></li><li><button type="button" class="cq-dc__co" aria-pressed="false" data-d="Anlægsarbejde. Byggemodning og el-arbejde, bl.a. til datacentre, var 59 % af omsætningen." data-g="Byggeri og køling"><span class="cq-dc__lg"><img src="fra-critiquito/logos/sterling-infrastructure.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-dc__nm">Sterling Infrastructure</span><span class="cq-dc__cw">0,23 %</span></button></li><li><button type="button" class="cq-dc__co" aria-pressed="false" data-d="Installerer køling, ventilation, VVS og el i bygninger, bl.a. datacentre." data-g="Byggeri og køling"><span class="cq-dc__lg"><img src="fra-critiquito/logos/comfort-systems-usa.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-dc__nm">Comfort Systems USA</span><span class="cq-dc__cw">0,07 %</span></button></li></ul></div></div><div class="cq-dc__info" aria-live="polite"></div></div></div><div class="cq-dc__lag cq-dc__scope" data-lag="m"><h3 class="cq-dc__lagh"><button type="button" class="cq-dc__dx cq-dc__lagb" aria-expanded="false" aria-controls="cq-dc-p-m" data-grp="lag" data-lag="m"><span class="cq-dc__sw cq-dc__sw--m" aria-hidden="true"><svg class="cq-dc__ic cq-dc__ic--grp" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.75" y="8.25" width="18.5" height="7.5" rx="1.5"/><path d="M5.5 10.75h7M5.5 13.25h7" stroke-width="1"/><circle cx="16" cy="12" r="1" fill="currentColor" stroke="none"/><circle cx="18.5" cy="12" r="1" fill="currentColor" stroke="none"/></svg></span><span class="cq-dc__lagn">Maskinerne</span><span class="cq-dc__lagw">1,51 %</span><span class="cq-dc__lagc">8 selskaber</span><span class="cq-dc__chev" aria-hidden="true"></span></button></h3><div class="cq-dc__lagp" id="cq-dc-p-m"><p class="cq-dc__lagx">Serverne og de skabe, de sidder i.</p><figure class="dc-foto"><picture><source media="(max-width:599px)" srcset="fra-billedstil/billeder/datacenter-foto-rack-kabler-mobil.webp" width="480" height="600"><img src="fra-billedstil/billeder/datacenter-foto-rack-kabler-bred.webp" alt="Netværkskabler bag på et rack med servere" width="600" height="400" loading="lazy" decoding="async"></picture><figcaption>Hvordan arbejder tusindvis af computere sammen? Netværkskabler bag på et serverrack i et forskningsdatacenter i Californien. Foto: Derrick Coetzee, CC0, Wikimedia Commons (beskåret).</figcaption></figure><div class="cq-dc__led"><p class="cq-dc__lh"><svg class="cq-dc__ic cq-dc__ic--led" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2.75" width="14" height="18.5" rx="1.5"/><path d="M5 9h14M5 15h14"/><path d="M7.75 5.9h5M7.75 12h5M7.75 18.1h5" stroke-width="1"/><circle cx="16" cy="5.9" r=".9" fill="currentColor" stroke="none"/><circle cx="16" cy="12" r=".9" fill="currentColor" stroke="none"/><circle cx="16" cy="18.1" r=".9" fill="currentColor" stroke="none"/></svg><span class="cq-dc__ln">Servere og racks</span><span class="cq-dc__lm">1,51 % · 8 selskaber</span></p><p class="cq-dc__lx">En server er en computer uden skærm, der arbejder døgnet rundt. Serverne sidder stablet i høje skabe, der kaldes racks. Flere af selskaberne er kontraktproducenter, altså fabrikker, der producerer for andre.</p><ul class="cq-dc__cos" id="cq-dc-l-servere" data-top="5"><li><button type="button" class="cq-dc__co" aria-pressed="false" data-d="Samler bl.a. serverskabe, der er klar til AI." data-g="Servere og racks"><span class="cq-dc__lg"><img src="fra-critiquito/logos/tss.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-dc__nm">TSS</span><span class="cq-dc__cw">0,47 %</span></button></li><li><button type="button" class="cq-dc__co" aria-pressed="false" data-d="Designer og producerer for andre, bl.a. udstyr til AI- og clouddatacentre." data-g="Servere og racks"><span class="cq-dc__lg"><img src="fra-critiquito/logos/celestica.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-dc__nm">Celestica</span><span class="cq-dc__cw">0,45 %</span></button></li><li><button type="button" class="cq-dc__co" aria-pressed="false" data-d="Laver robuste, kraftige computere til brug ude i felten." data-g="Servere og racks"><span class="cq-dc__lg"><img src="fra-critiquito/logos/one-stop-systems.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-dc__nm">One Stop Systems</span><span class="cq-dc__cw">0,20 %</span></button></li><li><button type="button" class="cq-dc__co" aria-pressed="false" data-d="Producerer for andre. Området med regnekraft, strøm og køling til datacentre var 24 % af omsætningen." data-g="Servere og racks" data-a="Energi og elnet"><span class="cq-dc__lg"><img src="fra-critiquito/logos/flex.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-dc__nm">Flex</span><span class="cq-dc__cw">0,14 %</span></button></li><li><button type="button" class="cq-dc__co" aria-pressed="false" data-d="Servere og hele serverskabe, bl.a. til AI." data-g="Servere og racks"><span class="cq-dc__lg"><span class="cq-dc__ini" aria-hidden="true">SM</span></span><span class="cq-dc__nm">Super Micro Computer</span><span class="cq-dc__cw">0,10 %</span></button></li><li><button type="button" class="cq-dc__co" aria-pressed="false" data-d="Producerer for andre. Forretningsområdet Intelligent Infrastructure, som omfatter AI-infrastruktur og kunder inden for kapitaludstyr, cloud og datacentre samt netværk og kommunikation, var 48 % af omsætningen i 3. kvartal af regnskabsåret 2026 (marts til maj 2026)." data-g="Servere og racks"><span class="cq-dc__lg"><img src="fra-critiquito/logos/jabil.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-dc__nm">Jabil</span><span class="cq-dc__cw">0,07 %</span></button></li><li><button type="button" class="cq-dc__co" aria-pressed="false" data-d="PC&#x27;er, servere, lager og netværk. Leverede AI-servere for 24.683 mio. USD i regnskabsåret 2026." data-g="Servere og racks"><span class="cq-dc__lg"><img src="fra-critiquito/logos/dell.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-dc__nm">Dell</span><span class="cq-dc__cw">0,04 %</span></button></li><li><button type="button" class="cq-dc__co" aria-pressed="false" data-d="Producerer for andre. Området for cloud og AI-infrastruktur var 62 % af omsætningen i 3. kvartal." data-g="Servere og racks"><span class="cq-dc__lg"><img src="fra-critiquito/logos/sanmina.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-dc__nm">Sanmina</span><span class="cq-dc__cw">0,04 %</span></button></li></ul><button type="button" class="cq-dc__all" aria-expanded="false" aria-controls="cq-dc-l-servere" data-n="8">Vis alle (8)</button></div><div class="cq-dc__info" aria-live="polite"></div></div></div></div>
+</div>
+<p class="cq-dc__known"><b>Kendte navne fylder lidt:</b> Microsoft 0,11 % · Super Micro Computer 0,10 % · Cisco Systems 0,09 % · Dell 0,04 % · Arista Networks 0,03 %.</p>
+<p class="cq-dc__note">Alle procenter er andele af hele fonden, afdelingen PMINDI pr. 16.10.2026, og ikke af temaet. Hvert lags procent er de små grupper i laget lagt sammen. Hvor stor en del af selskabernes omsætning der kommer fra AI, kan ikke opgøres. Mange selskaber oplyser ikke tallet for sig. Sanmina oplyser fx kun ét samlet tal for cloud og AI-infrastruktur. I et datacenter bærer de samme kabler, lasere og servere både AI og almindelige apps.</p>
+</div>
+<script>(function(){var R=document.getElementById('cq-dc');if(!R||R.dataset.on)return;R.dataset.on='1';R.classList.add('cq-dc--js');
+var fine=window.matchMedia&&matchMedia('(hover: hover) and (pointer: fine)').matches;
+function show(btn){var sc=btn.closest('.cq-dc__scope')||R,inf=sc.querySelector('.cq-dc__info');if(!inf)return;inf.textContent='';
+inf.appendChild(btn.querySelector('.cq-dc__lg').cloneNode(true));var w=document.createElement('div');
+function el(t,c,x){var e=document.createElement(t);e.className=c;e.textContent=x;w.appendChild(e);return e}
+el('p','cq-dc__ig',btn.dataset.g);var h=el('p','cq-dc__ih',btn.querySelector('.cq-dc__nm').textContent);var s=document.createElement('span');s.textContent=btn.querySelector('.cq-dc__cw').textContent+' af fonden';h.appendChild(s);
+el('p','cq-dc__id',btn.dataset.d);if(btn.dataset.a)el('p','cq-dc__ia','Hører også til temaet: '+btn.dataset.a);inf.appendChild(w)}
+R.querySelectorAll('.cq-dc__co').forEach(function(b){b.addEventListener('click',function(){var sc=b.closest('.cq-dc__scope')||R;sc.querySelectorAll('.cq-dc__co[aria-pressed=true]').forEach(function(o){if(o!==b)o.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');show(b)});
+b.addEventListener('focus',function(){show(b)});if(fine)b.addEventListener('mouseenter',function(){show(b)})});
+function setAll(a,o){var l=document.getElementById(a.getAttribute('aria-controls'));l.classList.toggle('cq-dc--open',o);a.setAttribute('aria-expanded',o);a.textContent=o?'Vis færre':'Vis alle ('+a.dataset.n+')'}
+R.querySelectorAll('.cq-dc__all').forEach(function(a){a.addEventListener('click',function(){var o=a.getAttribute('aria-expanded')!=='true';setAll(a,o);if(o){var l=document.getElementById(a.getAttribute('aria-controls')),f=l.children[5];if(f)f.querySelector('button').focus()}})});
+function setDx(b,o){var t=document.getElementById(b.getAttribute('aria-controls'));b.setAttribute('aria-expanded',o);t.hidden=!o;
+ if(o&&b.dataset.grp)R.querySelectorAll('.cq-dc__dx[data-grp="'+b.dataset.grp+'"]').forEach(function(x){if(x!==b&&x.getAttribute('aria-expanded')==='true')setDx(x,false)});
+ R.dispatchEvent(new CustomEvent('cq:dx',{detail:{btn:b,open:o}}))}
+R.cqSetDx=setDx;
+R.querySelectorAll('.cq-dc__dx').forEach(function(b){setDx(b,b.dataset.open==='1');b.addEventListener('click',function(){setDx(b,b.getAttribute('aria-expanded')!=='true')})});
+R.addEventListener('keydown',function(e){if(e.key!=='Escape'&&e.key!=='Esc')return;var n=document.activeElement;
+ if(n&&n.getAttribute&&n.getAttribute('aria-expanded')==='true'){e.preventDefault();if(n.classList.contains('cq-dc__all'))setAll(n,false);else setDx(n,false);return}
+ while(n&&n!==R){if(n.id){var b=R.querySelector('[aria-controls="'+n.id+'"][aria-expanded="true"]');if(b){e.preventDefault();if(b.classList.contains('cq-dc__all'))setAll(b,false);else setDx(b,false);b.focus();return}}n=n.parentNode}});
+})();
+(function(){var R=document.getElementById('cq-dc');var rings=[].slice.call(R.querySelectorAll('.cq-dc__ring'));
+function hi(){rings.forEach(function(g){var b=R.querySelector('.cq-dc__lagb[data-lag="'+g.dataset.lag+'"]');g.classList.toggle('cq-dc--hi',b.getAttribute('aria-expanded')==='true')})}
+R.addEventListener('cq:dx',hi);hi();
+rings.forEach(function(g){g.addEventListener('click',function(e){e.stopPropagation();var b=R.querySelector('.cq-dc__lagb[data-lag="'+g.dataset.lag+'"]');R.cqSetDx(b,true);b.focus({preventScroll:true});if(window.innerWidth<900)b.scrollIntoView({block:'nearest'})})});
+var rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(!rm&&'IntersectionObserver' in window){var F=R.querySelector('.cq-dc__fig');R.classList.add('cq-dc--arm');var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){setTimeout(function(){R.classList.remove('cq-dc--arm')},150);io.disconnect()}},{threshold:.6});io.observe(F)}
+})();</script>
+</section></div>
+
+<section class="s" id="fod" aria-labelledby="fod-h"><div class="wrap">
+<p class="eyebrow">Naboerne</p>
+<h2 id="fod-h">Også med en fod i datacentre</h2>
+<p class="smal">Nogle selskaber leverer også til datacentre, men hører i fonden til et andet tema, fordi det er der, deres hovedforretning er. Det gælder bl.a. selskaber, der leverer strøm, chips og harddiske.</p>
+<p class="smal">31 selskaber med i alt 10,36 % af hele fonden, afdelingen PMINDI pr. 16.10.2026. De tæller ikke med i de 12,59 %.</p>
+<ul class="fod" id="fod-liste"><li><b>SoftBank Group</b><span>Hovedtema: Platformsøkonomi</span><i>1,54 %<span class="sr"> af fonden</span></i></li><li><b>SpaceX</b><span>Hovedtema: Rumfart</span><i>1,38 %<span class="sr"> af fonden</span></i></li><li><b>Broadcom</b><span>Hovedtema: Chips og halvledere</span><i>0,56 %<span class="sr"> af fonden</span></i></li><li><b>CleanSpark</b><span>Hovedtema: Krypto</span><i>0,52 %<span class="sr"> af fonden</span></i></li><li><b>Generac</b><span>Hovedtema: Energi og elnet</span><i>0,51 %<span class="sr"> af fonden</span></i></li><li><b>Navitas Semiconductor</b><span>Hovedtema: Chips og halvledere</span><i>0,51 %<span class="sr"> af fonden</span></i></li><li><b>Bitdeer</b><span>Hovedtema: Krypto</span><i>0,49 %<span class="sr"> af fonden</span></i></li><li><b>Western Digital</b><span>Hovedtema: Chips og halvledere</span><i>0,44 %<span class="sr"> af fonden</span></i></li><li><b>Power Solutions International</b><span>Hovedtema: Energi og elnet</span><i>0,43 %<span class="sr"> af fonden</span></i></li><li><b>Amazon</b><span>Hovedtema: Platformsøkonomi</span><i>0,41 %<span class="sr"> af fonden</span></i></li><li><b>Seagate Technology</b><span>Hovedtema: Chips og halvledere</span><i>0,35 %<span class="sr"> af fonden</span></i></li><li><b>Galaxy Digital</b><span>Hovedtema: Krypto</span><i>0,34 %<span class="sr"> af fonden</span></i></li><li><b>Riot Platforms</b><span>Hovedtema: Krypto</span><i>0,32 %<span class="sr"> af fonden</span></i></li><li><b>ERock</b><span>Hovedtema: Energi og elnet</span><i>0,27 %<span class="sr"> af fonden</span></i></li><li><b>NVIDIA</b><span>Hovedtema: Chips og halvledere</span><i>0,26 %<span class="sr"> af fonden</span></i></li><li><b>Keel Infrastructure</b><span>Hovedtema: Krypto</span><i>0,24 %<span class="sr"> af fonden</span></i></li><li><b>Talen Energy</b><span>Hovedtema: Energi og elnet</span><i>0,24 %<span class="sr"> af fonden</span></i></li><li><b>Chemours</b><span>Hovedtema: Råstoffer</span><i>0,23 %<span class="sr"> af fonden</span></i></li><li><b>Bloom Energy</b><span>Hovedtema: Energi og elnet</span><i>0,21 %<span class="sr"> af fonden</span></i></li><li><b>Oklo</b><span>Hovedtema: Energi og elnet</span><i>0,17 %<span class="sr"> af fonden</span></i></li><li><b>Quanta Services</b><span>Hovedtema: Energi og elnet</span><i>0,16 %<span class="sr"> af fonden</span></i></li><li><b>Bit Digital</b><span>Hovedtema: Krypto</span><i>0,15 %<span class="sr"> af fonden</span></i></li><li><b>Monolithic Power Systems</b><span>Hovedtema: Chips og halvledere</span><i>0,12 %<span class="sr"> af fonden</span></i></li><li><b>Solaris Energy Infrastructure</b><span>Hovedtema: Energi og elnet</span><i>0,10 %<span class="sr"> af fonden</span></i></li><li><b>Marvell</b><span>Hovedtema: Chips og halvledere</span><i>0,09 %<span class="sr"> af fonden</span></i></li><li><b>Caterpillar</b><span>Hovedtema: Energi og elnet</span><i>0,08 %<span class="sr"> af fonden</span></i></li><li><b>Cummins</b><span>Hovedtema: Energi og elnet</span><i>0,07 %<span class="sr"> af fonden</span></i></li><li><b>Alibaba</b><span>Hovedtema: Platformsøkonomi</span><i>0,05 %<span class="sr"> af fonden</span></i></li><li><b>Meta</b><span>Hovedtema: Platformsøkonomi</span><i>0,05 %<span class="sr"> af fonden</span></i></li><li><b>AMD</b><span>Hovedtema: Chips og halvledere</span><i>0,04 %<span class="sr"> af fonden</span></i></li><li><b>Cloudflare</b><span>Hovedtema: Software &amp; AI</span><i>0,03 %<span class="sr"> af fonden</span></i></li></ul>
+<button type="button" class="knap" id="fod-alle" aria-expanded="false" aria-controls="fod-liste" hidden>Vis alle (31)</button>
+<p class="note">Hovedtemaet er det tema, selskabet tæller med i.</p>
+</div></section>
+
+<section class="s" id="udefra" aria-labelledby="udefra-h"><div class="wrap">
+<p class="eyebrow">Set udefra</p>
+<h2 id="udefra-h">Inde i hallen og i nyhederne</h2>
+<div class="udefra-g">
+<figure class="vid"><div class="vid-ramme" data-yt="FsxthdQ_sL4" data-title="Video: Inside a Google Cloud TPU Data Center (Google Cloud)"><button type="button" class="vid-play" aria-label="Afspil video fra Google Cloud: Inde i et af Googles datacentre (2 min. 40 sek., på engelsk). Videoen hentes fra YouTube."><picture><source media="(max-width:599px)" srcset="fra-billedstil/billeder/datacenter-plakat-FsxthdQ_sL4-mobil.webp"><img src="fra-billedstil/billeder/datacenter-plakat-FsxthdQ_sL4-bred.webp" alt="" width="960" height="540" loading="lazy"></picture><span class="vid-kilde" aria-hidden="true">Google Cloud</span><span class="vid-ikon" aria-hidden="true"></span><span class="vid-tid" aria-hidden="true">2:40</span></button></div>
+<figcaption><b>Google Cloud viser rundt i et af Googles datacentre: racks med AI-servere, netværk, kontakter, der sender lyset videre, væskekøling og adgangskontrol.</b> TPU i titlen er Googles egen AI-chip. Kilde: Google Cloud. Video fra 29.08.2023, 2:40, på engelsk: “Inside a Google Cloud TPU Data Center”. Google (Alphabet) er ikke blandt fondens selskaber. <a href="https://www.youtube.com/watch?v=FsxthdQ_sL4" rel="noopener" target="_blank">Se på YouTube<span class="sr"> (åbner i nyt vindue)</span></a></figcaption></figure>
+<div>
+<ul class="xs" id="x-liste"><li class="xp kort" data-url="https://twitter.com/business/status/2113167250127548426"><div class="xp-top"><p class="xp-trin"><a href="#cq-dc" data-lag="f">Hører til: Forbindelserne</a></p><p class="xp-dato"><time datetime="2026-10-22">22.10.2026</time></p></div><p class="xp-fra"><b>Bloomberg</b> <span>@business · på engelsk</span></p><p class="xp-forkl"><span class="xp-k">Kort fortalt</span> Ifølge Bloomberg skyldtes det stigende efterspørgsel efter netværksudstyr til datacentre, at Nokias overskud i tredje kvartal blev højere, end analytikerne havde ventet. Bloomberg skriver, at investeringerne i AI-infrastruktur vokser kraftigt. Nokia er ikke blandt fondens selskaber.</p><div class="xp-knapper"><button type="button" class="xp-vis" hidden>Vis opslaget<span class="sr"> fra Bloomberg</span></button><a class="xp-link" href="https://twitter.com/business/status/2113167250127548426" rel="noopener" target="_blank">Se opslaget på X<span class="sr"> (åbner i nyt vindue)</span></a></div><div class="xp-embed" tabindex="-1" role="group" aria-label="Opslag fra Bloomberg på X"></div></li><li class="xp kort x-mere" data-url="https://twitter.com/CNBC/status/2112967211027509396"><div class="xp-top"><p class="xp-trin"><a href="#cq-dc" data-lag="m">Hører til: Maskinerne</a></p><p class="xp-dato"><time datetime="2026-10-21">21.10.2026</time></p></div><p class="xp-fra"><b>CNBC</b> <span>@CNBC · på engelsk</span></p><p class="xp-forkl"><span class="xp-k">Kort fortalt</span> Ifølge CNBC har Nvidia præsenteret DSX Pod AI Factory, der samler syv racks med NVIDIAs nye AI-computere (Vera Rubin) i en enhed på størrelse med en standardcontainer, som vejer omkring 28.000 kg. Ifølge Nvidia er den bygget til at blive fragtet på lastbil ad almindelige veje, og kabler og væskekøling samles på fabrikken.</p><div class="xp-knapper"><button type="button" class="xp-vis" hidden>Vis opslaget<span class="sr"> fra CNBC</span></button><a class="xp-link" href="https://twitter.com/CNBC/status/2112967211027509396" rel="noopener" target="_blank">Se opslaget på X<span class="sr"> (åbner i nyt vindue)</span></a></div><div class="xp-embed" tabindex="-1" role="group" aria-label="Opslag fra CNBC på X"></div></li><li class="xp kort x-mere" data-url="https://twitter.com/theinformation/status/2111925311789019323"><div class="xp-top"><p class="xp-trin"><a href="#cq-dc" data-lag="h">Hører til: Hallen og driften</a></p><p class="xp-dato"><time datetime="2026-10-18">18.10.2026</time></p></div><p class="xp-fra"><b>The Information</b> <span>@theinformation · på engelsk</span></p><p class="xp-forkl"><span class="xp-k">Kort fortalt</span> Ifølge The Information bygger tech-chefer og AI-udviklere egne små datacentre i kældre, garager og hjemmekontorer for at undgå at betale for cloudberegning. Mediet skriver, at maskinerne giver mere kontrol over AI-modellerne, men også skaber dyre problemer med køling.</p><div class="xp-knapper"><button type="button" class="xp-vis" hidden>Vis opslaget<span class="sr"> fra The Information</span></button><a class="xp-link" href="https://twitter.com/theinformation/status/2111925311789019323" rel="noopener" target="_blank">Se opslaget på X<span class="sr"> (åbner i nyt vindue)</span></a></div><div class="xp-embed" tabindex="-1" role="group" aria-label="Opslag fra The Information på X"></div></li></ul>
+<button type="button" class="knap" id="x-mere" aria-expanded="false" aria-controls="x-liste" hidden>Vis 2 opslag mere</button>
+<p class="xnote">Opslagene er udvalgt af teamet bag NewDeal Invest. Afsenderne og de nævnte selskaber står ikke bag denne side, og opslagene er ikke fondens vurdering.</p>
+</div>
+</div>
+</div></section>
+
+<section class="s" id="risiko" aria-labelledby="risiko-h"><div class="wrap">
+<div class="risiko kort">
+<h2 id="risiko-h">Det skal man vide om temaet</h2>
+<ul id="risiko-liste"><li><b>Få store kunder.</b> Hos flere af selskaberne kommer meget af omsætningen fra få kunder. <span class="eks">Core Scientific lejer kun datacenterplads ud til CoreWeave (<a href="https://www.sec.gov/Archives/edgar/data/1839341/000162828026013305/core-20251231.htm" rel="noopener" target="_blank">Core Scientific, årsrapport 2025<span class="sr"> (åbner i nyt vindue)</span></a>).</span></li><li><b>Investeringer før indtægter.</b> Et datacenter skal bygges og udstyres, før det kan lejes ud. <span class="eks">CoreWeave havde i 2025 en omsætning på 5.131 mio. USD og et underskud på 1.167 mio. USD (<a href="https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm" rel="noopener" target="_blank">CoreWeave, årsrapport 2025<span class="sr"> (åbner i nyt vindue)</span></a>). Fermi havde ingen omsætning pr. 30.06.2026 (<a href="https://www.sec.gov/Archives/edgar/data/2071778/000207177826000051/frmi-20260630.htm" rel="noopener" target="_blank">Fermi, kvartalsrapport<span class="sr"> (åbner i nyt vindue)</span></a>).</span></li><li><b>Teknologi under udvikling.</b> Nogle af selskaberne udvikler stadig deres teknologi og har kun en meget lille omsætning<span class="eks">, fx Lightwave Logic (<a href="https://www.sec.gov/Archives/edgar/data/1325964/000107997326000348/lwlg_10k-123125.htm" rel="noopener" target="_blank">Lightwave Logic, årsrapport 2025<span class="sr"> (åbner i nyt vindue)</span></a>)</span>.</li><li><b>Omstilling fra bitcoin-mining.</b> Flere af de selskaber, der lejer regnekraft ud, driver stadig bitcoin-mining ved siden af. <span class="eks">Hos Cipher Digital kom al omsætning i 2025 og første halvår 2026 fra mining (<a href="https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm" rel="noopener" target="_blank">årsrapport 2025<span class="sr"> (åbner i nyt vindue)</span></a> og <a href="https://www.sec.gov/Archives/edgar/data/1819989/000181998926000041/cifr-20260630.htm" rel="noopener" target="_blank">kvartalsrapport<span class="sr"> (åbner i nyt vindue)</span></a>).</span></li><li><b>Datacentre er ikke hele forretningen.</b> Hos nogle selskaber er datacentre kun en del af salget. <span class="eks">Hos nLight kom 67 % af omsætningen fra forsvar og luftfart (<a href="https://www.sec.gov/Archives/edgar/data/1124796/000112479626000012/lasr-20251231.htm" rel="noopener" target="_blank">nLight, årsrapport 2025<span class="sr"> (åbner i nyt vindue)</span></a>).</span></li></ul>
+<button type="button" class="knap" id="risiko-eks" aria-expanded="false" aria-controls="risiko-liste" hidden>Se eksempler og kilder</button>
+<p class="note eks">Kilder: selskabernes årsrapporter og kvartalsrapporter, linket ved hvert tal.</p>
+</div>
+</div></section>
+
+<section class="s" id="videre" aria-labelledby="videre-h"><div class="wrap">
+<p class="eyebrow">Videre</p>
+<h2 id="videre-h">Det hænger sammen</h2>
+<div class="videre-g">
+<figure class="graf kort"><img src="fra-billedstil/grafik/datacenter-overgang-naboer.svg" alt="Chippen sidder i serveren, og hallen trækker strøm udefra" width="960" height="320" loading="lazy"><figcaption>Illustration: NewDeal Invest.</figcaption></figure>
+<div>
+<p>Datacentrene hænger sammen med strømmen, der driver dem, chippen, der regner i dem, og bitcoin-mining, som flere af selskaberne kommer fra.</p>
+<ul class="cta">
+<li><a href="../chips/index.html">Chips og halvledere <span>Chippen i serveren</span></a></li>
+<li><a href="../krypto/index.html">Bitcoin-mining hører til fondens tema Krypto.</a></li>
+</ul>
+</div>
+</div>
+</div></section>
+
+<section class="s kilder" id="kilder" aria-labelledby="kilder-h"><div class="wrap">
+<details class="kilder-d" id="kilder-d">
+<summary><h2 id="kilder-h">Kilder og kreditering</h2></summary>
+<h3>Tal</h3>
+<ul>
+<li>Andele: afdelingen PMINDI pr. 16.10.2026 (fondens data). Temaer og grupper: NewDeal Invests egen opdeling.</li>
+<li>Selskabsoplysninger: selskabernes årsrapporter og kvartalsrapporter, linket ved hvert tal.</li>
+<li>Investeringer i bygninger og udstyr: årsrapporter fra <a href="https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm" rel="noopener" target="_blank">Amazon<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm" rel="noopener" target="_blank">Microsoft<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm" rel="noopener" target="_blank">Alphabet<span class="sr"> (åbner i nyt vindue)</span></a> og <a href="https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm" rel="noopener" target="_blank">Meta<span class="sr"> (åbner i nyt vindue)</span></a>. Omregnet med Nationalbankens gennemsnitskurs for 2025 (Danmarks Statistik, DNVALA). BNP: Danmarks Statistik, NAN1.</li>
+</ul>
+<h3>Billeder, video og opslag</h3>
+<ul>
+<li>Tegninger, ikoner og videoplakat: NewDeal Invest.</li>
+<li>Foto af rack: Derrick Coetzee, <a href="https://commons.wikimedia.org/wiki/File:Rear_of_rack_at_NERSC_data_center_-_closeup.jpg" rel="noopener" target="_blank">“Rear of rack at NERSC data center - closeup”<span class="sr"> (åbner i nyt vindue)</span></a>, Wikimedia Commons, <a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="noopener" target="_blank">CC0<span class="sr"> (åbner i nyt vindue)</span></a> (beskåret). Taget i NERSC-datacentret i Californien.</li>
+<li>Video: Google Cloud, “Inside a Google Cloud TPU Data Center”, YouTube, 29.08.2023.</li>
+<li>Opslag: CNBC, Bloomberg og The Information på X. Opslagene vises kun, hvis du klikker.</li>
+<li>Logoer tilhører de enkelte selskaber.</li>
+</ul>
+</details>
+</div></section>
+</main>
+<footer><div class="wrap">
+<p>Siden beskriver indholdet af fonden og er ikke investeringsrådgivning. Omtalen af et selskab er ikke en anbefaling.</p>
+<p>Risikoindikatoren i fondens Dokument med central information (KID) er 5 på en skala fra 1 til 7. Historiske afkast er ingen garanti for fremtidige afkast. Du kan tabe hele eller dele af det investerede beløb.</p>
+</div></footer>
+<script>(function(){
+document.documentElement.classList.add('js');
+var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var pr=document.querySelector('.prog');
+function prog(){var h=document.documentElement,m=h.scrollHeight-innerHeight;pr.style.setProperty('--p',m>0?(scrollY/m).toFixed(3):0)}
+addEventListener('scroll',prog,{passive:true});prog();
+/* også med en fod: listen foldet, Vis alle (31) */
+var fl=document.getElementById('fod-liste'),fb=document.getElementById('fod-alle');
+if(fl&&fb){fb.hidden=false;fb.addEventListener('click',function(){var o=fb.getAttribute('aria-expanded')!=='true';fb.setAttribute('aria-expanded',String(o));fl.classList.toggle('alle',o);fb.textContent=o?'Vis færre':'Vis alle (31)';if(o){var f=fl.querySelector('li:nth-child(2)');if(f){f.tabIndex=-1;f.focus({preventScroll:true})}}})}
+/* X: ét opslag synligt, to bag knap */
+var xl=document.getElementById('x-liste'),xm=document.getElementById('x-mere');
+if(xl&&xm){xm.hidden=false;xm.addEventListener('click',function(){var o=xm.getAttribute('aria-expanded')!=='true';xm.setAttribute('aria-expanded',String(o));xl.classList.toggle('alle',o);xm.textContent=o?'Vis færre':'Vis 2 opslag mere';if(o){var f=xl.querySelector('.x-mere');if(f){f.tabIndex=-1;f.focus({preventScroll:true})}}})}
+/* X-facade: intet hentes fra X før klik; widgets.js indlæses én gang */
+function twl(){if(window.twttr&&window.twttr.widgets)return;window.twttr=(function(d){var t=window.twttr||{};if(t._e)return t;t._e=[];t.ready=function(f){t._e.push(f)};var j=d.createElement('script');j.id='twitter-wjs';j.async=true;j.src='https://platform.twitter.com/widgets.js';j.charset='utf-8';d.body.appendChild(j);return t})(document)}
+[].forEach.call(document.querySelectorAll('.xp[data-url]'),function(li){var b=li.querySelector('.xp-vis'),em=li.querySelector('.xp-embed');b.hidden=false;
+ b.addEventListener('click',function(){if(em.firstChild)return;var q=document.createElement('blockquote');q.className='twitter-tweet';q.setAttribute('data-theme','dark');q.setAttribute('data-dnt','true');q.setAttribute('data-conversation','none');q.setAttribute('data-lang','da');
+ var a=document.createElement('a');a.href=li.dataset.url;a.textContent='Opslaget hentes fra X …';q.appendChild(a);em.appendChild(q);b.hidden=true;em.focus({preventScroll:true});
+ twl();window.twttr.ready(function(t){t.widgets.load(em)})})});
+/* "Hører til": åbn gruppen i zoomen */
+var R=document.getElementById('cq-dc');
+[].forEach.call(document.querySelectorAll('.xp-trin a[data-lag]'),function(a){a.addEventListener('click',function(e){var b=R&&R.querySelector('.cq-dc__lagb[data-lag="'+a.dataset.lag+'"]');if(!b||!R.cqSetDx)return;e.preventDefault();R.cqSetDx(b,true);b.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});b.focus({preventScroll:true})})});
+/* risiko: eksempler og kilder bag knap */
+var rk=document.querySelector('.risiko'),rx=document.getElementById('risiko-eks');
+if(rk&&rx){rx.hidden=false;rx.addEventListener('click',function(){var o=rx.getAttribute('aria-expanded')!=='true';rx.setAttribute('aria-expanded',String(o));rk.classList.toggle('aaben',o);rx.textContent=o?'Skjul eksempler og kilder':'Se eksempler og kilder'})}
+/* kilder: åbn den foldede liste, når der linkes til den */
+var kd=document.getElementById('kilder-d');
+[].forEach.call(document.querySelectorAll('a[href="#kilder"]'),function(a){a.addEventListener('click',function(){if(kd)kd.open=true})});
+/* video-facade: YouTube (nocookie) hentes først ved klik */
+[].forEach.call(document.querySelectorAll('.vid-ramme[data-yt]'),function(r){var b=r.querySelector('.vid-play');b.addEventListener('click',function(){var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+r.dataset.yt+'?autoplay=1&rel=0&playsinline=1';f.title=r.dataset.title;f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.setAttribute('allowfullscreen','');f.referrerPolicy='strict-origin-when-cross-origin';r.replaceChild(f,b);f.focus()})});
+})();
+</script>
+</body>
+</html>

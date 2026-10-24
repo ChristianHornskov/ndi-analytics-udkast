@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:,">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sundhed og biotek: muligt er ikke det samme som vist · NewDeal Invest</title>
+<meta name="description" content="Hvordan bliver teknologi til behandling? Fondens selskaber inden for digital sundhed, bioteknologi og lægemidler, og forskellen på teknisk muligt og dokumenteret effekt.">
+<link rel="preload" href="fonts/font-1.woff2" as="font" type="font/woff2" crossorigin>
+<style>@font-face{font-family:'DM Sans';font-style:normal;font-weight:100 900;font-display:swap;src:url('fonts/font-1.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:100 900;font-display:swap;src:url('fonts/font-0.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:200 800;font-display:swap;src:url('fonts/font-3.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:200 800;font-display:swap;src:url('fonts/font-2.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}
+:root{--bg:#050a0f;--ink:#e6e8ed;--mute:#aebbc7;--acc:#b19ea7;--al:#d6cad0;--teal:#89aeb4;--accbg:#1f191d;--line:#313a4a;--card:#0b141c;--surf:#0f1a22;--fokus:#cde0e2}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 'DM Sans',system-ui,sans-serif;overflow-x:hidden}
+img,svg{max-width:100%;height:auto;display:block}
+a{color:var(--al);text-underline-offset:3px}
+a:hover{color:var(--ink)}
+:focus-visible{outline:3px solid var(--fokus);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:Manrope,'DM Sans',sans-serif;font-weight:500;line-height:1.18;letter-spacing:-.04em;margin:0}
+h2{font-size:clamp(28px,7vw,42px);font-weight:500;margin:.2rem 0 1rem}
+p{margin:0 0 1rem}
+.wrap{width:min(1120px,100% - 2.5rem);margin:0 auto}
+.smal{max-width:44rem}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-999px;top:8px;z-index:50;background:var(--ink);color:var(--bg);padding:.7rem 1rem;border-radius:6px}
+.skip:focus{left:8px}
+.eyebrow{font:600 11px/1.3 'DM Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin:0 0 12px}
+.note{font-size:.85rem;color:var(--mute);margin:.9rem 0 0}
+.kort{background:var(--card);border:1px solid var(--line);border-radius:12px}
+.top{position:sticky;top:0;z-index:20;background:#000;border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px}
+.top img{width:130px;height:auto;display:block}
+.top span{font-size:11px;letter-spacing:.14em;color:var(--teal);font-weight:600;text-transform:uppercase;text-align:right}
+.prog{position:absolute;left:0;bottom:-1px;height:2px;width:100%;background:var(--acc);transform-origin:0 50%;transform:scaleX(var(--p,0))}
+/* hero: indlægssedlen */
+.hero{position:relative}
+.hero-bill{margin:0;position:relative}
+.hero-bill img{width:100%;max-height:560px;object-fit:cover}
+@media(max-width:599px){.hero-bill img{max-height:320px}}
+.hero-bill::after{content:"";position:absolute;inset:auto 0 0 0;height:55%;background:linear-gradient(transparent,var(--bg));pointer-events:none}
+.hero-g{position:relative;z-index:2;margin-top:clamp(-8rem,-11vw,-3rem);padding-bottom:clamp(2rem,5vw,3.5rem);display:grid;gap:1.5rem}
+@media(min-width:880px){.hero-g{grid-template-columns:minmax(0,7fr) minmax(0,5fr);align-items:end}}
+.hero h1{font-size:clamp(40px,11vw,72px);font-weight:500;margin:0 0 .4rem;letter-spacing:-.04em}
+.hero .under{font:500 clamp(1.05rem,2.4vw,1.3rem)/1.3 Manrope,sans-serif;color:var(--al);margin:0 0 1.1rem}
+.hero .lead{font-size:clamp(1.08rem,2.2vw,1.25rem);max-width:40rem}
+.hero .lead+p{max-width:40rem;color:var(--mute)}
+.kred{font-size:.8rem;color:var(--mute);margin:.4rem 0 0}
+section.s{padding:clamp(1.75rem,6vw,4rem) 0;border-top:1px solid var(--line);scroll-margin-top:4.5rem}
+/* fonden */
+.fonden-g{display:grid;gap:1.25rem;grid-template-columns:minmax(0,1fr)}
+@media(min-width:880px){.fonden-g{grid-template-columns:minmax(0,5fr) minmax(0,6fr);align-items:start}}
+.vindue{overflow:hidden}
+.vindue-in{padding:1.25rem 1.5rem 1.4rem}
+.tal{font:800 clamp(3.4rem,13vw,5.4rem)/1 Manrope,sans-serif;color:var(--ink);margin:0 0 .3rem;letter-spacing:-.03em}
+.tal small{font-size:.45em;color:var(--al);margin-left:.1em}
+.tal .mk{display:none}.x-unused{display:inline-block;width:.07em;height:.8em;background:var(--acc);margin-left:.08em;vertical-align:-.05em}
+@media(prefers-reduced-motion:no-preference){.tal .mk{display:none}.x-unused{animation:su-blink 1.1s steps(2,start) infinite}}
+@keyframes su-blink{to{visibility:hidden}}
+.fakta{list-style:none;margin:1rem 0 0;padding:0;display:grid;gap:.5rem}
+.fakta li{display:flex;justify-content:space-between;gap:1rem;border-top:1px solid var(--line);padding-top:.5rem;font-size:.95rem}
+.fakta b{font-weight:600;text-align:right}
+.strip{display:flex;height:14px;border-radius:7px;margin:.4rem 0 .5rem;gap:2px}
+.strip span:first-child{border-radius:7px 0 0 7px}.strip span:last-child{border-radius:0 7px 7px 0}
+.strip span{background:#3a4558;height:100%}
+.strip .hl{background:var(--al);box-shadow:0 0 0 2px var(--bg),0 0 0 3px var(--al)}
+.strip-l{font-size:.9rem;margin:0}
+.strip-l b{color:var(--ink)}
+.alle12{margin-top:.6rem}
+.alle12 summary,.fold summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-weight:600;color:var(--al)}
+.alle12 ol{margin:.2rem 0 0;padding-left:1.4rem;font-size:.9rem;columns:2 14rem;column-gap:2rem}
+.alle12 li.hl{font-weight:700}
+/* tilføjelser */
+.sw-ik{display:inline-block;width:22px;height:22px;vertical-align:-5px;margin-right:.45rem}
+.sw-illu{width:100%;max-width:240px;margin:.2rem 0 .8rem}
+.sw-mere{font-size:.9rem;color:var(--mute);margin:.2rem 0 .8rem}
+.sw-noteik{display:inline-block;width:20px;height:20px;vertical-align:-4px;margin-right:.4rem}
+.efter{margin-top:1.25rem;max-width:46rem;font-size:.95rem;color:var(--mute)}
+.efter b{color:var(--ink);font-weight:600}
+/* naboer */
+.nabo-h{display:flex;align-items:center;gap:.7rem}
+.nabo-h img{width:36px;height:36px;flex:none}
+.knap{display:inline-flex;align-items:center;gap:.5rem;min-height:44px;padding:.55rem 1rem;border:1px solid var(--acc);border-radius:999px;background:transparent;color:var(--ink);font:600 .95rem 'DM Sans',sans-serif;cursor:pointer;margin-top:.9rem}
+.knap:hover{background:var(--accbg)}
+.knap[hidden]{display:none}
+.fold{margin-top:1rem;border:1px solid var(--line);border-radius:10px;background:var(--card)}
+.fold summary{padding:.4rem 1rem}
+.fold>div{padding:0 1rem 1rem}
+.binder{display:grid;gap:1.25rem;margin-top:1.75rem}
+@media(min-width:880px){.binder{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center}}
+.graf{margin:0;padding:.8rem}
+.graf figcaption{margin-top:.3rem!important}
+.graf figcaption{font-size:.85rem;color:var(--mute);margin-top:.6rem}
+.cta{list-style:none;margin:0;padding:0;display:grid;gap:.6rem}
+.cta a{display:flex;justify-content:space-between;align-items:center;gap:1rem;min-height:56px;padding:.8rem 1.1rem;border:1px solid var(--acc);border-radius:12px;color:var(--ink);text-decoration:none;font-weight:600;background:var(--surf)}
+.cta a:hover{background:var(--accbg)}
+.cta a span{color:var(--mute);font-weight:400;font-size:.88rem;text-align:right}
+@media(max-width:599px){.cta a{flex-direction:column;align-items:flex-start;gap:.1rem}.cta a span{text-align:left}}
+.cta .ingen{padding:.4rem 1.1rem;color:var(--mute);font-size:.92rem}
+/* set udefra */
+.udefra-g{display:grid;gap:1.5rem}
+@media(min-width:960px){.udefra-g{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);align-items:start}}
+.vid{margin:0}
+.vid-ramme{position:relative;aspect-ratio:16/9;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:#000}
+.vid-ramme iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vid-play{position:absolute;inset:0;width:100%;height:100%;padding:0;border:0;background:#000;display:block;cursor:pointer}
+.vid-play img{width:100%;height:100%;object-fit:cover}
+.vid-ikon{position:absolute;z-index:2;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:#fff;box-shadow:0 4px 24px rgba(0,0,0,.5)}
+.vid-ikon::after{content:"";position:absolute;left:26px;top:20px;border-style:solid;border-width:12px 0 12px 19px;border-color:transparent transparent transparent #050a0f}
+.vid-tid{position:absolute;z-index:2;right:8px;bottom:8px;background:rgba(0,0,0,.8);color:#fff;font-size:13px;padding:2px 8px;border-radius:4px}
+.vid-kilde{position:absolute;z-index:2;left:8px;top:8px;background:rgba(0,0,0,.82);color:#fff;font-size:13px;font-weight:600;padding:3px 9px;border-radius:4px}
+.vid figcaption{font-size:.9rem;color:var(--mute);margin-top:.7rem}
+.vid figcaption b{color:var(--ink);font-weight:600}
+.fold .vid+.vid{margin-top:1.25rem}
+.xs{list-style:none;margin:0;padding:0;display:grid;gap:.8rem}
+.xp{padding:.8rem 1rem}
+.xp-forkl{margin-bottom:.4rem}
+.xp-top{display:flex;justify-content:space-between;align-items:center;gap:.6rem;flex-wrap:wrap}
+.xp-top p{margin:0}
+.xp-trin a{display:inline-flex;align-items:center;min-height:44px;font-size:.85rem;font-weight:600}
+.xp-trin span{display:inline-flex;align-items:center;min-height:44px;font-size:.85rem;color:var(--mute)}
+.xp-dato{font-size:.85rem;color:var(--mute)}
+.xp-fra{margin:.2rem 0 .4rem}
+.xp-fra span{color:var(--mute);font-size:.88rem}
+.xp-delt{display:block;font-size:.85rem;color:var(--al);font-weight:600}
+.xp-forkl{font-size:.95rem}
+.xp-k{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--al);margin-right:.3rem}
+.xp-knapper{display:flex;flex-wrap:wrap;gap:.4rem 1rem;align-items:center}
+.xp-vis{min-height:44px;padding:.5rem .95rem;border:1px solid var(--acc);border-radius:999px;background:transparent;color:var(--ink);font:600 .9rem 'DM Sans',sans-serif;cursor:pointer}
+.xp-vis[hidden]{display:none}
+.xp-link{display:inline-flex;align-items:center;min-height:44px;font-size:.9rem}
+.xp-embed:not(:empty){margin-top:.6rem}
+.xnote{font-size:.85rem;color:var(--mute);margin-top:.9rem}
+/* risiko */
+.risiko{padding:clamp(1rem,3vw,1.5rem);border-left:3px solid var(--acc)}
+.risiko ul{margin:0;padding-left:1.1rem;display:grid;gap:.7rem}
+.risiko li b{font-weight:700}
+.risiko a{display:inline}
+/* kilder */
+.kilder{font-size:.9rem;color:var(--mute)}
+.kilder h3{font-size:1.05rem;color:var(--ink);margin:1.2rem 0 .5rem}
+.kilder ul{padding-left:1.1rem;margin:0;display:grid;gap:.35rem}
+.kilder a{display:inline}
+.cq-su__dx,.cq-su__trs li,.cq-su__panel{scroll-margin-top:4.5rem}
+footer{border-top:1px solid var(--line);padding:2rem 0 3rem;font-size:.88rem;color:var(--mute)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+
+.su-vid{margin:.2rem 0 .8rem;border:1px solid var(--line);border-radius:10px;background:var(--card)}
+.su-vid summary{cursor:pointer;min-height:44px;display:flex;align-items:center;padding:.3rem .9rem;font-weight:600;color:var(--al);font-size:.92rem}
+.su-vid>div{padding:0 .9rem .9rem}
+.naboer{display:grid;gap:1rem;margin-top:1.5rem}
+@media(min-width:880px){.naboer{grid-template-columns:minmax(0,5fr) minmax(0,6fr);align-items:center}}
+.flere{list-style:none;margin:.7rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:.5rem}
+.flere a{display:inline-flex;align-items:center;min-height:44px;padding:.4rem .9rem;border:1px solid var(--line);border-radius:999px;background:var(--surf);color:var(--ink);text-decoration:none;font-size:.92rem}
+.flere a:hover{border-color:var(--acc)}
+/* sundhed */
+.foldelinjer{height:18px;background:url(fra-billedstil/grafik/sundhed-moenster-foldelinjer.svg) repeat-x 0 50%/auto 18px;opacity:.55;border-bottom:1px solid var(--line)}
+.fonden-in{padding:1.25rem 1.5rem 1.4rem}
+.hero-g .vid{align-self:end}
+.hero-vid figcaption{font-size:.85rem}
+.xs{grid-template-columns:minmax(0,1fr)}
+@media(min-width:960px){.xs{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start}}
+.js .xs:not(.alle) .ekstra{display:none}
+@media(max-width:599px){.nab-graf{display:none}.hero-bill img{max-height:220px}}
+.spredt-g{display:grid;gap:1.25rem}
+@media(min-width:880px){.spredt-g{grid-template-columns:minmax(0,6fr) minmax(0,5fr);align-items:start}}
+.s12{display:flex;height:34px;border-radius:6px;overflow:hidden;margin:.3rem 0 .4rem;border:1px solid var(--line)}
+.s12 span{height:100%;min-width:0;box-shadow:inset -1px 0 0 var(--bg)}
+.s12 span:last-child{box-shadow:none}
+.s12 .g1{background:#b19ea7}.s12 .g2{background:#7d6f77}.s12 .g3{background:#4f474d}
+.s12 .hl{background:#d6cad0}
+.s12-ender{display:flex;justify-content:space-between;font-size:.85rem;color:var(--mute);margin:0 0 .6rem}
+.s12-lg{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.3rem 1rem;font-size:.85rem;color:var(--mute)}
+.s12-lg i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:.35rem;vertical-align:-1px}
+.fod{display:grid;grid-template-columns:auto minmax(0,1fr);gap:.8rem;align-items:start;padding:.9rem 1rem;margin:1.25rem 0 0;max-width:46rem}
+.fod img{width:32px;height:32px}
+.fod p{margin:0;font-size:.95rem}
+.su-cq{margin-top:2.5rem}
+.vaerd-g{display:grid;gap:1.5rem}
+@media(min-width:880px){.vaerd-g{grid-template-columns:minmax(0,6fr) minmax(0,5fr);align-items:start}}
+.risiko ul{list-style:none;padding-left:0}
+.risiko li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:.7rem;align-items:start}
+.risiko li img{width:28px;height:28px;margin-top:.1rem}
+.risiko li p{margin:0}
+.fda figcaption .eu{display:block;color:var(--ink);margin-top:.4rem}
+.cq-su [hidden]{display:none!important}
+.cq-su__dx,.cq-su__panel{scroll-margin-top:4.5rem}
+
+/* læserrunde: UX-valg */
+@media(min-width:880px){.hero-g{grid-template-columns:minmax(0,7fr)}}
+.su-cq:first-child{margin-top:0}
+.su-cq:first-child .cq-su{border-top:0;padding-top:0}
+.su-harvard{max-width:40rem;margin:0 0 2.5rem}
+.su-harvard figcaption{font-size:.85rem}
+.spredt-g{max-width:46rem}
+@media(min-width:880px){.spredt-g{grid-template-columns:1fr}}
+.spredt-g{gap:.6rem}
+.s12{height:22px}
+.s12-ender{margin:0 0 .3rem;font-size:.8rem}
+.s12-tx{font-size:.85rem;color:var(--mute);margin:.4rem 0 0}
+#vaerd h2{font-size:clamp(22px,5.4vw,28px)}
+#kilder h2{font-size:18px;font-weight:600;letter-spacing:-.01em;color:var(--ink)}
+.xp-ejer{font-size:.85rem;color:var(--mute);margin:-.1rem 0 .5rem}
+.kid-p a{display:inline-flex;align-items:center;min-height:44px}
+</style>
+</head>
+<body>
+<a class="skip" href="#indhold">Spring til indholdet</a>
+<header class="top"><div class="wrap"><img src="img/ndi-logo.webp" alt="NewDeal Invest" width="155" height="57"><span>Tema · Sundhed og biotek</span></div><div class="prog" aria-hidden="true"></div></header>
+<main id="indhold" tabindex="-1">
+<section class="hero" aria-labelledby="h1">
+<figure class="hero-bill"><picture><source media="(max-width:599px)" srcset="fra-billedstil/grafik/sundhed-hero-indlaegssedlen-mobil.svg"><img src="fra-billedstil/grafik/sundhed-hero-indlaegssedlen.svg" alt="En foldet seddel med fire felter, hvert med sit eget lille tegn. Bagved ligger to mindre sedler." width="1200" height="600" fetchpriority="high"></picture></figure>
+<div class="wrap hero-g">
+<div>
+<h1 id="h1">Muligt er ikke det samme som vist</h1>
+<p class="under">Hvordan bliver teknologi til behandling?</p>
+<p class="lead">Temaet samler fondens selskaber inden for sundhed: digitale sundhedstjenester, bioteknologi og lægemidler. Ny teknologi kan gøre ting, der ikke kunne lade sig gøre før.</p>
+<p>Men det er én ting, at noget teknisk kan lade sig gøre. Det er en anden ting, at det er afprøvet og har vist en effekt. Siden holder de to ting adskilt. Den viser, hvad selskaberne laver, og hvor de tjener penge. Den siger intet om, hvorvidt deres behandlinger virker, og den giver ingen råd om sundhed.</p>
+<p class="kred">Illustration: NewDeal Invest.</p>
+</div>
+
+</div>
+</section>
+
+<section class="s" id="fonden" aria-labelledby="fonden-h"><div class="wrap">
+<p class="eyebrow">Fonden</p>
+<h2 id="fonden-h">Under 2 kroner af hver 100</h2>
+<div class="fonden-g">
+<div class="kort"><div class="foldelinjer" aria-hidden="true"></div><div class="fonden-in">
+<p class="tal">1,77<small>%</small></p>
+<p>af fonden ligger i Sundhed og biotek, fordelt på 12 selskaber.</p>
+<ul class="fakta"><li><span>Plads blandt fondens 12 temaer</span><b>Det næstmindste</b></li></ul>
+<p class="note" style="margin-top:.6rem">Kun <a href="../kvante/index.html">Kvantecomputere</a> er mindre.</p>
+<p class="note">Alle procenter på siden er andele af hele fonden, afdelingen PMINDI (NewDeal Invest klasse n, den udloddende andelsklasse, der udbetaler udbytte) pr. 16.10.2026.</p>
+</div></div>
+<div>
+<div class="strip" role="img" aria-label="Fondens 12 temaer side om side efter andel. Sundhed og biotek er fremhævet."><span style="flex:24.31"></span><span style="flex:16.96"></span><span style="flex:12.59"></span><span style="flex:10.56"></span><span style="flex:7.23"></span><span style="flex:6.69"></span><span style="flex:5.99"></span><span style="flex:5.22"></span><span style="flex:4.07"></span><span style="flex:2.35"></span><span class="hl" style="flex:1.77"></span><span style="flex:1.57"></span></div>
+<p class="strip-l">Sundhed og biotek er et af de 12 temaer, NewDeal Invest deler fondens selskaber op i.</p>
+<details class="alle12"><summary>Se alle 12 temaer</summary><ol><li>Chips og halvledere</li><li>Energi og elnet</li><li>Datacentre</li><li>Platformsøkonomi</li><li>Robotter &amp; fysisk AI</li><li>Råstoffer</li><li>Rumfart</li><li>Fintech</li><li>Krypto</li><li>Software &amp; AI</li><li class="hl">Sundhed og biotek</li><li>Kvantecomputere</li></ol></details>
+</div>
+</div>
+</div></section>
+
+<section class="s" id="spredt" aria-labelledby="spredt-h"><div class="wrap">
+<div class="su-cq"><section class="cq-su" id="cq-su" aria-labelledby="cq-su-h">
+<style>.cq-su{--cq-su-ink:var(--ink,#e6e8ed);--cq-su-mute:var(--mute,#aebbc7);--cq-su-line:var(--line,#313a4a);--cq-su-surf:var(--surf,#0f1a22);--cq-su-card:var(--card,#0b141c);--cq-su-focus:var(--fokus,#cde0e2);
+--cq-su-a:#b19ea7;--cq-su-pick:#221b22;color:var(--cq-su-ink);font-family:'DM Sans',system-ui,sans-serif;padding:clamp(1.5rem,6vw,4.5rem) 0;scroll-margin-top:4.5rem;border-top:1px solid var(--cq-su-line)}
+.cq-su *{box-sizing:border-box}
+.cq-su__sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.cq-su__cos{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:6px}
+.cq-su--js .cq-su__cos:not(.cq-su--open)>li:nth-child(n+6){display:none}
+.cq-su__co{width:100%;min-height:48px;display:grid;grid-template-columns:28px minmax(0,1fr) auto;align-items:center;gap:8px;padding:6px 9px;border:1px solid var(--cq-su-line);border-radius:9px;background:var(--cq-su-surf);color:var(--cq-su-ink);font:inherit;font-size:.88rem;line-height:1.25;text-align:left;cursor:pointer}
+.cq-su__co:hover,.cq-su__co[aria-pressed=true]{border-color:var(--cq-su-a)}
+.cq-su__co[aria-pressed=true]{background:var(--cq-su-pick)}
+.cq-su__lg{width:28px;height:28px;border-radius:6px;background:#fff;display:grid;place-items:center;overflow:hidden;flex:0 0 auto}
+.cq-su__lg img{width:24px;height:24px;object-fit:contain;display:block}
+.cq-su__ini{font:700 .75rem/1 Manrope,sans-serif;color:#050a0f}
+.cq-su__nm{min-width:0;overflow-wrap:anywhere}
+.cq-su__cw{font-variant-numeric:tabular-nums;color:var(--cq-su-mute);font-size:.82rem;white-space:nowrap}
+.cq-su__all{margin-top:6px;min-height:44px;min-width:44px;padding:0 14px;border-radius:9px;border:1px solid var(--cq-su-line);background:transparent;color:var(--cq-su-ink);font:inherit;font-size:.9rem;cursor:pointer}
+.cq-su__all:hover{border-color:var(--cq-su-a)}
+.cq-su__info{min-height:4.6rem;margin:8px 0;padding:.6rem .75rem;border-radius:10px;background:var(--cq-su-surf);border:1px solid var(--cq-su-line);display:flex;gap:.7rem;align-items:flex-start;font-size:.9rem}
+.cq-su__hint{margin:0;color:var(--cq-su-mute);align-self:center}
+.cq-su__ih{margin:0 0 .1rem;font-weight:700}
+.cq-su__ih span{font-weight:500;color:var(--cq-su-mute);margin-left:.35rem;font-variant-numeric:tabular-nums}
+.cq-su__ig{margin:0 0 .15rem;font-size:.76rem;color:var(--cq-su-mute);text-transform:uppercase;letter-spacing:.05em}
+.cq-su__id{margin:0;line-height:1.45}
+.cq-su__ia{margin:.25rem 0 0;font-size:.82rem;color:var(--cq-su-mute)}
+.cq-su button:focus-visible,.cq-su a:focus-visible{outline:3px solid var(--cq-su-focus);outline-offset:2px}
+
+.cq-su__in{max-width:1180px;margin:0 auto}
+.cq-su__kick{margin:0 0 12px;color:var(--teal,#89aeb4);text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:600}
+.cq-su__h2{font-family:Manrope,'DM Sans',sans-serif;font-weight:500;font-size:clamp(28px,7vw,42px);line-height:1.18;letter-spacing:-.04em;margin:0}
+.cq-su__date{margin:.45rem 0 0;font-size:.84rem;font-weight:600}
+.cq-su__date span{display:inline-block;width:.6rem;height:.6rem;border-radius:2px;background:var(--cq-su-a);margin-right:.45rem}
+.cq-su__lead{max-width:46rem;color:var(--cq-su-mute);font-size:1rem;line-height:1.55;margin:.8rem 0 .8rem}
+.cq-su__qs{list-style:none;margin:0 0 14px;padding:0;display:flex;flex-wrap:wrap;gap:6px 16px}
+.cq-su__qs li{display:flex;align-items:center;gap:.4rem;font:600 .84rem Manrope,sans-serif}
+.cq-su__qi{width:20px;height:20px;color:var(--cq-su-a);flex:0 0 auto}
+.cq-su__shelf{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;max-width:760px;border-bottom:1.5px solid var(--cq-su-line);padding-bottom:0}
+.cq-su__sb{position:relative;display:grid;grid-template-rows:auto auto auto auto;align-content:end;justify-items:start;gap:2px;min-height:44px;padding:8px 8px 10px;border:1px solid transparent;border-radius:12px 12px 0 0;background:transparent;color:var(--cq-su-ink);font:inherit;text-align:left;cursor:pointer}
+.cq-su__sb:hover{border-color:var(--cq-su-line)}
+.cq-su__sb[aria-expanded=true]{background:var(--cq-su-pick);border-color:var(--cq-su-a)}
+.cq-su__slot{width:100%;height:var(--cq-su-max,128px);display:flex;align-items:flex-end;margin-bottom:8px}
+.cq-su__sheet{position:relative;width:min(calc(100% - 20px),104px);height:calc(var(--h)*var(--cq-su-max,128px));display:flex;justify-content:center;padding-top:6px;border:1.6px solid var(--cq-su-a);border-radius:3px;
+background:linear-gradient(to bottom,var(--cq-su-card) 0 25%,var(--cq-su-surf) 25% 50%,var(--cq-su-card) 50% 75%,var(--cq-su-surf) 75% 100%);clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,0 100%)}
+.cq-su__sheet::after{content:"";position:absolute;top:-1px;right:-1px;width:12px;height:12px;background:linear-gradient(225deg,transparent 50%,var(--cq-su-a) 50% 56%,var(--cq-su-surf) 56%)}
+.cq-su__si{width:22px;height:22px;color:var(--cq-su-a)}
+.cq-su__sn{font:600 .9rem/1.25 Manrope,sans-serif;overflow-wrap:anywhere}
+.cq-su__sc{font-size:.76rem;color:var(--cq-su-mute)}
+.cq-su__sw{font:600 1.05rem Manrope,sans-serif;font-variant-numeric:tabular-nums}
+.cq-su__chev{position:absolute;top:10px;right:10px;width:8px;height:8px;border-right:1.5px solid var(--cq-su-mute);border-bottom:1.5px solid var(--cq-su-mute);transform:rotate(45deg)}
+.cq-su__sb[aria-expanded=true] .cq-su__chev{transform:rotate(225deg);top:14px}
+.cq-su__panels{margin-top:12px}
+.cq-su__panel{padding:.7rem .85rem .5rem;border:1px solid var(--cq-su-a);border-radius:12px;background:var(--cq-su-surf);scroll-margin-top:5rem}
+.cq-su__ph{display:flex;align-items:center;gap:.7rem}
+.cq-su__pi{width:24px;height:24px;color:var(--cq-su-a);flex:0 0 auto}
+.cq-su__pt{flex:1;margin:0;font:500 1rem/1.3 Manrope,sans-serif}
+.cq-su__pt:focus{outline:none}
+.cq-su__pt:focus-visible{outline:3px solid var(--cq-su-focus);outline-offset:2px;border-radius:4px}
+.cq-su__pt span{display:block;font:500 .78rem 'DM Sans',sans-serif;color:var(--cq-su-mute)}
+.cq-su__close{min-height:44px;min-width:44px;padding:0 12px;border-radius:9px;border:1px solid var(--cq-su-line);background:transparent;color:var(--cq-su-ink);font:inherit;font-size:.88rem;cursor:pointer}
+.cq-su__close:hover{border-color:var(--cq-su-a)}
+.cq-su__fields{display:grid;margin:.7rem 0 .8rem;border:1px solid var(--cq-su-line);border-radius:6px;overflow:hidden}
+.cq-su__f{display:grid;grid-template-columns:24px 1fr;column-gap:.6rem;padding:.65rem .75rem;background:var(--cq-su-card)}
+.cq-su__f:nth-child(even){background:var(--cq-su-pick)}
+.cq-su__f+.cq-su__f{border-top:1px dashed var(--cq-su-line)}
+.cq-su__fi{width:24px;height:24px;color:var(--cq-su-a);grid-row:1/3}
+.cq-su__fq{margin:0;font:500 .9rem/1.4 Manrope,sans-serif}
+.cq-su__ft{margin:.15rem 0 0;font-size:.9rem;line-height:1.5}
+.cq-su__ft em,.cq-su__key em{font-style:normal;font-weight:600;color:var(--cq-su-ink)}
+.cq-su__lh{margin:0 0 .4rem;font:600 .75rem Manrope,sans-serif;text-transform:uppercase;letter-spacing:.1em;color:var(--cq-su-a)}
+.cq-su__cos{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
+.cq-su__co,.cq-su__info{background:var(--cq-su-card)}
+.cq-su__fod{width:15px;height:15px;color:var(--cq-su-a);vertical-align:-2px}
+.cq-su__keys{display:grid;gap:8px;margin-top:14px}
+.cq-su__key{display:flex;align-items:flex-start;gap:.55rem;margin:0;color:var(--cq-su-mute);font-size:.84rem;line-height:1.45;max-width:42rem}
+.cq-su__ki{width:22px;height:22px;flex:0 0 auto;color:var(--cq-su-a)}
+.cq-su__key--raad{color:var(--cq-su-ink)}
+@media (min-width:760px){.cq-su{--cq-su-max:180px}
+.cq-su__sb{padding:10px 12px 12px}.cq-su__sheet{width:min(calc(100% - 24px),140px)}
+.cq-su__fields{grid-template-columns:repeat(4,minmax(0,1fr))}
+.cq-su__f{grid-template-columns:1fr;row-gap:.3rem;align-content:start}.cq-su__fi{grid-row:auto}
+.cq-su__f+.cq-su__f{border-top:0;border-left:1px dashed var(--cq-su-line)}}
+.cq-su--js .cq-su__sb{transition:border-color .2s ease,background-color .2s ease}
+@media (prefers-reduced-motion:reduce){.cq-su--js .cq-su__sb{transition:none}}
+.cq-su [hidden]{display:none!important}
+.cq-su .cq-su__f{display:block;padding:0 .75rem}
+.cq-su p a{padding:14px 4px;margin:-14px -4px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.cq-su__fs{display:flex;align-items:center;gap:.6rem;min-height:44px;padding:.3rem 0;cursor:pointer;list-style:none;color:var(--cq-su-ink)}
+.cq-su__fs::-webkit-details-marker{display:none}
+.cq-su__fs::after{content:"";flex:0 0 auto;margin-left:auto;margin-right:4px;width:9px;height:9px;border-right:2px solid var(--cq-su-ink);border-bottom:2px solid var(--cq-su-ink);transform:rotate(45deg);margin-top:-4px}
+.cq-su__fs:hover .cq-su__fq{text-decoration:underline;text-underline-offset:3px}
+.cq-su__f[open]>.cq-su__fs::after{transform:rotate(225deg);margin-top:4px}
+.cq-su__fs:focus-visible{outline:3px solid var(--cq-su-focus);outline-offset:-3px;border-radius:4px}
+.cq-su .cq-su__fs .cq-su__fi{grid-row:auto}
+.cq-su .cq-su__f>.cq-su__ft{margin:0 0 0 calc(24px + .6rem);padding:0 0 .65rem}
+.cq-su .cq-su__fields{margin:.6rem 0 .7rem}
+@media (max-width:759px){.cq-su .cq-su__cos{grid-template-columns:repeat(2,minmax(0,1fr))}
+.cq-su--js .cq-su__cos:not(.cq-su--open)>li:nth-child(n+5){display:none}
+.cq-su .cq-su__co{grid-template-columns:28px minmax(0,1fr);grid-template-areas:"l n" "l w";row-gap:1px;padding:6px 8px;font-size:.84rem}
+.cq-su__co .cq-su__lg{grid-area:l}
+.cq-su__co .cq-su__nm{grid-area:n}
+.cq-su__co .cq-su__cw{grid-area:w;font-size:.78rem}
+.cq-su .cq-su__info{min-height:0}
+}
+@media (min-width:760px){.cq-su .cq-su__f{padding:.45rem .75rem .65rem}
+.cq-su .cq-su__fs{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"i c" "q c";align-items:center;column-gap:.5rem;row-gap:.3rem;min-height:44px;padding:.2rem 0}
+.cq-su .cq-su__fs .cq-su__fi{grid-area:i}
+.cq-su .cq-su__fs .cq-su__fq{grid-area:q}
+.cq-su .cq-su__fs::after{grid-area:c;margin-left:0}
+.cq-su .cq-su__f>.cq-su__ft{margin:.3rem 0 0;padding:0}
+}
+@media (min-width:1000px){.cq-su .cq-su__in{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,380px);column-gap:40px}
+.cq-su .cq-su__in>*{grid-column:1/-1}
+.cq-su .cq-su__in>.cq-su__shelf{grid-column:1;grid-row:6;max-width:none}
+.cq-su .cq-su__in>.cq-su__keys{grid-column:2;grid-row:6;align-self:end;margin-top:0;padding-bottom:4px}
+.cq-su .cq-su__in>.cq-su__panels{grid-row:7}
+}
+.cq-su .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.cq-su .su-vid{margin:.2rem 0 .8rem;border:1px solid var(--cq-su-line);border-radius:10px;background:var(--cq-su-card)}
+.cq-su .su-vid summary{cursor:pointer;min-height:44px;display:flex;align-items:center;padding:.3rem .9rem;font-weight:600;color:var(--al,#d6cad0);font-size:.92rem}
+.cq-su .su-vid summary:focus-visible{outline:3px solid var(--cq-su-focus);outline-offset:2px}
+.cq-su .su-vid>div{padding:0 .9rem .9rem}
+.cq-su .vid{margin:0;max-width:560px}
+.cq-su .vid-ramme{position:relative;aspect-ratio:16/9;border-radius:10px;overflow:hidden;border:1px solid var(--cq-su-line);background:#000}
+.cq-su .vid-ramme iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.cq-su .vid-play{position:absolute;inset:0;width:100%;height:100%;padding:0;border:0;background:#000;display:block;cursor:pointer}
+.cq-su .vid-play img{width:100%;height:100%;object-fit:cover;display:block}
+.cq-su .vid-ikon{position:absolute;z-index:2;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:#fff;box-shadow:0 4px 24px rgba(0,0,0,.5)}
+.cq-su .vid-ikon::after{content:"";position:absolute;left:26px;top:20px;border-style:solid;border-width:12px 0 12px 19px;border-color:transparent transparent transparent #050a0f}
+.cq-su .vid-tid{position:absolute;z-index:2;right:8px;bottom:8px;background:rgba(0,0,0,.8);color:#fff;font-size:13px;padding:2px 8px;border-radius:4px}
+.cq-su .vid-kilde{position:absolute;z-index:2;left:8px;top:8px;background:rgba(0,0,0,.82);color:#fff;font-size:13px;font-weight:600;padding:3px 9px;border-radius:4px}
+.cq-su .vid figcaption{font-size:.9rem;color:var(--cq-su-mute);margin-top:.7rem}
+.cq-su .vid figcaption b{color:var(--cq-su-ink);font-weight:600}
+</style>
+<div class="cq-su__in">
+<p class="cq-su__kick">Sundhed og biotek</p>
+<h2 class="cq-su__h2" id="cq-su-h">Tre indlægssedler</h2>
+<p class="cq-su__date"><span aria-hidden="true"></span>Andel af hele fonden, afdelingen PMINDI pr. 16.10.2026</p>
+<p class="cq-su__lead">Hver gruppe har sin egen seddel med de samme fire spørgsmål. Tallet ved hver gruppe er dens andel af fonden. Tryk på en seddel for at folde den ud.</p>
+<ul class="cq-su__qs" aria-label="De fire spørgsmål på hver seddel"><li><svg class="cq-su__qi" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.5" fill="currentColor"/></svg><span>Hvad er det?</span></li><li><svg class="cq-su__qi" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18" stroke-width="1"/><circle cx="4.5" cy="12" r="2" fill="currentColor"/><circle cx="12" cy="12" r="2" fill="currentColor"/><circle cx="19.5" cy="12" r="2"/></svg><span>Hvor langt er det?</span></li><li><svg class="cq-su__qi" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 13v6h17v-6"/><path d="M12 3v11M8.5 10.5L12 14l3.5-3.5"/></svg><span>Hvem betaler?</span></li><li><svg class="cq-su__qi" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="1.5" stroke-dasharray="3 2.5"/></svg><span>Hvad tallene ikke viser</span></li></ul>
+<div class="cq-su__shelf"><button type="button" class="cq-su__dx cq-su__sb" aria-expanded="false" aria-controls="cq-su-p-digital-health" data-grp="su"><span class="cq-su__slot" aria-hidden="true"><span class="cq-su__sheet" style="--h:1.000"><svg class="cq-su__si" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="6.5" y="2.5" width="11" height="19" rx="2"/><path d="M10.5 18.5h3" stroke-width="1"/><path d="M9 8.5h6M9 11.5h4" stroke-width="1"/><path d="M14 12.5l2 1.5" stroke-width="1"/></svg></span></span><span class="cq-su__sn">Digital sundhed og sundheds&shy;ydelser</span><span class="cq-su__sr">. </span><span class="cq-su__sc">6 selskaber<span class="cq-su__sr">, </span></span><span class="cq-su__sw">0,83 %</span><span class="cq-su__chev" aria-hidden="true"></span><span class="cq-su__sr"> af fonden. Fold sedlen ud</span></button><button type="button" class="cq-su__dx cq-su__sb" aria-expanded="false" aria-controls="cq-su-p-biotech" data-grp="su"><span class="cq-su__slot" aria-hidden="true"><span class="cq-su__sheet" style="--h:0.735"><svg class="cq-su__si" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 2.5c0 5 10 5 10 9.5S7 16.5 7 21.5M17 2.5c0 5-10 5-10 9.5s10 4.5 10 9.5"/><path d="M8.5 5.5h7M9 18.5h6M10 9h4M10 15h4" stroke-width="1"/></svg></span></span><span class="cq-su__sn">Bioteknologi</span><span class="cq-su__sr">. </span><span class="cq-su__sc">4 selskaber<span class="cq-su__sr">, </span></span><span class="cq-su__sw">0,61 %</span><span class="cq-su__chev" aria-hidden="true"></span><span class="cq-su__sr"> af fonden. Fold sedlen ud</span></button><button type="button" class="cq-su__dx cq-su__sb" aria-expanded="false" aria-controls="cq-su-p-pharma" data-grp="su"><span class="cq-su__slot" aria-hidden="true"><span class="cq-su__sheet" style="--h:0.398"><svg class="cq-su__si" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2.5h6M10 2.5v6L5 18a2 2 0 0 0 1.8 3h10.4A2 2 0 0 0 19 18l-5-9.5v-6"/><path d="M7 15h10" stroke-width="1"/></svg></span></span><span class="cq-su__sn">Lægemidler og produktion</span><span class="cq-su__sr">. </span><span class="cq-su__sc">2 selskaber<span class="cq-su__sr">, </span></span><span class="cq-su__sw">0,33 %</span><span class="cq-su__chev" aria-hidden="true"></span><span class="cq-su__sr"> af fonden. Fold sedlen ud</span></button></div>
+<div class="cq-su__panels"><div class="cq-su__panel cq-su__scope" id="cq-su-p-digital-health" role="region" aria-label="Digital sundhed og sundhedsydelser" hidden>
+<div class="cq-su__ph"><svg class="cq-su__pi" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="6.5" y="2.5" width="11" height="19" rx="2"/><path d="M10.5 18.5h3" stroke-width="1"/><path d="M9 8.5h6M9 11.5h4" stroke-width="1"/><path d="M14 12.5l2 1.5" stroke-width="1"/></svg><p class="cq-su__pt">Digital sundhed og sundhedsydelser<span>6 selskaber · 0,83 %</span></p><button type="button" class="cq-su__close" data-for="cq-su-p-digital-health">Luk<span class="cq-su__sr"> Digital sundhed og sundhedsydelser</span></button></div>
+<div class="cq-su__fields"><details class="cq-su__f" open><summary class="cq-su__fs"><svg class="cq-su__fi" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.5" fill="currentColor"/></svg><span class="cq-su__fq">Hvad er det?</span></summary><p class="cq-su__ft">Lægekonsultationer over nettet, levering af medicin, digitale programmer for fx diabetes og fysioterapi, diagnostik (undersøgelser, der finder ud af, hvad en patient fejler) og en sygeforsikring.</p></details><details class="cq-su__f" open><summary class="cq-su__fs"><svg class="cq-su__fi" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18" stroke-width="1"/><circle cx="4.5" cy="12" r="2" fill="currentColor"/><circle cx="12" cy="12" r="2" fill="currentColor"/><circle cx="19.5" cy="12" r="2"/></svg><span class="cq-su__fq">Hvor langt er det?</span></summary><p class="cq-su__ft">Tjenesterne er i brug i dag.</p></details><details class="cq-su__f" open><summary class="cq-su__fs"><svg class="cq-su__fi" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 13v6h17v-6"/><path d="M12 3v11M8.5 10.5L12 14l3.5-3.5"/></svg><span class="cq-su__fq">Hvem betaler?</span></summary><p class="cq-su__ft">Forskelligt. Hims &amp; Hers og LifeMD henvender sig direkte til forbrugerne. Hims &amp; Hers giver over nettet adgang til autoriserede behandlere, som kan udskrive medicin, når det er relevant, fx inden for hårtab, vægttab, sexologisk sundhed og hud. Det meste af omsætningen i USA kommer fra abonnementer på receptpligtige produkter (Hims &amp; Hers, 10-K 2025). Hims &amp; Hers, temaets største selskab, havde ca. 2,5 mio. abonnenter ved udgangen af 2025 og en omsætning på 2.348 mio. dollars i 2025. Hinge Health har især arbejdsgivere som kunder. Oscar Health tilbyder ikke en behandling, men en sygeforsikring.</p></details><details class="cq-su__f" open><summary class="cq-su__fs"><svg class="cq-su__fi" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="1.5" stroke-dasharray="3 2.5"/></svg><span class="cq-su__fq">Hvad tallene ikke viser</span></summary><p class="cq-su__ft">At en tjeneste er i brug, siger ikke noget om, hvor godt den virker. Tempus AI og Hinge Health bruger AI. Hvor meget af omsætningen der kommer fra AI, oplyser de ikke. Om software i sundhed kan du læse på siden <a href="../software/index.html">Software &amp; AI</a>.</p></details></div>
+<p class="cq-su__lh">Selskaberne</p>
+<ul class="cq-su__cos" id="cq-su-l-digital-health" data-top="5"><li><button type="button" class="cq-su__co" aria-pressed="false" data-d="Platform for sundhed og velvære direkte til forbrugerne. Tilknyttede lægegrupper står for konsultationer over nettet, og selskabet står for levering og opfølgning." data-g="Digital sundhed og sundhedsydelser"><span class="cq-su__lg"><span class="cq-su__ini" aria-hidden="true">HH</span></span><span class="cq-su__nm">Hims &amp; Hers Health</span><span class="cq-su__cw">0,53 %</span></button></li><li><button type="button" class="cq-su__co" aria-pressed="false" data-d="Teknologiselskab inden for sundhed. Forretningen er delt i diagnostik og i data og software." data-g="Digital sundhed og sundhedsydelser" data-a="Software &amp; AI"><span class="cq-su__lg"><img src="fra-critiquito/logos/tempus-ai.webp" alt="" width="28" height="28" loading="lazy" decoding="async"></span><span class="cq-su__nm">Tempus AI <svg class="cq-su__fod" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7l5 2 5-2v8l-5 2-5-2z" stroke-dasharray="2 1.5"/><path d="M12.5 15l4 3.5"/><circle cx="18.5" cy="19.5" r="1.5" fill="currentColor"/></svg></span><span class="cq-su__cw">0,15 %</span></button></li><li><button type="button" class="cq-su__co" aria-pressed="false" data-d="Lægebehandling over nettet og apoteksydelser direkte til patienter." data-g="Digital sundhed og sundhedsydelser"><span class="cq-su__lg"><span class="cq-su__ini" aria-hidden="true">LI</span></span><span class="cq-su__nm">LifeMD</span><span class="cq-su__cw">0,05 %</span></button></li><li><button type="button" class="cq-su__co" aria-pressed="false" data-d="Programmer over nettet for prædiabetes, diabetes og forhøjet blodtryk, fysioterapi og støtte til medlemmer, der tager medicin af typen GLP-1." data-g="Digital sundhed og sundhedsydelser"><span class="cq-su__lg"><span class="cq-su__ini" aria-hidden="true">OH</span></span><span class="cq-su__nm">Omada Health</span><span class="cq-su__cw">0,05 %</span></button></li><li><button type="button" class="cq-su__co" aria-pressed="false" data-d="Behandling af muskel- og skeletlidelser, hvor AI hjælper med at tilpasse træningen, udstyr, man bærer på kroppen, og behandlere. Kunderne er især arbejdsgivere, der selv betaler de ansattes sundhedsudgifter." data-g="Digital sundhed og sundhedsydelser"><span class="cq-su__lg"><span class="cq-su__ini" aria-hidden="true">HH</span></span><span class="cq-su__nm">Hinge Health</span><span class="cq-su__cw">0,03 %</span></button></li><li><button type="button" class="cq-su__co" aria-pressed="false" data-d="Sygeforsikring i USA til enkeltpersoner, familier og ansatte." data-g="Digital sundhed og sundhedsydelser" data-a="Fintech"><span class="cq-su__lg"><span class="cq-su__ini" aria-hidden="true">OH</span></span><span class="cq-su__nm">Oscar Health <svg class="cq-su__fod" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7l5 2 5-2v8l-5 2-5-2z" stroke-dasharray="2 1.5"/><path d="M12.5 15l4 3.5"/><circle cx="18.5" cy="19.5" r="1.5" fill="currentColor"/></svg></span><span class="cq-su__cw">0,02 %</span></button></li></ul><button type="button" class="cq-su__all" aria-expanded="false" aria-controls="cq-su-l-digital-health" data-n="6">Vis alle (6)</button><div class="cq-su__info" aria-live="polite"><p class="cq-su__hint">Tryk på et selskab for at se, hvad det laver.</p></div></div><div class="cq-su__panel cq-su__scope" id="cq-su-p-biotech" role="region" aria-label="Bioteknologi" hidden>
+<div class="cq-su__ph"><svg class="cq-su__pi" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 2.5c0 5 10 5 10 9.5S7 16.5 7 21.5M17 2.5c0 5-10 5-10 9.5s10 4.5 10 9.5"/><path d="M8.5 5.5h7M9 18.5h6M10 9h4M10 15h4" stroke-width="1"/></svg><p class="cq-su__pt">Bioteknologi<span>4 selskaber · 0,61 %</span></p><button type="button" class="cq-su__close" data-for="cq-su-p-biotech">Luk<span class="cq-su__sr"> Bioteknologi</span></button></div>
+<div class="cq-su__fields"><details class="cq-su__f" open><summary class="cq-su__fs"><svg class="cq-su__fi" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.5" fill="currentColor"/></svg><span class="cq-su__fq">Hvad er det?</span></summary><p class="cq-su__ft">Nye biologiske værktøjer. BioNTech arbejder med mRNA, en opskrift som kroppens egne celler bruger til at lave ét bestemt protein. Intellia og CRISPR Therapeutics arbejder med CRISPR. AbCellera leder efter lægemidler baseret på antistoffer, de stoffer, kroppens immunforsvar selv laver.</p></details><details class="cq-su__f" open><summary class="cq-su__fs"><svg class="cq-su__fi" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18" stroke-width="1"/><circle cx="4.5" cy="12" r="2" fill="currentColor"/><circle cx="12" cy="12" r="2" fill="currentColor"/><circle cx="19.5" cy="12" r="2"/></svg><span class="cq-su__fq">Hvor langt er det?</span></summary><p class="cq-su__ft">Meget forskelligt. Ca. 70 % af BioNTechs omsætning i 2025 kom fra covid-19-vaccinen, som selskabet har sammen med Pfizer. BioNTech har også behandlinger mod kræft under udvikling. AbCellera afprøver to af sine egne lægemidler på mennesker (klinisk fase).</p></details><details class="cq-su__f" open><summary class="cq-su__fs"><svg class="cq-su__fi" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 13v6h17v-6"/><path d="M12 3v11M8.5 10.5L12 14l3.5-3.5"/></svg><span class="cq-su__fq">Hvem betaler?</span></summary><p class="cq-su__ft">Indtægten kan komme meget sent. CRISPR Therapeutics havde i 2025 en omsætning på ca. 23 mio. kr., og det hele var tilskud fra almennyttige organisationer. Selskabet havde ingen omsætning fra salg af behandlinger, det ejer alene. Den godkendte behandling fra videoen under sedlerne har det sammen med Vertex. Vertex står for salget i hele verden, og overskud eller underskud deles med 60 % til Vertex og 40 % til CRISPR Therapeutics. Når indtægter og udgifter er lagt sammen, kostede samarbejdet CRISPR Therapeutics ca. 1,4 mia. kr. i 2025. Det gav altså ikke en indtægt. Vertex er ikke blandt fondens selskaber pr. 16.10.2026.</p></details><details class="cq-su__f" open><summary class="cq-su__fs"><svg class="cq-su__fi" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="1.5" stroke-dasharray="3 2.5"/></svg><span class="cq-su__fq">Hvad tallene ikke viser</span></summary><p class="cq-su__ft">Et lovende forsøg er ikke det samme som en godkendt behandling.</p></details></div>
+<details class="su-vid"><summary>Sådan virker mRNA</summary><div><figure class="vid"><div class="vid-ramme" data-cq-su-yt="S8Wd-NMqvno" data-title="Video: How Do mRNA Vaccines Work? (The Children’s Hospital of Philadelphia)"><button type="button" class="vid-play" aria-label="Afspil video fra The Children’s Hospital of Philadelphia fra 2020: How Do mRNA Vaccines Work? (2 min., på engelsk). Videoen hentes fra YouTube."><picture><source media="(max-width:599px)" srcset="fra-billedstil/billeder/sundhed-plakat-S8Wd-NMqvno-mobil.webp"><img src="fra-billedstil/billeder/sundhed-plakat-S8Wd-NMqvno-bred.webp" alt="" width="960" height="540" loading="lazy"></picture><span class="vid-kilde" aria-hidden="true">CHOP · 2020</span><span class="vid-ikon" aria-hidden="true"></span><span class="vid-tid" aria-hidden="true">2:00</span></button></div><figcaption><b>En læge forklarer, hvordan mRNA virker.</b> Videoen er optaget, før de første covid-19-vacciner blev godkendt. Kilde: The Children’s Hospital of Philadelphia, et amerikansk universitetshospital. Video fra 13.11.2020, 2:00, på engelsk: “How Do mRNA Vaccines Work?”. <a href="https://www.youtube.com/watch?v=S8Wd-NMqvno" rel="noopener" target="_blank">Se på YouTube<span class="sr"> (åbner i nyt vindue)</span></a></figcaption></figure></div></details>
+<p class="cq-su__lh">Selskaberne</p>
+<ul class="cq-su__cos" id="cq-su-l-biotech" data-top="5"><li><button type="button" class="cq-su__co" aria-pressed="false" data-d="Udvikler behandlinger, der bruger kroppens eget immunforsvar (immunterapi). Har covid-19-vaccinen sammen med Pfizer og behandlinger mod kræft under udvikling." data-g="Bioteknologi"><span class="cq-su__lg"><span class="cq-su__ini" aria-hidden="true">BI</span></span><span class="cq-su__nm">BioNTech</span><span class="cq-su__cw">0,35 %</span></button></li><li><button type="button" class="cq-su__co" aria-pressed="false" data-d="Biotekselskab, der bruger CRISPR til at rette i DNA (genredigering)." data-g="Bioteknologi"><span class="cq-su__lg"><span class="cq-su__ini" aria-hidden="true">IT</span></span><span class="cq-su__nm">Intellia Therapeutics</span><span class="cq-su__cw">0,17 %</span></button></li><li><button type="button" class="cq-su__co" aria-pressed="false" data-d="Biotekselskab, der udvikler behandlinger med CRISPR." data-g="Bioteknologi"><span class="cq-su__lg"><span class="cq-su__ini" aria-hidden="true">CT</span></span><span class="cq-su__nm">CRISPR Therapeutics</span><span class="cq-su__cw">0,08 %</span></button></li><li><button type="button" class="cq-su__co" aria-pressed="false" data-d="Bioteknologi i klinisk fase, der leder efter lægemidler baseret på antistoffer." data-g="Bioteknologi"><span class="cq-su__lg"><span class="cq-su__ini" aria-hidden="true">AB</span></span><span class="cq-su__nm">AbCellera Biologics</span><span class="cq-su__cw">0,01 %</span></button></li></ul><div class="cq-su__info" aria-live="polite"><p class="cq-su__hint">Tryk på et selskab for at se, hvad det laver.</p></div></div><div class="cq-su__panel cq-su__scope" id="cq-su-p-pharma" role="region" aria-label="Lægemidler og produktion" hidden>
+<div class="cq-su__ph"><svg class="cq-su__pi" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2.5h6M10 2.5v6L5 18a2 2 0 0 0 1.8 3h10.4A2 2 0 0 0 19 18l-5-9.5v-6"/><path d="M7 15h10" stroke-width="1"/></svg><p class="cq-su__pt">Lægemidler og produktion<span>2 selskaber · 0,33 %</span></p><button type="button" class="cq-su__close" data-for="cq-su-p-pharma">Luk<span class="cq-su__sr"> Lægemidler og produktion</span></button></div>
+<div class="cq-su__fields"><details class="cq-su__f" open><summary class="cq-su__fs"><svg class="cq-su__fi" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.5" fill="currentColor"/></svg><span class="cq-su__fq">Hvad er det?</span></summary><p class="cq-su__ft">Eli Lilly udvikler, fremstiller og markedsfører lægemidler. Bachem fremstiller byggesten til lægemidler for andre medicinal- og biotekselskaber: korte kæder af aminosyrer og af DNA- eller RNA-byggesten.</p></details><details class="cq-su__f" open><summary class="cq-su__fs"><svg class="cq-su__fi" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18" stroke-width="1"/><circle cx="4.5" cy="12" r="2" fill="currentColor"/><circle cx="12" cy="12" r="2" fill="currentColor"/><circle cx="19.5" cy="12" r="2"/></svg><span class="cq-su__fq">Hvor langt er det?</span></summary><p class="cq-su__ft">Godkendt og i brug. Eli Lillys to lægemidler med det aktive stof tirzepatid, Mounjaro og Zepbound, gav ca. 36,5 mia. dollars i omsætning i 2025. Det svarer i størrelse til ca. 7,8 % af Danmarks BNP. Det var over halvdelen af Eli Lillys omsætning. Mounjaro er godkendt til voksne med type 2-diabetes og Zepbound til voksne med svær overvægt eller overvægt med mindst én vægtrelateret sygdom samt til søvnapnø hos voksne med svær overvægt, begge sammen med kost og motion (Eli Lilly, 10-K 2025).</p></details><details class="cq-su__f" open><summary class="cq-su__fs"><svg class="cq-su__fi" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 13v6h17v-6"/><path d="M12 3v11M8.5 10.5L12 14l3.5-3.5"/></svg><span class="cq-su__fq">Hvem betaler?</span></summary><p class="cq-su__ft">Eli Lilly tjener på sine egne lægemidler. Bachem tjener på at producere for andre, både til forskning, forsøg og færdige produkter.</p></details><details class="cq-su__f" open><summary class="cq-su__fs"><svg class="cq-su__fi" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="1.5" stroke-dasharray="3 2.5"/></svg><span class="cq-su__fq">Hvad tallene ikke viser</span></summary><p class="cq-su__ft">Omsætning er ikke det samme som antal patienter, og den siger intet om, hvordan et lægemiddel virker.</p></details></div>
+<p class="cq-su__lh">Selskaberne</p>
+<ul class="cq-su__cos" id="cq-su-l-pharma" data-top="5"><li><button type="button" class="cq-su__co" aria-pressed="false" data-d="Udvikler, fremstiller og markedsfører lægemidler til mennesker." data-g="Lægemidler og produktion"><span class="cq-su__lg"><span class="cq-su__ini" aria-hidden="true">EL</span></span><span class="cq-su__nm">Eli Lilly</span><span class="cq-su__cw">0,22 %</span></button></li><li><button type="button" class="cq-su__co" aria-pressed="false" data-d="Udvikler og fremstiller byggesten til lægemidler for medicinal- og biotekselskaber, til forskning, forsøg og færdige produkter." data-g="Lægemidler og produktion"><span class="cq-su__lg"><span class="cq-su__ini" aria-hidden="true">BA</span></span><span class="cq-su__nm">Bachem</span><span class="cq-su__cw">0,11 %</span></button></li></ul><div class="cq-su__info" aria-live="polite"><p class="cq-su__hint">Tryk på et selskab for at se, hvad det laver.</p></div></div></div>
+<div class="cq-su__keys">
+<p class="cq-su__key cq-su__key--raad"><svg class="cq-su__ki" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v10H10l-4 4v-4H4z"/><path d="M3 21L21 3" stroke-width="1.25"/></svg><span>Sedlerne låner kun formen fra medicinpakken. De er ikke en indlægsseddel og giver ingen råd om medicin.</span></p>
+<p class="cq-su__key"><svg class="cq-su__ki" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="9" width="7" height="12" rx="1"/><rect x="14" y="3" width="7" height="18" rx="1"/></svg><span>Sedlens højde svarer til gruppens andel af fonden.</span></p>
+<p class="cq-su__key"><svg class="cq-su__ki" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7l5 2 5-2v8l-5 2-5-2z" stroke-dasharray="2 1.5"/><path d="M12.5 15l4 3.5"/><circle cx="18.5" cy="19.5" r="1.5" fill="currentColor"/></svg><span>Mærket ved et selskab betyder, at det også hører til et andet tema. Tempus AI laver også noget, der hører til temaet <a href="../software/index.html">Software &amp; AI</a>, og Oscar Health laver også noget, der hører til temaet <a href="../fintech/index.html">Fintech</a>. I fondens opdeling tælles selskaberne kun med her.</span></p>
+</div>
+</div>
+<script>(function(){var R=document.getElementById('cq-su');if(!R||R.dataset.on)return;R.dataset.on='1';R.classList.add('cq-su--js');
+var TL={'Software & AI':'../software/index.html','Fintech':'../fintech/index.html'};
+var mqS=window.matchMedia('(max-width:759px)');
+var fine=window.matchMedia&&matchMedia('(hover: hover) and (pointer: fine)').matches;
+function show(btn){var sc=btn.closest('.cq-su__scope')||R,inf=sc.querySelector('.cq-su__info');if(!inf)return;inf.textContent='';
+inf.appendChild(btn.querySelector('.cq-su__lg').cloneNode(true));var w=document.createElement('div');
+function el(t,c,x){var e=document.createElement(t);e.className=c;e.textContent=x;w.appendChild(e);return e}
+el('p','cq-su__ig',btn.dataset.g);var h=el('p','cq-su__ih',btn.querySelector('.cq-su__nm').textContent);var s=document.createElement('span');s.textContent=btn.querySelector('.cq-su__cw').textContent+' af fonden';h.appendChild(s);
+el('p','cq-su__id',btn.dataset.d);if(btn.dataset.a){var q=el('p','cq-su__ia',btn.querySelector('.cq-su__nm').textContent.trim()+' laver også noget, der hører til temaet '),u=TL[btn.dataset.a],k=document.createElement(u?'a':'span');if(u)k.href=u;k.textContent=btn.dataset.a;q.appendChild(k);q.appendChild(document.createTextNode('. I fondens opdeling tælles selskabet kun med her.'))}inf.appendChild(w)}
+R.querySelectorAll('.cq-su__co').forEach(function(b){b.addEventListener('click',function(){var sc=b.closest('.cq-su__scope')||R;sc.querySelectorAll('.cq-su__co[aria-pressed=true]').forEach(function(o){if(o!==b)o.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');show(b)});
+b.addEventListener('focus',function(){show(b)});if(fine)b.addEventListener('mouseenter',function(){show(b)})});
+function setAll(a,o){var l=document.getElementById(a.getAttribute('aria-controls'));l.classList.toggle('cq-su--open',o);a.setAttribute('aria-expanded',o);a.textContent=o?'Vis færre':'Vis alle ('+a.dataset.n+')'}
+R.querySelectorAll('.cq-su__all').forEach(function(a){a.addEventListener('click',function(){var o=a.getAttribute('aria-expanded')!=='true';setAll(a,o);if(o){var l=document.getElementById(a.getAttribute('aria-controls')),f=l.children[mqS.matches?4:5];if(f)f.querySelector('button').focus()}})});
+function setDx(b,o){var t=document.getElementById(b.getAttribute('aria-controls'));b.setAttribute('aria-expanded',o);t.hidden=!o;
+ if(o&&b.dataset.grp)R.querySelectorAll('.cq-su__dx[data-grp="'+b.dataset.grp+'"]').forEach(function(x){if(x!==b&&x.getAttribute('aria-expanded')==='true')setDx(x,false)});
+ R.dispatchEvent(new CustomEvent('cq:dx',{detail:{btn:b,open:o}}))}
+R.cqSetDx=setDx;
+R.querySelectorAll('.cq-su__dx').forEach(function(b){setDx(b,b.dataset.open==='1');b.addEventListener('click',function(){setDx(b,b.getAttribute('aria-expanded')!=='true')})});
+R.addEventListener('keydown',function(e){if(e.key!=='Escape'&&e.key!=='Esc')return;var n=document.activeElement;
+ if(n&&n.getAttribute&&n.getAttribute('aria-controls')&&n.getAttribute('aria-expanded')==='true'){e.preventDefault();if(n.classList.contains('cq-su__all'))setAll(n,false);else setDx(n,false);return}
+ while(n&&n!==R){if(n.id){var b=R.querySelector('[aria-controls="'+n.id+'"][aria-expanded="true"]');if(b){e.preventDefault();if(b.classList.contains('cq-su__all'))setAll(b,false);else setDx(b,false);b.focus();return}}n=n.parentNode}});
+})();
+(function(){var R=document.getElementById('cq-su');if(!R||R.dataset.on2)return;R.dataset.on2='1';var rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches,mq=window.matchMedia('(min-width:760px)');
+R.querySelectorAll('.cq-su__close').forEach(function(c){c.addEventListener('click',function(){var b=R.querySelector('[aria-controls="'+c.dataset.for+'"]');R.cqSetDx(b,false);b.focus()})});
+R.querySelectorAll('.cq-su__panel .cq-su__pt').forEach(function(t){t.tabIndex=-1});
+R.querySelectorAll('.cq-su__sb').forEach(function(b){b.addEventListener('click',function(){if(b.getAttribute('aria-expanded')!=='true')return;var p=document.getElementById(b.getAttribute('aria-controls')),t=p.querySelector('.cq-su__pt');if(t)t.focus({preventScroll:true});var r=p.getBoundingClientRect();if(r.top<0||r.top>window.innerHeight-80)p.scrollIntoView({block:'start',behavior:rm?'auto':'smooth'})})});
+function sync(d){d.querySelector('.cq-su__fs').setAttribute('aria-expanded',d.open?'true':'false')}
+R.querySelectorAll('.cq-su__f').forEach(function(d){d.addEventListener('toggle',function(){sync(d)})});
+function fold(){var w=mq.matches;R.querySelectorAll('.cq-su__f').forEach(function(d){d.open=w;sync(d)})}
+fold();if(mq.addEventListener)mq.addEventListener('change',fold);
+R.querySelectorAll('.vid-ramme[data-cq-su-yt]').forEach(function(r){var v=r.querySelector('.vid-play');if(!v)return;v.addEventListener('click',function(){var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+r.getAttribute('data-cq-su-yt')+'?autoplay=1&rel=0&playsinline=1';f.title=r.dataset.title;f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.setAttribute('allowfullscreen','');f.referrerPolicy='strict-origin-when-cross-origin';r.replaceChild(f,v);f.focus()})});
+})();
+</script>
+</section></div>
+<div class="su-harvard"><figure class="vid"><div class="vid-ramme" data-yt="RqWJHmxXM2E" data-title="Video: Creating the World’s First CRISPR Medicine, for Sickle Cell Disease (Harvard Medical School)"><button type="button" class="vid-play" aria-label="Afspil video fra Harvard Medical School: Creating the World’s First CRISPR Medicine, for Sickle Cell Disease (3 min. 9 sek., på engelsk). Videoen hentes fra YouTube."><picture><source media="(max-width:599px)" srcset="fra-billedstil/billeder/sundhed-plakat-RqWJHmxXM2E-mobil.webp"><img src="fra-billedstil/billeder/sundhed-plakat-RqWJHmxXM2E-bred.webp" alt="" width="960" height="540" loading="lazy"></picture><span class="vid-kilde" aria-hidden="true">Harvard Medical School</span><span class="vid-ikon" aria-hidden="true"></span><span class="vid-tid" aria-hidden="true">3:09</span></button></div><figcaption><b>Forskere fortæller, hvordan en opdagelse i laboratoriet blev til den første godkendte behandling med CRISPR, et værktøj der kan klippe i DNA. Behandlingen er mod seglcellesygdom. De fortæller også, hvad der skal til ud over idéen: forsøg, godkendelse og produktion.</b> CRISPR Therapeutics, som er i fonden, nævnes som et af selskaberne bag. Kilde: Harvard Medical School. Video fra 20.02.2025, 3:09, på engelsk. <a href="https://www.youtube.com/watch?v=RqWJHmxXM2E" rel="noopener" target="_blank">Se på YouTube<span class="sr"> (åbner i nyt vindue)</span></a></figcaption></figure></div>
+<p class="eyebrow">Selskaberne</p>
+<h2 id="spredt-h">Lille og spredt</h2>
+<div class="spredt-g">
+<div>
+<div class="s12" role="img" aria-label="Temaets 12 selskaber som felter i én strimmel. Feltets bredde svarer til selskabets andel af fonden. Det største felt, Hims &amp; Hers Health, fylder knap en tredjedel."><span class="hl" style="flex:0.53 1 0"></span><span class="g1" style="flex:0.15 1 0"></span><span class="g1" style="flex:0.05 1 0"></span><span class="g1" style="flex:0.05 1 0"></span><span class="g1" style="flex:0.03 1 0"></span><span class="g1" style="flex:0.02 1 0"></span><span class="g2" style="flex:0.35 1 0"></span><span class="g2" style="flex:0.17 1 0"></span><span class="g2" style="flex:0.08 1 0"></span><span class="g2" style="flex:0.01 1 0"></span><span class="g3" style="flex:0.22 1 0"></span><span class="g3" style="flex:0.11 1 0"></span></div>
+<p class="s12-ender" aria-hidden="true"><span>Største: Hims &amp; Hers Health</span><span>Mindste: AbCellera Biologics</span></p>
+<ul class="s12-lg" aria-label="Farverne i strimlen"><li><i class="g1" style="background:#b19ea7"></i>Digital sundhed og sundhedsydelser</li><li><i class="g2" style="background:#7d6f77"></i>Bioteknologi</li><li><i class="g3" style="background:#4f474d"></i>Lægemidler og produktion</li></ul>
+<p class="s12-tx">Hvert felt er ét af temaets 12 selskaber. Bredden svarer til selskabets andel af fonden. Farven viser gruppen.</p>
+</div>
+<div>
+<p>Det største selskab, Hims &amp; Hers Health, fylder 0,53 % af fonden. Det er knap en tredjedel af temaet. Resten er små andele. Den mindste er 0,01 %.</p>
+</div>
+</div>
+
+<div class="fod kort"><img src="fra-billedstil/ikoner/sundhed-ikon-ogsaa-med-en-fod.svg" alt="" width="32" height="32"><p><b>Også med en fod i sundhed</b> To selskaber under temaet Energi og elnet laver også noget, der hører til temaet Sundhed og biotek. ASP Isotopes (0,22 %) ejer flertallet i et selskab, der fremstiller stoffer til lægemidler. Mirion Technologies (0,12 %) laver udstyr og software til kræftafdelinger og diagnostik. De tælles kun med under Energi og elnet og ikke i temaets 1,77 %. Kilder: <a href="https://www.sec.gov/Archives/edgar/data/1921865/000119312526151294/aspi-20251231.htm" rel="noopener" target="_blank">ASP Isotopes<span class="sr"> (åbner i nyt vindue)</span></a> og <a href="https://www.sec.gov/Archives/edgar/data/1809987/000162828026009869/mir-20251231.htm" rel="noopener" target="_blank">Mirion Technologies<span class="sr"> (åbner i nyt vindue)</span></a>, årsrapporter 2025.</p></div>
+</div></section>
+
+<section class="s" id="udefra" aria-labelledby="udefra-h"><div class="wrap">
+<p class="eyebrow">Set udefra</p>
+<h2 id="udefra-h">I nyhederne</h2>
+<p class="smal">Her er udvalgte opslag fra mediet STAT. Videoerne på siden er fra et universitet, et universitetshospital og en myndighed. Ingen af dem er fondens holdning. Resultater i opslagene og videoerne er kildens egne og er ikke kontrolleret af NewDeal Invest.</p>
+<ul class="xs" id="x-liste"><li class="xp kort" data-url="https://twitter.com/statnews/status/2112914104637620592"><div class="xp-top"><p class="xp-trin"><a href="#vaerd">Hører til: Forsøg og godkendelse</a></p><p class="xp-dato"><time datetime="2026-10-21">21.10.2026</time></p></div><p class="xp-fra"><b>STAT</b> <span>@statnews · på engelsk</span></p><p class="xp-forkl"><span class="xp-k">Kort fortalt</span> Ifølge STAT har GSK fået godkendelse fra den amerikanske lægemiddelmyndighed FDA til sit lægemiddel mod hepatitis B, der skal hedde Hibsago. STAT skriver, at godkendelsen gælder udvalgte voksne med kronisk hepatitis B, en sygdom, der er en hyppig årsag til leverkræft og skrumpelever.</p><p class="xp-ejer">GSK er ikke blandt fondens selskaber pr. 16.10.2026.</p><div class="xp-knapper"><button type="button" class="xp-vis" hidden>Vis opslaget<span class="sr"> fra STAT</span></button><a class="xp-link" href="https://twitter.com/statnews/status/2112914104637620592" rel="noopener" target="_blank">Se opslaget på X<span class="sr"> (åbner i nyt vindue)</span></a></div><div class="xp-embed" tabindex="-1" role="group" aria-label="Opslag fra STAT på X"></div></li><li class="xp kort ekstra" data-url="https://twitter.com/statnews/status/2113744544076284177"><div class="xp-top"><p class="xp-trin"><a href="#vaerd">Hører til: Forsøg og godkendelse</a></p><p class="xp-dato"><time datetime="2026-10-23">23.10.2026</time></p></div><p class="xp-fra"><b>STAT</b> <span>@statnews · på engelsk</span></p><p class="xp-forkl"><span class="xp-k">Kort fortalt</span> Ifølge STAT har en ny analyse vurderet den kliniske gevinst af nye kræftlægemidler, som europæiske myndigheder har godkendt over en nyere fireårsperiode. STAT skriver, at analysen finder, at de fleste af dem ikke giver en stor klinisk gevinst.</p><div class="xp-knapper"><button type="button" class="xp-vis" hidden>Vis opslaget<span class="sr"> fra STAT</span></button><a class="xp-link" href="https://twitter.com/statnews/status/2113744544076284177" rel="noopener" target="_blank">Se opslaget på X<span class="sr"> (åbner i nyt vindue)</span></a></div><div class="xp-embed" tabindex="-1" role="group" aria-label="Opslag fra STAT på X"></div></li></ul>
+<button type="button" class="knap" id="x-alle" aria-expanded="false" aria-controls="x-liste" hidden>Vis 1 opslag mere</button>
+<p class="xnote">Opslagene er udvalgt af teamet bag NewDeal Invest. Afsenderne og de nævnte selskaber står ikke bag denne side, og opslagene er ikke fondens vurdering.</p>
+</div></section>
+
+<section class="s" id="naboer" aria-labelledby="naboer-h"><div class="wrap">
+<p class="eyebrow">Videre</p>
+<h2 id="naboer-h">Tæt på sundhed</h2>
+<div class="naboer">
+<figure class="graf kort nab-graf"><img src="fra-billedstil/grafik/sundhed-overgang-naboer.svg" alt="Nabotemaer: software og robotter" width="480" height="140" loading="lazy"><figcaption>Illustration: NewDeal Invest.</figcaption></figure>
+<div>
+<ul class="cta">
+<li><a href="../software/index.html">Software &amp; AI <span>Software til forskning og diagnostik</span></a></li>
+<li><a href="../fysisk-ai/index.html">Robotter &amp; fysisk AI <span>Robotter i den fysiske verden</span></a></li>
+</ul>
+<p class="note" style="margin-top:.8rem">Flere temasider:</p>
+<ul class="flere">
+<li><a href="../kvante/index.html">Kvantecomputere</a></li>
+<li><a href="../chips/index.html">Chips og halvledere</a></li>
+<li><a href="../datacenter/index.html">Datacentre</a></li>
+<li><a href="../raastoffer/index.html">Råstoffer</a></li>
+<li><a href="../space/index.html">Rumfart</a></li>
+<li><a href="../platforme/index.html">Platformsøkonomi</a></li>
+<li><a href="../fintech/index.html">Fintech</a></li>
+<li><a href="../krypto/index.html">Krypto</a></li>
+</ul>
+</div>
+</div>
+</div></section>
+
+<section class="s" id="vaerd" aria-labelledby="vaerd-h"><div class="wrap">
+<div class="vaerd-g">
+<div class="risiko kort">
+<p class="eyebrow">Risiko</p>
+<h2 id="vaerd-h">Det skal man vide om temaet</h2>
+<ul><li><img src="fra-billedstil/ikoner/sundhed-ikon-forsoeg-og-godkendelse.svg" alt="" width="28" height="28"><p><b>Forsøg og godkendelse.</b> Før et lægemiddel kan bruges, skal det afprøves i flere faser, og en myndighed skal vurdere sikkerhed, virkning og kvalitet. I USA godkendte lægemiddelmyndigheden FDA 46 nye lægemidler i 2025, knap 4 om måneden (<a href="https://www.fda.gov/drugs/novel-drug-approvals-fda/novel-drug-approvals-2025" rel="noopener" target="_blank">FDA, Novel Drug Approvals for 2025<span class="sr"> (åbner i nyt vindue)</span></a>).</p></li><li><img src="fra-billedstil/ikoner/sundhed-ikon-lang-vej-til-indtaegt.svg" alt="" width="28" height="28"><p><b>Lang vej til indtægt.</b> Nogle selskaber har næsten ingen omsætning, mens de udvikler behandlinger (<a href="https://www.sec.gov/Archives/edgar/data/1674416/000119312526048957/crsp-20251231.htm" rel="noopener" target="_blank">CRISPR Therapeutics, årsrapport 2025<span class="sr"> (åbner i nyt vindue)</span></a>).</p></li><li><img src="fra-billedstil/ikoner/sundhed-ikon-faa-produkter.svg" alt="" width="28" height="28"><p><b>Få produkter.</b> Nogle selskaber får det meste af omsætningen fra ét eller to produkter (<a href="https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/lly-20251231.htm" rel="noopener" target="_blank">Eli Lilly<span class="sr"> (åbner i nyt vindue)</span></a> og <a href="https://www.sec.gov/Archives/edgar/data/1776985/000177698526000017/bntx-20251231.htm" rel="noopener" target="_blank">BioNTech<span class="sr"> (åbner i nyt vindue)</span></a>, årsrapporter 2025).</p></li><li><img src="fra-billedstil/ikoner/sundhed-ikon-hvem-betaler-arbejdsgiver.svg" alt="" width="28" height="28"><p><b>Hvem betaler.</b> Hos nogle selskaber er det en arbejdsgiver, der betaler, ikke patienten (<a href="https://www.sec.gov/Archives/edgar/data/1673743/000162828026013808/hnge-20251231.htm" rel="noopener" target="_blank">Hinge Health<span class="sr"> (åbner i nyt vindue)</span></a>, årsrapport 2025). Oscar Health er selv forsikringen. Præmierne kommer mest fra den amerikanske stat som tilskud til medlemmernes forsikring og resten fra medlemmerne selv, og Oscar betaler for behandlingen (<a href="https://www.sec.gov/Archives/edgar/data/1568651/000156865126000011/oscr-20251231.htm" rel="noopener" target="_blank">Oscar Health<span class="sr"> (åbner i nyt vindue)</span></a>, årsrapport 2025). 93 % af præmierne kom i 2025 direkte fra staten (CMS) og 7 % fra medlemmerne.</p></li><li><img src="fra-billedstil/ikoner/sundhed-ikon-ingen-raad.svg" alt="" width="28" height="28"><p><b>Ingen råd.</b> Siden fortæller om selskaber og giver ingen råd om medicin. Spørgsmål om sundhed og medicin hører hjemme hos en læge.</p></li></ul>
+</div>
+<div class="fda"><figure class="vid"><div class="vid-ramme" data-yt="fZ-Msidi7EE" data-title="Video: How does the FDA approve new drugs? (U.S. Food and Drug Administration)"><button type="button" class="vid-play" aria-label="Afspil video fra den amerikanske lægemiddelmyndighed FDA: How does the FDA approve new drugs? (3 min. 16 sek., på engelsk). Videoen hentes fra YouTube."><picture><source media="(max-width:599px)" srcset="fra-billedstil/billeder/sundhed-plakat-fZ-Msidi7EE-mobil.webp"><img src="fra-billedstil/billeder/sundhed-plakat-fZ-Msidi7EE-bred.webp" alt="" width="960" height="540" loading="lazy"></picture><span class="vid-kilde" aria-hidden="true">FDA</span><span class="vid-ikon" aria-hidden="true"></span><span class="vid-tid" aria-hidden="true">3:16</span></button></div><figcaption><b>Den amerikanske lægemiddelmyndighed forklarer vejen fra laboratoriet gennem tre faser af kliniske forsøg til myndighedens vurdering og overvågningen efter godkendelsen.</b> Kilde: U.S. Food and Drug Administration. Video fra 06.09.2023, 3:16, på engelsk. <a href="https://www.youtube.com/watch?v=fZ-Msidi7EE" rel="noopener" target="_blank">Se på YouTube<span class="sr"> (åbner i nyt vindue)</span></a><span class="eu">Videoen handler om USA. I EU vurderer Det Europæiske Lægemiddelagentur (EMA) mange nye lægemidler, og Europa-Kommissionen træffer afgørelsen om godkendelse. I Danmark godkender og kontrollerer Lægemiddelstyrelsen lægemidler på det danske marked.</span></figcaption></figure></div>
+</div>
+</div></section>
+
+<section class="s kilder" id="kilder" aria-labelledby="kilder-h"><div class="wrap">
+<h2 id="kilder-h">Kilder og kreditering</h2>
+<details class="fold"><summary>Se alle kilder og krediteringer</summary><div>
+<h3>Tal</h3><ul><li>Andele: afdelingen PMINDI pr. 16.10.2026 (fondens data). Temaer og grupper: NewDeal Invests egen opdeling.</li><li>Selskabernes egne årsrapporter for 2025: <a href="https://www.sec.gov/Archives/edgar/data/1773751/000177375126000022/hims-20251231.htm" rel="noopener" target="_blank">Hims &amp; Hers Health<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1717115/000119312526066961/tem-20251231.htm" rel="noopener" target="_blank">Tempus AI<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/948320/000149315226009549/form10-k.htm" rel="noopener" target="_blank">LifeMD<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1611115/000162828026015637/omda-20251231.htm" rel="noopener" target="_blank">Omada Health<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1673743/000162828026013808/hnge-20251231.htm" rel="noopener" target="_blank">Hinge Health<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1568651/000156865126000011/oscr-20251231.htm" rel="noopener" target="_blank">Oscar Health<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1776985/000177698526000017/bntx-20251231.htm" rel="noopener" target="_blank">BioNTech<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1652130/000119312526076550/ntla-20251231.htm" rel="noopener" target="_blank">Intellia Therapeutics<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1674416/000119312526048957/crsp-20251231.htm" rel="noopener" target="_blank">CRISPR Therapeutics<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1703057/000170305726000012/abcl-20251231.htm" rel="noopener" target="_blank">AbCellera Biologics<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/lly-20251231.htm" rel="noopener" target="_blank">Eli Lilly<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.bachem.com/wp-content/uploads/2026/03/Bachem-Annual-report-2025-EN.pdf" rel="noopener" target="_blank">Bachem<span class="sr"> (åbner i nyt vindue)</span></a>.</li><li>Mirion Technologies: <a href="https://www.sec.gov/Archives/edgar/data/1809987/000162828026009869/mir-20251231.htm" rel="noopener" target="_blank">årsrapport 2025<span class="sr"> (åbner i nyt vindue)</span></a>.</li><li>ASP Isotopes: <a href="https://www.sec.gov/Archives/edgar/data/1921865/000119312526151294/aspi-20251231.htm" rel="noopener" target="_blank">årsrapport 2025<span class="sr"> (åbner i nyt vindue)</span></a>.</li><li>Godkendelser i USA: <a href="https://www.fda.gov/drugs/novel-drug-approvals-fda/novel-drug-approvals-2025" rel="noopener" target="_blank">FDA, Novel Drug Approvals for 2025<span class="sr"> (åbner i nyt vindue)</span></a>.</li><li>Danmarks BNP 2025: <a href="https://www.statbank.dk/NAN1" rel="noopener" target="_blank">Danmarks Statistik, NAN1<span class="sr"> (åbner i nyt vindue)</span></a>. Omregning fra dollars: Nationalbankens gennemsnitskurs for 2025, <a href="https://www.statbank.dk/DNVALA" rel="noopener" target="_blank">Danmarks Statistik, DNVALA<span class="sr"> (åbner i nyt vindue)</span></a>.</li></ul><h3>Billeder, video og opslag</h3><ul><li>Tegninger, ikoner og videoplakater. Illustration: NewDeal Invest.</li><li>Videoer: Harvard Medical School, “Creating the World’s First CRISPR Medicine, for Sickle Cell Disease”, 20.02.2025. The Children’s Hospital of Philadelphia, “How Do mRNA Vaccines Work?”, 13.11.2020. U.S. Food and Drug Administration, “How does the FDA approve new drugs?”, 06.09.2023. Alle på YouTube.</li><li>Opslag: STAT på X. Opslagene vises først, når du trykker på dem.</li><li>Logoer tilhører de enkelte selskaber.</li></ul>
+<p class="kid-p"><a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm140b" rel="noopener" target="_blank">Dokument med central information (KID)<span class="sr"> (åbner i nyt vindue)</span></a></p>
+</div></details>
+</div></section>
+</main>
+<footer><div class="wrap">
+<p>Siden beskriver indholdet af fonden og er ikke investeringsrådgivning. Omtalen af et selskab er ikke en anbefaling.</p>
+<p>Risikoindikatoren i fondens Dokument med central information (KID) er 5 på en skala fra 1 til 7. Historiske afkast er ingen garanti for fremtidige afkast. Du kan tabe hele eller dele af det investerede beløb.</p>
+</div></footer>
+<script>(function(){
+document.documentElement.classList.add('js');
+var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var pr=document.querySelector('.prog');
+function prog(){var h=document.documentElement,m=h.scrollHeight-innerHeight;pr.style.setProperty('--p',m>0?(scrollY/m).toFixed(3):0)}
+addEventListener('scroll',prog,{passive:true});prog();
+/* fold-liste: X-opslag */
+function fold(lid,bid,lab){var l=document.getElementById(lid),b=document.getElementById(bid);if(!l||!b)return;b.hidden=false;b.addEventListener('click',function(){var o=b.getAttribute('aria-expanded')!=='true';b.setAttribute('aria-expanded',String(o));l.classList.toggle('alle',o);b.textContent=o?'Vis færre':lab;if(o){var f=l.querySelector('.ekstra');if(f){f.tabIndex=-1;f.focus({preventScroll:true})}}})}
+fold('x-liste','x-alle','Vis 1 opslag mere');
+/* X-facade: intet hentes fra X før klik; widgets.js indlæses én gang */
+function twl(){if(window.twttr&&window.twttr.widgets)return;window.twttr=(function(d){var t=window.twttr||{};if(t._e)return t;t._e=[];t.ready=function(f){t._e.push(f)};var j=d.createElement('script');j.id='twitter-wjs';j.async=true;j.src='https://platform.twitter.com/widgets.js';j.charset='utf-8';d.body.appendChild(j);return t})(document)}
+[].forEach.call(document.querySelectorAll('.xp[data-url]'),function(li){var b=li.querySelector('.xp-vis'),em=li.querySelector('.xp-embed');b.hidden=false;
+ b.addEventListener('click',function(){if(em.firstChild)return;var q=document.createElement('blockquote');q.className='twitter-tweet';q.setAttribute('data-theme','dark');q.setAttribute('data-dnt','true');q.setAttribute('data-conversation','none');q.setAttribute('data-lang','da');
+ var a=document.createElement('a');a.href=li.dataset.url;a.textContent='Opslaget hentes fra X …';q.appendChild(a);em.appendChild(q);b.hidden=true;em.focus({preventScroll:true});
+ twl();window.twttr.ready(function(t){t.widgets.load(em)})})});
+/* "Hører til": åbn sedlen */
+var R=document.getElementById('cq-su');
+[].forEach.call(document.querySelectorAll('.xp-trin a[data-k]'),function(a){a.addEventListener('click',function(e){var b=R&&R.querySelector('.cq-su__sb[aria-controls="cq-su-p-'+a.dataset.k+'"]');if(!b||!R.cqSetDx)return;e.preventDefault();R.cqSetDx(b,true);var p=document.getElementById(b.getAttribute('aria-controls'));p.tabIndex=-1;p.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});p.focus({preventScroll:true})})});
+/* video-facade: YouTube (nocookie) hentes først ved klik */
+[].forEach.call(document.querySelectorAll('.vid-ramme[data-yt]'),function(r){var b=r.querySelector('.vid-play');b.addEventListener('click',function(){var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+r.dataset.yt+'?autoplay=1&rel=0&playsinline=1';f.title=r.dataset.title;f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.setAttribute('allowfullscreen','');f.referrerPolicy='strict-origin-when-cross-origin';r.replaceChild(f,b);f.focus()})});
+})();
+</script>
+</body>
+</html>

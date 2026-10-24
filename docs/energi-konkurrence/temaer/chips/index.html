@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chips og halvledere · Én chip, mange hænder · NewDeal Invest</title>
+<meta name="description" content="Chips er fondens største tema: 24,31 % fordelt på 75 selskaber i hele kæden, fra tegning og maskiner til hukommelse og strømchips.">
+<meta name="theme-color" content="#050a0f">
+<link rel="icon" href="data:,">
+<style>@font-face{font-family:'DM Sans';font-style:normal;font-weight:100 900;font-display:swap;src:url('fonts/font-1.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:100 900;font-display:swap;src:url('fonts/font-0.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:200 800;font-display:swap;src:url('fonts/font-3.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:200 800;font-display:swap;src:url('fonts/font-2.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}
+:root{--bg:#050a0f;--ink:#e6e8ed;--mute:#aebbc7;--teal:#89aeb4;--line:#313a4a;--card:#0b141c;--surf:#0f1a22;--fokus:#cde0e2;--x:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10'%3E%3Cpath d='M0 5h10M5 0v10' stroke='%2389aeb4' stroke-opacity='.6'/%3E%3C/svg%3E")}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 'DM Sans',system-ui,sans-serif;overflow-x:clip}
+a{color:inherit}button{font:inherit;color:inherit;cursor:pointer}img{max-width:100%}
+h1,h2,h3{font-family:Manrope,'DM Sans',sans-serif;font-weight:500;line-height:1.18;letter-spacing:-.04em;margin:0}
+p{margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding:0 18px}
+.eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);font-weight:600;margin:0 0 12px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+a:focus-visible,button:focus-visible,summary:focus-visible,iframe:focus-visible{outline:3px solid var(--fokus);outline-offset:3px}
+.skip{position:absolute;left:12px;top:-60px;background:var(--teal);color:var(--bg);padding:12px 16px;border-radius:5px;z-index:60;font-weight:600}
+.skip:focus{top:12px}
+.top{position:sticky;top:0;z-index:40;background:#000;border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px}
+.top img{width:130px;height:auto;display:block}
+.top span{font-size:11px;letter-spacing:.14em;color:var(--teal);font-weight:600;text-transform:uppercase;text-align:right}
+.prog{position:absolute;left:0;bottom:-1px;height:2px;width:100%;background:var(--teal);transform-origin:left;transform:scaleX(var(--p,0))}
+section{scroll-margin-top:64px}
+h2{font-size:clamp(28px,7vw,42px);max-width:22ch}
+.lead{font-size:18px;color:var(--mute);max-width:58ch}
+/* die-kort: svagt gitter + justeringskryds i hjørnerne (Billedstil) */
+.die{position:relative;background:linear-gradient(rgba(49,58,74,.28) 1px,transparent 1px) 0 0/20px 20px,linear-gradient(90deg,rgba(49,58,74,.28) 1px,transparent 1px) 0 0/20px 20px,var(--card);border:1px solid var(--line);border-radius:12px}
+.die::after{content:"";position:absolute;inset:7px;pointer-events:none;background:var(--x) left top/10px 10px no-repeat,var(--x) right top/10px 10px no-repeat,var(--x) left bottom/10px 10px no-repeat,var(--x) right bottom/10px 10px no-repeat}
+/* 1 hero: nærbillede */
+.hero{position:relative;padding:28px 0 36px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:url(grafik/chips-die-spor.svg) 0 0/96px 96px repeat;opacity:.55;-webkit-mask-image:var(--hm);mask-image:var(--hm);pointer-events:none;--hm:radial-gradient(ellipse 95% 40% at 50% 80%,#000 35%,transparent 80%)}
+@media (min-width:900px){.hero::before{--hm:radial-gradient(ellipse 55% 75% at 74% 45%,#000 35%,transparent 80%)}}
+.hero .wrap{position:relative;display:grid;gap:26px}
+.hero h1{font-size:clamp(40px,11vw,72px);max-width:12ch}
+.hero .intro{font-size:18px;color:var(--mute);max-width:54ch;margin-top:16px}
+.hero .intro+.intro{margin-top:12px}
+.hero-fig{margin:0;padding:12px}
+.hero-zoom{border-radius:8px;overflow:hidden;background:#000;aspect-ratio:3/2}
+.hero-zoom img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 45%;transform:scale(var(--z,1));transform-origin:50% 45%;will-change:transform}
+.hero-fig figcaption{font-size:13px;color:var(--mute);margin-top:10px;padding:0 4px}
+.hero-tal{margin-top:24px;padding:18px 20px 16px;max-width:520px}
+.hero-tal strong{display:block;font-family:Manrope,sans-serif;font-weight:500;font-size:clamp(40px,10vw,56px);letter-spacing:-.04em;line-height:1}
+.hero-tal span{display:block;color:var(--mute);font-size:15px;margin-top:8px;line-height:1.5}
+.cta{display:inline-flex;align-items:center;gap:10px;min-height:48px;margin-top:22px;padding:0 20px;border:1px solid var(--teal);border-radius:999px;color:var(--ink);text-decoration:none;font-weight:600}
+.cta::after{content:"→";color:var(--teal)}
+.cta.nl{margin-top:1rem}.cta.nl::after{content:none}
+.cta:hover{background:rgba(137,174,180,.1)}
+/* 2 fonden */
+.fonden{padding:40px 0 20px;border-top:1px solid var(--line)}
+.fonden .grid{display:grid;gap:22px;margin-top:20px}
+.stor{padding:20px}
+.stor strong{display:block;font-family:Manrope,sans-serif;font-weight:500;font-size:clamp(56px,16vw,96px);letter-spacing:-.05em;line-height:1;color:var(--teal)}
+.stor .hvad{margin-top:10px;font-size:15px;color:var(--ink);max-width:46ch}
+.stor .hvad b{font-weight:600}
+.txt p{max-width:62ch;color:var(--mute)}.txt p+p{margin-top:12px}.txt b{color:var(--ink);font-weight:600}
+.fakta{list-style:none;margin:22px 0 0;padding:14px 18px;display:grid;gap:6px 26px;font-size:15px;color:var(--mute)}
+.fakta b{color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums}
+.fakta li:first-child b,.fakta li:nth-child(2) b{font-family:Manrope,sans-serif;font-weight:500;font-size:22px;letter-spacing:-.03em;margin-right:4px}
+.greb-link{display:inline-flex;align-items:center;min-height:44px;margin-top:6px;color:var(--teal);font-weight:600;text-underline-offset:3px}
+.greb-link::after{content:"↓";margin-left:.4rem}
+.greb{margin-top:22px;padding:22px 20px}
+.greb h3{font-size:clamp(22px,5.4vw,30px);max-width:24ch}
+.greb>p{margin-top:12px;max-width:62ch;color:var(--mute)}
+.sam{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:12px;max-width:640px}
+.sam li{display:grid;gap:6px}
+.sam .l{display:flex;justify-content:space-between;gap:12px;font-size:14px;color:var(--mute)}
+.sam .l b{color:var(--ink);font-family:Manrope,sans-serif;font-weight:600;font-size:18px;font-variant-numeric:tabular-nums}
+.sam .s{height:12px;border-radius:3px;background:#121e27;overflow:hidden}.sam .s i{display:block;height:100%;background:var(--teal)}
+.sam li+li .s i{background:#c3ccd6}
+/* 3 kæden (Critiquito), tilpasset siden */
+#cq-kaede.cq-ch{--cq-c5:#e6e8ed;--cq-c6:#c3ccd6;--cq-c7:#a3b0bd;--cq-gold:var(--fokus);position:relative;border-top:1px solid var(--line)}
+#cq-kaede::before{content:"";position:absolute;inset:0;background:url(grafik/chips-die-moenster.svg) 0 0/96px 96px repeat;opacity:.35;pointer-events:none}
+#cq-kaede .cq-ch__in{position:relative;padding:0 18px;max-width:1180px}
+#cq-kaede .cq-ch__kick{font-size:11px;letter-spacing:.14em;font-weight:600}
+#cq-kaede h2{font-weight:500;letter-spacing:-.04em}
+#cq-kaede h3.kd-asof{display:block;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);font-weight:600;margin:0 0 .5rem;line-height:1.5}
+#cq-kaede .cq-ch__br span+span{border-color:#c3ccd6}
+#cq-kaede .cq-ch__gl span+span{color:#c3ccd6}
+#cq-kaede .cq-ch__done{background:rgba(230,232,237,.04);border:1px dashed #6b7787;color:var(--ink)}
+#cq-kaede .cq-ch__p{position:relative}
+#cq-kaede .cq-ch__co{position:relative}
+#cq-kaede .cq-ch__co::after{content:"";position:absolute;inset:5px;pointer-events:none;background:var(--x) left top/7px 7px no-repeat,var(--x) right top/7px 7px no-repeat,var(--x) left bottom/7px 7px no-repeat,var(--x) right bottom/7px 7px no-repeat;opacity:.8}
+#cq-kaede .cq-ch__nm{hyphens:manual;overflow-wrap:normal;word-break:normal}
+#cq-kaede .cq-ch__tn img{vertical-align:-5px;margin-right:6px;opacity:.9}
+.kd-ill{display:block;float:right;width:104px;height:auto;margin:0 0 .4rem .8rem}
+#cq-kaede .cq-ch__t{display:flow-root}
+html{scroll-padding-top:136px}
+#cq-kaede .cq-ch__chip{position:sticky;top:70px;z-index:20;box-shadow:0 0 0 9px var(--bg)}
+#cq-kaede .cq-ch__seg{cursor:pointer;opacity:.85}
+#cq-kaede .cq-ch__seg--j{background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.10) 0 2px,transparent 2px 6px)}
+#cq-kaede .cq-ch__seg.on{opacity:1;box-shadow:inset 0 0 0 2px #fff}
+#cq-kaede .kd-over30{margin:.9rem 0 1.4rem;max-width:44rem;font-size:14px;color:var(--mute);line-height:1.55}
+@media (max-width:599px){#cq-kaede .cq-ch__chip{padding:6px 5px}#cq-kaede .cq-ch__bar{height:22px}#cq-kaede .cq-ch__chip::before{top:-8px}#cq-kaede .cq-ch__chip::after{bottom:-8px}}
+.kd-zoom{display:block;width:100%;max-width:420px;height:auto;margin:0 0 .8rem}
+.kd-foto{margin:.4rem 0 .8rem;max-width:400px}
+.kd-foto img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;border-radius:10px;border:1px solid var(--line);filter:saturate(.75)}
+.kd-foto figcaption{font-size:13px;color:var(--mute);margin-top:6px;line-height:1.45}
+.kd-foto a,.kilder .kred a{color:var(--teal);text-underline-offset:3px;display:inline-block;padding:13px 0;margin:-13px 0}
+.kd-dots{display:flex;justify-content:center;gap:8px;margin:.55rem 0 0}
+.kd-dots i{width:7px;height:7px;border-radius:50%;background:var(--line)}
+.kd-dots i.on{background:var(--teal);transform:scale(1.25)}
+/* video-facade */
+.vid{margin:.8rem 0 .9rem;max-width:560px}
+.vid-ramme{position:relative;aspect-ratio:16/9;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:#000}
+.vid-ramme iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vid-play{position:absolute;inset:0;width:100%;height:100%;padding:0;border:0;background:#000;display:block}
+.vid-play img{width:100%;height:100%;object-fit:cover;display:block;opacity:.8;filter:grayscale(.9) contrast(1.05)}
+.vid-play::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,10,15,0) 40%,rgba(5,10,15,.55));z-index:1}
+.vid-ikon{position:absolute;z-index:2;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:var(--ink);box-shadow:0 4px 24px rgba(0,0,0,.5)}
+.vid-ikon::after{content:"";position:absolute;left:26px;top:20px;border-style:solid;border-width:12px 0 12px 19px;border-color:transparent transparent transparent var(--bg)}
+.vid-play:hover .vid-ikon{background:#fff}
+.vid-play:focus-visible{outline:3px solid var(--fokus);outline-offset:-3px}
+.vid-tid{position:absolute;z-index:2;right:8px;bottom:8px;background:rgba(0,0,0,.8);color:#fff;font-size:13px;padding:2px 8px;border-radius:4px}
+.vid figcaption{font-size:13px;color:var(--mute);margin-top:8px;line-height:1.5}
+.vid figcaption b{color:var(--ink);font-weight:600;display:block}
+.vid figcaption a{display:inline-flex;align-items:center;min-height:44px;color:var(--teal);font-weight:600}
+/* 5 X */
+.xs{padding:40px 0;border-top:1px solid var(--line)}
+.xs-liste{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:12px}
+.xp{padding:4px 14px 10px;min-width:0;overflow:hidden}
+.xp-delt{font-size:13px;color:var(--teal);font-weight:600;padding-top:10px}
+.xp-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.xp-trin a{display:inline-flex;align-items:center;min-height:44px;color:var(--teal);font-size:13px;font-weight:600;letter-spacing:.02em;text-underline-offset:3px}
+.xp-trin a::before{content:"";width:8px;height:8px;border-radius:2px;background:var(--teal);margin-right:8px}
+.xp-dato{font-size:13px;color:var(--mute);font-variant-numeric:tabular-nums}
+.xp-fra{font-size:14px;color:var(--mute);margin-top:-6px}
+.xp-fra b{color:var(--ink);font-weight:600}
+.xp-k{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);font-weight:600;margin-right:4px}
+.xp-forkl{font-size:15px;line-height:1.5;margin-top:6px}
+.xp-ord{font-size:14px;color:var(--mute);margin-top:6px}
+.xp-knapper{display:flex;flex-wrap:wrap;align-items:center;gap:0 18px;margin-top:6px}
+.xp-vis{min-height:44px;padding:0 16px;border-radius:10px;border:1px solid var(--teal);background:var(--surf);color:var(--ink);font:inherit;font-weight:600;cursor:pointer}
+.xp-vis:hover{background:#15242e}
+.xp-link{display:inline-flex;align-items:center;min-height:44px;color:var(--teal);font-weight:600;text-underline-offset:3px}
+.xp-embed:empty{display:none}.xp-embed:focus{outline:none}.xp-embed:focus-visible{outline:3px solid var(--fokus);outline-offset:3px}
+.xp blockquote.twitter-tweet{margin:10px 0 4px;font-size:14px;color:var(--mute)}
+.xp .twitter-tweet-rendered,.xp iframe{max-width:100%!important;min-width:0!important}
+.xp .twitter-tweet-rendered{margin:10px 0 4px!important}
+@media (max-width:599px){
+ .xs-liste{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;margin:16px -18px 0;padding:0 18px 10px;scroll-padding:0 18px;scrollbar-width:thin;scrollbar-color:var(--line) transparent;align-items:flex-start}
+ .xs-liste>.xp{flex:0 0 86%;scroll-snap-align:start}
+}
+.xs-swipe{display:none;font-size:13px;color:var(--mute);margin-top:4px}
+@media (max-width:599px){.xs-swipe{display:block}}
+.xs-note{margin-top:18px;font-size:14px;color:var(--mute);max-width:70ch}
+/* 6 videre: overgang til energi */
+.videre{padding:40px 0;border-top:1px solid var(--line)}
+.videre .grid{display:grid;gap:22px;align-items:center}
+.videre figure{margin:0}
+.videre .foto img{display:block;width:100%;height:auto;border-radius:12px;border:1px solid var(--line);aspect-ratio:3/2;object-fit:cover}
+.videre .foto figcaption{font-size:13px;color:var(--mute);margin-top:8px}
+.overgang{display:block;width:100%;max-width:520px;height:auto;margin:18px 0 6px}
+.videre .txt p{margin-top:12px}
+.fod{margin-top:26px}
+.fod summary{min-height:56px;display:flex;align-items:center;justify-content:space-between;gap:12px;cursor:pointer;list-style:none;font-weight:600;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.fod summary::-webkit-details-marker{display:none}
+.fod summary::after{content:"＋";color:var(--teal)}.fod[open] summary::after{content:"−"}
+.fod p{font-size:14px;color:var(--mute);margin:14px 0 10px;max-width:70ch}
+.fod ul{list-style:none;margin:0 0 10px;padding:0;display:grid;gap:8px}
+.fod li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 12px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--surf);font-size:14px}
+.fod li b{font-weight:600}.fod li span{color:var(--mute);grid-column:1}.fod li i{font-style:normal;grid-column:2;grid-row:1/3;align-self:center;font-variant-numeric:tabular-nums}
+/* 7 kilder */
+.kilder-s{padding:10px 0 20px;border-top:1px solid var(--line)}
+.kilder summary{min-height:56px;display:flex;align-items:center;justify-content:space-between;gap:12px;cursor:pointer;list-style:none;font-weight:600}
+.kilder summary::-webkit-details-marker{display:none}
+.kilder summary::after{content:"＋";color:var(--teal)}.kilder[open] summary::after{content:"−"}
+.kilder ul{margin:0 0 18px;padding-left:18px;font-size:14px;color:var(--mute);display:grid;gap:14px;max-width:80ch}
+.kilder a{color:var(--teal);text-underline-offset:3px;overflow-wrap:anywhere;display:inline-block;padding:13px 0;margin:-13px 0}
+.kilder p{font-size:14px;color:var(--mute);max-width:80ch;margin:0 0 14px}
+.kilder h3{font-size:16px;margin:18px 0 10px;letter-spacing:-.01em}
+.kid{display:inline-flex!important;align-items:center;min-height:44px;margin:6px 0 4px!important;padding:0!important;font-weight:600}
+footer{border-top:1px solid var(--line);padding:22px 0 64px;font-size:13px;color:var(--mute)}
+footer p{max-width:80ch}footer p+p{margin-top:8px}
+@media (min-width:860px){
+ .wrap{padding:0 28px}#cq-kaede .cq-ch__in{padding:0 28px}
+ .kd-dots{display:none}
+ #cq-kaede .cq-ch__cos{grid-template-columns:repeat(auto-fill,minmax(196px,1fr))}
+ .kd-ill{width:120px}
+}
+@media (min-width:900px){
+ .hero{padding:56px 0 64px}
+ .hero .wrap{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);align-items:center;gap:48px}
+ .hero-zoom{aspect-ratio:4/5}
+ .fonden{padding:64px 0 32px}
+ .fonden .grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start}
+ .greb{padding:30px 32px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:40px}
+ .greb h3,.greb>p,.greb-link{grid-column:1}.greb .sam{grid-column:2;grid-row:1/5;align-self:center;margin-top:0}
+ .fakta{grid-template-columns:auto auto minmax(0,1.6fr)}
+ .xs{padding:64px 0}.xs-liste{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;align-items:start}
+ .xs-liste>.xp:last-child:nth-child(odd){grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,550px);column-gap:28px;align-items:start}
+ .xs-liste>.xp:last-child:nth-child(odd)>*{grid-column:1}
+ .xs-liste>.xp:last-child:nth-child(odd)>.xp-embed{grid-column:2;grid-row:1/span 6}
+ .xs-liste>.xp:last-child:nth-child(odd) .twitter-tweet-rendered,.xs-liste>.xp:last-child:nth-child(odd) blockquote.twitter-tweet{margin-top:0!important}
+ .videre{padding:64px 0}.videre .grid{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:48px}
+}
+
+.sam .l{flex-wrap:wrap;align-items:baseline}.sam .l b{white-space:nowrap}
+.videre .foto img{filter:saturate(.35)}
+
+/* R2: koncentration (top 10) */
+.konc{margin-top:22px;padding:20px 20px 18px}
+.konc h3{font-size:clamp(20px,5vw,26px);max-width:30ch}
+.konc .asof{font-size:13px;color:var(--mute);margin-top:6px}
+.konc ol{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:6px 32px;counter-reset:k}
+.konc li{counter-increment:k;display:grid;grid-template-columns:22px minmax(0,1fr) auto;column-gap:8px;row-gap:4px;align-items:baseline;font-size:14px;line-height:1.45}
+.konc li::before{content:counter(k);grid-row:1;color:var(--teal);font-size:12px;font-weight:600;font-variant-numeric:tabular-nums}
+.konc .n{grid-column:2;color:var(--ink);min-width:0}
+.konc .v{grid-column:3;color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap}
+.konc .s{grid-column:2/4;height:5px;border-radius:3px;background:#121e27;overflow:hidden}.konc .s i{display:block;height:100%;width:calc(var(--v)/1.32*100%);background:var(--teal)}
+/* R2: risiko */
+.risiko{padding:8px 0 40px}
+.risk{padding:20px 20px 18px;border-left:3px solid var(--teal);max-width:760px}
+.risk h2{font-size:clamp(22px,5.4vw,28px);max-width:none}
+.risk p{margin-top:10px;color:var(--mute);max-width:62ch}
+/* R2: billeder, der endnu ikke er hentet, viser die-gitteret i stedet for en tom mørk flade */
+.videre .foto img{background:linear-gradient(rgba(49,58,74,.35) 1px,transparent 1px) 0 0/20px 20px,linear-gradient(90deg,rgba(49,58,74,.35) 1px,transparent 1px) 0 0/20px 20px,var(--card)}
+.hero-zoom{background:linear-gradient(rgba(49,58,74,.35) 1px,transparent 1px) 0 0/20px 20px,linear-gradient(90deg,rgba(49,58,74,.35) 1px,transparent 1px) 0 0/20px 20px,var(--card)}
+@media (min-width:900px){
+ .konc{padding:26px 32px 24px}
+ .konc ol{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(5,auto);grid-auto-flow:column}
+ .risiko{padding:0 0 64px}
+ .risk{padding:26px 32px 24px}
+}
+@media(max-width:599px){#x-opslag,#videre,#cq-kaede{padding-top:1.75rem;padding-bottom:1.75rem}#fonden{padding-top:1.75rem}#risiko{padding-bottom:1.75rem}#chippen{padding-bottom:1.75rem}footer{padding-bottom:2rem}.greb.die,.konc.die,.hero-tal.die,.fakta.die{margin-top:1rem}a.cta{margin-top:1rem}p.kd-over30{margin-top:.6rem;margin-bottom:1rem}.eyebrow{margin-bottom:.5rem}.stor.die,.risk.die{padding-top:1rem;padding-bottom:1rem}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.hero-zoom img{transform:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Spring til indholdet</a>
+<header class="top"><div class="wrap"><img src="img/ndi-logo.webp" alt="NewDeal Invest" width="155" height="57"><span>Tema · Chips og halvledere</span></div><i class="prog" aria-hidden="true"></i></header>
+<main id="main">
+<section class="hero" id="chippen" aria-labelledby="h1">
+<div class="wrap">
+<div>
+<p class="eyebrow">Sådan bliver en chip til</p>
+<h1 id="h1">Én chip, mange hænder</h1>
+<p class="intro">Når en AI svarer, foregår regnearbejdet i chips. En chip er en lille plade af et halvledermateriale med et enormt antal små elektriske kontakter. Halvleder betyder, at materialet kan styres, så det enten leder strøm eller ikke gør.</p>
+<p class="intro">Chips bliver lavet mange ad gangen på en wafer: en tynd, rund skive, oftest af silicium. Men ingen chip bliver lavet af ét selskab alene. Denne side følger hænderne bag chippen.</p>
+<div class="hero-tal die"><strong>791,7 mia. USD</strong><span>Så stort var verdens samlede salg af halvledere i 2025, ca. 5.242 mia. kr. Det svarer i størrelse til ca. 1,7 gange Danmarks BNP.</span></div>
+<a class="cta" href="#cq-kaede">Følg chippen trin for trin</a>
+</div>
+<figure class="hero-fig die">
+<div class="hero-zoom"><picture><source media="(max-width:899px)" srcset="img/chips-hero-wafer-bred.webp" width="660" height="440"><img src="img/chips-hero-wafer.webp" alt="Siliciumwafer i en holder med et gitter af chips, før de skæres ud" width="660" height="990" fetchpriority="high"></picture></div>
+<figcaption>Siliciumwafer med et gitter af chips, før de skæres ud. Illustration: NewDeal Invest.</figcaption>
+</figure>
+</div>
+</section>
+<section class="fonden" id="fonden" aria-labelledby="h-fonden">
+<div class="wrap">
+<p class="eyebrow">Fonden</p>
+<h2 id="h-fonden">Chips er fondens største tema</h2>
+<div class="grid">
+<div class="stor die"><strong>24,31 %</strong><p class="hvad">af fonden ligger i chiptemaet. Temaet tæller hele kæden bag chippen med, også selskaber, der ikke selv laver chips. <b>Alle procenter på siden er andele af hele fonden, afdelingen PMINDI (NewDeal Invest klasse n, den udloddende andelsklasse, der udbetaler udbytte) pr. 16.10.2026.</b></p></div>
+<div class="txt">
+<p>Det er knap hver fjerde krone i fonden. Til sammenligning ligger 16,96 % i Energi og elnet, fondens næststørste tema. På sin hjemmeside skriver NewDeal Invest, at porteføljerne har et særligt fokus på kunstig intelligens, infrastruktur, mikrochips og spacetech.</p>
+<p>Chips bruges til meget mere end AI. Hos TSMC kom 29 % af omsætningen i 2025 fra chips til smartphones og 5 % fra chips til biler.</p>
+<p>Hvor stor en del af selskabernes omsætning, der kommer fra AI, kan ikke beregnes. De fleste selskaber opgør det ikke for sig, og mange af de samme chips bruges både til AI og til meget andet.</p>
+</div>
+</div>
+<ul class="fakta die" role="list">
+<li><b>75</b> af fondens 373 selskaber</li>
+<li><b>8</b> trin fra tegning til færdig chip</li>
+<li>Største chipselskab: <b>Samsung Electronics, 1,32 % af fonden</b>. Kun tre selskaber i fonden fylder mere: Tesla, SoftBank Group og SpaceX.</li>
+</ul>
+<div class="konc die">
+<h3 id="h-konc">De 10 største selskaber i chiptemaet fylder tilsammen 8,96 % af&nbsp;fonden</h3>
+<p class="asof">Andel af hele fonden, afdelingen PMINDI pr. 16.10.2026</p>
+<ol role="list" aria-labelledby="h-konc"><li><span class="n">Samsung Electronics</span><span class="v">1,32 %<span class="sr"> af fonden</span></span><span class="s" aria-hidden="true"><i style="--v:1.32"></i></span></li><li><span class="n">Taiyo Yuden</span><span class="v">1,05 %<span class="sr"> af fonden</span></span><span class="s" aria-hidden="true"><i style="--v:1.05"></i></span></li><li><span class="n">SK hynix</span><span class="v">1,04 %<span class="sr"> af fonden</span></span><span class="s" aria-hidden="true"><i style="--v:1.04"></i></span></li><li><span class="n">Cerebras Systems</span><span class="v">0,94 %<span class="sr"> af fonden</span></span><span class="s" aria-hidden="true"><i style="--v:0.94"></i></span></li><li><span class="n">LPKF Laser &amp; Electronics</span><span class="v">0,89 %<span class="sr"> af fonden</span></span><span class="s" aria-hidden="true"><i style="--v:0.89"></i></span></li><li><span class="n">Kioxia</span><span class="v">0,85 %<span class="sr"> af fonden</span></span><span class="s" aria-hidden="true"><i style="--v:0.85"></i></span></li><li><span class="n">GlobalFoundries</span><span class="v">0,77 %<span class="sr"> af fonden</span></span><span class="s" aria-hidden="true"><i style="--v:0.77"></i></span></li><li><span class="n">Tower Semiconductor</span><span class="v">0,75 %<span class="sr"> af fonden</span></span><span class="s" aria-hidden="true"><i style="--v:0.75"></i></span></li><li><span class="n">Soitec</span><span class="v">0,68 %<span class="sr"> af fonden</span></span><span class="s" aria-hidden="true"><i style="--v:0.68"></i></span></li><li><span class="n">Nova</span><span class="v">0,67 %<span class="sr"> af fonden</span></span><span class="s" aria-hidden="true"><i style="--v:0.67"></i></span></li></ol>
+</div>
+<div class="greb die">
+<h3>Navnet på chippen og hænderne bag den</h3>
+<p>Mange kender NVIDIA som navnet på AI-chips. I regnskabsåret, der sluttede 25.01.2026, havde selskabet en omsætning på 215,9 mia. USD. Samme år brugte det 6,0 mia. USD på anlæg og immaterielle aktiver, altså fx bygninger, maskiner og rettigheder. Det er 2,8 % af omsætningen. NVIDIA har ingen egne chipfabrikker: selskabet tegner chipsene, og andre laver, samler og tester dem.</p>
+<ul class="sam" role="list" aria-label="NVIDIA, regnskabsåret til januar 2026">
+<li><span class="l"><span>Omsætning, ca. 1.430 mia. kr.</span><b>215,9 mia. USD</b></span><span class="s" aria-hidden="true"><i style="width:100%"></i></span></li>
+<li><span class="l"><span>Anlæg og immaterielle aktiver, ca. 40 mia. kr.</span><b>6,0 mia. USD</b></span><span class="s" aria-hidden="true"><i style="width:2.8%"></i></span></li>
+</ul>
+<p>Pengene ligger i hele kæden bag chippen, og de kendte navne fylder lidt: NVIDIA 0,26 %, ASML 0,09 %, AMD 0,04 % og TSMC 0,03 %. Siden bruger alligevel NVIDIA og TSMC som eksempler, fordi mange kender dem.</p>
+<a class="greb-link" href="#cq-kaede">Se, hvor pengene ligger i kæden</a>
+</div>
+</div>
+</section>
+
+<section class="cq-ch" id="cq-kaede" aria-labelledby="cq-ch-h">
+<style>.cq-ch{--cq-ink:var(--ink,#e6e8ed);--cq-mute:var(--mute,#aebbc7);--cq-line:var(--line,#313a4a);--cq-teal:var(--teal,#89aeb4);--cq-gold:var(--gold,#f5ee9e);--cq-card:var(--card,#0b141c);--cq-surf:var(--surf,#0f1a22);
+--cq-c0:#6f9aa1;--cq-c1:#7ca5ab;--cq-c2:#89aeb4;--cq-c3:#a9c7cb;--cq-c4:#cde0e2;--cq-c5:#f5ee9e;--cq-c6:#e2c66f;--cq-c7:#c99a5b;
+color:var(--cq-ink);font-family:'DM Sans',system-ui,sans-serif;padding:clamp(2.5rem,7vw,5rem) 0;scroll-margin-top:4.5rem}
+.cq-ch *{box-sizing:border-box}
+.cq-ch__in{max-width:1120px;margin:0 auto}
+.cq-ch__kick{margin:0 0 .5rem;color:var(--cq-teal);text-transform:uppercase;letter-spacing:.12em;font-size:.8rem;font-weight:700}
+.cq-ch h2{font-family:Manrope,sans-serif;font-size:clamp(1.7rem,4.6vw,2.6rem);line-height:1.12;margin:0 0 .8rem;letter-spacing:-.01em}
+.cq-ch__lead{max-width:44rem;color:var(--cq-mute);font-size:1.06rem;line-height:1.6;margin:0 0 1.6rem}
+.cq-ch__map{margin:0 0 1.4rem}
+.cq-ch__tot{margin:0 0 .7rem;line-height:1.5;max-width:44rem}
+.cq-ch__tot b{font-family:Manrope,sans-serif;font-size:1.25rem;color:var(--cq-teal)}
+.cq-ch__chip{position:relative;padding:9px 6px;border:2px solid var(--cq-line);border-radius:10px;background:var(--cq-surf)}
+.cq-ch__chip::before,.cq-ch__chip::after{content:"";position:absolute;left:14px;right:14px;height:7px;background:repeating-linear-gradient(90deg,var(--cq-line) 0 5px,transparent 5px 14px)}
+.cq-ch__chip::before{top:-9px}.cq-ch__chip::after{bottom:-9px}
+.cq-ch__bar{display:flex;height:26px;border-radius:5px;transition:gap .7s ease;overflow:hidden;gap:2px;background:var(--cq-line)}
+.cq-ch__seg{flex:0 0 calc(var(--w) - 2px);min-width:2px;background:var(--c);opacity:.6;transition:opacity .25s,transform .25s,background-color .7s ease;transform-origin:center bottom}
+.cq-ch__seg.on{opacity:1;transform:scaleY(1.25)}
+.cq-ch--arm .cq-ch__bar{gap:0}.cq-ch--arm .cq-ch__seg{background:var(--cq-teal);opacity:.8}
+.cq-ch__br{display:grid;grid-template-columns:var(--f) 1fr;gap:4px;margin-top:14px;font-size:.84rem;color:var(--cq-mute)}
+.cq-ch__br span{border-top:2px solid var(--cq-teal);padding-top:.35rem}
+.cq-ch__br span+span{border-color:var(--cq-gold);text-align:right}
+.cq-ch__sr,.cq-ch__gl{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.cq-ch__nav{margin:0 0 .8rem}
+.cq-ch__tabs{display:none;list-style:none;margin:0;padding:0}
+.cq-ch__pager{display:flex;align-items:center;gap:.6rem}
+.cq-ch__pager button,.cq-ch__all{min-width:44px;min-height:44px;border-radius:10px;border:1px solid var(--cq-line);background:var(--cq-surf);color:var(--cq-ink);font:inherit;cursor:pointer}
+.cq-ch__pager button{font-size:1.5rem;line-height:1}
+.cq-ch__pager button:disabled{opacity:.35;cursor:default}
+.cq-ch__pl{flex:1;margin:0;text-align:center;font-family:Manrope,sans-serif;font-weight:700}
+.cq-ch__pl span{color:var(--cq-mute);font-weight:600;margin-right:.35rem}
+.cq-ch__track{display:flex;transition:height .3s ease;gap:14px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;scroll-behavior:smooth;align-items:flex-start;padding:2px 2px 12px;margin:0 -2px;scrollbar-width:thin;scrollbar-color:var(--cq-line) transparent;position:relative}
+.cq-ch__p{flex:0 0 88%;scroll-snap-align:start;background:var(--cq-card);border:1px solid var(--cq-line);border-top:4px solid var(--c);border-radius:14px;padding:1.2rem 1.05rem 1.1rem;min-width:0}
+.cq-ch__done{margin:-.2rem 0 .8rem;padding:.55rem .75rem;border-radius:9px;background:rgba(245,238,158,.08);border:1px dashed rgba(245,238,158,.45);color:var(--cq-gold);font-weight:600;font-size:.92rem}
+.cq-ch__pos{margin:0 0 .35rem;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--cq-mute)}
+.cq-ch h3{font-family:Manrope,sans-serif;font-weight:500;font-size:1.45rem;line-height:1.2;margin:0 0 .7rem;display:flex;flex-wrap:wrap;align-items:baseline;gap:.15rem .55rem}
+.cq-ch__pn{display:inline-grid;place-items:center;width:1.9rem;height:1.9rem;border-radius:50%;background:var(--c);color:#050a0f;font-size:1rem;align-self:center}
+.cq-ch__sub{flex-basis:100%;font-family:'DM Sans',sans-serif;font-weight:500;font-size:.95rem;color:var(--cq-mute)}
+.cq-ch__w{margin:0 0 .8rem;display:flex;flex-wrap:wrap;align-items:baseline;gap:.2rem .5rem}
+.cq-ch__w b{font-family:Manrope,sans-serif;font-size:2rem;color:var(--c);font-variant-numeric:tabular-nums;line-height:1}
+.cq-ch__w span{color:var(--cq-mute);font-size:.92rem}
+.cq-ch__x{margin:0 0 .7rem;line-height:1.6;max-width:42rem}
+.cq-ch__f{margin:0 0 .7rem;line-height:1.55;font-size:.95rem;color:var(--cq-mute);border-left:3px solid var(--c);padding-left:.7rem;max-width:42rem}
+.cq-ch__link{margin:0 0 .7rem}
+.cq-ch__link a{display:inline-flex;align-items:center;min-height:44px;color:var(--cq-teal);font-weight:600;text-underline-offset:3px}
+.cq-ch__link a::after{content:"→";margin-left:.4rem}
+.cq-ch__info{min-height:5.6rem;margin:.9rem 0 .7rem;padding:.7rem .8rem;border-radius:10px;background:var(--cq-surf);border:1px solid var(--cq-line);display:flex;gap:.75rem;align-items:flex-start}
+.cq-ch__hint{margin:0;color:var(--cq-mute);font-size:.9rem;align-self:center}
+.cq-ch__info .cq-ch__lg{flex:0 0 auto}
+.cq-ch__ih{margin:0 0 .15rem;font-weight:700}
+.cq-ch__ih span{color:var(--c);font-variant-numeric:tabular-nums;margin-left:.35rem}
+.cq-ch__ig{margin:0 0 .25rem;font-size:.8rem;color:var(--cq-mute);text-transform:uppercase;letter-spacing:.05em}
+.cq-ch__id{margin:0;font-size:.93rem;line-height:1.5}
+.cq-ch__ia{margin:.3rem 0 0;font-size:.85rem;color:var(--cq-mute)}
+.cq-ch__cos{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(132px,1fr));gap:8px}
+.cq-ch--js .cq-ch__cos:not(.open) li:nth-child(n+7){display:none}
+.cq-ch__co{width:100%;min-height:56px;font-size:inherit;display:grid;grid-template-columns:40px 1fr;grid-template-rows:auto auto;column-gap:.55rem;align-items:center;text-align:left;padding:.4rem .5rem;border-radius:10px;border:1px solid var(--cq-line);background:transparent;color:var(--cq-ink);font:inherit;cursor:pointer;transition:border-color .15s,background .15s}
+.cq-ch__co .cq-ch__lg{grid-row:1/3}
+.cq-ch__nm{font-size:.88rem;line-height:1.2;font-weight:600;align-self:end;overflow-wrap:break-word;hyphens:manual}
+.cq-ch__cw{font-size:.82rem;color:var(--cq-mute);font-variant-numeric:tabular-nums;align-self:start}
+.cq-ch__co:hover,.cq-ch__co[aria-pressed=true]{border-color:var(--c);background:rgba(137,174,180,.08)}
+.cq-ch__lg{width:40px;height:40px;border-radius:8px;background:#fff;display:grid;place-items:center;overflow:hidden}
+.cq-ch__lg img{width:36px;height:36px;object-fit:contain;display:block}
+.cq-ch__lg--m{background:var(--cq-surf);border:1px solid var(--cq-line)}
+.cq-ch__mono{font-family:Manrope,sans-serif;font-weight:700;font-size:.85rem;color:var(--cq-teal)}
+.cq-ch__all{margin-top:.6rem;padding:0 1rem;font-weight:600;color:var(--cq-teal)}
+.cq-ch__note{margin:1rem 0 .4rem;font-size:.9rem;line-height:1.55;color:var(--cq-mute);max-width:46rem}
+.cq-ch__src summary{display:inline-flex;min-width:44px;padding-right:.4rem;align-items:center;min-height:44px;cursor:pointer;color:var(--cq-mute);font-size:.9rem}
+.cq-ch__src ul{margin:0;padding-left:1.1rem;color:var(--cq-mute);font-size:.85rem;line-height:1.6}
+.cq-ch__src a{color:var(--cq-teal);display:inline-flex;min-height:44px;align-items:center}
+.cq-ch button:focus-visible,.cq-ch a:focus-visible,.cq-ch summary:focus-visible{outline:3px solid var(--cq-gold);outline-offset:2px}
+@media (max-width:599px){.cq-ch__co{grid-template-columns:1fr;grid-template-rows:auto;justify-items:start;row-gap:.3rem;padding:.55rem .55rem .5rem}.cq-ch__co .cq-ch__lg{grid-row:auto}}
+@media (min-width:600px){.cq-ch__p{flex-basis:80%;padding:1.5rem 1.5rem 1.3rem}.cq-ch__cos{grid-template-columns:repeat(auto-fill,minmax(170px,1fr))}}
+@media (min-width:860px){
+ .cq-ch__p{flex-basis:100%}
+ .cq-ch__gl{position:static;width:auto;height:auto;clip:auto;display:grid;grid-template-columns:5fr 3fr;gap:18px;margin:0 0 .4rem;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--cq-mute)}
+ .cq-ch__gl span+span{color:var(--cq-gold)}
+ .cq-ch__tabs{display:grid;grid-template-columns:repeat(5,1fr) 18px repeat(3,1fr);gap:6px}
+ .cq-ch__tabs li:nth-child(6){grid-column:7}
+ .cq-ch__tab{width:100%;height:100%;min-height:76px;display:flex;flex-direction:column;align-items:flex-start;gap:.2rem;padding:.55rem .6rem;border-radius:10px;border:1px solid var(--cq-line);border-top:3px solid var(--c);background:var(--cq-card);color:var(--cq-ink);font:inherit;text-align:left;cursor:pointer;transition:background .15s,border-color .15s}
+ .cq-ch__tab:hover{background:var(--cq-surf)}
+ .cq-ch__tab[aria-current=step]{background:var(--cq-surf);border-color:var(--c);box-shadow:inset 0 -3px 0 var(--c)}
+ .cq-ch__tn{font-size:.75rem;color:var(--cq-mute)}
+ .cq-ch__tt{font-family:Manrope,sans-serif;font-weight:700;font-size:.92rem;line-height:1.2}
+ .cq-ch__tw{font-size:.85rem;color:var(--c);font-variant-numeric:tabular-nums;margin-top:auto}
+ .cq-ch__pager{display:none}
+ .cq-ch__p{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);column-gap:2rem;align-items:start;padding:1.6rem 1.8rem}
+ .cq-ch__r .cq-ch__info{margin-top:0}
+}
+@media (max-width:859px){
+ .cq-ch__tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(4,auto);grid-auto-flow:column;gap:6px;margin:0 0 .6rem}
+ .cq-ch__tab{width:100%;height:100%;min-height:48px;display:grid;grid-template-columns:auto minmax(0,1fr);grid-template-areas:"n w" "t t";align-items:center;column-gap:6px;row-gap:1px;padding:.4rem .55rem;border-radius:8px;border:1px solid var(--cq-line);border-left:3px solid var(--c);background:var(--cq-card);color:var(--cq-ink);font:inherit;text-align:left;cursor:pointer}
+ .cq-ch__tab[aria-current=step]{background:var(--cq-surf);border-color:var(--c);box-shadow:inset 0 0 0 1px var(--c)}
+ .cq-ch__tn{grid-area:n;font-size:.75rem;color:var(--cq-mute);white-space:nowrap}
+ .cq-ch__tn img{width:16px;height:16px;vertical-align:-3px!important;margin-right:4px!important}
+ .cq-ch__tw{grid-area:w;justify-self:end;font-size:.82rem;color:var(--c);font-variant-numeric:tabular-nums;font-weight:600}
+ .cq-ch__tt{grid-area:t;font-family:Manrope,sans-serif;font-weight:700;font-size:.86rem;line-height:1.2}
+}
+.kd-mas{display:none}
+@media (max-width:859px){
+ .kd-mas{display:block;order:0;margin:0 0 .5rem;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);font-weight:600;line-height:1.5}
+ .cq-ch__nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:6px;row-gap:6px}
+ .cq-ch__nav>*{grid-column:1/-1}
+ .cq-ch__nav .cq-ch__gl,.cq-ch__nav .cq-ch__tabs{display:contents}
+ .cq-ch__gl span{grid-column:1/-1;font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;color:var(--cq-mute);white-space:normal}
+ .cq-ch__gl span:first-child{order:1}
+ .cq-ch__tabs li{grid-column:auto;order:2}
+ .cq-ch__gl span+span{order:3;margin-top:.35rem}
+ .cq-ch__tabs li:nth-child(n+6){order:4}
+ .cq-ch__pager{order:5;margin-top:.2rem}
+ .kd-dots{order:6}
+}
+@media (prefers-reduced-motion:reduce){.cq-ch__track{scroll-behavior:auto}.cq-ch *{transition:none!important}}
+#cq-kaede .cq-ch__kick,#cq-kaede h3.kd-asof{font-size:12px}
+</style>
+<div class="cq-ch__in">
+<p class="cq-ch__kick">Fra tegning til færdig chip</p>
+<h2 id="cq-ch-h">Sådan bliver en chip til</h2>
+<p class="cq-ch__lead">Siden deler kæden op i otte trin. I de fem første bliver chippen tegnet, får sine materialer, bliver bygget op af maskiner, bliver fremstillet og til sidst samlet og testet. De tre sidste trin er de opgaver, den færdige chip kan have: at regne, huske eller styre strøm og signaler.</p>
+<h3 class="kd-asof">Andel af fonden pr. 16.10.2026 (afdelingen PMINDI)</h3><p class="cq-ch__tot">Her er fondens <b>24,31 %</b> i chips delt op på de otte trin:</p>
+<div class="cq-ch__chip" aria-hidden="true"><div class="cq-ch__bar"><span class="cq-ch__seg" data-i="0" style="--w:0.617%;--c:var(--cq-c0)"></span><span class="cq-ch__seg" data-i="1" style="--w:6.170%;--c:var(--cq-c1)"></span><span class="cq-ch__seg" data-i="2" style="--w:19.334%;--c:var(--cq-c2)"></span><span class="cq-ch__seg" data-i="3" style="--w:9.420%;--c:var(--cq-c3)"></span><span class="cq-ch__seg" data-i="4" style="--w:13.040%;--c:var(--cq-c4)"></span><span class="cq-ch__seg cq-ch__seg--j" data-i="5" style="--w:10.325%;--c:var(--cq-c5)"></span><span class="cq-ch__seg cq-ch__seg--j" data-i="6" style="--w:22.419%;--c:var(--cq-c6)"></span><span class="cq-ch__seg cq-ch__seg--j" data-i="7" style="--w:18.675%;--c:var(--cq-c7)"></span></div></div>
+<div class="cq-ch__br" aria-hidden="true" style="--f:48.581%"><span>Fremstillingen · 11,81 %</span><span>Den færdige chip · 12,50 %</span></div>
+<p class="cq-ch__sr">Fremstillingen: 40 selskaber, 11,81 %. Den færdige chip: 35 selskaber, 12,50 %.</p>
+<p class="kd-over30">37 af de 75 selskaber laver ikke selv chips. 34 af dem laver software til chipdesign, materialer og maskiner eller samler og tester chips. De sidste 3 står under den færdige chip: Taiyo Yuden laver komponenter, og Western Digital og Seagate laver harddiske. De 3 fylder tilsammen 1,84 % af fonden. Og 5 er kontraktproducenter, der laver chips for andre.</p>
+<nav class="cq-ch__nav" aria-label="Trin i kæden">
+<p class="kd-mas">Andel af hele fonden, afdelingen PMINDI pr. 16.10.2026</p>
+<p class="cq-ch__gl" aria-hidden="true"><span>Fremstillingen</span><span>Den færdige chip</span></p>
+<ol class="cq-ch__tabs" role="list"><li><button type="button" class="cq-ch__tab" data-i="0" aria-controls="cq-ch-p-tegnes" style="--c:var(--cq-c0)"><span class="cq-ch__tn" aria-hidden="true"><img src="ikoner/chips-ikon-1-tegnes.svg" alt="" width="20" height="20">1</span><span class="cq-ch__tt">Tegnes</span><span class="cq-ch__tw">0,15 %</span></button></li><li><button type="button" class="cq-ch__tab" data-i="1" aria-controls="cq-ch-p-materialer" style="--c:var(--cq-c1)"><span class="cq-ch__tn" aria-hidden="true"><img src="ikoner/chips-ikon-2-materialer.svg" alt="" width="20" height="20">2</span><span class="cq-ch__tt">Materialer</span><span class="cq-ch__tw">1,50 %</span></button></li><li><button type="button" class="cq-ch__tab" data-i="2" aria-controls="cq-ch-p-maskiner" style="--c:var(--cq-c2)"><span class="cq-ch__tn" aria-hidden="true"><img src="ikoner/chips-ikon-3-maskiner.svg" alt="" width="20" height="20">3</span><span class="cq-ch__tt">Maskiner</span><span class="cq-ch__tw">4,70 %</span></button></li><li><button type="button" class="cq-ch__tab" data-i="3" aria-controls="cq-ch-p-fremstilles" style="--c:var(--cq-c3)"><span class="cq-ch__tn" aria-hidden="true"><img src="ikoner/chips-ikon-4-fremstilles.svg" alt="" width="20" height="20">4</span><span class="cq-ch__tt">Fremstilles</span><span class="cq-ch__tw">2,29 %</span></button></li><li><button type="button" class="cq-ch__tab" data-i="4" aria-controls="cq-ch-p-samles" style="--c:var(--cq-c4)"><span class="cq-ch__tn" aria-hidden="true"><img src="ikoner/chips-ikon-5-samles-testes.svg" alt="" width="20" height="20">5</span><span class="cq-ch__tt">Samles og testes</span><span class="cq-ch__tw">3,17 %</span></button></li><li><button type="button" class="cq-ch__tab" data-i="5" aria-controls="cq-ch-p-regner" style="--c:var(--cq-c5)"><span class="cq-ch__tn" aria-hidden="true"><img src="ikoner/chips-ikon-6-regner.svg" alt="" width="20" height="20">6</span><span class="cq-ch__tt">Regner</span><span class="cq-ch__tw">2,51 %</span></button></li><li><button type="button" class="cq-ch__tab" data-i="6" aria-controls="cq-ch-p-husker" style="--c:var(--cq-c6)"><span class="cq-ch__tn" aria-hidden="true"><img src="ikoner/chips-ikon-7-husker.svg" alt="" width="20" height="20">7</span><span class="cq-ch__tt">Husker</span><span class="cq-ch__tw">5,45 %</span></button></li><li><button type="button" class="cq-ch__tab" data-i="7" aria-controls="cq-ch-p-styrer" style="--c:var(--cq-c7)"><span class="cq-ch__tn" aria-hidden="true"><img src="ikoner/chips-ikon-8-styrer.svg" alt="" width="20" height="20">8</span><span class="cq-ch__tt">Styrer strøm og signaler</span><span class="cq-ch__tw">4,54 %</span></button></li></ol>
+<div class="cq-ch__pager"><button type="button" class="cq-ch__pv" aria-label="Forrige trin">‹</button><p class="cq-ch__pl" aria-live="polite"><span>1 / 8</span> Tegnes</p><button type="button" class="cq-ch__nx" aria-label="Næste trin">›</button></div>
+<div class="kd-dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+</nav>
+<div class="cq-ch__track"><article class="cq-ch__p" id="cq-ch-p-tegnes" data-i="0" aria-labelledby="cq-ch-h-tegnes" style="--c:var(--cq-c0)">
+<div class="cq-ch__t"><img class="kd-ill" src="grafik/chips-illu-1-tegnes.svg" alt="" width="240" height="160" loading="lazy"><p class="cq-ch__pos">Trin 1 af 8 · Fremstillingen</p>
+<h3 id="cq-ch-h-tegnes"><span class="cq-ch__pn" aria-hidden="true">1</span>Tegnes<span class="cq-ch__sub">Software til chipdesign</span></h3>
+<p class="cq-ch__w"><b>0,15 %</b> <span>af fonden · 2 selskaber</span></p>
+<p class="cq-ch__x">En chip begynder som en tegning. Ingeniører tegner og afprøver den i særlig software, før noget bliver lavet. Her står de to selskaber, der laver softwaren. NVIDIA og de andre selskaber, der tegner selve chippen, står under trin 6 til 8, efter det, chippen bruges til.</p></div>
+<div class="cq-ch__r"><div class="cq-ch__info" aria-live="polite"><p class="cq-ch__hint">Tryk på et selskab for at se, hvad det laver.</p></div>
+<ul class="cq-ch__cos" id="cq-ch-l-tegnes" role="list"><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver software, som ingeniører bruger til at tegne og afprøve chips, og færdige byggeklodser til chips." data-g="Software til chipdesign" data-a="" aria-label="Synopsys, 0,09 % af fonden"><span class="cq-ch__lg cq-ch__lg--m"><span class="cq-ch__mono">S</span></span><span class="cq-ch__nm">Synopsys</span><span class="cq-ch__cw" aria-hidden="true">0,09 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver software, som ingeniører bruger til at tegne chips og elektronik." data-g="Software til chipdesign" data-a="" aria-label="Cadence Design Systems, 0,06 % af fonden"><span class="cq-ch__lg cq-ch__lg--m"><span class="cq-ch__mono">CD</span></span><span class="cq-ch__nm">Cadence Design Systems</span><span class="cq-ch__cw" aria-hidden="true">0,06 %</span></button></li></ul></div>
+</article><article class="cq-ch__p" id="cq-ch-p-materialer" data-i="1" aria-labelledby="cq-ch-h-materialer" style="--c:var(--cq-c1)">
+<div class="cq-ch__t"><img class="kd-ill" src="grafik/chips-illu-2-materialer.svg" alt="" width="240" height="160" loading="lazy"><p class="cq-ch__pos">Trin 2 af 8 · Fremstillingen</p>
+<h3 id="cq-ch-h-materialer"><span class="cq-ch__pn" aria-hidden="true">2</span>Materialer<span class="cq-ch__sub">Skiver og kemi</span></h3>
+<p class="cq-ch__w"><b>1,50 %</b> <span>af fonden · 5 selskaber</span></p>
+<p class="cq-ch__x">Det hele starter med skiven, waferen. Nogle af selskaberne her laver skiver af andre halvledermaterialer end silicium. Fabrikken skal også bruge meget rene materialer og kemikalier.</p></div>
+<div class="cq-ch__r"><div class="cq-ch__info" aria-live="polite"><span class="cq-ch__lg"><img alt="" decoding="async" height="40" loading="lazy" src="logos/FR0013227113.webp" width="40"/></span><div><p class="cq-ch__ig">Materialer og skiver</p><p class="cq-ch__ih">Soitec<span>0,68 % af fonden</span></p><p class="cq-ch__id">Laver særlige skiver (wafers), hvor et tyndt isolerende lag ligger under siliciummet.</p></div></div>
+<ul class="cq-ch__cos" id="cq-ch-l-materialer" role="list"><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver særlige skiver (wafers), hvor et tyndt isolerende lag ligger under siliciummet." data-g="Materialer og skiver" data-a="" aria-label="Soitec, 0,68 % af fonden"><span class="cq-ch__lg"><img src="logos/FR0013227113.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">Soitec</span><span class="cq-ch__cw" aria-hidden="true">0,68 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver skiver med særlige halvledermaterialer til lys og trådløs kommunikation." data-g="Materialer og skiver" data-a="" aria-label="IQE, 0,39 % af fonden"><span class="cq-ch__lg"><img src="logos/GB0009619924.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">IQE</span><span class="cq-ch__cw" aria-hidden="true">0,39 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver skiver af særlige materialer, fx indiumfosfid og galliumarsenid." data-g="Materialer og skiver" data-a="" aria-label="AXT, 0,16 % af fonden"><span class="cq-ch__lg"><img src="logos/US00246W1036.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">AXT</span><span class="cq-ch__cw" aria-hidden="true">0,16 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Leverer materialer og procesløsninger til chipindustrien." data-g="Materialer og skiver" data-a="" aria-label="Entegris, 0,14 % af fonden"><span class="cq-ch__lg"><img src="logos/US29362U1043.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">Entegris</span><span class="cq-ch__cw" aria-hidden="true">0,14 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver materialer og komponenter af siliciumkarbid til strømelektronik." data-g="Materialer og skiver" data-a="" aria-label="Wolfspeed, 0,13 % af fonden"><span class="cq-ch__lg"><img src="logos/US97785W1062.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">Wolfspeed</span><span class="cq-ch__cw" aria-hidden="true">0,13 %</span></button></li></ul></div>
+</article><article class="cq-ch__p" id="cq-ch-p-maskiner" data-i="2" aria-labelledby="cq-ch-h-maskiner" style="--c:var(--cq-c2)">
+<div class="cq-ch__t"><p class="cq-ch__pos">Trin 3 af 8 · Fremstillingen</p>
+<h3 id="cq-ch-h-maskiner"><span class="cq-ch__pn" aria-hidden="true">3</span>Maskiner<span class="cq-ch__sub">Udstyr til chipfabrikker</span></h3>
+<p class="cq-ch__w"><b>4,70 %</b> <span>af fonden · 17 selskaber</span></p>
+<p class="cq-ch__x">På fabrikken bygges chippen op lag på lag. Maskiner lægger tynde lag på skiven og belyser et mønster på den. At belyse mønstret kaldes litografi. Derefter ætser maskinerne mønstret ud, dvs. fjerner det materiale, der ikke skal være der, og skiven bliver renset. Undervejs bliver der målt, for en lille fejl kan ødelægge mange chips.</p><p class="cq-ch__f">ASMLs omsætning i 2025 kom bl.a. fra 48 af sine mest avancerede litografimaskiner, der belyser med ekstremt ultraviolet lys (EUV).</p><figure class="vid"><div class="vid-ramme" data-yt="MfFGRl00LKY" data-title="Video: Inside the machine: How a High NA system generates EUV light (ASML)"><button type="button" class="vid-play" aria-label="Afspil video: Sådan laver ASML&#x27;s maskine EUV-lys (2 min. 18 sek., på engelsk). Videoen hentes fra YouTube."><img src="img/yt-MfFGRl00LKY.webp" alt="" width="960" height="540" loading="lazy"><span class="vid-ikon" aria-hidden="true"></span><span class="vid-tid" aria-hidden="true">2:18</span></button></div><figcaption><b>ASML viser, hvordan små dråber af tin bliver til EUV-lys inde i maskinen.</b> Video fra ASML, 21.08.2025, 2:18, på engelsk: “Inside the machine: How a High NA system generates EUV light”. <a href="https://www.youtube.com/watch?v=MfFGRl00LKY" rel="noopener" target="_blank">Se på YouTube<span class="sr"> (åbner i nyt vindue)</span></a></figcaption></figure></div>
+<div class="cq-ch__r"><div class="cq-ch__info" aria-live="polite"><span class="cq-ch__lg"><img alt="" decoding="async" height="40" loading="lazy" src="logos/DE0006450000.webp" width="40"/></span><div><p class="cq-ch__ig">Procesudstyr og måling</p><p class="cq-ch__ih">LPKF Laser &amp; Electronics<span>0,89 % af fonden</span></p><p class="cq-ch__id">Laver laserudstyr til fremstilling. En del af udstyret bruges til glas, når chips pakkes. Resten bruges til printplader, solceller og lasersvejsning.</p></div></div>
+<ul class="cq-ch__cos" id="cq-ch-l-maskiner" role="list"><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver laserudstyr til fremstilling. En del af udstyret bruges til glas, når chips pakkes. Resten bruges til printplader, solceller og lasersvejsning." data-g="Procesudstyr og måling" data-a="" aria-label="LPKF Laser &amp; Electronics, 0,89 % af fonden"><span class="cq-ch__lg"><img src="logos/DE0006450000.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">LPKF Laser &amp; Electro&shy;nics</span><span class="cq-ch__cw" aria-hidden="true">0,89 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver måleudstyr, der kontrollerer processen undervejs i chipfabrikken." data-g="Procesudstyr og måling" data-a="" aria-label="Nova, 0,67 % af fonden"><span class="cq-ch__lg"><img src="logos/IL0010845571.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">Nova</span><span class="cq-ch__cw" aria-hidden="true">0,67 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver udstyr til chipfabrikker." data-g="Procesudstyr og måling" data-a="" aria-label="Tokyo Electron, 0,45 % af fonden"><span class="cq-ch__lg"><img src="logos/JP3571400005.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">Tokyo Electron</span><span class="cq-ch__cw" aria-hidden="true">0,45 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver udstyr, der lægger meget tynde lag på skiven." data-g="Procesudstyr og måling" data-a="" aria-label="ASM International, 0,43 % af fonden"><span class="cq-ch__lg"><img src="logos/NL0000334118.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">ASM Inter&shy;national</span><span class="cq-ch__cw" aria-hidden="true">0,43 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver udstyr, der kontrollerer masker og skiver, også til den mest avancerede litografi." data-g="Litografi og masker" data-a="" aria-label="Lasertec, 0,32 % af fonden"><span class="cq-ch__lg"><img src="logos/JP3979200007.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">Lasertec</span><span class="cq-ch__cw" aria-hidden="true">0,32 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver videnskabelige instrumenter. Omkring en tredjedel af omsætningen er måleudstyr til chipfabrikker (1. halvår 2026)." data-g="Procesudstyr og måling" data-a="" aria-label="Rigaku, 0,31 % af fonden"><span class="cq-ch__lg"><img src="logos/JP3969750003.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">Rigaku</span><span class="cq-ch__cw" aria-hidden="true">0,31 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver udstyr, der inspicerer og måler under chipproduktionen." data-g="Procesudstyr og måling" data-a="" aria-label="KLA, 0,28 % af fonden"><span class="cq-ch__lg"><img src="logos/US4824801009.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">KLA</span><span class="cq-ch__cw" aria-hidden="true">0,28 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver måle- og inspektionsudstyr til chipindustrien." data-g="Procesudstyr og måling" data-a="" aria-label="Onto Innovation, 0,26 % af fonden"><span class="cq-ch__lg cq-ch__lg--m"><span class="cq-ch__mono">OI</span></span><span class="cq-ch__nm">Onto Innovation</span><span class="cq-ch__cw" aria-hidden="true">0,26 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver instrumenter og dele til chipudstyr. Chipmarkedet stod for 43 % af omsætningen i 2025." data-g="Procesudstyr og måling" data-a="" aria-label="MKS, 0,25 % af fonden"><span class="cq-ch__lg"><img src="logos/US55306N1046.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">MKS</span><span class="cq-ch__cw" aria-hidden="true">0,25 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver procesudstyr til chipproduktion." data-g="Procesudstyr og måling" data-a="" aria-label="Veeco Instruments, 0,19 % af fonden"><span class="cq-ch__lg"><img src="logos/US9224171002.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">Veeco Instru&shy;ments</span><span class="cq-ch__cw" aria-hidden="true">0,19 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver udstyr, der lægger tynde lag af halvledermateriale." data-g="Procesudstyr og måling" data-a="" aria-label="Aixtron, 0,18 % af fonden"><span class="cq-ch__lg cq-ch__lg--m"><span class="cq-ch__mono">A</span></span><span class="cq-ch__nm">Aixtron</span><span class="cq-ch__cw" aria-hidden="true">0,18 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver og servicerer udstyr, der lægger tynde lag på skiven." data-g="Procesudstyr og måling" data-a="" aria-label="Kokusai Electric, 0,14 % af fonden"><span class="cq-ch__lg"><img src="logos/JP3293330001.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">Kokusai Electric</span><span class="cq-ch__cw" aria-hidden="true">0,14 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver udstyr, der ætser og lægger lag på skiven." data-g="Procesudstyr og måling" data-a="" aria-label="Lam Research, 0,10 % af fonden"><span class="cq-ch__lg"><img src="logos/US5128073062.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">Lam Research</span><span class="cq-ch__cw" aria-hidden="true">0,10 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver de litografimaskiner, der belyser mønstret på skiven." data-g="Litografi og masker" data-a="" aria-label="ASML, 0,09 % af fonden"><span class="cq-ch__lg"><img src="logos/USN070592100.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">ASML</span><span class="cq-ch__cw" aria-hidden="true">0,09 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver procesudstyr, bl.a. til at rense skiver." data-g="Procesudstyr og måling" data-a="" aria-label="ACM Research, 0,06 % af fonden"><span class="cq-ch__lg"><img src="logos/US00108J1097.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">ACM Research</span><span class="cq-ch__cw" aria-hidden="true">0,06 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver og servicerer udstyr til chipfabrikker." data-g="Procesudstyr og måling" data-a="" aria-label="Applied Materials, 0,05 % af fonden"><span class="cq-ch__lg"><img src="logos/applied-materials.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">Applied Materials</span><span class="cq-ch__cw" aria-hidden="true">0,05 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver udstyr, der skyder små partikler (ioner) ind i skiven for at ændre dens egenskaber." data-g="Procesudstyr og måling" data-a="" aria-label="Axcelis Technologies, 0,03 % af fonden"><span class="cq-ch__lg cq-ch__lg--m"><span class="cq-ch__mono">AT</span></span><span class="cq-ch__nm">Axcelis Techno&shy;logies</span><span class="cq-ch__cw" aria-hidden="true">0,03 %</span></button></li></ul><button type="button" class="cq-ch__all" aria-expanded="false" aria-controls="cq-ch-l-maskiner" data-n="17">Vis alle (17)</button></div>
+</article><article class="cq-ch__p" id="cq-ch-p-fremstilles" data-i="3" aria-labelledby="cq-ch-h-fremstilles" style="--c:var(--cq-c3)">
+<div class="cq-ch__t"><p class="cq-ch__pos">Trin 4 af 8 · Fremstillingen</p>
+<h3 id="cq-ch-h-fremstilles"><span class="cq-ch__pn" aria-hidden="true">4</span>Fremstilles<span class="cq-ch__sub">Chipfabrikker for andre</span></h3>
+<p class="cq-ch__w"><b>2,29 %</b> <span>af fonden · 5 selskaber</span></p>
+<p class="cq-ch__x">Flere af de kendte chipselskaber, fx NVIDIA og AMD, har ingen egen fabrik til chipsene. De sender tegningen til en kontraktproducent, altså en fabrik, der laver chips for andre. Samsung og Intel har egne fabrikker, men i fondens inddeling står Samsung under Husker og Intel under Regner.</p><p class="cq-ch__f">Hos TSMC kom 58 % af omsætningen i 2025 fra chips til tunge beregninger, som TSMC kalder High Performance Computing.</p><figure class="vid"><div class="vid-ramme" data-yt="divOKxuYklM" data-title="Video: TSMC Fab Tour (TSMC Museum of Innovation)"><button type="button" class="vid-play" aria-label="Afspil video: Rundtur på en TSMC-fabrik (7 min. 55 sek., på engelsk). Videoen hentes fra YouTube."><img src="img/yt-divOKxuYklM.webp" alt="" width="960" height="540" loading="lazy"><span class="vid-ikon" aria-hidden="true"></span><span class="vid-tid" aria-hidden="true">7:55</span></button></div><figcaption><b>Rundtur på en chipfabrik: fra fotomaske og wafer over belysning og ætsning til test og indkapsling.</b> Video fra TSMC Museum of Innovation, 22.02.2024, 7:55, på engelsk: “TSMC Fab Tour”. <a href="https://www.youtube.com/watch?v=divOKxuYklM" rel="noopener" target="_blank">Se på YouTube<span class="sr"> (åbner i nyt vindue)</span></a></figcaption></figure></div>
+<div class="cq-ch__r"><div class="cq-ch__info" aria-live="polite"><span class="cq-ch__lg"><img alt="" decoding="async" height="40" loading="lazy" src="logos/KYG393871085.webp" width="40"/></span><div><p class="cq-ch__ig">Chipfabrik for andre</p><p class="cq-ch__ih">GlobalFoundries<span>0,77 % af fonden</span></p><p class="cq-ch__id">Laver chips for kunder, der selv har tegnet dem.</p></div></div>
+<ul class="cq-ch__cos" id="cq-ch-l-fremstilles" role="list"><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver chips for kunder, der selv har tegnet dem." data-g="Chipfabrik for andre" data-a="" aria-label="GlobalFoundries, 0,77 % af fonden"><span class="cq-ch__lg"><img src="logos/KYG393871085.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">Global&shy;Foundries</span><span class="cq-ch__cw" aria-hidden="true">0,77 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Kontraktproducent med specialteknologier. Laver chips efter kundernes tegninger." data-g="Chipfabrik for andre" data-a="" aria-label="Tower Semiconductor, 0,75 % af fonden"><span class="cq-ch__lg"><img src="logos/IL0010823792.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">Tower Semi&shy;conductor</span><span class="cq-ch__cw" aria-hidden="true">0,75 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Kontraktproducent: laver chips for andre og tjener mest på færdige skiver." data-g="Chipfabrik for andre" data-a="" aria-label="UMC, 0,41 % af fonden"><span class="cq-ch__lg cq-ch__lg--m"><span class="cq-ch__mono">U</span></span><span class="cq-ch__nm">UMC</span><span class="cq-ch__cw" aria-hidden="true">0,41 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Kontraktproducent med specialteknologier og seks fabrikker." data-g="Chipfabrik for andre" data-a="" aria-label="X-FAB, 0,33 % af fonden"><span class="cq-ch__lg"><img src="logos/BE0974310428.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">X-FAB</span><span class="cq-ch__cw" aria-hidden="true">0,33 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Kontraktproducent, der kun laver chips for andre." data-g="Chipfabrik for andre" data-a="" aria-label="TSMC, 0,03 % af fonden"><span class="cq-ch__lg cq-ch__lg--m"><span class="cq-ch__mono">T</span></span><span class="cq-ch__nm">TSMC</span><span class="cq-ch__cw" aria-hidden="true">0,03 %</span></button></li></ul></div>
+</article><article class="cq-ch__p" id="cq-ch-p-samles" data-i="4" aria-labelledby="cq-ch-h-samles" style="--c:var(--cq-c4)">
+<div class="cq-ch__t"><p class="cq-ch__pos">Trin 5 af 8 · Fremstillingen</p>
+<h3 id="cq-ch-h-samles"><span class="cq-ch__pn" aria-hidden="true">5</span>Samles og testes<span class="cq-ch__sub">Pakning og test</span></h3>
+<p class="cq-ch__w"><b>3,17 %</b> <span>af fonden · 11 selskaber</span></p>
+<p class="cq-ch__x">En chip er for lille og skrøbelig til at sidde alene i en computer. Den bliver forbundet og kapslet ind. Det kaldes pakning. Chippen bliver testet, mens den stadig sidder på skiven, og igen når den er færdig.</p><figure class="kd-foto"><img src="img/chips-test-probekort.webp" alt="Probekort med guldbaner, som bruges til at teste chips, mens de sidder på waferen" width="1000" height="1000" loading="lazy"><figcaption>Et probekort tester chippen, mens den stadig sidder på waferen. <a href="https://commons.wikimedia.org/wiki/File:Probe_card.JPG" rel="noopener" target="_blank">Foto: Ajoones</a>, <a href="https://creativecommons.org/licenses/by/3.0/" rel="noopener" target="_blank">CC BY 3.0</a>, Wikimedia Commons (beskåret)</figcaption></figure></div>
+<div class="cq-ch__r"><div class="cq-ch__info" aria-live="polite"><span class="cq-ch__lg cq-ch__lg--m"><span class="cq-ch__mono">B</span></span><div><p class="cq-ch__ig">Samling og pakning</p><p class="cq-ch__ih">Besi<span>0,64 % af fonden</span></p><p class="cq-ch__id">Laver maskiner, der samler chips, også meget tæt sammen i én pakke.</p></div></div>
+<ul class="cq-ch__cos" id="cq-ch-l-samles" role="list"><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver maskiner, der samler chips, også meget tæt sammen i én pakke." data-g="Samling og pakning" data-a="" aria-label="Besi, 0,64 % af fonden"><span class="cq-ch__lg cq-ch__lg--m"><span class="cq-ch__mono">B</span></span><span class="cq-ch__nm">Besi</span><span class="cq-ch__cw" aria-hidden="true">0,64 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver udstyr til at samle og pakke chips og til at montere dele på printplader." data-g="Samling og pakning" data-a="" aria-label="ASMPT, 0,52 % af fonden"><span class="cq-ch__lg"><img src="logos/KYG0535Q1331.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">ASMPT</span><span class="cq-ch__cw" aria-hidden="true">0,52 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver udstyr, der belægger, belyser og sammenføjer skiver, når chips laves og pakkes." data-g="Samling og pakning" data-a="" aria-label="SUSS MicroTec, 0,48 % af fonden"><span class="cq-ch__lg"><img src="logos/DE000A1K0235.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">SUSS MicroTec</span><span class="cq-ch__cw" aria-hidden="true">0,48 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver udstyr, der tester chips under hård belastning, så svage chips bliver fundet tidligt." data-g="Test og inspektion" data-a="" aria-label="Aehr Test Systems, 0,44 % af fonden"><span class="cq-ch__lg"><img src="logos/US00760J1088.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">Aehr Test Systems</span><span class="cq-ch__cw" aria-hidden="true">0,44 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver udstyr, der inspicerer og måler chips." data-g="Test og inspektion" data-a="" aria-label="Camtek, 0,42 % af fonden"><span class="cq-ch__lg cq-ch__lg--m"><span class="cq-ch__mono">C</span></span><span class="cq-ch__nm">Camtek</span><span class="cq-ch__cw" aria-hidden="true">0,42 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver testsystemer, der tester chips på skiven og når de er færdige." data-g="Test og inspektion" data-a="" aria-label="Advantest, 0,18 % af fonden"><span class="cq-ch__lg"><img src="logos/JP3122400009.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">Advantest</span><span class="cq-ch__cw" aria-hidden="true">0,18 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver udstyr, der forbinder chippen elektrisk med sin pakke." data-g="Samling og pakning" data-a="" aria-label="Kulicke &amp; Soffa, 0,18 % af fonden"><span class="cq-ch__lg"><img src="logos/US5012421013.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">Kulicke &amp; Soffa</span><span class="cq-ch__cw" aria-hidden="true">0,18 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Pakker og tester chips for andre selskaber." data-g="Samling og pakning" data-a="" aria-label="Amkor Technology, 0,11 % af fonden"><span class="cq-ch__lg"><img src="logos/US0316521006.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">Amkor Techno&shy;logy</span><span class="cq-ch__cw" aria-hidden="true">0,11 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Leverer test- og håndteringsudstyr til chipproduktion." data-g="Test og inspektion" data-a="" aria-label="Cohu, 0,09 % af fonden"><span class="cq-ch__lg"><img src="logos/US1925761066.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">Cohu</span><span class="cq-ch__cw" aria-hidden="true">0,09 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver probekort: nålehoveder, der tester chips, mens de sidder på skiven." data-g="Test og inspektion" data-a="" aria-label="FormFactor, 0,07 % af fonden"><span class="cq-ch__lg"><img src="logos/US3463751087.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">FormFactor</span><span class="cq-ch__cw" aria-hidden="true">0,07 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver automatisk testudstyr til chips og industrirobotter." data-g="Test og inspektion" data-a="Robotter &amp; fysisk AI" aria-label="Teradyne, 0,04 % af fonden"><span class="cq-ch__lg"><img src="logos/US8807701029.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">Teradyne</span><span class="cq-ch__cw" aria-hidden="true">0,04 %</span></button></li></ul><button type="button" class="cq-ch__all" aria-expanded="false" aria-controls="cq-ch-l-samles" data-n="11">Vis alle (11)</button></div>
+</article><article class="cq-ch__p cq-ch__p--j" id="cq-ch-p-regner" data-i="5" aria-labelledby="cq-ch-h-regner" style="--c:var(--cq-c5)">
+<div class="cq-ch__t"><img class="kd-zoom" src="grafik/chips-zoom-wafer-chip.svg" alt="" width="480" height="140" loading="lazy"><p class="cq-ch__done">Nu er chippen færdig.</p><p class="cq-ch__pos">Trin 6 af 8 · Den færdige chip</p>
+<h3 id="cq-ch-h-regner"><span class="cq-ch__pn" aria-hidden="true">6</span>Regner<span class="cq-ch__sub">Processorer og AI-chips</span></h3>
+<p class="cq-ch__w"><b>2,51 %</b> <span>af fonden · 7 selskaber</span></p>
+<p class="cq-ch__x">Processorer laver selve beregningerne. En AI-accelerator er en chip, der er bygget til at regne mange små regnestykker på én gang. Her står flere af de navne, de fleste kender. Hele trinnet fylder 2,51 % af fonden. Det er omkring en tiendedel af fondens 24,31 % i chips.</p></div>
+<div class="cq-ch__r"><div class="cq-ch__info" aria-live="polite"><span class="cq-ch__lg"><img alt="" decoding="async" height="40" loading="lazy" src="logos/US15675D1037.webp" width="40"/></span><div><p class="cq-ch__ig">Processorer og AI-chips</p><p class="cq-ch__ih">Cerebras Systems<span>0,94 % af fonden</span></p><p class="cq-ch__id">Udvikler en computerplatform til kunstig intelligens med egne systemer og software. Selve processoren laves af TSMC.</p></div></div>
+<ul class="cq-ch__cos" id="cq-ch-l-regner" role="list"><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Udvikler en computerplatform til kunstig intelligens med egne systemer og software. Selve processoren laves af TSMC." data-g="Processorer og AI-chips" data-a="" aria-label="Cerebras Systems, 0,94 % af fonden"><span class="cq-ch__lg"><img src="logos/US15675D1037.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">Cerebras Systems</span><span class="cq-ch__cw" aria-hidden="true">0,94 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Tegner og laver processorer og har egne chipfabrikker." data-g="Processorer og AI-chips" data-a="" aria-label="Intel, 0,60 % af fonden"><span class="cq-ch__lg"><img src="logos/US4581401001.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">Intel</span><span class="cq-ch__cw" aria-hidden="true">0,60 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Udvikler chips og software til netværk og datacentre. Det meste af produktionen er lagt ud til andre fabrikker, bl.a. TSMC." data-g="Processorer og AI-chips" data-a="Datacentre" aria-label="Broadcom, 0,56 % af fonden"><span class="cq-ch__lg"><img src="logos/US11135F1012.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">Broadcom</span><span class="cq-ch__cw" aria-hidden="true">0,56 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver grafikprocessorer, netværk og software til AI i datacentre. Har ingen egne chipfabrikker." data-g="Processorer og AI-chips" data-a="Datacentre" aria-label="NVIDIA, 0,26 % af fonden"><span class="cq-ch__lg"><img src="logos/US67066G1040.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">NVIDIA</span><span class="cq-ch__cw" aria-hidden="true">0,26 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver chips til datacentre og netværk. Har ingen egen chipfabrik." data-g="Processorer og AI-chips" data-a="Datacentre" aria-label="Marvell Technology, 0,09 % af fonden"><span class="cq-ch__lg"><img src="logos/US5738741041.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">Marvell Techno&shy;logy</span><span class="cq-ch__cw" aria-hidden="true">0,09 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver processorer, grafikchips og chips, som kunden kan indstille. Skiverne laves hos andre fabrikker." data-g="Processorer og AI-chips" data-a="Datacentre" aria-label="AMD, 0,04 % af fonden"><span class="cq-ch__lg cq-ch__lg--m"><span class="cq-ch__mono">A</span></span><span class="cq-ch__nm">AMD</span><span class="cq-ch__cw" aria-hidden="true">0,04 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Udvikler AI-computere med egne chips og software. Chippen laves af Samsung." data-g="Processorer og AI-chips" data-a="" aria-label="Blaize, 0,02 % af fonden"><span class="cq-ch__lg"><img src="logos/US0929151076.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">Blaize</span><span class="cq-ch__cw" aria-hidden="true">0,02 %</span></button></li></ul><button type="button" class="cq-ch__all" aria-expanded="false" aria-controls="cq-ch-l-regner" data-n="7">Vis alle (7)</button></div>
+</article><article class="cq-ch__p cq-ch__p--j" id="cq-ch-p-husker" data-i="6" aria-labelledby="cq-ch-h-husker" style="--c:var(--cq-c6)">
+<div class="cq-ch__t"><img class="kd-ill" src="grafik/chips-illu-7-husker.svg" alt="" width="240" height="160" loading="lazy"><p class="cq-ch__pos">Trin 7 af 8 · Den færdige chip</p>
+<h3 id="cq-ch-h-husker"><span class="cq-ch__pn" aria-hidden="true">7</span>Husker<span class="cq-ch__sub">Hukommelse og lagring</span></h3>
+<p class="cq-ch__w"><b>5,45 %</b> <span>af fonden · 9 selskaber</span></p>
+<p class="cq-ch__x">En regnechip er kun så hurtig, som data kan komme frem til den. Arbejdshukommelse holder data tæt på chippen, mens den regner. Flashhukommelse og harddiske gemmer data, også når strømmen er slået fra. Det er det største af de otte trin, og her står temaets største selskab, Samsung Electronics.</p><p class="cq-ch__f">Western Digital og Seagate laver harddiske, ikke chips. De står her, fordi de gemmer data i de samme computere.</p></div>
+<div class="cq-ch__r"><div class="cq-ch__info" aria-live="polite"><span class="cq-ch__lg cq-ch__lg--m"><span class="cq-ch__mono">SE</span></span><div><p class="cq-ch__ig">Arbejdshukommelse og chips, der forbinder den</p><p class="cq-ch__ih">Samsung Electronics<span>1,32 % af fonden</span></p><p class="cq-ch__id">Laver hukommelseschips og processorer til mobiler og producerer chips for andre. Koncernen laver også fx tv og telefoner.</p></div></div>
+<ul class="cq-ch__cos" id="cq-ch-l-husker" role="list"><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver hukommelseschips og processorer til mobiler og producerer chips for andre. Koncernen laver også fx tv og telefoner." data-g="Arbejdshukommelse og chips, der forbinder den" data-a="" aria-label="Samsung Electronics, 1,32 % af fonden"><span class="cq-ch__lg cq-ch__lg--m"><span class="cq-ch__mono">SE</span></span><span class="cq-ch__nm">Samsung Electro&shy;nics</span><span class="cq-ch__cw" aria-hidden="true">1,32 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver hukommelseschips, både arbejdshukommelse og flash." data-g="Arbejdshukommelse og chips, der forbinder den" data-a="" aria-label="SK hynix, 1,04 % af fonden"><span class="cq-ch__lg cq-ch__lg--m"><span class="cq-ch__mono">SH</span></span><span class="cq-ch__nm">SK hynix</span><span class="cq-ch__cw" aria-hidden="true">1,04 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Udvikler og laver flashhukommelse og SSD-drev, der gemmer data." data-g="Lagring" data-a="" aria-label="Kioxia, 0,85 % af fonden"><span class="cq-ch__lg"><img src="logos/JP3236330001.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">Kioxia</span><span class="cq-ch__cw" aria-hidden="true">0,85 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver chips og tegninger, der forbinder processoren med hukommelsen, og giver hukommelsesproducenter licens til sine patenter." data-g="Arbejdshukommelse og chips, der forbinder den" data-a="" aria-label="Rambus, 0,56 % af fonden"><span class="cq-ch__lg"><img src="logos/US7509171069.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">Rambus</span><span class="cq-ch__cw" aria-hidden="true">0,56 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver arbejdshukommelse og flash på egne fabrikker." data-g="Arbejdshukommelse og chips, der forbinder den" data-a="" aria-label="Micron Technology, 0,53 % af fonden"><span class="cq-ch__lg"><img src="logos/US5951121038.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">Micron Techno&shy;logy</span><span class="cq-ch__cw" aria-hidden="true">0,53 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver harddiske til at gemme data. Det er ikke chips." data-g="Harddiske" data-a="Datacentre" aria-label="Western Digital, 0,44 % af fonden"><span class="cq-ch__lg"><img src="logos/US9581021055.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">Western Digital</span><span class="cq-ch__cw" aria-hidden="true">0,44 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver harddiske og lagringssystemer. Det er ikke chips." data-g="Harddiske" data-a="Datacentre" aria-label="Seagate Technology, 0,35 % af fonden"><span class="cq-ch__lg"><img src="logos/IE00BKVD2N49.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">Seagate Techno&shy;logy</span><span class="cq-ch__cw" aria-hidden="true">0,35 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Tegner og laver flashhukommelse og lagring bygget på flash." data-g="Lagring" data-a="" aria-label="Sandisk, 0,20 % af fonden"><span class="cq-ch__lg"><img src="logos/US80004C2008.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">Sandisk</span><span class="cq-ch__cw" aria-hidden="true">0,20 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Udvikler styrechips til flashlagring, fx SSD-drev og lager i telefoner." data-g="Lagring" data-a="" aria-label="Silicon Motion, 0,16 % af fonden"><span class="cq-ch__lg"><img src="logos/US82706C1080.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">Silicon Motion</span><span class="cq-ch__cw" aria-hidden="true">0,16 %</span></button></li></ul><button type="button" class="cq-ch__all" aria-expanded="false" aria-controls="cq-ch-l-husker" data-n="9">Vis alle (9)</button></div>
+</article><article class="cq-ch__p cq-ch__p--j" id="cq-ch-p-styrer" data-i="7" aria-labelledby="cq-ch-h-styrer" style="--c:var(--cq-c7)">
+<div class="cq-ch__t"><img class="kd-ill" src="grafik/chips-illu-8-styrer.svg" alt="" width="240" height="160" loading="lazy"><p class="cq-ch__pos">Trin 8 af 8 · Den færdige chip</p>
+<h3 id="cq-ch-h-styrer"><span class="cq-ch__pn" aria-hidden="true">8</span>Styrer strøm og signaler<span class="cq-ch__sub">Strøm-, styre- og forbindelseschips</span></h3>
+<p class="cq-ch__w"><b>4,54 %</b> <span>af fonden · 19 selskaber</span></p>
+<p class="cq-ch__x">Alle chips skal have strøm i præcis den rigtige mængde, og de skal kunne tale med omverdenen. Strømchips omformer og fordeler strømmen. Andre chips holder takten, så alle dele arbejder i samme tempo, sender trådløst eller tager imod signaler fra sensorer og kameraer. Trinnets største selskab, Taiyo Yuden, laver små komponenter, der sidder ved siden af chipsene.</p></div>
+<div class="cq-ch__r"><div class="cq-ch__info" aria-live="polite"><span class="cq-ch__lg cq-ch__lg--m"><span class="cq-ch__mono">TY</span></span><div><p class="cq-ch__ig">Komponenter</p><p class="cq-ch__ih">Taiyo Yuden<span>1,05 % af fonden</span></p><p class="cq-ch__id">Laver små elektroniske komponenter, fx kondensatorer, der sidder ved siden af chipsene i elektronik. Det er ikke selv chips.</p></div></div>
+<ul class="cq-ch__cos" id="cq-ch-l-styrer" role="list"><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver små elektroniske komponenter, fx kondensatorer, der sidder ved siden af chipsene i elektronik. Det er ikke selv chips." data-g="Komponenter" data-a="" aria-label="Taiyo Yuden, 1,05 % af fonden"><span class="cq-ch__lg cq-ch__lg--m"><span class="cq-ch__mono">TY</span></span><span class="cq-ch__nm">Taiyo Yuden</span><span class="cq-ch__cw" aria-hidden="true">1,05 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Udvikler strømchips af nye materialer (galliumnitrid og siliciumkarbid), bl.a. til AI-datacentre og energianlæg." data-g="Strøm- og styrechips" data-a="Datacentre" aria-label="Navitas Semiconductor, 0,51 % af fonden"><span class="cq-ch__lg"><img src="logos/US63942X1063.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">Navitas Semi&shy;conductor</span><span class="cq-ch__cw" aria-hidden="true">0,51 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver timingchips, der holder takten i elektronik. Har ingen egen chipfabrik." data-g="Forbindelses- og sensorchips" data-a="" aria-label="SiTime, 0,48 % af fonden"><span class="cq-ch__lg"><img src="logos/US82982T1060.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">SiTime</span><span class="cq-ch__cw" aria-hidden="true">0,48 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver strømchips og sensorer." data-g="Strøm- og styrechips" data-a="Robotter &amp; fysisk AI" aria-label="onsemi, 0,35 % af fonden"><span class="cq-ch__lg"><img src="logos/US6821891057.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">onsemi</span><span class="cq-ch__cw" aria-hidden="true">0,35 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver chips, der styrer skærme, og billedsensorer. Har ingen egen chipfabrik." data-g="Forbindelses- og sensorchips" data-a="" aria-label="Himax Technologies, 0,33 % af fonden"><span class="cq-ch__lg"><img src="logos/US43289P1066.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">Himax Techno&shy;logies</span><span class="cq-ch__cw" aria-hidden="true">0,33 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Tegner og laver mange slags chips til biler, industri og elektronik." data-g="Strøm- og styrechips" data-a="" aria-label="STMicroelectronics, 0,31 % af fonden"><span class="cq-ch__lg"><img src="logos/US8610121027.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">STMicro&shy;electronics</span><span class="cq-ch__cw" aria-hidden="true">0,31 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver små styrechips, strømchips og analoge chips, især til biler og industri." data-g="Strøm- og styrechips" data-a="Robotter &amp; fysisk AI" aria-label="Renesas Electronics, 0,23 % af fonden"><span class="cq-ch__lg"><img src="logos/JP3164720009.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">Renesas Electro&shy;nics</span><span class="cq-ch__cw" aria-hidden="true">0,23 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver chips, der bruger meget lidt strøm, til små apparater og AI i dem." data-g="Strøm- og styrechips" data-a="" aria-label="Ambiq Micro, 0,22 % af fonden"><span class="cq-ch__lg"><img src="logos/US0231931058.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">Ambiq Micro</span><span class="cq-ch__cw" aria-hidden="true">0,22 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Udvikler chips til kommunikation og sensorer, der også bruger lys. Selskabet er i udviklingsfasen." data-g="Forbindelses- og sensorchips" data-a="" aria-label="Aeluma, 0,14 % af fonden"><span class="cq-ch__lg"><img src="logos/US00776X1090.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">Aeluma</span><span class="cq-ch__cw" aria-hidden="true">0,14 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver chips til strømforsyning, biler og forbundne apparater." data-g="Strøm- og styrechips" data-a="Robotter &amp; fysisk AI" aria-label="Infineon Technologies, 0,14 % af fonden"><span class="cq-ch__lg"><img src="logos/DE0006231004.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">Infineon Techno&shy;logies</span><span class="cq-ch__cw" aria-hidden="true">0,14 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver chips, der styrer strømforsyningen. Har ingen egen chipfabrik." data-g="Strøm- og styrechips" data-a="Datacentre" aria-label="Monolithic Power Systems, 0,12 % af fonden"><span class="cq-ch__lg"><img src="logos/US6098391054.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">Monolithic Power Systems</span><span class="cq-ch__cw" aria-hidden="true">0,12 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver trådløse chips med lavt strømforbrug, fx til Bluetooth." data-g="Forbindelses- og sensorchips" data-a="Robotter &amp; fysisk AI" aria-label="Nordic Semiconductor, 0,11 % af fonden"><span class="cq-ch__lg"><img src="logos/NO0003055501.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">Nordic Semi&shy;conductor</span><span class="cq-ch__cw" aria-hidden="true">0,11 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Udvikler og leverer strømchips." data-g="Strøm- og styrechips" data-a="" aria-label="Alpha and Omega Semiconductor, 0,10 % af fonden"><span class="cq-ch__lg"><img src="logos/BMG6331P1041.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">Alpha and Omega Semi&shy;conductor</span><span class="cq-ch__cw" aria-hidden="true">0,10 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver kommunikationschips til bredbånd, netværk og datacentre." data-g="Forbindelses- og sensorchips" data-a="" aria-label="MaxLinear, 0,10 % af fonden"><span class="cq-ch__lg"><img src="logos/US57776J1007.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">MaxLinear</span><span class="cq-ch__cw" aria-hidden="true">0,10 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Tegner og laver analoge chips og styrechips til elektronikproducenter." data-g="Strøm- og styrechips" data-a="" aria-label="Texas Instruments, 0,09 % af fonden"><span class="cq-ch__lg"><img src="logos/US8825081040.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">Texas Instru&shy;ments</span><span class="cq-ch__cw" aria-hidden="true">0,09 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Tegner og laver chips, der omsætter virkelige signaler som lyd, lys og bevægelse til data." data-g="Strøm- og styrechips" data-a="" aria-label="Analog Devices, 0,08 % af fonden"><span class="cq-ch__lg"><img src="logos/US0326541051.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">Analog Devices</span><span class="cq-ch__cw" aria-hidden="true">0,08 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Udvikler strømbesparende chips til AI i kameraer og biler." data-g="Forbindelses- og sensorchips" data-a="Robotter &amp; fysisk AI" aria-label="Ambarella, 0,07 % af fonden"><span class="cq-ch__lg"><img src="logos/KYG037AX1015.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">Ambarella</span><span class="cq-ch__cw" aria-hidden="true">0,07 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver små styrechips (mikrocontrollere) og analoge chips til elektronik." data-g="Strøm- og styrechips" data-a="" aria-label="Microchip Technology, 0,07 % af fonden"><span class="cq-ch__lg"><img src="logos/US5950171042.webp" alt="" width="40" height="40" loading="lazy" decoding="async"></span><span class="cq-ch__nm">Microchip Techno&shy;logy</span><span class="cq-ch__cw" aria-hidden="true">0,07 %</span></button></li><li><button type="button" class="cq-ch__co" aria-pressed="false" data-d="Laver strømbesparende chips, som kunden selv kan programmere. Har ingen egen chipfabrik." data-g="Forbindelses- og sensorchips" data-a="" aria-label="Lattice Semiconductor, 0,04 % af fonden"><span class="cq-ch__lg cq-ch__lg--m"><span class="cq-ch__mono">LS</span></span><span class="cq-ch__nm">Lattice Semi&shy;conductor</span><span class="cq-ch__cw" aria-hidden="true">0,04 %</span></button></li></ul><button type="button" class="cq-ch__all" aria-expanded="false" aria-controls="cq-ch-l-styrer" data-n="19">Vis alle (19)</button></div>
+</article></div>
+</div>
+<script>(function(){var R=document.getElementById('cq-kaede');if(!R||R.dataset.on)return;R.dataset.on='1';R.classList.add('cq-ch--js');
+var T=R.querySelector('.cq-ch__track'),P=[].slice.call(R.querySelectorAll('.cq-ch__p')),B=[].slice.call(R.querySelectorAll('.cq-ch__tab')),S=[].slice.call(R.querySelectorAll('.cq-ch__seg')),
+pv=R.querySelector('.cq-ch__pv'),nx=R.querySelector('.cq-ch__nx'),pl=R.querySelector('.cq-ch__pl'),cur=-1,
+rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+function name(i){return P[i].querySelector('h3').firstChild.nextSibling.nodeValue}
+function set(i){if(i===cur)return;cur=i;B.forEach(function(b,k){if(k===i)b.setAttribute('aria-current','step');else b.removeAttribute('aria-current')});
+S.forEach(function(s,k){s.classList.toggle('on',k===i)});pl.innerHTML='';var sp=document.createElement('span');sp.textContent=(i+1)+' / '+P.length;pl.appendChild(sp);pl.appendChild(document.createTextNode(' '+name(i)));
+pv.disabled=i===0;nx.disabled=i===P.length-1;fit()}
+function fit(){if(cur<0)return;T.style.height=(P[cur].offsetHeight+16)+'px'}
+if(window.ResizeObserver){var ro=new ResizeObserver(fit);P.forEach(function(p){ro.observe(p)})}
+function go(i){i=Math.max(0,Math.min(P.length-1,i));T.scrollTo({left:P[i].offsetLeft-T.firstElementChild.offsetLeft,behavior:rm?'auto':'smooth'});set(i)}
+var tm;T.addEventListener('scroll',function(){clearTimeout(tm);tm=setTimeout(function(){var x=T.scrollLeft,b=0,bd=1e9;P.forEach(function(p,k){var dd=Math.abs(p.offsetLeft-T.firstElementChild.offsetLeft-x);if(dd<bd){bd=dd;b=k}});set(b)},80)},{passive:true});
+B.forEach(function(b,k){b.addEventListener('click',function(){go(k)});b.addEventListener('keydown',function(e){var n=e.key==='ArrowRight'?k+1:e.key==='ArrowLeft'?k-1:e.key==='Home'?0:e.key==='End'?B.length-1:-1;if(n<0||n>=B.length)return;e.preventDefault();B[n].focus();go(n)})});
+pv.addEventListener('click',function(){go(cur-1)});nx.addEventListener('click',function(){go(cur+1)});
+R.addEventListener('focusin',function(e){var p=e.target.closest('.cq-ch__p');if(p){var i=+p.dataset.i;if(i!==cur){go(i)}}});
+function show(btn,pin){var p=btn.closest('.cq-ch__p'),inf=p.querySelector('.cq-ch__info');inf.textContent='';
+var lg=btn.querySelector('.cq-ch__lg').cloneNode(true);inf.appendChild(lg);var w=document.createElement('div');
+function el(t,c,x){var e=document.createElement(t);e.className=c;e.textContent=x;w.appendChild(e);return e}
+el('p','cq-ch__ig',btn.dataset.g);var h=el('p','cq-ch__ih',btn.querySelector('.cq-ch__nm').textContent.replace(/\u00ad/g,''));var s=document.createElement('span');s.textContent=btn.querySelector('.cq-ch__cw').textContent+' af fonden';h.appendChild(s);
+el('p','cq-ch__id',btn.dataset.d);if(btn.dataset.a)el('p','cq-ch__ia','Hører også til temaet: '+btn.dataset.a);inf.appendChild(w)}
+var fine=window.matchMedia&&matchMedia('(hover: hover) and (pointer: fine)').matches;
+R.querySelectorAll('.cq-ch__co').forEach(function(b){
+ b.addEventListener('click',function(){var p=b.closest('.cq-ch__p');p.querySelectorAll('.cq-ch__co[aria-pressed=true]').forEach(function(o){if(o!==b)o.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');show(b)});
+ b.addEventListener('focus',function(){show(b)});
+ if(fine)b.addEventListener('mouseenter',function(){show(b)});
+});
+R.querySelectorAll('.cq-ch__all').forEach(function(a){a.addEventListener('click',function(){var l=document.getElementById(a.getAttribute('aria-controls')),o=!l.classList.contains('open');l.classList.toggle('open',o);a.setAttribute('aria-expanded',o);a.textContent=o?'Vis færre':'Vis alle ('+a.dataset.n+')';if(o){var f=l.children[6];if(f)f.querySelector('button').focus()}})});
+set(0);
+if(!rm&&'IntersectionObserver' in window){var M=R.querySelector('.cq-ch__chip');R.classList.add('cq-ch--arm');var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){setTimeout(function(){R.classList.remove('cq-ch--arm')},350);io.disconnect()}},{threshold:.9});io.observe(M)}
+})();
+</script>
+</section>
+<section class="xs" id="x-opslag" aria-labelledby="h-x">
+<div class="wrap">
+<p class="eyebrow">Fra X</p>
+<h2 id="h-x">Kæden i nyhederne</h2>
+<p class="lead" style="margin-top:10px">Fem opslag om tre af kædens trin. „Kort fortalt“ er vores danske gengivelse. Opslaget hentes først fra X, når du trykker på „Vis opslaget“.</p>
+<p class="xs-swipe" aria-hidden="true">Stryg til siden for alle fem opslag →</p>
+<ul class="xs-liste" role="list">
+<li class="xp die" data-url="https://twitter.com/SKundojjala/status/2108082456637358591" data-team-post="https://x.com/MadsC007/status/2108103461418279113"><p class="xp-delt">Delt af Mads Christiansen fra teamet bag NewDeal Invest</p><div class="xp-top"><p class="xp-trin"><a href="#cq-ch-p-fremstilles" data-i="3"><span class="sr">Hører til </span>Trin 4 · Fremstilles</a></p><p class="xp-dato"><time datetime="2026-10-08">08.10.2026</time></p></div><p class="xp-fra"><b>Sravan Kundojjala</b> <span>@SKundojjala · på engelsk</span></p><p class="xp-forkl"><span class="xp-k">Kort fortalt</span> Kontoen Sravan Kundojjala oplyser, at TSMCs omsætning i september steg 48,1 % i forhold til september sidste år, til 16,133 mia. USD. Ifølge opslaget var omsætningen i årets første ni måneder større end i hele 2025. TSMC opgør selv omsætningen i september 2026 til 511,9 mia. taiwanske dollar, 54,6 % mere end i september 2025. Procenterne er forskellige, fordi kontoen måler i USD og TSMC i taiwanske dollar.</p><div class="xp-knapper"><button type="button" class="xp-vis" hidden>Vis opslaget<span class="sr"> fra Sravan Kundojjala</span></button><a class="xp-link" href="https://twitter.com/SKundojjala/status/2108082456637358591" rel="noopener" target="_blank">Se opslaget på X<span class="sr"> (åbner i nyt vindue)</span></a></div><div class="xp-embed" tabindex="-1" aria-label="Opslag fra Sravan Kundojjala på X"></div></li>
+<li class="xp die" data-url="https://twitter.com/NikkeiAsia/status/2112196854683181094"><div class="xp-top"><p class="xp-trin"><a href="#cq-ch-p-fremstilles" data-i="3"><span class="sr">Hører til </span>Trin 4 · Fremstilles</a></p><p class="xp-dato"><time datetime="2026-10-19">19.10.2026</time></p></div><p class="xp-fra"><b>Nikkei Asia</b> <span>@NikkeiAsia · på engelsk</span></p><p class="xp-forkl"><span class="xp-k">Kort fortalt</span> Nikkei Asia skriver, at Intels topchef Lip-Bu Tan siger, at Intels kontraktproduktion af chips har brug for „stærk“ støtte fra staten. Ifølge Nikkei Asia vurderer han også, at chips fra Kina ikke ligger langt efter amerikansk teknologi.</p><div class="xp-knapper"><button type="button" class="xp-vis" hidden>Vis opslaget<span class="sr"> fra Nikkei Asia</span></button><a class="xp-link" href="https://twitter.com/NikkeiAsia/status/2112196854683181094" rel="noopener" target="_blank">Se opslaget på X<span class="sr"> (åbner i nyt vindue)</span></a></div><div class="xp-embed" tabindex="-1" aria-label="Opslag fra Nikkei Asia på X"></div></li>
+<li class="xp die" data-url="https://twitter.com/business/status/2112906698658611546"><div class="xp-top"><p class="xp-trin"><a href="#cq-ch-p-regner" data-i="5"><span class="sr">Hører til </span>Trin 6 · Regner</a></p><p class="xp-dato"><time datetime="2026-10-21">21.10.2026</time></p></div><p class="xp-fra"><b>Bloomberg</b> <span>@business · på engelsk</span></p><p class="xp-forkl"><span class="xp-k">Kort fortalt</span> Bloomberg gengiver, at Carmen Li, topchef i Silicon Data, siger, at der stadig er „stor efterspørgsel“ efter ældre AI-chips. Ifølge Bloomberg er priserne på NVIDIAs H100-chip fortsat høje, fordi der er mangel på chips.</p><div class="xp-knapper"><button type="button" class="xp-vis" hidden>Vis opslaget<span class="sr"> fra Bloomberg</span></button><a class="xp-link" href="https://twitter.com/business/status/2112906698658611546" rel="noopener" target="_blank">Se opslaget på X<span class="sr"> (åbner i nyt vindue)</span></a></div><div class="xp-embed" tabindex="-1" aria-label="Opslag fra Bloomberg på X"></div></li>
+<li class="xp die" data-url="https://twitter.com/theinformation/status/2113329583407739269"><div class="xp-top"><p class="xp-trin"><a href="#cq-ch-p-regner" data-i="5"><span class="sr">Hører til </span>Trin 6 · Regner</a></p><p class="xp-dato"><time datetime="2026-10-22">22.10.2026</time></p></div><p class="xp-fra"><b>The Information</b> <span>@theinformation · på engelsk</span></p><p class="xp-forkl"><span class="xp-k">Kort fortalt</span> Mediet The Information skriver, at NVIDIA er med til at finansiere efterspørgslen efter sine egne chips gennem investeringer og tilsagn for over 170 mia. USD, mens aktierne falder i AI-cloududbydere, der lejer computerkraft til AI ud, og flere NVIDIA-støttede selskaber udskyder planerne om at få deres aktier noteret.</p><div class="xp-knapper"><button type="button" class="xp-vis" hidden>Vis opslaget<span class="sr"> fra The Information</span></button><a class="xp-link" href="https://twitter.com/theinformation/status/2113329583407739269" rel="noopener" target="_blank">Se opslaget på X<span class="sr"> (åbner i nyt vindue)</span></a></div><div class="xp-embed" tabindex="-1" aria-label="Opslag fra The Information på X"></div></li>
+<li class="xp die" data-url="https://twitter.com/SKhynix/status/2112696334872678863"><div class="xp-top"><p class="xp-trin"><a href="#cq-ch-p-husker" data-i="6"><span class="sr">Hører til </span>Trin 7 · Husker</a></p><p class="xp-dato"><time datetime="2026-10-21">21.10.2026</time></p></div><p class="xp-fra"><b>SK hynix</b> <span>@SKhynix · på engelsk</span></p><p class="xp-forkl"><span class="xp-k">Kort fortalt</span> SK hynix beskriver, hvordan selskabets HBM-hukommelse, avanceret pakning og PIM (processing-in-memory) bringer data og beregning tættere sammen. Formålet er ifølge SK hynix at forbedre AI-systemernes ydelse og effektivitet.</p><p class="xp-ord">HBM er arbejdshukommelse, hvor flere hukommelseschips er stablet oven på hinanden. PIM betyder, at en del af beregningen sker inde i selve hukommelsen.</p><div class="xp-knapper"><button type="button" class="xp-vis" hidden>Vis opslaget<span class="sr"> fra SK hynix</span></button><a class="xp-link" href="https://twitter.com/SKhynix/status/2112696334872678863" rel="noopener" target="_blank">Se opslaget på X<span class="sr"> (åbner i nyt vindue)</span></a></div><div class="xp-embed" tabindex="-1" aria-label="Opslag fra SK hynix på X"></div></li>
+</ul>
+<p class="xs-note">Opslagene er udvalgt af teamet bag NewDeal Invest. Afsenderne og de nævnte selskaber står ikke bag denne side, og opslagene er ikke fondens vurdering.</p>
+</div>
+</section>
+<section class="risiko" id="risiko" aria-labelledby="h-risiko">
+<div class="wrap">
+<div class="risk die">
+<h2 id="h-risiko">Det skal man vide</h2>
+<p>Chipselskabernes salg har historisk svinget meget, fordi efterspørgslen går i cykler, især efter hukommelse, temaets største trin (5,45 % af fonden). Flere af chipselskaberne, blandt dem TSMC og NVIDIA, er afhængige af produktion i Taiwan og påvirkes af USA's regler for eksport af chips og chipmaskiner til Kina.</p>
+</div>
+</div>
+</section>
+<section class="videre" id="videre" aria-labelledby="h-videre">
+<div class="wrap">
+<div class="grid">
+<figure class="foto"><img src="img/chips-chip-paa-printplade.webp" alt="Chip på en printplade forbundet til data og strøm" width="1020" height="680" loading="lazy"><figcaption>Illustration: NewDeal Invest.</figcaption></figure>
+<div class="txt">
+<p class="eyebrow">Videre</p>
+<h2 id="h-videre">Chippen skal have strøm</h2>
+<img class="overgang" src="grafik/chips-overgang-strom.svg" alt="" width="480" height="120">
+<p>Ingen chip virker uden strøm, og strømmen kommer fra kraftværker og elnet. Energi og elnet er fondens næststørste tema.</p>
+<a class="cta" href="../datacenter/index.html">Datacentre</a>
+</div>
+</div>
+<details class="fod">
+<summary>Også med en fod i chips: 9 selskaber fra andre temaer</summary>
+<p>De laver også chips eller chipsdele, men deres hovedforretning hører til et andet tema i fonden. De tæller ikke med i de 75 selskaber og de 24,31 %. Tilsammen er de 2,04 % af fonden.</p>
+<ul role="list"><li><b>Raspberry Pi</b><span>Robotter &amp; fysisk AI</span><i>0,60 %</i></li><li><b>Macom Technology Solutions</b><span>Datacentre</span><i>0,46 %</i></li><li><b>ams-OSRAM</b><span>Datacentre</span><i>0,27 %</i></li><li><b>Credo</b><span>Datacentre</span><i>0,27 %</i></li><li><b>Solstice Advanced Materials</b><span>Råstoffer</span><i>0,15 %</i></li><li><b>Semtech</b><span>Datacentre</span><i>0,11 %</i></li><li><b>Horizon Robotics</b><span>Robotter &amp; fysisk AI</span><i>0,10 %</i></li><li><b>Astera Labs</b><span>Datacentre</span><i>0,07 %</i></li><li><b>Apple</b><span>Platformsøkonomi</span><i>0,01 %</i></li></ul>
+</details>
+</div>
+</section>
+<section class="kilder-s" id="kilder" aria-labelledby="h-kilder">
+<div class="wrap">
+<details class="kilder">
+<summary><h2 id="h-kilder" style="font-size:18px;letter-spacing:-.01em;font-weight:600">Kilder og kreditering</h2></summary>
+<ul>
+<li>Andele: afdelingen PMINDI pr. 16.10.2026 (fondens data). Fordelingen på trin følger fondens egen inddeling af chipselskaberne. Beskrivelserne af selskaberne bygger på deres egne årsrapporter og hjemmesider. Fondens fokus: NewDeal Invests hjemmeside, siden Porteføljer (newdealinvest.dk/portefoljer, hentet 19.10.2026).</li>
+<li>Verdens salg af halvledere 2025: Semiconductor Industry Association, 06.02.2026 (<a href="https://www.semiconductors.org/global-annual-semiconductor-sales-increase-25-6-to-791-7-billion-in-2025/" rel="noopener" target="_blank">semiconductors.org</a>).</li>
+<li>NVIDIA: årsrapport (10-K) for regnskabsåret til 25.01.2026 (<a href="https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm" rel="noopener" target="_blank">sec.gov</a>).</li>
+<li>TSMC: årsrapport (20-F) for 2025, 16.04.2026 (<a href="https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm" rel="noopener" target="_blank">sec.gov</a>).</li>
+<li>ASML: resultater for 4. kvartal og hele 2025, 28.01.2026 (<a href="https://www.sec.gov/Archives/edgar/data/937966/000162828026003701/a2026_01x28xpresentation.htm" rel="noopener" target="_blank">sec.gov</a>).</li>
+<li>Danmarks BNP 2025, 3.118,5 mia. kr.: Danmarks Statistik, tabel NAN1 (<a href="https://www.statbank.dk/NAN1" rel="noopener" target="_blank">statbank.dk</a>). Omregning til kroner med Nationalbankens årsgennemsnit for 2025, tabel DNVALA (<a href="https://www.statbank.dk/DNVALA" rel="noopener" target="_blank">statbank.dk</a>). Omregninger og sammenligninger er vores egne beregninger.</li>
+</ul>
+<h3>Kreditering</h3>
+<p class="kred">Waferen, chippen på printpladen, tegninger og ikoner. Illustration: NewDeal Invest. Probekortet: <a href="https://commons.wikimedia.org/wiki/File:Probe_card.JPG" rel="noopener" target="_blank">foto af Ajoones</a>, <a href="https://creativecommons.org/licenses/by/3.0/" rel="noopener" target="_blank">CC BY 3.0</a>, Wikimedia Commons (beskåret).</p>
+<p>Videoerne er fra ASML og TSMC Museum of Innovation og vises fra YouTube, først når du trykker på dem. Opslagene er fra X. Logoer tilhører de enkelte selskaber og viser kun, hvilke selskaber fonden ejer aktier i. Afsenderne og selskaberne står ikke bag denne side, og der er intet samarbejde med dem.</p>
+<p><a class="kid" href="https://node-api.fundmarket.dk/funds/documents/priip_ipm140b" rel="noopener" target="_blank">Dokument med central information (KID)<span class="sr"> (åbner i nyt vindue)</span></a></p>
+</details>
+</div>
+</section>
+</main>
+<footer><div class="wrap">
+<p>Siden beskriver indholdet af fonden og er ikke investeringsrådgivning. Omtalen af et selskab er ikke en anbefaling.</p>
+<p>Risikoindikatoren i fondens Dokument med central information (KID) er 5 på en skala fra 1 til 7. Historiske afkast er ingen garanti for fremtidige afkast. Du kan tabe hele eller dele af det investerede beløb.</p>
+</div></footer>
+<script>
+(function(){
+var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var pr=document.querySelector('.prog');
+function prog(){var h=document.documentElement,m=h.scrollHeight-innerHeight;pr.style.setProperty('--p',m>0?(scrollY/m).toFixed(3):0)}
+addEventListener('scroll',prog,{passive:true});prog();
+/* én rolig zoom: fra nærbillede til overblik, mens man scroller forbi hero */
+var hz=document.querySelector('.hero-zoom'),hero=document.querySelector('.hero');
+if(!reduce&&hz){var tk=false;function z(){tk=false;var r=hero.getBoundingClientRect(),p=Math.min(1,Math.max(0,-r.top/(r.height*.8)));hz.style.setProperty('--z',(1.16-.16*p).toFixed(4))}
+addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(z)}},{passive:true});z();}
+/* kæden: trin-prikker på mobil + Esc */
+var R=document.getElementById('cq-kaede');
+if(R){var dots=[].slice.call(R.querySelectorAll('.kd-dots i')),pl=R.querySelector('.cq-ch__pl');
+function sync(){var m=/(\d+)\s*\/\s*(\d+)/.exec(pl.textContent);if(!m)return;dots.forEach(function(d,i){d.classList.toggle('on',i===m[1]-1)})}
+new MutationObserver(sync).observe(pl,{childList:true,subtree:true,characterData:true});sync();
+var std={};[].forEach.call(R.querySelectorAll('.cq-ch__p'),function(p){std[p.id]=p.querySelector('.cq-ch__info').innerHTML});
+R.addEventListener('keydown',function(e){if(e.key!=='Escape'&&e.key!=='Esc')return;var p=e.target.closest&&e.target.closest('.cq-ch__p');if(!p)return;
+ var l=p.querySelector('.cq-ch__cos.open'),a=p.querySelector('.cq-ch__all[aria-expanded="true"]');
+ if(l&&a){e.preventDefault();a.focus();a.click();return}
+ var on=p.querySelector('.cq-ch__co[aria-pressed="true"]');
+ if(on){e.preventDefault();on.setAttribute('aria-pressed','false');p.querySelector('.cq-ch__info').innerHTML=std[p.id]}});
+}
+/* X-facade: intet hentes fra X før klik; widgets.js indlæses én gang */
+var xs=[].slice.call(document.querySelectorAll('.xp[data-url]'));
+function twl(){if(window.twttr&&window.twttr.widgets)return;window.twttr=(function(d){var t=window.twttr||{};if(t._e)return t;t._e=[];t.ready=function(f){t._e.push(f)};var j=d.createElement('script');j.id='twitter-wjs';j.async=true;j.src='https://platform.twitter.com/widgets.js';j.charset='utf-8';d.body.appendChild(j);return t})(document)}
+xs.forEach(function(li){var b=li.querySelector('.xp-vis'),em=li.querySelector('.xp-embed');b.hidden=false;
+ b.addEventListener('click',function(){if(em.firstChild)return;var q=document.createElement('blockquote');q.className='twitter-tweet';q.setAttribute('data-theme','dark');q.setAttribute('data-dnt','true');q.setAttribute('data-conversation','none');q.setAttribute('data-lang','da');
+ var a=document.createElement('a');a.href=li.dataset.url;a.textContent='Opslaget hentes fra X …';q.appendChild(a);em.appendChild(q);b.hidden=true;em.focus({preventScroll:true});
+ twl();window.twttr.ready(function(t){t.widgets.load(em)})})});
+/* "Hører til trin": åbn trinnet i kæden */
+[].forEach.call(document.querySelectorAll('.xp-trin a[data-i]'),function(a){a.addEventListener('click',function(e){var t=R&&R.querySelector('.cq-ch__tab[data-i="'+a.dataset.i+'"]');if(!t)return;e.preventDefault();t.click();var p=document.getElementById(a.getAttribute('href').slice(1)),h=p&&p.querySelector('h3');setTimeout(function(){if(!h)return;h.tabIndex=-1;h.focus({preventScroll:true});R.querySelector('.cq-ch__nav').scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'})},reduce?0:450)})});
+/* chip-segmenter kan klikkes med mus (tastatur bruger fanerne) */
+if(R)[].forEach.call(R.querySelectorAll('.cq-ch__seg'),function(g){g.addEventListener('click',function(){var t=R.querySelector('.cq-ch__tab[data-i="'+g.dataset.i+'"]');if(t)t.click()})});
+/* video-facade: YouTube (nocookie) hentes først ved klik */
+[].forEach.call(document.querySelectorAll('.vid-ramme[data-yt]'),function(r){var b=r.querySelector('.vid-play');b.addEventListener('click',function(){var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+r.dataset.yt+'?autoplay=1&rel=0&playsinline=1';f.title=r.dataset.title;f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.setAttribute('allowfullscreen','');f.referrerPolicy='strict-origin-when-cross-origin';r.replaceChild(f,b);f.focus()})});
+})();
+</script>
+</body>
+</html>
