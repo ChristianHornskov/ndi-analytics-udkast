@@ -52,7 +52,7 @@ export function feedHtml(pub,{company,asOf}={}){
   if(!v.ok)return '<section class="x-feed"><h3>Opslag på X</h3><p class="small muted">Opslag kunne ikke vises lige nu.</p></section>';
   const items=v.items.filter(i=>i.company_isin===company);
   if(!items.length)return '<section class="x-feed"><h3>Opslag på X</h3><p class="small muted">Ingen redaktionelt udvalgte opslag for dette selskab endnu.</p></section>';
-  return `<section class="x-feed"><h3>Opslag på X</h3><p class="small muted">Udvalgt af redaktionen. Opslagene er afsenderens egne udsagn, ikke NDI's vurdering.</p>${items.map(i=>card(i,asOf)).join('')}<button type="button" class="button" data-x-load>Vis opslagene fra X</button><p class="small muted" data-x-status role="status"></p></section>`;
+  return `<section class="x-feed"><h3>Opslag på X</h3><p class="small muted">Udvalgt af redaktionen. Opslagene er afsenderens egne udsagn, ikke NewDeal Invests vurdering.</p>${items.map(i=>card(i,asOf)).join('')}<button type="button" class="button" data-x-load>Vis opslagene fra X</button><p class="small muted" data-x-status role="status"></p></section>`;
 }
 
 // Indlæser X' script efter brugerens klik. Løser altid (aldrig reject): 'loaded' | 'failed' | 'timeout'.
@@ -71,5 +71,5 @@ export function loadXWidgets(doc,{timeoutMs=8000,setTimer=setTimeout}={}){
 
 export function bindXFeed(root,doc=root.ownerDocument){
   const b=root.querySelector('[data-x-load]');if(!b)return;
-  b.addEventListener('click',()=>{b.disabled=true;loadXWidgets(doc).then(r=>{if(r!=='loaded')b.disabled=false})});
+  b.addEventListener('click',()=>{b.disabled=true;loadXWidgets(doc).then(r=>{if(r!=='loaded')b.disabled=false;else b.hidden=true})});
 }
