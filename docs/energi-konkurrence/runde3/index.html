@@ -239,6 +239,37 @@ footer p+p{margin-top:8px}
 .co.r[aria-pressed=true]{border-color:var(--teal);background:#14242b}
 .alle-liste .grp:first-child{margin-top:14px}
 .fond.aaben .info{position:sticky;top:68px;z-index:2}
+
+/* ===== X-opslag og video ===== */
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.xs{padding:64px 0 24px}
+.xs h2{font-size:clamp(28px,6vw,44px);margin-bottom:14px}
+.xs-lead{max-width:62ch;color:var(--mute)}
+.xs-liste{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:18px;grid-template-columns:minmax(0,1fr);align-items:start}
+@media (min-width:900px){.xs-liste{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}}
+.xp{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 16px;min-width:0;overflow:hidden}
+.xp-delt{font-size:13px;color:var(--gold);margin-bottom:8px}
+.xp-k{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);font-weight:600;margin-bottom:6px}
+.xp-forkl{font-size:15px}
+.xp blockquote.twitter-tweet{margin:16px 0 0;padding:14px 0 0;border-top:1px solid var(--line);font-size:14px;color:var(--mute)}
+.xp-fra b{color:var(--ink);font-weight:600}
+.xp-dato{margin-top:2px}
+.xp-link{display:inline-flex;align-items:center;min-height:44px;color:var(--gold);font-weight:600;text-underline-offset:3px}
+.xp .twitter-tweet-rendered,.xp iframe{max-width:100%!important;min-width:0!important}
+.xp .twitter-tweet-rendered{margin:16px 0 0!important}
+.vid{margin:24px 0 8px;max-width:760px}
+.vid-ramme{position:relative;aspect-ratio:16/9;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#000}
+.vid-ramme iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vid-play{position:absolute;inset:0;width:100%;height:100%;padding:0;border:0;background:#000;display:block}
+.vid-play img{width:100%;height:100%;object-fit:cover;display:block;opacity:.85}
+.vid-ikon{position:absolute;left:50%;top:50%;width:72px;height:72px;margin:-36px 0 0 -36px;border-radius:50%;background:var(--gold);box-shadow:0 4px 24px rgba(0,0,0,.5)}
+.vid-ikon::after{content:"";position:absolute;left:29px;top:22px;border-style:solid;border-width:14px 0 14px 22px;border-color:transparent transparent transparent var(--bg)}
+.vid-play:hover .vid-ikon{background:#fff}
+.vid-play:focus-visible{outline:3px solid var(--gold);outline-offset:-3px}
+.vid-tid{position:absolute;right:10px;bottom:10px;background:rgba(0,0,0,.8);color:#fff;font-size:13px;padding:2px 8px;border-radius:4px}
+.vid figcaption{font-size:13px;color:var(--mute);margin-top:10px}
+.vid figcaption b{color:var(--ink);font-weight:600}
+.vid figcaption a{display:inline-flex;align-items:center;min-height:44px;color:var(--gold)}
 </style>
 </head>
 <body>
@@ -337,6 +368,29 @@ s.classList.add('cq-vt--armed');new IntersectionObserver(function(e,o){e.forEach
 
 <!-- ===== /MODUL: ventetid ===== -->
 
+<!-- ===== MODUL: X-opslag (5 GODKENDT i DOM.md 24.10.2026, inkl. tillæg 12:50) ===== -->
+<section class="xs" id="x-opslag" aria-labelledby="h-x">
+<div class="wrap">
+<p class="eyebrow">Fra X</p>
+<h2 id="h-x">Kapløbet om strøm i nyhederne</h2>
+<p class="xs-lead">Fem opslag fra X, der viser kapløbet om strøm fra flere sider: forbruget, elproduktionen, nettilslutningen, brændslet og naboerne. Opslagene er afsendernes egne, og de danske forklaringer er skrevet af NewDeal Invest. Afsenderne står ikke bag siden.</p>
+<ul class="xs-liste" role="list">
+<li class="xp"><p class="xp-k">Kort fortalt</p><p class="xp-forkl">IEA skriver, at effektiviseringer skærer strømforbruget pr. AI-opgave ned i rekordtempo. Samtidig stiger brugen ifølge IEA kraftigt, og mere energitunge anvendelser som AI-agenter vinder frem; nogle opgaver bruger hundreder eller tusinder af gange mere energi end simple forespørgsler.</p>
+<blockquote class="twitter-tweet" data-theme="dark" data-dnt="true" data-conversation="none" data-lang="da"><p class="xp-fra"><b>IEA</b> <span>@IEA på X</span></p><p class="xp-dato">Opslag fra <time datetime="2026-10-21">21.10.2026</time> · på engelsk</p><a class="xp-link" href="https://twitter.com/IEA/status/2112939139276431588" rel="noopener" target="_blank">Se opslaget på X<span class="sr"> (åbner i nyt vindue)</span></a></blockquote></li>
+<li class="xp"><p class="xp-delt">Delt af Mads Christiansen</p><p class="xp-k">Kort fortalt</p><p class="xp-forkl">Kontoen a16z oplyser, at Kina i 2005 producerede halvt så meget strøm som USA, og at Kina i 2025 producerer mere end dobbelt så meget. Opslaget er delt af Mads Christiansen fra teamet bag NewDeal Invest. Det citerer et a16z-opslag, hvor Pat Gelsinger, tidligere topchef i Intel, ifølge a16z kalder elnettet loftet for USA's vækst og nævner, at USA's vedvarende energi er stærkt afhængig af Kina.</p>
+<blockquote class="twitter-tweet" data-theme="dark" data-dnt="true" data-conversation="none" data-lang="da"><p class="xp-fra"><b>a16z</b> <span>@a16z på X</span></p><p class="xp-dato">Opslag fra <time datetime="2026-10-10">10.10.2026</time> · på engelsk</p><a class="xp-link" href="https://twitter.com/a16z/status/2109018642629423174" rel="noopener" target="_blank">Se opslaget på X<span class="sr"> (åbner i nyt vindue)</span></a></blockquote></li>
+<li class="xp"><p class="xp-k">Kort fortalt</p><p class="xp-forkl">Ifølge nyhedsbureauet Reuters har Microsoft trukket sig fra en aftale om at være hovedkunde i et stort datacenter for Nscale, fordi forsinket nettilslutning har skubbet den forventede strømlevering ind i 2030'erne. Reuters beskriver det som en stor hindring for Storbritanniens AI-ambitioner.</p>
+<blockquote class="twitter-tweet" data-theme="dark" data-dnt="true" data-conversation="none" data-lang="da"><p class="xp-fra"><b>Reuters</b> <span>@Reuters på X</span></p><p class="xp-dato">Opslag fra <time datetime="2026-10-20">20.10.2026</time> · på engelsk</p><a class="xp-link" href="https://twitter.com/Reuters/status/2112578338006913307" rel="noopener" target="_blank">Se opslaget på X<span class="sr"> (åbner i nyt vindue)</span></a></blockquote></li>
+<li class="xp"><p class="xp-k">Kort fortalt</p><p class="xp-forkl">Ifølge Bloomberg har Kinder Morgan formelt forpligtet sig til at bygge en rørledning til 4,2 mia. USD, der skal transportere brændsel gennem det vestlige Texas og Texas Panhandle for at levere strøm til et datacenterkompleks.</p>
+<blockquote class="twitter-tweet" data-theme="dark" data-dnt="true" data-conversation="none" data-lang="da"><p class="xp-fra"><b>Bloomberg</b> <span>@business på X</span></p><p class="xp-dato">Opslag fra <time datetime="2026-10-22">22.10.2026</time> · på engelsk</p><a class="xp-link" href="https://twitter.com/business/status/2113071614237495481" rel="noopener" target="_blank">Se opslaget på X<span class="sr"> (åbner i nyt vindue)</span></a></blockquote></li>
+<li class="xp"><p class="xp-k">Kort fortalt</p><p class="xp-forkl">CNBC skriver, at 71&nbsp;% af amerikanerne i en Gallup-måling fra marts var imod et nyt datacenter i deres lokalområde, og at strømforbruget var den største bekymring. Ifølge CNBC har Google foreslået en aftale med Xcel Energy, der skal tilføje mere vind, sol og batterikapacitet, end datacentret ventes at bruge.</p>
+<blockquote class="twitter-tweet" data-theme="dark" data-dnt="true" data-conversation="none" data-lang="da"><p class="xp-fra"><b>CNBC</b> <span>@CNBC på X</span></p><p class="xp-dato">Opslag fra <time datetime="2026-10-20">20.10.2026</time> · på engelsk</p><a class="xp-link" href="https://twitter.com/CNBC/status/2112326206460756267" rel="noopener" target="_blank">Se opslaget på X<span class="sr"> (åbner i nyt vindue)</span></a></blockquote></li>
+</ul>
+</div>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</section>
+<!-- ===== /MODUL: X-opslag ===== -->
+
 <section class="fonden" id="fonden" aria-labelledby="h-fonden">
 <div class="wrap">
 <p class="eyebrow">Fonden</p>
@@ -353,6 +407,8 @@ s.classList.add('cq-vt--armed');new IntersectionObserver(function(e,o){e.forEach
 <div class="wrap">
 <div class="kaede-head"><p class="eyebrow">Selskaberne</p><h2 id="h-kaede">Fra jorden til datacentret</h2>
 <p>Følg strømmen fra råstofferne i jorden til serverne i datacentret. Ved hvert led ser du, hvilke af fondens selskaber der hører til, og hvor meget de vejer.</p><p class="cap">Andel af fonden pr. 16.10.2026 (afdelingen PMINDI). Hvert selskab står ét sted i kæden. Nogle af selskaberne hører i fondens opgørelse til et andet tema end energi, så leddene giver tilsammen ikke energiandelen. Det kan ikke opgøres, hvor stor en del af selskabernes omsætning der kommer fra AI.</p></div>
+<figure class="vid" id="video-elnet"><div class="vid-ramme" data-yt="bcekVV9MKTc"><button type="button" class="vid-play" aria-label="Afspil videoen How Electricity Gets To You fra Manitoba Hydro, 3 minutter, engelsk tale. Videoen hentes fra YouTube."><img src="img/video-manitoba-hydro-960x540.webp" alt="" width="960" height="540" loading="lazy" decoding="async"><span class="vid-ikon" aria-hidden="true"></span><span class="vid-tid" aria-hidden="true">3:16</span></button></div>
+<figcaption><b>How Electricity Gets To You</b> · Manitoba Hydro, canadisk elselskab · 3:16 · engelsk tale. Sådan kommer strømmen fra kraftværket gennem elnettet og frem til forbrugeren. Eksemplerne er canadiske (vandkraft). Videoen indlæses fra YouTube, først når du trykker. <a href="https://www.youtube.com/watch?v=bcekVV9MKTc" rel="noopener" target="_blank">Se på YouTube<span class="sr"> (åbner i nyt vindue)</span></a></figcaption></figure>
 <nav class="spor" aria-label="Kædens led i rækkefølge"><ol><li><a href="#led-raastoffer"><img src="assets/ikoner/bs-ikon-raastoffer.svg" alt="" width="28" height="28"><span>Råstoffer</span></a></li><li><a href="#led-braendsel"><img src="assets/ikoner/bs-ikon-braendsel.svg" alt="" width="28" height="28"><span>Brændsel</span></a></li><li><a href="#led-produktion"><img src="assets/ikoner/bs-ikon-produktion.svg" alt="" width="28" height="28"><span>Produktion</span></a></li><li><a href="#led-elnet"><img src="assets/ikoner/bs-ikon-elnet.svg" alt="" width="28" height="28"><span>Elnet</span></a></li><li><a href="#led-lagring"><img src="assets/ikoner/bs-ikon-lagring.svg" alt="" width="28" height="28"><span>Lagring</span></a></li><li><a href="#led-forsyning"><img src="assets/ikoner/bs-ikon-forsyning.svg" alt="" width="28" height="28"><span>Forsyning</span></a></li><li><a href="#led-datacenter"><img src="assets/ikoner/bs-ikon-datacenter.svg" alt="" width="28" height="28"><span>Datacenter</span></a></li></ol></nav>
 <nav id="cq-sidepunkter"></nav>
 <div class="leds">
@@ -574,6 +630,10 @@ if(!reduce&&'IntersectionObserver' in window){new IntersectionObserver(function(
 /* sidepunkter (Critiquito) */
 if(window.CqSidepunkter)CqSidepunkter.init({offset:64,label:'Kædens led',items:[].map.call(document.querySelectorAll('.led[data-cq-step]'),function(e){return {id:e.id,label:e.getAttribute('data-cq-step')}})});[].forEach.call(document.querySelectorAll('#cq-sidepunkter .cq-sp__lbl'),function(s){var k=document.createElement('span');k.className='cq-sp__kort';k.setAttribute('aria-hidden','true');k.textContent=s.textContent.split(' ')[0];s.parentNode.insertBefore(k,s.nextSibling)});
 })();
+</script>
+<script>
+/* Video-facade: YouTube (nocookie) indlæses først ved klik */
+document.querySelectorAll('.vid-ramme[data-yt]').forEach(function(r){var b=r.querySelector('.vid-play');b.addEventListener('click',function(){var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+r.dataset.yt+'?autoplay=1&rel=0&playsinline=1';f.title='Video: How Electricity Gets To You (Manitoba Hydro)';f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.setAttribute('allowfullscreen','');f.referrerPolicy='strict-origin-when-cross-origin';r.replaceChild(f,b);f.focus();});});
 </script>
 </body>
 </html>
