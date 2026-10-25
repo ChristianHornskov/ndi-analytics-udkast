@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="../fintech/img/ndi-logo.webp" type="image/webp">
 <title>Fintech | NewDeal Invest (udkast)</title>
-<meta name="description" content="Temaet Fintech i NewDeal Invests fond: 18 selskaber, 4,41 % af fonden.">
+<meta name="description" content="Temaet Fintech i NewDeal Invests fond: 18 selskaber, 4,41 % af fonden, og hvem der betaler, når noget ser gratis ud.">
 <link rel="preload" href="../fintech/fonts/font-3.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../fintech/fonts/font-1.woff2" as="font" type="font/woff2" crossorigin>
 <style>
@@ -38,47 +38,6 @@ h2{font-size:clamp(28px,7vw,42px);max-width:22ch}
 .lead{font-size:18px;color:var(--mute);max-width:58ch}
 .die{position:relative;background:linear-gradient(rgba(49,58,74,.28) 1px,transparent 1px) 0 0/20px 20px,linear-gradient(90deg,rgba(49,58,74,.28) 1px,transparent 1px) 0 0/20px 20px,var(--card);border:1px solid var(--line);border-radius:12px}
 .die::after{content:"";position:absolute;inset:7px;pointer-events:none;background:var(--x) left top/10px 10px no-repeat,var(--x) right top/10px 10px no-repeat,var(--x) left bottom/10px 10px no-repeat,var(--x) right bottom/10px 10px no-repeat}
-/* video-facade */
-.vid{margin:.8rem 0 .9rem;max-width:560px}
-.vid-ramme{position:relative;aspect-ratio:16/9;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:#000}
-.vid-ramme iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-.vid-play{position:absolute;inset:0;width:100%;height:100%;padding:0;border:0;background:#000;display:block}
-.vid-play img{width:100%;height:100%;object-fit:cover;display:block;opacity:.8;filter:grayscale(.9) contrast(1.05)}
-.vid-play::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,10,15,0) 40%,rgba(5,10,15,.55));z-index:1}
-.vid-ikon{position:absolute;z-index:2;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:var(--ink);box-shadow:0 4px 24px rgba(0,0,0,.5)}
-.vid-ikon::after{content:"";position:absolute;left:26px;top:20px;border-style:solid;border-width:12px 0 12px 19px;border-color:transparent transparent transparent var(--bg)}
-.vid-play:hover .vid-ikon{background:#fff}
-.vid-play:focus-visible{outline:3px solid var(--fokus);outline-offset:-3px}
-.vid-tid{position:absolute;z-index:2;right:8px;bottom:8px;background:rgba(0,0,0,.8);color:#fff;font-size:13px;padding:2px 8px;border-radius:4px}
-.vid figcaption{font-size:13px;color:var(--mute);margin-top:8px;line-height:1.5}
-.vid figcaption b{color:var(--ink);font-weight:600;display:block}
-.vid figcaption a{display:inline-flex;align-items:center;min-height:44px;color:var(--a);font-weight:600}
-/* X */
-.xs{padding:40px 0;border-top:1px solid var(--line)}
-.xs-liste{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:12px}
-.xp{padding:4px 14px 10px;min-width:0;overflow:hidden}
-.xp-delt{font-size:13px;color:var(--a);font-weight:600;padding-top:10px}
-.xp-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
-.xp-trin a{display:inline-flex;align-items:center;min-height:44px;color:var(--a);font-size:13px;font-weight:600;letter-spacing:.02em;text-underline-offset:3px}
-.xp-trin a::before{content:"";width:8px;height:8px;border-radius:2px;background:var(--a);margin-right:8px}
-.xp-dato{font-size:13px;color:var(--mute);font-variant-numeric:tabular-nums}
-.xp-fra{font-size:14px;color:var(--mute);margin-top:-6px}
-.xp-fra b{color:var(--ink);font-weight:600}
-.xp-k{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--a);font-weight:600;margin-right:4px}
-.xp-forkl{font-size:15px;line-height:1.5;margin-top:6px}
-.xp-ord{font-size:14px;color:var(--mute);margin-top:6px}
-.xp-knapper{display:flex;flex-wrap:wrap;align-items:center;gap:0 18px;margin-top:6px}
-.xp-vis{min-height:44px;padding:0 16px;border-radius:10px;border:1px solid var(--a);background:var(--surf);color:var(--ink);font:inherit;font-weight:600;cursor:pointer}
-.xp-vis:hover{background:#15242e}
-.xp-link{display:inline-flex;align-items:center;min-height:44px;color:var(--a);font-weight:600;text-underline-offset:3px}
-.xp-embed:empty{display:none}.xp-embed:focus{outline:none}.xp-embed:focus-visible{outline:3px solid var(--fokus);outline-offset:3px}
-.xp blockquote.twitter-tweet{margin:10px 0 4px;font-size:14px;color:var(--mute)}
-.xp .twitter-tweet-rendered,.xp iframe{max-width:100%!important;min-width:0!important}
-.xp .twitter-tweet-rendered{margin:10px 0 4px!important}
-.js .xs:not(.alle) .ekstra{display:none}
-.x-mere{margin-top:14px;min-height:44px;padding:0 18px;border-radius:10px;border:1px solid var(--a);background:transparent;color:var(--ink);font:inherit;font-weight:600;cursor:pointer}
-.x-mere:hover{background:var(--surf)}
-.xs-note{margin-top:18px;font-size:14px;color:var(--mute);max-width:70ch}
 /* 7 kilder */
 .kilder-s{padding:10px 0 20px;border-top:1px solid var(--line)}
 .kilder summary{min-height:56px;display:flex;align-items:center;justify-content:space-between;gap:12px;cursor:pointer;list-style:none;font-weight:600}
@@ -92,118 +51,195 @@ h2{font-size:clamp(28px,7vw,42px);max-width:22ch}
 .kid{display:inline-flex!important;align-items:center;min-height:44px;margin:6px 0 4px!important;padding:0!important;font-weight:600}
 footer{border-top:1px solid var(--line);padding:22px 0 64px;font-size:13px;color:var(--mute)}
 footer p{max-width:80ch}footer p+p{margin-top:8px}
-html{scroll-padding-top:72px}
-.s{padding:34px 0;position:relative}
-.t-s+.t-s{border-top:1px solid var(--line)}
-.t h2{margin:0 0 18px}
-.t p,.t ul,.t ol{max-width:68ch;font-size:17px;line-height:1.65}
-.t p+p,.t ul+p,.t p+ul{margin-top:1em}
-.t p strong{font-weight:600}
-.t-h3{font-size:20px;letter-spacing:-.02em;margin:28px 0 8px;max-width:40ch}
-.t-intro{padding:40px 0 10px}
-.t-intro h1{font-size:clamp(40px,11vw,72px);letter-spacing:-.05em;line-height:1.03}
-.kilder-s .kilder ul{margin-top:4px}
-.videre-g{display:grid;gap:18px;margin-top:16px}
+html{scroll-padding-top:76px}
+.side{max-width:1120px;margin:0 auto;padding:0 18px}
+.intro{padding:44px 0 8px;max-width:680px}
+.intro h1{font-size:clamp(44px,12vw,76px);letter-spacing:-.05em;line-height:1}
+.intro .lead{margin-top:18px;color:var(--ink);font-size:19px;line-height:1.55;max-width:none}
+.byline{margin-top:14px;font-size:14px;color:var(--mute)}
+.gitter{display:grid;gap:0;margin-top:28px}
+.tekst{min-width:0;max-width:680px}
+.tekst p,.tekst li{font-size:17px;line-height:1.68}
+.tekst p+p,.tekst ul+p,.tekst p+ul,.tekst p+.tbl,.tekst .tbl+p{margin-top:1em}
+.tekst p strong{font-weight:600}
+.t-s{padding:40px 0;border-top:1px solid var(--line)}
+.t-s h2{font-size:clamp(26px,6.4vw,34px);max-width:none;text-wrap:balance;margin:0 0 18px}
+.t-s h3{font-size:20px;letter-spacing:-.02em;margin:34px 0 10px}
+.fakta{border:1px solid var(--line);border-radius:12px;background:var(--card);padding:18px 18px 14px;margin:0 0 28px}
+.fakta-h{font-size:13px!important;letter-spacing:.12em!important;text-transform:uppercase;font-family:'DM Sans',sans-serif!important;font-weight:600!important;color:var(--mute);margin:0 0 12px}
+.fakta dl{margin:0;display:grid;grid-template-columns:1fr 1fr;gap:14px 18px}
+.fakta dl div{border-top:1px solid var(--line);padding-top:10px}
+.fakta .bred{grid-column:1/-1}
+.fakta dt{font-size:13px;color:var(--mute)}
+.fakta dd{margin:2px 0 0;font-size:15px;line-height:1.5}
+.fakta dd.stor{font-family:Manrope,sans-serif;font-size:40px;letter-spacing:-.04em;line-height:1.1;color:var(--a)}
+.grp{list-style:none;margin:4px 0 0;padding:0}.grp li{display:flex;justify-content:space-between;gap:12px;padding:3px 0;font-variant-numeric:tabular-nums}.grp li span:last-child{color:var(--mute)}
+.fakta-n{font-size:12px;color:var(--mute);margin-top:12px}
+.toc{margin:0 0 28px}
+.toc h2{font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-family:'DM Sans',sans-serif;font-weight:600;color:var(--mute);margin:0 0 6px}
+.toc ul{margin:0;padding:0;list-style:none;font-size:15px;line-height:1.35}
+.toc li{padding:0}
+.toc a{display:inline-block;padding:8px 0;text-decoration:none;color:var(--ink)}
+.toc a:hover{text-decoration:underline;text-underline-offset:3px}
+.tbl{overflow-x:auto;margin-top:18px}
+.selsk-t{width:100%;border-collapse:collapse;font-size:15px;line-height:1.5}
+.selsk-t th,.selsk-t td{text-align:left;vertical-align:top;padding:12px 0;border-top:1px solid var(--line)}
+.selsk-t tbody th[scope=row]{width:9.5em;padding-right:16px;font-weight:600}
+.selsk-t .andel{display:block;font-weight:400;color:var(--mute);font-variant-numeric:tabular-nums;font-size:14px}
+.selsk-t td{color:var(--ink)}
+.selsk-t tr.seg th{padding:26px 0 10px;border-top:0;font-family:Manrope,sans-serif;font-size:19px;font-weight:600;letter-spacing:-.01em}
+.selsk-t tr.seg th span{font-family:'DM Sans',sans-serif;font-size:14px;font-weight:400;color:var(--mute);margin-left:6px}
+.selsk-t tr.seg p{font-family:'DM Sans',sans-serif;font-weight:400;font-size:15px;color:var(--mute);margin:4px 0 0;letter-spacing:0}
+.selsk-t tbody:first-of-type tr.seg th{padding-top:6px}
+.tema{display:block;font-size:14px;color:var(--mute);margin-top:2px}
+.tema a{color:var(--ink);text-underline-offset:3px}
+.risk-l{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:16px}
+.risk-l li{padding-left:16px;border-left:2px solid var(--line)}
+.risk-l b{font-weight:600}
+.k{display:block;font-size:13px;margin-top:4px;color:var(--mute)}
+.k a{color:var(--mute);text-underline-offset:3px;display:inline-block;padding:10px 0;margin:-10px 0}
+.note{font-size:14px!important;color:var(--mute);margin-top:18px!important}
+.faq{border-top:1px solid var(--line)}
+.faq:last-child{border-bottom:1px solid var(--line)}
+.faq summary{min-height:56px;padding:14px 32px 14px 0;cursor:pointer;list-style:none;font-weight:600;font-size:17px;line-height:1.4;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"＋";position:absolute;right:0;top:14px;color:var(--a)}
+.faq[open] summary::after{content:"−"}
+.faq p{padding:0 0 18px;max-width:64ch}
+.laes{white-space:nowrap;color:var(--mute);text-underline-offset:3px}
+.kilder-s{border-top:1px solid var(--line);padding:28px 0 10px}
+.kilder-s h2{font-size:22px;margin:0 0 12px}
+.kilder-s ul{margin:0;padding-left:18px;font-size:14px;color:var(--mute);display:grid;gap:10px}
+.kilder-s li{font-size:14px!important;line-height:1.55!important}
+.kilder-s a{color:var(--ink);text-underline-offset:3px;overflow-wrap:anywhere}
+.kid{display:inline-flex;align-items:center;min-height:44px;margin-top:14px;font-weight:600;color:var(--ink);text-underline-offset:3px}
+.videre{border-top:1px solid var(--line);padding:32px 0 44px}
+.videre h2{font-size:22px;margin:0 0 4px}
+.videre p{color:var(--mute);font-size:15px}
 .naboer{list-style:none;margin:14px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
 .naboer a{display:flex;align-items:center;min-height:52px;padding:8px 30px 8px 12px;border:1px solid var(--line);border-radius:10px;background:var(--card);text-decoration:none;font-weight:600;font-size:14px;line-height:1.3;position:relative}
 .naboer a::after{content:"→";position:absolute;right:10px;top:50%;transform:translateY(-50%);color:var(--a)}
 .naboer a:hover{border-color:var(--a)}
-@media (min-width:900px){.s{padding:60px 0}.naboer{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media (min-width:860px){.wrap{padding:0 28px}}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+@media (min-width:600px){.naboer{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (min-width:860px){.side{padding:0 28px}.wrap{padding:0 28px}}
+@media (min-width:1080px){
+ .gitter{grid-template-columns:minmax(0,680px) 300px;gap:0 64px;align-items:start}
+ .rail{grid-column:2;grid-row:1;align-self:stretch;padding-top:40px}
+ .toc{position:sticky;top:84px}
+ .tekst{grid-column:1;grid-row:1}
+ .toc ul{font-size:14px}.toc a{padding:6px 0}
+}
+@media (max-width:480px){.selsk-t tbody th[scope=row]{width:7.2em;padding-right:12px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
 <a class="skip" href="#indhold">Spring til indholdet</a>
 <header class="top"><div class="wrap"><img src="../fintech/img/ndi-logo.webp" alt="NewDeal Invest" width="130" height="48"><span>Tema · Fintech</span></div><div class="prog" aria-hidden="true"></div></header>
 <main id="indhold" tabindex="-1">
-
-<section class="t-intro" aria-labelledby="h1"><div class="wrap t"><h1 id="h1">Fintech</h1></div></section>
-
-<section class="s t-s" id="fondens-definition-og-en-enkel-test" aria-labelledby="fondens-definition-og-en-enkel-test-h"><div class="wrap t">
-<h2 id="fondens-definition-og-en-enkel-test-h">Fondens definition og en enkel test</h2>
+<div class="side">
+<div class="intro">
+<h1 id="h1">Fintech</h1>
+<p class="lead">Fintech er virksomheder, hvor softwaren selv træffer de beslutninger om betaling, lån, opsparing og forsikring, som før krævede en filial og en sagsbehandler. Her kan du læse, hvem der betaler, når noget ser gratis ud, hvordan reglerne er ændret siden 2020, og hvad hvert af fondens 18 fintechselskaber løser.</p>
+<p class="byline">NewDeal Invest · Andele pr. 16.10.2026 · Læsetid ca. 12 min.</p>
+</div>
+<div class="gitter">
+<div class="rail">
+<aside class="fakta" aria-labelledby="fakta-h">
+<h2 id="fakta-h" class="fakta-h">Temaet i fonden</h2>
+<dl>
+<div><dt>Andel af fonden</dt><dd class="stor">4,41 %</dd></div>
+<div><dt>Selskaber</dt><dd class="stor">18</dd></div>
+<div class="bred"><dt>Fem grupper</dt><dd><ul class="grp"><li><span>Banker i en app</span><span>1,24 %</span></li><li><span>Betalinger</span><span>1,20 %</span></li><li><span>Lån og kreditteknologi</span><span>0,74 %</span></li><li><span>Forsikring</span><span>0,72 %</span></li><li><span>Handelsplatforme</span><span>0,51 %</span></li></ul></dd></div>
+<div class="bred"><dt>Største selskab i temaet</dt><dd>SoFi, 0,66 %</dd></div>
+<div class="bred"><dt>Også fintech under andre temaer</dt><dd>6 selskaber, 2,81 %</dd></div>
+</dl>
+<p class="fakta-n">Afdelingen PMINDI pr. 16.10.2026, fondens data.</p>
+</aside>
+<nav class="toc" aria-labelledby="toc-h"><h2 id="toc-h">På siden</h2><ul><li><a href="#fondens-definition-og-en-enkel-t">Fondens definition og en enkel test</a></li><li><a href="#hvem-betaler-nar-noget-ser-grati">Hvem betaler, når noget ser gratis ud</a></li><li><a href="#reglerne-bag-er-kommet-over-seks">Reglerne bag er kommet over seks år</a></li><li><a href="#den-digitale-dollar-er-en-rentef">1. Den digitale dollar er en renteforretning</a></li><li><a href="#chime-lever-af-en-undtagelse-for">2. Chime lever af en undtagelse for små banker, SoFi blev selv bank</a></li><li><a href="#gratis-straksbetaling-skal-betal">3. Gratis straksbetaling skal betales af nogen</a></li><li><a href="#markedspladsen-kender-kunden-bed">4. Markedspladsen kender kunden bedre end banken</a></li><li><a href="#nar-der-star-0-rente-er-det-buti">5. Når der står 0 % rente, er det butikken, der betaler</a></li><li><a href="#en-maskine-godkender-lanet-men-l">6. En maskine godkender lånet, men loven kræver stadig en begrundelse</a></li><li><a href="#selskaberne">Fondens fintechselskaber</a></li><li><a href="#risici">Det skal man vide om temaet</a></li><li><a href="#spoergsmaal">Spørgsmål, vi ofte får</a></li><li><a href="#kilder">Kilder</a></li></ul></nav>
+</div>
+<div class="tekst">
+<section class="t-s" id="fondens-definition-og-en-enkel-t" aria-labelledby="fondens-definition-og-en-enkel-t-h">
+<h2 id="fondens-definition-og-en-enkel-t-h">Fondens definition og en enkel test</h2>
 <p>I et ugebrev fra 28.09.2026 beskriver NewDeal Invest, hvad fonden forstår ved en teknologivirksomhed: "En teknologivirksomhed investerer efter vores opfattelse så meget i nye teknologier og fremtidige forretningsmodeller, at investeringernes størrelse kan påvirke regnskabet meget betydeligt i nutiden."</p>
 <p>Fintech er den slags virksomheder inden for penge. Det gælder betaling, lån, opsparing og forsikring, hvor softwaren selv træffer de beslutninger, som før krævede en filial og en sagsbehandler. Investeringen i den software kan få regnskabet til at se svagt ud i dag, selv om forretningen bliver bygget. Som NewDeal Invest skrev i ugebrevet 17.08.2026: "Jo mere de investerer i fremtiden, desto dårligere ser bundlinjen ud lige nu."</p>
 <p>Testen er enkel. Fjern appen. Står der en almindelig bank tilbage med de samme produkter og den samme kreditvurdering, var det en bank med en app. Ligger kreditvurderingen, betalingen eller prisen på forsikringen i selve koden, er det fintech.</p>
 <p>Derfor dukker fintech sjældent op der, hvor sektorlisterne leder. SoFi står under finanssektoren. Sea står under e-handel, men driver også lån og betalinger gennem Monee.</p>
 <p>Temaet Fintech omfatter 18 af fondens selskaber, i alt 4,41 % af fonden (afdelingen PMINDI pr. 16.10.2026, fondens data).</p>
-</div></section>
-
-<section class="s t-s" id="hvem-betaler-nar-noget-ser-gratis-ud" aria-labelledby="hvem-betaler-nar-noget-ser-gratis-ud-h"><div class="wrap t">
-<h2 id="hvem-betaler-nar-noget-ser-gratis-ud-h">Hvem betaler, når noget ser gratis ud</h2>
+</section>
+<section class="t-s" id="hvem-betaler-nar-noget-ser-grati" aria-labelledby="hvem-betaler-nar-noget-ser-grati-h">
+<h2 id="hvem-betaler-nar-noget-ser-grati-h">Hvem betaler, når noget ser gratis ud</h2>
 <p>En digital dollar uden rente, en bankkonto via en app, en gratis straksbetaling og et lån til 0 % ser alle billige ud for kunden.</p>
-</div></section>
-
-<section class="s t-s" id="reglerne-bag-er-kommet-over-seks-ar" aria-labelledby="reglerne-bag-er-kommet-over-seks-ar-h"><div class="wrap t">
-<h2 id="reglerne-bag-er-kommet-over-seks-ar-h">Reglerne bag er kommet over seks år</h2>
+</section>
+<section class="t-s" id="reglerne-bag-er-kommet-over-seks" aria-labelledby="reglerne-bag-er-kommet-over-seks-h">
+<h2 id="reglerne-bag-er-kommet-over-seks-h">Reglerne bag er kommet over seks år</h2>
 <p>Ændringerne er ikke sket på én gang. Brasilien lancerede betalingssystemet Pix i november 2020. EU forbød i 2024 rente på stablecoins. USA fik sin første lov om stablecoins i 2025, og samme år blev straksoverførsler et krav i euroområdet. Flere af reglerne får først fuld virkning i 2027.</p>
 <p><strong>Digitale dollars har fået en lov i USA.</strong> GENIUS Act blev underskrevet 18.07.2025. Loven kræver, at stablecoins er fuldt dækket af dollars eller korte amerikanske statspapirer. Loven træder i kraft 18.01.2027.</p>
 <p><strong>EU har lukket for rente på digitale euro og dollars.</strong> Siden 30.06.2024 har MiCA forbudt både udstedere og handelsplatforme at give rente på stablecoins. Det gælder også, når renten kaldes bonus eller rabat.</p>
 <p><strong>Straksbetaling er blevet et krav.</strong> Banker i euroområdet skal siden 09.10.2025 kunne sende overførsler i euro, der er fremme inden for ti sekunder, og de må ikke tage mere for dem end for en almindelig overførsel. I lande uden euro, også Danmark, gælder kravet om ens pris for overførsler i euro fra 09.01.2027. Pix nåede næsten 80 mia. betalinger i 2025, og Indiens UPI havde 24,1 mia. betalinger alene i september 2026.</p>
-</div></section>
-
-<section class="s t-s" id="1-den-digitale-dollar-er-en-renteforretn" aria-labelledby="1-den-digitale-dollar-er-en-renteforretn-h"><div class="wrap t">
-<h2 id="1-den-digitale-dollar-er-en-renteforretn-h">1. Den digitale dollar er en renteforretning</h2>
+</section>
+<section class="t-s" id="den-digitale-dollar-er-en-rentef" aria-labelledby="den-digitale-dollar-er-en-rentef-h">
+<h2 id="den-digitale-dollar-er-en-rentef-h">1. Den digitale dollar er en renteforretning</h2>
 <p>Circle udsteder den digitale dollar USDC, men det er ikke teknologien, der tjener pengene. I 2025 kom 2.636,8 mio. af Circles 2.746,6 mio. USD i omsætning fra rente på reserverne, ca. 96 %. Ca. 63 % af renteindtægten, 1.661,5 mio. USD, gik videre som distributionsomkostninger. Det meste af stigningen i distributionsomkostningerne, 438,4 mio. USD, var betalinger til Coinbase, knyttet til renteindtægten fra reserverne.</p>
 <p>Coinbase havde selv 1.348,8 mio. USD i stablecoinindtægt i 2025 og brugte 441,3 mio. USD på "USDC rewards" til sine kunder. GENIUS Act forbyder udstedere af stablecoins at betale rente eller afkast til den, der har stablecoinen, alene for at have, bruge eller beholde den. Loven nævner ikke handelspladser. Den 21.10.2026 vedtog den amerikanske bankmyndighed OCC den første endelige regel under loven. Ifølge OCC kan forbuddet også ramme betalinger, som en anden foretager på udstederens vegne, og OCC vurderer hver ordning ud fra de konkrete forhold. Reglen giver ingen undtagelse for bonusordninger, heller ikke for dem, der fandtes før loven. For en handelsplads som Coinbase er det derfor uafklaret, om dens bonusser til kunderne falder ind under forbuddet. Coinbase skriver selv, at selskabet direkte og indirekte kan blive omfattet af lovens krav. I EU er døren lukket for begge led.</p>
 <p>USDC er i øvrigt nummer to. Kapitalforvalteren ARK, der selv ejer aktier i Circle og Coinbase og oplyser en mulig økonomisk interesse i Tether, opgjorde i februar 2026 Tethers USDT til 187 mia. USD og ca. 60 % af markedet, mod 75 mia. USD for USDC.</p>
 <p>Hvor følsom forretningen er, har Circle selv regnet ud: En rente 1 procentpoint lavere ville give 756 mio. USD mindre i renteindtægt og 369 mio. USD mindre i udgifter til distribution og transaktioner. Næsten halvdelen af et rentefald bliver altså modsvaret af lavere udgifter til distribution og transaktioner.</p>
-</div></section>
-
-<section class="s t-s" id="2-chime-lever-af-en-undtagelse-for-sma-b" aria-labelledby="2-chime-lever-af-en-undtagelse-for-sma-b-h"><div class="wrap t">
-<h2 id="2-chime-lever-af-en-undtagelse-for-sma-b-h">2. Chime lever af en undtagelse for små banker, SoFi blev selv bank</h2>
+</section>
+<section class="t-s" id="chime-lever-af-en-undtagelse-for" aria-labelledby="chime-lever-af-en-undtagelse-for-h">
+<h2 id="chime-lever-af-en-undtagelse-for-h">2. Chime lever af en undtagelse for små banker, SoFi blev selv bank</h2>
 <p>Chime er ikke en bank. Kontoen ligger hos The Bancorp Bank og Stride Bank, og det er ikke et teknisk valg, men selve indtjeningen. I 2025 kom 1.500,6 mio. af Chimes 2.186,8 mio. USD i omsætning fra betalinger, ca. 69 %. Det er hovedsageligt det gebyr, butikken betaler kortudstederen, hver gang et Chime-kort bruges.</p>
 <p>I USA må store banker højst tage 21 cent plus 0,05 % af beløbet for en betaling med debetkort, plus op til 1 cent til svindelforebyggelse. Banker med under 10 mia. USD i aktiver er undtaget. Chime skriver selv i sin årsrapport, at selskabet afhænger af, at bankerne bag kontiene bliver ved med at være undtaget.</p>
 <p>Tag en kunde, der betaler i et supermarked med sit Chime-kort. Chime tjener ikke på et gebyr fra kunden. Butikken betaler et gebyr gennem kortnetværket, som regel en procentdel af beløbet plus et fast beløb. Gebyret går til banken bag kortet, men det er Chime, der står for betalingstjenesten og bogfører hele gebyret som sin omsætning. Bankerne får til gengæld betaling for at udstede kortene og give adgang til kortnetværket, mest som en procentdel af det, kunderne bruger på kortet. I 2024 gav en betaling med debetkort fra en bank omfattet af loftet i gennemsnit 0,23 USD, ca. 0,47 % af beløbet. Uden for loftet var gennemsnittet 0,51 USD, ca. 1,21 %. Bankens størrelse er altså en del af Chimes indtjening.</p>
 <p>SoFi valgte den modsatte vej og fik sin egen banklicens i 2022. Ved udgangen af 2025 havde SoFi Bank 37,5 mia. USD i indlån. Ifølge SoFi er det billigere at låne indlånene ud end at låne penge af andre banker til formålet. Chime tjener på, at kortet bliver brugt, mens SoFi tjener på at låne ud.</p>
-</div></section>
-
-<section class="s t-s" id="3-gratis-straksbetaling-skal-betales-af-" aria-labelledby="3-gratis-straksbetaling-skal-betales-af--h"><div class="wrap t">
-<h2 id="3-gratis-straksbetaling-skal-betales-af--h">3. Gratis straksbetaling skal betales af nogen</h2>
+</section>
+<section class="t-s" id="gratis-straksbetaling-skal-betal" aria-labelledby="gratis-straksbetaling-skal-betal-h">
+<h2 id="gratis-straksbetaling-skal-betal-h">3. Gratis straksbetaling skal betales af nogen</h2>
 <p>I Brasilien må bankerne ikke tage gebyr af privatpersoner, der sender en Pix eller modtager en overførsel. Af virksomheder må bankerne derimod gerne tage gebyr, både når de sender, og når de modtager. Pix bruges af 148 mio. privatpersoner, ca. 86 % af de voksne, og på rekorddagen 05.12.2025 blev der gennemført 313.339.328 betalinger.</p>
 <p>Når betalingen er gratis, må pengene tjenes et andet sted. Nu lader kunderne betale en Pix med kreditrammen på kortet. I 2. kvartal 2026 kom 3.604,8 mio. af Nus 5.875,7 mio. USD i omsætning, opgjort i selskabets egen ledelsesopgørelse, fra renter på kort og lån, ca. 61 %. Yderligere 1.454,4 mio. USD, ca. 25 %, kom fra renter af selskabets overskydende likviditet og andre rentebærende aktiver end lån. Gebyrer gav kun 816,4 mio. USD, ca. 14 %. Appen ligner software, men ligesom hos Circle er det renten, der bærer.</p>
 <p>Indien viser, at også et nationalt betalingssystem skal betales af nogen. Fra 15.10.2026 betaler butikker 0,4 % for større UPI-betalinger. Regeringen begrunder det med drift, sikkerhed og innovation. De små betalinger, som udgør over 95 % af antallet til butikker, er stadig gratis. DLocal arbejder i netop det felt og hjælper internationale butikker med at tage imod betalinger i lande med lokale systemer.</p>
-</div></section>
-
-<section class="s t-s" id="4-markedspladsen-kender-kunden-bedre-end" aria-labelledby="4-markedspladsen-kender-kunden-bedre-end-h"><div class="wrap t">
-<h2 id="4-markedspladsen-kender-kunden-bedre-end-h">4. Markedspladsen kender kunden bedre end banken</h2>
+</section>
+<section class="t-s" id="markedspladsen-kender-kunden-bed" aria-labelledby="markedspladsen-kender-kunden-bed-h">
+<h2 id="markedspladsen-kender-kunden-bed-h">4. Markedspladsen kender kunden bedre end banken</h2>
 <p>En bank, der ikke kender kunden, kan ikke vurdere et lån. Verdensbanken opgør, at 1,3 mia. voksne i verden stadig ikke har en konto, men at omkring 900 mio. af dem har en mobiltelefon. En markedsplads ser derimod, hvordan kunden handler og betaler, og kan tilbyde lån og opsparing i den samme app.</p>
 <p>MercadoLibre beskriver Mercado Pago som en fintechplatform med lån, kreditkort, opsparing og betalinger, også til brugere, der aldrig handler på markedspladsen. Sea skrev 20.10.2026 om sin finansdel Monee: "We believe Monee is approaching the point where it can stand on its own two feet". Kaspi.kz har samlet markedsplads, betaling og lån i én app i Kasakhstan og har ca. 27,5 mio. brugere i alt, heraf 15,7 mio. i Kasakhstan og 11,8 mio. i Tyrkiet. I 2025 kom den tyrkiske e-handelsplatform Hepsiburada med i koncernen.</p>
-</div></section>
-
-<section class="s t-s" id="5-nar-der-star-0-rente-er-det-butikken-d" aria-labelledby="5-nar-der-star-0-rente-er-det-butikken-d-h"><div class="wrap t">
-<h2 id="5-nar-der-star-0-rente-er-det-butikken-d-h">5. Når der står 0 % rente, er det butikken, der betaler</h2>
+</section>
+<section class="t-s" id="nar-der-star-0-rente-er-det-buti" aria-labelledby="nar-der-star-0-rente-er-det-buti-h">
+<h2 id="nar-der-star-0-rente-er-det-buti-h">5. Når der står 0 % rente, er det butikken, der betaler</h2>
 <p>I Affirms årsrapport står det ligeud: Affirm tjener generelt mere på gebyret fra butikken, når lånet er rentefrit, end når kunden betaler rente. For butikken er det salgsfremme. I regnskabsåret til 30.06.2026 var gebyrerne fra butikkerne 1.149,9 mio. af Affirms 4.261,1 mio. USD i omsætning, ca. 27 %.</p>
 <p>Klarna går et skridt videre. 71 % af omsætningen i 2025 kom fra transaktioner og services, som hovedsageligt betales af butikkerne. Heraf tjente Klarna 190 mio. USD på reklamer, ca. 5 % af omsætningen, hvor butikker betaler for at blive vist til Klarnas brugere.</p>
-</div></section>
-
-<section class="s t-s" id="6-en-maskine-godkender-lanet-men-loven-k" aria-labelledby="6-en-maskine-godkender-lanet-men-loven-k-h"><div class="wrap t">
-<h2 id="6-en-maskine-godkender-lanet-men-loven-k-h">6. En maskine godkender lånet, men loven kræver stadig en begrundelse</h2>
+</section>
+<section class="t-s" id="en-maskine-godkender-lanet-men-l" aria-labelledby="en-maskine-godkender-lanet-men-l-h">
+<h2 id="en-maskine-godkender-lanet-men-l-h">6. En maskine godkender lånet, men loven kræver stadig en begrundelse</h2>
 <p>Upstart lader en AI-model vurdere lån for banker og kreditforeninger. I 2025 blev 91 % af lånene behandlet helt automatisk, uden at en medarbejder hos Upstart skulle ind over, mod ca. 70 %, da Upstart kom på aktiemarkedet i december 2020. I 2. kvartal 2026 formidlede Upstart lån for 4,2 mia. USD, 50 % mere end året før.</p>
 <p>Det svære er afslaget. Amerikansk lov kræver, at en låntager, der får nej, får de konkrete hovedgrunde at vide eller kan bede om dem. Det er ikke nok at skrive, at ansøgeren ikke nåede den nødvendige score i långiverens model. Forbrugermyndigheden CFPB skrev i 2022, at det også gælder modeller, som långiveren ikke selv kan forklare. Den vejledning trak CFPB tilbage 12.05.2025, men selve lovkravet står stadig. I EU regnes AI til kreditvurdering som højrisiko. EU's regler for AI, der vurderer om en person er kreditværdig, gælder fra 02.12.2027. Datoen blev fastsat ved en ændring af AI-forordningen, der trådte i kraft 27.07.2026 (forordning (EU) 2026/1744).</p>
 <p>Pagaya arbejder på den anden side af afslaget. Långivere kan sende afviste ansøgninger videre til Pagaya, hvis modeller vurderer dem igen.</p>
-</div></section>
-
-<section class="s t-s" id="fondens-fintechselskaber-og-hvad-de-lose" aria-labelledby="fondens-fintechselskaber-og-hvad-de-lose-h"><div class="wrap t">
-<h2 id="fondens-fintechselskaber-og-hvad-de-lose-h">Fondens fintechselskaber, og hvad de løser</h2>
-<p>Andelene er af fonden, afdelingen PMINDI pr. 16.10.2026 (fondens data).</p>
-<h3 class="t-h3">Betalinger, 1,20 %</h3>
-<p>Klarna (0,63 %) lader kunden betale med det samme, senere eller over flere måneder. Shift4 (0,39 %) leverer software til butikker og sørger for, at kortbetalingerne går igennem, og gennem Global Blue får turister momsen tilbage. Global-e (0,08 %) løser problemet med told og betaling, når en webbutik har kunder i udlandet, fordi det formelt er Global-e, der står for salget. Affirm (0,06 %) lader kunden dele betalingen op i rater, med eller uden renter, og har sit eget betalingskort, Affirm Card. DLocal (0,04 %) hjælper internationale butikker med at tage imod betalinger fra kunder i vækstmarkeder.</p>
-<h3 class="t-h3">Handelsplatforme, 0,51 %</h3>
-<p>Webull (0,26 %) er en digital investeringsplatform rettet mod yngre private investorer. Robinhood (0,19 %) samler handel med aktier, krypto, optioner og futures i én app. Futu (0,06 %) står bag apps til handel med aktier og til opsparing, Futubull og Moomoo.</p>
-<h3 class="t-h3">Banker i en app, 1,24 %</h3>
-<p>SoFi (0,66 %) lader medlemmerne låne, spare, investere og forsikre sig i én app og ejer sin egen bank. Nu (0,27 %) startede i Brasilien og har nu også kunder i Mexico og Colombia. Chime (0,25 %) tilbyder bankforretninger i en app i USA, mens selve kontiene ligger hos to mindre banker. Kaspi.kz (0,06 %) samler markedsplads, betalinger og bank i én app i Kasakhstan og har siden 2025 haft kontrollen med Hepsiburada i Tyrkiet.</p>
-<h3 class="t-h3">Lån og kreditteknologi, 0,74 %</h3>
-<p>Upstart (0,61 %) giver långivere AI-modeller til forbrugslån uden sikkerhed og til at lægge billån om. Figure (0,10 %) bruger blockchain, en fælles digital bog over hvem der ejer hvad, til lån og værdipapirer, og i 2025 var over 98 % af de lån, der blev ydet gennem Figures platform, lån med sikkerhed i boligens friværdi. Pagaya (0,03 %) giver afviste låneansøgninger en ny vurdering.</p>
-<h3 class="t-h3">Forsikring, 0,72 %</h3>
-<p>Root (0,35 %) sætter prisen på bilforsikring mest efter, hvordan kunden kører, og mindre efter, hvem kunden er. I Californien må data om, hvordan kunden kører, ikke bruges til at sætte prisen. En enhed i bilen må kun måle, hvor langt bilen kører. Lemonade (0,31 %) lader kunden tegne forsikring og anmelde skader i en chat med et computerprogram. Ategrity (0,06 %) forsikrer ejendom og ansvar for små og mellemstore virksomheder i USA, ofte risici, som almindelige forsikringer ikke dækker.</p>
-<h3 class="t-h3">Seks selskaber under andre temaer, 2,81 %</h3>
-<p>Sea (1,26 %) driver e-handel med Shopee, spil med Garena og betalinger og lån med Monee. Grab (0,33 %) samler transport, levering og betalinger i Sydøstasien. MercadoLibre (0,30 %) kombinerer e-handel med betalinger og lån gennem Mercado Pago i Latinamerika. Coinbase (0,51 %) driver en platform til handel med krypto, som i december 2025 blev udvidet med blandt andet aktier. Circle (0,39 %) udsteder den digitale dollar USDC. Oscar Health (0,02 %) tilbyder sygeforsikring. I fondens opdeling hører Sea, Grab og MercadoLibre til Platformsøkonomi, Coinbase og Circle til Krypto og Oscar Health til Sundhed og biotek.</p>
-</div></section>
-
-<section class="kilder-s" id="kilder" aria-labelledby="h-kilder"><div class="wrap">
-<details class="kilder" open>
-<summary><h2 id="h-kilder">Kilder</h2></summary>
+</section>
+<section class="t-s" id="selskaberne" aria-labelledby="selskaberne-h">
+<h2 id="selskaberne-h">Fondens fintechselskaber, og hvad de løser</h2>
+<p>De 18 selskaber falder i fem grupper. Under hver gruppe står, hvad der sker for kunden, og derefter én linje om hvert selskab. Andelene er af fonden, afdelingen PMINDI pr. 16.10.2026 (fondens data).</p>
+<div class="tbl"><table class="selsk-t">
+<caption class="sr">Temaets 18 selskaber fordelt på fem grupper med andel af fonden</caption>
+<thead class="sr"><tr><th scope="col">Selskab og andel af fonden</th><th scope="col">Hvad selskabet løser</th></tr></thead>
+<tbody><tr class="seg"><th colspan="2" scope="colgroup" id="seg0">Betalinger <span>1,20 % · 5 selskaber</span><p>Pengene flyttes fra kunden til butikken, i en fysisk butik eller på nettet.</p></th></tr><tr><th scope="row" headers="seg0">Klarna<span class="andel">0,63 %</span></th><td>Lader kunden betale med det samme, senere eller over flere måneder.</td></tr><tr><th scope="row" headers="seg0">Shift4<span class="andel">0,39 %</span></th><td>Leverer software til butikker og sørger for, at kortbetalingerne går igennem. Gennem Global Blue får turister momsen tilbage.</td></tr><tr><th scope="row" headers="seg0">Global-e<span class="andel">0,08 %</span></th><td>Løser problemet med told og betaling, når en webbutik har kunder i udlandet, fordi det formelt er Global-e, der står for salget.</td></tr><tr><th scope="row" headers="seg0">Affirm<span class="andel">0,06 %</span></th><td>Lader kunden dele betalingen op i rater, med eller uden renter, og har sit eget betalingskort, Affirm Card.</td></tr><tr><th scope="row" headers="seg0">DLocal<span class="andel">0,04 %</span></th><td>Hjælper internationale butikker med at tage imod betalinger fra kunder i vækstmarkeder.</td></tr></tbody><tbody><tr class="seg"><th colspan="2" scope="colgroup" id="seg1">Handelsplatforme <span>0,51 % · 3 selskaber</span><p>Kunden handler aktier og andre værdipapirer i en app.</p></th></tr><tr><th scope="row" headers="seg1">Webull<span class="andel">0,26 %</span></th><td>En digital investeringsplatform rettet mod yngre private investorer.</td></tr><tr><th scope="row" headers="seg1">Robinhood<span class="andel">0,19 %</span></th><td>Samler handel med aktier, krypto, optioner og futures i én app.</td></tr><tr><th scope="row" headers="seg1">Futu<span class="andel">0,06 %</span></th><td>Står bag apps til handel med aktier og til opsparing, Futubull og Moomoo.</td></tr></tbody><tbody><tr class="seg"><th colspan="2" scope="colgroup" id="seg2">Banker i en app <span>1,24 % · 4 selskaber</span><p>Kunden låner, sparer og betaler i én app. Den slags banker kaldes også neobanker, fordi de kun findes digitalt.</p></th></tr><tr><th scope="row" headers="seg2">SoFi<span class="andel">0,66 %</span></th><td>Lader medlemmerne låne, spare, investere og forsikre sig i én app og ejer sin egen bank.</td></tr><tr><th scope="row" headers="seg2">Nu<span class="andel">0,27 %</span></th><td>Startede i Brasilien og har nu også kunder i Mexico og Colombia.</td></tr><tr><th scope="row" headers="seg2">Chime<span class="andel">0,25 %</span></th><td>Tilbyder bankforretninger i en app i USA, mens selve kontiene ligger hos to mindre banker.</td></tr><tr><th scope="row" headers="seg2">Kaspi.kz<span class="andel">0,06 %</span></th><td>Samler markedsplads, betalinger og bank i én app i Kasakhstan og har siden 2025 haft kontrollen med Hepsiburada i Tyrkiet.</td></tr></tbody><tbody><tr class="seg"><th colspan="2" scope="colgroup" id="seg3">Lån og kreditteknologi <span>0,74 % · 3 selskaber</span><p>En låneansøgning bliver vurderet, før pengene udbetales.</p></th></tr><tr><th scope="row" headers="seg3">Upstart<span class="andel">0,61 %</span></th><td>Giver långivere AI-modeller til forbrugslån uden sikkerhed og til at lægge billån om.</td></tr><tr><th scope="row" headers="seg3">Figure<span class="andel">0,10 %</span></th><td>Bruger blockchain, en fælles digital bog over hvem der ejer hvad, til lån og værdipapirer. I 2025 var over 98 % af de lån, der blev ydet gennem Figures platform, lån med sikkerhed i boligens friværdi.</td></tr><tr><th scope="row" headers="seg3">Pagaya<span class="andel">0,03 %</span></th><td>Giver afviste låneansøgninger en ny vurdering.</td></tr></tbody><tbody><tr class="seg"><th colspan="2" scope="colgroup" id="seg4">Forsikring <span>0,72 % · 3 selskaber</span><p>Kunden betaler for en forsikring og får penge, hvis skaden sker.</p></th></tr><tr><th scope="row" headers="seg4">Root<span class="andel">0,35 %</span></th><td>Sætter prisen på bilforsikring mest efter, hvordan kunden kører, og mindre efter, hvem kunden er. I Californien må data om, hvordan kunden kører, ikke bruges til at sætte prisen. En enhed i bilen må kun måle, hvor langt bilen kører.</td></tr><tr><th scope="row" headers="seg4">Lemonade<span class="andel">0,31 %</span></th><td>Lader kunden tegne forsikring og anmelde skader i en chat med et computerprogram.</td></tr><tr><th scope="row" headers="seg4">Ategrity<span class="andel">0,06 %</span></th><td>Forsikrer ejendom og ansvar for små og mellemstore virksomheder i USA, ofte risici, som almindelige forsikringer ikke dækker.</td></tr></tbody>
+</table></div>
+<h3 id="andre-temaer">Seks selskaber under andre temaer, 2,81 %</h3>
+<p>Seks selskaber laver også fintech, men hører i fondens opdeling til et andet tema og tælles ikke med i temaets 4,41 %.</p>
+<div class="tbl"><table class="selsk-t"><caption class="sr">Seks selskaber under andre temaer</caption>
+<thead class="sr"><tr><th scope="col">Selskab og andel af fonden</th><th scope="col">Hvad selskabet laver</th></tr></thead>
+<tbody><tr><th scope="row">Sea<span class="andel">1,26 %</span></th><td>Driver e-handel med Shopee, spil med Garena og betalinger og lån med Monee. <span class="tema">Tema: <a href="../platforme/index.html">Platformsøkonomi</a></span></td></tr><tr><th scope="row">Grab<span class="andel">0,33 %</span></th><td>Samler transport, levering og betalinger i Sydøstasien. <span class="tema">Tema: <a href="../platforme/index.html">Platformsøkonomi</a></span></td></tr><tr><th scope="row">MercadoLibre<span class="andel">0,30 %</span></th><td>Kombinerer e-handel med betalinger og lån gennem Mercado Pago i Latinamerika. <span class="tema">Tema: <a href="../platforme/index.html">Platformsøkonomi</a></span></td></tr><tr><th scope="row">Coinbase<span class="andel">0,51 %</span></th><td>Driver en platform til handel med krypto, som i december 2025 blev udvidet med blandt andet aktier. <span class="tema">Tema: <a href="../krypto/index.html">Krypto</a></span></td></tr><tr><th scope="row">Circle<span class="andel">0,39 %</span></th><td>Udsteder den digitale dollar USDC. <span class="tema">Tema: <a href="../krypto/index.html">Krypto</a></span></td></tr><tr><th scope="row">Oscar Health<span class="andel">0,02 %</span></th><td>Tilbyder sygeforsikring. <span class="tema">Tema: <a href="../sundhed/index.html">Sundhed og biotek</a></span></td></tr></tbody></table></div>
+</section>
+<section class="t-s" id="risici" aria-labelledby="risici-h">
+<h2 id="risici-h">Det skal man vide om temaet</h2>
+<p>Selskaberne i temaet har nogle risici til fælles. Punkterne bygger på selskabernes egne årsrapporter.</p>
+<ul class="risk-l"><li><b>Kredittab.</b> Selskaber, der låner penge ud eller lader kunden betale over tid, kan miste penge, hvis kunderne ikke betaler tilbage.<span class="k">Kilde: <a href="https://www.sec.gov/Archives/edgar/data/2003292/000200329226000007/klar-20251231.htm" rel="noopener" target="_blank">Klarna, årsrapport (10-K) 2025<span class="sr"> (åbner i nyt vindue)</span></a></span></li><li><b>Svindel.</b> Betalinger skal kontrolleres på et splitsekund, og svindel kan koste selskaberne penge.<span class="k">Kilde: <a href="https://www.sec.gov/Archives/edgar/data/1794669/000179466926000010/four-20251231.htm" rel="noopener" target="_blank">Shift4, årsrapport (10-K) 2025<span class="sr"> (åbner i nyt vindue)</span></a></span></li><li><b>Regler og tilsyn.</b> Banker, betalingsselskaber og forsikringsselskaber er under tilsyn, og nye regler kan ændre deres forretning. Et eksempel fra siden: For en handelsplads som Coinbase er det uafklaret, om dens bonusser til kunderne falder ind under GENIUS Acts forbud.<span class="k">Kilder: <a href="https://www.sec.gov/Archives/edgar/data/1818874/000181887426000013/sofi-20251231.htm" rel="noopener" target="_blank">SoFi, 10-K 2025<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1788882/000178888226000014/root-20251231.htm" rel="noopener" target="_blank">Root, 10-K 2025<span class="sr"> (åbner i nyt vindue)</span></a></span></li><li><b>Renten.</b> Flere af forretningerne bæres af renter. Circle har selv regnet ud, at en rente 1 procentpoint lavere ville give 756 mio. USD mindre i renteindtægt og 369 mio. USD mindre i udgifter til distribution og transaktioner.<span class="k">Kilde: afsnit 1 på siden (Circle, 10-K 2025).</span></li><li><b>Kundernes aktivitet.</b> Handelsplatforme tjener mindre, når kunderne handler mindre.<span class="k">Kilde: <a href="https://www.sec.gov/Archives/edgar/data/1783879/000178387926000023/hood-20251231.htm" rel="noopener" target="_blank">Robinhood, årsrapport (10-K) 2025<span class="sr"> (åbner i nyt vindue)</span></a></span></li><li><b>Afhængighed af andre.</b> Nogle selskaber har ikke selv tilladelse til at drive bank. De bruger en anden banks licens, eller de tjener penge på, at långivere bruger deres modeller. Ændrer de andre vilkårene eller stopper aftalen, rammer det selskabets forretning. Chime skriver selv i sin årsrapport, at selskabet afhænger af, at bankerne bag kontiene bliver ved med at være undtaget fra loftet over kortgebyrer.<span class="k">Kilder: <a href="https://www.sec.gov/Archives/edgar/data/1795586/000179558626000013/chym-20251231.htm" rel="noopener" target="_blank">Chime, 10-K 2025<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1647639/000164763926000027/upst-20251231.htm" rel="noopener" target="_blank">Upstart, 10-K 2025<span class="sr"> (åbner i nyt vindue)</span></a></span></li></ul>
+<p class="note">Fonden som helhed har risikoindikator 5 på en skala fra 1 til 7 i sit Dokument med central information (KID).</p>
+</section>
+<section class="t-s" id="spoergsmaal" aria-labelledby="spoergsmaal-h">
+<h2 id="spoergsmaal-h">Spørgsmål, vi ofte får</h2>
+<details class="faq"><summary>Hvad er forskellen på en bank med en app og et fintechselskab?</summary><p>Fjern appen. Står der en almindelig bank tilbage med de samme produkter og den samme kreditvurdering, var det en bank med en app. Ligger kreditvurderingen, betalingen eller prisen på forsikringen i selve koden, er det fintech. <a class="laes" href="#fondens-definition-og-en-enkel-t">Læs afsnittet</a></p></details><details class="faq"><summary>Hvor meget fylder fintech i fonden?</summary><p>Temaet omfatter 18 af fondens selskaber, i alt 4,41 % af fonden. Seks selskaber under andre temaer laver også fintech. De fylder tilsammen 2,81 % og tælles under deres eget tema. Andelene er pr. 16.10.2026. <a class="laes" href="#selskaberne">Læs afsnittet</a></p></details><details class="faq"><summary>Hvordan tjener man penge på en betaling, der er gratis?</summary><p>Andre betaler. I Brasilien er Pix gratis for privatpersoner, og Nu tjente i 2. kvartal 2026 ca. 61 % af sin omsætning på renter af kort og lån. Når et lån hos Affirm koster 0 % i rente, tjener Affirm generelt mere på gebyret fra butikken. <a class="laes" href="#gratis-straksbetaling-skal-betal">Læs afsnittet</a></p></details><details class="faq"><summary>Må man få rente på en stablecoin?</summary><p>I EU nej: Siden 30.06.2024 har MiCA forbudt både udstedere og handelsplatforme at give rente på stablecoins, også når den kaldes bonus eller rabat. I USA forbyder GENIUS Act udstederen at betale rente eller afkast. For en handelsplads som Coinbase er det uafklaret, om dens bonusser falder ind under forbuddet. <a class="laes" href="#den-digitale-dollar-er-en-rentef">Læs afsnittet</a></p></details><details class="faq"><summary>Må en AI-model give afslag på et lån?</summary><p>Ja, men amerikansk lov kræver, at en låntager, der får nej, får de konkrete hovedgrunde at vide eller kan bede om dem. Hos Upstart blev 91 % af lånene i 2025 behandlet helt automatisk. I EU regnes AI til kreditvurdering som højrisiko, og reglerne gælder fra 02.12.2027. <a class="laes" href="#en-maskine-godkender-lanet-men-l">Læs afsnittet</a></p></details><details class="faq"><summary>Hvorfor står Coinbase og Circle ikke i temaets 4,41 %?</summary><p>I fondens opdeling hører Coinbase og Circle til temaet Krypto. Det samme gælder Sea, Grab og MercadoLibre, der hører til Platformsøkonomi, og Oscar Health, der hører til Sundhed og biotek. <a class="laes" href="#andre-temaer">Læs afsnittet</a></p></details>
+</section>
+<section class="kilder-s" id="kilder" aria-labelledby="h-kilder">
+<h2 id="h-kilder">Kilder</h2>
 <ul>
 <li>Definitionen: NewDeal Invest, ugebrev 28.09.2026, "Hvad er noget godt?", og ugebrev 17.08.2026, "Uge 33 - Samme tal, modsatte konklusioner", <a href="https://www.newdealinvest.dk/" rel="noopener" target="_blank">newdealinvest.dk<span class="sr"> (åbner i nyt vindue)</span></a>.</li>
 <li>Sektorlisterne: Sea 20-F 2025 om Monee.</li>
@@ -216,13 +252,13 @@ html{scroll-padding-top:72px}
 <li>Afsnit 6: Upstart 10-K 2025 og kvartalsmeddelelse 04.08.2026, Regulation B § 1002.9 (CFPB), Federal Register 12.05.2025, forordning (EU) 2026/1744 og EU-Kommissionen 27.07.2026, Pagaya 10-K 2025.</li>
 <li>Selskabsbeskrivelser: selskabernes årsrapporter, herunder Global-e 20-F 2025, Figure 10-K 2025 og Root 10-K 2025, Californiens Insurance Code §1861.02 (<a href="https://leginfo.legislature.ca.gov/" rel="noopener" target="_blank">leginfo.legislature.ca.gov<span class="sr"> (åbner i nyt vindue)</span></a>) og 10 CCR §2632.5 (ændring 15.10.2009, <a href="https://www.insurance.ca.gov/" rel="noopener" target="_blank">insurance.ca.gov<span class="sr"> (åbner i nyt vindue)</span></a>), samt fondens data.</li>
 </ul>
-<p><a class="kid" href="https://node-api.fundmarket.dk/funds/documents/priip_ipm140b" rel="noopener" target="_blank">Dokument med central information (KID)<span class="sr"> (åbner i nyt vindue)</span></a></p>
-</details>
-</div></section>
-
-<section class="s" id="videre" aria-labelledby="videre-h"><div class="wrap">
+<a class="kid" href="https://node-api.fundmarket.dk/funds/documents/priip_ipm140b" rel="noopener" target="_blank">Dokument med central information (KID)<span class="sr"> (åbner i nyt vindue)</span></a>
+</section>
+</div>
+</div>
+<section class="videre" id="videre" aria-labelledby="videre-h">
 <h2 id="videre-h">Fondens andre temaer</h2>
-<div>
+<p>Nysgerrig på at læse mere om fondens andre temaer?</p>
 <ul class="naboer">
 <li><a href="../chips/index.html">Chips og halvledere</a></li>
 <li><a href="../datacenter/index.html">Datacentre</a></li>
@@ -235,8 +271,8 @@ html{scroll-padding-top:72px}
 <li><a href="../krypto/index.html">Krypto</a></li>
 <li><a href="../sundhed/index.html">Sundhed og biotek</a></li>
 </ul>
+</section>
 </div>
-</div></section>
 </main>
 <footer><div class="wrap">
 <p>Siden beskriver indholdet af fonden og er ikke investeringsrådgivning. Omtalen af et selskab er ikke en anbefaling.</p>
@@ -246,7 +282,6 @@ html{scroll-padding-top:72px}
 (function(){
 var pr=document.querySelector('.prog');
 function prog(){var h=document.documentElement,m=h.scrollHeight-innerHeight;pr.style.setProperty('--p',m>0?(scrollY/m).toFixed(3):0)}
-addEventListener('scroll',prog,{passive:true});prog();
 })();
 </script>
 </body>
