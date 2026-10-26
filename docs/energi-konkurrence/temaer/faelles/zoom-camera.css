@@ -1,0 +1,202 @@
+/* Spor zoom (V4 runde 4) · kameraturen "Fra skærm til strøm". Alle farver kommer fra temaets CSS-variabler
+   (--bg, --text, --teal, --gold, --line) via color-mix, så lys og mørk tilstand virker uden ændringer her. */
+.zc{--zc-bg:var(--bg,#050a0f);--zc-ink:var(--text,#e6e8ed);--zc-teal:var(--teal,#89aeb4);--zc-gold:var(--gold,#f5ee9e);--zc-line:var(--line,#313a4a);
+ --zc-step:50svh;position:relative;width:100%;margin:28px 0 0;color:var(--zc-ink);isolation:isolate}
+.zc *{box-sizing:border-box}
+.zc-track{position:relative;height:calc(100svh + var(--zc-steps,5) * var(--zc-step))}
+.zc-view{position:sticky;top:0;height:100svh;overflow:hidden;contain:layout paint}
+.zc-head{position:absolute;z-index:6;left:20px;right:20px;top:18px;pointer-events:none}
+.zc-head .exp-kicker{margin-bottom:8px}
+.zc-head h2{font-family:'Atlas Manrope',Manrope,sans-serif;font-weight:500;font-size:clamp(30px,8.4vw,56px);line-height:1.02;letter-spacing:-.035em;margin:0;color:var(--zc-ink)}
+.zc-head h2 em{display:block;font-style:normal;color:var(--zc-teal)}
+.zc .zc-skip{position:absolute;z-index:7;right:16px;top:8px;min-height:44px;padding:0 14px;border-radius:999px;border:1px solid color-mix(in srgb,var(--zc-ink) 22%,transparent);background:color-mix(in srgb,var(--zc-bg) 55%,transparent);color:color-mix(in srgb,var(--zc-ink) 80%,transparent);font:inherit;font-size:13px;cursor:pointer;backdrop-filter:blur(6px)}
+.zc .zc-skip:hover,.zc .zc-skip:focus-visible{color:var(--zc-ink);border-color:var(--zc-teal)}
+
+/* Scenen: hver frame fylder scenen og tones blødt ud mod baggrunden. Ingen hård kant. */
+.zc-stage{position:absolute;inset:0}
+.zc-layer{position:absolute;inset:0;visibility:hidden}
+.zc-layer.is-on{visibility:visible}
+.zc-frame{position:absolute;inset:0;margin:0;overflow:hidden;
+ -webkit-mask-image:linear-gradient(transparent,#000 13%,#000 80%,transparent 99%),radial-gradient(125% 95% at 50% 46%,#000 58%,transparent 100%);-webkit-mask-composite:source-in;
+ mask-image:linear-gradient(transparent,#000 13%,#000 80%,transparent 99%),radial-gradient(125% 95% at 50% 46%,#000 58%,transparent 100%);mask-composite:intersect}
+.zc[data-zc-art="desktop"] .zc-frame{-webkit-mask-image:linear-gradient(transparent,#000 9%,#000 84%,transparent),linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(transparent,#000 9%,#000 84%,transparent),linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.zc-img{position:absolute;left:0;top:0;max-width:none;transform-origin:0 0;user-select:none;-webkit-user-drag:none;background:transparent;
+ --zc-edge:linear-gradient(transparent,#000 10%,#000 86%,transparent);--zc-r0:100%;--zc-r1:100%;
+ -webkit-mask-image:var(--zc-edge);mask-image:var(--zc-edge)}
+/* Næste lag inde i portalen: blød radial maske, der åbner sig, mens laget vokser. Radius styres af JS via --zc-r0/--zc-r1. */
+.zc-img.is-entering{-webkit-mask-image:var(--zc-edge),radial-gradient(closest-side at 50% 50%,#000 var(--zc-r0),transparent var(--zc-r1));mask-image:var(--zc-edge),radial-gradient(closest-side at 50% 50%,#000 var(--zc-r0),transparent var(--zc-r1));-webkit-mask-composite:source-in;mask-composite:intersect}
+
+/* Mørk: næste lag blandes ind med screen som i SVG'ernes portal, så dets mørke baggrund forsvinder. Lys: normal blanding,
+   for darken gør laget usynligt på mørke flader (telefonens skærm); den bløde maske giver i stedet en lys linse. */
+.zc-layer.is-portal{mix-blend-mode:screen}
+[data-theme="light"] .zc-layer.is-portal{mix-blend-mode:normal}
+/* Gul fokusring om portalen: tænder, når kameraet kører ind, og pulserer stille tre gange i hvile. */
+.zc-ring{position:absolute;left:0;top:0;z-index:4;border-radius:50%;pointer-events:none;opacity:0;
+ border:1.5px solid var(--zc-gold);box-shadow:0 0 22px color-mix(in srgb,var(--zc-gold) 55%,transparent),inset 0 0 14px color-mix(in srgb,var(--zc-gold) 30%,transparent)}
+.zc-ring.is-rest{animation:zc-ring 2.4s ease-in-out 3 both}
+@keyframes zc-ring{0%,100%{opacity:.25}50%{opacity:.8}}
+.zc .zc-portal{position:absolute;left:0;top:0;z-index:5;border-radius:50%;border:0;background:transparent;cursor:zoom-in;min-height:44px;min-width:44px}
+.zc .zc-portal:focus-visible{outline:2px solid var(--zc-gold);outline-offset:4px}
+
+/* Glaskortet i hvile: lagnavn, led, én sætning, tal kun hvis > 0, og selskaberne som initialer. */
+.zc-card{position:absolute;z-index:6;left:16px;right:16px;bottom:18px;padding:16px 18px;border-radius:22px;opacity:0;transform:translateY(14px);pointer-events:none;transition:opacity .28s ease-out,transform .28s ease-out;
+ background:linear-gradient(160deg,color-mix(in srgb,var(--zc-line) 78%,transparent),color-mix(in srgb,var(--zc-bg) 90%,transparent));border:1px solid color-mix(in srgb,var(--zc-teal) 26%,transparent);
+ box-shadow:0 -10px 40px color-mix(in srgb,var(--zc-bg) 80%,transparent),0 0 40px color-mix(in srgb,var(--zc-teal) 10%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.zc-layer.is-card .zc-card{opacity:1;transform:none;pointer-events:auto}
+.zc-card-kicker{display:block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--zc-teal)}
+.zc-card h3{font-family:'Atlas Manrope',Manrope,sans-serif;font-weight:500;font-size:24px;letter-spacing:-.03em;line-height:1.1;margin:4px 0 6px;color:var(--zc-ink)}
+.zc-card p{margin:0;font-size:15px;line-height:1.45;color:color-mix(in srgb,var(--zc-ink) 86%,transparent)}
+.zc-people{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:12px;flex-wrap:wrap}
+.zc-count{font-size:14px;color:color-mix(in srgb,var(--zc-ink) 74%,transparent)}
+.zc-count b{font-family:'Atlas Manrope',Manrope,sans-serif;font-weight:500;font-size:34px;letter-spacing:-.03em;color:var(--zc-teal);margin-right:4px;vertical-align:-3px}
+.zc-avatars{display:flex}
+.zc .zc-avatar{width:44px;height:44px;min-height:44px;margin-left:-8px;border-radius:50%;padding:0;font:inherit;font-size:12px;font-weight:600;letter-spacing:.02em;cursor:pointer;
+ color:var(--zc-ink);background:color-mix(in srgb,var(--zc-bg) 70%,var(--zc-teal) 30%);border:1.5px solid color-mix(in srgb,var(--zc-teal) 55%,transparent);box-shadow:0 0 0 2px var(--zc-bg)}
+.zc .zc-avatar:first-child{margin-left:0}
+.zc .zc-avatar:hover,.zc .zc-avatar:focus-visible{border-color:var(--zc-gold);position:relative;z-index:1}
+.zc-actions{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;justify-content:flex-end;margin-top:10px}
+.zc .zc-link{min-height:44px;padding:0 2px;border:0;background:none;font:inherit;font-size:14px;color:var(--zc-ink);cursor:pointer;text-decoration:underline;text-decoration-color:var(--zc-teal);text-underline-offset:4px}
+.zc .zc-follow{min-height:44px;padding:0 18px;border-radius:999px;border:0;font:inherit;font-size:14px;font-weight:600;cursor:pointer;color:var(--zc-bg);background:var(--zc-teal);box-shadow:0 0 24px color-mix(in srgb,var(--zc-teal) 45%,transparent)}
+.zc-actions:has(.zc-follow){justify-content:space-between}
+
+/* Dybdeskinnen er en glødende kæde: fremdrift i teal, en gul perle ved kameraets position. */
+.zc-rail{position:absolute;z-index:6;left:8px;top:24%;height:46%;width:34px}
+.zc-chain{position:absolute;left:16px;top:6px;bottom:6px;width:2px;border-radius:2px;background:color-mix(in srgb,var(--zc-teal) 22%,transparent)}
+.zc-chain-fill{position:absolute;inset:0;transform-origin:top;transform:scaleY(0);background:linear-gradient(var(--zc-teal),color-mix(in srgb,var(--zc-gold) 70%,var(--zc-teal)));box-shadow:0 0 10px var(--zc-teal)}
+.zc-chain-bead{position:absolute;left:50%;top:0;width:10px;height:10px;margin:-5px 0 0 -5px;border-radius:50%;background:var(--zc-gold);box-shadow:0 0 14px 3px color-mix(in srgb,var(--zc-gold) 65%,transparent)}
+.zc-rail ol{list-style:none;margin:0;padding:0;position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between}
+.zc-rail li{display:block;height:0;position:relative}
+.zc .zc-rail button{position:absolute;left:0;top:-22px;width:34px;height:44px;min-height:44px;padding:0;border:0;background:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--zc-ink);font:inherit}
+.zc .zc-rail button i{width:10px;height:10px;border-radius:50%;background:var(--zc-bg);border:1.5px solid color-mix(in srgb,var(--zc-teal) 60%,transparent);transition:transform .2s}
+.zc-rail .is-done button i{background:color-mix(in srgb,var(--zc-teal) 50%,transparent);border-color:var(--zc-teal)}
+.zc .zc-rail button[aria-current] i{background:var(--zc-gold);border-color:var(--zc-gold);transform:scale(1.25);box-shadow:0 0 12px var(--zc-gold)}
+.zc .zc-rail button span{position:absolute;left:38px;white-space:nowrap;font-size:13px;color:color-mix(in srgb,var(--zc-ink) 80%,transparent);opacity:0;transition:opacity .2s;pointer-events:none;text-shadow:0 0 8px var(--zc-bg)}
+.zc .zc-rail button[aria-current] span,.zc .zc-rail button:focus-visible span{opacity:1}
+.zc.is-moving .zc-rail button[aria-current] span{opacity:0}
+.zc .zc-rail button:focus-visible{outline:2px solid var(--zc-gold);outline-offset:-2px;border-radius:12px}
+
+.zc-actions:has(.zc-cue){justify-content:space-between}
+.zc-cue{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:color-mix(in srgb,var(--zc-ink) 72%,transparent)}
+.zc-cue b{display:block;width:16px;height:24px;border:1.5px solid color-mix(in srgb,var(--zc-teal) 70%,transparent);border-radius:9px;position:relative}
+.zc-cue b::after{content:"";position:absolute;left:50%;top:5px;width:2px;height:5px;border-radius:2px;background:var(--zc-teal);transform:translateX(-50%);animation:zc-wheel 1.6s ease-in-out 4}
+@keyframes zc-wheel{50%{transform:translate(-50%,6px);opacity:.3}}
+
+@media (min-width:760px){
+ .zc{--zc-step:70svh}
+ .zc-head{left:max(4.5%,96px);top:32px;right:auto;max-width:620px}
+ .zc-skip{right:max(4.5%,24px);top:36px}
+ .zc-rail{left:max(calc(4.5% - 12px),12px);top:26%;height:48%}
+ .zc-card{left:auto;right:max(4.5%,24px);bottom:7%;width:min(420px,40vw);padding:20px 22px}
+ .zc-card h3{font-size:28px}
+}
+
+/* Reduced motion og statisk version: seks stillbilleder under hinanden med samme glaskort. Ingen skalering. */
+.zc.is-static .zc-track{height:auto}
+.zc.is-static .zc-view{position:relative;height:auto;overflow:visible;contain:none;padding:0 16px 8px;display:flex;flex-direction:column}
+.zc.is-static .zc-head{order:0}.zc.is-static .zc-rail{order:1;margin-bottom:12px}.zc.is-static .zc-stage{order:2}
+.zc.is-static .zc-head{position:relative;left:auto;right:auto;top:auto;padding:0 0 14px;opacity:1}
+.zc.is-static .zc-skip,.zc.is-static .zc-ring,.zc.is-static .zc-portal,.zc.is-static .zc-cue,.zc.is-static .zc-chain{display:none}
+.zc.is-static .zc-rail{position:sticky;z-index:8;top:0;left:auto;width:auto;height:auto;padding:8px 0;background:color-mix(in srgb,var(--zc-bg) 88%,transparent);backdrop-filter:blur(6px)}
+.zc.is-static .zc-rail ol{position:static;flex-direction:row;flex-wrap:wrap;gap:6px}
+.zc.is-static .zc-rail li{height:auto}
+.zc.is-static .zc-rail button{position:static;width:auto;padding:0 12px;border:1px solid color-mix(in srgb,var(--zc-teal) 35%,transparent);border-radius:999px;gap:6px}
+.zc.is-static .zc-rail button i{display:none}
+.zc.is-static .zc-rail button span{position:static;opacity:1}
+.zc.is-static .zc-stage{position:relative;inset:auto;display:grid;gap:22px}
+.zc.is-static .zc-layer{position:relative;inset:auto;visibility:visible;scroll-margin-top:64px}
+.zc.is-static .zc-frame{position:relative;inset:auto;aspect-ratio:780/1040;border-radius:18px;-webkit-mask-image:linear-gradient(transparent,#000 8%,#000 85%,transparent);mask-image:linear-gradient(transparent,#000 8%,#000 85%,transparent)}
+.zc.is-static[data-zc-art="desktop"] .zc-frame,.zc.is-static .zc-frame:has(img[width="1600"]){aspect-ratio:16/9}
+.zc.is-static .zc-img{position:absolute;inset:0;width:100%!important;height:100%!important;left:0!important;top:0!important;object-fit:cover;transform:none!important;opacity:1!important}
+.zc.is-static .zc-card{position:relative;left:auto;right:auto;bottom:auto;width:auto;margin-top:-56px;opacity:1;transform:none;pointer-events:auto;transition:opacity .15s}
+@media (min-width:760px){.zc.is-static .zc-view{padding:0 max(4.5%,24px) 8px}.zc.is-static .zc-stage{grid-template-columns:1fr 1fr}}
+@media (prefers-reduced-motion:reduce){.zc-ring.is-rest,.zc-cue b::after{animation:none}.zc-card{transition:none}}
+
+/* Runde 6 (spor B, fo-22/priv-20): selskaber med navn i lagkortet. */
+.zc .zc-avatars.zc-names{display:flex;flex-wrap:wrap;gap:6px}
+.zc .zc-avatar.zc-name{width:auto;height:auto;min-height:44px;margin-left:0;border-radius:22px;padding:4px 14px 4px 4px;display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:500;letter-spacing:0;white-space:nowrap}
+.zc .zc-name .zc-ini{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;font-size:12px;font-weight:700;background:color-mix(in srgb,var(--zc-teal) 22%,transparent)}
+/* Runde 6 (spor B, sbk-4/priv-27): på mobil slutter fremdriftsskinnen over lagkortet i stedet for at løbe gennem det.
+   mob-22/ux-25: skinnens trykflader er 44 × 44 px. */
+@media (max-width:700px){.zc-rail{top:14%;height:36%}}
+.zc .zc-rail button{width:44px;left:-5px}
+/* Runde 6 (spor B, ux-20): i lyst tema blandes portalen med multiply (lyst temas modstykke til mørks screen), så det næste
+   lags lyse baggrund ikke står som en mælket skive midt i skiftet. */
+[data-theme="light"] .zc-layer.is-portal{mix-blend-mode:multiply}
+/* Runde 6 (spor B, ux-26): 100vw medregner rullebjælken; siden må ikke kunne rystes sidelæns. clip (ikke hidden) bevarer sticky. */
+.exp-page{overflow-x:clip}
+.zc-controls{position:absolute;z-index:9;right:20px;top:100px;display:flex;align-items:center;gap:10px;padding:6px;border-radius:40px;background:var(--zc-bg);color:var(--zc-ink);border:1px solid var(--zc-teal)}
+.zc-controls button{display:grid;place-items:center;width:56px;height:56px;min-height:56px;padding:0;border-radius:50%;font-size:28px;line-height:1;color:var(--zc-ink);background:color-mix(in srgb,var(--zc-teal) 18%,var(--zc-bg));border:1px solid var(--zc-teal)}
+.zc-controls button:disabled{opacity:.4;cursor:default}
+.zc-controls span{min-width:38px;text-align:center;font-variant-numeric:tabular-nums;font-size:14px}
+.zc.is-static .zc-controls{display:none}
+.zc.is-scene .zc-cue{display:none}
+@media(max-width:699px){.zc-controls{top:110px;right:16px}.zc-hint{display:none}}
+/* Keep the explanation outside the picture. Normal page scrolling never changes layers. */
+.zc[data-zc].is-scene:not(.is-static) .zc-track{height:auto}
+.zc[data-zc].is-scene:not(.is-static) .zc-view{position:relative;height:clamp(480px,70svh,760px)}
+.zc.is-scene:not(.is-static) .zc-layer .zc-card{display:none}
+.zc[data-zc].is-scene:not(.is-static) .zc-hint{display:none}
+.zc.is-scene .zc-controls{top:auto;bottom:16px;right:20px}
+.zc.is-scene .zc-head{left:24px;top:24px;right:24px;max-width:70%}
+.zc.is-scene .zc-head h2{font-size:clamp(28px,4vw,46px)}
+.zc.is-scene .zc-skip{position:relative;inset:auto;margin:0 20px 20px}
+.zc.is-scene .zc-rail{top:32%;height:38%;left:16px}
+.zc-reader{position:relative;padding:0 20px 24px}
+.zc-reader .zc-card{position:relative;inset:auto;width:auto;max-width:900px;margin:0 auto;opacity:1;transform:none;pointer-events:auto;visibility:visible}
+.zc.is-static .zc-reader{display:none}
+@media(min-width:760px){.zc-reader .zc-card{padding:24px 32px}.zc-reader .zc-people{display:flex;align-items:center;gap:24px}}
+
+/* The explanation lives below the camera, with room for the role of each company. */
+.zc-explanation{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin:24px 0}
+.zc-explanation h4{font-size:17px;margin:0 0 8px;color:var(--ndi-ink)}
+.zc-explanation p{font-size:16px!important;line-height:1.7!important;margin:0!important}
+.zc-reader .zc-people{display:block}
+.zc-reader .zc-names{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:14px}
+.zc-reader .zc-name{white-space:normal;height:auto;align-items:start;text-align:left;padding:12px;min-width:0}
+.zc-name small{display:block;font-size:13px;line-height:1.5;font-weight:400;margin-top:6px;color:var(--ndi-ink-muted)}
+@media(max-width:700px){.zc-explanation{grid-template-columns:1fr;gap:18px}.zc-reader .zc-names{grid-template-columns:1fr}.zc-reader .zc-card{padding:22px 18px}}
+
+/* Zoom review: a short explanation and readable company rows, with an explicit last destination. */
+.zc .zc-card .zc-explanation{display:block;margin:18px 0 24px}
+.zc .zc-card .zc-explanation p{max-width:72ch;font-size:17px!important;line-height:1.65!important}
+.zc .zc-card .zc-explanation p+p{margin-top:12px!important}
+.zc .zc-card .zc-bridge{color:var(--zc-teal)}
+.zc .zc-card .zc-people h4{margin:0 0 3px;font-size:16px;color:var(--zc-ink)}
+.zc .zc-people .zc-avatars.zc-names{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:12px;width:100%}
+.zc .zc-people .zc-avatar.zc-name{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;width:100%;min-width:0;min-height:88px;padding:14px;margin:0;border:1px solid var(--zc-line);border-radius:9px;white-space:normal;text-align:left;background:color-mix(in srgb,var(--zc-ink) 3%,transparent);font-weight:400}
+.zc .zc-company-copy{min-width:0}
+.zc .zc-company-copy strong{display:block;font-size:15px;line-height:1.35;color:var(--zc-ink)}
+.zc .zc-company-copy small{margin-top:6px;font-size:14px;line-height:1.45;color:var(--zc-teal)}
+.zc .zc-company-arrow{flex:none;color:var(--zc-teal)}
+.zc .zc-article-link{display:inline-flex;align-items:center;gap:20px;min-height:48px;padding:11px 17px;border:1px solid var(--zc-teal);border-radius:8px;color:var(--zc-ink);text-decoration:none;font-weight:600;font-size:16px;background:color-mix(in srgb,var(--zc-teal) 12%,transparent)}
+.zc .zc-actions{justify-content:space-between;gap:14px;margin-top:24px}
+.zc .zc-electricity-link{position:absolute;inset:0;z-index:6;cursor:pointer;color:var(--zc-ink);text-decoration:none}
+.zc .zc-electricity-link[hidden]{display:none}
+.zc .zc-electricity-link>span{position:absolute;bottom:100px;right:24px;display:flex;align-items:center;gap:20px;padding:15px 20px;border:1px solid var(--zc-teal);border-radius:10px;background:var(--zc-bg);font-size:18px;font-weight:650}
+.zc .zc-electricity-link:hover>span{background:color-mix(in srgb,var(--zc-teal) 20%,var(--zc-bg))}
+.zc .zc-article-link:focus-visible,.zc .zc-electricity-link:focus-visible{outline:2px solid var(--zc-gold);outline-offset:-4px}
+.zc.is-static .zc-electricity-link{display:none}
+@media(max-width:700px){.zc .zc-people .zc-avatars.zc-names{grid-template-columns:1fr}.zc .zc-people .zc-avatar.zc-name{min-height:72px}.zc .zc-card .zc-explanation p{font-size:16px!important}.zc .zc-electricity-link>span{right:16px;bottom:96px;max-width:calc(100% - 80px);font-size:17px}.zc .zc-actions{align-items:stretch;flex-direction:column}}
+/* Claude runde 9 · lagviseren */
+/* mob-r9-004: skinnen får plads til alle seks trykfelter (44 px), så prik 1 og 6 ikke ligger uden for skinnen eller under billedet. */
+@media (max-width:700px){.zc.is-scene .zc-rail{height:auto;top:20%;z-index:7}
+.zc.is-scene .zc-rail ol{position:relative;display:grid;grid-auto-rows:44px}
+.zc.is-scene .zc-rail li{height:44px}
+.zc.is-scene .zc-rail button{top:0}
+.zc.is-scene .zc-chain{top:22px;bottom:22px}}
+/* ux-r9-010: på desktop står alle lagnavne dæmpet ved prikkerne; det aktive er tydeligt. */
+@media (min-width:701px){.zc.is-scene:not(.is-static) .zc-rail button span{opacity:.6}
+.zc.is-scene:not(.is-static) .zc-rail button[aria-current] span{opacity:1}}
+/* mob-r9-005: liggende telefon; scenen fylder skærmen, så + og − er synlige. */
+@media (orientation:landscape) and (max-height:520px){.zc[data-zc].is-scene:not(.is-static) .zc-view{height:100svh;min-height:300px}
+.zc.is-scene:not(.is-static) .zc-rail{top:38%;height:50%}
+.zc.is-scene:not(.is-static) .zc-rail button:not([aria-current]) span{opacity:0}
+.zc[data-zc].is-scene:not(.is-static).zc-at-start .zc-start-cue{top:auto;bottom:92px}}
+/* mob-r9-008: ringens trykfelt er mindst 56 px. */
+.zc .zc-portal{min-height:56px;min-width:56px;margin:-6px}
+/* mo-r9-002: en synlig opfordring på første lag; forsvinder, når man er dykket ned. */
+.zc-start-cue{display:none}
+.zc[data-zc].is-scene:not(.is-static).zc-at-start .zc-start-cue{display:block;position:absolute;z-index:9;right:20px;margin:0;padding:6px 12px;border-radius:999px;font-size:14px;color:var(--zc-ink);background:color-mix(in srgb,var(--zc-bg) 85%,transparent);border:1px solid color-mix(in srgb,var(--zc-gold) 55%,transparent);bottom:96px}
+@media (min-width:700px){.zc[data-zc].is-scene:not(.is-static).zc-at-start .zc-start-cue{bottom:auto;top:178px}}
+@media (prefers-reduced-motion:no-preference){.zc[data-zc].is-scene:not(.is-static).zc-at-start .zc-start-cue{animation:zcCue 2.4s ease-in-out 3}}
+@keyframes zcCue{50%{border-color:var(--zc-gold);box-shadow:0 0 14px color-mix(in srgb,var(--zc-gold) 45%,transparent)}}
