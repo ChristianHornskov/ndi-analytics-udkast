@@ -2,3 +2,8 @@
 .ndi-company-path{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px}.ndi-company-path a{padding:14px;border:1px solid #45636a;border-radius:8px;text-decoration:none}.ndi-company-path a:hover{background:#23434a}
 
 .ndi-foot a{color:#cbd6b4}
+
+.ndi-tile img{height:300px;object-fit:cover;filter:brightness(1.08);transition:transform .65s,filter .65s}.ndi-tile:hover img,.ndi-tile:focus-visible img{transform:scale(1.025);filter:brightness(1.18)}.ndi-tile{position:relative}.ndi-tile[data-map-preview=datacenter]:hover img{filter:brightness(1.25) saturate(1.12)}@media(prefers-reduced-motion:reduce){.ndi-tile img{transition:none}.ndi-tile:hover img{transform:none}}
+
+.ndi-rail-frame{display:grid;grid-template-columns:42px minmax(0,1fr) 42px;align-items:center;gap:10px}.ndi-rail-frame>button{height:48px;border-radius:50%;border:1px solid #89aeb4;background:#1b323b;color:#e8edf0;font-size:25px;cursor:pointer}.ndi-photo-rail{display:flex;gap:28px;overflow-x:auto;scroll-snap-type:x proximity;padding:8px 0 16px}.ndi-photo-group{flex:none;margin:0}.ndi-photo-group>h3{font-size:17px;margin:0 0 14px}.ndi-photo-row{display:flex;gap:16px}.ndi-photo-row .ndi-tile{width:260px;flex:none;scroll-snap-align:start}.ndi-photo-row .ndi-tile img{height:310px}.ndi-photo-row .ndi-tile div{padding:18px}.ndi-photo-row .ndi-tile h3{font-size:22px}.ndi-photo-row .ndi-tile p{min-height:74px}.ndi-photo-row .ndi-tile:hover{transform:none}@media(max-width:600px){.ndi-rail-frame{grid-template-columns:32px minmax(0,1fr) 32px;gap:5px}.ndi-rail-frame>button{height:40px;font-size:20px}.ndi-photo-row .ndi-tile{width:220px}.ndi-photo-row .ndi-tile img{height:280px}}
+.ndi-photo-rail{scrollbar-color:#89aeb4 #10222b;scrollbar-width:thin}
