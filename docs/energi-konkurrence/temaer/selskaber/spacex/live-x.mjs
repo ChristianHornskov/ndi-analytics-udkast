@@ -2,7 +2,21 @@ import {bindXFeed} from './content-feed.mjs';
 export const FEED_URL='https://ndigrafdatab5174313.blob.core.windows.net/x-curated/latest.json';
 const escape=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const date=s=>new Date(s).toLocaleDateString('da-DK');
-let saved,loadedAt=0;
+let saved,loadedAt=0,pending;
+const mounted=new WeakMap();
+export const REFRESH_MS=300000;
+async function refreshFeed(){
+ if(pending)return pending;
+ if(saved&&Date.now()-loadedAt<REFRESH_MS)return;
+ pending=(async()=>{
+  const response=await fetch(FEED_URL,{signal:AbortSignal.timeout(8000),cache:'no-cache'});
+  if(!response.ok)throw Error('Feed unavailable');
+  const candidate=await response.json();
+  if(candidate?.kind!=='ndi.x.curated'||candidate.schema_version!==1||!candidate.companies||Array.isArray(candidate.companies)||typeof candidate.companies!=='object')throw Error('Invalid feed');
+  saved=candidate;loadedAt=Date.now();
+ })();
+ try{await pending;}finally{pending=undefined;}
+}
 export function renderFeed(feed,isin,now=Date.now()){
  if(feed?.schema_version!==1||feed?.kind!=='ndi.x.curated')return '';
  const row=feed.companies?.[isin];
@@ -13,10 +27,22 @@ export function renderFeed(feed,isin,now=Date.now()){
 }
 export async function mountLiveX(root){
  const host=root.querySelector('[data-live-x]');if(!host)return;
+ if(mounted.has(host))return mounted.get(host).refresh();
  host.hidden=true;host.innerHTML='';
- const show=()=>{host.innerHTML=renderFeed(saved,host.dataset.liveX);host.hidden=!host.innerHTML;bindXFeed(host);};
- try{
-  if(!saved||Date.now()-loadedAt>300000){const response=await fetch(FEED_URL,{signal:AbortSignal.timeout(8000),cache:'no-cache'});if(!response.ok)throw Error('Feed unavailable');const candidate=await response.json();if(candidate.kind!=='ndi.x.curated'||candidate.schema_version!==1)throw Error('Invalid feed');saved=candidate;loadedAt=Date.now();}
-  if(host.isConnected)show();
- }catch{if(host.isConnected&&saved)show();}
+ let previous='',timer;
+ const doc=host.ownerDocument,win=doc?.defaultView;
+ const cleanup=()=>{if(timer)clearInterval(timer);doc?.removeEventListener('visibilitychange',wake);win?.removeEventListener('online',wake);mounted.delete(host);};
+ const refresh=async()=>{
+  if(!host.isConnected){cleanup();return;}
+  if(doc?.visibilityState==='hidden')return;
+  try{await refreshFeed();}catch{/* Keep the last valid selection during a temporary outage. */}
+  if(!host.isConnected){cleanup();return;}
+  const html=renderFeed(saved,host.dataset.liveX);
+  // Do not reset an opened X embed when the selection has not changed.
+  if(html!==previous){host.innerHTML=html;previous=html;host.hidden=!html;bindXFeed(host);}
+ };
+ const wake=()=>{void refresh();};
+ mounted.set(host,{refresh});
+ if(doc){timer=setInterval(wake,REFRESH_MS);doc.addEventListener('visibilitychange',wake);win?.addEventListener('online',wake);}
+ await refresh();
 }
