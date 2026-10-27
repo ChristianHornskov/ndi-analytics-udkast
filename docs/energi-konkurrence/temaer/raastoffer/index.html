@@ -192,10 +192,10 @@ html{scroll-padding-top:72px}
 .note a{padding:14px 0}
 
 </style>
-<link data-ndi-shell="true" href="../samlet.css" rel="stylesheet"/></head>
+<link data-ndi-shell="true" href="../samlet.css" rel="stylesheet"/><link href="../faelles/portfolio-live.css" rel="stylesheet"/></head>
 <body><header class="ndi-bar"><a href="../index.html"><strong>NewDeal Invest</strong></a><nav aria-label="Hovednavigation"><a href="../index.html#fund-chart">Forsidegraf</a><a href="../udforsk.html">Udforsk temaerne</a><a href="../selskaber.html">Alle selskaber</a></nav></header>
 <a class="skip" href="#indhold">Spring til indholdet</a>
-<main id="indhold" tabindex="-1">
+<main id="indhold" tabindex="-1"><p data-portfolio-status="" role="status">Henter den seneste validerede Azure-rapport…</p><p class="ndi-historical-note">Aktuelle fondsvægte og største positioner hentes fra Azure i afsnittet nedenfor. Tal i de redaktionelle diagrammer og selskabseksempler er historiske pr. 16.10.2026; de opdateres ikke som aktuelle fondstal. <a href="#aktuelle-positioner">Se temaets aktuelle positioner ↓</a></p>
 <section aria-labelledby="h1" class="cq-hero-ra">
 <style>.cq-hero-ra{--cq-hero-ra-bg:var(--bg,#050a0f);--cq-hero-ra-ink:var(--ink,#e6e8ed);--cq-hero-ra-mute:var(--mute,#aebbc7);--cq-hero-ra-line:var(--line,#313a4a);--cq-hero-ra-card:var(--card,#0b141c);--cq-hero-ra-a:#9f886a;
 position:relative;padding:24px 0 26px;border-bottom:1px solid var(--cq-hero-ra-line);color:var(--cq-hero-ra-ink);font-family:'DM Sans',system-ui,sans-serif}
@@ -259,7 +259,7 @@ position:relative;padding:24px 0 26px;border-bottom:1px solid var(--cq-hero-ra-l
 <p class="note">Andel af hele fonden, afdelingen PMINDI pr. 16.10.2026. Fondens seks andre temaer er mindre.</p>
 </figure>
 </div>
-</div></section><section class="ndi-reading top-companies" id="ndi-company-path"><h2>De største positioner i Råstoffer</h2><p>De fem største positioner i temaet, sorteret efter andel af hele PMINDI pr. 16.10.2026.</p><div class="top-company-grid"><article><div class="top-company-head"><span class="top-rank">01</span><h3>Ero Copper</h3><strong>0,53 %</strong></div><p>Kobber- og guldproducent med drift i Brasilien. Hovedaktivitet er salg af kobberkoncentrat fra Caraíba og Tucumã.</p><a href="../selskaber/CA2960061091.html">Læs om selskabet →</a></article><article><div class="top-company-head"><span class="top-rank">02</span><h3>United States Antimony</h3><strong>0,43 %</strong></div><p>Bryder, forarbejder og leverer antimon og ædelmetaller (Montana og Mexico) samt zeolit (Idaho).</p><a href="../selskaber/US9115491030.html">Læs om selskabet →</a></article><article><div class="top-company-head"><span class="top-rank">03</span><h3>Huntsman Corp</h3><strong>0,36 %</strong></div><p>Se selskabets placering i temaets oversigt og i fondens positionsliste.</p><a href="../selskaber.html?q=US4470111075">Se positionen →</a></article><article><div class="top-company-head"><span class="top-rank">04</span><h3>Lynas Rare Earths</h3><strong>0,34 %</strong></div><p>Bryder sjældne jordarter ved Mt Weld i Western Australia og fremstiller separerede oxider i Malaysia.</p><a href="../selskaber/AU000000LYC6.html">Læs om selskabet →</a></article><article><div class="top-company-head"><span class="top-rank">05</span><h3>Energy Fuels</h3><strong>0,31 %</strong></div><p>Producerer sjældne jordarter, siden 2024 også NdPr, der bruges i magneter. Bryder også uran.</p><a href="../selskaber/CA2926717083.html">Læs om selskabet →</a></article></div><a href="../selskaber.html">Se hele positionslisten →</a></section>
+</div></section><section class="ndi-current" data-current-theme-panel="raastoffer" id="aktuelle-positioner">Henter temaets aktuelle andel og største positioner…</section>
 <div class="wrap cq-wrap">
 <section aria-labelledby="cq-rs-h" class="cq-rs" id="cq-rs">
 <style>.cq-rs{--cq-rs-ink:var(--ink,#e6e8ed);--cq-rs-mute:var(--mute,#aebbc7);--cq-rs-line:var(--line,#313a4a);--cq-rs-surf:var(--surf,#0f1a22);--cq-rs-card:var(--card,#0b141c);--cq-rs-focus:var(--fokus,#cde0e2);
@@ -548,5 +548,5 @@ if(xs&&xm){var tx=xm.textContent;xm.hidden=false;xm.addEventListener('click',fun
 document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="#"]');if(!a)return;var t=document.getElementById(a.getAttribute('href').slice(1));if(!t)return;var d=t.closest('details');if(d&&!d.open){d.open=true;}});
 
 </script>
-</body>
+<script src="../faelles/portfolio-live.mjs" type="module"></script></body>
 </html>

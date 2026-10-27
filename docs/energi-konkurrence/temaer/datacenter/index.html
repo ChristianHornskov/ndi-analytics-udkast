@@ -163,10 +163,10 @@ footer .kid{display:inline-flex;align-items:center;min-height:44px}
 @media(max-width:599px){section.s{padding:1.5rem 0}.fonden-g,.greb-g,.udefra-g,.videre-g{gap:1rem}footer{padding-top:1.5rem;padding-bottom:2rem}.cq-dc{padding-top:1rem;padding-bottom:1rem}.hero-tal{margin-bottom:.75rem}.capex{margin-top:.75rem;padding-top:1rem;padding-bottom:1rem}main p{margin-bottom:.75rem}main h2{margin-bottom:.75rem}.eyebrow{margin-bottom:.4rem}.stor.kort,.risiko.kort{padding-top:1rem;padding-bottom:1rem}figure.graf.kort{padding-top:.75rem;padding-bottom:.75rem}p.note{margin-top:.6rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
 </style>
-<link data-ndi-shell="true" href="../samlet.css" rel="stylesheet"/></head>
+<link data-ndi-shell="true" href="../samlet.css" rel="stylesheet"/><link href="../faelles/portfolio-live.css" rel="stylesheet"/></head>
 <body><header class="ndi-bar"><a href="../index.html"><strong>NewDeal Invest</strong></a><nav aria-label="Hovednavigation"><a href="../index.html#fund-chart">Forsidegraf</a><a href="../udforsk.html">Udforsk temaerne</a><a href="../selskaber.html">Alle selskaber</a></nav></header>
 <a class="skip" href="#indhold">Spring til indholdet</a>
-<main id="indhold" tabindex="-1">
+<main id="indhold" tabindex="-1"><p data-portfolio-status="" role="status">Henter den seneste validerede Azure-rapport…</p><p class="ndi-historical-note">Aktuelle fondsvægte og største positioner hentes fra Azure i afsnittet nedenfor. Tal i de redaktionelle diagrammer og selskabseksempler er historiske pr. 16.10.2026; de opdateres ikke som aktuelle fondstal. <a href="#aktuelle-positioner">Se temaets aktuelle positioner ↓</a></p>
 <section aria-labelledby="h1" class="hero">
 <figure class="hero-bill"><picture><source media="(max-width:599px)" srcset="fra-billedstil/grafik/datacenter-hero-mellem-maskinerne-mobil.svg"/><img alt="Mange servere i rækker, bundet sammen af kabler og lys" fetchpriority="high" height="720" src="fra-billedstil/grafik/datacenter-hero-mellem-maskinerne.svg" width="1440"/></picture></figure>
 <div class="wrap hero-tekst">
@@ -203,7 +203,7 @@ footer .kid{display:inline-flex;align-items:center;min-height:44px}
 </div>
 </div>
 </div>
-</div></section><section class="ndi-reading top-companies" id="ndi-company-path"><h2>De største positioner i Datacentre</h2><p>De fem største positioner i temaet, sorteret efter andel af hele PMINDI pr. 16.10.2026.</p><div class="top-company-grid"><article><div class="top-company-head"><img alt="" height="40" loading="lazy" src="../faelles/logos/SE0003917798.webp" width="40"/><span class="top-rank">01</span><h3>Sivers Semiconductors</h3><strong>1,01 %</strong></div><p>Laver kraftige lasere til lysforbindelser, bl.a. i AI-datacentre. Laver også chips til trådløs kommunikation.</p><a href="../selskaber/SE0003917798.html">Læs om selskabet →</a></article><article><div class="top-company-head"><img alt="" height="40" loading="lazy" src="../faelles/logos/CH0030380734.webp" width="40"/><span class="top-rank">02</span><h3>Huber + Suhner Ag-Reg</h3><strong>0,75 %</strong></div><p>Se selskabets placering i temaets oversigt og i fondens positionsliste.</p><a href="../selskaber/CH0030380734.html">Læs om selskabet →</a></article><article><div class="top-company-head"><img alt="" height="40" loading="lazy" src="../faelles/logos/AU0000185993.webp" width="40"/><span class="top-rank">03</span><h3>IREN</h3><strong>0,65 %</strong></div><p>Ejer og driver datacentre og lejer regnekraft ud til AI. Driver stadig bitcoin-mining i dele af sine datacentre, mens de lægges om.</p><a href="../selskaber/AU0000185993.html">Læs om selskabet →</a></article><article><div class="top-company-head"><img alt="" height="40" loading="lazy" src="../faelles/logos/US68389X1054.webp" width="40"/><span class="top-rank">04</span><h3>Oracle</h3><strong>0,56 %</strong></div><p>Forretningssoftware og cloud. Oracles cloud leverer regnekraft, lager og netværk.</p><a href="../selskaber.html?q=US68389X1054">Se positionen →</a></article><article><div class="top-company-head"><img alt="" height="40" loading="lazy" src="../faelles/logos/US03823U1025.webp" width="40"/><span class="top-rank">05</span><h3>Applied Optoelectronics</h3><strong>0,54 %</strong></div><p>Laver udstyr til fibernet, bl.a. til datacentre, kabel-tv, tele og internet til hjemmet.</p><a href="../selskaber/US03823U1025.html">Læs om selskabet →</a></article></div><a href="../selskaber.html">Se hele positionslisten →</a></section>
+</div></section><section class="ndi-current" data-current-theme-panel="datacenter" id="aktuelle-positioner">Henter temaets aktuelle andel og største positioner…</section>
 <section aria-labelledby="greb-h" class="s" id="greb"><div class="wrap">
 <p class="eyebrow">Hovedgrebet</p>
 <h2 id="greb-h">Det, der binder maskinerne sammen</h2>
@@ -449,5 +449,5 @@ var kd=document.getElementById('kilder-d');
 [].forEach.call(document.querySelectorAll('.vid-ramme[data-yt]'),function(r){var b=r.querySelector('.vid-play');b.addEventListener('click',function(){var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+r.dataset.yt+'?autoplay=1&rel=0&playsinline=1';f.title=r.dataset.title;f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.setAttribute('allowfullscreen','');f.referrerPolicy='strict-origin-when-cross-origin';r.replaceChild(f,b);f.focus()})});
 })();
 </script>
-</body>
+<script src="../faelles/portfolio-live.mjs" type="module"></script></body>
 </html>

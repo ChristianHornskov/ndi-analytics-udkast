@@ -207,10 +207,10 @@ footer{border-top:1px solid var(--line);padding:2rem 0 3rem;font-size:.88rem;col
 .xp-ejer{font-size:.85rem;color:var(--mute);margin:-.1rem 0 .5rem}
 .kid-p a{display:inline-flex;align-items:center;min-height:44px}
 </style>
-<link data-ndi-shell="true" href="../samlet.css" rel="stylesheet"/></head>
+<link data-ndi-shell="true" href="../samlet.css" rel="stylesheet"/><link href="../faelles/portfolio-live.css" rel="stylesheet"/></head>
 <body><header class="ndi-bar"><a href="../index.html"><strong>NewDeal Invest</strong></a><nav aria-label="Hovednavigation"><a href="../index.html#fund-chart">Forsidegraf</a><a href="../udforsk.html">Udforsk temaerne</a><a href="../selskaber.html">Alle selskaber</a></nav></header>
 <a class="skip" href="#indhold">Spring til indholdet</a>
-<main id="indhold" tabindex="-1">
+<main id="indhold" tabindex="-1"><p data-portfolio-status="" role="status">Henter den seneste validerede Azure-rapport…</p><p class="ndi-historical-note">Aktuelle fondsvægte og største positioner hentes fra Azure i afsnittet nedenfor. Tal i de redaktionelle diagrammer og selskabseksempler er historiske pr. 16.10.2026; de opdateres ikke som aktuelle fondstal. <a href="#aktuelle-positioner">Se temaets aktuelle positioner ↓</a></p>
 <section aria-labelledby="h1" class="hero">
 <figure class="hero-bill"><picture><source media="(max-width:599px)" srcset="fra-billedstil/grafik/sundhed-hero-indlaegssedlen-mobil.svg"/><img alt="En foldet seddel med fire felter, hvert med sit eget lille tegn. Bagved ligger to mindre sedler." fetchpriority="high" height="600" src="fra-billedstil/grafik/sundhed-hero-indlaegssedlen.svg" width="1200"/></picture></figure>
 <div class="wrap hero-g">
@@ -240,7 +240,7 @@ footer{border-top:1px solid var(--line);padding:2rem 0 3rem;font-size:.88rem;col
 <details class="alle12"><summary>Se alle 12 temaer</summary><ol><li>Chips og halvledere</li><li>Energi og elnet</li><li>Datacentre</li><li>Platformsøkonomi</li><li>Robotter &amp; fysisk AI</li><li>Råstoffer</li><li>Rumfart</li><li>Fintech</li><li>Krypto</li><li>Software &amp; AI</li><li class="hl">Sundhed og biotek</li><li>Kvantecomputere</li></ol></details>
 </div>
 </div>
-</div></section><section class="ndi-reading top-companies" id="ndi-company-path"><h2>De største positioner i Sundhed og biotek</h2><p>De fem største positioner i temaet, sorteret efter andel af hele PMINDI pr. 16.10.2026.</p><div class="top-company-grid"><article><div class="top-company-head"><span class="top-rank">01</span><h3>Hims Hers Health Inc</h3><strong>0,53 %</strong></div><p>Se selskabets placering i temaets oversigt og i fondens positionsliste.</p><a href="../selskaber.html?q=US4330001060">Se positionen →</a></article><article><div class="top-company-head"><span class="top-rank">02</span><h3>Biontech Se-Adr</h3><strong>0,35 %</strong></div><p>Se selskabets placering i temaets oversigt og i fondens positionsliste.</p><a href="../selskaber.html?q=US09075V1026">Se positionen →</a></article><article><div class="top-company-head"><span class="top-rank">03</span><h3>Eli Lilly and Company</h3><strong>0,22 %</strong></div><p>Se selskabets placering i temaets oversigt og i fondens positionsliste.</p><a href="../selskaber.html?q=US5324571083">Se positionen →</a></article><article><div class="top-company-head"><span class="top-rank">04</span><h3>Intellia Therapeutics Inc</h3><strong>0,17 %</strong></div><p>Se selskabets placering i temaets oversigt og i fondens positionsliste.</p><a href="../selskaber.html?q=US45826J1051">Se positionen →</a></article><article><div class="top-company-head"><img alt="" height="40" loading="lazy" src="../faelles/logos/US88023B1035.webp" width="40"/><span class="top-rank">05</span><h3>Tempus AI</h3><strong>0,15 %</strong></div><p>Teknologiselskab inden for sundhed. Forretningen er delt i diagnostik og i data og software.</p><a href="../selskaber.html?q=US88023B1035">Se positionen →</a></article></div><a href="../selskaber.html">Se hele positionslisten →</a></section>
+</div></section><section class="ndi-current" data-current-theme-panel="sundhed" id="aktuelle-positioner">Henter temaets aktuelle andel og største positioner…</section>
 <section aria-labelledby="spredt-h" class="s" id="spredt"><div class="wrap">
 <div class="su-cq"><section aria-labelledby="cq-su-h" class="cq-su" id="cq-su">
 <style>.cq-su{--cq-su-ink:var(--ink,#e6e8ed);--cq-su-mute:var(--mute,#aebbc7);--cq-su-line:var(--line,#313a4a);--cq-su-surf:var(--surf,#0f1a22);--cq-su-card:var(--card,#0b141c);--cq-su-focus:var(--fokus,#cde0e2);
@@ -527,5 +527,5 @@ var R=document.getElementById('cq-su');
 [].forEach.call(document.querySelectorAll('.vid-ramme[data-yt]'),function(r){var b=r.querySelector('.vid-play');b.addEventListener('click',function(){var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+r.dataset.yt+'?autoplay=1&rel=0&playsinline=1';f.title=r.dataset.title;f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.setAttribute('allowfullscreen','');f.referrerPolicy='strict-origin-when-cross-origin';r.replaceChild(f,b);f.focus()})});
 })();
 </script>
-</body>
+<script src="../faelles/portfolio-live.mjs" type="module"></script></body>
 </html>

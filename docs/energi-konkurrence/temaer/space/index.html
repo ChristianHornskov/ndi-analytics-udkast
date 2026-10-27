@@ -176,10 +176,10 @@ footer .kid{display:inline-flex;align-items:center;min-height:44px}
 /* lille UX-runde: kun afstande på mobil */
 @media(max-width:599px){main .s{padding:2rem 0}#fonden{padding-bottom:1.25rem}#risiko{padding-top:1.25rem}.penge-g,.udefra-g{gap:1.25rem}}
 </style>
-<link data-ndi-shell="true" href="../samlet.css" rel="stylesheet"/></head>
+<link data-ndi-shell="true" href="../samlet.css" rel="stylesheet"/><link href="../faelles/portfolio-live.css" rel="stylesheet"/></head>
 <body><header class="ndi-bar"><a href="../index.html"><strong>NewDeal Invest</strong></a><nav aria-label="Hovednavigation"><a href="../index.html#fund-chart">Forsidegraf</a><a href="../udforsk.html">Udforsk temaerne</a><a href="../selskaber.html">Alle selskaber</a></nav></header>
 <a class="skip" href="#indhold">Spring til indholdet</a>
-<main id="indhold" tabindex="-1">
+<main id="indhold" tabindex="-1"><p data-portfolio-status="" role="status">Henter den seneste validerede Azure-rapport…</p><p class="ndi-historical-note">Aktuelle fondsvægte og største positioner hentes fra Azure i afsnittet nedenfor. Tal i de redaktionelle diagrammer og selskabseksempler er historiske pr. 16.10.2026; de opdateres ikke som aktuelle fondstal. <a href="#aktuelle-positioner">Se temaets aktuelle positioner ↓</a></p>
 <section aria-labelledby="h1" class="hero">
 <div class="wrap hero-tekst">
 <h1 id="h1">Rumfart</h1><p class="theme-main-question">Er produktet en opsendelse, en forbindelse eller data?</p>
@@ -209,7 +209,7 @@ footer .kid{display:inline-flex;align-items:center;min-height:44px}
 <p>Temaerne er NewDeal Invests egen opdeling af fondens selskaber.</p>
 </div>
 </div>
-</div></section><section class="ndi-reading top-companies" id="ndi-company-path"><h2>De største positioner i Rumfart</h2><p>De fem største positioner i temaet, sorteret efter andel af hele PMINDI pr. 16.10.2026.</p><div class="top-company-grid"><article><div class="top-company-head"><img alt="" height="40" loading="lazy" src="../faelles/logos/US84615Q1031.webp" width="40"/><span class="top-rank">01</span><h3>SpaceX</h3><strong>1,38 %</strong></div><p>Opsendelse (Falcon, Dragon, Starship), satellitbredbånd via Starlink og en AI-del fra sammenlægningen med xAI.</p><a href="../selskaber/spacex/index.html">Læs om selskabet →</a></article><article><div class="top-company-head"><img alt="" height="40" loading="lazy" src="../faelles/logos/US72703X1063.webp" width="40"/><span class="top-rank">02</span><h3>Planet Labs</h3><strong>0,53 %</strong></div><p>Har bygget, opsendt og driver hundredvis af satellitter, der fotograferer Jordens landområder hver dag.</p><a href="../selskaber/US72703X1063.html">Læs om selskabet →</a></article><article><div class="top-company-head"><img alt="" height="40" loading="lazy" src="../faelles/logos/US00217D1000.webp" width="40"/><span class="top-rank">03</span><h3>AST SpaceMobile</h3><strong>0,49 %</strong></div><p>Bygger et mobilbredbåndsnet i rummet, som almindelige smartphones kan bruge direkte.</p><a href="../selskaber.html?q=US00217D1000">Se positionen →</a></article><article><div class="top-company-head"><img alt="" height="40" loading="lazy" src="../faelles/logos/US46125A1007.webp" width="40"/><span class="top-rank">04</span><h3>Intuitive Machines</h3><strong>0,48 %</strong></div><p>Infrastruktur og tjenester i rummet med fokus på varig aktivitet ud over Jorden. Datterselskabet Lanteris bygger kommunikationssatellitter til kommercielle kunder. Satellitterne kredser i høj bane om Jorden.</p><a href="../selskaber/US46125A1007.html">Læs om selskabet →</a></article><article><div class="top-company-head"><img alt="" height="40" loading="lazy" src="../faelles/logos/CA55293N1096.webp" width="40"/><span class="top-rank">05</span><h3>MDA Space</h3><strong>0,40 %</strong></div><p>Bygger hele satellitsystemer og dele til dem til kommunikationsnet i lav, mellemhøj og høj bane om Jorden.</p><a href="../selskaber/CA55293N1096.html">Læs om selskabet →</a></article></div><a href="../selskaber.html">Se hele positionslisten →</a></section>
+</div></section><section class="ndi-current" data-current-theme-panel="space" id="aktuelle-positioner">Henter temaets aktuelle andel og største positioner…</section>
 <div class="wrap"><section aria-labelledby="cq-rum-h" class="cq-rum" id="cq-rum">
 <style>.cq-rum{--cq-rum-ink:var(--ink,#e6e8ed);--cq-rum-mute:var(--mute,#aebbc7);--cq-rum-line:var(--line,#313a4a);--cq-rum-surf:var(--surf,#0f1a22);--cq-rum-card:var(--card,#0b141c);--cq-rum-focus:var(--fokus,#cde0e2);
 --cq-rum-a:#7c92b0;--cq-rum-pick:#141d29;color:var(--cq-rum-ink);font-family:'DM Sans',system-ui,sans-serif;padding:clamp(1.5rem,6vw,4.5rem) 0;scroll-margin-top:4.5rem;border-top:1px solid var(--cq-rum-line)}
@@ -501,5 +501,5 @@ var kd=document.getElementById('kilder-d');
 [].forEach.call(document.querySelectorAll('.vid-ramme[data-yt]'),function(r){var b=r.querySelector('.vid-play');b.addEventListener('click',function(){var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+r.dataset.yt+'?autoplay=1&rel=0&playsinline=1';f.title=r.dataset.title;f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.setAttribute('allowfullscreen','');f.referrerPolicy='strict-origin-when-cross-origin';r.replaceChild(f,b);f.focus()})});
 })();
 </script>
-</body>
+<script src="../faelles/portfolio-live.mjs" type="module"></script></body>
 </html>

@@ -185,10 +185,10 @@ h2{font-size:clamp(28px,7vw,42px)}
 .efter-bog .bog-g{margin-top:0}
 .efter-bog{padding-top:1.5rem}
 </style>
-<link data-ndi-shell="true" href="../samlet.css" rel="stylesheet"/></head>
+<link data-ndi-shell="true" href="../samlet.css" rel="stylesheet"/><link href="../faelles/portfolio-live.css" rel="stylesheet"/></head>
 <body><header class="ndi-bar"><a href="../index.html"><strong>NewDeal Invest</strong></a><nav aria-label="Hovednavigation"><a href="../index.html#fund-chart">Forsidegraf</a><a href="../udforsk.html">Udforsk temaerne</a><a href="../selskaber.html">Alle selskaber</a></nav></header>
 <a class="skip" href="#indhold">Spring til indholdet</a>
-<main id="indhold" tabindex="-1">
+<main id="indhold" tabindex="-1"><p data-portfolio-status="" role="status">Henter den seneste validerede Azure-rapport…</p><p class="ndi-historical-note">Aktuelle fondsvægte og største positioner hentes fra Azure i afsnittet nedenfor. Tal i de redaktionelle diagrammer og selskabseksempler er historiske pr. 16.10.2026; de opdateres ikke som aktuelle fondstal. <a href="#aktuelle-positioner">Se temaets aktuelle positioner ↓</a></p>
 <section aria-labelledby="h1" class="hero">
 <figure class="hero-bill"><picture><source height="900" media="(max-width:599px)" srcset="fra-billedstil/billeder/krypto-hero-hovedbogen-mobil.webp" width="720"/><img alt="En opslået regnskabsbog med linjer og kolonner og en pen, der skriver en ny linje. Rundt om ligger mindre kopier af samme bog." fetchpriority="high" height="720" src="fra-billedstil/billeder/krypto-hero-hovedbogen-bred.webp" width="1440"/></picture></figure>
 <div class="wrap hero-tekst">
@@ -216,7 +216,7 @@ h2{font-size:clamp(28px,7vw,42px)}
 <p>Intet af de 17 selskaber fylder mere end 0,52 % af fonden. De fire største, CleanSpark, Coinbase, Bitdeer og Circle, er tilsammen knap halvdelen af temaet.</p>
 </div>
 </div>
-</div></section><section class="ndi-reading top-companies" id="ndi-company-path"><h2>De største positioner i Krypto</h2><p>De fem største positioner i temaet, sorteret efter andel af hele PMINDI pr. 16.10.2026.</p><div class="top-company-grid"><article><div class="top-company-head"><img alt="" height="40" loading="lazy" src="../faelles/logos/US18452B2097.webp" width="40"/><span class="top-rank">01</span><h3>Cleanspark</h3><strong>0,52 %</strong></div><p>Bitcoin-mining i Georgia, Tennessee, Mississippi og Wyoming. Kalder sig nu datacenterudvikler.</p><a href="../selskaber.html?q=US18452B2097">Se positionen →</a></article><article><div class="top-company-head"><span class="top-rank">02</span><h3>Coinbase Glb</h3><strong>0,51 %</strong></div><p>Se selskabets placering i temaets oversigt og i fondens positionsliste.</p><a href="../selskaber.html?q=US19260Q1076">Se positionen →</a></article><article><div class="top-company-head"><img alt="" height="40" loading="lazy" src="../faelles/logos/KYG114481008.webp" width="40"/><span class="top-rank">03</span><h3>Bitdeer Technologies Group</h3><strong>0,49 %</strong></div><p>Se selskabets placering i temaets oversigt og i fondens positionsliste.</p><a href="../selskaber.html?q=KYG114481008">Se positionen →</a></article><article><div class="top-company-head"><span class="top-rank">04</span><h3>Circle Internet Group Inc</h3><strong>0,39 %</strong></div><p>Se selskabets placering i temaets oversigt og i fondens positionsliste.</p><a href="../selskaber.html?q=US1725731079">Se positionen →</a></article><article><div class="top-company-head"><img alt="" height="40" loading="lazy" src="../faelles/logos/US36317J2096.webp" width="40"/><span class="top-rank">05</span><h3>Galaxy Digital Inc</h3><strong>0,34 %</strong></div><p>Se selskabets placering i temaets oversigt og i fondens positionsliste.</p><a href="../selskaber.html?q=US36317J2096">Se positionen →</a></article></div><a href="../selskaber.html">Se hele positionslisten →</a></section>
+</div></section><section class="ndi-current" data-current-theme-panel="krypto" id="aktuelle-positioner">Henter temaets aktuelle andel og største positioner…</section>
 <section aria-labelledby="cq-kr-h" class="cq-kr" id="cq-kr">
 <style>.cq-kr{--cq-kr-ink:var(--ink,#e6e8ed);--cq-kr-mute:var(--mute,#aebbc7);--cq-kr-line:var(--line,#313a4a);--cq-kr-surf:var(--surf,#0f1a22);--cq-kr-card:var(--card,#0b141c);--cq-kr-focus:var(--fokus,#cde0e2);
 --cq-kr-a:#9eadae;--cq-kr-pick:#182327;color:var(--cq-kr-ink);font-family:'DM Sans',system-ui,sans-serif;padding:clamp(1.5rem,6vw,4.5rem) 0;scroll-margin-top:4.5rem;border-top:1px solid var(--cq-kr-line)}
@@ -522,5 +522,5 @@ var kd=document.getElementById('kilder-d');
 [].forEach.call(document.querySelectorAll('.vid-ramme[data-yt]'),function(r){var b=r.querySelector('.vid-play');b.addEventListener('click',function(){var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+r.dataset.yt+'?autoplay=1&rel=0&playsinline=1';f.title=r.dataset.title;f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.setAttribute('allowfullscreen','');f.referrerPolicy='strict-origin-when-cross-origin';r.replaceChild(f,b);f.focus()})});
 })();
 </script>
-</body>
+<script src="../faelles/portfolio-live.mjs" type="module"></script></body>
 </html>
