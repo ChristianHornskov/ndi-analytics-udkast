@@ -1,4 +1,4 @@
-import {bindXFeed} from './content-feed.mjs';
+import {loadXWidgets} from './content-feed.mjs';
 export const FEED_URL='https://ndigrafdatab5174313.blob.core.windows.net/x-curated/latest.json';
 const escape=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const date=s=>new Date(s).toLocaleDateString('da-DK');
@@ -23,7 +23,30 @@ export function renderFeed(feed,isin,now=Date.now()){
  const posts=(Array.isArray(row?.posts)?row.posts:[]).filter(p=>{if(!p||typeof p.author_handle!=='string')return false;const match=/^https:\/\/x\.com\/([\w]{1,15})\/status\/(\d{1,25})$/.exec(p.url||'');const age=now-Date.parse(p.published_at);return match&&match[2]===p.post_id&&match[1].toLowerCase()===p.author_handle.toLowerCase()&&age>=0&&age<=365*864e5;}).slice(0,4);
  if(!posts.length)return '';
  const stale=row.status==='retry'||now-Date.parse(row.checked_at)>48*36e5;
- return `<section class="section live-x"><span class="eyebrow">FRA SELSKABERNES KANALER</span><h2>Udvalgte opslag fra X</h2><p>Udvalgt automatisk efter relevans for selskabets teknologi og forretning. Opslagene er afsendernes egne udsagn.</p><p class="small">Senest gennemgået ${escape(date(row.checked_at))}.${stale?' Opdateringen er forsinket; her vises det seneste udvalg.':''}</p><div class="live-x-grid">${posts.map(p=>`<article class="live-x-card"><div><b>@${escape(p.author_handle)}</b><small>${escape(({official:'Selskabets konto',employee:'Person i selskabet',independent:'Ekstern kilde'})[p.source_type]||'Ekstern kilde')} · ${escape(date(p.published_at))}</small></div><p>${escape(p.reason)}</p><blockquote class="twitter-tweet" data-dnt="true" data-theme="dark"><a href="${escape(p.url)}" target="_blank" rel="noopener noreferrer">Læs opslaget på X ↗</a></blockquote></article>`).join('')}</div><button type="button" class="button secondary" data-x-load>Vis opslagene her på siden</button><p class="small">Når du viser opslagene, oprettes forbindelse til X.</p><p data-x-status role="status"></p></section>`;
+ return `<section class="section live-x"><span class="eyebrow">FRA SELSKABERNES KANALER</span><h2>Udvalgte opslag fra X</h2><p>Nyheder om teknologien og forretningen, udvalgt automatisk. Selve opslagene kommer fra X; forklaringen under hvert opslag er vores automatiske resumé.</p><p class="small">Senest gennemgået ${escape(date(row.checked_at))}.${stale?' Opdateringen er forsinket; her vises det seneste udvalg.':''}</p><div class="live-x-grid">${posts.map(p=>`<article class="live-x-card"><div class="live-x-original"><div class="live-x-author"><span class="live-x-avatar" aria-hidden="true">${escape(p.author_handle.slice(0,1).toUpperCase())}</span><div><b>@${escape(p.author_handle)}</b><small>${escape(({official:'Selskabets konto',employee:'Person i selskabet',independent:'Ekstern kilde'})[p.source_type]||'Ekstern kilde')} · ${escape(date(p.published_at))}</small></div><span class="live-x-brand" aria-label="X">𝕏</span></div><blockquote class="twitter-tweet" data-dnt="true" data-theme="light"><a href="${escape(p.url)}" target="_blank" rel="noopener noreferrer">Åbn originalopslaget på X ↗</a></blockquote></div><div class="live-x-context"><span>HVORFOR ER DET MED?</span><p>${escape(p.reason)}</p></div></article>`).join('')}</div><button type="button" class="button secondary" data-x-load hidden>Prøv at hente opslagene igen</button><p class="small">Opslagene indlæses fra X. De er afsendernes egne udsagn.</p><p data-x-status role="status"></p></section>`;
+}
+function embedWhenVisible(host){
+ const doc=host.ownerDocument,win=doc?.defaultView;
+ if(!win||!host.querySelector('[data-x-load]'))return;
+ const button=host.querySelector('[data-x-load]'),status=host.querySelector('[data-x-status]');
+ let loading=false;
+ const load=async()=>{
+  if(loading||!host.isConnected)return;loading=true;button.hidden=true;
+  status.textContent='Henter opslag fra X…';
+  const result=await loadXWidgets(doc);
+  if(!host.isConnected)return;
+  // Script loading alone does not prove that X could render a particular post.
+  win.setTimeout(()=>{
+   if(!status.isConnected)return;
+   const cards=[...host.querySelectorAll('.live-x-original')];
+   const complete=cards.every(c=>c.querySelector('iframe'));
+   status.textContent=complete?'':'X kunne ikke vise alle opslag her. Du kan stadig åbne originalerne via linkene.';
+   button.hidden=complete;loading=false;
+  },result==='loaded'?8000:0);
+ };
+ button.addEventListener('click',load);
+ if(win.IntersectionObserver){const observer=new win.IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)){observer.disconnect();void load();}},{rootMargin:'300px'});observer.observe(host);}
+ else void load();
 }
 export async function mountLiveX(root){
  const host=root.querySelector('[data-live-x]');if(!host)return;
@@ -39,7 +62,7 @@ export async function mountLiveX(root){
   if(!host.isConnected){cleanup();return;}
   const html=renderFeed(saved,host.dataset.liveX);
   // Do not reset an opened X embed when the selection has not changed.
-  if(html!==previous){host.innerHTML=html;previous=html;host.hidden=!html;bindXFeed(host);}
+  if(html!==previous){host.innerHTML=html;previous=html;host.hidden=!html;if(html)embedWhenVisible(host);}
  };
  const wake=()=>{void refresh();};
  mounted.set(host,{refresh});
