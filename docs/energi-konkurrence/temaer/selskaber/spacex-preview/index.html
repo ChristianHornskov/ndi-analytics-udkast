@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="da">
+<head>
+<link rel="icon" href="data:,">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>SpaceX (SPCX): rumfart, Starlink og AI | NewDeal Invest</title>
+<meta name="description" content="Hvordan SpaceX’ tre forretninger virker: opsendelser, Starlink og AI.">
+<meta name="theme-color" content="#050a0f">
+<link rel="preload" as="image" type="image/avif" media="(min-width:601px)" imagesrcset="img/hero-spacex-1440w.avif 1x, img/hero-spacex-1440w@2x.avif 2x" fetchpriority="high">
+<link rel="preload" as="image" type="image/avif" media="(max-width:600px)" imagesrcset="img/hero-spacex-390.avif 1x, img/hero-spacex-390@2x.avif 2x" fetchpriority="high">
+<link rel="preload" href="fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:400 600;font-display:swap;src:url('fonts/dm-sans.woff2') format('woff2')}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:400 600;font-display:swap;src:url('fonts/manrope.woff2') format('woff2')}
+:root{
+--bg:#050a0f;
+--kort:#0c141c;
+--kort-2:#111b25;
+--linje:#1f2a33;
+--linje-2:#2c3a46;
+--graf-akse:#5b6874;
+--tekst:#e6e8ed;
+--tekst-2:#aebbc7;
+--accent-spacex:#8fa3b8;
+--accent:var(--accent-spacex);
+--font-overskrift:'Manrope',system-ui,sans-serif;
+--font-brod:'DM Sans',system-ui,sans-serif;
+--fs-display:clamp(2.5rem,1.6rem + 3.2vw,4.5rem);
+--fs-h2:clamp(1.875rem,1.3rem + 1.9vw,2.75rem);
+--fs-h3:clamp(1.25rem,1.1rem + .5vw,1.5rem);
+--fs-tal:clamp(2.25rem,1.6rem + 2.4vw,3.75rem);
+--fs-lede:clamp(1.1875rem,1.05rem + .45vw,1.375rem);
+--fs-brod:clamp(1.0625rem,1rem + .2vw,1.125rem);
+--fs-lille:.875rem;
+--fs-mikro:.75rem;
+--lh-taet:1.12; --lh-overskrift:1.2; --lh-brod:1.65;
+--spor-display:-.02em; --spor-kicker:.08em;
+--side-maks:75rem;
+--tekst-maks:42.5rem;
+--figur-maks:60rem;
+--kant:clamp(1.25rem,5vw,4rem);
+--rille:clamp(1rem,2vw,1.5rem);
+--sektion:clamp(4.5rem,9vw,8.5rem);
+--r:14px; --r-lille:10px;
+--tryk:44px;
+}
+body[data-accent="spacex"]{--accent:var(--accent-spacex)}
+@media (prefers-reduced-motion:reduce){
+*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:5.5rem}
+body{margin:0;background:var(--bg);color:var(--tekst);font:400 var(--fs-brod)/var(--lh-brod) var(--font-brod);
+font-feature-settings:"ss01";text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,svg,picture{display:block;max-width:100%}
+a{color:inherit;text-decoration-line:underline;text-decoration-color:var(--accent);text-decoration-thickness:1px;text-underline-offset:.22em}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+h1,h2,h3,h4{font-family:var(--font-overskrift);font-weight:500;margin:0;text-wrap:balance}
+p{margin:0 0 1em}
+.tal,.num{font-variant-numeric:tabular-nums lining-nums}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.spring{position:absolute;left:var(--kant);top:-100px;background:var(--kort);padding:.75rem 1rem;border-radius:var(--r-lille);z-index:20}
+.spring:focus{top:.5rem}
+.ramme{width:min(100% - 2*var(--kant),var(--side-maks));margin-inline:auto}
+.smal{max-width:var(--tekst-maks)}
+.bred{max-width:var(--figur-maks)}
+.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--linje)}
+.top .ramme{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:64px}
+.maerke{display:inline-flex;align-items:center;gap:.6rem;min-height:var(--tryk);text-decoration:none;font:500 1.0625rem/1 var(--font-overskrift);letter-spacing:-.01em}
+.maerke svg{width:22px;height:22px;color:var(--accent)}
+.top nav ul{display:flex;gap:.25rem;list-style:none;margin:0;padding:0}
+.top nav a{display:inline-flex;align-items:center;min-height:var(--tryk);padding:0 .75rem;text-decoration:none;font-size:var(--fs-lille);border-radius:999px}
+.top nav a:hover{background:var(--kort)}
+@media (max-width:640px){.top nav .valgfri{display:none}.top nav a{padding:0 .6rem}}
+.hero{position:relative;padding-top:clamp(1.5rem,4vw,3rem)}
+.tilbage{display:inline-flex;align-items:center;min-height:var(--tryk);font-size:var(--fs-lille);text-decoration:none;gap:.4rem}
+.tilbage:hover{text-decoration:underline;text-decoration-color:var(--accent)}
+.kicker{display:flex;align-items:center;gap:.75rem;margin:clamp(1.5rem,4vw,3rem) 0 1.25rem;font:500 var(--fs-mikro)/1.4 var(--font-brod);letter-spacing:var(--spor-kicker);text-transform:uppercase}
+.kicker::before{content:"";width:28px;height:2px;background:var(--accent);flex:none}
+.hero h1{font-size:var(--fs-display);line-height:var(--lh-taet);letter-spacing:var(--spor-display);max-width:16ch}
+.dek{font-size:var(--fs-lede);line-height:1.5;max-width:36rem;margin:1.5rem 0 0}
+.hero-billede{position:relative;margin:clamp(1rem,3vw,2rem) 0 0;width:100%}
+.hero-billede .felt{position:relative;aspect-ratio:var(--hero-ar,2/1);max-height:720px;margin-inline:auto;max-width:1440px}
+.hero-billede picture,.hero-billede img{width:100%;height:100%;object-fit:cover}
+.hero-billede figcaption{width:min(100% - 2*var(--kant),var(--side-maks));margin:.5rem auto 0}
+.hero-billede .billedtekst{display:block;max-width:var(--tekst-maks);font-size:var(--fs-lille);line-height:1.5;color:var(--tekst);margin-bottom:.35rem}
+.hero-billede .kredit{display:block}
+@media (max-width:600px){.hero-billede .felt{aspect-ratio:4/5;max-height:none}}
+.felt{background:var(--bg)}
+.kredit{font-size:var(--fs-mikro);line-height:1.5;color:var(--tekst-2);margin:0}
+.fakta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--rille);margin:clamp(2rem,5vw,3.5rem) 0 0;padding:clamp(1.5rem,3vw,2rem) 0;border-block:1px solid var(--linje);list-style:none}
+.fakta li{display:flex;flex-direction:column;gap:.35rem;padding-left:1rem;border-left:2px solid var(--accent)}
+.fakta .tal{font:500 var(--fs-tal)/1 var(--font-overskrift);letter-spacing:-.02em}
+.fakta .hvad{font-size:var(--fs-lille);line-height:1.45;max-width:22ch}
+@media (max-width:720px){.fakta{grid-template-columns:1fr;gap:1.25rem}}
+.kildelinje{font-size:var(--fs-mikro);color:var(--tekst-2);margin:.85rem 0 0;line-height:1.5}
+.forbehold{font-size:var(--fs-lille);margin:1rem 0 0;max-width:var(--tekst-maks)}
+.indhold{position:sticky;top:64px;z-index:9;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--linje);margin-top:clamp(2.5rem,5vw,4rem)}
+.indhold ol{display:flex;gap:.25rem;list-style:none;margin:0 auto;padding:0;overflow-x:auto;scrollbar-width:none}
+.indhold ol::-webkit-scrollbar{display:none}
+.indhold a{display:inline-flex;align-items:center;gap:.5rem;min-height:var(--tryk);padding:0 .9rem;white-space:nowrap;text-decoration:none;font-size:var(--fs-lille);border-radius:999px}
+.indhold a span{font-variant-numeric:tabular-nums;color:var(--tekst-2);font-size:var(--fs-mikro)}
+.indhold a:hover,.indhold a[aria-current="true"]{background:var(--kort);box-shadow:inset 0 -2px 0 var(--accent)}
+.sektion{padding-block:var(--sektion) 0}
+.sek-hoved{max-width:var(--tekst-maks);margin-bottom:clamp(2rem,4vw,3rem)}
+.sek-hoved .kicker{margin-top:0}
+.sek-hoved h2{font-size:var(--fs-h2);line-height:var(--lh-overskrift);letter-spacing:-.015em}
+.sek-hoved p{font-size:var(--fs-lede);line-height:1.5;margin:1rem 0 0}
+h3{font-size:var(--fs-h3);line-height:1.3;letter-spacing:-.01em}
+.mellemrubrik{font:600 var(--fs-mikro)/1.4 var(--font-brod);letter-spacing:var(--spor-kicker);text-transform:uppercase;margin:1.5rem 0 .4rem}
+.prosa{max-width:var(--tekst-maks)}
+.prosa p{margin-bottom:1.1em}
+.forklar{margin:0 auto clamp(2.5rem,5vw,4rem);max-width:var(--figur-maks)}
+.forklar .tegning{position:relative}
+.forklar .tegning svg{width:100%;height:auto;border-radius:var(--r)}
+.forklar .lille{display:none}
+.forklar .etiketter{position:absolute;inset:0;pointer-events:none}
+.forklar .etiket{position:absolute;font-size:var(--fs-lille);line-height:1.25;color:var(--tekst-2);white-space:nowrap;background:color-mix(in srgb,var(--kort) 85%,transparent);padding:.1rem .35rem;border-radius:4px}
+.forklar figcaption{margin-top:.6rem}
+@media (max-width:600px){.forklar .stor{display:none}.forklar .lille{display:block}.forklar .etiket{font-size:var(--fs-mikro)}}
+.faner{display:none;gap:.25rem;margin-bottom:1rem;padding:.25rem;background:var(--kort);border:1px solid var(--linje);border-radius:999px}
+.faner button{flex:1;min-height:var(--tryk);border:0;background:transparent;color:var(--tekst);font:500 var(--fs-lille)/1 var(--font-brod);border-radius:999px;cursor:pointer}
+.faner button[aria-selected="true"]{background:var(--kort-2);box-shadow:inset 0 0 0 1px var(--accent)}
+.fliser{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--rille)}
+.flise{background:var(--kort);border:1px solid var(--linje);border-radius:var(--r);padding:clamp(1.25rem,2.5vw,2rem);display:flex;flex-direction:column}
+.flise .omraade{display:flex;align-items:center;gap:.6rem;font-size:var(--fs-mikro);letter-spacing:var(--spor-kicker);text-transform:uppercase;margin:0 0 1.25rem}
+.flise .omraade::before{content:"";width:10px;height:10px;border-radius:50%;border:2px solid var(--accent)}
+.flise h3{margin-bottom:.75rem}
+.flise .ingress{font-size:var(--fs-brod);font-weight:500;margin-bottom:1rem}
+.flise p{font-size:var(--fs-lille);line-height:1.6}
+.flise .afhaenger{margin-top:auto;padding-top:1rem;border-top:1px solid var(--linje);font-size:var(--fs-lille)}
+.flise .afhaenger b{font-weight:600}
+.flise .mere{display:inline-flex;align-items:center;min-height:var(--tryk);font-size:var(--fs-lille)}
+@media (max-width:899px){
+.faner{display:flex}
+.fliser{grid-template-columns:1fr}
+.fliser.med-faner .flise:not(.aktiv){display:none}
+}
+.mellemspil{display:grid;grid-template-columns:5fr 7fr;gap:clamp(1.5rem,5vw,5rem);align-items:start;margin-top:clamp(3.5rem,7vw,6rem);padding-top:clamp(2rem,4vw,3rem);border-top:1px solid var(--linje)}
+.mellemspil h3{font-size:var(--fs-h2);line-height:var(--lh-overskrift);letter-spacing:-.015em}
+.mellemspil .prosa p{font-size:var(--fs-brod)}
+@media (max-width:899px){.mellemspil{grid-template-columns:1fr}}
+.flow{list-style:none;margin:2rem 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;counter-reset:trin}
+.flow li{position:relative;padding:1.25rem 1.25rem 1.25rem 0;border-top:2px solid var(--accent);counter-increment:trin;font:500 var(--fs-brod)/1.35 var(--font-overskrift)}
+.flow li::before{content:"0" counter(trin);display:block;font:400 var(--fs-mikro)/1 var(--font-brod);color:var(--tekst-2);margin-bottom:.6rem;letter-spacing:.06em}
+.flow li:not(:last-child)::after{content:"";position:absolute;right:.75rem;top:-7px;width:12px;height:12px;border-top:2px solid var(--accent);border-right:2px solid var(--accent);transform:rotate(45deg)}
+@media (max-width:600px){.flow{grid-template-columns:1fr}.flow li{border-top:0;border-left:2px solid var(--accent);padding:0 0 1.25rem 1.25rem}.flow li:not(:last-child)::after{display:none}}
+.valg{display:inline-flex;gap:.25rem;padding:.25rem;background:var(--kort);border:1px solid var(--linje);border-radius:999px;margin-bottom:1.5rem}
+.valg button{min-height:var(--tryk);min-width:var(--tryk);padding:0 1.1rem;border:0;background:transparent;color:var(--tekst);font:500 var(--fs-lille)/1 var(--font-brod);border-radius:999px;cursor:pointer}
+.valg button[aria-pressed="true"]{background:var(--kort-2);box-shadow:inset 0 0 0 1px var(--accent)}
+.periode{font-size:var(--fs-lille);margin:0 0 1.5rem}
+.multipler{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--rille)}
+.multipel{background:var(--kort);border:1px solid var(--linje);border-radius:var(--r);padding:clamp(1.25rem,2.5vw,1.75rem)}
+.multipel h3{font-size:var(--fs-lille);font-family:var(--font-brod);font-weight:500;letter-spacing:var(--spor-kicker);text-transform:uppercase}
+.multipel .sum{font:500 var(--fs-tal)/1 var(--font-overskrift);letter-spacing:-.02em;margin:.75rem 0 .25rem}
+.multipel .enhed{font-size:var(--fs-lille);margin:0 0 1.5rem}
+.soejler{list-style:none;margin:0;padding:0;display:grid;gap:1rem}
+.soejler li{display:grid;grid-template-columns:5.5rem 1fr;align-items:center;gap:.25rem .75rem}
+.soejler .navn{font-size:var(--fs-lille)}
+.soejler .spor{position:relative;height:28px}
+.soejler .nul{position:absolute;top:-4px;bottom:-4px;width:1px;background:var(--linje-2)}
+.soejler .bjaelke{position:absolute;top:6px;height:16px;background:var(--accent);border-radius:2px;transition:left .5s ease,width .5s ease}
+.soejler .bjaelke.neg{background:transparent;border:1.5px solid var(--accent);background-image:repeating-linear-gradient(135deg,var(--accent) 0 1.5px,transparent 1.5px 6px)}
+.soejler .vaerdi{grid-column:2;font-size:var(--fs-lille);font-variant-numeric:tabular-nums;margin-top:-.15rem}
+.konklusion{font:500 var(--fs-lede)/1.45 var(--font-overskrift);max-width:var(--tekst-maks);margin:clamp(2rem,4vw,3rem) 0 1.25rem}
+@media (max-width:899px){.multipler{grid-template-columns:1fr}}
+.tidslinje{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:var(--rille);position:relative}
+.tidslinje::before{content:"";position:absolute;left:0;right:0;top:7px;height:1px;background:var(--linje-2)}
+.tidslinje li{position:relative;padding-top:2rem}
+.tidslinje li::before{content:"";position:absolute;top:0;left:0;width:15px;height:15px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+.tidslinje time{display:block;font:500 var(--fs-h3)/1.2 var(--font-overskrift);margin-bottom:.5rem}
+.tidslinje h3{font-size:var(--fs-brod);font-family:var(--font-brod);font-weight:500;margin-bottom:.4rem;line-height:1.35}
+.tidslinje p{font-size:var(--fs-lille);line-height:1.55;margin-bottom:.25rem}
+.tidslinje a{display:inline-flex;align-items:center;min-height:var(--tryk);font-size:var(--fs-lille)}
+@media (max-width:1023px){
+.tidslinje{grid-template-columns:1fr;gap:0}
+.tidslinje::before{left:7px;right:auto;top:0;bottom:0;width:1px;height:auto}
+.tidslinje li{padding:0 0 1.75rem 2.25rem}
+}
+.fond{display:grid;grid-template-columns:5fr 7fr;gap:clamp(1.5rem,5vw,5rem);align-items:start}
+.andele{list-style:none;margin:0;padding:0;display:grid;gap:1.5rem}
+.andele li{padding-left:1rem;border-left:2px solid var(--accent)}
+.andele .tal{display:block;font:500 var(--fs-tal)/1 var(--font-overskrift);letter-spacing:-.02em}
+.andele .hvad{font-size:var(--fs-lille)}
+.risiko{background:var(--kort);border:1px solid var(--linje);border-radius:var(--r);padding:clamp(1.25rem,3vw,2rem)}
+.risiko h3{margin-bottom:.75rem}
+.risiko p{font-size:var(--fs-lille)}
+@media (max-width:899px){.fond{grid-template-columns:1fr}}
+.graf{margin:0}
+.graf .flade{position:relative}
+.graf svg{width:100%;height:auto;overflow:visible}
+.graf .gitter line{stroke:var(--linje);stroke-width:1}
+.graf .serie{fill:none;stroke:var(--accent);stroke-width:2;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.graf .punkt{fill:var(--bg);stroke:var(--accent);stroke-width:1.5;vector-effect:non-scaling-stroke}
+.graf .y,.graf .x,.graf .direkte{position:absolute;font-size:var(--fs-mikro);line-height:1;white-space:nowrap}
+.graf .y{left:0;transform:translateY(-120%);color:var(--tekst-2)}
+.graf .x{bottom:-1.6rem;color:var(--tekst-2)}
+.graf .direkte{font-size:var(--fs-lille);background:var(--bg);padding:.15rem .35rem;border-radius:4px}
+.graf figcaption{margin-top:2.5rem}
+.videoer{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--rille)}
+.video{background:var(--kort);border:1px solid var(--linje);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.video .skaerm{aspect-ratio:16/9;display:grid;place-items:center;background:radial-gradient(120% 90% at 50% 40%,var(--kort-2),var(--bg));border-bottom:1px solid var(--linje)}
+.video .skaerm span{width:64px;height:64px;border-radius:50%;border:1.5px solid var(--accent);display:grid;place-items:center}
+.video .skaerm svg{width:20px;height:20px;color:var(--accent);margin-left:3px}
+.video .tekst{padding:1.25rem 1.5rem 1rem}
+.video .meta{font-size:var(--fs-mikro);color:var(--tekst-2);margin-bottom:.35rem}
+.video h3{font-size:var(--fs-h3);margin-bottom:.5rem}
+.video p{font-size:var(--fs-lille)}
+.video a{display:inline-flex;align-items:center;min-height:var(--tryk);font-size:var(--fs-lille)}
+@media (max-width:720px){.videoer{grid-template-columns:1fr}}
+.xs{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--rille)}
+.x-kort{background:#000;border:1px solid var(--linje);border-radius:var(--r);padding:1.25rem 1.25rem .5rem;display:flex;flex-direction:column}
+.x-kort header{display:flex;align-items:center;gap:.75rem;margin-bottom:1rem}
+.x-kort .av{width:40px;height:40px;border-radius:50%;background:var(--kort-2);border:1px solid var(--linje-2);display:grid;place-items:center;font:600 var(--fs-lille)/1 var(--font-overskrift);flex:none}
+.x-kort .hvem{display:flex;flex-direction:column;line-height:1.3;min-width:0}
+.x-kort .hvem b{font-weight:600;font-size:var(--fs-lille)}
+.x-kort .hvem span{font-size:var(--fs-mikro);color:var(--tekst-2)}
+.x-kort .xlogo{margin-left:auto;width:18px;height:18px;color:var(--tekst)}
+.x-kort .emne{font-size:var(--fs-mikro);letter-spacing:var(--spor-kicker);text-transform:uppercase;margin:0 0 .5rem;display:flex;align-items:center;gap:.5rem}
+.x-kort .emne::before{content:"";width:16px;height:2px;background:var(--accent)}
+.x-kort p{font-size:var(--fs-lille);line-height:1.6}
+.x-kort .fond-note{font-size:var(--fs-mikro);color:var(--tekst-2)}
+.x-kort a{margin-top:auto;display:inline-flex;align-items:center;min-height:var(--tryk);font-size:var(--fs-lille)}
+@media (max-width:1023px){.xs{grid-template-columns:1fr}}
+.perspektiv{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(1.5rem,5vw,5rem);padding:clamp(1.5rem,4vw,3rem);border:1px solid var(--linje);border-radius:var(--r);background:linear-gradient(180deg,var(--kort),var(--bg))}
+.perspektiv blockquote{margin:0;font:500 var(--fs-h3)/1.4 var(--font-overskrift)}
+.perspektiv blockquote::before{content:"";display:block;width:28px;height:2px;background:var(--accent);margin-bottom:1.25rem}
+.perspektiv p{font-size:var(--fs-lille)}
+.perspektiv a{display:inline-flex;align-items:center;min-height:var(--tryk);font-size:var(--fs-brod);font-weight:500}
+@media (max-width:899px){.perspektiv{grid-template-columns:1fr}}
+.spoergsmaal{list-style:none;margin:0;padding:0;counter-reset:s;max-width:var(--tekst-maks)}
+.spoergsmaal li{counter-increment:s;display:grid;grid-template-columns:3rem 1fr;gap:1rem;padding:1.25rem 0;border-top:1px solid var(--linje);font:500 var(--fs-h3)/1.35 var(--font-overskrift)}
+.spoergsmaal li::before{content:"0" counter(s);font:400 var(--fs-lille)/2 var(--font-brod);color:var(--tekst-2);border-top:2px solid var(--accent);padding-top:.25rem;align-self:start}
+.faktaboks{border-left:2px solid var(--accent);padding:.25rem 0 .25rem 1.25rem;max-width:var(--tekst-maks);margin:2rem 0}
+.faktaboks h3{font-size:var(--fs-brod);font-family:var(--font-brod);font-weight:500;margin-bottom:.5rem}
+.faktaboks p{font-size:var(--fs-brod);margin:0}
+.kilder{list-style:none;margin:0;padding:0;max-width:var(--tekst-maks)}
+.kilder li{display:flex;justify-content:space-between;gap:1rem;align-items:center;border-top:1px solid var(--linje);min-height:56px}
+.kilder a{display:inline-flex;align-items:center;min-height:var(--tryk)}
+.kilder time{font-size:var(--fs-mikro);color:var(--tekst-2);white-space:nowrap}
+.naboer{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--rille)}
+.naboer a{display:flex;flex-direction:column;gap:.35rem;min-height:var(--tryk);padding:1.25rem 1.5rem;background:var(--kort);border:1px solid var(--linje);border-radius:var(--r);text-decoration:none;height:100%}
+.naboer a:hover{border-color:var(--accent)}
+.naboer b{font:500 var(--fs-h3)/1.25 var(--font-overskrift)}
+.naboer b::after{content:" →";color:var(--tekst-2)}
+.naboer span{font-size:var(--fs-lille)}
+@media (max-width:720px){.naboer{grid-template-columns:1fr}}
+.info{margin-top:var(--sektion);padding-block:clamp(3rem,6vw,5rem);border-top:1px solid var(--linje);background:linear-gradient(180deg,var(--kort),var(--bg) 70%)}
+.info .kolonner{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1.5rem,4vw,3.5rem);margin-top:2rem}
+.info h2{font-size:var(--fs-h3);max-width:28ch}
+.info h3{font-size:var(--fs-brod);font-family:var(--font-brod);font-weight:500;margin-bottom:.5rem}
+.info p{font-size:var(--fs-lille);line-height:1.6}
+.info a{display:inline-flex;align-items:center;min-height:var(--tryk);font-size:var(--fs-lille)}
+.info .links{list-style:none;padding:0;margin:0}
+@media (max-width:899px){.info .kolonner{grid-template-columns:1fr}}
+.fod{padding-block:2rem 3rem;border-top:1px solid var(--linje);font-size:var(--fs-mikro);color:var(--tekst-2)}
+.fod .ramme{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;align-items:center}
+.fod .maerke{color:var(--tekst);font-size:var(--fs-lille)}
+.periode{font-size:var(--fs-lille);color:var(--tekst-2);margin:0 0 1rem}
+.underrubrik{font-size:var(--fs-h3);margin:clamp(3rem,6vw,5rem) 0 .75rem}
+.graf .flade{margin-top:1.5rem;margin-bottom:2rem}
+.tabel{margin-top:1rem;font-size:var(--fs-lille)}
+.tabel summary{display:flex;align-items:center;min-height:var(--tryk);cursor:pointer;text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:.22em}
+.tabel table{border-collapse:collapse;width:100%;max-width:24rem;margin-top:.5rem}
+.tabel th,.tabel td{text-align:left;padding:.4rem .5rem;border-bottom:1px solid var(--linje)}
+.tabel th{font-weight:500;color:var(--tekst-2);font-size:var(--fs-mikro)}
+.tabel td.tal{text-align:right}
+.info .links li{font-size:var(--fs-mikro);color:var(--tekst-2)}
+.info .links li a{color:var(--tekst)}
+@media (prefers-reduced-motion:reduce){.soejler .bjaelke{transition:none}}
+body{--streg:2px}
+body[data-accent="spacex"]{--streg:3px}
+.kicker::before,.flow li,.fakta li,.andele li,.faktaboks{border-width:var(--streg)}
+.kicker::before{height:var(--streg)}
+.graf .serie{stroke-width:var(--streg)}
+.soejler .bjaelke.neg{border-width:var(--streg)}
+body[data-accent="spacex"] .soejler .bjaelke{height:18px;top:5px}
+@media (min-width:1024px){
+.hero-tekst{display:grid;grid-template-columns:minmax(0,8fr) minmax(0,4fr);gap:clamp(2rem,5vw,5rem);align-items:end}
+.hero h1{max-width:none}
+.hero-tekst .dek{margin:0 0 .4rem}
+}
+.sek-hoved .kicker{font-size:var(--fs-mikro);line-height:1.4;margin:0 0 1.25rem}
+.perspektiv blockquote::before{display:none}
+.video .skaerm{aspect-ratio:16/7}
+.maerke span,.top nav a{white-space:nowrap}
+@media (max-width:440px){.top nav li:not(:first-child){display:none}}
+.graf .flade{display:grid;grid-template-columns:3.4rem minmax(0,1fr);position:relative}
+.graf .flade>.y{left:0;transform:translateY(-50%)}
+.graf .plot{grid-column:2;position:relative}
+.graf .punkt{fill:none;stroke:var(--accent);stroke-width:7;stroke-linecap:round;vector-effect:non-scaling-stroke}
+body[data-accent="spacex"] .graf .punkt{stroke-width:8}
+.graf .direkte{color:var(--tekst)}
+.graf .plot{margin-right:3.6rem}
+.graf .plot .x:last-of-type{right:-1.2rem}
+@media (max-width:600px){.graf svg{aspect-ratio:1000/620 !important}}
+@media (min-width:601px){
+.hero .ramme{position:relative;z-index:1}
+.hero-billede.lav{margin-top:calc(-.36 * min(100vw,1440px) * 560 / 1440)}
+}
+@media (prefers-reduced-motion: no-preference) {
+.bs-forklar .bs-hjem,
+.bs-forklar .bs-signal,
+.bs-forklar .bs-software { animation: bs-flyd 6s linear infinite; }
+.bs-forklar .bs-op,
+.bs-forklar .bs-strom { animation: bs-ind 1.2s ease-out both; }
+@keyframes bs-flyd { to { stroke-dashoffset: -60; } }
+@keyframes bs-ind { from { opacity: 0; } }
+}
+.andel-linje{display:flex;flex-wrap:wrap;align-items:baseline;gap:.35rem 1.5rem;margin:1rem 0 0;font-size:var(--fs-lille)}
+.andel-linje .tal{font:500 var(--fs-h3)/1.2 var(--font-overskrift);margin-right:.3rem}
+.andel-linje .dato{flex-basis:100%;font-size:var(--fs-mikro);color:var(--tekst-2)}
+.lille-tekst{font-size:var(--fs-lille)}
+.perspektiv-ramme{margin-top:clamp(3rem,6vw,5rem)}
+.kildelinje.afslut{margin-top:2rem}
+.graf-titel{font-size:var(--fs-h3);margin:0 0 .25rem}
+.risiko .links{list-style:none;margin:1rem 0 0;padding:0}
+.risiko .links a{display:inline-flex;align-items:center;min-height:var(--tryk);font-size:var(--fs-lille)}
+.hjemrejse{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(1.5rem,5vw,4rem);align-items:start;margin-top:clamp(3.5rem,7vw,6rem);padding-top:clamp(2rem,4vw,3rem);border-top:1px solid var(--linje)}
+.hjemrejse .foto{margin:0}
+.hjemrejse img{display:block;width:100%;height:auto;border-radius:var(--r)}
+.hjemrejse figcaption{margin-top:.6rem}
+.hjemrejse .billedtekst{display:block;font-size:var(--fs-lille);line-height:1.5;margin-bottom:.25rem}
+.hjemrejse .kicker{margin-top:0}
+.hjemrejse h3{font-size:var(--fs-h3);line-height:var(--lh-overskrift);margin-bottom:1rem}
+.hjemrejse .prosa p{font-size:var(--fs-brod)}
+.hjemrejse .mere{display:inline-flex;align-items:center;min-height:var(--tryk);font-size:var(--fs-lille)}
+@media (max-width:899px){.hjemrejse{grid-template-columns:1fr}}
+.x-kort{padding:clamp(1.25rem,2.5vw,1.75rem)}
+.video .tekst{padding:clamp(1.25rem,2.5vw,1.75rem)}
+a.skaerm{text-decoration:none;color:inherit}
+.video .skaerm{aspect-ratio:16/6}
+.video .skaerm .yt-tekst{display:inline-flex;align-items:center;min-height:44px;padding:0 1.25rem;border:1px solid var(--linje);border-radius:999px;background:var(--bg);color:var(--tekst);font-weight:500;width:auto;height:auto;white-space:nowrap}
+a.skaerm:hover .yt-tekst{background:var(--kort-2)}
+.indhold a em,.indhold a i{font-style:normal}
+.indhold a b{display:none;font-weight:inherit}
+@media (max-width:720px){.video .skaerm{aspect-ratio:16/5}}
+@media (max-width:640px){.indhold a span,.indhold a i,.indhold a .lang{display:none}.indhold a b{display:inline}.indhold a{padding:0 .4rem;font-size:var(--fs-mikro)}.indhold ol{justify-content:space-between}}
+.vis-x{align-self:flex-start;min-height:var(--tryk);margin-top:.5rem;padding:0 1rem;background:transparent;color:var(--tekst);border:1px solid var(--linje-2);border-radius:var(--r-lille);font:500 var(--fs-lille)/1 var(--font-brod);cursor:pointer}
+.vis-x:hover{border-color:var(--accent)}
+.vis-x:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.x-indlejret:empty{display:none}
+.x-indlejret{margin-top:1rem;min-height:0}
+.x-indlejret .twitter-tweet{margin:0!important}
+.x-indlejret.henter{height:0;overflow:hidden;margin:0}
+.x-besked{font-size:var(--fs-lille);color:var(--tekst)}
+.forbehold a,.lille-tekst a,.kildelinje a{display:inline-flex;align-items:center;min-height:var(--tryk)}
+.forklar .tegning img{display:block;width:100%;height:auto;border-radius:var(--r)}
+</style>
+</head>
+<body data-accent="spacex">
+<a class="spring" href="#indhold">Spring til indholdet</a>
+<header class="top"><div class="ramme">
+<a class="maerke" href="../../index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19V5l14 14V5"/></svg><span>NewDeal Invest</span></a>
+<nav aria-label="Hovedmenu"><ul>
+<li><a href="../../udforsk.html">Temaerne</a></li>
+<li class="valgfri"><a href="../../stoerste-selskaber.html">De 20 største</a></li>
+<li><a href="../../selskaber.html">Alle selskaber</a></li>
+</ul></nav>
+</div></header>
+<main id="indhold">
+<section class="hero"><div class="ramme">
+<a class="tilbage" href="../../space/index.html">← Til temaet Rumfart</a>
+<div class="hero-tekst"><div><p class="kicker">SpaceX · SPCX · Nasdaq</p>
+<h1>Vejen til rummet. Forbindelsen til Jorden.</h1>
+<p class="andel-linje"><span><b class="tal">2,72 %</b> af PMINDI</span><span><b class="tal">2,92 %</b> af PMINDIAKK</span><span class="dato">SpaceX’ andel af fonden pr. 29.10.2026</span></p></div>
+<p class="dek">SpaceX sender mennesker og satellitter i kredsløb og leverer internetforbindelser gennem Starlink. AI udgjorde godt halvdelen af selskabets omsætning i 3. kvartal 2026. Her kan du undersøge, hvordan teknologien virker, og hvad de forskellige forretninger bidrager med.</p></div>
+</div>
+<figure class="hero-billede lav">
+<div class="felt" style="--hero-ar:1440/560">
+<picture>
+<source media="(max-width:600px)" type="image/avif" srcset="img/hero-spacex-390.avif 1x, img/hero-spacex-390@2x.avif 2x" width="390" height="488">
+<source media="(max-width:600px)" srcset="img/hero-spacex-390.webp 1x, img/hero-spacex-390@2x.webp 2x" width="390" height="488">
+<source type="image/avif" srcset="img/hero-spacex-1440w.avif 1x, img/hero-spacex-1440w@2x.avif 2x" width="1440" height="560">
+<img src="img/hero-spacex-1440w.webp" srcset="img/hero-spacex-1440w.webp 1x, img/hero-spacex-1440w@2x.webp 2x" width="1440" height="560" alt="" fetchpriority="high" decoding="async">
+</picture>
+</div>
+<figcaption><span class="kredit">Illustration: NewDeal Invest.</span></figcaption>
+</figure>
+<div class="ramme">
+<ul class="fakta"><li><span class="tal">14,58</span><span class="hvad">mia. USD i omsætning i 3. kvartal 2026</span></li><li><span class="tal">7,56</span><span class="hvad">mia. USD af omsætningen kom fra AI</span></li><li><span class="tal">2,79</span><span class="hvad">mia. USD i driftsresultat, sum af segmenter</span></li></ul>
+<p class="kildelinje">Andele: afdelingerne PMINDI og PMINDIAKK pr. 29.10.2026 (fondens data). Regnskabstal: Q3-regnskabsmeddelelsen, offentliggjort 20.10.2026. Tekst redigeret 29.10.2026.</p>
+<p class="forbehold">Markedsføringsmateriale, ikke personlig investeringsrådgivning. Indholdet tager ikke hensyn til din økonomi, erfaring eller risikovillighed. <a href="#info">Risiko og investorinformation ↓</a></p>
+</div></section>
+<nav class="indhold" aria-label="På siden"><div class="ramme"><ol><li><a href="#teknologien"><span>01</span><em>Teknologi<i>en</i></em></a></li><li><a href="#forretningen"><span>02</span><em>Forretning<i>en</i></em></a></li><li><a href="#historien"><span>03</span><em>Historie<i>n</i></em></a></li><li><a href="#fonden"><span>04</span>Fonden</a></li><li><a href="#se-det-ske"><span>05</span><em class="lang">Se det ske</em><b>Video</b></a></li></ol></div></nav>
+<section class="sektion" id="teknologien"><div class="ramme">
+<header class="sek-hoved"><p class="kicker">01 · Teknologien</p><h2>Tre forretninger med forskellige opgaver.</h2><p>Rumfart, Starlink og AI har hver sin teknik, sine kunder og sin økonomi.</p></header>
+<figure class="forklar" role="img" aria-label="Tegning: en raket på vej op, satellitter i kredsløb over en terminal på Jorden og et datacenter.">
+<div class="tegning stor"><img class="bs-billede" src="img/forklar-spacex-stor.svg" width="960" height="540" alt="" loading="lazy" decoding="async"><div class="etiketter" aria-hidden="true"><span class="etiket" style="left:17.0%;top:88.0%;transform:translate(-50%,-50%)">Hjem igen (genbrug)</span><span class="etiket" style="left:50.0%;top:6.8%;transform:translate(-50%,-50%)">Starlink (satellitterne)</span><span class="etiket" style="left:26.7%;top:38.0%;transform:translate(-50%,-50%)">Opsendelse</span><span class="etiket" style="left:50.0%;top:88.0%;transform:translate(-50%,-50%)">Terminal</span><span class="etiket" style="left:80.0%;top:88.0%;transform:translate(-50%,-50%)">AI på jorden</span></div></div>
+<div class="tegning lille"><img class="bs-billede" src="img/forklar-spacex-lille.svg" width="358" height="268" alt="" loading="lazy" decoding="async"><div class="etiketter" aria-hidden="true"><span class="etiket" style="left:3.0%;top:88.0%;transform:translate(0,-50%)">Hjem igen</span><span class="etiket" style="left:50.0%;top:5.8%;transform:translate(-50%,-50%)">Starlink (satellitterne)</span><span class="etiket" style="left:26.7%;top:38.0%;transform:translate(-50%,-50%)">Opsendelse</span><span class="etiket" style="left:50.0%;top:88.0%;transform:translate(-50%,-50%)">Terminal</span><span class="etiket" style="left:80.0%;top:88.0%;transform:translate(-50%,-50%)">AI på jorden</span></div></div>
+<figcaption class="kredit">Illustration: NewDeal Invest. Skematisk tegning, ikke i målestok.</figcaption>
+</figure>
+<div class="faner" role="tablist" aria-label="Vælg forretning" data-faner="fliser"><button type="button" role="tab" aria-selected="true">Rumfart</button><button type="button" role="tab" aria-selected="false">Starlink</button><button type="button" role="tab" aria-selected="false">AI</button></div><div class="fliser med-faner" id="fliser"><article class="flise aktiv"><p class="omraade">Rumfart · opsendelser</p><h3>Adgang til kredsløb</h3><p class="ingress">Raketten er transporten. Genbrug ændrer regnestykket.</p><p>En raket består af trin, der arbejder efter hinanden. Falcon 9 bringer det nederste trin med de store motorer tilbage til Jorden, så det kan flyve igen. Det sparer ikke al klargøring, og resten af raketten genbruges ikke på samme måde.</p><p class="mellemrubrik">Sådan bliver det en forretning</p><p>Kunder betaler for at få satellitter, last eller mennesker ud i rummet. SpaceX bruger også opsendelserne internt til Starlink. En intern opsendelse er derfor ikke det samme som en ny ekstern kundeindtægt.</p><p class="afhaenger"><b>Det afhænger af:</b> hvor ofte raketten kan flyve, og hvor sikkert og billigt den kan klargøres igen.</p><a class="mere" href="https://www.spacex.com/vehicles/falcon-9/" rel="noopener" target="_blank">Falcon 9 hos SpaceX ↗</a></article><article class="flise"><p class="omraade">Starlink · internet fra kredsløb</p><h3>En tjeneste over Jorden</h3><p class="ingress">Opsendelsen varer minutter. Forbindelsen betales løbende.</p><p>Starlink forbinder terminaler på Jorden med satellitter i lave kredsløb. Satellitterne flytter sig hele tiden, så forbindelsen skal overdrages fra én til den næste. Netværket består også af jordstationer, software og forbindelser mellem satellitter.</p><p class="mellemrubrik">Sådan bliver det en forretning</p><p>Her er produktet internetadgang. Kunden betaler for udstyr og en tjeneste, der typisk betales løbende. Flere satellitter kan give mere kapacitet, men netværket skal også vedligeholdes og fornys.</p><p class="afhaenger"><b>Det afhænger af:</b> kundeantal, indtægt pr. kunde og netværkets kapacitet.</p><a class="mere" href="https://www.starlink.com/technology" rel="noopener" target="_blank">Teknologien bag Starlink ↗</a></article><article class="flise"><p class="omraade">AI · beregning</p><h3>Beregning og software</h3><p class="ingress">Koncernen rækker også ind i datacentret.</p><p>SpaceX rapporterer nu også AI-modeller, software og beregningsinfrastruktur i segmentet Super Intelligence. Her er produktet beregning eller software, mens de fysiske forudsætninger blandt andet er chips, strøm og køling.</p><p class="mellemrubrik">Sådan bliver det en forretning</p><p>Forretningen skal forstås særskilt fra opsendelser og internetabonnementer. Store aftaler kan øge omsætningen, samtidig med at udbygningen kræver store investeringer.</p><p class="afhaenger"><b>Det afhænger af:</b> kapacitetsudnyttelse, kundeaftaler og udgifter til infrastrukturen.</p><a class="mere" href="https://www.sec.gov/Archives/edgar/data/1181412/000162828026066482/spaceexplorationtechnologi.htm" rel="noopener" target="_blank">Læs segmentbeskrivelsen ↗</a></article></div>
+<div class="mellemspil"><div><p class="kicker">Det vigtige samspil</p><h3>Starlink giver SpaceX en anden indtægt fra rumfarten.</h3></div><div class="prosa"><p>Når SpaceX sender en kundes satellit op, betaler kunden for transporten. Når raketten i stedet bærer Starlink-satellitter, bygger SpaceX sit eget netværk. Her kommer indtægten fra de kunder, som betaler for internetadgang.</p><p>SpaceX leverer altså både raketten og den tjeneste, satellitterne gør mulig. Men en opsendelse for Starlink er ikke en betaling fra en ny kunde uden for koncernen. Det er en del af arbejdet og udgiften ved at drive internetforretningen.</p><ol class="flow"><li>Falcon-raketten bringer Starlink-satellitter i kredsløb.</li><li>Starlink-netværket forbinder kundens terminal med internettet.</li><li>Kunden betaler for udstyr og internetadgang.</li></ol></div></div>
+<div class="hjemrejse"><figure class="foto"><picture><source media="(max-width:600px)" srcset="img/booster-retur-800.webp" width="800" height="533"><img src="img/booster-retur-1200.webp" width="1200" height="800" alt="To rakettrin lander lodret med motorerne tændt under en blå himmel." loading="lazy" decoding="async"></picture><figcaption><span class="billedtekst">Sideboosterne vender hjem efter GOES-U-opsendelsen i juni 2024.</span><span class="kredit">Foto: SpaceX (CC0), via NOAA.</span></figcaption></figure>
+<div class="prosa"><p class="kicker">Det er også en hjemrejse</p><h3>Raketten er ikke færdig, når den har sendt sin last afsted.</h3><p>På billedet vender to rakettrin tilbage til Jorden. Motorerne bremser nedstigningen, og landingsbenene gør det muligt at sætte trinnene ned igen.</p><p>Det er forskellen mellem at bygge et nyt rakettrin til hver tur og at kunne bruge det samme flere gange. Men en vellykket landing er kun begyndelsen. Inspektion, klargøring og næste opsendelse er også en del af regnestykket.</p><p class="mellemrubrik">Fra teknik til forretning</p><p>Genbrug kan fordele udgiften til et rakettrin over flere flyvninger. Hvor meget det betyder, afhænger også af vedligeholdelse, kapacitet og hvor ofte raketten kommer afsted.</p><a class="mere" href="https://www.nesdis.noaa.gov/imagery/media-stills-animation/geostationary-satellites-media-gallery/goes-u-launch-image-gallery" rel="noopener" target="_blank">Se billederne fra GOES-U-opsendelsen hos NOAA ↗<span class="sr"> (åbner i nyt vindue)</span></a></div></div>
+</div></section>
+<section class="sektion" id="forretningen"><div class="ramme">
+<header class="sek-hoved"><p class="kicker">02 · Forretningen</p><h2>Omsætning fortæller kun en del af historien.</h2><p>Sammenlign de tre segmenter. En stor forretning målt på omsætning behøver ikke bidrage mest til driftsresultatet.</p></header>
+<div class="valg" role="group" aria-label="Vælg kvartal"><button type="button" aria-pressed="false" data-periode="p0">2. kvt. 2026</button><button type="button" aria-pressed="true" data-periode="p1">3. kvt. 2026</button></div><div class="periode-panel" id="p0" hidden>
+<p class="periode">2. kvartal 2026 · april til juni. Alle tal i mio. USD.</p>
+<div class="multipler"><div class="multipel"><h3>Omsætning</h3><p class="sum tal">7,81</p><p class="enhed">mia. USD i alt</p><ul class="soejler"><li><span class="navn">Rumfart</span><span class="spor"><span class="nul" style="left:0.00%"></span><span class="bjaelke" style="left:0.00%;width:12.72%"></span></span><span class="vaerdi">962</span></li><li><span class="navn">Starlink</span><span class="spor"><span class="nul" style="left:0.00%"></span><span class="bjaelke" style="left:0.00%;width:56.76%"></span></span><span class="vaerdi">4.291</span></li><li><span class="navn">AI</span><span class="spor"><span class="nul" style="left:0.00%"></span><span class="bjaelke" style="left:0.00%;width:33.88%"></span></span><span class="vaerdi">2.561</span></li></ul></div><div class="multipel"><h3>Driftsresultat</h3><p class="sum tal">−0,14</p><p class="enhed">mia. USD, sum af segmenter</p><ul class="soejler"><li><span class="navn">Rumfart</span><span class="spor"><span class="nul" style="left:34.69%"></span><span class="bjaelke neg" style="left:19.73%;width:14.96%"></span></span><span class="vaerdi">−542</span></li><li><span class="navn">Starlink</span><span class="spor"><span class="nul" style="left:34.69%"></span><span class="bjaelke" style="left:34.69%;width:45.70%"></span></span><span class="vaerdi">1.656</span></li><li><span class="navn">AI</span><span class="spor"><span class="nul" style="left:34.69%"></span><span class="bjaelke neg" style="left:0.00%;width:34.69%"></span></span><span class="vaerdi">−1.257</span></li></ul></div><div class="multipel"><h3>Anlægsinvesteringer</h3><p class="sum tal">18,37</p><p class="enhed">mia. USD i alt</p><ul class="soejler"><li><span class="navn">Rumfart</span><span class="spor"><span class="nul" style="left:0.00%"></span><span class="bjaelke" style="left:0.00%;width:7.14%"></span></span><span class="vaerdi">1.174</span></li><li><span class="navn">Starlink</span><span class="spor"><span class="nul" style="left:0.00%"></span><span class="bjaelke" style="left:0.00%;width:8.31%"></span></span><span class="vaerdi">1.367</span></li><li><span class="navn">AI</span><span class="spor"><span class="nul" style="left:0.00%"></span><span class="bjaelke" style="left:0.00%;width:96.25%"></span></span><span class="vaerdi">15.828</span></li></ul></div></div>
+<p class="konklusion">Starlink havde både størst omsætning og størst driftsresultat. Anlægsinvesteringerne var 18,37 mia. USD.</p>
+</div><div class="periode-panel" id="p1">
+<p class="periode">3. kvartal 2026 · juli til september. Alle tal i mio. USD.</p>
+<div class="multipler"><div class="multipel"><h3>Omsætning</h3><p class="sum tal">14,58</p><p class="enhed">mia. USD i alt</p><ul class="soejler"><li><span class="navn">Rumfart</span><span class="spor"><span class="nul" style="left:0.00%"></span><span class="bjaelke" style="left:0.00%;width:23.37%"></span></span><span class="vaerdi">1.767</span></li><li><span class="navn">Starlink</span><span class="spor"><span class="nul" style="left:0.00%"></span><span class="bjaelke" style="left:0.00%;width:69.42%"></span></span><span class="vaerdi">5.248</span></li><li><span class="navn">AI</span><span class="spor"><span class="nul" style="left:0.00%"></span><span class="bjaelke" style="left:0.00%;width:100.00%"></span></span><span class="vaerdi">7.560</span></li></ul></div><div class="multipel"><h3>Driftsresultat</h3><p class="sum tal">2,79</p><p class="enhed">mia. USD, sum af segmenter</p><ul class="soejler"><li><span class="navn">Rumfart</span><span class="spor"><span class="nul" style="left:34.69%"></span><span class="bjaelke neg" style="left:34.49%;width:0.40%"></span></span><span class="vaerdi">−7</span></li><li><span class="navn">Starlink</span><span class="spor"><span class="nul" style="left:34.69%"></span><span class="bjaelke" style="left:34.69%;width:65.31%"></span></span><span class="vaerdi">2.367</span></li><li><span class="navn">AI</span><span class="spor"><span class="nul" style="left:34.69%"></span><span class="bjaelke" style="left:34.69%;width:11.89%"></span></span><span class="vaerdi">431</span></li></ul></div><div class="multipel"><h3>Anlægsinvesteringer</h3><p class="sum tal">19,59</p><p class="enhed">mia. USD i alt</p><ul class="soejler"><li><span class="navn">Rumfart</span><span class="spor"><span class="nul" style="left:0.00%"></span><span class="bjaelke" style="left:0.00%;width:9.77%"></span></span><span class="vaerdi">1.606</span></li><li><span class="navn">Starlink</span><span class="spor"><span class="nul" style="left:0.00%"></span><span class="bjaelke" style="left:0.00%;width:9.38%"></span></span><span class="vaerdi">1.543</span></li><li><span class="navn">AI</span><span class="spor"><span class="nul" style="left:0.00%"></span><span class="bjaelke" style="left:0.00%;width:100.00%"></span></span><span class="vaerdi">16.444</span></li></ul></div></div>
+<p class="konklusion">AI havde størst omsætning. Starlink bidrog mest til driftsresultatet. Anlægsinvesteringerne oversteg omsætningen, og 16,44 mia. USD gik til AI.</p>
+</div><p class="prosa lille-tekst">Hver graf bruger samme skala i begge kvartaler. Driftsresultat er resultat før renter og skat. Anlægsinvesteringer er udgifter til aktiver, der skal bruges over flere år. Periodens afskrivninger indgår i driftsresultatet, men hele investeringen trækkes ikke fra på én gang.</p><p class="prosa lille-tekst">AI-væksten kom ifølge selskabet især fra nye cloudaftaler, overtagelsen af Cursor og øget brug af Grok. Cursor indgår fra 14.08.2026 og bidrog med 608 mio. USD i omsætning. Driftsresultatet inkluderer 1,2 mia. USD i aktiebaseret aflønning knyttet til overtagelsen. Kvartalerne har derfor forskellig koncernsammensætning.</p><p class="kildelinje">Kilde: Q3-regnskabsmeddelelsen, 8-K bilag 99.1, offentliggjort 20.10.2026. Q2 er sammenligningstal fra samme meddelelse. Super Intelligence er selskabets regnskabsnavn for AI-segmentet. <a href="https://www.sec.gov/Archives/edgar/data/1181412/000162828026066482/spaceexplorationtechnologi.htm" rel="noopener" target="_blank">Åbn regnskabsmeddelelsen hos SEC ↗</a></p>
+</div></section>
+<section class="sektion" id="historien"><div class="ramme">
+<header class="sek-hoved"><p class="kicker">03 · Historien</p><h2>Fra et enkelt mål til flere forretninger.</h2><p>Udvalgte milepæle. Historien viser, hvad selskabet har opnået. Den er ikke en tidsplan for det næste gennembrud.</p></header>
+<ol class="tidslinje"><li><time>2002</time><h3>En ny raketvirksomhed</h3><p>SpaceX bliver grundlagt. Udgangspunktet er at udvikle og bygge egne raketter.</p><a href="https://www.nasa.gov/wp-content/uploads/2018/07/spacex_nasa_crs-4_presskit.pdf" rel="noopener" target="_blank">Kilde ↗<span class="sr"> til En ny raketvirksomhed (åbner i nyt vindue)</span></a></li><li><time>2012</time><h3>Dragon når rumstationen</h3><p>Lastflyvningen viser, at et privat udviklet rumfartøj kan levere til ISS og vende tilbage.</p><a href="https://www.nasa.gov/wp-content/uploads/2018/07/spacex_nasa_crs-4_presskit.pdf" rel="noopener" target="_blank">Kilde ↗<span class="sr"> til Dragon når rumstationen (åbner i nyt vindue)</span></a></li><li><time>2015</time><h3>Første trin lander igen</h3><p>Falcon 9 lander sit første trin efter en opsendelse. Det er et afgørende skridt mod at genbruge rakettrin frem for at bygge et nyt til hver flyvning.</p><a href="https://science.nasa.gov/image-article/apod-2015-december-28-falcon-9-first-stage-landing/" rel="noopener" target="_blank">Kilde ↗<span class="sr"> til Første trin lander igen (åbner i nyt vindue)</span></a></li><li><time>2020</time><h3>Mennesker om bord</h3><p>Demo-2 bringer astronauter til ISS. Senere samme år certificerer NASA systemet til regelmæssige bemandede flyvninger.</p><a href="https://www.nasa.gov/humans-in-space/nasa-and-spacex-complete-certification-of-first-human-rated-commercial-space-system/" rel="noopener" target="_blank">Kilde ↗<span class="sr"> til Mennesker om bord (åbner i nyt vindue)</span></a></li><li><time>Juni 2026</time><h3>SpaceX kommer på Nasdaq</h3><p>Aktien begynder at handle under SPCX. Handelshistorikken er derfor væsentligt kortere end selskabets historie.</p><a href="https://www.sec.gov/Archives/edgar/data/1181412/000162828026066880/spcx-20260930.htm" rel="noopener" target="_blank">Kilde ↗<span class="sr"> til SpaceX kommer på Nasdaq (åbner i nyt vindue)</span></a></li><li><time>3. kvt. 2026</time><h3>Starship bærer en nyttelast</h3><p>Starship leverer 26 af selskabets egne Starlink V3-satellitter. Selskabet omtaler missionen som indtægtsgivende. Det er ikke dokumentation for en ekstern kundeindtægt.</p><a href="https://www.sec.gov/Archives/edgar/data/1181412/000162828026066482/spaceexplorationtechnologi.htm" rel="noopener" target="_blank">Kilde ↗<span class="sr"> til Starship bærer en nyttelast (åbner i nyt vindue)</span></a></li></ol>
+</div></section>
+<section class="sektion" id="fonden"><div class="ramme">
+<header class="sek-hoved"><p class="kicker">04 · Fonden</p><h2>SpaceX i fonden.</h2><p>Hvor stor en del af fonden SpaceX udgør, i hver af de to afdelinger.</p></header>
+<div class="fond"><div><ul class="andele"><li><span class="tal">2,72 %</span><span class="hvad">af fonden, afdelingen PMINDI, den udloddende andelsklasse.</span></li><li><span class="tal">2,92 %</span><span class="hvad">af fonden, afdelingen PMINDIAKK, den akkumulerende andelsklasse.</span></li></ul><p class="kildelinje">Andele: afdelingerne PMINDI og PMINDIAKK pr. 29.10.2026 (fondens data). Ikke realtidstal.</p><div class="risiko"><h3>Risiko</h3><p>Aktien kan falde i værdi, og hele det investerede beløb kan tabes. Investering gennem fonden er ikke det samme som at eje SpaceX-aktien direkte.</p><p>Fondens risiko er 5 af 7. Fonden har en økonomisk interesse i selskabet gennem den oplyste andel.</p><ul class="links"><li><a href="https://fundmarket.dk/newdeal-invest-kl-n/" rel="noopener" target="_blank">PMINDI: KID og prospekt ↗<span class="sr"> (åbner i nyt vindue)</span></a></li><li><a href="https://fundmarket.dk/newdeal-invest-akk-kl-n/" rel="noopener" target="_blank">PMINDIAKK: KID og prospekt ↗<span class="sr"> (åbner i nyt vindue)</span></a></li></ul></div></div>
+<div><figure class="graf">
+<h3 class="graf-titel">Andelens historie i fonden</h3>
+<p class="mellemrubrik">Andel af PMINDI · fire månedsobservationer og 29.10.2026</p>
+<div class="flade"><span class="y" style="top:96.67%">0,00 %</span><span class="y" style="top:66.67%">1,00 %</span><span class="y" style="top:36.67%">2,00 %</span><span class="y" style="top:6.67%">3,00 %</span><div class="plot">
+<svg viewBox="0 0 1000 300" preserveAspectRatio="none" role="img" aria-label="Linjegraf over SpaceX’ andel af PMINDI fra 0,28 % 01.07.2026 til 2,72 % 29.10.2026. Alle fem observationer står i tabellen." style="aspect-ratio:1000/300"><g class="gitter"><line x1="0" x2="1000" y1="290.0" y2="290.0"/><line x1="0" x2="1000" y1="200.0" y2="200.0"/><line x1="0" x2="1000" y1="110.0" y2="110.0"/><line x1="0" x2="1000" y1="20.0" y2="20.0"/></g><polyline class="serie" points="0.0,264.8 275.0,125.3 516.7,146.9 766.7,148.7 1000.0,45.2"/><line class="punkt" x1="0.0" y1="264.8" x2="0.0" y2="264.8"/><line class="punkt" x1="275.0" y1="125.3" x2="275.0" y2="125.3"/><line class="punkt" x1="516.7" y1="146.9" x2="516.7" y2="146.9"/><line class="punkt" x1="766.7" y1="148.7" x2="766.7" y2="148.7"/><line class="punkt" x1="1000.0" y1="45.2" x2="1000.0" y2="45.2"/></svg>
+<span class="direkte" style="left:0.00%;top:88.27%;transform:translate(12px,-30%)">0,28 %</span><span class="direkte" style="left:27.50%;top:41.77%;transform:translate(-50%,-170%)">1,83 %</span><span class="direkte" style="left:51.67%;top:48.97%;transform:translate(-50%,-170%)">1,59 %</span><span class="direkte" style="left:76.67%;top:49.57%;transform:translate(-50%,70%)">1,57 %</span><span class="direkte" style="left:100.00%;top:15.07%;transform:translate(10px,-50%)">2,72 %</span><span class="x" style="left:0">01.07.2026</span><span class="x" style="right:0">29.10.2026</span></div></div>
+<figcaption class="kredit">Første tilgængelige Fundmarket-rapport i hver måned. Sidste punkt, 29.10.2026, er fondens egne data, samme kilde som andelen øverst. Manglende observationer er udeladt og ikke sat til nul. Grafen viser andelen af fonden, ikke aktiens pris.</figcaption>
+<details class="tabel"><summary>Se observationer</summary><table><thead><tr><th scope="col">Dato</th><th scope="col">PMINDI</th><th scope="col">PMINDIAKK</th></tr></thead><tbody><tr><td>01.07.2026</td><td class="tal">0,28 %</td><td class="tal">0,23 %</td></tr><tr><td>03.08.2026</td><td class="tal">1,83 %</td><td class="tal">2,23 %</td></tr><tr><td>01.09.2026</td><td class="tal">1,59 %</td><td class="tal">1,60 %</td></tr><tr><td>01.10.2026</td><td class="tal">1,57 %</td><td class="tal">1,60 %</td></tr><tr><td>29.10.2026</td><td class="tal">2,72 %</td><td class="tal">2,92 %</td></tr></tbody></table><p class="kildelinje">Fire månedsobservationer fra 01.07.2026 til 01.10.2026 fra Fundmarket. 29.10.2026 er fondens egne data. <a href="https://fundmarket.dk/newdeal-invest-kl-n/" rel="noopener" target="_blank">Fundmarket · fondsoplysninger og rapporter ↗<span class="sr"> (åbner i nyt vindue)</span></a></p></details>
+</figure></div></div>
+</div></section>
+<section class="sektion" id="se-det-ske"><div class="ramme">
+<header class="sek-hoved"><p class="kicker">05 · Se det ske</p><h2>Det er lettere at forstå, når man har set det.</h2><p>To historiske optagelser fra SpaceX. Se efter genbrug af rakettrinnene og opsendelse af satellitter.</p></header>
+<div class="videoer"><article class="video">
+<a class="skaerm" href="https://www.youtube.com/watch?v=A0FZIwabctw" tabindex="-1" aria-hidden="true" rel="noopener" target="_blank"><span class="yt-tekst">Se på YouTube ↗</span></a>
+<div class="tekst"><p class="meta">2018 · SpaceX</p><h3>Falcon Heavy &amp; Starman</h3><p>To sideboostere lander efter den første Falcon Heavy-flyvning. Det gør genbrug fysisk og let at få øje på.</p>
+<a href="https://www.youtube.com/watch?v=A0FZIwabctw" rel="noopener" target="_blank">Se videoen på YouTube ↗<span class="sr"> (åbner i nyt vindue)</span></a></div>
+</article><article class="video">
+<a class="skaerm" href="https://www.youtube.com/watch?v=KzpVUXxdc68" tabindex="-1" aria-hidden="true" rel="noopener" target="_blank"><span class="yt-tekst">Se på YouTube ↗</span></a>
+<div class="tekst"><p class="meta">2022 · SpaceX</p><h3>En Starlink-opsendelse</h3><p>Følg en mission med 53 satellitter. Første trin fløj her for tolvte gang.</p>
+<a href="https://www.youtube.com/watch?v=KzpVUXxdc68" rel="noopener" target="_blank">Se videoen på YouTube ↗<span class="sr"> (åbner i nyt vindue)</span></a></div>
+</article></div><p class="kildelinje">Videoerne er selskabets eget materiale og vises ikke som en uafhængig vurdering. De åbner hos YouTube.</p>
+<h3 class="underrubrik">Udvalgte opslag fra X</h3>
+<p class="prosa lille-tekst">Nyheder om teknologien og forretningen, udvalgt automatisk. Teksten på hvert kort er vores automatiske resumé. Opslaget fra X indlæses først, når du trykker på knappen.</p>
+<ul class="xs"><li class="x-kort">
+<header><span class="av" aria-hidden="true">S</span><span class="hvem"><b>Starlink</b><span>@Starlink · Selskabets konto · <time>26.10.2026</time></span></span><svg class="xlogo" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.3L5.3 21H2.2l7.3-8.3L2 3h6.3l4.4 5.8L17.8 3Zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5Z"/></svg></header>
+<p class="emne">Hvorfor er det med?</p>
+<p>Starlink oplyser, at tjenesten Starlink Mobile nu er i drift i Brasilien sammen med teleselskabet Vivo. Ifølge Starlink kan 50 mio. kunder bruge apps og beskeder i områder uden mobildækning, og 7 mio. telefoner er allerede forbundet.</p>
+<a href="https://x.com/Starlink/status/2114747196226859108" rel="noopener" target="_blank">Se hele opslaget på X ↗<span class="sr"> (åbner i nyt vindue)</span></a>
+<button type="button" class="vis-x">Vis opslaget her</button><div class="x-indlejret"></div>
+</li><li class="x-kort">
+<header><span class="av" aria-hidden="true">S</span><span class="hvem"><b>Starlink</b><span>@Starlink · Selskabets konto · <time>26.10.2026</time></span></span><svg class="xlogo" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.3L5.3 21H2.2l7.3-8.3L2 3h6.3l4.4 5.8L17.8 3Zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5Z"/></svg></header>
+<p class="emne">Hvorfor er det med?</p>
+<p>Starlink oplyser, at selskabet skal levere internetforbindelse om bord på easyJets fly, så passagererne kan arbejde, streame og holde kontakten under flyvningen.</p>
+<a href="https://x.com/Starlink/status/2114695236459094499" rel="noopener" target="_blank">Se hele opslaget på X ↗<span class="sr"> (åbner i nyt vindue)</span></a>
+<button type="button" class="vis-x">Vis opslaget her</button><div class="x-indlejret"></div>
+</li><li class="x-kort">
+<header><span class="av" aria-hidden="true">S</span><span class="hvem"><b>SpaceX</b><span>@SpaceX · Selskabets konto · <time>25.10.2026</time></span></span><svg class="xlogo" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.3L5.3 21H2.2l7.3-8.3L2 3h6.3l4.4 5.8L17.8 3Zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5Z"/></svg></header>
+<p class="emne">Hvorfor er det med?</p>
+<p>SpaceX oplyser, at selskabet har gennemført en statisk prøvetænding af alle 33 motorer i fuld varighed på den Super Heavy-booster, der forberedes til Starships 15. testflyvning.</p>
+<a href="https://x.com/SpaceX/status/2114444137067844004" rel="noopener" target="_blank">Se hele opslaget på X ↗<span class="sr"> (åbner i nyt vindue)</span></a>
+<button type="button" class="vis-x">Vis opslaget her</button><div class="x-indlejret"></div>
+</li></ul>
+<p class="kildelinje">Senest gennemgået 29.10.2026. Opslagene er afsendernes egne udsagn.</p>
+<div class="perspektiv-ramme"><div class="perspektiv"><div><p class="kicker">NewDeal Invests perspektiv</p><blockquote>Nysgerrig på at læse mere om forbindelsen mellem opsendelser, kommunikation og beregningsinfrastruktur?</blockquote></div><div><p>Analysen undersøger forbindelsen mellem opsendelser, kommunikation og beregningsinfrastruktur. Scenarier om datacentre i rummet skal holdes adskilt fra dokumenteret drift.</p><a href="https://www.newdealinvest.dk/post/spacex-powering-ai-from-orbit" rel="noopener" target="_blank">SpaceX - Powering AI from Orbit ↗<span class="sr"> (åbner i nyt vindue)</span></a><p class="kildelinje">NewDeal Invest · analyse, kilde: Convequity · 03.07.2026. Dateret kommentar.</p></div></div></div>
+</div></section>
+<section class="sektion"><div class="ramme">
+<p class="kicker">Videre</p><h2 class="sr">Videre</h2>
+<ul class="naboer"><li><a href="../../space/index.html"><b>Rumfart</b><span>Fra opsendelse til tjenester på Jorden</span></a></li><li><a href="../../datacenter/index.html"><b>Datacentre</b><span>Den fysiske infrastruktur bag AI</span></a></li><li><a href="../../software/index.html"><b>Software &amp; AI</b><span>Fra beregning til noget, kunden bruger</span></a></li></ul>
+</div></section>
+</main>
+<section class="info" id="info"><div class="ramme">
+<p class="kicker">Risiko og investorinformation</p>
+<h2>Et grundlag for at forstå. Ikke en personlig anbefaling.</h2>
+<div class="kolonner"><div><h3>Materialets formål</h3><p>Udgivet af NewDeal Invest som markedsføringsmateriale. PMINDI og PMINDIAKK forvaltes af Fundmarket A/S. Siden forklarer selskabets teknologi og forretning og tager ikke stilling til, om en investering er egnet til dig. Den er ikke personlig investerings- eller skatterådgivning.</p></div><div><h3>Hvis du overvejer fonden</h3><p>Du kan miste en del af eller hele din investering. Teknologiaktier kan svinge betydeligt, og fonden er også udsat for sektorrisiko. Læs dokumentet med central information (PRIIP-KID), prospektet og risikobeskrivelsen inden en investeringsbeslutning.</p><ul class="links"><li><a href="https://fundmarket.dk/newdeal-invest-kl-n/" rel="noopener" target="_blank">PMINDI: KID og prospekt hos Fundmarket ↗<span class="sr"> (åbner i nyt vindue)</span></a></li><li><a href="https://fundmarket.dk/newdeal-invest-akk-kl-n/" rel="noopener" target="_blank">PMINDIAKK: KID og prospekt hos Fundmarket ↗<span class="sr"> (åbner i nyt vindue)</span></a></li><li><a href="https://www.newdealinvest.dk/risici" rel="noopener" target="_blank">Fondens risikofaktorer ↗<span class="sr"> (åbner i nyt vindue)</span></a></li></ul></div><div><h3>Kilder og interesser</h3><p>Fondens andel vises med dato under Fonden. Selskabets egne videoer og opslag er afsenderens udsagn. Udvælgelsen gør dem ikke til uafhængige analyser. Kildeangivelse er heller ikke en garanti for, at udsagnene er korrekte.</p><p>Regnskabstal og fondsandele har hver deres opgørelsesdato. Forklaringer og spørgsmål på siden er redaktionelt indhold.</p></div></div>
+<p class="kildelinje afslut">Beholdninger 29.10.2026. Tekst redigeret 29.10.2026.</p>
+</div></section>
+<footer class="fod"><div class="ramme"><a class="maerke" href="../../index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19V5l14 14V5"/></svg><span>NewDeal Invest</span></a>
+<span>Markedsføringsmateriale. Ikke personlig investeringsrådgivning. Investering indebærer risiko for tab.</span></div></footer>
+<script>
+(function(){
+var b=document.querySelectorAll('.valg button');
+b.forEach(function(k){k.addEventListener('click',function(){
+  b.forEach(function(x){x.setAttribute('aria-pressed','false');document.getElementById(x.dataset.periode).hidden=true});
+  k.setAttribute('aria-pressed','true');document.getElementById(k.dataset.periode).hidden=false;})});
+document.querySelectorAll('[data-faner]').forEach(function(f){
+  var fl=document.getElementById(f.dataset.faner),knap=f.querySelectorAll('button');
+  knap.forEach(function(t,i){t.addEventListener('click',function(){
+    knap.forEach(function(x){x.setAttribute('aria-selected','false')});t.setAttribute('aria-selected','true');
+    fl.querySelectorAll('.flise').forEach(function(x,j){x.classList.toggle('aktiv',i===j)});})});
+});
+var links=[].slice.call(document.querySelectorAll('.indhold a'));
+if('IntersectionObserver' in window&&links.length){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){
+    links.forEach(function(a){a.setAttribute('aria-current',String(a.getAttribute('href')==='#'+e.target.id))});}})},{rootMargin:'-40% 0px -55% 0px'});
+  links.forEach(function(a){var s=document.querySelector(a.getAttribute('href'));if(s)io.observe(s)});
+}
+if(window.matchMedia&&matchMedia('(prefers-reduced-motion: no-preference)').matches&&'IntersectionObserver' in window&&window.fetch){
+  var tio=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;tio.unobserve(e.target);var img=e.target;
+    fetch(img.getAttribute('src')).then(function(r){return r.ok?r.text():null}).then(function(t){if(!t)return;
+      var d=new DOMParser().parseFromString(t,'image/svg+xml').documentElement;if(d&&d.nodeName==='svg'){img.replaceWith(document.importNode(d,true))}}).catch(function(){})})},{rootMargin:'200px 0px'});
+  document.querySelectorAll('.tegning img.bs-billede').forEach(function(i){if(i.offsetParent!==null)tio.observe(i)});
+}
+var xjs=null,xvent=[];
+function medX(f){if(window.twttr&&twttr.widgets&&twttr.widgets.createTweet){f();return}xvent.push(f);
+  if(!xjs){xjs=document.createElement('script');xjs.async=true;xjs.src='https://platform.twitter.com/widgets.js';
+    xjs.onload=function(){twttr.ready(function(){xvent.splice(0).forEach(function(g){g()})})};
+    xjs.onerror=function(){xvent.splice(0).forEach(function(g){g(true)})};document.body.appendChild(xjs)}}
+document.querySelectorAll('.vis-x').forEach(function(k){k.addEventListener('click',function(){
+  var kort=k.closest('.x-kort'),mål=kort.querySelector('.x-indlejret'),url=kort.querySelector('a[href^="https://x.com/"]').href,id=(url.match(/status\/(\d+)/)||[])[1];
+  k.disabled=true;k.textContent='Henter opslaget …';
+  var fejl=function(){mål.textContent='';k.hidden=true;var p=document.createElement('p');p.className='x-besked';p.textContent='Opslaget kunne ikke vises her. Brug linket ovenfor.';mål.appendChild(p)};
+  var stop=setTimeout(fejl,10000);
+  medX(function(galt){if(galt||!id){clearTimeout(stop);fejl();return}
+    mål.classList.add('henter');
+    twttr.widgets.createTweet(id,mål,{theme:'dark',dnt:true,conversation:'none'}).then(function(el){clearTimeout(stop);
+      if(el){mål.classList.remove('henter');k.hidden=true;kort.classList.add('indlejret')}else{fejl()}})});
+})});
+})();
+</script>
+</body></html>
