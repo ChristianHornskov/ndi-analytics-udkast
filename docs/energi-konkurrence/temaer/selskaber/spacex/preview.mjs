@@ -1,2 +1,2 @@
-import {bindSpaceX} from './spacex-page.mjs?v=spacex-editorial-20261029';
-bindSpaceX(document);
+import {bindSpaceX} from './spacex-page.mjs';
+const reused=JSON.parse(document.querySelector('#company-context').textContent);bindSpaceX(document,{reused,fund:0});
