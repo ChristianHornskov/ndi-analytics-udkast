@@ -13,7 +13,8 @@ export function metrics(b,isin){
  const items=b.data.funds.map(f=>{const p=companies(f).find(p=>p.isin===isin);return {f,p,r:p?marketRow(b,f,p):null};});
  const field=(title,value)=>`<div><small>${esc(title)}</small><strong>${value}</strong></div>`;
  let fields=items.map(({f,p})=>field('Andel af '+f.short,p?pct(p.weight):'Ikke i beholdningen')).join('');
- const quotes=[...new Map(items.filter(x=>Number.isFinite(x.r?.marketClose)).map(x=>[JSON.stringify(x.r),x])).values()];
+ const quoteKey=r=>JSON.stringify([r.listingIdentitySha256,r.marketClose,r.marketCurrency,r.date,r.priceReturns?.y1??null,r.distance??null,r.source]);
+ const quotes=[...new Map(items.filter(x=>Number.isFinite(x.r?.marketClose)).map(x=>[quoteKey(x.r),x])).values()];
  let notes=[];
  for(const {f,r} of quotes){
   const suffix=quotes.length>1?' · '+f.short:'';
