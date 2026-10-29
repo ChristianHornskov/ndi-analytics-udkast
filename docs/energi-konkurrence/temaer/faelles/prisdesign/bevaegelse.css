@@ -1,0 +1,12 @@
+/* Billedstil · valgfri bevægelse til forklaringstegningerne (29.10.2026).
+   Virker kun, når forklar-<side>.svg er indsat inline i HTML (ikke som <img>).
+   Uden filen, eller når læseren har valgt reduceret bevægelse, står tegningen færdig. */
+@media (prefers-reduced-motion: no-preference) {
+  .bs-forklar .bs-hjem,
+  .bs-forklar .bs-signal,
+  .bs-forklar .bs-software { animation: bs-flyd 6s linear infinite; }
+  .bs-forklar .bs-op,
+  .bs-forklar .bs-strom { animation: bs-ind 1.2s ease-out both; }
+  @keyframes bs-flyd { to { stroke-dashoffset: -60; } }
+  @keyframes bs-ind { from { opacity: 0; } }
+}

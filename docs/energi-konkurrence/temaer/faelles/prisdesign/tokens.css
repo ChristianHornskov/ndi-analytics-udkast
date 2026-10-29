@@ -1,0 +1,53 @@
+/* NewDeal Invest · designtokens (mørk palet)
+   Én tekstfarve (--tekst). --tekst-2 kun til kilder, kreditter og datoer.
+   Én accent pr. side via <body data-accent="…">. Accent bruges aldrig til tekst.
+   Kontrast (WCAG) mod --bg / --kort står ud for hver farve. */
+:root{
+  /* Flader */
+  --bg:#050a0f;            /* sidebaggrund */
+  --kort:#0c141c;          /* kort, paneler */
+  --kort-2:#111b25;        /* hover/aktiv flade på kort (1,12:1 mod kort, kun flade) */
+  --linje:#1f2a33;         /* kantlinjer, gitter (1,36:1, dekorativ) */
+  --linje-2:#2c3a46;       /* stærkere skillelinje (1,70:1, dekorativ) */
+  --graf-akse:#5b6874;     /* konturer i grafik, der bærer betydning (3,48:1) */
+  /* Tekst */
+  --tekst:#e6e8ed;         /* 16,21 / 15,13 */
+  --tekst-2:#aebbc7;       /* 10,16 / 9,48  kun kilder, kreditter, datoer */
+  /* Accenter (endelige fra Billedstil, 29.10.2026). Kun grafik. */
+  --accent-spacex:#8fa3b8; /* 7,66 / 7,15 */
+  --accent-tesla:#c08a5e;  /* 6,66 / 6,22 */
+  --accent-fintech:#b3bd9e;/* 10,12 / 9,44 */
+  --accent:var(--accent-spacex);
+  --guld:#efc47c;          /* kun i NewDeal Invest-mærket */
+  --pladsholder:#f2a7c9;   /* lyserød stiplet ramme for manglende data */
+
+  /* Typografi */
+  --font-overskrift:'Manrope',system-ui,sans-serif;  /* altid vægt 500 */
+  --font-brod:'DM Sans',system-ui,sans-serif;
+  --fs-display:clamp(2.5rem,1.6rem + 3.2vw,4.5rem);  /* 40 → 72 */
+  --fs-h2:clamp(1.875rem,1.3rem + 1.9vw,2.75rem);    /* 30 → 44 */
+  --fs-h3:clamp(1.25rem,1.1rem + .5vw,1.5rem);       /* 20 → 24 */
+  --fs-tal:clamp(2.25rem,1.6rem + 2.4vw,3.75rem);    /* 36 → 60, nøgletal */
+  --fs-lede:clamp(1.1875rem,1.05rem + .45vw,1.375rem);/* 19 → 22 */
+  --fs-brod:clamp(1.0625rem,1rem + .2vw,1.125rem);   /* 17 → 18 */
+  --fs-lille:.875rem;      /* 14 */
+  --fs-mikro:.75rem;       /* 12, absolut minimum */
+  --lh-taet:1.12; --lh-overskrift:1.2; --lh-brod:1.65;
+  --spor-display:-.02em; --spor-kicker:.08em;
+
+  /* Grid og luft */
+  --side-maks:75rem;       /* 1200 */
+  --tekst-maks:42.5rem;    /* 680, læselinje ca. 70 tegn */
+  --figur-maks:60rem;      /* 960, forklarende illustration */
+  --kant:clamp(1.25rem,5vw,4rem);  /* 20 → 64 sidemargen */
+  --rille:clamp(1rem,2vw,1.5rem);  /* 16 → 24 kolonneafstand */
+  --sektion:clamp(4.5rem,9vw,8.5rem); /* 72 → 136 mellem sektioner */
+  --r:14px; --r-lille:10px;
+  --tryk:44px;             /* mindste trykflade */
+}
+body[data-accent="spacex"]{--accent:var(--accent-spacex)}
+body[data-accent="tesla"]{--accent:var(--accent-tesla)}
+body[data-accent="fintech"]{--accent:var(--accent-fintech)}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}

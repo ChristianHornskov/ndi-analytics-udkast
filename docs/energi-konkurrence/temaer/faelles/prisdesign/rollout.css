@@ -1,0 +1,124 @@
+@font-face{font-family:Manrope;src:url('../../fintech/fonts/font-3.woff2') format('woff2');font-weight:200 800;font-display:swap}
+@font-face{font-family:'DM Sans';src:url('../../fintech/fonts/font-1.woff2') format('woff2');font-weight:100 900;font-display:swap}
+.pd{background:var(--bg)!important;color:var(--tekst);font:400 var(--fs-brod)/1.65 'DM Sans',sans-serif;--ink:var(--tekst);--mute:var(--tekst-2);--card:var(--kort);--surf:var(--kort);--line:var(--linje);--gold:var(--accent)}
+.pd *{box-sizing:border-box}
+.pd [hidden]{display:none!important}
+.pd :is(h1,h2,h3,h4){font-family:Manrope,sans-serif!important;font-weight:500!important;color:var(--tekst)!important;letter-spacing:-.02em;overflow-wrap:break-word}
+.pd h1{font-size:var(--fs-display)!important;line-height:1.12!important}
+.pd h2{font-size:var(--fs-h2);line-height:1.2}
+.pd h3{font-size:var(--fs-h3);line-height:1.3}
+.pd :is(p,li,blockquote,a,button,summary,label,span,strong,b){color:var(--tekst)!important}
+.pd :is(.eyebrow,.c20-kicker,.sx-kicker,.kicker,.c20-hero h2,.company-intro h2,.theme-main-question,.sx-weight,.sx-stat strong,.tal,.num){color:var(--tekst)!important}
+.pd :is(small,figcaption,.note,.k,.byline,.c20-note,.sx-caption){font-size:max(12px,.75rem)!important;color:var(--tekst-2)!important;line-height:1.55}
+.pd :is(a,button,summary,select){min-height:44px}
+.pd a{display:inline-flex;align-items:center;gap:.25em;padding-block:8px;color:var(--tekst);overflow-wrap:anywhere;text-underline-offset:4px}
+.pd :is(button,summary){font:inherit;font-size:max(12px,1em);cursor:pointer}
+.pd :is(button,.button,.cta a){background:var(--kort);color:var(--tekst);border-color:var(--graf-akse)}
+.pd :is(a,button,summary,select):focus-visible{outline:3px solid var(--tekst);outline-offset:4px}
+.pd :is(.c20-main,.ndi-hub,.sx-page){max-width:1200px!important;width:calc(100% - 40px)!important;margin-inline:auto!important}
+.pd :is(.company-intro,.c20-hero){display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,64px);padding-block:48px;align-items:center}
+.pd :is(.company-intro-copy,.c20-hero>div){min-width:0}
+.pd :is(.company-scene,.hero-bill,.hero-fig){margin:0;background:var(--bg);border-color:var(--linje)}
+.pd .company-scene img{width:100%;height:auto;aspect-ratio:2/1;object-fit:contain}
+.pd .company-scene figcaption{padding:12px 0}
+.pd .company-scene figcaption{position:static;background:none;inset:auto}
+.pd .company-scene{display:block;min-height:0;border:0;border-radius:0;overflow:visible}
+.pd .pd-neutral{display:block;width:100%;height:auto}
+.pd :is(.c20-section,.company-depth,.c20-ndi,.sx-section){margin-block:clamp(64px,8vw,112px);padding:0;background:transparent;border-color:var(--linje)}
+.pd :is(.c20-section,.company-depth,.c20-ndi,.sx-section) p{max-width:680px}
+.pd :is(.company-flow,.c20-system,.c20-reports,.ndi-current,.company-weight-chart,.sx-finance,.sx-questions article){background:var(--kort);color:var(--tekst);border:1px solid var(--linje);border-radius:14px;padding:clamp(20px,3vw,36px)}
+.pd .company-flow article{background:transparent;border-color:var(--linje)}
+.pd .c20-local{position:static;display:flex;flex-wrap:wrap;background:var(--bg);gap:8px;border-block:1px solid var(--linje)}
+.pd .c20-local a{color:var(--tekst);white-space:normal}
+.pd .company-nav-number{color:var(--tekst-2)}
+.pd .ndi-current-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.pd .ndi-current-grid strong,.pd .pd-opening strong{font:500 var(--fs-tal)/1.1 Manrope,sans-serif;display:block;color:var(--tekst)}
+.pd .ndi-current-grid small{display:block;margin-bottom:12px}
+.pd .pd-fund-title{margin-top:64px}
+.pd .pd-opening{display:grid;grid-template-columns:1fr 1fr;gap:32px;border-block:1px solid var(--linje);padding:32px 0;margin-bottom:40px;align-items:center}
+.pd .pd-opening p{margin:12px 0;max-width:560px}
+.pd .pd-waffle{width:min(100%,320px);height:auto;display:block;margin-inline:auto}
+.pd .pd-chart-end{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
+.pd .pd-chart-end strong{font:500 32px Manrope,sans-serif}
+.pd .company-weight-chart svg{width:100%;height:260px;display:block}
+.pd .pd-axis{display:flex;justify-content:space-between;gap:24px;font-size:12px!important;max-width:none!important}
+.pd .pd-revenues{margin:32px 0;padding:24px;border-block:1px solid var(--linje)}
+.pd .pd-revenues>div{margin-top:24px}
+.pd .pd-revenues p{display:flex;justify-content:space-between;max-width:none}
+.pd .pd-revenues svg{width:100%;height:18px;display:block}
+.pd :is(table,.c20-reports){max-width:100%}
+.pd table{width:100%;border-collapse:collapse;font-size:14px}
+.pd td,.pd th{padding:10px;border-bottom:1px solid var(--linje);text-align:left}
+.pd :is(.live-x-card,.live-x-original,.live-x-context,.x-card,.tweet,.xpost){background:var(--kort)!important;color:var(--tekst)!important;border-color:var(--linje)!important}
+.pd .live-x-original a,.pd .live-x-author small,.pd .live-x-context>span,.pd .live-x-more>summary{color:var(--tekst)!important;font-size:14px}
+.pd .live-x-author{min-width:0;flex-wrap:wrap}
+.pd .live-x-avatar{background:var(--kort-2)!important;color:var(--tekst)!important}
+.pd .pd-video-poster{display:grid;place-items:center;width:100%;min-height:180px;aspect-ratio:16/9;background:var(--kort);color:var(--accent)}
+.pd .pd-video-poster svg{width:100px;height:70px}
+.pd .sx-player button{display:block;width:100%;position:relative;padding:0}
+.pd .sx-player .sx-play{display:none}
+.pd .sx-player button>span:last-child:not(.pd-video-poster){display:block;position:static;padding:12px}
+.pd :is(.ndi-foot,footer){max-width:1200px;margin:64px auto 0;padding:28px 20px;border-top:1px solid var(--linje);font-size:14px;line-height:1.65;color:var(--tekst-2)}
+.pd footer a{margin-right:24px}
+.pd .ndi-bar{position:relative;background:var(--bg);gap:12px;flex-wrap:wrap;padding-inline:20px}
+.pd .ndi-bar nav{display:flex;flex-wrap:wrap;gap:12px}
+.pd .ndi-bar a{color:var(--tekst);font-size:14px}
+.pd .ndi-bar strong{color:var(--guld)}
+.pd .hero-tekst{margin-top:0!important;padding-top:24px}
+.pd .pd-dek{font-size:var(--fs-lede);max-width:680px;margin:20px 0}
+.pd .pd-company-links{display:flex;flex-wrap:wrap;gap:10px;padding:24px 0}
+.pd .pd-company-links a{border:1px solid var(--linje-2);padding:10px 16px;border-radius:24px;background:var(--kort);font-size:14px}
+.pd .pd-explainer{position:relative;margin:0}
+.pd .pd-explainer picture,.pd .pd-explainer img{display:block;width:100%;height:auto}
+.pd .pd-explainer-labels{display:flex;flex-wrap:wrap;justify-content:space-around;gap:12px;font-size:12px;padding:12px}
+.pd .sx-kpis :is(strong,span),.pd .sx-compare-row strong{color:var(--tekst)!important}
+.pd .sx-q2,.pd .sx-q3{background:var(--accent)!important}
+.pd .sx-q2{opacity:.5}
+.pd .sx-hero{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;background:var(--bg)}
+.pd .sx-hero-photo{position:static;width:100%;height:auto;grid-column:2;grid-row:1}
+.pd .sx-hero-copy{position:static;grid-column:1;grid-row:1;padding:0;max-width:none}
+.pd .sx-hero-foot{grid-column:1/-1;position:static;background:transparent;flex-wrap:wrap}
+.pd .sx-timeline li{min-width:0}
+.pd :is(.c20-risk,.c20-questions li,.c20-split aside,.c20-ndi blockquote,.sx-context,.sx-bridge,.sx-reading,.sx-watch){background:var(--kort)!important;color:var(--tekst)!important;border-color:var(--linje-2)!important}
+.pd :is(.c20-risk,.c20-split aside){padding:24px;border-radius:14px}
+.pd .pd-company-directory{max-width:1200px;margin:64px auto;padding:24px 20px}
+.pd .pd-ranked>div{margin:16px 0}
+.pd .pd-ranked p{display:flex;justify-content:space-between;gap:12px;font-size:14px}
+.pd .pd-ranked svg{width:100%;height:18px;display:block}
+.pd .pd-fintech-select{display:block;margin:24px 0}
+.pd .pd-fintech-select select{display:block;width:100%;background:var(--kort);color:var(--tekst);border:1px solid var(--graf-akse);padding:10px;font:inherit}
+.pd .cq-ft__info>[data-company-link]{display:flex;flex-basis:100%;padding:12px}
+.pd .sx-tabs button[aria-pressed=true]{background:var(--kort-2)!important;color:var(--tekst)!important;border-color:var(--accent)!important}
+.pd .eyebrow{font-size:12px!important}
+.pd .c20-identity{min-width:0;flex-wrap:wrap}
+.pd .c20-identity>div{min-width:0;max-width:100%}
+.pd h1{overflow-wrap:anywhere}
+.pd img{max-width:100%}
+.pd .pd-explainer-art{position:relative}
+.pd .pd-diagram-label{position:absolute;left:var(--x);top:var(--y);transform:translate(-50%,-50%);font-size:12px;line-height:1.3;max-width:27%;text-align:center;background:var(--bg);padding:2px}
+.pd .pd-group-icon{color:var(--accent)!important;stroke:var(--accent)}
+.pd .hero-bill img{object-fit:contain;aspect-ratio:2/1!important}
+.pd :is(.company-scene,.sx-hero)::before,.pd :is(.company-scene,.sx-hero)::after{display:none}
+.pd section:has(> .ndi-current[hidden]){display:none}
+.pd h2:has(+ .ndi-current[hidden]){display:none}
+@media(max-width:600px){.pd .pd-diagram-label{left:var(--mx);top:var(--my);max-width:29%}.pd .hero-bill img{aspect-ratio:390/488!important}}
+@media(max-width:600px){.pd .sx-orbit-panel .pd-diagram-label:nth-of-type(3){left:3%;transform:translate(0,-50%);text-align:left}}
+.pd .pd-theme-opening{max-width:1160px;width:calc(100% - 40px);margin:32px auto 64px}
+.pd .sx-compare-track svg{display:block;width:100%;height:100%}
+@media(max-width:700px){
+ .pd :is(.company-intro,.c20-hero,.sx-hero,.pd-opening){grid-template-columns:1fr;gap:24px}
+ .pd :is(.company-scene,.sx-hero-photo){grid-row:1;grid-column:1}
+ .pd .sx-hero-copy{grid-row:2;grid-column:1}
+ .pd .company-scene img{aspect-ratio:390/488;max-height:440px;object-fit:contain}
+ .pd .company-scene .pd-neutral{max-height:220px}
+ .pd .ndi-current-grid{grid-template-columns:1fr 1fr;gap:16px}
+ .pd .ndi-current-grid strong{font-size:32px}
+ .pd .sx-timeline li{display:block}
+ .pd .sx-timeline time{display:block;margin-bottom:12px}
+ .pd .company-weight-chart{padding:16px}
+ .pd .company-weight-chart svg{height:220px}
+ .pd .sx-chapters{position:static;display:flex;flex-wrap:wrap}
+ .pd :is(.c20-split,.company-flow){grid-template-columns:1fr}
+ .pd .ndi-bar nav{gap:8px}
+ .pd .ndi-bar nav a{font-size:12px}
+}
