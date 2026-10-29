@@ -16,7 +16,7 @@ export function weightFigure(weight){
 export function metrics(b,isin){
  const items=b.data.funds.map(f=>({f,p:companies(f).find(p=>p.isin===isin)}));
  if(!items.some(x=>x.p))return '';
- const fields=items.map(({f,p})=>`<div><small>Andel af ${esc(f.short)}</small><strong>${p?pct(p.weight):'Ikke i beholdningen'}</strong></div>`).join('');
+ const fields=items.map(({f,p})=>`<div><small>Andel af ${esc(f.short)}</small><strong class="${p?'': 'pd-not-held'}">${p?pct(p.weight):'Ikke i beholdningen'}</strong></div>`).join('');
  return `<div class="ndi-current-grid">${fields}</div><p>Beholdninger ${esc(displayDate(b.data.positionsAsOf||b.data.asOf))}.</p><p>Fondens risiko: 5 af 7. Investering indebærer risiko for tab. Fonden har en økonomisk interesse i selskabet gennem den oplyste andel. Ikke en personlig anbefaling.</p><a href="https://fundmarket.dk/newdeal-invest-kl-n/">PMINDI: KID og prospekt ↗</a> <a href="https://fundmarket.dk/newdeal-invest-akk-kl-n/">PMINDIAKK: KID og prospekt ↗</a>`;
 }
 
