@@ -12,3 +12,8 @@
 [data-live-x] .live-x-context>span{font-size:10px;letter-spacing:.14em;color:#e9c891;font-weight:700}
 [data-live-x] .live-x-context p{font-size:15px;line-height:1.7;margin:10px 0 0;color:#dae6ed}
 [data-live-x] [hidden]{display:none!important}
+
+/* Reader review, 29 October 2026. */
+.live-x-original{background:#15202b!important;color:#e7e9ea;border-color:#405563}.live-x-original:has(iframe) .live-x-author{display:none}.live-x-original a{color:#b5dbe7}.live-x-author b{color:#e7e9ea}.live-x-author small{font-size:12px;color:#b6c9d5}.live-x-context>span{font-size:12px}.live-x-original blockquote{margin:0}.live-x-card{min-width:0}
+
+.live-x-more{grid-column:1/-1}.live-x-more>summary{display:list-item;cursor:pointer;min-height:44px;padding:14px 4px;color:#efc47c;font-size:16px}.live-x-more .live-x-grid{margin-top:16px}

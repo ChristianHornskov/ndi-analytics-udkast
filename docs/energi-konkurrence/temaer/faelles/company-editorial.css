@@ -1,5 +1,7 @@
+@import url('../selskaber/spacex/fonts/fonts.css');
 /* Shared editorial treatment; facts and live data remain in their existing components. */
-.company-editorial{--company-accent:#e7bd79;background:#091720!important;color:#edf2f4;font-family:Arial,sans-serif;line-height:1.7}
+.company-editorial{--company-accent:#e7bd79;background:#091720!important;color:#edf2f4;font-family:'DM Sans',sans-serif;line-height:1.7}
+.company-editorial :is(h1,h2,h3){font-family:Manrope,sans-serif}
 .company-editorial *{box-sizing:border-box}
 .company-editorial main{max-width:1240px;margin:auto;padding:36px 32px 72px}
 .company-editorial main>p:first-child{font-size:12px;color:#a8bbc5}
@@ -46,3 +48,6 @@
 .company-editorial :is(a,button):focus-visible{outline:3px solid var(--company-accent);outline-offset:4px}
 @media(max-width:800px){.company-editorial .c20-hero,.company-intro{grid-template-columns:1fr;gap:28px}.company-scene{max-height:370px}.company-scene img{min-height:270px;height:330px}.company-editorial main{padding:26px 20px 50px}.company-editorial .company-flow{grid-template-columns:1fr}.company-editorial .c20-local{grid-template-columns:repeat(2,minmax(0,1fr))}.company-editorial .c20-local a{font-size:14px;padding:14px 12px;gap:10px}.company-editorial .company-route ol{grid-template-columns:1fr;gap:22px}.company-editorial .company-route li+li:before{content:'↓';left:4px;top:-22px}.company-editorial .company-route li strong{font-size:18px}.company-editorial .c20-ndi{padding:28px 24px}.company-weight-chart{padding:18px 5px}.company-weight-chart svg text{font-size:18px}}
 @media(prefers-reduced-motion:reduce){.company-editorial .c20-local a{transition:none;transform:none!important}}
+
+/* Reader review, 29 October 2026. */
+.company-weight-chart svg text{font-family:'DM Sans',sans-serif}.company-editorial h1{font-weight:500;letter-spacing:-.02em}.company-editorial .c20-local a{min-height:44px}.company-editorial small{font-size:12px}@media(max-width:600px){.company-editorial .company-depth{padding:28px 0}.company-editorial .company-route{margin:26px 0}}

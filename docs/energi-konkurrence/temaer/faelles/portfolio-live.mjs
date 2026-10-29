@@ -8,7 +8,24 @@ const status=typeof document==='undefined'?null:document.querySelector('[data-po
 const holdings=b=>companies(b.data.funds.find(f=>f.id==='pmindi')).sort((a,b)=>b.weight-a.weight||a.isin.localeCompare(b.isin));
 export function themeTotals(rows,metadata){const totals={};for(const p of rows){const key=metadata[p.isin]?.themeUrl?.split('/')[0]||'unclassified';totals[key]=(totals[key]||0)+p.weight;}return totals;}
 function cards(rows){return rows.map(p=>{const m=labels[p.isin]||{};return `<a class="c20-index-card" href="${esc(link(m.url||'selskaber.html?q='+encodeURIComponent(p.isin)))}">${m.logo?`<img alt="" width="48" height="48" loading="lazy" src="${esc(link(m.logo))}">`:''}<span>${esc(m.theme||'Tema endnu ikke klassificeret')}</span><h2>${esc(m.displayName||p.name)}</h2>${m.teaser?`<p>${esc(m.teaser)}</p>`:''}<strong>${pct(p.weight)} · ${m.url?'Læs om selskabet':'Se positionen'} →</strong></a>`;}).join('');}
-function metrics(b,isin){return b.data.funds.map(f=>{const p=companies(f).find(p=>p.isin===isin),r=p?marketRow(b,f,p):null;return `<div><h3>${esc(f.short)}</h3><div class="ndi-current-grid"><div><small>Andel af afdelingen</small><strong>${p?pct(p.weight):'Ikke i seneste beholdningsliste'}</strong></div><div><small>Seneste afsluttede lukkekurs</small><strong>${r?num(r.marketClose)+' '+esc(r.marketCurrency||''):'—'}</strong></div><div><small>Kursudvikling · 12 måneder</small><strong>${pct(r?.priceReturns?.y1)}</strong></div><div><small>Under 52-ugers top</small><strong>${pct(r?.distance)}</strong></div></div><p>Kursdato: ${esc(r?.date||'Ingen afstemt kurs')}. ${!Number.isFinite(r?.priceReturns?.y1)?'12-måneders afkast er ikke tilgængeligt. ':''}${!Number.isFinite(r?.distance)?'Afstand til 52-ugers top er ikke tilgængelig. ':''}${r?.source?.startsWith('https://')?`<a href="${esc(r.source)}" target="_blank" rel="noopener">Kurskilde ↗</a>`:''}</p></div>`;}).join('')+`<p>Beholdninger ${esc(b.data.positionsAsOf||b.data.asOf)}. Kursændring i noteringsvaluta, uden geninvesteret udbytte. Ikke realtidskurser.</p>`;}
+const displayDate=v=>/^\d{4}-\d{2}-\d{2}$/.test(v||'')?v.split('-').reverse().join('.'):String(v||'');
+export function metrics(b,isin){
+ const items=b.data.funds.map(f=>{const p=companies(f).find(p=>p.isin===isin);return {f,p,r:p?marketRow(b,f,p):null};});
+ const field=(title,value)=>`<div><small>${esc(title)}</small><strong>${value}</strong></div>`;
+ let fields=items.map(({f,p})=>field('Andel af '+f.short,p?pct(p.weight):'Ikke i beholdningen')).join('');
+ const quotes=[...new Map(items.filter(x=>Number.isFinite(x.r?.marketClose)).map(x=>[JSON.stringify(x.r),x])).values()];
+ let notes=[];
+ for(const {f,r} of quotes){
+  const suffix=quotes.length>1?' · '+f.short:'';
+  fields+=field('Seneste lukkekurs'+suffix,num(r.marketClose)+' '+esc(r.marketCurrency||''));
+  if(Number.isFinite(r.priceReturns?.y1))fields+=field('Kursudvikling · 12 måneder'+suffix,pct(r.priceReturns.y1));
+  if(Number.isFinite(r.distance))fields+=field('Under 52-ugers top'+suffix,pct(r.distance));
+  notes.push(`Kursdato${esc(suffix)}: ${esc(displayDate(r.date))}.${r.source?.startsWith('https://')?` <a href="${esc(r.source)}" target="_blank" rel="noopener">Kurskilde ↗</a>`:''}`);
+ }
+ if(!quotes.length)notes.push('En afstemt lukkekurs er endnu ikke tilgængelig.');
+ return `<div class="ndi-current-grid">${fields}</div><p>${notes.join(' ')}</p><p>Beholdninger ${esc(displayDate(b.data.positionsAsOf||b.data.asOf))}. Kursændring i noteringsvaluta, uden geninvesteret udbytte. Ikke realtidskurser.</p>`;
+}
+
 function render(b){
  const rows=holdings(b),totals=themeTotals(rows,labels),date=b.data.positionsAsOf||b.data.asOf;
  document.querySelectorAll('[data-current-theme]').forEach(el=>{const key=el.dataset.currentTheme==='fintech'?'fintech-tekst':el.dataset.currentTheme;el.textContent=pct(totals[key]||0)+(el.dataset.suffix||'');el.closest('[data-map-preview]')?.style.setProperty('--w',totals[key]||0);});
