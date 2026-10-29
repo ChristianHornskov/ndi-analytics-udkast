@@ -1,5 +1,5 @@
 import {earnings,ipo,segments,quarters,milestones} from './spacex-data.mjs';
-import {mountLiveX,renderFeed} from './live-x.mjs';
+import {mountLiveX,renderFeed} from './live-x.mjs?v=design-20261029';
 import {bindXFeed,postedAt} from './content-feed.mjs';
 const ISIN='US84615Q1031';
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
