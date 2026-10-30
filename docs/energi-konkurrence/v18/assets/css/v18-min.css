@@ -1,0 +1,102 @@
+/* v18 Skal B7 (F-182) og B6: ingen tekst under 12 px på desktop og under 13 px under 600 px.
+   Indlæses efter v5-komponenter.css (genereret), så den vinder over v5's 11 px- og 12 px-regler. */
+.kicker,.eyebrow{font-size:12px !important}
+.sm-overskrift,.v18-forside .eyebrow,.v18p-iv,.v18t-spm .lille,.v18s-del .rolle-liste dt,.v5 .metrics span,.v5 .theme-detail figcaption,.v5 .photo-theme-grid .ndi-tile small{font-size:12px}
+@media (max-width:599.98px){
+  :root{--fs-12:.8125rem}
+  .kicker,.eyebrow{font-size:13px !important}
+  .sm-overskrift,.v18-forside .eyebrow,.v18p-iv,.v18t-spm .lille,.v18s-del .rolle-liste dt,.v5 .metrics span,.v5 .theme-detail figcaption,.v5 .photo-theme-grid .ndi-tile small,
+  .v18s-trin-nr,.v18-eksempel strong,.v5 .return-calendar thead th,.v5 .return-calendar th,.v5 .end-return,.v5 .funds small,.v5 .theme-card span,.v5 .allocation-labels>a,.v5 .allocation-labels>span,.v5 .door figcaption,
+  .sm-overskrift-note,.sm-data-t,.sm-data-s,.v18p-nr,.v18p-ring span,.v18p-tabel thead th,.v18p-tabel small,.v18p-tal,.spot-fane-dato,.tl-md,.tl-dato,.videokort-v3 .video-flade .kredit{font-size:13px}
+}
+
+/* v18 Skal (F-183): trykflader mindst 44 px. Chips i porteføljevisningen var 36 px. */
+.v18p-chips summary{min-height:44px}
+/* Foldede sektioner på desktop: summary er skjult, når sektionen er åben. Bliver synlig ved tastaturfokus,
+   så fokus aldrig står på et usynligt element. */
+.fold-sektion[open] > summary:focus-visible{position:static;width:auto;height:auto;overflow:visible;clip:auto;min-height:44px}
+
+/* v18 Skal F-184: kontrolkanter mindst 3:1 i begge temaer. */
+.sm-luk{border:1px solid var(--c-line-strong)}
+:root[data-tema="lys"] .knap--rolig{border-color:var(--v5-teal)}
+
+/* v18 Skal (A, fundet 30.10 aften): v5-komponenter.css bruger v5's egne variabler (--teal, --line, --gold, --bg, --ink, --text),
+   men v5_css.py springer v5's :root over. Uden dem faldt kanter og fyld bort (fx periodeknapperne og den valgte periode).
+   Her peger de på v18's tema-variabler, så begge temaer virker. */
+:root{--bg:var(--v5-bg);--ink:var(--v5-ink);--text:var(--v5-ink);--teal:var(--v5-teal);--line:var(--v5-line);--gold:var(--v5-gold)}
+/* F-184: kanter på kontroller mindst 3:1 (rammer om flader bruger stadig --line) */
+.v5 .periods button,.v5 .chip,.v5 .theme-tabs button,.v5 .funds button,.v5 details>summary{border-color:var(--v5-kant)}
+.v5 .periods button[aria-pressed=true],.v5 .chip[aria-pressed=true],.v5 .theme-tabs button[aria-pressed=true]{border-color:var(--v5-teal)}
+
+/* v18 Bør (afskåret mobiloverskrift): topbjælken under 600 px. Faktaark-knappen viser kun pilen (teksten står for skærmlæsere),
+   sidenavnet står på én linje og forkortes kun, hvis det stadig ikke kan være der. */
+@media (max-width:599.98px){
+  .topbar-mobil{gap:8px}
+  .topbar-mobil .maerke{min-width:0;gap:10px}
+  .topbar-mobil .maerke-tekst{min-width:0;display:flex;flex-direction:column}
+  .topbar-mobil .maerke-navn,.topbar-mobil .maerke-sub{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .topbar-mobil > .knap--lille{flex:none;position:relative;width:44px;min-width:44px;height:44px;padding:0;gap:0;overflow:hidden;white-space:nowrap;text-indent:44px;justify-content:flex-start}
+  .topbar-mobil > .knap--lille .ik{position:absolute;left:12px;top:12px;width:18px;height:18px}
+}
+
+/* v18 Skal (fundet 30.10 aften): Alle selskaber stod med navn og tema højrestillet. Tekst venstre, tal højre. */
+.tabel--alle th:not(.tal-celle),.tabel--alle td:not(.tal-celle){text-align:left}
+.tabel--alle th.tal-celle,.tabel--alle td.tal-celle{text-align:right}
+@media (max-width:599.98px){.tabel--alle td:not(.tal-celle){white-space:normal}}
+
+/* v18 Skal (A, selskabssidens skabelon, fundet 30.10 aften): luft mellem overskrift, hero og trinknapperne (01–04).
+   h1 og trinknapperne stødte direkte op mod herokortet. */
+.v18s > .v18s-hoved{margin-bottom:28px}
+.v18s > .kort--hero + .v18s-trin,.v18s > .v18s-trin{margin-top:24px}
+@media (max-width:599.98px){.v18s > .v18s-hoved{margin-bottom:20px}.v18s > .v18s-trin{margin-top:18px}}
+/* Ingen kort i kort (C): tabellens egen ramme fjernes inde i panelet. Mindre luft på mobil, så alle fire kolonner kan være der. */
+.panel > .tabel-rul{border:0;border-radius:0;margin-top:0}
+@media (max-width:599.98px){
+  #alle .kort.panel{padding:8px}
+  .tabel--alle th,.tabel--alle td{padding:8px 6px}
+}
+@media (max-width:599.98px){.tabel--alle .pos-bar{display:none}.tabel--alle th.tal-celle:last-child{white-space:normal}}
+@media (max-width:599.98px){
+  .tabel--alle{width:100%;table-layout:fixed}
+  .tabel--alle th:nth-child(1){width:30px}.tabel--alle th:nth-child(4){width:62px}
+  .tabel--alle td,.tabel--alle th{overflow-wrap:anywhere;hyphens:auto}
+  .tabel--alle td.tal-celle{display:table-cell}
+}
+@media (max-width:599.98px){.tabel--alle{font-size:14px}.tabel--alle th:nth-child(3){width:124px}.tabel--alle td,.tabel--alle th{overflow-wrap:normal;hyphens:manual}.tabel--alle th[scope="row"],.tabel--alle td:nth-child(2){overflow-wrap:anywhere}}
+
+/* v18 Bør/D4 (30.10 aften): tidligere-ejede sider (tidligere_side) i v5-stil, så de ligner selskabssidernes skabelon:
+   samme h1 og logofelt som .v18s-hoved og pilleknapper som .v18s-trin. Kun CSS, ingen ny tekst. */
+.sektion--overblik:has(.gitter--stub) .sidehoved{gap:18px;margin-bottom:28px}
+.sektion--overblik:has(.gitter--stub) .sidehoved h1{font-size:clamp(40px,5.5vw,64px);line-height:1.05;letter-spacing:-.04em;margin:.15em 0 0;overflow-wrap:anywhere}
+.sektion--overblik:has(.gitter--stub) .sidehoved-ikon--logo{width:64px;height:64px;flex:0 0 64px;border-radius:15px;background:#142934;border:0;color:var(--v5-teal)}
+:root[data-tema="lys"] .sektion--overblik:has(.gitter--stub) .sidehoved-ikon--logo{background:#fff;border:1px solid var(--v5-line)}
+.sektion--overblik:has(.gitter--stub) .videre{margin-top:28px;gap:10px}
+.sektion--overblik:has(.gitter--stub) .videre .knap{min-height:44px;padding:8px 18px;border:1px solid var(--v5-kant);border-radius:30px;background:var(--v5-flade);color:var(--v5-ink);font-size:15px}
+.sektion--overblik:has(.gitter--stub) .videre .knap:hover{border-color:var(--v5-teal);background:var(--v5-flade-2)}
+.sektion--overblik:has(.gitter--stub) .videre .knap .ik{color:var(--v5-teal)}
+@media(max-width:599.98px){.sektion--overblik:has(.gitter--stub) .sidehoved{gap:12px;margin-bottom:20px}.sektion--overblik:has(.gitter--stub) .sidehoved-ikon--logo{width:48px;height:48px;flex-basis:48px}.sektion--overblik:has(.gitter--stub) .videre .knap{font-size:14px;padding:8px 14px}}
+
+/* v18 Bør (LISTE pkt. 11, 30.10 aften): topanimationer (19 + SpaceX) med streg i v5's teal, ingen lyseblå flade
+   og den runde pauseknap i teal outline. Farverne sættes kun som variabler på selve SVG'en, så resten af siden er uændret. */
+.kort--topanim .ta-svg{
+  --c-data-1:color-mix(in srgb,var(--v5-teal) 72%,var(--v5-bg));
+  --c-data-2:var(--v5-teal);
+  --c-data-3:color-mix(in srgb,var(--v5-teal) 60%,var(--v5-ink));
+  --c-line:var(--v5-line);
+  --c-line-strong:var(--v5-kant);
+}
+.kort--topanim .hero-pause,.kort--topanim .ta-knap{border-color:var(--v5-teal);color:var(--v5-teal);background:transparent}
+.kort--topanim .hero-pause:hover,.kort--topanim .ta-knap:hover{background:color-mix(in srgb,var(--v5-teal) 14%,transparent);color:var(--v5-ink)}
+/* Kontrast (kontrast.py 30.10): Eksempeldata-mærket i lys var 4,49:1. */
+:root[data-tema="lys"] .v18-eksempel{border-color:#7d6a30}:root[data-tema="lys"] .v18-eksempel strong{background:#7d6a30;color:#fff}
+/* F-157 (30.10): fotokreditten flugter med billedets venstre kant (var forskudt 20 px af padding + margin). */
+.v18-ramme .foto-kredit,.v18t-foto .foto-kredit,.v18s-tegning .foto-kredit{padding-inline:0;margin-inline:0}
+
+/* Skal (fundet i eksport 2, 30.10 kl. 20:43): CLS 0,12–0,16 på SpaceX ved 1280/1440. Nu, hvor X-widgets faktisk indlæses,
+   voksede .x-embed fra 120 px (venter) til 520/560 px (klar). På desktop holdes den endelige højde fra start, så intet flytter sig.
+   Mobil (<600) er uændret. */
+@media (min-width:600px){
+  .x-embed:not(.x-embed--klar){height:520px;min-height:0}
+  .x-embed:not(.x-embed--klar) .x-embed-vent{position:absolute;inset:0;min-height:0}
+}
+@media (min-width:900px){.x-embed:not(.x-embed--klar){height:560px}}
