@@ -1,4 +1,4 @@
-
+ 
 (function () {
   var rod = document.getElementById("virksomhedsfaser"); if (!rod) return;
   var knapper = rod.querySelectorAll("[data-fase]"), felter = rod.querySelectorAll("[data-fase-felt]"), tekster = rod.querySelectorAll(".v18-fase-tekst");

@@ -1,4 +1,4 @@
-/* Genereret af _kilde/v5_fortaelling.py: v5-temasidens egne scripts, ordret. */
+ 
 try{(function(){var R=document.getElementById('cq-sw');if(!R||R.dataset.on)return;R.dataset.on='1';R.classList.add('cq-sw--js');
 var fine=window.matchMedia&&matchMedia('(hover: hover) and (pointer: fine)').matches;
 function show(btn){var sc=btn.closest('.cq-sw__scope')||R,inf=sc.querySelector('.cq-sw__info');if(!inf)return;inf.textContent='';
@@ -27,19 +27,19 @@ var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 var pr=document.querySelector('.prog');
 function prog(){if(!pr)return;var h=document.documentElement,m=h.scrollHeight-innerHeight;pr&&pr.style.setProperty('--p',m>0?(scrollY/m).toFixed(3):0)}
 addEventListener('scroll',prog,{passive:true});prog();
-/* fold-lister: top + "Vis alle" (naboer og X-opslag) */
+ 
 function fold(lid,bid,lab){var l=document.getElementById(lid),b=document.getElementById(bid);if(!l||!b)return;b.hidden=false;b.addEventListener('click',function(){var o=b.getAttribute('aria-expanded')!=='true';b.setAttribute('aria-expanded',String(o));l.classList.toggle('alle',o);b.textContent=o?'Vis færre':lab;if(o){var f=l.querySelector('.ekstra');if(f){f.tabIndex=-1;f.focus({preventScroll:true})}}})}
 fold('fod-liste','fod-alle','Vis alle (11)');fold('x-liste','x-alle','Vis 3 opslag mere');
-/* X-facade: intet hentes fra X før klik; widgets.js indlæses én gang */
+ 
 function twl(){if(window.twttr&&window.twttr.widgets)return;window.twttr=(function(d){var t=window.twttr||{};if(t._e)return t;t._e=[];t.ready=function(f){t._e.push(f)};var j=d.createElement('script');j.id='twitter-wjs';j.async=true;j.src='https://platform.twitter.com/widgets.js';j.charset='utf-8';d.body.appendChild(j);return t})(document)}
 [].forEach.call(document.querySelectorAll('.xp[data-url]'),function(li){var b=li.querySelector('.xp-vis'),em=li.querySelector('.xp-embed');b.hidden=false;
  b.addEventListener('click',function(){if(em.firstChild)return;var q=document.createElement('blockquote');q.className='twitter-tweet';q.setAttribute('data-theme','dark');q.setAttribute('data-dnt','true');q.setAttribute('data-conversation','none');q.setAttribute('data-lang','da');
  var a=document.createElement('a');a.href=li.dataset.url;a.textContent='Opslaget hentes fra X …';q.appendChild(a);em.appendChild(q);b.hidden=true;em.focus({preventScroll:true});
  twl();window.twttr.ready(function(t){t.widgets.load(em)})})});
-/* "Hører til": åbn kortet i opgavekortet */
+ 
 var R=document.getElementById('cq-sw');
 [].forEach.call(document.querySelectorAll('.xp-trin a[data-k]'),function(a){a.addEventListener('click',function(e){var b=R&&R.querySelector('.cq-sw__dx[aria-controls="cq-sw-p-'+a.dataset.k+'"]');if(!b||!R.cqSetDx)return;e.preventDefault();R.cqSetDx(b,true);(b.closest('li')||b).scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});b.focus({preventScroll:true})})});
-/* video-facade: YouTube (nocookie) hentes først ved klik */
+ 
 [].forEach.call(document.querySelectorAll('.vid-ramme[data-yt]'),function(r){var b=r.querySelector('.vid-play');b.addEventListener('click',function(){var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+r.dataset.yt+'?autoplay=1&rel=0&playsinline=1';f.title=r.dataset.title;f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.setAttribute('allowfullscreen','');f.referrerPolicy='strict-origin-when-cross-origin';r.replaceChild(f,b);f.focus()})});
 })();
 }catch(e){}

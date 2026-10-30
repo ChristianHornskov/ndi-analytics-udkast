@@ -1,9 +1,5 @@
-/* v18 (B8, B10): porteføljesektionen på forsiden, tegnet direkte fra NDI_DATA.portefolje og NDI_DATA.fondsudvikling.
-   graf-v2 indlæses ikke. Filerne kontrolleres af datalag.js (NDI_DATALAG.ndi): skema, kontrakt, release.id og andelsdato.
-   Her slås kun op og formateres. Ingen summer, gennemsnit, sortering, filtrering, top-N, afrunding eller omregning;
-   listerne kommer færdigsorterede og afrundede fra Azure (indtil da: eksempeldata). Graferne omregner kun værdier til
-   koordinater. Teksterne er ordret fra graf-v2 (v6), dog uden fondsvælger, søgning og sektorfilter (de kræver filtrering).
-   Menuens underpunkter bruger #portefoeljen-<id>: portfolio · highs · risk-summary · method. */
+
+
 (function () {
   "use strict";
   var knap = document.getElementById("portefolje-knap"), fold = document.getElementById("portefolje-fold");
@@ -14,7 +10,7 @@
   var V = window.NDI_VALG || {};
   var NB = "\u00a0", MD = ["jan.", "feb.", "mar.", "apr.", "maj", "jun.", "jul.", "aug.", "sep.", "okt.", "nov.", "dec."];
 
-  /* ---------- formatering (kun visning) ---------- */
+   
   function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
   function tal(v, d) { if (v == null) return "—"; var t = v.toFixed(d).split("."); return (t[0].replace("-", "−").replace(/\B(?=(\d{3})+(?!\d))/g, ".")) + (t[1] ? "," + t[1] : ""); }
   function p2(v) { return v == null ? "—" : tal(v, 2) + NB + "%"; }
@@ -22,28 +18,28 @@
   function fortegn(v) { return v == null ? "—" : (v > 0 ? "+" : "") + p1(v); }
   function heltal(v) { return v == null ? "—" : tal(v, 0); }
   function dato(s) { if (!s) return "—"; var d = s.slice(0, 10).split("-"); return +d[2] + ". " + MD[+d[1] - 1] + " " + d[0]; }
-  function lokalDato(iso) { /* ISO med tidszone -> dato i Europe/Copenhagen (kun visning) */
+  function lokalDato(iso) {  
     try { return new Intl.DateTimeFormat("da-DK", { timeZone: "Europe/Copenhagen", day: "numeric", month: "short", year: "numeric" }).format(new Date(iso)); } catch (e) { return dato(iso); }
   }
   function maaned(s) { var d = s.split("-"); return MD[+d[1] - 1] + " " + d[0].slice(2); }
-  function harSide(slug) { var S = (window.NDI_DATA || {}).sider || {}; return !!(slug && S[slug] === true); }   /* Å20 (B) */
+  function harSide(slug) { var S = (window.NDI_DATA || {}).sider || {}; return !!(slug && S[slug] === true); }    
   function link(navn, slug) { return harSide(slug) ? '<a href="selskaber/' + esc(slug) + '.html">' + esc(navn) + "</a>" : esc(navn); }
 
-  /* ---------- eksempeldata-mærke ---------- */
+   
   var hoved = document.querySelector(".v18-portefolje-hoved");
   if (P && P.eksempeldata && hoved) {
     var m = document.createElement("p"); m.className = "v18-eksempel"; m.setAttribute("role", "note");
     m.innerHTML = "<strong>Eksempeldata</strong> " + esc(P.eksempelNote); hoved.insertBefore(m, knap);
   }
 
-  /* ---------- 1. Portefølje ---------- */
+   
   function portfolio() {
     var b = P.beholdning, g = P.geografi;
     var top = b.top10.map(function (r) { return '<li><span class="v18p-navn">' + link(r.navn, r.slug) + '</span><span class="v18p-spor" aria-hidden="true"><i style="--v:' + r.bar + '"></i></span><b>' + p2(r.andel) + "</b></li>"; }).join("");
     var kaede = "";
     if (VK && P.vaerdikaede) {
-      /* K17: portefolje.vaerdikaede = [{id, andel, antal, selskaber:[{slug, andel}]}] færdigsorteret fra data.
-         Teksterne slås kun op i vaerdikaede-tekster (gruppe via id, selskab via slug). Ingen sortering eller filtrering her. */
+      
+
       var navne = {};
       VK.grupper.forEach(function (x) { navne[x.id] = x; });
       kaede = '<div class="panel v18p-kaede"><span class="eyebrow">TEKNOLOGI ER MERE END ÉN SEKTOR</span><h3>Fra chips til det, chipsene gør muligt.</h3>' +
@@ -83,9 +79,9 @@
       '<p class="small">Rul i tabellen for flere rækker. På små skærme kan du også rulle til siden →</p></div></section>';
   }
 
-  /* ---------- små linjegrafer (kun koordinater) ---------- */
+   
   function linjegraf(serier, etiket) {
-    /* Aksen afrundes til hele 10 % omkring seriernes yderpunkter: kun koordinater (afsnit 9 pkt. 3) */
+     
     var lo = Infinity, hi = -Infinity;
     serier.forEach(function (s) { s.p.forEach(function (r) { if (r[1] < lo) lo = r[1]; if (r[1] > hi) hi = r[1]; }); });
     lo = Math.floor(Math.min(lo, 0) / 10) * 10; hi = Math.ceil(Math.max(hi, 0) / 10) * 10; if (hi === lo) hi = lo + 10;
@@ -100,7 +96,7 @@
       '<text x="' + x0 + '" y="' + (h - 6) + '">' + dato(a[0][0]) + '</text><text x="' + x1 + '" y="' + (h - 6) + '" text-anchor="end">' + dato(a[a.length - 1][0]) + "</text></svg>";
   }
 
-  /* ---------- 2. 52-ugers top ---------- */
+   
   function highs() {
     var t = P.top52, r = P.risiko;
     var bars = t.intervaller.map(function (iv, i) {
@@ -108,7 +104,7 @@
     }).join("");
     var hist = t.historik.map(function (h) { return [h.dato, h.middel]; }), med = t.historik.map(function (h) { return [h.dato, h.median]; });
     var fald = r.faldSerie;
-    /* K17 (Byggespec 17:49): tom tilstand, når ingen positioner er fordelt i intervallerne (alle antal = 0). Ingen tal. */
+     
     var tom = t.intervaller.every(function (iv) { return iv.antal === 0; });
     return '<section class="v18p-del" id="portefoeljen-highs" aria-labelledby="h-p-highs"><div class="panel"><span class="eyebrow">AKTIERNES KURSUDVIKLING</span><h3 id="h-p-highs">Afstand til toppen · op til 52 uger</h3>' +
       "<p>Seneste tilgængelige lukkekurs på eller før porteføljedatoen sammenholdt med højeste dagskurs i de foregående 52 uger. Ikke totalafkast og ikke et mål for, om en aktie er billig.</p>" +
@@ -135,12 +131,12 @@
       iv.aktier.map(function (a) { return '<tr><th scope="row">' + link(a.navn, a.slug) + "</th><td>" + p2(a.andel) + "</td><td>" + tal(a.lukkekurs, 2) + NB + esc(a.valuta) + "<small>" + dato(a.kursdato) + "</small></td><td>" + tal(a.top, 2) + NB + esc(a.valuta) + "</td><td>" + p1(a.afstand52) + (a.afstandBasis === "kortere" ? "*" : "") + "</td></tr>"; }).join("") + "</tbody></table></div>" : "");
   }
 
-  /* ---------- 3. Risiko ---------- */
+   
   var KAL = ["Jan", "Feb", "Mar", "Apr", "Maj", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dec"];
   function kalender() {
     if (!U) return '<p class="v18-fejl" role="status">Grafen er ikke tilgængelig lige nu</p>';
     var rk = U.kalender.map(function (aar) {
-      var pr = {}; aar.maaneder.forEach(function (m) { pr[+m.maaned.slice(5)] = m; });   /* opslag efter månedsnummer */
+      var pr = {}; aar.maaneder.forEach(function (m) { pr[+m.maaned.slice(5)] = m; });    
       return '<tr><th scope="row">' + aar.aar + (aar.delvis ? "*" : "") + '</th><td class="annual-total ' + (aar.afkast >= 0 ? "positive" : "negative") + '">' + p1(aar.afkast) + "</td>" +
         KAL.map(function (k, i) { var m = pr[i + 1]; return '<td class="' + (m ? (m.afkast >= 0 ? "positive" : "negative") : "muted") + '">' + (m ? tal(m.afkast, 1) + (m.delvis ? "*" : "") : "—") + "</td>"; }).join("") + "</tr>";
     }).join("");
@@ -165,7 +161,7 @@
       '<div class="panel"><span class="eyebrow">MÅNED FOR MÅNED</span><h3>Afkastkalender</h3>' + kalender() + "</div></section>";
   }
 
-  /* ---------- 4. Metode ---------- */
+   
   function method() {
     var m = P.metode, o = m.omkostninger, r = P.risiko;
     function afs(t, x) { return "<details><summary>" + t + "</summary>" + x + "</details>"; }
@@ -196,7 +192,7 @@
       '<p class="small">Dette er rapportens felt for officiel NAV, ikke dens indikative aktuelle kurs. Den officielle værdi kan vedrøre en tidligere dato end beholdningerne.</p></div></section>';
   }
 
-  /* ---------- fold, spring og menu ---------- */
+   
   var tegnet = false;
   function tegn() {
     if (tegnet) return; tegnet = true;
@@ -215,8 +211,8 @@
     aabnFold();
     var el = document.getElementById("portefoeljen-" + id); if (!el) return;
     el.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
-    /* V5-BEVARET: porteføljen står nu under temaerne og de ti største. Kommer man udefra (widgetens "Se største fald"),
-       kan indholdet over stadig være ved at lægge sig, når hoppet beregnes. Når scrollet og siden er færdige, rettes målet én gang. */
+    
+
     var ret = function () {
       var r = el.getBoundingClientRect(), m = parseFloat(getComputedStyle(el).scrollMarginTop) || 0;
       if (Math.abs(r.top - m) > 4) el.scrollIntoView({ behavior: "auto", block: "start" });

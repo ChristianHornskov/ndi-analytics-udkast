@@ -1,137 +1,48 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="da">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="noindex,nofollow" name="robots"/>
-<title>NewDeal Invest - totalafkast</title>
-<link href="chart.css" rel="stylesheet"/>
-<!-- og:start -->
-<!-- og:end -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#050a0f">
+<script>(function(){var d=document.documentElement,t=null;try{t=localStorage.getItem("ndi-tema")}catch(e){}if(t!=="lys"&&t!=="mørk"){t="mørk"}d.setAttribute("data-tema",t)})();</script>
+<title>Fondens udvikling · NewDeal Invest</title>
+<meta name="description" content="NewDeal Invest PMINDI: fondens udvikling.">
 <link rel="icon" href="../assets/img/ndi-favicon.png" type="image/png">
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/komponenter.css">
+<link rel="stylesheet" href="../assets/css/sider.css">
+<link rel="stylesheet" href="../assets/css/tema-lys.css">
+<link rel="stylesheet" href="../assets/fonts/v5/fonts.css">
+<link rel="stylesheet" href="../assets/css/v5.css">
+<link rel="stylesheet" href="../assets/css/v5-komponenter.css">
+<link rel="stylesheet" href="../assets/css/v18-min.css">
+<script>try{document.fonts.load("500 16px Manrope");document.fonts.load("400 16px 'DM Sans'")}catch(e){}</script>
 </head>
-<body>
-<a class="skip" href="#chart-title">Gå til graf</a>
-<p class="print-mast">NewDeal Invest. Udskrift. Markedsføringsmateriale. Generel information, <span class="keep">ikke investeringsrådgivning.</span> Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast.</p>
-<main class="embed">
-<section aria-labelledby="chart-title" class="panel">
-<header class="chart-heading">
-<div>
-<p class="eyebrow">NEWDEAL INVEST</p>
-<h1 id="chart-title">Totalafkast</h1>
+<body class="v18-widget-side">
+
+<main id="indhold" tabindex="-1">
+<div class="v5 v18-forside v18-widget">
+<div id="afkast" class="v18-afkast"></div>
+<nav class="v18-widget-knapper" aria-label="Videre til NewDeal Invest"><a class="knap v18-widget-knap" href="../index.html" target="_top">Undersøg porteføljen mere →</a><a class="knap v18-widget-knap" href="../index.html#temaer" target="_top">Udforsk teknologien →</a><a class="knap v18-widget-knap" href="../index.html#portefoeljen-risk-summary" target="_top">Se største fald →</a></nav>
+<section class="information" id="vigtig-information" aria-labelledby="h-info"><h2 id="h-info">Vigtig information</h2><div id="vigtig-information-indhold"><p>Henter vigtig information …</p></div></section>
 </div>
-<div class="chart-meta">
-<div id="updated">Henter kursdato…</div>
-<div class="data-source"><span aria-hidden="true" class="status-dot"></span><span id="source-label">Henter data…</span></div>
-</div>
-</header>
-<div aria-label="Andelsklasse" class="class-options" role="radiogroup">
-<button aria-checked="true" class="class-card selected" data-fund="PMINDI" role="radio" type="button">
-<svg aria-hidden="true" class="class-mark" focusable="false" viewbox="0 0 100 36"><rect height="16" rx="3" width="32" x="1.5" y="14.5"></rect><path d="M33.5 22.5 H78"></path><path d="M72 17.5 L80 22.5 L72 27.5"></path></svg>
-<span class="class-title"><span aria-hidden="true" class="checkmark">✓</span>PMINDI</span>
-<span class="class-subtitle">Udbyttebetalende. Udbytte udbetales <span class="keep">til dig.</span></span>
-</button>
-<button aria-checked="false" class="class-card" data-fund="PMINDIAKK" role="radio" type="button">
-<svg aria-hidden="true" class="class-mark" focusable="false" viewbox="0 0 100 36"><rect height="16" rx="3" width="32" x="1.5" y="14.5"></rect><path d="M33.5 22.5 H62 C80 22.5 80 6.5 62 6.5 H18.5 V10"></path><path d="M13 8.5 L18.5 16 L24 8.5"></path></svg>
-<span class="class-title"><span aria-hidden="true" class="checkmark">✓</span>PMINDIAKK</span>
-<span class="class-subtitle">Akkumulerende. Afkastet bliver i fonden.</span>
-</button>
-</div>
-<div class="chart-toolbar">
-<div aria-label="Periode" class="segmented periods" role="tablist">
-<button aria-controls="chart-container" aria-selected="false" class="control" data-period="ytd" role="tab" tabindex="-1" type="button">År til dato</button>
-<button aria-controls="chart-container" aria-selected="true" class="control active" data-period="all" role="tab" tabindex="0" type="button">Hele perioden</button>
-</div>
-</div>
-<div class="life-bit" id="life-bit">
-<div class="life-bit-rail">
-<button aria-label="Hele perioden" aria-pressed="true" class="life-bit-all" data-period="all" type="button"></button>
-<button aria-label="År til dato" aria-pressed="false" class="life-bit-ytd" data-period="ytd" id="life-bit-ytd" type="button"></button>
-</div>
-<p aria-live="polite" class="life-bit-say" id="life-bit-say"></p>
-</div>
-<div class="chart-legends">
-<div class="legend">
-<span id="legend-fund">PMINDI</span>
-<strong aria-describedby="historisk-advarsel" id="fund-return">-</strong>
-</div>
-</div>
-<p class="bench-note"><span aria-hidden="true" class="status-dot"></span>Fonden har intet fast benchmark.</p>
-<div class="chart-container" id="chart-container">
-<svg aria-labelledby="svg-title svg-description" id="performance-chart" role="img" tabindex="0"></svg>
-<div class="chart-tooltip" hidden="" id="chart-tooltip"></div>
-<div class="chart-loading" id="chart-loading">Henter data…</div>
-<label class="sr-only" for="chart-slider" style="position:absolute;width:1px;height:1px;clip-path:inset(50%);overflow:hidden">Datopunkt i grafen</label>
-<input aria-valuetext="" class="chart-slider" id="chart-slider" max="1" min="0" style="position:absolute;width:1px;height:1px;clip-path:inset(50%);overflow:hidden" type="range" value="0"/>
-</div>
-<p aria-live="polite" class="chart-readout" id="chart-readout"></p>
-<div class="stops" hidden="" id="chart-stops">
-<div aria-label="Stop på kurven" class="stops-track" id="stops-track" role="group"></div>
-<p class="stops-say" id="stops-say"></p>
-</div>
-<div class="day-split" hidden="" id="day-split">
-<div aria-hidden="true" class="day-track"><i class="over" id="day-over-bar"></i><i class="under" id="day-under-bar"></i></div>
-<div aria-label="Dage på og under nul" class="day-picks" role="group">
-<button aria-pressed="false" data-side="over" type="button">På eller <span class="keep">over nul</span></button>
-<button aria-pressed="false" class="under" data-side="under" type="button"><span class="keep">Under nul</span></button>
-</div>
-<p aria-live="polite" class="day-say" id="day-say"></p>
-<p class="day-hop"><button hidden="" id="first-below" type="button">Første dag <span class="keep">under nul</span></button></p>
-</div>
-<p aria-live="polite" class="chart-context" hidden="" id="chart-context"></p>
-<p class="chart-pointe" id="chart-pointe"></p>
-<div class="metrics-row">
-<div class="metric metric-total">
-<span class="metric-label">Totalafkast</span>
-<strong aria-describedby="historisk-advarsel" class="accent" id="metric-total">-</strong>
-<small id="metric-total-note">Siden start · efter omkostninger</small>
-</div>
-<div class="metric metric-cagr">
-<span class="metric-label">Gns. årligt afkast</span>
-<strong aria-describedby="historisk-advarsel" id="metric-cagr">-</strong>
-<small id="metric-cagr-note">Siden start</small>
-</div>
-<div class="metric metric-ytd">
-<span class="metric-label">År til dato</span>
-<strong aria-describedby="historisk-advarsel" id="metric-ytd">-</strong>
-<small id="metric-ytd-note">Fra årets start</small>
-</div>
-<div class="metric metric-dd">
-<span class="metric-label">Største fald</span>
-<div class="dd-row">
-<strong aria-describedby="historisk-advarsel" id="metric-dd">-</strong>
-<span aria-hidden="true" class="dd-well" hidden="" id="metric-dd-well"><i></i></span>
-</div>
-<small id="metric-dd-note">I den viste periode</small>
-</div>
-<aside class="warn" id="historisk-advarsel" role="note">
- Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan tabe en del af eller hele <span class="keep">din investering.</span>
-</aside>
-</div>
-<p class="foot">Afkastet er i danske kroner og efter fondens løbende omkostninger, før skat og egne handelsomkostninger. Totalafkast forudsætter geninvesteret udbytte. <span class="keep">Kilde: Fundmarket.</span></p>
-<p class="sri-line" hidden="" id="sri-line"></p>
-<p class="print-row"><button class="outline-button" id="print-sheet" type="button">Udskriv</button></p>
-</section>
-<div class="embed-cta">
-<p>Vil du forstå beholdningen, temaerne og de <span class="keep">store fald</span>?</p>
-<div class="embed-cta-links">
-<a class="outline-button" href="../index.html" target="_top">Undersøg porteføljen mere →</a>
-<a class="outline-button" href="../index.html#temaer" target="_top">Udforsk teknologien →</a>
-<span aria-hidden="true" class="cta-break"></span>
-<a class="outline-button" href="../index.html#portefoeljen-risk-summary" id="drawdown-link" target="_top">Se største fald →</a>
-<button class="outline-button" id="share-chart" type="button">Del grafen</button>
-</div>
-<p class="share-note" hidden="" id="share-note"></p>
-</div>
-<footer class="embed-legal">
-<p><strong>Markedsføringsmateriale.</strong> Læs <a href="https://fundmarket.dk/wp-content/uploads/Faellesprospekt-for-afdelinger-og-andelsklasser-i-Investeringsforeningen-Portfoliomanager-opdateret-24.10.2025.pdf" rel="noopener" target="_blank">prospektet ↗</a> og KID for <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm140b" rel="noopener" target="_blank">PMINDI ↗</a> eller <a href="https://node-api.fundmarket.dk/funds/documents/priip_ipm145b" rel="noopener" target="_blank">PMINDIAKK ↗</a>, før du træffer <span class="keep">en endelig investeringsbeslutning.</span></p>
-<p>Udkast. Generel information, <span class="keep">ikke investeringsrådgivning.</span> Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast. Du kan <span class="keep">tabe penge.</span></p>
-</footer>
 </main>
-<noscript>
-<p class="noscript-note">Grafen kræver JavaScript. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast.</p>
-</noscript>
-<script src="chart.js"></script>
-<script>new ResizeObserver(()=>parent.postMessage({type:"ndi-chart-height",height:document.body.getBoundingClientRect().height},location.origin)).observe(document.body);</script></body>
+    <footer class="sidefod">
+      <div class="sidefod-maerke"><span class="logo-felt"><img class="ndi-logo" src="../assets/img/ndi-logo-moerk-baggrund.png" width="2048" height="754" alt="NewDeal Invest" decoding="async"></span></div>
+      <div class="sidefod-tekst">
+        <p>NewDeal Invest er et brand for NDIIR ApS, investeringsrådgiver for Fundmarket A/S. Markedsføringsmateriale. Ikke personlig investeringsrådgivning. Investering indebærer risiko for tab. </p>
+        <p class="sidefod-kilde">Kilde til fondstal: Fundmarket A/S, der forvalter Investeringsforeningen PortfolioManager. NDIIR ApS yder investeringsrådgivning til foreningen. <span class="sidefod-dato">Opdateret <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span>.</span></p>
+      </div>
+    </footer>
+<script src="../data/dagens-tal.js"></script>
+<script src="../data/sider.js"></script>
+<script src="../assets/js/valg.js"></script>
+<script src="../data/fondsudvikling.js"></script>
+<script src="../data/portefolje.js"></script>
+<script src="../assets/js/datalag.js"></script>
+<script src="../assets/js/tema.js"></script>
+<script src="../assets/js/grafik.js"></script>
+<script src="../assets/js/v18-afkast.js"></script>
+</body>
 </html>

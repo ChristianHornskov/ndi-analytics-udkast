@@ -1,10 +1,8 @@
-/* NewDeal Invest · grafer i ren SVG (ingen biblioteker).
-   Regnskabstal (SEC) til segmentgrafen læses fra window.NDI_DATA; panelet "omsætning mod investeringer" og donutten læser spacex.sec i dagens-tal.json (v12). Andelens historie læses fra data/dagens-tal.json
-   (window.NDI_TAL.spacex.historik og .akse) via datalag.js. Intet beregnes eller fremskrives;
-   kun skalaer og placering på skærmen regnes ud. */
+
+
 (function () {
   "use strict";
-  var D = (window.NDI_DATA || {}).regnskab;  /* v18.1: data/regnskab.js */
+  var D = (window.NDI_DATA || {}).regnskab;   
   var NS = "http://www.w3.org/2000/svg";
 
   function el(name, attrs, parent) {
@@ -27,12 +25,12 @@
   }
   var nf = new Intl.NumberFormat("da-DK");
   function heltal(n) { return nf.format(n).replace("-", "\u2212"); }
-  /* Kildens tal er i mio. dollar. Visningen er i mia. dollar (R3-13): kun formatering, ingen beregning på fondsdata. */
+   
   function mia(n, dec) { return (n / 1000).toFixed(dec).replace(".", ",").replace("-", "\u2212"); }
   function pct(n) { return n.toFixed(2).replace(".", ",") + "\u00a0%"; }
   function datoKort(iso) { var p = iso.split("-"); return p[2] + "." + p[1]; }
   function datoLang(iso) { var p = iso.split("-"); return p[2] + "." + p[1] + "." + p[0]; }
-  /* v17 (triage G-06): danske månedsnavne på andelsgrafens tidsakse; præcis dato står i tooltip */
+   
   var MDR = ["jan.", "feb.", "mar.", "apr.", "maj", "jun.", "jul.", "aug.", "sep.", "okt.", "nov.", "dec."];
   function mdKort(iso) { return MDR[+iso.split("-")[1] - 1]; }
   function mdLang(iso) { return mdKort(iso) + " " + iso.split("-")[0]; }
@@ -40,20 +38,20 @@
   function farve(v) { return getComputedStyle(document.documentElement).getPropertyValue(v.replace(/var\((--[^)]+)\)/, "$1")).trim() || v; }
   function pathFra(pts) { return pts.map(function (p, i) { return (i ? "L" : "M") + p[0].toFixed(1) + " " + p[1].toFixed(1); }).join(" "); }
 
-  /* ---------- Minigraf i fondskortet ---------- */
-  /* Andelens historie: punkterne og aksens top står færdige i dagens-tal.json. */
+   
+   
   function andelSerier() {
     var h = window.NDI_TAL && window.NDI_TAL.spacex && window.NDI_TAL.spacex.historik;
     if (!h) return null;
     return [
-      /* v18.1 (DATAKONTRAKT 2.1): historik[].andel, kun PMINDI */
+       
       { id: "andel", navn: "Andel af fonden", farve: "var(--c-accent)", punkter: h.map(function (p) { return [p.dato, p.andel]; }) }
     ];
   }
   function andelMaks() { return window.NDI_TAL.spacex.akse.maks; }
 
   function minigraf(box) {
-    box.innerHTML = ""; /* v15: mål den tomme boks, så en tidlig tegning ikke låser højden */
+    box.innerHTML = "";  
     var w = Math.max(160, box.clientWidth), h = Math.max(60, box.clientHeight);
     var s = svgRod(box, w, h, true);
     var serier = andelSerier(); if (!serier) return;
@@ -65,14 +63,14 @@
     el("line", { x1: pad.l, x2: w - pad.r, y1: y(0), y2: y(0), class: "gitterlinje", stroke: farve("var(--c-grid)") }, s);
     serier.slice().reverse().forEach(function (ser, idx) {
       var pts = ser.punkter.map(function (p) { return [x(p[0]), y(p[1])]; });
-      /* v17 (G-06): ingen udfyldning */
+       
       el("path", { d: pathFra(pts), fill: "none", stroke: farve(ser.farve), "stroke-width": idx === 1 ? 2 : 1.5, "stroke-linejoin": "round", "stroke-linecap": "round", "stroke-dasharray": idx === 1 ? "" : "4 3" }, s);
       var sidste = pts[pts.length - 1];
       el("circle", { cx: sidste[0], cy: sidste[1], r: idx === 1 ? 3.5 : 3, fill: farve(ser.farve), stroke: farve("var(--c-surface)"), "stroke-width": 2 }, s);
     });
   }
 
-  /* ---------- Linjegraf: andelens historie ---------- */
+   
   function linje(box) {
     var w = Math.max(280, box.clientWidth), h = box.clientHeight || 280;
     var smal = w < 480;
@@ -89,11 +87,11 @@
     }
     punkter.forEach(function (p, i) {
       var anchor = i === 0 ? "start" : (i === punkter.length - 1 ? "end" : "middle");
-      
+       
       var kant = i === 0 || i === punkter.length - 1;
-      /* en dato tæt på den sidste dato springes over, så teksterne ikke ligger oven i hinanden (360 px) */
+       
       if (!kant && x(punkter[punkter.length - 1][0]) - x(p[0]) < 56) return;
-      /* v17 (G-06): samme måned som den sidste dato skrives kun én gang */
+       
       if (!kant && p[0].slice(0, 7) === punkter[punkter.length - 1][0].slice(0, 7)) return;
       var nabo = i === 0 ? punkter[1] : punkter[i - 1];
       var plads = nabo ? Math.abs(x(nabo[0]) - x(p[0])) : 0;
@@ -105,7 +103,7 @@
     serier.slice().reverse().forEach(function (ser) {
       var accent = ser.id === "andel";
       var pts = ser.punkter.map(function (p) { return [x(p[0]), y(p[1])]; });
-      /* v17 (G-06): ingen udfyldning under linjen; kun punkter med tynde linjer */
+       
       el("path", { d: pathFra(pts), fill: "none", stroke: farve(ser.farve), "stroke-width": accent ? 1.5 : 1.25, "stroke-linejoin": "round", "stroke-dasharray": accent ? "" : "5 4" }, s);
       var serPrik = [];
       pts.forEach(function (pt, i) {
@@ -113,13 +111,13 @@
         serPrik.push(c);
       });
       prikker.push(serPrik);
-      /* Værdi ved sidste punkt */
+       
       var sidste = ser.punkter[ser.punkter.length - 1];
       var ly = y(sidste[1]) + (accent ? 12 : -2);
       tekst(s, x(sidste[0]) + 10, ly, pct(sidste[1]), { "text-anchor": "start", class: "vaerdi-tekst", fill: farve(ser.farve) });
     });
 
-    /* Tooltip: mus, berøring og tastatur */
+     
     var tip = document.createElement("div");
     tip.className = "graf-tip"; tip.setAttribute("aria-hidden", "true");
     box.appendChild(tip);
@@ -164,7 +162,7 @@
     };
   }
 
-  /* ---------- Grupperede søjler: segmenter ---------- */
+   
   var MAAL = {
     oms: { felt: "omsaetning", navn: "Omsætning" },
     drift: { felt: "drift", navn: "Driftsresultat" },
@@ -224,9 +222,8 @@
     });
   }
 
-  /* ---------- Donut: omsætning 3. kvt. ----------
-     v12 (Faktatjek R3/R4): tal, buelængder (bue) og startpunkter (start) står færdige i
-     data/dagens-tal.json (spacex.sec.donut, bygget af _kilde/sec_tal.py). Her ganges kun med omkredsen. */
+  
+
   function secData() { var t = window.NDI_TAL; return t && t.spacex && t.spacex.sec; }
   function donut(box) {
     var sec = secData(); if (!sec) return;
@@ -251,8 +248,8 @@
     box.style.maxWidth = size + "px";
   }
 
-  /* ---------- Vandrette søjler: anlæg mod omsætning ----------
-     v12: aksens maks og trin og søjlernes bredde (andel af aksen) står i spacex.sec. */
+  
+
   function vandret(box) {
     var sec = secData(); if (!sec) return;
     var w = Math.max(280, box.clientWidth), h = box.clientHeight || 200;
@@ -278,7 +275,7 @@
     });
   }
 
-  /* ---------- Opstart og responsiv gentegning ---------- */
+   
   var tegnere = [
     ["minigraf", minigraf], ["graf-andel", linje], ["graf-donut", donut], ["graf-anlaeg", vandret],
     ["graf-segment", function (b) { soejler(b, b.dataset.maal || "oms"); }]
@@ -306,8 +303,8 @@
     }
   }
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(start); else start();
-  /* Når dagens tal er hentet, tegnes andelens historie (igen). */
+   
   document.addEventListener("ndi:tema", tegnAlle);
-  window.addEventListener("load", function () { var b = document.getElementById("minigraf"); if (b) minigraf(b); }); /* v15: data er klar før billederne; tegn igen, når layoutet er færdigt */
+  window.addEventListener("load", function () { var b = document.getElementById("minigraf"); if (b) minigraf(b); });  
   document.addEventListener("ndi:tal", function () { ["minigraf", "graf-andel", "graf-donut", "graf-anlaeg"].forEach(function (id) { var b = document.getElementById(id); if (b) tegnere.forEach(function (t) { if (t[0] === id) t[1](b); }); }); });
 })();

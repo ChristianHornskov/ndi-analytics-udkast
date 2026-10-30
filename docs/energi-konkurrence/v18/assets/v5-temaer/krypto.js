@@ -1,4 +1,4 @@
-/* Genereret af _kilde/v5_fortaelling.py: v5-temasidens egne scripts, ordret. */
+ 
 try{(function(){var R=document.getElementById('cq-kr');if(!R||R.dataset.on)return;R.dataset.on='1';R.classList.add('cq-kr--js');
 var TL={'Datacentre':'../datacenter/index.html','Fintech':'../fintech/index.html'};
 var fine=window.matchMedia&&matchMedia('(hover: hover) and (pointer: fine)').matches;
@@ -43,25 +43,25 @@ var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 var pr=document.querySelector('.prog');
 function prog(){if(!pr)return;var h=document.documentElement,m=h.scrollHeight-innerHeight;pr&&pr.style.setProperty('--p',m>0?(scrollY/m).toFixed(3):0)}
 addEventListener('scroll',prog,{passive:true});prog();
-/* X: ét opslag synligt, tre bag knap */
+ 
 var xl=document.getElementById('x-liste'),xm=document.getElementById('x-mere');
 if(xl&&xm){xm.hidden=false;xm.addEventListener('click',function(){var o=xm.getAttribute('aria-expanded')!=='true';xm.setAttribute('aria-expanded',String(o));xl.classList.toggle('alle',o);xm.textContent=o?'Vis færre':'Vis 2 opslag mere';if(o){var f=xl.querySelector('.x-mere');if(f){f.tabIndex=-1;f.focus({preventScroll:true})}}})}
-/* X-facade: intet hentes fra X før klik; widgets.js indlæses én gang */
+ 
 function twl(){if(window.twttr&&window.twttr.widgets)return;window.twttr=(function(d){var t=window.twttr||{};if(t._e)return t;t._e=[];t.ready=function(f){t._e.push(f)};var j=d.createElement('script');j.id='twitter-wjs';j.async=true;j.src='https://platform.twitter.com/widgets.js';j.charset='utf-8';d.body.appendChild(j);return t})(document)}
 [].forEach.call(document.querySelectorAll('.xp[data-url]'),function(li){var b=li.querySelector('.xp-vis'),em=li.querySelector('.xp-embed');b.hidden=false;
  b.addEventListener('click',function(){if(em.firstChild)return;var q=document.createElement('blockquote');q.className='twitter-tweet';q.setAttribute('data-theme','dark');q.setAttribute('data-dnt','true');q.setAttribute('data-conversation','none');q.setAttribute('data-lang','da');
  var a=document.createElement('a');a.href=li.dataset.url;a.textContent='Opslaget hentes fra X …';q.appendChild(a);em.appendChild(q);b.hidden=true;em.focus({preventScroll:true});
  twl();window.twttr.ready(function(t){t.widgets.load(em)})})});
-/* "Hører til": åbn rollen i hovedbogen */
+ 
 var R=document.getElementById('cq-kr');
 [].forEach.call(document.querySelectorAll('.xp-trin a[data-rolle]'),function(a){a.addEventListener('click',function(e){var b=R&&R.querySelector('.cq-kr__rb[aria-controls="cq-kr-p-'+a.dataset.rolle+'"]');if(!b||!R.cqSetDx)return;e.preventDefault();R.cqSetDx(b,true);b.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});b.focus({preventScroll:true})})});
-/* risiko: eksempler og kilder bag knap */
+ 
 var rk=document.querySelector('.risiko'),rx=document.getElementById('risiko-eks');
 if(rk&&rx){rx.hidden=false;rx.addEventListener('click',function(){var o=rx.getAttribute('aria-expanded')!=='true';rx.setAttribute('aria-expanded',String(o));rk.classList.toggle('aaben',o);rx.textContent=o?'Skjul eksempler og kilder':'Se eksempler og kilder'})}
-/* kilder: åbn den foldede liste, når der linkes til den */
+ 
 var kd=document.getElementById('kilder-d');
 [].forEach.call(document.querySelectorAll('a[href="#kilder"]'),function(a){a.addEventListener('click',function(){if(kd)kd.open=true})});
-/* video-facade: YouTube (nocookie) hentes først ved klik */
+ 
 [].forEach.call(document.querySelectorAll('.vid-ramme[data-yt]'),function(r){var b=r.querySelector('.vid-play');b.addEventListener('click',function(){var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+r.dataset.yt+'?autoplay=1&rel=0&playsinline=1';f.title=r.dataset.title;f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.setAttribute('allowfullscreen','');f.referrerPolicy='strict-origin-when-cross-origin';r.replaceChild(f,b);f.focus()})});
 })();
 }catch(e){}

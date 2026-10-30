@@ -1,25 +1,25 @@
-// Spor zoom (V4 runde 4) · det levende prikfelt. Erstatter tegningen i createAtlasCanvas med samme API
-// (destroy, setFilter, setSelection, getLayout, getState) og genbruger layoutAtlas, så antal og placering er de samme.
-// Nyt: stjernestøv, der samler sig ved indgang (≤ 1.600 ms), åndedræt i hvile, synlige rigtige tråde mellem linjer
-// (tykkelse = delte selskaber) med lys, der løber langs dem, og labels, der skærer trådene fri.
-// Tegner KUN, når noget bevæger sig: fuld hastighed under samling og tryk, ca. 24 billeder/s i åndedrættet,
-// og helt stille efter en rolig udtoning. Stopper uden for viewport og i skjult fane. DPR op til 3.
-// Ingen farver i koden: alle farver læses fra temaets CSS-variabler og læses igen ved temaskift.
+
+
+
+
+
+
+
 import {CLUSTER_NAMES} from './atlas-data.mjs';
 import {layoutAtlas} from './atlas-canvas.mjs';
 
 export const GATHER_MS=1600;
 export const REST_THREADS=14;
 const FLIGHT_MS=900,STAGGER_MS=GATHER_MS-FLIGHT_MS-120,LIFE_FPS=24,IDLE_MS=22000,SETTLE_MS=2400,BREATH_MS=6000,PULSE_MS=1500,PULSE_GAP=2600;
-// Runde 6 (spor B, ux-18): navnene bor i atlas-data.mjs, så indlæsningsskelettet viser de samme klyngenavne som kortet.
+
 const NAMES=CLUSTER_NAMES;
 export const clusterName=c=>c.displayName||NAMES[c.id]||c.name;
 
-// Deterministisk støj pr. ISIN, så startfeltet er det samme ved hver indlæsning (og testbart).
+
 export function seeded(key,salt=0){let h=2166136261^salt;for(const ch of String(key)){h^=ch.charCodeAt(0);h=Math.imul(h,16777619)}h^=h>>>13;h=Math.imul(h,1274126177);return ((h^(h>>>16))>>>0)/4294967296}
 export const easeOutCubic=t=>1-(1-Math.min(1,Math.max(0,t)))**3;
 
-// Rigtige tværtråde: ét par linjer pr. tråd, vægtet med antal selskaber, der også arbejder på den anden linje.
+
 export function atlasThreads(layout){
  const by=new Map(layout.clusters.map(c=>[c.id,c])),pairs=new Map();
  for(const d of layout.dots)for(const id of d.also||[]){if(id===d.line||!by.has(id)||!by.has(d.line))continue;const key=[d.line,id].sort().join('|');pairs.set(key,(pairs.get(key)||0)+1)}
@@ -27,8 +27,8 @@ export function atlasThreads(layout){
   return {a:a.id,b:b.id,count,x1:a.x,y1:a.y,x2:b.x,y2:b.y,cx:mx-dy/len*bow,cy:my+dx/len*bow}}).sort((p,q)=>q.count-p.count||(p.a+p.b).localeCompare(q.a+q.b));
 }
 
-// Teknologiske sammenhænge er et selvstændigt lag; de ændrer aldrig selskabstrådenes antal.
-// Grundlag: de eksisterende led hybrid, quantum-software og quantum-problems med deres kilder.
+
+
 export const ATLAS_TECHNOLOGY_RELATIONS=[
  {a:'kvante',b:'chips',kind:'technology',label:'Klassisk styring',explanation:'Kvantesystemer bruger klassiske chips til styring og til at bearbejde måleresultater.'},
  {a:'kvante',b:'software',kind:'technology',label:'Programmer og algoritmer',explanation:'Software forbereder kvanteberegninger og forbinder dem med klassiske beregninger.'},
@@ -41,8 +41,8 @@ export function atlasTechnologyThreads(layout){
   return {...r,x1:a.x,y1:a.y,x2:b.x,y2:b.y,cx:(a.x+b.x)/2-dy/len*bow,cy:(a.y+b.y)/2+dx/len*bow};
  });
 }
-// Trådens tekst placeres på et punkt af kurven, hvor den ikke ligger under et temas navn.
-// Temaernes navne skærer alt fri under sig; uden dette blev »Programmer og algoritmer« delvist slettet ved 390 px.
+
+
 export function threadLabelSpot(th,width,labels,height=21){
  const at=t=>{const u=1-t;return [u*u*th.x1+2*u*t*th.cx+t*t*th.x2,u*u*th.y1+2*u*t*th.cy+t*t*th.y2]};
  const free=([x,y])=>!labels.some(r=>x-width/2<r.x+r.w&&x+width/2>r.x&&y-17<r.y+r.h&&y-17+height>r.y);
@@ -53,14 +53,14 @@ export function technologyNeighbours(threads,focus){
  return new Set(threads.filter(t=>t.a===focus||t.b===focus).flatMap(t=>[t.a,t.b]));
 }
 
-// Startpositioner (stjernestøv) og forsinkelser. Alle prikker er hjemme senest GATHER_MS efter start.
+
 export function gatherPlan(layout){
  return layout.dots.map(d=>({sx:seeded(d.isin,1)*layout.width,sy:seeded(d.isin,2)*layout.height,delay:seeded(d.isin,3)*STAGGER_MS,dur:FLIGHT_MS+seeded(d.isin,4)*120}));
 }
-// Hvor en prik står til tiden t (ms siden samlingens start), og om den stadig flyver.
+
 export function gatherPosition(d,plan,t){const k=easeOutCubic((t-plan.delay)/plan.dur);return {x:plan.sx+(d.x-plan.sx)*k,y:plan.sy+(d.y-plan.sy)*k,k}}
 
-// Farver fra temaet. Kun CSS-variabler; uden dem bruges canvas' egen tekstfarve.
+
 function parseColour(v){
  v=String(v||'').trim();let m=/^#([0-9a-f]{3,8})$/i.exec(v);
  if(m){let h=m[1];if(h.length<6)h=[...h].map(c=>c+c).join('');return [0,2,4].map(i=>parseInt(h.slice(i,i+2),16))}
@@ -71,7 +71,7 @@ export function readPalette(el){
  const cs=el.ownerDocument.defaultView.getComputedStyle(el),get=(n,fb)=>parseColour(cs.getPropertyValue(n))||fb;
  const ink=get('--text',parseColour(cs.color)||[128,128,128]);
  const p={ink,teal:get('--teal',ink),gold:get('--gold',ink),bg:get('--bg',null),line:get('--line',ink)};
- // Lys baggrund: gløden bliver til en blød skygge, så den dæmpes (glow-faktor), ellers bliver feltet grumset.
+ 
  p.glow=p.bg&&(p.bg[0]*.299+p.bg[1]*.587+p.bg[2]*.114)>140?.45:1;p.key=JSON.stringify(p);return p;
 }
 const rgba=(c,a)=>`rgba(${c[0]},${c[1]},${c[2]},${Math.max(0,Math.min(1,a)).toFixed(3)})`;
@@ -84,9 +84,9 @@ export function createLivingAtlas(host,{model,onLine,reducedMotion=false,counter
  let layout,threads=[],technologyThreads=[],plan=[],labels=[],palette=readPalette(host),dpr=1,backKey='';const back=doc.createElement('canvas');
  let visible=false,dead=false,filter='all',selection=null,hover=null,highlight=null,ripple=null,gatherStart=null,gathered=false,lifeUntil=0,timer=0,raf=0,frames=0,lastDraw=0,pulse=null,nextPulse=0;
  const now=()=>win.performance.now();
- // Runde 5 (mobil-review P2-5, runde 4-svaghed): første opbygning deles op, så ingen opgave bliver lang ved DPR 3.
- // Layout og knapper nu (de giver feltets højde), første tegning i næste frame, og baggrundslaget (tråde og glød) i idle,
- // mens prikkerne samler sig (laget tones alligevel først ind under samlingen). ResizeObserver tegner kun igen ved ny bredde.
+ 
+ 
+ 
  let lastWidth=0,drawRaf=0,backIdle=0;
  const keyNow=()=>`${layout.width}|${layout.height}|${dpr}|${selection}|${hover}|${palette.key}`;
  const idle=f=>win.requestIdleCallback?win.requestIdleCallback(f,{timeout:400}):win.setTimeout(f,60);
@@ -95,7 +95,7 @@ export function createLivingAtlas(host,{model,onLine,reducedMotion=false,counter
   const width=host.clientWidth||360;lastWidth=width;const height=width<600?540:560;layout=layoutAtlas(model,{width,height});for(const c of layout.clusters)c.phase=seeded(c.id,9)*Math.PI*2;threads=atlasThreads(layout);technologyThreads=atlasTechnologyThreads(layout);plan=gatherPlan(layout);
   dpr=Math.min(3,win.devicePixelRatio||1);canvas.width=Math.round(width*dpr);canvas.height=Math.round(layout.height*dpr);canvas.style.width=width+'px';canvas.style.height=layout.height+'px';host.style.height='auto';host.style.minHeight=layout.height+'px';
   const sample=(dash,color,w=2)=>`<svg width="30" height="10" viewBox="0 0 30 10" aria-hidden="true" focusable="false" style="vertical-align:middle;margin-right:6px"><line x1="2" y1="5" x2="28" y2="5" stroke="${color}" stroke-width="${w}" stroke-linecap="round"${dash?` stroke-dasharray="${dash}"`:''}/></svg>`;
-  // Claude runde 9 (ux-r9-004): signaturen tegnes som de rigtige linjer; den mulige anvendelse har sin egen gule, prikkede stil.
+  
   legend.innerHTML=`<span style="margin-right:16px;white-space:nowrap">${sample('','var(--teal)')}Fælles selskaber</span><span style="margin-right:16px;white-space:nowrap">${sample('6 4','var(--teal)')}Teknologisk samspil</span><span style="white-space:nowrap">${sample('0.5 5','var(--gold)',3)}Mulig anvendelse · forskning</span>`;legend.append(relationStatus);
   relationStatus.textContent=technologyThreads.length?'Kvante er forbundet med chips og software. Den gule, prikkede forbindelse til sundhed er en mulig fremtidig anvendelse: forskning i molekylesimulering.':'';ctx.setTransform(dpr,0,0,dpr,0,0);
   host.querySelectorAll('button').forEach(b=>b.remove());
@@ -105,14 +105,14 @@ export function createLivingAtlas(host,{model,onLine,reducedMotion=false,counter
    b.style.cssText=`left:${c.x}px;top:${top}px;width:${Math.max(72,Math.min(110,layout.width/layout.cols))}px;height:${hitR*2+55+(c.id==='ikke-klassificeret'?31:0)}px;--label-top:${c.labelY-top}px`;
    b.setAttribute('aria-label',`${clusterName(c)}, ${c.count} ${c.count===1?'selskab':'selskaber'}`);b.setAttribute('aria-description',technologyThreads.filter(t=>t.a===c.id||t.b===c.id).map(t=>t.explanation).join(' '));b.innerHTML='<span></span><small></small>';b.firstChild.textContent=clusterName(c);b.lastChild.textContent=`${c.count} ${c.count===1?'selskab':'selskaber'}`;
    b.addEventListener('click',()=>{ripple={x:c.x,y:c.y,start:now()};selection=c.id;hover=null;wake(4000);onLine?.(c.id,b)});
-   // Runde 6 (spor B, frisk-9): musen over en klynge viser dens tråde og prikker, før man klikker.
+   
    b.addEventListener('pointerenter',e=>{if(e.pointerType==='mouse'&&hover!==c.id){hover=c.id;draw(now())}});b.addEventListener('pointerleave',e=>{if(e.pointerType==='mouse'&&hover===c.id){hover=null;draw(now())}});
    b.addEventListener('focus',()=>{hover=c.id;draw(now())});b.addEventListener('blur',()=>{if(hover===c.id){hover=null;draw(now())}});
    host.append(b)}
   drawSoon();
 
  }
- // Åndedræt: ±2 px radialt pr. klynge over ca. 6 s, skaleret med afstanden til midten. amp tones ud før stop.
+ 
  function breathAmp(t){if(reducedMotion||!gathered)return 0;const left=lifeUntil-t;return left<=0?0:Math.min(1,left/SETTLE_MS)}
  function pos(d,i,t,amp,centre){
   let x=d.x,y=d.y;
@@ -130,7 +130,7 @@ export function createLivingAtlas(host,{model,onLine,reducedMotion=false,counter
 
    b.strokeStyle=rgba(on?P.gold:P.teal,a);b.lineWidth=on?w+.6:w;b.beginPath();b.moveTo(th.x1,th.y1);b.quadraticCurveTo(th.cx,th.cy,th.x2,th.y2);b.stroke()}
 
-  // Et adskilt, stiplet lag viser teknologisk samspil; prikker viser forskningsanvendelsen.
+  
   for(const th of technologyThreads){
    const on=focus&&(th.a===focus||th.b===focus),dim=focus&&!on;
    const research=th.kind==='research';b.setLineDash(simpleConnections?[]:research?[0.5,6]:[8,5]);b.lineCap=research?'round':'butt';b.strokeStyle=rgba(research&&!simpleConnections?P.gold:P.teal,dim?.18:on?1:research?.9:.65);b.lineWidth=research?(on?3.4:2.8):(on?2.6:1.7);
@@ -143,12 +143,12 @@ export function createLivingAtlas(host,{model,onLine,reducedMotion=false,counter
   for(const button of host.querySelectorAll('[data-ac-line]')){button.classList.toggle('is-technology-related',neighbours.has(button.dataset.acLine));}
   const relevant=technologyThreads.filter(th=>th.a===focus||th.b===focus),status=relevant.length?relevant.map(th=>th.explanation).join(' '):technologyThreads.length?'Kvante er forbundet med chips og software. Den gule, prikkede forbindelse til sundhed er en mulig fremtidig anvendelse: forskning i molekylesimulering.':'';
   if(relationStatus.textContent!==status)relationStatus.textContent=status;
-  // Tekst på den stærkeste tråd for valgt linje: hvor mange selskaber de deler.
+  
   if(selection){const th=threads.find(th=>th.a===selection||th.b===selection);if(th){b.font='600 12px system-ui,sans-serif';b.textAlign='center';const text=`${th.count} fælles`,w=b.measureText(text).width+12,[x,y]=threadLabelSpot(th,w,labels);if(P.bg){b.fillStyle=rgba(P.bg,.96);b.fillRect(x-w/2,y-17,w,21)}b.fillStyle=rgba(P.gold,1);b.fillText(text,x,y-2)}}
-  // Labels skærer trådene fri, så ingen tråd krydser en tekst.
+  
   b.globalCompositeOperation='destination-out';b.fillStyle=rgba(P.ink,1);
   for(const r of labels){b.beginPath();b.roundRect?b.roundRect(r.x,r.y,r.w,r.h,8):b.rect(r.x,r.y,r.w,r.h);b.fill()}
-  // Glød bag tråde og prikker.
+  
   b.globalCompositeOperation='destination-over';
   for(const c of layout.clusters){const R=Math.max(35,c.r*2.4),sel=focus===c.id||neighbours.has(c.id),g=b.createRadialGradient(c.x,c.y,0,c.x,c.y,R);g.addColorStop(0,rgba(sel?P.gold:P.teal,(sel?.2:.11)*P.glow));g.addColorStop(.45,rgba(P.line,.27*P.glow));g.addColorStop(1,rgba(P.line,0));b.fillStyle=g;b.fillRect(c.x-R,c.y-R,R*2,R*2)}
   b.globalCompositeOperation='source-over';
@@ -159,17 +159,17 @@ export function createLivingAtlas(host,{model,onLine,reducedMotion=false,counter
   const W=layout.width,H=layout.height,P=palette,amp=breathAmp(t),gatherK=gatherStart===null||gathered?1:Math.min(1,(t-gatherStart)/GATHER_MS);
   if(ripple&&t-ripple.start>900)ripple=null;
   ctx.globalCompositeOperation='source-over';ctx.globalAlpha=1;ctx.clearRect(0,0,W,H);
-  // 1-3. Tråde, fritskårne labels og glød ligger forudtegnet i ét lag (kun gentegnet ved ændring), så en frame er billig.
+  
   const key=keyNow();if(backKey!==key){if(!gathered&&!reducedMotion&&!backKey){if(!backIdle)backIdle=idle(()=>{backIdle=0;if(!dead&&layout&&backKey!==keyNow()){buildBackdrop(keyNow());if(!raf)draw(now())}})}else buildBackdrop(key)}
   if(backKey===key){ctx.globalAlpha=gatherK;ctx.setTransform(1,0,0,1,0,0);ctx.drawImage(back,0,0);ctx.setTransform(dpr,0,0,dpr,0,0);ctx.globalAlpha=1}
 
   const threadIn=gathered?1:Math.max(0,(gatherK-.7)/.3);
   if(threadIn>0&&!reducedMotion){
-   // Lys, der løber langs én tråd ad gangen (eller langs den valgte linjes tråde). Springer over, hvor en label står.
+   
    const runs=selection?threads.filter(th=>th.a===selection||th.b===selection).slice(0,4).map((th,i)=>({th,u:((t/PULSE_MS)+i*.27)%1})):pulse&&t<pulse.start+PULSE_MS?[{th:pulse.th,u:(t-pulse.start)/PULSE_MS}]:[];
    for(const {th,u} of runs)for(let k=0;k<6;k++){const uu=u-k*.025;if(uu<0)break;const [x,y]=quad(th,uu);if(labels.some(r=>x>r.x&&x<r.x+r.w&&y>r.y&&y<r.y+r.h))continue;ctx.fillStyle=rgba(selection?P.gold:P.ink,(.85-k*.14)*threadIn);ctx.beginPath();ctx.arc(x,y,2.4-k*.25,0,Math.PI*2);ctx.fill()}
   }
-  // 4. Prikkerne. Under samlingen med korte lysspor.
+  
   ctx.globalCompositeOperation='source-over';
   const centre=new Map(layout.clusters.map(c=>[c.id,c])),r=layout.dotR,relatedThemes=technologyNeighbours(technologyThreads,hover||selection);
   for(const [i,d] of layout.dots.entries()){
@@ -180,9 +180,9 @@ export function createLivingAtlas(host,{model,onLine,reducedMotion=false,counter
    ctx.fillStyle=rgba(col,a);ctx.beginPath();ctx.arc(p.x,p.y,p.k<1?radius*(.6+.4*p.k):hit?radius*1.7:radius,0,Math.PI*2);ctx.fill();
   }
   ctx.globalAlpha=1;
-  // Runde 6 (spor B, frisk-8): tallet tæller ikke op fra 0. På en langsom forbindelse stod der "0 selskaber"; nu står det rigtige antal hele tiden, og kun prikkerne samler sig.
+  
  }
- // Planlægning: tegn kun, når noget bevæger sig.
+ 
  function busy(t){return (gatherStart!==null&&!gathered)||!!ripple}
  function alive(t){return !reducedMotion&&(busy(t)||t<lifeUntil||!!selection&&t<lifeUntil)}
  function stop(){win.cancelAnimationFrame(raf);raf=0;win.clearTimeout(timer);timer=0}
@@ -208,7 +208,7 @@ export function createLivingAtlas(host,{model,onLine,reducedMotion=false,counter
  return {
   destroy(){dead=true;stop();win.cancelAnimationFrame(drawRaf);ro.disconnect();io.disconnect();themeObserver.disconnect();motion?.removeEventListener('change',motionChanged);doc.removeEventListener('visibilitychange',visibility);win.removeEventListener('ndi-themechange',retheme);host.removeEventListener('pointermove',poke);host.removeEventListener('pointerdown',poke);host.replaceChildren()},
   setFilter(v){filter=v;draw(now());wake(4000)},
-  // Runde 6 (spor B, frisk-9): søgningens træffere lyser på kortet. En tom mængde slukker markeringen.
+  
   setHighlight(isins){highlight=isins&&isins.size?isins:null;draw(now())},setSelection(v){selection=v;draw(now());if(v)wake(6000)},getLayout:()=>layout,
   getState:()=>({filter,selection,hover,highlighted:highlight?.size||0,reducedMotion,gathered,animating:!!(raf||timer),frames,threads:threads.length,technologyThreads:technologyThreads.map(t=>({a:t.a,b:t.b,kind:t.kind})),dpr})
 

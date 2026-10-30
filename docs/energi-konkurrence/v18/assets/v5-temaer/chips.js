@@ -1,4 +1,4 @@
-/* Genereret af _kilde/v5_fortaelling.py: v5-temasidens egne scripts, ordret. */
+ 
 try{(function(){var R=document.getElementById('cq-kaede');if(!R||R.dataset.on)return;R.dataset.on='1';R.classList.add('cq-ch--js');
 var T=R.querySelector('.cq-ch__track'),P=[].slice.call(R.querySelectorAll('.cq-ch__p')),B=[].slice.call(R.querySelectorAll('.cq-ch__tab')),S=[].slice.call(R.querySelectorAll('.cq-ch__seg')),
 pv=R.querySelector('.cq-ch__pv'),nx=R.querySelector('.cq-ch__nx'),pl=R.querySelector('.cq-ch__pl'),cur=-1,
@@ -36,11 +36,11 @@ var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 var pr=document.querySelector('.prog');
 function prog(){if(!pr)return;var h=document.documentElement,m=h.scrollHeight-innerHeight;pr&&pr.style.setProperty('--p',m>0?(scrollY/m).toFixed(3):0)}
 addEventListener('scroll',prog,{passive:true});prog();
-/* én rolig zoom: fra nærbillede til overblik, mens man scroller forbi hero */
+ 
 var hz=document.querySelector('.hero-zoom'),hero=document.querySelector('.hero');
 if(!reduce&&hz){var tk=false;function z(){tk=false;var r=hero.getBoundingClientRect(),p=Math.min(1,Math.max(0,-r.top/(r.height*.8)));hz.style.setProperty('--z',(1.16-.16*p).toFixed(4))}
 addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(z)}},{passive:true});z();}
-/* kæden: trin-prikker på mobil + Esc */
+ 
 var R=document.getElementById('cq-kaede');
 if(R){var dots=[].slice.call(R.querySelectorAll('.kd-dots i')),pl=R.querySelector('.cq-ch__pl');
 function sync(){var m=/(\d+)\s*\/\s*(\d+)/.exec(pl.textContent);if(!m)return;dots.forEach(function(d,i){d.classList.toggle('on',i===m[1]-1)})}
@@ -52,18 +52,18 @@ R.addEventListener('keydown',function(e){if(e.key!=='Escape'&&e.key!=='Esc')retu
  var on=p.querySelector('.cq-ch__co[aria-pressed="true"]');
  if(on){e.preventDefault();on.setAttribute('aria-pressed','false');p.querySelector('.cq-ch__info').innerHTML=std[p.id]}});
 }
-/* X-facade: intet hentes fra X før klik; widgets.js indlæses én gang */
+ 
 var xs=[].slice.call(document.querySelectorAll('.xp[data-url]'));
 function twl(){if(window.twttr&&window.twttr.widgets)return;window.twttr=(function(d){var t=window.twttr||{};if(t._e)return t;t._e=[];t.ready=function(f){t._e.push(f)};var j=d.createElement('script');j.id='twitter-wjs';j.async=true;j.src='https://platform.twitter.com/widgets.js';j.charset='utf-8';d.body.appendChild(j);return t})(document)}
 xs.forEach(function(li){var b=li.querySelector('.xp-vis'),em=li.querySelector('.xp-embed');b.hidden=false;
  b.addEventListener('click',function(){if(em.firstChild)return;var q=document.createElement('blockquote');q.className='twitter-tweet';q.setAttribute('data-theme','dark');q.setAttribute('data-dnt','true');q.setAttribute('data-conversation','none');q.setAttribute('data-lang','da');
  var a=document.createElement('a');a.href=li.dataset.url;a.textContent='Opslaget hentes fra X …';q.appendChild(a);em.appendChild(q);b.hidden=true;em.focus({preventScroll:true});
  twl();window.twttr.ready(function(t){t.widgets.load(em)})})});
-/* "Hører til trin": åbn trinnet i kæden */
+ 
 [].forEach.call(document.querySelectorAll('.xp-trin a[data-i]'),function(a){a.addEventListener('click',function(e){var t=R&&R.querySelector('.cq-ch__tab[data-i="'+a.dataset.i+'"]');if(!t)return;e.preventDefault();t.click();var p=document.getElementById(a.getAttribute('href').slice(1)),h=p&&p.querySelector('h3');setTimeout(function(){if(!h)return;h.tabIndex=-1;h.focus({preventScroll:true});R.querySelector('.cq-ch__nav').scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'})},reduce?0:450)})});
-/* chip-segmenter kan klikkes med mus (tastatur bruger fanerne) */
+ 
 if(R)[].forEach.call(R.querySelectorAll('.cq-ch__seg'),function(g){g.addEventListener('click',function(){var t=R.querySelector('.cq-ch__tab[data-i="'+g.dataset.i+'"]');if(t)t.click()})});
-/* video-facade: YouTube (nocookie) hentes først ved klik */
+ 
 [].forEach.call(document.querySelectorAll('.vid-ramme[data-yt]'),function(r){var b=r.querySelector('.vid-play');b.addEventListener('click',function(){var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+r.dataset.yt+'?autoplay=1&rel=0&playsinline=1';f.title=r.dataset.title;f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.setAttribute('allowfullscreen','');f.referrerPolicy='strict-origin-when-cross-origin';r.replaceChild(f,b);f.focus()})});
 })();
 }catch(e){}

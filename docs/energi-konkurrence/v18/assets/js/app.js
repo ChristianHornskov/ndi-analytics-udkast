@@ -1,12 +1,12 @@
-/* NewDeal Invest · fælles adfærd på alle sider: skuffemenu, scrollspy, faner, temaliste.
-   Alle dele er valgfrie: en del uden sine elementer springes over. */
+
+
 (function () {
   "use strict";
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
   var mq = window.matchMedia("(max-width: 1023.98px)");
 
-  /* ---------- Skuffemenu (under 1024 px) ---------- */
+   
   var menu = $("#sidemenu"), slor = $("#slor"), aabn = $("#menu-aaben"), luk = $("#menu-luk");
   var hoved = $(".hoved"), topbar = $(".topbar-mobil");
   var sidsteFokus = null;
@@ -47,7 +47,7 @@
     hoved.removeAttribute("inert"); topbar.removeAttribute("inert");
     document.body.classList.remove("laast");
     if (mq.matches) menu.setAttribute("inert", "");
-    if (!stille) aabn.focus({ preventScroll: true }); 
+    if (!stille) aabn.focus({ preventScroll: true });  
   }
   if (menu && aabn && luk && slor) {
   aabn.addEventListener("click", aabnMenu);
@@ -63,7 +63,7 @@
       else if (!e.shiftKey && document.activeElement === sidste) { e.preventDefault(); forste.focus(); }
     }
   });
-  /* Klik på et ankerlink i skuffen lukker den */
+   
   $$('a[href^="#"]:not([data-snart])', menu).forEach(function (a) {
     a.addEventListener("click", function () { if (mq.matches) lukMenu(true); });
   });
@@ -71,7 +71,7 @@
   saetSkuffeTilstand();
   }
 
-  /* ---------- Flere temaer ---------- */
+   
   var visFlere = $(".sm-vis-flere"), flere = $("#sm-temaer");
   if (visFlere && flere) visFlere.addEventListener("click", function () {
     var aaben = visFlere.getAttribute("aria-expanded") === "true";
@@ -80,7 +80,7 @@
     $(".sm-vis-tekst", visFlere).hidden = !aaben; $(".sm-vis-faerre", visFlere).hidden = aaben;
   });
 
-  /* ---------- "Kommer snart" ---------- */
+   
   var toast = $("#toast"), toastTimer;
   function visToast(txt) {
     if (!toast) return;
@@ -98,7 +98,7 @@
     a.addEventListener("click", function (e) { e.preventDefault(); visToast(a.getAttribute("data-snart")); });
   });
 
-  /* ---------- Scrollspy ---------- */
+   
   var links = $$(".sm-link[data-spy]");
   var aktuel = $("#aktuel-sektion");
   var sektioner = links.map(function (l) { return document.getElementById(l.dataset.spy); }).filter(Boolean);
@@ -113,7 +113,7 @@
   function opdaterSpy() {
     if (!sektioner.length) return;
     var linjeY = window.innerHeight * 0.3, valgt = sektioner[0];
-    /* v5: skjulte sektioner (fx kursgrafen uden data) tæller ikke */
+     
     sektioner.forEach(function (s) { if (!s.hidden && s.getClientRects().length && s.getBoundingClientRect().top <= linjeY) valgt = s; });
     if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) valgt = sektioner[sektioner.length - 1];
     marker(valgt.id);
@@ -123,16 +123,17 @@
   window.addEventListener("resize", opdaterSpy);
   opdaterSpy();
 
-  /* v5: fanerne til nøgletal er fjernet. Tallene står i HTML og assets/js/data.js, begge bygget af _kilde/sec_tal.py. */
+   
 })();
+
 
 (function () {
   if (!window.matchMedia("(min-width: 600px) and (min-height: 600px)").matches) return;
   document.querySelectorAll("details[data-aaben-bred]").forEach(function (d) { d.open = true; });
-  /* v5: en åben sektionsfold viser ikke sin overskrift på brede skærme, så den skjulte overskrift må ikke kunne få fokus */
+   
   document.querySelectorAll("details.fold-sektion[data-aaben-bred] > summary").forEach(function (s) { s.setAttribute("tabindex", "-1"); });
 })();
-/* v3: et link til et afsnit i en lukket fold åbner folden */
+ 
 (function () {
   function aabn(id) {
     var m = id && document.getElementById(id); if (!m) return;
@@ -144,7 +145,7 @@
   });
   if (location.hash) aabn(location.hash.slice(1));
 })();
-
+ 
 (function () {
   document.addEventListener("click", function (e) {
     var k = e.target.closest && e.target.closest("[data-vis-alle]"); if (!k) return;
@@ -156,11 +157,11 @@
   });
 })();
 
-/* v13: mobilfoldenes knap fortæller skærmlæsere, om folden er åben. Grafer i folden tegnes igen ved åbning (ResizeObserver i charts.js). */
+ 
 (function () {
   document.querySelectorAll("details.fold-mobil").forEach(function (d) {
     var s = d.querySelector(":scope > summary"); if (!s) return;
-    /* v15: knapteksten skifter mellem "Vis …" og "Skjul …" */
+     
     var t = s.firstChild && s.firstChild.nodeType === 3 ? s.firstChild : null;
     var rest = t ? t.nodeValue.replace(/^\s*(Vis|Skjul)\s+/, "") : "";
     function synk() {
@@ -170,7 +171,7 @@
     synk(); d.addEventListener("toggle", synk);
   });
 })();
-
+ 
 (function () {
   if (window.matchMedia("(min-width: 600px) and (min-height: 600px)").matches) return;
   document.querySelectorAll("details.fold-mobil details.fold-graf").forEach(function (d) { d.open = true; });

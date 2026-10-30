@@ -1,17 +1,14 @@
-/* v18 (A, D1, D3): forsidens afkastmodul fra v5 (forside-v5.mjs), som almindeligt script, så det også virker via lokal fil.
-   DATAKONTRAKT v18.1 afsnit 4: alle tal står færdige i window.NDI_DATA.fondsudvikling (data/fondsudvikling.js).
-   Browseren regner ikke afkast, 100.000 kr. eller kalender; den tegner kun og placerer på skærmen.
-   Vigtig information læser fond.* (dagens-tal) og NDI_DATA.portefolje.metode (omkostninger og risiko fra KID).
-   Ændringer i forhold til v5: ingen afdelingsknapper (D3), kalenderen foldet (D1), Azure-sætningen er ændret (byggeplan K9). */
+
+
 (function () {
   "use strict";
   var V = window.NDI_VALG || {};
   var DL = window.NDI_DATALAG || { ndi: function () { return null; } };
   var U = DL.ndi("fondsudvikling"), M = (DL.ndi("portefolje") || {}).metode, F = (window.DAGENS_TAL || {}).fond;
-  var NQ = V.Aa9_nasdaq !== false;   /* Å9: Nasdaq-sammenligningen kan slås fra i valg.js */
+  var NQ = V.Aa9_nasdaq !== false;    
   var app = document.getElementById("afkast");
   var info = document.getElementById("vigtig-information-indhold");
-  
+   
   if (!U || !U.perioder || !U.perioder.length) { if (app) app.innerHTML = '<p class="lille v18-fejl" role="status">Grafen er ikke tilgængelig lige nu. Der vises ingen gemte tal som erstatning.</p>'; return; }
   var NAVN = (F && F.id) || V.D3_fond || "PMINDI";
 

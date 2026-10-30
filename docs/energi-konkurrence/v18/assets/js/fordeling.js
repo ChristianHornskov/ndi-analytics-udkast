@@ -1,5 +1,5 @@
-/* Fordelingssiden: tegner temaringen med de færdige stier fra dagens-tal.json (intet regnes her),
-   og hover/fokus på legenden fremhæver ringsegmentet og skriver temaet i midten. */
+
+
 (function () {
   "use strict";
   var midte = document.getElementById("ring-midte");

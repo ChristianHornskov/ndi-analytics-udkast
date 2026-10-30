@@ -1,6 +1,6 @@
-/* NewDeal Invest · sider.css: fælles menu-tilstande, fordelingsside, stubs og SpaceX-tilføjelser. Bygger på tokens.css + komponenter.css. */
 
-/* ---------- Menu: aktiv side, forælder, undermenu ---------- */
+
+
 .sm-link[aria-current="page"] { background: var(--c-accent-soft); color: var(--c-text); font-weight: var(--fw-medium); }
 .sm-link[aria-current="page"] .ik, .sm-link[aria-current="page"] .sm-tal { color: var(--c-accent); }
 .sm-link[aria-current="page"]::before {
@@ -26,7 +26,7 @@
 .sm-link--under[aria-current="location"]::before { left: calc(-1 * var(--sp-3) - 2px); top: 6px; bottom: 6px; }
 .sm-link--under[aria-current="location"] { background: transparent; color: var(--c-text); }
 
-/* ---------- Kernetal ---------- */
+
 .kpi-felt { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gutter); }
 .kpi--accent { border-color: var(--c-accent-line); background: linear-gradient(180deg, var(--c-accent-soft), var(--c-surface) 75%); }
 .kpi--accent .mellemtal { color: var(--c-accent); }
@@ -54,7 +54,7 @@
   .kpi-felt .kpi-sub { font-size: var(--fs-12); }
 }
 
-/* ---------- Fordelingsside: layout ---------- */
+
 .gitter--fordeling > .kpi-felt { grid-column: span 12; }
 .gitter--fordeling > .panel--ring { grid-column: span 12; }
 @media (min-width: 1280px) {
@@ -65,7 +65,7 @@
 }
 @media (min-width: 768px) and (max-width: 1279.98px) { .kpi-felt { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 
-/* Ring */
+
 .panel--ring { overflow: hidden; position: relative;
   background: radial-gradient(120% 80% at 20% 0%, rgba(169, 196, 228, 0.06), transparent 55%), var(--c-surface); }
 .ring-layout { display: grid; grid-template-columns: minmax(220px, 300px) minmax(0, 1fr); gap: var(--sp-6); align-items: center; }
@@ -103,7 +103,7 @@
   .legende-raekke { grid-template-columns: 28px minmax(0, 1fr) 56px 60px; gap: var(--sp-2); font-size: var(--fs-13); }
 }
 
-/* Temakort */
+
 .temagitter { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: var(--gutter); }
 .temakort { min-width: 0; }
 .temakort-link {
@@ -125,7 +125,7 @@
 .temakort-cta { display: inline-flex; align-items: center; gap: 6px; font-size: var(--fs-13); color: var(--c-text-2); }
 .temakort-link:hover .temakort-cta { color: var(--c-text); }
 
-/* Kæden */
+
 .kaede { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--sp-6); position: relative; }
 .kaede-led { position: relative; min-width: 0; }
 .kaede-led:not(:last-child)::after {
@@ -159,7 +159,7 @@
 }
 @keyframes puls-flyt-v { to { background-position: 0 16px; } }
 
-/* Positioner */
+
 .tabel--positioner .pos-navn { display: inline-flex; align-items: center; gap: var(--sp-3); color: var(--c-text); text-decoration: none; font-weight: var(--fw-medium); }
 .tabel--positioner .pos-navn:hover { text-decoration: underline; text-underline-offset: 3px; }
 .tabel--positioner th[scope="row"] { white-space: nowrap; }
@@ -171,7 +171,7 @@
 .pos-akk { color: var(--c-data-2); font-variant-numeric: tabular-nums; }
 @media (max-width: 599.98px) { .pos-bar { width: 44px; } .tabel--positioner td.tal-celle:has(.pos-bar) { min-width: 0; } }
 
-/* Andelsklasser */
+
 .klasser { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--sp-4); }
 .klasse { display: flex; flex-direction: column; gap: var(--sp-2); padding: var(--sp-5); border-radius: var(--r-md); border: 1px solid var(--c-line); background: var(--c-surface-2); }
 .klasse--accent { border-color: var(--c-accent-line); background: var(--c-accent-soft); }
@@ -180,7 +180,7 @@
 .klasse .knap { margin-top: auto; align-self: flex-start; }
 @media (max-width: 599.98px) { .klasser { grid-template-columns: 1fr; } }
 
-/* ---------- Stubs (tema og selskab) ---------- */
+
 .sidehoved-ikon--logo { font-family: var(--font-display); font-size: var(--fs-24); font-weight: var(--fw-semibold); color: var(--c-data-2); }
 .sidehoved .kicker a { color: inherit; text-underline-offset: 3px; }
 @media (min-width: 1024px) {
@@ -224,7 +224,7 @@
 .skelet-streg { height: 8px; border-radius: 4px; background: linear-gradient(90deg, var(--c-surface-3) 0%, var(--c-line-strong) 50%, var(--c-surface-3) 100%); background-size: 200% 100%; animation: skimmer 2.4s linear infinite; }
 @keyframes skimmer { to { background-position: -200% 0; } }
 
-/* ---------- SpaceX: orbit-hero ---------- */
+
 .kort--orbit { min-height: 440px; }
 .hero-billede--svg { overflow: hidden; }
 .hero-svg { display: block; width: 100%; height: 100%; }
@@ -244,7 +244,7 @@
 }
 @media (max-width: 599.98px) { .kort--orbit .hero-titel { font-size: var(--fs-24); } }
 
-/* Overblik: historik + Hvad er SpaceX */
+
 @media (min-width: 1280px) {
   .gitter--overblik > .panel--historik { grid-column: span 7; }
   .gitter--overblik > .panel--hvad { grid-column: span 5; }
@@ -259,7 +259,7 @@
 .hvad-liste dd { color: var(--c-text-2); font-size: var(--fs-14); }
 @media (max-width: 599.98px) { .hvad-liste > div { grid-template-columns: 1fr; gap: var(--sp-1); } }
 
-/* ---------- SpaceX: spotlight for Mads' 10 pointer ---------- */
+
 .spotlight { position: relative; overflow: hidden; padding: var(--sp-6) var(--sp-7); display: grid; gap: var(--sp-6);
   background: radial-gradient(90% 120% at 100% 0%, rgba(95, 125, 163, .14), transparent 60%), var(--c-surface); }
 .spot-hoved { display: flex; align-items: center; justify-content: space-between; gap: var(--sp-4); flex-wrap: wrap; }
@@ -270,7 +270,7 @@
 .spot-taeller { min-width: 64px; text-align: center; font-variant-numeric: tabular-nums; color: var(--c-text-2); font-size: var(--fs-14); }
 #spot-nu { color: var(--c-text); font-weight: var(--fw-semibold); }
 
-/* scene: uden JS løbende tekst med skillelinjer; med JS én pointe ad gangen */
+
 .spot-scene { display: grid; }
 .spot-panel { display: grid; grid-template-columns: minmax(120px, 220px) minmax(0, 1fr); gap: var(--sp-6); align-items: start; padding: var(--sp-6) 0; border-top: 1px solid var(--c-line); }
 .spot-panel:first-child { border-top: 0; padding-top: 0; }
@@ -291,7 +291,7 @@
 @keyframes nr-ind { from { opacity: 0; transform: translateY(16px) scale(.96); } }
 @keyframes tekst-ind { from { opacity: 0; transform: translateX(12px); } }
 
-/* faner + tidslinje */
+
 .spot-navigation { display: grid; gap: var(--sp-3); }
 .spot-faner { display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: var(--sp-2); }
 .spot-faner[hidden] { display: none; }
@@ -335,12 +335,12 @@
   .spot-hoved .spot-styr { width: 100%; justify-content: space-between; }
 }
 
-/* Investorinfo */
+
 .panel--investor { flex-direction: row; align-items: center; justify-content: space-between; gap: var(--sp-5); flex-wrap: wrap; }
 .investor-tekst { max-width: 620px; display: grid; gap: var(--sp-2); }
 .investor-tekst p:last-child { color: var(--c-text-2); }
 
-/* ---------- Bevægelse ---------- */
+
 @media (prefers-reduced-motion: reduce) {
   .ring-kredslob, .kaede-led::after, .skelet-streg, .legende-bar > span, .temakort-bar > span, .pos-bar > span, .mini-soejler span,
   .er-ny .spot-nr, .er-ny .spot-tekst { animation: none !important; }
@@ -352,14 +352,14 @@
 .tidslinje { padding-right: var(--sp-4); }
 .tl-prik[style*="--x:0.00"] .tl-dato { left: -4px; transform: none; }
 
-/* ===================== v2: fortællingen i fem trin og nye komponenter ===================== */
+
 .kun-smal { display: none !important; }
 @media (max-width: 599.98px) { .kun-bred { display: none !important; } .kun-smal { display: revert !important; } ol.kun-smal, ul.kun-smal { display: grid !important; } }
 
-/* Hero på fordelingssiden */
+
 .fordeling-hero { position: relative; overflow: hidden; border-radius: var(--r-xl); background: var(--c-space); border: 1px solid var(--c-line); min-height: 300px; display: flex; align-items: flex-end; }
-.fordeling-hero-billede { position: absolute; inset: 0 0 0 auto; width: 52%; height: 100%; object-fit: cover; object-position: right center; }  /* v12 (Menneskeøjne 3): ikke bag H1 */
-.fordeling-hero-tekst { position: relative; padding: var(--sp-8); max-width: min(640px, 48%); background: none; /* v12: billedet står ikke længere bag teksten, så tonepladen er fjernet */ }
+.fordeling-hero-billede { position: absolute; inset: 0 0 0 auto; width: 52%; height: 100%; object-fit: cover; object-position: right center; }  
+.fordeling-hero-tekst { position: relative; padding: var(--sp-8); max-width: min(640px, 48%); background: none;  }
 .fordeling-hero-tekst h1 { font-size: var(--fs-40); line-height: var(--lh-tight); letter-spacing: -0.02em; margin: var(--sp-2) 0; }
 .fordeling-hero-lede { font-size: var(--fs-18); line-height: var(--lh-snug); }
 .fordeling-hero .kredit { position: absolute; right: var(--sp-4); bottom: var(--sp-3); margin: 0; }
@@ -370,7 +370,7 @@
   .fordeling-hero-lede { font-size: var(--fs-16); }
 }
 
-/* Trin */
+
 .trinnav { margin-top: var(--sp-5); }
 .trinnav ol { display: flex; flex-wrap: wrap; gap: var(--sp-3); }
 .trinnav a { display: inline-flex; align-items: center; gap: var(--sp-2); min-height: 44px; padding: 6px var(--sp-4) 6px 6px; border-radius: var(--r-pill); border: 1px solid var(--c-line-strong); background: var(--c-surface); color: var(--c-text); font-size: var(--fs-14); text-decoration: none; }
@@ -397,7 +397,7 @@
 .fakta-tekst { font-size: var(--fs-13); line-height: var(--lh-snug); }
 @media (max-width: 359.98px) { .fakta-liste { gap: var(--sp-2); } .fakta-liste li { padding: var(--sp-2) var(--sp-3); } .fakta-tal { font-size: var(--fs-20); } }
 
-/* Ring, legende og grå note */
+
 .legende-farve { display: inline-block; width: 14px; height: 14px; border-radius: 4px; flex: none; }
 .legende-farve--graa { background: repeating-linear-gradient(135deg, #5A6577 0 3px, #3A4558 3px 6px); }
 .graa-note { display: flex; gap: var(--sp-3); align-items: flex-start; padding: var(--sp-3) var(--sp-4); border-radius: var(--r-md); background: var(--c-surface-2); font-size: var(--fs-14); }
@@ -405,7 +405,7 @@
 .ring-label { fill: #0A1220; font-family: var(--font-display); font-size: 13px; font-weight: 500; }
 .ring-baner { opacity: .7; }
 
-/* Temakort med eksempel */
+
 .temakort-eks { display: grid; gap: 2px; padding-top: var(--sp-3); margin-top: var(--sp-1); border-top: 1px solid var(--c-line); font-size: var(--fs-14); line-height: var(--lh-snug); }
 .temakort-eks-navn { font-size: var(--fs-13); color: var(--c-accent); }
 .temakort-kilde { font-size: var(--fs-12); }
@@ -417,11 +417,11 @@
   .rul-hint { display: block; }
 }
 
-/* Kæden */
+
 .panel--kaede { gap: var(--sp-5); }
 .kaede-node { min-height: 44px; }
 
-/* Trin 5: eksempel */
+
 .eksempel-kort { display: grid; gap: var(--sp-6); align-items: center; margin-bottom: var(--gutter); }
 @media (min-width: 768px) { .eksempel-kort { grid-template-columns: 300px minmax(0, 1fr); } }
 .eksempel-billede { width: 100%; height: auto; border-radius: var(--r-md); background: var(--c-space); }
@@ -433,7 +433,7 @@
 .vejviser-pil { display: inline-grid; place-items: center; }
 .hint { font-size: var(--fs-14); padding-left: var(--sp-3); border-left: 3px solid var(--c-accent); margin: var(--sp-2) 0; }
 
-/* Top 10 som kort under 600 */
+
 .topkort-liste { gap: var(--sp-2); }
 .topkort { display: grid; grid-template-columns: 28px minmax(0, 1fr) auto; grid-template-areas: "nr navn tal" "nr tema tema"; column-gap: var(--sp-3); row-gap: 2px; align-items: center; min-height: 56px; padding: var(--sp-3); border-radius: var(--r-md); background: var(--c-surface-2); border: 1px solid var(--c-line); color: var(--c-text); text-decoration: none; }
 .topkort:hover { border-color: var(--c-accent-line); }
@@ -442,14 +442,14 @@
 .topkort-tal { grid-area: tal; font-family: var(--font-display); font-size: var(--fs-16); color: var(--c-accent); font-variant-numeric: tabular-nums; }
 .topkort-tema { grid-area: tema; display: inline-flex; align-items: center; gap: 6px; font-size: var(--fs-13); }
 
-/* SpaceX */
+
 .sidehoved-lede { margin-top: var(--sp-2); font-size: var(--fs-16); max-width: 60ch; }
 .andel-spring { padding: var(--sp-3) var(--sp-4); border-radius: var(--r-md); background: var(--c-accent-soft); border: 1px solid var(--c-accent-line); font-size: var(--fs-16); }
 .pointe-ord { display: grid; gap: var(--sp-2); margin: var(--sp-3) 0; padding: var(--sp-3) var(--sp-4); border-radius: var(--r-md); background: var(--c-surface-2); font-size: var(--fs-14); }
 .pointe-ord dt { font-family: var(--font-display); }
 .kildechip { min-height: 44px; display: inline-flex; align-items: center; }
 
-/* Temasider og Rumfart */
+
 .tema-spm { font-size: var(--fs-18); line-height: var(--lh-snug); }
 .panel--bred { grid-column: 1 / -1; }
 .rf-gitter { display: grid; gap: var(--gutter); grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
@@ -493,7 +493,7 @@
 .vide-liste dt { font-family: var(--font-display); font-size: var(--fs-18); margin-bottom: var(--sp-1); }
 .vide-liste dd { max-width: 75ch; line-height: var(--lh-body); }
 
-/* v2: én vægt (Manrope 500) og berøringsmål på mindst 44 px */
+
 html, body, strong, b, th, dt, h1, h2, h3, h4, summary, button, input, svg text { font-weight: 500 !important; }
 .knap, .knap--lille, .sm-link, .sm-selskab, .sm-tilbage, .sm-vis-flere, .legende-raekke, .maerke, .tekstlink.flise-link, .tekstlink--lille, .xkort-link, .fane, .hero-pause, .fold-ud > summary, .temakort-cta { min-height: 44px; }
 .ikonknap, #menu-aaben { min-width: 44px; min-height: 44px; }
@@ -509,14 +509,14 @@ p a.tekstlink, dd a.tekstlink, figcaption a.tekstlink { min-height: 0; display: 
   .fane { font-size: var(--fs-12); padding: 0 6px; min-width: 0; }
 }
 @media (max-width: 599.98px) { .fane { white-space: normal; hyphens: auto; -webkit-hyphens: auto; line-height: 1.2; overflow-wrap: anywhere; } }
-/* v2: rækker med plads i temaet på selskabssider */
+
 ul.fakta-liste:has(> li > strong) { display: flex; flex-direction: column; gap: 0; list-style: none; padding: 0; margin: 0; grid-template-columns: none; }
 ul.fakta-liste > li:has(> strong) { display: flex; justify-content: space-between; align-items: baseline; gap: var(--sp-3); padding: var(--sp-2) 0; border: 0; border-bottom: 1px solid var(--c-line); border-radius: 0; background: none; min-height: 0; }
 ul.fakta-liste > li > strong { color: var(--c-text); white-space: nowrap; }
 .tema-spm > .lille { display: block; margin-bottom: var(--sp-1); }
 
-/* ===================== v3 ===================== */
-/* R2-04: én tekstfarve. Stålblå kun i grafer, ringe, bjælker og ikoner. Valgt tal markeres med rammen. */
+
+
 .tekstlink, .tekstlink:hover, .sektion-kicker, .kicker, .andel-celle dd, .andel-celle--accent dd, .indeks-nr, .tl-nu .tl-aar,
 .xkort-hvorfor, .kpi--accent .mellemtal, .ring-tal, .temakort-andel, .kaede-tal, .pos-pm, .pos-akk, .klasse--accent .klasse-navn,
 .sidehoved-ikon--logo, .spot-fane[aria-selected="true"] .spot-fane-nr, .fakta-tal, .temakort-eks-navn, .topkort-tal, .rf-retning, .rf-gsum,
@@ -525,11 +525,11 @@ ul.fakta-liste > li > strong { color: var(--c-text); white-space: nowrap; }
 .tekstlink:hover { text-decoration-color: currentColor; }
 .andel-celle--accent { box-shadow: inset 0 0 0 1px var(--c-accent-line); border-radius: var(--r-sm); }
 
-/* R2-05: kickerlinket er navigation og får 44 px trykflade */
+
 .kicker-link { display: inline-flex; align-items: center; min-height: 44px; padding: 0 var(--sp-2); margin: -12px calc(-1 * var(--sp-2)); color: var(--c-text); text-decoration: underline; text-decoration-color: var(--c-accent-line); text-underline-offset: 3px; }
 .kicker-link:hover { text-decoration-color: currentColor; }
 
-/* SpaceX v3 */
+
 .andel-hvorfor { font-size: var(--fs-14); margin-top: var(--sp-3); }
 .punktliste { list-style: disc; padding-left: 1.2em; display: grid; gap: var(--sp-2); margin: var(--sp-2) 0 var(--sp-3); }
 .delbar-titel { font-size: var(--fs-13); margin: var(--sp-4) 0 var(--sp-2); }
@@ -596,7 +596,7 @@ ul.fakta-liste > li > strong { color: var(--c-text); white-space: nowrap; }
   .milepaele .tidslinje li { padding-bottom: 0; }
   .milepaele .tidslinje li::after { display: none; }
 }
-/* v3 fordeling */
+
 .ring-midte { gap: 2px; }
 .ring-midte .ring-tal { font-size: clamp(2.5rem, 9vw, 4rem); font-weight: 500; color: var(--c-text); order: 0; }
 .ring-midte .ring-navn { font-size: var(--fs-16); color: var(--c-text-2); order: 1; }
@@ -642,8 +642,8 @@ ul.fakta-liste > li > strong { color: var(--c-text); white-space: nowrap; }
   .rf-gitter { grid-template-columns: 1fr 1fr; align-items: start; }
   .rf-gitter > :first-child { grid-row: span 2; }
 }
-/* v4 SKAL-regel (tal over folden ved 390): på mobil står temaets andel først, så den isometriske tegning (B20). v3 havde helten først (order:-1). */
-/* Chips */
+
+
 .chips-hopliste { list-style: none; margin: var(--sp-4) 0 0; padding: 0; display: grid; gap: var(--sp-2); grid-template-columns: repeat(4, 1fr); counter-reset: none; }
 .chips-hop { display: grid; grid-template-columns: 28px 1fr auto; align-items: center; gap: var(--sp-2); min-height: 44px; padding: var(--sp-2) var(--sp-3); border: 1px solid var(--c-line); border-radius: 12px; background: var(--c-surface-2); color: var(--c-text); text-decoration: none; font-size: var(--fs-14); }
 .chips-hop:hover, .chips-hop:focus-visible { border-color: var(--c-accent); }
@@ -659,7 +659,7 @@ ul.fakta-liste > li > strong { color: var(--c-text); white-space: nowrap; }
 .chips-trin .rf-under { clear: both; }
 @media (max-width: 1023.98px) { .chips-hopliste { grid-template-columns: 1fr 1fr; } .chips-gitter { grid-template-columns: 1fr; } }
 @media (max-width: 599.98px) { .chips-tegning { width: 96px; } .chips-hop { font-size: var(--fs-12, .75rem); } }
-/* v3: lister foldet sammen på mobil, altid åbne fra 600 px */
+
 @media (min-width: 600px) { .fold-liste > summary { display: none; } }
 @media (max-width: 599.98px) {
   .fold-liste > summary { padding: 0 var(--sp-4); border: 1px solid var(--c-line-strong); border-radius: 999px; background: var(--c-surface-2); display: inline-flex; }
@@ -675,14 +675,14 @@ ul.fakta-liste > li > strong { color: var(--c-text); white-space: nowrap; }
 @media (max-width: 599.98px) { .videre .knap { white-space: normal; text-align: left; max-width: 100%; height: auto; padding-block: var(--sp-2); } }
 
 
-/* Overskrifter og mærker med et indsat tal må ikke være flex: ellers giver gap ekstra luft om tallet */
+
 #h-top { display: block; }
 .chip--status { display: inline-block; line-height: 22px; }
 
 .tekstlink--tryk { display: inline-block; padding-block: 12px; margin-block: -12px; line-height: 20px; }
-/* R3-12: tal og enhed står altid på samme linje */
+
 .enhed, .legende-tal, .fakta-tal, .temakort-andel { white-space: nowrap; }
-/* R3-16: menuen må bryde temanavne over to linjer i stedet for at afkorte dem */
+
 .sm-link--tema span:nth-child(2) { white-space: normal; overflow: visible; text-overflow: clip; overflow-wrap: break-word; }
 
 .chips-hop strong, .chips-flere > summary { color: var(--c-text); }
@@ -692,7 +692,7 @@ ul.fakta-liste > li > strong { color: var(--c-text); white-space: nowrap; }
   .topkort { grid-template-columns: 24px minmax(0, 1fr) auto; grid-template-areas: "nr navn tal" "nr tema tema"; column-gap: var(--sp-3); row-gap: 0; align-items: center; min-height: 44px; padding: 6px var(--sp-3); }
   .topkort-navn { font-size: var(--fs-16); hyphens: manual; overflow-wrap: normal; word-break: normal; }
   .topkort-tema { font-size: var(--fs-12); }
-  /* R3-06: SpaceX-tegningen i trin 5 fylder kortets bredde */
+  
   .eksempel-billede { max-height: none; aspect-ratio: 2 / 1; object-fit: cover; object-position: 50% 45%; }
   
   .ring { max-width: 232px; }
@@ -723,7 +723,7 @@ ul.fakta-liste > li > strong { color: var(--c-text); white-space: nowrap; }
   .kpi-raekke--3 .kpi { gap: 4px; padding: var(--sp-3) var(--sp-4); }
 }
 @media (max-width: 599.98px) {
-  /* Panelets titel gentager sektionens titel lige over; billedteksten siger allerede "skematisk" */
+  
   .tegning-panel > .panel-hoved { display: none; }
   .kort--orbit .hero-billede, .kort--orbit::before { aspect-ratio: 3 / 1; }
 }
@@ -732,7 +732,7 @@ ul.fakta-liste > li > strong { color: var(--c-text); white-space: nowrap; }
   .forfatter--linje .forfatter-navn { font-size: var(--fs-16); }
 }
 
-/* v4: hidden skal altid skjule, også når en klasse sætter display (fx .knap, li). Før stod både "Næste i temaet" og "Sidste selskab" og en tom top 10-række */
+
 [hidden] { display: none !important; }
 
 
@@ -755,7 +755,7 @@ ul.fakta-liste > li > strong { color: var(--c-text); white-space: nowrap; }
 }
 
 .andel-tal .andel-ingen { display: block; font-size: var(--fs-14); line-height: 1.4; color: var(--c-text-2); }
-/* v4 B25: visning-mærkning af tekster, der ikke er godkendt */
+
 .visning-banner { margin: 0 0 var(--sp-4); padding: var(--sp-2) var(--sp-3); border: 1px dashed var(--c-line-strong); border-radius: var(--r-sm); font-size: var(--fs-12, .75rem); line-height: 1.4; color: var(--c-text-2); background: var(--c-surface); }
 .visning-banner strong { color: var(--c-text); margin-right: var(--sp-2); text-transform: uppercase; letter-spacing: .06em; }
 .badge-visning { display: inline-block; margin-left: var(--sp-2); padding: 1px var(--sp-2); border: 1px dashed var(--c-line-strong); border-radius: 999px; font-size: var(--fs-12, .75rem); letter-spacing: 0; text-transform: none; color: var(--c-text-2); vertical-align: middle; }
@@ -797,7 +797,7 @@ ul.fakta-liste > li > strong { color: var(--c-text); white-space: nowrap; }
   #fonden .trin-hoved .sektion-kicker { margin-bottom: var(--sp-2); }
   #fonden .fakta-liste { margin-top: var(--sp-1); }
   #fonden .fakta-liste li { padding-block: var(--sp-2); }
-  /* SpaceX/selskaber: kursgrafens pladsholder fylder mindre, så længe der ikke er data */
+  
   .kurs-tom { padding: var(--sp-3) var(--sp-4); }
   .kurs-panel .panel-hoved { margin-bottom: var(--sp-2); }
   .kort.kurs-panel { padding-block: var(--sp-3); gap: var(--sp-2); }
@@ -827,13 +827,13 @@ ul.fakta-liste > li > strong { color: var(--c-text); white-space: nowrap; }
   .tegning-panel .kredit { max-width: 720px; margin-inline: auto; margin-top: 0; }
 }
 
-/* v5: "Største selskab"-rækker: navnet må bryde, så intet løber ud; på mobil står navnet på egen linje (stabil højde før/efter data) */
+
 ul.fakta-liste > li.fakta-stak > strong { white-space: normal; text-align: right; }
 @media (max-width: 599.98px) {
   ul.fakta-liste > li.fakta-stak { flex-direction: column; align-items: stretch; gap: 2px; }
   ul.fakta-liste > li.fakta-stak > strong { text-align: left; }
 }
-/* v5 CLS: forklaringen under minisøjlerne reserverer to linjer på mobil, så tallene ikke flytter listen */
+
 @media (max-width: 599.98px) { .mini-forklaring { min-height: 2lh; } }
 
 .vis-alle-knap { display: none; }
@@ -848,9 +848,9 @@ ul.fakta-liste > li.fakta-stak > strong { white-space: normal; text-align: right
   .eksempel-billede { display: none; }
   .trin-figur img { max-height: 150px; width: 100%; object-fit: contain; }
 }
-/* v5: knappen i videokortet må bryde om, så den ikke klippes ved 1280 px */
+
 .videokort-v3 .videokort-tekst .knap { max-width: 100%; white-space: normal; text-align: left; height: auto; }
-/* v5: ved 360 px står de tre nøgletal over folden (før 784 px mod 780 px) */
+
 @media (max-width: 374.98px) { .fordeling-hero-billede { aspect-ratio: 5 / 1; } }
 
 
@@ -896,11 +896,11 @@ ul.fakta-liste > li.fakta-stak > strong { white-space: normal; text-align: right
 
 @media (min-width: 600px) { .kpi-raekke--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 
-/* ===================== v11 (B2): dataelementer. Kun tokens, så lys og mørk følger med. ===================== */
-/* Forsidens fire nøgletal: 2 × 2 på mobil, 4 i bredden */
+
+
 #fonden .fakta-liste--kpi { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .fakta-liste--kpi li > a:focus-visible { outline: 2px solid var(--c-accent); outline-offset: 4px; border-radius: var(--r-md); }
-/* Prikkort */
+
 .panel--prikkort, .panel--verden { margin-top: var(--sp-4); }
 svg.prikkort { display: block; width: 100%; height: auto; margin-top: var(--sp-3); overflow: visible; }
 .prikkort .prik { fill: var(--c-data-1); stroke: var(--c-surface); stroke-width: 0.8; }
@@ -916,31 +916,31 @@ svg.prikkort { display: block; width: 100%; height: auto; margin-top: var(--sp-3
 
 .prikkort-kortnavn { fill: var(--c-text-2); font-size: 38px; }
 .prikkort-kortnavn.er-aktiv { fill: var(--c-text); font-weight: var(--fw-semibold); }
-/* Halvring for top 10 */
+
 .halvring { margin: var(--sp-3) 0 0; display: flex; align-items: center; gap: var(--sp-4); }
 .halvring-svg { width: 160px; height: auto; flex: none; }
 .halvring-spor { fill: none; stroke: var(--c-surface-3); stroke-width: 18; }
 .halvring-bue { fill: none; stroke: var(--c-data-1); stroke-width: 18; }
 .halvring figcaption { display: grid; gap: 2px; }
 .halvring-tal { font-family: var(--font-display); font-size: var(--fs-24); font-weight: var(--fw-semibold); color: var(--c-text); }
-/* Verdenskort */
+
 svg.verden { display: block; width: 100%; height: auto; margin: var(--sp-3) 0; }
 .verden-baggrund { fill: none; stroke: var(--c-kort-land); stroke-width: 2.2; stroke-linecap: round; }
 .verdens-prik { fill: var(--c-data-1); fill-opacity: 0.85; stroke: var(--c-surface); stroke-width: 1; }
-/* Temasider: vaffel og lille prikkort */
+
 .gitter--tema-grafik { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--sp-4); }
 @media (min-width: 900px) { .gitter--tema-grafik { grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); } }
 .vaffel { display: grid; grid-template-columns: repeat(10, 1fr); gap: 3px; max-width: 260px; margin: var(--sp-3) 0; }
 .vaffel-rute { aspect-ratio: 1; border-radius: 2px; background: var(--c-surface-3); }
 .vaffel-rute[data-fyldt="ja"] { background: var(--c-data-1); }
 .vaffel:empty { min-height: 260px; }
-/* Rangfigur på selskabssider */
+
 .rang { margin: var(--sp-3) 0 0; }
 .rang-soejler { display: flex; align-items: flex-end; gap: 2px; height: 64px; border-bottom: 1px solid var(--c-line); }
 .rang-soejle { flex: 1; max-width: 18px; min-height: 3px; height: calc(var(--v) * 100%); border-radius: 2px 2px 0 0; background: var(--c-surface-3); }
 .rang-soejle--aktiv { background: var(--c-data-1); }
 .rang figcaption { margin-top: var(--sp-2); }
-/* SpaceX: donut og vandrette søjler */
+
 .graf--donut { height: 220px; }
 .graf--vandret { height: 200px; }
 .gitter--tema-grafik > * { grid-column: auto; }
@@ -960,8 +960,7 @@ svg.verden { display: block; width: 100%; height: auto; margin: var(--sp-3) 0; }
 @media (min-width: 600px) and (min-height: 600px) { .fold-ring > summary { display: none; } }
 .fold-ring > summary { margin-top: var(--sp-2); }
 
-/* v13: mobilfold. Under 600×600 ligger udvalgte paneler bag en tydelig "Vis …"-knap.
-   På brede skærme er folden åben (app.js), knappen skjules, og <details> får display:contents, så layoutet er det samme som i v12. */
+
 @media (min-width: 600px) and (min-height: 600px) { .fold-mobil, .fold-mobil::details-content { display: contents; } .fold-mobil > summary { display: none; } }
 @media not ((min-width: 600px) and (min-height: 600px)) {
   
@@ -996,15 +995,15 @@ svg.verden { display: block; width: 100%; height: auto; margin: var(--sp-3) 0; }
 :root[data-tema="lys"] .temaskift .ik--sol { display: none; }
 :root:not([data-tema="lys"]) .temaskift .ik--maane { display: none; }
 
-/* v16: udvidede tekster, lange kilde-URL-er brydes */
+
 .kilde-udvidet { overflow-wrap: anywhere; }
 
 
 main p.kildelinje a:not([class]), main p a.tekstlink, main dd a.tekstlink, main figcaption a.tekstlink { padding-block: 14px; margin-block: -14px; }
 main p.kildelinje a:not([class]), main li > a.tekstlink, main th > a.tekstlink, .tekstlink--tryk, main p a.tekstlink, main dd a.tekstlink, main figcaption a.tekstlink { padding-inline: 6px; margin-inline: -6px; }
 
-/* ===== v17 ===== */
-/* Punkt 3: officielt logo, uændret PNG. Mørkt tema: direkte på baggrunden. Lyst tema: lille mørkt felt (tema.py). */
+
+
 .maerke--logo { flex-direction: column; align-items: flex-start; gap: var(--sp-2); }
 .logo-felt { display: inline-flex; align-items: center; justify-content: center; border-radius: var(--r-sm); line-height: 0; }
 :root[data-tema="lys"] .logo-felt { padding: 8px 10px; }
@@ -1015,12 +1014,12 @@ main p.kildelinje a:not([class]), main li > a.tekstlink, main th > a.tekstlink, 
 :root[data-tema="lys"] .topbar-mobil .maerke img.ndi-logo { height: 32px; }
 .topbar-mobil .maerke--lille { gap: var(--sp-3); }
 .sidefod-maerke img.ndi-logo { width: 120px; height: auto; }
-/* Punkt 6: menuen i tre tydelige dele + link til alle selskaber */
+
 .sm-gruppe + .sm-gruppe { border-top: 1px solid var(--c-line-strong); margin-top: var(--sp-4); padding-top: var(--sp-5); }
 .sm-alle { display: flex; align-items: center; gap: var(--sp-2); margin: var(--sp-2) var(--sp-2) 0; padding: var(--sp-2) var(--sp-3); min-height: 44px; border-radius: var(--r-sm); color: var(--c-accent); font-weight: var(--fw-semibold); font-size: var(--fs-14); text-decoration: none; }
 .sm-alle:hover, .sm-alle[aria-current="page"] { background: var(--c-accent-soft); }
 .sm-alle span { flex: 1; }
-/* Punkt 22: mobil mindst 13 px */
+
 @media (max-width: 1023px) {
   .topbar-mobil .maerke-sub, .maerke-sub { font-size: 13px; }
   .topbar-mobil .maerke-navn { font-size: 14px; }
@@ -1030,7 +1029,7 @@ main p.kildelinje a:not([class]), main li > a.tekstlink, main th > a.tekstlink, 
 }
 
 @media (max-width: 599.98px) { .kort--orbit:not(.kort--topanim) .kredit--hero { display: none; } }
-/* Forsiden: kort intro i stedet for hero (punkt 4) */
+
 .sektion--intro .side-titel { margin: 0; }
 .sektion--intro .sektion-intro { max-width: 60ch; }
 .se-alle { margin-top: var(--sp-4); }
@@ -1038,7 +1037,7 @@ main p.kildelinje a:not([class]), main li > a.tekstlink, main th > a.tekstlink, 
 .eksempel-kort--klode .eksempel-billede { width: 100%; max-width: 440px; height: auto; aspect-ratio: 660 / 520; }
 .tabel--alle td, .tabel--alle th { white-space: nowrap; }
 .tabel--alle th[scope="row"] { white-space: normal; }
-/* Punkt 9: streger mellem temaerne (fra v4-lab Atlas). Tegnes langsomt op; ingen bevægelse ved reduceret bevægelse. */
+
 .prikkort-traade { pointer-events: none; }
 .traad { fill: none; stroke: var(--c-accent); stroke-linecap: round; opacity: .32; transition: opacity .2s ease; }
 .traad--staerk { opacity: .55; }
@@ -1053,8 +1052,7 @@ main p.kildelinje a:not([class]), main li > a.tekstlink, main th > a.tekstlink, 
 
 .sm-selskab[aria-current="page"]::before { content: none; }
 .sm-selskab[aria-current="page"] { box-shadow: inset 3px 0 0 var(--c-accent); position: relative; }
-/* v17 punkt 27: værdikæden på Chips. Desktop: vandret fra venstre mod højre, de tre slags færdige chips som grene til sidst.
-   Mobil: lodret oppefra og ned. Pilene er kun pynt (CSS-indhold), kæden læses som en nummereret liste. */
+
 .vk-kort { padding: var(--sp-5); }
 .vaerdikaede, .vk-trinliste, .vk-selskaber { list-style: none; margin: 0; padding: 0; }
 .vaerdikaede { display: grid; gap: var(--sp-4); }
@@ -1080,19 +1078,19 @@ main p.kildelinje a:not([class]), main li > a.tekstlink, main th > a.tekstlink, 
 .vk-fase--faerdig { position: relative; padding-top: var(--sp-4); }
 .vk-fase--faerdig .vk-trin + .vk-trin::before { content: none; }
 @media (min-width: 1100px) {
-  /* Række 1: fremstillingen fra venstre mod højre. Række 2: den færdige chip, tre grene ved siden af hinanden. */
+  
   .vk-fase--frem .vk-trinliste { grid-template-columns: repeat(5, minmax(0, 1fr)); }
   .vk-fase--faerdig .vk-trinliste { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .vk-fase--frem .vk-trin + .vk-trin::before { content: "→"; top: 40px; left: calc(-1 * var(--sp-4)); transform: none; width: var(--sp-4); text-align: center; }
   .vk-trin { height: 100%; }
 }
-/* Mobil: selskabsnavnene står i en linje med komma, så kæden ikke bliver lang. */
+
 @media (max-width: 1099px) {
   .vk-selskaber li { display: inline; }
   .vk-selskaber li + li::before { content: ", "; }
   .vk-flere { display: inline; margin-left: .25em; }
 }
-/* v17 punkt 29: X-opslag på temasiderne. Pladsen er reserveret, så siden ikke hopper, når opslagene kommer. */
+
 .x-tema { min-height: 120px; }
 .x-tema-liste { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--sp-3); }
 @media (min-width: 900px) { .x-tema-liste { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
@@ -1102,7 +1100,7 @@ main p.kildelinje a:not([class]), main li > a.tekstlink, main th > a.tekstlink, 
 .x-tema-kat { display: inline-block; margin-right: var(--sp-2); padding: 0 6px; border-radius: 999px; border: 1px solid var(--c-line-strong); font-size: var(--fs-13); }
 .x-tema-status--fejl { color: var(--c-text); }
 
-/* v17 punkt 27/22: trykflader på selskaber i værdikæden mindst 44 x 44 px */
+
 .vk-selskab { display: inline-flex; align-items: center; min-height: 44px; min-width: 44px; }
 @media (max-width: 1099px) {
   .vk-selskaber { display: flex; flex-wrap: wrap; column-gap: 0.45em; }
@@ -1121,8 +1119,7 @@ main p.kildelinje a:not([class]), main li > a.tekstlink, main th > a.tekstlink, 
   .kort--orbit .kredit--hero { position: static; display: block; width: fit-content; max-width: calc(100% - 2 * var(--sp-4)); margin: 0 var(--sp-4) var(--sp-4); }
 }
 
-/* v17 punkt 10/15: Billedstils temafotos. Aldrig bredere end filens naturlige bredde (max-width sættes fra filen i byggeriet),
-   ingen opskalering (ingen hover-zoom), og kreditlinjen står synligt under hvert billede */
+
 .foto-kredit { display: block; font-size: 13px; line-height: 1.4; color: var(--c-text-2); padding: var(--sp-2) var(--sp-4) 0; }
 .temakort-billede--foto { aspect-ratio: auto; overflow: visible; background: none; border-bottom: 0; margin: 0 auto; width: 100%; }
 .temakort-billede--foto img { display: block; width: 100%; height: auto; aspect-ratio: 2 / 1; object-fit: cover; border-bottom: 1px solid var(--c-line); }
@@ -1140,18 +1137,18 @@ main p.kildelinje a:not([class]), main li > a.tekstlink, main th > a.tekstlink, 
 @media (max-width: 599.98px) { .temakort-billede--foto { aspect-ratio: auto; } .temakort-billede--foto img { aspect-ratio: 3 / 1; } }
 @media (prefers-reduced-motion: reduce) { .temakort-billede--foto img { transition: none; } }
 
-/* v17 triage G-02: selskabsnavne ombrydes under 480 px i stedet for at blive afkortet med "…" */
+
 @media (max-width: 479.98px) {
   .tl-navn, .legende-navn { white-space: normal; overflow: visible; text-overflow: clip; overflow-wrap: anywhere; line-height: 1.3; }
 }
-/* v17 triage U-04: tidligere ejede selskaber med egen side, listet på alle-selskaber.html */
+
 .tidligere-alle { list-style: none; margin: 0 0 var(--sp-3); padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); column-gap: var(--sp-4); }
 .tidligere-alle li { display: flex; align-items: center; min-height: 44px; }
 
 .kurs-panel .panel-titel { flex-wrap: wrap; }
 .kurs-panel [data-kurs-periode] { flex-basis: 100%; font-size: 14px; font-weight: 400; color: var(--c-text-2); }
 
-/* v17 (punkt 31): én diskret kildeblok på alle selskabssider */
+
 .kildeblok { margin-top: 16px; padding-top: 10px; border-top: 1px solid var(--c-line); color: var(--c-text-2); }
 .kildeblok-titel { margin: 0 0 4px; font-size: 13px; font-weight: 600; letter-spacing: .02em; color: var(--c-text-2); }
 .kildeblok-liste { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
@@ -1161,7 +1158,7 @@ main p.kildelinje a:not([class]), main li > a.tekstlink, main th > a.tekstlink, 
 .kildeblok-om { font-weight: 600; }
 .kildeblok-note { margin: 4px 0 0; }
 
-/* v17 (punkt 34): Nøgletal/Starlink kompakt, og bredden begrænset på store skærme */
+
 #noegletal .kpi { padding: 14px 16px; }
 #noegletal .kpi-forklar { margin-bottom: 4px; }
 @media (min-width: 1024px) {
@@ -1173,7 +1170,7 @@ main p.kildelinje a:not([class]), main li > a.tekstlink, main th > a.tekstlink, 
   #noegletal > .gitter > article.panel .panel-hoved { flex-wrap: wrap; }
 }
 
-/* v17 (punkt 36): "10 ting, vi har sagt om SpaceX" som enkel liste med kort */
+
 .pointe-forfatter { margin: 0 0 var(--sp-3, 16px); }
 .pointe-liste { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; grid-template-columns: 1fr; }
 @media (min-width: 900px) { .pointe-liste { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
@@ -1187,7 +1184,7 @@ main p.kildelinje a:not([class]), main li > a.tekstlink, main th > a.tekstlink, 
 .pointe-kort .spot-broed, .pointe-kort .spot-citat { margin: 0; }
 .pointe-kort .pointe-kilde { margin-top: auto; }
 
-/* v17 (punkt 32): de to tegninger side om side på brede skærme */
+
 .tegning-par { display: grid; gap: 16px; grid-template-columns: 1fr; align-items: start; }
 @media (min-width: 1024px) { .tegning-par { grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); } }
 .tegning-par > figure { margin: 0; }
@@ -1195,7 +1192,7 @@ main p.kildelinje a:not([class]), main li > a.tekstlink, main th > a.tekstlink, 
 .tegning-klode-billede { display: block; width: 100%; height: auto; aspect-ratio: 660 / 520; border-radius: var(--r-md); background: var(--c-space); }
 .tegning-klode .kredit { margin-top: 8px; }
 
-/* v17 punkt 35: rigtige X-embeds i pladser med fast højde, så indlejringen ikke flytter siden (CLS < 0,1). Lang tekst ruller inde i pladsen. */
+
 .x-embed { position: relative; height: 520px; overflow-y: auto; overscroll-behavior: contain; margin: 0 0 var(--sp-2); border-radius: var(--r-md); border: 1px solid var(--c-line); background: var(--c-surface-2, transparent); contain: layout paint; }
 .x-embed-vent { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; margin: 0; padding: var(--sp-3); text-align: center; color: var(--c-text-2); }
 .x-embed--klar .x-embed-vent { display: none; }
@@ -1209,7 +1206,7 @@ main p.kildelinje a:not([class]), main li > a.tekstlink, main th > a.tekstlink, 
 .x-embed-hent { min-height: 44px; }
 @media (max-width: 599.98px) { .x-embed, .x-embed.x-embed--klar { height: auto; min-height: 0; overflow: visible; } }
 
-/* v17 punkt 28: "Det har vi skrevet" på temasiderne */
+
 .skrevet-liste { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--sp-3); }
 @media (min-width: 900px) { .skrevet-liste { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (min-width: 1280px) { .skrevet-liste { max-width: 1240px; } }
@@ -1240,23 +1237,20 @@ main p.kildelinje a:not([class]), main li > a.tekstlink, main th > a.tekstlink, 
 @media (max-width: 599.98px) { .chips-hopliste { grid-template-columns: minmax(0, 1fr); } }
 .chips-hop { min-width: 0; }
 .chips-hop > span:not(.chips-nr) { min-width: 0; overflow-wrap: anywhere; hyphens: auto; }
-/* v17.1 (brief C): afsnittet "NDI-FutureTech på eToro" på eToro Groups selskabsside */
+
 .etoro-ndi { margin-top: var(--sp-6); padding-top: var(--sp-5); border-top: 1px solid var(--c-line); }
 .etoro-ndi-titel { margin: 0 0 var(--sp-3); font-size: var(--fs-18, 1.125rem); }
 .etoro-ndi .knap { min-height: 44px; }
 .etoro-ndi-fodnote { color: var(--c-text-2); max-width: 70ch; }
 
-/* v17.1 (fundet under B-kontrollen, også i v17): på selskabssider med langt temanavn var brødkrummen og
-   KID-knappen bredere end topbaren ved 1024-1180 px (vandret rulning, fx SoftBank Group 1083 px ved 1024).
-   Brødkrummen må nu bryde linjen, og knappen beholder sin bredde. */
+
 .topbar .broedkrumme { min-width: 0; flex: 1 1 auto; }
 .topbar .broedkrumme ol { flex-wrap: wrap; row-gap: 0; }
 .topbar .topbar-handling { flex: none; }
-/* v17.1 (også i v17): i temaer med mange selskaber (fx Chips) blev rangfiguren bredere end kortet ved 1024-1180 px.
-   Fra 60 søjler bliver mellemrum og mindstebredde 1 px, så alle selskaber stadig vises. */
+
 .rang-soejler:has(> :nth-child(60)) { gap: 1px; }
 .rang-soejler:has(> :nth-child(60)) > .rang-soejle:not(.rang-soejle--aktiv) { min-width: 1px; }
-/* 1024-1279 px: linket til newdealinvest.dk står også øverst i menuen, så det udelades her i brødkrummen; så står krummen på én linje. */
+
 @media (min-width: 1024px) and (max-width: 1279.98px) {
   .topbar .broedkrumme li:first-child:has(> a[href^="https://www.newdealinvest.dk"]) { display: none; }
 }

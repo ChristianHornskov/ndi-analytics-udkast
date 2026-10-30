@@ -7,7 +7,7 @@ export function layoutAtlas(model,{width=360,height=540}={}){
 }
 export function createAtlasCanvas(host,{model,onLine,reducedMotion=false}={}){
  const doc=host.ownerDocument,win=doc.defaultView;host.classList.add('ac');const canvas=doc.createElement('canvas');canvas.setAttribute('aria-hidden','true');host.replaceChildren(canvas);const ctx=canvas.getContext('2d');let layout,raf=0,visible=true,dead=false,filter='all',selection=null,phase=0,last=0,ripple=null;
- // Spor tema-data: farverne kommer fra temaets CSS-variabler (theme-tokens.css) og læses igen ved temaskift.
+ 
  let pal;const alpha=(c,a)=>{ctx.fillStyle=c;const v=ctx.fillStyle,m=/^#(..)(..)(..)$/.exec(v);return m?`rgba(${parseInt(m[1],16)},${parseInt(m[2],16)},${parseInt(m[3],16)},${a})`:v.replace(/rgba?\(([^,]+),([^,]+),([^,)]+).*$/,`rgba($1,$2,$3,${a})`)};
  const readPalette=()=>{const cs=win.getComputedStyle(host),v=n=>cs.getPropertyValue(n).trim()||cs.color;pal={dot:v('--ndi-dot'),alt:v('--ndi-dot-alt'),multi:v('--ndi-dot-multi'),active:v('--ndi-dot-active'),thread:v('--ndi-thread'),spark:v('--ndi-spark')};pal.glow=alpha(v('--ndi-field-glow'),.11);pal.depth=alpha(v('--ndi-field-depth'),.27);pal.fade=alpha(v('--ndi-field-depth'),0)};readPalette();
  const themeWatch=new MutationObserver(()=>{readPalette();draw(performance.now())});themeWatch.observe(doc.documentElement,{attributes:true,attributeFilter:['data-theme']});

@@ -1,7 +1,4 @@
-/* NewDeal Invest · topanimationer (drop-in). Bruger kun farvetokens fra tokens.css / tema-lys.css.
-   Desktop og tablet (600 px og op): SVG'en fylder .hero-billede som SpaceX-heroen i dag.
-   Under 600 px: lavt statisk bånd øverst i kortet (aspect-ratio 540/240, højst 150 px) med udsnittet pr. selskab,
-   centreret med "meet" og klippet til udsnittet. Kanterne viser kun var(--c-space). Teksten står under båndet. */
+
 .ta-udsnit { position: absolute; inset: 0; }
 .ta-udsnit > .ta-svg { display: block; width: 100%; height: 100%; }
 
@@ -21,16 +18,14 @@
   .kort--topanim:not(:has(#ta-spacex)) .hero-pause { display: none; } 
   .kort--topanim .kredit--hero { position: static; align-self: flex-start; margin: 0 var(--sp-4) var(--sp-4); }
 }
-/* 1024-1279 px: afspil-/pauseknappen står nederst til højre i et smalt kort og lå oven på heroens knapper
-   (målt ved 1024-1180 px, også på v17's SpaceX-side). Her vises den som rund ikonknap (44 x 44 px, teksten
-   bevares for skærmlæsere), og knapperne i teksten får plads til den. */
+
 @media (min-width: 1024px) and (max-width: 1279.98px) {
   .kort--topanim .hero-pause { width: 44px; padding: 0; justify-content: center; }
   .kort--topanim .hero-pause .hero-pause-tekst { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
   .kort--topanim .hero-handling { padding-right: 56px; }
 }
 
-/* ---- v17.1 ---- */
+
 
 @media (max-width: 599.98px) {
   .gitter--stub > .kort--topanim, .gitter--overblik > .kort--topanim { order: -1; }
@@ -39,10 +34,10 @@
 .kort--topanim .kredit--hero, .kort--topanim .hero-tekst .kicker { font-size: .8125rem; }
 
 .kort--topanim .ta-knap, .kort--topanim .hero-pause { border-color: var(--c-text-3); }
-/* B: "Hvad selskabet laver" i sit eget kort under heroen. */
+
 .kort--hvad { grid-column: 1 / -1; }
 .kort--hvad .hero-titel { margin-top: 0; }
-/* B: på selskabssiderne står topanimationen på heroens plads (venstre, 8 kolonner) og "Hvad selskabet laver" under. */
+
 @media (min-width: 1024px) {
   .gitter--stub > .kort--topanim { grid-column: 1 / span 8; grid-row: 1; }
   .gitter--stub > .kort--hvad { grid-column: 1 / span 8; grid-row: 2; }

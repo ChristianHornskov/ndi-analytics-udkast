@@ -1,9 +1,5 @@
-/* v17 (kurs-format.md, skema 2): kursgraf på selskabssider. Læser KUN lokale filer i data/kurs/.
-   Indeks: window.KURS_INDEX fra data/kurs/index.js = {"skema":2,"kilde","opdateret","filer":{"<slug>":{"ticker","fil"}}}.
-   Kursfil: data/kurs/<fil>.js sætter window.KURS["<ticker>"] = {ticker, navn?, valuta, kilde, opdateret, punkter:[["ÅÅÅÅ-MM-DD", lukkekurs], ...]}.
-   Byggeren sætter <script src="../data/kurs/<fil>.js"> på siden, når selskabet står i indekset og filen består valideringen.
-   Via lokal fil bruges kun .js (ingen fetch). Over http er <fil>.json reserve.
-   Sektionen er skjult fra start (ingen tom ramme, ingen CLS) og forbliver skjult uden data. JS finder ikke på tal. */
+
+
 (function () {
   var rod = (document.currentScript && document.currentScript.src || '').replace(/assets\/js\/kursgraf\.js.*$/, '');
   var paneler = document.querySelectorAll('[data-kurs-id]');
@@ -14,8 +10,8 @@
   function tegn(panel, f) {
     var pk = (f.punkter || []).filter(function (p) { return p && typeof p[1] === 'number' && isFinite(p[1]); });
     if (pk.length < 2) return;
-    // SVG'et tegnes i panelets egen bredde (1:1), så aksetekst altid er 12 px.
-    // v18: vis sektionen før målingen; en skjult sektion har bredden 0, og grafen blev tegnet i minimumsbredden.
+    
+    
     var sek0 = panel.closest('[data-kurs-sektion]'); if (sek0) sek0.hidden = false;
     var cs = getComputedStyle(panel), W = Math.max(260, Math.round(panel.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight)));
     var H = W < 520 ? 220 : 280, ml = 48, mr = 8, mt = 26, mb = 30;
@@ -55,7 +51,7 @@
     if (!ix || ix.skema !== 2 || !ix.filer) return;
     Array.prototype.forEach.call(paneler, function (p) {
       var e = ix.filer[p.getAttribute('data-kurs-id')];
-      /* kun den ticker, byggeren har valideret og sat på panelet */
+       
       if (!e || typeof e.ticker !== 'string' || e.ticker !== p.getAttribute('data-kurs-ticker') || !/^[a-z0-9_][a-z0-9._-]*$/.test(e.fil || '')) return;
       var f = window.KURS && window.KURS[e.ticker];
       if (gyldig(f, e.ticker)) { tegn(p, f); return; }

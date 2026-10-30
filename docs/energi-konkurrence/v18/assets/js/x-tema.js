@@ -1,12 +1,11 @@
-/* v17 punkt 29 og 35: X-opslag om temaets (eller selskabets) selskaber fra det kuraterede X-feed. Se _kilde/x_tema.py.
-   Eksport: kun øjebliksbilledet window.NDI_X_SNAPSHOT (data/x-curated.js), intet live-hent.
-   Kun opslag, som X-kontrol har godkendt: selskabet har status "ok", og opslaget har checked_at og en x.com-adresse. */
+
+
 (function () {
   'use strict';
   var LIVE = false;
   var VIS = 6;
-  /* v17 punkt 35: rigtige X-embeds. Hvert opslag får en plads med fast højde (.x-embed), så indlejringen ikke flytter siden (CLS).
-     widgets.js fra platform.twitter.com hentes først, når en plads nærmer sig skærmen. Uden script eller net står linket til opslaget. */
+  
+
   var WIDGETS = 'https://platform.twitter.com/widgets.js', wp = null, pladser = [];
   function tema() { return document.documentElement.getAttribute('data-tema') === 'lys' ? 'light' : 'dark'; }
   function widgets() {
@@ -32,7 +31,7 @@
       });
     }).catch(function () { p.classList.add('x-embed--fejl'); p.classList.remove('x-embed--henter'); p.removeAttribute('data-x-vist'); var b = p.querySelector('.x-embed-hent'); if (b) { b.disabled = false; b.textContent = 'Prøv igen'; } });
   }
-  
+   
   var MOBIL = window.matchMedia ? window.matchMedia('(max-width: 599.98px)') : { matches: false };
   function observer(p) {
     pladser.push(p);
@@ -50,7 +49,7 @@
   }
   function plads(id, url) {
     var p = el('div', 'x-embed'); p.setAttribute('data-x-id', id);
-    
+     
     var f = el('div', 'x-embed-vent lille');
     var t = el('span', null, MOBIL.matches ? 'Opslaget hentes først fra X, når du trykker. ' : 'Opslaget hentes fra X. Virker det ikke, kan du ');
     var a = el('a', 'tekstlink', MOBIL.matches ? 'Se opslaget på X' : 'åbne det på X'); a.href = url; a.target = '_blank'; a.rel = 'noopener noreferrer';
@@ -108,7 +107,7 @@
         if (!egen) {
           om.appendChild(document.createTextNode('Om '));
           if (h.s.slug && ((window.NDI_DATA || {}).sider || {})[h.s.slug] === true) { var a = el('a', 'tekstlink', h.s.navn); a.href = rel + 'selskaber/' + h.s.slug + '.html'; om.appendChild(a); }
-          else om.appendChild(document.createTextNode(h.s.navn));   /* Å20 (B): ingen side i NDI_DATA.sider -> navnet uden link */
+          else om.appendChild(document.createTextNode(h.s.navn));    
         }
         if (om.childNodes.length) li.appendChild(om);
         var pl = h.p.post_id ? plads(String(h.p.post_id), h.p.url) : null;
@@ -125,7 +124,7 @@
     kl.hidden = false;
   }
   function start() {
-    /* faste pladser i HTML (SpaceX-siden) */
+     
     document.querySelectorAll('.x-embed[data-x-id]').forEach(observer);
     var sek = document.querySelectorAll('[data-x-tema]'); if (!sek.length) return;
     var hent = (window.NDI_X_SNAPSHOT ? Promise.resolve(window.NDI_X_SNAPSHOT) : Promise.reject(new Error('intet øjebliksbillede')));

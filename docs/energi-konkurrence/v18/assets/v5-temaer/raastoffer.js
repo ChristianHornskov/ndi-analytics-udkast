@@ -1,4 +1,4 @@
-/* Genereret af _kilde/v5_fortaelling.py: v5-temasidens egne scripts, ordret. */
+ 
 try{document.documentElement.classList.add('js')}catch(e){}
 try{(function(){var R=document.getElementById('cq-rs');if(!R||R.dataset.on)return;R.dataset.on='1';R.classList.add('cq-rs--js');
 var fine=window.matchMedia&&matchMedia('(hover: hover) and (pointer: fine)').matches;
@@ -30,23 +30,23 @@ var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 var pr=document.querySelector('.prog');
 function prog(){if(!pr)return;var h=document.documentElement,m=h.scrollHeight-innerHeight;pr&&pr.style.setProperty('--p',m>0?(scrollY/m).toFixed(3):0)}
 addEventListener('scroll',prog,{passive:true});prog();
-/* X-facade: intet hentes fra X før klik; widgets.js indlæses én gang */
+ 
 function twl(){if(window.twttr&&window.twttr.widgets)return;window.twttr=(function(d){var t=window.twttr||{};if(t._e)return t;t._e=[];t.ready=function(f){t._e.push(f)};var j=d.createElement('script');j.id='twitter-wjs';j.async=true;j.src='https://platform.twitter.com/widgets.js';j.charset='utf-8';d.body.appendChild(j);return t})(document)}
 [].forEach.call(document.querySelectorAll('.xp[data-url]'),function(li){var b=li.querySelector('.xp-vis'),em=li.querySelector('.xp-embed');b.hidden=false;
  b.addEventListener('click',function(){if(em.firstChild)return;var q=document.createElement('blockquote');q.className='twitter-tweet';q.setAttribute('data-theme','dark');q.setAttribute('data-dnt','true');q.setAttribute('data-conversation','none');q.setAttribute('data-lang','da');
  var a=document.createElement('a');a.href=li.dataset.url;a.textContent='Opslaget hentes fra X …';q.appendChild(a);em.appendChild(q);b.hidden=true;em.focus({preventScroll:true});
  twl();window.twttr.ready(function(t){t.widgets.load(em)})})});
-/* "Hører til": åbn feltet i grundstofkortet */
+ 
 var R=document.getElementById('cq-rs');
 [].forEach.call(document.querySelectorAll('.xp-trin a[data-felt]'),function(a){a.addEventListener('click',function(e){var t=R&&R.querySelector('[aria-controls="cq-rs-p-'+a.dataset.felt+'"]');if(!t||!R.cqSetDx)return;e.preventDefault();R.cqSetDx(t,true);var p=document.getElementById('cq-rs-p-'+a.dataset.felt),h=p&&p.querySelector('h3');if(h){h.tabIndex=-1;p.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});h.focus({preventScroll:true})}})});
-/* X: ét opslag synligt, resten bag knappen "Vis N opslag mere" */
+ 
 var xs=document.querySelector('.xs'),xm=document.getElementById('x-mere');
 if(xs&&xm){var tx=xm.textContent;xm.hidden=false;xm.addEventListener('click',function(){var o=xm.getAttribute('aria-expanded')!=='true';xm.setAttribute('aria-expanded',String(o));xs.classList.toggle('alle',o);xm.textContent=o?'Vis færre':tx;if(o){var f=xs.querySelector('.ekstra .xp-fra b');if(f){f.tabIndex=-1;f.focus({preventScroll:true})}}})}
-/* video-facade: YouTube (nocookie) hentes først ved klik */
+ 
 [].forEach.call(document.querySelectorAll('.vid-ramme[data-yt]'),function(r){var b=r.querySelector('.vid-play');b.addEventListener('click',function(){var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+r.dataset.yt+'?autoplay=1&rel=0&playsinline=1';f.title=r.dataset.title;f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.setAttribute('allowfullscreen','');f.referrerPolicy='strict-origin-when-cross-origin';r.replaceChild(f,b);f.focus()})});
 })();
 
-/* Anker ind i en lukket <details> (fx risiko -> Kilder): fold op og hop */
+ 
 document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="#"]');if(!a)return;var t=document.getElementById(a.getAttribute('href').slice(1));if(!t)return;var d=t.closest('details');if(d&&!d.open){d.open=true;}});
 
 }catch(e){}

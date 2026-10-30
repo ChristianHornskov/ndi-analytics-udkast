@@ -1,6 +1,5 @@
-/* grafik.js (v11, fase B2): tegner prikkort, halvring og verdenskort ud fra data/dagens-tal.json.
-   Alle koordinater, radier og buer er regnet på forhånd i _kilde/grafik_data.py. Her sættes kun attributter.
-   Tekstudgaven af tallene står i HTML ved siden af hver figur (datalag.js fylder den). */
+
+
 (function () {
   "use strict";
   var NS = "http://www.w3.org/2000/svg";
@@ -12,7 +11,7 @@
   }
   function tom(e) { while (e.firstChild) e.removeChild(e.firstChild); }
 
-  /* Prikkort: <svg data-prikkort="prikkort.bred" [data-aktiv-tema="id"] [data-etiketter]> */
+   
   function prikkort(svg, d) {
     var p = window.NDI_DATALAG.slaaOp(d, svg.getAttribute("data-prikkort"));
     if (!p) return;
@@ -20,7 +19,7 @@
     tom(g);
     svg.setAttribute("viewBox", "0 0 " + p.bredde + " " + p.hoejde);
     var aktiv = svg.getAttribute("data-aktiv-tema");
-    
+     
     var kNr = {}, iKl = {};
     p.klynger.forEach(function (k, i) { kNr[k.id] = i; });
     p.prikker.forEach(function (q) {
@@ -29,7 +28,7 @@
         style: "--pd:" + ((kNr[q.tema] || 0) * 90 + (j % 12) * 22) + "ms" }, g);
       if (!aktiv) el("title", {}, c).textContent = q.navn;
     });
-    
+     
     if (svg.hasAttribute("data-kortnavne")) {
       var ng = svg.querySelector(".prikkort-navne") || el("g", { "class": "prikkort-navne", "aria-hidden": "true" }, svg);
       tom(ng);
@@ -54,8 +53,8 @@
         t1.textContent = k.navn;
         var t2 = el("text", { x: k.x, y: k.y2, "text-anchor": "middle", "class": "prikkort-tal" }, a);
         t2.textContent = window.NDI_DATALAG.format(t.antal, "heltal") + " selskaber · " + window.NDI_DATALAG.format(t.andel, "pct");
-        /* v17 (punkt 9): peg på et tema, så lyser dets streger op */
-        /* v17: peg på et tema, så fremhæves dets streger, og de andre dæmpes */
+         
+         
         function fokus(id) {
           if (id) svg.setAttribute("data-fokus", id); else svg.removeAttribute("data-fokus");
           svg.querySelectorAll(".traad").forEach(function (t) { t.classList.toggle("er-naer", !!id && (t.getAttribute("data-fra") === id || t.getAttribute("data-til") === id)); });
@@ -66,7 +65,7 @@
         a.addEventListener("blur", function () { fokus(null); });
       });
     }
-    /* v17 (punkt 9): streger mellem temaerne. Stierne og bredderne står færdige i dagens-tal.json (prikkort.*.traade). */
+     
     if (svg.hasAttribute("data-traade") && p.traade) {
       var tg = svg.querySelector(".prikkort-traade");
       if (!tg) { tg = el("g", { "class": "prikkort-traade", "aria-hidden": "true" }); svg.insertBefore(tg, g); }
@@ -80,7 +79,7 @@
     }
   }
 
-  /* Halvring: <svg data-halvring="top10.halvring"> med <path class="halvring-spor"> og <path class="halvring-bue"> */
+   
   function halvring(svg, d) {
     var h = window.NDI_DATALAG.slaaOp(d, svg.getAttribute("data-halvring"));
     if (!h) return;
@@ -88,7 +87,7 @@
     svg.querySelector(".halvring-bue").setAttribute("d", h.bue);
   }
 
-  /* Verdenskort: <svg data-verden="verden"> */
+   
   function verden(svg, d) {
     var v = window.NDI_DATALAG.slaaOp(d, svg.getAttribute("data-verden"));
     if (!v) return;
@@ -102,18 +101,18 @@
     });
   }
 
-  /* Rangfigur: markér det aktuelle selskab blandt temaets søjler (opslag, ingen beregning). */
+   
   function rang(box) {
     var slug = box.getAttribute("data-aktiv-slug");
     var s = box.querySelector('[data-slug="' + slug + '"]');
     if (!s) return;
     s.classList.add("rang-soejle--aktiv");
-    
+     
     var alle = box.querySelectorAll(".rang-soejle"), i = Array.prototype.indexOf.call(alle, s);
     if (i > alle.length / 2) s.classList.add("rang-soejle--etiket-venstre");
   }
 
-  /* 30.10: prikkortet animeres, når det kommer ind på skærmen (også på mobil). Reduceret bevægelse: slutbilledet (CSS). */
+   
   function vent(svg) {
     if (svg.hasAttribute("data-vent")) return;
     svg.setAttribute("data-vent", "");

@@ -1,5 +1,5 @@
-/* Lyst og mørkt tema (v11). Hovedets inline-script har allerede sat data-tema uden blink.
-   Knappen gemmer valget i localStorage. v17 (punkt 1): uden gemt valg er mørkt tema standard, som på newdealinvest.dk. */
+
+
 (function () {
   var d = document.documentElement, KEY = "ndi-tema";
   function saet(t) {

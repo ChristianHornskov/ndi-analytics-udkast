@@ -11,24 +11,20 @@
 
 
 .v18p-chips summary{min-height:44px}
-/* Foldede sektioner på desktop: summary er skjult, når sektionen er åben. Bliver synlig ved tastaturfokus,
-   så fokus aldrig står på et usynligt element. */
+
 .fold-sektion[open] > summary:focus-visible{position:static;width:auto;height:auto;overflow:visible;clip:auto;min-height:44px}
 
 
 .sm-luk{border:1px solid var(--c-line-strong)}
 :root[data-tema="lys"] .knap--rolig{border-color:var(--v5-teal)}
 
-/* v18 Skal (A, fundet 30.10 aften): v5-komponenter.css bruger v5's egne variabler (--teal, --line, --gold, --bg, --ink, --text),
-   men v5_css.py springer v5's :root over. Uden dem faldt kanter og fyld bort (fx periodeknapperne og den valgte periode).
-   Her peger de på v18's tema-variabler, så begge temaer virker. */
+
 :root{--bg:var(--v5-bg);--ink:var(--v5-ink);--text:var(--v5-ink);--teal:var(--v5-teal);--line:var(--v5-line);--gold:var(--v5-gold)}
 
 .v5 .periods button,.v5 .chip,.v5 .theme-tabs button,.v5 .funds button,.v5 details>summary{border-color:var(--v5-kant)}
 .v5 .periods button[aria-pressed=true],.v5 .chip[aria-pressed=true],.v5 .theme-tabs button[aria-pressed=true]{border-color:var(--v5-teal)}
 
-/* v18 Bør (afskåret mobiloverskrift): topbjælken under 600 px. Faktaark-knappen viser kun pilen (teksten står for skærmlæsere),
-   sidenavnet står på én linje og forkortes kun, hvis det stadig ikke kan være der. */
+
 @media (max-width:599.98px){
   .topbar-mobil{gap:8px}
   .topbar-mobil .maerke{min-width:0;gap:10px}
@@ -38,17 +34,16 @@
   .topbar-mobil > .knap--lille .ik{position:absolute;left:12px;top:12px;width:18px;height:18px}
 }
 
-/* v18 Skal (fundet 30.10 aften): Alle selskaber stod med navn og tema højrestillet. Tekst venstre, tal højre. */
+
 .tabel--alle th:not(.tal-celle),.tabel--alle td:not(.tal-celle){text-align:left}
 .tabel--alle th.tal-celle,.tabel--alle td.tal-celle{text-align:right}
 @media (max-width:599.98px){.tabel--alle td:not(.tal-celle){white-space:normal}}
 
-/* v18 Skal (A, selskabssidens skabelon, fundet 30.10 aften): luft mellem overskrift, hero og trinknapperne (01–04).
-   h1 og trinknapperne stødte direkte op mod herokortet. */
+
 .v18s > .v18s-hoved{margin-bottom:28px}
 .v18s > .kort--hero + .v18s-trin,.v18s > .v18s-trin{margin-top:24px}
 @media (max-width:599.98px){.v18s > .v18s-hoved{margin-bottom:20px}.v18s > .v18s-trin{margin-top:18px}}
-/* Ingen kort i kort (C): tabellens egen ramme fjernes inde i panelet. Mindre luft på mobil, så alle fire kolonner kan være der. */
+
 .panel > .tabel-rul{border:0;border-radius:0;margin-top:0}
 @media (max-width:599.98px){
   #alle .kort.panel{padding:8px}
@@ -63,8 +58,7 @@
 }
 @media (max-width:599.98px){.tabel--alle{font-size:14px}.tabel--alle th:nth-child(3){width:124px}.tabel--alle td,.tabel--alle th{overflow-wrap:normal;hyphens:manual}.tabel--alle th[scope="row"],.tabel--alle td:nth-child(2){overflow-wrap:anywhere}}
 
-/* v18 Bør/D4 (30.10 aften): tidligere-ejede sider (tidligere_side) i v5-stil, så de ligner selskabssidernes skabelon:
-   samme h1 og logofelt som .v18s-hoved og pilleknapper som .v18s-trin. Kun CSS, ingen ny tekst. */
+
 .sektion--overblik:has(.gitter--stub) .sidehoved{gap:18px;margin-bottom:28px}
 .sektion--overblik:has(.gitter--stub) .sidehoved h1{font-size:clamp(40px,5.5vw,64px);line-height:1.05;letter-spacing:-.04em;margin:.15em 0 0;overflow-wrap:anywhere}
 .sektion--overblik:has(.gitter--stub) .sidehoved-ikon--logo{width:64px;height:64px;flex:0 0 64px;border-radius:15px;background:#142934;border:0;color:var(--v5-teal)}
@@ -75,8 +69,7 @@
 .sektion--overblik:has(.gitter--stub) .videre .knap .ik{color:var(--v5-teal)}
 @media(max-width:599.98px){.sektion--overblik:has(.gitter--stub) .sidehoved{gap:12px;margin-bottom:20px}.sektion--overblik:has(.gitter--stub) .sidehoved-ikon--logo{width:48px;height:48px;flex-basis:48px}.sektion--overblik:has(.gitter--stub) .videre .knap{font-size:14px;padding:8px 14px}}
 
-/* v18 Bør (LISTE pkt. 11, 30.10 aften): topanimationer (19 + SpaceX) med streg i v5's teal, ingen lyseblå flade
-   og den runde pauseknap i teal outline. Farverne sættes kun som variabler på selve SVG'en, så resten af siden er uændret. */
+
 .kort--topanim .ta-svg{
   --c-data-1:color-mix(in srgb,var(--v5-teal) 72%,var(--v5-bg));
   --c-data-2:var(--v5-teal);
@@ -86,30 +79,25 @@
 }
 .kort--topanim .hero-pause,.kort--topanim .ta-knap{border-color:var(--v5-teal);color:var(--v5-teal);background:transparent}
 .kort--topanim .hero-pause:hover,.kort--topanim .ta-knap:hover{background:color-mix(in srgb,var(--v5-teal) 14%,transparent);color:var(--v5-ink)}
-/* Kontrast (kontrast.py 30.10): Eksempeldata-mærket i lys var 4,49:1. */
+
 :root[data-tema="lys"] .v18-eksempel{border-color:#7d6a30}:root[data-tema="lys"] .v18-eksempel strong{background:#7d6a30;color:#fff}
 
 .v18-ramme .foto-kredit,.v18t-foto .foto-kredit,.v18s-tegning .foto-kredit{padding-inline:0;margin-inline:0}
 
-/* Skal (fundet i eksport 2, 30.10 kl. 20:43): CLS 0,12–0,16 på SpaceX ved 1280/1440. Nu, hvor X-widgets faktisk indlæses,
-   voksede .x-embed fra 120 px (venter) til 520/560 px (klar). På desktop holdes den endelige højde fra start, så intet flytter sig.
-   Mobil (<600) er uændret. */
+
 @media (min-width:600px){
   .x-embed:not(.x-embed--klar){height:520px;min-height:0}
   .x-embed:not(.x-embed--klar) .x-embed-vent{position:absolute;inset:0;min-height:0}
 }
 @media (min-width:900px){.x-embed:not(.x-embed--klar){height:560px}}
 
-/* Skal (skal.py "tryk", 30.10 kl. 21:20): på desktop er overskriften (summary) i en åben .fold-sektion kun til skærmlæsere
-   (1x1 px, tabindex -1). Den kan ikke trykkes på og må ikke fange klik. Synlige foldetitler er stadig mindst 44 px. */
+
 @media (min-width:600px){.fold-sektion[open] > summary:not(:focus-visible){pointer-events:none}}
-/* Finpudsning (30.10 kl. 21:21, mod v5): kildelinjen under topanimationen flugter nu med heroteksten
-   (teksten i mærket står ud for kickeren), i stedet for 4-8 px til siden. */
+
 @media (max-width:599.98px){.kort--topanim .kredit--hero{margin-left:var(--sp-2)}}
 @media (min-width:600px) and (max-width:1023.98px){.kort--topanim:not(:has(#ta-spacex)) .kredit--hero{margin-left:var(--sp-3)}}
 @media (min-width:1024px){.kort--topanim:not(:has(#ta-spacex)) .kredit--hero{margin-left:var(--sp-6)}}
-/* Finpudsning (30.10 kl. 21:23, mod v5): luft mellem forsidens overskrift og eksempeldata-mærket (før 0 px),
-   og spørgsmålsboksen i temaheroen får igen v5's 20 px over sig (v5.css linje 287 blev overtrumfet af linje 286, så den stod med 14 px). */
+
 .v18-afkast > h1 + .v18-eksempel{margin-top:var(--sp-4)}
 .v18t-hero-tekst > p.v18t-spm:not(.kicker):not(.v18t-under){margin-top:20px}
 
@@ -153,7 +141,7 @@
 .v18-atlas{margin:48px 0}
 .v18-atlas{container-type:inline-size}
 .v18-atlas #living-map{min-height:600px;background:var(--bg);border-radius:12px;padding-bottom:40px}
-/* atlas-canvas.mjs: bredde < 600 => 2 kolonner x 6 rækker x 135 = 810 px; ellers 4 x 3 => max(560, 405) = 560 px. Reserveres inkl. 40 px bundluft (border-box), så CLS = 0. */
+
 @container (max-width:599.98px){.v18-atlas #living-map{min-height:850px}}
 
 .v18-c20{--accent:var(--v5-teal);margin-top:40px}
@@ -199,3 +187,22 @@
 }
 @keyframes prik-ind{to{opacity:1;transform:scale(1)}}
 @keyframes prik-ind-ude{to{opacity:.42;transform:scale(1)}}
+.v18-widget-side .v18-widget{max-width:1180px;margin:0 auto;padding:clamp(20px,4vw,48px) clamp(16px,4vw,40px)}
+.v18-widget-knapper{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 8px}
+.v18-widget-knapper .v18-widget-knap{min-height:44px;display:inline-flex;align-items:center;font-size:16px}
+.v18-widget-side .v18-widget{display:flex;flex-direction:column}
+.v18-widget-side .v18-widget>#afkast{display:contents}
+.v18-widget-side #return-calendar{order:2;margin-top:16px}
+.v18-widget-side .v18-widget-knapper{order:1}
+.v18-widget-side #vigtig-information{order:3}
+.v18-widget-side .v18-widget:not(:has(#fund-chart))>:not(#afkast),.v18-widget-side:not(:has(#fund-chart)) .sidefod{visibility:hidden}
+.v18-v5produkt{margin:32px 0 8px}
+.v18-v5produkt>h3{font:500 clamp(24px,3vw,32px)/1.2 Manrope,sans-serif;letter-spacing:-.01em;margin:0 0 16px}
+.v18-v5produkt .company-flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:0 0 32px}
+.v18-v5produkt .company-flow article{min-width:0;padding:24px;background:var(--v5-flade,rgba(255,255,255,.03));border:1px solid var(--v5-kant,rgba(255,255,255,.12));border-radius:12px}
+.v18-v5produkt .company-flow article:before{content:attr(data-nr);display:block;font:500 28px/1 Manrope,sans-serif;color:var(--v5-accent,#d6c78a)}
+.v18-v5produkt .company-flow h4{font:500 18px/1.3 Manrope,sans-serif;letter-spacing:-.01em;margin:12px 0 8px}
+.v18-v5produkt .company-flow p{margin:0}
+.v18-v5produkt>h4{font:500 18px/1.3 Manrope,sans-serif;margin:24px 0 8px}
+.v18-v5produkt>p,.v18-v5produkt ul{max-width:72ch}
+@media(max-width:700px){.v18-v5produkt .company-flow{grid-template-columns:1fr;gap:16px}}

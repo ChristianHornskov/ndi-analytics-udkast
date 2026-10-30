@@ -1,9 +1,9 @@
-/* SpaceX: spotlight for de 10 pointer (ARIA-faner) og pause af hero-animation. Uden JS står alle pointer som løbende tekst. */
+ 
 (function () {
   "use strict";
   var reduceret = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)");
 
-  /* ---------- Hero: SMIL-animation stoppes ved reduceret bevægelse og kan pauses ---------- */
+   
   var svg = document.querySelector(".hero-svg"), pause = document.querySelector(".hero-pause");
   if (svg && svg.pauseAnimations) {
     var stoppet = false;
@@ -21,7 +21,7 @@
     if (reduceret && reduceret.addEventListener) reduceret.addEventListener("change", function (e) { saet(e.matches); });
   }
 
-  /* ---------- Spotlight ---------- */
+   
   var rod = document.getElementById("spotlight");
   if (!rod) return;
   var faner = Array.prototype.slice.call(rod.querySelectorAll('.spot-fane[role="tab"]'));
@@ -71,7 +71,7 @@
   Array.prototype.forEach.call(rod.querySelectorAll("[data-retning]"), function (b) {
     b.addEventListener("click", function () { vaelg(aktiv + Number(b.dataset.retning)); });
   });
-  /* Dybt link: #pointe-4 åbner pointe 4 */
+   
   var h = window.location.hash.match(/^#pointe-(\d+)$/);
   vaelg(h ? Number(h[1]) - 1 : 0);
 })();

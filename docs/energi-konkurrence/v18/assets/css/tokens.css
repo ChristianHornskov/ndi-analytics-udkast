@@ -1,9 +1,4 @@
-/* ==========================================================================
-   NewDeal Invest · Design tokens (v3)
-   Én kilde til farver, spacing, typografi, radier, skygger og bevægelse.
-   Palet: "Blæk og messing" — dyb marine/blæk-neutraler + én afdæmpet messing-accent.
-   Kontrast (WCAG 2.1) er målt mod --c-surface (#111C2E) og --c-bg (#0A1220), se LEVERING.md.
-   ========================================================================== */
+
 
 @font-face {
   font-family: "Manrope";
@@ -14,37 +9,37 @@
 :root {
   color-scheme: dark;
 
-  /* ---- Farver: flader (blæk) ---- */
-  --c-bg:          #0A1220;  /* sidebaggrund */
-  --c-sidebar:     #0C1524;  /* venstremenu */
-  --c-surface:     #111C2E;  /* kort og paneler */
-  --c-surface-2:   #16233A;  /* hover, indlejrede felter */
-  --c-surface-3:   #1C2B45;  /* aktiv, valgt */
-  --c-space:       #050A0F;  /* billedflade (matcher illustrationernes baggrund) */
-  --c-line:        #213049;  /* hårlinjer og kortkanter */
-  --c-line-strong: #2E4263;  /* akser, inputkanter */
+  
+  --c-bg:          #0A1220;  
+  --c-sidebar:     #0C1524;  
+  --c-surface:     #111C2E;  
+  --c-surface-2:   #16233A;  
+  --c-surface-3:   #1C2B45;  
+  --c-space:       #050A0F;  
+  --c-line:        #213049;  
+  --c-line-strong: #2E4263;  
   --c-kort-land: #4A6080;  
 
-  /* ---- Farver: tekst ---- */
-  --c-text:        #E9EEF5;  /* 14,7:1 på surface */
-  --c-text-2:      #E9EEF5;  /* én tekstfarve (v2) */
-  --c-text-3:      #E9EEF5;  /* én tekstfarve (v2) */
+  
+  --c-text:        #E9EEF5;  
+  --c-text-2:      #E9EEF5;  
+  --c-text-3:      #E9EEF5;  
 
-  /* ---- Farver: accent (afdæmpet messing) ---- */
-  --c-accent:        #A9C4E4;  /* stålblå, 9,3:1 på surface. Guld kun i logoet */
+  
+  --c-accent:        #A9C4E4;  
   --c-accent-strong: #C9D9EC;
-  --c-accent-ink:    #0A1220;  /* tekst på stålblå flade */
+  --c-accent-ink:    #0A1220;  
   --c-accent-soft:   rgba(169, 196, 228, 0.12);
   --c-accent-line:   rgba(169, 196, 228, 0.38);
 
-  /* ---- Farver: data (stålblå skala, ikke-accent) ---- */
-  --c-data-1: #5F7DA3;   /* 4,0:1 grafisk kontrast */
-  --c-data-2: #9DB3CF;   /* 8,0:1 */
-  --c-data-3: #DCE5F0;   /* 13,4:1 */
-  --c-data-neg: #93A2B7; /* negative værdier: skraveret, aldrig rødt */
+  
+  --c-data-1: #5F7DA3;   
+  --c-data-2: #9DB3CF;   
+  --c-data-3: #DCE5F0;   
+  --c-data-neg: #93A2B7; 
   --c-grid:     rgba(147, 162, 183, 0.16);
 
-  /* ---- Spacing (4/8-skala) ---- */
+  
   --sp-1: 4px;
   --sp-2: 8px;
   --sp-3: 12px;
@@ -57,20 +52,20 @@
   --sp-10: 64px;
   --sp-11: 80px;
 
-  /* ---- Typografi ---- */
+  
   --font-display: "Manrope", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-body:    "Manrope", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
 
-  --fs-12: 0.75rem;    /* mikrotekst, akser (min.) */
-  --fs-13: 0.8125rem;  /* etiketter, kilder */
-  --fs-14: 0.875rem;   /* menu, kortbrødtekst */
-  --fs-16: 1rem;       /* brødtekst */
-  --fs-18: 1.125rem;   /* ingress, kortoverskrift */
+  --fs-12: 0.75rem;    
+  --fs-13: 0.8125rem;  
+  --fs-14: 0.875rem;   
+  --fs-16: 1rem;       
+  --fs-18: 1.125rem;   
   --fs-20: 1.25rem;
-  --fs-24: 1.5rem;     /* paneloverskrift stor */
-  --fs-28: 1.75rem;    /* heltekst-titel */
-  --fs-32: 2rem;       /* nøgletal, h2 */
-  --fs-40: 2.5rem;     /* h1, fondsandel */
+  --fs-24: 1.5rem;     
+  --fs-28: 1.75rem;    
+  --fs-32: 2rem;       
+  --fs-40: 2.5rem;     
   --fs-48: 3rem;
 
   --lh-tight: 1.15;
@@ -83,7 +78,7 @@
 
   --tracking-caps: 0.08em;
 
-  /* ---- Radier ---- */
+  
   --r-xs: 6px;
   --r-sm: 8px;
   --r-md: 12px;
@@ -91,20 +86,20 @@
   --r-xl: 20px;
   --r-pill: 999px;
 
-  /* ---- Skygger ---- */
+  
   --sh-1: 0 1px 0 rgba(255, 255, 255, 0.03) inset, 0 1px 2px rgba(0, 0, 0, 0.35);
   --sh-2: 0 1px 0 rgba(255, 255, 255, 0.04) inset, 0 8px 24px -12px rgba(0, 0, 0, 0.6);
   --sh-3: 0 24px 64px -16px rgba(0, 0, 0, 0.7);
   --sh-focus: 0 0 0 2px var(--c-bg), 0 0 0 4px #FFFFFF;
 
-  /* ---- Layout ---- */
+  
   --sidebar-w: 272px;
   --topbar-h: 64px;
   --content-max: 1240px;
   --gutter: var(--sp-6);
   --page-pad: var(--sp-8);
 
-  /* ---- Bevægelse ---- */
+  
   --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
   --dur-1: 120ms;
   --dur-2: 220ms;
