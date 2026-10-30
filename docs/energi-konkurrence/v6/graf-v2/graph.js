@@ -837,7 +837,7 @@ if(typeof data!=='undefined'&&data){renderHighs(data.funds[selected],highData);v
 // Nested horizontal table scrollers remain independent and usable.
 const v2FrameViewportStyle=document.createElement('style');
 v2FrameViewportStyle.id='v2-frame-viewport';
-v2FrameViewportStyle.textContent='html{overflow-y:hidden!important}';
+v2FrameViewportStyle.textContent=window.parent!==window?'html{overflow-y:hidden!important}':'html{overflow-y:auto!important}';
 document.head.append(v2FrameViewportStyle);
 
 // V2 only: changing the parent iframe height is not a chart-width change.
