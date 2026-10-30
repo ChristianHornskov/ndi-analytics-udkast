@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 140" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Maskinen i midten. Chippen indeni, softwaren og batteriet har deres egne sider">
+<title>Maskinen i midten. Chippen indeni, softwaren og batteriet har deres egne sider</title>
+<rect width="480" height="140" rx="12" fill="#E8EAED"/><g fill="none" stroke="#B6C0D2" stroke-width="1" stroke-linecap="round"><path d="M14 14L32.0 14.0A18 18 0 0 1 25.6 27.8Z"/><path d="M25.0 14.0A11 11 0 0 1 21.1 22.4" opacity=".7"/></g><circle cx="466" cy="128" r="2.4" fill="#B6C0D2"/><circle cx="457" cy="128" r="1.9" fill="#B6C0D2"/><circle cx="448" cy="128" r="1.4" fill="#B6C0D2"/><circle cx="439" cy="128" r="0.9" fill="#B6C0D2"/>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+
+<rect x="190" y="50" width="100" height="44" rx="10" stroke="#886A4F" stroke-width="2.5"/><circle cx="214" cy="104" r="12" stroke="#886A4F" stroke-width="2.5"/><circle cx="266" cy="104" r="12" stroke="#886A4F" stroke-width="2.5"/>
+<path d="M290 72L326.5 55.7A40 40 0 0 1 326.5 88.3Z" fill="#886A4F" fill-opacity=".14" stroke="none"/>
+<path d="M180 72H120M360 40l-30 18M360 104l-30-18" stroke="#405262" stroke-width="1" stroke-dasharray="2 5"/>
+<rect x="64" y="46" width="52" height="52" rx="5" stroke="#B6C0D2" stroke-width="2"/><rect x="78" y="60" width="24" height="24" rx="3" stroke="#B6C0D2" stroke-width="1.5"/>
+<rect x="364" y="16" width="64" height="44" rx="5" stroke="#B6C0D2" stroke-width="2"/><path d="M364 28h64" stroke="#B6C0D2" stroke-width="1.5"/>
+<rect x="370" y="88" width="48" height="28" rx="4" stroke="#B6C0D2" stroke-width="2"/><path d="M418 96v12" stroke="#B6C0D2" stroke-width="3"/>
+</g>
+</svg>

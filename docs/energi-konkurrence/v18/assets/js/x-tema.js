@@ -32,7 +32,7 @@
       });
     }).catch(function () { p.classList.add('x-embed--fejl'); p.classList.remove('x-embed--henter'); p.removeAttribute('data-x-vist'); var b = p.querySelector('.x-embed-hent'); if (b) { b.disabled = false; b.textContent = 'Prøv igen'; } });
   }
-  /* v17.1 (Mobil P2-3, F-159): på mobil et statisk kort bag klik; opslaget hentes først, når brugeren trykker. */
+  
   var MOBIL = window.matchMedia ? window.matchMedia('(max-width: 599.98px)') : { matches: false };
   function observer(p) {
     pladser.push(p);
@@ -50,7 +50,7 @@
   }
   function plads(id, url) {
     var p = el('div', 'x-embed'); p.setAttribute('data-x-id', id);
-    /* v17.1 (F-159): teksten står i ét span, så mellemrummet før linket ikke forsvinder i flex-boksen */
+    
     var f = el('div', 'x-embed-vent lille');
     var t = el('span', null, MOBIL.matches ? 'Opslaget hentes først fra X, når du trykker. ' : 'Opslaget hentes fra X. Virker det ikke, kan du ');
     var a = el('a', 'tekstlink', MOBIL.matches ? 'Se opslaget på X' : 'åbne det på X'); a.href = url; a.target = '_blank'; a.rel = 'noopener noreferrer';

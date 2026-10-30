@@ -215,6 +215,14 @@
     aabnFold();
     var el = document.getElementById("portefoeljen-" + id); if (!el) return;
     el.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+    /* V5-BEVARET: porteføljen står nu under temaerne og de ti største. Kommer man udefra (widgetens "Se største fald"),
+       kan indholdet over stadig være ved at lægge sig, når hoppet beregnes. Når scrollet og siden er færdige, rettes målet én gang. */
+    var ret = function () {
+      var r = el.getBoundingClientRect(), m = parseFloat(getComputedStyle(el).scrollMarginTop) || 0;
+      if (Math.abs(r.top - m) > 4) el.scrollIntoView({ behavior: "auto", block: "start" });
+    };
+    if ("onscrollend" in window && Math.abs(el.getBoundingClientRect().top) > 4) window.addEventListener("scrollend", function () { setTimeout(ret, 0); }, { once: true });
+    if (document.readyState !== "complete") window.addEventListener("load", function () { setTimeout(ret, 0); }, { once: true });
   }
   function fraHash() { var m = /^#portefoeljen-(.+)$/.exec(location.hash); if (m) { hopTil(decodeURIComponent(m[1])); return true; } return false; }
 

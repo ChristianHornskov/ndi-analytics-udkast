@@ -4,7 +4,7 @@
    centreret med "meet" og klippet til udsnittet. Kanterne viser kun var(--c-space). Teksten står under båndet. */
 .ta-udsnit { position: absolute; inset: 0; }
 .ta-udsnit > .ta-svg { display: block; width: 100%; height: 100%; }
-/* v17.1 Mobil P2-1: båndet også i lav landskabsvisning (telefon på langs). */
+
 @media (max-width: 599.98px), (max-height: 479.98px) and (orientation: landscape) {
   .kort--hero.kort--topanim .hero-billede--svg.ta-baand {
     display: block; position: relative; inset: auto; width: 100%; height: auto;
@@ -18,7 +18,7 @@
     left: calc(var(--ux) / var(--uw) * -100%); top: calc(var(--uy) / var(--uh) * -100%);
   }
   .kort--topanim .hero-tekst { margin-top: 0; padding-top: var(--sp-4); }
-  .kort--topanim .hero-pause { display: none; }
+  .kort--topanim:not(:has(#ta-spacex)) .hero-pause { display: none; } 
   .kort--topanim .kredit--hero { position: static; align-self: flex-start; margin: 0 var(--sp-4) var(--sp-4); }
 }
 /* 1024-1279 px: afspil-/pauseknappen står nederst til højre i et smalt kort og lå oven på heroens knapper
@@ -31,13 +31,13 @@
 }
 
 /* ---- v17.1 ---- */
-/* Mobil P2-2: under 600 px står heroen med animationen før andelskortet, så animationen ses uden at rulle. */
+
 @media (max-width: 599.98px) {
   .gitter--stub > .kort--topanim, .gitter--overblik > .kort--topanim { order: -1; }
 }
-/* Mobil P2-3 (F-161-linjen): kredit og rang-kicker i heroen på mindst 13 px. */
+
 .kort--topanim .kredit--hero, .kort--topanim .hero-tekst .kicker { font-size: .8125rem; }
-/* F-164: knappens kant med 3:1 kontrast mod kortet i begge temaer. */
+
 .kort--topanim .ta-knap, .kort--topanim .hero-pause { border-color: var(--c-text-3); }
 /* B: "Hvad selskabet laver" i sit eget kort under heroen. */
 .kort--hvad { grid-column: 1 / -1; }
@@ -48,9 +48,7 @@
   .gitter--stub > .kort--hvad { grid-column: 1 / span 8; grid-row: 2; }
   .gitter--stub > .stub-andel:has(~ .kort--topanim) { grid-row: 1 / span 2; align-self: start; }
 }
-/* v17.1 F-166 / Mads P3 (hero-tekst over motiv): fra 600 px dækkede overskriften motivet (Samsung ved 1024 px: motivet lå
-   inde i overskriften). Motivet står nu i sit eget bånd øverst i kortet, med samme udsnit som på mobil (højst 220 px),
-   og teksten står under båndet. SpaceX beholder sin banehero. */
+
 @media (min-width: 600px) and (min-height: 480px), (orientation: portrait) and (min-width: 600px) {
   .kort--hero.kort--topanim:not(:has(#ta-spacex)) .hero-billede--svg.ta-baand {
     display: block; position: relative; inset: auto; width: 100%; height: auto;
@@ -66,10 +64,15 @@
   .kort--topanim:not(:has(#ta-spacex)) .hero-tekst { margin-top: 0; padding-top: var(--sp-5, 24px); }
   .kort--topanim:not(:has(#ta-spacex)) .kredit--hero { position: static; align-self: flex-start; margin: 0 var(--sp-5, 24px) var(--sp-4); }
 }
-/* v17.1 F-168: i lyst tema stod SpaceX' banelinjer kraftigt gennem overskriften. En blød flade bag teksten dæmper dem. */
+
 @media (min-width: 600px) {
   :root[data-tema="lys"] .kort--topanim:has(#ta-spacex) .hero-tekst {
     position: relative; z-index: 1;
     background: radial-gradient(ellipse 75% 70% at 35% 55%, color-mix(in srgb, var(--c-space) 82%, transparent) 0%, transparent 100%);
   }
+}
+
+.ta-ude, .ta-ude * { animation-play-state: paused !important; }
+@media (max-width: 599.98px), (max-height: 479.98px) and (orientation: landscape) {
+  .kort--topanim:has(#ta-spacex) .hero-pause { display: inline-flex; top: var(--sp-2); left: var(--sp-2); }
 }

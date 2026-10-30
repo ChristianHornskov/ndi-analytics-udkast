@@ -89,7 +89,7 @@
     }
     punkter.forEach(function (p, i) {
       var anchor = i === 0 ? "start" : (i === punkter.length - 1 ? "end" : "middle");
-      /* v5 (F-91): første og sidste dato får år, når der er plads til det ved siden af nabodatoen */
+      
       var kant = i === 0 || i === punkter.length - 1;
       /* en dato tæt på den sidste dato springes over, så teksterne ikke ligger oven i hinanden (360 px) */
       if (!kant && x(punkter[punkter.length - 1][0]) - x(p[0]) < 56) return;

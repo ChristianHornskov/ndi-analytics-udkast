@@ -11,8 +11,8 @@
   var NQ = V.Aa9_nasdaq !== false;   /* Å9: Nasdaq-sammenligningen kan slås fra i valg.js */
   var app = document.getElementById("afkast");
   var info = document.getElementById("vigtig-information-indhold");
-  if (!app) return;
-  if (!U || !U.perioder || !U.perioder.length) { app.innerHTML = '<p class="lille v18-fejl" role="status">Grafen er ikke tilgængelig lige nu. Der vises ingen gemte tal som erstatning.</p>'; return; }
+  
+  if (!U || !U.perioder || !U.perioder.length) { if (app) app.innerHTML = '<p class="lille v18-fejl" role="status">Grafen er ikke tilgængelig lige nu. Der vises ingen gemte tal som erstatning.</p>'; return; }
   var NAVN = (F && F.id) || V.D3_fond || "PMINDI";
 
   var fmt = function (v) { return v == null ? "—" : Number(v).toLocaleString("da-DK", { maximumFractionDigits: 1, minimumFractionDigits: 1 }); };
@@ -98,7 +98,10 @@
     app.querySelectorAll("[data-period]").forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-period") === per)); });
     bindChart();
   }
-  app.innerHTML = skelet();
-  app.querySelectorAll("[data-period]").forEach(function (b) { b.addEventListener("click", function () { per = b.getAttribute("data-period"); opdater(); }); });
-  bindChart(); vigtig();
+  if (app) {
+    app.innerHTML = skelet();
+    app.querySelectorAll("[data-period]").forEach(function (b) { b.addEventListener("click", function () { per = b.getAttribute("data-period"); opdater(); }); });
+    bindChart();
+  }
+  vigtig();
 })();

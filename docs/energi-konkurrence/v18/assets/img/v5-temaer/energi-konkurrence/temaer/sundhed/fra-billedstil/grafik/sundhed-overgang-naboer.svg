@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 140" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Nabotemaer: Software &amp; AI og Fysisk AI">
+<title>Nabotemaer: Software &amp; AI og Fysisk AI</title>
+<rect width="480" height="140" rx="12" fill="#0b141c"/><path fill="none" d="M8 10l7 2.5 7-2.5 7 2.5v8l-7-2.5-7 2.5-7-2.5z" stroke="#313a4a" stroke-width="1" stroke-linejoin="round"/><path fill="none" d="M450 128h20" stroke="#313a4a" stroke-width="1" stroke-dasharray="2 2"/>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="150" cy="70" r="34" stroke="#313a4a" stroke-width="1.5"/><g transform="translate(150 70)" stroke="#aebbc7" stroke-width="1.5"><rect x="-14" y="-11" width="28" height="22" rx="2"/><path d="M-14 -5h28"/></g><circle cx="330" cy="70" r="34" stroke="#313a4a" stroke-width="1.5"/><g transform="translate(330 70)" stroke="#aebbc7" stroke-width="1.5"><path d="M0 0L-15 -10M0 0L15 -10M0 0"/><circle r="2.5"/></g><path d="M192 70h96" stroke="#313a4a" stroke-width="1.5" stroke-dasharray="1 6" stroke-linecap="round"/>
+</g>
+</svg>

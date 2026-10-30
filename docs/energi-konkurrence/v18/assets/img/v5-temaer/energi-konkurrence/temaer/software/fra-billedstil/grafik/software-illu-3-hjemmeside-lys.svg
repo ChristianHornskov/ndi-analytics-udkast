@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 160" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-label="En hjemmeside bliver bygget: blokke sættes på plads i et vindue, og den sidste blok trækkes ind med musen">
+<title>En hjemmeside bliver bygget: blokke sættes på plads i et vindue, og den sidste blok trækkes ind med musen</title><style>@media (prefers-reduced-motion:no-preference){.blok{animation:d 3s ease-in-out infinite}@keyframes d{0%,20%{transform:translate(0,0)}60%,100%{transform:translate(-40px,-12px)}}}</style>
+<rect width="240" height="160" rx="12" fill="#E8EAED"/><g fill="none" stroke="#B6C0D2" stroke-width="1" stroke-linecap="round"><path d="M12 24H228" opacity=".7"/>
+<rect x="14" y="9" width="30" height="8" rx="4"/><path d="M52 13h16" opacity=".7"/>
+<path d="M222 140v10M210 150h6" stroke-width="1.5"/></g>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+
+<rect x="30" y="38" width="150" height="100" rx="8" stroke="#506281" stroke-width="2"/><path d="M30 52h150" stroke="#506281" stroke-width="1.5"/>
+<rect x="42" y="62" width="126" height="22" rx="4" stroke="#506281" stroke-width="1.5" fill="#506281" fill-opacity=".12"/>
+<rect x="42" y="92" width="58" height="34" rx="4" stroke="#506281" stroke-width="1.5"/>
+<rect x="110" y="92" width="58" height="34" rx="4" stroke="#405262" stroke-width="1" stroke-dasharray="3 4"/>
+<g class="blok"><rect x="150" y="104" width="58" height="34" rx="4" stroke="#1F232D" stroke-width="2" fill="#E8EAED"/>
+<path d="M196 128l4.5 14 3-5.4 5.6-2.4z" fill="#1F232D" stroke="#1F232D" stroke-width="1"/></g>
+</g>
+</svg>

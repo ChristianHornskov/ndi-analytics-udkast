@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 160" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-label="En rejse og kvitteringerne bagefter samles i ét program">
+<title>En rejse og kvitteringerne bagefter samles i ét program</title>
+<rect width="240" height="160" rx="12" fill="#E8EAED"/><g fill="none" stroke="#B6C0D2" stroke-width="1" stroke-linecap="round"><path d="M12 24H228" opacity=".7"/>
+<rect x="14" y="9" width="30" height="8" rx="4"/><path d="M52 13h16" opacity=".7"/>
+<path d="M222 140v10M210 150h6" stroke-width="1.5"/></g>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+
+<rect x="24" y="44" width="70" height="40" rx="5" stroke="#506281" stroke-width="2"/><path d="M70 44v40" stroke="#506281" stroke-width="1.5" stroke-dasharray="3 3"/>
+<path d="M34 64l8-3 10 4 6-6 4 2-6 7 4 7-3 1-5-6-8 3" stroke="#1F232D" stroke-width="1.5"/>
+<path d="M36 96h26v40l-4-3-4 3-4-3-5 3-4-3-5 3z" stroke="#506281" stroke-width="2"/><path d="M42 106h14M42 114h10M42 122h12" stroke="#405262" stroke-width="1"/>
+<path d="M100 66c18 0 22 22 40 22M74 116c30 0 38-28 66-28" stroke="#405262" stroke-width="1.5"/>
+<rect x="142" y="54" width="76" height="70" rx="6" stroke="#1F232D" stroke-width="2"/><path d="M142 68h76" stroke="#1F232D" stroke-width="1.5"/>
+<path d="M152 82h44M152 94h34M152 106h40" stroke="#506281" stroke-width="1.5"/><path d="M200 104l5 5 9-10" stroke="#1F232D" stroke-width="2"/>
+</g>
+</svg>

@@ -23,7 +23,7 @@
   --c-space:       #050A0F;  /* billedflade (matcher illustrationernes baggrund) */
   --c-line:        #213049;  /* hårlinjer og kortkanter */
   --c-line-strong: #2E4263;  /* akser, inputkanter */
-  --c-kort-land: #4A6080;  /* v12 (F-120): verdenskortets kontinenter, 2,66:1 mod panelet */
+  --c-kort-land: #4A6080;  
 
   /* ---- Farver: tekst ---- */
   --c-text:        #E9EEF5;  /* 14,7:1 på surface */

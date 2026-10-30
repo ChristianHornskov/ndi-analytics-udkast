@@ -5,7 +5,7 @@
 :root, :root[data-tema="mørk"] {
   color-scheme: dark;
   --v5-bg: #050a0f; --v5-ink: #e6e8ed; --v5-ink-2: #aebbc7; --v5-teal: #89aeb4; --v5-gold: #f5ee9e;
-  --v5-line: #313a4a; --v5-kant: #5d6c7d; /* kontrolkanter mindst 3:1 (F-184) */
+  --v5-line: #313a4a; --v5-kant: #5d6c7d; 
   --v5-panel-a: #0d1921; --v5-panel-b: #070e15; --v5-flade: #0c171f; --v5-flade-2: #193039;
   --v5-graa: #a2abb7; --v5-pos: #17332f; --v5-neg: #33282b;
 
@@ -26,7 +26,7 @@
 :root[data-tema="lys"] {
   color-scheme: light;
   --v5-bg: #f5f7f8; --v5-ink: #10181f; --v5-ink-2: #3f4c57; --v5-teal: #2f6b73; --v5-gold: #8a6d00;
-  --v5-line: #d3dbe0; --v5-kant: #6b7a85; /* F-184: mindst 3:1 mod alle lyse flader (var #7b8a95, 2,94:1) */
+  --v5-line: #d3dbe0; --v5-kant: #6b7a85; 
   --v5-panel-a: #ffffff; --v5-panel-b: #eef3f5; --v5-flade: #ffffff; --v5-flade-2: #dfecee;
   --v5-graa: #6b7480; --v5-pos: #dcefe9; --v5-neg: #f4e3e5;
   --c-bg: var(--v5-bg); --c-sidebar: var(--v5-bg); --c-surface: #ffffff; --c-surface-2: #eef3f5; --c-surface-3: var(--v5-flade-2);
@@ -81,7 +81,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 500; letter-spac
 .kicker, .eyebrow { font-size: 11px !important; letter-spacing: .14em; color: var(--v5-teal); font-weight: 600; text-transform: uppercase; }
 main { max-width: calc(1180px + 2 * var(--page-pad)); }
 @media (max-width: 1023.98px) { body { font-size: 16px; } }
-/* B6: mindst 13 px på mobil, 12 px på desktop (F-182) */
+
 @media (max-width: 599.98px) { small, .lille, .small, .kildelinje { font-size: 13px !important; } }
 
 /* ===== v18 forside (B1-B5): v5's fotofliser, temabjælker og de største selskaber, med v18's farvevariabler ===== */
@@ -118,7 +118,7 @@ main { max-width: calc(1180px + 2 * var(--page-pad)); }
 @media(max-width:600px){.v5 .photo-theme-grid{grid-template-columns:1fr 1fr;gap:10px}
  .v5 .ndi-tile img{height:150px}.v5 .ndi-tile div{padding:12px}.v5 .ndi-tile h3{font-size:17px}.v5 .ndi-tile p{display:none}.v5 .ndi-tile small{font-size:13px}}
 @media(prefers-reduced-motion:reduce){.v5 .ndi-tile,.v5 .ndi-tile img{transition:none}.v5 .ndi-tile:hover,.v5 .ndi-tile:hover img{transform:none}}
-/* Temabjælker (v5 .allocation-review) */
+
 .v5 .allocation-review{margin-top:40px;padding:25px 28px;border:1px solid var(--c-line);border-radius:12px;background:var(--v5-flade)}
 .v5 .allocation-review h2{font-size:26px}
 .v5 .allocation-review>p{font-size:14px;color:var(--c-text-3);margin:0 0 16px}
@@ -357,9 +357,10 @@ main .panel-titel>.ik,main .kort-titel>.ik,main .sektion-kicker>.ik,main .sektio
    så "Tidligere i fonden" og sidefoden ikke springer ned. Fjernes af .tal-klar / .tal-mangler. */
 html:not(.tal-klar):not(.tal-mangler) #alle .tabel-rul{min-height:150vh}
 
+
 .v18-proces{padding-block:0}
 .v18-proces-ramme{display:block;width:100%;min-height:480px;border:0;background:transparent}
-/* v18 (Leo 18:13): lange selskabsnavne (fx CSLM Digital Asset Acquisition Corp III) må ikke give vandret scroll ved 360-390 px */
+
 .v18s-hero-tekst,.v18s-hoved>div{min-width:0}
 .v18t-knapper .v5-knap{white-space:normal;max-width:100%;overflow-wrap:anywhere}
 .topbar-mobil .maerke-tekst{min-width:0;overflow:hidden}

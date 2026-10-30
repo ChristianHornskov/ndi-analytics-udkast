@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 160" width="240" height="160" fill="none" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Styrer strøm og signaler: strøm fordeles, og signaler går ind og ud"><title>Styrer strøm og signaler: strøm fordeles, og signaler går ind og ud</title>
+<rect width="240" height="160" rx="12" fill="#0b141c"/>
+<g stroke="#313a4a" stroke-width="1" opacity=".55"><path d="M20 0V160"/><path d="M40 0V160"/><path d="M60 0V160"/><path d="M80 0V160"/><path d="M100 0V160"/><path d="M120 0V160"/><path d="M140 0V160"/><path d="M160 0V160"/><path d="M180 0V160"/><path d="M200 0V160"/><path d="M220 0V160"/><path d="M0 20H240"/><path d="M0 40H240"/><path d="M0 60H240"/><path d="M0 80H240"/><path d="M0 100H240"/><path d="M0 120H240"/><path d="M0 140H240"/></g>
+<g stroke="#89aeb4" stroke-width="1" opacity=".55"><path d="M7 12h10M12 7v10"/><path d="M223 12h10M228 7v10"/><path d="M7 148h10M12 143v10"/><path d="M223 148h10M228 143v10"/></g>
+<g stroke="#89aeb4" stroke-width="2"><rect x="92" y="52" width="56" height="56" rx="6"/>
+<g stroke-width="1.5"><path d="M92 68H58v-30H26M92 92H58v30H26M148 80h20"/></g>
+<path d="M168 66h8v-14h12v14h12v-14h12v14h8" stroke="#e6e8ed"/>
+<path d="M188 92l-12 18h10l-6 16 18-22h-10l6-12z" stroke="#e6e8ed"/>
+<g fill="#89aeb4" stroke="none"><circle cx="26" cy="38" r="4"/><circle cx="26" cy="122" r="4"/></g>
+<g fill="#89aeb4" stroke="none"><rect x="106" y="66" width="12" height="12" rx="2" opacity=".55"/><rect x="122" y="66" width="12" height="12" rx="2"/><rect x="106" y="82" width="12" height="12" rx="2"/><rect x="122" y="82" width="12" height="12" rx="2" opacity=".55"/></g></g></svg>

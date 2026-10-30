@@ -219,7 +219,7 @@ main:focus { box-shadow: none; }
 .sm-logo--billede { padding: 2px; }
 .sidehoved-ikon--billede { padding: 6px; }
 .sm-logo--billede img, .sidehoved-ikon--billede img { display: block; width: 100%; height: 100%; object-fit: contain; }
-.sm-selskab[aria-current="page"] .sm-logo--billede { background: white; border-color: var(--c-line); } /* v16 F-130: pladen forbliver hvid */
+.sm-selskab[aria-current="page"] .sm-logo--billede { background: white; border-color: var(--c-line); } 
 .sm-navn { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .sm-tal { font-size: var(--fs-13); color: var(--c-text-3); }
 .sm-selskab[aria-current="page"] { background: var(--c-accent-soft); color: var(--c-text); font-weight: var(--fw-medium); }
@@ -823,7 +823,7 @@ main { display: block; max-width: calc(var(--content-max) + 2 * var(--page-pad))
 .legende-farve[data-trin="11"]{background:#64788E}.ring-seg[data-trin="11"]{stroke:#64788E}
 .legende-farve[data-trin="12"]{background:#5F7389}.ring-seg[data-trin="12"]{stroke:#5F7389}
 
-/* v4 F-47: kildelinje nederst i sidefoden på alle sider (Christian via Leo, 29.10) */
+
 .sidefod-tekst { display: grid; gap: var(--sp-2); min-width: 0; }
 .sidefod-tekst p { margin: 0; }
 .sidefod-kilde { font-size: var(--fs-13); color: var(--c-text-2); }
@@ -836,16 +836,16 @@ main { display: block; max-width: calc(var(--content-max) + 2 * var(--page-pad))
 .temaskift:focus-visible { outline: none; box-shadow: var(--sh-focus); }
 .temaskift .ik { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; }
 
-/* v16 F-129: .sidehoved-ikon (background: var(--c-surface)) står senere end pladereglen og vandt; højere specificitet giver hvid plade i begge temaer */
+
 .sidehoved-ikon.sidehoved-ikon--billede { background: white; border-color: var(--c-line); }
-/* v16 F-130: det aktuelle selskab markeres med rækkens baggrund og stregen til venstre */
+
 .sm-selskab[aria-current="page"]::before {
   content: ""; position: absolute; left: -12px; top: 8px; bottom: 8px; width: 3px;
   border-radius: 0 3px 3px 0; background: var(--c-accent);
 }
-/* v16 P2-2: sidefoden 13 px */
+
 .sidefod, .sidefod p, .sidefod-kilde, .sidefod-dato { font-size: var(--fs-13); }
-/* v16 P2-1: brandet som tekst i mobilens topbjælke, inden for 56 px */
+
 .topbar-brand { font-size: var(--fs-12); line-height: 1.2; color: var(--c-text-2); font-weight: var(--fw-medium); white-space: nowrap; }
 .topbar-mobil .maerke-navn { line-height: 1.15; }
 .topbar-mobil .maerke-sub { line-height: 1.2; }

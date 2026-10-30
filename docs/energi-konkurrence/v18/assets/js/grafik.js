@@ -20,11 +20,16 @@
     tom(g);
     svg.setAttribute("viewBox", "0 0 " + p.bredde + " " + p.hoejde);
     var aktiv = svg.getAttribute("data-aktiv-tema");
+    
+    var kNr = {}, iKl = {};
+    p.klynger.forEach(function (k, i) { kNr[k.id] = i; });
     p.prikker.forEach(function (q) {
-      var c = el("circle", { cx: q.cx, cy: q.cy, r: q.r, "class": "prik" + (aktiv && q.tema !== aktiv ? " prik--ude" : ""), "data-gruppe": q.tema }, g);
+      var j = iKl[q.tema] = (iKl[q.tema] || 0) + 1;
+      var c = el("circle", { cx: q.cx, cy: q.cy, r: q.r, "class": "prik" + (aktiv && q.tema !== aktiv ? " prik--ude" : ""), "data-gruppe": q.tema,
+        style: "--pd:" + ((kNr[q.tema] || 0) * 90 + (j % 12) * 22) + "ms" }, g);
       if (!aktiv) el("title", {}, c).textContent = q.navn;
     });
-    /* v12 (F-119): det lille prikkort får et kort navn under hver klynge (tekst fra dagens-tal.json) */
+    
     if (svg.hasAttribute("data-kortnavne")) {
       var ng = svg.querySelector(".prikkort-navne") || el("g", { "class": "prikkort-navne", "aria-hidden": "true" }, svg);
       tom(ng);
@@ -103,15 +108,26 @@
     var s = box.querySelector('[data-slug="' + slug + '"]');
     if (!s) return;
     s.classList.add("rang-soejle--aktiv");
-    /* v12 (F-118): etiketten vender ind mod figuren, så den ikke går ud over kanten (kun placering, ingen tal) */
+    
     var alle = box.querySelectorAll(".rang-soejle"), i = Array.prototype.indexOf.call(alle, s);
     if (i > alle.length / 2) s.classList.add("rang-soejle--etiket-venstre");
+  }
+
+  /* 30.10: prikkortet animeres, når det kommer ind på skærmen (også på mobil). Reduceret bevægelse: slutbilledet (CSS). */
+  function vent(svg) {
+    if (svg.hasAttribute("data-vent")) return;
+    svg.setAttribute("data-vent", "");
+    if (!("IntersectionObserver" in window)) { svg.classList.add("er-synlig"); return; }
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (x) { if (x.isIntersecting) { svg.classList.add("er-synlig"); io.disconnect(); } });
+    }, { threshold: 0.2 });
+    io.observe(svg);
   }
 
   function tegn(e) {
     var d = (e && e.detail) || window.NDI_TAL;
     if (!d) return;
-    document.querySelectorAll("svg[data-prikkort]").forEach(function (s) { prikkort(s, d); });
+    document.querySelectorAll("svg[data-prikkort]").forEach(function (s) { prikkort(s, d); vent(s); });
     document.querySelectorAll("svg[data-halvring]").forEach(function (s) { halvring(s, d); });
     document.querySelectorAll("svg[data-verden]").forEach(function (s) { verden(s, d); });
     document.querySelectorAll("[data-aktiv-slug]").forEach(rang);

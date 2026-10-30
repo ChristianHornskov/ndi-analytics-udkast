@@ -1,5 +1,4 @@
-/* v18 Skal B7 (F-182) og B6: ingen tekst under 12 px på desktop og under 13 px under 600 px.
-   Indlæses efter v5-komponenter.css (genereret), så den vinder over v5's 11 px- og 12 px-regler. */
+
 .kicker,.eyebrow{font-size:12px !important}
 .sm-overskrift,.v18-forside .eyebrow,.v18p-iv,.v18t-spm .lille,.v18s-del .rolle-liste dt,.v5 .metrics span,.v5 .theme-detail figcaption,.v5 .photo-theme-grid .ndi-tile small{font-size:12px}
 @media (max-width:599.98px){
@@ -10,13 +9,13 @@
   .sm-overskrift-note,.sm-data-t,.sm-data-s,.v18p-nr,.v18p-ring span,.v18p-tabel thead th,.v18p-tabel small,.v18p-tal,.spot-fane-dato,.tl-md,.tl-dato,.videokort-v3 .video-flade .kredit{font-size:13px}
 }
 
-/* v18 Skal (F-183): trykflader mindst 44 px. Chips i porteføljevisningen var 36 px. */
+
 .v18p-chips summary{min-height:44px}
 /* Foldede sektioner på desktop: summary er skjult, når sektionen er åben. Bliver synlig ved tastaturfokus,
    så fokus aldrig står på et usynligt element. */
 .fold-sektion[open] > summary:focus-visible{position:static;width:auto;height:auto;overflow:visible;clip:auto;min-height:44px}
 
-/* v18 Skal F-184: kontrolkanter mindst 3:1 i begge temaer. */
+
 .sm-luk{border:1px solid var(--c-line-strong)}
 :root[data-tema="lys"] .knap--rolig{border-color:var(--v5-teal)}
 
@@ -24,7 +23,7 @@
    men v5_css.py springer v5's :root over. Uden dem faldt kanter og fyld bort (fx periodeknapperne og den valgte periode).
    Her peger de på v18's tema-variabler, så begge temaer virker. */
 :root{--bg:var(--v5-bg);--ink:var(--v5-ink);--text:var(--v5-ink);--teal:var(--v5-teal);--line:var(--v5-line);--gold:var(--v5-gold)}
-/* F-184: kanter på kontroller mindst 3:1 (rammer om flader bruger stadig --line) */
+
 .v5 .periods button,.v5 .chip,.v5 .theme-tabs button,.v5 .funds button,.v5 details>summary{border-color:var(--v5-kant)}
 .v5 .periods button[aria-pressed=true],.v5 .chip[aria-pressed=true],.v5 .theme-tabs button[aria-pressed=true]{border-color:var(--v5-teal)}
 
@@ -89,7 +88,7 @@
 .kort--topanim .hero-pause:hover,.kort--topanim .ta-knap:hover{background:color-mix(in srgb,var(--v5-teal) 14%,transparent);color:var(--v5-ink)}
 /* Kontrast (kontrast.py 30.10): Eksempeldata-mærket i lys var 4,49:1. */
 :root[data-tema="lys"] .v18-eksempel{border-color:#7d6a30}:root[data-tema="lys"] .v18-eksempel strong{background:#7d6a30;color:#fff}
-/* F-157 (30.10): fotokreditten flugter med billedets venstre kant (var forskudt 20 px af padding + margin). */
+
 .v18-ramme .foto-kredit,.v18t-foto .foto-kredit,.v18s-tegning .foto-kredit{padding-inline:0;margin-inline:0}
 
 /* Skal (fundet i eksport 2, 30.10 kl. 20:43): CLS 0,12–0,16 på SpaceX ved 1280/1440. Nu, hvor X-widgets faktisk indlæses,
@@ -100,3 +99,103 @@
   .x-embed:not(.x-embed--klar) .x-embed-vent{position:absolute;inset:0;min-height:0}
 }
 @media (min-width:900px){.x-embed:not(.x-embed--klar){height:560px}}
+
+/* Skal (skal.py "tryk", 30.10 kl. 21:20): på desktop er overskriften (summary) i en åben .fold-sektion kun til skærmlæsere
+   (1x1 px, tabindex -1). Den kan ikke trykkes på og må ikke fange klik. Synlige foldetitler er stadig mindst 44 px. */
+@media (min-width:600px){.fold-sektion[open] > summary:not(:focus-visible){pointer-events:none}}
+/* Finpudsning (30.10 kl. 21:21, mod v5): kildelinjen under topanimationen flugter nu med heroteksten
+   (teksten i mærket står ud for kickeren), i stedet for 4-8 px til siden. */
+@media (max-width:599.98px){.kort--topanim .kredit--hero{margin-left:var(--sp-2)}}
+@media (min-width:600px) and (max-width:1023.98px){.kort--topanim:not(:has(#ta-spacex)) .kredit--hero{margin-left:var(--sp-3)}}
+@media (min-width:1024px){.kort--topanim:not(:has(#ta-spacex)) .kredit--hero{margin-left:var(--sp-6)}}
+/* Finpudsning (30.10 kl. 21:23, mod v5): luft mellem forsidens overskrift og eksempeldata-mærket (før 0 px),
+   og spørgsmålsboksen i temaheroen får igen v5's 20 px over sig (v5.css linje 287 blev overtrumfet af linje 286, så den stod med 14 px). */
+.v18-afkast > h1 + .v18-eksempel{margin-top:var(--sp-4)}
+.v18t-hero-tekst > p.v18t-spm:not(.kicker):not(.v18t-under){margin-top:20px}
+
+.v18-forside h1#h-portefolje{font:500 clamp(26px,3.2vw,36px)/1.15 Manrope,sans-serif;margin:0 0 12px;letter-spacing:-.01em}
+
+.v18-hub h1{font:500 clamp(36px,5vw,64px)/1.08 Manrope,sans-serif;letter-spacing:-.04em;max-width:900px;margin:0 0 16px}
+.v18-hub p{margin:0;max-width:62ch;color:var(--c-text-2,inherit)}
+.v18-forside .v18-hvorfor{margin:0 0 20px;max-width:62ch}
+
+.v18-v5forretning .pd-business-tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:8px 0 32px}
+.v18-v5forretning .pd-business-tiles article{padding:24px;background:var(--v5-flade,rgba(255,255,255,.03));border:1px solid var(--v5-kant,rgba(255,255,255,.12));border-radius:12px}
+.v18-v5forretning .pd-business-tiles h3{font:500 18px/1.3 Manrope,sans-serif;letter-spacing:-.01em;margin:0 0 8px}
+.v18-v5forretning .pd-business-tiles p{margin:0}
+.v18-v5forretning .pd-explainer{position:relative;margin:0 0 32px}
+.v18-v5forretning .pd-explainer-art{position:relative}
+.v18-v5forretning .pd-explainer picture,.v18-v5forretning .pd-explainer img{display:block;width:100%;height:auto;aspect-ratio:960/540;border-radius:12px}
+.v18-v5forretning .pd-diagram-label{position:absolute;left:var(--x);top:var(--y);transform:translate(-50%,-50%);font-size:13px;line-height:1.3;max-width:27%;text-align:center;background:#0c141c;color:#e6e8ed;padding:2px}
+.v18-v5forretning .pd-label-mobile{display:none}
+.v18-v5forretning figcaption{margin-top:8px;font-size:13px}
+@media(max-width:700px){.v18-v5forretning .pd-business-tiles{grid-template-columns:1fr}}
+@media(max-width:600px){.v18-v5forretning .pd-diagram-label{left:var(--mx);top:var(--my);max-width:29%}.v18-v5forretning .pd-label-mobile{display:inline}.v18-v5forretning .pd-label-desktop{display:none}.v18-v5forretning .pd-explainer img{aspect-ratio:358/268}}
+
+.v18-faser{margin:56px 0 0}
+.v18-faser-knapper{display:grid;grid-template-columns:repeat(5,1fr);margin-top:16px}
+.v18-faser-knapper button{background:transparent;color:var(--v5-ink);border:1px solid transparent;border-radius:10px 10px 0 0;font:inherit;font-size:14px;line-height:1.35;padding:10px 4px;cursor:pointer;min-height:44px}
+.v18-faser-knapper button[aria-pressed=true]{background:var(--v5-flade-2);border-color:var(--v5-teal)}
+.v18-faser-knapper img{display:block;width:94px;height:94px;object-fit:contain;margin:0 auto 6px}
+:root[data-tema="lys"] #virksomhedsfaser .v18-faser-knapper img[src$=".webp"]:not([src*="/iso/"]):not([src*="/logoer/"]){box-shadow:none;border-radius:16px;filter:none;background-color:transparent}
+.v18-faser-forklaring{display:flex;gap:24px;font-size:14px;color:var(--v5-ink-2);margin-top:14px}
+.v18-faser-kurve{display:block;width:100%;height:auto;aspect-ratio:1000/360;background:var(--v5-flade);border:1px solid var(--v5-line);border-radius:12px;margin:14px 0}
+.v18-faser-kurve rect[data-fase-felt]{fill:transparent}.v18-faser-kurve rect[data-fase-felt].aktiv{fill:color-mix(in srgb,var(--v5-teal) 14%,transparent);stroke:var(--v5-teal);stroke-width:1}
+.v18-faser-kurve .nul{stroke:var(--v5-kant);stroke-dasharray:3 6}
+.v18-faser-kurve .oms,.v18-faser-kurve .overskud{fill:none;stroke:var(--v5-teal);stroke-width:5}.v18-faser-kurve .overskud{stroke:var(--v5-gold);stroke-dasharray:10 8}
+.v18-faser-kurve .p1{fill:var(--v5-teal)}.v18-faser-kurve .p2{fill:var(--v5-gold)}
+.v18-faser-kurve .akse{fill:var(--v5-ink-2);font:17px "DM Sans",sans-serif}
+.v18-faser-kurve .milepael rect{fill:var(--v5-flade-2);stroke:var(--v5-line)}.v18-faser-kurve .milepael text{fill:var(--v5-ink);font:600 20px "DM Sans",sans-serif}.v18-faser-kurve .milepael path{stroke:var(--v5-ink-2);stroke-width:2}
+.v18-faser-tekst{min-height:210px;padding:24px;background:var(--v5-flade-2);border-radius:12px}
+.v18-faser-tekst h3{margin:0 0 8px}.v18-faser-tekst h4{margin:16px 0 4px}
+@media(max-width:600px){.v18-faser-knapper{display:flex;overflow-x:auto}.v18-faser-knapper button{min-width:125px;flex:1}.v18-faser-kurve .akse{font-size:23px}.v18-faser-kurve .milepael text{font-size:22px}}
+
+.v18-atlas{margin:48px 0}
+.v18-atlas{container-type:inline-size}
+.v18-atlas #living-map{min-height:600px;background:var(--bg);border-radius:12px;padding-bottom:40px}
+/* atlas-canvas.mjs: bredde < 600 => 2 kolonner x 6 rækker x 135 = 810 px; ellers 4 x 3 => max(560, 405) = 560 px. Reserveres inkl. 40 px bundluft (border-box), så CLS = 0. */
+@container (max-width:599.98px){.v18-atlas #living-map{min-height:850px}}
+
+.v18-c20{--accent:var(--v5-teal);margin-top:40px}
+.v18-c20 .c20-kicker{font-size:12px;letter-spacing:.14em;color:var(--v5-teal);font-weight:700}
+.v18-c20 .c20-note{font-size:13px;line-height:1.6;color:var(--v5-ink-2)}
+.v18-c20 .c20-section{padding:32px 0;border-bottom:1px solid var(--v5-line)}
+.v18-c20 .c20-section:last-child{border-bottom:0}
+.v18-c20 .c20-split{display:grid;grid-template-columns:1.2fr 1fr;gap:50px}
+.v18-c20 .c20-split aside{align-self:center;border-left:3px solid var(--v5-gold);padding:22px 28px;background:var(--v5-flade-2)}
+.v18-c20 .c20-split aside h4{color:var(--v5-gold);font-size:21px;margin:0 0 8px}
+.v18-c20 .pd-revenues{margin:32px 0;padding:24px 0;border-block:1px solid var(--v5-line)}
+.v18-c20 .pd-revenues>div{margin-top:24px}
+.v18-c20 .pd-revenues p{display:flex;justify-content:space-between;max-width:none;margin:0 0 6px}
+.v18-c20 .pd-revenues svg{width:100%;height:18px;display:block}
+.v18-c20 .pd-revenues>a{display:inline-block;margin-top:16px}
+.v18-c20 .c20-reports{background:var(--v5-flade);border:1px solid var(--v5-line);border-radius:14px;padding:16px 20px;max-width:100%}
+.v18-c20 .c20-reports summary{cursor:pointer;min-height:44px;display:flex;align-items:center}
+.v18-c20 .c20-questions{list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.v18-c20 .c20-questions li{padding:24px;border:1px solid var(--v5-line);border-radius:12px;background:var(--v5-flade);line-height:1.5}
+.v18-c20 .c20-questions span{display:block;color:var(--v5-gold);font-size:28px;margin-bottom:14px}
+@media(max-width:800px){.v18-c20 .c20-split{grid-template-columns:1fr;gap:24px}.v18-c20 .c20-questions{grid-template-columns:1fr}}
+.v18-c20 .c20-split{border-bottom:0;padding-bottom:0}
+
+.v18-c20 .c20-ndi{margin:8px 0 32px;padding:36px;border:1px solid var(--v5-line);border-radius:16px;background:var(--v5-flade-2)}
+.v18-c20 .c20-ndi h3{font-size:28px;line-height:1.15;margin:14px 0}
+.v18-c20 .c20-ndi blockquote{font:italic 23px/1.55 Georgia,serif;margin:25px 0;padding-left:22px;border-left:3px solid var(--v5-gold);max-width:800px}
+@media(max-width:480px){.v18-c20 .c20-ndi{padding:24px}.v18-c20 .c20-ndi blockquote{font-size:20px}}
+
+
+.v18-prikkort{margin:48px 0}
+.v18-prikkort .panel--prikkort{background:var(--v5-flade);border:1px solid var(--v5-line);border-radius:12px;padding:16px;margin-top:16px}
+.v18-prikkort .prik{fill:var(--v5-teal)}
+.v18-prikkort .traad{stroke:var(--v5-teal)}
+.v18-prikkort .prikkort-navn{fill:var(--v5-ink)}
+.v18-prikkort .prikkort-tal{fill:var(--v5-ink-2)}
+.v18-prikkort .tabel-fold{margin-top:12px}
+@media (prefers-reduced-motion: no-preference){
+  .prikkort .traad{animation:none}
+  .prikkort.er-synlig .traad{animation:traad-ind 1.6s ease-out forwards;animation-delay:calc(1200ms + var(--i,0) * 60ms)}
+  .prikkort[data-vent] .prik{opacity:0;transform:scale(.2);transform-box:fill-box;transform-origin:center}
+  .prikkort.er-synlig .prik{animation:prik-ind .5s cubic-bezier(.2,.7,.3,1.2) forwards;animation-delay:var(--pd,0ms)}
+  .prikkort.er-synlig .prik--ude{animation-name:prik-ind-ude}
+}
+@keyframes prik-ind{to{opacity:1;transform:scale(1)}}
+@keyframes prik-ind-ude{to{opacity:.42;transform:scale(1)}}

@@ -47,7 +47,7 @@
     hoved.removeAttribute("inert"); topbar.removeAttribute("inert");
     document.body.classList.remove("laast");
     if (mq.matches) menu.setAttribute("inert", "");
-    if (!stille) aabn.focus({ preventScroll: true }); /* v16 P3-3: fokus altid tilbage til menuknappen (touch giver ikke knappen fokus) */
+    if (!stille) aabn.focus({ preventScroll: true }); 
   }
   if (menu && aabn && luk && slor) {
   aabn.addEventListener("click", aabnMenu);
@@ -125,8 +125,7 @@
 
   /* v5: fanerne til nøgletal er fjernet. Tallene står i HTML og assets/js/data.js, begge bygget af _kilde/sec_tal.py. */
 })();
-/* v2: foldbare lister er åbne på brede skærme og lukkede på mobil.
-   v5 (F-70): en telefon på langs (fx 844×390) tæller som mobil, så folderne bliver lukkede. */
+
 (function () {
   if (!window.matchMedia("(min-width: 600px) and (min-height: 600px)").matches) return;
   document.querySelectorAll("details[data-aaben-bred]").forEach(function (d) { d.open = true; });
@@ -145,7 +144,7 @@
   });
   if (location.hash) aabn(location.hash.slice(1));
 })();
-/* v5 (F-68): "Vis alle" viser resten af en afkortet liste og flytter fokus til det første nye punkt */
+
 (function () {
   document.addEventListener("click", function (e) {
     var k = e.target.closest && e.target.closest("[data-vis-alle]"); if (!k) return;
@@ -171,7 +170,7 @@
     synk(); d.addEventListener("toggle", synk);
   });
 })();
-/* v14 (F-125): på mobil viser mobilfolden grafen direkte, så den indre graffold er altid åben */
+
 (function () {
   if (window.matchMedia("(min-width: 600px) and (min-height: 600px)").matches) return;
   document.querySelectorAll("details.fold-mobil details.fold-graf").forEach(function (d) { d.open = true; });
