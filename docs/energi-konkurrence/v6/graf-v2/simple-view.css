@@ -1,0 +1,38 @@
+.simple-view main{padding:20px 0 0;max-width:1180px}
+.simple-view .fund-introduction{display:none}
+.simple-view:not(.advanced-view) nav{display:none}
+.simple-view #class-options{padding:0}
+.simple-view #class-options h2{margin-top:0;font-size:17px}
+.simple-view #asof{padding:0;color:#a8bec4}
+.simple-view .controls{margin-bottom:24px}
+.simple-view:not(.advanced-view) #topmini{display:none}
+.simple-view:not(.advanced-view) .holdings-summary>p{display:none}
+.simple-view .holdings-summary h2{font-size:20px;font-weight:400}
+.simple-view:not(.advanced-view) #concentration{display:block;margin:20px 0}
+.simple-view:not(.advanced-view) #concentration .metric:first-child .value{font-size:64px;line-height:1.1;color:#eaf0ed;letter-spacing:-2px}
+.simple-view:not(.advanced-view) #concentration .metric:first-child .label{display:none}
+.simple-view:not(.advanced-view) #concentration .metric:first-child .sub{font-size:15px}
+.simple-view:not(.advanced-view) #concentration .metric:nth-child(2){margin-top:24px;padding-top:18px;border-top:1px solid #30454d}
+.simple-view:not(.advanced-view) #concentration .metric:nth-child(2) .value{font-size:28px}
+.simple-view .grid:has(>#investment-example){grid-template-columns:minmax(0,1.6fr) minmax(0,1fr)}
+.simple-view .grid:has(>#investment-example)>article{padding:24px;height:auto}
+.simple-view .investment-example{gap:18px;border:1px solid #30454d;border-radius:14px;background:linear-gradient(135deg,#183239,#11242c)}
+.simple-view .investment-comparison{grid-template-columns:1fr auto 1.4fr;margin:22px 0 18px}
+.simple-view .investment-end strong{font-size:clamp(30px,4vw,46px)}
+.simple-view .holdings-summary{display:flex;flex-direction:column;background:#102129}
+.simple-view .holdings-summary>.textbutton,.simple-view .holdings-summary>button{margin-top:auto;align-self:flex-start}
+.simple-view .detail-action{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:24px 0;margin-top:10px;border-block:1px solid #30454d}
+.simple-view .detail-action p{font-size:14px;margin:6px 0 0;color:#a8bec4}
+.simple-view #detail-toggle{padding:14px 18px;min-height:48px;background:#89aeb4;color:#08171d;border:1px solid #89aeb4;border-radius:7px;font-size:15px;font-weight:600;cursor:pointer}
+.simple-view #detail-toggle:hover{background:#b0cbd0}
+.simple-view #important-information{border-top:1px solid #30454d;margin-top:0}
+.simple-view #important-information>summary{padding:20px 0;font-size:15px;color:#cadbdd;cursor:pointer}
+.simple-view #risk-banner{padding:18px 0;margin:0;border:0}
+.simple-view .disclaimer{margin:0;padding:0 0 20px;background:transparent;border:0}
+.simple-view footer{display:none}
+.simple-view .panel{border-radius:14px}
+.simple-view #headline{margin-bottom:20px}
+.simple-view #growth{margin-top:10px}
+.simple-view button:focus-visible,.simple-view summary:focus-visible,.simple-view a:focus-visible{outline:2px solid #f5ee9e;outline-offset:4px}
+@media(max-width:760px){.simple-view main{padding:16px 0 0}.simple-view .grid:has(>#investment-example){grid-template-columns:1fr}.simple-view .detail-action{align-items:stretch;flex-direction:column;gap:16px}.simple-view #detail-toggle{width:100%}.simple-view .investment-comparison{grid-template-columns:1fr auto 1.3fr;gap:10px}.simple-view .investment-start strong{font-size:20px}.simple-view .investment-end strong{font-size:32px}.simple-view .grid:has(>#investment-example)>article{padding:22px 18px}.simple-view:not(.advanced-view) #concentration{display:grid;grid-template-columns:1fr 1fr;gap:18px}.simple-view:not(.advanced-view) #concentration .metric:nth-child(2){margin:0;padding:0 0 0 18px;border-top:0;border-left:1px solid #30454d}.simple-view:not(.advanced-view) #concentration .metric:first-child .value{font-size:48px}}
+@media(max-width:410px){.simple-view .investment-comparison{grid-template-columns:1fr}.simple-view .investment-arrow{display:none}.simple-view .investment-start{padding-bottom:12px;border-bottom:1px solid #30454d}.simple-view #class-choice [data-class]{font-size:14px}}
