@@ -1,0 +1,115 @@
+
+:root[data-tema="lys"] { color-scheme: light;
+  --c-bg: #F4F6F8;
+  --c-sidebar: #ECEFF3;
+  --c-surface: #FFFFFF;
+  --c-surface-2: #F2F4F7;
+  --c-surface-3: #E5E9EE;
+  --c-space: #EEF1F4;
+  --c-line: #D6DCE3;
+  --c-line-strong: #7B8593;
+  --c-kort-land: #8A94A1;
+  --c-text: #141B26;
+  --c-text-2: #141B26;
+  --c-text-3: #141B26;
+  --c-accent: #2D4F78;
+  --c-accent-strong: #1D3A5F;
+  --c-accent-ink: #FFFFFF;
+  --c-accent-soft: rgba(45, 79, 120, 0.10);
+  --c-accent-line: rgba(45, 79, 120, 0.45);
+  --c-data-1: #58739A;
+  --c-data-2: #3F5F88;
+  --c-data-3: #1F3656;
+  --c-data-neg: #5E6B7D;
+  --c-grid: rgba(20, 27, 38, 0.14);
+  --sh-1: 0 1px 0 rgba(255,255,255,.6) inset, 0 1px 2px rgba(15,23,32,.08);
+  --sh-2: 0 1px 0 rgba(255,255,255,.6) inset, 0 8px 24px -12px rgba(15,23,32,.18);
+  --sh-3: 0 24px 64px -16px rgba(15,23,32,.24);
+  --sh-focus: 0 0 0 2px var(--c-bg), 0 0 0 4px #141B26;
+}
+:root[data-tema="lys"] .knap--rolig { background: rgba(242, 243, 245, 0.55); border-color: rgba(19, 30, 47, 0.28); }
+:root[data-tema="lys"] .knap--rolig:hover { background: rgba(210, 215, 221, 0.85); }
+:root[data-tema="lys"] .slor { background: rgba(242, 243, 245, 0.66); }
+:root[data-tema="lys"] .topbar-mobil { background: rgba(230, 233, 236, 0.92); }
+:root[data-tema="lys"] .andel-celle { background: rgba(242, 243, 245, 0.35); }
+:root[data-tema="lys"] .kort--hero::before { background: linear-gradient(90deg, rgba(242, 243, 245, 0.92) 0%, rgba(242, 243, 245, 0.7) 42%, rgba(242, 243, 245, 0) 75%),
+              linear-gradient(0deg, rgba(242, 243, 245, 0.7) 0%, rgba(242, 243, 245, 0) 45%); }
+:root[data-tema="lys"] .kredit--hero { text-shadow: 0 1px 2px #FFFFFF; }
+@media (max-width: 1023.98px) { :root[data-tema="lys"] .kort--hero::before { background: linear-gradient(0deg, var(--c-space) 0%, rgba(242, 243, 245, 0) 55%); } }
+:root[data-tema="lys"] .graf-fokus:focus-visible { outline: 2px solid #141B26; }
+:root[data-tema="lys"] .etiket { background: rgba(219, 223, 228, 0.9); }
+:root[data-tema="lys"] .video-flade { background:
+    radial-gradient(120% 90% at 20% 100%, rgba(28, 66, 112, 0.22), transparent 55%),
+    radial-gradient(80% 80% at 90% 0%, rgba(96, 129, 171, 0.35), transparent 60%),
+    var(--c-space); }
+:root[data-tema="lys"] .video-flade--b { background: radial-gradient(100% 80% at 80% 100%, rgba(52, 81, 118, 0.25), transparent 60%), radial-gradient(70% 70% at 10% 10%, rgba(28, 66, 112, 0.16), transparent 60%), var(--c-space); }
+:root[data-tema="lys"] .video-aar { color: rgba(19, 30, 47, 0.18); }
+:root[data-tema="lys"] .video-play { background: rgba(19, 30, 47, 0.08); border: 1px solid rgba(19, 30, 47, 0.3); }
+:root[data-tema="lys"] .perspektiv { background: radial-gradient(70% 140% at 100% 0%, rgba(28, 66, 112, 0.12), transparent 60%), var(--c-surface); }
+:root[data-tema="lys"] .legende-farve[data-trin="1"] { background:#16273C; }
+:root[data-tema="lys"] .ring-seg[data-trin="1"] { stroke:#16273C; }
+:root[data-tema="lys"] .legende-farve[data-trin="2"] { background:#22364C; }
+:root[data-tema="lys"] .ring-seg[data-trin="2"] { stroke:#22364C; }
+:root[data-tema="lys"] .legende-farve[data-trin="3"] { background:#2C435D; }
+:root[data-tema="lys"] .ring-seg[data-trin="3"] { stroke:#2C435D; }
+:root[data-tema="lys"] .legende-farve[data-trin="4"] { background:#324C6A; }
+:root[data-tema="lys"] .ring-seg[data-trin="4"] { stroke:#324C6A; }
+:root[data-tema="lys"] .legende-farve[data-trin="5"] { background:#3C5878; }
+:root[data-tema="lys"] .ring-seg[data-trin="5"] { stroke:#3C5878; }
+:root[data-tema="lys"] .legende-farve[data-trin="6"] { background:#4C6580; }
+:root[data-tema="lys"] .ring-seg[data-trin="6"] { stroke:#4C6580; }
+:root[data-tema="lys"] .legende-farve[data-trin="7"] { background:#556E8A; }
+:root[data-tema="lys"] .ring-seg[data-trin="7"] { stroke:#556E8A; }
+:root[data-tema="lys"] .legende-farve[data-trin="8"] { background:#5F7893; }
+:root[data-tema="lys"] .ring-seg[data-trin="8"] { stroke:#5F7893; }
+:root[data-tema="lys"] .legende-farve[data-trin="9"] { background:#68809A; }
+:root[data-tema="lys"] .ring-seg[data-trin="9"] { stroke:#68809A; }
+:root[data-tema="lys"] .legende-farve[data-trin="10"] { background:#71879E; }
+:root[data-tema="lys"] .ring-seg[data-trin="10"] { stroke:#71879E; }
+:root[data-tema="lys"] .legende-farve[data-trin="11"] { background:#768CA4; }
+:root[data-tema="lys"] .ring-seg[data-trin="11"] { stroke:#768CA4; }
+:root[data-tema="lys"] .legende-farve[data-trin="12"] { background:#7B91A8; }
+:root[data-tema="lys"] .ring-seg[data-trin="12"] { stroke:#7B91A8; }
+:root[data-tema="lys"] .panel--ring { background: radial-gradient(120% 80% at 20% 0%, rgba(28, 66, 112, 0.06), transparent 55%), var(--c-surface); }
+:root[data-tema="lys"] .ring-har-valg .ring-seg.er-valgt { filter: drop-shadow(0 0 10px rgba(28, 66, 112, .45)); }
+:root[data-tema="lys"] .mini-soejler span.aktiv { box-shadow: 0 0 12px rgba(28, 66, 112, .35); }
+:root[data-tema="lys"] .tema-liste li:nth-child(odd) { background: rgba(242, 243, 245, .25); }
+:root[data-tema="lys"] .hero-pause { background: rgba(242, 243, 245, .6); }
+:root[data-tema="lys"] .spotlight { background: radial-gradient(90% 120% at 100% 0%, rgba(96, 129, 171, .14), transparent 60%), var(--c-surface); }
+:root[data-tema="lys"] .spot-nr { background: linear-gradient(180deg, rgba(52, 81, 118, .22), transparent 80%); }
+:root[data-tema="lys"] .tl-prik.er-valgt { box-shadow: inset 0 0 0 4px var(--c-accent), 0 0 0 6px rgba(28, 66, 112, .15); box-shadow: 0 0 0 6px rgba(28, 66, 112, .15); }
+:root[data-tema="lys"] .legende-farve--graa { background: repeating-linear-gradient(135deg, #8D99AC 0 3px, #A9B5CA 3px 6px); }
+:root[data-tema="lys"] .ring-label { fill: #E6E9EC; }
+:root[data-tema="lys"] .stub-hero::before { background: linear-gradient(0deg, var(--c-space) 0%, rgba(242, 243, 245, 0) 40%); }
+:root[data-tema="lys"] .kredit--hero { background: rgba(242, 243, 245, .85); }
+:root[data-tema="lys"] .sm-rul { background:
+    linear-gradient(var(--c-sidebar) 30%, transparent) center top / 100% 24px no-repeat local,
+    linear-gradient(transparent, var(--c-sidebar) 70%) center bottom / 100% 24px no-repeat local,
+    radial-gradient(farthest-side at 50% 0, rgba(15, 23, 32, .55), transparent) center top / 100% 12px no-repeat scroll,
+    radial-gradient(farthest-side at 50% 100%, rgba(15, 23, 32, .55), transparent) center bottom / 100% 12px no-repeat scroll; }
+@media not ((min-width: 600px) and (min-height: 600px)) { :root[data-tema="lys"] .chips-galleri img[src*="chips-zoom"] { background: #E8EAED; } }
+:root[data-tema="lys"] svg [fill="#050A0F" i] { fill: #F2F3F5; }
+:root[data-tema="lys"] svg [fill="#5F7DA3" i] { fill: #6081AB; }
+:root[data-tema="lys"] svg [fill="#9DB3CF" i] { fill: #345176; }
+:root[data-tema="lys"] svg [fill="#B6C2D2" i] { fill: #34455C; }
+:root[data-tema="lys"] svg [fill="#DCE5F0" i] { fill: #16273C; }
+:root[data-tema="lys"] svg [fill="#E9EEF5" i] { fill: #131E2F; }
+:root[data-tema="lys"] svg [stop-color="#050A0F" i] { stop-color: #F2F3F5; }
+:root[data-tema="lys"] svg [stop-color="#111C2E" i] { stop-color: #DBDFE4; }
+:root[data-tema="lys"] svg [stop-color="#5F7DA3" i] { stop-color: #6081AB; }
+:root[data-tema="lys"] svg [stop-color="#E9EEF5" i] { stop-color: #131E2F; }
+:root[data-tema="lys"] svg [stroke="#2A3A52" i] { stroke: #ADBFDA; }
+:root[data-tema="lys"] svg [stroke="#2E4263" i] { stroke: #9DB3D7; }
+:root[data-tema="lys"] svg [stroke="#5F7DA3" i] { stroke: #6081AB; }
+:root[data-tema="lys"] svg [stroke="#9DB3CF" i] { stroke: #345176; }
+:root[data-tema="lys"] svg [stroke="#DCE5F0" i] { stroke: #16273C; }
+:root[data-tema="lys"] svg [stroke="#E9EEF5" i] { stroke: #131E2F; }
+:root[data-tema="lys"] img.kun-lys, :root[data-tema="lys"] .fordeling-hero { background-color: var(--c-surface-2); }
+:root[data-tema="lys"] .temakort-billede, :root[data-tema="lys"] .stub-billede { background-color: var(--c-surface-2); }
+:root[data-tema="lys"] img[src*="/iso/"]:not([src*="-lys."]) { filter: invert(1) hue-rotate(180deg) sepia(.22) saturate(.85) contrast(.92); background-color: transparent; }
+:root[data-tema="lys"] img[src$=".webp"]:not([src*="/iso/"]):not([src*="/logoer/"]), :root[data-tema="lys"] img[src$=".avif"]:not([src*="/iso/"]):not([src*="/logoer/"]) { background-color: #0A1220; filter: saturate(.8) brightness(1.04); box-shadow: 0 0 0 6px var(--c-surface-2), 0 0 0 7px var(--c-line); }
+:root[data-tema="lys"] .spot-nr { -webkit-background-clip: text; background-clip: text; }
+:root[data-tema="lys"] .logo-felt { background-color: #0A1220; box-shadow: none; }
+.ndi-logo, :root[data-tema="lys"] .ndi-logo { filter: none !important; background: none !important; box-shadow: none !important; }
+:root[data-tema="lys"] .kun-moerk { display: none !important; }
+:root:not([data-tema="lys"]) .kun-lys { display: none !important; }

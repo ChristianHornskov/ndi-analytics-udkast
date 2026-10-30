@@ -1,0 +1,34332 @@
+
+window.DAGENS_TAL = {
+ "skema": 1,
+ "andelsdato": "2026-10-30",
+ "andelsdatoTekst": "30.10.2026",
+ "kilde": {
+  "fondsdata": "data.json",
+  "temaliste": "selskaber.csv (NewDeal Invests temaliste)"
+ },
+ "fonde": {
+  "PMINDI": {
+   "antalSelskaber": 373,
+   "antalTemaer": 12
+  },
+  "PMINDIAKK": {
+   "antalSelskaber": 354,
+   "antalTemaer": 12
+  }
+ },
+ "temaer": [
+  {
+   "id": "chips",
+   "navn": "Chips og halvledere",
+   "plads": 1,
+   "andel": 23.79,
+   "antal": 75,
+   "bar": 1.0,
+   "ringFra": 0.0,
+   "ringTil": 85.644,
+   "stoerste": {
+    "navn": "Samsung Electronics",
+    "slug": "samsung-electronics",
+    "andel": 1.43,
+    "bar": 1.0
+   },
+   "selskaber": [
+    {
+     "navn": "Samsung Electronics",
+     "slug": "samsung-electronics",
+     "andel": 1.43,
+     "bar": 1.0
+    },
+    {
+     "navn": "SK hynix",
+     "slug": "sk-hynix",
+     "andel": 1.07,
+     "bar": 0.7483
+    },
+    {
+     "navn": "Taiyo Yuden",
+     "slug": "taiyo-yuden",
+     "andel": 0.94,
+     "bar": 0.6573
+    },
+    {
+     "navn": "Kioxia",
+     "slug": "kioxia",
+     "andel": 0.91,
+     "logo": "assets/img/logoer/0c03b2f725.webp",
+     "bar": 0.6364
+    },
+    {
+     "navn": "LPKF Laser & Electronics",
+     "slug": "lpkf-laser-electronics",
+     "andel": 0.81,
+     "logo": "assets/img/logoer/1750ae3fb9.webp",
+     "bar": 0.5664
+    },
+    {
+     "navn": "Cerebras Systems",
+     "slug": "cerebras-systems",
+     "andel": 0.75,
+     "logo": "assets/img/logoer/a56f2ad71f.webp",
+     "bar": 0.5245
+    },
+    {
+     "navn": "GlobalFoundries",
+     "slug": "globalfoundries",
+     "andel": 0.72,
+     "logo": "assets/img/logoer/cd450e45a6.webp",
+     "bar": 0.5035
+    },
+    {
+     "navn": "Soitec",
+     "slug": "soitec",
+     "andel": 0.69,
+     "logo": "assets/img/logoer/dd34bfa59d.webp",
+     "bar": 0.4825
+    },
+    {
+     "navn": "Tower Semiconductor",
+     "slug": "tower-semiconductor",
+     "andel": 0.67,
+     "logo": "assets/img/logoer/1e6260ed54.webp",
+     "bar": 0.4685
+    },
+    {
+     "navn": "Nova",
+     "slug": "nova",
+     "andel": 0.66,
+     "logo": "assets/img/logoer/d15f922473.webp",
+     "bar": 0.4615
+    },
+    {
+     "navn": "Besi",
+     "slug": "besi",
+     "andel": 0.64,
+     "bar": 0.4476
+    },
+    {
+     "navn": "Broadcom",
+     "slug": "broadcom",
+     "andel": 0.55,
+     "logo": "assets/img/logoer/38132e6c7a.webp",
+     "bar": 0.3846
+    },
+    {
+     "navn": "IQE",
+     "slug": "iqe",
+     "andel": 0.55,
+     "logo": "assets/img/logoer/52e0da790e.webp",
+     "bar": 0.3846
+    },
+    {
+     "navn": "Rambus",
+     "slug": "rambus",
+     "andel": 0.55,
+     "logo": "assets/img/logoer/2479ea1f21.webp",
+     "bar": 0.3846
+    },
+    {
+     "navn": "Micron Technology",
+     "slug": "micron-technology",
+     "andel": 0.54,
+     "logo": "assets/img/logoer/b17fd8dc45.webp",
+     "bar": 0.3776
+    },
+    {
+     "navn": "Navitas Semiconductor",
+     "slug": "navitas-semiconductor",
+     "andel": 0.5,
+     "logo": "assets/img/logoer/71733dc185.webp",
+     "bar": 0.3497
+    },
+    {
+     "navn": "Western Digital",
+     "slug": "western-digital",
+     "andel": 0.48,
+     "logo": "assets/img/logoer/e2b55bbc59.webp",
+     "bar": 0.3357
+    },
+    {
+     "navn": "Intel",
+     "slug": "intel",
+     "andel": 0.46,
+     "logo": "assets/img/logoer/c081184173.webp",
+     "bar": 0.3217
+    },
+    {
+     "navn": "SiTime",
+     "slug": "sitime",
+     "andel": 0.46,
+     "logo": "assets/img/logoer/2277a3e7fd.webp",
+     "bar": 0.3217
+    },
+    {
+     "navn": "SUSS MicroTec",
+     "slug": "suss-microtec",
+     "andel": 0.45,
+     "logo": "assets/img/logoer/b7558a97d0.webp",
+     "bar": 0.3147
+    },
+    {
+     "navn": "Tokyo Electron",
+     "slug": "tokyo-electron",
+     "andel": 0.45,
+     "logo": "assets/img/logoer/323e8423ed.webp",
+     "bar": 0.3147
+    },
+    {
+     "navn": "ASM International",
+     "slug": "asm-international",
+     "andel": 0.44,
+     "logo": "assets/img/logoer/07aa949943.webp",
+     "bar": 0.3077
+    },
+    {
+     "navn": "ASMPT",
+     "slug": "asmpt",
+     "andel": 0.42,
+     "logo": "assets/img/logoer/7532150e62.webp",
+     "bar": 0.2937
+    },
+    {
+     "navn": "Camtek",
+     "slug": "camtek",
+     "andel": 0.4,
+     "bar": 0.2797
+    },
+    {
+     "navn": "Aehr Test Systems",
+     "slug": "aehr-test-systems",
+     "andel": 0.37,
+     "logo": "assets/img/logoer/d4bb600b5c.webp",
+     "bar": 0.2587
+    },
+    {
+     "navn": "onsemi",
+     "slug": "onsemi",
+     "andel": 0.36,
+     "logo": "assets/img/logoer/6b99a93f2d.webp",
+     "bar": 0.2517
+    },
+    {
+     "navn": "Seagate Technology",
+     "slug": "seagate-technology",
+     "andel": 0.35,
+     "logo": "assets/img/logoer/953b305bc8.webp",
+     "bar": 0.2448
+    },
+    {
+     "navn": "UMC",
+     "slug": "umc",
+     "andel": 0.35,
+     "bar": 0.2448
+    },
+    {
+     "navn": "MKS",
+     "slug": "mks",
+     "andel": 0.34,
+     "logo": "assets/img/logoer/6457d6104b.webp",
+     "bar": 0.2378
+    },
+    {
+     "navn": "STMicroelectronics",
+     "slug": "stmicroelectronics",
+     "andel": 0.34,
+     "logo": "assets/img/logoer/18732b5c85.webp",
+     "bar": 0.2378
+    },
+    {
+     "navn": "X-FAB",
+     "slug": "x-fab",
+     "andel": 0.33,
+     "logo": "assets/img/logoer/20463d39c6.webp",
+     "bar": 0.2308
+    },
+    {
+     "navn": "Himax Technologies",
+     "slug": "himax-technologies",
+     "andel": 0.32,
+     "logo": "assets/img/logoer/d76363e112.webp",
+     "bar": 0.2238
+    },
+    {
+     "navn": "Lasertec",
+     "slug": "lasertec",
+     "andel": 0.31,
+     "logo": "assets/img/logoer/af96b86550.webp",
+     "bar": 0.2168
+    },
+    {
+     "navn": "Rigaku",
+     "slug": "rigaku",
+     "andel": 0.31,
+     "logo": "assets/img/logoer/f5a191a973.webp",
+     "bar": 0.2168
+    },
+    {
+     "navn": "KLA",
+     "slug": "kla",
+     "andel": 0.28,
+     "logo": "assets/img/logoer/854d641e64.webp",
+     "bar": 0.1958
+    },
+    {
+     "navn": "NVIDIA",
+     "slug": "nvidia",
+     "andel": 0.26,
+     "logo": "assets/img/logoer/2a95ecdd14.webp",
+     "bar": 0.1818
+    },
+    {
+     "navn": "Onto Innovation",
+     "slug": "onto-innovation",
+     "andel": 0.24,
+     "bar": 0.1678
+    },
+    {
+     "navn": "Ambiq Micro",
+     "slug": "ambiq-micro",
+     "andel": 0.23,
+     "logo": "assets/img/logoer/0ee2f82a70.webp",
+     "bar": 0.1608
+    },
+    {
+     "navn": "Renesas Electronics",
+     "slug": "renesas-electronics",
+     "andel": 0.23,
+     "logo": "assets/img/logoer/816a57db83.webp",
+     "bar": 0.1608
+    },
+    {
+     "navn": "Aixtron",
+     "slug": "aixtron",
+     "andel": 0.2,
+     "bar": 0.1399
+    },
+    {
+     "navn": "Advantest",
+     "slug": "advantest",
+     "andel": 0.19,
+     "logo": "assets/img/logoer/509540d950.webp",
+     "bar": 0.1329
+    },
+    {
+     "navn": "SanDisk",
+     "slug": "sandisk",
+     "andel": 0.19,
+     "logo": "assets/img/logoer/b2287832b5.webp",
+     "bar": 0.1329
+    },
+    {
+     "navn": "Kulicke & Soffa",
+     "slug": "kulicke-soffa",
+     "andel": 0.18,
+     "logo": "assets/img/logoer/66774484fb.webp",
+     "bar": 0.1259
+    },
+    {
+     "navn": "Veeco Instruments",
+     "slug": "veeco-instruments",
+     "andel": 0.18,
+     "logo": "assets/img/logoer/c9df30070b.webp",
+     "bar": 0.1259
+    },
+    {
+     "navn": "AXT",
+     "slug": "axt",
+     "andel": 0.17,
+     "logo": "assets/img/logoer/def622555b.webp",
+     "bar": 0.1189
+    },
+    {
+     "navn": "Silicon Motion",
+     "slug": "silicon-motion",
+     "andel": 0.17,
+     "logo": "assets/img/logoer/4496e3b5c3.webp",
+     "bar": 0.1189
+    },
+    {
+     "navn": "Infineon Technologies",
+     "slug": "infineon-technologies",
+     "andel": 0.14,
+     "logo": "assets/img/logoer/8660f21517.webp",
+     "bar": 0.0979
+    },
+    {
+     "navn": "Aeluma",
+     "slug": "aeluma",
+     "andel": 0.13,
+     "logo": "assets/img/logoer/6ef097e172.webp",
+     "bar": 0.0909
+    },
+    {
+     "navn": "Kokusai Electric",
+     "slug": "kokusai-electric",
+     "andel": 0.13,
+     "logo": "assets/img/logoer/aea873782d.webp",
+     "bar": 0.0909
+    },
+    {
+     "navn": "Entegris",
+     "slug": "entegris",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/f3e07fcdad.webp",
+     "bar": 0.0839
+    },
+    {
+     "navn": "Monolithic Power Systems",
+     "slug": "monolithic-power-systems",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/2f24c4902d.webp",
+     "bar": 0.0839
+    },
+    {
+     "navn": "Wolfspeed",
+     "slug": "wolfspeed",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/8800d66171.webp",
+     "bar": 0.0839
+    },
+    {
+     "navn": "Nordic Semiconductor",
+     "slug": "nordic-semiconductor",
+     "andel": 0.11,
+     "logo": "assets/img/logoer/5c3c449f1d.webp",
+     "bar": 0.0769
+    },
+    {
+     "navn": "ACM Research",
+     "slug": "acm-research",
+     "andel": 0.1,
+     "logo": "assets/img/logoer/f70b811920.webp",
+     "bar": 0.0699
+    },
+    {
+     "navn": "Alpha and Omega Semiconductor",
+     "slug": "alpha-and-omega-semiconductor",
+     "andel": 0.1,
+     "logo": "assets/img/logoer/d90ffeffb4.webp",
+     "bar": 0.0699
+    },
+    {
+     "navn": "Amkor Technology",
+     "slug": "amkor-technology",
+     "andel": 0.1,
+     "logo": "assets/img/logoer/850bb0587b.webp",
+     "bar": 0.0699
+    },
+    {
+     "navn": "ASML",
+     "slug": "asml",
+     "andel": 0.09,
+     "logo": "assets/img/logoer/6a9ec0669d.webp",
+     "bar": 0.0629
+    },
+    {
+     "navn": "Lam Research",
+     "slug": "lam-research",
+     "andel": 0.09,
+     "logo": "assets/img/logoer/26fd337cb3.webp",
+     "bar": 0.0629
+    },
+    {
+     "navn": "MaxLinear",
+     "slug": "maxlinear",
+     "andel": 0.09,
+     "logo": "assets/img/logoer/6d7e7e5294.webp",
+     "bar": 0.0629
+    },
+    {
+     "navn": "Synopsys",
+     "slug": "synopsys",
+     "andel": 0.09,
+     "bar": 0.0629
+    },
+    {
+     "navn": "Analog Devices",
+     "slug": "analog-devices",
+     "andel": 0.08,
+     "logo": "assets/img/logoer/14d73a01e1.webp",
+     "bar": 0.0559
+    },
+    {
+     "navn": "Cohu",
+     "slug": "cohu",
+     "andel": 0.08,
+     "logo": "assets/img/logoer/6942a6ca36.webp",
+     "bar": 0.0559
+    },
+    {
+     "navn": "Marvell Technology",
+     "slug": "marvell-technology",
+     "andel": 0.08,
+     "logo": "assets/img/logoer/d80d4e7eb1.webp",
+     "bar": 0.0559
+    },
+    {
+     "navn": "Texas Instruments",
+     "slug": "texas-instruments",
+     "andel": 0.08,
+     "logo": "assets/img/logoer/d705da286b.webp",
+     "bar": 0.0559
+    },
+    {
+     "navn": "Ambarella",
+     "slug": "ambarella",
+     "andel": 0.07,
+     "logo": "assets/img/logoer/c16d310945.webp",
+     "bar": 0.049
+    },
+    {
+     "navn": "Microchip Technology",
+     "slug": "microchip-technology",
+     "andel": 0.07,
+     "logo": "assets/img/logoer/cd75c9140d.webp",
+     "bar": 0.049
+    },
+    {
+     "navn": "Cadence Design Systems",
+     "slug": "cadence-design-systems",
+     "andel": 0.06,
+     "bar": 0.042
+    },
+    {
+     "navn": "FormFactor",
+     "slug": "formfactor",
+     "andel": 0.06,
+     "logo": "assets/img/logoer/58a0d186b3.webp",
+     "bar": 0.042
+    },
+    {
+     "navn": "Applied Materials",
+     "slug": "applied-materials",
+     "andel": 0.05,
+     "logo": "assets/img/logoer/b846cd3f38.webp",
+     "bar": 0.035
+    },
+    {
+     "navn": "AMD",
+     "slug": "amd",
+     "andel": 0.04,
+     "bar": 0.028
+    },
+    {
+     "navn": "Lattice Semiconductor",
+     "slug": "lattice-semiconductor",
+     "andel": 0.04,
+     "bar": 0.028
+    },
+    {
+     "navn": "TSMC",
+     "slug": "tsmc",
+     "andel": 0.04,
+     "bar": 0.028
+    },
+    {
+     "navn": "Axcelis Technologies",
+     "slug": "axcelis-technologies",
+     "andel": 0.03,
+     "bar": 0.021
+    },
+    {
+     "navn": "Teradyne",
+     "slug": "teradyne",
+     "andel": 0.03,
+     "logo": "assets/img/logoer/2419f7bcca.webp",
+     "bar": 0.021
+    },
+    {
+     "navn": "Blaize",
+     "slug": "blaize",
+     "andel": 0.01,
+     "logo": "assets/img/logoer/fbfec736cc.webp",
+     "bar": 0.007
+    }
+   ],
+   "akk": {
+    "andel": 24.53,
+    "antal": 71,
+    "plads": 1,
+    "stoerste": {
+     "navn": "Samsung Electronics",
+     "slug": "samsung-electronics",
+     "andel": 1.39,
+     "bar": 1.0
+    }
+   },
+   "ringSti": "M200.8 50.0 A150 150 0 0 1 349.5 187.8",
+   "forrige": null,
+   "naeste": {
+    "id": "energi",
+    "navn": "Energi og elnet"
+   },
+   "vist": [
+    {
+     "navn": "Samsung Electronics",
+     "slug": "samsung-electronics",
+     "andel": 1.43,
+     "bar": 1.0
+    },
+    {
+     "navn": "SK hynix",
+     "slug": "sk-hynix",
+     "andel": 1.07,
+     "bar": 0.7483
+    },
+    {
+     "navn": "Taiyo Yuden",
+     "slug": "taiyo-yuden",
+     "andel": 0.94,
+     "bar": 0.6573
+    },
+    {
+     "navn": "Kioxia",
+     "slug": "kioxia",
+     "andel": 0.91,
+     "logo": "assets/img/logoer/0c03b2f725.webp",
+     "bar": 0.6364
+    },
+    {
+     "navn": "LPKF Laser & Electronics",
+     "slug": "lpkf-laser-electronics",
+     "andel": 0.81,
+     "logo": "assets/img/logoer/1750ae3fb9.webp",
+     "bar": 0.5664
+    },
+    {
+     "navn": "Cerebras Systems",
+     "slug": "cerebras-systems",
+     "andel": 0.75,
+     "logo": "assets/img/logoer/a56f2ad71f.webp",
+     "bar": 0.5245
+    },
+    {
+     "navn": "GlobalFoundries",
+     "slug": "globalfoundries",
+     "andel": 0.72,
+     "logo": "assets/img/logoer/cd450e45a6.webp",
+     "bar": 0.5035
+    },
+    {
+     "navn": "Soitec",
+     "slug": "soitec",
+     "andel": 0.69,
+     "logo": "assets/img/logoer/dd34bfa59d.webp",
+     "bar": 0.4825
+    },
+    {
+     "navn": "Tower Semiconductor",
+     "slug": "tower-semiconductor",
+     "andel": 0.67,
+     "logo": "assets/img/logoer/1e6260ed54.webp",
+     "bar": 0.4685
+    },
+    {
+     "navn": "Nova",
+     "slug": "nova",
+     "andel": 0.66,
+     "logo": "assets/img/logoer/d15f922473.webp",
+     "bar": 0.4615
+    },
+    {
+     "navn": "Besi",
+     "slug": "besi",
+     "andel": 0.64,
+     "bar": 0.4476
+    },
+    {
+     "navn": "Broadcom",
+     "slug": "broadcom",
+     "andel": 0.55,
+     "logo": "assets/img/logoer/38132e6c7a.webp",
+     "bar": 0.3846
+    },
+    {
+     "navn": "IQE",
+     "slug": "iqe",
+     "andel": 0.55,
+     "logo": "assets/img/logoer/52e0da790e.webp",
+     "bar": 0.3846
+    },
+    {
+     "navn": "Rambus",
+     "slug": "rambus",
+     "andel": 0.55,
+     "logo": "assets/img/logoer/2479ea1f21.webp",
+     "bar": 0.3846
+    },
+    {
+     "navn": "Micron Technology",
+     "slug": "micron-technology",
+     "andel": 0.54,
+     "logo": "assets/img/logoer/b17fd8dc45.webp",
+     "bar": 0.3776
+    },
+    {
+     "navn": "Navitas Semiconductor",
+     "slug": "navitas-semiconductor",
+     "andel": 0.5,
+     "logo": "assets/img/logoer/71733dc185.webp",
+     "bar": 0.3497
+    },
+    {
+     "navn": "Western Digital",
+     "slug": "western-digital",
+     "andel": 0.48,
+     "logo": "assets/img/logoer/e2b55bbc59.webp",
+     "bar": 0.3357
+    },
+    {
+     "navn": "Intel",
+     "slug": "intel",
+     "andel": 0.46,
+     "logo": "assets/img/logoer/c081184173.webp",
+     "bar": 0.3217
+    },
+    {
+     "navn": "SiTime",
+     "slug": "sitime",
+     "andel": 0.46,
+     "logo": "assets/img/logoer/2277a3e7fd.webp",
+     "bar": 0.3217
+    },
+    {
+     "navn": "SUSS MicroTec",
+     "slug": "suss-microtec",
+     "andel": 0.45,
+     "logo": "assets/img/logoer/b7558a97d0.webp",
+     "bar": 0.3147
+    },
+    {
+     "navn": "Tokyo Electron",
+     "slug": "tokyo-electron",
+     "andel": 0.45,
+     "logo": "assets/img/logoer/323e8423ed.webp",
+     "bar": 0.3147
+    },
+    {
+     "navn": "ASM International",
+     "slug": "asm-international",
+     "andel": 0.44,
+     "logo": "assets/img/logoer/07aa949943.webp",
+     "bar": 0.3077
+    },
+    {
+     "navn": "ASMPT",
+     "slug": "asmpt",
+     "andel": 0.42,
+     "logo": "assets/img/logoer/7532150e62.webp",
+     "bar": 0.2937
+    },
+    {
+     "navn": "Camtek",
+     "slug": "camtek",
+     "andel": 0.4,
+     "bar": 0.2797
+    },
+    {
+     "navn": "Aehr Test Systems",
+     "slug": "aehr-test-systems",
+     "andel": 0.37,
+     "logo": "assets/img/logoer/d4bb600b5c.webp",
+     "bar": 0.2587
+    },
+    {
+     "navn": "onsemi",
+     "slug": "onsemi",
+     "andel": 0.36,
+     "logo": "assets/img/logoer/6b99a93f2d.webp",
+     "bar": 0.2517
+    },
+    {
+     "navn": "Seagate Technology",
+     "slug": "seagate-technology",
+     "andel": 0.35,
+     "logo": "assets/img/logoer/953b305bc8.webp",
+     "bar": 0.2448
+    },
+    {
+     "navn": "UMC",
+     "slug": "umc",
+     "andel": 0.35,
+     "bar": 0.2448
+    },
+    {
+     "navn": "MKS",
+     "slug": "mks",
+     "andel": 0.34,
+     "logo": "assets/img/logoer/6457d6104b.webp",
+     "bar": 0.2378
+    },
+    {
+     "navn": "STMicroelectronics",
+     "slug": "stmicroelectronics",
+     "andel": 0.34,
+     "logo": "assets/img/logoer/18732b5c85.webp",
+     "bar": 0.2378
+    },
+    {
+     "navn": "X-FAB",
+     "slug": "x-fab",
+     "andel": 0.33,
+     "logo": "assets/img/logoer/20463d39c6.webp",
+     "bar": 0.2308
+    },
+    {
+     "navn": "Himax Technologies",
+     "slug": "himax-technologies",
+     "andel": 0.32,
+     "logo": "assets/img/logoer/d76363e112.webp",
+     "bar": 0.2238
+    },
+    {
+     "navn": "Lasertec",
+     "slug": "lasertec",
+     "andel": 0.31,
+     "logo": "assets/img/logoer/af96b86550.webp",
+     "bar": 0.2168
+    },
+    {
+     "navn": "Rigaku",
+     "slug": "rigaku",
+     "andel": 0.31,
+     "logo": "assets/img/logoer/f5a191a973.webp",
+     "bar": 0.2168
+    },
+    {
+     "navn": "KLA",
+     "slug": "kla",
+     "andel": 0.28,
+     "logo": "assets/img/logoer/854d641e64.webp",
+     "bar": 0.1958
+    },
+    {
+     "navn": "NVIDIA",
+     "slug": "nvidia",
+     "andel": 0.26,
+     "logo": "assets/img/logoer/2a95ecdd14.webp",
+     "bar": 0.1818
+    },
+    {
+     "navn": "Onto Innovation",
+     "slug": "onto-innovation",
+     "andel": 0.24,
+     "bar": 0.1678
+    },
+    {
+     "navn": "Ambiq Micro",
+     "slug": "ambiq-micro",
+     "andel": 0.23,
+     "logo": "assets/img/logoer/0ee2f82a70.webp",
+     "bar": 0.1608
+    },
+    {
+     "navn": "Renesas Electronics",
+     "slug": "renesas-electronics",
+     "andel": 0.23,
+     "logo": "assets/img/logoer/816a57db83.webp",
+     "bar": 0.1608
+    },
+    {
+     "navn": "Aixtron",
+     "slug": "aixtron",
+     "andel": 0.2,
+     "bar": 0.1399
+    },
+    {
+     "navn": "Advantest",
+     "slug": "advantest",
+     "andel": 0.19,
+     "logo": "assets/img/logoer/509540d950.webp",
+     "bar": 0.1329
+    },
+    {
+     "navn": "SanDisk",
+     "slug": "sandisk",
+     "andel": 0.19,
+     "logo": "assets/img/logoer/b2287832b5.webp",
+     "bar": 0.1329
+    },
+    {
+     "navn": "Kulicke & Soffa",
+     "slug": "kulicke-soffa",
+     "andel": 0.18,
+     "logo": "assets/img/logoer/66774484fb.webp",
+     "bar": 0.1259
+    },
+    {
+     "navn": "Veeco Instruments",
+     "slug": "veeco-instruments",
+     "andel": 0.18,
+     "logo": "assets/img/logoer/c9df30070b.webp",
+     "bar": 0.1259
+    },
+    {
+     "navn": "AXT",
+     "slug": "axt",
+     "andel": 0.17,
+     "logo": "assets/img/logoer/def622555b.webp",
+     "bar": 0.1189
+    },
+    {
+     "navn": "Silicon Motion",
+     "slug": "silicon-motion",
+     "andel": 0.17,
+     "logo": "assets/img/logoer/4496e3b5c3.webp",
+     "bar": 0.1189
+    },
+    {
+     "navn": "Infineon Technologies",
+     "slug": "infineon-technologies",
+     "andel": 0.14,
+     "logo": "assets/img/logoer/8660f21517.webp",
+     "bar": 0.0979
+    },
+    {
+     "navn": "Aeluma",
+     "slug": "aeluma",
+     "andel": 0.13,
+     "logo": "assets/img/logoer/6ef097e172.webp",
+     "bar": 0.0909
+    },
+    {
+     "navn": "Kokusai Electric",
+     "slug": "kokusai-electric",
+     "andel": 0.13,
+     "logo": "assets/img/logoer/aea873782d.webp",
+     "bar": 0.0909
+    },
+    {
+     "navn": "Entegris",
+     "slug": "entegris",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/f3e07fcdad.webp",
+     "bar": 0.0839
+    },
+    {
+     "navn": "Monolithic Power Systems",
+     "slug": "monolithic-power-systems",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/2f24c4902d.webp",
+     "bar": 0.0839
+    },
+    {
+     "navn": "Wolfspeed",
+     "slug": "wolfspeed",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/8800d66171.webp",
+     "bar": 0.0839
+    },
+    {
+     "navn": "Nordic Semiconductor",
+     "slug": "nordic-semiconductor",
+     "andel": 0.11,
+     "logo": "assets/img/logoer/5c3c449f1d.webp",
+     "bar": 0.0769
+    },
+    {
+     "navn": "ACM Research",
+     "slug": "acm-research",
+     "andel": 0.1,
+     "logo": "assets/img/logoer/f70b811920.webp",
+     "bar": 0.0699
+    },
+    {
+     "navn": "Alpha and Omega Semiconductor",
+     "slug": "alpha-and-omega-semiconductor",
+     "andel": 0.1,
+     "logo": "assets/img/logoer/d90ffeffb4.webp",
+     "bar": 0.0699
+    },
+    {
+     "navn": "Amkor Technology",
+     "slug": "amkor-technology",
+     "andel": 0.1,
+     "logo": "assets/img/logoer/850bb0587b.webp",
+     "bar": 0.0699
+    },
+    {
+     "navn": "ASML",
+     "slug": "asml",
+     "andel": 0.09,
+     "logo": "assets/img/logoer/6a9ec0669d.webp",
+     "bar": 0.0629
+    },
+    {
+     "navn": "Lam Research",
+     "slug": "lam-research",
+     "andel": 0.09,
+     "logo": "assets/img/logoer/26fd337cb3.webp",
+     "bar": 0.0629
+    },
+    {
+     "navn": "MaxLinear",
+     "slug": "maxlinear",
+     "andel": 0.09,
+     "logo": "assets/img/logoer/6d7e7e5294.webp",
+     "bar": 0.0629
+    },
+    {
+     "navn": "Synopsys",
+     "slug": "synopsys",
+     "andel": 0.09,
+     "bar": 0.0629
+    },
+    {
+     "navn": "Analog Devices",
+     "slug": "analog-devices",
+     "andel": 0.08,
+     "logo": "assets/img/logoer/14d73a01e1.webp",
+     "bar": 0.0559
+    },
+    {
+     "navn": "Cohu",
+     "slug": "cohu",
+     "andel": 0.08,
+     "logo": "assets/img/logoer/6942a6ca36.webp",
+     "bar": 0.0559
+    },
+    {
+     "navn": "Marvell Technology",
+     "slug": "marvell-technology",
+     "andel": 0.08,
+     "logo": "assets/img/logoer/d80d4e7eb1.webp",
+     "bar": 0.0559
+    },
+    {
+     "navn": "Texas Instruments",
+     "slug": "texas-instruments",
+     "andel": 0.08,
+     "logo": "assets/img/logoer/d705da286b.webp",
+     "bar": 0.0559
+    },
+    {
+     "navn": "Ambarella",
+     "slug": "ambarella",
+     "andel": 0.07,
+     "logo": "assets/img/logoer/c16d310945.webp",
+     "bar": 0.049
+    },
+    {
+     "navn": "Microchip Technology",
+     "slug": "microchip-technology",
+     "andel": 0.07,
+     "logo": "assets/img/logoer/cd75c9140d.webp",
+     "bar": 0.049
+    },
+    {
+     "navn": "Cadence Design Systems",
+     "slug": "cadence-design-systems",
+     "andel": 0.06,
+     "bar": 0.042
+    },
+    {
+     "navn": "FormFactor",
+     "slug": "formfactor",
+     "andel": 0.06,
+     "logo": "assets/img/logoer/58a0d186b3.webp",
+     "bar": 0.042
+    },
+    {
+     "navn": "Applied Materials",
+     "slug": "applied-materials",
+     "andel": 0.05,
+     "logo": "assets/img/logoer/b846cd3f38.webp",
+     "bar": 0.035
+    },
+    {
+     "navn": "AMD",
+     "slug": "amd",
+     "andel": 0.04,
+     "bar": 0.028
+    },
+    {
+     "navn": "Lattice Semiconductor",
+     "slug": "lattice-semiconductor",
+     "andel": 0.04,
+     "bar": 0.028
+    },
+    {
+     "navn": "TSMC",
+     "slug": "tsmc",
+     "andel": 0.04,
+     "bar": 0.028
+    },
+    {
+     "navn": "Axcelis Technologies",
+     "slug": "axcelis-technologies",
+     "andel": 0.03,
+     "bar": 0.021
+    },
+    {
+     "navn": "Teradyne",
+     "slug": "teradyne",
+     "andel": 0.03,
+     "logo": "assets/img/logoer/2419f7bcca.webp",
+     "bar": 0.021
+    },
+    {
+     "navn": "Blaize",
+     "slug": "blaize",
+     "andel": 0.01,
+     "logo": "assets/img/logoer/fbfec736cc.webp",
+     "bar": 0.007
+    }
+   ],
+   "antalVist": 75,
+   "oevrige": [],
+   "oevrigeAntal": 0,
+   "alleVist": true,
+   "tidligere": [
+    {
+     "navn": "Alphawave IP Group",
+     "slug": "alphawave-ip-group",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "Arm",
+     "slug": "arm",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "NXP Semiconductors",
+     "slug": "nxp-semiconductors",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "Qualcomm",
+     "slug": "qualcomm",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "Silicon Laboratories",
+     "slug": "silicon-laboratories",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    }
+   ],
+   "tidligereAntal": 5,
+   "vaffelRuter": 24,
+   "vaffel": [
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    }
+   ],
+   "vaffelIngen": false
+  },
+  {
+   "id": "energi",
+   "navn": "Energi og elnet",
+   "plads": 2,
+   "andel": 17.06,
+   "antal": 69,
+   "bar": 0.7171,
+   "ringFra": 85.644,
+   "ringTil": 147.06,
+   "stoerste": {
+    "navn": "Babcock & Wilcox",
+    "slug": "babcock-wilcox",
+    "andel": 0.83,
+    "logo": "assets/img/logoer/986bc5308a.webp",
+    "bar": 1.0
+   },
+   "selskaber": [
+    {
+     "navn": "Babcock & Wilcox",
+     "slug": "babcock-wilcox",
+     "andel": 0.83,
+     "logo": "assets/img/logoer/986bc5308a.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "T1 Energy",
+     "slug": "t1-energy",
+     "andel": 0.76,
+     "logo": "assets/img/logoer/2e90ce846f.webp",
+     "bar": 0.9157
+    },
+    {
+     "navn": "Enovix",
+     "slug": "enovix",
+     "andel": 0.66,
+     "logo": "assets/img/logoer/27b7860880.webp",
+     "bar": 0.7952
+    },
+    {
+     "navn": "Expand Energy",
+     "slug": "expand-energy",
+     "andel": 0.62,
+     "logo": "assets/img/logoer/2929f4ef4d.webp",
+     "bar": 0.747
+    },
+    {
+     "navn": "Comstock Resources",
+     "slug": "comstock-resources",
+     "andel": 0.54,
+     "bar": 0.6506
+    },
+    {
+     "navn": "Generac",
+     "slug": "generac",
+     "andel": 0.54,
+     "logo": "assets/img/logoer/d699c2505d.webp",
+     "bar": 0.6506
+    },
+    {
+     "navn": "MYR Group",
+     "slug": "myr-group",
+     "andel": 0.54,
+     "logo": "assets/img/logoer/97c8b3b259.webp",
+     "bar": 0.6506
+    },
+    {
+     "navn": "SolarEdge",
+     "slug": "solaredge",
+     "andel": 0.53,
+     "logo": "assets/img/logoer/c87f3d4b5f.webp",
+     "bar": 0.6386
+    },
+    {
+     "navn": "Fluence Energy",
+     "slug": "fluence-energy",
+     "andel": 0.51,
+     "logo": "assets/img/logoer/3539d10e3a.webp",
+     "bar": 0.6145
+    },
+    {
+     "navn": "SES AI",
+     "slug": "ses-ai",
+     "andel": 0.46,
+     "logo": "assets/img/logoer/b5ff391c12.webp",
+     "bar": 0.5542
+    },
+    {
+     "navn": "QuantumScape",
+     "slug": "quantumscape",
+     "andel": 0.43,
+     "logo": "assets/img/logoer/08f4389b60.webp",
+     "bar": 0.5181
+    },
+    {
+     "navn": "Power Solutions International",
+     "slug": "power-solutions-internationa",
+     "andel": 0.41,
+     "logo": "assets/img/logoer/a237f0a932.webp",
+     "bar": 0.494
+    },
+    {
+     "navn": "First Solar",
+     "slug": "first-solar",
+     "andel": 0.4,
+     "bar": 0.4819
+    },
+    {
+     "navn": "Tigo Energy",
+     "slug": "tigo-energy",
+     "andel": 0.38,
+     "logo": "assets/img/logoer/d130cb4bf1.webp",
+     "bar": 0.4578
+    },
+    {
+     "navn": "Sunrun",
+     "slug": "sunrun",
+     "andel": 0.37,
+     "logo": "assets/img/logoer/512087f698.webp",
+     "bar": 0.4458
+    },
+    {
+     "navn": "Enphase Energy",
+     "slug": "enphase-energy",
+     "andel": 0.34,
+     "logo": "assets/img/logoer/cd750eed57.webp",
+     "bar": 0.4096
+    },
+    {
+     "navn": "Ballard Power Systems",
+     "slug": "ballard-power-systems",
+     "andel": 0.33,
+     "logo": "assets/img/logoer/8156fe896a.webp",
+     "bar": 0.3976
+    },
+    {
+     "navn": "ProPetro",
+     "slug": "propetro",
+     "andel": 0.33,
+     "logo": "assets/img/logoer/d527a65f18.webp",
+     "bar": 0.3976
+    },
+    {
+     "navn": "Vistra",
+     "slug": "vistra",
+     "andel": 0.29,
+     "logo": "assets/img/logoer/016d0b3e6d.webp",
+     "bar": 0.3494
+    },
+    {
+     "navn": "Antero Resources",
+     "slug": "antero-resources",
+     "andel": 0.25,
+     "logo": "assets/img/logoer/c5f2c6a496.webp",
+     "bar": 0.3012
+    },
+    {
+     "navn": "Centrus Energy",
+     "slug": "centrus-energy",
+     "andel": 0.25,
+     "logo": "assets/img/logoer/6a84ac3104.webp",
+     "bar": 0.3012
+    },
+    {
+     "navn": "ERock",
+     "slug": "erock",
+     "andel": 0.25,
+     "logo": "assets/img/logoer/73aa26b22b.webp",
+     "bar": 0.3012
+    },
+    {
+     "navn": "Rolls-Royce",
+     "slug": "rolls-royce",
+     "andel": 0.25,
+     "logo": "assets/img/logoer/5c92af4fd2.webp",
+     "bar": 0.3012
+    },
+    {
+     "navn": "Talen Energy",
+     "slug": "talen-energy",
+     "andel": 0.25,
+     "logo": "assets/img/logoer/e1a57b5672.webp",
+     "bar": 0.3012
+    },
+    {
+     "navn": "Kinder Morgan",
+     "slug": "kinder-morgan",
+     "andel": 0.24,
+     "logo": "assets/img/logoer/5170c52721.webp",
+     "bar": 0.2892
+    },
+    {
+     "navn": "ASP Isotopes",
+     "slug": "asp-isotopes",
+     "andel": 0.23,
+     "logo": "assets/img/logoer/03c53396fb.webp",
+     "bar": 0.2771
+    },
+    {
+     "navn": "Nextracker",
+     "slug": "nextracker",
+     "andel": 0.23,
+     "logo": "assets/img/logoer/c140436de9.webp",
+     "bar": 0.2771
+    },
+    {
+     "navn": "Solid Power",
+     "slug": "solid-power",
+     "andel": 0.23,
+     "logo": "assets/img/logoer/e242bc0885.webp",
+     "bar": 0.2771
+    },
+    {
+     "navn": "NextEra Energy",
+     "slug": "nextera-energy",
+     "andel": 0.22,
+     "bar": 0.2651
+    },
+    {
+     "navn": "Shoals Technologies",
+     "slug": "shoals-technologies",
+     "andel": 0.22,
+     "logo": "assets/img/logoer/c6fe3d7472.webp",
+     "bar": 0.2651
+    },
+    {
+     "navn": "Vista Energy",
+     "slug": "vista-energy-sab-de-cv",
+     "andel": 0.21,
+     "logo": "assets/img/logoer/a021ce5560.webp",
+     "bar": 0.253
+    },
+    {
+     "navn": "Bloom Energy",
+     "slug": "bloom-energy",
+     "andel": 0.2,
+     "logo": "assets/img/logoer/aec3569753.webp",
+     "bar": 0.241
+    },
+    {
+     "navn": "Amprius Technologies",
+     "slug": "amprius-technologies",
+     "andel": 0.19,
+     "logo": "assets/img/logoer/1aac94c645.webp",
+     "bar": 0.2289
+    },
+    {
+     "navn": "DTE Energy",
+     "slug": "dte-energy-company",
+     "andel": 0.19,
+     "logo": "assets/img/logoer/9bfcfd6aa9.webp",
+     "bar": 0.2289
+    },
+    {
+     "navn": "GE Vernova",
+     "slug": "ge-vernova",
+     "andel": 0.19,
+     "logo": "assets/img/logoer/35d6fd9204.webp",
+     "bar": 0.2289
+    },
+    {
+     "navn": "American Electric Power",
+     "slug": "am-electric",
+     "andel": 0.18,
+     "bar": 0.2169
+    },
+    {
+     "navn": "Array Technologies",
+     "slug": "array-technologies",
+     "andel": 0.18,
+     "logo": "assets/img/logoer/5f68d4c6f1.webp",
+     "bar": 0.2169
+    },
+    {
+     "navn": "BWX Technologies",
+     "slug": "bwx-technologies",
+     "andel": 0.18,
+     "logo": "assets/img/logoer/fb6c04b84e.webp",
+     "bar": 0.2169
+    },
+    {
+     "navn": "CMS Energy",
+     "slug": "cms-energy",
+     "andel": 0.18,
+     "bar": 0.2169
+    },
+    {
+     "navn": "Canadian Solar",
+     "slug": "canadian-solar",
+     "andel": 0.18,
+     "logo": "assets/img/logoer/66c992d02d.webp",
+     "bar": 0.2169
+    },
+    {
+     "navn": "FirstEnergy",
+     "slug": "firstenergy",
+     "andel": 0.18,
+     "logo": "assets/img/logoer/7b3028feda.webp",
+     "bar": 0.2169
+    },
+    {
+     "navn": "Southern Company",
+     "slug": "southern-company",
+     "andel": 0.18,
+     "logo": "assets/img/logoer/435ee7b106.webp",
+     "bar": 0.2169
+    },
+    {
+     "navn": "Nano Nuclear Energy",
+     "slug": "nano-nuclear-energy",
+     "andel": 0.17,
+     "logo": "assets/img/logoer/db4cc352e4.webp",
+     "bar": 0.2048
+    },
+    {
+     "navn": "EQT",
+     "slug": "eqt",
+     "andel": 0.16,
+     "logo": "assets/img/logoer/a943d461fb.webp",
+     "bar": 0.1928
+    },
+    {
+     "navn": "Quanta Services",
+     "slug": "quanta-services",
+     "andel": 0.16,
+     "logo": "assets/img/logoer/21ea777ffb.webp",
+     "bar": 0.1928
+    },
+    {
+     "navn": "Oklo",
+     "slug": "oklo",
+     "andel": 0.15,
+     "logo": "assets/img/logoer/2f59a56bef.webp",
+     "bar": 0.1807
+    },
+    {
+     "navn": "Range Resources",
+     "slug": "range-resources",
+     "andel": 0.15,
+     "logo": "assets/img/logoer/029ce81085.webp",
+     "bar": 0.1807
+    },
+    {
+     "navn": "Atlas Energy Solutions",
+     "slug": "atlas-energy-solutions",
+     "andel": 0.14,
+     "logo": "assets/img/logoer/e61814aaa9.webp",
+     "bar": 0.1687
+    },
+    {
+     "navn": "Eos Energy",
+     "slug": "eos-energy",
+     "andel": 0.13,
+     "logo": "assets/img/logoer/73a3325656.webp",
+     "bar": 0.1566
+    },
+    {
+     "navn": "ITT",
+     "slug": "itt",
+     "andel": 0.13,
+     "bar": 0.1566
+    },
+    {
+     "navn": "Primoris Services",
+     "slug": "primoris-services",
+     "andel": 0.13,
+     "bar": 0.1566
+    },
+    {
+     "navn": "Lightbridge",
+     "slug": "lightbridge",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/4272125255.webp",
+     "bar": 0.1446
+    },
+    {
+     "navn": "Tantalus Systems",
+     "slug": "tantalus-systems",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/5061bb7e93.webp",
+     "bar": 0.1446
+    },
+    {
+     "navn": "Clearway Energy",
+     "slug": "clearway-energy-inc-c",
+     "andel": 0.11,
+     "logo": "assets/img/logoer/c6302193eb.webp",
+     "bar": 0.1325
+    },
+    {
+     "navn": "Electrovaya",
+     "slug": "electrovaya",
+     "andel": 0.11,
+     "logo": "assets/img/logoer/a9ff78987f.webp",
+     "bar": 0.1325
+    },
+    {
+     "navn": "Fluor",
+     "slug": "fluor",
+     "andel": 0.11,
+     "bar": 0.1325
+    },
+    {
+     "navn": "Mirion Technologies",
+     "slug": "mirion-technologies",
+     "andel": 0.11,
+     "logo": "assets/img/logoer/44f31faefb.webp",
+     "bar": 0.1325
+    },
+    {
+     "navn": "Plug Power",
+     "slug": "plug-power",
+     "andel": 0.11,
+     "bar": 0.1325
+    },
+    {
+     "navn": "Solaris Energy Infrastructure",
+     "slug": "solaris-energy-infrastructure",
+     "andel": 0.11,
+     "logo": "assets/img/logoer/a83ef95b65.webp",
+     "bar": 0.1325
+    },
+    {
+     "navn": "Microvast",
+     "slug": "microvast",
+     "andel": 0.1,
+     "bar": 0.1205
+    },
+    {
+     "navn": "NuScale Power",
+     "slug": "nuscale-power",
+     "andel": 0.1,
+     "logo": "assets/img/logoer/8cd4c2b13d.webp",
+     "bar": 0.1205
+    },
+    {
+     "navn": "Flowserve",
+     "slug": "flowserve",
+     "andel": 0.09,
+     "bar": 0.1084
+    },
+    {
+     "navn": "Terrestrial Energy",
+     "slug": "terrestrial-energy",
+     "andel": 0.09,
+     "logo": "assets/img/logoer/c4ba238faa.webp",
+     "bar": 0.1084
+    },
+    {
+     "navn": "Canadian Natural Resources",
+     "slug": "canadian-natural-resources",
+     "andel": 0.07,
+     "logo": "assets/img/logoer/8cf8211760.webp",
+     "bar": 0.0843
+    },
+    {
+     "navn": "Caterpillar",
+     "slug": "caterpillar",
+     "andel": 0.07,
+     "logo": "assets/img/logoer/580b8b9a63.webp",
+     "bar": 0.0843
+    },
+    {
+     "navn": "Cummins",
+     "slug": "cummins",
+     "andel": 0.06,
+     "logo": "assets/img/logoer/f812a094ea.webp",
+     "bar": 0.0723
+    },
+    {
+     "navn": "Terex",
+     "slug": "terex",
+     "andel": 0.06,
+     "logo": "assets/img/logoer/cea4e9cb1b.webp",
+     "bar": 0.0723
+    },
+    {
+     "navn": "Terra Innovatum",
+     "slug": "terra-innovatum",
+     "andel": 0.05,
+     "logo": "assets/img/logoer/9b5fc9369d.webp",
+     "bar": 0.0602
+    },
+    {
+     "navn": "NeoVolta",
+     "slug": "neovolta",
+     "andel": 0.02,
+     "logo": "assets/img/logoer/7d5ba478b0.webp",
+     "bar": 0.0241
+    }
+   ],
+   "akk": {
+    "andel": 17.21,
+    "antal": 68,
+    "plads": 2,
+    "stoerste": {
+     "navn": "T1 Energy",
+     "slug": "t1-energy",
+     "andel": 0.69,
+     "logo": "assets/img/logoer/2e90ce846f.webp",
+     "bar": 1.0
+    }
+   },
+   "ringSti": "M349.6 189.4 A150 150 0 0 1 282.2 325.5",
+   "forrige": {
+    "id": "chips",
+    "navn": "Chips og halvledere"
+   },
+   "naeste": {
+    "id": "datacenter",
+    "navn": "Datacentre"
+   },
+   "vist": [
+    {
+     "navn": "Babcock & Wilcox",
+     "slug": "babcock-wilcox",
+     "andel": 0.83,
+     "logo": "assets/img/logoer/986bc5308a.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "T1 Energy",
+     "slug": "t1-energy",
+     "andel": 0.76,
+     "logo": "assets/img/logoer/2e90ce846f.webp",
+     "bar": 0.9157
+    },
+    {
+     "navn": "Enovix",
+     "slug": "enovix",
+     "andel": 0.66,
+     "logo": "assets/img/logoer/27b7860880.webp",
+     "bar": 0.7952
+    },
+    {
+     "navn": "Expand Energy",
+     "slug": "expand-energy",
+     "andel": 0.62,
+     "logo": "assets/img/logoer/2929f4ef4d.webp",
+     "bar": 0.747
+    },
+    {
+     "navn": "Comstock Resources",
+     "slug": "comstock-resources",
+     "andel": 0.54,
+     "bar": 0.6506
+    },
+    {
+     "navn": "Generac",
+     "slug": "generac",
+     "andel": 0.54,
+     "logo": "assets/img/logoer/d699c2505d.webp",
+     "bar": 0.6506
+    },
+    {
+     "navn": "MYR Group",
+     "slug": "myr-group",
+     "andel": 0.54,
+     "logo": "assets/img/logoer/97c8b3b259.webp",
+     "bar": 0.6506
+    },
+    {
+     "navn": "SolarEdge",
+     "slug": "solaredge",
+     "andel": 0.53,
+     "logo": "assets/img/logoer/c87f3d4b5f.webp",
+     "bar": 0.6386
+    },
+    {
+     "navn": "Fluence Energy",
+     "slug": "fluence-energy",
+     "andel": 0.51,
+     "logo": "assets/img/logoer/3539d10e3a.webp",
+     "bar": 0.6145
+    },
+    {
+     "navn": "SES AI",
+     "slug": "ses-ai",
+     "andel": 0.46,
+     "logo": "assets/img/logoer/b5ff391c12.webp",
+     "bar": 0.5542
+    },
+    {
+     "navn": "QuantumScape",
+     "slug": "quantumscape",
+     "andel": 0.43,
+     "logo": "assets/img/logoer/08f4389b60.webp",
+     "bar": 0.5181
+    },
+    {
+     "navn": "Power Solutions International",
+     "slug": "power-solutions-internationa",
+     "andel": 0.41,
+     "logo": "assets/img/logoer/a237f0a932.webp",
+     "bar": 0.494
+    },
+    {
+     "navn": "First Solar",
+     "slug": "first-solar",
+     "andel": 0.4,
+     "bar": 0.4819
+    },
+    {
+     "navn": "Tigo Energy",
+     "slug": "tigo-energy",
+     "andel": 0.38,
+     "logo": "assets/img/logoer/d130cb4bf1.webp",
+     "bar": 0.4578
+    },
+    {
+     "navn": "Sunrun",
+     "slug": "sunrun",
+     "andel": 0.37,
+     "logo": "assets/img/logoer/512087f698.webp",
+     "bar": 0.4458
+    },
+    {
+     "navn": "Enphase Energy",
+     "slug": "enphase-energy",
+     "andel": 0.34,
+     "logo": "assets/img/logoer/cd750eed57.webp",
+     "bar": 0.4096
+    },
+    {
+     "navn": "Ballard Power Systems",
+     "slug": "ballard-power-systems",
+     "andel": 0.33,
+     "logo": "assets/img/logoer/8156fe896a.webp",
+     "bar": 0.3976
+    },
+    {
+     "navn": "ProPetro",
+     "slug": "propetro",
+     "andel": 0.33,
+     "logo": "assets/img/logoer/d527a65f18.webp",
+     "bar": 0.3976
+    },
+    {
+     "navn": "Vistra",
+     "slug": "vistra",
+     "andel": 0.29,
+     "logo": "assets/img/logoer/016d0b3e6d.webp",
+     "bar": 0.3494
+    },
+    {
+     "navn": "Antero Resources",
+     "slug": "antero-resources",
+     "andel": 0.25,
+     "logo": "assets/img/logoer/c5f2c6a496.webp",
+     "bar": 0.3012
+    },
+    {
+     "navn": "Centrus Energy",
+     "slug": "centrus-energy",
+     "andel": 0.25,
+     "logo": "assets/img/logoer/6a84ac3104.webp",
+     "bar": 0.3012
+    },
+    {
+     "navn": "ERock",
+     "slug": "erock",
+     "andel": 0.25,
+     "logo": "assets/img/logoer/73aa26b22b.webp",
+     "bar": 0.3012
+    },
+    {
+     "navn": "Rolls-Royce",
+     "slug": "rolls-royce",
+     "andel": 0.25,
+     "logo": "assets/img/logoer/5c92af4fd2.webp",
+     "bar": 0.3012
+    },
+    {
+     "navn": "Talen Energy",
+     "slug": "talen-energy",
+     "andel": 0.25,
+     "logo": "assets/img/logoer/e1a57b5672.webp",
+     "bar": 0.3012
+    },
+    {
+     "navn": "Kinder Morgan",
+     "slug": "kinder-morgan",
+     "andel": 0.24,
+     "logo": "assets/img/logoer/5170c52721.webp",
+     "bar": 0.2892
+    },
+    {
+     "navn": "ASP Isotopes",
+     "slug": "asp-isotopes",
+     "andel": 0.23,
+     "logo": "assets/img/logoer/03c53396fb.webp",
+     "bar": 0.2771
+    },
+    {
+     "navn": "Nextracker",
+     "slug": "nextracker",
+     "andel": 0.23,
+     "logo": "assets/img/logoer/c140436de9.webp",
+     "bar": 0.2771
+    },
+    {
+     "navn": "Solid Power",
+     "slug": "solid-power",
+     "andel": 0.23,
+     "logo": "assets/img/logoer/e242bc0885.webp",
+     "bar": 0.2771
+    },
+    {
+     "navn": "NextEra Energy",
+     "slug": "nextera-energy",
+     "andel": 0.22,
+     "bar": 0.2651
+    },
+    {
+     "navn": "Shoals Technologies",
+     "slug": "shoals-technologies",
+     "andel": 0.22,
+     "logo": "assets/img/logoer/c6fe3d7472.webp",
+     "bar": 0.2651
+    },
+    {
+     "navn": "Vista Energy",
+     "slug": "vista-energy-sab-de-cv",
+     "andel": 0.21,
+     "logo": "assets/img/logoer/a021ce5560.webp",
+     "bar": 0.253
+    },
+    {
+     "navn": "Bloom Energy",
+     "slug": "bloom-energy",
+     "andel": 0.2,
+     "logo": "assets/img/logoer/aec3569753.webp",
+     "bar": 0.241
+    },
+    {
+     "navn": "Amprius Technologies",
+     "slug": "amprius-technologies",
+     "andel": 0.19,
+     "logo": "assets/img/logoer/1aac94c645.webp",
+     "bar": 0.2289
+    },
+    {
+     "navn": "DTE Energy",
+     "slug": "dte-energy-company",
+     "andel": 0.19,
+     "logo": "assets/img/logoer/9bfcfd6aa9.webp",
+     "bar": 0.2289
+    },
+    {
+     "navn": "GE Vernova",
+     "slug": "ge-vernova",
+     "andel": 0.19,
+     "logo": "assets/img/logoer/35d6fd9204.webp",
+     "bar": 0.2289
+    },
+    {
+     "navn": "American Electric Power",
+     "slug": "am-electric",
+     "andel": 0.18,
+     "bar": 0.2169
+    },
+    {
+     "navn": "Array Technologies",
+     "slug": "array-technologies",
+     "andel": 0.18,
+     "logo": "assets/img/logoer/5f68d4c6f1.webp",
+     "bar": 0.2169
+    },
+    {
+     "navn": "BWX Technologies",
+     "slug": "bwx-technologies",
+     "andel": 0.18,
+     "logo": "assets/img/logoer/fb6c04b84e.webp",
+     "bar": 0.2169
+    },
+    {
+     "navn": "CMS Energy",
+     "slug": "cms-energy",
+     "andel": 0.18,
+     "bar": 0.2169
+    },
+    {
+     "navn": "Canadian Solar",
+     "slug": "canadian-solar",
+     "andel": 0.18,
+     "logo": "assets/img/logoer/66c992d02d.webp",
+     "bar": 0.2169
+    },
+    {
+     "navn": "FirstEnergy",
+     "slug": "firstenergy",
+     "andel": 0.18,
+     "logo": "assets/img/logoer/7b3028feda.webp",
+     "bar": 0.2169
+    },
+    {
+     "navn": "Southern Company",
+     "slug": "southern-company",
+     "andel": 0.18,
+     "logo": "assets/img/logoer/435ee7b106.webp",
+     "bar": 0.2169
+    },
+    {
+     "navn": "Nano Nuclear Energy",
+     "slug": "nano-nuclear-energy",
+     "andel": 0.17,
+     "logo": "assets/img/logoer/db4cc352e4.webp",
+     "bar": 0.2048
+    },
+    {
+     "navn": "EQT",
+     "slug": "eqt",
+     "andel": 0.16,
+     "logo": "assets/img/logoer/a943d461fb.webp",
+     "bar": 0.1928
+    },
+    {
+     "navn": "Quanta Services",
+     "slug": "quanta-services",
+     "andel": 0.16,
+     "logo": "assets/img/logoer/21ea777ffb.webp",
+     "bar": 0.1928
+    },
+    {
+     "navn": "Oklo",
+     "slug": "oklo",
+     "andel": 0.15,
+     "logo": "assets/img/logoer/2f59a56bef.webp",
+     "bar": 0.1807
+    },
+    {
+     "navn": "Range Resources",
+     "slug": "range-resources",
+     "andel": 0.15,
+     "logo": "assets/img/logoer/029ce81085.webp",
+     "bar": 0.1807
+    },
+    {
+     "navn": "Atlas Energy Solutions",
+     "slug": "atlas-energy-solutions",
+     "andel": 0.14,
+     "logo": "assets/img/logoer/e61814aaa9.webp",
+     "bar": 0.1687
+    },
+    {
+     "navn": "Eos Energy",
+     "slug": "eos-energy",
+     "andel": 0.13,
+     "logo": "assets/img/logoer/73a3325656.webp",
+     "bar": 0.1566
+    },
+    {
+     "navn": "ITT",
+     "slug": "itt",
+     "andel": 0.13,
+     "bar": 0.1566
+    },
+    {
+     "navn": "Primoris Services",
+     "slug": "primoris-services",
+     "andel": 0.13,
+     "bar": 0.1566
+    },
+    {
+     "navn": "Lightbridge",
+     "slug": "lightbridge",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/4272125255.webp",
+     "bar": 0.1446
+    },
+    {
+     "navn": "Tantalus Systems",
+     "slug": "tantalus-systems",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/5061bb7e93.webp",
+     "bar": 0.1446
+    },
+    {
+     "navn": "Clearway Energy",
+     "slug": "clearway-energy-inc-c",
+     "andel": 0.11,
+     "logo": "assets/img/logoer/c6302193eb.webp",
+     "bar": 0.1325
+    },
+    {
+     "navn": "Electrovaya",
+     "slug": "electrovaya",
+     "andel": 0.11,
+     "logo": "assets/img/logoer/a9ff78987f.webp",
+     "bar": 0.1325
+    },
+    {
+     "navn": "Fluor",
+     "slug": "fluor",
+     "andel": 0.11,
+     "bar": 0.1325
+    },
+    {
+     "navn": "Mirion Technologies",
+     "slug": "mirion-technologies",
+     "andel": 0.11,
+     "logo": "assets/img/logoer/44f31faefb.webp",
+     "bar": 0.1325
+    },
+    {
+     "navn": "Plug Power",
+     "slug": "plug-power",
+     "andel": 0.11,
+     "bar": 0.1325
+    },
+    {
+     "navn": "Solaris Energy Infrastructure",
+     "slug": "solaris-energy-infrastructure",
+     "andel": 0.11,
+     "logo": "assets/img/logoer/a83ef95b65.webp",
+     "bar": 0.1325
+    },
+    {
+     "navn": "Microvast",
+     "slug": "microvast",
+     "andel": 0.1,
+     "bar": 0.1205
+    },
+    {
+     "navn": "NuScale Power",
+     "slug": "nuscale-power",
+     "andel": 0.1,
+     "logo": "assets/img/logoer/8cd4c2b13d.webp",
+     "bar": 0.1205
+    },
+    {
+     "navn": "Flowserve",
+     "slug": "flowserve",
+     "andel": 0.09,
+     "bar": 0.1084
+    },
+    {
+     "navn": "Terrestrial Energy",
+     "slug": "terrestrial-energy",
+     "andel": 0.09,
+     "logo": "assets/img/logoer/c4ba238faa.webp",
+     "bar": 0.1084
+    },
+    {
+     "navn": "Canadian Natural Resources",
+     "slug": "canadian-natural-resources",
+     "andel": 0.07,
+     "logo": "assets/img/logoer/8cf8211760.webp",
+     "bar": 0.0843
+    },
+    {
+     "navn": "Caterpillar",
+     "slug": "caterpillar",
+     "andel": 0.07,
+     "logo": "assets/img/logoer/580b8b9a63.webp",
+     "bar": 0.0843
+    },
+    {
+     "navn": "Cummins",
+     "slug": "cummins",
+     "andel": 0.06,
+     "logo": "assets/img/logoer/f812a094ea.webp",
+     "bar": 0.0723
+    },
+    {
+     "navn": "Terex",
+     "slug": "terex",
+     "andel": 0.06,
+     "logo": "assets/img/logoer/cea4e9cb1b.webp",
+     "bar": 0.0723
+    },
+    {
+     "navn": "Terra Innovatum",
+     "slug": "terra-innovatum",
+     "andel": 0.05,
+     "logo": "assets/img/logoer/9b5fc9369d.webp",
+     "bar": 0.0602
+    },
+    {
+     "navn": "NeoVolta",
+     "slug": "neovolta",
+     "andel": 0.02,
+     "logo": "assets/img/logoer/7d5ba478b0.webp",
+     "bar": 0.0241
+    }
+   ],
+   "antalVist": 69,
+   "oevrige": [],
+   "oevrigeAntal": 0,
+   "alleVist": true,
+   "tidligere": [
+    {
+     "navn": "ABB",
+     "slug": "abb",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "Arcadis",
+     "slug": "arcadis",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "Schneider Electric",
+     "slug": "schneider-electric",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    }
+   ],
+   "tidligereAntal": 3,
+   "vaffelRuter": 17,
+   "vaffel": [
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    }
+   ],
+   "vaffelIngen": false
+  },
+  {
+   "id": "datacenter",
+   "navn": "Datacentre",
+   "plads": 3,
+   "andel": 12.41,
+   "antal": 47,
+   "bar": 0.5216,
+   "ringFra": 147.06,
+   "ringTil": 191.736,
+   "stoerste": {
+    "navn": "Sivers Semiconductors",
+    "slug": "sivers-semiconductors",
+    "andel": 0.96,
+    "logo": "assets/img/logoer/db445c4b44.webp",
+    "bar": 1.0
+   },
+   "selskaber": [
+    {
+     "navn": "Sivers Semiconductors",
+     "slug": "sivers-semiconductors",
+     "andel": 0.96,
+     "logo": "assets/img/logoer/db445c4b44.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "HUBER+SUHNER",
+     "slug": "huber-suhner",
+     "andel": 0.78,
+     "logo": "assets/img/logoer/11887265c5.webp",
+     "bar": 0.8125
+    },
+    {
+     "navn": "IREN",
+     "slug": "iren",
+     "andel": 0.55,
+     "logo": "assets/img/logoer/8d7faf7227.webp",
+     "bar": 0.5729
+    },
+    {
+     "navn": "Oracle",
+     "slug": "oracle",
+     "andel": 0.55,
+     "logo": "assets/img/logoer/5356208f45.webp",
+     "bar": 0.5729
+    },
+    {
+     "navn": "POET Technologies",
+     "slug": "poet-technologies",
+     "andel": 0.51,
+     "logo": "assets/img/logoer/195af23c91.webp",
+     "bar": 0.5313
+    },
+    {
+     "navn": "TSS",
+     "slug": "tss",
+     "andel": 0.51,
+     "logo": "assets/img/logoer/10dbf237be.webp",
+     "bar": 0.5313
+    },
+    {
+     "navn": "Applied Optoelectronics",
+     "slug": "applied-optoelectronics",
+     "andel": 0.5,
+     "logo": "assets/img/logoer/50f5d2e657.webp",
+     "bar": 0.5208
+    },
+    {
+     "navn": "Fabrinet",
+     "slug": "fabrinet",
+     "andel": 0.49,
+     "logo": "assets/img/logoer/faecb4c2a0.webp",
+     "bar": 0.5104
+    },
+    {
+     "navn": "MACOM",
+     "slug": null,
+     "andel": 0.43,
+     "logo": "assets/img/logoer/5a28873fd6.webp",
+     "bar": 0.4479
+    },
+    {
+     "navn": "Celestica",
+     "slug": null,
+     "andel": 0.4,
+     "logo": "assets/img/logoer/6d8dd08e82.webp",
+     "bar": 0.4167
+    },
+    {
+     "navn": "Core Scientific",
+     "slug": null,
+     "andel": 0.37,
+     "logo": "assets/img/logoer/97c8da134b.webp",
+     "bar": 0.3854
+    },
+    {
+     "navn": "Lightwave Logic",
+     "slug": null,
+     "andel": 0.33,
+     "logo": "assets/img/logoer/e9055a8471.webp",
+     "bar": 0.3438
+    },
+    {
+     "navn": "nLight",
+     "slug": null,
+     "andel": 0.31,
+     "logo": "assets/img/logoer/dc17c82e18.webp",
+     "bar": 0.3229
+    },
+    {
+     "navn": "Ciena",
+     "slug": null,
+     "andel": 0.3,
+     "logo": "assets/img/logoer/c061d89ef3.webp",
+     "bar": 0.3125
+    },
+    {
+     "navn": "Super Micro Computer",
+     "slug": null,
+     "andel": 0.3,
+     "bar": 0.3125
+    },
+    {
+     "navn": "ams OSRAM",
+     "slug": null,
+     "andel": 0.3,
+     "logo": "assets/img/logoer/05ec090c51.webp",
+     "bar": 0.3125
+    },
+    {
+     "navn": "Cipher Mining",
+     "slug": null,
+     "andel": 0.27,
+     "logo": "assets/img/logoer/f1d2cce3c4.webp",
+     "bar": 0.2813
+    },
+    {
+     "navn": "Fermi",
+     "slug": null,
+     "andel": 0.26,
+     "logo": "assets/img/logoer/0a46e1a14e.webp",
+     "bar": 0.2708
+    },
+    {
+     "navn": "Sumitomo Electric Industries",
+     "slug": null,
+     "andel": 0.26,
+     "logo": "assets/img/logoer/4bfdcfc178.webp",
+     "bar": 0.2708
+    },
+    {
+     "navn": "Corning",
+     "slug": null,
+     "andel": 0.25,
+     "bar": 0.2604
+    },
+    {
+     "navn": "Credo",
+     "slug": null,
+     "andel": 0.24,
+     "logo": "assets/img/logoer/c3a5745ed7.webp",
+     "bar": 0.25
+    },
+    {
+     "navn": "Jacobs Solutions",
+     "slug": null,
+     "andel": 0.24,
+     "logo": "assets/img/logoer/0efb6bcc0f.webp",
+     "bar": 0.25
+    },
+    {
+     "navn": "Coherent",
+     "slug": null,
+     "andel": 0.23,
+     "logo": "assets/img/logoer/a8fbb1734a.webp",
+     "bar": 0.2396
+    },
+    {
+     "navn": "Lumen",
+     "slug": null,
+     "andel": 0.23,
+     "logo": "assets/img/logoer/2df7ff5b87.webp",
+     "bar": 0.2396
+    },
+    {
+     "navn": "Lumentum",
+     "slug": null,
+     "andel": 0.23,
+     "logo": "assets/img/logoer/c0e7024ff6.webp",
+     "bar": 0.2396
+    },
+    {
+     "navn": "CoreWeave",
+     "slug": null,
+     "andel": 0.22,
+     "logo": "assets/img/logoer/62c2f58237.webp",
+     "bar": 0.2292
+    },
+    {
+     "navn": "WhiteFiber",
+     "slug": null,
+     "andel": 0.22,
+     "logo": "assets/img/logoer/f433480c29.webp",
+     "bar": 0.2292
+    },
+    {
+     "navn": "Sterling Infrastructure",
+     "slug": null,
+     "andel": 0.2,
+     "logo": "assets/img/logoer/f0a04595a9.webp",
+     "bar": 0.2083
+    },
+    {
+     "navn": "IPG Photonics",
+     "slug": null,
+     "andel": 0.19,
+     "logo": "assets/img/logoer/8b09b7424c.webp",
+     "bar": 0.1979
+    },
+    {
+     "navn": "Nebius",
+     "slug": null,
+     "andel": 0.19,
+     "logo": "assets/img/logoer/10c7aab9d7.webp",
+     "bar": 0.1979
+    },
+    {
+     "navn": "SharonAI",
+     "slug": null,
+     "andel": 0.19,
+     "logo": "assets/img/logoer/5ed341c791.webp",
+     "bar": 0.1979
+    },
+    {
+     "navn": "One Stop Systems",
+     "slug": null,
+     "andel": 0.18,
+     "logo": "assets/img/logoer/0a804bf14f.webp",
+     "bar": 0.1875
+    },
+    {
+     "navn": "Viavi Solutions",
+     "slug": null,
+     "andel": 0.15,
+     "logo": "assets/img/logoer/81a86c48c8.webp",
+     "bar": 0.1563
+    },
+    {
+     "navn": "Flex",
+     "slug": null,
+     "andel": 0.14,
+     "logo": "assets/img/logoer/dfee0bd94b.webp",
+     "bar": 0.1458
+    },
+    {
+     "navn": "Microsoft",
+     "slug": null,
+     "andel": 0.11,
+     "logo": "assets/img/logoer/b76ce7f2fd.webp",
+     "bar": 0.1146
+    },
+    {
+     "navn": "Semtech",
+     "slug": null,
+     "andel": 0.11,
+     "logo": "assets/img/logoer/2167e3a8b4.webp",
+     "bar": 0.1146
+    },
+    {
+     "navn": "Cisco Systems",
+     "slug": null,
+     "andel": 0.09,
+     "bar": 0.0938
+    },
+    {
+     "navn": "Keysight Technologies",
+     "slug": null,
+     "andel": 0.09,
+     "logo": "assets/img/logoer/e427a8e166.webp",
+     "bar": 0.0938
+    },
+    {
+     "navn": "TeraWulf",
+     "slug": null,
+     "andel": 0.09,
+     "logo": "assets/img/logoer/d1770075d5.webp",
+     "bar": 0.0938
+    },
+    {
+     "navn": "Amphenol",
+     "slug": null,
+     "andel": 0.07,
+     "logo": "assets/img/logoer/c40d682601.webp",
+     "bar": 0.0729
+    },
+    {
+     "navn": "Astera Labs",
+     "slug": null,
+     "andel": 0.07,
+     "logo": "assets/img/logoer/52a6832518.webp",
+     "bar": 0.0729
+    },
+    {
+     "navn": "Comfort Systems USA",
+     "slug": null,
+     "andel": 0.07,
+     "logo": "assets/img/logoer/4f8a216f4e.webp",
+     "bar": 0.0729
+    },
+    {
+     "navn": "Jabil",
+     "slug": null,
+     "andel": 0.07,
+     "logo": "assets/img/logoer/d8480c337d.webp",
+     "bar": 0.0729
+    },
+    {
+     "navn": "Applied Digital",
+     "slug": null,
+     "andel": 0.05,
+     "logo": "assets/img/logoer/2ca551c451.webp",
+     "bar": 0.0521
+    },
+    {
+     "navn": "Dell",
+     "slug": null,
+     "andel": 0.04,
+     "logo": "assets/img/logoer/7b65f57d16.webp",
+     "bar": 0.0417
+    },
+    {
+     "navn": "Sanmina",
+     "slug": null,
+     "andel": 0.04,
+     "logo": "assets/img/logoer/a404c6c183.webp",
+     "bar": 0.0417
+    },
+    {
+     "navn": "Arista Networks",
+     "slug": null,
+     "andel": 0.03,
+     "logo": "assets/img/logoer/143ca78461.webp",
+     "bar": 0.0313
+    }
+   ],
+   "akk": {
+    "andel": 12.04,
+    "antal": 45,
+    "plads": 3,
+    "stoerste": {
+     "navn": "Sivers Semiconductors",
+     "slug": "sivers-semiconductors",
+     "andel": 1.09,
+     "logo": "assets/img/logoer/db445c4b44.webp",
+     "bar": 1.0
+    }
+   },
+   "ringSti": "M280.9 326.3 A150 150 0 0 1 170.3 347.0",
+   "forrige": {
+    "id": "energi",
+    "navn": "Energi og elnet"
+   },
+   "naeste": {
+    "id": "platforme",
+    "navn": "Platformsøkonomi"
+   },
+   "vist": [
+    {
+     "navn": "Sivers Semiconductors",
+     "slug": "sivers-semiconductors",
+     "andel": 0.96,
+     "logo": "assets/img/logoer/db445c4b44.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "HUBER+SUHNER",
+     "slug": "huber-suhner",
+     "andel": 0.78,
+     "logo": "assets/img/logoer/11887265c5.webp",
+     "bar": 0.8125
+    },
+    {
+     "navn": "IREN",
+     "slug": "iren",
+     "andel": 0.55,
+     "logo": "assets/img/logoer/8d7faf7227.webp",
+     "bar": 0.5729
+    },
+    {
+     "navn": "Oracle",
+     "slug": "oracle",
+     "andel": 0.55,
+     "logo": "assets/img/logoer/5356208f45.webp",
+     "bar": 0.5729
+    },
+    {
+     "navn": "POET Technologies",
+     "slug": "poet-technologies",
+     "andel": 0.51,
+     "logo": "assets/img/logoer/195af23c91.webp",
+     "bar": 0.5313
+    },
+    {
+     "navn": "TSS",
+     "slug": "tss",
+     "andel": 0.51,
+     "logo": "assets/img/logoer/10dbf237be.webp",
+     "bar": 0.5313
+    },
+    {
+     "navn": "Applied Optoelectronics",
+     "slug": "applied-optoelectronics",
+     "andel": 0.5,
+     "logo": "assets/img/logoer/50f5d2e657.webp",
+     "bar": 0.5208
+    },
+    {
+     "navn": "Fabrinet",
+     "slug": "fabrinet",
+     "andel": 0.49,
+     "logo": "assets/img/logoer/faecb4c2a0.webp",
+     "bar": 0.5104
+    }
+   ],
+   "antalVist": 8,
+   "oevrige": [
+    {
+     "navn": "MACOM",
+     "slug": null,
+     "andel": 0.43,
+     "logo": "assets/img/logoer/5a28873fd6.webp",
+     "bar": 0.4479
+    },
+    {
+     "navn": "Celestica",
+     "slug": null,
+     "andel": 0.4,
+     "logo": "assets/img/logoer/6d8dd08e82.webp",
+     "bar": 0.4167
+    },
+    {
+     "navn": "Core Scientific",
+     "slug": null,
+     "andel": 0.37,
+     "logo": "assets/img/logoer/97c8da134b.webp",
+     "bar": 0.3854
+    },
+    {
+     "navn": "Lightwave Logic",
+     "slug": null,
+     "andel": 0.33,
+     "logo": "assets/img/logoer/e9055a8471.webp",
+     "bar": 0.3438
+    },
+    {
+     "navn": "nLight",
+     "slug": null,
+     "andel": 0.31,
+     "logo": "assets/img/logoer/dc17c82e18.webp",
+     "bar": 0.3229
+    },
+    {
+     "navn": "Ciena",
+     "slug": null,
+     "andel": 0.3,
+     "logo": "assets/img/logoer/c061d89ef3.webp",
+     "bar": 0.3125
+    },
+    {
+     "navn": "Super Micro Computer",
+     "slug": null,
+     "andel": 0.3,
+     "bar": 0.3125
+    },
+    {
+     "navn": "ams OSRAM",
+     "slug": null,
+     "andel": 0.3,
+     "logo": "assets/img/logoer/05ec090c51.webp",
+     "bar": 0.3125
+    },
+    {
+     "navn": "Cipher Mining",
+     "slug": null,
+     "andel": 0.27,
+     "logo": "assets/img/logoer/f1d2cce3c4.webp",
+     "bar": 0.2813
+    },
+    {
+     "navn": "Fermi",
+     "slug": null,
+     "andel": 0.26,
+     "logo": "assets/img/logoer/0a46e1a14e.webp",
+     "bar": 0.2708
+    },
+    {
+     "navn": "Sumitomo Electric Industries",
+     "slug": null,
+     "andel": 0.26,
+     "logo": "assets/img/logoer/4bfdcfc178.webp",
+     "bar": 0.2708
+    },
+    {
+     "navn": "Corning",
+     "slug": null,
+     "andel": 0.25,
+     "bar": 0.2604
+    },
+    {
+     "navn": "Credo",
+     "slug": null,
+     "andel": 0.24,
+     "logo": "assets/img/logoer/c3a5745ed7.webp",
+     "bar": 0.25
+    },
+    {
+     "navn": "Jacobs Solutions",
+     "slug": null,
+     "andel": 0.24,
+     "logo": "assets/img/logoer/0efb6bcc0f.webp",
+     "bar": 0.25
+    },
+    {
+     "navn": "Coherent",
+     "slug": null,
+     "andel": 0.23,
+     "logo": "assets/img/logoer/a8fbb1734a.webp",
+     "bar": 0.2396
+    },
+    {
+     "navn": "Lumen",
+     "slug": null,
+     "andel": 0.23,
+     "logo": "assets/img/logoer/2df7ff5b87.webp",
+     "bar": 0.2396
+    },
+    {
+     "navn": "Lumentum",
+     "slug": null,
+     "andel": 0.23,
+     "logo": "assets/img/logoer/c0e7024ff6.webp",
+     "bar": 0.2396
+    },
+    {
+     "navn": "CoreWeave",
+     "slug": null,
+     "andel": 0.22,
+     "logo": "assets/img/logoer/62c2f58237.webp",
+     "bar": 0.2292
+    },
+    {
+     "navn": "WhiteFiber",
+     "slug": null,
+     "andel": 0.22,
+     "logo": "assets/img/logoer/f433480c29.webp",
+     "bar": 0.2292
+    },
+    {
+     "navn": "Sterling Infrastructure",
+     "slug": null,
+     "andel": 0.2,
+     "logo": "assets/img/logoer/f0a04595a9.webp",
+     "bar": 0.2083
+    },
+    {
+     "navn": "IPG Photonics",
+     "slug": null,
+     "andel": 0.19,
+     "logo": "assets/img/logoer/8b09b7424c.webp",
+     "bar": 0.1979
+    },
+    {
+     "navn": "Nebius",
+     "slug": null,
+     "andel": 0.19,
+     "logo": "assets/img/logoer/10c7aab9d7.webp",
+     "bar": 0.1979
+    },
+    {
+     "navn": "SharonAI",
+     "slug": null,
+     "andel": 0.19,
+     "logo": "assets/img/logoer/5ed341c791.webp",
+     "bar": 0.1979
+    },
+    {
+     "navn": "One Stop Systems",
+     "slug": null,
+     "andel": 0.18,
+     "logo": "assets/img/logoer/0a804bf14f.webp",
+     "bar": 0.1875
+    },
+    {
+     "navn": "Viavi Solutions",
+     "slug": null,
+     "andel": 0.15,
+     "logo": "assets/img/logoer/81a86c48c8.webp",
+     "bar": 0.1563
+    },
+    {
+     "navn": "Flex",
+     "slug": null,
+     "andel": 0.14,
+     "logo": "assets/img/logoer/dfee0bd94b.webp",
+     "bar": 0.1458
+    },
+    {
+     "navn": "Microsoft",
+     "slug": null,
+     "andel": 0.11,
+     "logo": "assets/img/logoer/b76ce7f2fd.webp",
+     "bar": 0.1146
+    },
+    {
+     "navn": "Semtech",
+     "slug": null,
+     "andel": 0.11,
+     "logo": "assets/img/logoer/2167e3a8b4.webp",
+     "bar": 0.1146
+    },
+    {
+     "navn": "Cisco Systems",
+     "slug": null,
+     "andel": 0.09,
+     "bar": 0.0938
+    },
+    {
+     "navn": "Keysight Technologies",
+     "slug": null,
+     "andel": 0.09,
+     "logo": "assets/img/logoer/e427a8e166.webp",
+     "bar": 0.0938
+    },
+    {
+     "navn": "TeraWulf",
+     "slug": null,
+     "andel": 0.09,
+     "logo": "assets/img/logoer/d1770075d5.webp",
+     "bar": 0.0938
+    },
+    {
+     "navn": "Amphenol",
+     "slug": null,
+     "andel": 0.07,
+     "logo": "assets/img/logoer/c40d682601.webp",
+     "bar": 0.0729
+    },
+    {
+     "navn": "Astera Labs",
+     "slug": null,
+     "andel": 0.07,
+     "logo": "assets/img/logoer/52a6832518.webp",
+     "bar": 0.0729
+    },
+    {
+     "navn": "Comfort Systems USA",
+     "slug": null,
+     "andel": 0.07,
+     "logo": "assets/img/logoer/4f8a216f4e.webp",
+     "bar": 0.0729
+    },
+    {
+     "navn": "Jabil",
+     "slug": null,
+     "andel": 0.07,
+     "logo": "assets/img/logoer/d8480c337d.webp",
+     "bar": 0.0729
+    },
+    {
+     "navn": "Applied Digital",
+     "slug": null,
+     "andel": 0.05,
+     "logo": "assets/img/logoer/2ca551c451.webp",
+     "bar": 0.0521
+    },
+    {
+     "navn": "Dell",
+     "slug": null,
+     "andel": 0.04,
+     "logo": "assets/img/logoer/7b65f57d16.webp",
+     "bar": 0.0417
+    },
+    {
+     "navn": "Sanmina",
+     "slug": null,
+     "andel": 0.04,
+     "logo": "assets/img/logoer/a404c6c183.webp",
+     "bar": 0.0417
+    },
+    {
+     "navn": "Arista Networks",
+     "slug": null,
+     "andel": 0.03,
+     "logo": "assets/img/logoer/143ca78461.webp",
+     "bar": 0.0313
+    }
+   ],
+   "oevrigeAntal": 39,
+   "alleVist": false,
+   "tidligere": [
+    {
+     "navn": "Hewlett Packard Enterprise",
+     "slug": "hewlett-packard-enterprise",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "Modine Manufacturing",
+     "slug": "modine-manufacturing",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "Munters",
+     "slug": "munters",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "Vertiv",
+     "slug": "vertiv",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    }
+   ],
+   "tidligereAntal": 4,
+   "vaffelRuter": 12,
+   "vaffel": [
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    }
+   ],
+   "vaffelIngen": false
+  },
+  {
+   "id": "platforme",
+   "navn": "Platformsøkonomi",
+   "plads": 4,
+   "andel": 9.87,
+   "antal": 31,
+   "bar": 0.4149,
+   "ringFra": 191.736,
+   "ringTil": 227.268,
+   "stoerste": {
+    "navn": "SoftBank Group",
+    "slug": "softbank-group",
+    "andel": 1.68,
+    "logo": "assets/img/logoer/47f8edf10d.svg",
+    "bar": 1.0
+   },
+   "selskaber": [
+    {
+     "navn": "SoftBank Group",
+     "slug": "softbank-group",
+     "andel": 1.68,
+     "logo": "assets/img/logoer/47f8edf10d.svg",
+     "bar": 1.0
+    },
+    {
+     "navn": "Carvana",
+     "slug": "carvana",
+     "andel": 1.29,
+     "bar": 0.7679
+    },
+    {
+     "navn": "AppLovin",
+     "slug": "applovin",
+     "andel": 1.15,
+     "logo": "assets/img/logoer/0563db3d84.webp",
+     "bar": 0.6845
+    },
+    {
+     "navn": "Sea",
+     "slug": "sea",
+     "andel": 1.05,
+     "bar": 0.625
+    },
+    {
+     "navn": "Opendoor",
+     "slug": "opendoor",
+     "andel": 0.55,
+     "bar": 0.3274
+    },
+    {
+     "navn": "AUTO1 Group",
+     "slug": "auto1-group",
+     "andel": 0.44,
+     "bar": 0.2619
+    },
+    {
+     "navn": "Roblox",
+     "slug": "roblox",
+     "andel": 0.41,
+     "bar": 0.244
+    },
+    {
+     "navn": "Amazon",
+     "slug": "amazon",
+     "andel": 0.35,
+     "logo": "assets/img/logoer/7275c91851.webp",
+     "bar": 0.2083
+    },
+    {
+     "navn": "Grab",
+     "slug": null,
+     "andel": 0.32,
+     "bar": 0.1905
+    },
+    {
+     "navn": "Coupang",
+     "slug": null,
+     "andel": 0.29,
+     "bar": 0.1726
+    },
+    {
+     "navn": "MercadoLibre",
+     "slug": null,
+     "andel": 0.28,
+     "bar": 0.1667
+    },
+    {
+     "navn": "Reddit",
+     "slug": null,
+     "andel": 0.28,
+     "bar": 0.1667
+    },
+    {
+     "navn": "HelloFresh",
+     "slug": null,
+     "andel": 0.24,
+     "bar": 0.1429
+    },
+    {
+     "navn": "Uber",
+     "slug": null,
+     "andel": 0.19,
+     "logo": "assets/img/logoer/58af121b97.webp",
+     "bar": 0.1131
+    },
+    {
+     "navn": "International Workplace Group",
+     "slug": null,
+     "andel": 0.18,
+     "bar": 0.1071
+    },
+    {
+     "navn": "Chewy",
+     "slug": null,
+     "andel": 0.17,
+     "bar": 0.1012
+    },
+    {
+     "navn": "Prosus",
+     "slug": null,
+     "andel": 0.14,
+     "bar": 0.0833
+    },
+    {
+     "navn": "Meituan",
+     "slug": null,
+     "andel": 0.13,
+     "bar": 0.0774
+    },
+    {
+     "navn": "Netflix",
+     "slug": null,
+     "andel": 0.13,
+     "bar": 0.0774
+    },
+    {
+     "navn": "Allegro.eu",
+     "slug": null,
+     "andel": 0.07,
+     "bar": 0.0417
+    },
+    {
+     "navn": "DoorDash",
+     "slug": null,
+     "andel": 0.07,
+     "bar": 0.0417
+    },
+    {
+     "navn": "WEBTOON Entertainment",
+     "slug": null,
+     "andel": 0.07,
+     "bar": 0.0417
+    },
+    {
+     "navn": "Spotify",
+     "slug": null,
+     "andel": 0.06,
+     "bar": 0.0357
+    },
+    {
+     "navn": "Coursera",
+     "slug": null,
+     "andel": 0.05,
+     "logo": "assets/img/logoer/022f875489.webp",
+     "bar": 0.0298
+    },
+    {
+     "navn": "FuboTV",
+     "slug": null,
+     "andel": 0.05,
+     "bar": 0.0298
+    },
+    {
+     "navn": "MNTN",
+     "slug": null,
+     "andel": 0.05,
+     "logo": "assets/img/logoer/4e6fe253a3.webp",
+     "bar": 0.0298
+    },
+    {
+     "navn": "PDD Holdings",
+     "slug": null,
+     "andel": 0.05,
+     "bar": 0.0298
+    },
+    {
+     "navn": "Alibaba Group",
+     "slug": null,
+     "andel": 0.04,
+     "bar": 0.0238
+    },
+    {
+     "navn": "Meta Platforms",
+     "slug": null,
+     "andel": 0.04,
+     "logo": "assets/img/logoer/506fe57b82.webp",
+     "bar": 0.0238
+    },
+    {
+     "navn": "Zeta Global Holdings",
+     "slug": null,
+     "andel": 0.04,
+     "bar": 0.0238
+    },
+    {
+     "navn": "Apple",
+     "slug": null,
+     "andel": 0.01,
+     "logo": "assets/img/logoer/03a6259dbd.webp",
+     "bar": 0.006
+    }
+   ],
+   "akk": {
+    "andel": 8.58,
+    "antal": 24,
+    "plads": 4,
+    "stoerste": {
+     "navn": "SoftBank Group",
+     "slug": "softbank-group",
+     "andel": 1.34,
+     "logo": "assets/img/logoer/47f8edf10d.svg",
+     "bar": 1.0
+    }
+   },
+   "ringSti": "M168.7 346.7 A150 150 0 0 1 90.4 302.4",
+   "forrige": {
+    "id": "datacenter",
+    "navn": "Datacentre"
+   },
+   "naeste": {
+    "id": "rumfart",
+    "navn": "Rumfart"
+   },
+   "vist": [
+    {
+     "navn": "SoftBank Group",
+     "slug": "softbank-group",
+     "andel": 1.68,
+     "logo": "assets/img/logoer/47f8edf10d.svg",
+     "bar": 1.0
+    },
+    {
+     "navn": "Carvana",
+     "slug": "carvana",
+     "andel": 1.29,
+     "bar": 0.7679
+    },
+    {
+     "navn": "AppLovin",
+     "slug": "applovin",
+     "andel": 1.15,
+     "logo": "assets/img/logoer/0563db3d84.webp",
+     "bar": 0.6845
+    },
+    {
+     "navn": "Sea",
+     "slug": "sea",
+     "andel": 1.05,
+     "bar": 0.625
+    },
+    {
+     "navn": "Opendoor",
+     "slug": "opendoor",
+     "andel": 0.55,
+     "bar": 0.3274
+    },
+    {
+     "navn": "AUTO1 Group",
+     "slug": "auto1-group",
+     "andel": 0.44,
+     "bar": 0.2619
+    },
+    {
+     "navn": "Roblox",
+     "slug": "roblox",
+     "andel": 0.41,
+     "bar": 0.244
+    },
+    {
+     "navn": "Amazon",
+     "slug": "amazon",
+     "andel": 0.35,
+     "logo": "assets/img/logoer/7275c91851.webp",
+     "bar": 0.2083
+    }
+   ],
+   "antalVist": 8,
+   "oevrige": [
+    {
+     "navn": "Grab",
+     "slug": null,
+     "andel": 0.32,
+     "bar": 0.1905
+    },
+    {
+     "navn": "Coupang",
+     "slug": null,
+     "andel": 0.29,
+     "bar": 0.1726
+    },
+    {
+     "navn": "MercadoLibre",
+     "slug": null,
+     "andel": 0.28,
+     "bar": 0.1667
+    },
+    {
+     "navn": "Reddit",
+     "slug": null,
+     "andel": 0.28,
+     "bar": 0.1667
+    },
+    {
+     "navn": "HelloFresh",
+     "slug": null,
+     "andel": 0.24,
+     "bar": 0.1429
+    },
+    {
+     "navn": "Uber",
+     "slug": null,
+     "andel": 0.19,
+     "logo": "assets/img/logoer/58af121b97.webp",
+     "bar": 0.1131
+    },
+    {
+     "navn": "International Workplace Group",
+     "slug": null,
+     "andel": 0.18,
+     "bar": 0.1071
+    },
+    {
+     "navn": "Chewy",
+     "slug": null,
+     "andel": 0.17,
+     "bar": 0.1012
+    },
+    {
+     "navn": "Prosus",
+     "slug": null,
+     "andel": 0.14,
+     "bar": 0.0833
+    },
+    {
+     "navn": "Meituan",
+     "slug": null,
+     "andel": 0.13,
+     "bar": 0.0774
+    },
+    {
+     "navn": "Netflix",
+     "slug": null,
+     "andel": 0.13,
+     "bar": 0.0774
+    },
+    {
+     "navn": "Allegro.eu",
+     "slug": null,
+     "andel": 0.07,
+     "bar": 0.0417
+    },
+    {
+     "navn": "DoorDash",
+     "slug": null,
+     "andel": 0.07,
+     "bar": 0.0417
+    },
+    {
+     "navn": "WEBTOON Entertainment",
+     "slug": null,
+     "andel": 0.07,
+     "bar": 0.0417
+    },
+    {
+     "navn": "Spotify",
+     "slug": null,
+     "andel": 0.06,
+     "bar": 0.0357
+    },
+    {
+     "navn": "Coursera",
+     "slug": null,
+     "andel": 0.05,
+     "logo": "assets/img/logoer/022f875489.webp",
+     "bar": 0.0298
+    },
+    {
+     "navn": "FuboTV",
+     "slug": null,
+     "andel": 0.05,
+     "bar": 0.0298
+    },
+    {
+     "navn": "MNTN",
+     "slug": null,
+     "andel": 0.05,
+     "logo": "assets/img/logoer/4e6fe253a3.webp",
+     "bar": 0.0298
+    },
+    {
+     "navn": "PDD Holdings",
+     "slug": null,
+     "andel": 0.05,
+     "bar": 0.0298
+    },
+    {
+     "navn": "Alibaba Group",
+     "slug": null,
+     "andel": 0.04,
+     "bar": 0.0238
+    },
+    {
+     "navn": "Meta Platforms",
+     "slug": null,
+     "andel": 0.04,
+     "logo": "assets/img/logoer/506fe57b82.webp",
+     "bar": 0.0238
+    },
+    {
+     "navn": "Zeta Global Holdings",
+     "slug": null,
+     "andel": 0.04,
+     "bar": 0.0238
+    },
+    {
+     "navn": "Apple",
+     "slug": null,
+     "andel": 0.01,
+     "logo": "assets/img/logoer/03a6259dbd.webp",
+     "bar": 0.006
+    }
+   ],
+   "oevrigeAntal": 23,
+   "alleVist": false,
+   "tidligere": [],
+   "tidligereAntal": 0,
+   "vaffelRuter": 10,
+   "vaffel": [
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    }
+   ],
+   "vaffelIngen": false
+  },
+  {
+   "id": "rumfart",
+   "navn": "Rumfart",
+   "plads": 5,
+   "andel": 8.26,
+   "antal": 18,
+   "bar": 0.3472,
+   "ringFra": 227.268,
+   "ringTil": 257.004,
+   "stoerste": {
+    "navn": "SpaceX",
+    "slug": "spacex",
+    "andel": 3.54,
+    "logo": "assets/img/logoer/d55f831486.webp",
+    "bar": 1.0
+   },
+   "selskaber": [
+    {
+     "navn": "SpaceX",
+     "slug": "spacex",
+     "andel": 3.54,
+     "logo": "assets/img/logoer/d55f831486.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Planet Labs",
+     "slug": "planet-labs",
+     "andel": 0.52,
+     "logo": "assets/img/logoer/bcc55f45c9.webp",
+     "bar": 0.1469
+    },
+    {
+     "navn": "Intuitive Machines",
+     "slug": "intuitive-machines",
+     "andel": 0.49,
+     "logo": "assets/img/logoer/5f02f07ad3.webp",
+     "bar": 0.1384
+    },
+    {
+     "navn": "AST SpaceMobile",
+     "slug": "ast-spacemobile",
+     "andel": 0.48,
+     "logo": "assets/img/logoer/46350e4587.webp",
+     "bar": 0.1356
+    },
+    {
+     "navn": "BlackSky",
+     "slug": "blacksky",
+     "andel": 0.42,
+     "logo": "assets/img/logoer/f63b43efe9.webp",
+     "bar": 0.1186
+    },
+    {
+     "navn": "York Space Systems",
+     "slug": "york-space-systems",
+     "andel": 0.42,
+     "bar": 0.1186
+    },
+    {
+     "navn": "MDA Space",
+     "slug": "mda-space",
+     "andel": 0.4,
+     "logo": "assets/img/logoer/2d4deb2248.webp",
+     "bar": 0.113
+    },
+    {
+     "navn": "Rocket Lab",
+     "slug": "rocket-lab",
+     "andel": 0.38,
+     "logo": "assets/img/logoer/8a97cb55ec.webp",
+     "bar": 0.1073
+    },
+    {
+     "navn": "Redwire",
+     "slug": "redwire",
+     "andel": 0.27,
+     "logo": "assets/img/logoer/8bb9c0aadf.webp",
+     "bar": 0.0763
+    },
+    {
+     "navn": "Firefly Aerospace",
+     "slug": "firefly-aerospace",
+     "andel": 0.26,
+     "logo": "assets/img/logoer/d180bac9cd.webp",
+     "bar": 0.0734
+    },
+    {
+     "navn": "Satellogic",
+     "slug": "satellogic",
+     "andel": 0.21,
+     "logo": "assets/img/logoer/de6508f13e.webp",
+     "bar": 0.0593
+    },
+    {
+     "navn": "Starfighters Space",
+     "slug": "starfighters-space",
+     "andel": 0.2,
+     "logo": "assets/img/logoer/ead0d3103f.webp",
+     "bar": 0.0565
+    },
+    {
+     "navn": "Spire Global",
+     "slug": "spire-global",
+     "andel": 0.19,
+     "logo": "assets/img/logoer/a834214184.webp",
+     "bar": 0.0537
+    },
+    {
+     "navn": "Voyager Technologies",
+     "slug": "voyager-technologies",
+     "andel": 0.17,
+     "logo": "assets/img/logoer/9ac32ffea7.webp",
+     "bar": 0.048
+    },
+    {
+     "navn": "HawkEye 360",
+     "slug": "hawkeye-360",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/9bb4103dc9.webp",
+     "bar": 0.0339
+    },
+    {
+     "navn": "Howmet Aerospace",
+     "slug": "howmet-aerospace",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/c7acbe56b6.webp",
+     "bar": 0.0339
+    },
+    {
+     "navn": "Karman Space & Defense",
+     "slug": "karman-space-defense",
+     "andel": 0.05,
+     "logo": "assets/img/logoer/724b5c6398.webp",
+     "bar": 0.0141
+    },
+    {
+     "navn": "Iridium Communications",
+     "slug": "iridium-communications",
+     "andel": 0.02,
+     "logo": "assets/img/logoer/a090499165.webp",
+     "bar": 0.0056
+    }
+   ],
+   "akk": {
+    "andel": 8.2,
+    "antal": 18,
+    "plads": 5,
+    "stoerste": {
+     "navn": "SpaceX",
+     "slug": "spacex",
+     "andel": 3.62,
+     "logo": "assets/img/logoer/d55f831486.webp",
+     "bar": 1.0
+    }
+   },
+   "ringSti": "M89.3 301.2 A150 150 0 0 1 54.0 234.5",
+   "forrige": {
+    "id": "platforme",
+    "navn": "Platformsøkonomi"
+   },
+   "naeste": {
+    "id": "fysisk-ai",
+    "navn": "Robotter & fysisk AI"
+   },
+   "vist": [
+    {
+     "navn": "SpaceX",
+     "slug": "spacex",
+     "andel": 3.54,
+     "logo": "assets/img/logoer/d55f831486.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Planet Labs",
+     "slug": "planet-labs",
+     "andel": 0.52,
+     "logo": "assets/img/logoer/bcc55f45c9.webp",
+     "bar": 0.1469
+    },
+    {
+     "navn": "Intuitive Machines",
+     "slug": "intuitive-machines",
+     "andel": 0.49,
+     "logo": "assets/img/logoer/5f02f07ad3.webp",
+     "bar": 0.1384
+    },
+    {
+     "navn": "AST SpaceMobile",
+     "slug": "ast-spacemobile",
+     "andel": 0.48,
+     "logo": "assets/img/logoer/46350e4587.webp",
+     "bar": 0.1356
+    },
+    {
+     "navn": "BlackSky",
+     "slug": "blacksky",
+     "andel": 0.42,
+     "logo": "assets/img/logoer/f63b43efe9.webp",
+     "bar": 0.1186
+    },
+    {
+     "navn": "York Space Systems",
+     "slug": "york-space-systems",
+     "andel": 0.42,
+     "bar": 0.1186
+    },
+    {
+     "navn": "MDA Space",
+     "slug": "mda-space",
+     "andel": 0.4,
+     "logo": "assets/img/logoer/2d4deb2248.webp",
+     "bar": 0.113
+    },
+    {
+     "navn": "Rocket Lab",
+     "slug": "rocket-lab",
+     "andel": 0.38,
+     "logo": "assets/img/logoer/8a97cb55ec.webp",
+     "bar": 0.1073
+    },
+    {
+     "navn": "Redwire",
+     "slug": "redwire",
+     "andel": 0.27,
+     "logo": "assets/img/logoer/8bb9c0aadf.webp",
+     "bar": 0.0763
+    },
+    {
+     "navn": "Firefly Aerospace",
+     "slug": "firefly-aerospace",
+     "andel": 0.26,
+     "logo": "assets/img/logoer/d180bac9cd.webp",
+     "bar": 0.0734
+    },
+    {
+     "navn": "Satellogic",
+     "slug": "satellogic",
+     "andel": 0.21,
+     "logo": "assets/img/logoer/de6508f13e.webp",
+     "bar": 0.0593
+    },
+    {
+     "navn": "Starfighters Space",
+     "slug": "starfighters-space",
+     "andel": 0.2,
+     "logo": "assets/img/logoer/ead0d3103f.webp",
+     "bar": 0.0565
+    },
+    {
+     "navn": "Spire Global",
+     "slug": "spire-global",
+     "andel": 0.19,
+     "logo": "assets/img/logoer/a834214184.webp",
+     "bar": 0.0537
+    },
+    {
+     "navn": "Voyager Technologies",
+     "slug": "voyager-technologies",
+     "andel": 0.17,
+     "logo": "assets/img/logoer/9ac32ffea7.webp",
+     "bar": 0.048
+    },
+    {
+     "navn": "HawkEye 360",
+     "slug": "hawkeye-360",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/9bb4103dc9.webp",
+     "bar": 0.0339
+    },
+    {
+     "navn": "Howmet Aerospace",
+     "slug": "howmet-aerospace",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/c7acbe56b6.webp",
+     "bar": 0.0339
+    },
+    {
+     "navn": "Karman Space & Defense",
+     "slug": "karman-space-defense",
+     "andel": 0.05,
+     "logo": "assets/img/logoer/724b5c6398.webp",
+     "bar": 0.0141
+    },
+    {
+     "navn": "Iridium Communications",
+     "slug": "iridium-communications",
+     "andel": 0.02,
+     "logo": "assets/img/logoer/a090499165.webp",
+     "bar": 0.0056
+    }
+   ],
+   "antalVist": 18,
+   "oevrige": [],
+   "oevrigeAntal": 0,
+   "alleVist": true,
+   "tidligere": [
+    {
+     "navn": "Globalstar",
+     "slug": "globalstar",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "L3Harris Technologies",
+     "slug": "l3harris-technologies",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    }
+   ],
+   "tidligereAntal": 2,
+   "vaffelRuter": 8,
+   "vaffel": [
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    }
+   ],
+   "vaffelIngen": false
+  },
+  {
+   "id": "fysisk-ai",
+   "navn": "Robotter & fysisk AI",
+   "plads": 6,
+   "andel": 7.36,
+   "antal": 27,
+   "bar": 0.3094,
+   "ringFra": 257.004,
+   "ringTil": 283.5,
+   "stoerste": {
+    "navn": "Tesla",
+    "slug": "tesla",
+    "andel": 1.76,
+    "logo": "assets/img/logoer/69a6d6749c.webp",
+    "bar": 1.0
+   },
+   "selskaber": [
+    {
+     "navn": "Tesla",
+     "slug": "tesla",
+     "andel": 1.76,
+     "logo": "assets/img/logoer/69a6d6749c.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Ford Motor",
+     "slug": "ford-motor",
+     "andel": 0.7,
+     "logo": "assets/img/logoer/ae3f14d060.webp",
+     "bar": 0.3977
+    },
+    {
+     "navn": "Raspberry Pi",
+     "slug": "raspberry-pi",
+     "andel": 0.59,
+     "logo": "assets/img/logoer/d0b387d0ba.webp",
+     "bar": 0.3352
+    },
+    {
+     "navn": "Merlin",
+     "slug": "merlin",
+     "andel": 0.57,
+     "logo": "assets/img/logoer/cbfb947247.webp",
+     "bar": 0.3239
+    },
+    {
+     "navn": "Joby Aviation",
+     "slug": "joby-aviation",
+     "andel": 0.48,
+     "logo": "assets/img/logoer/44f4cec729.webp",
+     "bar": 0.2727
+    },
+    {
+     "navn": "Aeva Technologies",
+     "slug": "aeva-technologies",
+     "andel": 0.35,
+     "logo": "assets/img/logoer/a92ed9d7da.webp",
+     "bar": 0.1989
+    },
+    {
+     "navn": "Symbotic",
+     "slug": "symbotic",
+     "andel": 0.35,
+     "logo": "assets/img/logoer/3dc18d2f25.webp",
+     "bar": 0.1989
+    },
+    {
+     "navn": "Pony AI",
+     "slug": "pony-ai",
+     "andel": 0.24,
+     "logo": "assets/img/logoer/98e519ca1d.webp",
+     "bar": 0.1364
+    },
+    {
+     "navn": "Archer Aviation",
+     "slug": null,
+     "andel": 0.22,
+     "logo": "assets/img/logoer/ff9d84ba67.webp",
+     "bar": 0.125
+    },
+    {
+     "navn": "Shelly",
+     "slug": null,
+     "andel": 0.22,
+     "logo": "assets/img/logoer/e05971bf1e.webp",
+     "bar": 0.125
+    },
+    {
+     "navn": "Ondas Holdings",
+     "slug": null,
+     "andel": 0.21,
+     "logo": "assets/img/logoer/5fe46c2994.webp",
+     "bar": 0.1193
+    },
+    {
+     "navn": "MicroVision",
+     "slug": null,
+     "andel": 0.19,
+     "logo": "assets/img/logoer/51ea966fa7.webp",
+     "bar": 0.108
+    },
+    {
+     "navn": "Unusual Machines",
+     "slug": null,
+     "andel": 0.17,
+     "logo": "assets/img/logoer/bdb5c46e40.webp",
+     "bar": 0.0966
+    },
+    {
+     "navn": "Swarmer",
+     "slug": null,
+     "andel": 0.15,
+     "logo": "assets/img/logoer/02f2196857.webp",
+     "bar": 0.0852
+    },
+    {
+     "navn": "Kodiak AI",
+     "slug": null,
+     "andel": 0.14,
+     "logo": "assets/img/logoer/d7a1a06d42.webp",
+     "bar": 0.0795
+    },
+    {
+     "navn": "Ouster",
+     "slug": null,
+     "andel": 0.13,
+     "logo": "assets/img/logoer/01747fd772.webp",
+     "bar": 0.0739
+    },
+    {
+     "navn": "WeRide",
+     "slug": null,
+     "andel": 0.13,
+     "logo": "assets/img/logoer/21745bda39.webp",
+     "bar": 0.0739
+    },
+    {
+     "navn": "Li Auto",
+     "slug": null,
+     "andel": 0.12,
+     "logo": "assets/img/logoer/05b2c827a9.webp",
+     "bar": 0.0682
+    },
+    {
+     "navn": "General Motors",
+     "slug": null,
+     "andel": 0.11,
+     "logo": "assets/img/logoer/1acd1c785c.webp",
+     "bar": 0.0625
+    },
+    {
+     "navn": "Serve Robotics",
+     "slug": null,
+     "andel": 0.11,
+     "logo": "assets/img/logoer/7c4830637f.webp",
+     "bar": 0.0625
+    },
+    {
+     "navn": "Horizon Robotics",
+     "slug": null,
+     "andel": 0.09,
+     "logo": "assets/img/logoer/217d44d2d4.webp",
+     "bar": 0.0511
+    },
+    {
+     "navn": "Kraken Robotics",
+     "slug": null,
+     "andel": 0.09,
+     "logo": "assets/img/logoer/e5e4ea2e41.webp",
+     "bar": 0.0511
+    },
+    {
+     "navn": "Aurora Innovation",
+     "slug": null,
+     "andel": 0.07,
+     "logo": "assets/img/logoer/96c297e2f4.webp",
+     "bar": 0.0398
+    },
+    {
+     "navn": "Churchill Capital",
+     "slug": null,
+     "andel": 0.07,
+     "logo": "assets/img/logoer/fc84ce9c32.webp",
+     "bar": 0.0398
+    },
+    {
+     "navn": "Rivian Automotive",
+     "slug": null,
+     "andel": 0.04,
+     "logo": "assets/img/logoer/685cecc72b.webp",
+     "bar": 0.0227
+    },
+    {
+     "navn": "Airo Group",
+     "slug": null,
+     "andel": 0.03,
+     "logo": "assets/img/logoer/306ab9c095.webp",
+     "bar": 0.017
+    },
+    {
+     "navn": "Lantronix",
+     "slug": null,
+     "andel": 0.03,
+     "logo": "assets/img/logoer/96363544d1.webp",
+     "bar": 0.017
+    }
+   ],
+   "akk": {
+    "andel": 7.8,
+    "antal": 25,
+    "plads": 7,
+    "stoerste": {
+     "navn": "Tesla",
+     "slug": "tesla",
+     "andel": 1.7,
+     "logo": "assets/img/logoer/69a6d6749c.webp",
+     "bar": 1.0
+    }
+   },
+   "ringSti": "M53.7 233.0 A150 150 0 0 1 54.0 165.7",
+   "forrige": {
+    "id": "rumfart",
+    "navn": "Rumfart"
+   },
+   "naeste": {
+    "id": "raastoffer",
+    "navn": "Råstoffer"
+   },
+   "vist": [
+    {
+     "navn": "Tesla",
+     "slug": "tesla",
+     "andel": 1.76,
+     "logo": "assets/img/logoer/69a6d6749c.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Ford Motor",
+     "slug": "ford-motor",
+     "andel": 0.7,
+     "logo": "assets/img/logoer/ae3f14d060.webp",
+     "bar": 0.3977
+    },
+    {
+     "navn": "Raspberry Pi",
+     "slug": "raspberry-pi",
+     "andel": 0.59,
+     "logo": "assets/img/logoer/d0b387d0ba.webp",
+     "bar": 0.3352
+    },
+    {
+     "navn": "Merlin",
+     "slug": "merlin",
+     "andel": 0.57,
+     "logo": "assets/img/logoer/cbfb947247.webp",
+     "bar": 0.3239
+    },
+    {
+     "navn": "Joby Aviation",
+     "slug": "joby-aviation",
+     "andel": 0.48,
+     "logo": "assets/img/logoer/44f4cec729.webp",
+     "bar": 0.2727
+    },
+    {
+     "navn": "Aeva Technologies",
+     "slug": "aeva-technologies",
+     "andel": 0.35,
+     "logo": "assets/img/logoer/a92ed9d7da.webp",
+     "bar": 0.1989
+    },
+    {
+     "navn": "Symbotic",
+     "slug": "symbotic",
+     "andel": 0.35,
+     "logo": "assets/img/logoer/3dc18d2f25.webp",
+     "bar": 0.1989
+    },
+    {
+     "navn": "Pony AI",
+     "slug": "pony-ai",
+     "andel": 0.24,
+     "logo": "assets/img/logoer/98e519ca1d.webp",
+     "bar": 0.1364
+    }
+   ],
+   "antalVist": 8,
+   "oevrige": [
+    {
+     "navn": "Archer Aviation",
+     "slug": null,
+     "andel": 0.22,
+     "logo": "assets/img/logoer/ff9d84ba67.webp",
+     "bar": 0.125
+    },
+    {
+     "navn": "Shelly",
+     "slug": null,
+     "andel": 0.22,
+     "logo": "assets/img/logoer/e05971bf1e.webp",
+     "bar": 0.125
+    },
+    {
+     "navn": "Ondas Holdings",
+     "slug": null,
+     "andel": 0.21,
+     "logo": "assets/img/logoer/5fe46c2994.webp",
+     "bar": 0.1193
+    },
+    {
+     "navn": "MicroVision",
+     "slug": null,
+     "andel": 0.19,
+     "logo": "assets/img/logoer/51ea966fa7.webp",
+     "bar": 0.108
+    },
+    {
+     "navn": "Unusual Machines",
+     "slug": null,
+     "andel": 0.17,
+     "logo": "assets/img/logoer/bdb5c46e40.webp",
+     "bar": 0.0966
+    },
+    {
+     "navn": "Swarmer",
+     "slug": null,
+     "andel": 0.15,
+     "logo": "assets/img/logoer/02f2196857.webp",
+     "bar": 0.0852
+    },
+    {
+     "navn": "Kodiak AI",
+     "slug": null,
+     "andel": 0.14,
+     "logo": "assets/img/logoer/d7a1a06d42.webp",
+     "bar": 0.0795
+    },
+    {
+     "navn": "Ouster",
+     "slug": null,
+     "andel": 0.13,
+     "logo": "assets/img/logoer/01747fd772.webp",
+     "bar": 0.0739
+    },
+    {
+     "navn": "WeRide",
+     "slug": null,
+     "andel": 0.13,
+     "logo": "assets/img/logoer/21745bda39.webp",
+     "bar": 0.0739
+    },
+    {
+     "navn": "Li Auto",
+     "slug": null,
+     "andel": 0.12,
+     "logo": "assets/img/logoer/05b2c827a9.webp",
+     "bar": 0.0682
+    },
+    {
+     "navn": "General Motors",
+     "slug": null,
+     "andel": 0.11,
+     "logo": "assets/img/logoer/1acd1c785c.webp",
+     "bar": 0.0625
+    },
+    {
+     "navn": "Serve Robotics",
+     "slug": null,
+     "andel": 0.11,
+     "logo": "assets/img/logoer/7c4830637f.webp",
+     "bar": 0.0625
+    },
+    {
+     "navn": "Horizon Robotics",
+     "slug": null,
+     "andel": 0.09,
+     "logo": "assets/img/logoer/217d44d2d4.webp",
+     "bar": 0.0511
+    },
+    {
+     "navn": "Kraken Robotics",
+     "slug": null,
+     "andel": 0.09,
+     "logo": "assets/img/logoer/e5e4ea2e41.webp",
+     "bar": 0.0511
+    },
+    {
+     "navn": "Aurora Innovation",
+     "slug": null,
+     "andel": 0.07,
+     "logo": "assets/img/logoer/96c297e2f4.webp",
+     "bar": 0.0398
+    },
+    {
+     "navn": "Churchill Capital",
+     "slug": null,
+     "andel": 0.07,
+     "logo": "assets/img/logoer/fc84ce9c32.webp",
+     "bar": 0.0398
+    },
+    {
+     "navn": "Rivian Automotive",
+     "slug": null,
+     "andel": 0.04,
+     "logo": "assets/img/logoer/685cecc72b.webp",
+     "bar": 0.0227
+    },
+    {
+     "navn": "Airo Group",
+     "slug": null,
+     "andel": 0.03,
+     "logo": "assets/img/logoer/306ab9c095.webp",
+     "bar": 0.017
+    },
+    {
+     "navn": "Lantronix",
+     "slug": null,
+     "andel": 0.03,
+     "logo": "assets/img/logoer/96363544d1.webp",
+     "bar": 0.017
+    }
+   ],
+   "oevrigeAntal": 19,
+   "alleVist": false,
+   "tidligere": [
+    {
+     "navn": "Hexagon",
+     "slug": "hexagon",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "Intuitive Surgical",
+     "slug": "intuitive-surgical",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "Mobileye Global",
+     "slug": "mobileye-global",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    }
+   ],
+   "tidligereAntal": 3,
+   "vaffelRuter": 7,
+   "vaffel": [
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    }
+   ],
+   "vaffelIngen": false
+  },
+  {
+   "id": "raastoffer",
+   "navn": "Råstoffer",
+   "plads": 7,
+   "andel": 7.02,
+   "antal": 36,
+   "bar": 0.2951,
+   "ringFra": 283.5,
+   "ringTil": 308.772,
+   "stoerste": {
+    "navn": "United States Antimony",
+    "slug": "united-states-antimony",
+    "andel": 0.51,
+    "bar": 1.0
+   },
+   "selskaber": [
+    {
+     "navn": "United States Antimony",
+     "slug": "united-states-antimony",
+     "andel": 0.51,
+     "bar": 1.0
+    },
+    {
+     "navn": "Ero Copper",
+     "slug": "ero-copper",
+     "andel": 0.49,
+     "bar": 0.9608
+    },
+    {
+     "navn": "Huntsman",
+     "slug": "huntsman",
+     "andel": 0.4,
+     "bar": 0.7843
+    },
+    {
+     "navn": "Lynas Rare Earths",
+     "slug": "lynas-rare-earths",
+     "andel": 0.4,
+     "bar": 0.7843
+    },
+    {
+     "navn": "Critical Metals",
+     "slug": "critical-metals",
+     "andel": 0.32,
+     "bar": 0.6275
+    },
+    {
+     "navn": "Energy Fuels",
+     "slug": "energy-fuels",
+     "andel": 0.31,
+     "bar": 0.6078
+    },
+    {
+     "navn": "NioCorp",
+     "slug": "niocorp",
+     "andel": 0.28,
+     "bar": 0.549
+    },
+    {
+     "navn": "First Majestic Silver",
+     "slug": "first-majestic-silver",
+     "andel": 0.27,
+     "bar": 0.5294
+    },
+    {
+     "navn": "Celanese",
+     "slug": null,
+     "andel": 0.26,
+     "bar": 0.5098
+    },
+    {
+     "navn": "Pan American Silver",
+     "slug": null,
+     "andel": 0.26,
+     "bar": 0.5098
+    },
+    {
+     "navn": "Chemours",
+     "slug": null,
+     "andel": 0.24,
+     "logo": "assets/img/logoer/d4f7b7868e.webp",
+     "bar": 0.4706
+    },
+    {
+     "navn": "Hecla Mining",
+     "slug": null,
+     "andel": 0.24,
+     "bar": 0.4706
+    },
+    {
+     "navn": "Coeur Mining",
+     "slug": null,
+     "andel": 0.23,
+     "bar": 0.451
+    },
+    {
+     "navn": "Freeport-McMoRan",
+     "slug": null,
+     "andel": 0.23,
+     "bar": 0.451
+    },
+    {
+     "navn": "MP Materials",
+     "slug": null,
+     "andel": 0.2,
+     "logo": "assets/img/logoer/6d00d3c8c0.webp",
+     "bar": 0.3922
+    },
+    {
+     "navn": "Capstone Copper",
+     "slug": null,
+     "andel": 0.19,
+     "bar": 0.3725
+    },
+    {
+     "navn": "Albemarle",
+     "slug": null,
+     "andel": 0.18,
+     "bar": 0.3529
+    },
+    {
+     "navn": "Arkema",
+     "slug": null,
+     "andel": 0.18,
+     "bar": 0.3529
+    },
+    {
+     "navn": "Sigma Lithium",
+     "slug": null,
+     "andel": 0.18,
+     "bar": 0.3529
+    },
+    {
+     "navn": "American Resources",
+     "slug": null,
+     "andel": 0.17,
+     "bar": 0.3333
+    },
+    {
+     "navn": "Idaho Strategic Resources",
+     "slug": null,
+     "andel": 0.14,
+     "bar": 0.2745
+    },
+    {
+     "navn": "Solstice Advanced Materials",
+     "slug": null,
+     "andel": 0.13,
+     "logo": "assets/img/logoer/579b1a0ab4.webp",
+     "bar": 0.2549
+    },
+    {
+     "navn": "Southern Copper",
+     "slug": null,
+     "andel": 0.13,
+     "bar": 0.2549
+    },
+    {
+     "navn": "American Battery Technology",
+     "slug": null,
+     "andel": 0.11,
+     "bar": 0.2157
+    },
+    {
+     "navn": "Lithium Americas",
+     "slug": null,
+     "andel": 0.11,
+     "bar": 0.2157
+    },
+    {
+     "navn": "Newmont",
+     "slug": null,
+     "andel": 0.11,
+     "bar": 0.2157
+    },
+    {
+     "navn": "Standard Lithium",
+     "slug": null,
+     "andel": 0.11,
+     "bar": 0.2157
+    },
+    {
+     "navn": "USA Rare Earth",
+     "slug": null,
+     "andel": 0.1,
+     "bar": 0.1961
+    },
+    {
+     "navn": "Almonty Industries",
+     "slug": null,
+     "andel": 0.09,
+     "bar": 0.1765
+    },
+    {
+     "navn": "Perpetua Resources",
+     "slug": null,
+     "andel": 0.09,
+     "bar": 0.1765
+    },
+    {
+     "navn": "Trekor Metals",
+     "slug": null,
+     "andel": 0.09,
+     "bar": 0.1765
+    },
+    {
+     "navn": "The Metals Company",
+     "slug": null,
+     "andel": 0.07,
+     "bar": 0.137
+    },
+    {
+     "navn": "Trilogy Metals",
+     "slug": null,
+     "andel": 0.06,
+     "bar": 0.1176
+    },
+    {
+     "navn": "Ivanhoe Electric",
+     "slug": null,
+     "andel": 0.05,
+     "bar": 0.098
+    },
+    {
+     "navn": "Neo Performance Materials",
+     "slug": null,
+     "andel": 0.05,
+     "bar": 0.098
+    },
+    {
+     "navn": "Northern Dynasty Minerals",
+     "slug": null,
+     "andel": 0.04,
+     "bar": 0.0784
+    }
+   ],
+   "akk": {
+    "andel": 8.15,
+    "antal": 36,
+    "plads": 6,
+    "stoerste": {
+     "navn": "United States Antimony",
+     "slug": "united-states-antimony",
+     "andel": 0.46,
+     "bar": 1.0
+    }
+   },
+   "ringSti": "M54.3 164.2 A150 150 0 0 1 82.6 106.7",
+   "forrige": {
+    "id": "fysisk-ai",
+    "navn": "Robotter & fysisk AI"
+   },
+   "naeste": {
+    "id": "fintech",
+    "navn": "Fintech"
+   },
+   "vist": [
+    {
+     "navn": "United States Antimony",
+     "slug": "united-states-antimony",
+     "andel": 0.51,
+     "bar": 1.0
+    },
+    {
+     "navn": "Ero Copper",
+     "slug": "ero-copper",
+     "andel": 0.49,
+     "bar": 0.9608
+    },
+    {
+     "navn": "Huntsman",
+     "slug": "huntsman",
+     "andel": 0.4,
+     "bar": 0.7843
+    },
+    {
+     "navn": "Lynas Rare Earths",
+     "slug": "lynas-rare-earths",
+     "andel": 0.4,
+     "bar": 0.7843
+    },
+    {
+     "navn": "Critical Metals",
+     "slug": "critical-metals",
+     "andel": 0.32,
+     "bar": 0.6275
+    },
+    {
+     "navn": "Energy Fuels",
+     "slug": "energy-fuels",
+     "andel": 0.31,
+     "bar": 0.6078
+    },
+    {
+     "navn": "NioCorp",
+     "slug": "niocorp",
+     "andel": 0.28,
+     "bar": 0.549
+    },
+    {
+     "navn": "First Majestic Silver",
+     "slug": "first-majestic-silver",
+     "andel": 0.27,
+     "bar": 0.5294
+    }
+   ],
+   "antalVist": 8,
+   "oevrige": [
+    {
+     "navn": "Celanese",
+     "slug": null,
+     "andel": 0.26,
+     "bar": 0.5098
+    },
+    {
+     "navn": "Pan American Silver",
+     "slug": null,
+     "andel": 0.26,
+     "bar": 0.5098
+    },
+    {
+     "navn": "Chemours",
+     "slug": null,
+     "andel": 0.24,
+     "logo": "assets/img/logoer/d4f7b7868e.webp",
+     "bar": 0.4706
+    },
+    {
+     "navn": "Hecla Mining",
+     "slug": null,
+     "andel": 0.24,
+     "bar": 0.4706
+    },
+    {
+     "navn": "Coeur Mining",
+     "slug": null,
+     "andel": 0.23,
+     "bar": 0.451
+    },
+    {
+     "navn": "Freeport-McMoRan",
+     "slug": null,
+     "andel": 0.23,
+     "bar": 0.451
+    },
+    {
+     "navn": "MP Materials",
+     "slug": null,
+     "andel": 0.2,
+     "logo": "assets/img/logoer/6d00d3c8c0.webp",
+     "bar": 0.3922
+    },
+    {
+     "navn": "Capstone Copper",
+     "slug": null,
+     "andel": 0.19,
+     "bar": 0.3725
+    },
+    {
+     "navn": "Albemarle",
+     "slug": null,
+     "andel": 0.18,
+     "bar": 0.3529
+    },
+    {
+     "navn": "Arkema",
+     "slug": null,
+     "andel": 0.18,
+     "bar": 0.3529
+    },
+    {
+     "navn": "Sigma Lithium",
+     "slug": null,
+     "andel": 0.18,
+     "bar": 0.3529
+    },
+    {
+     "navn": "American Resources",
+     "slug": null,
+     "andel": 0.17,
+     "bar": 0.3333
+    },
+    {
+     "navn": "Idaho Strategic Resources",
+     "slug": null,
+     "andel": 0.14,
+     "bar": 0.2745
+    },
+    {
+     "navn": "Solstice Advanced Materials",
+     "slug": null,
+     "andel": 0.13,
+     "logo": "assets/img/logoer/579b1a0ab4.webp",
+     "bar": 0.2549
+    },
+    {
+     "navn": "Southern Copper",
+     "slug": null,
+     "andel": 0.13,
+     "bar": 0.2549
+    },
+    {
+     "navn": "American Battery Technology",
+     "slug": null,
+     "andel": 0.11,
+     "bar": 0.2157
+    },
+    {
+     "navn": "Lithium Americas",
+     "slug": null,
+     "andel": 0.11,
+     "bar": 0.2157
+    },
+    {
+     "navn": "Newmont",
+     "slug": null,
+     "andel": 0.11,
+     "bar": 0.2157
+    },
+    {
+     "navn": "Standard Lithium",
+     "slug": null,
+     "andel": 0.11,
+     "bar": 0.2157
+    },
+    {
+     "navn": "USA Rare Earth",
+     "slug": null,
+     "andel": 0.1,
+     "bar": 0.1961
+    },
+    {
+     "navn": "Almonty Industries",
+     "slug": null,
+     "andel": 0.09,
+     "bar": 0.1765
+    },
+    {
+     "navn": "Perpetua Resources",
+     "slug": null,
+     "andel": 0.09,
+     "bar": 0.1765
+    },
+    {
+     "navn": "Trekor Metals",
+     "slug": null,
+     "andel": 0.09,
+     "bar": 0.1765
+    },
+    {
+     "navn": "The Metals Company",
+     "slug": null,
+     "andel": 0.07,
+     "bar": 0.137
+    },
+    {
+     "navn": "Trilogy Metals",
+     "slug": null,
+     "andel": 0.06,
+     "bar": 0.1176
+    },
+    {
+     "navn": "Ivanhoe Electric",
+     "slug": null,
+     "andel": 0.05,
+     "bar": 0.098
+    },
+    {
+     "navn": "Neo Performance Materials",
+     "slug": null,
+     "andel": 0.05,
+     "bar": 0.098
+    },
+    {
+     "navn": "Northern Dynasty Minerals",
+     "slug": null,
+     "andel": 0.04,
+     "bar": 0.0784
+    }
+   ],
+   "oevrigeAntal": 28,
+   "alleVist": false,
+   "tidligere": [],
+   "tidligereAntal": 0,
+   "vaffelRuter": 7,
+   "vaffel": [
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    }
+   ],
+   "vaffelIngen": false
+  },
+  {
+   "id": "fintech",
+   "navn": "Fintech",
+   "plads": 8,
+   "andel": 4.17,
+   "antal": 18,
+   "bar": 0.1753,
+   "ringFra": 308.772,
+   "ringTil": 323.784,
+   "stoerste": {
+    "navn": "SoFi",
+    "slug": "sofi",
+    "andel": 0.7,
+    "bar": 1.0
+   },
+   "selskaber": [
+    {
+     "navn": "SoFi",
+     "slug": "sofi",
+     "andel": 0.7,
+     "bar": 1.0
+    },
+    {
+     "navn": "Klarna",
+     "slug": "klarna",
+     "andel": 0.59,
+     "bar": 0.8429
+    },
+    {
+     "navn": "Upstart",
+     "slug": "upstart",
+     "andel": 0.56,
+     "logo": "assets/img/logoer/d926b3917c.webp",
+     "bar": 0.8
+    },
+    {
+     "navn": "Shift4 Payments",
+     "slug": "shift4-payments",
+     "andel": 0.39,
+     "bar": 0.5571
+    },
+    {
+     "navn": "Root",
+     "slug": "root",
+     "andel": 0.34,
+     "bar": 0.4857
+    },
+    {
+     "navn": "Lemonade",
+     "slug": "lemonade",
+     "andel": 0.29,
+     "logo": "assets/img/logoer/b706fa8dc2.webp",
+     "bar": 0.4143
+    },
+    {
+     "navn": "Chime Financial",
+     "slug": "chime-financial",
+     "andel": 0.23,
+     "bar": 0.3286
+    },
+    {
+     "navn": "Webull",
+     "slug": "webull",
+     "andel": 0.23,
+     "bar": 0.3286
+    },
+    {
+     "navn": "Nu",
+     "slug": null,
+     "andel": 0.22,
+     "bar": 0.3143
+    },
+    {
+     "navn": "Robinhood",
+     "slug": null,
+     "andel": 0.17,
+     "bar": 0.2429
+    },
+    {
+     "navn": "Figure Technology Solutions",
+     "slug": null,
+     "andel": 0.09,
+     "bar": 0.1286
+    },
+    {
+     "navn": "Global-e",
+     "slug": null,
+     "andel": 0.07,
+     "bar": 0.1
+    },
+    {
+     "navn": "Affirm",
+     "slug": null,
+     "andel": 0.06,
+     "bar": 0.0857
+    },
+    {
+     "navn": "Futu",
+     "slug": null,
+     "andel": 0.06,
+     "bar": 0.0857
+    },
+    {
+     "navn": "Kaspi.kz",
+     "slug": null,
+     "andel": 0.06,
+     "bar": 0.0857
+    },
+    {
+     "navn": "Ategrity Specialty Holdings",
+     "slug": null,
+     "andel": 0.05,
+     "bar": 0.0714
+    },
+    {
+     "navn": "Pagaya Technologies",
+     "slug": null,
+     "andel": 0.03,
+     "bar": 0.0429
+    },
+    {
+     "navn": "dLocal",
+     "slug": null,
+     "andel": 0.03,
+     "bar": 0.0429
+    }
+   ],
+   "akk": {
+    "andel": 3.34,
+    "antal": 17,
+    "plads": 9,
+    "stoerste": {
+     "navn": "SoFi",
+     "slug": "sofi",
+     "andel": 0.51,
+     "bar": 1.0
+    }
+   },
+   "ringSti": "M83.5 105.5 A150 150 0 0 1 110.7 79.4",
+   "forrige": {
+    "id": "raastoffer",
+    "navn": "Råstoffer"
+   },
+   "naeste": {
+    "id": "krypto",
+    "navn": "Krypto"
+   },
+   "vist": [
+    {
+     "navn": "SoFi",
+     "slug": "sofi",
+     "andel": 0.7,
+     "bar": 1.0
+    },
+    {
+     "navn": "Klarna",
+     "slug": "klarna",
+     "andel": 0.59,
+     "bar": 0.8429
+    },
+    {
+     "navn": "Upstart",
+     "slug": "upstart",
+     "andel": 0.56,
+     "logo": "assets/img/logoer/d926b3917c.webp",
+     "bar": 0.8
+    },
+    {
+     "navn": "Shift4 Payments",
+     "slug": "shift4-payments",
+     "andel": 0.39,
+     "bar": 0.5571
+    },
+    {
+     "navn": "Root",
+     "slug": "root",
+     "andel": 0.34,
+     "bar": 0.4857
+    },
+    {
+     "navn": "Lemonade",
+     "slug": "lemonade",
+     "andel": 0.29,
+     "logo": "assets/img/logoer/b706fa8dc2.webp",
+     "bar": 0.4143
+    },
+    {
+     "navn": "Chime Financial",
+     "slug": "chime-financial",
+     "andel": 0.23,
+     "bar": 0.3286
+    },
+    {
+     "navn": "Webull",
+     "slug": "webull",
+     "andel": 0.23,
+     "bar": 0.3286
+    }
+   ],
+   "antalVist": 8,
+   "oevrige": [
+    {
+     "navn": "Nu",
+     "slug": null,
+     "andel": 0.22,
+     "bar": 0.3143
+    },
+    {
+     "navn": "Robinhood",
+     "slug": null,
+     "andel": 0.17,
+     "bar": 0.2429
+    },
+    {
+     "navn": "Figure Technology Solutions",
+     "slug": null,
+     "andel": 0.09,
+     "bar": 0.1286
+    },
+    {
+     "navn": "Global-e",
+     "slug": null,
+     "andel": 0.07,
+     "bar": 0.1
+    },
+    {
+     "navn": "Affirm",
+     "slug": null,
+     "andel": 0.06,
+     "bar": 0.0857
+    },
+    {
+     "navn": "Futu",
+     "slug": null,
+     "andel": 0.06,
+     "bar": 0.0857
+    },
+    {
+     "navn": "Kaspi.kz",
+     "slug": null,
+     "andel": 0.06,
+     "bar": 0.0857
+    },
+    {
+     "navn": "Ategrity Specialty Holdings",
+     "slug": null,
+     "andel": 0.05,
+     "bar": 0.0714
+    },
+    {
+     "navn": "Pagaya Technologies",
+     "slug": null,
+     "andel": 0.03,
+     "bar": 0.0429
+    },
+    {
+     "navn": "dLocal",
+     "slug": null,
+     "andel": 0.03,
+     "bar": 0.0429
+    }
+   ],
+   "oevrigeAntal": 10,
+   "alleVist": false,
+   "tidligere": [],
+   "tidligereAntal": 0,
+   "vaffelRuter": 4,
+   "vaffel": [
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    }
+   ],
+   "vaffelIngen": false
+  },
+  {
+   "id": "krypto",
+   "navn": "Krypto",
+   "plads": 9,
+   "andel": 3.67,
+   "antal": 17,
+   "bar": 0.1543,
+   "ringFra": 323.784,
+   "ringTil": 336.996,
+   "stoerste": {
+    "navn": "Bitdeer Technologies Group",
+    "slug": "bitdeer-technologies-group",
+    "andel": 0.45,
+    "logo": "assets/img/logoer/232d32ac89.webp",
+    "bar": 1.0
+   },
+   "selskaber": [
+    {
+     "navn": "Bitdeer Technologies Group",
+     "slug": "bitdeer-technologies-group",
+     "andel": 0.45,
+     "logo": "assets/img/logoer/232d32ac89.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "CleanSpark",
+     "slug": "cleanspark",
+     "andel": 0.45,
+     "logo": "assets/img/logoer/3fe8934664.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Coinbase",
+     "slug": "coinbase",
+     "andel": 0.44,
+     "bar": 0.9778
+    },
+    {
+     "navn": "Galaxy Digital",
+     "slug": "galaxy-digital",
+     "andel": 0.34,
+     "logo": "assets/img/logoer/9d23c4d489.webp",
+     "bar": 0.7556
+    },
+    {
+     "navn": "Circle Internet Group",
+     "slug": "circle-internet-group",
+     "andel": 0.32,
+     "bar": 0.7111
+    },
+    {
+     "navn": "Riot Platforms",
+     "slug": "riot-platforms",
+     "andel": 0.28,
+     "logo": "assets/img/logoer/ecba7af17a.webp",
+     "bar": 0.6222
+    },
+    {
+     "navn": "Gemini Space Station",
+     "slug": "gemini-space-station",
+     "andel": 0.26,
+     "bar": 0.5778
+    },
+    {
+     "navn": "Keel Infrastructure",
+     "slug": "keel-infrastructure",
+     "andel": 0.22,
+     "logo": "assets/img/logoer/842387a5b6.webp",
+     "bar": 0.4889
+    },
+    {
+     "navn": "Hyperliquid Strategies",
+     "slug": null,
+     "andel": 0.19,
+     "bar": 0.4222
+    },
+    {
+     "navn": "Bit Digital",
+     "slug": null,
+     "andel": 0.13,
+     "logo": "assets/img/logoer/f693f57c28.webp",
+     "bar": 0.2889
+    },
+    {
+     "navn": "Bitmine Immersion Technologies",
+     "slug": null,
+     "andel": 0.12,
+     "bar": 0.2667
+    },
+    {
+     "navn": "CSLM Digital Asset Acquisition Corp III",
+     "slug": null,
+     "andel": 0.1,
+     "bar": 0.2222
+    },
+    {
+     "navn": "Bullish",
+     "slug": null,
+     "andel": 0.08,
+     "bar": 0.1778
+    },
+    {
+     "navn": "Sharplink",
+     "slug": null,
+     "andel": 0.08,
+     "bar": 0.1778
+    },
+    {
+     "navn": "Strategy",
+     "slug": null,
+     "andel": 0.08,
+     "bar": 0.1778
+    },
+    {
+     "navn": "Upexi",
+     "slug": null,
+     "andel": 0.08,
+     "bar": 0.1778
+    },
+    {
+     "navn": "DeFi Development",
+     "slug": null,
+     "andel": 0.05,
+     "bar": 0.1111
+    }
+   ],
+   "akk": {
+    "andel": 3.43,
+    "antal": 17,
+    "plads": 8,
+    "stoerste": {
+     "navn": "Coinbase",
+     "slug": "coinbase",
+     "andel": 0.43,
+     "bar": 1.0
+    }
+   },
+   "ringSti": "M112.0 78.5 A150 150 0 0 1 140.7 62.2",
+   "forrige": {
+    "id": "fintech",
+    "navn": "Fintech"
+   },
+   "naeste": {
+    "id": "software",
+    "navn": "Software & AI"
+   },
+   "vist": [
+    {
+     "navn": "Bitdeer Technologies Group",
+     "slug": "bitdeer-technologies-group",
+     "andel": 0.45,
+     "logo": "assets/img/logoer/232d32ac89.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "CleanSpark",
+     "slug": "cleanspark",
+     "andel": 0.45,
+     "logo": "assets/img/logoer/3fe8934664.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Coinbase",
+     "slug": "coinbase",
+     "andel": 0.44,
+     "bar": 0.9778
+    },
+    {
+     "navn": "Galaxy Digital",
+     "slug": "galaxy-digital",
+     "andel": 0.34,
+     "logo": "assets/img/logoer/9d23c4d489.webp",
+     "bar": 0.7556
+    },
+    {
+     "navn": "Circle Internet Group",
+     "slug": "circle-internet-group",
+     "andel": 0.32,
+     "bar": 0.7111
+    },
+    {
+     "navn": "Riot Platforms",
+     "slug": "riot-platforms",
+     "andel": 0.28,
+     "logo": "assets/img/logoer/ecba7af17a.webp",
+     "bar": 0.6222
+    },
+    {
+     "navn": "Gemini Space Station",
+     "slug": "gemini-space-station",
+     "andel": 0.26,
+     "bar": 0.5778
+    },
+    {
+     "navn": "Keel Infrastructure",
+     "slug": "keel-infrastructure",
+     "andel": 0.22,
+     "logo": "assets/img/logoer/842387a5b6.webp",
+     "bar": 0.4889
+    }
+   ],
+   "antalVist": 8,
+   "oevrige": [
+    {
+     "navn": "Hyperliquid Strategies",
+     "slug": null,
+     "andel": 0.19,
+     "bar": 0.4222
+    },
+    {
+     "navn": "Bit Digital",
+     "slug": null,
+     "andel": 0.13,
+     "logo": "assets/img/logoer/f693f57c28.webp",
+     "bar": 0.2889
+    },
+    {
+     "navn": "Bitmine Immersion Technologies",
+     "slug": null,
+     "andel": 0.12,
+     "bar": 0.2667
+    },
+    {
+     "navn": "CSLM Digital Asset Acquisition Corp III",
+     "slug": null,
+     "andel": 0.1,
+     "bar": 0.2222
+    },
+    {
+     "navn": "Bullish",
+     "slug": null,
+     "andel": 0.08,
+     "bar": 0.1778
+    },
+    {
+     "navn": "Sharplink",
+     "slug": null,
+     "andel": 0.08,
+     "bar": 0.1778
+    },
+    {
+     "navn": "Strategy",
+     "slug": null,
+     "andel": 0.08,
+     "bar": 0.1778
+    },
+    {
+     "navn": "Upexi",
+     "slug": null,
+     "andel": 0.08,
+     "bar": 0.1778
+    },
+    {
+     "navn": "DeFi Development",
+     "slug": null,
+     "andel": 0.05,
+     "bar": 0.1111
+    }
+   ],
+   "oevrigeAntal": 9,
+   "alleVist": false,
+   "tidligere": [],
+   "tidligereAntal": 0,
+   "vaffelRuter": 4,
+   "vaffel": [
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    }
+   ],
+   "vaffelIngen": false
+  },
+  {
+   "id": "software",
+   "navn": "Software & AI",
+   "plads": 10,
+   "andel": 2.13,
+   "antal": 15,
+   "bar": 0.0895,
+   "ringFra": 336.996,
+   "ringTil": 344.664,
+   "stoerste": {
+    "navn": "SoundHound AI",
+    "slug": "soundhound-ai",
+    "andel": 0.78,
+    "logo": "assets/img/logoer/ccdc9e4e50.webp",
+    "bar": 1.0
+   },
+   "selskaber": [
+    {
+     "navn": "SoundHound AI",
+     "slug": "soundhound-ai",
+     "andel": 0.78,
+     "logo": "assets/img/logoer/ccdc9e4e50.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Palantir",
+     "slug": "palantir",
+     "andel": 0.32,
+     "logo": "assets/img/logoer/ddbd7bb802.webp",
+     "bar": 0.4103
+    },
+    {
+     "navn": "Unity Software",
+     "slug": "unity-software",
+     "andel": 0.27,
+     "logo": "assets/img/logoer/cd0d4faaf6.webp",
+     "bar": 0.3462
+    },
+    {
+     "navn": "Innodata",
+     "slug": "innodata",
+     "andel": 0.22,
+     "logo": "assets/img/logoer/4c267b5466.webp",
+     "bar": 0.2821
+    },
+    {
+     "navn": "Navan",
+     "slug": "navan",
+     "andel": 0.18,
+     "logo": "assets/img/logoer/9512417995.webp",
+     "bar": 0.2308
+    },
+    {
+     "navn": "Snowflake",
+     "slug": "snowflake",
+     "andel": 0.07,
+     "logo": "assets/img/logoer/b4fa744531.webp",
+     "bar": 0.0897
+    },
+    {
+     "navn": "Wix.com",
+     "slug": "wix-com",
+     "andel": 0.07,
+     "logo": "assets/img/logoer/34352ee693.webp",
+     "bar": 0.0897
+    },
+    {
+     "navn": "Figma",
+     "slug": "figma",
+     "andel": 0.04,
+     "logo": "assets/img/logoer/5197e2fc2a.webp",
+     "bar": 0.0513
+    },
+    {
+     "navn": "Palo Alto Networks",
+     "slug": null,
+     "andel": 0.04,
+     "logo": "assets/img/logoer/f05045b720.webp",
+     "bar": 0.0513
+    },
+    {
+     "navn": "Rubrik",
+     "slug": null,
+     "andel": 0.04,
+     "logo": "assets/img/logoer/7fa11c1750.webp",
+     "bar": 0.0513
+    },
+    {
+     "navn": "Cloudflare",
+     "slug": null,
+     "andel": 0.03,
+     "logo": "assets/img/logoer/8074b65bbc.webp",
+     "bar": 0.0385
+    },
+    {
+     "navn": "Samsara",
+     "slug": null,
+     "andel": 0.03,
+     "logo": "assets/img/logoer/62632fbeff.webp",
+     "bar": 0.0385
+    },
+    {
+     "navn": "Netskope",
+     "slug": null,
+     "andel": 0.02,
+     "logo": "assets/img/logoer/afc9e13926.webp",
+     "bar": 0.0256
+    },
+    {
+     "navn": "CrowdStrike",
+     "slug": null,
+     "andel": 0.01,
+     "logo": "assets/img/logoer/014afe4b37.webp",
+     "bar": 0.0128
+    },
+    {
+     "navn": "SailPoint",
+     "slug": null,
+     "andel": 0.01,
+     "logo": "assets/img/logoer/9d816778e8.webp",
+     "bar": 0.0128
+    }
+   ],
+   "akk": {
+    "andel": 1.97,
+    "antal": 13,
+    "plads": 10,
+    "stoerste": {
+     "navn": "SoundHound AI",
+     "slug": "soundhound-ai",
+     "andel": 0.72,
+     "logo": "assets/img/logoer/ccdc9e4e50.webp",
+     "bar": 1.0
+    }
+   },
+   "ringSti": "M142.1 61.6 A150 150 0 0 1 159.6 55.6",
+   "forrige": {
+    "id": "krypto",
+    "navn": "Krypto"
+   },
+   "naeste": {
+    "id": "sundhed",
+    "navn": "Sundhed og biotek"
+   },
+   "vist": [
+    {
+     "navn": "SoundHound AI",
+     "slug": "soundhound-ai",
+     "andel": 0.78,
+     "logo": "assets/img/logoer/ccdc9e4e50.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Palantir",
+     "slug": "palantir",
+     "andel": 0.32,
+     "logo": "assets/img/logoer/ddbd7bb802.webp",
+     "bar": 0.4103
+    },
+    {
+     "navn": "Unity Software",
+     "slug": "unity-software",
+     "andel": 0.27,
+     "logo": "assets/img/logoer/cd0d4faaf6.webp",
+     "bar": 0.3462
+    },
+    {
+     "navn": "Innodata",
+     "slug": "innodata",
+     "andel": 0.22,
+     "logo": "assets/img/logoer/4c267b5466.webp",
+     "bar": 0.2821
+    },
+    {
+     "navn": "Navan",
+     "slug": "navan",
+     "andel": 0.18,
+     "logo": "assets/img/logoer/9512417995.webp",
+     "bar": 0.2308
+    },
+    {
+     "navn": "Snowflake",
+     "slug": "snowflake",
+     "andel": 0.07,
+     "logo": "assets/img/logoer/b4fa744531.webp",
+     "bar": 0.0897
+    },
+    {
+     "navn": "Wix.com",
+     "slug": "wix-com",
+     "andel": 0.07,
+     "logo": "assets/img/logoer/34352ee693.webp",
+     "bar": 0.0897
+    },
+    {
+     "navn": "Figma",
+     "slug": "figma",
+     "andel": 0.04,
+     "logo": "assets/img/logoer/5197e2fc2a.webp",
+     "bar": 0.0513
+    }
+   ],
+   "antalVist": 8,
+   "oevrige": [
+    {
+     "navn": "Palo Alto Networks",
+     "slug": null,
+     "andel": 0.04,
+     "logo": "assets/img/logoer/f05045b720.webp",
+     "bar": 0.0513
+    },
+    {
+     "navn": "Rubrik",
+     "slug": null,
+     "andel": 0.04,
+     "logo": "assets/img/logoer/7fa11c1750.webp",
+     "bar": 0.0513
+    },
+    {
+     "navn": "Cloudflare",
+     "slug": null,
+     "andel": 0.03,
+     "logo": "assets/img/logoer/8074b65bbc.webp",
+     "bar": 0.0385
+    },
+    {
+     "navn": "Samsara",
+     "slug": null,
+     "andel": 0.03,
+     "logo": "assets/img/logoer/62632fbeff.webp",
+     "bar": 0.0385
+    },
+    {
+     "navn": "Netskope",
+     "slug": null,
+     "andel": 0.02,
+     "logo": "assets/img/logoer/afc9e13926.webp",
+     "bar": 0.0256
+    },
+    {
+     "navn": "CrowdStrike",
+     "slug": null,
+     "andel": 0.01,
+     "logo": "assets/img/logoer/014afe4b37.webp",
+     "bar": 0.0128
+    },
+    {
+     "navn": "SailPoint",
+     "slug": null,
+     "andel": 0.01,
+     "logo": "assets/img/logoer/9d816778e8.webp",
+     "bar": 0.0128
+    }
+   ],
+   "oevrigeAntal": 7,
+   "alleVist": false,
+   "tidligere": [
+    {
+     "navn": "Accenture",
+     "slug": "accenture",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "Adobe",
+     "slug": "adobe",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "Altair Engineering",
+     "slug": "altair-engineering",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "Ansys",
+     "slug": "ansys",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "AppFolio",
+     "slug": "appfolio",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "Atlassian",
+     "slug": "atlassian",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "Autodesk",
+     "slug": "autodesk",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "Baidu",
+     "slug": "baidu",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "Bentley Systems",
+     "slug": "bentley-systems",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "Blend Labs",
+     "slug": "blend-labs",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "Confluent",
+     "slug": "confluent",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "Dassault Systemes",
+     "slug": "dassault-systemes",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "Datadog",
+     "slug": "datadog",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "Fastly",
+     "slug": "fastly",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "Five9",
+     "slug": "five9",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "Fortinet",
+     "slug": "fortinet",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "Gartner",
+     "slug": "gartner",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "GitLab",
+     "slug": "gitlab",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "GoDaddy",
+     "slug": "godaddy",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "HubSpot",
+     "slug": "hubspot",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "Intuit",
+     "slug": "intuit",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "Jamf",
+     "slug": "jamf",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "Klaviyo",
+     "slug": "klaviyo",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "Matterport",
+     "slug": "matterport",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "monday.com",
+     "slug": "monday-com",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "MongoDB",
+     "slug": "mongodb",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "Okta",
+     "slug": "okta",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "OneStream",
+     "slug": "onestream",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "Paycom Software",
+     "slug": "paycom-software",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "Procore Technologies",
+     "slug": "procore-technologies",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "PTC",
+     "slug": "ptc",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "Qualys",
+     "slug": "qualys",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "Salesforce",
+     "slug": "salesforce",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "SentinelOne",
+     "slug": "sentinelone",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "ServiceNow",
+     "slug": "servicenow",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "Tenable",
+     "slug": "tenable",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "UiPath",
+     "slug": "uipath",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "Yubico",
+     "slug": "yubico",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "Zoom Communications",
+     "slug": "zoom-communications",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    },
+    {
+     "navn": "Zscaler",
+     "slug": "zscaler",
+     "andel": 0.0,
+     "andelAKK": 0.0
+    }
+   ],
+   "tidligereAntal": 40,
+   "vaffelRuter": 2,
+   "vaffel": [
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    }
+   ],
+   "vaffelIngen": false
+  },
+  {
+   "id": "sundhed",
+   "navn": "Sundhed og biotek",
+   "plads": 11,
+   "andel": 1.84,
+   "antal": 12,
+   "bar": 0.0773,
+   "ringFra": 344.664,
+   "ringTil": 351.288,
+   "stoerste": {
+    "navn": "Hims & Hers Health",
+    "slug": "hims-hers-health",
+    "andel": 0.51,
+    "bar": 1.0
+   },
+   "selskaber": [
+    {
+     "navn": "Hims & Hers Health",
+     "slug": "hims-hers-health",
+     "andel": 0.51,
+     "bar": 1.0
+    },
+    {
+     "navn": "BioNTech",
+     "slug": "biontech",
+     "andel": 0.36,
+     "bar": 0.7059
+    },
+    {
+     "navn": "Eli Lilly",
+     "slug": "eli-lilly",
+     "andel": 0.26,
+     "bar": 0.5098
+    },
+    {
+     "navn": "Intellia Therapeutics",
+     "slug": "intellia-therapeutics",
+     "andel": 0.18,
+     "bar": 0.3529
+    },
+    {
+     "navn": "Tempus AI",
+     "slug": "tempus-ai",
+     "andel": 0.13,
+     "logo": "assets/img/logoer/a678549283.webp",
+     "bar": 0.2549
+    },
+    {
+     "navn": "Bachem",
+     "slug": "bachem",
+     "andel": 0.11,
+     "bar": 0.2157
+    },
+    {
+     "navn": "CRISPR Therapeutics",
+     "slug": "crispr-therapeutics",
+     "andel": 0.09,
+     "bar": 0.1765
+    },
+    {
+     "navn": "Omada Health",
+     "slug": "omada-health",
+     "andel": 0.09,
+     "bar": 0.1765
+    },
+    {
+     "navn": "LifeMD",
+     "slug": null,
+     "andel": 0.05,
+     "bar": 0.098
+    },
+    {
+     "navn": "Hinge Health",
+     "slug": null,
+     "andel": 0.03,
+     "bar": 0.0588
+    },
+    {
+     "navn": "Oscar Health",
+     "slug": null,
+     "andel": 0.02,
+     "bar": 0.0392
+    },
+    {
+     "navn": "AbCellera Biologics",
+     "slug": null,
+     "andel": 0.01,
+     "bar": 0.0196
+    }
+   ],
+   "akk": {
+    "andel": 1.78,
+    "antal": 12,
+    "plads": 12,
+    "stoerste": {
+     "navn": "Hims & Hers Health",
+     "slug": "hims-hers-health",
+     "andel": 0.42,
+     "bar": 1.0
+    }
+   },
+   "ringSti": "M161.1 55.1 A150 150 0 0 1 176.5 51.9",
+   "forrige": {
+    "id": "software",
+    "navn": "Software & AI"
+   },
+   "naeste": {
+    "id": "kvante",
+    "navn": "Kvantecomputere"
+   },
+   "vist": [
+    {
+     "navn": "Hims & Hers Health",
+     "slug": "hims-hers-health",
+     "andel": 0.51,
+     "bar": 1.0
+    },
+    {
+     "navn": "BioNTech",
+     "slug": "biontech",
+     "andel": 0.36,
+     "bar": 0.7059
+    },
+    {
+     "navn": "Eli Lilly",
+     "slug": "eli-lilly",
+     "andel": 0.26,
+     "bar": 0.5098
+    },
+    {
+     "navn": "Intellia Therapeutics",
+     "slug": "intellia-therapeutics",
+     "andel": 0.18,
+     "bar": 0.3529
+    },
+    {
+     "navn": "Tempus AI",
+     "slug": "tempus-ai",
+     "andel": 0.13,
+     "logo": "assets/img/logoer/a678549283.webp",
+     "bar": 0.2549
+    },
+    {
+     "navn": "Bachem",
+     "slug": "bachem",
+     "andel": 0.11,
+     "bar": 0.2157
+    },
+    {
+     "navn": "CRISPR Therapeutics",
+     "slug": "crispr-therapeutics",
+     "andel": 0.09,
+     "bar": 0.1765
+    },
+    {
+     "navn": "Omada Health",
+     "slug": "omada-health",
+     "andel": 0.09,
+     "bar": 0.1765
+    }
+   ],
+   "antalVist": 8,
+   "oevrige": [
+    {
+     "navn": "LifeMD",
+     "slug": null,
+     "andel": 0.05,
+     "bar": 0.098
+    },
+    {
+     "navn": "Hinge Health",
+     "slug": null,
+     "andel": 0.03,
+     "bar": 0.0588
+    },
+    {
+     "navn": "Oscar Health",
+     "slug": null,
+     "andel": 0.02,
+     "bar": 0.0392
+    },
+    {
+     "navn": "AbCellera Biologics",
+     "slug": null,
+     "andel": 0.01,
+     "bar": 0.0196
+    }
+   ],
+   "oevrigeAntal": 4,
+   "alleVist": false,
+   "tidligere": [],
+   "tidligereAntal": 0,
+   "vaffelRuter": 2,
+   "vaffel": [
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    }
+   ],
+   "vaffelIngen": false
+  },
+  {
+   "id": "kvante",
+   "navn": "Kvantecomputere",
+   "plads": 12,
+   "andel": 1.63,
+   "antal": 7,
+   "bar": 0.0685,
+   "ringFra": 351.288,
+   "ringTil": 357.156,
+   "stoerste": {
+    "navn": "Oxford Instruments",
+    "slug": "oxford-instruments",
+    "andel": 0.47,
+    "logo": "assets/img/logoer/25a1fbdfb2.webp",
+    "bar": 1.0
+   },
+   "selskaber": [
+    {
+     "navn": "Oxford Instruments",
+     "slug": "oxford-instruments",
+     "andel": 0.47,
+     "logo": "assets/img/logoer/25a1fbdfb2.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Quantum Computing",
+     "slug": "quantum-computing",
+     "andel": 0.31,
+     "logo": "assets/img/logoer/3f574bae01.webp",
+     "bar": 0.6596
+    },
+    {
+     "navn": "Quantinuum",
+     "slug": "quantinuum",
+     "andel": 0.24,
+     "logo": "assets/img/logoer/6d1f1222ac.webp",
+     "bar": 0.5106
+    },
+    {
+     "navn": "D-Wave Quantum",
+     "slug": "d-wave-quantum",
+     "andel": 0.19,
+     "logo": "assets/img/logoer/a45fccae65.webp",
+     "bar": 0.4043
+    },
+    {
+     "navn": "Rigetti Computing",
+     "slug": "rigetti-computing",
+     "andel": 0.18,
+     "logo": "assets/img/logoer/0d730480c3.webp",
+     "bar": 0.383
+    },
+    {
+     "navn": "Infleqtion",
+     "slug": "infleqtion",
+     "andel": 0.14,
+     "logo": "assets/img/logoer/9a3e974f72.webp",
+     "bar": 0.2979
+    },
+    {
+     "navn": "IonQ",
+     "slug": "ionq",
+     "andel": 0.1,
+     "logo": "assets/img/logoer/4fc209b71b.webp",
+     "bar": 0.2128
+    }
+   ],
+   "akk": {
+    "andel": 1.89,
+    "antal": 7,
+    "plads": 11,
+    "stoerste": {
+     "navn": "Oxford Instruments",
+     "slug": "oxford-instruments",
+     "andel": 0.45,
+     "logo": "assets/img/logoer/25a1fbdfb2.webp",
+     "bar": 1.0
+    }
+   },
+   "ringSti": "M178.1 51.6 A150 150 0 0 1 191.8 50.2",
+   "forrige": {
+    "id": "sundhed",
+    "navn": "Sundhed og biotek"
+   },
+   "naeste": null,
+   "vist": [
+    {
+     "navn": "Oxford Instruments",
+     "slug": "oxford-instruments",
+     "andel": 0.47,
+     "logo": "assets/img/logoer/25a1fbdfb2.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Quantum Computing",
+     "slug": "quantum-computing",
+     "andel": 0.31,
+     "logo": "assets/img/logoer/3f574bae01.webp",
+     "bar": 0.6596
+    },
+    {
+     "navn": "Quantinuum",
+     "slug": "quantinuum",
+     "andel": 0.24,
+     "logo": "assets/img/logoer/6d1f1222ac.webp",
+     "bar": 0.5106
+    },
+    {
+     "navn": "D-Wave Quantum",
+     "slug": "d-wave-quantum",
+     "andel": 0.19,
+     "logo": "assets/img/logoer/a45fccae65.webp",
+     "bar": 0.4043
+    },
+    {
+     "navn": "Rigetti Computing",
+     "slug": "rigetti-computing",
+     "andel": 0.18,
+     "logo": "assets/img/logoer/0d730480c3.webp",
+     "bar": 0.383
+    },
+    {
+     "navn": "Infleqtion",
+     "slug": "infleqtion",
+     "andel": 0.14,
+     "logo": "assets/img/logoer/9a3e974f72.webp",
+     "bar": 0.2979
+    },
+    {
+     "navn": "IonQ",
+     "slug": "ionq",
+     "andel": 0.1,
+     "logo": "assets/img/logoer/4fc209b71b.webp",
+     "bar": 0.2128
+    }
+   ],
+   "antalVist": 7,
+   "oevrige": [],
+   "oevrigeAntal": 0,
+   "alleVist": true,
+   "tidligere": [],
+   "tidligereAntal": 0,
+   "vaffelRuter": 2,
+   "vaffel": [
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "ja"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    },
+    {
+     "fyldt": "nej"
+    }
+   ],
+   "vaffelIngen": false
+  }
+ ],
+ "top10": {
+  "antal": 10,
+  "sum": 14.87,
+  "liste": [
+   {
+    "navn": "SpaceX",
+    "slug": "spacex",
+    "andel": 3.54,
+    "logo": "assets/img/logoer/d55f831486.webp",
+    "bar": 1.0,
+    "plads": 1,
+    "tema": "rumfart",
+    "temaNavn": "Rumfart"
+   },
+   {
+    "navn": "Tesla",
+    "slug": "tesla",
+    "andel": 1.76,
+    "logo": "assets/img/logoer/69a6d6749c.webp",
+    "bar": 0.4972,
+    "plads": 2,
+    "tema": "fysisk-ai",
+    "temaNavn": "Robotter & fysisk AI"
+   },
+   {
+    "navn": "SoftBank Group",
+    "slug": "softbank-group",
+    "andel": 1.68,
+    "logo": "assets/img/logoer/47f8edf10d.svg",
+    "bar": 0.4746,
+    "plads": 3,
+    "tema": "platforme",
+    "temaNavn": "Platformsøkonomi"
+   },
+   {
+    "navn": "Samsung Electronics",
+    "slug": "samsung-electronics",
+    "andel": 1.43,
+    "bar": 0.404,
+    "plads": 4,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Carvana",
+    "slug": "carvana",
+    "andel": 1.29,
+    "bar": 0.3644,
+    "plads": 5,
+    "tema": "platforme",
+    "temaNavn": "Platformsøkonomi"
+   },
+   {
+    "navn": "AppLovin",
+    "slug": "applovin",
+    "andel": 1.15,
+    "logo": "assets/img/logoer/0563db3d84.webp",
+    "bar": 0.3249,
+    "plads": 6,
+    "tema": "platforme",
+    "temaNavn": "Platformsøkonomi"
+   },
+   {
+    "navn": "SK hynix",
+    "slug": "sk-hynix",
+    "andel": 1.07,
+    "bar": 0.3023,
+    "plads": 7,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Sea",
+    "slug": "sea",
+    "andel": 1.05,
+    "bar": 0.2966,
+    "plads": 8,
+    "tema": "platforme",
+    "temaNavn": "Platformsøkonomi"
+   },
+   {
+    "navn": "Sivers Semiconductors",
+    "slug": "sivers-semiconductors",
+    "andel": 0.96,
+    "logo": "assets/img/logoer/db445c4b44.webp",
+    "bar": 0.2712,
+    "plads": 9,
+    "tema": "datacenter",
+    "temaNavn": "Datacentre"
+   },
+   {
+    "navn": "Taiyo Yuden",
+    "slug": "taiyo-yuden",
+    "andel": 0.94,
+    "bar": 0.2655,
+    "plads": 10,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   }
+  ],
+  "oevrigeAntal": 363,
+  "oevrigeHoejst": 0.91,
+  "halvring": {
+   "spor": "M24.0 118.0 A96 96 0 0 1 216.0 118.0",
+   "bue": "M24.0 118.0 A96 96 0 0 1 34.3 74.8"
+  }
+ },
+ "rest": {
+  "iAlt": 0.79,
+  "udenTema": 0.79,
+  "udenTemaAntal": 1,
+  "kontanterOgKonti": 0.07,
+  "afrunding": -0.07
+ },
+ "restAKK": {
+  "udenTema": 0.92,
+  "udenTemaAntal": 1
+ },
+ "selskaber": {
+  "samsung-electronics": {
+   "navn": "Samsung Electronics",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 1.43,
+   "andelAKK": 1.39,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 1,
+   "antalITema": 75,
+   "fondsPlads": 4,
+   "top10Plads": 4,
+   "naeste": {
+    "slug": "sk-hynix",
+    "navn": "SK hynix"
+   }
+  },
+  "sk-hynix": {
+   "navn": "SK hynix",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 1.07,
+   "andelAKK": 1.15,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 2,
+   "antalITema": 75,
+   "fondsPlads": 7,
+   "top10Plads": 7,
+   "naeste": {
+    "slug": "taiyo-yuden",
+    "navn": "Taiyo Yuden"
+   }
+  },
+  "taiyo-yuden": {
+   "navn": "Taiyo Yuden",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.94,
+   "andelAKK": 0.86,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 3,
+   "antalITema": 75,
+   "fondsPlads": 10,
+   "top10Plads": 10,
+   "naeste": {
+    "slug": "kioxia",
+    "navn": "Kioxia"
+   }
+  },
+  "kioxia": {
+   "navn": "Kioxia",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.91,
+   "andelAKK": 1.01,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 4,
+   "antalITema": 75,
+   "fondsPlads": 11,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "lpkf-laser-electronics",
+    "navn": "LPKF Laser & Electronics"
+   },
+   "logo": "assets/img/logoer/0c03b2f725.webp"
+  },
+  "lpkf-laser-electronics": {
+   "navn": "LPKF Laser & Electronics",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.81,
+   "andelAKK": 1.08,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 5,
+   "antalITema": 75,
+   "fondsPlads": 13,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "cerebras-systems",
+    "navn": "Cerebras Systems"
+   },
+   "logo": "assets/img/logoer/1750ae3fb9.webp"
+  },
+  "cerebras-systems": {
+   "navn": "Cerebras Systems",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.75,
+   "andelAKK": 0.85,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 6,
+   "antalITema": 75,
+   "fondsPlads": 18,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "globalfoundries",
+    "navn": "GlobalFoundries"
+   },
+   "logo": "assets/img/logoer/a56f2ad71f.webp"
+  },
+  "globalfoundries": {
+   "navn": "GlobalFoundries",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.72,
+   "andelAKK": 0.58,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 7,
+   "antalITema": 75,
+   "fondsPlads": 19,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "soitec",
+    "navn": "Soitec"
+   },
+   "logo": "assets/img/logoer/cd450e45a6.webp"
+  },
+  "soitec": {
+   "navn": "Soitec",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.69,
+   "andelAKK": 0.93,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 8,
+   "antalITema": 75,
+   "fondsPlads": 22,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "tower-semiconductor",
+    "navn": "Tower Semiconductor"
+   },
+   "logo": "assets/img/logoer/dd34bfa59d.webp"
+  },
+  "tower-semiconductor": {
+   "navn": "Tower Semiconductor",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.67,
+   "andelAKK": 0.84,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 9,
+   "antalITema": 75,
+   "fondsPlads": 23,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "nova",
+    "navn": "Nova"
+   },
+   "logo": "assets/img/logoer/1e6260ed54.webp"
+  },
+  "nova": {
+   "navn": "Nova",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.66,
+   "andelAKK": 0.59,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 10,
+   "antalITema": 75,
+   "fondsPlads": 25,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "besi",
+    "navn": "Besi"
+   },
+   "logo": "assets/img/logoer/d15f922473.webp"
+  },
+  "besi": {
+   "navn": "Besi",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.64,
+   "andelAKK": 0.68,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 11,
+   "antalITema": 75,
+   "fondsPlads": 26,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "broadcom",
+    "navn": "Broadcom"
+   }
+  },
+  "broadcom": {
+   "navn": "Broadcom",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.55,
+   "andelAKK": 0.55,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 12,
+   "antalITema": 75,
+   "fondsPlads": 32,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "iqe",
+    "navn": "IQE"
+   },
+   "logo": "assets/img/logoer/38132e6c7a.webp"
+  },
+  "iqe": {
+   "navn": "IQE",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.55,
+   "andelAKK": 0.54,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 13,
+   "antalITema": 75,
+   "fondsPlads": 33,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "rambus",
+    "navn": "Rambus"
+   },
+   "logo": "assets/img/logoer/52e0da790e.webp"
+  },
+  "rambus": {
+   "navn": "Rambus",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.55,
+   "andelAKK": 0.38,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 14,
+   "antalITema": 75,
+   "fondsPlads": 37,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "micron-technology",
+    "navn": "Micron Technology"
+   },
+   "logo": "assets/img/logoer/2479ea1f21.webp"
+  },
+  "micron-technology": {
+   "navn": "Micron Technology",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.54,
+   "andelAKK": 0.55,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 15,
+   "antalITema": 75,
+   "fondsPlads": 41,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "navitas-semiconductor",
+    "navn": "Navitas Semiconductor"
+   },
+   "logo": "assets/img/logoer/b17fd8dc45.webp"
+  },
+  "navitas-semiconductor": {
+   "navn": "Navitas Semiconductor",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.5,
+   "andelAKK": 0.48,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 16,
+   "antalITema": 75,
+   "fondsPlads": 50,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "western-digital",
+    "navn": "Western Digital"
+   },
+   "logo": "assets/img/logoer/71733dc185.webp"
+  },
+  "western-digital": {
+   "navn": "Western Digital",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.48,
+   "andelAKK": 0.38,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 17,
+   "antalITema": 75,
+   "fondsPlads": 56,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "intel",
+    "navn": "Intel"
+   },
+   "logo": "assets/img/logoer/e2b55bbc59.webp"
+  },
+  "intel": {
+   "navn": "Intel",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.46,
+   "andelAKK": 0.49,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 18,
+   "antalITema": 75,
+   "fondsPlads": 58,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "sitime",
+    "navn": "SiTime"
+   },
+   "logo": "assets/img/logoer/c081184173.webp"
+  },
+  "sitime": {
+   "navn": "SiTime",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.46,
+   "andelAKK": 0.4,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 19,
+   "antalITema": 75,
+   "fondsPlads": 60,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "suss-microtec",
+    "navn": "SUSS MicroTec"
+   },
+   "logo": "assets/img/logoer/2277a3e7fd.webp"
+  },
+  "suss-microtec": {
+   "navn": "SUSS MicroTec",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.45,
+   "andelAKK": 0.31,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 20,
+   "antalITema": 75,
+   "fondsPlads": 63,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "tokyo-electron",
+    "navn": "Tokyo Electron"
+   },
+   "logo": "assets/img/logoer/b7558a97d0.webp"
+  },
+  "tokyo-electron": {
+   "navn": "Tokyo Electron",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.45,
+   "andelAKK": 0.43,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 21,
+   "antalITema": 75,
+   "fondsPlads": 64,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "asm-international",
+    "navn": "ASM International"
+   },
+   "logo": "assets/img/logoer/323e8423ed.webp"
+  },
+  "asm-international": {
+   "navn": "ASM International",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.44,
+   "andelAKK": 0.56,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 22,
+   "antalITema": 75,
+   "fondsPlads": 65,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "asmpt",
+    "navn": "ASMPT"
+   },
+   "logo": "assets/img/logoer/07aa949943.webp"
+  },
+  "asmpt": {
+   "navn": "ASMPT",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.42,
+   "andelAKK": 0.42,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 23,
+   "antalITema": 75,
+   "fondsPlads": 70,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "camtek",
+    "navn": "Camtek"
+   },
+   "logo": "assets/img/logoer/7532150e62.webp"
+  },
+  "camtek": {
+   "navn": "Camtek",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.4,
+   "andelAKK": 0.3,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 24,
+   "antalITema": 75,
+   "fondsPlads": 75,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "aehr-test-systems",
+    "navn": "Aehr Test Systems"
+   }
+  },
+  "aehr-test-systems": {
+   "navn": "Aehr Test Systems",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.37,
+   "andelAKK": 0.54,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 25,
+   "antalITema": 75,
+   "fondsPlads": 84,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "onsemi",
+    "navn": "onsemi"
+   },
+   "logo": "assets/img/logoer/d4bb600b5c.webp"
+  },
+  "onsemi": {
+   "navn": "onsemi",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.36,
+   "andelAKK": 0.29,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 26,
+   "antalITema": 75,
+   "fondsPlads": 88,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "seagate-technology",
+    "navn": "Seagate Technology"
+   },
+   "logo": "assets/img/logoer/6b99a93f2d.webp"
+  },
+  "seagate-technology": {
+   "navn": "Seagate Technology",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.35,
+   "andelAKK": 0.32,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 27,
+   "antalITema": 75,
+   "fondsPlads": 91,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "umc",
+    "navn": "UMC"
+   },
+   "logo": "assets/img/logoer/953b305bc8.webp"
+  },
+  "umc": {
+   "navn": "UMC",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.35,
+   "andelAKK": 0.28,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 28,
+   "antalITema": 75,
+   "fondsPlads": 93,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "mks",
+    "navn": "MKS"
+   }
+  },
+  "mks": {
+   "navn": "MKS",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.34,
+   "andelAKK": 0.32,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 29,
+   "antalITema": 75,
+   "fondsPlads": 96,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "stmicroelectronics",
+    "navn": "STMicroelectronics"
+   },
+   "logo": "assets/img/logoer/6457d6104b.webp"
+  },
+  "stmicroelectronics": {
+   "navn": "STMicroelectronics",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.34,
+   "andelAKK": 0.48,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 30,
+   "antalITema": 75,
+   "fondsPlads": 98,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "x-fab",
+    "navn": "X-FAB"
+   },
+   "logo": "assets/img/logoer/18732b5c85.webp"
+  },
+  "x-fab": {
+   "navn": "X-FAB",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.33,
+   "andelAKK": 0.28,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 31,
+   "antalITema": 75,
+   "fondsPlads": 102,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "himax-technologies",
+    "navn": "Himax Technologies"
+   },
+   "logo": "assets/img/logoer/20463d39c6.webp"
+  },
+  "himax-technologies": {
+   "navn": "Himax Technologies",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.32,
+   "andelAKK": 0.3,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 32,
+   "antalITema": 75,
+   "fondsPlads": 106,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "lasertec",
+    "navn": "Lasertec"
+   },
+   "logo": "assets/img/logoer/d76363e112.webp"
+  },
+  "lasertec": {
+   "navn": "Lasertec",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.31,
+   "andelAKK": 0.45,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 33,
+   "antalITema": 75,
+   "fondsPlads": 109,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "rigaku",
+    "navn": "Rigaku"
+   },
+   "logo": "assets/img/logoer/af96b86550.webp"
+  },
+  "rigaku": {
+   "navn": "Rigaku",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.31,
+   "andelAKK": 0.25,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 34,
+   "antalITema": 75,
+   "fondsPlads": 111,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "kla",
+    "navn": "KLA"
+   },
+   "logo": "assets/img/logoer/f5a191a973.webp"
+  },
+  "kla": {
+   "navn": "KLA",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.28,
+   "andelAKK": 0.23,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 35,
+   "antalITema": 75,
+   "fondsPlads": 119,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "nvidia",
+    "navn": "NVIDIA"
+   },
+   "logo": "assets/img/logoer/854d641e64.webp"
+  },
+  "nvidia": {
+   "navn": "NVIDIA",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.26,
+   "andelAKK": 0.19,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 36,
+   "antalITema": 75,
+   "fondsPlads": 133,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "onto-innovation",
+    "navn": "Onto Innovation"
+   },
+   "logo": "assets/img/logoer/2a95ecdd14.webp"
+  },
+  "onto-innovation": {
+   "navn": "Onto Innovation",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.24,
+   "andelAKK": 0.22,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 37,
+   "antalITema": 75,
+   "fondsPlads": 148,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "ambiq-micro",
+    "navn": "Ambiq Micro"
+   }
+  },
+  "ambiq-micro": {
+   "navn": "Ambiq Micro",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.23,
+   "andelAKK": 0.2,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 38,
+   "antalITema": 75,
+   "fondsPlads": 152,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "renesas-electronics",
+    "navn": "Renesas Electronics"
+   },
+   "logo": "assets/img/logoer/0ee2f82a70.webp"
+  },
+  "renesas-electronics": {
+   "navn": "Renesas Electronics",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.23,
+   "andelAKK": 0.22,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 39,
+   "antalITema": 75,
+   "fondsPlads": 160,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "aixtron",
+    "navn": "Aixtron"
+   },
+   "logo": "assets/img/logoer/816a57db83.webp"
+  },
+  "aixtron": {
+   "navn": "Aixtron",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.2,
+   "andelAKK": 0.18,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 40,
+   "antalITema": 75,
+   "fondsPlads": 175,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "advantest",
+    "navn": "Advantest"
+   }
+  },
+  "advantest": {
+   "navn": "Advantest",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.19,
+   "andelAKK": 0.33,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 41,
+   "antalITema": 75,
+   "fondsPlads": 180,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "sandisk",
+    "navn": "SanDisk"
+   },
+   "logo": "assets/img/logoer/509540d950.webp"
+  },
+  "sandisk": {
+   "navn": "SanDisk",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.19,
+   "andelAKK": 0.21,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 42,
+   "antalITema": 75,
+   "fondsPlads": 190,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "kulicke-soffa",
+    "navn": "Kulicke & Soffa"
+   },
+   "logo": "assets/img/logoer/b2287832b5.webp"
+  },
+  "kulicke-soffa": {
+   "navn": "Kulicke & Soffa",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.18,
+   "andelAKK": 0.18,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 43,
+   "antalITema": 75,
+   "fondsPlads": 204,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "veeco-instruments",
+    "navn": "Veeco Instruments"
+   },
+   "logo": "assets/img/logoer/66774484fb.webp"
+  },
+  "veeco-instruments": {
+   "navn": "Veeco Instruments",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.18,
+   "andelAKK": 0.15,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 44,
+   "antalITema": 75,
+   "fondsPlads": 210,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "axt",
+    "navn": "AXT"
+   },
+   "logo": "assets/img/logoer/c9df30070b.webp"
+  },
+  "axt": {
+   "navn": "AXT",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.17,
+   "andelAKK": 0.13,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 45,
+   "antalITema": 75,
+   "fondsPlads": 211,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "silicon-motion",
+    "navn": "Silicon Motion"
+   },
+   "logo": "assets/img/logoer/def622555b.webp"
+  },
+  "silicon-motion": {
+   "navn": "Silicon Motion",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.17,
+   "andelAKK": 0.16,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 46,
+   "antalITema": 75,
+   "fondsPlads": 216,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "infineon-technologies",
+    "navn": "Infineon Technologies"
+   },
+   "logo": "assets/img/logoer/4496e3b5c3.webp"
+  },
+  "infineon-technologies": {
+   "navn": "Infineon Technologies",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.14,
+   "andelAKK": 0.23,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 47,
+   "antalITema": 75,
+   "fondsPlads": 228,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "aeluma",
+    "navn": "Aeluma"
+   },
+   "logo": "assets/img/logoer/8660f21517.webp"
+  },
+  "aeluma": {
+   "navn": "Aeluma",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.13,
+   "andelAKK": 0.2,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 48,
+   "antalITema": 75,
+   "fondsPlads": 232,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "kokusai-electric",
+    "navn": "Kokusai Electric"
+   },
+   "logo": "assets/img/logoer/6ef097e172.webp"
+  },
+  "kokusai-electric": {
+   "navn": "Kokusai Electric",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.13,
+   "andelAKK": 0.05,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 49,
+   "antalITema": 75,
+   "fondsPlads": 236,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "entegris",
+    "navn": "Entegris"
+   },
+   "logo": "assets/img/logoer/aea873782d.webp"
+  },
+  "entegris": {
+   "navn": "Entegris",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.12,
+   "andelAKK": 0.18,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 50,
+   "antalITema": 75,
+   "fondsPlads": 246,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "monolithic-power-systems",
+    "navn": "Monolithic Power Systems"
+   },
+   "logo": "assets/img/logoer/f3e07fcdad.webp"
+  },
+  "monolithic-power-systems": {
+   "navn": "Monolithic Power Systems",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.12,
+   "andelAKK": 0.1,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 51,
+   "antalITema": 75,
+   "fondsPlads": 251,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "wolfspeed",
+    "navn": "Wolfspeed"
+   },
+   "logo": "assets/img/logoer/2f24c4902d.webp"
+  },
+  "wolfspeed": {
+   "navn": "Wolfspeed",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.12,
+   "andelAKK": 0.17,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 52,
+   "antalITema": 75,
+   "fondsPlads": 253,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "nordic-semiconductor",
+    "navn": "Nordic Semiconductor"
+   },
+   "logo": "assets/img/logoer/8800d66171.webp"
+  },
+  "nordic-semiconductor": {
+   "navn": "Nordic Semiconductor",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.11,
+   "andelAKK": 0.15,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 53,
+   "antalITema": 75,
+   "fondsPlads": 264,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "acm-research",
+    "navn": "ACM Research"
+   },
+   "logo": "assets/img/logoer/5c3c449f1d.webp"
+  },
+  "acm-research": {
+   "navn": "ACM Research",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.1,
+   "andelAKK": 0.11,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 54,
+   "antalITema": 75,
+   "fondsPlads": 270,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "alpha-and-omega-semiconductor",
+    "navn": "Alpha and Omega Semiconductor"
+   },
+   "logo": "assets/img/logoer/f70b811920.webp"
+  },
+  "alpha-and-omega-semiconductor": {
+   "navn": "Alpha and Omega Semiconductor",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.1,
+   "andelAKK": 0.17,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 55,
+   "antalITema": 75,
+   "fondsPlads": 271,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "amkor-technology",
+    "navn": "Amkor Technology"
+   },
+   "logo": "assets/img/logoer/d90ffeffb4.webp"
+  },
+  "amkor-technology": {
+   "navn": "Amkor Technology",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.1,
+   "andelAKK": 0.23,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 56,
+   "antalITema": 75,
+   "fondsPlads": 272,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "asml",
+    "navn": "ASML"
+   },
+   "logo": "assets/img/logoer/850bb0587b.webp"
+  },
+  "asml": {
+   "navn": "ASML",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.09,
+   "andelAKK": 0.11,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 57,
+   "antalITema": 75,
+   "fondsPlads": 278,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "lam-research",
+    "navn": "Lam Research"
+   },
+   "logo": "assets/img/logoer/6a9ec0669d.webp"
+  },
+  "lam-research": {
+   "navn": "Lam Research",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.09,
+   "andelAKK": 0.11,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 58,
+   "antalITema": 75,
+   "fondsPlads": 287,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "maxlinear",
+    "navn": "MaxLinear"
+   },
+   "logo": "assets/img/logoer/26fd337cb3.webp"
+  },
+  "maxlinear": {
+   "navn": "MaxLinear",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.09,
+   "andelAKK": 0.1,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 59,
+   "antalITema": 75,
+   "fondsPlads": 288,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "synopsys",
+    "navn": "Synopsys"
+   },
+   "logo": "assets/img/logoer/6d7e7e5294.webp"
+  },
+  "synopsys": {
+   "navn": "Synopsys",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.09,
+   "andelAKK": null,
+   "akkStatus": "ejes_ikke",
+   "akkEjesIkke": true,
+   "akkMangler": false,
+   "pladsITema": 60,
+   "antalITema": 75,
+   "fondsPlads": 291,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "analog-devices",
+    "navn": "Analog Devices"
+   }
+  },
+  "analog-devices": {
+   "navn": "Analog Devices",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.08,
+   "andelAKK": 0.1,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 61,
+   "antalITema": 75,
+   "fondsPlads": 295,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "cohu",
+    "navn": "Cohu"
+   },
+   "logo": "assets/img/logoer/14d73a01e1.webp"
+  },
+  "cohu": {
+   "navn": "Cohu",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.08,
+   "andelAKK": 0.19,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 62,
+   "antalITema": 75,
+   "fondsPlads": 297,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "marvell-technology",
+    "navn": "Marvell Technology"
+   },
+   "logo": "assets/img/logoer/6942a6ca36.webp"
+  },
+  "marvell-technology": {
+   "navn": "Marvell Technology",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.08,
+   "andelAKK": 0.11,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 63,
+   "antalITema": 75,
+   "fondsPlads": 298,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "texas-instruments",
+    "navn": "Texas Instruments"
+   },
+   "logo": "assets/img/logoer/d80d4e7eb1.webp"
+  },
+  "texas-instruments": {
+   "navn": "Texas Instruments",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.08,
+   "andelAKK": 0.07,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 64,
+   "antalITema": 75,
+   "fondsPlads": 301,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "ambarella",
+    "navn": "Ambarella"
+   },
+   "logo": "assets/img/logoer/d705da286b.webp"
+  },
+  "ambarella": {
+   "navn": "Ambarella",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.07,
+   "andelAKK": 0.05,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 65,
+   "antalITema": 75,
+   "fondsPlads": 304,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "microchip-technology",
+    "navn": "Microchip Technology"
+   },
+   "logo": "assets/img/logoer/c16d310945.webp"
+  },
+  "microchip-technology": {
+   "navn": "Microchip Technology",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.07,
+   "andelAKK": 0.11,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 66,
+   "antalITema": 75,
+   "fondsPlads": 315,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "cadence-design-systems",
+    "navn": "Cadence Design Systems"
+   },
+   "logo": "assets/img/logoer/cd75c9140d.webp"
+  },
+  "cadence-design-systems": {
+   "navn": "Cadence Design Systems",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.06,
+   "andelAKK": null,
+   "akkStatus": "ejes_ikke",
+   "akkEjesIkke": true,
+   "akkMangler": false,
+   "pladsITema": 67,
+   "antalITema": 75,
+   "fondsPlads": 321,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "formfactor",
+    "navn": "FormFactor"
+   }
+  },
+  "formfactor": {
+   "navn": "FormFactor",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.06,
+   "andelAKK": 0.1,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 68,
+   "antalITema": 75,
+   "fondsPlads": 323,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "applied-materials",
+    "navn": "Applied Materials"
+   },
+   "logo": "assets/img/logoer/58a0d186b3.webp"
+  },
+  "applied-materials": {
+   "navn": "Applied Materials",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.05,
+   "andelAKK": 0.07,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 69,
+   "antalITema": 75,
+   "fondsPlads": 330,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "amd",
+    "navn": "AMD"
+   },
+   "logo": "assets/img/logoer/b846cd3f38.webp"
+  },
+  "amd": {
+   "navn": "AMD",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.04,
+   "andelAKK": null,
+   "akkStatus": "ejes_ikke",
+   "akkEjesIkke": true,
+   "akkMangler": false,
+   "pladsITema": 70,
+   "antalITema": 75,
+   "fondsPlads": 342,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "lattice-semiconductor",
+    "navn": "Lattice Semiconductor"
+   }
+  },
+  "lattice-semiconductor": {
+   "navn": "Lattice Semiconductor",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.04,
+   "andelAKK": 0.07,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 71,
+   "antalITema": 75,
+   "fondsPlads": 346,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "tsmc",
+    "navn": "TSMC"
+   }
+  },
+  "tsmc": {
+   "navn": "TSMC",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.04,
+   "andelAKK": null,
+   "akkStatus": "ejes_ikke",
+   "akkEjesIkke": true,
+   "akkMangler": false,
+   "pladsITema": 72,
+   "antalITema": 75,
+   "fondsPlads": 353,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "axcelis-technologies",
+    "navn": "Axcelis Technologies"
+   }
+  },
+  "axcelis-technologies": {
+   "navn": "Axcelis Technologies",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.03,
+   "andelAKK": 0.04,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 73,
+   "antalITema": 75,
+   "fondsPlads": 357,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "teradyne",
+    "navn": "Teradyne"
+   }
+  },
+  "teradyne": {
+   "navn": "Teradyne",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.03,
+   "andelAKK": 0.04,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 74,
+   "antalITema": 75,
+   "fondsPlads": 363,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "blaize",
+    "navn": "Blaize"
+   },
+   "logo": "assets/img/logoer/2419f7bcca.webp"
+  },
+  "blaize": {
+   "navn": "Blaize",
+   "tema": "chips",
+   "temaNavn": "Chips og halvledere",
+   "andel": 0.01,
+   "andelAKK": 0.01,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 75,
+   "antalITema": 75,
+   "fondsPlads": 371,
+   "top10Plads": null,
+   "naeste": null,
+   "logo": "assets/img/logoer/fbfec736cc.webp"
+  },
+  "babcock-wilcox": {
+   "navn": "Babcock & Wilcox",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.83,
+   "andelAKK": 0.5,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 1,
+   "antalITema": 69,
+   "fondsPlads": 12,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "t1-energy",
+    "navn": "T1 Energy"
+   },
+   "logo": "assets/img/logoer/986bc5308a.webp"
+  },
+  "t1-energy": {
+   "navn": "T1 Energy",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.76,
+   "andelAKK": 0.69,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 2,
+   "antalITema": 69,
+   "fondsPlads": 17,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "enovix",
+    "navn": "Enovix"
+   },
+   "logo": "assets/img/logoer/2e90ce846f.webp"
+  },
+  "enovix": {
+   "navn": "Enovix",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.66,
+   "andelAKK": 0.48,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 3,
+   "antalITema": 69,
+   "fondsPlads": 24,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "expand-energy",
+    "navn": "Expand Energy"
+   },
+   "logo": "assets/img/logoer/27b7860880.webp"
+  },
+  "expand-energy": {
+   "navn": "Expand Energy",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.62,
+   "andelAKK": 0.59,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 4,
+   "antalITema": 69,
+   "fondsPlads": 27,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "comstock-resources",
+    "navn": "Comstock Resources"
+   },
+   "logo": "assets/img/logoer/2929f4ef4d.webp"
+  },
+  "comstock-resources": {
+   "navn": "Comstock Resources",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.54,
+   "andelAKK": 0.52,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 5,
+   "antalITema": 69,
+   "fondsPlads": 38,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "generac",
+    "navn": "Generac"
+   }
+  },
+  "generac": {
+   "navn": "Generac",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.54,
+   "andelAKK": 0.49,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 6,
+   "antalITema": 69,
+   "fondsPlads": 39,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "myr-group",
+    "navn": "MYR Group"
+   },
+   "logo": "assets/img/logoer/d699c2505d.webp"
+  },
+  "myr-group": {
+   "navn": "MYR Group",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.54,
+   "andelAKK": 0.55,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 7,
+   "antalITema": 69,
+   "fondsPlads": 40,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "solaredge",
+    "navn": "SolarEdge"
+   },
+   "logo": "assets/img/logoer/97c8b3b259.webp"
+  },
+  "solaredge": {
+   "navn": "SolarEdge",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.53,
+   "andelAKK": 0.43,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 8,
+   "antalITema": 69,
+   "fondsPlads": 42,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "fluence-energy",
+    "navn": "Fluence Energy"
+   },
+   "logo": "assets/img/logoer/c87f3d4b5f.webp"
+  },
+  "fluence-energy": {
+   "navn": "Fluence Energy",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.51,
+   "andelAKK": 0.46,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 9,
+   "antalITema": 69,
+   "fondsPlads": 44,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "ses-ai",
+    "navn": "SES AI"
+   },
+   "logo": "assets/img/logoer/3539d10e3a.webp"
+  },
+  "ses-ai": {
+   "navn": "SES AI",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.46,
+   "andelAKK": 0.33,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 10,
+   "antalITema": 69,
+   "fondsPlads": 59,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "quantumscape",
+    "navn": "QuantumScape"
+   },
+   "logo": "assets/img/logoer/b5ff391c12.webp"
+  },
+  "quantumscape": {
+   "navn": "QuantumScape",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.43,
+   "andelAKK": 0.34,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 11,
+   "antalITema": 69,
+   "fondsPlads": 69,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "power-solutions-internationa",
+    "navn": "Power Solutions International"
+   },
+   "logo": "assets/img/logoer/08f4389b60.webp"
+  },
+  "power-solutions-internationa": {
+   "navn": "Power Solutions International",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.41,
+   "andelAKK": 0.3,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 12,
+   "antalITema": 69,
+   "fondsPlads": 73,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "first-solar",
+    "navn": "First Solar"
+   },
+   "logo": "assets/img/logoer/a237f0a932.webp"
+  },
+  "first-solar": {
+   "navn": "First Solar",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.4,
+   "andelAKK": 0.46,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 13,
+   "antalITema": 69,
+   "fondsPlads": 77,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "tigo-energy",
+    "navn": "Tigo Energy"
+   }
+  },
+  "tigo-energy": {
+   "navn": "Tigo Energy",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.38,
+   "andelAKK": 0.26,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 14,
+   "antalITema": 69,
+   "fondsPlads": 83,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "sunrun",
+    "navn": "Sunrun"
+   },
+   "logo": "assets/img/logoer/d130cb4bf1.webp"
+  },
+  "sunrun": {
+   "navn": "Sunrun",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.37,
+   "andelAKK": 0.49,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 15,
+   "antalITema": 69,
+   "fondsPlads": 86,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "enphase-energy",
+    "navn": "Enphase Energy"
+   },
+   "logo": "assets/img/logoer/512087f698.webp"
+  },
+  "enphase-energy": {
+   "navn": "Enphase Energy",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.34,
+   "andelAKK": 0.34,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 16,
+   "antalITema": 69,
+   "fondsPlads": 94,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "ballard-power-systems",
+    "navn": "Ballard Power Systems"
+   },
+   "logo": "assets/img/logoer/cd750eed57.webp"
+  },
+  "ballard-power-systems": {
+   "navn": "Ballard Power Systems",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.33,
+   "andelAKK": 0.27,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 17,
+   "antalITema": 69,
+   "fondsPlads": 99,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "propetro",
+    "navn": "ProPetro"
+   },
+   "logo": "assets/img/logoer/8156fe896a.webp"
+  },
+  "propetro": {
+   "navn": "ProPetro",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.33,
+   "andelAKK": 0.3,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 18,
+   "antalITema": 69,
+   "fondsPlads": 101,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "vistra",
+    "navn": "Vistra"
+   },
+   "logo": "assets/img/logoer/d527a65f18.webp"
+  },
+  "vistra": {
+   "navn": "Vistra",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.29,
+   "andelAKK": 0.4,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 19,
+   "antalITema": 69,
+   "fondsPlads": 118,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "antero-resources",
+    "navn": "Antero Resources"
+   },
+   "logo": "assets/img/logoer/016d0b3e6d.webp"
+  },
+  "antero-resources": {
+   "navn": "Antero Resources",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.25,
+   "andelAKK": 0.3,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 20,
+   "antalITema": 69,
+   "fondsPlads": 136,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "centrus-energy",
+    "navn": "Centrus Energy"
+   },
+   "logo": "assets/img/logoer/c5f2c6a496.webp"
+  },
+  "centrus-energy": {
+   "navn": "Centrus Energy",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.25,
+   "andelAKK": 0.31,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 21,
+   "antalITema": 69,
+   "fondsPlads": 137,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "erock",
+    "navn": "ERock"
+   },
+   "logo": "assets/img/logoer/6a84ac3104.webp"
+  },
+  "erock": {
+   "navn": "ERock",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.25,
+   "andelAKK": 0.26,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 22,
+   "antalITema": 69,
+   "fondsPlads": 139,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "rolls-royce",
+    "navn": "Rolls-Royce"
+   },
+   "logo": "assets/img/logoer/73aa26b22b.webp"
+  },
+  "rolls-royce": {
+   "navn": "Rolls-Royce",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.25,
+   "andelAKK": 0.24,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 23,
+   "antalITema": 69,
+   "fondsPlads": 140,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "talen-energy",
+    "navn": "Talen Energy"
+   },
+   "logo": "assets/img/logoer/5c92af4fd2.webp"
+  },
+  "talen-energy": {
+   "navn": "Talen Energy",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.25,
+   "andelAKK": 0.21,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 24,
+   "antalITema": 69,
+   "fondsPlads": 141,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "kinder-morgan",
+    "navn": "Kinder Morgan"
+   },
+   "logo": "assets/img/logoer/e1a57b5672.webp"
+  },
+  "kinder-morgan": {
+   "navn": "Kinder Morgan",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.24,
+   "andelAKK": 0.19,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 25,
+   "antalITema": 69,
+   "fondsPlads": 147,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "asp-isotopes",
+    "navn": "ASP Isotopes"
+   },
+   "logo": "assets/img/logoer/5170c52721.webp"
+  },
+  "asp-isotopes": {
+   "navn": "ASP Isotopes",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.23,
+   "andelAKK": 0.38,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 26,
+   "antalITema": 69,
+   "fondsPlads": 151,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "nextracker",
+    "navn": "Nextracker"
+   },
+   "logo": "assets/img/logoer/03c53396fb.webp"
+  },
+  "nextracker": {
+   "navn": "Nextracker",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.23,
+   "andelAKK": 0.53,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 27,
+   "antalITema": 69,
+   "fondsPlads": 159,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "solid-power",
+    "navn": "Solid Power"
+   },
+   "logo": "assets/img/logoer/c140436de9.webp"
+  },
+  "solid-power": {
+   "navn": "Solid Power",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.23,
+   "andelAKK": 0.17,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 28,
+   "antalITema": 69,
+   "fondsPlads": 161,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "nextera-energy",
+    "navn": "NextEra Energy"
+   },
+   "logo": "assets/img/logoer/e242bc0885.webp"
+  },
+  "nextera-energy": {
+   "navn": "NextEra Energy",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.22,
+   "andelAKK": 0.18,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 29,
+   "antalITema": 69,
+   "fondsPlads": 167,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "shoals-technologies",
+    "navn": "Shoals Technologies"
+   }
+  },
+  "shoals-technologies": {
+   "navn": "Shoals Technologies",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.22,
+   "andelAKK": 0.3,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 30,
+   "antalITema": 69,
+   "fondsPlads": 170,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "vista-energy-sab-de-cv",
+    "navn": "Vista Energy"
+   },
+   "logo": "assets/img/logoer/c6fe3d7472.webp"
+  },
+  "vista-energy-sab-de-cv": {
+   "navn": "Vista Energy",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.21,
+   "andelAKK": 0.17,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 31,
+   "antalITema": 69,
+   "fondsPlads": 174,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "bloom-energy",
+    "navn": "Bloom Energy"
+   },
+   "logo": "assets/img/logoer/a021ce5560.webp"
+  },
+  "bloom-energy": {
+   "navn": "Bloom Energy",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.2,
+   "andelAKK": 0.33,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 32,
+   "antalITema": 69,
+   "fondsPlads": 176,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "amprius-technologies",
+    "navn": "Amprius Technologies"
+   },
+   "logo": "assets/img/logoer/aec3569753.webp"
+  },
+  "amprius-technologies": {
+   "navn": "Amprius Technologies",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.19,
+   "andelAKK": 0.26,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 33,
+   "antalITema": 69,
+   "fondsPlads": 181,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "dte-energy-company",
+    "navn": "DTE Energy"
+   },
+   "logo": "assets/img/logoer/1aac94c645.webp"
+  },
+  "dte-energy-company": {
+   "navn": "DTE Energy",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.19,
+   "andelAKK": 0.15,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 34,
+   "antalITema": 69,
+   "fondsPlads": 184,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "ge-vernova",
+    "navn": "GE Vernova"
+   },
+   "logo": "assets/img/logoer/9bfcfd6aa9.webp"
+  },
+  "ge-vernova": {
+   "navn": "GE Vernova",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.19,
+   "andelAKK": 0.25,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 35,
+   "antalITema": 69,
+   "fondsPlads": 185,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "am-electric",
+    "navn": "American Electric Power"
+   },
+   "logo": "assets/img/logoer/35d6fd9204.webp"
+  },
+  "am-electric": {
+   "navn": "American Electric Power",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.18,
+   "andelAKK": 0.16,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 36,
+   "antalITema": 69,
+   "fondsPlads": 195,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "array-technologies",
+    "navn": "Array Technologies"
+   }
+  },
+  "array-technologies": {
+   "navn": "Array Technologies",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.18,
+   "andelAKK": 0.29,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 37,
+   "antalITema": 69,
+   "fondsPlads": 197,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "bwx-technologies",
+    "navn": "BWX Technologies"
+   },
+   "logo": "assets/img/logoer/5f68d4c6f1.webp"
+  },
+  "bwx-technologies": {
+   "navn": "BWX Technologies",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.18,
+   "andelAKK": 0.17,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 38,
+   "antalITema": 69,
+   "fondsPlads": 198,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "cms-energy",
+    "navn": "CMS Energy"
+   },
+   "logo": "assets/img/logoer/fb6c04b84e.webp"
+  },
+  "cms-energy": {
+   "navn": "CMS Energy",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.18,
+   "andelAKK": 0.15,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 39,
+   "antalITema": 69,
+   "fondsPlads": 199,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "canadian-solar",
+    "navn": "Canadian Solar"
+   }
+  },
+  "canadian-solar": {
+   "navn": "Canadian Solar",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.18,
+   "andelAKK": 0.24,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 40,
+   "antalITema": 69,
+   "fondsPlads": 200,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "firstenergy",
+    "navn": "FirstEnergy"
+   },
+   "logo": "assets/img/logoer/66c992d02d.webp"
+  },
+  "firstenergy": {
+   "navn": "FirstEnergy",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.18,
+   "andelAKK": 0.15,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 41,
+   "antalITema": 69,
+   "fondsPlads": 201,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "southern-company",
+    "navn": "Southern Company"
+   },
+   "logo": "assets/img/logoer/7b3028feda.webp"
+  },
+  "southern-company": {
+   "navn": "Southern Company",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.18,
+   "andelAKK": 0.11,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 42,
+   "antalITema": 69,
+   "fondsPlads": 209,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "nano-nuclear-energy",
+    "navn": "Nano Nuclear Energy"
+   },
+   "logo": "assets/img/logoer/435ee7b106.webp"
+  },
+  "nano-nuclear-energy": {
+   "navn": "Nano Nuclear Energy",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.17,
+   "andelAKK": 0.2,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 43,
+   "antalITema": 69,
+   "fondsPlads": 214,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "eqt",
+    "navn": "EQT"
+   },
+   "logo": "assets/img/logoer/db4cc352e4.webp"
+  },
+  "eqt": {
+   "navn": "EQT",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.16,
+   "andelAKK": 0.1,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 44,
+   "antalITema": 69,
+   "fondsPlads": 219,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "quanta-services",
+    "navn": "Quanta Services"
+   },
+   "logo": "assets/img/logoer/a943d461fb.webp"
+  },
+  "quanta-services": {
+   "navn": "Quanta Services",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.16,
+   "andelAKK": 0.17,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 45,
+   "antalITema": 69,
+   "fondsPlads": 220,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "oklo",
+    "navn": "Oklo"
+   },
+   "logo": "assets/img/logoer/21ea777ffb.webp"
+  },
+  "oklo": {
+   "navn": "Oklo",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.15,
+   "andelAKK": 0.16,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 46,
+   "antalITema": 69,
+   "fondsPlads": 221,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "range-resources",
+    "navn": "Range Resources"
+   },
+   "logo": "assets/img/logoer/2f59a56bef.webp"
+  },
+  "range-resources": {
+   "navn": "Range Resources",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.15,
+   "andelAKK": 0.12,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 47,
+   "antalITema": 69,
+   "fondsPlads": 222,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "atlas-energy-solutions",
+    "navn": "Atlas Energy Solutions"
+   },
+   "logo": "assets/img/logoer/029ce81085.webp"
+  },
+  "atlas-energy-solutions": {
+   "navn": "Atlas Energy Solutions",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.14,
+   "andelAKK": 0.12,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 48,
+   "antalITema": 69,
+   "fondsPlads": 225,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "eos-energy",
+    "navn": "Eos Energy"
+   },
+   "logo": "assets/img/logoer/e61814aaa9.webp"
+  },
+  "eos-energy": {
+   "navn": "Eos Energy",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.13,
+   "andelAKK": 0.2,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 49,
+   "antalITema": 69,
+   "fondsPlads": 234,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "itt",
+    "navn": "ITT"
+   },
+   "logo": "assets/img/logoer/73a3325656.webp"
+  },
+  "itt": {
+   "navn": "ITT",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.13,
+   "andelAKK": 0.13,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 50,
+   "antalITema": 69,
+   "fondsPlads": 235,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "primoris-services",
+    "navn": "Primoris Services"
+   }
+  },
+  "primoris-services": {
+   "navn": "Primoris Services",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.13,
+   "andelAKK": 0.16,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 51,
+   "antalITema": 69,
+   "fondsPlads": 240,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "lightbridge",
+    "navn": "Lightbridge"
+   }
+  },
+  "lightbridge": {
+   "navn": "Lightbridge",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.12,
+   "andelAKK": 0.29,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 52,
+   "antalITema": 69,
+   "fondsPlads": 250,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "tantalus-systems",
+    "navn": "Tantalus Systems"
+   },
+   "logo": "assets/img/logoer/4272125255.webp"
+  },
+  "tantalus-systems": {
+   "navn": "Tantalus Systems",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.12,
+   "andelAKK": 0.21,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 53,
+   "antalITema": 69,
+   "fondsPlads": 252,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "clearway-energy-inc-c",
+    "navn": "Clearway Energy"
+   },
+   "logo": "assets/img/logoer/5061bb7e93.webp"
+  },
+  "clearway-energy-inc-c": {
+   "navn": "Clearway Energy",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.11,
+   "andelAKK": 0.16,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 54,
+   "antalITema": 69,
+   "fondsPlads": 256,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "electrovaya",
+    "navn": "Electrovaya"
+   },
+   "logo": "assets/img/logoer/c6302193eb.webp"
+  },
+  "electrovaya": {
+   "navn": "Electrovaya",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.11,
+   "andelAKK": 0.14,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 55,
+   "antalITema": 69,
+   "fondsPlads": 257,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "fluor",
+    "navn": "Fluor"
+   },
+   "logo": "assets/img/logoer/a9ff78987f.webp"
+  },
+  "fluor": {
+   "navn": "Fluor",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.11,
+   "andelAKK": 0.13,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 56,
+   "antalITema": 69,
+   "fondsPlads": 258,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "mirion-technologies",
+    "navn": "Mirion Technologies"
+   }
+  },
+  "mirion-technologies": {
+   "navn": "Mirion Technologies",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.11,
+   "andelAKK": 0.11,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 57,
+   "antalITema": 69,
+   "fondsPlads": 262,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "plug-power",
+    "navn": "Plug Power"
+   },
+   "logo": "assets/img/logoer/44f31faefb.webp"
+  },
+  "plug-power": {
+   "navn": "Plug Power",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.11,
+   "andelAKK": 0.14,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 58,
+   "antalITema": 69,
+   "fondsPlads": 265,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "solaris-energy-infrastructure",
+    "navn": "Solaris Energy Infrastructure"
+   }
+  },
+  "solaris-energy-infrastructure": {
+   "navn": "Solaris Energy Infrastructure",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.11,
+   "andelAKK": 0.13,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 59,
+   "antalITema": 69,
+   "fondsPlads": 268,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "microvast",
+    "navn": "Microvast"
+   },
+   "logo": "assets/img/logoer/a83ef95b65.webp"
+  },
+  "microvast": {
+   "navn": "Microvast",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.1,
+   "andelAKK": 0.12,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 60,
+   "antalITema": 69,
+   "fondsPlads": 275,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "nuscale-power",
+    "navn": "NuScale Power"
+   }
+  },
+  "nuscale-power": {
+   "navn": "NuScale Power",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.1,
+   "andelAKK": 0.12,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 61,
+   "antalITema": 69,
+   "fondsPlads": 276,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "flowserve",
+    "navn": "Flowserve"
+   },
+   "logo": "assets/img/logoer/8cd4c2b13d.webp"
+  },
+  "flowserve": {
+   "navn": "Flowserve",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.09,
+   "andelAKK": 0.1,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 62,
+   "antalITema": 69,
+   "fondsPlads": 283,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "terrestrial-energy",
+    "navn": "Terrestrial Energy"
+   }
+  },
+  "terrestrial-energy": {
+   "navn": "Terrestrial Energy",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.09,
+   "andelAKK": 0.15,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 63,
+   "antalITema": 69,
+   "fondsPlads": 293,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "canadian-natural-resources",
+    "navn": "Canadian Natural Resources"
+   },
+   "logo": "assets/img/logoer/c4ba238faa.webp"
+  },
+  "canadian-natural-resources": {
+   "navn": "Canadian Natural Resources",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.07,
+   "andelAKK": null,
+   "akkStatus": "ejes_ikke",
+   "akkEjesIkke": true,
+   "akkMangler": false,
+   "pladsITema": 64,
+   "antalITema": 69,
+   "fondsPlads": 308,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "caterpillar",
+    "navn": "Caterpillar"
+   },
+   "logo": "assets/img/logoer/8cf8211760.webp"
+  },
+  "caterpillar": {
+   "navn": "Caterpillar",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.07,
+   "andelAKK": 0.1,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 65,
+   "antalITema": 69,
+   "fondsPlads": 309,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "cummins",
+    "navn": "Cummins"
+   },
+   "logo": "assets/img/logoer/580b8b9a63.webp"
+  },
+  "cummins": {
+   "navn": "Cummins",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.06,
+   "andelAKK": 0.08,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 66,
+   "antalITema": 69,
+   "fondsPlads": 322,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "terex",
+    "navn": "Terex"
+   },
+   "logo": "assets/img/logoer/f812a094ea.webp"
+  },
+  "terex": {
+   "navn": "Terex",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.06,
+   "andelAKK": 0.09,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 67,
+   "antalITema": 69,
+   "fondsPlads": 327,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "terra-innovatum",
+    "navn": "Terra Innovatum"
+   },
+   "logo": "assets/img/logoer/cea4e9cb1b.webp"
+  },
+  "terra-innovatum": {
+   "navn": "Terra Innovatum",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.05,
+   "andelAKK": 0.05,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 68,
+   "antalITema": 69,
+   "fondsPlads": 341,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "neovolta",
+    "navn": "NeoVolta"
+   },
+   "logo": "assets/img/logoer/9b5fc9369d.webp"
+  },
+  "neovolta": {
+   "navn": "NeoVolta",
+   "tema": "energi",
+   "temaNavn": "Energi og elnet",
+   "andel": 0.02,
+   "andelAKK": 0.03,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 69,
+   "antalITema": 69,
+   "fondsPlads": 366,
+   "top10Plads": null,
+   "naeste": null,
+   "logo": "assets/img/logoer/7d5ba478b0.webp"
+  },
+  "sivers-semiconductors": {
+   "navn": "Sivers Semiconductors",
+   "tema": "datacenter",
+   "temaNavn": "Datacentre",
+   "andel": 0.96,
+   "andelAKK": 1.09,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 1,
+   "antalITema": 47,
+   "fondsPlads": 9,
+   "top10Plads": 9,
+   "naeste": {
+    "slug": "huber-suhner",
+    "navn": "HUBER+SUHNER"
+   },
+   "logo": "assets/img/logoer/db445c4b44.webp"
+  },
+  "huber-suhner": {
+   "navn": "HUBER+SUHNER",
+   "tema": "datacenter",
+   "temaNavn": "Datacentre",
+   "andel": 0.78,
+   "andelAKK": 0.58,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 2,
+   "antalITema": 47,
+   "fondsPlads": 15,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "iren",
+    "navn": "IREN"
+   },
+   "logo": "assets/img/logoer/11887265c5.webp"
+  },
+  "iren": {
+   "navn": "IREN",
+   "tema": "datacenter",
+   "temaNavn": "Datacentre",
+   "andel": 0.55,
+   "andelAKK": 0.43,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 3,
+   "antalITema": 47,
+   "fondsPlads": 34,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "oracle",
+    "navn": "Oracle"
+   },
+   "logo": "assets/img/logoer/8d7faf7227.webp"
+  },
+  "oracle": {
+   "navn": "Oracle",
+   "tema": "datacenter",
+   "temaNavn": "Datacentre",
+   "andel": 0.55,
+   "andelAKK": 0.48,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 4,
+   "antalITema": 47,
+   "fondsPlads": 36,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "poet-technologies",
+    "navn": "POET Technologies"
+   },
+   "logo": "assets/img/logoer/5356208f45.webp"
+  },
+  "poet-technologies": {
+   "navn": "POET Technologies",
+   "tema": "datacenter",
+   "temaNavn": "Datacentre",
+   "andel": 0.51,
+   "andelAKK": 0.4,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 5,
+   "antalITema": 47,
+   "fondsPlads": 46,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "tss",
+    "navn": "TSS"
+   },
+   "logo": "assets/img/logoer/195af23c91.webp"
+  },
+  "tss": {
+   "navn": "TSS",
+   "tema": "datacenter",
+   "temaNavn": "Datacentre",
+   "andel": 0.51,
+   "andelAKK": 0.44,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 6,
+   "antalITema": 47,
+   "fondsPlads": 47,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "applied-optoelectronics",
+    "navn": "Applied Optoelectronics"
+   },
+   "logo": "assets/img/logoer/10dbf237be.webp"
+  },
+  "applied-optoelectronics": {
+   "navn": "Applied Optoelectronics",
+   "tema": "datacenter",
+   "temaNavn": "Datacentre",
+   "andel": 0.5,
+   "andelAKK": 0.34,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 7,
+   "antalITema": 47,
+   "fondsPlads": 49,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "fabrinet",
+    "navn": "Fabrinet"
+   },
+   "logo": "assets/img/logoer/50f5d2e657.webp"
+  },
+  "fabrinet": {
+   "navn": "Fabrinet",
+   "tema": "datacenter",
+   "temaNavn": "Datacentre",
+   "andel": 0.49,
+   "andelAKK": 0.4,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 8,
+   "antalITema": 47,
+   "fondsPlads": 52,
+   "top10Plads": null,
+   "naeste": null,
+   "logo": "assets/img/logoer/faecb4c2a0.webp"
+  },
+  "softbank-group": {
+   "navn": "SoftBank Group",
+   "tema": "platforme",
+   "temaNavn": "Platformsøkonomi",
+   "andel": 1.68,
+   "andelAKK": 1.34,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 1,
+   "antalITema": 31,
+   "fondsPlads": 3,
+   "top10Plads": 3,
+   "naeste": {
+    "slug": "carvana",
+    "navn": "Carvana"
+   },
+   "logo": "assets/img/logoer/47f8edf10d.svg"
+  },
+  "carvana": {
+   "navn": "Carvana",
+   "tema": "platforme",
+   "temaNavn": "Platformsøkonomi",
+   "andel": 1.29,
+   "andelAKK": 1.27,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 2,
+   "antalITema": 31,
+   "fondsPlads": 5,
+   "top10Plads": 5,
+   "naeste": {
+    "slug": "applovin",
+    "navn": "AppLovin"
+   }
+  },
+  "applovin": {
+   "navn": "AppLovin",
+   "tema": "platforme",
+   "temaNavn": "Platformsøkonomi",
+   "andel": 1.15,
+   "andelAKK": 1.07,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 3,
+   "antalITema": 31,
+   "fondsPlads": 6,
+   "top10Plads": 6,
+   "naeste": {
+    "slug": "sea",
+    "navn": "Sea"
+   },
+   "logo": "assets/img/logoer/0563db3d84.webp"
+  },
+  "sea": {
+   "navn": "Sea",
+   "tema": "platforme",
+   "temaNavn": "Platformsøkonomi",
+   "andel": 1.05,
+   "andelAKK": 0.94,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 4,
+   "antalITema": 31,
+   "fondsPlads": 8,
+   "top10Plads": 8,
+   "naeste": {
+    "slug": "opendoor",
+    "navn": "Opendoor"
+   }
+  },
+  "opendoor": {
+   "navn": "Opendoor",
+   "tema": "platforme",
+   "temaNavn": "Platformsøkonomi",
+   "andel": 0.55,
+   "andelAKK": 0.39,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 5,
+   "antalITema": 31,
+   "fondsPlads": 35,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "auto1-group",
+    "navn": "AUTO1 Group"
+   }
+  },
+  "auto1-group": {
+   "navn": "AUTO1 Group",
+   "tema": "platforme",
+   "temaNavn": "Platformsøkonomi",
+   "andel": 0.44,
+   "andelAKK": 0.33,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 6,
+   "antalITema": 31,
+   "fondsPlads": 66,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "roblox",
+    "navn": "Roblox"
+   }
+  },
+  "roblox": {
+   "navn": "Roblox",
+   "tema": "platforme",
+   "temaNavn": "Platformsøkonomi",
+   "andel": 0.41,
+   "andelAKK": 0.4,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 7,
+   "antalITema": 31,
+   "fondsPlads": 74,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "amazon",
+    "navn": "Amazon"
+   }
+  },
+  "amazon": {
+   "navn": "Amazon",
+   "tema": "platforme",
+   "temaNavn": "Platformsøkonomi",
+   "andel": 0.35,
+   "andelAKK": 0.31,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 8,
+   "antalITema": 31,
+   "fondsPlads": 90,
+   "top10Plads": null,
+   "naeste": null,
+   "logo": "assets/img/logoer/7275c91851.webp"
+  },
+  "spacex": {
+   "navn": "SpaceX",
+   "tema": "rumfart",
+   "temaNavn": "Rumfart",
+   "andel": 3.54,
+   "andelAKK": 3.62,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 1,
+   "antalITema": 18,
+   "fondsPlads": 1,
+   "top10Plads": 1,
+   "naeste": {
+    "slug": "planet-labs",
+    "navn": "Planet Labs"
+   },
+   "logo": "assets/img/logoer/d55f831486.webp"
+  },
+  "planet-labs": {
+   "navn": "Planet Labs",
+   "tema": "rumfart",
+   "temaNavn": "Rumfart",
+   "andel": 0.52,
+   "andelAKK": 0.54,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 2,
+   "antalITema": 18,
+   "fondsPlads": 43,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "intuitive-machines",
+    "navn": "Intuitive Machines"
+   },
+   "logo": "assets/img/logoer/bcc55f45c9.webp"
+  },
+  "intuitive-machines": {
+   "navn": "Intuitive Machines",
+   "tema": "rumfart",
+   "temaNavn": "Rumfart",
+   "andel": 0.49,
+   "andelAKK": 0.5,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 3,
+   "antalITema": 18,
+   "fondsPlads": 53,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "ast-spacemobile",
+    "navn": "AST SpaceMobile"
+   },
+   "logo": "assets/img/logoer/5f02f07ad3.webp"
+  },
+  "ast-spacemobile": {
+   "navn": "AST SpaceMobile",
+   "tema": "rumfart",
+   "temaNavn": "Rumfart",
+   "andel": 0.48,
+   "andelAKK": 0.5,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 4,
+   "antalITema": 18,
+   "fondsPlads": 54,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "blacksky",
+    "navn": "BlackSky"
+   },
+   "logo": "assets/img/logoer/46350e4587.webp"
+  },
+  "blacksky": {
+   "navn": "BlackSky",
+   "tema": "rumfart",
+   "temaNavn": "Rumfart",
+   "andel": 0.42,
+   "andelAKK": 0.44,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 5,
+   "antalITema": 18,
+   "fondsPlads": 71,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "york-space-systems",
+    "navn": "York Space Systems"
+   },
+   "logo": "assets/img/logoer/f63b43efe9.webp"
+  },
+  "york-space-systems": {
+   "navn": "York Space Systems",
+   "tema": "rumfart",
+   "temaNavn": "Rumfart",
+   "andel": 0.42,
+   "andelAKK": 0.32,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 6,
+   "antalITema": 18,
+   "fondsPlads": 72,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "mda-space",
+    "navn": "MDA Space"
+   }
+  },
+  "mda-space": {
+   "navn": "MDA Space",
+   "tema": "rumfart",
+   "temaNavn": "Rumfart",
+   "andel": 0.4,
+   "andelAKK": 0.37,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 7,
+   "antalITema": 18,
+   "fondsPlads": 80,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "rocket-lab",
+    "navn": "Rocket Lab"
+   },
+   "logo": "assets/img/logoer/2d4deb2248.webp"
+  },
+  "rocket-lab": {
+   "navn": "Rocket Lab",
+   "tema": "rumfart",
+   "temaNavn": "Rumfart",
+   "andel": 0.38,
+   "andelAKK": 0.27,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 8,
+   "antalITema": 18,
+   "fondsPlads": 82,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "redwire",
+    "navn": "Redwire"
+   },
+   "logo": "assets/img/logoer/8a97cb55ec.webp"
+  },
+  "redwire": {
+   "navn": "Redwire",
+   "tema": "rumfart",
+   "temaNavn": "Rumfart",
+   "andel": 0.27,
+   "andelAKK": 0.24,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 9,
+   "antalITema": 18,
+   "fondsPlads": 126,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "firefly-aerospace",
+    "navn": "Firefly Aerospace"
+   },
+   "logo": "assets/img/logoer/8bb9c0aadf.webp"
+  },
+  "firefly-aerospace": {
+   "navn": "Firefly Aerospace",
+   "tema": "rumfart",
+   "temaNavn": "Rumfart",
+   "andel": 0.26,
+   "andelAKK": 0.27,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 10,
+   "antalITema": 18,
+   "fondsPlads": 131,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "satellogic",
+    "navn": "Satellogic"
+   },
+   "logo": "assets/img/logoer/d180bac9cd.webp"
+  },
+  "satellogic": {
+   "navn": "Satellogic",
+   "tema": "rumfart",
+   "temaNavn": "Rumfart",
+   "andel": 0.21,
+   "andelAKK": 0.15,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 11,
+   "antalITema": 18,
+   "fondsPlads": 173,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "starfighters-space",
+    "navn": "Starfighters Space"
+   },
+   "logo": "assets/img/logoer/de6508f13e.webp"
+  },
+  "starfighters-space": {
+   "navn": "Starfighters Space",
+   "tema": "rumfart",
+   "temaNavn": "Rumfart",
+   "andel": 0.2,
+   "andelAKK": 0.21,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 12,
+   "antalITema": 18,
+   "fondsPlads": 178,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "spire-global",
+    "navn": "Spire Global"
+   },
+   "logo": "assets/img/logoer/ead0d3103f.webp"
+  },
+  "spire-global": {
+   "navn": "Spire Global",
+   "tema": "rumfart",
+   "temaNavn": "Rumfart",
+   "andel": 0.19,
+   "andelAKK": 0.16,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 13,
+   "antalITema": 18,
+   "fondsPlads": 192,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "voyager-technologies",
+    "navn": "Voyager Technologies"
+   },
+   "logo": "assets/img/logoer/a834214184.webp"
+  },
+  "voyager-technologies": {
+   "navn": "Voyager Technologies",
+   "tema": "rumfart",
+   "temaNavn": "Rumfart",
+   "andel": 0.17,
+   "andelAKK": 0.2,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 14,
+   "antalITema": 18,
+   "fondsPlads": 218,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "hawkeye-360",
+    "navn": "HawkEye 360"
+   },
+   "logo": "assets/img/logoer/9ac32ffea7.webp"
+  },
+  "hawkeye-360": {
+   "navn": "HawkEye 360",
+   "tema": "rumfart",
+   "temaNavn": "Rumfart",
+   "andel": 0.12,
+   "andelAKK": 0.2,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 15,
+   "antalITema": 18,
+   "fondsPlads": 247,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "howmet-aerospace",
+    "navn": "Howmet Aerospace"
+   },
+   "logo": "assets/img/logoer/9bb4103dc9.webp"
+  },
+  "howmet-aerospace": {
+   "navn": "Howmet Aerospace",
+   "tema": "rumfart",
+   "temaNavn": "Rumfart",
+   "andel": 0.12,
+   "andelAKK": 0.1,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 16,
+   "antalITema": 18,
+   "fondsPlads": 248,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "karman-space-defense",
+    "navn": "Karman Space & Defense"
+   },
+   "logo": "assets/img/logoer/c7acbe56b6.webp"
+  },
+  "karman-space-defense": {
+   "navn": "Karman Space & Defense",
+   "tema": "rumfart",
+   "temaNavn": "Rumfart",
+   "andel": 0.05,
+   "andelAKK": 0.09,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 17,
+   "antalITema": 18,
+   "fondsPlads": 336,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "iridium-communications",
+    "navn": "Iridium Communications"
+   },
+   "logo": "assets/img/logoer/724b5c6398.webp"
+  },
+  "iridium-communications": {
+   "navn": "Iridium Communications",
+   "tema": "rumfart",
+   "temaNavn": "Rumfart",
+   "andel": 0.02,
+   "andelAKK": 0.02,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 18,
+   "antalITema": 18,
+   "fondsPlads": 365,
+   "top10Plads": null,
+   "naeste": null,
+   "logo": "assets/img/logoer/a090499165.webp"
+  },
+  "tesla": {
+   "navn": "Tesla",
+   "tema": "fysisk-ai",
+   "temaNavn": "Robotter & fysisk AI",
+   "andel": 1.76,
+   "andelAKK": 1.7,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 1,
+   "antalITema": 27,
+   "fondsPlads": 2,
+   "top10Plads": 2,
+   "naeste": {
+    "slug": "ford-motor",
+    "navn": "Ford Motor"
+   },
+   "logo": "assets/img/logoer/69a6d6749c.webp"
+  },
+  "ford-motor": {
+   "navn": "Ford Motor",
+   "tema": "fysisk-ai",
+   "temaNavn": "Robotter & fysisk AI",
+   "andel": 0.7,
+   "andelAKK": 0.57,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 2,
+   "antalITema": 27,
+   "fondsPlads": 20,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "raspberry-pi",
+    "navn": "Raspberry Pi"
+   },
+   "logo": "assets/img/logoer/ae3f14d060.webp"
+  },
+  "raspberry-pi": {
+   "navn": "Raspberry Pi",
+   "tema": "fysisk-ai",
+   "temaNavn": "Robotter & fysisk AI",
+   "andel": 0.59,
+   "andelAKK": 0.8,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 3,
+   "antalITema": 27,
+   "fondsPlads": 29,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "merlin",
+    "navn": "Merlin"
+   },
+   "logo": "assets/img/logoer/d0b387d0ba.webp"
+  },
+  "merlin": {
+   "navn": "Merlin",
+   "tema": "fysisk-ai",
+   "temaNavn": "Robotter & fysisk AI",
+   "andel": 0.57,
+   "andelAKK": 0.74,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 4,
+   "antalITema": 27,
+   "fondsPlads": 30,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "joby-aviation",
+    "navn": "Joby Aviation"
+   },
+   "logo": "assets/img/logoer/cbfb947247.webp"
+  },
+  "joby-aviation": {
+   "navn": "Joby Aviation",
+   "tema": "fysisk-ai",
+   "temaNavn": "Robotter & fysisk AI",
+   "andel": 0.48,
+   "andelAKK": 0.47,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 5,
+   "antalITema": 27,
+   "fondsPlads": 55,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "aeva-technologies",
+    "navn": "Aeva Technologies"
+   },
+   "logo": "assets/img/logoer/44f4cec729.webp"
+  },
+  "aeva-technologies": {
+   "navn": "Aeva Technologies",
+   "tema": "fysisk-ai",
+   "temaNavn": "Robotter & fysisk AI",
+   "andel": 0.35,
+   "andelAKK": 0.28,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 6,
+   "antalITema": 27,
+   "fondsPlads": 89,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "symbotic",
+    "navn": "Symbotic"
+   },
+   "logo": "assets/img/logoer/a92ed9d7da.webp"
+  },
+  "symbotic": {
+   "navn": "Symbotic",
+   "tema": "fysisk-ai",
+   "temaNavn": "Robotter & fysisk AI",
+   "andel": 0.35,
+   "andelAKK": 0.37,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 7,
+   "antalITema": 27,
+   "fondsPlads": 92,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "pony-ai",
+    "navn": "Pony AI"
+   },
+   "logo": "assets/img/logoer/3dc18d2f25.webp"
+  },
+  "pony-ai": {
+   "navn": "Pony AI",
+   "tema": "fysisk-ai",
+   "temaNavn": "Robotter & fysisk AI",
+   "andel": 0.24,
+   "andelAKK": 0.29,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 8,
+   "antalITema": 27,
+   "fondsPlads": 149,
+   "top10Plads": null,
+   "naeste": null,
+   "logo": "assets/img/logoer/98e519ca1d.webp"
+  },
+  "united-states-antimony": {
+   "navn": "United States Antimony",
+   "tema": "raastoffer",
+   "temaNavn": "Råstoffer",
+   "andel": 0.51,
+   "andelAKK": 0.46,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 1,
+   "antalITema": 36,
+   "fondsPlads": 48,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "ero-copper",
+    "navn": "Ero Copper"
+   }
+  },
+  "ero-copper": {
+   "navn": "Ero Copper",
+   "tema": "raastoffer",
+   "temaNavn": "Råstoffer",
+   "andel": 0.49,
+   "andelAKK": 0.39,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 2,
+   "antalITema": 36,
+   "fondsPlads": 51,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "huntsman",
+    "navn": "Huntsman"
+   }
+  },
+  "huntsman": {
+   "navn": "Huntsman",
+   "tema": "raastoffer",
+   "temaNavn": "Råstoffer",
+   "andel": 0.4,
+   "andelAKK": 0.31,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 3,
+   "antalITema": 36,
+   "fondsPlads": 78,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "lynas-rare-earths",
+    "navn": "Lynas Rare Earths"
+   }
+  },
+  "lynas-rare-earths": {
+   "navn": "Lynas Rare Earths",
+   "tema": "raastoffer",
+   "temaNavn": "Råstoffer",
+   "andel": 0.4,
+   "andelAKK": 0.38,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 4,
+   "antalITema": 36,
+   "fondsPlads": 79,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "critical-metals",
+    "navn": "Critical Metals"
+   }
+  },
+  "critical-metals": {
+   "navn": "Critical Metals",
+   "tema": "raastoffer",
+   "temaNavn": "Råstoffer",
+   "andel": 0.32,
+   "andelAKK": 0.33,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 5,
+   "antalITema": 36,
+   "fondsPlads": 104,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "energy-fuels",
+    "navn": "Energy Fuels"
+   }
+  },
+  "energy-fuels": {
+   "navn": "Energy Fuels",
+   "tema": "raastoffer",
+   "temaNavn": "Råstoffer",
+   "andel": 0.31,
+   "andelAKK": 0.27,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 6,
+   "antalITema": 36,
+   "fondsPlads": 108,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "niocorp",
+    "navn": "NioCorp"
+   }
+  },
+  "niocorp": {
+   "navn": "NioCorp",
+   "tema": "raastoffer",
+   "temaNavn": "Råstoffer",
+   "andel": 0.28,
+   "andelAKK": 0.34,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 7,
+   "antalITema": 36,
+   "fondsPlads": 121,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "first-majestic-silver",
+    "navn": "First Majestic Silver"
+   }
+  },
+  "first-majestic-silver": {
+   "navn": "First Majestic Silver",
+   "tema": "raastoffer",
+   "temaNavn": "Råstoffer",
+   "andel": 0.27,
+   "andelAKK": 0.32,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 8,
+   "antalITema": 36,
+   "fondsPlads": 125,
+   "top10Plads": null,
+   "naeste": null
+  },
+  "sofi": {
+   "navn": "SoFi",
+   "tema": "fintech",
+   "temaNavn": "Fintech",
+   "andel": 0.7,
+   "andelAKK": 0.51,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 1,
+   "antalITema": 18,
+   "fondsPlads": 21,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "klarna",
+    "navn": "Klarna"
+   }
+  },
+  "klarna": {
+   "navn": "Klarna",
+   "tema": "fintech",
+   "temaNavn": "Fintech",
+   "andel": 0.59,
+   "andelAKK": 0.46,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 2,
+   "antalITema": 18,
+   "fondsPlads": 28,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "upstart",
+    "navn": "Upstart"
+   }
+  },
+  "upstart": {
+   "navn": "Upstart",
+   "tema": "fintech",
+   "temaNavn": "Fintech",
+   "andel": 0.56,
+   "andelAKK": 0.39,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 3,
+   "antalITema": 18,
+   "fondsPlads": 31,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "shift4-payments",
+    "navn": "Shift4 Payments"
+   },
+   "logo": "assets/img/logoer/d926b3917c.webp"
+  },
+  "shift4-payments": {
+   "navn": "Shift4 Payments",
+   "tema": "fintech",
+   "temaNavn": "Fintech",
+   "andel": 0.39,
+   "andelAKK": 0.28,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 4,
+   "antalITema": 18,
+   "fondsPlads": 81,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "root",
+    "navn": "Root"
+   }
+  },
+  "root": {
+   "navn": "Root",
+   "tema": "fintech",
+   "temaNavn": "Fintech",
+   "andel": 0.34,
+   "andelAKK": 0.26,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 5,
+   "antalITema": 18,
+   "fondsPlads": 97,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "lemonade",
+    "navn": "Lemonade"
+   }
+  },
+  "lemonade": {
+   "navn": "Lemonade",
+   "tema": "fintech",
+   "temaNavn": "Fintech",
+   "andel": 0.29,
+   "andelAKK": 0.22,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 6,
+   "antalITema": 18,
+   "fondsPlads": 117,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "chime-financial",
+    "navn": "Chime Financial"
+   },
+   "logo": "assets/img/logoer/b706fa8dc2.webp"
+  },
+  "chime-financial": {
+   "navn": "Chime Financial",
+   "tema": "fintech",
+   "temaNavn": "Fintech",
+   "andel": 0.23,
+   "andelAKK": 0.19,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 7,
+   "antalITema": 18,
+   "fondsPlads": 153,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "webull",
+    "navn": "Webull"
+   }
+  },
+  "webull": {
+   "navn": "Webull",
+   "tema": "fintech",
+   "temaNavn": "Fintech",
+   "andel": 0.23,
+   "andelAKK": 0.17,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 8,
+   "antalITema": 18,
+   "fondsPlads": 162,
+   "top10Plads": null,
+   "naeste": null
+  },
+  "bitdeer-technologies-group": {
+   "navn": "Bitdeer Technologies Group",
+   "tema": "krypto",
+   "temaNavn": "Krypto",
+   "andel": 0.45,
+   "andelAKK": 0.39,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 1,
+   "antalITema": 17,
+   "fondsPlads": 61,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "cleanspark",
+    "navn": "CleanSpark"
+   },
+   "logo": "assets/img/logoer/232d32ac89.webp"
+  },
+  "cleanspark": {
+   "navn": "CleanSpark",
+   "tema": "krypto",
+   "temaNavn": "Krypto",
+   "andel": 0.45,
+   "andelAKK": 0.33,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 2,
+   "antalITema": 17,
+   "fondsPlads": 62,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "coinbase",
+    "navn": "Coinbase"
+   },
+   "logo": "assets/img/logoer/3fe8934664.webp"
+  },
+  "coinbase": {
+   "navn": "Coinbase",
+   "tema": "krypto",
+   "temaNavn": "Krypto",
+   "andel": 0.44,
+   "andelAKK": 0.43,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 3,
+   "antalITema": 17,
+   "fondsPlads": 67,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "galaxy-digital",
+    "navn": "Galaxy Digital"
+   }
+  },
+  "galaxy-digital": {
+   "navn": "Galaxy Digital",
+   "tema": "krypto",
+   "temaNavn": "Krypto",
+   "andel": 0.34,
+   "andelAKK": 0.22,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 4,
+   "antalITema": 17,
+   "fondsPlads": 95,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "circle-internet-group",
+    "navn": "Circle Internet Group"
+   },
+   "logo": "assets/img/logoer/9d23c4d489.webp"
+  },
+  "circle-internet-group": {
+   "navn": "Circle Internet Group",
+   "tema": "krypto",
+   "temaNavn": "Krypto",
+   "andel": 0.32,
+   "andelAKK": 0.41,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 5,
+   "antalITema": 17,
+   "fondsPlads": 103,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "riot-platforms",
+    "navn": "Riot Platforms"
+   }
+  },
+  "riot-platforms": {
+   "navn": "Riot Platforms",
+   "tema": "krypto",
+   "temaNavn": "Krypto",
+   "andel": 0.28,
+   "andelAKK": 0.2,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 6,
+   "antalITema": 17,
+   "fondsPlads": 123,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "gemini-space-station",
+    "navn": "Gemini Space Station"
+   },
+   "logo": "assets/img/logoer/ecba7af17a.webp"
+  },
+  "gemini-space-station": {
+   "navn": "Gemini Space Station",
+   "tema": "krypto",
+   "temaNavn": "Krypto",
+   "andel": 0.26,
+   "andelAKK": 0.2,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 7,
+   "antalITema": 17,
+   "fondsPlads": 132,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "keel-infrastructure",
+    "navn": "Keel Infrastructure"
+   }
+  },
+  "keel-infrastructure": {
+   "navn": "Keel Infrastructure",
+   "tema": "krypto",
+   "temaNavn": "Krypto",
+   "andel": 0.22,
+   "andelAKK": 0.29,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 8,
+   "antalITema": 17,
+   "fondsPlads": 166,
+   "top10Plads": null,
+   "naeste": null,
+   "logo": "assets/img/logoer/842387a5b6.webp"
+  },
+  "soundhound-ai": {
+   "navn": "SoundHound AI",
+   "tema": "software",
+   "temaNavn": "Software & AI",
+   "andel": 0.78,
+   "andelAKK": 0.72,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 1,
+   "antalITema": 15,
+   "fondsPlads": 16,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "palantir",
+    "navn": "Palantir"
+   },
+   "logo": "assets/img/logoer/ccdc9e4e50.webp"
+  },
+  "palantir": {
+   "navn": "Palantir",
+   "tema": "software",
+   "temaNavn": "Software & AI",
+   "andel": 0.32,
+   "andelAKK": 0.22,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 2,
+   "antalITema": 15,
+   "fondsPlads": 107,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "unity-software",
+    "navn": "Unity Software"
+   },
+   "logo": "assets/img/logoer/ddbd7bb802.webp"
+  },
+  "unity-software": {
+   "navn": "Unity Software",
+   "tema": "software",
+   "temaNavn": "Software & AI",
+   "andel": 0.27,
+   "andelAKK": 0.26,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 3,
+   "antalITema": 15,
+   "fondsPlads": 127,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "innodata",
+    "navn": "Innodata"
+   },
+   "logo": "assets/img/logoer/cd0d4faaf6.webp"
+  },
+  "innodata": {
+   "navn": "Innodata",
+   "tema": "software",
+   "temaNavn": "Software & AI",
+   "andel": 0.22,
+   "andelAKK": 0.24,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 4,
+   "antalITema": 15,
+   "fondsPlads": 165,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "navan",
+    "navn": "Navan"
+   },
+   "logo": "assets/img/logoer/4c267b5466.webp"
+  },
+  "navan": {
+   "navn": "Navan",
+   "tema": "software",
+   "temaNavn": "Software & AI",
+   "andel": 0.18,
+   "andelAKK": 0.17,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 5,
+   "antalITema": 15,
+   "fondsPlads": 205,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "snowflake",
+    "navn": "Snowflake"
+   },
+   "logo": "assets/img/logoer/9512417995.webp"
+  },
+  "snowflake": {
+   "navn": "Snowflake",
+   "tema": "software",
+   "temaNavn": "Software & AI",
+   "andel": 0.07,
+   "andelAKK": 0.07,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 6,
+   "antalITema": 15,
+   "fondsPlads": 316,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "wix-com",
+    "navn": "Wix.com"
+   },
+   "logo": "assets/img/logoer/b4fa744531.webp"
+  },
+  "wix-com": {
+   "navn": "Wix.com",
+   "tema": "software",
+   "temaNavn": "Software & AI",
+   "andel": 0.07,
+   "andelAKK": 0.11,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 7,
+   "antalITema": 15,
+   "fondsPlads": 319,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "figma",
+    "navn": "Figma"
+   },
+   "logo": "assets/img/logoer/34352ee693.webp"
+  },
+  "figma": {
+   "navn": "Figma",
+   "tema": "software",
+   "temaNavn": "Software & AI",
+   "andel": 0.04,
+   "andelAKK": 0.01,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 8,
+   "antalITema": 15,
+   "fondsPlads": 345,
+   "top10Plads": null,
+   "naeste": null,
+   "logo": "assets/img/logoer/5197e2fc2a.webp"
+  },
+  "hims-hers-health": {
+   "navn": "Hims & Hers Health",
+   "tema": "sundhed",
+   "temaNavn": "Sundhed og biotek",
+   "andel": 0.51,
+   "andelAKK": 0.42,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 1,
+   "antalITema": 12,
+   "fondsPlads": 45,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "biontech",
+    "navn": "BioNTech"
+   }
+  },
+  "biontech": {
+   "navn": "BioNTech",
+   "tema": "sundhed",
+   "temaNavn": "Sundhed og biotek",
+   "andel": 0.36,
+   "andelAKK": 0.28,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 2,
+   "antalITema": 12,
+   "fondsPlads": 87,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "eli-lilly",
+    "navn": "Eli Lilly"
+   }
+  },
+  "eli-lilly": {
+   "navn": "Eli Lilly",
+   "tema": "sundhed",
+   "temaNavn": "Sundhed og biotek",
+   "andel": 0.26,
+   "andelAKK": 0.19,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 3,
+   "antalITema": 12,
+   "fondsPlads": 129,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "intellia-therapeutics",
+    "navn": "Intellia Therapeutics"
+   }
+  },
+  "intellia-therapeutics": {
+   "navn": "Intellia Therapeutics",
+   "tema": "sundhed",
+   "temaNavn": "Sundhed og biotek",
+   "andel": 0.18,
+   "andelAKK": 0.19,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 4,
+   "antalITema": 12,
+   "fondsPlads": 202,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "tempus-ai",
+    "navn": "Tempus AI"
+   }
+  },
+  "tempus-ai": {
+   "navn": "Tempus AI",
+   "tema": "sundhed",
+   "temaNavn": "Sundhed og biotek",
+   "andel": 0.13,
+   "andelAKK": 0.08,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 5,
+   "antalITema": 12,
+   "fondsPlads": 243,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "bachem",
+    "navn": "Bachem"
+   },
+   "logo": "assets/img/logoer/a678549283.webp"
+  },
+  "bachem": {
+   "navn": "Bachem",
+   "tema": "sundhed",
+   "temaNavn": "Sundhed og biotek",
+   "andel": 0.11,
+   "andelAKK": 0.21,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 6,
+   "antalITema": 12,
+   "fondsPlads": 255,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "crispr-therapeutics",
+    "navn": "CRISPR Therapeutics"
+   }
+  },
+  "crispr-therapeutics": {
+   "navn": "CRISPR Therapeutics",
+   "tema": "sundhed",
+   "temaNavn": "Sundhed og biotek",
+   "andel": 0.09,
+   "andelAKK": 0.15,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 7,
+   "antalITema": 12,
+   "fondsPlads": 280,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "omada-health",
+    "navn": "Omada Health"
+   }
+  },
+  "omada-health": {
+   "navn": "Omada Health",
+   "tema": "sundhed",
+   "temaNavn": "Sundhed og biotek",
+   "andel": 0.09,
+   "andelAKK": 0.11,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 8,
+   "antalITema": 12,
+   "fondsPlads": 289,
+   "top10Plads": null,
+   "naeste": null
+  },
+  "oxford-instruments": {
+   "navn": "Oxford Instruments",
+   "tema": "kvante",
+   "temaNavn": "Kvantecomputere",
+   "andel": 0.47,
+   "andelAKK": 0.45,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 1,
+   "antalITema": 7,
+   "fondsPlads": 57,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "quantum-computing",
+    "navn": "Quantum Computing"
+   },
+   "logo": "assets/img/logoer/25a1fbdfb2.webp"
+  },
+  "quantum-computing": {
+   "navn": "Quantum Computing",
+   "tema": "kvante",
+   "temaNavn": "Kvantecomputere",
+   "andel": 0.31,
+   "andelAKK": 0.4,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 2,
+   "antalITema": 7,
+   "fondsPlads": 110,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "quantinuum",
+    "navn": "Quantinuum"
+   },
+   "logo": "assets/img/logoer/3f574bae01.webp"
+  },
+  "quantinuum": {
+   "navn": "Quantinuum",
+   "tema": "kvante",
+   "temaNavn": "Kvantecomputere",
+   "andel": 0.24,
+   "andelAKK": 0.41,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 3,
+   "antalITema": 7,
+   "fondsPlads": 150,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "d-wave-quantum",
+    "navn": "D-Wave Quantum"
+   },
+   "logo": "assets/img/logoer/6d1f1222ac.webp"
+  },
+  "d-wave-quantum": {
+   "navn": "D-Wave Quantum",
+   "tema": "kvante",
+   "temaNavn": "Kvantecomputere",
+   "andel": 0.19,
+   "andelAKK": 0.16,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 4,
+   "antalITema": 7,
+   "fondsPlads": 183,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "rigetti-computing",
+    "navn": "Rigetti Computing"
+   },
+   "logo": "assets/img/logoer/a45fccae65.webp"
+  },
+  "rigetti-computing": {
+   "navn": "Rigetti Computing",
+   "tema": "kvante",
+   "temaNavn": "Kvantecomputere",
+   "andel": 0.18,
+   "andelAKK": 0.21,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 5,
+   "antalITema": 7,
+   "fondsPlads": 207,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "infleqtion",
+    "navn": "Infleqtion"
+   },
+   "logo": "assets/img/logoer/0d730480c3.webp"
+  },
+  "infleqtion": {
+   "navn": "Infleqtion",
+   "tema": "kvante",
+   "temaNavn": "Kvantecomputere",
+   "andel": 0.14,
+   "andelAKK": 0.12,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 6,
+   "antalITema": 7,
+   "fondsPlads": 229,
+   "top10Plads": null,
+   "naeste": {
+    "slug": "ionq",
+    "navn": "IonQ"
+   },
+   "logo": "assets/img/logoer/9a3e974f72.webp"
+  },
+  "ionq": {
+   "navn": "IonQ",
+   "tema": "kvante",
+   "temaNavn": "Kvantecomputere",
+   "andel": 0.1,
+   "andelAKK": 0.14,
+   "akkStatus": "ejes",
+   "akkEjesIkke": false,
+   "akkMangler": false,
+   "pladsITema": 7,
+   "antalITema": 7,
+   "fondsPlads": 274,
+   "top10Plads": null,
+   "naeste": null,
+   "logo": "assets/img/logoer/4fc209b71b.webp"
+  }
+ },
+ "grupper": {
+  "rumfart:op": {
+   "akk": {
+    "andel": 5.69,
+    "antal": 10
+   },
+   "akkIngen": false,
+   "andel": 5.81,
+   "antal": 10,
+   "selskaber": [
+    {
+     "navn": "SpaceX",
+     "slug": "spacex",
+     "andel": 3.54,
+     "logo": "assets/img/logoer/d55f831486.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "York Space Systems",
+     "slug": "york-space-systems",
+     "andel": 0.42,
+     "bar": 0.1186
+    },
+    {
+     "navn": "MDA Space",
+     "slug": "mda-space",
+     "andel": 0.4,
+     "logo": "assets/img/logoer/2d4deb2248.webp",
+     "bar": 0.113
+    },
+    {
+     "navn": "Rocket Lab",
+     "slug": "rocket-lab",
+     "andel": 0.38,
+     "logo": "assets/img/logoer/8a97cb55ec.webp",
+     "bar": 0.1073
+    },
+    {
+     "navn": "Redwire",
+     "slug": "redwire",
+     "andel": 0.27,
+     "logo": "assets/img/logoer/8bb9c0aadf.webp",
+     "bar": 0.0763
+    },
+    {
+     "navn": "Firefly Aerospace",
+     "slug": "firefly-aerospace",
+     "andel": 0.26,
+     "logo": "assets/img/logoer/d180bac9cd.webp",
+     "bar": 0.0734
+    },
+    {
+     "navn": "Starfighters Space",
+     "slug": "starfighters-space",
+     "andel": 0.2,
+     "logo": "assets/img/logoer/ead0d3103f.webp",
+     "bar": 0.0565
+    },
+    {
+     "navn": "Voyager Technologies",
+     "slug": "voyager-technologies",
+     "andel": 0.17,
+     "logo": "assets/img/logoer/9ac32ffea7.webp",
+     "bar": 0.048
+    },
+    {
+     "navn": "Howmet Aerospace",
+     "slug": "howmet-aerospace",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/c7acbe56b6.webp",
+     "bar": 0.0339
+    },
+    {
+     "navn": "Karman Space & Defense",
+     "slug": "karman-space-defense",
+     "andel": 0.05,
+     "logo": "assets/img/logoer/724b5c6398.webp",
+     "bar": 0.0141
+    }
+   ],
+   "vis": [
+    {
+     "navn": "SpaceX",
+     "slug": "spacex",
+     "andel": 3.54,
+     "logo": "assets/img/logoer/d55f831486.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "York Space Systems",
+     "slug": "york-space-systems",
+     "andel": 0.42,
+     "bar": 0.1186
+    },
+    {
+     "navn": "MDA Space",
+     "slug": "mda-space",
+     "andel": 0.4,
+     "logo": "assets/img/logoer/2d4deb2248.webp",
+     "bar": 0.113
+    }
+   ],
+   "flere": [
+    {
+     "navn": "Rocket Lab",
+     "slug": "rocket-lab",
+     "andel": 0.38,
+     "logo": "assets/img/logoer/8a97cb55ec.webp",
+     "bar": 0.1073
+    },
+    {
+     "navn": "Redwire",
+     "slug": "redwire",
+     "andel": 0.27,
+     "logo": "assets/img/logoer/8bb9c0aadf.webp",
+     "bar": 0.0763
+    },
+    {
+     "navn": "Firefly Aerospace",
+     "slug": "firefly-aerospace",
+     "andel": 0.26,
+     "logo": "assets/img/logoer/d180bac9cd.webp",
+     "bar": 0.0734
+    },
+    {
+     "navn": "Starfighters Space",
+     "slug": "starfighters-space",
+     "andel": 0.2,
+     "logo": "assets/img/logoer/ead0d3103f.webp",
+     "bar": 0.0565
+    },
+    {
+     "navn": "Voyager Technologies",
+     "slug": "voyager-technologies",
+     "andel": 0.17,
+     "logo": "assets/img/logoer/9ac32ffea7.webp",
+     "bar": 0.048
+    },
+    {
+     "navn": "Howmet Aerospace",
+     "slug": "howmet-aerospace",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/c7acbe56b6.webp",
+     "bar": 0.0339
+    },
+    {
+     "navn": "Karman Space & Defense",
+     "slug": "karman-space-defense",
+     "andel": 0.05,
+     "logo": "assets/img/logoer/724b5c6398.webp",
+     "bar": 0.0141
+    }
+   ],
+   "antalFlere": 7
+  },
+  "rumfart:op:1": {
+   "akk": {
+    "andel": 4.37,
+    "antal": 4
+   },
+   "akkIngen": false,
+   "andel": 4.38,
+   "antal": 4,
+   "selskaber": [
+    {
+     "navn": "SpaceX",
+     "slug": "spacex",
+     "andel": 3.54,
+     "logo": "assets/img/logoer/d55f831486.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Rocket Lab",
+     "slug": "rocket-lab",
+     "andel": 0.38,
+     "logo": "assets/img/logoer/8a97cb55ec.webp",
+     "bar": 0.1073
+    },
+    {
+     "navn": "Firefly Aerospace",
+     "slug": "firefly-aerospace",
+     "andel": 0.26,
+     "logo": "assets/img/logoer/d180bac9cd.webp",
+     "bar": 0.0734
+    },
+    {
+     "navn": "Starfighters Space",
+     "slug": "starfighters-space",
+     "andel": 0.2,
+     "logo": "assets/img/logoer/ead0d3103f.webp",
+     "bar": 0.0565
+    }
+   ],
+   "vis": [
+    {
+     "navn": "SpaceX",
+     "slug": "spacex",
+     "andel": 3.54,
+     "logo": "assets/img/logoer/d55f831486.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Rocket Lab",
+     "slug": "rocket-lab",
+     "andel": 0.38,
+     "logo": "assets/img/logoer/8a97cb55ec.webp",
+     "bar": 0.1073
+    },
+    {
+     "navn": "Firefly Aerospace",
+     "slug": "firefly-aerospace",
+     "andel": 0.26,
+     "logo": "assets/img/logoer/d180bac9cd.webp",
+     "bar": 0.0734
+    }
+   ],
+   "flere": [
+    {
+     "navn": "Starfighters Space",
+     "slug": "starfighters-space",
+     "andel": 0.2,
+     "logo": "assets/img/logoer/ead0d3103f.webp",
+     "bar": 0.0565
+    }
+   ],
+   "antalFlere": 1
+  },
+  "rumfart:op:2": {
+   "akk": {
+    "andel": 0.69,
+    "antal": 2
+   },
+   "akkIngen": false,
+   "andel": 0.82,
+   "antal": 2,
+   "selskaber": [
+    {
+     "navn": "York Space Systems",
+     "slug": "york-space-systems",
+     "andel": 0.42,
+     "bar": 1.0
+    },
+    {
+     "navn": "MDA Space",
+     "slug": "mda-space",
+     "andel": 0.4,
+     "logo": "assets/img/logoer/2d4deb2248.webp",
+     "bar": 0.9524
+    }
+   ],
+   "vis": [
+    {
+     "navn": "York Space Systems",
+     "slug": "york-space-systems",
+     "andel": 0.42,
+     "bar": 1.0
+    },
+    {
+     "navn": "MDA Space",
+     "slug": "mda-space",
+     "andel": 0.4,
+     "logo": "assets/img/logoer/2d4deb2248.webp",
+     "bar": 0.9524
+    }
+   ],
+   "flere": [],
+   "antalFlere": 0
+  },
+  "rumfart:op:3": {
+   "akk": {
+    "andel": 0.44,
+    "antal": 2
+   },
+   "akkIngen": false,
+   "andel": 0.44,
+   "antal": 2,
+   "selskaber": [
+    {
+     "navn": "Redwire",
+     "slug": "redwire",
+     "andel": 0.27,
+     "logo": "assets/img/logoer/8bb9c0aadf.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Voyager Technologies",
+     "slug": "voyager-technologies",
+     "andel": 0.17,
+     "logo": "assets/img/logoer/9ac32ffea7.webp",
+     "bar": 0.6296
+    }
+   ],
+   "vis": [
+    {
+     "navn": "Redwire",
+     "slug": "redwire",
+     "andel": 0.27,
+     "logo": "assets/img/logoer/8bb9c0aadf.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Voyager Technologies",
+     "slug": "voyager-technologies",
+     "andel": 0.17,
+     "logo": "assets/img/logoer/9ac32ffea7.webp",
+     "bar": 0.6296
+    }
+   ],
+   "flere": [],
+   "antalFlere": 0
+  },
+  "rumfart:op:4": {
+   "akk": {
+    "andel": 0.19,
+    "antal": 2
+   },
+   "akkIngen": false,
+   "andel": 0.17,
+   "antal": 2,
+   "selskaber": [
+    {
+     "navn": "Howmet Aerospace",
+     "slug": "howmet-aerospace",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/c7acbe56b6.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Karman Space & Defense",
+     "slug": "karman-space-defense",
+     "andel": 0.05,
+     "logo": "assets/img/logoer/724b5c6398.webp",
+     "bar": 0.4167
+    }
+   ],
+   "vis": [
+    {
+     "navn": "Howmet Aerospace",
+     "slug": "howmet-aerospace",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/c7acbe56b6.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Karman Space & Defense",
+     "slug": "karman-space-defense",
+     "andel": 0.05,
+     "logo": "assets/img/logoer/724b5c6398.webp",
+     "bar": 0.4167
+    }
+   ],
+   "flere": [],
+   "antalFlere": 0
+  },
+  "rumfart:ned": {
+   "akk": {
+    "andel": 2.01,
+    "antal": 7
+   },
+   "akkIngen": false,
+   "andel": 1.96,
+   "antal": 7,
+   "selskaber": [
+    {
+     "navn": "Planet Labs",
+     "slug": "planet-labs",
+     "andel": 0.52,
+     "logo": "assets/img/logoer/bcc55f45c9.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "AST SpaceMobile",
+     "slug": "ast-spacemobile",
+     "andel": 0.48,
+     "logo": "assets/img/logoer/46350e4587.webp",
+     "bar": 0.9231
+    },
+    {
+     "navn": "BlackSky",
+     "slug": "blacksky",
+     "andel": 0.42,
+     "logo": "assets/img/logoer/f63b43efe9.webp",
+     "bar": 0.8077
+    },
+    {
+     "navn": "Satellogic",
+     "slug": "satellogic",
+     "andel": 0.21,
+     "logo": "assets/img/logoer/de6508f13e.webp",
+     "bar": 0.4038
+    },
+    {
+     "navn": "Spire Global",
+     "slug": "spire-global",
+     "andel": 0.19,
+     "logo": "assets/img/logoer/a834214184.webp",
+     "bar": 0.3654
+    },
+    {
+     "navn": "HawkEye 360",
+     "slug": "hawkeye-360",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/9bb4103dc9.webp",
+     "bar": 0.2308
+    },
+    {
+     "navn": "Iridium Communications",
+     "slug": "iridium-communications",
+     "andel": 0.02,
+     "logo": "assets/img/logoer/a090499165.webp",
+     "bar": 0.0385
+    }
+   ],
+   "vis": [
+    {
+     "navn": "Planet Labs",
+     "slug": "planet-labs",
+     "andel": 0.52,
+     "logo": "assets/img/logoer/bcc55f45c9.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "AST SpaceMobile",
+     "slug": "ast-spacemobile",
+     "andel": 0.48,
+     "logo": "assets/img/logoer/46350e4587.webp",
+     "bar": 0.9231
+    },
+    {
+     "navn": "BlackSky",
+     "slug": "blacksky",
+     "andel": 0.42,
+     "logo": "assets/img/logoer/f63b43efe9.webp",
+     "bar": 0.8077
+    }
+   ],
+   "flere": [
+    {
+     "navn": "Satellogic",
+     "slug": "satellogic",
+     "andel": 0.21,
+     "logo": "assets/img/logoer/de6508f13e.webp",
+     "bar": 0.4038
+    },
+    {
+     "navn": "Spire Global",
+     "slug": "spire-global",
+     "andel": 0.19,
+     "logo": "assets/img/logoer/a834214184.webp",
+     "bar": 0.3654
+    },
+    {
+     "navn": "HawkEye 360",
+     "slug": "hawkeye-360",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/9bb4103dc9.webp",
+     "bar": 0.2308
+    },
+    {
+     "navn": "Iridium Communications",
+     "slug": "iridium-communications",
+     "andel": 0.02,
+     "logo": "assets/img/logoer/a090499165.webp",
+     "bar": 0.0385
+    }
+   ],
+   "antalFlere": 4
+  },
+  "rumfart:ned:1": {
+   "akk": {
+    "andel": 1.49,
+    "antal": 5
+   },
+   "akkIngen": false,
+   "andel": 1.46,
+   "antal": 5,
+   "selskaber": [
+    {
+     "navn": "Planet Labs",
+     "slug": "planet-labs",
+     "andel": 0.52,
+     "logo": "assets/img/logoer/bcc55f45c9.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "BlackSky",
+     "slug": "blacksky",
+     "andel": 0.42,
+     "logo": "assets/img/logoer/f63b43efe9.webp",
+     "bar": 0.8077
+    },
+    {
+     "navn": "Satellogic",
+     "slug": "satellogic",
+     "andel": 0.21,
+     "logo": "assets/img/logoer/de6508f13e.webp",
+     "bar": 0.4038
+    },
+    {
+     "navn": "Spire Global",
+     "slug": "spire-global",
+     "andel": 0.19,
+     "logo": "assets/img/logoer/a834214184.webp",
+     "bar": 0.3654
+    },
+    {
+     "navn": "HawkEye 360",
+     "slug": "hawkeye-360",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/9bb4103dc9.webp",
+     "bar": 0.2308
+    }
+   ],
+   "vis": [
+    {
+     "navn": "Planet Labs",
+     "slug": "planet-labs",
+     "andel": 0.52,
+     "logo": "assets/img/logoer/bcc55f45c9.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "BlackSky",
+     "slug": "blacksky",
+     "andel": 0.42,
+     "logo": "assets/img/logoer/f63b43efe9.webp",
+     "bar": 0.8077
+    },
+    {
+     "navn": "Satellogic",
+     "slug": "satellogic",
+     "andel": 0.21,
+     "logo": "assets/img/logoer/de6508f13e.webp",
+     "bar": 0.4038
+    }
+   ],
+   "flere": [
+    {
+     "navn": "Spire Global",
+     "slug": "spire-global",
+     "andel": 0.19,
+     "logo": "assets/img/logoer/a834214184.webp",
+     "bar": 0.3654
+    },
+    {
+     "navn": "HawkEye 360",
+     "slug": "hawkeye-360",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/9bb4103dc9.webp",
+     "bar": 0.2308
+    }
+   ],
+   "antalFlere": 2
+  },
+  "rumfart:ned:2": {
+   "akk": {
+    "andel": 0.52,
+    "antal": 2
+   },
+   "akkIngen": false,
+   "andel": 0.5,
+   "antal": 2,
+   "selskaber": [
+    {
+     "navn": "AST SpaceMobile",
+     "slug": "ast-spacemobile",
+     "andel": 0.48,
+     "logo": "assets/img/logoer/46350e4587.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Iridium Communications",
+     "slug": "iridium-communications",
+     "andel": 0.02,
+     "logo": "assets/img/logoer/a090499165.webp",
+     "bar": 0.0417
+    }
+   ],
+   "vis": [
+    {
+     "navn": "AST SpaceMobile",
+     "slug": "ast-spacemobile",
+     "andel": 0.48,
+     "logo": "assets/img/logoer/46350e4587.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Iridium Communications",
+     "slug": "iridium-communications",
+     "andel": 0.02,
+     "logo": "assets/img/logoer/a090499165.webp",
+     "bar": 0.0417
+    }
+   ],
+   "flere": [],
+   "antalFlere": 0
+  },
+  "rumfart:ud": {
+   "akk": {
+    "andel": 0.5,
+    "antal": 1
+   },
+   "akkIngen": false,
+   "andel": 0.49,
+   "antal": 1,
+   "selskaber": [
+    {
+     "navn": "Intuitive Machines",
+     "slug": "intuitive-machines",
+     "andel": 0.49,
+     "logo": "assets/img/logoer/5f02f07ad3.webp",
+     "bar": 1.0
+    }
+   ],
+   "vis": [
+    {
+     "navn": "Intuitive Machines",
+     "slug": "intuitive-machines",
+     "andel": 0.49,
+     "logo": "assets/img/logoer/5f02f07ad3.webp",
+     "bar": 1.0
+    }
+   ],
+   "flere": [],
+   "antalFlere": 0
+  },
+  "rumfart:ud:1": {
+   "akk": {
+    "andel": 0.5,
+    "antal": 1
+   },
+   "akkIngen": false,
+   "andel": 0.49,
+   "antal": 1,
+   "selskaber": [
+    {
+     "navn": "Intuitive Machines",
+     "slug": "intuitive-machines",
+     "andel": 0.49,
+     "logo": "assets/img/logoer/5f02f07ad3.webp",
+     "bar": 1.0
+    }
+   ],
+   "vis": [
+    {
+     "navn": "Intuitive Machines",
+     "slug": "intuitive-machines",
+     "andel": 0.49,
+     "logo": "assets/img/logoer/5f02f07ad3.webp",
+     "bar": 1.0
+    }
+   ],
+   "flere": [],
+   "antalFlere": 0
+  },
+  "chips:tegnes": {
+   "akk": {
+    "andel": 0.0,
+    "antal": 0
+   },
+   "akkIngen": true,
+   "andel": 0.15,
+   "antal": 2,
+   "selskaber": [
+    {
+     "navn": "Synopsys",
+     "slug": "synopsys",
+     "andel": 0.09,
+     "bar": 1.0
+    },
+    {
+     "navn": "Cadence Design Systems",
+     "slug": "cadence-design-systems",
+     "andel": 0.06,
+     "bar": 0.6667
+    }
+   ],
+   "vis": [
+    {
+     "navn": "Synopsys",
+     "slug": "synopsys",
+     "andel": 0.09,
+     "bar": 1.0
+    },
+    {
+     "navn": "Cadence Design Systems",
+     "slug": "cadence-design-systems",
+     "andel": 0.06,
+     "bar": 0.6667
+    }
+   ],
+   "flere": [],
+   "antalFlere": 0
+  },
+  "chips:tegnes:1": {
+   "akk": {
+    "andel": 0.0,
+    "antal": 0
+   },
+   "akkIngen": true,
+   "andel": 0.15,
+   "antal": 2,
+   "selskaber": [
+    {
+     "navn": "Synopsys",
+     "slug": "synopsys",
+     "andel": 0.09,
+     "bar": 1.0
+    },
+    {
+     "navn": "Cadence Design Systems",
+     "slug": "cadence-design-systems",
+     "andel": 0.06,
+     "bar": 0.6667
+    }
+   ],
+   "vis": [
+    {
+     "navn": "Synopsys",
+     "slug": "synopsys",
+     "andel": 0.09,
+     "bar": 1.0
+    },
+    {
+     "navn": "Cadence Design Systems",
+     "slug": "cadence-design-systems",
+     "andel": 0.06,
+     "bar": 0.6667
+    }
+   ],
+   "flere": [],
+   "antalFlere": 0
+  },
+  "chips:materialer": {
+   "akk": {
+    "andel": 1.95,
+    "antal": 5
+   },
+   "akkIngen": false,
+   "andel": 1.65,
+   "antal": 5,
+   "selskaber": [
+    {
+     "navn": "Soitec",
+     "slug": "soitec",
+     "andel": 0.69,
+     "logo": "assets/img/logoer/dd34bfa59d.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "IQE",
+     "slug": "iqe",
+     "andel": 0.55,
+     "logo": "assets/img/logoer/52e0da790e.webp",
+     "bar": 0.7971
+    },
+    {
+     "navn": "AXT",
+     "slug": "axt",
+     "andel": 0.17,
+     "logo": "assets/img/logoer/def622555b.webp",
+     "bar": 0.2464
+    },
+    {
+     "navn": "Entegris",
+     "slug": "entegris",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/f3e07fcdad.webp",
+     "bar": 0.1739
+    },
+    {
+     "navn": "Wolfspeed",
+     "slug": "wolfspeed",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/8800d66171.webp",
+     "bar": 0.1739
+    }
+   ],
+   "vis": [
+    {
+     "navn": "Soitec",
+     "slug": "soitec",
+     "andel": 0.69,
+     "logo": "assets/img/logoer/dd34bfa59d.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "IQE",
+     "slug": "iqe",
+     "andel": 0.55,
+     "logo": "assets/img/logoer/52e0da790e.webp",
+     "bar": 0.7971
+    },
+    {
+     "navn": "AXT",
+     "slug": "axt",
+     "andel": 0.17,
+     "logo": "assets/img/logoer/def622555b.webp",
+     "bar": 0.2464
+    }
+   ],
+   "flere": [
+    {
+     "navn": "Entegris",
+     "slug": "entegris",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/f3e07fcdad.webp",
+     "bar": 0.1739
+    },
+    {
+     "navn": "Wolfspeed",
+     "slug": "wolfspeed",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/8800d66171.webp",
+     "bar": 0.1739
+    }
+   ],
+   "antalFlere": 2
+  },
+  "chips:materialer:1": {
+   "akk": {
+    "andel": 1.95,
+    "antal": 5
+   },
+   "akkIngen": false,
+   "andel": 1.65,
+   "antal": 5,
+   "selskaber": [
+    {
+     "navn": "Soitec",
+     "slug": "soitec",
+     "andel": 0.69,
+     "logo": "assets/img/logoer/dd34bfa59d.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "IQE",
+     "slug": "iqe",
+     "andel": 0.55,
+     "logo": "assets/img/logoer/52e0da790e.webp",
+     "bar": 0.7971
+    },
+    {
+     "navn": "AXT",
+     "slug": "axt",
+     "andel": 0.17,
+     "logo": "assets/img/logoer/def622555b.webp",
+     "bar": 0.2464
+    },
+    {
+     "navn": "Entegris",
+     "slug": "entegris",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/f3e07fcdad.webp",
+     "bar": 0.1739
+    },
+    {
+     "navn": "Wolfspeed",
+     "slug": "wolfspeed",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/8800d66171.webp",
+     "bar": 0.1739
+    }
+   ],
+   "vis": [
+    {
+     "navn": "Soitec",
+     "slug": "soitec",
+     "andel": 0.69,
+     "logo": "assets/img/logoer/dd34bfa59d.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "IQE",
+     "slug": "iqe",
+     "andel": 0.55,
+     "logo": "assets/img/logoer/52e0da790e.webp",
+     "bar": 0.7971
+    },
+    {
+     "navn": "AXT",
+     "slug": "axt",
+     "andel": 0.17,
+     "logo": "assets/img/logoer/def622555b.webp",
+     "bar": 0.2464
+    }
+   ],
+   "flere": [
+    {
+     "navn": "Entegris",
+     "slug": "entegris",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/f3e07fcdad.webp",
+     "bar": 0.1739
+    },
+    {
+     "navn": "Wolfspeed",
+     "slug": "wolfspeed",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/8800d66171.webp",
+     "bar": 0.1739
+    }
+   ],
+   "antalFlere": 2
+  },
+  "chips:maskiner": {
+   "akk": {
+    "andel": 4.95,
+    "antal": 17
+   },
+   "akkIngen": false,
+   "andel": 4.71,
+   "antal": 17,
+   "selskaber": [
+    {
+     "navn": "LPKF Laser & Electronics",
+     "slug": "lpkf-laser-electronics",
+     "andel": 0.81,
+     "logo": "assets/img/logoer/1750ae3fb9.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Nova",
+     "slug": "nova",
+     "andel": 0.66,
+     "logo": "assets/img/logoer/d15f922473.webp",
+     "bar": 0.8148
+    },
+    {
+     "navn": "Tokyo Electron",
+     "slug": "tokyo-electron",
+     "andel": 0.45,
+     "logo": "assets/img/logoer/323e8423ed.webp",
+     "bar": 0.5556
+    },
+    {
+     "navn": "ASM International",
+     "slug": "asm-international",
+     "andel": 0.44,
+     "logo": "assets/img/logoer/07aa949943.webp",
+     "bar": 0.5432
+    },
+    {
+     "navn": "MKS",
+     "slug": "mks",
+     "andel": 0.34,
+     "logo": "assets/img/logoer/6457d6104b.webp",
+     "bar": 0.4198
+    },
+    {
+     "navn": "Lasertec",
+     "slug": "lasertec",
+     "andel": 0.31,
+     "logo": "assets/img/logoer/af96b86550.webp",
+     "bar": 0.383
+    },
+    {
+     "navn": "Rigaku",
+     "slug": "rigaku",
+     "andel": 0.31,
+     "logo": "assets/img/logoer/f5a191a973.webp",
+     "bar": 0.383
+    },
+    {
+     "navn": "KLA",
+     "slug": "kla",
+     "andel": 0.28,
+     "logo": "assets/img/logoer/854d641e64.webp",
+     "bar": 0.3457
+    },
+    {
+     "navn": "Onto Innovation",
+     "slug": "onto-innovation",
+     "andel": 0.24,
+     "bar": 0.2963
+    },
+    {
+     "navn": "Aixtron",
+     "slug": "aixtron",
+     "andel": 0.2,
+     "bar": 0.2469
+    },
+    {
+     "navn": "Veeco Instruments",
+     "slug": "veeco-instruments",
+     "andel": 0.18,
+     "logo": "assets/img/logoer/c9df30070b.webp",
+     "bar": 0.2222
+    },
+    {
+     "navn": "Kokusai Electric",
+     "slug": "kokusai-electric",
+     "andel": 0.13,
+     "logo": "assets/img/logoer/aea873782d.webp",
+     "bar": 0.1605
+    },
+    {
+     "navn": "ACM Research",
+     "slug": "acm-research",
+     "andel": 0.1,
+     "logo": "assets/img/logoer/f70b811920.webp",
+     "bar": 0.1235
+    },
+    {
+     "navn": "ASML",
+     "slug": "asml",
+     "andel": 0.09,
+     "logo": "assets/img/logoer/6a9ec0669d.webp",
+     "bar": 0.1111
+    },
+    {
+     "navn": "Lam Research",
+     "slug": "lam-research",
+     "andel": 0.09,
+     "logo": "assets/img/logoer/26fd337cb3.webp",
+     "bar": 0.1111
+    },
+    {
+     "navn": "Applied Materials",
+     "slug": "applied-materials",
+     "andel": 0.05,
+     "logo": "assets/img/logoer/b846cd3f38.webp",
+     "bar": 0.0617
+    },
+    {
+     "navn": "Axcelis Technologies",
+     "slug": "axcelis-technologies",
+     "andel": 0.03,
+     "bar": 0.037
+    }
+   ],
+   "vis": [
+    {
+     "navn": "LPKF Laser & Electronics",
+     "slug": "lpkf-laser-electronics",
+     "andel": 0.81,
+     "logo": "assets/img/logoer/1750ae3fb9.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Nova",
+     "slug": "nova",
+     "andel": 0.66,
+     "logo": "assets/img/logoer/d15f922473.webp",
+     "bar": 0.8148
+    },
+    {
+     "navn": "Tokyo Electron",
+     "slug": "tokyo-electron",
+     "andel": 0.45,
+     "logo": "assets/img/logoer/323e8423ed.webp",
+     "bar": 0.5556
+    }
+   ],
+   "flere": [
+    {
+     "navn": "ASM International",
+     "slug": "asm-international",
+     "andel": 0.44,
+     "logo": "assets/img/logoer/07aa949943.webp",
+     "bar": 0.5432
+    },
+    {
+     "navn": "MKS",
+     "slug": "mks",
+     "andel": 0.34,
+     "logo": "assets/img/logoer/6457d6104b.webp",
+     "bar": 0.4198
+    },
+    {
+     "navn": "Lasertec",
+     "slug": "lasertec",
+     "andel": 0.31,
+     "logo": "assets/img/logoer/af96b86550.webp",
+     "bar": 0.383
+    },
+    {
+     "navn": "Rigaku",
+     "slug": "rigaku",
+     "andel": 0.31,
+     "logo": "assets/img/logoer/f5a191a973.webp",
+     "bar": 0.383
+    },
+    {
+     "navn": "KLA",
+     "slug": "kla",
+     "andel": 0.28,
+     "logo": "assets/img/logoer/854d641e64.webp",
+     "bar": 0.3457
+    },
+    {
+     "navn": "Onto Innovation",
+     "slug": "onto-innovation",
+     "andel": 0.24,
+     "bar": 0.2963
+    },
+    {
+     "navn": "Aixtron",
+     "slug": "aixtron",
+     "andel": 0.2,
+     "bar": 0.2469
+    },
+    {
+     "navn": "Veeco Instruments",
+     "slug": "veeco-instruments",
+     "andel": 0.18,
+     "logo": "assets/img/logoer/c9df30070b.webp",
+     "bar": 0.2222
+    },
+    {
+     "navn": "Kokusai Electric",
+     "slug": "kokusai-electric",
+     "andel": 0.13,
+     "logo": "assets/img/logoer/aea873782d.webp",
+     "bar": 0.1605
+    },
+    {
+     "navn": "ACM Research",
+     "slug": "acm-research",
+     "andel": 0.1,
+     "logo": "assets/img/logoer/f70b811920.webp",
+     "bar": 0.1235
+    },
+    {
+     "navn": "ASML",
+     "slug": "asml",
+     "andel": 0.09,
+     "logo": "assets/img/logoer/6a9ec0669d.webp",
+     "bar": 0.1111
+    },
+    {
+     "navn": "Lam Research",
+     "slug": "lam-research",
+     "andel": 0.09,
+     "logo": "assets/img/logoer/26fd337cb3.webp",
+     "bar": 0.1111
+    },
+    {
+     "navn": "Applied Materials",
+     "slug": "applied-materials",
+     "andel": 0.05,
+     "logo": "assets/img/logoer/b846cd3f38.webp",
+     "bar": 0.0617
+    },
+    {
+     "navn": "Axcelis Technologies",
+     "slug": "axcelis-technologies",
+     "andel": 0.03,
+     "bar": 0.037
+    }
+   ],
+   "antalFlere": 14
+  },
+  "chips:maskiner:1": {
+   "akk": {
+    "andel": 4.39,
+    "antal": 15
+   },
+   "akkIngen": false,
+   "andel": 4.31,
+   "antal": 15,
+   "selskaber": [
+    {
+     "navn": "LPKF Laser & Electronics",
+     "slug": "lpkf-laser-electronics",
+     "andel": 0.81,
+     "logo": "assets/img/logoer/1750ae3fb9.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Nova",
+     "slug": "nova",
+     "andel": 0.66,
+     "logo": "assets/img/logoer/d15f922473.webp",
+     "bar": 0.8148
+    },
+    {
+     "navn": "Tokyo Electron",
+     "slug": "tokyo-electron",
+     "andel": 0.45,
+     "logo": "assets/img/logoer/323e8423ed.webp",
+     "bar": 0.5556
+    },
+    {
+     "navn": "ASM International",
+     "slug": "asm-international",
+     "andel": 0.44,
+     "logo": "assets/img/logoer/07aa949943.webp",
+     "bar": 0.5432
+    },
+    {
+     "navn": "MKS",
+     "slug": "mks",
+     "andel": 0.34,
+     "logo": "assets/img/logoer/6457d6104b.webp",
+     "bar": 0.4198
+    },
+    {
+     "navn": "Rigaku",
+     "slug": "rigaku",
+     "andel": 0.31,
+     "logo": "assets/img/logoer/f5a191a973.webp",
+     "bar": 0.383
+    },
+    {
+     "navn": "KLA",
+     "slug": "kla",
+     "andel": 0.28,
+     "logo": "assets/img/logoer/854d641e64.webp",
+     "bar": 0.3457
+    },
+    {
+     "navn": "Onto Innovation",
+     "slug": "onto-innovation",
+     "andel": 0.24,
+     "bar": 0.2963
+    },
+    {
+     "navn": "Aixtron",
+     "slug": "aixtron",
+     "andel": 0.2,
+     "bar": 0.2469
+    },
+    {
+     "navn": "Veeco Instruments",
+     "slug": "veeco-instruments",
+     "andel": 0.18,
+     "logo": "assets/img/logoer/c9df30070b.webp",
+     "bar": 0.2222
+    },
+    {
+     "navn": "Kokusai Electric",
+     "slug": "kokusai-electric",
+     "andel": 0.13,
+     "logo": "assets/img/logoer/aea873782d.webp",
+     "bar": 0.1605
+    },
+    {
+     "navn": "ACM Research",
+     "slug": "acm-research",
+     "andel": 0.1,
+     "logo": "assets/img/logoer/f70b811920.webp",
+     "bar": 0.1235
+    },
+    {
+     "navn": "Lam Research",
+     "slug": "lam-research",
+     "andel": 0.09,
+     "logo": "assets/img/logoer/26fd337cb3.webp",
+     "bar": 0.1111
+    },
+    {
+     "navn": "Applied Materials",
+     "slug": "applied-materials",
+     "andel": 0.05,
+     "logo": "assets/img/logoer/b846cd3f38.webp",
+     "bar": 0.0617
+    },
+    {
+     "navn": "Axcelis Technologies",
+     "slug": "axcelis-technologies",
+     "andel": 0.03,
+     "bar": 0.037
+    }
+   ],
+   "vis": [
+    {
+     "navn": "LPKF Laser & Electronics",
+     "slug": "lpkf-laser-electronics",
+     "andel": 0.81,
+     "logo": "assets/img/logoer/1750ae3fb9.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Nova",
+     "slug": "nova",
+     "andel": 0.66,
+     "logo": "assets/img/logoer/d15f922473.webp",
+     "bar": 0.8148
+    },
+    {
+     "navn": "Tokyo Electron",
+     "slug": "tokyo-electron",
+     "andel": 0.45,
+     "logo": "assets/img/logoer/323e8423ed.webp",
+     "bar": 0.5556
+    }
+   ],
+   "flere": [
+    {
+     "navn": "ASM International",
+     "slug": "asm-international",
+     "andel": 0.44,
+     "logo": "assets/img/logoer/07aa949943.webp",
+     "bar": 0.5432
+    },
+    {
+     "navn": "MKS",
+     "slug": "mks",
+     "andel": 0.34,
+     "logo": "assets/img/logoer/6457d6104b.webp",
+     "bar": 0.4198
+    },
+    {
+     "navn": "Rigaku",
+     "slug": "rigaku",
+     "andel": 0.31,
+     "logo": "assets/img/logoer/f5a191a973.webp",
+     "bar": 0.383
+    },
+    {
+     "navn": "KLA",
+     "slug": "kla",
+     "andel": 0.28,
+     "logo": "assets/img/logoer/854d641e64.webp",
+     "bar": 0.3457
+    },
+    {
+     "navn": "Onto Innovation",
+     "slug": "onto-innovation",
+     "andel": 0.24,
+     "bar": 0.2963
+    },
+    {
+     "navn": "Aixtron",
+     "slug": "aixtron",
+     "andel": 0.2,
+     "bar": 0.2469
+    },
+    {
+     "navn": "Veeco Instruments",
+     "slug": "veeco-instruments",
+     "andel": 0.18,
+     "logo": "assets/img/logoer/c9df30070b.webp",
+     "bar": 0.2222
+    },
+    {
+     "navn": "Kokusai Electric",
+     "slug": "kokusai-electric",
+     "andel": 0.13,
+     "logo": "assets/img/logoer/aea873782d.webp",
+     "bar": 0.1605
+    },
+    {
+     "navn": "ACM Research",
+     "slug": "acm-research",
+     "andel": 0.1,
+     "logo": "assets/img/logoer/f70b811920.webp",
+     "bar": 0.1235
+    },
+    {
+     "navn": "Lam Research",
+     "slug": "lam-research",
+     "andel": 0.09,
+     "logo": "assets/img/logoer/26fd337cb3.webp",
+     "bar": 0.1111
+    },
+    {
+     "navn": "Applied Materials",
+     "slug": "applied-materials",
+     "andel": 0.05,
+     "logo": "assets/img/logoer/b846cd3f38.webp",
+     "bar": 0.0617
+    },
+    {
+     "navn": "Axcelis Technologies",
+     "slug": "axcelis-technologies",
+     "andel": 0.03,
+     "bar": 0.037
+    }
+   ],
+   "antalFlere": 12
+  },
+  "chips:maskiner:2": {
+   "akk": {
+    "andel": 0.56,
+    "antal": 2
+   },
+   "akkIngen": false,
+   "andel": 0.4,
+   "antal": 2,
+   "selskaber": [
+    {
+     "navn": "Lasertec",
+     "slug": "lasertec",
+     "andel": 0.31,
+     "logo": "assets/img/logoer/af96b86550.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "ASML",
+     "slug": "asml",
+     "andel": 0.09,
+     "logo": "assets/img/logoer/6a9ec0669d.webp",
+     "bar": 0.2903
+    }
+   ],
+   "vis": [
+    {
+     "navn": "Lasertec",
+     "slug": "lasertec",
+     "andel": 0.31,
+     "logo": "assets/img/logoer/af96b86550.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "ASML",
+     "slug": "asml",
+     "andel": 0.09,
+     "logo": "assets/img/logoer/6a9ec0669d.webp",
+     "bar": 0.2903
+    }
+   ],
+   "flere": [],
+   "antalFlere": 0
+  },
+  "chips:fremstilles": {
+   "akk": {
+    "andel": 1.98,
+    "antal": 4
+   },
+   "akkIngen": false,
+   "andel": 2.11,
+   "antal": 5,
+   "selskaber": [
+    {
+     "navn": "GlobalFoundries",
+     "slug": "globalfoundries",
+     "andel": 0.72,
+     "logo": "assets/img/logoer/cd450e45a6.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Tower Semiconductor",
+     "slug": "tower-semiconductor",
+     "andel": 0.67,
+     "logo": "assets/img/logoer/1e6260ed54.webp",
+     "bar": 0.9306
+    },
+    {
+     "navn": "UMC",
+     "slug": "umc",
+     "andel": 0.35,
+     "bar": 0.4861
+    },
+    {
+     "navn": "X-FAB",
+     "slug": "x-fab",
+     "andel": 0.33,
+     "logo": "assets/img/logoer/20463d39c6.webp",
+     "bar": 0.4583
+    },
+    {
+     "navn": "TSMC",
+     "slug": "tsmc",
+     "andel": 0.04,
+     "bar": 0.0556
+    }
+   ],
+   "vis": [
+    {
+     "navn": "GlobalFoundries",
+     "slug": "globalfoundries",
+     "andel": 0.72,
+     "logo": "assets/img/logoer/cd450e45a6.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Tower Semiconductor",
+     "slug": "tower-semiconductor",
+     "andel": 0.67,
+     "logo": "assets/img/logoer/1e6260ed54.webp",
+     "bar": 0.9306
+    },
+    {
+     "navn": "UMC",
+     "slug": "umc",
+     "andel": 0.35,
+     "bar": 0.4861
+    }
+   ],
+   "flere": [
+    {
+     "navn": "X-FAB",
+     "slug": "x-fab",
+     "andel": 0.33,
+     "logo": "assets/img/logoer/20463d39c6.webp",
+     "bar": 0.4583
+    },
+    {
+     "navn": "TSMC",
+     "slug": "tsmc",
+     "andel": 0.04,
+     "bar": 0.0556
+    }
+   ],
+   "antalFlere": 2
+  },
+  "chips:fremstilles:1": {
+   "akk": {
+    "andel": 1.98,
+    "antal": 4
+   },
+   "akkIngen": false,
+   "andel": 2.11,
+   "antal": 5,
+   "selskaber": [
+    {
+     "navn": "GlobalFoundries",
+     "slug": "globalfoundries",
+     "andel": 0.72,
+     "logo": "assets/img/logoer/cd450e45a6.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Tower Semiconductor",
+     "slug": "tower-semiconductor",
+     "andel": 0.67,
+     "logo": "assets/img/logoer/1e6260ed54.webp",
+     "bar": 0.9306
+    },
+    {
+     "navn": "UMC",
+     "slug": "umc",
+     "andel": 0.35,
+     "bar": 0.4861
+    },
+    {
+     "navn": "X-FAB",
+     "slug": "x-fab",
+     "andel": 0.33,
+     "logo": "assets/img/logoer/20463d39c6.webp",
+     "bar": 0.4583
+    },
+    {
+     "navn": "TSMC",
+     "slug": "tsmc",
+     "andel": 0.04,
+     "bar": 0.0556
+    }
+   ],
+   "vis": [
+    {
+     "navn": "GlobalFoundries",
+     "slug": "globalfoundries",
+     "andel": 0.72,
+     "logo": "assets/img/logoer/cd450e45a6.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Tower Semiconductor",
+     "slug": "tower-semiconductor",
+     "andel": 0.67,
+     "logo": "assets/img/logoer/1e6260ed54.webp",
+     "bar": 0.9306
+    },
+    {
+     "navn": "UMC",
+     "slug": "umc",
+     "andel": 0.35,
+     "bar": 0.4861
+    }
+   ],
+   "flere": [
+    {
+     "navn": "X-FAB",
+     "slug": "x-fab",
+     "andel": 0.33,
+     "logo": "assets/img/logoer/20463d39c6.webp",
+     "bar": 0.4583
+    },
+    {
+     "navn": "TSMC",
+     "slug": "tsmc",
+     "andel": 0.04,
+     "bar": 0.0556
+    }
+   ],
+   "antalFlere": 2
+  },
+  "chips:samles": {
+   "akk": {
+    "andel": 3.32,
+    "antal": 11
+   },
+   "akkIngen": false,
+   "andel": 2.92,
+   "antal": 11,
+   "selskaber": [
+    {
+     "navn": "Besi",
+     "slug": "besi",
+     "andel": 0.64,
+     "bar": 1.0
+    },
+    {
+     "navn": "SUSS MicroTec",
+     "slug": "suss-microtec",
+     "andel": 0.45,
+     "logo": "assets/img/logoer/b7558a97d0.webp",
+     "bar": 0.7031
+    },
+    {
+     "navn": "ASMPT",
+     "slug": "asmpt",
+     "andel": 0.42,
+     "logo": "assets/img/logoer/7532150e62.webp",
+     "bar": 0.6563
+    },
+    {
+     "navn": "Camtek",
+     "slug": "camtek",
+     "andel": 0.4,
+     "bar": 0.625
+    },
+    {
+     "navn": "Aehr Test Systems",
+     "slug": "aehr-test-systems",
+     "andel": 0.37,
+     "logo": "assets/img/logoer/d4bb600b5c.webp",
+     "bar": 0.5781
+    },
+    {
+     "navn": "Advantest",
+     "slug": "advantest",
+     "andel": 0.19,
+     "logo": "assets/img/logoer/509540d950.webp",
+     "bar": 0.2969
+    },
+    {
+     "navn": "Kulicke & Soffa",
+     "slug": "kulicke-soffa",
+     "andel": 0.18,
+     "logo": "assets/img/logoer/66774484fb.webp",
+     "bar": 0.2813
+    },
+    {
+     "navn": "Amkor Technology",
+     "slug": "amkor-technology",
+     "andel": 0.1,
+     "logo": "assets/img/logoer/850bb0587b.webp",
+     "bar": 0.1563
+    },
+    {
+     "navn": "Cohu",
+     "slug": "cohu",
+     "andel": 0.08,
+     "logo": "assets/img/logoer/6942a6ca36.webp",
+     "bar": 0.125
+    },
+    {
+     "navn": "FormFactor",
+     "slug": "formfactor",
+     "andel": 0.06,
+     "logo": "assets/img/logoer/58a0d186b3.webp",
+     "bar": 0.0938
+    },
+    {
+     "navn": "Teradyne",
+     "slug": "teradyne",
+     "andel": 0.03,
+     "logo": "assets/img/logoer/2419f7bcca.webp",
+     "bar": 0.0469
+    }
+   ],
+   "vis": [
+    {
+     "navn": "Besi",
+     "slug": "besi",
+     "andel": 0.64,
+     "bar": 1.0
+    },
+    {
+     "navn": "SUSS MicroTec",
+     "slug": "suss-microtec",
+     "andel": 0.45,
+     "logo": "assets/img/logoer/b7558a97d0.webp",
+     "bar": 0.7031
+    },
+    {
+     "navn": "ASMPT",
+     "slug": "asmpt",
+     "andel": 0.42,
+     "logo": "assets/img/logoer/7532150e62.webp",
+     "bar": 0.6563
+    }
+   ],
+   "flere": [
+    {
+     "navn": "Camtek",
+     "slug": "camtek",
+     "andel": 0.4,
+     "bar": 0.625
+    },
+    {
+     "navn": "Aehr Test Systems",
+     "slug": "aehr-test-systems",
+     "andel": 0.37,
+     "logo": "assets/img/logoer/d4bb600b5c.webp",
+     "bar": 0.5781
+    },
+    {
+     "navn": "Advantest",
+     "slug": "advantest",
+     "andel": 0.19,
+     "logo": "assets/img/logoer/509540d950.webp",
+     "bar": 0.2969
+    },
+    {
+     "navn": "Kulicke & Soffa",
+     "slug": "kulicke-soffa",
+     "andel": 0.18,
+     "logo": "assets/img/logoer/66774484fb.webp",
+     "bar": 0.2813
+    },
+    {
+     "navn": "Amkor Technology",
+     "slug": "amkor-technology",
+     "andel": 0.1,
+     "logo": "assets/img/logoer/850bb0587b.webp",
+     "bar": 0.1563
+    },
+    {
+     "navn": "Cohu",
+     "slug": "cohu",
+     "andel": 0.08,
+     "logo": "assets/img/logoer/6942a6ca36.webp",
+     "bar": 0.125
+    },
+    {
+     "navn": "FormFactor",
+     "slug": "formfactor",
+     "andel": 0.06,
+     "logo": "assets/img/logoer/58a0d186b3.webp",
+     "bar": 0.0938
+    },
+    {
+     "navn": "Teradyne",
+     "slug": "teradyne",
+     "andel": 0.03,
+     "logo": "assets/img/logoer/2419f7bcca.webp",
+     "bar": 0.0469
+    }
+   ],
+   "antalFlere": 8
+  },
+  "chips:samles:1": {
+   "akk": {
+    "andel": 1.82,
+    "antal": 5
+   },
+   "akkIngen": false,
+   "andel": 1.79,
+   "antal": 5,
+   "selskaber": [
+    {
+     "navn": "Besi",
+     "slug": "besi",
+     "andel": 0.64,
+     "bar": 1.0
+    },
+    {
+     "navn": "SUSS MicroTec",
+     "slug": "suss-microtec",
+     "andel": 0.45,
+     "logo": "assets/img/logoer/b7558a97d0.webp",
+     "bar": 0.7031
+    },
+    {
+     "navn": "ASMPT",
+     "slug": "asmpt",
+     "andel": 0.42,
+     "logo": "assets/img/logoer/7532150e62.webp",
+     "bar": 0.6563
+    },
+    {
+     "navn": "Kulicke & Soffa",
+     "slug": "kulicke-soffa",
+     "andel": 0.18,
+     "logo": "assets/img/logoer/66774484fb.webp",
+     "bar": 0.2813
+    },
+    {
+     "navn": "Amkor Technology",
+     "slug": "amkor-technology",
+     "andel": 0.1,
+     "logo": "assets/img/logoer/850bb0587b.webp",
+     "bar": 0.1563
+    }
+   ],
+   "vis": [
+    {
+     "navn": "Besi",
+     "slug": "besi",
+     "andel": 0.64,
+     "bar": 1.0
+    },
+    {
+     "navn": "SUSS MicroTec",
+     "slug": "suss-microtec",
+     "andel": 0.45,
+     "logo": "assets/img/logoer/b7558a97d0.webp",
+     "bar": 0.7031
+    },
+    {
+     "navn": "ASMPT",
+     "slug": "asmpt",
+     "andel": 0.42,
+     "logo": "assets/img/logoer/7532150e62.webp",
+     "bar": 0.6563
+    }
+   ],
+   "flere": [
+    {
+     "navn": "Kulicke & Soffa",
+     "slug": "kulicke-soffa",
+     "andel": 0.18,
+     "logo": "assets/img/logoer/66774484fb.webp",
+     "bar": 0.2813
+    },
+    {
+     "navn": "Amkor Technology",
+     "slug": "amkor-technology",
+     "andel": 0.1,
+     "logo": "assets/img/logoer/850bb0587b.webp",
+     "bar": 0.1563
+    }
+   ],
+   "antalFlere": 2
+  },
+  "chips:samles:2": {
+   "akk": {
+    "andel": 1.5,
+    "antal": 6
+   },
+   "akkIngen": false,
+   "andel": 1.13,
+   "antal": 6,
+   "selskaber": [
+    {
+     "navn": "Camtek",
+     "slug": "camtek",
+     "andel": 0.4,
+     "bar": 1.0
+    },
+    {
+     "navn": "Aehr Test Systems",
+     "slug": "aehr-test-systems",
+     "andel": 0.37,
+     "logo": "assets/img/logoer/d4bb600b5c.webp",
+     "bar": 0.925
+    },
+    {
+     "navn": "Advantest",
+     "slug": "advantest",
+     "andel": 0.19,
+     "logo": "assets/img/logoer/509540d950.webp",
+     "bar": 0.475
+    },
+    {
+     "navn": "Cohu",
+     "slug": "cohu",
+     "andel": 0.08,
+     "logo": "assets/img/logoer/6942a6ca36.webp",
+     "bar": 0.2
+    },
+    {
+     "navn": "FormFactor",
+     "slug": "formfactor",
+     "andel": 0.06,
+     "logo": "assets/img/logoer/58a0d186b3.webp",
+     "bar": 0.15
+    },
+    {
+     "navn": "Teradyne",
+     "slug": "teradyne",
+     "andel": 0.03,
+     "logo": "assets/img/logoer/2419f7bcca.webp",
+     "bar": 0.075
+    }
+   ],
+   "vis": [
+    {
+     "navn": "Camtek",
+     "slug": "camtek",
+     "andel": 0.4,
+     "bar": 1.0
+    },
+    {
+     "navn": "Aehr Test Systems",
+     "slug": "aehr-test-systems",
+     "andel": 0.37,
+     "logo": "assets/img/logoer/d4bb600b5c.webp",
+     "bar": 0.925
+    },
+    {
+     "navn": "Advantest",
+     "slug": "advantest",
+     "andel": 0.19,
+     "logo": "assets/img/logoer/509540d950.webp",
+     "bar": 0.475
+    }
+   ],
+   "flere": [
+    {
+     "navn": "Cohu",
+     "slug": "cohu",
+     "andel": 0.08,
+     "logo": "assets/img/logoer/6942a6ca36.webp",
+     "bar": 0.2
+    },
+    {
+     "navn": "FormFactor",
+     "slug": "formfactor",
+     "andel": 0.06,
+     "logo": "assets/img/logoer/58a0d186b3.webp",
+     "bar": 0.15
+    },
+    {
+     "navn": "Teradyne",
+     "slug": "teradyne",
+     "andel": 0.03,
+     "logo": "assets/img/logoer/2419f7bcca.webp",
+     "bar": 0.075
+    }
+   ],
+   "antalFlere": 3
+  },
+  "chips:regner": {
+   "akk": {
+    "andel": 2.2,
+    "antal": 6
+   },
+   "akkIngen": false,
+   "andel": 2.15,
+   "antal": 7,
+   "selskaber": [
+    {
+     "navn": "Cerebras Systems",
+     "slug": "cerebras-systems",
+     "andel": 0.75,
+     "logo": "assets/img/logoer/a56f2ad71f.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Broadcom",
+     "slug": "broadcom",
+     "andel": 0.55,
+     "logo": "assets/img/logoer/38132e6c7a.webp",
+     "bar": 0.7333
+    },
+    {
+     "navn": "Intel",
+     "slug": "intel",
+     "andel": 0.46,
+     "logo": "assets/img/logoer/c081184173.webp",
+     "bar": 0.6133
+    },
+    {
+     "navn": "NVIDIA",
+     "slug": "nvidia",
+     "andel": 0.26,
+     "logo": "assets/img/logoer/2a95ecdd14.webp",
+     "bar": 0.3467
+    },
+    {
+     "navn": "Marvell Technology",
+     "slug": "marvell-technology",
+     "andel": 0.08,
+     "logo": "assets/img/logoer/d80d4e7eb1.webp",
+     "bar": 0.1067
+    },
+    {
+     "navn": "AMD",
+     "slug": "amd",
+     "andel": 0.04,
+     "bar": 0.0533
+    },
+    {
+     "navn": "Blaize",
+     "slug": "blaize",
+     "andel": 0.01,
+     "logo": "assets/img/logoer/fbfec736cc.webp",
+     "bar": 0.0133
+    }
+   ],
+   "vis": [
+    {
+     "navn": "Cerebras Systems",
+     "slug": "cerebras-systems",
+     "andel": 0.75,
+     "logo": "assets/img/logoer/a56f2ad71f.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Broadcom",
+     "slug": "broadcom",
+     "andel": 0.55,
+     "logo": "assets/img/logoer/38132e6c7a.webp",
+     "bar": 0.7333
+    },
+    {
+     "navn": "Intel",
+     "slug": "intel",
+     "andel": 0.46,
+     "logo": "assets/img/logoer/c081184173.webp",
+     "bar": 0.6133
+    }
+   ],
+   "flere": [
+    {
+     "navn": "NVIDIA",
+     "slug": "nvidia",
+     "andel": 0.26,
+     "logo": "assets/img/logoer/2a95ecdd14.webp",
+     "bar": 0.3467
+    },
+    {
+     "navn": "Marvell Technology",
+     "slug": "marvell-technology",
+     "andel": 0.08,
+     "logo": "assets/img/logoer/d80d4e7eb1.webp",
+     "bar": 0.1067
+    },
+    {
+     "navn": "AMD",
+     "slug": "amd",
+     "andel": 0.04,
+     "bar": 0.0533
+    },
+    {
+     "navn": "Blaize",
+     "slug": "blaize",
+     "andel": 0.01,
+     "logo": "assets/img/logoer/fbfec736cc.webp",
+     "bar": 0.0133
+    }
+   ],
+   "antalFlere": 4
+  },
+  "chips:regner:1": {
+   "akk": {
+    "andel": 2.2,
+    "antal": 6
+   },
+   "akkIngen": false,
+   "andel": 2.15,
+   "antal": 7,
+   "selskaber": [
+    {
+     "navn": "Cerebras Systems",
+     "slug": "cerebras-systems",
+     "andel": 0.75,
+     "logo": "assets/img/logoer/a56f2ad71f.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Broadcom",
+     "slug": "broadcom",
+     "andel": 0.55,
+     "logo": "assets/img/logoer/38132e6c7a.webp",
+     "bar": 0.7333
+    },
+    {
+     "navn": "Intel",
+     "slug": "intel",
+     "andel": 0.46,
+     "logo": "assets/img/logoer/c081184173.webp",
+     "bar": 0.6133
+    },
+    {
+     "navn": "NVIDIA",
+     "slug": "nvidia",
+     "andel": 0.26,
+     "logo": "assets/img/logoer/2a95ecdd14.webp",
+     "bar": 0.3467
+    },
+    {
+     "navn": "Marvell Technology",
+     "slug": "marvell-technology",
+     "andel": 0.08,
+     "logo": "assets/img/logoer/d80d4e7eb1.webp",
+     "bar": 0.1067
+    },
+    {
+     "navn": "AMD",
+     "slug": "amd",
+     "andel": 0.04,
+     "bar": 0.0533
+    },
+    {
+     "navn": "Blaize",
+     "slug": "blaize",
+     "andel": 0.01,
+     "logo": "assets/img/logoer/fbfec736cc.webp",
+     "bar": 0.0133
+    }
+   ],
+   "vis": [
+    {
+     "navn": "Cerebras Systems",
+     "slug": "cerebras-systems",
+     "andel": 0.75,
+     "logo": "assets/img/logoer/a56f2ad71f.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Broadcom",
+     "slug": "broadcom",
+     "andel": 0.55,
+     "logo": "assets/img/logoer/38132e6c7a.webp",
+     "bar": 0.7333
+    },
+    {
+     "navn": "Intel",
+     "slug": "intel",
+     "andel": 0.46,
+     "logo": "assets/img/logoer/c081184173.webp",
+     "bar": 0.6133
+    }
+   ],
+   "flere": [
+    {
+     "navn": "NVIDIA",
+     "slug": "nvidia",
+     "andel": 0.26,
+     "logo": "assets/img/logoer/2a95ecdd14.webp",
+     "bar": 0.3467
+    },
+    {
+     "navn": "Marvell Technology",
+     "slug": "marvell-technology",
+     "andel": 0.08,
+     "logo": "assets/img/logoer/d80d4e7eb1.webp",
+     "bar": 0.1067
+    },
+    {
+     "navn": "AMD",
+     "slug": "amd",
+     "andel": 0.04,
+     "bar": 0.0533
+    },
+    {
+     "navn": "Blaize",
+     "slug": "blaize",
+     "andel": 0.01,
+     "logo": "assets/img/logoer/fbfec736cc.webp",
+     "bar": 0.0133
+    }
+   ],
+   "antalFlere": 4
+  },
+  "chips:husker": {
+   "akk": {
+    "andel": 5.55,
+    "antal": 9
+   },
+   "akkIngen": false,
+   "andel": 5.69,
+   "antal": 9,
+   "selskaber": [
+    {
+     "navn": "Samsung Electronics",
+     "slug": "samsung-electronics",
+     "andel": 1.43,
+     "bar": 1.0
+    },
+    {
+     "navn": "SK hynix",
+     "slug": "sk-hynix",
+     "andel": 1.07,
+     "bar": 0.7483
+    },
+    {
+     "navn": "Kioxia",
+     "slug": "kioxia",
+     "andel": 0.91,
+     "logo": "assets/img/logoer/0c03b2f725.webp",
+     "bar": 0.6364
+    },
+    {
+     "navn": "Rambus",
+     "slug": "rambus",
+     "andel": 0.55,
+     "logo": "assets/img/logoer/2479ea1f21.webp",
+     "bar": 0.3846
+    },
+    {
+     "navn": "Micron Technology",
+     "slug": "micron-technology",
+     "andel": 0.54,
+     "logo": "assets/img/logoer/b17fd8dc45.webp",
+     "bar": 0.3776
+    },
+    {
+     "navn": "Western Digital",
+     "slug": "western-digital",
+     "andel": 0.48,
+     "logo": "assets/img/logoer/e2b55bbc59.webp",
+     "bar": 0.3357
+    },
+    {
+     "navn": "Seagate Technology",
+     "slug": "seagate-technology",
+     "andel": 0.35,
+     "logo": "assets/img/logoer/953b305bc8.webp",
+     "bar": 0.2448
+    },
+    {
+     "navn": "SanDisk",
+     "slug": "sandisk",
+     "andel": 0.19,
+     "logo": "assets/img/logoer/b2287832b5.webp",
+     "bar": 0.1329
+    },
+    {
+     "navn": "Silicon Motion",
+     "slug": "silicon-motion",
+     "andel": 0.17,
+     "logo": "assets/img/logoer/4496e3b5c3.webp",
+     "bar": 0.1189
+    }
+   ],
+   "vis": [
+    {
+     "navn": "Samsung Electronics",
+     "slug": "samsung-electronics",
+     "andel": 1.43,
+     "bar": 1.0
+    },
+    {
+     "navn": "SK hynix",
+     "slug": "sk-hynix",
+     "andel": 1.07,
+     "bar": 0.7483
+    },
+    {
+     "navn": "Kioxia",
+     "slug": "kioxia",
+     "andel": 0.91,
+     "logo": "assets/img/logoer/0c03b2f725.webp",
+     "bar": 0.6364
+    }
+   ],
+   "flere": [
+    {
+     "navn": "Rambus",
+     "slug": "rambus",
+     "andel": 0.55,
+     "logo": "assets/img/logoer/2479ea1f21.webp",
+     "bar": 0.3846
+    },
+    {
+     "navn": "Micron Technology",
+     "slug": "micron-technology",
+     "andel": 0.54,
+     "logo": "assets/img/logoer/b17fd8dc45.webp",
+     "bar": 0.3776
+    },
+    {
+     "navn": "Western Digital",
+     "slug": "western-digital",
+     "andel": 0.48,
+     "logo": "assets/img/logoer/e2b55bbc59.webp",
+     "bar": 0.3357
+    },
+    {
+     "navn": "Seagate Technology",
+     "slug": "seagate-technology",
+     "andel": 0.35,
+     "logo": "assets/img/logoer/953b305bc8.webp",
+     "bar": 0.2448
+    },
+    {
+     "navn": "SanDisk",
+     "slug": "sandisk",
+     "andel": 0.19,
+     "logo": "assets/img/logoer/b2287832b5.webp",
+     "bar": 0.1329
+    },
+    {
+     "navn": "Silicon Motion",
+     "slug": "silicon-motion",
+     "andel": 0.17,
+     "logo": "assets/img/logoer/4496e3b5c3.webp",
+     "bar": 0.1189
+    }
+   ],
+   "antalFlere": 6
+  },
+  "chips:husker:1": {
+   "akk": {
+    "andel": 3.47,
+    "antal": 4
+   },
+   "akkIngen": false,
+   "andel": 3.59,
+   "antal": 4,
+   "selskaber": [
+    {
+     "navn": "Samsung Electronics",
+     "slug": "samsung-electronics",
+     "andel": 1.43,
+     "bar": 1.0
+    },
+    {
+     "navn": "SK hynix",
+     "slug": "sk-hynix",
+     "andel": 1.07,
+     "bar": 0.7483
+    },
+    {
+     "navn": "Rambus",
+     "slug": "rambus",
+     "andel": 0.55,
+     "logo": "assets/img/logoer/2479ea1f21.webp",
+     "bar": 0.3846
+    },
+    {
+     "navn": "Micron Technology",
+     "slug": "micron-technology",
+     "andel": 0.54,
+     "logo": "assets/img/logoer/b17fd8dc45.webp",
+     "bar": 0.3776
+    }
+   ],
+   "vis": [
+    {
+     "navn": "Samsung Electronics",
+     "slug": "samsung-electronics",
+     "andel": 1.43,
+     "bar": 1.0
+    },
+    {
+     "navn": "SK hynix",
+     "slug": "sk-hynix",
+     "andel": 1.07,
+     "bar": 0.7483
+    },
+    {
+     "navn": "Rambus",
+     "slug": "rambus",
+     "andel": 0.55,
+     "logo": "assets/img/logoer/2479ea1f21.webp",
+     "bar": 0.3846
+    }
+   ],
+   "flere": [
+    {
+     "navn": "Micron Technology",
+     "slug": "micron-technology",
+     "andel": 0.54,
+     "logo": "assets/img/logoer/b17fd8dc45.webp",
+     "bar": 0.3776
+    }
+   ],
+   "antalFlere": 1
+  },
+  "chips:husker:2": {
+   "akk": {
+    "andel": 1.38,
+    "antal": 3
+   },
+   "akkIngen": false,
+   "andel": 1.27,
+   "antal": 3,
+   "selskaber": [
+    {
+     "navn": "Kioxia",
+     "slug": "kioxia",
+     "andel": 0.91,
+     "logo": "assets/img/logoer/0c03b2f725.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "SanDisk",
+     "slug": "sandisk",
+     "andel": 0.19,
+     "logo": "assets/img/logoer/b2287832b5.webp",
+     "bar": 0.2088
+    },
+    {
+     "navn": "Silicon Motion",
+     "slug": "silicon-motion",
+     "andel": 0.17,
+     "logo": "assets/img/logoer/4496e3b5c3.webp",
+     "bar": 0.1868
+    }
+   ],
+   "vis": [
+    {
+     "navn": "Kioxia",
+     "slug": "kioxia",
+     "andel": 0.91,
+     "logo": "assets/img/logoer/0c03b2f725.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "SanDisk",
+     "slug": "sandisk",
+     "andel": 0.19,
+     "logo": "assets/img/logoer/b2287832b5.webp",
+     "bar": 0.2088
+    },
+    {
+     "navn": "Silicon Motion",
+     "slug": "silicon-motion",
+     "andel": 0.17,
+     "logo": "assets/img/logoer/4496e3b5c3.webp",
+     "bar": 0.1868
+    }
+   ],
+   "flere": [],
+   "antalFlere": 0
+  },
+  "chips:husker:3": {
+   "akk": {
+    "andel": 0.7,
+    "antal": 2
+   },
+   "akkIngen": false,
+   "andel": 0.83,
+   "antal": 2,
+   "selskaber": [
+    {
+     "navn": "Western Digital",
+     "slug": "western-digital",
+     "andel": 0.48,
+     "logo": "assets/img/logoer/e2b55bbc59.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Seagate Technology",
+     "slug": "seagate-technology",
+     "andel": 0.35,
+     "logo": "assets/img/logoer/953b305bc8.webp",
+     "bar": 0.7292
+    }
+   ],
+   "vis": [
+    {
+     "navn": "Western Digital",
+     "slug": "western-digital",
+     "andel": 0.48,
+     "logo": "assets/img/logoer/e2b55bbc59.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Seagate Technology",
+     "slug": "seagate-technology",
+     "andel": 0.35,
+     "logo": "assets/img/logoer/953b305bc8.webp",
+     "bar": 0.7292
+    }
+   ],
+   "flere": [],
+   "antalFlere": 0
+  },
+  "chips:styrer": {
+   "akk": {
+    "andel": 4.58,
+    "antal": 19
+   },
+   "akkIngen": false,
+   "andel": 4.41,
+   "antal": 19,
+   "selskaber": [
+    {
+     "navn": "Taiyo Yuden",
+     "slug": "taiyo-yuden",
+     "andel": 0.94,
+     "bar": 1.0
+    },
+    {
+     "navn": "Navitas Semiconductor",
+     "slug": "navitas-semiconductor",
+     "andel": 0.5,
+     "logo": "assets/img/logoer/71733dc185.webp",
+     "bar": 0.5319
+    },
+    {
+     "navn": "SiTime",
+     "slug": "sitime",
+     "andel": 0.46,
+     "logo": "assets/img/logoer/2277a3e7fd.webp",
+     "bar": 0.4894
+    },
+    {
+     "navn": "onsemi",
+     "slug": "onsemi",
+     "andel": 0.36,
+     "logo": "assets/img/logoer/6b99a93f2d.webp",
+     "bar": 0.383
+    },
+    {
+     "navn": "STMicroelectronics",
+     "slug": "stmicroelectronics",
+     "andel": 0.34,
+     "logo": "assets/img/logoer/18732b5c85.webp",
+     "bar": 0.3617
+    },
+    {
+     "navn": "Himax Technologies",
+     "slug": "himax-technologies",
+     "andel": 0.32,
+     "logo": "assets/img/logoer/d76363e112.webp",
+     "bar": 0.3404
+    },
+    {
+     "navn": "Ambiq Micro",
+     "slug": "ambiq-micro",
+     "andel": 0.23,
+     "logo": "assets/img/logoer/0ee2f82a70.webp",
+     "bar": 0.2447
+    },
+    {
+     "navn": "Renesas Electronics",
+     "slug": "renesas-electronics",
+     "andel": 0.23,
+     "logo": "assets/img/logoer/816a57db83.webp",
+     "bar": 0.2447
+    },
+    {
+     "navn": "Infineon Technologies",
+     "slug": "infineon-technologies",
+     "andel": 0.14,
+     "logo": "assets/img/logoer/8660f21517.webp",
+     "bar": 0.1489
+    },
+    {
+     "navn": "Aeluma",
+     "slug": "aeluma",
+     "andel": 0.13,
+     "logo": "assets/img/logoer/6ef097e172.webp",
+     "bar": 0.1383
+    },
+    {
+     "navn": "Monolithic Power Systems",
+     "slug": "monolithic-power-systems",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/2f24c4902d.webp",
+     "bar": 0.1277
+    },
+    {
+     "navn": "Nordic Semiconductor",
+     "slug": "nordic-semiconductor",
+     "andel": 0.11,
+     "logo": "assets/img/logoer/5c3c449f1d.webp",
+     "bar": 0.117
+    },
+    {
+     "navn": "Alpha and Omega Semiconductor",
+     "slug": "alpha-and-omega-semiconductor",
+     "andel": 0.1,
+     "logo": "assets/img/logoer/d90ffeffb4.webp",
+     "bar": 0.1064
+    },
+    {
+     "navn": "MaxLinear",
+     "slug": "maxlinear",
+     "andel": 0.09,
+     "logo": "assets/img/logoer/6d7e7e5294.webp",
+     "bar": 0.0957
+    },
+    {
+     "navn": "Analog Devices",
+     "slug": "analog-devices",
+     "andel": 0.08,
+     "logo": "assets/img/logoer/14d73a01e1.webp",
+     "bar": 0.0851
+    },
+    {
+     "navn": "Texas Instruments",
+     "slug": "texas-instruments",
+     "andel": 0.08,
+     "logo": "assets/img/logoer/d705da286b.webp",
+     "bar": 0.0851
+    },
+    {
+     "navn": "Ambarella",
+     "slug": "ambarella",
+     "andel": 0.07,
+     "logo": "assets/img/logoer/c16d310945.webp",
+     "bar": 0.0745
+    },
+    {
+     "navn": "Microchip Technology",
+     "slug": "microchip-technology",
+     "andel": 0.07,
+     "logo": "assets/img/logoer/cd75c9140d.webp",
+     "bar": 0.0745
+    },
+    {
+     "navn": "Lattice Semiconductor",
+     "slug": "lattice-semiconductor",
+     "andel": 0.04,
+     "bar": 0.0426
+    }
+   ],
+   "vis": [
+    {
+     "navn": "Taiyo Yuden",
+     "slug": "taiyo-yuden",
+     "andel": 0.94,
+     "bar": 1.0
+    },
+    {
+     "navn": "Navitas Semiconductor",
+     "slug": "navitas-semiconductor",
+     "andel": 0.5,
+     "logo": "assets/img/logoer/71733dc185.webp",
+     "bar": 0.5319
+    },
+    {
+     "navn": "SiTime",
+     "slug": "sitime",
+     "andel": 0.46,
+     "logo": "assets/img/logoer/2277a3e7fd.webp",
+     "bar": 0.4894
+    }
+   ],
+   "flere": [
+    {
+     "navn": "onsemi",
+     "slug": "onsemi",
+     "andel": 0.36,
+     "logo": "assets/img/logoer/6b99a93f2d.webp",
+     "bar": 0.383
+    },
+    {
+     "navn": "STMicroelectronics",
+     "slug": "stmicroelectronics",
+     "andel": 0.34,
+     "logo": "assets/img/logoer/18732b5c85.webp",
+     "bar": 0.3617
+    },
+    {
+     "navn": "Himax Technologies",
+     "slug": "himax-technologies",
+     "andel": 0.32,
+     "logo": "assets/img/logoer/d76363e112.webp",
+     "bar": 0.3404
+    },
+    {
+     "navn": "Ambiq Micro",
+     "slug": "ambiq-micro",
+     "andel": 0.23,
+     "logo": "assets/img/logoer/0ee2f82a70.webp",
+     "bar": 0.2447
+    },
+    {
+     "navn": "Renesas Electronics",
+     "slug": "renesas-electronics",
+     "andel": 0.23,
+     "logo": "assets/img/logoer/816a57db83.webp",
+     "bar": 0.2447
+    },
+    {
+     "navn": "Infineon Technologies",
+     "slug": "infineon-technologies",
+     "andel": 0.14,
+     "logo": "assets/img/logoer/8660f21517.webp",
+     "bar": 0.1489
+    },
+    {
+     "navn": "Aeluma",
+     "slug": "aeluma",
+     "andel": 0.13,
+     "logo": "assets/img/logoer/6ef097e172.webp",
+     "bar": 0.1383
+    },
+    {
+     "navn": "Monolithic Power Systems",
+     "slug": "monolithic-power-systems",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/2f24c4902d.webp",
+     "bar": 0.1277
+    },
+    {
+     "navn": "Nordic Semiconductor",
+     "slug": "nordic-semiconductor",
+     "andel": 0.11,
+     "logo": "assets/img/logoer/5c3c449f1d.webp",
+     "bar": 0.117
+    },
+    {
+     "navn": "Alpha and Omega Semiconductor",
+     "slug": "alpha-and-omega-semiconductor",
+     "andel": 0.1,
+     "logo": "assets/img/logoer/d90ffeffb4.webp",
+     "bar": 0.1064
+    },
+    {
+     "navn": "MaxLinear",
+     "slug": "maxlinear",
+     "andel": 0.09,
+     "logo": "assets/img/logoer/6d7e7e5294.webp",
+     "bar": 0.0957
+    },
+    {
+     "navn": "Analog Devices",
+     "slug": "analog-devices",
+     "andel": 0.08,
+     "logo": "assets/img/logoer/14d73a01e1.webp",
+     "bar": 0.0851
+    },
+    {
+     "navn": "Texas Instruments",
+     "slug": "texas-instruments",
+     "andel": 0.08,
+     "logo": "assets/img/logoer/d705da286b.webp",
+     "bar": 0.0851
+    },
+    {
+     "navn": "Ambarella",
+     "slug": "ambarella",
+     "andel": 0.07,
+     "logo": "assets/img/logoer/c16d310945.webp",
+     "bar": 0.0745
+    },
+    {
+     "navn": "Microchip Technology",
+     "slug": "microchip-technology",
+     "andel": 0.07,
+     "logo": "assets/img/logoer/cd75c9140d.webp",
+     "bar": 0.0745
+    },
+    {
+     "navn": "Lattice Semiconductor",
+     "slug": "lattice-semiconductor",
+     "andel": 0.04,
+     "bar": 0.0426
+    }
+   ],
+   "antalFlere": 16
+  },
+  "chips:styrer:1": {
+   "akk": {
+    "andel": 0.86,
+    "antal": 1
+   },
+   "akkIngen": false,
+   "andel": 0.94,
+   "antal": 1,
+   "selskaber": [
+    {
+     "navn": "Taiyo Yuden",
+     "slug": "taiyo-yuden",
+     "andel": 0.94,
+     "bar": 1.0
+    }
+   ],
+   "vis": [
+    {
+     "navn": "Taiyo Yuden",
+     "slug": "taiyo-yuden",
+     "andel": 0.94,
+     "bar": 1.0
+    }
+   ],
+   "flere": [],
+   "antalFlere": 0
+  },
+  "chips:styrer:2": {
+   "akk": {
+    "andel": 2.45,
+    "antal": 11
+   },
+   "akkIngen": false,
+   "andel": 2.25,
+   "antal": 11,
+   "selskaber": [
+    {
+     "navn": "Navitas Semiconductor",
+     "slug": "navitas-semiconductor",
+     "andel": 0.5,
+     "logo": "assets/img/logoer/71733dc185.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "onsemi",
+     "slug": "onsemi",
+     "andel": 0.36,
+     "logo": "assets/img/logoer/6b99a93f2d.webp",
+     "bar": 0.72
+    },
+    {
+     "navn": "STMicroelectronics",
+     "slug": "stmicroelectronics",
+     "andel": 0.34,
+     "logo": "assets/img/logoer/18732b5c85.webp",
+     "bar": 0.68
+    },
+    {
+     "navn": "Ambiq Micro",
+     "slug": "ambiq-micro",
+     "andel": 0.23,
+     "logo": "assets/img/logoer/0ee2f82a70.webp",
+     "bar": 0.46
+    },
+    {
+     "navn": "Renesas Electronics",
+     "slug": "renesas-electronics",
+     "andel": 0.23,
+     "logo": "assets/img/logoer/816a57db83.webp",
+     "bar": 0.46
+    },
+    {
+     "navn": "Infineon Technologies",
+     "slug": "infineon-technologies",
+     "andel": 0.14,
+     "logo": "assets/img/logoer/8660f21517.webp",
+     "bar": 0.28
+    },
+    {
+     "navn": "Monolithic Power Systems",
+     "slug": "monolithic-power-systems",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/2f24c4902d.webp",
+     "bar": 0.24
+    },
+    {
+     "navn": "Alpha and Omega Semiconductor",
+     "slug": "alpha-and-omega-semiconductor",
+     "andel": 0.1,
+     "logo": "assets/img/logoer/d90ffeffb4.webp",
+     "bar": 0.2
+    },
+    {
+     "navn": "Analog Devices",
+     "slug": "analog-devices",
+     "andel": 0.08,
+     "logo": "assets/img/logoer/14d73a01e1.webp",
+     "bar": 0.16
+    },
+    {
+     "navn": "Texas Instruments",
+     "slug": "texas-instruments",
+     "andel": 0.08,
+     "logo": "assets/img/logoer/d705da286b.webp",
+     "bar": 0.16
+    },
+    {
+     "navn": "Microchip Technology",
+     "slug": "microchip-technology",
+     "andel": 0.07,
+     "logo": "assets/img/logoer/cd75c9140d.webp",
+     "bar": 0.14
+    }
+   ],
+   "vis": [
+    {
+     "navn": "Navitas Semiconductor",
+     "slug": "navitas-semiconductor",
+     "andel": 0.5,
+     "logo": "assets/img/logoer/71733dc185.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "onsemi",
+     "slug": "onsemi",
+     "andel": 0.36,
+     "logo": "assets/img/logoer/6b99a93f2d.webp",
+     "bar": 0.72
+    },
+    {
+     "navn": "STMicroelectronics",
+     "slug": "stmicroelectronics",
+     "andel": 0.34,
+     "logo": "assets/img/logoer/18732b5c85.webp",
+     "bar": 0.68
+    }
+   ],
+   "flere": [
+    {
+     "navn": "Ambiq Micro",
+     "slug": "ambiq-micro",
+     "andel": 0.23,
+     "logo": "assets/img/logoer/0ee2f82a70.webp",
+     "bar": 0.46
+    },
+    {
+     "navn": "Renesas Electronics",
+     "slug": "renesas-electronics",
+     "andel": 0.23,
+     "logo": "assets/img/logoer/816a57db83.webp",
+     "bar": 0.46
+    },
+    {
+     "navn": "Infineon Technologies",
+     "slug": "infineon-technologies",
+     "andel": 0.14,
+     "logo": "assets/img/logoer/8660f21517.webp",
+     "bar": 0.28
+    },
+    {
+     "navn": "Monolithic Power Systems",
+     "slug": "monolithic-power-systems",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/2f24c4902d.webp",
+     "bar": 0.24
+    },
+    {
+     "navn": "Alpha and Omega Semiconductor",
+     "slug": "alpha-and-omega-semiconductor",
+     "andel": 0.1,
+     "logo": "assets/img/logoer/d90ffeffb4.webp",
+     "bar": 0.2
+    },
+    {
+     "navn": "Analog Devices",
+     "slug": "analog-devices",
+     "andel": 0.08,
+     "logo": "assets/img/logoer/14d73a01e1.webp",
+     "bar": 0.16
+    },
+    {
+     "navn": "Texas Instruments",
+     "slug": "texas-instruments",
+     "andel": 0.08,
+     "logo": "assets/img/logoer/d705da286b.webp",
+     "bar": 0.16
+    },
+    {
+     "navn": "Microchip Technology",
+     "slug": "microchip-technology",
+     "andel": 0.07,
+     "logo": "assets/img/logoer/cd75c9140d.webp",
+     "bar": 0.14
+    }
+   ],
+   "antalFlere": 8
+  },
+  "chips:styrer:3": {
+   "akk": {
+    "andel": 1.27,
+    "antal": 7
+   },
+   "akkIngen": false,
+   "andel": 1.22,
+   "antal": 7,
+   "selskaber": [
+    {
+     "navn": "SiTime",
+     "slug": "sitime",
+     "andel": 0.46,
+     "logo": "assets/img/logoer/2277a3e7fd.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Himax Technologies",
+     "slug": "himax-technologies",
+     "andel": 0.32,
+     "logo": "assets/img/logoer/d76363e112.webp",
+     "bar": 0.6957
+    },
+    {
+     "navn": "Aeluma",
+     "slug": "aeluma",
+     "andel": 0.13,
+     "logo": "assets/img/logoer/6ef097e172.webp",
+     "bar": 0.2826
+    },
+    {
+     "navn": "Nordic Semiconductor",
+     "slug": "nordic-semiconductor",
+     "andel": 0.11,
+     "logo": "assets/img/logoer/5c3c449f1d.webp",
+     "bar": 0.2391
+    },
+    {
+     "navn": "MaxLinear",
+     "slug": "maxlinear",
+     "andel": 0.09,
+     "logo": "assets/img/logoer/6d7e7e5294.webp",
+     "bar": 0.1957
+    },
+    {
+     "navn": "Ambarella",
+     "slug": "ambarella",
+     "andel": 0.07,
+     "logo": "assets/img/logoer/c16d310945.webp",
+     "bar": 0.1522
+    },
+    {
+     "navn": "Lattice Semiconductor",
+     "slug": "lattice-semiconductor",
+     "andel": 0.04,
+     "bar": 0.087
+    }
+   ],
+   "vis": [
+    {
+     "navn": "SiTime",
+     "slug": "sitime",
+     "andel": 0.46,
+     "logo": "assets/img/logoer/2277a3e7fd.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Himax Technologies",
+     "slug": "himax-technologies",
+     "andel": 0.32,
+     "logo": "assets/img/logoer/d76363e112.webp",
+     "bar": 0.6957
+    },
+    {
+     "navn": "Aeluma",
+     "slug": "aeluma",
+     "andel": 0.13,
+     "logo": "assets/img/logoer/6ef097e172.webp",
+     "bar": 0.2826
+    }
+   ],
+   "flere": [
+    {
+     "navn": "Nordic Semiconductor",
+     "slug": "nordic-semiconductor",
+     "andel": 0.11,
+     "logo": "assets/img/logoer/5c3c449f1d.webp",
+     "bar": 0.2391
+    },
+    {
+     "navn": "MaxLinear",
+     "slug": "maxlinear",
+     "andel": 0.09,
+     "logo": "assets/img/logoer/6d7e7e5294.webp",
+     "bar": 0.1957
+    },
+    {
+     "navn": "Ambarella",
+     "slug": "ambarella",
+     "andel": 0.07,
+     "logo": "assets/img/logoer/c16d310945.webp",
+     "bar": 0.1522
+    },
+    {
+     "navn": "Lattice Semiconductor",
+     "slug": "lattice-semiconductor",
+     "andel": 0.04,
+     "bar": 0.087
+    }
+   ],
+   "antalFlere": 4
+  },
+  "chips:fremstillingen": {
+   "akk": {
+    "andel": 12.2,
+    "antal": 37
+   },
+   "akkIngen": false,
+   "andel": 11.54,
+   "antal": 40,
+   "selskaber": [
+    {
+     "navn": "LPKF Laser & Electronics",
+     "slug": "lpkf-laser-electronics",
+     "andel": 0.81,
+     "logo": "assets/img/logoer/1750ae3fb9.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "GlobalFoundries",
+     "slug": "globalfoundries",
+     "andel": 0.72,
+     "logo": "assets/img/logoer/cd450e45a6.webp",
+     "bar": 0.8889
+    },
+    {
+     "navn": "Soitec",
+     "slug": "soitec",
+     "andel": 0.69,
+     "logo": "assets/img/logoer/dd34bfa59d.webp",
+     "bar": 0.8519
+    },
+    {
+     "navn": "Tower Semiconductor",
+     "slug": "tower-semiconductor",
+     "andel": 0.67,
+     "logo": "assets/img/logoer/1e6260ed54.webp",
+     "bar": 0.8272
+    },
+    {
+     "navn": "Nova",
+     "slug": "nova",
+     "andel": 0.66,
+     "logo": "assets/img/logoer/d15f922473.webp",
+     "bar": 0.8148
+    },
+    {
+     "navn": "Besi",
+     "slug": "besi",
+     "andel": 0.64,
+     "bar": 0.7901
+    },
+    {
+     "navn": "IQE",
+     "slug": "iqe",
+     "andel": 0.55,
+     "logo": "assets/img/logoer/52e0da790e.webp",
+     "bar": 0.679
+    },
+    {
+     "navn": "SUSS MicroTec",
+     "slug": "suss-microtec",
+     "andel": 0.45,
+     "logo": "assets/img/logoer/b7558a97d0.webp",
+     "bar": 0.5556
+    },
+    {
+     "navn": "Tokyo Electron",
+     "slug": "tokyo-electron",
+     "andel": 0.45,
+     "logo": "assets/img/logoer/323e8423ed.webp",
+     "bar": 0.5556
+    },
+    {
+     "navn": "ASM International",
+     "slug": "asm-international",
+     "andel": 0.44,
+     "logo": "assets/img/logoer/07aa949943.webp",
+     "bar": 0.5432
+    },
+    {
+     "navn": "ASMPT",
+     "slug": "asmpt",
+     "andel": 0.42,
+     "logo": "assets/img/logoer/7532150e62.webp",
+     "bar": 0.5185
+    },
+    {
+     "navn": "Camtek",
+     "slug": "camtek",
+     "andel": 0.4,
+     "bar": 0.4938
+    },
+    {
+     "navn": "Aehr Test Systems",
+     "slug": "aehr-test-systems",
+     "andel": 0.37,
+     "logo": "assets/img/logoer/d4bb600b5c.webp",
+     "bar": 0.4568
+    },
+    {
+     "navn": "UMC",
+     "slug": "umc",
+     "andel": 0.35,
+     "bar": 0.4321
+    },
+    {
+     "navn": "MKS",
+     "slug": "mks",
+     "andel": 0.34,
+     "logo": "assets/img/logoer/6457d6104b.webp",
+     "bar": 0.4198
+    },
+    {
+     "navn": "X-FAB",
+     "slug": "x-fab",
+     "andel": 0.33,
+     "logo": "assets/img/logoer/20463d39c6.webp",
+     "bar": 0.4074
+    },
+    {
+     "navn": "Lasertec",
+     "slug": "lasertec",
+     "andel": 0.31,
+     "logo": "assets/img/logoer/af96b86550.webp",
+     "bar": 0.383
+    },
+    {
+     "navn": "Rigaku",
+     "slug": "rigaku",
+     "andel": 0.31,
+     "logo": "assets/img/logoer/f5a191a973.webp",
+     "bar": 0.383
+    },
+    {
+     "navn": "KLA",
+     "slug": "kla",
+     "andel": 0.28,
+     "logo": "assets/img/logoer/854d641e64.webp",
+     "bar": 0.3457
+    },
+    {
+     "navn": "Onto Innovation",
+     "slug": "onto-innovation",
+     "andel": 0.24,
+     "bar": 0.2963
+    },
+    {
+     "navn": "Aixtron",
+     "slug": "aixtron",
+     "andel": 0.2,
+     "bar": 0.2469
+    },
+    {
+     "navn": "Advantest",
+     "slug": "advantest",
+     "andel": 0.19,
+     "logo": "assets/img/logoer/509540d950.webp",
+     "bar": 0.2346
+    },
+    {
+     "navn": "Kulicke & Soffa",
+     "slug": "kulicke-soffa",
+     "andel": 0.18,
+     "logo": "assets/img/logoer/66774484fb.webp",
+     "bar": 0.2222
+    },
+    {
+     "navn": "Veeco Instruments",
+     "slug": "veeco-instruments",
+     "andel": 0.18,
+     "logo": "assets/img/logoer/c9df30070b.webp",
+     "bar": 0.2222
+    },
+    {
+     "navn": "AXT",
+     "slug": "axt",
+     "andel": 0.17,
+     "logo": "assets/img/logoer/def622555b.webp",
+     "bar": 0.2099
+    },
+    {
+     "navn": "Kokusai Electric",
+     "slug": "kokusai-electric",
+     "andel": 0.13,
+     "logo": "assets/img/logoer/aea873782d.webp",
+     "bar": 0.1605
+    },
+    {
+     "navn": "Entegris",
+     "slug": "entegris",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/f3e07fcdad.webp",
+     "bar": 0.1481
+    },
+    {
+     "navn": "Wolfspeed",
+     "slug": "wolfspeed",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/8800d66171.webp",
+     "bar": 0.1481
+    },
+    {
+     "navn": "ACM Research",
+     "slug": "acm-research",
+     "andel": 0.1,
+     "logo": "assets/img/logoer/f70b811920.webp",
+     "bar": 0.1235
+    },
+    {
+     "navn": "Amkor Technology",
+     "slug": "amkor-technology",
+     "andel": 0.1,
+     "logo": "assets/img/logoer/850bb0587b.webp",
+     "bar": 0.1235
+    },
+    {
+     "navn": "ASML",
+     "slug": "asml",
+     "andel": 0.09,
+     "logo": "assets/img/logoer/6a9ec0669d.webp",
+     "bar": 0.1111
+    },
+    {
+     "navn": "Lam Research",
+     "slug": "lam-research",
+     "andel": 0.09,
+     "logo": "assets/img/logoer/26fd337cb3.webp",
+     "bar": 0.1111
+    },
+    {
+     "navn": "Synopsys",
+     "slug": "synopsys",
+     "andel": 0.09,
+     "bar": 0.1111
+    },
+    {
+     "navn": "Cohu",
+     "slug": "cohu",
+     "andel": 0.08,
+     "logo": "assets/img/logoer/6942a6ca36.webp",
+     "bar": 0.0988
+    },
+    {
+     "navn": "Cadence Design Systems",
+     "slug": "cadence-design-systems",
+     "andel": 0.06,
+     "bar": 0.0741
+    },
+    {
+     "navn": "FormFactor",
+     "slug": "formfactor",
+     "andel": 0.06,
+     "logo": "assets/img/logoer/58a0d186b3.webp",
+     "bar": 0.0741
+    },
+    {
+     "navn": "Applied Materials",
+     "slug": "applied-materials",
+     "andel": 0.05,
+     "logo": "assets/img/logoer/b846cd3f38.webp",
+     "bar": 0.0617
+    },
+    {
+     "navn": "TSMC",
+     "slug": "tsmc",
+     "andel": 0.04,
+     "bar": 0.0494
+    },
+    {
+     "navn": "Axcelis Technologies",
+     "slug": "axcelis-technologies",
+     "andel": 0.03,
+     "bar": 0.037
+    },
+    {
+     "navn": "Teradyne",
+     "slug": "teradyne",
+     "andel": 0.03,
+     "logo": "assets/img/logoer/2419f7bcca.webp",
+     "bar": 0.037
+    }
+   ],
+   "vis": [
+    {
+     "navn": "LPKF Laser & Electronics",
+     "slug": "lpkf-laser-electronics",
+     "andel": 0.81,
+     "logo": "assets/img/logoer/1750ae3fb9.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "GlobalFoundries",
+     "slug": "globalfoundries",
+     "andel": 0.72,
+     "logo": "assets/img/logoer/cd450e45a6.webp",
+     "bar": 0.8889
+    },
+    {
+     "navn": "Soitec",
+     "slug": "soitec",
+     "andel": 0.69,
+     "logo": "assets/img/logoer/dd34bfa59d.webp",
+     "bar": 0.8519
+    }
+   ],
+   "flere": [
+    {
+     "navn": "Tower Semiconductor",
+     "slug": "tower-semiconductor",
+     "andel": 0.67,
+     "logo": "assets/img/logoer/1e6260ed54.webp",
+     "bar": 0.8272
+    },
+    {
+     "navn": "Nova",
+     "slug": "nova",
+     "andel": 0.66,
+     "logo": "assets/img/logoer/d15f922473.webp",
+     "bar": 0.8148
+    },
+    {
+     "navn": "Besi",
+     "slug": "besi",
+     "andel": 0.64,
+     "bar": 0.7901
+    },
+    {
+     "navn": "IQE",
+     "slug": "iqe",
+     "andel": 0.55,
+     "logo": "assets/img/logoer/52e0da790e.webp",
+     "bar": 0.679
+    },
+    {
+     "navn": "SUSS MicroTec",
+     "slug": "suss-microtec",
+     "andel": 0.45,
+     "logo": "assets/img/logoer/b7558a97d0.webp",
+     "bar": 0.5556
+    },
+    {
+     "navn": "Tokyo Electron",
+     "slug": "tokyo-electron",
+     "andel": 0.45,
+     "logo": "assets/img/logoer/323e8423ed.webp",
+     "bar": 0.5556
+    },
+    {
+     "navn": "ASM International",
+     "slug": "asm-international",
+     "andel": 0.44,
+     "logo": "assets/img/logoer/07aa949943.webp",
+     "bar": 0.5432
+    },
+    {
+     "navn": "ASMPT",
+     "slug": "asmpt",
+     "andel": 0.42,
+     "logo": "assets/img/logoer/7532150e62.webp",
+     "bar": 0.5185
+    },
+    {
+     "navn": "Camtek",
+     "slug": "camtek",
+     "andel": 0.4,
+     "bar": 0.4938
+    },
+    {
+     "navn": "Aehr Test Systems",
+     "slug": "aehr-test-systems",
+     "andel": 0.37,
+     "logo": "assets/img/logoer/d4bb600b5c.webp",
+     "bar": 0.4568
+    },
+    {
+     "navn": "UMC",
+     "slug": "umc",
+     "andel": 0.35,
+     "bar": 0.4321
+    },
+    {
+     "navn": "MKS",
+     "slug": "mks",
+     "andel": 0.34,
+     "logo": "assets/img/logoer/6457d6104b.webp",
+     "bar": 0.4198
+    },
+    {
+     "navn": "X-FAB",
+     "slug": "x-fab",
+     "andel": 0.33,
+     "logo": "assets/img/logoer/20463d39c6.webp",
+     "bar": 0.4074
+    },
+    {
+     "navn": "Lasertec",
+     "slug": "lasertec",
+     "andel": 0.31,
+     "logo": "assets/img/logoer/af96b86550.webp",
+     "bar": 0.383
+    },
+    {
+     "navn": "Rigaku",
+     "slug": "rigaku",
+     "andel": 0.31,
+     "logo": "assets/img/logoer/f5a191a973.webp",
+     "bar": 0.383
+    },
+    {
+     "navn": "KLA",
+     "slug": "kla",
+     "andel": 0.28,
+     "logo": "assets/img/logoer/854d641e64.webp",
+     "bar": 0.3457
+    },
+    {
+     "navn": "Onto Innovation",
+     "slug": "onto-innovation",
+     "andel": 0.24,
+     "bar": 0.2963
+    },
+    {
+     "navn": "Aixtron",
+     "slug": "aixtron",
+     "andel": 0.2,
+     "bar": 0.2469
+    },
+    {
+     "navn": "Advantest",
+     "slug": "advantest",
+     "andel": 0.19,
+     "logo": "assets/img/logoer/509540d950.webp",
+     "bar": 0.2346
+    },
+    {
+     "navn": "Kulicke & Soffa",
+     "slug": "kulicke-soffa",
+     "andel": 0.18,
+     "logo": "assets/img/logoer/66774484fb.webp",
+     "bar": 0.2222
+    },
+    {
+     "navn": "Veeco Instruments",
+     "slug": "veeco-instruments",
+     "andel": 0.18,
+     "logo": "assets/img/logoer/c9df30070b.webp",
+     "bar": 0.2222
+    },
+    {
+     "navn": "AXT",
+     "slug": "axt",
+     "andel": 0.17,
+     "logo": "assets/img/logoer/def622555b.webp",
+     "bar": 0.2099
+    },
+    {
+     "navn": "Kokusai Electric",
+     "slug": "kokusai-electric",
+     "andel": 0.13,
+     "logo": "assets/img/logoer/aea873782d.webp",
+     "bar": 0.1605
+    },
+    {
+     "navn": "Entegris",
+     "slug": "entegris",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/f3e07fcdad.webp",
+     "bar": 0.1481
+    },
+    {
+     "navn": "Wolfspeed",
+     "slug": "wolfspeed",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/8800d66171.webp",
+     "bar": 0.1481
+    },
+    {
+     "navn": "ACM Research",
+     "slug": "acm-research",
+     "andel": 0.1,
+     "logo": "assets/img/logoer/f70b811920.webp",
+     "bar": 0.1235
+    },
+    {
+     "navn": "Amkor Technology",
+     "slug": "amkor-technology",
+     "andel": 0.1,
+     "logo": "assets/img/logoer/850bb0587b.webp",
+     "bar": 0.1235
+    },
+    {
+     "navn": "ASML",
+     "slug": "asml",
+     "andel": 0.09,
+     "logo": "assets/img/logoer/6a9ec0669d.webp",
+     "bar": 0.1111
+    },
+    {
+     "navn": "Lam Research",
+     "slug": "lam-research",
+     "andel": 0.09,
+     "logo": "assets/img/logoer/26fd337cb3.webp",
+     "bar": 0.1111
+    },
+    {
+     "navn": "Synopsys",
+     "slug": "synopsys",
+     "andel": 0.09,
+     "bar": 0.1111
+    },
+    {
+     "navn": "Cohu",
+     "slug": "cohu",
+     "andel": 0.08,
+     "logo": "assets/img/logoer/6942a6ca36.webp",
+     "bar": 0.0988
+    },
+    {
+     "navn": "Cadence Design Systems",
+     "slug": "cadence-design-systems",
+     "andel": 0.06,
+     "bar": 0.0741
+    },
+    {
+     "navn": "FormFactor",
+     "slug": "formfactor",
+     "andel": 0.06,
+     "logo": "assets/img/logoer/58a0d186b3.webp",
+     "bar": 0.0741
+    },
+    {
+     "navn": "Applied Materials",
+     "slug": "applied-materials",
+     "andel": 0.05,
+     "logo": "assets/img/logoer/b846cd3f38.webp",
+     "bar": 0.0617
+    },
+    {
+     "navn": "TSMC",
+     "slug": "tsmc",
+     "andel": 0.04,
+     "bar": 0.0494
+    },
+    {
+     "navn": "Axcelis Technologies",
+     "slug": "axcelis-technologies",
+     "andel": 0.03,
+     "bar": 0.037
+    },
+    {
+     "navn": "Teradyne",
+     "slug": "teradyne",
+     "andel": 0.03,
+     "logo": "assets/img/logoer/2419f7bcca.webp",
+     "bar": 0.037
+    }
+   ],
+   "antalFlere": 37
+  },
+  "chips:faerdig": {
+   "akk": {
+    "andel": 12.33,
+    "antal": 34
+   },
+   "akkIngen": false,
+   "andel": 12.25,
+   "antal": 35,
+   "selskaber": [
+    {
+     "navn": "Samsung Electronics",
+     "slug": "samsung-electronics",
+     "andel": 1.43,
+     "bar": 1.0
+    },
+    {
+     "navn": "SK hynix",
+     "slug": "sk-hynix",
+     "andel": 1.07,
+     "bar": 0.7483
+    },
+    {
+     "navn": "Taiyo Yuden",
+     "slug": "taiyo-yuden",
+     "andel": 0.94,
+     "bar": 0.6573
+    },
+    {
+     "navn": "Kioxia",
+     "slug": "kioxia",
+     "andel": 0.91,
+     "logo": "assets/img/logoer/0c03b2f725.webp",
+     "bar": 0.6364
+    },
+    {
+     "navn": "Cerebras Systems",
+     "slug": "cerebras-systems",
+     "andel": 0.75,
+     "logo": "assets/img/logoer/a56f2ad71f.webp",
+     "bar": 0.5245
+    },
+    {
+     "navn": "Broadcom",
+     "slug": "broadcom",
+     "andel": 0.55,
+     "logo": "assets/img/logoer/38132e6c7a.webp",
+     "bar": 0.3846
+    },
+    {
+     "navn": "Rambus",
+     "slug": "rambus",
+     "andel": 0.55,
+     "logo": "assets/img/logoer/2479ea1f21.webp",
+     "bar": 0.3846
+    },
+    {
+     "navn": "Micron Technology",
+     "slug": "micron-technology",
+     "andel": 0.54,
+     "logo": "assets/img/logoer/b17fd8dc45.webp",
+     "bar": 0.3776
+    },
+    {
+     "navn": "Navitas Semiconductor",
+     "slug": "navitas-semiconductor",
+     "andel": 0.5,
+     "logo": "assets/img/logoer/71733dc185.webp",
+     "bar": 0.3497
+    },
+    {
+     "navn": "Western Digital",
+     "slug": "western-digital",
+     "andel": 0.48,
+     "logo": "assets/img/logoer/e2b55bbc59.webp",
+     "bar": 0.3357
+    },
+    {
+     "navn": "Intel",
+     "slug": "intel",
+     "andel": 0.46,
+     "logo": "assets/img/logoer/c081184173.webp",
+     "bar": 0.3217
+    },
+    {
+     "navn": "SiTime",
+     "slug": "sitime",
+     "andel": 0.46,
+     "logo": "assets/img/logoer/2277a3e7fd.webp",
+     "bar": 0.3217
+    },
+    {
+     "navn": "onsemi",
+     "slug": "onsemi",
+     "andel": 0.36,
+     "logo": "assets/img/logoer/6b99a93f2d.webp",
+     "bar": 0.2517
+    },
+    {
+     "navn": "Seagate Technology",
+     "slug": "seagate-technology",
+     "andel": 0.35,
+     "logo": "assets/img/logoer/953b305bc8.webp",
+     "bar": 0.2448
+    },
+    {
+     "navn": "STMicroelectronics",
+     "slug": "stmicroelectronics",
+     "andel": 0.34,
+     "logo": "assets/img/logoer/18732b5c85.webp",
+     "bar": 0.2378
+    },
+    {
+     "navn": "Himax Technologies",
+     "slug": "himax-technologies",
+     "andel": 0.32,
+     "logo": "assets/img/logoer/d76363e112.webp",
+     "bar": 0.2238
+    },
+    {
+     "navn": "NVIDIA",
+     "slug": "nvidia",
+     "andel": 0.26,
+     "logo": "assets/img/logoer/2a95ecdd14.webp",
+     "bar": 0.1818
+    },
+    {
+     "navn": "Ambiq Micro",
+     "slug": "ambiq-micro",
+     "andel": 0.23,
+     "logo": "assets/img/logoer/0ee2f82a70.webp",
+     "bar": 0.1608
+    },
+    {
+     "navn": "Renesas Electronics",
+     "slug": "renesas-electronics",
+     "andel": 0.23,
+     "logo": "assets/img/logoer/816a57db83.webp",
+     "bar": 0.1608
+    },
+    {
+     "navn": "SanDisk",
+     "slug": "sandisk",
+     "andel": 0.19,
+     "logo": "assets/img/logoer/b2287832b5.webp",
+     "bar": 0.1329
+    },
+    {
+     "navn": "Silicon Motion",
+     "slug": "silicon-motion",
+     "andel": 0.17,
+     "logo": "assets/img/logoer/4496e3b5c3.webp",
+     "bar": 0.1189
+    },
+    {
+     "navn": "Infineon Technologies",
+     "slug": "infineon-technologies",
+     "andel": 0.14,
+     "logo": "assets/img/logoer/8660f21517.webp",
+     "bar": 0.0979
+    },
+    {
+     "navn": "Aeluma",
+     "slug": "aeluma",
+     "andel": 0.13,
+     "logo": "assets/img/logoer/6ef097e172.webp",
+     "bar": 0.0909
+    },
+    {
+     "navn": "Monolithic Power Systems",
+     "slug": "monolithic-power-systems",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/2f24c4902d.webp",
+     "bar": 0.0839
+    },
+    {
+     "navn": "Nordic Semiconductor",
+     "slug": "nordic-semiconductor",
+     "andel": 0.11,
+     "logo": "assets/img/logoer/5c3c449f1d.webp",
+     "bar": 0.0769
+    },
+    {
+     "navn": "Alpha and Omega Semiconductor",
+     "slug": "alpha-and-omega-semiconductor",
+     "andel": 0.1,
+     "logo": "assets/img/logoer/d90ffeffb4.webp",
+     "bar": 0.0699
+    },
+    {
+     "navn": "MaxLinear",
+     "slug": "maxlinear",
+     "andel": 0.09,
+     "logo": "assets/img/logoer/6d7e7e5294.webp",
+     "bar": 0.0629
+    },
+    {
+     "navn": "Analog Devices",
+     "slug": "analog-devices",
+     "andel": 0.08,
+     "logo": "assets/img/logoer/14d73a01e1.webp",
+     "bar": 0.0559
+    },
+    {
+     "navn": "Marvell Technology",
+     "slug": "marvell-technology",
+     "andel": 0.08,
+     "logo": "assets/img/logoer/d80d4e7eb1.webp",
+     "bar": 0.0559
+    },
+    {
+     "navn": "Texas Instruments",
+     "slug": "texas-instruments",
+     "andel": 0.08,
+     "logo": "assets/img/logoer/d705da286b.webp",
+     "bar": 0.0559
+    },
+    {
+     "navn": "Ambarella",
+     "slug": "ambarella",
+     "andel": 0.07,
+     "logo": "assets/img/logoer/c16d310945.webp",
+     "bar": 0.049
+    },
+    {
+     "navn": "Microchip Technology",
+     "slug": "microchip-technology",
+     "andel": 0.07,
+     "logo": "assets/img/logoer/cd75c9140d.webp",
+     "bar": 0.049
+    },
+    {
+     "navn": "AMD",
+     "slug": "amd",
+     "andel": 0.04,
+     "bar": 0.028
+    },
+    {
+     "navn": "Lattice Semiconductor",
+     "slug": "lattice-semiconductor",
+     "andel": 0.04,
+     "bar": 0.028
+    },
+    {
+     "navn": "Blaize",
+     "slug": "blaize",
+     "andel": 0.01,
+     "logo": "assets/img/logoer/fbfec736cc.webp",
+     "bar": 0.007
+    }
+   ],
+   "vis": [
+    {
+     "navn": "Samsung Electronics",
+     "slug": "samsung-electronics",
+     "andel": 1.43,
+     "bar": 1.0
+    },
+    {
+     "navn": "SK hynix",
+     "slug": "sk-hynix",
+     "andel": 1.07,
+     "bar": 0.7483
+    },
+    {
+     "navn": "Taiyo Yuden",
+     "slug": "taiyo-yuden",
+     "andel": 0.94,
+     "bar": 0.6573
+    }
+   ],
+   "flere": [
+    {
+     "navn": "Kioxia",
+     "slug": "kioxia",
+     "andel": 0.91,
+     "logo": "assets/img/logoer/0c03b2f725.webp",
+     "bar": 0.6364
+    },
+    {
+     "navn": "Cerebras Systems",
+     "slug": "cerebras-systems",
+     "andel": 0.75,
+     "logo": "assets/img/logoer/a56f2ad71f.webp",
+     "bar": 0.5245
+    },
+    {
+     "navn": "Broadcom",
+     "slug": "broadcom",
+     "andel": 0.55,
+     "logo": "assets/img/logoer/38132e6c7a.webp",
+     "bar": 0.3846
+    },
+    {
+     "navn": "Rambus",
+     "slug": "rambus",
+     "andel": 0.55,
+     "logo": "assets/img/logoer/2479ea1f21.webp",
+     "bar": 0.3846
+    },
+    {
+     "navn": "Micron Technology",
+     "slug": "micron-technology",
+     "andel": 0.54,
+     "logo": "assets/img/logoer/b17fd8dc45.webp",
+     "bar": 0.3776
+    },
+    {
+     "navn": "Navitas Semiconductor",
+     "slug": "navitas-semiconductor",
+     "andel": 0.5,
+     "logo": "assets/img/logoer/71733dc185.webp",
+     "bar": 0.3497
+    },
+    {
+     "navn": "Western Digital",
+     "slug": "western-digital",
+     "andel": 0.48,
+     "logo": "assets/img/logoer/e2b55bbc59.webp",
+     "bar": 0.3357
+    },
+    {
+     "navn": "Intel",
+     "slug": "intel",
+     "andel": 0.46,
+     "logo": "assets/img/logoer/c081184173.webp",
+     "bar": 0.3217
+    },
+    {
+     "navn": "SiTime",
+     "slug": "sitime",
+     "andel": 0.46,
+     "logo": "assets/img/logoer/2277a3e7fd.webp",
+     "bar": 0.3217
+    },
+    {
+     "navn": "onsemi",
+     "slug": "onsemi",
+     "andel": 0.36,
+     "logo": "assets/img/logoer/6b99a93f2d.webp",
+     "bar": 0.2517
+    },
+    {
+     "navn": "Seagate Technology",
+     "slug": "seagate-technology",
+     "andel": 0.35,
+     "logo": "assets/img/logoer/953b305bc8.webp",
+     "bar": 0.2448
+    },
+    {
+     "navn": "STMicroelectronics",
+     "slug": "stmicroelectronics",
+     "andel": 0.34,
+     "logo": "assets/img/logoer/18732b5c85.webp",
+     "bar": 0.2378
+    },
+    {
+     "navn": "Himax Technologies",
+     "slug": "himax-technologies",
+     "andel": 0.32,
+     "logo": "assets/img/logoer/d76363e112.webp",
+     "bar": 0.2238
+    },
+    {
+     "navn": "NVIDIA",
+     "slug": "nvidia",
+     "andel": 0.26,
+     "logo": "assets/img/logoer/2a95ecdd14.webp",
+     "bar": 0.1818
+    },
+    {
+     "navn": "Ambiq Micro",
+     "slug": "ambiq-micro",
+     "andel": 0.23,
+     "logo": "assets/img/logoer/0ee2f82a70.webp",
+     "bar": 0.1608
+    },
+    {
+     "navn": "Renesas Electronics",
+     "slug": "renesas-electronics",
+     "andel": 0.23,
+     "logo": "assets/img/logoer/816a57db83.webp",
+     "bar": 0.1608
+    },
+    {
+     "navn": "SanDisk",
+     "slug": "sandisk",
+     "andel": 0.19,
+     "logo": "assets/img/logoer/b2287832b5.webp",
+     "bar": 0.1329
+    },
+    {
+     "navn": "Silicon Motion",
+     "slug": "silicon-motion",
+     "andel": 0.17,
+     "logo": "assets/img/logoer/4496e3b5c3.webp",
+     "bar": 0.1189
+    },
+    {
+     "navn": "Infineon Technologies",
+     "slug": "infineon-technologies",
+     "andel": 0.14,
+     "logo": "assets/img/logoer/8660f21517.webp",
+     "bar": 0.0979
+    },
+    {
+     "navn": "Aeluma",
+     "slug": "aeluma",
+     "andel": 0.13,
+     "logo": "assets/img/logoer/6ef097e172.webp",
+     "bar": 0.0909
+    },
+    {
+     "navn": "Monolithic Power Systems",
+     "slug": "monolithic-power-systems",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/2f24c4902d.webp",
+     "bar": 0.0839
+    },
+    {
+     "navn": "Nordic Semiconductor",
+     "slug": "nordic-semiconductor",
+     "andel": 0.11,
+     "logo": "assets/img/logoer/5c3c449f1d.webp",
+     "bar": 0.0769
+    },
+    {
+     "navn": "Alpha and Omega Semiconductor",
+     "slug": "alpha-and-omega-semiconductor",
+     "andel": 0.1,
+     "logo": "assets/img/logoer/d90ffeffb4.webp",
+     "bar": 0.0699
+    },
+    {
+     "navn": "MaxLinear",
+     "slug": "maxlinear",
+     "andel": 0.09,
+     "logo": "assets/img/logoer/6d7e7e5294.webp",
+     "bar": 0.0629
+    },
+    {
+     "navn": "Analog Devices",
+     "slug": "analog-devices",
+     "andel": 0.08,
+     "logo": "assets/img/logoer/14d73a01e1.webp",
+     "bar": 0.0559
+    },
+    {
+     "navn": "Marvell Technology",
+     "slug": "marvell-technology",
+     "andel": 0.08,
+     "logo": "assets/img/logoer/d80d4e7eb1.webp",
+     "bar": 0.0559
+    },
+    {
+     "navn": "Texas Instruments",
+     "slug": "texas-instruments",
+     "andel": 0.08,
+     "logo": "assets/img/logoer/d705da286b.webp",
+     "bar": 0.0559
+    },
+    {
+     "navn": "Ambarella",
+     "slug": "ambarella",
+     "andel": 0.07,
+     "logo": "assets/img/logoer/c16d310945.webp",
+     "bar": 0.049
+    },
+    {
+     "navn": "Microchip Technology",
+     "slug": "microchip-technology",
+     "andel": 0.07,
+     "logo": "assets/img/logoer/cd75c9140d.webp",
+     "bar": 0.049
+    },
+    {
+     "navn": "AMD",
+     "slug": "amd",
+     "andel": 0.04,
+     "bar": 0.028
+    },
+    {
+     "navn": "Lattice Semiconductor",
+     "slug": "lattice-semiconductor",
+     "andel": 0.04,
+     "bar": 0.028
+    },
+    {
+     "navn": "Blaize",
+     "slug": "blaize",
+     "andel": 0.01,
+     "logo": "assets/img/logoer/fbfec736cc.webp",
+     "bar": 0.007
+    }
+   ],
+   "antalFlere": 32
+  },
+  "chips:ikkeChipsFremstilling": {
+   "akk": {
+    "andel": 10.22,
+    "antal": 33
+   },
+   "akkIngen": false,
+   "andel": 9.43,
+   "antal": 35,
+   "selskaber": [
+    {
+     "navn": "LPKF Laser & Electronics",
+     "slug": "lpkf-laser-electronics",
+     "andel": 0.81,
+     "logo": "assets/img/logoer/1750ae3fb9.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Soitec",
+     "slug": "soitec",
+     "andel": 0.69,
+     "logo": "assets/img/logoer/dd34bfa59d.webp",
+     "bar": 0.8519
+    },
+    {
+     "navn": "Nova",
+     "slug": "nova",
+     "andel": 0.66,
+     "logo": "assets/img/logoer/d15f922473.webp",
+     "bar": 0.8148
+    },
+    {
+     "navn": "Besi",
+     "slug": "besi",
+     "andel": 0.64,
+     "bar": 0.7901
+    },
+    {
+     "navn": "IQE",
+     "slug": "iqe",
+     "andel": 0.55,
+     "logo": "assets/img/logoer/52e0da790e.webp",
+     "bar": 0.679
+    },
+    {
+     "navn": "SUSS MicroTec",
+     "slug": "suss-microtec",
+     "andel": 0.45,
+     "logo": "assets/img/logoer/b7558a97d0.webp",
+     "bar": 0.5556
+    },
+    {
+     "navn": "Tokyo Electron",
+     "slug": "tokyo-electron",
+     "andel": 0.45,
+     "logo": "assets/img/logoer/323e8423ed.webp",
+     "bar": 0.5556
+    },
+    {
+     "navn": "ASM International",
+     "slug": "asm-international",
+     "andel": 0.44,
+     "logo": "assets/img/logoer/07aa949943.webp",
+     "bar": 0.5432
+    },
+    {
+     "navn": "ASMPT",
+     "slug": "asmpt",
+     "andel": 0.42,
+     "logo": "assets/img/logoer/7532150e62.webp",
+     "bar": 0.5185
+    },
+    {
+     "navn": "Camtek",
+     "slug": "camtek",
+     "andel": 0.4,
+     "bar": 0.4938
+    },
+    {
+     "navn": "Aehr Test Systems",
+     "slug": "aehr-test-systems",
+     "andel": 0.37,
+     "logo": "assets/img/logoer/d4bb600b5c.webp",
+     "bar": 0.4568
+    },
+    {
+     "navn": "MKS",
+     "slug": "mks",
+     "andel": 0.34,
+     "logo": "assets/img/logoer/6457d6104b.webp",
+     "bar": 0.4198
+    },
+    {
+     "navn": "Lasertec",
+     "slug": "lasertec",
+     "andel": 0.31,
+     "logo": "assets/img/logoer/af96b86550.webp",
+     "bar": 0.383
+    },
+    {
+     "navn": "Rigaku",
+     "slug": "rigaku",
+     "andel": 0.31,
+     "logo": "assets/img/logoer/f5a191a973.webp",
+     "bar": 0.383
+    },
+    {
+     "navn": "KLA",
+     "slug": "kla",
+     "andel": 0.28,
+     "logo": "assets/img/logoer/854d641e64.webp",
+     "bar": 0.3457
+    },
+    {
+     "navn": "Onto Innovation",
+     "slug": "onto-innovation",
+     "andel": 0.24,
+     "bar": 0.2963
+    },
+    {
+     "navn": "Aixtron",
+     "slug": "aixtron",
+     "andel": 0.2,
+     "bar": 0.2469
+    },
+    {
+     "navn": "Advantest",
+     "slug": "advantest",
+     "andel": 0.19,
+     "logo": "assets/img/logoer/509540d950.webp",
+     "bar": 0.2346
+    },
+    {
+     "navn": "Kulicke & Soffa",
+     "slug": "kulicke-soffa",
+     "andel": 0.18,
+     "logo": "assets/img/logoer/66774484fb.webp",
+     "bar": 0.2222
+    },
+    {
+     "navn": "Veeco Instruments",
+     "slug": "veeco-instruments",
+     "andel": 0.18,
+     "logo": "assets/img/logoer/c9df30070b.webp",
+     "bar": 0.2222
+    },
+    {
+     "navn": "AXT",
+     "slug": "axt",
+     "andel": 0.17,
+     "logo": "assets/img/logoer/def622555b.webp",
+     "bar": 0.2099
+    },
+    {
+     "navn": "Kokusai Electric",
+     "slug": "kokusai-electric",
+     "andel": 0.13,
+     "logo": "assets/img/logoer/aea873782d.webp",
+     "bar": 0.1605
+    },
+    {
+     "navn": "Entegris",
+     "slug": "entegris",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/f3e07fcdad.webp",
+     "bar": 0.1481
+    },
+    {
+     "navn": "Wolfspeed",
+     "slug": "wolfspeed",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/8800d66171.webp",
+     "bar": 0.1481
+    },
+    {
+     "navn": "ACM Research",
+     "slug": "acm-research",
+     "andel": 0.1,
+     "logo": "assets/img/logoer/f70b811920.webp",
+     "bar": 0.1235
+    },
+    {
+     "navn": "Amkor Technology",
+     "slug": "amkor-technology",
+     "andel": 0.1,
+     "logo": "assets/img/logoer/850bb0587b.webp",
+     "bar": 0.1235
+    },
+    {
+     "navn": "ASML",
+     "slug": "asml",
+     "andel": 0.09,
+     "logo": "assets/img/logoer/6a9ec0669d.webp",
+     "bar": 0.1111
+    },
+    {
+     "navn": "Lam Research",
+     "slug": "lam-research",
+     "andel": 0.09,
+     "logo": "assets/img/logoer/26fd337cb3.webp",
+     "bar": 0.1111
+    },
+    {
+     "navn": "Synopsys",
+     "slug": "synopsys",
+     "andel": 0.09,
+     "bar": 0.1111
+    },
+    {
+     "navn": "Cohu",
+     "slug": "cohu",
+     "andel": 0.08,
+     "logo": "assets/img/logoer/6942a6ca36.webp",
+     "bar": 0.0988
+    },
+    {
+     "navn": "Cadence Design Systems",
+     "slug": "cadence-design-systems",
+     "andel": 0.06,
+     "bar": 0.0741
+    },
+    {
+     "navn": "FormFactor",
+     "slug": "formfactor",
+     "andel": 0.06,
+     "logo": "assets/img/logoer/58a0d186b3.webp",
+     "bar": 0.0741
+    },
+    {
+     "navn": "Applied Materials",
+     "slug": "applied-materials",
+     "andel": 0.05,
+     "logo": "assets/img/logoer/b846cd3f38.webp",
+     "bar": 0.0617
+    },
+    {
+     "navn": "Axcelis Technologies",
+     "slug": "axcelis-technologies",
+     "andel": 0.03,
+     "bar": 0.037
+    },
+    {
+     "navn": "Teradyne",
+     "slug": "teradyne",
+     "andel": 0.03,
+     "logo": "assets/img/logoer/2419f7bcca.webp",
+     "bar": 0.037
+    }
+   ],
+   "vis": [
+    {
+     "navn": "LPKF Laser & Electronics",
+     "slug": "lpkf-laser-electronics",
+     "andel": 0.81,
+     "logo": "assets/img/logoer/1750ae3fb9.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Soitec",
+     "slug": "soitec",
+     "andel": 0.69,
+     "logo": "assets/img/logoer/dd34bfa59d.webp",
+     "bar": 0.8519
+    },
+    {
+     "navn": "Nova",
+     "slug": "nova",
+     "andel": 0.66,
+     "logo": "assets/img/logoer/d15f922473.webp",
+     "bar": 0.8148
+    }
+   ],
+   "flere": [
+    {
+     "navn": "Besi",
+     "slug": "besi",
+     "andel": 0.64,
+     "bar": 0.7901
+    },
+    {
+     "navn": "IQE",
+     "slug": "iqe",
+     "andel": 0.55,
+     "logo": "assets/img/logoer/52e0da790e.webp",
+     "bar": 0.679
+    },
+    {
+     "navn": "SUSS MicroTec",
+     "slug": "suss-microtec",
+     "andel": 0.45,
+     "logo": "assets/img/logoer/b7558a97d0.webp",
+     "bar": 0.5556
+    },
+    {
+     "navn": "Tokyo Electron",
+     "slug": "tokyo-electron",
+     "andel": 0.45,
+     "logo": "assets/img/logoer/323e8423ed.webp",
+     "bar": 0.5556
+    },
+    {
+     "navn": "ASM International",
+     "slug": "asm-international",
+     "andel": 0.44,
+     "logo": "assets/img/logoer/07aa949943.webp",
+     "bar": 0.5432
+    },
+    {
+     "navn": "ASMPT",
+     "slug": "asmpt",
+     "andel": 0.42,
+     "logo": "assets/img/logoer/7532150e62.webp",
+     "bar": 0.5185
+    },
+    {
+     "navn": "Camtek",
+     "slug": "camtek",
+     "andel": 0.4,
+     "bar": 0.4938
+    },
+    {
+     "navn": "Aehr Test Systems",
+     "slug": "aehr-test-systems",
+     "andel": 0.37,
+     "logo": "assets/img/logoer/d4bb600b5c.webp",
+     "bar": 0.4568
+    },
+    {
+     "navn": "MKS",
+     "slug": "mks",
+     "andel": 0.34,
+     "logo": "assets/img/logoer/6457d6104b.webp",
+     "bar": 0.4198
+    },
+    {
+     "navn": "Lasertec",
+     "slug": "lasertec",
+     "andel": 0.31,
+     "logo": "assets/img/logoer/af96b86550.webp",
+     "bar": 0.383
+    },
+    {
+     "navn": "Rigaku",
+     "slug": "rigaku",
+     "andel": 0.31,
+     "logo": "assets/img/logoer/f5a191a973.webp",
+     "bar": 0.383
+    },
+    {
+     "navn": "KLA",
+     "slug": "kla",
+     "andel": 0.28,
+     "logo": "assets/img/logoer/854d641e64.webp",
+     "bar": 0.3457
+    },
+    {
+     "navn": "Onto Innovation",
+     "slug": "onto-innovation",
+     "andel": 0.24,
+     "bar": 0.2963
+    },
+    {
+     "navn": "Aixtron",
+     "slug": "aixtron",
+     "andel": 0.2,
+     "bar": 0.2469
+    },
+    {
+     "navn": "Advantest",
+     "slug": "advantest",
+     "andel": 0.19,
+     "logo": "assets/img/logoer/509540d950.webp",
+     "bar": 0.2346
+    },
+    {
+     "navn": "Kulicke & Soffa",
+     "slug": "kulicke-soffa",
+     "andel": 0.18,
+     "logo": "assets/img/logoer/66774484fb.webp",
+     "bar": 0.2222
+    },
+    {
+     "navn": "Veeco Instruments",
+     "slug": "veeco-instruments",
+     "andel": 0.18,
+     "logo": "assets/img/logoer/c9df30070b.webp",
+     "bar": 0.2222
+    },
+    {
+     "navn": "AXT",
+     "slug": "axt",
+     "andel": 0.17,
+     "logo": "assets/img/logoer/def622555b.webp",
+     "bar": 0.2099
+    },
+    {
+     "navn": "Kokusai Electric",
+     "slug": "kokusai-electric",
+     "andel": 0.13,
+     "logo": "assets/img/logoer/aea873782d.webp",
+     "bar": 0.1605
+    },
+    {
+     "navn": "Entegris",
+     "slug": "entegris",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/f3e07fcdad.webp",
+     "bar": 0.1481
+    },
+    {
+     "navn": "Wolfspeed",
+     "slug": "wolfspeed",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/8800d66171.webp",
+     "bar": 0.1481
+    },
+    {
+     "navn": "ACM Research",
+     "slug": "acm-research",
+     "andel": 0.1,
+     "logo": "assets/img/logoer/f70b811920.webp",
+     "bar": 0.1235
+    },
+    {
+     "navn": "Amkor Technology",
+     "slug": "amkor-technology",
+     "andel": 0.1,
+     "logo": "assets/img/logoer/850bb0587b.webp",
+     "bar": 0.1235
+    },
+    {
+     "navn": "ASML",
+     "slug": "asml",
+     "andel": 0.09,
+     "logo": "assets/img/logoer/6a9ec0669d.webp",
+     "bar": 0.1111
+    },
+    {
+     "navn": "Lam Research",
+     "slug": "lam-research",
+     "andel": 0.09,
+     "logo": "assets/img/logoer/26fd337cb3.webp",
+     "bar": 0.1111
+    },
+    {
+     "navn": "Synopsys",
+     "slug": "synopsys",
+     "andel": 0.09,
+     "bar": 0.1111
+    },
+    {
+     "navn": "Cohu",
+     "slug": "cohu",
+     "andel": 0.08,
+     "logo": "assets/img/logoer/6942a6ca36.webp",
+     "bar": 0.0988
+    },
+    {
+     "navn": "Cadence Design Systems",
+     "slug": "cadence-design-systems",
+     "andel": 0.06,
+     "bar": 0.0741
+    },
+    {
+     "navn": "FormFactor",
+     "slug": "formfactor",
+     "andel": 0.06,
+     "logo": "assets/img/logoer/58a0d186b3.webp",
+     "bar": 0.0741
+    },
+    {
+     "navn": "Applied Materials",
+     "slug": "applied-materials",
+     "andel": 0.05,
+     "logo": "assets/img/logoer/b846cd3f38.webp",
+     "bar": 0.0617
+    },
+    {
+     "navn": "Axcelis Technologies",
+     "slug": "axcelis-technologies",
+     "andel": 0.03,
+     "bar": 0.037
+    },
+    {
+     "navn": "Teradyne",
+     "slug": "teradyne",
+     "andel": 0.03,
+     "logo": "assets/img/logoer/2419f7bcca.webp",
+     "bar": 0.037
+    }
+   ],
+   "antalFlere": 32
+  },
+  "chips:ikkeChipsFaerdig": {
+   "akk": {
+    "andel": 1.56,
+    "antal": 3
+   },
+   "akkIngen": false,
+   "andel": 1.77,
+   "antal": 3,
+   "selskaber": [
+    {
+     "navn": "Taiyo Yuden",
+     "slug": "taiyo-yuden",
+     "andel": 0.94,
+     "bar": 1.0
+    },
+    {
+     "navn": "Western Digital",
+     "slug": "western-digital",
+     "andel": 0.48,
+     "logo": "assets/img/logoer/e2b55bbc59.webp",
+     "bar": 0.5106
+    },
+    {
+     "navn": "Seagate Technology",
+     "slug": "seagate-technology",
+     "andel": 0.35,
+     "logo": "assets/img/logoer/953b305bc8.webp",
+     "bar": 0.3723
+    }
+   ],
+   "vis": [
+    {
+     "navn": "Taiyo Yuden",
+     "slug": "taiyo-yuden",
+     "andel": 0.94,
+     "bar": 1.0
+    },
+    {
+     "navn": "Western Digital",
+     "slug": "western-digital",
+     "andel": 0.48,
+     "logo": "assets/img/logoer/e2b55bbc59.webp",
+     "bar": 0.5106
+    },
+    {
+     "navn": "Seagate Technology",
+     "slug": "seagate-technology",
+     "andel": 0.35,
+     "logo": "assets/img/logoer/953b305bc8.webp",
+     "bar": 0.3723
+    }
+   ],
+   "flere": [],
+   "antalFlere": 0
+  },
+  "energi:fuel": {
+   "akk": {
+    "andel": 2.68,
+    "antal": 9
+   },
+   "akkIngen": false,
+   "andel": 2.72,
+   "antal": 10,
+   "selskaber": [
+    {
+     "navn": "Expand Energy",
+     "slug": "expand-energy",
+     "andel": 0.62,
+     "logo": "assets/img/logoer/2929f4ef4d.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Comstock Resources",
+     "slug": "comstock-resources",
+     "andel": 0.54,
+     "bar": 0.871
+    },
+    {
+     "navn": "Antero Resources",
+     "slug": "antero-resources",
+     "andel": 0.25,
+     "logo": "assets/img/logoer/c5f2c6a496.webp",
+     "bar": 0.4032
+    },
+    {
+     "navn": "Centrus Energy",
+     "slug": "centrus-energy",
+     "andel": 0.25,
+     "logo": "assets/img/logoer/6a84ac3104.webp",
+     "bar": 0.4032
+    },
+    {
+     "navn": "Kinder Morgan",
+     "slug": "kinder-morgan",
+     "andel": 0.24,
+     "logo": "assets/img/logoer/5170c52721.webp",
+     "bar": 0.3871
+    },
+    {
+     "navn": "ASP Isotopes",
+     "slug": "asp-isotopes",
+     "andel": 0.23,
+     "logo": "assets/img/logoer/03c53396fb.webp",
+     "bar": 0.371
+    },
+    {
+     "navn": "Vista Energy",
+     "slug": "vista-energy-sab-de-cv",
+     "andel": 0.21,
+     "logo": "assets/img/logoer/a021ce5560.webp",
+     "bar": 0.3387
+    },
+    {
+     "navn": "EQT",
+     "slug": "eqt",
+     "andel": 0.16,
+     "logo": "assets/img/logoer/a943d461fb.webp",
+     "bar": 0.2581
+    },
+    {
+     "navn": "Range Resources",
+     "slug": "range-resources",
+     "andel": 0.15,
+     "logo": "assets/img/logoer/029ce81085.webp",
+     "bar": 0.2419
+    },
+    {
+     "navn": "Canadian Natural Resources",
+     "slug": "canadian-natural-resources",
+     "andel": 0.07,
+     "logo": "assets/img/logoer/8cf8211760.webp",
+     "bar": 0.1129
+    }
+   ],
+   "vis": [
+    {
+     "navn": "Expand Energy",
+     "slug": "expand-energy",
+     "andel": 0.62,
+     "logo": "assets/img/logoer/2929f4ef4d.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Comstock Resources",
+     "slug": "comstock-resources",
+     "andel": 0.54,
+     "bar": 0.871
+    },
+    {
+     "navn": "Antero Resources",
+     "slug": "antero-resources",
+     "andel": 0.25,
+     "logo": "assets/img/logoer/c5f2c6a496.webp",
+     "bar": 0.4032
+    }
+   ],
+   "flere": [
+    {
+     "navn": "Centrus Energy",
+     "slug": "centrus-energy",
+     "andel": 0.25,
+     "logo": "assets/img/logoer/6a84ac3104.webp",
+     "bar": 0.4032
+    },
+    {
+     "navn": "Kinder Morgan",
+     "slug": "kinder-morgan",
+     "andel": 0.24,
+     "logo": "assets/img/logoer/5170c52721.webp",
+     "bar": 0.3871
+    },
+    {
+     "navn": "ASP Isotopes",
+     "slug": "asp-isotopes",
+     "andel": 0.23,
+     "logo": "assets/img/logoer/03c53396fb.webp",
+     "bar": 0.371
+    },
+    {
+     "navn": "Vista Energy",
+     "slug": "vista-energy-sab-de-cv",
+     "andel": 0.21,
+     "logo": "assets/img/logoer/a021ce5560.webp",
+     "bar": 0.3387
+    },
+    {
+     "navn": "EQT",
+     "slug": "eqt",
+     "andel": 0.16,
+     "logo": "assets/img/logoer/a943d461fb.webp",
+     "bar": 0.2581
+    },
+    {
+     "navn": "Range Resources",
+     "slug": "range-resources",
+     "andel": 0.15,
+     "logo": "assets/img/logoer/029ce81085.webp",
+     "bar": 0.2419
+    },
+    {
+     "navn": "Canadian Natural Resources",
+     "slug": "canadian-natural-resources",
+     "andel": 0.07,
+     "logo": "assets/img/logoer/8cf8211760.webp",
+     "bar": 0.1129
+    }
+   ],
+   "antalFlere": 7
+  },
+  "energi:udstyr": {
+   "akk": {
+    "andel": 0.65,
+    "antal": 4
+   },
+   "akkIngen": false,
+   "andel": 0.69,
+   "antal": 4,
+   "selskaber": [
+    {
+     "navn": "ProPetro",
+     "slug": "propetro",
+     "andel": 0.33,
+     "logo": "assets/img/logoer/d527a65f18.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Atlas Energy Solutions",
+     "slug": "atlas-energy-solutions",
+     "andel": 0.14,
+     "logo": "assets/img/logoer/e61814aaa9.webp",
+     "bar": 0.4242
+    },
+    {
+     "navn": "ITT",
+     "slug": "itt",
+     "andel": 0.13,
+     "bar": 0.3939
+    },
+    {
+     "navn": "Flowserve",
+     "slug": "flowserve",
+     "andel": 0.09,
+     "bar": 0.2727
+    }
+   ],
+   "vis": [
+    {
+     "navn": "ProPetro",
+     "slug": "propetro",
+     "andel": 0.33,
+     "logo": "assets/img/logoer/d527a65f18.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Atlas Energy Solutions",
+     "slug": "atlas-energy-solutions",
+     "andel": 0.14,
+     "logo": "assets/img/logoer/e61814aaa9.webp",
+     "bar": 0.4242
+    },
+    {
+     "navn": "ITT",
+     "slug": "itt",
+     "andel": 0.13,
+     "bar": 0.3939
+    }
+   ],
+   "flere": [
+    {
+     "navn": "Flowserve",
+     "slug": "flowserve",
+     "andel": 0.09,
+     "bar": 0.2727
+    }
+   ],
+   "antalFlere": 1
+  },
+  "energi:generation": {
+   "akk": {
+    "andel": 2.73,
+    "antal": 12
+   },
+   "akkIngen": false,
+   "andel": 2.92,
+   "antal": 12,
+   "selskaber": [
+    {
+     "navn": "Babcock & Wilcox",
+     "slug": "babcock-wilcox",
+     "andel": 0.83,
+     "logo": "assets/img/logoer/986bc5308a.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Power Solutions International",
+     "slug": "power-solutions-internationa",
+     "andel": 0.41,
+     "logo": "assets/img/logoer/a237f0a932.webp",
+     "bar": 0.494
+    },
+    {
+     "navn": "Ballard Power Systems",
+     "slug": "ballard-power-systems",
+     "andel": 0.33,
+     "logo": "assets/img/logoer/8156fe896a.webp",
+     "bar": 0.3976
+    },
+    {
+     "navn": "ERock",
+     "slug": "erock",
+     "andel": 0.25,
+     "logo": "assets/img/logoer/73aa26b22b.webp",
+     "bar": 0.3012
+    },
+    {
+     "navn": "Rolls-Royce",
+     "slug": "rolls-royce",
+     "andel": 0.25,
+     "logo": "assets/img/logoer/5c92af4fd2.webp",
+     "bar": 0.3012
+    },
+    {
+     "navn": "Bloom Energy",
+     "slug": "bloom-energy",
+     "andel": 0.2,
+     "logo": "assets/img/logoer/aec3569753.webp",
+     "bar": 0.241
+    },
+    {
+     "navn": "GE Vernova",
+     "slug": "ge-vernova",
+     "andel": 0.19,
+     "logo": "assets/img/logoer/35d6fd9204.webp",
+     "bar": 0.2289
+    },
+    {
+     "navn": "Fluor",
+     "slug": "fluor",
+     "andel": 0.11,
+     "bar": 0.1325
+    },
+    {
+     "navn": "Plug Power",
+     "slug": "plug-power",
+     "andel": 0.11,
+     "bar": 0.1325
+    },
+    {
+     "navn": "Solaris Energy Infrastructure",
+     "slug": "solaris-energy-infrastructure",
+     "andel": 0.11,
+     "logo": "assets/img/logoer/a83ef95b65.webp",
+     "bar": 0.1325
+    },
+    {
+     "navn": "Caterpillar",
+     "slug": "caterpillar",
+     "andel": 0.07,
+     "logo": "assets/img/logoer/580b8b9a63.webp",
+     "bar": 0.0843
+    },
+    {
+     "navn": "Cummins",
+     "slug": "cummins",
+     "andel": 0.06,
+     "logo": "assets/img/logoer/f812a094ea.webp",
+     "bar": 0.0723
+    }
+   ],
+   "vis": [
+    {
+     "navn": "Babcock & Wilcox",
+     "slug": "babcock-wilcox",
+     "andel": 0.83,
+     "logo": "assets/img/logoer/986bc5308a.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Power Solutions International",
+     "slug": "power-solutions-internationa",
+     "andel": 0.41,
+     "logo": "assets/img/logoer/a237f0a932.webp",
+     "bar": 0.494
+    },
+    {
+     "navn": "Ballard Power Systems",
+     "slug": "ballard-power-systems",
+     "andel": 0.33,
+     "logo": "assets/img/logoer/8156fe896a.webp",
+     "bar": 0.3976
+    }
+   ],
+   "flere": [
+    {
+     "navn": "ERock",
+     "slug": "erock",
+     "andel": 0.25,
+     "logo": "assets/img/logoer/73aa26b22b.webp",
+     "bar": 0.3012
+    },
+    {
+     "navn": "Rolls-Royce",
+     "slug": "rolls-royce",
+     "andel": 0.25,
+     "logo": "assets/img/logoer/5c92af4fd2.webp",
+     "bar": 0.3012
+    },
+    {
+     "navn": "Bloom Energy",
+     "slug": "bloom-energy",
+     "andel": 0.2,
+     "logo": "assets/img/logoer/aec3569753.webp",
+     "bar": 0.241
+    },
+    {
+     "navn": "GE Vernova",
+     "slug": "ge-vernova",
+     "andel": 0.19,
+     "logo": "assets/img/logoer/35d6fd9204.webp",
+     "bar": 0.2289
+    },
+    {
+     "navn": "Fluor",
+     "slug": "fluor",
+     "andel": 0.11,
+     "bar": 0.1325
+    },
+    {
+     "navn": "Plug Power",
+     "slug": "plug-power",
+     "andel": 0.11,
+     "bar": 0.1325
+    },
+    {
+     "navn": "Solaris Energy Infrastructure",
+     "slug": "solaris-energy-infrastructure",
+     "andel": 0.11,
+     "logo": "assets/img/logoer/a83ef95b65.webp",
+     "bar": 0.1325
+    },
+    {
+     "navn": "Caterpillar",
+     "slug": "caterpillar",
+     "andel": 0.07,
+     "logo": "assets/img/logoer/580b8b9a63.webp",
+     "bar": 0.0843
+    },
+    {
+     "navn": "Cummins",
+     "slug": "cummins",
+     "andel": 0.06,
+     "logo": "assets/img/logoer/f812a094ea.webp",
+     "bar": 0.0723
+    }
+   ],
+   "antalFlere": 9
+  },
+  "energi:nuclear": {
+   "akk": {
+    "andel": 1.25,
+    "antal": 8
+   },
+   "akkIngen": false,
+   "andel": 0.97,
+   "antal": 8,
+   "selskaber": [
+    {
+     "navn": "BWX Technologies",
+     "slug": "bwx-technologies",
+     "andel": 0.18,
+     "logo": "assets/img/logoer/fb6c04b84e.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Nano Nuclear Energy",
+     "slug": "nano-nuclear-energy",
+     "andel": 0.17,
+     "logo": "assets/img/logoer/db4cc352e4.webp",
+     "bar": 0.9444
+    },
+    {
+     "navn": "Oklo",
+     "slug": "oklo",
+     "andel": 0.15,
+     "logo": "assets/img/logoer/2f59a56bef.webp",
+     "bar": 0.8333
+    },
+    {
+     "navn": "Lightbridge",
+     "slug": "lightbridge",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/4272125255.webp",
+     "bar": 0.6667
+    },
+    {
+     "navn": "Mirion Technologies",
+     "slug": "mirion-technologies",
+     "andel": 0.11,
+     "logo": "assets/img/logoer/44f31faefb.webp",
+     "bar": 0.6111
+    },
+    {
+     "navn": "NuScale Power",
+     "slug": "nuscale-power",
+     "andel": 0.1,
+     "logo": "assets/img/logoer/8cd4c2b13d.webp",
+     "bar": 0.5556
+    },
+    {
+     "navn": "Terrestrial Energy",
+     "slug": "terrestrial-energy",
+     "andel": 0.09,
+     "logo": "assets/img/logoer/c4ba238faa.webp",
+     "bar": 0.5
+    },
+    {
+     "navn": "Terra Innovatum",
+     "slug": "terra-innovatum",
+     "andel": 0.05,
+     "logo": "assets/img/logoer/9b5fc9369d.webp",
+     "bar": 0.2778
+    }
+   ],
+   "vis": [
+    {
+     "navn": "BWX Technologies",
+     "slug": "bwx-technologies",
+     "andel": 0.18,
+     "logo": "assets/img/logoer/fb6c04b84e.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Nano Nuclear Energy",
+     "slug": "nano-nuclear-energy",
+     "andel": 0.17,
+     "logo": "assets/img/logoer/db4cc352e4.webp",
+     "bar": 0.9444
+    },
+    {
+     "navn": "Oklo",
+     "slug": "oklo",
+     "andel": 0.15,
+     "logo": "assets/img/logoer/2f59a56bef.webp",
+     "bar": 0.8333
+    }
+   ],
+   "flere": [
+    {
+     "navn": "Lightbridge",
+     "slug": "lightbridge",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/4272125255.webp",
+     "bar": 0.6667
+    },
+    {
+     "navn": "Mirion Technologies",
+     "slug": "mirion-technologies",
+     "andel": 0.11,
+     "logo": "assets/img/logoer/44f31faefb.webp",
+     "bar": 0.6111
+    },
+    {
+     "navn": "NuScale Power",
+     "slug": "nuscale-power",
+     "andel": 0.1,
+     "logo": "assets/img/logoer/8cd4c2b13d.webp",
+     "bar": 0.5556
+    },
+    {
+     "navn": "Terrestrial Energy",
+     "slug": "terrestrial-energy",
+     "andel": 0.09,
+     "logo": "assets/img/logoer/c4ba238faa.webp",
+     "bar": 0.5
+    },
+    {
+     "navn": "Terra Innovatum",
+     "slug": "terra-innovatum",
+     "andel": 0.05,
+     "logo": "assets/img/logoer/9b5fc9369d.webp",
+     "bar": 0.2778
+    }
+   ],
+   "antalFlere": 5
+  },
+  "energi:solar": {
+   "akk": {
+    "andel": 3.73,
+    "antal": 9
+   },
+   "akkIngen": false,
+   "andel": 3.37,
+   "antal": 9,
+   "selskaber": [
+    {
+     "navn": "T1 Energy",
+     "slug": "t1-energy",
+     "andel": 0.76,
+     "logo": "assets/img/logoer/2e90ce846f.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "SolarEdge",
+     "slug": "solaredge",
+     "andel": 0.53,
+     "logo": "assets/img/logoer/c87f3d4b5f.webp",
+     "bar": 0.6974
+    },
+    {
+     "navn": "First Solar",
+     "slug": "first-solar",
+     "andel": 0.4,
+     "bar": 0.5263
+    },
+    {
+     "navn": "Tigo Energy",
+     "slug": "tigo-energy",
+     "andel": 0.38,
+     "logo": "assets/img/logoer/d130cb4bf1.webp",
+     "bar": 0.5
+    },
+    {
+     "navn": "Sunrun",
+     "slug": "sunrun",
+     "andel": 0.37,
+     "logo": "assets/img/logoer/512087f698.webp",
+     "bar": 0.4868
+    },
+    {
+     "navn": "Enphase Energy",
+     "slug": "enphase-energy",
+     "andel": 0.34,
+     "logo": "assets/img/logoer/cd750eed57.webp",
+     "bar": 0.4474
+    },
+    {
+     "navn": "Nextracker",
+     "slug": "nextracker",
+     "andel": 0.23,
+     "logo": "assets/img/logoer/c140436de9.webp",
+     "bar": 0.3026
+    },
+    {
+     "navn": "Array Technologies",
+     "slug": "array-technologies",
+     "andel": 0.18,
+     "logo": "assets/img/logoer/5f68d4c6f1.webp",
+     "bar": 0.2368
+    },
+    {
+     "navn": "Canadian Solar",
+     "slug": "canadian-solar",
+     "andel": 0.18,
+     "logo": "assets/img/logoer/66c992d02d.webp",
+     "bar": 0.2368
+    }
+   ],
+   "vis": [
+    {
+     "navn": "T1 Energy",
+     "slug": "t1-energy",
+     "andel": 0.76,
+     "logo": "assets/img/logoer/2e90ce846f.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "SolarEdge",
+     "slug": "solaredge",
+     "andel": 0.53,
+     "logo": "assets/img/logoer/c87f3d4b5f.webp",
+     "bar": 0.6974
+    },
+    {
+     "navn": "First Solar",
+     "slug": "first-solar",
+     "andel": 0.4,
+     "bar": 0.5263
+    }
+   ],
+   "flere": [
+    {
+     "navn": "Tigo Energy",
+     "slug": "tigo-energy",
+     "andel": 0.38,
+     "logo": "assets/img/logoer/d130cb4bf1.webp",
+     "bar": 0.5
+    },
+    {
+     "navn": "Sunrun",
+     "slug": "sunrun",
+     "andel": 0.37,
+     "logo": "assets/img/logoer/512087f698.webp",
+     "bar": 0.4868
+    },
+    {
+     "navn": "Enphase Energy",
+     "slug": "enphase-energy",
+     "andel": 0.34,
+     "logo": "assets/img/logoer/cd750eed57.webp",
+     "bar": 0.4474
+    },
+    {
+     "navn": "Nextracker",
+     "slug": "nextracker",
+     "andel": 0.23,
+     "logo": "assets/img/logoer/c140436de9.webp",
+     "bar": 0.3026
+    },
+    {
+     "navn": "Array Technologies",
+     "slug": "array-technologies",
+     "andel": 0.18,
+     "logo": "assets/img/logoer/5f68d4c6f1.webp",
+     "bar": 0.2368
+    },
+    {
+     "navn": "Canadian Solar",
+     "slug": "canadian-solar",
+     "andel": 0.18,
+     "logo": "assets/img/logoer/66c992d02d.webp",
+     "bar": 0.2368
+    }
+   ],
+   "antalFlere": 6
+  },
+  "energi:backup-storage": {
+   "akk": {
+    "andel": 3.02,
+    "antal": 11
+   },
+   "akkIngen": false,
+   "andel": 3.38,
+   "antal": 11,
+   "selskaber": [
+    {
+     "navn": "Enovix",
+     "slug": "enovix",
+     "andel": 0.66,
+     "logo": "assets/img/logoer/27b7860880.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Generac",
+     "slug": "generac",
+     "andel": 0.54,
+     "logo": "assets/img/logoer/d699c2505d.webp",
+     "bar": 0.8182
+    },
+    {
+     "navn": "Fluence Energy",
+     "slug": "fluence-energy",
+     "andel": 0.51,
+     "logo": "assets/img/logoer/3539d10e3a.webp",
+     "bar": 0.7727
+    },
+    {
+     "navn": "SES AI",
+     "slug": "ses-ai",
+     "andel": 0.46,
+     "logo": "assets/img/logoer/b5ff391c12.webp",
+     "bar": 0.697
+    },
+    {
+     "navn": "QuantumScape",
+     "slug": "quantumscape",
+     "andel": 0.43,
+     "logo": "assets/img/logoer/08f4389b60.webp",
+     "bar": 0.6515
+    },
+    {
+     "navn": "Solid Power",
+     "slug": "solid-power",
+     "andel": 0.23,
+     "logo": "assets/img/logoer/e242bc0885.webp",
+     "bar": 0.3485
+    },
+    {
+     "navn": "Amprius Technologies",
+     "slug": "amprius-technologies",
+     "andel": 0.19,
+     "logo": "assets/img/logoer/1aac94c645.webp",
+     "bar": 0.2879
+    },
+    {
+     "navn": "Eos Energy",
+     "slug": "eos-energy",
+     "andel": 0.13,
+     "logo": "assets/img/logoer/73a3325656.webp",
+     "bar": 0.197
+    },
+    {
+     "navn": "Electrovaya",
+     "slug": "electrovaya",
+     "andel": 0.11,
+     "logo": "assets/img/logoer/a9ff78987f.webp",
+     "bar": 0.1667
+    },
+    {
+     "navn": "Microvast",
+     "slug": "microvast",
+     "andel": 0.1,
+     "bar": 0.1515
+    },
+    {
+     "navn": "NeoVolta",
+     "slug": "neovolta",
+     "andel": 0.02,
+     "logo": "assets/img/logoer/7d5ba478b0.webp",
+     "bar": 0.0303
+    }
+   ],
+   "vis": [
+    {
+     "navn": "Enovix",
+     "slug": "enovix",
+     "andel": 0.66,
+     "logo": "assets/img/logoer/27b7860880.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Generac",
+     "slug": "generac",
+     "andel": 0.54,
+     "logo": "assets/img/logoer/d699c2505d.webp",
+     "bar": 0.8182
+    },
+    {
+     "navn": "Fluence Energy",
+     "slug": "fluence-energy",
+     "andel": 0.51,
+     "logo": "assets/img/logoer/3539d10e3a.webp",
+     "bar": 0.7727
+    }
+   ],
+   "flere": [
+    {
+     "navn": "SES AI",
+     "slug": "ses-ai",
+     "andel": 0.46,
+     "logo": "assets/img/logoer/b5ff391c12.webp",
+     "bar": 0.697
+    },
+    {
+     "navn": "QuantumScape",
+     "slug": "quantumscape",
+     "andel": 0.43,
+     "logo": "assets/img/logoer/08f4389b60.webp",
+     "bar": 0.6515
+    },
+    {
+     "navn": "Solid Power",
+     "slug": "solid-power",
+     "andel": 0.23,
+     "logo": "assets/img/logoer/e242bc0885.webp",
+     "bar": 0.3485
+    },
+    {
+     "navn": "Amprius Technologies",
+     "slug": "amprius-technologies",
+     "andel": 0.19,
+     "logo": "assets/img/logoer/1aac94c645.webp",
+     "bar": 0.2879
+    },
+    {
+     "navn": "Eos Energy",
+     "slug": "eos-energy",
+     "andel": 0.13,
+     "logo": "assets/img/logoer/73a3325656.webp",
+     "bar": 0.197
+    },
+    {
+     "navn": "Electrovaya",
+     "slug": "electrovaya",
+     "andel": 0.11,
+     "logo": "assets/img/logoer/a9ff78987f.webp",
+     "bar": 0.1667
+    },
+    {
+     "navn": "Microvast",
+     "slug": "microvast",
+     "andel": 0.1,
+     "bar": 0.1515
+    },
+    {
+     "navn": "NeoVolta",
+     "slug": "neovolta",
+     "andel": 0.02,
+     "logo": "assets/img/logoer/7d5ba478b0.webp",
+     "bar": 0.0303
+    }
+   ],
+   "antalFlere": 8
+  },
+  "energi:grid": {
+   "akk": {
+    "andel": 1.48,
+    "antal": 6
+   },
+   "akkIngen": false,
+   "andel": 1.23,
+   "antal": 6,
+   "selskaber": [
+    {
+     "navn": "MYR Group",
+     "slug": "myr-group",
+     "andel": 0.54,
+     "logo": "assets/img/logoer/97c8b3b259.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Shoals Technologies",
+     "slug": "shoals-technologies",
+     "andel": 0.22,
+     "logo": "assets/img/logoer/c6fe3d7472.webp",
+     "bar": 0.4074
+    },
+    {
+     "navn": "Quanta Services",
+     "slug": "quanta-services",
+     "andel": 0.16,
+     "logo": "assets/img/logoer/21ea777ffb.webp",
+     "bar": 0.2963
+    },
+    {
+     "navn": "Primoris Services",
+     "slug": "primoris-services",
+     "andel": 0.13,
+     "bar": 0.2407
+    },
+    {
+     "navn": "Tantalus Systems",
+     "slug": "tantalus-systems",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/5061bb7e93.webp",
+     "bar": 0.2222
+    },
+    {
+     "navn": "Terex",
+     "slug": "terex",
+     "andel": 0.06,
+     "logo": "assets/img/logoer/cea4e9cb1b.webp",
+     "bar": 0.1111
+    }
+   ],
+   "vis": [
+    {
+     "navn": "MYR Group",
+     "slug": "myr-group",
+     "andel": 0.54,
+     "logo": "assets/img/logoer/97c8b3b259.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Shoals Technologies",
+     "slug": "shoals-technologies",
+     "andel": 0.22,
+     "logo": "assets/img/logoer/c6fe3d7472.webp",
+     "bar": 0.4074
+    },
+    {
+     "navn": "Quanta Services",
+     "slug": "quanta-services",
+     "andel": 0.16,
+     "logo": "assets/img/logoer/21ea777ffb.webp",
+     "bar": 0.2963
+    }
+   ],
+   "flere": [
+    {
+     "navn": "Primoris Services",
+     "slug": "primoris-services",
+     "andel": 0.13,
+     "bar": 0.2407
+    },
+    {
+     "navn": "Tantalus Systems",
+     "slug": "tantalus-systems",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/5061bb7e93.webp",
+     "bar": 0.2222
+    },
+    {
+     "navn": "Terex",
+     "slug": "terex",
+     "andel": 0.06,
+     "logo": "assets/img/logoer/cea4e9cb1b.webp",
+     "bar": 0.1111
+    }
+   ],
+   "antalFlere": 3
+  },
+  "energi:utility": {
+   "akk": {
+    "andel": 1.67,
+    "antal": 9
+   },
+   "akkIngen": false,
+   "andel": 1.78,
+   "antal": 9,
+   "selskaber": [
+    {
+     "navn": "Vistra",
+     "slug": "vistra",
+     "andel": 0.29,
+     "logo": "assets/img/logoer/016d0b3e6d.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Talen Energy",
+     "slug": "talen-energy",
+     "andel": 0.25,
+     "logo": "assets/img/logoer/e1a57b5672.webp",
+     "bar": 0.8621
+    },
+    {
+     "navn": "NextEra Energy",
+     "slug": "nextera-energy",
+     "andel": 0.22,
+     "bar": 0.7586
+    },
+    {
+     "navn": "DTE Energy",
+     "slug": "dte-energy-company",
+     "andel": 0.19,
+     "logo": "assets/img/logoer/9bfcfd6aa9.webp",
+     "bar": 0.6552
+    },
+    {
+     "navn": "American Electric Power",
+     "slug": "am-electric",
+     "andel": 0.18,
+     "bar": 0.6207
+    },
+    {
+     "navn": "CMS Energy",
+     "slug": "cms-energy",
+     "andel": 0.18,
+     "bar": 0.6207
+    },
+    {
+     "navn": "FirstEnergy",
+     "slug": "firstenergy",
+     "andel": 0.18,
+     "logo": "assets/img/logoer/7b3028feda.webp",
+     "bar": 0.6207
+    },
+    {
+     "navn": "Southern Company",
+     "slug": "southern-company",
+     "andel": 0.18,
+     "logo": "assets/img/logoer/435ee7b106.webp",
+     "bar": 0.6207
+    },
+    {
+     "navn": "Clearway Energy",
+     "slug": "clearway-energy-inc-c",
+     "andel": 0.11,
+     "logo": "assets/img/logoer/c6302193eb.webp",
+     "bar": 0.3793
+    }
+   ],
+   "vis": [
+    {
+     "navn": "Vistra",
+     "slug": "vistra",
+     "andel": 0.29,
+     "logo": "assets/img/logoer/016d0b3e6d.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Talen Energy",
+     "slug": "talen-energy",
+     "andel": 0.25,
+     "logo": "assets/img/logoer/e1a57b5672.webp",
+     "bar": 0.8621
+    },
+    {
+     "navn": "NextEra Energy",
+     "slug": "nextera-energy",
+     "andel": 0.22,
+     "bar": 0.7586
+    }
+   ],
+   "flere": [
+    {
+     "navn": "DTE Energy",
+     "slug": "dte-energy-company",
+     "andel": 0.19,
+     "logo": "assets/img/logoer/9bfcfd6aa9.webp",
+     "bar": 0.6552
+    },
+    {
+     "navn": "American Electric Power",
+     "slug": "am-electric",
+     "andel": 0.18,
+     "bar": 0.6207
+    },
+    {
+     "navn": "CMS Energy",
+     "slug": "cms-energy",
+     "andel": 0.18,
+     "bar": 0.6207
+    },
+    {
+     "navn": "FirstEnergy",
+     "slug": "firstenergy",
+     "andel": 0.18,
+     "logo": "assets/img/logoer/7b3028feda.webp",
+     "bar": 0.6207
+    },
+    {
+     "navn": "Southern Company",
+     "slug": "southern-company",
+     "andel": 0.18,
+     "logo": "assets/img/logoer/435ee7b106.webp",
+     "bar": 0.6207
+    },
+    {
+     "navn": "Clearway Energy",
+     "slug": "clearway-energy-inc-c",
+     "andel": 0.11,
+     "logo": "assets/img/logoer/c6302193eb.webp",
+     "bar": 0.3793
+    }
+   ],
+   "antalFlere": 6
+  },
+  "chips:ikkeChips": {
+   "akk": {
+    "andel": 11.78,
+    "antal": 36
+   },
+   "akkIngen": false,
+   "andel": 11.2,
+   "antal": 38,
+   "selskaber": [
+    {
+     "navn": "Taiyo Yuden",
+     "slug": "taiyo-yuden",
+     "andel": 0.94,
+     "bar": 1.0
+    },
+    {
+     "navn": "LPKF Laser & Electronics",
+     "slug": "lpkf-laser-electronics",
+     "andel": 0.81,
+     "logo": "assets/img/logoer/1750ae3fb9.webp",
+     "bar": 0.8617
+    },
+    {
+     "navn": "Soitec",
+     "slug": "soitec",
+     "andel": 0.69,
+     "logo": "assets/img/logoer/dd34bfa59d.webp",
+     "bar": 0.734
+    },
+    {
+     "navn": "Nova",
+     "slug": "nova",
+     "andel": 0.66,
+     "logo": "assets/img/logoer/d15f922473.webp",
+     "bar": 0.7021
+    },
+    {
+     "navn": "Besi",
+     "slug": "besi",
+     "andel": 0.64,
+     "bar": 0.6809
+    },
+    {
+     "navn": "IQE",
+     "slug": "iqe",
+     "andel": 0.55,
+     "logo": "assets/img/logoer/52e0da790e.webp",
+     "bar": 0.5851
+    },
+    {
+     "navn": "Western Digital",
+     "slug": "western-digital",
+     "andel": 0.48,
+     "logo": "assets/img/logoer/e2b55bbc59.webp",
+     "bar": 0.5106
+    },
+    {
+     "navn": "SUSS MicroTec",
+     "slug": "suss-microtec",
+     "andel": 0.45,
+     "logo": "assets/img/logoer/b7558a97d0.webp",
+     "bar": 0.4787
+    },
+    {
+     "navn": "Tokyo Electron",
+     "slug": "tokyo-electron",
+     "andel": 0.45,
+     "logo": "assets/img/logoer/323e8423ed.webp",
+     "bar": 0.4787
+    },
+    {
+     "navn": "ASM International",
+     "slug": "asm-international",
+     "andel": 0.44,
+     "logo": "assets/img/logoer/07aa949943.webp",
+     "bar": 0.4681
+    },
+    {
+     "navn": "ASMPT",
+     "slug": "asmpt",
+     "andel": 0.42,
+     "logo": "assets/img/logoer/7532150e62.webp",
+     "bar": 0.4468
+    },
+    {
+     "navn": "Camtek",
+     "slug": "camtek",
+     "andel": 0.4,
+     "bar": 0.4255
+    },
+    {
+     "navn": "Aehr Test Systems",
+     "slug": "aehr-test-systems",
+     "andel": 0.37,
+     "logo": "assets/img/logoer/d4bb600b5c.webp",
+     "bar": 0.3936
+    },
+    {
+     "navn": "Seagate Technology",
+     "slug": "seagate-technology",
+     "andel": 0.35,
+     "logo": "assets/img/logoer/953b305bc8.webp",
+     "bar": 0.3723
+    },
+    {
+     "navn": "MKS",
+     "slug": "mks",
+     "andel": 0.34,
+     "logo": "assets/img/logoer/6457d6104b.webp",
+     "bar": 0.3617
+    },
+    {
+     "navn": "Lasertec",
+     "slug": "lasertec",
+     "andel": 0.31,
+     "logo": "assets/img/logoer/af96b86550.webp",
+     "bar": 0.3298
+    },
+    {
+     "navn": "Rigaku",
+     "slug": "rigaku",
+     "andel": 0.31,
+     "logo": "assets/img/logoer/f5a191a973.webp",
+     "bar": 0.3298
+    },
+    {
+     "navn": "KLA",
+     "slug": "kla",
+     "andel": 0.28,
+     "logo": "assets/img/logoer/854d641e64.webp",
+     "bar": 0.2979
+    },
+    {
+     "navn": "Onto Innovation",
+     "slug": "onto-innovation",
+     "andel": 0.24,
+     "bar": 0.2553
+    },
+    {
+     "navn": "Aixtron",
+     "slug": "aixtron",
+     "andel": 0.2,
+     "bar": 0.2128
+    },
+    {
+     "navn": "Advantest",
+     "slug": "advantest",
+     "andel": 0.19,
+     "logo": "assets/img/logoer/509540d950.webp",
+     "bar": 0.2021
+    },
+    {
+     "navn": "Kulicke & Soffa",
+     "slug": "kulicke-soffa",
+     "andel": 0.18,
+     "logo": "assets/img/logoer/66774484fb.webp",
+     "bar": 0.1915
+    },
+    {
+     "navn": "Veeco Instruments",
+     "slug": "veeco-instruments",
+     "andel": 0.18,
+     "logo": "assets/img/logoer/c9df30070b.webp",
+     "bar": 0.1915
+    },
+    {
+     "navn": "AXT",
+     "slug": "axt",
+     "andel": 0.17,
+     "logo": "assets/img/logoer/def622555b.webp",
+     "bar": 0.1809
+    },
+    {
+     "navn": "Kokusai Electric",
+     "slug": "kokusai-electric",
+     "andel": 0.13,
+     "logo": "assets/img/logoer/aea873782d.webp",
+     "bar": 0.1383
+    },
+    {
+     "navn": "Entegris",
+     "slug": "entegris",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/f3e07fcdad.webp",
+     "bar": 0.1277
+    },
+    {
+     "navn": "Wolfspeed",
+     "slug": "wolfspeed",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/8800d66171.webp",
+     "bar": 0.1277
+    },
+    {
+     "navn": "ACM Research",
+     "slug": "acm-research",
+     "andel": 0.1,
+     "logo": "assets/img/logoer/f70b811920.webp",
+     "bar": 0.1064
+    },
+    {
+     "navn": "Amkor Technology",
+     "slug": "amkor-technology",
+     "andel": 0.1,
+     "logo": "assets/img/logoer/850bb0587b.webp",
+     "bar": 0.1064
+    },
+    {
+     "navn": "ASML",
+     "slug": "asml",
+     "andel": 0.09,
+     "logo": "assets/img/logoer/6a9ec0669d.webp",
+     "bar": 0.0957
+    },
+    {
+     "navn": "Lam Research",
+     "slug": "lam-research",
+     "andel": 0.09,
+     "logo": "assets/img/logoer/26fd337cb3.webp",
+     "bar": 0.0957
+    },
+    {
+     "navn": "Synopsys",
+     "slug": "synopsys",
+     "andel": 0.09,
+     "bar": 0.0957
+    },
+    {
+     "navn": "Cohu",
+     "slug": "cohu",
+     "andel": 0.08,
+     "logo": "assets/img/logoer/6942a6ca36.webp",
+     "bar": 0.0851
+    },
+    {
+     "navn": "Cadence Design Systems",
+     "slug": "cadence-design-systems",
+     "andel": 0.06,
+     "bar": 0.0638
+    },
+    {
+     "navn": "FormFactor",
+     "slug": "formfactor",
+     "andel": 0.06,
+     "logo": "assets/img/logoer/58a0d186b3.webp",
+     "bar": 0.0638
+    },
+    {
+     "navn": "Applied Materials",
+     "slug": "applied-materials",
+     "andel": 0.05,
+     "logo": "assets/img/logoer/b846cd3f38.webp",
+     "bar": 0.0532
+    },
+    {
+     "navn": "Axcelis Technologies",
+     "slug": "axcelis-technologies",
+     "andel": 0.03,
+     "bar": 0.0319
+    },
+    {
+     "navn": "Teradyne",
+     "slug": "teradyne",
+     "andel": 0.03,
+     "logo": "assets/img/logoer/2419f7bcca.webp",
+     "bar": 0.0319
+    }
+   ],
+   "vis": [
+    {
+     "navn": "Taiyo Yuden",
+     "slug": "taiyo-yuden",
+     "andel": 0.94,
+     "bar": 1.0
+    },
+    {
+     "navn": "LPKF Laser & Electronics",
+     "slug": "lpkf-laser-electronics",
+     "andel": 0.81,
+     "logo": "assets/img/logoer/1750ae3fb9.webp",
+     "bar": 0.8617
+    },
+    {
+     "navn": "Soitec",
+     "slug": "soitec",
+     "andel": 0.69,
+     "logo": "assets/img/logoer/dd34bfa59d.webp",
+     "bar": 0.734
+    }
+   ],
+   "flere": [
+    {
+     "navn": "Nova",
+     "slug": "nova",
+     "andel": 0.66,
+     "logo": "assets/img/logoer/d15f922473.webp",
+     "bar": 0.7021
+    },
+    {
+     "navn": "Besi",
+     "slug": "besi",
+     "andel": 0.64,
+     "bar": 0.6809
+    },
+    {
+     "navn": "IQE",
+     "slug": "iqe",
+     "andel": 0.55,
+     "logo": "assets/img/logoer/52e0da790e.webp",
+     "bar": 0.5851
+    },
+    {
+     "navn": "Western Digital",
+     "slug": "western-digital",
+     "andel": 0.48,
+     "logo": "assets/img/logoer/e2b55bbc59.webp",
+     "bar": 0.5106
+    },
+    {
+     "navn": "SUSS MicroTec",
+     "slug": "suss-microtec",
+     "andel": 0.45,
+     "logo": "assets/img/logoer/b7558a97d0.webp",
+     "bar": 0.4787
+    },
+    {
+     "navn": "Tokyo Electron",
+     "slug": "tokyo-electron",
+     "andel": 0.45,
+     "logo": "assets/img/logoer/323e8423ed.webp",
+     "bar": 0.4787
+    },
+    {
+     "navn": "ASM International",
+     "slug": "asm-international",
+     "andel": 0.44,
+     "logo": "assets/img/logoer/07aa949943.webp",
+     "bar": 0.4681
+    },
+    {
+     "navn": "ASMPT",
+     "slug": "asmpt",
+     "andel": 0.42,
+     "logo": "assets/img/logoer/7532150e62.webp",
+     "bar": 0.4468
+    },
+    {
+     "navn": "Camtek",
+     "slug": "camtek",
+     "andel": 0.4,
+     "bar": 0.4255
+    },
+    {
+     "navn": "Aehr Test Systems",
+     "slug": "aehr-test-systems",
+     "andel": 0.37,
+     "logo": "assets/img/logoer/d4bb600b5c.webp",
+     "bar": 0.3936
+    },
+    {
+     "navn": "Seagate Technology",
+     "slug": "seagate-technology",
+     "andel": 0.35,
+     "logo": "assets/img/logoer/953b305bc8.webp",
+     "bar": 0.3723
+    },
+    {
+     "navn": "MKS",
+     "slug": "mks",
+     "andel": 0.34,
+     "logo": "assets/img/logoer/6457d6104b.webp",
+     "bar": 0.3617
+    },
+    {
+     "navn": "Lasertec",
+     "slug": "lasertec",
+     "andel": 0.31,
+     "logo": "assets/img/logoer/af96b86550.webp",
+     "bar": 0.3298
+    },
+    {
+     "navn": "Rigaku",
+     "slug": "rigaku",
+     "andel": 0.31,
+     "logo": "assets/img/logoer/f5a191a973.webp",
+     "bar": 0.3298
+    },
+    {
+     "navn": "KLA",
+     "slug": "kla",
+     "andel": 0.28,
+     "logo": "assets/img/logoer/854d641e64.webp",
+     "bar": 0.2979
+    },
+    {
+     "navn": "Onto Innovation",
+     "slug": "onto-innovation",
+     "andel": 0.24,
+     "bar": 0.2553
+    },
+    {
+     "navn": "Aixtron",
+     "slug": "aixtron",
+     "andel": 0.2,
+     "bar": 0.2128
+    },
+    {
+     "navn": "Advantest",
+     "slug": "advantest",
+     "andel": 0.19,
+     "logo": "assets/img/logoer/509540d950.webp",
+     "bar": 0.2021
+    },
+    {
+     "navn": "Kulicke & Soffa",
+     "slug": "kulicke-soffa",
+     "andel": 0.18,
+     "logo": "assets/img/logoer/66774484fb.webp",
+     "bar": 0.1915
+    },
+    {
+     "navn": "Veeco Instruments",
+     "slug": "veeco-instruments",
+     "andel": 0.18,
+     "logo": "assets/img/logoer/c9df30070b.webp",
+     "bar": 0.1915
+    },
+    {
+     "navn": "AXT",
+     "slug": "axt",
+     "andel": 0.17,
+     "logo": "assets/img/logoer/def622555b.webp",
+     "bar": 0.1809
+    },
+    {
+     "navn": "Kokusai Electric",
+     "slug": "kokusai-electric",
+     "andel": 0.13,
+     "logo": "assets/img/logoer/aea873782d.webp",
+     "bar": 0.1383
+    },
+    {
+     "navn": "Entegris",
+     "slug": "entegris",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/f3e07fcdad.webp",
+     "bar": 0.1277
+    },
+    {
+     "navn": "Wolfspeed",
+     "slug": "wolfspeed",
+     "andel": 0.12,
+     "logo": "assets/img/logoer/8800d66171.webp",
+     "bar": 0.1277
+    },
+    {
+     "navn": "ACM Research",
+     "slug": "acm-research",
+     "andel": 0.1,
+     "logo": "assets/img/logoer/f70b811920.webp",
+     "bar": 0.1064
+    },
+    {
+     "navn": "Amkor Technology",
+     "slug": "amkor-technology",
+     "andel": 0.1,
+     "logo": "assets/img/logoer/850bb0587b.webp",
+     "bar": 0.1064
+    },
+    {
+     "navn": "ASML",
+     "slug": "asml",
+     "andel": 0.09,
+     "logo": "assets/img/logoer/6a9ec0669d.webp",
+     "bar": 0.0957
+    },
+    {
+     "navn": "Lam Research",
+     "slug": "lam-research",
+     "andel": 0.09,
+     "logo": "assets/img/logoer/26fd337cb3.webp",
+     "bar": 0.0957
+    },
+    {
+     "navn": "Synopsys",
+     "slug": "synopsys",
+     "andel": 0.09,
+     "bar": 0.0957
+    },
+    {
+     "navn": "Cohu",
+     "slug": "cohu",
+     "andel": 0.08,
+     "logo": "assets/img/logoer/6942a6ca36.webp",
+     "bar": 0.0851
+    },
+    {
+     "navn": "Cadence Design Systems",
+     "slug": "cadence-design-systems",
+     "andel": 0.06,
+     "bar": 0.0638
+    },
+    {
+     "navn": "FormFactor",
+     "slug": "formfactor",
+     "andel": 0.06,
+     "logo": "assets/img/logoer/58a0d186b3.webp",
+     "bar": 0.0638
+    },
+    {
+     "navn": "Applied Materials",
+     "slug": "applied-materials",
+     "andel": 0.05,
+     "logo": "assets/img/logoer/b846cd3f38.webp",
+     "bar": 0.0532
+    },
+    {
+     "navn": "Axcelis Technologies",
+     "slug": "axcelis-technologies",
+     "andel": 0.03,
+     "bar": 0.0319
+    },
+    {
+     "navn": "Teradyne",
+     "slug": "teradyne",
+     "andel": 0.03,
+     "logo": "assets/img/logoer/2419f7bcca.webp",
+     "bar": 0.0319
+    }
+   ],
+   "antalFlere": 35
+  },
+  "rumfart:top5": {
+   "andel": 5.45,
+   "antal": 5,
+   "selskaber": [
+    {
+     "navn": "SpaceX",
+     "slug": "spacex",
+     "andel": 3.54,
+     "logo": "assets/img/logoer/d55f831486.webp",
+     "bar": 1.0
+    },
+    {
+     "navn": "Planet Labs",
+     "slug": "planet-labs",
+     "andel": 0.52,
+     "logo": "assets/img/logoer/bcc55f45c9.webp",
+     "bar": 0.1469
+    },
+    {
+     "navn": "Intuitive Machines",
+     "slug": "intuitive-machines",
+     "andel": 0.49,
+     "logo": "assets/img/logoer/5f02f07ad3.webp",
+     "bar": 0.1384
+    },
+    {
+     "navn": "AST SpaceMobile",
+     "slug": "ast-spacemobile",
+     "andel": 0.48,
+     "logo": "assets/img/logoer/46350e4587.webp",
+     "bar": 0.1356
+    },
+    {
+     "navn": "BlackSky",
+     "slug": "blacksky",
+     "andel": 0.42,
+     "logo": "assets/img/logoer/f63b43efe9.webp",
+     "bar": 0.1186
+    }
+   ]
+  }
+ },
+ "tidligere": {
+  "antal": 97,
+  "udenTema": [
+   {
+    "navn": "Airbnb",
+    "slug": "airbnb",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   {
+    "navn": "Alphabet",
+    "slug": "alphabet",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   {
+    "navn": "Angi",
+    "slug": "angi",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   {
+    "navn": "BILL Holdings",
+    "slug": "bill-holdings",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   {
+    "navn": "Block",
+    "slug": "block",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   {
+    "navn": "Bumble",
+    "slug": "bumble",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   {
+    "navn": "Cardlytics",
+    "slug": "cardlytics",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   {
+    "navn": "Certara",
+    "slug": "certara",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   {
+    "navn": "Delivery Hero",
+    "slug": "delivery-hero",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   {
+    "navn": "DraftKings",
+    "slug": "draftkings",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   {
+    "navn": "Duolingo",
+    "slug": "duolingo",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   {
+    "navn": "Evaxion Biotech",
+    "slug": "evaxion-biotech",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   {
+    "navn": "Evolution",
+    "slug": "evolution",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   {
+    "navn": "Farfetch",
+    "slug": "farfetch",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   {
+    "navn": "Flexion Mobile",
+    "slug": "flexion-mobile",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   {
+    "navn": "Gravity",
+    "slug": "gravity",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   {
+    "navn": "HIVE Digital Technologies",
+    "slug": "hive-digital-technologies",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   {
+    "navn": "JD.com",
+    "slug": "jd-com",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   {
+    "navn": "Just Eat Takeaway.com",
+    "slug": "just-eat-takeaway-com",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   {
+    "navn": "Maplebear",
+    "slug": "maplebear",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   {
+    "navn": "MARA Holdings",
+    "slug": "mara-holdings",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   {
+    "navn": "Marley Spoon Group",
+    "slug": "marley-spoon-group",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   {
+    "navn": "Mastercard",
+    "slug": "mastercard",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   {
+    "navn": "Nano-X Imaging",
+    "slug": "nano-x-imaging",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   {
+    "navn": "Novo Nordisk",
+    "slug": "novo-nordisk",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   {
+    "navn": "PayPal",
+    "slug": "paypal",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   {
+    "navn": "Peloton Interactive",
+    "slug": "peloton-interactive",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   {
+    "navn": "People Inc. (tidl. IAC)",
+    "slug": "people-inc-tidl-iac",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   {
+    "navn": "Pinterest",
+    "slug": "pinterest",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   {
+    "navn": "Roku",
+    "slug": "roku",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   {
+    "navn": "Schrödinger",
+    "slug": "schrodinger",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   {
+    "navn": "Shopify",
+    "slug": "shopify",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   {
+    "navn": "Simulations Plus",
+    "slug": "simulations-plus",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   {
+    "navn": "Sony Financial Group",
+    "slug": "sony-financial-group",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   {
+    "navn": "Sony Group",
+    "slug": "sony-group",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   {
+    "navn": "StoneCo",
+    "slug": "stoneco",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   {
+    "navn": "Teladoc Health",
+    "slug": "teladoc-health",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   {
+    "navn": "Toast",
+    "slug": "toast",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   {
+    "navn": "Trade Desk",
+    "slug": "trade-desk",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   {
+    "navn": "Visa",
+    "slug": "visa",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   }
+  ],
+  "sider": {
+   "abb": {
+    "navn": "ABB",
+    "slug": "abb",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "accenture": {
+    "navn": "Accenture",
+    "slug": "accenture",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "adobe": {
+    "navn": "Adobe",
+    "slug": "adobe",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "airbnb": {
+    "navn": "Airbnb",
+    "slug": "airbnb",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "alphabet": {
+    "navn": "Alphabet",
+    "slug": "alphabet",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "alphawave-ip-group": {
+    "navn": "Alphawave IP Group",
+    "slug": "alphawave-ip-group",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "altair-engineering": {
+    "navn": "Altair Engineering",
+    "slug": "altair-engineering",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "angi": {
+    "navn": "Angi",
+    "slug": "angi",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "ansys": {
+    "navn": "Ansys",
+    "slug": "ansys",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "appfolio": {
+    "navn": "AppFolio",
+    "slug": "appfolio",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "arcadis": {
+    "navn": "Arcadis",
+    "slug": "arcadis",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "arm": {
+    "navn": "Arm",
+    "slug": "arm",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "atlassian": {
+    "navn": "Atlassian",
+    "slug": "atlassian",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "autodesk": {
+    "navn": "Autodesk",
+    "slug": "autodesk",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "baidu": {
+    "navn": "Baidu",
+    "slug": "baidu",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "bentley-systems": {
+    "navn": "Bentley Systems",
+    "slug": "bentley-systems",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "bill-holdings": {
+    "navn": "BILL Holdings",
+    "slug": "bill-holdings",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "blend-labs": {
+    "navn": "Blend Labs",
+    "slug": "blend-labs",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "block": {
+    "navn": "Block",
+    "slug": "block",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "bumble": {
+    "navn": "Bumble",
+    "slug": "bumble",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "cardlytics": {
+    "navn": "Cardlytics",
+    "slug": "cardlytics",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "certara": {
+    "navn": "Certara",
+    "slug": "certara",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "confluent": {
+    "navn": "Confluent",
+    "slug": "confluent",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "dassault-systemes": {
+    "navn": "Dassault Systemes",
+    "slug": "dassault-systemes",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "datadog": {
+    "navn": "Datadog",
+    "slug": "datadog",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "delivery-hero": {
+    "navn": "Delivery Hero",
+    "slug": "delivery-hero",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "draftkings": {
+    "navn": "DraftKings",
+    "slug": "draftkings",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "duolingo": {
+    "navn": "Duolingo",
+    "slug": "duolingo",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "evaxion-biotech": {
+    "navn": "Evaxion Biotech",
+    "slug": "evaxion-biotech",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "evolution": {
+    "navn": "Evolution",
+    "slug": "evolution",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "farfetch": {
+    "navn": "Farfetch",
+    "slug": "farfetch",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "fastly": {
+    "navn": "Fastly",
+    "slug": "fastly",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "five9": {
+    "navn": "Five9",
+    "slug": "five9",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "flexion-mobile": {
+    "navn": "Flexion Mobile",
+    "slug": "flexion-mobile",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "fortinet": {
+    "navn": "Fortinet",
+    "slug": "fortinet",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "gartner": {
+    "navn": "Gartner",
+    "slug": "gartner",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "gitlab": {
+    "navn": "GitLab",
+    "slug": "gitlab",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "globalstar": {
+    "navn": "Globalstar",
+    "slug": "globalstar",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "godaddy": {
+    "navn": "GoDaddy",
+    "slug": "godaddy",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "gravity": {
+    "navn": "Gravity",
+    "slug": "gravity",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "hewlett-packard-enterprise": {
+    "navn": "Hewlett Packard Enterprise",
+    "slug": "hewlett-packard-enterprise",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "hexagon": {
+    "navn": "Hexagon",
+    "slug": "hexagon",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "hive-digital-technologies": {
+    "navn": "HIVE Digital Technologies",
+    "slug": "hive-digital-technologies",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "hubspot": {
+    "navn": "HubSpot",
+    "slug": "hubspot",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "intuit": {
+    "navn": "Intuit",
+    "slug": "intuit",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "intuitive-surgical": {
+    "navn": "Intuitive Surgical",
+    "slug": "intuitive-surgical",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "jamf": {
+    "navn": "Jamf",
+    "slug": "jamf",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "jd-com": {
+    "navn": "JD.com",
+    "slug": "jd-com",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "just-eat-takeaway-com": {
+    "navn": "Just Eat Takeaway.com",
+    "slug": "just-eat-takeaway-com",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "klaviyo": {
+    "navn": "Klaviyo",
+    "slug": "klaviyo",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "l3harris-technologies": {
+    "navn": "L3Harris Technologies",
+    "slug": "l3harris-technologies",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "maplebear": {
+    "navn": "Maplebear",
+    "slug": "maplebear",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "mara-holdings": {
+    "navn": "MARA Holdings",
+    "slug": "mara-holdings",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "marley-spoon-group": {
+    "navn": "Marley Spoon Group",
+    "slug": "marley-spoon-group",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "mastercard": {
+    "navn": "Mastercard",
+    "slug": "mastercard",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "matterport": {
+    "navn": "Matterport",
+    "slug": "matterport",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "mobileye-global": {
+    "navn": "Mobileye Global",
+    "slug": "mobileye-global",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "modine-manufacturing": {
+    "navn": "Modine Manufacturing",
+    "slug": "modine-manufacturing",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "monday-com": {
+    "navn": "monday.com",
+    "slug": "monday-com",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "mongodb": {
+    "navn": "MongoDB",
+    "slug": "mongodb",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "munters": {
+    "navn": "Munters",
+    "slug": "munters",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "nano-x-imaging": {
+    "navn": "Nano-X Imaging",
+    "slug": "nano-x-imaging",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "novo-nordisk": {
+    "navn": "Novo Nordisk",
+    "slug": "novo-nordisk",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "nxp-semiconductors": {
+    "navn": "NXP Semiconductors",
+    "slug": "nxp-semiconductors",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "okta": {
+    "navn": "Okta",
+    "slug": "okta",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "onestream": {
+    "navn": "OneStream",
+    "slug": "onestream",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "paycom-software": {
+    "navn": "Paycom Software",
+    "slug": "paycom-software",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "paypal": {
+    "navn": "PayPal",
+    "slug": "paypal",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "peloton-interactive": {
+    "navn": "Peloton Interactive",
+    "slug": "peloton-interactive",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "people-inc-tidl-iac": {
+    "navn": "People Inc. (tidl. IAC)",
+    "slug": "people-inc-tidl-iac",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "pinterest": {
+    "navn": "Pinterest",
+    "slug": "pinterest",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "procore-technologies": {
+    "navn": "Procore Technologies",
+    "slug": "procore-technologies",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "ptc": {
+    "navn": "PTC",
+    "slug": "ptc",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "qualcomm": {
+    "navn": "Qualcomm",
+    "slug": "qualcomm",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "qualys": {
+    "navn": "Qualys",
+    "slug": "qualys",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "roku": {
+    "navn": "Roku",
+    "slug": "roku",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "salesforce": {
+    "navn": "Salesforce",
+    "slug": "salesforce",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "schneider-electric": {
+    "navn": "Schneider Electric",
+    "slug": "schneider-electric",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "schrodinger": {
+    "navn": "Schrödinger",
+    "slug": "schrodinger",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "sentinelone": {
+    "navn": "SentinelOne",
+    "slug": "sentinelone",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "servicenow": {
+    "navn": "ServiceNow",
+    "slug": "servicenow",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "shopify": {
+    "navn": "Shopify",
+    "slug": "shopify",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "silicon-laboratories": {
+    "navn": "Silicon Laboratories",
+    "slug": "silicon-laboratories",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "simulations-plus": {
+    "navn": "Simulations Plus",
+    "slug": "simulations-plus",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "sony-financial-group": {
+    "navn": "Sony Financial Group",
+    "slug": "sony-financial-group",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "sony-group": {
+    "navn": "Sony Group",
+    "slug": "sony-group",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "stoneco": {
+    "navn": "StoneCo",
+    "slug": "stoneco",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "teladoc-health": {
+    "navn": "Teladoc Health",
+    "slug": "teladoc-health",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "tenable": {
+    "navn": "Tenable",
+    "slug": "tenable",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "toast": {
+    "navn": "Toast",
+    "slug": "toast",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "trade-desk": {
+    "navn": "Trade Desk",
+    "slug": "trade-desk",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "uipath": {
+    "navn": "UiPath",
+    "slug": "uipath",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "vertiv": {
+    "navn": "Vertiv",
+    "slug": "vertiv",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "visa": {
+    "navn": "Visa",
+    "slug": "visa",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "yubico": {
+    "navn": "Yubico",
+    "slug": "yubico",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "zoom-communications": {
+    "navn": "Zoom Communications",
+    "slug": "zoom-communications",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   },
+   "zscaler": {
+    "navn": "Zscaler",
+    "slug": "zscaler",
+    "andel": 0.0,
+    "andelAKK": 0.0
+   }
+  },
+  "udenTemaAntal": 40
+ },
+ "spacex": {
+  "historik": [
+   {
+    "dato": "2026-07-01",
+    "PMINDI": 0.28,
+    "PMINDIAKK": 0.23,
+    "datoTekst": "01.07.2026"
+   },
+   {
+    "dato": "2026-08-03",
+    "PMINDI": 1.83,
+    "PMINDIAKK": 2.23,
+    "datoTekst": "03.08.2026"
+   },
+   {
+    "dato": "2026-09-01",
+    "PMINDI": 1.59,
+    "PMINDIAKK": 1.6,
+    "datoTekst": "01.09.2026"
+   },
+   {
+    "dato": "2026-10-01",
+    "PMINDI": 1.57,
+    "PMINDIAKK": 1.6,
+    "datoTekst": "01.10.2026"
+   },
+   {
+    "dato": "2026-10-30",
+    "PMINDI": 3.54,
+    "PMINDIAKK": 3.62,
+    "datoTekst": "30.10.2026"
+   }
+  ],
+  "sec": {
+   "kvartaler": [
+    {
+     "id": "q2",
+     "navn": "2. kvt. 2026",
+     "kort": "2. kvt.",
+     "omsaetning": "7,81",
+     "anlaeg": "18,37",
+     "bredde": {
+      "omsaetning": 0.3907,
+      "anlaeg": 0.9184
+     },
+     "kilde": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026052535/spcx-20260630.htm",
+     "kildeNavn": "SpaceX 10-Q for 2. kvartal 2026 (SEC)",
+     "note": "note om segmenter: Revenues og Capital expenditures"
+    },
+    {
+     "id": "q3",
+     "navn": "3. kvt. 2026",
+     "kort": "3. kvt.",
+     "omsaetning": "14,58",
+     "anlaeg": "19,59",
+     "bredde": {
+      "omsaetning": 0.7288,
+      "anlaeg": 0.9797
+     },
+     "kilde": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026066880/spcx-20260930.htm",
+     "kildeNavn": "SpaceX 10-Q for 3. kvartal 2026 (SEC)",
+     "note": "note om segmenter: Revenues og Capital expenditures"
+    }
+   ],
+   "akse": {
+    "maks": 20,
+    "trin": [
+     0,
+     5,
+     10,
+     15,
+     20
+    ]
+   },
+   "donut": {
+    "dele": [
+     {
+      "nr": 0,
+      "navn": "Rumfart",
+      "q3": "1,77",
+      "q3sidsteAar": "1,67",
+      "bue": 0.1212,
+      "start": 0.8788
+     },
+     {
+      "nr": 1,
+      "navn": "Starlink",
+      "q3": "5,25",
+      "q3sidsteAar": "3,10",
+      "bue": 0.3601,
+      "start": 0.5187
+     },
+     {
+      "nr": 2,
+      "navn": "AI",
+      "q3": "7,56",
+      "q3sidsteAar": "0,81",
+      "bue": 0.5187,
+      "start": 0.0
+     }
+    ],
+    "tegneorden": [
+     {
+      "nr": 2,
+      "navn": "AI",
+      "q3": "7,56",
+      "q3sidsteAar": "0,81",
+      "bue": 0.5187,
+      "start": 0.0
+     },
+     {
+      "nr": 1,
+      "navn": "Starlink",
+      "q3": "5,25",
+      "q3sidsteAar": "3,10",
+      "bue": 0.3601,
+      "start": 0.5187
+     },
+     {
+      "nr": 0,
+      "navn": "Rumfart",
+      "q3": "1,77",
+      "q3sidsteAar": "1,67",
+      "bue": 0.1212,
+      "start": 0.8788
+     }
+    ],
+    "total": "14,58",
+    "totalSidsteAar": "5,58",
+    "kilde": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026066880/spcx-20260930.htm",
+    "kildeNavn": "SpaceX 10-Q for 3. kvartal 2026 (SEC)"
+   },
+   "kilder": {
+    "q2": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026052535/spcx-20260630.htm",
+     "navn": "SpaceX 10-Q for 2. kvartal 2026 (SEC)"
+    },
+    "q3": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026066880/spcx-20260930.htm",
+     "navn": "SpaceX 10-Q for 3. kvartal 2026 (SEC)"
+    }
+   },
+   "note": "note om segmenter: Revenues og Capital expenditures"
+  },
+  "spring": {
+   "fraDato": "01.10.2026",
+   "fra": 1.57,
+   "til": 3.54,
+   "retning": "steg"
+  },
+  "springAKK": {
+   "fraDato": "01.10.2026",
+   "fra": 1.6,
+   "til": 3.62,
+   "retning": "steg"
+  },
+  "antalMaalinger": 5,
+  "antalMaaneder": 4,
+  "fraDatoTekst": "01.07.2026",
+  "akse": {
+   "maks": 4
+  }
+ },
+ "prikkort": {
+  "bred": {
+   "prikker": [
+    {
+     "cx": 125.0,
+     "cy": 82.0,
+     "r": 8.6,
+     "tema": "chips",
+     "navn": "Samsung Electronics"
+    },
+    {
+     "cx": 114.4,
+     "cy": 91.7,
+     "r": 7.8,
+     "tema": "chips",
+     "navn": "SK hynix"
+    },
+    {
+     "cx": 126.5,
+     "cy": 64.9,
+     "r": 7.4,
+     "tema": "chips",
+     "navn": "Taiyo Yuden"
+    },
+    {
+     "cx": 136.8,
+     "cy": 97.5,
+     "r": 7.4,
+     "tema": "chips",
+     "navn": "Kioxia"
+    },
+    {
+     "cx": 103.9,
+     "cy": 78.3,
+     "r": 7.1,
+     "tema": "chips",
+     "navn": "LPKF Laser & Electronics"
+    },
+    {
+     "cx": 144.5,
+     "cy": 69.6,
+     "r": 6.9,
+     "tema": "chips",
+     "navn": "Cerebras Systems"
+    },
+    {
+     "cx": 118.6,
+     "cy": 105.9,
+     "r": 6.8,
+     "tema": "chips",
+     "navn": "GlobalFoundries"
+    },
+    {
+     "cx": 112.9,
+     "cy": 58.8,
+     "r": 6.7,
+     "tema": "chips",
+     "navn": "Soitec"
+    },
+    {
+     "cx": 150.8,
+     "cy": 91.4,
+     "r": 6.7,
+     "tema": "chips",
+     "navn": "Tower Semiconductor"
+    },
+    {
+     "cx": 98.4,
+     "cy": 93.0,
+     "r": 6.6,
+     "tema": "chips",
+     "navn": "Nova"
+    },
+    {
+     "cx": 137.7,
+     "cy": 54.9,
+     "r": 6.6,
+     "tema": "chips",
+     "navn": "Besi"
+    },
+    {
+     "cx": 134.3,
+     "cy": 111.6,
+     "r": 6.3,
+     "tema": "chips",
+     "navn": "Broadcom"
+    },
+    {
+     "cx": 97.3,
+     "cy": 65.9,
+     "r": 6.3,
+     "tema": "chips",
+     "navn": "IQE"
+    },
+    {
+     "cx": 157.3,
+     "cy": 74.9,
+     "r": 6.3,
+     "tema": "chips",
+     "navn": "Rambus"
+    },
+    {
+     "cx": 105.4,
+     "cy": 109.8,
+     "r": 6.2,
+     "tema": "chips",
+     "navn": "Micron Technology"
+    },
+    {
+     "cx": 120.5,
+     "cy": 47.4,
+     "r": 6.1,
+     "tema": "chips",
+     "navn": "Navitas Semiconductor"
+    },
+    {
+     "cx": 152.3,
+     "cy": 105.0,
+     "r": 6.0,
+     "tema": "chips",
+     "navn": "Western Digital"
+    },
+    {
+     "cx": 88.5,
+     "cy": 83.5,
+     "r": 5.9,
+     "tema": "chips",
+     "navn": "Intel"
+    },
+    {
+     "cx": 151.5,
+     "cy": 55.6,
+     "r": 5.9,
+     "tema": "chips",
+     "navn": "SiTime"
+    },
+    {
+     "cx": 123.2,
+     "cy": 120.1,
+     "r": 5.9,
+     "tema": "chips",
+     "navn": "SUSS MicroTec"
+    },
+    {
+     "cx": 100.1,
+     "cy": 52.1,
+     "r": 5.9,
+     "tema": "chips",
+     "navn": "Tokyo Electron"
+    },
+    {
+     "cx": 164.3,
+     "cy": 87.3,
+     "r": 5.8,
+     "tema": "chips",
+     "navn": "ASM International"
+    },
+    {
+     "cx": 91.9,
+     "cy": 105.0,
+     "r": 5.8,
+     "tema": "chips",
+     "navn": "ASMPT"
+    },
+    {
+     "cx": 134.0,
+     "cy": 42.0,
+     "r": 5.7,
+     "tema": "chips",
+     "navn": "Camtek"
+    },
+    {
+     "cx": 145.7,
+     "cy": 118.2,
+     "r": 5.6,
+     "tema": "chips",
+     "navn": "Aehr Test Systems"
+    },
+    {
+     "cx": 84.7,
+     "cy": 69.1,
+     "r": 5.5,
+     "tema": "chips",
+     "navn": "onsemi"
+    },
+    {
+     "cx": 164.0,
+     "cy": 64.0,
+     "r": 5.5,
+     "tema": "chips",
+     "navn": "Seagate Technology"
+    },
+    {
+     "cx": 108.2,
+     "cy": 122.1,
+     "r": 5.5,
+     "tema": "chips",
+     "navn": "UMC"
+    },
+    {
+     "cx": 110.1,
+     "cy": 40.5,
+     "r": 5.4,
+     "tema": "chips",
+     "navn": "MKS"
+    },
+    {
+     "cx": 164.6,
+     "cy": 102.8,
+     "r": 5.4,
+     "tema": "chips",
+     "navn": "STMicroelectronics"
+    },
+    {
+     "cx": 81.2,
+     "cy": 93.5,
+     "r": 5.4,
+     "tema": "chips",
+     "navn": "X-FAB"
+    },
+    {
+     "cx": 149.8,
+     "cy": 43.5,
+     "r": 5.3,
+     "tema": "chips",
+     "navn": "Himax Technologies"
+    },
+    {
+     "cx": 132.8,
+     "cy": 127.7,
+     "r": 5.3,
+     "tema": "chips",
+     "navn": "Lasertec"
+    },
+    {
+     "cx": 88.0,
+     "cy": 53.3,
+     "r": 5.3,
+     "tema": "chips",
+     "navn": "Rigaku"
+    },
+    {
+     "cx": 172.2,
+     "cy": 78.1,
+     "r": 5.2,
+     "tema": "chips",
+     "navn": "KLA"
+    },
+    {
+     "cx": 92.5,
+     "cy": 117.1,
+     "r": 5.1,
+     "tema": "chips",
+     "navn": "NVIDIA"
+    },
+    {
+     "cx": 125.2,
+     "cy": 33.7,
+     "r": 4.9,
+     "tema": "chips",
+     "navn": "Onto Innovation"
+    },
+    {
+     "cx": 157.7,
+     "cy": 118.1,
+     "r": 4.9,
+     "tema": "chips",
+     "navn": "Ambiq Micro"
+    },
+    {
+     "cx": 76.0,
+     "cy": 77.5,
+     "r": 4.9,
+     "tema": "chips",
+     "navn": "Renesas Electronics"
+    },
+    {
+     "cx": 164.5,
+     "cy": 52.0,
+     "r": 4.7,
+     "tema": "chips",
+     "navn": "Aixtron"
+    },
+    {
+     "cx": 116.1,
+     "cy": 131.2,
+     "r": 4.7,
+     "tema": "chips",
+     "navn": "Advantest"
+    },
+    {
+     "cx": 98.2,
+     "cy": 39.3,
+     "r": 4.7,
+     "tema": "chips",
+     "navn": "SanDisk"
+    },
+    {
+     "cx": 174.0,
+     "cy": 95.4,
+     "r": 4.6,
+     "tema": "chips",
+     "navn": "Kulicke & Soffa"
+    },
+    {
+     "cx": 79.5,
+     "cy": 105.4,
+     "r": 4.6,
+     "tema": "chips",
+     "navn": "Veeco Instruments"
+    },
+    {
+     "cx": 142.9,
+     "cy": 33.7,
+     "r": 4.5,
+     "tema": "chips",
+     "navn": "AXT"
+    },
+    {
+     "cx": 144.6,
+     "cy": 130.1,
+     "r": 4.5,
+     "tema": "chips",
+     "navn": "Silicon Motion"
+    },
+    {
+     "cx": 77.8,
+     "cy": 59.6,
+     "r": 4.3,
+     "tema": "chips",
+     "navn": "Infineon Technologies"
+    },
+    {
+     "cx": 175.3,
+     "cy": 66.5,
+     "r": 4.3,
+     "tema": "chips",
+     "navn": "Aeluma"
+    },
+    {
+     "cx": 98.2,
+     "cy": 127.7,
+     "r": 4.3,
+     "tema": "chips",
+     "navn": "Kokusai Electric"
+    },
+    {
+     "cx": 113.8,
+     "cy": 29.9,
+     "r": 4.2,
+     "tema": "chips",
+     "navn": "Entegris"
+    },
+    {
+     "cx": 168.7,
+     "cy": 113.0,
+     "r": 4.2,
+     "tema": "chips",
+     "navn": "Monolithic Power Systems"
+    },
+    {
+     "cx": 71.5,
+     "cy": 88.7,
+     "r": 4.2,
+     "tema": "chips",
+     "navn": "Wolfspeed"
+    },
+    {
+     "cx": 160.1,
+     "cy": 40.7,
+     "r": 4.1,
+     "tema": "chips",
+     "navn": "Nordic Semiconductor"
+    },
+    {
+     "cx": 127.0,
+     "cy": 136.5,
+     "r": 4.0,
+     "tema": "chips",
+     "navn": "ACM Research"
+    },
+    {
+     "cx": 86.5,
+     "cy": 43.0,
+     "r": 4.0,
+     "tema": "chips",
+     "navn": "Alpha and Omega Semiconductor"
+    },
+    {
+     "cx": 180.0,
+     "cy": 84.8,
+     "r": 4.0,
+     "tema": "chips",
+     "navn": "Amkor Technology"
+    },
+    {
+     "cx": 82.3,
+     "cy": 117.3,
+     "r": 4.0,
+     "tema": "chips",
+     "navn": "ASML"
+    },
+    {
+     "cx": 132.7,
+     "cy": 26.9,
+     "r": 4.0,
+     "tema": "chips",
+     "navn": "Lam Research"
+    },
+    {
+     "cx": 156.7,
+     "cy": 128.1,
+     "r": 4.0,
+     "tema": "chips",
+     "navn": "MaxLinear"
+    },
+    {
+     "cx": 70.2,
+     "cy": 69.4,
+     "r": 4.0,
+     "tema": "chips",
+     "navn": "Synopsys"
+    },
+    {
+     "cx": 174.1,
+     "cy": 54.2,
+     "r": 3.9,
+     "tema": "chips",
+     "navn": "Analog Devices"
+    },
+    {
+     "cx": 107.5,
+     "cy": 136.0,
+     "r": 3.9,
+     "tema": "chips",
+     "navn": "Cohu"
+    },
+    {
+     "cx": 101.4,
+     "cy": 30.2,
+     "r": 3.9,
+     "tema": "chips",
+     "navn": "Marvell Technology"
+    },
+    {
+     "cx": 177.7,
+     "cy": 104.4,
+     "r": 3.9,
+     "tema": "chips",
+     "navn": "Texas Instruments"
+    },
+    {
+     "cx": 70.8,
+     "cy": 101.2,
+     "r": 3.8,
+     "tema": "chips",
+     "navn": "Ambarella"
+    },
+    {
+     "cx": 152.1,
+     "cy": 31.0,
+     "r": 3.8,
+     "tema": "chips",
+     "navn": "Microchip Technology"
+    },
+    {
+     "cx": 139.5,
+     "cy": 138.1,
+     "r": 3.7,
+     "tema": "chips",
+     "navn": "Cadence Design Systems"
+    },
+    {
+     "cx": 76.2,
+     "cy": 50.3,
+     "r": 3.7,
+     "tema": "chips",
+     "navn": "FormFactor"
+    },
+    {
+     "cx": 182.7,
+     "cy": 72.4,
+     "r": 3.6,
+     "tema": "chips",
+     "navn": "Applied Materials"
+    },
+    {
+     "cx": 88.9,
+     "cy": 128.2,
+     "r": 3.4,
+     "tema": "chips",
+     "navn": "AMD"
+    },
+    {
+     "cx": 120.4,
+     "cy": 23.3,
+     "r": 3.4,
+     "tema": "chips",
+     "navn": "Lattice Semiconductor"
+    },
+    {
+     "cx": 168.2,
+     "cy": 122.3,
+     "r": 3.4,
+     "tema": "chips",
+     "navn": "TSMC"
+    },
+    {
+     "cx": 65.7,
+     "cy": 81.4,
+     "r": 3.3,
+     "tema": "chips",
+     "navn": "Axcelis Technologies"
+    },
+    {
+     "cx": 169.3,
+     "cy": 42.2,
+     "r": 3.3,
+     "tema": "chips",
+     "navn": "Teradyne"
+    },
+    {
+     "cx": 119.2,
+     "cy": 141.4,
+     "r": 2.9,
+     "tema": "chips",
+     "navn": "Blaize"
+    },
+    {
+     "cx": 375.0,
+     "cy": 82.0,
+     "r": 7.1,
+     "tema": "energi",
+     "navn": "Babcock & Wilcox"
+    },
+    {
+     "cx": 365.7,
+     "cy": 90.5,
+     "r": 6.9,
+     "tema": "energi",
+     "navn": "T1 Energy"
+    },
+    {
+     "cx": 376.3,
+     "cy": 66.9,
+     "r": 6.6,
+     "tema": "energi",
+     "navn": "Enovix"
+    },
+    {
+     "cx": 385.5,
+     "cy": 95.7,
+     "r": 6.5,
+     "tema": "energi",
+     "navn": "Expand Energy"
+    },
+    {
+     "cx": 356.2,
+     "cy": 78.7,
+     "r": 6.2,
+     "tema": "energi",
+     "navn": "Comstock Resources"
+    },
+    {
+     "cx": 392.4,
+     "cy": 70.9,
+     "r": 6.2,
+     "tema": "energi",
+     "navn": "Generac"
+    },
+    {
+     "cx": 369.2,
+     "cy": 103.4,
+     "r": 6.2,
+     "tema": "energi",
+     "navn": "MYR Group"
+    },
+    {
+     "cx": 364.1,
+     "cy": 61.1,
+     "r": 6.2,
+     "tema": "energi",
+     "navn": "SolarEdge"
+    },
+    {
+     "cx": 398.3,
+     "cy": 90.5,
+     "r": 6.1,
+     "tema": "energi",
+     "navn": "Fluence Energy"
+    },
+    {
+     "cx": 351.0,
+     "cy": 91.9,
+     "r": 5.9,
+     "tema": "energi",
+     "navn": "SES AI"
+    },
+    {
+     "cx": 386.5,
+     "cy": 57.5,
+     "r": 5.8,
+     "tema": "energi",
+     "navn": "QuantumScape"
+    },
+    {
+     "cx": 383.4,
+     "cy": 108.8,
+     "r": 5.7,
+     "tema": "energi",
+     "navn": "Power Solutions International"
+    },
+    {
+     "cx": 349.8,
+     "cy": 67.4,
+     "r": 5.7,
+     "tema": "energi",
+     "navn": "First Solar"
+    },
+    {
+     "cx": 404.3,
+     "cy": 75.6,
+     "r": 5.6,
+     "tema": "energi",
+     "navn": "Tigo Energy"
+    },
+    {
+     "cx": 357.2,
+     "cy": 107.3,
+     "r": 5.6,
+     "tema": "energi",
+     "navn": "Sunrun"
+    },
+    {
+     "cx": 370.9,
+     "cy": 50.6,
+     "r": 5.4,
+     "tema": "energi",
+     "navn": "Enphase Energy"
+    },
+    {
+     "cx": 399.8,
+     "cy": 102.9,
+     "r": 5.4,
+     "tema": "energi",
+     "navn": "Ballard Power Systems"
+    },
+    {
+     "cx": 341.8,
+     "cy": 83.4,
+     "r": 5.4,
+     "tema": "energi",
+     "navn": "ProPetro"
+    },
+    {
+     "cx": 399.1,
+     "cy": 58.0,
+     "r": 5.2,
+     "tema": "energi",
+     "navn": "Vistra"
+    },
+    {
+     "cx": 374.1,
+     "cy": 116.6,
+     "r": 5.0,
+     "tema": "energi",
+     "navn": "Antero Resources"
+    },
+    {
+     "cx": 352.4,
+     "cy": 54.9,
+     "r": 5.0,
+     "tema": "energi",
+     "navn": "Centrus Energy"
+    },
+    {
+     "cx": 410.6,
+     "cy": 86.8,
+     "r": 5.0,
+     "tema": "energi",
+     "navn": "ERock"
+    },
+    {
+     "cx": 345.0,
+     "cy": 102.8,
+     "r": 5.0,
+     "tema": "energi",
+     "navn": "Rolls-Royce"
+    },
+    {
+     "cx": 383.1,
+     "cy": 45.8,
+     "r": 5.0,
+     "tema": "energi",
+     "navn": "Talen Energy"
+    },
+    {
+     "cx": 393.7,
+     "cy": 114.7,
+     "r": 4.9,
+     "tema": "energi",
+     "navn": "Kinder Morgan"
+    },
+    {
+     "cx": 338.5,
+     "cy": 70.4,
+     "r": 4.9,
+     "tema": "energi",
+     "navn": "ASP Isotopes"
+    },
+    {
+     "cx": 410.3,
+     "cy": 65.7,
+     "r": 4.9,
+     "tema": "energi",
+     "navn": "Nextracker"
+    },
+    {
+     "cx": 359.8,
+     "cy": 118.3,
+     "r": 4.9,
+     "tema": "energi",
+     "navn": "Solid Power"
+    },
+    {
+     "cx": 361.5,
+     "cy": 44.4,
+     "r": 4.8,
+     "tema": "energi",
+     "navn": "NextEra Energy"
+    },
+    {
+     "cx": 410.8,
+     "cy": 100.8,
+     "r": 4.8,
+     "tema": "energi",
+     "navn": "Shoals Technologies"
+    },
+    {
+     "cx": 335.4,
+     "cy": 92.4,
+     "r": 4.8,
+     "tema": "energi",
+     "navn": "Vista Energy"
+    },
+    {
+     "cx": 397.4,
+     "cy": 47.1,
+     "r": 4.7,
+     "tema": "energi",
+     "navn": "Bloom Energy"
+    },
+    {
+     "cx": 381.9,
+     "cy": 123.3,
+     "r": 4.7,
+     "tema": "energi",
+     "navn": "Amprius Technologies"
+    },
+    {
+     "cx": 341.5,
+     "cy": 56.0,
+     "r": 4.7,
+     "tema": "energi",
+     "navn": "DTE Energy"
+    },
+    {
+     "cx": 417.7,
+     "cy": 78.5,
+     "r": 4.7,
+     "tema": "energi",
+     "navn": "GE Vernova"
+    },
+    {
+     "cx": 345.6,
+     "cy": 113.8,
+     "r": 4.6,
+     "tema": "energi",
+     "navn": "American Electric Power"
+    },
+    {
+     "cx": 375.2,
+     "cy": 38.2,
+     "r": 4.6,
+     "tema": "energi",
+     "navn": "Array Technologies"
+    },
+    {
+     "cx": 404.7,
+     "cy": 114.8,
+     "r": 4.6,
+     "tema": "energi",
+     "navn": "BWX Technologies"
+    },
+    {
+     "cx": 330.5,
+     "cy": 77.9,
+     "r": 4.6,
+     "tema": "energi",
+     "navn": "CMS Energy"
+    },
+    {
+     "cx": 410.9,
+     "cy": 54.7,
+     "r": 4.6,
+     "tema": "energi",
+     "navn": "Canadian Solar"
+    },
+    {
+     "cx": 366.8,
+     "cy": 126.8,
+     "r": 4.6,
+     "tema": "energi",
+     "navn": "FirstEnergy"
+    },
+    {
+     "cx": 350.5,
+     "cy": 43.1,
+     "r": 4.6,
+     "tema": "energi",
+     "navn": "Southern Company"
+    },
+    {
+     "cx": 419.8,
+     "cy": 94.3,
+     "r": 4.5,
+     "tema": "energi",
+     "navn": "Nano Nuclear Energy"
+    },
+    {
+     "cx": 333.4,
+     "cy": 103.4,
+     "r": 4.5,
+     "tema": "energi",
+     "navn": "EQT"
+    },
+    {
+     "cx": 391.4,
+     "cy": 37.7,
+     "r": 4.5,
+     "tema": "energi",
+     "navn": "Quanta Services"
+    },
+    {
+     "cx": 392.9,
+     "cy": 126.1,
+     "r": 4.4,
+     "tema": "energi",
+     "navn": "Oklo"
+    },
+    {
+     "cx": 331.6,
+     "cy": 61.5,
+     "r": 4.4,
+     "tema": "energi",
+     "navn": "Range Resources"
+    },
+    {
+     "cx": 421.2,
+     "cy": 67.8,
+     "r": 4.3,
+     "tema": "energi",
+     "navn": "Atlas Energy Solutions"
+    },
+    {
+     "cx": 350.4,
+     "cy": 124.0,
+     "r": 4.3,
+     "tema": "energi",
+     "navn": "Eos Energy"
+    },
+    {
+     "cx": 364.7,
+     "cy": 34.0,
+     "r": 4.3,
+     "tema": "energi",
+     "navn": "ITT"
+    },
+    {
+     "cx": 415.3,
+     "cy": 110.6,
+     "r": 4.3,
+     "tema": "energi",
+     "navn": "Primoris Services"
+    },
+    {
+     "cx": 325.6,
+     "cy": 88.2,
+     "r": 4.2,
+     "tema": "energi",
+     "navn": "Lightbridge"
+    },
+    {
+     "cx": 407.5,
+     "cy": 43.8,
+     "r": 4.2,
+     "tema": "energi",
+     "navn": "Tantalus Systems"
+    },
+    {
+     "cx": 376.8,
+     "cy": 132.4,
+     "r": 4.1,
+     "tema": "energi",
+     "navn": "Clearway Energy"
+    },
+    {
+     "cx": 339.4,
+     "cy": 45.8,
+     "r": 4.1,
+     "tema": "energi",
+     "navn": "Electrovaya"
+    },
+    {
+     "cx": 426.0,
+     "cy": 84.6,
+     "r": 4.1,
+     "tema": "energi",
+     "navn": "Fluor"
+    },
+    {
+     "cx": 335.4,
+     "cy": 114.7,
+     "r": 4.1,
+     "tema": "energi",
+     "navn": "Mirion Technologies"
+    },
+    {
+     "cx": 381.9,
+     "cy": 30.8,
+     "r": 4.1,
+     "tema": "energi",
+     "navn": "Plug Power"
+    },
+    {
+     "cx": 404.5,
+     "cy": 124.9,
+     "r": 4.1,
+     "tema": "energi",
+     "navn": "Solaris Energy Infrastructure"
+    },
+    {
+     "cx": 324.0,
+     "cy": 70.3,
+     "r": 4.0,
+     "tema": "energi",
+     "navn": "Microvast"
+    },
+    {
+     "cx": 420.8,
+     "cy": 56.0,
+     "r": 4.0,
+     "tema": "energi",
+     "navn": "NuScale Power"
+    },
+    {
+     "cx": 358.7,
+     "cy": 132.4,
+     "r": 4.0,
+     "tema": "energi",
+     "navn": "Flowserve"
+    },
+    {
+     "cx": 352.9,
+     "cy": 33.6,
+     "r": 4.0,
+     "tema": "energi",
+     "navn": "Terrestrial Energy"
+    },
+    {
+     "cx": 424.3,
+     "cy": 102.9,
+     "r": 3.8,
+     "tema": "energi",
+     "navn": "Canadian Natural Resources"
+    },
+    {
+     "cx": 324.3,
+     "cy": 100.0,
+     "r": 3.8,
+     "tema": "energi",
+     "navn": "Caterpillar"
+    },
+    {
+     "cx": 400.4,
+     "cy": 34.3,
+     "r": 3.7,
+     "tema": "energi",
+     "navn": "Cummins"
+    },
+    {
+     "cx": 388.6,
+     "cy": 134.6,
+     "r": 3.7,
+     "tema": "energi",
+     "navn": "Terex"
+    },
+    {
+     "cx": 329.3,
+     "cy": 52.3,
+     "r": 3.6,
+     "tema": "energi",
+     "navn": "Terra Innovatum"
+    },
+    {
+     "cx": 429.0,
+     "cy": 73.0,
+     "r": 3.1,
+     "tema": "energi",
+     "navn": "NeoVolta"
+    },
+    {
+     "cx": 625.0,
+     "cy": 82.0,
+     "r": 7.5,
+     "tema": "datacenter",
+     "navn": "Sivers Semiconductors"
+    },
+    {
+     "cx": 615.5,
+     "cy": 90.7,
+     "r": 7.0,
+     "tema": "datacenter",
+     "navn": "HUBER+SUHNER"
+    },
+    {
+     "cx": 626.3,
+     "cy": 66.8,
+     "r": 6.3,
+     "tema": "datacenter",
+     "navn": "IREN"
+    },
+    {
+     "cx": 635.5,
+     "cy": 95.7,
+     "r": 6.3,
+     "tema": "datacenter",
+     "navn": "Oracle"
+    },
+    {
+     "cx": 606.4,
+     "cy": 78.7,
+     "r": 6.1,
+     "tema": "datacenter",
+     "navn": "POET Technologies"
+    },
+    {
+     "cx": 642.3,
+     "cy": 71.0,
+     "r": 6.1,
+     "tema": "datacenter",
+     "navn": "TSS"
+    },
+    {
+     "cx": 619.3,
+     "cy": 103.2,
+     "r": 6.1,
+     "tema": "datacenter",
+     "navn": "Applied Optoelectronics"
+    },
+    {
+     "cx": 614.3,
+     "cy": 61.3,
+     "r": 6.0,
+     "tema": "datacenter",
+     "navn": "Fabrinet"
+    },
+    {
+     "cx": 648.0,
+     "cy": 90.4,
+     "r": 5.8,
+     "tema": "datacenter",
+     "navn": "MACOM"
+    },
+    {
+     "cx": 601.3,
+     "cy": 91.8,
+     "r": 5.7,
+     "tema": "datacenter",
+     "navn": "Celestica"
+    },
+    {
+     "cx": 636.3,
+     "cy": 57.9,
+     "r": 5.6,
+     "tema": "datacenter",
+     "navn": "Core Scientific"
+    },
+    {
+     "cx": 633.3,
+     "cy": 108.3,
+     "r": 5.4,
+     "tema": "datacenter",
+     "navn": "Lightwave Logic"
+    },
+    {
+     "cx": 600.4,
+     "cy": 67.7,
+     "r": 5.3,
+     "tema": "datacenter",
+     "navn": "nLight"
+    },
+    {
+     "cx": 653.6,
+     "cy": 75.7,
+     "r": 5.2,
+     "tema": "datacenter",
+     "navn": "Ciena"
+    },
+    {
+     "cx": 607.7,
+     "cy": 106.6,
+     "r": 5.2,
+     "tema": "datacenter",
+     "navn": "Super Micro Computer"
+    },
+    {
+     "cx": 621.0,
+     "cy": 51.4,
+     "r": 5.2,
+     "tema": "datacenter",
+     "navn": "ams OSRAM"
+    },
+    {
+     "cx": 649.2,
+     "cy": 102.4,
+     "r": 5.1,
+     "tema": "datacenter",
+     "navn": "Cipher Mining"
+    },
+    {
+     "cx": 592.7,
+     "cy": 83.3,
+     "r": 5.1,
+     "tema": "datacenter",
+     "navn": "Fermi"
+    },
+    {
+     "cx": 648.4,
+     "cy": 58.7,
+     "r": 5.1,
+     "tema": "datacenter",
+     "navn": "Sumitomo Electric Industries"
+    },
+    {
+     "cx": 623.4,
+     "cy": 115.7,
+     "r": 5.0,
+     "tema": "datacenter",
+     "navn": "Corning"
+    },
+    {
+     "cx": 603.0,
+     "cy": 55.6,
+     "r": 4.9,
+     "tema": "datacenter",
+     "navn": "Credo"
+    },
+    {
+     "cx": 659.7,
+     "cy": 86.7,
+     "r": 4.9,
+     "tema": "datacenter",
+     "navn": "Jacobs Solutions"
+    },
+    {
+     "cx": 595.8,
+     "cy": 102.3,
+     "r": 4.9,
+     "tema": "datacenter",
+     "navn": "Coherent"
+    },
+    {
+     "cx": 633.0,
+     "cy": 46.7,
+     "r": 4.9,
+     "tema": "datacenter",
+     "navn": "Lumen"
+    },
+    {
+     "cx": 643.3,
+     "cy": 113.9,
+     "r": 4.9,
+     "tema": "datacenter",
+     "navn": "Lumentum"
+    },
+    {
+     "cx": 589.4,
+     "cy": 70.6,
+     "r": 4.8,
+     "tema": "datacenter",
+     "navn": "CoreWeave"
+    },
+    {
+     "cx": 659.5,
+     "cy": 66.1,
+     "r": 4.8,
+     "tema": "datacenter",
+     "navn": "WhiteFiber"
+    },
+    {
+     "cx": 610.1,
+     "cy": 117.5,
+     "r": 4.7,
+     "tema": "datacenter",
+     "navn": "Sterling Infrastructure"
+    },
+    {
+     "cx": 611.8,
+     "cy": 45.3,
+     "r": 4.7,
+     "tema": "datacenter",
+     "navn": "IPG Photonics"
+    },
+    {
+     "cx": 660.0,
+     "cy": 100.4,
+     "r": 4.7,
+     "tema": "datacenter",
+     "navn": "Nebius"
+    },
+    {
+     "cx": 586.3,
+     "cy": 92.2,
+     "r": 4.7,
+     "tema": "datacenter",
+     "navn": "SharonAI"
+    },
+    {
+     "cx": 646.9,
+     "cy": 47.9,
+     "r": 4.6,
+     "tema": "datacenter",
+     "navn": "One Stop Systems"
+    },
+    {
+     "cx": 631.9,
+     "cy": 122.4,
+     "r": 4.4,
+     "tema": "datacenter",
+     "navn": "Viavi Solutions"
+    },
+    {
+     "cx": 592.3,
+     "cy": 56.7,
+     "r": 4.3,
+     "tema": "datacenter",
+     "navn": "Flex"
+    },
+    {
+     "cx": 666.7,
+     "cy": 78.5,
+     "r": 4.1,
+     "tema": "datacenter",
+     "navn": "Microsoft"
+    },
+    {
+     "cx": 596.3,
+     "cy": 113.0,
+     "r": 4.1,
+     "tema": "datacenter",
+     "navn": "Semtech"
+    },
+    {
+     "cx": 625.2,
+     "cy": 39.4,
+     "r": 4.0,
+     "tema": "datacenter",
+     "navn": "Cisco Systems"
+    },
+    {
+     "cx": 653.8,
+     "cy": 113.8,
+     "r": 4.0,
+     "tema": "datacenter",
+     "navn": "Keysight Technologies"
+    },
+    {
+     "cx": 581.9,
+     "cy": 78.0,
+     "r": 4.0,
+     "tema": "datacenter",
+     "navn": "TeraWulf"
+    },
+    {
+     "cx": 659.7,
+     "cy": 55.6,
+     "r": 3.8,
+     "tema": "datacenter",
+     "navn": "Amphenol"
+    },
+    {
+     "cx": 617.1,
+     "cy": 125.2,
+     "r": 3.8,
+     "tema": "datacenter",
+     "navn": "Astera Labs"
+    },
+    {
+     "cx": 601.4,
+     "cy": 44.5,
+     "r": 3.8,
+     "tema": "datacenter",
+     "navn": "Comfort Systems USA"
+    },
+    {
+     "cx": 668.0,
+     "cy": 93.8,
+     "r": 3.8,
+     "tema": "datacenter",
+     "navn": "Jabil"
+    },
+    {
+     "cx": 585.1,
+     "cy": 102.5,
+     "r": 3.6,
+     "tema": "datacenter",
+     "navn": "Applied Digital"
+    },
+    {
+     "cx": 640.7,
+     "cy": 39.6,
+     "r": 3.4,
+     "tema": "datacenter",
+     "navn": "Dell"
+    },
+    {
+     "cx": 642.1,
+     "cy": 124.1,
+     "r": 3.4,
+     "tema": "datacenter",
+     "navn": "Sanmina"
+    },
+    {
+     "cx": 583.7,
+     "cy": 62.4,
+     "r": 3.3,
+     "tema": "datacenter",
+     "navn": "Arista Networks"
+    },
+    {
+     "cx": 875.0,
+     "cy": 82.0,
+     "r": 9.1,
+     "tema": "platforme",
+     "navn": "SoftBank Group"
+    },
+    {
+     "cx": 863.8,
+     "cy": 92.2,
+     "r": 8.3,
+     "tema": "platforme",
+     "navn": "Carvana"
+    },
+    {
+     "cx": 876.6,
+     "cy": 63.9,
+     "r": 8.0,
+     "tema": "platforme",
+     "navn": "AppLovin"
+    },
+    {
+     "cx": 887.5,
+     "cy": 98.3,
+     "r": 7.7,
+     "tema": "platforme",
+     "navn": "Sea"
+    },
+    {
+     "cx": 853.3,
+     "cy": 78.2,
+     "r": 6.3,
+     "tema": "platforme",
+     "navn": "Opendoor"
+    },
+    {
+     "cx": 894.7,
+     "cy": 69.5,
+     "r": 5.8,
+     "tema": "platforme",
+     "navn": "AUTO1 Group"
+    },
+    {
+     "cx": 868.6,
+     "cy": 105.7,
+     "r": 5.7,
+     "tema": "platforme",
+     "navn": "Roblox"
+    },
+    {
+     "cx": 863.2,
+     "cy": 59.3,
+     "r": 5.5,
+     "tema": "platforme",
+     "navn": "Amazon"
+    },
+    {
+     "cx": 899.9,
+     "cy": 91.1,
+     "r": 5.3,
+     "tema": "platforme",
+     "navn": "Grab"
+    },
+    {
+     "cx": 849.7,
+     "cy": 92.4,
+     "r": 5.2,
+     "tema": "platforme",
+     "navn": "Coupang"
+    },
+    {
+     "cx": 887.0,
+     "cy": 56.4,
+     "r": 5.2,
+     "tema": "platforme",
+     "navn": "MercadoLibre"
+    },
+    {
+     "cx": 883.7,
+     "cy": 109.7,
+     "r": 5.2,
+     "tema": "platforme",
+     "navn": "Reddit"
+    },
+    {
+     "cx": 849.2,
+     "cy": 67.1,
+     "r": 4.9,
+     "tema": "platforme",
+     "navn": "HelloFresh"
+    },
+    {
+     "cx": 904.8,
+     "cy": 75.5,
+     "r": 4.7,
+     "tema": "platforme",
+     "navn": "Uber"
+    },
+    {
+     "cx": 857.1,
+     "cy": 107.4,
+     "r": 4.6,
+     "tema": "platforme",
+     "navn": "International Workplace Group"
+    },
+    {
+     "cx": 870.9,
+     "cy": 50.5,
+     "r": 4.5,
+     "tema": "platforme",
+     "navn": "Chewy"
+    },
+    {
+     "cx": 899.7,
+     "cy": 102.8,
+     "r": 4.3,
+     "tema": "platforme",
+     "navn": "Prosus"
+    },
+    {
+     "cx": 842.2,
+     "cy": 83.4,
+     "r": 4.3,
+     "tema": "platforme",
+     "navn": "Meituan"
+    },
+    {
+     "cx": 898.6,
+     "cy": 58.5,
+     "r": 4.3,
+     "tema": "platforme",
+     "navn": "Netflix"
+    },
+    {
+     "cx": 873.4,
+     "cy": 115.7,
+     "r": 3.8,
+     "tema": "platforme",
+     "navn": "Allegro.eu"
+    },
+    {
+     "cx": 853.1,
+     "cy": 55.7,
+     "r": 3.8,
+     "tema": "platforme",
+     "navn": "DoorDash"
+    },
+    {
+     "cx": 909.3,
+     "cy": 86.6,
+     "r": 3.8,
+     "tema": "platforme",
+     "navn": "WEBTOON Entertainment"
+    },
+    {
+     "cx": 846.3,
+     "cy": 102.0,
+     "r": 3.7,
+     "tema": "platforme",
+     "navn": "Spotify"
+    },
+    {
+     "cx": 882.8,
+     "cy": 47.5,
+     "r": 3.6,
+     "tema": "platforme",
+     "navn": "Coursera"
+    },
+    {
+     "cx": 892.8,
+     "cy": 113.0,
+     "r": 3.6,
+     "tema": "platforme",
+     "navn": "FuboTV"
+    },
+    {
+     "cx": 840.6,
+     "cy": 71.0,
+     "r": 3.6,
+     "tema": "platforme",
+     "navn": "MNTN"
+    },
+    {
+     "cx": 908.1,
+     "cy": 66.7,
+     "r": 3.6,
+     "tema": "platforme",
+     "navn": "PDD Holdings"
+    },
+    {
+     "cx": 860.8,
+     "cy": 116.0,
+     "r": 3.4,
+     "tema": "platforme",
+     "navn": "Alibaba Group"
+    },
+    {
+     "cx": 862.4,
+     "cy": 47.0,
+     "r": 3.4,
+     "tema": "platforme",
+     "navn": "Meta Platforms"
+    },
+    {
+     "cx": 908.2,
+     "cy": 99.5,
+     "r": 3.4,
+     "tema": "platforme",
+     "navn": "Zeta Global Holdings"
+    },
+    {
+     "cx": 838.5,
+     "cy": 91.6,
+     "r": 2.9,
+     "tema": "platforme",
+     "navn": "Apple"
+    },
+    {
+     "cx": 125.0,
+     "cy": 282.0,
+     "r": 12.2,
+     "tema": "rumfart",
+     "navn": "SpaceX"
+    },
+    {
+     "cx": 112.8,
+     "cy": 293.1,
+     "r": 6.1,
+     "tema": "rumfart",
+     "navn": "Planet Labs"
+    },
+    {
+     "cx": 126.6,
+     "cy": 263.8,
+     "r": 6.0,
+     "tema": "rumfart",
+     "navn": "Intuitive Machines"
+    },
+    {
+     "cx": 137.1,
+     "cy": 297.7,
+     "r": 6.0,
+     "tema": "rumfart",
+     "navn": "AST SpaceMobile"
+    },
+    {
+     "cx": 104.1,
+     "cy": 278.3,
+     "r": 5.8,
+     "tema": "rumfart",
+     "navn": "BlackSky"
+    },
+    {
+     "cx": 144.0,
+     "cy": 269.9,
+     "r": 5.8,
+     "tema": "rumfart",
+     "navn": "York Space Systems"
+    },
+    {
+     "cx": 118.8,
+     "cy": 304.9,
+     "r": 5.7,
+     "tema": "rumfart",
+     "navn": "MDA Space"
+    },
+    {
+     "cx": 113.6,
+     "cy": 260.0,
+     "r": 5.6,
+     "tema": "rumfart",
+     "navn": "Rocket Lab"
+    },
+    {
+     "cx": 149.2,
+     "cy": 290.8,
+     "r": 5.1,
+     "tema": "rumfart",
+     "navn": "Redwire"
+    },
+    {
+     "cx": 100.4,
+     "cy": 292.2,
+     "r": 5.1,
+     "tema": "rumfart",
+     "navn": "Firefly Aerospace"
+    },
+    {
+     "cx": 136.6,
+     "cy": 257.2,
+     "r": 4.8,
+     "tema": "rumfart",
+     "navn": "Satellogic"
+    },
+    {
+     "cx": 133.4,
+     "cy": 308.8,
+     "r": 4.7,
+     "tema": "rumfart",
+     "navn": "Starfighters Space"
+    },
+    {
+     "cx": 100.1,
+     "cy": 267.5,
+     "r": 4.7,
+     "tema": "rumfart",
+     "navn": "Spire Global"
+    },
+    {
+     "cx": 153.8,
+     "cy": 275.7,
+     "r": 4.5,
+     "tema": "rumfart",
+     "navn": "Voyager Technologies"
+    },
+    {
+     "cx": 107.7,
+     "cy": 306.6,
+     "r": 4.2,
+     "tema": "rumfart",
+     "navn": "HawkEye 360"
+    },
+    {
+     "cx": 121.1,
+     "cy": 251.6,
+     "r": 4.2,
+     "tema": "rumfart",
+     "navn": "Howmet Aerospace"
+    },
+    {
+     "cx": 148.7,
+     "cy": 302.0,
+     "r": 3.6,
+     "tema": "rumfart",
+     "navn": "Karman Space & Defense"
+    },
+    {
+     "cx": 93.6,
+     "cy": 283.3,
+     "r": 3.1,
+     "tema": "rumfart",
+     "navn": "Iridium Communications"
+    },
+    {
+     "cx": 375.0,
+     "cy": 282.0,
+     "r": 9.3,
+     "tema": "fysisk-ai",
+     "navn": "Tesla"
+    },
+    {
+     "cx": 364.5,
+     "cy": 291.6,
+     "r": 6.8,
+     "tema": "fysisk-ai",
+     "navn": "Ford Motor"
+    },
+    {
+     "cx": 376.4,
+     "cy": 265.6,
+     "r": 6.4,
+     "tema": "fysisk-ai",
+     "navn": "Raspberry Pi"
+    },
+    {
+     "cx": 386.1,
+     "cy": 296.5,
+     "r": 6.3,
+     "tema": "fysisk-ai",
+     "navn": "Merlin"
+    },
+    {
+     "cx": 355.4,
+     "cy": 278.5,
+     "r": 6.0,
+     "tema": "fysisk-ai",
+     "navn": "Joby Aviation"
+    },
+    {
+     "cx": 392.9,
+     "cy": 270.6,
+     "r": 5.5,
+     "tema": "fysisk-ai",
+     "navn": "Aeva Technologies"
+    },
+    {
+     "cx": 369.2,
+     "cy": 303.6,
+     "r": 5.5,
+     "tema": "fysisk-ai",
+     "navn": "Symbotic"
+    },
+    {
+     "cx": 364.2,
+     "cy": 261.3,
+     "r": 4.9,
+     "tema": "fysisk-ai",
+     "navn": "Pony AI"
+    },
+    {
+     "cx": 397.8,
+     "cy": 290.3,
+     "r": 4.8,
+     "tema": "fysisk-ai",
+     "navn": "Archer Aviation"
+    },
+    {
+     "cx": 351.8,
+     "cy": 291.6,
+     "r": 4.8,
+     "tema": "fysisk-ai",
+     "navn": "Shelly"
+    },
+    {
+     "cx": 386.0,
+     "cy": 258.5,
+     "r": 4.8,
+     "tema": "fysisk-ai",
+     "navn": "Ondas Holdings"
+    },
+    {
+     "cx": 383.0,
+     "cy": 307.4,
+     "r": 4.7,
+     "tema": "fysisk-ai",
+     "navn": "MicroVision"
+    },
+    {
+     "cx": 351.3,
+     "cy": 268.3,
+     "r": 4.5,
+     "tema": "fysisk-ai",
+     "navn": "Unusual Machines"
+    },
+    {
+     "cx": 402.4,
+     "cy": 276.0,
+     "r": 4.4,
+     "tema": "fysisk-ai",
+     "navn": "Swarmer"
+    },
+    {
+     "cx": 358.5,
+     "cy": 305.5,
+     "r": 4.3,
+     "tema": "fysisk-ai",
+     "navn": "Kodiak AI"
+    },
+    {
+     "cx": 371.2,
+     "cy": 253.0,
+     "r": 4.3,
+     "tema": "fysisk-ai",
+     "navn": "Ouster"
+    },
+    {
+     "cx": 397.8,
+     "cy": 301.2,
+     "r": 4.3,
+     "tema": "fysisk-ai",
+     "navn": "WeRide"
+    },
+    {
+     "cx": 344.6,
+     "cy": 283.3,
+     "r": 4.2,
+     "tema": "fysisk-ai",
+     "navn": "Li Auto"
+    },
+    {
+     "cx": 397.0,
+     "cy": 260.2,
+     "r": 4.1,
+     "tema": "fysisk-ai",
+     "navn": "General Motors"
+    },
+    {
+     "cx": 374.2,
+     "cy": 313.5,
+     "r": 4.1,
+     "tema": "fysisk-ai",
+     "navn": "Serve Robotics"
+    },
+    {
+     "cx": 354.5,
+     "cy": 257.4,
+     "r": 4.0,
+     "tema": "fysisk-ai",
+     "navn": "Horizon Robotics"
+    },
+    {
+     "cx": 407.2,
+     "cy": 286.3,
+     "r": 4.0,
+     "tema": "fysisk-ai",
+     "navn": "Kraken Robotics"
+    },
+    {
+     "cx": 348.0,
+     "cy": 300.8,
+     "r": 3.8,
+     "tema": "fysisk-ai",
+     "navn": "Aurora Innovation"
+    },
+    {
+     "cx": 383.0,
+     "cy": 249.5,
+     "r": 3.8,
+     "tema": "fysisk-ai",
+     "navn": "Churchill Capital"
+    },
+    {
+     "cx": 391.8,
+     "cy": 311.3,
+     "r": 3.4,
+     "tema": "fysisk-ai",
+     "navn": "Rivian Automotive"
+    },
+    {
+     "cx": 342.5,
+     "cy": 271.6,
+     "r": 3.3,
+     "tema": "fysisk-ai",
+     "navn": "Airo Group"
+    },
+    {
+     "cx": 406.2,
+     "cy": 267.6,
+     "r": 3.3,
+     "tema": "fysisk-ai",
+     "navn": "Lantronix"
+    },
+    {
+     "cx": 625.0,
+     "cy": 282.0,
+     "r": 6.1,
+     "tema": "raastoffer",
+     "navn": "United States Antimony"
+    },
+    {
+     "cx": 616.8,
+     "cy": 289.5,
+     "r": 6.0,
+     "tema": "raastoffer",
+     "navn": "Ero Copper"
+    },
+    {
+     "cx": 626.2,
+     "cy": 268.7,
+     "r": 5.7,
+     "tema": "raastoffer",
+     "navn": "Huntsman"
+    },
+    {
+     "cx": 634.3,
+     "cy": 294.1,
+     "r": 5.7,
+     "tema": "raastoffer",
+     "navn": "Lynas Rare Earths"
+    },
+    {
+     "cx": 608.4,
+     "cy": 279.1,
+     "r": 5.3,
+     "tema": "raastoffer",
+     "navn": "Critical Metals"
+    },
+    {
+     "cx": 640.4,
+     "cy": 272.2,
+     "r": 5.3,
+     "tema": "raastoffer",
+     "navn": "Energy Fuels"
+    },
+    {
+     "cx": 619.9,
+     "cy": 300.8,
+     "r": 5.2,
+     "tema": "raastoffer",
+     "navn": "NioCorp"
+    },
+    {
+     "cx": 615.5,
+     "cy": 263.7,
+     "r": 5.1,
+     "tema": "raastoffer",
+     "navn": "First Majestic Silver"
+    },
+    {
+     "cx": 645.4,
+     "cy": 289.5,
+     "r": 5.1,
+     "tema": "raastoffer",
+     "navn": "Celanese"
+    },
+    {
+     "cx": 604.0,
+     "cy": 290.7,
+     "r": 5.1,
+     "tema": "raastoffer",
+     "navn": "Pan American Silver"
+    },
+    {
+     "cx": 635.0,
+     "cy": 260.5,
+     "r": 4.9,
+     "tema": "raastoffer",
+     "navn": "Chemours"
+    },
+    {
+     "cx": 632.4,
+     "cy": 305.5,
+     "r": 4.9,
+     "tema": "raastoffer",
+     "navn": "Hecla Mining"
+    },
+    {
+     "cx": 603.0,
+     "cy": 269.2,
+     "r": 4.9,
+     "tema": "raastoffer",
+     "navn": "Coeur Mining"
+    },
+    {
+     "cx": 650.7,
+     "cy": 276.3,
+     "r": 4.9,
+     "tema": "raastoffer",
+     "navn": "Freeport-McMoRan"
+    },
+    {
+     "cx": 609.4,
+     "cy": 304.2,
+     "r": 4.7,
+     "tema": "raastoffer",
+     "navn": "MP Materials"
+    },
+    {
+     "cx": 621.4,
+     "cy": 254.4,
+     "r": 4.7,
+     "tema": "raastoffer",
+     "navn": "Capstone Copper"
+    },
+    {
+     "cx": 646.8,
+     "cy": 300.4,
+     "r": 4.6,
+     "tema": "raastoffer",
+     "navn": "Albemarle"
+    },
+    {
+     "cx": 595.8,
+     "cy": 283.2,
+     "r": 4.6,
+     "tema": "raastoffer",
+     "navn": "Arkema"
+    },
+    {
+     "cx": 646.2,
+     "cy": 260.9,
+     "r": 4.6,
+     "tema": "raastoffer",
+     "navn": "Sigma Lithium"
+    },
+    {
+     "cx": 623.6,
+     "cy": 312.5,
+     "r": 4.5,
+     "tema": "raastoffer",
+     "navn": "American Resources"
+    },
+    {
+     "cx": 605.1,
+     "cy": 258.1,
+     "r": 4.3,
+     "tema": "raastoffer",
+     "navn": "Idaho Strategic Resources"
+    },
+    {
+     "cx": 656.4,
+     "cy": 286.2,
+     "r": 4.3,
+     "tema": "raastoffer",
+     "navn": "Solstice Advanced Materials"
+    },
+    {
+     "cx": 598.6,
+     "cy": 300.4,
+     "r": 4.3,
+     "tema": "raastoffer",
+     "navn": "Southern Copper"
+    },
+    {
+     "cx": 632.2,
+     "cy": 250.1,
+     "r": 4.1,
+     "tema": "raastoffer",
+     "navn": "American Battery Technology"
+    },
+    {
+     "cx": 641.5,
+     "cy": 310.8,
+     "r": 4.1,
+     "tema": "raastoffer",
+     "navn": "Lithium Americas"
+    },
+    {
+     "cx": 592.9,
+     "cy": 271.8,
+     "r": 4.1,
+     "tema": "raastoffer",
+     "navn": "Newmont"
+    },
+    {
+     "cx": 656.0,
+     "cy": 267.7,
+     "r": 4.1,
+     "tema": "raastoffer",
+     "navn": "Standard Lithium"
+    },
+    {
+     "cx": 611.6,
+     "cy": 314.0,
+     "r": 4.0,
+     "tema": "raastoffer",
+     "navn": "USA Rare Earth"
+    },
+    {
+     "cx": 613.1,
+     "cy": 249.0,
+     "r": 4.0,
+     "tema": "raastoffer",
+     "navn": "Almonty Industries"
+    },
+    {
+     "cx": 656.5,
+     "cy": 298.5,
+     "r": 4.0,
+     "tema": "raastoffer",
+     "navn": "Perpetua Resources"
+    },
+    {
+     "cx": 590.2,
+     "cy": 291.2,
+     "r": 4.0,
+     "tema": "raastoffer",
+     "navn": "Trekor Metals"
+    },
+    {
+     "cx": 644.7,
+     "cy": 251.4,
+     "r": 3.8,
+     "tema": "raastoffer",
+     "navn": "The Metals Company"
+    },
+    {
+     "cx": 631.2,
+     "cy": 318.2,
+     "r": 3.7,
+     "tema": "raastoffer",
+     "navn": "Trilogy Metals"
+    },
+    {
+     "cx": 595.7,
+     "cy": 259.3,
+     "r": 3.6,
+     "tema": "raastoffer",
+     "navn": "Ivanhoe Electric"
+    },
+    {
+     "cx": 662.3,
+     "cy": 278.9,
+     "r": 3.6,
+     "tema": "raastoffer",
+     "navn": "Neo Performance Materials"
+    },
+    {
+     "cx": 599.3,
+     "cy": 309.7,
+     "r": 3.4,
+     "tema": "raastoffer",
+     "navn": "Northern Dynasty Minerals"
+    },
+    {
+     "cx": 875.0,
+     "cy": 282.0,
+     "r": 6.8,
+     "tema": "fintech",
+     "navn": "SoFi"
+    },
+    {
+     "cx": 866.2,
+     "cy": 290.0,
+     "r": 6.4,
+     "tema": "fintech",
+     "navn": "Klarna"
+    },
+    {
+     "cx": 876.3,
+     "cy": 267.7,
+     "r": 6.3,
+     "tema": "fintech",
+     "navn": "Upstart"
+    },
+    {
+     "cx": 884.8,
+     "cy": 294.8,
+     "r": 5.6,
+     "tema": "fintech",
+     "navn": "Shift4 Payments"
+    },
+    {
+     "cx": 857.6,
+     "cy": 278.9,
+     "r": 5.4,
+     "tema": "fintech",
+     "navn": "Root"
+    },
+    {
+     "cx": 891.0,
+     "cy": 271.8,
+     "r": 5.2,
+     "tema": "fintech",
+     "navn": "Lemonade"
+    },
+    {
+     "cx": 869.8,
+     "cy": 301.4,
+     "r": 4.9,
+     "tema": "fintech",
+     "navn": "Chime Financial"
+    },
+    {
+     "cx": 865.3,
+     "cy": 263.2,
+     "r": 4.9,
+     "tema": "fintech",
+     "navn": "Webull"
+    },
+    {
+     "cx": 895.8,
+     "cy": 289.6,
+     "r": 4.8,
+     "tema": "fintech",
+     "navn": "Nu"
+    },
+    {
+     "cx": 853.8,
+     "cy": 290.8,
+     "r": 4.5,
+     "tema": "fintech",
+     "navn": "Robinhood"
+    },
+    {
+     "cx": 885.0,
+     "cy": 260.6,
+     "r": 4.0,
+     "tema": "fintech",
+     "navn": "Figure Technology Solutions"
+    },
+    {
+     "cx": 882.3,
+     "cy": 305.1,
+     "r": 3.8,
+     "tema": "fintech",
+     "navn": "Global-e"
+    },
+    {
+     "cx": 853.5,
+     "cy": 269.6,
+     "r": 3.7,
+     "tema": "fintech",
+     "navn": "Affirm"
+    },
+    {
+     "cx": 899.8,
+     "cy": 276.6,
+     "r": 3.7,
+     "tema": "fintech",
+     "navn": "Futu"
+    },
+    {
+     "cx": 860.1,
+     "cy": 303.2,
+     "r": 3.7,
+     "tema": "fintech",
+     "navn": "Kaspi.kz"
+    },
+    {
+     "cx": 871.6,
+     "cy": 255.8,
+     "r": 3.6,
+     "tema": "fintech",
+     "navn": "Ategrity Specialty Holdings"
+    },
+    {
+     "cx": 895.5,
+     "cy": 299.3,
+     "r": 3.3,
+     "tema": "fintech",
+     "navn": "Pagaya Technologies"
+    },
+    {
+     "cx": 847.7,
+     "cy": 283.1,
+     "r": 3.3,
+     "tema": "fintech",
+     "navn": "dLocal"
+    },
+    {
+     "cx": 125.0,
+     "cy": 482.0,
+     "r": 5.9,
+     "tema": "krypto",
+     "navn": "Bitdeer Technologies Group"
+    },
+    {
+     "cx": 117.0,
+     "cy": 489.3,
+     "r": 5.9,
+     "tema": "krypto",
+     "navn": "CleanSpark"
+    },
+    {
+     "cx": 126.2,
+     "cy": 468.8,
+     "r": 5.8,
+     "tema": "krypto",
+     "navn": "Coinbase"
+    },
+    {
+     "cx": 134.2,
+     "cy": 493.9,
+     "r": 5.4,
+     "tema": "krypto",
+     "navn": "Galaxy Digital"
+    },
+    {
+     "cx": 108.6,
+     "cy": 479.1,
+     "r": 5.3,
+     "tema": "krypto",
+     "navn": "Circle Internet Group"
+    },
+    {
+     "cx": 140.2,
+     "cy": 472.3,
+     "r": 5.2,
+     "tema": "krypto",
+     "navn": "Riot Platforms"
+    },
+    {
+     "cx": 120.0,
+     "cy": 500.6,
+     "r": 5.1,
+     "tema": "krypto",
+     "navn": "Gemini Space Station"
+    },
+    {
+     "cx": 115.6,
+     "cy": 464.0,
+     "r": 4.8,
+     "tema": "krypto",
+     "navn": "Keel Infrastructure"
+    },
+    {
+     "cx": 145.0,
+     "cy": 489.3,
+     "r": 4.7,
+     "tema": "krypto",
+     "navn": "Hyperliquid Strategies"
+    },
+    {
+     "cx": 104.6,
+     "cy": 490.4,
+     "r": 4.3,
+     "tema": "krypto",
+     "navn": "Bit Digital"
+    },
+    {
+     "cx": 134.7,
+     "cy": 461.3,
+     "r": 4.2,
+     "tema": "krypto",
+     "navn": "Bitmine Immersion Technologies"
+    },
+    {
+     "cx": 132.0,
+     "cy": 504.4,
+     "r": 4.0,
+     "tema": "krypto",
+     "navn": "CSLM Digital Asset Acquisition Corp III"
+    },
+    {
+     "cx": 104.1,
+     "cy": 469.9,
+     "r": 3.9,
+     "tema": "krypto",
+     "navn": "Bullish"
+    },
+    {
+     "cx": 149.2,
+     "cy": 476.7,
+     "r": 3.9,
+     "tema": "krypto",
+     "navn": "Sharplink"
+    },
+    {
+     "cx": 110.4,
+     "cy": 502.7,
+     "r": 3.9,
+     "tema": "krypto",
+     "navn": "Strategy"
+    },
+    {
+     "cx": 121.7,
+     "cy": 456.3,
+     "r": 3.9,
+     "tema": "krypto",
+     "navn": "Upexi"
+    },
+    {
+     "cx": 145.2,
+     "cy": 499.0,
+     "r": 3.6,
+     "tema": "krypto",
+     "navn": "DeFi Development"
+    },
+    {
+     "cx": 375.0,
+     "cy": 482.0,
+     "r": 7.0,
+     "tema": "software",
+     "navn": "SoundHound AI"
+    },
+    {
+     "cx": 366.7,
+     "cy": 489.6,
+     "r": 5.3,
+     "tema": "software",
+     "navn": "Palantir"
+    },
+    {
+     "cx": 376.2,
+     "cy": 468.8,
+     "r": 5.1,
+     "tema": "software",
+     "navn": "Unity Software"
+    },
+    {
+     "cx": 384.0,
+     "cy": 493.7,
+     "r": 4.8,
+     "tema": "software",
+     "navn": "Innodata"
+    },
+    {
+     "cx": 359.2,
+     "cy": 479.2,
+     "r": 4.6,
+     "tema": "software",
+     "navn": "Navan"
+    },
+    {
+     "cx": 389.3,
+     "cy": 472.9,
+     "r": 3.8,
+     "tema": "software",
+     "navn": "Snowflake"
+    },
+    {
+     "cx": 370.4,
+     "cy": 499.1,
+     "r": 3.8,
+     "tema": "software",
+     "navn": "Wix.com"
+    },
+    {
+     "cx": 366.5,
+     "cy": 465.7,
+     "r": 3.4,
+     "tema": "software",
+     "navn": "Figma"
+    },
+    {
+     "cx": 392.9,
+     "cy": 488.5,
+     "r": 3.4,
+     "tema": "software",
+     "navn": "Palo Alto Networks"
+    },
+    {
+     "cx": 356.8,
+     "cy": 489.5,
+     "r": 3.4,
+     "tema": "software",
+     "navn": "Rubrik"
+    },
+    {
+     "cx": 383.6,
+     "cy": 463.6,
+     "r": 3.3,
+     "tema": "software",
+     "navn": "Cloudflare"
+    },
+    {
+     "cx": 381.3,
+     "cy": 501.9,
+     "r": 3.3,
+     "tema": "software",
+     "navn": "Samsara"
+    },
+    {
+     "cx": 356.5,
+     "cy": 471.3,
+     "r": 3.1,
+     "tema": "software",
+     "navn": "Netskope"
+    },
+    {
+     "cx": 396.4,
+     "cy": 477.3,
+     "r": 2.9,
+     "tema": "software",
+     "navn": "CrowdStrike"
+    },
+    {
+     "cx": 362.2,
+     "cy": 500.3,
+     "r": 2.9,
+     "tema": "software",
+     "navn": "SailPoint"
+    },
+    {
+     "cx": 625.0,
+     "cy": 482.0,
+     "r": 6.1,
+     "tema": "sundhed",
+     "navn": "Hims & Hers Health"
+    },
+    {
+     "cx": 617.1,
+     "cy": 489.2,
+     "r": 5.5,
+     "tema": "sundhed",
+     "navn": "BioNTech"
+    },
+    {
+     "cx": 626.1,
+     "cy": 469.4,
+     "r": 5.1,
+     "tema": "sundhed",
+     "navn": "Eli Lilly"
+    },
+    {
+     "cx": 633.6,
+     "cy": 493.2,
+     "r": 4.6,
+     "tema": "sundhed",
+     "navn": "Intellia Therapeutics"
+    },
+    {
+     "cx": 609.9,
+     "cy": 479.3,
+     "r": 4.3,
+     "tema": "sundhed",
+     "navn": "Tempus AI"
+    },
+    {
+     "cx": 638.8,
+     "cy": 473.2,
+     "r": 4.1,
+     "tema": "sundhed",
+     "navn": "Bachem"
+    },
+    {
+     "cx": 620.5,
+     "cy": 498.7,
+     "r": 4.0,
+     "tema": "sundhed",
+     "navn": "CRISPR Therapeutics"
+    },
+    {
+     "cx": 616.6,
+     "cy": 465.9,
+     "r": 4.0,
+     "tema": "sundhed",
+     "navn": "Omada Health"
+    },
+    {
+     "cx": 642.7,
+     "cy": 488.5,
+     "r": 3.6,
+     "tema": "sundhed",
+     "navn": "LifeMD"
+    },
+    {
+     "cx": 607.0,
+     "cy": 489.4,
+     "r": 3.3,
+     "tema": "sundhed",
+     "navn": "Hinge Health"
+    },
+    {
+     "cx": 633.5,
+     "cy": 463.8,
+     "r": 3.1,
+     "tema": "sundhed",
+     "navn": "Oscar Health"
+    },
+    {
+     "cx": 631.1,
+     "cy": 501.6,
+     "r": 2.9,
+     "tema": "sundhed",
+     "navn": "AbCellera Biologics"
+    },
+    {
+     "cx": 875.0,
+     "cy": 482.0,
+     "r": 6.0,
+     "tema": "kvante",
+     "navn": "Oxford Instruments"
+    },
+    {
+     "cx": 867.3,
+     "cy": 489.1,
+     "r": 5.3,
+     "tema": "kvante",
+     "navn": "Quantum Computing"
+    },
+    {
+     "cx": 876.1,
+     "cy": 469.7,
+     "r": 4.9,
+     "tema": "kvante",
+     "navn": "Quantinuum"
+    },
+    {
+     "cx": 883.5,
+     "cy": 493.0,
+     "r": 4.7,
+     "tema": "kvante",
+     "navn": "D-Wave Quantum"
+    },
+    {
+     "cx": 860.0,
+     "cy": 479.3,
+     "r": 4.6,
+     "tema": "kvante",
+     "navn": "Rigetti Computing"
+    },
+    {
+     "cx": 888.8,
+     "cy": 473.2,
+     "r": 4.3,
+     "tema": "kvante",
+     "navn": "Infleqtion"
+    },
+    {
+     "cx": 870.5,
+     "cy": 498.7,
+     "r": 4.0,
+     "tema": "kvante",
+     "navn": "IonQ"
+    }
+   ],
+   "klynger": [
+    {
+     "id": "chips",
+     "navn": "Chips og halvledere",
+     "kort": "Chips",
+     "x": 125.0,
+     "cy": 82.0,
+     "y1": 178,
+     "y2": 196,
+     "link": "temaer/chips.html",
+     "linjeTekst": null,
+     "fx": 4,
+     "fy": 4,
+     "fb": 242,
+     "fh": 200
+    },
+    {
+     "id": "energi",
+     "navn": "Energi og elnet",
+     "kort": "Energi",
+     "x": 375.0,
+     "cy": 82.0,
+     "y1": 178,
+     "y2": 196,
+     "link": "temaer/energi.html",
+     "linjeTekst": null,
+     "fx": 254,
+     "fy": 4,
+     "fb": 242,
+     "fh": 200
+    },
+    {
+     "id": "datacenter",
+     "navn": "Datacentre",
+     "kort": "Datacentre",
+     "x": 625.0,
+     "cy": 82.0,
+     "y1": 178,
+     "y2": 196,
+     "link": "temaer/datacenter.html",
+     "linjeTekst": null,
+     "fx": 504,
+     "fy": 4,
+     "fb": 242,
+     "fh": 200
+    },
+    {
+     "id": "platforme",
+     "navn": "Platformsøkonomi",
+     "kort": "Platforme",
+     "x": 875.0,
+     "cy": 82.0,
+     "y1": 178,
+     "y2": 196,
+     "link": "temaer/platforme.html",
+     "linjeTekst": null,
+     "fx": 754,
+     "fy": 4,
+     "fb": 242,
+     "fh": 200
+    },
+    {
+     "id": "rumfart",
+     "navn": "Rumfart",
+     "kort": "Rumfart",
+     "x": 125.0,
+     "cy": 282.0,
+     "y1": 378,
+     "y2": 396,
+     "link": "temaer/rumfart.html",
+     "linjeTekst": null,
+     "fx": 4,
+     "fy": 204,
+     "fb": 242,
+     "fh": 200
+    },
+    {
+     "id": "fysisk-ai",
+     "navn": "Robotter & fysisk AI",
+     "kort": "Robotter",
+     "x": 375.0,
+     "cy": 282.0,
+     "y1": 378,
+     "y2": 396,
+     "link": "temaer/fysisk-ai.html",
+     "linjeTekst": null,
+     "fx": 254,
+     "fy": 204,
+     "fb": 242,
+     "fh": 200
+    },
+    {
+     "id": "raastoffer",
+     "navn": "Råstoffer",
+     "kort": "Råstoffer",
+     "x": 625.0,
+     "cy": 282.0,
+     "y1": 378,
+     "y2": 396,
+     "link": "temaer/raastoffer.html",
+     "linjeTekst": null,
+     "fx": 504,
+     "fy": 204,
+     "fb": 242,
+     "fh": 200
+    },
+    {
+     "id": "fintech",
+     "navn": "Fintech",
+     "kort": "Fintech",
+     "x": 875.0,
+     "cy": 282.0,
+     "y1": 378,
+     "y2": 396,
+     "link": "temaer/fintech.html",
+     "linjeTekst": null,
+     "fx": 754,
+     "fy": 204,
+     "fb": 242,
+     "fh": 200
+    },
+    {
+     "id": "krypto",
+     "navn": "Krypto",
+     "kort": "Krypto",
+     "x": 125.0,
+     "cy": 482.0,
+     "y1": 578,
+     "y2": 596,
+     "link": "temaer/krypto.html",
+     "linjeTekst": null,
+     "fx": 4,
+     "fy": 404,
+     "fb": 242,
+     "fh": 200
+    },
+    {
+     "id": "software",
+     "navn": "Software & AI",
+     "kort": "Software",
+     "x": 375.0,
+     "cy": 482.0,
+     "y1": 578,
+     "y2": 596,
+     "link": "temaer/software.html",
+     "linjeTekst": null,
+     "fx": 254,
+     "fy": 404,
+     "fb": 242,
+     "fh": 200
+    },
+    {
+     "id": "sundhed",
+     "navn": "Sundhed og biotek",
+     "kort": "Sundhed",
+     "x": 625.0,
+     "cy": 482.0,
+     "y1": 578,
+     "y2": 596,
+     "link": "temaer/sundhed.html",
+     "linjeTekst": null,
+     "fx": 504,
+     "fy": 404,
+     "fb": 242,
+     "fh": 200
+    },
+    {
+     "id": "kvante",
+     "navn": "Kvantecomputere",
+     "kort": "Kvante",
+     "x": 875.0,
+     "cy": 482.0,
+     "y1": 578,
+     "y2": 596,
+     "link": "temaer/kvante.html",
+     "linjeTekst": null,
+     "fx": 754,
+     "fy": 404,
+     "fb": 242,
+     "fh": 200
+    }
+   ],
+   "bredde": 1000,
+   "hoejde": 604,
+   "traade": [
+    {
+     "fra": "datacenter",
+     "til": "energi",
+     "antal": 15,
+     "d": "M625.0 82.0 Q500.0 37.0 375.0 82.0",
+     "w": 6.0,
+     "styrke": "staerk"
+    },
+    {
+     "fra": "chips",
+     "til": "datacenter",
+     "antal": 13,
+     "d": "M125.0 82.0 Q375.0 142.0 625.0 82.0",
+     "w": 5.3,
+     "styrke": "staerk"
+    },
+    {
+     "fra": "datacenter",
+     "til": "krypto",
+     "antal": 10,
+     "d": "M625.0 82.0 Q337.5 235.1 125.0 482.0",
+     "w": 4.3,
+     "styrke": "staerk"
+    },
+    {
+     "fra": "energi",
+     "til": "fysisk-ai",
+     "antal": 9,
+     "d": "M375.0 82.0 Q339.0 182.0 375.0 282.0",
+     "w": 4.0,
+     "styrke": "staerk"
+    },
+    {
+     "fra": "chips",
+     "til": "fysisk-ai",
+     "antal": 8,
+     "d": "M125.0 82.0 Q214.0 227.0 375.0 282.0",
+     "w": 3.7,
+     "styrke": "staerk"
+    },
+    {
+     "fra": "fintech",
+     "til": "platforme",
+     "antal": 5,
+     "d": "M875.0 282.0 Q911.0 182.0 875.0 82.0",
+     "w": 2.7,
+     "styrke": "mellem"
+    },
+    {
+     "fra": "platforme",
+     "til": "software",
+     "antal": 5,
+     "d": "M875.0 82.0 Q587.5 235.1 375.0 482.0",
+     "w": 2.7,
+     "styrke": "mellem"
+    },
+    {
+     "fra": "datacenter",
+     "til": "platforme",
+     "antal": 4,
+     "d": "M625.0 82.0 Q750.0 127.0 875.0 82.0",
+     "w": 2.3,
+     "styrke": "mellem"
+    },
+    {
+     "fra": "datacenter",
+     "til": "software",
+     "antal": 4,
+     "d": "M625.0 82.0 Q449.1 250.2 375.0 482.0",
+     "w": 2.3,
+     "styrke": "mellem"
+    },
+    {
+     "fra": "fintech",
+     "til": "krypto",
+     "antal": 4,
+     "d": "M875.0 282.0 Q484.5 324.0 125.0 482.0",
+     "w": 2.3,
+     "styrke": "mellem"
+    },
+    {
+     "fra": "energi",
+     "til": "sundhed",
+     "antal": 2,
+     "d": "M375.0 82.0 Q449.1 313.8 625.0 482.0",
+     "w": 1.7,
+     "styrke": "svag"
+    },
+    {
+     "fra": "fintech",
+     "til": "software",
+     "antal": 2,
+     "d": "M875.0 282.0 Q602.7 326.3 375.0 482.0",
+     "w": 1.7,
+     "styrke": "svag"
+    },
+    {
+     "fra": "fysisk-ai",
+     "til": "software",
+     "antal": 2,
+     "d": "M375.0 282.0 Q339.0 381.9 375.0 482.0",
+     "w": 1.7,
+     "styrke": "svag"
+    },
+    {
+     "fra": "chips",
+     "til": "platforme",
+     "antal": 1,
+     "d": "M125.0 82.0 Q500.0 142.0 875.0 82.0",
+     "w": 1.3,
+     "styrke": "svag"
+    },
+    {
+     "fra": "chips",
+     "til": "raastoffer",
+     "antal": 1,
+     "d": "M125.0 82.0 Q352.7 237.7 625.0 282.0",
+     "w": 1.3,
+     "styrke": "svag"
+    },
+    {
+     "fra": "datacenter",
+     "til": "fysisk-ai",
+     "antal": 1,
+     "d": "M625.0 82.0 Q464.0 137.0 375.0 282.0",
+     "w": 1.3,
+     "styrke": "svag"
+    },
+    {
+     "fra": "datacenter",
+     "til": "raastoffer",
+     "antal": 1,
+     "d": "M625.0 82.0 Q589.0 182.0 625.0 282.0",
+     "w": 1.3,
+     "styrke": "svag"
+    },
+    {
+     "fra": "datacenter",
+     "til": "rumfart",
+     "antal": 1,
+     "d": "M625.0 82.0 Q352.7 126.3 125.0 282.0",
+     "w": 1.3,
+     "styrke": "svag"
+    },
+    {
+     "fra": "energi",
+     "til": "raastoffer",
+     "antal": 1,
+     "d": "M375.0 82.0 Q464.0 227.0 625.0 282.0",
+     "w": 1.3,
+     "styrke": "svag"
+    },
+    {
+     "fra": "energi",
+     "til": "rumfart",
+     "antal": 1,
+     "d": "M375.0 82.0 Q214.0 137.0 125.0 282.0",
+     "w": 1.3,
+     "styrke": "svag"
+    },
+    {
+     "fra": "fintech",
+     "til": "sundhed",
+     "antal": 1,
+     "d": "M875.0 282.0 Q714.0 337.0 625.0 482.0",
+     "w": 1.3,
+     "styrke": "svag"
+    },
+    {
+     "fra": "fysisk-ai",
+     "til": "platforme",
+     "antal": 1,
+     "d": "M375.0 282.0 Q647.3 237.7 875.0 82.0",
+     "w": 1.3,
+     "styrke": "svag"
+    },
+    {
+     "fra": "fysisk-ai",
+     "til": "raastoffer",
+     "antal": 1,
+     "d": "M375.0 282.0 Q500.0 327.0 625.0 282.0",
+     "w": 1.3,
+     "styrke": "svag"
+    },
+    {
+     "fra": "fysisk-ai",
+     "til": "rumfart",
+     "antal": 1,
+     "d": "M375.0 282.0 Q250.0 237.0 125.0 282.0",
+     "w": 1.3,
+     "styrke": "svag"
+    },
+    {
+     "fra": "software",
+     "til": "sundhed",
+     "antal": 1,
+     "d": "M375.0 482.0 Q500.0 527.0 625.0 482.0",
+     "w": 1.3,
+     "styrke": "svag"
+    }
+   ]
+  },
+  "smal": {
+   "prikker": [
+    {
+     "cx": 125.0,
+     "cy": 92.0,
+     "r": 9.3,
+     "tema": "chips",
+     "navn": "Samsung Electronics"
+    },
+    {
+     "cx": 113.7,
+     "cy": 102.4,
+     "r": 8.4,
+     "tema": "chips",
+     "navn": "SK hynix"
+    },
+    {
+     "cx": 126.6,
+     "cy": 73.8,
+     "r": 8.0,
+     "tema": "chips",
+     "navn": "Taiyo Yuden"
+    },
+    {
+     "cx": 137.7,
+     "cy": 108.5,
+     "r": 7.9,
+     "tema": "chips",
+     "navn": "Kioxia"
+    },
+    {
+     "cx": 102.5,
+     "cy": 88.0,
+     "r": 7.6,
+     "tema": "chips",
+     "navn": "LPKF Laser & Electronics"
+    },
+    {
+     "cx": 145.9,
+     "cy": 78.7,
+     "r": 7.4,
+     "tema": "chips",
+     "navn": "Cerebras Systems"
+    },
+    {
+     "cx": 118.1,
+     "cy": 117.5,
+     "r": 7.4,
+     "tema": "chips",
+     "navn": "GlobalFoundries"
+    },
+    {
+     "cx": 112.1,
+     "cy": 67.2,
+     "r": 7.3,
+     "tema": "chips",
+     "navn": "Soitec"
+    },
+    {
+     "cx": 152.6,
+     "cy": 102.1,
+     "r": 7.2,
+     "tema": "chips",
+     "navn": "Tower Semiconductor"
+    },
+    {
+     "cx": 96.6,
+     "cy": 103.7,
+     "r": 7.1,
+     "tema": "chips",
+     "navn": "Nova"
+    },
+    {
+     "cx": 138.6,
+     "cy": 63.0,
+     "r": 7.1,
+     "tema": "chips",
+     "navn": "Besi"
+    },
+    {
+     "cx": 134.9,
+     "cy": 123.6,
+     "r": 6.8,
+     "tema": "chips",
+     "navn": "Broadcom"
+    },
+    {
+     "cx": 95.4,
+     "cy": 74.8,
+     "r": 6.8,
+     "tema": "chips",
+     "navn": "IQE"
+    },
+    {
+     "cx": 159.5,
+     "cy": 84.4,
+     "r": 6.8,
+     "tema": "chips",
+     "navn": "Rambus"
+    },
+    {
+     "cx": 104.1,
+     "cy": 121.7,
+     "r": 6.7,
+     "tema": "chips",
+     "navn": "Micron Technology"
+    },
+    {
+     "cx": 120.2,
+     "cy": 55.1,
+     "r": 6.6,
+     "tema": "chips",
+     "navn": "Navitas Semiconductor"
+    },
+    {
+     "cx": 154.2,
+     "cy": 116.6,
+     "r": 6.5,
+     "tema": "chips",
+     "navn": "Western Digital"
+    },
+    {
+     "cx": 86.0,
+     "cy": 93.6,
+     "r": 6.4,
+     "tema": "chips",
+     "navn": "Intel"
+    },
+    {
+     "cx": 153.3,
+     "cy": 63.9,
+     "r": 6.4,
+     "tema": "chips",
+     "navn": "SiTime"
+    },
+    {
+     "cx": 123.1,
+     "cy": 132.7,
+     "r": 6.4,
+     "tema": "chips",
+     "navn": "SUSS MicroTec"
+    },
+    {
+     "cx": 98.4,
+     "cy": 60.1,
+     "r": 6.4,
+     "tema": "chips",
+     "navn": "Tokyo Electron"
+    },
+    {
+     "cx": 166.9,
+     "cy": 97.6,
+     "r": 6.3,
+     "tema": "chips",
+     "navn": "ASM International"
+    },
+    {
+     "cx": 89.7,
+     "cy": 116.6,
+     "r": 6.2,
+     "tema": "chips",
+     "navn": "ASMPT"
+    },
+    {
+     "cx": 134.6,
+     "cy": 49.3,
+     "r": 6.1,
+     "tema": "chips",
+     "navn": "Camtek"
+    },
+    {
+     "cx": 147.1,
+     "cy": 130.6,
+     "r": 6.0,
+     "tema": "chips",
+     "navn": "Aehr Test Systems"
+    },
+    {
+     "cx": 82.0,
+     "cy": 78.3,
+     "r": 6.0,
+     "tema": "chips",
+     "navn": "onsemi"
+    },
+    {
+     "cx": 166.6,
+     "cy": 72.8,
+     "r": 5.9,
+     "tema": "chips",
+     "navn": "Seagate Technology"
+    },
+    {
+     "cx": 107.1,
+     "cy": 134.8,
+     "r": 5.9,
+     "tema": "chips",
+     "navn": "UMC"
+    },
+    {
+     "cx": 109.1,
+     "cy": 47.7,
+     "r": 5.9,
+     "tema": "chips",
+     "navn": "MKS"
+    },
+    {
+     "cx": 167.2,
+     "cy": 114.2,
+     "r": 5.9,
+     "tema": "chips",
+     "navn": "STMicroelectronics"
+    },
+    {
+     "cx": 78.3,
+     "cy": 104.3,
+     "r": 5.8,
+     "tema": "chips",
+     "navn": "X-FAB"
+    },
+    {
+     "cx": 151.4,
+     "cy": 50.9,
+     "r": 5.8,
+     "tema": "chips",
+     "navn": "Himax Technologies"
+    },
+    {
+     "cx": 133.4,
+     "cy": 140.7,
+     "r": 5.7,
+     "tema": "chips",
+     "navn": "Lasertec"
+    },
+    {
+     "cx": 85.5,
+     "cy": 61.4,
+     "r": 5.7,
+     "tema": "chips",
+     "navn": "Rigaku"
+    },
+    {
+     "cx": 175.3,
+     "cy": 87.8,
+     "r": 5.6,
+     "tema": "chips",
+     "navn": "KLA"
+    },
+    {
+     "cx": 90.4,
+     "cy": 129.5,
+     "r": 5.5,
+     "tema": "chips",
+     "navn": "NVIDIA"
+    },
+    {
+     "cx": 125.3,
+     "cy": 40.5,
+     "r": 5.3,
+     "tema": "chips",
+     "navn": "Onto Innovation"
+    },
+    {
+     "cx": 159.9,
+     "cy": 130.5,
+     "r": 5.3,
+     "tema": "chips",
+     "navn": "Ambiq Micro"
+    },
+    {
+     "cx": 72.8,
+     "cy": 87.2,
+     "r": 5.3,
+     "tema": "chips",
+     "navn": "Renesas Electronics"
+    },
+    {
+     "cx": 167.1,
+     "cy": 60.0,
+     "r": 5.1,
+     "tema": "chips",
+     "navn": "Aixtron"
+    },
+    {
+     "cx": 115.5,
+     "cy": 144.5,
+     "r": 5.0,
+     "tema": "chips",
+     "navn": "Advantest"
+    },
+    {
+     "cx": 96.4,
+     "cy": 46.5,
+     "r": 5.0,
+     "tema": "chips",
+     "navn": "SanDisk"
+    },
+    {
+     "cx": 177.2,
+     "cy": 106.3,
+     "r": 5.0,
+     "tema": "chips",
+     "navn": "Kulicke & Soffa"
+    },
+    {
+     "cx": 76.5,
+     "cy": 116.9,
+     "r": 5.0,
+     "tema": "chips",
+     "navn": "Veeco Instruments"
+    },
+    {
+     "cx": 144.1,
+     "cy": 40.5,
+     "r": 4.9,
+     "tema": "chips",
+     "navn": "AXT"
+    },
+    {
+     "cx": 145.9,
+     "cy": 143.3,
+     "r": 4.9,
+     "tema": "chips",
+     "navn": "Silicon Motion"
+    },
+    {
+     "cx": 74.6,
+     "cy": 68.1,
+     "r": 4.7,
+     "tema": "chips",
+     "navn": "Infineon Technologies"
+    },
+    {
+     "cx": 178.6,
+     "cy": 75.5,
+     "r": 4.6,
+     "tema": "chips",
+     "navn": "Aeluma"
+    },
+    {
+     "cx": 96.5,
+     "cy": 140.7,
+     "r": 4.6,
+     "tema": "chips",
+     "navn": "Kokusai Electric"
+    },
+    {
+     "cx": 113.1,
+     "cy": 36.5,
+     "r": 4.5,
+     "tema": "chips",
+     "navn": "Entegris"
+    },
+    {
+     "cx": 171.6,
+     "cy": 125.1,
+     "r": 4.5,
+     "tema": "chips",
+     "navn": "Monolithic Power Systems"
+    },
+    {
+     "cx": 68.0,
+     "cy": 99.1,
+     "r": 4.5,
+     "tema": "chips",
+     "navn": "Wolfspeed"
+    },
+    {
+     "cx": 162.4,
+     "cy": 48.0,
+     "r": 4.5,
+     "tema": "chips",
+     "navn": "Nordic Semiconductor"
+    },
+    {
+     "cx": 127.1,
+     "cy": 150.0,
+     "r": 4.4,
+     "tema": "chips",
+     "navn": "ACM Research"
+    },
+    {
+     "cx": 84.0,
+     "cy": 50.4,
+     "r": 4.4,
+     "tema": "chips",
+     "navn": "Alpha and Omega Semiconductor"
+    },
+    {
+     "cx": 183.6,
+     "cy": 95.0,
+     "r": 4.4,
+     "tema": "chips",
+     "navn": "Amkor Technology"
+    },
+    {
+     "cx": 79.5,
+     "cy": 129.6,
+     "r": 4.3,
+     "tema": "chips",
+     "navn": "ASML"
+    },
+    {
+     "cx": 133.2,
+     "cy": 33.3,
+     "r": 4.3,
+     "tema": "chips",
+     "navn": "Lam Research"
+    },
+    {
+     "cx": 158.8,
+     "cy": 141.1,
+     "r": 4.3,
+     "tema": "chips",
+     "navn": "MaxLinear"
+    },
+    {
+     "cx": 66.6,
+     "cy": 78.6,
+     "r": 4.3,
+     "tema": "chips",
+     "navn": "Synopsys"
+    },
+    {
+     "cx": 177.3,
+     "cy": 62.3,
+     "r": 4.2,
+     "tema": "chips",
+     "navn": "Analog Devices"
+    },
+    {
+     "cx": 106.4,
+     "cy": 149.5,
+     "r": 4.2,
+     "tema": "chips",
+     "navn": "Cohu"
+    },
+    {
+     "cx": 99.8,
+     "cy": 36.8,
+     "r": 4.2,
+     "tema": "chips",
+     "navn": "Marvell Technology"
+    },
+    {
+     "cx": 181.2,
+     "cy": 115.8,
+     "r": 4.2,
+     "tema": "chips",
+     "navn": "Texas Instruments"
+    },
+    {
+     "cx": 67.3,
+     "cy": 112.5,
+     "r": 4.1,
+     "tema": "chips",
+     "navn": "Ambarella"
+    },
+    {
+     "cx": 153.9,
+     "cy": 37.7,
+     "r": 4.1,
+     "tema": "chips",
+     "navn": "Microchip Technology"
+    },
+    {
+     "cx": 140.5,
+     "cy": 151.8,
+     "r": 4.0,
+     "tema": "chips",
+     "navn": "Cadence Design Systems"
+    },
+    {
+     "cx": 73.0,
+     "cy": 58.2,
+     "r": 4.0,
+     "tema": "chips",
+     "navn": "FormFactor"
+    },
+    {
+     "cx": 186.4,
+     "cy": 81.8,
+     "r": 3.9,
+     "tema": "chips",
+     "navn": "Applied Materials"
+    },
+    {
+     "cx": 86.5,
+     "cy": 141.2,
+     "r": 3.7,
+     "tema": "chips",
+     "navn": "AMD"
+    },
+    {
+     "cx": 120.1,
+     "cy": 29.5,
+     "r": 3.7,
+     "tema": "chips",
+     "navn": "Lattice Semiconductor"
+    },
+    {
+     "cx": 171.0,
+     "cy": 135.0,
+     "r": 3.7,
+     "tema": "chips",
+     "navn": "TSMC"
+    },
+    {
+     "cx": 61.8,
+     "cy": 91.4,
+     "r": 3.6,
+     "tema": "chips",
+     "navn": "Axcelis Technologies"
+    },
+    {
+     "cx": 172.1,
+     "cy": 49.7,
+     "r": 3.6,
+     "tema": "chips",
+     "navn": "Teradyne"
+    },
+    {
+     "cx": 118.8,
+     "cy": 155.2,
+     "r": 3.2,
+     "tema": "chips",
+     "navn": "Blaize"
+    },
+    {
+     "cx": 375.0,
+     "cy": 92.0,
+     "r": 7.7,
+     "tema": "energi",
+     "navn": "Babcock & Wilcox"
+    },
+    {
+     "cx": 365.1,
+     "cy": 101.1,
+     "r": 7.5,
+     "tema": "energi",
+     "navn": "T1 Energy"
+    },
+    {
+     "cx": 376.4,
+     "cy": 75.9,
+     "r": 7.1,
+     "tema": "energi",
+     "navn": "Enovix"
+    },
+    {
+     "cx": 386.2,
+     "cy": 106.6,
+     "r": 7.0,
+     "tema": "energi",
+     "navn": "Expand Energy"
+    },
+    {
+     "cx": 355.0,
+     "cy": 88.5,
+     "r": 6.7,
+     "tema": "energi",
+     "navn": "Comstock Resources"
+    },
+    {
+     "cx": 393.6,
+     "cy": 80.2,
+     "r": 6.7,
+     "tema": "energi",
+     "navn": "Generac"
+    },
+    {
+     "cx": 368.9,
+     "cy": 114.8,
+     "r": 6.7,
+     "tema": "energi",
+     "navn": "MYR Group"
+    },
+    {
+     "cx": 363.4,
+     "cy": 69.7,
+     "r": 6.7,
+     "tema": "energi",
+     "navn": "SolarEdge"
+    },
+    {
+     "cx": 399.9,
+     "cy": 101.1,
+     "r": 6.6,
+     "tema": "energi",
+     "navn": "Fluence Energy"
+    },
+    {
+     "cx": 349.3,
+     "cy": 102.6,
+     "r": 6.4,
+     "tema": "energi",
+     "navn": "SES AI"
+    },
+    {
+     "cx": 387.2,
+     "cy": 65.8,
+     "r": 6.3,
+     "tema": "energi",
+     "navn": "QuantumScape"
+    },
+    {
+     "cx": 384.0,
+     "cy": 120.6,
+     "r": 6.2,
+     "tema": "energi",
+     "navn": "Power Solutions International"
+    },
+    {
+     "cx": 348.2,
+     "cy": 76.5,
+     "r": 6.1,
+     "tema": "energi",
+     "navn": "First Solar"
+    },
+    {
+     "cx": 406.2,
+     "cy": 85.1,
+     "r": 6.1,
+     "tema": "energi",
+     "navn": "Tigo Energy"
+    },
+    {
+     "cx": 356.1,
+     "cy": 118.9,
+     "r": 6.0,
+     "tema": "energi",
+     "navn": "Sunrun"
+    },
+    {
+     "cx": 370.7,
+     "cy": 58.5,
+     "r": 5.9,
+     "tema": "energi",
+     "navn": "Enphase Energy"
+    },
+    {
+     "cx": 401.5,
+     "cy": 114.3,
+     "r": 5.8,
+     "tema": "energi",
+     "navn": "Ballard Power Systems"
+    },
+    {
+     "cx": 339.6,
+     "cy": 93.5,
+     "r": 5.8,
+     "tema": "energi",
+     "navn": "ProPetro"
+    },
+    {
+     "cx": 400.7,
+     "cy": 66.5,
+     "r": 5.6,
+     "tema": "energi",
+     "navn": "Vistra"
+    },
+    {
+     "cx": 374.0,
+     "cy": 128.9,
+     "r": 5.4,
+     "tema": "energi",
+     "navn": "Antero Resources"
+    },
+    {
+     "cx": 350.9,
+     "cy": 63.1,
+     "r": 5.4,
+     "tema": "energi",
+     "navn": "Centrus Energy"
+    },
+    {
+     "cx": 412.9,
+     "cy": 97.1,
+     "r": 5.4,
+     "tema": "energi",
+     "navn": "ERock"
+    },
+    {
+     "cx": 343.1,
+     "cy": 114.2,
+     "r": 5.4,
+     "tema": "energi",
+     "navn": "Rolls-Royce"
+    },
+    {
+     "cx": 383.7,
+     "cy": 53.4,
+     "r": 5.4,
+     "tema": "energi",
+     "navn": "Talen Energy"
+    },
+    {
+     "cx": 395.0,
+     "cy": 126.9,
+     "r": 5.3,
+     "tema": "energi",
+     "navn": "Kinder Morgan"
+    },
+    {
+     "cx": 336.1,
+     "cy": 79.6,
+     "r": 5.3,
+     "tema": "energi",
+     "navn": "ASP Isotopes"
+    },
+    {
+     "cx": 412.6,
+     "cy": 74.6,
+     "r": 5.3,
+     "tema": "energi",
+     "navn": "Nextracker"
+    },
+    {
+     "cx": 358.8,
+     "cy": 130.7,
+     "r": 5.3,
+     "tema": "energi",
+     "navn": "Solid Power"
+    },
+    {
+     "cx": 360.6,
+     "cy": 52.0,
+     "r": 5.2,
+     "tema": "energi",
+     "navn": "NextEra Energy"
+    },
+    {
+     "cx": 413.2,
+     "cy": 112.1,
+     "r": 5.2,
+     "tema": "energi",
+     "navn": "Shoals Technologies"
+    },
+    {
+     "cx": 332.8,
+     "cy": 103.1,
+     "r": 5.2,
+     "tema": "energi",
+     "navn": "Vista Energy"
+    },
+    {
+     "cx": 398.9,
+     "cy": 54.8,
+     "r": 5.1,
+     "tema": "energi",
+     "navn": "Bloom Energy"
+    },
+    {
+     "cx": 383.3,
+     "cy": 136.0,
+     "r": 5.0,
+     "tema": "energi",
+     "navn": "Amprius Technologies"
+    },
+    {
+     "cx": 339.3,
+     "cy": 64.3,
+     "r": 5.0,
+     "tema": "energi",
+     "navn": "DTE Energy"
+    },
+    {
+     "cx": 420.5,
+     "cy": 88.2,
+     "r": 5.0,
+     "tema": "energi",
+     "navn": "GE Vernova"
+    },
+    {
+     "cx": 343.6,
+     "cy": 125.9,
+     "r": 5.0,
+     "tema": "energi",
+     "navn": "American Electric Power"
+    },
+    {
+     "cx": 375.2,
+     "cy": 45.3,
+     "r": 5.0,
+     "tema": "energi",
+     "navn": "Array Technologies"
+    },
+    {
+     "cx": 406.7,
+     "cy": 126.9,
+     "r": 5.0,
+     "tema": "energi",
+     "navn": "BWX Technologies"
+    },
+    {
+     "cx": 327.6,
+     "cy": 87.6,
+     "r": 5.0,
+     "tema": "energi",
+     "navn": "CMS Energy"
+    },
+    {
+     "cx": 413.3,
+     "cy": 62.9,
+     "r": 5.0,
+     "tema": "energi",
+     "navn": "Canadian Solar"
+    },
+    {
+     "cx": 366.3,
+     "cy": 139.7,
+     "r": 5.0,
+     "tema": "energi",
+     "navn": "FirstEnergy"
+    },
+    {
+     "cx": 348.9,
+     "cy": 50.5,
+     "r": 5.0,
+     "tema": "energi",
+     "navn": "Southern Company"
+    },
+    {
+     "cx": 422.7,
+     "cy": 105.1,
+     "r": 4.9,
+     "tema": "energi",
+     "navn": "Nano Nuclear Energy"
+    },
+    {
+     "cx": 330.6,
+     "cy": 114.8,
+     "r": 4.8,
+     "tema": "energi",
+     "navn": "EQT"
+    },
+    {
+     "cx": 392.5,
+     "cy": 44.9,
+     "r": 4.8,
+     "tema": "energi",
+     "navn": "Quanta Services"
+    },
+    {
+     "cx": 394.1,
+     "cy": 139.0,
+     "r": 4.8,
+     "tema": "energi",
+     "navn": "Oklo"
+    },
+    {
+     "cx": 328.8,
+     "cy": 70.1,
+     "r": 4.8,
+     "tema": "energi",
+     "navn": "Range Resources"
+    },
+    {
+     "cx": 424.2,
+     "cy": 76.8,
+     "r": 4.7,
+     "tema": "energi",
+     "navn": "Atlas Energy Solutions"
+    },
+    {
+     "cx": 348.8,
+     "cy": 136.8,
+     "r": 4.6,
+     "tema": "energi",
+     "navn": "Eos Energy"
+    },
+    {
+     "cx": 364.0,
+     "cy": 40.9,
+     "r": 4.6,
+     "tema": "energi",
+     "navn": "ITT"
+    },
+    {
+     "cx": 417.9,
+     "cy": 122.5,
+     "r": 4.6,
+     "tema": "energi",
+     "navn": "Primoris Services"
+    },
+    {
+     "cx": 322.4,
+     "cy": 98.6,
+     "r": 4.5,
+     "tema": "energi",
+     "navn": "Lightbridge"
+    },
+    {
+     "cx": 409.6,
+     "cy": 51.4,
+     "r": 4.5,
+     "tema": "energi",
+     "navn": "Tantalus Systems"
+    },
+    {
+     "cx": 377.0,
+     "cy": 145.7,
+     "r": 4.5,
+     "tema": "energi",
+     "navn": "Clearway Energy"
+    },
+    {
+     "cx": 337.1,
+     "cy": 53.5,
+     "r": 4.5,
+     "tema": "energi",
+     "navn": "Electrovaya"
+    },
+    {
+     "cx": 429.3,
+     "cy": 94.8,
+     "r": 4.5,
+     "tema": "energi",
+     "navn": "Fluor"
+    },
+    {
+     "cx": 332.8,
+     "cy": 126.9,
+     "r": 4.5,
+     "tema": "energi",
+     "navn": "Mirion Technologies"
+    },
+    {
+     "cx": 383.3,
+     "cy": 37.4,
+     "r": 4.5,
+     "tema": "energi",
+     "navn": "Plug Power"
+    },
+    {
+     "cx": 406.4,
+     "cy": 137.6,
+     "r": 4.5,
+     "tema": "energi",
+     "navn": "Solaris Energy Infrastructure"
+    },
+    {
+     "cx": 320.7,
+     "cy": 79.5,
+     "r": 4.4,
+     "tema": "energi",
+     "navn": "Microvast"
+    },
+    {
+     "cx": 423.8,
+     "cy": 64.4,
+     "r": 4.4,
+     "tema": "energi",
+     "navn": "NuScale Power"
+    },
+    {
+     "cx": 357.6,
+     "cy": 145.6,
+     "r": 4.3,
+     "tema": "energi",
+     "navn": "Flowserve"
+    },
+    {
+     "cx": 351.5,
+     "cy": 40.4,
+     "r": 4.3,
+     "tema": "energi",
+     "navn": "Terrestrial Energy"
+    },
+    {
+     "cx": 427.5,
+     "cy": 114.3,
+     "r": 4.1,
+     "tema": "energi",
+     "navn": "Canadian Natural Resources"
+    },
+    {
+     "cx": 321.0,
+     "cy": 111.1,
+     "r": 4.1,
+     "tema": "energi",
+     "navn": "Caterpillar"
+    },
+    {
+     "cx": 402.0,
+     "cy": 41.2,
+     "r": 4.0,
+     "tema": "energi",
+     "navn": "Cummins"
+    },
+    {
+     "cx": 389.5,
+     "cy": 148.0,
+     "r": 4.0,
+     "tema": "energi",
+     "navn": "Terex"
+    },
+    {
+     "cx": 326.3,
+     "cy": 60.4,
+     "r": 3.9,
+     "tema": "energi",
+     "navn": "Terra Innovatum"
+    },
+    {
+     "cx": 432.5,
+     "cy": 82.4,
+     "r": 3.4,
+     "tema": "energi",
+     "navn": "NeoVolta"
+    },
+    {
+     "cx": 125.0,
+     "cy": 312.0,
+     "r": 8.1,
+     "tema": "datacenter",
+     "navn": "Sivers Semiconductors"
+    },
+    {
+     "cx": 114.8,
+     "cy": 321.3,
+     "r": 7.5,
+     "tema": "datacenter",
+     "navn": "HUBER+SUHNER"
+    },
+    {
+     "cx": 126.4,
+     "cy": 295.8,
+     "r": 6.8,
+     "tema": "datacenter",
+     "navn": "IREN"
+    },
+    {
+     "cx": 136.2,
+     "cy": 326.6,
+     "r": 6.8,
+     "tema": "datacenter",
+     "navn": "Oracle"
+    },
+    {
+     "cx": 105.1,
+     "cy": 308.5,
+     "r": 6.6,
+     "tema": "datacenter",
+     "navn": "POET Technologies"
+    },
+    {
+     "cx": 143.5,
+     "cy": 300.2,
+     "r": 6.6,
+     "tema": "datacenter",
+     "navn": "TSS"
+    },
+    {
+     "cx": 118.9,
+     "cy": 334.6,
+     "r": 6.6,
+     "tema": "datacenter",
+     "navn": "Applied Optoelectronics"
+    },
+    {
+     "cx": 113.5,
+     "cy": 289.9,
+     "r": 6.5,
+     "tema": "datacenter",
+     "navn": "Fabrinet"
+    },
+    {
+     "cx": 149.6,
+     "cy": 321.0,
+     "r": 6.3,
+     "tema": "datacenter",
+     "navn": "MACOM"
+    },
+    {
+     "cx": 99.7,
+     "cy": 322.4,
+     "r": 6.1,
+     "tema": "datacenter",
+     "navn": "Celestica"
+    },
+    {
+     "cx": 137.0,
+     "cy": 286.3,
+     "r": 6.0,
+     "tema": "datacenter",
+     "navn": "Core Scientific"
+    },
+    {
+     "cx": 133.8,
+     "cy": 340.1,
+     "r": 5.8,
+     "tema": "datacenter",
+     "navn": "Lightwave Logic"
+    },
+    {
+     "cx": 98.7,
+     "cy": 296.8,
+     "r": 5.7,
+     "tema": "datacenter",
+     "navn": "nLight"
+    },
+    {
+     "cx": 155.5,
+     "cy": 305.3,
+     "r": 5.7,
+     "tema": "datacenter",
+     "navn": "Ciena"
+    },
+    {
+     "cx": 106.5,
+     "cy": 338.3,
+     "r": 5.7,
+     "tema": "datacenter",
+     "navn": "Super Micro Computer"
+    },
+    {
+     "cx": 120.8,
+     "cy": 279.3,
+     "r": 5.7,
+     "tema": "datacenter",
+     "navn": "ams OSRAM"
+    },
+    {
+     "cx": 150.8,
+     "cy": 333.7,
+     "r": 5.5,
+     "tema": "datacenter",
+     "navn": "Cipher Mining"
+    },
+    {
+     "cx": 90.5,
+     "cy": 313.4,
+     "r": 5.5,
+     "tema": "datacenter",
+     "navn": "Fermi"
+    },
+    {
+     "cx": 150.0,
+     "cy": 287.1,
+     "r": 5.5,
+     "tema": "datacenter",
+     "navn": "Sumitomo Electric Industries"
+    },
+    {
+     "cx": 123.3,
+     "cy": 347.9,
+     "r": 5.4,
+     "tema": "datacenter",
+     "navn": "Corning"
+    },
+    {
+     "cx": 101.5,
+     "cy": 283.9,
+     "r": 5.3,
+     "tema": "datacenter",
+     "navn": "Credo"
+    },
+    {
+     "cx": 162.0,
+     "cy": 317.0,
+     "r": 5.3,
+     "tema": "datacenter",
+     "navn": "Jacobs Solutions"
+    },
+    {
+     "cx": 93.8,
+     "cy": 333.7,
+     "r": 5.3,
+     "tema": "datacenter",
+     "navn": "Coherent"
+    },
+    {
+     "cx": 133.5,
+     "cy": 274.3,
+     "r": 5.3,
+     "tema": "datacenter",
+     "navn": "Lumen"
+    },
+    {
+     "cx": 144.5,
+     "cy": 346.0,
+     "r": 5.3,
+     "tema": "datacenter",
+     "navn": "Lumentum"
+    },
+    {
+     "cx": 87.0,
+     "cy": 299.9,
+     "r": 5.2,
+     "tema": "datacenter",
+     "navn": "CoreWeave"
+    },
+    {
+     "cx": 161.7,
+     "cy": 295.0,
+     "r": 5.2,
+     "tema": "datacenter",
+     "navn": "WhiteFiber"
+    },
+    {
+     "cx": 109.2,
+     "cy": 349.8,
+     "r": 5.1,
+     "tema": "datacenter",
+     "navn": "Sterling Infrastructure"
+    },
+    {
+     "cx": 110.9,
+     "cy": 272.9,
+     "r": 5.0,
+     "tema": "datacenter",
+     "navn": "IPG Photonics"
+    },
+    {
+     "cx": 162.3,
+     "cy": 331.6,
+     "r": 5.0,
+     "tema": "datacenter",
+     "navn": "Nebius"
+    },
+    {
+     "cx": 83.8,
+     "cy": 322.9,
+     "r": 5.0,
+     "tema": "datacenter",
+     "navn": "SharonAI"
+    },
+    {
+     "cx": 148.3,
+     "cy": 275.7,
+     "r": 5.0,
+     "tema": "datacenter",
+     "navn": "One Stop Systems"
+    },
+    {
+     "cx": 132.4,
+     "cy": 355.0,
+     "r": 4.8,
+     "tema": "datacenter",
+     "navn": "Viavi Solutions"
+    },
+    {
+     "cx": 90.1,
+     "cy": 285.0,
+     "r": 4.7,
+     "tema": "datacenter",
+     "navn": "Flex"
+    },
+    {
+     "cx": 169.4,
+     "cy": 308.3,
+     "r": 4.5,
+     "tema": "datacenter",
+     "navn": "Microsoft"
+    },
+    {
+     "cx": 94.5,
+     "cy": 345.0,
+     "r": 4.5,
+     "tema": "datacenter",
+     "navn": "Semtech"
+    },
+    {
+     "cx": 125.2,
+     "cy": 266.7,
+     "r": 4.3,
+     "tema": "datacenter",
+     "navn": "Cisco Systems"
+    },
+    {
+     "cx": 155.7,
+     "cy": 345.9,
+     "r": 4.3,
+     "tema": "datacenter",
+     "navn": "Keysight Technologies"
+    },
+    {
+     "cx": 79.1,
+     "cy": 307.7,
+     "r": 4.3,
+     "tema": "datacenter",
+     "navn": "TeraWulf"
+    },
+    {
+     "cx": 162.0,
+     "cy": 283.9,
+     "r": 4.1,
+     "tema": "datacenter",
+     "navn": "Amphenol"
+    },
+    {
+     "cx": 116.6,
+     "cy": 358.0,
+     "r": 4.1,
+     "tema": "datacenter",
+     "navn": "Astera Labs"
+    },
+    {
+     "cx": 99.9,
+     "cy": 272.1,
+     "r": 4.1,
+     "tema": "datacenter",
+     "navn": "Comfort Systems USA"
+    },
+    {
+     "cx": 170.8,
+     "cy": 324.6,
+     "r": 4.1,
+     "tema": "datacenter",
+     "navn": "Jabil"
+    },
+    {
+     "cx": 82.5,
+     "cy": 333.8,
+     "r": 3.9,
+     "tema": "datacenter",
+     "navn": "Applied Digital"
+    },
+    {
+     "cx": 141.7,
+     "cy": 266.9,
+     "r": 3.7,
+     "tema": "datacenter",
+     "navn": "Dell"
+    },
+    {
+     "cx": 143.2,
+     "cy": 356.8,
+     "r": 3.7,
+     "tema": "datacenter",
+     "navn": "Sanmina"
+    },
+    {
+     "cx": 81.0,
+     "cy": 291.2,
+     "r": 3.6,
+     "tema": "datacenter",
+     "navn": "Arista Networks"
+    },
+    {
+     "cx": 375.0,
+     "cy": 312.0,
+     "r": 9.9,
+     "tema": "platforme",
+     "navn": "SoftBank Group"
+    },
+    {
+     "cx": 363.0,
+     "cy": 323.0,
+     "r": 9.0,
+     "tema": "platforme",
+     "navn": "Carvana"
+    },
+    {
+     "cx": 376.7,
+     "cy": 292.7,
+     "r": 8.6,
+     "tema": "platforme",
+     "navn": "AppLovin"
+    },
+    {
+     "cx": 388.3,
+     "cy": 329.4,
+     "r": 8.3,
+     "tema": "platforme",
+     "navn": "Sea"
+    },
+    {
+     "cx": 351.8,
+     "cy": 307.9,
+     "r": 6.8,
+     "tema": "platforme",
+     "navn": "Opendoor"
+    },
+    {
+     "cx": 396.0,
+     "cy": 298.6,
+     "r": 6.3,
+     "tema": "platforme",
+     "navn": "AUTO1 Group"
+    },
+    {
+     "cx": 368.2,
+     "cy": 337.3,
+     "r": 6.2,
+     "tema": "platforme",
+     "navn": "Roblox"
+    },
+    {
+     "cx": 362.4,
+     "cy": 287.8,
+     "r": 5.9,
+     "tema": "platforme",
+     "navn": "Amazon"
+    },
+    {
+     "cx": 401.6,
+     "cy": 321.7,
+     "r": 5.8,
+     "tema": "platforme",
+     "navn": "Grab"
+    },
+    {
+     "cx": 348.0,
+     "cy": 323.2,
+     "r": 5.6,
+     "tema": "platforme",
+     "navn": "Coupang"
+    },
+    {
+     "cx": 387.8,
+     "cy": 284.7,
+     "r": 5.6,
+     "tema": "platforme",
+     "navn": "MercadoLibre"
+    },
+    {
+     "cx": 384.3,
+     "cy": 341.6,
+     "r": 5.6,
+     "tema": "platforme",
+     "navn": "Reddit"
+    },
+    {
+     "cx": 347.5,
+     "cy": 296.1,
+     "r": 5.3,
+     "tema": "platforme",
+     "navn": "HelloFresh"
+    },
+    {
+     "cx": 406.7,
+     "cy": 305.0,
+     "r": 5.0,
+     "tema": "platforme",
+     "navn": "Uber"
+    },
+    {
+     "cx": 355.9,
+     "cy": 339.1,
+     "r": 5.0,
+     "tema": "platforme",
+     "navn": "International Workplace Group"
+    },
+    {
+     "cx": 370.7,
+     "cy": 278.5,
+     "r": 4.9,
+     "tema": "platforme",
+     "navn": "Chewy"
+    },
+    {
+     "cx": 401.3,
+     "cy": 334.2,
+     "r": 4.7,
+     "tema": "platforme",
+     "navn": "Prosus"
+    },
+    {
+     "cx": 340.0,
+     "cy": 313.4,
+     "r": 4.6,
+     "tema": "platforme",
+     "navn": "Meituan"
+    },
+    {
+     "cx": 400.2,
+     "cy": 286.9,
+     "r": 4.6,
+     "tema": "platforme",
+     "navn": "Netflix"
+    },
+    {
+     "cx": 374.0,
+     "cy": 348.0,
+     "r": 4.1,
+     "tema": "platforme",
+     "navn": "Allegro.eu"
+    },
+    {
+     "cx": 351.6,
+     "cy": 284.0,
+     "r": 4.1,
+     "tema": "platforme",
+     "navn": "DoorDash"
+    },
+    {
+     "cx": 411.6,
+     "cy": 316.9,
+     "r": 4.1,
+     "tema": "platforme",
+     "navn": "WEBTOON Entertainment"
+    },
+    {
+     "cx": 344.4,
+     "cy": 333.3,
+     "r": 4.0,
+     "tema": "platforme",
+     "navn": "Spotify"
+    },
+    {
+     "cx": 383.3,
+     "cy": 275.2,
+     "r": 3.9,
+     "tema": "platforme",
+     "navn": "Coursera"
+    },
+    {
+     "cx": 393.9,
+     "cy": 345.1,
+     "r": 3.9,
+     "tema": "platforme",
+     "navn": "FuboTV"
+    },
+    {
+     "cx": 338.3,
+     "cy": 300.3,
+     "r": 3.9,
+     "tema": "platforme",
+     "navn": "MNTN"
+    },
+    {
+     "cx": 410.3,
+     "cy": 295.7,
+     "r": 3.9,
+     "tema": "platforme",
+     "navn": "PDD Holdings"
+    },
+    {
+     "cx": 359.8,
+     "cy": 348.2,
+     "r": 3.7,
+     "tema": "platforme",
+     "navn": "Alibaba Group"
+    },
+    {
+     "cx": 361.6,
+     "cy": 274.7,
+     "r": 3.7,
+     "tema": "platforme",
+     "navn": "Meta Platforms"
+    },
+    {
+     "cx": 410.4,
+     "cy": 330.6,
+     "r": 3.7,
+     "tema": "platforme",
+     "navn": "Zeta Global Holdings"
+    },
+    {
+     "cx": 336.1,
+     "cy": 322.3,
+     "r": 3.2,
+     "tema": "platforme",
+     "navn": "Apple"
+    },
+    {
+     "cx": 125.0,
+     "cy": 532.0,
+     "r": 13.1,
+     "tema": "rumfart",
+     "navn": "SpaceX"
+    },
+    {
+     "cx": 112.0,
+     "cy": 543.9,
+     "r": 6.6,
+     "tema": "rumfart",
+     "navn": "Planet Labs"
+    },
+    {
+     "cx": 126.7,
+     "cy": 512.6,
+     "r": 6.5,
+     "tema": "rumfart",
+     "navn": "Intuitive Machines"
+    },
+    {
+     "cx": 137.9,
+     "cy": 548.8,
+     "r": 6.5,
+     "tema": "rumfart",
+     "navn": "AST SpaceMobile"
+    },
+    {
+     "cx": 102.7,
+     "cy": 528.1,
+     "r": 6.2,
+     "tema": "rumfart",
+     "navn": "BlackSky"
+    },
+    {
+     "cx": 145.3,
+     "cy": 519.1,
+     "r": 6.2,
+     "tema": "rumfart",
+     "navn": "York Space Systems"
+    },
+    {
+     "cx": 118.4,
+     "cy": 556.5,
+     "r": 6.1,
+     "tema": "rumfart",
+     "navn": "MDA Space"
+    },
+    {
+     "cx": 112.8,
+     "cy": 508.5,
+     "r": 6.1,
+     "tema": "rumfart",
+     "navn": "Rocket Lab"
+    },
+    {
+     "cx": 150.8,
+     "cy": 541.4,
+     "r": 5.5,
+     "tema": "rumfart",
+     "navn": "Redwire"
+    },
+    {
+     "cx": 98.7,
+     "cy": 542.8,
+     "r": 5.5,
+     "tema": "rumfart",
+     "navn": "Firefly Aerospace"
+    },
+    {
+     "cx": 137.4,
+     "cy": 505.5,
+     "r": 5.2,
+     "tema": "rumfart",
+     "navn": "Satellogic"
+    },
+    {
+     "cx": 134.0,
+     "cy": 560.6,
+     "r": 5.1,
+     "tema": "rumfart",
+     "navn": "Starfighters Space"
+    },
+    {
+     "cx": 98.4,
+     "cy": 516.6,
+     "r": 5.0,
+     "tema": "rumfart",
+     "navn": "Spire Global"
+    },
+    {
+     "cx": 155.7,
+     "cy": 525.2,
+     "r": 4.9,
+     "tema": "rumfart",
+     "navn": "Voyager Technologies"
+    },
+    {
+     "cx": 106.6,
+     "cy": 558.2,
+     "r": 4.5,
+     "tema": "rumfart",
+     "navn": "HawkEye 360"
+    },
+    {
+     "cx": 120.8,
+     "cy": 499.6,
+     "r": 4.5,
+     "tema": "rumfart",
+     "navn": "Howmet Aerospace"
+    },
+    {
+     "cx": 150.3,
+     "cy": 553.3,
+     "r": 3.9,
+     "tema": "rumfart",
+     "navn": "Karman Space & Defense"
+    },
+    {
+     "cx": 91.6,
+     "cy": 533.4,
+     "r": 3.4,
+     "tema": "rumfart",
+     "navn": "Iridium Communications"
+    },
+    {
+     "cx": 375.0,
+     "cy": 532.0,
+     "r": 10.0,
+     "tema": "fysisk-ai",
+     "navn": "Tesla"
+    },
+    {
+     "cx": 363.8,
+     "cy": 542.3,
+     "r": 7.3,
+     "tema": "fysisk-ai",
+     "navn": "Ford Motor"
+    },
+    {
+     "cx": 376.5,
+     "cy": 514.5,
+     "r": 6.9,
+     "tema": "fysisk-ai",
+     "navn": "Raspberry Pi"
+    },
+    {
+     "cx": 386.9,
+     "cy": 547.5,
+     "r": 6.8,
+     "tema": "fysisk-ai",
+     "navn": "Merlin"
+    },
+    {
+     "cx": 354.1,
+     "cy": 528.3,
+     "r": 6.5,
+     "tema": "fysisk-ai",
+     "navn": "Joby Aviation"
+    },
+    {
+     "cx": 394.1,
+     "cy": 519.9,
+     "r": 5.9,
+     "tema": "fysisk-ai",
+     "navn": "Aeva Technologies"
+    },
+    {
+     "cx": 368.8,
+     "cy": 555.0,
+     "r": 5.9,
+     "tema": "fysisk-ai",
+     "navn": "Symbotic"
+    },
+    {
+     "cx": 363.5,
+     "cy": 509.9,
+     "r": 5.3,
+     "tema": "fysisk-ai",
+     "navn": "Pony AI"
+    },
+    {
+     "cx": 399.3,
+     "cy": 540.9,
+     "r": 5.2,
+     "tema": "fysisk-ai",
+     "navn": "Archer Aviation"
+    },
+    {
+     "cx": 350.3,
+     "cy": 542.2,
+     "r": 5.2,
+     "tema": "fysisk-ai",
+     "navn": "Shelly"
+    },
+    {
+     "cx": 386.7,
+     "cy": 507.0,
+     "r": 5.2,
+     "tema": "fysisk-ai",
+     "navn": "Ondas Holdings"
+    },
+    {
+     "cx": 383.5,
+     "cy": 559.1,
+     "r": 5.0,
+     "tema": "fysisk-ai",
+     "navn": "MicroVision"
+    },
+    {
+     "cx": 349.7,
+     "cy": 517.4,
+     "r": 4.9,
+     "tema": "fysisk-ai",
+     "navn": "Unusual Machines"
+    },
+    {
+     "cx": 404.2,
+     "cy": 525.6,
+     "r": 4.8,
+     "tema": "fysisk-ai",
+     "navn": "Swarmer"
+    },
+    {
+     "cx": 357.4,
+     "cy": 557.0,
+     "r": 4.7,
+     "tema": "fysisk-ai",
+     "navn": "Kodiak AI"
+    },
+    {
+     "cx": 371.0,
+     "cy": 501.1,
+     "r": 4.6,
+     "tema": "fysisk-ai",
+     "navn": "Ouster"
+    },
+    {
+     "cx": 399.3,
+     "cy": 552.5,
+     "r": 4.6,
+     "tema": "fysisk-ai",
+     "navn": "WeRide"
+    },
+    {
+     "cx": 342.6,
+     "cy": 533.3,
+     "r": 4.5,
+     "tema": "fysisk-ai",
+     "navn": "Li Auto"
+    },
+    {
+     "cx": 398.4,
+     "cy": 508.7,
+     "r": 4.5,
+     "tema": "fysisk-ai",
+     "navn": "General Motors"
+    },
+    {
+     "cx": 374.1,
+     "cy": 565.5,
+     "r": 4.5,
+     "tema": "fysisk-ai",
+     "navn": "Serve Robotics"
+    },
+    {
+     "cx": 353.2,
+     "cy": 505.8,
+     "r": 4.3,
+     "tema": "fysisk-ai",
+     "navn": "Horizon Robotics"
+    },
+    {
+     "cx": 409.3,
+     "cy": 536.6,
+     "r": 4.3,
+     "tema": "fysisk-ai",
+     "navn": "Kraken Robotics"
+    },
+    {
+     "cx": 346.2,
+     "cy": 552.0,
+     "r": 4.1,
+     "tema": "fysisk-ai",
+     "navn": "Aurora Innovation"
+    },
+    {
+     "cx": 383.0,
+     "cy": 497.3,
+     "r": 4.1,
+     "tema": "fysisk-ai",
+     "navn": "Churchill Capital"
+    },
+    {
+     "cx": 392.9,
+     "cy": 563.2,
+     "r": 3.7,
+     "tema": "fysisk-ai",
+     "navn": "Rivian Automotive"
+    },
+    {
+     "cx": 340.4,
+     "cy": 521.0,
+     "r": 3.6,
+     "tema": "fysisk-ai",
+     "navn": "Airo Group"
+    },
+    {
+     "cx": 408.3,
+     "cy": 516.6,
+     "r": 3.6,
+     "tema": "fysisk-ai",
+     "navn": "Lantronix"
+    },
+    {
+     "cx": 125.0,
+     "cy": 752.0,
+     "r": 6.6,
+     "tema": "raastoffer",
+     "navn": "United States Antimony"
+    },
+    {
+     "cx": 116.3,
+     "cy": 760.0,
+     "r": 6.5,
+     "tema": "raastoffer",
+     "navn": "Ero Copper"
+    },
+    {
+     "cx": 126.2,
+     "cy": 737.8,
+     "r": 6.1,
+     "tema": "raastoffer",
+     "navn": "Huntsman"
+    },
+    {
+     "cx": 134.9,
+     "cy": 764.9,
+     "r": 6.1,
+     "tema": "raastoffer",
+     "navn": "Lynas Rare Earths"
+    },
+    {
+     "cx": 107.3,
+     "cy": 748.9,
+     "r": 5.8,
+     "tema": "raastoffer",
+     "navn": "Critical Metals"
+    },
+    {
+     "cx": 141.4,
+     "cy": 741.6,
+     "r": 5.7,
+     "tema": "raastoffer",
+     "navn": "Energy Fuels"
+    },
+    {
+     "cx": 119.6,
+     "cy": 772.1,
+     "r": 5.6,
+     "tema": "raastoffer",
+     "navn": "NioCorp"
+    },
+    {
+     "cx": 114.9,
+     "cy": 732.5,
+     "r": 5.5,
+     "tema": "raastoffer",
+     "navn": "First Majestic Silver"
+    },
+    {
+     "cx": 146.8,
+     "cy": 759.9,
+     "r": 5.5,
+     "tema": "raastoffer",
+     "navn": "Celanese"
+    },
+    {
+     "cx": 102.6,
+     "cy": 761.3,
+     "r": 5.5,
+     "tema": "raastoffer",
+     "navn": "Pan American Silver"
+    },
+    {
+     "cx": 135.7,
+     "cy": 729.1,
+     "r": 5.3,
+     "tema": "raastoffer",
+     "navn": "Chemours"
+    },
+    {
+     "cx": 132.8,
+     "cy": 777.0,
+     "r": 5.3,
+     "tema": "raastoffer",
+     "navn": "Hecla Mining"
+    },
+    {
+     "cx": 101.5,
+     "cy": 738.4,
+     "r": 5.3,
+     "tema": "raastoffer",
+     "navn": "Coeur Mining"
+    },
+    {
+     "cx": 152.4,
+     "cy": 746.0,
+     "r": 5.3,
+     "tema": "raastoffer",
+     "navn": "Freeport-McMoRan"
+    },
+    {
+     "cx": 108.4,
+     "cy": 775.6,
+     "r": 5.1,
+     "tema": "raastoffer",
+     "navn": "MP Materials"
+    },
+    {
+     "cx": 121.2,
+     "cy": 722.6,
+     "r": 5.0,
+     "tema": "raastoffer",
+     "navn": "Capstone Copper"
+    },
+    {
+     "cx": 148.2,
+     "cy": 771.6,
+     "r": 5.0,
+     "tema": "raastoffer",
+     "navn": "Albemarle"
+    },
+    {
+     "cx": 93.9,
+     "cy": 753.3,
+     "r": 5.0,
+     "tema": "raastoffer",
+     "navn": "Arkema"
+    },
+    {
+     "cx": 147.5,
+     "cy": 729.6,
+     "r": 5.0,
+     "tema": "raastoffer",
+     "navn": "Sigma Lithium"
+    },
+    {
+     "cx": 123.5,
+     "cy": 784.4,
+     "r": 4.9,
+     "tema": "raastoffer",
+     "navn": "American Resources"
+    },
+    {
+     "cx": 103.8,
+     "cy": 726.6,
+     "r": 4.7,
+     "tema": "raastoffer",
+     "navn": "Idaho Strategic Resources"
+    },
+    {
+     "cx": 158.4,
+     "cy": 756.5,
+     "r": 4.6,
+     "tema": "raastoffer",
+     "navn": "Solstice Advanced Materials"
+    },
+    {
+     "cx": 96.9,
+     "cy": 771.6,
+     "r": 4.6,
+     "tema": "raastoffer",
+     "navn": "Southern Copper"
+    },
+    {
+     "cx": 132.6,
+     "cy": 718.0,
+     "r": 4.5,
+     "tema": "raastoffer",
+     "navn": "American Battery Technology"
+    },
+    {
+     "cx": 142.6,
+     "cy": 782.7,
+     "r": 4.5,
+     "tema": "raastoffer",
+     "navn": "Lithium Americas"
+    },
+    {
+     "cx": 90.8,
+     "cy": 741.1,
+     "r": 4.5,
+     "tema": "raastoffer",
+     "navn": "Newmont"
+    },
+    {
+     "cx": 158.0,
+     "cy": 736.7,
+     "r": 4.5,
+     "tema": "raastoffer",
+     "navn": "Standard Lithium"
+    },
+    {
+     "cx": 110.8,
+     "cy": 786.0,
+     "r": 4.4,
+     "tema": "raastoffer",
+     "navn": "USA Rare Earth"
+    },
+    {
+     "cx": 112.4,
+     "cy": 716.9,
+     "r": 4.3,
+     "tema": "raastoffer",
+     "navn": "Almonty Industries"
+    },
+    {
+     "cx": 158.5,
+     "cy": 769.6,
+     "r": 4.3,
+     "tema": "raastoffer",
+     "navn": "Perpetua Resources"
+    },
+    {
+     "cx": 88.0,
+     "cy": 761.8,
+     "r": 4.3,
+     "tema": "raastoffer",
+     "navn": "Trekor Metals"
+    },
+    {
+     "cx": 145.9,
+     "cy": 719.5,
+     "r": 4.1,
+     "tema": "raastoffer",
+     "navn": "The Metals Company"
+    },
+    {
+     "cx": 131.6,
+     "cy": 790.5,
+     "r": 4.0,
+     "tema": "raastoffer",
+     "navn": "Trilogy Metals"
+    },
+    {
+     "cx": 93.8,
+     "cy": 727.8,
+     "r": 3.9,
+     "tema": "raastoffer",
+     "navn": "Ivanhoe Electric"
+    },
+    {
+     "cx": 164.7,
+     "cy": 748.7,
+     "r": 3.9,
+     "tema": "raastoffer",
+     "navn": "Neo Performance Materials"
+    },
+    {
+     "cx": 97.7,
+     "cy": 781.5,
+     "r": 3.7,
+     "tema": "raastoffer",
+     "navn": "Northern Dynasty Minerals"
+    },
+    {
+     "cx": 375.0,
+     "cy": 752.0,
+     "r": 7.3,
+     "tema": "fintech",
+     "navn": "SoFi"
+    },
+    {
+     "cx": 365.7,
+     "cy": 760.6,
+     "r": 6.9,
+     "tema": "fintech",
+     "navn": "Klarna"
+    },
+    {
+     "cx": 376.3,
+     "cy": 736.7,
+     "r": 6.8,
+     "tema": "fintech",
+     "navn": "Upstart"
+    },
+    {
+     "cx": 385.5,
+     "cy": 765.7,
+     "r": 6.1,
+     "tema": "fintech",
+     "navn": "Shift4 Payments"
+    },
+    {
+     "cx": 356.4,
+     "cy": 748.7,
+     "r": 5.9,
+     "tema": "fintech",
+     "navn": "Root"
+    },
+    {
+     "cx": 392.1,
+     "cy": 741.1,
+     "r": 5.6,
+     "tema": "fintech",
+     "navn": "Lemonade"
+    },
+    {
+     "cx": 369.4,
+     "cy": 772.7,
+     "r": 5.3,
+     "tema": "fintech",
+     "navn": "Chime Financial"
+    },
+    {
+     "cx": 364.6,
+     "cy": 732.0,
+     "r": 5.3,
+     "tema": "fintech",
+     "navn": "Webull"
+    },
+    {
+     "cx": 397.1,
+     "cy": 760.1,
+     "r": 5.2,
+     "tema": "fintech",
+     "navn": "Nu"
+    },
+    {
+     "cx": 352.4,
+     "cy": 761.3,
+     "r": 4.9,
+     "tema": "fintech",
+     "navn": "Robinhood"
+    },
+    {
+     "cx": 385.7,
+     "cy": 729.2,
+     "r": 4.3,
+     "tema": "fintech",
+     "navn": "Figure Technology Solutions"
+    },
+    {
+     "cx": 383.4,
+     "cy": 776.6,
+     "r": 4.1,
+     "tema": "fintech",
+     "navn": "Global-e"
+    },
+    {
+     "cx": 352.1,
+     "cy": 738.8,
+     "r": 4.0,
+     "tema": "fintech",
+     "navn": "Affirm"
+    },
+    {
+     "cx": 401.4,
+     "cy": 746.2,
+     "r": 4.0,
+     "tema": "fintech",
+     "navn": "Futu"
+    },
+    {
+     "cx": 359.1,
+     "cy": 774.6,
+     "r": 4.0,
+     "tema": "fintech",
+     "navn": "Kaspi.kz"
+    },
+    {
+     "cx": 371.4,
+     "cy": 724.1,
+     "r": 3.9,
+     "tema": "fintech",
+     "navn": "Ategrity Specialty Holdings"
+    },
+    {
+     "cx": 396.9,
+     "cy": 770.4,
+     "r": 3.6,
+     "tema": "fintech",
+     "navn": "Pagaya Technologies"
+    },
+    {
+     "cx": 346.0,
+     "cy": 753.2,
+     "r": 3.6,
+     "tema": "fintech",
+     "navn": "dLocal"
+    },
+    {
+     "cx": 125.0,
+     "cy": 972.0,
+     "r": 6.4,
+     "tema": "krypto",
+     "navn": "Bitdeer Technologies Group"
+    },
+    {
+     "cx": 116.5,
+     "cy": 979.8,
+     "r": 6.4,
+     "tema": "krypto",
+     "navn": "CleanSpark"
+    },
+    {
+     "cx": 126.2,
+     "cy": 957.9,
+     "r": 6.3,
+     "tema": "krypto",
+     "navn": "Coinbase"
+    },
+    {
+     "cx": 134.8,
+     "cy": 984.7,
+     "r": 5.9,
+     "tema": "krypto",
+     "navn": "Galaxy Digital"
+    },
+    {
+     "cx": 107.6,
+     "cy": 968.9,
+     "r": 5.8,
+     "tema": "krypto",
+     "navn": "Circle Internet Group"
+    },
+    {
+     "cx": 141.2,
+     "cy": 961.7,
+     "r": 5.6,
+     "tema": "krypto",
+     "navn": "Riot Platforms"
+    },
+    {
+     "cx": 119.7,
+     "cy": 991.8,
+     "r": 5.5,
+     "tema": "krypto",
+     "navn": "Gemini Space Station"
+    },
+    {
+     "cx": 115.0,
+     "cy": 952.8,
+     "r": 5.2,
+     "tema": "krypto",
+     "navn": "Keel Infrastructure"
+    },
+    {
+     "cx": 146.3,
+     "cy": 979.8,
+     "r": 5.0,
+     "tema": "krypto",
+     "navn": "Hyperliquid Strategies"
+    },
+    {
+     "cx": 103.3,
+     "cy": 981.0,
+     "r": 4.6,
+     "tema": "krypto",
+     "navn": "Bit Digital"
+    },
+    {
+     "cx": 135.3,
+     "cy": 950.0,
+     "r": 4.5,
+     "tema": "krypto",
+     "navn": "Bitmine Immersion Technologies"
+    },
+    {
+     "cx": 132.5,
+     "cy": 995.9,
+     "r": 4.4,
+     "tema": "krypto",
+     "navn": "CSLM Digital Asset Acquisition Corp III"
+    },
+    {
+     "cx": 102.8,
+     "cy": 959.1,
+     "r": 4.2,
+     "tema": "krypto",
+     "navn": "Bullish"
+    },
+    {
+     "cx": 150.7,
+     "cy": 966.3,
+     "r": 4.2,
+     "tema": "krypto",
+     "navn": "Sharplink"
+    },
+    {
+     "cx": 109.5,
+     "cy": 994.1,
+     "r": 4.2,
+     "tema": "krypto",
+     "navn": "Strategy"
+    },
+    {
+     "cx": 121.5,
+     "cy": 944.6,
+     "r": 4.2,
+     "tema": "krypto",
+     "navn": "Upexi"
+    },
+    {
+     "cx": 146.5,
+     "cy": 990.1,
+     "r": 3.9,
+     "tema": "krypto",
+     "navn": "DeFi Development"
+    },
+    {
+     "cx": 375.0,
+     "cy": 972.0,
+     "r": 7.5,
+     "tema": "software",
+     "navn": "SoundHound AI"
+    },
+    {
+     "cx": 366.1,
+     "cy": 980.2,
+     "r": 5.8,
+     "tema": "software",
+     "navn": "Palantir"
+    },
+    {
+     "cx": 376.2,
+     "cy": 958.0,
+     "r": 5.5,
+     "tema": "software",
+     "navn": "Unity Software"
+    },
+    {
+     "cx": 384.6,
+     "cy": 984.5,
+     "r": 5.2,
+     "tema": "software",
+     "navn": "Innodata"
+    },
+    {
+     "cx": 358.2,
+     "cy": 969.0,
+     "r": 5.0,
+     "tema": "software",
+     "navn": "Navan"
+    },
+    {
+     "cx": 390.2,
+     "cy": 962.3,
+     "r": 4.1,
+     "tema": "software",
+     "navn": "Snowflake"
+    },
+    {
+     "cx": 370.1,
+     "cy": 990.2,
+     "r": 4.1,
+     "tema": "software",
+     "navn": "Wix.com"
+    },
+    {
+     "cx": 366.0,
+     "cy": 954.6,
+     "r": 3.7,
+     "tema": "software",
+     "navn": "Figma"
+    },
+    {
+     "cx": 394.1,
+     "cy": 979.0,
+     "r": 3.7,
+     "tema": "software",
+     "navn": "Palo Alto Networks"
+    },
+    {
+     "cx": 355.6,
+     "cy": 980.0,
+     "r": 3.7,
+     "tema": "software",
+     "navn": "Rubrik"
+    },
+    {
+     "cx": 384.2,
+     "cy": 952.4,
+     "r": 3.6,
+     "tema": "software",
+     "navn": "Cloudflare"
+    },
+    {
+     "cx": 381.7,
+     "cy": 993.2,
+     "r": 3.6,
+     "tema": "software",
+     "navn": "Samsara"
+    },
+    {
+     "cx": 355.3,
+     "cy": 960.6,
+     "r": 3.4,
+     "tema": "software",
+     "navn": "Netskope"
+    },
+    {
+     "cx": 397.7,
+     "cy": 967.0,
+     "r": 3.2,
+     "tema": "software",
+     "navn": "CrowdStrike"
+    },
+    {
+     "cx": 361.4,
+     "cy": 991.4,
+     "r": 3.2,
+     "tema": "software",
+     "navn": "SailPoint"
+    },
+    {
+     "cx": 125.0,
+     "cy": 1192.0,
+     "r": 6.6,
+     "tema": "sundhed",
+     "navn": "Hims & Hers Health"
+    },
+    {
+     "cx": 116.6,
+     "cy": 1199.7,
+     "r": 6.0,
+     "tema": "sundhed",
+     "navn": "BioNTech"
+    },
+    {
+     "cx": 126.2,
+     "cy": 1178.5,
+     "r": 5.5,
+     "tema": "sundhed",
+     "navn": "Eli Lilly"
+    },
+    {
+     "cx": 134.2,
+     "cy": 1204.0,
+     "r": 5.0,
+     "tema": "sundhed",
+     "navn": "Intellia Therapeutics"
+    },
+    {
+     "cx": 108.9,
+     "cy": 1189.2,
+     "r": 4.6,
+     "tema": "sundhed",
+     "navn": "Tempus AI"
+    },
+    {
+     "cx": 139.7,
+     "cy": 1182.6,
+     "r": 4.5,
+     "tema": "sundhed",
+     "navn": "Bachem"
+    },
+    {
+     "cx": 120.2,
+     "cy": 1209.8,
+     "r": 4.3,
+     "tema": "sundhed",
+     "navn": "CRISPR Therapeutics"
+    },
+    {
+     "cx": 116.1,
+     "cy": 1174.8,
+     "r": 4.3,
+     "tema": "sundhed",
+     "navn": "Omada Health"
+    },
+    {
+     "cx": 143.9,
+     "cy": 1198.9,
+     "r": 3.9,
+     "tema": "sundhed",
+     "navn": "LifeMD"
+    },
+    {
+     "cx": 105.8,
+     "cy": 1199.9,
+     "r": 3.6,
+     "tema": "sundhed",
+     "navn": "Hinge Health"
+    },
+    {
+     "cx": 134.0,
+     "cy": 1172.7,
+     "r": 3.4,
+     "tema": "sundhed",
+     "navn": "Oscar Health"
+    },
+    {
+     "cx": 131.5,
+     "cy": 1212.8,
+     "r": 3.2,
+     "tema": "sundhed",
+     "navn": "AbCellera Biologics"
+    },
+    {
+     "cx": 375.0,
+     "cy": 1192.0,
+     "r": 6.4,
+     "tema": "kvante",
+     "navn": "Oxford Instruments"
+    },
+    {
+     "cx": 366.8,
+     "cy": 1199.5,
+     "r": 5.7,
+     "tema": "kvante",
+     "navn": "Quantum Computing"
+    },
+    {
+     "cx": 376.2,
+     "cy": 1178.9,
+     "r": 5.3,
+     "tema": "kvante",
+     "navn": "Quantinuum"
+    },
+    {
+     "cx": 384.0,
+     "cy": 1203.8,
+     "r": 5.0,
+     "tema": "kvante",
+     "navn": "D-Wave Quantum"
+    },
+    {
+     "cx": 359.0,
+     "cy": 1189.2,
+     "r": 5.0,
+     "tema": "kvante",
+     "navn": "Rigetti Computing"
+    },
+    {
+     "cx": 389.7,
+     "cy": 1182.6,
+     "r": 4.7,
+     "tema": "kvante",
+     "navn": "Infleqtion"
+    },
+    {
+     "cx": 370.2,
+     "cy": 1209.8,
+     "r": 4.4,
+     "tema": "kvante",
+     "navn": "IonQ"
+    }
+   ],
+   "klynger": [
+    {
+     "id": "chips",
+     "navn": "Chips og halvledere",
+     "kort": "Chips",
+     "x": 125.0,
+     "cy": 92.0,
+     "y1": 198,
+     "y2": 216,
+     "link": "temaer/chips.html",
+     "linjeTekst": null,
+     "fx": 4,
+     "fy": 4,
+     "fb": 242,
+     "fh": 220
+    },
+    {
+     "id": "energi",
+     "navn": "Energi og elnet",
+     "kort": "Energi",
+     "x": 375.0,
+     "cy": 92.0,
+     "y1": 198,
+     "y2": 216,
+     "link": "temaer/energi.html",
+     "linjeTekst": null,
+     "fx": 254,
+     "fy": 4,
+     "fb": 242,
+     "fh": 220
+    },
+    {
+     "id": "datacenter",
+     "navn": "Datacentre",
+     "kort": "Datacentre",
+     "x": 125.0,
+     "cy": 312.0,
+     "y1": 418,
+     "y2": 436,
+     "link": "temaer/datacenter.html",
+     "linjeTekst": null,
+     "fx": 4,
+     "fy": 224,
+     "fb": 242,
+     "fh": 220
+    },
+    {
+     "id": "platforme",
+     "navn": "Platformsøkonomi",
+     "kort": "Platforme",
+     "x": 375.0,
+     "cy": 312.0,
+     "y1": 418,
+     "y2": 436,
+     "link": "temaer/platforme.html",
+     "linjeTekst": null,
+     "fx": 254,
+     "fy": 224,
+     "fb": 242,
+     "fh": 220
+    },
+    {
+     "id": "rumfart",
+     "navn": "Rumfart",
+     "kort": "Rumfart",
+     "x": 125.0,
+     "cy": 532.0,
+     "y1": 638,
+     "y2": 656,
+     "link": "temaer/rumfart.html",
+     "linjeTekst": null,
+     "fx": 4,
+     "fy": 444,
+     "fb": 242,
+     "fh": 220
+    },
+    {
+     "id": "fysisk-ai",
+     "navn": "Robotter & fysisk AI",
+     "kort": "Robotter",
+     "x": 375.0,
+     "cy": 532.0,
+     "y1": 638,
+     "y2": 656,
+     "link": "temaer/fysisk-ai.html",
+     "linjeTekst": null,
+     "fx": 254,
+     "fy": 444,
+     "fb": 242,
+     "fh": 220
+    },
+    {
+     "id": "raastoffer",
+     "navn": "Råstoffer",
+     "kort": "Råstoffer",
+     "x": 125.0,
+     "cy": 752.0,
+     "y1": 858,
+     "y2": 876,
+     "link": "temaer/raastoffer.html",
+     "linjeTekst": null,
+     "fx": 4,
+     "fy": 664,
+     "fb": 242,
+     "fh": 220
+    },
+    {
+     "id": "fintech",
+     "navn": "Fintech",
+     "kort": "Fintech",
+     "x": 375.0,
+     "cy": 752.0,
+     "y1": 858,
+     "y2": 876,
+     "link": "temaer/fintech.html",
+     "linjeTekst": null,
+     "fx": 254,
+     "fy": 664,
+     "fb": 242,
+     "fh": 220
+    },
+    {
+     "id": "krypto",
+     "navn": "Krypto",
+     "kort": "Krypto",
+     "x": 125.0,
+     "cy": 972.0,
+     "y1": 1078,
+     "y2": 1096,
+     "link": "temaer/krypto.html",
+     "linjeTekst": null,
+     "fx": 4,
+     "fy": 884,
+     "fb": 242,
+     "fh": 220
+    },
+    {
+     "id": "software",
+     "navn": "Software & AI",
+     "kort": "Software",
+     "x": 375.0,
+     "cy": 972.0,
+     "y1": 1078,
+     "y2": 1096,
+     "link": "temaer/software.html",
+     "linjeTekst": null,
+     "fx": 254,
+     "fy": 884,
+     "fb": 242,
+     "fh": 220
+    },
+    {
+     "id": "sundhed",
+     "navn": "Sundhed og biotek",
+     "kort": "Sundhed",
+     "x": 125.0,
+     "cy": 1192.0,
+     "y1": 1298,
+     "y2": 1316,
+     "link": "temaer/sundhed.html",
+     "linjeTekst": null,
+     "fx": 4,
+     "fy": 1104,
+     "fb": 242,
+     "fh": 220
+    },
+    {
+     "id": "kvante",
+     "navn": "Kvantecomputere",
+     "kort": "Kvante",
+     "x": 375.0,
+     "cy": 1192.0,
+     "y1": 1298,
+     "y2": 1316,
+     "link": "temaer/kvante.html",
+     "linjeTekst": null,
+     "fx": 254,
+     "fy": 1104,
+     "fb": 242,
+     "fh": 220
+    }
+   ],
+   "bredde": 500,
+   "hoejde": 1324,
+   "traade": [
+    {
+     "fra": "datacenter",
+     "til": "energi",
+     "antal": 15,
+     "d": "M125.0 312.0 Q289.6 247.0 375.0 92.0",
+     "w": 6.0,
+     "styrke": "staerk"
+    },
+    {
+     "fra": "chips",
+     "til": "datacenter",
+     "antal": 13,
+     "d": "M125.0 92.0 Q85.4 202.0 125.0 312.0",
+     "w": 5.3,
+     "styrke": "staerk"
+    },
+    {
+     "fra": "datacenter",
+     "til": "krypto",
+     "antal": 10,
+     "d": "M125.0 312.0 Q65.0 642.0 125.0 972.0",
+     "w": 4.3,
+     "styrke": "staerk"
+    },
+    {
+     "fra": "energi",
+     "til": "fysisk-ai",
+     "antal": 9,
+     "d": "M375.0 92.0 Q315.0 312.0 375.0 532.0",
+     "w": 4.0,
+     "styrke": "staerk"
+    },
+    {
+     "fra": "chips",
+     "til": "fysisk-ai",
+     "antal": 8,
+     "d": "M125.0 92.0 Q197.8 341.6 375.0 532.0",
+     "w": 3.7,
+     "styrke": "staerk"
+    },
+    {
+     "fra": "fintech",
+     "til": "platforme",
+     "antal": 5,
+     "d": "M375.0 752.0 Q435.0 532.0 375.0 312.0",
+     "w": 2.7,
+     "styrke": "mellem"
+    },
+    {
+     "fra": "platforme",
+     "til": "software",
+     "antal": 5,
+     "d": "M375.0 312.0 Q315.0 642.0 375.0 972.0",
+     "w": 2.7,
+     "styrke": "mellem"
+    },
+    {
+     "fra": "datacenter",
+     "til": "platforme",
+     "antal": 4,
+     "d": "M125.0 312.0 Q250.0 357.0 375.0 312.0",
+     "w": 2.3,
+     "styrke": "mellem"
+    },
+    {
+     "fra": "datacenter",
+     "til": "software",
+     "antal": 4,
+     "d": "M125.0 312.0 Q193.9 663.3 375.0 972.0",
+     "w": 2.3,
+     "styrke": "mellem"
+    },
+    {
+     "fra": "fintech",
+     "til": "krypto",
+     "antal": 4,
+     "d": "M375.0 752.0 Q210.4 817.0 125.0 972.0",
+     "w": 2.3,
+     "styrke": "mellem"
+    },
+    {
+     "fra": "energi",
+     "til": "sundhed",
+     "antal": 2,
+     "d": "M375.0 92.0 Q191.5 628.7 125.0 1192.0",
+     "w": 1.7,
+     "styrke": "svag"
+    },
+    {
+     "fra": "fintech",
+     "til": "software",
+     "antal": 2,
+     "d": "M375.0 752.0 Q335.4 862.0 375.0 972.0",
+     "w": 1.7,
+     "styrke": "svag"
+    },
+    {
+     "fra": "fysisk-ai",
+     "til": "software",
+     "antal": 2,
+     "d": "M375.0 532.0 Q315.0 752.0 375.0 972.0",
+     "w": 1.7,
+     "styrke": "svag"
+    },
+    {
+     "fra": "chips",
+     "til": "platforme",
+     "antal": 1,
+     "d": "M125.0 92.0 Q210.4 247.0 375.0 312.0",
+     "w": 1.3,
+     "styrke": "svag"
+    },
+    {
+     "fra": "chips",
+     "til": "raastoffer",
+     "antal": 1,
+     "d": "M125.0 92.0 Q65.0 422.0 125.0 752.0",
+     "w": 1.3,
+     "styrke": "svag"
+    },
+    {
+     "fra": "datacenter",
+     "til": "fysisk-ai",
+     "antal": 1,
+     "d": "M125.0 312.0 Q210.4 467.0 375.0 532.0",
+     "w": 1.3,
+     "styrke": "svag"
+    },
+    {
+     "fra": "datacenter",
+     "til": "raastoffer",
+     "antal": 1,
+     "d": "M125.0 312.0 Q65.0 532.0 125.0 752.0",
+     "w": 1.3,
+     "styrke": "svag"
+    },
+    {
+     "fra": "datacenter",
+     "til": "rumfart",
+     "antal": 1,
+     "d": "M125.0 312.0 Q85.4 422.0 125.0 532.0",
+     "w": 1.3,
+     "styrke": "svag"
+    },
+    {
+     "fra": "energi",
+     "til": "raastoffer",
+     "antal": 1,
+     "d": "M375.0 92.0 Q193.9 400.7 125.0 752.0",
+     "w": 1.3,
+     "styrke": "svag"
+    },
+    {
+     "fra": "energi",
+     "til": "rumfart",
+     "antal": 1,
+     "d": "M375.0 92.0 Q197.8 282.4 125.0 532.0",
+     "w": 1.3,
+     "styrke": "svag"
+    },
+    {
+     "fra": "fintech",
+     "til": "sundhed",
+     "antal": 1,
+     "d": "M375.0 752.0 Q197.8 942.4 125.0 1192.0",
+     "w": 1.3,
+     "styrke": "svag"
+    },
+    {
+     "fra": "fysisk-ai",
+     "til": "platforme",
+     "antal": 1,
+     "d": "M375.0 532.0 Q414.6 422.0 375.0 312.0",
+     "w": 1.3,
+     "styrke": "svag"
+    },
+    {
+     "fra": "fysisk-ai",
+     "til": "raastoffer",
+     "antal": 1,
+     "d": "M375.0 532.0 Q210.4 597.0 125.0 752.0",
+     "w": 1.3,
+     "styrke": "svag"
+    },
+    {
+     "fra": "fysisk-ai",
+     "til": "rumfart",
+     "antal": 1,
+     "d": "M375.0 532.0 Q250.0 487.0 125.0 532.0",
+     "w": 1.3,
+     "styrke": "svag"
+    },
+    {
+     "fra": "software",
+     "til": "sundhed",
+     "antal": 1,
+     "d": "M375.0 972.0 Q210.4 1037.0 125.0 1192.0",
+     "w": 1.3,
+     "styrke": "svag"
+    }
+   ]
+  },
+  "lille": {
+   "prikker": [
+    {
+     "cx": 125.0,
+     "cy": 67.0,
+     "r": 7.3,
+     "tema": "chips",
+     "navn": "Samsung Electronics"
+    },
+    {
+     "cx": 115.9,
+     "cy": 75.4,
+     "r": 6.6,
+     "tema": "chips",
+     "navn": "SK hynix"
+    },
+    {
+     "cx": 126.3,
+     "cy": 52.3,
+     "r": 6.3,
+     "tema": "chips",
+     "navn": "Taiyo Yuden"
+    },
+    {
+     "cx": 135.2,
+     "cy": 80.3,
+     "r": 6.2,
+     "tema": "chips",
+     "navn": "Kioxia"
+    },
+    {
+     "cx": 106.8,
+     "cy": 63.8,
+     "r": 6.0,
+     "tema": "chips",
+     "navn": "LPKF Laser & Electronics"
+    },
+    {
+     "cx": 141.9,
+     "cy": 56.3,
+     "r": 5.8,
+     "tema": "chips",
+     "navn": "Cerebras Systems"
+    },
+    {
+     "cx": 119.5,
+     "cy": 87.6,
+     "r": 5.7,
+     "tema": "chips",
+     "navn": "GlobalFoundries"
+    },
+    {
+     "cx": 114.6,
+     "cy": 46.9,
+     "r": 5.7,
+     "tema": "chips",
+     "navn": "Soitec"
+    },
+    {
+     "cx": 147.3,
+     "cy": 75.1,
+     "r": 5.6,
+     "tema": "chips",
+     "navn": "Tower Semiconductor"
+    },
+    {
+     "cx": 102.0,
+     "cy": 76.5,
+     "r": 5.6,
+     "tema": "chips",
+     "navn": "Nova"
+    },
+    {
+     "cx": 136.0,
+     "cy": 43.5,
+     "r": 5.5,
+     "tema": "chips",
+     "navn": "Besi"
+    },
+    {
+     "cx": 133.0,
+     "cy": 92.6,
+     "r": 5.3,
+     "tema": "chips",
+     "navn": "Broadcom"
+    },
+    {
+     "cx": 101.0,
+     "cy": 53.1,
+     "r": 5.3,
+     "tema": "chips",
+     "navn": "IQE"
+    },
+    {
+     "cx": 152.9,
+     "cy": 60.9,
+     "r": 5.3,
+     "tema": "chips",
+     "navn": "Rambus"
+    },
+    {
+     "cx": 108.1,
+     "cy": 91.1,
+     "r": 5.2,
+     "tema": "chips",
+     "navn": "Micron Technology"
+    },
+    {
+     "cx": 121.1,
+     "cy": 37.1,
+     "r": 5.1,
+     "tema": "chips",
+     "navn": "Navitas Semiconductor"
+    },
+    {
+     "cx": 148.7,
+     "cy": 86.9,
+     "r": 5.0,
+     "tema": "chips",
+     "navn": "Western Digital"
+    },
+    {
+     "cx": 93.4,
+     "cy": 68.3,
+     "r": 5.0,
+     "tema": "chips",
+     "navn": "Intel"
+    },
+    {
+     "cx": 147.9,
+     "cy": 44.2,
+     "r": 5.0,
+     "tema": "chips",
+     "navn": "SiTime"
+    },
+    {
+     "cx": 123.5,
+     "cy": 100.0,
+     "r": 5.0,
+     "tema": "chips",
+     "navn": "SUSS MicroTec"
+    },
+    {
+     "cx": 103.4,
+     "cy": 41.1,
+     "r": 5.0,
+     "tema": "chips",
+     "navn": "Tokyo Electron"
+    },
+    {
+     "cx": 159.0,
+     "cy": 71.6,
+     "r": 4.9,
+     "tema": "chips",
+     "navn": "ASM International"
+    },
+    {
+     "cx": 96.3,
+     "cy": 87.0,
+     "r": 4.9,
+     "tema": "chips",
+     "navn": "ASMPT"
+    },
+    {
+     "cx": 132.8,
+     "cy": 32.3,
+     "r": 4.8,
+     "tema": "chips",
+     "navn": "Camtek"
+    },
+    {
+     "cx": 142.9,
+     "cy": 98.3,
+     "r": 4.7,
+     "tema": "chips",
+     "navn": "Aehr Test Systems"
+    },
+    {
+     "cx": 90.1,
+     "cy": 55.9,
+     "r": 4.6,
+     "tema": "chips",
+     "navn": "onsemi"
+    },
+    {
+     "cx": 158.7,
+     "cy": 51.4,
+     "r": 4.6,
+     "tema": "chips",
+     "navn": "Seagate Technology"
+    },
+    {
+     "cx": 110.4,
+     "cy": 101.8,
+     "r": 4.6,
+     "tema": "chips",
+     "navn": "UMC"
+    },
+    {
+     "cx": 112.1,
+     "cy": 31.0,
+     "r": 4.6,
+     "tema": "chips",
+     "navn": "MKS"
+    },
+    {
+     "cx": 159.3,
+     "cy": 85.0,
+     "r": 4.6,
+     "tema": "chips",
+     "navn": "STMicroelectronics"
+    },
+    {
+     "cx": 87.1,
+     "cy": 77.0,
+     "r": 4.5,
+     "tema": "chips",
+     "navn": "X-FAB"
+    },
+    {
+     "cx": 146.5,
+     "cy": 33.6,
+     "r": 4.5,
+     "tema": "chips",
+     "navn": "Himax Technologies"
+    },
+    {
+     "cx": 131.8,
+     "cy": 106.6,
+     "r": 4.4,
+     "tema": "chips",
+     "navn": "Lasertec"
+    },
+    {
+     "cx": 92.9,
+     "cy": 42.1,
+     "r": 4.4,
+     "tema": "chips",
+     "navn": "Rigaku"
+    },
+    {
+     "cx": 165.9,
+     "cy": 63.6,
+     "r": 4.3,
+     "tema": "chips",
+     "navn": "KLA"
+    },
+    {
+     "cx": 96.8,
+     "cy": 97.4,
+     "r": 4.2,
+     "tema": "chips",
+     "navn": "NVIDIA"
+    },
+    {
+     "cx": 125.2,
+     "cy": 25.1,
+     "r": 4.2,
+     "tema": "chips",
+     "navn": "Onto Innovation"
+    },
+    {
+     "cx": 153.4,
+     "cy": 98.3,
+     "r": 4.1,
+     "tema": "chips",
+     "navn": "Ambiq Micro"
+    },
+    {
+     "cx": 82.5,
+     "cy": 63.1,
+     "r": 4.1,
+     "tema": "chips",
+     "navn": "Renesas Electronics"
+    },
+    {
+     "cx": 159.3,
+     "cy": 41.0,
+     "r": 4.0,
+     "tema": "chips",
+     "navn": "Aixtron"
+    },
+    {
+     "cx": 117.2,
+     "cy": 109.7,
+     "r": 3.9,
+     "tema": "chips",
+     "navn": "Advantest"
+    },
+    {
+     "cx": 101.7,
+     "cy": 30.0,
+     "r": 3.9,
+     "tema": "chips",
+     "navn": "SanDisk"
+    },
+    {
+     "cx": 167.5,
+     "cy": 78.6,
+     "r": 3.9,
+     "tema": "chips",
+     "navn": "Kulicke & Soffa"
+    },
+    {
+     "cx": 85.5,
+     "cy": 87.3,
+     "r": 3.9,
+     "tema": "chips",
+     "navn": "Veeco Instruments"
+    },
+    {
+     "cx": 140.5,
+     "cy": 25.1,
+     "r": 3.8,
+     "tema": "chips",
+     "navn": "AXT"
+    },
+    {
+     "cx": 142.0,
+     "cy": 108.7,
+     "r": 3.8,
+     "tema": "chips",
+     "navn": "Silicon Motion"
+    },
+    {
+     "cx": 84.0,
+     "cy": 47.6,
+     "r": 3.6,
+     "tema": "chips",
+     "navn": "Infineon Technologies"
+    },
+    {
+     "cx": 168.6,
+     "cy": 53.6,
+     "r": 3.6,
+     "tema": "chips",
+     "navn": "Aeluma"
+    },
+    {
+     "cx": 101.8,
+     "cy": 106.6,
+     "r": 3.6,
+     "tema": "chips",
+     "navn": "Kokusai Electric"
+    },
+    {
+     "cx": 115.3,
+     "cy": 21.8,
+     "r": 3.5,
+     "tema": "chips",
+     "navn": "Entegris"
+    },
+    {
+     "cx": 162.9,
+     "cy": 93.9,
+     "r": 3.5,
+     "tema": "chips",
+     "navn": "Monolithic Power Systems"
+    },
+    {
+     "cx": 78.6,
+     "cy": 72.8,
+     "r": 3.5,
+     "tema": "chips",
+     "navn": "Wolfspeed"
+    },
+    {
+     "cx": 155.5,
+     "cy": 31.2,
+     "r": 3.5,
+     "tema": "chips",
+     "navn": "Nordic Semiconductor"
+    },
+    {
+     "cx": 126.7,
+     "cy": 114.3,
+     "r": 3.4,
+     "tema": "chips",
+     "navn": "ACM Research"
+    },
+    {
+     "cx": 91.6,
+     "cy": 33.1,
+     "r": 3.4,
+     "tema": "chips",
+     "navn": "Alpha and Omega Semiconductor"
+    },
+    {
+     "cx": 172.8,
+     "cy": 69.4,
+     "r": 3.4,
+     "tema": "chips",
+     "navn": "Amkor Technology"
+    },
+    {
+     "cx": 87.9,
+     "cy": 97.6,
+     "r": 3.3,
+     "tema": "chips",
+     "navn": "ASML"
+    },
+    {
+     "cx": 131.7,
+     "cy": 19.1,
+     "r": 3.3,
+     "tema": "chips",
+     "navn": "Lam Research"
+    },
+    {
+     "cx": 152.5,
+     "cy": 107.0,
+     "r": 3.3,
+     "tema": "chips",
+     "navn": "MaxLinear"
+    },
+    {
+     "cx": 77.4,
+     "cy": 56.1,
+     "r": 3.3,
+     "tema": "chips",
+     "navn": "Synopsys"
+    },
+    {
+     "cx": 167.7,
+     "cy": 42.8,
+     "r": 3.2,
+     "tema": "chips",
+     "navn": "Analog Devices"
+    },
+    {
+     "cx": 109.8,
+     "cy": 113.9,
+     "r": 3.2,
+     "tema": "chips",
+     "navn": "Cohu"
+    },
+    {
+     "cx": 104.5,
+     "cy": 21.9,
+     "r": 3.2,
+     "tema": "chips",
+     "navn": "Marvell Technology"
+    },
+    {
+     "cx": 170.8,
+     "cy": 86.4,
+     "r": 3.2,
+     "tema": "chips",
+     "navn": "Texas Instruments"
+    },
+    {
+     "cx": 77.9,
+     "cy": 83.7,
+     "r": 3.2,
+     "tema": "chips",
+     "navn": "Ambarella"
+    },
+    {
+     "cx": 148.6,
+     "cy": 22.7,
+     "r": 3.2,
+     "tema": "chips",
+     "navn": "Microchip Technology"
+    },
+    {
+     "cx": 137.6,
+     "cy": 115.8,
+     "r": 3.1,
+     "tema": "chips",
+     "navn": "Cadence Design Systems"
+    },
+    {
+     "cx": 82.6,
+     "cy": 39.4,
+     "r": 3.1,
+     "tema": "chips",
+     "navn": "FormFactor"
+    },
+    {
+     "cx": 175.1,
+     "cy": 58.6,
+     "r": 3.0,
+     "tema": "chips",
+     "navn": "Applied Materials"
+    },
+    {
+     "cx": 93.6,
+     "cy": 107.2,
+     "r": 2.9,
+     "tema": "chips",
+     "navn": "AMD"
+    },
+    {
+     "cx": 121.0,
+     "cy": 16.0,
+     "r": 2.9,
+     "tema": "chips",
+     "navn": "Lattice Semiconductor"
+    },
+    {
+     "cx": 162.6,
+     "cy": 102.1,
+     "r": 2.9,
+     "tema": "chips",
+     "navn": "TSMC"
+    },
+    {
+     "cx": 73.4,
+     "cy": 66.5,
+     "r": 2.8,
+     "tema": "chips",
+     "navn": "Axcelis Technologies"
+    },
+    {
+     "cx": 163.5,
+     "cy": 32.4,
+     "r": 2.8,
+     "tema": "chips",
+     "navn": "Teradyne"
+    },
+    {
+     "cx": 120.0,
+     "cy": 118.6,
+     "r": 2.4,
+     "tema": "chips",
+     "navn": "Blaize"
+    },
+    {
+     "cx": 375.0,
+     "cy": 67.0,
+     "r": 6.0,
+     "tema": "energi",
+     "navn": "Babcock & Wilcox"
+    },
+    {
+     "cx": 367.0,
+     "cy": 74.3,
+     "r": 5.8,
+     "tema": "energi",
+     "navn": "T1 Energy"
+    },
+    {
+     "cx": 376.1,
+     "cy": 53.9,
+     "r": 5.6,
+     "tema": "energi",
+     "navn": "Enovix"
+    },
+    {
+     "cx": 384.1,
+     "cy": 78.9,
+     "r": 5.5,
+     "tema": "energi",
+     "navn": "Expand Energy"
+    },
+    {
+     "cx": 358.8,
+     "cy": 64.1,
+     "r": 5.2,
+     "tema": "energi",
+     "navn": "Comstock Resources"
+    },
+    {
+     "cx": 390.1,
+     "cy": 57.4,
+     "r": 5.2,
+     "tema": "energi",
+     "navn": "Generac"
+    },
+    {
+     "cx": 370.0,
+     "cy": 85.5,
+     "r": 5.2,
+     "tema": "energi",
+     "navn": "MYR Group"
+    },
+    {
+     "cx": 365.6,
+     "cy": 48.9,
+     "r": 5.2,
+     "tema": "energi",
+     "navn": "SolarEdge"
+    },
+    {
+     "cx": 395.2,
+     "cy": 74.4,
+     "r": 5.1,
+     "tema": "energi",
+     "navn": "Fluence Energy"
+    },
+    {
+     "cx": 354.2,
+     "cy": 75.6,
+     "r": 5.0,
+     "tema": "energi",
+     "navn": "SES AI"
+    },
+    {
+     "cx": 384.9,
+     "cy": 45.7,
+     "r": 4.9,
+     "tema": "energi",
+     "navn": "QuantumScape"
+    },
+    {
+     "cx": 383.0,
+     "cy": 90.2,
+     "r": 4.8,
+     "tema": "energi",
+     "navn": "Power Solutions International"
+    },
+    {
+     "cx": 353.2,
+     "cy": 54.4,
+     "r": 4.8,
+     "tema": "energi",
+     "navn": "First Solar"
+    },
+    {
+     "cx": 400.4,
+     "cy": 61.4,
+     "r": 4.7,
+     "tema": "energi",
+     "navn": "Tigo Energy"
+    },
+    {
+     "cx": 359.6,
+     "cy": 88.9,
+     "r": 4.7,
+     "tema": "energi",
+     "navn": "Sunrun"
+    },
+    {
+     "cx": 371.5,
+     "cy": 39.8,
+     "r": 4.6,
+     "tema": "energi",
+     "navn": "Enphase Energy"
+    },
+    {
+     "cx": 396.5,
+     "cy": 85.1,
+     "r": 4.5,
+     "tema": "energi",
+     "navn": "Ballard Power Systems"
+    },
+    {
+     "cx": 346.2,
+     "cy": 68.2,
+     "r": 4.5,
+     "tema": "energi",
+     "navn": "ProPetro"
+    },
+    {
+     "cx": 395.9,
+     "cy": 46.2,
+     "r": 4.4,
+     "tema": "energi",
+     "navn": "Vistra"
+    },
+    {
+     "cx": 374.3,
+     "cy": 97.0,
+     "r": 4.2,
+     "tema": "energi",
+     "navn": "Antero Resources"
+    },
+    {
+     "cx": 355.4,
+     "cy": 43.5,
+     "r": 4.2,
+     "tema": "energi",
+     "navn": "Centrus Energy"
+    },
+    {
+     "cx": 405.9,
+     "cy": 71.2,
+     "r": 4.2,
+     "tema": "energi",
+     "navn": "ERock"
+    },
+    {
+     "cx": 349.0,
+     "cy": 85.1,
+     "r": 4.2,
+     "tema": "energi",
+     "navn": "Rolls-Royce"
+    },
+    {
+     "cx": 381.9,
+     "cy": 35.6,
+     "r": 4.2,
+     "tema": "energi",
+     "navn": "Talen Energy"
+    },
+    {
+     "cx": 391.3,
+     "cy": 95.4,
+     "r": 4.2,
+     "tema": "energi",
+     "navn": "Kinder Morgan"
+    },
+    {
+     "cx": 343.3,
+     "cy": 56.9,
+     "r": 4.1,
+     "tema": "energi",
+     "navn": "ASP Isotopes"
+    },
+    {
+     "cx": 405.6,
+     "cy": 52.9,
+     "r": 4.1,
+     "tema": "energi",
+     "navn": "Nextracker"
+    },
+    {
+     "cx": 361.8,
+     "cy": 98.6,
+     "r": 4.1,
+     "tema": "energi",
+     "navn": "Solid Power"
+    },
+    {
+     "cx": 363.3,
+     "cy": 34.4,
+     "r": 4.1,
+     "tema": "energi",
+     "navn": "NextEra Energy"
+    },
+    {
+     "cx": 406.1,
+     "cy": 83.3,
+     "r": 4.1,
+     "tema": "energi",
+     "navn": "Shoals Technologies"
+    },
+    {
+     "cx": 340.6,
+     "cy": 76.1,
+     "r": 4.0,
+     "tema": "energi",
+     "navn": "Vista Energy"
+    },
+    {
+     "cx": 394.5,
+     "cy": 36.7,
+     "r": 4.0,
+     "tema": "energi",
+     "navn": "Bloom Energy"
+    },
+    {
+     "cx": 381.2,
+     "cy": 102.9,
+     "r": 3.9,
+     "tema": "energi",
+     "navn": "Amprius Technologies"
+    },
+    {
+     "cx": 345.9,
+     "cy": 44.4,
+     "r": 3.9,
+     "tema": "energi",
+     "navn": "DTE Energy"
+    },
+    {
+     "cx": 412.1,
+     "cy": 63.9,
+     "r": 3.9,
+     "tema": "energi",
+     "navn": "GE Vernova"
+    },
+    {
+     "cx": 349.4,
+     "cy": 94.7,
+     "r": 3.9,
+     "tema": "energi",
+     "navn": "American Electric Power"
+    },
+    {
+     "cx": 375.2,
+     "cy": 28.9,
+     "r": 3.9,
+     "tema": "energi",
+     "navn": "Array Technologies"
+    },
+    {
+     "cx": 400.8,
+     "cy": 95.5,
+     "r": 3.9,
+     "tema": "energi",
+     "navn": "BWX Technologies"
+    },
+    {
+     "cx": 336.3,
+     "cy": 63.4,
+     "r": 3.9,
+     "tema": "energi",
+     "navn": "CMS Energy"
+    },
+    {
+     "cx": 406.2,
+     "cy": 43.3,
+     "r": 3.9,
+     "tema": "energi",
+     "navn": "Canadian Solar"
+    },
+    {
+     "cx": 367.9,
+     "cy": 106.0,
+     "r": 3.9,
+     "tema": "energi",
+     "navn": "FirstEnergy"
+    },
+    {
+     "cx": 353.7,
+     "cy": 33.2,
+     "r": 3.9,
+     "tema": "energi",
+     "navn": "Southern Company"
+    },
+    {
+     "cx": 413.9,
+     "cy": 77.7,
+     "r": 3.8,
+     "tema": "energi",
+     "navn": "Nano Nuclear Energy"
+    },
+    {
+     "cx": 338.8,
+     "cy": 85.6,
+     "r": 3.8,
+     "tema": "energi",
+     "navn": "EQT"
+    },
+    {
+     "cx": 389.3,
+     "cy": 28.5,
+     "r": 3.8,
+     "tema": "energi",
+     "navn": "Quanta Services"
+    },
+    {
+     "cx": 390.6,
+     "cy": 105.3,
+     "r": 3.7,
+     "tema": "energi",
+     "navn": "Oklo"
+    },
+    {
+     "cx": 337.3,
+     "cy": 49.1,
+     "r": 3.7,
+     "tema": "energi",
+     "navn": "Range Resources"
+    },
+    {
+     "cx": 415.2,
+     "cy": 54.6,
+     "r": 3.6,
+     "tema": "energi",
+     "navn": "Atlas Energy Solutions"
+    },
+    {
+     "cx": 353.6,
+     "cy": 103.6,
+     "r": 3.6,
+     "tema": "energi",
+     "navn": "Eos Energy"
+    },
+    {
+     "cx": 366.0,
+     "cy": 25.3,
+     "r": 3.6,
+     "tema": "energi",
+     "navn": "ITT"
+    },
+    {
+     "cx": 410.1,
+     "cy": 91.9,
+     "r": 3.6,
+     "tema": "energi",
+     "navn": "Primoris Services"
+    },
+    {
+     "cx": 332.0,
+     "cy": 72.4,
+     "r": 3.5,
+     "tema": "energi",
+     "navn": "Lightbridge"
+    },
+    {
+     "cx": 403.3,
+     "cy": 33.8,
+     "r": 3.5,
+     "tema": "energi",
+     "navn": "Tantalus Systems"
+    },
+    {
+     "cx": 376.6,
+     "cy": 110.9,
+     "r": 3.5,
+     "tema": "energi",
+     "navn": "Clearway Energy"
+    },
+    {
+     "cx": 344.0,
+     "cy": 35.5,
+     "r": 3.5,
+     "tema": "energi",
+     "navn": "Electrovaya"
+    },
+    {
+     "cx": 419.4,
+     "cy": 69.3,
+     "r": 3.5,
+     "tema": "energi",
+     "navn": "Fluor"
+    },
+    {
+     "cx": 340.5,
+     "cy": 95.5,
+     "r": 3.5,
+     "tema": "energi",
+     "navn": "Mirion Technologies"
+    },
+    {
+     "cx": 381.2,
+     "cy": 22.4,
+     "r": 3.5,
+     "tema": "energi",
+     "navn": "Plug Power"
+    },
+    {
+     "cx": 400.7,
+     "cy": 104.3,
+     "r": 3.5,
+     "tema": "energi",
+     "navn": "Solaris Energy Infrastructure"
+    },
+    {
+     "cx": 330.6,
+     "cy": 56.8,
+     "r": 3.4,
+     "tema": "energi",
+     "navn": "Microvast"
+    },
+    {
+     "cx": 414.9,
+     "cy": 44.4,
+     "r": 3.4,
+     "tema": "energi",
+     "navn": "NuScale Power"
+    },
+    {
+     "cx": 360.8,
+     "cy": 110.9,
+     "r": 3.3,
+     "tema": "energi",
+     "navn": "Flowserve"
+    },
+    {
+     "cx": 355.8,
+     "cy": 24.8,
+     "r": 3.3,
+     "tema": "energi",
+     "navn": "Terrestrial Energy"
+    },
+    {
+     "cx": 417.9,
+     "cy": 85.2,
+     "r": 3.2,
+     "tema": "energi",
+     "navn": "Canadian Natural Resources"
+    },
+    {
+     "cx": 330.8,
+     "cy": 82.6,
+     "r": 3.2,
+     "tema": "energi",
+     "navn": "Caterpillar"
+    },
+    {
+     "cx": 397.1,
+     "cy": 25.4,
+     "r": 3.1,
+     "tema": "energi",
+     "navn": "Cummins"
+    },
+    {
+     "cx": 386.8,
+     "cy": 112.8,
+     "r": 3.1,
+     "tema": "energi",
+     "navn": "Terex"
+    },
+    {
+     "cx": 335.2,
+     "cy": 41.1,
+     "r": 3.0,
+     "tema": "energi",
+     "navn": "Terra Innovatum"
+    },
+    {
+     "cx": 422.0,
+     "cy": 59.2,
+     "r": 2.6,
+     "tema": "energi",
+     "navn": "NeoVolta"
+    },
+    {
+     "cx": 625.0,
+     "cy": 67.0,
+     "r": 6.3,
+     "tema": "datacenter",
+     "navn": "Sivers Semiconductors"
+    },
+    {
+     "cx": 616.8,
+     "cy": 74.5,
+     "r": 5.9,
+     "tema": "datacenter",
+     "navn": "HUBER+SUHNER"
+    },
+    {
+     "cx": 626.2,
+     "cy": 53.9,
+     "r": 5.3,
+     "tema": "datacenter",
+     "navn": "IREN"
+    },
+    {
+     "cx": 634.1,
+     "cy": 78.8,
+     "r": 5.3,
+     "tema": "datacenter",
+     "navn": "Oracle"
+    },
+    {
+     "cx": 608.9,
+     "cy": 64.1,
+     "r": 5.1,
+     "tema": "datacenter",
+     "navn": "POET Technologies"
+    },
+    {
+     "cx": 640.0,
+     "cy": 57.5,
+     "r": 5.1,
+     "tema": "datacenter",
+     "navn": "TSS"
+    },
+    {
+     "cx": 620.1,
+     "cy": 85.4,
+     "r": 5.1,
+     "tema": "datacenter",
+     "navn": "Applied Optoelectronics"
+    },
+    {
+     "cx": 615.7,
+     "cy": 49.1,
+     "r": 5.1,
+     "tema": "datacenter",
+     "navn": "Fabrinet"
+    },
+    {
+     "cx": 645.0,
+     "cy": 74.3,
+     "r": 4.9,
+     "tema": "datacenter",
+     "navn": "MACOM"
+    },
+    {
+     "cx": 604.5,
+     "cy": 75.5,
+     "r": 4.8,
+     "tema": "datacenter",
+     "navn": "Celestica"
+    },
+    {
+     "cx": 634.8,
+     "cy": 46.1,
+     "r": 4.7,
+     "tema": "datacenter",
+     "navn": "Core Scientific"
+    },
+    {
+     "cx": 632.2,
+     "cy": 89.8,
+     "r": 4.5,
+     "tema": "datacenter",
+     "navn": "Lightwave Logic"
+    },
+    {
+     "cx": 603.7,
+     "cy": 54.6,
+     "r": 4.4,
+     "tema": "datacenter",
+     "navn": "nLight"
+    },
+    {
+     "cx": 649.8,
+     "cy": 61.5,
+     "r": 4.4,
+     "tema": "datacenter",
+     "navn": "Ciena"
+    },
+    {
+     "cx": 610.0,
+     "cy": 88.4,
+     "r": 4.4,
+     "tema": "datacenter",
+     "navn": "Super Micro Computer"
+    },
+    {
+     "cx": 621.6,
+     "cy": 40.4,
+     "r": 4.4,
+     "tema": "datacenter",
+     "navn": "ams OSRAM"
+    },
+    {
+     "cx": 646.0,
+     "cy": 84.7,
+     "r": 4.3,
+     "tema": "datacenter",
+     "navn": "Cipher Mining"
+    },
+    {
+     "cx": 596.9,
+     "cy": 68.2,
+     "r": 4.2,
+     "tema": "datacenter",
+     "navn": "Fermi"
+    },
+    {
+     "cx": 645.3,
+     "cy": 46.8,
+     "r": 4.2,
+     "tema": "datacenter",
+     "navn": "Sumitomo Electric Industries"
+    },
+    {
+     "cx": 623.6,
+     "cy": 96.2,
+     "r": 4.2,
+     "tema": "datacenter",
+     "navn": "Corning"
+    },
+    {
+     "cx": 605.9,
+     "cy": 44.1,
+     "r": 4.2,
+     "tema": "datacenter",
+     "navn": "Credo"
+    },
+    {
+     "cx": 655.1,
+     "cy": 71.1,
+     "r": 4.2,
+     "tema": "datacenter",
+     "navn": "Jacobs Solutions"
+    },
+    {
+     "cx": 599.6,
+     "cy": 84.7,
+     "r": 4.1,
+     "tema": "datacenter",
+     "navn": "Coherent"
+    },
+    {
+     "cx": 631.9,
+     "cy": 36.3,
+     "r": 4.1,
+     "tema": "datacenter",
+     "navn": "Lumen"
+    },
+    {
+     "cx": 640.9,
+     "cy": 94.7,
+     "r": 4.1,
+     "tema": "datacenter",
+     "navn": "Lumentum"
+    },
+    {
+     "cx": 594.1,
+     "cy": 57.1,
+     "r": 4.1,
+     "tema": "datacenter",
+     "navn": "CoreWeave"
+    },
+    {
+     "cx": 654.9,
+     "cy": 53.2,
+     "r": 4.1,
+     "tema": "datacenter",
+     "navn": "WhiteFiber"
+    },
+    {
+     "cx": 612.1,
+     "cy": 97.9,
+     "r": 4.0,
+     "tema": "datacenter",
+     "navn": "Sterling Infrastructure"
+    },
+    {
+     "cx": 613.5,
+     "cy": 35.1,
+     "r": 3.9,
+     "tema": "datacenter",
+     "navn": "IPG Photonics"
+    },
+    {
+     "cx": 655.4,
+     "cy": 83.0,
+     "r": 3.9,
+     "tema": "datacenter",
+     "navn": "Nebius"
+    },
+    {
+     "cx": 591.4,
+     "cy": 75.9,
+     "r": 3.9,
+     "tema": "datacenter",
+     "navn": "SharonAI"
+    },
+    {
+     "cx": 644.0,
+     "cy": 37.4,
+     "r": 3.9,
+     "tema": "datacenter",
+     "navn": "One Stop Systems"
+    },
+    {
+     "cx": 631.0,
+     "cy": 102.1,
+     "r": 3.7,
+     "tema": "datacenter",
+     "navn": "Viavi Solutions"
+    },
+    {
+     "cx": 596.5,
+     "cy": 45.0,
+     "r": 3.6,
+     "tema": "datacenter",
+     "navn": "Flex"
+    },
+    {
+     "cx": 661.2,
+     "cy": 64.0,
+     "r": 3.5,
+     "tema": "datacenter",
+     "navn": "Microsoft"
+    },
+    {
+     "cx": 600.1,
+     "cy": 93.9,
+     "r": 3.5,
+     "tema": "datacenter",
+     "navn": "Semtech"
+    },
+    {
+     "cx": 625.2,
+     "cy": 30.0,
+     "r": 3.3,
+     "tema": "datacenter",
+     "navn": "Cisco Systems"
+    },
+    {
+     "cx": 650.1,
+     "cy": 94.7,
+     "r": 3.3,
+     "tema": "datacenter",
+     "navn": "Keysight Technologies"
+    },
+    {
+     "cx": 587.5,
+     "cy": 63.5,
+     "r": 3.3,
+     "tema": "datacenter",
+     "navn": "TeraWulf"
+    },
+    {
+     "cx": 655.2,
+     "cy": 44.1,
+     "r": 3.2,
+     "tema": "datacenter",
+     "navn": "Amphenol"
+    },
+    {
+     "cx": 618.2,
+     "cy": 104.6,
+     "r": 3.2,
+     "tema": "datacenter",
+     "navn": "Astera Labs"
+    },
+    {
+     "cx": 604.5,
+     "cy": 34.4,
+     "r": 3.2,
+     "tema": "datacenter",
+     "navn": "Comfort Systems USA"
+    },
+    {
+     "cx": 662.4,
+     "cy": 77.3,
+     "r": 3.2,
+     "tema": "datacenter",
+     "navn": "Jabil"
+    },
+    {
+     "cx": 590.2,
+     "cy": 84.8,
+     "r": 3.0,
+     "tema": "datacenter",
+     "navn": "Applied Digital"
+    },
+    {
+     "cx": 638.7,
+     "cy": 30.1,
+     "r": 2.9,
+     "tema": "datacenter",
+     "navn": "Dell"
+    },
+    {
+     "cx": 639.9,
+     "cy": 103.7,
+     "r": 2.9,
+     "tema": "datacenter",
+     "navn": "Sanmina"
+    },
+    {
+     "cx": 589.0,
+     "cy": 50.0,
+     "r": 2.8,
+     "tema": "datacenter",
+     "navn": "Arista Networks"
+    },
+    {
+     "cx": 875.0,
+     "cy": 67.0,
+     "r": 7.7,
+     "tema": "platforme",
+     "navn": "SoftBank Group"
+    },
+    {
+     "cx": 865.4,
+     "cy": 75.8,
+     "r": 7.0,
+     "tema": "platforme",
+     "navn": "Carvana"
+    },
+    {
+     "cx": 876.4,
+     "cy": 51.4,
+     "r": 6.7,
+     "tema": "platforme",
+     "navn": "AppLovin"
+    },
+    {
+     "cx": 885.8,
+     "cy": 81.0,
+     "r": 6.5,
+     "tema": "platforme",
+     "navn": "Sea"
+    },
+    {
+     "cx": 856.3,
+     "cy": 63.7,
+     "r": 5.3,
+     "tema": "platforme",
+     "navn": "Opendoor"
+    },
+    {
+     "cx": 892.0,
+     "cy": 56.2,
+     "r": 4.9,
+     "tema": "platforme",
+     "navn": "AUTO1 Group"
+    },
+    {
+     "cx": 869.5,
+     "cy": 87.4,
+     "r": 4.8,
+     "tema": "platforme",
+     "navn": "Roblox"
+    },
+    {
+     "cx": 864.8,
+     "cy": 47.4,
+     "r": 4.6,
+     "tema": "platforme",
+     "navn": "Amazon"
+    },
+    {
+     "cx": 896.5,
+     "cy": 74.9,
+     "r": 4.5,
+     "tema": "platforme",
+     "navn": "Grab"
+    },
+    {
+     "cx": 853.1,
+     "cy": 76.0,
+     "r": 4.4,
+     "tema": "platforme",
+     "navn": "Coupang"
+    },
+    {
+     "cx": 885.4,
+     "cy": 44.9,
+     "r": 4.3,
+     "tema": "platforme",
+     "navn": "MercadoLibre"
+    },
+    {
+     "cx": 882.5,
+     "cy": 91.0,
+     "r": 4.3,
+     "tema": "platforme",
+     "navn": "Reddit"
+    },
+    {
+     "cx": 852.7,
+     "cy": 54.1,
+     "r": 4.2,
+     "tema": "platforme",
+     "navn": "HelloFresh"
+    },
+    {
+     "cx": 900.8,
+     "cy": 61.3,
+     "r": 3.9,
+     "tema": "platforme",
+     "navn": "Uber"
+    },
+    {
+     "cx": 859.5,
+     "cy": 89.0,
+     "r": 3.9,
+     "tema": "platforme",
+     "navn": "International Workplace Group"
+    },
+    {
+     "cx": 871.5,
+     "cy": 39.7,
+     "r": 3.8,
+     "tema": "platforme",
+     "navn": "Chewy"
+    },
+    {
+     "cx": 896.4,
+     "cy": 85.0,
+     "r": 3.6,
+     "tema": "platforme",
+     "navn": "Prosus"
+    },
+    {
+     "cx": 846.6,
+     "cy": 68.2,
+     "r": 3.6,
+     "tema": "platforme",
+     "navn": "Meituan"
+    },
+    {
+     "cx": 895.5,
+     "cy": 46.6,
+     "r": 3.6,
+     "tema": "platforme",
+     "navn": "Netflix"
+    },
+    {
+     "cx": 873.6,
+     "cy": 96.3,
+     "r": 3.2,
+     "tema": "platforme",
+     "navn": "Allegro.eu"
+    },
+    {
+     "cx": 856.0,
+     "cy": 44.2,
+     "r": 3.2,
+     "tema": "platforme",
+     "navn": "DoorDash"
+    },
+    {
+     "cx": 904.8,
+     "cy": 71.0,
+     "r": 3.2,
+     "tema": "platforme",
+     "navn": "WEBTOON Entertainment"
+    },
+    {
+     "cx": 850.0,
+     "cy": 84.4,
+     "r": 3.1,
+     "tema": "platforme",
+     "navn": "Spotify"
+    },
+    {
+     "cx": 881.7,
+     "cy": 37.0,
+     "r": 3.0,
+     "tema": "platforme",
+     "navn": "Coursera"
+    },
+    {
+     "cx": 890.4,
+     "cy": 94.0,
+     "r": 3.0,
+     "tema": "platforme",
+     "navn": "FuboTV"
+    },
+    {
+     "cx": 845.1,
+     "cy": 57.5,
+     "r": 3.0,
+     "tema": "platforme",
+     "navn": "MNTN"
+    },
+    {
+     "cx": 903.8,
+     "cy": 53.7,
+     "r": 3.0,
+     "tema": "platforme",
+     "navn": "PDD Holdings"
+    },
+    {
+     "cx": 862.6,
+     "cy": 96.5,
+     "r": 2.9,
+     "tema": "platforme",
+     "navn": "Alibaba Group"
+    },
+    {
+     "cx": 864.1,
+     "cy": 36.6,
+     "r": 2.9,
+     "tema": "platforme",
+     "navn": "Meta Platforms"
+    },
+    {
+     "cx": 903.9,
+     "cy": 82.2,
+     "r": 2.9,
+     "tema": "platforme",
+     "navn": "Zeta Global Holdings"
+    },
+    {
+     "cx": 843.2,
+     "cy": 75.4,
+     "r": 2.4,
+     "tema": "platforme",
+     "navn": "Apple"
+    },
+    {
+     "cx": 125.0,
+     "cy": 237.0,
+     "r": 10.3,
+     "tema": "rumfart",
+     "navn": "SpaceX"
+    },
+    {
+     "cx": 114.5,
+     "cy": 246.6,
+     "r": 5.2,
+     "tema": "rumfart",
+     "navn": "Planet Labs"
+    },
+    {
+     "cx": 126.4,
+     "cy": 221.3,
+     "r": 5.1,
+     "tema": "rumfart",
+     "navn": "Intuitive Machines"
+    },
+    {
+     "cx": 135.4,
+     "cy": 250.6,
+     "r": 5.0,
+     "tema": "rumfart",
+     "navn": "AST SpaceMobile"
+    },
+    {
+     "cx": 107.0,
+     "cy": 233.8,
+     "r": 4.9,
+     "tema": "rumfart",
+     "navn": "BlackSky"
+    },
+    {
+     "cx": 141.4,
+     "cy": 226.6,
+     "r": 4.9,
+     "tema": "rumfart",
+     "navn": "York Space Systems"
+    },
+    {
+     "cx": 119.7,
+     "cy": 256.8,
+     "r": 4.8,
+     "tema": "rumfart",
+     "navn": "MDA Space"
+    },
+    {
+     "cx": 115.1,
+     "cy": 218.0,
+     "r": 4.7,
+     "tema": "rumfart",
+     "navn": "Rocket Lab"
+    },
+    {
+     "cx": 145.9,
+     "cy": 244.6,
+     "r": 4.3,
+     "tema": "rumfart",
+     "navn": "Redwire"
+    },
+    {
+     "cx": 103.7,
+     "cy": 245.8,
+     "r": 4.2,
+     "tema": "rumfart",
+     "navn": "Firefly Aerospace"
+    },
+    {
+     "cx": 135.0,
+     "cy": 215.5,
+     "r": 4.0,
+     "tema": "rumfart",
+     "navn": "Satellogic"
+    },
+    {
+     "cx": 132.3,
+     "cy": 260.2,
+     "r": 4.0,
+     "tema": "rumfart",
+     "navn": "Starfighters Space"
+    },
+    {
+     "cx": 103.4,
+     "cy": 224.5,
+     "r": 3.9,
+     "tema": "rumfart",
+     "navn": "Spire Global"
+    },
+    {
+     "cx": 150.0,
+     "cy": 231.5,
+     "r": 3.8,
+     "tema": "rumfart",
+     "navn": "Voyager Technologies"
+    },
+    {
+     "cx": 110.0,
+     "cy": 258.3,
+     "r": 3.5,
+     "tema": "rumfart",
+     "navn": "HawkEye 360"
+    },
+    {
+     "cx": 121.6,
+     "cy": 210.7,
+     "r": 3.5,
+     "tema": "rumfart",
+     "navn": "Howmet Aerospace"
+    },
+    {
+     "cx": 145.6,
+     "cy": 254.4,
+     "r": 3.0,
+     "tema": "rumfart",
+     "navn": "Karman Space & Defense"
+    },
+    {
+     "cx": 97.8,
+     "cy": 238.1,
+     "r": 2.6,
+     "tema": "rumfart",
+     "navn": "Iridium Communications"
+    },
+    {
+     "cx": 375.0,
+     "cy": 237.0,
+     "r": 7.8,
+     "tema": "fysisk-ai",
+     "navn": "Tesla"
+    },
+    {
+     "cx": 366.0,
+     "cy": 245.3,
+     "r": 5.7,
+     "tema": "fysisk-ai",
+     "navn": "Ford Motor"
+    },
+    {
+     "cx": 376.2,
+     "cy": 222.9,
+     "r": 5.4,
+     "tema": "fysisk-ai",
+     "navn": "Raspberry Pi"
+    },
+    {
+     "cx": 384.6,
+     "cy": 249.6,
+     "r": 5.3,
+     "tema": "fysisk-ai",
+     "navn": "Merlin"
+    },
+    {
+     "cx": 358.1,
+     "cy": 234.0,
+     "r": 5.0,
+     "tema": "fysisk-ai",
+     "navn": "Joby Aviation"
+    },
+    {
+     "cx": 390.5,
+     "cy": 227.2,
+     "r": 4.6,
+     "tema": "fysisk-ai",
+     "navn": "Aeva Technologies"
+    },
+    {
+     "cx": 370.0,
+     "cy": 255.7,
+     "r": 4.6,
+     "tema": "fysisk-ai",
+     "navn": "Symbotic"
+    },
+    {
+     "cx": 365.7,
+     "cy": 219.1,
+     "r": 4.2,
+     "tema": "fysisk-ai",
+     "navn": "Pony AI"
+    },
+    {
+     "cx": 394.7,
+     "cy": 244.2,
+     "r": 4.1,
+     "tema": "fysisk-ai",
+     "navn": "Archer Aviation"
+    },
+    {
+     "cx": 354.9,
+     "cy": 245.3,
+     "r": 4.1,
+     "tema": "fysisk-ai",
+     "navn": "Shelly"
+    },
+    {
+     "cx": 384.5,
+     "cy": 216.7,
+     "r": 4.0,
+     "tema": "fysisk-ai",
+     "navn": "Ondas Holdings"
+    },
+    {
+     "cx": 381.9,
+     "cy": 259.1,
+     "r": 3.9,
+     "tema": "fysisk-ai",
+     "navn": "MicroVision"
+    },
+    {
+     "cx": 354.4,
+     "cy": 225.1,
+     "r": 3.8,
+     "tema": "fysisk-ai",
+     "navn": "Unusual Machines"
+    },
+    {
+     "cx": 398.8,
+     "cy": 231.8,
+     "r": 3.7,
+     "tema": "fysisk-ai",
+     "navn": "Swarmer"
+    },
+    {
+     "cx": 360.7,
+     "cy": 257.4,
+     "r": 3.6,
+     "tema": "fysisk-ai",
+     "navn": "Kodiak AI"
+    },
+    {
+     "cx": 371.7,
+     "cy": 211.8,
+     "r": 3.6,
+     "tema": "fysisk-ai",
+     "navn": "Ouster"
+    },
+    {
+     "cx": 394.8,
+     "cy": 253.7,
+     "r": 3.6,
+     "tema": "fysisk-ai",
+     "navn": "WeRide"
+    },
+    {
+     "cx": 348.6,
+     "cy": 238.1,
+     "r": 3.5,
+     "tema": "fysisk-ai",
+     "navn": "Li Auto"
+    },
+    {
+     "cx": 394.1,
+     "cy": 218.0,
+     "r": 3.5,
+     "tema": "fysisk-ai",
+     "navn": "General Motors"
+    },
+    {
+     "cx": 374.4,
+     "cy": 264.4,
+     "r": 3.5,
+     "tema": "fysisk-ai",
+     "navn": "Serve Robotics"
+    },
+    {
+     "cx": 357.2,
+     "cy": 215.6,
+     "r": 3.3,
+     "tema": "fysisk-ai",
+     "navn": "Horizon Robotics"
+    },
+    {
+     "cx": 403.0,
+     "cy": 240.8,
+     "r": 3.3,
+     "tema": "fysisk-ai",
+     "navn": "Kraken Robotics"
+    },
+    {
+     "cx": 351.5,
+     "cy": 253.4,
+     "r": 3.2,
+     "tema": "fysisk-ai",
+     "navn": "Aurora Innovation"
+    },
+    {
+     "cx": 381.4,
+     "cy": 208.7,
+     "r": 3.2,
+     "tema": "fysisk-ai",
+     "navn": "Churchill Capital"
+    },
+    {
+     "cx": 389.6,
+     "cy": 262.5,
+     "r": 2.9,
+     "tema": "fysisk-ai",
+     "navn": "Rivian Automotive"
+    },
+    {
+     "cx": 346.7,
+     "cy": 228.0,
+     "r": 2.8,
+     "tema": "fysisk-ai",
+     "navn": "Airo Group"
+    },
+    {
+     "cx": 402.2,
+     "cy": 224.4,
+     "r": 2.8,
+     "tema": "fysisk-ai",
+     "navn": "Lantronix"
+    },
+    {
+     "cx": 625.0,
+     "cy": 237.0,
+     "r": 5.1,
+     "tema": "raastoffer",
+     "navn": "United States Antimony"
+    },
+    {
+     "cx": 617.9,
+     "cy": 243.5,
+     "r": 5.1,
+     "tema": "raastoffer",
+     "navn": "Ero Copper"
+    },
+    {
+     "cx": 626.0,
+     "cy": 225.4,
+     "r": 4.8,
+     "tema": "raastoffer",
+     "navn": "Huntsman"
+    },
+    {
+     "cx": 633.1,
+     "cy": 247.5,
+     "r": 4.8,
+     "tema": "raastoffer",
+     "navn": "Lynas Rare Earths"
+    },
+    {
+     "cx": 610.6,
+     "cy": 234.5,
+     "r": 4.5,
+     "tema": "raastoffer",
+     "navn": "Critical Metals"
+    },
+    {
+     "cx": 638.4,
+     "cy": 228.5,
+     "r": 4.4,
+     "tema": "raastoffer",
+     "navn": "Energy Fuels"
+    },
+    {
+     "cx": 620.6,
+     "cy": 253.4,
+     "r": 4.3,
+     "tema": "raastoffer",
+     "navn": "NioCorp"
+    },
+    {
+     "cx": 616.7,
+     "cy": 221.1,
+     "r": 4.3,
+     "tema": "raastoffer",
+     "navn": "First Majestic Silver"
+    },
+    {
+     "cx": 642.7,
+     "cy": 243.5,
+     "r": 4.2,
+     "tema": "raastoffer",
+     "navn": "Celanese"
+    },
+    {
+     "cx": 606.7,
+     "cy": 244.5,
+     "r": 4.2,
+     "tema": "raastoffer",
+     "navn": "Pan American Silver"
+    },
+    {
+     "cx": 633.7,
+     "cy": 218.3,
+     "r": 4.2,
+     "tema": "raastoffer",
+     "navn": "Chemours"
+    },
+    {
+     "cx": 631.4,
+     "cy": 257.4,
+     "r": 4.2,
+     "tema": "raastoffer",
+     "navn": "Hecla Mining"
+    },
+    {
+     "cx": 605.8,
+     "cy": 225.9,
+     "r": 4.1,
+     "tema": "raastoffer",
+     "navn": "Coeur Mining"
+    },
+    {
+     "cx": 647.4,
+     "cy": 232.1,
+     "r": 4.1,
+     "tema": "raastoffer",
+     "navn": "Freeport-McMoRan"
+    },
+    {
+     "cx": 611.4,
+     "cy": 256.3,
+     "r": 4.0,
+     "tema": "raastoffer",
+     "navn": "MP Materials"
+    },
+    {
+     "cx": 621.9,
+     "cy": 213.0,
+     "r": 3.9,
+     "tema": "raastoffer",
+     "navn": "Capstone Copper"
+    },
+    {
+     "cx": 644.0,
+     "cy": 253.0,
+     "r": 3.9,
+     "tema": "raastoffer",
+     "navn": "Albemarle"
+    },
+    {
+     "cx": 599.6,
+     "cy": 238.0,
+     "r": 3.9,
+     "tema": "raastoffer",
+     "navn": "Arkema"
+    },
+    {
+     "cx": 643.4,
+     "cy": 218.7,
+     "r": 3.9,
+     "tema": "raastoffer",
+     "navn": "Sigma Lithium"
+    },
+    {
+     "cx": 623.8,
+     "cy": 263.5,
+     "r": 3.8,
+     "tema": "raastoffer",
+     "navn": "American Resources"
+    },
+    {
+     "cx": 607.7,
+     "cy": 216.2,
+     "r": 3.6,
+     "tema": "raastoffer",
+     "navn": "Idaho Strategic Resources"
+    },
+    {
+     "cx": 652.3,
+     "cy": 240.7,
+     "r": 3.6,
+     "tema": "raastoffer",
+     "navn": "Solstice Advanced Materials"
+    },
+    {
+     "cx": 602.0,
+     "cy": 253.0,
+     "r": 3.6,
+     "tema": "raastoffer",
+     "navn": "Southern Copper"
+    },
+    {
+     "cx": 631.3,
+     "cy": 209.2,
+     "r": 3.5,
+     "tema": "raastoffer",
+     "navn": "American Battery Technology"
+    },
+    {
+     "cx": 639.4,
+     "cy": 262.1,
+     "r": 3.5,
+     "tema": "raastoffer",
+     "navn": "Lithium Americas"
+    },
+    {
+     "cx": 597.0,
+     "cy": 228.1,
+     "r": 3.5,
+     "tema": "raastoffer",
+     "navn": "Newmont"
+    },
+    {
+     "cx": 652.0,
+     "cy": 224.5,
+     "r": 3.5,
+     "tema": "raastoffer",
+     "navn": "Standard Lithium"
+    },
+    {
+     "cx": 613.3,
+     "cy": 264.9,
+     "r": 3.4,
+     "tema": "raastoffer",
+     "navn": "USA Rare Earth"
+    },
+    {
+     "cx": 614.6,
+     "cy": 208.2,
+     "r": 3.3,
+     "tema": "raastoffer",
+     "navn": "Almonty Industries"
+    },
+    {
+     "cx": 652.4,
+     "cy": 251.4,
+     "r": 3.3,
+     "tema": "raastoffer",
+     "navn": "Perpetua Resources"
+    },
+    {
+     "cx": 594.7,
+     "cy": 245.0,
+     "r": 3.3,
+     "tema": "raastoffer",
+     "navn": "Trekor Metals"
+    },
+    {
+     "cx": 642.1,
+     "cy": 210.3,
+     "r": 3.2,
+     "tema": "raastoffer",
+     "navn": "The Metals Company"
+    },
+    {
+     "cx": 630.4,
+     "cy": 268.6,
+     "r": 3.1,
+     "tema": "raastoffer",
+     "navn": "Trilogy Metals"
+    },
+    {
+     "cx": 599.4,
+     "cy": 217.2,
+     "r": 3.0,
+     "tema": "raastoffer",
+     "navn": "Ivanhoe Electric"
+    },
+    {
+     "cx": 657.6,
+     "cy": 234.3,
+     "r": 3.0,
+     "tema": "raastoffer",
+     "navn": "Neo Performance Materials"
+    },
+    {
+     "cx": 602.6,
+     "cy": 261.2,
+     "r": 2.9,
+     "tema": "raastoffer",
+     "navn": "Northern Dynasty Minerals"
+    },
+    {
+     "cx": 875.0,
+     "cy": 237.0,
+     "r": 5.7,
+     "tema": "fintech",
+     "navn": "SoFi"
+    },
+    {
+     "cx": 867.4,
+     "cy": 243.9,
+     "r": 5.4,
+     "tema": "fintech",
+     "navn": "Klarna"
+    },
+    {
+     "cx": 876.1,
+     "cy": 224.6,
+     "r": 5.3,
+     "tema": "fintech",
+     "navn": "Upstart"
+    },
+    {
+     "cx": 883.5,
+     "cy": 248.1,
+     "r": 4.7,
+     "tema": "fintech",
+     "navn": "Shift4 Payments"
+    },
+    {
+     "cx": 859.9,
+     "cy": 234.3,
+     "r": 4.6,
+     "tema": "fintech",
+     "navn": "Root"
+    },
+    {
+     "cx": 888.9,
+     "cy": 228.2,
+     "r": 4.4,
+     "tema": "fintech",
+     "navn": "Lemonade"
+    },
+    {
+     "cx": 870.5,
+     "cy": 253.8,
+     "r": 4.1,
+     "tema": "fintech",
+     "navn": "Chime Financial"
+    },
+    {
+     "cx": 866.5,
+     "cy": 220.7,
+     "r": 4.1,
+     "tema": "fintech",
+     "navn": "Webull"
+    },
+    {
+     "cx": 893.0,
+     "cy": 243.6,
+     "r": 4.1,
+     "tema": "fintech",
+     "navn": "Nu"
+    },
+    {
+     "cx": 856.5,
+     "cy": 244.6,
+     "r": 3.8,
+     "tema": "fintech",
+     "navn": "Robinhood"
+    },
+    {
+     "cx": 883.7,
+     "cy": 218.4,
+     "r": 3.3,
+     "tema": "fintech",
+     "navn": "Figure Technology Solutions"
+    },
+    {
+     "cx": 881.3,
+     "cy": 257.1,
+     "r": 3.2,
+     "tema": "fintech",
+     "navn": "Global-e"
+    },
+    {
+     "cx": 856.3,
+     "cy": 226.2,
+     "r": 3.1,
+     "tema": "fintech",
+     "navn": "Affirm"
+    },
+    {
+     "cx": 896.6,
+     "cy": 232.3,
+     "r": 3.1,
+     "tema": "fintech",
+     "navn": "Futu"
+    },
+    {
+     "cx": 862.0,
+     "cy": 255.4,
+     "r": 3.1,
+     "tema": "fintech",
+     "navn": "Kaspi.kz"
+    },
+    {
+     "cx": 872.0,
+     "cy": 214.2,
+     "r": 3.0,
+     "tema": "fintech",
+     "navn": "Ategrity Specialty Holdings"
+    },
+    {
+     "cx": 892.9,
+     "cy": 252.1,
+     "r": 2.8,
+     "tema": "fintech",
+     "navn": "Pagaya Technologies"
+    },
+    {
+     "cx": 851.2,
+     "cy": 238.0,
+     "r": 2.8,
+     "tema": "fintech",
+     "navn": "dLocal"
+    },
+    {
+     "cx": 125.0,
+     "cy": 407.0,
+     "r": 5.0,
+     "tema": "krypto",
+     "navn": "Bitdeer Technologies Group"
+    },
+    {
+     "cx": 118.1,
+     "cy": 413.3,
+     "r": 5.0,
+     "tema": "krypto",
+     "navn": "CleanSpark"
+    },
+    {
+     "cx": 126.0,
+     "cy": 395.6,
+     "r": 4.9,
+     "tema": "krypto",
+     "navn": "Coinbase"
+    },
+    {
+     "cx": 132.9,
+     "cy": 417.4,
+     "r": 4.6,
+     "tema": "krypto",
+     "navn": "Galaxy Digital"
+    },
+    {
+     "cx": 110.8,
+     "cy": 404.5,
+     "r": 4.5,
+     "tema": "krypto",
+     "navn": "Circle Internet Group"
+    },
+    {
+     "cx": 138.2,
+     "cy": 398.6,
+     "r": 4.3,
+     "tema": "krypto",
+     "navn": "Riot Platforms"
+    },
+    {
+     "cx": 120.7,
+     "cy": 423.1,
+     "r": 4.2,
+     "tema": "krypto",
+     "navn": "Gemini Space Station"
+    },
+    {
+     "cx": 116.9,
+     "cy": 391.3,
+     "r": 4.1,
+     "tema": "krypto",
+     "navn": "Keel Infrastructure"
+    },
+    {
+     "cx": 142.4,
+     "cy": 413.3,
+     "r": 3.9,
+     "tema": "krypto",
+     "navn": "Hyperliquid Strategies"
+    },
+    {
+     "cx": 107.3,
+     "cy": 414.3,
+     "r": 3.6,
+     "tema": "krypto",
+     "navn": "Bit Digital"
+    },
+    {
+     "cx": 133.4,
+     "cy": 389.0,
+     "r": 3.5,
+     "tema": "krypto",
+     "navn": "Bitmine Immersion Technologies"
+    },
+    {
+     "cx": 131.1,
+     "cy": 426.5,
+     "r": 3.4,
+     "tema": "krypto",
+     "navn": "CSLM Digital Asset Acquisition Corp III"
+    },
+    {
+     "cx": 106.8,
+     "cy": 396.5,
+     "r": 3.2,
+     "tema": "krypto",
+     "navn": "Bullish"
+    },
+    {
+     "cx": 146.1,
+     "cy": 402.4,
+     "r": 3.2,
+     "tema": "krypto",
+     "navn": "Sharplink"
+    },
+    {
+     "cx": 112.3,
+     "cy": 425.1,
+     "r": 3.2,
+     "tema": "krypto",
+     "navn": "Strategy"
+    },
+    {
+     "cx": 122.1,
+     "cy": 384.6,
+     "r": 3.2,
+     "tema": "krypto",
+     "navn": "Upexi"
+    },
+    {
+     "cx": 142.6,
+     "cy": 421.9,
+     "r": 3.0,
+     "tema": "krypto",
+     "navn": "DeFi Development"
+    },
+    {
+     "cx": 375.0,
+     "cy": 407.0,
+     "r": 5.9,
+     "tema": "software",
+     "navn": "SoundHound AI"
+    },
+    {
+     "cx": 367.8,
+     "cy": 413.6,
+     "r": 4.5,
+     "tema": "software",
+     "navn": "Palantir"
+    },
+    {
+     "cx": 376.0,
+     "cy": 395.6,
+     "r": 4.3,
+     "tema": "software",
+     "navn": "Unity Software"
+    },
+    {
+     "cx": 383.0,
+     "cy": 417.2,
+     "r": 4.1,
+     "tema": "software",
+     "navn": "Innodata"
+    },
+    {
+     "cx": 361.3,
+     "cy": 404.6,
+     "r": 3.9,
+     "tema": "software",
+     "navn": "Navan"
+    },
+    {
+     "cx": 387.4,
+     "cy": 399.1,
+     "r": 3.2,
+     "tema": "software",
+     "navn": "Snowflake"
+    },
+    {
+     "cx": 371.0,
+     "cy": 421.9,
+     "r": 3.2,
+     "tema": "software",
+     "navn": "Wix.com"
+    },
+    {
+     "cx": 367.6,
+     "cy": 392.8,
+     "r": 2.9,
+     "tema": "software",
+     "navn": "Figma"
+    },
+    {
+     "cx": 390.6,
+     "cy": 412.7,
+     "r": 2.9,
+     "tema": "software",
+     "navn": "Palo Alto Networks"
+    },
+    {
+     "cx": 359.1,
+     "cy": 413.6,
+     "r": 2.9,
+     "tema": "software",
+     "navn": "Rubrik"
+    },
+    {
+     "cx": 383.2,
+     "cy": 390.9,
+     "r": 2.8,
+     "tema": "software",
+     "navn": "Cloudflare"
+    },
+    {
+     "cx": 380.5,
+     "cy": 424.4,
+     "r": 2.8,
+     "tema": "software",
+     "navn": "Samsara"
+    },
+    {
+     "cx": 358.8,
+     "cy": 397.6,
+     "r": 2.6,
+     "tema": "software",
+     "navn": "Netskope"
+    },
+    {
+     "cx": 393.7,
+     "cy": 402.9,
+     "r": 2.4,
+     "tema": "software",
+     "navn": "CrowdStrike"
+    },
+    {
+     "cx": 363.8,
+     "cy": 423.0,
+     "r": 2.4,
+     "tema": "software",
+     "navn": "SailPoint"
+    },
+    {
+     "cx": 625.0,
+     "cy": 407.0,
+     "r": 5.1,
+     "tema": "sundhed",
+     "navn": "Hims & Hers Health"
+    },
+    {
+     "cx": 618.1,
+     "cy": 413.3,
+     "r": 4.6,
+     "tema": "sundhed",
+     "navn": "BioNTech"
+    },
+    {
+     "cx": 626.0,
+     "cy": 396.0,
+     "r": 4.2,
+     "tema": "sundhed",
+     "navn": "Eli Lilly"
+    },
+    {
+     "cx": 632.5,
+     "cy": 416.8,
+     "r": 3.9,
+     "tema": "sundhed",
+     "navn": "Intellia Therapeutics"
+    },
+    {
+     "cx": 611.9,
+     "cy": 404.7,
+     "r": 3.6,
+     "tema": "sundhed",
+     "navn": "Tempus AI"
+    },
+    {
+     "cx": 637.0,
+     "cy": 399.3,
+     "r": 3.5,
+     "tema": "sundhed",
+     "navn": "Bachem"
+    },
+    {
+     "cx": 621.1,
+     "cy": 421.6,
+     "r": 3.3,
+     "tema": "sundhed",
+     "navn": "CRISPR Therapeutics"
+    },
+    {
+     "cx": 617.7,
+     "cy": 392.9,
+     "r": 3.3,
+     "tema": "sundhed",
+     "navn": "Omada Health"
+    },
+    {
+     "cx": 640.5,
+     "cy": 412.7,
+     "r": 3.0,
+     "tema": "sundhed",
+     "navn": "LifeMD"
+    },
+    {
+     "cx": 609.3,
+     "cy": 413.5,
+     "r": 2.8,
+     "tema": "sundhed",
+     "navn": "Hinge Health"
+    },
+    {
+     "cx": 632.4,
+     "cy": 391.1,
+     "r": 2.6,
+     "tema": "sundhed",
+     "navn": "Oscar Health"
+    },
+    {
+     "cx": 630.4,
+     "cy": 424.1,
+     "r": 2.4,
+     "tema": "sundhed",
+     "navn": "AbCellera Biologics"
+    },
+    {
+     "cx": 875.0,
+     "cy": 407.0,
+     "r": 5.0,
+     "tema": "kvante",
+     "navn": "Oxford Instruments"
+    },
+    {
+     "cx": 868.3,
+     "cy": 413.1,
+     "r": 4.4,
+     "tema": "kvante",
+     "navn": "Quantum Computing"
+    },
+    {
+     "cx": 875.9,
+     "cy": 396.3,
+     "r": 4.2,
+     "tema": "kvante",
+     "navn": "Quantinuum"
+    },
+    {
+     "cx": 882.4,
+     "cy": 416.6,
+     "r": 3.9,
+     "tema": "kvante",
+     "navn": "D-Wave Quantum"
+    },
+    {
+     "cx": 861.9,
+     "cy": 404.7,
+     "r": 3.9,
+     "tema": "kvante",
+     "navn": "Rigetti Computing"
+    },
+    {
+     "cx": 887.0,
+     "cy": 399.3,
+     "r": 3.6,
+     "tema": "kvante",
+     "navn": "Infleqtion"
+    },
+    {
+     "cx": 871.1,
+     "cy": 421.6,
+     "r": 3.4,
+     "tema": "kvante",
+     "navn": "IonQ"
+    }
+   ],
+   "klynger": [
+    {
+     "id": "chips",
+     "navn": "Chips og halvledere",
+     "kort": "Chips",
+     "x": 125.0,
+     "cy": 67.0,
+     "y1": 148,
+     "y2": 166,
+     "link": "temaer/chips.html",
+     "linjeTekst": null,
+     "fx": 4,
+     "fy": 4,
+     "fb": 242,
+     "fh": 170
+    },
+    {
+     "id": "energi",
+     "navn": "Energi og elnet",
+     "kort": "Energi",
+     "x": 375.0,
+     "cy": 67.0,
+     "y1": 148,
+     "y2": 166,
+     "link": "temaer/energi.html",
+     "linjeTekst": null,
+     "fx": 254,
+     "fy": 4,
+     "fb": 242,
+     "fh": 170
+    },
+    {
+     "id": "datacenter",
+     "navn": "Datacentre",
+     "kort": "Datacentre",
+     "x": 625.0,
+     "cy": 67.0,
+     "y1": 148,
+     "y2": 166,
+     "link": "temaer/datacenter.html",
+     "linjeTekst": null,
+     "fx": 504,
+     "fy": 4,
+     "fb": 242,
+     "fh": 170
+    },
+    {
+     "id": "platforme",
+     "navn": "Platformsøkonomi",
+     "kort": "Platforme",
+     "x": 875.0,
+     "cy": 67.0,
+     "y1": 148,
+     "y2": 166,
+     "link": "temaer/platforme.html",
+     "linjeTekst": null,
+     "fx": 754,
+     "fy": 4,
+     "fb": 242,
+     "fh": 170
+    },
+    {
+     "id": "rumfart",
+     "navn": "Rumfart",
+     "kort": "Rumfart",
+     "x": 125.0,
+     "cy": 237.0,
+     "y1": 318,
+     "y2": 336,
+     "link": "temaer/rumfart.html",
+     "linjeTekst": null,
+     "fx": 4,
+     "fy": 174,
+     "fb": 242,
+     "fh": 170
+    },
+    {
+     "id": "fysisk-ai",
+     "navn": "Robotter & fysisk AI",
+     "kort": "Robotter",
+     "x": 375.0,
+     "cy": 237.0,
+     "y1": 318,
+     "y2": 336,
+     "link": "temaer/fysisk-ai.html",
+     "linjeTekst": null,
+     "fx": 254,
+     "fy": 174,
+     "fb": 242,
+     "fh": 170
+    },
+    {
+     "id": "raastoffer",
+     "navn": "Råstoffer",
+     "kort": "Råstoffer",
+     "x": 625.0,
+     "cy": 237.0,
+     "y1": 318,
+     "y2": 336,
+     "link": "temaer/raastoffer.html",
+     "linjeTekst": null,
+     "fx": 504,
+     "fy": 174,
+     "fb": 242,
+     "fh": 170
+    },
+    {
+     "id": "fintech",
+     "navn": "Fintech",
+     "kort": "Fintech",
+     "x": 875.0,
+     "cy": 237.0,
+     "y1": 318,
+     "y2": 336,
+     "link": "temaer/fintech.html",
+     "linjeTekst": null,
+     "fx": 754,
+     "fy": 174,
+     "fb": 242,
+     "fh": 170
+    },
+    {
+     "id": "krypto",
+     "navn": "Krypto",
+     "kort": "Krypto",
+     "x": 125.0,
+     "cy": 407.0,
+     "y1": 488,
+     "y2": 506,
+     "link": "temaer/krypto.html",
+     "linjeTekst": null,
+     "fx": 4,
+     "fy": 344,
+     "fb": 242,
+     "fh": 170
+    },
+    {
+     "id": "software",
+     "navn": "Software & AI",
+     "kort": "Software",
+     "x": 375.0,
+     "cy": 407.0,
+     "y1": 488,
+     "y2": 506,
+     "link": "temaer/software.html",
+     "linjeTekst": null,
+     "fx": 254,
+     "fy": 344,
+     "fb": 242,
+     "fh": 170
+    },
+    {
+     "id": "sundhed",
+     "navn": "Sundhed og biotek",
+     "kort": "Sundhed",
+     "x": 625.0,
+     "cy": 407.0,
+     "y1": 488,
+     "y2": 506,
+     "link": "temaer/sundhed.html",
+     "linjeTekst": null,
+     "fx": 504,
+     "fy": 344,
+     "fb": 242,
+     "fh": 170
+    },
+    {
+     "id": "kvante",
+     "navn": "Kvantecomputere",
+     "kort": "Kvante",
+     "x": 875.0,
+     "cy": 407.0,
+     "y1": 488,
+     "y2": 506,
+     "link": "temaer/kvante.html",
+     "linjeTekst": null,
+     "fx": 754,
+     "fy": 344,
+     "fb": 242,
+     "fh": 170
+    }
+   ],
+   "bredde": 1000,
+   "hoejde": 514,
+   "traade": [
+    {
+     "fra": "datacenter",
+     "til": "energi",
+     "antal": 15,
+     "d": "M625.0 67.0 Q500.0 22.0 375.0 67.0",
+     "w": 6.0,
+     "styrke": "staerk"
+    },
+    {
+     "fra": "chips",
+     "til": "datacenter",
+     "antal": 13,
+     "d": "M125.0 67.0 Q375.0 127.0 625.0 67.0",
+     "w": 5.3,
+     "styrke": "staerk"
+    },
+    {
+     "fra": "datacenter",
+     "til": "krypto",
+     "antal": 10,
+     "d": "M625.0 67.0 Q341.3 187.4 125.0 407.0",
+     "w": 4.3,
+     "styrke": "staerk"
+    },
+    {
+     "fra": "energi",
+     "til": "fysisk-ai",
+     "antal": 9,
+     "d": "M375.0 67.0 Q344.4 152.0 375.0 237.0",
+     "w": 4.0,
+     "styrke": "staerk"
+    },
+    {
+     "fra": "chips",
+     "til": "fysisk-ai",
+     "antal": 8,
+     "d": "M125.0 67.0 Q219.4 197.0 375.0 237.0",
+     "w": 3.7,
+     "styrke": "staerk"
+    },
+    {
+     "fra": "fintech",
+     "til": "platforme",
+     "antal": 5,
+     "d": "M875.0 237.0 Q905.6 152.0 875.0 67.0",
+     "w": 2.7,
+     "styrke": "mellem"
+    },
+    {
+     "fra": "platforme",
+     "til": "software",
+     "antal": 5,
+     "d": "M875.0 67.0 Q591.3 187.4 375.0 407.0",
+     "w": 2.7,
+     "styrke": "mellem"
+    },
+    {
+     "fra": "datacenter",
+     "til": "platforme",
+     "antal": 4,
+     "d": "M625.0 67.0 Q750.0 112.0 875.0 67.0",
+     "w": 2.3,
+     "styrke": "mellem"
+    },
+    {
+     "fra": "datacenter",
+     "til": "software",
+     "antal": 4,
+     "d": "M625.0 67.0 Q451.7 201.5 375.0 407.0",
+     "w": 2.3,
+     "styrke": "mellem"
+    },
+    {
+     "fra": "fintech",
+     "til": "krypto",
+     "antal": 4,
+     "d": "M875.0 237.0 Q486.7 263.5 125.0 407.0",
+     "w": 2.3,
+     "styrke": "mellem"
+    },
+    {
+     "fra": "energi",
+     "til": "sundhed",
+     "antal": 2,
+     "d": "M375.0 67.0 Q451.7 272.5 625.0 407.0",
+     "w": 1.7,
+     "styrke": "svag"
+    },
+    {
+     "fra": "fintech",
+     "til": "software",
+     "antal": 2,
+     "d": "M875.0 237.0 Q605.7 265.2 375.0 407.0",
+     "w": 1.7,
+     "styrke": "svag"
+    },
+    {
+     "fra": "fysisk-ai",
+     "til": "software",
+     "antal": 2,
+     "d": "M375.0 237.0 Q344.4 322.0 375.0 407.0",
+     "w": 1.7,
+     "styrke": "svag"
+    },
+    {
+     "fra": "chips",
+     "til": "platforme",
+     "antal": 1,
+     "d": "M125.0 67.0 Q500.0 127.0 875.0 67.0",
+     "w": 1.3,
+     "styrke": "svag"
+    },
+    {
+     "fra": "chips",
+     "til": "raastoffer",
+     "antal": 1,
+     "d": "M125.0 67.0 Q355.7 208.8 625.0 237.0",
+     "w": 1.3,
+     "styrke": "svag"
+    },
+    {
+     "fra": "datacenter",
+     "til": "fysisk-ai",
+     "antal": 1,
+     "d": "M625.0 67.0 Q469.4 107.0 375.0 237.0",
+     "w": 1.3,
+     "styrke": "svag"
+    },
+    {
+     "fra": "datacenter",
+     "til": "raastoffer",
+     "antal": 1,
+     "d": "M625.0 67.0 Q594.4 152.0 625.0 237.0",
+     "w": 1.3,
+     "styrke": "svag"
+    },
+    {
+     "fra": "datacenter",
+     "til": "rumfart",
+     "antal": 1,
+     "d": "M625.0 67.0 Q355.7 95.2 125.0 237.0",
+     "w": 1.3,
+     "styrke": "svag"
+    },
+    {
+     "fra": "energi",
+     "til": "raastoffer",
+     "antal": 1,
+     "d": "M375.0 67.0 Q469.4 197.0 625.0 237.0",
+     "w": 1.3,
+     "styrke": "svag"
+    },
+    {
+     "fra": "energi",
+     "til": "rumfart",
+     "antal": 1,
+     "d": "M375.0 67.0 Q219.4 107.0 125.0 237.0",
+     "w": 1.3,
+     "styrke": "svag"
+    },
+    {
+     "fra": "fintech",
+     "til": "sundhed",
+     "antal": 1,
+     "d": "M875.0 237.0 Q719.4 277.0 625.0 407.0",
+     "w": 1.3,
+     "styrke": "svag"
+    },
+    {
+     "fra": "fysisk-ai",
+     "til": "platforme",
+     "antal": 1,
+     "d": "M375.0 237.0 Q644.3 208.8 875.0 67.0",
+     "w": 1.3,
+     "styrke": "svag"
+    },
+    {
+     "fra": "fysisk-ai",
+     "til": "raastoffer",
+     "antal": 1,
+     "d": "M375.0 237.0 Q500.0 282.0 625.0 237.0",
+     "w": 1.3,
+     "styrke": "svag"
+    },
+    {
+     "fra": "fysisk-ai",
+     "til": "rumfart",
+     "antal": 1,
+     "d": "M375.0 237.0 Q250.0 192.0 125.0 237.0",
+     "w": 1.3,
+     "styrke": "svag"
+    },
+    {
+     "fra": "software",
+     "til": "sundhed",
+     "antal": 1,
+     "d": "M375.0 407.0 Q500.0 452.0 625.0 407.0",
+     "w": 1.3,
+     "styrke": "svag"
+    }
+   ]
+  },
+  "medTema": 372,
+  "udenTema": 1,
+  "udenTemaNavne": "eToro Group",
+  "traadeAntal": 25,
+  "traadeSelskaber": 94,
+  "traadeKilde": {
+   "dato": "2026-10-16",
+   "datoTekst": "16.10.2026"
+  },
+  "traadeListe": [
+   {
+    "fra": "Datacentre",
+    "til": "Energi og elnet",
+    "antal": 15
+   },
+   {
+    "fra": "Chips og halvledere",
+    "til": "Datacentre",
+    "antal": 13
+   },
+   {
+    "fra": "Datacentre",
+    "til": "Krypto",
+    "antal": 10
+   },
+   {
+    "fra": "Energi og elnet",
+    "til": "Robotter & fysisk AI",
+    "antal": 9
+   },
+   {
+    "fra": "Chips og halvledere",
+    "til": "Robotter & fysisk AI",
+    "antal": 8
+   },
+   {
+    "fra": "Fintech",
+    "til": "Platformsøkonomi",
+    "antal": 5
+   },
+   {
+    "fra": "Platformsøkonomi",
+    "til": "Software & AI",
+    "antal": 5
+   },
+   {
+    "fra": "Datacentre",
+    "til": "Platformsøkonomi",
+    "antal": 4
+   },
+   {
+    "fra": "Datacentre",
+    "til": "Software & AI",
+    "antal": 4
+   },
+   {
+    "fra": "Fintech",
+    "til": "Krypto",
+    "antal": 4
+   },
+   {
+    "fra": "Energi og elnet",
+    "til": "Sundhed og biotek",
+    "antal": 2
+   },
+   {
+    "fra": "Fintech",
+    "til": "Software & AI",
+    "antal": 2
+   },
+   {
+    "fra": "Robotter & fysisk AI",
+    "til": "Software & AI",
+    "antal": 2
+   },
+   {
+    "fra": "Chips og halvledere",
+    "til": "Platformsøkonomi",
+    "antal": 1
+   },
+   {
+    "fra": "Chips og halvledere",
+    "til": "Råstoffer",
+    "antal": 1
+   },
+   {
+    "fra": "Datacentre",
+    "til": "Robotter & fysisk AI",
+    "antal": 1
+   },
+   {
+    "fra": "Datacentre",
+    "til": "Råstoffer",
+    "antal": 1
+   },
+   {
+    "fra": "Datacentre",
+    "til": "Rumfart",
+    "antal": 1
+   },
+   {
+    "fra": "Energi og elnet",
+    "til": "Råstoffer",
+    "antal": 1
+   },
+   {
+    "fra": "Energi og elnet",
+    "til": "Rumfart",
+    "antal": 1
+   },
+   {
+    "fra": "Fintech",
+    "til": "Sundhed og biotek",
+    "antal": 1
+   },
+   {
+    "fra": "Robotter & fysisk AI",
+    "til": "Platformsøkonomi",
+    "antal": 1
+   },
+   {
+    "fra": "Robotter & fysisk AI",
+    "til": "Råstoffer",
+    "antal": 1
+   },
+   {
+    "fra": "Robotter & fysisk AI",
+    "til": "Rumfart",
+    "antal": 1
+   },
+   {
+    "fra": "Software & AI",
+    "til": "Sundhed og biotek",
+    "antal": 1
+   }
+  ]
+ },
+ "alleSelskaber": {
+  "antal": 373,
+  "liste": [
+   {
+    "navn": "SpaceX",
+    "slug": "spacex",
+    "andel": 3.54,
+    "logo": "assets/img/logoer/d55f831486.webp",
+    "bar": 1.0,
+    "plads": 1,
+    "tema": "rumfart",
+    "temaNavn": "Rumfart"
+   },
+   {
+    "navn": "Tesla",
+    "slug": "tesla",
+    "andel": 1.76,
+    "logo": "assets/img/logoer/69a6d6749c.webp",
+    "bar": 0.4972,
+    "plads": 2,
+    "tema": "fysisk-ai",
+    "temaNavn": "Robotter & fysisk AI"
+   },
+   {
+    "navn": "SoftBank Group",
+    "slug": "softbank-group",
+    "andel": 1.68,
+    "logo": "assets/img/logoer/47f8edf10d.svg",
+    "bar": 0.4746,
+    "plads": 3,
+    "tema": "platforme",
+    "temaNavn": "Platformsøkonomi"
+   },
+   {
+    "navn": "Samsung Electronics",
+    "slug": "samsung-electronics",
+    "andel": 1.43,
+    "bar": 0.404,
+    "plads": 4,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Carvana",
+    "slug": "carvana",
+    "andel": 1.29,
+    "bar": 0.3644,
+    "plads": 5,
+    "tema": "platforme",
+    "temaNavn": "Platformsøkonomi"
+   },
+   {
+    "navn": "AppLovin",
+    "slug": "applovin",
+    "andel": 1.15,
+    "logo": "assets/img/logoer/0563db3d84.webp",
+    "bar": 0.3249,
+    "plads": 6,
+    "tema": "platforme",
+    "temaNavn": "Platformsøkonomi"
+   },
+   {
+    "navn": "SK hynix",
+    "slug": "sk-hynix",
+    "andel": 1.07,
+    "bar": 0.3023,
+    "plads": 7,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Sea",
+    "slug": "sea",
+    "andel": 1.05,
+    "bar": 0.2966,
+    "plads": 8,
+    "tema": "platforme",
+    "temaNavn": "Platformsøkonomi"
+   },
+   {
+    "navn": "Sivers Semiconductors",
+    "slug": "sivers-semiconductors",
+    "andel": 0.96,
+    "logo": "assets/img/logoer/db445c4b44.webp",
+    "bar": 0.2712,
+    "plads": 9,
+    "tema": "datacenter",
+    "temaNavn": "Datacentre"
+   },
+   {
+    "navn": "Taiyo Yuden",
+    "slug": "taiyo-yuden",
+    "andel": 0.94,
+    "bar": 0.2655,
+    "plads": 10,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Kioxia",
+    "slug": "kioxia",
+    "andel": 0.91,
+    "logo": "assets/img/logoer/0c03b2f725.webp",
+    "bar": 0.2571,
+    "plads": 11,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Babcock & Wilcox",
+    "slug": "babcock-wilcox",
+    "andel": 0.83,
+    "logo": "assets/img/logoer/986bc5308a.webp",
+    "bar": 0.2345,
+    "plads": 12,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "LPKF Laser & Electronics",
+    "slug": "lpkf-laser-electronics",
+    "andel": 0.81,
+    "logo": "assets/img/logoer/1750ae3fb9.webp",
+    "bar": 0.2288,
+    "plads": 13,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "eToro Group",
+    "slug": null,
+    "andel": 0.79,
+    "bar": 0.2232,
+    "plads": 14,
+    "tema": null,
+    "temaNavn": "Uden tema"
+   },
+   {
+    "navn": "HUBER+SUHNER",
+    "slug": "huber-suhner",
+    "andel": 0.78,
+    "logo": "assets/img/logoer/11887265c5.webp",
+    "bar": 0.2203,
+    "plads": 15,
+    "tema": "datacenter",
+    "temaNavn": "Datacentre"
+   },
+   {
+    "navn": "SoundHound AI",
+    "slug": "soundhound-ai",
+    "andel": 0.78,
+    "logo": "assets/img/logoer/ccdc9e4e50.webp",
+    "bar": 0.2203,
+    "plads": 16,
+    "tema": "software",
+    "temaNavn": "Software & AI"
+   },
+   {
+    "navn": "T1 Energy",
+    "slug": "t1-energy",
+    "andel": 0.76,
+    "logo": "assets/img/logoer/2e90ce846f.webp",
+    "bar": 0.2147,
+    "plads": 17,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Cerebras Systems",
+    "slug": "cerebras-systems",
+    "andel": 0.75,
+    "logo": "assets/img/logoer/a56f2ad71f.webp",
+    "bar": 0.2119,
+    "plads": 18,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "GlobalFoundries",
+    "slug": "globalfoundries",
+    "andel": 0.72,
+    "logo": "assets/img/logoer/cd450e45a6.webp",
+    "bar": 0.2034,
+    "plads": 19,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Ford Motor",
+    "slug": "ford-motor",
+    "andel": 0.7,
+    "logo": "assets/img/logoer/ae3f14d060.webp",
+    "bar": 0.1977,
+    "plads": 20,
+    "tema": "fysisk-ai",
+    "temaNavn": "Robotter & fysisk AI"
+   },
+   {
+    "navn": "SoFi",
+    "slug": "sofi",
+    "andel": 0.7,
+    "bar": 0.1977,
+    "plads": 21,
+    "tema": "fintech",
+    "temaNavn": "Fintech"
+   },
+   {
+    "navn": "Soitec",
+    "slug": "soitec",
+    "andel": 0.69,
+    "logo": "assets/img/logoer/dd34bfa59d.webp",
+    "bar": 0.1949,
+    "plads": 22,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Tower Semiconductor",
+    "slug": "tower-semiconductor",
+    "andel": 0.67,
+    "logo": "assets/img/logoer/1e6260ed54.webp",
+    "bar": 0.1893,
+    "plads": 23,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Enovix",
+    "slug": "enovix",
+    "andel": 0.66,
+    "logo": "assets/img/logoer/27b7860880.webp",
+    "bar": 0.1864,
+    "plads": 24,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Nova",
+    "slug": "nova",
+    "andel": 0.66,
+    "logo": "assets/img/logoer/d15f922473.webp",
+    "bar": 0.1864,
+    "plads": 25,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Besi",
+    "slug": "besi",
+    "andel": 0.64,
+    "bar": 0.1808,
+    "plads": 26,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Expand Energy",
+    "slug": "expand-energy",
+    "andel": 0.62,
+    "logo": "assets/img/logoer/2929f4ef4d.webp",
+    "bar": 0.1751,
+    "plads": 27,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Klarna",
+    "slug": "klarna",
+    "andel": 0.59,
+    "bar": 0.1667,
+    "plads": 28,
+    "tema": "fintech",
+    "temaNavn": "Fintech"
+   },
+   {
+    "navn": "Raspberry Pi",
+    "slug": "raspberry-pi",
+    "andel": 0.59,
+    "logo": "assets/img/logoer/d0b387d0ba.webp",
+    "bar": 0.1667,
+    "plads": 29,
+    "tema": "fysisk-ai",
+    "temaNavn": "Robotter & fysisk AI"
+   },
+   {
+    "navn": "Merlin",
+    "slug": "merlin",
+    "andel": 0.57,
+    "logo": "assets/img/logoer/cbfb947247.webp",
+    "bar": 0.161,
+    "plads": 30,
+    "tema": "fysisk-ai",
+    "temaNavn": "Robotter & fysisk AI"
+   },
+   {
+    "navn": "Upstart",
+    "slug": "upstart",
+    "andel": 0.56,
+    "logo": "assets/img/logoer/d926b3917c.webp",
+    "bar": 0.1582,
+    "plads": 31,
+    "tema": "fintech",
+    "temaNavn": "Fintech"
+   },
+   {
+    "navn": "Broadcom",
+    "slug": "broadcom",
+    "andel": 0.55,
+    "logo": "assets/img/logoer/38132e6c7a.webp",
+    "bar": 0.1554,
+    "plads": 32,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "IQE",
+    "slug": "iqe",
+    "andel": 0.55,
+    "logo": "assets/img/logoer/52e0da790e.webp",
+    "bar": 0.1554,
+    "plads": 33,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "IREN",
+    "slug": "iren",
+    "andel": 0.55,
+    "logo": "assets/img/logoer/8d7faf7227.webp",
+    "bar": 0.1554,
+    "plads": 34,
+    "tema": "datacenter",
+    "temaNavn": "Datacentre"
+   },
+   {
+    "navn": "Opendoor",
+    "slug": "opendoor",
+    "andel": 0.55,
+    "bar": 0.1554,
+    "plads": 35,
+    "tema": "platforme",
+    "temaNavn": "Platformsøkonomi"
+   },
+   {
+    "navn": "Oracle",
+    "slug": "oracle",
+    "andel": 0.55,
+    "logo": "assets/img/logoer/5356208f45.webp",
+    "bar": 0.1554,
+    "plads": 36,
+    "tema": "datacenter",
+    "temaNavn": "Datacentre"
+   },
+   {
+    "navn": "Rambus",
+    "slug": "rambus",
+    "andel": 0.55,
+    "logo": "assets/img/logoer/2479ea1f21.webp",
+    "bar": 0.1554,
+    "plads": 37,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Comstock Resources",
+    "slug": "comstock-resources",
+    "andel": 0.54,
+    "bar": 0.1525,
+    "plads": 38,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Generac",
+    "slug": "generac",
+    "andel": 0.54,
+    "logo": "assets/img/logoer/d699c2505d.webp",
+    "bar": 0.1525,
+    "plads": 39,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "MYR Group",
+    "slug": "myr-group",
+    "andel": 0.54,
+    "logo": "assets/img/logoer/97c8b3b259.webp",
+    "bar": 0.1525,
+    "plads": 40,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Micron Technology",
+    "slug": "micron-technology",
+    "andel": 0.54,
+    "logo": "assets/img/logoer/b17fd8dc45.webp",
+    "bar": 0.1525,
+    "plads": 41,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "SolarEdge",
+    "slug": "solaredge",
+    "andel": 0.53,
+    "logo": "assets/img/logoer/c87f3d4b5f.webp",
+    "bar": 0.1497,
+    "plads": 42,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Planet Labs",
+    "slug": "planet-labs",
+    "andel": 0.52,
+    "logo": "assets/img/logoer/bcc55f45c9.webp",
+    "bar": 0.1469,
+    "plads": 43,
+    "tema": "rumfart",
+    "temaNavn": "Rumfart"
+   },
+   {
+    "navn": "Fluence Energy",
+    "slug": "fluence-energy",
+    "andel": 0.51,
+    "logo": "assets/img/logoer/3539d10e3a.webp",
+    "bar": 0.1441,
+    "plads": 44,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Hims & Hers Health",
+    "slug": "hims-hers-health",
+    "andel": 0.51,
+    "bar": 0.1441,
+    "plads": 45,
+    "tema": "sundhed",
+    "temaNavn": "Sundhed og biotek"
+   },
+   {
+    "navn": "POET Technologies",
+    "slug": "poet-technologies",
+    "andel": 0.51,
+    "logo": "assets/img/logoer/195af23c91.webp",
+    "bar": 0.1441,
+    "plads": 46,
+    "tema": "datacenter",
+    "temaNavn": "Datacentre"
+   },
+   {
+    "navn": "TSS",
+    "slug": "tss",
+    "andel": 0.51,
+    "logo": "assets/img/logoer/10dbf237be.webp",
+    "bar": 0.1441,
+    "plads": 47,
+    "tema": "datacenter",
+    "temaNavn": "Datacentre"
+   },
+   {
+    "navn": "United States Antimony",
+    "slug": "united-states-antimony",
+    "andel": 0.51,
+    "bar": 0.1441,
+    "plads": 48,
+    "tema": "raastoffer",
+    "temaNavn": "Råstoffer"
+   },
+   {
+    "navn": "Applied Optoelectronics",
+    "slug": "applied-optoelectronics",
+    "andel": 0.5,
+    "logo": "assets/img/logoer/50f5d2e657.webp",
+    "bar": 0.1412,
+    "plads": 49,
+    "tema": "datacenter",
+    "temaNavn": "Datacentre"
+   },
+   {
+    "navn": "Navitas Semiconductor",
+    "slug": "navitas-semiconductor",
+    "andel": 0.5,
+    "logo": "assets/img/logoer/71733dc185.webp",
+    "bar": 0.1412,
+    "plads": 50,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Ero Copper",
+    "slug": "ero-copper",
+    "andel": 0.49,
+    "bar": 0.1384,
+    "plads": 51,
+    "tema": "raastoffer",
+    "temaNavn": "Råstoffer"
+   },
+   {
+    "navn": "Fabrinet",
+    "slug": "fabrinet",
+    "andel": 0.49,
+    "logo": "assets/img/logoer/faecb4c2a0.webp",
+    "bar": 0.1384,
+    "plads": 52,
+    "tema": "datacenter",
+    "temaNavn": "Datacentre"
+   },
+   {
+    "navn": "Intuitive Machines",
+    "slug": "intuitive-machines",
+    "andel": 0.49,
+    "logo": "assets/img/logoer/5f02f07ad3.webp",
+    "bar": 0.1384,
+    "plads": 53,
+    "tema": "rumfart",
+    "temaNavn": "Rumfart"
+   },
+   {
+    "navn": "AST SpaceMobile",
+    "slug": "ast-spacemobile",
+    "andel": 0.48,
+    "logo": "assets/img/logoer/46350e4587.webp",
+    "bar": 0.1356,
+    "plads": 54,
+    "tema": "rumfart",
+    "temaNavn": "Rumfart"
+   },
+   {
+    "navn": "Joby Aviation",
+    "slug": "joby-aviation",
+    "andel": 0.48,
+    "logo": "assets/img/logoer/44f4cec729.webp",
+    "bar": 0.1356,
+    "plads": 55,
+    "tema": "fysisk-ai",
+    "temaNavn": "Robotter & fysisk AI"
+   },
+   {
+    "navn": "Western Digital",
+    "slug": "western-digital",
+    "andel": 0.48,
+    "logo": "assets/img/logoer/e2b55bbc59.webp",
+    "bar": 0.1356,
+    "plads": 56,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Oxford Instruments",
+    "slug": "oxford-instruments",
+    "andel": 0.47,
+    "logo": "assets/img/logoer/25a1fbdfb2.webp",
+    "bar": 0.1328,
+    "plads": 57,
+    "tema": "kvante",
+    "temaNavn": "Kvantecomputere"
+   },
+   {
+    "navn": "Intel",
+    "slug": "intel",
+    "andel": 0.46,
+    "logo": "assets/img/logoer/c081184173.webp",
+    "bar": 0.1299,
+    "plads": 58,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "SES AI",
+    "slug": "ses-ai",
+    "andel": 0.46,
+    "logo": "assets/img/logoer/b5ff391c12.webp",
+    "bar": 0.1299,
+    "plads": 59,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "SiTime",
+    "slug": "sitime",
+    "andel": 0.46,
+    "logo": "assets/img/logoer/2277a3e7fd.webp",
+    "bar": 0.1299,
+    "plads": 60,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Bitdeer Technologies Group",
+    "slug": "bitdeer-technologies-group",
+    "andel": 0.45,
+    "logo": "assets/img/logoer/232d32ac89.webp",
+    "bar": 0.1271,
+    "plads": 61,
+    "tema": "krypto",
+    "temaNavn": "Krypto"
+   },
+   {
+    "navn": "CleanSpark",
+    "slug": "cleanspark",
+    "andel": 0.45,
+    "logo": "assets/img/logoer/3fe8934664.webp",
+    "bar": 0.1271,
+    "plads": 62,
+    "tema": "krypto",
+    "temaNavn": "Krypto"
+   },
+   {
+    "navn": "SUSS MicroTec",
+    "slug": "suss-microtec",
+    "andel": 0.45,
+    "logo": "assets/img/logoer/b7558a97d0.webp",
+    "bar": 0.1271,
+    "plads": 63,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Tokyo Electron",
+    "slug": "tokyo-electron",
+    "andel": 0.45,
+    "logo": "assets/img/logoer/323e8423ed.webp",
+    "bar": 0.1271,
+    "plads": 64,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "ASM International",
+    "slug": "asm-international",
+    "andel": 0.44,
+    "logo": "assets/img/logoer/07aa949943.webp",
+    "bar": 0.1243,
+    "plads": 65,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "AUTO1 Group",
+    "slug": "auto1-group",
+    "andel": 0.44,
+    "bar": 0.1243,
+    "plads": 66,
+    "tema": "platforme",
+    "temaNavn": "Platformsøkonomi"
+   },
+   {
+    "navn": "Coinbase",
+    "slug": "coinbase",
+    "andel": 0.44,
+    "bar": 0.1243,
+    "plads": 67,
+    "tema": "krypto",
+    "temaNavn": "Krypto"
+   },
+   {
+    "navn": "MACOM",
+    "slug": null,
+    "andel": 0.43,
+    "logo": "assets/img/logoer/5a28873fd6.webp",
+    "bar": 0.1215,
+    "plads": 68,
+    "tema": "datacenter",
+    "temaNavn": "Datacentre"
+   },
+   {
+    "navn": "QuantumScape",
+    "slug": "quantumscape",
+    "andel": 0.43,
+    "logo": "assets/img/logoer/08f4389b60.webp",
+    "bar": 0.1215,
+    "plads": 69,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "ASMPT",
+    "slug": "asmpt",
+    "andel": 0.42,
+    "logo": "assets/img/logoer/7532150e62.webp",
+    "bar": 0.1186,
+    "plads": 70,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "BlackSky",
+    "slug": "blacksky",
+    "andel": 0.42,
+    "logo": "assets/img/logoer/f63b43efe9.webp",
+    "bar": 0.1186,
+    "plads": 71,
+    "tema": "rumfart",
+    "temaNavn": "Rumfart"
+   },
+   {
+    "navn": "York Space Systems",
+    "slug": "york-space-systems",
+    "andel": 0.42,
+    "bar": 0.1186,
+    "plads": 72,
+    "tema": "rumfart",
+    "temaNavn": "Rumfart"
+   },
+   {
+    "navn": "Power Solutions International",
+    "slug": "power-solutions-internationa",
+    "andel": 0.41,
+    "logo": "assets/img/logoer/a237f0a932.webp",
+    "bar": 0.1158,
+    "plads": 73,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Roblox",
+    "slug": "roblox",
+    "andel": 0.41,
+    "bar": 0.1158,
+    "plads": 74,
+    "tema": "platforme",
+    "temaNavn": "Platformsøkonomi"
+   },
+   {
+    "navn": "Camtek",
+    "slug": "camtek",
+    "andel": 0.4,
+    "bar": 0.113,
+    "plads": 75,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Celestica",
+    "slug": null,
+    "andel": 0.4,
+    "logo": "assets/img/logoer/6d8dd08e82.webp",
+    "bar": 0.113,
+    "plads": 76,
+    "tema": "datacenter",
+    "temaNavn": "Datacentre"
+   },
+   {
+    "navn": "First Solar",
+    "slug": "first-solar",
+    "andel": 0.4,
+    "bar": 0.113,
+    "plads": 77,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Huntsman",
+    "slug": "huntsman",
+    "andel": 0.4,
+    "bar": 0.113,
+    "plads": 78,
+    "tema": "raastoffer",
+    "temaNavn": "Råstoffer"
+   },
+   {
+    "navn": "Lynas Rare Earths",
+    "slug": "lynas-rare-earths",
+    "andel": 0.4,
+    "bar": 0.113,
+    "plads": 79,
+    "tema": "raastoffer",
+    "temaNavn": "Råstoffer"
+   },
+   {
+    "navn": "MDA Space",
+    "slug": "mda-space",
+    "andel": 0.4,
+    "logo": "assets/img/logoer/2d4deb2248.webp",
+    "bar": 0.113,
+    "plads": 80,
+    "tema": "rumfart",
+    "temaNavn": "Rumfart"
+   },
+   {
+    "navn": "Shift4 Payments",
+    "slug": "shift4-payments",
+    "andel": 0.39,
+    "bar": 0.1102,
+    "plads": 81,
+    "tema": "fintech",
+    "temaNavn": "Fintech"
+   },
+   {
+    "navn": "Rocket Lab",
+    "slug": "rocket-lab",
+    "andel": 0.38,
+    "logo": "assets/img/logoer/8a97cb55ec.webp",
+    "bar": 0.1073,
+    "plads": 82,
+    "tema": "rumfart",
+    "temaNavn": "Rumfart"
+   },
+   {
+    "navn": "Tigo Energy",
+    "slug": "tigo-energy",
+    "andel": 0.38,
+    "logo": "assets/img/logoer/d130cb4bf1.webp",
+    "bar": 0.1073,
+    "plads": 83,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Aehr Test Systems",
+    "slug": "aehr-test-systems",
+    "andel": 0.37,
+    "logo": "assets/img/logoer/d4bb600b5c.webp",
+    "bar": 0.1045,
+    "plads": 84,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Core Scientific",
+    "slug": null,
+    "andel": 0.37,
+    "logo": "assets/img/logoer/97c8da134b.webp",
+    "bar": 0.1045,
+    "plads": 85,
+    "tema": "datacenter",
+    "temaNavn": "Datacentre"
+   },
+   {
+    "navn": "Sunrun",
+    "slug": "sunrun",
+    "andel": 0.37,
+    "logo": "assets/img/logoer/512087f698.webp",
+    "bar": 0.1045,
+    "plads": 86,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "BioNTech",
+    "slug": "biontech",
+    "andel": 0.36,
+    "bar": 0.1017,
+    "plads": 87,
+    "tema": "sundhed",
+    "temaNavn": "Sundhed og biotek"
+   },
+   {
+    "navn": "onsemi",
+    "slug": "onsemi",
+    "andel": 0.36,
+    "logo": "assets/img/logoer/6b99a93f2d.webp",
+    "bar": 0.1017,
+    "plads": 88,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Aeva Technologies",
+    "slug": "aeva-technologies",
+    "andel": 0.35,
+    "logo": "assets/img/logoer/a92ed9d7da.webp",
+    "bar": 0.0989,
+    "plads": 89,
+    "tema": "fysisk-ai",
+    "temaNavn": "Robotter & fysisk AI"
+   },
+   {
+    "navn": "Amazon",
+    "slug": "amazon",
+    "andel": 0.35,
+    "logo": "assets/img/logoer/7275c91851.webp",
+    "bar": 0.0989,
+    "plads": 90,
+    "tema": "platforme",
+    "temaNavn": "Platformsøkonomi"
+   },
+   {
+    "navn": "Seagate Technology",
+    "slug": "seagate-technology",
+    "andel": 0.35,
+    "logo": "assets/img/logoer/953b305bc8.webp",
+    "bar": 0.0989,
+    "plads": 91,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Symbotic",
+    "slug": "symbotic",
+    "andel": 0.35,
+    "logo": "assets/img/logoer/3dc18d2f25.webp",
+    "bar": 0.0989,
+    "plads": 92,
+    "tema": "fysisk-ai",
+    "temaNavn": "Robotter & fysisk AI"
+   },
+   {
+    "navn": "UMC",
+    "slug": "umc",
+    "andel": 0.35,
+    "bar": 0.0989,
+    "plads": 93,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Enphase Energy",
+    "slug": "enphase-energy",
+    "andel": 0.34,
+    "logo": "assets/img/logoer/cd750eed57.webp",
+    "bar": 0.096,
+    "plads": 94,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Galaxy Digital",
+    "slug": "galaxy-digital",
+    "andel": 0.34,
+    "logo": "assets/img/logoer/9d23c4d489.webp",
+    "bar": 0.096,
+    "plads": 95,
+    "tema": "krypto",
+    "temaNavn": "Krypto"
+   },
+   {
+    "navn": "MKS",
+    "slug": "mks",
+    "andel": 0.34,
+    "logo": "assets/img/logoer/6457d6104b.webp",
+    "bar": 0.096,
+    "plads": 96,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Root",
+    "slug": "root",
+    "andel": 0.34,
+    "bar": 0.096,
+    "plads": 97,
+    "tema": "fintech",
+    "temaNavn": "Fintech"
+   },
+   {
+    "navn": "STMicroelectronics",
+    "slug": "stmicroelectronics",
+    "andel": 0.34,
+    "logo": "assets/img/logoer/18732b5c85.webp",
+    "bar": 0.096,
+    "plads": 98,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Ballard Power Systems",
+    "slug": "ballard-power-systems",
+    "andel": 0.33,
+    "logo": "assets/img/logoer/8156fe896a.webp",
+    "bar": 0.0932,
+    "plads": 99,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Lightwave Logic",
+    "slug": null,
+    "andel": 0.33,
+    "logo": "assets/img/logoer/e9055a8471.webp",
+    "bar": 0.0932,
+    "plads": 100,
+    "tema": "datacenter",
+    "temaNavn": "Datacentre"
+   },
+   {
+    "navn": "ProPetro",
+    "slug": "propetro",
+    "andel": 0.33,
+    "logo": "assets/img/logoer/d527a65f18.webp",
+    "bar": 0.0932,
+    "plads": 101,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "X-FAB",
+    "slug": "x-fab",
+    "andel": 0.33,
+    "logo": "assets/img/logoer/20463d39c6.webp",
+    "bar": 0.0932,
+    "plads": 102,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Circle Internet Group",
+    "slug": "circle-internet-group",
+    "andel": 0.32,
+    "bar": 0.0904,
+    "plads": 103,
+    "tema": "krypto",
+    "temaNavn": "Krypto"
+   },
+   {
+    "navn": "Critical Metals",
+    "slug": "critical-metals",
+    "andel": 0.32,
+    "bar": 0.0904,
+    "plads": 104,
+    "tema": "raastoffer",
+    "temaNavn": "Råstoffer"
+   },
+   {
+    "navn": "Grab",
+    "slug": null,
+    "andel": 0.32,
+    "bar": 0.0904,
+    "plads": 105,
+    "tema": "platforme",
+    "temaNavn": "Platformsøkonomi"
+   },
+   {
+    "navn": "Himax Technologies",
+    "slug": "himax-technologies",
+    "andel": 0.32,
+    "logo": "assets/img/logoer/d76363e112.webp",
+    "bar": 0.0904,
+    "plads": 106,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Palantir",
+    "slug": "palantir",
+    "andel": 0.32,
+    "logo": "assets/img/logoer/ddbd7bb802.webp",
+    "bar": 0.0904,
+    "plads": 107,
+    "tema": "software",
+    "temaNavn": "Software & AI"
+   },
+   {
+    "navn": "Energy Fuels",
+    "slug": "energy-fuels",
+    "andel": 0.31,
+    "bar": 0.0876,
+    "plads": 108,
+    "tema": "raastoffer",
+    "temaNavn": "Råstoffer"
+   },
+   {
+    "navn": "Lasertec",
+    "slug": "lasertec",
+    "andel": 0.31,
+    "logo": "assets/img/logoer/af96b86550.webp",
+    "bar": 0.0876,
+    "plads": 109,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Quantum Computing",
+    "slug": "quantum-computing",
+    "andel": 0.31,
+    "logo": "assets/img/logoer/3f574bae01.webp",
+    "bar": 0.0876,
+    "plads": 110,
+    "tema": "kvante",
+    "temaNavn": "Kvantecomputere"
+   },
+   {
+    "navn": "Rigaku",
+    "slug": "rigaku",
+    "andel": 0.31,
+    "logo": "assets/img/logoer/f5a191a973.webp",
+    "bar": 0.0876,
+    "plads": 111,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "nLight",
+    "slug": null,
+    "andel": 0.31,
+    "logo": "assets/img/logoer/dc17c82e18.webp",
+    "bar": 0.0876,
+    "plads": 112,
+    "tema": "datacenter",
+    "temaNavn": "Datacentre"
+   },
+   {
+    "navn": "Ciena",
+    "slug": null,
+    "andel": 0.3,
+    "logo": "assets/img/logoer/c061d89ef3.webp",
+    "bar": 0.0847,
+    "plads": 113,
+    "tema": "datacenter",
+    "temaNavn": "Datacentre"
+   },
+   {
+    "navn": "Super Micro Computer",
+    "slug": null,
+    "andel": 0.3,
+    "bar": 0.0847,
+    "plads": 114,
+    "tema": "datacenter",
+    "temaNavn": "Datacentre"
+   },
+   {
+    "navn": "ams OSRAM",
+    "slug": null,
+    "andel": 0.3,
+    "logo": "assets/img/logoer/05ec090c51.webp",
+    "bar": 0.0847,
+    "plads": 115,
+    "tema": "datacenter",
+    "temaNavn": "Datacentre"
+   },
+   {
+    "navn": "Coupang",
+    "slug": null,
+    "andel": 0.29,
+    "bar": 0.0819,
+    "plads": 116,
+    "tema": "platforme",
+    "temaNavn": "Platformsøkonomi"
+   },
+   {
+    "navn": "Lemonade",
+    "slug": "lemonade",
+    "andel": 0.29,
+    "logo": "assets/img/logoer/b706fa8dc2.webp",
+    "bar": 0.0819,
+    "plads": 117,
+    "tema": "fintech",
+    "temaNavn": "Fintech"
+   },
+   {
+    "navn": "Vistra",
+    "slug": "vistra",
+    "andel": 0.29,
+    "logo": "assets/img/logoer/016d0b3e6d.webp",
+    "bar": 0.0819,
+    "plads": 118,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "KLA",
+    "slug": "kla",
+    "andel": 0.28,
+    "logo": "assets/img/logoer/854d641e64.webp",
+    "bar": 0.0791,
+    "plads": 119,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "MercadoLibre",
+    "slug": null,
+    "andel": 0.28,
+    "bar": 0.0791,
+    "plads": 120,
+    "tema": "platforme",
+    "temaNavn": "Platformsøkonomi"
+   },
+   {
+    "navn": "NioCorp",
+    "slug": "niocorp",
+    "andel": 0.28,
+    "bar": 0.0791,
+    "plads": 121,
+    "tema": "raastoffer",
+    "temaNavn": "Råstoffer"
+   },
+   {
+    "navn": "Reddit",
+    "slug": null,
+    "andel": 0.28,
+    "bar": 0.0791,
+    "plads": 122,
+    "tema": "platforme",
+    "temaNavn": "Platformsøkonomi"
+   },
+   {
+    "navn": "Riot Platforms",
+    "slug": "riot-platforms",
+    "andel": 0.28,
+    "logo": "assets/img/logoer/ecba7af17a.webp",
+    "bar": 0.0791,
+    "plads": 123,
+    "tema": "krypto",
+    "temaNavn": "Krypto"
+   },
+   {
+    "navn": "Cipher Mining",
+    "slug": null,
+    "andel": 0.27,
+    "logo": "assets/img/logoer/f1d2cce3c4.webp",
+    "bar": 0.0763,
+    "plads": 124,
+    "tema": "datacenter",
+    "temaNavn": "Datacentre"
+   },
+   {
+    "navn": "First Majestic Silver",
+    "slug": "first-majestic-silver",
+    "andel": 0.27,
+    "bar": 0.0763,
+    "plads": 125,
+    "tema": "raastoffer",
+    "temaNavn": "Råstoffer"
+   },
+   {
+    "navn": "Redwire",
+    "slug": "redwire",
+    "andel": 0.27,
+    "logo": "assets/img/logoer/8bb9c0aadf.webp",
+    "bar": 0.0763,
+    "plads": 126,
+    "tema": "rumfart",
+    "temaNavn": "Rumfart"
+   },
+   {
+    "navn": "Unity Software",
+    "slug": "unity-software",
+    "andel": 0.27,
+    "logo": "assets/img/logoer/cd0d4faaf6.webp",
+    "bar": 0.0763,
+    "plads": 127,
+    "tema": "software",
+    "temaNavn": "Software & AI"
+   },
+   {
+    "navn": "Celanese",
+    "slug": null,
+    "andel": 0.26,
+    "bar": 0.0734,
+    "plads": 128,
+    "tema": "raastoffer",
+    "temaNavn": "Råstoffer"
+   },
+   {
+    "navn": "Eli Lilly",
+    "slug": "eli-lilly",
+    "andel": 0.26,
+    "bar": 0.0734,
+    "plads": 129,
+    "tema": "sundhed",
+    "temaNavn": "Sundhed og biotek"
+   },
+   {
+    "navn": "Fermi",
+    "slug": null,
+    "andel": 0.26,
+    "logo": "assets/img/logoer/0a46e1a14e.webp",
+    "bar": 0.0734,
+    "plads": 130,
+    "tema": "datacenter",
+    "temaNavn": "Datacentre"
+   },
+   {
+    "navn": "Firefly Aerospace",
+    "slug": "firefly-aerospace",
+    "andel": 0.26,
+    "logo": "assets/img/logoer/d180bac9cd.webp",
+    "bar": 0.0734,
+    "plads": 131,
+    "tema": "rumfart",
+    "temaNavn": "Rumfart"
+   },
+   {
+    "navn": "Gemini Space Station",
+    "slug": "gemini-space-station",
+    "andel": 0.26,
+    "bar": 0.0734,
+    "plads": 132,
+    "tema": "krypto",
+    "temaNavn": "Krypto"
+   },
+   {
+    "navn": "NVIDIA",
+    "slug": "nvidia",
+    "andel": 0.26,
+    "logo": "assets/img/logoer/2a95ecdd14.webp",
+    "bar": 0.0734,
+    "plads": 133,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Pan American Silver",
+    "slug": null,
+    "andel": 0.26,
+    "bar": 0.0734,
+    "plads": 134,
+    "tema": "raastoffer",
+    "temaNavn": "Råstoffer"
+   },
+   {
+    "navn": "Sumitomo Electric Industries",
+    "slug": null,
+    "andel": 0.26,
+    "logo": "assets/img/logoer/4bfdcfc178.webp",
+    "bar": 0.0734,
+    "plads": 135,
+    "tema": "datacenter",
+    "temaNavn": "Datacentre"
+   },
+   {
+    "navn": "Antero Resources",
+    "slug": "antero-resources",
+    "andel": 0.25,
+    "logo": "assets/img/logoer/c5f2c6a496.webp",
+    "bar": 0.0706,
+    "plads": 136,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Centrus Energy",
+    "slug": "centrus-energy",
+    "andel": 0.25,
+    "logo": "assets/img/logoer/6a84ac3104.webp",
+    "bar": 0.0706,
+    "plads": 137,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Corning",
+    "slug": null,
+    "andel": 0.25,
+    "bar": 0.0706,
+    "plads": 138,
+    "tema": "datacenter",
+    "temaNavn": "Datacentre"
+   },
+   {
+    "navn": "ERock",
+    "slug": "erock",
+    "andel": 0.25,
+    "logo": "assets/img/logoer/73aa26b22b.webp",
+    "bar": 0.0706,
+    "plads": 139,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Rolls-Royce",
+    "slug": "rolls-royce",
+    "andel": 0.25,
+    "logo": "assets/img/logoer/5c92af4fd2.webp",
+    "bar": 0.0706,
+    "plads": 140,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Talen Energy",
+    "slug": "talen-energy",
+    "andel": 0.25,
+    "logo": "assets/img/logoer/e1a57b5672.webp",
+    "bar": 0.0706,
+    "plads": 141,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Chemours",
+    "slug": null,
+    "andel": 0.24,
+    "logo": "assets/img/logoer/d4f7b7868e.webp",
+    "bar": 0.0678,
+    "plads": 142,
+    "tema": "raastoffer",
+    "temaNavn": "Råstoffer"
+   },
+   {
+    "navn": "Credo",
+    "slug": null,
+    "andel": 0.24,
+    "logo": "assets/img/logoer/c3a5745ed7.webp",
+    "bar": 0.0678,
+    "plads": 143,
+    "tema": "datacenter",
+    "temaNavn": "Datacentre"
+   },
+   {
+    "navn": "Hecla Mining",
+    "slug": null,
+    "andel": 0.24,
+    "bar": 0.0678,
+    "plads": 144,
+    "tema": "raastoffer",
+    "temaNavn": "Råstoffer"
+   },
+   {
+    "navn": "HelloFresh",
+    "slug": null,
+    "andel": 0.24,
+    "bar": 0.0678,
+    "plads": 145,
+    "tema": "platforme",
+    "temaNavn": "Platformsøkonomi"
+   },
+   {
+    "navn": "Jacobs Solutions",
+    "slug": null,
+    "andel": 0.24,
+    "logo": "assets/img/logoer/0efb6bcc0f.webp",
+    "bar": 0.0678,
+    "plads": 146,
+    "tema": "datacenter",
+    "temaNavn": "Datacentre"
+   },
+   {
+    "navn": "Kinder Morgan",
+    "slug": "kinder-morgan",
+    "andel": 0.24,
+    "logo": "assets/img/logoer/5170c52721.webp",
+    "bar": 0.0678,
+    "plads": 147,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Onto Innovation",
+    "slug": "onto-innovation",
+    "andel": 0.24,
+    "bar": 0.0678,
+    "plads": 148,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Pony AI",
+    "slug": "pony-ai",
+    "andel": 0.24,
+    "logo": "assets/img/logoer/98e519ca1d.webp",
+    "bar": 0.0678,
+    "plads": 149,
+    "tema": "fysisk-ai",
+    "temaNavn": "Robotter & fysisk AI"
+   },
+   {
+    "navn": "Quantinuum",
+    "slug": "quantinuum",
+    "andel": 0.24,
+    "logo": "assets/img/logoer/6d1f1222ac.webp",
+    "bar": 0.0678,
+    "plads": 150,
+    "tema": "kvante",
+    "temaNavn": "Kvantecomputere"
+   },
+   {
+    "navn": "ASP Isotopes",
+    "slug": "asp-isotopes",
+    "andel": 0.23,
+    "logo": "assets/img/logoer/03c53396fb.webp",
+    "bar": 0.065,
+    "plads": 151,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Ambiq Micro",
+    "slug": "ambiq-micro",
+    "andel": 0.23,
+    "logo": "assets/img/logoer/0ee2f82a70.webp",
+    "bar": 0.065,
+    "plads": 152,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Chime Financial",
+    "slug": "chime-financial",
+    "andel": 0.23,
+    "bar": 0.065,
+    "plads": 153,
+    "tema": "fintech",
+    "temaNavn": "Fintech"
+   },
+   {
+    "navn": "Coeur Mining",
+    "slug": null,
+    "andel": 0.23,
+    "bar": 0.065,
+    "plads": 154,
+    "tema": "raastoffer",
+    "temaNavn": "Råstoffer"
+   },
+   {
+    "navn": "Coherent",
+    "slug": null,
+    "andel": 0.23,
+    "logo": "assets/img/logoer/a8fbb1734a.webp",
+    "bar": 0.065,
+    "plads": 155,
+    "tema": "datacenter",
+    "temaNavn": "Datacentre"
+   },
+   {
+    "navn": "Freeport-McMoRan",
+    "slug": null,
+    "andel": 0.23,
+    "bar": 0.065,
+    "plads": 156,
+    "tema": "raastoffer",
+    "temaNavn": "Råstoffer"
+   },
+   {
+    "navn": "Lumen",
+    "slug": null,
+    "andel": 0.23,
+    "logo": "assets/img/logoer/2df7ff5b87.webp",
+    "bar": 0.065,
+    "plads": 157,
+    "tema": "datacenter",
+    "temaNavn": "Datacentre"
+   },
+   {
+    "navn": "Lumentum",
+    "slug": null,
+    "andel": 0.23,
+    "logo": "assets/img/logoer/c0e7024ff6.webp",
+    "bar": 0.065,
+    "plads": 158,
+    "tema": "datacenter",
+    "temaNavn": "Datacentre"
+   },
+   {
+    "navn": "Nextracker",
+    "slug": "nextracker",
+    "andel": 0.23,
+    "logo": "assets/img/logoer/c140436de9.webp",
+    "bar": 0.065,
+    "plads": 159,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Renesas Electronics",
+    "slug": "renesas-electronics",
+    "andel": 0.23,
+    "logo": "assets/img/logoer/816a57db83.webp",
+    "bar": 0.065,
+    "plads": 160,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Solid Power",
+    "slug": "solid-power",
+    "andel": 0.23,
+    "logo": "assets/img/logoer/e242bc0885.webp",
+    "bar": 0.065,
+    "plads": 161,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Webull",
+    "slug": "webull",
+    "andel": 0.23,
+    "bar": 0.065,
+    "plads": 162,
+    "tema": "fintech",
+    "temaNavn": "Fintech"
+   },
+   {
+    "navn": "Archer Aviation",
+    "slug": null,
+    "andel": 0.22,
+    "logo": "assets/img/logoer/ff9d84ba67.webp",
+    "bar": 0.0621,
+    "plads": 163,
+    "tema": "fysisk-ai",
+    "temaNavn": "Robotter & fysisk AI"
+   },
+   {
+    "navn": "CoreWeave",
+    "slug": null,
+    "andel": 0.22,
+    "logo": "assets/img/logoer/62c2f58237.webp",
+    "bar": 0.0621,
+    "plads": 164,
+    "tema": "datacenter",
+    "temaNavn": "Datacentre"
+   },
+   {
+    "navn": "Innodata",
+    "slug": "innodata",
+    "andel": 0.22,
+    "logo": "assets/img/logoer/4c267b5466.webp",
+    "bar": 0.0621,
+    "plads": 165,
+    "tema": "software",
+    "temaNavn": "Software & AI"
+   },
+   {
+    "navn": "Keel Infrastructure",
+    "slug": "keel-infrastructure",
+    "andel": 0.22,
+    "logo": "assets/img/logoer/842387a5b6.webp",
+    "bar": 0.0621,
+    "plads": 166,
+    "tema": "krypto",
+    "temaNavn": "Krypto"
+   },
+   {
+    "navn": "NextEra Energy",
+    "slug": "nextera-energy",
+    "andel": 0.22,
+    "bar": 0.0621,
+    "plads": 167,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Nu",
+    "slug": null,
+    "andel": 0.22,
+    "bar": 0.0621,
+    "plads": 168,
+    "tema": "fintech",
+    "temaNavn": "Fintech"
+   },
+   {
+    "navn": "Shelly",
+    "slug": null,
+    "andel": 0.22,
+    "logo": "assets/img/logoer/e05971bf1e.webp",
+    "bar": 0.0621,
+    "plads": 169,
+    "tema": "fysisk-ai",
+    "temaNavn": "Robotter & fysisk AI"
+   },
+   {
+    "navn": "Shoals Technologies",
+    "slug": "shoals-technologies",
+    "andel": 0.22,
+    "logo": "assets/img/logoer/c6fe3d7472.webp",
+    "bar": 0.0621,
+    "plads": 170,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "WhiteFiber",
+    "slug": null,
+    "andel": 0.22,
+    "logo": "assets/img/logoer/f433480c29.webp",
+    "bar": 0.0621,
+    "plads": 171,
+    "tema": "datacenter",
+    "temaNavn": "Datacentre"
+   },
+   {
+    "navn": "Ondas Holdings",
+    "slug": null,
+    "andel": 0.21,
+    "logo": "assets/img/logoer/5fe46c2994.webp",
+    "bar": 0.0593,
+    "plads": 172,
+    "tema": "fysisk-ai",
+    "temaNavn": "Robotter & fysisk AI"
+   },
+   {
+    "navn": "Satellogic",
+    "slug": "satellogic",
+    "andel": 0.21,
+    "logo": "assets/img/logoer/de6508f13e.webp",
+    "bar": 0.0593,
+    "plads": 173,
+    "tema": "rumfart",
+    "temaNavn": "Rumfart"
+   },
+   {
+    "navn": "Vista Energy",
+    "slug": "vista-energy-sab-de-cv",
+    "andel": 0.21,
+    "logo": "assets/img/logoer/a021ce5560.webp",
+    "bar": 0.0593,
+    "plads": 174,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Aixtron",
+    "slug": "aixtron",
+    "andel": 0.2,
+    "bar": 0.0565,
+    "plads": 175,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Bloom Energy",
+    "slug": "bloom-energy",
+    "andel": 0.2,
+    "logo": "assets/img/logoer/aec3569753.webp",
+    "bar": 0.0565,
+    "plads": 176,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "MP Materials",
+    "slug": null,
+    "andel": 0.2,
+    "logo": "assets/img/logoer/6d00d3c8c0.webp",
+    "bar": 0.0565,
+    "plads": 177,
+    "tema": "raastoffer",
+    "temaNavn": "Råstoffer"
+   },
+   {
+    "navn": "Starfighters Space",
+    "slug": "starfighters-space",
+    "andel": 0.2,
+    "logo": "assets/img/logoer/ead0d3103f.webp",
+    "bar": 0.0565,
+    "plads": 178,
+    "tema": "rumfart",
+    "temaNavn": "Rumfart"
+   },
+   {
+    "navn": "Sterling Infrastructure",
+    "slug": null,
+    "andel": 0.2,
+    "logo": "assets/img/logoer/f0a04595a9.webp",
+    "bar": 0.0565,
+    "plads": 179,
+    "tema": "datacenter",
+    "temaNavn": "Datacentre"
+   },
+   {
+    "navn": "Advantest",
+    "slug": "advantest",
+    "andel": 0.19,
+    "logo": "assets/img/logoer/509540d950.webp",
+    "bar": 0.0537,
+    "plads": 180,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Amprius Technologies",
+    "slug": "amprius-technologies",
+    "andel": 0.19,
+    "logo": "assets/img/logoer/1aac94c645.webp",
+    "bar": 0.0537,
+    "plads": 181,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Capstone Copper",
+    "slug": null,
+    "andel": 0.19,
+    "bar": 0.0537,
+    "plads": 182,
+    "tema": "raastoffer",
+    "temaNavn": "Råstoffer"
+   },
+   {
+    "navn": "D-Wave Quantum",
+    "slug": "d-wave-quantum",
+    "andel": 0.19,
+    "logo": "assets/img/logoer/a45fccae65.webp",
+    "bar": 0.0537,
+    "plads": 183,
+    "tema": "kvante",
+    "temaNavn": "Kvantecomputere"
+   },
+   {
+    "navn": "DTE Energy",
+    "slug": "dte-energy-company",
+    "andel": 0.19,
+    "logo": "assets/img/logoer/9bfcfd6aa9.webp",
+    "bar": 0.0537,
+    "plads": 184,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "GE Vernova",
+    "slug": "ge-vernova",
+    "andel": 0.19,
+    "logo": "assets/img/logoer/35d6fd9204.webp",
+    "bar": 0.0537,
+    "plads": 185,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Hyperliquid Strategies",
+    "slug": null,
+    "andel": 0.19,
+    "bar": 0.0537,
+    "plads": 186,
+    "tema": "krypto",
+    "temaNavn": "Krypto"
+   },
+   {
+    "navn": "IPG Photonics",
+    "slug": null,
+    "andel": 0.19,
+    "logo": "assets/img/logoer/8b09b7424c.webp",
+    "bar": 0.0537,
+    "plads": 187,
+    "tema": "datacenter",
+    "temaNavn": "Datacentre"
+   },
+   {
+    "navn": "MicroVision",
+    "slug": null,
+    "andel": 0.19,
+    "logo": "assets/img/logoer/51ea966fa7.webp",
+    "bar": 0.0537,
+    "plads": 188,
+    "tema": "fysisk-ai",
+    "temaNavn": "Robotter & fysisk AI"
+   },
+   {
+    "navn": "Nebius",
+    "slug": null,
+    "andel": 0.19,
+    "logo": "assets/img/logoer/10c7aab9d7.webp",
+    "bar": 0.0537,
+    "plads": 189,
+    "tema": "datacenter",
+    "temaNavn": "Datacentre"
+   },
+   {
+    "navn": "SanDisk",
+    "slug": "sandisk",
+    "andel": 0.19,
+    "logo": "assets/img/logoer/b2287832b5.webp",
+    "bar": 0.0537,
+    "plads": 190,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "SharonAI",
+    "slug": null,
+    "andel": 0.19,
+    "logo": "assets/img/logoer/5ed341c791.webp",
+    "bar": 0.0537,
+    "plads": 191,
+    "tema": "datacenter",
+    "temaNavn": "Datacentre"
+   },
+   {
+    "navn": "Spire Global",
+    "slug": "spire-global",
+    "andel": 0.19,
+    "logo": "assets/img/logoer/a834214184.webp",
+    "bar": 0.0537,
+    "plads": 192,
+    "tema": "rumfart",
+    "temaNavn": "Rumfart"
+   },
+   {
+    "navn": "Uber",
+    "slug": null,
+    "andel": 0.19,
+    "logo": "assets/img/logoer/58af121b97.webp",
+    "bar": 0.0537,
+    "plads": 193,
+    "tema": "platforme",
+    "temaNavn": "Platformsøkonomi"
+   },
+   {
+    "navn": "Albemarle",
+    "slug": null,
+    "andel": 0.18,
+    "bar": 0.0508,
+    "plads": 194,
+    "tema": "raastoffer",
+    "temaNavn": "Råstoffer"
+   },
+   {
+    "navn": "American Electric Power",
+    "slug": "am-electric",
+    "andel": 0.18,
+    "bar": 0.0508,
+    "plads": 195,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Arkema",
+    "slug": null,
+    "andel": 0.18,
+    "bar": 0.0508,
+    "plads": 196,
+    "tema": "raastoffer",
+    "temaNavn": "Råstoffer"
+   },
+   {
+    "navn": "Array Technologies",
+    "slug": "array-technologies",
+    "andel": 0.18,
+    "logo": "assets/img/logoer/5f68d4c6f1.webp",
+    "bar": 0.0508,
+    "plads": 197,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "BWX Technologies",
+    "slug": "bwx-technologies",
+    "andel": 0.18,
+    "logo": "assets/img/logoer/fb6c04b84e.webp",
+    "bar": 0.0508,
+    "plads": 198,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "CMS Energy",
+    "slug": "cms-energy",
+    "andel": 0.18,
+    "bar": 0.0508,
+    "plads": 199,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Canadian Solar",
+    "slug": "canadian-solar",
+    "andel": 0.18,
+    "logo": "assets/img/logoer/66c992d02d.webp",
+    "bar": 0.0508,
+    "plads": 200,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "FirstEnergy",
+    "slug": "firstenergy",
+    "andel": 0.18,
+    "logo": "assets/img/logoer/7b3028feda.webp",
+    "bar": 0.0508,
+    "plads": 201,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Intellia Therapeutics",
+    "slug": "intellia-therapeutics",
+    "andel": 0.18,
+    "bar": 0.0508,
+    "plads": 202,
+    "tema": "sundhed",
+    "temaNavn": "Sundhed og biotek"
+   },
+   {
+    "navn": "International Workplace Group",
+    "slug": null,
+    "andel": 0.18,
+    "bar": 0.0508,
+    "plads": 203,
+    "tema": "platforme",
+    "temaNavn": "Platformsøkonomi"
+   },
+   {
+    "navn": "Kulicke & Soffa",
+    "slug": "kulicke-soffa",
+    "andel": 0.18,
+    "logo": "assets/img/logoer/66774484fb.webp",
+    "bar": 0.0508,
+    "plads": 204,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Navan",
+    "slug": "navan",
+    "andel": 0.18,
+    "logo": "assets/img/logoer/9512417995.webp",
+    "bar": 0.0508,
+    "plads": 205,
+    "tema": "software",
+    "temaNavn": "Software & AI"
+   },
+   {
+    "navn": "One Stop Systems",
+    "slug": null,
+    "andel": 0.18,
+    "logo": "assets/img/logoer/0a804bf14f.webp",
+    "bar": 0.0508,
+    "plads": 206,
+    "tema": "datacenter",
+    "temaNavn": "Datacentre"
+   },
+   {
+    "navn": "Rigetti Computing",
+    "slug": "rigetti-computing",
+    "andel": 0.18,
+    "logo": "assets/img/logoer/0d730480c3.webp",
+    "bar": 0.0508,
+    "plads": 207,
+    "tema": "kvante",
+    "temaNavn": "Kvantecomputere"
+   },
+   {
+    "navn": "Sigma Lithium",
+    "slug": null,
+    "andel": 0.18,
+    "bar": 0.0508,
+    "plads": 208,
+    "tema": "raastoffer",
+    "temaNavn": "Råstoffer"
+   },
+   {
+    "navn": "Southern Company",
+    "slug": "southern-company",
+    "andel": 0.18,
+    "logo": "assets/img/logoer/435ee7b106.webp",
+    "bar": 0.0508,
+    "plads": 209,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Veeco Instruments",
+    "slug": "veeco-instruments",
+    "andel": 0.18,
+    "logo": "assets/img/logoer/c9df30070b.webp",
+    "bar": 0.0508,
+    "plads": 210,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "AXT",
+    "slug": "axt",
+    "andel": 0.17,
+    "logo": "assets/img/logoer/def622555b.webp",
+    "bar": 0.048,
+    "plads": 211,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "American Resources",
+    "slug": null,
+    "andel": 0.17,
+    "bar": 0.048,
+    "plads": 212,
+    "tema": "raastoffer",
+    "temaNavn": "Råstoffer"
+   },
+   {
+    "navn": "Chewy",
+    "slug": null,
+    "andel": 0.17,
+    "bar": 0.048,
+    "plads": 213,
+    "tema": "platforme",
+    "temaNavn": "Platformsøkonomi"
+   },
+   {
+    "navn": "Nano Nuclear Energy",
+    "slug": "nano-nuclear-energy",
+    "andel": 0.17,
+    "logo": "assets/img/logoer/db4cc352e4.webp",
+    "bar": 0.048,
+    "plads": 214,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Robinhood",
+    "slug": null,
+    "andel": 0.17,
+    "bar": 0.048,
+    "plads": 215,
+    "tema": "fintech",
+    "temaNavn": "Fintech"
+   },
+   {
+    "navn": "Silicon Motion",
+    "slug": "silicon-motion",
+    "andel": 0.17,
+    "logo": "assets/img/logoer/4496e3b5c3.webp",
+    "bar": 0.048,
+    "plads": 216,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Unusual Machines",
+    "slug": null,
+    "andel": 0.17,
+    "logo": "assets/img/logoer/bdb5c46e40.webp",
+    "bar": 0.048,
+    "plads": 217,
+    "tema": "fysisk-ai",
+    "temaNavn": "Robotter & fysisk AI"
+   },
+   {
+    "navn": "Voyager Technologies",
+    "slug": "voyager-technologies",
+    "andel": 0.17,
+    "logo": "assets/img/logoer/9ac32ffea7.webp",
+    "bar": 0.048,
+    "plads": 218,
+    "tema": "rumfart",
+    "temaNavn": "Rumfart"
+   },
+   {
+    "navn": "EQT",
+    "slug": "eqt",
+    "andel": 0.16,
+    "logo": "assets/img/logoer/a943d461fb.webp",
+    "bar": 0.0452,
+    "plads": 219,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Quanta Services",
+    "slug": "quanta-services",
+    "andel": 0.16,
+    "logo": "assets/img/logoer/21ea777ffb.webp",
+    "bar": 0.0452,
+    "plads": 220,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Oklo",
+    "slug": "oklo",
+    "andel": 0.15,
+    "logo": "assets/img/logoer/2f59a56bef.webp",
+    "bar": 0.0424,
+    "plads": 221,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Range Resources",
+    "slug": "range-resources",
+    "andel": 0.15,
+    "logo": "assets/img/logoer/029ce81085.webp",
+    "bar": 0.0424,
+    "plads": 222,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Swarmer",
+    "slug": null,
+    "andel": 0.15,
+    "logo": "assets/img/logoer/02f2196857.webp",
+    "bar": 0.0424,
+    "plads": 223,
+    "tema": "fysisk-ai",
+    "temaNavn": "Robotter & fysisk AI"
+   },
+   {
+    "navn": "Viavi Solutions",
+    "slug": null,
+    "andel": 0.15,
+    "logo": "assets/img/logoer/81a86c48c8.webp",
+    "bar": 0.0424,
+    "plads": 224,
+    "tema": "datacenter",
+    "temaNavn": "Datacentre"
+   },
+   {
+    "navn": "Atlas Energy Solutions",
+    "slug": "atlas-energy-solutions",
+    "andel": 0.14,
+    "logo": "assets/img/logoer/e61814aaa9.webp",
+    "bar": 0.0395,
+    "plads": 225,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Flex",
+    "slug": null,
+    "andel": 0.14,
+    "logo": "assets/img/logoer/dfee0bd94b.webp",
+    "bar": 0.0395,
+    "plads": 226,
+    "tema": "datacenter",
+    "temaNavn": "Datacentre"
+   },
+   {
+    "navn": "Idaho Strategic Resources",
+    "slug": null,
+    "andel": 0.14,
+    "bar": 0.0395,
+    "plads": 227,
+    "tema": "raastoffer",
+    "temaNavn": "Råstoffer"
+   },
+   {
+    "navn": "Infineon Technologies",
+    "slug": "infineon-technologies",
+    "andel": 0.14,
+    "logo": "assets/img/logoer/8660f21517.webp",
+    "bar": 0.0395,
+    "plads": 228,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Infleqtion",
+    "slug": "infleqtion",
+    "andel": 0.14,
+    "logo": "assets/img/logoer/9a3e974f72.webp",
+    "bar": 0.0395,
+    "plads": 229,
+    "tema": "kvante",
+    "temaNavn": "Kvantecomputere"
+   },
+   {
+    "navn": "Kodiak AI",
+    "slug": null,
+    "andel": 0.14,
+    "logo": "assets/img/logoer/d7a1a06d42.webp",
+    "bar": 0.0395,
+    "plads": 230,
+    "tema": "fysisk-ai",
+    "temaNavn": "Robotter & fysisk AI"
+   },
+   {
+    "navn": "Prosus",
+    "slug": null,
+    "andel": 0.14,
+    "bar": 0.0395,
+    "plads": 231,
+    "tema": "platforme",
+    "temaNavn": "Platformsøkonomi"
+   },
+   {
+    "navn": "Aeluma",
+    "slug": "aeluma",
+    "andel": 0.13,
+    "logo": "assets/img/logoer/6ef097e172.webp",
+    "bar": 0.0367,
+    "plads": 232,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Bit Digital",
+    "slug": null,
+    "andel": 0.13,
+    "logo": "assets/img/logoer/f693f57c28.webp",
+    "bar": 0.0367,
+    "plads": 233,
+    "tema": "krypto",
+    "temaNavn": "Krypto"
+   },
+   {
+    "navn": "Eos Energy",
+    "slug": "eos-energy",
+    "andel": 0.13,
+    "logo": "assets/img/logoer/73a3325656.webp",
+    "bar": 0.0367,
+    "plads": 234,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "ITT",
+    "slug": "itt",
+    "andel": 0.13,
+    "bar": 0.0367,
+    "plads": 235,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Kokusai Electric",
+    "slug": "kokusai-electric",
+    "andel": 0.13,
+    "logo": "assets/img/logoer/aea873782d.webp",
+    "bar": 0.0367,
+    "plads": 236,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Meituan",
+    "slug": null,
+    "andel": 0.13,
+    "bar": 0.0367,
+    "plads": 237,
+    "tema": "platforme",
+    "temaNavn": "Platformsøkonomi"
+   },
+   {
+    "navn": "Netflix",
+    "slug": null,
+    "andel": 0.13,
+    "bar": 0.0367,
+    "plads": 238,
+    "tema": "platforme",
+    "temaNavn": "Platformsøkonomi"
+   },
+   {
+    "navn": "Ouster",
+    "slug": null,
+    "andel": 0.13,
+    "logo": "assets/img/logoer/01747fd772.webp",
+    "bar": 0.0367,
+    "plads": 239,
+    "tema": "fysisk-ai",
+    "temaNavn": "Robotter & fysisk AI"
+   },
+   {
+    "navn": "Primoris Services",
+    "slug": "primoris-services",
+    "andel": 0.13,
+    "bar": 0.0367,
+    "plads": 240,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Solstice Advanced Materials",
+    "slug": null,
+    "andel": 0.13,
+    "logo": "assets/img/logoer/579b1a0ab4.webp",
+    "bar": 0.0367,
+    "plads": 241,
+    "tema": "raastoffer",
+    "temaNavn": "Råstoffer"
+   },
+   {
+    "navn": "Southern Copper",
+    "slug": null,
+    "andel": 0.13,
+    "bar": 0.0367,
+    "plads": 242,
+    "tema": "raastoffer",
+    "temaNavn": "Råstoffer"
+   },
+   {
+    "navn": "Tempus AI",
+    "slug": "tempus-ai",
+    "andel": 0.13,
+    "logo": "assets/img/logoer/a678549283.webp",
+    "bar": 0.0367,
+    "plads": 243,
+    "tema": "sundhed",
+    "temaNavn": "Sundhed og biotek"
+   },
+   {
+    "navn": "WeRide",
+    "slug": null,
+    "andel": 0.13,
+    "logo": "assets/img/logoer/21745bda39.webp",
+    "bar": 0.0367,
+    "plads": 244,
+    "tema": "fysisk-ai",
+    "temaNavn": "Robotter & fysisk AI"
+   },
+   {
+    "navn": "Bitmine Immersion Technologies",
+    "slug": null,
+    "andel": 0.12,
+    "bar": 0.0339,
+    "plads": 245,
+    "tema": "krypto",
+    "temaNavn": "Krypto"
+   },
+   {
+    "navn": "Entegris",
+    "slug": "entegris",
+    "andel": 0.12,
+    "logo": "assets/img/logoer/f3e07fcdad.webp",
+    "bar": 0.0339,
+    "plads": 246,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "HawkEye 360",
+    "slug": "hawkeye-360",
+    "andel": 0.12,
+    "logo": "assets/img/logoer/9bb4103dc9.webp",
+    "bar": 0.0339,
+    "plads": 247,
+    "tema": "rumfart",
+    "temaNavn": "Rumfart"
+   },
+   {
+    "navn": "Howmet Aerospace",
+    "slug": "howmet-aerospace",
+    "andel": 0.12,
+    "logo": "assets/img/logoer/c7acbe56b6.webp",
+    "bar": 0.0339,
+    "plads": 248,
+    "tema": "rumfart",
+    "temaNavn": "Rumfart"
+   },
+   {
+    "navn": "Li Auto",
+    "slug": null,
+    "andel": 0.12,
+    "logo": "assets/img/logoer/05b2c827a9.webp",
+    "bar": 0.0339,
+    "plads": 249,
+    "tema": "fysisk-ai",
+    "temaNavn": "Robotter & fysisk AI"
+   },
+   {
+    "navn": "Lightbridge",
+    "slug": "lightbridge",
+    "andel": 0.12,
+    "logo": "assets/img/logoer/4272125255.webp",
+    "bar": 0.0339,
+    "plads": 250,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Monolithic Power Systems",
+    "slug": "monolithic-power-systems",
+    "andel": 0.12,
+    "logo": "assets/img/logoer/2f24c4902d.webp",
+    "bar": 0.0339,
+    "plads": 251,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Tantalus Systems",
+    "slug": "tantalus-systems",
+    "andel": 0.12,
+    "logo": "assets/img/logoer/5061bb7e93.webp",
+    "bar": 0.0339,
+    "plads": 252,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Wolfspeed",
+    "slug": "wolfspeed",
+    "andel": 0.12,
+    "logo": "assets/img/logoer/8800d66171.webp",
+    "bar": 0.0339,
+    "plads": 253,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "American Battery Technology",
+    "slug": null,
+    "andel": 0.11,
+    "bar": 0.0311,
+    "plads": 254,
+    "tema": "raastoffer",
+    "temaNavn": "Råstoffer"
+   },
+   {
+    "navn": "Bachem",
+    "slug": "bachem",
+    "andel": 0.11,
+    "bar": 0.0311,
+    "plads": 255,
+    "tema": "sundhed",
+    "temaNavn": "Sundhed og biotek"
+   },
+   {
+    "navn": "Clearway Energy",
+    "slug": "clearway-energy-inc-c",
+    "andel": 0.11,
+    "logo": "assets/img/logoer/c6302193eb.webp",
+    "bar": 0.0311,
+    "plads": 256,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Electrovaya",
+    "slug": "electrovaya",
+    "andel": 0.11,
+    "logo": "assets/img/logoer/a9ff78987f.webp",
+    "bar": 0.0311,
+    "plads": 257,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Fluor",
+    "slug": "fluor",
+    "andel": 0.11,
+    "bar": 0.0311,
+    "plads": 258,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "General Motors",
+    "slug": null,
+    "andel": 0.11,
+    "logo": "assets/img/logoer/1acd1c785c.webp",
+    "bar": 0.0311,
+    "plads": 259,
+    "tema": "fysisk-ai",
+    "temaNavn": "Robotter & fysisk AI"
+   },
+   {
+    "navn": "Lithium Americas",
+    "slug": null,
+    "andel": 0.11,
+    "bar": 0.0311,
+    "plads": 260,
+    "tema": "raastoffer",
+    "temaNavn": "Råstoffer"
+   },
+   {
+    "navn": "Microsoft",
+    "slug": null,
+    "andel": 0.11,
+    "logo": "assets/img/logoer/b76ce7f2fd.webp",
+    "bar": 0.0311,
+    "plads": 261,
+    "tema": "datacenter",
+    "temaNavn": "Datacentre"
+   },
+   {
+    "navn": "Mirion Technologies",
+    "slug": "mirion-technologies",
+    "andel": 0.11,
+    "logo": "assets/img/logoer/44f31faefb.webp",
+    "bar": 0.0311,
+    "plads": 262,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Newmont",
+    "slug": null,
+    "andel": 0.11,
+    "bar": 0.0311,
+    "plads": 263,
+    "tema": "raastoffer",
+    "temaNavn": "Råstoffer"
+   },
+   {
+    "navn": "Nordic Semiconductor",
+    "slug": "nordic-semiconductor",
+    "andel": 0.11,
+    "logo": "assets/img/logoer/5c3c449f1d.webp",
+    "bar": 0.0311,
+    "plads": 264,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Plug Power",
+    "slug": "plug-power",
+    "andel": 0.11,
+    "bar": 0.0311,
+    "plads": 265,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Semtech",
+    "slug": null,
+    "andel": 0.11,
+    "logo": "assets/img/logoer/2167e3a8b4.webp",
+    "bar": 0.0311,
+    "plads": 266,
+    "tema": "datacenter",
+    "temaNavn": "Datacentre"
+   },
+   {
+    "navn": "Serve Robotics",
+    "slug": null,
+    "andel": 0.11,
+    "logo": "assets/img/logoer/7c4830637f.webp",
+    "bar": 0.0311,
+    "plads": 267,
+    "tema": "fysisk-ai",
+    "temaNavn": "Robotter & fysisk AI"
+   },
+   {
+    "navn": "Solaris Energy Infrastructure",
+    "slug": "solaris-energy-infrastructure",
+    "andel": 0.11,
+    "logo": "assets/img/logoer/a83ef95b65.webp",
+    "bar": 0.0311,
+    "plads": 268,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Standard Lithium",
+    "slug": null,
+    "andel": 0.11,
+    "bar": 0.0311,
+    "plads": 269,
+    "tema": "raastoffer",
+    "temaNavn": "Råstoffer"
+   },
+   {
+    "navn": "ACM Research",
+    "slug": "acm-research",
+    "andel": 0.1,
+    "logo": "assets/img/logoer/f70b811920.webp",
+    "bar": 0.0282,
+    "plads": 270,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Alpha and Omega Semiconductor",
+    "slug": "alpha-and-omega-semiconductor",
+    "andel": 0.1,
+    "logo": "assets/img/logoer/d90ffeffb4.webp",
+    "bar": 0.0282,
+    "plads": 271,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Amkor Technology",
+    "slug": "amkor-technology",
+    "andel": 0.1,
+    "logo": "assets/img/logoer/850bb0587b.webp",
+    "bar": 0.0282,
+    "plads": 272,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "CSLM Digital Asset Acquisition Corp III",
+    "slug": null,
+    "andel": 0.1,
+    "bar": 0.0282,
+    "plads": 273,
+    "tema": "krypto",
+    "temaNavn": "Krypto"
+   },
+   {
+    "navn": "IonQ",
+    "slug": "ionq",
+    "andel": 0.1,
+    "logo": "assets/img/logoer/4fc209b71b.webp",
+    "bar": 0.0282,
+    "plads": 274,
+    "tema": "kvante",
+    "temaNavn": "Kvantecomputere"
+   },
+   {
+    "navn": "Microvast",
+    "slug": "microvast",
+    "andel": 0.1,
+    "bar": 0.0282,
+    "plads": 275,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "NuScale Power",
+    "slug": "nuscale-power",
+    "andel": 0.1,
+    "logo": "assets/img/logoer/8cd4c2b13d.webp",
+    "bar": 0.0282,
+    "plads": 276,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "USA Rare Earth",
+    "slug": null,
+    "andel": 0.1,
+    "bar": 0.0282,
+    "plads": 277,
+    "tema": "raastoffer",
+    "temaNavn": "Råstoffer"
+   },
+   {
+    "navn": "ASML",
+    "slug": "asml",
+    "andel": 0.09,
+    "logo": "assets/img/logoer/6a9ec0669d.webp",
+    "bar": 0.0254,
+    "plads": 278,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Almonty Industries",
+    "slug": null,
+    "andel": 0.09,
+    "bar": 0.0254,
+    "plads": 279,
+    "tema": "raastoffer",
+    "temaNavn": "Råstoffer"
+   },
+   {
+    "navn": "CRISPR Therapeutics",
+    "slug": "crispr-therapeutics",
+    "andel": 0.09,
+    "bar": 0.0254,
+    "plads": 280,
+    "tema": "sundhed",
+    "temaNavn": "Sundhed og biotek"
+   },
+   {
+    "navn": "Cisco Systems",
+    "slug": null,
+    "andel": 0.09,
+    "bar": 0.0254,
+    "plads": 281,
+    "tema": "datacenter",
+    "temaNavn": "Datacentre"
+   },
+   {
+    "navn": "Figure Technology Solutions",
+    "slug": null,
+    "andel": 0.09,
+    "bar": 0.0254,
+    "plads": 282,
+    "tema": "fintech",
+    "temaNavn": "Fintech"
+   },
+   {
+    "navn": "Flowserve",
+    "slug": "flowserve",
+    "andel": 0.09,
+    "bar": 0.0254,
+    "plads": 283,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Horizon Robotics",
+    "slug": null,
+    "andel": 0.09,
+    "logo": "assets/img/logoer/217d44d2d4.webp",
+    "bar": 0.0254,
+    "plads": 284,
+    "tema": "fysisk-ai",
+    "temaNavn": "Robotter & fysisk AI"
+   },
+   {
+    "navn": "Keysight Technologies",
+    "slug": null,
+    "andel": 0.09,
+    "logo": "assets/img/logoer/e427a8e166.webp",
+    "bar": 0.0254,
+    "plads": 285,
+    "tema": "datacenter",
+    "temaNavn": "Datacentre"
+   },
+   {
+    "navn": "Kraken Robotics",
+    "slug": null,
+    "andel": 0.09,
+    "logo": "assets/img/logoer/e5e4ea2e41.webp",
+    "bar": 0.0254,
+    "plads": 286,
+    "tema": "fysisk-ai",
+    "temaNavn": "Robotter & fysisk AI"
+   },
+   {
+    "navn": "Lam Research",
+    "slug": "lam-research",
+    "andel": 0.09,
+    "logo": "assets/img/logoer/26fd337cb3.webp",
+    "bar": 0.0254,
+    "plads": 287,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "MaxLinear",
+    "slug": "maxlinear",
+    "andel": 0.09,
+    "logo": "assets/img/logoer/6d7e7e5294.webp",
+    "bar": 0.0254,
+    "plads": 288,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Omada Health",
+    "slug": "omada-health",
+    "andel": 0.09,
+    "bar": 0.0254,
+    "plads": 289,
+    "tema": "sundhed",
+    "temaNavn": "Sundhed og biotek"
+   },
+   {
+    "navn": "Perpetua Resources",
+    "slug": null,
+    "andel": 0.09,
+    "bar": 0.0254,
+    "plads": 290,
+    "tema": "raastoffer",
+    "temaNavn": "Råstoffer"
+   },
+   {
+    "navn": "Synopsys",
+    "slug": "synopsys",
+    "andel": 0.09,
+    "bar": 0.0254,
+    "plads": 291,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "TeraWulf",
+    "slug": null,
+    "andel": 0.09,
+    "logo": "assets/img/logoer/d1770075d5.webp",
+    "bar": 0.0254,
+    "plads": 292,
+    "tema": "datacenter",
+    "temaNavn": "Datacentre"
+   },
+   {
+    "navn": "Terrestrial Energy",
+    "slug": "terrestrial-energy",
+    "andel": 0.09,
+    "logo": "assets/img/logoer/c4ba238faa.webp",
+    "bar": 0.0254,
+    "plads": 293,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Trekor Metals",
+    "slug": null,
+    "andel": 0.09,
+    "bar": 0.0254,
+    "plads": 294,
+    "tema": "raastoffer",
+    "temaNavn": "Råstoffer"
+   },
+   {
+    "navn": "Analog Devices",
+    "slug": "analog-devices",
+    "andel": 0.08,
+    "logo": "assets/img/logoer/14d73a01e1.webp",
+    "bar": 0.0226,
+    "plads": 295,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Bullish",
+    "slug": null,
+    "andel": 0.08,
+    "bar": 0.0226,
+    "plads": 296,
+    "tema": "krypto",
+    "temaNavn": "Krypto"
+   },
+   {
+    "navn": "Cohu",
+    "slug": "cohu",
+    "andel": 0.08,
+    "logo": "assets/img/logoer/6942a6ca36.webp",
+    "bar": 0.0226,
+    "plads": 297,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Marvell Technology",
+    "slug": "marvell-technology",
+    "andel": 0.08,
+    "logo": "assets/img/logoer/d80d4e7eb1.webp",
+    "bar": 0.0226,
+    "plads": 298,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Sharplink",
+    "slug": null,
+    "andel": 0.08,
+    "bar": 0.0226,
+    "plads": 299,
+    "tema": "krypto",
+    "temaNavn": "Krypto"
+   },
+   {
+    "navn": "Strategy",
+    "slug": null,
+    "andel": 0.08,
+    "bar": 0.0226,
+    "plads": 300,
+    "tema": "krypto",
+    "temaNavn": "Krypto"
+   },
+   {
+    "navn": "Texas Instruments",
+    "slug": "texas-instruments",
+    "andel": 0.08,
+    "logo": "assets/img/logoer/d705da286b.webp",
+    "bar": 0.0226,
+    "plads": 301,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Upexi",
+    "slug": null,
+    "andel": 0.08,
+    "bar": 0.0226,
+    "plads": 302,
+    "tema": "krypto",
+    "temaNavn": "Krypto"
+   },
+   {
+    "navn": "Allegro.eu",
+    "slug": null,
+    "andel": 0.07,
+    "bar": 0.0198,
+    "plads": 303,
+    "tema": "platforme",
+    "temaNavn": "Platformsøkonomi"
+   },
+   {
+    "navn": "Ambarella",
+    "slug": "ambarella",
+    "andel": 0.07,
+    "logo": "assets/img/logoer/c16d310945.webp",
+    "bar": 0.0198,
+    "plads": 304,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Amphenol",
+    "slug": null,
+    "andel": 0.07,
+    "logo": "assets/img/logoer/c40d682601.webp",
+    "bar": 0.0198,
+    "plads": 305,
+    "tema": "datacenter",
+    "temaNavn": "Datacentre"
+   },
+   {
+    "navn": "Astera Labs",
+    "slug": null,
+    "andel": 0.07,
+    "logo": "assets/img/logoer/52a6832518.webp",
+    "bar": 0.0198,
+    "plads": 306,
+    "tema": "datacenter",
+    "temaNavn": "Datacentre"
+   },
+   {
+    "navn": "Aurora Innovation",
+    "slug": null,
+    "andel": 0.07,
+    "logo": "assets/img/logoer/96c297e2f4.webp",
+    "bar": 0.0198,
+    "plads": 307,
+    "tema": "fysisk-ai",
+    "temaNavn": "Robotter & fysisk AI"
+   },
+   {
+    "navn": "Canadian Natural Resources",
+    "slug": "canadian-natural-resources",
+    "andel": 0.07,
+    "logo": "assets/img/logoer/8cf8211760.webp",
+    "bar": 0.0198,
+    "plads": 308,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Caterpillar",
+    "slug": "caterpillar",
+    "andel": 0.07,
+    "logo": "assets/img/logoer/580b8b9a63.webp",
+    "bar": 0.0198,
+    "plads": 309,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Churchill Capital",
+    "slug": null,
+    "andel": 0.07,
+    "logo": "assets/img/logoer/fc84ce9c32.webp",
+    "bar": 0.0198,
+    "plads": 310,
+    "tema": "fysisk-ai",
+    "temaNavn": "Robotter & fysisk AI"
+   },
+   {
+    "navn": "Comfort Systems USA",
+    "slug": null,
+    "andel": 0.07,
+    "logo": "assets/img/logoer/4f8a216f4e.webp",
+    "bar": 0.0198,
+    "plads": 311,
+    "tema": "datacenter",
+    "temaNavn": "Datacentre"
+   },
+   {
+    "navn": "DoorDash",
+    "slug": null,
+    "andel": 0.07,
+    "bar": 0.0198,
+    "plads": 312,
+    "tema": "platforme",
+    "temaNavn": "Platformsøkonomi"
+   },
+   {
+    "navn": "Global-e",
+    "slug": null,
+    "andel": 0.07,
+    "bar": 0.0198,
+    "plads": 313,
+    "tema": "fintech",
+    "temaNavn": "Fintech"
+   },
+   {
+    "navn": "Jabil",
+    "slug": null,
+    "andel": 0.07,
+    "logo": "assets/img/logoer/d8480c337d.webp",
+    "bar": 0.0198,
+    "plads": 314,
+    "tema": "datacenter",
+    "temaNavn": "Datacentre"
+   },
+   {
+    "navn": "Microchip Technology",
+    "slug": "microchip-technology",
+    "andel": 0.07,
+    "logo": "assets/img/logoer/cd75c9140d.webp",
+    "bar": 0.0198,
+    "plads": 315,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Snowflake",
+    "slug": "snowflake",
+    "andel": 0.07,
+    "logo": "assets/img/logoer/b4fa744531.webp",
+    "bar": 0.0198,
+    "plads": 316,
+    "tema": "software",
+    "temaNavn": "Software & AI"
+   },
+   {
+    "navn": "The Metals Company",
+    "slug": null,
+    "andel": 0.07,
+    "bar": 0.0198,
+    "plads": 317,
+    "tema": "raastoffer",
+    "temaNavn": "Råstoffer"
+   },
+   {
+    "navn": "WEBTOON Entertainment",
+    "slug": null,
+    "andel": 0.07,
+    "bar": 0.0198,
+    "plads": 318,
+    "tema": "platforme",
+    "temaNavn": "Platformsøkonomi"
+   },
+   {
+    "navn": "Wix.com",
+    "slug": "wix-com",
+    "andel": 0.07,
+    "logo": "assets/img/logoer/34352ee693.webp",
+    "bar": 0.0198,
+    "plads": 319,
+    "tema": "software",
+    "temaNavn": "Software & AI"
+   },
+   {
+    "navn": "Affirm",
+    "slug": null,
+    "andel": 0.06,
+    "bar": 0.0169,
+    "plads": 320,
+    "tema": "fintech",
+    "temaNavn": "Fintech"
+   },
+   {
+    "navn": "Cadence Design Systems",
+    "slug": "cadence-design-systems",
+    "andel": 0.06,
+    "bar": 0.0169,
+    "plads": 321,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Cummins",
+    "slug": "cummins",
+    "andel": 0.06,
+    "logo": "assets/img/logoer/f812a094ea.webp",
+    "bar": 0.0169,
+    "plads": 322,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "FormFactor",
+    "slug": "formfactor",
+    "andel": 0.06,
+    "logo": "assets/img/logoer/58a0d186b3.webp",
+    "bar": 0.0169,
+    "plads": 323,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Futu",
+    "slug": null,
+    "andel": 0.06,
+    "bar": 0.0169,
+    "plads": 324,
+    "tema": "fintech",
+    "temaNavn": "Fintech"
+   },
+   {
+    "navn": "Kaspi.kz",
+    "slug": null,
+    "andel": 0.06,
+    "bar": 0.0169,
+    "plads": 325,
+    "tema": "fintech",
+    "temaNavn": "Fintech"
+   },
+   {
+    "navn": "Spotify",
+    "slug": null,
+    "andel": 0.06,
+    "bar": 0.0169,
+    "plads": 326,
+    "tema": "platforme",
+    "temaNavn": "Platformsøkonomi"
+   },
+   {
+    "navn": "Terex",
+    "slug": "terex",
+    "andel": 0.06,
+    "logo": "assets/img/logoer/cea4e9cb1b.webp",
+    "bar": 0.0169,
+    "plads": 327,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Trilogy Metals",
+    "slug": null,
+    "andel": 0.06,
+    "bar": 0.0169,
+    "plads": 328,
+    "tema": "raastoffer",
+    "temaNavn": "Råstoffer"
+   },
+   {
+    "navn": "Applied Digital",
+    "slug": null,
+    "andel": 0.05,
+    "logo": "assets/img/logoer/2ca551c451.webp",
+    "bar": 0.0141,
+    "plads": 329,
+    "tema": "datacenter",
+    "temaNavn": "Datacentre"
+   },
+   {
+    "navn": "Applied Materials",
+    "slug": "applied-materials",
+    "andel": 0.05,
+    "logo": "assets/img/logoer/b846cd3f38.webp",
+    "bar": 0.0141,
+    "plads": 330,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Ategrity Specialty Holdings",
+    "slug": null,
+    "andel": 0.05,
+    "bar": 0.0141,
+    "plads": 331,
+    "tema": "fintech",
+    "temaNavn": "Fintech"
+   },
+   {
+    "navn": "Coursera",
+    "slug": null,
+    "andel": 0.05,
+    "logo": "assets/img/logoer/022f875489.webp",
+    "bar": 0.0141,
+    "plads": 332,
+    "tema": "platforme",
+    "temaNavn": "Platformsøkonomi"
+   },
+   {
+    "navn": "DeFi Development",
+    "slug": null,
+    "andel": 0.05,
+    "bar": 0.0141,
+    "plads": 333,
+    "tema": "krypto",
+    "temaNavn": "Krypto"
+   },
+   {
+    "navn": "FuboTV",
+    "slug": null,
+    "andel": 0.05,
+    "bar": 0.0141,
+    "plads": 334,
+    "tema": "platforme",
+    "temaNavn": "Platformsøkonomi"
+   },
+   {
+    "navn": "Ivanhoe Electric",
+    "slug": null,
+    "andel": 0.05,
+    "bar": 0.0141,
+    "plads": 335,
+    "tema": "raastoffer",
+    "temaNavn": "Råstoffer"
+   },
+   {
+    "navn": "Karman Space & Defense",
+    "slug": "karman-space-defense",
+    "andel": 0.05,
+    "logo": "assets/img/logoer/724b5c6398.webp",
+    "bar": 0.0141,
+    "plads": 336,
+    "tema": "rumfart",
+    "temaNavn": "Rumfart"
+   },
+   {
+    "navn": "LifeMD",
+    "slug": null,
+    "andel": 0.05,
+    "bar": 0.0141,
+    "plads": 337,
+    "tema": "sundhed",
+    "temaNavn": "Sundhed og biotek"
+   },
+   {
+    "navn": "MNTN",
+    "slug": null,
+    "andel": 0.05,
+    "logo": "assets/img/logoer/4e6fe253a3.webp",
+    "bar": 0.0141,
+    "plads": 338,
+    "tema": "platforme",
+    "temaNavn": "Platformsøkonomi"
+   },
+   {
+    "navn": "Neo Performance Materials",
+    "slug": null,
+    "andel": 0.05,
+    "bar": 0.0141,
+    "plads": 339,
+    "tema": "raastoffer",
+    "temaNavn": "Råstoffer"
+   },
+   {
+    "navn": "PDD Holdings",
+    "slug": null,
+    "andel": 0.05,
+    "bar": 0.0141,
+    "plads": 340,
+    "tema": "platforme",
+    "temaNavn": "Platformsøkonomi"
+   },
+   {
+    "navn": "Terra Innovatum",
+    "slug": "terra-innovatum",
+    "andel": 0.05,
+    "logo": "assets/img/logoer/9b5fc9369d.webp",
+    "bar": 0.0141,
+    "plads": 341,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "AMD",
+    "slug": "amd",
+    "andel": 0.04,
+    "bar": 0.0113,
+    "plads": 342,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Alibaba Group",
+    "slug": null,
+    "andel": 0.04,
+    "bar": 0.0113,
+    "plads": 343,
+    "tema": "platforme",
+    "temaNavn": "Platformsøkonomi"
+   },
+   {
+    "navn": "Dell",
+    "slug": null,
+    "andel": 0.04,
+    "logo": "assets/img/logoer/7b65f57d16.webp",
+    "bar": 0.0113,
+    "plads": 344,
+    "tema": "datacenter",
+    "temaNavn": "Datacentre"
+   },
+   {
+    "navn": "Figma",
+    "slug": "figma",
+    "andel": 0.04,
+    "logo": "assets/img/logoer/5197e2fc2a.webp",
+    "bar": 0.0113,
+    "plads": 345,
+    "tema": "software",
+    "temaNavn": "Software & AI"
+   },
+   {
+    "navn": "Lattice Semiconductor",
+    "slug": "lattice-semiconductor",
+    "andel": 0.04,
+    "bar": 0.0113,
+    "plads": 346,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Meta Platforms",
+    "slug": null,
+    "andel": 0.04,
+    "logo": "assets/img/logoer/506fe57b82.webp",
+    "bar": 0.0113,
+    "plads": 347,
+    "tema": "platforme",
+    "temaNavn": "Platformsøkonomi"
+   },
+   {
+    "navn": "Northern Dynasty Minerals",
+    "slug": null,
+    "andel": 0.04,
+    "bar": 0.0113,
+    "plads": 348,
+    "tema": "raastoffer",
+    "temaNavn": "Råstoffer"
+   },
+   {
+    "navn": "Palo Alto Networks",
+    "slug": null,
+    "andel": 0.04,
+    "logo": "assets/img/logoer/f05045b720.webp",
+    "bar": 0.0113,
+    "plads": 349,
+    "tema": "software",
+    "temaNavn": "Software & AI"
+   },
+   {
+    "navn": "Rivian Automotive",
+    "slug": null,
+    "andel": 0.04,
+    "logo": "assets/img/logoer/685cecc72b.webp",
+    "bar": 0.0113,
+    "plads": 350,
+    "tema": "fysisk-ai",
+    "temaNavn": "Robotter & fysisk AI"
+   },
+   {
+    "navn": "Rubrik",
+    "slug": null,
+    "andel": 0.04,
+    "logo": "assets/img/logoer/7fa11c1750.webp",
+    "bar": 0.0113,
+    "plads": 351,
+    "tema": "software",
+    "temaNavn": "Software & AI"
+   },
+   {
+    "navn": "Sanmina",
+    "slug": null,
+    "andel": 0.04,
+    "logo": "assets/img/logoer/a404c6c183.webp",
+    "bar": 0.0113,
+    "plads": 352,
+    "tema": "datacenter",
+    "temaNavn": "Datacentre"
+   },
+   {
+    "navn": "TSMC",
+    "slug": "tsmc",
+    "andel": 0.04,
+    "bar": 0.0113,
+    "plads": 353,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Zeta Global Holdings",
+    "slug": null,
+    "andel": 0.04,
+    "bar": 0.0113,
+    "plads": 354,
+    "tema": "platforme",
+    "temaNavn": "Platformsøkonomi"
+   },
+   {
+    "navn": "Airo Group",
+    "slug": null,
+    "andel": 0.03,
+    "logo": "assets/img/logoer/306ab9c095.webp",
+    "bar": 0.0085,
+    "plads": 355,
+    "tema": "fysisk-ai",
+    "temaNavn": "Robotter & fysisk AI"
+   },
+   {
+    "navn": "Arista Networks",
+    "slug": null,
+    "andel": 0.03,
+    "logo": "assets/img/logoer/143ca78461.webp",
+    "bar": 0.0085,
+    "plads": 356,
+    "tema": "datacenter",
+    "temaNavn": "Datacentre"
+   },
+   {
+    "navn": "Axcelis Technologies",
+    "slug": "axcelis-technologies",
+    "andel": 0.03,
+    "bar": 0.0085,
+    "plads": 357,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "Cloudflare",
+    "slug": null,
+    "andel": 0.03,
+    "logo": "assets/img/logoer/8074b65bbc.webp",
+    "bar": 0.0085,
+    "plads": 358,
+    "tema": "software",
+    "temaNavn": "Software & AI"
+   },
+   {
+    "navn": "Hinge Health",
+    "slug": null,
+    "andel": 0.03,
+    "bar": 0.0085,
+    "plads": 359,
+    "tema": "sundhed",
+    "temaNavn": "Sundhed og biotek"
+   },
+   {
+    "navn": "Lantronix",
+    "slug": null,
+    "andel": 0.03,
+    "logo": "assets/img/logoer/96363544d1.webp",
+    "bar": 0.0085,
+    "plads": 360,
+    "tema": "fysisk-ai",
+    "temaNavn": "Robotter & fysisk AI"
+   },
+   {
+    "navn": "Pagaya Technologies",
+    "slug": null,
+    "andel": 0.03,
+    "bar": 0.0085,
+    "plads": 361,
+    "tema": "fintech",
+    "temaNavn": "Fintech"
+   },
+   {
+    "navn": "Samsara",
+    "slug": null,
+    "andel": 0.03,
+    "logo": "assets/img/logoer/62632fbeff.webp",
+    "bar": 0.0085,
+    "plads": 362,
+    "tema": "software",
+    "temaNavn": "Software & AI"
+   },
+   {
+    "navn": "Teradyne",
+    "slug": "teradyne",
+    "andel": 0.03,
+    "logo": "assets/img/logoer/2419f7bcca.webp",
+    "bar": 0.0085,
+    "plads": 363,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "dLocal",
+    "slug": null,
+    "andel": 0.03,
+    "bar": 0.0085,
+    "plads": 364,
+    "tema": "fintech",
+    "temaNavn": "Fintech"
+   },
+   {
+    "navn": "Iridium Communications",
+    "slug": "iridium-communications",
+    "andel": 0.02,
+    "logo": "assets/img/logoer/a090499165.webp",
+    "bar": 0.0056,
+    "plads": 365,
+    "tema": "rumfart",
+    "temaNavn": "Rumfart"
+   },
+   {
+    "navn": "NeoVolta",
+    "slug": "neovolta",
+    "andel": 0.02,
+    "logo": "assets/img/logoer/7d5ba478b0.webp",
+    "bar": 0.0056,
+    "plads": 366,
+    "tema": "energi",
+    "temaNavn": "Energi og elnet"
+   },
+   {
+    "navn": "Netskope",
+    "slug": null,
+    "andel": 0.02,
+    "logo": "assets/img/logoer/afc9e13926.webp",
+    "bar": 0.0056,
+    "plads": 367,
+    "tema": "software",
+    "temaNavn": "Software & AI"
+   },
+   {
+    "navn": "Oscar Health",
+    "slug": null,
+    "andel": 0.02,
+    "bar": 0.0056,
+    "plads": 368,
+    "tema": "sundhed",
+    "temaNavn": "Sundhed og biotek"
+   },
+   {
+    "navn": "AbCellera Biologics",
+    "slug": null,
+    "andel": 0.01,
+    "bar": 0.0028,
+    "plads": 369,
+    "tema": "sundhed",
+    "temaNavn": "Sundhed og biotek"
+   },
+   {
+    "navn": "Apple",
+    "slug": null,
+    "andel": 0.01,
+    "logo": "assets/img/logoer/03a6259dbd.webp",
+    "bar": 0.0028,
+    "plads": 370,
+    "tema": "platforme",
+    "temaNavn": "Platformsøkonomi"
+   },
+   {
+    "navn": "Blaize",
+    "slug": "blaize",
+    "andel": 0.01,
+    "logo": "assets/img/logoer/fbfec736cc.webp",
+    "bar": 0.0028,
+    "plads": 371,
+    "tema": "chips",
+    "temaNavn": "Chips og halvledere"
+   },
+   {
+    "navn": "CrowdStrike",
+    "slug": null,
+    "andel": 0.01,
+    "logo": "assets/img/logoer/014afe4b37.webp",
+    "bar": 0.0028,
+    "plads": 372,
+    "tema": "software",
+    "temaNavn": "Software & AI"
+   },
+   {
+    "navn": "SailPoint",
+    "slug": null,
+    "andel": 0.01,
+    "logo": "assets/img/logoer/9d816778e8.webp",
+    "bar": 0.0028,
+    "plads": 373,
+    "tema": "software",
+    "temaNavn": "Software & AI"
+   }
+  ]
+ },
+ "verden": {
+  "lande": [
+   {
+    "kode": "US",
+    "navn": "USA",
+    "antal": 263,
+    "andel": 65.12,
+    "cx": 227.8,
+    "cy": 124.8,
+    "r": 30.6,
+    "plads": 1
+   },
+   {
+    "kode": "JP",
+    "navn": "Japan",
+    "antal": 10,
+    "andel": 5.41,
+    "cx": 883.3,
+    "cy": 133.9,
+    "r": 11.1,
+    "plads": 2
+   },
+   {
+    "kode": "CA",
+    "navn": "Canada",
+    "antal": 26,
+    "andel": 4.91,
+    "cx": 211.1,
+    "cy": 73.0,
+    "r": 10.7,
+    "plads": 3
+   },
+   {
+    "kode": "KY",
+    "navn": "Caymanøerne",
+    "antal": 18,
+    "andel": 4.49,
+    "cx": 274.4,
+    "cy": 184.7,
+    "r": 10.4,
+    "plads": 4
+   },
+   {
+    "kode": "GB",
+    "navn": "Storbritannien",
+    "antal": 5,
+    "andel": 2.45,
+    "cx": 494.4,
+    "cy": 79.1,
+    "r": 8.5,
+    "plads": 5
+   },
+   {
+    "kode": "DE",
+    "navn": "Tyskland",
+    "antal": 6,
+    "andel": 2.28,
+    "cx": 528.9,
+    "cy": 88.3,
+    "r": 8.3,
+    "plads": 6
+   },
+   {
+    "kode": "IL",
+    "navn": "Israel",
+    "antal": 6,
+    "andel": 1.9,
+    "cx": 597.2,
+    "cy": 147.6,
+    "r": 7.9,
+    "plads": 7
+   },
+   {
+    "kode": "NL",
+    "navn": "Holland",
+    "antal": 5,
+    "andel": 1.46,
+    "cx": 514.7,
+    "cy": 84.9,
+    "r": 7.3,
+    "plads": 8
+   },
+   {
+    "kode": "VG",
+    "navn": "De Britiske Jomfruøer",
+    "antal": 2,
+    "andel": 1.11,
+    "cx": 320.6,
+    "cy": 187.5,
+    "r": 6.8,
+    "plads": 9
+   },
+   {
+    "kode": "CH",
+    "navn": "Schweiz",
+    "antal": 3,
+    "andel": 0.98,
+    "cx": 522.8,
+    "cy": 101.0,
+    "r": 6.6,
+    "plads": 10
+   },
+   {
+    "kode": "SE",
+    "navn": "Sverige",
+    "antal": 1,
+    "andel": 0.96,
+    "cx": 544.4,
+    "cy": 54.8,
+    "r": 6.5,
+    "plads": 11
+   },
+   {
+    "kode": "AU",
+    "navn": "Australien",
+    "antal": 2,
+    "andel": 0.95,
+    "cx": 872.2,
+    "cy": 319.6,
+    "r": 6.5,
+    "plads": 12
+   },
+   {
+    "kode": "FR",
+    "navn": "Frankrig",
+    "antal": 2,
+    "andel": 0.87,
+    "cx": 506.4,
+    "cy": 101.7,
+    "r": 6.4,
+    "plads": 13
+   },
+   {
+    "kode": "IE",
+    "navn": "Irland",
+    "antal": 1,
+    "andel": 0.35,
+    "cx": 477.8,
+    "cy": 81.6,
+    "r": 5.2,
+    "plads": 14
+   },
+   {
+    "kode": "BE",
+    "navn": "Belgien",
+    "antal": 1,
+    "andel": 0.33,
+    "cx": 512.5,
+    "cy": 89.5,
+    "r": 5.2,
+    "plads": 15
+   },
+   {
+    "kode": "AT",
+    "navn": "Østrig",
+    "antal": 1,
+    "andel": 0.3,
+    "cx": 540.3,
+    "cy": 98.6,
+    "r": 5.1,
+    "plads": 16
+   },
+   {
+    "kode": "BG",
+    "navn": "Bulgarien",
+    "antal": 1,
+    "andel": 0.22,
+    "cx": 570.8,
+    "cy": 113.5,
+    "r": 4.8,
+    "plads": 17
+   },
+   {
+    "kode": "JE",
+    "navn": "Jersey",
+    "antal": 1,
+    "andel": 0.18,
+    "cx": 494.2,
+    "cy": 93.7,
+    "r": 4.6,
+    "plads": 18
+   },
+   {
+    "kode": "SG",
+    "navn": "Singapore",
+    "antal": 1,
+    "andel": 0.14,
+    "cx": 788.3,
+    "cy": 239.4,
+    "r": 4.5,
+    "plads": 19
+   },
+   {
+    "kode": "LU",
+    "navn": "Luxembourg",
+    "antal": 2,
+    "andel": 0.13,
+    "cx": 516.9,
+    "cy": 91.9,
+    "r": 4.4,
+    "plads": 20
+   },
+   {
+    "kode": "NO",
+    "navn": "Norge",
+    "antal": 1,
+    "andel": 0.11,
+    "cx": 525.0,
+    "cy": 57.8,
+    "r": 4.3,
+    "plads": 21
+   },
+   {
+    "kode": "BM",
+    "navn": "Bermuda",
+    "antal": 1,
+    "andel": 0.1,
+    "cx": 320.0,
+    "cy": 145.2,
+    "r": 4.3,
+    "plads": 22
+   }
+  ],
+  "antalLande": 22,
+  "stoersteLand": "USA",
+  "stoersteAndel": 65.12,
+  "stoersteAntal": 263,
+  "depotbeviser": {
+   "antal": 14,
+   "andel": 5.25,
+   "ingen": false,
+   "eksempler": "Samsung Electronics og SK hynix",
+   "liste": [
+    {
+     "navn": "Samsung Electronics",
+     "andel": 1.43,
+     "boers": "IOB"
+    },
+    {
+     "navn": "SK hynix",
+     "andel": 1.07,
+     "boers": "FRA"
+    },
+    {
+     "navn": "Sea",
+     "andel": 1.05,
+     "boers": "NYQ"
+    },
+    {
+     "navn": "BioNTech",
+     "andel": 0.36,
+     "boers": "NMS"
+    },
+    {
+     "navn": "UMC",
+     "andel": 0.35,
+     "boers": "NYQ"
+    },
+    {
+     "navn": "Himax Technologies",
+     "andel": 0.32,
+     "boers": "NMS"
+    },
+    {
+     "navn": "Silicon Motion",
+     "andel": 0.17,
+     "boers": "NMS"
+    },
+    {
+     "navn": "WeRide",
+     "andel": 0.13,
+     "boers": "NGM"
+    },
+    {
+     "navn": "Li Auto",
+     "andel": 0.12,
+     "boers": "NMS"
+    },
+    {
+     "navn": "Futu",
+     "andel": 0.06,
+     "boers": "NGM"
+    },
+    {
+     "navn": "Kaspi.kz",
+     "andel": 0.06,
+     "boers": "NMS"
+    },
+    {
+     "navn": "PDD Holdings",
+     "andel": 0.05,
+     "boers": "NMS"
+    },
+    {
+     "navn": "Alibaba Group",
+     "andel": 0.04,
+     "boers": "NYQ"
+    },
+    {
+     "navn": "TSMC",
+     "andel": 0.04,
+     "boers": "NYQ"
+    }
+   ]
+  },
+  "juridiske": "Caymanøerne, De Britiske Jomfruøer, Bermuda og Jersey",
+  "juridiskeAntal": 4,
+  "bredde": 1000,
+  "hoejde": 420,
+  "land": "M187.5 4.6h0M212.5 4.6h0M220.8 4.6h0M229.2 4.6h0M245.8 4.6h0M262.5 4.6h0M270.8 4.6h0M279.2 4.6h0M287.5 4.6h0M304.2 4.6h0M312.5 4.6h0M320.8 4.6h0M329.2 4.6h0M337.5 4.6h0M345.8 4.6h0M354.2 4.6h0M362.5 4.6h0M370.8 4.6h0M379.2 4.6h0M387.5 4.6h0M395.8 4.6h0M404.2 4.6h0M412.5 4.6h0M420.8 4.6h0M429.2 4.6h0M437.5 4.6h0M537.5 4.6h0M545.8 4.6h0M779.2 4.6h0M787.5 4.6h0M179.2 13.7h0M187.5 13.7h0M204.2 13.7h0M220.8 13.7h0M237.5 13.7h0M245.8 13.7h0M254.2 13.7h0M262.5 13.7h0M270.8 13.7h0M337.5 13.7h0M345.8 13.7h0M354.2 13.7h0M362.5 13.7h0M370.8 13.7h0M379.2 13.7h0M387.5 13.7h0M395.8 13.7h0M404.2 13.7h0M412.5 13.7h0M420.8 13.7h0M429.2 13.7h0M437.5 13.7h0M662.5 13.7h0M670.8 13.7h0M754.2 13.7h0M762.5 13.7h0M770.8 13.7h0M779.2 13.7h0M787.5 13.7h0M795.8 13.7h0M804.2 13.7h0M812.5 13.7h0M887.5 13.7h0M895.8 13.7h0M154.2 22.8h0M162.5 22.8h0M179.2 22.8h0M187.5 22.8h0M195.8 22.8h0M204.2 22.8h0M220.8 22.8h0M229.2 22.8h0M237.5 22.8h0M254.2 22.8h0M262.5 22.8h0M270.8 22.8h0M354.2 22.8h0M362.5 22.8h0M370.8 22.8h0M379.2 22.8h0M387.5 22.8h0M395.8 22.8h0M404.2 22.8h0M412.5 22.8h0M420.8 22.8h0M429.2 22.8h0M437.5 22.8h0M645.8 22.8h0M654.2 22.8h0M695.8 22.8h0M729.2 22.8h0M737.5 22.8h0M745.8 22.8h0M754.2 22.8h0M762.5 22.8h0M770.8 22.8h0M779.2 22.8h0M787.5 22.8h0M795.8 22.8h0M804.2 22.8h0M812.5 22.8h0M820.8 22.8h0M829.2 22.8h0M837.5 22.8h0M845.8 22.8h0M854.2 22.8h0M887.5 22.8h0M895.8 22.8h0M54.2 32.0h0M62.5 32.0h0M70.8 32.0h0M79.2 32.0h0M87.5 32.0h0M95.8 32.0h0M104.2 32.0h0M112.5 32.0h0M129.2 32.0h0M137.5 32.0h0M145.8 32.0h0M154.2 32.0h0M162.5 32.0h0M179.2 32.0h0M187.5 32.0h0M195.8 32.0h0M204.2 32.0h0M212.5 32.0h0M229.2 32.0h0M237.5 32.0h0M245.8 32.0h0M262.5 32.0h0M270.8 32.0h0M287.5 32.0h0M295.8 32.0h0M304.2 32.0h0M312.5 32.0h0M354.2 32.0h0M362.5 32.0h0M370.8 32.0h0M379.2 32.0h0M387.5 32.0h0M395.8 32.0h0M404.2 32.0h0M412.5 32.0h0M420.8 32.0h0M429.2 32.0h0M554.2 32.0h0M562.5 32.0h0M570.8 32.0h0M579.2 32.0h0M587.5 32.0h0M670.8 32.0h0M687.5 32.0h0M695.8 32.0h0M712.5 32.0h0M720.8 32.0h0M729.2 32.0h0M737.5 32.0h0M745.8 32.0h0M754.2 32.0h0M762.5 32.0h0M770.8 32.0h0M779.2 32.0h0M787.5 32.0h0M795.8 32.0h0M804.2 32.0h0M812.5 32.0h0M820.8 32.0h0M829.2 32.0h0M837.5 32.0h0M845.8 32.0h0M854.2 32.0h0M862.5 32.0h0M870.8 32.0h0M879.2 32.0h0M887.5 32.0h0M895.8 32.0h0M904.2 32.0h0M912.5 32.0h0M920.8 32.0h0M929.2 32.0h0M937.5 32.0h0M945.8 32.0h0M954.2 32.0h0M962.5 32.0h0M979.2 32.0h0M987.5 32.0h0M29.2 41.1h0M37.5 41.1h0M45.8 41.1h0M54.2 41.1h0M62.5 41.1h0M70.8 41.1h0M79.2 41.1h0M87.5 41.1h0M95.8 41.1h0M104.2 41.1h0M112.5 41.1h0M120.8 41.1h0M129.2 41.1h0M137.5 41.1h0M145.8 41.1h0M154.2 41.1h0M162.5 41.1h0M170.8 41.1h0M179.2 41.1h0M187.5 41.1h0M195.8 41.1h0M204.2 41.1h0M212.5 41.1h0M220.8 41.1h0M229.2 41.1h0M237.5 41.1h0M245.8 41.1h0M254.2 41.1h0M262.5 41.1h0M270.8 41.1h0M279.2 41.1h0M287.5 41.1h0M295.8 41.1h0M304.2 41.1h0M312.5 41.1h0M320.8 41.1h0M329.2 41.1h0M337.5 41.1h0M345.8 41.1h0M354.2 41.1h0M362.5 41.1h0M370.8 41.1h0M379.2 41.1h0M387.5 41.1h0M395.8 41.1h0M404.2 41.1h0M412.5 41.1h0M420.8 41.1h0M429.2 41.1h0M437.5 41.1h0M445.8 41.1h0M454.2 41.1h0M462.5 41.1h0M470.8 41.1h0M479.2 41.1h0M487.5 41.1h0M495.8 41.1h0M504.2 41.1h0M512.5 41.1h0M520.8 41.1h0M529.2 41.1h0M595.8 41.1h0M620.8 41.1h0M54.2 50.2h0M62.5 50.2h0M70.8 50.2h0M79.2 50.2h0M87.5 50.2h0M95.8 50.2h0M104.2 50.2h0M112.5 50.2h0M120.8 50.2h0M129.2 50.2h0M137.5 50.2h0M145.8 50.2h0M154.2 50.2h0M162.5 50.2h0M170.8 50.2h0M179.2 50.2h0M187.5 50.2h0M195.8 50.2h0M204.2 50.2h0M212.5 50.2h0M220.8 50.2h0M229.2 50.2h0M237.5 50.2h0M245.8 50.2h0M262.5 50.2h0M304.2 50.2h0M312.5 50.2h0M362.5 50.2h0M370.8 50.2h0M379.2 50.2h0M529.2 50.2h0M537.5 50.2h0M545.8 50.2h0M554.2 50.2h0M562.5 50.2h0M570.8 50.2h0M579.2 50.2h0M587.5 50.2h0M595.8 50.2h0M604.2 50.2h0M612.5 50.2h0M620.8 50.2h0M629.2 50.2h0M637.5 50.2h0M645.8 50.2h0M654.2 50.2h0M662.5 50.2h0M670.8 50.2h0M679.2 50.2h0M687.5 50.2h0M695.8 50.2h0M704.2 50.2h0M712.5 50.2h0M720.8 50.2h0M729.2 50.2h0M737.5 50.2h0M745.8 50.2h0M754.2 50.2h0M762.5 50.2h0M770.8 50.2h0M779.2 50.2h0M787.5 50.2h0M795.8 50.2h0M804.2 50.2h0M812.5 50.2h0M820.8 50.2h0M829.2 50.2h0M837.5 50.2h0M845.8 50.2h0M854.2 50.2h0M862.5 50.2h0M870.8 50.2h0M879.2 50.2h0M887.5 50.2h0M895.8 50.2h0M904.2 50.2h0M912.5 50.2h0M920.8 50.2h0M929.2 50.2h0M937.5 50.2h0M945.8 50.2h0M954.2 50.2h0M962.5 50.2h0M970.8 50.2h0M979.2 50.2h0M987.5 50.2h0M995.8 50.2h0M45.8 59.3h0M54.2 59.3h0M62.5 59.3h0M70.8 59.3h0M79.2 59.3h0M87.5 59.3h0M95.8 59.3h0M104.2 59.3h0M112.5 59.3h0M120.8 59.3h0M129.2 59.3h0M137.5 59.3h0M145.8 59.3h0M154.2 59.3h0M162.5 59.3h0M170.8 59.3h0M179.2 59.3h0M187.5 59.3h0M195.8 59.3h0M204.2 59.3h0M212.5 59.3h0M220.8 59.3h0M229.2 59.3h0M237.5 59.3h0M287.5 59.3h0M295.8 59.3h0M304.2 59.3h0M379.2 59.3h0M520.8 59.3h0M529.2 59.3h0M537.5 59.3h0M545.8 59.3h0M562.5 59.3h0M570.8 59.3h0M579.2 59.3h0M587.5 59.3h0M595.8 59.3h0M604.2 59.3h0M612.5 59.3h0M620.8 59.3h0M629.2 59.3h0M637.5 59.3h0M645.8 59.3h0M654.2 59.3h0M662.5 59.3h0M670.8 59.3h0M679.2 59.3h0M687.5 59.3h0M695.8 59.3h0M704.2 59.3h0M712.5 59.3h0M720.8 59.3h0M729.2 59.3h0M737.5 59.3h0M745.8 59.3h0M754.2 59.3h0M762.5 59.3h0M770.8 59.3h0M779.2 59.3h0M787.5 59.3h0M795.8 59.3h0M804.2 59.3h0M812.5 59.3h0M820.8 59.3h0M829.2 59.3h0M837.5 59.3h0M845.8 59.3h0M854.2 59.3h0M862.5 59.3h0M870.8 59.3h0M879.2 59.3h0M887.5 59.3h0M895.8 59.3h0M904.2 59.3h0M912.5 59.3h0M920.8 59.3h0M929.2 59.3h0M954.2 59.3h0M962.5 59.3h0M970.8 59.3h0M62.5 68.5h0M70.8 68.5h0M129.2 68.5h0M137.5 68.5h0M145.8 68.5h0M154.2 68.5h0M162.5 68.5h0M170.8 68.5h0M179.2 68.5h0M187.5 68.5h0M195.8 68.5h0M204.2 68.5h0M212.5 68.5h0M220.8 68.5h0M229.2 68.5h0M237.5 68.5h0M287.5 68.5h0M295.8 68.5h0M304.2 68.5h0M312.5 68.5h0M320.8 68.5h0M487.5 68.5h0M529.2 68.5h0M537.5 68.5h0M545.8 68.5h0M562.5 68.5h0M570.8 68.5h0M579.2 68.5h0M587.5 68.5h0M595.8 68.5h0M604.2 68.5h0M612.5 68.5h0M620.8 68.5h0M629.2 68.5h0M637.5 68.5h0M645.8 68.5h0M654.2 68.5h0M662.5 68.5h0M670.8 68.5h0M679.2 68.5h0M687.5 68.5h0M695.8 68.5h0M704.2 68.5h0M712.5 68.5h0M720.8 68.5h0M729.2 68.5h0M737.5 68.5h0M745.8 68.5h0M754.2 68.5h0M762.5 68.5h0M770.8 68.5h0M779.2 68.5h0M787.5 68.5h0M795.8 68.5h0M804.2 68.5h0M812.5 68.5h0M820.8 68.5h0M829.2 68.5h0M837.5 68.5h0M845.8 68.5h0M854.2 68.5h0M862.5 68.5h0M870.8 68.5h0M879.2 68.5h0M887.5 68.5h0M937.5 68.5h0M945.8 68.5h0M137.5 77.6h0M145.8 77.6h0M154.2 77.6h0M162.5 77.6h0M170.8 77.6h0M179.2 77.6h0M187.5 77.6h0M195.8 77.6h0M204.2 77.6h0M212.5 77.6h0M220.8 77.6h0M229.2 77.6h0M237.5 77.6h0M245.8 77.6h0M254.2 77.6h0M262.5 77.6h0M270.8 77.6h0M279.2 77.6h0M287.5 77.6h0M295.8 77.6h0M304.2 77.6h0M312.5 77.6h0M320.8 77.6h0M329.2 77.6h0M337.5 77.6h0M479.2 77.6h0M495.8 77.6h0M545.8 77.6h0M562.5 77.6h0M570.8 77.6h0M579.2 77.6h0M587.5 77.6h0M595.8 77.6h0M604.2 77.6h0M612.5 77.6h0M620.8 77.6h0M629.2 77.6h0M637.5 77.6h0M645.8 77.6h0M654.2 77.6h0M662.5 77.6h0M670.8 77.6h0M679.2 77.6h0M687.5 77.6h0M695.8 77.6h0M704.2 77.6h0M712.5 77.6h0M720.8 77.6h0M729.2 77.6h0M737.5 77.6h0M745.8 77.6h0M754.2 77.6h0M762.5 77.6h0M770.8 77.6h0M779.2 77.6h0M787.5 77.6h0M795.8 77.6h0M804.2 77.6h0M812.5 77.6h0M820.8 77.6h0M829.2 77.6h0M837.5 77.6h0M845.8 77.6h0M854.2 77.6h0M862.5 77.6h0M870.8 77.6h0M879.2 77.6h0M937.5 77.6h0M945.8 77.6h0M145.8 86.7h0M154.2 86.7h0M162.5 86.7h0M170.8 86.7h0M179.2 86.7h0M187.5 86.7h0M195.8 86.7h0M204.2 86.7h0M212.5 86.7h0M220.8 86.7h0M229.2 86.7h0M237.5 86.7h0M245.8 86.7h0M254.2 86.7h0M262.5 86.7h0M270.8 86.7h0M287.5 86.7h0M295.8 86.7h0M304.2 86.7h0M312.5 86.7h0M320.8 86.7h0M329.2 86.7h0M337.5 86.7h0M345.8 86.7h0M495.8 86.7h0M512.5 86.7h0M520.8 86.7h0M529.2 86.7h0M537.5 86.7h0M545.8 86.7h0M554.2 86.7h0M562.5 86.7h0M570.8 86.7h0M579.2 86.7h0M587.5 86.7h0M595.8 86.7h0M604.2 86.7h0M612.5 86.7h0M620.8 86.7h0M629.2 86.7h0M637.5 86.7h0M645.8 86.7h0M654.2 86.7h0M662.5 86.7h0M670.8 86.7h0M679.2 86.7h0M687.5 86.7h0M695.8 86.7h0M704.2 86.7h0M712.5 86.7h0M720.8 86.7h0M729.2 86.7h0M737.5 86.7h0M745.8 86.7h0M754.2 86.7h0M762.5 86.7h0M770.8 86.7h0M779.2 86.7h0M787.5 86.7h0M795.8 86.7h0M804.2 86.7h0M812.5 86.7h0M820.8 86.7h0M829.2 86.7h0M837.5 86.7h0M845.8 86.7h0M854.2 86.7h0M862.5 86.7h0M870.8 86.7h0M879.2 86.7h0M887.5 86.7h0M895.8 86.7h0M937.5 86.7h0M162.5 95.9h0M170.8 95.9h0M179.2 95.9h0M187.5 95.9h0M195.8 95.9h0M204.2 95.9h0M212.5 95.9h0M220.8 95.9h0M229.2 95.9h0M237.5 95.9h0M245.8 95.9h0M254.2 95.9h0M262.5 95.9h0M270.8 95.9h0M279.2 95.9h0M287.5 95.9h0M295.8 95.9h0M304.2 95.9h0M312.5 95.9h0M337.5 95.9h0M345.8 95.9h0M487.5 95.9h0M495.8 95.9h0M504.2 95.9h0M512.5 95.9h0M520.8 95.9h0M529.2 95.9h0M537.5 95.9h0M545.8 95.9h0M554.2 95.9h0M562.5 95.9h0M570.8 95.9h0M579.2 95.9h0M587.5 95.9h0M595.8 95.9h0M604.2 95.9h0M612.5 95.9h0M620.8 95.9h0M629.2 95.9h0M637.5 95.9h0M645.8 95.9h0M654.2 95.9h0M662.5 95.9h0M670.8 95.9h0M679.2 95.9h0M687.5 95.9h0M695.8 95.9h0M704.2 95.9h0M712.5 95.9h0M720.8 95.9h0M729.2 95.9h0M737.5 95.9h0M745.8 95.9h0M754.2 95.9h0M762.5 95.9h0M770.8 95.9h0M779.2 95.9h0M787.5 95.9h0M795.8 95.9h0M804.2 95.9h0M812.5 95.9h0M820.8 95.9h0M829.2 95.9h0M837.5 95.9h0M845.8 95.9h0M854.2 95.9h0M862.5 95.9h0M870.8 95.9h0M879.2 95.9h0M887.5 95.9h0M895.8 95.9h0M162.5 105.0h0M170.8 105.0h0M179.2 105.0h0M187.5 105.0h0M195.8 105.0h0M204.2 105.0h0M212.5 105.0h0M220.8 105.0h0M229.2 105.0h0M237.5 105.0h0M245.8 105.0h0M254.2 105.0h0M262.5 105.0h0M270.8 105.0h0M279.2 105.0h0M287.5 105.0h0M295.8 105.0h0M304.2 105.0h0M312.5 105.0h0M320.8 105.0h0M329.2 105.0h0M504.2 105.0h0M512.5 105.0h0M520.8 105.0h0M529.2 105.0h0M545.8 105.0h0M554.2 105.0h0M562.5 105.0h0M570.8 105.0h0M579.2 105.0h0M595.8 105.0h0M604.2 105.0h0M612.5 105.0h0M620.8 105.0h0M629.2 105.0h0M654.2 105.0h0M662.5 105.0h0M670.8 105.0h0M679.2 105.0h0M687.5 105.0h0M695.8 105.0h0M704.2 105.0h0M712.5 105.0h0M720.8 105.0h0M729.2 105.0h0M737.5 105.0h0M745.8 105.0h0M754.2 105.0h0M762.5 105.0h0M770.8 105.0h0M779.2 105.0h0M787.5 105.0h0M795.8 105.0h0M804.2 105.0h0M812.5 105.0h0M820.8 105.0h0M829.2 105.0h0M837.5 105.0h0M845.8 105.0h0M854.2 105.0h0M862.5 105.0h0M870.8 105.0h0M879.2 105.0h0M162.5 114.1h0M170.8 114.1h0M179.2 114.1h0M187.5 114.1h0M195.8 114.1h0M204.2 114.1h0M212.5 114.1h0M220.8 114.1h0M229.2 114.1h0M237.5 114.1h0M245.8 114.1h0M254.2 114.1h0M262.5 114.1h0M270.8 114.1h0M279.2 114.1h0M287.5 114.1h0M295.8 114.1h0M479.2 114.1h0M487.5 114.1h0M495.8 114.1h0M504.2 114.1h0M537.5 114.1h0M554.2 114.1h0M562.5 114.1h0M570.8 114.1h0M620.8 114.1h0M629.2 114.1h0M654.2 114.1h0M662.5 114.1h0M670.8 114.1h0M679.2 114.1h0M687.5 114.1h0M695.8 114.1h0M704.2 114.1h0M712.5 114.1h0M720.8 114.1h0M729.2 114.1h0M737.5 114.1h0M745.8 114.1h0M754.2 114.1h0M762.5 114.1h0M770.8 114.1h0M779.2 114.1h0M787.5 114.1h0M795.8 114.1h0M804.2 114.1h0M812.5 114.1h0M820.8 114.1h0M829.2 114.1h0M837.5 114.1h0M845.8 114.1h0M854.2 114.1h0M862.5 114.1h0M895.8 114.1h0M162.5 123.3h0M170.8 123.3h0M179.2 123.3h0M187.5 123.3h0M195.8 123.3h0M204.2 123.3h0M212.5 123.3h0M220.8 123.3h0M229.2 123.3h0M237.5 123.3h0M245.8 123.3h0M254.2 123.3h0M262.5 123.3h0M270.8 123.3h0M279.2 123.3h0M287.5 123.3h0M479.2 123.3h0M487.5 123.3h0M495.8 123.3h0M545.8 123.3h0M562.5 123.3h0M579.2 123.3h0M587.5 123.3h0M595.8 123.3h0M604.2 123.3h0M612.5 123.3h0M620.8 123.3h0M629.2 123.3h0M654.2 123.3h0M662.5 123.3h0M670.8 123.3h0M679.2 123.3h0M687.5 123.3h0M695.8 123.3h0M704.2 123.3h0M712.5 123.3h0M720.8 123.3h0M729.2 123.3h0M737.5 123.3h0M745.8 123.3h0M754.2 123.3h0M762.5 123.3h0M770.8 123.3h0M779.2 123.3h0M787.5 123.3h0M795.8 123.3h0M804.2 123.3h0M812.5 123.3h0M820.8 123.3h0M829.2 123.3h0M854.2 123.3h0M162.5 132.4h0M170.8 132.4h0M179.2 132.4h0M187.5 132.4h0M195.8 132.4h0M204.2 132.4h0M212.5 132.4h0M220.8 132.4h0M229.2 132.4h0M237.5 132.4h0M245.8 132.4h0M254.2 132.4h0M262.5 132.4h0M270.8 132.4h0M279.2 132.4h0M287.5 132.4h0M504.2 132.4h0M512.5 132.4h0M520.8 132.4h0M529.2 132.4h0M562.5 132.4h0M604.2 132.4h0M612.5 132.4h0M620.8 132.4h0M629.2 132.4h0M637.5 132.4h0M645.8 132.4h0M654.2 132.4h0M662.5 132.4h0M670.8 132.4h0M679.2 132.4h0M687.5 132.4h0M695.8 132.4h0M704.2 132.4h0M712.5 132.4h0M720.8 132.4h0M729.2 132.4h0M737.5 132.4h0M745.8 132.4h0M754.2 132.4h0M762.5 132.4h0M770.8 132.4h0M779.2 132.4h0M787.5 132.4h0M795.8 132.4h0M804.2 132.4h0M812.5 132.4h0M820.8 132.4h0M829.2 132.4h0M854.2 132.4h0M879.2 132.4h0M887.5 132.4h0M179.2 141.5h0M187.5 141.5h0M195.8 141.5h0M204.2 141.5h0M212.5 141.5h0M220.8 141.5h0M229.2 141.5h0M237.5 141.5h0M245.8 141.5h0M254.2 141.5h0M262.5 141.5h0M270.8 141.5h0M279.2 141.5h0M479.2 141.5h0M487.5 141.5h0M495.8 141.5h0M504.2 141.5h0M512.5 141.5h0M520.8 141.5h0M529.2 141.5h0M604.2 141.5h0M612.5 141.5h0M620.8 141.5h0M629.2 141.5h0M637.5 141.5h0M645.8 141.5h0M654.2 141.5h0M662.5 141.5h0M670.8 141.5h0M679.2 141.5h0M687.5 141.5h0M695.8 141.5h0M704.2 141.5h0M712.5 141.5h0M720.8 141.5h0M729.2 141.5h0M737.5 141.5h0M745.8 141.5h0M754.2 141.5h0M762.5 141.5h0M770.8 141.5h0M779.2 141.5h0M787.5 141.5h0M795.8 141.5h0M804.2 141.5h0M812.5 141.5h0M820.8 141.5h0M829.2 141.5h0M862.5 141.5h0M870.8 141.5h0M179.2 150.7h0M187.5 150.7h0M195.8 150.7h0M204.2 150.7h0M212.5 150.7h0M220.8 150.7h0M229.2 150.7h0M237.5 150.7h0M245.8 150.7h0M254.2 150.7h0M262.5 150.7h0M270.8 150.7h0M479.2 150.7h0M487.5 150.7h0M495.8 150.7h0M504.2 150.7h0M512.5 150.7h0M520.8 150.7h0M529.2 150.7h0M537.5 150.7h0M545.8 150.7h0M562.5 150.7h0M570.8 150.7h0M579.2 150.7h0M587.5 150.7h0M595.8 150.7h0M604.2 150.7h0M612.5 150.7h0M620.8 150.7h0M629.2 150.7h0M637.5 150.7h0M645.8 150.7h0M654.2 150.7h0M662.5 150.7h0M670.8 150.7h0M679.2 150.7h0M687.5 150.7h0M695.8 150.7h0M704.2 150.7h0M712.5 150.7h0M720.8 150.7h0M729.2 150.7h0M737.5 150.7h0M745.8 150.7h0M754.2 150.7h0M762.5 150.7h0M770.8 150.7h0M779.2 150.7h0M787.5 150.7h0M795.8 150.7h0M804.2 150.7h0M812.5 150.7h0M820.8 150.7h0M829.2 150.7h0M187.5 159.8h0M195.8 159.8h0M204.2 159.8h0M212.5 159.8h0M220.8 159.8h0M229.2 159.8h0M270.8 159.8h0M470.8 159.8h0M479.2 159.8h0M487.5 159.8h0M495.8 159.8h0M504.2 159.8h0M512.5 159.8h0M520.8 159.8h0M529.2 159.8h0M537.5 159.8h0M545.8 159.8h0M554.2 159.8h0M562.5 159.8h0M570.8 159.8h0M579.2 159.8h0M587.5 159.8h0M604.2 159.8h0M612.5 159.8h0M620.8 159.8h0M629.2 159.8h0M654.2 159.8h0M662.5 159.8h0M670.8 159.8h0M679.2 159.8h0M687.5 159.8h0M695.8 159.8h0M704.2 159.8h0M712.5 159.8h0M720.8 159.8h0M729.2 159.8h0M737.5 159.8h0M745.8 159.8h0M754.2 159.8h0M762.5 159.8h0M770.8 159.8h0M779.2 159.8h0M787.5 159.8h0M795.8 159.8h0M804.2 159.8h0M812.5 159.8h0M820.8 159.8h0M829.2 159.8h0M204.2 168.9h0M212.5 168.9h0M220.8 168.9h0M462.5 168.9h0M470.8 168.9h0M479.2 168.9h0M487.5 168.9h0M495.8 168.9h0M504.2 168.9h0M512.5 168.9h0M520.8 168.9h0M529.2 168.9h0M537.5 168.9h0M545.8 168.9h0M554.2 168.9h0M562.5 168.9h0M570.8 168.9h0M579.2 168.9h0M587.5 168.9h0M595.8 168.9h0M604.2 168.9h0M612.5 168.9h0M620.8 168.9h0M629.2 168.9h0M637.5 168.9h0M654.2 168.9h0M687.5 168.9h0M695.8 168.9h0M704.2 168.9h0M712.5 168.9h0M720.8 168.9h0M729.2 168.9h0M737.5 168.9h0M745.8 168.9h0M754.2 168.9h0M762.5 168.9h0M770.8 168.9h0M779.2 168.9h0M787.5 168.9h0M795.8 168.9h0M804.2 168.9h0M812.5 168.9h0M820.8 168.9h0M829.2 168.9h0M837.5 168.9h0M212.5 178.0h0M220.8 178.0h0M229.2 178.0h0M454.2 178.0h0M462.5 178.0h0M470.8 178.0h0M479.2 178.0h0M487.5 178.0h0M495.8 178.0h0M504.2 178.0h0M512.5 178.0h0M520.8 178.0h0M529.2 178.0h0M537.5 178.0h0M545.8 178.0h0M554.2 178.0h0M562.5 178.0h0M570.8 178.0h0M579.2 178.0h0M587.5 178.0h0M595.8 178.0h0M612.5 178.0h0M620.8 178.0h0M629.2 178.0h0M637.5 178.0h0M645.8 178.0h0M654.2 178.0h0M662.5 178.0h0M695.8 178.0h0M704.2 178.0h0M712.5 178.0h0M720.8 178.0h0M729.2 178.0h0M737.5 178.0h0M762.5 178.0h0M770.8 178.0h0M779.2 178.0h0M787.5 178.0h0M795.8 178.0h0M804.2 178.0h0M212.5 187.2h0M220.8 187.2h0M229.2 187.2h0M245.8 187.2h0M254.2 187.2h0M295.8 187.2h0M304.2 187.2h0M462.5 187.2h0M470.8 187.2h0M479.2 187.2h0M487.5 187.2h0M495.8 187.2h0M504.2 187.2h0M512.5 187.2h0M520.8 187.2h0M529.2 187.2h0M537.5 187.2h0M545.8 187.2h0M554.2 187.2h0M562.5 187.2h0M570.8 187.2h0M579.2 187.2h0M587.5 187.2h0M595.8 187.2h0M604.2 187.2h0M620.8 187.2h0M629.2 187.2h0M637.5 187.2h0M645.8 187.2h0M654.2 187.2h0M704.2 187.2h0M712.5 187.2h0M720.8 187.2h0M729.2 187.2h0M762.5 187.2h0M770.8 187.2h0M779.2 187.2h0M787.5 187.2h0M804.2 187.2h0M245.8 196.3h0M254.2 196.3h0M262.5 196.3h0M454.2 196.3h0M462.5 196.3h0M470.8 196.3h0M479.2 196.3h0M487.5 196.3h0M495.8 196.3h0M504.2 196.3h0M512.5 196.3h0M520.8 196.3h0M529.2 196.3h0M537.5 196.3h0M545.8 196.3h0M554.2 196.3h0M562.5 196.3h0M570.8 196.3h0M579.2 196.3h0M587.5 196.3h0M595.8 196.3h0M604.2 196.3h0M620.8 196.3h0M629.2 196.3h0M637.5 196.3h0M712.5 196.3h0M720.8 196.3h0M779.2 196.3h0M787.5 196.3h0M795.8 196.3h0M837.5 196.3h0M262.5 205.4h0M454.2 205.4h0M462.5 205.4h0M470.8 205.4h0M479.2 205.4h0M487.5 205.4h0M495.8 205.4h0M504.2 205.4h0M512.5 205.4h0M520.8 205.4h0M529.2 205.4h0M537.5 205.4h0M545.8 205.4h0M554.2 205.4h0M562.5 205.4h0M570.8 205.4h0M579.2 205.4h0M587.5 205.4h0M595.8 205.4h0M604.2 205.4h0M612.5 205.4h0M712.5 205.4h0M720.8 205.4h0M787.5 205.4h0M795.8 205.4h0M845.8 205.4h0M270.8 214.6h0M279.2 214.6h0M295.8 214.6h0M304.2 214.6h0M312.5 214.6h0M320.8 214.6h0M329.2 214.6h0M462.5 214.6h0M470.8 214.6h0M479.2 214.6h0M487.5 214.6h0M495.8 214.6h0M504.2 214.6h0M512.5 214.6h0M520.8 214.6h0M529.2 214.6h0M537.5 214.6h0M545.8 214.6h0M554.2 214.6h0M562.5 214.6h0M570.8 214.6h0M579.2 214.6h0M587.5 214.6h0M595.8 214.6h0M604.2 214.6h0M612.5 214.6h0M620.8 214.6h0M629.2 214.6h0M637.5 214.6h0M712.5 214.6h0M829.2 214.6h0M287.5 223.7h0M295.8 223.7h0M304.2 223.7h0M312.5 223.7h0M320.8 223.7h0M329.2 223.7h0M337.5 223.7h0M470.8 223.7h0M479.2 223.7h0M487.5 223.7h0M495.8 223.7h0M504.2 223.7h0M512.5 223.7h0M520.8 223.7h0M529.2 223.7h0M537.5 223.7h0M545.8 223.7h0M554.2 223.7h0M562.5 223.7h0M570.8 223.7h0M579.2 223.7h0M587.5 223.7h0M595.8 223.7h0M604.2 223.7h0M612.5 223.7h0M620.8 223.7h0M629.2 223.7h0M779.2 223.7h0M845.8 223.7h0M287.5 232.8h0M295.8 232.8h0M304.2 232.8h0M312.5 232.8h0M320.8 232.8h0M329.2 232.8h0M337.5 232.8h0M345.8 232.8h0M354.2 232.8h0M529.2 232.8h0M537.5 232.8h0M545.8 232.8h0M554.2 232.8h0M562.5 232.8h0M570.8 232.8h0M579.2 232.8h0M587.5 232.8h0M595.8 232.8h0M604.2 232.8h0M612.5 232.8h0M620.8 232.8h0M629.2 232.8h0M770.8 232.8h0M820.8 232.8h0M279.2 242.0h0M287.5 242.0h0M295.8 242.0h0M304.2 242.0h0M312.5 242.0h0M320.8 242.0h0M329.2 242.0h0M337.5 242.0h0M345.8 242.0h0M354.2 242.0h0M529.2 242.0h0M537.5 242.0h0M545.8 242.0h0M554.2 242.0h0M562.5 242.0h0M570.8 242.0h0M579.2 242.0h0M587.5 242.0h0M595.8 242.0h0M604.2 242.0h0M612.5 242.0h0M779.2 242.0h0M804.2 242.0h0M812.5 242.0h0M820.8 242.0h0M837.5 242.0h0M279.2 251.1h0M287.5 251.1h0M295.8 251.1h0M304.2 251.1h0M312.5 251.1h0M320.8 251.1h0M329.2 251.1h0M337.5 251.1h0M345.8 251.1h0M354.2 251.1h0M362.5 251.1h0M370.8 251.1h0M379.2 251.1h0M529.2 251.1h0M537.5 251.1h0M545.8 251.1h0M554.2 251.1h0M562.5 251.1h0M570.8 251.1h0M579.2 251.1h0M587.5 251.1h0M595.8 251.1h0M604.2 251.1h0M612.5 251.1h0M787.5 251.1h0M812.5 251.1h0M820.8 251.1h0M837.5 251.1h0M870.8 251.1h0M879.2 251.1h0M887.5 251.1h0M279.2 260.2h0M287.5 260.2h0M295.8 260.2h0M304.2 260.2h0M312.5 260.2h0M320.8 260.2h0M329.2 260.2h0M337.5 260.2h0M345.8 260.2h0M354.2 260.2h0M362.5 260.2h0M370.8 260.2h0M379.2 260.2h0M387.5 260.2h0M395.8 260.2h0M537.5 260.2h0M545.8 260.2h0M554.2 260.2h0M562.5 260.2h0M570.8 260.2h0M579.2 260.2h0M587.5 260.2h0M595.8 260.2h0M604.2 260.2h0M887.5 260.2h0M895.8 260.2h0M904.2 260.2h0M912.5 260.2h0M920.8 260.2h0M287.5 269.3h0M295.8 269.3h0M304.2 269.3h0M312.5 269.3h0M320.8 269.3h0M329.2 269.3h0M337.5 269.3h0M345.8 269.3h0M354.2 269.3h0M362.5 269.3h0M370.8 269.3h0M379.2 269.3h0M387.5 269.3h0M395.8 269.3h0M537.5 269.3h0M545.8 269.3h0M554.2 269.3h0M562.5 269.3h0M570.8 269.3h0M579.2 269.3h0M587.5 269.3h0M595.8 269.3h0M604.2 269.3h0M829.2 269.3h0M895.8 269.3h0M287.5 278.5h0M295.8 278.5h0M304.2 278.5h0M312.5 278.5h0M320.8 278.5h0M329.2 278.5h0M337.5 278.5h0M345.8 278.5h0M354.2 278.5h0M362.5 278.5h0M370.8 278.5h0M379.2 278.5h0M387.5 278.5h0M395.8 278.5h0M545.8 278.5h0M554.2 278.5h0M562.5 278.5h0M570.8 278.5h0M579.2 278.5h0M587.5 278.5h0M595.8 278.5h0M604.2 278.5h0M895.8 278.5h0M295.8 287.6h0M304.2 287.6h0M312.5 287.6h0M320.8 287.6h0M329.2 287.6h0M337.5 287.6h0M345.8 287.6h0M354.2 287.6h0M362.5 287.6h0M370.8 287.6h0M379.2 287.6h0M387.5 287.6h0M537.5 287.6h0M545.8 287.6h0M554.2 287.6h0M562.5 287.6h0M570.8 287.6h0M579.2 287.6h0M587.5 287.6h0M595.8 287.6h0M604.2 287.6h0M612.5 287.6h0M637.5 287.6h0M854.2 287.6h0M862.5 287.6h0M870.8 287.6h0M895.8 287.6h0M304.2 296.7h0M312.5 296.7h0M320.8 296.7h0M329.2 296.7h0M337.5 296.7h0M345.8 296.7h0M354.2 296.7h0M362.5 296.7h0M370.8 296.7h0M379.2 296.7h0M387.5 296.7h0M537.5 296.7h0M545.8 296.7h0M554.2 296.7h0M562.5 296.7h0M570.8 296.7h0M579.2 296.7h0M587.5 296.7h0M595.8 296.7h0M604.2 296.7h0M629.2 296.7h0M845.8 296.7h0M854.2 296.7h0M862.5 296.7h0M870.8 296.7h0M879.2 296.7h0M887.5 296.7h0M895.8 296.7h0M904.2 296.7h0M995.8 296.7h0M312.5 305.9h0M320.8 305.9h0M329.2 305.9h0M337.5 305.9h0M345.8 305.9h0M354.2 305.9h0M362.5 305.9h0M370.8 305.9h0M379.2 305.9h0M387.5 305.9h0M537.5 305.9h0M545.8 305.9h0M554.2 305.9h0M562.5 305.9h0M570.8 305.9h0M579.2 305.9h0M587.5 305.9h0M595.8 305.9h0M629.2 305.9h0M829.2 305.9h0M837.5 305.9h0M845.8 305.9h0M854.2 305.9h0M862.5 305.9h0M870.8 305.9h0M879.2 305.9h0M887.5 305.9h0M895.8 305.9h0M904.2 305.9h0M912.5 305.9h0M312.5 315.0h0M320.8 315.0h0M329.2 315.0h0M337.5 315.0h0M345.8 315.0h0M354.2 315.0h0M362.5 315.0h0M370.8 315.0h0M545.8 315.0h0M554.2 315.0h0M562.5 315.0h0M570.8 315.0h0M579.2 315.0h0M587.5 315.0h0M595.8 315.0h0M629.2 315.0h0M820.8 315.0h0M829.2 315.0h0M837.5 315.0h0M845.8 315.0h0M854.2 315.0h0M862.5 315.0h0M870.8 315.0h0M879.2 315.0h0M887.5 315.0h0M895.8 315.0h0M904.2 315.0h0M912.5 315.0h0M304.2 324.1h0M312.5 324.1h0M320.8 324.1h0M329.2 324.1h0M337.5 324.1h0M345.8 324.1h0M354.2 324.1h0M362.5 324.1h0M545.8 324.1h0M554.2 324.1h0M562.5 324.1h0M570.8 324.1h0M579.2 324.1h0M587.5 324.1h0M820.8 324.1h0M829.2 324.1h0M837.5 324.1h0M845.8 324.1h0M854.2 324.1h0M862.5 324.1h0M870.8 324.1h0M879.2 324.1h0M887.5 324.1h0M895.8 324.1h0M904.2 324.1h0M912.5 324.1h0M920.8 324.1h0M304.2 333.3h0M312.5 333.3h0M320.8 333.3h0M329.2 333.3h0M337.5 333.3h0M345.8 333.3h0M354.2 333.3h0M554.2 333.3h0M562.5 333.3h0M570.8 333.3h0M579.2 333.3h0M820.8 333.3h0M829.2 333.3h0M837.5 333.3h0M845.8 333.3h0M854.2 333.3h0M862.5 333.3h0M870.8 333.3h0M879.2 333.3h0M887.5 333.3h0M895.8 333.3h0M904.2 333.3h0M912.5 333.3h0M920.8 333.3h0M304.2 342.4h0M312.5 342.4h0M320.8 342.4h0M329.2 342.4h0M337.5 342.4h0M345.8 342.4h0M354.2 342.4h0M554.2 342.4h0M562.5 342.4h0M570.8 342.4h0M579.2 342.4h0M829.2 342.4h0M837.5 342.4h0M845.8 342.4h0M879.2 342.4h0M887.5 342.4h0M895.8 342.4h0M904.2 342.4h0M912.5 342.4h0M920.8 342.4h0M304.2 351.5h0M312.5 351.5h0M320.8 351.5h0M329.2 351.5h0M337.5 351.5h0M887.5 351.5h0M895.8 351.5h0M904.2 351.5h0M912.5 351.5h0M304.2 360.7h0M312.5 360.7h0M320.8 360.7h0M329.2 360.7h0M904.2 360.7h0M987.5 360.7h0M295.8 369.8h0M304.2 369.8h0M312.5 369.8h0M904.2 369.8h0M979.2 369.8h0M987.5 369.8h0M295.8 378.9h0M304.2 378.9h0M312.5 378.9h0M970.8 378.9h0M295.8 388.0h0M304.2 388.0h0M312.5 388.0h0M295.8 397.2h0M304.2 397.2h0M295.8 406.3h0M304.2 406.3h0"
+ }
+};
