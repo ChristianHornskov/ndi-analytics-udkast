@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 140" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-label="En server sender elektriske signaler til et optisk modul, som sender dem videre som lys gennem en fiber til den næste server">
+<title>En server sender elektriske signaler til et optisk modul, som sender dem videre som lys gennem en fiber til den næste server</title><style>@media (prefers-reduced-motion:no-preference){.lys{animation:l 1.4s linear infinite}@keyframes l{to{stroke-dashoffset:-44}}}</style>
+<rect width="480" height="140" rx="12" fill="#0b141c"/>
+<g stroke="#313a4a" stroke-width="1" opacity=".45"><path d="M12 16H468"/><path d="M12 32H468"/><path d="M12 48H468"/><path d="M12 64H468"/><path d="M12 80H468"/><path d="M12 96H468"/><path d="M12 112H468"/><path d="M12 128H468"/></g>
+<g fill="none" stroke="#313a4a" stroke-width="1"><circle cx="14" cy="12" r="2"/><circle cx="21" cy="12" r="2"/><circle cx="459" cy="12" r="2"/><circle cx="466" cy="12" r="2"/><circle cx="14" cy="128" r="2"/><circle cx="21" cy="128" r="2"/><circle cx="459" cy="128" r="2"/><circle cx="466" cy="128" r="2"/></g>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+<rect x="22" y="50" width="56" height="40" rx="4" stroke="#6e9fa9" stroke-width="2"/><path d="M30 62h30M30 72h22M30 82h26" stroke="#6e9fa9" stroke-width="1"/>
+<path d="M78 70h18" stroke="#6e9fa9" stroke-width="1.5"/>
+<rect x="96" y="58" width="34" height="24" rx="3" stroke="#e6e8ed" stroke-width="1.5"/><circle cx="130" cy="70" r="3" fill="#e6e8ed" stroke="none"/>
+<path d="M133 70H347" stroke="#6e9fa9" stroke-width="2"/>
+<path class="lys" d="M136 70H344" stroke="#e6e8ed" stroke-width="3" stroke-dasharray="8 14"/>
+<rect x="350" y="58" width="34" height="24" rx="3" stroke="#e6e8ed" stroke-width="1.5"/><circle cx="350" cy="70" r="3" fill="#e6e8ed" stroke="none"/>
+<path d="M384 70h18" stroke="#6e9fa9" stroke-width="1.5"/>
+<rect x="402" y="50" width="56" height="40" rx="4" stroke="#6e9fa9" stroke-width="2"/><path d="M410 62h30M410 72h22M410 82h26" stroke="#6e9fa9" stroke-width="1"/>
+<path d="M40 104h20l2-5 4 10 4-10 4 10 2-5h4" stroke="#aebbc7" stroke-width="1"/><path d="M420 104h20l2-5 4 10 4-10 4 10 2-5h4" stroke="#aebbc7" stroke-width="1"/>
+<path d="M200 96h80" stroke="#aebbc7" stroke-width="1" stroke-dasharray="5 7"/>
+</g>
+</svg>

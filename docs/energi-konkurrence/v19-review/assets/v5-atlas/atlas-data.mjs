@@ -1,0 +1,1 @@
+export const CLUSTER_NAMES={"chips": "Chips og halvledere", "datacenter": "Datacentre", "software": "Software & AI", "raastoffer": "Råstoffer", "fysisk-ai": "Robotter & fysisk AI", "kvante": "Kvantecomputere", "space": "Rumfart", "platforme": "Platformsøkonomi", "krypto": "Krypto", "sundhed": "Sundhed og biotek", "energi": "Energi og elnet", "fintech": "Fintech"};

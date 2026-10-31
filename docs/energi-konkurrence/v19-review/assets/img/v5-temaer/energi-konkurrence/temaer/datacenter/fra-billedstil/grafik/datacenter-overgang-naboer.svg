@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 140" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Chippen sidder inde i serveren, serveren står i hallen, og hallen trækker strøm udefra">
+<title>Chippen sidder inde i serveren, serveren står i hallen, og hallen trækker strøm udefra</title><style>@media (prefers-reduced-motion:no-preference){.puls{animation:p 2s linear infinite}@keyframes p{to{stroke-dashoffset:60}}}</style>
+<rect width="480" height="140" rx="12" fill="#0b141c"/>
+<g stroke="#313a4a" stroke-width="1" opacity=".45"><path d="M12 16H468"/><path d="M12 32H468"/><path d="M12 48H468"/><path d="M12 64H468"/><path d="M12 80H468"/><path d="M12 96H468"/><path d="M12 112H468"/><path d="M12 128H468"/></g>
+<g fill="none" stroke="#313a4a" stroke-width="1"><circle cx="14" cy="12" r="2"/><circle cx="21" cy="12" r="2"/><circle cx="459" cy="12" r="2"/><circle cx="466" cy="12" r="2"/><circle cx="14" cy="128" r="2"/><circle cx="21" cy="128" r="2"/><circle cx="459" cy="128" r="2"/><circle cx="466" cy="128" r="2"/></g>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+<rect x="40" y="46" width="48" height="48" rx="4" stroke="#aebbc7" stroke-width="1.5"/><rect x="54" y="60" width="20" height="20" rx="2" stroke="#aebbc7" stroke-width="1.5"/>
+<path d="M60 46v-6M68 46v-6M60 94v6M68 94v6M40 64h-6M40 76h-6M88 64h6M88 76h6" stroke="#aebbc7" stroke-width="1"/>
+<path d="M100 70h60" stroke="#6e9fa9" stroke-width="1.5" stroke-dasharray="3 5"/>
+<path d="M176 52l64-22 64 22" stroke="#6e9fa9" stroke-width="2"/><path d="M184 50v66h112V50" stroke="#6e9fa9" stroke-width="2"/>
+<rect x="196" y="66" width="10" height="36" rx="1.5" stroke="#6e9fa9" stroke-width="1.5"/><rect x="214" y="66" width="10" height="36" rx="1.5" stroke="#6e9fa9" stroke-width="1.5"/><rect x="232" y="66" width="10" height="36" rx="1.5" stroke="#6e9fa9" stroke-width="1.5"/><rect x="250" y="66" width="10" height="36" rx="1.5" stroke="#6e9fa9" stroke-width="1.5"/><rect x="268" y="66" width="10" height="36" rx="1.5" stroke="#6e9fa9" stroke-width="1.5"/>
+<path d="M190 60h100" stroke="#e6e8ed" stroke-width="1.5"/>
+<path d="M320 70h60" stroke="#f5ee9e" stroke-width="1.5" stroke-dasharray="3 5"/>
+<path class="puls" d="M320 70h60" stroke="#f5ee9e" stroke-width="2.5" stroke-dasharray="6 54"/>
+<path d="M414 40l-16 32h14l-8 28 22-36h-14l10-24z" stroke="#f5ee9e" stroke-width="1.5"/>
+</g>
+</svg>

@@ -1,0 +1,5 @@
+.ac{position:relative;isolation:isolate}.ac canvas{display:block;pointer-events:none}.ac-cluster{position:absolute;transform:translateX(-50%);background:transparent!important;border:0!important;color:#e6e8ed;padding:0!important;min-height:44px;min-width:44px;cursor:pointer;border-radius:50%;font:inherit;overflow:visible!important}.ac-cluster:focus-visible{outline:2px solid #f5ee9e;outline-offset:8px}.ac-cluster>span,.ac-cluster>small{position:absolute;top:var(--label-top);left:50%;transform:translateX(-50%);white-space:nowrap;font-size:12px;line-height:16px;pointer-events:none}.ac-cluster>small{top:calc(var(--label-top) + 17px);color:#89aeb4;font-size:12px}
+.ac-cluster[data-ac-line="ikke-klassificeret"]>span{width:104px;white-space:normal;text-align:center}.ac-cluster[data-ac-line="ikke-klassificeret"]>small{top:calc(var(--label-top) + 48px)}
+
+
+.ac-cluster>span,.ac-cluster>small{text-shadow:0 0 2px var(--ndi-bg-raised,var(--ndi-bg,#050a0f)),0 0 5px var(--ndi-bg-raised,var(--ndi-bg,#050a0f)),0 0 9px var(--ndi-bg-raised,var(--ndi-bg,#050a0f))}

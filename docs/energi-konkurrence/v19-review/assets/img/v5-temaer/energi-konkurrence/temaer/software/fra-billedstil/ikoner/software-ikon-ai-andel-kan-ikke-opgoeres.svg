@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="AI-andelen kan ikke opgøres" style="color:#8e9cb4">
+<title>AI-andelen kan ikke opgøres</title>
+<circle cx="12" cy="12" r="9.25"/><path d="M12 2.75v9.25h9.25" stroke-dasharray="2 2.25"/>
+<path d="M9.75 15.5a2.25 2.25 0 1 1 3 2.1c-.5.2-.75.6-.75 1.1" stroke-width="1"/><circle cx="12" cy="20.25" r=".1" stroke-width="1.5"/>
+</svg>

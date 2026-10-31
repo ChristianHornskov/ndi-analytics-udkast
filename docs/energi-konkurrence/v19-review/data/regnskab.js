@@ -1,0 +1,2 @@
+ 
+window.NDI_DATA=window.NDI_DATA||{};window.NDI_DATA.regnskab={"skema":1,"kontrakt":"v18.1","kilde":"SpaceX' regnskabsmeddelelse for 3. kvartal 2026, 8-K bilag 99.1 (SEC), 20.10.2026. Mio. dollar.","segmenter":["Rumfart","Starlink","AI"],"kvartaler":[{"id":"q2","navn":"2. kvt. 2026","kort":"2. kvt.","periode":"april til juni","omsaetning":[962,4291,2561],"drift":[-542,1656,-1257],"anlaeg":[1174,1367,15828]},{"id":"q3","navn":"3. kvt. 2026","kort":"3. kvt.","periode":"juli til september","omsaetning":[1767,5248,7560],"drift":[-7,2367,431],"anlaeg":[1606,1543,16444]}]};

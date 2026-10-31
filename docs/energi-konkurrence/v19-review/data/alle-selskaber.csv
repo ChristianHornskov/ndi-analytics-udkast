@@ -1,0 +1,374 @@
+﻿Nr.;Selskab;Tema;Andel af fonden pr. 30.10.2026 (%)
+1;SpaceX;Rumfart;3,54
+2;Tesla;Robotter & fysisk AI;1,76
+3;SoftBank Group;Platformsøkonomi;1,68
+4;Samsung Electronics;Chips og halvledere;1,43
+5;Carvana;Platformsøkonomi;1,29
+6;AppLovin;Platformsøkonomi;1,15
+7;SK hynix;Chips og halvledere;1,07
+8;Sea;Platformsøkonomi;1,05
+9;Sivers Semiconductors;Datacentre;0,96
+10;Taiyo Yuden;Chips og halvledere;0,94
+11;Kioxia;Chips og halvledere;0,91
+12;Babcock & Wilcox;Energi og elnet;0,83
+13;LPKF Laser & Electronics;Chips og halvledere;0,81
+14;eToro Group;Platformsøkonomi;0,79
+15;HUBER+SUHNER;Datacentre;0,78
+16;SoundHound AI;Software & AI;0,78
+17;T1 Energy;Energi og elnet;0,76
+18;Cerebras Systems;Chips og halvledere;0,75
+19;GlobalFoundries;Chips og halvledere;0,72
+20;Ford Motor;Robotter & fysisk AI;0,7
+21;SoFi;Fintech;0,7
+22;Soitec;Chips og halvledere;0,69
+23;Tower Semiconductor;Chips og halvledere;0,67
+24;Enovix;Energi og elnet;0,66
+25;Nova;Chips og halvledere;0,66
+26;Besi;Chips og halvledere;0,64
+27;Expand Energy;Energi og elnet;0,62
+28;Klarna;Fintech;0,59
+29;Raspberry Pi;Robotter & fysisk AI;0,59
+30;Merlin;Robotter & fysisk AI;0,57
+31;Upstart;Fintech;0,56
+32;Broadcom;Chips og halvledere;0,55
+33;IQE;Chips og halvledere;0,55
+34;IREN;Datacentre;0,55
+35;Opendoor;Platformsøkonomi;0,55
+36;Oracle;Datacentre;0,55
+37;Rambus;Chips og halvledere;0,55
+38;Comstock Resources;Energi og elnet;0,54
+39;Generac;Energi og elnet;0,54
+40;MYR Group;Energi og elnet;0,54
+41;Micron Technology;Chips og halvledere;0,54
+42;SolarEdge;Energi og elnet;0,53
+43;Planet Labs;Rumfart;0,52
+44;Fluence Energy;Energi og elnet;0,51
+45;Hims & Hers Health;Sundhed og biotek;0,51
+46;POET Technologies;Datacentre;0,51
+47;TSS;Datacentre;0,51
+48;United States Antimony;Råstoffer;0,51
+49;Applied Optoelectronics;Datacentre;0,5
+50;Navitas Semiconductor;Chips og halvledere;0,5
+51;Ero Copper;Råstoffer;0,49
+52;Fabrinet;Datacentre;0,49
+53;Intuitive Machines;Rumfart;0,49
+54;AST SpaceMobile;Rumfart;0,48
+55;Joby Aviation;Robotter & fysisk AI;0,48
+56;Western Digital;Chips og halvledere;0,48
+57;Oxford Instruments;Kvantecomputere;0,47
+58;Intel;Chips og halvledere;0,46
+59;SES AI;Energi og elnet;0,46
+60;SiTime;Chips og halvledere;0,46
+61;Bitdeer Technologies Group;Krypto;0,45
+62;CleanSpark;Krypto;0,45
+63;SUSS MicroTec;Chips og halvledere;0,45
+64;Tokyo Electron;Chips og halvledere;0,45
+65;ASM International;Chips og halvledere;0,44
+66;AUTO1 Group;Platformsøkonomi;0,44
+67;Coinbase;Krypto;0,44
+68;MACOM;Datacentre;0,43
+69;QuantumScape;Energi og elnet;0,43
+70;ASMPT;Chips og halvledere;0,42
+71;BlackSky;Rumfart;0,42
+72;York Space Systems;Rumfart;0,42
+73;Power Solutions International;Energi og elnet;0,41
+74;Roblox;Platformsøkonomi;0,41
+75;Camtek;Chips og halvledere;0,4
+76;Celestica;Datacentre;0,4
+77;First Solar;Energi og elnet;0,4
+78;Huntsman;Råstoffer;0,4
+79;Lynas Rare Earths;Råstoffer;0,4
+80;MDA Space;Rumfart;0,4
+81;Shift4 Payments;Fintech;0,39
+82;Rocket Lab;Rumfart;0,38
+83;Tigo Energy;Energi og elnet;0,38
+84;Aehr Test Systems;Chips og halvledere;0,37
+85;Core Scientific;Datacentre;0,37
+86;Sunrun;Energi og elnet;0,37
+87;BioNTech;Sundhed og biotek;0,36
+88;onsemi;Chips og halvledere;0,36
+89;Aeva Technologies;Robotter & fysisk AI;0,35
+90;Amazon;Platformsøkonomi;0,35
+91;Seagate Technology;Chips og halvledere;0,35
+92;Symbotic;Robotter & fysisk AI;0,35
+93;UMC;Chips og halvledere;0,35
+94;Enphase Energy;Energi og elnet;0,34
+95;Galaxy Digital;Krypto;0,34
+96;MKS;Chips og halvledere;0,34
+97;Root;Fintech;0,34
+98;STMicroelectronics;Chips og halvledere;0,34
+99;Ballard Power Systems;Energi og elnet;0,33
+100;Lightwave Logic;Datacentre;0,33
+101;ProPetro;Energi og elnet;0,33
+102;X-FAB;Chips og halvledere;0,33
+103;Circle Internet Group;Krypto;0,32
+104;Critical Metals;Råstoffer;0,32
+105;Grab;Platformsøkonomi;0,32
+106;Himax Technologies;Chips og halvledere;0,32
+107;Palantir;Software & AI;0,32
+108;Energy Fuels;Råstoffer;0,31
+109;Lasertec;Chips og halvledere;0,31
+110;Quantum Computing;Kvantecomputere;0,31
+111;Rigaku;Chips og halvledere;0,31
+112;nLight;Datacentre;0,31
+113;Ciena;Datacentre;0,3
+114;Super Micro Computer;Datacentre;0,3
+115;ams OSRAM;Datacentre;0,3
+116;Coupang;Platformsøkonomi;0,29
+117;Lemonade;Fintech;0,29
+118;Vistra;Energi og elnet;0,29
+119;KLA;Chips og halvledere;0,28
+120;MercadoLibre;Platformsøkonomi;0,28
+121;NioCorp;Råstoffer;0,28
+122;Reddit;Platformsøkonomi;0,28
+123;Riot Platforms;Krypto;0,28
+124;Cipher Digital;Datacentre;0,27
+125;First Majestic Silver;Råstoffer;0,27
+126;Redwire;Rumfart;0,27
+127;Unity Software;Software & AI;0,27
+128;Celanese;Råstoffer;0,26
+129;Eli Lilly;Sundhed og biotek;0,26
+130;Fermi;Datacentre;0,26
+131;Firefly Aerospace;Rumfart;0,26
+132;Gemini Space Station;Krypto;0,26
+133;NVIDIA;Chips og halvledere;0,26
+134;Pan American Silver;Råstoffer;0,26
+135;Sumitomo Electric Industries;Datacentre;0,26
+136;Antero Resources;Energi og elnet;0,25
+137;Centrus Energy;Energi og elnet;0,25
+138;Corning;Datacentre;0,25
+139;ERock;Energi og elnet;0,25
+140;Rolls-Royce;Energi og elnet;0,25
+141;Talen Energy;Energi og elnet;0,25
+142;Chemours;Råstoffer;0,24
+143;Credo;Datacentre;0,24
+144;Hecla Mining;Råstoffer;0,24
+145;HelloFresh;Platformsøkonomi;0,24
+146;Jacobs Solutions;Datacentre;0,24
+147;Kinder Morgan;Energi og elnet;0,24
+148;Onto Innovation;Chips og halvledere;0,24
+149;Pony AI;Robotter & fysisk AI;0,24
+150;Quantinuum;Kvantecomputere;0,24
+151;ASP Isotopes;Energi og elnet;0,23
+152;Ambiq Micro;Chips og halvledere;0,23
+153;Chime Financial;Fintech;0,23
+154;Coeur Mining;Råstoffer;0,23
+155;Coherent;Datacentre;0,23
+156;Freeport-McMoRan;Råstoffer;0,23
+157;Lumen;Datacentre;0,23
+158;Lumentum;Datacentre;0,23
+159;Nextracker;Energi og elnet;0,23
+160;Renesas Electronics;Chips og halvledere;0,23
+161;Solid Power;Energi og elnet;0,23
+162;Webull;Fintech;0,23
+163;Archer Aviation;Robotter & fysisk AI;0,22
+164;CoreWeave;Datacentre;0,22
+165;Innodata;Software & AI;0,22
+166;Keel Infrastructure;Krypto;0,22
+167;NextEra Energy;Energi og elnet;0,22
+168;Nu;Fintech;0,22
+169;Shelly;Robotter & fysisk AI;0,22
+170;Shoals Technologies;Energi og elnet;0,22
+171;WhiteFiber;Datacentre;0,22
+172;Ondas Holdings;Robotter & fysisk AI;0,21
+173;Satellogic;Rumfart;0,21
+174;Vista Energy;Energi og elnet;0,21
+175;Aixtron;Chips og halvledere;0,2
+176;Bloom Energy;Energi og elnet;0,2
+177;MP Materials;Råstoffer;0,2
+178;Starfighters Space;Rumfart;0,2
+179;Sterling Infrastructure;Datacentre;0,2
+180;Advantest;Chips og halvledere;0,19
+181;Amprius Technologies;Energi og elnet;0,19
+182;Capstone Copper;Råstoffer;0,19
+183;D-Wave Quantum;Kvantecomputere;0,19
+184;DTE Energy;Energi og elnet;0,19
+185;GE Vernova;Energi og elnet;0,19
+186;Hyperliquid Strategies;Krypto;0,19
+187;IPG Photonics;Datacentre;0,19
+188;MicroVision;Robotter & fysisk AI;0,19
+189;Nebius;Datacentre;0,19
+190;SanDisk;Chips og halvledere;0,19
+191;SharonAI;Datacentre;0,19
+192;Spire Global;Rumfart;0,19
+193;Uber;Platformsøkonomi;0,19
+194;Albemarle;Råstoffer;0,18
+195;American Electric Power;Energi og elnet;0,18
+196;Arkema;Råstoffer;0,18
+197;Array Technologies;Energi og elnet;0,18
+198;BWX Technologies;Energi og elnet;0,18
+199;CMS Energy;Energi og elnet;0,18
+200;Canadian Solar;Energi og elnet;0,18
+201;FirstEnergy;Energi og elnet;0,18
+202;Intellia Therapeutics;Sundhed og biotek;0,18
+203;International Workplace Group;Platformsøkonomi;0,18
+204;Kulicke & Soffa;Chips og halvledere;0,18
+205;Navan;Software & AI;0,18
+206;One Stop Systems;Datacentre;0,18
+207;Rigetti Computing;Kvantecomputere;0,18
+208;Sigma Lithium;Råstoffer;0,18
+209;Southern Company;Energi og elnet;0,18
+210;Veeco Instruments;Chips og halvledere;0,18
+211;AXT;Chips og halvledere;0,17
+212;American Resources;Råstoffer;0,17
+213;Chewy;Platformsøkonomi;0,17
+214;Nano Nuclear Energy;Energi og elnet;0,17
+215;Robinhood;Fintech;0,17
+216;Silicon Motion;Chips og halvledere;0,17
+217;Unusual Machines;Robotter & fysisk AI;0,17
+218;Voyager Technologies;Rumfart;0,17
+219;EQT;Energi og elnet;0,16
+220;Quanta Services;Energi og elnet;0,16
+221;Oklo;Energi og elnet;0,15
+222;Range Resources;Energi og elnet;0,15
+223;Swarmer;Robotter & fysisk AI;0,15
+224;Viavi Solutions;Datacentre;0,15
+225;Atlas Energy Solutions;Energi og elnet;0,14
+226;Flex;Datacentre;0,14
+227;Idaho Strategic Resources;Råstoffer;0,14
+228;Infineon Technologies;Chips og halvledere;0,14
+229;Infleqtion;Kvantecomputere;0,14
+230;Kodiak AI;Robotter & fysisk AI;0,14
+231;Prosus;Platformsøkonomi;0,14
+232;Aeluma;Chips og halvledere;0,13
+233;Bit Digital;Krypto;0,13
+234;Eos Energy;Energi og elnet;0,13
+235;ITT;Energi og elnet;0,13
+236;Kokusai Electric;Chips og halvledere;0,13
+237;Meituan;Platformsøkonomi;0,13
+238;Netflix;Platformsøkonomi;0,13
+239;Ouster;Robotter & fysisk AI;0,13
+240;Primoris Services;Energi og elnet;0,13
+241;Solstice Advanced Materials;Råstoffer;0,13
+242;Southern Copper;Råstoffer;0,13
+243;Tempus AI;Sundhed og biotek;0,13
+244;WeRide;Robotter & fysisk AI;0,13
+245;Bitmine Immersion Technologies;Krypto;0,12
+246;Entegris;Chips og halvledere;0,12
+247;HawkEye 360;Rumfart;0,12
+248;Howmet Aerospace;Rumfart;0,12
+249;Li Auto;Robotter & fysisk AI;0,12
+250;Lightbridge;Energi og elnet;0,12
+251;Monolithic Power Systems;Chips og halvledere;0,12
+252;Tantalus Systems;Energi og elnet;0,12
+253;Wolfspeed;Chips og halvledere;0,12
+254;American Battery Technology;Råstoffer;0,11
+255;Bachem;Sundhed og biotek;0,11
+256;Clearway Energy;Energi og elnet;0,11
+257;Electrovaya;Energi og elnet;0,11
+258;Fluor;Energi og elnet;0,11
+259;General Motors;Robotter & fysisk AI;0,11
+260;Lithium Americas;Råstoffer;0,11
+261;Microsoft;Datacentre;0,11
+262;Mirion Technologies;Energi og elnet;0,11
+263;Newmont;Råstoffer;0,11
+264;Nordic Semiconductor;Chips og halvledere;0,11
+265;Plug Power;Energi og elnet;0,11
+266;Semtech;Datacentre;0,11
+267;Serve Robotics;Robotter & fysisk AI;0,11
+268;Solaris Energy Infrastructure;Energi og elnet;0,11
+269;Standard Lithium;Råstoffer;0,11
+270;ACM Research;Chips og halvledere;0,1
+271;Alpha and Omega Semiconductor;Chips og halvledere;0,1
+272;Amkor Technology;Chips og halvledere;0,1
+273;CSLM Digital Asset Acquisition Corp III;Krypto;0,1
+274;IonQ;Kvantecomputere;0,1
+275;Microvast;Energi og elnet;0,1
+276;NuScale Power;Energi og elnet;0,1
+277;USA Rare Earth;Råstoffer;0,1
+278;ASML;Chips og halvledere;0,09
+279;Almonty Industries;Råstoffer;0,09
+280;CRISPR Therapeutics;Sundhed og biotek;0,09
+281;Cisco Systems;Datacentre;0,09
+282;Figure Technology Solutions;Fintech;0,09
+283;Flowserve;Energi og elnet;0,09
+284;Horizon Robotics;Robotter & fysisk AI;0,09
+285;Keysight Technologies;Datacentre;0,09
+286;Kraken Robotics;Robotter & fysisk AI;0,09
+287;Lam Research;Chips og halvledere;0,09
+288;MaxLinear;Chips og halvledere;0,09
+289;Omada Health;Sundhed og biotek;0,09
+290;Perpetua Resources;Råstoffer;0,09
+291;Synopsys;Chips og halvledere;0,09
+292;TeraWulf;Datacentre;0,09
+293;Terrestrial Energy;Energi og elnet;0,09
+294;Trekor Metals;Råstoffer;0,09
+295;Analog Devices;Chips og halvledere;0,08
+296;Bullish;Krypto;0,08
+297;Cohu;Chips og halvledere;0,08
+298;Marvell Technology;Chips og halvledere;0,08
+299;Sharplink;Krypto;0,08
+300;Strategy;Krypto;0,08
+301;Texas Instruments;Chips og halvledere;0,08
+302;Upexi;Krypto;0,08
+303;Allegro.eu;Platformsøkonomi;0,07
+304;Ambarella;Chips og halvledere;0,07
+305;Amphenol;Datacentre;0,07
+306;Astera Labs;Datacentre;0,07
+307;Aurora Innovation;Robotter & fysisk AI;0,07
+308;Canadian Natural Resources;Energi og elnet;0,07
+309;Caterpillar;Energi og elnet;0,07
+310;Churchill Capital;Robotter & fysisk AI;0,07
+311;Comfort Systems USA;Datacentre;0,07
+312;DoorDash;Platformsøkonomi;0,07
+313;Global-e;Fintech;0,07
+314;Jabil;Datacentre;0,07
+315;Microchip Technology;Chips og halvledere;0,07
+316;Snowflake;Software & AI;0,07
+317;The Metals Company;Råstoffer;0,07
+318;WEBTOON Entertainment;Platformsøkonomi;0,07
+319;Wix.com;Software & AI;0,07
+320;Affirm;Fintech;0,06
+321;Cadence Design Systems;Chips og halvledere;0,06
+322;Cummins;Energi og elnet;0,06
+323;FormFactor;Chips og halvledere;0,06
+324;Futu;Fintech;0,06
+325;Kaspi.kz;Fintech;0,06
+326;Spotify;Platformsøkonomi;0,06
+327;Terex;Energi og elnet;0,06
+328;Trilogy Metals;Råstoffer;0,06
+329;Applied Digital;Datacentre;0,05
+330;Applied Materials;Chips og halvledere;0,05
+331;Ategrity Specialty Holdings;Fintech;0,05
+332;Coursera;Platformsøkonomi;0,05
+333;DeFi Development;Krypto;0,05
+334;FuboTV;Platformsøkonomi;0,05
+335;Ivanhoe Electric;Råstoffer;0,05
+336;Karman Space & Defense;Rumfart;0,05
+337;LifeMD;Sundhed og biotek;0,05
+338;MNTN;Platformsøkonomi;0,05
+339;Neo Performance Materials;Råstoffer;0,05
+340;PDD Holdings;Platformsøkonomi;0,05
+341;Terra Innovatum;Energi og elnet;0,05
+342;AMD;Chips og halvledere;0,04
+343;Alibaba Group;Platformsøkonomi;0,04
+344;Dell;Datacentre;0,04
+345;Figma;Software & AI;0,04
+346;Lattice Semiconductor;Chips og halvledere;0,04
+347;Meta Platforms;Platformsøkonomi;0,04
+348;Northern Dynasty Minerals;Råstoffer;0,04
+349;Palo Alto Networks;Software & AI;0,04
+350;Rivian Automotive;Robotter & fysisk AI;0,04
+351;Rubrik;Software & AI;0,04
+352;Sanmina;Datacentre;0,04
+353;TSMC;Chips og halvledere;0,04
+354;Zeta Global Holdings;Platformsøkonomi;0,04
+355;Airo Group;Robotter & fysisk AI;0,03
+356;Arista Networks;Datacentre;0,03
+357;Axcelis Technologies;Chips og halvledere;0,03
+358;Cloudflare;Software & AI;0,03
+359;Hinge Health;Sundhed og biotek;0,03
+360;Lantronix;Robotter & fysisk AI;0,03
+361;Pagaya Technologies;Fintech;0,03
+362;Samsara;Software & AI;0,03
+363;Teradyne;Chips og halvledere;0,03
+364;dLocal;Fintech;0,03
+365;Iridium Communications;Rumfart;0,02
+366;NeoVolta;Energi og elnet;0,02
+367;Netskope;Software & AI;0,02
+368;Oscar Health;Sundhed og biotek;0,02
+369;AbCellera Biologics;Sundhed og biotek;0,01
+370;Apple;Platformsøkonomi;0,01
+371;Blaize;Chips og halvledere;0,01
+372;CrowdStrike;Software & AI;0,01
+373;SailPoint;Software & AI;0,01

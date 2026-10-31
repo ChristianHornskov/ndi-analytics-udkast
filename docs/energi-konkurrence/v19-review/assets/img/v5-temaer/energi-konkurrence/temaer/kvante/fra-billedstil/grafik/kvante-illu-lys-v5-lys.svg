@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 160" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Lys: hver qubit er en enkelt lyspartikel, der løber gennem en lysleder">
+<title>Lys: hver qubit er en enkelt lyspartikel, der løber gennem en lysleder</title><style>@media (prefers-reduced-motion:no-preference){.ph{animation:ph 1.5s ease-in-out infinite alternate}.p1{animation-delay:.5s}.p2{animation-delay:1s}@keyframes ph{from{opacity:.3}to{opacity:1}}}</style>
+<rect width="240" height="160" rx="12" fill="#E8EAED"/><g fill="none" stroke="#B6C0D2" stroke-width="1" stroke-linecap="round"><path d="M10 148H26C34 148 38 140 46 140H52M26 148H52"/><path d="M12 145v6"/><path d="M18 145v6"/><path d="M24 145v6"/><path d="M226 8v18" stroke-dasharray="2 3"/></g>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M20 110C70 110 80 50 130 50S190 90 222 90" stroke="#B6C0D2" stroke-width="10"/><path d="M20 110C70 110 80 50 130 50S190 90 222 90" stroke="#E8EAED" stroke-width="6"/><circle cx="60" cy="98" r="4" fill="#5A4F74" class="ph p0"/><circle cx="60" cy="98" r="9" fill="#5A4F74" opacity=".18"/><circle cx="128" cy="50" r="4" fill="#5A4F74" class="ph p1"/><circle cx="128" cy="50" r="9" fill="#5A4F74" opacity=".18"/><circle cx="196" cy="84" r="4" fill="#5A4F74" class="ph p2"/><circle cx="196" cy="84" r="9" fill="#5A4F74" opacity=".18"/>
+</g>
+</svg>

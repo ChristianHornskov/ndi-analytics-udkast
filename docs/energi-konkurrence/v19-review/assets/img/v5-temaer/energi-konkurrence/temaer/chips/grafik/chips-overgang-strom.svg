@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 120" width="480" height="120" fill="none" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Chippen skal have strøm"><title>Chippen skal have strøm</title>
+<style>@media (prefers-reduced-motion:no-preference){.flow{stroke-dasharray:6 10;animation:f 1.6s linear infinite}@keyframes f{to{stroke-dashoffset:-32}}}</style>
+<g stroke="#313a4a" stroke-width="1" opacity=".6"><path d="M24 6v108"/><path d="M48 6v108"/><path d="M72 6v108"/><path d="M96 6v108"/><path d="M120 6v108"/><path d="M144 6v108"/><path d="M168 6v108"/><path d="M192 6v108"/><path d="M216 6v108"/><path d="M240 6v108"/><path d="M264 6v108"/><path d="M288 6v108"/><path d="M312 6v108"/><path d="M336 6v108"/><path d="M360 6v108"/><path d="M384 6v108"/><path d="M408 6v108"/><path d="M432 6v108"/><path d="M456 6v108"/></g>
+<rect x="40" y="30" width="80" height="60" rx="6" stroke="#89aeb4" stroke-width="2"/>
+<g stroke="#89aeb4" stroke-width="1.5"><path d="M52 30v-8M52 90v8"/><path d="M64 30v-8M64 90v8"/><path d="M76 30v-8M76 90v8"/><path d="M88 30v-8M88 90v8"/><path d="M100 30v-8M100 90v8"/></g>
+<g fill="#89aeb4"><rect x="54" y="44" width="9" height="9" rx="1.5" opacity=".55"/><rect x="54" y="60" width="9" height="9" rx="1.5" opacity=".55"/><rect x="68" y="44" width="9" height="9" rx="1.5" opacity=".55"/><rect x="68" y="60" width="9" height="9" rx="1.5" opacity=".55"/><rect x="82" y="44" width="9" height="9" rx="1.5" opacity=".55"/><rect x="82" y="60" width="9" height="9" rx="1.5" opacity=".55"/><rect x="96" y="44" width="9" height="9" rx="1.5" opacity=".55"/><rect x="96" y="60" width="9" height="9" rx="1.5" opacity=".55"/></g>
+<g stroke="#89aeb4" stroke-width="2"><path d="M120 50h90l20 20h140"/><path d="M120 70h70l20 20h100l30-20" opacity=".55"/></g>
+<path class="flow" d="M120 50h90l20 20h140" stroke="#f5ee9e" stroke-width="2"/>
+<circle cx="404" cy="70" r="30" stroke="#f5ee9e" stroke-width="2"/>
+<path d="M410 52l-14 20h10l-6 16 18-22h-10l6-14z" stroke="#f5ee9e" stroke-width="2"/>
+</svg>
