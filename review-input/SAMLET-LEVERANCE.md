@@ -13,7 +13,7 @@ Tilladte statusser: mangler; under arbejde; verificeret færdigt; afventer Chris
 |---|---|---|---|
 | U01 | Widget med eksisterende foretrukket graf, kalender, klasseskift og kopierbar ISIN | verificeret færdigt | Begge klasser og begge ISIN-kopieringer browserkontrolleret. Desktopkalender og lodret mobilkalender; periodevalg1år/sidenstart og mobilgraf verificeret. Kontotyper fremhævet efter Christians seneste ønske; overlever klasseskift. |
 | U02 | To visuelle indgange med korrekt destination: porteføljeanalyse og tech | verificeret færdigt | Christian godkendte viste illustration med tre selskaber/vægte. Begge href kontrolleret og sider åbnet under brugerrejsekontrol. |
-| U03 | Fordybelsesdata kun PMINDI | under arbejde | portfolio.js fastholder selected=0; kontrollér øvrige indgange. |
+| U03 | Fordybelsesdata kun PMINDI | verificeret færdigt | Udvidet test af alle tema-/selskabssider: ingen klasseskifter eller review-funds. dagens-tal.fond.id er PMINDI; originaldata byteidentiske. Porteføljen fastholder PMINDI. |
 | U04 | Porteføljeoverblik før selskabsliste; grafisk top | verificeret færdigt | f0f2df6; 390/1280 px browserkontrol, PMINDI-serie bevaret. |
 | U05 | Mobilkort/desktop-tabel, seks perioder, rød/grøn, sortering, kort historik | verificeret færdigt | f0f2df6; browser: Tesla, tom søgning, begge sorteringsretninger, kursdato og links. |
 | U06 | Ét felt pr. sektor, oprindelig 52-ugers-farveskala, mobilbjælker | verificeret færdigt | 2d10201/f0f2df6; Christian godkendte kombination; diagramfilter kontrolleret. |
@@ -22,18 +22,18 @@ Tilladte statusser: mangler; under arbejde; verificeret færdigt; afventer Chris
 | U09 | Grafisk klasse/udlodning og forklarende geografi/metode | verificeret færdigt | f0f2df6/225c798; to bekræftede udlodninger, responsiv graf og dataproces; ingen falsk automatisk freshness. |
 | U10 | Tech: tæt menu med 12 temaer, forbindelsesdiagram og forklaring | verificeret færdigt | Tech desktop og mobil390: alle 12 temaer i menuen, mobilklikmål 44 px, aktiv sektionsmarkør og lukning efter ankerklik. Prikdiagram Chips åbner chips.html; forklaringen står før diagrammet. |
 | U11 | AI-telefonens zoom og spørgsmål som én sammenhængende scene | verificeret færdigt | Direkte tryk på illustrationen skifter 1 til 2 med zoom og tekst; mobil direkte lagvalg til 6 giver strømforklaring og korrekt slutlink. Tekst og billede i samme scene. |
-| U12 | SpaceX: interaktiv raket/Starlink, billeder/videoer, historie og regnskabstal | under arbejde | Tidligere implementeret; afstem hver seneste brugerrettelse med den renderede side. |
-| U13 | Chips: ingen følgelampe, hoverlys, forståelig selskabsoversigt, rigtige X-opslag | under arbejde | Chipkæde og oprydning findes; slutkontrollér alle interaktioner. |
-| U14 | Medier: thumbnails, to synlige med mulighed for flere, relevante Mads-videoer/X | under arbejde | 56 sider/98 YouTube/9 Instagram/26 X integrationer registreret; 5 runtime-tests. Kontrollér faktisk udvalg og synlige embeds på stikprøver. |
-| U15 | Hele aftalte brugerrejse på 390/desktop, lyst/mørkt hvor understøttet | mangler | Dokumentér sider og interaktioner; ingen påstand om fysisk Safari/Wix-test. |
-| U16 | Reproducerbart build, tests, scoped commits/push, tilgængeligt reviewlink | under arbejde | 20 tests og5 medietests bestået. Seneste kodepush97a8759; ny navigationsrettelse består20 tests. Slutkontrol og reviewlink udestår. |
+| U12 | SpaceX: interaktiv raket/Starlink, billeder/videoer, historie og regnskabstal | verificeret færdigt | Se SLUTKONTROL-20261031.md: raket/Starlink/AI,2015-milepæl, film, regnskabskort, Mads-X og læsbar historie kontrolleret. Desktop/mobil uden vandret overflow. |
+| U13 | Chips: ingen følgelampe, hoverlys, forståelig selskabsoversigt, rigtige X-opslag | verificeret færdigt | Chipkæde mobil/desktop, ingen lampenode, valgte søjler og paneler. NVIDIA-søgning/Regner-filter og hukommelsesgenvej testet. Faktisk X-opslag indlæst. Se slutkontrol. |
+| U14 | Medier: thumbnails, to synlige med mulighed for flere, relevante Mads-videoer/X | verificeret færdigt | Thumbnails, to-synlige-regel og udfoldning testet. SpaceX-video og faktiske Mads-X samt chipnyhed-X browserverificeret.20 tests/5 medietests; eksterne platformbegrænsninger dokumenteret. |
+| U15 | Hele aftalte brugerrejse på 390/desktop, lyst/mørkt hvor understøttet | verificeret færdigt | Aftalte brugerrejser og ændrede komponenter kontrolleret; sider, lys/mørk, mobil/desktop og præcise stikprøvebegrænsninger dokumenteret i SLUTKONTROL-20261031.md. |
+| U16 | Reproducerbart build, tests, scoped commits/push, tilgængeligt reviewlink | verificeret færdigt | Build gennemført;20 tests bestået efter sidste ændring;5 medietests tidligere bestået efter medieændring. Kodepush e718952, afsluttende dokumentation i samme reviewgren. Lokal reviewindgang åbnet og verificeret; ingen ny offentlig hosting. Se SLUTKONTROL-20261031.md. |
 
 ## Groks sektioner tænkt forfra — begge TOP10-lister
 D=Designbygger, C=Critiquito. Kilder under ../design-review-read/codex-overdragelse-20261031/06-designforslag/sektioner-gentaenkt/. Alle 20 forslag er repræsenteret her, også dubletter. Manglende statusbevis betyder ikke, at implementeringen nødvendigvis mangler.
 
 | ID/kilder | Forslag | Status | Næste handling |
 |---|---|---|---|
-| S01 D1 | Tre ting om chips: kæde/cyklus/afhængigheder | under arbejde | Sammenhold nuværende løsning med forslag og Christians ønske om reel visuel forklaring. |
+| S01 D1 | Tre ting om chips: kæde/cyklus/afhængigheder | verificeret færdigt | Tre visuelle sammenhænge implementeret i chips_directory.py: eksisterende38/75-tal, cyklus og Taiwan/eksportregler. Desktop/mobil læst; hukommelsesgenvej giver9 selskaber. Ingen erstatning af X-opslag. |
 | S02 D2 | Vigtig information | fravalgt med Christians godkendelse | Christian har udskudt compliancegennemgangen. Ikke et permanent designfravalg; uden for denne omgang. |
 | S03 D3 C2 | Kvante: omsætning, tilsagn og udbetaling | verificeret færdigt | Omsætningsbjælker læser de seks beløb fra eksisterende kildetekst; tre støttefaser skelner hensigt, tilsagn og ukendt udbetaling. Mobil390 mørkt og desktop lyst/mørkt kontrolleret. Originalkilder bevaret. |
 | S04 D4 C5 | Krypto-overlap/Venn | verificeret færdigt | section_visuals.py: tre overlappende temaer, to læsbare forbindelser og klassifikation bevaret. Desktop lyst/mørkt og mobil390 lyst; foldbare originaloplysninger åbnet. To forkerte dynamiske temalinks rettet. |

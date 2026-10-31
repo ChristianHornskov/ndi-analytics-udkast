@@ -67,3 +67,8 @@ Læs SAMLET-LEVERANCE.md før næste handling. Denne fil erstatter ikke tidliger
 - Brugerens seneste usageoplysning er14%; ingen nye redesigns, resterende kontrol og dokumenteret aflevering prioriteres.
 
 - S08: Christian valgte kompakt klassevælger efter billedsammenligning. Opfølgende ønskede han fremhævede kontotyper; eksisterende ord nu diskret gule/fede, øvrig tekst uændret. Browsermobil og klasseskift verificeret (en efterrender-overskrivning blev opdaget og rettet). U01 og F09 nu verificeret.
+
+## Afsluttende reviewkontrol
+- Alle42 stabile U/S/F-rækker er afstemt med kode, test, browserbevis og brugerbeslutninger. De22 porteføljeforslag og Claude-underregistret er medtaget.
+- Udvidet PMINDI-test dækker alle tema-/selskabssider;20 tests bestået. Fuld kontroloversigt og begrænsninger: SLUTKONTROL-20261031.md.
+- Reviewindgangen er åbnet på http://127.0.0.1:8880/widget/index.html. Det er lokal preview, ikke et nyt offentligt link. Wix/main/Azure er urørt.

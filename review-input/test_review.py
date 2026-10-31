@@ -93,9 +93,11 @@ class ReviewTests(unittest.TestCase):
         self.assertEqual(animated,21)
 
     def test_only_widget_loads_fund_selection(self):
-        for name in ['index.html','tech.html','selskaber/spacex.html']:
-            tree=html.parse(str(DEST/name))
+        pages=[DEST/'index.html',DEST/'tech.html',*list((DEST/'temaer').glob('*.html')),*list((DEST/'selskaber').glob('*.html'))]
+        for page in pages:
+            tree=html.parse(str(page))
             self.assertFalse(tree.xpath('//script[contains(@src,"review-funds")]'))
+        self.assertEqual(json.loads((DEST/'data/dagens-tal.json').read_text(encoding='utf-8'))['fond']['id'],'PMINDI')
         self.assertEqual((DEST/'data/dagens-tal.json').read_bytes(),(SOURCE/'data/dagens-tal.json').read_bytes())
     def test_accumulating_class_history(self):
         data=json.loads((DEST/'data/review-funds.js').read_text(encoding='utf-8').removeprefix('window.REVIEW_FUNDS=').removesuffix(';'))

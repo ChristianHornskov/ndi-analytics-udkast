@@ -20,4 +20,4 @@ Andre Grok-forslag er fortsat til vurdering. Ingen anbefaling om at beholde en g
 ## Kontrol
 19 automatiske tests og 5 runtime-tests for medier bestået. Browserkontroller omfatter mobilkalenderens klasseskift, 52-ugersintervallets selskabsfilter, nedtursgraf, fasevalg, fysisk AI's selskabspanel, eToro/SoFi-genafspilning, Tesla-omsætning, krypto og rumfart. SpaceX kontrolleret for mobiloverløb og bevarede sektioner. Krypto og fasegraf kontrolleret i lyst desktoptema; flere øvrige i mørkt tema.
 
-Begrænsninger: Ingen test på fysisk iPhone/Safari eller inde i Wix. Ingen ny samlet faktakontrol af eksisterende indhold. Porteføljeknappens nye illustration er et reviewforslag til Christian, ikke en endeligt godkendt retning.
+Begrænsninger: Ingen test på fysisk iPhone/Safari eller inde i Wix. Ingen ny samlet faktakontrol af eksisterende indhold. Porteføljeknappens illustration er efterfølgende godkendt af Christian. Seneste samlede kontrol findes i SLUTKONTROL-20261031.md.
