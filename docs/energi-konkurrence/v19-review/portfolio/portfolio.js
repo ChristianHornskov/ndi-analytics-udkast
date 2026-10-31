@@ -11,6 +11,23 @@
   const menu=document.createElement('nav');menu.id='analysis-nav';menu.setAttribute('aria-label','Porteføljeanalyse');
   menu.innerHTML='<a href="#analysis-dashboard">Overblik</a><a href="#preview-risk-summary">Risiko i tal</a><a href="#highs">Afstand til toppen</a><a href="#portfolio">Fordeling & selskaber</a><a href="#risk">Nedture & afkast</a><a href="#method">Datagrundlag</a>';
   intro.after(menu);
+  const sectionLinks=[...menu.querySelectorAll('a')];
+  function markSection(){
+    const threshold=menu.getBoundingClientRect().height+28;
+    let current=sectionLinks[0];
+    for(const link of sectionLinks){
+      const target=document.querySelector(link.hash);
+      if(target&&target.getBoundingClientRect().top<=threshold)current=link;
+    }
+    for(const link of sectionLinks){
+      if(link===current)link.setAttribute('aria-current','location');
+      else link.removeAttribute('aria-current');
+    }
+  }
+  let navFrame=0;
+  window.addEventListener('scroll',()=>{if(!navFrame)navFrame=requestAnimationFrame(()=>{navFrame=0;markSection();});},{passive:true});
+  window.addEventListener('resize',markSection);
+  requestAnimationFrame(markSection);
   const dashboard=document.createElement('section');dashboard.id='analysis-dashboard';dashboard.className='analysis-dashboard';menu.after(dashboard);
   const bridge=document.createElement('a');bridge.href='../tech.html';bridge.className='analysis-tech-bridge';
   bridge.innerHTML='<div><span class="eyebrow">FORSTÅ SELSKABERNE BAG TALLENE</span><h2>Teknologi går på tværs af sektorer</h2><p>En chip, et datacenter og elnettet kan ligge i hver sin sektor — men være afhængige af hinanden. Gå på opdagelse i de 12 temaer og se forbindelserne.</p><strong>Gå på opdagelse i tech <span aria-hidden="true">→</span></strong></div><img src="../assets/img/v5-fotos/chips-siliciumwafer.webp" alt="" loading="lazy">';

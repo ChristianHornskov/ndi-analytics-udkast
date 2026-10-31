@@ -12,7 +12,7 @@ Tilladte statusser: mangler; under arbejde; verificeret færdigt; afventer Chris
 | ID | Krav | Status | Bevis eller næste handling |
 |---|---|---|---|
 | U01 | Widget med eksisterende foretrukket graf, kalender, klasseskift og kopierbar ISIN | under arbejde | Klasseskift tidligere browserkontrolleret; samlet slutkontrol af begge klasser og ISIN udestår. |
-| U02 | To visuelle indgange med korrekt destination: porteføljeanalyse og tech | under arbejde | Widgetgrafik findes; kontrollér ruter og sammenhæng. Porteføljeillustration kræver Christians visuelle vurdering før endelig accept. |
+| U02 | To visuelle indgange med korrekt destination: porteføljeanalyse og tech | verificeret færdigt | Christian godkendte viste illustration med tre selskaber/vægte. Begge href kontrolleret og sider åbnet under brugerrejsekontrol. |
 | U03 | Fordybelsesdata kun PMINDI | under arbejde | portfolio.js fastholder selected=0; kontrollér øvrige indgange. |
 | U04 | Porteføljeoverblik før selskabsliste; grafisk top | verificeret færdigt | f0f2df6; 390/1280 px browserkontrol, PMINDI-serie bevaret. |
 | U05 | Mobilkort/desktop-tabel, seks perioder, rød/grøn, sortering, kort historik | verificeret færdigt | f0f2df6; browser: Tesla, tom søgning, begge sorteringsretninger, kursdato og links. |
@@ -26,7 +26,7 @@ Tilladte statusser: mangler; under arbejde; verificeret færdigt; afventer Chris
 | U13 | Chips: ingen følgelampe, hoverlys, forståelig selskabsoversigt, rigtige X-opslag | under arbejde | Chipkæde og oprydning findes; slutkontrollér alle interaktioner. |
 | U14 | Medier: thumbnails, to synlige med mulighed for flere, relevante Mads-videoer/X | under arbejde | 56 sider/98 YouTube/9 Instagram/26 X integrationer registreret; 5 runtime-tests. Kontrollér faktisk udvalg og synlige embeds på stikprøver. |
 | U15 | Hele aftalte brugerrejse på 390/desktop, lyst/mørkt hvor understøttet | mangler | Dokumentér sider og interaktioner; ingen påstand om fysisk Safari/Wix-test. |
-| U16 | Reproducerbart build, tests, scoped commits/push, tilgængeligt reviewlink | under arbejde | 19 tests/5 medietests bestået, HEAD 225c798. Gentag kun efter relevante ændringer; endelig scopekontrol udestår. |
+| U16 | Reproducerbart build, tests, scoped commits/push, tilgængeligt reviewlink | under arbejde | 20 tests og5 medietests bestået. Seneste kodepush97a8759; ny navigationsrettelse består20 tests. Slutkontrol og reviewlink udestår. |
 
 ## Groks sektioner tænkt forfra — begge TOP10-lister
 D=Designbygger, C=Critiquito. Kilder under ../design-review-read/codex-overdragelse-20261031/06-designforslag/sektioner-gentaenkt/. Alle 20 forslag er repræsenteret her, også dubletter. Manglende statusbevis betyder ikke, at implementeringen nødvendigvis mangler.
@@ -63,8 +63,8 @@ Kilder: samme mappe, smaafejl/. ID bevares ved afslutning. D og C nummererer hve
 | F08 | D9 D10 C3 fasegraf | verificeret færdigt | Alle fem faseknapper kontrolleret ved 390 px; aria-pressed og tekst/selskab skifter korrekt. Hele grafen inklusive begge kurver og labels er synlig på mobil. |
 | F09 | C4 widgetknapper/Nasdaqfarve | under arbejde | Sammenhold med Christians godkendte original; forelæg evt. fravalg frem for at antage godkendelse. |
 | F10 | C7 52-ugers-farver | fravalgt med Christians godkendelse | Christian valgte oprindelig flerfarveskala. |
-| F11 | C9 tech-krydshenvisning | under arbejde | Eksisterende bridge; kontrollér læsbarhed og klikfelt. |
-| F12 | C10 sidehoved/faner | under arbejde | Ny hero godkendt; kontrollér aktive navigationsmarkører og mobilklikfelter. |
+| F11 | C9 tech-krydshenvisning | verificeret færdigt | Browser: hele den forklarende tech-krydshenvisning åbner tech.html med overskriften Teknologi hænger sammen. Mobil/desktop layout bevaret. |
+| F12 | C10 sidehoved/faner | verificeret færdigt | Porteføljemenu rettet til minimum44px; browser måler alle seks links44px og aktiv markør skifter fra Afstand til toppen til Datagrundlag. Techmenu tidligere kontrolleret44px. |
 
 ## Yderligere leverancer og afgrænsning
 - De 22 porteføljeforslag: DESIGNBESLUTNINGER-20261031.md er underregister; alle rækker skal fortsat dækkes af U04–U09/U15, ikke erstatte S/F-registret.

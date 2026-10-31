@@ -59,3 +59,9 @@ Læs SAMLET-LEVERANCE.md før næste handling. Denne fil erstatter ikke tidliger
 - S03, S06 og F07 verificeret: kvantebeløb/støttestadier, fysisk-AI-skala og Alphabet-opstilling. Alle ændringer i section_visuals.py med eksisterende datagrundlag.
 - Mediekontrol fandt ældre xs-liste-nyheder og SpaceX-filmrække uden to-synlige-begrænsning. Begge følger nu reglen. Energi browser:2 synlige+3 foldet; SpaceX tredje video skjult→foldet ud→korrekt YouTube-nocookie-iframe.
 - F01 energithumbnail faktisk indlæst. U14 fortsat under arbejde, eksterne X-embeds og resterende udvalg ikke færdigverificeret.
+- Christian har godkendt porteføljeindgangens illustration med de tre selskaber/vægte. U02 afsluttet.
+- SpaceX mobil: Mads på X viser faktisk indlejrede opslag (ikke kun links); begge officielle X-iframes observeret, første opslag visuelt læst. Tidslinje2015 og Starlink/AI-valg fungerer med skiftende forklaring. Medieudfoldning virker.
+
+- F11/F12 slutkontrolleret: tech-bridge navigerer korrekt; porteføljenavigation har nu44px trykflader og aktiv sektionsmarkør ved scroll.20 tests bestået efter rettelsen.
+- Chips mobil Husker-panel og desktop Maskiner-valg verificeret; isometrisk scene vises ved1512px, kompakt trinliste ved1280px. Ingen lampenode i renderet grafik. S01 visuelt gennemset i lys desktop, resterende kontrol fortsætter.
+- Brugerens seneste usageoplysning er14%; ingen nye redesigns, resterende kontrol og dokumenteret aflevering prioriteres.
