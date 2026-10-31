@@ -23,6 +23,15 @@ class ReviewTests(unittest.TestCase):
         tree=html.parse(str(DEST/'tech.html'))
         self.assertEqual(tree.xpath('//*[@id="temaer"]')[0].getnext().get('id'),'forbindelser')
 
+    def test_tech_navigation_and_examples(self):
+        tree=html.parse(str(DEST/'tech.html'))
+        self.assertEqual(tree.xpath('//*[@id="sm-h-fond"]/following-sibling::ul[1]//a/@data-spy'),['temaer','forbindelser','ai-rejsen','virksomhedsfaser','vigtig-information'])
+        examples=tree.xpath('//*[@class="phase-company"]/@href')
+        self.assertEqual(len(examples),5)
+        for href in examples:
+            self.assertTrue((DEST/href).exists())
+        self.assertEqual(len(tree.xpath('//*[@class="phase-source"]')),5)
+
     def test_only_widget_loads_fund_selection(self):
         for name in ['index.html','tech.html','selskaber/spacex.html']:
             tree=html.parse(str(DEST/name))

@@ -19,7 +19,7 @@ def cls(tree, name):
 
 def save(tree, path):
     text=html.tostring(tree, encoding='unicode', doctype='<!doctype html>')
-    text=text.replace('review.css"','review.css?v=20261031e"')
+    text=text.replace('review.css"','review.css?v=20261031phases"')
     for phrase in [' Skematisk, ikke i målestok.',' Skematisk tegning, ikke i målestok.','Principskitse — ikke konkrete selskabstal eller en prognose. ']:
         text=text.replace(phrase,'')
     path.write_text(text,encoding='utf-8')
@@ -95,6 +95,9 @@ def build():
             if anchor and anchor not in ids:
                 a.set('href',('index.html' if tech else 'tech.html')+'#'+anchor)
                 a.attrib.pop('data-spy',None)
+        if tech:
+            from tech_refinement import refine_tech
+            refine_tech(tree)
         save(tree,DEST/filename)
     widget=html.parse(str(SOURCE/'widget/index.html')).getroot()
     widget.find('head').append(html.fragment_fromstring('<link rel="stylesheet" href="../assets/css/review.css">'))
