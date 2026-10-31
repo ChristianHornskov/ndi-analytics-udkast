@@ -30,6 +30,8 @@ def build():
     compile_funds(SOURCE,DEST)
     shutil.copytree(Path(__file__).with_name('zoom-assets'),DEST/'assets/review-zoom',dirs_exist_ok=True)
     shutil.copyfile(Path(__file__).with_name('journey.js'),DEST/'assets/js/review-journey.js')
+    for name in ['zoom-camera.mjs','zoom-camera.css']:
+        shutil.copyfile(Path(__file__).with_name(name),DEST/'assets'/('js' if name.endswith('mjs') else 'css')/name)
     atlas_source=(SOURCE/'assets/v5-atlas/atlas-living.mjs').read_text(encoding='utf-8')
     atlas_source=atlas_source.replace('simpleConnections=false}={}', 'simpleConnections=false,introOnly=false}={}')
     atlas_source=atlas_source.replace('pauseBtn.hidden=reducedMotion', 'pauseBtn.hidden=reducedMotion||introOnly')
@@ -69,7 +71,8 @@ def build():
             atlas.addnext(html.fragment_fromstring('<section id="ai-rejsen" class="review-journey"></section>'))
             for phases in tree.xpath('//*[@id="virksomhedsfaser"]'):
                 tree.xpath('//*[@id="ai-rejsen"]')[0].addnext(phases)
-            tree.find('body').append(html.fragment_fromstring('<script src="assets/js/review-journey.js"></script>'))
+            tree.find('head').append(html.fragment_fromstring('<link rel="stylesheet" href="assets/css/zoom-camera.css">'))
+            tree.find('body').append(html.fragment_fromstring('<script type="module" src="assets/js/review-journey.js?v=20261031zoom"></script>'))
             for node in tree.xpath('//*[@data-spy="top10" or @data-spy="portefoeljen"]'):
                 remove(node.getparent())
             for node in tree.xpath('//*[@data-portefolje]'):
