@@ -113,3 +113,6 @@ def refine_spacex(page, source, dest):
 
 
 
+
+    from spacex_story import enrich_spacex
+    enrich_spacex(page)

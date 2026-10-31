@@ -17,7 +17,7 @@
   }
   document.querySelectorAll('[data-video]').forEach(button=>button.addEventListener('click',()=>{
     const iframe=document.createElement('iframe');
-    iframe.src='https://www.youtube-nocookie.com/embed/'+button.dataset.video+'?autoplay=1&rel=0';
+    iframe.src='https://www.youtube-nocookie.com/embed/'+button.dataset.video+'?autoplay=1&rel=0&start='+(Number(button.dataset.start)||0);
     iframe.title=button.getAttribute('aria-label');
     iframe.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';
     iframe.allowFullscreen=true;
@@ -26,3 +26,18 @@
     iframe.focus();
   }));
 })();
+
+(() => {
+ const history=document.querySelector('.sx-history');
+ if(!history)return;
+ history.querySelectorAll('[data-sx-year]').forEach(button=>button.addEventListener('click',()=>{
+  const era=button.dataset.sxYear;
+  history.dataset.era=era;
+  history.querySelectorAll('[data-sx-year]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
+  history.querySelectorAll('[data-sx-chapter]').forEach(p=>p.hidden=p.dataset.sxChapter!==era);
+ }));
+})();
+document.querySelectorAll('.sx-point-expand').forEach(detail=>{
+ const update=()=>{detail.querySelector('summary').textContent=detail.open?'Luk argumentet':'Læs argumentet'};
+ detail.addEventListener('toggle',update);update();
+});
