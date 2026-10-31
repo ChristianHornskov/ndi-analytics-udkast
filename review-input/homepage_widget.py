@@ -32,8 +32,8 @@ def build_homepage_widget(dest):
             shutil.copyfile(path,portfolio/path.name)
     analysis=html.parse(str(source/'simple-embed.html')).getroot()
     analysis.find('head/title').text='Porteføljeanalyse · PMINDI · NewDeal Invest'
-    analysis.find('head').append(html.fragment_fromstring('<link rel="stylesheet" href="portfolio.css?v=20261031a">'))
-    for src in ['homepage-patch.js','portfolio.js?v=20261031a']:
+    analysis.find('head').append(html.fragment_fromstring('<link rel="stylesheet" href="portfolio.css?v=20261031b">'))
+    for src in ['homepage-patch.js','portfolio.js?v=20261031b']:
         analysis.find('body').append(html.fragment_fromstring('<script src="'+src+'"></script>'))
     (portfolio/'index.html').write_text(html.tostring(analysis,encoding='unicode',doctype='<!doctype html>'),encoding='utf-8')
     for name in ['portfolio.js','portfolio.css']:
