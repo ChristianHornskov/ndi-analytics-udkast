@@ -15,15 +15,9 @@
     left: calc(var(--ux) / var(--uw) * -100%); top: calc(var(--uy) / var(--uh) * -100%);
   }
   .kort--topanim .hero-tekst { margin-top: 0; padding-top: var(--sp-4); }
-  .kort--topanim:not(:has(#ta-spacex)) .hero-pause { display: none; } 
   .kort--topanim .kredit--hero { position: static; align-self: flex-start; margin: 0 var(--sp-4) var(--sp-4); }
 }
 
-@media (min-width: 1024px) and (max-width: 1279.98px) {
-  .kort--topanim .hero-pause { width: 44px; padding: 0; justify-content: center; }
-  .kort--topanim .hero-pause .hero-pause-tekst { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-  .kort--topanim .hero-handling { padding-right: 56px; }
-}
 
 
 
@@ -68,6 +62,23 @@
 }
 
 .ta-ude, .ta-ude * { animation-play-state: paused !important; }
+
+/* Kontrolknap: en lille ikonknap (44 x 44 px trykflade) i hjørnet af illustrationen
+   i stedet for en tekstknap, så den ikke dominerer. Navnet ligger i knappens
+   skjulte tekst og title. Knappen vises på alle bredder, også mobil. */
+.kort--hero.kort--topanim .hero-pause {
+  width: 44px; height: 44px; min-height: 44px; padding: 0; gap: 0; justify-content: center;
+  background: color-mix(in srgb, var(--c-space) 72%, transparent);
+}
+.kort--topanim .hero-pause .hero-pause-tekst {
+  position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
+}
+.kort--hero.kort--topanim:not(:has(#ta-spacex)) .hero-pause { top: var(--sp-2); right: var(--sp-2); bottom: auto; left: auto; }
 @media (max-width: 599.98px), (max-height: 479.98px) and (orientation: landscape) {
-  .kort--topanim:has(#ta-spacex) .hero-pause { display: inline-flex; top: var(--sp-2); left: var(--sp-2); }
+  .kort--hero.kort--topanim .hero-pause:not([hidden]) { display: inline-flex; top: var(--sp-2); right: var(--sp-2); bottom: auto; left: auto; }
+}
+
+/* Tryk eller klik på illustrationen afspiller igen eller pauser (samme som knappen). */
+@media (prefers-reduced-motion: no-preference) {
+  .kort--topanim.ta-aktiv .ta-baand { cursor: pointer; -webkit-tap-highlight-color: transparent; }
 }
