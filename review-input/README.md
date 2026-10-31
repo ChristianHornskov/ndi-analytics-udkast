@@ -33,4 +33,5 @@ to Christian's items 2, 3, 4 and 6: journeys, weaker layouts, media and mobile Q
 See UX-JOURNEY-REVIEW-20261031.md for coverage and limitations.
 
 The independent Grok/Claude reviews, data pipeline work, compliance review and
-Wix publication remain deferred. This branch is not approval for production.
+general production rollout remain deferred. Christian subsequently authorized the separate Wix review page at https://www.newdealinvest.dk/graf-review; see WIX-UDGIVELSE-20261031.md. The homepage is unchanged.
+
