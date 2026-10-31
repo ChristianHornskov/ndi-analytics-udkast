@@ -1,0 +1,12 @@
+{
+  "source": "https://ndigrafdatab5174313.blob.core.windows.net/graph/preview-module-20260930.html",
+  "base": "https://ndigrafdatab5174313.blob.core.windows.net/graph/releases/93111a1f2383de6f0f234a290818f02781f6e914a1dc8940b6c1f7b5f6480b4a/",
+  "release": {
+    "schemaVersion": 1,
+    "release": "93111a1f2383de6f0f234a290818f02781f6e914a1dc8940b6c1f7b5f6480b4a",
+    "asOf": "2026-10-30",
+    "validated": true,
+    "checkedAt": "2026-10-30T09:49:22.873900+01:00"
+  },
+  "purpose": "Read-only public homepage code copied for isolated preview."
+}

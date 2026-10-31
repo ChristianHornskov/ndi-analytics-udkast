@@ -1,0 +1,23 @@
+/* Limited composition changes to the actual homepage widget. */
+html.simple-view main{padding:24px 20px!important}
+.simple-view #headline{grid-template-columns:repeat(3,minmax(0,1fr))}
+.simple-view #overview>.grid:not(.primary-chart),.simple-view .detail-action,.simple-view #risk-explained,
+.simple-view #portfolio,.simple-view #highs,.simple-view #risk,.simple-view #method,
+.simple-view #preview-risk-summary,.simple-view #nasdaq-toggle{display:none!important}
+.simple-view #preview-entries{display:grid!important;grid-template-columns:1fr 1fr;gap:16px;margin:22px 0 28px;padding:0;border:0}
+#preview-entries a{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 22px;background:#14262e;border:1px solid #54747d;border-radius:9px;color:#eef4f5;text-decoration:none}
+#preview-entries a:hover{background:#213e47;border-color:#a3c9ce}
+#preview-entries strong{display:block;font-size:17px;font-weight:650;line-height:1.4}
+#preview-entries small{display:block;font-size:13px;color:#b9ced2;line-height:1.5;margin-top:7px}
+#preview-entries a>span:last-child{font-size:26px;color:#a3c9ce}
+#preview-copy-isins{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+#preview-copy-isins button{border:0;background:none;text-align:left;color:#b9ced2;padding:8px 2px;font:inherit;font-size:12px;cursor:pointer}
+#preview-copy-isins button span{text-decoration:underline;margin-left:6px}
+#copy-status{grid-column:1/-1;font-size:13px}#copy-status:empty{display:none}
+#preview-calendar{margin-top:24px}#preview-calendar table{min-width:900px;width:100%;font-size:13px}
+#preview-calendar .tablewrap{border:1px solid #30454d;border-radius:10px}
+#preview-calendar td,#preview-calendar th{padding:14px 10px;text-align:right;white-space:nowrap}
+#preview-calendar th:first-child{text-align:left}#preview-calendar .annual{font-weight:700;background:#213e47}
+@media(max-width:600px){html.simple-view main{padding:12px 10px!important}.simple-view #preview-entries{grid-template-columns:1fr;gap:10px}#preview-entries a{padding:18px}.simple-view #headline{grid-template-columns:1fr;gap:16px}.simple-view #headline .metric{padding-left:14px}.simple-view #headline .value{font-size:30px}#preview-copy-isins{grid-template-columns:1fr;gap:0}#preview-calendar{margin-top:16px}}
+
+#preview-calendar,#preview-entries{grid-column:1/-1;width:100%;min-width:0}

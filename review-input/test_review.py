@@ -6,8 +6,19 @@ from build import SOURCE, DEST
 
 class ReviewTests(unittest.TestCase):
     def test_two_distinct_destinations(self):
-        tree=html.parse(str(DEST/'widget/index.html'))
-        self.assertEqual(tree.xpath('//nav[@class="review-entry-cards"]/a/@href'),['../index.html','../tech.html'])
+        code=(DEST/'widget/preview-adapter.js').read_text(encoding='utf-8')
+        self.assertIn('href="../index.html"',code)
+        self.assertIn('href="../tech.html"',code)
+    def test_original_design_is_preserved(self):
+        original=Path(__file__).with_name('homepage-source')
+        for name in ['style.css','wix-embed.css','simple-view.css','app.js','homepage-patch.js','data.json']:
+            self.assertEqual((original/name).read_bytes(),(DEST/'widget'/name).read_bytes(),name)
+        source=html.parse(str(SOURCE/'index.html'))
+        built=html.parse(str(DEST/'index.html'))
+        query='//div[@class="photo-theme-grid"]//a/@href'
+        self.assertEqual(source.xpath(query),built.xpath(query))
+        self.assertGreater(len(built.xpath(query)),0)
+        self.assertNotIn("setInterval(async()=>{",(DEST/'widget/production-embed.js').read_text(encoding='utf-8'))
     def test_only_widget_loads_fund_selection(self):
         for name in ['index.html','tech.html','selskaber/spacex.html']:
             tree=html.parse(str(DEST/name))

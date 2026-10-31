@@ -19,6 +19,7 @@ def cls(tree, name):
 
 def save(tree, path):
     text=html.tostring(tree, encoding='unicode', doctype='<!doctype html>')
+    text=text.replace('review.css"','review.css?v=20261031e"')
     for phrase in [' Skematisk, ikke i målestok.',' Skematisk tegning, ikke i målestok.','Principskitse — ikke konkrete selskabstal eller en prognose. ']:
         text=text.replace(phrase,'')
     path.write_text(text,encoding='utf-8')
@@ -42,8 +43,8 @@ def build():
         hub = cls(tree, 'v18-hub')[0]
         hub.clear(); hub.set('class', 'v18-hub review-intro')
         hub.append(html.fragment_fromstring('<nav class="review-paths" aria-label="Vælg indgang"><a href="index.html" '+('' if tech else 'aria-current="page"')+'>Porteføljen</a><a href="tech.html" '+('aria-current="page"' if tech else '')+'>Tech</a><a href="widget/index.html">Fondens udvikling</a></nav>'))
-        title = 'Teknologi hænger sammen.' if tech else 'Se, hvad du investerer i.'
-        intro = ('En AI-model kræver chips. Chips kræver fabrikker, energi og materialer. Følg forbindelserne og opdag selskaberne, der gør teknologien mulig — også hvis du bare er nysgerrig på, hvordan det hele virker.' if tech else 'Vi ser teknologi som mere end software og store amerikanske navne. Fonden investerer på tværs af de selskaber, der bygger, driver og bruger ny teknologi. Her har vi samlet investeringerne i 12 temaer, så du kan forstå både selskaberne og sammenhængene.')
+        title = 'Teknologi hænger sammen.' if tech else 'Selskaberne bag fonden.'
+        intro = ('En AI-model kræver chips. Chips kræver fabrikker, energi og materialer. Følg forbindelserne og opdag selskaberne, der gør teknologien mulig — også hvis du bare er nysgerrig på, hvordan det hele virker.' if tech else 'Vi ser teknologi som mere end software. Udforsk fondens selskaber i 12 temaer — fra chips og energi til rumfart og sundhed.')
         hub.append(html.fragment_fromstring('<h1>'+title+'</h1>'))
         hub.append(html.fragment_fromstring('<p class="review-lead">'+intro+'</p>'))
         for node in cls(tree, 'two-paths'): remove(node)
@@ -72,13 +73,11 @@ def build():
             for node in tree.xpath('//*[@data-portefolje]'):
                 if node.getparent() is not None: remove(node)
         else:
-            for name in ['v18-atlas', 'v18-faser','photo-theme-grid']:
+            for name in ['v18-atlas', 'v18-faser']:
                 for node in cls(tree,name): remove(node)
-            heading=tree.xpath('//*[@id="h-temaer"]')[0];heading.text='Hvor er pengene investeret?'
+            heading=tree.xpath('//*[@id="h-temaer"]')[0];heading.text='Fondens 12 temaer'
             for p in tree.xpath('//*[@id="temaer"]/p'):
-                p.clear();p.text='Temaerne viser, hvilke dele af teknologiens værdikæder fonden investerer i. Vælg et tema for at se selskaberne bag.'
-            for heading in tree.xpath('//*[@id="h-fylder"]'):remove(heading)
-            for section in cls(tree,'allocation-review'):section.set('aria-labelledby','h-temaer')
+                remove(p)
         for details in tree.xpath('//*[@id="virksomhedsfaser"]//details'):
             details.tag='div'; details.set('class','review-risk-text')
             for summary in details.findall('summary'): summary.tag='h4'
@@ -97,12 +96,12 @@ def build():
     nav=cls(widget,'v18-widget-knapper')[0]
     nav.clear(); nav.set('class','review-entry-cards'); nav.set('aria-label','Gå på opdagelse')
     for href,title,text in [('index.html','Gå på opdagelse i porteføljen','Se investeringerne, vægtene og selskaberne bag fonden.'),('tech.html','Gå på opdagelse i tech','Forstå teknologien og forbindelserne mellem selskaberne.')]:
-        nav.append(html.fragment_fromstring('<a href="../'+href+'"><strong>'+title+' <span aria-hidden="true">↗</span></strong><span>'+text+'</span></a>'))
+        nav.append(html.fragment_fromstring('<a href="../'+href+'"><span class="entry-copy"><strong>'+title+'</strong><span>'+text+'</span></span><span class="entry-arrow" aria-hidden="true">→</span></a>'))
     save(widget,DEST/'widget/index.html')
     # Only the widget receives a class selector. Portfolio data stays PMINDI.
     widget_path=DEST/'widget/index.html'
     markup=widget_path.read_text(encoding='utf-8')
-    markup=markup.replace('<script src="../assets/js/v18-afkast.js"', '<script src="../data/review-funds.js"></script><script src="../assets/js/review-widget.js"')
+    markup=markup.replace('<script src="../assets/js/v18-afkast.js"', '<script src="../data/review-funds.js"></script><script src="../assets/js/review-widget.js?v=20261031e"')
     widget_path.write_text(markup,encoding='utf-8')
     chart=(SOURCE/'assets/js/v18-afkast.js').read_text(encoding='utf-8')
     chart=chart.replace('(U.kalender || []).map', '(U.kalender || []).slice(0,3).map')
@@ -142,6 +141,8 @@ def build():
             if not page.xpath('//link[contains(@href,"review.css")]'):
                 page.find('head').append(html.fragment_fromstring('<link rel="stylesheet" href="../assets/css/review.css">'))
             save(page,path)
+    from homepage_widget import build_homepage_widget
+    build_homepage_widget(DEST)
     print('Built isolated preview:', DEST)
 
 if __name__ == '__main__': build()
