@@ -192,6 +192,8 @@ def build():
     clean_chips(DEST)
     from journey_polish import polish
     polish(DEST)
+    from data_quality import repair_data_copy
+    repair_data_copy(DEST)
     print('Built isolated preview:', DEST)
 
 if __name__ == '__main__': build()

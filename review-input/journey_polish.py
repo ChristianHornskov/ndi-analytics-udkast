@@ -26,6 +26,8 @@ def polish(dest):
             shutil.copyfile(asset,target)
             text=text.replace(raw,rel+'assets/review-img/'+name)
         text=re.sub(r'<section\b[^>]*class="ndi-reading theme-question"[^>]*>.*?</section>','',text,flags=re.S)
+        if path.parent.name=='temaer' and path.stem=='chips':
+            text=text.replace('href="#kaeden">Se kæden trin for trin','href="#ck-kaede">Se kæden trin for trin')
         if path.parent.name=='temaer' and path.stem=='fintech':
             companies=next(t['selskaber'] for t in data['temaer'] if t['id']=='fintech')[:3]
             bars=''.join('<a href="../selskaber/'+c['slug']+'.html"><span>'+escape(c['navn'])+'</span><strong>'+str(c['andel']).replace('.',',')+' %</strong></a>' for c in companies)
@@ -61,8 +63,8 @@ def polish(dest):
             if choices:trail+='<nav class="up-shortcuts" aria-label="På denne side">'+''.join(choices)+'</nav>'
             text=re.sub(r'(<main\b[^>]*>)',lambda m:m[0]+trail,text,count=1)
         if path.name!='index.html' or path.parent!=dest:
-            text=text.replace('</head>',f'<link rel="stylesheet" href="{rel}assets/css/journey-polish.css?v=20261031b"></head>',1)
-            text=text.replace('</body>',f'<script defer src="{rel}assets/js/journey-polish.js?v=20261031"></script></body>',1)
+            text=text.replace('</head>',f'<link rel="stylesheet" href="{rel}assets/css/journey-polish.css?v=20261031c"></head>',1)
+            text=text.replace('</body>',f'<script defer src="{rel}assets/js/journey-polish.js?v=20261031c"></script></body>',1)
         # Real YouTube thumbnails for existing click-to-play videos. Keep player handlers intact.
         page=html.fromstring(text)
         changed=False

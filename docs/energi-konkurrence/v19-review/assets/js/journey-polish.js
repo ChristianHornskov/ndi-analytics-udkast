@@ -1,4 +1,11 @@
 (()=>{'use strict';
+ // The preserved homepage emits this message for its Wix host. In a standalone
+ // review there is no host, so finish the navigation locally instead.
+ if(parent===window)window.addEventListener('message',event=>{
+  if(event.source!==window||event.origin!==location.origin||event.data?.type!=='ndi-preview-scroll')return;
+  const top=event.data.top;
+  if(typeof top==='number'&&Number.isFinite(top))window.scrollTo({top:Math.max(0,top-20),behavior:'auto'});
+ });
  // Small, predictable image loading and in-page navigation across the review.
  document.querySelectorAll('img').forEach(img=>{img.decoding='async';if(!img.loading&&img.getBoundingClientRect().top>innerHeight*1.3)img.loading='lazy'});
  document.querySelectorAll('iframe').forEach(frame=>{if(!frame.loading)frame.loading='lazy'});
@@ -7,7 +14,8 @@
  if(nav.length&&'IntersectionObserver'in window){let visible=new Set;const io=new IntersectionObserver(entries=>{entries.forEach(e=>e.isIntersecting?visible.add(e.target.id):visible.delete(e.target.id));let active=nav.find(a=>visible.has(a.hash.slice(1)));nav.forEach(a=>{a.classList.toggle('up-contents-active',a===active);if(a===active)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current')})},{rootMargin:'-75px 0px -50% 0px'});nav.forEach(a=>{let el=document.getElementById(a.hash.slice(1));if(el)io.observe(el)})}
  if(document.documentElement.classList.contains('portfolio-analysis')){
   fetch('../data/company-routes.json').then(r=>r.json()).then(routes=>{
-   function link(){document.querySelectorAll('#holdings tr').forEach(row=>{const cell=row.cells[0];if(!cell||cell.querySelector('.up-company-link'))return;const node=[...cell.childNodes].find(n=>n.nodeType===3&&n.textContent.trim());if(!node)return;const name=node.textContent.trim();if(!routes[name])return;const a=document.createElement('a');a.href=routes[name];a.className='up-company-link';a.textContent=name;node.replaceWith(a)})}
+   const lookup=Object.fromEntries(Object.entries(routes).map(([k,v])=>[k.toLocaleLowerCase('da'),v]));
+   function link(){document.querySelectorAll('#holdings tr').forEach(row=>{const cell=row.cells[0];if(!cell||cell.querySelector('.up-company-link'))return;const node=[...cell.childNodes].find(n=>n.nodeType===3&&n.textContent.trim());if(!node)return;const name=node.textContent.trim();const href=lookup[name.toLocaleLowerCase('da')];if(!href)return;const a=document.createElement('a');a.href=href;a.className='up-company-link';a.textContent=name;node.replaceWith(a)})}
    link();const host=document.getElementById('holdings');if(host)new MutationObserver(link).observe(host,{childList:true,subtree:true});
   }).catch(()=>{});
  }

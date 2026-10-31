@@ -22,7 +22,7 @@ def build_media(dest):
                     cards.append(f'<article class="rm-social"><p class="rm-source">INSTAGRAM · NEWDEAL INVEST · {escape(item["date"])}</p><h3>Kort om {escape(entry["name"])}</h3><button type="button" data-instagram="{escape(item["url"])}">Afspil klippet her</button><a href="{escape(item["url"])}" target="_blank" rel="noopener">Åbn på Instagram ↗</a><div class="rm-embed"></div></article>')
                 else:
                     label='Skrevet af Mads Christiansen' if item['type']=='egen' else 'Delt af Mads Christiansen'
-                    cards.append(f'<article class="rm-social rm-x"><p class="rm-source">X · {escape(item["date"])}</p><h3>{label}</h3><div class="rm-embed" data-x="{escape(item["id"])}"></div><a href="{escape(item["url"])}" target="_blank" rel="noopener">Læs det originale opslag på X ↗</a></article>')
+                    cards.append(f'<article class="rm-social rm-x"><p class="rm-source">X · {escape(item["date"])}</p><h3>{label}</h3><div class="rm-embed" id="x-{escape(item["id"])}" data-x="{escape(item["id"])}"></div><a href="{escape(item["url"])}" target="_blank" rel="noopener">Læs det originale opslag på X ↗</a></article>')
                 counts[kind]+=1
             if cards:
                 label={'youtube':'videoer','instagram':'korte klip','x':'opslag'}[kind]
@@ -39,7 +39,7 @@ def build_media(dest):
         if match:text=text[:match.start()]+markup+text[match.start():]
         else:text=text.replace('</main>',markup+'</main>',1)
         text=text.replace('</head>','<link rel="stylesheet" href="../assets/css/review-media.css?v=20261031-2"></head>',1)
-        text=text.replace('</body>','<script defer src="../assets/js/review-media.js?v=20261031-2"></script></body>',1)
+        text=text.replace('</body>','<script defer src="../assets/js/review-media.js?v=20261031-3"></script></body>',1)
         path.write_text(text,encoding='utf8');counts['pages']+=1
     for name,folder in [('review-media.css','css'),('review-media.js','js')]:shutil.copyfile(source/name,dest/'assets'/folder/name)
     (source/'MEDIA-INTEGRATION-STATUS.json').write_text(json.dumps(counts,indent=2),encoding='utf8')

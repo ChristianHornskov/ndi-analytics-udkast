@@ -7,3 +7,4 @@ main select{max-width:100%;min-height:42px;padding:8px 30px 8px 12px;border:1px 
 
 /* Real posters retain one existing play control and video duration. */
 .vid-play.up-thumbnail-play{position:relative;overflow:hidden;isolation:isolate;background:#10232b!important}.vid-play.up-thumbnail-play .up-video-thumbnail{position:absolute!important;inset:0;width:100%!important;height:100%!important;object-fit:cover;display:block;z-index:-1}.vid-play.up-thumbnail-play .vid-ikon{position:absolute;z-index:1;box-shadow:0 2px 22px #0008}.vid-play.up-thumbnail-play .vid-tid{z-index:2;background:#071015cc;padding:3px 7px;border-radius:4px}
+.up-data-date{font-size:12px;line-height:1.6;color:var(--muted,#63757b);margin:12px 0 20px;font-variant-numeric:tabular-nums}

@@ -5,6 +5,40 @@ from lxml import html
 from build import SOURCE, DEST
 
 class ReviewTests(unittest.TestCase):
+    def test_date_labels_and_quantum_copy(self):
+        for name in ['widget/index.html','tech.html']:
+            tree=html.parse(str(DEST/name))
+            labels=tree.xpath('//*[@class="up-data-date"]/text()')
+            self.assertEqual(labels,['Afkast til 29.10.2026 · Beholdning pr. 30.10.2026'])
+        tree=html.parse(str(DEST/'temaer/kvante.html'))
+        text=' '.join(tree.xpath('//*[@id="penge"]')[0].itertext())
+        self.assertIn('Ca. 224 mio. USD',text)
+        self.assertIn('Op til 300 mio. USD',text)
+        self.assertIn('korrigeret',text)
+        self.assertNotIn('Lovet, ikke udbetalt',text)
+        self.assertNotIn('omsatte de seks selskaber, der bygger kvantecomputere, for tilsammen i 2025',text)
+
+    def test_media_destinations_and_timestamps(self):
+        import re
+        from urllib.parse import urlparse,parse_qs
+        count=0
+        for path in DEST.rglob('*.html'):
+            tree=html.parse(str(path))
+            for button in tree.xpath('//*[@data-youtube]'):
+                video=button.get('data-youtube');start=button.get('data-start')
+                self.assertRegex(video,r'^[A-Za-z0-9_-]{11}$')
+                self.assertRegex(start,r'^\d+$')
+                article=button.xpath('ancestor::article')[0]
+                urls=article.xpath('.//a[contains(@href,"youtube.com/watch")]/@href')
+                self.assertEqual(len(urls),1)
+                q=parse_qs(urlparse(urls[0]).query)
+                self.assertEqual(q['v'],[video]);self.assertEqual(q['t'],[start+'s'])
+                self.assertEqual(button.xpath('.//img/@src | .//img/@data-deferred-src'),['https://i.ytimg.com/vi/'+video+'/hqdefault.jpg'])
+                count+=1
+            for host in tree.xpath('//*[@data-x]'):
+                urls=host.xpath('ancestor::article[1]//a/@href')
+                self.assertTrue(any('/status/'+host.get('data-x') in u for u in urls))
+        self.assertGreater(count,50)
     def test_chip_chain_delivery(self):
         tree=html.parse(str(DEST/'temaer/chips.html'))
         self.assertEqual(len(tree.xpath('//*[@id="ck-kaede"]')),1)
