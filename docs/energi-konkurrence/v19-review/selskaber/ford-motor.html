@@ -39,12 +39,9 @@
 
 <script>try{document.fonts.load("500 16px Manrope");document.fonts.load("400 16px 'DM Sans'")}catch(e){}</script>
 
-<link rel="stylesheet" href="../assets/css/review.css?v=20261031logos"></head>
+<link rel="stylesheet" href="../assets/css/review.css?v=20261031logos"><link rel="stylesheet" href="../assets/css/journey-polish.css?v=20261031"></head>
 
 <body data-slug="ford-motor">
-
-
-
 <svg class="sprite" aria-hidden="true" focusable="false">
 
 <symbol id="i-pause" viewbox="0 0 24 24"><path d="M9 6v12M15 6v12"></path></symbol>
@@ -128,180 +125,90 @@
 <a class="spring" href="#indhold">Gå til indhold</a>
 
 <div class="app">
-
-  <header class="topbar-mobil">
-
-    <button class="ikonknap" id="menu-aaben" type="button" aria-controls="sidemenu" aria-expanded="false"><svg class="ik" aria-hidden="true"><use href="#i-menu"></use></svg><span class="sr">Åbn menuen</span></button>
-
-    <a class="maerke maerke--lille" href="../index.html" aria-label="NewDeal Invest, til fondsoverblikket">
-
-      <span class="logo-felt logo-felt--lille"><img class="ndi-logo" src="../assets/img/ndi-logo-moerk-baggrund.png" width="2048" height="754" alt="NewDeal Invest" decoding="async"></span>
-
-      <span class="maerke-tekst"><span class="maerke-navn">Ford Motor</span><span class="maerke-sub" id="aktuel-sektion">Selskab</span></span>
-
-    </a>
-
-    <a class="knap knap--lille" href="https://fundmarket.dk/newdeal-invest-kl-n/" target="_blank" rel="noopener">Faktaark<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (KID) og prospekt for PMINDI (åbner i nyt vindue)</span></a>
-
-  </header>
-
-  <div class="slor" id="slor" hidden></div>
-
-  <aside class="sidemenu" id="sidemenu" aria-label="Hovedmenu">
-
-    <div class="sm-top">
-
-      <a class="maerke maerke--logo" href="../index.html" aria-label="NewDeal Invest, fondsoverblik">
-
-        <span class="logo-felt"><img class="ndi-logo" src="../assets/img/ndi-logo-moerk-baggrund.png" width="2048" height="754" alt="NewDeal Invest" decoding="async"></span><span class="maerke-sub">Fondsoverblik</span>
-
-      </a>
-
-      <button class="ikonknap sm-luk" id="menu-luk" type="button"><svg class="ik" aria-hidden="true"><use href="#i-luk"></use></svg><span class="sr">Luk menuen</span></button>
-
-    </div>
-
-    <nav class="review-section-nav" aria-label="Vælg indgang"><a href="../index.html">Porteføljen</a><a href="../tech.html">Tech</a><a href="../widget/index.html">Afkast</a></nav><div class="sm-rul">
-
-      <a class="sm-tilbage" href="https://www.newdealinvest.dk/"><svg class="ik" aria-hidden="true"><use href="#i-tilbage"></use></svg><span>Til NewDeal Invests forside</span></a>
-
-
-
-      <nav class="sm-gruppe" aria-labelledby="sm-h-fond">
-
-        <h2 class="sm-overskrift" id="sm-h-fond"><span>Fonden</span></h2>
-
-        <ul class="sm-liste">
-
-          <li><a class="sm-link" href="../fondens-udvikling.html"><span>Fondens udvikling</span></a>
-
-          </li>
-
-          <li><a class="sm-link" href="../index.html#temaer"><span>Fonden fordelt på temaer</span></a>
-
-          </li>
-
-          <li><a class="sm-link" href="../index.html#top10"><span>De <span data-tal="top10.antal" data-fmt="talord">…</span> største selskaber</span></a>
-
-          </li>
-
-          <li><a class="sm-link" href="../index.html#portefoeljen"><span>Porteføljen</span></a>
-
-            <ul class="sm-under sm-under--fond" aria-label="Porteføljen">
-
-              <li><a class="sm-link sm-link--under" href="../index.html#portefoeljen-portfolio" data-portefolje="portfolio"><span>Portefølje</span></a></li>
-
-              <li><a class="sm-link sm-link--under" href="../index.html#portefoeljen-highs" data-portefolje="highs"><span>52-ugers top</span></a></li>
-
-              <li><a class="sm-link sm-link--under" href="../index.html#portefoeljen-risk-summary" data-portefolje="risk-summary"><span>Risiko</span></a></li>
-
-              <li><a class="sm-link sm-link--under" href="../index.html#portefoeljen-method" data-portefolje="method"><span>Metode</span></a></li>
-
-            </ul>
-
-          </li>
-
-          <li><a class="sm-link" href="../index.html#vigtig-information"><span>Risiko og vigtig information</span></a>
-
-          </li>
-
-        </ul>
-
-      </nav>
-
-      <nav class="sm-gruppe" aria-labelledby="sm-h-temaer">
-
-        <h2 class="sm-overskrift" id="sm-h-temaer"><span>Temaer</span><span class="sm-overskrift-note">Andel af fonden</span></h2>
-
-        <ul class="sm-liste">
-
-        </ul>
-
-        <ul class="sm-liste sm-temaliste" id="sm-temaer" data-ordne="temaer">
-
-          <li data-id="chips"><a class="sm-link sm-link--tema" style="--tf:#8bb8bc" href="../temaer/chips.html"><svg class="ik" aria-hidden="true"><use href="#t-chips"></use></svg><span>Chips og halvledere</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="energi"><a class="sm-link sm-link--tema" style="--tf:#759ebc" href="../temaer/energi.html"><svg class="ik" aria-hidden="true"><use href="#t-energi"></use></svg><span>Energi og elnet</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="datacenter"><a class="sm-link sm-link--tema" style="--tf:#d5ba75" href="../temaer/datacenter.html"><svg class="ik" aria-hidden="true"><use href="#t-datacenter"></use></svg><span>Datacentre</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="platforme"><a class="sm-link sm-link--tema" style="--tf:#b78f70" href="../temaer/platforme.html"><svg class="ik" aria-hidden="true"><use href="#t-platforme"></use></svg><span>Platformsøkonomi</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="fysisk-ai" class="er-aktiv"><a class="sm-link sm-link--tema er-foraelder" style="--tf:#9ab595" href="../temaer/fysisk-ai.html"><svg class="ik" aria-hidden="true"><use href="#t-fysisk-ai"></use></svg><span>Robotter &amp; fysisk AI</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="raastoffer"><a class="sm-link sm-link--tema" style="--tf:#bd9cbb" href="../temaer/raastoffer.html"><svg class="ik" aria-hidden="true"><use href="#t-raastoffer"></use></svg><span>Råstoffer</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="rumfart"><a class="sm-link sm-link--tema" style="--tf:#a18cc7" href="../temaer/rumfart.html"><svg class="ik" aria-hidden="true"><use href="#t-rumfart"></use></svg><span>Rumfart</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="fintech"><a class="sm-link sm-link--tema" style="--tf:#6ea4bb" href="../temaer/fintech.html"><svg class="ik" aria-hidden="true"><use href="#t-fintech"></use></svg><span>Fintech</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="krypto"><a class="sm-link sm-link--tema" style="--tf:#a8ba86" href="../temaer/krypto.html"><svg class="ik" aria-hidden="true"><use href="#t-krypto"></use></svg><span>Krypto</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="software"><a class="sm-link sm-link--tema" style="--tf:#c9a58b" href="../temaer/software.html"><svg class="ik" aria-hidden="true"><use href="#t-software"></use></svg><span>Software &amp; AI</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="sundhed"><a class="sm-link sm-link--tema" style="--tf:#a4a6cf" href="../temaer/sundhed.html"><svg class="ik" aria-hidden="true"><use href="#t-sundhed"></use></svg><span>Sundhed og biotek</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="kvante"><a class="sm-link sm-link--tema" style="--tf:#cd99a5" href="../temaer/kvante.html"><svg class="ik" aria-hidden="true"><use href="#t-kvante"></use></svg><span>Kvantecomputere</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-        </ul>
-
-        <button class="sm-vis-flere" type="button" aria-expanded="false" aria-controls="sm-temaer">
-
-          <span class="sm-vis-tekst">Vis alle <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer</span><span class="sm-vis-faerre" hidden>Vis færre temaer</span><svg class="ik ik--s" aria-hidden="true"><use href="#i-ned"></use></svg>
-
-        </button>
-
-      </nav>
-
-      <nav class="sm-gruppe" aria-labelledby="sm-h-selskaber">
-
-        <h2 class="sm-overskrift" id="sm-h-selskaber"><span>Selskaber</span><span class="sm-overskrift-note">Andel af fonden</span></h2>
-
-        <ul class="sm-liste">
-
-        </ul>
-
-        <ul class="sm-liste" data-liste="top10.liste" data-skabelon="tpl-sm-top"></ul>
-
-        <a class="sm-alle" href="../alle-selskaber.html"><svg class="ik ik--s" aria-hidden="true"><use href="#i-selskab"></use></svg><span>Se alle selskaber i fonden</span><svg class="ik ik--s" aria-hidden="true"><use href="#i-frem"></use></svg></a>
-
-        <template id="tpl-sm-top"><li><a class="sm-selskab" data-link-selskab href="#"><span class="sm-logo" aria-hidden="true" data-f="forbogstav"></span><span class="sm-navn" data-f="navn"></span><span class="sm-tal" data-f="andel" data-fmt="pct"></span></a></li></template>
-
-        <ul class="sm-liste" hidden>
-
-        </ul>
-
-      </nav>
-
-    </div>
-
-    <div class="sm-bund">
-
-      <button class="temaskift" id="temaskift" type="button" aria-label="Skift til lyst tema"><svg class="ik ik--sol" aria-hidden="true" viewbox="0 0 24 24"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"></path></svg><svg class="ik ik--maane" aria-hidden="true" viewbox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"></path></svg><span class="temaskift-tekst">Lyst tema</span></button>
-
-      <div class="sm-datakort"><svg class="ik" aria-hidden="true"><use href="#i-kalender"></use></svg><div><p class="sm-data-t">Alle andele pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…</span></p><p class="sm-data-s">Tallene er fra PMINDI. Markedsføringsmateriale. Ikke personlig investeringsrådgivning.</p></div></div>
-
-    </div>
-
-  </aside>
-
-  <div class="hoved">
-
-    <main id="indhold" tabindex="-1">
-
-
-
-      <section class="sektion sektion--overblik v18s" id="overblik" aria-labelledby="h-side">
-
-        <p class="v18s-tilbage"><a class="tekstlink" href="../temaer/fysisk-ai.html"><span aria-hidden="true">←</span> Robotter &amp; fysisk AI</a></p>
-
-        <header class="v18s-hoved v18s-hoved--kort"><div class="sidehoved-ikon sidehoved-ikon--logo sidehoved-ikon--billede" aria-hidden="true"><img src="../assets/img/logoer/ae3f14d060.webp" width="56" height="56" alt=""></div><div><p class="kicker">Selskab i temaet <a class="kicker-link" href="../temaer/fysisk-ai.html">Robotter &amp; fysisk AI</a></p>
-
-            <h1 id="h-side">Ford Motor</h1></div></header>
-
-          <article class="kort kort--hero kort--orbit kort--topanim" aria-labelledby="h-hero">
-
-            <div class="hero-billede hero-billede--svg ta-baand"><div class="ta-udsnit"><svg class="hero-svg ta-svg" id="ta-ford-motor" viewbox="0 0 1200 600" preserveaspectratio="xMidYMid slice" data-varighed="3" style="--ux:398;--uy:40;--uw:293;--uh:130" aria-hidden="true" focusable="false">
+<header class="topbar-mobil">
+<button class="ikonknap" id="menu-aaben" type="button" aria-controls="sidemenu" aria-expanded="false"><svg class="ik" aria-hidden="true"><use href="#i-menu"></use></svg><span class="sr">Åbn menuen</span></button>
+<a class="maerke maerke--lille" href="../portfolio/index.html" aria-label="NewDeal Invest, til fondsoverblikket">
+<span class="logo-felt logo-felt--lille"><img class="ndi-logo" src="../assets/img/ndi-logo-moerk-baggrund.png" width="2048" height="754" alt="NewDeal Invest" decoding="async"></span>
+<span class="maerke-tekst"><span class="maerke-navn">Ford Motor</span><span class="maerke-sub" id="aktuel-sektion">Selskab</span></span>
+</a>
+<a class="knap knap--lille" href="https://fundmarket.dk/newdeal-invest-kl-n/" target="_blank" rel="noopener">Faktaark<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (KID) og prospekt for PMINDI (åbner i nyt vindue)</span></a>
+</header>
+<div class="slor" id="slor" hidden></div>
+<aside class="sidemenu" id="sidemenu" aria-label="Hovedmenu">
+<div class="sm-top">
+<a class="maerke maerke--logo" href="../portfolio/index.html" aria-label="NewDeal Invest, fondsoverblik">
+<span class="logo-felt"><img class="ndi-logo" src="../assets/img/ndi-logo-moerk-baggrund.png" width="2048" height="754" alt="NewDeal Invest" decoding="async"></span><span class="maerke-sub">Fondsoverblik</span>
+</a>
+<button class="ikonknap sm-luk" id="menu-luk" type="button"><svg class="ik" aria-hidden="true"><use href="#i-luk"></use></svg><span class="sr">Luk menuen</span></button>
+</div>
+<nav class="review-section-nav" aria-label="Vælg indgang"><a href="../portfolio/index.html">Porteføljen</a><a href="../tech.html">Tech</a><a href="../widget/index.html">Afkast</a></nav><div class="sm-rul">
+<a class="sm-tilbage" href="https://www.newdealinvest.dk/"><svg class="ik" aria-hidden="true"><use href="#i-tilbage"></use></svg><span>Til NewDeal Invests forside</span></a>
+<nav class="sm-gruppe" aria-labelledby="sm-h-fond">
+<h2 class="sm-overskrift" id="sm-h-fond"><span>Fonden</span></h2>
+<ul class="sm-liste">
+<li><a class="sm-link" href="../fondens-udvikling.html"><span>Fondens udvikling</span></a>
+</li>
+<li><a class="sm-link" href="../tech.html#temaer"><span>Fonden fordelt på temaer</span></a>
+</li>
+<li><a class="sm-link" href="../portfolio/index.html#portfolio"><span>De <span data-tal="top10.antal" data-fmt="talord">…</span> største selskaber</span></a>
+</li>
+<li><a class="sm-link" href="../portfolio/index.html#portfolio"><span>Porteføljen</span></a>
+<ul class="sm-under sm-under--fond" aria-label="Porteføljen">
+<li><a class="sm-link sm-link--under" href="../portfolio/index.html#portfolio" data-portefolje="portfolio"><span>Portefølje</span></a></li>
+<li><a class="sm-link sm-link--under" href="../portfolio/index.html#highs" data-portefolje="highs"><span>52-ugers top</span></a></li>
+<li><a class="sm-link sm-link--under" href="../portfolio/index.html#preview-risk-summary" data-portefolje="risk-summary"><span>Risiko</span></a></li>
+<li><a class="sm-link sm-link--under" href="../portfolio/index.html#method" data-portefolje="method"><span>Metode</span></a></li>
+</ul>
+</li>
+<li><a class="sm-link" href="../widget/index.html#global-disclaimer"><span>Risiko og vigtig information</span></a>
+</li>
+</ul>
+</nav>
+<nav class="sm-gruppe" aria-labelledby="sm-h-temaer">
+<h2 class="sm-overskrift" id="sm-h-temaer"><span>Temaer</span><span class="sm-overskrift-note">Andel af fonden</span></h2>
+<ul class="sm-liste">
+</ul>
+<ul class="sm-liste sm-temaliste" id="sm-temaer" data-ordne="temaer">
+<li data-id="chips"><a class="sm-link sm-link--tema" style="--tf:#8bb8bc" href="../temaer/chips.html"><svg class="ik" aria-hidden="true"><use href="#t-chips"></use></svg><span>Chips og halvledere</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="energi"><a class="sm-link sm-link--tema" style="--tf:#759ebc" href="../temaer/energi.html"><svg class="ik" aria-hidden="true"><use href="#t-energi"></use></svg><span>Energi og elnet</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="datacenter"><a class="sm-link sm-link--tema" style="--tf:#d5ba75" href="../temaer/datacenter.html"><svg class="ik" aria-hidden="true"><use href="#t-datacenter"></use></svg><span>Datacentre</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="platforme"><a class="sm-link sm-link--tema" style="--tf:#b78f70" href="../temaer/platforme.html"><svg class="ik" aria-hidden="true"><use href="#t-platforme"></use></svg><span>Platformsøkonomi</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="fysisk-ai" class="er-aktiv"><a class="sm-link sm-link--tema er-foraelder" style="--tf:#9ab595" href="../temaer/fysisk-ai.html"><svg class="ik" aria-hidden="true"><use href="#t-fysisk-ai"></use></svg><span>Robotter &amp; fysisk AI</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="raastoffer"><a class="sm-link sm-link--tema" style="--tf:#bd9cbb" href="../temaer/raastoffer.html"><svg class="ik" aria-hidden="true"><use href="#t-raastoffer"></use></svg><span>Råstoffer</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="rumfart"><a class="sm-link sm-link--tema" style="--tf:#a18cc7" href="../temaer/rumfart.html"><svg class="ik" aria-hidden="true"><use href="#t-rumfart"></use></svg><span>Rumfart</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="fintech"><a class="sm-link sm-link--tema" style="--tf:#6ea4bb" href="../temaer/fintech.html"><svg class="ik" aria-hidden="true"><use href="#t-fintech"></use></svg><span>Fintech</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="krypto"><a class="sm-link sm-link--tema" style="--tf:#a8ba86" href="../temaer/krypto.html"><svg class="ik" aria-hidden="true"><use href="#t-krypto"></use></svg><span>Krypto</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="software"><a class="sm-link sm-link--tema" style="--tf:#c9a58b" href="../temaer/software.html"><svg class="ik" aria-hidden="true"><use href="#t-software"></use></svg><span>Software &amp; AI</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="sundhed"><a class="sm-link sm-link--tema" style="--tf:#a4a6cf" href="../temaer/sundhed.html"><svg class="ik" aria-hidden="true"><use href="#t-sundhed"></use></svg><span>Sundhed og biotek</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="kvante"><a class="sm-link sm-link--tema" style="--tf:#cd99a5" href="../temaer/kvante.html"><svg class="ik" aria-hidden="true"><use href="#t-kvante"></use></svg><span>Kvantecomputere</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+</ul>
+<button class="sm-vis-flere" type="button" aria-expanded="false" aria-controls="sm-temaer">
+<span class="sm-vis-tekst">Vis alle <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer</span><span class="sm-vis-faerre" hidden>Vis færre temaer</span><svg class="ik ik--s" aria-hidden="true"><use href="#i-ned"></use></svg>
+</button>
+</nav>
+<nav class="sm-gruppe" aria-labelledby="sm-h-selskaber">
+<h2 class="sm-overskrift" id="sm-h-selskaber"><span>Selskaber</span><span class="sm-overskrift-note">Andel af fonden</span></h2>
+<ul class="sm-liste">
+</ul>
+<ul class="sm-liste" data-liste="top10.liste" data-skabelon="tpl-sm-top"></ul>
+<a class="sm-alle" href="../alle-selskaber.html"><svg class="ik ik--s" aria-hidden="true"><use href="#i-selskab"></use></svg><span>Se alle selskaber i fonden</span><svg class="ik ik--s" aria-hidden="true"><use href="#i-frem"></use></svg></a>
+<template id="tpl-sm-top"><li><a class="sm-selskab" data-link-selskab href="#"><span class="sm-logo" aria-hidden="true" data-f="forbogstav"></span><span class="sm-navn" data-f="navn"></span><span class="sm-tal" data-f="andel" data-fmt="pct"></span></a></li></template>
+<ul class="sm-liste" hidden>
+</ul>
+</nav>
+</div>
+<div class="sm-bund">
+<button class="temaskift" id="temaskift" type="button" aria-label="Skift til lyst tema"><svg class="ik ik--sol" aria-hidden="true" viewbox="0 0 24 24"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"></path></svg><svg class="ik ik--maane" aria-hidden="true" viewbox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"></path></svg><span class="temaskift-tekst">Lyst tema</span></button>
+<div class="sm-datakort"><svg class="ik" aria-hidden="true"><use href="#i-kalender"></use></svg><div><p class="sm-data-t">Alle andele pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…</span></p><p class="sm-data-s">Tallene er fra PMINDI. Markedsføringsmateriale. Ikke personlig investeringsrådgivning.</p></div></div>
+</div>
+</aside>
+<div class="hoved">
+<main id="indhold" tabindex="-1"><nav class="up-trail" aria-label="Du er her"><a href="../tech.html">Tech</a><span aria-hidden="true">/</span><a href="../temaer/fysisk-ai.html">Robotter &amp; fysisk AI</a><span aria-hidden="true">/</span><span aria-current="page">Ford Motor</span></nav><nav class="up-shortcuts" aria-label="På denne side"><a href="#hvad">Forstå selskabet</a></nav>
+<section class="sektion sektion--overblik v18s" id="overblik" aria-labelledby="h-side">
+<header class="v18s-hoved v18s-hoved--kort"><div class="sidehoved-ikon sidehoved-ikon--logo sidehoved-ikon--billede" aria-hidden="true"><img src="../assets/img/logoer/ae3f14d060.webp" width="56" height="56" alt=""></div><div><p class="kicker">Selskab i temaet <a class="kicker-link" href="../temaer/fysisk-ai.html">Robotter &amp; fysisk AI</a></p>
+<h1 id="h-side">Ford Motor</h1></div></header>
+<article class="kort kort--hero kort--orbit kort--topanim" aria-labelledby="h-hero">
+<div class="hero-billede hero-billede--svg ta-baand"><div class="ta-udsnit"><svg class="hero-svg ta-svg" id="ta-ford-motor" viewbox="0 0 1200 600" preserveaspectratio="xMidYMid slice" data-varighed="3" style="--ux:398;--uy:40;--uw:293;--uh:130" aria-hidden="true" focusable="false">
 
 <style>#ta-ford-motor .fs{fill:var(--c-space)}#ta-ford-motor .fp{fill:var(--c-surface)}#ta-ford-motor .f1{fill:var(--c-data-1)}#ta-ford-motor .f2{fill:var(--c-data-2)}#ta-ford-motor .f3{fill:var(--c-data-3)}#ta-ford-motor .fa{fill:var(--c-accent)}#ta-ford-motor .fl{fill:var(--c-data-1);fill-opacity:.2}#ta-ford-motor .fm{fill:var(--c-data-1);fill-opacity:.42}#ta-ford-motor .fn{fill:none}#ta-ford-motor .fg{fill:var(--c-line)}#ta-ford-motor .s1{stroke:var(--c-data-1)}#ta-ford-motor .s2{stroke:var(--c-data-2)}#ta-ford-motor .s3{stroke:var(--c-data-3)}#ta-ford-motor .sa{stroke:var(--c-accent)}#ta-ford-motor .sp{stroke:var(--c-surface)}#ta-ford-motor .sl{stroke:var(--c-line-strong)}@media (max-width:599.98px),(max-height:479.98px) and (orientation:landscape){#ta-ford-motor .ta-scene{clip-path:url(#ta-ford-motor-u)}#ta-ford-motor .ta-bg{display:none}}#ta-ford-motor.ta-pause *{animation-play-state:paused!important}@media (prefers-reduced-motion:no-preference){#ta-ford-motor.ta-spil .a{animation:ta-ford-motort var(--d,1s) var(--t,0s) cubic-bezier(.3,.7,.2,1) backwards}#ta-ford-motor.ta-spil .dr{stroke-dasharray:1 1;animation:ta-ford-motord var(--d,1s) var(--t,0s) cubic-bezier(.45,.1,.3,1) backwards}#ta-ford-motor.ta-spil .fi{animation:ta-ford-motorf var(--d,.6s) var(--t,0s) ease-out backwards}@keyframes ta-ford-motort{from{transform:translate(var(--x,0px),var(--y,0px)) scale(var(--s,1)) rotate(var(--r,0deg));opacity:var(--o,1)}}@keyframes ta-ford-motord{from{stroke-dashoffset:1}}@keyframes ta-ford-motorf{from{fill-opacity:var(--f0,0)}}#ta-ford-motor.ta-spil .vl{transform-origin:545px 162px;animation:ta-ford-motorv 1.6s .4s cubic-bezier(.3,.7,.2,1) backwards}@keyframes ta-ford-motorv{from{transform:scaleY(0)}}}</style>
 
@@ -316,202 +223,95 @@
 <g data-z="k"><path d="M439 162L540 50M651 162L550 50" class="s1"></path></g><g data-z="k"><g class="vl"><path d="M470.5 162L479.5 162L534.5 67.9L533.1 67.9z" class="fa"></path><path d="M610.5 162L619.5 162L556.9 67.9L555.5 67.9z" class="fa"></path></g></g><g data-z="k"><path d="M524 120l6-16h30l6 16z" class="fp s2"></path><rect x="514" y="119" width="62" height="28" rx="6" class="fp s2"></rect><rect x="520" y="126" width="12" height="6" rx="2" class="f3"></rect><rect x="558" y="126" width="12" height="6" rx="2" class="f3"></rect><rect x="534" y="137" width="22" height="6" rx="1.5" class="s1" stroke-width="2"></rect><rect x="518" y="146" width="12" height="12" rx="3" class="f2"></rect><rect x="560" y="146" width="12" height="12" rx="3" class="f2"></rect></g>
 
 </g></svg></div></div>
-
-            <div class="hero-tekst">
-
-              <p class="kicker"><span data-tal="selskaber.ford-motor.fondsPlads" data-fmt="rangkicker">…</span></p>
-
-              <h2 class="hero-titel" id="h-hero">Tre bilforretninger med forskellige opgaver</h2>
-
-              <p>Ford leverer køretøjerne, forbundne tjenester som førerassistancen BlueCruise og lån til bilerne gennem Ford Credit.</p>
-
-              <div class="hero-handling">
-
-                <a class="knap knap--accent" href="#hvad">Hvad laver Ford Motor?</a>
-
-                <a class="knap knap--rolig" href="../temaer/fysisk-ai.html">Til temaet Robotter &amp; fysisk AI</a>
-
-              </div>
-
-            </div>
-
-            <button class="hero-pause ta-knap" type="button" hidden><svg class="ik ik--s" aria-hidden="true"><use href="#i-afspil"></use></svg><span class="hero-pause-tekst">Afspil igen</span></button>
-
-            <p class="kredit kredit--hero">Illustration: NewDeal Invest.</p>
-
-          </article>
-
-        <nav class="v18s-trin" aria-label="På siden"><ol><li><a class="v18s-trin-knap" href="#hvad"><span class="v18s-trin-nr">01</span><span>Hvad selskabet laver</span></a></li><li><a class="v18s-trin-knap" href="#rolle"><span class="v18s-trin-nr">02</span><span>Hører til temaet</span></a></li><li><a class="v18s-trin-knap" href="#aktien"><span class="v18s-trin-nr">03</span><span>Aktien og fonden</span></a></li><li><a class="v18s-trin-knap" href="#kilder"><span class="v18s-trin-nr">04</span><span>Kilder</span></a></li></ol></nav>
-
-      </section>
-
-      
-
-      <section class="sektion v18s-del " id="hvad" aria-labelledby="h-hvad">
-
-        <p class="v18s-del-nr kicker"><span>01</span> Forstå forretningen</p>
-
-        <h2 class="v18s-del-titel" id="h-hvad">Hvad Ford Motor laver</h2>
-
-        <div class="v18s-tekst"><p>Ford Motor bygger lastbiler, SUV'er, varebiler og personbiler, også under luksusmærket Lincoln, og har både benzin- og hybridbiler, elbiler og en afdeling for erhvervskunder, Ford Pro. Selskabet ligger i Dearborn i Michigan og har ca. 169.000 ansatte på verdensplan.</p><p>Private og virksomheder skal bruge biler og varevogne. Ford leverer køretøjerne, forbundne tjenester som førerassistancen BlueCruise og lån til bilerne gennem Ford Credit.</p></div><div class="v18-c20"><section class="c20-section c20-split" id="v5-forretning"><div><span class="c20-kicker">TEKNOLOGI → FORRETNING</span><h3>Hvad er det vigtige at forstå?</h3><p>Ford Pro knytter køretøjer til erhvervskundernes drift, mens de øvrige forretninger har andre produkt- og investeringsbehov. Overgangen mellem drivlinjer sker samtidig med, at eksisterende køretøjer skal produceres og serviceres. Det gør segmenterne mere oplysende end et enkelt samlet salgstal.</p><p class="c20-note">Forklaringen bygger på selskabskilderne nederst. Spørgsmålene er redaktionelle læsegreb.</p></div><aside><h4>Det er værd at skelne mellem</h4><p>En placering under fysisk AI betyder ikke, at hele Ford er en AI-forretning. Siden viser selskabets faktiske produkter og de forskellige økonomier bag dem.</p></aside></section></div>
-
-      </section>
-
-      
-
-      <section class="sektion v18s-del " id="rolle" aria-labelledby="h-rolle">
-
-        <p class="v18s-del-nr kicker"><span>02</span> Temaet</p>
-
-        <h2 class="v18s-del-titel" id="h-rolle">Hører til temaet</h2>
-
-        <figure class="v18s-tegning v18s-tegning--rolle v18-ramme"><picture class="stub-billede"><img src="../assets/img/temaer/iso/fysisk-ai.webp" alt="" width="1600" height="900"></picture><figcaption class="kredit lille">Illustration: NewDeal Invest.</figcaption></figure>
-
-              <div class="rolle" aria-label="Hører til temaet">
-
-                
-
-                <p>Ford Motor er med i temaet <a class="tekstlink" href="../temaer/fysisk-ai.html">Robotter &amp; fysisk AI</a>.</p>
-
-                
-
-                <p class="lille rolle-kilde">Kilde: fondens temainddeling.</p>
-
-              </div><div class="v18-c20"><section class="c20-ndi" id="v5-perspektiv"><span class="c20-kicker">FRA NYHEDSBREVE OG SUBSTACK</span><h3>Temaets perspektiv</h3><p>Læs NewDeal Invests perspektiv på robotter &amp; fysisk ai. Artiklen bruges som temabaggrund; den er ikke en særskilt analyse af dette selskab.</p><a href="https://www.newdealinvest.dk/post/uge-40-usa-og-europa-to-forskellige-%C3%B8konomier" rel="noopener" target="_blank">Uge 40 - USA og Europa: To forskellige økonomier ↗</a><p class="c20-note">NewDeal Invest · 05.10.2026. Dateret kommentar.</p></section><section class="c20-section"><h3>Tre spørgsmål til næste regnskab</h3><ol class="c20-questions"><li><span>01</span>Hvilke segmenter skaber indtjening?</li><li><span>02</span>Hvad kræver overgangen mellem drivlinjer?</li><li><span>03</span>Hvordan påvirker finansiering og konjunkturer kunderne?</li></ol><p class="c20-note">Brug spørgsmålene til at følge udviklingen. De er ikke en vurdering af aktiens attraktivitet.</p></section></div>
-
-      </section>
-
-      
-
-      <section class="sektion v18s-del " id="aktien" aria-labelledby="h-aktien">
-
-        <p class="v18s-del-nr kicker"><span>03</span> Aktien og fonden</p>
-
-        <h2 class="v18s-del-titel" id="h-aktien">Ford Motor i PMINDI</h2>
-
-        <div class="v18-stortal v18-stortal--selskab">
-
-          <div class="v18-stortal-tal">
-
-            <p class="v18-stortal-v"><span><span data-tal="selskaber.ford-motor.andel" data-fmt="tal">…  </span></span><span class="v18-stortal-enhed">%</span></p>
-
-            <p class="v18-stortal-tekst">af PMINDI er aktier i Ford Motor. Andelen viser, hvor stor en del af fonden aktierne udgør.</p>
-
-            <p class="kildelinje">Andele i PMINDI, den udgave af fonden, der udbetaler udbytte, pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span> (fondens data).</p>
-
-          </div>
-
-          <figure class="rang v18-stortal-figur v18-ramme" data-aktiv-slug="ford-motor">
-
-            <div class="rang-soejler" aria-hidden="true" data-liste="temaer#fysisk-ai.selskaber" data-skabelon="tpl-rang"></div>
-
-            <figcaption class="lille">Temaets selskaber efter andel, største til venstre. Ford Motor er markeret: <span data-tal="selskaber.ford-motor.pladsITema" data-fmt="plads">nr. …</span> af <span data-tal="selskaber.ford-motor.antalITema" data-fmt="heltal">… </span>.</figcaption>
-
-          </figure>
-
-          <template id="tpl-rang"><span class="rang-soejle" data-fbar data-saet="data-slug:slug,data-etiket:navn"></span></template>
-
-          <details class="fold-ud v18-flere-tal">
-
-            <summary>Flere tal om selskabet i fonden</summary>
-
-            <ul class="fakta-liste">
-
-              <li><span>Plads i temaet</span><strong><span data-tal="selskaber.ford-motor.pladsITema" data-fmt="Plads">Nr. …</span> af <span data-tal="selskaber.ford-motor.antalITema" data-fmt="heltal">… </span></strong></li>
-
-              <li data-hvis="selskaber.ford-motor.top10Plads" hidden><span>Blandt fondens største</span><strong><span data-tal="selskaber.ford-motor.top10Plads" data-fmt="Plads">Nr. …</span> af <span data-tal="top10.antal" data-fmt="heltal">… </span></strong></li>
-
-            </ul>
-
-          </details>
-
-        </div>
-
-        <section class="sektion sektion--kurs" id="kurs" aria-labelledby="h-kurs" data-kurs-sektion hidden>
-
-        <div class="kort panel kurs-panel" data-kurs-id="ford-motor" data-kurs-ticker="" data-kurs-fil="">
-
-          <header class="panel-hoved"><h2 class="panel-titel" id="h-kurs"><svg class="ik ik--s" aria-hidden="true"><use href="#i-historie"></use></svg>Aktiens lukkekurs<span data-kurs-periode></span></h2></header>
-
-          <div class="kurs-graf" data-kurs-graf hidden></div>
-
-          <p class="lille" data-kurs-note hidden>Grafen viser aktiens lukkekurs i den valuta, aktien handles i.</p>
-
-        </div>
-
-        
-
-      </section>
-
-      </section>
-
-      
-
-      <section class="sektion v18s-del " id="kilder" aria-labelledby="h-kilder">
-
-        <p class="v18s-del-nr kicker"><span>04</span> Kilder</p>
-
-        <h2 class="v18s-del-titel" id="h-kilder">Kilder til teksten</h2>
-
-        <aside class="kildeblok lille" aria-label="Kilder til teksten"><p class="kildeblok-titel">Kilder</p><ul class="kildeblok-liste"><li><a class="tekstlink tekstlink--tryk" href="https://www.sec.gov/Archives/edgar/data/37996/000003799626000015/f-20251231.htm" target="_blank" rel="noopener">Årsregnskab 2025 (SEC)<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (åbner i nyt vindue)</span></a><span class="kildeblok-dato">11.02.2026</span></li></ul></aside>
-
-      </section>
-
-      
-
-      <section class="sektion sektion--x" id="x-opslag" aria-labelledby="h-x-opslag" data-x-tema data-x-selskab data-x-vis="4" data-x-rel="../" data-x-selskaber='[{"isin": "US3453708600", "navn": "Ford Motor", "slug": "ford-motor"}]' hidden>
-
-        <header class="sektion-hoved">
-
-          <h2 class="sektion-titel" id="h-x-opslag">Det skriver de på X om Ford Motor</h2>
-
-          <p class="sektion-intro">Udvalgte offentlige opslag. Opslagene er andres og ikke NewDeal Invests holdning.</p>
-
-        </header>
-
-        <div class="kort panel x-tema">
-
-          <p class="x-tema-status lille" role="status">Henter opslag …</p>
-
-          <details class="fold-ud fold-mobil fold-sektion" data-aaben-bred><summary aria-expanded="false">Se opslagene fra X</summary><ul class="x-tema-liste" hidden></ul></details>
-
-          <p class="kildelinje x-tema-kilde" hidden></p>
-
-        </div>
-
-      </section>
-
-      <nav class="videre v18s-videre" aria-label="Videre">
-
-        <a class="knap knap--rolig v5-knap" href="../temaer/fysisk-ai.html">Til temaet Robotter &amp; fysisk AI</a>
-
-        <a class="knap knap--rolig v5-knap" href="../index.html">Sådan er fonden bygget</a>
-
-        <a class="knap knap--primaer v5-knap" href="../temaer/fysisk-ai.html" data-hvis="selskaber.ford-motor.naeste" data-href-selskab="selskaber.ford-motor.naeste" hidden><span>Næste i temaet: <span data-navn="selskaber.ford-motor.naeste">…</span></span> <span aria-hidden="true">→</span></a>
-
-        <a class="knap knap--primaer v5-knap" href="../temaer/fysisk-ai.html" data-skjul="selskaber.ford-motor.naeste" hidden>Sidste selskab i temaet. Tilbage til Robotter &amp; fysisk AI <span aria-hidden="true">→</span></a>
-
-      </nav>
-
-
-
-    </main>
-
-    <footer class="sidefod">
-
-      <div class="sidefod-maerke"><span class="logo-felt"><img class="ndi-logo" src="../assets/img/ndi-logo-moerk-baggrund.png" width="2048" height="754" alt="NewDeal Invest" decoding="async"></span></div>
-
-      <div class="sidefod-tekst">
-
-        <p>NewDeal Invest er et brand for NDIIR ApS, investeringsrådgiver for Fundmarket A/S. Markedsføringsmateriale. Ikke personlig investeringsrådgivning. Investering indebærer risiko for tab. Alle andele pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span>.</p>
-
-        <p class="sidefod-kilde">Kilde til fondstal: Fundmarket A/S, der forvalter Investeringsforeningen PortfolioManager. NDIIR ApS yder investeringsrådgivning til foreningen. <span class="sidefod-dato">Opdateret <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span>.</span></p>
-
-      </div>
-
-    </footer>
-
-  </div>
+<div class="hero-tekst">
+<p class="kicker"><span data-tal="selskaber.ford-motor.fondsPlads" data-fmt="rangkicker">…</span></p>
+<h2 class="hero-titel" id="h-hero">Tre bilforretninger med forskellige opgaver</h2>
+<p>Ford leverer køretøjerne, forbundne tjenester som førerassistancen BlueCruise og lån til bilerne gennem Ford Credit.</p>
+<div class="hero-handling">
+<a class="knap knap--accent" href="#hvad">Hvad laver Ford Motor?</a>
+<a class="knap knap--rolig" href="../temaer/fysisk-ai.html">Til temaet Robotter &amp; fysisk AI</a>
+</div>
+</div>
+<button class="hero-pause ta-knap" type="button" hidden><svg class="ik ik--s" aria-hidden="true"><use href="#i-afspil"></use></svg><span class="hero-pause-tekst">Afspil igen</span></button>
+<p class="kredit kredit--hero">Illustration: NewDeal Invest.</p>
+</article>
+<nav class="v18s-trin" aria-label="På siden"><ol><li><a class="v18s-trin-knap" href="#hvad"><span class="v18s-trin-nr">01</span><span>Hvad selskabet laver</span></a></li><li><a class="v18s-trin-knap" href="#rolle"><span class="v18s-trin-nr">02</span><span>Hører til temaet</span></a></li><li><a class="v18s-trin-knap" href="#aktien"><span class="v18s-trin-nr">03</span><span>Aktien og fonden</span></a></li><li><a class="v18s-trin-knap" href="#kilder"><span class="v18s-trin-nr">04</span><span>Kilder</span></a></li></ol></nav>
+</section>
+<section class="sektion v18s-del " id="hvad" aria-labelledby="h-hvad">
+<p class="v18s-del-nr kicker"><span>01</span> Forstå forretningen</p>
+<h2 class="v18s-del-titel" id="h-hvad">Hvad Ford Motor laver</h2>
+<div class="v18s-tekst"><p>Ford Motor bygger lastbiler, SUV'er, varebiler og personbiler, også under luksusmærket Lincoln, og har både benzin- og hybridbiler, elbiler og en afdeling for erhvervskunder, Ford Pro. Selskabet ligger i Dearborn i Michigan og har ca. 169.000 ansatte på verdensplan.</p><p>Private og virksomheder skal bruge biler og varevogne. Ford leverer køretøjerne, forbundne tjenester som førerassistancen BlueCruise og lån til bilerne gennem Ford Credit.</p></div><div class="v18-c20"><section class="c20-section c20-split" id="v5-forretning"><div><span class="c20-kicker">TEKNOLOGI → FORRETNING</span><h3>Hvad er det vigtige at forstå?</h3><p>Ford Pro knytter køretøjer til erhvervskundernes drift, mens de øvrige forretninger har andre produkt- og investeringsbehov. Overgangen mellem drivlinjer sker samtidig med, at eksisterende køretøjer skal produceres og serviceres. Det gør segmenterne mere oplysende end et enkelt samlet salgstal.</p><p class="c20-note">Forklaringen bygger på selskabskilderne nederst. Spørgsmålene er redaktionelle læsegreb.</p></div><aside><h4>Det er værd at skelne mellem</h4><p>En placering under fysisk AI betyder ikke, at hele Ford er en AI-forretning. Siden viser selskabets faktiske produkter og de forskellige økonomier bag dem.</p></aside></section></div>
+</section>
+<section class="sektion v18s-del " id="rolle" aria-labelledby="h-rolle">
+<p class="v18s-del-nr kicker"><span>02</span> Temaet</p>
+<h2 class="v18s-del-titel" id="h-rolle">Hører til temaet</h2>
+<figure class="v18s-tegning v18s-tegning--rolle v18-ramme"><picture class="stub-billede"><img src="../assets/img/temaer/iso/fysisk-ai.webp" alt="" width="1600" height="900"></picture><figcaption class="kredit lille">Illustration: NewDeal Invest.</figcaption></figure>
+<div class="rolle" aria-label="Hører til temaet">
+<p>Ford Motor er med i temaet <a class="tekstlink" href="../temaer/fysisk-ai.html">Robotter &amp; fysisk AI</a>.</p>
+<p class="lille rolle-kilde">Kilde: fondens temainddeling.</p>
+</div><div class="v18-c20"><section class="c20-ndi" id="v5-perspektiv"><span class="c20-kicker">FRA NYHEDSBREVE OG SUBSTACK</span><h3>Temaets perspektiv</h3><p>Læs NewDeal Invests perspektiv på robotter &amp; fysisk ai. Artiklen bruges som temabaggrund; den er ikke en særskilt analyse af dette selskab.</p><a href="https://www.newdealinvest.dk/post/uge-40-usa-og-europa-to-forskellige-%C3%B8konomier" rel="noopener" target="_blank">Uge 40 - USA og Europa: To forskellige økonomier ↗</a><p class="c20-note">NewDeal Invest · 05.10.2026. Dateret kommentar.</p></section><section class="c20-section"><h3>Tre spørgsmål til næste regnskab</h3><ol class="c20-questions"><li><span>01</span>Hvilke segmenter skaber indtjening?</li><li><span>02</span>Hvad kræver overgangen mellem drivlinjer?</li><li><span>03</span>Hvordan påvirker finansiering og konjunkturer kunderne?</li></ol><p class="c20-note">Brug spørgsmålene til at følge udviklingen. De er ikke en vurdering af aktiens attraktivitet.</p></section></div>
+</section>
+<section class="sektion v18s-del " id="aktien" aria-labelledby="h-aktien">
+<p class="v18s-del-nr kicker"><span>03</span> Aktien og fonden</p>
+<h2 class="v18s-del-titel" id="h-aktien">Ford Motor i PMINDI</h2>
+<div class="v18-stortal v18-stortal--selskab">
+<div class="v18-stortal-tal">
+<p class="v18-stortal-v"><span><span data-tal="selskaber.ford-motor.andel" data-fmt="tal">…  </span></span><span class="v18-stortal-enhed">%</span></p>
+<p class="v18-stortal-tekst">af PMINDI er aktier i Ford Motor. Andelen viser, hvor stor en del af fonden aktierne udgør.</p>
+<p class="kildelinje">Andele i PMINDI, den udgave af fonden, der udbetaler udbytte, pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span> (fondens data).</p>
+</div>
+<figure class="rang v18-stortal-figur v18-ramme" data-aktiv-slug="ford-motor">
+<div class="rang-soejler" aria-hidden="true" data-liste="temaer#fysisk-ai.selskaber" data-skabelon="tpl-rang"></div>
+<figcaption class="lille">Temaets selskaber efter andel, største til venstre. Ford Motor er markeret: <span data-tal="selskaber.ford-motor.pladsITema" data-fmt="plads">nr. …</span> af <span data-tal="selskaber.ford-motor.antalITema" data-fmt="heltal">… </span>.</figcaption>
+</figure>
+<template id="tpl-rang"><span class="rang-soejle" data-fbar data-saet="data-slug:slug,data-etiket:navn"></span></template>
+<details class="fold-ud v18-flere-tal">
+<summary>Flere tal om selskabet i fonden</summary>
+<ul class="fakta-liste">
+<li><span>Plads i temaet</span><strong><span data-tal="selskaber.ford-motor.pladsITema" data-fmt="Plads">Nr. …</span> af <span data-tal="selskaber.ford-motor.antalITema" data-fmt="heltal">… </span></strong></li>
+<li data-hvis="selskaber.ford-motor.top10Plads" hidden><span>Blandt fondens største</span><strong><span data-tal="selskaber.ford-motor.top10Plads" data-fmt="Plads">Nr. …</span> af <span data-tal="top10.antal" data-fmt="heltal">… </span></strong></li>
+</ul>
+</details>
+</div>
+<section class="sektion sektion--kurs" id="kurs" aria-labelledby="h-kurs" data-kurs-sektion hidden>
+<div class="kort panel kurs-panel" data-kurs-id="ford-motor" data-kurs-ticker="" data-kurs-fil="">
+<header class="panel-hoved"><h2 class="panel-titel" id="h-kurs"><svg class="ik ik--s" aria-hidden="true"><use href="#i-historie"></use></svg>Aktiens lukkekurs<span data-kurs-periode></span></h2></header>
+<div class="kurs-graf" data-kurs-graf hidden></div>
+<p class="lille" data-kurs-note hidden>Grafen viser aktiens lukkekurs i den valuta, aktien handles i.</p>
+</div>
+</section>
+</section>
+<section class="sektion v18s-del " id="kilder" aria-labelledby="h-kilder">
+<p class="v18s-del-nr kicker"><span>04</span> Kilder</p>
+<h2 class="v18s-del-titel" id="h-kilder">Kilder til teksten</h2>
+<aside class="kildeblok lille" aria-label="Kilder til teksten"><p class="kildeblok-titel">Kilder</p><ul class="kildeblok-liste"><li><a class="tekstlink tekstlink--tryk" href="https://www.sec.gov/Archives/edgar/data/37996/000003799626000015/f-20251231.htm" target="_blank" rel="noopener">Årsregnskab 2025 (SEC)<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (åbner i nyt vindue)</span></a><span class="kildeblok-dato">11.02.2026</span></li></ul></aside>
+</section>
+<section class="sektion sektion--x" id="x-opslag" aria-labelledby="h-x-opslag" data-x-tema data-x-selskab data-x-vis="4" data-x-rel="../" data-x-selskaber='[{"isin": "US3453708600", "navn": "Ford Motor", "slug": "ford-motor"}]' hidden>
+<header class="sektion-hoved">
+<h2 class="sektion-titel" id="h-x-opslag">Det skriver de på X om Ford Motor</h2>
+<p class="sektion-intro">Udvalgte offentlige opslag. Opslagene er andres og ikke NewDeal Invests holdning.</p>
+</header>
+<div class="kort panel x-tema">
+<p class="x-tema-status lille" role="status">Henter opslag …</p>
+<details class="fold-ud fold-mobil fold-sektion" data-aaben-bred><summary aria-expanded="false">Se opslagene fra X</summary><ul class="x-tema-liste" hidden></ul></details>
+<p class="kildelinje x-tema-kilde" hidden></p>
+</div>
+</section>
+<nav class="videre v18s-videre" aria-label="Videre">
+<a class="knap knap--rolig v5-knap" href="../temaer/fysisk-ai.html">Til temaet Robotter &amp; fysisk AI</a>
+<a class="knap knap--rolig v5-knap" href="../portfolio/index.html">Sådan er fonden bygget</a>
+<a class="knap knap--primaer v5-knap" href="../temaer/fysisk-ai.html" data-hvis="selskaber.ford-motor.naeste" data-href-selskab="selskaber.ford-motor.naeste" hidden><span>Næste i temaet: <span data-navn="selskaber.ford-motor.naeste">…</span></span> <span aria-hidden="true">→</span></a>
+<a class="knap knap--primaer v5-knap" href="../temaer/fysisk-ai.html" data-skjul="selskaber.ford-motor.naeste" hidden>Sidste selskab i temaet. Tilbage til Robotter &amp; fysisk AI <span aria-hidden="true">→</span></a>
+</nav>
+</main>
+<footer class="sidefod">
+<div class="sidefod-maerke"><span class="logo-felt"><img class="ndi-logo" src="../assets/img/ndi-logo-moerk-baggrund.png" width="2048" height="754" alt="NewDeal Invest" decoding="async"></span></div>
+<div class="sidefod-tekst">
+<p>NewDeal Invest er et brand for NDIIR ApS, investeringsrådgiver for Fundmarket A/S. Markedsføringsmateriale. Ikke personlig investeringsrådgivning. Investering indebærer risiko for tab. Alle andele pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span>.</p>
+<p class="sidefod-kilde">Kilde til fondstal: Fundmarket A/S, der forvalter Investeringsforeningen PortfolioManager. NDIIR ApS yder investeringsrådgivning til foreningen. <span class="sidefod-dato">Opdateret <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span>.</span></p>
+</div>
+</footer>
+</div>
 
 </div>
 
@@ -541,6 +341,6 @@
 
 <script src="../assets/js/topanimation.js?v=20261031-animation1"></script>
 
-</body>
+<script defer src="../assets/js/journey-polish.js?v=20261031"></script></body>
 
 </html>

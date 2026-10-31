@@ -39,12 +39,9 @@
 
 <link rel="stylesheet" href="../assets/v5-temaer/datacenter.css">
 
-<link rel="stylesheet" href="../assets/css/review.css?v=20261031logos"><link rel="stylesheet" href="../assets/css/review-media.css?v=20261031-1"></head>
+<link rel="stylesheet" href="../assets/css/review.css?v=20261031logos"><link rel="stylesheet" href="../assets/css/review-media.css?v=20261031-2"><link rel="stylesheet" href="../assets/css/journey-polish.css?v=20261031"></head>
 
 <body>
-
-
-
 <svg class="sprite" aria-hidden="true" focusable="false">
 
 <symbol id="i-pause" viewbox="0 0 24 24"><path d="M9 6v12M15 6v12"></path></symbol>
@@ -128,278 +125,139 @@
 <a class="spring" href="#indhold">Gå til indhold</a>
 
 <div class="app">
-
-  <header class="topbar-mobil">
-
-    <button class="ikonknap" id="menu-aaben" type="button" aria-controls="sidemenu" aria-expanded="false"><svg class="ik" aria-hidden="true"><use href="#i-menu"></use></svg><span class="sr">Åbn menuen</span></button>
-
-    <a class="maerke maerke--lille" href="../index.html" aria-label="NewDeal Invest, til fondsoverblikket">
-
-      <span class="logo-felt logo-felt--lille"><img class="ndi-logo" src="../assets/img/ndi-logo-moerk-baggrund.png" width="2048" height="754" alt="NewDeal Invest" decoding="async"></span>
-
-      <span class="maerke-tekst"><span class="maerke-navn">Datacentre</span><span class="maerke-sub" id="aktuel-sektion">Tema</span></span>
-
-    </a>
-
-    <a class="knap knap--lille" href="https://fundmarket.dk/newdeal-invest-kl-n/" target="_blank" rel="noopener">Faktaark<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (KID) og prospekt for PMINDI (åbner i nyt vindue)</span></a>
-
-  </header>
-
-  <div class="slor" id="slor" hidden></div>
-
-  <aside class="sidemenu" id="sidemenu" aria-label="Hovedmenu">
-
-    <div class="sm-top">
-
-      <a class="maerke maerke--logo" href="../index.html" aria-label="NewDeal Invest, fondsoverblik">
-
-        <span class="logo-felt"><img class="ndi-logo" src="../assets/img/ndi-logo-moerk-baggrund.png" width="2048" height="754" alt="NewDeal Invest" decoding="async"></span><span class="maerke-sub">Fondsoverblik</span>
-
-      </a>
-
-      <button class="ikonknap sm-luk" id="menu-luk" type="button"><svg class="ik" aria-hidden="true"><use href="#i-luk"></use></svg><span class="sr">Luk menuen</span></button>
-
-    </div>
-
-    <nav class="review-section-nav" aria-label="Vælg indgang"><a href="../index.html">Porteføljen</a><a href="../tech.html">Tech</a><a href="../widget/index.html">Afkast</a></nav><div class="sm-rul">
-
-      <a class="sm-tilbage" href="https://www.newdealinvest.dk/"><svg class="ik" aria-hidden="true"><use href="#i-tilbage"></use></svg><span>Til NewDeal Invests forside</span></a>
-
-
-
-      <nav class="sm-gruppe" aria-labelledby="sm-h-fond">
-
-        <h2 class="sm-overskrift" id="sm-h-fond"><span>Fonden</span></h2>
-
-        <ul class="sm-liste">
-
-          <li><a class="sm-link" href="../fondens-udvikling.html"><span>Fondens udvikling</span></a>
-
-          </li>
-
-          <li><a class="sm-link" href="../index.html#temaer"><span>Fonden fordelt på temaer</span></a>
-
-          </li>
-
-          <li><a class="sm-link" href="../index.html#top10"><span>De <span data-tal="top10.antal" data-fmt="talord">…</span> største selskaber</span></a>
-
-          </li>
-
-          <li><a class="sm-link" href="../index.html#portefoeljen"><span>Porteføljen</span></a>
-
-            <ul class="sm-under sm-under--fond" aria-label="Porteføljen">
-
-              <li><a class="sm-link sm-link--under" href="../index.html#portefoeljen-portfolio" data-portefolje="portfolio"><span>Portefølje</span></a></li>
-
-              <li><a class="sm-link sm-link--under" href="../index.html#portefoeljen-highs" data-portefolje="highs"><span>52-ugers top</span></a></li>
-
-              <li><a class="sm-link sm-link--under" href="../index.html#portefoeljen-risk-summary" data-portefolje="risk-summary"><span>Risiko</span></a></li>
-
-              <li><a class="sm-link sm-link--under" href="../index.html#portefoeljen-method" data-portefolje="method"><span>Metode</span></a></li>
-
-            </ul>
-
-          </li>
-
-          <li><a class="sm-link" href="../index.html#vigtig-information"><span>Risiko og vigtig information</span></a>
-
-          </li>
-
-        </ul>
-
-      </nav>
-
-      <nav class="sm-gruppe" aria-labelledby="sm-h-temaer">
-
-        <h2 class="sm-overskrift" id="sm-h-temaer"><span>Temaer</span><span class="sm-overskrift-note">Andel af fonden</span></h2>
-
-        <ul class="sm-liste">
-
-        </ul>
-
-        <ul class="sm-liste sm-temaliste" id="sm-temaer" data-ordne="temaer">
-
-          <li data-id="chips"><a class="sm-link sm-link--tema" style="--tf:#8bb8bc" href="../temaer/chips.html"><svg class="ik" aria-hidden="true"><use href="#t-chips"></use></svg><span>Chips og halvledere</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="energi"><a class="sm-link sm-link--tema" style="--tf:#759ebc" href="../temaer/energi.html"><svg class="ik" aria-hidden="true"><use href="#t-energi"></use></svg><span>Energi og elnet</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="datacenter" class="er-aktiv"><a class="sm-link sm-link--tema" style="--tf:#d5ba75" href="../temaer/datacenter.html" aria-current="page"><svg class="ik" aria-hidden="true"><use href="#t-datacenter"></use></svg><span>Datacentre</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="platforme"><a class="sm-link sm-link--tema" style="--tf:#b78f70" href="../temaer/platforme.html"><svg class="ik" aria-hidden="true"><use href="#t-platforme"></use></svg><span>Platformsøkonomi</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="fysisk-ai"><a class="sm-link sm-link--tema" style="--tf:#9ab595" href="../temaer/fysisk-ai.html"><svg class="ik" aria-hidden="true"><use href="#t-fysisk-ai"></use></svg><span>Robotter &amp; fysisk AI</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="raastoffer"><a class="sm-link sm-link--tema" style="--tf:#bd9cbb" href="../temaer/raastoffer.html"><svg class="ik" aria-hidden="true"><use href="#t-raastoffer"></use></svg><span>Råstoffer</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="rumfart"><a class="sm-link sm-link--tema" style="--tf:#a18cc7" href="../temaer/rumfart.html"><svg class="ik" aria-hidden="true"><use href="#t-rumfart"></use></svg><span>Rumfart</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="fintech"><a class="sm-link sm-link--tema" style="--tf:#6ea4bb" href="../temaer/fintech.html"><svg class="ik" aria-hidden="true"><use href="#t-fintech"></use></svg><span>Fintech</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="krypto"><a class="sm-link sm-link--tema" style="--tf:#a8ba86" href="../temaer/krypto.html"><svg class="ik" aria-hidden="true"><use href="#t-krypto"></use></svg><span>Krypto</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="software"><a class="sm-link sm-link--tema" style="--tf:#c9a58b" href="../temaer/software.html"><svg class="ik" aria-hidden="true"><use href="#t-software"></use></svg><span>Software &amp; AI</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="sundhed"><a class="sm-link sm-link--tema" style="--tf:#a4a6cf" href="../temaer/sundhed.html"><svg class="ik" aria-hidden="true"><use href="#t-sundhed"></use></svg><span>Sundhed og biotek</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="kvante"><a class="sm-link sm-link--tema" style="--tf:#cd99a5" href="../temaer/kvante.html"><svg class="ik" aria-hidden="true"><use href="#t-kvante"></use></svg><span>Kvantecomputere</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-        </ul>
-
-        <button class="sm-vis-flere" type="button" aria-expanded="false" aria-controls="sm-temaer">
-
-          <span class="sm-vis-tekst">Vis alle <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer</span><span class="sm-vis-faerre" hidden>Vis færre temaer</span><svg class="ik ik--s" aria-hidden="true"><use href="#i-ned"></use></svg>
-
-        </button>
-
-      </nav>
-
-      <nav class="sm-gruppe" aria-labelledby="sm-h-selskaber">
-
-        <h2 class="sm-overskrift" id="sm-h-selskaber"><span>Selskaber</span><span class="sm-overskrift-note">Andel af fonden</span></h2>
-
-        <ul class="sm-liste">
-
-        </ul>
-
-        <ul class="sm-liste" data-liste="top10.liste" data-skabelon="tpl-sm-top"></ul>
-
-        <a class="sm-alle" href="../alle-selskaber.html"><svg class="ik ik--s" aria-hidden="true"><use href="#i-selskab"></use></svg><span>Se alle selskaber i fonden</span><svg class="ik ik--s" aria-hidden="true"><use href="#i-frem"></use></svg></a>
-
-        <template id="tpl-sm-top"><li><a class="sm-selskab" data-link-selskab href="#"><span class="sm-logo" aria-hidden="true" data-f="forbogstav"></span><span class="sm-navn" data-f="navn"></span><span class="sm-tal" data-f="andel" data-fmt="pct"></span></a></li></template>
-
-        <ul class="sm-liste" hidden>
-
-        </ul>
-
-      </nav>
-
-    </div>
-
-    <div class="sm-bund">
-
-      <button class="temaskift" id="temaskift" type="button" aria-label="Skift til lyst tema"><svg class="ik ik--sol" aria-hidden="true" viewbox="0 0 24 24"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"></path></svg><svg class="ik ik--maane" aria-hidden="true" viewbox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"></path></svg><span class="temaskift-tekst">Lyst tema</span></button>
-
-      <div class="sm-datakort"><svg class="ik" aria-hidden="true"><use href="#i-kalender"></use></svg><div><p class="sm-data-t">Alle andele pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…</span></p><p class="sm-data-s">Tallene er fra PMINDI. Markedsføringsmateriale. Ikke personlig investeringsrådgivning.</p></div></div>
-
-    </div>
-
-  </aside>
-
-  <div class="hoved">
-
-    <main id="indhold" tabindex="-1">
+<header class="topbar-mobil">
+<button class="ikonknap" id="menu-aaben" type="button" aria-controls="sidemenu" aria-expanded="false"><svg class="ik" aria-hidden="true"><use href="#i-menu"></use></svg><span class="sr">Åbn menuen</span></button>
+<a class="maerke maerke--lille" href="../portfolio/index.html" aria-label="NewDeal Invest, til fondsoverblikket">
+<span class="logo-felt logo-felt--lille"><img class="ndi-logo" src="../assets/img/ndi-logo-moerk-baggrund.png" width="2048" height="754" alt="NewDeal Invest" decoding="async"></span>
+<span class="maerke-tekst"><span class="maerke-navn">Datacentre</span><span class="maerke-sub" id="aktuel-sektion">Tema</span></span>
+</a>
+<a class="knap knap--lille" href="https://fundmarket.dk/newdeal-invest-kl-n/" target="_blank" rel="noopener">Faktaark<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (KID) og prospekt for PMINDI (åbner i nyt vindue)</span></a>
+</header>
+<div class="slor" id="slor" hidden></div>
+<aside class="sidemenu" id="sidemenu" aria-label="Hovedmenu">
+<div class="sm-top">
+<a class="maerke maerke--logo" href="../portfolio/index.html" aria-label="NewDeal Invest, fondsoverblik">
+<span class="logo-felt"><img class="ndi-logo" src="../assets/img/ndi-logo-moerk-baggrund.png" width="2048" height="754" alt="NewDeal Invest" decoding="async"></span><span class="maerke-sub">Fondsoverblik</span>
+</a>
+<button class="ikonknap sm-luk" id="menu-luk" type="button"><svg class="ik" aria-hidden="true"><use href="#i-luk"></use></svg><span class="sr">Luk menuen</span></button>
+</div>
+<nav class="review-section-nav" aria-label="Vælg indgang"><a href="../portfolio/index.html">Porteføljen</a><a href="../tech.html">Tech</a><a href="../widget/index.html">Afkast</a></nav><div class="sm-rul">
+<a class="sm-tilbage" href="https://www.newdealinvest.dk/"><svg class="ik" aria-hidden="true"><use href="#i-tilbage"></use></svg><span>Til NewDeal Invests forside</span></a>
+<nav class="sm-gruppe" aria-labelledby="sm-h-fond">
+<h2 class="sm-overskrift" id="sm-h-fond"><span>Fonden</span></h2>
+<ul class="sm-liste">
+<li><a class="sm-link" href="../fondens-udvikling.html"><span>Fondens udvikling</span></a>
+</li>
+<li><a class="sm-link" href="../tech.html#temaer"><span>Fonden fordelt på temaer</span></a>
+</li>
+<li><a class="sm-link" href="../portfolio/index.html#portfolio"><span>De <span data-tal="top10.antal" data-fmt="talord">…</span> største selskaber</span></a>
+</li>
+<li><a class="sm-link" href="../portfolio/index.html#portfolio"><span>Porteføljen</span></a>
+<ul class="sm-under sm-under--fond" aria-label="Porteføljen">
+<li><a class="sm-link sm-link--under" href="../portfolio/index.html#portfolio" data-portefolje="portfolio"><span>Portefølje</span></a></li>
+<li><a class="sm-link sm-link--under" href="../portfolio/index.html#highs" data-portefolje="highs"><span>52-ugers top</span></a></li>
+<li><a class="sm-link sm-link--under" href="../portfolio/index.html#preview-risk-summary" data-portefolje="risk-summary"><span>Risiko</span></a></li>
+<li><a class="sm-link sm-link--under" href="../portfolio/index.html#method" data-portefolje="method"><span>Metode</span></a></li>
+</ul>
+</li>
+<li><a class="sm-link" href="../widget/index.html#global-disclaimer"><span>Risiko og vigtig information</span></a>
+</li>
+</ul>
+</nav>
+<nav class="sm-gruppe" aria-labelledby="sm-h-temaer">
+<h2 class="sm-overskrift" id="sm-h-temaer"><span>Temaer</span><span class="sm-overskrift-note">Andel af fonden</span></h2>
+<ul class="sm-liste">
+</ul>
+<ul class="sm-liste sm-temaliste" id="sm-temaer" data-ordne="temaer">
+<li data-id="chips"><a class="sm-link sm-link--tema" style="--tf:#8bb8bc" href="../temaer/chips.html"><svg class="ik" aria-hidden="true"><use href="#t-chips"></use></svg><span>Chips og halvledere</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="energi"><a class="sm-link sm-link--tema" style="--tf:#759ebc" href="../temaer/energi.html"><svg class="ik" aria-hidden="true"><use href="#t-energi"></use></svg><span>Energi og elnet</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="datacenter" class="er-aktiv"><a class="sm-link sm-link--tema" style="--tf:#d5ba75" href="../temaer/datacenter.html" aria-current="page"><svg class="ik" aria-hidden="true"><use href="#t-datacenter"></use></svg><span>Datacentre</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="platforme"><a class="sm-link sm-link--tema" style="--tf:#b78f70" href="../temaer/platforme.html"><svg class="ik" aria-hidden="true"><use href="#t-platforme"></use></svg><span>Platformsøkonomi</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="fysisk-ai"><a class="sm-link sm-link--tema" style="--tf:#9ab595" href="../temaer/fysisk-ai.html"><svg class="ik" aria-hidden="true"><use href="#t-fysisk-ai"></use></svg><span>Robotter &amp; fysisk AI</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="raastoffer"><a class="sm-link sm-link--tema" style="--tf:#bd9cbb" href="../temaer/raastoffer.html"><svg class="ik" aria-hidden="true"><use href="#t-raastoffer"></use></svg><span>Råstoffer</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="rumfart"><a class="sm-link sm-link--tema" style="--tf:#a18cc7" href="../temaer/rumfart.html"><svg class="ik" aria-hidden="true"><use href="#t-rumfart"></use></svg><span>Rumfart</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="fintech"><a class="sm-link sm-link--tema" style="--tf:#6ea4bb" href="../temaer/fintech.html"><svg class="ik" aria-hidden="true"><use href="#t-fintech"></use></svg><span>Fintech</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="krypto"><a class="sm-link sm-link--tema" style="--tf:#a8ba86" href="../temaer/krypto.html"><svg class="ik" aria-hidden="true"><use href="#t-krypto"></use></svg><span>Krypto</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="software"><a class="sm-link sm-link--tema" style="--tf:#c9a58b" href="../temaer/software.html"><svg class="ik" aria-hidden="true"><use href="#t-software"></use></svg><span>Software &amp; AI</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="sundhed"><a class="sm-link sm-link--tema" style="--tf:#a4a6cf" href="../temaer/sundhed.html"><svg class="ik" aria-hidden="true"><use href="#t-sundhed"></use></svg><span>Sundhed og biotek</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="kvante"><a class="sm-link sm-link--tema" style="--tf:#cd99a5" href="../temaer/kvante.html"><svg class="ik" aria-hidden="true"><use href="#t-kvante"></use></svg><span>Kvantecomputere</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+</ul>
+<button class="sm-vis-flere" type="button" aria-expanded="false" aria-controls="sm-temaer">
+<span class="sm-vis-tekst">Vis alle <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer</span><span class="sm-vis-faerre" hidden>Vis færre temaer</span><svg class="ik ik--s" aria-hidden="true"><use href="#i-ned"></use></svg>
+</button>
+</nav>
+<nav class="sm-gruppe" aria-labelledby="sm-h-selskaber">
+<h2 class="sm-overskrift" id="sm-h-selskaber"><span>Selskaber</span><span class="sm-overskrift-note">Andel af fonden</span></h2>
+<ul class="sm-liste">
+</ul>
+<ul class="sm-liste" data-liste="top10.liste" data-skabelon="tpl-sm-top"></ul>
+<a class="sm-alle" href="../alle-selskaber.html"><svg class="ik ik--s" aria-hidden="true"><use href="#i-selskab"></use></svg><span>Se alle selskaber i fonden</span><svg class="ik ik--s" aria-hidden="true"><use href="#i-frem"></use></svg></a>
+<template id="tpl-sm-top"><li><a class="sm-selskab" data-link-selskab href="#"><span class="sm-logo" aria-hidden="true" data-f="forbogstav"></span><span class="sm-navn" data-f="navn"></span><span class="sm-tal" data-f="andel" data-fmt="pct"></span></a></li></template>
+<ul class="sm-liste" hidden>
+</ul>
+</nav>
+</div>
+<div class="sm-bund">
+<button class="temaskift" id="temaskift" type="button" aria-label="Skift til lyst tema"><svg class="ik ik--sol" aria-hidden="true" viewbox="0 0 24 24"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"></path></svg><svg class="ik ik--maane" aria-hidden="true" viewbox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"></path></svg><span class="temaskift-tekst">Lyst tema</span></button>
+<div class="sm-datakort"><svg class="ik" aria-hidden="true"><use href="#i-kalender"></use></svg><div><p class="sm-data-t">Alle andele pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…</span></p><p class="sm-data-s">Tallene er fra PMINDI. Markedsføringsmateriale. Ikke personlig investeringsrådgivning.</p></div></div>
+</div>
+</aside>
+<div class="hoved">
+<main id="indhold" tabindex="-1"><nav class="up-trail" aria-label="Du er her"><a href="../tech.html">Tech</a><span aria-hidden="true">/</span><span aria-current="page">Datacentre</span></nav><nav class="up-shortcuts" aria-label="På denne side"><a href="#cq-dc">Forstå teknologien</a><a href="#selskaberne">Selskaberne</a><a href="#mere-fra-ndi">Videoer & opslag</a></nav>
 
 <template id="tpl-tl"><li><a class="tl-raekke" data-link-selskab href="#"><span class="sm-logo" aria-hidden="true" data-f="forbogstav"></span><span class="tl-navn" data-f="navn"></span><span class="pos-bar" aria-hidden="true"><span data-fbar></span></span><span class="tl-tal" data-f="andel" data-fmt="pct"></span></a></li></template><template id="tpl-mini"><span data-fbar></span></template>
-
-      <section class="sektion sektion--overblik" id="overblik" aria-labelledby="h-side">
-
-        <div class="v18t">
-
-        <div class="v18t-hero v18t-hero--v5">
-
-          <div class="v18t-foto v18t-foto--v5"><figure class="tema-foto v5-heromotiv"><picture><source media="(max-width:599px)" srcset="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-billedstil/grafik/datacenter-hero-mellem-maskinerne-mobil.svg"></source><img class="kun-moerk" alt="Mange servere i rækker, bundet sammen af kabler og lys" decoding="async" height="720" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-billedstil/grafik/datacenter-hero-mellem-maskinerne.svg" width="1440"><img loading="lazy" class="kun-lys" alt="Mange servere i rækker, bundet sammen af kabler og lys" decoding="async" height="720" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-billedstil/grafik/datacenter-hero-mellem-maskinerne-lys.svg" width="1440"></picture><figcaption class="foto-kredit">Illustration: NewDeal Invest.</figcaption></figure></div>
-
-          <div class="v18t-hero-tekst">
-
-            <p class="kicker">Et af de <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer i NewDeal Invest</p>
-
-            <h1 id="h-side">Datacentre</h1>
-
-            <p class="v18t-under">Hvad skal der til for, at maskinerne arbejder sammen?</p>
-
-            <p>En AI-beregning skal fordeles mellem servere, og resultaterne skal samles igen. Derfor handler datacentre også om kabler, lasere, netværk og drift. Zoom ud fra serveren og se, hvad der binder maskinerne sammen.</p>
-
-            
-
-            <div class="v18t-knapper"><a class="knap knap--primaer v5-knap" href="#selskaberne">Se selskaberne <span aria-hidden="true">↓</span></a><a class="knap knap--rolig v5-knap" href="#skrevet">Læs vores perspektiv</a></div>
-
-          </div>
-
-          
-
-        </div>
-
-        <div class="v18t-fotobaand"><figure class="tema-foto" style="max-width:600px"><img src="../fotos/datacenter.webp" width="600" height="400" alt="Gang mellem serverracks i et datacenter." loading="lazy" decoding="async" style="max-width:600px"><figcaption class="foto-kredit">Foto: Oleg Alexandrov, CC BY-SA 4.0, via Wikimedia Commons</figcaption></figure></div>
-
-        <section class="v18-stortal" aria-labelledby="h-andel">
-
-            <div class="v18-stortal-tal">
-
-              <h2 class="sr" id="h-andel">Temaets andel af fonden</h2>
-
-              <p class="v18-stortal-v"><span><span data-tal="temaer#datacenter.andel" data-fmt="tal">…  </span></span><span class="v18-stortal-enhed">%</span></p>
-
-              <p class="v18-stortal-tekst">af PMINDI er placeret i temaet Datacentre.</p>
-
-              <p class="kildelinje">Andele i PMINDI, den udgave af fonden, der udbetaler udbytte, pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span> (fondens data).</p>
-
-            </div>
-
-            <div class="v18-stortal-figur v18-ramme">
-
-              <div class="mini-soejler" aria-hidden="true" data-liste="temaer" data-skabelon="tpl-mini" data-aktiv-id="datacenter"></div>
-
-              <p class="lille mini-forklaring">De <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer efter størrelse. Datacentre er <span data-tal="temaer#datacenter.plads" data-fmt="plads">nr. …</span>.</p>
-
-            </div>
-
-            <details class="fold-ud v18-flere-tal">
-
-              <summary>Flere tal om temaet</summary>
-
-              <ul class="fakta-liste">
-
-                <li><span>Plads blandt <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer</span><strong><span data-tal="temaer#datacenter.plads" data-fmt="Plads">Nr. …</span></strong></li>
-
-                <li><span>Selskaber i temaet</span><strong><span data-tal="temaer#datacenter.antal" data-fmt="heltal">… </span></strong></li>
-
-                <li class="fakta-stak"><span>Største selskab</span><strong><span data-navn="temaer#datacenter.stoerste">…</span> · <span data-tal="temaer#datacenter.stoerste.andel" data-fmt="pct">…   %</span></strong></li>
-
-              </ul>
-
-            </details>
-
-          </section>
-
-        
-
-      <section class="sektion v18-perspektiv" id="skrevet" aria-labelledby="h-skrevet">
-
-        <div class="v18-perspektiv-boks">
-
-          <p class="kicker">Det har vi skrevet</p>
-
-          <h2 class="v18-perspektiv-titel" id="h-skrevet">NewDeal Invests perspektiv</h2>
-
-          <p class="v18-perspektiv-intro">Ordret uddrag af NewDeal Invests egne ugebreve og indlæg om temaet, med dato og link til hele teksten. Det er ikke en anbefaling.</p>
-
-          <blockquote class="skrevet-citat"><p>»Oracle fortæller samtidig, at deres nye datacenterfaciliteter er profitable fra det øjeblik, de bliver taget i brug. Oracle regnskabet fortæller i virkeligheden den samme historie som Anthropics tal: der er kæmpestor efterspørgsel efter AI-compute.«</p></blockquote>
-
-            <p class="skrevet-meta lille"><span class="skrevet-titel">Betaler investeringer i AI sig?</span> · <time datetime="2026-03-16">16.03.2026</time> · ugebrev uge 11, blog</p>
-
-            <p class="skrevet-selsk lille">Nævner: Oracle, Anthropic</p>
-
-            <a class="tekstlink tekstlink--tryk skrevet-link" href="https://www.newdealinvest.dk/post/uge-11-betaler-investeringer-i-ai-sig" target="_blank" rel="noopener">Læs hele teksten på bloggen<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (åbner i nyt vindue)</span></a>
-
-          <details class="fold-ud v18-perspektiv-flere"><summary>Flere uddrag om temaet (1)</summary>
-
-            <details class="fold-ud fold-mobil fold-sektion" data-aaben-bred><summary aria-expanded="false">Læs uddragene fra vores ugebreve</summary><ol class="skrevet-liste"><li><blockquote class="skrevet-citat"><p>»Efter at have sikret sig mindst 10 GW gennem NVIDIA og arbejdet på det fireårige “Stargate”-projekt med Oracle og SoftBank, ønsker OpenAI at undgå at blive fanget i fremtidige flaskehalse. Power-infrastruktur og godkendelser er i dag det egentlige chokepoint i AI-udbygningen – ikke chipproduktion i sig selv.«</p></blockquote>
-
-            <p class="skrevet-meta lille"><span class="skrevet-titel">Skal du være nervøs for den cirkulære AI-økonomi?</span> · <time datetime="2025-10-13">13.10.2025</time> · ugebrev uge 41, blog</p>
-
-            <p class="skrevet-selsk lille">Nævner: OpenAI, NVIDIA, Oracle, SoftBank</p>
-
-            <a class="tekstlink tekstlink--tryk skrevet-link" href="https://www.newdealinvest.dk/post/uge-41-skal-du-v%C3%A6re-nerv%C3%B8s-for-den-cirkul%C3%A6re-ai-%C3%B8konomi" target="_blank" rel="noopener">Læs hele teksten på bloggen<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (åbner i nyt vindue)</span></a></li></ol></details></details>
-
-        </div>
-
-      </section>
-
-        </div>
-
-      </section>
-
-      <div class="v5f v5f-datacenter" data-v5-fortaelling="datacenter"><section aria-labelledby="greb-h" class="s" id="greb"><div class="wrap">
+<section class="sektion sektion--overblik" id="overblik" aria-labelledby="h-side">
+<div class="v18t">
+<div class="v18t-hero v18t-hero--v5">
+<div class="v18t-foto v18t-foto--v5"><figure class="tema-foto v5-heromotiv"><picture><source media="(max-width:599px)" srcset="../assets/review-img/e6ee53f8dab5.svg"></source><img class="kun-moerk" alt="Mange servere i rækker, bundet sammen af kabler og lys" decoding="async" height="720" src="../assets/review-img/4ba10defaee4.svg" width="1440"><img loading="lazy" class="kun-lys" alt="Mange servere i rækker, bundet sammen af kabler og lys" decoding="async" height="720" src="../assets/review-img/934676da74d4.svg" width="1440"></picture><figcaption class="foto-kredit">Illustration: NewDeal Invest.</figcaption></figure></div>
+<div class="v18t-hero-tekst">
+<p class="kicker">Et af de <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer i NewDeal Invest</p>
+<h1 id="h-side">Datacentre</h1>
+<p class="v18t-under">Hvad skal der til for, at maskinerne arbejder sammen?</p>
+<p>En AI-beregning skal fordeles mellem servere, og resultaterne skal samles igen. Derfor handler datacentre også om kabler, lasere, netværk og drift. Zoom ud fra serveren og se, hvad der binder maskinerne sammen.</p>
+<div class="v18t-knapper"><a class="knap knap--primaer v5-knap" href="#selskaberne">Se selskaberne <span aria-hidden="true">↓</span></a><a class="knap knap--rolig v5-knap" href="#skrevet">Læs vores perspektiv</a></div>
+</div>
+</div>
+<div class="v18t-fotobaand"><figure class="tema-foto" style="max-width:600px"><img src="../fotos/datacenter.webp" width="600" height="400" alt="Gang mellem serverracks i et datacenter." loading="lazy" decoding="async" style="max-width:600px"><figcaption class="foto-kredit">Foto: Oleg Alexandrov, CC BY-SA 4.0, via Wikimedia Commons</figcaption></figure></div>
+<section class="v18-stortal" aria-labelledby="h-andel">
+<div class="v18-stortal-tal">
+<h2 class="sr" id="h-andel">Temaets andel af fonden</h2>
+<p class="v18-stortal-v"><span><span data-tal="temaer#datacenter.andel" data-fmt="tal">…  </span></span><span class="v18-stortal-enhed">%</span></p>
+<p class="v18-stortal-tekst">af PMINDI er placeret i temaet Datacentre.</p>
+<p class="kildelinje">Andele i PMINDI, den udgave af fonden, der udbetaler udbytte, pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span> (fondens data).</p>
+</div>
+<div class="v18-stortal-figur v18-ramme">
+<div class="mini-soejler" aria-hidden="true" data-liste="temaer" data-skabelon="tpl-mini" data-aktiv-id="datacenter"></div>
+<p class="lille mini-forklaring">De <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer efter størrelse. Datacentre er <span data-tal="temaer#datacenter.plads" data-fmt="plads">nr. …</span>.</p>
+</div>
+<details class="fold-ud v18-flere-tal">
+<summary>Flere tal om temaet</summary>
+<ul class="fakta-liste">
+<li><span>Plads blandt <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer</span><strong><span data-tal="temaer#datacenter.plads" data-fmt="Plads">Nr. …</span></strong></li>
+<li><span>Selskaber i temaet</span><strong><span data-tal="temaer#datacenter.antal" data-fmt="heltal">… </span></strong></li>
+<li class="fakta-stak"><span>Største selskab</span><strong><span data-navn="temaer#datacenter.stoerste">…</span> · <span data-tal="temaer#datacenter.stoerste.andel" data-fmt="pct">…   %</span></strong></li>
+</ul>
+</details>
+</section>
+<section class="sektion v18-perspektiv" id="skrevet" aria-labelledby="h-skrevet">
+<div class="v18-perspektiv-boks">
+<p class="kicker">Det har vi skrevet</p>
+<h2 class="v18-perspektiv-titel" id="h-skrevet">NewDeal Invests perspektiv</h2>
+<p class="v18-perspektiv-intro">Ordret uddrag af NewDeal Invests egne ugebreve og indlæg om temaet, med dato og link til hele teksten. Det er ikke en anbefaling.</p>
+<blockquote class="skrevet-citat"><p>»Oracle fortæller samtidig, at deres nye datacenterfaciliteter er profitable fra det øjeblik, de bliver taget i brug. Oracle regnskabet fortæller i virkeligheden den samme historie som Anthropics tal: der er kæmpestor efterspørgsel efter AI-compute.«</p></blockquote>
+<p class="skrevet-meta lille"><span class="skrevet-titel">Betaler investeringer i AI sig?</span> · <time datetime="2026-03-16">16.03.2026</time> · ugebrev uge 11, blog</p>
+<p class="skrevet-selsk lille">Nævner: Oracle, Anthropic</p>
+<a class="tekstlink tekstlink--tryk skrevet-link" href="https://www.newdealinvest.dk/post/uge-11-betaler-investeringer-i-ai-sig" target="_blank" rel="noopener">Læs hele teksten på bloggen<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (åbner i nyt vindue)</span></a>
+<details class="fold-ud v18-perspektiv-flere"><summary>Flere uddrag om temaet (1)</summary>
+<details class="fold-ud fold-mobil fold-sektion" data-aaben-bred><summary aria-expanded="false">Læs uddragene fra vores ugebreve</summary><ol class="skrevet-liste"><li><blockquote class="skrevet-citat"><p>»Efter at have sikret sig mindst 10 GW gennem NVIDIA og arbejdet på det fireårige “Stargate”-projekt med Oracle og SoftBank, ønsker OpenAI at undgå at blive fanget i fremtidige flaskehalse. Power-infrastruktur og godkendelser er i dag det egentlige chokepoint i AI-udbygningen – ikke chipproduktion i sig selv.«</p></blockquote>
+<p class="skrevet-meta lille"><span class="skrevet-titel">Skal du være nervøs for den cirkulære AI-økonomi?</span> · <time datetime="2025-10-13">13.10.2025</time> · ugebrev uge 41, blog</p>
+<p class="skrevet-selsk lille">Nævner: OpenAI, NVIDIA, Oracle, SoftBank</p>
+<a class="tekstlink tekstlink--tryk skrevet-link" href="https://www.newdealinvest.dk/post/uge-41-skal-du-v%C3%A6re-nerv%C3%B8s-for-den-cirkul%C3%A6re-ai-%C3%B8konomi" target="_blank" rel="noopener">Læs hele teksten på bloggen<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (åbner i nyt vindue)</span></a></li></ol></details></details>
+</div>
+</section>
+</div>
+</section>
+<div class="v5f v5f-datacenter" data-v5-fortaelling="datacenter"><section aria-labelledby="greb-h" class="s" id="greb"><div class="wrap">
 
 <p class="eyebrow">Hovedgrebet</p>
 
@@ -410,31 +268,22 @@
 <div>
 
 <p>Inde i en server løber data som elektriske signaler i kobber. Men når tusindvis af servere skal arbejde sammen, er afstandene for lange til kobber alene. Så sendes data som lys gennem tynde glastråde, der kaldes fiber. Lasere og optiske moduler laver de elektriske signaler om til lys og tilbage igen, og netværksudstyr sørger for, at data kommer frem til den rigtige server.</p>
-
-
-
 </div>
 
 <div>
 
-<figure class="graf kort"><img class="kun-moerk" alt="Signalet går fra server til server som lys i en fiber" height="320" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-billedstil/grafik/datacenter-lys-i-fiber.svg" width="960"><img loading="lazy" class="kun-lys" alt="Signalet går fra server til server som lys i en fiber" height="320" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-billedstil/grafik/datacenter-lys-i-fiber-lys.svg" width="960"><figcaption>Fra elektrisk signal til lys og tilbage igen. Illustration: NewDeal Invest.</figcaption></figure>
+<figure class="graf kort"><img class="kun-moerk" alt="Signalet går fra server til server som lys i en fiber" height="320" src="../assets/review-img/9ed808223888.svg" width="960"><img loading="lazy" class="kun-lys" alt="Signalet går fra server til server som lys i en fiber" height="320" src="../assets/review-img/66456ebcfba9.svg" width="960"><figcaption>Fra elektrisk signal til lys og tilbage igen. Illustration: NewDeal Invest.</figcaption></figure>
 
 </div>
 
 </div>
 
 </div></section><section aria-labelledby="cq-dc-h" class="cq-dc" id="cq-dc">
-
-
-
 <div class="cq-dc__in">
 
 <p class="cq-dc__kick">Selskaberne</p>
 
 <h2 class="cq-dc__h2" id="cq-dc-h">Zoom ud fra én server</h2>
-
-
-
 <p class="cq-dc__lead">I midten står én server. Zoom ud, og den bliver til tusindvis af servere i en hal, forbundet med kabler, lys og netværk. Hver flade er tegnet efter, hvor stor en del af fonden laget fylder.</p>
 
 <div class="cq-dc__grid">
@@ -467,18 +316,12 @@
 
 </figure>
 
-<div class="cq-dc__lags"><p class="cq-dc__hint cq-dc__hint--top">Tryk på et selskab for at se, hvad det laver.</p><div class="cq-dc__lag cq-dc__scope" data-lag="f"><h3 class="cq-dc__lagh"><button aria-controls="cq-dc-p-f" aria-expanded="false" class="cq-dc__dx cq-dc__lagb" data-grp="lag" data-lag="f" data-open="1" type="button"><span aria-hidden="true" class="cq-dc__sw cq-dc__sw--f"><svg aria-hidden="true" class="cq-dc__ic cq-dc__ic--grp" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect height="13.5" rx="1" width="4.5" x="2.25" y="5.25"></rect><rect height="13.5" rx="1" width="4.5" x="17.25" y="5.25"></rect><path d="M6.75 8.5h10.5M6.75 15.5h10.5"></path><path d="M6.75 12h1.5M10.25 12h1.5M13.75 12h1.5" stroke-width="1.5"></path></svg></span><span class="cq-dc__lagn">Forbindelserne</span><span class="cq-dc__lagc"></span><span aria-hidden="true" class="cq-dc__chev"></span></button></h3><div class="cq-dc__lagp" id="cq-dc-p-f"><p class="cq-dc__lagx">Kablerne, lyset og netværket, der binder serverne sammen.</p><div class="cq-dc__led"><h4 class="cq-dc__lhh"><button aria-controls="cq-dc-b-lasere" aria-expanded="false" class="cq-dc__dx cq-dc__lb2" data-grp="f" type="button"><svg aria-hidden="true" class="cq-dc__ic cq-dc__ic--led" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect height="9.5" rx="1.5" width="10" x="2.25" y="7.25"></rect><path d="M5 10.25h4.5M5 13.75h2.5" stroke-width="1"></path><circle cx="12.25" cy="12" fill="currentColor" r="1.25" stroke="none"></circle><path d="M14.5 12h1.5M18 12h1.5M21.25 12h.5"></path><path d="M15 8.5l5-1.5M15 15.5l5 1.5" stroke-width="1"></path></svg><span class="cq-dc__ln">Lasere og optiske moduler</span><span aria-hidden="true" class="cq-dc__chev"></span></button></h4><div class="cq-dc__lbody" id="cq-dc-b-lasere"><p class="cq-dc__lx">En laser laver lys, der kan tændes og slukkes meget hurtigt, og sådan sendes data gennem fiber. Et optisk modul, også kaldet en transceiver, sidder i hver ende af fiberen. Fotonik betyder teknik, der arbejder med lys.</p><ul class="cq-dc__cos" data-top="5" id="cq-dc-l-lasere"><li><button aria-pressed="false" class="cq-dc__co" data-d="Laver kraftige lasere til lysforbindelser, bl.a. i AI-datacentre. Laver også chips til trådløs kommunikation." data-g="Lasere og optiske moduler" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/sivers-semiconductors.webp" width="28"></span><span class="cq-dc__nm">Sivers Semiconductors</span></button><a class="ndi-profile-link" href="../selskaber/sivers-semiconductors.html">Læs om Sivers Semiconductors →</a></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Laver udstyr til fibernet, bl.a. til datacentre, kabel-tv, tele og internet til hjemmet." data-g="Lasere og optiske moduler" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/applied-optoelectronics.webp" width="28"></span><span class="cq-dc__nm">Applied Optoelectronics</span></button><a class="ndi-profile-link" href="../selskaber/applied-optoelectronics.html">Læs om Applied Optoelectronics →</a></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Producerer optiske og elektroniske komponenter for andre. Produkter til datacentre var 47,9 % af omsætningen i regnskabsåret 2026." data-g="Lasere og optiske moduler" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/fabrinet.webp" width="28"></span><span class="cq-dc__nm">Fabrinet</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Udvikler en teknik, der samler lyskomponenter på én chip. Den første anvendelse er optiske moduler til datacentre." data-g="Lasere og optiske moduler" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/poet-technologies.webp" width="28"></span><span class="cq-dc__nm">POET Technologies</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-a="Chips og halvledere" data-d="Designer og producerer chips til industri og forsvar, datacentre og tele." data-g="Lasere og optiske moduler" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/macom.webp" width="28"></span><span class="cq-dc__nm">MACOM</span></button><a class="ndi-profile-link" href="../selskaber/macom.html">Læs om MACOM →</a></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Udvikler særlige plastmaterialer, der kan styre lys i optiske komponenter." data-g="Lasere og optiske moduler" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/lightwave-logic.webp" width="28"></span><span class="cq-dc__nm">Lightwave Logic</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-a="Chips og halvledere" data-d="Laver lys- og sensorløsninger. Optik til datacentre er på prototypestadiet." data-g="Lasere og optiske moduler" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/ams-osram.webp" width="28"></span><span class="cq-dc__nm">ams OSRAM</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Laver kraftige lasere, især til forsvar og luftfart." data-g="Lasere og optiske moduler" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/nlight.webp" width="28"></span><span class="cq-dc__nm">nLight</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Laver optiske produkter. Den største del af omsætningen kommer fra komponenter, der bl.a. leveres til cloud-datacentre og AI-selskaber." data-g="Lasere og optiske moduler" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/lumentum.webp" width="28"></span><span class="cq-dc__nm">Lumentum</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-a="Robotter &amp; fysisk AI" data-d="Laver fiberlasere, især til bearbejdning af materialer." data-g="Lasere og optiske moduler" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/ipg-photonics.webp" width="28"></span><span class="cq-dc__nm">IPG Photonics</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-a="Chips og halvledere" data-d="Chips til bl.a. netværk i datacentre, til industri og til mobilnet." data-g="Lasere og optiske moduler" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/semtech.webp" width="28"></span><span class="cq-dc__nm">Semtech</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Laver lasere, optiske moduler og materialer til datacentre, kommunikation og industri." data-g="Lasere og optiske moduler" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/coherent.webp" width="28"></span><span class="cq-dc__nm">Coherent</span></button><a class="ndi-profile-link" href="../selskaber/coherent.html">Læs om Coherent →</a></li></ul><button aria-controls="cq-dc-l-lasere" aria-expanded="false" class="cq-dc__all" data-n="12" type="button">Vis alle (12)</button></div></div><div class="cq-dc__led"><h4 class="cq-dc__lhh"><button aria-controls="cq-dc-b-kabler" aria-expanded="false" class="cq-dc__dx cq-dc__lb2" data-grp="f" type="button"><svg aria-hidden="true" class="cq-dc__ic cq-dc__ic--led" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect height="5.5" rx="1" width="4" x="2.25" y="9.25"></rect><path d="M6.25 12C11 12 12 5.5 18.5 5.5M6.25 12h12.25M6.25 12C11 12 12 18.5 18.5 18.5"></path><circle cx="20" cy="5.5" r="1.5"></circle><circle cx="20" cy="12" r="1.5"></circle><circle cx="20" cy="18.5" r="1.5"></circle></svg><span class="cq-dc__ln">Kabler, fiber og stik</span><span aria-hidden="true" class="cq-dc__chev"></span></button></h4><div class="cq-dc__lbody" id="cq-dc-b-kabler"><p class="cq-dc__lx">Kobberkabler forbinder det, der står tæt på hinanden, og fiberkabler bærer lyset over længere afstand. Stikkene holder forbindelsen præcis og tæt. Selskaberne leverer også til andre kunder end datacentre.</p><ul class="cq-dc__cos" data-top="5" id="cq-dc-l-kabler"><li><button aria-pressed="false" class="cq-dc__co" data-d="Leverer forbindelser med fiber og radiosignaler, bl.a. til datacentre." data-g="Kabler, fiber og stik" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/huber-suhner.webp" width="28"></span><span class="cq-dc__nm">Huber+Suhner</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-a="Energi og elnet" data-d="Laver bl.a. optiske stik og komponenter til datacentre. Selskabet laver også dele til biler." data-g="Kabler, fiber og stik" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/sumitomo-electric-industries.webp" width="28"></span><span class="cq-dc__nm">Sumitomo Electric Industries</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Glas og materialer. Optisk kommunikation var det største forretningsområde i 2025 med en omsætning på 6.274 mio. USD." data-g="Kabler, fiber og stik" type="button"><span class="cq-dc__lg"><span aria-hidden="true" class="cq-dc__ini">CO</span></span><span class="cq-dc__nm">Corning</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Stik, kabler, fiberforbindelser, antenner og sensorer." data-g="Kabler, fiber og stik" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/amphenol.webp" width="28"></span><span class="cq-dc__nm">Amphenol</span></button></li></ul></div></div><div class="cq-dc__led"><h4 class="cq-dc__lhh"><button aria-controls="cq-dc-b-net" aria-expanded="false" class="cq-dc__dx cq-dc__lb2" data-grp="f" type="button"><svg aria-hidden="true" class="cq-dc__ic cq-dc__ic--led" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="6" cy="5" r="2"></circle><circle cx="18" cy="5" r="2"></circle><rect height="6" rx="1.5" width="18.5" x="2.75" y="14.25"></rect><path d="M6 7v7.25M18 7v7.25M7.5 6.5l9 7.75M16.5 6.5l-9 7.75"></path><circle cx="6.5" cy="17.25" fill="currentColor" r=".8" stroke="none"></circle><circle cx="10" cy="17.25" fill="currentColor" r=".8" stroke="none"></circle><circle cx="13.5" cy="17.25" fill="currentColor" r=".8" stroke="none"></circle><circle cx="17" cy="17.25" fill="currentColor" r=".8" stroke="none"></circle></svg><span class="cq-dc__ln">Netværk og forbindelseschips</span><span aria-hidden="true" class="cq-dc__chev"></span></button></h4><div class="cq-dc__lbody" id="cq-dc-b-net"><p class="cq-dc__lx">Netværket bestemmer, hvor data skal hen, i hallen og mellem datacentre. Andre selskaber laver udstyr, der måler og tester forbindelserne. Forbindelseschips får mange chips i samme system til at arbejde som én stor computer.</p><ul class="cq-dc__cos" data-top="5" id="cq-dc-l-net"><li><button aria-pressed="false" class="cq-dc__co" data-d="Netværksudstyr, software og service til netværk. Én cloududbyder stod for omkring 18 % af omsætningen." data-g="Netværk og forbindelseschips" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/ciena.webp" width="28"></span><span class="cq-dc__nm">Ciena</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-a="Chips og halvledere" data-d="Laver kabler, optiske moduler og chips til meget hurtige forbindelser." data-g="Netværk og forbindelseschips" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/credo.webp" width="28"></span><span class="cq-dc__nm">Credo</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Fibernet og netværkstjenester til virksomheder." data-g="Netværk og forbindelseschips" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/lumen.webp" width="28"></span><span class="cq-dc__nm">Lumen</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Test- og måleudstyr til netværk samt optiske produkter. Datacentre er ét af flere markeder." data-g="Netværk og forbindelseschips" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/viavi-solutions.webp" width="28"></span><span class="cq-dc__nm">Viavi Solutions</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-a="Software &amp; AI" data-d="Netværksudstyr, bl.a. til AI hos store cloududbydere." data-g="Netværk og forbindelseschips" type="button"><span class="cq-dc__lg"><span aria-hidden="true" class="cq-dc__ini">CS</span></span><span class="cq-dc__nm">Cisco Systems</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Test- og måleudstyr, bl.a. til forbindelserne i og mellem datacentre." data-g="Netværk og forbindelseschips" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/keysight-technologies.webp" width="28"></span><span class="cq-dc__nm">Keysight Technologies</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-a="Chips og halvledere" data-d="Forbindelseschips, der får mange chips i samme system til at arbejde sammen." data-g="Netværk og forbindelseschips" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/astera-labs.webp" width="28"></span><span class="cq-dc__nm">Astera Labs</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Netværksudstyr og software til datacentre, også til AI." data-g="Netværk og forbindelseschips" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/arista-networks.webp" width="28"></span><span class="cq-dc__nm">Arista Networks</span></button></li></ul><button aria-controls="cq-dc-l-net" aria-expanded="false" class="cq-dc__all" data-n="8" type="button">Vis alle (8)</button></div></div><div aria-live="polite" class="cq-dc__info"></div></div></div><div class="cq-dc__lag cq-dc__scope" data-lag="h"><h3 class="cq-dc__lagh"><button aria-controls="cq-dc-p-h" aria-expanded="false" class="cq-dc__dx cq-dc__lagb" data-grp="lag" data-lag="h" type="button"><span aria-hidden="true" class="cq-dc__sw cq-dc__sw--h"><svg aria-hidden="true" class="cq-dc__ic cq-dc__ic--grp" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M2.75 5.25h18.5"></path><path d="M7.25 5.25v4M12 5.25v4M16.75 5.25v4" stroke-width="1"></path><rect height="11" rx=".75" width="4" x="5.25" y="9.25"></rect><rect height="11" rx=".75" width="4" x="10" y="9.25"></rect><rect height="11" rx=".75" width="4" x="14.75" y="9.25"></rect><path d="M2.75 20.25h18.5"></path></svg></span><span class="cq-dc__lagn">Hallen og driften</span><span class="cq-dc__lagc"></span><span aria-hidden="true" class="cq-dc__chev"></span></button></h3><div class="cq-dc__lagp" id="cq-dc-p-h"><p class="cq-dc__lagx">Bygningen, kølingen og dem, der driver hallen og lejer regnekraften ud.</p><div class="cq-dc__led"><h4 class="cq-dc__lhh"><button aria-controls="cq-dc-b-drift" aria-expanded="false" class="cq-dc__dx cq-dc__lb2" data-grp="h" type="button"><svg aria-hidden="true" class="cq-dc__ic cq-dc__ic--led" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 18.5h10.25a4 4 0 0 0 .4-7.98A5.5 5.5 0 0 0 7.05 9.3 4.6 4.6 0 0 0 7 18.5z"></path><path d="M8.75 13.25h5M8.75 15.75h5" stroke-width="1"></path><circle cx="16" cy="13.25" fill="currentColor" r=".8" stroke="none"></circle><circle cx="16" cy="15.75" fill="currentColor" r=".8" stroke="none"></circle></svg><span class="cq-dc__ln">Datacenterdrift og cloud</span><span aria-hidden="true" class="cq-dc__chev"></span></button></h4><div class="cq-dc__lbody" id="cq-dc-b-drift"><p class="cq-dc__lx">Cloud betyder, at man lejer regnekraft og lager over nettet i stedet for at eje sine egne servere. Oracle og Microsoft er store udbydere, hvor cloud er en del af en stor softwareforretning. Flere af de øvrige kommer fra bitcoin-mining, altså at bruge computere og strøm til at registrere bitcoin-transaktioner mod betaling i bitcoin. Nu bruger de deres strøm og bygninger til AI.</p><ul class="cq-dc__cos" data-top="5" id="cq-dc-l-drift"><li><button aria-pressed="false" class="cq-dc__co" data-a="Krypto, Energi og elnet" data-d="Ejer og driver datacentre og lejer regnekraft ud til AI. Driver stadig bitcoin-mining i dele af sine datacentre, mens de lægges om." data-g="Datacenterdrift og cloud" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/iris-energy.webp" width="28"></span><span class="cq-dc__nm">IREN</span></button><a class="ndi-profile-link" href="../selskaber/iren.html">Læs om IREN →</a></li><li><button aria-pressed="false" class="cq-dc__co" data-a="Software &amp; AI" data-d="Forretningssoftware og cloud. Oracles cloud leverer regnekraft, lager og netværk." data-g="Datacenterdrift og cloud" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/oracle.webp" width="28"></span><span class="cq-dc__nm">Oracle</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-a="Krypto" data-d="Bygger og driver datacentre og lejer plads ud til store AI-beregninger. Har også bitcoin-mining." data-g="Datacenterdrift og cloud" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/core-scientific.webp" width="28"></span><span class="cq-dc__nm">Core Scientific</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-a="Krypto" data-d="Er ved at lægge om fra bitcoin-mining til datacentre med lejeaftaler." data-g="Datacenterdrift og cloud" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/cipher-mining.webp" width="28"></span><span class="cq-dc__nm">Cipher Digital</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Ejer datacentre og lejer regnekraft til AI ud som cloudtjeneste." data-g="Datacenterdrift og cloud" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/whitefiber.webp" width="28"></span><span class="cq-dc__nm">WhiteFiber</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Cloud bygget til AI: træning og brug af AI-modeller på egen software og egne servere." data-g="Datacenterdrift og cloud" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/coreweave.webp" width="28"></span><span class="cq-dc__nm">CoreWeave</span></button><a class="ndi-profile-link" href="../selskaber/coreweave.html">Læs om CoreWeave →</a></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Australsk udbyder af regnekraft til AI via cloud." data-g="Datacenterdrift og cloud" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/sharonai.webp" width="28"></span><span class="cq-dc__nm">SharonAI</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Cloud til AI med regnekraft, software og tjenester til at træne og bruge AI-modeller." data-g="Datacenterdrift og cloud" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/nebius.webp" width="28"></span><span class="cq-dc__nm">Nebius</span></button><a class="ndi-profile-link" href="../selskaber/nebius.html">Læs om Nebius →</a></li><li><button aria-pressed="false" class="cq-dc__co" data-a="Software &amp; AI" data-d="Software, cloud og AI. Microsofts cloud, Azure, leverer regnekraft, netværk og lager fra selskabets datacentre." data-g="Datacenterdrift og cloud" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/microsoft.webp" width="28"></span><span class="cq-dc__nm">Microsoft</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-a="Krypto" data-d="Driver datacentre til AI og andre store beregninger. Udlejning af regnekraft var 31,9 af 44,8 mio. USD i omsætning i 2. kvartal 2026." data-g="Datacenterdrift og cloud" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/terawulf.webp" width="28"></span><span class="cq-dc__nm">TeraWulf</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Designer, bygger og driver datacentre til AI og andre store beregninger. CoreWeave lejer kapacitet." data-g="Datacenterdrift og cloud" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/applied-digital.webp" width="28"></span><span class="cq-dc__nm">Applied Digital</span></button></li></ul><button aria-controls="cq-dc-l-drift" aria-expanded="false" class="cq-dc__all" data-n="11" type="button">Vis alle (11)</button></div></div><div class="cq-dc__led"><h4 class="cq-dc__lhh"><button aria-controls="cq-dc-b-byg" aria-expanded="false" class="cq-dc__dx cq-dc__lb2" data-grp="h" type="button"><svg aria-hidden="true" class="cq-dc__ic cq-dc__ic--led" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M2.75 9.5L12 4l9.25 5.5"></path><path d="M4.75 8.5v12h14.5v-12"></path><circle cx="12" cy="14.5" r="3.75"></circle><path d="M12 14.5c0-1.6 1-2.6 2.2-2.4M12 14.5c-1.4.8-2.8.4-3.1-.8M12 14.5c1.4.8 1.6 2.2.6 3" stroke-width="1"></path></svg><span class="cq-dc__ln">Byggeri og køling</span><span aria-hidden="true" class="cq-dc__chev"></span></button></h4><div class="cq-dc__lbody" id="cq-dc-b-byg"><p class="cq-dc__lx">Før den første server tændes, skal der være en bygning, el og køling. Serverne laver meget varme, og kølingen leder den væk. Selskaberne her er ingeniørfirmaer og entreprenører, der tegner, bygger og installerer.</p><ul class="cq-dc__cos" data-top="5" id="cq-dc-l-byg"><li><button aria-pressed="false" class="cq-dc__co" data-a="Energi og elnet" data-d="Udvikler et område til energi og datacentre i Texas." data-g="Byggeri og køling" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/fermi.webp" width="28"></span><span class="cq-dc__nm">Fermi</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-a="Energi og elnet" data-d="Ingeniør- og rådgivningsfirma inden for infrastruktur." data-g="Byggeri og køling" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/jacobs-solutions.webp" width="28"></span><span class="cq-dc__nm">Jacobs Solutions</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Anlægsarbejde. Byggemodning og el-arbejde, bl.a. til datacentre, var 59 % af omsætningen." data-g="Byggeri og køling" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/sterling-infrastructure.webp" width="28"></span><span class="cq-dc__nm">Sterling Infrastructure</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Installerer køling, ventilation, VVS og el i bygninger, bl.a. datacentre." data-g="Byggeri og køling" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/comfort-systems-usa.webp" width="28"></span><span class="cq-dc__nm">Comfort Systems USA</span></button></li></ul></div></div><div aria-live="polite" class="cq-dc__info"></div></div></div><div class="cq-dc__lag cq-dc__scope" data-lag="m"><h3 class="cq-dc__lagh"><button aria-controls="cq-dc-p-m" aria-expanded="false" class="cq-dc__dx cq-dc__lagb" data-grp="lag" data-lag="m" type="button"><span aria-hidden="true" class="cq-dc__sw cq-dc__sw--m"><svg aria-hidden="true" class="cq-dc__ic cq-dc__ic--grp" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect height="7.5" rx="1.5" width="18.5" x="2.75" y="8.25"></rect><path d="M5.5 10.75h7M5.5 13.25h7" stroke-width="1"></path><circle cx="16" cy="12" fill="currentColor" r="1" stroke="none"></circle><circle cx="18.5" cy="12" fill="currentColor" r="1" stroke="none"></circle></svg></span><span class="cq-dc__lagn">Maskinerne</span><span class="cq-dc__lagc"></span><span aria-hidden="true" class="cq-dc__chev"></span></button></h3><div class="cq-dc__lagp" id="cq-dc-p-m"><p class="cq-dc__lagx">Serverne og de skabe, de sidder i.</p><figure class="dc-foto"><svg aria-hidden="true" class="pd-neutral" viewbox="0 0 600 300"><g fill="none" stroke="var(--graf-akse)" stroke-width="2"><rect height="140" rx="18" width="140" x="40" y="80"></rect><rect height="140" rx="18" width="140" x="230" y="80"></rect><rect height="140" rx="18" width="140" x="420" y="80"></rect><path d="M180 150H230M370 150H420"></path></g><g fill="none" stroke="var(--accent)" stroke-width="3"><circle cx="110" cy="150" r="35"></circle><path d="M265 115H335V185H265ZM455 150H525M490 115V185"></path></g></svg><figcaption>Produkt · anvendelse · forretning. Skematisk illustration: NewDeal Invest.</figcaption></figure><div class="cq-dc__led"><p class="cq-dc__lx">En server er en computer uden skærm, der arbejder døgnet rundt. Serverne sidder stablet i høje skabe, der kaldes racks. Flere af selskaberne er kontraktproducenter, altså fabrikker, der producerer for andre.</p><ul class="cq-dc__cos" data-top="5" id="cq-dc-l-servere"><li><button aria-pressed="false" class="cq-dc__co" data-d="Samler bl.a. serverskabe, der er klar til AI." data-g="Servere og racks" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/tss.webp" width="28"></span><span class="cq-dc__nm">TSS</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Designer og producerer for andre, bl.a. udstyr til AI- og clouddatacentre." data-g="Servere og racks" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/celestica.webp" width="28"></span><span class="cq-dc__nm">Celestica</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Laver robuste, kraftige computere til brug ude i felten." data-g="Servere og racks" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/one-stop-systems.webp" width="28"></span><span class="cq-dc__nm">One Stop Systems</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-a="Energi og elnet" data-d="Producerer for andre. Området med regnekraft, strøm og køling til datacentre var 24 % af omsætningen." data-g="Servere og racks" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/flex.webp" width="28"></span><span class="cq-dc__nm">Flex</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Servere og hele serverskabe, bl.a. til AI." data-g="Servere og racks" type="button"><span class="cq-dc__lg"><span aria-hidden="true" class="cq-dc__ini">SM</span></span><span class="cq-dc__nm">Super Micro Computer</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Producerer for andre. Forretningsområdet Intelligent Infrastructure, som omfatter AI-infrastruktur og kunder inden for kapitaludstyr, cloud og datacentre samt netværk og kommunikation, var 48 % af omsætningen i 3. kvartal af regnskabsåret 2026 (marts til maj 2026)." data-g="Servere og racks" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/jabil.webp" width="28"></span><span class="cq-dc__nm">Jabil</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-d="PC'er, servere, lager og netværk. Leverede AI-servere for 24.683 mio. USD i regnskabsåret 2026." data-g="Servere og racks" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/dell.webp" width="28"></span><span class="cq-dc__nm">Dell</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Producerer for andre. Området for cloud og AI-infrastruktur var 62 % af omsætningen i 3. kvartal." data-g="Servere og racks" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/sanmina.webp" width="28"></span><span class="cq-dc__nm">Sanmina</span></button></li></ul><button aria-controls="cq-dc-l-servere" aria-expanded="false" class="cq-dc__all" data-n="8" type="button">Vis alle (8)</button></div><div aria-live="polite" class="cq-dc__info"></div></div></div></div>
+<div class="cq-dc__lags"><p class="cq-dc__hint cq-dc__hint--top">Tryk på et selskab for at se, hvad det laver.</p><div class="cq-dc__lag cq-dc__scope" data-lag="f"><h3 class="cq-dc__lagh"><button aria-controls="cq-dc-p-f" aria-expanded="false" class="cq-dc__dx cq-dc__lagb" data-grp="lag" data-lag="f" data-open="1" type="button"><span aria-hidden="true" class="cq-dc__sw cq-dc__sw--f"><svg aria-hidden="true" class="cq-dc__ic cq-dc__ic--grp" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect height="13.5" rx="1" width="4.5" x="2.25" y="5.25"></rect><rect height="13.5" rx="1" width="4.5" x="17.25" y="5.25"></rect><path d="M6.75 8.5h10.5M6.75 15.5h10.5"></path><path d="M6.75 12h1.5M10.25 12h1.5M13.75 12h1.5" stroke-width="1.5"></path></svg></span><span class="cq-dc__lagn">Forbindelserne</span><span class="cq-dc__lagc"></span><span aria-hidden="true" class="cq-dc__chev"></span></button></h3><div class="cq-dc__lagp" id="cq-dc-p-f"><p class="cq-dc__lagx">Kablerne, lyset og netværket, der binder serverne sammen.</p><div class="cq-dc__led"><h4 class="cq-dc__lhh"><button aria-controls="cq-dc-b-lasere" aria-expanded="false" class="cq-dc__dx cq-dc__lb2" data-grp="f" type="button"><svg aria-hidden="true" class="cq-dc__ic cq-dc__ic--led" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect height="9.5" rx="1.5" width="10" x="2.25" y="7.25"></rect><path d="M5 10.25h4.5M5 13.75h2.5" stroke-width="1"></path><circle cx="12.25" cy="12" fill="currentColor" r="1.25" stroke="none"></circle><path d="M14.5 12h1.5M18 12h1.5M21.25 12h.5"></path><path d="M15 8.5l5-1.5M15 15.5l5 1.5" stroke-width="1"></path></svg><span class="cq-dc__ln">Lasere og optiske moduler</span><span aria-hidden="true" class="cq-dc__chev"></span></button></h4><div class="cq-dc__lbody" id="cq-dc-b-lasere"><p class="cq-dc__lx">En laser laver lys, der kan tændes og slukkes meget hurtigt, og sådan sendes data gennem fiber. Et optisk modul, også kaldet en transceiver, sidder i hver ende af fiberen. Fotonik betyder teknik, der arbejder med lys.</p><ul class="cq-dc__cos" data-top="5" id="cq-dc-l-lasere"><li><button aria-pressed="false" class="cq-dc__co" data-d="Laver kraftige lasere til lysforbindelser, bl.a. i AI-datacentre. Laver også chips til trådløs kommunikation." data-g="Lasere og optiske moduler" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/review-img/c0fd2dbf0eb5.webp" width="28"></span><span class="cq-dc__nm">Sivers Semiconductors</span></button><a class="ndi-profile-link" href="../selskaber/sivers-semiconductors.html">Læs om Sivers Semiconductors →</a></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Laver udstyr til fibernet, bl.a. til datacentre, kabel-tv, tele og internet til hjemmet." data-g="Lasere og optiske moduler" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/review-img/04fe9003f388.webp" width="28"></span><span class="cq-dc__nm">Applied Optoelectronics</span></button><a class="ndi-profile-link" href="../selskaber/applied-optoelectronics.html">Læs om Applied Optoelectronics →</a></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Producerer optiske og elektroniske komponenter for andre. Produkter til datacentre var 47,9 % af omsætningen i regnskabsåret 2026." data-g="Lasere og optiske moduler" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/fabrinet.webp" width="28"></span><span class="cq-dc__nm">Fabrinet</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Udvikler en teknik, der samler lyskomponenter på én chip. Den første anvendelse er optiske moduler til datacentre." data-g="Lasere og optiske moduler" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/review-img/aa4d5af279a7.webp" width="28"></span><span class="cq-dc__nm">POET Technologies</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-a="Chips og halvledere" data-d="Designer og producerer chips til industri og forsvar, datacentre og tele." data-g="Lasere og optiske moduler" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/macom.webp" width="28"></span><span class="cq-dc__nm">MACOM</span></button><a class="ndi-profile-link" href="../selskaber/macom.html">Læs om MACOM →</a></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Udvikler særlige plastmaterialer, der kan styre lys i optiske komponenter." data-g="Lasere og optiske moduler" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/lightwave-logic.webp" width="28"></span><span class="cq-dc__nm">Lightwave Logic</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-a="Chips og halvledere" data-d="Laver lys- og sensorløsninger. Optik til datacentre er på prototypestadiet." data-g="Lasere og optiske moduler" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/ams-osram.webp" width="28"></span><span class="cq-dc__nm">ams OSRAM</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Laver kraftige lasere, især til forsvar og luftfart." data-g="Lasere og optiske moduler" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/nlight.webp" width="28"></span><span class="cq-dc__nm">nLight</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Laver optiske produkter. Den største del af omsætningen kommer fra komponenter, der bl.a. leveres til cloud-datacentre og AI-selskaber." data-g="Lasere og optiske moduler" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/lumentum.webp" width="28"></span><span class="cq-dc__nm">Lumentum</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-a="Robotter &amp; fysisk AI" data-d="Laver fiberlasere, især til bearbejdning af materialer." data-g="Lasere og optiske moduler" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/ipg-photonics.webp" width="28"></span><span class="cq-dc__nm">IPG Photonics</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-a="Chips og halvledere" data-d="Chips til bl.a. netværk i datacentre, til industri og til mobilnet." data-g="Lasere og optiske moduler" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/semtech.webp" width="28"></span><span class="cq-dc__nm">Semtech</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Laver lasere, optiske moduler og materialer til datacentre, kommunikation og industri." data-g="Lasere og optiske moduler" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/coherent.webp" width="28"></span><span class="cq-dc__nm">Coherent</span></button><a class="ndi-profile-link" href="../selskaber/coherent.html">Læs om Coherent →</a></li></ul><button aria-controls="cq-dc-l-lasere" aria-expanded="false" class="cq-dc__all" data-n="12" type="button">Vis alle (12)</button></div></div><div class="cq-dc__led"><h4 class="cq-dc__lhh"><button aria-controls="cq-dc-b-kabler" aria-expanded="false" class="cq-dc__dx cq-dc__lb2" data-grp="f" type="button"><svg aria-hidden="true" class="cq-dc__ic cq-dc__ic--led" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect height="5.5" rx="1" width="4" x="2.25" y="9.25"></rect><path d="M6.25 12C11 12 12 5.5 18.5 5.5M6.25 12h12.25M6.25 12C11 12 12 18.5 18.5 18.5"></path><circle cx="20" cy="5.5" r="1.5"></circle><circle cx="20" cy="12" r="1.5"></circle><circle cx="20" cy="18.5" r="1.5"></circle></svg><span class="cq-dc__ln">Kabler, fiber og stik</span><span aria-hidden="true" class="cq-dc__chev"></span></button></h4><div class="cq-dc__lbody" id="cq-dc-b-kabler"><p class="cq-dc__lx">Kobberkabler forbinder det, der står tæt på hinanden, og fiberkabler bærer lyset over længere afstand. Stikkene holder forbindelsen præcis og tæt. Selskaberne leverer også til andre kunder end datacentre.</p><ul class="cq-dc__cos" data-top="5" id="cq-dc-l-kabler"><li><button aria-pressed="false" class="cq-dc__co" data-d="Leverer forbindelser med fiber og radiosignaler, bl.a. til datacentre." data-g="Kabler, fiber og stik" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/huber-suhner.webp" width="28"></span><span class="cq-dc__nm">Huber+Suhner</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-a="Energi og elnet" data-d="Laver bl.a. optiske stik og komponenter til datacentre. Selskabet laver også dele til biler." data-g="Kabler, fiber og stik" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/review-img/eb3e7296661d.webp" width="28"></span><span class="cq-dc__nm">Sumitomo Electric Industries</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Glas og materialer. Optisk kommunikation var det største forretningsområde i 2025 med en omsætning på 6.274 mio. USD." data-g="Kabler, fiber og stik" type="button"><span class="cq-dc__lg"><span aria-hidden="true" class="cq-dc__ini">CO</span></span><span class="cq-dc__nm">Corning</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Stik, kabler, fiberforbindelser, antenner og sensorer." data-g="Kabler, fiber og stik" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/amphenol.webp" width="28"></span><span class="cq-dc__nm">Amphenol</span></button></li></ul></div></div><div class="cq-dc__led"><h4 class="cq-dc__lhh"><button aria-controls="cq-dc-b-net" aria-expanded="false" class="cq-dc__dx cq-dc__lb2" data-grp="f" type="button"><svg aria-hidden="true" class="cq-dc__ic cq-dc__ic--led" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="6" cy="5" r="2"></circle><circle cx="18" cy="5" r="2"></circle><rect height="6" rx="1.5" width="18.5" x="2.75" y="14.25"></rect><path d="M6 7v7.25M18 7v7.25M7.5 6.5l9 7.75M16.5 6.5l-9 7.75"></path><circle cx="6.5" cy="17.25" fill="currentColor" r=".8" stroke="none"></circle><circle cx="10" cy="17.25" fill="currentColor" r=".8" stroke="none"></circle><circle cx="13.5" cy="17.25" fill="currentColor" r=".8" stroke="none"></circle><circle cx="17" cy="17.25" fill="currentColor" r=".8" stroke="none"></circle></svg><span class="cq-dc__ln">Netværk og forbindelseschips</span><span aria-hidden="true" class="cq-dc__chev"></span></button></h4><div class="cq-dc__lbody" id="cq-dc-b-net"><p class="cq-dc__lx">Netværket bestemmer, hvor data skal hen, i hallen og mellem datacentre. Andre selskaber laver udstyr, der måler og tester forbindelserne. Forbindelseschips får mange chips i samme system til at arbejde som én stor computer.</p><ul class="cq-dc__cos" data-top="5" id="cq-dc-l-net"><li><button aria-pressed="false" class="cq-dc__co" data-d="Netværksudstyr, software og service til netværk. Én cloududbyder stod for omkring 18 % af omsætningen." data-g="Netværk og forbindelseschips" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/ciena.webp" width="28"></span><span class="cq-dc__nm">Ciena</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-a="Chips og halvledere" data-d="Laver kabler, optiske moduler og chips til meget hurtige forbindelser." data-g="Netværk og forbindelseschips" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/credo.webp" width="28"></span><span class="cq-dc__nm">Credo</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Fibernet og netværkstjenester til virksomheder." data-g="Netværk og forbindelseschips" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/lumen.webp" width="28"></span><span class="cq-dc__nm">Lumen</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Test- og måleudstyr til netværk samt optiske produkter. Datacentre er ét af flere markeder." data-g="Netværk og forbindelseschips" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/viavi-solutions.webp" width="28"></span><span class="cq-dc__nm">Viavi Solutions</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-a="Software &amp; AI" data-d="Netværksudstyr, bl.a. til AI hos store cloududbydere." data-g="Netværk og forbindelseschips" type="button"><span class="cq-dc__lg"><span aria-hidden="true" class="cq-dc__ini">CS</span></span><span class="cq-dc__nm">Cisco Systems</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Test- og måleudstyr, bl.a. til forbindelserne i og mellem datacentre." data-g="Netværk og forbindelseschips" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/review-img/46e9628ee467.webp" width="28"></span><span class="cq-dc__nm">Keysight Technologies</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-a="Chips og halvledere" data-d="Forbindelseschips, der får mange chips i samme system til at arbejde sammen." data-g="Netværk og forbindelseschips" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/astera-labs.webp" width="28"></span><span class="cq-dc__nm">Astera Labs</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Netværksudstyr og software til datacentre, også til AI." data-g="Netværk og forbindelseschips" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/arista-networks.webp" width="28"></span><span class="cq-dc__nm">Arista Networks</span></button></li></ul><button aria-controls="cq-dc-l-net" aria-expanded="false" class="cq-dc__all" data-n="8" type="button">Vis alle (8)</button></div></div><div aria-live="polite" class="cq-dc__info"></div></div></div><div class="cq-dc__lag cq-dc__scope" data-lag="h"><h3 class="cq-dc__lagh"><button aria-controls="cq-dc-p-h" aria-expanded="false" class="cq-dc__dx cq-dc__lagb" data-grp="lag" data-lag="h" type="button"><span aria-hidden="true" class="cq-dc__sw cq-dc__sw--h"><svg aria-hidden="true" class="cq-dc__ic cq-dc__ic--grp" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M2.75 5.25h18.5"></path><path d="M7.25 5.25v4M12 5.25v4M16.75 5.25v4" stroke-width="1"></path><rect height="11" rx=".75" width="4" x="5.25" y="9.25"></rect><rect height="11" rx=".75" width="4" x="10" y="9.25"></rect><rect height="11" rx=".75" width="4" x="14.75" y="9.25"></rect><path d="M2.75 20.25h18.5"></path></svg></span><span class="cq-dc__lagn">Hallen og driften</span><span class="cq-dc__lagc"></span><span aria-hidden="true" class="cq-dc__chev"></span></button></h3><div class="cq-dc__lagp" id="cq-dc-p-h"><p class="cq-dc__lagx">Bygningen, kølingen og dem, der driver hallen og lejer regnekraften ud.</p><div class="cq-dc__led"><h4 class="cq-dc__lhh"><button aria-controls="cq-dc-b-drift" aria-expanded="false" class="cq-dc__dx cq-dc__lb2" data-grp="h" type="button"><svg aria-hidden="true" class="cq-dc__ic cq-dc__ic--led" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 18.5h10.25a4 4 0 0 0 .4-7.98A5.5 5.5 0 0 0 7.05 9.3 4.6 4.6 0 0 0 7 18.5z"></path><path d="M8.75 13.25h5M8.75 15.75h5" stroke-width="1"></path><circle cx="16" cy="13.25" fill="currentColor" r=".8" stroke="none"></circle><circle cx="16" cy="15.75" fill="currentColor" r=".8" stroke="none"></circle></svg><span class="cq-dc__ln">Datacenterdrift og cloud</span><span aria-hidden="true" class="cq-dc__chev"></span></button></h4><div class="cq-dc__lbody" id="cq-dc-b-drift"><p class="cq-dc__lx">Cloud betyder, at man lejer regnekraft og lager over nettet i stedet for at eje sine egne servere. Oracle og Microsoft er store udbydere, hvor cloud er en del af en stor softwareforretning. Flere af de øvrige kommer fra bitcoin-mining, altså at bruge computere og strøm til at registrere bitcoin-transaktioner mod betaling i bitcoin. Nu bruger de deres strøm og bygninger til AI.</p><ul class="cq-dc__cos" data-top="5" id="cq-dc-l-drift"><li><button aria-pressed="false" class="cq-dc__co" data-a="Krypto, Energi og elnet" data-d="Ejer og driver datacentre og lejer regnekraft ud til AI. Driver stadig bitcoin-mining i dele af sine datacentre, mens de lægges om." data-g="Datacenterdrift og cloud" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/iris-energy.webp" width="28"></span><span class="cq-dc__nm">IREN</span></button><a class="ndi-profile-link" href="../selskaber/iren.html">Læs om IREN →</a></li><li><button aria-pressed="false" class="cq-dc__co" data-a="Software &amp; AI" data-d="Forretningssoftware og cloud. Oracles cloud leverer regnekraft, lager og netværk." data-g="Datacenterdrift og cloud" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/oracle.webp" width="28"></span><span class="cq-dc__nm">Oracle</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-a="Krypto" data-d="Bygger og driver datacentre og lejer plads ud til store AI-beregninger. Har også bitcoin-mining." data-g="Datacenterdrift og cloud" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/core-scientific.webp" width="28"></span><span class="cq-dc__nm">Core Scientific</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-a="Krypto" data-d="Er ved at lægge om fra bitcoin-mining til datacentre med lejeaftaler." data-g="Datacenterdrift og cloud" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/cipher-mining.webp" width="28"></span><span class="cq-dc__nm">Cipher Digital</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Ejer datacentre og lejer regnekraft til AI ud som cloudtjeneste." data-g="Datacenterdrift og cloud" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/whitefiber.webp" width="28"></span><span class="cq-dc__nm">WhiteFiber</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Cloud bygget til AI: træning og brug af AI-modeller på egen software og egne servere." data-g="Datacenterdrift og cloud" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/coreweave.webp" width="28"></span><span class="cq-dc__nm">CoreWeave</span></button><a class="ndi-profile-link" href="../selskaber/coreweave.html">Læs om CoreWeave →</a></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Australsk udbyder af regnekraft til AI via cloud." data-g="Datacenterdrift og cloud" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/sharonai.webp" width="28"></span><span class="cq-dc__nm">SharonAI</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Cloud til AI med regnekraft, software og tjenester til at træne og bruge AI-modeller." data-g="Datacenterdrift og cloud" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/nebius.webp" width="28"></span><span class="cq-dc__nm">Nebius</span></button><a class="ndi-profile-link" href="../selskaber/nebius.html">Læs om Nebius →</a></li><li><button aria-pressed="false" class="cq-dc__co" data-a="Software &amp; AI" data-d="Software, cloud og AI. Microsofts cloud, Azure, leverer regnekraft, netværk og lager fra selskabets datacentre." data-g="Datacenterdrift og cloud" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/microsoft.webp" width="28"></span><span class="cq-dc__nm">Microsoft</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-a="Krypto" data-d="Driver datacentre til AI og andre store beregninger. Udlejning af regnekraft var 31,9 af 44,8 mio. USD i omsætning i 2. kvartal 2026." data-g="Datacenterdrift og cloud" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/terawulf.webp" width="28"></span><span class="cq-dc__nm">TeraWulf</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Designer, bygger og driver datacentre til AI og andre store beregninger. CoreWeave lejer kapacitet." data-g="Datacenterdrift og cloud" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/applied-digital.webp" width="28"></span><span class="cq-dc__nm">Applied Digital</span></button></li></ul><button aria-controls="cq-dc-l-drift" aria-expanded="false" class="cq-dc__all" data-n="11" type="button">Vis alle (11)</button></div></div><div class="cq-dc__led"><h4 class="cq-dc__lhh"><button aria-controls="cq-dc-b-byg" aria-expanded="false" class="cq-dc__dx cq-dc__lb2" data-grp="h" type="button"><svg aria-hidden="true" class="cq-dc__ic cq-dc__ic--led" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M2.75 9.5L12 4l9.25 5.5"></path><path d="M4.75 8.5v12h14.5v-12"></path><circle cx="12" cy="14.5" r="3.75"></circle><path d="M12 14.5c0-1.6 1-2.6 2.2-2.4M12 14.5c-1.4.8-2.8.4-3.1-.8M12 14.5c1.4.8 1.6 2.2.6 3" stroke-width="1"></path></svg><span class="cq-dc__ln">Byggeri og køling</span><span aria-hidden="true" class="cq-dc__chev"></span></button></h4><div class="cq-dc__lbody" id="cq-dc-b-byg"><p class="cq-dc__lx">Før den første server tændes, skal der være en bygning, el og køling. Serverne laver meget varme, og kølingen leder den væk. Selskaberne her er ingeniørfirmaer og entreprenører, der tegner, bygger og installerer.</p><ul class="cq-dc__cos" data-top="5" id="cq-dc-l-byg"><li><button aria-pressed="false" class="cq-dc__co" data-a="Energi og elnet" data-d="Udvikler et område til energi og datacentre i Texas." data-g="Byggeri og køling" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/fermi.webp" width="28"></span><span class="cq-dc__nm">Fermi</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-a="Energi og elnet" data-d="Ingeniør- og rådgivningsfirma inden for infrastruktur." data-g="Byggeri og køling" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/jacobs-solutions.webp" width="28"></span><span class="cq-dc__nm">Jacobs Solutions</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Anlægsarbejde. Byggemodning og el-arbejde, bl.a. til datacentre, var 59 % af omsætningen." data-g="Byggeri og køling" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/review-img/dbc5d48c5b94.webp" width="28"></span><span class="cq-dc__nm">Sterling Infrastructure</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Installerer køling, ventilation, VVS og el i bygninger, bl.a. datacentre." data-g="Byggeri og køling" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/review-img/0e00be186206.webp" width="28"></span><span class="cq-dc__nm">Comfort Systems USA</span></button></li></ul></div></div><div aria-live="polite" class="cq-dc__info"></div></div></div><div class="cq-dc__lag cq-dc__scope" data-lag="m"><h3 class="cq-dc__lagh"><button aria-controls="cq-dc-p-m" aria-expanded="false" class="cq-dc__dx cq-dc__lagb" data-grp="lag" data-lag="m" type="button"><span aria-hidden="true" class="cq-dc__sw cq-dc__sw--m"><svg aria-hidden="true" class="cq-dc__ic cq-dc__ic--grp" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect height="7.5" rx="1.5" width="18.5" x="2.75" y="8.25"></rect><path d="M5.5 10.75h7M5.5 13.25h7" stroke-width="1"></path><circle cx="16" cy="12" fill="currentColor" r="1" stroke="none"></circle><circle cx="18.5" cy="12" fill="currentColor" r="1" stroke="none"></circle></svg></span><span class="cq-dc__lagn">Maskinerne</span><span class="cq-dc__lagc"></span><span aria-hidden="true" class="cq-dc__chev"></span></button></h3><div class="cq-dc__lagp" id="cq-dc-p-m"><p class="cq-dc__lagx">Serverne og de skabe, de sidder i.</p><figure class="dc-foto"><svg aria-hidden="true" class="pd-neutral" viewbox="0 0 600 300"><g fill="none" stroke="var(--graf-akse)" stroke-width="2"><rect height="140" rx="18" width="140" x="40" y="80"></rect><rect height="140" rx="18" width="140" x="230" y="80"></rect><rect height="140" rx="18" width="140" x="420" y="80"></rect><path d="M180 150H230M370 150H420"></path></g><g fill="none" stroke="var(--accent)" stroke-width="3"><circle cx="110" cy="150" r="35"></circle><path d="M265 115H335V185H265ZM455 150H525M490 115V185"></path></g></svg><figcaption>Produkt · anvendelse · forretning. Skematisk illustration: NewDeal Invest.</figcaption></figure><div class="cq-dc__led"><p class="cq-dc__lx">En server er en computer uden skærm, der arbejder døgnet rundt. Serverne sidder stablet i høje skabe, der kaldes racks. Flere af selskaberne er kontraktproducenter, altså fabrikker, der producerer for andre.</p><ul class="cq-dc__cos" data-top="5" id="cq-dc-l-servere"><li><button aria-pressed="false" class="cq-dc__co" data-d="Samler bl.a. serverskabe, der er klar til AI." data-g="Servere og racks" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/tss.webp" width="28"></span><span class="cq-dc__nm">TSS</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Designer og producerer for andre, bl.a. udstyr til AI- og clouddatacentre." data-g="Servere og racks" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/celestica.webp" width="28"></span><span class="cq-dc__nm">Celestica</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Laver robuste, kraftige computere til brug ude i felten." data-g="Servere og racks" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/one-stop-systems.webp" width="28"></span><span class="cq-dc__nm">One Stop Systems</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-a="Energi og elnet" data-d="Producerer for andre. Området med regnekraft, strøm og køling til datacentre var 24 % af omsætningen." data-g="Servere og racks" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/flex.webp" width="28"></span><span class="cq-dc__nm">Flex</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Servere og hele serverskabe, bl.a. til AI." data-g="Servere og racks" type="button"><span class="cq-dc__lg"><span aria-hidden="true" class="cq-dc__ini">SM</span></span><span class="cq-dc__nm">Super Micro Computer</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Producerer for andre. Forretningsområdet Intelligent Infrastructure, som omfatter AI-infrastruktur og kunder inden for kapitaludstyr, cloud og datacentre samt netværk og kommunikation, var 48 % af omsætningen i 3. kvartal af regnskabsåret 2026 (marts til maj 2026)." data-g="Servere og racks" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/jabil.webp" width="28"></span><span class="cq-dc__nm">Jabil</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-d="PC'er, servere, lager og netværk. Leverede AI-servere for 24.683 mio. USD i regnskabsåret 2026." data-g="Servere og racks" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/dell.webp" width="28"></span><span class="cq-dc__nm">Dell</span></button></li><li><button aria-pressed="false" class="cq-dc__co" data-d="Producerer for andre. Området for cloud og AI-infrastruktur var 62 % af omsætningen i 3. kvartal." data-g="Servere og racks" type="button"><span class="cq-dc__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-critiquito/logoer/sanmina.webp" width="28"></span><span class="cq-dc__nm">Sanmina</span></button></li></ul><button aria-controls="cq-dc-l-servere" aria-expanded="false" class="cq-dc__all" data-n="8" type="button">Vis alle (8)</button></div><div aria-live="polite" class="cq-dc__info"></div></div></div></div>
 
 </div>
-
-
-
 <p class="cq-dc__note"> Hvert lags procent er de små grupper i laget lagt sammen. Hvor stor en del af selskabernes omsætning der kommer fra AI, kan ikke opgøres. Mange selskaber oplyser ikke tallet for sig. Sanmina oplyser fx kun ét samlet tal for cloud og AI-infrastruktur. I et datacenter bærer de samme kabler, lasere og servere både AI og almindelige apps.</p>
 
 </div>
-
-
-
 </section><section aria-labelledby="fod-h" class="s" id="fod"><div class="wrap">
 
 <p class="eyebrow">Naboerne</p>
@@ -486,9 +329,6 @@
 <h2 id="fod-h">Også med en fod i datacentre</h2>
 
 <p class="smal">Nogle selskaber leverer også til datacentre, men hører i fonden til et andet tema, fordi det er der, deres hovedforretning er. Det gælder bl.a. selskaber, der leverer strøm, chips og harddiske.</p>
-
-
-
 <ul class="fod" id="fod-liste"><li><b>SoftBank Group</b><span>Hovedtema: Platformsøkonomi</span><i><span class="sr"></span></i></li><li><b>SpaceX</b><span>Hovedtema: Rumfart</span><i><span class="sr"></span></i></li><li><b>Broadcom</b><span>Hovedtema: Chips og halvledere</span><i><span class="sr"></span></i></li><li><b>CleanSpark</b><span>Hovedtema: Krypto</span><i><span class="sr"></span></i></li><li><b>Generac</b><span>Hovedtema: Energi og elnet</span><i><span class="sr"></span></i></li><li><b>Navitas Semiconductor</b><span>Hovedtema: Chips og halvledere</span><i><span class="sr"></span></i></li><li><b>Bitdeer</b><span>Hovedtema: Krypto</span><i><span class="sr"></span></i></li><li><b>Western Digital</b><span>Hovedtema: Chips og halvledere</span><i><span class="sr"></span></i></li><li><b>Power Solutions International</b><span>Hovedtema: Energi og elnet</span><i><span class="sr"></span></i></li><li><b>Amazon</b><span>Hovedtema: Platformsøkonomi</span><i><span class="sr"></span></i></li><li><b>Seagate Technology</b><span>Hovedtema: Chips og halvledere</span><i><span class="sr"></span></i></li><li><b>Galaxy Digital</b><span>Hovedtema: Krypto</span><i><span class="sr"></span></i></li><li><b>Riot Platforms</b><span>Hovedtema: Krypto</span><i><span class="sr"></span></i></li><li><b>ERock</b><span>Hovedtema: Energi og elnet</span><i><span class="sr"></span></i></li><li><b>NVIDIA</b><span>Hovedtema: Chips og halvledere</span><i><span class="sr"></span></i></li><li><b>Keel Infrastructure</b><span>Hovedtema: Krypto</span><i><span class="sr"></span></i></li><li><b>Talen Energy</b><span>Hovedtema: Energi og elnet</span><i><span class="sr"></span></i></li><li><b>Chemours</b><span>Hovedtema: Råstoffer</span><i><span class="sr"></span></i></li><li><b>Bloom Energy</b><span>Hovedtema: Energi og elnet</span><i><span class="sr"></span></i></li><li><b>Oklo</b><span>Hovedtema: Energi og elnet</span><i><span class="sr"></span></i></li><li><b>Quanta Services</b><span>Hovedtema: Energi og elnet</span><i><span class="sr"></span></i></li><li><b>Bit Digital</b><span>Hovedtema: Krypto</span><i><span class="sr"></span></i></li><li><b>Monolithic Power Systems</b><span>Hovedtema: Chips og halvledere</span><i><span class="sr"></span></i></li><li><b>Solaris Energy Infrastructure</b><span>Hovedtema: Energi og elnet</span><i><span class="sr"></span></i></li><li><b>Marvell</b><span>Hovedtema: Chips og halvledere</span><i><span class="sr"></span></i></li><li><b>Caterpillar</b><span>Hovedtema: Energi og elnet</span><i><span class="sr"></span></i></li><li><b>Cummins</b><span>Hovedtema: Energi og elnet</span><i><span class="sr"></span></i></li><li><b>Alibaba</b><span>Hovedtema: Platformsøkonomi</span><i><span class="sr"></span></i></li><li><b>Meta</b><span>Hovedtema: Platformsøkonomi</span><i><span class="sr"></span></i></li><li><b>AMD</b><span>Hovedtema: Chips og halvledere</span><i><span class="sr"></span></i></li><li><b>Cloudflare</b><span>Hovedtema: Software &amp; AI</span><i><span class="sr"></span></i></li></ul>
 
 <button aria-controls="fod-liste" aria-expanded="false" class="knap" hidden="" id="fod-alle" type="button">Vis alle (31)</button>
@@ -503,7 +343,7 @@
 
 <div class="udefra-g">
 
-<figure class="vid"><div class="vid-ramme" data-title="Video: Inside a Google Cloud TPU Data Center (Google Cloud)" data-yt="FsxthdQ_sL4"><button aria-label="Videoen hentes fra YouTube." class="vid-play" type="button"><picture><source media="(max-width:599px)" srcset="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-billedstil/billeder/datacenter-plakat-FsxthdQ_sL4-mobil.webp"></source><img alt="" height="540" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-billedstil/billeder/datacenter-plakat-FsxthdQ_sL4-bred.webp" width="960"></picture><span aria-hidden="true" class="vid-kilde">Google Cloud</span><span aria-hidden="true" class="vid-ikon"></span><span aria-hidden="true" class="vid-tid">2:40</span></button></div><p class="media-reading"><strong>Se efter:</strong> Er det beregningen, forbindelserne eller den fysiske drift, der ændres?</p>
+<figure class="vid"><div class="vid-ramme" data-title="Video: Inside a Google Cloud TPU Data Center (Google Cloud)" data-yt="FsxthdQ_sL4"><button aria-label="Videoen hentes fra YouTube." class="vid-play" type="button"><picture><source media="(max-width:599px)" srcset="../assets/review-img/e2f463cdbbf9.webp"></source><img alt="" height="540" loading="lazy" src="../assets/review-img/c619127f88c5.webp" width="960"></picture><span aria-hidden="true" class="vid-kilde">Google Cloud</span><span aria-hidden="true" class="vid-ikon"></span><span aria-hidden="true" class="vid-tid">2:40</span></button></div><p class="media-reading"><strong>Se efter:</strong> Er det beregningen, forbindelserne eller den fysiske drift, der ændres?</p>
 
 <figcaption><b>Google Cloud viser rundt i et af Googles datacentre: racks med AI-servere, netværk, kontakter, der sender lyset videre, væskekøling og adgangskontrol.</b> TPU i titlen er Googles egen AI-chip. Kilde: Google Cloud. Video fra 29.08.2023, 2:40, på engelsk: “Inside a Google Cloud TPU Data Center”. Google (Alphabet) er ikke blandt fondens selskaber. <a href="https://www.youtube.com/watch?v=FsxthdQ_sL4" rel="noopener" target="_blank">Se på YouTube<span class="sr"> (åbner i nyt vindue)</span></a></figcaption></figure>
 
@@ -522,60 +362,32 @@
 </div></section></div>
 
 <section class="sektion" id="selskaberne" aria-labelledby="h-selskaber">
-
-        <div class="gitter gitter--stub">
-
-          <article class="kort panel panel--bred" aria-labelledby="h-selskaber">
-
-            <header class="panel-hoved">
-
-              <div><h2 class="panel-titel" id="h-selskaber"><svg class="ik" aria-hidden="true"><use href="#i-selskab"></use></svg><span data-hvis="temaer#datacenter.oevrigeAntal">De <span data-tal="temaer#datacenter.antalVist" data-fmt="heltal">… </span> største af temaets <span data-tal="temaer#datacenter.antal" data-fmt="antal" data-en="selskab" data-fl="selskaber">…  selskaber</span></span><span data-hvis="temaer#datacenter.alleVist" hidden>Temaets <span data-tal="temaer#datacenter.antal" data-fmt="antal" data-en="selskab" data-fl="selskaber">…  selskaber</span></span></h2>
-
-              <p class="hint">Tryk på et selskab for at se mere om det.</p></div>
-
-            </header>
-
-            <ul class="tema-liste" data-liste="temaer#datacenter.vist" data-skabelon="tpl-tl"></ul>
-
-            <details class="fold-ud fold-liste" data-hvis="temaer#datacenter.oevrigeAntal" hidden><summary><span>Vis alle <span data-tal="temaer#datacenter.antal" data-fmt="antal" data-en="selskab" data-fl="selskaber">…  selskaber</span> i temaet</span></summary>
-
-              <ul class="tema-liste" data-liste="temaer#datacenter.oevrige" data-skabelon="tpl-tl"></ul>
-
-            </details>
-
-            <p class="kildelinje">Andele i PMINDI, den udgave af fonden, der udbetaler udbytte, pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span> (fondens data).</p>
-
-          </article>
-
-        </div>
-
-      </section>
-
-      <section class="sektion v18-proces" data-proces-slot="datacenter" hidden></section>
-
-      
-
-      <section class="sektion sektion--x" id="x-opslag" aria-labelledby="h-x-opslag" data-x-tema data-x-rel="../" data-x-selskaber='[{"isin": "SE0003917798", "navn": "Sivers Semiconductors", "slug": "sivers-semiconductors"}, {"isin": "CH0030380734", "navn": "HUBER+SUHNER", "slug": "huber-suhner"}, {"isin": "AU0000185993", "navn": "IREN", "slug": "iren"}, {"isin": "US68389X1054", "navn": "Oracle", "slug": "oracle"}, {"isin": "CA73044W3021", "navn": "POET Technologies", "slug": "poet-technologies"}, {"isin": "US87288V1017", "navn": "TSS", "slug": "tss"}, {"isin": "US03823U1025", "navn": "Applied Optoelectronics", "slug": "applied-optoelectronics"}, {"isin": "KYG3323L1005", "navn": "Fabrinet", "slug": "fabrinet"}, {"isin": "US55405Y1001", "navn": "MACOM", "slug": "macom"}, {"isin": "CA15101Q2071", "navn": "Celestica", "slug": "celestica"}, {"isin": "US21874A1060", "navn": "Core Scientific", "slug": "core-scientific"}, {"isin": "US5322751042", "navn": "Lightwave Logic", "slug": "lightwave-logic"}, {"isin": "US65487K1007", "navn": "nLight", "slug": "nlight"}, {"isin": "AT0000A3EPA4", "navn": "ams OSRAM", "slug": "ams-osram"}, {"isin": "US1717793095", "navn": "Ciena", "slug": "ciena"}, {"isin": "US86800U3023", "navn": "Super Micro Computer", "slug": "super-micro-computer"}, {"isin": "US17253J1060", "navn": "Cipher Digital", "slug": "cipher-mining"}, {"isin": "US3149111086", "navn": "Fermi", "slug": "fermi"}, {"isin": "JP3407400005", "navn": "Sumitomo Electric Industries", "slug": "sumitomo-electric-industries"}, {"isin": "US2193501051", "navn": "Corning", "slug": "corning"}, {"isin": "KYG254571055", "navn": "Credo", "slug": "crdo"}, {"isin": "US46982L1089", "navn": "Jacobs Solutions", "slug": "jacobs-solutions"}, {"isin": "US19247G1076", "navn": "Coherent", "slug": "coherent"}, {"isin": "US5502411037", "navn": "Lumen", "slug": "lumen-tech"}, {"isin": "US55024U1097", "navn": "Lumentum", "slug": "lumentum-hldngs"}, {"isin": "US21873S1087", "navn": "CoreWeave", "slug": "coreweave"}, {"isin": "KYG961151035", "navn": "WhiteFiber", "slug": "whitefiber"}, {"isin": "US8592411016", "navn": "Sterling Infrastructure", "slug": "sterling-infrastructure"}, {"isin": "US44980X1090", "navn": "IPG Photonics", "slug": "ipg-photonics"}, {"isin": "NL0009805522", "navn": "Nebius", "slug": "nebius"}, {"isin": "US7789203061", "navn": "SharonAI", "slug": "sharonai-holdings"}, {"isin": "US68247W1099", "navn": "One Stop Systems", "slug": "one-stop-systems"}, {"isin": "US9255501051", "navn": "Viavi Solutions", "slug": "viavi-solutions"}, {"isin": "SG9999000020", "navn": "Flex", "slug": "flex"}, {"isin": "US5949181045", "navn": "Microsoft", "slug": "microsoft"}, {"isin": "US8168501018", "navn": "Semtech", "slug": "semtech"}, {"isin": "US17275R1023", "navn": "Cisco Systems", "slug": "cisco-systems"}, {"isin": "US49338L1035", "navn": "Keysight Technologies", "slug": "keysight-technologies-in"}, {"isin": "US88080T1043", "navn": "TeraWulf", "slug": "terawulf"}, {"isin": "US0320951017", "navn": "Amphenol", "slug": "amphenol"}, {"isin": "US04626A1034", "navn": "Astera Labs", "slug": "astera-labs"}, {"isin": "US1999081045", "navn": "Comfort Systems USA", "slug": "comfort-systems-usa"}, {"isin": "US4663131039", "navn": "Jabil", "slug": "jabil"}, {"isin": "US0381692070", "navn": "Applied Digital", "slug": "applied-digital"}, {"isin": "US24703L2025", "navn": "Dell", "slug": "dell-tech"}, {"isin": "US8010561020", "navn": "Sanmina", "slug": "sanmina"}, {"isin": "US0404132054", "navn": "Arista Networks", "slug": "arista-networks"}]'>
-
-        <header class="sektion-hoved">
-
-          <h2 class="sektion-titel" id="h-x-opslag">Det skriver de på X</h2>
-
-          <p class="sektion-intro">Udvalgte offentlige opslag om selskaberne i temaet. Opslagene er andres og ikke NewDeal Invests holdning.</p>
-
-        </header>
-
-        <div class="kort panel x-tema">
-
-          <p class="x-tema-status lille" role="status">Henter opslag …</p>
-
-          <details class="fold-ud fold-mobil fold-sektion" data-aaben-bred><summary aria-expanded="false">Se opslagene fra X</summary><ul class="x-tema-liste" hidden></ul></details>
-
-          <p class="kildelinje x-tema-kilde" hidden></p>
-
-        </div>
-
-      </section>
+<div class="gitter gitter--stub">
+<article class="kort panel panel--bred" aria-labelledby="h-selskaber">
+<header class="panel-hoved">
+<div><h2 class="panel-titel" id="h-selskaber"><svg class="ik" aria-hidden="true"><use href="#i-selskab"></use></svg><span data-hvis="temaer#datacenter.oevrigeAntal">De <span data-tal="temaer#datacenter.antalVist" data-fmt="heltal">… </span> største af temaets <span data-tal="temaer#datacenter.antal" data-fmt="antal" data-en="selskab" data-fl="selskaber">…  selskaber</span></span><span data-hvis="temaer#datacenter.alleVist" hidden>Temaets <span data-tal="temaer#datacenter.antal" data-fmt="antal" data-en="selskab" data-fl="selskaber">…  selskaber</span></span></h2>
+<p class="hint">Tryk på et selskab for at se mere om det.</p></div>
+</header>
+<ul class="tema-liste" data-liste="temaer#datacenter.vist" data-skabelon="tpl-tl"></ul>
+<details class="fold-ud fold-liste" data-hvis="temaer#datacenter.oevrigeAntal" hidden><summary><span>Vis alle <span data-tal="temaer#datacenter.antal" data-fmt="antal" data-en="selskab" data-fl="selskaber">…  selskaber</span> i temaet</span></summary>
+<ul class="tema-liste" data-liste="temaer#datacenter.oevrige" data-skabelon="tpl-tl"></ul>
+</details>
+<p class="kildelinje">Andele i PMINDI, den udgave af fonden, der udbetaler udbytte, pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span> (fondens data).</p>
+</article>
+</div>
+</section>
+<section class="sektion v18-proces" data-proces-slot="datacenter" hidden></section>
+<section class="sektion sektion--x" id="x-opslag" aria-labelledby="h-x-opslag" data-x-tema data-x-rel="../" data-x-selskaber='[{"isin": "SE0003917798", "navn": "Sivers Semiconductors", "slug": "sivers-semiconductors"}, {"isin": "CH0030380734", "navn": "HUBER+SUHNER", "slug": "huber-suhner"}, {"isin": "AU0000185993", "navn": "IREN", "slug": "iren"}, {"isin": "US68389X1054", "navn": "Oracle", "slug": "oracle"}, {"isin": "CA73044W3021", "navn": "POET Technologies", "slug": "poet-technologies"}, {"isin": "US87288V1017", "navn": "TSS", "slug": "tss"}, {"isin": "US03823U1025", "navn": "Applied Optoelectronics", "slug": "applied-optoelectronics"}, {"isin": "KYG3323L1005", "navn": "Fabrinet", "slug": "fabrinet"}, {"isin": "US55405Y1001", "navn": "MACOM", "slug": "macom"}, {"isin": "CA15101Q2071", "navn": "Celestica", "slug": "celestica"}, {"isin": "US21874A1060", "navn": "Core Scientific", "slug": "core-scientific"}, {"isin": "US5322751042", "navn": "Lightwave Logic", "slug": "lightwave-logic"}, {"isin": "US65487K1007", "navn": "nLight", "slug": "nlight"}, {"isin": "AT0000A3EPA4", "navn": "ams OSRAM", "slug": "ams-osram"}, {"isin": "US1717793095", "navn": "Ciena", "slug": "ciena"}, {"isin": "US86800U3023", "navn": "Super Micro Computer", "slug": "super-micro-computer"}, {"isin": "US17253J1060", "navn": "Cipher Digital", "slug": "cipher-mining"}, {"isin": "US3149111086", "navn": "Fermi", "slug": "fermi"}, {"isin": "JP3407400005", "navn": "Sumitomo Electric Industries", "slug": "sumitomo-electric-industries"}, {"isin": "US2193501051", "navn": "Corning", "slug": "corning"}, {"isin": "KYG254571055", "navn": "Credo", "slug": "crdo"}, {"isin": "US46982L1089", "navn": "Jacobs Solutions", "slug": "jacobs-solutions"}, {"isin": "US19247G1076", "navn": "Coherent", "slug": "coherent"}, {"isin": "US5502411037", "navn": "Lumen", "slug": "lumen-tech"}, {"isin": "US55024U1097", "navn": "Lumentum", "slug": "lumentum-hldngs"}, {"isin": "US21873S1087", "navn": "CoreWeave", "slug": "coreweave"}, {"isin": "KYG961151035", "navn": "WhiteFiber", "slug": "whitefiber"}, {"isin": "US8592411016", "navn": "Sterling Infrastructure", "slug": "sterling-infrastructure"}, {"isin": "US44980X1090", "navn": "IPG Photonics", "slug": "ipg-photonics"}, {"isin": "NL0009805522", "navn": "Nebius", "slug": "nebius"}, {"isin": "US7789203061", "navn": "SharonAI", "slug": "sharonai-holdings"}, {"isin": "US68247W1099", "navn": "One Stop Systems", "slug": "one-stop-systems"}, {"isin": "US9255501051", "navn": "Viavi Solutions", "slug": "viavi-solutions"}, {"isin": "SG9999000020", "navn": "Flex", "slug": "flex"}, {"isin": "US5949181045", "navn": "Microsoft", "slug": "microsoft"}, {"isin": "US8168501018", "navn": "Semtech", "slug": "semtech"}, {"isin": "US17275R1023", "navn": "Cisco Systems", "slug": "cisco-systems"}, {"isin": "US49338L1035", "navn": "Keysight Technologies", "slug": "keysight-technologies-in"}, {"isin": "US88080T1043", "navn": "TeraWulf", "slug": "terawulf"}, {"isin": "US0320951017", "navn": "Amphenol", "slug": "amphenol"}, {"isin": "US04626A1034", "navn": "Astera Labs", "slug": "astera-labs"}, {"isin": "US1999081045", "navn": "Comfort Systems USA", "slug": "comfort-systems-usa"}, {"isin": "US4663131039", "navn": "Jabil", "slug": "jabil"}, {"isin": "US0381692070", "navn": "Applied Digital", "slug": "applied-digital"}, {"isin": "US24703L2025", "navn": "Dell", "slug": "dell-tech"}, {"isin": "US8010561020", "navn": "Sanmina", "slug": "sanmina"}, {"isin": "US0404132054", "navn": "Arista Networks", "slug": "arista-networks"}]'>
+<header class="sektion-hoved">
+<h2 class="sektion-titel" id="h-x-opslag">Det skriver de på X</h2>
+<p class="sektion-intro">Udvalgte offentlige opslag om selskaberne i temaet. Opslagene er andres og ikke NewDeal Invests holdning.</p>
+</header>
+<div class="kort panel x-tema">
+<p class="x-tema-status lille" role="status">Henter opslag …</p>
+<details class="fold-ud fold-mobil fold-sektion" data-aaben-bred><summary aria-expanded="false">Se opslagene fra X</summary><ul class="x-tema-liste" hidden></ul></details>
+<p class="kildelinje x-tema-kilde" hidden></p>
+</div>
+</section>
 
 <div class="v5f v5f-datacenter" data-v5-fortaelling="datacenter-b"><section aria-labelledby="risiko-h" class="s" id="risiko"><div class="wrap">
 
@@ -591,7 +403,7 @@
 
 </div>
 
-</div></section><section class="rm-section" id="mere-fra-ndi" aria-labelledby="rm-title"><p class="rm-source">VIDEOER OG OPSLAG</p><h2 id="rm-title">Bliv klogere på Datacentre</h2><div class="rm-grid rm-grid-youtube"><article class="rm-video"><button type="button" class="rm-play" data-youtube="aW2FCthXuMw" data-start="0" aria-label="Afspil Hvad er den bedste model for Neoclouds?"><img loading="lazy" src="https://i.ytimg.com/vi/aW2FCthXuMw/hqdefault.jpg" alt=""><span class="rm-play-icon" aria-hidden="true">▶</span><span class="rm-start">Se fra 0:00</span></button><div class="rm-caption"><p class="rm-source">NEWDEAL INVEST · 2026-07-08</p><h3>Hvad er den bedste model for Neoclouds?</h3><a href="https://www.youtube.com/watch?v=aW2FCthXuMw&amp;t=0s" target="_blank" rel="noopener">Se på YouTube ↗</a></div></article><article class="rm-video"><button type="button" class="rm-play" data-youtube="Y6rqisEs6zc" data-start="0" aria-label="Afspil AI-boomets størrelse forklaret og perspektiveret"><img loading="lazy" src="https://i.ytimg.com/vi/Y6rqisEs6zc/hqdefault.jpg" alt=""><span class="rm-play-icon" aria-hidden="true">▶</span><span class="rm-start">Se fra 0:00</span></button><div class="rm-caption"><p class="rm-source">NEWDEAL INVEST · 2026-09-01</p><h3>AI-boomets størrelse forklaret og perspektiveret</h3><a href="https://www.youtube.com/watch?v=Y6rqisEs6zc&amp;t=0s" target="_blank" rel="noopener">Se på YouTube ↗</a></div></article></div><details class="rm-more"><summary>Se flere videoer (1)</summary><div class="rm-grid rm-grid-youtube"><article class="rm-video"><button type="button" class="rm-play" data-youtube="sV41WVailKo" data-start="0" aria-label="Afspil Neocloud økonomien - simpelt forklaret"><img loading="lazy" src="https://i.ytimg.com/vi/sV41WVailKo/hqdefault.jpg" alt=""><span class="rm-play-icon" aria-hidden="true">▶</span><span class="rm-start">Se fra 0:00</span></button><div class="rm-caption"><p class="rm-source">NEWDEAL INVEST · 2026-09-25</p><h3>Neocloud økonomien - simpelt forklaret</h3><a href="https://www.youtube.com/watch?v=sV41WVailKo&amp;t=0s" target="_blank" rel="noopener">Se på YouTube ↗</a></div></article></div></details><div class="rm-grid rm-grid-x"><article class="rm-social rm-x"><p class="rm-source">X · 2026-10-30</p><h3>Delt af Mads Christiansen</h3><div class="rm-embed" data-x="2116215146146324851"></div><a href="https://x.com/StockMKTNewz/status/2116215146146324851" target="_blank" rel="noopener">Læs det originale opslag på X ↗</a></article><article class="rm-social rm-x"><p class="rm-source">X · 2026-10-30</p><h3>Delt af Mads Christiansen</h3><div class="rm-embed" data-x="2116021423181557770"></div><a href="https://x.com/LunarCitizens/status/2116021423181557770" target="_blank" rel="noopener">Læs det originale opslag på X ↗</a></article></div></section><section aria-labelledby="videre-h" class="s" id="videre"><div class="wrap">
+</div></section><section class="rm-section" id="mere-fra-ndi" aria-labelledby="rm-title"><p class="rm-source">VIDEOER OG OPSLAG</p><h2 id="rm-title">Bliv klogere på Datacentre</h2><div class="rm-grid rm-grid-youtube"><article class="rm-video"><button type="button" class="rm-play" data-youtube="aW2FCthXuMw" data-start="0" aria-label="Afspil Hvad er den bedste model for Neoclouds?"><img loading="lazy" src="https://i.ytimg.com/vi/aW2FCthXuMw/hqdefault.jpg" alt=""><span class="rm-play-icon" aria-hidden="true">▶</span><span class="rm-start">Se fra 0:00</span></button><div class="rm-caption"><p class="rm-source">NEWDEAL INVEST · 2026-07-08</p><h3>Hvad er den bedste model for Neoclouds?</h3><p class="rm-topic">Om Datacentre · starter ved 0:00</p><a href="https://www.youtube.com/watch?v=aW2FCthXuMw&amp;t=0s" target="_blank" rel="noopener">Se på YouTube ↗</a></div></article><article class="rm-video"><button type="button" class="rm-play" data-youtube="Y6rqisEs6zc" data-start="0" aria-label="Afspil AI-boomets størrelse forklaret og perspektiveret"><img loading="lazy" src="https://i.ytimg.com/vi/Y6rqisEs6zc/hqdefault.jpg" alt=""><span class="rm-play-icon" aria-hidden="true">▶</span><span class="rm-start">Se fra 0:00</span></button><div class="rm-caption"><p class="rm-source">NEWDEAL INVEST · 2026-09-01</p><h3>AI-boomets størrelse forklaret og perspektiveret</h3><p class="rm-topic">Om Datacentre · starter ved 0:00</p><a href="https://www.youtube.com/watch?v=Y6rqisEs6zc&amp;t=0s" target="_blank" rel="noopener">Se på YouTube ↗</a></div></article></div><details class="rm-more"><summary>Se flere videoer (1)</summary><div class="rm-grid rm-grid-youtube"><article class="rm-video"><button type="button" class="rm-play" data-youtube="sV41WVailKo" data-start="0" aria-label="Afspil Neocloud økonomien - simpelt forklaret"><img loading="lazy" src="https://i.ytimg.com/vi/sV41WVailKo/hqdefault.jpg" alt=""><span class="rm-play-icon" aria-hidden="true">▶</span><span class="rm-start">Se fra 0:00</span></button><div class="rm-caption"><p class="rm-source">NEWDEAL INVEST · 2026-09-25</p><h3>Neocloud økonomien - simpelt forklaret</h3><p class="rm-topic">Om Datacentre · starter ved 0:00</p><a href="https://www.youtube.com/watch?v=sV41WVailKo&amp;t=0s" target="_blank" rel="noopener">Se på YouTube ↗</a></div></article></div></details><div class="rm-grid rm-grid-x"><article class="rm-social rm-x"><p class="rm-source">X · 2026-10-30</p><h3>Delt af Mads Christiansen</h3><div class="rm-embed" data-x="2116215146146324851"></div><a href="https://x.com/StockMKTNewz/status/2116215146146324851" target="_blank" rel="noopener">Læs det originale opslag på X ↗</a></article><article class="rm-social rm-x"><p class="rm-source">X · 2026-10-30</p><h3>Delt af Mads Christiansen</h3><div class="rm-embed" data-x="2116021423181557770"></div><a href="https://x.com/LunarCitizens/status/2116021423181557770" target="_blank" rel="noopener">Læs det originale opslag på X ↗</a></article></div></section><section aria-labelledby="videre-h" class="s" id="videre"><div class="wrap">
 
 <p class="eyebrow">Videre</p>
 
@@ -599,7 +411,7 @@
 
 <div class="videre-g">
 
-<figure class="graf kort"><img class="kun-moerk" alt="Chippen sidder i serveren, og hallen trækker strøm udefra" height="320" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-billedstil/grafik/datacenter-overgang-naboer.svg" width="960"><img class="kun-lys" alt="Chippen sidder i serveren, og hallen trækker strøm udefra" height="320" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/datacenter/fra-billedstil/grafik/datacenter-overgang-naboer-lys.svg" width="960"><figcaption>Illustration: NewDeal Invest.</figcaption></figure>
+<figure class="graf kort"><img class="kun-moerk" alt="Chippen sidder i serveren, og hallen trækker strøm udefra" height="320" loading="lazy" src="../assets/review-img/80518641045e.svg" width="960"><img class="kun-lys" alt="Chippen sidder i serveren, og hallen trækker strøm udefra" height="320" loading="lazy" src="../assets/review-img/9b4321256ac9.svg" width="960"><figcaption>Illustration: NewDeal Invest.</figcaption></figure>
 
 <div>
 
@@ -654,42 +466,21 @@
 </details>
 
 </div></section></div>
-
-
-
-      
-
-      <div class="sektion sektion--videre"><nav class="videre" aria-label="Videre">
-
-          <a class="knap" href="../index.html#hvert-tema"><svg class="ik ik--s" aria-hidden="true"><use href="#i-tilbage"></use></svg>Alle temaer</a>
-
-          <a class="knap" href="../index.html#hvert-tema" data-hvis="temaer#datacenter.forrige" data-href-tema="temaer#datacenter.forrige" hidden><svg class="ik ik--s" aria-hidden="true"><use href="#i-tilbage"></use></svg><span class="knap-tekst">Forrige tema: <span data-navn="temaer#datacenter.forrige">…</span></span></a>
-
-          <a class="knap knap--primaer" href="../index.html#hvert-tema" data-hvis="temaer#datacenter.naeste" data-href-tema="temaer#datacenter.naeste" hidden><span class="knap-tekst">Næste tema: <span data-navn="temaer#datacenter.naeste">…</span></span><svg class="ik ik--s" aria-hidden="true"><use href="#i-frem"></use></svg></a>
-
-          <a class="knap knap--primaer" href="#kilder" data-skjul="temaer#datacenter.naeste" hidden>Det var det sidste tema. Se kilderne<svg class="ik ik--s" aria-hidden="true"><use href="#i-frem"></use></svg></a>
-
-        </nav></div>
-
-
-
-    </main>
-
-    <footer class="sidefod">
-
-      <div class="sidefod-maerke"><span class="logo-felt"><img class="ndi-logo" src="../assets/img/ndi-logo-moerk-baggrund.png" width="2048" height="754" alt="NewDeal Invest" decoding="async"></span></div>
-
-      <div class="sidefod-tekst">
-
-        <p>NewDeal Invest er et brand for NDIIR ApS, investeringsrådgiver for Fundmarket A/S. Markedsføringsmateriale. Ikke personlig investeringsrådgivning. Investering indebærer risiko for tab. Alle andele pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span>.</p>
-
-        <p class="sidefod-kilde">Kilde til fondstal: Fundmarket A/S, der forvalter Investeringsforeningen PortfolioManager. NDIIR ApS yder investeringsrådgivning til foreningen. <span class="sidefod-dato">Opdateret <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span>.</span></p>
-
-      </div>
-
-    </footer>
-
-  </div>
+<div class="sektion sektion--videre"><nav class="videre" aria-label="Videre">
+<a class="knap" href="../tech.html#temaer"><svg class="ik ik--s" aria-hidden="true"><use href="#i-tilbage"></use></svg>Alle temaer</a>
+<a class="knap" href="../tech.html#temaer" data-hvis="temaer#datacenter.forrige" data-href-tema="temaer#datacenter.forrige" hidden><svg class="ik ik--s" aria-hidden="true"><use href="#i-tilbage"></use></svg><span class="knap-tekst">Forrige tema: <span data-navn="temaer#datacenter.forrige">…</span></span></a>
+<a class="knap knap--primaer" href="../tech.html#temaer" data-hvis="temaer#datacenter.naeste" data-href-tema="temaer#datacenter.naeste" hidden><span class="knap-tekst">Næste tema: <span data-navn="temaer#datacenter.naeste">…</span></span><svg class="ik ik--s" aria-hidden="true"><use href="#i-frem"></use></svg></a>
+<a class="knap knap--primaer" href="#kilder" data-skjul="temaer#datacenter.naeste" hidden>Det var det sidste tema. Se kilderne<svg class="ik ik--s" aria-hidden="true"><use href="#i-frem"></use></svg></a>
+</nav></div>
+</main>
+<footer class="sidefod">
+<div class="sidefod-maerke"><span class="logo-felt"><img class="ndi-logo" src="../assets/img/ndi-logo-moerk-baggrund.png" width="2048" height="754" alt="NewDeal Invest" decoding="async"></span></div>
+<div class="sidefod-tekst">
+<p>NewDeal Invest er et brand for NDIIR ApS, investeringsrådgiver for Fundmarket A/S. Markedsføringsmateriale. Ikke personlig investeringsrådgivning. Investering indebærer risiko for tab. Alle andele pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span>.</p>
+<p class="sidefod-kilde">Kilde til fondstal: Fundmarket A/S, der forvalter Investeringsforeningen PortfolioManager. NDIIR ApS yder investeringsrådgivning til foreningen. <span class="sidefod-dato">Opdateret <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span>.</span></p>
+</div>
+</footer>
+</div>
 
 </div>
 
@@ -715,6 +506,6 @@
 
 <script src="../assets/v5-temaer/datacenter.js" defer></script>
 
-<script defer src="../assets/js/review-media.js?v=20261031-1"></script></body>
+<script defer src="../assets/js/review-media.js?v=20261031-2"></script><script defer src="../assets/js/journey-polish.js?v=20261031"></script></body>
 
 </html>

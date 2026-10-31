@@ -17,7 +17,7 @@ def build_media(dest):
                 if kind=='youtube':
                     title=item['title'] if '\ufffd' not in item['title'] else 'Mads Christiansen om '+entry['name']
                     start=int(item['start']);stamp=f'{start//60}:{start%60:02d}'
-                    cards.append(f'<article class="rm-video"><button type="button" class="rm-play" data-youtube="{escape(item["id"])}" data-start="{start}" aria-label="Afspil {escape(title)}"><img loading="lazy" src="https://i.ytimg.com/vi/{escape(item["id"])}/hqdefault.jpg" alt=""><span class="rm-play-icon" aria-hidden="true">▶</span><span class="rm-start">Se fra {stamp}</span></button><div class="rm-caption"><p class="rm-source">NEWDEAL INVEST · {escape(item["date"])}</p><h3>{escape(title)}</h3><a href="https://www.youtube.com/watch?v={escape(item["id"])}&amp;t={start}s" target="_blank" rel="noopener">Se på YouTube ↗</a></div></article>')
+                    cards.append(f'<article class="rm-video"><button type="button" class="rm-play" data-youtube="{escape(item["id"])}" data-start="{start}" aria-label="Afspil {escape(title)}"><img loading="lazy" src="https://i.ytimg.com/vi/{escape(item["id"])}/hqdefault.jpg" alt=""><span class="rm-play-icon" aria-hidden="true">▶</span><span class="rm-start">Se fra {stamp}</span></button><div class="rm-caption"><p class="rm-source">NEWDEAL INVEST · {escape(item["date"])}</p><h3>{escape(title)}</h3><p class="rm-topic">Om {escape(entry["name"])} · starter ved {stamp}</p><a href="https://www.youtube.com/watch?v={escape(item["id"])}&amp;t={start}s" target="_blank" rel="noopener">Se på YouTube ↗</a></div></article>')
                 elif kind=='instagram':
                     cards.append(f'<article class="rm-social"><p class="rm-source">INSTAGRAM · NEWDEAL INVEST · {escape(item["date"])}</p><h3>Kort om {escape(entry["name"])}</h3><button type="button" data-instagram="{escape(item["url"])}">Afspil klippet her</button><a href="{escape(item["url"])}" target="_blank" rel="noopener">Åbn på Instagram ↗</a><div class="rm-embed"></div></article>')
                 else:
@@ -38,8 +38,8 @@ def build_media(dest):
         match=re.search(r'<section\b[^>]*\bid="(?:videre|kilder)"',text)
         if match:text=text[:match.start()]+markup+text[match.start():]
         else:text=text.replace('</main>',markup+'</main>',1)
-        text=text.replace('</head>','<link rel="stylesheet" href="../assets/css/review-media.css?v=20261031-1"></head>',1)
-        text=text.replace('</body>','<script defer src="../assets/js/review-media.js?v=20261031-1"></script></body>',1)
+        text=text.replace('</head>','<link rel="stylesheet" href="../assets/css/review-media.css?v=20261031-2"></head>',1)
+        text=text.replace('</body>','<script defer src="../assets/js/review-media.js?v=20261031-2"></script></body>',1)
         path.write_text(text,encoding='utf8');counts['pages']+=1
     for name,folder in [('review-media.css','css'),('review-media.js','js')]:shutil.copyfile(source/name,dest/'assets'/folder/name)
     (source/'MEDIA-INTEGRATION-STATUS.json').write_text(json.dumps(counts,indent=2),encoding='utf8')

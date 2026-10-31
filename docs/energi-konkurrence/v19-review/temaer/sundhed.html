@@ -39,12 +39,9 @@
 
 <link rel="stylesheet" href="../assets/v5-temaer/sundhed.css">
 
-<link rel="stylesheet" href="../assets/css/review.css?v=20261031logos"><link rel="stylesheet" href="../assets/css/review-media.css?v=20261031-1"></head>
+<link rel="stylesheet" href="../assets/css/review.css?v=20261031logos"><link rel="stylesheet" href="../assets/css/review-media.css?v=20261031-2"><link rel="stylesheet" href="../assets/css/journey-polish.css?v=20261031"></head>
 
 <body>
-
-
-
 <svg class="sprite" aria-hidden="true" focusable="false">
 
 <symbol id="i-pause" viewbox="0 0 24 24"><path d="M9 6v12M15 6v12"></path></symbol>
@@ -128,283 +125,141 @@
 <a class="spring" href="#indhold">Gå til indhold</a>
 
 <div class="app">
-
-  <header class="topbar-mobil">
-
-    <button class="ikonknap" id="menu-aaben" type="button" aria-controls="sidemenu" aria-expanded="false"><svg class="ik" aria-hidden="true"><use href="#i-menu"></use></svg><span class="sr">Åbn menuen</span></button>
-
-    <a class="maerke maerke--lille" href="../index.html" aria-label="NewDeal Invest, til fondsoverblikket">
-
-      <span class="logo-felt logo-felt--lille"><img class="ndi-logo" src="../assets/img/ndi-logo-moerk-baggrund.png" width="2048" height="754" alt="NewDeal Invest" decoding="async"></span>
-
-      <span class="maerke-tekst"><span class="maerke-navn">Sundhed og biotek</span><span class="maerke-sub" id="aktuel-sektion">Tema</span></span>
-
-    </a>
-
-    <a class="knap knap--lille" href="https://fundmarket.dk/newdeal-invest-kl-n/" target="_blank" rel="noopener">Faktaark<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (KID) og prospekt for PMINDI (åbner i nyt vindue)</span></a>
-
-  </header>
-
-  <div class="slor" id="slor" hidden></div>
-
-  <aside class="sidemenu" id="sidemenu" aria-label="Hovedmenu">
-
-    <div class="sm-top">
-
-      <a class="maerke maerke--logo" href="../index.html" aria-label="NewDeal Invest, fondsoverblik">
-
-        <span class="logo-felt"><img class="ndi-logo" src="../assets/img/ndi-logo-moerk-baggrund.png" width="2048" height="754" alt="NewDeal Invest" decoding="async"></span><span class="maerke-sub">Fondsoverblik</span>
-
-      </a>
-
-      <button class="ikonknap sm-luk" id="menu-luk" type="button"><svg class="ik" aria-hidden="true"><use href="#i-luk"></use></svg><span class="sr">Luk menuen</span></button>
-
-    </div>
-
-    <nav class="review-section-nav" aria-label="Vælg indgang"><a href="../index.html">Porteføljen</a><a href="../tech.html">Tech</a><a href="../widget/index.html">Afkast</a></nav><div class="sm-rul">
-
-      <a class="sm-tilbage" href="https://www.newdealinvest.dk/"><svg class="ik" aria-hidden="true"><use href="#i-tilbage"></use></svg><span>Til NewDeal Invests forside</span></a>
-
-
-
-      <nav class="sm-gruppe" aria-labelledby="sm-h-fond">
-
-        <h2 class="sm-overskrift" id="sm-h-fond"><span>Fonden</span></h2>
-
-        <ul class="sm-liste">
-
-          <li><a class="sm-link" href="../fondens-udvikling.html"><span>Fondens udvikling</span></a>
-
-          </li>
-
-          <li><a class="sm-link" href="../index.html#temaer"><span>Fonden fordelt på temaer</span></a>
-
-          </li>
-
-          <li><a class="sm-link" href="../index.html#top10"><span>De <span data-tal="top10.antal" data-fmt="talord">…</span> største selskaber</span></a>
-
-          </li>
-
-          <li><a class="sm-link" href="../index.html#portefoeljen"><span>Porteføljen</span></a>
-
-            <ul class="sm-under sm-under--fond" aria-label="Porteføljen">
-
-              <li><a class="sm-link sm-link--under" href="../index.html#portefoeljen-portfolio" data-portefolje="portfolio"><span>Portefølje</span></a></li>
-
-              <li><a class="sm-link sm-link--under" href="../index.html#portefoeljen-highs" data-portefolje="highs"><span>52-ugers top</span></a></li>
-
-              <li><a class="sm-link sm-link--under" href="../index.html#portefoeljen-risk-summary" data-portefolje="risk-summary"><span>Risiko</span></a></li>
-
-              <li><a class="sm-link sm-link--under" href="../index.html#portefoeljen-method" data-portefolje="method"><span>Metode</span></a></li>
-
-            </ul>
-
-          </li>
-
-          <li><a class="sm-link" href="../index.html#vigtig-information"><span>Risiko og vigtig information</span></a>
-
-          </li>
-
-        </ul>
-
-      </nav>
-
-      <nav class="sm-gruppe" aria-labelledby="sm-h-temaer">
-
-        <h2 class="sm-overskrift" id="sm-h-temaer"><span>Temaer</span><span class="sm-overskrift-note">Andel af fonden</span></h2>
-
-        <ul class="sm-liste">
-
-        </ul>
-
-        <ul class="sm-liste sm-temaliste" id="sm-temaer" data-ordne="temaer">
-
-          <li data-id="chips"><a class="sm-link sm-link--tema" style="--tf:#8bb8bc" href="../temaer/chips.html"><svg class="ik" aria-hidden="true"><use href="#t-chips"></use></svg><span>Chips og halvledere</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="energi"><a class="sm-link sm-link--tema" style="--tf:#759ebc" href="../temaer/energi.html"><svg class="ik" aria-hidden="true"><use href="#t-energi"></use></svg><span>Energi og elnet</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="datacenter"><a class="sm-link sm-link--tema" style="--tf:#d5ba75" href="../temaer/datacenter.html"><svg class="ik" aria-hidden="true"><use href="#t-datacenter"></use></svg><span>Datacentre</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="platforme"><a class="sm-link sm-link--tema" style="--tf:#b78f70" href="../temaer/platforme.html"><svg class="ik" aria-hidden="true"><use href="#t-platforme"></use></svg><span>Platformsøkonomi</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="fysisk-ai"><a class="sm-link sm-link--tema" style="--tf:#9ab595" href="../temaer/fysisk-ai.html"><svg class="ik" aria-hidden="true"><use href="#t-fysisk-ai"></use></svg><span>Robotter &amp; fysisk AI</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="raastoffer"><a class="sm-link sm-link--tema" style="--tf:#bd9cbb" href="../temaer/raastoffer.html"><svg class="ik" aria-hidden="true"><use href="#t-raastoffer"></use></svg><span>Råstoffer</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="rumfart"><a class="sm-link sm-link--tema" style="--tf:#a18cc7" href="../temaer/rumfart.html"><svg class="ik" aria-hidden="true"><use href="#t-rumfart"></use></svg><span>Rumfart</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="fintech"><a class="sm-link sm-link--tema" style="--tf:#6ea4bb" href="../temaer/fintech.html"><svg class="ik" aria-hidden="true"><use href="#t-fintech"></use></svg><span>Fintech</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="krypto"><a class="sm-link sm-link--tema" style="--tf:#a8ba86" href="../temaer/krypto.html"><svg class="ik" aria-hidden="true"><use href="#t-krypto"></use></svg><span>Krypto</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="software"><a class="sm-link sm-link--tema" style="--tf:#c9a58b" href="../temaer/software.html"><svg class="ik" aria-hidden="true"><use href="#t-software"></use></svg><span>Software &amp; AI</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="sundhed" class="er-aktiv"><a class="sm-link sm-link--tema" style="--tf:#a4a6cf" href="../temaer/sundhed.html" aria-current="page"><svg class="ik" aria-hidden="true"><use href="#t-sundhed"></use></svg><span>Sundhed og biotek</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="kvante"><a class="sm-link sm-link--tema" style="--tf:#cd99a5" href="../temaer/kvante.html"><svg class="ik" aria-hidden="true"><use href="#t-kvante"></use></svg><span>Kvantecomputere</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-        </ul>
-
-        <button class="sm-vis-flere" type="button" aria-expanded="false" aria-controls="sm-temaer">
-
-          <span class="sm-vis-tekst">Vis alle <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer</span><span class="sm-vis-faerre" hidden>Vis færre temaer</span><svg class="ik ik--s" aria-hidden="true"><use href="#i-ned"></use></svg>
-
-        </button>
-
-      </nav>
-
-      <nav class="sm-gruppe" aria-labelledby="sm-h-selskaber">
-
-        <h2 class="sm-overskrift" id="sm-h-selskaber"><span>Selskaber</span><span class="sm-overskrift-note">Andel af fonden</span></h2>
-
-        <ul class="sm-liste">
-
-        </ul>
-
-        <ul class="sm-liste" data-liste="top10.liste" data-skabelon="tpl-sm-top"></ul>
-
-        <a class="sm-alle" href="../alle-selskaber.html"><svg class="ik ik--s" aria-hidden="true"><use href="#i-selskab"></use></svg><span>Se alle selskaber i fonden</span><svg class="ik ik--s" aria-hidden="true"><use href="#i-frem"></use></svg></a>
-
-        <template id="tpl-sm-top"><li><a class="sm-selskab" data-link-selskab href="#"><span class="sm-logo" aria-hidden="true" data-f="forbogstav"></span><span class="sm-navn" data-f="navn"></span><span class="sm-tal" data-f="andel" data-fmt="pct"></span></a></li></template>
-
-        <ul class="sm-liste" hidden>
-
-        </ul>
-
-      </nav>
-
-    </div>
-
-    <div class="sm-bund">
-
-      <button class="temaskift" id="temaskift" type="button" aria-label="Skift til lyst tema"><svg class="ik ik--sol" aria-hidden="true" viewbox="0 0 24 24"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"></path></svg><svg class="ik ik--maane" aria-hidden="true" viewbox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"></path></svg><span class="temaskift-tekst">Lyst tema</span></button>
-
-      <div class="sm-datakort"><svg class="ik" aria-hidden="true"><use href="#i-kalender"></use></svg><div><p class="sm-data-t">Alle andele pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…</span></p><p class="sm-data-s">Tallene er fra PMINDI. Markedsføringsmateriale. Ikke personlig investeringsrådgivning.</p></div></div>
-
-    </div>
-
-  </aside>
-
-  <div class="hoved">
-
-    <main id="indhold" tabindex="-1">
+<header class="topbar-mobil">
+<button class="ikonknap" id="menu-aaben" type="button" aria-controls="sidemenu" aria-expanded="false"><svg class="ik" aria-hidden="true"><use href="#i-menu"></use></svg><span class="sr">Åbn menuen</span></button>
+<a class="maerke maerke--lille" href="../portfolio/index.html" aria-label="NewDeal Invest, til fondsoverblikket">
+<span class="logo-felt logo-felt--lille"><img class="ndi-logo" src="../assets/img/ndi-logo-moerk-baggrund.png" width="2048" height="754" alt="NewDeal Invest" decoding="async"></span>
+<span class="maerke-tekst"><span class="maerke-navn">Sundhed og biotek</span><span class="maerke-sub" id="aktuel-sektion">Tema</span></span>
+</a>
+<a class="knap knap--lille" href="https://fundmarket.dk/newdeal-invest-kl-n/" target="_blank" rel="noopener">Faktaark<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (KID) og prospekt for PMINDI (åbner i nyt vindue)</span></a>
+</header>
+<div class="slor" id="slor" hidden></div>
+<aside class="sidemenu" id="sidemenu" aria-label="Hovedmenu">
+<div class="sm-top">
+<a class="maerke maerke--logo" href="../portfolio/index.html" aria-label="NewDeal Invest, fondsoverblik">
+<span class="logo-felt"><img class="ndi-logo" src="../assets/img/ndi-logo-moerk-baggrund.png" width="2048" height="754" alt="NewDeal Invest" decoding="async"></span><span class="maerke-sub">Fondsoverblik</span>
+</a>
+<button class="ikonknap sm-luk" id="menu-luk" type="button"><svg class="ik" aria-hidden="true"><use href="#i-luk"></use></svg><span class="sr">Luk menuen</span></button>
+</div>
+<nav class="review-section-nav" aria-label="Vælg indgang"><a href="../portfolio/index.html">Porteføljen</a><a href="../tech.html">Tech</a><a href="../widget/index.html">Afkast</a></nav><div class="sm-rul">
+<a class="sm-tilbage" href="https://www.newdealinvest.dk/"><svg class="ik" aria-hidden="true"><use href="#i-tilbage"></use></svg><span>Til NewDeal Invests forside</span></a>
+<nav class="sm-gruppe" aria-labelledby="sm-h-fond">
+<h2 class="sm-overskrift" id="sm-h-fond"><span>Fonden</span></h2>
+<ul class="sm-liste">
+<li><a class="sm-link" href="../fondens-udvikling.html"><span>Fondens udvikling</span></a>
+</li>
+<li><a class="sm-link" href="../tech.html#temaer"><span>Fonden fordelt på temaer</span></a>
+</li>
+<li><a class="sm-link" href="../portfolio/index.html#portfolio"><span>De <span data-tal="top10.antal" data-fmt="talord">…</span> største selskaber</span></a>
+</li>
+<li><a class="sm-link" href="../portfolio/index.html#portfolio"><span>Porteføljen</span></a>
+<ul class="sm-under sm-under--fond" aria-label="Porteføljen">
+<li><a class="sm-link sm-link--under" href="../portfolio/index.html#portfolio" data-portefolje="portfolio"><span>Portefølje</span></a></li>
+<li><a class="sm-link sm-link--under" href="../portfolio/index.html#highs" data-portefolje="highs"><span>52-ugers top</span></a></li>
+<li><a class="sm-link sm-link--under" href="../portfolio/index.html#preview-risk-summary" data-portefolje="risk-summary"><span>Risiko</span></a></li>
+<li><a class="sm-link sm-link--under" href="../portfolio/index.html#method" data-portefolje="method"><span>Metode</span></a></li>
+</ul>
+</li>
+<li><a class="sm-link" href="../widget/index.html#global-disclaimer"><span>Risiko og vigtig information</span></a>
+</li>
+</ul>
+</nav>
+<nav class="sm-gruppe" aria-labelledby="sm-h-temaer">
+<h2 class="sm-overskrift" id="sm-h-temaer"><span>Temaer</span><span class="sm-overskrift-note">Andel af fonden</span></h2>
+<ul class="sm-liste">
+</ul>
+<ul class="sm-liste sm-temaliste" id="sm-temaer" data-ordne="temaer">
+<li data-id="chips"><a class="sm-link sm-link--tema" style="--tf:#8bb8bc" href="../temaer/chips.html"><svg class="ik" aria-hidden="true"><use href="#t-chips"></use></svg><span>Chips og halvledere</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="energi"><a class="sm-link sm-link--tema" style="--tf:#759ebc" href="../temaer/energi.html"><svg class="ik" aria-hidden="true"><use href="#t-energi"></use></svg><span>Energi og elnet</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="datacenter"><a class="sm-link sm-link--tema" style="--tf:#d5ba75" href="../temaer/datacenter.html"><svg class="ik" aria-hidden="true"><use href="#t-datacenter"></use></svg><span>Datacentre</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="platforme"><a class="sm-link sm-link--tema" style="--tf:#b78f70" href="../temaer/platforme.html"><svg class="ik" aria-hidden="true"><use href="#t-platforme"></use></svg><span>Platformsøkonomi</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="fysisk-ai"><a class="sm-link sm-link--tema" style="--tf:#9ab595" href="../temaer/fysisk-ai.html"><svg class="ik" aria-hidden="true"><use href="#t-fysisk-ai"></use></svg><span>Robotter &amp; fysisk AI</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="raastoffer"><a class="sm-link sm-link--tema" style="--tf:#bd9cbb" href="../temaer/raastoffer.html"><svg class="ik" aria-hidden="true"><use href="#t-raastoffer"></use></svg><span>Råstoffer</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="rumfart"><a class="sm-link sm-link--tema" style="--tf:#a18cc7" href="../temaer/rumfart.html"><svg class="ik" aria-hidden="true"><use href="#t-rumfart"></use></svg><span>Rumfart</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="fintech"><a class="sm-link sm-link--tema" style="--tf:#6ea4bb" href="../temaer/fintech.html"><svg class="ik" aria-hidden="true"><use href="#t-fintech"></use></svg><span>Fintech</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="krypto"><a class="sm-link sm-link--tema" style="--tf:#a8ba86" href="../temaer/krypto.html"><svg class="ik" aria-hidden="true"><use href="#t-krypto"></use></svg><span>Krypto</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="software"><a class="sm-link sm-link--tema" style="--tf:#c9a58b" href="../temaer/software.html"><svg class="ik" aria-hidden="true"><use href="#t-software"></use></svg><span>Software &amp; AI</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="sundhed" class="er-aktiv"><a class="sm-link sm-link--tema" style="--tf:#a4a6cf" href="../temaer/sundhed.html" aria-current="page"><svg class="ik" aria-hidden="true"><use href="#t-sundhed"></use></svg><span>Sundhed og biotek</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="kvante"><a class="sm-link sm-link--tema" style="--tf:#cd99a5" href="../temaer/kvante.html"><svg class="ik" aria-hidden="true"><use href="#t-kvante"></use></svg><span>Kvantecomputere</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+</ul>
+<button class="sm-vis-flere" type="button" aria-expanded="false" aria-controls="sm-temaer">
+<span class="sm-vis-tekst">Vis alle <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer</span><span class="sm-vis-faerre" hidden>Vis færre temaer</span><svg class="ik ik--s" aria-hidden="true"><use href="#i-ned"></use></svg>
+</button>
+</nav>
+<nav class="sm-gruppe" aria-labelledby="sm-h-selskaber">
+<h2 class="sm-overskrift" id="sm-h-selskaber"><span>Selskaber</span><span class="sm-overskrift-note">Andel af fonden</span></h2>
+<ul class="sm-liste">
+</ul>
+<ul class="sm-liste" data-liste="top10.liste" data-skabelon="tpl-sm-top"></ul>
+<a class="sm-alle" href="../alle-selskaber.html"><svg class="ik ik--s" aria-hidden="true"><use href="#i-selskab"></use></svg><span>Se alle selskaber i fonden</span><svg class="ik ik--s" aria-hidden="true"><use href="#i-frem"></use></svg></a>
+<template id="tpl-sm-top"><li><a class="sm-selskab" data-link-selskab href="#"><span class="sm-logo" aria-hidden="true" data-f="forbogstav"></span><span class="sm-navn" data-f="navn"></span><span class="sm-tal" data-f="andel" data-fmt="pct"></span></a></li></template>
+<ul class="sm-liste" hidden>
+</ul>
+</nav>
+</div>
+<div class="sm-bund">
+<button class="temaskift" id="temaskift" type="button" aria-label="Skift til lyst tema"><svg class="ik ik--sol" aria-hidden="true" viewbox="0 0 24 24"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"></path></svg><svg class="ik ik--maane" aria-hidden="true" viewbox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"></path></svg><span class="temaskift-tekst">Lyst tema</span></button>
+<div class="sm-datakort"><svg class="ik" aria-hidden="true"><use href="#i-kalender"></use></svg><div><p class="sm-data-t">Alle andele pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…</span></p><p class="sm-data-s">Tallene er fra PMINDI. Markedsføringsmateriale. Ikke personlig investeringsrådgivning.</p></div></div>
+</div>
+</aside>
+<div class="hoved">
+<main id="indhold" tabindex="-1"><nav class="up-trail" aria-label="Du er her"><a href="../tech.html">Tech</a><span aria-hidden="true">/</span><span aria-current="page">Sundhed og biotek</span></nav><nav class="up-shortcuts" aria-label="På denne side"><a href="#cq-su">Forstå teknologien</a><a href="#selskaberne">Selskaberne</a><a href="#mere-fra-ndi">Videoer & opslag</a></nav>
 
 <template id="tpl-tl"><li><a class="tl-raekke" data-link-selskab href="#"><span class="sm-logo" aria-hidden="true" data-f="forbogstav"></span><span class="tl-navn" data-f="navn"></span><span class="pos-bar" aria-hidden="true"><span data-fbar></span></span><span class="tl-tal" data-f="andel" data-fmt="pct"></span></a></li></template><template id="tpl-mini"><span data-fbar></span></template>
-
-      <section class="sektion sektion--overblik" id="overblik" aria-labelledby="h-side">
-
-        <div class="v18t">
-
-        <div class="v18t-hero v18t-hero--v5">
-
-          <div class="v18t-foto v18t-foto--v5"><figure class="tema-foto v5-heromotiv"><picture><source media="(max-width:599px)" srcset="../assets/img/v5-temaer/energi-konkurrence/temaer/sundhed/fra-billedstil/grafik/sundhed-hero-indlaegssedlen-mobil.svg"></source><img class="kun-moerk" alt="En foldet seddel med fire felter, hvert med sit eget lille tegn. Bagved ligger to mindre sedler." decoding="async" height="600" src="../assets/img/v5-temaer/energi-konkurrence/temaer/sundhed/fra-billedstil/grafik/sundhed-hero-indlaegssedlen.svg" width="1200"><img loading="lazy" class="kun-lys" alt="En foldet seddel med fire felter, hvert med sit eget lille tegn. Bagved ligger to mindre sedler." decoding="async" height="600" src="../assets/img/v5-temaer/energi-konkurrence/temaer/sundhed/fra-billedstil/grafik/sundhed-hero-indlaegssedlen-lys.svg" width="1200"></picture><figcaption class="foto-kredit">Illustration: NewDeal Invest.</figcaption></figure></div>
-
-          <div class="v18t-hero-tekst">
-
-            <p class="kicker">Et af de <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer i NewDeal Invest</p>
-
-            <h1 id="h-side">Sundhed og biotek</h1>
-
-            <p class="v18t-under">Hvilket produkt er dokumenteret, og hvem betaler?</p>
-
-            <p>Sundhedstjenester, bioteknologi og lægemidler har forskellige kunder og krav til dokumentation. Undersøg, hvad hvert selskab leverer, hvor langt det er, og hvad dets omsætning fortæller.</p>
-
-            
-
-            <div class="v18t-knapper"><a class="knap knap--primaer v5-knap" href="#selskaberne">Se selskaberne <span aria-hidden="true">↓</span></a><a class="knap knap--rolig v5-knap" href="#skrevet">Læs vores perspektiv</a></div>
-
-          </div>
-
-          
-
-        </div>
-
-        <div class="v18t-fotobaand"><figure class="tema-foto" style="max-width:600px"><img src="../fotos/sundhed.webp" width="600" height="400" alt="Laboratorium: en dråbe fra en pipettespids ned i et bægerglas." loading="lazy" decoding="async" style="max-width:600px"><figcaption class="foto-kredit">Foto: Alexander Bogatyrev, CC BY 4.0, via Wikimedia Commons</figcaption></figure></div>
-
-        <section class="v18-stortal" aria-labelledby="h-andel">
-
-            <div class="v18-stortal-tal">
-
-              <h2 class="sr" id="h-andel">Temaets andel af fonden</h2>
-
-              <p class="v18-stortal-v"><span><span data-tal="temaer#sundhed.andel" data-fmt="tal">…  </span></span><span class="v18-stortal-enhed">%</span></p>
-
-              <p class="v18-stortal-tekst">af PMINDI er placeret i temaet Sundhed og biotek.</p>
-
-              <p class="kildelinje">Andele i PMINDI, den udgave af fonden, der udbetaler udbytte, pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span> (fondens data).</p>
-
-            </div>
-
-            <div class="v18-stortal-figur v18-ramme">
-
-              <div class="mini-soejler" aria-hidden="true" data-liste="temaer" data-skabelon="tpl-mini" data-aktiv-id="sundhed"></div>
-
-              <p class="lille mini-forklaring">De <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer efter størrelse. Sundhed er <span data-tal="temaer#sundhed.plads" data-fmt="plads">nr. …</span>.</p>
-
-            </div>
-
-            <details class="fold-ud v18-flere-tal">
-
-              <summary>Flere tal om temaet</summary>
-
-              <ul class="fakta-liste">
-
-                <li><span>Plads blandt <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer</span><strong><span data-tal="temaer#sundhed.plads" data-fmt="Plads">Nr. …</span></strong></li>
-
-                <li><span>Selskaber i temaet</span><strong><span data-tal="temaer#sundhed.antal" data-fmt="heltal">… </span></strong></li>
-
-                <li class="fakta-stak"><span>Største selskab</span><strong><span data-navn="temaer#sundhed.stoerste">…</span> · <span data-tal="temaer#sundhed.stoerste.andel" data-fmt="pct">…   %</span></strong></li>
-
-              </ul>
-
-            </details>
-
-          </section>
-
-        
-
-      <section class="sektion v18-perspektiv" id="skrevet" aria-labelledby="h-skrevet">
-
-        <div class="v18-perspektiv-boks">
-
-          <p class="kicker">Det har vi skrevet</p>
-
-          <h2 class="v18-perspektiv-titel" id="h-skrevet">NewDeal Invests perspektiv</h2>
-
-          <p class="v18-perspektiv-intro">Ordret uddrag af NewDeal Invests egne ugebreve og indlæg om temaet, med dato og link til hele teksten. Det er ikke en anbefaling.</p>
-
-          <blockquote class="skrevet-citat"><p>»Intuitive Surgical, der udvikler kirurgiske robotter, gør det muligt for kirurgen at styre operationen via et joystick fra en fjern position. Robotten, meget passende kaldet Da Vinci, indsamler samtidig data, der fungerer som en slags co-pilot og assisterer kirurgen med råd og vejledning under operationen.«</p></blockquote>
-
-            <p class="skrevet-meta lille"><span class="skrevet-titel">Amerikansk paradigmeskifte og techregnskaber</span> · <time datetime="2025-01-27">27.01.2025</time> · ugebrev uge 4, blog</p>
-
-            <p class="skrevet-selsk lille">Nævner: Intuitive Surgical</p>
-
-            <a class="tekstlink tekstlink--tryk skrevet-link" href="https://www.newdealinvest.dk/post/uge-4-amerikansk-paradigmeskifte-og-techregnskaber" target="_blank" rel="noopener">Læs hele teksten på bloggen<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (åbner i nyt vindue)</span></a>
-
-          
-
-        </div>
-
-      </section>
-
-        </div>
-
-      </section>
-
-      <div class="v5f v5f-sundhed" data-v5-fortaelling="sundhed"><section aria-labelledby="spredt-h" class="s" id="spredt"><div class="wrap">
+<section class="sektion sektion--overblik" id="overblik" aria-labelledby="h-side">
+<div class="v18t">
+<div class="v18t-hero v18t-hero--v5">
+<div class="v18t-foto v18t-foto--v5"><figure class="tema-foto v5-heromotiv"><picture><source media="(max-width:599px)" srcset="../assets/review-img/03ac2c990b62.svg"></source><img class="kun-moerk" alt="En foldet seddel med fire felter, hvert med sit eget lille tegn. Bagved ligger to mindre sedler." decoding="async" height="600" src="../assets/review-img/c7b9ed23739c.svg" width="1200"><img loading="lazy" class="kun-lys" alt="En foldet seddel med fire felter, hvert med sit eget lille tegn. Bagved ligger to mindre sedler." decoding="async" height="600" src="../assets/review-img/3bf3fe3fdef8.svg" width="1200"></picture><figcaption class="foto-kredit">Illustration: NewDeal Invest.</figcaption></figure></div>
+<div class="v18t-hero-tekst">
+<p class="kicker">Et af de <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer i NewDeal Invest</p>
+<h1 id="h-side">Sundhed og biotek</h1>
+<p class="v18t-under">Hvilket produkt er dokumenteret, og hvem betaler?</p>
+<p>Sundhedstjenester, bioteknologi og lægemidler har forskellige kunder og krav til dokumentation. Undersøg, hvad hvert selskab leverer, hvor langt det er, og hvad dets omsætning fortæller.</p>
+<div class="v18t-knapper"><a class="knap knap--primaer v5-knap" href="#selskaberne">Se selskaberne <span aria-hidden="true">↓</span></a><a class="knap knap--rolig v5-knap" href="#skrevet">Læs vores perspektiv</a></div>
+</div>
+</div>
+<div class="v18t-fotobaand"><figure class="tema-foto" style="max-width:600px"><img src="../fotos/sundhed.webp" width="600" height="400" alt="Laboratorium: en dråbe fra en pipettespids ned i et bægerglas." loading="lazy" decoding="async" style="max-width:600px"><figcaption class="foto-kredit">Foto: Alexander Bogatyrev, CC BY 4.0, via Wikimedia Commons</figcaption></figure></div>
+<section class="v18-stortal" aria-labelledby="h-andel">
+<div class="v18-stortal-tal">
+<h2 class="sr" id="h-andel">Temaets andel af fonden</h2>
+<p class="v18-stortal-v"><span><span data-tal="temaer#sundhed.andel" data-fmt="tal">…  </span></span><span class="v18-stortal-enhed">%</span></p>
+<p class="v18-stortal-tekst">af PMINDI er placeret i temaet Sundhed og biotek.</p>
+<p class="kildelinje">Andele i PMINDI, den udgave af fonden, der udbetaler udbytte, pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span> (fondens data).</p>
+</div>
+<div class="v18-stortal-figur v18-ramme">
+<div class="mini-soejler" aria-hidden="true" data-liste="temaer" data-skabelon="tpl-mini" data-aktiv-id="sundhed"></div>
+<p class="lille mini-forklaring">De <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer efter størrelse. Sundhed er <span data-tal="temaer#sundhed.plads" data-fmt="plads">nr. …</span>.</p>
+</div>
+<details class="fold-ud v18-flere-tal">
+<summary>Flere tal om temaet</summary>
+<ul class="fakta-liste">
+<li><span>Plads blandt <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer</span><strong><span data-tal="temaer#sundhed.plads" data-fmt="Plads">Nr. …</span></strong></li>
+<li><span>Selskaber i temaet</span><strong><span data-tal="temaer#sundhed.antal" data-fmt="heltal">… </span></strong></li>
+<li class="fakta-stak"><span>Største selskab</span><strong><span data-navn="temaer#sundhed.stoerste">…</span> · <span data-tal="temaer#sundhed.stoerste.andel" data-fmt="pct">…   %</span></strong></li>
+</ul>
+</details>
+</section>
+<section class="sektion v18-perspektiv" id="skrevet" aria-labelledby="h-skrevet">
+<div class="v18-perspektiv-boks">
+<p class="kicker">Det har vi skrevet</p>
+<h2 class="v18-perspektiv-titel" id="h-skrevet">NewDeal Invests perspektiv</h2>
+<p class="v18-perspektiv-intro">Ordret uddrag af NewDeal Invests egne ugebreve og indlæg om temaet, med dato og link til hele teksten. Det er ikke en anbefaling.</p>
+<blockquote class="skrevet-citat"><p>»Intuitive Surgical, der udvikler kirurgiske robotter, gør det muligt for kirurgen at styre operationen via et joystick fra en fjern position. Robotten, meget passende kaldet Da Vinci, indsamler samtidig data, der fungerer som en slags co-pilot og assisterer kirurgen med råd og vejledning under operationen.«</p></blockquote>
+<p class="skrevet-meta lille"><span class="skrevet-titel">Amerikansk paradigmeskifte og techregnskaber</span> · <time datetime="2025-01-27">27.01.2025</time> · ugebrev uge 4, blog</p>
+<p class="skrevet-selsk lille">Nævner: Intuitive Surgical</p>
+<a class="tekstlink tekstlink--tryk skrevet-link" href="https://www.newdealinvest.dk/post/uge-4-amerikansk-paradigmeskifte-og-techregnskaber" target="_blank" rel="noopener">Læs hele teksten på bloggen<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (åbner i nyt vindue)</span></a>
+</div>
+</section>
+</div>
+</section>
+<div class="v5f v5f-sundhed" data-v5-fortaelling="sundhed"><section aria-labelledby="spredt-h" class="s" id="spredt"><div class="wrap">
 
 <div class="su-cq"><section aria-labelledby="cq-su-h" class="cq-su" id="cq-su">
-
-
-
 <div class="cq-su__in">
 
 <p class="cq-su__kick">Sundhed og biotek</p>
 
 <h2 class="cq-su__h2" id="cq-su-h">Tre indlægssedler</h2>
-
-
-
 <p class="cq-su__lead">Hver gruppe har sin egen seddel med de samme fire spørgsmål. Tallet ved hver gruppe er dens andel af fonden. Tryk på en seddel for at folde den ud.</p>
 
 <ul aria-label="De fire spørgsmål på hver seddel" class="cq-su__qs"><li><svg aria-hidden="true" class="cq-su__qi" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" fill="currentColor" r="2.5"></circle></svg><span>Hvad er det?</span></li><li><svg aria-hidden="true" class="cq-su__qi" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 12h18" stroke-width="1"></path><circle cx="4.5" cy="12" fill="currentColor" r="2"></circle><circle cx="12" cy="12" fill="currentColor" r="2"></circle><circle cx="19.5" cy="12" r="2"></circle></svg><span>Hvor langt er det?</span></li><li><svg aria-hidden="true" class="cq-su__qi" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3.5 13v6h17v-6"></path><path d="M12 3v11M8.5 10.5L12 14l3.5-3.5"></path></svg><span>Hvem betaler?</span></li><li><svg aria-hidden="true" class="cq-su__qi" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect height="16" rx="1.5" stroke-dasharray="3 2.5" width="16" x="4" y="4"></rect></svg><span>Hvad tallene ikke viser</span></li></ul>
@@ -425,7 +280,7 @@
 
 <div class="cq-su__fields"><details class="cq-su__f" open=""><summary class="cq-su__fs"><svg aria-hidden="true" class="cq-su__fi" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" fill="currentColor" r="2.5"></circle></svg><span class="cq-su__fq">Hvad er det?</span></summary><p class="cq-su__ft">Nye biologiske værktøjer. BioNTech arbejder med mRNA, en opskrift som kroppens egne celler bruger til at lave ét bestemt protein. Intellia og CRISPR Therapeutics arbejder med CRISPR. AbCellera leder efter lægemidler baseret på antistoffer, de stoffer, kroppens immunforsvar selv laver.</p></details><details class="cq-su__f" open=""><summary class="cq-su__fs"><svg aria-hidden="true" class="cq-su__fi" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 12h18" stroke-width="1"></path><circle cx="4.5" cy="12" fill="currentColor" r="2"></circle><circle cx="12" cy="12" fill="currentColor" r="2"></circle><circle cx="19.5" cy="12" r="2"></circle></svg><span class="cq-su__fq">Hvor langt er det?</span></summary><p class="cq-su__ft">Meget forskelligt.  BioNTech har også behandlinger mod kræft under udvikling. AbCellera afprøver to af sine egne lægemidler på mennesker (klinisk fase).</p></details><details class="cq-su__f" open=""><summary class="cq-su__fs"><svg aria-hidden="true" class="cq-su__fi" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3.5 13v6h17v-6"></path><path d="M12 3v11M8.5 10.5L12 14l3.5-3.5"></path></svg><span class="cq-su__fq">Hvem betaler?</span></summary><p class="cq-su__ft">Indtægten kan komme meget sent.  Selskabet havde ingen omsætning fra salg af behandlinger, det ejer alene. Den godkendte behandling fra videoen under sedlerne har det sammen med Vertex.   Det gav altså ikke en indtægt. </p></details><details class="cq-su__f" open=""><summary class="cq-su__fs"><svg aria-hidden="true" class="cq-su__fi" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect height="16" rx="1.5" stroke-dasharray="3 2.5" width="16" x="4" y="4"></rect></svg><span class="cq-su__fq">Hvad tallene ikke viser</span></summary><p class="cq-su__ft">Et lovende forsøg er ikke det samme som en godkendt behandling.</p></details></div>
 
-<details class="su-vid"><summary>Sådan virker mRNA</summary><div><figure class="vid"><div class="vid-ramme" data-cq-su-yt="S8Wd-NMqvno" data-title="Video: How Do mRNA Vaccines Work? (The Children’s Hospital of Philadelphia)"><button aria-label="Videoen hentes fra YouTube." class="vid-play" type="button"><picture><source media="(max-width:599px)" srcset="../assets/img/v5-temaer/energi-konkurrence/temaer/sundhed/fra-billedstil/billeder/sundhed-plakat-S8Wd-NMqvno-mobil.webp"></source><img alt="" height="540" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/sundhed/fra-billedstil/billeder/sundhed-plakat-S8Wd-NMqvno-bred.webp" width="960"></picture><span aria-hidden="true" class="vid-kilde">CHOP · 2020</span><span aria-hidden="true" class="vid-ikon"></span><span aria-hidden="true" class="vid-tid">2:00</span></button></div><p class="media-reading"><strong>Se efter:</strong> Skeln mellem teknisk mulighed, dokumenteret behandling og en kommerciel ydelse.</p><figcaption><b>En læge forklarer, hvordan mRNA virker.</b> Videoen er optaget, før de første covid-19-vacciner blev godkendt. Kilde: The Children’s Hospital of Philadelphia, et amerikansk universitetshospital. Video fra 13.11.2020, 2:00, på engelsk: “How Do mRNA Vaccines Work?”. <a href="https://www.youtube.com/watch?v=S8Wd-NMqvno" rel="noopener" target="_blank">Se på YouTube<span class="sr"> (åbner i nyt vindue)</span></a></figcaption></figure></div></details>
+<details class="su-vid"><summary>Sådan virker mRNA</summary><div><figure class="vid"><div class="vid-ramme" data-cq-su-yt="S8Wd-NMqvno" data-title="Video: How Do mRNA Vaccines Work? (The Children’s Hospital of Philadelphia)"><button aria-label="Videoen hentes fra YouTube." class="vid-play" type="button"><picture><source media="(max-width:599px)" srcset="../assets/review-img/72c38fba1598.webp"></source><img alt="" height="540" loading="lazy" src="../assets/review-img/1f2f4aa8db26.webp" width="960"></picture><span aria-hidden="true" class="vid-kilde">CHOP · 2020</span><span aria-hidden="true" class="vid-ikon"></span><span aria-hidden="true" class="vid-tid">2:00</span></button></div><p class="media-reading"><strong>Se efter:</strong> Skeln mellem teknisk mulighed, dokumenteret behandling og en kommerciel ydelse.</p><figcaption><b>En læge forklarer, hvordan mRNA virker.</b> Videoen er optaget, før de første covid-19-vacciner blev godkendt. Kilde: The Children’s Hospital of Philadelphia, et amerikansk universitetshospital. Video fra 13.11.2020, 2:00, på engelsk: “How Do mRNA Vaccines Work?”. <a href="https://www.youtube.com/watch?v=S8Wd-NMqvno" rel="noopener" target="_blank">Se på YouTube<span class="sr"> (åbner i nyt vindue)</span></a></figcaption></figure></div></details>
 
 <p class="cq-su__lh">Selskaberne</p>
 
@@ -450,12 +305,9 @@
 </div>
 
 </div>
-
-
-
 </section></div>
 
-<div class="su-harvard"><figure class="vid"><div class="vid-ramme" data-title="Video: Creating the World’s First CRISPR Medicine, for Sickle Cell Disease (Harvard Medical School)" data-yt="RqWJHmxXM2E"><button aria-label="Videoen hentes fra YouTube." class="vid-play" type="button"><picture><source media="(max-width:599px)" srcset="../assets/img/v5-temaer/energi-konkurrence/temaer/sundhed/fra-billedstil/billeder/sundhed-plakat-RqWJHmxXM2E-mobil.webp"></source><img alt="" height="540" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/sundhed/fra-billedstil/billeder/sundhed-plakat-RqWJHmxXM2E-bred.webp" width="960"></picture><span aria-hidden="true" class="vid-kilde">Harvard Medical School</span><span aria-hidden="true" class="vid-ikon"></span><span aria-hidden="true" class="vid-tid">3:09</span></button></div><p class="media-reading"><strong>Se efter:</strong> Skeln mellem teknisk mulighed, dokumenteret behandling og en kommerciel ydelse.</p><figcaption><b>Forskere fortæller, hvordan en opdagelse i laboratoriet blev til den første godkendte behandling med CRISPR, et værktøj der kan klippe i DNA. Behandlingen er mod seglcellesygdom. De fortæller også, hvad der skal til ud over idéen: forsøg, godkendelse og produktion.</b> CRISPR Therapeutics, som er i fonden, nævnes som et af selskaberne bag. Kilde: Harvard Medical School. Video fra 20.02.2025, 3:09, på engelsk. <a href="https://www.youtube.com/watch?v=RqWJHmxXM2E" rel="noopener" target="_blank">Se på YouTube<span class="sr"> (åbner i nyt vindue)</span></a></figcaption></figure></div>
+<div class="su-harvard"><figure class="vid"><div class="vid-ramme" data-title="Video: Creating the World’s First CRISPR Medicine, for Sickle Cell Disease (Harvard Medical School)" data-yt="RqWJHmxXM2E"><button aria-label="Videoen hentes fra YouTube." class="vid-play" type="button"><picture><source media="(max-width:599px)" srcset="../assets/review-img/52db96c9aa56.webp"></source><img alt="" height="540" loading="lazy" src="../assets/review-img/60c95cc9d100.webp" width="960"></picture><span aria-hidden="true" class="vid-kilde">Harvard Medical School</span><span aria-hidden="true" class="vid-ikon"></span><span aria-hidden="true" class="vid-tid">3:09</span></button></div><p class="media-reading"><strong>Se efter:</strong> Skeln mellem teknisk mulighed, dokumenteret behandling og en kommerciel ydelse.</p><figcaption><b>Forskere fortæller, hvordan en opdagelse i laboratoriet blev til den første godkendte behandling med CRISPR, et værktøj der kan klippe i DNA. Behandlingen er mod seglcellesygdom. De fortæller også, hvad der skal til ud over idéen: forsøg, godkendelse og produktion.</b> CRISPR Therapeutics, som er i fonden, nævnes som et af selskaberne bag. Kilde: Harvard Medical School. Video fra 20.02.2025, 3:09, på engelsk. <a href="https://www.youtube.com/watch?v=RqWJHmxXM2E" rel="noopener" target="_blank">Se på YouTube<span class="sr"> (åbner i nyt vindue)</span></a></figcaption></figure></div>
 
 <p class="eyebrow">Selskaberne</p>
 
@@ -466,9 +318,6 @@
 <div>
 
 <div aria-label="Feltets bredde svarer til selskabets andel af fonden." class="s12" role="img"><span class="hl" style="flex:0.53 1 0"></span><span class="g1" style="flex:0.15 1 0"></span><span class="g1" style="flex:0.05 1 0"></span><span class="g1" style="flex:0.05 1 0"></span><span class="g1" style="flex:0.03 1 0"></span><span class="g1" style="flex:0.02 1 0"></span><span class="g2" style="flex:0.35 1 0"></span><span class="g2" style="flex:0.17 1 0"></span><span class="g2" style="flex:0.08 1 0"></span><span class="g2" style="flex:0.01 1 0"></span><span class="g3" style="flex:0.22 1 0"></span><span class="g3" style="flex:0.11 1 0"></span></div>
-
-
-
 <ul aria-label="Farverne i strimlen" class="s12-lg"><li><i class="g1" style="background:#b19ea7"></i>Digital sundhed og sundhedsydelser</li><li><i class="g2" style="background:#7d6f77"></i>Bioteknologi</li><li><i class="g3" style="background:#4f474d"></i>Lægemidler og produktion</li></ul>
 
 <p class="s12-tx"> Bredden svarer til selskabets andel af fonden. Farven viser gruppen.</p>
@@ -483,7 +332,7 @@
 
 </div>
 
-<div class="fod kort"><img class="kun-moerk" alt="" height="32" src="../assets/img/v5-temaer/energi-konkurrence/temaer/sundhed/fra-billedstil/ikoner/sundhed-ikon-ogsaa-med-en-fod.svg" width="32"><img loading="lazy" class="kun-lys" alt="" height="32" src="../assets/img/v5-temaer/energi-konkurrence/temaer/sundhed/fra-billedstil/ikoner/sundhed-ikon-ogsaa-med-en-fod-lys.svg" width="32"><p><b>Også med en fod i sundhed</b> To selskaber under temaet Energi og elnet laver også noget, der hører til temaet Sundhed og biotek.    Kilder: <a href="https://www.sec.gov/Archives/edgar/data/1921865/000119312526151294/aspi-20251231.htm" rel="noopener" target="_blank">ASP Isotopes<span class="sr"> (åbner i nyt vindue)</span></a> og <a href="https://www.sec.gov/Archives/edgar/data/1809987/000162828026009869/mir-20251231.htm" rel="noopener" target="_blank">Mirion Technologies<span class="sr"> (åbner i nyt vindue)</span></a>, årsrapporter 2025.</p></div>
+<div class="fod kort"><img class="kun-moerk" alt="" height="32" src="../assets/review-img/3c1a404c2160.svg" width="32"><img loading="lazy" class="kun-lys" alt="" height="32" src="../assets/review-img/89663a543feb.svg" width="32"><p><b>Også med en fod i sundhed</b> To selskaber under temaet Energi og elnet laver også noget, der hører til temaet Sundhed og biotek.    Kilder: <a href="https://www.sec.gov/Archives/edgar/data/1921865/000119312526151294/aspi-20251231.htm" rel="noopener" target="_blank">ASP Isotopes<span class="sr"> (åbner i nyt vindue)</span></a> og <a href="https://www.sec.gov/Archives/edgar/data/1809987/000162828026009869/mir-20251231.htm" rel="noopener" target="_blank">Mirion Technologies<span class="sr"> (åbner i nyt vindue)</span></a>, årsrapporter 2025.</p></div>
 
 </div></section><section aria-labelledby="udefra-h" class="s" id="udefra"><div class="wrap">
 
@@ -507,7 +356,7 @@
 
 <div class="naboer">
 
-<figure class="graf kort nab-graf"><img class="kun-moerk" alt="Nabotemaer: software og robotter" height="140" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/sundhed/fra-billedstil/grafik/sundhed-overgang-naboer.svg" width="480"><img class="kun-lys" alt="Nabotemaer: software og robotter" height="140" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/sundhed/fra-billedstil/grafik/sundhed-overgang-naboer-lys.svg" width="480"><figcaption>Illustration: NewDeal Invest.</figcaption></figure>
+<figure class="graf kort nab-graf"><img class="kun-moerk" alt="Nabotemaer: software og robotter" height="140" loading="lazy" src="../assets/review-img/8cf5432fa232.svg" width="480"><img class="kun-lys" alt="Nabotemaer: software og robotter" height="140" loading="lazy" src="../assets/review-img/fa73b2982413.svg" width="480"><figcaption>Illustration: NewDeal Invest.</figcaption></figure>
 
 <div>
 
@@ -548,60 +397,32 @@
 </div></section></div>
 
 <section class="sektion" id="selskaberne" aria-labelledby="h-selskaber">
-
-        <div class="gitter gitter--stub">
-
-          <article class="kort panel panel--bred" aria-labelledby="h-selskaber">
-
-            <header class="panel-hoved">
-
-              <div><h2 class="panel-titel" id="h-selskaber"><svg class="ik" aria-hidden="true"><use href="#i-selskab"></use></svg><span data-hvis="temaer#sundhed.oevrigeAntal">De <span data-tal="temaer#sundhed.antalVist" data-fmt="heltal">… </span> største af temaets <span data-tal="temaer#sundhed.antal" data-fmt="antal" data-en="selskab" data-fl="selskaber">…  selskaber</span></span><span data-hvis="temaer#sundhed.alleVist" hidden>Temaets <span data-tal="temaer#sundhed.antal" data-fmt="antal" data-en="selskab" data-fl="selskaber">…  selskaber</span></span></h2>
-
-              <p class="hint">Tryk på et selskab for at se mere om det.</p></div>
-
-            </header>
-
-            <ul class="tema-liste" data-liste="temaer#sundhed.vist" data-skabelon="tpl-tl"></ul>
-
-            <details class="fold-ud fold-liste" data-hvis="temaer#sundhed.oevrigeAntal" hidden><summary><span>Vis alle <span data-tal="temaer#sundhed.antal" data-fmt="antal" data-en="selskab" data-fl="selskaber">…  selskaber</span> i temaet</span></summary>
-
-              <ul class="tema-liste" data-liste="temaer#sundhed.oevrige" data-skabelon="tpl-tl"></ul>
-
-            </details>
-
-            <p class="kildelinje">Andele i PMINDI, den udgave af fonden, der udbetaler udbytte, pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span> (fondens data).</p>
-
-          </article>
-
-        </div>
-
-      </section>
-
-      <section class="sektion v18-proces" data-proces-slot="sundhed" hidden></section>
-
-      
-
-      <section class="sektion sektion--x" id="x-opslag" aria-labelledby="h-x-opslag" data-x-tema data-x-rel="../" data-x-selskaber='[{"isin": "US4330001060", "navn": "Hims &amp; Hers Health", "slug": "hims-hers-health"}, {"isin": "US09075V1026", "navn": "BioNTech", "slug": "biontech"}, {"isin": "US5324571083", "navn": "Eli Lilly", "slug": "eli-lilly"}, {"isin": "US45826J1051", "navn": "Intellia Therapeutics", "slug": "intellia-therapeutics"}, {"isin": "US88023B1035", "navn": "Tempus AI", "slug": "tempus-ai"}, {"isin": "CH1176493729", "navn": "Bachem", "slug": "bachem"}, {"isin": "CH0334081137", "navn": "CRISPR Therapeutics", "slug": "crispr-therapeutics"}, {"isin": "US68170A1088", "navn": "Omada Health", "slug": "omada-health"}, {"isin": "US53216B1044", "navn": "LifeMD", "slug": "lifemd"}, {"isin": "US4333131039", "navn": "Hinge Health", "slug": "hinge-health"}, {"isin": "US6877931096", "navn": "Oscar Health", "slug": "oscar-health"}, {"isin": "CA00288U1066", "navn": "AbCellera Biologics", "slug": "abcellera-biologics"}]'>
-
-        <header class="sektion-hoved">
-
-          <h2 class="sektion-titel" id="h-x-opslag">Det skriver de på X</h2>
-
-          <p class="sektion-intro">Udvalgte offentlige opslag om selskaberne i temaet. Opslagene er andres og ikke NewDeal Invests holdning.</p>
-
-        </header>
-
-        <div class="kort panel x-tema">
-
-          <p class="x-tema-status lille" role="status">Henter opslag …</p>
-
-          <details class="fold-ud fold-mobil fold-sektion" data-aaben-bred><summary aria-expanded="false">Se opslagene fra X</summary><ul class="x-tema-liste" hidden></ul></details>
-
-          <p class="kildelinje x-tema-kilde" hidden></p>
-
-        </div>
-
-      </section>
+<div class="gitter gitter--stub">
+<article class="kort panel panel--bred" aria-labelledby="h-selskaber">
+<header class="panel-hoved">
+<div><h2 class="panel-titel" id="h-selskaber"><svg class="ik" aria-hidden="true"><use href="#i-selskab"></use></svg><span data-hvis="temaer#sundhed.oevrigeAntal">De <span data-tal="temaer#sundhed.antalVist" data-fmt="heltal">… </span> største af temaets <span data-tal="temaer#sundhed.antal" data-fmt="antal" data-en="selskab" data-fl="selskaber">…  selskaber</span></span><span data-hvis="temaer#sundhed.alleVist" hidden>Temaets <span data-tal="temaer#sundhed.antal" data-fmt="antal" data-en="selskab" data-fl="selskaber">…  selskaber</span></span></h2>
+<p class="hint">Tryk på et selskab for at se mere om det.</p></div>
+</header>
+<ul class="tema-liste" data-liste="temaer#sundhed.vist" data-skabelon="tpl-tl"></ul>
+<details class="fold-ud fold-liste" data-hvis="temaer#sundhed.oevrigeAntal" hidden><summary><span>Vis alle <span data-tal="temaer#sundhed.antal" data-fmt="antal" data-en="selskab" data-fl="selskaber">…  selskaber</span> i temaet</span></summary>
+<ul class="tema-liste" data-liste="temaer#sundhed.oevrige" data-skabelon="tpl-tl"></ul>
+</details>
+<p class="kildelinje">Andele i PMINDI, den udgave af fonden, der udbetaler udbytte, pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span> (fondens data).</p>
+</article>
+</div>
+</section>
+<section class="sektion v18-proces" data-proces-slot="sundhed" hidden></section>
+<section class="sektion sektion--x" id="x-opslag" aria-labelledby="h-x-opslag" data-x-tema data-x-rel="../" data-x-selskaber='[{"isin": "US4330001060", "navn": "Hims &amp; Hers Health", "slug": "hims-hers-health"}, {"isin": "US09075V1026", "navn": "BioNTech", "slug": "biontech"}, {"isin": "US5324571083", "navn": "Eli Lilly", "slug": "eli-lilly"}, {"isin": "US45826J1051", "navn": "Intellia Therapeutics", "slug": "intellia-therapeutics"}, {"isin": "US88023B1035", "navn": "Tempus AI", "slug": "tempus-ai"}, {"isin": "CH1176493729", "navn": "Bachem", "slug": "bachem"}, {"isin": "CH0334081137", "navn": "CRISPR Therapeutics", "slug": "crispr-therapeutics"}, {"isin": "US68170A1088", "navn": "Omada Health", "slug": "omada-health"}, {"isin": "US53216B1044", "navn": "LifeMD", "slug": "lifemd"}, {"isin": "US4333131039", "navn": "Hinge Health", "slug": "hinge-health"}, {"isin": "US6877931096", "navn": "Oscar Health", "slug": "oscar-health"}, {"isin": "CA00288U1066", "navn": "AbCellera Biologics", "slug": "abcellera-biologics"}]'>
+<header class="sektion-hoved">
+<h2 class="sektion-titel" id="h-x-opslag">Det skriver de på X</h2>
+<p class="sektion-intro">Udvalgte offentlige opslag om selskaberne i temaet. Opslagene er andres og ikke NewDeal Invests holdning.</p>
+</header>
+<div class="kort panel x-tema">
+<p class="x-tema-status lille" role="status">Henter opslag …</p>
+<details class="fold-ud fold-mobil fold-sektion" data-aaben-bred><summary aria-expanded="false">Se opslagene fra X</summary><ul class="x-tema-liste" hidden></ul></details>
+<p class="kildelinje x-tema-kilde" hidden></p>
+</div>
+</section>
 
 <div class="v5f v5f-sundhed" data-v5-fortaelling="sundhed-b"><section aria-labelledby="vaerd-h" class="s" id="vaerd"><div class="wrap">
 
@@ -613,15 +434,15 @@
 
 <h2 id="vaerd-h">Det skal man vide om temaet</h2>
 
-<ul><li><img class="kun-moerk" alt="" height="28" src="../assets/img/v5-temaer/energi-konkurrence/temaer/sundhed/fra-billedstil/ikoner/sundhed-ikon-forsoeg-og-godk.svg" width="28"><img loading="lazy" class="kun-lys" alt="" height="28" src="../assets/img/v5-temaer/energi-konkurrence/temaer/sundhed/fra-billedstil/ikoner/sundhed-ikon-forsoeg-og-godk-lys.svg" width="28"><p><b>Forsøg og godkendelse.</b><a href="https://www.fda.gov/drugs/novel-drug-approvals-fda/novel-drug-approvals-2025" rel="noopener" target="_blank">FDA, Novel Drug Approvals for 2025<span class="sr"> (åbner i nyt vindue)</span></a>).</p></li><li><img class="kun-moerk" alt="" height="28" src="../assets/img/v5-temaer/energi-konkurrence/temaer/sundhed/fra-billedstil/ikoner/sundhed-ikon-lang-vej-til-indtaegt.svg" width="28"><img loading="lazy" class="kun-lys" alt="" height="28" src="../assets/img/v5-temaer/energi-konkurrence/temaer/sundhed/fra-billedstil/ikoner/sundhed-ikon-lang-vej-til-indtaegt-lys.svg" width="28"><p><b>Lang vej til indtægt.</b> Nogle selskaber har næsten ingen omsætning, mens de udvikler behandlinger (<a href="https://www.sec.gov/Archives/edgar/data/1674416/000119312526048957/crsp-20251231.htm" rel="noopener" target="_blank">CRISPR Therapeutics, årsrapport 2025<span class="sr"> (åbner i nyt vindue)</span></a>).</p></li><li><img class="kun-moerk" alt="" height="28" src="../assets/img/v5-temaer/energi-konkurrence/temaer/sundhed/fra-billedstil/ikoner/sundhed-ikon-faa-produkter.svg" width="28"><img loading="lazy" class="kun-lys" alt="" height="28" src="../assets/img/v5-temaer/energi-konkurrence/temaer/sundhed/fra-billedstil/ikoner/sundhed-ikon-faa-produkter-lys.svg" width="28"><p><b>Få produkter.</b> Nogle selskaber får det meste af omsætningen fra ét eller to produkter (<a href="https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/lly-20251231.htm" rel="noopener" target="_blank">Eli Lilly<span class="sr"> (åbner i nyt vindue)</span></a> og <a href="https://www.sec.gov/Archives/edgar/data/1776985/000177698526000017/bntx-20251231.htm" rel="noopener" target="_blank">BioNTech<span class="sr"> (åbner i nyt vindue)</span></a>, årsrapporter 2025).</p></li><li><img class="kun-moerk" alt="" height="28" src="../assets/img/v5-temaer/energi-konkurrence/temaer/sundhed/fra-billedstil/ikoner/sundhed-ikon-hvem-betaler-arbejdsgiver.svg" width="28"><img loading="lazy" class="kun-lys" alt="" height="28" src="../assets/img/v5-temaer/energi-konkurrence/temaer/sundhed/fra-billedstil/ikoner/sundhed-ikon-hvem-betaler-arbejdsgiver-lys.svg" width="28"><p><b>Hvem betaler.</b> Hos nogle selskaber er det en arbejdsgiver, der betaler, ikke patienten (<a href="https://www.sec.gov/Archives/edgar/data/1673743/000162828026013808/hnge-20251231.htm" rel="noopener" target="_blank">Hinge Health<span class="sr"> (åbner i nyt vindue)</span></a>, årsrapport 2025). Oscar Health er selv forsikringen. Præmierne kommer mest fra den amerikanske stat som tilskud til medlemmernes forsikring og resten fra medlemmerne selv, og Oscar betaler for behandlingen (<a href="https://www.sec.gov/Archives/edgar/data/1568651/000156865126000011/oscr-20251231.htm" rel="noopener" target="_blank">Oscar Health<span class="sr"> (åbner i nyt vindue)</span></a>, årsrapport 2025). 93 % af præmierne kom i 2025 direkte fra staten (CMS) og 7 % fra medlemmerne.</p></li><li><img class="kun-moerk" alt="" height="28" src="../assets/img/v5-temaer/energi-konkurrence/temaer/sundhed/fra-billedstil/ikoner/sundhed-ikon-ingen-raad.svg" width="28"><img loading="lazy" class="kun-lys" alt="" height="28" src="../assets/img/v5-temaer/energi-konkurrence/temaer/sundhed/fra-billedstil/ikoner/sundhed-ikon-ingen-raad-lys.svg" width="28"><p><b>Ingen råd.</b> Siden fortæller om selskaber og giver ingen råd om medicin. Spørgsmål om sundhed og medicin hører hjemme hos en læge.</p></li></ul>
+<ul><li><img class="kun-moerk" alt="" height="28" src="../assets/review-img/088106f4088e.svg" width="28"><img loading="lazy" class="kun-lys" alt="" height="28" src="../assets/review-img/879eac46afb3.svg" width="28"><p><b>Forsøg og godkendelse.</b><a href="https://www.fda.gov/drugs/novel-drug-approvals-fda/novel-drug-approvals-2025" rel="noopener" target="_blank">FDA, Novel Drug Approvals for 2025<span class="sr"> (åbner i nyt vindue)</span></a>).</p></li><li><img class="kun-moerk" alt="" height="28" src="../assets/review-img/b4f348246083.svg" width="28"><img loading="lazy" class="kun-lys" alt="" height="28" src="../assets/review-img/f85e4624af6e.svg" width="28"><p><b>Lang vej til indtægt.</b> Nogle selskaber har næsten ingen omsætning, mens de udvikler behandlinger (<a href="https://www.sec.gov/Archives/edgar/data/1674416/000119312526048957/crsp-20251231.htm" rel="noopener" target="_blank">CRISPR Therapeutics, årsrapport 2025<span class="sr"> (åbner i nyt vindue)</span></a>).</p></li><li><img class="kun-moerk" alt="" height="28" src="../assets/review-img/afaf15f33db8.svg" width="28"><img loading="lazy" class="kun-lys" alt="" height="28" src="../assets/review-img/45f72742b0cb.svg" width="28"><p><b>Få produkter.</b> Nogle selskaber får det meste af omsætningen fra ét eller to produkter (<a href="https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/lly-20251231.htm" rel="noopener" target="_blank">Eli Lilly<span class="sr"> (åbner i nyt vindue)</span></a> og <a href="https://www.sec.gov/Archives/edgar/data/1776985/000177698526000017/bntx-20251231.htm" rel="noopener" target="_blank">BioNTech<span class="sr"> (åbner i nyt vindue)</span></a>, årsrapporter 2025).</p></li><li><img class="kun-moerk" alt="" height="28" src="../assets/review-img/970c4d0e65a2.svg" width="28"><img loading="lazy" class="kun-lys" alt="" height="28" src="../assets/review-img/1594689e7f29.svg" width="28"><p><b>Hvem betaler.</b> Hos nogle selskaber er det en arbejdsgiver, der betaler, ikke patienten (<a href="https://www.sec.gov/Archives/edgar/data/1673743/000162828026013808/hnge-20251231.htm" rel="noopener" target="_blank">Hinge Health<span class="sr"> (åbner i nyt vindue)</span></a>, årsrapport 2025). Oscar Health er selv forsikringen. Præmierne kommer mest fra den amerikanske stat som tilskud til medlemmernes forsikring og resten fra medlemmerne selv, og Oscar betaler for behandlingen (<a href="https://www.sec.gov/Archives/edgar/data/1568651/000156865126000011/oscr-20251231.htm" rel="noopener" target="_blank">Oscar Health<span class="sr"> (åbner i nyt vindue)</span></a>, årsrapport 2025). 93 % af præmierne kom i 2025 direkte fra staten (CMS) og 7 % fra medlemmerne.</p></li><li><img class="kun-moerk" alt="" height="28" src="../assets/review-img/b0c5c5fa8712.svg" width="28"><img loading="lazy" class="kun-lys" alt="" height="28" src="../assets/review-img/cbde89d420d1.svg" width="28"><p><b>Ingen råd.</b> Siden fortæller om selskaber og giver ingen råd om medicin. Spørgsmål om sundhed og medicin hører hjemme hos en læge.</p></li></ul>
 
 </div>
 
-<div class="fda"><figure class="vid"><div class="vid-ramme" data-title="Video: How does the FDA approve new drugs? (U.S. Food and Drug Administration)" data-yt="fZ-Msidi7EE"><button aria-label="Videoen hentes fra YouTube." class="vid-play" type="button"><picture><source media="(max-width:599px)" srcset="../assets/img/v5-temaer/energi-konkurrence/temaer/sundhed/fra-billedstil/billeder/sundhed-plakat-fZ-Msidi7EE-mobil.webp"></source><img alt="" height="540" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/sundhed/fra-billedstil/billeder/sundhed-plakat-fZ-Msidi7EE-bred.webp" width="960"></picture><span aria-hidden="true" class="vid-kilde">FDA</span><span aria-hidden="true" class="vid-ikon"></span><span aria-hidden="true" class="vid-tid">3:16</span></button></div><p class="media-reading"><strong>Se efter:</strong> Skeln mellem teknisk mulighed, dokumenteret behandling og en kommerciel ydelse.</p><figcaption><b>Den amerikanske lægemiddelmyndighed forklarer vejen fra laboratoriet gennem tre faser af kliniske forsøg til myndighedens vurdering og overvågningen efter godkendelsen.</b> Kilde: U.S. Food and Drug Administration. Video fra 06.09.2023, 3:16, på engelsk. <a href="https://www.youtube.com/watch?v=fZ-Msidi7EE" rel="noopener" target="_blank">Se på YouTube<span class="sr"> (åbner i nyt vindue)</span></a><span class="eu">Videoen handler om USA. I EU vurderer Det Europæiske Lægemiddelagentur (EMA) mange nye lægemidler, og Europa-Kommissionen træffer afgørelsen om godkendelse. I Danmark godkender og kontrollerer Lægemiddelstyrelsen lægemidler på det danske marked.</span></figcaption></figure></div>
+<div class="fda"><figure class="vid"><div class="vid-ramme" data-title="Video: How does the FDA approve new drugs? (U.S. Food and Drug Administration)" data-yt="fZ-Msidi7EE"><button aria-label="Videoen hentes fra YouTube." class="vid-play" type="button"><picture><source media="(max-width:599px)" srcset="../assets/review-img/7908e82f634d.webp"></source><img alt="" height="540" loading="lazy" src="../assets/review-img/38cd7ab6c3f9.webp" width="960"></picture><span aria-hidden="true" class="vid-kilde">FDA</span><span aria-hidden="true" class="vid-ikon"></span><span aria-hidden="true" class="vid-tid">3:16</span></button></div><p class="media-reading"><strong>Se efter:</strong> Skeln mellem teknisk mulighed, dokumenteret behandling og en kommerciel ydelse.</p><figcaption><b>Den amerikanske lægemiddelmyndighed forklarer vejen fra laboratoriet gennem tre faser af kliniske forsøg til myndighedens vurdering og overvågningen efter godkendelsen.</b> Kilde: U.S. Food and Drug Administration. Video fra 06.09.2023, 3:16, på engelsk. <a href="https://www.youtube.com/watch?v=fZ-Msidi7EE" rel="noopener" target="_blank">Se på YouTube<span class="sr"> (åbner i nyt vindue)</span></a><span class="eu">Videoen handler om USA. I EU vurderer Det Europæiske Lægemiddelagentur (EMA) mange nye lægemidler, og Europa-Kommissionen træffer afgørelsen om godkendelse. I Danmark godkender og kontrollerer Lægemiddelstyrelsen lægemidler på det danske marked.</span></figcaption></figure></div>
 
 </div>
 
-</div></section><section class="rm-section" id="mere-fra-ndi" aria-labelledby="rm-title"><p class="rm-source">VIDEOER OG OPSLAG</p><h2 id="rm-title">Bliv klogere på Sundhed og biotek</h2><div class="rm-grid rm-grid-youtube"><article class="rm-video"><button type="button" class="rm-play" data-youtube="QcLM-60Bj20" data-start="3545" aria-label="Afspil NewDeal Invest Live Q&amp;A - June 2nd at 20:00 with Mads Christiansen, Jesper Bæk"><img loading="lazy" src="https://i.ytimg.com/vi/QcLM-60Bj20/hqdefault.jpg" alt=""><span class="rm-play-icon" aria-hidden="true">▶</span><span class="rm-start">Se fra 59:05</span></button><div class="rm-caption"><p class="rm-source">NEWDEAL INVEST · 2024-06-03</p><h3>NewDeal Invest Live Q&amp;A - June 2nd at 20:00 with Mads Christiansen, Jesper Bæk</h3><a href="https://www.youtube.com/watch?v=QcLM-60Bj20&amp;t=3545s" target="_blank" rel="noopener">Se på YouTube ↗</a></div></article><article class="rm-video"><button type="button" class="rm-play" data-youtube="UPSJO5_rBDo" data-start="2710" aria-label="Afspil NewDeal Invest Live Q&amp;A with Mads Christiansen &amp; Jesper Bæk - December 15th 2024 - 8:00 PM"><img loading="lazy" src="https://i.ytimg.com/vi/UPSJO5_rBDo/hqdefault.jpg" alt=""><span class="rm-play-icon" aria-hidden="true">▶</span><span class="rm-start">Se fra 45:10</span></button><div class="rm-caption"><p class="rm-source">NEWDEAL INVEST · 2024-12-16</p><h3>NewDeal Invest Live Q&amp;A with Mads Christiansen &amp; Jesper Bæk - December 15th 2024 - 8:00 PM</h3><a href="https://www.youtube.com/watch?v=UPSJO5_rBDo&amp;t=2710s" target="_blank" rel="noopener">Se på YouTube ↗</a></div></article></div></section><section aria-labelledby="kilder-h" class="s kilder" id="kilder"><div class="wrap">
+</div></section><section class="rm-section" id="mere-fra-ndi" aria-labelledby="rm-title"><p class="rm-source">VIDEOER OG OPSLAG</p><h2 id="rm-title">Bliv klogere på Sundhed og biotek</h2><div class="rm-grid rm-grid-youtube"><article class="rm-video"><button type="button" class="rm-play" data-youtube="QcLM-60Bj20" data-start="3545" aria-label="Afspil NewDeal Invest Live Q&amp;A - June 2nd at 20:00 with Mads Christiansen, Jesper Bæk"><img loading="lazy" src="https://i.ytimg.com/vi/QcLM-60Bj20/hqdefault.jpg" alt=""><span class="rm-play-icon" aria-hidden="true">▶</span><span class="rm-start">Se fra 59:05</span></button><div class="rm-caption"><p class="rm-source">NEWDEAL INVEST · 2024-06-03</p><h3>NewDeal Invest Live Q&amp;A - June 2nd at 20:00 with Mads Christiansen, Jesper Bæk</h3><p class="rm-topic">Om Sundhed og biotek · starter ved 59:05</p><a href="https://www.youtube.com/watch?v=QcLM-60Bj20&amp;t=3545s" target="_blank" rel="noopener">Se på YouTube ↗</a></div></article><article class="rm-video"><button type="button" class="rm-play" data-youtube="UPSJO5_rBDo" data-start="2710" aria-label="Afspil NewDeal Invest Live Q&amp;A with Mads Christiansen &amp; Jesper Bæk - December 15th 2024 - 8:00 PM"><img loading="lazy" src="https://i.ytimg.com/vi/UPSJO5_rBDo/hqdefault.jpg" alt=""><span class="rm-play-icon" aria-hidden="true">▶</span><span class="rm-start">Se fra 45:10</span></button><div class="rm-caption"><p class="rm-source">NEWDEAL INVEST · 2024-12-16</p><h3>NewDeal Invest Live Q&amp;A with Mads Christiansen &amp; Jesper Bæk - December 15th 2024 - 8:00 PM</h3><p class="rm-topic">Om Sundhed og biotek · starter ved 45:10</p><a href="https://www.youtube.com/watch?v=UPSJO5_rBDo&amp;t=2710s" target="_blank" rel="noopener">Se på YouTube ↗</a></div></article></div></section><section aria-labelledby="kilder-h" class="s kilder" id="kilder"><div class="wrap">
 
 <h2 id="kilder-h">Kilder og kreditering</h2>
 
@@ -634,42 +455,21 @@
 </div></details>
 
 </div></section></div>
-
-
-
-      
-
-      <div class="sektion sektion--videre"><nav class="videre" aria-label="Videre">
-
-          <a class="knap" href="../index.html#hvert-tema"><svg class="ik ik--s" aria-hidden="true"><use href="#i-tilbage"></use></svg>Alle temaer</a>
-
-          <a class="knap" href="../index.html#hvert-tema" data-hvis="temaer#sundhed.forrige" data-href-tema="temaer#sundhed.forrige" hidden><svg class="ik ik--s" aria-hidden="true"><use href="#i-tilbage"></use></svg><span class="knap-tekst">Forrige tema: <span data-navn="temaer#sundhed.forrige">…</span></span></a>
-
-          <a class="knap knap--primaer" href="../index.html#hvert-tema" data-hvis="temaer#sundhed.naeste" data-href-tema="temaer#sundhed.naeste" hidden><span class="knap-tekst">Næste tema: <span data-navn="temaer#sundhed.naeste">…</span></span><svg class="ik ik--s" aria-hidden="true"><use href="#i-frem"></use></svg></a>
-
-          <a class="knap knap--primaer" href="#kilder" data-skjul="temaer#sundhed.naeste" hidden>Det var det sidste tema. Se kilderne<svg class="ik ik--s" aria-hidden="true"><use href="#i-frem"></use></svg></a>
-
-        </nav></div>
-
-
-
-    </main>
-
-    <footer class="sidefod">
-
-      <div class="sidefod-maerke"><span class="logo-felt"><img class="ndi-logo" src="../assets/img/ndi-logo-moerk-baggrund.png" width="2048" height="754" alt="NewDeal Invest" decoding="async"></span></div>
-
-      <div class="sidefod-tekst">
-
-        <p>NewDeal Invest er et brand for NDIIR ApS, investeringsrådgiver for Fundmarket A/S. Markedsføringsmateriale. Ikke personlig investeringsrådgivning. Investering indebærer risiko for tab. Alle andele pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span>.</p>
-
-        <p class="sidefod-kilde">Kilde til fondstal: Fundmarket A/S, der forvalter Investeringsforeningen PortfolioManager. NDIIR ApS yder investeringsrådgivning til foreningen. <span class="sidefod-dato">Opdateret <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span>.</span></p>
-
-      </div>
-
-    </footer>
-
-  </div>
+<div class="sektion sektion--videre"><nav class="videre" aria-label="Videre">
+<a class="knap" href="../tech.html#temaer"><svg class="ik ik--s" aria-hidden="true"><use href="#i-tilbage"></use></svg>Alle temaer</a>
+<a class="knap" href="../tech.html#temaer" data-hvis="temaer#sundhed.forrige" data-href-tema="temaer#sundhed.forrige" hidden><svg class="ik ik--s" aria-hidden="true"><use href="#i-tilbage"></use></svg><span class="knap-tekst">Forrige tema: <span data-navn="temaer#sundhed.forrige">…</span></span></a>
+<a class="knap knap--primaer" href="../tech.html#temaer" data-hvis="temaer#sundhed.naeste" data-href-tema="temaer#sundhed.naeste" hidden><span class="knap-tekst">Næste tema: <span data-navn="temaer#sundhed.naeste">…</span></span><svg class="ik ik--s" aria-hidden="true"><use href="#i-frem"></use></svg></a>
+<a class="knap knap--primaer" href="#kilder" data-skjul="temaer#sundhed.naeste" hidden>Det var det sidste tema. Se kilderne<svg class="ik ik--s" aria-hidden="true"><use href="#i-frem"></use></svg></a>
+</nav></div>
+</main>
+<footer class="sidefod">
+<div class="sidefod-maerke"><span class="logo-felt"><img class="ndi-logo" src="../assets/img/ndi-logo-moerk-baggrund.png" width="2048" height="754" alt="NewDeal Invest" decoding="async"></span></div>
+<div class="sidefod-tekst">
+<p>NewDeal Invest er et brand for NDIIR ApS, investeringsrådgiver for Fundmarket A/S. Markedsføringsmateriale. Ikke personlig investeringsrådgivning. Investering indebærer risiko for tab. Alle andele pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span>.</p>
+<p class="sidefod-kilde">Kilde til fondstal: Fundmarket A/S, der forvalter Investeringsforeningen PortfolioManager. NDIIR ApS yder investeringsrådgivning til foreningen. <span class="sidefod-dato">Opdateret <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span>.</span></p>
+</div>
+</footer>
+</div>
 
 </div>
 
@@ -695,6 +495,6 @@
 
 <script src="../assets/v5-temaer/sundhed.js" defer></script>
 
-<script defer src="../assets/js/review-media.js?v=20261031-1"></script></body>
+<script defer src="../assets/js/review-media.js?v=20261031-2"></script><script defer src="../assets/js/journey-polish.js?v=20261031"></script></body>
 
 </html>

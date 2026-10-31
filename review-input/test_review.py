@@ -117,6 +117,35 @@ class ReviewTests(unittest.TestCase):
                 if not src.startswith(('https:','http:','data:')):
                     self.assertTrue((path.parent/src.split('?')[0]).resolve().exists(),src)
 
+    def test_journey_routes_and_assets(self):
+        from urllib.parse import unquote
+        for path in DEST.rglob('*.html'):
+            tree=html.parse(str(path))
+            for src in tree.xpath('//img/@src|//script/@src|//link[@rel="stylesheet"]/@href'):
+                if src.startswith(('http:','https:','data:','//')):continue
+                asset=(path.parent/unquote(src.split('?')[0].split('#')[0])).resolve()
+                self.assertTrue(asset.exists(),str(path)+': '+src)
+            for href in tree.xpath('//a/@href'):
+                if href.startswith(('http:','https:','mailto:','tel:','#','//','javascript:')):continue
+                name=href.split('?')[0].split('#')[0]
+                if name.endswith('.html'):self.assertTrue((path.parent/name).resolve().exists(),str(path)+': '+href)
+            if path.parent.name in ('temaer','selskaber'):
+                self.assertEqual(len(tree.xpath('//nav[@aria-label="Du er her"]')),1)
+                for href in tree.xpath('//nav[@aria-label="På denne side"]/a/@href'):
+                    self.assertTrue(tree.xpath('//*[@id=$id]',id=href[1:]),str(path)+': '+href)
+    def test_preserved_data_and_company_routes(self):
+        self.assertEqual((SOURCE/'data/dagens-tal.json').read_bytes(),(DEST/'data/dagens-tal.json').read_bytes())
+        routes=json.loads((DEST/'data/company-routes.json').read_text(encoding='utf8'))
+        self.assertGreater(len(routes),300)
+        for name,link in routes.items():self.assertTrue((DEST/'portfolio'/link).resolve().exists(),name)
+    def test_theme_media_disclosure(self):
+        script=(DEST/'assets/js/x-tema.js').read_text(encoding='utf8')
+        self.assertIn('while(ul.children.length>2)',script)
+        for path in DEST.rglob('*.html'):
+            tree=html.parse(str(path))
+            for grid in tree.xpath('//*[@id="mere-fra-ndi"]/div[contains(@class,"rm-grid")]'):
+                self.assertLessEqual(len(grid.xpath('./article')),2,str(path))
+
 if __name__=='__main__':unittest.main()
 
 

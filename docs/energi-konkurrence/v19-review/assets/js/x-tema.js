@@ -35,7 +35,7 @@
   var MOBIL = window.matchMedia ? window.matchMedia('(max-width: 599.98px)') : { matches: false };
   function observer(p) {
     pladser.push(p);
-    if (MOBIL.matches) {
+    if (false) {
       if (p.querySelector('.x-embed-hent')) return;
       var f = p.querySelector('.x-embed-vent');
       var b = el('button', 'knap knap--rolig x-embed-hent', 'Vis opslaget her'); b.type = 'button';
@@ -44,7 +44,7 @@
       return;
     }
     if (!('IntersectionObserver' in window)) return indlejr(p);
-    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { io.disconnect(); indlejr(p); } }); }, { rootMargin: '600px 0px' });
+    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { io.disconnect(); indlejr(p); } }); }, { rootMargin: '100px 0px' });
     io.observe(p);
   }
   function plads(id, url) {
@@ -118,6 +118,10 @@
         if (pl) pending.push(pl);
       });
       ul.hidden = false;
+      if(ul.children.length>2){
+        var more=el('details','rm-more'), title=el('summary',null,'Se flere X-opslag ('+(ul.children.length-2)+')'), rest=el('ul','x-tema-liste');
+        more.appendChild(title);more.appendChild(rest);while(ul.children.length>2)rest.appendChild(ul.children[2]);ul.after(more);
+      }
       pending.forEach(observer);
     }
     kl.textContent = 'Kilde: NewDeal Invests kuraterede X-feed, ' + (live ? 'hentet nu' : 'øjebliksbillede') + ', opdateret ' + dato(feed.updated_at, true) + '. Udvalgt af X-kontrol.';

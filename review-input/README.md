@@ -25,12 +25,12 @@ not an automatic daily feed. Nasdaq retains export 5's total-return DKK series;
 for the accumulating class it is rebased only if both dates match exactly.
 No market-data requests or cloud deployments happen during a build.
 
-## Work still in progress
+## Review status, 31 October
 
-- Integrate and review Claude's separately delivered mobile animation fixes.
-- Integrate verified video and X inventories from Grok; flagged videos remain excluded.
-- Phone/AI journey restored from V5 illustrations with direct navigation; finish visual review.
-- Finish SpaceX history layout and the interactive business illustration.
-- Complete mobile, desktop and light-theme review before any Wix release.
+The review includes the animation integration, SpaceX refinements, curated media,
+chip-chain component and searchable company directory. The latest pass is limited
+to Christian's items 2, 3, 4 and 6: journeys, weaker layouts, media and mobile QA.
+See UX-JOURNEY-REVIEW-20261031.md for coverage and limitations.
 
-This is an integration checkpoint, not approval for production deployment.
+The independent Grok/Claude reviews, data pipeline work, compliance review and
+Wix publication remain deferred. This branch is not approval for production.

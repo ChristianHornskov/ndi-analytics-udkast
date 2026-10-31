@@ -39,12 +39,9 @@
 
 <link rel="stylesheet" href="../assets/v5-temaer/kvante.css">
 
-<link rel="stylesheet" href="../assets/css/review.css?v=20261031logos"><link rel="stylesheet" href="../assets/css/review-media.css?v=20261031-1"></head>
+<link rel="stylesheet" href="../assets/css/review.css?v=20261031logos"><link rel="stylesheet" href="../assets/css/review-media.css?v=20261031-2"><link rel="stylesheet" href="../assets/css/journey-polish.css?v=20261031"></head>
 
 <body>
-
-
-
 <svg class="sprite" aria-hidden="true" focusable="false">
 
 <symbol id="i-pause" viewbox="0 0 24 24"><path d="M9 6v12M15 6v12"></path></symbol>
@@ -128,281 +125,138 @@
 <a class="spring" href="#indhold">Gå til indhold</a>
 
 <div class="app">
-
-  <header class="topbar-mobil">
-
-    <button class="ikonknap" id="menu-aaben" type="button" aria-controls="sidemenu" aria-expanded="false"><svg class="ik" aria-hidden="true"><use href="#i-menu"></use></svg><span class="sr">Åbn menuen</span></button>
-
-    <a class="maerke maerke--lille" href="../index.html" aria-label="NewDeal Invest, til fondsoverblikket">
-
-      <span class="logo-felt logo-felt--lille"><img class="ndi-logo" src="../assets/img/ndi-logo-moerk-baggrund.png" width="2048" height="754" alt="NewDeal Invest" decoding="async"></span>
-
-      <span class="maerke-tekst"><span class="maerke-navn">Kvantecomputere</span><span class="maerke-sub" id="aktuel-sektion">Tema</span></span>
-
-    </a>
-
-    <a class="knap knap--lille" href="https://fundmarket.dk/newdeal-invest-kl-n/" target="_blank" rel="noopener">Faktaark<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (KID) og prospekt for PMINDI (åbner i nyt vindue)</span></a>
-
-  </header>
-
-  <div class="slor" id="slor" hidden></div>
-
-  <aside class="sidemenu" id="sidemenu" aria-label="Hovedmenu">
-
-    <div class="sm-top">
-
-      <a class="maerke maerke--logo" href="../index.html" aria-label="NewDeal Invest, fondsoverblik">
-
-        <span class="logo-felt"><img class="ndi-logo" src="../assets/img/ndi-logo-moerk-baggrund.png" width="2048" height="754" alt="NewDeal Invest" decoding="async"></span><span class="maerke-sub">Fondsoverblik</span>
-
-      </a>
-
-      <button class="ikonknap sm-luk" id="menu-luk" type="button"><svg class="ik" aria-hidden="true"><use href="#i-luk"></use></svg><span class="sr">Luk menuen</span></button>
-
-    </div>
-
-    <nav class="review-section-nav" aria-label="Vælg indgang"><a href="../index.html">Porteføljen</a><a href="../tech.html">Tech</a><a href="../widget/index.html">Afkast</a></nav><div class="sm-rul">
-
-      <a class="sm-tilbage" href="https://www.newdealinvest.dk/"><svg class="ik" aria-hidden="true"><use href="#i-tilbage"></use></svg><span>Til NewDeal Invests forside</span></a>
-
-
-
-      <nav class="sm-gruppe" aria-labelledby="sm-h-fond">
-
-        <h2 class="sm-overskrift" id="sm-h-fond"><span>Fonden</span></h2>
-
-        <ul class="sm-liste">
-
-          <li><a class="sm-link" href="../fondens-udvikling.html"><span>Fondens udvikling</span></a>
-
-          </li>
-
-          <li><a class="sm-link" href="../index.html#temaer"><span>Fonden fordelt på temaer</span></a>
-
-          </li>
-
-          <li><a class="sm-link" href="../index.html#top10"><span>De <span data-tal="top10.antal" data-fmt="talord">…</span> største selskaber</span></a>
-
-          </li>
-
-          <li><a class="sm-link" href="../index.html#portefoeljen"><span>Porteføljen</span></a>
-
-            <ul class="sm-under sm-under--fond" aria-label="Porteføljen">
-
-              <li><a class="sm-link sm-link--under" href="../index.html#portefoeljen-portfolio" data-portefolje="portfolio"><span>Portefølje</span></a></li>
-
-              <li><a class="sm-link sm-link--under" href="../index.html#portefoeljen-highs" data-portefolje="highs"><span>52-ugers top</span></a></li>
-
-              <li><a class="sm-link sm-link--under" href="../index.html#portefoeljen-risk-summary" data-portefolje="risk-summary"><span>Risiko</span></a></li>
-
-              <li><a class="sm-link sm-link--under" href="../index.html#portefoeljen-method" data-portefolje="method"><span>Metode</span></a></li>
-
-            </ul>
-
-          </li>
-
-          <li><a class="sm-link" href="../index.html#vigtig-information"><span>Risiko og vigtig information</span></a>
-
-          </li>
-
-        </ul>
-
-      </nav>
-
-      <nav class="sm-gruppe" aria-labelledby="sm-h-temaer">
-
-        <h2 class="sm-overskrift" id="sm-h-temaer"><span>Temaer</span><span class="sm-overskrift-note">Andel af fonden</span></h2>
-
-        <ul class="sm-liste">
-
-        </ul>
-
-        <ul class="sm-liste sm-temaliste" id="sm-temaer" data-ordne="temaer">
-
-          <li data-id="chips"><a class="sm-link sm-link--tema" style="--tf:#8bb8bc" href="../temaer/chips.html"><svg class="ik" aria-hidden="true"><use href="#t-chips"></use></svg><span>Chips og halvledere</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="energi"><a class="sm-link sm-link--tema" style="--tf:#759ebc" href="../temaer/energi.html"><svg class="ik" aria-hidden="true"><use href="#t-energi"></use></svg><span>Energi og elnet</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="datacenter"><a class="sm-link sm-link--tema" style="--tf:#d5ba75" href="../temaer/datacenter.html"><svg class="ik" aria-hidden="true"><use href="#t-datacenter"></use></svg><span>Datacentre</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="platforme"><a class="sm-link sm-link--tema" style="--tf:#b78f70" href="../temaer/platforme.html"><svg class="ik" aria-hidden="true"><use href="#t-platforme"></use></svg><span>Platformsøkonomi</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="fysisk-ai"><a class="sm-link sm-link--tema" style="--tf:#9ab595" href="../temaer/fysisk-ai.html"><svg class="ik" aria-hidden="true"><use href="#t-fysisk-ai"></use></svg><span>Robotter &amp; fysisk AI</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="raastoffer"><a class="sm-link sm-link--tema" style="--tf:#bd9cbb" href="../temaer/raastoffer.html"><svg class="ik" aria-hidden="true"><use href="#t-raastoffer"></use></svg><span>Råstoffer</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="rumfart"><a class="sm-link sm-link--tema" style="--tf:#a18cc7" href="../temaer/rumfart.html"><svg class="ik" aria-hidden="true"><use href="#t-rumfart"></use></svg><span>Rumfart</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="fintech"><a class="sm-link sm-link--tema" style="--tf:#6ea4bb" href="../temaer/fintech.html"><svg class="ik" aria-hidden="true"><use href="#t-fintech"></use></svg><span>Fintech</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="krypto"><a class="sm-link sm-link--tema" style="--tf:#a8ba86" href="../temaer/krypto.html"><svg class="ik" aria-hidden="true"><use href="#t-krypto"></use></svg><span>Krypto</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="software"><a class="sm-link sm-link--tema" style="--tf:#c9a58b" href="../temaer/software.html"><svg class="ik" aria-hidden="true"><use href="#t-software"></use></svg><span>Software &amp; AI</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="sundhed"><a class="sm-link sm-link--tema" style="--tf:#a4a6cf" href="../temaer/sundhed.html"><svg class="ik" aria-hidden="true"><use href="#t-sundhed"></use></svg><span>Sundhed og biotek</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="kvante" class="er-aktiv"><a class="sm-link sm-link--tema" style="--tf:#cd99a5" href="../temaer/kvante.html" aria-current="page"><svg class="ik" aria-hidden="true"><use href="#t-kvante"></use></svg><span>Kvantecomputere</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-        </ul>
-
-        <button class="sm-vis-flere" type="button" aria-expanded="false" aria-controls="sm-temaer">
-
-          <span class="sm-vis-tekst">Vis alle <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer</span><span class="sm-vis-faerre" hidden>Vis færre temaer</span><svg class="ik ik--s" aria-hidden="true"><use href="#i-ned"></use></svg>
-
-        </button>
-
-      </nav>
-
-      <nav class="sm-gruppe" aria-labelledby="sm-h-selskaber">
-
-        <h2 class="sm-overskrift" id="sm-h-selskaber"><span>Selskaber</span><span class="sm-overskrift-note">Andel af fonden</span></h2>
-
-        <ul class="sm-liste">
-
-        </ul>
-
-        <ul class="sm-liste" data-liste="top10.liste" data-skabelon="tpl-sm-top"></ul>
-
-        <a class="sm-alle" href="../alle-selskaber.html"><svg class="ik ik--s" aria-hidden="true"><use href="#i-selskab"></use></svg><span>Se alle selskaber i fonden</span><svg class="ik ik--s" aria-hidden="true"><use href="#i-frem"></use></svg></a>
-
-        <template id="tpl-sm-top"><li><a class="sm-selskab" data-link-selskab href="#"><span class="sm-logo" aria-hidden="true" data-f="forbogstav"></span><span class="sm-navn" data-f="navn"></span><span class="sm-tal" data-f="andel" data-fmt="pct"></span></a></li></template>
-
-        <ul class="sm-liste" hidden>
-
-        </ul>
-
-      </nav>
-
-    </div>
-
-    <div class="sm-bund">
-
-      <button class="temaskift" id="temaskift" type="button" aria-label="Skift til lyst tema"><svg class="ik ik--sol" aria-hidden="true" viewbox="0 0 24 24"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"></path></svg><svg class="ik ik--maane" aria-hidden="true" viewbox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"></path></svg><span class="temaskift-tekst">Lyst tema</span></button>
-
-      <div class="sm-datakort"><svg class="ik" aria-hidden="true"><use href="#i-kalender"></use></svg><div><p class="sm-data-t">Alle andele pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…</span></p><p class="sm-data-s">Tallene er fra PMINDI. Markedsføringsmateriale. Ikke personlig investeringsrådgivning.</p></div></div>
-
-    </div>
-
-  </aside>
-
-  <div class="hoved">
-
-    <main id="indhold" tabindex="-1">
+<header class="topbar-mobil">
+<button class="ikonknap" id="menu-aaben" type="button" aria-controls="sidemenu" aria-expanded="false"><svg class="ik" aria-hidden="true"><use href="#i-menu"></use></svg><span class="sr">Åbn menuen</span></button>
+<a class="maerke maerke--lille" href="../portfolio/index.html" aria-label="NewDeal Invest, til fondsoverblikket">
+<span class="logo-felt logo-felt--lille"><img class="ndi-logo" src="../assets/img/ndi-logo-moerk-baggrund.png" width="2048" height="754" alt="NewDeal Invest" decoding="async"></span>
+<span class="maerke-tekst"><span class="maerke-navn">Kvantecomputere</span><span class="maerke-sub" id="aktuel-sektion">Tema</span></span>
+</a>
+<a class="knap knap--lille" href="https://fundmarket.dk/newdeal-invest-kl-n/" target="_blank" rel="noopener">Faktaark<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (KID) og prospekt for PMINDI (åbner i nyt vindue)</span></a>
+</header>
+<div class="slor" id="slor" hidden></div>
+<aside class="sidemenu" id="sidemenu" aria-label="Hovedmenu">
+<div class="sm-top">
+<a class="maerke maerke--logo" href="../portfolio/index.html" aria-label="NewDeal Invest, fondsoverblik">
+<span class="logo-felt"><img class="ndi-logo" src="../assets/img/ndi-logo-moerk-baggrund.png" width="2048" height="754" alt="NewDeal Invest" decoding="async"></span><span class="maerke-sub">Fondsoverblik</span>
+</a>
+<button class="ikonknap sm-luk" id="menu-luk" type="button"><svg class="ik" aria-hidden="true"><use href="#i-luk"></use></svg><span class="sr">Luk menuen</span></button>
+</div>
+<nav class="review-section-nav" aria-label="Vælg indgang"><a href="../portfolio/index.html">Porteføljen</a><a href="../tech.html">Tech</a><a href="../widget/index.html">Afkast</a></nav><div class="sm-rul">
+<a class="sm-tilbage" href="https://www.newdealinvest.dk/"><svg class="ik" aria-hidden="true"><use href="#i-tilbage"></use></svg><span>Til NewDeal Invests forside</span></a>
+<nav class="sm-gruppe" aria-labelledby="sm-h-fond">
+<h2 class="sm-overskrift" id="sm-h-fond"><span>Fonden</span></h2>
+<ul class="sm-liste">
+<li><a class="sm-link" href="../fondens-udvikling.html"><span>Fondens udvikling</span></a>
+</li>
+<li><a class="sm-link" href="../tech.html#temaer"><span>Fonden fordelt på temaer</span></a>
+</li>
+<li><a class="sm-link" href="../portfolio/index.html#portfolio"><span>De <span data-tal="top10.antal" data-fmt="talord">…</span> største selskaber</span></a>
+</li>
+<li><a class="sm-link" href="../portfolio/index.html#portfolio"><span>Porteføljen</span></a>
+<ul class="sm-under sm-under--fond" aria-label="Porteføljen">
+<li><a class="sm-link sm-link--under" href="../portfolio/index.html#portfolio" data-portefolje="portfolio"><span>Portefølje</span></a></li>
+<li><a class="sm-link sm-link--under" href="../portfolio/index.html#highs" data-portefolje="highs"><span>52-ugers top</span></a></li>
+<li><a class="sm-link sm-link--under" href="../portfolio/index.html#preview-risk-summary" data-portefolje="risk-summary"><span>Risiko</span></a></li>
+<li><a class="sm-link sm-link--under" href="../portfolio/index.html#method" data-portefolje="method"><span>Metode</span></a></li>
+</ul>
+</li>
+<li><a class="sm-link" href="../widget/index.html#global-disclaimer"><span>Risiko og vigtig information</span></a>
+</li>
+</ul>
+</nav>
+<nav class="sm-gruppe" aria-labelledby="sm-h-temaer">
+<h2 class="sm-overskrift" id="sm-h-temaer"><span>Temaer</span><span class="sm-overskrift-note">Andel af fonden</span></h2>
+<ul class="sm-liste">
+</ul>
+<ul class="sm-liste sm-temaliste" id="sm-temaer" data-ordne="temaer">
+<li data-id="chips"><a class="sm-link sm-link--tema" style="--tf:#8bb8bc" href="../temaer/chips.html"><svg class="ik" aria-hidden="true"><use href="#t-chips"></use></svg><span>Chips og halvledere</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="energi"><a class="sm-link sm-link--tema" style="--tf:#759ebc" href="../temaer/energi.html"><svg class="ik" aria-hidden="true"><use href="#t-energi"></use></svg><span>Energi og elnet</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="datacenter"><a class="sm-link sm-link--tema" style="--tf:#d5ba75" href="../temaer/datacenter.html"><svg class="ik" aria-hidden="true"><use href="#t-datacenter"></use></svg><span>Datacentre</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="platforme"><a class="sm-link sm-link--tema" style="--tf:#b78f70" href="../temaer/platforme.html"><svg class="ik" aria-hidden="true"><use href="#t-platforme"></use></svg><span>Platformsøkonomi</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="fysisk-ai"><a class="sm-link sm-link--tema" style="--tf:#9ab595" href="../temaer/fysisk-ai.html"><svg class="ik" aria-hidden="true"><use href="#t-fysisk-ai"></use></svg><span>Robotter &amp; fysisk AI</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="raastoffer"><a class="sm-link sm-link--tema" style="--tf:#bd9cbb" href="../temaer/raastoffer.html"><svg class="ik" aria-hidden="true"><use href="#t-raastoffer"></use></svg><span>Råstoffer</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="rumfart"><a class="sm-link sm-link--tema" style="--tf:#a18cc7" href="../temaer/rumfart.html"><svg class="ik" aria-hidden="true"><use href="#t-rumfart"></use></svg><span>Rumfart</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="fintech"><a class="sm-link sm-link--tema" style="--tf:#6ea4bb" href="../temaer/fintech.html"><svg class="ik" aria-hidden="true"><use href="#t-fintech"></use></svg><span>Fintech</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="krypto"><a class="sm-link sm-link--tema" style="--tf:#a8ba86" href="../temaer/krypto.html"><svg class="ik" aria-hidden="true"><use href="#t-krypto"></use></svg><span>Krypto</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="software"><a class="sm-link sm-link--tema" style="--tf:#c9a58b" href="../temaer/software.html"><svg class="ik" aria-hidden="true"><use href="#t-software"></use></svg><span>Software &amp; AI</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="sundhed"><a class="sm-link sm-link--tema" style="--tf:#a4a6cf" href="../temaer/sundhed.html"><svg class="ik" aria-hidden="true"><use href="#t-sundhed"></use></svg><span>Sundhed og biotek</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="kvante" class="er-aktiv"><a class="sm-link sm-link--tema" style="--tf:#cd99a5" href="../temaer/kvante.html" aria-current="page"><svg class="ik" aria-hidden="true"><use href="#t-kvante"></use></svg><span>Kvantecomputere</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+</ul>
+<button class="sm-vis-flere" type="button" aria-expanded="false" aria-controls="sm-temaer">
+<span class="sm-vis-tekst">Vis alle <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer</span><span class="sm-vis-faerre" hidden>Vis færre temaer</span><svg class="ik ik--s" aria-hidden="true"><use href="#i-ned"></use></svg>
+</button>
+</nav>
+<nav class="sm-gruppe" aria-labelledby="sm-h-selskaber">
+<h2 class="sm-overskrift" id="sm-h-selskaber"><span>Selskaber</span><span class="sm-overskrift-note">Andel af fonden</span></h2>
+<ul class="sm-liste">
+</ul>
+<ul class="sm-liste" data-liste="top10.liste" data-skabelon="tpl-sm-top"></ul>
+<a class="sm-alle" href="../alle-selskaber.html"><svg class="ik ik--s" aria-hidden="true"><use href="#i-selskab"></use></svg><span>Se alle selskaber i fonden</span><svg class="ik ik--s" aria-hidden="true"><use href="#i-frem"></use></svg></a>
+<template id="tpl-sm-top"><li><a class="sm-selskab" data-link-selskab href="#"><span class="sm-logo" aria-hidden="true" data-f="forbogstav"></span><span class="sm-navn" data-f="navn"></span><span class="sm-tal" data-f="andel" data-fmt="pct"></span></a></li></template>
+<ul class="sm-liste" hidden>
+</ul>
+</nav>
+</div>
+<div class="sm-bund">
+<button class="temaskift" id="temaskift" type="button" aria-label="Skift til lyst tema"><svg class="ik ik--sol" aria-hidden="true" viewbox="0 0 24 24"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"></path></svg><svg class="ik ik--maane" aria-hidden="true" viewbox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"></path></svg><span class="temaskift-tekst">Lyst tema</span></button>
+<div class="sm-datakort"><svg class="ik" aria-hidden="true"><use href="#i-kalender"></use></svg><div><p class="sm-data-t">Alle andele pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…</span></p><p class="sm-data-s">Tallene er fra PMINDI. Markedsføringsmateriale. Ikke personlig investeringsrådgivning.</p></div></div>
+</div>
+</aside>
+<div class="hoved">
+<main id="indhold" tabindex="-1"><nav class="up-trail" aria-label="Du er her"><a href="../tech.html">Tech</a><span aria-hidden="true">/</span><span aria-current="page">Kvante­computere</span></nav><nav class="up-shortcuts" aria-label="På denne side"><a href="#cq-kv">Forstå teknologien</a><a href="#selskaberne">Selskaberne</a><a href="#mere-fra-ndi">Videoer & opslag</a></nav>
 
 <template id="tpl-tl"><li><a class="tl-raekke" data-link-selskab href="#"><span class="sm-logo" aria-hidden="true" data-f="forbogstav"></span><span class="tl-navn" data-f="navn"></span><span class="pos-bar" aria-hidden="true"><span data-fbar></span></span><span class="tl-tal" data-f="andel" data-fmt="pct"></span></a></li></template><template id="tpl-mini"><span data-fbar></span></template>
-
-      <section class="sektion sektion--overblik" id="overblik" aria-labelledby="h-side">
-
-        <div class="v18t">
-
-        <div class="v18t-hero v18t-hero--v5">
-
-          <div class="v18t-foto v18t-foto--v5"><figure class="tema-foto v5-heromotiv"><picture><source height="900" media="(max-width:599px)" srcset="../assets/img/v5-temaer/energi-konkurrence/temaer/kvante/fra-billedstil/grafik/kvante-hero-sporskiftet-mobil.svg" width="720"></source><img class="kun-moerk" alt="Spor går ud fra ét lysende punkt og spreder sig. Alle stopper ved en stiplet linje, og ét sidespor drejer af" decoding="async" height="600" src="../assets/img/v5-temaer/energi-konkurrence/temaer/kvante/fra-billedstil/grafik/kvante-hero-sporskiftet.svg" width="1200"><img loading="lazy" class="kun-lys" alt="Spor går ud fra ét lysende punkt og spreder sig. Alle stopper ved en stiplet linje, og ét sidespor drejer af" decoding="async" height="600" src="../assets/img/v5-temaer/energi-konkurrence/temaer/kvante/fra-billedstil/grafik/kvante-hero-sporskiftet-lys.svg" width="1200"></picture><figcaption class="foto-kredit">Illustration: NewDeal Invest.</figcaption></figure></div>
-
-          <div class="v18t-hero-tekst">
-
-            <p class="kicker">Et af de <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer i NewDeal Invest</p>
-
-            <h1 id="h-side">Kvante­computere</h1>
-
-            <p class="v18t-under">Hvad er demonstreret, og hvad er faktisk en forretning?</p>
-
-            <p>Selskaberne bygger ikke den samme slags kvantecomputer. Sammenlign de tekniske spor, og hold forskellen mellem et forskningsresultat, et produkt og selskabets omsætning for øje.</p>
-
-            
-
-            <div class="v18t-knapper"><a class="knap knap--primaer v5-knap" href="#selskaberne">Se selskaberne <span aria-hidden="true">↓</span></a><a class="knap knap--rolig v5-knap" href="#skrevet">Læs vores perspektiv</a></div>
-
-          </div>
-
-          
-
-        </div>
-
-        
-
-        <section class="v18-stortal" aria-labelledby="h-andel">
-
-            <div class="v18-stortal-tal">
-
-              <h2 class="sr" id="h-andel">Temaets andel af fonden</h2>
-
-              <p class="v18-stortal-v"><span><span data-tal="temaer#kvante.andel" data-fmt="tal">…  </span></span><span class="v18-stortal-enhed">%</span></p>
-
-              <p class="v18-stortal-tekst">af PMINDI er placeret i temaet Kvantecomputere.</p>
-
-              <p class="kildelinje">Andele i PMINDI, den udgave af fonden, der udbetaler udbytte, pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span> (fondens data).</p>
-
-            </div>
-
-            <div class="v18-stortal-figur v18-ramme">
-
-              <div class="mini-soejler" aria-hidden="true" data-liste="temaer" data-skabelon="tpl-mini" data-aktiv-id="kvante"></div>
-
-              <p class="lille mini-forklaring">De <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer efter størrelse. Kvante er <span data-tal="temaer#kvante.plads" data-fmt="plads">nr. …</span>.</p>
-
-            </div>
-
-            <details class="fold-ud v18-flere-tal">
-
-              <summary>Flere tal om temaet</summary>
-
-              <ul class="fakta-liste">
-
-                <li><span>Plads blandt <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer</span><strong><span data-tal="temaer#kvante.plads" data-fmt="Plads">Nr. …</span></strong></li>
-
-                <li><span>Selskaber i temaet</span><strong><span data-tal="temaer#kvante.antal" data-fmt="heltal">… </span></strong></li>
-
-                <li class="fakta-stak"><span>Største selskab</span><strong><span data-navn="temaer#kvante.stoerste">…</span> · <span data-tal="temaer#kvante.stoerste.andel" data-fmt="pct">…   %</span></strong></li>
-
-              </ul>
-
-            </details>
-
-          </section>
-
-        
-
-      <section class="sektion v18-perspektiv" id="skrevet" aria-labelledby="h-skrevet">
-
-        <div class="v18-perspektiv-boks">
-
-          <p class="kicker">Det har vi skrevet</p>
-
-          <h2 class="v18-perspektiv-titel" id="h-skrevet">NewDeal Invests perspektiv</h2>
-
-          <p class="v18-perspektiv-intro">Ordret uddrag af NewDeal Invests egne ugebreve og indlæg om temaet, med dato og link til hele teksten. Det er ikke en anbefaling.</p>
-
-          <blockquote class="skrevet-citat"><p>»Mandag aften præsenterede virksomheden sin nye Willow-chip, et vigtigt gennembrud inden for kvantecomputing. Willow kan foretage beregninger på få minutter, som vil tage vores kraftigste computere i dag længere end universet har eksisteret.«</p></blockquote>
-
-            <p class="skrevet-meta lille"><span class="skrevet-titel">Kinesisk gearskifte og kvantespring hos Alphabet</span> · <time datetime="2024-12-16">16.12.2024</time> · ugebrev uge 50, blog</p>
-
-            <p class="skrevet-selsk lille">Nævner: Alphabet</p>
-
-            <a class="tekstlink tekstlink--tryk skrevet-link" href="https://www.newdealinvest.dk/post/uge-50-kinesisk-gearskifte-og-kvantespring-hos-alphabet" target="_blank" rel="noopener">Læs hele teksten på bloggen<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (åbner i nyt vindue)</span></a>
-
-          
-
-        </div>
-
-      </section>
-
-        </div>
-
-      </section>
-
-      <div class="v5f v5f-kvante" data-v5-fortaelling="kvante"><section aria-label="Indgang til Kvantecomputere" class="ndi-reading theme-question"><h2>Det undersøger vi på siden</h2><div class="ndi-jumps"><a href="#hvad">Forstå forskellene mellem de tekniske spor ↓</a><a href="../alle-selskaber.html">Find selskaberne →</a></div></section><section aria-labelledby="cq-kv-h" class="cq-kv" id="cq-kv">
-
-
-
+<section class="sektion sektion--overblik" id="overblik" aria-labelledby="h-side">
+<div class="v18t">
+<div class="v18t-hero v18t-hero--v5">
+<div class="v18t-foto v18t-foto--v5"><figure class="tema-foto v5-heromotiv"><picture><source height="900" media="(max-width:599px)" srcset="../assets/review-img/af5752ac134b.svg" width="720"></source><img class="kun-moerk" alt="Spor går ud fra ét lysende punkt og spreder sig. Alle stopper ved en stiplet linje, og ét sidespor drejer af" decoding="async" height="600" src="../assets/review-img/1e752b92891d.svg" width="1200"><img loading="lazy" class="kun-lys" alt="Spor går ud fra ét lysende punkt og spreder sig. Alle stopper ved en stiplet linje, og ét sidespor drejer af" decoding="async" height="600" src="../assets/review-img/04094ef2f809.svg" width="1200"></picture><figcaption class="foto-kredit">Illustration: NewDeal Invest.</figcaption></figure></div>
+<div class="v18t-hero-tekst">
+<p class="kicker">Et af de <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer i NewDeal Invest</p>
+<h1 id="h-side">Kvante­computere</h1>
+<p class="v18t-under">Hvad er demonstreret, og hvad er faktisk en forretning?</p>
+<p>Selskaberne bygger ikke den samme slags kvantecomputer. Sammenlign de tekniske spor, og hold forskellen mellem et forskningsresultat, et produkt og selskabets omsætning for øje.</p>
+<div class="v18t-knapper"><a class="knap knap--primaer v5-knap" href="#selskaberne">Se selskaberne <span aria-hidden="true">↓</span></a><a class="knap knap--rolig v5-knap" href="#skrevet">Læs vores perspektiv</a></div>
+</div>
+</div>
+<section class="v18-stortal" aria-labelledby="h-andel">
+<div class="v18-stortal-tal">
+<h2 class="sr" id="h-andel">Temaets andel af fonden</h2>
+<p class="v18-stortal-v"><span><span data-tal="temaer#kvante.andel" data-fmt="tal">…  </span></span><span class="v18-stortal-enhed">%</span></p>
+<p class="v18-stortal-tekst">af PMINDI er placeret i temaet Kvantecomputere.</p>
+<p class="kildelinje">Andele i PMINDI, den udgave af fonden, der udbetaler udbytte, pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span> (fondens data).</p>
+</div>
+<div class="v18-stortal-figur v18-ramme">
+<div class="mini-soejler" aria-hidden="true" data-liste="temaer" data-skabelon="tpl-mini" data-aktiv-id="kvante"></div>
+<p class="lille mini-forklaring">De <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer efter størrelse. Kvante er <span data-tal="temaer#kvante.plads" data-fmt="plads">nr. …</span>.</p>
+</div>
+<details class="fold-ud v18-flere-tal">
+<summary>Flere tal om temaet</summary>
+<ul class="fakta-liste">
+<li><span>Plads blandt <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer</span><strong><span data-tal="temaer#kvante.plads" data-fmt="Plads">Nr. …</span></strong></li>
+<li><span>Selskaber i temaet</span><strong><span data-tal="temaer#kvante.antal" data-fmt="heltal">… </span></strong></li>
+<li class="fakta-stak"><span>Største selskab</span><strong><span data-navn="temaer#kvante.stoerste">…</span> · <span data-tal="temaer#kvante.stoerste.andel" data-fmt="pct">…   %</span></strong></li>
+</ul>
+</details>
+</section>
+<section class="sektion v18-perspektiv" id="skrevet" aria-labelledby="h-skrevet">
+<div class="v18-perspektiv-boks">
+<p class="kicker">Det har vi skrevet</p>
+<h2 class="v18-perspektiv-titel" id="h-skrevet">NewDeal Invests perspektiv</h2>
+<p class="v18-perspektiv-intro">Ordret uddrag af NewDeal Invests egne ugebreve og indlæg om temaet, med dato og link til hele teksten. Det er ikke en anbefaling.</p>
+<blockquote class="skrevet-citat"><p>»Mandag aften præsenterede virksomheden sin nye Willow-chip, et vigtigt gennembrud inden for kvantecomputing. Willow kan foretage beregninger på få minutter, som vil tage vores kraftigste computere i dag længere end universet har eksisteret.«</p></blockquote>
+<p class="skrevet-meta lille"><span class="skrevet-titel">Kinesisk gearskifte og kvantespring hos Alphabet</span> · <time datetime="2024-12-16">16.12.2024</time> · ugebrev uge 50, blog</p>
+<p class="skrevet-selsk lille">Nævner: Alphabet</p>
+<a class="tekstlink tekstlink--tryk skrevet-link" href="https://www.newdealinvest.dk/post/uge-50-kinesisk-gearskifte-og-kvantespring-hos-alphabet" target="_blank" rel="noopener">Læs hele teksten på bloggen<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (åbner i nyt vindue)</span></a>
+</div>
+</section>
+</div>
+</section>
+<div class="v5f v5f-kvante" data-v5-fortaelling="kvante"><section aria-labelledby="cq-kv-h" class="cq-kv" id="cq-kv">
 <div class="cq-kv__in">
 
 <p class="cq-kv__kick">Sporskiftet</p>
 
 <h2 class="cq-kv__h2" id="cq-kv-h">Sporene, side om side</h2>
-
-
-
 <p class="cq-kv__lead">Selskaberne i fonden bygger kvantecomputeren på hver deres måde. Tegningen viser sporene. Jo bredere et spor er, jo mere fylder det i fonden. Ingen af sporene er nået frem til en fuldt funktionel kvantecomputer.</p>
 
 <div class="cq-kv__stage"><figure class="cq-kv__fig"><div class="cq-kv__sv"><svg aria-hidden="true" class="cq-kv__svg" focusable="false" viewbox="0 0 520 410">
@@ -441,7 +295,7 @@
 
 <button class="cq-kv__close" data-for="cq-kv-p-trapped-ions" type="button">Luk<span class="cq-kv__sr"> Fangede ioner</span></button></div>
 
-<p class="cq-kv__ptx">Atomer med elektrisk ladning holdes svævende i et vakuumkammer, en beholder uden luft, og styres med laserlys. Ifølge NIST kan de holde på deres kvantetilstand længe, altså den sarte tilstand, som beregningen bygger på, men de regner forholdsvis langsomt. Det er det eneste spor med to selskaber.</p><img alt="Ladede atomer svæver på række og styres med laserlys" class="kun-moerk kv-illu" height="160" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/kvante/fra-billedstil/grafik/kvante-illu-fangede-ioner.svg" width="240"><img alt="Ladede atomer svæver på række og styres med laserlys" class="kun-lys kv-illu" height="160" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/kvante/fra-billedstil/grafik/kvante-illu-fangede-ioner-lys.svg" width="240"><figure class="ion"><picture><source media="(max-width:599px)" srcset="../assets/img/v5-temaer/energi-konkurrence/temaer/kvante/fra-billedstil/billeder/kvante-foto-ionfaelde-nist-bred.webp"></source><img alt="En forsøgsopstilling med metaldele, ledninger og et vakuumkammer, hvor ioner holdes fast" decoding="async" height="400" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/kvante/fra-billedstil/billeder/kvante-foto-ionfaelde-nist-bred.webp" width="600"></picture><figcaption>Forsøgsopstilling til fangede ioner hos NIST i USA. Foto: NIST, offentligt domæne.</figcaption></figure><details class="kv-vid"><summary>Selskabets egen video om fangede ioner</summary><div><figure class="vid"><div class="vid-ramme" data-title="Video: How Trapped-Ion Quantum Computers Work (Quantinuum)" data-yt="ec3Bs6Wam8w"><button aria-label="Videoen hentes fra YouTube." class="vid-play" type="button"><picture><source media="(max-width:599px)" srcset="../assets/img/v5-temaer/energi-konkurrence/temaer/kvante/fra-billedstil/billeder/kvante-plakat-ec3Bs6Wam8w-mobil.webp"></source><img alt="" height="540" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/kvante/fra-billedstil/billeder/kvante-plakat-ec3Bs6Wam8w-bred.webp" width="960"></picture><span aria-hidden="true" class="vid-kilde">Quantinuum</span><span aria-hidden="true" class="vid-ikon"></span><span aria-hidden="true" class="vid-tid">2:02</span></button></div><p class="media-reading"><strong>Se efter:</strong> Hvilket teknisk resultat er vist, og hvilke begrænsninger følger med?</p><figcaption>Kilde: Quantinuum, som er et af fondens selskaber. Video fra 07.02.2025, 2:02, på engelsk: “How Trapped-Ion Quantum Computers Work”. <a href="https://www.youtube.com/watch?v=ec3Bs6Wam8w" rel="noopener" target="_blank">Se på YouTube<span class="sr"> (åbner i nyt vindue)</span></a></figcaption></figure></div></details>
+<p class="cq-kv__ptx">Atomer med elektrisk ladning holdes svævende i et vakuumkammer, en beholder uden luft, og styres med laserlys. Ifølge NIST kan de holde på deres kvantetilstand længe, altså den sarte tilstand, som beregningen bygger på, men de regner forholdsvis langsomt. Det er det eneste spor med to selskaber.</p><img alt="Ladede atomer svæver på række og styres med laserlys" class="kun-moerk kv-illu" height="160" loading="lazy" src="../assets/review-img/44a6c7edc510.svg" width="240"><img alt="Ladede atomer svæver på række og styres med laserlys" class="kun-lys kv-illu" height="160" loading="lazy" src="../assets/review-img/53218b7a008e.svg" width="240"><figure class="ion"><picture><source media="(max-width:599px)" srcset="../assets/review-img/02dd150bfeab.webp"></source><img alt="En forsøgsopstilling med metaldele, ledninger og et vakuumkammer, hvor ioner holdes fast" decoding="async" height="400" loading="lazy" src="../assets/review-img/02dd150bfeab.webp" width="600"></picture><figcaption>Forsøgsopstilling til fangede ioner hos NIST i USA. Foto: NIST, offentligt domæne.</figcaption></figure><details class="kv-vid"><summary>Selskabets egen video om fangede ioner</summary><div><figure class="vid"><div class="vid-ramme" data-title="Video: How Trapped-Ion Quantum Computers Work (Quantinuum)" data-yt="ec3Bs6Wam8w"><button aria-label="Videoen hentes fra YouTube." class="vid-play" type="button"><picture><source media="(max-width:599px)" srcset="../assets/review-img/b0ae0462eea1.webp"></source><img alt="" height="540" loading="lazy" src="../assets/review-img/1256b1b21559.webp" width="960"></picture><span aria-hidden="true" class="vid-kilde">Quantinuum</span><span aria-hidden="true" class="vid-ikon"></span><span aria-hidden="true" class="vid-tid">2:02</span></button></div><p class="media-reading"><strong>Se efter:</strong> Hvilket teknisk resultat er vist, og hvilke begrænsninger følger med?</p><figcaption>Kilde: Quantinuum, som er et af fondens selskaber. Video fra 07.02.2025, 2:02, på engelsk: “How Trapped-Ion Quantum Computers Work”. <a href="https://www.youtube.com/watch?v=ec3Bs6Wam8w" rel="noopener" target="_blank">Se på YouTube<span class="sr"> (åbner i nyt vindue)</span></a></figcaption></figure></div></details>
 
 <ul class="cq-kv__cos" data-top="5" id="cq-kv-l-trapped-ions"><li><button aria-pressed="false" class="cq-kv__co" data-d="Kvantecomputere med fangede ioner, dannet i 2021 af Honeywell Quantum Solutions og Cambridge Quantum Computing. Omsætning 2025: 30,9 mio. USD." data-g="Fangede ioner" type="button"><span class="cq-kv__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/kvante/fra-critiquito/logoer/quantinuum.webp" width="28"></span><span class="cq-kv__nm">Quantinuum</span></button></li><li><button aria-pressed="false" class="cq-kv__co" data-d="Kvantecomputere med fangede ioner. Ejer siden 31.07.2026 også chipfabrikken SkyWater. Omsætning 2025: 130,0 mio. USD, heraf en del fra overtagne selskaber." data-g="Fangede ioner" type="button"><span class="cq-kv__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/kvante/fra-critiquito/logoer/ionq.webp" width="28"></span><span class="cq-kv__nm">IonQ</span></button></li></ul><div aria-live="polite" class="cq-kv__info"><p class="cq-kv__hint">Tryk på et selskab for at se, hvad det laver.</p></div></div><div aria-label="Lys" class="cq-kv__panel cq-kv__scope" hidden="" id="cq-kv-p-photonic-qc" role="region">
 
@@ -449,15 +303,15 @@
 
 <button class="cq-kv__close" data-for="cq-kv-p-photonic-qc" type="button">Luk<span class="cq-kv__sr"> Lys</span></button></div>
 
-<p class="cq-kv__ptx">Qubitten er en enkelt lyspartikel, en foton. Selskabet arbejder ved almindelig stuetemperatur. </p><img alt="Hver qubit er en enkelt lyspartikel, der løber gennem en lysleder" class="kun-moerk kv-illu" height="160" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/kvante/fra-billedstil/grafik/kvante-illu-lys-v5.svg" width="240"><img alt="Hver qubit er en enkelt lyspartikel, der løber gennem en lysleder" class="kun-lys kv-illu" height="160" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/kvante/fra-billedstil/grafik/kvante-illu-lys-v5-lys.svg" width="240">
+<p class="cq-kv__ptx">Qubitten er en enkelt lyspartikel, en foton. Selskabet arbejder ved almindelig stuetemperatur. </p><img alt="Hver qubit er en enkelt lyspartikel, der løber gennem en lysleder" class="kun-moerk kv-illu" height="160" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/kvante/fra-billedstil/grafik/kvante-illu-lys-v5.svg" width="240"><img alt="Hver qubit er en enkelt lyspartikel, der løber gennem en lysleder" class="kun-lys kv-illu" height="160" loading="lazy" src="../assets/review-img/4980335a8c6d.svg" width="240">
 
-<ul class="cq-kv__cos" data-top="5" id="cq-kv-l-photonic-qc"><li><button aria-pressed="false" class="cq-kv__co" data-d="Chips, der styrer lys, og kvanteteknologi med lys, der arbejder ved stuetemperatur. Har i 2026 overtaget Luminar Semiconductor, NuCrypt og NHanced. Omsætning 2025: 0,7 mio. USD." data-g="Lys" type="button"><span class="cq-kv__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/kvante/fra-critiquito/logoer/quantum-computing-inc.webp" width="28"></span><span class="cq-kv__nm">Quantum Computing Inc</span></button></li></ul><div aria-live="polite" class="cq-kv__info"><p class="cq-kv__hint">Tryk på et selskab for at se, hvad det laver.</p></div></div><div aria-label="Annealing" class="cq-kv__panel cq-kv__scope" hidden="" id="cq-kv-p-annealing" role="region">
+<ul class="cq-kv__cos" data-top="5" id="cq-kv-l-photonic-qc"><li><button aria-pressed="false" class="cq-kv__co" data-d="Chips, der styrer lys, og kvanteteknologi med lys, der arbejder ved stuetemperatur. Har i 2026 overtaget Luminar Semiconductor, NuCrypt og NHanced. Omsætning 2025: 0,7 mio. USD." data-g="Lys" type="button"><span class="cq-kv__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/review-img/63469cd97089.webp" width="28"></span><span class="cq-kv__nm">Quantum Computing Inc</span></button></li></ul><div aria-live="polite" class="cq-kv__info"><p class="cq-kv__hint">Tryk på et selskab for at se, hvad det laver.</p></div></div><div aria-label="Annealing" class="cq-kv__panel cq-kv__scope" hidden="" id="cq-kv-p-annealing" role="region">
 
 <div class="cq-kv__ph"><svg aria-hidden="true" class="cq-kv__pi" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M2.75 9c2 0 2.5 5 4.5 5s2-7 4.25-7 2.5 11 5 11 2-6 4.75-6"></path><circle cx="16.5" cy="15.75" fill="currentColor" r="1.5"></circle></svg><div><h3 class="cq-kv__h3">Annealing</h3></div>
 
 <button class="cq-kv__close" data-for="cq-kv-p-annealing" type="button">Luk<span class="cq-kv__sr"> Annealing</span></button></div>
 
-<p class="cq-kv__ptx">Annealing er en anden type kvantemaskine, der er rettet mod bestemte opgaver, fx at finde den bedste af mange kombinationer. Selskabet bygger også den almindelige type kvantecomputer.</p><img alt="Maskinen leder efter den laveste dal, altså den bedste kombination" class="kun-moerk kv-illu" height="160" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/kvante/fra-billedstil/grafik/kvante-illu-annealing.svg" width="240"><img alt="Maskinen leder efter den laveste dal, altså den bedste kombination" class="kun-lys kv-illu" height="160" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/kvante/fra-billedstil/grafik/kvante-illu-annealing-lys.svg" width="240">
+<p class="cq-kv__ptx">Annealing er en anden type kvantemaskine, der er rettet mod bestemte opgaver, fx at finde den bedste af mange kombinationer. Selskabet bygger også den almindelige type kvantecomputer.</p><img alt="Maskinen leder efter den laveste dal, altså den bedste kombination" class="kun-moerk kv-illu" height="160" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/kvante/fra-billedstil/grafik/kvante-illu-annealing.svg" width="240"><img alt="Maskinen leder efter den laveste dal, altså den bedste kombination" class="kun-lys kv-illu" height="160" loading="lazy" src="../assets/review-img/972860cb5335.svg" width="240">
 
 <ul class="cq-kv__cos" data-top="5" id="cq-kv-l-annealing"><li><button aria-pressed="false" class="cq-kv__co" data-d="Kvantecomputere af to slags, annealing og den almindelige type, og software, bl.a. adgang til maskinerne over internettet. Omsætning 2025: 24,6 mio. USD." data-g="Annealing" type="button"><span class="cq-kv__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/kvante/fra-critiquito/logoer/d-wave-quantum.webp" width="28"></span><span class="cq-kv__nm"><span class="cq-kv__nw">D-Wave</span> Quantum</span></button></li></ul><div aria-live="polite" class="cq-kv__info"><p class="cq-kv__hint">Tryk på et selskab for at se, hvad det laver.</p></div></div><div aria-label="Neutrale atomer" class="cq-kv__panel cq-kv__scope" hidden="" id="cq-kv-p-neutral-atoms" role="region">
 
@@ -465,7 +319,7 @@
 
 <button class="cq-kv__close" data-for="cq-kv-p-neutral-atoms" type="button">Luk<span class="cq-kv__sr"> Neutrale atomer</span></button></div>
 
-<p class="cq-kv__ptx">Atomer uden elektrisk ladning holdes fast med laserlys i et vakuumkammer. Selskabet laver også kvantesensorer, meget følsomme måleinstrumenter.</p><img alt="Atomer uden ladning holdes fast i et gitter af laserlys" class="kun-moerk kv-illu" height="160" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/kvante/fra-billedstil/grafik/kvante-illu-neutrale-atomer.svg" width="240"><img alt="Atomer uden ladning holdes fast i et gitter af laserlys" class="kun-lys kv-illu" height="160" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/kvante/fra-billedstil/grafik/kvante-illu-neutrale-atomer-lys.svg" width="240">
+<p class="cq-kv__ptx">Atomer uden elektrisk ladning holdes fast med laserlys i et vakuumkammer. Selskabet laver også kvantesensorer, meget følsomme måleinstrumenter.</p><img alt="Atomer uden ladning holdes fast i et gitter af laserlys" class="kun-moerk kv-illu" height="160" loading="lazy" src="../assets/review-img/98686c684ffd.svg" width="240"><img alt="Atomer uden ladning holdes fast i et gitter af laserlys" class="kun-lys kv-illu" height="160" loading="lazy" src="../assets/review-img/a1db723330d4.svg" width="240">
 
 <ul class="cq-kv__cos" data-top="5" id="cq-kv-l-neutral-atoms"><li><button aria-pressed="false" class="cq-kv__co" data-d="Kvantesensorer, kvantecomputere og software, alle bygget på neutrale atomer. Omsætning 2025: 31,1 mio. USD." data-g="Neutrale atomer" type="button"><span class="cq-kv__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/kvante/fra-critiquito/logoer/infleqtion.webp" width="28"></span><span class="cq-kv__nm">Infleqtion</span></button></li></ul><div aria-live="polite" class="cq-kv__info"><p class="cq-kv__hint">Tryk på et selskab for at se, hvad det laver.</p></div></div><div aria-label="Superledende kredsløb" class="cq-kv__panel cq-kv__scope" hidden="" id="cq-kv-p-superconducting" role="region">
 
@@ -473,7 +327,7 @@
 
 <button class="cq-kv__close" data-for="cq-kv-p-superconducting" type="button">Luk<span class="cq-kv__sr"> Superledende kredsløb</span></button></div>
 
-<p class="cq-kv__ptx"> Ifølge NIST regner de hurtigt, men deres kvantetilstand er mere skrøbelig end ionernes. Om chipfremstilling kan du læse på siden <a href="chips.html">Chips og halvledere</a>.</p><img alt="En lille chip, der køles ned til tæt på det absolutte nulpunkt" class="kun-moerk kv-illu" height="160" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/kvante/fra-billedstil/grafik/kvante-illu-superledende.svg" width="240"><img alt="En lille chip, der køles ned til tæt på det absolutte nulpunkt" class="kun-lys kv-illu" height="160" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/kvante/fra-billedstil/grafik/kvante-illu-superledende-lys.svg" width="240">
+<p class="cq-kv__ptx"> Ifølge NIST regner de hurtigt, men deres kvantetilstand er mere skrøbelig end ionernes. Om chipfremstilling kan du læse på siden <a href="chips.html">Chips og halvledere</a>.</p><img alt="En lille chip, der køles ned til tæt på det absolutte nulpunkt" class="kun-moerk kv-illu" height="160" loading="lazy" src="../assets/review-img/84c4a827d843.svg" width="240"><img alt="En lille chip, der køles ned til tæt på det absolutte nulpunkt" class="kun-lys kv-illu" height="160" loading="lazy" src="../assets/review-img/0adc972f18f3.svg" width="240">
 
 <ul class="cq-kv__cos" data-top="5" id="cq-kv-l-superconducting"><li><button aria-pressed="false" class="cq-kv__co" data-d="Kvantecomputere med superledende qubits på siliciumchips, der køles til ca. 0,02 kelvin, lige over det absolutte nulpunkt, bl.a. systemet Novera med 9 qubits. Omsætning 2025: 7,1 mio. USD." data-g="Superledende kredsløb" type="button"><span class="cq-kv__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/kvante/fra-critiquito/logoer/rigetti-computing.webp" width="28"></span><span class="cq-kv__nm">Rigetti Computing</span></button></li></ul><div aria-live="polite" class="cq-kv__info"><p class="cq-kv__hint">Tryk på et selskab for at se, hvad det laver.</p></div></div><div aria-label="Sidespor: kulde og instrumenter" class="cq-kv__panel cq-kv__scope" hidden="" id="cq-kv-p-cryogenics" role="region">
 
@@ -486,9 +340,6 @@
 <ul class="cq-kv__cos" data-top="5" id="cq-kv-l-cryogenics"><li><button aria-pressed="false" class="cq-kv__co" data-d="Mikroskoper, kameraer, analyseinstrumenter og software (Imaging &amp; Analysis) samt udstyr til halvlederfremstilling og røntgenrør. Den kvantefokuserede del, NanoScience, er afhændet (januar 2026)." data-g="Sidespor: kulde og instrumenter" type="button"><span class="cq-kv__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/kvante/fra-critiquito/logoer/oxford-instruments.webp" width="28"></span><span class="cq-kv__nm">Oxford Instruments</span></button></li></ul><div aria-live="polite" class="cq-kv__info"><p class="cq-kv__hint">Tryk på et selskab for at se, hvad det laver.</p></div></div>
 
 </div>
-
-
-
 </section><p class="kv-navne"><b>Selskaberne i temaet:</b> Oxford Instruments, Quantinuum, IonQ, Quantum Computing Inc, D-Wave Quantum, Infleqtion og Rigetti Computing. Ingen selskaber i fondens andre temaer hører også delvis til dette tema.</p><section aria-labelledby="hvad-h" class="s" id="hvad"><div class="wrap">
 
 <p class="eyebrow">Forklaret</p>
@@ -517,7 +368,7 @@
 
 <div>
 
-<figure class="vid"><div class="vid-ramme" data-title="Video: How do quantum computers work? (nature video)" data-yt="olQWPmBZ24s"><button aria-label="Videoen hentes fra YouTube." class="vid-play" type="button"><picture><source media="(max-width:599px)" srcset="../assets/img/v5-temaer/energi-konkurrence/temaer/kvante/fra-billedstil/billeder/kvante-plakat-olQWPmBZ24s-mobil.webp"></source><img alt="" height="540" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/kvante/fra-billedstil/billeder/kvante-plakat-olQWPmBZ24s-bred.webp" width="960"></picture><span aria-hidden="true" class="vid-kilde">nature video</span><span aria-hidden="true" class="vid-ikon"></span><span aria-hidden="true" class="vid-tid">5:27</span></button></div><p class="media-reading"><strong>Se efter:</strong> Hvilket teknisk resultat er vist, og hvilke begrænsninger følger med?</p><figcaption><b>Videoen forklarer, hvordan en kvantecomputer regner, hvorfor den laver fejl, og hvordan forskerne retter dem.</b> Kilde: nature video, videokanalen for det videnskabelige tidsskrift Nature. Video fra 22.07.2026, 5:27, på engelsk. <a href="https://www.youtube.com/watch?v=olQWPmBZ24s" rel="noopener" target="_blank">Se på YouTube<span class="sr"> (åbner i nyt vindue)</span></a></figcaption></figure>
+<figure class="vid"><div class="vid-ramme" data-title="Video: How do quantum computers work? (nature video)" data-yt="olQWPmBZ24s"><button aria-label="Videoen hentes fra YouTube." class="vid-play" type="button"><picture><source media="(max-width:599px)" srcset="../assets/review-img/6f324c4ca2a7.webp"></source><img alt="" height="540" loading="lazy" src="../assets/review-img/c02d091cefd5.webp" width="960"></picture><span aria-hidden="true" class="vid-kilde">nature video</span><span aria-hidden="true" class="vid-ikon"></span><span aria-hidden="true" class="vid-tid">5:27</span></button></div><p class="media-reading"><strong>Se efter:</strong> Hvilket teknisk resultat er vist, og hvilke begrænsninger følger med?</p><figcaption><b>Videoen forklarer, hvordan en kvantecomputer regner, hvorfor den laver fejl, og hvordan forskerne retter dem.</b> Kilde: nature video, videokanalen for det videnskabelige tidsskrift Nature. Video fra 22.07.2026, 5:27, på engelsk. <a href="https://www.youtube.com/watch?v=olQWPmBZ24s" rel="noopener" target="_blank">Se på YouTube<span class="sr"> (åbner i nyt vindue)</span></a></figcaption></figure>
 
 </div>
 
@@ -533,10 +384,7 @@
 
 <div class="penge kort">
 
-<p class="penge-h"><img class="kun-moerk" alt="" height="28" src="../assets/img/v5-temaer/energi-konkurrence/temaer/kvante/fra-billedstil/ikoner/kvante-ikon-sammen-med-computer.svg" width="28"><img loading="lazy" class="kun-lys" alt="" height="28" src="../assets/img/v5-temaer/energi-konkurrence/temaer/kvante/fra-billedstil/ikoner/kvante-ikon-sammen-med-computer-lys.svg" width="28">Omsætning 2025</p>
-
-
-
+<p class="penge-h"><img class="kun-moerk" alt="" height="28" src="../assets/review-img/ae1154c57fa8.svg" width="28"><img loading="lazy" class="kun-lys" alt="" height="28" src="../assets/review-img/0b1e84161053.svg" width="28">Omsætning 2025</p>
 <p>omsatte de seks selskaber, der bygger kvantecomputere, for tilsammen i 2025. Tallet er al deres omsætning, ikke kun den del, der kommer fra kvante. </p>
 
 <p class="note">Kilder: selskabernes regnskaber (se Kilder), omregnet med Nationalbankens kurs for 2025 (<a href="https://www.statbank.dk/DNVALA" rel="noopener" target="_blank">Danmarks Statistik, DNVALA<span class="sr"> (åbner i nyt vindue)</span></a>).</p>
@@ -545,10 +393,7 @@
 
 <div class="penge kort">
 
-<p class="penge-h"><img class="kun-moerk" alt="" height="28" src="../assets/img/v5-temaer/energi-konkurrence/temaer/kvante/fra-billedstil/ikoner/kvante-ikon-lovet-ikke-udbetalt.svg" width="28"><img loading="lazy" class="kun-lys" alt="" height="28" src="../assets/img/v5-temaer/energi-konkurrence/temaer/kvante/fra-billedstil/ikoner/kvante-ikon-lovet-ikke-udbetalt-lys.svg" width="28">Lovet, ikke udbetalt</p>
-
-
-
+<p class="penge-h"><img class="kun-moerk" alt="" height="28" src="../assets/review-img/9df63c858f22.svg" width="28"><img loading="lazy" class="kun-lys" alt="" height="28" src="../assets/review-img/8378a67cefb3.svg" width="28">Lovet, ikke udbetalt</p>
 <p>har den amerikanske regering i 2026 givet tilsagn om til tre af selskaberne og stillet i udsigt til et fjerde.  </p>
 
 <p>D-Wave Quantum, Quantinuum og Rigetti Computing fik endeligt tilsagn 08.09.2026. Infleqtion har kun et foreløbigt løfte (en hensigtserklæring) fra 21.05.2026.</p>
@@ -573,65 +418,37 @@
 
 <p class="xnote">Opslagene er udvalgt af teamet bag NewDeal Invest. Afsenderne og de nævnte selskaber står ikke bag denne side, og opslagene er ikke fondens vurdering.</p>
 
-<details class="fold udefra-v"><summary>Én video mere: kulden</summary><div><figure class="vid"><div class="vid-ramme" data-title="Video: What is a dilution fridge? (Fermilab)" data-yt="HSClNB2pq0c"><button aria-label="Videoen hentes fra YouTube." class="vid-play" type="button"><picture><source media="(max-width:599px)" srcset="../assets/img/v5-temaer/energi-konkurrence/temaer/kvante/fra-billedstil/billeder/kvante-plakat-HSClNB2pq0c-mobil.webp"></source><img alt="" height="540" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/kvante/fra-billedstil/billeder/kvante-plakat-HSClNB2pq0c-bred.webp" width="960"></picture><span aria-hidden="true" class="vid-kilde">Fermilab</span><span aria-hidden="true" class="vid-ikon"></span><span aria-hidden="true" class="vid-tid">3:06</span></button></div><p class="media-reading"><strong>Se efter:</strong> Hvilket teknisk resultat er vist, og hvilke begrænsninger følger med?</p><figcaption><b>Ingeniører og en fysiker forklarer, hvordan en fortyndingskøler, et særligt køleskab til kvantecomputere, når ned tæt på det absolutte nulpunkt, og hvorfor det er nødvendigt.</b> Kilde: Fermilab, et offentligt forskningslaboratorium. Video fra 26.03.2026, 3:06, på engelsk. <a href="https://www.youtube.com/watch?v=HSClNB2pq0c" rel="noopener" target="_blank">Se på YouTube<span class="sr"> (åbner i nyt vindue)</span></a></figcaption></figure></div></details>
+<details class="fold udefra-v"><summary>Én video mere: kulden</summary><div><figure class="vid"><div class="vid-ramme" data-title="Video: What is a dilution fridge? (Fermilab)" data-yt="HSClNB2pq0c"><button aria-label="Videoen hentes fra YouTube." class="vid-play" type="button"><picture><source media="(max-width:599px)" srcset="../assets/review-img/8a55e79f01aa.webp"></source><img alt="" height="540" loading="lazy" src="../assets/review-img/182854efbc46.webp" width="960"></picture><span aria-hidden="true" class="vid-kilde">Fermilab</span><span aria-hidden="true" class="vid-ikon"></span><span aria-hidden="true" class="vid-tid">3:06</span></button></div><p class="media-reading"><strong>Se efter:</strong> Hvilket teknisk resultat er vist, og hvilke begrænsninger følger med?</p><figcaption><b>Ingeniører og en fysiker forklarer, hvordan en fortyndingskøler, et særligt køleskab til kvantecomputere, når ned tæt på det absolutte nulpunkt, og hvorfor det er nødvendigt.</b> Kilde: Fermilab, et offentligt forskningslaboratorium. Video fra 26.03.2026, 3:06, på engelsk. <a href="https://www.youtube.com/watch?v=HSClNB2pq0c" rel="noopener" target="_blank">Se på YouTube<span class="sr"> (åbner i nyt vindue)</span></a></figcaption></figure></div></details>
 
 </div></section></div>
 
 <section class="sektion" id="selskaberne" aria-labelledby="h-selskaber">
-
-        <div class="gitter gitter--stub">
-
-          <article class="kort panel panel--bred" aria-labelledby="h-selskaber">
-
-            <header class="panel-hoved">
-
-              <div><h2 class="panel-titel" id="h-selskaber"><svg class="ik" aria-hidden="true"><use href="#i-selskab"></use></svg><span data-hvis="temaer#kvante.oevrigeAntal" hidden>De <span data-tal="temaer#kvante.antalVist" data-fmt="heltal">… </span> største af temaets <span data-tal="temaer#kvante.antal" data-fmt="antal" data-en="selskab" data-fl="selskaber">…  selskaber</span></span><span data-hvis="temaer#kvante.alleVist">Temaets <span data-tal="temaer#kvante.antal" data-fmt="antal" data-en="selskab" data-fl="selskaber">…  selskaber</span></span></h2>
-
-              <p class="hint">Tryk på et selskab for at se mere om det.</p></div>
-
-            </header>
-
-            <ul class="tema-liste" data-liste="temaer#kvante.vist" data-skabelon="tpl-tl"></ul>
-
-            <details class="fold-ud fold-liste" data-hvis="temaer#kvante.oevrigeAntal" hidden><summary><span>Vis alle <span data-tal="temaer#kvante.antal" data-fmt="antal" data-en="selskab" data-fl="selskaber">…  selskaber</span> i temaet</span></summary>
-
-              <ul class="tema-liste" data-liste="temaer#kvante.oevrige" data-skabelon="tpl-tl"></ul>
-
-            </details>
-
-            <p class="kildelinje">Andele i PMINDI, den udgave af fonden, der udbetaler udbytte, pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span> (fondens data).</p>
-
-          </article>
-
-        </div>
-
-      </section>
-
-      <section class="sektion v18-proces" data-proces-slot="kvante" hidden></section>
-
-      
-
-      <section class="sektion sektion--x" id="x-opslag" aria-labelledby="h-x-opslag" data-x-tema data-x-rel="../" data-x-selskaber='[{"isin": "GB0006650450", "navn": "Oxford Instruments", "slug": "oxford-instruments"}, {"isin": "US74766W1080", "navn": "Quantum Computing", "slug": "quantum-computing"}, {"isin": "US74768A1043", "navn": "Quantinuum", "slug": "quantinuum"}, {"isin": "US26740W1099", "navn": "D-Wave Quantum", "slug": "d-wave-quantum"}, {"isin": "US76655K1034", "navn": "Rigetti Computing", "slug": "rigetti-computing"}, {"isin": "US45676K1034", "navn": "Infleqtion", "slug": "infleqtion"}, {"isin": "US46222L1089", "navn": "IonQ", "slug": "ionq"}]'>
-
-        <header class="sektion-hoved">
-
-          <h2 class="sektion-titel" id="h-x-opslag">Det skriver de på X</h2>
-
-          <p class="sektion-intro">Udvalgte offentlige opslag om selskaberne i temaet. Opslagene er andres og ikke NewDeal Invests holdning.</p>
-
-        </header>
-
-        <div class="kort panel x-tema">
-
-          <p class="x-tema-status lille" role="status">Henter opslag …</p>
-
-          <details class="fold-ud fold-mobil fold-sektion" data-aaben-bred><summary aria-expanded="false">Se opslagene fra X</summary><ul class="x-tema-liste" hidden></ul></details>
-
-          <p class="kildelinje x-tema-kilde" hidden></p>
-
-        </div>
-
-      </section>
+<div class="gitter gitter--stub">
+<article class="kort panel panel--bred" aria-labelledby="h-selskaber">
+<header class="panel-hoved">
+<div><h2 class="panel-titel" id="h-selskaber"><svg class="ik" aria-hidden="true"><use href="#i-selskab"></use></svg><span data-hvis="temaer#kvante.oevrigeAntal" hidden>De <span data-tal="temaer#kvante.antalVist" data-fmt="heltal">… </span> største af temaets <span data-tal="temaer#kvante.antal" data-fmt="antal" data-en="selskab" data-fl="selskaber">…  selskaber</span></span><span data-hvis="temaer#kvante.alleVist">Temaets <span data-tal="temaer#kvante.antal" data-fmt="antal" data-en="selskab" data-fl="selskaber">…  selskaber</span></span></h2>
+<p class="hint">Tryk på et selskab for at se mere om det.</p></div>
+</header>
+<ul class="tema-liste" data-liste="temaer#kvante.vist" data-skabelon="tpl-tl"></ul>
+<details class="fold-ud fold-liste" data-hvis="temaer#kvante.oevrigeAntal" hidden><summary><span>Vis alle <span data-tal="temaer#kvante.antal" data-fmt="antal" data-en="selskab" data-fl="selskaber">…  selskaber</span> i temaet</span></summary>
+<ul class="tema-liste" data-liste="temaer#kvante.oevrige" data-skabelon="tpl-tl"></ul>
+</details>
+<p class="kildelinje">Andele i PMINDI, den udgave af fonden, der udbetaler udbytte, pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span> (fondens data).</p>
+</article>
+</div>
+</section>
+<section class="sektion v18-proces" data-proces-slot="kvante" hidden></section>
+<section class="sektion sektion--x" id="x-opslag" aria-labelledby="h-x-opslag" data-x-tema data-x-rel="../" data-x-selskaber='[{"isin": "GB0006650450", "navn": "Oxford Instruments", "slug": "oxford-instruments"}, {"isin": "US74766W1080", "navn": "Quantum Computing", "slug": "quantum-computing"}, {"isin": "US74768A1043", "navn": "Quantinuum", "slug": "quantinuum"}, {"isin": "US26740W1099", "navn": "D-Wave Quantum", "slug": "d-wave-quantum"}, {"isin": "US76655K1034", "navn": "Rigetti Computing", "slug": "rigetti-computing"}, {"isin": "US45676K1034", "navn": "Infleqtion", "slug": "infleqtion"}, {"isin": "US46222L1089", "navn": "IonQ", "slug": "ionq"}]'>
+<header class="sektion-hoved">
+<h2 class="sektion-titel" id="h-x-opslag">Det skriver de på X</h2>
+<p class="sektion-intro">Udvalgte offentlige opslag om selskaberne i temaet. Opslagene er andres og ikke NewDeal Invests holdning.</p>
+</header>
+<div class="kort panel x-tema">
+<p class="x-tema-status lille" role="status">Henter opslag …</p>
+<details class="fold-ud fold-mobil fold-sektion" data-aaben-bred><summary aria-expanded="false">Se opslagene fra X</summary><ul class="x-tema-liste" hidden></ul></details>
+<p class="kildelinje x-tema-kilde" hidden></p>
+</div>
+</section>
 
 <div class="v5f v5f-kvante" data-v5-fortaelling="kvante-b"><section aria-labelledby="risiko-h" class="s" id="risiko"><div class="wrap">
 
@@ -651,7 +468,7 @@
 
 <div class="naboer">
 
-<figure class="graf kort nab-graf"><img class="kun-moerk" alt="Nabotemaer: chips, software og sundhed" height="140" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/kvante/fra-billedstil/grafik/kvante-overgang-naboer.svg" width="480"><img class="kun-lys" alt="Nabotemaer: chips, software og sundhed" height="140" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/kvante/fra-billedstil/grafik/kvante-overgang-naboer-lys.svg" width="480"><figcaption>Illustration: NewDeal Invest.</figcaption></figure>
+<figure class="graf kort nab-graf"><img class="kun-moerk" alt="Nabotemaer: chips, software og sundhed" height="140" loading="lazy" src="../assets/review-img/5f1b195b81a2.svg" width="480"><img class="kun-lys" alt="Nabotemaer: chips, software og sundhed" height="140" loading="lazy" src="../assets/review-img/6e0444b4b8cd.svg" width="480"><figcaption>Illustration: NewDeal Invest.</figcaption></figure>
 
 <div>
 
@@ -695,7 +512,7 @@
 
 </div>
 
-</div></section><section class="rm-section" id="mere-fra-ndi" aria-labelledby="rm-title"><p class="rm-source">VIDEOER OG OPSLAG</p><h2 id="rm-title">Bliv klogere på Kvantecomputere</h2><div class="rm-grid rm-grid-youtube"><article class="rm-video"><button type="button" class="rm-play" data-youtube="yiNWLIblPvY" data-start="2140" aria-label="Afspil NewDeal Invest Live Q&amp;A - March 17th at 20:00 (8 PM) with Mads Christiansen &amp; Jesper Bæk"><img loading="lazy" src="https://i.ytimg.com/vi/yiNWLIblPvY/hqdefault.jpg" alt=""><span class="rm-play-icon" aria-hidden="true">▶</span><span class="rm-start">Se fra 35:40</span></button><div class="rm-caption"><p class="rm-source">NEWDEAL INVEST · 2024-03-18</p><h3>NewDeal Invest Live Q&amp;A - March 17th at 20:00 (8 PM) with Mads Christiansen &amp; Jesper Bæk</h3><a href="https://www.youtube.com/watch?v=yiNWLIblPvY&amp;t=2140s" target="_blank" rel="noopener">Se på YouTube ↗</a></div></article></div></section><section aria-labelledby="kilder-h" class="s kilder" id="kilder"><div class="wrap">
+</div></section><section class="rm-section" id="mere-fra-ndi" aria-labelledby="rm-title"><p class="rm-source">VIDEOER OG OPSLAG</p><h2 id="rm-title">Bliv klogere på Kvantecomputere</h2><div class="rm-grid rm-grid-youtube"><article class="rm-video"><button type="button" class="rm-play" data-youtube="yiNWLIblPvY" data-start="2140" aria-label="Afspil NewDeal Invest Live Q&amp;A - March 17th at 20:00 (8 PM) with Mads Christiansen &amp; Jesper Bæk"><img loading="lazy" src="https://i.ytimg.com/vi/yiNWLIblPvY/hqdefault.jpg" alt=""><span class="rm-play-icon" aria-hidden="true">▶</span><span class="rm-start">Se fra 35:40</span></button><div class="rm-caption"><p class="rm-source">NEWDEAL INVEST · 2024-03-18</p><h3>NewDeal Invest Live Q&amp;A - March 17th at 20:00 (8 PM) with Mads Christiansen &amp; Jesper Bæk</h3><p class="rm-topic">Om Kvantecomputere · starter ved 35:40</p><a href="https://www.youtube.com/watch?v=yiNWLIblPvY&amp;t=2140s" target="_blank" rel="noopener">Se på YouTube ↗</a></div></article></div></section><section aria-labelledby="kilder-h" class="s kilder" id="kilder"><div class="wrap">
 
 <h2 id="kilder-h">Kilder og kreditering</h2>
 
@@ -706,42 +523,21 @@
 </div></details>
 
 </div></section></div>
-
-
-
-      
-
-      <div class="sektion sektion--videre"><nav class="videre" aria-label="Videre">
-
-          <a class="knap" href="../index.html#hvert-tema"><svg class="ik ik--s" aria-hidden="true"><use href="#i-tilbage"></use></svg>Alle temaer</a>
-
-          <a class="knap" href="../index.html#hvert-tema" data-hvis="temaer#kvante.forrige" data-href-tema="temaer#kvante.forrige" hidden><svg class="ik ik--s" aria-hidden="true"><use href="#i-tilbage"></use></svg><span class="knap-tekst">Forrige tema: <span data-navn="temaer#kvante.forrige">…</span></span></a>
-
-          <a class="knap knap--primaer" href="../index.html#hvert-tema" data-hvis="temaer#kvante.naeste" data-href-tema="temaer#kvante.naeste" hidden><span class="knap-tekst">Næste tema: <span data-navn="temaer#kvante.naeste">…</span></span><svg class="ik ik--s" aria-hidden="true"><use href="#i-frem"></use></svg></a>
-
-          <a class="knap knap--primaer" href="#kilder" data-skjul="temaer#kvante.naeste" hidden>Det var det sidste tema. Se kilderne<svg class="ik ik--s" aria-hidden="true"><use href="#i-frem"></use></svg></a>
-
-        </nav></div>
-
-
-
-    </main>
-
-    <footer class="sidefod">
-
-      <div class="sidefod-maerke"><span class="logo-felt"><img class="ndi-logo" src="../assets/img/ndi-logo-moerk-baggrund.png" width="2048" height="754" alt="NewDeal Invest" decoding="async"></span></div>
-
-      <div class="sidefod-tekst">
-
-        <p>NewDeal Invest er et brand for NDIIR ApS, investeringsrådgiver for Fundmarket A/S. Markedsføringsmateriale. Ikke personlig investeringsrådgivning. Investering indebærer risiko for tab. Alle andele pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span>.</p>
-
-        <p class="sidefod-kilde">Kilde til fondstal: Fundmarket A/S, der forvalter Investeringsforeningen PortfolioManager. NDIIR ApS yder investeringsrådgivning til foreningen. <span class="sidefod-dato">Opdateret <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span>.</span></p>
-
-      </div>
-
-    </footer>
-
-  </div>
+<div class="sektion sektion--videre"><nav class="videre" aria-label="Videre">
+<a class="knap" href="../tech.html#temaer"><svg class="ik ik--s" aria-hidden="true"><use href="#i-tilbage"></use></svg>Alle temaer</a>
+<a class="knap" href="../tech.html#temaer" data-hvis="temaer#kvante.forrige" data-href-tema="temaer#kvante.forrige" hidden><svg class="ik ik--s" aria-hidden="true"><use href="#i-tilbage"></use></svg><span class="knap-tekst">Forrige tema: <span data-navn="temaer#kvante.forrige">…</span></span></a>
+<a class="knap knap--primaer" href="../tech.html#temaer" data-hvis="temaer#kvante.naeste" data-href-tema="temaer#kvante.naeste" hidden><span class="knap-tekst">Næste tema: <span data-navn="temaer#kvante.naeste">…</span></span><svg class="ik ik--s" aria-hidden="true"><use href="#i-frem"></use></svg></a>
+<a class="knap knap--primaer" href="#kilder" data-skjul="temaer#kvante.naeste" hidden>Det var det sidste tema. Se kilderne<svg class="ik ik--s" aria-hidden="true"><use href="#i-frem"></use></svg></a>
+</nav></div>
+</main>
+<footer class="sidefod">
+<div class="sidefod-maerke"><span class="logo-felt"><img class="ndi-logo" src="../assets/img/ndi-logo-moerk-baggrund.png" width="2048" height="754" alt="NewDeal Invest" decoding="async"></span></div>
+<div class="sidefod-tekst">
+<p>NewDeal Invest er et brand for NDIIR ApS, investeringsrådgiver for Fundmarket A/S. Markedsføringsmateriale. Ikke personlig investeringsrådgivning. Investering indebærer risiko for tab. Alle andele pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span>.</p>
+<p class="sidefod-kilde">Kilde til fondstal: Fundmarket A/S, der forvalter Investeringsforeningen PortfolioManager. NDIIR ApS yder investeringsrådgivning til foreningen. <span class="sidefod-dato">Opdateret <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span>.</span></p>
+</div>
+</footer>
+</div>
 
 </div>
 
@@ -767,6 +563,6 @@
 
 <script src="../assets/v5-temaer/kvante.js" defer></script>
 
-<script defer src="../assets/js/review-media.js?v=20261031-1"></script></body>
+<script defer src="../assets/js/review-media.js?v=20261031-2"></script><script defer src="../assets/js/journey-polish.js?v=20261031"></script></body>
 
 </html>

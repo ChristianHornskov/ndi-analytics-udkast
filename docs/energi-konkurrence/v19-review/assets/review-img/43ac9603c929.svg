@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 160" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Et login: to felter, hvor kodeordet er skjult som prikker, og et skjold, der godkender, at det er dig">
+<title>Et login: to felter, hvor kodeordet er skjult som prikker, og et skjold, der godkender, at det er dig</title>
+<rect width="240" height="160" rx="12" fill="#0b141c"/><g fill="none" stroke="#313a4a" stroke-width="1" stroke-linecap="round"><path d="M12 24H228" opacity=".7"/>
+<rect x="14" y="9" width="30" height="8" rx="4"/><path d="M52 13h16" opacity=".7"/>
+<path d="M222 140v10M210 150h6" stroke-width="1.5"/></g>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+
+<rect x="40" y="40" width="112" height="92" rx="8" stroke="#8e9cb4" stroke-width="2"/>
+<path d="M54 56h40" stroke="#aebbc7" stroke-width="1"/><rect x="54" y="62" width="84" height="16" rx="4" stroke="#8e9cb4" stroke-width="1.5"/>
+<path d="M54 88h34" stroke="#aebbc7" stroke-width="1"/><rect x="54" y="94" width="84" height="16" rx="4" stroke="#8e9cb4" stroke-width="1.5"/>
+<circle cx="63" cy="102" r="2.2" fill="#e6e8ed" stroke="none"/><circle cx="72" cy="102" r="2.2" fill="#e6e8ed" stroke="none"/><circle cx="81" cy="102" r="2.2" fill="#e6e8ed" stroke="none"/><circle cx="90" cy="102" r="2.2" fill="#e6e8ed" stroke="none"/><circle cx="99" cy="102" r="2.2" fill="#e6e8ed" stroke="none"/><circle cx="108" cy="102" r="2.2" fill="#e6e8ed" stroke="none"/>
+<path d="M186 54l22 8v16c0 13-9 23-22 27-13-4-22-14-22-27V62z" stroke="#e6e8ed" stroke-width="2" fill="#8e9cb4" fill-opacity=".12"/>
+<path class="ok" d="M176 80l7 7 13-14" stroke="#e6e8ed" stroke-width="2.5"/>
+</g>
+</svg>

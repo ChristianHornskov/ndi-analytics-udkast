@@ -190,6 +190,8 @@ def build():
     build_media(DEST)
     from chips_cleanup import clean_chips
     clean_chips(DEST)
+    from journey_polish import polish
+    polish(DEST)
     print('Built isolated preview:', DEST)
 
 if __name__ == '__main__': build()

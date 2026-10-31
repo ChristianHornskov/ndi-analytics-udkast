@@ -39,12 +39,9 @@
 
 <link rel="stylesheet" href="../assets/v5-temaer/fysisk-ai.css">
 
-<link rel="stylesheet" href="../assets/css/review.css?v=20261031logos"><link rel="stylesheet" href="../assets/css/review-media.css?v=20261031-1"></head>
+<link rel="stylesheet" href="../assets/css/review.css?v=20261031logos"><link rel="stylesheet" href="../assets/css/review-media.css?v=20261031-2"><link rel="stylesheet" href="../assets/css/journey-polish.css?v=20261031"></head>
 
 <body>
-
-
-
 <svg class="sprite" aria-hidden="true" focusable="false">
 
 <symbol id="i-pause" viewbox="0 0 24 24"><path d="M9 6v12M15 6v12"></path></symbol>
@@ -128,270 +125,134 @@
 <a class="spring" href="#indhold">Gå til indhold</a>
 
 <div class="app">
-
-  <header class="topbar-mobil">
-
-    <button class="ikonknap" id="menu-aaben" type="button" aria-controls="sidemenu" aria-expanded="false"><svg class="ik" aria-hidden="true"><use href="#i-menu"></use></svg><span class="sr">Åbn menuen</span></button>
-
-    <a class="maerke maerke--lille" href="../index.html" aria-label="NewDeal Invest, til fondsoverblikket">
-
-      <span class="logo-felt logo-felt--lille"><img class="ndi-logo" src="../assets/img/ndi-logo-moerk-baggrund.png" width="2048" height="754" alt="NewDeal Invest" decoding="async"></span>
-
-      <span class="maerke-tekst"><span class="maerke-navn">Robotter &amp; fysisk AI</span><span class="maerke-sub" id="aktuel-sektion">Tema</span></span>
-
-    </a>
-
-    <a class="knap knap--lille" href="https://fundmarket.dk/newdeal-invest-kl-n/" target="_blank" rel="noopener">Faktaark<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (KID) og prospekt for PMINDI (åbner i nyt vindue)</span></a>
-
-  </header>
-
-  <div class="slor" id="slor" hidden></div>
-
-  <aside class="sidemenu" id="sidemenu" aria-label="Hovedmenu">
-
-    <div class="sm-top">
-
-      <a class="maerke maerke--logo" href="../index.html" aria-label="NewDeal Invest, fondsoverblik">
-
-        <span class="logo-felt"><img class="ndi-logo" src="../assets/img/ndi-logo-moerk-baggrund.png" width="2048" height="754" alt="NewDeal Invest" decoding="async"></span><span class="maerke-sub">Fondsoverblik</span>
-
-      </a>
-
-      <button class="ikonknap sm-luk" id="menu-luk" type="button"><svg class="ik" aria-hidden="true"><use href="#i-luk"></use></svg><span class="sr">Luk menuen</span></button>
-
-    </div>
-
-    <nav class="review-section-nav" aria-label="Vælg indgang"><a href="../index.html">Porteføljen</a><a href="../tech.html">Tech</a><a href="../widget/index.html">Afkast</a></nav><div class="sm-rul">
-
-      <a class="sm-tilbage" href="https://www.newdealinvest.dk/"><svg class="ik" aria-hidden="true"><use href="#i-tilbage"></use></svg><span>Til NewDeal Invests forside</span></a>
-
-
-
-      <nav class="sm-gruppe" aria-labelledby="sm-h-fond">
-
-        <h2 class="sm-overskrift" id="sm-h-fond"><span>Fonden</span></h2>
-
-        <ul class="sm-liste">
-
-          <li><a class="sm-link" href="../fondens-udvikling.html"><span>Fondens udvikling</span></a>
-
-          </li>
-
-          <li><a class="sm-link" href="../index.html#temaer"><span>Fonden fordelt på temaer</span></a>
-
-          </li>
-
-          <li><a class="sm-link" href="../index.html#top10"><span>De <span data-tal="top10.antal" data-fmt="talord">…</span> største selskaber</span></a>
-
-          </li>
-
-          <li><a class="sm-link" href="../index.html#portefoeljen"><span>Porteføljen</span></a>
-
-            <ul class="sm-under sm-under--fond" aria-label="Porteføljen">
-
-              <li><a class="sm-link sm-link--under" href="../index.html#portefoeljen-portfolio" data-portefolje="portfolio"><span>Portefølje</span></a></li>
-
-              <li><a class="sm-link sm-link--under" href="../index.html#portefoeljen-highs" data-portefolje="highs"><span>52-ugers top</span></a></li>
-
-              <li><a class="sm-link sm-link--under" href="../index.html#portefoeljen-risk-summary" data-portefolje="risk-summary"><span>Risiko</span></a></li>
-
-              <li><a class="sm-link sm-link--under" href="../index.html#portefoeljen-method" data-portefolje="method"><span>Metode</span></a></li>
-
-            </ul>
-
-          </li>
-
-          <li><a class="sm-link" href="../index.html#vigtig-information"><span>Risiko og vigtig information</span></a>
-
-          </li>
-
-        </ul>
-
-      </nav>
-
-      <nav class="sm-gruppe" aria-labelledby="sm-h-temaer">
-
-        <h2 class="sm-overskrift" id="sm-h-temaer"><span>Temaer</span><span class="sm-overskrift-note">Andel af fonden</span></h2>
-
-        <ul class="sm-liste">
-
-        </ul>
-
-        <ul class="sm-liste sm-temaliste" id="sm-temaer" data-ordne="temaer">
-
-          <li data-id="chips"><a class="sm-link sm-link--tema" style="--tf:#8bb8bc" href="../temaer/chips.html"><svg class="ik" aria-hidden="true"><use href="#t-chips"></use></svg><span>Chips og halvledere</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="energi"><a class="sm-link sm-link--tema" style="--tf:#759ebc" href="../temaer/energi.html"><svg class="ik" aria-hidden="true"><use href="#t-energi"></use></svg><span>Energi og elnet</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="datacenter"><a class="sm-link sm-link--tema" style="--tf:#d5ba75" href="../temaer/datacenter.html"><svg class="ik" aria-hidden="true"><use href="#t-datacenter"></use></svg><span>Datacentre</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="platforme"><a class="sm-link sm-link--tema" style="--tf:#b78f70" href="../temaer/platforme.html"><svg class="ik" aria-hidden="true"><use href="#t-platforme"></use></svg><span>Platformsøkonomi</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="fysisk-ai" class="er-aktiv"><a class="sm-link sm-link--tema" style="--tf:#9ab595" href="../temaer/fysisk-ai.html" aria-current="page"><svg class="ik" aria-hidden="true"><use href="#t-fysisk-ai"></use></svg><span>Robotter &amp; fysisk AI</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="raastoffer"><a class="sm-link sm-link--tema" style="--tf:#bd9cbb" href="../temaer/raastoffer.html"><svg class="ik" aria-hidden="true"><use href="#t-raastoffer"></use></svg><span>Råstoffer</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="rumfart"><a class="sm-link sm-link--tema" style="--tf:#a18cc7" href="../temaer/rumfart.html"><svg class="ik" aria-hidden="true"><use href="#t-rumfart"></use></svg><span>Rumfart</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="fintech"><a class="sm-link sm-link--tema" style="--tf:#6ea4bb" href="../temaer/fintech.html"><svg class="ik" aria-hidden="true"><use href="#t-fintech"></use></svg><span>Fintech</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="krypto"><a class="sm-link sm-link--tema" style="--tf:#a8ba86" href="../temaer/krypto.html"><svg class="ik" aria-hidden="true"><use href="#t-krypto"></use></svg><span>Krypto</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="software"><a class="sm-link sm-link--tema" style="--tf:#c9a58b" href="../temaer/software.html"><svg class="ik" aria-hidden="true"><use href="#t-software"></use></svg><span>Software &amp; AI</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="sundhed"><a class="sm-link sm-link--tema" style="--tf:#a4a6cf" href="../temaer/sundhed.html"><svg class="ik" aria-hidden="true"><use href="#t-sundhed"></use></svg><span>Sundhed og biotek</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-          <li data-id="kvante"><a class="sm-link sm-link--tema" style="--tf:#cd99a5" href="../temaer/kvante.html"><svg class="ik" aria-hidden="true"><use href="#t-kvante"></use></svg><span>Kvantecomputere</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-
-        </ul>
-
-        <button class="sm-vis-flere" type="button" aria-expanded="false" aria-controls="sm-temaer">
-
-          <span class="sm-vis-tekst">Vis alle <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer</span><span class="sm-vis-faerre" hidden>Vis færre temaer</span><svg class="ik ik--s" aria-hidden="true"><use href="#i-ned"></use></svg>
-
-        </button>
-
-      </nav>
-
-      <nav class="sm-gruppe" aria-labelledby="sm-h-selskaber">
-
-        <h2 class="sm-overskrift" id="sm-h-selskaber"><span>Selskaber</span><span class="sm-overskrift-note">Andel af fonden</span></h2>
-
-        <ul class="sm-liste">
-
-        </ul>
-
-        <ul class="sm-liste" data-liste="top10.liste" data-skabelon="tpl-sm-top"></ul>
-
-        <a class="sm-alle" href="../alle-selskaber.html"><svg class="ik ik--s" aria-hidden="true"><use href="#i-selskab"></use></svg><span>Se alle selskaber i fonden</span><svg class="ik ik--s" aria-hidden="true"><use href="#i-frem"></use></svg></a>
-
-        <template id="tpl-sm-top"><li><a class="sm-selskab" data-link-selskab href="#"><span class="sm-logo" aria-hidden="true" data-f="forbogstav"></span><span class="sm-navn" data-f="navn"></span><span class="sm-tal" data-f="andel" data-fmt="pct"></span></a></li></template>
-
-        <ul class="sm-liste" hidden>
-
-        </ul>
-
-      </nav>
-
-    </div>
-
-    <div class="sm-bund">
-
-      <button class="temaskift" id="temaskift" type="button" aria-label="Skift til lyst tema"><svg class="ik ik--sol" aria-hidden="true" viewbox="0 0 24 24"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"></path></svg><svg class="ik ik--maane" aria-hidden="true" viewbox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"></path></svg><span class="temaskift-tekst">Lyst tema</span></button>
-
-      <div class="sm-datakort"><svg class="ik" aria-hidden="true"><use href="#i-kalender"></use></svg><div><p class="sm-data-t">Alle andele pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…</span></p><p class="sm-data-s">Tallene er fra PMINDI. Markedsføringsmateriale. Ikke personlig investeringsrådgivning.</p></div></div>
-
-    </div>
-
-  </aside>
-
-  <div class="hoved">
-
-    <main id="indhold" tabindex="-1">
+<header class="topbar-mobil">
+<button class="ikonknap" id="menu-aaben" type="button" aria-controls="sidemenu" aria-expanded="false"><svg class="ik" aria-hidden="true"><use href="#i-menu"></use></svg><span class="sr">Åbn menuen</span></button>
+<a class="maerke maerke--lille" href="../portfolio/index.html" aria-label="NewDeal Invest, til fondsoverblikket">
+<span class="logo-felt logo-felt--lille"><img class="ndi-logo" src="../assets/img/ndi-logo-moerk-baggrund.png" width="2048" height="754" alt="NewDeal Invest" decoding="async"></span>
+<span class="maerke-tekst"><span class="maerke-navn">Robotter &amp; fysisk AI</span><span class="maerke-sub" id="aktuel-sektion">Tema</span></span>
+</a>
+<a class="knap knap--lille" href="https://fundmarket.dk/newdeal-invest-kl-n/" target="_blank" rel="noopener">Faktaark<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (KID) og prospekt for PMINDI (åbner i nyt vindue)</span></a>
+</header>
+<div class="slor" id="slor" hidden></div>
+<aside class="sidemenu" id="sidemenu" aria-label="Hovedmenu">
+<div class="sm-top">
+<a class="maerke maerke--logo" href="../portfolio/index.html" aria-label="NewDeal Invest, fondsoverblik">
+<span class="logo-felt"><img class="ndi-logo" src="../assets/img/ndi-logo-moerk-baggrund.png" width="2048" height="754" alt="NewDeal Invest" decoding="async"></span><span class="maerke-sub">Fondsoverblik</span>
+</a>
+<button class="ikonknap sm-luk" id="menu-luk" type="button"><svg class="ik" aria-hidden="true"><use href="#i-luk"></use></svg><span class="sr">Luk menuen</span></button>
+</div>
+<nav class="review-section-nav" aria-label="Vælg indgang"><a href="../portfolio/index.html">Porteføljen</a><a href="../tech.html">Tech</a><a href="../widget/index.html">Afkast</a></nav><div class="sm-rul">
+<a class="sm-tilbage" href="https://www.newdealinvest.dk/"><svg class="ik" aria-hidden="true"><use href="#i-tilbage"></use></svg><span>Til NewDeal Invests forside</span></a>
+<nav class="sm-gruppe" aria-labelledby="sm-h-fond">
+<h2 class="sm-overskrift" id="sm-h-fond"><span>Fonden</span></h2>
+<ul class="sm-liste">
+<li><a class="sm-link" href="../fondens-udvikling.html"><span>Fondens udvikling</span></a>
+</li>
+<li><a class="sm-link" href="../tech.html#temaer"><span>Fonden fordelt på temaer</span></a>
+</li>
+<li><a class="sm-link" href="../portfolio/index.html#portfolio"><span>De <span data-tal="top10.antal" data-fmt="talord">…</span> største selskaber</span></a>
+</li>
+<li><a class="sm-link" href="../portfolio/index.html#portfolio"><span>Porteføljen</span></a>
+<ul class="sm-under sm-under--fond" aria-label="Porteføljen">
+<li><a class="sm-link sm-link--under" href="../portfolio/index.html#portfolio" data-portefolje="portfolio"><span>Portefølje</span></a></li>
+<li><a class="sm-link sm-link--under" href="../portfolio/index.html#highs" data-portefolje="highs"><span>52-ugers top</span></a></li>
+<li><a class="sm-link sm-link--under" href="../portfolio/index.html#preview-risk-summary" data-portefolje="risk-summary"><span>Risiko</span></a></li>
+<li><a class="sm-link sm-link--under" href="../portfolio/index.html#method" data-portefolje="method"><span>Metode</span></a></li>
+</ul>
+</li>
+<li><a class="sm-link" href="../widget/index.html#global-disclaimer"><span>Risiko og vigtig information</span></a>
+</li>
+</ul>
+</nav>
+<nav class="sm-gruppe" aria-labelledby="sm-h-temaer">
+<h2 class="sm-overskrift" id="sm-h-temaer"><span>Temaer</span><span class="sm-overskrift-note">Andel af fonden</span></h2>
+<ul class="sm-liste">
+</ul>
+<ul class="sm-liste sm-temaliste" id="sm-temaer" data-ordne="temaer">
+<li data-id="chips"><a class="sm-link sm-link--tema" style="--tf:#8bb8bc" href="../temaer/chips.html"><svg class="ik" aria-hidden="true"><use href="#t-chips"></use></svg><span>Chips og halvledere</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="energi"><a class="sm-link sm-link--tema" style="--tf:#759ebc" href="../temaer/energi.html"><svg class="ik" aria-hidden="true"><use href="#t-energi"></use></svg><span>Energi og elnet</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="datacenter"><a class="sm-link sm-link--tema" style="--tf:#d5ba75" href="../temaer/datacenter.html"><svg class="ik" aria-hidden="true"><use href="#t-datacenter"></use></svg><span>Datacentre</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="platforme"><a class="sm-link sm-link--tema" style="--tf:#b78f70" href="../temaer/platforme.html"><svg class="ik" aria-hidden="true"><use href="#t-platforme"></use></svg><span>Platformsøkonomi</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="fysisk-ai" class="er-aktiv"><a class="sm-link sm-link--tema" style="--tf:#9ab595" href="../temaer/fysisk-ai.html" aria-current="page"><svg class="ik" aria-hidden="true"><use href="#t-fysisk-ai"></use></svg><span>Robotter &amp; fysisk AI</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="raastoffer"><a class="sm-link sm-link--tema" style="--tf:#bd9cbb" href="../temaer/raastoffer.html"><svg class="ik" aria-hidden="true"><use href="#t-raastoffer"></use></svg><span>Råstoffer</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="rumfart"><a class="sm-link sm-link--tema" style="--tf:#a18cc7" href="../temaer/rumfart.html"><svg class="ik" aria-hidden="true"><use href="#t-rumfart"></use></svg><span>Rumfart</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="fintech"><a class="sm-link sm-link--tema" style="--tf:#6ea4bb" href="../temaer/fintech.html"><svg class="ik" aria-hidden="true"><use href="#t-fintech"></use></svg><span>Fintech</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="krypto"><a class="sm-link sm-link--tema" style="--tf:#a8ba86" href="../temaer/krypto.html"><svg class="ik" aria-hidden="true"><use href="#t-krypto"></use></svg><span>Krypto</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="software"><a class="sm-link sm-link--tema" style="--tf:#c9a58b" href="../temaer/software.html"><svg class="ik" aria-hidden="true"><use href="#t-software"></use></svg><span>Software &amp; AI</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="sundhed"><a class="sm-link sm-link--tema" style="--tf:#a4a6cf" href="../temaer/sundhed.html"><svg class="ik" aria-hidden="true"><use href="#t-sundhed"></use></svg><span>Sundhed og biotek</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+<li data-id="kvante"><a class="sm-link sm-link--tema" style="--tf:#cd99a5" href="../temaer/kvante.html"><svg class="ik" aria-hidden="true"><use href="#t-kvante"></use></svg><span>Kvantecomputere</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+</ul>
+<button class="sm-vis-flere" type="button" aria-expanded="false" aria-controls="sm-temaer">
+<span class="sm-vis-tekst">Vis alle <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer</span><span class="sm-vis-faerre" hidden>Vis færre temaer</span><svg class="ik ik--s" aria-hidden="true"><use href="#i-ned"></use></svg>
+</button>
+</nav>
+<nav class="sm-gruppe" aria-labelledby="sm-h-selskaber">
+<h2 class="sm-overskrift" id="sm-h-selskaber"><span>Selskaber</span><span class="sm-overskrift-note">Andel af fonden</span></h2>
+<ul class="sm-liste">
+</ul>
+<ul class="sm-liste" data-liste="top10.liste" data-skabelon="tpl-sm-top"></ul>
+<a class="sm-alle" href="../alle-selskaber.html"><svg class="ik ik--s" aria-hidden="true"><use href="#i-selskab"></use></svg><span>Se alle selskaber i fonden</span><svg class="ik ik--s" aria-hidden="true"><use href="#i-frem"></use></svg></a>
+<template id="tpl-sm-top"><li><a class="sm-selskab" data-link-selskab href="#"><span class="sm-logo" aria-hidden="true" data-f="forbogstav"></span><span class="sm-navn" data-f="navn"></span><span class="sm-tal" data-f="andel" data-fmt="pct"></span></a></li></template>
+<ul class="sm-liste" hidden>
+</ul>
+</nav>
+</div>
+<div class="sm-bund">
+<button class="temaskift" id="temaskift" type="button" aria-label="Skift til lyst tema"><svg class="ik ik--sol" aria-hidden="true" viewbox="0 0 24 24"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"></path></svg><svg class="ik ik--maane" aria-hidden="true" viewbox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"></path></svg><span class="temaskift-tekst">Lyst tema</span></button>
+<div class="sm-datakort"><svg class="ik" aria-hidden="true"><use href="#i-kalender"></use></svg><div><p class="sm-data-t">Alle andele pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…</span></p><p class="sm-data-s">Tallene er fra PMINDI. Markedsføringsmateriale. Ikke personlig investeringsrådgivning.</p></div></div>
+</div>
+</aside>
+<div class="hoved">
+<main id="indhold" tabindex="-1"><nav class="up-trail" aria-label="Du er her"><a href="../tech.html">Tech</a><span aria-hidden="true">/</span><span aria-current="page">Robotter &amp; fysisk AI</span></nav><nav class="up-shortcuts" aria-label="På denne side"><a href="#cq-fa">Forstå teknologien</a><a href="#selskaberne">Selskaberne</a><a href="#mere-fra-ndi">Videoer & opslag</a></nav>
 
 <template id="tpl-tl"><li><a class="tl-raekke" data-link-selskab href="#"><span class="sm-logo" aria-hidden="true" data-f="forbogstav"></span><span class="tl-navn" data-f="navn"></span><span class="pos-bar" aria-hidden="true"><span data-fbar></span></span><span class="tl-tal" data-f="andel" data-fmt="pct"></span></a></li></template><template id="tpl-mini"><span data-fbar></span></template>
-
-      <section class="sektion sektion--overblik" id="overblik" aria-labelledby="h-side">
-
-        <div class="v18t">
-
-        <div class="v18t-hero v18t-hero--v5 v18t-hero--motiv-venstre">
-
-          <div class="v18t-foto v18t-foto--v5"><figure class="tema-foto v5-heromotiv"><picture><source media="(max-width:899px)" srcset="../assets/img/v5-temaer/energi-konkurrence/temaer/fysisk-ai/fra-billedstil/billeder/fysisk-ai-hero-synsfelt-mobil.webp"></source><img alt="Tegning: en maskine ser omgivelserne som prikker, og synsfeltet foran lyser op." decoding="async" height="720" src="../assets/img/v5-temaer/energi-konkurrence/temaer/fysisk-ai/fra-billedstil/billeder/fysisk-ai-hero-synsfelt-bred.webp" width="1440"></picture><figcaption class="foto-kredit">Illustration: NewDeal Invest.</figcaption></figure></div>
-
-          <div class="v18t-hero-tekst">
-
-            <p class="kicker">Et af de <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer i NewDeal Invest</p>
-
-            <h1 id="h-side">Robotter &amp; fysisk AI</h1>
-
-            <p class="v18t-under">Leverer selskabet en sans, styringen eller hele maskinen?</p>
-
-            <p>Et system, der kan beskrive et rum, er ikke nødvendigvis en maskine, der kan bevæge sig i det. Udforsk sensorer, styring og bevægelse, og se forskellen på at levere en del og at bygge den færdige maskine.</p>
-
-            
-
-            <div class="v18t-knapper"><a class="knap knap--primaer v5-knap" href="#selskaberne">Se selskaberne <span aria-hidden="true">↓</span></a><a class="knap knap--rolig v5-knap" href="#skrevet">Læs vores perspektiv</a></div>
-
-          </div>
-
-          
-
-        </div>
-
-        <div class="v18t-fotobaand"><figure class="tema-foto" style="max-width:600px"><img src="../fotos/fysisk-ai.webp" width="600" height="400" alt="Industrirobot, der fører et emne mod en polerskive." loading="lazy" decoding="async" style="max-width:600px"><figcaption class="foto-kredit">Foto: Henrysz, CC BY 4.0, via Wikimedia Commons</figcaption></figure></div>
-
-        <section class="v18-stortal" aria-labelledby="h-andel">
-
-            <div class="v18-stortal-tal">
-
-              <h2 class="sr" id="h-andel">Temaets andel af fonden</h2>
-
-              <p class="v18-stortal-v"><span><span data-tal="temaer#fysisk-ai.andel" data-fmt="tal">…  </span></span><span class="v18-stortal-enhed">%</span></p>
-
-              <p class="v18-stortal-tekst">af PMINDI er placeret i temaet Robotter &amp; fysisk AI.</p>
-
-              <p class="kildelinje">Andele i PMINDI, den udgave af fonden, der udbetaler udbytte, pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span> (fondens data).</p>
-
-            </div>
-
-            <div class="v18-stortal-figur v18-ramme">
-
-              <div class="mini-soejler" aria-hidden="true" data-liste="temaer" data-skabelon="tpl-mini" data-aktiv-id="fysisk-ai"></div>
-
-              <p class="lille mini-forklaring">De <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer efter størrelse. Robotter er <span data-tal="temaer#fysisk-ai.plads" data-fmt="plads">nr. …</span>.</p>
-
-            </div>
-
-            <details class="fold-ud v18-flere-tal">
-
-              <summary>Flere tal om temaet</summary>
-
-              <ul class="fakta-liste">
-
-                <li><span>Plads blandt <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer</span><strong><span data-tal="temaer#fysisk-ai.plads" data-fmt="Plads">Nr. …</span></strong></li>
-
-                <li><span>Selskaber i temaet</span><strong><span data-tal="temaer#fysisk-ai.antal" data-fmt="heltal">… </span></strong></li>
-
-                <li class="fakta-stak"><span>Største selskab</span><strong><span data-navn="temaer#fysisk-ai.stoerste">…</span> · <span data-tal="temaer#fysisk-ai.stoerste.andel" data-fmt="pct">…   %</span></strong></li>
-
-              </ul>
-
-            </details>
-
-          </section>
-
-        
-
-      <section class="sektion v18-perspektiv" id="skrevet" aria-labelledby="h-skrevet">
-
-        <div class="v18-perspektiv-boks">
-
-          <p class="kicker">Det har vi skrevet</p>
-
-          <h2 class="v18-perspektiv-titel" id="h-skrevet">NewDeal Invests perspektiv</h2>
-
-          <p class="v18-perspektiv-intro">Ordret uddrag af NewDeal Invests egne ugebreve og indlæg om temaet, med dato og link til hele teksten. Det er ikke en anbefaling.</p>
-
-          <blockquote class="skrevet-citat" lang="en"><p>»So despite Cybercab now entering service, Tesla’s autonomy story is still driven much more by potential than by proven scale. But Tesla’s bet is also fundamentally different from Waymo’s.«</p></blockquote><p class="skrevet-oversat"><span class="skrevet-oversat-etiket">På dansk (vores oversættelse):</span> »Så selv om Cybercab nu er sat i drift, er Teslas historie om selvkørsel stadig drevet langt mere af potentiale end af bevist skala. Men Teslas satsning er også grundlæggende anderledes end Waymos.«</p>
-
-            <p class="skrevet-meta lille"><span class="skrevet-titel">Tesla’s Cybercab Is Here. The Potential Is Clearer Than the Details</span> · <time datetime="2026-09-04">04.09.2026</time> · Substack, af Jesper Bæk</p>
-
-            <p class="skrevet-selsk lille">Nævner: Tesla, Waymo</p>
-
-            <a class="tekstlink tekstlink--tryk skrevet-link" href="https://newdealinvest.substack.com/p/teslas-cybercab-is-here-the-potential" target="_blank" rel="noopener">Læs hele teksten på Substack<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (åbner i nyt vindue)</span></a>
-
-          
-
-        </div>
-
-      </section>
-
-        </div>
-
-      </section>
-
-      <div class="v5f v5f-fysisk-ai" data-v5-fortaelling="fysisk-ai"><section aria-label="Indgang til Robotter &amp; fysisk AI" class="ndi-reading theme-question"><h2>Det undersøger vi på siden</h2><div class="ndi-jumps"><a href="#cq-fa">Udforsk maskinen del for del ↓</a><a href="../alle-selskaber.html">Find selskaberne →</a></div></section><div aria-hidden="true" class="scan"></div><section aria-labelledby="vaegt-h" class="s vaegt" id="vaegt"><div class="wrap">
+<section class="sektion sektion--overblik" id="overblik" aria-labelledby="h-side">
+<div class="v18t">
+<div class="v18t-hero v18t-hero--v5 v18t-hero--motiv-venstre">
+<div class="v18t-foto v18t-foto--v5"><figure class="tema-foto v5-heromotiv"><picture><source media="(max-width:899px)" srcset="../assets/review-img/ef094141e3b5.webp"></source><img alt="Tegning: en maskine ser omgivelserne som prikker, og synsfeltet foran lyser op." decoding="async" height="720" src="../assets/review-img/4231dee237d9.webp" width="1440"></picture><figcaption class="foto-kredit">Illustration: NewDeal Invest.</figcaption></figure></div>
+<div class="v18t-hero-tekst">
+<p class="kicker">Et af de <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer i NewDeal Invest</p>
+<h1 id="h-side">Robotter &amp; fysisk AI</h1>
+<p class="v18t-under">Leverer selskabet en sans, styringen eller hele maskinen?</p>
+<p>Et system, der kan beskrive et rum, er ikke nødvendigvis en maskine, der kan bevæge sig i det. Udforsk sensorer, styring og bevægelse, og se forskellen på at levere en del og at bygge den færdige maskine.</p>
+<div class="v18t-knapper"><a class="knap knap--primaer v5-knap" href="#selskaberne">Se selskaberne <span aria-hidden="true">↓</span></a><a class="knap knap--rolig v5-knap" href="#skrevet">Læs vores perspektiv</a></div>
+</div>
+</div>
+<div class="v18t-fotobaand"><figure class="tema-foto" style="max-width:600px"><img src="../fotos/fysisk-ai.webp" width="600" height="400" alt="Industrirobot, der fører et emne mod en polerskive." loading="lazy" decoding="async" style="max-width:600px"><figcaption class="foto-kredit">Foto: Henrysz, CC BY 4.0, via Wikimedia Commons</figcaption></figure></div>
+<section class="v18-stortal" aria-labelledby="h-andel">
+<div class="v18-stortal-tal">
+<h2 class="sr" id="h-andel">Temaets andel af fonden</h2>
+<p class="v18-stortal-v"><span><span data-tal="temaer#fysisk-ai.andel" data-fmt="tal">…  </span></span><span class="v18-stortal-enhed">%</span></p>
+<p class="v18-stortal-tekst">af PMINDI er placeret i temaet Robotter &amp; fysisk AI.</p>
+<p class="kildelinje">Andele i PMINDI, den udgave af fonden, der udbetaler udbytte, pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span> (fondens data).</p>
+</div>
+<div class="v18-stortal-figur v18-ramme">
+<div class="mini-soejler" aria-hidden="true" data-liste="temaer" data-skabelon="tpl-mini" data-aktiv-id="fysisk-ai"></div>
+<p class="lille mini-forklaring">De <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer efter størrelse. Robotter er <span data-tal="temaer#fysisk-ai.plads" data-fmt="plads">nr. …</span>.</p>
+</div>
+<details class="fold-ud v18-flere-tal">
+<summary>Flere tal om temaet</summary>
+<ul class="fakta-liste">
+<li><span>Plads blandt <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer</span><strong><span data-tal="temaer#fysisk-ai.plads" data-fmt="Plads">Nr. …</span></strong></li>
+<li><span>Selskaber i temaet</span><strong><span data-tal="temaer#fysisk-ai.antal" data-fmt="heltal">… </span></strong></li>
+<li class="fakta-stak"><span>Største selskab</span><strong><span data-navn="temaer#fysisk-ai.stoerste">…</span> · <span data-tal="temaer#fysisk-ai.stoerste.andel" data-fmt="pct">…   %</span></strong></li>
+</ul>
+</details>
+</section>
+<section class="sektion v18-perspektiv" id="skrevet" aria-labelledby="h-skrevet">
+<div class="v18-perspektiv-boks">
+<p class="kicker">Det har vi skrevet</p>
+<h2 class="v18-perspektiv-titel" id="h-skrevet">NewDeal Invests perspektiv</h2>
+<p class="v18-perspektiv-intro">Ordret uddrag af NewDeal Invests egne ugebreve og indlæg om temaet, med dato og link til hele teksten. Det er ikke en anbefaling.</p>
+<blockquote class="skrevet-citat" lang="en"><p>»So despite Cybercab now entering service, Tesla’s autonomy story is still driven much more by potential than by proven scale. But Tesla’s bet is also fundamentally different from Waymo’s.«</p></blockquote><p class="skrevet-oversat"><span class="skrevet-oversat-etiket">På dansk (vores oversættelse):</span> »Så selv om Cybercab nu er sat i drift, er Teslas historie om selvkørsel stadig drevet langt mere af potentiale end af bevist skala. Men Teslas satsning er også grundlæggende anderledes end Waymos.«</p>
+<p class="skrevet-meta lille"><span class="skrevet-titel">Tesla’s Cybercab Is Here. The Potential Is Clearer Than the Details</span> · <time datetime="2026-09-04">04.09.2026</time> · Substack, af Jesper Bæk</p>
+<p class="skrevet-selsk lille">Nævner: Tesla, Waymo</p>
+<a class="tekstlink tekstlink--tryk skrevet-link" href="https://newdealinvest.substack.com/p/teslas-cybercab-is-here-the-potential" target="_blank" rel="noopener">Læs hele teksten på Substack<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (åbner i nyt vindue)</span></a>
+</div>
+</section>
+</div>
+</section>
+<div class="v5f v5f-fysisk-ai" data-v5-fortaelling="fysisk-ai"><div aria-hidden="true" class="scan"></div><section aria-labelledby="vaegt-h" class="s vaegt" id="vaegt"><div class="wrap">
 
 <p class="eyebrow"><span aria-hidden="true" class="rg"></span>Hvad der vejer mest</p>
 
@@ -416,17 +277,11 @@
 </div>
 
 </div></section><section aria-labelledby="cq-fa-h" class="cq-fa" id="cq-fa">
-
-
-
 <div class="cq-fa__in">
 
 <p class="cq-fa__kick"><span aria-hidden="true" class="cq-fa__rg"></span>Øjne, hjerne og hjul</p>
 
 <h2 class="cq-fa__h2" id="cq-fa-h">Maskinen, del for del</h2>
-
-
-
 <p class="cq-fa__lead">Tegningen viser én maskine med seks dele. Jo større en del er, jo mere fylder den i fonden. Tryk på en del for at se selskaberne.</p>
 
 <div class="cq-fa__stage"><figure class="cq-fa__fig"><svg aria-hidden="true" class="cq-fa__svg" focusable="false" viewbox="0 0 600 420">
@@ -452,9 +307,6 @@
 <g class="cq-fa__pt" data-part="hjul" style="--i:0"><circle class="cq-fa__sh" cx="215" cy="344.0" r="60.0"></circle><circle class="cq-fa__ln" cx="215" cy="344.0" r="27.0"></circle><circle class="cq-fa__hub" cx="215" cy="344.0" r="6"></circle><circle class="cq-fa__sh" cx="395" cy="344.0" r="60.0"></circle><circle class="cq-fa__ln" cx="395" cy="344.0" r="27.0"></circle><circle class="cq-fa__hub" cx="395" cy="344.0" r="6"></circle></g><text class="cq-fa__lb" data-part="hjul" text-anchor="middle" x="305" y="390">Hjul</text>
 
 </svg>
-
-
-
 <figcaption class="cq-fa__key"><span><i aria-hidden="true" class="cq-fa__k1"></i>Delens areal svarer til andelen af fonden</span><span><i aria-hidden="true" class="cq-fa__k2"></i>Den stiplede krop er kun tegning og viser ingen andel</span></figcaption></figure>
 
 <ul aria-label="Maskinens seks dele" class="cq-fa__parts"><li><button aria-controls="cq-fa-p-hjul" aria-expanded="false" class="cq-fa__dx cq-fa__part" data-grp="fa" data-part="hjul" type="button">
@@ -495,7 +347,7 @@
 
 <p class="cq-fa__ptx">Små computere og enheder i hjem og industri, der måler, styrer og sender data videre.  Som nerverne i en krop sender de signaler videre.</p>
 
-<ul class="cq-fa__cos" data-top="5" id="cq-fa-l-nerver"><li><button aria-pressed="false" class="cq-fa__co" data-a="Chips og halvledere" data-d="Små computere på ét printkort, computermoduler og chips til industri, til producenter, der bygger dem ind i egne produkter, og til hobby og undervisning." data-g="Nerver · Forbundne enheder" type="button"><span class="cq-fa__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/fysisk-ai/fra-critiquito/logoer/raspberry-pi-holdings.webp" width="28"></span><span class="cq-fa__nm">Raspberry Pi Holdings</span></button></li><li><button aria-pressed="false" class="cq-fa__co" data-d="Smarte kontakter og målere til hjem og bygninger, som kan styres over internettet." data-g="Nerver · Forbundne enheder" type="button"><span class="cq-fa__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/fysisk-ai/fra-critiquito/logoer/shelly-group.webp" width="28"></span><span class="cq-fa__nm">Shelly Group</span></button></li><li><button aria-pressed="false" class="cq-fa__co" data-d="AI, der regner direkte i apparatet, og små enheder til industrien, der sender data over internettet, bl.a. til ubemandede systemer, der opfylder amerikanske forsvarskrav." data-g="Nerver · Forbundne enheder" type="button"><span class="cq-fa__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/fysisk-ai/fra-critiquito/logoer/lantronix.webp" width="28"></span><span class="cq-fa__nm">Lantronix</span></button></li></ul><div aria-live="polite" class="cq-fa__info"><p class="cq-fa__hint">Tryk på et selskab for at se, hvad det laver.</p></div></div><div aria-label="Øjne" class="cq-fa__panel cq-fa__scope" hidden="" id="cq-fa-p-oejne" role="region">
+<ul class="cq-fa__cos" data-top="5" id="cq-fa-l-nerver"><li><button aria-pressed="false" class="cq-fa__co" data-a="Chips og halvledere" data-d="Små computere på ét printkort, computermoduler og chips til industri, til producenter, der bygger dem ind i egne produkter, og til hobby og undervisning." data-g="Nerver · Forbundne enheder" type="button"><span class="cq-fa__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/review-img/be9d3b80395f.webp" width="28"></span><span class="cq-fa__nm">Raspberry Pi Holdings</span></button></li><li><button aria-pressed="false" class="cq-fa__co" data-d="Smarte kontakter og målere til hjem og bygninger, som kan styres over internettet." data-g="Nerver · Forbundne enheder" type="button"><span class="cq-fa__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/fysisk-ai/fra-critiquito/logoer/shelly-group.webp" width="28"></span><span class="cq-fa__nm">Shelly Group</span></button></li><li><button aria-pressed="false" class="cq-fa__co" data-d="AI, der regner direkte i apparatet, og små enheder til industrien, der sender data over internettet, bl.a. til ubemandede systemer, der opfylder amerikanske forsvarskrav." data-g="Nerver · Forbundne enheder" type="button"><span class="cq-fa__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/fysisk-ai/fra-critiquito/logoer/lantronix.webp" width="28"></span><span class="cq-fa__nm">Lantronix</span></button></li></ul><div aria-live="polite" class="cq-fa__info"><p class="cq-fa__hint">Tryk på et selskab for at se, hvad det laver.</p></div></div><div aria-label="Øjne" class="cq-fa__panel cq-fa__scope" hidden="" id="cq-fa-p-oejne" role="region">
 
 <div class="cq-fa__ph"><svg aria-hidden="true" class="cq-fa__phi" focusable="false" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><circle cx="12" cy="7" r="4.5"></circle><circle cx="12" cy="17" r="4.5"></circle></g></svg><div><h3 class="cq-fa__h3">Øjne</h3></div>
 
@@ -519,12 +371,9 @@
 
 <p class="cq-fa__ptx">Robotter, der flytter kasser på lagre eller kører varer ud på fortovet.  Det gør Teradyne, som ejer Universal Robots i Odense. Teradyne tælles under Chips og halvledere, se Også med en fod.</p>
 
-<ul class="cq-fa__cos" data-top="5" id="cq-fa-l-arme"><li><button aria-pressed="false" class="cq-fa__co" data-d="Robotstyret automation af lagre og distributionscentre." data-g="Arme og ben · Robotter" type="button"><span class="cq-fa__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/fysisk-ai/fra-critiquito/logoer/symbotic.webp" width="28"></span><span class="cq-fa__nm">Symbotic</span></button></li><li><button aria-pressed="false" class="cq-fa__co" data-d="Selvkørende robotter, der leverer mad og varer på fortovet." data-g="Arme og ben · Robotter" type="button"><span class="cq-fa__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/fysisk-ai/fra-critiquito/logoer/serve-robotics.webp" width="28"></span><span class="cq-fa__nm">Serve Robotics</span></button></li><li><button aria-pressed="false" class="cq-fa__co" data-d="Skalselskab (SPAC) uden egen drift. Har annonceret en sammenlægning med Agility Robotics, der laver humanoide robotter. Sammenlægningen er ikke gennemført." data-g="Arme og ben · Robotter" type="button"><span class="cq-fa__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/fysisk-ai/fra-critiquito/logoer/churchill-capital-corp-xi.webp" width="28"></span><span class="cq-fa__nm">Churchill Capital Corp XI</span></button></li></ul><div aria-live="polite" class="cq-fa__info"><p class="cq-fa__hint">Tryk på et selskab for at se, hvad det laver.</p></div></div>
+<ul class="cq-fa__cos" data-top="5" id="cq-fa-l-arme"><li><button aria-pressed="false" class="cq-fa__co" data-d="Robotstyret automation af lagre og distributionscentre." data-g="Arme og ben · Robotter" type="button"><span class="cq-fa__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/fysisk-ai/fra-critiquito/logoer/symbotic.webp" width="28"></span><span class="cq-fa__nm">Symbotic</span></button></li><li><button aria-pressed="false" class="cq-fa__co" data-d="Selvkørende robotter, der leverer mad og varer på fortovet." data-g="Arme og ben · Robotter" type="button"><span class="cq-fa__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/fysisk-ai/fra-critiquito/logoer/serve-robotics.webp" width="28"></span><span class="cq-fa__nm">Serve Robotics</span></button></li><li><button aria-pressed="false" class="cq-fa__co" data-d="Skalselskab (SPAC) uden egen drift. Har annonceret en sammenlægning med Agility Robotics, der laver humanoide robotter. Sammenlægningen er ikke gennemført." data-g="Arme og ben · Robotter" type="button"><span class="cq-fa__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/review-img/bb8c7c4b5da8.webp" width="28"></span><span class="cq-fa__nm">Churchill Capital Corp XI</span></button></li></ul><div aria-live="polite" class="cq-fa__info"><p class="cq-fa__hint">Tryk på et selskab for at se, hvad det laver.</p></div></div>
 
 </div>
-
-
-
 </section><section aria-labelledby="naermere-h" class="s" id="naermere"><div class="wrap">
 
 <p class="eyebrow"><span aria-hidden="true" class="rg"></span>Delene, set nærmere</p>
@@ -539,7 +388,7 @@
 
 <p class="smal">En lidar måler afstand med laserlys og tegner omgivelserne som prikker. TED-Ed forklarer, hvordan en selvkørende bil ser. Videoerne er ikke fondens holdning.</p>
 
-<figure class="vid"><div class="vid-ramme" data-title="Video: How do self-driving cars “see”? Sajan Saini (TED-Ed)" data-yt="PRg5RNU_JLk"><button aria-label="Videoen hentes fra YouTube." class="vid-play" type="button"><picture><source media="(max-width:599px)" srcset="../assets/img/v5-temaer/energi-konkurrence/temaer/fysisk-ai/fra-billedstil/billeder/fysisk-ai-plakat-PRg5RNU_JLk-mobil.webp"></source><img alt="" height="720" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/fysisk-ai/fra-billedstil/billeder/fysisk-ai-plakat-PRg5RNU_JLk-bred.webp" width="1280"></picture><span aria-hidden="true" class="vid-kilde">TED-Ed</span><span aria-hidden="true" class="vid-ikon"></span><span aria-hidden="true" class="vid-tid">5:24</span></button></div><p class="media-reading"><strong>Se efter:</strong> Se efter forskellen på en demonstration og en maskine, der løser opgaven i drift.</p><figcaption><b>TED-Ed: How do self-driving cars “see”?</b>TED-Ed, 2019, på engelsk. Den nævner kort chips til lidar.</figcaption></figure>
+<figure class="vid"><div class="vid-ramme" data-title="Video: How do self-driving cars “see”? Sajan Saini (TED-Ed)" data-yt="PRg5RNU_JLk"><button aria-label="Videoen hentes fra YouTube." class="vid-play" type="button"><picture><source media="(max-width:599px)" srcset="../assets/review-img/61fc35de43fc.webp"></source><img alt="" height="720" loading="lazy" src="../assets/review-img/c0ef650d1cb0.webp" width="1280"></picture><span aria-hidden="true" class="vid-kilde">TED-Ed</span><span aria-hidden="true" class="vid-ikon"></span><span aria-hidden="true" class="vid-tid">5:24</span></button></div><p class="media-reading"><strong>Se efter:</strong> Se efter forskellen på en demonstration og en maskine, der løser opgaven i drift.</p><figcaption><b>TED-Ed: How do self-driving cars “see”?</b>TED-Ed, 2019, på engelsk. Den nævner kort chips til lidar.</figcaption></figure>
 
 </div>
 
@@ -547,9 +396,9 @@
 
 <ul class="sm-l" role="list">
 
-<li class="sm"><div class="vid"><div class="vid-ramme" data-title="Video: Exclusive: Ride-Along Inside Aurora's Self-Driving Semitruck (CNBC)" data-yt="N6--id0Up7c"><button aria-label="Videoen hentes fra YouTube." class="vid-play" type="button"><picture><source media="(max-width:599px)" srcset="../assets/img/v5-temaer/energi-konkurrence/temaer/fysisk-ai/fra-billedstil/billeder/fysisk-ai-plakat-N6--id0Up7c-mobil.webp"></source><img alt="" height="720" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/fysisk-ai/fra-billedstil/billeder/fysisk-ai-plakat-N6--id0Up7c-bred.webp" width="1280"></picture><span aria-hidden="true" class="vid-kilde">CNBC</span><span aria-hidden="true" class="vid-ikon"></span><span aria-hidden="true" class="vid-tid">3:35</span></button></div><p class="media-reading"><strong>Se efter:</strong> Se efter forskellen på en demonstration og en maskine, der løser opgaven i drift.</p></div><p class="sm-t"><span class="del-k"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 21.25V14"></path><path d="M12 14L6.25 6.5M12 14l5.75-7.5" stroke-width="1"></path><path d="M17.75 6.5l-.25 2.75M17.75 6.5l-2.6.9"></path><circle cx="12" cy="14" fill="currentColor" r="1.5"></circle><rect height="3" rx=".75" stroke-width="1" width="4.5" x="4" y="2.75"></rect></svg>Hjerne</span><b>Med i en førerløs lastbil</b>CNBC, 2026, på engelsk. En reporter kører med i en selvkørende lastbil i Texas.</p></li>
+<li class="sm"><div class="vid"><div class="vid-ramme" data-title="Video: Exclusive: Ride-Along Inside Aurora's Self-Driving Semitruck (CNBC)" data-yt="N6--id0Up7c"><button aria-label="Videoen hentes fra YouTube." class="vid-play" type="button"><picture><source media="(max-width:599px)" srcset="../assets/review-img/6cc26f6301be.webp"></source><img alt="" height="720" loading="lazy" src="../assets/review-img/fb76828d282d.webp" width="1280"></picture><span aria-hidden="true" class="vid-kilde">CNBC</span><span aria-hidden="true" class="vid-ikon"></span><span aria-hidden="true" class="vid-tid">3:35</span></button></div><p class="media-reading"><strong>Se efter:</strong> Se efter forskellen på en demonstration og en maskine, der løser opgaven i drift.</p></div><p class="sm-t"><span class="del-k"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 21.25V14"></path><path d="M12 14L6.25 6.5M12 14l5.75-7.5" stroke-width="1"></path><path d="M17.75 6.5l-.25 2.75M17.75 6.5l-2.6.9"></path><circle cx="12" cy="14" fill="currentColor" r="1.5"></circle><rect height="3" rx=".75" stroke-width="1" width="4.5" x="4" y="2.75"></rect></svg>Hjerne</span><b>Med i en førerløs lastbil</b>CNBC, 2026, på engelsk. En reporter kører med i en selvkørende lastbil i Texas.</p></li>
 
-<li class="sm"><div class="vid"><div class="vid-ramme" data-title="Video: Symbotic: End to End System (Symbotic)" data-yt="MgNEyEwrjaw"><button aria-label="Videoen hentes fra YouTube." class="vid-play" type="button"><picture><source media="(max-width:599px)" srcset="../assets/img/v5-temaer/energi-konkurrence/temaer/fysisk-ai/fra-billedstil/billeder/fysisk-ai-plakat-MgNEyEwrjaw-mobil.webp"></source><img alt="" height="720" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/fysisk-ai/fra-billedstil/billeder/fysisk-ai-plakat-MgNEyEwrjaw-bred.webp" width="1280"></picture><span aria-hidden="true" class="vid-kilde">Symbotic</span><span aria-hidden="true" class="vid-ikon"></span><span aria-hidden="true" class="vid-tid">0:55</span></button></div><p class="media-reading"><strong>Se efter:</strong> Se efter forskellen på en demonstration og en maskine, der løser opgaven i drift.</p></div><p class="sm-t"><span class="del-k"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4.75 20.25h9.5"></path><path d="M7 20.25v-3.5l4-5.5 5 1.5"></path><circle cx="11" cy="11.25" r="1.25"></circle><path d="M16 12.75l2.75-1.75M16 12.75l2.75 1.5"></path><rect height="4.5" rx=".75" stroke-width="1" width="4.25" x="17" y="15.75"></rect></svg>Arme og ben</span><span class="selsk">Selskabets egen video</span><b>Små robotter på et lager</b>Symbotic, 2025, på engelsk. Symbotic er et af fondens selskaber.</p></li>
+<li class="sm"><div class="vid"><div class="vid-ramme" data-title="Video: Symbotic: End to End System (Symbotic)" data-yt="MgNEyEwrjaw"><button aria-label="Videoen hentes fra YouTube." class="vid-play" type="button"><picture><source media="(max-width:599px)" srcset="../assets/review-img/6a5cc1fb2974.webp"></source><img alt="" height="720" loading="lazy" src="../assets/review-img/72fb7558e7b5.webp" width="1280"></picture><span aria-hidden="true" class="vid-kilde">Symbotic</span><span aria-hidden="true" class="vid-ikon"></span><span aria-hidden="true" class="vid-tid">0:55</span></button></div><p class="media-reading"><strong>Se efter:</strong> Se efter forskellen på en demonstration og en maskine, der løser opgaven i drift.</p></div><p class="sm-t"><span class="del-k"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4.75 20.25h9.5"></path><path d="M7 20.25v-3.5l4-5.5 5 1.5"></path><circle cx="11" cy="11.25" r="1.25"></circle><path d="M16 12.75l2.75-1.75M16 12.75l2.75 1.5"></path><rect height="4.5" rx=".75" stroke-width="1" width="4.25" x="17" y="15.75"></rect></svg>Arme og ben</span><span class="selsk">Selskabets egen video</span><b>Små robotter på et lager</b>Symbotic, 2025, på engelsk. Symbotic er et af fondens selskaber.</p></li>
 
 </ul>
 
@@ -561,7 +410,7 @@
 
 <ul class="sm-l" role="list">
 
-<li class="sm"><div class="vid"><div class="vid-ramme" data-title="Video: Explained: How Humanoid Robots Perceive the World (Agility)" data-yt="MhRd0vvdaj0"><button aria-label="Videoen hentes fra YouTube." class="vid-play" type="button"><picture><source media="(max-width:599px)" srcset="../assets/img/v5-temaer/energi-konkurrence/temaer/fysisk-ai/fra-billedstil/billeder/fysisk-ai-plakat-MhRd0vvdaj0-mobil.webp"></source><img alt="" height="720" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/fysisk-ai/fra-billedstil/billeder/fysisk-ai-plakat-MhRd0vvdaj0-bred.webp" width="1280"></picture><span aria-hidden="true" class="vid-kilde">Agility</span><span aria-hidden="true" class="vid-ikon"></span><span aria-hidden="true" class="vid-tid">4:00</span></button></div><p class="media-reading"><strong>Se efter:</strong> Se efter forskellen på en demonstration og en maskine, der løser opgaven i drift.</p></div><p class="sm-t"><span class="selsk">Selskabets egen video</span><b>Sådan opfatter en robot omgivelserne</b>Agility, 2023, på engelsk. Agility Robotics er ikke selv i fonden.</p></li>
+<li class="sm"><div class="vid"><div class="vid-ramme" data-title="Video: Explained: How Humanoid Robots Perceive the World (Agility)" data-yt="MhRd0vvdaj0"><button aria-label="Videoen hentes fra YouTube." class="vid-play" type="button"><picture><source media="(max-width:599px)" srcset="../assets/review-img/4fc3ffde9e48.webp"></source><img alt="" height="720" loading="lazy" src="../assets/review-img/7a3b0c4c3d7b.webp" width="1280"></picture><span aria-hidden="true" class="vid-kilde">Agility</span><span aria-hidden="true" class="vid-ikon"></span><span aria-hidden="true" class="vid-tid">4:00</span></button></div><p class="media-reading"><strong>Se efter:</strong> Se efter forskellen på en demonstration og en maskine, der løser opgaven i drift.</p></div><p class="sm-t"><span class="selsk">Selskabets egen video</span><b>Sådan opfatter en robot omgivelserne</b>Agility, 2023, på engelsk. Agility Robotics er ikke selv i fonden.</p></li>
 
 </ul>
 
@@ -588,9 +437,6 @@
 <ul class="fod" id="fod-liste"><li><b>Enovix</b><span>Hovedtema: Energi og elnet</span><i><span class="sr"></span></i></li><li><b>SES AI</b><span>Hovedtema: Energi og elnet</span><i><span class="sr"></span></i></li><li><b>QuantumScape</b><span>Hovedtema: Energi og elnet</span><i><span class="sr"></span></i></li><li><b>onsemi</b><span>Hovedtema: Chips og halvledere</span><i><span class="sr"></span></i></li><li><b>Ballard Power Systems</b><span>Hovedtema: Energi og elnet</span><i><span class="sr"></span></i></li><li class="ekstra"><b>Solid Power</b><span>Hovedtema: Energi og elnet</span><i><span class="sr"></span></i></li><li class="ekstra"><b>Renesas Electronics</b><span>Hovedtema: Chips og halvledere</span><i><span class="sr"></span></i></li><li class="ekstra"><b>Uber</b><span>Hovedtema: Platformsøkonomi</span><i><span class="sr"></span></i></li><li class="ekstra"><b>MP Materials</b><span>Hovedtema: Råstoffer</span><i><span class="sr"></span></i></li><li class="ekstra"><b>IPG Photonics</b><span>Hovedtema: Datacentre</span><i><span class="sr"></span></i></li><li class="ekstra"><b>Amprius Technologies</b><span>Hovedtema: Energi og elnet</span><i><span class="sr"></span></i></li><li class="ekstra"><b>Infineon Technologies</b><span>Hovedtema: Chips og halvledere</span><i><span class="sr"></span></i></li><li class="ekstra"><b>Nordic Semiconductor</b><span>Hovedtema: Chips og halvledere</span><i><span class="sr"></span></i></li><li class="ekstra"><b>Microvast</b><span>Hovedtema: Energi og elnet</span><i><span class="sr"></span></i></li><li class="ekstra"><b>Ambarella</b><span>Hovedtema: Chips og halvledere</span><i><span class="sr"></span></i></li><li class="ekstra"><b>Teradyne</b><span>Hovedtema: Chips og halvledere</span><i><span class="sr"></span></i></li><li class="ekstra"><b>Samsara</b><span>Hovedtema: Software &amp; AI</span><i><span class="sr"></span></i></li></ul>
 
 <button aria-controls="fod-liste" aria-expanded="false" class="vis-alle" hidden="" id="fod-mere" type="button">Vis alle (17)</button>
-
-
-
 </div>
 
 </div>
@@ -618,60 +464,32 @@
 </div></section></div>
 
 <section class="sektion" id="selskaberne" aria-labelledby="h-selskaber">
-
-        <div class="gitter gitter--stub">
-
-          <article class="kort panel panel--bred" aria-labelledby="h-selskaber">
-
-            <header class="panel-hoved">
-
-              <div><h2 class="panel-titel" id="h-selskaber"><svg class="ik" aria-hidden="true"><use href="#i-selskab"></use></svg><span data-hvis="temaer#fysisk-ai.oevrigeAntal">De <span data-tal="temaer#fysisk-ai.antalVist" data-fmt="heltal">… </span> største af temaets <span data-tal="temaer#fysisk-ai.antal" data-fmt="antal" data-en="selskab" data-fl="selskaber">…  selskaber</span></span><span data-hvis="temaer#fysisk-ai.alleVist" hidden>Temaets <span data-tal="temaer#fysisk-ai.antal" data-fmt="antal" data-en="selskab" data-fl="selskaber">…  selskaber</span></span></h2>
-
-              <p class="hint">Tryk på et selskab for at se mere om det.</p></div>
-
-            </header>
-
-            <ul class="tema-liste" data-liste="temaer#fysisk-ai.vist" data-skabelon="tpl-tl"></ul>
-
-            <details class="fold-ud fold-liste" data-hvis="temaer#fysisk-ai.oevrigeAntal" hidden><summary><span>Vis alle <span data-tal="temaer#fysisk-ai.antal" data-fmt="antal" data-en="selskab" data-fl="selskaber">…  selskaber</span> i temaet</span></summary>
-
-              <ul class="tema-liste" data-liste="temaer#fysisk-ai.oevrige" data-skabelon="tpl-tl"></ul>
-
-            </details>
-
-            <p class="kildelinje">Andele i PMINDI, den udgave af fonden, der udbetaler udbytte, pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span> (fondens data).</p>
-
-          </article>
-
-        </div>
-
-      </section>
-
-      <section class="sektion v18-proces" data-proces-slot="fysisk-ai" hidden></section>
-
-      
-
-      <section class="sektion sektion--x" id="x-opslag" aria-labelledby="h-x-opslag" data-x-tema data-x-rel="../" data-x-selskaber='[{"isin": "US88160R1014", "navn": "Tesla", "slug": "tesla"}, {"isin": "US3453708600", "navn": "Ford Motor", "slug": "ford-motor"}, {"isin": "GB00BS3DYQ52", "navn": "Raspberry Pi", "slug": "raspberry-pi"}, {"isin": "US5901061003", "navn": "Merlin", "slug": "merlin"}, {"isin": "KYG651631007", "navn": "Joby Aviation", "slug": "joby-aviation"}, {"isin": "US00835Q2021", "navn": "Aeva Technologies", "slug": "aeva-technologies"}, {"isin": "US87151X1019", "navn": "Symbotic", "slug": "symbotic"}, {"isin": "US7329081084", "navn": "Pony AI", "slug": "pony-ai"}, {"isin": "US03945R1023", "navn": "Archer Aviation", "slug": "archer-aviation"}, {"isin": "BG1100003166", "navn": "Shelly", "slug": "shelly"}, {"isin": "US68236H2040", "navn": "Ondas Holdings", "slug": "ondas-holdings"}, {"isin": "US5949604038", "navn": "MicroVision", "slug": "microvision"}, {"isin": "US91532F1021", "navn": "Unusual Machines", "slug": "unusual-machines-inc-us"}, {"isin": "US86989Y1091", "navn": "Swarmer", "slug": "swarmer"}, {"isin": "US5000811043", "navn": "Kodiak AI", "slug": "kodiak-ai"}, {"isin": "US68989M2026", "navn": "Ouster", "slug": "ouster"}, {"isin": "US9509151083", "navn": "WeRide", "slug": "weride-inc-adr"}, {"isin": "US50202M1027", "navn": "Li Auto", "slug": "li-auto-sp-ads"}, {"isin": "US37045V1008", "navn": "General Motors", "slug": "general-motors"}, {"isin": "US81758H1068", "navn": "Serve Robotics", "slug": "serve-robotics"}, {"isin": "KYG4602S1057", "navn": "Horizon Robotics", "slug": "horizon-robotics"}, {"isin": "CA50077N1024", "navn": "Kraken Robotics", "slug": "kraken-robotics"}, {"isin": "US0517741072", "navn": "Aurora Innovation", "slug": "aurora-innovtn"}, {"isin": "KYG2131A1085", "navn": "Churchill Capital", "slug": "churchill-capital"}, {"isin": "US76954A1034", "navn": "Rivian Automotive", "slug": "rivian-automotive"}, {"isin": "US0094221068", "navn": "Airo Group", "slug": "airo-group"}, {"isin": "US5165482036", "navn": "Lantronix", "slug": "lantronix"}]'>
-
-        <header class="sektion-hoved">
-
-          <h2 class="sektion-titel" id="h-x-opslag">Det skriver de på X</h2>
-
-          <p class="sektion-intro">Udvalgte offentlige opslag om selskaberne i temaet. Opslagene er andres og ikke NewDeal Invests holdning.</p>
-
-        </header>
-
-        <div class="kort panel x-tema">
-
-          <p class="x-tema-status lille" role="status">Henter opslag …</p>
-
-          <details class="fold-ud fold-mobil fold-sektion" data-aaben-bred><summary aria-expanded="false">Se opslagene fra X</summary><ul class="x-tema-liste" hidden></ul></details>
-
-          <p class="kildelinje x-tema-kilde" hidden></p>
-
-        </div>
-
-      </section>
+<div class="gitter gitter--stub">
+<article class="kort panel panel--bred" aria-labelledby="h-selskaber">
+<header class="panel-hoved">
+<div><h2 class="panel-titel" id="h-selskaber"><svg class="ik" aria-hidden="true"><use href="#i-selskab"></use></svg><span data-hvis="temaer#fysisk-ai.oevrigeAntal">De <span data-tal="temaer#fysisk-ai.antalVist" data-fmt="heltal">… </span> største af temaets <span data-tal="temaer#fysisk-ai.antal" data-fmt="antal" data-en="selskab" data-fl="selskaber">…  selskaber</span></span><span data-hvis="temaer#fysisk-ai.alleVist" hidden>Temaets <span data-tal="temaer#fysisk-ai.antal" data-fmt="antal" data-en="selskab" data-fl="selskaber">…  selskaber</span></span></h2>
+<p class="hint">Tryk på et selskab for at se mere om det.</p></div>
+</header>
+<ul class="tema-liste" data-liste="temaer#fysisk-ai.vist" data-skabelon="tpl-tl"></ul>
+<details class="fold-ud fold-liste" data-hvis="temaer#fysisk-ai.oevrigeAntal" hidden><summary><span>Vis alle <span data-tal="temaer#fysisk-ai.antal" data-fmt="antal" data-en="selskab" data-fl="selskaber">…  selskaber</span> i temaet</span></summary>
+<ul class="tema-liste" data-liste="temaer#fysisk-ai.oevrige" data-skabelon="tpl-tl"></ul>
+</details>
+<p class="kildelinje">Andele i PMINDI, den udgave af fonden, der udbetaler udbytte, pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span> (fondens data).</p>
+</article>
+</div>
+</section>
+<section class="sektion v18-proces" data-proces-slot="fysisk-ai" hidden></section>
+<section class="sektion sektion--x" id="x-opslag" aria-labelledby="h-x-opslag" data-x-tema data-x-rel="../" data-x-selskaber='[{"isin": "US88160R1014", "navn": "Tesla", "slug": "tesla"}, {"isin": "US3453708600", "navn": "Ford Motor", "slug": "ford-motor"}, {"isin": "GB00BS3DYQ52", "navn": "Raspberry Pi", "slug": "raspberry-pi"}, {"isin": "US5901061003", "navn": "Merlin", "slug": "merlin"}, {"isin": "KYG651631007", "navn": "Joby Aviation", "slug": "joby-aviation"}, {"isin": "US00835Q2021", "navn": "Aeva Technologies", "slug": "aeva-technologies"}, {"isin": "US87151X1019", "navn": "Symbotic", "slug": "symbotic"}, {"isin": "US7329081084", "navn": "Pony AI", "slug": "pony-ai"}, {"isin": "US03945R1023", "navn": "Archer Aviation", "slug": "archer-aviation"}, {"isin": "BG1100003166", "navn": "Shelly", "slug": "shelly"}, {"isin": "US68236H2040", "navn": "Ondas Holdings", "slug": "ondas-holdings"}, {"isin": "US5949604038", "navn": "MicroVision", "slug": "microvision"}, {"isin": "US91532F1021", "navn": "Unusual Machines", "slug": "unusual-machines-inc-us"}, {"isin": "US86989Y1091", "navn": "Swarmer", "slug": "swarmer"}, {"isin": "US5000811043", "navn": "Kodiak AI", "slug": "kodiak-ai"}, {"isin": "US68989M2026", "navn": "Ouster", "slug": "ouster"}, {"isin": "US9509151083", "navn": "WeRide", "slug": "weride-inc-adr"}, {"isin": "US50202M1027", "navn": "Li Auto", "slug": "li-auto-sp-ads"}, {"isin": "US37045V1008", "navn": "General Motors", "slug": "general-motors"}, {"isin": "US81758H1068", "navn": "Serve Robotics", "slug": "serve-robotics"}, {"isin": "KYG4602S1057", "navn": "Horizon Robotics", "slug": "horizon-robotics"}, {"isin": "CA50077N1024", "navn": "Kraken Robotics", "slug": "kraken-robotics"}, {"isin": "US0517741072", "navn": "Aurora Innovation", "slug": "aurora-innovtn"}, {"isin": "KYG2131A1085", "navn": "Churchill Capital", "slug": "churchill-capital"}, {"isin": "US76954A1034", "navn": "Rivian Automotive", "slug": "rivian-automotive"}, {"isin": "US0094221068", "navn": "Airo Group", "slug": "airo-group"}, {"isin": "US5165482036", "navn": "Lantronix", "slug": "lantronix"}]'>
+<header class="sektion-hoved">
+<h2 class="sektion-titel" id="h-x-opslag">Det skriver de på X</h2>
+<p class="sektion-intro">Udvalgte offentlige opslag om selskaberne i temaet. Opslagene er andres og ikke NewDeal Invests holdning.</p>
+</header>
+<div class="kort panel x-tema">
+<p class="x-tema-status lille" role="status">Henter opslag …</p>
+<details class="fold-ud fold-mobil fold-sektion" data-aaben-bred><summary aria-expanded="false">Se opslagene fra X</summary><ul class="x-tema-liste" hidden></ul></details>
+<p class="kildelinje x-tema-kilde" hidden></p>
+</div>
+</section>
 
 <div class="v5f v5f-fysisk-ai" data-v5-fortaelling="fysisk-ai-b"><section aria-labelledby="risiko-h" class="s" id="risiko"><div class="wrap">
 
@@ -693,7 +511,7 @@
 
 </div>
 
-</div></section><section class="rm-section" id="mere-fra-ndi" aria-labelledby="rm-title"><p class="rm-source">VIDEOER OG OPSLAG</p><h2 id="rm-title">Bliv klogere på Robotter &amp; fysisk AI</h2><div class="rm-grid rm-grid-youtube"><article class="rm-video"><button type="button" class="rm-play" data-youtube="iTyszaFOb70" data-start="1312" aria-label="Afspil Kort og godt, Ep. 2"><img loading="lazy" src="https://i.ytimg.com/vi/iTyszaFOb70/hqdefault.jpg" alt=""><span class="rm-play-icon" aria-hidden="true">▶</span><span class="rm-start">Se fra 21:52</span></button><div class="rm-caption"><p class="rm-source">NEWDEAL INVEST · 2026-09-15</p><h3>Kort og godt, Ep. 2</h3><a href="https://www.youtube.com/watch?v=iTyszaFOb70&amp;t=1312s" target="_blank" rel="noopener">Se på YouTube ↗</a></div></article><article class="rm-video"><button type="button" class="rm-play" data-youtube="eRpN78LtAOQ" data-start="1412" aria-label="Afspil Kort og godt, Ep. 1"><img loading="lazy" src="https://i.ytimg.com/vi/eRpN78LtAOQ/hqdefault.jpg" alt=""><span class="rm-play-icon" aria-hidden="true">▶</span><span class="rm-start">Se fra 23:32</span></button><div class="rm-caption"><p class="rm-source">NEWDEAL INVEST · 2026-09-08</p><h3>Kort og godt, Ep. 1</h3><a href="https://www.youtube.com/watch?v=eRpN78LtAOQ&amp;t=1412s" target="_blank" rel="noopener">Se på YouTube ↗</a></div></article></div><details class="rm-more"><summary>Se flere videoer (1)</summary><div class="rm-grid rm-grid-youtube"><article class="rm-video"><button type="button" class="rm-play" data-youtube="GBPffuqKxi8" data-start="1861" aria-label="Afspil Kort og godt, Ep. 7"><img loading="lazy" src="https://i.ytimg.com/vi/GBPffuqKxi8/hqdefault.jpg" alt=""><span class="rm-play-icon" aria-hidden="true">▶</span><span class="rm-start">Se fra 31:01</span></button><div class="rm-caption"><p class="rm-source">NEWDEAL INVEST · 2026-10-20</p><h3>Kort og godt, Ep. 7</h3><a href="https://www.youtube.com/watch?v=GBPffuqKxi8&amp;t=1861s" target="_blank" rel="noopener">Se på YouTube ↗</a></div></article></div></details><div class="rm-grid rm-grid-x"><article class="rm-social rm-x"><p class="rm-source">X · 2026-10-27</p><h3>Delt af Mads Christiansen</h3><div class="rm-embed" data-x="2115072271207542991"></div><a href="https://x.com/RobotaxiRadar/status/2115072271207542991" target="_blank" rel="noopener">Læs det originale opslag på X ↗</a></article></div></section><section aria-labelledby="videre-h" class="s" id="videre"><div class="wrap">
+</div></section><section class="rm-section" id="mere-fra-ndi" aria-labelledby="rm-title"><p class="rm-source">VIDEOER OG OPSLAG</p><h2 id="rm-title">Bliv klogere på Robotter &amp; fysisk AI</h2><div class="rm-grid rm-grid-youtube"><article class="rm-video"><button type="button" class="rm-play" data-youtube="iTyszaFOb70" data-start="1312" aria-label="Afspil Kort og godt, Ep. 2"><img loading="lazy" src="https://i.ytimg.com/vi/iTyszaFOb70/hqdefault.jpg" alt=""><span class="rm-play-icon" aria-hidden="true">▶</span><span class="rm-start">Se fra 21:52</span></button><div class="rm-caption"><p class="rm-source">NEWDEAL INVEST · 2026-09-15</p><h3>Kort og godt, Ep. 2</h3><p class="rm-topic">Om Robotter &amp; fysisk AI · starter ved 21:52</p><a href="https://www.youtube.com/watch?v=iTyszaFOb70&amp;t=1312s" target="_blank" rel="noopener">Se på YouTube ↗</a></div></article><article class="rm-video"><button type="button" class="rm-play" data-youtube="eRpN78LtAOQ" data-start="1412" aria-label="Afspil Kort og godt, Ep. 1"><img loading="lazy" src="https://i.ytimg.com/vi/eRpN78LtAOQ/hqdefault.jpg" alt=""><span class="rm-play-icon" aria-hidden="true">▶</span><span class="rm-start">Se fra 23:32</span></button><div class="rm-caption"><p class="rm-source">NEWDEAL INVEST · 2026-09-08</p><h3>Kort og godt, Ep. 1</h3><p class="rm-topic">Om Robotter &amp; fysisk AI · starter ved 23:32</p><a href="https://www.youtube.com/watch?v=eRpN78LtAOQ&amp;t=1412s" target="_blank" rel="noopener">Se på YouTube ↗</a></div></article></div><details class="rm-more"><summary>Se flere videoer (1)</summary><div class="rm-grid rm-grid-youtube"><article class="rm-video"><button type="button" class="rm-play" data-youtube="GBPffuqKxi8" data-start="1861" aria-label="Afspil Kort og godt, Ep. 7"><img loading="lazy" src="https://i.ytimg.com/vi/GBPffuqKxi8/hqdefault.jpg" alt=""><span class="rm-play-icon" aria-hidden="true">▶</span><span class="rm-start">Se fra 31:01</span></button><div class="rm-caption"><p class="rm-source">NEWDEAL INVEST · 2026-10-20</p><h3>Kort og godt, Ep. 7</h3><p class="rm-topic">Om Robotter &amp; fysisk AI · starter ved 31:01</p><a href="https://www.youtube.com/watch?v=GBPffuqKxi8&amp;t=1861s" target="_blank" rel="noopener">Se på YouTube ↗</a></div></article></div></details><div class="rm-grid rm-grid-x"><article class="rm-social rm-x"><p class="rm-source">X · 2026-10-27</p><h3>Delt af Mads Christiansen</h3><div class="rm-embed" data-x="2115072271207542991"></div><a href="https://x.com/RobotaxiRadar/status/2115072271207542991" target="_blank" rel="noopener">Læs det originale opslag på X ↗</a></article></div></section><section aria-labelledby="videre-h" class="s" id="videre"><div class="wrap">
 
 <p class="eyebrow"><span aria-hidden="true" class="rg"></span>Videre</p>
 
@@ -701,7 +519,7 @@
 
 <div class="videre-g">
 
-<figure class="graf"><img class="kun-moerk" alt="Maskinen i midten med en chip, et softwarevindue og et batteri ude til siden" height="140" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/fysisk-ai/fra-billedstil/grafik/fysisk-ai-overgang-naboer.svg" width="480"><img class="kun-lys" alt="Maskinen i midten med en chip, et softwarevindue og et batteri ude til siden" height="140" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/fysisk-ai/fra-billedstil/grafik/fysisk-ai-overgang-naboer-lys.svg" width="480"><figcaption>Illustration: NewDeal Invest.</figcaption></figure>
+<figure class="graf"><img class="kun-moerk" alt="Maskinen i midten med en chip, et softwarevindue og et batteri ude til siden" height="140" loading="lazy" src="../assets/review-img/4bb4cf5cbc00.svg" width="480"><img class="kun-lys" alt="Maskinen i midten med en chip, et softwarevindue og et batteri ude til siden" height="140" loading="lazy" src="../assets/review-img/90c9bbd8c56f.svg" width="480"><figcaption>Illustration: NewDeal Invest.</figcaption></figure>
 
 <div>
 
@@ -754,42 +572,21 @@
 </details>
 
 </div></section></div>
-
-
-
-      
-
-      <div class="sektion sektion--videre"><nav class="videre" aria-label="Videre">
-
-          <a class="knap" href="../index.html#hvert-tema"><svg class="ik ik--s" aria-hidden="true"><use href="#i-tilbage"></use></svg>Alle temaer</a>
-
-          <a class="knap" href="../index.html#hvert-tema" data-hvis="temaer#fysisk-ai.forrige" data-href-tema="temaer#fysisk-ai.forrige" hidden><svg class="ik ik--s" aria-hidden="true"><use href="#i-tilbage"></use></svg><span class="knap-tekst">Forrige tema: <span data-navn="temaer#fysisk-ai.forrige">…</span></span></a>
-
-          <a class="knap knap--primaer" href="../index.html#hvert-tema" data-hvis="temaer#fysisk-ai.naeste" data-href-tema="temaer#fysisk-ai.naeste" hidden><span class="knap-tekst">Næste tema: <span data-navn="temaer#fysisk-ai.naeste">…</span></span><svg class="ik ik--s" aria-hidden="true"><use href="#i-frem"></use></svg></a>
-
-          <a class="knap knap--primaer" href="#kilder" data-skjul="temaer#fysisk-ai.naeste" hidden>Det var det sidste tema. Se kilderne<svg class="ik ik--s" aria-hidden="true"><use href="#i-frem"></use></svg></a>
-
-        </nav></div>
-
-
-
-    </main>
-
-    <footer class="sidefod">
-
-      <div class="sidefod-maerke"><span class="logo-felt"><img class="ndi-logo" src="../assets/img/ndi-logo-moerk-baggrund.png" width="2048" height="754" alt="NewDeal Invest" decoding="async"></span></div>
-
-      <div class="sidefod-tekst">
-
-        <p>NewDeal Invest er et brand for NDIIR ApS, investeringsrådgiver for Fundmarket A/S. Markedsføringsmateriale. Ikke personlig investeringsrådgivning. Investering indebærer risiko for tab. Alle andele pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span>.</p>
-
-        <p class="sidefod-kilde">Kilde til fondstal: Fundmarket A/S, der forvalter Investeringsforeningen PortfolioManager. NDIIR ApS yder investeringsrådgivning til foreningen. <span class="sidefod-dato">Opdateret <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span>.</span></p>
-
-      </div>
-
-    </footer>
-
-  </div>
+<div class="sektion sektion--videre"><nav class="videre" aria-label="Videre">
+<a class="knap" href="../tech.html#temaer"><svg class="ik ik--s" aria-hidden="true"><use href="#i-tilbage"></use></svg>Alle temaer</a>
+<a class="knap" href="../tech.html#temaer" data-hvis="temaer#fysisk-ai.forrige" data-href-tema="temaer#fysisk-ai.forrige" hidden><svg class="ik ik--s" aria-hidden="true"><use href="#i-tilbage"></use></svg><span class="knap-tekst">Forrige tema: <span data-navn="temaer#fysisk-ai.forrige">…</span></span></a>
+<a class="knap knap--primaer" href="../tech.html#temaer" data-hvis="temaer#fysisk-ai.naeste" data-href-tema="temaer#fysisk-ai.naeste" hidden><span class="knap-tekst">Næste tema: <span data-navn="temaer#fysisk-ai.naeste">…</span></span><svg class="ik ik--s" aria-hidden="true"><use href="#i-frem"></use></svg></a>
+<a class="knap knap--primaer" href="#kilder" data-skjul="temaer#fysisk-ai.naeste" hidden>Det var det sidste tema. Se kilderne<svg class="ik ik--s" aria-hidden="true"><use href="#i-frem"></use></svg></a>
+</nav></div>
+</main>
+<footer class="sidefod">
+<div class="sidefod-maerke"><span class="logo-felt"><img class="ndi-logo" src="../assets/img/ndi-logo-moerk-baggrund.png" width="2048" height="754" alt="NewDeal Invest" decoding="async"></span></div>
+<div class="sidefod-tekst">
+<p>NewDeal Invest er et brand for NDIIR ApS, investeringsrådgiver for Fundmarket A/S. Markedsføringsmateriale. Ikke personlig investeringsrådgivning. Investering indebærer risiko for tab. Alle andele pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span>.</p>
+<p class="sidefod-kilde">Kilde til fondstal: Fundmarket A/S, der forvalter Investeringsforeningen PortfolioManager. NDIIR ApS yder investeringsrådgivning til foreningen. <span class="sidefod-dato">Opdateret <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span>.</span></p>
+</div>
+</footer>
+</div>
 
 </div>
 
@@ -815,6 +612,6 @@
 
 <script src="../assets/v5-temaer/fysisk-ai.js" defer></script>
 
-<script defer src="../assets/js/review-media.js?v=20261031-1"></script></body>
+<script defer src="../assets/js/review-media.js?v=20261031-2"></script><script defer src="../assets/js/journey-polish.js?v=20261031"></script></body>
 
 </html>
