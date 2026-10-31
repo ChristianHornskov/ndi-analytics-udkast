@@ -34,3 +34,21 @@ html.portfolio-analysis main{max-width:1180px;padding:28px 20px!important}
 .portfolio-analysis #riskmetrics .metric:last-child{border-right:0!important}.portfolio-analysis #riskmetrics .label{min-height:3em;font-size:13px;line-height:1.5;white-space:normal;overflow-wrap:anywhere}.portfolio-analysis #riskmetrics .value{font-size:clamp(22px,2.2vw,31px);line-height:1.3;white-space:nowrap;font-variant-numeric:tabular-nums;margin:9px 0}.portfolio-analysis #riskmetrics .sub{white-space:normal;line-height:1.5;font-size:12px;overflow-wrap:anywhere}
 @media(min-width:701px) and (max-width:1100px){.portfolio-analysis #riskmetrics{grid-template-columns:repeat(12,minmax(0,1fr))!important}.portfolio-analysis #riskmetrics .metric{grid-column:span 3}.portfolio-analysis #riskmetrics .metric:nth-child(n+5){grid-column:span 4;border-top:1px solid #89aeb433!important}}
 @media(max-width:700px){.portfolio-analysis #riskmetrics{grid-template-columns:minmax(0,1fr)!important}.portfolio-analysis #riskmetrics .metric{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 16px;border-right:0!important;border-bottom:1px solid #89aeb433!important;padding:16px 18px!important}.portfolio-analysis #riskmetrics .label{min-height:0;align-self:center;font-size:14px}.portfolio-analysis #riskmetrics .value{grid-column:2;grid-row:1 / span 2;align-self:center;font-size:27px;margin:0}.portfolio-analysis #riskmetrics .sub{grid-column:1}.portfolio-analysis #riskmetrics .metric:last-child{border-bottom:0!important}}
+
+/* Mobile readability fixes; preserve calculations and red/green scale. */
+@media(max-width:700px){
+.portfolio-analysis .tablewrap:has(td.heat){position:relative;overflow-x:auto;scrollbar-width:thin;scrollbar-color:#89aeb4 #132830}
+.portfolio-analysis .tablewrap:has(td.heat)::before{content:"Stryg til siden for at se alle måneder →";display:block;position:sticky;left:0;width:100%;box-sizing:border-box;padding:6px 0 12px;color:#b6cbd0;font-size:12px}
+.portfolio-analysis table:has(td.heat) tr>th:first-child{position:sticky;left:0;z-index:1;background:#10232b;box-shadow:2px 0 0 #89aeb444}
+.portfolio-analysis .audit-addition .tablewrap table{min-width:0;width:100%;table-layout:fixed}
+.portfolio-analysis .audit-addition .tablewrap :is(th,td){white-space:normal;overflow-wrap:anywhere;font-size:12px;padding:11px 5px}
+.portfolio-analysis .audit-addition .tablewrap :is(th,td):first-child{width:38%}
+.portfolio-analysis .fund-costs .metrics{display:grid;grid-template-columns:minmax(0,1fr)!important;gap:0}
+.portfolio-analysis .fund-costs .metric{min-width:0;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:5px 12px;padding:14px 0;border-bottom:1px solid #89aeb433}
+.portfolio-analysis .fund-costs .metric .label{white-space:normal;overflow-wrap:anywhere;font-size:14px}
+.portfolio-analysis .fund-costs .metric .value{grid-column:2;grid-row:1/3;align-self:center;font-size:24px;margin:0;white-space:nowrap}
+.portfolio-analysis .fund-costs .metric .sub{grid-column:1;white-space:normal}
+.portfolio-analysis #drawdown svg{min-width:0!important;width:100%!important;height:auto}
+.portfolio-analysis #drawdown svg text{font-size:24px}
+.portfolio-analysis #drawdown svg text:is([y="24"],[y="48"]){display:none}
+}
