@@ -76,7 +76,22 @@
     draw();
   }
 
+  function pmindiVigtig() {
+    if (!info || !M || !F) return;
+    var c = M.omkostninger, kid = F.kidUrl || M.kidUrl;
+    info.innerHTML = '<div class="information-grid"><div><h3>Datagrundlag</h3><p>Grafen viser totalafkast i DKK med geninvesteret udbytte for ' + String(M.juridiskNavn).replace(/kl\.? n/i, "andelsklasse n") + ", ISIN " + F.isin + ". Kurserne er hentet fra Fundmarkets offentliggjorte historik og afstemt mod rapporternes officielle NAV. Siden viser den validerede rapport med kursdata til " + date(U.kursdato) + ". Det er ikke realtidskurser eller officielt godkendte fondsnøgletal.</p>" +
+      "<h3>Afkast og omkostninger</h3><p>Afkastet er efter fondens løbende omkostninger. Emissions- og indløsningstillæg på henholdsvis " + money(c.indgang) + " % og " + money(c.udgang) + " % ved køb og salg indgår ikke, og det samme gælder dine egne handelsomkostninger og skat. Historisk afkast er ingen garanti for fremtidigt afkast og er ikke en pålidelig indikator for, hvad du kan forvente fremover.</p>" +
+      "<p>Forvaltning og drift: " + money(c.loebende) + " % årligt. Transaktionsomkostninger: " + money(c.transaktion) + " % (KID-estimat; kan variere). Fondens løbende omkostninger er allerede indregnet i afkastet og skal ikke trækkes fra igen.</p>" +
+      '<p class="small">Årlig omkostningsvirkning (PRIIP-KID): ' + money(c.aarligFemAar) + " % ved " + M.anbefaletAar + " års ejertid og " + money(c.aarligEtAar) + ' % ved 1 års ejertid. <a href="' + kid + '" target="_blank" rel="noopener">Læs dokumentet med central information ↗</a></p></div>' +
+      "<div><h3>Risiko og investeringshorisont</h3><p>Efter PRIIP-KID har afdelingen risikoklasse " + M.risikoklasse + " ud af " + M.risikoskalaMax + ", svarende til " + M.risikoTekst + " risiko. Klassificeringen forudsætter, at du beholder produktet i " + M.anbefaletAar + " år, som også er den anbefalede investeringsperiode. Den faktiske risiko kan variere betydeligt, hvis du indløser tidligere, og du kan da få mindre tilbage.</p>" +
+      "<p>Produktet har ingen beskyttelse mod den fremtidige markedsudvikling, og du kan tabe noget af eller hele din investering. De væsentligste risici er aktiemarkedsrisiko, vækst- og sektorrisiko samt valutarisiko. Teknologi- og vækstaktier svinger ofte mere end det brede aktiemarked, både op og ned. Investeringen henvender sig til investorer med høj risikovillighed og lang investeringshorisont.</p>" +
+      '<h3>Valg af afdeling og skat</h3><p class="small">Generel information, ikke en personlig anbefaling eller skatterådgivning. Skattebehandlingen afhænger af din individuelle situation og kan ændres. Valget afhænger også af depotudbyderens muligheder.</p>' +
+      '<h3>Din investeringsbeslutning</h3><p>NewDeal Invest yder ikke investeringsrådgivning til investorer og formidler ikke ordrer. Materialet er markedsføring og ikke personlig investeringsrådgivning. Det tager ikke hensyn til din økonomi, erfaring eller risikovillighed, og enhver investeringsbeslutning træffer du selv. Læs <a href="' + kid + '" target="_blank" rel="noopener">PRIIP-KID ↗</a>, <a href="https://www.newdealinvest.dk/risici" target="_blank" rel="noopener">risikofaktorerne ↗</a> og <a href="https://node-api.fundmarket.dk/funds/documents/prospekt_ipm" target="_blank" rel="noopener">prospektet ↗</a> inden en endelig investeringsbeslutning.</p>' +
+      "<p>PRIIP-KID indeholder et moderat resultatscenarie med de tilhørende beregningsforudsætninger. Scenariet er ikke en prognose eller en garanti for afkast. Aktiv forvaltning er ikke en garanti for merafkast.</p></div></div>";
+  }
+
   function vigtig() {
+      if(F.id==='PMINDI'){pmindiVigtig();return;}
       if(info) info.innerHTML='<p>Grafen viser totalafkast efter fondens løbende omkostninger. Historisk afkast er ingen garanti for fremtidigt afkast. Du kan tabe penge. <a target="_blank" rel="noopener" href="'+F.kidUrl+'">Læs klassens PRIIP-KID ↗</a> · <a href="https://www.newdealinvest.dk/risici" target="_blank" rel="noopener">Risici ↗</a></p>';
   }
   function opdater() {

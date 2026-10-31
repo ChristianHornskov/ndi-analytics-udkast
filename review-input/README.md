@@ -29,7 +29,7 @@ No market-data requests or cloud deployments happen during a build.
 
 - Integrate and review Claude's separately delivered mobile animation fixes.
 - Integrate verified video and X inventories from Grok; flagged videos remain excluded.
-- Restore the phone/AI journey after identifying the appropriate source.
+- Phone/AI journey restored from V5 illustrations with direct navigation; finish visual review.
 - Finish SpaceX history layout and the interactive business illustration.
 - Complete mobile, desktop and light-theme review before any Wix release.
 

@@ -76,7 +76,7 @@ export function readPalette(el){
 }
 const rgba=(c,a)=>`rgba(${c[0]},${c[1]},${c[2]},${Math.max(0,Math.min(1,a)).toFixed(3)})`;
 
-export function createLivingAtlas(host,{model,onLine,reducedMotion=false,counter=null,dotStyle=null,simpleConnections=false}={}){
+export function createLivingAtlas(host,{model,onLine,reducedMotion=false,counter=null,dotStyle=null,simpleConnections=false,introOnly=false}={}){
  const doc=host.ownerDocument,win=doc.defaultView;host.classList.add('ac','al');
  const canvas=doc.createElement('canvas');canvas.setAttribute('aria-hidden','true');host.replaceChildren(canvas);const ctx=canvas.getContext('2d');
  const legend=doc.createElement('div');legend.className='al-technology-legend';legend.style.cssText='position:relative;padding:10px 4px 0;font-size:13px;line-height:1.5;color:var(--text);';host.append(legend);legend.hidden=simpleConnections;
@@ -86,7 +86,7 @@ export function createLivingAtlas(host,{model,onLine,reducedMotion=false,counter
  let paused=false,pausedAt=0,shift=0;
  const now=()=>paused?pausedAt:win.performance.now()-shift;
  const pauseBtn=doc.createElement('button');pauseBtn.type='button';pauseBtn.className='ac-pause';pauseBtn.setAttribute('aria-pressed','false');pauseBtn.setAttribute('aria-label','Pause animationen');
- pauseBtn.innerHTML='<span class="ac-pause-ikon" aria-hidden="true"></span><span class="ac-pause-tekst" aria-hidden="true">Pause</span>';pauseBtn.hidden=reducedMotion;
+ pauseBtn.innerHTML='<span class="ac-pause-ikon" aria-hidden="true"></span><span class="ac-pause-tekst" aria-hidden="true">Pause</span>';pauseBtn.hidden=reducedMotion||introOnly;
  function setPaused(v){if(v===paused)return;if(v){pausedAt=now();paused=true;stop();draw(pausedAt)}else{shift=win.performance.now()-pausedAt;paused=false;if(now()<lifeUntil||(gatherStart!==null&&!gathered))start();else wake()}
   pauseBtn.setAttribute('aria-pressed',String(paused));host.classList.toggle('is-paused',paused)}
  pauseBtn.addEventListener('click',()=>setPaused(!paused));host.append(pauseBtn);
@@ -194,7 +194,7 @@ export function createLivingAtlas(host,{model,onLine,reducedMotion=false,counter
  function stop(){win.cancelAnimationFrame(raf);raf=0;win.clearTimeout(timer);timer=0}
  function loop(){
   raf=0;timer=0;if(dead||!visible||doc.hidden)return;const t=now();
-  if(gatherStart!==null&&!gathered&&t-gatherStart>=GATHER_MS){gathered=true;host.classList.add('is-gathered');if(counter)counter.textContent=String(layout.dots.length)}
+  if(gatherStart!==null&&!gathered&&t-gatherStart>=GATHER_MS){gathered=true;host.classList.add('is-gathered');if(counter)counter.textContent=String(layout.dots.length);if(introOnly)setPaused(true)}
   if(gathered&&!selection&&!reducedMotion&&t>=nextPulse&&t<lifeUntil-SETTLE_MS){const pick=threads[Math.floor(seeded(String(Math.floor(t)),5)*Math.min(threads.length,10))];if(pick)pulse={th:pick,start:t};nextPulse=t+PULSE_MS+PULSE_GAP}
   draw(t);
   if(!alive(t)){draw(t);return}
@@ -203,13 +203,13 @@ export function createLivingAtlas(host,{model,onLine,reducedMotion=false,counter
  function start(){if(!raf&&!timer&&!dead&&!paused&&visible&&!doc.hidden&&!reducedMotion)raf=win.requestAnimationFrame(loop)}
  function wake(ms=IDLE_MS){if(reducedMotion){draw(now());return}lifeUntil=Math.max(lifeUntil,now()+ms);if(!gathered&&gatherStart===null)return;start()}
  function beginGather(){if(gatherStart!==null)return;if(reducedMotion){gathered=true;host.classList.add('is-gathered');draw(now());return}gatherStart=now();lifeUntil=gatherStart+GATHER_MS+IDLE_MS;nextPulse=gatherStart+GATHER_MS+400;start()}
- const motion=win.matchMedia?.('(prefers-reduced-motion: reduce)'),motionChanged=()=>{reducedMotion=motion.matches;pauseBtn.hidden=reducedMotion;if(reducedMotion){stop();gathered=true;if(counter&&layout)counter.textContent=String(layout.dots.length)}draw(now());if(!reducedMotion)wake()};motion?.addEventListener('change',motionChanged);
+ const motion=win.matchMedia?.('(prefers-reduced-motion: reduce)'),motionChanged=()=>{reducedMotion=motion.matches;pauseBtn.hidden=reducedMotion||introOnly;if(reducedMotion){stop();gathered=true;if(counter&&layout)counter.textContent=String(layout.dots.length)}draw(now());if(!reducedMotion)wake()};motion?.addEventListener('change',motionChanged);
  const ro=new ResizeObserver(()=>{const w=host.clientWidth||360;if(w!==lastWidth)resize()});ro.observe(host);
  const io=new IntersectionObserver(es=>{visible=es[0].isIntersecting;if(visible){if(gatherStart===null)beginGather();else wake()}else stop()},{threshold:.15});io.observe(host);
  const visibility=()=>{if(doc.hidden)stop();else if(visible)wake()};doc.addEventListener('visibilitychange',visibility);
  const poke=()=>wake();host.addEventListener('pointermove',poke,{passive:true});host.addEventListener('pointerdown',poke,{passive:true});
  const retheme=()=>{palette=readPalette(host);draw(now())};
- const themeObserver=new MutationObserver(retheme);themeObserver.observe(doc.documentElement,{attributes:true,attributeFilter:['data-theme','class','style']});win.addEventListener('ndi-themechange',retheme);
+ const themeObserver=new MutationObserver(retheme);themeObserver.observe(doc.documentElement,{attributes:true,attributeFilter:['data-theme','data-tema','class','style']});win.addEventListener('ndi-themechange',retheme);
  resize();
  return {
   destroy(){dead=true;stop();win.cancelAnimationFrame(drawRaf);ro.disconnect();io.disconnect();themeObserver.disconnect();motion?.removeEventListener('change',motionChanged);doc.removeEventListener('visibilitychange',visibility);win.removeEventListener('ndi-themechange',retheme);host.removeEventListener('pointermove',poke);host.removeEventListener('pointerdown',poke);host.replaceChildren()},
