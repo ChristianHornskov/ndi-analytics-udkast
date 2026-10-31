@@ -37,7 +37,7 @@
 
 <script>try{document.fonts.load("500 16px Manrope");document.fonts.load("400 16px 'DM Sans'")}catch(e){}</script>
 
-<link rel="stylesheet" href="assets/css/review.css?v=20261031logos"><link rel="stylesheet" href="assets/css/zoom-camera.css"><link rel="stylesheet" href="assets/css/journey-polish.css?v=20261031c"></head>
+<link rel="stylesheet" href="assets/css/review.css?v=20261031logos"><link rel="stylesheet" href="assets/css/zoom-camera.css"><link rel="stylesheet" href="assets/css/journey-polish.css?v=20261031d"></head>
 
 <body class="review-tech">
 <svg class="sprite" aria-hidden="true" focusable="false">
@@ -143,12 +143,12 @@
 <a class="sm-tilbage" href="https://www.newdealinvest.dk/"><svg class="ik" aria-hidden="true"><use href="#i-tilbage"></use></svg><span>Til NewDeal Invests forside</span></a>
 <nav class="sm-gruppe" aria-labelledby="sm-h-fond">
 <h2 class="sm-overskrift" id="sm-h-fond"><span>Gå på opdagelse</span></h2>
-<ul><li><a class="sm-link" href="#temaer" data-spy="temaer"><span>De 12 temaer</span></a></li><li><a class="sm-link" href="#forbindelser" data-spy="forbindelser"><span>Se forbindelserne</span></a></li><li><a class="sm-link" href="#ai-rejsen" data-spy="ai-rejsen"><span>Fra skærm til strøm</span></a></li><li><a class="sm-link" href="#virksomhedsfaser" data-spy="virksomhedsfaser"><span>Fra teknologi til forretning</span></a></li><li><a class="sm-link" href="#vigtig-information" data-spy="vigtig-information"><span>Kilder &amp; vigtig information</span></a></li></ul><div class="tech-other-paths"><span>SE OGSÅ</span><a href="portfolio/index.html">Porteføljeanalyse →</a><a href="widget/index.html">Fondens afkast →</a></div></nav>
+<ul><li><a class="sm-link" href="#temaer" data-spy="temaer"><span>De 12 temaer</span></a></li><li><a class="sm-link" href="#forbindelser" data-spy="forbindelser"><span>Se forbindelserne</span></a></li><li><a class="sm-link" href="#ai-rejsen" data-spy="ai-rejsen"><span>Fra skærm til strøm</span></a></li><li><a class="sm-link" href="#virksomhedsfaser" data-spy="virksomhedsfaser"><span>Fra teknologi til forretning</span></a></li><li><a class="sm-link" href="#vigtig-information" data-spy="vigtig-information"><span>Kilder &amp; vigtig information</span></a></li></ul></nav>
 <nav class="sm-gruppe" aria-labelledby="sm-h-temaer">
 <h2 class="sm-overskrift" id="sm-h-temaer"><span>Temaer</span></h2>
 <ul class="sm-liste">
 </ul>
-<ul class="sm-liste sm-temaliste" id="sm-temaer" data-ordne="temaer">
+<ul class="sm-liste sm-temaliste vis-alle" id="sm-temaer" data-ordne="temaer">
 <li data-id="chips"><a class="sm-link sm-link--tema" style="--tf:#8bb8bc" href="temaer/chips.html"><svg class="ik" aria-hidden="true"><use href="#t-chips"></use></svg><span>Chips og halvledere</span></a></li>
 <li data-id="energi"><a class="sm-link sm-link--tema" style="--tf:#759ebc" href="temaer/energi.html"><svg class="ik" aria-hidden="true"><use href="#t-energi"></use></svg><span>Energi og elnet</span></a></li>
 <li data-id="datacenter"><a class="sm-link sm-link--tema" style="--tf:#d5ba75" href="temaer/datacenter.html"><svg class="ik" aria-hidden="true"><use href="#t-datacenter"></use></svg><span>Datacentre</span></a></li>
@@ -162,11 +162,8 @@
 <li data-id="sundhed"><a class="sm-link sm-link--tema" style="--tf:#a4a6cf" href="temaer/sundhed.html"><svg class="ik" aria-hidden="true"><use href="#t-sundhed"></use></svg><span>Sundhed og biotek</span></a></li>
 <li data-id="kvante"><a class="sm-link sm-link--tema" style="--tf:#cd99a5" href="temaer/kvante.html"><svg class="ik" aria-hidden="true"><use href="#t-kvante"></use></svg><span>Kvantecomputere</span></a></li>
 </ul>
-<button class="sm-vis-flere" type="button" aria-expanded="false" aria-controls="sm-temaer">
-<span class="sm-vis-tekst">Vis alle <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer</span><span class="sm-vis-faerre" hidden>Vis færre temaer</span><svg class="ik ik--s" aria-hidden="true"><use href="#i-ned"></use></svg>
-</button>
 </nav>
-<nav class="sm-gruppe" aria-labelledby="sm-h-selskaber">
+<div class="tech-other-paths"><span>SE OGSÅ</span><a href="portfolio/index.html">Porteføljeanalyse →</a><a href="widget/index.html">Fondens afkast →</a></div><nav class="sm-gruppe" aria-labelledby="sm-h-selskaber">
 <h2 class="sm-overskrift" id="sm-h-selskaber"><span>Selskaber</span></h2>
 <ul class="sm-liste">
 </ul>
@@ -203,7 +200,7 @@
 <a class="ndi-tile" data-map-visning="raastoffer" href="temaer/raastoffer.html"><img alt="Kobbermalm, silicium og lithiummineral på en mørk sten" height="990" width="660" loading="lazy" decoding="async" src="assets/img/v5-fotos/raastoffer-malm-og-silicium.webp"><div><h3>Råstoffer</h3><p>Hvor i vejen fra råstof til materiale arbejder selskabet?</p><small><span data-tal="temaer#raastoffer.andel" data-fmt="pct">…   %</span> af fonden · Udforsk temaet →</small></div></a>
 </div>
 </section>
-<section id="forbindelser" class="v18-atlas" aria-labelledby="h-forbindelser"><link rel="stylesheet" href="assets/v5-atlas/atlas-canvas.css"><h2 id="h-forbindelser">Se forbindelserne</h2><div id="living-map"></div><script type="module">import {createLivingAtlas} from "./assets/v5-atlas/atlas-living.mjs";import model from "./assets/v5-atlas/atlas-model.mjs";const sti={"chips": "temaer/chips.html", "energi": "temaer/energi.html", "datacenter": "temaer/datacenter.html", "platforme": "temaer/platforme.html", "fysisk-ai": "temaer/fysisk-ai.html", "raastoffer": "temaer/raastoffer.html", "space": "temaer/rumfart.html", "fintech": "temaer/fintech.html", "krypto": "temaer/krypto.html", "software": "temaer/software.html", "sundhed": "temaer/sundhed.html", "kvante": "temaer/kvante.html"};const atlas=createLivingAtlas(document.querySelector("#living-map"),{model,simpleConnections:true,introOnly:true,onLine:id=>{if(sti[id])location.href=sti[id]},reducedMotion:matchMedia("(prefers-reduced-motion: reduce)").matches});document.querySelectorAll('[data-map-visning]').forEach(a=>{a.addEventListener('pointerenter',()=>atlas.setSelection(a.dataset.mapVisning));a.addEventListener('pointerleave',()=>atlas.setSelection(null));a.addEventListener('focus',()=>atlas.setSelection(a.dataset.mapVisning));a.addEventListener('blur',()=>atlas.setSelection(null))});</script></section>
+<section id="forbindelser" class="v18-atlas" aria-labelledby="h-forbindelser"><link rel="stylesheet" href="assets/v5-atlas/atlas-canvas.css"><h2 id="h-forbindelser">Se forbindelserne</h2><p class="connections-intro">Teknologi står sjældent alene. AI kræver chips, datacentre og strøm — og de samme selskaber kan bidrage flere steder. Prikkerne viser selskaberne, samlet i temaer. Peg på et tema for at fremhæve det, og klik for at gå på opdagelse.</p><div id="living-map"></div><script type="module">import {createLivingAtlas} from "./assets/v5-atlas/atlas-living.mjs";import model from "./assets/v5-atlas/atlas-model.mjs";const sti={"chips": "temaer/chips.html", "energi": "temaer/energi.html", "datacenter": "temaer/datacenter.html", "platforme": "temaer/platforme.html", "fysisk-ai": "temaer/fysisk-ai.html", "raastoffer": "temaer/raastoffer.html", "space": "temaer/rumfart.html", "fintech": "temaer/fintech.html", "krypto": "temaer/krypto.html", "software": "temaer/software.html", "sundhed": "temaer/sundhed.html", "kvante": "temaer/kvante.html"};const atlas=createLivingAtlas(document.querySelector("#living-map"),{model,simpleConnections:true,introOnly:true,onLine:id=>{if(sti[id])location.href=sti[id]},reducedMotion:matchMedia("(prefers-reduced-motion: reduce)").matches});document.querySelectorAll('[data-map-visning]').forEach(a=>{a.addEventListener('pointerenter',()=>atlas.setSelection(a.dataset.mapVisning));a.addEventListener('pointerleave',()=>atlas.setSelection(null));a.addEventListener('focus',()=>atlas.setSelection(a.dataset.mapVisning));a.addEventListener('blur',()=>atlas.setSelection(null))});</script></section>
 <section id="ai-rejsen" class="review-journey"></section><section id="virksomhedsfaser" class="v18-faser" aria-labelledby="h-faser">
 <h2 id="h-faser">Hvornår bliver teknologien til en forretning?</h2>
 <p class="v18-ingress">Den samme teknologi kan være et lovende forsøg i ét selskab og en stor forretning i et andet. Vælg en fase og se, hvad du skal forstå om kunderne, økonomien og næste skridt.</p>

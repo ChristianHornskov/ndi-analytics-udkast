@@ -17,6 +17,16 @@ def polish(dest):
     for path in dest.rglob('*.html'):
         text=path.read_text(encoding='utf8')
         rel='../' if path.parent!=dest else ''
+        if path.name=='tech.html':
+            text=text.replace('id="h-forbindelser">Se forbindelserne</h2>', 'id="h-forbindelser">Se forbindelserne</h2><p class="connections-intro">Teknologi står sjældent alene. AI kræver chips, datacentre og strøm — og de samme selskaber kan bidrage flere steder. Prikkerne viser selskaberne, samlet i temaer. Peg på et tema for at fremhæve det, og klik for at gå på opdagelse.</p>')
+            text=text.replace('sm-liste sm-temaliste', 'sm-liste sm-temaliste vis-alle')
+            cross=re.search(r'<div class="tech-other-paths">.*?</div>',text,re.S)
+            if cross:
+                text=text.replace(cross[0],'')
+                text=text.replace('<nav class="sm-gruppe" aria-labelledby="sm-h-selskaber">',cross[0]+'<nav class="sm-gruppe" aria-labelledby="sm-h-selskaber">',1)
+
+            text=re.sub(r'<button class="sm-vis-flere"[^>]*>.*?</button>', '', text, flags=re.S)
+
         # Short local asset paths also work on Windows preview servers with MAX_PATH.
         for raw in set(re.findall(r'(?:\.\./)?assets/img/v5-temaer/[^"\s<>]+\.(?:svg|webp|png|jpg)',text)):
             asset=(path.parent/raw).resolve()
@@ -63,7 +73,7 @@ def polish(dest):
             if choices:trail+='<nav class="up-shortcuts" aria-label="På denne side">'+''.join(choices)+'</nav>'
             text=re.sub(r'(<main\b[^>]*>)',lambda m:m[0]+trail,text,count=1)
         if path.name!='index.html' or path.parent!=dest:
-            text=text.replace('</head>',f'<link rel="stylesheet" href="{rel}assets/css/journey-polish.css?v=20261031c"></head>',1)
+            text=text.replace('</head>',f'<link rel="stylesheet" href="{rel}assets/css/journey-polish.css?v=20261031d"></head>',1)
             text=text.replace('</body>',f'<script defer src="{rel}assets/js/journey-polish.js?v=20261031c"></script></body>',1)
         # Real YouTube thumbnails for existing click-to-play videos. Keep player handlers intact.
         page=html.fromstring(text)

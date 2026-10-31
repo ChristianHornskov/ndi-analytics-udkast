@@ -8,3 +8,28 @@ main select{max-width:100%;min-height:42px;padding:8px 30px 8px 12px;border:1px 
 /* Real posters retain one existing play control and video duration. */
 .vid-play.up-thumbnail-play{position:relative;overflow:hidden;isolation:isolate;background:#10232b!important}.vid-play.up-thumbnail-play .up-video-thumbnail{position:absolute!important;inset:0;width:100%!important;height:100%!important;object-fit:cover;display:block;z-index:-1}.vid-play.up-thumbnail-play .vid-ikon{position:absolute;z-index:1;box-shadow:0 2px 22px #0008}.vid-play.up-thumbnail-play .vid-tid{z-index:2;background:#071015cc;padding:3px 7px;border-radius:4px}
 .up-data-date{font-size:12px;line-height:1.6;color:var(--muted,#63757b);margin:12px 0 20px;font-variant-numeric:tabular-nums}
+
+/* Tech: compact navigation and one continuous illustrated AI story. */
+.review-tech #sidemenu .sm-gruppe{margin:12px 0!important}
+.review-tech #sidemenu .sm-link{min-height:30px;padding-top:5px!important;padding-bottom:5px!important;font-size:13px;line-height:1.4}
+.review-tech #sidemenu .sm-overskrift{margin-bottom:5px}
+.review-tech #sidemenu .tech-other-paths{gap:7px;margin:10px 16px 12px;padding-top:10px}
+.review-tech #sidemenu .sm-temaliste>li{display:block}
+.connections-intro{max-width:760px;font-size:17px;line-height:1.65;color:var(--c-muted,var(--c-text));margin:12px 0 22px}
+#ai-rejsen .zc{border:1px solid var(--zc-line);border-radius:20px;overflow:hidden;margin-top:18px}
+#ai-rejsen .zc-reader{padding:0 28px 28px;background:var(--zc-bg)}
+#ai-rejsen .zc-reader .zc-card{max-width:none;padding:22px 0 0;border:0;border-top:1px solid var(--zc-line);border-radius:0;box-shadow:none;background:transparent;backdrop-filter:none}
+#ai-rejsen .zc-reader .zc-card h3{font-size:clamp(23px,3vw,30px)}
+#ai-rejsen .zc-controls{border:0;background:transparent;gap:6px;padding:0}
+#ai-rejsen .zc-controls button{width:44px;height:44px;min-height:44px;font-size:23px}
+@media(max-width:800px),(pointer:coarse){.review-tech #sidemenu .sm-link{min-height:44px;padding-top:9px!important;padding-bottom:9px!important}}
+@media(max-width:600px){#ai-rejsen .zc-reader{padding:0 18px 22px}.connections-intro{font-size:16px}}
+
+@media(min-width:801px) and (pointer:fine){
+.review-tech #sidemenu .sm-top{padding:12px 16px 8px}
+.review-tech #sidemenu .sm-top .logo-felt{max-width:125px}
+.review-tech #sidemenu .sm-tilbage{min-height:30px;padding-block:5px;margin-bottom:4px;font-size:11px}
+.review-tech #sidemenu .sm-gruppe{margin:8px 0!important}
+.review-tech #sidemenu .sm-overskrift{padding-block:5px;margin-block:0 4px}
+.review-tech #sidemenu .sm-link{min-height:28px;padding-block:4px!important}
+}
