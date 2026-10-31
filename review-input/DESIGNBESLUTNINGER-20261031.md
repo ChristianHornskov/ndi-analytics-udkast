@@ -15,7 +15,8 @@ Christians svar i chatten er styrende. D = Designbygger, C = Critiquito; numrene
 | D9 / C9: omkostninger | Eksisterende uændret opstilling udtrykkeligt godkendt. |
 | D10 / C11: klasse/udlodninger | Ny grafisk tidslinje godkendt. Samme totalafkastserie og bekræftede ex-datoer; tabel bevares som præcis aflæsning. |
 | D11: vigtig information | Afventer afsluttende complianceomgang, som Christian har udskudt. Ikke et endeligt designfravalg. |
-| C10: metode | Stadig til vurdering. Påstand om automatisk opdatering hvert femte minut må ikke bruges om det statiske review. |
+| C10: metode | Procesvisningen integreret med korrekte oplysninger om det faste reviewudtræk; eksisterende detaljer og kilder bevares. Ingen påstand om automatisk opdatering hvert femte minut. |
 
 ## Kontrol
 Mobilkort kontrolleret ved 390 px: seks perioder, positive/negative farver, sortering begge retninger, søgning, tomt resultat, selskabslink og kursoplysninger. Desktop 1280 px: 11 kolonner og skjulte mobilkort. Geografifilter kontrolleret. Fysisk AI's lys-tema-kontrast rettet. Hero og udlodningsfigur bruger rapportserien, ikke mockuppens tegnede kurve.
+

@@ -78,6 +78,12 @@
     document.querySelectorAll('#drawdown > p').forEach(p=>{if(p.textContent.startsWith('Datoerne i grafen'))p.textContent='Fold listen ud for at se dato og størrelse for hver nedtur. En nedtur slutter, når den tidligere top genvindes. Den aktuelle nedturs bund kan ændre sig.';});
     const rolling=document.getElementById('rolling-chart');if(rolling&&!document.getElementById('analysis-rolling-guide')){const p=document.createElement('p');p.id='analysis-rolling-guide';p.className='analysis-explain';p.textContent='Flyt starttidspunktet én dag ad gangen: hvert punkt viser det afkast, en investering havde givet over de foregående 12 måneder. Det gør det tydeligt, hvor meget resultatet afhænger af, hvornår man investerede.';rolling.before(p);}
 
+    const methodHost=document.getElementById('method-content');
+    if(methodHost&&!document.getElementById('analysis-data-path')){
+      const path=document.createElement('div');path.id='analysis-data-path';
+      path.innerHTML='<p class="analysis-explain">Fra rapport til figur: afkast og beholdninger har hver sin dato. Derfor viser vi begge datoer, så du kan se, hvilket grundlag du undersøger.</p><ol class="analysis-data-path"><li><span>01</span><strong>Fundmarket</strong><p>Rapporter med fondens kurser og beholdninger.</p></li><li><span>02</span><strong>Fælles datagrundlag</strong><p>Kurser, positioner og dokumenterede udlodninger.</p></li><li><span>03</span><strong>Kontrol</strong><p>Datoer og afkast afstemmes med de angivne kilder.</p></li><li><span>04</span><strong>Denne visning</strong><p>Et fast reviewudtræk. Siden henter ikke nye rapporter automatisk.</p></li></ol>';
+      methodHost.prepend(path);
+    }
     const da=day=>day.split('-').reverse().join('.');
     document.getElementById('analysis-date').textContent='PMINDI · Afkast til '+da(data.funds[0].performanceAsOf)+' · Beholdning pr. '+da(data.positionsAsOf||data.asOf);
     document.querySelectorAll('#method p').forEach(p=>{if(p.textContent.startsWith('Data kommer fra Fundmarkets rapporter via'))p.textContent='Denne testversion bruger et fast udtræk af Fundmarkets rapporter og de kontrollerede datafiler. Afkast følger den officielle kursdato; beholdninger følger rapportdatoen. Siden opdaterer ikke sig selv til en ny dataversion.';});

@@ -18,12 +18,16 @@ Delrapporter, tests og commits afslutter ikke opgaven. Fortsæt uafhængige auto
 - Rettet søgningens gamle callback, som ellers genindførte en forældet firekolonners tabel.
 - Desktop 1280 px: oprindelig tabel med 11 kolonner, ingen mobilkort. Ingen vandret sideoverflow i mobilkontrollen.
 
-## Åbne beslutninger
-- Ny grafisk top godkendt og implementeret; mobilkontrol pågår.
+## Senest afsluttet og til visuel vurdering
+- Ny grafisk top godkendt og implementeret; kontrolleret ved 390 og 1280 px.
 - Ny grafisk udlodningstidslinje godkendt og implementeret med bekræftede datoer.
 - Porteføljeknappens illustration afventer visuel vurdering.
-- Metodeforslaget vurderes separat; mockuppens påstand om opdatering hvert femte minut må ikke videreføres til det statiske review.
+- Metodeforslagets procesvisning er indarbejdet med korrekte oplysninger om fast reviewudtræk; eksisterende metode- og kildeoplysninger bevares.
 
 ## Afgrænsning
 Kun reviewgren. Ingen main-merge, Wix, Azure, nye datakilder eller afsluttende compliancegennemgang. Ingen fysisk iPhone/Safari-test.
+
+
+## Afsluttende kontrol
+19 automatiske tests og 5 medietests bestået. JavaScript-syntaks kontrolleret. To dokumenterede udlodningsmarkører verificeret i browser; gammel dublet skjult. Ingen vandret overflow ved 390 px. Fysisk Safari/Wix ikke testet. Implementeringsomgangen er klar til Christians visuelle review; ingen liveudgivelse.
 
