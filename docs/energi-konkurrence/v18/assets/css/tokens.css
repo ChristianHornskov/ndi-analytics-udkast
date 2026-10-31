@@ -117,3 +117,18 @@
 @media (max-width: 599.98px) {
   :root { --page-pad: var(--sp-4); --gutter: var(--sp-4); }
 }
+
+
+:root, :root[data-tema="mørk"], :root[data-tema="lys"] {
+  --knap-hoejde: 48px;
+  --knap-hoejde-min: 44px;
+  --knap-radius: 5px;
+  --knap-radius-chip: 999px;
+  --knap-kant-bredde: 1px;
+  --knap-pad: 0 20px;
+  --knap-pad-chip: 0 16px;
+  --knap-fs: 14px;
+  --knap-fw: 600;
+  --knap-fokus: 2px solid var(--v5-gold, #f5ee9e);
+  --knap-fokus-afstand: 2px;
+}

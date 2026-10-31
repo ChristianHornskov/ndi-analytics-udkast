@@ -152,9 +152,8 @@
           <div class="v18t-hero-tekst">
             <p class="kicker">Et af de <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer i NewDeal Invest</p>
             <h1 id="h-side">Rumfart</h1>
-            <p class="v18t-under">Satellitter giver internet og billeder af Jorden. Raketter bringer dem derop.</p>
-            <p>En opsendelse er én forretning. Satellitforbindelser og billeder af Jorden er andre. Temaet samler selskaber i fonden, der bygger raketter og satellitter, og selskaber, der bruger satellitter.</p>
-            <p class="v18t-spm"><span class="lille">Spørgsmålet, der skiller selskaberne ad</span>Skal produktet op i rummet, sende noget ned til Jorden eller længere ud?</p>
+            <p class="v18t-under">Er produktet en opsendelse, en forbindelse eller data?</p>
+            <p>En opsendelse er én forretning. Satellitforbindelser og billeder af Jorden er andre. Følg de tre retninger i kortet, og gå videre til selskaberne bag dem.</p>
             <ul aria-label="Gå til en retning i tegningen" class="v18t-ret">
 <li><a data-dir="op" href="#cq-rum"><svg aria-hidden="true" focusable="false" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M12 20V5M6 11l6-6 6 6"></path></g></svg>
 <span><b>Op</b><span>Det, der skal op</span></span></a></li>
@@ -167,6 +166,7 @@
           </div>
           <div class="v18t-foto v18-ramme"><figure class="tema-foto tema-foto--tonet" style="max-width:600px"><img src="../fotos/rumfart.webp" width="600" height="400" alt="Rumfærgen Atlantis letter (STS-125)." loading="lazy" decoding="async" style="max-width:600px"><figcaption class="foto-kredit">Foto: NASA</figcaption></figure></div>
         </div>
+        
         <section class="v18-stortal" aria-labelledby="h-andel">
             <div class="v18-stortal-tal">
               <h2 class="sr" id="h-andel">Temaets andel af fonden</h2>
@@ -204,132 +204,6 @@
         <p class="hint hint--fri">Tryk på et selskab for at se mere om det.</p>
       </section>
       <template id="tpl-tl"><li><a class="tl-raekke" data-link-selskab href="#"><span class="sm-logo" aria-hidden="true" data-f="forbogstav"></span><span class="tl-navn" data-f="navn"></span><span class="pos-bar" aria-hidden="true"><span data-fbar></span></span><span class="tl-tal" data-f="andel" data-fmt="pct"></span></a></li></template><template id="tpl-mini"><span data-fbar></span></template>
-
-      <section class="sektion" id="retninger" aria-labelledby="h-retninger">
-        <header class="sektion-hoved">
-          <p class="sektion-kicker"><svg class="ik ik--s" aria-hidden="true"><use href="#t-rumfart"/></svg>Op, ned og ud</p>
-          <h2 class="sektion-titel" id="h-retninger">Alle <span data-tal="temaer#rumfart.antal" data-fmt="antal" data-en="selskab" data-fl="selskaber">…  selskaber</span> i temaet</h2>
-          <p class="sektion-intro">Temaet er delt i tre. Op: raketter og satellitter. Ned: billeder, data og forbindelse fra rummet. Ud: fartøjer til Månen.</p>
-        </header>
-        <div class="rf-gitter">
-          <article class="kort panel rf-gruppe" aria-labelledby="h-rf-op">
-            <header class="panel-hoved"><div><p class="rf-retning">Op</p><h3 class="panel-titel" id="h-rf-op">Raketter og satellitter</h3></div><span class="rf-gsum"><span data-tal="grupper.rumfart:op.andel" data-fmt="pct">…   %</span><span class="lille"> af fonden</span></span></header>
-            <details class="fold-ud fold-liste" data-aaben-bred><summary><span data-tal="grupper.rumfart:op.antal" data-fmt="se">Se de …  selskaber</span></summary>
-            <div class="rf-under">
-                <h4 class="rf-under-titel"><span>Opsendelse</span><span class="rf-sum"><span data-tal="grupper.rumfart:op:1.andel" data-fmt="pct">…   %</span></span></h4>
-                <p>En raket bringer satellitter og udstyr op i kredsløb om Jorden.</p>
-                <ul class="tema-liste tema-liste--taet" data-liste="grupper.rumfart:op:1.selskaber" data-skabelon="tpl-tl"></ul>
-              </div><div class="rf-under">
-                <h4 class="rf-under-titel"><span>Satellitter og platforme</span><span class="rf-sum"><span data-tal="grupper.rumfart:op:2.andel" data-fmt="pct">…   %</span></span></h4>
-                <p>En satellit har strøm, styring og radio og det udstyr, den skal bruge. Selskaberne bygger satellitter og dele til dem.</p>
-                <ul class="tema-liste tema-liste--taet" data-liste="grupper.rumfart:op:2.selskaber" data-skabelon="tpl-tl"></ul>
-              </div><div class="rf-under">
-                <h4 class="rf-under-titel"><span>Udstyr om bord og rumsystemer</span><span class="rf-sum"><span data-tal="grupper.rumfart:op:3.andel" data-fmt="pct">…   %</span></span></h4>
-                <p>Udstyr og systemer til rumfartøjer, både til forskning og forsvar.</p>
-                <ul class="tema-liste tema-liste--taet" data-liste="grupper.rumfart:op:3.selskaber" data-skabelon="tpl-tl"></ul>
-              </div><div class="rf-under">
-                <h4 class="rf-under-titel"><span>Raketdele og motorer</span><span class="rf-sum"><span data-tal="grupper.rumfart:op:4.andel" data-fmt="pct">…   %</span></span></h4>
-                <p>Dele til raketter, satellitter og fly. Howmet Aerospace laver mest dele til jetmotorer og fly.</p>
-                <ul class="tema-liste tema-liste--taet" data-liste="grupper.rumfart:op:4.selskaber" data-skabelon="tpl-tl"></ul>
-              </div>
-            </details>
-          </article><article class="kort panel rf-gruppe" aria-labelledby="h-rf-ned">
-            <header class="panel-hoved"><div><p class="rf-retning">Ned</p><h3 class="panel-titel" id="h-rf-ned">Billeder, data og forbindelse fra rummet</h3></div><span class="rf-gsum"><span data-tal="grupper.rumfart:ned.andel" data-fmt="pct">…   %</span><span class="lille"> af fonden</span></span></header>
-            <details class="fold-ud fold-liste" data-aaben-bred><summary><span data-tal="grupper.rumfart:ned.antal" data-fmt="se">Se de …  selskaber</span></summary>
-            <div class="rf-under">
-                <h4 class="rf-under-titel"><span>Billeder og data om Jorden</span><span class="rf-sum"><span data-tal="grupper.rumfart:ned:1.andel" data-fmt="pct">…   %</span></span></h4>
-                <p>Satellitter tager billeder og opfanger signaler fra Jorden. Planet Labs skriver, at dets satellitter fotograferer Jordens landområder hver dag.</p>
-                <ul class="tema-liste tema-liste--taet" data-liste="grupper.rumfart:ned:1.selskaber" data-skabelon="tpl-tl"></ul>
-              </div><div class="rf-under">
-                <h4 class="rf-under-titel"><span>Forbindelse fra rummet</span><span class="rf-sum"><span data-tal="grupper.rumfart:ned:2.andel" data-fmt="pct">…   %</span></span></h4>
-                <p>Satellitter sender tale og data til steder uden mobilmaster. AST SpaceMobile bygger et mobilnet i rummet, som almindelige telefoner kan bruge direkte.</p>
-                <ul class="tema-liste tema-liste--taet" data-liste="grupper.rumfart:ned:2.selskaber" data-skabelon="tpl-tl"></ul>
-              </div>
-            </details>
-          </article><article class="kort panel rf-gruppe" aria-labelledby="h-rf-ud">
-            <header class="panel-hoved"><div><p class="rf-retning">Ud</p><h3 class="panel-titel" id="h-rf-ud">Fartøjer til Månen</h3></div><span class="rf-gsum"><span data-tal="grupper.rumfart:ud.andel" data-fmt="pct">…   %</span><span class="lille"> af fonden</span></span></header>
-            <details class="fold-ud fold-liste" data-aaben-bred><summary><span data-tal="grupper.rumfart:ud.antal" data-fmt="se">Se de …  selskaber</span></summary>
-            <div class="rf-under">
-                <h4 class="rf-under-titel"><span>Månen</span><span class="rf-sum"><span data-tal="grupper.rumfart:ud:1.andel" data-fmt="pct">…   %</span></span></h4>
-                <p>Intuitive Machines bygger fartøjer, der lander på Månen, og har sendt dem dertil for NASA.</p>
-                <ul class="tema-liste tema-liste--taet" data-liste="grupper.rumfart:ud:1.selskaber" data-skabelon="tpl-tl"></ul>
-              </div>
-            </details>
-          </article>
-        </div>
-        <p class="kildelinje">Andele i PMINDI, den udgave af fonden, der udbetaler udbytte, pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span> (fondens data). Grupperne og teksterne er fra NewDeal Invests temaside om rumfart.</p>
-      </section>
-
-      <section class="sektion" id="forretning" aria-labelledby="h-forretning">
-        <header class="sektion-hoved">
-          <p class="sektion-kicker"><svg class="ik ik--s" aria-hidden="true"><use href="#i-forretning"/></svg>Hvor pengene kommer fra</p>
-          <h2 class="sektion-titel" id="h-forretning">Raketter er ikke hele forretningen.</h2>
-        </header>
-        <div class="gitter">
-          <article class="kort panel s6" aria-labelledby="h-rf-spacex">
-            <header class="panel-hoved"><h3 class="panel-titel" id="h-rf-spacex">SpaceX: mest Starlink i 2025, mest AI i 3. kvartal 2026</h3></header>
-            <p>I hele 2025 kom de fleste penge fra Starlink, altså internet fra satellitter. I 3. kvartal 2026 kom over halvdelen af omsætningen fra AI. AI-delen omfatter også det sociale medie X, som hører til SpaceX. AI-væksten kom ifølge selskabet især fra nye cloudaftaler (kunder lejer regnekraft i SpaceX’ datacentre), overtagelsen af Cursor (et program til at skrive kode) og flere abonnementer på Grok og X. Grok er selskabets AI-assistent. <a class="tekstlink tekstlink--tryk" href="../selskaber/spacex.html#forretning">Se tallene og forklaringen på SpaceX-siden</a>.</p>
-            <p class="lille">Kilder: <a class="tekstlink tekstlink--tryk" href="https://www.sec.gov/Archives/edgar/data/1181412/000162828026042639/spaceexplorationtechnologi.htm" target="_blank" rel="noopener">SpaceX’ prospekt af 12.06.2026<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"/></svg><span class="sr"> (åbner i nyt vindue)</span></a> (2025) og SpaceX’ regnskab for 3. kvartal 2026 (se SpaceX-siden).</p>
-          </article>
-          <article class="kort panel s6" aria-labelledby="h-rf-rklb">
-            <header class="panel-hoved"><h3 class="panel-titel" id="h-rf-rklb">Rocket Lab: 601,8 mio. dollar i 2025</h3></header>
-            <div class="delbar" aria-hidden="true"><span class="delbar-seg delbar-seg--0" style="--v:0.6693"></span><span class="delbar-seg delbar-seg--1" style="--v:0.3307"></span></div><ul class="delbar-liste"><li><span class="delbar-prik delbar-seg--0" aria-hidden="true"></span><span>Rumfartøjer og dele</span><strong>402,8 mio. dollar</strong></li><li><span class="delbar-prik delbar-seg--1" aria-hidden="true"></span><span>Opsendelser</span><strong>199,0 mio. dollar</strong></li></ul>
-            <p>Rocket Lab er kendt for sine raketter, men omkring to tredjedele af selskabets omsætning i 2025 kom fra at bygge rumfartøjer og dele.</p>
-            <p class="lille">Kilde: <a class="tekstlink tekstlink--tryk" href="https://www.sec.gov/Archives/edgar/data/1819994/000181999426000013/rklb-20251231.htm" target="_blank" rel="noopener">Rocket Labs årsrapport 2025<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"/></svg><span class="sr"> (åbner i nyt vindue)</span></a>.</p>
-          </article>
-        </div>
-        <figure class="kort foto-kort">
-          <img src="../assets/img/temaer/rumfart-marker-landsat.webp" alt="Marker i Kansas set fra en satellit: runde og firkantede felter i grønne og brune farver." width="600" height="400" loading="lazy">
-          <figcaption>Det, der kommer ned igen: marker i Kansas, set fra en satellit. Foto: NASA/USGS Landsat, offentligt domæne (<a class="tekstlink tekstlink--tryk" href="https://commons.wikimedia.org/wiki/File:Landsat_sees_crops_in_Kansas.jpg" target="_blank" rel="noopener">Wikimedia Commons<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"/></svg><span class="sr"> (åbner i nyt vindue)</span></a>).</figcaption>
-        </figure>
-      </section>
-
-      <section class="sektion" id="videoer" aria-labelledby="h-videoer">
-        <header class="sektion-hoved">
-          <p class="sektion-kicker"><svg class="ik ik--s" aria-hidden="true"><use href="#i-medier"/></svg>Se det selv</p>
-          <h2 class="sektion-titel" id="h-videoer">To videoer fra SpaceX</h2>
-        </header>
-        <div class="gitter video-raekke">
-          <article class="kort videokort-v3 s6">
-            <figure class="video-flade">
-              <img class="kun-moerk" src="../assets/img/video-falcon-heavy.svg" width="640" height="360" alt="" loading="lazy" decoding="async"><img class="kun-lys" src="../assets/img/video-falcon-heavy-lys.svg" width="640" height="360" alt="" loading="lazy" decoding="async">
-              <figcaption class="kredit">Illustration: NewDeal Invest. Tegningen er ikke taget fra videoen.</figcaption>
-            </figure>
-            <div class="videokort-tekst">
-              <p class="kicker">Video fra SpaceX · 2018</p>
-              <h3 class="panel-titel">Den første flyvning med Falcon Heavy</h3>
-              <p>Se den første flyvning med Falcon Heavy fra 2018.</p>
-              <a class="knap knap--rolig" href="https://www.youtube.com/watch?v=A0FZIwabctw" target="_blank" rel="noopener"><svg class="ik ik--s" aria-hidden="true"><use href="#i-medier"/></svg>Se videoen på YouTube<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"/></svg><span class="sr"> (åbner i nyt vindue)</span></a>
-            </div>
-          </article><article class="kort videokort-v3 s6">
-            <figure class="video-flade">
-              <img class="kun-moerk" src="../assets/img/video-starlink.svg" width="640" height="360" alt="" loading="lazy" decoding="async"><img class="kun-lys" src="../assets/img/video-starlink-lys.svg" width="640" height="360" alt="" loading="lazy" decoding="async">
-              <figcaption class="kredit">Illustration: NewDeal Invest. Tegningen er ikke taget fra videoen.</figcaption>
-            </figure>
-            <div class="videokort-tekst">
-              <p class="kicker">Video fra SpaceX · 2022</p>
-              <h3 class="panel-titel">En opsendelse med 53 satellitter</h3>
-              <p>Følg en mission, der sender 53 Starlink-satellitter op.</p>
-              <a class="knap knap--rolig" href="https://www.youtube.com/watch?v=KzpVUXxdc68" target="_blank" rel="noopener"><svg class="ik ik--s" aria-hidden="true"><use href="#i-medier"/></svg>Se videoen på YouTube<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"/></svg><span class="sr"> (åbner i nyt vindue)</span></a>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="sektion" id="vide" aria-labelledby="h-vide">
-        <header class="sektion-hoved">
-          <p class="sektion-kicker"><svg class="ik ik--s" aria-hidden="true"><use href="#i-risiko"/></svg>Det skal man vide</p>
-          <h2 class="sektion-titel" id="h-vide">Tre ting om temaet</h2>
-        </header>
-        <div class="kort panel">
-          <dl class="vide-liste">
-            <div><dt>Forsvar fylder</dt><dd>Seks af selskaberne beskriver sig selv som rum- og forsvarsselskaber. Deres kunder er ofte stater og militær, og den slags kontrakter kan ændre sig. Selskabernes egne beskrivelser: <span class="kilde-chips"><a class="kilde-chip" href="https://www.sec.gov/Archives/edgar/data/2086587/000162828026019923/yorkspacesystemsinc10-k.htm" target="_blank" rel="noopener">York Space Systems<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"/></svg><span class="sr"> (åbner i nyt vindue)</span></a><a class="kilde-chip" href="https://www.sec.gov/Archives/edgar/data/1819810/000181981026000029/rdw-20251231.htm" target="_blank" rel="noopener">Redwire<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"/></svg><span class="sr"> (åbner i nyt vindue)</span></a><a class="kilde-chip" href="https://www.sec.gov/Archives/edgar/data/1860160/000119312526116309/fly-20251231.htm" target="_blank" rel="noopener">Firefly Aerospace<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"/></svg><span class="sr"> (åbner i nyt vindue)</span></a><a class="kilde-chip" href="https://www.sec.gov/Archives/edgar/data/1788060/000162828026016543/voyg-20251231.htm" target="_blank" rel="noopener">Voyager Technologies<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"/></svg><span class="sr"> (åbner i nyt vindue)</span></a><a class="kilde-chip" href="https://www.sec.gov/Archives/edgar/data/1750704/000162828026032207/hawkeye360424b4.htm" target="_blank" rel="noopener">HawkEye 360<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"/></svg><span class="sr"> (åbner i nyt vindue)</span></a><a class="kilde-chip" href="https://www.sec.gov/Archives/edgar/data/2040127/000204012726000014/krmn-20251231.htm" target="_blank" rel="noopener">Karman Space &amp; Defense<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"/></svg><span class="sr"> (åbner i nyt vindue)</span></a></span></dd></div>
-            <div><dt>Få store selskaber</dt><dd><span data-navn="temaer#rumfart.stoerste">…</span> er temaets største selskab med <span data-tal="temaer#rumfart.stoerste.andel" data-fmt="pct">…   %</span> af fonden. De fem største selskaber, <span data-tal="grupper.rumfart:top5.selskaber" data-fmt="navne">…</span>, er tilsammen <span data-tal="grupper.rumfart:top5.andel" data-fmt="pct">…   %</span> af fonden. Hele temaet er <span data-tal="temaer#rumfart.andel" data-fmt="pct">…   %</span>. Temaet afhænger derfor meget af, hvordan det går for få selskaber.</dd></div>
-            <div><dt>Grænsetilfælde</dt><dd>Nogle selskaber er kun delvist rumfart. Howmet Aerospace laver mest dele til fly. Starfighters Space sender i dag ikke raketter op. SpaceX har også en AI-del. Kilder: <span class="kilde-chips"><a class="kilde-chip" href="https://www.sec.gov/Archives/edgar/data/4281/000000428126000012/hwm-20251231.htm" target="_blank" rel="noopener">Howmet Aerospace, årsrapport 2025<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"/></svg><span class="sr"> (åbner i nyt vindue)</span></a><a class="kilde-chip" href="https://www.sec.gov/Archives/edgar/data/1947016/000106299326004648/forms1a.htm" target="_blank" rel="noopener">Starfighters Space, prospekt<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"/></svg><span class="sr"> (åbner i nyt vindue)</span></a><a class="kilde-chip" href="https://www.sec.gov/Archives/edgar/data/1181412/000162828026042639/spaceexplorationtechnologi.htm" target="_blank" rel="noopener">SpaceX, prospekt<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"/></svg><span class="sr"> (åbner i nyt vindue)</span></a></span></dd></div>
-          </dl>
-          <p class="kildelinje">Andele i PMINDI, den udgave af fonden, der udbetaler udbytte, pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span> (fondens data).</p>
-        </div>
-      </section>
 
       
 <div class="v5f v5f-rumfart" data-v5-fortaelling="rumfart"><section aria-labelledby="cq-rum-h" class="cq-rum" id="cq-rum">
@@ -435,6 +309,37 @@
 </div></section></div>
 <section class="sektion v18-proces" data-proces-slot="rumfart" hidden></section>
       
+      <section class="sektion" id="videoer" aria-labelledby="h-videoer">
+        <header class="sektion-hoved">
+          <p class="sektion-kicker"><svg class="ik ik--s" aria-hidden="true"><use href="#i-medier"/></svg>Se det selv</p>
+          <h2 class="sektion-titel" id="h-videoer">To videoer fra SpaceX</h2>
+        </header>
+        <div class="gitter video-raekke">
+          <article class="kort videokort-v3 s6">
+            <figure class="video-flade">
+              <img class="kun-moerk" src="../assets/img/video-falcon-heavy.svg" width="640" height="360" alt="" loading="lazy" decoding="async"><img class="kun-lys" src="../assets/img/video-falcon-heavy-lys.svg" width="640" height="360" alt="" loading="lazy" decoding="async">
+              <figcaption class="kredit">Illustration: NewDeal Invest. Tegningen er ikke taget fra videoen.</figcaption>
+            </figure>
+            <div class="videokort-tekst">
+              <p class="kicker">Video fra SpaceX · 2018</p>
+              <h3 class="panel-titel">Den første flyvning med Falcon Heavy</h3>
+              <p>Se den første flyvning med Falcon Heavy fra 2018.</p>
+              <a class="knap knap--rolig" href="https://www.youtube.com/watch?v=A0FZIwabctw" target="_blank" rel="noopener"><svg class="ik ik--s" aria-hidden="true"><use href="#i-medier"/></svg>Se videoen på YouTube<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"/></svg><span class="sr"> (åbner i nyt vindue)</span></a>
+            </div>
+          </article><article class="kort videokort-v3 s6">
+            <figure class="video-flade">
+              <img class="kun-moerk" src="../assets/img/video-starlink.svg" width="640" height="360" alt="" loading="lazy" decoding="async"><img class="kun-lys" src="../assets/img/video-starlink-lys.svg" width="640" height="360" alt="" loading="lazy" decoding="async">
+              <figcaption class="kredit">Illustration: NewDeal Invest. Tegningen er ikke taget fra videoen.</figcaption>
+            </figure>
+            <div class="videokort-tekst">
+              <p class="kicker">Video fra SpaceX · 2022</p>
+              <h3 class="panel-titel">En opsendelse med 53 satellitter</h3>
+              <p>Følg en mission, der sender 53 Starlink-satellitter op.</p>
+              <a class="knap knap--rolig" href="https://www.youtube.com/watch?v=KzpVUXxdc68" target="_blank" rel="noopener"><svg class="ik ik--s" aria-hidden="true"><use href="#i-medier"/></svg>Se videoen på YouTube<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"/></svg><span class="sr"> (åbner i nyt vindue)</span></a>
+            </div>
+          </article>
+        </div>
+      </section>
       <section class="sektion sektion--x" id="x-opslag" aria-labelledby="h-x-opslag" data-x-tema data-x-rel="../" data-x-selskaber="[{&quot;isin&quot;: &quot;US84615Q1031&quot;, &quot;navn&quot;: &quot;SpaceX&quot;, &quot;slug&quot;: &quot;spacex&quot;}, {&quot;isin&quot;: &quot;US72703X1063&quot;, &quot;navn&quot;: &quot;Planet Labs&quot;, &quot;slug&quot;: &quot;planet-labs&quot;}, {&quot;isin&quot;: &quot;US46125A1007&quot;, &quot;navn&quot;: &quot;Intuitive Machines&quot;, &quot;slug&quot;: &quot;intuitive-machines&quot;}, {&quot;isin&quot;: &quot;US00217D1000&quot;, &quot;navn&quot;: &quot;AST SpaceMobile&quot;, &quot;slug&quot;: &quot;ast-spacemobile&quot;}, {&quot;isin&quot;: &quot;US09263B2079&quot;, &quot;navn&quot;: &quot;BlackSky&quot;, &quot;slug&quot;: &quot;blacksky&quot;}, {&quot;isin&quot;: &quot;US9870841007&quot;, &quot;navn&quot;: &quot;York Space Systems&quot;, &quot;slug&quot;: &quot;york-space-systems&quot;}, {&quot;isin&quot;: &quot;CA55293N1096&quot;, &quot;navn&quot;: &quot;MDA Space&quot;, &quot;slug&quot;: &quot;mda-space&quot;}, {&quot;isin&quot;: &quot;US7731211089&quot;, &quot;navn&quot;: &quot;Rocket Lab&quot;, &quot;slug&quot;: &quot;rocket-lab&quot;}, {&quot;isin&quot;: &quot;US75776W1036&quot;, &quot;navn&quot;: &quot;Redwire&quot;, &quot;slug&quot;: &quot;redwire&quot;}, {&quot;isin&quot;: &quot;US31816X1063&quot;, &quot;navn&quot;: &quot;Firefly Aerospace&quot;, &quot;slug&quot;: &quot;firefly-aerospace&quot;}, {&quot;isin&quot;: &quot;US80401C1009&quot;, &quot;navn&quot;: &quot;Satellogic&quot;, &quot;slug&quot;: &quot;satellogic&quot;}, {&quot;isin&quot;: &quot;US85529M1045&quot;, &quot;navn&quot;: &quot;Starfighters Space&quot;, &quot;slug&quot;: &quot;starfighters-space&quot;}, {&quot;isin&quot;: &quot;US8485603067&quot;, &quot;navn&quot;: &quot;Spire Global&quot;, &quot;slug&quot;: &quot;spire-global&quot;}, {&quot;isin&quot;: &quot;US92892B1035&quot;, &quot;navn&quot;: &quot;Voyager Technologies&quot;, &quot;slug&quot;: &quot;voyager-technologies&quot;}, {&quot;isin&quot;: &quot;US4202011056&quot;, &quot;navn&quot;: &quot;HawkEye 360&quot;, &quot;slug&quot;: &quot;hawkeye-360&quot;}, {&quot;isin&quot;: &quot;US4432011082&quot;, &quot;navn&quot;: &quot;Howmet Aerospace&quot;, &quot;slug&quot;: &quot;howmet-aerospace&quot;}, {&quot;isin&quot;: &quot;US4859241048&quot;, &quot;navn&quot;: &quot;Karman Space &amp; Defense&quot;, &quot;slug&quot;: &quot;karman-space-defense&quot;}, {&quot;isin&quot;: &quot;US46269C1027&quot;, &quot;navn&quot;: &quot;Iridium Communications&quot;, &quot;slug&quot;: &quot;iridium-communications&quot;}]">
         <header class="sektion-hoved">
           <h2 class="sektion-titel" id="h-x-opslag">Det skriver de på X</h2>
