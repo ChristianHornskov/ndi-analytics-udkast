@@ -3,23 +3,8 @@
   "use strict";
   var reduceret = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)");
 
-   
-  var svg = document.querySelector(".hero-svg"), pause = document.querySelector(".hero-pause");
-  if (svg && svg.pauseAnimations) {
-    var stoppet = false;
-    var saet = function (stop) {
-      stoppet = stop;
-      if (stop) svg.pauseAnimations(); else svg.unpauseAnimations();
-      if (pause) {
-        pause.setAttribute("aria-pressed", String(stop));
-        pause.querySelector("use").setAttribute("href", stop ? "#i-afspil" : "#i-pause");
-        pause.querySelector(".hero-pause-tekst").textContent = stop ? "Start animation" : "Stop animation";
-      }
-    };
-    if (pause) { pause.hidden = false; pause.addEventListener("click", function () { saet(!stoppet); }); }
-    if (reduceret && reduceret.matches) { svg.setCurrentTime(12); saet(true); }
-    if (reduceret && reduceret.addEventListener) reduceret.addEventListener("change", function (e) { saet(e.matches); });
-  }
+  // Hero-animationen (.hero-svg / .hero-pause) styres af topanimation.js.
+  // Den tidligere styring her gav dobbelte klik-handlere på samme knap.
 
    
   var rod = document.getElementById("spotlight");
