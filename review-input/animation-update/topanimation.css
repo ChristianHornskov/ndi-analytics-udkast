@@ -1,0 +1,84 @@
+
+.ta-udsnit { position: absolute; inset: 0; }
+.ta-udsnit > .ta-svg { display: block; width: 100%; height: 100%; }
+
+@media (max-width: 599.98px), (max-height: 479.98px) and (orientation: landscape) {
+  .kort--hero.kort--topanim .hero-billede--svg.ta-baand {
+    display: block; position: relative; inset: auto; width: 100%; height: auto;
+    aspect-ratio: 540 / 240; max-height: 150px; background: var(--c-space); overflow: hidden;
+  }
+  .kort--hero.kort--topanim::before { content: none; display: none; }
+  .ta-baand .ta-udsnit { position: relative; inset: auto; height: 100%; aspect-ratio: 9 / 4; max-width: 100%; margin: 0 auto; overflow: hidden; }
+  .ta-baand .ta-udsnit > .ta-svg {
+    position: absolute; max-width: none;
+    width: calc(1200 / var(--uw) * 100%); height: calc(600 / var(--uh) * 100%);
+    left: calc(var(--ux) / var(--uw) * -100%); top: calc(var(--uy) / var(--uh) * -100%);
+  }
+  .kort--topanim .hero-tekst { margin-top: 0; padding-top: var(--sp-4); }
+  .kort--topanim .kredit--hero { position: static; align-self: flex-start; margin: 0 var(--sp-4) var(--sp-4); }
+}
+
+
+
+
+@media (max-width: 599.98px) {
+  .gitter--stub > .kort--topanim, .gitter--overblik > .kort--topanim { order: -1; }
+}
+
+.kort--topanim .kredit--hero, .kort--topanim .hero-tekst .kicker { font-size: .8125rem; }
+
+.kort--topanim .ta-knap, .kort--topanim .hero-pause { border-color: var(--c-text-3); }
+
+.kort--hvad { grid-column: 1 / -1; }
+.kort--hvad .hero-titel { margin-top: 0; }
+
+@media (min-width: 1024px) {
+  .gitter--stub > .kort--topanim { grid-column: 1 / span 8; grid-row: 1; }
+  .gitter--stub > .kort--hvad { grid-column: 1 / span 8; grid-row: 2; }
+  .gitter--stub > .stub-andel:has(~ .kort--topanim) { grid-row: 1 / span 2; align-self: start; }
+}
+
+@media (min-width: 600px) and (min-height: 480px), (orientation: portrait) and (min-width: 600px) {
+  .kort--hero.kort--topanim:not(:has(#ta-spacex)) .hero-billede--svg.ta-baand {
+    display: block; position: relative; inset: auto; width: 100%; height: auto;
+    aspect-ratio: 540 / 240; max-height: 220px; background: var(--c-space); overflow: hidden;
+  }
+  .kort--hero.kort--topanim:not(:has(#ta-spacex))::before { content: none; display: none; }
+  .kort--topanim:not(:has(#ta-spacex)) .ta-baand .ta-udsnit { position: relative; inset: auto; height: 100%; aspect-ratio: 9 / 4; max-width: 100%; margin: 0 auto; overflow: hidden; }
+  .kort--topanim:not(:has(#ta-spacex)) .ta-baand .ta-udsnit > .ta-svg {
+    position: absolute; max-width: none;
+    width: calc(1200 / var(--uw) * 100%); height: calc(600 / var(--uh) * 100%);
+    left: calc(var(--ux) / var(--uw) * -100%); top: calc(var(--uy) / var(--uh) * -100%);
+  }
+  .kort--topanim:not(:has(#ta-spacex)) .hero-tekst { margin-top: 0; padding-top: var(--sp-5, 24px); }
+  .kort--topanim:not(:has(#ta-spacex)) .kredit--hero { position: static; align-self: flex-start; margin: 0 var(--sp-5, 24px) var(--sp-4); }
+}
+
+@media (min-width: 600px) {
+  :root[data-tema="lys"] .kort--topanim:has(#ta-spacex) .hero-tekst {
+    position: relative; z-index: 1;
+    background: radial-gradient(ellipse 75% 70% at 35% 55%, color-mix(in srgb, var(--c-space) 82%, transparent) 0%, transparent 100%);
+  }
+}
+
+.ta-ude, .ta-ude * { animation-play-state: paused !important; }
+
+/* Kontrolknap: en lille ikonknap (44 x 44 px trykflade) i hjørnet af illustrationen
+   i stedet for en tekstknap, så den ikke dominerer. Navnet ligger i knappens
+   skjulte tekst og title. Knappen vises på alle bredder, også mobil. */
+.kort--hero.kort--topanim .hero-pause {
+  width: 44px; height: 44px; min-height: 44px; padding: 0; gap: 0; justify-content: center;
+  background: color-mix(in srgb, var(--c-space) 72%, transparent);
+}
+.kort--topanim .hero-pause .hero-pause-tekst {
+  position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
+}
+.kort--hero.kort--topanim:not(:has(#ta-spacex)) .hero-pause { top: var(--sp-2); right: var(--sp-2); bottom: auto; left: auto; }
+@media (max-width: 599.98px), (max-height: 479.98px) and (orientation: landscape) {
+  .kort--hero.kort--topanim .hero-pause:not([hidden]) { display: inline-flex; top: var(--sp-2); right: var(--sp-2); bottom: auto; left: auto; }
+}
+
+/* Tryk eller klik på illustrationen afspiller igen eller pauser (samme som knappen). */
+@media (prefers-reduced-motion: no-preference) {
+  .kort--topanim.ta-aktiv .ta-baand { cursor: pointer; -webkit-tap-highlight-color: transparent; }
+}

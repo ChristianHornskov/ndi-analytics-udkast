@@ -32,6 +32,22 @@ class ReviewTests(unittest.TestCase):
             self.assertTrue((DEST/href).exists())
         self.assertEqual(len(tree.xpath('//*[@class="phase-source"]')),5)
 
+    def test_animation_integration(self):
+        reference=html.fromstring((DEST/'animationer/spacex.svg').read_bytes())
+        inline=html.parse(str(DEST/'selskaber/spacex.html')).xpath('//*[@id="ta-spacex"]')[0]
+        self.assertEqual(html.tostring(reference,with_tail=False).replace(b"\r\n",b"\n"),html.tostring(inline,with_tail=False).replace(b"\r\n",b"\n"))
+        animated=0
+        for path in (DEST/'selskaber').glob('*.html'):
+            tree=html.parse(str(path))
+            scripts=tree.xpath('//script[contains(@src,"topanimation.js")]/@src')
+            if scripts:
+                animated+=1
+                self.assertEqual(len(scripts),1)
+                self.assertIn('?v=20261031-animation1',scripts[0])
+                for href in tree.xpath('//link[contains(@href,"topanimation.css")]/@href'):
+                    self.assertIn('?v=20261031-animation1',href)
+        self.assertEqual(animated,21)
+
     def test_only_widget_loads_fund_selection(self):
         for name in ['index.html','tech.html','selskaber/spacex.html']:
             tree=html.parse(str(DEST/name))

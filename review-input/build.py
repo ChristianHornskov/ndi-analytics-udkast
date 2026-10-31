@@ -151,6 +151,20 @@ def build():
             save(page,path)
     from homepage_widget import build_homepage_widget
     build_homepage_widget(DEST)
+    # Reviewed animation overlay; original export 5 stays intact.
+    update=Path(__file__).with_name('animation-update')
+    for name,folder in [('topanimation.js','assets/js'),('pointer.js','assets/js'),('topanimation.css','assets/css'),('spacex.svg','animationer')]:
+        shutil.copyfile(update/name,DEST/folder/name)
+    import re
+    for path in (DEST/'selskaber').glob('*.html'):
+        original=path.read_text(encoding='utf-8')
+        text=original
+        if path.name=='spacex.html':
+            svg=html.tostring(html.fromstring((update/'spacex.svg').read_bytes()),encoding='unicode',with_tail=False)
+            text,count=re.subn(r'<svg\b[^>]*\bid="ta-spacex".*?</svg>',lambda m:svg,text,flags=re.S)
+            assert count==1, 'SpaceX hero must be replaced exactly once'
+        text=re.sub(r'((?:src|href)="[^"?]*(?:topanimation\.js|pointer\.js|topanimation\.css))(?:\?[^"]*)?"',r'\1?v=20261031-animation1"',text)
+        if text!=original: path.write_text(text,encoding='utf-8')
     print('Built isolated preview:', DEST)
 
 if __name__ == '__main__': build()
