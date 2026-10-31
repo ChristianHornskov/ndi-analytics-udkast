@@ -1,10 +1,24 @@
 /* Preview-only composition. Original homepage graph, data and styling remain intact. */
 (() => {
+  function highlightAccounts(){
+    document.querySelectorAll('#class-choice .preview-tax').forEach(note=>{
+      if(note.querySelector('.class-account-focus'))return;
+      const text=note.textContent;
+      const focus=text.startsWith('Typisk relevant')?'frie midler eller aktiesparekonto':'pension, VSO og selskaber';
+      const at=text.indexOf(focus);
+      if(at<0)return;
+      const emphasis=document.createElement('b');emphasis.className='class-account-focus';emphasis.textContent=focus;
+      note.replaceChildren(document.createTextNode(text.slice(0,at)),emphasis,document.createTextNode(text.slice(at+focus.length)));
+    });
+  }
+  const classChoice=document.getElementById("class-choice");
+  if(classChoice)new MutationObserver(highlightAccounts).observe(classChoice,{childList:true,subtree:true});
   function adapt() {
     if (!data || !window.REVIEW_FUNDS) return;
     const f = data.funds[selected];
     const summary = window.REVIEW_FUNDS.find(item => item.id.toLowerCase() === f.id);
     if (!summary) return;
+    highlightAccounts();
     const u = summary.u;
     const all = u.perioder.find(p => p.id === 'all');
     document.getElementById('headline').innerHTML =

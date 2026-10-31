@@ -11,7 +11,7 @@ Tilladte statusser: mangler; under arbejde; verificeret færdigt; afventer Chris
 ## Brugerkrav og tværgående leverance
 | ID | Krav | Status | Bevis eller næste handling |
 |---|---|---|---|
-| U01 | Widget med eksisterende foretrukket graf, kalender, klasseskift og kopierbar ISIN | under arbejde | Klasseskift tidligere browserkontrolleret; samlet slutkontrol af begge klasser og ISIN udestår. |
+| U01 | Widget med eksisterende foretrukket graf, kalender, klasseskift og kopierbar ISIN | verificeret færdigt | Begge klasser og begge ISIN-kopieringer browserkontrolleret. Desktopkalender og lodret mobilkalender; periodevalg1år/sidenstart og mobilgraf verificeret. Kontotyper fremhævet efter Christians seneste ønske; overlever klasseskift. |
 | U02 | To visuelle indgange med korrekt destination: porteføljeanalyse og tech | verificeret færdigt | Christian godkendte viste illustration med tre selskaber/vægte. Begge href kontrolleret og sider åbnet under brugerrejsekontrol. |
 | U03 | Fordybelsesdata kun PMINDI | under arbejde | portfolio.js fastholder selected=0; kontrollér øvrige indgange. |
 | U04 | Porteføljeoverblik før selskabsliste; grafisk top | verificeret færdigt | f0f2df6; 390/1280 px browserkontrol, PMINDI-serie bevaret. |
@@ -40,7 +40,7 @@ D=Designbygger, C=Critiquito. Kilder under ../design-review-read/codex-overdrage
 | S05 D5 C6 | Energi: strømafbrydelse, kæde og tidslinje | verificeret færdigt | section_visuals.py: kildeprosa bevaret, tre led og tidsforløb; støttefunktioner ikke fejlagtigt seriekoblet. Browser 390/1280, lyst/mørkt. |
 | S06 D6 C9 | Fysisk AI: hjul/propeller/robotters størrelsesforhold | verificeret færdigt | Fem-mod-en-blokgraf indarbejdet efter forslag. Skelner Teslas samlede omsætning fra værdien af installerede robotter; ikke fremstillet som fondsvægt eller robotomsætning. Desktop/mobil390 kontrolleret. |
 | S07 D7 C4 | NVIDIA: problem, produkt, bruger og rolle | verificeret færdigt | section_visuals.py: problem → GPU/netværk/CUDA → brugere. Originale kundedefinitioner/kilder bevaret i detaljer. Mobil/mørk og desktop/lys+mørk kontrolleret. |
-| S08 D8 C10 | Widget: klassernes pengestrøm/kontotyper | under arbejde | Widget må skifte klasse, mens fordybelsen kun bruger PMINDI. Kontrollér indhold og valgt løsning. |
+| S08 D8 C10 | Widget: klassernes pengestrøm/kontotyper | verificeret færdigt | Christian så forslag og eksisterende widget og valgte eksplicit den kompakte klassevælger. Eksisterende kontotypeord fremhævet diskret efter opfølgende ønske; intet nyt indhold eller anbefaling tilføjet. Mobil og klasseskift verificeret. |
 | S09 D9 | Chipsnyheder hængt på kædens trin | fravalgt med Christians godkendelse | Christian fandt forslaget for komplekst; behold rigtige læselige X-opslag, ikke erstatninger med resuméer. |
 | S10 D10 | Årsrapportafstemning som kildekort/tidslinje | verificeret færdigt | section_visuals.py: uændret annual-evidence.json. PMINDI desktop/mobil; widgetklasseskift kontrollerer PMINDIAKK -5,6 %, PDF104, korrekt datoorden og uafklaret kildeforskel. Skift tilbage PMINDI korrekt. JS-syntaks og 20 tests bestået. |
 | S11 C1 | Dataproces og foldbare formelforklaringer | verificeret færdigt | Proces 225c798; seks formelafsnit nu foldbare med originaltekst/kilder bevaret. Desktop Sharpe og mobil390 månedsafkast åbnet/lukket. Omkostninger uændret efter brugerens valg. |
@@ -61,7 +61,7 @@ Kilder: samme mappe, smaafejl/. ID bevares ved afslutning. D og C nummererer hve
 | F06 | D6 C8 dobbelt vigtig-information-overskrift | verificeret færdigt | Dubletoverskrift skjules kun inde i den eksisterende navngivne informationssektion. Browser bekræfter én synlig overskrift; alt indhold bevaret. |
 | F07 | D7 Alphabet-andel/kildelink | verificeret færdigt | Alphabet 0,00 % bekræftet i dagens-tal.json som tidligere position. Indramning inkl. inset-shadow fjernet og SEC-link venstrestillet. Browserkontrolleret. |
 | F08 | D9 D10 C3 fasegraf | verificeret færdigt | Alle fem faseknapper kontrolleret ved 390 px; aria-pressed og tekst/selskab skifter korrekt. Hele grafen inklusive begge kurver og labels er synlig på mobil. |
-| F09 | C4 widgetknapper/Nasdaqfarve | under arbejde | Sammenhold med Christians godkendte original; forelæg evt. fravalg frem for at antage godkendelse. |
+| F09 | C4 widgetknapper/Nasdaqfarve | verificeret færdigt | Begge destinationskort godkendt af Christian. Widgetdesktop/mobil: Nasdaq i oprindelig orange, ingen gul ramme eller toggle; korrekt fælles slutdato og synlig serie. |
 | F10 | C7 52-ugers-farver | fravalgt med Christians godkendelse | Christian valgte oprindelig flerfarveskala. |
 | F11 | C9 tech-krydshenvisning | verificeret færdigt | Browser: hele den forklarende tech-krydshenvisning åbner tech.html med overskriften Teknologi hænger sammen. Mobil/desktop layout bevaret. |
 | F12 | C10 sidehoved/faner | verificeret færdigt | Porteføljemenu rettet til minimum44px; browser måler alle seks links44px og aktiv markør skifter fra Afstand til toppen til Datagrundlag. Techmenu tidligere kontrolleret44px. |

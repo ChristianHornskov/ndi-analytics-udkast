@@ -65,3 +65,5 @@ Læs SAMLET-LEVERANCE.md før næste handling. Denne fil erstatter ikke tidliger
 - F11/F12 slutkontrolleret: tech-bridge navigerer korrekt; porteføljenavigation har nu44px trykflader og aktiv sektionsmarkør ved scroll.20 tests bestået efter rettelsen.
 - Chips mobil Husker-panel og desktop Maskiner-valg verificeret; isometrisk scene vises ved1512px, kompakt trinliste ved1280px. Ingen lampenode i renderet grafik. S01 visuelt gennemset i lys desktop, resterende kontrol fortsætter.
 - Brugerens seneste usageoplysning er14%; ingen nye redesigns, resterende kontrol og dokumenteret aflevering prioriteres.
+
+- S08: Christian valgte kompakt klassevælger efter billedsammenligning. Opfølgende ønskede han fremhævede kontotyper; eksisterende ord nu diskret gule/fede, øvrig tekst uændret. Browsermobil og klasseskift verificeret (en efterrender-overskrivning blev opdaget og rettet). U01 og F09 nu verificeret.
