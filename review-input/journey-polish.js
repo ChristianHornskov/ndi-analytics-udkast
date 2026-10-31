@@ -15,7 +15,7 @@
  if(document.documentElement.classList.contains('portfolio-analysis')){
   fetch('../data/company-routes.json').then(r=>r.json()).then(routes=>{
    const lookup=Object.fromEntries(Object.entries(routes).map(([k,v])=>[k.toLocaleLowerCase('da'),v]));
-   function link(){document.querySelectorAll('#holdings tr').forEach(row=>{const cell=row.cells[0];if(!cell||cell.querySelector('.up-company-link'))return;const node=[...cell.childNodes].find(n=>n.nodeType===3&&n.textContent.trim());if(!node)return;const name=node.textContent.trim();const href=lookup[name.toLocaleLowerCase('da')];if(!href)return;const a=document.createElement('a');a.href=href;a.className='up-company-link';a.textContent=name;node.replaceWith(a)})}
+   function link(){document.querySelectorAll('#holdings tr').forEach(row=>{const cell=row.cells[0];if(!cell||cell.querySelector('.up-company-link'))return;const node=[...cell.childNodes].find(n=>n.nodeType===3&&n.textContent.trim());if(!node)return;const name=node.textContent.trim();const href=lookup[name.toLocaleLowerCase('da')];if(!href)return;const a=document.createElement('a');a.href=href;a.className='up-company-link';a.textContent=name;node.replaceWith(a)});document.dispatchEvent(new Event('ndi-holdings-linked'))}
    link();const host=document.getElementById('holdings');if(host)new MutationObserver(link).observe(host,{childList:true,subtree:true});
   }).catch(()=>{});
  }

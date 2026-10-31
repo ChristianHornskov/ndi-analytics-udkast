@@ -1,32 +1,29 @@
 # Arbejdsliste — 31. oktober 2026
 
 ## Arbejdsform
-Delrapporter, tests og commits afslutter ikke den samlede opgave. Fortsæt næste autoriserede punkt. Hvis Codex anbefaler en gammel version frem for et nyt forslag, skal Christian først se før-/efterbilleder og godkende valget. Uafhængigt arbejde fortsætter imens.
+Delrapporter, tests og commits afslutter ikke opgaven. Fortsæt uafhængige autoriserede punkter. Gamle designs, der foretrækkes frem for forslag, kræver Christians billedbaserede godkendelse.
 
-## Godkendte designvalg
-- Nøgletal og risiko: behold den kompakte gamle opstilling (Christians svar i chatten).
-- Omkostninger: behold den gamle uændret (Christians svar i chatten).
-- Mobilkalender: måneder lodret, år i kolonner, grøn/rød.
-- Nedtursgraf: Claudes nye kurve med tydelige bundpunkter.
-- Afstand til 52-ugers top: behold desktopdiagrammet; mobil får vandrette vægtbjælker med den oprindelige farveskala.
+## Godkendt og indarbejdet
+- Kompakte eksisterende nøgletal/risiko og uændrede omkostninger.
+- Lodret mobilkalender, rød/grøn; Claudes nedtursgraf.
+- 52-ugers-visning: desktopdiagram, mobile vægtbjælker i oprindelig farveskala.
+- Selskaber: nye mobilkort med røde/grønne afkast; sorterbar tabel på computer.
+- Sektorer: ét felt pr. sektor, ikke et felt for hvert selskab.
 
-## Rettet tidligere
-- Navigation, selskabslinks, datolinje, kvantebeløb og mediers fejltilstande (f2e5d5f).
-- Tættere techmenu, alle 12 temaer, forklaring til prikdiagram og samlet AI-scene (1977922).
-- Mobile bredder og tekstoverløb (cd886ee).
+## Seneste arbejde
+- Claude-integration committed/pushet som 2d10201; 19 tests og 5 medietests bestod.
+- Geografiens vægtbjælker bruger samme kontrollerede data og fælles 0–100 %-skala; filtre bevaret.
+- Fysisk AI: inaktive grupper er læselige i lyst tema.
+- Mobilkort: alle seks afkastperioder, topafstand, kort historik og kursdato bevaret. Sortering, selskabslinks, søgning og tomt resultat kontrolleret ved 390 px.
+- Rettet søgningens gamle callback, som ellers genindførte en forældet firekolonners tabel.
+- Desktop 1280 px: oprindelig tabel med 11 kolonner, ingen mobilkort. Ingen vandret sideoverflow i mobilkontrollen.
 
-## Under integration og kontrol
-- Claude 871aa329 integreres selektivt gennem claude_integration.py, ikke ved at overskrive siderne samlet.
-- Fasegraf, fysisk AI, eToro, omsætningsvisning og porteføljens kalender/nedture/52-ugers-visning er kontrolleret i browseren på mobil; udvalgte elementer også desktop.
-- Widgetens mobilkalender bruger samme data og skifter korrekt mellem fondsklasserne. Porteføljeknappen har et nyt forslag baseret på de tre største faktiske positioner.
-- Krypto: rettet integrationsmål til selve størrelsesfiguren #kr-andele. Naboafsnittet #fod skal ikke udskiftes ved en fejl.
-- 18 automatiske test og 5 medie-runtime-test bestod før den sidste kryptojustering. Skal køres efter sidste ændring.
+## Åbne beslutninger
+- Ny grafisk top godkendt og implementeret; mobilkontrol pågår.
+- Ny grafisk udlodningstidslinje godkendt og implementeret med bekræftede datoer.
+- Porteføljeknappens illustration afventer visuel vurdering.
+- Metodeforslaget vurderes separat; mockuppens påstand om opdatering hvert femte minut må ikke videreføres til det statiske review.
 
-## Åbent
-1. Browserkontrol af krypto og rumfart efter integration; regression på SoFi og SpaceX og kontrol i lyst tema.
-2. Alle 22 Grok-porteføljeforslag er set. Resterende fravalg er anbefalinger, ikke godkendte beslutninger. Vis relevante før-/efterbilleder til Christian før gamle versioner vælges endeligt.
-3. Saml integrationsnoter, kør afsluttende tests og commit/push reviewgrenen.
-4. Porteføljeknappens nye illustration afventer Christians visuelle vurdering.
+## Afgrænsning
+Kun reviewgren. Ingen main-merge, Wix, Azure, nye datakilder eller afsluttende compliancegennemgang. Ingen fysisk iPhone/Safari-test.
 
-## Uden for denne omgang
-Main-merge, Wix-udgivelse, Azure/driftsændringer, nye datakilder og afsluttende compliance-gennemgang.

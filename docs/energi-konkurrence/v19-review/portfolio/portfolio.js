@@ -30,8 +30,39 @@
     const entries=groups.map(([name,value],i)=>({name,value,i}));
     const tiles=partition(entries,0,0,1000,440);
     box.innerHTML='<p class="analysis-explain">Jo større et felt er, desto mere fylder sektoren blandt fondens aktier. Selskaber i forskellige sektorer kan stadig være afhængige af den samme teknologi. Vælg et felt eller et navn for at se selskaberne.</p><div class="analysis-sector-map"><svg viewBox="0 0 1000 440" role="group" aria-label="Sektorer fordelt efter deres vægt blandt aktierne">'+tiles.map(t=>'<g tabindex="0" role="button" data-sector="'+esc(t.name)+'" aria-label="'+esc(sectorNames[t.name]||t.name)+' '+pct(t.value)+'"><title>'+esc(sectorNames[t.name]||t.name)+' · '+pct(t.value)+' af fonden</title><rect x="'+(t.x+3)+'" y="'+(t.y+3)+'" width="'+Math.max(0,t.w-6)+'" height="'+Math.max(0,t.h-6)+'" rx="8" fill="'+colors[t.i%colors.length]+'"/>'+(t.w>105&&t.h>95?'<text x="'+(t.x+18)+'" y="'+(t.y+38)+'" fill="#0b2029" font-size="'+(t.w<160?13:t.w<250?17:23)+'">'+esc(sectorNames[t.name]||t.name)+'</text><text x="'+(t.x+18)+'" y="'+(t.y+72)+'" fill="#0b2029" font-size="30">'+pct(t.value)+'</text>':'')+'</g>').join('')+'</svg></div><div class="analysis-sector-key">'+entries.map(t=>'<button type="button" data-sector="'+esc(t.name)+'"><i style="background:'+colors[t.i%colors.length]+'"></i><span>'+esc(sectorNames[t.name]||t.name)+'</span><strong>'+pct(t.value)+'</strong></button>').join('')+'</div>';
-    box.querySelectorAll('[data-sector]').forEach(b=>{b.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();b.click();}};b.onclick=()=>{sectorFilter=b.dataset.sector;countryFilter='';holdings();document.getElementById('holdings').closest('article').scrollIntoView({behavior:'smooth',block:'start'});};});
+    box.querySelectorAll('[data-sector]').forEach(b=>{b.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();b.click();}};b.onclick=()=>{sectorFilter=b.dataset.sector;countryFilter='';holdings();document.getElementById('all-holdings-title').scrollIntoView({behavior:'smooth',block:'start'});};});
     document.getElementById('sectorNote').textContent='Andel af hele fondens formue. Klik på en sektor for at se selskaberne. Leverandørens sektorinddeling; kontanter er ikke med.';
+  }
+  function returnFigure(f,id,distributions=false){
+    const points=f.data.filter(p=>Number.isFinite(p.total)).map(p=>({d:p.d,v:p.total}));
+    if(!points.length)return '<p>Afkastserie mangler.</p>';
+    if(f.inception<points[0].d)points.unshift({d:f.inception,v:100});
+    const base=points[0].v;points.forEach(p=>p.v=(p.v/base-1)*100);
+    const compact=window.matchMedia('(max-width:700px)').matches;
+    const W=compact?360:760,H=compact?260:340,L=compact?45:52,R=compact?12:22,T=distributions?70:24,B=42;
+    const first=Date.parse(points[0].d),last=Date.parse(points.at(-1).d),lo=Math.min(0,...points.map(p=>p.v)),hi=Math.max(1,...points.map(p=>p.v));
+    const x=d=>L+(Date.parse(d)-first)/(last-first||1)*(W-L-R),y=v=>T+(hi-v)/(hi-lo)*(H-T-B);
+    const line=points.map((p,i)=>(i?'L':'M')+x(p.d).toFixed(2)+','+y(p.v).toFixed(2)).join(' ');
+    const ticks=Array.from({length:Math.floor(hi/50)+1},(_,i)=>i*50).map(v=>{return '<line x1="'+L+'" x2="'+(W-R)+'" y1="'+y(v)+'" y2="'+y(v)+'" stroke="#30454e"/><text x="'+(L-9)+'" y="'+(y(v)+5)+'" text-anchor="end" fill="#b5c8ce" font-size="14">'+n(v,0)+' %</text>';}).join('');
+    const markers=distributions?f.dividends.filter(d=>d.status==='confirmed'&&d.exDate>=points[0].d&&d.exDate<=points.at(-1).d).map(d=>'<g><title>Ex-dato '+esc(d.exDate)+': '+n(d.amount,2)+' kr. pr. bevis</title><line x1="'+x(d.exDate)+'" x2="'+x(d.exDate)+'" y1="45" y2="'+(H-B)+'" stroke="#eee69b" stroke-dasharray="4 5"/><rect x="'+(x(d.exDate)-45)+'" y="8" width="90" height="30" rx="9" fill="#eee69b"/><text x="'+x(d.exDate)+'" y="29" text-anchor="middle" fill="#102129" font-size="16">'+n(d.amount,2)+' kr.</text><circle cx="'+x(d.exDate)+'" cy="'+(H-B)+'" r="6" fill="#eee69b"/></g>').join(''):'';
+    return '<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="PMINDI totalafkast i procent, '+esc(points[0].d)+' til '+esc(points.at(-1).d)+(distributions?', med dokumenterede udlodninger':'')+'"><defs><linearGradient id="'+id+'-fill" x2="0" y2="1"><stop stop-color="#9bd6de" stop-opacity=".3"/><stop offset="1" stop-color="#9bd6de" stop-opacity="0"/></linearGradient></defs>'+ticks+'<path d="'+line+' L'+(W-R)+','+(H-B)+' L'+L+','+(H-B)+' Z" fill="url(#'+id+'-fill)"/><path d="'+line+'" fill="none" stroke="#9bd6de" stroke-width="3"/>'+markers+'<circle cx="'+(W-R)+'" cy="'+y(points.at(-1).v)+'" r="5" fill="#eee69b"/><text x="'+L+'" y="'+(H-10)+'" fill="#b5c8ce" font-size="14">'+esc(points[0].d)+'</text><text x="'+(W-R)+'" y="'+(H-10)+'" text-anchor="end" fill="#b5c8ce" font-size="14">'+esc(points.at(-1).d)+'</text></svg>';
+  }
+  function graphicalOverview(f,m){
+    if(!document.getElementById('analysis-hero-chart')){
+      const copy=document.createElement('div');copy.className='analysis-hero-copy';
+      [...intro.children].filter(el=>!el.classList.contains('analysis-paths')).forEach(el=>copy.appendChild(el));intro.appendChild(copy);
+      const figure=document.createElement('figure');figure.id='analysis-hero-chart';intro.appendChild(figure);
+    }
+    const figure=document.getElementById('analysis-hero-chart');
+    const content='<figcaption><span>Totalafkast i DKK<small>Med geninvesteret udbytte · '+esc(f.performanceAsOf)+'</small></span><strong>'+pct(m?.totalReturn)+'</strong></figcaption>'+returnFigure(f,'hero-return');
+    if(figure.innerHTML!==content)figure.innerHTML=content;
+    let panel=document.getElementById('analysis-distributions');
+    if(!panel){panel=document.createElement('section');panel.id='analysis-distributions';panel.className='panel analysis-distributions';}
+    const table='<table><thead><tr><th>Ex-dato</th><th>Betalingsdato</th><th>Kr. pr. bevis</th></tr></thead><tbody>'+f.dividends.filter(d=>d.status==='confirmed').map(d=>'<tr><td>'+esc(d.exDate)+'</td><td>'+esc(d.paymentDate)+'</td><td>'+n(d.amount,2)+'</td></tr>').join('')+'</tbody></table>';
+    const html='<span class="eyebrow">KLASSE OG UDLODNINGER</span><h2>Udloddende klasse</h2><p>PMINDI udbetaler udbytte. Kurven viser det samlede afkast, hvis udbyttet blev geninvesteret. De gule markører viser ex-datoen og udbyttet pr. bevis.</p><figure>'+returnFigure(f,'distribution-return',true)+'</figure><div class="analysis-distribution-details"><div>'+table+'</div><p>På ex-datoen fragår udlodningen normalt kursen. Det er ikke i sig selv et investeringstab. Kurven indeholder allerede geninvesteringen; udbyttet skal ikke lægges til igen.</p></div>';
+    if(panel.innerHTML!==html)panel.innerHTML=html;
+    const oldClass=[...document.querySelectorAll('#method-content .audit-addition')].find(el=>el.querySelector('h2')?.textContent==='Udloddende klasse'); if(oldClass)oldClass.hidden=true;
+    const risk=document.getElementById('risk');if(risk.nextElementSibling!==panel)risk.after(panel);
   }
   function arrange(){
     if(!data)return;
@@ -51,7 +82,7 @@
     document.getElementById('analysis-date').textContent='PMINDI · Afkast til '+da(data.funds[0].performanceAsOf)+' · Beholdning pr. '+da(data.positionsAsOf||data.asOf);
     document.querySelectorAll('#method p').forEach(p=>{if(p.textContent.startsWith('Data kommer fra Fundmarkets rapporter via'))p.textContent='Denne testversion bruger et fast udtræk af Fundmarkets rapporter og de kontrollerede datafiler. Afkast følger den officielle kursdato; beholdninger følger rapportdatoen. Siden opdaterer ikke sig selv til en ny dataversion.';});
     let cursor=menu;
-    for(const id of ['analysis-dashboard','preview-risk-summary','highs','portfolio','risk','method']){
+    for(const id of ['analysis-dashboard','preview-risk-summary','highs','portfolio','risk','analysis-distributions','method']){
       const section=document.getElementById(id);
       if(section){if(cursor.nextElementSibling!==section)cursor.after(section);section.hidden=false;cursor=section;}
     }
@@ -63,6 +94,7 @@
     if(holdingsPanel&&holdingsPanel.nextElementSibling!==bridge)holdingsPanel.after(bridge);
     const geoPanel=document.getElementById('geography-review');
     if(geoPanel&&bridge.nextElementSibling!==geoPanel)bridge.after(geoPanel);
+    graphicalOverview(f,m);
 
 
 
@@ -77,6 +109,23 @@
     const ordered=ps.slice().sort((a,b)=>{const av=value(a),bv=value(b);if(!Number.isFinite(av))return Number.isFinite(bv)?1:0;if(!Number.isFinite(bv))return -1;return (av-bv)*sortDirection;});
     return originalMarkup(ordered);
   };
+  function renderMobileHoldings(){
+    const body=document.getElementById('holdings'),table=body?.closest('table');if(!table)return;
+    const wrap=table.closest('.tablewrap')||table;wrap.classList.add('analysis-desktop-holdings');
+    let mobile=document.getElementById('analysis-mobile-holdings');
+    if(!mobile){mobile=document.createElement('div');mobile.id='analysis-mobile-holdings';mobile.className='analysis-mobile-holdings';wrap.before(mobile);}
+    const heads=[...table.querySelectorAll('thead th')].map(h=>h.textContent.replace(/[↕↓↑]/g,'').trim());
+    const maxWeight=Math.max(...data.funds[0].positions.map(p=>Number(p.weight)||0),1);
+    const options=[['weight','Vægt i fonden'],...periods.map(([key],i)=>[key,heads[4+i]])];
+    mobile.innerHTML='<div class="analysis-mobile-sort"><label for="mobile-holdings-sort">Sortér selskaber</label><select id="mobile-holdings-sort">'+options.map(([key,label])=>'<option value="'+key+'"'+(key===sortKey?' selected':'')+'>'+esc(label)+'</option>').join('')+'</select><button type="button" aria-label="Skift sorteringsretning">'+(sortDirection===-1?'Størst først ↓':'Mindst først ↑')+'</button></div><div class="analysis-holding-cards">'+[...body.rows].map(row=>{
+      const cells=[...row.cells];if(cells.length<5)return '<p class="analysis-empty">'+esc(row.textContent)+'</p>';
+      const value=parseFloat(cells[3].textContent.replace(',','.'));
+      return '<article class="analysis-holding-card"><div class="analysis-holding-title"><div>'+cells[0].innerHTML+'</div><strong>'+cells[3].innerHTML+'<small>af fonden</small></strong></div><div class="analysis-holding-weight" aria-hidden="true"><i style="width:'+Math.max(0,Math.min(100,value/maxWeight*100))+'%"></i></div><p class="analysis-holding-sector">'+cells[1].innerHTML+'</p><dl>'+cells.slice(4).map((cell,i)=>'<div><dt>'+esc(i===cells.length-5?'Under toppen':heads[i+4])+'</dt><dd class="'+(cell.classList.contains('analysis-up')?'analysis-up':cell.classList.contains('analysis-down')?'analysis-down':'')+'">'+cell.innerHTML+'</dd></div>').join('')+'</dl><details><summary>Kurs og handelsdato</summary><p>'+cells[2].innerHTML+'</p></details></article>';
+    }).join('')+'</div>';
+    mobile.querySelector('select').onchange=e=>{sortKey=e.target.value;holdings();};
+    mobile.querySelector('button').onclick=()=>{sortDirection=-sortDirection;holdings();};
+  }
+  document.addEventListener('ndi-holdings-linked',renderMobileHoldings);
   function decorateHoldings(){
     const body=document.getElementById('holdings'),table=body.closest('table');
     const headers=table.querySelectorAll('thead th');
@@ -86,12 +135,41 @@
     body.querySelectorAll('tr').forEach(row=>{periods.forEach((_,i)=>{const cell=row.cells[4+i];if(!cell)return;const v=Number(cell.textContent.replace(/[^0-9,.-]/g,'').replace(',','.'));if(cell.textContent.includes('%'))cell.classList.add(v>0?'analysis-up':v<0?'analysis-down':'analysis-flat');});const isin=row.cells[0]?.querySelector('small:last-child')?.textContent;const r=highData?.funds.find(f=>f.short===data.funds[0].short)?.rows.find(r=>r.isin===isin);const last=row.cells[row.cells.length-1],extra=supplement[isin];if(r?.status==='short_history'){last.innerHTML=Number.isFinite(extra?.distance)?pct(extra.distance)+'<small>Top siden '+esc(extra.start)+'</small>':'<span class="analysis-missing">Kort historik</span><small>Topkurs mangler i data</small>';}});
   }
   const originalHoldings=holdings;
-  holdings=function(){originalHoldings();decorateHoldings();arrange();};
+  holdings=function(){originalHoldings();decorateHoldings();renderMobileHoldings();arrange();};
+  document.getElementById('search').oninput=()=>holdings();
   const originalGeography=renderGeography;
-  renderGeography=function(){originalGeography();arrange();};
+  function decorateGeography(){
+    if(!data||!geography||geography.asOf!==data.asOf)return;
+    const rows=geography.funds[data.funds[0].id]||[];
+    const groups=sumBy(rows.filter(r=>r.status==='profile_found'),r=>r.country);
+    const weights=new Map(groups);
+    document.querySelectorAll('#geography-review .country-pick').forEach(button=>{
+      const weight=weights.get(button.dataset.hq);
+      if(!Number.isFinite(weight))return;
+      button.classList.add('analysis-country');
+      let track=button.querySelector('.analysis-country-track');
+      if(!track){track=document.createElement('i');track.className='analysis-country-track';track.setAttribute('aria-hidden','true');track.appendChild(document.createElement('i'));button.appendChild(track);}
+      track.firstChild.style.width=Math.max(0,Math.min(100,weight))+'%';
+    });
+    const map=document.getElementById('hq-map');
+    if(map&&!map.querySelector('.analysis-geo-guide')&&groups.length){
+      const lead=document.createElement('p');lead.className='analysis-geo-guide';
+      const largest=groups[0];lead.innerHTML='<strong>'+pct(largest[1])+'</strong><span>af fonden er i selskaber med hovedsæde i '+esc(countryLabel(largest[0]))+'.</span>';
+      map.prepend(lead);
+    }
+  }
+  renderGeography=function(){originalGeography();decorateGeography();arrange();};
+  window.addEventListener('resize',()=>requestAnimationFrame(arrange));
+  decorateGeography();
   if(data){attachWeek();holdings();sectors();arrange();}
   new MutationObserver(arrange).observe(main,{childList:true});
   // Same lazy map loader as the existing full view, now on the analysis page.
   fetch('world.geojson').then(r=>{if(!r.ok)throw Error('Kortdata mangler');return r.json()}).then(w=>{world=w;if(data&&geography)renderGeography();}).catch(()=>{});
 })();
+
+
+
+
+
+
 

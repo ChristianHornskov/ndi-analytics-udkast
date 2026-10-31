@@ -68,3 +68,6 @@
 @media(max-width:700px){.phase-company{gap:12px}.phase-company .phase-logo{flex-basis:60px;width:60px;height:60px;border-radius:13px}.review-tech .v18-faser-kurve{max-height:none;min-height:185px}.phase-identity strong{font-size:25px}}
 /* Keep the official logo inside its background plate, including light theme. */
 .logo-felt .ndi-logo{max-width:100%;height:auto;object-fit:contain;min-width:0;flex-shrink:1}
+/* Keep unselected technology categories legible while a detail panel is open. */
+:root[data-tema="lys"] .cq-fa[data-sel] .fa-tm__g:not(.cq-fa--on){opacity:1}
+:root[data-tema="lys"] .cq-fa .fa-tm__g.cq-fa--on .fa-tm__gb{outline:2px solid #436b72;outline-offset:-3px}
