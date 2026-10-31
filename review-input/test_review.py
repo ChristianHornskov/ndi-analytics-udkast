@@ -5,6 +5,16 @@ from lxml import html
 from build import SOURCE, DEST
 
 class ReviewTests(unittest.TestCase):
+    def test_chip_chain_delivery(self):
+        tree=html.parse(str(DEST/'temaer/chips.html'))
+        self.assertEqual(len(tree.xpath('//*[@id="ck-kaede"]')),1)
+        self.assertFalse(tree.xpath('//*[@id="cq-kaede"]'))
+        data=json.loads(tree.xpath('//*[@id="ck-data"]')[0].text)
+        self.assertEqual(len(data),8)
+        self.assertEqual(len(tree.xpath('//*[contains(concat(" ",@class," ")," ck-punkt-knap ")]')),8)
+        links=tree.xpath('//head/link/@href')
+        self.assertGreater(next(i for i,s in enumerate(links) if 'chipkaede.css' in s),next(i for i,s in enumerate(links) if 'review.css' in s))
+        self.assertTrue(tree.xpath('//script[contains(@src,"chipkaede.js") and @defer]'))
     def test_two_distinct_destinations(self):
         code=(DEST/'widget/preview-adapter.js').read_text(encoding='utf-8')
         self.assertIn('href="../portfolio/index.html"',code)

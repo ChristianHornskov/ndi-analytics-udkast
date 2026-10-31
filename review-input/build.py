@@ -167,6 +167,23 @@ def build():
             assert count==1, 'SpaceX hero must be replaced exactly once'
         text=re.sub(r'((?:src|href)="[^"?]*(?:topanimation\.js|pointer\.js|topanimation\.css))(?:\?[^"]*)?"',r'\1?v=20261031-animation1"',text)
         if text!=original: path.write_text(text,encoding='utf-8')
+    # Isolated chip-chain delivery, regenerated from its own checked-in data.
+    import runpy
+    chip=Path(__file__).with_name('chipkaede')
+    runpy.run_path(str(chip/'build.py'),run_name='__main__')
+    chip_assets=DEST/'assets/chipkaede'
+    chip_assets.mkdir(exist_ok=True)
+    for name in ['chipkaede.css','chipkaede.js']:
+        shutil.copyfile(chip/name,chip_assets/name)
+    path=DEST/'temaer/chips.html'
+    page=html.parse(str(path)).getroot()
+    old=page.xpath('//section[@id="cq-kaede"]')
+    assert len(old)==1, 'Expected exactly one original chip chain'
+    replacement=next(node for node in html.fragments_fromstring((chip/'chipkaede.html').read_text(encoding='utf-8')) if getattr(node,'tag',None)=='section')
+    old[0].getparent().replace(old[0],replacement)
+    page.find('head').append(html.fragment_fromstring('<link rel="stylesheet" href="../assets/chipkaede/chipkaede.css?v=20261031-1">'))
+    page.find('body').append(html.fragment_fromstring('<script defer src="../assets/chipkaede/chipkaede.js?v=20261031-1"></script>'))
+    save(page,path)
     print('Built isolated preview:', DEST)
 
 if __name__ == '__main__': build()

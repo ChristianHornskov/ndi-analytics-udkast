@@ -1,0 +1,674 @@
+[
+ {
+  "slug": "tegnes",
+  "navn": "Tegnes",
+  "sub": "Software til chipdesign",
+  "tekst": "En chip begynder som en tegning. Ingeniører tegner og afprøver den i særlig software, før noget bliver lavet. Her står de to selskaber, der laver softwaren.",
+  "selskaber": [
+   {
+    "navn": "Synopsys",
+    "andre": "",
+    "d": "Laver software, som ingeniører bruger til at tegne og afprøve chips, og færdige byggeklodser til chips.",
+    "g": "Software til chipdesign",
+    "logo": null,
+    "mono": "S"
+   },
+   {
+    "navn": "Cadence Design Systems",
+    "andre": "",
+    "d": "Laver software, som ingeniører bruger til at tegne chips og elektronik.",
+    "g": "Software til chipdesign",
+    "logo": null,
+    "mono": "CD"
+   }
+  ],
+  "andel": 0.617
+ },
+ {
+  "slug": "materialer",
+  "navn": "Materialer",
+  "sub": "Skiver og kemi",
+  "tekst": "Det hele starter med skiven, waferen. Nogle af selskaberne her laver skiver af andre halvledermaterialer end silicium. Fabrikken skal også bruge meget rene materialer og kemikalier.",
+  "selskaber": [
+   {
+    "navn": "Soitec",
+    "andre": "",
+    "d": "Laver særlige skiver (wafers), hvor et tyndt isolerende lag ligger under siliciummet.",
+    "g": "Materialer og skiver",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/FR0013227113.webp",
+    "mono": null
+   },
+   {
+    "navn": "IQE",
+    "andre": "",
+    "d": "Laver skiver med særlige halvledermaterialer til lys og trådløs kommunikation.",
+    "g": "Materialer og skiver",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/GB0009619924.webp",
+    "mono": null
+   },
+   {
+    "navn": "AXT",
+    "andre": "",
+    "d": "Laver skiver af særlige materialer, fx indiumfosfid og galliumarsenid.",
+    "g": "Materialer og skiver",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/US00246W1036.webp",
+    "mono": null
+   },
+   {
+    "navn": "Entegris",
+    "andre": "",
+    "d": "Leverer materialer og procesløsninger til chipindustrien.",
+    "g": "Materialer og skiver",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/US29362U1043.webp",
+    "mono": null
+   },
+   {
+    "navn": "Wolfspeed",
+    "andre": "",
+    "d": "Laver materialer og komponenter af siliciumkarbid til strømelektronik.",
+    "g": "Materialer og skiver",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/US97785W1062.webp",
+    "mono": null
+   }
+  ],
+  "andel": 6.17
+ },
+ {
+  "slug": "maskiner",
+  "navn": "Maskiner",
+  "sub": "Udstyr til chipfabrikker",
+  "tekst": "På fabrikken bygges chippen op lag på lag. Maskiner lægger tynde lag på skiven og belyser et mønster på den. At belyse mønstret kaldes litografi. Derefter ætser maskinerne mønstret ud, dvs. fjerner det materiale, der ikke skal være der, og skiven bliver renset. Undervejs bliver der målt, for en lille fejl kan ødelægge mange chips.",
+  "selskaber": [
+   {
+    "navn": "LPKF Laser & Electronics",
+    "andre": "",
+    "d": "Laver laserudstyr til fremstilling. En del af udstyret bruges til glas, når chips pakkes. Resten bruges til printplader, solceller og lasersvejsning.",
+    "g": "Procesudstyr og måling",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/DE0006450000.webp",
+    "mono": null
+   },
+   {
+    "navn": "Nova",
+    "andre": "",
+    "d": "Laver måleudstyr, der kontrollerer processen undervejs i chipfabrikken.",
+    "g": "Procesudstyr og måling",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/IL0010845571.webp",
+    "mono": null
+   },
+   {
+    "navn": "Tokyo Electron",
+    "andre": "",
+    "d": "Laver udstyr til chipfabrikker.",
+    "g": "Procesudstyr og måling",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/JP3571400005.webp",
+    "mono": null
+   },
+   {
+    "navn": "ASM International",
+    "andre": "",
+    "d": "Laver udstyr, der lægger meget tynde lag på skiven.",
+    "g": "Procesudstyr og måling",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/NL0000334118.webp",
+    "mono": null
+   },
+   {
+    "navn": "Lasertec",
+    "andre": "",
+    "d": "Laver udstyr, der kontrollerer masker og skiver, også til den mest avancerede litografi.",
+    "g": "Litografi og masker",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/JP3979200007.webp",
+    "mono": null
+   },
+   {
+    "navn": "Rigaku",
+    "andre": "",
+    "d": "Laver videnskabelige instrumenter. Omkring en tredjedel af omsætningen er måleudstyr til chipfabrikker (1. halvår 2026).",
+    "g": "Procesudstyr og måling",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/JP3969750003.webp",
+    "mono": null
+   },
+   {
+    "navn": "KLA",
+    "andre": "",
+    "d": "Laver udstyr, der inspicerer og måler under chipproduktionen.",
+    "g": "Procesudstyr og måling",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/US4824801009.webp",
+    "mono": null
+   },
+   {
+    "navn": "Onto Innovation",
+    "andre": "",
+    "d": "Laver måle- og inspektionsudstyr til chipindustrien.",
+    "g": "Procesudstyr og måling",
+    "logo": null,
+    "mono": "OI"
+   },
+   {
+    "navn": "MKS",
+    "andre": "",
+    "d": "Laver instrumenter og dele til chipudstyr. Chipmarkedet stod for 43 % af omsætningen i 2025.",
+    "g": "Procesudstyr og måling",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/US55306N1046.webp",
+    "mono": null
+   },
+   {
+    "navn": "Veeco Instruments",
+    "andre": "",
+    "d": "Laver procesudstyr til chipproduktion.",
+    "g": "Procesudstyr og måling",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/US9224171002.webp",
+    "mono": null
+   },
+   {
+    "navn": "Aixtron",
+    "andre": "",
+    "d": "Laver udstyr, der lægger tynde lag af halvledermateriale.",
+    "g": "Procesudstyr og måling",
+    "logo": null,
+    "mono": "A"
+   },
+   {
+    "navn": "Kokusai Electric",
+    "andre": "",
+    "d": "Laver og servicerer udstyr, der lægger tynde lag på skiven.",
+    "g": "Procesudstyr og måling",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/JP3293330001.webp",
+    "mono": null
+   },
+   {
+    "navn": "Lam Research",
+    "andre": "",
+    "d": "Laver udstyr, der ætser og lægger lag på skiven.",
+    "g": "Procesudstyr og måling",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/US5128073062.webp",
+    "mono": null
+   },
+   {
+    "navn": "ASML",
+    "andre": "",
+    "d": "Laver de litografimaskiner, der belyser mønstret på skiven.",
+    "g": "Litografi og masker",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/USN070592100.webp",
+    "mono": null
+   },
+   {
+    "navn": "ACM Research",
+    "andre": "",
+    "d": "Laver procesudstyr, bl.a. til at rense skiver.",
+    "g": "Procesudstyr og måling",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/US00108J1097.webp",
+    "mono": null
+   },
+   {
+    "navn": "Applied Materials",
+    "andre": "",
+    "d": "Laver og servicerer udstyr til chipfabrikker.",
+    "g": "Procesudstyr og måling",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/applied-materials.webp",
+    "mono": null
+   },
+   {
+    "navn": "Axcelis Technologies",
+    "andre": "",
+    "d": "Laver udstyr, der skyder små partikler (ioner) ind i skiven for at ændre dens egenskaber.",
+    "g": "Procesudstyr og måling",
+    "logo": null,
+    "mono": "AT"
+   }
+  ],
+  "andel": 19.334
+ },
+ {
+  "slug": "fremstilles",
+  "navn": "Fremstilles",
+  "sub": "Chipfabrikker for andre",
+  "tekst": "Flere af de kendte chipselskaber, fx NVIDIA og AMD, har ingen egen fabrik til chipsene. De sender tegningen til en kontraktproducent, altså en fabrik, der laver chips for andre. Samsung og Intel har egne fabrikker, men i fondens inddeling står Samsung under Husker og Intel under Regner.",
+  "selskaber": [
+   {
+    "navn": "GlobalFoundries",
+    "andre": "",
+    "d": "Laver chips for kunder, der selv har tegnet dem.",
+    "g": "Chipfabrik for andre",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/KYG393871085.webp",
+    "mono": null
+   },
+   {
+    "navn": "Tower Semiconductor",
+    "andre": "",
+    "d": "Kontraktproducent med specialteknologier. Laver chips efter kundernes tegninger.",
+    "g": "Chipfabrik for andre",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/IL0010823792.webp",
+    "mono": null
+   },
+   {
+    "navn": "UMC",
+    "andre": "",
+    "d": "Kontraktproducent: laver chips for andre og tjener mest på færdige skiver.",
+    "g": "Chipfabrik for andre",
+    "logo": null,
+    "mono": "U"
+   },
+   {
+    "navn": "X-FAB",
+    "andre": "",
+    "d": "Kontraktproducent med specialteknologier og seks fabrikker.",
+    "g": "Chipfabrik for andre",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/BE0974310428.webp",
+    "mono": null
+   },
+   {
+    "navn": "TSMC",
+    "andre": "",
+    "d": "Kontraktproducent, der kun laver chips for andre.",
+    "g": "Chipfabrik for andre",
+    "logo": null,
+    "mono": "T"
+   }
+  ],
+  "andel": 9.42
+ },
+ {
+  "slug": "samles",
+  "navn": "Samles og testes",
+  "sub": "Pakning og test",
+  "tekst": "En chip er for lille og skrøbelig til at sidde alene i en computer. Den bliver forbundet og kapslet ind. Det kaldes pakning. Chippen bliver testet, mens den stadig sidder på skiven, og igen når den er færdig.",
+  "selskaber": [
+   {
+    "navn": "Besi",
+    "andre": "",
+    "d": "Laver maskiner, der samler chips, også meget tæt sammen i én pakke.",
+    "g": "Samling og pakning",
+    "logo": null,
+    "mono": "B"
+   },
+   {
+    "navn": "ASMPT",
+    "andre": "",
+    "d": "Laver udstyr til at samle og pakke chips og til at montere dele på printplader.",
+    "g": "Samling og pakning",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/KYG0535Q1331.webp",
+    "mono": null
+   },
+   {
+    "navn": "SUSS MicroTec",
+    "andre": "",
+    "d": "Laver udstyr, der belægger, belyser og sammenføjer skiver, når chips laves og pakkes.",
+    "g": "Samling og pakning",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/DE000A1K0235.webp",
+    "mono": null
+   },
+   {
+    "navn": "Aehr Test Systems",
+    "andre": "",
+    "d": "Laver udstyr, der tester chips under hård belastning, så svage chips bliver fundet tidligt.",
+    "g": "Test og inspektion",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/US00760J1088.webp",
+    "mono": null
+   },
+   {
+    "navn": "Camtek",
+    "andre": "",
+    "d": "Laver udstyr, der inspicerer og måler chips.",
+    "g": "Test og inspektion",
+    "logo": null,
+    "mono": "C"
+   },
+   {
+    "navn": "Advantest",
+    "andre": "",
+    "d": "Laver testsystemer, der tester chips på skiven og når de er færdige.",
+    "g": "Test og inspektion",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/JP3122400009.webp",
+    "mono": null
+   },
+   {
+    "navn": "Kulicke & Soffa",
+    "andre": "",
+    "d": "Laver udstyr, der forbinder chippen elektrisk med sin pakke.",
+    "g": "Samling og pakning",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/US5012421013.webp",
+    "mono": null
+   },
+   {
+    "navn": "Amkor Technology",
+    "andre": "",
+    "d": "Pakker og tester chips for andre selskaber.",
+    "g": "Samling og pakning",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/US0316521006.webp",
+    "mono": null
+   },
+   {
+    "navn": "Cohu",
+    "andre": "",
+    "d": "Leverer test- og håndteringsudstyr til chipproduktion.",
+    "g": "Test og inspektion",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/US1925761066.webp",
+    "mono": null
+   },
+   {
+    "navn": "FormFactor",
+    "andre": "",
+    "d": "Laver probekort: nålehoveder, der tester chips, mens de sidder på skiven.",
+    "g": "Test og inspektion",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/US3463751087.webp",
+    "mono": null
+   },
+   {
+    "navn": "Teradyne",
+    "andre": "Robotter & fysisk AI",
+    "d": "Laver automatisk testudstyr til chips og industrirobotter.",
+    "g": "Test og inspektion",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/US8807701029.webp",
+    "mono": null
+   }
+  ],
+  "andel": 13.04
+ },
+ {
+  "slug": "regner",
+  "navn": "Regner",
+  "sub": "Processorer og AI-chips",
+  "tekst": "Processorer laver selve beregningerne. En AI-accelerator er en chip, der er bygget til at regne mange små regnestykker på én gang. Her står flere af de navne, de fleste kender.",
+  "selskaber": [
+   {
+    "navn": "Cerebras Systems",
+    "andre": "",
+    "d": "Udvikler en computerplatform til kunstig intelligens med egne systemer og software. Selve processoren laves af TSMC.",
+    "g": "Processorer og AI-chips",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/US15675D1037.webp",
+    "mono": null
+   },
+   {
+    "navn": "Intel",
+    "andre": "",
+    "d": "Tegner og laver processorer og har egne chipfabrikker.",
+    "g": "Processorer og AI-chips",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/US4581401001.webp",
+    "mono": null
+   },
+   {
+    "navn": "Broadcom",
+    "andre": "Datacentre",
+    "d": "Udvikler chips og software til netværk og datacentre. Det meste af produktionen er lagt ud til andre fabrikker, bl.a. TSMC.",
+    "g": "Processorer og AI-chips",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/US11135F1012.webp",
+    "mono": null
+   },
+   {
+    "navn": "NVIDIA",
+    "andre": "Datacentre",
+    "d": "Laver grafikprocessorer, netværk og software til AI i datacentre. Har ingen egne chipfabrikker.",
+    "g": "Processorer og AI-chips",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/US67066G1040.webp",
+    "mono": null
+   },
+   {
+    "navn": "Marvell Technology",
+    "andre": "Datacentre",
+    "d": "Laver chips til datacentre og netværk. Har ingen egen chipfabrik.",
+    "g": "Processorer og AI-chips",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/US5738741041.webp",
+    "mono": null
+   },
+   {
+    "navn": "AMD",
+    "andre": "Datacentre",
+    "d": "Laver processorer, grafikchips og chips, som kunden kan indstille. Skiverne laves hos andre fabrikker.",
+    "g": "Processorer og AI-chips",
+    "logo": null,
+    "mono": "A"
+   },
+   {
+    "navn": "Blaize",
+    "andre": "",
+    "d": "Udvikler AI-computere med egne chips og software. Chippen laves af Samsung.",
+    "g": "Processorer og AI-chips",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/US0929151076.webp",
+    "mono": null
+   }
+  ],
+  "andel": 10.325
+ },
+ {
+  "slug": "husker",
+  "navn": "Husker",
+  "sub": "Hukommelse og lagring",
+  "tekst": "En regnechip er kun så hurtig, som data kan komme frem til den. Arbejdshukommelse holder data tæt på chippen, mens den regner. Flashhukommelse og harddiske gemmer data, også når strømmen er slået fra.",
+  "selskaber": [
+   {
+    "navn": "Samsung Electronics",
+    "andre": "",
+    "d": "Laver hukommelseschips og processorer til mobiler og producerer chips for andre. Koncernen laver også fx tv og telefoner.",
+    "g": "Arbejdshukommelse og chips, der forbinder den",
+    "logo": null,
+    "mono": "SE"
+   },
+   {
+    "navn": "SK hynix",
+    "andre": "",
+    "d": "Laver hukommelseschips, både arbejdshukommelse og flash.",
+    "g": "Arbejdshukommelse og chips, der forbinder den",
+    "logo": null,
+    "mono": "SH"
+   },
+   {
+    "navn": "Kioxia",
+    "andre": "",
+    "d": "Udvikler og laver flashhukommelse og SSD-drev, der gemmer data.",
+    "g": "Lagring",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/JP3236330001.webp",
+    "mono": null
+   },
+   {
+    "navn": "Rambus",
+    "andre": "",
+    "d": "Laver chips og tegninger, der forbinder processoren med hukommelsen, og giver hukommelsesproducenter licens til sine patenter.",
+    "g": "Arbejdshukommelse og chips, der forbinder den",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/US7509171069.webp",
+    "mono": null
+   },
+   {
+    "navn": "Micron Technology",
+    "andre": "",
+    "d": "Laver arbejdshukommelse og flash på egne fabrikker.",
+    "g": "Arbejdshukommelse og chips, der forbinder den",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/US5951121038.webp",
+    "mono": null
+   },
+   {
+    "navn": "Western Digital",
+    "andre": "Datacentre",
+    "d": "Laver harddiske til at gemme data. Det er ikke chips.",
+    "g": "Harddiske",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/US9581021055.webp",
+    "mono": null
+   },
+   {
+    "navn": "Seagate Technology",
+    "andre": "Datacentre",
+    "d": "Laver harddiske og lagringssystemer. Det er ikke chips.",
+    "g": "Harddiske",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/IE00BKVD2N49.webp",
+    "mono": null
+   },
+   {
+    "navn": "Sandisk",
+    "andre": "",
+    "d": "Tegner og laver flashhukommelse og lagring bygget på flash.",
+    "g": "Lagring",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/US80004C2008.webp",
+    "mono": null
+   },
+   {
+    "navn": "Silicon Motion",
+    "andre": "",
+    "d": "Udvikler styrechips til flashlagring, fx SSD-drev og lager i telefoner.",
+    "g": "Lagring",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/US82706C1080.webp",
+    "mono": null
+   }
+  ],
+  "andel": 22.419
+ },
+ {
+  "slug": "styrer",
+  "navn": "Styrer strøm og signaler",
+  "sub": "Strøm-, styre- og forbindelseschips",
+  "tekst": "Alle chips skal have strøm i præcis den rigtige mængde, og de skal kunne tale med omverdenen. Strømchips omformer og fordeler strømmen. Andre chips holder takten, så alle dele arbejder i samme tempo, sender trådløst eller tager imod signaler fra sensorer og kameraer.",
+  "selskaber": [
+   {
+    "navn": "Taiyo Yuden",
+    "andre": "",
+    "d": "Laver små elektroniske komponenter, fx kondensatorer, der sidder ved siden af chipsene i elektronik. Det er ikke selv chips.",
+    "g": "Komponenter",
+    "logo": null,
+    "mono": "TY"
+   },
+   {
+    "navn": "Navitas Semiconductor",
+    "andre": "Datacentre",
+    "d": "Udvikler strømchips af nye materialer (galliumnitrid og siliciumkarbid), bl.a. til AI-datacentre og energianlæg.",
+    "g": "Strøm- og styrechips",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/US63942X1063.webp",
+    "mono": null
+   },
+   {
+    "navn": "SiTime",
+    "andre": "",
+    "d": "Laver timingchips, der holder takten i elektronik. Har ingen egen chipfabrik.",
+    "g": "Forbindelses- og sensorchips",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/US82982T1060.webp",
+    "mono": null
+   },
+   {
+    "navn": "onsemi",
+    "andre": "Robotter & fysisk AI",
+    "d": "Laver strømchips og sensorer.",
+    "g": "Strøm- og styrechips",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/US6821891057.webp",
+    "mono": null
+   },
+   {
+    "navn": "Himax Technologies",
+    "andre": "",
+    "d": "Laver chips, der styrer skærme, og billedsensorer. Har ingen egen chipfabrik.",
+    "g": "Forbindelses- og sensorchips",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/US43289P1066.webp",
+    "mono": null
+   },
+   {
+    "navn": "STMicroelectronics",
+    "andre": "",
+    "d": "Tegner og laver mange slags chips til biler, industri og elektronik.",
+    "g": "Strøm- og styrechips",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/US8610121027.webp",
+    "mono": null
+   },
+   {
+    "navn": "Renesas Electronics",
+    "andre": "Robotter & fysisk AI",
+    "d": "Laver små styrechips, strømchips og analoge chips, især til biler og industri.",
+    "g": "Strøm- og styrechips",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/JP3164720009.webp",
+    "mono": null
+   },
+   {
+    "navn": "Ambiq Micro",
+    "andre": "",
+    "d": "Laver chips, der bruger meget lidt strøm, til små apparater og AI i dem.",
+    "g": "Strøm- og styrechips",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/US0231931058.webp",
+    "mono": null
+   },
+   {
+    "navn": "Aeluma",
+    "andre": "",
+    "d": "Udvikler chips til kommunikation og sensorer, der også bruger lys. Selskabet er i udviklingsfasen.",
+    "g": "Forbindelses- og sensorchips",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/US00776X1090.webp",
+    "mono": null
+   },
+   {
+    "navn": "Infineon Technologies",
+    "andre": "Robotter & fysisk AI",
+    "d": "Laver chips til strømforsyning, biler og forbundne apparater.",
+    "g": "Strøm- og styrechips",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/DE0006231004.webp",
+    "mono": null
+   },
+   {
+    "navn": "Monolithic Power Systems",
+    "andre": "Datacentre",
+    "d": "Laver chips, der styrer strømforsyningen. Har ingen egen chipfabrik.",
+    "g": "Strøm- og styrechips",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/US6098391054.webp",
+    "mono": null
+   },
+   {
+    "navn": "Nordic Semiconductor",
+    "andre": "Robotter & fysisk AI",
+    "d": "Laver trådløse chips med lavt strømforbrug, fx til Bluetooth.",
+    "g": "Forbindelses- og sensorchips",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/NO0003055501.webp",
+    "mono": null
+   },
+   {
+    "navn": "Alpha and Omega Semiconductor",
+    "andre": "",
+    "d": "Udvikler og leverer strømchips.",
+    "g": "Strøm- og styrechips",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/BMG6331P1041.webp",
+    "mono": null
+   },
+   {
+    "navn": "MaxLinear",
+    "andre": "",
+    "d": "Laver kommunikationschips til bredbånd, netværk og datacentre.",
+    "g": "Forbindelses- og sensorchips",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/US57776J1007.webp",
+    "mono": null
+   },
+   {
+    "navn": "Texas Instruments",
+    "andre": "",
+    "d": "Tegner og laver analoge chips og styrechips til elektronikproducenter.",
+    "g": "Strøm- og styrechips",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/US8825081040.webp",
+    "mono": null
+   },
+   {
+    "navn": "Analog Devices",
+    "andre": "",
+    "d": "Tegner og laver chips, der omsætter virkelige signaler som lyd, lys og bevægelse til data.",
+    "g": "Strøm- og styrechips",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/US0326541051.webp",
+    "mono": null
+   },
+   {
+    "navn": "Ambarella",
+    "andre": "Robotter & fysisk AI",
+    "d": "Udvikler strømbesparende chips til AI i kameraer og biler.",
+    "g": "Forbindelses- og sensorchips",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/KYG037AX1015.webp",
+    "mono": null
+   },
+   {
+    "navn": "Microchip Technology",
+    "andre": "",
+    "d": "Laver små styrechips (mikrocontrollere) og analoge chips til elektronik.",
+    "g": "Strøm- og styrechips",
+    "logo": "../assets/img/v5-temaer/energi-konkurrence/temaer/chips/logoer/US5950171042.webp",
+    "mono": null
+   },
+   {
+    "navn": "Lattice Semiconductor",
+    "andre": "",
+    "d": "Laver strømbesparende chips, som kunden selv kan programmere. Har ingen egen chipfabrik.",
+    "g": "Forbindelses- og sensorchips",
+    "logo": null,
+    "mono": "LS"
+   }
+  ],
+  "andel": 18.675
+ }
+]
