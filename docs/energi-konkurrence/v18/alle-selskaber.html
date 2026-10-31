@@ -85,7 +85,7 @@
       <nav class="sm-gruppe" aria-labelledby="sm-h-fond">
         <h2 class="sm-overskrift" id="sm-h-fond"><span>Fonden</span></h2>
         <ul class="sm-liste">
-          <li><a class="sm-link" href="widget/index.html"><span>Fondens udvikling</span></a>
+          <li><a class="sm-link" href="fondens-udvikling.html"><span>Fondens udvikling</span></a>
           </li>
           <li><a class="sm-link" href="index.html#temaer"><span>Fonden fordelt på temaer</span></a>
           </li>
@@ -150,9 +150,10 @@
           <p class="sektion-intro">De <span data-tal="alleSelskaber.antal" data-fmt="antal" data-en="selskab" data-fl="selskaber">…  selskaber</span> i PMINDI, fra største til mindste andel pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span>. Et navn med link har sin egen side.</p>
           <p><a class="knap knap--rolig" href="data/alle-selskaber.csv" download>Download hele listen (CSV)</a></p>
         </header>
+        <div class="alle-soeg"><label for="find">Søg efter selskab eller tema</label><input class="alle-filter" id="find" type="search" placeholder="Fx SpaceX, SoFi eller chips" autocomplete="off" aria-controls="alle-tabel"></div>
         <div class="kort panel">
           <div class="tabel-rul">
-            <table class="tabel tabel--alle">
+            <table class="tabel tabel--alle" id="alle-tabel">
               <caption class="sr">Alle selskaber i PMINDI med tema og andel af fonden</caption>
               <thead><tr><th scope="col" class="tal-celle">Nr.</th><th scope="col">Selskab</th><th scope="col">Tema</th><th scope="col" class="tal-celle">Andel af fonden</th></tr></thead>
               <tbody data-liste="alleSelskaber.liste" data-skabelon="tpl-alle-raekke"></tbody>
@@ -160,7 +161,7 @@
           </div>
           <template id="tpl-alle-raekke"><tr>
                   <td class="tal-celle lille" data-f="plads"></td>
-                  <th scope="row"><a class="pos-navn" data-link-selskab href="#"><span data-f="navn"></span></a></th>
+                  <th scope="row"><span class="alle-navn"><span class="sm-logo alle-logo" aria-hidden="true" data-f="forbogstav"></span><a class="pos-navn" data-link-selskab href="#"><span data-f="navn"></span></a></span></th>
                   <td><span data-f="temaNavn" data-fmt="tekst"></span></td>
                   <td class="tal-celle"><span class="pos-bar" aria-hidden="true"><span data-fbar></span></span><span class="pos-pm" data-f="andel" data-fmt="pct"></span></td>
                 </tr></template>
@@ -197,5 +198,6 @@
 <script src="assets/js/tema.js"></script>
 <script src="assets/js/grafik.js"></script>
 <script src="assets/js/app.js"></script>
+<script src="assets/js/alle-soeg.js"></script>
 </body>
 </html>

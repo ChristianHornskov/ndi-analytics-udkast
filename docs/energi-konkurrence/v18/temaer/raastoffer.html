@@ -86,7 +86,7 @@
       <nav class="sm-gruppe" aria-labelledby="sm-h-fond">
         <h2 class="sm-overskrift" id="sm-h-fond"><span>Fonden</span></h2>
         <ul class="sm-liste">
-          <li><a class="sm-link" href="../widget/index.html"><span>Fondens udvikling</span></a>
+          <li><a class="sm-link" href="../fondens-udvikling.html"><span>Fondens udvikling</span></a>
           </li>
           <li><a class="sm-link" href="../index.html#temaer"><span>Fonden fordelt på temaer</span></a>
           </li>
@@ -147,16 +147,18 @@
 <template id="tpl-tl"><li><a class="tl-raekke" data-link-selskab href="#"><span class="sm-logo" aria-hidden="true" data-f="forbogstav"></span><span class="tl-navn" data-f="navn"></span><span class="pos-bar" aria-hidden="true"><span data-fbar></span></span><span class="tl-tal" data-f="andel" data-fmt="pct"></span></a></li></template><template id="tpl-mini"><span data-fbar></span></template>
       <section class="sektion sektion--overblik" id="overblik" aria-labelledby="h-side">
         <div class="v18t">
-        <div class="v18t-hero">
+        <div class="v18t-hero v18t-hero--v5">
+          <div class="v18t-foto v18t-foto--v5"><figure class="tema-foto v5-heromotiv"><picture><source media="(max-width:899px)" srcset="../assets/img/v5-temaer/energi-konkurrence/temaer/raastoffer/fra-billedstil/billeder/raastoffer-hero-jordsnit-bred.webp"/><img alt="Snit gennem jorden med lag og en lysende åre af krystaller" decoding="async" height="900" src="../assets/img/v5-temaer/energi-konkurrence/temaer/raastoffer/fra-billedstil/billeder/raastoffer-hero-jordsnit-mobil.webp" width="720"/></picture><figcaption class="foto-kredit">Illustration: NewDeal Invest.</figcaption></figure></div>
           <div class="v18t-hero-tekst">
             <p class="kicker">Et af de <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer i NewDeal Invest</p>
             <h1 id="h-side">Råstoffer</h1>
             <p class="v18t-under">Teknologi er bygget af kobber, magneter og batterimaterialer. Nogen skal grave dem op og gøre dem klar.</p>
             <p>Det er ikke nok at vide, at teknologien bruger kobber, magneter eller batterimaterialer. Se også, hvor i forarbejdningen selskabet arbejder, og om der allerede er produktion eller stadig et projekt.</p>
             <p class="v18t-spm"><span class="lille">Spørgsmålet, der skiller selskaberne ad</span>Hvor i vejen fra råstof til materiale arbejder selskabet?</p>
+            
             <div class="v18t-knapper"><a class="knap knap--primaer v5-knap" href="#selskaberne">Se selskaberne <span aria-hidden="true">↓</span></a><a class="knap knap--rolig v5-knap" href="#skrevet">Læs vores perspektiv</a></div>
           </div>
-          <div class="v18t-foto v18-ramme"><figure class="tema-foto" style="max-width:600px"><img src="../fotos/raastoffer.webp" width="600" height="400" alt="Åben mine set ovenfra med terrasser i en dyb grube." loading="lazy" decoding="async" style="max-width:600px"><figcaption class="foto-kredit">Foto: Calistemon, CC BY-SA 4.0, via Wikimedia Commons</figcaption></figure></div>
+          
         </div>
         <section class="v18-stortal" aria-labelledby="h-andel">
             <div class="v18-stortal-tal">
@@ -378,7 +380,7 @@
           <a class="knap" href="../index.html#hvert-tema"><svg class="ik ik--s" aria-hidden="true"><use href="#i-tilbage"/></svg>Alle temaer</a>
           <a class="knap" href="../index.html#hvert-tema" data-hvis="temaer#raastoffer.forrige" data-href-tema="temaer#raastoffer.forrige" hidden><svg class="ik ik--s" aria-hidden="true"><use href="#i-tilbage"/></svg><span class="knap-tekst">Forrige tema: <span data-navn="temaer#raastoffer.forrige">…</span></span></a>
           <a class="knap knap--primaer" href="../index.html#hvert-tema" data-hvis="temaer#raastoffer.naeste" data-href-tema="temaer#raastoffer.naeste" hidden><span class="knap-tekst">Næste tema: <span data-navn="temaer#raastoffer.naeste">…</span></span><svg class="ik ik--s" aria-hidden="true"><use href="#i-frem"/></svg></a>
-          <a class="knap knap--primaer" href="../index.html#kilder" data-skjul="temaer#raastoffer.naeste" hidden>Det var det sidste tema. Se kilderne<svg class="ik ik--s" aria-hidden="true"><use href="#i-frem"/></svg></a>
+          <a class="knap knap--primaer" href="#kilder" data-skjul="temaer#raastoffer.naeste" hidden>Det var det sidste tema. Se kilderne<svg class="ik ik--s" aria-hidden="true"><use href="#i-frem"/></svg></a>
         </nav></div>
 
     </main>

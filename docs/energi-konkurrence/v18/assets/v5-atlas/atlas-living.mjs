@@ -46,7 +46,7 @@ export function atlasTechnologyThreads(layout){
 export function threadLabelSpot(th,width,labels,height=21){
  const at=t=>{const u=1-t;return [u*u*th.x1+2*u*t*th.cx+t*t*th.x2,u*u*th.y1+2*u*t*th.cy+t*t*th.y2]};
  const free=([x,y])=>!labels.some(r=>x-width/2<r.x+r.w&&x+width/2>r.x&&y-17<r.y+r.h&&y-17+height>r.y);
- for(const t of [.48,.4,.56,.32,.64,.25,.72]){const p=at(t);if(free(p))return p}
+ for(const t of [.48,.4,.56,.32,.64,.25,.72,.18,.8,.12,.88]){const p=at(t);if(free(p))return p}
  return at(.48);
 }
 export function technologyNeighbours(threads,focus){
@@ -83,7 +83,13 @@ export function createLivingAtlas(host,{model,onLine,reducedMotion=false,counter
  const relationStatus=doc.createElement('p');relationStatus.className='al-relation-status';relationStatus.setAttribute('aria-live','polite');relationStatus.style.cssText='margin:6px 0 0;min-height:3em';
  let layout,threads=[],technologyThreads=[],plan=[],labels=[],palette=readPalette(host),dpr=1,backKey='';const back=doc.createElement('canvas');
  let visible=false,dead=false,filter='all',selection=null,hover=null,highlight=null,ripple=null,gatherStart=null,gathered=false,lifeUntil=0,timer=0,raf=0,frames=0,lastDraw=0,pulse=null,nextPulse=0;
- const now=()=>win.performance.now();
+ let paused=false,pausedAt=0,shift=0;
+ const now=()=>paused?pausedAt:win.performance.now()-shift;
+ const pauseBtn=doc.createElement('button');pauseBtn.type='button';pauseBtn.className='ac-pause';pauseBtn.setAttribute('aria-pressed','false');pauseBtn.setAttribute('aria-label','Pause animationen');
+ pauseBtn.innerHTML='<span class="ac-pause-ikon" aria-hidden="true"></span><span class="ac-pause-tekst" aria-hidden="true">Pause</span>';pauseBtn.hidden=reducedMotion;
+ function setPaused(v){if(v===paused)return;if(v){pausedAt=now();paused=true;stop();draw(pausedAt)}else{shift=win.performance.now()-pausedAt;paused=false;if(now()<lifeUntil||(gatherStart!==null&&!gathered))start();else wake()}
+  pauseBtn.setAttribute('aria-pressed',String(paused));host.classList.toggle('is-paused',paused)}
+ pauseBtn.addEventListener('click',()=>setPaused(!paused));host.append(pauseBtn);
  
  
  
@@ -98,7 +104,7 @@ export function createLivingAtlas(host,{model,onLine,reducedMotion=false,counter
   
   legend.innerHTML=`<span style="margin-right:16px;white-space:nowrap">${sample('','var(--teal)')}Fælles selskaber</span><span style="margin-right:16px;white-space:nowrap">${sample('6 4','var(--teal)')}Teknologisk samspil</span><span style="white-space:nowrap">${sample('0.5 5','var(--gold)',3)}Mulig anvendelse · forskning</span>`;legend.append(relationStatus);
   relationStatus.textContent=technologyThreads.length?'Kvante er forbundet med chips og software. Den gule, prikkede forbindelse til sundhed er en mulig fremtidig anvendelse: forskning i molekylesimulering.':'';ctx.setTransform(dpr,0,0,dpr,0,0);
-  host.querySelectorAll('button').forEach(b=>b.remove());
+  host.querySelectorAll('button.ac-cluster').forEach(b=>b.remove());
   ctx.font='600 13px system-ui,sans-serif';
   labels=layout.clusters.map(c=>{const w=Math.max(ctx.measureText(clusterName(c)).width,ctx.measureText(`${c.count} selskaber`).width)+14;return {x:c.x-w/2,y:c.labelY-3,w,h:39}});
   for(const c of layout.clusters){const b=doc.createElement('button');b.type='button';b.className='ac-cluster';b.dataset.acLine=c.id;const hitR=Math.max(22,c.r),top=c.y-hitR-4;
@@ -136,7 +142,7 @@ export function createLivingAtlas(host,{model,onLine,reducedMotion=false,counter
    const research=th.kind==='research';b.setLineDash(simpleConnections?[]:research?[0.5,6]:[8,5]);b.lineCap=research?'round':'butt';b.strokeStyle=rgba(research&&!simpleConnections?P.gold:P.teal,dim?.18:on?1:research?.9:.65);b.lineWidth=research?(on?3.4:2.8):(on?2.6:1.7);
    b.beginPath();b.moveTo(th.x1,th.y1);b.quadraticCurveTo(th.cx,th.cy,th.x2,th.y2);b.stroke();b.setLineDash([]);
    b.lineCap='butt';
-   if(on||(research&&!dim)){b.font='600 12px system-ui,sans-serif';b.textAlign='center';const w=b.measureText(th.label).width+12,[x,y]=threadLabelSpot(th,w,labels);
+   if(on||(research&&!dim)){b.font='600 12px system-ui,sans-serif';b.textAlign='center';const w=b.measureText(th.label).width+12,[x,y]=threadLabelSpot(th,w,labels.concat(layout.clusters.map(c=>({x:c.x-c.r-4,y:c.y-c.r-4,w:2*c.r+8,h:2*c.r+8}))));
     if(P.bg){b.fillStyle=rgba(P.bg,.96);b.fillRect(x-w/2,y-17,w,21)}b.fillStyle=rgba(P.ink,1);b.fillText(th.label,x,y-2);}
   }
   const neighbours=technologyNeighbours(technologyThreads,focus);
@@ -194,10 +200,10 @@ export function createLivingAtlas(host,{model,onLine,reducedMotion=false,counter
   if(!alive(t)){draw(t);return}
   if(busy(t))raf=win.requestAnimationFrame(loop);else timer=win.setTimeout(()=>{raf=win.requestAnimationFrame(loop)},Math.max(0,1000/LIFE_FPS-(now()-t)));
  }
- function start(){if(!raf&&!timer&&!dead&&visible&&!doc.hidden&&!reducedMotion)raf=win.requestAnimationFrame(loop)}
+ function start(){if(!raf&&!timer&&!dead&&!paused&&visible&&!doc.hidden&&!reducedMotion)raf=win.requestAnimationFrame(loop)}
  function wake(ms=IDLE_MS){if(reducedMotion){draw(now());return}lifeUntil=Math.max(lifeUntil,now()+ms);if(!gathered&&gatherStart===null)return;start()}
  function beginGather(){if(gatherStart!==null)return;if(reducedMotion){gathered=true;host.classList.add('is-gathered');draw(now());return}gatherStart=now();lifeUntil=gatherStart+GATHER_MS+IDLE_MS;nextPulse=gatherStart+GATHER_MS+400;start()}
- const motion=win.matchMedia?.('(prefers-reduced-motion: reduce)'),motionChanged=()=>{reducedMotion=motion.matches;if(reducedMotion){stop();gathered=true;if(counter&&layout)counter.textContent=String(layout.dots.length)}draw(now());if(!reducedMotion)wake()};motion?.addEventListener('change',motionChanged);
+ const motion=win.matchMedia?.('(prefers-reduced-motion: reduce)'),motionChanged=()=>{reducedMotion=motion.matches;pauseBtn.hidden=reducedMotion;if(reducedMotion){stop();gathered=true;if(counter&&layout)counter.textContent=String(layout.dots.length)}draw(now());if(!reducedMotion)wake()};motion?.addEventListener('change',motionChanged);
  const ro=new ResizeObserver(()=>{const w=host.clientWidth||360;if(w!==lastWidth)resize()});ro.observe(host);
  const io=new IntersectionObserver(es=>{visible=es[0].isIntersecting;if(visible){if(gatherStart===null)beginGather();else wake()}else stop()},{threshold:.15});io.observe(host);
  const visibility=()=>{if(doc.hidden)stop();else if(visible)wake()};doc.addEventListener('visibilitychange',visibility);
@@ -210,7 +216,7 @@ export function createLivingAtlas(host,{model,onLine,reducedMotion=false,counter
   setFilter(v){filter=v;draw(now());wake(4000)},
   
   setHighlight(isins){highlight=isins&&isins.size?isins:null;draw(now())},setSelection(v){selection=v;draw(now());if(v)wake(6000)},getLayout:()=>layout,
-  getState:()=>({filter,selection,hover,highlighted:highlight?.size||0,reducedMotion,gathered,animating:!!(raf||timer),frames,threads:threads.length,technologyThreads:technologyThreads.map(t=>({a:t.a,b:t.b,kind:t.kind})),dpr})
+  getState:()=>({paused,filter,selection,hover,highlighted:highlight?.size||0,reducedMotion,gathered,animating:!!(raf||timer),frames,threads:threads.length,technologyThreads:technologyThreads.map(t=>({a:t.a,b:t.b,kind:t.kind})),dpr})
 
  };
 }

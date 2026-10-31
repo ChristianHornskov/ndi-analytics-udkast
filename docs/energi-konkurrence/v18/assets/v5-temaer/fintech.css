@@ -431,8 +431,8 @@
 @media (prefers-reduced-motion:reduce){.v5f-fintech .cq-ft--js .cq-ft__ln, .v5f-fintech .cq-ft--js .cq-ft__sum{transition:none}
 .v5f-fintech .cq-ft--arm .cq-ft__ln, .v5f-fintech .cq-ft--arm .cq-ft__sum{opacity:1;transform:none}}
 .v5f-fintech{--accent:#b3bd9e;--company-accent:#b3bd9e;--a:#b3bd9e;--teal:var(--accent);--tl:var(--accent);--acc:var(--accent);--al:var(--accent)}
-:root[data-tema="lys"] .v5f-fintech{--bg:#F2F3F5;--kort:#E7EAED;--kort-2:#E0E3E7;--linje:#D1D6DC;--linje-2:#BAC9D6;--graf-akse:#909EAB;--tekst:#1F232D;--tekst-2:#405262;--accent-spacex:#4C6580;--accent-tesla:#B6733C;--accent-fintech:#647149;--guld:#A26909;--pladsholder:#77093B}
-:root[data-tema="lys"] .v5f-fintech{--bg:#F2F3F5;--ink:#1F232D;--mute:#405262;--a:#647149;--line:#B6C0D2;--card:#E8EAED;--surf:#E2E5E9;--fokus:#343E1B}
+:root[data-tema="lys"] .v5f-fintech{--bg:#F2F3F5;--kort:#E7EAED;--kort-2:#E0E3E7;--linje:#D1D6DC;--linje-2:#BAC9D6;--graf-akse:#5C656D;--tekst:#1F232D;--tekst-2:#405262;--accent-spacex:#4C6580;--accent-tesla:#8C592E;--accent-fintech:#5D6944;--guld:#8B5A08;--pladsholder:#77093B}
+:root[data-tema="lys"] .v5f-fintech{--bg:#F2F3F5;--ink:#1F232D;--mute:#405262;--a:#5D6944;--line:#7A818D;--card:#E8EAED;--surf:#E2E5E9;--fokus:#343E1B}
 :root[data-tema="lys"] .v5f-fintech .top{background:#FFFFFF}
 :root[data-tema="lys"] .v5f-fintech .die{background:linear-gradient(rgba(182, 192, 210, .28) 1px,transparent 1px) 0 0/20px 20px,linear-gradient(90deg,rgba(182, 192, 210, .28) 1px,transparent 1px) 0 0/20px 20px,var(--card)}
 :root[data-tema="lys"] .v5f-fintech .vid-ramme{background:#FFFFFF}
@@ -444,10 +444,10 @@
 :root[data-tema="lys"] .v5f-fintech .xp-vis:hover{background:#D9DDE2}
 :root[data-tema="lys"] .v5f-fintech .rg{-webkit-mask:linear-gradient(#FFFFFF 0 0) top/100% 8px no-repeat,conic-gradient(from -45deg at 50% 100%,#FFFFFF 90deg,#0000 0) bottom/5px 4px repeat-x;mask:linear-gradient(#FFFFFF 0 0) top/100% 8px no-repeat,conic-gradient(from -45deg at 50% 100%,#FFFFFF 90deg,#0000 0) bottom/5px 4px repeat-x;background:rgba(100, 113, 73, .25)}
 :root[data-tema="lys"] .v5f-fintech .hero-bill::after{background:linear-gradient(180deg,rgba(242, 243, 245, 0),var(--bg))}
-:root[data-tema="lys"] .v5f-fintech .rk li::after{border-bottom:2px dotted #9CA8BB}
+:root[data-tema="lys"] .v5f-fintech .rk li::after{border-bottom:2px dotted #788190}
 :root[data-tema="lys"] .v5f-fintech .vid-kilde{background:rgba(15, 23, 32, .78);color:#121212}
-:root[data-tema="lys"] .v5f-fintech .cq-ft{--cq-ft-ink:var(--ink,#1F232D);--cq-ft-mute:var(--mute,#405262);--cq-ft-line:var(--line,#B6C0D2);--cq-ft-surf:var(--surf,#E2E5E9);--cq-ft-card:var(--card,#E8EAED);--cq-ft-focus:var(--fokus,#264447);--cq-ft-a:#647149;--cq-ft-pick:#DEE1E6}
+:root[data-tema="lys"] .v5f-fintech .cq-ft{--cq-ft-ink:var(--ink,#1F232D);--cq-ft-mute:var(--mute,#405262);--cq-ft-line:var(--line,#7A818D);--cq-ft-surf:var(--surf,#E2E5E9);--cq-ft-card:var(--card,#E8EAED);--cq-ft-focus:var(--fokus,#264447);--cq-ft-a:#5D6944;--cq-ft-pick:#DEE1E6}
 :root[data-tema="lys"] .v5f-fintech .cq-ft__lg{background:#121212}
 :root[data-tema="lys"] .v5f-fintech .cq-ft__ini{color:#F2F3F5}
 :root[data-tema="lys"] .v5f-fintech .cq-ft:has(.cq-ft__lb[aria-expanded="true"]) .cq-ft__sum{box-shadow:0 -12px 14px -10px rgba(15, 23, 32, .65)}
-:root[data-tema="lys"] .v5f-fintech{--accent:#647149;--company-accent:#647149;--a:#647149}
+:root[data-tema="lys"] .v5f-fintech{--accent:#5D6944;--company-accent:#5D6944;--a:#5D6944}

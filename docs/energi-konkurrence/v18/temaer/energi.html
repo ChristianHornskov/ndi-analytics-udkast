@@ -86,7 +86,7 @@
       <nav class="sm-gruppe" aria-labelledby="sm-h-fond">
         <h2 class="sm-overskrift" id="sm-h-fond"><span>Fonden</span></h2>
         <ul class="sm-liste">
-          <li><a class="sm-link" href="../widget/index.html"><span>Fondens udvikling</span></a>
+          <li><a class="sm-link" href="../fondens-udvikling.html"><span>Fondens udvikling</span></a>
           </li>
           <li><a class="sm-link" href="../index.html#temaer"><span>Fonden fordelt på temaer</span></a>
           </li>
@@ -147,16 +147,18 @@
 
       <section class="sektion sektion--overblik" id="overblik" aria-labelledby="h-side">
         <div class="v18t">
-        <div class="v18t-hero">
+        <div class="v18t-hero v18t-hero--v5">
+          <div class="v18t-foto v18t-foto--v5"><figure class="tema-foto v5-heromotiv"><svg aria-hidden="true" class="v5-heromotiv-svg" viewbox="0 0 600 300"><g fill="none" stroke="var(--graf-akse)" stroke-width="2"><rect height="140" rx="18" width="140" x="40" y="80"></rect><rect height="140" rx="18" width="140" x="230" y="80"></rect><rect height="140" rx="18" width="140" x="420" y="80"></rect><path d="M180 150H230M370 150H420"></path></g><g fill="none" stroke="var(--accent)" stroke-width="3"><circle cx="110" cy="150" r="35"></circle><path d="M265 115H335V185H265ZM455 150H525M490 115V185"></path></g></svg><figcaption class="foto-kredit">Produkt · anvendelse · forretning. Skematisk illustration: NewDeal Invest.</figcaption></figure></div>
           <div class="v18t-hero-tekst">
             <p class="kicker">Et af de <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer i NewDeal Invest</p>
             <h1 id="h-side">Energi og elnet</h1>
             <p class="v18t-under">Det hurtigste led må vente på det langsomste. Et datacenter fuld af nye chips kan stå færdigt, før der er strøm nok til at tænde det.</p>
             <p>Energiproduktion, elnet og udstyr løser forskellige dele af samme opgave. Følg forbindelserne fra energikilde til strømforbrug, og se, hvor fondens selskaber arbejder.</p>
             <p class="v18t-spm"><span class="lille">Spørgsmålet, der skiller selskaberne ad</span>Hvor i energisystemet leverer selskabet sin løsning?</p>
+            
             <div class="v18t-knapper"><a class="knap knap--primaer v5-knap" href="#grupper">Se selskaberne <span aria-hidden="true">↓</span></a><a class="knap knap--rolig v5-knap" href="#skrevet">Læs vores perspektiv</a></div>
           </div>
-          <div class="v18t-foto v18-ramme"><figure class="tema-foto" style="max-width:600px"><img src="../fotos/energi.webp" width="600" height="400" alt="Højspændingsmast og ledninger mod blå himmel." loading="lazy" decoding="async" style="max-width:600px"><figcaption class="foto-kredit">Foto: Ron Clausen, CC0, via Wikimedia Commons</figcaption></figure></div>
+          
         </div>
         <section class="v18-stortal" aria-labelledby="h-andel">
             <div class="v18-stortal-tal">
@@ -374,7 +376,8 @@
 
       <nav class="videre videre--stor" aria-label="Videre">
         <a class="knap knap--primaer knap--stor" href="#grupper" data-href-selskab="temaer#energi.stoerste"><svg class="ik ik--s" aria-hidden="true"><use href="#i-selskab"/></svg><span class="knap-tekst">Videre: <span data-navn="temaer#energi.stoerste">…</span>, temaets største selskab i PMINDI</span><svg class="ik ik--s" aria-hidden="true"><use href="#i-frem"/></svg></a>
-        <a class="knap" href="../temaer/chips.html"><svg class="ik ik--s" aria-hidden="true"><use href="#t-chips"/></svg>Chips og halvledere</a>
+        <a class="knap" href="../index.html#hvert-tema" data-hvis="temaer#energi.forrige" data-href-tema="temaer#energi.forrige" hidden><svg class="ik ik--s" aria-hidden="true"><use href="#i-tilbage"/></svg><span class="knap-tekst">Forrige tema: <span data-navn="temaer#energi.forrige">…</span></span></a>
+        <a class="knap" href="../index.html#hvert-tema" data-hvis="temaer#energi.naeste" data-href-tema="temaer#energi.naeste" hidden><span class="knap-tekst">Næste tema: <span data-navn="temaer#energi.naeste">…</span></span><svg class="ik ik--s" aria-hidden="true"><use href="#i-frem"/></svg></a>
         <a class="knap" href="../index.html#hvert-tema"><svg class="ik ik--s" aria-hidden="true"><use href="#i-tilbage"/></svg>Alle temaer</a>
       </nav>
 

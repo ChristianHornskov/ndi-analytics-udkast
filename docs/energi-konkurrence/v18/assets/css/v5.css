@@ -23,7 +23,7 @@
 
 :root[data-tema="lys"] {
   color-scheme: light;
-  --v5-bg: #f5f7f8; --v5-ink: #10181f; --v5-ink-2: #3f4c57; --v5-teal: #2f6b73; --v5-gold: #8a6d00;
+  --v5-bg: #f5f7f8; --v5-ink: #10181f; --v5-ink-2: #3f4c57; --v5-teal: #2f6b73; --v5-gold: #725a00;
   --v5-line: #d3dbe0; --v5-kant: #6b7a85; 
   --v5-panel-a: #ffffff; --v5-panel-b: #eef3f5; --v5-flade: #ffffff; --v5-flade-2: #dfecee;
   --v5-graa: #6b7480; --v5-pos: #dcefe9; --v5-neg: #f4e3e5;
@@ -250,8 +250,8 @@ a.v5-top-raekke:hover{background:var(--v5-flade-2)}
 [data-tema="lys"] .v18-eksempel{border-color:#8a7536}[data-tema="lys"] .v18-eksempel strong{background:#8a7536;color:#fff}
 
 
-:root, :root[data-tema="mørk"] { --v18-nasdaq: #d6c78a; }
-:root[data-tema="lys"] { --v18-nasdaq: #7d6b1f; }
+:root, :root[data-tema="mørk"] { --v18-nasdaq: #a2abb7; }
+:root[data-tema="lys"] { --v18-nasdaq: #6b7480; }
 .v18p-tom{margin:1rem 0;padding:1rem;border:1px dashed var(--v5-linje,#3a4a50);color:var(--v5-tekst2,inherit)}
 
 

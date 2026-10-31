@@ -101,7 +101,7 @@
           var v = post[el.dataset.f];
           if (el.dataset.f === "forbogstav") v = post.navn ? post.navn.charAt(0) : "";
           if (el.dataset.f === "forbogstav" && post.logo) {  
-            var im = document.createElement("img"); im.src = ROD + post.logo; im.alt = ""; im.width = 56; im.height = 56; im.decoding = "async";
+            var im = document.createElement("img"); im.src = ROD + post.logo; im.alt = ""; im.width = 56; im.height = 56; im.decoding = "async"; im.loading = "lazy";
             el.textContent = ""; el.appendChild(im); el.classList.add("sm-logo--billede"); return;
           }
           el.textContent = v == null ? MANGLER : (el.dataset.fmt ? format(v, el.dataset.fmt, el) : String(v));
