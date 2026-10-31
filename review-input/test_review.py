@@ -216,6 +216,21 @@ class ReviewTests(unittest.TestCase):
         for a in tree.xpath('//*[@id="kr-andele"]//a[@href]'):
             self.assertTrue((DEST/'temaer'/a.get('href')).resolve().exists(),a.get('href'))
 
+    def test_section_visuals_keep_sources_and_deep_links(self):
+        energy=html.parse(str(DEST/'temaer/energi.html'))
+        self.assertEqual(len(energy.xpath('//*[@id="strommen-gik"]//ol/li')),3)
+        self.assertIn('12.33',energy.xpath('//*[@id="strommen-gik"]')[0].text_content())
+        nv=html.parse(str(DEST/'selskaber/nvidia.html'))
+        steps=nv.xpath('//ol[@class="sv-chip-role"]/li/a')
+        self.assertEqual(len(steps),8)
+        chips=html.parse(str(DEST/'temaer/chips.html'))
+        for step in steps:
+            anchor=step.get('href').split('#')[1]
+            self.assertTrue(anchor.startswith('ck-trin-'))
+            self.assertEqual(len(chips.xpath('//*[@id=$id]',id=anchor)),1)
+        self.assertTrue(nv.xpath('//*[@id="hvad"]//a[contains(@href,"sec.gov")]'))
+        self.assertEqual(len(nv.xpath('//details[@class="sv-source-detail"]')),1)
+
 if __name__=='__main__':unittest.main()
 
 

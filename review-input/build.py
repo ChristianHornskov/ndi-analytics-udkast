@@ -196,8 +196,11 @@ def build():
     repair_data_copy(DEST)
     from claude_integration import integrate
     integrate(DEST)
+    from section_visuals import improve_sections
+    improve_sections(DEST)
     print('Built isolated preview:', DEST)
 
 if __name__ == '__main__': build()
+
 
 

@@ -34,3 +34,10 @@ Kun reviewgren. Ingen main-merge, Wix, Azure, nye datakilder eller afsluttende c
 
 ## Autoritativt slutmål (tilføjet 31. oktober)
 Læs SAMLET-LEVERANCE.md før næste handling. Denne fil erstatter ikke tidligere ønsker; den genindsætter de tematiske/selskabsspecifikke og småfejlsforslag, som manglede i ovenstående delstatus. Formuleringen "implementeringsomgangen klar" ovenfor vedrører kun porteføljedelen og er IKKE en afslutning af hele opgaven.
+
+## Goal-fremdrift: energi og NVIDIA
+- S05, S07, S14 og F03 verificeret i SAMLET-LEVERANCE.md. Ingen øvrige rækker lukket.
+- Nyt reproducerbart section_visuals.py bygger forklaringerne; eksisterende tekst/kilder og data beholdes.
+- 20 automatiske tests bestået. Ny test kontrollerer tre energiled, eksisterende klokkeslæt, NVIDIA-kilder og alle otte chip-links.
+- Visuel kontrol: energi lyst/mørkt desktop og lyst mobil390; NVIDIA mørkt desktop/mobil og lyst desktop. Linket til Regner åbner korrekt panel og scroller dertil efter navigation.
+- Næste åbne spor: S04/S12 krypto-overlap og forretningsforklaring; derefter kvante/råstoffer samt samlet brugerrejse. Goal fortsat aktivt.

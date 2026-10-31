@@ -37,16 +37,16 @@ D=Designbygger, C=Critiquito. Kilder under ../design-review-read/codex-overdrage
 | S02 D2 | Vigtig information | fravalgt med Christians godkendelse | Christian har udskudt compliancegennemgangen. Ikke et permanent designfravalg; uden for denne omgang. |
 | S03 D3 C2 | Kvante: omsætning, tilsagn og udbetaling | under arbejde | Beløb tidligere rettet; kontrollér grafisk løsning og at tilsagn ikke vises som udbetalt. |
 | S04 D4 C5 | Krypto-overlap/Venn | mangler | Vurder billeder og eksisterende #fod; vægtgrafen #kr-andele er IKKE denne opgave. |
-| S05 D5 C6 | Energi: strømafbrydelse, kæde og tidslinje | mangler | Vurder og integrér egnet forklaring eller forelæg fravalg med billeder. |
+| S05 D5 C6 | Energi: strømafbrydelse, kæde og tidslinje | verificeret færdigt | section_visuals.py: kildeprosa bevaret, tre led og tidsforløb; støttefunktioner ikke fejlagtigt seriekoblet. Browser 390/1280, lyst/mørkt. |
 | S06 D6 C9 | Fysisk AI: hjul/propeller/robotters størrelsesforhold | under arbejde | Claude-fliser og lyskontrast integreret; bevis om selve størrelsesforklaringen skal findes. |
-| S07 D7 C4 | NVIDIA: problem, produkt, bruger og rolle | mangler | Vurder flow mod nuværende side, ingen ukontrollerede nye fakta. |
+| S07 D7 C4 | NVIDIA: problem, produkt, bruger og rolle | verificeret færdigt | section_visuals.py: problem → GPU/netværk/CUDA → brugere. Originale kundedefinitioner/kilder bevaret i detaljer. Mobil/mørk og desktop/lys+mørk kontrolleret. |
 | S08 D8 C10 | Widget: klassernes pengestrøm/kontotyper | under arbejde | Widget må skifte klasse, mens fordybelsen kun bruger PMINDI. Kontrollér indhold og valgt løsning. |
 | S09 D9 | Chipsnyheder hængt på kædens trin | fravalgt med Christians godkendelse | Christian fandt forslaget for komplekst; behold rigtige læselige X-opslag, ikke erstatninger med resuméer. |
 | S10 D10 | Årsrapportafstemning som kildekort/tidslinje | mangler | Vurder grafisk forbedring; bevar datoforskelle og dokumentation. |
 | S11 C1 | Dataproces og foldbare formelforklaringer | under arbejde | Proces implementeret 225c798, omkostninger fastholdt efter godkendelse. Kontrollér om lange detaljer stadig kræver aftalt forbedring. |
 | S12 C3 | Krypto: aktier, ikke mønter; forskellige forretningsrisici | mangler | Vurder grafik uden at gøre generel complianceomgang til del af opgaven. |
 | S13 C7 | Råstoffer: mine, raffinering og afhængigheder | mangler | Gennemgå før/efter og eksisterende citat/kilde; giv dansk læsevej. |
-| S14 C8 | NVIDIA placeret i chipkædens otte trin | mangler | Kontrollér faktiske roller; ingen antagelse om egne fabrikker. |
+| S14 C8 | NVIDIA placeret i chipkædens otte trin | verificeret færdigt | Otte links med Regner markeret. Browserklik åbner #ck-trin-regner med korrekt mobilpanel; gammel skjult h-ct-destination rettet. Test kontrollerer alle otte mål. |
 
 ## Groks småfejl — begge TOP10-lister
 Kilder: samme mappe, smaafejl/. ID bevares ved afslutning. D og C nummererer hver 1–10.
@@ -55,7 +55,7 @@ Kilder: samme mappe, smaafejl/. ID bevares ved afslutning. D og C nummererer hve
 |---|---|---|---|
 | F01 | D1 videoplakat | under arbejde | Christian ønsker thumbnails; kontrollér faktisk energivideo-thumbnail frem for tom gradient. |
 | F02 | D2 D8 C1 C5 kalender | verificeret færdigt | Godkendt lodret mobilkalender og rød/grøn; 2d10201. |
-| F03 | D3 energihero lyst tema | mangler | Visuel kontrol af lys hero, ikke kun fysisk AI. |
+| F03 | D3 energihero lyst tema | verificeret færdigt | section-visuals.css: hvid baggrund/kontrast i lys tilstand, mørk uændret. Browser verificerer hvid baggrund og læselige streger. |
 | F04 | D4 C2 nedture | verificeret færdigt | Godkendt Claude-løsning; 2d10201. |
 | F05 | D5 C6 nøgletal/omkostninger | verificeret færdigt | Gamle kompakte opstillinger udtrykkeligt valgt; ingen indholdsændring. |
 | F06 | D6 C8 dobbelt vigtig-information-overskrift | under arbejde | Kontrollér dublet; ingen ny complianceanalyse. |
