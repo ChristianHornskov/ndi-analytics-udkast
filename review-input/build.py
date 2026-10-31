@@ -139,6 +139,8 @@ def build():
     for fold in spacex.xpath('//details[summary[contains(.,"Se billedet af sideboosterne")]]'):
         fold.tag='div'
         for summary in fold.findall('summary'):remove(summary)
+    from spacex_refinement import refine_spacex
+    refine_spacex(spacex,SOURCE,DEST)
     save(spacex,DEST/'selskaber/spacex.html')
     # A consistent route back from every company and technology page.
     for path in list((DEST/'selskaber').glob('*.html'))+list((DEST/'temaer').glob('*.html')):
