@@ -15,12 +15,27 @@ def refine_tech(tree):
       ('NVIDIA','nvidia','Høj vækst med indtjening','NVIDIA rapporterede både omsætningsvækst og overskud i regnskabsåret 2026. Her flytter spørgsmålet sig fra, om produktet kan sælges, til hvor længe efterspørgsel og indtjening kan holde.','Hvor kommer næste vækst fra, og hvad kræver den af kunderne?','https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Fourth-Quarter-and-Fiscal-2026/','Regnskabsår 2026'),
       ('Microsoft','microsoft','En stor forretning skal forny sig','Microsoft kombinerer etablerede softwareforretninger med investeringer i cloud og AI. En etableret virksomhed kan derfor have modne produkter og nye vækstområder på samme tid.','Skaber de nye investeringer værdi ud over den eksisterende indtjening?','https://www.microsoft.com/investor/reports/ar26/index.html','Årsrapport 2026')
     ]
+    identities={
+      'oklo':('2f59a56bef','Kerneenergi'),
+      'ionq':('4fc209b71b','Kvantecomputere'),
+      'rocket-lab':('8a97cb55ec','Opsendelser og rumsystemer'),
+      'nvidia':('2a95ecdd14','Chips og AI-infrastruktur'),
+      'microsoft':('b76ce7f2fd','Software, cloud og AI')
+    }
     for i,(name,slug,title,copy,question,source,date) in enumerate(examples):
         panel=phases.xpath('.//*[@id="fase-'+str(i)+'"]')[0]
         text=html.Element('div',{'class':'phase-explanation'})
         for child in list(panel): text.append(child)
         panel.append(text)
         example=html.fragment_fromstring('<aside class="phase-example"><span class="eyebrow">SE DET I ET SELSKAB</span><a class="phase-company" href="selskaber/'+slug+'.html">'+name+' <span>↗</span></a><h4>'+title+'</h4><p>'+copy+'</p><blockquote>'+question+'</blockquote><a class="tekstlink" href="selskaber/'+slug+'.html">Udforsk '+name+' →</a><a class="phase-source" href="'+source+'" target="_blank" rel="noopener">Kilde: '+date+' ↗</a></aside>')
+        logo,sector=identities[slug]
+        company=example.xpath('.//a[@class="phase-company"]')[0]
+        company.clear()
+        company.set('class','phase-company')
+        company.set('href','selskaber/'+slug+'.html')
+        company.append(html.fragment_fromstring('<span class="phase-logo"><img src="assets/img/logoer/'+logo+'.webp" alt="'+name+' logo" width="64" height="64" loading="lazy"></span>'))
+        company.append(html.fragment_fromstring('<span class="phase-identity"><strong>'+name+'</strong><small>'+sector+'</small></span>'))
+        company.append(html.fragment_fromstring('<span class="phase-company-arrow" aria-hidden="true">↗</span>'))
         panel.append(example)
     growth=phases.xpath('.//*[@id="fase-2"]//div[@class="phase-explanation"]/p')[0]
     growth.text='Kunderne er der, og salget vokser. Nu skal selskabet levere i større skala uden at miste kvalitet eller bruge uforholdsmæssigt meget kapital. Vækst er ikke det samme som overskud; det afgørende er, om økonomien forbedres, når forretningen bliver større.'

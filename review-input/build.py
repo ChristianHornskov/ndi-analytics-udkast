@@ -19,7 +19,7 @@ def cls(tree, name):
 
 def save(tree, path):
     text=html.tostring(tree, encoding='unicode', doctype='<!doctype html>')
-    text=text.replace('review.css"','review.css?v=20261031phases"')
+    text=text.replace('review.css"','review.css?v=20261031logos"')
     for phrase in [' Skematisk, ikke i målestok.',' Skematisk tegning, ikke i målestok.','Principskitse — ikke konkrete selskabstal eller en prognose. ']:
         text=text.replace(phrase,'')
     path.write_text(text,encoding='utf-8')
