@@ -97,7 +97,13 @@ class ReviewTests(unittest.TestCase):
     def test_compact_chips(self):
         tree=html.parse(str(DEST/'temaer/chips.html'))
         self.assertEqual(len(tree.xpath('//*[@id="tpl-vk"]')),1)
-        self.assertEqual(len(tree.xpath('//details[@class="cc-step"]')),8)
+        self.assertEqual(len(tree.xpath('//details[@class="cc-step"]')),0)
+        links=tree.xpath('//a[@class="cf-company"]/@href')
+        self.assertEqual(len(links),75)
+        self.assertEqual(len(set(links)),75)
+        for link in links:
+            self.assertTrue((DEST/'temaer'/link).resolve().exists(),link)
+        self.assertEqual(len(tree.xpath('//article[@class="ci-story"]')),3)
         self.assertFalse(tree.xpath('//details[@class="cc-step"][@open]'))
         self.assertEqual(len(tree.xpath('(//*[@id="kaeden-i-nyhederne"]//ul[@class="xs-liste"])[1]/li')),2)
         self.assertEqual(len(tree.xpath('//*[@id="mere-fra-ndi"]/div[contains(@class,"rm-grid-youtube")]/article')),2)

@@ -45,11 +45,14 @@ def clean_chips(dest):
  # Shorts are available but do not add another media wall to the first view.
  for grid in page.xpath('//*[contains(concat(" ",@class," ")," rm-grid-instagram ")]'):
   f=html.fragment_fromstring('<details class="rm-more"><summary>Se vores korte videoer fra Instagram</summary></details>');grid.addprevious(f);f.append(grid)
- page.find('head').append(html.fragment_fromstring('<link rel="stylesheet" href="../assets/css/chips-cleanup.css?v=1">'))
- page.find('body').append(html.fragment_fromstring('<script defer src="../assets/js/chips-cleanup.js?v=1"></script>'))
+ page.find('head').append(html.fragment_fromstring('<link rel="stylesheet" href="../assets/css/chips-cleanup.css?v=2">'))
+ page.find('body').append(html.fragment_fromstring('<script defer src="../assets/js/chips-cleanup.js?v=2"></script>'))
  # Deferred images in disclosures are not downloaded before expansion.
  for img in page.xpath('//details//img[@src]'):
   img.set('data-deferred-src',img.attrib.pop('src'))
+ from chips_directory import redesign
+ redesign(page,dest)
  p.write_text(html.tostring(page,encoding='unicode',doctype='<!doctype html>'),encoding='utf8')
  for name,folder in [('chips-cleanup.css','css'),('chips-cleanup.js','js')]:shutil.copyfile(Path(__file__).with_name(name),dest/'assets'/folder/name)
+
 
