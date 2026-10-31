@@ -1,6 +1,6 @@
 """Reuse the publicly released homepage widget; isolate preview-only additions."""
 from pathlib import Path
-import shutil
+import shutil,json
 from lxml import html
 
 def build_homepage_widget(dest):
@@ -17,9 +17,9 @@ def build_homepage_widget(dest):
     production.write_text(code[:start]+'// Preview: pinned to the documented release.\n'+code[end:],encoding='utf-8')
     tree=html.parse(str(source/'simple-embed.html')).getroot()
     tree.find('head/title').text='Fondens udvikling · NewDeal Invest · Preview'
-    tree.find('head').append(html.fragment_fromstring('<link rel="stylesheet" href="preview-adapter.css?v=20261031f">'))
+    tree.find('head').append(html.fragment_fromstring('<link rel="stylesheet" href="preview-adapter.css?v=20261031g">'))
     body=tree.find('body')
-    for src in ['homepage-patch.js','../data/review-funds.js','preview-adapter.js?v=20261031f']:
+    for src in ['homepage-patch.js','../data/review-funds.js','preview-adapter.js?v=20261031g']:
         body.append(html.fragment_fromstring('<script src="'+src+'"></script>'))
     (widget/'index.html').write_text(html.tostring(tree,encoding='unicode',doctype='<!doctype html>'),encoding='utf-8')
     for name in ['preview-adapter.js','preview-adapter.css']:
@@ -32,8 +32,10 @@ def build_homepage_widget(dest):
             shutil.copyfile(path,portfolio/path.name)
     analysis=html.parse(str(source/'simple-embed.html')).getroot()
     analysis.find('head/title').text='Porteføljeanalyse · PMINDI · NewDeal Invest'
-    analysis.find('head').append(html.fragment_fromstring('<link rel="stylesheet" href="portfolio.css?v=20261031b">'))
-    for src in ['homepage-patch.js','portfolio.js?v=20261031b']:
+    analysis.find('head').append(html.fragment_fromstring('<link rel="stylesheet" href="portfolio.css?v=20261031c">'))
+    supplement=json.loads(Path(__file__).with_name('portfolio-market-supplement.json').read_text(encoding='utf8'))
+    (portfolio/'market-supplement.js').write_text('window.NDI_PORTFOLIO_SUPPLEMENT='+json.dumps(supplement,ensure_ascii=False)+';',encoding='utf8')
+    for src in ['homepage-patch.js','market-supplement.js','portfolio.js?v=20261031c']:
         analysis.find('body').append(html.fragment_fromstring('<script src="'+src+'"></script>'))
     (portfolio/'index.html').write_text(html.tostring(analysis,encoding='unicode',doctype='<!doctype html>'),encoding='utf-8')
     for name in ['portfolio.js','portfolio.css']:

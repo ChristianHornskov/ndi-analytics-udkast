@@ -31,9 +31,16 @@
     let entries = document.getElementById('preview-entries');
     if (!entries) {
       entries = document.createElement('nav'); entries.id='preview-entries'; entries.className='review-entry-cards'; entries.setAttribute('aria-label','Gå på opdagelse');
-      entries.innerHTML='<a href="../portfolio/index.html"><span><strong>Gå på opdagelse i porteføljen</strong><small>Se beholdninger, spredning og risiko.</small></span><span aria-hidden="true">→</span></a><a href="../tech.html"><span><strong>Gå på opdagelse i tech</strong><small>Forstå teknologien og se forbindelserne.</small></span><span aria-hidden="true">→</span></a>';
+      entries.innerHTML='<a class="entry-portfolio" href="../portfolio/index.html"><div class="entry-art" aria-hidden="true"><svg viewBox="0 0 520 190"><defs><linearGradient id="entry-glow"><stop stop-color="#8ac7cb"/><stop offset="1" stop-color="#f2e6a0"/></linearGradient></defs><circle cx="385" cy="95" r="66" fill="none" stroke="#90bac226" stroke-width="24"/><g class="entry-sectors"></g><path d="M22 151H264M22 111H264M22 71H264" stroke="#a4ced515"/><path class="entry-spark" d="" fill="none" stroke="url(#entry-glow)" stroke-width="4"/><circle class="entry-end" cx="264" cy="25" r="5" fill="#ece5a3"/><text x="385" y="103" text-anchor="middle" fill="#d7e9e9" font-size="19">PMINDI</text></svg><span>AFKAST · RISIKO · SELSKABER</span></div><div class="entry-copy"><span><strong>Gå på opdagelse i porteføljen</strong><small>Få overblikket over afkast, udsving og de selskaber, fonden ejer.</small></span><span class="entry-arrow" aria-hidden="true">↗</span></div></a><a class="entry-tech" href="../tech.html"><div class="entry-art" aria-hidden="true"><img src="../assets/img/v5-fotos/chips-siliciumwafer.webp" alt=""><span>12 TEMAER · ÉN FORBUNDET VERDEN</span></div><div class="entry-copy"><span><strong>Gå på opdagelse i tech</strong><small>Fra chips og strøm til rumfart. Se teknologien og forbindelserne bag.</small></span><span class="entry-arrow" aria-hidden="true">↗</span></div></a>' ;
       calendar.after(entries);
     }
+    const source=data.funds.find(f=>f.id==='pmindi')||data.funds[0],points=source.data.filter(p=>Number.isFinite(p.total));
+    const lo=Math.min(...points.map(p=>p.total)),hi=Math.max(...points.map(p=>p.total));
+    const y=v=>151-(v-lo)/(hi-lo||1)*126;
+    entries.querySelector('.entry-spark').setAttribute('d',points.map((p,i)=>(i?'L':'M')+(22+i/(points.length-1)*242).toFixed(1)+' '+y(p.total).toFixed(1)).join(''));
+    entries.querySelector('.entry-end').setAttribute('cy',y(points.at(-1).total));
+    const sectors=sumBy(source.positions.filter(p=>p.isin&&p.weight>0),p=>p.sector||'Ukendt'),total=sectors.reduce((a,p)=>a+p[1],0);let offset=0;
+    entries.querySelector('.entry-sectors').innerHTML=sectors.map(([,v],i)=>{const length=v/total*414.69;const circle='<circle cx="385" cy="95" r="66" fill="none" stroke="'+palette[i%palette.length]+'" stroke-width="24" stroke-dasharray="'+Math.max(0,length-2)+' 414.69" stroke-dashoffset="'+(-offset)+'" transform="rotate(-90 385 95)"/>';offset+=length;return circle;}).join('');
     notifyHeight();
   }
   const homepageRender = render;

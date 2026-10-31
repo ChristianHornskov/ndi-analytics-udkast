@@ -146,6 +146,33 @@ class ReviewTests(unittest.TestCase):
             for grid in tree.xpath('//*[@id="mere-fra-ndi"]/div[contains(@class,"rm-grid")]'):
                 self.assertLessEqual(len(grid.xpath('./article')),2,str(path))
 
+    def test_portfolio_supplement_matches_snapshot(self):
+        supplement=json.loads(Path(__file__).with_name('portfolio-market-supplement.json').read_text(encoding='utf8'))
+        rows=json.loads(Path(__file__).with_name('homepage-source').joinpath('highs.json').read_text())['funds'][0]['rows']
+        self.assertEqual(len(rows),len(supplement['rows']))
+        self.assertFalse(supplement['errors'])
+        for row in rows:
+            extra=supplement['rows'][row['isin']]
+            self.assertEqual(extra['date'],row['returnDate'])
+            self.assertAlmostEqual(extra['close'],row['marketClose'],places=4)
+            self.assertEqual(extra['currency'],row['marketCurrency'])
+            self.assertIn('w1',extra)
+            if row['status']=='short_history':
+                self.assertIn('distance',extra)
+                self.assertLessEqual(extra['start'],extra['highDate'])
+                self.assertLessEqual(extra['highDate'],extra['date'])
+                self.assertAlmostEqual(extra['distance'],max(0,(1-extra['close']/extra['high'])*100))
+    def test_short_history_calculation_rejects_mismatch(self):
+        from portfolio_market_supplement import calculate
+        result={'meta':{'currency':'USD'},'timestamp':[1792540800,1793145600],'indicators':{'quote':[{'close':[100,90],'high':[105,95]}]}}
+        row={'returnDate':'2026-10-28','marketClose':90,'marketCurrency':'USD','status':'short_history'}
+        result['timestamp']=[int(__import__('datetime').datetime.fromisoformat(d).replace(tzinfo=__import__('datetime').timezone.utc).timestamp()) for d in ['2026-10-21','2026-10-28']]
+        extra=calculate(result,row)
+        self.assertAlmostEqual(extra['w1'],-10)
+        self.assertAlmostEqual(extra['distance'],(1-90/105)*100)
+        with self.assertRaises(ValueError):calculate(result,{**row,'marketClose':91})
+        with self.assertRaises(ValueError):calculate(result,{**row,'marketCurrency':'EUR'})
+
 if __name__=='__main__':unittest.main()
 
 
