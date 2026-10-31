@@ -24,7 +24,12 @@ def build_media(dest):
                     label='Skrevet af Mads Christiansen' if item['type']=='egen' else 'Delt af Mads Christiansen'
                     cards.append(f'<article class="rm-social rm-x"><p class="rm-source">X · {escape(item["date"])}</p><h3>{label}</h3><div class="rm-embed" data-x="{escape(item["id"])}"></div><a href="{escape(item["url"])}" target="_blank" rel="noopener">Læs det originale opslag på X ↗</a></article>')
                 counts[kind]+=1
-            if cards:groups.append('<div class="rm-grid rm-grid-'+kind+'">'+''.join(cards)+'</div>')
+            if cards:
+                label={'youtube':'videoer','instagram':'korte klip','x':'opslag'}[kind]
+                shown=cards[:2];extra=cards[2:]
+                groups.append('<div class="rm-grid rm-grid-'+kind+'">'+''.join(shown)+'</div>')
+                if extra:
+                    groups.append('<details class="rm-more"><summary>Se flere '+label+' ('+str(len(extra))+')</summary><div class="rm-grid rm-grid-'+kind+'">'+''.join(extra)+'</div></details>')
         if not groups:continue
         section=html.fragment_fromstring('<section class="rm-section" id="mere-fra-ndi" aria-labelledby="rm-title"><p class="rm-source">VIDEOER OG OPSLAG</p><h2 id="rm-title">Bliv klogere på '+escape(entry['name'])+'</h2>'+''.join(groups)+'</section>')
         markup=html.tostring(section,encoding='unicode')

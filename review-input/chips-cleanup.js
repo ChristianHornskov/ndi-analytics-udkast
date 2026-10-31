@@ -1,0 +1,1 @@
+(()=>{document.querySelectorAll('details').forEach(d=>d.addEventListener('toggle',()=>{if(d.open)d.querySelectorAll('img[data-deferred-src]').forEach(i=>{i.src=i.dataset.deferredSrc;i.removeAttribute('data-deferred-src')})}));document.querySelectorAll('.cc-explain').forEach(a=>a.addEventListener('click',()=>{const d=document.querySelector('.cc-deep');if(d)d.open=true}));})();

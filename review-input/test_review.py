@@ -94,6 +94,14 @@ class ReviewTests(unittest.TestCase):
             self.assertEqual(len(tree.xpath('//script[contains(@src,"review-media.js")]')),1)
         self.assertGreater(checked,40)
 
+    def test_compact_chips(self):
+        tree=html.parse(str(DEST/'temaer/chips.html'))
+        self.assertEqual(len(tree.xpath('//*[@id="tpl-vk"]')),1)
+        self.assertEqual(len(tree.xpath('//details[@class="cc-step"]')),8)
+        self.assertFalse(tree.xpath('//details[@class="cc-step"][@open]'))
+        self.assertEqual(len(tree.xpath('(//*[@id="kaeden-i-nyhederne"]//ul[@class="xs-liste"])[1]/li')),2)
+        self.assertEqual(len(tree.xpath('//*[@id="mere-fra-ndi"]/div[contains(@class,"rm-grid-youtube")]/article')),2)
+        self.assertFalse(tree.xpath('//details//img[@data-deferred-src][@src]'))
     def test_unique_ids_and_local_assets(self):
         for name in ['index.html','tech.html','widget/index.html','portfolio/index.html','selskaber/spacex.html']:
             path=DEST/name;tree=html.parse(str(path))
@@ -104,4 +112,6 @@ class ReviewTests(unittest.TestCase):
                     self.assertTrue((path.parent/src.split('?')[0]).resolve().exists(),src)
 
 if __name__=='__main__':unittest.main()
+
+
 

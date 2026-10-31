@@ -188,6 +188,8 @@ def build():
     save(page,path)
     from media_integration import build_media
     build_media(DEST)
+    from chips_cleanup import clean_chips
+    clean_chips(DEST)
     print('Built isolated preview:', DEST)
 
 if __name__ == '__main__': build()
