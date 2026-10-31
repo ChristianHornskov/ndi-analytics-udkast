@@ -1,0 +1,80 @@
+# Samlet leverance og afslutningskontrol — v19 review
+
+Dette er den autoritative opgaveliste fra 31. oktober 2026. ARBEJDSLISTE.md er fremdriftsnotat, ikke definitionen på hele opgaven. Ingen række må slettes ved opsummering. Nye ønsker tilføjes eller ændrer en navngiven række. Historiske drift-, Azure- og mailopgaver fra chatten genåbnes ikke af denne liste.
+
+## Slutmål
+En sammenhængende, visuelt gennemarbejdet reviewversion af widget → portefølje/tech → tema/selskab, med de aftalte forbedringer og hver relevant botanbefaling behandlet. Brug eksisterende dokumenterede data. Bevar accepteret design; byg ikke sitet forfra. Reviewgren: codex/v18-animation-integration-20261031. Ingen main-merge, Wix, Azure, produktionsændringer eller nye datakilder.
+
+## Statusregler
+Tilladte statusser: mangler; under arbejde; verificeret færdigt; afventer Christian; fravalgt med Christians godkendelse. En implementeringspåstand uden kontrolbevis er under arbejde. Hver færdig række skal have fil/commit og relevant test eller visuel kontrol. Et botforslag er input, ikke automatisk godkendelse. Gamle designs frem for nye skal vises med billeder og godkendes af Christian. Ét afventende punkt blokerer ikke uafhængige punkter. Udskudt compliance og publicering er uden for slutmålet.
+
+## Brugerkrav og tværgående leverance
+| ID | Krav | Status | Bevis eller næste handling |
+|---|---|---|---|
+| U01 | Widget med eksisterende foretrukket graf, kalender, klasseskift og kopierbar ISIN | under arbejde | Klasseskift tidligere browserkontrolleret; samlet slutkontrol af begge klasser og ISIN udestår. |
+| U02 | To visuelle indgange med korrekt destination: porteføljeanalyse og tech | under arbejde | Widgetgrafik findes; kontrollér ruter og sammenhæng. Porteføljeillustration kræver Christians visuelle vurdering før endelig accept. |
+| U03 | Fordybelsesdata kun PMINDI | under arbejde | portfolio.js fastholder selected=0; kontrollér øvrige indgange. |
+| U04 | Porteføljeoverblik før selskabsliste; grafisk top | verificeret færdigt | f0f2df6; 390/1280 px browserkontrol, PMINDI-serie bevaret. |
+| U05 | Mobilkort/desktop-tabel, seks perioder, rød/grøn, sortering, kort historik | verificeret færdigt | f0f2df6; browser: Tesla, tom søgning, begge sorteringsretninger, kursdato og links. |
+| U06 | Ét felt pr. sektor, oprindelig 52-ugers-farveskala, mobilbjælker | verificeret færdigt | 2d10201/f0f2df6; Christian godkendte kombination; diagramfilter kontrolleret. |
+| U07 | Kalender lodret på mobil; Claude-nedtursgraf | verificeret færdigt | 2d10201; browserkontroller beskrevet i CLAUDE-INTEGRATION-20261031.md. |
+| U08 | Kompakte gamle risiko/nøgletal og gamle omkostninger bevares | verificeret færdigt | Christians eksplicitte billedbaserede godkendelser. Ingen nyt redesign af disse. |
+| U09 | Grafisk klasse/udlodning og forklarende geografi/metode | verificeret færdigt | f0f2df6/225c798; to bekræftede udlodninger, responsiv graf og dataproces; ingen falsk automatisk freshness. |
+| U10 | Tech: tæt menu med 12 temaer, forbindelsesdiagram og forklaring | under arbejde | Tidligere 1977922; slutkontrol på mobil/desktop og navigation udestår. |
+| U11 | AI-telefonens zoom og spørgsmål som én sammenhængende scene | under arbejde | Tidligere integration; kontrollér klik/berøring og sammenhæng, ikke kun kontrolknapper. |
+| U12 | SpaceX: interaktiv raket/Starlink, billeder/videoer, historie og regnskabstal | under arbejde | Tidligere implementeret; afstem hver seneste brugerrettelse med den renderede side. |
+| U13 | Chips: ingen følgelampe, hoverlys, forståelig selskabsoversigt, rigtige X-opslag | under arbejde | Chipkæde og oprydning findes; slutkontrollér alle interaktioner. |
+| U14 | Medier: thumbnails, to synlige med mulighed for flere, relevante Mads-videoer/X | under arbejde | 56 sider/98 YouTube/9 Instagram/26 X integrationer registreret; 5 runtime-tests. Kontrollér faktisk udvalg og synlige embeds på stikprøver. |
+| U15 | Hele aftalte brugerrejse på 390/desktop, lyst/mørkt hvor understøttet | mangler | Dokumentér sider og interaktioner; ingen påstand om fysisk Safari/Wix-test. |
+| U16 | Reproducerbart build, tests, scoped commits/push, tilgængeligt reviewlink | under arbejde | 19 tests/5 medietests bestået, HEAD 225c798. Gentag kun efter relevante ændringer; endelig scopekontrol udestår. |
+
+## Groks sektioner tænkt forfra — begge TOP10-lister
+D=Designbygger, C=Critiquito. Kilder under ../design-review-read/codex-overdragelse-20261031/06-designforslag/sektioner-gentaenkt/. Alle 20 forslag er repræsenteret her, også dubletter. Manglende statusbevis betyder ikke, at implementeringen nødvendigvis mangler.
+
+| ID/kilder | Forslag | Status | Næste handling |
+|---|---|---|---|
+| S01 D1 | Tre ting om chips: kæde/cyklus/afhængigheder | under arbejde | Sammenhold nuværende løsning med forslag og Christians ønske om reel visuel forklaring. |
+| S02 D2 | Vigtig information | fravalgt med Christians godkendelse | Christian har udskudt compliancegennemgangen. Ikke et permanent designfravalg; uden for denne omgang. |
+| S03 D3 C2 | Kvante: omsætning, tilsagn og udbetaling | under arbejde | Beløb tidligere rettet; kontrollér grafisk løsning og at tilsagn ikke vises som udbetalt. |
+| S04 D4 C5 | Krypto-overlap/Venn | mangler | Vurder billeder og eksisterende #fod; vægtgrafen #kr-andele er IKKE denne opgave. |
+| S05 D5 C6 | Energi: strømafbrydelse, kæde og tidslinje | mangler | Vurder og integrér egnet forklaring eller forelæg fravalg med billeder. |
+| S06 D6 C9 | Fysisk AI: hjul/propeller/robotters størrelsesforhold | under arbejde | Claude-fliser og lyskontrast integreret; bevis om selve størrelsesforklaringen skal findes. |
+| S07 D7 C4 | NVIDIA: problem, produkt, bruger og rolle | mangler | Vurder flow mod nuværende side, ingen ukontrollerede nye fakta. |
+| S08 D8 C10 | Widget: klassernes pengestrøm/kontotyper | under arbejde | Widget må skifte klasse, mens fordybelsen kun bruger PMINDI. Kontrollér indhold og valgt løsning. |
+| S09 D9 | Chipsnyheder hængt på kædens trin | fravalgt med Christians godkendelse | Christian fandt forslaget for komplekst; behold rigtige læselige X-opslag, ikke erstatninger med resuméer. |
+| S10 D10 | Årsrapportafstemning som kildekort/tidslinje | mangler | Vurder grafisk forbedring; bevar datoforskelle og dokumentation. |
+| S11 C1 | Dataproces og foldbare formelforklaringer | under arbejde | Proces implementeret 225c798, omkostninger fastholdt efter godkendelse. Kontrollér om lange detaljer stadig kræver aftalt forbedring. |
+| S12 C3 | Krypto: aktier, ikke mønter; forskellige forretningsrisici | mangler | Vurder grafik uden at gøre generel complianceomgang til del af opgaven. |
+| S13 C7 | Råstoffer: mine, raffinering og afhængigheder | mangler | Gennemgå før/efter og eksisterende citat/kilde; giv dansk læsevej. |
+| S14 C8 | NVIDIA placeret i chipkædens otte trin | mangler | Kontrollér faktiske roller; ingen antagelse om egne fabrikker. |
+
+## Groks småfejl — begge TOP10-lister
+Kilder: samme mappe, smaafejl/. ID bevares ved afslutning. D og C nummererer hver 1–10.
+
+| ID | Punkter | Status | Kontrol/valg |
+|---|---|---|---|
+| F01 | D1 videoplakat | under arbejde | Christian ønsker thumbnails; kontrollér faktisk energivideo-thumbnail frem for tom gradient. |
+| F02 | D2 D8 C1 C5 kalender | verificeret færdigt | Godkendt lodret mobilkalender og rød/grøn; 2d10201. |
+| F03 | D3 energihero lyst tema | mangler | Visuel kontrol af lys hero, ikke kun fysisk AI. |
+| F04 | D4 C2 nedture | verificeret færdigt | Godkendt Claude-løsning; 2d10201. |
+| F05 | D5 C6 nøgletal/omkostninger | verificeret færdigt | Gamle kompakte opstillinger udtrykkeligt valgt; ingen indholdsændring. |
+| F06 | D6 C8 dobbelt vigtig-information-overskrift | under arbejde | Kontrollér dublet; ingen ny complianceanalyse. |
+| F07 | D7 Alphabet-andel/kildelink | mangler | Kontrollér faktisk position og visuel opstilling. |
+| F08 | D9 D10 C3 fasegraf | under arbejde | Claude-løsning 2d10201; kontrollér alle fem faser og labels ved 390 px. |
+| F09 | C4 widgetknapper/Nasdaqfarve | under arbejde | Sammenhold med Christians godkendte original; forelæg evt. fravalg frem for at antage godkendelse. |
+| F10 | C7 52-ugers-farver | fravalgt med Christians godkendelse | Christian valgte oprindelig flerfarveskala. |
+| F11 | C9 tech-krydshenvisning | under arbejde | Eksisterende bridge; kontrollér læsbarhed og klikfelt. |
+| F12 | C10 sidehoved/faner | under arbejde | Ny hero godkendt; kontrollér aktive navigationsmarkører og mobilklikfelter. |
+
+## Yderligere leverancer og afgrænsning
+- De 22 porteføljeforslag: DESIGNBESLUTNINGER-20261031.md er underregister; alle rækker skal fortsat dækkes af U04–U09/U15, ikke erstatte S/F-registret.
+- Claude 871aa329 og tidligere animationer: CLAUDE-INTEGRATION-20261031.md og claude-grafik/ er kildebevis. Afstem leverede filer med integrationsmodulet; dokumentér bevidste forskelle.
+- Medieregistre: MEDIA-INTEGRATION-STATUS.json, private overdragelsesregister og udvælgelse. Ingen udvidet offentliggørelse af private noter. Convequity og manglende rettigheder/kilder må ikke fremstilles som afklarede; afklar eksisterende leveringsnoter før evt. integration.
+- Ingen genåbning af udtrykkeligt udskudt compliance eller historiske Azure-driftsopgaver. Ikke nyt redesign af godkendte sektioner.
+
+## Afslutningsport
+1. Alle U/S/F-rækker skal være afstemt med faktisk kode og leverance; ingen åben række må omdøbes til færdig alene pga. commit eller tests.
+2. Alt uafhængigt autoriseret arbejde udføres før eventuelle afventende designvalg rapporteres som blokering.
+3. Afsluttende rapport angiver præcis liste over færdigt, afventer Christian og godkendte fravalg, med beviser og reviewlink.
+4. Goal må først markeres complete, når slutmålet er opfyldt. Ved reelt manglende input følges Goal-værktøjets blocker-regler; ingen falsk færdigmelding.
+5. Automatiske tests er nødvendige, men erstatter ikke visuel og menneskelig gennemgang.

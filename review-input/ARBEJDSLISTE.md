@@ -31,3 +31,6 @@ Kun reviewgren. Ingen main-merge, Wix, Azure, nye datakilder eller afsluttende c
 ## Afsluttende kontrol
 19 automatiske tests og 5 medietests bestået. JavaScript-syntaks kontrolleret. To dokumenterede udlodningsmarkører verificeret i browser; gammel dublet skjult. Ingen vandret overflow ved 390 px. Fysisk Safari/Wix ikke testet. Implementeringsomgangen er klar til Christians visuelle review; ingen liveudgivelse.
 
+
+## Autoritativt slutmål (tilføjet 31. oktober)
+Læs SAMLET-LEVERANCE.md før næste handling. Denne fil erstatter ikke tidligere ønsker; den genindsætter de tematiske/selskabsspecifikke og småfejlsforslag, som manglede i ovenstående delstatus. Formuleringen "implementeringsomgangen klar" ovenfor vedrører kun porteføljedelen og er IKKE en afslutning af hele opgaven.
