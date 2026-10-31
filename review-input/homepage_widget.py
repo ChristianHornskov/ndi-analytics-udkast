@@ -32,7 +32,7 @@ def build_homepage_widget(dest):
             shutil.copyfile(path,portfolio/path.name)
     analysis=html.parse(str(source/'simple-embed.html')).getroot()
     analysis.find('head/title').text='Porteføljeanalyse · PMINDI · NewDeal Invest'
-    analysis.find('head').append(html.fragment_fromstring('<link rel="stylesheet" href="portfolio.css?v=20261031c">'))
+    analysis.find('head').append(html.fragment_fromstring('<link rel="stylesheet" href="portfolio.css?v=20261031d">'))
     supplement=json.loads(Path(__file__).with_name('portfolio-market-supplement.json').read_text(encoding='utf8'))
     (portfolio/'market-supplement.js').write_text('window.NDI_PORTFOLIO_SUPPLEMENT='+json.dumps(supplement,ensure_ascii=False)+';',encoding='utf8')
     for src in ['homepage-patch.js','market-supplement.js','portfolio.js?v=20261031c']:

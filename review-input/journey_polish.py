@@ -61,8 +61,24 @@ def polish(dest):
             if choices:trail+='<nav class="up-shortcuts" aria-label="På denne side">'+''.join(choices)+'</nav>'
             text=re.sub(r'(<main\b[^>]*>)',lambda m:m[0]+trail,text,count=1)
         if path.name!='index.html' or path.parent!=dest:
-            text=text.replace('</head>',f'<link rel="stylesheet" href="{rel}assets/css/journey-polish.css?v=20261031"></head>',1)
+            text=text.replace('</head>',f'<link rel="stylesheet" href="{rel}assets/css/journey-polish.css?v=20261031b"></head>',1)
             text=text.replace('</body>',f'<script defer src="{rel}assets/js/journey-polish.js?v=20261031"></script></body>',1)
+        # Real YouTube thumbnails for existing click-to-play videos. Keep player handlers intact.
+        page=html.fromstring(text)
+        changed=False
+        for frame in page.xpath('//*[contains(concat(" ",normalize-space(@class)," ")," vid-ramme ")]'):
+            video=next((v for k,v in frame.attrib.items() if (k=='data-yt' or k.endswith('-yt')) and re.fullmatch(r'[A-Za-z0-9_-]{11}',v)),None)
+            buttons=frame.xpath('.//button[contains(concat(" ",normalize-space(@class)," ")," vid-play ")]')
+            if not video or not buttons:continue
+            button=buttons[0]
+            for poster in button.xpath('.//*[contains(concat(" ",normalize-space(@class)," ")," pd-video-poster ")]'):
+                poster.getparent().remove(poster)
+            if not button.xpath('.//img'):
+                img=html.Element('img',src='https://i.ytimg.com/vi/'+video+'/hqdefault.jpg',alt='',loading='lazy',decoding='async')
+                img.set('class','up-video-thumbnail');button.insert(0,img)
+                button.set('class',button.get('class','')+' up-thumbnail-play')
+                changed=True
+        if changed:text=html.tostring(page,encoding='unicode',method='html')
         # Remove accumulated serialization whitespace, without touching script, SVG or text.
         text=re.sub(r'>[\r\n\t ]{3,}<','>\n<',text)
         path.write_text(text,encoding='utf8')
