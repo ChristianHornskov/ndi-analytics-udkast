@@ -181,8 +181,10 @@ def build():
     assert len(old)==1, 'Expected exactly one original chip chain'
     replacement=next(node for node in html.fragments_fromstring((chip/'chipkaede.html').read_text(encoding='utf-8')) if getattr(node,'tag',None)=='section')
     old[0].getparent().replace(old[0],replacement)
-    page.find('head').append(html.fragment_fromstring('<link rel="stylesheet" href="../assets/chipkaede/chipkaede.css?v=20261031-1">'))
-    page.find('body').append(html.fragment_fromstring('<script defer src="../assets/chipkaede/chipkaede.js?v=20261031-1"></script>'))
+    page.find('head').append(html.fragment_fromstring('<link rel="stylesheet" href="../assets/chipkaede/chipkaede.css?v=20261031-2">'))
+    page.find('body').append(html.fragment_fromstring('<script defer src="../assets/chipkaede/chipkaede.js?v=20261031-2"></script>'))
+    from chip_news import refine_chip_news
+    refine_chip_news(page, DEST)
     save(page,path)
     print('Built isolated preview:', DEST)
 

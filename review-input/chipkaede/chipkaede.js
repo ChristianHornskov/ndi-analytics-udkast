@@ -1,6 +1,6 @@
 /* Chipkæden ("Sådan bliver en chip til").
  * Peg (mus), fokus (tastatur) eller tryk på et trin vælger det: søjlen løftes og
- * lyser op, lampen flytter sig derhen, ledningsbanerne tændes frem til trinnet, og
+ * lyser op, ledningsbanerne tændes frem til trinnet, og
  * panelet viser trinnets tekst og selskaber. Valget bliver stående, når musen
  * forlader scenen, så man kan gå videre til selskaberne i panelet. Der
  * vises en lodret liste i stedet for scenen, når komponenten er smallere end 960 px.
@@ -17,7 +17,6 @@
   var trin = [].slice.call(rod.querySelectorAll(".ck-trin"));
   trin.sort(function (a, b) { return +a.getAttribute("data-i") - +b.getAttribute("data-i"); });
   var spor = [].slice.call(rod.querySelectorAll(".ck-spor"));
-  var lampe = rod.querySelector(".ck-lampe-flyt");
   var panel = rod.querySelector(".ck-panel");
   var pTekst = panel.querySelector(".ck-panel-tekst");
   var cosListe = panel.querySelector(".ck-cos");
@@ -98,11 +97,6 @@
     panel.classList.remove("skifter"); void panel.offsetWidth; panel.classList.add("skifter");
   }
 
-  function flytLampe(i) {
-    if (!lampe) return;
-    var t = (trin[i].getAttribute("data-top") || "0,0").split(",");
-    lampe.style.transform = "translate(" + t[0] + "px," + (+t[1] - 8) + "px)";
-  }
 
   function vis(i) {
     if (i === vist) return;
@@ -112,8 +106,6 @@
       var til = +s.getAttribute("data-til"), ud = s.classList.contains("ck-spor--u");
       s.classList.toggle("er-taendt", ud ? til === i : til <= Math.min(i, 5));
     });
-    flytLampe(i);
-    if (lampe) lampe.parentNode.classList.toggle("er-ud", i >= 5);
     tegnPanel(i);
   }
 

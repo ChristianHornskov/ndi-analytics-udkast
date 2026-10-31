@@ -1,0 +1,18 @@
+.chip-news .xs-liste{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;overflow:visible!important;padding:0;list-style:none;scroll-snap-type:none}
+.chip-news .chip-news-card{display:flex;flex-direction:column;width:auto!important;min-width:0!important;max-width:none!important;padding:26px!important;border:1px solid #52656d55;border-radius:18px;background:linear-gradient(145deg,#8bb9bd0d,transparent);box-shadow:none;transform:none!important;opacity:1!important}
+.chip-news .chip-news-title{font-size:clamp(22px,2vw,28px);line-height:1.22;letter-spacing:-.025em;margin:16px 0 12px;max-width:28ch;color:inherit}
+.chip-news .xp-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.chip-news .xp-trin a{font-size:12px;letter-spacing:.035em;text-decoration:none;border-bottom:1px solid #7ba9ad;padding-bottom:3px}
+.chip-news .xp-dato{font-size:12px;opacity:.65;margin:0}
+.chip-news .xp-fra{font-size:13px;line-height:1.6;margin:0 0 14px;opacity:.8}
+.chip-news .xp-fra span{display:block}
+.chip-news .xp-forkl{font-size:16px;line-height:1.7;margin:0 0 16px;max-width:55ch}
+.chip-news .xp-delt{font-size:12px;color:#53848a;margin:0 0 10px}
+.chip-news .xp-ord{font-size:13px;line-height:1.6;opacity:.75;padding-left:12px;border-left:2px solid #8bb9bd66}
+.chip-news .xp-knapper{margin-top:auto;padding-top:18px;display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.chip-news .xp-knapper button,.chip-news .xp-knapper a{font-size:13px;min-height:44px;display:inline-flex;align-items:center}
+.chip-news .xp-knapper button[hidden]{display:none}
+.chip-news .xp-embed:empty{display:none}
+.chip-news .xs-note{font-size:12px;line-height:1.6;opacity:.65;max-width:80ch;margin-top:20px}
+@media(max-width:700px){.chip-news .xs-liste{grid-template-columns:1fr}.chip-news .chip-news-card{padding:22px!important}.chip-news .chip-news-title{font-size:25px}.chip-news .xp-forkl{font-size:16px}}
+.chip-news .xs-liste{grid-template-columns:repeat(2,minmax(0,1fr))!important;max-width:none!important;width:100%!important}.chip-news>div{max-width:none!important}@media(max-width:700px){.chip-news .xs-liste{grid-template-columns:1fr!important}}

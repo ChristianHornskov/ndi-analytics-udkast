@@ -165,21 +165,13 @@ for i in TEGNORDEN:
     if i == 5:
         lag.append(chip())
 
-# lyskegle (lampe), flyttes af JS til det aktive trin
-lampe = ('<g class="ck-lampe" aria-hidden="true"><g class="ck-lampe-flyt">'
-         '<line class="ck-lampe-snor" x1="0" y1="-132" x2="0" y2="-96"/>'
-         '<polygon class="ck-kegle" points="-14,-76 14,-76 30,0 -30,0"/>'
-         '<rect class="ck-lampe-hus" x="-26" y="-98" width="52" height="22" rx="6"/>'
-         '<ellipse class="ck-lampe-lys" cx="0" cy="-76" rx="14" ry="4"/>'
-         '<ellipse class="ck-plet" cx="0" cy="0" rx="30" ry="13"/></g></g>')
-
 SVG = (f'<svg class="ck-scene" viewBox="0 0 1208 770" role="group" aria-label="Kæden fra tegning til færdig chip. Vælg et trin.">'
        '<defs><filter id="ck-blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5"/></filter>'
        '<filter id="ck-blur2" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="18"/></filter>'
        '<linearGradient id="ck-kegle" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--ck-lys);stop-opacity:.9"/>'
        '<stop offset="1" style="stop-color:var(--ck-lys);stop-opacity:.08"/></linearGradient>'
        '<radialGradient id="ck-guld"><stop offset="0" stop-color="#e6d79c" stop-opacity=".30"/><stop offset="1" stop-color="#e6d79c" stop-opacity="0"/></radialGradient>'
-       '</defs>' + "".join(svg) + "".join(lag) + lampe + '</svg>')
+       '</defs>' + "".join(svg) + "".join(lag) + '</svg>')
 
 # ---------- mobilliste ----------
 li = []
