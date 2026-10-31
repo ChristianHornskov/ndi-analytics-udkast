@@ -1,0 +1,59 @@
+/* Fasegrafen i #virksomhedsfaser (tech.html). Genereres af scripts/v19-faser-graf.py.
+   Faserne er kolonner i grafen. Den valgte fase fremhæves blødt, og kurverne har direkte etiketter.
+   Bred skærm: fanerne med illustrationer står over kolonnerne og vælger fasen.
+   Smal skærm: fanerne skjules, og en række med fasenumre står over kolonnerne. */
+
+#virksomhedsfaser .fg { display: block; position: relative; margin: 0 0 10px; }
+#virksomhedsfaser .fg-svg { display: block; width: 100%; height: auto; overflow: visible; }
+#virksomhedsfaser .fg-svg--m { display: none; }
+
+/* kolonner */
+#virksomhedsfaser .fg-kol { cursor: pointer; }
+#virksomhedsfaser .fg-bg { fill: var(--v5-teal); fill-opacity: 0; transition: fill-opacity .2s; }
+#virksomhedsfaser .fg-top { fill: var(--v5-teal); opacity: 0; transition: opacity .2s; }
+#virksomhedsfaser .fg-kol:hover .fg-bg { fill-opacity: .05; }
+#virksomhedsfaser .fg-kol.aktiv .fg-bg { fill-opacity: .1; }
+#virksomhedsfaser .fg-kol.aktiv .fg-top { opacity: 1; }
+#virksomhedsfaser .fg-skel { stroke: var(--v5-line); stroke-width: 1; }
+
+/* kurver og etiketter */
+#virksomhedsfaser .fg-nul { stroke: var(--v5-kant); stroke-dasharray: 3 5; }
+#virksomhedsfaser .fg-oms { fill: none; stroke: var(--v5-teal); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+#virksomhedsfaser .fg-ovs { fill: none; stroke: var(--v5-gold); stroke-width: 2.5; stroke-dasharray: 8 6; stroke-linecap: round; }
+#virksomhedsfaser .fg-p1 { fill: var(--v5-teal); }
+#virksomhedsfaser .fg-p2 { fill: var(--v5-gold); }
+#virksomhedsfaser .fg-svg text { font-family: "DM Sans", sans-serif; paint-order: stroke; stroke: var(--v5-flade); stroke-width: 4px; stroke-linejoin: round; }
+#virksomhedsfaser .fg-akse { fill: var(--v5-ink-2); font-size: 13px; }
+#virksomhedsfaser .fg-et { font-size: 14px; }
+#virksomhedsfaser .fg-et--oms { fill: var(--v5-teal); }
+#virksomhedsfaser .fg-et--ovs { fill: var(--v5-gold); }
+#virksomhedsfaser .fg-navn { font-size: 15px; }
+#virksomhedsfaser .fg-navn--oms { fill: var(--v5-teal); }
+#virksomhedsfaser .fg-navn--ovs { fill: var(--v5-gold); }
+
+/* fanerne står direkte over kolonnerne */
+.review-tech #virksomhedsfaser .v18-faser-knapper { margin-bottom: 0; }
+.review-tech #virksomhedsfaser .v18-faser-knapper button[aria-pressed=true] { box-shadow: none; }
+
+/* talrækken bruges kun på smal skærm */
+#virksomhedsfaser .fg-nr { display: none; }
+
+@media (max-width: 700px) {
+  .review-tech #virksomhedsfaser .v18-faser-knapper { display: none; }
+  #virksomhedsfaser .fg-svg--d { display: none; }
+  #virksomhedsfaser .fg-svg--m { display: block; }
+  #virksomhedsfaser .fg-nr { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; margin: 18px 0 0; }
+  #virksomhedsfaser .fg-nr button {
+    min-height: 44px; padding: 0; border: 0; border-radius: 10px 10px 0 0; background: transparent; cursor: pointer;
+    color: var(--v5-ink-2); font: 500 15px Manrope, sans-serif;
+  }
+  #virksomhedsfaser .fg-nr button[aria-pressed=true] { color: var(--v5-ink); background: color-mix(in srgb, var(--v5-teal) 10%, transparent); }
+  #virksomhedsfaser .fg-nr button:focus-visible { outline-offset: -3px !important; }
+  #virksomhedsfaser .fg-et { font-size: 11.5px; }
+  #virksomhedsfaser .fg-navn { font-size: 12.5px; }
+  #virksomhedsfaser .fg-akse { font-size: 11px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #virksomhedsfaser .fg-bg, #virksomhedsfaser .fg-top { transition: none; }
+}

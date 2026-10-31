@@ -326,7 +326,7 @@
 .v5f-fysisk-ai .pd .ndi-bar nav{gap:8px}
 .v5f-fysisk-ai .pd .ndi-bar nav a{font-size:12px}}
 .v5f-fysisk-ai .pd .ndi-current-grid>div{min-width:0}
-.v5f-fysisk-ai .pd .ndi-current-grid strong.pd-not-held{font-size:18px;line-height:1.4;overflow-wrap:anywhere}
+.v5f-fysisk-ai .pd .ndi-current-grid strong.pd-not-held{font-size:18px;line-height:1.4;overflow-wrap:normal}
 .v5f-fysisk-ai .pd .company-scene{max-height:none}
 .v5f-fysisk-ai .pd .company-scene img{min-height:0}
 .v5f-fysisk-ai .pd .pd-business-tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:40px 0}
@@ -592,7 +592,7 @@ html.js .v5f-fysisk-ai .ud:not(.alle) .ekstra{display:none}
 .v5f-fysisk-ai .cq-fa__lg{width:28px;height:28px;border-radius:6px;background:#fff;display:grid;place-items:center;overflow:hidden;flex:0 0 auto}
 .v5f-fysisk-ai .cq-fa__lg img{width:24px;height:24px;object-fit:contain;display:block}
 .v5f-fysisk-ai .cq-fa__ini{font:700 .75rem/1 Manrope,sans-serif;color:#050a0f}
-.v5f-fysisk-ai .cq-fa__nm{min-width:0;overflow-wrap:anywhere}
+.v5f-fysisk-ai .cq-fa__nm{min-width:0;overflow-wrap:normal}
 .v5f-fysisk-ai .cq-fa__cw{font-variant-numeric:tabular-nums;color:var(--cq-fa-mute);font-size:0.82rem;white-space:nowrap}
 .v5f-fysisk-ai .cq-fa__all{margin-top:6px;min-height:44px;min-width:44px;padding:0 14px;border-radius:9px;border:1px solid var(--cq-fa-line);background:transparent;color:var(--cq-fa-ink);font:inherit;font-size:0.9rem;cursor:pointer}
 .v5f-fysisk-ai .cq-fa__all:hover{border-color:var(--cq-fa-a)}
@@ -777,3 +777,58 @@ html.js .v5f-fysisk-ai .ud:not(.alle) .ekstra{display:none}
 :root[data-tema="lys"] .v5f-fysisk-ai .cq-fa__k2{border:2px dashed #5E6671}
 :root[data-tema="lys"] .v5f-fysisk-ai .cq-fa__phi{background:rgba(136, 106, 79, .18)}
 :root[data-tema="lys"] .v5f-fysisk-ai{--accent:#7A5F47;--company-accent:#7A5F47;--a:#7A5F47}
+/* ---------- Treemap i #cq-fa ("Maskinen, del for del") ---------- */
+.cq-fa{--fa-bund:var(--cq-fa-card);--fa-hjul:#c7a98c;--fa-prop:#8fb0bc;--fa-nerver:#c9b077;--fa-oejne:#9ab595;--fa-hjerne:#aa9ccb;--fa-arme:#c99482}
+:root[data-tema="lys"] .cq-fa{--fa-hjul:#8a6544;--fa-prop:#3f6a7a;--fa-nerver:#7f6420;--fa-oejne:#4c6e46;--fa-hjerne:#5f4f86;--fa-arme:#8d4f3b}
+.cq-fa .fa-tm{position:relative;margin-top:1.25rem}
+.cq-fa .fa-tm__sum{margin:0 0 .9rem;font-size:.95rem;color:var(--cq-fa-mute)}
+.cq-fa .fa-tm__sum b{font:500 1.05rem 'Manrope',system-ui,sans-serif;color:var(--cq-fa-ink)}
+.cq-fa .fa-tm__flade{position:relative;height:500px;border-radius:16px;overflow:hidden;background:var(--fa-bund);isolation:isolate}
+.cq-fa .fa-tm__g{position:absolute;box-sizing:border-box;padding:3px;transition:opacity .25s}
+.cq-fa .fa-tm__g[data-part="hjul"]{--c:var(--fa-hjul)}.cq-fa .fa-tm__g[data-part="prop"]{--c:var(--fa-prop)}
+.cq-fa .fa-tm__g[data-part="nerver"]{--c:var(--fa-nerver)}.cq-fa .fa-tm__g[data-part="oejne"]{--c:var(--fa-oejne)}
+.cq-fa .fa-tm__g[data-part="hjerne"]{--c:var(--fa-hjerne)}.cq-fa .fa-tm__g[data-part="arme"]{--c:var(--fa-arme)}
+.cq-fa .fa-tm__gb{position:absolute;inset:3px;display:grid;grid-template-columns:auto minmax(0,1fr) auto;grid-template-rows:auto auto 1fr;align-content:start;column-gap:.5rem;row-gap:.1rem;
+ padding:.7rem .8rem;margin:0;border:1px solid color-mix(in srgb,var(--c) 45%,transparent);border-radius:12px;text-align:left;cursor:pointer;color:var(--cq-fa-ink);font:inherit;
+ background:linear-gradient(160deg,color-mix(in srgb,var(--c) 20%,var(--fa-bund)),color-mix(in srgb,var(--c) 9%,var(--fa-bund)));transition:background .2s,border-color .2s;border-color:color-mix(in srgb,var(--c) 40%,transparent)!important}
+.cq-fa .fa-tm__gb:hover,.cq-fa .fa-tm__g.cq-fa--on .fa-tm__gb{border-color:var(--c)!important;background:linear-gradient(160deg,color-mix(in srgb,var(--c) 30%,var(--fa-bund)),color-mix(in srgb,var(--c) 15%,var(--fa-bund)))}
+.cq-fa .fa-tm__gb:focus-visible{outline:2px solid var(--cq-fa-focus);outline-offset:-4px}
+.cq-fa .fa-tm__gi{width:22px;height:22px;color:var(--c);grid-row:1;grid-column:1;align-self:center}
+.cq-fa .fa-tm__gn{grid-row:1;grid-column:2;align-self:center;font:500 1rem/1.15 'Manrope',system-ui,sans-serif;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.cq-fa .fa-tm__gp{grid-row:1;grid-column:3;align-self:center;font:500 1.15rem/1 'Manrope',system-ui,sans-serif;font-variant-numeric:tabular-nums;color:var(--cq-fa-ink)}
+.cq-fa .fa-tm__ga{grid-row:2;grid-column:2/4;font-size:.78rem;color:var(--cq-fa-mute)}
+.cq-fa .fa-tm__ge{display:none}
+.cq-fa .fa-tm__cs{position:absolute;left:3px;right:3px;bottom:3px;top:64px;margin:0 .45rem .45rem;z-index:1}
+.cq-fa .fa-tm__c{position:absolute;box-sizing:border-box;margin:0;padding:.35rem .45rem;border:2px solid transparent;background-clip:padding-box;border-radius:9px;
+ display:flex;flex-direction:column;justify-content:flex-start;gap:.05rem;overflow:hidden;cursor:pointer;text-align:left;color:var(--cq-fa-ink);font:inherit;
+ background-color:color-mix(in srgb,var(--c) 52%,var(--fa-bund));border-color:transparent!important;transition:background-color .15s}
+.cq-fa .fa-tm__c:hover{background-color:color-mix(in srgb,var(--c) 78%,var(--fa-bund))}
+.cq-fa .fa-tm__cn{font-size:.8rem;line-height:1.15;overflow:hidden;overflow-wrap:normal;word-break:normal;hyphens:none}
+.cq-fa .fa-tm__cp{white-space:nowrap;overflow:hidden;font:500 .78rem 'Manrope',system-ui,sans-serif;color:color-mix(in srgb,var(--cq-fa-ink) 78%,transparent);font-variant-numeric:tabular-nums}
+.cq-fa .fa-tm__c--mini .fa-tm__cn,.cq-fa .fa-tm__c--mini .fa-tm__cp,.cq-fa .fa-tm__c--pct .fa-tm__cn{display:none}
+.cq-fa .fa-tm__g--lille .fa-tm__gb{grid-template-columns:auto minmax(0,1fr);padding:.55rem .6rem}
+.cq-fa .fa-tm__g--lille .fa-tm__gp{grid-row:2;grid-column:1/3;font-size:1rem}
+.cq-fa .fa-tm__g--lille .fa-tm__ga{display:none}
+.cq-fa .fa-tm__g--lille .fa-tm__cs{top:72px}
+.cq-fa[data-sel] .fa-tm__g:not(.cq-fa--on){opacity:.55}
+.cq-fa .fa-tm__tip{position:absolute;z-index:5;max-width:280px;padding:.7rem .8rem;border-radius:10px;background:var(--cq-fa-surf);border:1px solid var(--cq-fa-line);box-shadow:0 10px 30px rgba(0,0,0,.35);pointer-events:none}
+.cq-fa .fa-tm__tip p{margin:0}
+.cq-fa .fa-tm__th{display:flex;justify-content:space-between;gap:.8rem;font:500 .95rem 'Manrope',system-ui,sans-serif;color:var(--cq-fa-ink)}
+.cq-fa .fa-tm__td{margin-top:.3rem!important;font-size:.82rem;line-height:1.45;color:var(--cq-fa-mute)}
+.cq-fa .fa-tm__tq{margin-top:.4rem!important;font-size:.75rem;color:var(--cq-fa-mute);opacity:.8}
+/* smal: kun de seks dele, hele feltet er en knap */
+.cq-fa .fa-tm--smal .fa-tm__flade{height:560px}
+.cq-fa .fa-tm--smal .fa-tm__gb{grid-template-columns:auto minmax(0,1fr);padding:.65rem .7rem}
+.cq-fa .fa-tm--smal .fa-tm__gp{grid-row:2;grid-column:1/3;font-size:1.35rem;margin-top:.25rem}
+.cq-fa .fa-tm--smal .fa-tm__ga{grid-row:3;grid-column:1/3}
+.cq-fa .fa-tm--smal .fa-tm__ge{display:block;grid-row:4;grid-column:1/3;align-self:end;font-size:.78rem;color:var(--cq-fa-mute);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cq-fa .fa-tm--smal .fa-tm__g--lille .fa-tm__gp{font-size:1.1rem}
+.cq-fa .fa-tm--smal .fa-tm__g--lille .fa-tm__ge{display:none}
+.cq-fa .fa-tm--smal .fa-tm__gn{white-space:normal}
+:root[data-tema="lys"] .cq-fa .fa-tm__tip{box-shadow:0 10px 30px rgba(0,0,0,.12)}
+@media (prefers-reduced-motion:reduce){.cq-fa .fa-tm__g,.cq-fa .fa-tm__gb,.cq-fa .fa-tm__c{transition:none}}
+.cq-fa .fa-tm--smal .fa-tm__gb{background:linear-gradient(160deg,color-mix(in srgb,var(--c) 36%,var(--fa-bund)),color-mix(in srgb,var(--c) 18%,var(--fa-bund)))}
+.cq-fa .fa-tm--smal .fa-tm__gb:hover,.cq-fa .fa-tm--smal .fa-tm__g.cq-fa--on .fa-tm__gb{background:linear-gradient(160deg,color-mix(in srgb,var(--c) 50%,var(--fa-bund)),color-mix(in srgb,var(--c) 28%,var(--fa-bund)))}
+
+.cq-fa .fa-tm__cn,.cq-fa .fa-tm__cp{flex-shrink:0}.cq-fa .fa-tm__cn{margin-top:auto}.cq-fa .fa-tm__c--pct .fa-tm__cp{margin-top:auto}
+.cq-fa .fa-tm--smal .fa-tm__g--lille .fa-tm__ga{display:block;grid-row:3;grid-column:1/3}

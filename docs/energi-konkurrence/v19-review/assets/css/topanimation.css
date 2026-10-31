@@ -82,3 +82,57 @@
 @media (prefers-reduced-motion: no-preference) {
   .kort--topanim.ta-aktiv .ta-baand { cursor: pointer; -webkit-tap-highlight-color: transparent; }
 }
+
+/* ------------------------------------------------------------------
+   v19: kortets opstilling (gælder ikke SpaceX, som har sin egen hero)
+   Smal: illustration øverst, kreditlinje under den, tekst nederst.
+   Bred: tekst til venstre, illustration og kreditlinje til højre.
+   ------------------------------------------------------------------ */
+.kort--hero.kort--topanim:not(:has(#ta-spacex)) {
+  display: grid; grid-template-columns: minmax(0, 1fr); grid-template-areas: "bild" "kredit" "tekst";
+  align-content: start; justify-content: stretch; min-height: 0;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--c-surface) 55%, var(--c-space)) 0%, var(--c-space) 70%);
+}
+.kort--topanim:not(:has(#ta-spacex)) > .ta-baand { grid-area: bild; }
+.kort--topanim:not(:has(#ta-spacex)) > .hero-tekst { grid-area: tekst; max-width: none; margin-top: 0; padding: var(--sp-4) var(--sp-4) var(--sp-5); }
+.kort--topanim:not(:has(#ta-spacex)) > .kredit--hero {
+  grid-area: kredit; position: static; justify-self: end; margin: var(--sp-2) var(--sp-4) 0 !important;
+  padding: 0; background: none; text-shadow: none; color: var(--c-text-3, var(--c-text-2)); font-size: .75rem;
+}
+.kort--topanim:not(:has(#ta-spacex)) .hero-titel { margin: 0; }
+.kort--hero.kort--topanim:not(:has(#ta-spacex)) .hero-billede--svg.ta-baand {
+  display: block; position: relative; inset: auto; width: 100%; height: auto; max-height: none;
+  aspect-ratio: auto; background: transparent; overflow: hidden;
+}
+.kort--topanim:not(:has(#ta-spacex)) .ta-baand .ta-udsnit {
+  position: relative; inset: auto; width: 100%; height: auto; max-width: 100%; aspect-ratio: 9 / 4; margin: 0;
+  overflow: hidden; background: var(--c-space);
+}
+.kort--topanim:not(:has(#ta-spacex)) .ta-baand .ta-udsnit > .ta-svg {
+  position: absolute; max-width: none;
+  width: calc(1200 / var(--uw) * 100%); height: calc(600 / var(--uh) * 100%);
+  left: calc(var(--ux) / var(--uw) * -100%); top: calc(var(--uy) / var(--uh) * -100%);
+}
+/* Illustrationen skal vise hele udsnittet, også i smal visning. */
+@media (max-width: 599.98px), (max-height: 479.98px) and (orientation: landscape) {
+  .kort--topanim:not(:has(#ta-spacex)) #ta-etoro .ta-scene, .kort--topanim:not(:has(#ta-spacex)) .ta-svg .ta-scene { clip-path: none; }
+}
+/* Knappen ligger i samme gitterfelt som illustrationen, i dens øverste højre hjørne. */
+.kort--hero.kort--topanim:not(:has(#ta-spacex)) .hero-pause:not([hidden]) {
+  display: inline-flex; grid-area: bild; justify-self: end; align-self: start; position: relative;
+  top: auto; right: auto; bottom: auto; left: auto; margin: var(--sp-2); z-index: 2;
+}
+
+/* Bred: kortet er mindst ca. 720 px (skærme 800 til 1023 px og fra 1110 px, hvor sidemenuen fylder). */
+@media (min-width: 800px) and (max-width: 1023.98px), (min-width: 1110px) {
+  .kort--hero.kort--topanim:not(:has(#ta-spacex)) {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr); grid-template-rows: 1fr auto auto 1fr;
+    grid-template-areas: "tekst ." "tekst bild" "tekst kredit" "tekst ."; column-gap: var(--sp-6, 32px);
+    padding: var(--sp-6, 32px) var(--sp-6, 32px) var(--sp-5, 24px);
+  }
+  .kort--topanim:not(:has(#ta-spacex)) > .hero-tekst { align-self: center; padding: 0; }
+  .kort--topanim:not(:has(#ta-spacex)) .ta-baand .ta-udsnit { border-radius: 14px; border: 1px solid var(--c-line); }
+  .kort--topanim:not(:has(#ta-spacex)) > .kredit--hero { margin: var(--sp-2) 0 0 !important; }
+  .kort--hero.kort--topanim:not(:has(#ta-spacex)) .hero-pause:not([hidden]) { margin: 10px; }
+  .kort--topanim:not(:has(#ta-spacex)) .hero-titel { font-size: var(--fs-32, 2rem); max-width: 18ch; }
+}

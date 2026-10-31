@@ -194,6 +194,8 @@ def build():
     polish(DEST)
     from data_quality import repair_data_copy
     repair_data_copy(DEST)
+    from claude_integration import integrate
+    integrate(DEST)
     print('Built isolated preview:', DEST)
 
 if __name__ == '__main__': build()

@@ -1,0 +1,72 @@
+/* Nye grafer i porteføljeanalysen (v19). Se grafik-v19.js. */
+.g19-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
+.g19-kun-m{display:none}
+@media(max-width:600px){.g19-kun-d{display:none!important}.g19-kun-m{display:block}table.g19-kun-m{display:table}}
+
+/* ---------- 52-ugers top: liste på smal skærm ---------- */
+.g19-hl{display:none}
+@media(max-width:600px){
+ #highs-content .hist-scroll{display:none}
+ #highs-content .panelhead:has(+ .hist-scroll){display:none}
+ .g19-hl{display:block;margin:6px 0 10px}
+ .g19-hl-forkl{margin:0 0 10px;font-size:13px;line-height:1.45;color:var(--muted)}
+ .g19-hl-hd,.g19-hl-r{display:grid;grid-template-columns:66px minmax(0,1fr) 54px 28px;gap:8px;align-items:center}
+ .g19-hl-hd{padding:0 6px 6px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--edge)}
+ .g19-hl-hd span:nth-child(n+3){text-align:right}
+ .g19-hl-liste{list-style:none;margin:0;padding:0}
+ .g19-hl-r{width:100%;min-height:44px;padding:6px;border:0;border-bottom:1px solid var(--edge);border-radius:0;background:transparent;color:var(--ink);font:inherit;font-size:13.5px;text-align:left;cursor:pointer}
+ .g19-hl-r:focus-visible{outline:2px solid var(--ink);outline-offset:-2px;border-radius:6px}
+ .g19-hl-r[aria-pressed="true"]{background:rgba(137,174,180,.12);border-radius:6px}
+ .g19-hl-b{height:10px;border-radius:5px;background:#1a2c35;overflow:hidden}
+ .g19-hl-b i{display:block;height:100%;border-radius:5px;background:#5f8c93}
+ .g19-hl-r.er-stor .g19-hl-b i{background:var(--green)}
+ .g19-hl-r.er-top .g19-hl-b i{background:var(--yellow)}
+ .g19-hl-l{white-space:nowrap}
+ .g19-hl-r b{text-align:right;font-weight:600;font-variant-numeric:tabular-nums}
+ .g19-hl-r small{text-align:right;color:var(--muted);font-size:12px;font-variant-numeric:tabular-nums}
+}
+
+/* ---------- Vejen gennem nedturene ---------- */
+#drawdown.g19-nedture-box{overflow:visible}
+#drawdown .g19-nedture svg{display:block;width:100%;min-width:0;height:auto;overflow:visible}
+#drawdown .g19-nedture svg.g19-kun-m{display:none}
+@media(max-width:600px){#drawdown .g19-nedture svg.g19-kun-d{display:none}#drawdown .g19-nedture svg.g19-kun-m{display:block}}
+.g19-nedture text{font-family:inherit;paint-order:stroke;stroke:var(--panel);stroke-width:4px;stroke-linejoin:round}
+.g19-akse{font-size:12px;fill:var(--muted)}
+.g19-kun-m .g19-akse{font-size:11px}
+.g19-gitter{stroke:#1d2e37;stroke-width:1}
+.g19-nul{stroke:var(--edge);stroke-width:1}
+.g19-flade{fill:var(--red);fill-opacity:.16}
+.g19-kurve{fill:none;stroke:var(--red);stroke-width:1.8;stroke-linejoin:round}
+.g19-bund{fill:var(--panel);stroke:var(--red);stroke-width:2}
+.g19-nu{fill:var(--ink)}
+.g19-tal{font-size:11.5px;fill:var(--muted)}
+.g19-tal-stor{font-size:14px;font-weight:600;fill:var(--ink)}
+.g19-kun-m .g19-tal-stor{font-size:13px}
+.g19-dato{font-size:12px;fill:var(--muted)}
+
+/* ---------- Afkastkalender ---------- */
+.g19-kal-box{overflow:visible}
+.g19-kal{width:100%;border-collapse:separate;border-spacing:4px;table-layout:fixed;font-variant-numeric:tabular-nums}
+.g19-kal th{font-size:12px;font-weight:500;color:var(--muted);text-align:center;padding:4px 0;background:none;border:0}
+.g19-kal tbody th{text-align:left;font-size:13.5px;color:var(--ink);padding-right:6px}
+.g19-kal td{height:44px;padding:0 2px;border:0;border-radius:8px;text-align:center;font-size:13.5px;font-weight:600;color:var(--ink);white-space:nowrap}
+.g19-kal td.pos{background:#254844}
+.g19-kal td.neg{background:#4b3235}
+.g19-kal td.g19-igang{box-shadow:inset 0 0 0 2px var(--ink)}
+.g19-kal td.g19-k-tom{background:transparent}
+.g19-kal .g19-k-aar{text-align:right;padding-left:12px;border-left:1px solid var(--edge);border-radius:0;width:86px}
+.g19-kal td.g19-k-aar b{display:block;font-size:16px;font-weight:600}
+.g19-kal td.g19-k-aar small{display:block;font-size:11px;font-weight:400;color:var(--muted)}
+.g19-kal-m td{height:38px;font-size:13px}
+.g19-kal-m thead th{font-size:12.5px}
+.g19-kal-m tbody th{width:42px}
+.g19-kal-m .g19-k-aarr th{border-top:1px solid var(--edge);padding-top:8px}
+.g19-kal-m .g19-k-aarr td.g19-k-aar{border-left:0;border-top:1px solid var(--edge);text-align:center;padding:8px 0 0;width:auto;height:auto}
+.g19-kal-m .g19-k-aarr td.g19-k-aar b{font-size:13.5px}
+.g19-kal-m .g19-k-aarr td.g19-k-aar small{font-size:10.5px}
+.g19-k-leg{display:flex;flex-wrap:wrap;gap:6px 18px;margin:10px 4px 0;font-size:12px;color:var(--muted)}
+.g19-k-leg span{display:inline-flex;align-items:center;gap:6px}
+.g19-k-leg i{display:inline-block;width:14px;height:14px;border-radius:4px}
+.g19-k-leg i.pos{background:#254844}.g19-k-leg i.neg{background:#4b3235}.g19-k-leg i.g19-igang{box-shadow:inset 0 0 0 2px var(--ink)}
+@media(max-width:600px){.g19-kal{border-spacing:3px}}

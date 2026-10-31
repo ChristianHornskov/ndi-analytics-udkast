@@ -87,9 +87,9 @@ class ReviewTests(unittest.TestCase):
             if scripts:
                 animated+=1
                 self.assertEqual(len(scripts),1)
-                self.assertIn('?v=20261031-animation1',scripts[0])
+                self.assertIn('?v=20261031-integrated',scripts[0])
                 for href in tree.xpath('//link[contains(@href,"topanimation.css")]/@href'):
-                    self.assertIn('?v=20261031-animation1',href)
+                    self.assertIn('?v=20261031-integrated',href)
         self.assertEqual(animated,21)
 
     def test_only_widget_loads_fund_selection(self):
@@ -207,7 +207,17 @@ class ReviewTests(unittest.TestCase):
         with self.assertRaises(ValueError):calculate(result,{**row,'marketClose':91})
         with self.assertRaises(ValueError):calculate(result,{**row,'marketCurrency':'EUR'})
 
+    def test_claude_integration_preserves_neighbour_sections(self):
+        tree=html.parse(str(DEST/'temaer/krypto.html'))
+        self.assertEqual(len(tree.xpath('//*[@id="kr-andele"]')),1)
+        self.assertEqual(len(tree.xpath('//*[@id="fod"]')),1)
+        self.assertEqual(len(tree.xpath('//*[@id="fod-liste"]/li')),6)
+        self.assertFalse(tree.xpath('//div[@class="bog-g"]/figure[contains(@class,"smaa")]'))
+        for a in tree.xpath('//*[@id="kr-andele"]//a[@href]'):
+            self.assertTrue((DEST/'temaer'/a.get('href')).resolve().exists(),a.get('href'))
+
 if __name__=='__main__':unittest.main()
+
 
 
 

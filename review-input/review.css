@@ -66,3 +66,5 @@
 .phase-identity small{font-size:12px;line-height:1.4;font-weight:400;color:var(--v5-ink-2)}
 .phase-company .phase-company-arrow{margin-left:auto;font-size:22px}
 @media(max-width:700px){.phase-company{gap:12px}.phase-company .phase-logo{flex-basis:60px;width:60px;height:60px;border-radius:13px}.review-tech .v18-faser-kurve{max-height:none;min-height:185px}.phase-identity strong{font-size:25px}}
+/* Keep the official logo inside its background plate, including light theme. */
+.logo-felt .ndi-logo{max-width:100%;height:auto;object-fit:contain;min-width:0;flex-shrink:1}

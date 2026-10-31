@@ -663,3 +663,17 @@ html.js .v5f-rumfart .fod:not(.alle){display:none}
 :root[data-tema="lys"] .v5f-rumfart .cq-rum__sat path{stroke:#5E6671}
 :root[data-tema="lys"] .v5f-rumfart .cq-rum__pi{background:rgba(82, 109, 147, .16)}
 :root[data-tema="lys"] .v5f-rumfart{--accent:#4D668A;--company-accent:#4D668A;--a:#4D668A}
+/* Omsætningsfordeling (#penge): procent i hvert felt og én farve pr. del */
+.v5f-rumfart{--oms-net:#8fa9c9;--oms-rum:#efc47c;--oms-ai:#b3a1d9;--oms-del:#6f86a3;--oms-tekst:#0b1118}
+:root[data-tema="lys"] .v5f-rumfart{--oms-net:#4c6580;--oms-rum:#b98325;--oms-ai:#6e5a9a;--oms-del:#5c728c;--oms-tekst:#ffffff}
+.v5f-rumfart .seg .mute{color:var(--mute)}
+.v5f-rumfart .seg-bar--tal{height:40px;border-radius:10px;gap:3px;background:transparent}
+.v5f-rumfart .seg-bar--tal i{display:flex;align-items:center;min-width:0;padding-left:.6rem;overflow:hidden}
+.v5f-rumfart .seg-bar--tal b{font:500 .875rem/1 'Manrope',system-ui,sans-serif;color:var(--oms-tekst);white-space:nowrap}
+.v5f-rumfart .seg-bar.seg-bar--tal i.oms-net,.v5f-rumfart .seg-l.seg-l--tal li.oms-net::before{background:var(--oms-net)}
+.v5f-rumfart .seg-bar.seg-bar--tal i.oms-rum,.v5f-rumfart .seg-l.seg-l--tal li.oms-rum::before{background:var(--oms-rum)}
+.v5f-rumfart .seg-bar.seg-bar--tal i.oms-ai,.v5f-rumfart .seg-l.seg-l--tal li.oms-ai::before{background:var(--oms-ai)}
+.v5f-rumfart .seg-bar.seg-bar--tal i.oms-del,.v5f-rumfart .seg-l.seg-l--tal li.oms-del::before{background:var(--oms-del)}
+:root[data-tema="lys"] .v5f-rumfart .seg-bar--tal i.oms-rum b{color:#1f232d}
+.v5f-rumfart .seg-l--tal b{font-weight:500;color:var(--ink)}
+@media(max-width:420px){.v5f-rumfart .seg-bar--tal i{padding-left:.4rem}.v5f-rumfart .seg-bar--tal b{font-size:.75rem}}

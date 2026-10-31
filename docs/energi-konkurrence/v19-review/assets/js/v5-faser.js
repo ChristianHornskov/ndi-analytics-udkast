@@ -8,5 +8,6 @@
     tekster.forEach(function (t, k) { t.hidden = k !== i; });
   }
   knapper.forEach(function (b) { b.addEventListener("click", function () { vaelg(+b.dataset.fase); }); });
-  felter.forEach(function (f) { f.addEventListener("pointerenter", function () { vaelg(+f.dataset.faseFelt); }); });
+  // Kolonnerne i grafen vælger fasen ved klik og tryk. Tastaturet bruger fanerne (bred skærm) eller talrækken (smal skærm).
+  felter.forEach(function (f) { f.addEventListener("click", function () { vaelg(+f.dataset.faseFelt); }); });
 })();

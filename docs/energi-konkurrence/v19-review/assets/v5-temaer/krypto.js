@@ -65,3 +65,38 @@ var kd=document.getElementById('kilder-d');
 [].forEach.call(document.querySelectorAll('.vid-ramme[data-yt]'),function(r){var b=r.querySelector('.vid-play');b.addEventListener('click',function(){var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+r.dataset.yt+'?autoplay=1&rel=0&playsinline=1';f.title=r.dataset.title;f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.setAttribute('allowfullscreen','');f.referrerPolicy='strict-origin-when-cross-origin';r.replaceChild(f,b);f.focus()})});
 })();
 }catch(e){}
+try{
+/* Andele i temaet (#kr-andele): tegnes igen fra datalaget, så tal og rækkefølge følger dagens andele.
+   HTML'en indeholder samme liste beregnet ved eksporten, så figuren også virker uden JS. */
+(function(){
+var fig=document.getElementById('kr-andele');if(!fig)return;
+var ROLLE={},KORT={};
+[].forEach.call(document.querySelectorAll('#cq-kr .cq-kr__panel'),function(p){var r=p.getAttribute('aria-label')||'';r=r.replace(/ i bogen$/,'').replace(/^Skriver$/,'Skriver i bogen').replace(/^Åbner døren til$/,'Åbner døren til bogen');
+ [].forEach.call(p.querySelectorAll('.cq-kr__nm'),function(n){var t=n.textContent.trim();ROLLE[t.split(/\s+/)[0].toLowerCase()]=r;KORT[t.split(/\s+/)[0].toLowerCase()]=t;});});
+function dk(x){return x.toFixed(2).replace('.',',')+' %'}
+function tegn(d){
+ if(!d||!d.selskaber)return;
+ var alle=Object.keys(d.selskaber).map(function(k){var s=d.selskaber[k];return{slug:k,navn:s.navn,andel:s.andel,tema:s.tema}}).filter(function(s){return s.tema==='krypto'&&typeof s.andel==='number'});
+ if(!alle.length)return;
+ alle.sort(function(a,b){return b.andel-a.andel});
+ var top=alle.slice(0,8),rest=alle.slice(8),iren=d.selskaber.iren;
+ var maks=Math.max(alle[0].andel,iren&&iren.andel||0);maks=Math.ceil(maks*10+.5)/10;
+ fig.style.setProperty('--maks',maks);
+ var ol=fig.querySelector('.kr-and__liste');ol.textContent='';
+ top.forEach(function(s){var f=s.navn.split(/\s+/)[0].toLowerCase();
+  var li=document.createElement('li'),a=document.createElement('a'),sm=document.createElement('small'),b=document.createElement('span'),i=document.createElement('i'),v=document.createElement('b');
+  a.className='kr-and__n';a.href='../selskaber/'+s.slug+'.html';a.textContent=KORT[f]||s.navn;sm.textContent=ROLLE[f]||'Selskab i kryptotemaet';a.appendChild(sm);
+  b.className='kr-and__b';b.setAttribute('aria-hidden','true');i.style.setProperty('--v',s.andel);b.appendChild(i);v.textContent=dk(s.andel);
+  li.appendChild(a);li.appendChild(b);li.appendChild(v);ol.appendChild(li);});
+ if(rest.length){var sum=rest.reduce(function(t,s){return t+s.andel},0),lo=rest[rest.length-1].andel,hi=rest[0].andel;
+  var li=document.createElement('li'),n=document.createElement('span'),t=document.createElement('span');li.className='kr-and__rest';
+  n.className='kr-and__n';n.textContent=rest.length+' øvrige';t.className='kr-and__rt';
+  t.textContent=lo.toFixed(2).replace('.',',')+' til '+dk(hi)+' hver, tilsammen '+dk(sum);li.appendChild(n);li.appendChild(t);ol.appendChild(li);}
+ var h=fig.querySelector('.kr-and__h');if(h)h.textContent='Temaets '+alle.length+' selskaber er hver især små';
+ var ir=fig.querySelector('.kr-and__iren');
+ if(ir){if(iren&&typeof iren.andel==='number'){ir.hidden=false;ir.style.setProperty('--v',iren.andel);ir.firstChild.textContent='IREN '+dk(iren.andel);}else ir.hidden=true;}
+}
+if(window.NDI_TAL)tegn(window.NDI_TAL);
+document.addEventListener('ndi:tal',function(e){tegn(e.detail)});
+})();
+}catch(e){}
