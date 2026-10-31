@@ -31,7 +31,7 @@
     let entries = document.getElementById('preview-entries');
     if (!entries) {
       entries = document.createElement('nav'); entries.id='preview-entries'; entries.className='review-entry-cards'; entries.setAttribute('aria-label','Gå på opdagelse');
-      entries.innerHTML='<a href="../index.html"><span><strong>Gå på opdagelse i porteføljen</strong><small>Se selskaberne og temaerne bag din investering.</small></span><span aria-hidden="true">→</span></a><a href="../tech.html"><span><strong>Gå på opdagelse i tech</strong><small>Forstå teknologien og se forbindelserne.</small></span><span aria-hidden="true">→</span></a>';
+      entries.innerHTML='<a href="../portfolio/index.html"><span><strong>Gå på opdagelse i porteføljen</strong><small>Se beholdninger, spredning og risiko.</small></span><span aria-hidden="true">→</span></a><a href="../tech.html"><span><strong>Gå på opdagelse i tech</strong><small>Forstå teknologien og se forbindelserne.</small></span><span aria-hidden="true">→</span></a>';
       calendar.after(entries);
     }
     notifyHeight();

@@ -1,0 +1,11 @@
+html.portfolio-analysis main{max-width:1180px;padding:28px 20px!important}
+.portfolio-analysis .controls,.portfolio-analysis #overview,.portfolio-analysis .detail-action,.portfolio-analysis .fund-introduction,
+.portfolio-analysis main>nav:not(#analysis-nav){display:none!important}
+.portfolio-analysis.advanced-view #overview{display:none!important}
+.analysis-intro{padding:0 0 22px}.analysis-intro h1{font-size:clamp(30px,4vw,46px);margin:18px 0 14px;letter-spacing:-1px}.analysis-intro>p:not(.eyebrow){max-width:750px;line-height:1.65}.analysis-paths{display:flex;justify-content:space-between;gap:16px;margin-bottom:32px}.analysis-paths a{color:#b9ced2;text-decoration:none;font-size:14px}
+.portfolio-analysis.advanced-view #analysis-nav{display:flex!important;position:sticky;top:0;z-index:10;flex-wrap:wrap;gap:8px 24px;background:#0b151bf5;padding:14px 0;border-bottom:1px solid #36515a}
+#analysis-nav a{font-size:14px;color:#c5dbdf;text-decoration:none;padding:8px 0}#analysis-nav a:hover{text-decoration:underline}
+.portfolio-analysis .tab{scroll-margin-top:90px!important}
+.portfolio-analysis #portfolio{margin-top:24px!important}.portfolio-analysis #preview-risk-summary{margin-top:32px}
+@media(max-width:600px){html.portfolio-analysis main{padding:16px 12px!important}.analysis-paths{font-size:13px;gap:12px;margin-bottom:24px}.portfolio-analysis.advanced-view #analysis-nav{gap:4px 18px;position:relative}.portfolio-analysis .tab{scroll-margin-top:16px!important}.portfolio-analysis .metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.portfolio-analysis .tablewrap{max-width:100%;overflow-x:auto}.analysis-intro h1{font-size:32px}}
+

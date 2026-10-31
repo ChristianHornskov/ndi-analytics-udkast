@@ -1,0 +1,31 @@
+{
+  "asOf": "2026-10-30",
+  "funds": {
+    "pmindi": {
+      "latestOfficial": {
+        "date": "2026-10-29",
+        "nav": 123.62,
+        "reportDate": "2026-10-30",
+        "sourceFile": "2026-10-30T08-31-40__NewDeal_IPM140 30.10.2026.pdf",
+        "sha256": "a8e4a04478ec96ed530323b618f2e4f99958b7ff7e9f46e959358df303c5cb17"
+      },
+      "officialObservations": 704,
+      "conflictingDates": 0,
+      "sourceArithmeticWarnings": 22,
+      "fullyReconciled": false
+    },
+    "pmindiakk": {
+      "latestOfficial": {
+        "date": "2026-10-29",
+        "nav": 96.24,
+        "reportDate": "2026-10-30",
+        "sourceFile": "2026-10-30T08-34-18__NewDealAkk_IPM145 30.10.2026.pdf",
+        "sha256": "2389c451a36c816a8da51dce8cbf9602fafbd5a47722cec04f38a3990a7574bf"
+      },
+      "officialObservations": 218,
+      "conflictingDates": 0,
+      "sourceArithmeticWarnings": 0,
+      "fullyReconciled": false
+    }
+  }
+}

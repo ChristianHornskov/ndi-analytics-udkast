@@ -65,8 +65,10 @@ def build():
             for script in atlas.findall('script'):
                 script.text=script.text.replace('simpleConnections:true','simpleConnections:true,introOnly:true')
             for map_host in atlas.xpath('.//*[@id="living-map"]'):map_host.attrib.pop('style',None)
-            hub.addnext(atlas)
+            tree.xpath('//*[@id="temaer"]')[0].addnext(atlas)
             atlas.addnext(html.fragment_fromstring('<section id="ai-rejsen" class="review-journey"></section>'))
+            for phases in tree.xpath('//*[@id="virksomhedsfaser"]'):
+                tree.xpath('//*[@id="ai-rejsen"]')[0].addnext(phases)
             tree.find('body').append(html.fragment_fromstring('<script src="assets/js/review-journey.js"></script>'))
             for node in tree.xpath('//*[@data-spy="top10" or @data-spy="portefoeljen"]'):
                 remove(node.getparent())
@@ -146,3 +148,5 @@ def build():
     print('Built isolated preview:', DEST)
 
 if __name__ == '__main__': build()
+
+

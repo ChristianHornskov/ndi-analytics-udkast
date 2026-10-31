@@ -1,0 +1,26 @@
+{
+  "source": "https://node-api.fundmarket.dk/funds/documents/aarsrap2025",
+  "sha256": "8a4fc8874e69477516f3319971a958609341e9b7df8bf6b21ee7e8e5899c45f8",
+  "funds": {
+    "pmindi": {
+      "pdfPage": 98,
+      "inception": "2023-09-25",
+      "returns": {
+        "2023": 16.74,
+        "2024": 46.37,
+        "2025": 15.21
+      },
+      "firstGraphPoint": "2023-09-22"
+    },
+    "pmindiakk": {
+      "pdfPage": 104,
+      "inception": "2025-12-02",
+      "returns": {
+        "2025": -5.61
+      },
+      "yearEndNav2025": 94.53,
+      "unresolved": "Årsrapportens afkast −5,61 % svarer ikke til ændringen fra kurs 100 til indre værdi 94,53. Ingen korrektion er antaget.",
+      "firstGraphPoint": "2025-12-05"
+    }
+  }
+}
