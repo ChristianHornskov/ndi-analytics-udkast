@@ -1,6 +1,6 @@
  
 try{(function(){var R=document.getElementById('cq-kr');if(!R||R.dataset.on)return;R.dataset.on='1';R.classList.add('cq-kr--js');
-var TL={'Datacentre':'../datacenter/index.html','Fintech':'../fintech/index.html'};
+var TL={'Datacentre':'datacenter.html','Fintech':'fintech.html'};
 var fine=window.matchMedia&&matchMedia('(hover: hover) and (pointer: fine)').matches;
 function show(btn){var sc=btn.closest('.cq-kr__scope')||R,inf=sc.querySelector('.cq-kr__info');if(!inf)return;inf.textContent='';
 inf.appendChild(btn.querySelector('.cq-kr__lg').cloneNode(true));var w=document.createElement('div');

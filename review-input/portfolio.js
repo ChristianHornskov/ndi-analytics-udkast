@@ -79,6 +79,12 @@
     const rolling=document.getElementById('rolling-chart');if(rolling&&!document.getElementById('analysis-rolling-guide')){const p=document.createElement('p');p.id='analysis-rolling-guide';p.className='analysis-explain';p.textContent='Flyt starttidspunktet én dag ad gangen: hvert punkt viser det afkast, en investering havde givet over de foregående 12 måneder. Det gør det tydeligt, hvor meget resultatet afhænger af, hvornår man investerede.';rolling.before(p);}
 
     const methodHost=document.getElementById('method-content');
+    const formulaTitles=new Set(['Totalafkast, ÅTD og CAGR','12 måneder og månedsafkast','Volatilitet og Sharpe','Fald fra top','52-ugers top','Aktiernes eksterne kursudvikling']);
+    if(methodHost)for(const heading of [...methodHost.children].filter(el=>el.tagName==='H3'&&formulaTitles.has(el.textContent))){
+      const details=document.createElement('details');details.className='analysis-formula';
+      const summary=document.createElement('summary');heading.before(details);details.append(summary);summary.append(heading);
+      while(details.nextElementSibling?.tagName==='P')details.append(details.nextElementSibling);
+    }
     if(methodHost&&!document.getElementById('analysis-data-path')){
       const path=document.createElement('div');path.id='analysis-data-path';
       path.innerHTML='<p class="analysis-explain">Fra rapport til figur: afkast og beholdninger har hver sin dato. Derfor viser vi begge datoer, så du kan se, hvilket grundlag du undersøger.</p><ol class="analysis-data-path"><li><span>01</span><strong>Fundmarket</strong><p>Rapporter med fondens kurser og beholdninger.</p></li><li><span>02</span><strong>Fælles datagrundlag</strong><p>Kurser, positioner og dokumenterede udlodninger.</p></li><li><span>03</span><strong>Kontrol</strong><p>Datoer og afkast afstemmes med de angivne kilder.</p></li><li><span>04</span><strong>Denne visning</strong><p>Et fast reviewudtræk. Siden henter ikke nye rapporter automatisk.</p></li></ol>';

@@ -5,6 +5,10 @@ import shutil
 
 
 def improve_sections(dest):
+    improve_crypto(dest)
+    improve_nvidia(dest)
+    improve_materials(dest)
+    improve_annual_evidence(dest)
     path=dest/'temaer/energi.html'
     tree=html.fromstring(path.read_text(encoding='utf8'))
     section=tree.get_element_by_id('strommen-gik')
@@ -30,6 +34,79 @@ def improve_sections(dest):
     shutil.copyfile(Path(__file__).with_name('section-visuals.css'),target)
     path.write_text(html.tostring(tree,encoding='unicode',doctype='<!doctype html>'),encoding='utf8')
 
+
+def improve_annual_evidence(dest):
+    # The validated evidence JSON remains unchanged. Render each selected class from it.
+    for folder in ('portfolio','widget'):
+        js=dest/folder/'evidence.js'
+        source=js.read_text(encoding='utf8')
+        start=source.index('<section class="source-evidence"><h3>Afstemning til årsrapport')
+        end=source.index('</section>',start)+len('</section>')
+        markup='''<section class="source-evidence sv-annual"><header><div><span class="eyebrow">Kildekontrol</span><h3>Afstemning til årsrapport</h3><p>Afsluttede års afkast er kontrolleret mod årsrapporten.</p></div><a href="${esc(annualEvidence.source)}" target="_blank" rel="noopener">Årsrapport 2025 ↗<small>PDF-side ${annual.pdfPage}</small></a></header><div class="sv-annual-grid"><div><h4>Afkast i afsluttede år</h4><div class="sv-annual-years">${Object.entries(annual.returns).map(([y,v])=>`<div><strong>${esc(y)}</strong><span class="sv-annual-track"><i class="${v<0?'negative':''} ${y===annual.inception.slice(0,4)?'partial':''}" style="width:${Math.min(100,Math.abs(v))}%"></i></span><b>${pct(v)}</b></div>`).join('')}</div><p class="small muted">Startåret er en delperiode. Stribet bjælke markerer startåret.</p></div><div><h4>To forskellige startdatoer</h4><ol class="sv-date-line">${[{date:annual.firstGraphPoint,label:'Første punkt i grafgrundlaget'},{date:annual.inception,label:'Klassen påbegyndte investeringer'}].sort((a,b)=>a.date.localeCompare(b.date)).map(item=>`<li><time datetime="${esc(item.date)}">${esc(item.date)}</time><span>${item.label}</span></li>`).join('')}</ol><p class="small muted">Grafens første dato er ikke nødvendigvis dagen, investeringerne begyndte.</p></div></div>${annual.unresolved?`<p class="callout">Uafklaret kildeforskel: ${esc(annual.unresolved)} Grafen bruger årsrapportens oplyste afkast; dette er ikke en fuld NAV-afstemning.</p>`:''}</section>'''
+        js.write_text(source[:start]+markup+source[end:],encoding='utf8')
+        path=dest/folder/'index.html'
+        tree=html.fromstring(path.read_text(encoding='utf8'))
+        tree.find('head').append(html.Element('link',rel='stylesheet',href='../assets/css/section-visuals.css?v=20261031-1'))
+        path.write_text(html.tostring(tree,encoding='unicode',doctype='<!doctype html>'),encoding='utf8')
+
+
+def improve_materials(dest):
+    path=dest/'temaer/raastoffer.html'
+    tree=html.fromstring(path.read_text(encoding='utf8'))
+    box=tree.xpath('//div[@class="v18-perspektiv-boks"]')[0]
+    intro=box.xpath('./p[@class="v18-perspektiv-intro"]')[0]
+    visual=html.fragment_fromstring('''<div class="sv-materials">
+      <div class="sv-supply"><span class="sv-label">Udbud og efterspørgsel</span><h3>Er der kobber nok?</h3><ul><li>Hvor meget får verden brug for?</li><li>Hvor meget bliver produceret?</li><li>Bliver der underskud eller overskud?</li></ul></div>
+      <div class="sv-material-chain"><span class="sv-label">Det næste spørgsmål</span><h3>Hvem er vi afhængige af?</h3><ol>
+        <li><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 42s14-16 14-27a14 14 0 0 0-28 0c0 11 14 27 14 27Z"/><circle cx="24" cy="15" r="5"/></svg><strong>Oprindelse</strong><p>Hvor kommer kobberet fra?</p></li>
+        <li><svg viewBox="0 0 48 48" aria-hidden="true"><path d="m8 42 26-29M19 6q18 0 23 18M26 9l12 12"/></svg><strong>Minerne</strong><p>Hvem kontrollerer dem?</p></li>
+        <li><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M5 42V22l12-8v12l12-8v8h7V5h6v37ZM13 33v5m9-5v5m9-5v5"/></svg><strong>Raffinering</strong><p>Hvem forarbejder råstoffet?</p></li>
+        <li><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="9" cy="24" r="6"/><circle cx="37" cy="9" r="6"/><circle cx="37" cy="39" r="6"/><path d="m15 21 16-9M15 27l16 9"/></svg><strong>Afhængighed</strong><p>Hvilke lande vil være afhængige af hinanden?</p></li>
+      </ol></div>
+    </div>''')
+    intro.addnext(visual)
+    original=box.xpath('./blockquote[@lang="en"]')[0]
+    box.remove(original)
+    details=html.Element('details',attrib={'class':'sv-source-detail'})
+    summary=html.Element('summary');summary.text='Læs det originale citat på engelsk';details.append(summary);details.append(original)
+    box.xpath('./p[contains(@class,"skrevet-oversat")]')[0].addnext(details)
+    tree.find('head').append(html.Element('link',rel='stylesheet',href='../assets/css/section-visuals.css?v=20261031-1'))
+    path.write_text(html.tostring(tree,encoding='unicode',doctype='<!doctype html>'),encoding='utf8')
+
+
+def improve_crypto(dest):
+    path=dest/'temaer/krypto.html'
+    tree=html.fromstring(path.read_text(encoding='utf8'))
+    section=tree.get_element_by_id('fod').xpath('./div')[0]
+    visual=html.fragment_fromstring('''<div class="sv-overlap">
+      <div class="sv-orbits" aria-hidden="true"><span>Datacentre</span><span>Krypto</span><span>Fintech</span></div>
+      <p class="sv-overlap-intro">Samme selskab kan forbinde flere teknologier. I fondens opdeling tæller vi det kun i ét hovedtema.</p>
+      <div class="sv-overlap-pairs">
+        <article><h3>Datacentre ↔ Krypto</h3><p>Strøm, computere og bygninger er forbindelsen. Nogle selskaber miner krypto; andre bruger kapaciteten til AI.</p><h4>Tælles i Krypto</h4><p class="sv-names">CleanSpark · Bitdeer · Riot Platforms · Keel Infrastructure · Galaxy Digital · Bit Digital</p><h4>Tælles i Datacentre</h4><p class="sv-names">IREN · Core Scientific · Cipher Digital · TeraWulf</p><a href="datacenter.html">Udforsk datacentre →</a></article>
+        <article><h3>Krypto ↔ Fintech</h3><p>Handel, betaling og finansielle tjenester forbinder de to temaer.</p><h4>Tælles i Krypto</h4><p class="sv-names">Coinbase · Circle</p><h4>Tælles i Fintech</h4><p class="sv-names">Robinhood · Figure</p><a href="fintech.html">Udforsk fintech →</a></article>
+      </div>
+    </div>''')
+    # Keep the original classification and explanation available, including historic names.
+    details=html.Element('details',attrib={'class':'sv-source-detail'})
+    summary=html.Element('summary');summary.text='Læs mere om selskabernes placering';details.append(summary)
+    for child in list(section):
+        if child.tag in ('p','ul') and 'eyebrow' not in child.get('class',''):
+            section.remove(child);details.append(child)
+    section.append(visual);section.append(details)
+    risk=tree.get_element_by_id('risiko-liste')
+    explanation=html.fragment_fromstring('''<div class="sv-crypto-business">
+      <div class="sv-share-route"><span>Fonden</span><b aria-hidden="true">→</b><span>Aktier i selskaber</span><b aria-hidden="true">→</b><span>Forretninger omkring krypto</span></div>
+      <p>Du får eksponering mod selskabernes forretning — fonden ejer ikke kryptovaluta direkte.</p>
+      <div class="sv-business-rows"><div><strong>Mining</strong><span>Bitcoinprisen på den ene side. Strøm og udstyr på den anden.</span></div><div><strong>Handelsplatforme</strong><span>Kundernes handelsaktivitet påvirker indtjeningen.</span></div><div><strong>Egne beholdninger</strong><span>Kryptokurserne påvirker værdien af det, selskabet ejer.</span></div></div>
+      <p class="sv-business-note">Derfor kan to aktier i samme tema udvikle sig forskelligt. Regler og sikkerhed spiller også en rolle.</p>
+    </div>''')
+    risk.addprevious(explanation)
+    tree.find('head').append(html.Element('link',rel='stylesheet',href='../assets/css/section-visuals.css?v=20261031-1'))
+    path.write_text(html.tostring(tree,encoding='unicode',doctype='<!doctype html>'),encoding='utf8')
+    js=dest/'assets/v5-temaer/krypto.js'
+    js.write_text(js.read_text(encoding='utf8').replace('../datacenter/index.html','datacenter.html').replace('../fintech/index.html','fintech.html'),encoding='utf8')
+
+def improve_nvidia(dest):
     path=dest/'selskaber/nvidia.html'
     tree=html.fromstring(path.read_text(encoding='utf8'))
     what=tree.get_element_by_id('hvad')

@@ -41,3 +41,13 @@ Læs SAMLET-LEVERANCE.md før næste handling. Denne fil erstatter ikke tidliger
 - 20 automatiske tests bestået. Ny test kontrollerer tre energiled, eksisterende klokkeslæt, NVIDIA-kilder og alle otte chip-links.
 - Visuel kontrol: energi lyst/mørkt desktop og lyst mobil390; NVIDIA mørkt desktop/mobil og lyst desktop. Linket til Regner åbner korrekt panel og scroller dertil efter navigation.
 - Næste åbne spor: S04/S12 krypto-overlap og forretningsforklaring; derefter kvante/råstoffer samt samlet brugerrejse. Goal fortsat aktivt.
+
+## Goal-fremdrift: krypto, råstoffer og årsrapport
+- S04/S12: krypto-overlap og forskelle mellem forretninger gjort læsbare. Original klassifikation og syv kildepunkter bevaret; to dynamiske temalinks rettet.
+- S13: råstofperspektiv efter Critiquitos forslag, med dansk læsevej og originalcitat i fold-ud.
+- S10: årsrapportkort og starttidslinje implementeret i widget/portfolio ud fra uændret kildefil. PMINDI browserkontrolleret, anden klasse/runtimekontrol udestår.
+- Visuel kontrol: krypto desktop lys/mørk og mobil lys390; råstoffer desktop mørk/mobil lys390; årsrapport desktop og mobil390.
+- Fortsæt med S10 anden klasse, derefter S11 metode/foldning, F06 dublet og resterende samlet brugerrejse. Ingen afslutning eller liveudgivelse.
+- S10 færdigkontrolleret: widget skifter til PMINDIAKK med negativ stribet bjælke, PDF-side104, datoer 2/12 før 5/12 og eksisterende uafklaret kildeforskel. Tilbage til PMINDI giver korrekte tre år. Begge ISIN-knapper verificeret via kvittering og udklipsholder.
+- S11: seks originale formelafsnit er foldbare. Sharpe åbnet desktop, lukket og månedsafkast åbnet mobil390. Kilder og tekst bevaret, omkostninger urørt.
+- F06: dubletoverskriften er skjult, hvor den ydre navngivne informationssektion allerede findes. Ingen informationsafsnit fjernet.

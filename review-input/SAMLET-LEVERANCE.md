@@ -36,16 +36,16 @@ D=Designbygger, C=Critiquito. Kilder under ../design-review-read/codex-overdrage
 | S01 D1 | Tre ting om chips: kæde/cyklus/afhængigheder | under arbejde | Sammenhold nuværende løsning med forslag og Christians ønske om reel visuel forklaring. |
 | S02 D2 | Vigtig information | fravalgt med Christians godkendelse | Christian har udskudt compliancegennemgangen. Ikke et permanent designfravalg; uden for denne omgang. |
 | S03 D3 C2 | Kvante: omsætning, tilsagn og udbetaling | under arbejde | Beløb tidligere rettet; kontrollér grafisk løsning og at tilsagn ikke vises som udbetalt. |
-| S04 D4 C5 | Krypto-overlap/Venn | mangler | Vurder billeder og eksisterende #fod; vægtgrafen #kr-andele er IKKE denne opgave. |
+| S04 D4 C5 | Krypto-overlap/Venn | verificeret færdigt | section_visuals.py: tre overlappende temaer, to læsbare forbindelser og klassifikation bevaret. Desktop lyst/mørkt og mobil390 lyst; foldbare originaloplysninger åbnet. To forkerte dynamiske temalinks rettet. |
 | S05 D5 C6 | Energi: strømafbrydelse, kæde og tidslinje | verificeret færdigt | section_visuals.py: kildeprosa bevaret, tre led og tidsforløb; støttefunktioner ikke fejlagtigt seriekoblet. Browser 390/1280, lyst/mørkt. |
 | S06 D6 C9 | Fysisk AI: hjul/propeller/robotters størrelsesforhold | under arbejde | Claude-fliser og lyskontrast integreret; bevis om selve størrelsesforklaringen skal findes. |
 | S07 D7 C4 | NVIDIA: problem, produkt, bruger og rolle | verificeret færdigt | section_visuals.py: problem → GPU/netværk/CUDA → brugere. Originale kundedefinitioner/kilder bevaret i detaljer. Mobil/mørk og desktop/lys+mørk kontrolleret. |
 | S08 D8 C10 | Widget: klassernes pengestrøm/kontotyper | under arbejde | Widget må skifte klasse, mens fordybelsen kun bruger PMINDI. Kontrollér indhold og valgt løsning. |
 | S09 D9 | Chipsnyheder hængt på kædens trin | fravalgt med Christians godkendelse | Christian fandt forslaget for komplekst; behold rigtige læselige X-opslag, ikke erstatninger med resuméer. |
-| S10 D10 | Årsrapportafstemning som kildekort/tidslinje | mangler | Vurder grafisk forbedring; bevar datoforskelle og dokumentation. |
-| S11 C1 | Dataproces og foldbare formelforklaringer | under arbejde | Proces implementeret 225c798, omkostninger fastholdt efter godkendelse. Kontrollér om lange detaljer stadig kræver aftalt forbedring. |
-| S12 C3 | Krypto: aktier, ikke mønter; forskellige forretningsrisici | mangler | Vurder grafik uden at gøre generel complianceomgang til del af opgaven. |
-| S13 C7 | Råstoffer: mine, raffinering og afhængigheder | mangler | Gennemgå før/efter og eksisterende citat/kilde; giv dansk læsevej. |
+| S10 D10 | Årsrapportafstemning som kildekort/tidslinje | verificeret færdigt | section_visuals.py: uændret annual-evidence.json. PMINDI desktop/mobil; widgetklasseskift kontrollerer PMINDIAKK -5,6 %, PDF104, korrekt datoorden og uafklaret kildeforskel. Skift tilbage PMINDI korrekt. JS-syntaks og 20 tests bestået. |
+| S11 C1 | Dataproces og foldbare formelforklaringer | verificeret færdigt | Proces 225c798; seks formelafsnit nu foldbare med originaltekst/kilder bevaret. Desktop Sharpe og mobil390 månedsafkast åbnet/lukket. Omkostninger uændret efter brugerens valg. |
+| S12 C3 | Krypto: aktier, ikke mønter; forskellige forretningsrisici | verificeret færdigt | Diagram fra fond til aktier til forretning; tre forskellige indtjeningspåvirkninger. Syv originale punkter og MiCA-kilde bevaret/testet. Mobilvisning kontrolleret. |
+| S13 C7 | Råstoffer: mine, raffinering og afhængigheder | verificeret færdigt | Critiquitos forslag indarbejdet: udbud/efterspørgsel ved siden af fire forbundne led. Dansk citat synligt, original og kilde bevaret. Desktop mørkt/mobil lyst390 uden overflow. |
 | S14 C8 | NVIDIA placeret i chipkædens otte trin | verificeret færdigt | Otte links med Regner markeret. Browserklik åbner #ck-trin-regner med korrekt mobilpanel; gammel skjult h-ct-destination rettet. Test kontrollerer alle otte mål. |
 
 ## Groks småfejl — begge TOP10-lister
@@ -58,7 +58,7 @@ Kilder: samme mappe, smaafejl/. ID bevares ved afslutning. D og C nummererer hve
 | F03 | D3 energihero lyst tema | verificeret færdigt | section-visuals.css: hvid baggrund/kontrast i lys tilstand, mørk uændret. Browser verificerer hvid baggrund og læselige streger. |
 | F04 | D4 C2 nedture | verificeret færdigt | Godkendt Claude-løsning; 2d10201. |
 | F05 | D5 C6 nøgletal/omkostninger | verificeret færdigt | Gamle kompakte opstillinger udtrykkeligt valgt; ingen indholdsændring. |
-| F06 | D6 C8 dobbelt vigtig-information-overskrift | under arbejde | Kontrollér dublet; ingen ny complianceanalyse. |
+| F06 | D6 C8 dobbelt vigtig-information-overskrift | verificeret færdigt | Dubletoverskrift skjules kun inde i den eksisterende navngivne informationssektion. Browser bekræfter én synlig overskrift; alt indhold bevaret. |
 | F07 | D7 Alphabet-andel/kildelink | mangler | Kontrollér faktisk position og visuel opstilling. |
 | F08 | D9 D10 C3 fasegraf | under arbejde | Claude-løsning 2d10201; kontrollér alle fem faser og labels ved 390 px. |
 | F09 | C4 widgetknapper/Nasdaqfarve | under arbejde | Sammenhold med Christians godkendte original; forelæg evt. fravalg frem for at antage godkendelse. |
