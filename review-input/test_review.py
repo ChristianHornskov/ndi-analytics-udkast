@@ -179,6 +179,10 @@ class ReviewTests(unittest.TestCase):
             tree=html.parse(str(path))
             for grid in tree.xpath('//*[@id="mere-fra-ndi"]/div[contains(@class,"rm-grid")]'):
                 self.assertLessEqual(len(grid.xpath('./article')),2,str(path))
+            for listing in tree.xpath('//ul[contains(@class,"xs-liste")][not(ancestor::details)]'):
+                self.assertLessEqual(len(listing.xpath('./li')),2,str(path))
+            for listing in tree.xpath('//div[@class="sx-films"][not(ancestor::details)]'):
+                self.assertLessEqual(len(listing.xpath('./article')),2,str(path))
 
     def test_portfolio_supplement_matches_snapshot(self):
         supplement=json.loads(Path(__file__).with_name('portfolio-market-supplement.json').read_text(encoding='utf8'))
@@ -217,6 +221,11 @@ class ReviewTests(unittest.TestCase):
             self.assertTrue((DEST/'temaer'/a.get('href')).resolve().exists(),a.get('href'))
 
     def test_section_visuals_keep_sources_and_deep_links(self):
+        quantum=html.fromstring((DEST/'temaer/kvante.html').read_text(encoding='utf8'))
+        values=quantum.xpath('//div[@class="sv-quantum-revenue"]/div/strong/text()')
+        self.assertEqual(values,['130,0','31,1','30,9','24,6','7,1','0,7'])
+        self.assertEqual(len(quantum.xpath('//ol[@class="sv-funding-stages"]/li')),3)
+        self.assertIn('Ikke dokumenteret her',quantum.xpath('//li[@class="sv-unconfirmed"]')[0].text_content())
         materials=html.parse(str(DEST/'temaer/raastoffer.html'))
         self.assertEqual(len(materials.xpath('//div[@class="sv-material-chain"]/ol/li')),4)
         self.assertTrue(materials.xpath('//details[@class="sv-source-detail"]//blockquote[@lang="en"]'))

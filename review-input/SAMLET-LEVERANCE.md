@@ -20,8 +20,8 @@ Tilladte statusser: mangler; under arbejde; verificeret færdigt; afventer Chris
 | U07 | Kalender lodret på mobil; Claude-nedtursgraf | verificeret færdigt | 2d10201; browserkontroller beskrevet i CLAUDE-INTEGRATION-20261031.md. |
 | U08 | Kompakte gamle risiko/nøgletal og gamle omkostninger bevares | verificeret færdigt | Christians eksplicitte billedbaserede godkendelser. Ingen nyt redesign af disse. |
 | U09 | Grafisk klasse/udlodning og forklarende geografi/metode | verificeret færdigt | f0f2df6/225c798; to bekræftede udlodninger, responsiv graf og dataproces; ingen falsk automatisk freshness. |
-| U10 | Tech: tæt menu med 12 temaer, forbindelsesdiagram og forklaring | under arbejde | Tidligere 1977922; slutkontrol på mobil/desktop og navigation udestår. |
-| U11 | AI-telefonens zoom og spørgsmål som én sammenhængende scene | under arbejde | Tidligere integration; kontrollér klik/berøring og sammenhæng, ikke kun kontrolknapper. |
+| U10 | Tech: tæt menu med 12 temaer, forbindelsesdiagram og forklaring | verificeret færdigt | Tech desktop og mobil390: alle 12 temaer i menuen, mobilklikmål 44 px, aktiv sektionsmarkør og lukning efter ankerklik. Prikdiagram Chips åbner chips.html; forklaringen står før diagrammet. |
+| U11 | AI-telefonens zoom og spørgsmål som én sammenhængende scene | verificeret færdigt | Direkte tryk på illustrationen skifter 1 til 2 med zoom og tekst; mobil direkte lagvalg til 6 giver strømforklaring og korrekt slutlink. Tekst og billede i samme scene. |
 | U12 | SpaceX: interaktiv raket/Starlink, billeder/videoer, historie og regnskabstal | under arbejde | Tidligere implementeret; afstem hver seneste brugerrettelse med den renderede side. |
 | U13 | Chips: ingen følgelampe, hoverlys, forståelig selskabsoversigt, rigtige X-opslag | under arbejde | Chipkæde og oprydning findes; slutkontrollér alle interaktioner. |
 | U14 | Medier: thumbnails, to synlige med mulighed for flere, relevante Mads-videoer/X | under arbejde | 56 sider/98 YouTube/9 Instagram/26 X integrationer registreret; 5 runtime-tests. Kontrollér faktisk udvalg og synlige embeds på stikprøver. |
@@ -35,10 +35,10 @@ D=Designbygger, C=Critiquito. Kilder under ../design-review-read/codex-overdrage
 |---|---|---|---|
 | S01 D1 | Tre ting om chips: kæde/cyklus/afhængigheder | under arbejde | Sammenhold nuværende løsning med forslag og Christians ønske om reel visuel forklaring. |
 | S02 D2 | Vigtig information | fravalgt med Christians godkendelse | Christian har udskudt compliancegennemgangen. Ikke et permanent designfravalg; uden for denne omgang. |
-| S03 D3 C2 | Kvante: omsætning, tilsagn og udbetaling | under arbejde | Beløb tidligere rettet; kontrollér grafisk løsning og at tilsagn ikke vises som udbetalt. |
+| S03 D3 C2 | Kvante: omsætning, tilsagn og udbetaling | verificeret færdigt | Omsætningsbjælker læser de seks beløb fra eksisterende kildetekst; tre støttefaser skelner hensigt, tilsagn og ukendt udbetaling. Mobil390 mørkt og desktop lyst/mørkt kontrolleret. Originalkilder bevaret. |
 | S04 D4 C5 | Krypto-overlap/Venn | verificeret færdigt | section_visuals.py: tre overlappende temaer, to læsbare forbindelser og klassifikation bevaret. Desktop lyst/mørkt og mobil390 lyst; foldbare originaloplysninger åbnet. To forkerte dynamiske temalinks rettet. |
 | S05 D5 C6 | Energi: strømafbrydelse, kæde og tidslinje | verificeret færdigt | section_visuals.py: kildeprosa bevaret, tre led og tidsforløb; støttefunktioner ikke fejlagtigt seriekoblet. Browser 390/1280, lyst/mørkt. |
-| S06 D6 C9 | Fysisk AI: hjul/propeller/robotters størrelsesforhold | under arbejde | Claude-fliser og lyskontrast integreret; bevis om selve størrelsesforklaringen skal findes. |
+| S06 D6 C9 | Fysisk AI: hjul/propeller/robotters størrelsesforhold | verificeret færdigt | Fem-mod-en-blokgraf indarbejdet efter forslag. Skelner Teslas samlede omsætning fra værdien af installerede robotter; ikke fremstillet som fondsvægt eller robotomsætning. Desktop/mobil390 kontrolleret. |
 | S07 D7 C4 | NVIDIA: problem, produkt, bruger og rolle | verificeret færdigt | section_visuals.py: problem → GPU/netværk/CUDA → brugere. Originale kundedefinitioner/kilder bevaret i detaljer. Mobil/mørk og desktop/lys+mørk kontrolleret. |
 | S08 D8 C10 | Widget: klassernes pengestrøm/kontotyper | under arbejde | Widget må skifte klasse, mens fordybelsen kun bruger PMINDI. Kontrollér indhold og valgt løsning. |
 | S09 D9 | Chipsnyheder hængt på kædens trin | fravalgt med Christians godkendelse | Christian fandt forslaget for komplekst; behold rigtige læselige X-opslag, ikke erstatninger med resuméer. |
@@ -53,14 +53,14 @@ Kilder: samme mappe, smaafejl/. ID bevares ved afslutning. D og C nummererer hve
 
 | ID | Punkter | Status | Kontrol/valg |
 |---|---|---|---|
-| F01 | D1 videoplakat | under arbejde | Christian ønsker thumbnails; kontrollér faktisk energivideo-thumbnail frem for tom gradient. |
+| F01 | D1 videoplakat | verificeret færdigt | Energivideoens YouTube-thumbnail indlæst med naturalWidth480 ved scroll til sektionen; ikke tom gradient. |
 | F02 | D2 D8 C1 C5 kalender | verificeret færdigt | Godkendt lodret mobilkalender og rød/grøn; 2d10201. |
 | F03 | D3 energihero lyst tema | verificeret færdigt | section-visuals.css: hvid baggrund/kontrast i lys tilstand, mørk uændret. Browser verificerer hvid baggrund og læselige streger. |
 | F04 | D4 C2 nedture | verificeret færdigt | Godkendt Claude-løsning; 2d10201. |
 | F05 | D5 C6 nøgletal/omkostninger | verificeret færdigt | Gamle kompakte opstillinger udtrykkeligt valgt; ingen indholdsændring. |
 | F06 | D6 C8 dobbelt vigtig-information-overskrift | verificeret færdigt | Dubletoverskrift skjules kun inde i den eksisterende navngivne informationssektion. Browser bekræfter én synlig overskrift; alt indhold bevaret. |
-| F07 | D7 Alphabet-andel/kildelink | mangler | Kontrollér faktisk position og visuel opstilling. |
-| F08 | D9 D10 C3 fasegraf | under arbejde | Claude-løsning 2d10201; kontrollér alle fem faser og labels ved 390 px. |
+| F07 | D7 Alphabet-andel/kildelink | verificeret færdigt | Alphabet 0,00 % bekræftet i dagens-tal.json som tidligere position. Indramning inkl. inset-shadow fjernet og SEC-link venstrestillet. Browserkontrolleret. |
+| F08 | D9 D10 C3 fasegraf | verificeret færdigt | Alle fem faseknapper kontrolleret ved 390 px; aria-pressed og tekst/selskab skifter korrekt. Hele grafen inklusive begge kurver og labels er synlig på mobil. |
 | F09 | C4 widgetknapper/Nasdaqfarve | under arbejde | Sammenhold med Christians godkendte original; forelæg evt. fravalg frem for at antage godkendelse. |
 | F10 | C7 52-ugers-farver | fravalgt med Christians godkendelse | Christian valgte oprindelig flerfarveskala. |
 | F11 | C9 tech-krydshenvisning | under arbejde | Eksisterende bridge; kontrollér læsbarhed og klikfelt. |

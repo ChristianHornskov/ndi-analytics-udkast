@@ -5,6 +5,19 @@ import json,shutil
 
 def build_media(dest):
     source=Path(__file__).parent
+    # Legacy topic news also obey the two-visible rule, not just newly imported media.
+    for path in [*(dest/'temaer').glob('*.html'),dest/'selskaber/spacex.html']:
+        page=html.fromstring(path.read_text(encoding='utf8'));changed=False
+        for listing in page.xpath('//ul[contains(concat(" ",normalize-space(@class)," ")," xs-liste ")]|//div[@class="sx-films"]'):
+            items=listing.xpath('./li|./article')
+            if len(items)<=2:continue
+            more=html.Element('details',attrib={'class':'rm-more'})
+            label='videoer' if listing.tag=='div' else 'opslag'
+            summary=html.Element('summary');summary.text=f'Se flere {label} ({len(items)-2})';more.append(summary)
+            rest=html.Element(listing.tag,attrib={'class':listing.get('class','')});more.append(rest)
+            for item in items[2:]:listing.remove(item);rest.append(item)
+            listing.addnext(more);changed=True
+        if changed:path.write_text(html.tostring(page,encoding='unicode',doctype='<!doctype html>'),encoding='utf8')
     data=json.loads((source/'media-selection.json').read_text(encoding='utf8'))
     counts={'pages':0,'youtube':0,'instagram':0,'x':0}
     for file,entry in data.items():

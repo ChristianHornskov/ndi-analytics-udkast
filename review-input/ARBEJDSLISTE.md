@@ -51,3 +51,11 @@ Læs SAMLET-LEVERANCE.md før næste handling. Denne fil erstatter ikke tidliger
 - S10 færdigkontrolleret: widget skifter til PMINDIAKK med negativ stribet bjælke, PDF-side104, datoer 2/12 før 5/12 og eksisterende uafklaret kildeforskel. Tilbage til PMINDI giver korrekte tre år. Begge ISIN-knapper verificeret via kvittering og udklipsholder.
 - S11: seks originale formelafsnit er foldbare. Sharpe åbnet desktop, lukket og månedsafkast åbnet mobil390. Kilder og tekst bevaret, omkostninger urørt.
 - F06: dubletoverskriften er skjult, hvor den ydre navngivne informationssektion allerede findes. Ingen informationsafsnit fjernet.
+
+## Brugerrejsekontrol efter edcf144
+- U10/U11/F08 verificeret: techmenu med 12 temaer, 44px trykflader, ankerlukning/aktiv markør, prikdiagram til chips, direkte AI-zoom og alle fem forretningsfaser.
+- Chips: NVIDIA-søgning giver ét selskab, Regner-filter syv. Mobilkontrol uden tabeltvungen bredde. Resterende chips-/mediekontrol fortsætter.
+- Brugeren oplyser 18 % usage tilbage. Prioritér konkrete fejl/kontrol og gem dokumenteret fremdrift; det er ikke en tilladelse til at afslutte ufuldstændigt.
+- S03, S06 og F07 verificeret: kvantebeløb/støttestadier, fysisk-AI-skala og Alphabet-opstilling. Alle ændringer i section_visuals.py med eksisterende datagrundlag.
+- Mediekontrol fandt ældre xs-liste-nyheder og SpaceX-filmrække uden to-synlige-begrænsning. Begge følger nu reglen. Energi browser:2 synlige+3 foldet; SpaceX tredje video skjult→foldet ud→korrekt YouTube-nocookie-iframe.
+- F01 energithumbnail faktisk indlæst. U14 fortsat under arbejde, eksterne X-embeds og resterende udvalg ikke færdigverificeret.

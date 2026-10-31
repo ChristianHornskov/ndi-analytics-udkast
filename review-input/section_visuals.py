@@ -2,6 +2,7 @@
 from pathlib import Path
 from lxml import html
 import shutil
+import re
 
 
 def improve_sections(dest):
@@ -9,6 +10,13 @@ def improve_sections(dest):
     improve_nvidia(dest)
     improve_materials(dest)
     improve_annual_evidence(dest)
+    improve_quantum(dest)
+    improve_physical_scale(dest)
+    alphabet=dest/'selskaber/alphabet.html'
+    alphabet_tree=html.fromstring(alphabet.read_text(encoding='utf8'))
+    alphabet_tree.find('body').set('data-company-review','alphabet')
+    alphabet_tree.find('head').append(html.Element('link',rel='stylesheet',href='../assets/css/section-visuals.css?v=20261031-1'))
+    alphabet.write_text(html.tostring(alphabet_tree,encoding='unicode',doctype='<!doctype html>'),encoding='utf8')
     path=dest/'temaer/energi.html'
     tree=html.fromstring(path.read_text(encoding='utf8'))
     section=tree.get_element_by_id('strommen-gik')
@@ -32,6 +40,46 @@ def improve_sections(dest):
     tree.find('head').append(html.Element('link',rel='stylesheet',href='../assets/css/section-visuals.css?v=20261031-1'))
     target=dest/'assets/css/section-visuals.css'
     shutil.copyfile(Path(__file__).with_name('section-visuals.css'),target)
+    path.write_text(html.tostring(tree,encoding='unicode',doctype='<!doctype html>'),encoding='utf8')
+
+
+def improve_physical_scale(dest):
+    path=dest/'temaer/fysisk-ai.html'
+    tree=html.fromstring(path.read_text(encoding='utf8'))
+    host=tree.get_element_by_id('vaegt').xpath('.//div[@class="vaegt-g"]')[0]
+    figure=html.fragment_fromstring('''<figure class="sv-five-to-one">
+      <figcaption>En størrelsesforskel på omkring <strong>5 til 1</strong></figcaption>
+      <div><h3>Teslas samlede omsætning</h3><div class="sv-scale-blocks" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><p>Biler, energi og tjenester · 2025</p></div>
+      <div><h3>Nyinstallerede industrirobotter</h3><div class="sv-scale-blocks sv-scale-one" aria-hidden="true"><i></i></div><p>Værdien af robotterne installeret i verden · 2025</p></div>
+      <p class="sv-scale-note">To forskellige størrelser, der sætter omfanget i perspektiv. Det er ikke fondens vægte eller Teslas robotomsætning.</p>
+    </figure>''')
+    host.append(figure)
+    tree.find('head').append(html.Element('link',rel='stylesheet',href='../assets/css/section-visuals.css?v=20261031-1'))
+    path.write_text(html.tostring(tree,encoding='unicode',doctype='<!doctype html>'),encoding='utf8')
+
+
+def improve_quantum(dest):
+    path=dest/'temaer/kvante.html'
+    tree=html.fromstring(path.read_text(encoding='utf8'))
+    cards=tree.xpath('//div[@class="penge-g"]/div')
+    source=cards[0].xpath('./p[@class="note"]')[0].text_content()
+    values=re.findall(r'(IonQ|Infleqtion|Quantinuum|D-Wave|Rigetti|Quantum Computing Inc\.) (\d+,\d+)',source)
+    if len(values)!=6:raise ValueError('Quantum revenue source no longer matches six reported values')
+    chart=html.Element('div',attrib={'class':'sv-quantum-revenue','aria-label':'Omsætning 2025 i mio. USD'})
+    maximum=max(float(v.replace(',','.')) for _,v in values)
+    for name,value in values:
+        row=html.Element('div');label=html.Element('span');label.text=name;row.append(label)
+        track=html.Element('span',attrib={'class':'sv-q-track','aria-hidden':'true'})
+        bar=html.Element('i',style=f"width:{float(value.replace(',','.'))/maximum*100:.4f}%");track.append(bar);row.append(track)
+        number=html.Element('strong');number.text=value;row.append(number);chart.append(row)
+    cards[0].insert(2,chart)
+    stages=html.fragment_fromstring('''<ol class="sv-funding-stages" aria-label="Status for støtte, ikke omsætning">
+      <li><span>01 · Hensigtserklæring</span><strong>Infleqtion</strong><p>100 mio. USD · 21. maj 2026</p></li>
+      <li><span>02 · Endeligt tilsagn</span><strong>D-Wave · Quantinuum · Rigetti</strong><p>Op til 100 mio. USD hver · 8. september 2026</p></li>
+      <li class="sv-unconfirmed"><span>03 · Udbetalt</span><strong>Ikke dokumenteret her</strong><p>Et tilsagn fortæller ikke, hvor meget der er udbetalt.</p></li>
+    </ol>''')
+    cards[1].insert(1,stages)
+    tree.find('head').append(html.Element('link',rel='stylesheet',href='../assets/css/section-visuals.css?v=20261031-1'))
     path.write_text(html.tostring(tree,encoding='unicode',doctype='<!doctype html>'),encoding='utf8')
 
 
