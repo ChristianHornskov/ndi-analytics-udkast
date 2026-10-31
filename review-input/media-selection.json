@@ -1,0 +1,1616 @@
+{
+  "temaer/chips.html": {
+    "name": "Chips og halvledere",
+    "youtube": [
+      {
+        "id": "MXb0jdpygV4",
+        "title": "Kort og godt, Ep. 5",
+        "date": "2026-10-06",
+        "start": 1286,
+        "basis": "eksisterende placering"
+      },
+      {
+        "id": "OBzaA7UatRA",
+        "title": "Kort og godt, Ep. 4",
+        "date": "2026-09-29",
+        "start": 1347,
+        "basis": "undertekster"
+      },
+      {
+        "id": "GBPffuqKxi8",
+        "title": "Kort og godt, Ep. 7",
+        "date": "2026-10-20",
+        "start": 788,
+        "basis": "undertekster"
+      }
+    ],
+    "instagram": [
+      {
+        "id": "DcV5KfUPlsg",
+        "url": "https://www.instagram.com/reel/DcV5KfUPlsg/",
+        "date": "2026-08-22"
+      },
+      {
+        "id": "Db8j-m1vJq1",
+        "url": "https://www.instagram.com/reel/Db8j-m1vJq1/",
+        "date": "2026-08-12"
+      }
+    ],
+    "x": [
+      {
+        "id": "2113999526142915022",
+        "url": "https://x.com/KobeissiLetter/status/2113999526142915022",
+        "date": "2026-10-24",
+        "type": "repost"
+      },
+      {
+        "id": "2113615323454980567",
+        "url": "https://x.com/silicondata/status/2113615323454980567",
+        "date": "2026-10-23",
+        "type": "repost"
+      }
+    ]
+  },
+  "temaer/datacenter.html": {
+    "name": "Datacentre",
+    "youtube": [
+      {
+        "id": "aW2FCthXuMw",
+        "title": "Hvad er den bedste model for Neoclouds?",
+        "date": "2026-07-08",
+        "start": 0,
+        "basis": "titel"
+      },
+      {
+        "id": "Y6rqisEs6zc",
+        "title": "AI-boomets størrelse forklaret og perspektiveret",
+        "date": "2026-09-01",
+        "start": 0,
+        "basis": "eksisterende placering"
+      },
+      {
+        "id": "sV41WVailKo",
+        "title": "Neocloud økonomien - simpelt forklaret",
+        "date": "2026-09-25",
+        "start": 0,
+        "basis": "eksisterende placering"
+      }
+    ],
+    "instagram": [],
+    "x": [
+      {
+        "id": "2116215146146324851",
+        "url": "https://x.com/StockMKTNewz/status/2116215146146324851",
+        "date": "2026-10-30",
+        "type": "repost"
+      },
+      {
+        "id": "2116021423181557770",
+        "url": "https://x.com/LunarCitizens/status/2116021423181557770",
+        "date": "2026-10-30",
+        "type": "repost"
+      }
+    ]
+  },
+  "temaer/energi.html": {
+    "name": "Energi og elnet",
+    "youtube": [],
+    "instagram": [],
+    "x": [
+      {
+        "id": "2115897430944489892",
+        "url": "https://x.com/AtomsNotBits/status/2115897430944489892",
+        "date": "2026-10-29",
+        "type": "repost"
+      },
+      {
+        "id": "2115247239752745006",
+        "url": "https://x.com/ENERGY/status/2115247239752745006",
+        "date": "2026-10-28",
+        "type": "repost"
+      }
+    ]
+  },
+  "temaer/fintech.html": {
+    "name": "Fintech",
+    "youtube": [
+      {
+        "id": "Be-JJGT-5CQ",
+        "title": "NewDeal Invest Live Q&A - April 21st at 20:00 (8 PM) with Mads Christiansen & Jesper Bæk",
+        "date": "2024-04-22",
+        "start": 3085,
+        "basis": "beskrivelse (kapitel)"
+      }
+    ],
+    "instagram": [],
+    "x": []
+  },
+  "temaer/krypto.html": {
+    "name": "Krypto",
+    "youtube": [
+      {
+        "id": "OBzaA7UatRA",
+        "title": "Kort og godt, Ep. 4",
+        "date": "2026-09-29",
+        "start": 2029,
+        "basis": "beskrivelse (kapitel)"
+      },
+      {
+        "id": "RSNgsMbKc0o",
+        "title": "Den teknologiske udvikling, konjuktur, renter, aktier og krypto - CURAINVEST x NEWDEAL INVEST",
+        "date": "2025-10-09",
+        "start": 134,
+        "basis": "beskrivelse (kapitel)"
+      },
+      {
+        "id": "yeEVcGABCPQ",
+        "title": "Kort og godt, Ep. 3",
+        "date": "2026-09-22",
+        "start": 746,
+        "basis": "beskrivelse (kapitel)"
+      }
+    ],
+    "instagram": [],
+    "x": [
+      {
+        "id": "2100239551159574953",
+        "url": "https://x.com/BullTheoryio/status/2100239551159574953",
+        "date": "2026-09-16",
+        "type": "repost"
+      },
+      {
+        "id": "2100183232104800574",
+        "url": "https://x.com/cryptorover/status/2100183232104800574",
+        "date": "2026-09-16",
+        "type": "repost"
+      }
+    ]
+  },
+  "temaer/kvante.html": {
+    "name": "Kvantecomputere",
+    "youtube": [
+      {
+        "id": "yiNWLIblPvY",
+        "title": "NewDeal Invest Live Q&A - March 17th at 20:00 (8 PM) with Mads Christiansen & Jesper Bæk",
+        "date": "2024-03-18",
+        "start": 2140,
+        "basis": "beskrivelse (kapitel)"
+      }
+    ],
+    "instagram": [],
+    "x": []
+  },
+  "temaer/platforme.html": {
+    "name": "Platformsøkonomi",
+    "youtube": [
+      {
+        "id": "1Bg_LUxbj9M",
+        "title": "NewDeal Invest: Sea Limited shows impressive growth — yet the market still misreads the story",
+        "date": "2025-05-13",
+        "start": 72,
+        "basis": "beskrivelse (kapitel)"
+      }
+    ],
+    "instagram": [],
+    "x": []
+  },
+  "temaer/fysisk-ai.html": {
+    "name": "Robotter & fysisk AI",
+    "youtube": [
+      {
+        "id": "iTyszaFOb70",
+        "title": "Kort og godt, Ep. 2",
+        "date": "2026-09-15",
+        "start": 1312,
+        "basis": "beskrivelse (kapitel)"
+      },
+      {
+        "id": "eRpN78LtAOQ",
+        "title": "Kort og godt, Ep. 1",
+        "date": "2026-09-08",
+        "start": 1412,
+        "basis": "eksisterende placering"
+      },
+      {
+        "id": "GBPffuqKxi8",
+        "title": "Kort og godt, Ep. 7",
+        "date": "2026-10-20",
+        "start": 1861,
+        "basis": "beskrivelse (kapitel)"
+      }
+    ],
+    "instagram": [],
+    "x": [
+      {
+        "id": "2115072271207542991",
+        "url": "https://x.com/RobotaxiRadar/status/2115072271207542991",
+        "date": "2026-10-27",
+        "type": "repost"
+      },
+      {
+        "id": "2113003032162005327",
+        "url": "https://x.com/wallstengine/status/2113003032162005327",
+        "date": "2026-10-21",
+        "type": "repost"
+      }
+    ]
+  },
+  "temaer/rumfart.html": {
+    "name": "Rumfart",
+    "youtube": [
+      {
+        "id": "EoW0MgNAn_s",
+        "title": "Kort og godt, Ep. 6",
+        "date": "2026-10-13",
+        "start": 1151,
+        "basis": "beskrivelse (kapitel)"
+      },
+      {
+        "id": "GBPffuqKxi8",
+        "title": "Kort og godt, Ep. 7",
+        "date": "2026-10-20",
+        "start": 1990,
+        "basis": "beskrivelse (kapitel)"
+      },
+      {
+        "id": "yeEVcGABCPQ",
+        "title": "Kort og godt, Ep. 3",
+        "date": "2026-09-22",
+        "start": 1565,
+        "basis": "undertekster"
+      }
+    ],
+    "instagram": [
+      {
+        "id": "Db1Nl8UPgyi",
+        "url": "https://www.instagram.com/reel/Db1Nl8UPgyi/",
+        "date": "2026-08-09"
+      }
+    ],
+    "x": [
+      {
+        "id": "2116215146146324851",
+        "url": "https://x.com/StockMKTNewz/status/2116215146146324851",
+        "date": "2026-10-30",
+        "type": "repost"
+      },
+      {
+        "id": "2116021423181557770",
+        "url": "https://x.com/LunarCitizens/status/2116021423181557770",
+        "date": "2026-10-30",
+        "type": "repost"
+      }
+    ]
+  },
+  "temaer/raastoffer.html": {
+    "name": "Råstoffer",
+    "youtube": [
+      {
+        "id": "3sBWnu8QUHM",
+        "title": "Ugens blog for uge 38 - Når økonomi bliver geopolitik",
+        "date": "2026-09-21",
+        "start": 219,
+        "basis": "undertekster"
+      }
+    ],
+    "instagram": [],
+    "x": [
+      {
+        "id": "2114994295476302113",
+        "url": "https://x.com/zerohedge/status/2114994295476302113",
+        "date": "2026-10-27",
+        "type": "repost"
+      },
+      {
+        "id": "2104469541770166585",
+        "url": "https://x.com/POLITICOEurope/status/2104469541770166585",
+        "date": "2026-09-28",
+        "type": "repost"
+      }
+    ]
+  },
+  "temaer/software.html": {
+    "name": "Software & AI",
+    "youtube": [
+      {
+        "id": "EoW0MgNAn_s",
+        "title": "Kort og godt, Ep. 6",
+        "date": "2026-10-13",
+        "start": 503,
+        "basis": "beskrivelse (kapitel)"
+      },
+      {
+        "id": "GBPffuqKxi8",
+        "title": "Kort og godt, Ep. 7",
+        "date": "2026-10-20",
+        "start": 1547,
+        "basis": "beskrivelse (kapitel)"
+      },
+      {
+        "id": "5DwuBgbnzNw",
+        "title": "Anthropic og OpenAI vs Palantir og NVIDIA",
+        "date": "2026-07-12",
+        "start": 0,
+        "basis": "undertekster"
+      }
+    ],
+    "instagram": [],
+    "x": [
+      {
+        "id": "2115905121444135188",
+        "url": "https://x.com/jaminball/status/2115905121444135188",
+        "date": "2026-10-29",
+        "type": "repost"
+      },
+      {
+        "id": "2115879931888427448",
+        "url": "https://x.com/MadsC007/status/2115879931888427448",
+        "date": "2026-10-29",
+        "type": "egen"
+      }
+    ]
+  },
+  "temaer/sundhed.html": {
+    "name": "Sundhed og biotek",
+    "youtube": [
+      {
+        "id": "QcLM-60Bj20",
+        "title": "NewDeal Invest Live Q&A - June 2nd at 20:00 with Mads Christiansen, Jesper Bæk",
+        "date": "2024-06-03",
+        "start": 3545,
+        "basis": "beskrivelse (kapitel)"
+      },
+      {
+        "id": "UPSJO5_rBDo",
+        "title": "NewDeal Invest Live Q&A with Mads Christiansen & Jesper Bæk - December 15th 2024 - 8:00 PM",
+        "date": "2024-12-16",
+        "start": 2710,
+        "basis": "beskrivelse (kapitel)"
+      }
+    ],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/spacex.html": {
+    "name": "SpaceX",
+    "youtube": [
+      {
+        "id": "uDlalQXDfgc",
+        "title": "SpaceX IPO: Is NewDeal Invest Buying?",
+        "date": "2026-06-08",
+        "start": 596,
+        "basis": "beskrivelse (kapitel)"
+      },
+      {
+        "id": "GBPffuqKxi8",
+        "title": "Kort og godt, Ep. 7",
+        "date": "2026-10-20",
+        "start": 1990,
+        "basis": "beskrivelse (kapitel)"
+      },
+      {
+        "id": "M59oD0hdcE0",
+        "title": "Q2 Regnskaber fra SpaceX, Novo Nordisk og Palantir: Mads Giver Sit Take",
+        "date": "2026-08-05",
+        "start": 0,
+        "basis": "eksisterende placering"
+      }
+    ],
+    "instagram": [
+      {
+        "id": "DcV5KfUPlsg",
+        "url": "https://www.instagram.com/reel/DcV5KfUPlsg/",
+        "date": "2026-08-22"
+      },
+      {
+        "id": "Db1Nl8UPgyi",
+        "url": "https://www.instagram.com/reel/Db1Nl8UPgyi/",
+        "date": "2026-08-09"
+      },
+      {
+        "id": "DbqpisCP9va",
+        "url": "https://www.instagram.com/reel/DbqpisCP9va/",
+        "date": "2026-08-05"
+      }
+    ],
+    "x": [
+      {
+        "id": "2116021423181557770",
+        "url": "https://x.com/LunarCitizens/status/2116021423181557770",
+        "date": "2026-10-30",
+        "type": "repost"
+      },
+      {
+        "id": "2113051119723380747",
+        "url": "https://x.com/Sam_Badawi/status/2113051119723380747",
+        "date": "2026-10-21",
+        "type": "repost"
+      }
+    ]
+  },
+  "selskaber/tesla.html": {
+    "name": "Tesla",
+    "youtube": [
+      {
+        "id": "GBPffuqKxi8",
+        "title": "Kort og godt, Ep. 7",
+        "date": "2026-10-20",
+        "start": 1861,
+        "basis": "beskrivelse (kapitel)"
+      },
+      {
+        "id": "yiNWLIblPvY",
+        "title": "NewDeal Invest Live Q&A - March 17th at 20:00 (8 PM) with Mads Christiansen & Jesper Bæk",
+        "date": "2024-03-18",
+        "start": 1574,
+        "basis": "beskrivelse (kapitel)"
+      },
+      {
+        "id": "5woGJk1ikQ0",
+        "title": "NewDeal Invest Live Q&A - May 5th at 20:00 (8 PM) with Mads Christiansen & Jesper Bæk",
+        "date": "2024-05-06",
+        "start": 3400,
+        "basis": "beskrivelse (kapitel)"
+      }
+    ],
+    "instagram": [
+      {
+        "id": "DewftIIvuhv",
+        "url": "https://www.instagram.com/reel/DewftIIvuhv/",
+        "date": "2026-10-21"
+      }
+    ],
+    "x": [
+      {
+        "id": "2115072271207542991",
+        "url": "https://x.com/RobotaxiRadar/status/2115072271207542991",
+        "date": "2026-10-27",
+        "type": "repost"
+      },
+      {
+        "id": "2113003032162005327",
+        "url": "https://x.com/wallstengine/status/2113003032162005327",
+        "date": "2026-10-21",
+        "type": "repost"
+      }
+    ]
+  },
+  "selskaber/softbank-group.html": {
+    "name": "SoftBank Group",
+    "youtube": [
+      {
+        "id": "hHhBvsWya2k",
+        "title": "NewDeal Invest Live Q&A med Mads Christiansen & Jesper Bæk - 8. September 2024 kl. 20:00",
+        "date": "2024-09-09",
+        "start": 2977,
+        "basis": "beskrivelse (kapitel)"
+      }
+    ],
+    "instagram": [],
+    "x": [
+      {
+        "id": "2091812717174878709",
+        "url": "https://x.com/wallstengine/status/2091812717174878709",
+        "date": "2026-08-24",
+        "type": "repost"
+      }
+    ]
+  },
+  "selskaber/carvana.html": {
+    "name": "Carvana",
+    "youtube": [
+      {
+        "id": "7tgLUHVSBRA",
+        "title": "NewDeal Invest Live Q&A - 3. Marts kl. 20:00 med Mads Christiansen & Jesper Bæk",
+        "date": "2024-03-04",
+        "start": 1037,
+        "basis": "beskrivelse (kapitel)"
+      },
+      {
+        "id": "Be-JJGT-5CQ",
+        "title": "NewDeal Invest Live Q&A - April 21st at 20:00 (8 PM) with Mads Christiansen & Jesper Bæk",
+        "date": "2024-04-22",
+        "start": 2615,
+        "basis": "beskrivelse (kapitel)"
+      },
+      {
+        "id": "5woGJk1ikQ0",
+        "title": "NewDeal Invest Live Q&A - May 5th at 20:00 (8 PM) with Mads Christiansen & Jesper Bæk",
+        "date": "2024-05-06",
+        "start": 930,
+        "basis": "beskrivelse (kapitel)"
+      }
+    ],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/applovin.html": {
+    "name": "AppLovin",
+    "youtube": [
+      {
+        "id": "7tgLUHVSBRA",
+        "title": "NewDeal Invest Live Q&A - 3. Marts kl. 20:00 med Mads Christiansen & Jesper Bæk",
+        "date": "2024-03-04",
+        "start": 3140,
+        "basis": "beskrivelse (kapitel)"
+      },
+      {
+        "id": "QcLM-60Bj20",
+        "title": "NewDeal Invest Live Q&A - June 2nd at 20:00 with Mads Christiansen, Jesper Bæk",
+        "date": "2024-06-03",
+        "start": 2230,
+        "basis": "beskrivelse (kapitel)"
+      },
+      {
+        "id": "UPSJO5_rBDo",
+        "title": "NewDeal Invest Live Q&A with Mads Christiansen & Jesper Bæk - December 15th 2024 - 8:00 PM",
+        "date": "2024-12-16",
+        "start": 2230,
+        "basis": "beskrivelse (kapitel)"
+      }
+    ],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/sk-hynix.html": {
+    "name": "SK hynix",
+    "youtube": [],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/sea.html": {
+    "name": "Sea",
+    "youtube": [
+      {
+        "id": "nE1QLELh6qE",
+        "title": "NewDeal Invest: Sea Limited 1Q26 - Increasing our investment!",
+        "date": "2026-05-13",
+        "start": 0,
+        "basis": "titel"
+      },
+      {
+        "id": "1Bg_LUxbj9M",
+        "title": "NewDeal Invest: Sea Limited shows impressive growth — yet the market still misreads the story",
+        "date": "2025-05-13",
+        "start": 0,
+        "basis": "titel"
+      }
+    ],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/etoro-group.html": {
+    "name": "eToro Group",
+    "youtube": [
+      {
+        "id": "tpFu6ETjbrI",
+        "title": "NewDeal Invest x eToro - Event på Børsen (teaser)",
+        "date": "2024-03-27",
+        "start": 0,
+        "basis": "titel"
+      },
+      {
+        "id": "Cp5j63aW-ok",
+        "title": "NDI-FutureTech presentation for eToro - Invest in tech the correct way",
+        "date": "2024-12-10",
+        "start": 0,
+        "basis": "titel"
+      },
+      {
+        "id": "Be-JJGT-5CQ",
+        "title": "NewDeal Invest Live Q&A - April 21st at 20:00 (8 PM) with Mads Christiansen & Jesper Bæk",
+        "date": "2024-04-22",
+        "start": 1125,
+        "basis": "beskrivelse (kapitel)"
+      }
+    ],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/soundhound-ai.html": {
+    "name": "SoundHound AI",
+    "youtube": [
+      {
+        "id": "7tgLUHVSBRA",
+        "title": "NewDeal Invest Live Q&A - 3. Marts kl. 20:00 med Mads Christiansen & Jesper Bæk",
+        "date": "2024-03-04",
+        "start": 1775,
+        "basis": "beskrivelse (kapitel)"
+      }
+    ],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/t1-energy.html": {
+    "name": "T1 Energy",
+    "youtube": [],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/cerebras-systems.html": {
+    "name": "Cerebras Systems",
+    "youtube": [
+      {
+        "id": "j9BV3f4IEGA",
+        "title": "Cerebras - hurtigt men dyrt",
+        "date": "2026-07-06",
+        "start": 0,
+        "basis": "titel"
+      },
+      {
+        "id": "lqflldYWoFw",
+        "title": "Ugens blog for uge 43 - Tech-aktierne er crashet. Hvad sker der nu?",
+        "date": "2026-10-26",
+        "start": 320,
+        "basis": "undertekster"
+      }
+    ],
+    "instagram": [],
+    "x": [
+      {
+        "id": "2092423968926122489",
+        "url": "https://x.com/SVTrivo/status/2092423968926122489",
+        "date": "2026-08-26",
+        "type": "repost"
+      }
+    ]
+  },
+  "selskaber/globalfoundries.html": {
+    "name": "GlobalFoundries",
+    "youtube": [],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/sofi.html": {
+    "name": "SoFi",
+    "youtube": [],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/enovix.html": {
+    "name": "Enovix",
+    "youtube": [],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/merlin.html": {
+    "name": "Merlin",
+    "youtube": [],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/broadcom.html": {
+    "name": "Broadcom",
+    "youtube": [
+      {
+        "id": "AIsFYR6qgf4",
+        "title": "Broadcom: En fantastisk virksomhed alle nu har fået øjenene op for - hvad betyder det?",
+        "date": "2025-12-03",
+        "start": 0,
+        "basis": "titel"
+      },
+      {
+        "id": "EoW0MgNAn_s",
+        "title": "Kort og godt, Ep. 6",
+        "date": "2026-10-13",
+        "start": 67,
+        "basis": "undertekster"
+      },
+      {
+        "id": "GBPffuqKxi8",
+        "title": "Kort og godt, Ep. 7",
+        "date": "2026-10-20",
+        "start": 219,
+        "basis": "undertekster"
+      }
+    ],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/oracle.html": {
+    "name": "Oracle",
+    "youtube": [
+      {
+        "id": "OBzaA7UatRA",
+        "title": "Kort og godt, Ep. 4",
+        "date": "2026-09-29",
+        "start": 1967,
+        "basis": "beskrivelse (kapitel)"
+      },
+      {
+        "id": "FU2PLtigwPg",
+        "title": "NewDeal Invest Live Q&A - May 19th at 20:00 with Mads Christiansen, Jesper Bæk & Jordan Lambert",
+        "date": "2024-05-20",
+        "start": 3649,
+        "basis": "beskrivelse (kapitel)"
+      }
+    ],
+    "instagram": [],
+    "x": [
+      {
+        "id": "2103100286638416088",
+        "url": "https://x.com/wallstengine/status/2103100286638416088",
+        "date": "2026-09-24",
+        "type": "repost"
+      }
+    ]
+  },
+  "selskaber/opendoor.html": {
+    "name": "Opendoor",
+    "youtube": [
+      {
+        "id": "fRxwTum8qLw",
+        "title": "Webinar 12. juni kl. 20:00 - Forskellen på teknologi- og valuevirksomheder",
+        "date": "2025-06-13",
+        "start": 3555,
+        "basis": "beskrivelse (kapitel)"
+      }
+    ],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/iren.html": {
+    "name": "IREN",
+    "youtube": [],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/micron-technology.html": {
+    "name": "Micron Technology",
+    "youtube": [],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/solaredge.html": {
+    "name": "SolarEdge",
+    "youtube": [],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/hims-hers-health.html": {
+    "name": "Hims & Hers Health",
+    "youtube": [],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/united-states-antimony.html": {
+    "name": "United States Antimony",
+    "youtube": [],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/poet-technologies.html": {
+    "name": "POET Technologies",
+    "youtube": [],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/applied-optoelectronics.html": {
+    "name": "Applied Optoelectronics",
+    "youtube": [],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/navitas-semiconductor.html": {
+    "name": "Navitas Semiconductor",
+    "youtube": [
+      {
+        "id": "hHhBvsWya2k",
+        "title": "NewDeal Invest Live Q&A med Mads Christiansen & Jesper Bæk - 8. September 2024 kl. 20:00",
+        "date": "2024-09-09",
+        "start": 3431,
+        "basis": "beskrivelse (kapitel)"
+      }
+    ],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/intuitive-machines.html": {
+    "name": "Intuitive Machines",
+    "youtube": [],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/ast-spacemobile.html": {
+    "name": "AST SpaceMobile",
+    "youtube": [],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/joby-aviation.html": {
+    "name": "Joby Aviation",
+    "youtube": [],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/intel.html": {
+    "name": "Intel",
+    "youtube": [
+      {
+        "id": "cYYwQ4tKTD4",
+        "title": "ARM er oppe med 30% i præmarkedet... hvorfor? Hør ydermere historien om x86, Intel, ARM og RISC",
+        "date": "2024-02-08",
+        "start": 0,
+        "basis": "titel"
+      },
+      {
+        "id": "QcLM-60Bj20",
+        "title": "NewDeal Invest Live Q&A - June 2nd at 20:00 with Mads Christiansen, Jesper Bæk",
+        "date": "2024-06-03",
+        "start": 557,
+        "basis": "beskrivelse (kapitel)"
+      },
+      {
+        "id": "Q-DegJHF4Nw",
+        "title": "NewDeal Invest Live Q&A - June 16th at 17:00 - Guest Simon He joins Mads Christiansen & Jesper Bæk",
+        "date": "2024-06-16",
+        "start": 2711,
+        "basis": "beskrivelse (kapitel)"
+      }
+    ],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/coinbase.html": {
+    "name": "Coinbase",
+    "youtube": [],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/auto1-group.html": {
+    "name": "AUTO1 Group",
+    "youtube": [
+      {
+        "id": "Be-JJGT-5CQ",
+        "title": "NewDeal Invest Live Q&A - April 21st at 20:00 (8 PM) with Mads Christiansen & Jesper Bæk",
+        "date": "2024-04-22",
+        "start": 2615,
+        "basis": "beskrivelse (kapitel)"
+      },
+      {
+        "id": "hHhBvsWya2k",
+        "title": "NewDeal Invest Live Q&A med Mads Christiansen & Jesper Bæk - 8. September 2024 kl. 20:00",
+        "date": "2024-09-09",
+        "start": 2260,
+        "basis": "beskrivelse (kapitel)"
+      },
+      {
+        "id": "WXy6iZrRQ3M",
+        "title": "NewDeal Invest Live Q&A med Mads Christiansen & Jesper Bæk - 17. November 2024 - kl. 20:00",
+        "date": "2024-11-18",
+        "start": 2591,
+        "basis": "beskrivelse (kapitel)"
+      }
+    ],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/aehr-test-systems.html": {
+    "name": "Aehr Test Systems",
+    "youtube": [],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/amazon.html": {
+    "name": "Amazon",
+    "youtube": [
+      {
+        "id": "WXy6iZrRQ3M",
+        "title": "NewDeal Invest Live Q&A med Mads Christiansen & Jesper Bæk - 17. November 2024 - kl. 20:00",
+        "date": "2024-11-18",
+        "start": 110,
+        "basis": "beskrivelse (kapitel)"
+      }
+    ],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/enphase-energy.html": {
+    "name": "Enphase Energy",
+    "youtube": [],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/root.html": {
+    "name": "Root",
+    "youtube": [
+      {
+        "id": "hHhBvsWya2k",
+        "title": "NewDeal Invest Live Q&A med Mads Christiansen & Jesper Bæk - 8. September 2024 kl. 20:00",
+        "date": "2024-09-09",
+        "start": 2677,
+        "basis": "beskrivelse (kapitel)"
+      }
+    ],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/lightwave-logic.html": {
+    "name": "Lightwave Logic",
+    "youtube": [],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/palantir.html": {
+    "name": "Palantir",
+    "youtube": [
+      {
+        "id": "M59oD0hdcE0",
+        "title": "Q2 Regnskaber fra SpaceX, Novo Nordisk og Palantir: Mads Giver Sit Take",
+        "date": "2026-08-05",
+        "start": 1179,
+        "basis": "eksisterende placering"
+      },
+      {
+        "id": "5DwuBgbnzNw",
+        "title": "Anthropic og OpenAI vs Palantir og NVIDIA",
+        "date": "2026-07-12",
+        "start": 16,
+        "basis": "undertekster"
+      },
+      {
+        "id": "FU2PLtigwPg",
+        "title": "NewDeal Invest Live Q&A - May 19th at 20:00 with Mads Christiansen, Jesper Bæk & Jordan Lambert",
+        "date": "2024-05-20",
+        "start": 1013,
+        "basis": "beskrivelse (kapitel)"
+      }
+    ],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/critical-metals.html": {
+    "name": "Critical Metals",
+    "youtube": [],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/ghl.html": {
+    "name": "Grab",
+    "youtube": [
+      {
+        "id": "Be-JJGT-5CQ",
+        "title": "NewDeal Invest Live Q&A - April 21st at 20:00 (8 PM) with Mads Christiansen & Jesper Bæk",
+        "date": "2024-04-22",
+        "start": 1895,
+        "basis": "beskrivelse (kapitel)"
+      },
+      {
+        "id": "5woGJk1ikQ0",
+        "title": "NewDeal Invest Live Q&A - May 5th at 20:00 (8 PM) with Mads Christiansen & Jesper Bæk",
+        "date": "2024-05-06",
+        "start": 1769,
+        "basis": "beskrivelse (kapitel)"
+      }
+    ],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/ciena.html": {
+    "name": "Ciena",
+    "youtube": [],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/super-micro-computer.html": {
+    "name": "Super Micro Computer",
+    "youtube": [],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/lemonade.html": {
+    "name": "Lemonade",
+    "youtube": [
+      {
+        "id": "yiNWLIblPvY",
+        "title": "NewDeal Invest Live Q&A - March 17th at 20:00 (8 PM) with Mads Christiansen & Jesper Bæk",
+        "date": "2024-03-18",
+        "start": 2292,
+        "basis": "beskrivelse (kapitel)"
+      },
+      {
+        "id": "hHhBvsWya2k",
+        "title": "NewDeal Invest Live Q&A med Mads Christiansen & Jesper Bæk - 8. September 2024 kl. 20:00",
+        "date": "2024-09-09",
+        "start": 2677,
+        "basis": "beskrivelse (kapitel)"
+      }
+    ],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/reddit.html": {
+    "name": "Reddit",
+    "youtube": [
+      {
+        "id": "_6tVz0Bu1XM",
+        "title": "Reddit-aktien (RDDT) - Klip fra NewDeal Invest webinar",
+        "date": "2025-01-29",
+        "start": 0,
+        "basis": "titel"
+      }
+    ],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/mercadolibre.html": {
+    "name": "MercadoLibre",
+    "youtube": [
+      {
+        "id": "Be-JJGT-5CQ",
+        "title": "NewDeal Invest Live Q&A - April 21st at 20:00 (8 PM) with Mads Christiansen & Jesper Bæk",
+        "date": "2024-04-22",
+        "start": 1895,
+        "basis": "beskrivelse (kapitel)"
+      }
+    ],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/redwire.html": {
+    "name": "Redwire",
+    "youtube": [
+      {
+        "id": "WXy6iZrRQ3M",
+        "title": "NewDeal Invest Live Q&A med Mads Christiansen & Jesper Bæk - 17. November 2024 - kl. 20:00",
+        "date": "2024-11-18",
+        "start": 3348,
+        "basis": "beskrivelse (kapitel)"
+      }
+    ],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/nvidia.html": {
+    "name": "NVIDIA",
+    "youtube": [
+      {
+        "id": "5DwuBgbnzNw",
+        "title": "Anthropic og OpenAI vs Palantir og NVIDIA",
+        "date": "2026-07-12",
+        "start": 0,
+        "basis": "undertekster"
+      },
+      {
+        "id": "GBPffuqKxi8",
+        "title": "Kort og godt, Ep. 7",
+        "date": "2026-10-20",
+        "start": 926,
+        "basis": "undertekster"
+      }
+    ],
+    "instagram": [
+      {
+        "id": "DcERUrkp73N",
+        "url": "https://www.instagram.com/reel/DcERUrkp73N/",
+        "date": "2026-08-15"
+      }
+    ],
+    "x": [
+      {
+        "id": "2113615323454980567",
+        "url": "https://x.com/silicondata/status/2113615323454980567",
+        "date": "2026-10-23",
+        "type": "repost"
+      },
+      {
+        "id": "2112710445069156788",
+        "url": "https://x.com/GabGrowth/status/2112710445069156788",
+        "date": "2026-10-21",
+        "type": "repost"
+      }
+    ]
+  },
+  "selskaber/firefly-aerospace.html": {
+    "name": "Firefly Aerospace",
+    "youtube": [],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/gemini-space-station.html": {
+    "name": "Gemini Space Station",
+    "youtube": [],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/corning.html": {
+    "name": "Corning",
+    "youtube": [],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/centrus-energy.html": {
+    "name": "Centrus Energy",
+    "youtube": [],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/hecla-mining.html": {
+    "name": "Hecla Mining",
+    "youtube": [],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/hellofresh.html": {
+    "name": "HelloFresh",
+    "youtube": [
+      {
+        "id": "7tgLUHVSBRA",
+        "title": "NewDeal Invest Live Q&A - 3. Marts kl. 20:00 med Mads Christiansen & Jesper Bæk",
+        "date": "2024-03-04",
+        "start": 1513,
+        "basis": "beskrivelse (kapitel)"
+      },
+      {
+        "id": "yiNWLIblPvY",
+        "title": "NewDeal Invest Live Q&A - March 17th at 20:00 (8 PM) with Mads Christiansen & Jesper Bæk",
+        "date": "2024-03-18",
+        "start": 2755,
+        "basis": "beskrivelse (kapitel)"
+      },
+      {
+        "id": "Be-JJGT-5CQ",
+        "title": "NewDeal Invest Live Q&A - April 21st at 20:00 (8 PM) with Mads Christiansen & Jesper Bæk",
+        "date": "2024-04-22",
+        "start": 2615,
+        "basis": "beskrivelse (kapitel)"
+      }
+    ],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/asp-isotopes.html": {
+    "name": "ASP Isotopes",
+    "youtube": [],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/coreweave.html": {
+    "name": "CoreWeave",
+    "youtube": [],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/nu.html": {
+    "name": "Nu",
+    "youtube": [],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/archer-aviation.html": {
+    "name": "Archer Aviation",
+    "youtube": [],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/satellogic.html": {
+    "name": "Satellogic",
+    "youtube": [],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/bloom-energy.html": {
+    "name": "Bloom Energy",
+    "youtube": [],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/amprius-technologies.html": {
+    "name": "Amprius Technologies",
+    "youtube": [],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/sandisk.html": {
+    "name": "SanDisk",
+    "youtube": [],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/ge-vernova.html": {
+    "name": "GE Vernova",
+    "youtube": [],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/nebius.html": {
+    "name": "Nebius",
+    "youtube": [],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/spire-global.html": {
+    "name": "Spire Global",
+    "youtube": [
+      {
+        "id": "70iT9PjWF-Y",
+        "title": "NDI Exclusive interview with Spire Global CEO Peter Platzer",
+        "date": "2024-10-11",
+        "start": 299,
+        "basis": "beskrivelse (kapitel)"
+      }
+    ],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/uber-tech.html": {
+    "name": "Uber",
+    "youtube": [
+      {
+        "id": "FU2PLtigwPg",
+        "title": "NewDeal Invest Live Q&A - May 19th at 20:00 with Mads Christiansen, Jesper Bæk & Jordan Lambert",
+        "date": "2024-05-20",
+        "start": 282,
+        "basis": "beskrivelse (kapitel)"
+      },
+      {
+        "id": "QcLM-60Bj20",
+        "title": "NewDeal Invest Live Q&A - June 2nd at 20:00 with Mads Christiansen, Jesper Bæk",
+        "date": "2024-06-03",
+        "start": 1925,
+        "basis": "beskrivelse (kapitel)"
+      }
+    ],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/sigma-lithium.html": {
+    "name": "Sigma Lithium",
+    "youtube": [],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/intellia-therapeutics.html": {
+    "name": "Intellia Therapeutics",
+    "youtube": [
+      {
+        "id": "fRxwTum8qLw",
+        "title": "Webinar 12. juni kl. 20:00 - Forskellen på teknologi- og valuevirksomheder",
+        "date": "2025-06-13",
+        "start": 4538,
+        "basis": "beskrivelse (kapitel)"
+      }
+    ],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/axt.html": {
+    "name": "AXT",
+    "youtube": [],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/chewy.html": {
+    "name": "Chewy",
+    "youtube": [
+      {
+        "id": "tczx3rbB_44",
+        "title": "NewDeal Invest Live Q&A with Mads Christiansen & Jesper Bæk - September 29th 2024 - 8:00 PM",
+        "date": "2024-09-30",
+        "start": 911,
+        "basis": "beskrivelse (kapitel)"
+      }
+    ],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/kodiak-ai.html": {
+    "name": "Kodiak AI",
+    "youtube": [],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/infineon-technologies.html": {
+    "name": "Infineon Technologies",
+    "youtube": [],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/bitmine-immersion-technologi.html": {
+    "name": "Bitmine Immersion Technologies",
+    "youtube": [],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/fluor.html": {
+    "name": "Fluor",
+    "youtube": [],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/microsoft.html": {
+    "name": "Microsoft",
+    "youtube": [
+      {
+        "id": "Q-DegJHF4Nw",
+        "title": "NewDeal Invest Live Q&A - June 16th at 17:00 - Guest Simon He joins Mads Christiansen & Jesper Bæk",
+        "date": "2024-06-16",
+        "start": 3656,
+        "basis": "beskrivelse (kapitel)"
+      }
+    ],
+    "instagram": [],
+    "x": [
+      {
+        "id": "2115905121444135188",
+        "url": "https://x.com/jaminball/status/2115905121444135188",
+        "date": "2026-10-29",
+        "type": "repost"
+      },
+      {
+        "id": "2109631106404487523",
+        "url": "https://x.com/satyanadella/status/2109631106404487523",
+        "date": "2026-10-12",
+        "type": "repost"
+      }
+    ]
+  },
+  "selskaber/terrestrial-energy.html": {
+    "name": "Terrestrial Energy",
+    "youtube": [],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/asml.html": {
+    "name": "ASML",
+    "youtube": [
+      {
+        "id": "Be-JJGT-5CQ",
+        "title": "NewDeal Invest Live Q&A - April 21st at 20:00 (8 PM) with Mads Christiansen & Jesper Bæk",
+        "date": "2024-04-22",
+        "start": 885,
+        "basis": "beskrivelse (kapitel)"
+      },
+      {
+        "id": "QcLM-60Bj20",
+        "title": "NewDeal Invest Live Q&A - June 2nd at 20:00 with Mads Christiansen, Jesper Bæk",
+        "date": "2024-06-03",
+        "start": 557,
+        "basis": "beskrivelse (kapitel)"
+      },
+      {
+        "id": "Q-DegJHF4Nw",
+        "title": "NewDeal Invest Live Q&A - June 16th at 17:00 - Guest Simon He joins Mads Christiansen & Jesper Bæk",
+        "date": "2024-06-16",
+        "start": 2438,
+        "basis": "beskrivelse (kapitel)"
+      }
+    ],
+    "instagram": [
+      {
+        "id": "DcV5KfUPlsg",
+        "url": "https://www.instagram.com/reel/DcV5KfUPlsg/",
+        "date": "2026-08-22"
+      }
+    ],
+    "x": []
+  },
+  "selskaber/marvell-technology.html": {
+    "name": "Marvell Technology",
+    "youtube": [
+      {
+        "id": "WXy6iZrRQ3M",
+        "title": "NewDeal Invest Live Q&A med Mads Christiansen & Jesper Bæk - 17. November 2024 - kl. 20:00",
+        "date": "2024-11-18",
+        "start": 3048,
+        "basis": "beskrivelse (kapitel)"
+      }
+    ],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/astera-labs.html": {
+    "name": "Astera Labs",
+    "youtube": [],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/wix-com.html": {
+    "name": "Wix.com",
+    "youtube": [],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/snowflake.html": {
+    "name": "Snowflake",
+    "youtube": [
+      {
+        "id": "Q-DegJHF4Nw",
+        "title": "NewDeal Invest Live Q&A - June 16th at 17:00 - Guest Simon He joins Mads Christiansen & Jesper Bæk",
+        "date": "2024-06-16",
+        "start": 1013,
+        "basis": "beskrivelse (kapitel)"
+      },
+      {
+        "id": "UPSJO5_rBDo",
+        "title": "NewDeal Invest Live Q&A with Mads Christiansen & Jesper Bæk - December 15th 2024 - 8:00 PM",
+        "date": "2024-12-16",
+        "start": 1952,
+        "basis": "beskrivelse (kapitel)"
+      }
+    ],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/karman-space-defense.html": {
+    "name": "Karman Space & Defense",
+    "youtube": [],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/fubotv.html": {
+    "name": "FuboTV",
+    "youtube": [
+      {
+        "id": "5woGJk1ikQ0",
+        "title": "NewDeal Invest Live Q&A - May 5th at 20:00 (8 PM) with Mads Christiansen & Jesper Bæk",
+        "date": "2024-05-06",
+        "start": 2057,
+        "basis": "beskrivelse (kapitel)"
+      },
+      {
+        "id": "hHhBvsWya2k",
+        "title": "NewDeal Invest Live Q&A med Mads Christiansen & Jesper Bæk - 8. September 2024 kl. 20:00",
+        "date": "2024-09-09",
+        "start": 3431,
+        "basis": "beskrivelse (kapitel)"
+      }
+    ],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/meta-platforms.html": {
+    "name": "Meta Platforms",
+    "youtube": [
+      {
+        "id": "iGCNmCq7YE4",
+        "title": "Meta Compute?",
+        "date": "2026-07-13",
+        "start": 0,
+        "basis": "undertekster"
+      },
+      {
+        "id": "OBzaA7UatRA",
+        "title": "Kort og godt, Ep. 4",
+        "date": "2026-09-29",
+        "start": 947,
+        "basis": "beskrivelse (kapitel)"
+      }
+    ],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/amd.html": {
+    "name": "AMD",
+    "youtube": [
+      {
+        "id": "Q-DegJHF4Nw",
+        "title": "NewDeal Invest Live Q&A - June 16th at 17:00 - Guest Simon He joins Mads Christiansen & Jesper Bæk",
+        "date": "2024-06-16",
+        "start": 2711,
+        "basis": "beskrivelse (kapitel)"
+      }
+    ],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/dell-tech.html": {
+    "name": "Dell",
+    "youtube": [
+      {
+        "id": "QcLM-60Bj20",
+        "title": "NewDeal Invest Live Q&A - June 2nd at 20:00 with Mads Christiansen, Jesper Bæk",
+        "date": "2024-06-03",
+        "start": 127,
+        "basis": "beskrivelse (kapitel)"
+      }
+    ],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/palo-alto-net.html": {
+    "name": "Palo Alto Networks",
+    "youtube": [
+      {
+        "id": "FU2PLtigwPg",
+        "title": "NewDeal Invest Live Q&A - May 19th at 20:00 with Mads Christiansen, Jesper Bæk & Jordan Lambert",
+        "date": "2024-05-20",
+        "start": 2668,
+        "basis": "beskrivelse (kapitel)"
+      }
+    ],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/rubrik.html": {
+    "name": "Rubrik",
+    "youtube": [
+      {
+        "id": "FU2PLtigwPg",
+        "title": "NewDeal Invest Live Q&A - May 19th at 20:00 with Mads Christiansen, Jesper Bæk & Jordan Lambert",
+        "date": "2024-05-20",
+        "start": 3105,
+        "basis": "beskrivelse (kapitel)"
+      }
+    ],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/tsmc.html": {
+    "name": "TSMC",
+    "youtube": [
+      {
+        "id": "yiNWLIblPvY",
+        "title": "NewDeal Invest Live Q&A - March 17th at 20:00 (8 PM) with Mads Christiansen & Jesper Bæk",
+        "date": "2024-03-18",
+        "start": 3285,
+        "basis": "beskrivelse (kapitel)"
+      }
+    ],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/dlocal.html": {
+    "name": "dLocal",
+    "youtube": [
+      {
+        "id": "5woGJk1ikQ0",
+        "title": "NewDeal Invest Live Q&A - May 5th at 20:00 (8 PM) with Mads Christiansen & Jesper Bæk",
+        "date": "2024-05-06",
+        "start": 610,
+        "basis": "beskrivelse (kapitel)"
+      }
+    ],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/oscar-health.html": {
+    "name": "Oscar Health",
+    "youtube": [
+      {
+        "id": "hHhBvsWya2k",
+        "title": "NewDeal Invest Live Q&A med Mads Christiansen & Jesper Bæk - 8. September 2024 kl. 20:00",
+        "date": "2024-09-09",
+        "start": 2677,
+        "basis": "beskrivelse (kapitel)"
+      }
+    ],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/apple.html": {
+    "name": "Apple",
+    "youtube": [
+      {
+        "id": "7tgLUHVSBRA",
+        "title": "NewDeal Invest Live Q&A - 3. Marts kl. 20:00 med Mads Christiansen & Jesper Bæk",
+        "date": "2024-03-04",
+        "start": 3364,
+        "basis": "beskrivelse (kapitel)"
+      },
+      {
+        "id": "Q-DegJHF4Nw",
+        "title": "NewDeal Invest Live Q&A - June 16th at 17:00 - Guest Simon He joins Mads Christiansen & Jesper Bæk",
+        "date": "2024-06-16",
+        "start": 234,
+        "basis": "beskrivelse (kapitel)"
+      }
+    ],
+    "instagram": [],
+    "x": []
+  },
+  "selskaber/crwdstrik-hldg.html": {
+    "name": "CrowdStrike",
+    "youtube": [
+      {
+        "id": "Q-DegJHF4Nw",
+        "title": "NewDeal Invest Live Q&A - June 16th at 17:00 - Guest Simon He joins Mads Christiansen & Jesper Bæk",
+        "date": "2024-06-16",
+        "start": 850,
+        "basis": "beskrivelse (kapitel)"
+      }
+    ],
+    "instagram": [],
+    "x": []
+  }
+}

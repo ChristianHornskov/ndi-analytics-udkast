@@ -186,6 +186,8 @@ def build():
     from chip_news import refine_chip_news
     refine_chip_news(page, DEST)
     save(page,path)
+    from media_integration import build_media
+    build_media(DEST)
     print('Built isolated preview:', DEST)
 
 if __name__ == '__main__': build()

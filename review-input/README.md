@@ -11,7 +11,7 @@ python review-input/test_review.py
 node --check docs/energi-konkurrence/v19-review/assets/js/review-widget.js
 ```
 
-The entry point is `widget/index.html`. Its two buttons lead to `index.html`
+The entry point is `widget/index.html`. Its two buttons lead to `portfolio/index.html`
 (portfolio) and `tech.html` (technology). Only the widget loads both share classes.
 All deeper pages retain the original PMINDI portfolio dataset.
 

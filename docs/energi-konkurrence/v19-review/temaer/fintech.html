@@ -1,392 +1,782 @@
 <!doctype html>
-<html lang="da">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#050a0f">
-<script>(function(){var d=document.documentElement,t=null;try{t=localStorage.getItem("ndi-tema")}catch(e){}if(t!=="lys"&&t!=="mørk"){t="mørk"}d.setAttribute("data-tema",t)})();</script>
-<title>Fintech · NewDeal Invest</title>
-<meta name="description" content="Temaet Fintech i PMINDI: hvad det handler om, andel af fonden og de største selskaber.">
-<link rel="icon" href="../assets/img/ndi-favicon.png" type="image/png">
-<link rel="stylesheet" href="../assets/css/tokens.css">
-<link rel="stylesheet" href="../assets/css/komponenter.css">
-<link rel="stylesheet" href="../assets/css/sider.css">
-<link rel="stylesheet" href="../assets/css/tema-lys.css">
-<link rel="stylesheet" href="../assets/fonts/v5/fonts.css">
-<link rel="stylesheet" href="../assets/css/v5.css">
-<link rel="stylesheet" href="../assets/css/v5-komponenter.css">
-<link rel="stylesheet" href="../assets/css/v18-min.css">
-<script>try{document.fonts.load("500 16px Manrope");document.fonts.load("400 16px 'DM Sans'")}catch(e){}</script>
-<link rel="stylesheet" href="../assets/v5-temaer/fintech.css">
-<link rel="stylesheet" href="../assets/css/review.css?v=20261031logos"></head>
-<body>
-
-<svg class="sprite" aria-hidden="true" focusable="false">
-<symbol id="i-pause" viewbox="0 0 24 24"><path d="M9 6v12M15 6v12"></path></symbol>
-<symbol id="i-afspil" viewbox="0 0 24 24"><path d="M8 5.5v13l10-6.5z"></path></symbol>
-<symbol id="i-overblik" viewbox="0 0 24 24"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"></rect><rect x="13.5" y="3.5" width="7" height="4" rx="1.5"></rect><rect x="13.5" y="10.5" width="7" height="10" rx="1.5"></rect><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"></rect></symbol>
-<symbol id="i-pointer" viewbox="0 0 24 24"><path d="M4 5.5h16a1.5 1.5 0 0 1 1.5 1.5v9a1.5 1.5 0 0 1-1.5 1.5h-9l-4.5 3.5v-3.5H4A1.5 1.5 0 0 1 2.5 16V7A1.5 1.5 0 0 1 4 5.5z"></path><path d="M7 10h10M7 13.5h6"></path></symbol>
-<symbol id="i-noegletal" viewbox="0 0 24 24"><path d="M4 20V11M9.5 20V5M15 20v-6M20.5 20V8.5M2.5 20.5h19"></path></symbol>
-<symbol id="i-forretning" viewbox="0 0 24 24"><path d="M12 2.8c3.3 2.7 5 6.5 5 10.9l-2.2 3.2H9.2L7 13.7c0-4.4 1.7-8.2 5-10.9z"></path><circle cx="12" cy="10" r="1.8"></circle><path d="M9.6 17.5L8 21.2M14.4 17.5l1.6 3.7M12 17v4.2"></path></symbol>
-<symbol id="i-risiko" viewbox="0 0 24 24"><path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.3-7.5 9.5-4.3-1.2-7.5-4.9-7.5-9.5V6L12 3z"></path><path d="M12 8v4.5M12 15.6v.1"></path></symbol>
-<symbol id="i-historie" viewbox="0 0 24 24"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7.5V12l3 2"></path></symbol>
-<symbol id="i-medier" viewbox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="2.5"></rect><path d="M10 9.2v5.6l4.8-2.8L10 9.2z"></path></symbol>
-<symbol id="i-kilder" viewbox="0 0 24 24"><path d="M4.5 5.5A2 2 0 0 1 6.5 3.5h12v14h-12a2 2 0 0 0-2 2v-14z"></path><path d="M4.5 19.5a2 2 0 0 0 2 2h12v-4M9 8h6M9 11.5h4"></path></symbol>
-<symbol id="i-tilbage" viewbox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"></path></symbol>
-<symbol id="i-frem" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></symbol>
-<symbol id="i-ud" viewbox="0 0 24 24"><path d="M8 16L16 8M9.5 8H16v6.5"></path></symbol>
-<symbol id="i-menu" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"></path></symbol>
-<symbol id="i-luk" viewbox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"></path></symbol>
-<symbol id="i-chevron" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></symbol>
-<symbol id="i-ned" viewbox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></symbol>
-<symbol id="i-satellit" viewbox="0 0 24 24"><rect x="9.5" y="9.5" width="5" height="5" rx="1" transform="rotate(45 12 12)"></rect><path d="M8.2 8.2L4.6 4.6M15.8 15.8l3.6 3.6M3 8l5-5M16 21l5-5"></path><path d="M6 19a8 8 0 0 0 2-6"></path></symbol>
-<symbol id="i-chip" viewbox="0 0 24 24"><rect x="6.5" y="6.5" width="11" height="11" rx="1.5"></rect><rect x="9.5" y="9.5" width="5" height="5" rx=".6"></rect><path d="M9.5 3v3.5M14.5 3v3.5M9.5 17.5V21M14.5 17.5V21M3 9.5h3.5M3 14.5h3.5M17.5 9.5H21M17.5 14.5H21"></path></symbol>
-<symbol id="i-tema" viewbox="0 0 24 24"><path d="M12 3.5l9 4.5-9 4.5L3 8l9-4.5z"></path><path d="M3 12.5l9 4.5 9-4.5M3 16.5l9 4.5 9-4.5"></path></symbol>
-<symbol id="i-kalender" viewbox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"></rect><path d="M3.5 9.5h17M8 3v4M16 3v4"></path></symbol>
-<symbol id="i-dokument" viewbox="0 0 24 24"><path d="M6 2.5h8l4.5 4.5v14.5H6z"></path><path d="M14 2.5V7h4.5M9 12h6M9 15.5h6"></path></symbol>
-<symbol id="i-fond" viewbox="0 0 24 24"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5V12l6 6"></path></symbol>
-<symbol id="i-x" viewbox="0 0 24 24"><path d="M4 4l16 16M20 4L4 20"></path></symbol>
-<symbol id="i-selskab" viewbox="0 0 24 24"><path d="M4 20.5V8l6-3.5v16M10 20.5V3.5l10 4v13M2.5 20.5h19M13 9h4M13 12.5h4M13 16h4M6.5 11h1M6.5 14.5h1"></path></symbol>
-<symbol id="i-forbind" viewbox="0 0 24 24"><circle cx="5.5" cy="12" r="2.5"></circle><circle cx="18.5" cy="5.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle><path d="M8 11l8-4.3M8 13l8 4.3"></path></symbol>
-<symbol id="t-chips" viewbox="0 0 24 24"><rect x="6.5" y="6.5" width="11" height="11" rx="1.5"></rect><rect x="9.5" y="9.5" width="5" height="5" rx=".6"></rect><path d="M9.5 3v3.5M14.5 3v3.5M9.5 17.5V21M14.5 17.5V21M3 9.5h3.5M3 14.5h3.5M17.5 9.5H21M17.5 14.5H21"></path></symbol>
-<symbol id="t-energi" viewbox="0 0 24 24"><path d="M13.5 2.5L5 13.5h6l-1.5 8 8.5-11h-6z"></path></symbol>
-<symbol id="t-datacenter" viewbox="0 0 24 24"><rect x="4" y="3.5" width="16" height="5" rx="1.2"></rect><rect x="4" y="9.5" width="16" height="5" rx="1.2"></rect><rect x="4" y="15.5" width="16" height="5" rx="1.2"></rect><path d="M7 6h.1M7 12h.1M7 18h.1M11 6h6M11 12h6M11 18h6"></path></symbol>
-<symbol id="t-platforme" viewbox="0 0 24 24"><path d="M3 9.5l1.5-5h15L21 9.5M3 9.5a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0M5 12v8.5h14V12M10 20.5v-5h4v5"></path></symbol>
-<symbol id="t-fysisk-ai" viewbox="0 0 24 24"><path d="M4 20.5h9M6.5 20.5v-3l4-1.5M10.5 16l3-7.5M13.5 8.5l5 2.5"></path><circle cx="13.5" cy="8.5" r="2"></circle><path d="M18.5 11l2 3.5M18.5 11l-1 4"></path></symbol>
-<symbol id="t-raastoffer" viewbox="0 0 24 24"><path d="M8 4h8l4 5-8 11L4 9z"></path><path d="M4 9h16M9.5 9L12 20l2.5-11M8 4l1.5 5M16 4l-1.5 5"></path></symbol>
-<symbol id="t-rumfart" viewbox="0 0 24 24"><path d="M12 2.8c3.3 2.7 5 6.5 5 10.9l-2.2 3.2H9.2L7 13.7c0-4.4 1.7-8.2 5-10.9z"></path><circle cx="12" cy="10" r="1.8"></circle><path d="M9.6 17.5L8 21.2M14.4 17.5l1.6 3.7M12 17v4.2"></path></symbol>
-<symbol id="t-fintech" viewbox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="2"></rect><path d="M2.5 9.5h19M6 14.5h4"></path></symbol>
-<symbol id="t-krypto" viewbox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.2"></rect><rect x="14" y="3" width="7" height="7" rx="1.2"></rect><rect x="8.5" y="14" width="7" height="7" rx="1.2"></rect><path d="M10 6.5h4M6.5 10v2.5h5.5V14M17.5 10v2.5H12"></path></symbol>
-<symbol id="t-software" viewbox="0 0 24 24"><rect x="2.5" y="4" width="19" height="16" rx="2"></rect><path d="M2.5 8h19M8 12l-2.5 2.5L8 17M16 12l2.5 2.5L16 17M13 11.5l-2 6"></path></symbol>
-<symbol id="t-sundhed" viewbox="0 0 24 24"><path d="M2.5 12.5h4l2-4.5 3.5 9 2.5-6 1.5 1.5h5.5"></path></symbol>
-<symbol id="t-kvante" viewbox="0 0 24 24"><circle cx="12" cy="12" r="1.6"></circle><ellipse cx="12" cy="12" rx="9.5" ry="3.8"></ellipse><ellipse cx="12" cy="12" rx="9.5" ry="3.8" transform="rotate(60 12 12)"></ellipse><ellipse cx="12" cy="12" rx="9.5" ry="3.8" transform="rotate(120 12 12)"></ellipse></symbol>
-</svg>
-<a class="spring" href="#indhold">Gå til indhold</a>
-<div class="app">
-  <header class="topbar-mobil">
-    <button class="ikonknap" id="menu-aaben" type="button" aria-controls="sidemenu" aria-expanded="false"><svg class="ik" aria-hidden="true"><use href="#i-menu"></use></svg><span class="sr">Åbn menuen</span></button>
-    <a class="maerke maerke--lille" href="../index.html" aria-label="NewDeal Invest, til fondsoverblikket">
-      <span class="logo-felt logo-felt--lille"><img class="ndi-logo" src="../assets/img/ndi-logo-moerk-baggrund.png" width="2048" height="754" alt="NewDeal Invest" decoding="async"></span>
-      <span class="maerke-tekst"><span class="maerke-navn">Fintech</span><span class="maerke-sub" id="aktuel-sektion">Tema</span></span>
-    </a>
-    <a class="knap knap--lille" href="https://fundmarket.dk/newdeal-invest-kl-n/" target="_blank" rel="noopener">Faktaark<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (KID) og prospekt for PMINDI (åbner i nyt vindue)</span></a>
-  </header>
-  <div class="slor" id="slor" hidden></div>
-  <aside class="sidemenu" id="sidemenu" aria-label="Hovedmenu">
-    <div class="sm-top">
-      <a class="maerke maerke--logo" href="../index.html" aria-label="NewDeal Invest, fondsoverblik">
-        <span class="logo-felt"><img class="ndi-logo" src="../assets/img/ndi-logo-moerk-baggrund.png" width="2048" height="754" alt="NewDeal Invest" decoding="async"></span><span class="maerke-sub">Fondsoverblik</span>
-      </a>
-      <button class="ikonknap sm-luk" id="menu-luk" type="button"><svg class="ik" aria-hidden="true"><use href="#i-luk"></use></svg><span class="sr">Luk menuen</span></button>
-    </div>
-    <nav class="review-section-nav" aria-label="Vælg indgang"><a href="../index.html">Porteføljen</a><a href="../tech.html">Tech</a><a href="../widget/index.html">Afkast</a></nav><div class="sm-rul">
-      <a class="sm-tilbage" href="https://www.newdealinvest.dk/"><svg class="ik" aria-hidden="true"><use href="#i-tilbage"></use></svg><span>Til NewDeal Invests forside</span></a>
-
-      <nav class="sm-gruppe" aria-labelledby="sm-h-fond">
-        <h2 class="sm-overskrift" id="sm-h-fond"><span>Fonden</span></h2>
-        <ul class="sm-liste">
-          <li><a class="sm-link" href="../fondens-udvikling.html"><span>Fondens udvikling</span></a>
-          </li>
-          <li><a class="sm-link" href="../index.html#temaer"><span>Fonden fordelt på temaer</span></a>
-          </li>
-          <li><a class="sm-link" href="../index.html#top10"><span>De <span data-tal="top10.antal" data-fmt="talord">…</span> største selskaber</span></a>
-          </li>
-          <li><a class="sm-link" href="../index.html#portefoeljen"><span>Porteføljen</span></a>
-            <ul class="sm-under sm-under--fond" aria-label="Porteføljen">
-              <li><a class="sm-link sm-link--under" href="../index.html#portefoeljen-portfolio" data-portefolje="portfolio"><span>Portefølje</span></a></li>
-              <li><a class="sm-link sm-link--under" href="../index.html#portefoeljen-highs" data-portefolje="highs"><span>52-ugers top</span></a></li>
-              <li><a class="sm-link sm-link--under" href="../index.html#portefoeljen-risk-summary" data-portefolje="risk-summary"><span>Risiko</span></a></li>
-              <li><a class="sm-link sm-link--under" href="../index.html#portefoeljen-method" data-portefolje="method"><span>Metode</span></a></li>
-            </ul>
-          </li>
-          <li><a class="sm-link" href="../index.html#vigtig-information"><span>Risiko og vigtig information</span></a>
-          </li>
-        </ul>
-      </nav>
-      <nav class="sm-gruppe" aria-labelledby="sm-h-temaer">
-        <h2 class="sm-overskrift" id="sm-h-temaer"><span>Temaer</span><span class="sm-overskrift-note">Andel af fonden</span></h2>
-        <ul class="sm-liste">
-        </ul>
-        <ul class="sm-liste sm-temaliste" id="sm-temaer" data-ordne="temaer">
-          <li data-id="chips"><a class="sm-link sm-link--tema" style="--tf:#8bb8bc" href="../temaer/chips.html"><svg class="ik" aria-hidden="true"><use href="#t-chips"></use></svg><span>Chips og halvledere</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-          <li data-id="energi"><a class="sm-link sm-link--tema" style="--tf:#759ebc" href="../temaer/energi.html"><svg class="ik" aria-hidden="true"><use href="#t-energi"></use></svg><span>Energi og elnet</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-          <li data-id="datacenter"><a class="sm-link sm-link--tema" style="--tf:#d5ba75" href="../temaer/datacenter.html"><svg class="ik" aria-hidden="true"><use href="#t-datacenter"></use></svg><span>Datacentre</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-          <li data-id="platforme"><a class="sm-link sm-link--tema" style="--tf:#b78f70" href="../temaer/platforme.html"><svg class="ik" aria-hidden="true"><use href="#t-platforme"></use></svg><span>Platformsøkonomi</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-          <li data-id="fysisk-ai"><a class="sm-link sm-link--tema" style="--tf:#9ab595" href="../temaer/fysisk-ai.html"><svg class="ik" aria-hidden="true"><use href="#t-fysisk-ai"></use></svg><span>Robotter &amp; fysisk AI</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-          <li data-id="raastoffer"><a class="sm-link sm-link--tema" style="--tf:#bd9cbb" href="../temaer/raastoffer.html"><svg class="ik" aria-hidden="true"><use href="#t-raastoffer"></use></svg><span>Råstoffer</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-          <li data-id="rumfart"><a class="sm-link sm-link--tema" style="--tf:#a18cc7" href="../temaer/rumfart.html"><svg class="ik" aria-hidden="true"><use href="#t-rumfart"></use></svg><span>Rumfart</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-          <li data-id="fintech" class="er-aktiv"><a class="sm-link sm-link--tema" style="--tf:#6ea4bb" href="../temaer/fintech.html" aria-current="page"><svg class="ik" aria-hidden="true"><use href="#t-fintech"></use></svg><span>Fintech</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-          <li data-id="krypto"><a class="sm-link sm-link--tema" style="--tf:#a8ba86" href="../temaer/krypto.html"><svg class="ik" aria-hidden="true"><use href="#t-krypto"></use></svg><span>Krypto</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-          <li data-id="software"><a class="sm-link sm-link--tema" style="--tf:#c9a58b" href="../temaer/software.html"><svg class="ik" aria-hidden="true"><use href="#t-software"></use></svg><span>Software &amp; AI</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-          <li data-id="sundhed"><a class="sm-link sm-link--tema" style="--tf:#a4a6cf" href="../temaer/sundhed.html"><svg class="ik" aria-hidden="true"><use href="#t-sundhed"></use></svg><span>Sundhed og biotek</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-          <li data-id="kvante"><a class="sm-link sm-link--tema" style="--tf:#cd99a5" href="../temaer/kvante.html"><svg class="ik" aria-hidden="true"><use href="#t-kvante"></use></svg><span>Kvantecomputere</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
-        </ul>
-        <button class="sm-vis-flere" type="button" aria-expanded="false" aria-controls="sm-temaer">
-          <span class="sm-vis-tekst">Vis alle <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer</span><span class="sm-vis-faerre" hidden>Vis færre temaer</span><svg class="ik ik--s" aria-hidden="true"><use href="#i-ned"></use></svg>
-        </button>
-      </nav>
-      <nav class="sm-gruppe" aria-labelledby="sm-h-selskaber">
-        <h2 class="sm-overskrift" id="sm-h-selskaber"><span>Selskaber</span><span class="sm-overskrift-note">Andel af fonden</span></h2>
-        <ul class="sm-liste">
-        </ul>
-        <ul class="sm-liste" data-liste="top10.liste" data-skabelon="tpl-sm-top"></ul>
-        <a class="sm-alle" href="../alle-selskaber.html"><svg class="ik ik--s" aria-hidden="true"><use href="#i-selskab"></use></svg><span>Se alle selskaber i fonden</span><svg class="ik ik--s" aria-hidden="true"><use href="#i-frem"></use></svg></a>
-        <template id="tpl-sm-top"><li><a class="sm-selskab" data-link-selskab href="#"><span class="sm-logo" aria-hidden="true" data-f="forbogstav"></span><span class="sm-navn" data-f="navn"></span><span class="sm-tal" data-f="andel" data-fmt="pct"></span></a></li></template>
-        <ul class="sm-liste" hidden>
-        </ul>
-      </nav>
-    </div>
-    <div class="sm-bund">
-      <button class="temaskift" id="temaskift" type="button" aria-label="Skift til lyst tema"><svg class="ik ik--sol" aria-hidden="true" viewbox="0 0 24 24"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"></path></svg><svg class="ik ik--maane" aria-hidden="true" viewbox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"></path></svg><span class="temaskift-tekst">Lyst tema</span></button>
-      <div class="sm-datakort"><svg class="ik" aria-hidden="true"><use href="#i-kalender"></use></svg><div><p class="sm-data-t">Alle andele pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…</span></p><p class="sm-data-s">Tallene er fra PMINDI. Markedsføringsmateriale. Ikke personlig investeringsrådgivning.</p></div></div>
-    </div>
-  </aside>
-  <div class="hoved">
-    <main id="indhold" tabindex="-1">
-<template id="tpl-tl"><li><a class="tl-raekke" data-link-selskab href="#"><span class="sm-logo" aria-hidden="true" data-f="forbogstav"></span><span class="tl-navn" data-f="navn"></span><span class="pos-bar" aria-hidden="true"><span data-fbar></span></span><span class="tl-tal" data-f="andel" data-fmt="pct"></span></a></li></template><template id="tpl-mini"><span data-fbar></span></template>
-      <section class="sektion sektion--overblik" id="overblik" aria-labelledby="h-side">
-        <div class="v18t">
-        <div class="v18t-hero v18t-hero--v5">
-          <div class="v18t-foto v18t-foto--v5"><figure class="tema-foto v5-heromotiv"><picture><source height="488" media="(max-width:600px)" srcset="../assets/img/v5-temaer/energi-konkurrence/temaer/faelles/prisdesign/hero-fintech-390.webp 1x, ../assets/img/v5-temaer/energi-konkurrence/temaer/faelles/prisdesign/hero-fintech-390@2x.webp 2x" width="390"></source><img alt="" decoding="async" height="560" src="../assets/img/v5-temaer/energi-konkurrence/temaer/faelles/prisdesign/hero-fintech-1440w.webp" srcset="../assets/img/v5-temaer/energi-konkurrence/temaer/faelles/prisdesign/hero-fintech-1440w.webp 1x, ../assets/img/v5-temaer/energi-konkurrence/temaer/faelles/prisdesign/hero-fintech-1440w@2x.webp 2x" width="1440"></picture><figcaption class="foto-kredit">Illustration: NewDeal Invest.</figcaption></figure></div>
-          <div class="v18t-hero-tekst">
-            <p class="kicker">Et af de <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer i NewDeal Invest</p>
-            <h1 id="h-side">Hvad sker der, når du betaler?</h1>
-            <p class="v18t-under">Fem slags tjenester og fem forskellige måder at tjene penge på.</p>
-            <p>Når du betaler med telefonen eller handler aktier i en app, ser det ens og enkelt ud. Bag skærmen skal oplysninger kontrolleres, penge flyttes og aftaler registreres. Temaet samler de selskaber i fonden, der laver den slags finansielle tjenester med teknologi. Det kaldes fintech.</p>
-            
-            <div class="v18t-knapper"><a class="knap knap--primaer v5-knap" href="#selskaberne">Se selskaberne <span aria-hidden="true">↓</span></a><a class="knap knap--rolig v5-knap" href="../index.html#hvert-tema">Alle temaer</a></div>
-          </div>
-          
-        </div>
-        <div class="v18t-fotobaand"><figure class="tema-foto" style="max-width:600px"><img src="../fotos/fintech.webp" width="600" height="400" alt="Kontaktløs kortbetaling ved en terminal." loading="lazy" decoding="async" style="max-width:600px"><figcaption class="foto-kredit">Foto: Europa-Kommissionen, CC BY 4.0, via Wikimedia Commons (© European Union, 2026)</figcaption></figure></div>
-        <section class="v18-stortal" aria-labelledby="h-andel">
-            <div class="v18-stortal-tal">
-              <h2 class="sr" id="h-andel">Temaets andel af fonden</h2>
-              <p class="v18-stortal-v"><span><span data-tal="temaer#fintech.andel" data-fmt="tal">…  </span></span><span class="v18-stortal-enhed">%</span></p>
-              <p class="v18-stortal-tekst">af PMINDI er placeret i temaet Fintech.</p>
-              <p class="kildelinje">Andele i PMINDI, den udgave af fonden, der udbetaler udbytte, pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span> (fondens data).</p>
-            </div>
-            <div class="v18-stortal-figur v18-ramme">
-              <div class="mini-soejler" aria-hidden="true" data-liste="temaer" data-skabelon="tpl-mini" data-aktiv-id="fintech"></div>
-              <p class="lille mini-forklaring">De <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer efter størrelse. Fintech er <span data-tal="temaer#fintech.plads" data-fmt="plads">nr. …</span>.</p>
-            </div>
-            <details class="fold-ud v18-flere-tal">
-              <summary>Flere tal om temaet</summary>
-              <ul class="fakta-liste">
-                <li><span>Plads blandt <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer</span><strong><span data-tal="temaer#fintech.plads" data-fmt="Plads">Nr. …</span></strong></li>
-                <li><span>Selskaber i temaet</span><strong><span data-tal="temaer#fintech.antal" data-fmt="heltal">… </span></strong></li>
-                <li class="fakta-stak"><span>Største selskab</span><strong><span data-navn="temaer#fintech.stoerste">…</span> · <span data-tal="temaer#fintech.stoerste.andel" data-fmt="pct">…   %</span></strong></li>
-              </ul>
-            </details>
-          </section>
-        
-        </div>
-      </section>
-      <div class="v5f v5f-fintech" data-v5-fortaelling="fintech"><div aria-hidden="true" class="tak"></div><section aria-labelledby="fonden-h" class="s" id="fonden"><div class="wrap">
-<p class="eyebrow"><span aria-hidden="true" class="rg"></span>Fonden</p>
-<h2 id="fonden-h">Fintech i fonden</h2>
-<div class="fonden-g">
-
-<div>
-<p class="brod">Temaet handler om noget, de fleste gør hver dag.</p>
-
-<p class="brod" style="margin-top:22px">En digital wallet er en betalingsapp i fx telefonen, hvor kortet er gemt. </p>
-
-</div>
-</div><figure class="pd-explainer" data-diagram="fintech"><div class="pd-explainer-art"><picture><source media="(max-width:600px)" srcset="../assets/img/v5-temaer/energi-konkurrence/temaer/faelles/prisdesign/forklar-fintech-390.svg"></source><img class="kun-moerk" alt="" height="540" src="../assets/img/v5-temaer/energi-konkurrence/temaer/faelles/prisdesign/forklar-fintech.svg" width="960"><img loading="lazy" class="kun-lys" alt="" height="540" src="../assets/img/v5-temaer/energi-konkurrence/temaer/faelles/prisdesign/forklar-fintech-lys.svg" width="960"></picture><span class="pd-diagram-label pd-label-left" style="--x:9%;--y:53%;--mx:9%;--my:57%">Du betaler</span><span class="pd-diagram-label" style="--x:30%;--y:53%;--mx:30%;--my:23%">Kontrol</span><span class="pd-diagram-label" style="--x:48%;--y:53%;--mx:48%;--my:57%">Pengene flyttes</span><span class="pd-diagram-label" style="--x:66%;--y:53%;--mx:66%;--my:23%">Gebyr</span><span class="pd-diagram-label" style="--x:88%;--y:54.9%;--mx:88%;--my:59.4%">Butikken</span><span class="pd-diagram-label" style="--x:57%;--y:77%;--mx:57%;--my:81%">Betal over tid</span></div><figcaption>Illustration: NewDeal Invest.</figcaption></figure>
-</div></section><section aria-labelledby="spredt-h" class="s" id="spredt"><div class="wrap">
-<p class="eyebrow"><span aria-hidden="true" class="rg"></span>Hvad der vejer mest</p>
-<h2 class="ikh2" id="spredt-h"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16M4 10h16M4 14h16M4 18h16" stroke-width="1"></path><path d="M15 6h5M16 10h4M15.5 14h4.5M16.5 18h3.5"></path></svg>Intet enkelt stort selskab</h2>
-<div class="post-g">
-<div>
-<p data-ft-live="" data-ft-spread="" hidden=""></p>
-<p data-ft-groups-description="" data-ft-live="" hidden="" style="margin-top:12px"></p>
-</div>
-<div class="pd-ranked" data-ft-live="" data-ft-ranked="" hidden=""></div>
-</div>
-</div></section><section aria-labelledby="cq-ft-h" class="cq-ft" id="cq-ft">
-
-<div class="cq-ft__in">
-<p class="cq-ft__kick">Fintech</p>
-<h2 class="cq-ft__h2" id="cq-ft-h">Fem slags tjenester</h2>
-<p class="cq-ft__date" data-ft-date="" data-ft-live="" hidden=""></p>
-<p class="cq-ft__lead">Kvitteringen har fem linjer. Hver linje viser, hvad der sker for kunden, og hvordan selskaberne tjener penge. Tryk på en linje for at se mere.</p>
-<div class="cq-ft__stage">
-<div class="cq-ft__paper">
-<div class="cq-ft__hd"><svg aria-hidden="true" class="cq-ft__hi" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 3l1.5 1 1.5-1 1.5 1 1.5-1 1.5 1 1.5-1 1.5 1 1.5-1V21H6z"></path><path d="M8.5 8h2.5M8.5 11h2.5M8.5 14h2.5" stroke-width="1"></path><path d="M11.75 8h1M11.75 11h1M11.75 14h1" stroke-dasharray=".5 1" stroke-width="1"></path><path d="M14 8h1.5M14 11h1.5M14 14h1.5"></path><path d="M8.5 17.25h7" stroke-width="1"></path></svg><p class="cq-ft__ht">Kvittering</p><p class="cq-ft__hc">Andel af fonden</p></div>
-<label class="pd-fintech-select">Find et selskab fra A til Å<select id="pd-fintech-select"><option value="">Vælg selskab</option><option value="pd-fintech-company-11">Affirm</option><option value="pd-fintech-company-18">Ategrity</option><option value="pd-fintech-company-6">Chime</option><option value="pd-fintech-company-12">DLocal</option><option value="pd-fintech-company-0">eToro</option><option value="pd-fintech-company-14">Figure</option><option value="pd-fintech-company-3">Futu</option><option value="pd-fintech-company-10">Global-e</option><option value="pd-fintech-company-7">Kaspi.kz</option><option value="pd-fintech-company-8">Klarna</option><option value="pd-fintech-company-17">Lemonade</option><option value="pd-fintech-company-5">Nu</option><option value="pd-fintech-company-15">Pagaya</option><option value="pd-fintech-company-2">Robinhood</option><option value="pd-fintech-company-16">Root</option><option value="pd-fintech-company-9">Shift4</option><option value="pd-fintech-company-4">SoFi</option><option value="pd-fintech-company-13">Upstart</option><option value="pd-fintech-company-1">Webull</option></select></label><ul aria-label="Kvitteringens linjer" class="cq-ft__lines"><li class="cq-ft__ln"><button aria-controls="cq-ft-p-brokerage" aria-expanded="false" class="cq-ft__dx cq-ft__lb" data-g="brokerage" data-grp="ft" type="button"><svg aria-hidden="true" class="cq-ft__gi pd-group-icon" fill="none" focusable="false" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M4 8h14"></path><path d="M15 4.5L18.5 8 15 11.5"></path><path d="M20 16H6"></path><path d="M9 12.5L5.5 16 9 19.5"></path></svg><span aria-hidden="true" class="cq-ft__gn">Handelsplatforme og mæglere<span class="cq-ft__gs"></span></span><span aria-hidden="true" class="cq-ft__dots"></span><span aria-hidden="true" class="cq-ft__amt" data-ft-live="" hidden=""><span class="cq-ft__gw" data-ft-live="" hidden=""></span><span aria-hidden="true" class="cq-ft__bt"><i style="width:0%"></i></span></span><span class="cq-ft__sr"></span></button>
-<p class="cq-ft__what"><span class="cq-ft__fl">Hvad sker der</span> Kunden handler aktier og andre værdipapirer i en app. Hos eToro kan brugerne også følge hinanden som i et socialt netværk.</p>
-<div aria-label="Handelsplatforme og mæglere" class="cq-ft__panel cq-ft__scope" hidden="" id="cq-ft-p-brokerage" role="region">
-<div class="cq-ft__ph"><p class="cq-ft__fl cq-ft__fl--earn"><svg aria-hidden="true" class="cq-ft__fi" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 12h13"></path><path d="M17.5 12h3.5" stroke-width="3"></path><path d="M16 8.5v7" stroke-dasharray="1 1.25" stroke-width="1"></path></svg>Sådan tjener selskaberne penge</p><button class="cq-ft__close" data-for="cq-ft-p-brokerage" type="button">Luk<span class="cq-ft__sr"> Handelsplatforme og mæglere</span></button></div>
-<p class="cq-ft__earn"> En del af handlen er krypto, som har sit eget tema i fonden: <a href="krypto.html"><em>Krypto</em></a>.</p><ul class="cq-ft__cos" data-top="5" id="cq-ft-l-brokerage"><li><button aria-pressed="false" class="cq-ft__co" data-a="Krypto" data-d="Kombinerer et socialt netværk med en digital handels- og investeringsplatform." data-g="Handelsplatforme og mæglere" id="pd-fintech-company-0" type="button"><span class="cq-ft__lg"><span aria-hidden="true" class="cq-ft__ini">ET</span></span><span class="cq-ft__nm">eToro <svg aria-hidden="true" class="cq-ft__fod" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 7l1.5 1L6 7l1.5 1L9 7l1.5 1L12 7v7H3z" stroke-dasharray="2 1.5"></path><path d="M12 14l4 4"></path><circle cx="18" cy="19.5" fill="currentColor" r="1.5"></circle></svg></span><span class="cq-ft__cw" data-ft-live="" hidden=""></span></button></li><li><button aria-pressed="false" class="cq-ft__co" data-d="Digital investeringsplatform rettet mod yngre private investorer." data-g="Handelsplatforme og mæglere" id="pd-fintech-company-1" type="button"><span class="cq-ft__lg"><span aria-hidden="true" class="cq-ft__ini">WE</span></span><span class="cq-ft__nm">Webull</span><span class="cq-ft__cw" data-ft-live="" hidden=""></span></button></li><li><button aria-pressed="false" class="cq-ft__co" data-a="Krypto" data-d="Handelsplatform, hvor kunderne handler aktier, krypto og aftaler om at handle til en fast pris senere (optioner og futures)." data-g="Handelsplatforme og mæglere" id="pd-fintech-company-2" type="button"><span class="cq-ft__lg"><span aria-hidden="true" class="cq-ft__ini">RO</span></span><span class="cq-ft__nm">Robinhood <svg aria-hidden="true" class="cq-ft__fod" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 7l1.5 1L6 7l1.5 1L9 7l1.5 1L12 7v7H3z" stroke-dasharray="2 1.5"></path><path d="M12 14l4 4"></path><circle cx="18" cy="19.5" fill="currentColor" r="1.5"></circle></svg></span><span class="cq-ft__cw" data-ft-live="" hidden=""></span></button></li><li><button aria-pressed="false" class="cq-ft__co" data-d="Apps til handel med aktier og til opsparing (Futubull og Moomoo)." data-g="Handelsplatforme og mæglere" id="pd-fintech-company-3" type="button"><span class="cq-ft__lg"><span aria-hidden="true" class="cq-ft__ini">FU</span></span><span class="cq-ft__nm">Futu</span><span class="cq-ft__cw" data-ft-live="" hidden=""></span></button></li></ul><div aria-live="polite" class="cq-ft__info"><p class="cq-ft__hint">Tryk på et selskab for at se, hvad det laver.</p></div></div></li><li class="cq-ft__ln"><button aria-controls="cq-ft-p-neobank" aria-expanded="false" class="cq-ft__dx cq-ft__lb" data-g="neobank" data-grp="ft" type="button"><svg aria-hidden="true" class="cq-ft__gi pd-group-icon" fill="none" focusable="false" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><rect height="19" rx="2.5" width="12" x="6" y="2.5"></rect><path d="M9 10.5l3-2 3 2"></path><path d="M9.5 11v4M12 11v4M14.5 11v4"></path><path d="M9 15.5h6"></path><path d="M11 18.5h2"></path></svg><span aria-hidden="true" class="cq-ft__gn">Banker i en app<span class="cq-ft__gs"></span></span><span aria-hidden="true" class="cq-ft__dots"></span><span aria-hidden="true" class="cq-ft__amt" data-ft-live="" hidden=""><span class="cq-ft__gw" data-ft-live="" hidden=""></span><span aria-hidden="true" class="cq-ft__bt"><i style="width:0%"></i></span></span><span class="cq-ft__sr"></span></button>
-<p class="cq-ft__what"><span class="cq-ft__fl">Hvad sker der</span> Kunden låner, sparer og betaler i én app. Den slags banker kaldes også neobanker, fordi de kun findes digitalt.</p>
-<div aria-label="Banker i en app" class="cq-ft__panel cq-ft__scope" hidden="" id="cq-ft-p-neobank" role="region">
-<div class="cq-ft__ph"><p class="cq-ft__fl cq-ft__fl--earn"><svg aria-hidden="true" class="cq-ft__fi" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 12h13"></path><path d="M17.5 12h3.5" stroke-width="3"></path><path d="M16 8.5v7" stroke-dasharray="1 1.25" stroke-width="1"></path></svg>Sådan tjener selskaberne penge</p><button class="cq-ft__close" data-for="cq-ft-p-neobank" type="button">Luk<span class="cq-ft__sr"> Banker i en app</span></button></div>
-<p class="cq-ft__earn">Mest på renter af lån og på gebyrer, fx et lille gebyr, når kunden betaler med kortet. SoFi har sin egen bank. Chime er ikke selv en bank. Bankydelserne leveres af The Bancorp Bank og Stride Bank. </p><ul class="cq-ft__cos" data-top="5" id="cq-ft-l-neobank"><li><button aria-pressed="false" class="cq-ft__co" data-d="Medlemmerne kan låne, spare, bruge, investere og beskytte deres penge i én fælles app. Ejer sin egen bank, SoFi Bank." data-g="Banker i en app" id="pd-fintech-company-4" type="button"><span class="cq-ft__lg"><span aria-hidden="true" class="cq-ft__ini">SO</span></span><span class="cq-ft__nm">SoFi</span><span class="cq-ft__cw" data-ft-live="" hidden=""></span></button></li><li><button aria-pressed="false" class="cq-ft__co" data-d="Bank og betaling i en app. Har kunder i Mexico og Colombia ud over Brasilien." data-g="Banker i en app" id="pd-fintech-company-5" type="button"><span class="cq-ft__lg"><span aria-hidden="true" class="cq-ft__ini">NU</span></span><span class="cq-ft__nm">Nu</span><span class="cq-ft__cw" data-ft-live="" hidden=""></span></button></li><li><button aria-pressed="false" class="cq-ft__co" data-d="App til bankforretninger i USA." data-g="Banker i en app" id="pd-fintech-company-6" type="button"><span class="cq-ft__lg"><span aria-hidden="true" class="cq-ft__ini">CH</span></span><span class="cq-ft__nm">Chime</span><span class="cq-ft__cw" data-ft-live="" hidden=""></span></button></li><li><button aria-pressed="false" class="cq-ft__co" data-a="Platformsøkonomi" data-d="Markedsplads, betalinger og bank i én app. Ca. 27,5 mio. brugere i Kasakhstan og Tyrkiet (Hepsiburada)." data-g="Banker i en app" id="pd-fintech-company-7" type="button"><span class="cq-ft__lg"><span aria-hidden="true" class="cq-ft__ini">KA</span></span><span class="cq-ft__nm">Kaspi.kz <svg aria-hidden="true" class="cq-ft__fod" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 7l1.5 1L6 7l1.5 1L9 7l1.5 1L12 7v7H3z" stroke-dasharray="2 1.5"></path><path d="M12 14l4 4"></path><circle cx="18" cy="19.5" fill="currentColor" r="1.5"></circle></svg></span><span class="cq-ft__cw" data-ft-live="" hidden=""></span></button></li></ul><div aria-live="polite" class="cq-ft__info"><p class="cq-ft__hint">Tryk på et selskab for at se, hvad det laver.</p></div></div></li><li class="cq-ft__ln"><button aria-controls="cq-ft-p-payments" aria-expanded="false" class="cq-ft__dx cq-ft__lb" data-g="payments" data-grp="ft" type="button"><svg aria-hidden="true" class="cq-ft__gi pd-group-icon" fill="none" focusable="false" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><rect height="12" rx="2" width="13" x="3" y="6"></rect><path d="M3 10h13"></path><path d="M6 14.5h3"></path><path d="M18.5 9.5a4 4 0 0 1 0 5"></path><path d="M20.5 7.5a7 7 0 0 1 0 9"></path></svg><span aria-hidden="true" class="cq-ft__gn">Betalinger<span class="cq-ft__gs"></span></span><span aria-hidden="true" class="cq-ft__dots"></span><span aria-hidden="true" class="cq-ft__amt" data-ft-live="" hidden=""><span class="cq-ft__gw" data-ft-live="" hidden=""></span><span aria-hidden="true" class="cq-ft__bt"><i style="width:0%"></i></span></span><span class="cq-ft__sr"></span></button>
-<p class="cq-ft__what"><span class="cq-ft__fl">Hvad sker der</span> Pengene flyttes fra kunden til butikken, i en fysisk butik eller på nettet.</p>
-<div aria-label="Betalinger" class="cq-ft__panel cq-ft__scope" hidden="" id="cq-ft-p-payments" role="region">
-<div class="cq-ft__ph"><p class="cq-ft__fl cq-ft__fl--earn"><svg aria-hidden="true" class="cq-ft__fi" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 12h13"></path><path d="M17.5 12h3.5" stroke-width="3"></path><path d="M16 8.5v7" stroke-dasharray="1 1.25" stroke-width="1"></path></svg>Sådan tjener selskaberne penge</p><button class="cq-ft__close" data-for="cq-ft-p-payments" type="button">Luk<span class="cq-ft__sr"> Betalinger</span></button></div>
-<p class="cq-ft__earn">Typisk et lille gebyr pr. betaling, mange gange. Shift4 leverer software til butikker og sørger for, at kundernes betalinger går igennem. Klarna og Affirm lader også kunden betale over tid.  </p><ul class="cq-ft__cos" data-top="5" id="cq-ft-l-payments"><li><button aria-pressed="false" class="cq-ft__co" data-d="Lader kunden betale med det samme, senere eller over flere måneder (Pay in Full, Pay Later og Fair Financing)." data-g="Betalinger" id="pd-fintech-company-8" type="button"><span class="cq-ft__lg"><span aria-hidden="true" class="cq-ft__ini">KL</span></span><span class="cq-ft__nm">Klarna</span><span class="cq-ft__cw" data-ft-live="" hidden=""></span></button></li><li><button aria-pressed="false" class="cq-ft__co" data-d="Software til butikker, og betalingerne går igennem Shift4. Gennem Global Blue får turister momsen tilbage, når de handler i udlandet." data-g="Betalinger" id="pd-fintech-company-9" type="button"><span class="cq-ft__lg"><span aria-hidden="true" class="cq-ft__ini">SH</span></span><span class="cq-ft__nm">Shift4</span><span class="cq-ft__cw" data-ft-live="" hidden=""></span></button></li><li><button aria-pressed="false" class="cq-ft__co" data-a="Platformsøkonomi" data-d="Handel på nettet over grænser. Når en webbutik har kunder i udlandet, er det formelt Global-e, der står for salget." data-g="Betalinger" id="pd-fintech-company-10" type="button"><span class="cq-ft__lg"><span aria-hidden="true" class="cq-ft__ini">GE</span></span><span class="cq-ft__nm">Global-e <svg aria-hidden="true" class="cq-ft__fod" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 7l1.5 1L6 7l1.5 1L9 7l1.5 1L12 7v7H3z" stroke-dasharray="2 1.5"></path><path d="M12 14l4 4"></path><circle cx="18" cy="19.5" fill="currentColor" r="1.5"></circle></svg></span><span class="cq-ft__cw" data-ft-live="" hidden=""></span></button></li><li><button aria-pressed="false" class="cq-ft__co" data-d="Betaling over tid med lån, der betales af hver måned med renter, og betalingskortet Affirm Card. Handelsværdien, altså værdien af det, kunderne handlede for med Affirm, var 50,2 mia. USD i regnskabsåret til 30.06.2026." data-g="Betalinger" id="pd-fintech-company-11" type="button"><span class="cq-ft__lg"><span aria-hidden="true" class="cq-ft__ini">AF</span></span><span class="cq-ft__nm">Affirm</span><span class="cq-ft__cw" data-ft-live="" hidden=""></span></button></li><li><button aria-pressed="false" class="cq-ft__co" data-d="Hjælper internationale butikker med at tage imod betalinger fra kunder i vækstmarkeder. Betalinger for ca. 40,8 mia. USD gik igennem DLocal i 2025." data-g="Betalinger" id="pd-fintech-company-12" type="button"><span class="cq-ft__lg"><span aria-hidden="true" class="cq-ft__ini">DL</span></span><span class="cq-ft__nm">DLocal</span><span class="cq-ft__cw" data-ft-live="" hidden=""></span></button></li></ul><div aria-live="polite" class="cq-ft__info"><p class="cq-ft__hint">Tryk på et selskab for at se, hvad det laver.</p></div></div></li><li class="cq-ft__ln"><button aria-controls="cq-ft-p-lending" aria-expanded="false" class="cq-ft__dx cq-ft__lb" data-g="lending" data-grp="ft" type="button"><svg aria-hidden="true" class="cq-ft__gi pd-group-icon" fill="none" focusable="false" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><ellipse cx="9.5" cy="8" rx="5.5" ry="2.5"></ellipse><path d="M4 8v4c0 1.4 2.5 2.5 5.5 2.5S15 13.4 15 12V8"></path><path d="M4 12v4c0 1.4 2.5 2.5 5.5 2.5 1 0 1.9-.1 2.7-.3"></path><path d="M15.5 16.5a3.5 3.5 0 1 0 1.5-4.5"></path><path d="M16.4 10.4l.6 1.8-1.8.6"></path></svg><span aria-hidden="true" class="cq-ft__gn">Lån og kreditteknologi<span class="cq-ft__gs"></span></span><span aria-hidden="true" class="cq-ft__dots"></span><span aria-hidden="true" class="cq-ft__amt" data-ft-live="" hidden=""><span class="cq-ft__gw" data-ft-live="" hidden=""></span><span aria-hidden="true" class="cq-ft__bt"><i style="width:0%"></i></span></span><span class="cq-ft__sr"></span></button>
-<p class="cq-ft__what"><span class="cq-ft__fl">Hvad sker der</span> En låneansøgning bliver vurderet, før pengene udbetales.</p>
-<div aria-label="Lån og kreditteknologi" class="cq-ft__panel cq-ft__scope" hidden="" id="cq-ft-p-lending" role="region">
-<div class="cq-ft__ph"><p class="cq-ft__fl cq-ft__fl--earn"><svg aria-hidden="true" class="cq-ft__fi" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 12h13"></path><path d="M17.5 12h3.5" stroke-width="3"></path><path d="M16 8.5v7" stroke-dasharray="1 1.25" stroke-width="1"></path></svg>Sådan tjener selskaberne penge</p><button class="cq-ft__close" data-for="cq-ft-p-lending" type="button">Luk<span class="cq-ft__sr"> Lån og kreditteknologi</span></button></div>
-<p class="cq-ft__earn">En långiver tjener på renter, men kan miste penge på lån. Upstart og Pagaya laver computermodeller, som långivere bruger til at vurdere, om den, der søger om lån, kan betale tilbage. Figure laver boliglån med sikkerhed i boligens friværdi og registrerer lånene på blockchainen Provenance.</p><ul class="cq-ft__cos" data-top="5" id="cq-ft-l-lending"><li><button aria-pressed="false" class="cq-ft__co" data-a="Software &amp; AI" data-d="Markedsplads for lån bygget på egne AI-modeller, som långivere bruger til forbrugslån uden sikkerhed og til at lægge billån om." data-g="Lån og kreditteknologi" id="pd-fintech-company-13" type="button"><span class="cq-ft__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/fintech/fra-critiquito/logoer/upstart.webp" width="28"></span><span class="cq-ft__nm">Upstart <svg aria-hidden="true" class="cq-ft__fod" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 7l1.5 1L6 7l1.5 1L9 7l1.5 1L12 7v7H3z" stroke-dasharray="2 1.5"></path><path d="M12 14l4 4"></path><circle cx="18" cy="19.5" fill="currentColor" r="1.5"></circle></svg></span><span class="cq-ft__cw" data-ft-live="" hidden=""></span></button></li><li><button aria-pressed="false" class="cq-ft__co" data-a="Krypto" data-d="Bruger blockchain, en fælles digital bog over hvem der ejer hvad, til lån og værdipapirer. Boliglån med sikkerhed i boligens friværdi står for næsten hele omsætningen." data-g="Lån og kreditteknologi" id="pd-fintech-company-14" type="button"><span class="cq-ft__lg"><span aria-hidden="true" class="cq-ft__ini">FT</span></span><span class="cq-ft__nm">Figure <svg aria-hidden="true" class="cq-ft__fod" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 7l1.5 1L6 7l1.5 1L9 7l1.5 1L12 7v7H3z" stroke-dasharray="2 1.5"></path><path d="M12 14l4 4"></path><circle cx="18" cy="19.5" fill="currentColor" r="1.5"></circle></svg></span><span class="cq-ft__cw" data-ft-live="" hidden=""></span></button></li><li><button aria-pressed="false" class="cq-ft__co" data-d="Teknologi til långivere, der giver forbrugslån. Långivere kan sende afviste låneansøgninger videre til Pagayas netværk, hvor AI-modeller vurderer dem igen." data-g="Lån og kreditteknologi" id="pd-fintech-company-15" type="button"><span class="cq-ft__lg"><span aria-hidden="true" class="cq-ft__ini">PT</span></span><span class="cq-ft__nm">Pagaya</span><span class="cq-ft__cw" data-ft-live="" hidden=""></span></button></li></ul><div aria-live="polite" class="cq-ft__info"><p class="cq-ft__hint">Tryk på et selskab for at se, hvad det laver.</p></div></div></li><li class="cq-ft__ln"><button aria-controls="cq-ft-p-insurance" aria-expanded="false" class="cq-ft__dx cq-ft__lb" data-g="insurance" data-grp="ft" type="button"><svg aria-hidden="true" class="cq-ft__gi pd-group-icon" fill="none" focusable="false" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3c-4.7 0-8.5 3.4-9 7.5h18C20.5 6.4 16.7 3 12 3z"></path><path d="M12 10.5V18a2 2 0 0 1-4 0"></path><path d="M12 3v-.5"></path></svg><span aria-hidden="true" class="cq-ft__gn">Forsikring<span class="cq-ft__gs"></span></span><span aria-hidden="true" class="cq-ft__dots"></span><span aria-hidden="true" class="cq-ft__amt" data-ft-live="" hidden=""><span class="cq-ft__gw" data-ft-live="" hidden=""></span><span aria-hidden="true" class="cq-ft__bt"><i style="width:0%"></i></span></span><span class="cq-ft__sr"></span></button>
-<p class="cq-ft__what"><span class="cq-ft__fl">Hvad sker der</span> Kunden betaler for en forsikring og får penge, hvis skaden sker.</p>
-<div aria-label="Forsikring" class="cq-ft__panel cq-ft__scope" hidden="" id="cq-ft-p-insurance" role="region">
-<div class="cq-ft__ph"><p class="cq-ft__fl cq-ft__fl--earn"><svg aria-hidden="true" class="cq-ft__fi" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 12h13"></path><path d="M17.5 12h3.5" stroke-width="3"></path><path d="M16 8.5v7" stroke-dasharray="1 1.25" stroke-width="1"></path></svg>Sådan tjener selskaberne penge</p><button class="cq-ft__close" data-for="cq-ft-p-insurance" type="button">Luk<span class="cq-ft__sr"> Forsikring</span></button></div>
-<p class="cq-ft__earn">På forskellen mellem det, kunderne betaler, og det, skaderne og driften koster. Root sætter prisen på bilforsikring efter, hvordan kunden kører. Lemonade tilbyder lejer-, hus-, dyre-, bil- og livsforsikring. Kunden tegner forsikringen og anmelder skader i en chat med et computerprogram (en chatbot).</p><ul class="cq-ft__cos" data-top="5" id="cq-ft-l-insurance"><li><button aria-pressed="false" class="cq-ft__co" data-d="Bilforsikring, hvor prisen mest bygger på, hvordan kunden kører, og mindre på, hvem kunden er." data-g="Forsikring" id="pd-fintech-company-16" type="button"><span class="cq-ft__lg"><span aria-hidden="true" class="cq-ft__ini">RO</span></span><span class="cq-ft__nm">Root</span><span class="cq-ft__cw" data-ft-live="" hidden=""></span></button></li><li><button aria-pressed="false" class="cq-ft__co" data-a="Software &amp; AI" data-d="Lejer-, hus-, dyre-, bil- og livsforsikring. Kunden tegner forsikringen og anmelder skader i en chat med et computerprogram (en chatbot)." data-g="Forsikring" id="pd-fintech-company-17" type="button"><span class="cq-ft__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/fintech/fra-critiquito/logoer/lemonade.webp" width="28"></span><span class="cq-ft__nm">Lemonade <svg aria-hidden="true" class="cq-ft__fod" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 7l1.5 1L6 7l1.5 1L9 7l1.5 1L12 7v7H3z" stroke-dasharray="2 1.5"></path><path d="M12 14l4 4"></path><circle cx="18" cy="19.5" fill="currentColor" r="1.5"></circle></svg></span><span class="cq-ft__cw" data-ft-live="" hidden=""></span></button></li><li><button aria-pressed="false" class="cq-ft__co" data-d="Forsikrer ejendom og ansvar for små og mellemstore virksomheder i USA, ofte risici, som almindelige forsikringer ikke dækker." data-g="Forsikring" id="pd-fintech-company-18" type="button"><span class="cq-ft__lg"><span aria-hidden="true" class="cq-ft__ini">AS</span></span><span class="cq-ft__nm">Ategrity</span><span class="cq-ft__cw" data-ft-live="" hidden=""></span></button></li></ul><div aria-live="polite" class="cq-ft__info"><p class="cq-ft__hint">Tryk på et selskab for at se, hvad det laver.</p></div></div></li></ul>
-<div class="cq-ft__sum" data-ft-live="" hidden=""><svg aria-hidden="true" class="cq-ft__gi" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h18M3 10.5h18" stroke-width="1"></path><path d="M3 15.5h5" stroke-width="1"></path><path d="M13 15.5h8" stroke-width="3"></path></svg><span class="cq-ft__gn">I alt<span class="cq-ft__gs"></span></span><span aria-hidden="true" class="cq-ft__dots"></span><span class="cq-ft__amt" data-ft-live="" hidden=""><span class="cq-ft__gw" data-ft-live="" hidden=""></span></span></div>
-<a class="cq-ft__small" href="#det-med-smaat"><svg aria-hidden="true" class="cq-ft__si" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 5h10M3 8h8M3 11h10M3 14h6" stroke-width="1"></path><circle cx="16" cy="15" r="4"></circle><path d="M19 18l2.5 2.5"></path></svg><span><b>Det, man skal vide om temaet,</b> står længere nede på siden.</span></a>
-</div>
-<div class="cq-ft__side">
-<p class="cq-ft__key"><svg aria-hidden="true" class="cq-ft__ki" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 12h4" stroke-width="1"></path><path d="M9 12h5" stroke-dasharray=".5 1.5" stroke-width="1"></path><path d="M16 12h5" stroke-width="3"></path></svg><span>Tallet til højre og bjælken under det viser linjens andel af fonden.</span></p>
-<p class="cq-ft__key"><svg aria-hidden="true" class="cq-ft__ki" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 7l1.5 1L6 7l1.5 1L9 7l1.5 1L12 7v7H3z" stroke-dasharray="2 1.5"></path><path d="M12 14l4 4"></path><circle cx="18" cy="19.5" fill="currentColor" r="1.5"></circle></svg><span>Mærket ved et selskab betyder, at det også hører til et andet tema.</span></p>
-<p class="cq-ft__note">Sea, Grab og MercadoLibre hører til Platformsøkonomi, Coinbase og Circle til Krypto og Oscar Health til Sundhed og biotek. De tælles under deres egne temaer og indgår derfor ikke i fintechs andel.</p>
-</div></div>
-</div>
-
-</section><p class="tvaers">Syv af temaets egne selskaber laver også noget, der hører til et andet tema: Upstart og Lemonade (<a href="software.html">Software &amp; AI</a>), eToro, Robinhood og Figure (<a href="krypto.html">Krypto</a>) og Global-e og Kaspi.kz (<a href="platforme.html">Platformsøkonomi</a>). De har et mærke i kvitteringen, og i fondens opdeling tælles de kun med her.</p><section aria-labelledby="kassen-h" class="s kasse" id="kassen"><div class="wrap">
-<div class="vid-g">
-<div>
-<p class="eyebrow"><span aria-hidden="true" class="rg"></span>Ved kassen</p>
-<h2 id="kassen-h">Et tryk med kortet</h2>
-<p class="smal" style="margin-top:10px">Wall Street Journal skiller en kortlæser ad og viser, at kortet sender en engangskode i stedet for kortnummeret. Videoen er ikke fondens holdning.</p>
-</div>
-<figure class="vid"><div class="vid-ramme" data-title="Video: Why Tap-to-Pay Is Safer Than a Credit Card Swipe (The Wall Street Journal)" data-yt="S7dWigI7Soc"><button aria-label="Videoen hentes fra YouTube." class="vid-play" type="button"><picture><source media="(max-width:599px)" srcset="../assets/img/v5-temaer/energi-konkurrence/temaer/fintech/fra-billedstil/billeder/fintech-plakat-S7dWigI7Soc-mobil.webp"></source><img alt="" height="720" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/fintech/fra-billedstil/billeder/fintech-plakat-S7dWigI7Soc-bred.webp" width="1280"></picture><span aria-hidden="true" class="vid-kilde">The Wall Street Journal</span><span aria-hidden="true" class="vid-ikon"></span><span aria-hidden="true" class="vid-tid">6:53</span></button></div><figcaption><span class="aar">Fra 2023</span><b>WSJ: Why Tap-to-Pay Is Safer Than a Credit Card Swipe</b>The Wall Street Journal, på engelsk. Den handler om amerikanske forhold.</figcaption></figure>
-</div>
-</div></section><div aria-hidden="true" class="tak" style="margin-top:28px"></div><section aria-labelledby="h-x" class="s xs" id="i-nyhederne"><div class="wrap">
-<p class="eyebrow"><span aria-hidden="true" class="rg"></span>Set udefra</p>
-<h2 id="h-x">Betalinger i nyhederne</h2>
-<p class="lead-s">Her er udvalgte opslag og videoer fra medier, en centralbank og selskaber. De er ikke fondens holdning. Opslag og videoer hentes først, når du trykker på dem.</p>
-<ul class="sm-l" role="list" style="margin-top:16px">
-<li class="sm"><div class="vid"><div class="vid-ramme" data-title="Video: Why Using Your Credit Card Is Getting More Expensive (The Wall Street Journal)" data-yt="Z1dgvwpxud8"><button aria-label="Videoen hentes fra YouTube." class="vid-play" type="button"><picture><source media="(max-width:599px)" srcset="../assets/img/v5-temaer/energi-konkurrence/temaer/fintech/fra-billedstil/billeder/fintech-plakat-Z1dgvwpxud8-mobil.webp"></source><img alt="" height="720" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/fintech/fra-billedstil/billeder/fintech-plakat-Z1dgvwpxud8-bred.webp" width="1280"></picture><span aria-hidden="true" class="vid-kilde">The Wall Street Journal</span><span aria-hidden="true" class="vid-ikon"></span><span aria-hidden="true" class="vid-tid">5:35</span></button></div></div><p class="sm-t"><span class="aar">Fra 2022</span><b>Hvem tager et gebyr, når du betaler med kort</b>The Wall Street Journal, på engelsk. Den handler om amerikanske kreditkort. I EU er reglerne for kortgebyrer anderledes.</p></li>
-<li class="sm"><div class="vid"><div class="vid-ramme" data-title="Video: How 'Buy Now, Pay Later' Makes Billions From 'Free' Loans (The Wall Street Journal)" data-yt="3yC8WDjCIAU"><button aria-label="Videoen hentes fra YouTube." class="vid-play" type="button"><picture><source media="(max-width:599px)" srcset="../assets/img/v5-temaer/energi-konkurrence/temaer/fintech/fra-billedstil/billeder/fintech-plakat-3yC8WDjCIAU-mobil.webp"></source><img alt="" height="720" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/fintech/fra-billedstil/billeder/fintech-plakat-3yC8WDjCIAU-bred.webp" width="1280"></picture><span aria-hidden="true" class="vid-kilde">The Wall Street Journal</span><span aria-hidden="true" class="vid-ikon"></span><span aria-hidden="true" class="vid-tid">8:25</span></button></div></div><p class="sm-t"><b>Sådan tjener betaling over tid penge</b>The Wall Street Journal, 2025, på engelsk. Tallene i videoen gengives ikke her.</p></li>
-</ul>
-<details class="mere">
-<summary>Læs mere</summary>
-<div class="mere-in">
-<ul class="sm-l" role="list">
-<li class="sm"><div class="vid"><div class="vid-ramme" data-title="Video: How do digital payments work? | Money Matters (Bank of England)" data-yt="KmeObiXeJPw"><button aria-label="Videoen hentes fra YouTube." class="vid-play" type="button"><picture><source media="(max-width:599px)" srcset="../assets/img/v5-temaer/energi-konkurrence/temaer/fintech/fra-billedstil/billeder/fintech-plakat-KmeObiXeJPw-mobil.webp"></source><img alt="" height="720" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/fintech/fra-billedstil/billeder/fintech-plakat-KmeObiXeJPw-bred.webp" width="1280"></picture><span aria-hidden="true" class="vid-kilde">Bank of England</span><span aria-hidden="true" class="vid-ikon"></span><span aria-hidden="true" class="vid-tid">23:26</span></button></div></div><p class="sm-t"><b>Hvordan virker digitale betalinger?</b>Bank of England, 2026, på engelsk. En medarbejder i Bank of England forklarer, hvordan pengene flyttes mellem bankerne. Beskrivelsen bygger på Bank of Englands egen tekst til videoen. Tallene i videoen gengives ikke her.</p></li>
-</ul>
-</div>
-</details>
-<ul class="xs-liste" id="x-liste" role="list" style="margin-top:22px">
-<li class="xp" data-url="https://x.com/business/status/2112788499447378254"><div class="xp-top"><p class="xp-trin"><span>Digital tegnebog</span></p><p class="xp-dato"><time datetime="2026-10-21">21.10.2026</time></p></div><p class="xp-fra"><b>Bloomberg</b> <span>@business · på engelsk</span></p><p class="xp-forkl"><span class="xp-k">Kort fortalt</span> Ifølge Bloomberg siger den britiske konkurrencemyndighed, at Apples kontrol over iPhone forhindrer andre betalingsapps i at konkurrere med Apples digitale tegnebog.</p><p class="xp-egne">Apple står under temaet Platformsøkonomi.</p><div class="xp-knapper"><button class="xp-vis" hidden="" type="button">Vis opslaget<span class="sr"> fra Bloomberg</span></button><a class="xp-link" href="https://x.com/business/status/2112788499447378254" rel="noopener" target="_blank">Se opslaget på X<span class="sr"> (åbner i nyt vindue)</span></a></div><div aria-label="Opslag fra Bloomberg på X" class="xp-embed" role="group" tabindex="-1"></div></li><li class="xp ekstra" data-url="https://x.com/ReutersBiz/status/2113390141091758470"><div class="xp-top"><p class="xp-trin"><span>Digitale penge</span></p><p class="xp-dato"><time datetime="2026-10-23">23.10.2026</time></p></div><p class="xp-fra"><b>Reuters</b> <span>@ReutersBiz · på engelsk</span></p><p class="xp-forkl"><span class="xp-k">Kort fortalt</span> Ifølge Reuters har Sveriges centralbank, Riksbanken, genoptaget debatten om en digital e-krone, i takt med at den digitale euro og stablecoins bliver en større udfordring. Stablecoins er kryptopenge, der er lavet til at følge værdien af fx dollar eller euro.</p><div class="xp-knapper"><button class="xp-vis" hidden="" type="button">Vis opslaget<span class="sr"> fra Reuters</span></button><a class="xp-link" href="https://x.com/ReutersBiz/status/2113390141091758470" rel="noopener" target="_blank">Se opslaget på X<span class="sr"> (åbner i nyt vindue)</span></a></div><div aria-label="Opslag fra Reuters på X" class="xp-embed" role="group" tabindex="-1"></div></li><li class="xp ekstra" data-url="https://x.com/business/status/2112572083691491633"><div class="xp-top"><p class="xp-trin"><span>Betalinger</span></p><p class="xp-dato"><time datetime="2026-10-20">20.10.2026</time></p></div><p class="xp-fra"><b>Bloomberg</b> <span>@business · på engelsk</span></p><p class="xp-forkl"><span class="xp-k">Kort fortalt</span> Ifølge Bloomberg samarbejder Visa med BILL og Billtrust om at lade AI-assistenter, der selv kan udføre opgaver, starte og gennemføre virksomheders betaling af regninger, uden at et menneske skal bekræfte sin identitet ved hver betaling.</p><p class="xp-egne">Opslaget handler om Visa og BILLs betalingstjenester.</p><div class="xp-knapper"><button class="xp-vis" hidden="" type="button">Vis opslaget<span class="sr"> fra Bloomberg</span></button><a class="xp-link" href="https://x.com/business/status/2112572083691491633" rel="noopener" target="_blank">Se opslaget på X<span class="sr"> (åbner i nyt vindue)</span></a></div><div aria-label="Opslag fra Bloomberg på X" class="xp-embed" role="group" tabindex="-1"></div></li>
-</ul>
-<button aria-controls="x-liste" aria-expanded="false" class="x-mere" hidden="" id="x-mere" type="button">Vis 2 opslag mere</button>
-<p class="xs-note">Opslagene er udvalgt af teamet bag NewDeal Invest. „Kort fortalt“ er vores danske gengivelse. Afsenderne og de nævnte selskaber står ikke bag denne side.</p>
-</div></section></div>
-<section class="sektion" id="selskaberne" aria-labelledby="h-selskaber">
-        <div class="gitter gitter--stub">
-          <article class="kort panel panel--bred" aria-labelledby="h-selskaber">
-            <header class="panel-hoved">
-              <div><h2 class="panel-titel" id="h-selskaber"><svg class="ik" aria-hidden="true"><use href="#i-selskab"></use></svg><span data-hvis="temaer#fintech.oevrigeAntal">De <span data-tal="temaer#fintech.antalVist" data-fmt="heltal">… </span> største af temaets <span data-tal="temaer#fintech.antal" data-fmt="antal" data-en="selskab" data-fl="selskaber">…  selskaber</span></span><span data-hvis="temaer#fintech.alleVist" hidden>Temaets <span data-tal="temaer#fintech.antal" data-fmt="antal" data-en="selskab" data-fl="selskaber">…  selskaber</span></span></h2>
-              <p class="hint">Tryk på et selskab for at se mere om det.</p></div>
-            </header>
-            <ul class="tema-liste" data-liste="temaer#fintech.vist" data-skabelon="tpl-tl"></ul>
-            <details class="fold-ud fold-liste" data-hvis="temaer#fintech.oevrigeAntal" hidden><summary><span>Vis alle <span data-tal="temaer#fintech.antal" data-fmt="antal" data-en="selskab" data-fl="selskaber">…  selskaber</span> i temaet</span></summary>
-              <ul class="tema-liste" data-liste="temaer#fintech.oevrige" data-skabelon="tpl-tl"></ul>
-            </details>
-            <p class="kildelinje">Andele i PMINDI, den udgave af fonden, der udbetaler udbytte, pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span> (fondens data).</p>
-          </article>
-        </div>
-      </section>
-      <section class="sektion v18-proces" data-proces-slot="fintech" hidden></section>
-      
-      <section class="sektion sektion--x" id="x-opslag" aria-labelledby="h-x-opslag" data-x-tema data-x-rel="../" data-x-selskaber='[{"isin": "US83406F1021", "navn": "SoFi", "slug": "sofi"}, {"isin": "GB00BMHVL512", "navn": "Klarna", "slug": "klarna"}, {"isin": "US91680M1071", "navn": "Upstart", "slug": "upstart"}, {"isin": "US82452J1097", "navn": "Shift4 Payments", "slug": "shift4-payments"}, {"isin": "US77664L2079", "navn": "Root", "slug": "root"}, {"isin": "US52567D1072", "navn": "Lemonade", "slug": "lemonade"}, {"isin": "US16935C1099", "navn": "Chime Financial", "slug": "chime-financial"}, {"isin": "KYG9572D1034", "navn": "Webull", "slug": "webull"}, {"isin": "KYG6683N1034", "navn": "Nu", "slug": "nu"}, {"isin": "US7707001027", "navn": "Robinhood", "slug": "robinhood-mkts"}, {"isin": "US3493811034", "navn": "Figure Technology Solutions", "slug": "figure-technology-solut"}, {"isin": "IL0011741688", "navn": "Global-e", "slug": "global-e-online"}, {"isin": "US00827B1061", "navn": "Affirm", "slug": "affirm-hldg"}, {"isin": "US36118L1061", "navn": "Futu", "slug": "futu-hldg"}, {"isin": "US48581R2058", "navn": "Kaspi.kz", "slug": "kaspi-sp-gdr-reg-s"}, {"isin": "US04681Y1038", "navn": "Ategrity Specialty Holdings", "slug": "ategrity-specialty-holdings"}, {"isin": "KYG290181018", "navn": "dLocal", "slug": "dlocal"}, {"isin": "IL0011858912", "navn": "Pagaya Technologies", "slug": "pagaya-technologies"}]'>
-        <header class="sektion-hoved">
-          <h2 class="sektion-titel" id="h-x-opslag">Det skriver de på X</h2>
-          <p class="sektion-intro">Udvalgte offentlige opslag om selskaberne i temaet. Opslagene er andres og ikke NewDeal Invests holdning.</p>
-        </header>
-        <div class="kort panel x-tema">
-          <p class="x-tema-status lille" role="status">Henter opslag …</p>
-          <details class="fold-ud fold-mobil fold-sektion" data-aaben-bred><summary aria-expanded="false">Se opslagene fra X</summary><ul class="x-tema-liste" hidden></ul></details>
-          <p class="kildelinje x-tema-kilde" hidden></p>
-        </div>
-      </section>
-<div class="v5f v5f-fintech" data-v5-fortaelling="fintech-b"><section aria-labelledby="risiko-h" class="s" id="risiko"><div class="wrap">
-<div class="risk" id="det-med-smaat">
-<div class="risk-top"><img class="kun-moerk" alt="" height="160" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/fintech/fra-billedstil/grafik/fintech-illu-det-med-smaat.svg" width="240"><img class="kun-lys" alt="" height="160" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/fintech/fra-billedstil/grafik/fintech-illu-det-med-smaat-lys.svg" width="240"><h2 id="risiko-h">Det skal man vide om temaet</h2></div>
-<ul>
-<li><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9h4v6H3zM9 9h4v6H9z"></path><path d="M15 9h4v6h-4z" stroke-dasharray="1.5 1.5"></path><path d="M15.5 17.5l3 3M18.5 17.5l-3 3" stroke-width="1"></path></svg><b>Kredittab.</b> Selskaber, der låner penge ud eller lader kunden betale over tid, kan miste penge, hvis kunderne ikke betaler tilbage.<span class="k">Kilde: <a href="https://www.sec.gov/Archives/edgar/data/2003292/000200329226000007/klar-20251231.htm" rel="noopener" target="_blank">Klarna, årsrapport (20-F) 2025<span class="sr"> (åbner i nyt vindue)</span></a></span></li>
-<li><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3l7.5 3v5.5c0 4.5-3.25 8-7.5 9.5-4.25-1.5-7.5-5-7.5-9.5V6z"></path><path d="M12 8v4l2.5 1.5" stroke-width="1"></path></svg><b>Svindel.</b> Betalinger skal kontrolleres på et splitsekund, og svindel kan koste selskaberne penge.<span class="k">Kilde: <a href="https://www.sec.gov/Archives/edgar/data/1794669/000179466926000010/four-20251231.htm" rel="noopener" target="_blank">Shift4, årsrapport (10-K) 2025<span class="sr"> (åbner i nyt vindue)</span></a></span></li>
-<li><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3.5v16.5M6 20.5h12M4 7.5h16"></path><path d="M6 7.5l-2.5 6a2.5 2.5 0 0 0 5 0zM18 7.5l-2.5 6a2.5 2.5 0 0 0 5 0z" stroke-width="1"></path></svg><b>Regler og tilsyn.</b> Banker, betalingsselskaber og forsikringsselskaber er under tilsyn, og nye regler kan ændre deres forretning.<span class="k">Kilder: <a href="https://www.sec.gov/Archives/edgar/data/1818874/000181887426000013/sofi-20251231.htm" rel="noopener" target="_blank">SoFi, 10-K 2025<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1788882/000178888226000014/root-20251231.htm" rel="noopener" target="_blank">Root, 10-K 2025<span class="sr"> (åbner i nyt vindue)</span></a></span></li>
-<li><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 20V14M9 20V10M14 20V12M19 20V16"></path><path d="M3 21h18" stroke-width="1"></path><circle cx="6.5" cy="5" fill="currentColor" r="1.25"></circle><circle cx="11.5" cy="5" r="1.25"></circle><circle cx="16.5" cy="5" r="1.25"></circle></svg><b>Kundernes aktivitet.</b> Handelsplatforme tjener mindre, når kunderne handler mindre.<span class="k">Kilde: <a href="https://www.sec.gov/Archives/edgar/data/1783879/000178387926000023/hood-20251231.htm" rel="noopener" target="_blank">Robinhood, årsrapport (10-K) 2025<span class="sr"> (åbner i nyt vindue)</span></a></span></li>
-<li class="ub"><b>Afhængighed af andre.</b> Nogle selskaber har ikke selv tilladelse til at drive bank. De bruger en anden banks licens, eller de tjener penge på, at långivere bruger deres modeller. Ændrer de andre vilkårene eller stopper aftalen, rammer det selskabets forretning.<span class="k">Kilder: <a href="https://www.sec.gov/Archives/edgar/data/1795586/000179558626000013/chym-20251231.htm" rel="noopener" target="_blank">Chime, 10-K 2025<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1647639/000164763926000027/upst-20251231.htm" rel="noopener" target="_blank">Upstart, 10-K 2025<span class="sr"> (åbner i nyt vindue)</span></a></span></li>
-</ul>
-<details class="mere">
-<summary>Læs mere: sådan leder et kortselskab efter svindel</summary>
-<div class="mere-in">
-<ul class="sm-l" role="list">
-<li class="sm"><div class="vid"><div class="vid-ramme" data-title="Video: Why Fraud Is Getting Smarter and How AI Catches It in Under 1 Second (Visa)" data-yt="TmYoScdhXyc"><button aria-label="Videoen hentes fra YouTube." class="vid-play" type="button"><picture><source media="(max-width:599px)" srcset="../assets/img/v5-temaer/energi-konkurrence/temaer/fintech/fra-billedstil/billeder/fintech-plakat-TmYoScdhXyc-mobil.webp"></source><img alt="" height="720" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/fintech/fra-billedstil/billeder/fintech-plakat-TmYoScdhXyc-bred.webp" width="1280"></picture><span aria-hidden="true" class="vid-kilde">Visa</span><span aria-hidden="true" class="vid-ikon"></span><span aria-hidden="true" class="vid-tid">5:26</span></button></div></div><p class="sm-t"><span class="selsk">Selskabets egen video</span><b>Sådan leder Visa efter svindel</b>Visa, 2026, på engelsk. Visa er ikke blandt fondens selskaber. Tallene i videoen er Visas egne og gengives ikke her.</p></li>
-</ul>
-</div>
-</details>
-</div>
-</div></section><section aria-labelledby="videre-h" class="s" id="videre"><div class="wrap">
-<p class="eyebrow"><span aria-hidden="true" class="rg"></span>Videre</p>
-<h2 id="videre-h">Fondens andre temaer</h2>
-<div class="videre-g">
-<figure class="graf"><img class="kun-moerk" alt="Kvitteringen i midten med krypto og platformsøkonomi ude til siden." height="140" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/fintech/fra-billedstil/grafik/fintech-overgang-naboer.svg" width="480"><img class="kun-lys" alt="Kvitteringen i midten med krypto og platformsøkonomi ude til siden." height="140" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/fintech/fra-billedstil/grafik/fintech-overgang-naboer-lys.svg" width="480"><figcaption>Illustration: NewDeal Invest.</figcaption></figure>
-<div>
-<ul class="naboer">
-<li><a href="chips.html">Chips og halvledere</a></li>
-<li><a href="datacenter.html">Datacentre</a></li>
-<li><a href="fysisk-ai.html">Robotter &amp; fysisk AI</a></li>
-<li><a href="raastoffer.html">Råstoffer</a></li>
-<li><a href="rumfart.html">Rumfart</a></li>
-<li><a href="software.html">Software &amp; AI</a></li>
-<li><a href="kvante.html">Kvantecomputere</a></li>
-<li><a href="platforme.html">Platformsøkonomi</a></li>
-<li><a href="krypto.html">Krypto</a></li>
-<li><a href="sundhed.html">Sundhed og biotek</a></li>
-</ul>
-</div>
-</div>
-</div></section><section aria-labelledby="h-kilder" class="kilder-s" id="kilder"><div class="wrap">
-<details class="kilder">
-<summary><h2 id="h-kilder">Kilder og kreditering</h2></summary>
-<ul>
-<li>Andele hentes fra fondens seneste validerede opgørelse. Datoen vises sammen med tallene. Temaer og grupper: NewDeal Invests redaktionelle opdeling. Beskrivelserne bygger på selskabernes daterede årsrapporter.</li>
-<li>Kortbetalinger og digitale wallets: <a href="https://www.nationalbanken.dk/da/viden-og-nyheder/data-og-statistik/betalinger/20260202-naesten-hver-tredje-kortbetaling-foretages-nu-via-digitale-wallets" rel="noopener" target="_blank">Danmarks Nationalbank, 02.02.2026<span class="sr"> (åbner i nyt vindue)</span></a>. Befolkning: Danmarks Statistik, <a href="https://www.statbank.dk/FOLK1A" rel="noopener" target="_blank">tabel FOLK1A<span class="sr"> (åbner i nyt vindue)</span></a>.</li>
-<li>Selskabernes tal og beskrivelser: <a href="https://www.sec.gov/Archives/edgar/data/1493318/000121390026022034/ea0278371-20f_etoro.htm" rel="noopener" target="_blank">eToro, 20-F 2025<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/2003292/000200329226000007/klar-20251231.htm" rel="noopener" target="_blank">Klarna, 20-F 2025<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1820953/000162828026059279/afrm-20260630.htm" rel="noopener" target="_blank">Affirm, 10-K (år til 30.06.2026)<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1783879/000178387926000023/hood-20251231.htm" rel="noopener" target="_blank">Robinhood, 10-K 2025<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1691493/000129281426002166/nuform20f_2025.htm" rel="noopener" target="_blank">Nu Holdings, 20-F 2025<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1818874/000181887426000013/sofi-20251231.htm" rel="noopener" target="_blank">SoFi, 10-K 2025<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1795586/000179558626000013/chym-20251231.htm" rel="noopener" target="_blank">Chime, 10-K 2025<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1647639/000164763926000027/upst-20251231.htm" rel="noopener" target="_blank">Upstart, 10-K 2025<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1788882/000178888226000014/root-20251231.htm" rel="noopener" target="_blank">Root, 10-K 2025<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1794669/000179466926000010/four-20251231.htm" rel="noopener" target="_blank">Shift4, 10-K 2025<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1846832/000207097926000113/dlo-20251231.htm" rel="noopener" target="_blank">DLocal, 20-F 2025<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1985487/000198548726000008/kspi-20251231.htm" rel="noopener" target="_blank">Kaspi.kz, 20-F 2025<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1691421/000169142126000016/lmnd-20251231.htm" rel="noopener" target="_blank">Lemonade, 10-K 2025<span class="sr"> (åbner i nyt vindue)</span></a> og <a href="https://www.sec.gov/Archives/edgar/data/2040491/000204049126000011/asic-20251231.htm" rel="noopener" target="_blank">Ategrity, 10-K 2025<span class="sr"> (åbner i nyt vindue)</span></a>.</li>
-</ul>
-<h3>Kreditering</h3>
-<p>Tegninger, ikoner og videoplakater. Illustration: NewDeal Invest.</p>
-<p>Videoerne er fra The Wall Street Journal, Bank of England og Visa og vises fra YouTube, først når du trykker på dem. Opslagene er fra X. Logoer tilhører de enkelte selskaber og viser kun, hvilke selskaber fonden ejer aktier i. Afsenderne og selskaberne står ikke bag denne side, og der er intet samarbejde med dem.</p>
-<p><a class="kid" href="https://node-api.fundmarket.dk/funds/documents/priip_ipm140b" rel="noopener" target="_blank">Dokument med central information (KID)<span class="sr"> (åbner i nyt vindue)</span></a></p>
-</details>
-</div></section></div>
-
-      
-      <div class="sektion sektion--videre"><nav class="videre" aria-label="Videre">
-          <a class="knap" href="../index.html#hvert-tema"><svg class="ik ik--s" aria-hidden="true"><use href="#i-tilbage"></use></svg>Alle temaer</a>
-          <a class="knap" href="../index.html#hvert-tema" data-hvis="temaer#fintech.forrige" data-href-tema="temaer#fintech.forrige" hidden><svg class="ik ik--s" aria-hidden="true"><use href="#i-tilbage"></use></svg><span class="knap-tekst">Forrige tema: <span data-navn="temaer#fintech.forrige">…</span></span></a>
-          <a class="knap knap--primaer" href="../index.html#hvert-tema" data-hvis="temaer#fintech.naeste" data-href-tema="temaer#fintech.naeste" hidden><span class="knap-tekst">Næste tema: <span data-navn="temaer#fintech.naeste">…</span></span><svg class="ik ik--s" aria-hidden="true"><use href="#i-frem"></use></svg></a>
-          <a class="knap knap--primaer" href="#kilder" data-skjul="temaer#fintech.naeste" hidden>Det var det sidste tema. Se kilderne<svg class="ik ik--s" aria-hidden="true"><use href="#i-frem"></use></svg></a>
-        </nav></div>
-
-    </main>
-    <footer class="sidefod">
-      <div class="sidefod-maerke"><span class="logo-felt"><img class="ndi-logo" src="../assets/img/ndi-logo-moerk-baggrund.png" width="2048" height="754" alt="NewDeal Invest" decoding="async"></span></div>
-      <div class="sidefod-tekst">
-        <p>NewDeal Invest er et brand for NDIIR ApS, investeringsrådgiver for Fundmarket A/S. Markedsføringsmateriale. Ikke personlig investeringsrådgivning. Investering indebærer risiko for tab. Alle andele pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span>.</p>
-        <p class="sidefod-kilde">Kilde til fondstal: Fundmarket A/S, der forvalter Investeringsforeningen PortfolioManager. NDIIR ApS yder investeringsrådgivning til foreningen. <span class="sidefod-dato">Opdateret <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span>.</span></p>
-      </div>
-    </footer>
-  </div>
-</div>
-<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
-<script src="../data/dagens-tal.js"></script>
-<script src="../data/sider.js"></script>
-<script src="../assets/js/valg.js"></script>
-<script src="../data/x-curated.js"></script>
-<script src="../assets/js/datalag.js"></script>
-<script src="../assets/js/tema.js"></script>
-<script src="../assets/js/grafik.js"></script>
-<script src="../assets/js/app.js"></script>
-<script src="../assets/js/x-tema.js"></script>
-<script src="../assets/v5-temaer/fintech.js" defer></script>
-</body>
+<html lang="da">
+
+<head>
+
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="robots" content="noindex, nofollow">
+
+<meta name="theme-color" content="#050a0f">
+
+<script>(function(){var d=document.documentElement,t=null;try{t=localStorage.getItem("ndi-tema")}catch(e){}if(t!=="lys"&&t!=="mørk"){t="mørk"}d.setAttribute("data-tema",t)})();</script>
+
+<title>Fintech · NewDeal Invest</title>
+
+<meta name="description" content="Temaet Fintech i PMINDI: hvad det handler om, andel af fonden og de største selskaber.">
+
+<link rel="icon" href="../assets/img/ndi-favicon.png" type="image/png">
+
+<link rel="stylesheet" href="../assets/css/tokens.css">
+
+<link rel="stylesheet" href="../assets/css/komponenter.css">
+
+<link rel="stylesheet" href="../assets/css/sider.css">
+
+<link rel="stylesheet" href="../assets/css/tema-lys.css">
+
+<link rel="stylesheet" href="../assets/fonts/v5/fonts.css">
+
+<link rel="stylesheet" href="../assets/css/v5.css">
+
+<link rel="stylesheet" href="../assets/css/v5-komponenter.css">
+
+<link rel="stylesheet" href="../assets/css/v18-min.css">
+
+<script>try{document.fonts.load("500 16px Manrope");document.fonts.load("400 16px 'DM Sans'")}catch(e){}</script>
+
+<link rel="stylesheet" href="../assets/v5-temaer/fintech.css">
+
+<link rel="stylesheet" href="../assets/css/review.css?v=20261031logos"><link rel="stylesheet" href="../assets/css/review-media.css?v=20261031-1"></head>
+
+<body>
+
+
+
+<svg class="sprite" aria-hidden="true" focusable="false">
+
+<symbol id="i-pause" viewbox="0 0 24 24"><path d="M9 6v12M15 6v12"></path></symbol>
+
+<symbol id="i-afspil" viewbox="0 0 24 24"><path d="M8 5.5v13l10-6.5z"></path></symbol>
+
+<symbol id="i-overblik" viewbox="0 0 24 24"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"></rect><rect x="13.5" y="3.5" width="7" height="4" rx="1.5"></rect><rect x="13.5" y="10.5" width="7" height="10" rx="1.5"></rect><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"></rect></symbol>
+
+<symbol id="i-pointer" viewbox="0 0 24 24"><path d="M4 5.5h16a1.5 1.5 0 0 1 1.5 1.5v9a1.5 1.5 0 0 1-1.5 1.5h-9l-4.5 3.5v-3.5H4A1.5 1.5 0 0 1 2.5 16V7A1.5 1.5 0 0 1 4 5.5z"></path><path d="M7 10h10M7 13.5h6"></path></symbol>
+
+<symbol id="i-noegletal" viewbox="0 0 24 24"><path d="M4 20V11M9.5 20V5M15 20v-6M20.5 20V8.5M2.5 20.5h19"></path></symbol>
+
+<symbol id="i-forretning" viewbox="0 0 24 24"><path d="M12 2.8c3.3 2.7 5 6.5 5 10.9l-2.2 3.2H9.2L7 13.7c0-4.4 1.7-8.2 5-10.9z"></path><circle cx="12" cy="10" r="1.8"></circle><path d="M9.6 17.5L8 21.2M14.4 17.5l1.6 3.7M12 17v4.2"></path></symbol>
+
+<symbol id="i-risiko" viewbox="0 0 24 24"><path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.3-7.5 9.5-4.3-1.2-7.5-4.9-7.5-9.5V6L12 3z"></path><path d="M12 8v4.5M12 15.6v.1"></path></symbol>
+
+<symbol id="i-historie" viewbox="0 0 24 24"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7.5V12l3 2"></path></symbol>
+
+<symbol id="i-medier" viewbox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="2.5"></rect><path d="M10 9.2v5.6l4.8-2.8L10 9.2z"></path></symbol>
+
+<symbol id="i-kilder" viewbox="0 0 24 24"><path d="M4.5 5.5A2 2 0 0 1 6.5 3.5h12v14h-12a2 2 0 0 0-2 2v-14z"></path><path d="M4.5 19.5a2 2 0 0 0 2 2h12v-4M9 8h6M9 11.5h4"></path></symbol>
+
+<symbol id="i-tilbage" viewbox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"></path></symbol>
+
+<symbol id="i-frem" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></symbol>
+
+<symbol id="i-ud" viewbox="0 0 24 24"><path d="M8 16L16 8M9.5 8H16v6.5"></path></symbol>
+
+<symbol id="i-menu" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"></path></symbol>
+
+<symbol id="i-luk" viewbox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"></path></symbol>
+
+<symbol id="i-chevron" viewbox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></symbol>
+
+<symbol id="i-ned" viewbox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></symbol>
+
+<symbol id="i-satellit" viewbox="0 0 24 24"><rect x="9.5" y="9.5" width="5" height="5" rx="1" transform="rotate(45 12 12)"></rect><path d="M8.2 8.2L4.6 4.6M15.8 15.8l3.6 3.6M3 8l5-5M16 21l5-5"></path><path d="M6 19a8 8 0 0 0 2-6"></path></symbol>
+
+<symbol id="i-chip" viewbox="0 0 24 24"><rect x="6.5" y="6.5" width="11" height="11" rx="1.5"></rect><rect x="9.5" y="9.5" width="5" height="5" rx=".6"></rect><path d="M9.5 3v3.5M14.5 3v3.5M9.5 17.5V21M14.5 17.5V21M3 9.5h3.5M3 14.5h3.5M17.5 9.5H21M17.5 14.5H21"></path></symbol>
+
+<symbol id="i-tema" viewbox="0 0 24 24"><path d="M12 3.5l9 4.5-9 4.5L3 8l9-4.5z"></path><path d="M3 12.5l9 4.5 9-4.5M3 16.5l9 4.5 9-4.5"></path></symbol>
+
+<symbol id="i-kalender" viewbox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"></rect><path d="M3.5 9.5h17M8 3v4M16 3v4"></path></symbol>
+
+<symbol id="i-dokument" viewbox="0 0 24 24"><path d="M6 2.5h8l4.5 4.5v14.5H6z"></path><path d="M14 2.5V7h4.5M9 12h6M9 15.5h6"></path></symbol>
+
+<symbol id="i-fond" viewbox="0 0 24 24"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5V12l6 6"></path></symbol>
+
+<symbol id="i-x" viewbox="0 0 24 24"><path d="M4 4l16 16M20 4L4 20"></path></symbol>
+
+<symbol id="i-selskab" viewbox="0 0 24 24"><path d="M4 20.5V8l6-3.5v16M10 20.5V3.5l10 4v13M2.5 20.5h19M13 9h4M13 12.5h4M13 16h4M6.5 11h1M6.5 14.5h1"></path></symbol>
+
+<symbol id="i-forbind" viewbox="0 0 24 24"><circle cx="5.5" cy="12" r="2.5"></circle><circle cx="18.5" cy="5.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle><path d="M8 11l8-4.3M8 13l8 4.3"></path></symbol>
+
+<symbol id="t-chips" viewbox="0 0 24 24"><rect x="6.5" y="6.5" width="11" height="11" rx="1.5"></rect><rect x="9.5" y="9.5" width="5" height="5" rx=".6"></rect><path d="M9.5 3v3.5M14.5 3v3.5M9.5 17.5V21M14.5 17.5V21M3 9.5h3.5M3 14.5h3.5M17.5 9.5H21M17.5 14.5H21"></path></symbol>
+
+<symbol id="t-energi" viewbox="0 0 24 24"><path d="M13.5 2.5L5 13.5h6l-1.5 8 8.5-11h-6z"></path></symbol>
+
+<symbol id="t-datacenter" viewbox="0 0 24 24"><rect x="4" y="3.5" width="16" height="5" rx="1.2"></rect><rect x="4" y="9.5" width="16" height="5" rx="1.2"></rect><rect x="4" y="15.5" width="16" height="5" rx="1.2"></rect><path d="M7 6h.1M7 12h.1M7 18h.1M11 6h6M11 12h6M11 18h6"></path></symbol>
+
+<symbol id="t-platforme" viewbox="0 0 24 24"><path d="M3 9.5l1.5-5h15L21 9.5M3 9.5a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0M5 12v8.5h14V12M10 20.5v-5h4v5"></path></symbol>
+
+<symbol id="t-fysisk-ai" viewbox="0 0 24 24"><path d="M4 20.5h9M6.5 20.5v-3l4-1.5M10.5 16l3-7.5M13.5 8.5l5 2.5"></path><circle cx="13.5" cy="8.5" r="2"></circle><path d="M18.5 11l2 3.5M18.5 11l-1 4"></path></symbol>
+
+<symbol id="t-raastoffer" viewbox="0 0 24 24"><path d="M8 4h8l4 5-8 11L4 9z"></path><path d="M4 9h16M9.5 9L12 20l2.5-11M8 4l1.5 5M16 4l-1.5 5"></path></symbol>
+
+<symbol id="t-rumfart" viewbox="0 0 24 24"><path d="M12 2.8c3.3 2.7 5 6.5 5 10.9l-2.2 3.2H9.2L7 13.7c0-4.4 1.7-8.2 5-10.9z"></path><circle cx="12" cy="10" r="1.8"></circle><path d="M9.6 17.5L8 21.2M14.4 17.5l1.6 3.7M12 17v4.2"></path></symbol>
+
+<symbol id="t-fintech" viewbox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="2"></rect><path d="M2.5 9.5h19M6 14.5h4"></path></symbol>
+
+<symbol id="t-krypto" viewbox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.2"></rect><rect x="14" y="3" width="7" height="7" rx="1.2"></rect><rect x="8.5" y="14" width="7" height="7" rx="1.2"></rect><path d="M10 6.5h4M6.5 10v2.5h5.5V14M17.5 10v2.5H12"></path></symbol>
+
+<symbol id="t-software" viewbox="0 0 24 24"><rect x="2.5" y="4" width="19" height="16" rx="2"></rect><path d="M2.5 8h19M8 12l-2.5 2.5L8 17M16 12l2.5 2.5L16 17M13 11.5l-2 6"></path></symbol>
+
+<symbol id="t-sundhed" viewbox="0 0 24 24"><path d="M2.5 12.5h4l2-4.5 3.5 9 2.5-6 1.5 1.5h5.5"></path></symbol>
+
+<symbol id="t-kvante" viewbox="0 0 24 24"><circle cx="12" cy="12" r="1.6"></circle><ellipse cx="12" cy="12" rx="9.5" ry="3.8"></ellipse><ellipse cx="12" cy="12" rx="9.5" ry="3.8" transform="rotate(60 12 12)"></ellipse><ellipse cx="12" cy="12" rx="9.5" ry="3.8" transform="rotate(120 12 12)"></ellipse></symbol>
+
+</svg>
+
+<a class="spring" href="#indhold">Gå til indhold</a>
+
+<div class="app">
+
+  <header class="topbar-mobil">
+
+    <button class="ikonknap" id="menu-aaben" type="button" aria-controls="sidemenu" aria-expanded="false"><svg class="ik" aria-hidden="true"><use href="#i-menu"></use></svg><span class="sr">Åbn menuen</span></button>
+
+    <a class="maerke maerke--lille" href="../index.html" aria-label="NewDeal Invest, til fondsoverblikket">
+
+      <span class="logo-felt logo-felt--lille"><img class="ndi-logo" src="../assets/img/ndi-logo-moerk-baggrund.png" width="2048" height="754" alt="NewDeal Invest" decoding="async"></span>
+
+      <span class="maerke-tekst"><span class="maerke-navn">Fintech</span><span class="maerke-sub" id="aktuel-sektion">Tema</span></span>
+
+    </a>
+
+    <a class="knap knap--lille" href="https://fundmarket.dk/newdeal-invest-kl-n/" target="_blank" rel="noopener">Faktaark<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (KID) og prospekt for PMINDI (åbner i nyt vindue)</span></a>
+
+  </header>
+
+  <div class="slor" id="slor" hidden></div>
+
+  <aside class="sidemenu" id="sidemenu" aria-label="Hovedmenu">
+
+    <div class="sm-top">
+
+      <a class="maerke maerke--logo" href="../index.html" aria-label="NewDeal Invest, fondsoverblik">
+
+        <span class="logo-felt"><img class="ndi-logo" src="../assets/img/ndi-logo-moerk-baggrund.png" width="2048" height="754" alt="NewDeal Invest" decoding="async"></span><span class="maerke-sub">Fondsoverblik</span>
+
+      </a>
+
+      <button class="ikonknap sm-luk" id="menu-luk" type="button"><svg class="ik" aria-hidden="true"><use href="#i-luk"></use></svg><span class="sr">Luk menuen</span></button>
+
+    </div>
+
+    <nav class="review-section-nav" aria-label="Vælg indgang"><a href="../index.html">Porteføljen</a><a href="../tech.html">Tech</a><a href="../widget/index.html">Afkast</a></nav><div class="sm-rul">
+
+      <a class="sm-tilbage" href="https://www.newdealinvest.dk/"><svg class="ik" aria-hidden="true"><use href="#i-tilbage"></use></svg><span>Til NewDeal Invests forside</span></a>
+
+
+
+      <nav class="sm-gruppe" aria-labelledby="sm-h-fond">
+
+        <h2 class="sm-overskrift" id="sm-h-fond"><span>Fonden</span></h2>
+
+        <ul class="sm-liste">
+
+          <li><a class="sm-link" href="../fondens-udvikling.html"><span>Fondens udvikling</span></a>
+
+          </li>
+
+          <li><a class="sm-link" href="../index.html#temaer"><span>Fonden fordelt på temaer</span></a>
+
+          </li>
+
+          <li><a class="sm-link" href="../index.html#top10"><span>De <span data-tal="top10.antal" data-fmt="talord">…</span> største selskaber</span></a>
+
+          </li>
+
+          <li><a class="sm-link" href="../index.html#portefoeljen"><span>Porteføljen</span></a>
+
+            <ul class="sm-under sm-under--fond" aria-label="Porteføljen">
+
+              <li><a class="sm-link sm-link--under" href="../index.html#portefoeljen-portfolio" data-portefolje="portfolio"><span>Portefølje</span></a></li>
+
+              <li><a class="sm-link sm-link--under" href="../index.html#portefoeljen-highs" data-portefolje="highs"><span>52-ugers top</span></a></li>
+
+              <li><a class="sm-link sm-link--under" href="../index.html#portefoeljen-risk-summary" data-portefolje="risk-summary"><span>Risiko</span></a></li>
+
+              <li><a class="sm-link sm-link--under" href="../index.html#portefoeljen-method" data-portefolje="method"><span>Metode</span></a></li>
+
+            </ul>
+
+          </li>
+
+          <li><a class="sm-link" href="../index.html#vigtig-information"><span>Risiko og vigtig information</span></a>
+
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <nav class="sm-gruppe" aria-labelledby="sm-h-temaer">
+
+        <h2 class="sm-overskrift" id="sm-h-temaer"><span>Temaer</span><span class="sm-overskrift-note">Andel af fonden</span></h2>
+
+        <ul class="sm-liste">
+
+        </ul>
+
+        <ul class="sm-liste sm-temaliste" id="sm-temaer" data-ordne="temaer">
+
+          <li data-id="chips"><a class="sm-link sm-link--tema" style="--tf:#8bb8bc" href="../temaer/chips.html"><svg class="ik" aria-hidden="true"><use href="#t-chips"></use></svg><span>Chips og halvledere</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+
+          <li data-id="energi"><a class="sm-link sm-link--tema" style="--tf:#759ebc" href="../temaer/energi.html"><svg class="ik" aria-hidden="true"><use href="#t-energi"></use></svg><span>Energi og elnet</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+
+          <li data-id="datacenter"><a class="sm-link sm-link--tema" style="--tf:#d5ba75" href="../temaer/datacenter.html"><svg class="ik" aria-hidden="true"><use href="#t-datacenter"></use></svg><span>Datacentre</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+
+          <li data-id="platforme"><a class="sm-link sm-link--tema" style="--tf:#b78f70" href="../temaer/platforme.html"><svg class="ik" aria-hidden="true"><use href="#t-platforme"></use></svg><span>Platformsøkonomi</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+
+          <li data-id="fysisk-ai"><a class="sm-link sm-link--tema" style="--tf:#9ab595" href="../temaer/fysisk-ai.html"><svg class="ik" aria-hidden="true"><use href="#t-fysisk-ai"></use></svg><span>Robotter &amp; fysisk AI</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+
+          <li data-id="raastoffer"><a class="sm-link sm-link--tema" style="--tf:#bd9cbb" href="../temaer/raastoffer.html"><svg class="ik" aria-hidden="true"><use href="#t-raastoffer"></use></svg><span>Råstoffer</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+
+          <li data-id="rumfart"><a class="sm-link sm-link--tema" style="--tf:#a18cc7" href="../temaer/rumfart.html"><svg class="ik" aria-hidden="true"><use href="#t-rumfart"></use></svg><span>Rumfart</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+
+          <li data-id="fintech" class="er-aktiv"><a class="sm-link sm-link--tema" style="--tf:#6ea4bb" href="../temaer/fintech.html" aria-current="page"><svg class="ik" aria-hidden="true"><use href="#t-fintech"></use></svg><span>Fintech</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+
+          <li data-id="krypto"><a class="sm-link sm-link--tema" style="--tf:#a8ba86" href="../temaer/krypto.html"><svg class="ik" aria-hidden="true"><use href="#t-krypto"></use></svg><span>Krypto</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+
+          <li data-id="software"><a class="sm-link sm-link--tema" style="--tf:#c9a58b" href="../temaer/software.html"><svg class="ik" aria-hidden="true"><use href="#t-software"></use></svg><span>Software &amp; AI</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+
+          <li data-id="sundhed"><a class="sm-link sm-link--tema" style="--tf:#a4a6cf" href="../temaer/sundhed.html"><svg class="ik" aria-hidden="true"><use href="#t-sundhed"></use></svg><span>Sundhed og biotek</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+
+          <li data-id="kvante"><a class="sm-link sm-link--tema" style="--tf:#cd99a5" href="../temaer/kvante.html"><svg class="ik" aria-hidden="true"><use href="#t-kvante"></use></svg><span>Kvantecomputere</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
+
+        </ul>
+
+        <button class="sm-vis-flere" type="button" aria-expanded="false" aria-controls="sm-temaer">
+
+          <span class="sm-vis-tekst">Vis alle <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer</span><span class="sm-vis-faerre" hidden>Vis færre temaer</span><svg class="ik ik--s" aria-hidden="true"><use href="#i-ned"></use></svg>
+
+        </button>
+
+      </nav>
+
+      <nav class="sm-gruppe" aria-labelledby="sm-h-selskaber">
+
+        <h2 class="sm-overskrift" id="sm-h-selskaber"><span>Selskaber</span><span class="sm-overskrift-note">Andel af fonden</span></h2>
+
+        <ul class="sm-liste">
+
+        </ul>
+
+        <ul class="sm-liste" data-liste="top10.liste" data-skabelon="tpl-sm-top"></ul>
+
+        <a class="sm-alle" href="../alle-selskaber.html"><svg class="ik ik--s" aria-hidden="true"><use href="#i-selskab"></use></svg><span>Se alle selskaber i fonden</span><svg class="ik ik--s" aria-hidden="true"><use href="#i-frem"></use></svg></a>
+
+        <template id="tpl-sm-top"><li><a class="sm-selskab" data-link-selskab href="#"><span class="sm-logo" aria-hidden="true" data-f="forbogstav"></span><span class="sm-navn" data-f="navn"></span><span class="sm-tal" data-f="andel" data-fmt="pct"></span></a></li></template>
+
+        <ul class="sm-liste" hidden>
+
+        </ul>
+
+      </nav>
+
+    </div>
+
+    <div class="sm-bund">
+
+      <button class="temaskift" id="temaskift" type="button" aria-label="Skift til lyst tema"><svg class="ik ik--sol" aria-hidden="true" viewbox="0 0 24 24"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"></path></svg><svg class="ik ik--maane" aria-hidden="true" viewbox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"></path></svg><span class="temaskift-tekst">Lyst tema</span></button>
+
+      <div class="sm-datakort"><svg class="ik" aria-hidden="true"><use href="#i-kalender"></use></svg><div><p class="sm-data-t">Alle andele pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…</span></p><p class="sm-data-s">Tallene er fra PMINDI. Markedsføringsmateriale. Ikke personlig investeringsrådgivning.</p></div></div>
+
+    </div>
+
+  </aside>
+
+  <div class="hoved">
+
+    <main id="indhold" tabindex="-1">
+
+<template id="tpl-tl"><li><a class="tl-raekke" data-link-selskab href="#"><span class="sm-logo" aria-hidden="true" data-f="forbogstav"></span><span class="tl-navn" data-f="navn"></span><span class="pos-bar" aria-hidden="true"><span data-fbar></span></span><span class="tl-tal" data-f="andel" data-fmt="pct"></span></a></li></template><template id="tpl-mini"><span data-fbar></span></template>
+
+      <section class="sektion sektion--overblik" id="overblik" aria-labelledby="h-side">
+
+        <div class="v18t">
+
+        <div class="v18t-hero v18t-hero--v5">
+
+          <div class="v18t-foto v18t-foto--v5"><figure class="tema-foto v5-heromotiv"><picture><source height="488" media="(max-width:600px)" srcset="../assets/img/v5-temaer/energi-konkurrence/temaer/faelles/prisdesign/hero-fintech-390.webp 1x, ../assets/img/v5-temaer/energi-konkurrence/temaer/faelles/prisdesign/hero-fintech-390@2x.webp 2x" width="390"></source><img alt="" decoding="async" height="560" src="../assets/img/v5-temaer/energi-konkurrence/temaer/faelles/prisdesign/hero-fintech-1440w.webp" srcset="../assets/img/v5-temaer/energi-konkurrence/temaer/faelles/prisdesign/hero-fintech-1440w.webp 1x, ../assets/img/v5-temaer/energi-konkurrence/temaer/faelles/prisdesign/hero-fintech-1440w@2x.webp 2x" width="1440"></picture><figcaption class="foto-kredit">Illustration: NewDeal Invest.</figcaption></figure></div>
+
+          <div class="v18t-hero-tekst">
+
+            <p class="kicker">Et af de <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer i NewDeal Invest</p>
+
+            <h1 id="h-side">Hvad sker der, når du betaler?</h1>
+
+            <p class="v18t-under">Fem slags tjenester og fem forskellige måder at tjene penge på.</p>
+
+            <p>Når du betaler med telefonen eller handler aktier i en app, ser det ens og enkelt ud. Bag skærmen skal oplysninger kontrolleres, penge flyttes og aftaler registreres. Temaet samler de selskaber i fonden, der laver den slags finansielle tjenester med teknologi. Det kaldes fintech.</p>
+
+            
+
+            <div class="v18t-knapper"><a class="knap knap--primaer v5-knap" href="#selskaberne">Se selskaberne <span aria-hidden="true">↓</span></a><a class="knap knap--rolig v5-knap" href="../index.html#hvert-tema">Alle temaer</a></div>
+
+          </div>
+
+          
+
+        </div>
+
+        <div class="v18t-fotobaand"><figure class="tema-foto" style="max-width:600px"><img src="../fotos/fintech.webp" width="600" height="400" alt="Kontaktløs kortbetaling ved en terminal." loading="lazy" decoding="async" style="max-width:600px"><figcaption class="foto-kredit">Foto: Europa-Kommissionen, CC BY 4.0, via Wikimedia Commons (© European Union, 2026)</figcaption></figure></div>
+
+        <section class="v18-stortal" aria-labelledby="h-andel">
+
+            <div class="v18-stortal-tal">
+
+              <h2 class="sr" id="h-andel">Temaets andel af fonden</h2>
+
+              <p class="v18-stortal-v"><span><span data-tal="temaer#fintech.andel" data-fmt="tal">…  </span></span><span class="v18-stortal-enhed">%</span></p>
+
+              <p class="v18-stortal-tekst">af PMINDI er placeret i temaet Fintech.</p>
+
+              <p class="kildelinje">Andele i PMINDI, den udgave af fonden, der udbetaler udbytte, pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span> (fondens data).</p>
+
+            </div>
+
+            <div class="v18-stortal-figur v18-ramme">
+
+              <div class="mini-soejler" aria-hidden="true" data-liste="temaer" data-skabelon="tpl-mini" data-aktiv-id="fintech"></div>
+
+              <p class="lille mini-forklaring">De <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer efter størrelse. Fintech er <span data-tal="temaer#fintech.plads" data-fmt="plads">nr. …</span>.</p>
+
+            </div>
+
+            <details class="fold-ud v18-flere-tal">
+
+              <summary>Flere tal om temaet</summary>
+
+              <ul class="fakta-liste">
+
+                <li><span>Plads blandt <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer</span><strong><span data-tal="temaer#fintech.plads" data-fmt="Plads">Nr. …</span></strong></li>
+
+                <li><span>Selskaber i temaet</span><strong><span data-tal="temaer#fintech.antal" data-fmt="heltal">… </span></strong></li>
+
+                <li class="fakta-stak"><span>Største selskab</span><strong><span data-navn="temaer#fintech.stoerste">…</span> · <span data-tal="temaer#fintech.stoerste.andel" data-fmt="pct">…   %</span></strong></li>
+
+              </ul>
+
+            </details>
+
+          </section>
+
+        
+
+        </div>
+
+      </section>
+
+      <div class="v5f v5f-fintech" data-v5-fortaelling="fintech"><div aria-hidden="true" class="tak"></div><section aria-labelledby="fonden-h" class="s" id="fonden"><div class="wrap">
+
+<p class="eyebrow"><span aria-hidden="true" class="rg"></span>Fonden</p>
+
+<h2 id="fonden-h">Fintech i fonden</h2>
+
+<div class="fonden-g">
+
+
+
+<div>
+
+<p class="brod">Temaet handler om noget, de fleste gør hver dag.</p>
+
+
+
+<p class="brod" style="margin-top:22px">En digital wallet er en betalingsapp i fx telefonen, hvor kortet er gemt. </p>
+
+
+
+</div>
+
+</div><figure class="pd-explainer" data-diagram="fintech"><div class="pd-explainer-art"><picture><source media="(max-width:600px)" srcset="../assets/img/v5-temaer/energi-konkurrence/temaer/faelles/prisdesign/forklar-fintech-390.svg"></source><img class="kun-moerk" alt="" height="540" src="../assets/img/v5-temaer/energi-konkurrence/temaer/faelles/prisdesign/forklar-fintech.svg" width="960"><img loading="lazy" class="kun-lys" alt="" height="540" src="../assets/img/v5-temaer/energi-konkurrence/temaer/faelles/prisdesign/forklar-fintech-lys.svg" width="960"></picture><span class="pd-diagram-label pd-label-left" style="--x:9%;--y:53%;--mx:9%;--my:57%">Du betaler</span><span class="pd-diagram-label" style="--x:30%;--y:53%;--mx:30%;--my:23%">Kontrol</span><span class="pd-diagram-label" style="--x:48%;--y:53%;--mx:48%;--my:57%">Pengene flyttes</span><span class="pd-diagram-label" style="--x:66%;--y:53%;--mx:66%;--my:23%">Gebyr</span><span class="pd-diagram-label" style="--x:88%;--y:54.9%;--mx:88%;--my:59.4%">Butikken</span><span class="pd-diagram-label" style="--x:57%;--y:77%;--mx:57%;--my:81%">Betal over tid</span></div><figcaption>Illustration: NewDeal Invest.</figcaption></figure>
+
+</div></section><section aria-labelledby="spredt-h" class="s" id="spredt"><div class="wrap">
+
+<p class="eyebrow"><span aria-hidden="true" class="rg"></span>Hvad der vejer mest</p>
+
+<h2 class="ikh2" id="spredt-h"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16M4 10h16M4 14h16M4 18h16" stroke-width="1"></path><path d="M15 6h5M16 10h4M15.5 14h4.5M16.5 18h3.5"></path></svg>Intet enkelt stort selskab</h2>
+
+<div class="post-g">
+
+<div>
+
+<p data-ft-live="" data-ft-spread="" hidden=""></p>
+
+<p data-ft-groups-description="" data-ft-live="" hidden="" style="margin-top:12px"></p>
+
+</div>
+
+<div class="pd-ranked" data-ft-live="" data-ft-ranked="" hidden=""></div>
+
+</div>
+
+</div></section><section aria-labelledby="cq-ft-h" class="cq-ft" id="cq-ft">
+
+
+
+<div class="cq-ft__in">
+
+<p class="cq-ft__kick">Fintech</p>
+
+<h2 class="cq-ft__h2" id="cq-ft-h">Fem slags tjenester</h2>
+
+<p class="cq-ft__date" data-ft-date="" data-ft-live="" hidden=""></p>
+
+<p class="cq-ft__lead">Kvitteringen har fem linjer. Hver linje viser, hvad der sker for kunden, og hvordan selskaberne tjener penge. Tryk på en linje for at se mere.</p>
+
+<div class="cq-ft__stage">
+
+<div class="cq-ft__paper">
+
+<div class="cq-ft__hd"><svg aria-hidden="true" class="cq-ft__hi" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 3l1.5 1 1.5-1 1.5 1 1.5-1 1.5 1 1.5-1 1.5 1 1.5-1V21H6z"></path><path d="M8.5 8h2.5M8.5 11h2.5M8.5 14h2.5" stroke-width="1"></path><path d="M11.75 8h1M11.75 11h1M11.75 14h1" stroke-dasharray=".5 1" stroke-width="1"></path><path d="M14 8h1.5M14 11h1.5M14 14h1.5"></path><path d="M8.5 17.25h7" stroke-width="1"></path></svg><p class="cq-ft__ht">Kvittering</p><p class="cq-ft__hc">Andel af fonden</p></div>
+
+<label class="pd-fintech-select">Find et selskab fra A til Å<select id="pd-fintech-select"><option value="">Vælg selskab</option><option value="pd-fintech-company-11">Affirm</option><option value="pd-fintech-company-18">Ategrity</option><option value="pd-fintech-company-6">Chime</option><option value="pd-fintech-company-12">DLocal</option><option value="pd-fintech-company-0">eToro</option><option value="pd-fintech-company-14">Figure</option><option value="pd-fintech-company-3">Futu</option><option value="pd-fintech-company-10">Global-e</option><option value="pd-fintech-company-7">Kaspi.kz</option><option value="pd-fintech-company-8">Klarna</option><option value="pd-fintech-company-17">Lemonade</option><option value="pd-fintech-company-5">Nu</option><option value="pd-fintech-company-15">Pagaya</option><option value="pd-fintech-company-2">Robinhood</option><option value="pd-fintech-company-16">Root</option><option value="pd-fintech-company-9">Shift4</option><option value="pd-fintech-company-4">SoFi</option><option value="pd-fintech-company-13">Upstart</option><option value="pd-fintech-company-1">Webull</option></select></label><ul aria-label="Kvitteringens linjer" class="cq-ft__lines"><li class="cq-ft__ln"><button aria-controls="cq-ft-p-brokerage" aria-expanded="false" class="cq-ft__dx cq-ft__lb" data-g="brokerage" data-grp="ft" type="button"><svg aria-hidden="true" class="cq-ft__gi pd-group-icon" fill="none" focusable="false" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M4 8h14"></path><path d="M15 4.5L18.5 8 15 11.5"></path><path d="M20 16H6"></path><path d="M9 12.5L5.5 16 9 19.5"></path></svg><span aria-hidden="true" class="cq-ft__gn">Handelsplatforme og mæglere<span class="cq-ft__gs"></span></span><span aria-hidden="true" class="cq-ft__dots"></span><span aria-hidden="true" class="cq-ft__amt" data-ft-live="" hidden=""><span class="cq-ft__gw" data-ft-live="" hidden=""></span><span aria-hidden="true" class="cq-ft__bt"><i style="width:0%"></i></span></span><span class="cq-ft__sr"></span></button>
+
+<p class="cq-ft__what"><span class="cq-ft__fl">Hvad sker der</span> Kunden handler aktier og andre værdipapirer i en app. Hos eToro kan brugerne også følge hinanden som i et socialt netværk.</p>
+
+<div aria-label="Handelsplatforme og mæglere" class="cq-ft__panel cq-ft__scope" hidden="" id="cq-ft-p-brokerage" role="region">
+
+<div class="cq-ft__ph"><p class="cq-ft__fl cq-ft__fl--earn"><svg aria-hidden="true" class="cq-ft__fi" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 12h13"></path><path d="M17.5 12h3.5" stroke-width="3"></path><path d="M16 8.5v7" stroke-dasharray="1 1.25" stroke-width="1"></path></svg>Sådan tjener selskaberne penge</p><button class="cq-ft__close" data-for="cq-ft-p-brokerage" type="button">Luk<span class="cq-ft__sr"> Handelsplatforme og mæglere</span></button></div>
+
+<p class="cq-ft__earn"> En del af handlen er krypto, som har sit eget tema i fonden: <a href="krypto.html"><em>Krypto</em></a>.</p><ul class="cq-ft__cos" data-top="5" id="cq-ft-l-brokerage"><li><button aria-pressed="false" class="cq-ft__co" data-a="Krypto" data-d="Kombinerer et socialt netværk med en digital handels- og investeringsplatform." data-g="Handelsplatforme og mæglere" id="pd-fintech-company-0" type="button"><span class="cq-ft__lg"><span aria-hidden="true" class="cq-ft__ini">ET</span></span><span class="cq-ft__nm">eToro <svg aria-hidden="true" class="cq-ft__fod" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 7l1.5 1L6 7l1.5 1L9 7l1.5 1L12 7v7H3z" stroke-dasharray="2 1.5"></path><path d="M12 14l4 4"></path><circle cx="18" cy="19.5" fill="currentColor" r="1.5"></circle></svg></span><span class="cq-ft__cw" data-ft-live="" hidden=""></span></button></li><li><button aria-pressed="false" class="cq-ft__co" data-d="Digital investeringsplatform rettet mod yngre private investorer." data-g="Handelsplatforme og mæglere" id="pd-fintech-company-1" type="button"><span class="cq-ft__lg"><span aria-hidden="true" class="cq-ft__ini">WE</span></span><span class="cq-ft__nm">Webull</span><span class="cq-ft__cw" data-ft-live="" hidden=""></span></button></li><li><button aria-pressed="false" class="cq-ft__co" data-a="Krypto" data-d="Handelsplatform, hvor kunderne handler aktier, krypto og aftaler om at handle til en fast pris senere (optioner og futures)." data-g="Handelsplatforme og mæglere" id="pd-fintech-company-2" type="button"><span class="cq-ft__lg"><span aria-hidden="true" class="cq-ft__ini">RO</span></span><span class="cq-ft__nm">Robinhood <svg aria-hidden="true" class="cq-ft__fod" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 7l1.5 1L6 7l1.5 1L9 7l1.5 1L12 7v7H3z" stroke-dasharray="2 1.5"></path><path d="M12 14l4 4"></path><circle cx="18" cy="19.5" fill="currentColor" r="1.5"></circle></svg></span><span class="cq-ft__cw" data-ft-live="" hidden=""></span></button></li><li><button aria-pressed="false" class="cq-ft__co" data-d="Apps til handel med aktier og til opsparing (Futubull og Moomoo)." data-g="Handelsplatforme og mæglere" id="pd-fintech-company-3" type="button"><span class="cq-ft__lg"><span aria-hidden="true" class="cq-ft__ini">FU</span></span><span class="cq-ft__nm">Futu</span><span class="cq-ft__cw" data-ft-live="" hidden=""></span></button></li></ul><div aria-live="polite" class="cq-ft__info"><p class="cq-ft__hint">Tryk på et selskab for at se, hvad det laver.</p></div></div></li><li class="cq-ft__ln"><button aria-controls="cq-ft-p-neobank" aria-expanded="false" class="cq-ft__dx cq-ft__lb" data-g="neobank" data-grp="ft" type="button"><svg aria-hidden="true" class="cq-ft__gi pd-group-icon" fill="none" focusable="false" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><rect height="19" rx="2.5" width="12" x="6" y="2.5"></rect><path d="M9 10.5l3-2 3 2"></path><path d="M9.5 11v4M12 11v4M14.5 11v4"></path><path d="M9 15.5h6"></path><path d="M11 18.5h2"></path></svg><span aria-hidden="true" class="cq-ft__gn">Banker i en app<span class="cq-ft__gs"></span></span><span aria-hidden="true" class="cq-ft__dots"></span><span aria-hidden="true" class="cq-ft__amt" data-ft-live="" hidden=""><span class="cq-ft__gw" data-ft-live="" hidden=""></span><span aria-hidden="true" class="cq-ft__bt"><i style="width:0%"></i></span></span><span class="cq-ft__sr"></span></button>
+
+<p class="cq-ft__what"><span class="cq-ft__fl">Hvad sker der</span> Kunden låner, sparer og betaler i én app. Den slags banker kaldes også neobanker, fordi de kun findes digitalt.</p>
+
+<div aria-label="Banker i en app" class="cq-ft__panel cq-ft__scope" hidden="" id="cq-ft-p-neobank" role="region">
+
+<div class="cq-ft__ph"><p class="cq-ft__fl cq-ft__fl--earn"><svg aria-hidden="true" class="cq-ft__fi" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 12h13"></path><path d="M17.5 12h3.5" stroke-width="3"></path><path d="M16 8.5v7" stroke-dasharray="1 1.25" stroke-width="1"></path></svg>Sådan tjener selskaberne penge</p><button class="cq-ft__close" data-for="cq-ft-p-neobank" type="button">Luk<span class="cq-ft__sr"> Banker i en app</span></button></div>
+
+<p class="cq-ft__earn">Mest på renter af lån og på gebyrer, fx et lille gebyr, når kunden betaler med kortet. SoFi har sin egen bank. Chime er ikke selv en bank. Bankydelserne leveres af The Bancorp Bank og Stride Bank. </p><ul class="cq-ft__cos" data-top="5" id="cq-ft-l-neobank"><li><button aria-pressed="false" class="cq-ft__co" data-d="Medlemmerne kan låne, spare, bruge, investere og beskytte deres penge i én fælles app. Ejer sin egen bank, SoFi Bank." data-g="Banker i en app" id="pd-fintech-company-4" type="button"><span class="cq-ft__lg"><span aria-hidden="true" class="cq-ft__ini">SO</span></span><span class="cq-ft__nm">SoFi</span><span class="cq-ft__cw" data-ft-live="" hidden=""></span></button></li><li><button aria-pressed="false" class="cq-ft__co" data-d="Bank og betaling i en app. Har kunder i Mexico og Colombia ud over Brasilien." data-g="Banker i en app" id="pd-fintech-company-5" type="button"><span class="cq-ft__lg"><span aria-hidden="true" class="cq-ft__ini">NU</span></span><span class="cq-ft__nm">Nu</span><span class="cq-ft__cw" data-ft-live="" hidden=""></span></button></li><li><button aria-pressed="false" class="cq-ft__co" data-d="App til bankforretninger i USA." data-g="Banker i en app" id="pd-fintech-company-6" type="button"><span class="cq-ft__lg"><span aria-hidden="true" class="cq-ft__ini">CH</span></span><span class="cq-ft__nm">Chime</span><span class="cq-ft__cw" data-ft-live="" hidden=""></span></button></li><li><button aria-pressed="false" class="cq-ft__co" data-a="Platformsøkonomi" data-d="Markedsplads, betalinger og bank i én app. Ca. 27,5 mio. brugere i Kasakhstan og Tyrkiet (Hepsiburada)." data-g="Banker i en app" id="pd-fintech-company-7" type="button"><span class="cq-ft__lg"><span aria-hidden="true" class="cq-ft__ini">KA</span></span><span class="cq-ft__nm">Kaspi.kz <svg aria-hidden="true" class="cq-ft__fod" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 7l1.5 1L6 7l1.5 1L9 7l1.5 1L12 7v7H3z" stroke-dasharray="2 1.5"></path><path d="M12 14l4 4"></path><circle cx="18" cy="19.5" fill="currentColor" r="1.5"></circle></svg></span><span class="cq-ft__cw" data-ft-live="" hidden=""></span></button></li></ul><div aria-live="polite" class="cq-ft__info"><p class="cq-ft__hint">Tryk på et selskab for at se, hvad det laver.</p></div></div></li><li class="cq-ft__ln"><button aria-controls="cq-ft-p-payments" aria-expanded="false" class="cq-ft__dx cq-ft__lb" data-g="payments" data-grp="ft" type="button"><svg aria-hidden="true" class="cq-ft__gi pd-group-icon" fill="none" focusable="false" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><rect height="12" rx="2" width="13" x="3" y="6"></rect><path d="M3 10h13"></path><path d="M6 14.5h3"></path><path d="M18.5 9.5a4 4 0 0 1 0 5"></path><path d="M20.5 7.5a7 7 0 0 1 0 9"></path></svg><span aria-hidden="true" class="cq-ft__gn">Betalinger<span class="cq-ft__gs"></span></span><span aria-hidden="true" class="cq-ft__dots"></span><span aria-hidden="true" class="cq-ft__amt" data-ft-live="" hidden=""><span class="cq-ft__gw" data-ft-live="" hidden=""></span><span aria-hidden="true" class="cq-ft__bt"><i style="width:0%"></i></span></span><span class="cq-ft__sr"></span></button>
+
+<p class="cq-ft__what"><span class="cq-ft__fl">Hvad sker der</span> Pengene flyttes fra kunden til butikken, i en fysisk butik eller på nettet.</p>
+
+<div aria-label="Betalinger" class="cq-ft__panel cq-ft__scope" hidden="" id="cq-ft-p-payments" role="region">
+
+<div class="cq-ft__ph"><p class="cq-ft__fl cq-ft__fl--earn"><svg aria-hidden="true" class="cq-ft__fi" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 12h13"></path><path d="M17.5 12h3.5" stroke-width="3"></path><path d="M16 8.5v7" stroke-dasharray="1 1.25" stroke-width="1"></path></svg>Sådan tjener selskaberne penge</p><button class="cq-ft__close" data-for="cq-ft-p-payments" type="button">Luk<span class="cq-ft__sr"> Betalinger</span></button></div>
+
+<p class="cq-ft__earn">Typisk et lille gebyr pr. betaling, mange gange. Shift4 leverer software til butikker og sørger for, at kundernes betalinger går igennem. Klarna og Affirm lader også kunden betale over tid.  </p><ul class="cq-ft__cos" data-top="5" id="cq-ft-l-payments"><li><button aria-pressed="false" class="cq-ft__co" data-d="Lader kunden betale med det samme, senere eller over flere måneder (Pay in Full, Pay Later og Fair Financing)." data-g="Betalinger" id="pd-fintech-company-8" type="button"><span class="cq-ft__lg"><span aria-hidden="true" class="cq-ft__ini">KL</span></span><span class="cq-ft__nm">Klarna</span><span class="cq-ft__cw" data-ft-live="" hidden=""></span></button></li><li><button aria-pressed="false" class="cq-ft__co" data-d="Software til butikker, og betalingerne går igennem Shift4. Gennem Global Blue får turister momsen tilbage, når de handler i udlandet." data-g="Betalinger" id="pd-fintech-company-9" type="button"><span class="cq-ft__lg"><span aria-hidden="true" class="cq-ft__ini">SH</span></span><span class="cq-ft__nm">Shift4</span><span class="cq-ft__cw" data-ft-live="" hidden=""></span></button></li><li><button aria-pressed="false" class="cq-ft__co" data-a="Platformsøkonomi" data-d="Handel på nettet over grænser. Når en webbutik har kunder i udlandet, er det formelt Global-e, der står for salget." data-g="Betalinger" id="pd-fintech-company-10" type="button"><span class="cq-ft__lg"><span aria-hidden="true" class="cq-ft__ini">GE</span></span><span class="cq-ft__nm">Global-e <svg aria-hidden="true" class="cq-ft__fod" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 7l1.5 1L6 7l1.5 1L9 7l1.5 1L12 7v7H3z" stroke-dasharray="2 1.5"></path><path d="M12 14l4 4"></path><circle cx="18" cy="19.5" fill="currentColor" r="1.5"></circle></svg></span><span class="cq-ft__cw" data-ft-live="" hidden=""></span></button></li><li><button aria-pressed="false" class="cq-ft__co" data-d="Betaling over tid med lån, der betales af hver måned med renter, og betalingskortet Affirm Card. Handelsværdien, altså værdien af det, kunderne handlede for med Affirm, var 50,2 mia. USD i regnskabsåret til 30.06.2026." data-g="Betalinger" id="pd-fintech-company-11" type="button"><span class="cq-ft__lg"><span aria-hidden="true" class="cq-ft__ini">AF</span></span><span class="cq-ft__nm">Affirm</span><span class="cq-ft__cw" data-ft-live="" hidden=""></span></button></li><li><button aria-pressed="false" class="cq-ft__co" data-d="Hjælper internationale butikker med at tage imod betalinger fra kunder i vækstmarkeder. Betalinger for ca. 40,8 mia. USD gik igennem DLocal i 2025." data-g="Betalinger" id="pd-fintech-company-12" type="button"><span class="cq-ft__lg"><span aria-hidden="true" class="cq-ft__ini">DL</span></span><span class="cq-ft__nm">DLocal</span><span class="cq-ft__cw" data-ft-live="" hidden=""></span></button></li></ul><div aria-live="polite" class="cq-ft__info"><p class="cq-ft__hint">Tryk på et selskab for at se, hvad det laver.</p></div></div></li><li class="cq-ft__ln"><button aria-controls="cq-ft-p-lending" aria-expanded="false" class="cq-ft__dx cq-ft__lb" data-g="lending" data-grp="ft" type="button"><svg aria-hidden="true" class="cq-ft__gi pd-group-icon" fill="none" focusable="false" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><ellipse cx="9.5" cy="8" rx="5.5" ry="2.5"></ellipse><path d="M4 8v4c0 1.4 2.5 2.5 5.5 2.5S15 13.4 15 12V8"></path><path d="M4 12v4c0 1.4 2.5 2.5 5.5 2.5 1 0 1.9-.1 2.7-.3"></path><path d="M15.5 16.5a3.5 3.5 0 1 0 1.5-4.5"></path><path d="M16.4 10.4l.6 1.8-1.8.6"></path></svg><span aria-hidden="true" class="cq-ft__gn">Lån og kreditteknologi<span class="cq-ft__gs"></span></span><span aria-hidden="true" class="cq-ft__dots"></span><span aria-hidden="true" class="cq-ft__amt" data-ft-live="" hidden=""><span class="cq-ft__gw" data-ft-live="" hidden=""></span><span aria-hidden="true" class="cq-ft__bt"><i style="width:0%"></i></span></span><span class="cq-ft__sr"></span></button>
+
+<p class="cq-ft__what"><span class="cq-ft__fl">Hvad sker der</span> En låneansøgning bliver vurderet, før pengene udbetales.</p>
+
+<div aria-label="Lån og kreditteknologi" class="cq-ft__panel cq-ft__scope" hidden="" id="cq-ft-p-lending" role="region">
+
+<div class="cq-ft__ph"><p class="cq-ft__fl cq-ft__fl--earn"><svg aria-hidden="true" class="cq-ft__fi" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 12h13"></path><path d="M17.5 12h3.5" stroke-width="3"></path><path d="M16 8.5v7" stroke-dasharray="1 1.25" stroke-width="1"></path></svg>Sådan tjener selskaberne penge</p><button class="cq-ft__close" data-for="cq-ft-p-lending" type="button">Luk<span class="cq-ft__sr"> Lån og kreditteknologi</span></button></div>
+
+<p class="cq-ft__earn">En långiver tjener på renter, men kan miste penge på lån. Upstart og Pagaya laver computermodeller, som långivere bruger til at vurdere, om den, der søger om lån, kan betale tilbage. Figure laver boliglån med sikkerhed i boligens friværdi og registrerer lånene på blockchainen Provenance.</p><ul class="cq-ft__cos" data-top="5" id="cq-ft-l-lending"><li><button aria-pressed="false" class="cq-ft__co" data-a="Software &amp; AI" data-d="Markedsplads for lån bygget på egne AI-modeller, som långivere bruger til forbrugslån uden sikkerhed og til at lægge billån om." data-g="Lån og kreditteknologi" id="pd-fintech-company-13" type="button"><span class="cq-ft__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/fintech/fra-critiquito/logoer/upstart.webp" width="28"></span><span class="cq-ft__nm">Upstart <svg aria-hidden="true" class="cq-ft__fod" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 7l1.5 1L6 7l1.5 1L9 7l1.5 1L12 7v7H3z" stroke-dasharray="2 1.5"></path><path d="M12 14l4 4"></path><circle cx="18" cy="19.5" fill="currentColor" r="1.5"></circle></svg></span><span class="cq-ft__cw" data-ft-live="" hidden=""></span></button></li><li><button aria-pressed="false" class="cq-ft__co" data-a="Krypto" data-d="Bruger blockchain, en fælles digital bog over hvem der ejer hvad, til lån og værdipapirer. Boliglån med sikkerhed i boligens friværdi står for næsten hele omsætningen." data-g="Lån og kreditteknologi" id="pd-fintech-company-14" type="button"><span class="cq-ft__lg"><span aria-hidden="true" class="cq-ft__ini">FT</span></span><span class="cq-ft__nm">Figure <svg aria-hidden="true" class="cq-ft__fod" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 7l1.5 1L6 7l1.5 1L9 7l1.5 1L12 7v7H3z" stroke-dasharray="2 1.5"></path><path d="M12 14l4 4"></path><circle cx="18" cy="19.5" fill="currentColor" r="1.5"></circle></svg></span><span class="cq-ft__cw" data-ft-live="" hidden=""></span></button></li><li><button aria-pressed="false" class="cq-ft__co" data-d="Teknologi til långivere, der giver forbrugslån. Långivere kan sende afviste låneansøgninger videre til Pagayas netværk, hvor AI-modeller vurderer dem igen." data-g="Lån og kreditteknologi" id="pd-fintech-company-15" type="button"><span class="cq-ft__lg"><span aria-hidden="true" class="cq-ft__ini">PT</span></span><span class="cq-ft__nm">Pagaya</span><span class="cq-ft__cw" data-ft-live="" hidden=""></span></button></li></ul><div aria-live="polite" class="cq-ft__info"><p class="cq-ft__hint">Tryk på et selskab for at se, hvad det laver.</p></div></div></li><li class="cq-ft__ln"><button aria-controls="cq-ft-p-insurance" aria-expanded="false" class="cq-ft__dx cq-ft__lb" data-g="insurance" data-grp="ft" type="button"><svg aria-hidden="true" class="cq-ft__gi pd-group-icon" fill="none" focusable="false" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3c-4.7 0-8.5 3.4-9 7.5h18C20.5 6.4 16.7 3 12 3z"></path><path d="M12 10.5V18a2 2 0 0 1-4 0"></path><path d="M12 3v-.5"></path></svg><span aria-hidden="true" class="cq-ft__gn">Forsikring<span class="cq-ft__gs"></span></span><span aria-hidden="true" class="cq-ft__dots"></span><span aria-hidden="true" class="cq-ft__amt" data-ft-live="" hidden=""><span class="cq-ft__gw" data-ft-live="" hidden=""></span><span aria-hidden="true" class="cq-ft__bt"><i style="width:0%"></i></span></span><span class="cq-ft__sr"></span></button>
+
+<p class="cq-ft__what"><span class="cq-ft__fl">Hvad sker der</span> Kunden betaler for en forsikring og får penge, hvis skaden sker.</p>
+
+<div aria-label="Forsikring" class="cq-ft__panel cq-ft__scope" hidden="" id="cq-ft-p-insurance" role="region">
+
+<div class="cq-ft__ph"><p class="cq-ft__fl cq-ft__fl--earn"><svg aria-hidden="true" class="cq-ft__fi" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 12h13"></path><path d="M17.5 12h3.5" stroke-width="3"></path><path d="M16 8.5v7" stroke-dasharray="1 1.25" stroke-width="1"></path></svg>Sådan tjener selskaberne penge</p><button class="cq-ft__close" data-for="cq-ft-p-insurance" type="button">Luk<span class="cq-ft__sr"> Forsikring</span></button></div>
+
+<p class="cq-ft__earn">På forskellen mellem det, kunderne betaler, og det, skaderne og driften koster. Root sætter prisen på bilforsikring efter, hvordan kunden kører. Lemonade tilbyder lejer-, hus-, dyre-, bil- og livsforsikring. Kunden tegner forsikringen og anmelder skader i en chat med et computerprogram (en chatbot).</p><ul class="cq-ft__cos" data-top="5" id="cq-ft-l-insurance"><li><button aria-pressed="false" class="cq-ft__co" data-d="Bilforsikring, hvor prisen mest bygger på, hvordan kunden kører, og mindre på, hvem kunden er." data-g="Forsikring" id="pd-fintech-company-16" type="button"><span class="cq-ft__lg"><span aria-hidden="true" class="cq-ft__ini">RO</span></span><span class="cq-ft__nm">Root</span><span class="cq-ft__cw" data-ft-live="" hidden=""></span></button></li><li><button aria-pressed="false" class="cq-ft__co" data-a="Software &amp; AI" data-d="Lejer-, hus-, dyre-, bil- og livsforsikring. Kunden tegner forsikringen og anmelder skader i en chat med et computerprogram (en chatbot)." data-g="Forsikring" id="pd-fintech-company-17" type="button"><span class="cq-ft__lg"><img alt="" decoding="async" height="28" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/fintech/fra-critiquito/logoer/lemonade.webp" width="28"></span><span class="cq-ft__nm">Lemonade <svg aria-hidden="true" class="cq-ft__fod" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 7l1.5 1L6 7l1.5 1L9 7l1.5 1L12 7v7H3z" stroke-dasharray="2 1.5"></path><path d="M12 14l4 4"></path><circle cx="18" cy="19.5" fill="currentColor" r="1.5"></circle></svg></span><span class="cq-ft__cw" data-ft-live="" hidden=""></span></button></li><li><button aria-pressed="false" class="cq-ft__co" data-d="Forsikrer ejendom og ansvar for små og mellemstore virksomheder i USA, ofte risici, som almindelige forsikringer ikke dækker." data-g="Forsikring" id="pd-fintech-company-18" type="button"><span class="cq-ft__lg"><span aria-hidden="true" class="cq-ft__ini">AS</span></span><span class="cq-ft__nm">Ategrity</span><span class="cq-ft__cw" data-ft-live="" hidden=""></span></button></li></ul><div aria-live="polite" class="cq-ft__info"><p class="cq-ft__hint">Tryk på et selskab for at se, hvad det laver.</p></div></div></li></ul>
+
+<div class="cq-ft__sum" data-ft-live="" hidden=""><svg aria-hidden="true" class="cq-ft__gi" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 8h18M3 10.5h18" stroke-width="1"></path><path d="M3 15.5h5" stroke-width="1"></path><path d="M13 15.5h8" stroke-width="3"></path></svg><span class="cq-ft__gn">I alt<span class="cq-ft__gs"></span></span><span aria-hidden="true" class="cq-ft__dots"></span><span class="cq-ft__amt" data-ft-live="" hidden=""><span class="cq-ft__gw" data-ft-live="" hidden=""></span></span></div>
+
+<a class="cq-ft__small" href="#det-med-smaat"><svg aria-hidden="true" class="cq-ft__si" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 5h10M3 8h8M3 11h10M3 14h6" stroke-width="1"></path><circle cx="16" cy="15" r="4"></circle><path d="M19 18l2.5 2.5"></path></svg><span><b>Det, man skal vide om temaet,</b> står længere nede på siden.</span></a>
+
+</div>
+
+<div class="cq-ft__side">
+
+<p class="cq-ft__key"><svg aria-hidden="true" class="cq-ft__ki" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 12h4" stroke-width="1"></path><path d="M9 12h5" stroke-dasharray=".5 1.5" stroke-width="1"></path><path d="M16 12h5" stroke-width="3"></path></svg><span>Tallet til højre og bjælken under det viser linjens andel af fonden.</span></p>
+
+<p class="cq-ft__key"><svg aria-hidden="true" class="cq-ft__ki" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 7l1.5 1L6 7l1.5 1L9 7l1.5 1L12 7v7H3z" stroke-dasharray="2 1.5"></path><path d="M12 14l4 4"></path><circle cx="18" cy="19.5" fill="currentColor" r="1.5"></circle></svg><span>Mærket ved et selskab betyder, at det også hører til et andet tema.</span></p>
+
+<p class="cq-ft__note">Sea, Grab og MercadoLibre hører til Platformsøkonomi, Coinbase og Circle til Krypto og Oscar Health til Sundhed og biotek. De tælles under deres egne temaer og indgår derfor ikke i fintechs andel.</p>
+
+</div></div>
+
+</div>
+
+
+
+</section><p class="tvaers">Syv af temaets egne selskaber laver også noget, der hører til et andet tema: Upstart og Lemonade (<a href="software.html">Software &amp; AI</a>), eToro, Robinhood og Figure (<a href="krypto.html">Krypto</a>) og Global-e og Kaspi.kz (<a href="platforme.html">Platformsøkonomi</a>). De har et mærke i kvitteringen, og i fondens opdeling tælles de kun med her.</p><section aria-labelledby="kassen-h" class="s kasse" id="kassen"><div class="wrap">
+
+<div class="vid-g">
+
+<div>
+
+<p class="eyebrow"><span aria-hidden="true" class="rg"></span>Ved kassen</p>
+
+<h2 id="kassen-h">Et tryk med kortet</h2>
+
+<p class="smal" style="margin-top:10px">Wall Street Journal skiller en kortlæser ad og viser, at kortet sender en engangskode i stedet for kortnummeret. Videoen er ikke fondens holdning.</p>
+
+</div>
+
+<figure class="vid"><div class="vid-ramme" data-title="Video: Why Tap-to-Pay Is Safer Than a Credit Card Swipe (The Wall Street Journal)" data-yt="S7dWigI7Soc"><button aria-label="Videoen hentes fra YouTube." class="vid-play" type="button"><picture><source media="(max-width:599px)" srcset="../assets/img/v5-temaer/energi-konkurrence/temaer/fintech/fra-billedstil/billeder/fintech-plakat-S7dWigI7Soc-mobil.webp"></source><img alt="" height="720" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/fintech/fra-billedstil/billeder/fintech-plakat-S7dWigI7Soc-bred.webp" width="1280"></picture><span aria-hidden="true" class="vid-kilde">The Wall Street Journal</span><span aria-hidden="true" class="vid-ikon"></span><span aria-hidden="true" class="vid-tid">6:53</span></button></div><figcaption><span class="aar">Fra 2023</span><b>WSJ: Why Tap-to-Pay Is Safer Than a Credit Card Swipe</b>The Wall Street Journal, på engelsk. Den handler om amerikanske forhold.</figcaption></figure>
+
+</div>
+
+</div></section><div aria-hidden="true" class="tak" style="margin-top:28px"></div><section aria-labelledby="h-x" class="s xs" id="i-nyhederne"><div class="wrap">
+
+<p class="eyebrow"><span aria-hidden="true" class="rg"></span>Set udefra</p>
+
+<h2 id="h-x">Betalinger i nyhederne</h2>
+
+<p class="lead-s">Her er udvalgte opslag og videoer fra medier, en centralbank og selskaber. De er ikke fondens holdning. Opslag og videoer hentes først, når du trykker på dem.</p>
+
+<ul class="sm-l" role="list" style="margin-top:16px">
+
+<li class="sm"><div class="vid"><div class="vid-ramme" data-title="Video: Why Using Your Credit Card Is Getting More Expensive (The Wall Street Journal)" data-yt="Z1dgvwpxud8"><button aria-label="Videoen hentes fra YouTube." class="vid-play" type="button"><picture><source media="(max-width:599px)" srcset="../assets/img/v5-temaer/energi-konkurrence/temaer/fintech/fra-billedstil/billeder/fintech-plakat-Z1dgvwpxud8-mobil.webp"></source><img alt="" height="720" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/fintech/fra-billedstil/billeder/fintech-plakat-Z1dgvwpxud8-bred.webp" width="1280"></picture><span aria-hidden="true" class="vid-kilde">The Wall Street Journal</span><span aria-hidden="true" class="vid-ikon"></span><span aria-hidden="true" class="vid-tid">5:35</span></button></div></div><p class="sm-t"><span class="aar">Fra 2022</span><b>Hvem tager et gebyr, når du betaler med kort</b>The Wall Street Journal, på engelsk. Den handler om amerikanske kreditkort. I EU er reglerne for kortgebyrer anderledes.</p></li>
+
+<li class="sm"><div class="vid"><div class="vid-ramme" data-title="Video: How 'Buy Now, Pay Later' Makes Billions From 'Free' Loans (The Wall Street Journal)" data-yt="3yC8WDjCIAU"><button aria-label="Videoen hentes fra YouTube." class="vid-play" type="button"><picture><source media="(max-width:599px)" srcset="../assets/img/v5-temaer/energi-konkurrence/temaer/fintech/fra-billedstil/billeder/fintech-plakat-3yC8WDjCIAU-mobil.webp"></source><img alt="" height="720" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/fintech/fra-billedstil/billeder/fintech-plakat-3yC8WDjCIAU-bred.webp" width="1280"></picture><span aria-hidden="true" class="vid-kilde">The Wall Street Journal</span><span aria-hidden="true" class="vid-ikon"></span><span aria-hidden="true" class="vid-tid">8:25</span></button></div></div><p class="sm-t"><b>Sådan tjener betaling over tid penge</b>The Wall Street Journal, 2025, på engelsk. Tallene i videoen gengives ikke her.</p></li>
+
+</ul>
+
+<details class="mere">
+
+<summary>Læs mere</summary>
+
+<div class="mere-in">
+
+<ul class="sm-l" role="list">
+
+<li class="sm"><div class="vid"><div class="vid-ramme" data-title="Video: How do digital payments work? | Money Matters (Bank of England)" data-yt="KmeObiXeJPw"><button aria-label="Videoen hentes fra YouTube." class="vid-play" type="button"><picture><source media="(max-width:599px)" srcset="../assets/img/v5-temaer/energi-konkurrence/temaer/fintech/fra-billedstil/billeder/fintech-plakat-KmeObiXeJPw-mobil.webp"></source><img alt="" height="720" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/fintech/fra-billedstil/billeder/fintech-plakat-KmeObiXeJPw-bred.webp" width="1280"></picture><span aria-hidden="true" class="vid-kilde">Bank of England</span><span aria-hidden="true" class="vid-ikon"></span><span aria-hidden="true" class="vid-tid">23:26</span></button></div></div><p class="sm-t"><b>Hvordan virker digitale betalinger?</b>Bank of England, 2026, på engelsk. En medarbejder i Bank of England forklarer, hvordan pengene flyttes mellem bankerne. Beskrivelsen bygger på Bank of Englands egen tekst til videoen. Tallene i videoen gengives ikke her.</p></li>
+
+</ul>
+
+</div>
+
+</details>
+
+<ul class="xs-liste" id="x-liste" role="list" style="margin-top:22px">
+
+<li class="xp" data-url="https://x.com/business/status/2112788499447378254"><div class="xp-top"><p class="xp-trin"><span>Digital tegnebog</span></p><p class="xp-dato"><time datetime="2026-10-21">21.10.2026</time></p></div><p class="xp-fra"><b>Bloomberg</b> <span>@business · på engelsk</span></p><p class="xp-forkl"><span class="xp-k">Kort fortalt</span> Ifølge Bloomberg siger den britiske konkurrencemyndighed, at Apples kontrol over iPhone forhindrer andre betalingsapps i at konkurrere med Apples digitale tegnebog.</p><p class="xp-egne">Apple står under temaet Platformsøkonomi.</p><div class="xp-knapper"><button class="xp-vis" hidden="" type="button">Vis opslaget<span class="sr"> fra Bloomberg</span></button><a class="xp-link" href="https://x.com/business/status/2112788499447378254" rel="noopener" target="_blank">Se opslaget på X<span class="sr"> (åbner i nyt vindue)</span></a></div><div aria-label="Opslag fra Bloomberg på X" class="xp-embed" role="group" tabindex="-1"></div></li><li class="xp ekstra" data-url="https://x.com/ReutersBiz/status/2113390141091758470"><div class="xp-top"><p class="xp-trin"><span>Digitale penge</span></p><p class="xp-dato"><time datetime="2026-10-23">23.10.2026</time></p></div><p class="xp-fra"><b>Reuters</b> <span>@ReutersBiz · på engelsk</span></p><p class="xp-forkl"><span class="xp-k">Kort fortalt</span> Ifølge Reuters har Sveriges centralbank, Riksbanken, genoptaget debatten om en digital e-krone, i takt med at den digitale euro og stablecoins bliver en større udfordring. Stablecoins er kryptopenge, der er lavet til at følge værdien af fx dollar eller euro.</p><div class="xp-knapper"><button class="xp-vis" hidden="" type="button">Vis opslaget<span class="sr"> fra Reuters</span></button><a class="xp-link" href="https://x.com/ReutersBiz/status/2113390141091758470" rel="noopener" target="_blank">Se opslaget på X<span class="sr"> (åbner i nyt vindue)</span></a></div><div aria-label="Opslag fra Reuters på X" class="xp-embed" role="group" tabindex="-1"></div></li><li class="xp ekstra" data-url="https://x.com/business/status/2112572083691491633"><div class="xp-top"><p class="xp-trin"><span>Betalinger</span></p><p class="xp-dato"><time datetime="2026-10-20">20.10.2026</time></p></div><p class="xp-fra"><b>Bloomberg</b> <span>@business · på engelsk</span></p><p class="xp-forkl"><span class="xp-k">Kort fortalt</span> Ifølge Bloomberg samarbejder Visa med BILL og Billtrust om at lade AI-assistenter, der selv kan udføre opgaver, starte og gennemføre virksomheders betaling af regninger, uden at et menneske skal bekræfte sin identitet ved hver betaling.</p><p class="xp-egne">Opslaget handler om Visa og BILLs betalingstjenester.</p><div class="xp-knapper"><button class="xp-vis" hidden="" type="button">Vis opslaget<span class="sr"> fra Bloomberg</span></button><a class="xp-link" href="https://x.com/business/status/2112572083691491633" rel="noopener" target="_blank">Se opslaget på X<span class="sr"> (åbner i nyt vindue)</span></a></div><div aria-label="Opslag fra Bloomberg på X" class="xp-embed" role="group" tabindex="-1"></div></li>
+
+</ul>
+
+<button aria-controls="x-liste" aria-expanded="false" class="x-mere" hidden="" id="x-mere" type="button">Vis 2 opslag mere</button>
+
+<p class="xs-note">Opslagene er udvalgt af teamet bag NewDeal Invest. „Kort fortalt“ er vores danske gengivelse. Afsenderne og de nævnte selskaber står ikke bag denne side.</p>
+
+</div></section></div>
+
+<section class="sektion" id="selskaberne" aria-labelledby="h-selskaber">
+
+        <div class="gitter gitter--stub">
+
+          <article class="kort panel panel--bred" aria-labelledby="h-selskaber">
+
+            <header class="panel-hoved">
+
+              <div><h2 class="panel-titel" id="h-selskaber"><svg class="ik" aria-hidden="true"><use href="#i-selskab"></use></svg><span data-hvis="temaer#fintech.oevrigeAntal">De <span data-tal="temaer#fintech.antalVist" data-fmt="heltal">… </span> største af temaets <span data-tal="temaer#fintech.antal" data-fmt="antal" data-en="selskab" data-fl="selskaber">…  selskaber</span></span><span data-hvis="temaer#fintech.alleVist" hidden>Temaets <span data-tal="temaer#fintech.antal" data-fmt="antal" data-en="selskab" data-fl="selskaber">…  selskaber</span></span></h2>
+
+              <p class="hint">Tryk på et selskab for at se mere om det.</p></div>
+
+            </header>
+
+            <ul class="tema-liste" data-liste="temaer#fintech.vist" data-skabelon="tpl-tl"></ul>
+
+            <details class="fold-ud fold-liste" data-hvis="temaer#fintech.oevrigeAntal" hidden><summary><span>Vis alle <span data-tal="temaer#fintech.antal" data-fmt="antal" data-en="selskab" data-fl="selskaber">…  selskaber</span> i temaet</span></summary>
+
+              <ul class="tema-liste" data-liste="temaer#fintech.oevrige" data-skabelon="tpl-tl"></ul>
+
+            </details>
+
+            <p class="kildelinje">Andele i PMINDI, den udgave af fonden, der udbetaler udbytte, pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span> (fondens data).</p>
+
+          </article>
+
+        </div>
+
+      </section>
+
+      <section class="sektion v18-proces" data-proces-slot="fintech" hidden></section>
+
+      
+
+      <section class="sektion sektion--x" id="x-opslag" aria-labelledby="h-x-opslag" data-x-tema data-x-rel="../" data-x-selskaber='[{"isin": "US83406F1021", "navn": "SoFi", "slug": "sofi"}, {"isin": "GB00BMHVL512", "navn": "Klarna", "slug": "klarna"}, {"isin": "US91680M1071", "navn": "Upstart", "slug": "upstart"}, {"isin": "US82452J1097", "navn": "Shift4 Payments", "slug": "shift4-payments"}, {"isin": "US77664L2079", "navn": "Root", "slug": "root"}, {"isin": "US52567D1072", "navn": "Lemonade", "slug": "lemonade"}, {"isin": "US16935C1099", "navn": "Chime Financial", "slug": "chime-financial"}, {"isin": "KYG9572D1034", "navn": "Webull", "slug": "webull"}, {"isin": "KYG6683N1034", "navn": "Nu", "slug": "nu"}, {"isin": "US7707001027", "navn": "Robinhood", "slug": "robinhood-mkts"}, {"isin": "US3493811034", "navn": "Figure Technology Solutions", "slug": "figure-technology-solut"}, {"isin": "IL0011741688", "navn": "Global-e", "slug": "global-e-online"}, {"isin": "US00827B1061", "navn": "Affirm", "slug": "affirm-hldg"}, {"isin": "US36118L1061", "navn": "Futu", "slug": "futu-hldg"}, {"isin": "US48581R2058", "navn": "Kaspi.kz", "slug": "kaspi-sp-gdr-reg-s"}, {"isin": "US04681Y1038", "navn": "Ategrity Specialty Holdings", "slug": "ategrity-specialty-holdings"}, {"isin": "KYG290181018", "navn": "dLocal", "slug": "dlocal"}, {"isin": "IL0011858912", "navn": "Pagaya Technologies", "slug": "pagaya-technologies"}]'>
+
+        <header class="sektion-hoved">
+
+          <h2 class="sektion-titel" id="h-x-opslag">Det skriver de på X</h2>
+
+          <p class="sektion-intro">Udvalgte offentlige opslag om selskaberne i temaet. Opslagene er andres og ikke NewDeal Invests holdning.</p>
+
+        </header>
+
+        <div class="kort panel x-tema">
+
+          <p class="x-tema-status lille" role="status">Henter opslag …</p>
+
+          <details class="fold-ud fold-mobil fold-sektion" data-aaben-bred><summary aria-expanded="false">Se opslagene fra X</summary><ul class="x-tema-liste" hidden></ul></details>
+
+          <p class="kildelinje x-tema-kilde" hidden></p>
+
+        </div>
+
+      </section>
+
+<div class="v5f v5f-fintech" data-v5-fortaelling="fintech-b"><section aria-labelledby="risiko-h" class="s" id="risiko"><div class="wrap">
+
+<div class="risk" id="det-med-smaat">
+
+<div class="risk-top"><img class="kun-moerk" alt="" height="160" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/fintech/fra-billedstil/grafik/fintech-illu-det-med-smaat.svg" width="240"><img class="kun-lys" alt="" height="160" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/fintech/fra-billedstil/grafik/fintech-illu-det-med-smaat-lys.svg" width="240"><h2 id="risiko-h">Det skal man vide om temaet</h2></div>
+
+<ul>
+
+<li><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9h4v6H3zM9 9h4v6H9z"></path><path d="M15 9h4v6h-4z" stroke-dasharray="1.5 1.5"></path><path d="M15.5 17.5l3 3M18.5 17.5l-3 3" stroke-width="1"></path></svg><b>Kredittab.</b> Selskaber, der låner penge ud eller lader kunden betale over tid, kan miste penge, hvis kunderne ikke betaler tilbage.<span class="k">Kilde: <a href="https://www.sec.gov/Archives/edgar/data/2003292/000200329226000007/klar-20251231.htm" rel="noopener" target="_blank">Klarna, årsrapport (20-F) 2025<span class="sr"> (åbner i nyt vindue)</span></a></span></li>
+
+<li><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3l7.5 3v5.5c0 4.5-3.25 8-7.5 9.5-4.25-1.5-7.5-5-7.5-9.5V6z"></path><path d="M12 8v4l2.5 1.5" stroke-width="1"></path></svg><b>Svindel.</b> Betalinger skal kontrolleres på et splitsekund, og svindel kan koste selskaberne penge.<span class="k">Kilde: <a href="https://www.sec.gov/Archives/edgar/data/1794669/000179466926000010/four-20251231.htm" rel="noopener" target="_blank">Shift4, årsrapport (10-K) 2025<span class="sr"> (åbner i nyt vindue)</span></a></span></li>
+
+<li><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3.5v16.5M6 20.5h12M4 7.5h16"></path><path d="M6 7.5l-2.5 6a2.5 2.5 0 0 0 5 0zM18 7.5l-2.5 6a2.5 2.5 0 0 0 5 0z" stroke-width="1"></path></svg><b>Regler og tilsyn.</b> Banker, betalingsselskaber og forsikringsselskaber er under tilsyn, og nye regler kan ændre deres forretning.<span class="k">Kilder: <a href="https://www.sec.gov/Archives/edgar/data/1818874/000181887426000013/sofi-20251231.htm" rel="noopener" target="_blank">SoFi, 10-K 2025<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1788882/000178888226000014/root-20251231.htm" rel="noopener" target="_blank">Root, 10-K 2025<span class="sr"> (åbner i nyt vindue)</span></a></span></li>
+
+<li><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 20V14M9 20V10M14 20V12M19 20V16"></path><path d="M3 21h18" stroke-width="1"></path><circle cx="6.5" cy="5" fill="currentColor" r="1.25"></circle><circle cx="11.5" cy="5" r="1.25"></circle><circle cx="16.5" cy="5" r="1.25"></circle></svg><b>Kundernes aktivitet.</b> Handelsplatforme tjener mindre, når kunderne handler mindre.<span class="k">Kilde: <a href="https://www.sec.gov/Archives/edgar/data/1783879/000178387926000023/hood-20251231.htm" rel="noopener" target="_blank">Robinhood, årsrapport (10-K) 2025<span class="sr"> (åbner i nyt vindue)</span></a></span></li>
+
+<li class="ub"><b>Afhængighed af andre.</b> Nogle selskaber har ikke selv tilladelse til at drive bank. De bruger en anden banks licens, eller de tjener penge på, at långivere bruger deres modeller. Ændrer de andre vilkårene eller stopper aftalen, rammer det selskabets forretning.<span class="k">Kilder: <a href="https://www.sec.gov/Archives/edgar/data/1795586/000179558626000013/chym-20251231.htm" rel="noopener" target="_blank">Chime, 10-K 2025<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1647639/000164763926000027/upst-20251231.htm" rel="noopener" target="_blank">Upstart, 10-K 2025<span class="sr"> (åbner i nyt vindue)</span></a></span></li>
+
+</ul>
+
+<details class="mere">
+
+<summary>Læs mere: sådan leder et kortselskab efter svindel</summary>
+
+<div class="mere-in">
+
+<ul class="sm-l" role="list">
+
+<li class="sm"><div class="vid"><div class="vid-ramme" data-title="Video: Why Fraud Is Getting Smarter and How AI Catches It in Under 1 Second (Visa)" data-yt="TmYoScdhXyc"><button aria-label="Videoen hentes fra YouTube." class="vid-play" type="button"><picture><source media="(max-width:599px)" srcset="../assets/img/v5-temaer/energi-konkurrence/temaer/fintech/fra-billedstil/billeder/fintech-plakat-TmYoScdhXyc-mobil.webp"></source><img alt="" height="720" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/fintech/fra-billedstil/billeder/fintech-plakat-TmYoScdhXyc-bred.webp" width="1280"></picture><span aria-hidden="true" class="vid-kilde">Visa</span><span aria-hidden="true" class="vid-ikon"></span><span aria-hidden="true" class="vid-tid">5:26</span></button></div></div><p class="sm-t"><span class="selsk">Selskabets egen video</span><b>Sådan leder Visa efter svindel</b>Visa, 2026, på engelsk. Visa er ikke blandt fondens selskaber. Tallene i videoen er Visas egne og gengives ikke her.</p></li>
+
+</ul>
+
+</div>
+
+</details>
+
+</div>
+
+</div></section><section class="rm-section" id="mere-fra-ndi" aria-labelledby="rm-title"><p class="rm-source">VIDEOER OG OPSLAG</p><h2 id="rm-title">Bliv klogere på Fintech</h2><div class="rm-grid rm-grid-youtube"><article class="rm-video"><button type="button" class="rm-play" data-youtube="Be-JJGT-5CQ" data-start="3085" aria-label="Afspil NewDeal Invest Live Q&amp;A - April 21st at 20:00 (8 PM) with Mads Christiansen &amp; Jesper Bæk"><img loading="lazy" src="https://i.ytimg.com/vi/Be-JJGT-5CQ/hqdefault.jpg" alt=""><span class="rm-play-icon" aria-hidden="true">▶</span><span class="rm-start">Se fra 51:25</span></button><div class="rm-caption"><p class="rm-source">NEWDEAL INVEST · 2024-04-22</p><h3>NewDeal Invest Live Q&amp;A - April 21st at 20:00 (8 PM) with Mads Christiansen &amp; Jesper Bæk</h3><a href="https://www.youtube.com/watch?v=Be-JJGT-5CQ&amp;t=3085s" target="_blank" rel="noopener">Se på YouTube ↗</a></div></article></div></section><section aria-labelledby="videre-h" class="s" id="videre"><div class="wrap">
+
+<p class="eyebrow"><span aria-hidden="true" class="rg"></span>Videre</p>
+
+<h2 id="videre-h">Fondens andre temaer</h2>
+
+<div class="videre-g">
+
+<figure class="graf"><img class="kun-moerk" alt="Kvitteringen i midten med krypto og platformsøkonomi ude til siden." height="140" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/fintech/fra-billedstil/grafik/fintech-overgang-naboer.svg" width="480"><img class="kun-lys" alt="Kvitteringen i midten med krypto og platformsøkonomi ude til siden." height="140" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/fintech/fra-billedstil/grafik/fintech-overgang-naboer-lys.svg" width="480"><figcaption>Illustration: NewDeal Invest.</figcaption></figure>
+
+<div>
+
+<ul class="naboer">
+
+<li><a href="chips.html">Chips og halvledere</a></li>
+
+<li><a href="datacenter.html">Datacentre</a></li>
+
+<li><a href="fysisk-ai.html">Robotter &amp; fysisk AI</a></li>
+
+<li><a href="raastoffer.html">Råstoffer</a></li>
+
+<li><a href="rumfart.html">Rumfart</a></li>
+
+<li><a href="software.html">Software &amp; AI</a></li>
+
+<li><a href="kvante.html">Kvantecomputere</a></li>
+
+<li><a href="platforme.html">Platformsøkonomi</a></li>
+
+<li><a href="krypto.html">Krypto</a></li>
+
+<li><a href="sundhed.html">Sundhed og biotek</a></li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div></section><section aria-labelledby="h-kilder" class="kilder-s" id="kilder"><div class="wrap">
+
+<details class="kilder">
+
+<summary><h2 id="h-kilder">Kilder og kreditering</h2></summary>
+
+<ul>
+
+<li>Andele hentes fra fondens seneste validerede opgørelse. Datoen vises sammen med tallene. Temaer og grupper: NewDeal Invests redaktionelle opdeling. Beskrivelserne bygger på selskabernes daterede årsrapporter.</li>
+
+<li>Kortbetalinger og digitale wallets: <a href="https://www.nationalbanken.dk/da/viden-og-nyheder/data-og-statistik/betalinger/20260202-naesten-hver-tredje-kortbetaling-foretages-nu-via-digitale-wallets" rel="noopener" target="_blank">Danmarks Nationalbank, 02.02.2026<span class="sr"> (åbner i nyt vindue)</span></a>. Befolkning: Danmarks Statistik, <a href="https://www.statbank.dk/FOLK1A" rel="noopener" target="_blank">tabel FOLK1A<span class="sr"> (åbner i nyt vindue)</span></a>.</li>
+
+<li>Selskabernes tal og beskrivelser: <a href="https://www.sec.gov/Archives/edgar/data/1493318/000121390026022034/ea0278371-20f_etoro.htm" rel="noopener" target="_blank">eToro, 20-F 2025<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/2003292/000200329226000007/klar-20251231.htm" rel="noopener" target="_blank">Klarna, 20-F 2025<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1820953/000162828026059279/afrm-20260630.htm" rel="noopener" target="_blank">Affirm, 10-K (år til 30.06.2026)<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1783879/000178387926000023/hood-20251231.htm" rel="noopener" target="_blank">Robinhood, 10-K 2025<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1691493/000129281426002166/nuform20f_2025.htm" rel="noopener" target="_blank">Nu Holdings, 20-F 2025<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1818874/000181887426000013/sofi-20251231.htm" rel="noopener" target="_blank">SoFi, 10-K 2025<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1795586/000179558626000013/chym-20251231.htm" rel="noopener" target="_blank">Chime, 10-K 2025<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1647639/000164763926000027/upst-20251231.htm" rel="noopener" target="_blank">Upstart, 10-K 2025<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1788882/000178888226000014/root-20251231.htm" rel="noopener" target="_blank">Root, 10-K 2025<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1794669/000179466926000010/four-20251231.htm" rel="noopener" target="_blank">Shift4, 10-K 2025<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1846832/000207097926000113/dlo-20251231.htm" rel="noopener" target="_blank">DLocal, 20-F 2025<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1985487/000198548726000008/kspi-20251231.htm" rel="noopener" target="_blank">Kaspi.kz, 20-F 2025<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1691421/000169142126000016/lmnd-20251231.htm" rel="noopener" target="_blank">Lemonade, 10-K 2025<span class="sr"> (åbner i nyt vindue)</span></a> og <a href="https://www.sec.gov/Archives/edgar/data/2040491/000204049126000011/asic-20251231.htm" rel="noopener" target="_blank">Ategrity, 10-K 2025<span class="sr"> (åbner i nyt vindue)</span></a>.</li>
+
+</ul>
+
+<h3>Kreditering</h3>
+
+<p>Tegninger, ikoner og videoplakater. Illustration: NewDeal Invest.</p>
+
+<p>Videoerne er fra The Wall Street Journal, Bank of England og Visa og vises fra YouTube, først når du trykker på dem. Opslagene er fra X. Logoer tilhører de enkelte selskaber og viser kun, hvilke selskaber fonden ejer aktier i. Afsenderne og selskaberne står ikke bag denne side, og der er intet samarbejde med dem.</p>
+
+<p><a class="kid" href="https://node-api.fundmarket.dk/funds/documents/priip_ipm140b" rel="noopener" target="_blank">Dokument med central information (KID)<span class="sr"> (åbner i nyt vindue)</span></a></p>
+
+</details>
+
+</div></section></div>
+
+
+
+      
+
+      <div class="sektion sektion--videre"><nav class="videre" aria-label="Videre">
+
+          <a class="knap" href="../index.html#hvert-tema"><svg class="ik ik--s" aria-hidden="true"><use href="#i-tilbage"></use></svg>Alle temaer</a>
+
+          <a class="knap" href="../index.html#hvert-tema" data-hvis="temaer#fintech.forrige" data-href-tema="temaer#fintech.forrige" hidden><svg class="ik ik--s" aria-hidden="true"><use href="#i-tilbage"></use></svg><span class="knap-tekst">Forrige tema: <span data-navn="temaer#fintech.forrige">…</span></span></a>
+
+          <a class="knap knap--primaer" href="../index.html#hvert-tema" data-hvis="temaer#fintech.naeste" data-href-tema="temaer#fintech.naeste" hidden><span class="knap-tekst">Næste tema: <span data-navn="temaer#fintech.naeste">…</span></span><svg class="ik ik--s" aria-hidden="true"><use href="#i-frem"></use></svg></a>
+
+          <a class="knap knap--primaer" href="#kilder" data-skjul="temaer#fintech.naeste" hidden>Det var det sidste tema. Se kilderne<svg class="ik ik--s" aria-hidden="true"><use href="#i-frem"></use></svg></a>
+
+        </nav></div>
+
+
+
+    </main>
+
+    <footer class="sidefod">
+
+      <div class="sidefod-maerke"><span class="logo-felt"><img class="ndi-logo" src="../assets/img/ndi-logo-moerk-baggrund.png" width="2048" height="754" alt="NewDeal Invest" decoding="async"></span></div>
+
+      <div class="sidefod-tekst">
+
+        <p>NewDeal Invest er et brand for NDIIR ApS, investeringsrådgiver for Fundmarket A/S. Markedsføringsmateriale. Ikke personlig investeringsrådgivning. Investering indebærer risiko for tab. Alle andele pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span>.</p>
+
+        <p class="sidefod-kilde">Kilde til fondstal: Fundmarket A/S, der forvalter Investeringsforeningen PortfolioManager. NDIIR ApS yder investeringsrådgivning til foreningen. <span class="sidefod-dato">Opdateret <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span>.</span></p>
+
+      </div>
+
+    </footer>
+
+  </div>
+
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="../data/dagens-tal.js"></script>
+
+<script src="../data/sider.js"></script>
+
+<script src="../assets/js/valg.js"></script>
+
+<script src="../data/x-curated.js"></script>
+
+<script src="../assets/js/datalag.js"></script>
+
+<script src="../assets/js/tema.js"></script>
+
+<script src="../assets/js/grafik.js"></script>
+
+<script src="../assets/js/app.js"></script>
+
+<script src="../assets/js/x-tema.js"></script>
+
+<script src="../assets/v5-temaer/fintech.js" defer></script>
+
+<script defer src="../assets/js/review-media.js?v=20261031-1"></script></body>
+
 </html>

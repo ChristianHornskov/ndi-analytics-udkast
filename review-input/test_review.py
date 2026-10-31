@@ -77,6 +77,23 @@ class ReviewTests(unittest.TestCase):
             if p['sammenligningPunkter']:
                 self.assertEqual(p['punkter'][0][0],p['sammenligningPunkter'][0][0])
                 self.assertEqual(p['punkter'][-1][0],p['sammenligningPunkter'][-1][0])
+    def test_media_integration(self):
+        blocked={'vmbwJTUptKw','zGNAgVoCLao','CAkUyUTsVG0'}
+        checked=0
+        for path in list((DEST/'temaer').glob('*.html'))+list((DEST/'selskaber').glob('*.html')):
+            tree=html.parse(str(path))
+            sections=tree.xpath('//*[@id="mere-fra-ndi"]')
+            if not sections:continue
+            checked+=1
+            self.assertEqual(len(sections),1)
+            videos=sections[0].xpath('.//*[@data-youtube]/@data-youtube')
+            self.assertFalse(blocked.intersection(videos))
+            self.assertEqual(len(videos),len(set(videos)))
+            for start in sections[0].xpath('.//*[@data-start]/@data-start'):
+                self.assertGreaterEqual(int(start),0)
+            self.assertEqual(len(tree.xpath('//script[contains(@src,"review-media.js")]')),1)
+        self.assertGreater(checked,40)
+
     def test_unique_ids_and_local_assets(self):
         for name in ['index.html','tech.html','widget/index.html','portfolio/index.html','selskaber/spacex.html']:
             path=DEST/name;tree=html.parse(str(path))
