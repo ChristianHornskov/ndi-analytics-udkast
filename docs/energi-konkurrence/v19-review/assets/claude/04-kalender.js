@@ -37,7 +37,7 @@
       if (String(u.start || '').slice(0, 4) === String(year.aar)) sub = 'fra start';
       else if (String(u.kursdato || '').slice(0, 4) === String(year.aar)) sub = 'år til dato';
     }
-    return v + (sub ? '<small>' + sub + '</small>' : '');
+    return sub ? '<span title="' + sub + '" aria-label="' + v + ', ' + sub + '">' + v + '</span>' : v;
   }
   function byg() {
     var kal = document.getElementById('preview-calendar');
