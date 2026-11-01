@@ -1,0 +1,30 @@
+/* Forslag 11: én fælles fold-komponent for alle "vis mere"-felter på temasiderne.
+   Rækken ligner en knap: ramme, tekst til venstre, antal som lille mærke, chevron til højre,
+   der vender, når feltet er åbent. Samme komponent bruges til tal, opslag, videoer og kilder. */
+html body :is(details.fold-ud, details.rm-more, details.kilder, details.kilder-d, details.fold, details.flere) > summary {
+  list-style: none !important; display: flex !important; align-items: center; gap: 12px;
+  min-height: 48px; margin: 0 !important; padding: 10px 16px !important;
+  border: 1px solid #3b4957 !important; border-radius: 12px !important; background: rgba(15, 28, 36, .65) !important;
+  font: 500 15px/1.3 "DM Sans", sans-serif !important; color: #e9eef2 !important; letter-spacing: 0 !important; text-transform: none !important;
+  cursor: pointer; transition: border-color .2s, background .2s;
+}
+html body :is(details.fold-ud, details.rm-more, details.kilder, details.kilder-d, details.fold, details.flere) > summary::-webkit-details-marker { display: none; }
+html body :is(details.fold-ud, details.rm-more, details.kilder, details.kilder-d, details.fold, details.flere) > summary::before { content: none !important; display: none !important; }
+html body :is(details.fold-ud, details.rm-more, details.kilder, details.kilder-d, details.fold, details.flere) > summary::after {
+  content: "" !important; display: block !important; position: static !important; margin-left: auto !important;
+  width: 10px; height: 10px; border-right: 2px solid #8bb8bc; border-bottom: 2px solid #8bb8bc;
+  transform: translateY(-3px) rotate(45deg); transition: transform .2s; background: none !important;
+}
+html body :is(details.fold-ud, details.rm-more, details.kilder, details.kilder-d, details.fold, details.flere)[open] > summary::after { transform: translateY(2px) rotate(-135deg); }
+html body :is(details.fold-ud, details.rm-more, details.kilder, details.kilder-d, details.fold, details.flere) > summary:hover { border-color: #8bb8bc !important; background: rgba(139, 184, 188, .08) !important; }
+html body :is(details.fold-ud, details.rm-more, details.kilder, details.kilder-d, details.fold, details.flere)[open] > summary { border-radius: 12px 12px 0 0 !important; border-bottom-color: transparent !important; }
+html body :is(details.fold-ud, details.rm-more, details.kilder, details.kilder-d, details.fold, details.flere)[open] > :not(summary) { border-left: 1px solid #3b4957; border-right: 1px solid #3b4957; padding-left: 16px; padding-right: 16px; }
+html body :is(details.fold-ud, details.rm-more, details.kilder, details.kilder-d, details.fold, details.flere)[open] > :last-child { border-bottom: 1px solid #3b4957; border-radius: 0 0 12px 12px; padding-bottom: 14px; }
+.fold-tal { display: inline-grid; place-items: center; min-width: 26px; height: 22px; padding: 0 7px; border-radius: 11px; background: rgba(139, 184, 188, .16); color: #cde0e2; font: 600 12.5px "DM Sans", sans-serif; }
+html body :is(details.fold-ud, details.rm-more, details.kilder, details.kilder-d, details.fold, details.flere) > summary *:not(.fold-tal) { font: inherit !important; margin: 0 !important; color: inherit !important; letter-spacing: inherit !important; text-transform: none !important; }
+:root[data-tema="lys"] body :is(details.fold-ud, details.rm-more, details.kilder, details.kilder-d, details.fold, details.flere) > summary { border-color: #b9c5cc !important; background: rgba(255, 255, 255, .7) !important; color: #13212a !important; }
+:root[data-tema="lys"] body :is(details.fold-ud, details.rm-more, details.kilder, details.kilder-d, details.fold, details.flere) > summary::after { border-color: #2f6c73 !important; }
+:root[data-tema="lys"] body :is(details.fold-ud, details.rm-more, details.kilder, details.kilder-d, details.fold, details.flere)[open] > :not(summary),
+:root[data-tema="lys"] body :is(details.fold-ud, details.rm-more, details.kilder, details.kilder-d, details.fold, details.flere)[open] > :last-child { border-color: #b9c5cc !important; }
+:root[data-tema="lys"] .fold-tal { background: rgba(47, 108, 115, .12); color: #2f6c73; }
+@media (prefers-reduced-motion: reduce) { html body :is(details.fold-ud, details.rm-more, details.kilder, details.kilder-d, details.fold, details.flere) > summary, html body :is(details.fold-ud, details.rm-more, details.kilder, details.kilder-d, details.fold, details.flere) > summary::after { transition: none !important; } }

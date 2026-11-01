@@ -37,7 +37,14 @@
 
 <script>try{document.fonts.load("500 16px Manrope");document.fonts.load("400 16px 'DM Sans'")}catch(e){}</script>
 
-<link rel="stylesheet" href="../assets/css/review.css?v=20261031logos"><link rel="stylesheet" href="../assets/css/review-media.css?v=20261031-2"><link rel="stylesheet" href="../assets/css/journey-polish.css?v=20261031d"></head>
+<link rel="stylesheet" href="../assets/css/review.css?v=20261031logos"><link rel="stylesheet" href="../assets/css/review-media.css?v=20261031-2"><link rel="stylesheet" href="../assets/css/journey-polish.css?v=20261031d"><link rel="stylesheet" href="../assets/claude/16-logoer.css?v=cr16" data-claude-punkt="16">
+<link rel="stylesheet" href="../assets/claude/19-rang.css?v=cr19" data-claude-punkt="19">
+<link rel="stylesheet" href="../assets/claude/21-aktien.css?v=cr21" data-claude-punkt="21">
+<link rel="stylesheet" href="../assets/claude/29-x.css?v=cr29" data-claude-punkt="29">
+<link rel="stylesheet" href="../assets/claude/33-sidemenu.css?v=cr33" data-claude-punkt="33">
+<link rel="stylesheet" href="../assets/claude/51-lyst.css?v=cr51" data-claude-punkt="51">
+<link rel="stylesheet" href="../assets/claude/52-video.css?v=cr52" data-claude-punkt="52">
+</head>
 
 <body data-slug="fubotv">
 <svg class="sprite" aria-hidden="true" focusable="false">
@@ -166,7 +173,7 @@
 <h2 class="sm-overskrift" id="sm-h-temaer"><span>Temaer</span><span class="sm-overskrift-note">Andel af fonden</span></h2>
 <ul class="sm-liste">
 </ul>
-<ul class="sm-liste sm-temaliste" id="sm-temaer" data-ordne="temaer">
+<ul class="sm-liste sm-temaliste vis-alle" id="sm-temaer" data-ordne="temaer">
 <li data-id="chips"><a class="sm-link sm-link--tema" style="--tf:#8bb8bc" href="../temaer/chips.html"><svg class="ik" aria-hidden="true"><use href="#t-chips"></use></svg><span>Chips og halvledere</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
 <li data-id="energi"><a class="sm-link sm-link--tema" style="--tf:#759ebc" href="../temaer/energi.html"><svg class="ik" aria-hidden="true"><use href="#t-energi"></use></svg><span>Energi og elnet</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
 <li data-id="datacenter"><a class="sm-link sm-link--tema" style="--tf:#d5ba75" href="../temaer/datacenter.html"><svg class="ik" aria-hidden="true"><use href="#t-datacenter"></use></svg><span>Datacentre</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
@@ -180,9 +187,6 @@
 <li data-id="sundhed"><a class="sm-link sm-link--tema" style="--tf:#a4a6cf" href="../temaer/sundhed.html"><svg class="ik" aria-hidden="true"><use href="#t-sundhed"></use></svg><span>Sundhed og biotek</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
 <li data-id="kvante"><a class="sm-link sm-link--tema" style="--tf:#cd99a5" href="../temaer/kvante.html"><svg class="ik" aria-hidden="true"><use href="#t-kvante"></use></svg><span>Kvantecomputere</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
 </ul>
-<button class="sm-vis-flere" type="button" aria-expanded="false" aria-controls="sm-temaer">
-<span class="sm-vis-tekst">Vis alle <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer</span><span class="sm-vis-faerre" hidden>Vis færre temaer</span><svg class="ik ik--s" aria-hidden="true"><use href="#i-ned"></use></svg>
-</button>
 </nav>
 <nav class="sm-gruppe" aria-labelledby="sm-h-selskaber">
 <h2 class="sm-overskrift" id="sm-h-selskaber"><span>Selskaber</span><span class="sm-overskrift-note">Andel af fonden</span></h2>
@@ -205,7 +209,7 @@
 <section class="sektion sektion--overblik v18s" id="overblik" aria-labelledby="h-side">
 <div class="v18s-hero">
 <div class="v18s-hero-tekst">
-<header class="v18s-hoved"><div class="sidehoved-ikon sidehoved-ikon--logo" aria-hidden="true">F</div><div><p class="kicker">Selskab i temaet <a class="kicker-link" href="../temaer/platforme.html">Platformsøkonomi</a></p>
+<header class="v18s-hoved"><div class="sidehoved-ikon sidehoved-ikon--logo cr-logo-init" aria-hidden="true" style="--lf:#b78f70">F</div><div><p class="kicker">Selskab i temaet <a class="kicker-link" href="../temaer/platforme.html">Platformsøkonomi</a></p>
 <h1 id="h-side">FuboTV</h1></div></header>
 <div class="v18t-knapper"><a class="knap knap--primaer v5-knap" href="#hvad">Hvad laver FuboTV? <span aria-hidden="true">↓</span></a><a class="knap knap--rolig v5-knap" href="../temaer/platforme.html">Til temaet Platformsøkonomi</a></div>
 </div>
@@ -256,21 +260,21 @@
 </div>
 </section>
 </section>
-<section class="rm-section" id="mere-fra-ndi" aria-labelledby="rm-title"><p class="rm-source">VIDEOER OG OPSLAG</p><h2 id="rm-title">Bliv klogere på FuboTV</h2><div class="rm-grid rm-grid-youtube"><article class="rm-video"><button type="button" class="rm-play" data-youtube="5woGJk1ikQ0" data-start="2057" aria-label="Afspil NewDeal Invest Live Q&amp;A - May 5th at 20:00 (8 PM) with Mads Christiansen &amp; Jesper Bæk"><img loading="lazy" src="https://i.ytimg.com/vi/5woGJk1ikQ0/hqdefault.jpg" alt=""><span class="rm-play-icon" aria-hidden="true">▶</span><span class="rm-start">Se fra 34:17</span></button><div class="rm-caption"><p class="rm-source">NEWDEAL INVEST · 2024-05-06</p><h3>NewDeal Invest Live Q&amp;A - May 5th at 20:00 (8 PM) with Mads Christiansen &amp; Jesper Bæk</h3><p class="rm-topic">Om FuboTV · starter ved 34:17</p><a href="https://www.youtube.com/watch?v=5woGJk1ikQ0&amp;t=2057s" target="_blank" rel="noopener">Se på YouTube ↗</a></div></article><article class="rm-video"><button type="button" class="rm-play" data-youtube="hHhBvsWya2k" data-start="3431" aria-label="Afspil NewDeal Invest Live Q&amp;A med Mads Christiansen &amp; Jesper Bæk - 8. September 2024 kl. 20:00"><img loading="lazy" src="https://i.ytimg.com/vi/hHhBvsWya2k/hqdefault.jpg" alt=""><span class="rm-play-icon" aria-hidden="true">▶</span><span class="rm-start">Se fra 57:11</span></button><div class="rm-caption"><p class="rm-source">NEWDEAL INVEST · 2024-09-09</p><h3>NewDeal Invest Live Q&amp;A med Mads Christiansen &amp; Jesper Bæk - 8. September 2024 kl. 20:00</h3><p class="rm-topic">Om FuboTV · starter ved 57:11</p><a href="https://www.youtube.com/watch?v=hHhBvsWya2k&amp;t=3431s" target="_blank" rel="noopener">Se på YouTube ↗</a></div></article></div></section><section class="sektion v18s-del " id="kilder" aria-labelledby="h-kilder">
-<p class="v18s-del-nr kicker"><span>04</span> Kilder</p>
-<h2 class="v18s-del-titel" id="h-kilder">Kilder til teksten</h2>
-<aside class="kildeblok lille" aria-label="Kilder til teksten"><p class="kildeblok-titel">Kilder</p><ul class="kildeblok-liste"><li><a class="tekstlink tekstlink--tryk" href="https://www.sec.gov/Archives/edgar/data/1484769/000162828026053535/fubo-20260630.htm" target="_blank" rel="noopener">Kvartalsrapport 10-Q for kvartalet til 30.06.2026<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (åbner i nyt vindue)</span></a><span class="kildeblok-dato">05.08.2026</span></li><li><a class="tekstlink tekstlink--tryk" href="https://www.sec.gov/Archives/edgar/data/1484769/000149315225020163/form8-k.htm" target="_blank" rel="noopener">Meddelelse (8-K, SEC)<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (åbner i nyt vindue)</span></a><span class="kildeblok-dato">30.10.2025</span></li></ul></aside>
-</section>
-<section class="sektion sektion--x" id="x-opslag" aria-labelledby="h-x-opslag" data-x-tema data-x-selskab data-x-vis="4" data-x-rel="../" data-x-selskaber='[{"isin": "US35953D4016", "navn": "FuboTV", "slug": "fubotv"}]' hidden>
+<section class="rm-section" id="mere-fra-ndi" aria-labelledby="rm-title"><p class="rm-source">VIDEOER OG OPSLAG</p><h2 id="rm-title">Bliv klogere på FuboTV</h2><div class="rm-grid rm-grid-youtube"><article class="rm-video"><button type="button" class="rm-play" data-youtube="5woGJk1ikQ0" data-start="2057" aria-label="Afspil Live Q&amp;A med Mads Christiansen og Jesper Bæk, 5. maj 2024"><img loading="lazy" src="https://i.ytimg.com/vi/5woGJk1ikQ0/hqdefault.jpg" alt=""><span class="rm-play-icon" aria-hidden="true">▶</span><span class="rm-start">Se fra 34:17</span></button><div class="rm-caption"><p class="rm-source">NEWDEAL INVEST · 06.05.2024</p><h3>Live Q&amp;A med Mads Christiansen og Jesper Bæk, 5. maj 2024</h3><p class="rm-topic">Om FuboTV</p><a href="https://www.youtube.com/watch?v=5woGJk1ikQ0&amp;t=2057s" target="_blank" rel="noopener">Se på YouTube ↗</a></div></article><article class="rm-video"><button type="button" class="rm-play" data-youtube="hHhBvsWya2k" data-start="3431" aria-label="Afspil Live Q&amp;A med Mads Christiansen og Jesper Bæk, 8. september 2024"><img loading="lazy" src="https://i.ytimg.com/vi/hHhBvsWya2k/hqdefault.jpg" alt=""><span class="rm-play-icon" aria-hidden="true">▶</span><span class="rm-start">Se fra 57:11</span></button><div class="rm-caption"><p class="rm-source">NEWDEAL INVEST · 09.09.2024</p><h3>Live Q&amp;A med Mads Christiansen og Jesper Bæk, 8. september 2024</h3><p class="rm-topic">Om FuboTV</p><a href="https://www.youtube.com/watch?v=hHhBvsWya2k&amp;t=3431s" target="_blank" rel="noopener">Se på YouTube ↗</a></div></article></div></section><section class="sektion sektion--x" id="x-opslag" aria-labelledby="h-x-opslag" data-x-tema data-x-selskab data-x-vis="4" data-x-rel="../" data-x-selskaber='[{"isin": "US35953D4016", "navn": "FuboTV", "slug": "fubotv"}]' hidden>
 <header class="sektion-hoved">
 <h2 class="sektion-titel" id="h-x-opslag">Det skriver de på X om FuboTV</h2>
 <p class="sektion-intro">Udvalgte offentlige opslag. Opslagene er andres og ikke NewDeal Invests holdning.</p>
 </header>
 <div class="kort panel x-tema">
 <p class="x-tema-status lille" role="status">Henter opslag …</p>
-<details class="fold-ud fold-mobil fold-sektion" data-aaben-bred><summary aria-expanded="false">Se opslagene fra X</summary><ul class="x-tema-liste" hidden></ul></details>
+<details class="fold-ud fold-mobil fold-sektion" data-aaben-bred><summary aria-expanded="false">Vis opslagene fra X</summary><ul class="x-tema-liste" hidden></ul></details>
 <p class="kildelinje x-tema-kilde" hidden></p>
 </div>
+</section>
+<section class="sektion v18s-del " id="kilder" aria-labelledby="h-kilder">
+<p class="v18s-del-nr kicker"><span>04</span> Kilder</p>
+<h2 class="v18s-del-titel" id="h-kilder">Kilder til teksten</h2>
+<aside class="kildeblok lille" aria-label="Kilder til teksten"><p class="kildeblok-titel">Kilder</p><ul class="kildeblok-liste"><li><a class="tekstlink tekstlink--tryk" href="https://www.sec.gov/Archives/edgar/data/1484769/000162828026053535/fubo-20260630.htm" target="_blank" rel="noopener">Kvartalsrapport 10-Q for kvartalet til 30.06.2026<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (åbner i nyt vindue)</span></a><span class="kildeblok-dato">05.08.2026</span></li><li><a class="tekstlink tekstlink--tryk" href="https://www.sec.gov/Archives/edgar/data/1484769/000149315225020163/form8-k.htm" target="_blank" rel="noopener">Meddelelse (8-K, SEC)<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (åbner i nyt vindue)</span></a><span class="kildeblok-dato">30.10.2025</span></li></ul></aside>
 </section>
 <nav class="videre v18s-videre" aria-label="Videre">
 <a class="knap knap--rolig v5-knap" href="../temaer/platforme.html">Til temaet Platformsøkonomi</a>
@@ -314,6 +318,9 @@
 
 <script src="../assets/js/x-tema.js"></script>
 
-<script defer src="../assets/js/review-media.js?v=20261031-3"></script><script defer src="../assets/js/journey-polish.js?v=20261031c"></script></body>
+<script defer src="../assets/js/review-media.js?v=20261031-3"></script><script defer src="../assets/js/journey-polish.js?v=20261031c"></script><script src="../assets/claude/19-rang.js?v=cr19" defer data-claude-punkt="19"></script>
+<script src="../assets/claude/29-x.js?v=cr29" defer data-claude-punkt="29"></script>
+<script src="../assets/claude/52-video.js?v=cr52" defer data-claude-punkt="52"></script>
+</body>
 
 </html>

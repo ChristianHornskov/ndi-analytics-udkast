@@ -1,0 +1,23 @@
+/* Punkt 51: lyse varianter af mørke flader på selskabssiderne. Gælder kun lyst tema. */
+
+/* Teslas forretningsillustration (og andre .pd-explainer): stregtegningen vendes,
+   så baggrunden bliver lys og stregerne mørke. hue-rotate holder den orange farve. */
+[data-tema="lys"] .pd-explainer-art{filter:invert(1) hue-rotate(180deg);border-radius:12px}
+
+/* SpaceX' historiepanel: illustrationen beholder sin nattehimmel, teksten står lyst. */
+[data-tema="lys"] .sx-history{background:var(--c-surface);color:var(--c-text);border:1px solid var(--c-line)}
+[data-tema="lys"] .sx-history-art{background:radial-gradient(ellipse at 50% 70%,#21495b,transparent 65%),#0a1b29}
+[data-tema="lys"] .sx-history-eyebrow{color:#45626c}
+[data-tema="lys"] .sx-years button{color:#4f6470;border-bottom-color:#c5d0d6}
+[data-tema="lys"] .sx-years button[aria-pressed=true]{color:#6f5d00;border-color:#a88f12}
+[data-tema="lys"] .sx-chapter .tl-aar{color:#7d6a0c}
+[data-tema="lys"] .sx-chapter .tl-titel{color:var(--c-text)}
+[data-tema="lys"] .sx-chapter p{color:#33464e}
+[data-tema="lys"] .sx-chapter a{color:var(--c-accent)}
+
+/* Videokort: fladen bag billedet er lys, til billedet er hentet. */
+[data-tema="lys"] .rm-play,
+[data-tema="lys"] .sx-video-start{background:#dfe6ea}
+[data-tema="lys"] .cr-uden-billede{background:linear-gradient(135deg,#e7eef1,#cfdbe0)!important}
+[data-tema="lys"] .rm-video,
+[data-tema="lys"] .rm-social{background:var(--c-surface);border-color:var(--c-line)}

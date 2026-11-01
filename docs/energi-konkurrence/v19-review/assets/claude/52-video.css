@@ -1,0 +1,11 @@
+/* Punkt 52: videokort på selskabssiderne. */
+.rm-section .rm-more{margin:8px 0 0}
+.rm-section .rm-more>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:10px;min-height:44px;font-weight:500}
+.rm-section .rm-more>summary::-webkit-details-marker{display:none}
+.rm-section .rm-more>summary::before{content:"";width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(-45deg);transition:transform .2s;margin-right:2px}
+.rm-section .rm-more[open]>summary::before{transform:rotate(45deg)}
+.rm-section .rm-more:not([open]){margin-bottom:0}
+.rm-section .rm-more:not([open]) + .rm-grid{margin-top:16px}
+.cr-uden-billede{background:linear-gradient(135deg,#16313a,#0b1b22)!important}
+.cr-uden-billede img{visibility:hidden}
+@media(prefers-reduced-motion:reduce){.rm-section .rm-more>summary::before{transition:none}}

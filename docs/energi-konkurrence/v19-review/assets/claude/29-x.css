@@ -1,0 +1,9 @@
+/* Punkt 29: ét X-modul før Kilder på selskabssiderne. */
+#x-opslag .rm-grid-x{margin:0 0 20px;align-items:start}
+#x-opslag .rm-grid-x + .x-tema{margin-top:0}
+.rm-grid-x{align-items:start}
+.rm-x .rm-embed:empty{min-height:0}
+#mads-spacex .rm-grid-x{margin-top:24px}
+/* Kan opslaget ikke hentes, skrumper pladsen, der var holdt til det. */
+html body .x-embed.x-embed--fejl{height:auto!important;min-height:120px}
+html body .x-embed.x-embed--fejl .x-embed-vent{position:static;min-height:120px}

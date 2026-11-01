@@ -9,7 +9,7 @@ const DIR='assets/review-zoom/';
 // Billedmetadata fra Idéspejders zoom-lag.json (portal = andel af bredde/højde, hvor næste lag sidder i 1/8).
 // Stierne står fuldt udskrevet, så release-pakken kan se hver fil. Teksterne er redaktionelle, ikke data.
 export const ZOOM_LAYERS=[
- {id:'ai-use',label:'Spørgsmålet',copy:'Vi følger et spørgsmål til en AI-tjeneste i skyen — fra skærmen til maskinerne bag svaret.',
+ {id:'ai-use',label:'Spørgsmålet',copy:'Vi følger et spørgsmål til en AI-tjeneste i skyen, fra skærmen til maskinerne bag svaret.',
   mobile:{dark:'assets/review-zoom/zoom-1-ai-use-mobil-780x1040.webp',light:'assets/review-zoom/zoom-1-ai-use-mobil-780x1040-lys.webp',portal:[.5,.49]},
   desktop:{dark:'assets/review-zoom/zoom-1-ai-use-desktop-1600x900.webp',light:'assets/review-zoom/zoom-1-ai-use-desktop-1600x900-lys.webp',portal:[.5,.49]}},
  {id:'gpu-cloud',label:'Datacentret',copy:'Datacentret samler de computere, der skal beregne svaret.',
@@ -46,7 +46,7 @@ export const LAYER_EXPLANATIONS={
   'Fabrikken har brug for præcist udstyr, rene materialer og strøm. Nu ser vi på den strømforsyning, som både fabrikken og datacentret er afhængige af.'],
  'generation': ['Uden strøm kommer der intet svar',
   'Både chipfabrikken og datacentret skal have elektricitet. Kraftværker og andre produktionsanlæg leverer energien, mens elnettet får den frem til maskinerne.',
-  'Her slutter zoomturen. Fortsæt til forklaringen om strøm: se forskellen på anlæg i drift, nye kraftværker og reaktorer under udvikling — og hvem der arbejder med hvad.']
+  'Her slutter zoomturen. Fortsæt til forklaringen om strøm: se forskellen på anlæg i drift, nye kraftværker og reaktorer under udvikling, og hvem der arbejder med hvad.']
 };
 const COMPANY_ROLES={
  'ai-use':{'US4576422053':'Forbereder data, der bruges til at træne AI-modeller.','US8361001071':'Leverer stemmestyring og samtaler med AI.'},

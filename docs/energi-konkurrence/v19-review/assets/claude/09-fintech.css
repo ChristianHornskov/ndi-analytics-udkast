@@ -1,0 +1,25 @@
+#cq-ft .cq-ft__lb { display: grid !important; grid-template-columns: auto auto 1fr auto; align-items: center; column-gap: 12px; }
+#cq-ft .cq-ft__gs { display: block; font: 400 13px "DM Sans", sans-serif; color: var(--v5-muted, #a8b4bd); margin-top: 2px; letter-spacing: 0; }
+#cq-ft .cq-ft__amt { display: flex !important; flex-direction: column; align-items: flex-end; gap: 6px; min-width: 110px; }
+#cq-ft .cq-ft__gw { display: block !important; font: 500 20px/1 Manrope, sans-serif; color: var(--v5-ink, #e9eef2); font-variant-numeric: tabular-nums; }
+#cq-ft .cq-ft__bt { display: block !important; width: 110px; height: 6px; border-radius: 3px; background: color-mix(in srgb, var(--v5-ink, #e9eef2) 10%, transparent); overflow: hidden; }
+#cq-ft .cq-ft__bt i { display: block; height: 100%; border-radius: 3px; background: #c9c48a; }
+#cq-ft .cq-ft__sum { display: grid !important; grid-template-columns: auto auto 1fr auto; align-items: center; column-gap: 12px; margin: 8px 0 0; padding: 14px 16px 6px; border-top: 2px solid color-mix(in srgb, var(--v5-ink, #e9eef2) 55%, transparent); }
+#cq-ft .cq-ft__sum .cq-ft__gn { font-weight: 500; }
+#cq-ft .cq-ft__sum .cq-ft__gw { font-size: 24px; }
+#cq-ft select#pd-fintech-select { appearance: none; -webkit-appearance: none; color-scheme: dark; background: #0f1c24 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23c9c48a' stroke-width='1.6'/%3E%3C/svg%3E") no-repeat right 12px center !important; color: #e9eef2 !important; border: 1px solid #5d6c7d !important; border-radius: 10px !important; min-height: 44px; padding: 0 36px 0 14px !important; font: 400 15px "DM Sans", sans-serif !important; }
+#cq-ft label:has(#pd-fintech-select) { display: flex !important; flex-wrap: wrap; align-items: center; gap: 10px; }
+@media (max-width: 600px) {
+  #cq-ft .cq-ft__lb { grid-template-columns: auto 1fr auto; }
+  #cq-ft .cq-ft__dots { display: none !important; }
+  #cq-ft .cq-ft__amt { min-width: 72px; }
+  #cq-ft .cq-ft__bt { width: 72px; }
+  #cq-ft .cq-ft__gw { font-size: 17px; }
+  #cq-ft select#pd-fintech-select { width: 100%; }
+}
+:root[data-tema="lys"] #cq-ft .cq-ft__gs { color: #4f5d68; }
+:root[data-tema="lys"] #cq-ft .cq-ft__gw { color: #10181f; }
+:root[data-tema="lys"] #cq-ft .cq-ft__bt { background: rgba(16, 24, 31, .10); }
+:root[data-tema="lys"] #cq-ft .cq-ft__bt i { background: #8a7f2e; }
+:root[data-tema="lys"] #cq-ft .cq-ft__sum { border-top-color: rgba(16, 24, 31, .55); }
+:root[data-tema="lys"] #cq-ft select#pd-fintech-select { color-scheme: light; background-color: #ffffff !important; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%238a7f2e' stroke-width='1.6'/%3E%3C/svg%3E") !important; color: #10181f !important; border-color: #a9b6c0 !important; }

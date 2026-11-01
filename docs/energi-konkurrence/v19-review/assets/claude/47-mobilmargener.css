@@ -1,0 +1,4 @@
+/* Graf-review punkt 47: indrykning i omkostningsfelterne og tabeller inden for margenen. */
+.fund-costs .metrics .metric{padding-left:12px}
+.tablewrap,.calendar-scroll{max-width:100%;box-sizing:border-box}
+@media (max-width:400px){.fund-costs .metrics .metric .label{font-size:14px;word-break:normal;overflow-wrap:normal;hyphens:auto}}

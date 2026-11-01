@@ -1,0 +1,28 @@
+/* Punkt 18: "Tal fra daterede regnskaber" som tydelig fold med tabel. */
+.v18-c20 .c20-reports.cr-tal-klar{padding:0 20px}
+.v18-c20 .c20-reports.cr-tal-klar>summary{list-style:none;display:flex;align-items:center;gap:10px;min-height:52px;font-weight:500;font-size:16px}
+.v18-c20 .c20-reports.cr-tal-klar>summary::-webkit-details-marker{display:none}
+.cr-tal-pil{flex:none;width:24px;height:24px;border-radius:50%;border:1px solid var(--v5-teal);display:grid;place-items:center}
+.cr-tal-pil::before{content:"";width:6px;height:6px;border-right:1.6px solid var(--v5-teal);border-bottom:1.6px solid var(--v5-teal);transform:rotate(-45deg);transition:transform .2s}
+.c20-reports[open] .cr-tal-pil::before{transform:rotate(45deg) translate(-1px,-1px)}
+.cr-tal-antal{font-style:normal;font-size:12px;font-weight:500;color:var(--v5-ink-2);border:1px solid var(--v5-line);border-radius:999px;padding:2px 8px}
+.cr-tal-intro{font-size:13.5px;line-height:1.5;color:var(--v5-ink-2);margin:0 0 10px;max-width:68ch}
+.cr-tal{width:100%;border-collapse:collapse;margin:0 0 16px;font-variant-numeric:tabular-nums}
+.cr-tal th,.cr-tal td{padding:10px 12px 10px 0;border-top:1px solid var(--v5-line);text-align:left;font-size:14.5px;vertical-align:top}
+.cr-tal thead th{font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--v5-ink-2);border-top:0;padding-top:4px}
+.cr-tal tbody th{font-weight:500;color:var(--v5-ink)}
+.cr-tal .cr-v{text-align:right;padding-right:28px;white-space:nowrap;font-weight:500}
+.cr-tal .cr-s{color:var(--v5-ink-2);font-size:13.5px;padding-right:0}
+.cr-tal .cr-s a{color:inherit}
+.cr-tal thead th.cr-s,.cr-tal thead th.cr-v,.cr-tal thead th.cr-n{font-size:11px;color:var(--v5-ink-2)}
+@media(max-width:600px){
+ .v18-c20 .c20-reports.cr-tal-klar{padding:0 14px}
+ .cr-tal,.cr-tal tbody,.cr-tal tr{display:block}
+ .cr-tal thead{display:none}
+ .cr-tal tbody tr{display:grid;grid-template-columns:1fr auto;gap:2px 10px;padding:10px 0;border-top:1px solid var(--v5-line)}
+ .cr-tal tbody th,.cr-tal tbody td{border:0;padding:0}
+ .cr-tal .cr-n{grid-column:1;color:var(--v5-ink-2);font-size:13px}
+ .cr-tal .cr-v{grid-column:2;grid-row:1/3;align-self:center;padding-right:0}
+ .cr-tal .cr-s{grid-column:1/-1;font-size:12.5px}
+}
+@media(prefers-reduced-motion:reduce){.cr-tal-pil::before{transition:none}}

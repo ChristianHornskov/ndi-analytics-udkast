@@ -37,7 +37,14 @@
 
 <script>try{document.fonts.load("500 16px Manrope");document.fonts.load("400 16px 'DM Sans'")}catch(e){}</script>
 
-<link rel="stylesheet" href="../assets/css/review.css?v=20261031logos"><link rel="stylesheet" href="../assets/css/review-media.css?v=20261031-2"><link rel="stylesheet" href="../assets/css/journey-polish.css?v=20261031d"><link rel="stylesheet" href="../assets/css/section-visuals.css?v=20261031-1"></head>
+<link rel="stylesheet" href="../assets/css/review.css?v=20261031logos"><link rel="stylesheet" href="../assets/css/review-media.css?v=20261031-2"><link rel="stylesheet" href="../assets/css/journey-polish.css?v=20261031d"><link rel="stylesheet" href="../assets/css/section-visuals.css?v=20261031-1"><link rel="stylesheet" href="../assets/claude/16-logoer.css?v=cr16" data-claude-punkt="16">
+<link rel="stylesheet" href="../assets/claude/19-rang.css?v=cr19" data-claude-punkt="19">
+<link rel="stylesheet" href="../assets/claude/21-aktien.css?v=cr21" data-claude-punkt="21">
+<link rel="stylesheet" href="../assets/claude/29-x.css?v=cr29" data-claude-punkt="29">
+<link rel="stylesheet" href="../assets/claude/33-sidemenu.css?v=cr33" data-claude-punkt="33">
+<link rel="stylesheet" href="../assets/claude/51-lyst.css?v=cr51" data-claude-punkt="51">
+<link rel="stylesheet" href="../assets/claude/52-video.css?v=cr52" data-claude-punkt="52">
+</head>
 
 <body data-slug="nvidia">
 <svg class="sprite" aria-hidden="true" focusable="false">
@@ -166,7 +173,7 @@
 <h2 class="sm-overskrift" id="sm-h-temaer"><span>Temaer</span><span class="sm-overskrift-note">Andel af fonden</span></h2>
 <ul class="sm-liste">
 </ul>
-<ul class="sm-liste sm-temaliste" id="sm-temaer" data-ordne="temaer">
+<ul class="sm-liste sm-temaliste vis-alle" id="sm-temaer" data-ordne="temaer">
 <li data-id="chips" class="er-aktiv"><a class="sm-link sm-link--tema er-foraelder" style="--tf:#8bb8bc" href="../temaer/chips.html"><svg class="ik" aria-hidden="true"><use href="#t-chips"></use></svg><span>Chips og halvledere</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
 <li data-id="energi"><a class="sm-link sm-link--tema" style="--tf:#759ebc" href="../temaer/energi.html"><svg class="ik" aria-hidden="true"><use href="#t-energi"></use></svg><span>Energi og elnet</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
 <li data-id="datacenter"><a class="sm-link sm-link--tema" style="--tf:#d5ba75" href="../temaer/datacenter.html"><svg class="ik" aria-hidden="true"><use href="#t-datacenter"></use></svg><span>Datacentre</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
@@ -180,9 +187,6 @@
 <li data-id="sundhed"><a class="sm-link sm-link--tema" style="--tf:#a4a6cf" href="../temaer/sundhed.html"><svg class="ik" aria-hidden="true"><use href="#t-sundhed"></use></svg><span>Sundhed og biotek</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
 <li data-id="kvante"><a class="sm-link sm-link--tema" style="--tf:#cd99a5" href="../temaer/kvante.html"><svg class="ik" aria-hidden="true"><use href="#t-kvante"></use></svg><span>Kvantecomputere</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
 </ul>
-<button class="sm-vis-flere" type="button" aria-expanded="false" aria-controls="sm-temaer">
-<span class="sm-vis-tekst">Vis alle <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer</span><span class="sm-vis-faerre" hidden>Vis færre temaer</span><svg class="ik ik--s" aria-hidden="true"><use href="#i-ned"></use></svg>
-</button>
 </nav>
 <nav class="sm-gruppe" aria-labelledby="sm-h-selskaber">
 <h2 class="sm-overskrift" id="sm-h-selskaber"><span>Selskaber</span><span class="sm-overskrift-note">Andel af fonden</span></h2>
@@ -220,7 +224,7 @@
       <div class="sv-nvidia-problem"><span class="sv-label">Problemet</span><svg viewbox="0 0 140 90" aria-hidden="true"><g fill="currentColor"><circle cx="22" cy="20" r="5"></circle><circle cx="70" cy="20" r="5"></circle><circle cx="118" cy="20" r="5"></circle><circle cx="22" cy="70" r="5"></circle><circle cx="70" cy="70" r="5"></circle><circle cx="118" cy="70" r="5"></circle></g><path d="M22 25v40M70 25v40M118 25v40M26 24l40 42M74 24l40 42M66 24L26 66M114 24L74 66" fill="none" stroke="currentColor" stroke-width="1.5"></path></svg><h4>Mange beregninger på én gang</h4><p>Store AI-modeller kræver massiv parallel beregning.</p></div>
       <div class="sv-nvidia-stack"><span class="sv-label">NVIDIAs løsning</span><div><b>CUDA</b><span>Softwareplatformen</span></div><div><b>Netværk</b><span>Forbindelser mellem systemerne</span></div><div><b>GPU’er</b><span>Chips og computersystemer</span></div><p>Hardware og software, der fungerer som et samlet lag.</p></div>
       <div class="sv-nvidia-users"><span class="sv-label">Hvem bruger det?</span><h4>Fra datacenter til anvendelse</h4><ul><li>Systemproducenter og distributører</li><li>Cloududbydere og AI-modeludviklere</li><li>Virksomheder og det offentlige</li></ul><p>Brugerne kan være direkte kunder eller få adgang gennem andre leverandører.</p></div>
-    </div><details class="sv-source-detail"><summary>Produkter, kunder og rolle — flere detaljer</summary><div class="company-flow"><article data-nr="01"><h4>Produktet</h4><p>GPU'er og computersystemer (bl.a. Blackwell Ultra), netværk og software som CUDA.</p></article><article data-nr="02"><h4>Brugeren</h4><p>Direkte kunder er bl.a. systemproducenter (OEM/ODM), distributører, cloududbydere og AI-modeludviklere; indirekte kunder omfatter cloududbydere, AI-clouds, modeludviklere, virksomheder og det offentlige. </p></article><article data-nr="03"><h4>Rollen i teknologien</h4><p>Et sammenhængende hardware- og softwarelag til at udføre store beregninger parallelt.</p></article></div></details><h4>Problemet, selskabet arbejder med</h4><p>Store AI-modeller kræver massiv parallel beregning.</p><p>Kilder: <a href="https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm" rel="noopener" target="_blank">NVIDIA 10-Q, kvartal til 26.07.2026 (Q2 FY2027) · 26.08.2026</a> · <a href="https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm" rel="noopener" target="_blank">NVIDIA 10-K, FY2026 (til 25.01.2026) · 25.02.2026</a></p></section>
+    </div><details class="sv-source-detail"><summary>Produkter, kunder og rolle, flere detaljer</summary><div class="company-flow"><article data-nr="01"><h4>Produktet</h4><p>GPU'er og computersystemer (bl.a. Blackwell Ultra), netværk og software som CUDA.</p></article><article data-nr="02"><h4>Brugeren</h4><p>Direkte kunder er bl.a. systemproducenter (OEM/ODM), distributører, cloududbydere og AI-modeludviklere; indirekte kunder omfatter cloududbydere, AI-clouds, modeludviklere, virksomheder og det offentlige.</p></article><article data-nr="03"><h4>Rollen i teknologien</h4><p>Et sammenhængende hardware- og softwarelag til at udføre store beregninger parallelt.</p></article></div></details><p>Kilder: <a href="https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm" rel="noopener" target="_blank">NVIDIA 10-Q, kvartal til 26.07.2026 (Q2 FY2027) · 26.08.2026</a> · <a href="https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm" rel="noopener" target="_blank">NVIDIA 10-K, FY2026 (til 25.01.2026) · 25.02.2026</a></p></section>
 </section>
 <section class="sektion v18s-del " id="rolle" aria-labelledby="h-rolle">
 <p class="v18s-del-nr kicker"><span>02</span> Temaet</p>
@@ -231,7 +235,7 @@
 <div><dt>Del af værdikæden</dt><dd><a class="tekstlink" href="../temaer/chips.html#ck-trin-regner">Trin 6, Regner · Processorer og AI-chips</a></dd></div>
 <div><dt>Det laver selskabet</dt><dd>Laver grafikprocessorer, netværk og software til AI i datacentre. Har ingen egne chipfabrikker.</dd></div>
 </dl>
-<p class="lille rolle-kilde">Kilde: fondens temainddeling; værdikæden på temasiden Chips og halvledere.</p>
+<p class="lille rolle-kilde">Kilde: fondens temainddeling og værdikæden på temasiden Chips og halvledere.</p>
 </div>
 </section>
 <section class="sektion v18s-del " id="aktien" aria-labelledby="h-aktien">
@@ -264,21 +268,22 @@
 </div>
 </section>
 </section>
-<section class="rm-section" id="mere-fra-ndi" aria-labelledby="rm-title"><p class="rm-source">VIDEOER OG OPSLAG</p><h2 id="rm-title">Bliv klogere på NVIDIA</h2><div class="rm-grid rm-grid-youtube"><article class="rm-video"><button type="button" class="rm-play" data-youtube="5DwuBgbnzNw" data-start="0" aria-label="Afspil Anthropic og OpenAI vs Palantir og NVIDIA"><img loading="lazy" src="https://i.ytimg.com/vi/5DwuBgbnzNw/hqdefault.jpg" alt=""><span class="rm-play-icon" aria-hidden="true">▶</span><span class="rm-start">Se fra 0:00</span></button><div class="rm-caption"><p class="rm-source">NEWDEAL INVEST · 2026-07-12</p><h3>Anthropic og OpenAI vs Palantir og NVIDIA</h3><p class="rm-topic">Om NVIDIA · starter ved 0:00</p><a href="https://www.youtube.com/watch?v=5DwuBgbnzNw&amp;t=0s" target="_blank" rel="noopener">Se på YouTube ↗</a></div></article><article class="rm-video"><button type="button" class="rm-play" data-youtube="GBPffuqKxi8" data-start="926" aria-label="Afspil Kort og godt, Ep. 7"><img loading="lazy" src="https://i.ytimg.com/vi/GBPffuqKxi8/hqdefault.jpg" alt=""><span class="rm-play-icon" aria-hidden="true">▶</span><span class="rm-start">Se fra 15:26</span></button><div class="rm-caption"><p class="rm-source">NEWDEAL INVEST · 2026-10-20</p><h3>Kort og godt, Ep. 7</h3><p class="rm-topic">Om NVIDIA · starter ved 15:26</p><a href="https://www.youtube.com/watch?v=GBPffuqKxi8&amp;t=926s" target="_blank" rel="noopener">Se på YouTube ↗</a></div></article></div><div class="rm-grid rm-grid-instagram"><article class="rm-social"><p class="rm-source">INSTAGRAM · NEWDEAL INVEST · 2026-08-15</p><h3>Kort om NVIDIA</h3><button type="button" data-instagram="https://www.instagram.com/reel/DcERUrkp73N/">Afspil klippet her</button><a href="https://www.instagram.com/reel/DcERUrkp73N/" target="_blank" rel="noopener">Åbn på Instagram ↗</a><div class="rm-embed"></div></article></div><div class="rm-grid rm-grid-x"><article class="rm-social rm-x"><p class="rm-source">X · 2026-10-23</p><h3>Delt af Mads Christiansen</h3><div class="rm-embed" id="x-2113615323454980567" data-x="2113615323454980567"></div><a href="https://x.com/silicondata/status/2113615323454980567" target="_blank" rel="noopener">Læs det originale opslag på X ↗</a></article><article class="rm-social rm-x"><p class="rm-source">X · 2026-10-21</p><h3>Delt af Mads Christiansen</h3><div class="rm-embed" id="x-2112710445069156788" data-x="2112710445069156788"></div><a href="https://x.com/GabGrowth/status/2112710445069156788" target="_blank" rel="noopener">Læs det originale opslag på X ↗</a></article></div></section><section class="sektion v18s-del " id="kilder" aria-labelledby="h-kilder">
-<p class="v18s-del-nr kicker"><span>04</span> Kilder</p>
-<h2 class="v18s-del-titel" id="h-kilder">Kilder til teksten</h2>
-<aside class="kildeblok lille" aria-label="Kilder til teksten"><p class="kildeblok-titel">Kilder</p><ul class="kildeblok-liste"><li><a class="tekstlink tekstlink--tryk" href="https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm" target="_blank" rel="noopener">Årsregnskab 2026 (SEC)<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (åbner i nyt vindue)</span></a><span class="kildeblok-dato">25.02.2026</span></li></ul></aside>
-</section>
-<section class="sektion sektion--x" id="x-opslag" aria-labelledby="h-x-opslag" data-x-tema data-x-selskab data-x-vis="4" data-x-rel="../" data-x-selskaber='[{"isin": "US67066G1040", "navn": "NVIDIA", "slug": "nvidia"}]' hidden>
+<section class="rm-section" id="mere-fra-ndi" aria-labelledby="rm-title"><p class="rm-source">VIDEOER OG OPSLAG</p><h2 id="rm-title">Bliv klogere på NVIDIA</h2><div class="rm-grid rm-grid-youtube"><article class="rm-video"><button type="button" class="rm-play" data-youtube="5DwuBgbnzNw" data-start="0" aria-label="Afspil Anthropic og OpenAI vs Palantir og NVIDIA"><img loading="lazy" src="https://i.ytimg.com/vi/5DwuBgbnzNw/hqdefault.jpg" alt=""><span class="rm-play-icon" aria-hidden="true">▶</span></button><div class="rm-caption"><p class="rm-source">NEWDEAL INVEST · 12.07.2026</p><h3>Anthropic og OpenAI vs Palantir og NVIDIA</h3><p class="rm-topic">Om NVIDIA</p><a href="https://www.youtube.com/watch?v=5DwuBgbnzNw&amp;t=0s" target="_blank" rel="noopener">Se på YouTube ↗</a></div></article><article class="rm-video"><button type="button" class="rm-play" data-youtube="GBPffuqKxi8" data-start="926" aria-label="Afspil Kort og godt, Ep. 7"><img loading="lazy" src="https://i.ytimg.com/vi/GBPffuqKxi8/hqdefault.jpg" alt=""><span class="rm-play-icon" aria-hidden="true">▶</span><span class="rm-start">Se fra 15:26</span></button><div class="rm-caption"><p class="rm-source">NEWDEAL INVEST · 20.10.2026</p><h3>Kort og godt, Ep. 7</h3><p class="rm-topic">Om NVIDIA</p><a href="https://www.youtube.com/watch?v=GBPffuqKxi8&amp;t=926s" target="_blank" rel="noopener">Se på YouTube ↗</a></div></article></div><div class="rm-grid rm-grid-instagram"><article class="rm-social"><p class="rm-source">INSTAGRAM · NEWDEAL INVEST · 15.08.2026</p><h3>Kort om NVIDIA</h3><button type="button" data-instagram="https://www.instagram.com/reel/DcERUrkp73N/">Afspil klippet her</button><a href="https://www.instagram.com/reel/DcERUrkp73N/" target="_blank" rel="noopener">Åbn på Instagram ↗</a><div class="rm-embed"></div></article></div></section><section class="sektion sektion--x" id="x-opslag" aria-labelledby="h-x-opslag" data-x-tema data-x-selskab data-x-vis="4" data-x-rel="../" data-x-selskaber='[{"isin": "US67066G1040", "navn": "NVIDIA", "slug": "nvidia"}]' hidden>
 <header class="sektion-hoved">
 <h2 class="sektion-titel" id="h-x-opslag">Det skriver de på X om NVIDIA</h2>
 <p class="sektion-intro">Udvalgte offentlige opslag. Opslagene er andres og ikke NewDeal Invests holdning.</p>
 </header>
+<div class="rm-grid rm-grid-x"><article class="rm-social rm-x"><p class="rm-source">X · 2026-10-23</p><h3>Delt af Mads Christiansen</h3><div class="rm-embed" id="x-2113615323454980567" data-x="2113615323454980567"></div><a href="https://x.com/silicondata/status/2113615323454980567" target="_blank" rel="noopener">Læs det originale opslag på X ↗</a></article><article class="rm-social rm-x"><p class="rm-source">X · 2026-10-21</p><h3>Delt af Mads Christiansen</h3><div class="rm-embed" id="x-2112710445069156788" data-x="2112710445069156788"></div><a href="https://x.com/GabGrowth/status/2112710445069156788" target="_blank" rel="noopener">Læs det originale opslag på X ↗</a></article></div>
 <div class="kort panel x-tema">
 <p class="x-tema-status lille" role="status">Henter opslag …</p>
-<details class="fold-ud fold-mobil fold-sektion" data-aaben-bred><summary aria-expanded="false">Se opslagene fra X</summary><ul class="x-tema-liste" hidden></ul></details>
+<details class="fold-ud fold-mobil fold-sektion" data-aaben-bred><summary aria-expanded="false">Vis opslagene fra X</summary><ul class="x-tema-liste" hidden></ul></details>
 <p class="kildelinje x-tema-kilde" hidden></p>
 </div>
+</section>
+<section class="sektion v18s-del " id="kilder" aria-labelledby="h-kilder">
+<p class="v18s-del-nr kicker"><span>04</span> Kilder</p>
+<h2 class="v18s-del-titel" id="h-kilder">Kilder til teksten</h2>
+<aside class="kildeblok lille" aria-label="Kilder til teksten"><p class="kildeblok-titel">Kilder</p><ul class="kildeblok-liste"><li><a class="tekstlink tekstlink--tryk" href="https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm" target="_blank" rel="noopener">Årsregnskab 2026 (SEC)<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (åbner i nyt vindue)</span></a><span class="kildeblok-dato">25.02.2026</span></li></ul></aside>
 </section>
 <nav class="videre v18s-videre" aria-label="Videre">
 <a class="knap knap--rolig v5-knap" href="../temaer/chips.html">Til temaet Chips og halvledere</a>
@@ -322,6 +327,9 @@
 
 <script src="../assets/js/x-tema.js"></script>
 
-<script defer src="../assets/js/review-media.js?v=20261031-3"></script><script defer src="../assets/js/journey-polish.js?v=20261031c"></script></body>
+<script defer src="../assets/js/review-media.js?v=20261031-3"></script><script defer src="../assets/js/journey-polish.js?v=20261031c"></script><script src="../assets/claude/19-rang.js?v=cr19" defer data-claude-punkt="19"></script>
+<script src="../assets/claude/29-x.js?v=cr29" defer data-claude-punkt="29"></script>
+<script src="../assets/claude/52-video.js?v=cr52" defer data-claude-punkt="52"></script>
+</body>
 
 </html>

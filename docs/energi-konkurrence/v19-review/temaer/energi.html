@@ -39,7 +39,10 @@
 
 <link rel="stylesheet" href="../assets/v5-temaer/energi.css">
 
-<link rel="stylesheet" href="../assets/css/review.css?v=20261031logos"><link rel="stylesheet" href="../assets/css/review-media.css?v=20261031-2"><link rel="stylesheet" href="../assets/css/journey-polish.css?v=20261031d"><link rel="stylesheet" href="../assets/css/section-visuals.css?v=20261031-1"></head>
+<link rel="stylesheet" href="../assets/css/review.css?v=20261031logos"><link rel="stylesheet" href="../assets/css/review-media.css?v=20261031-2"><link rel="stylesheet" href="../assets/css/journey-polish.css?v=20261031d"><link rel="stylesheet" href="../assets/css/section-visuals.css?v=20261031-1"><link rel="stylesheet" href="../assets/claude/11-fold.css?v=cr11" data-claude-punkt="11">
+<link rel="stylesheet" href="../assets/claude/33-sidemenu.css?v=cr33" data-claude-punkt="33">
+<link rel="stylesheet" href="../assets/claude/37-medier.css?v=cr37" data-claude-punkt="37">
+</head>
 
 <body>
 <svg class="sprite" aria-hidden="true" focusable="false">
@@ -168,7 +171,7 @@
 <h2 class="sm-overskrift" id="sm-h-temaer"><span>Temaer</span><span class="sm-overskrift-note">Andel af fonden</span></h2>
 <ul class="sm-liste">
 </ul>
-<ul class="sm-liste sm-temaliste" id="sm-temaer" data-ordne="temaer">
+<ul class="sm-liste sm-temaliste vis-alle" id="sm-temaer" data-ordne="temaer">
 <li data-id="chips"><a class="sm-link sm-link--tema" style="--tf:#8bb8bc" href="../temaer/chips.html"><svg class="ik" aria-hidden="true"><use href="#t-chips"></use></svg><span>Chips og halvledere</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
 <li data-id="energi" class="er-aktiv"><a class="sm-link sm-link--tema" style="--tf:#759ebc" href="../temaer/energi.html" aria-current="page"><svg class="ik" aria-hidden="true"><use href="#t-energi"></use></svg><span>Energi og elnet</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
 <li data-id="datacenter"><a class="sm-link sm-link--tema" style="--tf:#d5ba75" href="../temaer/datacenter.html"><svg class="ik" aria-hidden="true"><use href="#t-datacenter"></use></svg><span>Datacentre</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
@@ -182,9 +185,6 @@
 <li data-id="sundhed"><a class="sm-link sm-link--tema" style="--tf:#a4a6cf" href="../temaer/sundhed.html"><svg class="ik" aria-hidden="true"><use href="#t-sundhed"></use></svg><span>Sundhed og biotek</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
 <li data-id="kvante"><a class="sm-link sm-link--tema" style="--tf:#cd99a5" href="../temaer/kvante.html"><svg class="ik" aria-hidden="true"><use href="#t-kvante"></use></svg><span>Kvantecomputere</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
 </ul>
-<button class="sm-vis-flere" type="button" aria-expanded="false" aria-controls="sm-temaer">
-<span class="sm-vis-tekst">Vis alle <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer</span><span class="sm-vis-faerre" hidden>Vis færre temaer</span><svg class="ik ik--s" aria-hidden="true"><use href="#i-ned"></use></svg>
-</button>
 </nav>
 <nav class="sm-gruppe" aria-labelledby="sm-h-selskaber">
 <h2 class="sm-overskrift" id="sm-h-selskaber"><span>Selskaber</span><span class="sm-overskrift-note">Andel af fonden</span></h2>
@@ -241,14 +241,13 @@
 <p class="kicker">Det har vi skrevet</p>
 <h2 class="v18-perspektiv-titel" id="h-skrevet">NewDeal Invests perspektiv</h2>
 <p class="v18-perspektiv-intro">Ordret uddrag af NewDeal Invests egne ugebreve og indlæg om temaet, med dato og link til hele teksten. Det er ikke en anbefaling.</p>
-<blockquote class="skrevet-citat"><p>»Den første løsning er brugen af billig nordamerikansk naturgas kombineret med gasturbiner placeret direkte ved datacentrene.«</p></blockquote>
+<blockquote class="skrevet-citat"><p>"Den første løsning er brugen af billig nordamerikansk naturgas kombineret med gasturbiner placeret direkte ved datacentrene."</p></blockquote>
 <p class="skrevet-meta lille"><span class="skrevet-titel">Fremtiden rykker tættere på</span> · <time datetime="2025-12-15">15.12.2025</time> · ugebrev uge 50, blog</p>
 <p class="skrevet-selsk lille">Nævner: Boom Supersonic</p>
 <a class="tekstlink tekstlink--tryk skrevet-link" href="https://www.newdealinvest.dk/post/uge-50-fremtiden-rykker-t%C3%A6ttere-p%C3%A5" target="_blank" rel="noopener">Læs hele teksten på bloggen<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (åbner i nyt vindue)</span></a>
 </div>
 </section>
 </div>
-<p class="hint hint--fri">Tryk på et selskab for at se mere om det.</p>
 </section>
 <template id="tpl-tl"><li><a class="tl-raekke" data-link-selskab href="#"><span class="sm-logo" aria-hidden="true" data-f="forbogstav"></span><span class="tl-navn" data-f="navn"></span><span class="pos-bar" aria-hidden="true"><span data-fbar></span></span><span class="tl-tal" data-f="andel" data-fmt="pct"></span></a></li></template><template id="tpl-mini"><span data-fbar></span></template>
 <div class="v5f v5f-energi" data-v5-fortaelling="energi"><section aria-labelledby="cq-vt-h" class="cq-vt" id="cq-ventetider">
@@ -293,27 +292,28 @@
 
 <p class="xs-lead">Fem opslag fra X, der viser kapløbet om strøm fra flere sider: forbruget, elproduktionen, nettilslutningen, brændslet og naboerne. Opslagene er afsendernes egne, og de danske forklaringer er skrevet af NewDeal Invest. Afsenderne står ikke bag siden.</p>
 
+<p class="media-reading media-reading--faelles" data-claude="38"><strong>Hvad skal du lægge mærke til?</strong> Hvor ligger ændringen: energikilde, elnet, udstyr eller leveringstid?</p>
 <ul class="xs-liste" role="list">
 
-<li class="xp"><p class="xp-k">Kort fortalt</p><p class="xp-forkl">IEA skriver, at effektiviseringer skærer strømforbruget pr. AI-opgave ned i rekordtempo. Samtidig stiger brugen ifølge IEA kraftigt, og mere energitunge anvendelser som AI-agenter vinder frem; nogle opgaver bruger hundreder eller tusinder af gange mere energi end simple forespørgsler.</p><p class="media-reading"><strong>Hvad skal du lægge mærke til?</strong> Hvor ligger ændringen: energikilde, elnet, udstyr eller leveringstid?</p>
+<li class="xp"><p class="xp-k">Kort fortalt</p><p class="xp-forkl">IEA skriver, at effektiviseringer skærer strømforbruget pr. AI-opgave ned i rekordtempo. Samtidig stiger brugen ifølge IEA kraftigt, og mere energitunge anvendelser som AI-agenter vinder frem; nogle opgaver bruger hundreder eller tusinder af gange mere energi end simple forespørgsler.</p>
 
 <blockquote class="twitter-tweet v5f-tweet" data-conversation="none" data-dnt="true" data-lang="da" data-theme="dark"><p class="xp-fra"><b>IEA</b> <span>@IEA på X</span></p><p class="xp-dato">Opslag fra <time datetime="2026-10-21">21.10.2026</time> · på engelsk</p><a class="xp-link" href="https://twitter.com/IEA/status/2112939139276431588" rel="noopener" target="_blank">Se opslaget på X<span class="sr"> (åbner i nyt vindue)</span></a></blockquote></li>
 
-<li class="xp"><p class="xp-delt">Delt af Mads Christiansen</p><p class="xp-k">Kort fortalt</p><p class="xp-forkl"> Opslaget er delt af Mads Christiansen fra teamet bag NewDeal Invest. </p><p class="media-reading"><strong>Hvad skal du lægge mærke til?</strong> Hvor ligger ændringen: energikilde, elnet, udstyr eller leveringstid?</p>
+<li class="xp"><p class="xp-delt">Delt af Mads Christiansen</p><p class="xp-k">Kort fortalt</p><p class="xp-forkl"> Opslaget er delt af Mads Christiansen fra teamet bag NewDeal Invest. </p>
 
 <blockquote class="twitter-tweet v5f-tweet" data-conversation="none" data-dnt="true" data-lang="da" data-theme="dark"><p class="xp-dato">Opslag fra <time datetime="2026-10-10">10.10.2026</time> · på engelsk</p><a class="xp-link" href="https://twitter.com/a16z/status/2109018642629423174" rel="noopener" target="_blank">Se opslaget på X<span class="sr"> (åbner i nyt vindue)</span></a></blockquote></li>
 
 </ul>
 
-<details class="rm-more"><summary>Se flere opslag (3)</summary><ul class="xs-liste"><li class="xp"><p class="xp-k">Kort fortalt</p><p class="xp-forkl">Ifølge nyhedsbureauet Reuters har Microsoft trukket sig fra en aftale om at være hovedkunde i et stort datacenter for Nscale, fordi forsinket nettilslutning har skubbet den forventede strømlevering ind i 2030'erne. Reuters beskriver det som en stor hindring for Storbritanniens AI-ambitioner.</p><p class="media-reading"><strong>Hvad skal du lægge mærke til?</strong> Hvor ligger ændringen: energikilde, elnet, udstyr eller leveringstid?</p>
+<details class="rm-more"><summary>Se flere opslag (3)</summary><ul class="xs-liste"><li class="xp"><p class="xp-k">Kort fortalt</p><p class="xp-forkl">Ifølge nyhedsbureauet Reuters har Microsoft trukket sig fra en aftale om at være hovedkunde i et stort datacenter for Nscale, fordi forsinket nettilslutning har skubbet den forventede strømlevering ind i 2030'erne. Reuters beskriver det som en stor hindring for Storbritanniens AI-ambitioner.</p>
 
 <blockquote class="twitter-tweet v5f-tweet" data-conversation="none" data-dnt="true" data-lang="da" data-theme="dark"><p class="xp-fra"><b>Reuters</b> <span>@Reuters på X</span></p><p class="xp-dato">Opslag fra <time datetime="2026-10-20">20.10.2026</time> · på engelsk</p><a class="xp-link" href="https://twitter.com/Reuters/status/2112578338006913307" rel="noopener" target="_blank">Se opslaget på X<span class="sr"> (åbner i nyt vindue)</span></a></blockquote></li>
 
-<li class="xp"><p class="xp-k">Kort fortalt</p><p class="media-reading"><strong>Hvad skal du lægge mærke til?</strong> Hvor ligger ændringen: energikilde, elnet, udstyr eller leveringstid?</p>
+<li class="xp"><p class="xp-k">Kort fortalt</p>
 
 <blockquote class="twitter-tweet v5f-tweet" data-conversation="none" data-dnt="true" data-lang="da" data-theme="dark"><p class="xp-fra"><b>Bloomberg</b> <span>@business på X</span></p><p class="xp-dato">Opslag fra <time datetime="2026-10-22">22.10.2026</time> · på engelsk</p><a class="xp-link" href="https://twitter.com/business/status/2113071614237495481" rel="noopener" target="_blank">Se opslaget på X<span class="sr"> (åbner i nyt vindue)</span></a></blockquote></li>
 
-<li class="xp"><p class="xp-k">Kort fortalt</p><p class="xp-forkl"> Ifølge CNBC har Google foreslået en aftale med Xcel Energy, der skal tilføje mere vind, sol og batterikapacitet, end datacentret ventes at bruge.</p><p class="media-reading"><strong>Hvad skal du lægge mærke til?</strong> Hvor ligger ændringen: energikilde, elnet, udstyr eller leveringstid?</p>
+<li class="xp"><p class="xp-k">Kort fortalt</p><p class="xp-forkl"> Ifølge CNBC har Google foreslået en aftale med Xcel Energy, der skal tilføje mere vind, sol og batterikapacitet, end datacentret ventes at bruge.</p>
 
 <blockquote class="twitter-tweet v5f-tweet" data-conversation="none" data-dnt="true" data-lang="da" data-theme="dark"><p class="xp-fra"><b>CNBC</b> <span>@CNBC på X</span></p><p class="xp-dato">Opslag fra <time datetime="2026-10-20">20.10.2026</time> · på engelsk</p><a class="xp-link" href="https://twitter.com/CNBC/status/2112326206460756267" rel="noopener" target="_blank">Se opslaget på X<span class="sr"> (åbner i nyt vindue)</span></a></blockquote></li>
 
@@ -510,7 +510,7 @@
 </header>
 <div class="kort panel x-tema">
 <p class="x-tema-status lille" role="status">Henter opslag …</p>
-<details class="fold-ud fold-mobil fold-sektion" data-aaben-bred><summary aria-expanded="false">Se opslagene fra X</summary><ul class="x-tema-liste" hidden></ul></details>
+<details class="fold-ud fold-mobil fold-sektion" data-aaben-bred><summary aria-expanded="false">Vis opslagene fra X</summary><ul class="x-tema-liste" hidden></ul></details>
 <p class="kildelinje x-tema-kilde" hidden></p>
 </div>
 </section>
@@ -581,6 +581,7 @@
 
 <script src="../assets/v5-temaer/energi.js" defer></script>
 
-<script defer src="../assets/js/review-media.js?v=20261031-3"></script><script defer src="../assets/js/journey-polish.js?v=20261031c"></script></body>
+<script defer src="../assets/js/review-media.js?v=20261031-3"></script><script defer src="../assets/js/journey-polish.js?v=20261031c"></script><script src="../assets/claude/11-fold.js?v=cr11" defer data-claude-punkt="11"></script>
+</body>
 
 </html>

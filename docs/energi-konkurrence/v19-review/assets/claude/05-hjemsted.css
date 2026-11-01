@@ -1,0 +1,27 @@
+/* Graf-review punkt 5: kortet over selskabernes hjemsted. */
+#geography-review .cr5-skjul{display:none}
+#geography-review #hq-map svg .cr5-aktiv{cursor:pointer;stroke:#0f1d23;stroke-width:.5}
+#geography-review #hq-map svg .cr5-on{stroke:#eee69b;stroke-width:1.6;fill:#eee69b}
+#geography-review #hq-map svg .cr5-prik{stroke:#0f1d23;stroke-width:1}
+#geography-review #hq-map svg .cr5-prik.cr5-on{stroke:#eee69b;stroke-width:2}
+.cr5-legende{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;margin:12px 0 0;font-size:13px;color:#b5c8ce}
+.cr5-legende i{display:block;width:150px;height:9px;border-radius:5px;background:linear-gradient(90deg,#2f4a53,#c3ecf0)}
+.cr5-legende p{flex-basis:100%;margin:6px 0 0;font-size:13px;color:#b5c8ce}
+.cr5-valgt{margin:16px 0 0;padding:16px 18px;border:1px solid #89aeb440;border-radius:14px;background:#0f1c22}
+.cr5-valgt[hidden]{display:none}
+.cr5-etiket{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#9fb6bb}
+.cr5-hoved{display:flex;align-items:baseline;gap:6px 14px;margin:6px 0;flex-wrap:wrap}
+.cr5-hoved strong{font-size:34px;line-height:1.1;color:#eee69b;font-variant-numeric:tabular-nums}
+.cr5-hoved span{font-size:15px;color:#eef4f3}
+.cr5-top{margin:4px 0 8px;font-size:14px;color:#b5c8ce}
+.cr5-alle{padding:0;border:0;background:none;color:#a4d8df;text-decoration:underline;font:inherit;font-size:14px;cursor:pointer;min-height:32px}
+#geography-review .cr5-liste{counter-reset:cr5}
+#geography-review .cr5-liste .country-pick.analysis-country{counter-increment:cr5;display:grid;grid-template-columns:26px minmax(0,1fr) minmax(60px,150px) auto;align-items:center;gap:10px;min-height:44px;padding:8px 12px;width:100%}
+#geography-review .cr5-liste .country-pick.analysis-country::before{content:counter(cr5);font-size:12px;color:#9fb6bb;font-variant-numeric:tabular-nums}
+#geography-review .cr5-liste .country-pick.analysis-country>span{grid-column:2}
+#geography-review .cr5-liste .country-pick.analysis-country>.analysis-country-track{grid-column:3;grid-row:1}
+#geography-review .cr5-liste .country-pick.analysis-country>strong{grid-column:4;grid-row:1;text-align:right;font-variant-numeric:tabular-nums}
+#geography-review .cr5-liste .country-pick.cr5-on{border-color:#eee69b;background:#89aeb422}
+#geography-review .cr5-liste .country-pick.cr5-on .analysis-country-track>i{background:#eee69b}
+#geography-review .cr5-liste details summary{min-height:40px;padding:8px 0;color:#a4d8df;cursor:pointer}
+@media (max-width:700px){.cr5-hoved strong{font-size:28px}#geography-review .cr5-liste .country-pick.analysis-country{grid-template-columns:24px minmax(0,1fr) minmax(50px,110px) auto}}

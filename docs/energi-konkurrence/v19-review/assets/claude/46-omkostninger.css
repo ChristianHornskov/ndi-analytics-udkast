@@ -1,0 +1,3 @@
+/* Graf-review punkt 46: samme tekststørrelse som resten af widgeten. */
+#preview-visible-costs p{font-size:14px;line-height:1.55}
+#preview-visible-costs p strong,#preview-visible-costs p a{font-size:inherit}

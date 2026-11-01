@@ -1,0 +1,6 @@
+/* Punkt 49: NDI-FutureTech i egen sektion på eToro-siden. */
+.cr-etoro-ndi .etoro-ndi{margin-top:0;padding-top:0;border-top:0}
+.cr-etoro-ndi .etoro-ndi>p{max-width:68ch}
+.cr-etoro-ndi .etoro-ndi>p:has(>.knap){margin:28px 0}
+.cr-etoro-ndi .etoro-ndi-fodnote{max-width:68ch}
+.cr-etoro-ndi .kildeblok{margin-top:24px}

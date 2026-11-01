@@ -1,0 +1,25 @@
+/* Punkt 16: ens logofelt. Logoer på en lys plade med samme luft, og initialer på
+   en plade i temaets farve, når logoet mangler. */
+html body .sidehoved-ikon--logo.sidehoved-ikon--billede,
+html body .alle-logo.sm-logo--billede{background:#f4f7f8!important;border:0!important;box-shadow:inset 0 0 0 1px rgba(0,0,0,.06);border-radius:14px}
+html body .sidehoved-ikon--logo.sidehoved-ikon--billede{padding:9px!important}
+html body .alle-logo.sm-logo--billede{padding:3px;border-radius:8px}
+html body .sidehoved-ikon--logo.sidehoved-ikon--billede img{width:100%;height:100%;object-fit:contain}
+html body .sidehoved-ikon--logo.cr-logo-init{
+  --lf:#8bb8bc;
+  background:color-mix(in srgb,var(--lf) 20%,#0b151c)!important;
+  border:0!important;box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--lf) 55%,transparent);
+  color:var(--lf)!important;border-radius:14px;
+  font-family:var(--font-display,inherit);font-weight:600;font-size:19px;letter-spacing:.02em;
+  display:grid;place-items:center;padding:0!important}
+html body .alle-logo.cr-logo-init{
+  --lf:#8bb8bc;
+  background:color-mix(in srgb,var(--lf) 20%,#0b151c)!important;border:0!important;
+  box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--lf) 55%,transparent);
+  color:var(--lf)!important;border-radius:8px;font-weight:600;font-size:11px;letter-spacing:.02em}
+html[data-tema="lys"] body .sidehoved-ikon--logo.cr-logo-init,
+html[data-tema="lys"] body .alle-logo.cr-logo-init{
+  background:color-mix(in srgb,var(--lf) 22%,#ffffff)!important;
+  box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--lf) 70%,transparent);
+  color:color-mix(in srgb,var(--lf) 55%,#10222a)!important}
+@media(max-width:600px){html body .sidehoved-ikon--logo.cr-logo-init{font-size:16px;border-radius:12px}html body .sidehoved-ikon--logo.sidehoved-ikon--billede{padding:7px!important;border-radius:12px}}

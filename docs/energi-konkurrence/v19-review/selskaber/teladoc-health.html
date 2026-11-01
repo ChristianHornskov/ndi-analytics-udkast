@@ -37,7 +37,11 @@
 
 <script>try{document.fonts.load("500 16px Manrope");document.fonts.load("400 16px 'DM Sans'")}catch(e){}</script>
 
-<link rel="stylesheet" href="../assets/css/review.css?v=20261031logos"><link rel="stylesheet" href="../assets/css/journey-polish.css?v=20261031d"></head>
+<link rel="stylesheet" href="../assets/css/review.css?v=20261031logos"><link rel="stylesheet" href="../assets/css/journey-polish.css?v=20261031d"><link rel="stylesheet" href="../assets/claude/16-logoer.css?v=cr16" data-claude-punkt="16">
+<link rel="stylesheet" href="../assets/claude/20-tidligere.css?v=cr20" data-claude-punkt="20">
+<link rel="stylesheet" href="../assets/claude/21-aktien.css?v=cr21" data-claude-punkt="21">
+<link rel="stylesheet" href="../assets/claude/33-sidemenu.css?v=cr33" data-claude-punkt="33">
+</head>
 
 <body>
 <svg class="sprite" aria-hidden="true" focusable="false">
@@ -166,7 +170,7 @@
 <h2 class="sm-overskrift" id="sm-h-temaer"><span>Temaer</span><span class="sm-overskrift-note">Andel af fonden</span></h2>
 <ul class="sm-liste">
 </ul>
-<ul class="sm-liste sm-temaliste" id="sm-temaer" data-ordne="temaer">
+<ul class="sm-liste sm-temaliste vis-alle" id="sm-temaer" data-ordne="temaer">
 <li data-id="chips"><a class="sm-link sm-link--tema" style="--tf:#8bb8bc" href="../temaer/chips.html"><svg class="ik" aria-hidden="true"><use href="#t-chips"></use></svg><span>Chips og halvledere</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
 <li data-id="energi"><a class="sm-link sm-link--tema" style="--tf:#759ebc" href="../temaer/energi.html"><svg class="ik" aria-hidden="true"><use href="#t-energi"></use></svg><span>Energi og elnet</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
 <li data-id="datacenter"><a class="sm-link sm-link--tema" style="--tf:#d5ba75" href="../temaer/datacenter.html"><svg class="ik" aria-hidden="true"><use href="#t-datacenter"></use></svg><span>Datacentre</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
@@ -180,9 +184,6 @@
 <li data-id="sundhed"><a class="sm-link sm-link--tema" style="--tf:#a4a6cf" href="../temaer/sundhed.html"><svg class="ik" aria-hidden="true"><use href="#t-sundhed"></use></svg><span>Sundhed og biotek</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
 <li data-id="kvante"><a class="sm-link sm-link--tema" style="--tf:#cd99a5" href="../temaer/kvante.html"><svg class="ik" aria-hidden="true"><use href="#t-kvante"></use></svg><span>Kvantecomputere</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
 </ul>
-<button class="sm-vis-flere" type="button" aria-expanded="false" aria-controls="sm-temaer">
-<span class="sm-vis-tekst">Vis alle <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer</span><span class="sm-vis-faerre" hidden>Vis færre temaer</span><svg class="ik ik--s" aria-hidden="true"><use href="#i-ned"></use></svg>
-</button>
 </nav>
 <nav class="sm-gruppe" aria-labelledby="sm-h-selskaber">
 <h2 class="sm-overskrift" id="sm-h-selskaber"><span>Selskaber</span><span class="sm-overskrift-note">Andel af fonden</span></h2>
@@ -204,31 +205,10 @@
 <main id="indhold" tabindex="-1"><nav class="up-trail" aria-label="Du er her"><a href="../tech.html">Tech</a><span aria-hidden="true">/</span><span aria-current="page">Teladoc Health</span></nav>
 <section class="sektion sektion--overblik" id="overblik" aria-labelledby="h-side">
 <header class="sidehoved">
-<div class="sidehoved-ikon sidehoved-ikon--logo" aria-hidden="true">T</div>
+<div class="sidehoved-ikon sidehoved-ikon--logo cr-logo-init" aria-hidden="true">TH</div>
 <div><p class="kicker">Tidligere i fonden</p><h1 id="h-side">Teladoc Health</h1></div>
 </header>
-<div class="gitter gitter--stub">
-<article class="kort kort--andel stub-andel" aria-labelledby="h-andel">
-<header class="kort-hoved">
-<h2 class="kort-titel" id="h-andel"><svg class="ik ik--s" aria-hidden="true"><use href="#i-fond"></use></svg>Andel af fonden</h2>
-</header>
-<dl class="andel-tal">
-<div class="andel-celle andel-celle--accent"><dt>PMINDI</dt><dd><span class="stortal"><span data-tal="tidligere.sider.teladoc-health.andel" data-fmt="tal">…  </span></span><span class="enhed">%</span></dd></div>
-</dl>
-<p>Andel af fonden pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span>. Fonden ejer ikke aktier i Teladoc Health på den dato.</p>
-<p class="lille">Siden er bevaret til orientering.</p>
-</article>
-<article class="kort kort--hero stub-hero">
-<div class="hero-tekst">
-<p class="kicker">Hvad selskabet laver</p>
-<p>Teladoc Health, Inc. leverer virtuel behandling (virtual care) og forbinder patienter, behandlere og sundhedsplatforme. Selskabet har hovedsæde i New York. Omsætningen var 2.530,0 mio. dollar i 2025 mod 2.569,6 mio. dollar i 2024.</p><p>Patienter skal kunne få behandling uden at møde op fysisk. Teladoc leverer virtuel behandling og forbinder patienter med behandlere.</p>
-<p class="lille">Omsætning er de penge, selskabet får ind fra kunderne, før udgifterne er trukket fra. </p> <a class="tekstlink tekstlink--tryk" href="https://www.sec.gov/Archives/edgar/data/1477449/000147744926000012/tdoc-20251231.htm" target="_blank" rel="noopener">Teladoc Health: 10-K for 2025<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (åbner i nyt vindue)</span></a>
-</div>
-</article>
-</div>
-<nav class="videre" aria-label="Videre">
-<a class="knap" href="../portfolio/index.html"><svg class="ik ik--s" aria-hidden="true"><use href="#i-tilbage"></use></svg>Sådan er fonden bygget</a>
-</nav>
+<div class="cr-stub-status" role="note"><span class="cr-prik" aria-hidden="true"></span><div><p class="cr-stub-titel">Ikke længere i fonden</p><p>Fonden ejer ikke aktier i Teladoc Health pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…</span>. Siden er bevaret til orientering.</p></div></div><div class="cr-stub-gitter"><article class="kort cr-stub-panel"><p class="cr-lab">Hvad selskabet laver</p><p>Teladoc Health, Inc. leverer virtuel behandling (virtual care) og forbinder patienter, behandlere og sundhedsplatforme. Selskabet har hovedsæde i New York.</p><p>Patienter skal kunne få behandling uden at møde op fysisk. Teladoc leverer virtuel behandling og forbinder patienter med behandlere.</p></article><article class="kort cr-stub-panel"><p class="cr-lab">Omsætning, mio. USD</p><div class="cr-oms"><span>2025</span><i aria-hidden="true" style="--w:98%"></i><b>2.530,0</b></div><div class="cr-oms cr-foer"><span>2024</span><i aria-hidden="true" style="--w:100%"></i><b>2.569,6</b></div><p class="cr-mini">Omsætning er de penge, selskabet får ind fra kunderne, før udgifterne er trukket fra. Kilde: <a class="tekstlink tekstlink--tryk" href="https://www.sec.gov/Archives/edgar/data/1477449/000147744926000012/tdoc-20251231.htm" target="_blank" rel="noopener">Teladoc Health: 10-K for 2025<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (åbner i nyt vindue)</span></a></p></article></div><nav class="videre cr-stub-videre" aria-label="Videre"><a class="knap" href="../alle-selskaber.html">Se fondens selskaber i dag →</a></nav>
 </section>
 <section class="sektion sektion--kurs" id="kurs" aria-labelledby="h-kurs" data-kurs-sektion hidden>
 <div class="kort panel kurs-panel" data-kurs-id="teladoc-health" data-kurs-ticker="" data-kurs-fil="">

@@ -39,7 +39,15 @@
 
 <script>try{document.fonts.load("500 16px Manrope");document.fonts.load("400 16px 'DM Sans'")}catch(e){}</script>
 
-<link rel="stylesheet" href="../assets/css/review.css?v=20261031logos"><link rel="stylesheet" href="../assets/css/review-media.css?v=20261031-2"><link rel="stylesheet" href="../assets/css/journey-polish.css?v=20261031d"></head>
+<link rel="stylesheet" href="../assets/css/review.css?v=20261031logos"><link rel="stylesheet" href="../assets/css/review-media.css?v=20261031-2"><link rel="stylesheet" href="../assets/css/journey-polish.css?v=20261031d"><link rel="stylesheet" href="../assets/claude/16-logoer.css?v=cr16" data-claude-punkt="16">
+<link rel="stylesheet" href="../assets/claude/17-rolle.css?v=cr17" data-claude-punkt="17">
+<link rel="stylesheet" href="../assets/claude/19-rang.css?v=cr19" data-claude-punkt="19">
+<link rel="stylesheet" href="../assets/claude/21-aktien.css?v=cr21" data-claude-punkt="21">
+<link rel="stylesheet" href="../assets/claude/33-sidemenu.css?v=cr33" data-claude-punkt="33">
+<link rel="stylesheet" href="../assets/claude/49-etoro.css?v=cr49" data-claude-punkt="49">
+<link rel="stylesheet" href="../assets/claude/51-lyst.css?v=cr51" data-claude-punkt="51">
+<link rel="stylesheet" href="../assets/claude/52-video.css?v=cr52" data-claude-punkt="52">
+</head>
 
 <body data-slug="etoro-group">
 <svg class="sprite" aria-hidden="true" focusable="false">
@@ -168,7 +176,7 @@
 <h2 class="sm-overskrift" id="sm-h-temaer"><span>Temaer</span><span class="sm-overskrift-note">Andel af fonden</span></h2>
 <ul class="sm-liste">
 </ul>
-<ul class="sm-liste sm-temaliste" id="sm-temaer" data-ordne="temaer">
+<ul class="sm-liste sm-temaliste vis-alle" id="sm-temaer" data-ordne="temaer">
 <li data-id="chips"><a class="sm-link sm-link--tema" style="--tf:#8bb8bc" href="../temaer/chips.html"><svg class="ik" aria-hidden="true"><use href="#t-chips"></use></svg><span>Chips og halvledere</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
 <li data-id="energi"><a class="sm-link sm-link--tema" style="--tf:#759ebc" href="../temaer/energi.html"><svg class="ik" aria-hidden="true"><use href="#t-energi"></use></svg><span>Energi og elnet</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
 <li data-id="datacenter"><a class="sm-link sm-link--tema" style="--tf:#d5ba75" href="../temaer/datacenter.html"><svg class="ik" aria-hidden="true"><use href="#t-datacenter"></use></svg><span>Datacentre</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
@@ -182,9 +190,6 @@
 <li data-id="sundhed"><a class="sm-link sm-link--tema" style="--tf:#a4a6cf" href="../temaer/sundhed.html"><svg class="ik" aria-hidden="true"><use href="#t-sundhed"></use></svg><span>Sundhed og biotek</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
 <li data-id="kvante"><a class="sm-link sm-link--tema" style="--tf:#cd99a5" href="../temaer/kvante.html"><svg class="ik" aria-hidden="true"><use href="#t-kvante"></use></svg><span>Kvantecomputere</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
 </ul>
-<button class="sm-vis-flere" type="button" aria-expanded="false" aria-controls="sm-temaer">
-<span class="sm-vis-tekst">Vis alle <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer</span><span class="sm-vis-faerre" hidden>Vis færre temaer</span><svg class="ik ik--s" aria-hidden="true"><use href="#i-ned"></use></svg>
-</button>
 </nav>
 <nav class="sm-gruppe" aria-labelledby="sm-h-selskaber">
 <h2 class="sm-overskrift" id="sm-h-selskaber"><span>Selskaber</span><span class="sm-overskrift-note">Andel af fonden</span></h2>
@@ -205,7 +210,7 @@
 <div class="hoved">
 <main id="indhold" tabindex="-1"><nav class="up-trail" aria-label="Du er her"><a href="../tech.html">Tech</a><span aria-hidden="true">/</span><a href="../temaer/platforme.html">Platformsøkonomi</a><span aria-hidden="true">/</span><span aria-current="page">eToro Group</span></nav><nav class="up-shortcuts" aria-label="På denne side"><a href="#hvad">Forstå selskabet</a><a href="#mere-fra-ndi">Videoer &amp; opslag</a></nav>
 <section class="sektion sektion--overblik v18s" id="overblik" aria-labelledby="h-side">
-<header class="v18s-hoved v18s-hoved--kort"><div class="sidehoved-ikon sidehoved-ikon--logo" aria-hidden="true">e</div><div><p class="kicker">Selskab i temaet <a class="kicker-link" href="../temaer/platforme.html">Platformsøkonomi</a></p>
+<header class="v18s-hoved v18s-hoved--kort"><div class="sidehoved-ikon sidehoved-ikon--logo cr-logo-init" aria-hidden="true" style="--lf:#b78f70">EG</div><div><p class="kicker">Selskab i temaet <a class="kicker-link" href="../temaer/platforme.html">Platformsøkonomi</a></p>
 <h1 id="h-side">eToro Group</h1></div></header>
 <article class="kort kort--hero kort--orbit kort--topanim" aria-labelledby="h-hero">
 <div class="hero-billede hero-billede--svg ta-baand"><div class="ta-udsnit"><svg class="hero-svg ta-svg" id="ta-etoro" viewbox="0 0 1200 600" preserveaspectratio="xMidYMid slice" data-varighed="4" style="--ux:300;--uy:60;--uw:600;--uh:266.67" aria-hidden="true" focusable="false">
@@ -242,13 +247,17 @@
 <p>eToro Group er med i temaet <a class="tekstlink" href="../temaer/platforme.html">Platformsøkonomi</a>.</p>
 <p class="lille rolle-kilde">Kilde: fondens temainddeling.</p>
 </div>
-<section class="etoro-ndi" aria-labelledby="h-etoro-ndi">
-<h3 class="etoro-ndi-titel" id="h-etoro-ndi">NDI-FutureTech på eToro</h3>
+
+</section>
+<section class="sektion v18s-del cr-etoro-ndi" id="ndi-futuretech" aria-labelledby="h-etoro-ndi">
+<h2 class="v18s-del-titel" id="h-etoro-ndi">NDI-FutureTech på eToro</h2>
+<div class="etoro-ndi">
+
 <p>NDI-FutureTech er en copy-trading portefølje af teknologivirksomheder, tilpasset den internationale handelsplatform eToro. Den følger samme overordnede strategi som PMINDI, men er mere koncentreret. Minimumsinvestering 500 USD og rebalanceres kvartalsvist. Du betaler ingen administrationsgebyrer, men vi modtager et løbende vederlag fra eToro når du kopierer porteføljen. Vederlaget trækkes ikke fra din investering, men eToros egne omkostninger (bl.a. spread og valutaveksling) påløber fortsat.</p>
 <p><a class="knap knap--primaer" href="https://med.etoro.com/aw.aspx?A=121472&amp;Task=Click&amp;TargetURL=https%3A%2F%2Fwww.etoro.com%2Fsmartportfolios%2Fndi-futuretech&amp;SubAffiliateID=" target="_blank" rel="noopener sponsored">Kopier nu<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (åbner i nyt vindue)</span></a></p>
 <p class="lille etoro-ndi-fodnote">Hjemmesiden er desuden markedsføringsmateriale for NDI-FutureTech, en Smart Portfolio på www.etoro.com, der ikke er en UCITS og ikke er omfattet af foreningens prospekt eller PRIIP-KID.</p>
 <aside class="kildeblok lille" aria-label="Kilder til teksten"><p class="kildeblok-titel">Kilder</p><ul class="kildeblok-liste"><li><a class="tekstlink tekstlink--tryk" href="https://www.newdealinvest.dk/" target="_blank" rel="noopener">Forsiden af newdealinvest.dk<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (åbner i nyt vindue)</span></a><span class="kildeblok-dato">hentet 30.10.2026</span></li></ul></aside>
-</section>
+</div>
 </section>
 <section class="sektion v18s-del " id="aktien" aria-labelledby="h-aktien">
 <p class="v18s-del-nr kicker"><span>03</span> Aktien og fonden</p>
@@ -280,7 +289,7 @@
 </div>
 </section>
 </section>
-<section class="rm-section" id="mere-fra-ndi" aria-labelledby="rm-title"><p class="rm-source">VIDEOER OG OPSLAG</p><h2 id="rm-title">Bliv klogere på eToro Group</h2><div class="rm-grid rm-grid-youtube"><article class="rm-video"><button type="button" class="rm-play" data-youtube="tpFu6ETjbrI" data-start="0" aria-label="Afspil NewDeal Invest x eToro - Event på Børsen (teaser)"><img loading="lazy" src="https://i.ytimg.com/vi/tpFu6ETjbrI/hqdefault.jpg" alt=""><span class="rm-play-icon" aria-hidden="true">▶</span><span class="rm-start">Se fra 0:00</span></button><div class="rm-caption"><p class="rm-source">NEWDEAL INVEST · 2024-03-27</p><h3>NewDeal Invest x eToro - Event på Børsen (teaser)</h3><p class="rm-topic">Om eToro Group · starter ved 0:00</p><a href="https://www.youtube.com/watch?v=tpFu6ETjbrI&amp;t=0s" target="_blank" rel="noopener">Se på YouTube ↗</a></div></article><article class="rm-video"><button type="button" class="rm-play" data-youtube="Cp5j63aW-ok" data-start="0" aria-label="Afspil NDI-FutureTech presentation for eToro - Invest in tech the correct way"><img loading="lazy" src="https://i.ytimg.com/vi/Cp5j63aW-ok/hqdefault.jpg" alt=""><span class="rm-play-icon" aria-hidden="true">▶</span><span class="rm-start">Se fra 0:00</span></button><div class="rm-caption"><p class="rm-source">NEWDEAL INVEST · 2024-12-10</p><h3>NDI-FutureTech presentation for eToro - Invest in tech the correct way</h3><p class="rm-topic">Om eToro Group · starter ved 0:00</p><a href="https://www.youtube.com/watch?v=Cp5j63aW-ok&amp;t=0s" target="_blank" rel="noopener">Se på YouTube ↗</a></div></article></div><details class="rm-more"><summary>Se flere videoer (1)</summary><div class="rm-grid rm-grid-youtube"><article class="rm-video"><button type="button" class="rm-play" data-youtube="Be-JJGT-5CQ" data-start="1125" aria-label="Afspil NewDeal Invest Live Q&amp;A - April 21st at 20:00 (8 PM) with Mads Christiansen &amp; Jesper Bæk"><img loading="lazy" src="https://i.ytimg.com/vi/Be-JJGT-5CQ/hqdefault.jpg" alt=""><span class="rm-play-icon" aria-hidden="true">▶</span><span class="rm-start">Se fra 18:45</span></button><div class="rm-caption"><p class="rm-source">NEWDEAL INVEST · 2024-04-22</p><h3>NewDeal Invest Live Q&amp;A - April 21st at 20:00 (8 PM) with Mads Christiansen &amp; Jesper Bæk</h3><p class="rm-topic">Om eToro Group · starter ved 18:45</p><a href="https://www.youtube.com/watch?v=Be-JJGT-5CQ&amp;t=1125s" target="_blank" rel="noopener">Se på YouTube ↗</a></div></article></div></details></section><section class="sektion v18s-del " id="kilder" aria-labelledby="h-kilder">
+<section class="rm-section" id="mere-fra-ndi" aria-labelledby="rm-title"><p class="rm-source">VIDEOER OG OPSLAG</p><h2 id="rm-title">Bliv klogere på eToro Group</h2><div class="rm-grid rm-grid-youtube"><article class="rm-video"><button type="button" class="rm-play" data-youtube="tpFu6ETjbrI" data-start="0" aria-label="Afspil NewDeal Invest x eToro - Event på Børsen (teaser)"><img loading="lazy" src="https://i.ytimg.com/vi/tpFu6ETjbrI/hqdefault.jpg" alt=""><span class="rm-play-icon" aria-hidden="true">▶</span></button><div class="rm-caption"><p class="rm-source">NEWDEAL INVEST · 27.03.2024</p><h3>NewDeal Invest x eToro - Event på Børsen (teaser)</h3><p class="rm-topic">Om eToro Group</p><a href="https://www.youtube.com/watch?v=tpFu6ETjbrI&amp;t=0s" target="_blank" rel="noopener">Se på YouTube ↗</a></div></article><article class="rm-video"><button type="button" class="rm-play" data-youtube="Cp5j63aW-ok" data-start="0" aria-label="Afspil NDI-FutureTech presentation for eToro - Invest in tech the correct way"><img loading="lazy" src="https://i.ytimg.com/vi/Cp5j63aW-ok/hqdefault.jpg" alt=""><span class="rm-play-icon" aria-hidden="true">▶</span></button><div class="rm-caption"><p class="rm-source">NEWDEAL INVEST · 10.12.2024</p><h3>NDI-FutureTech presentation for eToro - Invest in tech the correct way</h3><p class="rm-topic">Om eToro Group</p><a href="https://www.youtube.com/watch?v=Cp5j63aW-ok&amp;t=0s" target="_blank" rel="noopener">Se på YouTube ↗</a></div></article></div><details class="rm-more"><summary>Se flere videoer (1)</summary><div class="rm-grid rm-grid-youtube"><article class="rm-video"><button type="button" class="rm-play" data-youtube="Be-JJGT-5CQ" data-start="1125" aria-label="Afspil Live Q&amp;A med Mads Christiansen og Jesper Bæk, 21. april 2024"><img loading="lazy" src="https://i.ytimg.com/vi/Be-JJGT-5CQ/hqdefault.jpg" alt=""><span class="rm-play-icon" aria-hidden="true">▶</span><span class="rm-start">Se fra 18:45</span></button><div class="rm-caption"><p class="rm-source">NEWDEAL INVEST · 22.04.2024</p><h3>Live Q&amp;A med Mads Christiansen og Jesper Bæk, 21. april 2024</h3><p class="rm-topic">Om eToro Group</p><a href="https://www.youtube.com/watch?v=Be-JJGT-5CQ&amp;t=1125s" target="_blank" rel="noopener">Se på YouTube ↗</a></div></article></div></details></section><section class="sektion v18s-del " id="kilder" aria-labelledby="h-kilder">
 <p class="v18s-del-nr kicker"><span>04</span> Kilder</p>
 <h2 class="v18s-del-titel" id="h-kilder">Kilder til teksten</h2>
 <aside class="kildeblok lille" aria-label="Kilder til teksten"><p class="kildeblok-titel">Kilder</p><ul class="kildeblok-liste"><li><a class="tekstlink tekstlink--tryk" href="https://www.sec.gov/Archives/edgar/data/1493318/000121390026022034/ea0278371-20f_etoro.htm" target="_blank" rel="noopener">Årsregnskab 2025 (SEC)<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (åbner i nyt vindue)</span></a><span class="kildeblok-dato">02.03.2026</span></li></ul></aside>
@@ -329,6 +338,8 @@
 
 <script src="../assets/js/topanimation.js?v=20261031-integrated"></script>
 
-<script defer src="../assets/js/review-media.js?v=20261031-3"></script><script defer src="../assets/js/journey-polish.js?v=20261031c"></script></body>
+<script defer src="../assets/js/review-media.js?v=20261031-3"></script><script defer src="../assets/js/journey-polish.js?v=20261031c"></script><script src="../assets/claude/19-rang.js?v=cr19" defer data-claude-punkt="19"></script>
+<script src="../assets/claude/52-video.js?v=cr52" defer data-claude-punkt="52"></script>
+</body>
 
 </html>

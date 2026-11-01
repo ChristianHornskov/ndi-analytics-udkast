@@ -18,7 +18,10 @@
 <link rel="stylesheet" href="assets/css/v5-komponenter.css">
 <link rel="stylesheet" href="assets/css/v18-min.css">
 <script>try{document.fonts.load("500 16px Manrope");document.fonts.load("400 16px 'DM Sans'")}catch(e){}</script>
-<link rel="stylesheet" href="assets/css/journey-polish.css?v=20261031d"></head>
+<link rel="stylesheet" href="assets/css/journey-polish.css?v=20261031d"><link rel="stylesheet" href="assets/claude/07-alle-selskaber.css?v=cr7" data-claude-punkt="7">
+<link rel="stylesheet" href="assets/claude/16-logoer.css?v=cr16" data-claude-punkt="16">
+<link rel="stylesheet" href="assets/claude/33-sidemenu.css?v=cr33" data-claude-punkt="33">
+</head>
 <body>
 
 <svg class="sprite" aria-hidden="true" focusable="false">
@@ -106,7 +109,7 @@
 <h2 class="sm-overskrift" id="sm-h-temaer"><span>Temaer</span><span class="sm-overskrift-note">Andel af fonden</span></h2>
 <ul class="sm-liste">
 </ul>
-<ul class="sm-liste sm-temaliste" id="sm-temaer" data-ordne="temaer">
+<ul class="sm-liste sm-temaliste vis-alle" id="sm-temaer" data-ordne="temaer">
 <li data-id="chips"><a class="sm-link sm-link--tema" style="--tf:#8bb8bc" href="temaer/chips.html"><svg class="ik" aria-hidden="true"><use href="#t-chips"/></svg><span>Chips og halvledere</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
 <li data-id="energi"><a class="sm-link sm-link--tema" style="--tf:#759ebc" href="temaer/energi.html"><svg class="ik" aria-hidden="true"><use href="#t-energi"/></svg><span>Energi og elnet</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
 <li data-id="datacenter"><a class="sm-link sm-link--tema" style="--tf:#d5ba75" href="temaer/datacenter.html"><svg class="ik" aria-hidden="true"><use href="#t-datacenter"/></svg><span>Datacentre</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
@@ -120,9 +123,6 @@
 <li data-id="sundhed"><a class="sm-link sm-link--tema" style="--tf:#a4a6cf" href="temaer/sundhed.html"><svg class="ik" aria-hidden="true"><use href="#t-sundhed"/></svg><span>Sundhed og biotek</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
 <li data-id="kvante"><a class="sm-link sm-link--tema" style="--tf:#cd99a5" href="temaer/kvante.html"><svg class="ik" aria-hidden="true"><use href="#t-kvante"/></svg><span>Kvantecomputere</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
 </ul>
-<button class="sm-vis-flere" type="button" aria-expanded="false" aria-controls="sm-temaer" >
-<span class="sm-vis-tekst">Vis alle <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer</span><span class="sm-vis-faerre" hidden>Vis færre temaer</span><svg class="ik ik--s" aria-hidden="true"><use href="#i-ned"/></svg>
-</button>
 </nav>
 <nav class="sm-gruppe" aria-labelledby="sm-h-selskaber">
 <h2 class="sm-overskrift" id="sm-h-selskaber"><span>Selskaber</span><span class="sm-overskrift-note">Andel af fonden</span></h2>
@@ -196,5 +196,6 @@
 <script src="assets/js/grafik.js"></script>
 <script src="assets/js/app.js"></script>
 <script src="assets/js/alle-soeg.js"></script>
-<script defer src="assets/js/journey-polish.js?v=20261031c"></script></body>
+<script defer src="assets/js/journey-polish.js?v=20261031c"></script><script src="assets/claude/16-logoer.js?v=cr16" defer data-claude-punkt="16"></script>
+</body>
 </html>

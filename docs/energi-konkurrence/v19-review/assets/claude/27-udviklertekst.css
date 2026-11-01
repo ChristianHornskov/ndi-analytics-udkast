@@ -1,0 +1,7 @@
+/* Graf-review punkt 27: teknisk fold. */
+.cr27-teknik{margin:12px 0;font-size:13px}
+.cr27-teknik summary{cursor:pointer;min-height:32px;display:flex;align-items:center;opacity:.8}
+.cr27-teknik .cr27-indhold{padding:4px 0 2px}
+.cr27-teknik p{margin:6px 0;font-size:13px}
+.cr27-teknik p.v18-eksempel{background:none;border:0;padding:0}
+.cr27-teknik code{overflow-wrap:anywhere;word-break:break-all}

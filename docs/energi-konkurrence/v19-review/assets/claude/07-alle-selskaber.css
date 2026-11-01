@@ -1,0 +1,26 @@
+/* Graf-review punkt 7: alle selskaber på mobil. */
+@media (max-width:600px){
+  #alle-tabel.tabel--alle,#alle-tabel.tabel--alle tbody{display:block;width:100%}
+  #alle-tabel.tabel--alle thead{display:block}
+  #alle-tabel.tabel--alle thead tr{display:flex;justify-content:space-between;align-items:end;padding:0 0 8px;border-bottom:1px solid var(--linje,#89aeb433)}
+  #alle-tabel.tabel--alle thead th{display:none;padding:0;border:0;font-size:12px;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;width:auto!important;min-width:max-content;flex:0 0 auto}
+  #alle-tabel.tabel--alle thead th:nth-child(2),#alle-tabel.tabel--alle thead th:nth-child(4){display:block}
+  #alle-tabel.tabel--alle thead th:nth-child(2){font-size:0}
+  #alle-tabel.tabel--alle thead th:nth-child(2)::before{content:"Selskab og tema";font-size:12px}
+  #alle-tabel.tabel--alle tbody tr{display:grid;grid-template-columns:24px minmax(0,1fr) auto;grid-template-rows:auto auto;column-gap:10px;row-gap:2px;align-items:center;padding:12px 0;border-bottom:1px solid var(--linje,#89aeb433)}
+  #alle-tabel.tabel--alle tbody tr>*{display:block;padding:0;border:0;min-width:0;background:none}
+  #alle-tabel.tabel--alle tbody tr>td:first-child{grid-column:1;grid-row:1/3;text-align:right;font-size:12px;opacity:.75}
+  #alle-tabel.tabel--alle tbody tr>th{grid-column:2;grid-row:1;align-self:start}
+  #alle-tabel.tabel--alle tbody tr>td:nth-child(3){grid-column:2;grid-row:2;align-self:start;padding-left:52px;font-size:13px;opacity:.75;overflow-wrap:normal;word-break:normal;hyphens:manual}
+  #alle-tabel.tabel--alle tbody tr>td:nth-child(4){grid-column:3;grid-row:1/3;text-align:right;white-space:nowrap}
+  #alle-tabel.tabel--alle .alle-navn{display:flex;align-items:flex-start;gap:10px;min-width:0}
+  #alle-tabel.tabel--alle .alle-navn .alle-logo{flex:0 0 42px;width:42px;height:42px}
+  #alle-tabel.tabel--alle tbody tr>th .alle-logo{margin-bottom:-24px}
+  #alle-tabel.tabel--alle tbody tr>th .pos-navn{padding-top:1px}
+  #alle-tabel.tabel--alle .pos-navn{min-width:0;overflow-wrap:normal;word-break:normal;hyphens:manual;font-size:15px;line-height:1.3}
+  #alle-tabel.tabel--alle .alle-logo.sm-logo--billede{background:#f4f7f7;border-radius:10px;padding:5px;box-sizing:border-box}
+  #alle-tabel.tabel--alle .alle-logo.sm-logo--billede img{width:100%;height:100%;object-fit:contain}
+  #alle-tabel.tabel--alle td:nth-child(4) .pos-pm{display:block;font-variant-numeric:tabular-nums}
+  #alle-tabel.tabel--alle td:nth-child(4) .pos-bar{display:block;width:62px;margin:6px 0 0 auto;order:2}
+  #alle-tabel.tabel--alle td:nth-child(4){display:flex!important;flex-direction:column;align-items:flex-end}
+}

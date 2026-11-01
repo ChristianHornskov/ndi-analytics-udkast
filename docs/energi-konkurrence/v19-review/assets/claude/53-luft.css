@@ -1,0 +1,6 @@
+/* Punkt 53: luft i kildeknapper og c20-overskrifter. */
+.v18-c20 .c20-section h3{margin:10px 0 14px}
+.v18-c20 .c20-section .c20-note{margin-top:12px}
+.v18-c20 .c20-section .c20-kicker + h3{margin-top:8px}
+html body .sx-part .kildechip,
+html body .sx-point-expand .kildechip{padding:6px 14px!important;gap:6px}

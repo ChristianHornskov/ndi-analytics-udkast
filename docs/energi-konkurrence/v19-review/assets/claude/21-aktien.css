@@ -1,0 +1,6 @@
+/* Punkt 21: tomrum efter den skjulte kursgraf.
+   Gælder kun, mens #kurs er skjult. Kommer der kursdata, og #kurs vises,
+   gælder de gamle afstande igen. */
+#kurs[hidden]{display:none!important}
+#aktien:has(#kurs[hidden]){padding-bottom:28px}
+#aktien:has(#kurs[hidden]) + .rm-section{margin-top:0;border-top:0;padding-top:28px}

@@ -39,7 +39,11 @@
 
 <link rel="stylesheet" href="../assets/v5-temaer/rumfart.css?v=20261031-integrated">
 
-<link rel="stylesheet" href="../assets/css/review.css?v=20261031logos"><link rel="stylesheet" href="../assets/css/review-media.css?v=20261031-2"><link rel="stylesheet" href="../assets/css/journey-polish.css?v=20261031d"></head>
+<link rel="stylesheet" href="../assets/css/review.css?v=20261031logos"><link rel="stylesheet" href="../assets/css/review-media.css?v=20261031-2"><link rel="stylesheet" href="../assets/css/journey-polish.css?v=20261031d"><link rel="stylesheet" href="../assets/claude/11-fold.css?v=cr11" data-claude-punkt="11">
+<link rel="stylesheet" href="../assets/claude/14-videoer.css?v=cr14" data-claude-punkt="14">
+<link rel="stylesheet" href="../assets/claude/33-sidemenu.css?v=cr33" data-claude-punkt="33">
+<link rel="stylesheet" href="../assets/claude/37-medier.css?v=cr37" data-claude-punkt="37">
+</head>
 
 <body>
 <svg class="sprite" aria-hidden="true" focusable="false">
@@ -168,7 +172,7 @@
 <h2 class="sm-overskrift" id="sm-h-temaer"><span>Temaer</span><span class="sm-overskrift-note">Andel af fonden</span></h2>
 <ul class="sm-liste">
 </ul>
-<ul class="sm-liste sm-temaliste" id="sm-temaer" data-ordne="temaer">
+<ul class="sm-liste sm-temaliste vis-alle" id="sm-temaer" data-ordne="temaer">
 <li data-id="chips"><a class="sm-link sm-link--tema" style="--tf:#8bb8bc" href="../temaer/chips.html"><svg class="ik" aria-hidden="true"><use href="#t-chips"></use></svg><span>Chips og halvledere</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
 <li data-id="energi"><a class="sm-link sm-link--tema" style="--tf:#759ebc" href="../temaer/energi.html"><svg class="ik" aria-hidden="true"><use href="#t-energi"></use></svg><span>Energi og elnet</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
 <li data-id="datacenter"><a class="sm-link sm-link--tema" style="--tf:#d5ba75" href="../temaer/datacenter.html"><svg class="ik" aria-hidden="true"><use href="#t-datacenter"></use></svg><span>Datacentre</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
@@ -182,9 +186,6 @@
 <li data-id="sundhed"><a class="sm-link sm-link--tema" style="--tf:#a4a6cf" href="../temaer/sundhed.html"><svg class="ik" aria-hidden="true"><use href="#t-sundhed"></use></svg><span>Sundhed og biotek</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
 <li data-id="kvante"><a class="sm-link sm-link--tema" style="--tf:#cd99a5" href="../temaer/kvante.html"><svg class="ik" aria-hidden="true"><use href="#t-kvante"></use></svg><span>Kvantecomputere</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
 </ul>
-<button class="sm-vis-flere" type="button" aria-expanded="false" aria-controls="sm-temaer">
-<span class="sm-vis-tekst">Vis alle <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer</span><span class="sm-vis-faerre" hidden>Vis færre temaer</span><svg class="ik ik--s" aria-hidden="true"><use href="#i-ned"></use></svg>
-</button>
 </nav>
 <nav class="sm-gruppe" aria-labelledby="sm-h-selskaber">
 <h2 class="sm-overskrift" id="sm-h-selskaber"><span>Selskaber</span><span class="sm-overskrift-note">Andel af fonden</span></h2>
@@ -203,7 +204,7 @@
 </div>
 </aside>
 <div class="hoved">
-<main id="indhold" tabindex="-1"><nav class="up-trail" aria-label="Du er her"><a href="../tech.html">Tech</a><span aria-hidden="true">/</span><span aria-current="page">Rumfart</span></nav><nav class="up-shortcuts" aria-label="På denne side"><a href="#cq-rum">Forstå teknologien</a><a href="#mere-fra-ndi">Videoer &amp; opslag</a></nav>
+<main id="indhold" tabindex="-1"><nav class="up-trail" aria-label="Du er her"><a href="../tech.html">Tech</a><span aria-hidden="true">/</span><span aria-current="page">Rumfart</span></nav><nav class="up-shortcuts" aria-label="På denne side"><a href="#cq-rum">Forstå teknologien</a><a href="#selskaberne">Selskaberne</a><a href="#mere-fra-ndi">Videoer &amp; opslag</a></nav>
 <section class="sektion sektion--overblik" id="overblik" aria-labelledby="h-side">
 <div class="v18t">
 <div class="v18t-hero">
@@ -227,7 +228,7 @@
 <span><b>Ud</b><span>Det, der rækker længere ud</span></span></a></li>
 
 </ul>
-<div class="v18t-knapper"><a class="knap knap--primaer v5-knap" href="#retninger">Se selskaberne <span aria-hidden="true">↓</span></a><a class="knap knap--rolig v5-knap" href="#skrevet">Læs vores perspektiv</a></div>
+<div class="v18t-knapper"><a class="knap knap--primaer v5-knap" href="#selskaberne">Se selskaberne <span aria-hidden="true">↓</span></a><a class="knap knap--rolig v5-knap" href="#skrevet">Læs vores perspektiv</a></div>
 </div>
 <div class="v18t-foto v18-ramme"><figure class="tema-foto tema-foto--tonet" style="max-width:600px"><img src="../fotos/rumfart.webp" width="600" height="400" alt="Rumfærgen Atlantis letter (STS-125)." loading="lazy" decoding="async" style="max-width:600px"><figcaption class="foto-kredit">Foto: NASA</figcaption></figure></div>
 </div>
@@ -256,13 +257,12 @@
 <p class="kicker">Det har vi skrevet</p>
 <h2 class="v18-perspektiv-titel" id="h-skrevet">NewDeal Invests perspektiv</h2>
 <p class="v18-perspektiv-intro">Ordret uddrag af NewDeal Invests egne ugebreve og indlæg om temaet, med dato og link til hele teksten. Det er ikke en anbefaling.</p>
-<blockquote class="skrevet-citat"><p>»Musk har gjort noget fundamentalt: han har dramatisk reduceret omkostningen ved at sende ting ud i rummet. Og når transportomkostninger kollapser, opstår der helt nye markeder.«</p></blockquote>
+<blockquote class="skrevet-citat"><p>"Musk har gjort noget fundamentalt: han har dramatisk reduceret omkostningen ved at sende ting ud i rummet. Og når transportomkostninger kollapser, opstår der helt nye markeder."</p></blockquote>
 <p class="skrevet-meta lille"><span class="skrevet-titel">Begyndelsen af begyndelsen</span> · <time datetime="2026-05-31">31.05.2026</time> · ugebrev uge 21, blog</p>
 <a class="tekstlink tekstlink--tryk skrevet-link" href="https://www.newdealinvest.dk/post/uge-21-begyndelsen-af-begyndelsen" target="_blank" rel="noopener">Læs hele teksten på bloggen<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (åbner i nyt vindue)</span></a>
 </div>
 </section>
 </div>
-<p class="hint hint--fri">Tryk på et selskab for at se mere om det.</p>
 </section>
 <template id="tpl-tl"><li><a class="tl-raekke" data-link-selskab href="#"><span class="sm-logo" aria-hidden="true" data-f="forbogstav"></span><span class="tl-navn" data-f="navn"></span><span class="pos-bar" aria-hidden="true"><span data-fbar></span></span><span class="tl-tal" data-f="andel" data-fmt="pct"></span></a></li></template><template id="tpl-mini"><span data-fbar></span></template>
 <div class="v5f v5f-rumfart" data-v5-fortaelling="rumfart"><section aria-labelledby="cq-rum-h" class="cq-rum" id="cq-rum">
@@ -412,11 +412,11 @@
 
 <div>
 
-<figure class="vid"><div class="vid-ramme" data-title="Video: It takes six days for ESA satellites to map every field in the world (DW News)" data-yt="coxigfTyrdI"><button aria-label="Videoen hentes fra YouTube." class="vid-play" type="button"><picture><source media="(max-width:599px)" srcset="../assets/review-img/1d58a9d74b94.webp"></source><img alt="" height="720" loading="lazy" src="../assets/review-img/fc351d3604eb.webp" width="1280"></picture><span aria-hidden="true" class="vid-kilde">DW News</span><span aria-hidden="true" class="vid-ikon"></span><span aria-hidden="true" class="vid-tid">5:04</span></button></div><p class="media-reading"><strong>Se efter:</strong> Skeln mellem opsendelsen og den tjeneste, der bagefter leveres fra rummet.</p>
+<figure class="vid"><div class="vid-ramme" data-title="Video: It takes six days for ESA satellites to map every field in the world (DW News)" data-yt="coxigfTyrdI"><button aria-label="Videoen hentes fra YouTube." class="vid-play" type="button"><picture><source media="(max-width:599px)" srcset="../assets/img/v5-temaer/energi-konkurrence/temaer/space/fra-billedstil/billeder/space-plakat-coxigfTyrdI-mobil.webp"></source><img alt="" height="720" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/space/fra-billedstil/billeder/space-plakat-coxigfTyrdI-bred.webp" width="1280"></picture><span aria-hidden="true" class="vid-kilde">DW News</span><span aria-hidden="true" class="vid-ikon"></span><span aria-hidden="true" class="vid-tid">5:04</span></button></div><p class="media-reading"><strong>Se efter:</strong> Skeln mellem opsendelsen og den tjeneste, der bagefter leveres fra rummet.</p>
 
-<figcaption><b>Det, der kommer ned: DW News viser, hvordan satellitter kortlægger verdens marker, og hvordan data bruges i landbruget.</b> Indslaget er optaget ved ESA’s konference om satellitter, der holder øje med Jorden, Living Planet Symposium. Video fra 27.05.2022, 5:04, på engelsk: “It takes six days for ESA satellites to map every field in the world”. Kilde: DW News. <a href="https://www.youtube.com/watch?v=coxigfTyrdI" rel="noopener" target="_blank">Se på YouTube<span class="sr"> (åbner i nyt vindue)</span></a></figcaption></figure>
+<figcaption><b>Det, der kommer ned: DW News viser, hvordan satellitter kortlægger verdens marker, og hvordan data bruges i landbruget.</b> Indslaget er optaget ved ESA’s konference om satellitter, der holder øje med Jorden, Living Planet Symposium. Video fra 27.05.2022, 5:04, på engelsk: "It takes six days for ESA satellites to map every field in the world". Kilde: DW News. <a href="https://www.youtube.com/watch?v=coxigfTyrdI" rel="noopener" target="_blank">Se på YouTube<span class="sr"> (åbner i nyt vindue)</span></a></figcaption></figure>
 
-<figure class="vid"><div class="vid-ramme" data-title="Video: What is a Satellite? (NASA)" data-yt="1i5Mm7fDKQU"><button aria-label="Videoen hentes fra YouTube." class="vid-play" type="button"><picture><source media="(max-width:599px)" srcset="../assets/review-img/915aab5b3eec.webp"></source><img alt="" height="720" loading="lazy" src="../assets/review-img/886cdf6e687f.webp" width="1280"></picture><span aria-hidden="true" class="vid-kilde">NASA</span><span aria-hidden="true" class="vid-ikon"></span><span aria-hidden="true" class="vid-tid">2:49</span></button></div><p class="media-reading"><strong>Se efter:</strong> Skeln mellem opsendelsen og den tjeneste, der bagefter leveres fra rummet.</p>
+<figure class="vid"><div class="vid-ramme" data-title="Video: What is a Satellite? (NASA)" data-yt="1i5Mm7fDKQU"><button aria-label="Videoen hentes fra YouTube." class="vid-play" type="button"><picture><source media="(max-width:599px)" srcset="../assets/img/v5-temaer/energi-konkurrence/temaer/space/fra-billedstil/billeder/space-plakat-1i5Mm7fDKQU-mobil.webp"></source><img alt="" height="720" loading="lazy" src="../assets/img/v5-temaer/energi-konkurrence/temaer/space/fra-billedstil/billeder/space-plakat-1i5Mm7fDKQU-bred.webp" width="1280"></picture><span aria-hidden="true" class="vid-kilde">NASA</span><span aria-hidden="true" class="vid-ikon"></span><span aria-hidden="true" class="vid-tid">2:49</span></button></div><p class="media-reading"><strong>Se efter:</strong> Skeln mellem opsendelsen og den tjeneste, der bagefter leveres fra rummet.</p>
 
 <figcaption><b>Op: NASA’s undervisningskanal forklarer kort, hvad en satellit er.</b> Video fra 23.04.2026, 2:49, på engelsk. Kilde: Learn With NASA. <a href="https://www.youtube.com/watch?v=1i5Mm7fDKQU" rel="noopener" target="_blank">Se på YouTube<span class="sr"> (åbner i nyt vindue)</span></a></figcaption></figure>
 
@@ -424,7 +424,8 @@
 
 <div>
 
-<ul class="xs" id="x-liste"><li class="xp kort" data-url="https://twitter.com/RocketLab/status/2113543139462189240"><div class="xp-top"><p class="xp-trin"><a data-g="launch" href="#cq-rum">Hører til: Op · Opsendelse</a></p><p class="xp-dato"><time datetime="2026-10-23">23.10.2026</time></p></div><p class="xp-fra"><b>Rocket Lab</b> <span>@RocketLab · på engelsk</span></p><p class="xp-forkl"><span class="xp-k">Selskabets eget opslag</span> <span class="xp-k">Kort fortalt</span> Rocket Lab oplyser, at selskabets raket Electron har sat alle tre HAWK-satellitter til kunden HawkEye 360 i kredsløb.</p><p class="media-reading"><strong>Hvad skal du lægge mærke til?</strong> Læs opslaget sammen med afsnittet om op · opsendelse. Skeln mellem opsendelsen og den tjeneste, der bagefter leveres fra rummet.</p><div class="xp-knapper"><button class="xp-vis" hidden="" type="button">Vis opslaget<span class="sr"> fra Rocket Lab</span></button><a class="xp-link" href="https://twitter.com/RocketLab/status/2113543139462189240" rel="noopener" target="_blank">Se opslaget på X<span class="sr"> (åbner i nyt vindue)</span></a></div><div aria-label="Opslag fra Rocket Lab på X" class="xp-embed" role="group" tabindex="-1"></div></li><li class="xp kort x-mere" data-url="https://twitter.com/NASASpaceflight/status/2113907865060819060"><div class="xp-top"><p class="xp-trin"><a data-g="launch" href="#cq-rum">Hører til: Op · Opsendelse</a></p><p class="xp-dato"><time datetime="2026-10-24">24.10.2026</time></p></div><p class="xp-fra"><b>NASASpaceflight</b> <span>@NASASpaceflight · rumfartsmedie · på engelsk</span></p><p class="media-reading"><strong>Hvad skal du lægge mærke til?</strong> Læs opslaget sammen med afsnittet om op · opsendelse. Skeln mellem opsendelsen og den tjeneste, der bagefter leveres fra rummet.</p><div class="xp-knapper"><button class="xp-vis" hidden="" type="button">Vis opslaget<span class="sr"> fra NASASpaceflight</span></button><a class="xp-link" href="https://twitter.com/NASASpaceflight/status/2113907865060819060" rel="noopener" target="_blank">Se opslaget på X<span class="sr"> (åbner i nyt vindue)</span></a></div><div aria-label="Opslag fra NASASpaceflight på X" class="xp-embed" role="group" tabindex="-1"></div></li><li class="xp kort x-mere" data-url="https://twitter.com/WSJ/status/2113014030235234780"><div class="xp-top"><p class="xp-trin"><a data-g="launch" href="#cq-rum">Hører til: SpaceX under Opsendelse</a></p><p class="xp-dato"><time datetime="2026-10-21">21.10.2026</time></p></div><p class="xp-fra"><b>The Wall Street Journal</b> <span>@WSJ · på engelsk</span></p><p class="xp-forkl"><span class="xp-k">Kort fortalt</span> Politikere fra begge partier i den amerikanske Kongres kræver en undersøgelse af Elon Musk, efter at The Wall Street Journal har beskrevet, at SpaceX-chefen begrænsede Ukraines adgang til Starlink.</p><p class="media-reading"><strong>Hvad skal du lægge mærke til?</strong> Læs opslaget sammen med afsnittet om spacex under opsendelse. Skeln mellem opsendelsen og den tjeneste, der bagefter leveres fra rummet.</p><div class="xp-knapper"><button class="xp-vis" hidden="" type="button">Vis opslaget<span class="sr"> fra The Wall Street Journal</span></button><a class="xp-link" href="https://twitter.com/WSJ/status/2113014030235234780" rel="noopener" target="_blank">Se opslaget på X<span class="sr"> (åbner i nyt vindue)</span></a></div><div aria-label="Opslag fra The Wall Street Journal på X" class="xp-embed" role="group" tabindex="-1"></div></li><li class="xp kort x-mere" data-url="https://twitter.com/Reuters/status/2112418534802555247"><div class="xp-top"><p class="xp-trin"><a data-dir="ud" href="#cq-rum">Hører til: Ud</a></p><p class="xp-dato"><time datetime="2026-10-20">20.10.2026</time></p></div><p class="xp-fra"><b>Reuters</b> <span>@Reuters · på engelsk</span></p><p class="xp-forkl"><span class="xp-k">Kort fortalt</span> Ifølge Reuters har Japan sendt et ubemandet rumfartøj af sted mod Mars-månen Phobos. Reuters skriver, at missionen har til formål at blive den første, der henter prøver fra den lille måne tilbage til Jorden.</p><p class="media-reading"><strong>Hvad skal du lægge mærke til?</strong> Læs opslaget sammen med afsnittet om ud. Skeln mellem opsendelsen og den tjeneste, der bagefter leveres fra rummet.</p><div class="xp-knapper"><button class="xp-vis" hidden="" type="button">Vis opslaget<span class="sr"> fra Reuters</span></button><a class="xp-link" href="https://twitter.com/Reuters/status/2112418534802555247" rel="noopener" target="_blank">Se opslaget på X<span class="sr"> (åbner i nyt vindue)</span></a></div><div aria-label="Opslag fra Reuters på X" class="xp-embed" role="group" tabindex="-1"></div></li></ul>
+<p class="media-reading media-reading--faelles" data-claude="38"><strong>Hvad skal du lægge mærke til?</strong> Skeln mellem opsendelsen og den tjeneste, der bagefter leveres fra rummet.</p>
+<ul class="xs" id="x-liste"><li class="xp kort" data-url="https://twitter.com/RocketLab/status/2113543139462189240"><div class="xp-top"><p class="xp-trin"><a data-g="launch" href="#cq-rum">Hører til: Op · Opsendelse</a></p><p class="xp-dato"><time datetime="2026-10-23">23.10.2026</time></p></div><p class="xp-fra"><b>Rocket Lab</b> <span>@RocketLab · på engelsk</span></p><p class="xp-forkl"><span class="xp-k">Selskabets eget opslag</span> <span class="xp-k">Kort fortalt</span> Rocket Lab oplyser, at selskabets raket Electron har sat alle tre HAWK-satellitter til kunden HawkEye 360 i kredsløb.</p><div class="xp-knapper"><button class="xp-vis" hidden="" type="button">Vis opslaget<span class="sr"> fra Rocket Lab</span></button><a class="xp-link" href="https://twitter.com/RocketLab/status/2113543139462189240" rel="noopener" target="_blank">Se opslaget på X<span class="sr"> (åbner i nyt vindue)</span></a></div><div aria-label="Opslag fra Rocket Lab på X" class="xp-embed" role="group" tabindex="-1"></div></li><li class="xp kort x-mere" data-url="https://twitter.com/NASASpaceflight/status/2113907865060819060"><div class="xp-top"><p class="xp-trin"><a data-g="launch" href="#cq-rum">Hører til: Op · Opsendelse</a></p><p class="xp-dato"><time datetime="2026-10-24">24.10.2026</time></p></div><p class="xp-fra"><b>NASASpaceflight</b> <span>@NASASpaceflight · rumfartsmedie · på engelsk</span></p><div class="xp-knapper"><button class="xp-vis" hidden="" type="button">Vis opslaget<span class="sr"> fra NASASpaceflight</span></button><a class="xp-link" href="https://twitter.com/NASASpaceflight/status/2113907865060819060" rel="noopener" target="_blank">Se opslaget på X<span class="sr"> (åbner i nyt vindue)</span></a></div><div aria-label="Opslag fra NASASpaceflight på X" class="xp-embed" role="group" tabindex="-1"></div></li><li class="xp kort x-mere" data-url="https://twitter.com/WSJ/status/2113014030235234780"><div class="xp-top"><p class="xp-trin"><a data-g="launch" href="#cq-rum">Hører til: SpaceX under Opsendelse</a></p><p class="xp-dato"><time datetime="2026-10-21">21.10.2026</time></p></div><p class="xp-fra"><b>The Wall Street Journal</b> <span>@WSJ · på engelsk</span></p><p class="xp-forkl"><span class="xp-k">Kort fortalt</span> Politikere fra begge partier i den amerikanske Kongres kræver en undersøgelse af Elon Musk, efter at The Wall Street Journal har beskrevet, at SpaceX-chefen begrænsede Ukraines adgang til Starlink.</p><div class="xp-knapper"><button class="xp-vis" hidden="" type="button">Vis opslaget<span class="sr"> fra The Wall Street Journal</span></button><a class="xp-link" href="https://twitter.com/WSJ/status/2113014030235234780" rel="noopener" target="_blank">Se opslaget på X<span class="sr"> (åbner i nyt vindue)</span></a></div><div aria-label="Opslag fra The Wall Street Journal på X" class="xp-embed" role="group" tabindex="-1"></div></li><li class="xp kort x-mere" data-url="https://twitter.com/Reuters/status/2112418534802555247"><div class="xp-top"><p class="xp-trin"><a data-dir="ud" href="#cq-rum">Hører til: Ud</a></p><p class="xp-dato"><time datetime="2026-10-20">20.10.2026</time></p></div><p class="xp-fra"><b>Reuters</b> <span>@Reuters · på engelsk</span></p><p class="xp-forkl"><span class="xp-k">Kort fortalt</span> Ifølge Reuters har Japan sendt et ubemandet rumfartøj af sted mod Mars-månen Phobos. Reuters skriver, at missionen har til formål at blive den første, der henter prøver fra den lille måne tilbage til Jorden.</p><div class="xp-knapper"><button class="xp-vis" hidden="" type="button">Vis opslaget<span class="sr"> fra Reuters</span></button><a class="xp-link" href="https://twitter.com/Reuters/status/2112418534802555247" rel="noopener" target="_blank">Se opslaget på X<span class="sr"> (åbner i nyt vindue)</span></a></div><div aria-label="Opslag fra Reuters på X" class="xp-embed" role="group" tabindex="-1"></div></li></ul>
 
 <button aria-controls="x-liste" aria-expanded="false" class="knap" hidden="" id="x-mere" type="button">Vis 3 opslag mere</button>
 
@@ -434,7 +435,22 @@
 
 </div>
 
-</div></section></div>
+</div></section>
+<section class="sektion" id="selskaberne" data-claude-punkt="13" aria-labelledby="h-selskaber">
+<div class="gitter gitter--stub">
+<article class="kort panel panel--bred" aria-labelledby="h-selskaber">
+<header class="panel-hoved">
+<div><h2 class="panel-titel" id="h-selskaber"><svg class="ik" aria-hidden="true"><use href="#i-selskab"></use></svg><span data-hvis="temaer#rumfart.oevrigeAntal">De <span data-tal="temaer#rumfart.antalVist" data-fmt="heltal">… </span> største af temaets <span data-tal="temaer#rumfart.antal" data-fmt="antal" data-en="selskab" data-fl="selskaber">…  selskaber</span></span><span data-hvis="temaer#rumfart.alleVist" hidden>Temaets <span data-tal="temaer#rumfart.antal" data-fmt="antal" data-en="selskab" data-fl="selskaber">…  selskaber</span></span></h2>
+<p class="hint">Tryk på et selskab for at se mere om det.</p></div>
+</header>
+<ul class="tema-liste" data-liste="temaer#rumfart.vist" data-skabelon="tpl-tl"></ul>
+<details class="fold-ud fold-liste" data-hvis="temaer#rumfart.oevrigeAntal" hidden><summary><span>Vis alle <span data-tal="temaer#rumfart.antal" data-fmt="antal" data-en="selskab" data-fl="selskaber">…  selskaber</span> i temaet</span></summary>
+<ul class="tema-liste" data-liste="temaer#rumfart.oevrige" data-skabelon="tpl-tl"></ul>
+</details>
+<p class="kildelinje">Andele i PMINDI, den udgave af fonden, der udbetaler udbytte, pr. <span data-tal="andelsdatoTekst" data-fmt="tekst">…        </span> (fondens data).</p>
+</article>
+</div>
+</section></div>
 
 <section class="sektion v18-proces" data-proces-slot="rumfart" hidden></section>
 <section class="sektion" id="videoer" aria-labelledby="h-videoer">
@@ -452,7 +468,7 @@
 <p class="kicker">Video fra SpaceX · 2018</p>
 <h3 class="panel-titel">Den første flyvning med Falcon Heavy</h3>
 <p>Se den første flyvning med Falcon Heavy fra 2018.</p>
-<a class="knap knap--rolig" href="https://www.youtube.com/watch?v=A0FZIwabctw" target="_blank" rel="noopener"><svg class="ik ik--s" aria-hidden="true"><use href="#i-medier"></use></svg>Se videoen på YouTube<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (åbner i nyt vindue)</span></a>
+<a class="knap knap--rolig" href="https://www.youtube.com/watch?v=A0FZIwabctw" target="_blank" rel="noopener"><svg class="ik ik--s" aria-hidden="true"><use href="#i-medier"></use></svg>Se på YouTube<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (åbner i nyt vindue)</span></a>
 </div>
 </article><article class="kort videokort-v3 s6">
 <figure class="video-flade">
@@ -463,7 +479,7 @@
 <p class="kicker">Video fra SpaceX · 2022</p>
 <h3 class="panel-titel">En opsendelse med 53 satellitter</h3>
 <p>Følg en mission, der sender 53 Starlink-satellitter op.</p>
-<a class="knap knap--rolig" href="https://www.youtube.com/watch?v=KzpVUXxdc68" target="_blank" rel="noopener"><svg class="ik ik--s" aria-hidden="true"><use href="#i-medier"></use></svg>Se videoen på YouTube<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (åbner i nyt vindue)</span></a>
+<a class="knap knap--rolig" href="https://www.youtube.com/watch?v=KzpVUXxdc68" target="_blank" rel="noopener"><svg class="ik ik--s" aria-hidden="true"><use href="#i-medier"></use></svg>Se på YouTube<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (åbner i nyt vindue)</span></a>
 </div>
 </article>
 </div>
@@ -475,7 +491,7 @@
 </header>
 <div class="kort panel x-tema">
 <p class="x-tema-status lille" role="status">Henter opslag …</p>
-<details class="fold-ud fold-mobil fold-sektion" data-aaben-bred><summary aria-expanded="false">Se opslagene fra X</summary><ul class="x-tema-liste" hidden></ul></details>
+<details class="fold-ud fold-mobil fold-sektion" data-aaben-bred><summary aria-expanded="false">Vis opslagene fra X</summary><ul class="x-tema-liste" hidden></ul></details>
 <p class="kildelinje x-tema-kilde" hidden></p>
 </div>
 </section>
@@ -486,7 +502,7 @@
 
 <h2 id="risiko-h">Det skal man vide om temaet</h2>
 
-<ul id="risiko-liste"><li><b>Forsvar fylder.</b> <span class="eks">Seks af selskaberne beskriver sig selv som rum- og forsvarsselskaber. Deres kunder er ofte stater og militær, og den slags kontrakter kan ændre sig (selskabernes egne beskrivelser: <a href="https://www.sec.gov/Archives/edgar/data/2086587/000162828026019923/yorkspacesystemsinc10-k.htm" rel="noopener" target="_blank">York Space Systems<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1819810/000181981026000029/rdw-20251231.htm" rel="noopener" target="_blank">Redwire<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1860160/000119312526116309/fly-20251231.htm" rel="noopener" target="_blank">Firefly Aerospace<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1788060/000162828026016543/voyg-20251231.htm" rel="noopener" target="_blank">Voyager Technologies<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1750704/000162828026032207/hawkeye360424b4.htm" rel="noopener" target="_blank">HawkEye 360<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/2040127/000204012726000014/krmn-20251231.htm" rel="noopener" target="_blank">Karman Holdings<span class="sr"> (åbner i nyt vindue)</span></a>).</span></li><li><b>Få store selskaber.</b> <span class="eks">  </span></li><li><b>Grænsetilfælde.</b> <span class="eks"><a href="https://www.sec.gov/Archives/edgar/data/4281/000000428126000012/hwm-20251231.htm" rel="noopener" target="_blank">Howmet Aerospace, årsrapport 2025<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1947016/000106299326004648/forms1a.htm" rel="noopener" target="_blank">Starfighters Space, prospekt<span class="sr"> (åbner i nyt vindue)</span></a> og <a href="https://www.sec.gov/Archives/edgar/data/1181412/000162828026042639/spaceexplorationtechnologi.htm" rel="noopener" target="_blank">SpaceX, prospekt<span class="sr"> (åbner i nyt vindue)</span></a>).</span></li></ul>
+<ul id="risiko-liste"><li><b>Forsvar fylder.</b> <span class="eks">Seks af selskaberne beskriver sig selv som rum- og forsvarsselskaber. Deres kunder er ofte stater og militær, og den slags kontrakter kan ændre sig (selskabernes egne beskrivelser: <a href="https://www.sec.gov/Archives/edgar/data/2086587/000162828026019923/yorkspacesystemsinc10-k.htm" rel="noopener" target="_blank">York Space Systems<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1819810/000181981026000029/rdw-20251231.htm" rel="noopener" target="_blank">Redwire<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1860160/000119312526116309/fly-20251231.htm" rel="noopener" target="_blank">Firefly Aerospace<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1788060/000162828026016543/voyg-20251231.htm" rel="noopener" target="_blank">Voyager Technologies<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1750704/000162828026032207/hawkeye360424b4.htm" rel="noopener" target="_blank">HawkEye 360<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/2040127/000204012726000014/krmn-20251231.htm" rel="noopener" target="_blank">Karman Holdings<span class="sr"> (åbner i nyt vindue)</span></a>).</span></li><li><b>Få store selskaber.</b> <span class="eks">SpaceX er temaets største selskab med 3,54 % af fonden, under halvdelen af temaet, og også fondens største selskab. De fem største selskaber, SpaceX, Planet Labs, Intuitive Machines, AST SpaceMobile og BlackSky, er tilsammen 5,45 % af fonden, omkring to tredjedele af temaet. Temaet afhænger derfor meget af, hvordan det går for få selskaber (andele i PMINDI pr. 30.10.2026).</span></li><li><b>Grænsetilfælde.</b> <span class="eks">Nogle selskaber er kun delvist rumfart. Ét laver mest dele til fly, ét sender i dag ikke raketter op, og temaets største selskab har også en AI-del (<a href="https://www.sec.gov/Archives/edgar/data/4281/000000428126000012/hwm-20251231.htm" rel="noopener" target="_blank">Howmet Aerospace, årsrapport 2025<span class="sr"> (åbner i nyt vindue)</span></a>, <a href="https://www.sec.gov/Archives/edgar/data/1947016/000106299326004648/forms1a.htm" rel="noopener" target="_blank">Starfighters Space, prospekt<span class="sr"> (åbner i nyt vindue)</span></a> og <a href="https://www.sec.gov/Archives/edgar/data/1181412/000162828026042639/spaceexplorationtechnologi.htm" rel="noopener" target="_blank">SpaceX, prospekt<span class="sr"> (åbner i nyt vindue)</span></a>).</span></li></ul>
 
 <button aria-controls="risiko-liste" aria-expanded="false" class="knap" hidden="" id="risiko-eks" type="button">Se forklaring og kilder</button>
 
@@ -542,7 +558,7 @@
 
 <li>Tegninger, ikoner og videoplakater. Illustration: NewDeal Invest.</li>
 
-<li>Foto af marker i Kansas: NASA/USGS Landsat, <a href="https://commons.wikimedia.org/wiki/File:Landsat_sees_crops_in_Kansas.jpg" rel="noopener" target="_blank">“Landsat sees crops in Kansas”<span class="sr"> (åbner i nyt vindue)</span></a>, Wikimedia Commons, offentligt domæne (beskåret).</li>
+<li>Foto af marker i Kansas: NASA/USGS Landsat, <a href="https://commons.wikimedia.org/wiki/File:Landsat_sees_crops_in_Kansas.jpg" rel="noopener" target="_blank">"Landsat sees crops in Kansas"<span class="sr"> (åbner i nyt vindue)</span></a>, Wikimedia Commons, offentligt domæne (beskåret).</li>
 
 <li>Videoer: DW News (27.05.2022) og Learn With NASA (23.04.2026), YouTube. Videoerne hentes først, når du klikker.</li>
 
@@ -595,6 +611,7 @@
 
 <script src="../assets/v5-temaer/rumfart.js" defer></script>
 
-<script defer src="../assets/js/review-media.js?v=20261031-3"></script><script defer src="../assets/js/journey-polish.js?v=20261031c"></script></body>
+<script defer src="../assets/js/review-media.js?v=20261031-3"></script><script defer src="../assets/js/journey-polish.js?v=20261031c"></script><script src="../assets/claude/11-fold.js?v=cr11" defer data-claude-punkt="11"></script>
+</body>
 
 </html>

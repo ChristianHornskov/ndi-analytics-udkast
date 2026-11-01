@@ -1,0 +1,5 @@
+/* Punkt 33: alle temaer står i sidemenuen, og det aktive tema er tydeligt markeret. */
+.sm-temaliste > li { display: list-item; }
+.sm-temaliste > li.er-aktiv > .sm-link--tema { position: relative; background: var(--c-surface, rgba(139, 184, 188, .12)); color: var(--c-text, inherit); font-weight: 600; box-shadow: inset 3px 0 0 var(--tf, var(--v5-teal, #8bb8bc)); }
+.sm-temaliste > li.er-aktiv > .sm-link--tema .ik { color: var(--tf, var(--v5-teal, #8bb8bc)); }
+:root[data-tema="lys"] .sm-temaliste > li.er-aktiv > .sm-link--tema { background: rgba(47, 108, 115, .10); }

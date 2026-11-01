@@ -1,0 +1,5 @@
+/* Punkt 36: ekstra uddrag i perspektivboksen står som hovedcitatet: fuld bredde, samme skrift. */
+#skrevet .v18-perspektiv-flere .skrevet-liste { grid-template-columns: minmax(0, 1fr) !important; max-width: none; }
+#skrevet .v18-perspektiv-flere .skrevet-citat { font-size: clamp(18px, 2vw, 22px); }
+#skrevet .v18-perspektiv-boks > .skrevet-oversat { margin: 18px 0 10px; padding: 0 0 0 18px; border-left: 2px solid var(--v5-teal); font-family: var(--font-display); font-size: clamp(18px, 2vw, 22px); line-height: 1.45; color: var(--v5-ink); }
+#skrevet .v18-perspektiv-boks > .skrevet-oversat .skrevet-oversat-etiket { display: block; margin-bottom: 6px; font-family: inherit; font-size: 14px; line-height: 1.4; color: var(--c-text-2, inherit); }

@@ -1,0 +1,10 @@
+/* Punkt 14: videokortene stables på mobil. Billedet står øverst i fuld bredde, teksten under,
+   og knappen står på én linje. På desktop står kortene uændret side om side. */
+@media (max-width: 600px) {
+  #videoer .video-raekke { display: grid !important; grid-template-columns: minmax(0, 1fr) !important; gap: 14px !important; overflow: visible !important; }
+  #videoer .videokort-v3 { display: grid !important; grid-template-columns: minmax(0, 1fr) !important; grid-column: 1 / -1 !important; width: auto !important; min-width: 0 !important; padding: 0 !important; overflow: hidden; }
+  #videoer .videokort-v3 .video-flade { width: 100% !important; margin: 0 !important; aspect-ratio: 16 / 9; border-radius: 12px 12px 0 0; overflow: hidden; }
+  #videoer .videokort-v3 .video-flade img { width: 100%; height: 100%; object-fit: cover; }
+  #videoer .videokort-v3 .videokort-tekst { width: auto !important; min-width: 0; padding: 14px 16px 16px !important; }
+  #videoer .videokort-v3 .knap { width: 100%; justify-content: center; white-space: nowrap; }
+}

@@ -53,7 +53,7 @@
                 (harSide(s.slug) ? ' · <a href="selskaber/' + esc(s.slug) + '.html">Se selskabet</a>' : "") + (x.kilde ? ' · <a href="' + esc(x.kilde) + '" target="_blank" rel="noopener">Kilde ↗</a>' : "") + "</p></details>";
             }).join("") + "</div></li>";
         }).join("") +
-        '</ol><p class="small">Et udvalg til at forstå forretningerne — ikke en fuld fordeling af fonden eller en GICS-klassifikation. Temaerne bygger på selskabernes beskrivelser og kan overlappe. Hele beholdningslisten og den separate sektorfordeling findes nedenfor.</p></div>';
+        '</ol><p class="small">Et udvalg til at forstå forretningerne, ikke en fuld fordeling af fonden eller en GICS-klassifikation. Temaerne bygger på selskabernes beskrivelser og kan overlappe. Hele beholdningslisten og den separate sektorfordeling findes nedenfor.</p></div>';
     }
     var stop = b.sektorer.map(function (s, i) { return "var(--v18p-f" + (i % 12) + ") " + s.ringFra + "% " + s.ringTil + "%"; }).join(",");
     var sekt = b.sektorer.map(function (s, i) { return '<li><i style="background:var(--v18p-f' + (i % 12) + ')"></i><span>' + esc(s.navn) + "</span><b>" + p2(s.andel) + "</b></li>"; }).join("");
@@ -114,10 +114,10 @@
       '<p class="small">Antal aktier / andel af hele formuen. Klik på en søjle for at se aktierne.</p><div class="v18p-ivliste" id="v18p-ivliste" aria-live="polite"></div>' +
       '<p class="small">Afstand til højeste observerede kurs inden for op til 52 uger; kortere historik bruger den tilgængelige periode.</p></div>') +
       '<div class="panel"><span class="eyebrow">TO FORSKELLIGE MÅL · SAMME TIDSAKSE</span><h3>Fondens rekorder og aktiernes egne toppe</h3>' +
-      "<p>Start med fonden øverst: Når kurven når 0 %, er den samlede investering tilbage på sin hidtil højeste værdi (ATH). Sammenlign derefter med aktierne nedenunder — de har hver deres top og tæller her lige meget, uanset hvor meget fonden ejer.</p>" +
+      "<p>Start med fonden øverst: Når kurven når 0 %, er den samlede investering tilbage på sin hidtil højeste værdi (ATH). Sammenlign derefter med aktierne nedenunder, de har hver deres top og tæller her lige meget, uanset hvor meget fonden ejer.</p>" +
       "<h4>PMINDI · fonden samlet</h4><p class=\"small\">Afstand til fondens hidtil højeste totalafkast. Med geninvesteret udbytte, efter løbende omkostninger.</p><p>Afstand til fondens hidtil højeste værdi: <strong>" + p1(r.aktueltFald) + "</strong></p>" +
       linjegraf([{ k: "linje-fond", p: fald }], "Afstand til fondens hidtil højeste værdi") +
-      '<p class="small">0 % betyder rekordniveau — ikke 0 % i afkast.</p>' +
+      '<p class="small">0 % betyder rekordniveau, ikke 0 % i afkast.</p>' +
       (tom ? "" : '<h4>De enkelte aktier · ligevægtet</h4><p class="small">Afstand til hver akties egen top i op til 52 uger. Dette er ikke fondens afkast eller fondens ATH.</p>' +
       '<div class="legend"><span>Middelafstand ' + p1(t.historikSeneste.middel) + "</span><span>Medianafstand " + p1(t.historikSeneste.median) + "</span></div>" +
       linjegraf([{ k: "linje-sammen", p: med }, { k: "linje-fond", p: hist }], "Middel- og medianafstand til aktiernes egen top") +

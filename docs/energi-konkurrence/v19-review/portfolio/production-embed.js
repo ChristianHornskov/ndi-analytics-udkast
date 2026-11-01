@@ -54,7 +54,7 @@ function drawProductionGrowth(){
  const key=growthView,base=points[0][key];
  const plotted=points.map(p=>({d:p.d,v:key==='total'?100*p.total/base:p.price}));
  chart('growth',plotted,false);
- $('growth-period-result').textContent=points[0].d+' – '+points.at(-1).d+' · '+(key==='total'?'Totalafkast: ':'Kursændring uden udbytte: ')+pct((points.at(-1)[key]/base-1)*100);
+ $('growth-period-result').textContent=points[0].d+' til '+points.at(-1).d+' · '+(key==='total'?'Totalafkast: ':'Kursændring uden udbytte: ')+pct((points.at(-1)[key]/base-1)*100);
  const svg=$('growth').querySelector('svg');
  svg.setAttribute('tabindex','0');svg.setAttribute('aria-label',(key==='total'?'Totalafkast':'Kurs')+'. Brug piletaster eller træk for at se dato og værdi.');
  svg.style.touchAction='none';svg.style.userSelect='none';
@@ -111,7 +111,7 @@ function simplifyOverview(){
  $('investment-example').innerHTML=`<div><h2>Hvis du investerede 100.000 kr.</h2><p class="small muted">Ved klassens start · med geninvesteret udbytte</p><div class="investment-comparison"><div class="investment-start"><span>Ved start</span><strong>100.000 kr.</strong><small>${esc(dateLabel(f.inception))}</small></div><span class="investment-arrow" aria-hidden="true">→</span><div class="investment-end"><span>Værdi på seneste rapportdato</span><strong>${n(endingValue,0)} <small>kr.</small></strong><small>${esc(dateLabel(data.asOf))}</small></div></div><p class="investment-net">Efter fondens løbende omkostninger</p></div><div class="investment-cagr"><div><p>Gennemsnitligt årligt afkast</p><p class="small muted">CAGR · siden start${performance?.cagr==null?' · kræver mindst ét års historik':''}</p></div><strong>${performance?.cagr==null?'—':pct(performance.cagr)}</strong></div><p class="investment-footnote small muted">Illustrativ beregning på grafens totalafkastserie i DKK. Før skat, egne handelsomkostninger samt tillæg ved køb og salg. Historisk afkast er ingen garanti for fremtidigt afkast.</p>`;
  if(f.performanceAsOf){
   const period=$('headline').querySelector('.metric .sub');
-  if(period)period.textContent=f.inception+' – '+f.performanceAsOf+' · DKK · officielle kursdatoer';
+  if(period)period.textContent=f.inception+' til '+f.performanceAsOf+' · DKK · officielle kursdatoer';
   const example=$('investment-example');
   example.querySelector('.investment-end>span').textContent='Værdi på seneste officielle kursdato';
   example.querySelector('.investment-end>small').textContent=dateLabel(f.performanceAsOf);

@@ -22,7 +22,7 @@
     const u = summary.u;
     const all = u.perioder.find(p => p.id === 'all');
     document.getElementById('headline').innerHTML =
-      metric('Totalafkast siden start', pct(all.afkast), f.inception + ' – ' + f.performanceAsOf) +
+      metric('Totalafkast siden start', pct(all.afkast), f.inception + ' til ' + f.performanceAsOf) +
       metric('Gennemsnitligt årligt afkast', u.aarligtSidenStart == null ? '—' : pct(u.aarligtSidenStart), u.aarligtSidenStart == null ? 'Kræver mindst ét års historik' : 'Siden start · efter løbende omkostninger') +
       metric('100.000 kr. ved start', n(all.vaerdi100000, 0) + ' kr.', 'Med geninvesteret udbytte · før skat');
     let copies = document.getElementById('preview-copy-isins');

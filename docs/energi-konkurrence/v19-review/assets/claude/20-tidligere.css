@@ -1,0 +1,24 @@
+/* Punkt 20: sider for selskaber, der ikke længere er i fonden. */
+.cr-stub-status{display:flex;gap:14px;align-items:flex-start;margin:22px 0 0;padding:16px 18px;border-radius:14px;background:color-mix(in srgb,var(--v5-gold) 8%,transparent);border:1px solid color-mix(in srgb,var(--v5-gold) 40%,transparent)}
+.cr-stub-status .cr-prik{flex:none;width:10px;height:10px;border-radius:50%;background:var(--v5-gold);margin-top:7px}
+.cr-stub-status .cr-stub-titel{margin:0;font-size:17px;font-weight:500;color:var(--v5-ink)}
+.cr-stub-status p{margin:4px 0 0;font-size:14.5px;color:var(--v5-ink-2);max-width:70ch}
+.cr-stub-gitter{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:18px;margin-top:18px}
+.cr-stub-gitter--en{grid-template-columns:minmax(0,1fr)}
+.cr-stub-panel{padding:22px 24px;border:1px solid var(--v5-line);border-radius:14px;background:linear-gradient(180deg,var(--v5-panel-a),var(--v5-panel-b));min-width:0}
+.cr-stub-panel .cr-lab{margin:0 0 12px;font-size:11.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--v5-ink-2)}
+.cr-stub-panel>p:not([class]){font-size:15.5px;line-height:1.6;color:var(--v5-ink);max-width:70ch;margin:0}
+.cr-stub-panel>p:not([class])+p:not([class]){margin-top:12px}
+.cr-oms{display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:10px;align-items:center;margin:0 0 12px;font-size:14px;color:var(--v5-ink)}
+.cr-oms i{height:14px;border-radius:5px;background:var(--v5-flade-2);position:relative;overflow:hidden}
+.cr-oms i::after{content:"";position:absolute;inset:0 auto 0 0;width:var(--w);background:var(--lf,var(--v5-teal));border-radius:5px}
+.cr-oms.cr-foer{color:var(--v5-ink-2)}
+.cr-oms.cr-foer i::after{opacity:.45}
+.cr-oms b{text-align:right;font-weight:500;font-variant-numeric:tabular-nums}
+.cr-stub-panel .cr-mini{margin:10px 0 0;font-size:12.5px;line-height:1.5;color:var(--v5-ink-2)}
+.cr-stub-videre{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+@media(max-width:700px){
+ .cr-stub-gitter{grid-template-columns:minmax(0,1fr)}
+ .cr-stub-panel{padding:18px 16px}
+ .cr-stub-videre .knap{flex:1 1 100%;justify-content:center}
+}

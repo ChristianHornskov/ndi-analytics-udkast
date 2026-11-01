@@ -1,0 +1,3 @@
+/* Punkt 28: videobilledet i SpaceX' filmkort skal flugte med kortet.
+   .sx-film>a giver alle direkte links 22 px margin, også billedlinket. */
+.sx-film>a.sx-video-start{margin-left:0;margin-right:0;width:100%}

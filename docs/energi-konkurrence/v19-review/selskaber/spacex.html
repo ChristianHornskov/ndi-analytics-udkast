@@ -19,7 +19,14 @@
 <link rel="stylesheet" href="../assets/css/v5-komponenter.css">
 <link rel="stylesheet" href="../assets/css/v18-min.css">
 <script>try{document.fonts.load("500 16px Manrope");document.fonts.load("400 16px 'DM Sans'")}catch(e){}</script>
-<link rel="stylesheet" href="../assets/css/review.css?v=20261031logos"><link rel="stylesheet" href="../assets/css/spacex-review.css?v=1"><link rel="stylesheet" href="../assets/css/review-media.css?v=20261031-2"><link rel="stylesheet" href="../assets/css/journey-polish.css?v=20261031d"></head>
+<link rel="stylesheet" href="../assets/css/review.css?v=20261031logos"><link rel="stylesheet" href="../assets/css/spacex-review.css?v=1"><link rel="stylesheet" href="../assets/css/review-media.css?v=20261031-2"><link rel="stylesheet" href="../assets/css/journey-polish.css?v=20261031d"><link rel="stylesheet" href="../assets/claude/21-aktien.css?v=cr21" data-claude-punkt="21">
+<link rel="stylesheet" href="../assets/claude/28-video.css?v=cr28" data-claude-punkt="28">
+<link rel="stylesheet" href="../assets/claude/29-x.css?v=cr29" data-claude-punkt="29">
+<link rel="stylesheet" href="../assets/claude/33-sidemenu.css?v=cr33" data-claude-punkt="33">
+<link rel="stylesheet" href="../assets/claude/51-lyst.css?v=cr51" data-claude-punkt="51">
+<link rel="stylesheet" href="../assets/claude/52-video.css?v=cr52" data-claude-punkt="52">
+<link rel="stylesheet" href="../assets/claude/53-luft.css?v=cr53" data-claude-punkt="53">
+</head>
 <body data-slug="spacex" class="sx-refined">
 <svg class="sprite" aria-hidden="true" focusable="false">
 <symbol id="i-pause" viewbox="0 0 24 24"><path d="M9 6v12M15 6v12"></path></symbol>
@@ -106,7 +113,7 @@
 <h2 class="sm-overskrift" id="sm-h-temaer"><span>Temaer</span><span class="sm-overskrift-note">Andel af fonden</span></h2>
 <ul class="sm-liste">
 </ul>
-<ul class="sm-liste sm-temaliste" id="sm-temaer" data-ordne="temaer">
+<ul class="sm-liste sm-temaliste vis-alle" id="sm-temaer" data-ordne="temaer">
 <li data-id="chips"><a class="sm-link sm-link--tema" style="--tf:#8bb8bc" href="../temaer/chips.html"><svg class="ik" aria-hidden="true"><use href="#t-chips"></use></svg><span>Chips og halvledere</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
 <li data-id="energi"><a class="sm-link sm-link--tema" style="--tf:#759ebc" href="../temaer/energi.html"><svg class="ik" aria-hidden="true"><use href="#t-energi"></use></svg><span>Energi og elnet</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
 <li data-id="datacenter"><a class="sm-link sm-link--tema" style="--tf:#d5ba75" href="../temaer/datacenter.html"><svg class="ik" aria-hidden="true"><use href="#t-datacenter"></use></svg><span>Datacentre</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
@@ -120,9 +127,6 @@
 <li data-id="sundhed"><a class="sm-link sm-link--tema" style="--tf:#a4a6cf" href="../temaer/sundhed.html"><svg class="ik" aria-hidden="true"><use href="#t-sundhed"></use></svg><span>Sundhed og biotek</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
 <li data-id="kvante"><a class="sm-link sm-link--tema" style="--tf:#cd99a5" href="../temaer/kvante.html"><svg class="ik" aria-hidden="true"><use href="#t-kvante"></use></svg><span>Kvantecomputere</span><span class="sm-tal" data-tal="@andel">…</span></a></li>
 </ul>
-<button class="sm-vis-flere" type="button" aria-expanded="false" aria-controls="sm-temaer">
-<span class="sm-vis-tekst">Vis alle <span data-tal="fond.antalTemaer" data-fmt="heltal">… </span> temaer</span><span class="sm-vis-faerre" hidden>Vis færre temaer</span><svg class="ik ik--s" aria-hidden="true"><use href="#i-ned"></use></svg>
-</button>
 </nav>
 <nav class="sm-gruppe" aria-labelledby="sm-h-selskaber">
 <h2 class="sm-overskrift" id="sm-h-selskaber"><span>Selskaber</span><span class="sm-overskrift-note">Andel af fonden</span></h2>
@@ -152,7 +156,7 @@
 </div>
 </aside>
 <div class="hoved">
-<main id="indhold" tabindex="-1"><nav class="up-trail" aria-label="Du er her"><a href="../tech.html">Tech</a><span aria-hidden="true">/</span><a href="../temaer/rumfart.html">Rumfart</a><span aria-hidden="true">/</span><span aria-current="page">SpaceX</span></nav><nav class="up-shortcuts" aria-label="På denne side"><a href="#hvad">Forstå selskabet</a><a href="#mere-fra-ndi">Videoer & opslag</a></nav>
+<main id="indhold" tabindex="-1"><nav class="up-trail" aria-label="Du er her"><a href="../tech.html">Tech</a><span aria-hidden="true">/</span><a href="../temaer/rumfart.html">Rumfart</a><span aria-hidden="true">/</span><span aria-current="page">SpaceX</span></nav><nav class="up-shortcuts" aria-label="På denne side"><a href="#hvad">Forstå selskabet</a><a href="#mads-spacex">Videoer & opslag</a></nav>
 <section class="sektion sektion--overblik" id="overblik" aria-labelledby="h-side">
 <header class="sidehoved">
 <div class="sidehoved-ikon" aria-hidden="true"><svg class="ik" aria-hidden="true"><use href="#t-rumfart"></use></svg></div>
@@ -190,98 +194,191 @@
 </article>
 <article class="kort kort--hero kort--orbit kort--topanim" aria-labelledby="h-hero">
 <div class="hero-billede hero-billede--svg ta-baand"><div class="ta-udsnit"><svg class="hero-svg ta-svg" id="ta-spacex" viewbox="0 0 1200 600" preserveaspectratio="xMidYMid slice" data-loop="1" data-varighed="12" style="--ux:330;--uy:176;--uw:520;--uh:231" aria-hidden="true" focusable="false">
+
 <style>#ta-spacex .fs{fill:var(--c-space)}#ta-spacex .ft{fill:var(--c-text)}#ta-spacex .f1{fill:var(--c-data-1)}#ta-spacex .f2{fill:var(--c-data-2)}#ta-spacex .f3{fill:var(--c-data-3)}#ta-spacex .s1{stroke:var(--c-data-1)}#ta-spacex .s2{stroke:var(--c-data-2)}#ta-spacex .s3{stroke:var(--c-data-3)}#ta-spacex .st{stroke:var(--c-text)}#ta-spacex .sl{stroke:var(--c-line-strong)}#ta-spacex .g1{stop-color:var(--c-data-1)}#ta-spacex .gs{stop-color:var(--c-surface)}#ta-spacex .gr{stop-color:var(--c-space)}#ta-spacex .gt{stop-color:var(--c-text)}@media (max-width:599.98px),(max-height:479.98px) and (orientation:landscape){#ta-spacex .ta-scene{clip-path:url(#ta-spacex-u)}}</style>
+
 <defs>
+
 <clippath id="ta-spacex-u"><rect x="330" y="176" width="520" height="231"></rect></clippath>
+
 <radialgradient id="hx-atmo" cx="0.5" cy="0.5" r="0.5"><stop offset="0.86" class="g1" stop-opacity="0"></stop><stop offset="0.93" class="g1" stop-opacity=".6"></stop><stop offset="1" class="g1" stop-opacity="0"></stop></radialgradient>
+
 <radialgradient id="hx-jord" cx="0.5" cy="0.15" r="0.75"><stop offset="0" class="gs"></stop><stop offset="1" class="gr"></stop></radialgradient>
+
 <lineargradient id="hx-spor" x1="0" y1="1" x2="1" y2="0"><stop offset="0" class="gt" stop-opacity="0"></stop><stop offset="1" class="gt" stop-opacity=".9"></stop></lineargradient>
+
 </defs>
+
 <rect width="1200" height="600" class="fs"></rect>
+
 <g class="ta-scene">
+
 <g class="hx-stjerner f2"><circle cx="388.6" cy="72.4" r="0.6" opacity="0.29"></circle><circle cx="643.1" cy="175.5" r="0.6" opacity="0.75"></circle><circle cx="257.6" cy="41.3" r="1.3" opacity="0.29"></circle><circle cx="108.9" cy="203.8" r="0.6" opacity="0.77"></circle><circle cx="756.8" cy="279.8" r="0.6" opacity="0.57"></circle><circle cx="476.0" cy="468.6" r="0.6" opacity="0.56"></circle><circle cx="159.8" cy="201.2" r="0.6" opacity="0.56"></circle><circle cx="672.3" cy="327.4" r="0.6" opacity="0.57"></circle><circle cx="766.7" cy="178.8" r="0.6" opacity="0.56"></circle><circle cx="742.8" cy="238.3" r="1.3" opacity="0.68"></circle><circle cx="558.7" cy="443.3" r="1.0" opacity="0.41"></circle><circle cx="953.3" cy="335.5" r="0.8" opacity="0.30"></circle><circle cx="360.3" cy="237.7" r="1.0" opacity="0.65"></circle><circle cx="345.5" cy="470.5" r="0.6" opacity="0.53"></circle><circle cx="198.0" cy="164.2" r="1.3" opacity="0.48"></circle><circle cx="1154.4" cy="37.3" r="1.0" opacity="0.44"></circle><circle cx="420.2" cy="238.4" r="1.3" opacity="0.29"></circle><circle cx="112.3" cy="129.6" r="0.6" opacity="0.28"></circle><circle cx="841.8" cy="310.6" r="1.3" opacity="0.41"></circle><circle cx="462.9" cy="321.0" r="0.6" opacity="0.77"></circle><circle cx="426.6" cy="293.2" r="1.3" opacity="0.28"></circle><circle cx="921.9" cy="62.1" r="0.8" opacity="0.47"></circle><circle cx="1100.2" cy="238.3" r="0.8" opacity="0.50"></circle><circle cx="659.3" cy="424.0" r="1.3" opacity="0.73"></circle><circle cx="334.1" cy="199.3" r="1.0" opacity="0.63"></circle><circle cx="456.5" cy="110.8" r="0.6" opacity="0.35"></circle><circle cx="278.3" cy="112.0" r="1.3" opacity="0.71"></circle><circle cx="218.8" cy="135.3" r="0.8" opacity="0.48"></circle><circle cx="443.1" cy="271.8" r="0.8" opacity="0.63"></circle><circle cx="618.6" cy="296.4" r="0.6" opacity="0.50"></circle><circle cx="1045.2" cy="456.9" r="1.3" opacity="0.47"></circle><circle cx="472.9" cy="231.1" r="1.3" opacity="0.28"></circle><circle cx="80.8" cy="100.2" r="0.8" opacity="0.31"></circle><circle cx="720.9" cy="49.1" r="0.8" opacity="0.55"></circle><circle cx="1138.7" cy="294.6" r="0.6" opacity="0.73"></circle><circle cx="736.9" cy="71.3" r="1.0" opacity="0.78"></circle><circle cx="722.7" cy="227.6" r="0.6" opacity="0.72"></circle><circle cx="1191.7" cy="223.7" r="1.3" opacity="0.42"></circle><circle cx="172.9" cy="359.8" r="1.0" opacity="0.51"></circle><circle cx="830.5" cy="247.8" r="0.8" opacity="0.77"></circle><circle cx="633.9" cy="70.4" r="0.6" opacity="0.67"></circle><circle cx="357.7" cy="308.6" r="0.6" opacity="0.63"></circle><circle cx="313.3" cy="176.0" r="0.8" opacity="0.45"></circle><circle cx="267.4" cy="260.0" r="1.0" opacity="0.60"></circle><circle cx="735.9" cy="378.4" r="0.8" opacity="0.69"></circle><circle cx="982.0" cy="355.1" r="0.8" opacity="0.36"></circle><circle cx="591.3" cy="350.9" r="0.6" opacity="0.68"></circle><circle cx="566.7" cy="92.9" r="1.0" opacity="0.50"></circle><circle cx="1124.4" cy="474.3" r="1.0" opacity="0.29"></circle><circle cx="122.6" cy="225.6" r="1.0" opacity="0.36"></circle><circle cx="748.9" cy="432.1" r="0.6" opacity="0.51"></circle><circle cx="783.6" cy="383.8" r="0.6" opacity="0.71"></circle><circle cx="143.9" cy="186.5" r="0.8" opacity="0.51"></circle><circle cx="214.2" cy="378.8" r="1.0" opacity="0.30"></circle><circle cx="1135.4" cy="346.5" r="1.3" opacity="0.47"></circle><circle cx="1136.2" cy="347.9" r="0.8" opacity="0.80"></circle><circle cx="33.1" cy="283.6" r="1.3" opacity="0.69"></circle><circle cx="175.4" cy="396.7" r="1.3" opacity="0.61"></circle><circle cx="420.5" cy="263.4" r="0.8" opacity="0.26"></circle><circle cx="959.2" cy="348.7" r="0.6" opacity="0.54"></circle><circle cx="1120.3" cy="208.2" r="0.8" opacity="0.70"></circle><circle cx="253.3" cy="120.9" r="1.0" opacity="0.53"></circle><circle cx="916.4" cy="156.5" r="1.3" opacity="0.71"></circle><circle cx="73.1" cy="355.2" r="1.3" opacity="0.61"></circle><circle cx="978.1" cy="248.0" r="0.8" opacity="0.54"></circle><circle cx="628.2" cy="9.0" r="1.3" opacity="0.68"></circle><circle cx="730.3" cy="372.5" r="0.8" opacity="0.34"></circle><circle cx="568.2" cy="348.1" r="0.6" opacity="0.43"></circle><circle cx="622.0" cy="266.6" r="0.6" opacity="0.74"></circle><circle cx="68.2" cy="91.8" r="0.6" opacity="0.67"></circle><circle cx="609.3" cy="269.6" r="0.6" opacity="0.49"></circle><circle cx="735.0" cy="242.7" r="0.8" opacity="0.63"></circle><circle cx="542.8" cy="256.0" r="1.3" opacity="0.53"></circle><circle cx="297.2" cy="251.1" r="1.0" opacity="0.76"></circle><circle cx="1071.3" cy="97.2" r="1.3" opacity="0.33"></circle><circle cx="145.9" cy="212.2" r="0.6" opacity="0.62"></circle><circle cx="514.0" cy="102.1" r="1.0" opacity="0.68"></circle><circle cx="1076.4" cy="74.1" r="1.0" opacity="0.33"></circle><circle cx="1059.4" cy="464.4" r="0.8" opacity="0.66"></circle><circle cx="113.0" cy="424.8" r="0.8" opacity="0.79"></circle><circle cx="998.9" cy="77.5" r="1.3" opacity="0.80"></circle><circle cx="484.6" cy="202.2" r="1.0" opacity="0.43"></circle><circle cx="866.6" cy="9.4" r="1.3" opacity="0.49"></circle><circle cx="21.7" cy="159.1" r="1.0" opacity="0.53"></circle><circle cx="77.1" cy="472.8" r="0.8" opacity="0.78"></circle><circle cx="125.7" cy="127.5" r="0.6" opacity="0.75"></circle><circle cx="217.9" cy="362.8" r="1.3" opacity="0.72"></circle><circle cx="811.2" cy="454.1" r="1.3" opacity="0.33"></circle><circle cx="1103.0" cy="273.9" r="1.0" opacity="0.30"></circle><circle cx="69.0" cy="330.3" r="1.3" opacity="0.74"></circle><circle cx="322.7" cy="8.1" r="0.6" opacity="0.69"></circle><circle cx="100.5" cy="411.0" r="0.6" opacity="0.40"></circle><circle cx="146.0" cy="5.5" r="1.3" opacity="0.76"></circle><circle cx="321.4" cy="62.0" r="0.8" opacity="0.77"></circle><circle cx="1163.1" cy="125.7" r="0.8" opacity="0.36"></circle><circle cx="374.4" cy="146.4" r="0.8" opacity="0.41"></circle><circle cx="600.1" cy="85.4" r="1.0" opacity="0.69"></circle><circle cx="1193.4" cy="17.7" r="0.6" opacity="0.65"></circle><circle cx="661.3" cy="90.9" r="1.3" opacity="0.39"></circle><circle cx="536.5" cy="316.0" r="1.3" opacity="0.61"></circle><circle cx="655.1" cy="426.6" r="1.0" opacity="0.63"></circle><circle cx="1178.9" cy="164.5" r="0.8" opacity="0.47"></circle><circle cx="417.1" cy="26.1" r="0.8" opacity="0.26"></circle><circle cx="750.5" cy="422.3" r="1.3" opacity="0.34"></circle><circle cx="101.4" cy="403.8" r="1.0" opacity="0.58"></circle><circle cx="831.2" cy="21.7" r="0.8" opacity="0.34"></circle><circle cx="535.0" cy="126.4" r="1.0" opacity="0.78"></circle><circle cx="656.5" cy="117.3" r="1.0" opacity="0.37"></circle><circle cx="219.5" cy="161.0" r="0.6" opacity="0.51"></circle><circle cx="603.3" cy="96.5" r="0.6" opacity="0.30"></circle><circle cx="980.5" cy="69.1" r="0.6" opacity="0.47"></circle><circle cx="359.6" cy="302.2" r="0.6" opacity="0.57"></circle><circle cx="635.0" cy="360.3" r="1.3" opacity="0.67"></circle><circle cx="864.8" cy="237.2" r="1.0" opacity="0.65"></circle><circle cx="771.9" cy="21.0" r="1.3" opacity="0.65"></circle><circle cx="974.7" cy="66.9" r="0.6" opacity="0.70"></circle><circle cx="700.9" cy="428.6" r="0.8" opacity="0.30"></circle><circle cx="50.2" cy="305.8" r="0.6" opacity="0.46"></circle><circle cx="541.7" cy="24.4" r="0.6" opacity="0.59"></circle><circle cx="816.8" cy="234.9" r="0.6" opacity="0.50"></circle><circle cx="84.1" cy="447.6" r="0.6" opacity="0.61"></circle><circle cx="79.3" cy="353.7" r="1.0" opacity="0.70"></circle><circle cx="1015.4" cy="112.7" r="0.8" opacity="0.38"></circle><circle cx="779.9" cy="221.0" r="1.3" opacity="0.29"></circle><circle cx="1092.6" cy="137.9" r="0.6" opacity="0.59"></circle><circle cx="771.3" cy="37.2" r="0.8" opacity="0.43"></circle><circle cx="781.8" cy="332.6" r="0.8" opacity="0.26"></circle><circle cx="72.8" cy="129.0" r="0.6" opacity="0.63"></circle><circle cx="810.8" cy="139.6" r="1.0" opacity="0.51"></circle><circle cx="559.6" cy="56.9" r="0.8" opacity="0.42"></circle><circle cx="103.0" cy="227.0" r="1.0" opacity="0.50"></circle><circle cx="983.9" cy="464.7" r="1.3" opacity="0.80"></circle><circle cx="464.2" cy="439.9" r="0.8" opacity="0.29"></circle><circle cx="108.4" cy="358.8" r="1.0" opacity="0.77"></circle><circle cx="159.1" cy="393.7" r="1.0" opacity="0.74"></circle><circle cx="844.0" cy="111.1" r="1.3" opacity="0.47"></circle><circle cx="190.9" cy="456.0" r="1.3" opacity="0.47"></circle><circle cx="872.6" cy="199.8" r="1.3" opacity="0.42"></circle><circle cx="1008.3" cy="0.8" r="1.0" opacity="0.71"></circle><circle cx="144.0" cy="444.7" r="0.6" opacity="0.75"></circle><circle cx="347.8" cy="178.7" r="1.3" opacity="0.46"></circle><circle cx="1044.0" cy="36.7" r="1.3" opacity="0.67"></circle><circle cx="1025.1" cy="134.7" r="0.6" opacity="0.71"></circle><circle cx="342.7" cy="449.1" r="0.8" opacity="0.78"></circle><circle cx="523.5" cy="151.5" r="1.0" opacity="0.68"></circle><circle cx="513.3" cy="13.9" r="1.3" opacity="0.75"></circle><circle cx="1128.8" cy="263.6" r="0.6" opacity="0.28"></circle><circle cx="878.8" cy="216.4" r="0.8" opacity="0.60"></circle><circle cx="343.4" cy="23.5" r="0.8" opacity="0.34"></circle><circle cx="497.8" cy="135.2" r="1.0" opacity="0.66"></circle></g>
+
 <circle cx="1171.6" cy="109.3" r="1.4" class="ft"><animate attributename="opacity" values=".1;1;.1" dur="4.1s" begin="1.2s" repeatcount="indefinite"></animate></circle>
+
 <circle cx="668.8" cy="165.6" r="1.4" class="ft"><animate attributename="opacity" values=".1;1;.1" dur="2.9s" begin="0.6s" repeatcount="indefinite"></animate></circle>
+
 <circle cx="249.4" cy="380.5" r="1.4" class="ft"><animate attributename="opacity" values=".1;1;.1" dur="3.7s" begin="0.9s" repeatcount="indefinite"></animate></circle>
+
 <circle cx="1087.5" cy="418.5" r="1.4" class="ft"><animate attributename="opacity" values=".1;1;.1" dur="3.6s" begin="0.6s" repeatcount="indefinite"></animate></circle>
+
 <circle cx="230.9" cy="38.1" r="1.4" class="ft"><animate attributename="opacity" values=".1;1;.1" dur="3.4s" begin="0.4s" repeatcount="indefinite"></animate></circle>
+
 <circle cx="287.0" cy="108.5" r="1.4" class="ft"><animate attributename="opacity" values=".1;1;.1" dur="3.9s" begin="3.5s" repeatcount="indefinite"></animate></circle>
+
 <circle cx="899.6" cy="173.4" r="1.4" class="ft"><animate attributename="opacity" values=".1;1;.1" dur="3.5s" begin="2.1s" repeatcount="indefinite"></animate></circle>
+
 <circle cx="452.2" cy="142.0" r="1.4" class="ft"><animate attributename="opacity" values=".1;1;.1" dur="2.7s" begin="1.1s" repeatcount="indefinite"></animate></circle>
+
 <circle cx="1161.2" cy="52.9" r="1.4" class="ft"><animate attributename="opacity" values=".1;1;.1" dur="3.8s" begin="2.5s" repeatcount="indefinite"></animate></circle>
+
 <circle cx="1035.4" cy="90.7" r="1.4" class="ft"><animate attributename="opacity" values=".1;1;.1" dur="3.2s" begin="1.0s" repeatcount="indefinite"></animate></circle>
+
 <circle cx="860" cy="1150" r="821" fill="url(#hx-atmo)"></circle>
+
 <circle cx="860" cy="1150" r="760" fill="url(#hx-jord)" class="s2" stroke-opacity=".8" stroke-width="1.4"></circle>
+
 <clippath id="hx-klip"><circle cx="860" cy="1150" r="760"></circle></clippath><g clip-path="url(#hx-klip)" fill="none" class="sl" stroke-width="1">
+
 <ellipse cx="860" cy="436" rx="775" ry="74" opacity="0.80"></ellipse>
+
 <ellipse cx="860" cy="482" rx="775" ry="88" opacity="0.70"></ellipse>
+
 <ellipse cx="860" cy="528" rx="775" ry="102" opacity="0.60"></ellipse>
+
 <ellipse cx="860" cy="574" rx="775" ry="116" opacity="0.50"></ellipse>
+
 <ellipse cx="860" cy="620" rx="775" ry="130" opacity="0.40"></ellipse>
+
 <ellipse cx="860" cy="666" rx="775" ry="144" opacity="0.30"></ellipse>
+
 </g>
+
 <circle cx="503.2" cy="479.0" r="3" class="f3"></circle><circle cx="503.2" cy="479.0" r="3" fill="none" class="s3"><animate attributename="r" values="3;14" dur="2.6s" repeatcount="indefinite"></animate><animate attributename="opacity" values=".8;0" dur="2.6s" repeatcount="indefinite"></animate></circle>
+
 <circle cx="676.1" cy="412.6" r="3" class="f3"></circle><circle cx="676.1" cy="412.6" r="3" fill="none" class="s3"><animate attributename="r" values="3;14" dur="2.6s" repeatcount="indefinite"></animate><animate attributename="opacity" values=".8;0" dur="2.6s" repeatcount="indefinite"></animate></circle>
+
 <circle cx="833.5" cy="390.5" r="3" class="f3"></circle><circle cx="833.5" cy="390.5" r="3" fill="none" class="s3"><animate attributename="r" values="3;14" dur="2.6s" repeatcount="indefinite"></animate><animate attributename="opacity" values=".8;0" dur="2.6s" repeatcount="indefinite"></animate></circle>
+
 <circle cx="992.0" cy="401.5" r="3" class="f3"></circle><circle cx="992.0" cy="401.5" r="3" fill="none" class="s3"><animate attributename="r" values="3;14" dur="2.6s" repeatcount="indefinite"></animate><animate attributename="opacity" values=".8;0" dur="2.6s" repeatcount="indefinite"></animate></circle>
+
 <circle cx="1169.1" cy="455.7" r="3" class="f3"></circle><circle cx="1169.1" cy="455.7" r="3" fill="none" class="s3"><animate attributename="r" values="3;14" dur="2.6s" repeatcount="indefinite"></animate><animate attributename="opacity" values=".8;0" dur="2.6s" repeatcount="indefinite"></animate></circle>
+
 <g transform="rotate(-8 860 450)">
+
 <path id="hx-bane-0" d="M30 450 a830 210 0 1 0 1660 0 a830 210 0 1 0 -1660 0" fill="none" class="s2" stroke-width="1" stroke-dasharray="none"></path>
+
 <g class="f2"><circle r="2.6"></circle><rect x="-7" y="-1" width="14" height="2" opacity=".7"></rect><animatemotion dur="38s" begin="0.00s" repeatcount="indefinite"><mpath href="#hx-bane-0"></mpath></animatemotion></g>
+
 <g class="f2"><circle r="2.6"></circle><rect x="-7" y="-1" width="14" height="2" opacity=".7"></rect><animatemotion dur="38s" begin="-4.22s" repeatcount="indefinite"><mpath href="#hx-bane-0"></mpath></animatemotion></g>
+
 <g class="f2"><circle r="2.6"></circle><rect x="-7" y="-1" width="14" height="2" opacity=".7"></rect><animatemotion dur="38s" begin="-8.44s" repeatcount="indefinite"><mpath href="#hx-bane-0"></mpath></animatemotion></g>
+
 <g class="f2"><circle r="2.6"></circle><rect x="-7" y="-1" width="14" height="2" opacity=".7"></rect><animatemotion dur="38s" begin="-12.67s" repeatcount="indefinite"><mpath href="#hx-bane-0"></mpath></animatemotion></g>
+
 <g class="f2"><circle r="2.6"></circle><rect x="-7" y="-1" width="14" height="2" opacity=".7"></rect><animatemotion dur="38s" begin="-16.89s" repeatcount="indefinite"><mpath href="#hx-bane-0"></mpath></animatemotion></g>
+
 <g class="f2"><circle r="2.6"></circle><rect x="-7" y="-1" width="14" height="2" opacity=".7"></rect><animatemotion dur="38s" begin="-21.11s" repeatcount="indefinite"><mpath href="#hx-bane-0"></mpath></animatemotion></g>
+
 <g class="f2"><circle r="2.6"></circle><rect x="-7" y="-1" width="14" height="2" opacity=".7"></rect><animatemotion dur="38s" begin="-25.33s" repeatcount="indefinite"><mpath href="#hx-bane-0"></mpath></animatemotion></g>
+
 <g class="f2"><circle r="2.6"></circle><rect x="-7" y="-1" width="14" height="2" opacity=".7"></rect><animatemotion dur="38s" begin="-29.56s" repeatcount="indefinite"><mpath href="#hx-bane-0"></mpath></animatemotion></g>
+
 <g class="f2"><circle r="2.6"></circle><rect x="-7" y="-1" width="14" height="2" opacity=".7"></rect><animatemotion dur="38s" begin="-33.78s" repeatcount="indefinite"><mpath href="#hx-bane-0"></mpath></animatemotion></g>
+
 </g>
+
 <g transform="rotate(6 860 450)">
+
 <path id="hx-bane-1" d="M-20 450 a880 260 0 1 0 1760 0 a880 260 0 1 0 -1760 0" fill="none" class="s1" stroke-width="1" stroke-dasharray="3 5"></path>
+
 <g class="f1"><circle r="2.6"></circle><rect x="-7" y="-1" width="14" height="2" opacity=".7"></rect><animatemotion dur="52s" begin="0.00s" repeatcount="indefinite"><mpath href="#hx-bane-1"></mpath></animatemotion></g>
+
 <g class="f1"><circle r="2.6"></circle><rect x="-7" y="-1" width="14" height="2" opacity=".7"></rect><animatemotion dur="52s" begin="-7.43s" repeatcount="indefinite"><mpath href="#hx-bane-1"></mpath></animatemotion></g>
+
 <g class="f1"><circle r="2.6"></circle><rect x="-7" y="-1" width="14" height="2" opacity=".7"></rect><animatemotion dur="52s" begin="-14.86s" repeatcount="indefinite"><mpath href="#hx-bane-1"></mpath></animatemotion></g>
+
 <g class="f1"><circle r="2.6"></circle><rect x="-7" y="-1" width="14" height="2" opacity=".7"></rect><animatemotion dur="52s" begin="-22.29s" repeatcount="indefinite"><mpath href="#hx-bane-1"></mpath></animatemotion></g>
+
 <g class="f1"><circle r="2.6"></circle><rect x="-7" y="-1" width="14" height="2" opacity=".7"></rect><animatemotion dur="52s" begin="-29.71s" repeatcount="indefinite"><mpath href="#hx-bane-1"></mpath></animatemotion></g>
+
 <g class="f1"><circle r="2.6"></circle><rect x="-7" y="-1" width="14" height="2" opacity=".7"></rect><animatemotion dur="52s" begin="-37.14s" repeatcount="indefinite"><mpath href="#hx-bane-1"></mpath></animatemotion></g>
+
 <g class="f1"><circle r="2.6"></circle><rect x="-7" y="-1" width="14" height="2" opacity=".7"></rect><animatemotion dur="52s" begin="-44.57s" repeatcount="indefinite"><mpath href="#hx-bane-1"></mpath></animatemotion></g>
+
 </g>
+
 <g transform="rotate(-3 860 450)">
+
 <path id="hx-bane-2" d="M-75 450 a935 300 0 1 0 1870 0 a935 300 0 1 0 -1870 0" fill="none" class="s3" stroke-width="1" stroke-dasharray="none"></path>
+
 <g class="f3"><circle r="3.2"></circle><rect x="-7" y="-1" width="14" height="2" opacity=".7"></rect><animatemotion dur="70s" begin="0.00s" repeatcount="indefinite"><mpath href="#hx-bane-2"></mpath></animatemotion></g>
+
 <g class="f3"><circle r="3.2"></circle><rect x="-7" y="-1" width="14" height="2" opacity=".7"></rect><animatemotion dur="70s" begin="-11.67s" repeatcount="indefinite"><mpath href="#hx-bane-2"></mpath></animatemotion></g>
+
 <g class="f3"><circle r="3.2"></circle><rect x="-7" y="-1" width="14" height="2" opacity=".7"></rect><animatemotion dur="70s" begin="-23.33s" repeatcount="indefinite"><mpath href="#hx-bane-2"></mpath></animatemotion></g>
+
 <g class="f3"><circle r="3.2"></circle><rect x="-7" y="-1" width="14" height="2" opacity=".7"></rect><animatemotion dur="70s" begin="-35.00s" repeatcount="indefinite"><mpath href="#hx-bane-2"></mpath></animatemotion></g>
+
 <g class="f3"><circle r="3.2"></circle><rect x="-7" y="-1" width="14" height="2" opacity=".7"></rect><animatemotion dur="70s" begin="-46.67s" repeatcount="indefinite"><mpath href="#hx-bane-2"></mpath></animatemotion></g>
+
 <g class="f3"><circle r="3.2"></circle><rect x="-7" y="-1" width="14" height="2" opacity=".7"></rect><animatemotion dur="70s" begin="-58.33s" repeatcount="indefinite"><mpath href="#hx-bane-2"></mpath></animatemotion></g>
+
 </g>
+
 <line x1="503.2" y1="479.0" x2="491.2" y2="342.2" class="s3" stroke-width="1" stroke-dasharray="2 6" opacity=".0"><animate attributename="opacity" values="0;.75;0" dur="3.2s" begin="0.0s" repeatcount="indefinite"></animate><animate attributename="stroke-dashoffset" values="0;-32" dur="1.2s" repeatcount="indefinite"></animate></line>
+
 <circle cx="491.2" cy="342.2" r="2.2" class="ft" opacity=".9"></circle>
+
 <line x1="676.1" y1="412.6" x2="730.6" y2="251.7" class="s3" stroke-width="1" stroke-dasharray="2 6" opacity=".0"><animate attributename="opacity" values="0;.75;0" dur="3.2s" begin="0.6s" repeatcount="indefinite"></animate><animate attributename="stroke-dashoffset" values="0;-32" dur="1.2s" repeatcount="indefinite"></animate></line>
+
 <circle cx="730.6" cy="251.7" r="2.2" class="ft" opacity=".9"></circle>
+
 <line x1="833.5" y1="390.5" x2="878.2" y2="279.2" class="s3" stroke-width="1" stroke-dasharray="2 6" opacity=".0"><animate attributename="opacity" values="0;.75;0" dur="3.2s" begin="1.2s" repeatcount="indefinite"></animate><animate attributename="stroke-dashoffset" values="0;-32" dur="1.2s" repeatcount="indefinite"></animate></line>
+
 <circle cx="878.2" cy="279.2" r="2.2" class="ft" opacity=".9"></circle>
+
 <line x1="992.0" y1="401.5" x2="935.8" y2="249.0" class="s3" stroke-width="1" stroke-dasharray="2 6" opacity=".0"><animate attributename="opacity" values="0;.75;0" dur="3.2s" begin="1.8s" repeatcount="indefinite"></animate><animate attributename="stroke-dashoffset" values="0;-32" dur="1.2s" repeatcount="indefinite"></animate></line>
+
 <circle cx="935.8" cy="249.0" r="2.2" class="ft" opacity=".9"></circle>
+
 <line x1="1169.1" y1="455.7" x2="1216.6" y2="317.3" class="s3" stroke-width="1" stroke-dasharray="2 6" opacity=".0"><animate attributename="opacity" values="0;.75;0" dur="3.2s" begin="2.4s" repeatcount="indefinite"></animate><animate attributename="stroke-dashoffset" values="0;-32" dur="1.2s" repeatcount="indefinite"></animate></line>
+
 <circle cx="1216.6" cy="317.3" r="2.2" class="ft" opacity=".9"></circle>
+
 <path id="hx-raket" d="M392.1 551.1 C 362.1 391.1, 432.1 251.1, 652.1 191.1" fill="none" class="st" stroke-width="1.2" stroke-dasharray="3 6" stroke-linecap="round" opacity=".55"></path>
+
 <path d="M392.1 551.1 C 362.1 391.1, 432.1 251.1, 652.1 191.1" pathlength="1" fill="none" stroke="url(#hx-spor)" stroke-width="2" stroke-dasharray="1 2" stroke-dashoffset="1">
+
 <animate attributename="stroke-dashoffset" values="1;0" dur="5s" repeatcount="2" fill="freeze"></animate>
+
 </path>
+
 <path d="M392.1 551.1 C 362.1 391.1, 432.1 251.1, 652.1 191.1" pathlength="1" fill="none" class="st" stroke-width="2" stroke-dasharray="0.05 2" stroke-dashoffset="0.05" stroke-linecap="round">
+
 <animate attributename="stroke-dashoffset" values="0.05;-0.95" dur="5s" repeatcount="2" fill="freeze"></animate>
+
 </path>
+
 <g class="ft">
+
 <path d="M-8 -4 L-8 4 L10 0 Z"></path>
+
 <circle r="3" cx="-11" opacity=".7">
+
 <animate attributename="opacity" values=".3;.9;.3" dur=".5s" repeatcount="indefinite"></animate>
+
 </circle>
+
 <animatemotion dur="5s" repeatcount="2" fill="freeze" rotate="auto">
+
 <mpath href="#hx-raket"></mpath>
+
 </animatemotion>
+
 </g>
+
 </g></svg></div></div>
 <div class="hero-tekst">
 <p class="kicker"><span data-tal="selskaber.spacex.fondsPlads" data-fmt="rangkicker">…              </span></p>
@@ -337,7 +434,7 @@
 <h2 class="sektion-titel" id="h-forretning">Sådan hænger de tre dele sammen.</h2>
 </header>
 <div class="gitter">
-<div class="sx-system s12"><div class="sx-orbit-wrap"><svg class="sx-orbit" viewbox="0 0 660 520" aria-label="Udforsk opsendelser, Starlink og AI på Jorden"><defs><radialgradient id="sx-earth"><stop stop-color="#35606d"></stop><stop offset=".65" stop-color="#142e3d"></stop><stop offset="1" stop-color="#07131e"></stop></radialgradient><lineargradient id="sx-light"><stop stop-color="#f5ee9e"></stop><stop offset="1" stop-color="#89aeb4"></stop></lineargradient></defs><circle cx="330" cy="265" r="149" fill="url(#sx-earth)" stroke="#89aeb4" stroke-opacity=".5"></circle><g fill="none" stroke="#89aeb4" opacity=".24"><ellipse cx="330" cy="265" rx="80" ry="149"></ellipse><ellipse cx="330" cy="265" rx="30" ry="149"></ellipse><ellipse cx="330" cy="265" rx="149" ry="50"></ellipse><ellipse cx="330" cy="265" rx="149" ry="100"></ellipse><path d="M181 265H479"></path></g><ellipse class="sx-orbit-track" cx="330" cy="265" rx="250" ry="105" transform="rotate(-27 330 265)" fill="none" stroke="#89aeb4" stroke-width="1.5"></ellipse><ellipse cx="330" cy="265" rx="220" ry="190" transform="rotate(30 330 265)" fill="none" stroke="#313a4a" stroke-dasharray="3 9"></ellipse><g data-orbit-part="network" tabindex="0" role="button" aria-label="Starlink" aria-controls="sx-part-network"><path d="M468 107L421 221L303 322" fill="none" stroke="#f5ee9e" stroke-dasharray="5 6"></path><g transform="translate(468 107) rotate(-27)"><path d="M-13-8H13V8H-13Z" fill="#e6e8ed"></path><path d="M-48-13H-19V13H-48ZM19-13H48V13H19Z" fill="#365b72" stroke="#89aeb4"></path></g><circle cx="303" cy="322" r="7" fill="#f5ee9e"></circle><text x="446" y="72">STARLINK</text><text x="272" y="353">Terminal</text></g><g data-orbit-part="launch" tabindex="0" role="button" aria-label="Opsendelser" aria-controls="sx-part-launch"><path class="sx-flight" d="M160 430Q70 220 232 78" fill="none" stroke="url(#sx-light)" stroke-width="2" stroke-dasharray="5 7"></path><g transform="translate(133 237) rotate(12)"><path d="M0-55Q-12-40-12-20V30H12V-20Q12-40 0-55" fill="#e6e8ed"></path><path d="M-12 8L-24 33H-12M12 8L24 33H12" fill="#89aeb4"></path><path d="M-8 33L0 65L8 33" fill="#f5ee9e"></path></g><text x="70" y="475">OPSENDELSE</text></g><g data-orbit-part="compute" transform="translate(470 369)" tabindex="0" role="button" aria-label="AI på Jorden" aria-controls="sx-part-compute"><path d="M0 30L46 5L115 37L68 65Z" fill="#11202c" stroke="#89aeb4"></path><path d="M0 30V68L68 102V65M68 102L115 74V37" fill="#162c3a" stroke="#89aeb4"></path><path d="M15 47L54 66M15 60L54 79M79 69L103 56M79 82L103 69" stroke="#f5ee9e"></path><text x="-10" y="130">AI PÅ JORDEN</text></g></svg><p class="sx-interaction-hint">Peg på raketten, satellitten eller datacentret — eller tryk for at udforske.</p></div><div class="sx-system-reading"><div class="sx-system-tabs" role="group" aria-label="Vælg en del af SpaceX"><button type="button" data-sx-select="launch" aria-pressed="true" aria-controls="sx-part-launch">Opsendelser</button><button type="button" data-sx-select="network" aria-pressed="false" aria-controls="sx-part-network">Starlink</button><button type="button" data-sx-select="compute" aria-pressed="false" aria-controls="sx-part-compute">AI på Jorden</button></div><article class="sx-part" aria-labelledby="h-flise-1" id="sx-part-launch" data-sx-panel="launch">
+<div class="sx-system s12"><div class="sx-orbit-wrap"><svg class="sx-orbit" viewbox="0 0 660 520" aria-label="Udforsk opsendelser, Starlink og AI på Jorden"><defs><radialgradient id="sx-earth"><stop stop-color="#35606d"></stop><stop offset=".65" stop-color="#142e3d"></stop><stop offset="1" stop-color="#07131e"></stop></radialgradient><lineargradient id="sx-light"><stop stop-color="#f5ee9e"></stop><stop offset="1" stop-color="#89aeb4"></stop></lineargradient></defs><circle cx="330" cy="265" r="149" fill="url(#sx-earth)" stroke="#89aeb4" stroke-opacity=".5"></circle><g fill="none" stroke="#89aeb4" opacity=".24"><ellipse cx="330" cy="265" rx="80" ry="149"></ellipse><ellipse cx="330" cy="265" rx="30" ry="149"></ellipse><ellipse cx="330" cy="265" rx="149" ry="50"></ellipse><ellipse cx="330" cy="265" rx="149" ry="100"></ellipse><path d="M181 265H479"></path></g><ellipse class="sx-orbit-track" cx="330" cy="265" rx="250" ry="105" transform="rotate(-27 330 265)" fill="none" stroke="#89aeb4" stroke-width="1.5"></ellipse><ellipse cx="330" cy="265" rx="220" ry="190" transform="rotate(30 330 265)" fill="none" stroke="#313a4a" stroke-dasharray="3 9"></ellipse><g data-orbit-part="network" tabindex="0" role="button" aria-label="Starlink" aria-controls="sx-part-network"><path d="M468 107L421 221L303 322" fill="none" stroke="#f5ee9e" stroke-dasharray="5 6"></path><g transform="translate(468 107) rotate(-27)"><path d="M-13-8H13V8H-13Z" fill="#e6e8ed"></path><path d="M-48-13H-19V13H-48ZM19-13H48V13H19Z" fill="#365b72" stroke="#89aeb4"></path></g><circle cx="303" cy="322" r="7" fill="#f5ee9e"></circle><text x="446" y="72">STARLINK</text><text x="272" y="353">Terminal</text></g><g data-orbit-part="launch" tabindex="0" role="button" aria-label="Opsendelser" aria-controls="sx-part-launch"><path class="sx-flight" d="M160 430Q70 220 232 78" fill="none" stroke="url(#sx-light)" stroke-width="2" stroke-dasharray="5 7"></path><g transform="translate(133 237) rotate(12)"><path d="M0-55Q-12-40-12-20V30H12V-20Q12-40 0-55" fill="#e6e8ed"></path><path d="M-12 8L-24 33H-12M12 8L24 33H12" fill="#89aeb4"></path><path d="M-8 33L0 65L8 33" fill="#f5ee9e"></path></g><text x="70" y="475">OPSENDELSE</text></g><g data-orbit-part="compute" transform="translate(470 369)" tabindex="0" role="button" aria-label="AI på Jorden" aria-controls="sx-part-compute"><path d="M0 30L46 5L115 37L68 65Z" fill="#11202c" stroke="#89aeb4"></path><path d="M0 30V68L68 102V65M68 102L115 74V37" fill="#162c3a" stroke="#89aeb4"></path><path d="M15 47L54 66M15 60L54 79M79 69L103 56M79 82L103 69" stroke="#f5ee9e"></path><text x="-10" y="130">AI PÅ JORDEN</text></g></svg><p class="sx-interaction-hint">Peg på raketten, satellitten eller datacentret, eller tryk for at udforske.</p></div><div class="sx-system-reading"><div class="sx-system-tabs" role="group" aria-label="Vælg en del af SpaceX"><button type="button" data-sx-select="launch" aria-pressed="true" aria-controls="sx-part-launch">Opsendelser</button><button type="button" data-sx-select="network" aria-pressed="false" aria-controls="sx-part-network">Starlink</button><button type="button" data-sx-select="compute" aria-pressed="false" aria-controls="sx-part-compute">AI på Jorden</button></div><article class="sx-part" aria-labelledby="h-flise-1" id="sx-part-launch" data-sx-panel="launch">
 <div class="flise-top"><span class="ikonfelt ikonfelt--stor" aria-hidden="true"><svg class="ik" aria-hidden="true"><use href="#i-forretning"></use></svg></span><p class="kicker">Rumfart</p></div>
 <h3 class="flise-titel" id="h-flise-1">Transport ud i rummet</h3>
 <p class="flise-lead">Raketten er transporten.</p>
@@ -479,7 +576,7 @@
 </div></div>
 </div>
 </section>
-<section class="sektion sx-perspectives" id="mads-spacex"><header><p class="sektion-kicker">VORES PERSPEKTIV</p><h2>Mads om SpaceX</h2><p>Se gennemgangene, eller følg de diskussioner, Mads tager op på X.</p></header><div class="sx-films"><article class="sx-film"><button class="sx-video-start" type="button" data-video="GBPffuqKxi8" data-start="1990" aria-label="Afspil Starlink i Ukraine · Kort og godt, Ep. 7"><img src="https://i.ytimg.com/vi/GBPffuqKxi8/hqdefault.jpg" alt="" loading="lazy"><span class="sx-play" aria-hidden="true">▶</span><span class="sx-video-time">Fra 33:10</span></button><p class="sektion-kicker">20. oktober 2026</p><h4>Starlink i Ukraine · Kort og godt, Ep. 7</h4><a href="https://www.youtube.com/watch?v=GBPffuqKxi8&amp;t=1990s" target="_blank" rel="noopener">Se på YouTube ↗</a></article><article class="sx-film"><button class="sx-video-start" type="button" data-video="uDlalQXDfgc" data-start="596" aria-label="Afspil Hvordan ser vi på SpaceX?"><img src="https://i.ytimg.com/vi/uDlalQXDfgc/hqdefault.jpg" alt="" loading="lazy"><span class="sx-play" aria-hidden="true">▶</span><span class="sx-video-time">Fra 09:56</span></button><p class="sektion-kicker">8. juni 2026</p><h4>Hvordan ser vi på SpaceX?</h4><a href="https://www.youtube.com/watch?v=uDlalQXDfgc&amp;t=596s" target="_blank" rel="noopener">Se på YouTube ↗</a></article></div><details class="rm-more"><summary>Se flere videoer (1)</summary><div class="sx-films"><article class="sx-film"><button class="sx-video-start" type="button" data-video="M59oD0hdcE0" data-start="0" aria-label="Afspil Mads gennemgår regnskabet for 2. kvartal"><img src="https://i.ytimg.com/vi/M59oD0hdcE0/hqdefault.jpg" alt="" loading="lazy"><span class="sx-play" aria-hidden="true">▶</span><span class="sx-video-time">Fra 00:00</span></button><p class="sektion-kicker">5. august 2026</p><h4>Mads gennemgår regnskabet for 2. kvartal</h4><a href="https://www.youtube.com/watch?v=M59oD0hdcE0&amp;t=0s" target="_blank" rel="noopener">Se på YouTube ↗</a></article></div></details><h3 class="sx-mads-x-title">Mads på X</h3><div class="sx-mads-posts"><article><p class="sektion-kicker">Mads Christiansen · @MadsC007</p><div class="x-embed" data-x-id="2112436619244400908"><div class="x-embed-vent"><a href="https://x.com/MadsC007/status/2112436619244400908" target="_blank" rel="noopener">Se Mads’ opslag på X ↗</a></div></div></article><article><p class="sektion-kicker">Mads Christiansen · @MadsC007</p><div class="x-embed" data-x-id="2110461609793441807"><div class="x-embed-vent"><a href="https://x.com/MadsC007/status/2110461609793441807" target="_blank" rel="noopener">Se Mads’ opslag på X ↗</a></div></div></article></div></section><section class="sektion sektion--pointer" id="pointer" aria-labelledby="h-pointer">
+<section class="sektion sx-perspectives" id="mads-spacex"><header><p class="sektion-kicker">VORES PERSPEKTIV</p><h2>Mads om SpaceX</h2><p>Se gennemgangene, eller følg de diskussioner, Mads tager op på X.</p></header><div class="sx-films"><article class="sx-film"><button class="sx-video-start" type="button" data-video="GBPffuqKxi8" data-start="1990" aria-label="Afspil Starlink i Ukraine · Kort og godt, Ep. 7"><img src="https://i.ytimg.com/vi/GBPffuqKxi8/hqdefault.jpg" alt="" loading="lazy"><span class="sx-play" aria-hidden="true">▶</span><span class="sx-video-time">Fra 33:10</span></button><p class="sektion-kicker">20. oktober 2026</p><h4>Starlink i Ukraine · Kort og godt, Ep. 7</h4><a href="https://www.youtube.com/watch?v=GBPffuqKxi8&amp;t=1990s" target="_blank" rel="noopener">Se på YouTube ↗</a></article><article class="sx-film"><button class="sx-video-start" type="button" data-video="uDlalQXDfgc" data-start="596" aria-label="Afspil Hvordan ser vi på SpaceX?"><img src="https://i.ytimg.com/vi/uDlalQXDfgc/hqdefault.jpg" alt="" loading="lazy"><span class="sx-play" aria-hidden="true">▶</span><span class="sx-video-time">Fra 09:56</span></button><p class="sektion-kicker">8. juni 2026</p><h4>Hvordan ser vi på SpaceX?</h4><a href="https://www.youtube.com/watch?v=uDlalQXDfgc&amp;t=596s" target="_blank" rel="noopener">Se på YouTube ↗</a></article></div><details class="rm-more"><summary>Se flere videoer (1)</summary><div class="sx-films"><article class="sx-film"><button class="sx-video-start" type="button" data-video="M59oD0hdcE0" data-start="0" aria-label="Afspil Mads gennemgår regnskabet for 2. kvartal"><img src="https://i.ytimg.com/vi/M59oD0hdcE0/hqdefault.jpg" alt="" loading="lazy"><span class="sx-play" aria-hidden="true">▶</span><span class="sx-video-time">Fra 00:00</span></button><p class="sektion-kicker">5. august 2026</p><h4>Mads gennemgår regnskabet for 2. kvartal</h4><a href="https://www.youtube.com/watch?v=M59oD0hdcE0&amp;t=0s" target="_blank" rel="noopener">Se på YouTube ↗</a></article></div></details><h3 class="sx-mads-x-title">Mads på X</h3><div class="sx-mads-posts"><article><p class="sektion-kicker">Mads Christiansen · @MadsC007</p><div class="x-embed" data-x-id="2112436619244400908"><div class="x-embed-vent"><a href="https://x.com/MadsC007/status/2112436619244400908" target="_blank" rel="noopener">Se Mads’ opslag på X ↗</a></div></div></article><article><p class="sektion-kicker">Mads Christiansen · @MadsC007</p><div class="x-embed" data-x-id="2110461609793441807"><div class="x-embed-vent"><a href="https://x.com/MadsC007/status/2110461609793441807" target="_blank" rel="noopener">Se Mads’ opslag på X ↗</a></div></div></article></div><div class="rm-grid rm-grid-x"><article class="rm-social rm-x"><p class="rm-source">X · 2026-10-30</p><h3>Delt af Mads Christiansen</h3><div class="rm-embed" id="x-2116021423181557770" data-x="2116021423181557770"></div><a href="https://x.com/LunarCitizens/status/2116021423181557770" target="_blank" rel="noopener">Læs det originale opslag på X ↗</a></article><article class="rm-social rm-x"><p class="rm-source">X · 2026-10-21</p><h3>Delt af Mads Christiansen</h3><div class="rm-embed" id="x-2113051119723380747" data-x="2113051119723380747"></div><a href="https://x.com/Sam_Badawi/status/2113051119723380747" target="_blank" rel="noopener">Læs det originale opslag på X ↗</a></article></div></section><section class="sektion sektion--pointer" id="pointer" aria-labelledby="h-pointer">
 <header class="sektion-hoved">
 <p class="sektion-kicker"><svg class="ik ik--s" aria-hidden="true"><use href="#i-pointer"></use></svg>Det har vi sagt</p>
 <h2 class="sektion-titel" id="h-pointer">10 ting, vi har sagt om SpaceX</h2>
@@ -493,13 +590,13 @@
 <li class="kort pointe-kort sx-point" id="pointe-1" aria-labelledby="h-p1">
 <p class="pointe-meta"><span class="pointe-nr" aria-hidden="true">01</span><span class="sr">Punkt 1 af 10, </span><time>01.06.2026</time></p>
 <h3 class="pointe-titel" id="h-p1">En enorm startup, ikke et modent selskab</h3>
-<p class="sx-point-preview">SpaceX er allerede stort, men størrelsen fortæller ikke, hvor modent selskabet er.</p><details class="sx-point-expand" open=""><summary>Læs argumentet</summary><p class="spot-broed">SpaceX er allerede stort, men størrelsen fortæller ikke, hvor modent selskabet er. Genanvendelige raketter er stadig en ny teknologi, satellitbaseret internet er stadig i opbygningsfasen, og produktion og datacentre i rummet eksisterer næsten ikke endnu. Derfor kan SpaceX ses som en startup – bare en meget stor en.</p>
+<p class="sx-point-preview">SpaceX er allerede stort, men størrelsen fortæller ikke, hvor modent selskabet er.</p><details class="sx-point-expand" open=""><summary>Læs argumentet</summary><p class="spot-broed">SpaceX er allerede stort, men størrelsen fortæller ikke, hvor modent selskabet er. Genanvendelige raketter er stadig en ny teknologi, satellitbaseret internet er stadig i opbygningsfasen, og produktion og datacentre i rummet eksisterer næsten ikke endnu. Derfor kan SpaceX ses som en startup, bare en meget stor en.</p>
 <dl class="pointe-ord"><div><dt>Startup</dt><dd>et ungt selskab, der stadig bygger sin forretning op</dd></div></dl>
 <p class="pointe-kilde"><span class="lille">Kilde</span><a class="kildechip" href="https://www.newdealinvest.dk/post/uge-22-n%C3%A5r-metode-bliver-til-dogme" target="_blank" rel="noopener">Ugebrev uge 22: Når metode bliver til dogme · 01.06.2026<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (åbner i nyt vindue)</span></a></p>
 </details></li><li class="kort pointe-kort sx-point" id="pointe-2" aria-labelledby="h-p2">
 <p class="pointe-meta"><span class="pointe-nr" aria-hidden="true">02</span><span class="sr">Punkt 2 af 10, </span><time>01.06.2026</time></p>
 <h3 class="pointe-titel" id="h-p2">Metoden bestemmer konklusionen</h3>
-<p class="sx-point-preview">Bruger man klassiske value-metoder på SpaceX, er det faktisk en korrekt konklusion at sige nej tak.</p><details class="sx-point-expand"><summary>Læs argumentet</summary><p class="spot-broed">Bruger man klassiske value-metoder på SpaceX, er det faktisk en korrekt konklusion at sige nej tak. Det er ikke nødvendigvis forvalteren, der tager fejl – det er metoden, der leder til konklusionen. Problemet opstår, når metoden bliver til et dogme.</p>
+<p class="sx-point-preview">Bruger man klassiske value-metoder på SpaceX, er det faktisk en korrekt konklusion at sige nej tak.</p><details class="sx-point-expand"><summary>Læs argumentet</summary><p class="spot-broed">Bruger man klassiske value-metoder på SpaceX, er det faktisk en korrekt konklusion at sige nej tak. Det er ikke nødvendigvis forvalteren, der tager fejl, det er metoden, der leder til konklusionen. Problemet opstår, når metoden bliver til et dogme.</p>
 <dl class="pointe-ord"><div><dt>Value-metoder</dt><dd>måder at vurdere et selskab på ud fra, hvad det tjener og ejer i dag</dd></div><div><dt>Forvalteren</dt><dd>den person, der vælger aktierne i en fond</dd></div><div><dt>Dogme</dt><dd>en regel, man følger uden at stille spørgsmål ved den</dd></div></dl>
 <p class="pointe-kilde"><span class="lille">Kilde</span><a class="kildechip" href="https://www.newdealinvest.dk/post/uge-22-n%C3%A5r-metode-bliver-til-dogme" target="_blank" rel="noopener">Ugebrev uge 22: Når metode bliver til dogme · 01.06.2026<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (åbner i nyt vindue)</span></a></p>
 </details></li><li class="kort pointe-kort sx-point" id="pointe-3" aria-labelledby="h-p3">
@@ -511,13 +608,13 @@
 </details></li><li class="kort pointe-kort sx-point" id="pointe-4" aria-labelledby="h-p4">
 <p class="pointe-meta"><span class="pointe-nr" aria-hidden="true">04</span><span class="sr">Punkt 4 af 10, </span><time>23.07.2026</time></p>
 <h3 class="pointe-titel" id="h-p4">Samme selskab, to mentale modeller</h3>
-<p class="sx-point-preview">For en value-investor er SpaceX et rumfartsselskab.</p><details class="sx-point-expand"><summary>Læs argumentet</summary><p class="spot-broed">For en value-investor er SpaceX et rumfartsselskab. For en teknologiinvestor er det et vertikalt integreret datacenterselskab. Den ene spørger, hvad selskabet tjener i dag, og hvad det er værd. Den anden spørger, hvad teknologien gør det muligt for selskabet at blive. Samme information, helt forskellige mentale modeller – og pointen er at arbejde med begge.</p>
+<p class="sx-point-preview">For en value-investor er SpaceX et rumfartsselskab.</p><details class="sx-point-expand"><summary>Læs argumentet</summary><p class="spot-broed">For en value-investor er SpaceX et rumfartsselskab. For en teknologiinvestor er det et vertikalt integreret datacenterselskab. Den ene spørger, hvad selskabet tjener i dag, og hvad det er værd. Den anden spørger, hvad teknologien gør det muligt for selskabet at blive. Samme information, helt forskellige mentale modeller, og pointen er at arbejde med begge.</p>
 <dl class="pointe-ord"><div><dt>Value-investor</dt><dd>en investor, der især ser på, hvad selskabet tjener og ejer i dag</dd></div><div><dt>Vertikalt integreret</dt><dd>selskabet laver selv flere led i kæden</dd></div><div><dt>Mentale modeller</dt><dd>de billeder i hovedet, man bruger til at forstå noget</dd></div></dl>
 <p class="pointe-kilde"><span class="lille">Kilder</span><a class="kildechip" href="https://x.com/MadsC007/status/2080244096258490548" target="_blank" rel="noopener">Mads Christiansen på X · 23.07.2026<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (åbner i nyt vindue)</span></a><a class="kildechip" href="https://www.newdealinvest.dk/post/uge-27-bygger-vi-for-meget-ai" target="_blank" rel="noopener">Ugebrev uge 27: Bygger vi for meget AI? · 06.07.2026<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (åbner i nyt vindue)</span></a></p>
 </details></li><li class="kort pointe-kort sx-point" id="pointe-5" aria-labelledby="h-p5">
 <p class="pointe-meta"><span class="pointe-nr" aria-hidden="true">05</span><span class="sr">Punkt 5 af 10, </span><time>15.06.2026</time></p>
 <h3 class="pointe-titel" id="h-p5">Teknologiinvestering er en sandsynlighedsdisciplin</h3>
-<p class="sx-point-preview">Spiller man på, at Spanien går videre fra gruppespillet, ved man bagefter, om det skete – men ikke, om oddset var godt.</p><details class="sx-point-expand"><summary>Læs argumentet</summary><p class="spot-broed">Spiller man på, at Spanien går videre fra gruppespillet, ved man bagefter, om det skete – men ikke, om oddset var godt. Sådan er det også med SpaceX: om fem eller ti år kender vi udfaldet, men aldrig den sande sandsynlighed på investeringstidspunktet. Det interessante er derfor ikke kritikken fra en kapitalforvalter, som investerer andres penge og kaldte SpaceX grotesk overvurderet, men hvor sikker han var på sin konklusion.</p>
+<p class="sx-point-preview">Spiller man på, at Spanien går videre fra gruppespillet, ved man bagefter, om det skete, men ikke, om oddset var godt.</p><details class="sx-point-expand"><summary>Læs argumentet</summary><p class="spot-broed">Spiller man på, at Spanien går videre fra gruppespillet, ved man bagefter, om det skete, men ikke, om oddset var godt. Sådan er det også med SpaceX: om fem eller ti år kender vi udfaldet, men aldrig den sande sandsynlighed på investeringstidspunktet. Det interessante er derfor ikke kritikken fra en kapitalforvalter, som investerer andres penge og kaldte SpaceX grotesk overvurderet, men hvor sikker han var på sin konklusion.</p>
 <dl class="pointe-ord"><div><dt>Sandsynlighedsdisciplin</dt><dd>et fag, hvor man arbejder med, hvor sandsynligt noget er, ikke med sikre svar</dd></div><div><dt>Oddset</dt><dd>tallet, der viser, hvor sandsynligt man på forhånd regnede med, at noget ville ske</dd></div><div><dt>Udfaldet</dt><dd>det, der faktisk skete</dd></div></dl>
 <p class="pointe-kilde"><span class="lille">Kilde</span><a class="kildechip" href="https://www.newdealinvest.dk/post/uge-24-spacex-deler-vandene" target="_blank" rel="noopener">Ugebrev uge 24: SpaceX deler vandene · 15.06.2026<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (åbner i nyt vindue)</span></a></p>
 </details></li><li class="kort pointe-kort sx-point" id="pointe-6" aria-labelledby="h-p6">
@@ -530,11 +627,11 @@
 <p class="pointe-meta"><span class="pointe-nr" aria-hidden="true">07</span><span class="sr">Punkt 7 af 10, </span><time>28.09.2026</time></p>
 <h3 class="pointe-titel" id="h-p7">Hold Musk og selskabet adskilt</h3>
 <p class="sx-point-preview">Man kan kigge på SpaceX' regnskab.</p><details class="sx-point-expand"><summary>Læs argumentet</summary><p class="spot-broed">Man kan kigge på SpaceX' regnskab. Man kan kigge på teknologien og på, hvor stærkt selskabet står over for konkurrenterne. Eller man kan kigge på Elon Musk som person. Alle tre perspektiver fortæller noget, men de besvarer ikke det samme spørgsmål. Får holdningen til Musk lov at styre analysen, blandes vurderingen af ham sammen med vurderingen af teknologien og økonomien. Og omvendt er fantastisk teknologi heller ikke i sig selv et bevis på, at SpaceX er en fantastisk investering til enhver pris.</p>
-<p class="pointe-kilde"><span class="lille">Kilder</span><a class="kildechip" href="https://www.newdealinvest.dk/post/hvad-er-noget-godt" target="_blank" rel="noopener">Ugebrev uge 39: Hvad er noget »godt«? · 28.09.2026<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (åbner i nyt vindue)</span></a><a class="kildechip" href="https://newdealinvest.substack.com/p/week-39-what-is-something-good" target="_blank" rel="noopener">Substack: Week 39 - What is something 'good'? · 28.09.2026<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (åbner i nyt vindue)</span></a></p>
+<p class="pointe-kilde"><span class="lille">Kilder</span><a class="kildechip" href="https://www.newdealinvest.dk/post/hvad-er-noget-godt" target="_blank" rel="noopener">Ugebrev uge 39: Hvad er noget "godt"? · 28.09.2026<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (åbner i nyt vindue)</span></a><a class="kildechip" href="https://newdealinvest.substack.com/p/week-39-what-is-something-good" target="_blank" rel="noopener">Substack: Week 39 - What is something 'good'? · 28.09.2026<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (åbner i nyt vindue)</span></a></p>
 </details></li><li class="kort pointe-kort sx-point" id="pointe-8" aria-labelledby="h-p8">
 <p class="pointe-meta"><span class="pointe-nr" aria-hidden="true">08</span><span class="sr">Punkt 8 af 10, </span><time>25.09.2026</time></p>
 <h3 class="pointe-titel" id="h-p8">Negativ fri cash flow er ikke det samme som dårlig økonomi</h3>
-<p class="sx-point-preview">»En virksomhed kan have ekstraordinært attraktiv underliggende økonomi og samtidig et stort negativt frit cash flow.«</p><details class="sx-point-expand"><summary>Læs argumentet</summary><blockquote class="spot-citat"><p class="spot-broed">»En virksomhed kan have ekstraordinært attraktiv underliggende økonomi og samtidig et stort negativt frit cash flow. Forklaringen er hypervækst: Når kapaciteten vokser hurtigt, bygger selskabet langt mere, end det driver i dag, og pengene går ud, før kapaciteten giver omsætning. I regneeksemplet bygger jeg antagelserne på den økonomi, der er blevet diskuteret omkring SpaceX/xAI.«</p><footer class="lille">Mads Christiansen, fondschef og medstifter af NewDeal Invest. Substack: The Economy of a Neocloud, Simplified, 25.09.2026.</footer></blockquote>
+<p class="sx-point-preview">"En virksomhed kan have ekstraordinært attraktiv underliggende økonomi og samtidig et stort negativt frit cash flow."</p><details class="sx-point-expand"><summary>Læs argumentet</summary><blockquote class="spot-citat"><p class="spot-broed">"En virksomhed kan have ekstraordinært attraktiv underliggende økonomi og samtidig et stort negativt frit cash flow. Forklaringen er hypervækst: Når kapaciteten vokser hurtigt, bygger selskabet langt mere, end det driver i dag, og pengene går ud, før kapaciteten giver omsætning. I regneeksemplet bygger jeg antagelserne på den økonomi, der er blevet diskuteret omkring SpaceX/xAI."</p><footer class="lille">Mads Christiansen, fondschef og medstifter af NewDeal Invest. Substack: The Economy of a Neocloud, Simplified, 25.09.2026.</footer></blockquote>
 <dl class="pointe-ord"><div><dt>Frit cash flow</dt><dd>de penge, der er tilbage, når driften og investeringerne er betalt</dd></div><div><dt>Hypervækst</dt><dd>meget hurtig vækst</dd></div><div><dt>Kapacitet</dt><dd>hvor meget selskabet kan levere, fx hvor meget regnekraft der er i datacentrene</dd></div></dl>
 <p class="pointe-kilde"><span class="lille">Kilde</span><a class="kildechip" href="https://newdealinvest.substack.com/p/the-economy-of-a-neocloud-simplified" target="_blank" rel="noopener">Substack: The Economy of a Neocloud, Simplified · 25.09.2026<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (åbner i nyt vindue)</span></a></p>
 </details></li><li class="kort pointe-kort sx-point" id="pointe-9" aria-labelledby="h-p9">
@@ -546,7 +643,7 @@
 </details></li><li class="kort pointe-kort sx-point" id="pointe-10" aria-labelledby="h-p10">
 <p class="pointe-meta"><span class="pointe-nr" aria-hidden="true">10</span><span class="sr">Punkt 10 af 10, </span><time>31.05.2026</time></p>
 <h3 class="pointe-titel" id="h-p10">Billigere transport åbner nye markeder</h3>
-<p class="sx-point-preview">Musk har gjort noget fundamentalt: Han har dramatisk reduceret omkostningen ved at sende ting ud i rummet.</p><details class="sx-point-expand"><summary>Læs argumentet</summary><p class="spot-broed">Musk har gjort noget fundamentalt: Han har dramatisk reduceret omkostningen ved at sende ting ud i rummet. Når transportomkostninger kollapser, opstår der nye markeder. Sådan fungerer industrialisering – først bliver infrastrukturen billigere, derefter kommer innovationen ovenpå.</p>
+<p class="sx-point-preview">Musk har gjort noget fundamentalt: Han har dramatisk reduceret omkostningen ved at sende ting ud i rummet.</p><details class="sx-point-expand"><summary>Læs argumentet</summary><p class="spot-broed">Musk har gjort noget fundamentalt: Han har dramatisk reduceret omkostningen ved at sende ting ud i rummet. Når transportomkostninger kollapser, opstår der nye markeder. Sådan fungerer industrialisering, først bliver infrastrukturen billigere, derefter kommer innovationen ovenpå.</p>
 <p class="pointe-kilde"><span class="lille">Kilde</span><a class="kildechip" href="https://www.newdealinvest.dk/post/uge-21-begyndelsen-af-begyndelsen" target="_blank" rel="noopener">Ugebrev uge 21: Begyndelsen af begyndelsen · 31.05.2026<svg class="ik ik--s" aria-hidden="true"><use href="#i-ud"></use></svg><span class="sr"> (åbner i nyt vindue)</span></a></p>
 </details></li>
 </ol></div>
@@ -559,7 +656,7 @@
 <p class="lille" data-kurs-note hidden>Grafen viser aktiens lukkekurs i den valuta, aktien handles i.</p>
 </div>
 </section>
-<section class="rm-section" id="mere-fra-ndi" aria-labelledby="rm-title"><p class="rm-source">VIDEOER OG OPSLAG</p><h2 id="rm-title">Bliv klogere på SpaceX</h2><div class="rm-grid rm-grid-instagram"><article class="rm-social"><p class="rm-source">INSTAGRAM · NEWDEAL INVEST · 2026-08-22</p><h3>Kort om SpaceX</h3><button type="button" data-instagram="https://www.instagram.com/reel/DcV5KfUPlsg/">Afspil klippet her</button><a href="https://www.instagram.com/reel/DcV5KfUPlsg/" target="_blank" rel="noopener">Åbn på Instagram ↗</a><div class="rm-embed"></div></article><article class="rm-social"><p class="rm-source">INSTAGRAM · NEWDEAL INVEST · 2026-08-09</p><h3>Kort om SpaceX</h3><button type="button" data-instagram="https://www.instagram.com/reel/Db1Nl8UPgyi/">Afspil klippet her</button><a href="https://www.instagram.com/reel/Db1Nl8UPgyi/" target="_blank" rel="noopener">Åbn på Instagram ↗</a><div class="rm-embed"></div></article></div><details class="rm-more"><summary>Se flere korte klip (1)</summary><div class="rm-grid rm-grid-instagram"><article class="rm-social"><p class="rm-source">INSTAGRAM · NEWDEAL INVEST · 2026-08-05</p><h3>Kort om SpaceX</h3><button type="button" data-instagram="https://www.instagram.com/reel/DbqpisCP9va/">Afspil klippet her</button><a href="https://www.instagram.com/reel/DbqpisCP9va/" target="_blank" rel="noopener">Åbn på Instagram ↗</a><div class="rm-embed"></div></article></div></details><div class="rm-grid rm-grid-x"><article class="rm-social rm-x"><p class="rm-source">X · 2026-10-30</p><h3>Delt af Mads Christiansen</h3><div class="rm-embed" id="x-2116021423181557770" data-x="2116021423181557770"></div><a href="https://x.com/LunarCitizens/status/2116021423181557770" target="_blank" rel="noopener">Læs det originale opslag på X ↗</a></article><article class="rm-social rm-x"><p class="rm-source">X · 2026-10-21</p><h3>Delt af Mads Christiansen</h3><div class="rm-embed" id="x-2113051119723380747" data-x="2113051119723380747"></div><a href="https://x.com/Sam_Badawi/status/2113051119723380747" target="_blank" rel="noopener">Læs det originale opslag på X ↗</a></article></div></section><section class="sektion" id="videre" aria-labelledby="h-videre">
+<section class="rm-section" id="mere-fra-ndi" aria-labelledby="rm-title"><p class="rm-source">VIDEOER OG OPSLAG</p><h2 id="rm-title">Bliv klogere på SpaceX</h2><div class="rm-grid rm-grid-instagram"><article class="rm-social"><p class="rm-source">INSTAGRAM · NEWDEAL INVEST · 22.08.2026</p><h3>Kort om SpaceX, 22. august</h3><button type="button" data-instagram="https://www.instagram.com/reel/DcV5KfUPlsg/">Afspil klippet her</button><a href="https://www.instagram.com/reel/DcV5KfUPlsg/" target="_blank" rel="noopener">Åbn på Instagram ↗</a><div class="rm-embed"></div></article><article class="rm-social"><p class="rm-source">INSTAGRAM · NEWDEAL INVEST · 09.08.2026</p><h3>Kort om SpaceX, 9. august</h3><button type="button" data-instagram="https://www.instagram.com/reel/Db1Nl8UPgyi/">Afspil klippet her</button><a href="https://www.instagram.com/reel/Db1Nl8UPgyi/" target="_blank" rel="noopener">Åbn på Instagram ↗</a><div class="rm-embed"></div></article></div><details class="rm-more"><summary>Se flere korte klip (1)</summary><div class="rm-grid rm-grid-instagram"><article class="rm-social"><p class="rm-source">INSTAGRAM · NEWDEAL INVEST · 05.08.2026</p><h3>Kort om SpaceX, 5. august</h3><button type="button" data-instagram="https://www.instagram.com/reel/DbqpisCP9va/">Afspil klippet her</button><a href="https://www.instagram.com/reel/DbqpisCP9va/" target="_blank" rel="noopener">Åbn på Instagram ↗</a><div class="rm-embed"></div></article></div></details></section><section class="sektion" id="videre" aria-labelledby="h-videre">
 <div class="kort panel panel--investor">
 <div class="investor-tekst">
 <p class="sektion-kicker"><svg class="ik ik--s" aria-hidden="true"><use href="#i-fond"></use></svg>Næste skridt</p>
@@ -621,5 +718,6 @@
 <script src="../assets/js/topanimation.js?v=20261031-integrated"></script>
 <script src="../assets/js/kursgraf.js"></script>
 <script src="../assets/js/x-tema.js"></script>
-<script defer src="../assets/js/spacex-review.js?v=1"></script><script defer src="../assets/js/review-media.js?v=20261031-3"></script><script defer src="../assets/js/journey-polish.js?v=20261031c"></script></body>
+<script defer src="../assets/js/spacex-review.js?v=1"></script><script defer src="../assets/js/review-media.js?v=20261031-3"></script><script defer src="../assets/js/journey-polish.js?v=20261031c"></script><script src="../assets/claude/52-video.js?v=cr52" defer data-claude-punkt="52"></script>
+</body>
 </html>

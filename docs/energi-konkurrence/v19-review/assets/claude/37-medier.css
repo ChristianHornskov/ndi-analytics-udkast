@@ -1,0 +1,8 @@
+/* Punkt 37: står der kun ét kort i en medierække, bruger det hele bredden, så der ikke står en tom kolonne ved siden af. */
+#mere-fra-ndi .rm-grid > :only-child { grid-column: 1 / -1; }
+@media (min-width: 900px) {
+  #mere-fra-ndi .rm-grid-youtube > .rm-video:only-child { display: grid; grid-template-columns: minmax(0, 11fr) minmax(0, 9fr); align-items: center; }
+  #mere-fra-ndi .rm-grid-youtube > .rm-video:only-child > .rm-play { height: 100%; min-height: 0; }
+  #mere-fra-ndi .rm-grid-youtube > .rm-video:only-child > .rm-caption { padding: 24px 28px; }
+  #mere-fra-ndi .rm-grid-x > .rm-social:last-child:nth-child(odd):not(:only-child) { grid-column: 1 / -1; }
+}

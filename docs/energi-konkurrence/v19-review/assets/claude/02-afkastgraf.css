@@ -1,0 +1,16 @@
+/* Graf-review punkt 2: grafen går ud til kortets kant på mobil, så den får fuld bredde. */
+@media (max-width: 700px) {
+  .analysis-intro #analysis-hero-chart {
+    margin-left: -16px;
+    margin-right: -16px;
+    width: auto;
+    max-width: none;
+  }
+  .analysis-intro #analysis-hero-chart > figcaption {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .analysis-intro #analysis-hero-chart > svg {
+    width: 100%;
+  }
+}

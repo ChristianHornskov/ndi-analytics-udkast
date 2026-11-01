@@ -43,11 +43,19 @@ export function atlasTechnologyThreads(layout){
 }
 
 
-export function threadLabelSpot(th,width,labels,height=21){
+export function threadLabelSpot(th,width,labels,height=21,W=0,H=0){
+ // Punkt 15: mærket placeres ved siden af linjen i stedet for oven på den, holdes inden for kortet
+ // og må ikke dække et tema. Findes ingen fri plads, vælges pladsen med mindst overlap.
  const at=t=>{const u=1-t;return [u*u*th.x1+2*u*t*th.cx+t*t*th.x2,u*u*th.y1+2*u*t*th.cy+t*t*th.y2]};
- const free=([x,y])=>!labels.some(r=>x-width/2<r.x+r.w&&x+width/2>r.x&&y-17<r.y+r.h&&y-17+height>r.y);
- for(const t of [.48,.4,.56,.32,.64,.25,.72,.18,.8,.12,.88]){const p=at(t);if(free(p))return p}
- return at(.48);
+ const dv=t=>{const u=1-t;return [2*u*(th.cx-th.x1)+2*t*(th.x2-th.cx),2*u*(th.cy-th.y1)+2*t*(th.y2-th.cy)]};
+ const overlap=([x,y])=>{let a=0;for(const r of labels){const ox=Math.min(x+width/2,r.x+r.w)-Math.max(x-width/2,r.x),oy=Math.min(y+4,r.y+r.h)-Math.max(y-17,r.y);if(ox>0&&oy>0)a+=ox*oy}
+  if(W&&(x-width/2<4||x+width/2>W-4))a+=1e6;if(H&&(y-17<4||y+4>H-4))a+=1e6;return a};
+ let best=null,bestA=Infinity;
+ for(const t of [.48,.4,.56,.32,.64,.25,.72,.18,.8,.12,.88])for(const side of [1,-1]){
+  const [px,py]=at(t),[dx,dy]=dv(t),l=Math.hypot(dx,dy)||1,nx=-dy/l*side,ny=dx/l*side;
+  const off=Math.abs(nx)*width/2+Math.abs(ny)*height/2+5,p=[px+nx*off,py+ny*off+6.5],a=overlap(p);
+  if(a===0)return p;if(a<bestA){bestA=a;best=p}}
+ return best||at(.48);
 }
 export function technologyNeighbours(threads,focus){
  return new Set(threads.filter(t=>t.a===focus||t.b===focus).flatMap(t=>[t.a,t.b]));
@@ -98,7 +106,7 @@ export function createLivingAtlas(host,{model,onLine,reducedMotion=false,counter
  const idle=f=>win.requestIdleCallback?win.requestIdleCallback(f,{timeout:400}):win.setTimeout(f,60);
  function drawSoon(){if(!drawRaf)drawRaf=win.requestAnimationFrame(()=>{drawRaf=0;if(!dead)draw(now())})}
  function resize(){
-  const width=host.clientWidth||360;lastWidth=width;const height=width<600?540:560;layout=layoutAtlas(model,{width,height});for(const c of layout.clusters)c.phase=seeded(c.id,9)*Math.PI*2;threads=atlasThreads(layout);technologyThreads=atlasTechnologyThreads(layout);plan=gatherPlan(layout);
+  const width=host.clientWidth||360;lastWidth=width;const height=width<600?Math.max(540,Math.ceil((model?.lines?.length||0)/(model?.mobileColumns||3))*150):560;layout=layoutAtlas(model,{width,height});for(const c of layout.clusters)c.phase=seeded(c.id,9)*Math.PI*2;threads=atlasThreads(layout);technologyThreads=atlasTechnologyThreads(layout);plan=gatherPlan(layout);
   dpr=Math.min(3,win.devicePixelRatio||1);canvas.width=Math.round(width*dpr);canvas.height=Math.round(layout.height*dpr);canvas.style.width=width+'px';canvas.style.height=layout.height+'px';host.style.height='auto';host.style.minHeight=layout.height+'px';
   const sample=(dash,color,w=2)=>`<svg width="30" height="10" viewBox="0 0 30 10" aria-hidden="true" focusable="false" style="vertical-align:middle;margin-right:6px"><line x1="2" y1="5" x2="28" y2="5" stroke="${color}" stroke-width="${w}" stroke-linecap="round"${dash?` stroke-dasharray="${dash}"`:''}/></svg>`;
   
@@ -142,7 +150,7 @@ export function createLivingAtlas(host,{model,onLine,reducedMotion=false,counter
    const research=th.kind==='research';b.setLineDash(simpleConnections?[]:research?[0.5,6]:[8,5]);b.lineCap=research?'round':'butt';b.strokeStyle=rgba(research&&!simpleConnections?P.gold:P.teal,dim?.18:on?1:research?.9:.65);b.lineWidth=research?(on?3.4:2.8):(on?2.6:1.7);
    b.beginPath();b.moveTo(th.x1,th.y1);b.quadraticCurveTo(th.cx,th.cy,th.x2,th.y2);b.stroke();b.setLineDash([]);
    b.lineCap='butt';
-   if(on||(research&&!dim)){b.font='600 12px system-ui,sans-serif';b.textAlign='center';const w=b.measureText(th.label).width+12,[x,y]=threadLabelSpot(th,w,labels.concat(layout.clusters.map(c=>({x:c.x-c.r-4,y:c.y-c.r-4,w:2*c.r+8,h:2*c.r+8}))));
+   if(on||(research&&!dim)){b.font='600 12px system-ui,sans-serif';b.textAlign='center';const w=b.measureText(th.label).width+12,[x,y]=threadLabelSpot(th,w,labels.concat(layout.clusters.map(c=>({x:c.x-c.r-6,y:c.y-c.r-6,w:2*c.r+12,h:2*c.r+12}))),21,W,H);
     if(P.bg){b.fillStyle=rgba(P.bg,.96);b.fillRect(x-w/2,y-17,w,21)}b.fillStyle=rgba(P.ink,1);b.fillText(th.label,x,y-2);}
   }
   const neighbours=technologyNeighbours(technologyThreads,focus);
