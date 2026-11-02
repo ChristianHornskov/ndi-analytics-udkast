@@ -9,13 +9,28 @@
   async function json(url){const c=new AbortController(),t=setTimeout(()=>c.abort(),15000);try{const r=await originalFetch(url,{cache:'no-store',signal:c.signal});if(!r.ok)throw Error('Data kunne ikke hentes');return await r.json()}finally{clearTimeout(t)}}
   const ready=(async()=>{
     const pointer=await json(BASE+'latest.json');
-    if(pointer.validated!==true||!/^\w{64}$/.test(pointer.release)||!/^\d{4}-\d{2}-\d{2}$/.test(pointer.asOf))throw Error('Datagrundlaget er ikke valideret');
+    if(pointer.validated!==true||!/^[a-f0-9]{64}$/.test(pointer.release)||!/^\d{4}-\d{2}-\d{2}$/.test(pointer.asOf))throw Error('Datagrundlaget er ikke valideret');
     const values=await Promise.all(names.map(n=>json(BASE+'releases/'+pointer.release+'/'+n)));
     const files=Object.fromEntries(names.map((n,i)=>[n,values[i]]));
     if(['data.json','highs.json','insights.json'].some(n=>files[n].asOf!==pointer.asOf))throw Error('Data har forskellige datoer');
     const identities=await json(ROOT+'data/company-identities.json');
     let nasdaq=null;try{const n=await json(BASE+'nasdaq/latest.json');if(n.validated===true&&n.methodVersion==='ecb-daily-reference-v1'&&Array.isArray(n.rows)&&n.rows.every(r=>Number.isFinite(r.v)&&r.v>0))nasdaq=n}catch{}
-    const session={pointer,files,identities,root:ROOT,nasdaq};window.NDI_LIVE=session;return session;
+    let holdingsHistory=null;
+    // History is immutable and bound to this exact validated release, never a test archive.
+    try {
+      const h=await json(BASE+'holdings-history/'+pointer.release+'.json');
+      if(h.schemaVersion!==1||h.validated!==true||h.sourceRelease!==pointer.release||h.asOf!==pointer.asOf)throw Error('Historikken tilhører en anden udgave');
+      for(const f of files['data.json'].funds){
+        const rows=h.funds?.[f.id];
+        if(!Array.isArray(rows)||!rows.length||rows.at(-1).date!==pointer.asOf)throw Error('Historikken mangler seneste dato');
+        rows.forEach((r,i)=>{
+          if(!/^\d{4}-\d{2}-\d{2}$/.test(r.date)||r.date>pointer.asOf||(i&&rows[i-1].date>=r.date)||!r.weights||Object.values(r.weights).some(w=>!Number.isFinite(w)||w<0||w>100))throw Error('Ugyldig historik');
+        });
+        f.positions.filter(p=>p.isin&&p.weight>0).forEach(p=>{const w=rows.at(-1).weights[p.isin];if(!Number.isFinite(w)||Math.abs(w-p.weight)>0.0051)throw Error('Historik og aktuel position er forskellige')});
+      }
+      holdingsHistory=h;
+    }catch{}
+    const session={pointer,files,identities,root:ROOT,nasdaq,holdingsHistory};window.NDI_LIVE=session;return session;
   })();
   // The fund chart and portfolio keep their existing renderers, but receive the
   // same immutable release as company and theme pages.
@@ -52,10 +67,12 @@
     const bySlug={};positions.forEach(p=>{const m=s.identities[p.isin];if(m)bySlug[m.slug]=p});s.bySlug=bySlug;s.fund=fund;
     const date=s.files['data.json'].positionsAsOf||s.pointer.asOf,day=date.split('-').reverse().join('.');
     if(d.spacex){
-      // The validated release has current holdings, but no holdings-history file.
-      // Do not present the bundled historical snapshot as a live series.
-      d.spacex.historik=[];d.spacex.antalMaalinger=0;d.spacex.antalMaaneder=0;
-      d.spacex.fraDatoTekst=null;d.spacex.spring={fraDato:null,fra:null,til:null,retning:null};
+      const history=(s.holdingsHistory?.funds.pmindi||[]).filter(r=>Number.isFinite(r.weights['US84615Q1031'])).map(r=>({dato:r.date,datoTekst:r.date.split('-').reverse().join('.'),andel:r.weights['US84615Q1031']}));
+      d.spacex.historik=history;d.spacex.antalMaalinger=history.length;d.spacex.antalMaaneder=new Set(history.map(r=>r.dato.slice(0,7))).size;
+      d.spacex.fraDatoTekst=history[0]?.datoTekst||null;
+      d.spacex.akse={...(d.spacex.akse||{}),maks:Math.max(1,Math.ceil(Math.max(0,...history.map(r=>r.andel))))};
+      const previous=history.at(-2),last=history.at(-1);
+      d.spacex.spring={fraDato:previous?.dato||null,fra:previous?.andel??null,til:last?.andel??null,retning:previous&&last?(last.andel>=previous.andel?'steget':'faldet'):null};
     }
     if(window.NDI_DATA)window.NDI_DATA.fondsudvikling=fundView(s,fund);
     document.querySelectorAll('.up-data-date').forEach(e=>e.textContent='Afkast til '+fund.performanceAsOf.split('-').reverse().join('.')+' · Beholdning pr. '+day);
@@ -73,9 +90,19 @@
     const p=window.NDI_DATA?.portefolje;
     if(p){p.release=d.release;p.andelsdato=date;p.andelsdatoTekst=day;p.eksempeldata=false;p.kursdato=fund.performanceAsOf;p.beholdning.antalPositioner=list.length;p.beholdning.top10=d.top10.liste;p.beholdning.top10Sum=d.top10.sum;p.beholdning.positioner=positions.map(x=>({navn:s.identities[x.isin]?.navn||x.name,isin:x.isin,slug:s.identities[x.isin]?.slug,andel:x.weight,valuta:x.listingCurrency,sektor:x.sector}));p.vaerdikaede?.forEach(g=>{g.selskaber=g.selskaber.filter(c=>bySlug[c.slug]).map(c=>({...c,andel:bySlug[c.slug].weight}));g.antal=g.selskaber.length;g.andel=sum(g.selskaber)})}
     // Interactive chain datasets are editorial classifications; weights are live.
-    const ck=document.getElementById('ck-data');if(ck){const stages=JSON.parse(ck.textContent);stages.forEach(t=>{t.selskaber=t.selskaber.filter(c=>list.some(p=>p.navn.toLowerCase()===c.navn.toLowerCase()));t.selskaber.forEach(c=>{const p=list.find(p=>p.navn.toLowerCase()===c.navn.toLowerCase());c.andel=p.andel})});ck.textContent=JSON.stringify(stages)}
+    const ck=document.getElementById('ck-data');if(ck){const stages=JSON.parse(ck.textContent);stages.forEach(t=>{t.selskaber=t.selskaber.filter(c=>list.some(p=>p.navn.toLowerCase()===c.navn.toLowerCase()));t.selskaber.forEach(c=>{const p=list.find(p=>p.navn.toLowerCase()===c.navn.toLowerCase());c.andel=p.andel});t.selskaber.sort((a,b)=>b.andel-a.andel)});ck.textContent=JSON.stringify(stages)}
     document.querySelectorAll('[data-n][data-w]').forEach(e=>{const n=e.dataset.n==='Sumitomo Electric'?'Sumitomo Electric Industries':e.dataset.n;const p=list.find(p=>p.navn.toLowerCase()===n.toLowerCase());e.dataset.w=p?fmt(p.andel)+' %':'Ikke i den aktuelle beholdning'});
     document.querySelectorAll('.cf-company').forEach(e=>{const slug=e.getAttribute('href')?.split('/').pop().replace('.html','');const p=bySlug[slug];const w=e.querySelector('.cf-weight');if(w)w.textContent=p?fmt(p.weight)+' %':'Ikke i den aktuelle beholdning'});
+    // Keep the company finder in live weight order before its pagination starts.
+    document.querySelectorAll('.cf-results').forEach(ul=>{
+      const rows=[...ul.children],slugOf=row=>row.querySelector('.cf-company')?.getAttribute('href')?.split('/').pop().replace('.html','');
+      rows.sort((a,b)=>(bySlug[slugOf(b)]?.weight||0)-(bySlug[slugOf(a)]?.weight||0));
+      rows.forEach(row=>{
+        const slug=slugOf(row),logo=d.selskaber[slug]?.logo,box=row.querySelector('.cf-logo');
+        if(box&&logo){const img=document.createElement('img');img.src=new URL(logo,ROOT).href;img.alt='';img.width=32;img.height=32;img.loading='lazy';img.style.objectFit='contain';box.replaceChildren(img)}
+        ul.appendChild(row);
+      });
+    });
     // Keep literal date captions in step with their existing data bindings.
     document.querySelectorAll('[data-tal="andelsdatoTekst"]').forEach(e=>e.textContent=day);
   }
@@ -109,7 +136,7 @@
       document.documentElement.dataset.liveRelease=session.pointer.release;
       document.documentElement.classList.remove('ndi-live-loading');
       document.dispatchEvent(new CustomEvent('ndi:live',{detail:session}));
-      setInterval(async()=>{if(document.hidden)return;try{const p=await json(BASE+'latest.json');if(p.validated&&p.release!==session.pointer.release)location.reload()}catch{}},300000);
+      setInterval(async()=>{if(document.hidden)return;try{const p=await json(BASE+'latest.json');if(p.validated&&p.release!==session.pointer.release){location.reload();return}if(!session.holdingsHistory&&document.getElementById('andel-historie')){const h=await json(BASE+'holdings-history/'+session.pointer.release+'.json');if(h.validated===true&&h.sourceRelease===session.pointer.release&&h.asOf===session.pointer.asOf)location.reload()}}catch{}},300000);
     }catch(error){
       document.documentElement.classList.remove('ndi-live-loading');document.documentElement.classList.add('ndi-live-failed');
       document.querySelectorAll('[data-tal],.cf-weight,[data-w]').forEach(e=>{if(e.hasAttribute('data-w'))e.dataset.w='Data kunne ikke hentes';else e.textContent='—'});

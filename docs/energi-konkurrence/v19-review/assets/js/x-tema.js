@@ -101,7 +101,8 @@
         var li = el('li', 'x-tema-opslag');
         var top = el('p', 'x-tema-hoved');
         top.appendChild(el('strong', null, '@' + (h.p.author_handle || 'X')));
-        var meta = [dato(h.p.published_at), KILDE[h.p.source_type]].filter(Boolean).join(' · ');
+        // Show the original author and date; source_type is editorial classification, not verified account identity.
+        var meta = dato(h.p.published_at);
         if (meta) top.appendChild(el('span', 'x-tema-meta', ' · ' + meta));
         li.appendChild(top);
         var om = el('p', 'x-tema-om');
