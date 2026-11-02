@@ -90,3 +90,12 @@ html body .zc-track>.ndi-figure-note{position:relative;margin:12px 28px 0;max-wi
 @media(max-width:600px){html body .zc-track>.ndi-figure-note{margin:10px 16px 0}html body .ndi-disclosure summary{min-height:36px}}
 
 html body .ndi-disclosure summary::after{content:none!important}
+
+/* Small neutral provenance note in the scrollable navigation. */
+html body .ndi-menu-note{margin:8px 0 16px;padding:11px 12px;border:1px solid var(--c-line,#34434b);border-radius:8px;background:transparent;color:#adc0c8;font-family:inherit;font-size:12px;line-height:1.55;font-weight:400;box-shadow:none}
+html[data-tema="lys"] body .ndi-menu-note{color:#52636c;border-color:#d6dfe3}
+html body .ndi-menu-note p{margin:0 0 5px;font:inherit;color:inherit}
+html body .ndi-menu-note .ndi-menu-note-title{font-weight:600;color:var(--c-text,inherit)}
+html body .ndi-menu-note a{font:inherit;color:inherit;text-decoration:underline;text-underline-offset:3px;display:inline-block;padding:4px 0}
+#om-indholdet{scroll-margin-top:85px}
+
