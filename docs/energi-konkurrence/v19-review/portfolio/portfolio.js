@@ -6,7 +6,7 @@
   function attachWeek(){if(!highData)return;highData.funds.find(f=>f.short==='PMINDI')?.rows.forEach(r=>{const extra=supplement[r.isin];if(extra?.date===r.returnDate&&Math.abs(extra.close-r.marketClose)<.0001)r.priceReturns.w1=extra.w1;});}
   const main=document.querySelector('main');
   const intro=document.createElement('section');intro.className='analysis-intro';
-  intro.innerHTML='<div class="analysis-paths"><a href="../widget/index.html">← Fondens overblik</a><a href="../tech.html">Gå på opdagelse i tech →</a></div><p class="eyebrow">NEWDEAL INVEST · PMINDI</p><h1>Porteføljen under lup</h1><p>Se, hvad fonden ejer, hvordan investeringerne er fordelt, og hvor store udsving porteføljen har haft.</p><p id="analysis-date" class="small muted"></p>';
+  intro.innerHTML='<div class="analysis-paths"><a href="../widget/index.html">← Fondens afkast</a><a href="../tech.html">Udforsk selskaberne →</a></div><p class="eyebrow">NEWDEAL INVEST · PMINDI</p><h1>Porteføljen under lup</h1><p>Se, hvad fonden ejer, hvordan investeringerne er fordelt, og hvor store udsving porteføljen har haft.</p><p id="analysis-date" class="small muted"></p>';
   main.prepend(intro);
   const menu=document.createElement('nav');menu.id='analysis-nav';menu.setAttribute('aria-label','Porteføljeanalyse');
   menu.innerHTML='<a href="#analysis-dashboard">Overblik</a><a href="#preview-risk-summary">Risiko i tal</a><a href="#highs">Afstand til toppen</a><a href="#portfolio">Fordeling & selskaber</a><a href="#risk">Nedture & afkast</a><a href="#method">Datagrundlag</a>';
