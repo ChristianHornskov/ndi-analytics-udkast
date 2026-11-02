@@ -26,17 +26,42 @@
  const distance=Number.isFinite(r.distance)?r.distance:null;
  metric(r.status==='ok'?'Under 52-ugers top':'Under toppen i tilgængelig historik',distance===null?'—':number(distance)+' %',r.status==='ok'?'Højeste dagskurs i perioden':r.start?'Historik fra '+date(r.start):'Kortere end 52 uger');
  box.append(grid);
- // Show only dated observations supported by the validated return data. Do not
- // draw an invented daily line between sparse observations.
- const points=[{date:priceDate,value:close}];
- Object.entries(r.priceReturns||{}).forEach(([key,v])=>{const d=r.returnBaseDates?.[key];if(['d1','m1','m3','ytd','y1'].includes(key)&&Number.isFinite(v)&&v>-100&&d&&d<priceDate&&!points.some(p=>p.date===d))points.push({date:d,value:close/(1+v/100)})});
- points.sort((a,b)=>a.date.localeCompare(b.date));
- if(points.length>1){
-  box.append(el('h3',null,'Kurs på udvalgte handelsdage'));
-  const chart=el('div','ndi-market-chart');const min=Math.min(...points.map(p=>p.value)),max=Math.max(...points.map(p=>p.value)),span=max-min||1;
-  points.forEach(p=>{const item=el('div','ndi-market-point');item.style.setProperty('--level',String((p.value-min)/span));item.append(el('strong',null,number(p.value)),el('span','ndi-market-dot','●'),el('small',null,date(p.date)));chart.append(item)});
-  box.append(chart,el('p','lille','Udvalgte kursdatoer i '+currency+', beregnet ud fra de validerede kursændringer. Punkterne viser ikke kursforløbet mellem datoerne.'));
+ const daily=el('div','ndi-daily-history');box.append(daily);
+ daily.append(el('p','lille','Henter daglige lukkekurser …'));
+ const historyURL='https://ndigrafdatab5174313.blob.core.windows.net/graph/price-history/'+s.pointer.release+'.json';
+ async function showDaily(){
+  const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),20000);
+  try{
+   const response=await fetch(historyURL,{signal:controller.signal,cache:'no-store'});if(!response.ok)throw Error('unavailable');
+   const pack=await response.json(),c=pack.companies?.[isin];
+   if(pack.validated!==true||pack.schemaVersion!==1||pack.sourceRelease!==s.pointer.release||pack.asOf!==s.pointer.asOf||c?.status!=='ok'||c.listingIdentitySha256!==p.listingIdentitySha256||c.currency!==currency||c.date!==priceDate||!Array.isArray(c.points)||c.points.length<2)throw Error('invalid');
+   c.points.forEach((v,i)=>{if(!Array.isArray(v)||!/^\d{4}-\d{2}-\d{2}$/.test(v[0])||!Number.isFinite(v[1])||v[1]<=0||v[0]>priceDate||(i&&c.points[i-1][0]>=v[0]))throw Error('invalid point')});
+   if(c.points.at(-1)[0]!==priceDate||Math.abs(c.points.at(-1)[1]-close)>Math.max(1e-6,close*1e-7))throw Error('close mismatch');
+   daily.replaceChildren();daily.append(el('h3',null,'Daglige lukkekurser'));
+   const controls=el('div','ndi-price-periods'),canvas=el('div','ndi-price-canvas'),caption=el('p','lille');caption.setAttribute('aria-live','polite');
+   const NS='http://www.w3.org/2000/svg',buttons=[];let points=c.points,selected=points.length-1;
+   function node(tag,attrs,text){const n=document.createElementNS(NS,tag);Object.entries(attrs||{}).forEach(([k,v])=>n.setAttribute(k,String(v)));if(text)n.textContent=text;return n}
+   function draw(){
+    canvas.replaceChildren();const W=Math.max(320,Math.min(640,canvas.getBoundingClientRect().width||640)),H=280,left=68,right=88,top=24,bottom=40;
+    const min=Math.min(...points.map(v=>v[1])),max=Math.max(...points.map(v=>v[1])),spread=max-min||max*.02||1,low=Math.max(0,min-spread*.08),high=max+spread*.08;
+    const first=Date.parse(points[0][0]),last=Date.parse(points.at(-1)[0]),x=d=>left+(Date.parse(d)-first)/(last-first||1)*(W-left-right),y=v=>top+(high-v)/(high-low)*(H-top-bottom);
+    const svg=node('svg',{viewBox:'0 0 '+W+' '+H,role:'img',tabindex:0,'aria-label':'Daglige lukkekurser i '+currency+'. Brug venstre og højre piletast til at læse datoer.'});svg.style.cssText='width:100%;height:auto;display:block;touch-action:pan-y';
+    for(let i=0;i<3;i++){const v=low+(high-low)*i/2,cy=y(v);svg.append(node('line',{x1:left,x2:W-right,y1:cy,y2:cy,stroke:'currentColor',opacity:.15}),node('text',{x:left-8,y:cy+4,'text-anchor':'end','font-size':12,fill:'currentColor'},number(v)))}
+    let path='';points.forEach((v,i)=>{const gap=i&&(c.missingDates||[]).some(d=>d>points[i-1][0]&&d<v[0]);path+=(i&&!gap?' L':' M')+x(v[0])+','+y(v[1])});
+    svg.append(node('path',{d:path,fill:'none',stroke:'var(--c-accent, #70a9b4)','stroke-width':2,'stroke-linejoin':'round'}));
+    (W<480?[0,points.length-1]:[0,Math.floor((points.length-1)/2),points.length-1]).forEach((i,j)=>svg.append(node('text',{x:x(points[i][0]),y:H-12,'text-anchor':j===0?'start':i===points.length-1?'end':'middle','font-size':12,fill:'currentColor'},date(points[i][0]))));
+    const end=points.at(-1);svg.append(node('text',{x:W-right+8,y:y(end[1])+4,'font-size':13,fill:'currentColor'},number(end[1])));
+    const marker=node('circle',{r:4,fill:'var(--c-accent, #70a9b4)',stroke:'currentColor','stroke-width':1});svg.append(marker);
+    function inspect(i){selected=Math.max(0,Math.min(points.length-1,i));const v=points[selected];marker.setAttribute('cx',x(v[0]));marker.setAttribute('cy',y(v[1]));caption.textContent=date(v[0])+' · '+number(v[1])+' '+currency+' · '+points.length+' handelsdage i den viste periode'}
+    svg.addEventListener('pointermove',event=>{const rect=svg.getBoundingClientRect(),px=(event.clientX-rect.left)*W/rect.width;let i=0;points.forEach((v,j)=>{if(Math.abs(x(v[0])-px)<Math.abs(x(points[i][0])-px))i=j});inspect(i)});
+    svg.addEventListener('keydown',event=>{if(['ArrowLeft','ArrowRight','Home','End'].includes(event.key)){event.preventDefault();inspect(event.key==='Home'?0:event.key==='End'?points.length-1:selected+(event.key==='ArrowRight'?1:-1))}});
+    canvas.append(svg);inspect(points.length-1);
+   }
+   [['m1','1 måned',1],['m3','3 måneder',3],['all','Hele perioden',null]].forEach(([id,label,months])=>{const button=el('button','knap knap--rolig',label);button.type='button';button.style.minHeight='44px';button.setAttribute('aria-pressed',String(id==='all'));buttons.push(button);button.addEventListener('click',()=>{const cutoff=new Date(priceDate+'T12:00:00Z');if(months){const day=cutoff.getUTCDate();cutoff.setUTCDate(1);cutoff.setUTCMonth(cutoff.getUTCMonth()-months);const end=new Date(cutoff);end.setUTCMonth(end.getUTCMonth()+1);end.setUTCDate(0);cutoff.setUTCDate(Math.min(day,end.getUTCDate()))}const filtered=months?c.points.filter(v=>v[0]>=cutoff.toISOString().slice(0,10)):c.points;if(filtered.length<2)return;points=filtered;buttons.forEach(b=>b.setAttribute('aria-pressed',String(b===button)));draw()});controls.append(button)});
+   controls.style.cssText='display:flex;flex-wrap:wrap;gap:8px;margin:12px 0';daily.append(controls,canvas,caption,el('p','lille','Daglige lukkekurser i '+currency+' fra samme validerede Azure-udgave som nøgletallene. Dage uden kursdata udfyldes ikke.'));draw();
+  }catch{daily.replaceChildren(el('p','lille','Den daglige kurshistorik kan ikke vises for denne dataudgave lige nu. De validerede nøgletal ovenfor er fortsat tilgængelige.'));setTimeout(()=>{if(box.isConnected)showDaily()},300000)}finally{clearTimeout(timer)}
  }
+ showDaily();
  const note=el('p','lille');note.textContent='Kursændringer i aktiens noteringsvaluta, uden geninvesteret udbytte. Det er ikke fondens afkast på positionen. Kurser kan være forsinkede. Datagrundlag: '+s.pointer.asOf+'. ';
  if(/^https:\/\/query1\.finance\.yahoo\.com\//.test(r.source||'')){const a=el('a','tekstlink','Kurskilde');a.href=r.source;a.target='_blank';a.rel='noopener noreferrer';note.append(a)}
  box.append(note);
