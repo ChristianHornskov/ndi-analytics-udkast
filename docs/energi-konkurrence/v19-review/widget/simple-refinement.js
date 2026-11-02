@@ -4,7 +4,7 @@ const periods=[['d1','1 dag'],['m1','1 md.'],['m3','3 mdr.'],['ytd','ÅTD'],['y1
 const marketRow=p=>highData?.funds.find(f=>f.short===data.funds[selected].short)?.rows.find(r=>r.isin===p.isin);
 const returnCells=r=>periods.map(([key])=>`<td>${r?.priceReturns?.[key]==null?'—':pct(r.priceReturns[key])}</td>`).join('');
 const periodHeaders=()=>periods.map(([,label])=>`<th>${label}</th>`).join('');
-const countryLabel=c=>({'United States':'USA','United Kingdom':'Storbritannien','South Korea':'Sydkorea','Sweden':'Sverige','China':'Kina','Japan':'Japan','Germany':'Tyskland','Netherlands':'Nederlandene','Switzerland':'Schweiz','France':'Frankrig','Australia':'Australien'}[c]||c);
+const countryLabel=c=>({'United States':'USA','United Kingdom':'Storbritannien','South Korea':'Sydkorea','Sweden':'Sverige','China':'Kina','Japan':'Japan','Germany':'Tyskland','Netherlands':'Nederlandene','Switzerland':'Schweiz','France':'Frankrig','Poland':'Polen','Bulgaria':'Bulgarien','Thailand':'Thailand','Australia':'Australien','Norway':'Norge','Brazil':'Brasilien','Kazakhstan':'Kasakhstan','Denmark':'Danmark','Finland':'Finland','Belgium':'Belgien','Austria':'Østrig','Italy':'Italien','Spain':'Spanien','Ireland':'Irland','Israel':'Israel','Taiwan':'Taiwan','Hong Kong':'Hongkong','Singapore':'Singapore','South Africa':'Sydafrika','India':'Indien','Canada':'Canada','Mexico':'Mexico','Uruguay':'Uruguay','Luxembourg':'Luxembourg','Bermuda':'Bermuda','Cayman Islands':'Caymanøerne'}[c]||c);
 function niceScale(values,zero){
  let low=Math.min(...values,zero?0:100),high=Math.max(...values,zero?0:100),raw=(high-low||1)/4,power=10**Math.floor(Math.log10(raw));
  let step=[1,2,2.5,5,10].map(x=>x*power).find(x=>x>=raw)||10*power;
@@ -38,7 +38,7 @@ holdings=function(){
  const ps=f.positions.filter(p=>p.isin&&p.weight>0&&(!sectorFilter||(p.sector||'Ikke klassificeret')===sectorFilter)&&(!countryFilter||geo.some(r=>r.isin===p.isin&&r.country===countryFilter&&r.status==='profile_found'))&&`${p.name} ${p.isin}`.toLowerCase().includes(query));
  $('holdings').closest('table').querySelector('thead').innerHTML=`<tr><th>Selskab</th><th>Sektor</th><th>Markedskurs</th><th>Vægt</th>${periodHeaders()}<th>Under 52-ugers top</th></tr>`;
  $('holdings').innerHTML=holdingsMarkup(ps)||'<tr><td colspan="10">Ingen positioner matcher.</td></tr>';
- $('activefilter').innerHTML=`<p class="small muted">${ps.length} positioner. Kursændring i aktiens noteringsvaluta, uden geninvesteret udbytte. Eksterne markedskurser, uafhængigt af hvor længe fonden har ejet aktien. — betyder utilstrækkelige data.</p>`+((sectorFilter||countryFilter)?`<button id="clearfilter" class="chip">${esc([sectorNames[sectorFilter]||sectorFilter,countryLabel(countryFilter)].filter(Boolean).join(' · '))} × Nulstil filtre</button>`:'');
+ $('activefilter').innerHTML=`<p class="small muted">${ps.length} ${ps.length===1?"position":"positioner"}. Kursændring i aktiens noteringsvaluta, uden geninvesteret udbytte. Eksterne markedskurser, uafhængigt af hvor længe fonden har ejet aktien. — betyder utilstrækkelige data.</p>`+((sectorFilter||countryFilter)?`<button id="clearfilter" class="chip">${esc([sectorNames[sectorFilter]||sectorFilter,countryLabel(countryFilter)].filter(Boolean).join(' · '))} × Nulstil filtre</button>`:'');
  if($('clearfilter'))$('clearfilter').onclick=()=>{sectorFilter='';countryFilter='';holdings()};
 };
 const previousGeography=renderGeography;
@@ -51,7 +51,7 @@ renderGeography=function(){
  const list=box.querySelector('.maplayout>div:last-child');list.innerHTML=groups.slice(0,6).map(button).join('')+(groups.length>6?`<details><summary>Vis ${groups.length-6} øvrige lande</summary>${groups.slice(6).map(button).join('')}</details>`:'');
  function pick(country){countryFilter=country;sectorFilter='';$('search').value='';holdings();$('holdings').closest('article').scrollIntoView({behavior:'smooth',block:'start'});}
  list.querySelectorAll('[data-hq]').forEach(b=>b.onclick=()=>pick(b.dataset.hq));
- box.querySelectorAll('#hq-map path').forEach(p=>{const name=p.querySelector('title')?.textContent.split(':')[0];const country=name==='United States of America'?'United States':name;if(!groups.some(([c])=>c===country))return;p.setAttribute('role','button');p.setAttribute('tabindex','0');p.setAttribute('aria-label','Se positioner i '+countryLabel(country));p.style.cursor='pointer';p.onclick=()=>pick(country);p.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();pick(country)}};});
+ box.querySelectorAll('#hq-map path').forEach(p=>{const name=p.querySelector('title')?.textContent.split(':')[0];const country=name==='United States of America'?'United States':name;if(!groups.some(([c])=>c===country)){p.setAttribute('aria-hidden','true');p.setAttribute('focusable','false');return;}p.querySelector('title').textContent=countryLabel(country);p.removeAttribute('aria-hidden');p.setAttribute('role','button');p.setAttribute('tabindex','0');p.setAttribute('aria-label','Se positioner i '+countryLabel(country));p.style.cursor='pointer';p.onclick=()=>pick(country);p.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();pick(country)}};});
 };
 const previousHighs=renderHighs;
 highReasons.listing_currency_mismatch='Noteringens valuta matcher ikke beholdningen; tal tilbageholdt';

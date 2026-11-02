@@ -8,41 +8,45 @@
 
   var WIDGETS = 'https://platform.twitter.com/widgets.js', wp = null, pladser = [];
   function tema() { return document.documentElement.getAttribute('data-tema') === 'lys' ? 'light' : 'dark'; }
+  function deadline(work, ms) {
+    return new Promise(function (resolve, reject) {
+      var timer = setTimeout(function () { reject(new Error('timeout')); }, ms);
+      Promise.resolve(work).then(function (value) { clearTimeout(timer); resolve(value); }, function (error) { clearTimeout(timer); reject(error); });
+    });
+  }
   function widgets() {
+    if (window.twttr && window.twttr.widgets) return Promise.resolve(window.twttr);
     if (wp) return wp;
-    wp = new Promise(function (ok, nej) {
-      if (window.twttr && window.twttr.widgets) return ok(window.twttr);
-      var sc = document.createElement('script'); sc.src = WIDGETS; sc.async = true; sc.charset = 'utf-8';
+    var sc;
+    wp = deadline(new Promise(function (ok, nej) {
+      sc = document.createElement('script'); sc.src = WIDGETS; sc.async = true; sc.charset = 'utf-8';
       sc.onload = function () { if (window.twttr && window.twttr.ready) window.twttr.ready(ok); else nej(new Error('twttr')); };
       sc.onerror = nej; document.head.appendChild(sc);
-    });
+    }), 12000).catch(function (error) { if (sc) sc.remove(); wp = null; throw error; });
     return wp;
   }
   function indlejr(p) {
     var id = p.getAttribute('data-x-id'); if (!/^\d+$/.test(id || '')) return;
     var t = tema(); if (p.getAttribute('data-x-vist') === t) return;
-    p.setAttribute('data-x-vist', t);
+    p.setAttribute('data-x-vist', t); p.classList.add('x-embed--henter'); p.classList.remove('x-embed--fejl');
+    var retry = p.querySelector('.x-embed-hent'); if (retry) retry.remove();
     widgets().then(function (tw) {
       var gl = p.querySelector('.x-embed-ramme'); if (gl) gl.remove();
       var ramme = el('div', 'x-embed-ramme'); p.appendChild(ramme);
-      return tw.widgets.createTweet(id, ramme, { theme: t, dnt: true, conversation: 'none', align: 'center', lang: 'da' }).then(function (f) {
+      return deadline(tw.widgets.createTweet(id, ramme, { theme: t, dnt: true, conversation: 'none', align: 'center', lang: 'da' }), 12000).then(function (f) {
         if (!f) throw new Error('tom');
-        p.classList.add('x-embed--klar');
-      });
-    }).catch(function () { p.classList.add('x-embed--fejl'); p.classList.remove('x-embed--henter'); p.removeAttribute('data-x-vist'); var b = p.querySelector('.x-embed-hent'); if (b) { b.disabled = false; b.textContent = 'Prøv igen'; } });
+        p.classList.add('x-embed--klar'); p.classList.remove('x-embed--henter');
+      }).catch(function (error) { ramme.remove(); throw error; });
+    }).catch(function () {
+      p.classList.add('x-embed--fejl'); p.classList.remove('x-embed--henter'); p.removeAttribute('data-x-vist');
+      if (!p.querySelector('.x-embed-hent')) {
+        var b = el('button', 'knap knap--rolig x-embed-hent', 'Prøv igen'); b.type = 'button';
+        b.addEventListener('click', function () { indlejr(p); }); p.appendChild(b);
+      }
+    });
   }
-   
-  var MOBIL = window.matchMedia ? window.matchMedia('(max-width: 599.98px)') : { matches: false };
   function observer(p) {
-    pladser.push(p);
-    if (false) {
-      if (p.querySelector('.x-embed-hent')) return;
-      var f = p.querySelector('.x-embed-vent');
-      var b = el('button', 'knap knap--rolig x-embed-hent', 'Vis opslaget her'); b.type = 'button';
-      b.addEventListener('click', function () { b.disabled = true; b.textContent = 'Henter opslaget …'; p.classList.add('x-embed--henter'); indlejr(p); });
-      (f || p).appendChild(b);
-      return;
-    }
+    if (pladser.indexOf(p) === -1) pladser.push(p);
     if (!('IntersectionObserver' in window)) return indlejr(p);
     var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { io.disconnect(); indlejr(p); } }); }, { rootMargin: '100px 0px' });
     io.observe(p);
@@ -127,7 +131,7 @@
       }
       pending.forEach(observer);
     }
-    kl.textContent = 'Kilde: NewDeal Invests kuraterede X-feed, ' + (live ? 'hentet fra Azure' : 'senest tilgængelige kopi – live-feedet kunne ikke hentes') + ', opdateret ' + dato(feed.updated_at, true) + '. Udvalgt af X-kontrol.';
+    kl.textContent = 'Kilde: NewDeal Invests kuraterede X-feed, ' + (live ? 'hentet fra Azure' : 'senest tilgængelige kopi – live-feedet kunne ikke hentes') + ', opdateret ' + dato(feed.updated_at, true) + '. Opslagene er udvalgt efter relevans for selskabet.';
     kl.hidden = false;
   }
   function validFeed(f) {

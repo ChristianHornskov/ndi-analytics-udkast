@@ -57,7 +57,7 @@
 
     var ny = el("div", "oms-ramme");
     var hoved = el("div", "oms-hoved");
-    hoved.appendChild(el("h4", "oms-kick", "Omsætning · " + pn.lang));
+    hoved.appendChild(el("h4", "oms-kick", "Historisk omsætning · " + pn.lang));
     var t = el("p", "oms-tal"); t.appendChild(el("b", null, stort)); t.appendChild(el("span", null, stortEnhed)); hoved.appendChild(t);
     var d = el("p", "oms-delta");
     d.appendChild(el("span", "oms-maerke oms-maerke--" + retning, (aendring > 0 ? "+" : "") + dk(aendring, 1) + " %"));
