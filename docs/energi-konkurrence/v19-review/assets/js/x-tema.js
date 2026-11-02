@@ -2,7 +2,7 @@
 
 (function () {
   'use strict';
-  var LIVE = false;
+  var FEED_URL = 'https://ndigrafdatab5174313.blob.core.windows.net/x-curated/latest.json';
   var VIS = 6;
   
 
@@ -51,8 +51,8 @@
     var p = el('div', 'x-embed'); p.setAttribute('data-x-id', id);
      
     var f = el('div', 'x-embed-vent lille');
-    var t = el('span', null, MOBIL.matches ? 'Opslaget hentes først fra X, når du trykker. ' : 'Opslaget hentes fra X. Virker det ikke, kan du ');
-    var a = el('a', 'tekstlink', MOBIL.matches ? 'Se opslaget på X' : 'åbne det på X'); a.href = url; a.target = '_blank'; a.rel = 'noopener noreferrer';
+    var t = el('span', null, 'Opslaget hentes fra X. Virker det ikke, kan du ');
+    var a = el('a', 'tekstlink', 'åbne det på X'); a.href = url; a.target = '_blank'; a.rel = 'noopener noreferrer';
     t.appendChild(a); t.appendChild(document.createTextNode('.')); f.appendChild(t); p.appendChild(f);
     return p;
   }
@@ -70,11 +70,11 @@
   }
   function el(tag, cls, tekst) { var e = document.createElement(tag); if (cls) e.className = cls; if (tekst != null) e.textContent = tekst; return e; }
   function godkendte(feed, sel) {
-    var ud = [];
+    var ud = [], set = new Set();
     sel.forEach(function (s) {
       var c = feed.companies && feed.companies[s.isin];
       if (!c || c.status !== 'ok' || !Array.isArray(c.posts)) return;
-      c.posts.forEach(function (p) { if (p && p.checked_at && /^https:\/\/x\.com\//.test(p.url || '')) ud.push({ p: p, s: s }); });
+      c.posts.forEach(function (p) { if (p && p.checked_at && /^https:\/\/x\.com\//.test(p.url || '')) { var key = String(p.post_id || p.url); if (!set.has(key)) { set.add(key); ud.push({ p: p, s: s }); } } });
     });
     return ud.sort(function (a, b) { return String(b.p.published_at).localeCompare(String(a.p.published_at)); }).slice(0, VIS);
   }
@@ -91,7 +91,8 @@
     var hits = godkendte(feed, sel).slice(0, vis);
     var egen = sek.hasAttribute('data-x-selskab');
     var st = sek.querySelector('.x-tema-status'), ul = sek.querySelector('.x-tema-liste'), kl = sek.querySelector('.x-tema-kilde');
-    if (!hits.length && egen) { sek.hidden = true; return; }
+    ul.replaceChildren(); var oldMore = ul.parentElement.querySelector('.rm-more'); if (oldMore) oldMore.remove(); st.hidden = false; st.classList.remove('x-tema-status--fejl');
+    if (!hits.length) { sek.hidden = true; return; }
     if (!hits.length) { st.textContent = 'Der er ingen godkendte X-opslag om selskaberne i temaet lige nu.'; }
     else {
       st.hidden = true; sek.hidden = false; var pending = [];
@@ -124,16 +125,49 @@
       }
       pending.forEach(observer);
     }
-    kl.textContent = 'Kilde: NewDeal Invests kuraterede X-feed, ' + (live ? 'hentet nu' : 'øjebliksbillede') + ', opdateret ' + dato(feed.updated_at, true) + '. Udvalgt af X-kontrol.';
+    kl.textContent = 'Kilde: NewDeal Invests kuraterede X-feed, ' + (live ? 'hentet fra Azure' : 'senest tilgængelige kopi – live-feedet kunne ikke hentes') + ', opdateret ' + dato(feed.updated_at, true) + '. Udvalgt af X-kontrol.';
     kl.hidden = false;
   }
+  function validFeed(f) {
+    return !!(f && f.kind === 'ndi.x.curated' && f.companies && typeof f.companies === 'object' && !Array.isArray(f.companies) && !isNaN(Date.parse(f.updated_at)));
+  }
+  async function hentFeed() {
+    var controller = new AbortController(), timer = setTimeout(function () { controller.abort(); }, 12000);
+    try {
+      var response = await fetch(FEED_URL, { cache: 'no-store', signal: controller.signal });
+      if (!response.ok) throw new Error('HTTP ' + response.status);
+      var feed = await response.json();
+      if (!validFeed(feed)) throw new Error('Ugyldigt X-feed');
+      return { feed: feed, live: true };
+    } finally { clearTimeout(timer); }
+  }
+  window.NDI_X_FEED = { hent: hentFeed, gyldig: validFeed };
   function start() {
-     
     document.querySelectorAll('.x-embed[data-x-id]').forEach(observer);
     var sek = document.querySelectorAll('[data-x-tema]'); if (!sek.length) return;
-    var hent = (window.NDI_X_SNAPSHOT ? Promise.resolve(window.NDI_X_SNAPSHOT) : Promise.reject(new Error('intet øjebliksbillede')));
-    hent.then(function (f) { sek.forEach(function (s) { vis(s, f, LIVE); }); })
-        .catch(function () { sek.forEach(fejl); });
+    var busy = false, current = null, signature = '';
+    async function update() {
+      if (busy) return; busy = true;
+      try {
+        var result;
+        try { result = await hentFeed(); }
+        catch (e) {
+          var reserve = current || window.NDI_X_SNAPSHOT;
+          if (!validFeed(reserve)) throw e;
+          result = { feed: reserve, live: false };
+        }
+        var next = JSON.stringify(result);
+        if (next !== signature) {
+          sek.forEach(function (s) { vis(s, result.feed, result.live); });
+          signature = next; current = result.feed;
+          pladser = pladser.filter(function (p) { return p.isConnected; });
+        }
+      } catch (e) { sek.forEach(fejl); }
+      finally { busy = false; }
+    }
+    update();
+    setInterval(function () { if (!document.hidden) update(); }, 300000);
+    document.addEventListener('visibilitychange', function () { if (!document.hidden) update(); });
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
 })();
