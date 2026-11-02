@@ -75,3 +75,18 @@
 /* Company marks retain their own colours in both site themes. */
 html body .sm-logo.sm-logo--billede,html body .review-company-logo,html body .phase-logo{background:#fff!important;flex-shrink:0;overflow:hidden}
 html body .sm-logo.sm-logo--billede img,html body .sidehoved-ikon--billede img,html body .phase-logo img{object-fit:contain;display:block}
+
+/* Plain provenance captions, kept subordinate to the reading flow. */
+html body .ndi-disclosure,html body .ndi-figure-note{font-family:inherit;font-size:13px;font-weight:400;line-height:1.6;color:#adc0c8;background:none;border:0;box-shadow:none;border-radius:0;margin:14px 0 20px;padding:0;max-width:78ch}
+html[data-tema="lys"] body .ndi-disclosure,html[data-tema="lys"] body .ndi-figure-note{color:#52636c}
+html body .ndi-disclosure p,html body .ndi-disclosure a,html body .ndi-disclosure summary{font:inherit;color:inherit}
+html body .ndi-disclosure p{margin:0 0 6px}
+html body .ndi-disclosure details,html body .ndi-disclosure summary{background:none;border:0;box-shadow:none;border-radius:0;padding:0}
+html body .ndi-disclosure summary{display:list-item;cursor:pointer;min-height:28px;width:fit-content}
+html body .ndi-disclosure summary span,html body .ndi-disclosure a{text-decoration:underline;text-underline-offset:3px}
+html body .ndi-disclosure details[open]>p{margin-top:10px}
+html body .ndi-portfolio-scope{font:inherit;line-height:1.6}
+html body .zc-track>.ndi-figure-note{position:relative;margin:12px 28px 0;max-width:none}
+@media(max-width:600px){html body .zc-track>.ndi-figure-note{margin:10px 16px 0}html body .ndi-disclosure summary{min-height:36px}}
+
+html body .ndi-disclosure summary::after{content:none!important}
