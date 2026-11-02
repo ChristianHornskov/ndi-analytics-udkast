@@ -104,12 +104,12 @@
     }
     if(methodHost&&!document.getElementById('analysis-data-path')){
       const path=document.createElement('div');path.id='analysis-data-path';
-      path.innerHTML='<p class="analysis-explain">Fra rapport til figur: afkast og beholdninger har hver sin dato. Derfor viser vi begge datoer, så du kan se, hvilket grundlag du undersøger.</p><ol class="analysis-data-path"><li><span>01</span><strong>Fundmarket</strong><p>Rapporter med fondens kurser og beholdninger.</p></li><li><span>02</span><strong>Fælles datagrundlag</strong><p>Kurser, positioner og dokumenterede udlodninger.</p></li><li><span>03</span><strong>Kontrol</strong><p>Datoer og afkast afstemmes med de angivne kilder.</p></li><li><span>04</span><strong>Denne visning</strong><p>Et fast reviewudtræk. Siden henter ikke nye rapporter automatisk.</p></li></ol>';
+      path.innerHTML='<p class="analysis-explain">Fra rapport til figur: afkast og beholdninger har hver sin dato. Derfor viser vi begge datoer, så du kan se, hvilket grundlag du undersøger.</p><ol class="analysis-data-path"><li><span>01</span><strong>Fundmarket</strong><p>Rapporter med fondens kurser og beholdninger.</p></li><li><span>02</span><strong>Fælles datagrundlag</strong><p>Kurser, positioner og dokumenterede udlodninger.</p></li><li><span>03</span><strong>Kontrol</strong><p>Datoer og afkast afstemmes med de angivne kilder.</p></li><li><span>04</span><strong>Denne visning</strong><p>Et dateret datagrundlag. Kursdato og beholdningsdato viser, hvilken periode tallene dækker.</p></li></ol>';
       methodHost.prepend(path);
     }
     const da=day=>day.split('-').reverse().join('.');
     document.getElementById('analysis-date').textContent='PMINDI · Afkast til '+da(data.funds[0].performanceAsOf)+' · Beholdning pr. '+da(data.positionsAsOf||data.asOf);
-    document.querySelectorAll('#method p').forEach(p=>{if(p.textContent.startsWith('Data kommer fra Fundmarkets rapporter via'))p.textContent='Denne testversion bruger et fast udtræk af Fundmarkets rapporter og de kontrollerede datafiler. Afkast følger den officielle kursdato; beholdninger følger rapportdatoen. Siden opdaterer ikke sig selv til en ny dataversion.';});
+    document.querySelectorAll('#method p').forEach(p=>{if(p.textContent.startsWith('Data kommer fra Fundmarkets rapporter via'))p.textContent='Fondstal og aktiekurser læses fra denne versions daterede datafiler. De er ikke realtidskurser. Afkast følger kursdatoen, mens beholdninger følger beholdningsdatoen. Nye tal kræver, at datafilerne opdateres. X-opslag hentes særskilt fra det aktuelle Azure-feed.';});
     let cursor=menu;
     for(const id of ['analysis-dashboard','preview-risk-summary','highs','portfolio','risk','analysis-distributions','method']){
       const section=document.getElementById(id);
