@@ -71,3 +71,7 @@
 /* Keep unselected technology categories legible while a detail panel is open. */
 :root[data-tema="lys"] .cq-fa[data-sel] .fa-tm__g:not(.cq-fa--on){opacity:1}
 :root[data-tema="lys"] .cq-fa .fa-tm__g.cq-fa--on .fa-tm__gb{outline:2px solid #436b72;outline-offset:-3px}
+
+/* Company marks retain their own colours in both site themes. */
+html body .sm-logo.sm-logo--billede,html body .review-company-logo,html body .phase-logo{background:#fff!important;flex-shrink:0;overflow:hidden}
+html body .sm-logo.sm-logo--billede img,html body .sidehoved-ikon--billede img,html body .phase-logo img{object-fit:contain;display:block}

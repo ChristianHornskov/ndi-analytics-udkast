@@ -1,7 +1,7 @@
 /* Punkt 16: ens logofelt. Logoer på en lys plade med samme luft, og initialer på
    en plade i temaets farve, når logoet mangler. */
 html body .sidehoved-ikon--logo.sidehoved-ikon--billede,
-html body .alle-logo.sm-logo--billede{background:#f4f7f8!important;border:0!important;box-shadow:inset 0 0 0 1px rgba(0,0,0,.06);border-radius:14px}
+html body .alle-logo.sm-logo--billede{background:#fff!important;border:0!important;box-shadow:inset 0 0 0 1px rgba(0,0,0,.06);border-radius:14px}
 html body .sidehoved-ikon--logo.sidehoved-ikon--billede{padding:9px!important}
 html body .alle-logo.sm-logo--billede{padding:3px;border-radius:8px}
 html body .sidehoved-ikon--logo.sidehoved-ikon--billede img{width:100%;height:100%;object-fit:contain}
