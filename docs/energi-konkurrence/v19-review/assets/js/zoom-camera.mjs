@@ -48,7 +48,7 @@ export const LAYER_EXPLANATIONS={
   'Både chipfabrikken og datacentret skal have elektricitet. Kraftværker og andre produktionsanlæg leverer energien, mens elnettet får den frem til maskinerne.',
   'Her slutter zoomturen. Fortsæt til forklaringen om strøm: se forskellen på anlæg i drift, nye kraftværker og reaktorer under udvikling, og hvem der arbejder med hvad.']
 };
-const COMPANY_ROLES={
+export const COMPANY_ROLES={
  'ai-use':{'US4576422053':'Forbereder data, der bruges til at træne AI-modeller.','US8361001071':'Leverer stemmestyring og samtaler med AI.'},
  'gpu-cloud':{'US17253J1060':'Arbejder med datacentre til AI og udvinding af bitcoin.','US21874A1060':'Driver datacentre for AI-kunder og udvinder bitcoin.','US21873S1087':'Udlejer regnekraft fra AI-servere.','NL0009805522':'Driver AI-servere og softwaren til dem.','AU0000185993':'Ejer datacentre og udlejer regnekraft.','US0381692070':'Bygger og udlejer datacenterbygninger.','US84615Q1031':'Udlejer regnekraft gennem sit AI-segment.'},
  'scale-up':{'KYG254571055':'Leverer kabler og chips, der flytter data mellem maskiner.','US67066G1040':'Forbinder AI-chips, så de hurtigt kan udveksle data og dele beregningsarbejdet.','US04626A1034':'Leverer chips, der holder forbindelserne hurtige og stabile.'},
@@ -111,7 +111,7 @@ export function cameraFrame(f,portal,box){
 function cardHtml(l,last,first,fund=0){
  const [title,body,bridge]=LAYER_EXPLANATIONS[l.id],link=zoomArticleLink(l.id,fund);
  const people=l.count?`<div class="zc-people"><h4>Eksempler fra fonden</h4><span class="zc-count">${l.count} ${l.count===1?'selskab':'selskaber'} arbejder med denne del</span><span class="zc-avatars zc-names">${l.companies.slice(0,3).map(c=>`<button type="button" class="zc-avatar zc-name" data-exp-company="${esc(c.isin)}"><span class="zc-company-copy"><strong>${esc(c.name)}</strong>${c.description?`<small>${esc(c.description)}</small>`:''}</span><span class="zc-company-arrow" aria-hidden="true">→</span></button>`).join('')}</span></div>`:'';
- return `<article class="zc-card" aria-labelledby="zc-card-${l.id}"><span class="zc-card-kicker">Lag ${pad(l.index)} · ${esc(l.label)}</span><h3 id="zc-card-${l.id}">${esc(title)}</h3><div class="zc-explanation"><p>${esc(body)}</p><p class="zc-bridge">${esc(bridge)}</p></div>${people}<div class="zc-actions"><a class="zc-article-link" href="${esc(link.href)}">${esc(link.label)} <span aria-hidden="true">→</span></a>${last?'':''}</div></article>`;
+ return `<article class="zc-card" data-company-layer="${l.id}" aria-labelledby="zc-card-${l.id}"><span class="zc-card-kicker">Lag ${pad(l.index)} · ${esc(l.label)}</span><h3 id="zc-card-${l.id}">${esc(title)}</h3><div class="zc-explanation"><p>${esc(body)}</p><p class="zc-bridge">${esc(bridge)}</p></div>${people}<div class="zc-actions"><a class="zc-article-link" href="${esc(link.href)}">${esc(link.label)} <span aria-hidden="true">→</span></a>${last?'':''}</div></article>`;
 }
 
 export function zoomCameraHtml(model,{profiles={},fund=0}={}){

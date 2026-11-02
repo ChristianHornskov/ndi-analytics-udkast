@@ -1,0 +1,11 @@
+#ai-rejsen .zc-reader .zc-card{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(260px,1fr);column-gap:32px;align-items:start}
+#ai-rejsen .zc-reader .zc-card> :not(.journey-company){grid-column:1}
+#ai-rejsen .journey-company{grid-column:2;grid-row:1/6;align-self:stretch;padding:24px;border:1px solid var(--zc-line);border-radius:16px;background:var(--zc-bg);min-width:0}
+#ai-rejsen .journey-company .phase-company{display:flex;align-items:center;gap:14px;margin:18px 0;text-decoration:none;color:inherit}
+#ai-rejsen .journey-company .phase-logo{display:grid;place-items:center;width:56px;height:56px;flex-shrink:0}
+#ai-rejsen .journey-company img{width:48px;height:48px;object-fit:contain}
+#ai-rejsen .journey-company .phase-identity{display:grid;gap:5px}
+#ai-rejsen .journey-company .phase-identity strong{font-size:22px}
+#ai-rejsen .journey-company .phase-company-arrow{margin-left:auto}
+#ai-rejsen .journey-company-basis{display:block;margin-top:18px;font-size:12px;line-height:1.5;opacity:.8}
+@media(max-width:800px){#ai-rejsen .zc-reader .zc-card{display:block}#ai-rejsen .journey-company{margin-top:22px;padding:20px}}

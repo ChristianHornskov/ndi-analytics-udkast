@@ -1,4 +1,4 @@
-import {zoomCameraHtml,bindZoomCamera} from './zoom-camera.mjs';
+import {zoomCameraHtml,bindZoomCamera} from './zoom-camera.mjs?v=20261102-company';
 const host=document.querySelector('#ai-rejsen');
 if(host){
   host.innerHTML='<h2>Hvad sker der, når du spørger AI?</h2><p class="review-lead">Tryk på ringen i billedet og følg dit spørgsmål fra telefonen til teknologien bag svaret. Du kan også bruge + og − eller vælge et led direkte.</p>'+zoomCameraHtml();
@@ -6,3 +6,6 @@ if(host){
   host.querySelector('.zc-start-cue').textContent='Tryk på ringen og kig indenfor';
   bindZoomCamera(host);
 }
+
+import {bindJourneyCompanies} from './journey-companies.mjs?v=20261102';
+if(host)bindJourneyCompanies(host);
