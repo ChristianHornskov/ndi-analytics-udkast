@@ -8,7 +8,7 @@
  const rows=s.files['highs.json'].funds.find(f=>f.short==='PMINDI')?.rows||[];
  const r=rows.find(r=>r.isin===isin);
  const host=document.getElementById('aktien')||document.getElementById('kurs');if(!host)return;
- if(host.id==='kurs')host.replaceChildren();
+ if(host.id==='kurs'){host.replaceChildren();host.hidden=false;}
  const box=document.createElement('section');box.className='ndi-market';box.id='aktiekurs';
  const h=document.createElement('h2');h.textContent='Aktiens kursudvikling';box.append(h);
  host.append(box);

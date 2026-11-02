@@ -42,7 +42,7 @@
    
   function andelSerier() {
     var h = window.NDI_TAL && window.NDI_TAL.spacex && window.NDI_TAL.spacex.historik;
-    if (!h) return null;
+    if (!h || h.length < 2) return null;
     return [
        
       { id: "andel", navn: "Andel af fonden", farve: "var(--c-accent)", punkter: h.map(function (p) { return [p.dato, p.andel]; }) }

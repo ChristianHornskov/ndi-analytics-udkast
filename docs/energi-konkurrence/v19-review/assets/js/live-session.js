@@ -51,6 +51,12 @@
     const positions=fund.positions.filter(p=>/^[A-Z]{2}[A-Z0-9]{10}$/.test(p.isin||'')&&Number.isFinite(p.weight)&&p.weight>0);
     const bySlug={};positions.forEach(p=>{const m=s.identities[p.isin];if(m)bySlug[m.slug]=p});s.bySlug=bySlug;s.fund=fund;
     const date=s.files['data.json'].positionsAsOf||s.pointer.asOf,day=date.split('-').reverse().join('.');
+    if(d.spacex){
+      // The validated release has current holdings, but no holdings-history file.
+      // Do not present the bundled historical snapshot as a live series.
+      d.spacex.historik=[];d.spacex.antalMaalinger=0;d.spacex.antalMaaneder=0;
+      d.spacex.fraDatoTekst=null;d.spacex.spring={fraDato:null,fra:null,til:null,retning:null};
+    }
     if(window.NDI_DATA)window.NDI_DATA.fondsudvikling=fundView(s,fund);
     document.querySelectorAll('.up-data-date').forEach(e=>e.textContent='Afkast til '+fund.performanceAsOf.split('-').reverse().join('.')+' · Beholdning pr. '+day);
     d.andelsdato=date;d.andelsdatoTekst=day;d.beregnet=s.pointer.checkedAt;d.beregnetTekst=s.pointer.asOf.split('-').reverse().join('.');
@@ -79,7 +85,7 @@
     const e=document.createElement('script'),src=node.dataset.ndiSrc;
     let timer,eventName;
     const done=()=>{clearTimeout(timer);if(eventName)document.removeEventListener(eventName,done);resolve()};
-    const fail=()=>{clearTimeout(timer);if(eventName)document.removeEventListener(eventName,done);reject(Error('Siden kunne ikke indl�ses'))};
+    const fail=()=>{clearTimeout(timer);if(eventName)document.removeEventListener(eventName,done);reject(Error('Siden kunne ikke indlæses'))};
     if(node.dataset.ndiType)e.type=node.dataset.ndiType;
     if(src){e.src=src;e.onload=done;e.onerror=fail;timer=setTimeout(fail,20000)}
     else {e.textContent=node.textContent;if(e.type==='module'){
@@ -93,7 +99,7 @@
     try{
       const session=await ready;
       const metadata=node=>/(^|\/)data\//.test(node.dataset.ndiSrc||'')||(node.dataset.ndiSrc||'').includes('/valg.js');
-      const skip=node=>/market-supplement\.js|data\/review-funds\.js/.test(node.dataset.ndiSrc||'');
+      const skip=node=>/market-supplement\.js|data\/review-funds\.js|data\/kurs\/|assets\/js\/kursgraf\.js/.test(node.dataset.ndiSrc||'');
       // Inline diagrams can precede data tags in the document. Load all editorial
       // metadata first and replace its numeric snapshots before any renderer runs.
       for(const node of queue.filter(metadata))if(!skip(node))await script(node);

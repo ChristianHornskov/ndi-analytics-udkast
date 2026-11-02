@@ -9,6 +9,11 @@
  const weight=slug=>d.selskaber[slug]?.andel||0;
  const theme=location.pathname.split('/').pop().replace('.html','');
  const current=d.temaer.find(t=>t.id===theme);
+ const history=document.getElementById('andel-historie');
+ if(history&&!(d.spacex?.historik?.length>1)){
+  history.querySelectorAll('#graf-andel,.tabel-fold,.kildelinje').forEach(e=>e.hidden=true);
+  put(history,'#historik p','Den aktuelle andel vises ovenfor. Historiske beholdningsdata er endnu ikke tilgængelige i det fælles datagrundlag.');
+ }
  for(const prefix of ['ft','kr','fa','su']){
   const groups=[];
   document.querySelectorAll('.cq-'+prefix+'__co[data-slug]').forEach(b=>{
