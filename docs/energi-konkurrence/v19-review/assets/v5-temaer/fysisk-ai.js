@@ -71,8 +71,8 @@ function squarify(vals,x,y,w,h){var out=[],tot=vals.reduce(function(a,b){return 
  return out}
 function pc(v){return(Math.max(0,v)).toFixed(3)+'%'}
 function data(){
- return G.map(function(g){var cs=[].slice.call(g.querySelectorAll('.fa-tm__c')).map(function(c){var a=andel(c.dataset.slug);if(a==null)a=parseFloat((c.querySelector('.fa-tm__cp').textContent||'0').replace(',','.'))||0;return{el:c,a:a}});
-  cs.sort(function(a,b){return b.a-a.a});return{g:g,cs:cs,a:cs.reduce(function(t,c){return t+c.a},0)}}).sort(function(a,b){return b.a-a.a});
+ return G.map(function(g){var cs=[].slice.call(g.querySelectorAll('.fa-tm__c')).map(function(c){var a=andel(c.dataset.slug);if(a==null)a=0;c.hidden=a<=0;return{el:c,a:a}}).filter(function(c){return c.a>0});
+  cs.sort(function(a,b){return b.a-a.a});return{g:g,cs:cs,a:cs.reduce(function(t,c){return t+c.a},0)}}).filter(function(d){d.g.hidden=d.a<=0;return d.a>0}).sort(function(a,b){return b.a-a.a});
 }
 function layout(){
  var W=flade.clientWidth;if(!W)return;var smal=W<SMAL;T.classList.toggle('fa-tm--smal',smal);
@@ -80,7 +80,7 @@ function layout(){
  var dd=data();
  squarify(dd.map(function(d){return d.a}),0,0,W,H).forEach(function(r,i){var d=dd[i],g=d.g;
   g.style.left=pc(r[0]/W*100);g.style.top=pc(r[1]/H*100);g.style.width=pc(r[2]/W*100);g.style.height=pc(r[3]/H*100);g.style.order=i;
-  var gp=g.querySelector('.fa-tm__gp');if(gp)gp.textContent=dk(d.a);
+  var ga=g.querySelector('.fa-tm__ga');if(ga)ga.textContent=d.cs.length+' selskaber';var gp=g.querySelector('.fa-tm__gp');if(gp)gp.textContent=dk(d.a);
   var gb=g.querySelector('.fa-tm__gb'),n=d.cs.length;if(gb)gb.setAttribute('aria-label',g.querySelector('.fa-tm__gn').textContent+', '+dk(d.a).replace(' ',' ')+' af fonden, '+n+' selskaber. Vis selskaberne.');
   g.classList.toggle('fa-tm__g--lille',r[2]<230||r[3]<150);
   var csH=r[3]-HOVED,cs=g.querySelector('.fa-tm__cs'),tjek=[];

@@ -102,3 +102,12 @@ html body .ndi-menu-note a{font:inherit;color:inherit;text-decoration:underline;
 
 /* Related X selections share one place without changing their authorship. */
 .ndi-x-samlet > .ndi-x-underafsnit{margin-top:1.5rem;padding-top:1rem;border-top:0}.ndi-x-underafsnit > h2,.ndi-x-underafsnit > .xs-kicker{display:none}.ndi-x-samlet .rm-social-grid{margin-top:1.5rem}
+
+.ndi-market{margin-top:2rem;padding-top:2rem;border-top:1px solid var(--border,#56666c)}
+.ndi-market-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1rem;margin:1.5rem 0}
+.ndi-market-metric{padding:1rem;border:1px solid #80929c55;border-radius:12px;display:flex;flex-direction:column;gap:.5rem}
+.ndi-market-metric strong{font-size:1.7rem}.ndi-market-metric small{opacity:.8}
+.ndi-market-chart{display:flex;gap:1rem;overflow-x:auto;border-bottom:1px solid #80929c66;margin:1.5rem 0;padding:0 .5rem}
+.ndi-market-point{flex:1;min-width:90px;height:210px;position:relative;text-align:center;font-size:.85rem}
+.ndi-market-point strong{display:block}.ndi-market-dot{display:block;color:var(--accent,#77b2b8);font-size:1.5rem;margin-top:calc(15px + (1 - var(--level))*115px)}
+.ndi-market-point small{position:absolute;bottom:.7rem;left:0;right:0}

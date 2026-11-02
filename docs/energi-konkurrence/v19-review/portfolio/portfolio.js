@@ -109,7 +109,7 @@
     }
     const da=day=>day.split('-').reverse().join('.');
     document.getElementById('analysis-date').textContent='PMINDI · Afkast til '+da(data.funds[0].performanceAsOf)+' · Beholdning pr. '+da(data.positionsAsOf||data.asOf);
-    document.querySelectorAll('#method p').forEach(p=>{if(p.textContent.startsWith('Data kommer fra Fundmarkets rapporter via'))p.textContent='Fondstal og aktiekurser læses fra denne versions daterede datafiler. De er ikke realtidskurser. Afkast følger kursdatoen, mens beholdninger følger beholdningsdatoen. Nye tal kræver, at datafilerne opdateres. X-opslag hentes særskilt fra det aktuelle Azure-feed.';});
+    document.querySelectorAll('#method p').forEach(p=>{if(p.textContent.startsWith('Data kommer fra Fundmarkets rapporter via'))p.textContent='Fondstal og aktiekurser hentes fra den seneste validerede dataudgave i Azure. Alle sider bruger samme udgave. Afkast følger kursdatoen, mens beholdninger følger beholdningsdatoen; det er ikke realtidskurser. En åben side kontrollerer hvert femte minut, om der er en ny dataudgave. X-opslag hentes særskilt fra det aktuelle Azure-feed.';});
     let cursor=menu;
     for(const id of ['analysis-dashboard','preview-risk-summary','highs','portfolio','risk','analysis-distributions','method']){
       const section=document.getElementById(id);

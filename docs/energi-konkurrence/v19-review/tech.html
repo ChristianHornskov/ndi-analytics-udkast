@@ -38,7 +38,7 @@
 <script>try{document.fonts.load("500 16px Manrope");document.fonts.load("400 16px 'DM Sans'")}catch(e){}</script>
 
 <link rel="stylesheet" href="assets/css/review.css?v=20261102-sidebar-ai"><link rel="stylesheet" href="assets/css/zoom-camera.css"><link rel="stylesheet" href="assets/css/journey-polish.css?v=20261031d"><link rel="stylesheet" href="assets/css/faser-graf.css?v=20261031-integrated"><link rel="stylesheet" href="assets/claude/33-sidemenu.css?v=cr33" data-claude-punkt="33">
-<link rel="stylesheet" href="assets/css/journey-companies.css?v=20261102-carousel"></head>
+<link rel="stylesheet" href="assets/css/journey-companies.css?v=20261102-carousel"><style>.ndi-live-loading main{visibility:hidden}.ndi-live-failed main>:not(.ndi-live-error){display:none!important}.ndi-live-error{padding:2rem;border:1px solid currentColor;border-radius:12px}.ndi-live-loading #app{visibility:hidden}</style><script src="assets/js/live-session.js?v=20261102"></script></head>
 
 <body class="review-tech">
 <svg class="sprite" aria-hidden="true" focusable="false">
@@ -201,7 +201,7 @@
 <a class="ndi-tile" data-map-visning="raastoffer" href="temaer/raastoffer.html"><img alt="Kobbermalm, silicium og lithiummineral på en mørk sten" height="990" width="660" loading="lazy" decoding="async" src="assets/img/v5-fotos/raastoffer-malm-og-silicium.webp"><div><h3>Råstoffer</h3><p>Hvor i vejen fra råstof til materiale arbejder selskabet?</p><small><span data-tal="temaer#raastoffer.andel" data-fmt="pct">…   %</span> af fonden · Udforsk temaet →</small></div></a>
 </div>
 </section>
-<section id="forbindelser" class="v18-atlas" aria-labelledby="h-forbindelser"><link rel="stylesheet" href="assets/v5-atlas/atlas-canvas.css"><h2 id="h-forbindelser">Se forbindelserne i porteføljen</h2><p class="connections-intro">Teknologi står sjældent alene. AI kræver chips, datacentre og strøm, og de samme selskaber kan bidrage flere steder. Prikkerne viser fondens selskaber, samlet i temaer. Peg på et tema for at fremhæve det, og klik for at gå på opdagelse.</p><div id="living-map"></div><p class="ndi-figure-note">Forenklet kort over porteføljens teknologier. Forbindelserne viser ikke i sig selv dokumenterede kunde- eller leverandørforhold.</p><script type="module">import {createLivingAtlas} from "./assets/v5-atlas/atlas-living.mjs?v=cr15";import model from "./assets/v5-atlas/atlas-model.mjs";const sti={"chips": "temaer/chips.html", "energi": "temaer/energi.html", "datacenter": "temaer/datacenter.html", "platforme": "temaer/platforme.html", "fysisk-ai": "temaer/fysisk-ai.html", "raastoffer": "temaer/raastoffer.html", "space": "temaer/rumfart.html", "fintech": "temaer/fintech.html", "krypto": "temaer/krypto.html", "software": "temaer/software.html", "sundhed": "temaer/sundhed.html", "kvante": "temaer/kvante.html"};const atlas=createLivingAtlas(document.querySelector("#living-map"),{model,simpleConnections:true,introOnly:true,onLine:id=>{if(sti[id])location.href=sti[id]},reducedMotion:matchMedia("(prefers-reduced-motion: reduce)").matches});document.querySelectorAll('[data-map-visning]').forEach(a=>{a.addEventListener('pointerenter',()=>atlas.setSelection(a.dataset.mapVisning));a.addEventListener('pointerleave',()=>atlas.setSelection(null));a.addEventListener('focus',()=>atlas.setSelection(a.dataset.mapVisning));a.addEventListener('blur',()=>atlas.setSelection(null))});</script></section>
+<section id="forbindelser" class="v18-atlas" aria-labelledby="h-forbindelser"><link rel="stylesheet" href="assets/v5-atlas/atlas-canvas.css"><h2 id="h-forbindelser">Se forbindelserne i porteføljen</h2><p class="connections-intro">Teknologi står sjældent alene. AI kræver chips, datacentre og strøm, og de samme selskaber kan bidrage flere steder. Prikkerne viser fondens selskaber, samlet i temaer. Peg på et tema for at fremhæve det, og klik for at gå på opdagelse.</p><div id="living-map"></div><p class="ndi-figure-note">Forenklet kort over porteføljens teknologier. Forbindelserne viser ikke i sig selv dokumenterede kunde- eller leverandørforhold.</p><script type="application/ndi-script" data-ndi-type="module">import {createLivingAtlas} from "./assets/v5-atlas/atlas-living.mjs?v=cr15";import model from "./assets/v5-atlas/atlas-model.mjs";const sti={"chips": "temaer/chips.html", "energi": "temaer/energi.html", "datacenter": "temaer/datacenter.html", "platforme": "temaer/platforme.html", "fysisk-ai": "temaer/fysisk-ai.html", "raastoffer": "temaer/raastoffer.html", "space": "temaer/rumfart.html", "fintech": "temaer/fintech.html", "krypto": "temaer/krypto.html", "software": "temaer/software.html", "sundhed": "temaer/sundhed.html", "kvante": "temaer/kvante.html"};const active=new Set(window.NDI_LIVE.fund.positions.filter(p=>p.weight>0).map(p=>p.isin));model.lines.forEach(l=>{l.stations.forEach(s=>{s.companies=s.companies.filter(c=>active.has(c.isin));s.count=s.companies.length});l.transfers=l.transfers.filter(c=>active.has(c.isin));l.count=l.stations.reduce((n,s)=>n+s.count,0)});model.companies=window.DAGENS_TAL.fond.antalSelskaber;const atlas=createLivingAtlas(document.querySelector("#living-map"),{model,simpleConnections:true,introOnly:true,onLine:id=>{if(sti[id])location.href=sti[id]},reducedMotion:matchMedia("(prefers-reduced-motion: reduce)").matches});document.querySelectorAll('[data-map-visning]').forEach(a=>{a.addEventListener('pointerenter',()=>atlas.setSelection(a.dataset.mapVisning));a.addEventListener('pointerleave',()=>atlas.setSelection(null));a.addEventListener('focus',()=>atlas.setSelection(a.dataset.mapVisning));a.addEventListener('blur',()=>atlas.setSelection(null))});</script></section>
 <section id="ai-rejsen" class="review-journey"></section><section id="virksomhedsfaser" class="v18-faser" aria-labelledby="h-faser">
 <h2 id="h-faser">Hvornår bliver teknologien til en forretning?</h2>
 <p class="v18-ingress">Den samme teknologi kan være et lovende forsøg i ét selskab og en stor forretning i et andet. Vælg en fase og se, hvad du skal forstå om kunderne, økonomien og næste skridt.</p>
@@ -227,32 +227,32 @@
 
 <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 
-<script src="data/dagens-tal.js"></script>
+<script type="application/ndi-script" data-ndi-src="data/dagens-tal.js"></script>
 
-<script src="data/sider.js"></script>
+<script type="application/ndi-script" data-ndi-src="data/sider.js"></script>
 
-<script src="assets/js/valg.js"></script>
+<script type="application/ndi-script" data-ndi-src="assets/js/valg.js"></script>
 
-<script src="data/fondsudvikling.js"></script>
+<script type="application/ndi-script" data-ndi-src="data/fondsudvikling.js"></script>
 
-<script src="data/portefolje.js"></script>
+<script type="application/ndi-script" data-ndi-src="data/portefolje.js"></script>
 
-<script src="data/vaerdikaede-tekster.js"></script>
+<script type="application/ndi-script" data-ndi-src="data/vaerdikaede-tekster.js"></script>
 
-<script src="assets/js/datalag.js"></script>
+<script type="application/ndi-script" data-ndi-src="assets/js/datalag.js"></script>
 
-<script src="assets/js/tema.js"></script>
+<script type="application/ndi-script" data-ndi-src="assets/js/tema.js"></script>
 
-<script src="assets/js/grafik.js"></script>
+<script type="application/ndi-script" data-ndi-src="assets/js/grafik.js"></script>
 
-<script src="assets/js/app.js"></script>
+<script type="application/ndi-script" data-ndi-src="assets/js/app.js"></script>
 
-<script src="assets/js/v18-afkast.js"></script>
+<script type="application/ndi-script" data-ndi-src="assets/js/v18-afkast.js"></script>
 
-<script src="assets/js/v18-portefolje.js"></script>
+<script type="application/ndi-script" data-ndi-src="assets/js/v18-portefolje.js"></script>
 
-<script src="assets/js/v5-faser.js?v=20261031-integrated"></script>
+<script type="application/ndi-script" data-ndi-src="assets/js/v5-faser.js?v=20261031-integrated"></script>
 
-<script type="module" src="assets/js/review-journey.js?v=20261102-disclosure"></script><script defer src="assets/js/journey-polish.js?v=20261031c"></script></body>
+<script type="application/ndi-script" data-ndi-type="module" data-ndi-src="assets/js/review-journey.js?v=20261102-disclosure"></script><script type="application/ndi-script" defer data-ndi-src="assets/js/journey-polish.js?v=20261031c"></script></body>
 
 </html>
