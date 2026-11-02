@@ -99,3 +99,6 @@ html body .ndi-menu-note .ndi-menu-note-title{font-weight:600;color:var(--c-text
 html body .ndi-menu-note a{font:inherit;color:inherit;text-decoration:underline;text-underline-offset:3px;display:inline-block;padding:4px 0}
 #om-indholdet{scroll-margin-top:85px}
 
+
+/* Related X selections share one place without changing their authorship. */
+.ndi-x-samlet > .ndi-x-underafsnit{margin-top:1.5rem;padding-top:1rem;border-top:0}.ndi-x-underafsnit > h2,.ndi-x-underafsnit > .xs-kicker{display:none}.ndi-x-samlet .rm-social-grid{margin-top:1.5rem}

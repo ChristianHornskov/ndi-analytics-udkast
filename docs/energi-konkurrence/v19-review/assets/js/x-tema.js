@@ -71,6 +71,7 @@
   function el(tag, cls, tekst) { var e = document.createElement(tag); if (cls) e.className = cls; if (tekst != null) e.textContent = tekst; return e; }
   function godkendte(feed, sel) {
     var ud = [], set = new Set();
+    if (document.querySelector('.ndi-x-samlet')) document.querySelectorAll('.ndi-x-samlet a[href*="/status/"]').forEach(function (a) { if (!a.closest('[data-x-tema]')) { var m = a.href.match(/status\/(\d+)/); if (m) set.add(m[1]); } });
     sel.forEach(function (s) {
       var c = feed.companies && feed.companies[s.isin];
       if (!c || c.status !== 'ok' || !Array.isArray(c.posts)) return;
