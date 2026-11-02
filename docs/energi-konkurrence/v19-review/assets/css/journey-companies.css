@@ -9,3 +9,12 @@
 #ai-rejsen .journey-company .phase-company-arrow{margin-left:auto}
 #ai-rejsen .journey-company-basis{display:block;margin-top:18px;font-size:12px;line-height:1.5;opacity:.8}
 @media(max-width:800px){#ai-rejsen .zc-reader .zc-card{display:block}#ai-rejsen .journey-company{margin-top:22px;padding:20px}}
+#ai-rejsen .journey-company-top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+#ai-rejsen .journey-company-controls{display:flex;align-items:center;gap:8px}
+#ai-rejsen .journey-company-controls button{display:grid;place-items:center;width:44px;height:44px;padding:0;border:1px solid var(--zc-line);border-radius:50%;background:transparent;color:inherit;font:inherit;font-size:24px;cursor:pointer}
+#ai-rejsen .journey-company-controls button:hover{background:color-mix(in srgb,currentColor 10%,transparent)}
+#ai-rejsen .journey-company-controls button:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+#ai-rejsen .journey-company-controls span{font-size:13px;min-width:42px;text-align:center;font-variant-numeric:tabular-nums}
+#ai-rejsen .journey-company .phase-company{min-height:78px}
+#ai-rejsen .journey-company>p{min-height:5.5em}
+#ai-rejsen .journey-company .phase-identity{min-width:0;overflow-wrap:anywhere}

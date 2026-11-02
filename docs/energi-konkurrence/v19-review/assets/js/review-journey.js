@@ -7,5 +7,5 @@ if(host){
   bindZoomCamera(host);
 }
 
-import {bindJourneyCompanies} from './journey-companies.mjs?v=20261102';
+import {bindJourneyCompanies} from './journey-companies.mjs?v=20261102-carousel';
 if(host)bindJourneyCompanies(host);
