@@ -53,6 +53,7 @@
     var b = el("b", null, c.navn);
     info.appendChild(b);
     info.appendChild(document.createTextNode(". " + c.d + (c.andre ? " Hører også til temaet: " + c.andre + "." : "")));
+    if (c.href) { var link = el("a", "ndi-profile-link", "Læs om " + c.navn + " →"); link.href = c.href; info.appendChild(link); }
   }
 
   function tegnSelskaber(i) {
