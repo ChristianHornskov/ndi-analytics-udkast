@@ -85,7 +85,7 @@
     if (document.querySelector('.ndi-x-samlet')) document.querySelectorAll('.ndi-x-samlet a[href*="/status/"]').forEach(function (a) { if (!a.closest('[data-x-tema]')) { var m = a.href.match(/status\/(\d+)/); if (m) set.add(m[1]); } });
     sel.forEach(function (s) {
       var c = feed.companies && feed.companies[s.isin];
-      if (!c || c.status !== 'ok' || !Array.isArray(c.posts)) return;
+      if (!c || (c.status !== 'ok' && c.display_status !== 'retained') || !Array.isArray(c.posts)) return;
       c.posts.forEach(function (p) { if (p && authorAllowed(s.isin, p) && p.checked_at && /^https:\/\/x\.com\//.test(p.url || '')) { var key = String(p.post_id || p.url); if (!set.has(key)) { set.add(key); ud.push({ p: p, s: s }); } } });
     });
     return ud.sort(function (a, b) { return String(b.p.published_at).localeCompare(String(a.p.published_at)); }).slice(0, VIS);
