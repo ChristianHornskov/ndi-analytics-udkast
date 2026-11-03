@@ -4,6 +4,16 @@
  const session=window.NDI_LIVE;
  if(session){const f=session.files['data.json'].funds.find(f=>f.id==='pmindi');const date=s=>s.split('-').reverse().join('.');document.querySelectorAll('.up-data-date').forEach(e=>e.textContent='Afkast til '+date(f.performanceAsOf)+' · Beholdning pr. '+date(session.files['data.json'].positionsAsOf));}
  const d=window.NDI_TAL||window.DAGENS_TAL;if(!d)return;
+ document.querySelectorAll('[data-required-data]').forEach(block=>{
+  const value=block.dataset.requiredData.split('.').reduce((v,k)=>v?.[k],d);
+  if(value!=null)return;
+  const heading=block.querySelector('h3');
+  [...block.children].forEach(child=>{if(!child.classList.contains('kildelinje'))child.hidden=true});
+  if(heading){heading.hidden=false;heading.textContent='Regnskabstallene i originalrapporten';block.prepend(heading)}
+  const note=document.createElement('p');note.className='lille';note.setAttribute('role','status');
+  note.textContent='Denne regnskabssammenligning er endnu ikke tilgængelig her. Tallene kan læses i den originale kvartalsrapport nedenfor.';
+  if(heading)heading.after(note);else block.prepend(note);
+ });
  const pct=n=>n.toLocaleString('da-DK',{minimumFractionDigits:2,maximumFractionDigits:2})+' %';
  const put=(root,sel,text)=>root.querySelectorAll(sel).forEach(e=>e.textContent=text);
  const weight=slug=>d.selskaber[slug]?.andel||0;

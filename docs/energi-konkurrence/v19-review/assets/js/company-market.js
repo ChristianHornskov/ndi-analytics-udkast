@@ -23,8 +23,10 @@
  metric('Seneste lukkekurs',number(close)+' '+currencyLabel,date(priceDate)+' · '+r.ticker);
  const y=r.priceReturns?.y1,from=r.returnBaseDates?.y1;
  metric('Kursændring · 12 måneder',Number.isFinite(y)&&from?(y>0?'+':'')+number(y)+' %':'—',from?date(from)+' – '+date(priceDate):'Ikke tilstrækkelig kurshistorik');
- const distance=Number.isFinite(r.distance)?r.distance:null;
- metric(r.status==='ok'?'Under 52-ugers top':'Under toppen i tilgængelig historik',distance===null?'—':number(distance)+' %',r.status==='ok'?'Højeste dagskurs i perioden':r.start?'Historik fra '+date(r.start):'Kortere end 52 uger');
+ const shortTop=r.status==='short_history'?r.availableHistoryTop:null;
+ const distance=Number.isFinite(r.distance)?r.distance:Number.isFinite(shortTop?.distance)?shortTop.distance:null;
+ const topStart=shortTop?.start||r.start;
+ metric(r.status==='ok'?'Under 52-ugers top':'Under toppen i tilgængelig historik',distance===null?'—':number(distance)+' %',r.status==='ok'?'Højeste dagskurs i perioden':topStart?'Historik fra '+date(topStart):'Kortere end 52 uger');
  box.append(grid);
  const daily=el('div','ndi-daily-history');box.append(daily);
  daily.append(el('p','lille','Henter daglige lukkekurser …'));
