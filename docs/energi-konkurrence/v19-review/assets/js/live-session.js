@@ -16,7 +16,7 @@
     const identityTask=json(ROOT+'data/company-identities.json');
     const nasdaqTask=fundPage?json(GRAPH+'nasdaq/latest.json',4000).catch(()=>null):Promise.resolve(null);
     const historyTask=/\/selskaber\/spacex\.html$/.test(location.pathname)?json(BASE+'releases/'+pointer.release+'/holdings-history.json',4000).catch(()=>null):Promise.resolve(null);
-    const fundamentalsTask=/\/selskaber\/spacex\.html$/.test(location.pathname)?(async()=>{const p=await json(GRAPH+'company-fundamentals-v1/latest.json',4000);if(p.validated!==true||!/^[a-f0-9]{64}$/.test(p.release))return null;const d=await json(GRAPH+'company-fundamentals-v1/releases/'+p.release+'.json',4000);return d.schema_version===1&&d.validated===true?d:null})().catch(()=>null):Promise.resolve(null);
+    const fundamentalsTask=/\/selskaber\/(spacex|applovin|babcock-wilcox|carvana|cerebras-systems|sea|soundhound-ai|t1-energy|tesla|tower-semiconductor)\.html$/.test(location.pathname)?(async()=>{const p=await json(GRAPH+'company-fundamentals-v1/latest.json',4000);if(p.validated!==true||!/^[a-f0-9]{64}$/.test(p.release))return null;const d=await json(GRAPH+'company-fundamentals-v1/releases/'+p.release+'.json',4000);return d.schema_version===1&&d.validated===true?d:null})().catch(()=>null):Promise.resolve(null);
     const [values,identities,nasdaqCandidate,historyCandidate,fundamentals]=await Promise.all([Promise.all(required.map(n=>json(BASE+'releases/'+pointer.release+'/'+n))),identityTask,nasdaqTask,historyTask,fundamentalsTask]);
     const files=Object.fromEntries(required.map((n,i)=>[n,values[i]]));
     if(['data.json','highs.json','insights.json'].some(n=>files[n].asOf!==pointer.asOf))throw Error('Data har forskellige datoer');
