@@ -138,6 +138,18 @@
     document.querySelectorAll('[data-tal="andelsdatoTekst"]').forEach(e=>e.textContent=day);
   }
   window.NDI_ADAPT_LIVE=adapt;
+  function optionalMedia(node){return /\/(?:x-tema|review-media|52-video)\.js(?:\?|$)/.test(node.dataset.ndiSrc||'')}
+  async function loadMedia(queue){
+    for(const node of queue){
+      try{await script(node)}catch{
+        // Existing original-post/video links remain usable. A media failure
+        // must never turn validated holdings into a whole-page error.
+        window.NDI_OPTIONAL_FAILURES=window.NDI_OPTIONAL_FAILURES||[];
+        window.NDI_OPTIONAL_FAILURES.push(node.dataset.ndiSrc);
+        document.dispatchEvent(new CustomEvent('ndi:media-unavailable',{detail:{src:node.dataset.ndiSrc}}));
+      }
+    }
+  }
   function dataStatus(session){
     const data=session.files['data.json'],q=data.dataQuality;
     const day=new Intl.DateTimeFormat('sv-SE',{timeZone:'Europe/Copenhagen',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
@@ -173,12 +185,15 @@
       // metadata first and replace its numeric snapshots before any renderer runs.
       for(const node of queue.filter(metadata))if(!skip(node))await script(node);
       adapt(session);
-      for(const node of queue.filter(n=>!metadata(n)))if(!skip(node))await script(node);
+      for(const node of queue.filter(n=>!metadata(n)&&!optionalMedia(n)))if(!skip(node))await script(node);
       await script({dataset:{ndiSrc:ROOT+'assets/js/live-theme-values.js'},textContent:''});
       dataStatus(session);
       loading.remove();document.documentElement.dataset.liveRelease=session.pointer.release;
       document.documentElement.classList.remove('ndi-live-loading');
       document.dispatchEvent(new CustomEvent('ndi:live',{detail:session}));
+      // No extra click and no polling: install the existing scroll observers
+      // after the core page is visible, retaining media-script order.
+      void loadMedia(queue.filter(optionalMedia));
     }catch(error){
       loading.remove();
       document.documentElement.classList.remove('ndi-live-loading');document.documentElement.classList.add('ndi-live-failed');
