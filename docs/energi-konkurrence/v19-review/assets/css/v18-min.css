@@ -335,3 +335,5 @@ html body .ndi-market .ndi-price-periods button.knap[aria-pressed="true"]:not(.x
 .review-tech .sm-luk .ik{display:none}
 
 button[data-copy],#high-all,#high-unknown{min-height:44px;min-width:44px}
+
+.ndi-data-status{margin:1.25rem 0;padding:.5rem 0;font-size:.8rem;line-height:1.5;color:var(--muted,currentColor)}

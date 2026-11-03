@@ -138,6 +138,16 @@
     document.querySelectorAll('[data-tal="andelsdatoTekst"]').forEach(e=>e.textContent=day);
   }
   window.NDI_ADAPT_LIVE=adapt;
+  function dataStatus(session){
+    const data=session.files['data.json'],q=data.dataQuality;
+    const day=new Intl.DateTimeFormat('sv-SE',{timeZone:'Europe/Copenhagen',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+    const valid=q&&q.reportDate===session.pointer.asOf&&q.positionsAsOf===data.positionsAsOf;
+    const stale=valid&&/^\d{4}-\d{2}-\d{2}$/.test(q.attentionFrom)&&day>=q.attentionFrom;
+    const note=document.createElement('p');note.className='lille ndi-data-status';
+    note.textContent='Fondens beholdning pr. '+data.positionsAsOf.split('-').reverse().join('.')+' · Rapportdato '+session.pointer.asOf.split('-').reverse().join('.')+'.';
+    const main=document.querySelector('main')||document.body;
+    if(stale){note.textContent+=' Der afventes nyere fondsdata.';note.setAttribute('role','status');main.prepend(note)}else main.append(note);
+  }
   let moduleNumber=0;
   function script(node){return new Promise((resolve,reject)=>{
     const e=document.createElement('script'),src=node.dataset.ndiSrc;
@@ -165,6 +175,7 @@
       adapt(session);
       for(const node of queue.filter(n=>!metadata(n)))if(!skip(node))await script(node);
       await script({dataset:{ndiSrc:ROOT+'assets/js/live-theme-values.js'},textContent:''});
+      dataStatus(session);
       loading.remove();document.documentElement.dataset.liveRelease=session.pointer.release;
       document.documentElement.classList.remove('ndi-live-loading');
       document.dispatchEvent(new CustomEvent('ndi:live',{detail:session}));
