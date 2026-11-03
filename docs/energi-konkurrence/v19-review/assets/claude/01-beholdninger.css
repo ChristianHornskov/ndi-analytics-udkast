@@ -32,3 +32,7 @@
   .holdings-actions #holdings-excel{background:none;border:0;text-decoration:underline;color:#b7c9cd}
 }
 @media (prefers-reduced-motion:reduce){.cr1-mere::before{transition:none}}
+
+.cr1-mere{width:44px;height:44px}.cr1-mere::before{left:18px;top:15px}.cr1-mere[aria-expanded="true"]::before{top:20px}
+
+.cr1-tal{grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1fr) 44px}

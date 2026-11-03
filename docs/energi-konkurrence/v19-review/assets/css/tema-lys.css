@@ -97,3 +97,5 @@
 .ndi-logo, :root[data-tema="lys"] .ndi-logo { filter: none !important; background: none !important; box-shadow: none !important; }
 :root[data-tema="lys"] .kun-moerk { display: none !important; }
 :root:not([data-tema="lys"]) .kun-lys { display: none !important; }
+
+html[data-tema="lys"] :is(.ci-number,.ci-eyebrow,.cf-info small,.sx-step-no,.pointe-nr,.sx-interaction-hint){color:#2f6b73}

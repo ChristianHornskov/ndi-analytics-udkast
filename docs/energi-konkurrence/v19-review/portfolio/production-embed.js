@@ -7,7 +7,7 @@ const showTabBeforeMap=showTab;
 showTab=function(name){
  showTabBeforeMap(name);
  if(name==='portfolio'&&!world&&!worldLoading){
-  worldLoading=fetch('world.geojson').then(r=>{if(!r.ok)throw Error('Kortdata mangler');return r.json()})
+  worldLoading=window.NDI_FETCH('world.geojson').then(r=>{if(!r.ok)throw Error('Kortdata mangler');return r.json()})
    .then(w=>{world=w;if(data&&geography)renderGeography();notifyHeight()})
    .catch(()=>{worldLoading=null;});
  }

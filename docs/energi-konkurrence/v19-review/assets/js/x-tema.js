@@ -131,7 +131,8 @@
       }
       pending.forEach(observer);
     }
-    kl.textContent = 'Kilde: NewDeal Invests kuraterede X-feed, ' + (live ? 'hentet fra Azure' : 'senest tilgængelige kopi – live-feedet kunne ikke hentes') + ', opdateret ' + dato(feed.updated_at, true) + '. Opslagene er udvalgt efter relevans for selskabet.';
+    kl.textContent = 'Opslagene er udvalgt automatisk efter relevans for selskabet. Senest opdateret ' + dato(feed.updated_at, true) + '.' + (live ? '' : ' Den seneste opdatering kunne ikke hentes. Her vises den senest tilgængelige kopi.');
+    if(Date.now()-Date.parse(feed.updated_at)>72*60*60*1000)kl.textContent+=' Udvalget er ikke blevet opdateret de seneste tre døgn.';
     kl.hidden = false;
   }
   function validFeed(f) {
@@ -149,6 +150,10 @@
   }
   window.NDI_X_FEED = { hent: hentFeed, gyldig: validFeed };
   function start() {
+    document.querySelectorAll('.xp[data-url]').forEach(function(card){
+      var id=(card.dataset.url||'').match(/status\/(\d+)/),host=card.querySelector('.xp-embed'),button=card.querySelector('.xp-vis');
+      if(!id||!host)return;host.classList.add('x-embed');host.dataset.xId=id[1];if(button)button.hidden=true;
+    });
     document.querySelectorAll('.x-embed[data-x-id]').forEach(observer);
     var sek = document.querySelectorAll('[data-x-tema]'); if (!sek.length) return;
     var busy = false, current = null, signature = '';
@@ -172,8 +177,6 @@
       finally { busy = false; }
     }
     update();
-    setInterval(function () { if (!document.hidden) update(); }, 300000);
-    document.addEventListener('visibilitychange', function () { if (!document.hidden) update(); });
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
 })();

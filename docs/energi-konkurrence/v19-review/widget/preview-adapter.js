@@ -51,9 +51,9 @@
       entries.innerHTML='<a class="entry-portfolio" href="../portfolio/index.html"><div class="entry-art" aria-hidden="true"><div class="entry-holdings"></div><span>AFKAST · RISIKO · SELSKABER</span></div><div class="entry-copy"><span><strong>Gå på opdagelse i porteføljen</strong><small>Få overblikket over afkast, udsving og de selskaber, fonden ejer.</small></span><span class="entry-arrow" aria-hidden="true">↗</span></div></a><a class="entry-tech" href="../tech.html"><div class="entry-art" aria-hidden="true"><img src="../assets/img/v5-fotos/chips-siliciumwafer.webp" alt=""><span>12 TEMAER · ÉN FORBUNDET VERDEN</span></div><div class="entry-copy"><span><strong>Gå på opdagelse i tech</strong><small>Fra chips og strøm til rumfart. Se teknologien og forbindelserne bag.</small></span><span class="entry-arrow" aria-hidden="true">↗</span></div></a>' ;
       calendar.after(entries);
     }
-    const source=data.funds.find(f=>f.id==='pmindi')||data.funds[0];
+    const source=data.funds[selected];
     const top=source.positions.filter(p=>p.isin&&p.weight>0).sort((a,b)=>b.weight-a.weight).slice(0,3);
-    entries.querySelector('.entry-holdings').innerHTML='<div class="entry-holdings-title">Et kig ind i fonden <span>PMINDI</span></div>'+top.map((p,i)=>'<div class="entry-holding"><span class="entry-rank">0'+(i+1)+'</span><span class="entry-company">'+esc(p.name)+'</span><b>'+n(p.weight,1)+' %</b><i style="width:'+Math.max(3,p.weight/top[0].weight*100)+'%"></i></div>').join('');
+    entries.querySelector('.entry-holdings').innerHTML='<div class="entry-holdings-title">Et kig ind i fonden <span>'+esc(source.short)+'</span></div>'+top.map((p,i)=>'<div class="entry-holding"><span class="entry-rank">0'+(i+1)+'</span><span class="entry-company">'+esc(p.name)+'</span><b>'+n(p.weight,1)+' %</b><i style="width:'+Math.max(3,p.weight/top[0].weight*100)+'%"></i></div>').join('');
     notifyHeight();
   }
   const homepageRender = render;

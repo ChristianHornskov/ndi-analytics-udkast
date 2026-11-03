@@ -1,3 +1,5 @@
 /* Graf-review punkt 41: fast baggrund og luft over sektionerne. */
 html.portfolio-analysis #analysis-nav{background:#0b151b!important}
 html.portfolio-analysis main :is(#analysis-dashboard,#preview-risk-summary,#highs,#portfolio,#risk,#method){scroll-margin-top:var(--cr41-top,16px)!important}
+
+@media(max-width:700px){html.portfolio-analysis #analysis-nav{position:sticky!important;top:0;z-index:30;flex-wrap:nowrap!important;overflow-x:auto;max-width:100%;padding:6px}html.portfolio-analysis #analysis-nav a{min-height:44px;flex-shrink:0}}

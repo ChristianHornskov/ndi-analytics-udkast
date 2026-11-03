@@ -250,7 +250,7 @@ holdings=function(){
  const ps=f.positions.filter(p=>p.isin&&p.weight>0&&(!sectorFilter||(p.sector||'Ikke klassificeret')===sectorFilter)&&(!countryFilter||geo.some(r=>r.isin===p.isin&&r.country===countryFilter&&r.status==='profile_found'))&&`${p.name} ${p.isin} ${ndiListing(p).symbol} ${ndiListingLabel(p)}`.toLowerCase().includes(query));
  $('holdings').closest('table').querySelector('thead').innerHTML=`<tr><th>Selskab</th><th>Sektor</th><th>Markedskurs</th><th>Vægt</th>${periodHeaders()}<th>Under 52-ugers top</th></tr>`;
  $('holdings').innerHTML=holdingsMarkup(ps)||'<tr><td colspan="10">Ingen positioner matcher.</td></tr>';
- $('activefilter').innerHTML=`<p class="small muted">${ps.length} ${ps.length===1?"position":"positioner"}. Kursændring i aktiens noteringsvaluta, uden geninvesteret udbytte. Eksterne markedskurser, uafhængigt af hvor længe fonden har ejet aktien. — betyder utilstrækkelige data.</p>`+((sectorFilter||countryFilter)?`<button id="clearfilter" class="chip">${esc([sectorNames[sectorFilter]||sectorFilter,countryLabel(countryFilter)].filter(Boolean).join(' · '))} × Nulstil filtre</button>`:'');
+ $('activefilter').innerHTML=`<p class="small muted">${ps.length} ${ps.length===1?"position":"positioner"}. Kursændring i aktiens noteringsvaluta, uden geninvesteret udbytte. Eksterne markedskurser, uafhængigt af hvor længe fonden har ejet aktien. En streg betyder, at datagrundlaget er utilstrækkeligt.</p>`+((sectorFilter||countryFilter)?`<button id="clearfilter" class="chip">${esc([sectorNames[sectorFilter]||sectorFilter,countryLabel(countryFilter)].filter(Boolean).join(' · '))} × Nulstil filtre</button>`:'');
  ensureHoldingsButton();
  if($('clearfilter'))$('clearfilter').onclick=()=>{sectorFilter='';countryFilter='';holdings()};
 };
@@ -337,7 +337,7 @@ drawNasdaq=function(){
  const fund=data.funds[selected],box=document.getElementById('growth'),note=document.getElementById('nasdaq-note');
  let compare=nasdaqEnabled&&window.NDI_NASDAQ?.validated;
  const source=window.NDI_NASDAQ;
- const points=comparisonPoints(fund,growthPeriod,source);if(points.length<2)return;
+ const points=comparisonPoints(fund,growthPeriod,source);if(points.length<2){if(note){note.hidden=false;note.textContent='Der er ikke tilstrækkelig historik til at sammenligne den valgte periode.'}return;}
  const indexPoints=points.filter(p=>Number.isFinite(p.index));compare=compare&&indexPoints.length>=2;
  const end=points.at(-1),firstDate=Date.parse(points[0].d),lastDate=Date.parse(end.d);
  const mobile=box.clientWidth<600,W=mobile?Math.max(220,box.clientWidth):1000,H=mobile?Math.round(Math.max(230,Math.min(300,box.clientWidth*.78))):410,L=mobile?43:68,R=mobile?8:92,T=24,B=44;

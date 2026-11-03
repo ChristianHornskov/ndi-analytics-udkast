@@ -2,7 +2,7 @@
 
 (function () {
   "use strict";
-  var KILDE_URL = "data/dagens-tal.json";
+  var KILDE_URL = "";
   var SKEMA = 1, KONTRAKT = "v18.1";
 
   var script = document.currentScript;
@@ -188,11 +188,8 @@
   
 
   function hent() {
-    if (window.DAGENS_TAL) return anvend(window.DAGENS_TAL);
-    fetch(url, { cache: "no-cache" })
-      .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
-      .then(anvend)
-      .catch(function (e) { fejl(e && e.message); });
+    if (window.NDI_LIVE && window.DAGENS_TAL && window.DAGENS_TAL.release.id === window.NDI_LIVE.pointer.release) return anvend(window.DAGENS_TAL);
+    fejl("Det validerede datagrundlag er ikke klar");
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", hent); else hent();
 })();

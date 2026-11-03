@@ -43,7 +43,6 @@ function fold(box,btn,luk,fokus){if(!box||!btn)return;var tx=btn.textContent;btn
 fold(document.querySelector('.xs'),document.getElementById('x-mere'),'Vis færre','.ekstra .xp-fra b');
 fold(document.getElementById('fod-boks'),document.getElementById('fod-mere'),'Vis færre','.ekstra b');
  
-[].forEach.call(document.querySelectorAll('.vid-ramme[data-yt]'),function(r){var b=r.querySelector('.vid-play');b.addEventListener('click',function(){var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+r.dataset.yt+'?autoplay=1&rel=0&playsinline=1';f.title=r.dataset.title;f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.setAttribute('allowfullscreen','');f.referrerPolicy='strict-origin-when-cross-origin';r.replaceChild(f,b);f.focus()})});
 })();
 
  

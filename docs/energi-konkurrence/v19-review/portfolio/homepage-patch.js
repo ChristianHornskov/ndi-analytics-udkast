@@ -250,7 +250,7 @@ holdings=function(){
  const ps=f.positions.filter(p=>p.isin&&p.weight>0&&(!sectorFilter||(p.sector||'Ikke klassificeret')===sectorFilter)&&(!countryFilter||geo.some(r=>r.isin===p.isin&&r.country===countryFilter&&r.status==='profile_found'))&&`${p.name} ${p.isin} ${ndiListing(p).symbol} ${ndiListingLabel(p)}`.toLowerCase().includes(query));
  $('holdings').closest('table').querySelector('thead').innerHTML=`<tr><th>Selskab</th><th>Sektor</th><th>Markedskurs</th><th>Vægt</th>${periodHeaders()}<th>Under 52-ugers top</th></tr>`;
  $('holdings').innerHTML=holdingsMarkup(ps)||'<tr><td colspan="10">Ingen positioner matcher.</td></tr>';
- $('activefilter').innerHTML=`<p class="small muted">${ps.length} ${ps.length===1?"position":"positioner"}. Kursændring i aktiens noteringsvaluta, uden geninvesteret udbytte. Eksterne markedskurser, uafhængigt af hvor længe fonden har ejet aktien. — betyder utilstrækkelige data.</p>`+((sectorFilter||countryFilter)?`<button id="clearfilter" class="chip">${esc([sectorNames[sectorFilter]||sectorFilter,countryLabel(countryFilter)].filter(Boolean).join(' · '))} × Nulstil filtre</button>`:'');
+ $('activefilter').innerHTML=`<p class="small muted">${ps.length} ${ps.length===1?"position":"positioner"}. Kursændring i aktiens noteringsvaluta, uden geninvesteret udbytte. Eksterne markedskurser, uafhængigt af hvor længe fonden har ejet aktien. En streg betyder, at datagrundlaget er utilstrækkeligt.</p>`+((sectorFilter||countryFilter)?`<button id="clearfilter" class="chip">${esc([sectorNames[sectorFilter]||sectorFilter,countryLabel(countryFilter)].filter(Boolean).join(' · '))} × Nulstil filtre</button>`:'');
  ensureHoldingsButton();
  if($('clearfilter'))$('clearfilter').onclick=()=>{sectorFilter='';countryFilter='';holdings()};
 };

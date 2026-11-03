@@ -321,3 +321,17 @@ html body .cq-perspektiv .knap{white-space:normal!important;height:auto!importan
 .ndi-loading-status{position:fixed;top:12px;left:50%;transform:translateX(-50%);z-index:10000;padding:10px 18px;border-radius:8px;background:#e8efec;color:#193b3d;max-width:calc(100% - 24px);font:16px/1.4 system-ui}
 .ndi-editorial-fallback{max-width:850px;margin:24px auto}.ndi-editorial-fallback .ndi-disclosure{margin-top:24px}
 #vaegt .vaegt-g:has(>div:only-child){display:block;max-width:80ch}
+
+/* Shared responsive states. */
+.sidemenu .sm-luk .ik{display:none!important}
+.sidemenu .sm-luk::after{content:'×';display:block;font-size:28px;line-height:1;color:currentColor}
+html body .x-embed.x-embed--fejl{height:auto!important;min-height:120px}
+html body .x-embed.x-embed--fejl .x-embed-vent{position:static;min-height:120px}
+.tl-navn{overflow-wrap:break-word;hyphens:auto}
+@media(max-width:420px){.tl-raekke{grid-template-columns:auto minmax(0,1fr) auto}.tl-raekke .pos-bar{display:none}}
+html body .ndi-market .ndi-price-periods button.knap[aria-pressed="true"]:not(.x){background:#89aeb4!important;color:#0b151b!important;border-color:#89aeb4!important}
+.cr-uden-billede img{display:none}
+
+.review-tech .sm-luk .ik{display:none}
+
+button[data-copy],#high-all,#high-unknown{min-height:44px;min-width:44px}

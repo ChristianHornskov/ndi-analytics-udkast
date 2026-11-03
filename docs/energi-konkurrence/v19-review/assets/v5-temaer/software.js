@@ -40,6 +40,5 @@ function twl(){if(window.twttr&&window.twttr.widgets)return;window.twttr=(functi
 var R=document.getElementById('cq-sw');
 [].forEach.call(document.querySelectorAll('.xp-trin a[data-k]'),function(a){a.addEventListener('click',function(e){var b=R&&R.querySelector('.cq-sw__dx[aria-controls="cq-sw-p-'+a.dataset.k+'"]');if(!b||!R.cqSetDx)return;e.preventDefault();R.cqSetDx(b,true);(b.closest('li')||b).scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});b.focus({preventScroll:true})})});
  
-[].forEach.call(document.querySelectorAll('.vid-ramme[data-yt]'),function(r){var b=r.querySelector('.vid-play');b.addEventListener('click',function(){var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+r.dataset.yt+'?autoplay=1&rel=0&playsinline=1';f.title=r.dataset.title;f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.setAttribute('allowfullscreen','');f.referrerPolicy='strict-origin-when-cross-origin';r.replaceChild(f,b);f.focus()})});
 })();
 }catch(e){}

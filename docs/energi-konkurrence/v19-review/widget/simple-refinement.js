@@ -22,7 +22,7 @@ chart=function(id,points,percentage=false){
  if(id==='drawdown'){
   const lows=drawdownBottoms(points).sort((a,b)=>a.v-b.v).slice(0,5).sort((a,b)=>a.d.localeCompare(b.d));
   let right=-Infinity;
-  lows.forEach((p,i)=>{const label=new Date(p.d+'T12:00:00Z').toLocaleDateString('da-DK',{day:'numeric',month:'short',year:'numeric'}),xx=x(p),yy=y(p.v),tx=Math.max(115,Math.min(W-110,xx));const lane=tx-100<right?1:0;right=tx+100;const ty=24+lane*24;
+  lows.forEach((p,i)=>{const label=new Date(p.d+'T12:00:00Z').toLocaleDateString('da-DK',{day:'numeric',month:'short',year:'numeric'}),xx=x(p),yy=y(p.v),tx=Math.max(140,Math.min(W-140,xx));const lane=tx-100<right?1:0;right=tx+100;const ty=24+lane*24;
    annotations+=`<line x1="${xx}" x2="${tx}" y1="${yy}" y2="${ty+5}" stroke="#d38f88" stroke-opacity=".5" stroke-dasharray="3 4"/><circle cx="${xx}" cy="${yy}" r="4" fill="#d38f88"/><text x="${tx}" y="${ty}" text-anchor="middle" fill="#eef4f3" font-size="14">${label} · ${pct(p.v)}</text>`;
   });
  }
@@ -38,7 +38,7 @@ holdings=function(){
  const ps=f.positions.filter(p=>p.isin&&p.weight>0&&(!sectorFilter||(p.sector||'Ikke klassificeret')===sectorFilter)&&(!countryFilter||geo.some(r=>r.isin===p.isin&&r.country===countryFilter&&r.status==='profile_found'))&&`${p.name} ${p.isin}`.toLowerCase().includes(query));
  $('holdings').closest('table').querySelector('thead').innerHTML=`<tr><th>Selskab</th><th>Sektor</th><th>Markedskurs</th><th>Vægt</th>${periodHeaders()}<th>Under 52-ugers top</th></tr>`;
  $('holdings').innerHTML=holdingsMarkup(ps)||'<tr><td colspan="10">Ingen positioner matcher.</td></tr>';
- $('activefilter').innerHTML=`<p class="small muted">${ps.length} ${ps.length===1?"position":"positioner"}. Kursændring i aktiens noteringsvaluta, uden geninvesteret udbytte. Eksterne markedskurser, uafhængigt af hvor længe fonden har ejet aktien. — betyder utilstrækkelige data.</p>`+((sectorFilter||countryFilter)?`<button id="clearfilter" class="chip">${esc([sectorNames[sectorFilter]||sectorFilter,countryLabel(countryFilter)].filter(Boolean).join(' · '))} × Nulstil filtre</button>`:'');
+ $('activefilter').innerHTML=`<p class="small muted">${ps.length} ${ps.length===1?"position":"positioner"}. Kursændring i aktiens noteringsvaluta, uden geninvesteret udbytte. Eksterne markedskurser, uafhængigt af hvor længe fonden har ejet aktien. En streg betyder, at datagrundlaget er utilstrækkeligt.</p>`+((sectorFilter||countryFilter)?`<button id="clearfilter" class="chip">${esc([sectorNames[sectorFilter]||sectorFilter,countryLabel(countryFilter)].filter(Boolean).join(' · '))} × Nulstil filtre</button>`:'');
  if($('clearfilter'))$('clearfilter').onclick=()=>{sectorFilter='';countryFilter='';holdings()};
 };
 const previousGeography=renderGeography;
@@ -123,4 +123,4 @@ overviewTop.querySelector('button').textContent='Se alle positionerne →';
 $('sectorbars').parentElement.hidden=true;
 const rollingPanel=$('rolling-chart').closest('article'),rollingDetails=document.createElement('details');rollingDetails.className='panel rolling-details';rollingDetails.innerHTML='<summary>Supplerende analyse: afkast over de seneste 12 måneder</summary>';rollingPanel.replaceWith(rollingDetails);rollingDetails.appendChild(rollingPanel);rollingPanel.classList.remove('panel');
 const oldFundChange=$('fund').onchange;$('fund').onchange=e=>{countryFilter='';oldFundChange(e)};
-fetch('fund-documents.json',{cache:'default'}).then(r=>{if(!r.ok)throw Error('KID-data mangler');return r.json()}).then(d=>{fundDocuments=d;if(data)render()}).catch(()=>{});
+window.NDI_FETCH('fund-documents.json',{cache:'default'}).then(r=>{if(!r.ok)throw Error('KID-data mangler');return r.json()}).then(d=>{fundDocuments=d;if(data)render()}).catch(()=>{});

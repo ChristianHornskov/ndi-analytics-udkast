@@ -23,7 +23,7 @@
     while ((n = w.nextNode())) liste.push(n);
     liste.forEach(function (n) {
       var el = n.parentElement;
-      if (!el || spring(el)) return;
+      if (!el || spring(el) || /(?:review|release)-\d{4}-\d{2}-\d{2}/.test(n.textContent)) return;
       var ny = om(n.textContent);
       if (ny !== n.textContent) n.textContent = ny;
     });

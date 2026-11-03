@@ -23,6 +23,6 @@ renderReview=function(){
   if(note)note.textContent='Beregnet fra samme indeks som grafen. Startår og indeværende år er delperioder. Afsluttede års procentafkast er afstemt mod årsrapport 2025; se Data om fonden & metode for kilde og resterende forbehold.';
  }
 };
-Promise.all(['nav-evidence.json','annual-evidence.json'].map(async path=>{const r=await fetch(path,{cache:'default'});if(!r.ok)throw Error(path);return r.json()})).then(([nav,annual])=>{navEvidence=nav;annualEvidence=annual;if(data)render()}).catch(()=>{
+Promise.all(['nav-evidence.json','annual-evidence.json'].map(async path=>{const r=await window.NDI_FETCH(path,{cache:'default'});if(!r.ok)throw Error(path);return r.json()})).then(([nav,annual])=>{navEvidence=nav;annualEvidence=annual;if(data)render()}).catch(()=>{
  if($('method-content'))$('method-content').insertAdjacentHTML('beforeend','<p class="callout source-evidence">Supplerende kildekontrol kunne ikke indlæses. Ingen NAV-afstemning bekræftes.</p>');
 });

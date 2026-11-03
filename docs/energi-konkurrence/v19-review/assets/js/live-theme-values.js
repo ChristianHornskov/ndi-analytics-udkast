@@ -49,7 +49,8 @@
   if(current)put(document,'.s12-tx','Temaet fylder '+pct(current.andel)+' af fonden fordelt på '+current.antal+' selskaber. Feltets bredde svarer til selskabets andel.');
   document.querySelectorAll('p').forEach(e=>{if(/^Hims.*største.*%/.test(e.textContent)&&!e.children.length)e.textContent=current?.stoerste?current.stoerste.navn+' er temaets største position med '+pct(current.stoerste.andel)+' af fonden.':''});
  }
- if(theme==='platforme'&&current){
-  document.querySelectorAll('.eks').forEach(e=>{if(e.textContent.includes('SoftBank Group er temaets største')){const top=current.selskaber.slice(0,5);e.textContent=top.length?top[0].navn+' er temaets største position med '+pct(top[0].andel)+' af fonden. De fem største positioner i temaet er '+top.map(c=>c.navn).join(', ')+'. De fylder tilsammen '+pct(top.reduce((n,c)=>n+c.andel,0))+' af fonden pr. '+d.andelsdatoTekst+'.':''}});
+ if(current){
+  const top=current.selskaber.slice(0,5);
+  document.querySelectorAll('[data-live-top-summary]').forEach(e=>{e.textContent=top.length?top[0].navn+' er temaets største position med '+pct(top[0].andel)+' af fonden. De '+top.length+' største positioner fylder tilsammen '+pct(top.reduce((n,c)=>n+c.andel,0))+' pr. '+d.andelsdatoTekst+'.':'Der er ingen aktuelle positioner i temaet.'});
  }
 })();

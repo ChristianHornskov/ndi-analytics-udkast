@@ -1,9 +1,8 @@
 /* Portfolio-only composition of the existing homepage's full analysis. */
 (() => {
   document.documentElement.classList.add('advanced-view','portfolio-analysis');
-  const supplement=window.NDI_PORTFOLIO_SUPPLEMENT?.rows||{};
   if(!periods.some(([key])=>key==='w1'))periods.splice(1,0,['w1','1 uge']);
-  function attachWeek(){if(!highData)return;highData.funds.find(f=>f.short==='PMINDI')?.rows.forEach(r=>{const extra=supplement[r.isin];if(extra?.date===r.returnDate&&Math.abs(extra.close-r.marketClose)<.0001)r.priceReturns.w1=extra.w1;});}
+  function attachWeek(){}
   const main=document.querySelector('main');
   const intro=document.createElement('section');intro.className='analysis-intro';
   intro.innerHTML='<div class="analysis-paths"><a href="../widget/index.html">← Fondens afkast</a><a href="../tech.html">Udforsk selskaberne →</a></div><p class="eyebrow">NEWDEAL INVEST · PMINDI</p><h1>Porteføljen under lup</h1><p>Se, hvad fonden ejer, hvordan investeringerne er fordelt, og hvor store udsving porteføljen har haft.</p><p id="analysis-date" class="small muted"></p>';
@@ -193,7 +192,7 @@
   if(data){attachWeek();holdings();sectors();arrange();}
   new MutationObserver(arrange).observe(main,{childList:true});
   // Same lazy map loader as the existing full view, now on the analysis page.
-  fetch('world.geojson').then(r=>{if(!r.ok)throw Error('Kortdata mangler');return r.json()}).then(w=>{world=w;if(data&&geography)renderGeography();}).catch(()=>{});
+  window.NDI_FETCH('world.geojson').then(r=>{if(!r.ok)throw Error('Kortdata mangler');return r.json()}).then(w=>{world=w;if(data&&geography)renderGeography();}).catch(()=>{});
 })();
 
 

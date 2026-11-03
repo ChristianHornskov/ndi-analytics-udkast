@@ -15,16 +15,16 @@
     });
     select('launch');
   }
-  document.querySelectorAll('[data-video]').forEach(button=>button.addEventListener('click',()=>{
+  const videos=new IntersectionObserver(entries=>entries.forEach(e=>{if(!e.isIntersecting)return;const button=e.target;videos.unobserve(button);
     const iframe=document.createElement('iframe');
-    iframe.src='https://www.youtube-nocookie.com/embed/'+button.dataset.video+'?autoplay=1&rel=0&start='+(Number(button.dataset.start)||0);
+    iframe.src='https://www.youtube-nocookie.com/embed/'+button.dataset.video+'?rel=0&start='+(Number(button.dataset.start)||0);
     iframe.title=button.getAttribute('aria-label');
     iframe.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';
     iframe.allowFullscreen=true;
     iframe.className='sx-video-player';
     button.replaceWith(iframe);
-    iframe.focus();
-  }));
+  }),{rootMargin:'100px'});
+  document.querySelectorAll('[data-video]').forEach(button=>videos.observe(button));
 })();
 
 (() => {
