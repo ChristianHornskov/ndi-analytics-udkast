@@ -4,6 +4,13 @@
   'use strict';
   var FEED_URL = 'https://ndigrafdatab5174313.blob.core.windows.net/x-curated/latest.json';
   var VIS = 6;
+  // Only Mads' own authored posts are scoped. A repost uses its original author.
+  var MADS_ISINS = new Set(['US84615Q1031','US88160R1014','US81141R1005','US1468691027','US11135F1012','JP3436100006','DE0006450000','FR0013227113']);
+  function authorAllowed(isin, post) {
+    var handle = String(post.author_handle || '').replace(/^@/, '').toLowerCase();
+    var match = String(post.url || '').match(/^https:\/\/(?:www\.)?(?:x\.com|twitter\.com)\/([^/]+)\/status\//i);
+    return MADS_ISINS.has(isin) || (handle !== 'madsc007' && (!match || match[1].toLowerCase() !== 'madsc007'));
+  }
   
 
   var WIDGETS = 'https://platform.twitter.com/widgets.js', wp = null, pladser = [];
@@ -79,7 +86,7 @@
     sel.forEach(function (s) {
       var c = feed.companies && feed.companies[s.isin];
       if (!c || c.status !== 'ok' || !Array.isArray(c.posts)) return;
-      c.posts.forEach(function (p) { if (p && p.checked_at && /^https:\/\/x\.com\//.test(p.url || '')) { var key = String(p.post_id || p.url); if (!set.has(key)) { set.add(key); ud.push({ p: p, s: s }); } } });
+      c.posts.forEach(function (p) { if (p && authorAllowed(s.isin, p) && p.checked_at && /^https:\/\/x\.com\//.test(p.url || '')) { var key = String(p.post_id || p.url); if (!set.has(key)) { set.add(key); ud.push({ p: p, s: s }); } } });
     });
     return ud.sort(function (a, b) { return String(b.p.published_at).localeCompare(String(a.p.published_at)); }).slice(0, VIS);
   }
