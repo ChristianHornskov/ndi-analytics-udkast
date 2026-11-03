@@ -173,6 +173,7 @@
     return (f <= 1 ? 1 : f <= 2 ? 2 : f <= 2.5 ? 2.5 : f <= 5 ? 5 : 10) * mag;
   }
   function soejler(box, maal) {
+    if(!D){box.textContent='Regnskabstallene kunne ikke hentes. Se originalrapporten nedenfor.';return;}
     var m = MAAL[maal]; box.dataset.maal = maal;
     var w = Math.max(280, box.clientWidth), h = box.clientHeight || 300;
     var smal = w < 480;

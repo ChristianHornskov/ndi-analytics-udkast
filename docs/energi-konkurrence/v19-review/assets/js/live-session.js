@@ -16,7 +16,8 @@
     const identityTask=json(ROOT+'data/company-identities.json');
     const nasdaqTask=fundPage?json(GRAPH+'nasdaq/latest.json',4000).catch(()=>null):Promise.resolve(null);
     const historyTask=/\/selskaber\/spacex\.html$/.test(location.pathname)?json(BASE+'releases/'+pointer.release+'/holdings-history.json',4000).catch(()=>null):Promise.resolve(null);
-    const [values,identities,nasdaqCandidate,historyCandidate]=await Promise.all([Promise.all(required.map(n=>json(BASE+'releases/'+pointer.release+'/'+n))),identityTask,nasdaqTask,historyTask]);
+    const fundamentalsTask=/\/selskaber\/spacex\.html$/.test(location.pathname)?(async()=>{const p=await json(GRAPH+'company-fundamentals-v1/latest.json',4000);if(p.validated!==true||!/^[a-f0-9]{64}$/.test(p.release))return null;const d=await json(GRAPH+'company-fundamentals-v1/releases/'+p.release+'.json',4000);return d.schema_version===1&&d.validated===true?d:null})().catch(()=>null):Promise.resolve(null);
+    const [values,identities,nasdaqCandidate,historyCandidate,fundamentals]=await Promise.all([Promise.all(required.map(n=>json(BASE+'releases/'+pointer.release+'/'+n))),identityTask,nasdaqTask,historyTask,fundamentalsTask]);
     const files=Object.fromEntries(required.map((n,i)=>[n,values[i]]));
     if(['data.json','highs.json','insights.json'].some(n=>files[n].asOf!==pointer.asOf))throw Error('Data har forskellige datoer');
 
@@ -37,7 +38,7 @@
       holdingsHistory=h;
     }catch{}
     if(required.some(n=>files[n].sourceRelease!==pointer.sourceRelease))throw Error('Data tilhører forskellige udgaver');
-    const session={pointer,files,identities,root:ROOT,nasdaq,holdingsHistory,dataBase:BASE};window.NDI_LIVE=session;return session;
+    const session={pointer,files,identities,root:ROOT,nasdaq,holdingsHistory,fundamentals,dataBase:BASE};window.NDI_LIVE=session;return session;
   })();
   // The fund chart and portfolio keep their existing renderers, but receive the
   // same immutable release as company and theme pages.
@@ -49,6 +50,25 @@
   };
   window.NDI_LIVE_READY=ready;ready.catch(()=>{});
   const fmt=x=>Number(x).toLocaleString('da-DK',{minimumFractionDigits:2,maximumFractionDigits:2});
+  function spacexReports(company){
+    if(!company||company.currency!=='USD'||company.unit!=='million'||!Array.isArray(company.periods)||company.segments?.length!==3)return null;
+    // The surrounding article explicitly discusses these periods. A new report
+    // must not silently replace them while leaving the old dates in its prose.
+    const q2=company.periods.find(p=>p.id==='2026-Q2'),q3=company.periods.find(p=>p.id==='2026-Q3'),prior=company.periods.find(p=>p.id==='2025-Q3');
+    const fields=['revenue','operating_income','capex'];
+    if(![q2,q3,prior].every(p=>p&&p.length_months===3&&/^https:\/\/www\.sec\.gov\/Archives\/edgar\/data\/1181412\//.test(p.source_url)))return null;
+    if(![q2,q3].every(p=>fields.every(k=>Array.isArray(p[k])&&p[k].length===3&&p[k].every(Number.isFinite)))||prior.revenue?.length!==3||!prior.revenue.every(Number.isFinite))return null;
+    const sum=a=>a.reduce((n,v)=>n+v,0),billion=v=>fmt(v/1000),total=sum(q3.revenue),previous=sum(prior.revenue);
+    if(total<=0||previous<=0||[...q2.revenue,...q3.revenue,...prior.revenue,...q2.capex,...q3.capex].some(v=>v<0))return null;
+    const ceiling=Math.ceil(Math.max(sum(q2.revenue),sum(q3.revenue),sum(q2.capex),sum(q3.capex))/5000)*5;
+    let offset=0;
+    const drawing=q3.revenue.map((v,nr)=>{const x={nr,start:offset,bue:v/total};offset+=x.bue;return x});
+    const quarters=[q2,q3].map((p,i)=>({id:i?'q3':'q2',kort:i?'3. kvt.':'2. kvt.',navn:(i?'3.':'2.')+' kvt. 2026',periode:i?'juli til september':'april til juni',omsaetning:p.revenue,drift:p.operating_income,anlaeg:p.capex}));
+    return {chart:{skema:1,kontrakt:'v18.1',segmenter:company.segments,kvartaler:quarters,kilde:'SpaceX 10-Q, note om segmenter. Mio. USD.'},
+      sec:{donut:{total:billion(total),totalSidsteAar:billion(previous),dele:q3.revenue.map((v,i)=>({q3:billion(v),q3sidsteAar:billion(prior.revenue[i])})),tegneorden:drawing},
+        kvartaler:[q2,q3].map((p,i)=>({id:i?'q3':'q2',kort:i?'3. kvt.':'2. kvt.',omsaetning:billion(sum(p.revenue)),anlaeg:billion(sum(p.capex)),bredde:{omsaetning:sum(p.revenue)/1000/ceiling,anlaeg:sum(p.capex)/1000/ceiling}})),
+        akse:{trin:Array.from({length:5},(_,i)=>ceiling*i/4)}}};
+  }
   function fundView(s,f){
     const i=s.files['insights.json'].funds[f.id],series=f.data.filter(p=>Number.isFinite(p.total)&&p.total>0),last=series.at(-1),first=series[0];
     const before=day=>series.filter(p=>p.d<=day).at(-1);
@@ -75,6 +95,10 @@
     const bySlug={};positions.forEach(p=>{const m=s.identities[p.isin];if(m)bySlug[m.slug]=p});s.bySlug=bySlug;s.fund=fund;
     const date=s.files['data.json'].positionsAsOf||s.pointer.asOf,day=date.split('-').reverse().join('.');
     if(d.spacex){
+      const reports=spacexReports(s.fundamentals?.companies?.US84615Q1031);
+      delete d.spacex.sec;
+      if(window.NDI_DATA)window.NDI_DATA.regnskab=reports?.chart||null;
+      if(reports)d.spacex.sec=reports.sec;
       const history=(s.holdingsHistory?.funds.pmindi||[]).filter(r=>Number.isFinite(r.weights['US84615Q1031'])).map(r=>({dato:r.date,datoTekst:r.date.split('-').reverse().join('.'),andel:r.weights['US84615Q1031']}));
       d.spacex.historik=history;d.spacex.antalMaalinger=history.length;d.spacex.antalMaaneder=new Set(history.map(r=>r.dato.slice(0,7))).size;
       d.spacex.fraDatoTekst=history[0]?.datoTekst||null;
@@ -180,7 +204,7 @@
     try{
       const session=await ready;
       const metadata=node=>/(^|\/)data\//.test(node.dataset.ndiSrc||'')||(node.dataset.ndiSrc||'').includes('/valg.js');
-      const skip=node=>/market-supplement\.js|data\/review-funds\.js|data\/kurs\/|assets\/js\/kursgraf\.js/.test(node.dataset.ndiSrc||'');
+      const skip=node=>/market-supplement\.js|data\/review-funds\.js|data\/regnskab\.js|data\/kurs\/|assets\/js\/kursgraf\.js/.test(node.dataset.ndiSrc||'');
       // Inline diagrams can precede data tags in the document. Load all editorial
       // metadata first and replace its numeric snapshots before any renderer runs.
       for(const node of queue.filter(metadata))if(!skip(node))await script(node);
