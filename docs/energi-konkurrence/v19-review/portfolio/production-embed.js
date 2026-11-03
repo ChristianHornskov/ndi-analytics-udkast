@@ -160,7 +160,7 @@ render=function(){
  simplifyOverview();
  $('asof').textContent='Rapportdata: '+data.asOf+' · daglige rapporter, ikke realtidskurser';
  const heading=Array.from($('method-content').querySelectorAll('h3')).find(h=>h.textContent==='Dagligt datagrundlag');
- if(heading?.nextElementSibling)heading.nextElementSibling.textContent='Data kommer fra Fundmarkets rapporter via det fælles dataregister. Den viste rapportdato angiver det datagrundlag, denne version bruger. Datoer, afkast, beholdninger, kildedækning og PRIIP-KID kontrolleres, før en samlet version frigives. Ved fejl beholdes seneste validerede version. Rapportdatoen ovenfor viser, hvilket datagrundlag du ser; den er ikke en kurs i realtid. En åben side søger efter en ny version hvert femte minut.';
+ if(heading?.nextElementSibling)heading.nextElementSibling.textContent='Data kommer fra Fundmarkets rapporter via det fælles dataregister. Den viste rapportdato angiver det datagrundlag, denne version bruger. Datoer, afkast, beholdninger, kildedækning og PRIIP-KID kontrolleres, før en samlet version frigives. Ved fejl beholdes seneste validerede version. Rapportdatoen ovenfor viser, hvilket datagrundlag du ser; den er ikke en kurs i realtid. Siden henter den seneste komplette version, når du åbner den.';
  const doc=fundDocuments?.funds[data.funds[selected].id];
  if(!doc){$('risk-banner').textContent='Dokumentoplysninger indlæses. Se det officielle PRIIP-KID før en investeringsbeslutning.';}
  notifyHeight();
