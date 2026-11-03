@@ -59,13 +59,15 @@
     if(![q2,q3,prior].every(p=>p&&p.length_months===3&&/^https:\/\/www\.sec\.gov\/Archives\/edgar\/data\/1181412\//.test(p.source_url)))return null;
     if(![q2,q3].every(p=>fields.every(k=>Array.isArray(p[k])&&p[k].length===3&&p[k].every(Number.isFinite)))||prior.revenue?.length!==3||!prior.revenue.every(Number.isFinite))return null;
     const sum=a=>a.reduce((n,v)=>n+v,0),billion=v=>fmt(v/1000),total=sum(q3.revenue),previous=sum(prior.revenue);
-    if(total<=0||previous<=0||[...q2.revenue,...q3.revenue,...prior.revenue,...q2.capex,...q3.capex].some(v=>v<0))return null;
+    if(total<=0||previous<=0||sum(q3.capex)<=0||[...q2.revenue,...q3.revenue,...prior.revenue,...q2.capex,...q3.capex].some(v=>v<0))return null;
     const ceiling=Math.ceil(Math.max(sum(q2.revenue),sum(q3.revenue),sum(q2.capex),sum(q3.capex))/5000)*5;
     let offset=0;
     const drawing=q3.revenue.map((v,nr)=>{const x={nr,start:offset,bue:v/total};offset+=x.bue;return x});
     const quarters=[q2,q3].map((p,i)=>({id:i?'q3':'q2',kort:i?'3. kvt.':'2. kvt.',navn:(i?'3.':'2.')+' kvt. 2026',periode:i?'juli til september':'april til juni',omsaetning:p.revenue,drift:p.operating_income,anlaeg:p.capex}));
     return {chart:{skema:1,kontrakt:'v18.1',segmenter:company.segments,kvartaler:quarters,kilde:'SpaceX 10-Q, note om segmenter. Mio. USD.'},
-      sec:{donut:{total:billion(total),totalSidsteAar:billion(previous),dele:q3.revenue.map((v,i)=>({q3:billion(v),q3sidsteAar:billion(prior.revenue[i])})),tegneorden:drawing},
+      sec:{kpi:{drift:billion(sum(q3.operating_income)),driftForrige:billion(sum(q2.operating_income)),investering:billion(sum(q3.capex)),aiInvestering:billion(q3.capex[2]),aiAndel:Math.round(q3.capex[2]/sum(q3.capex)*100),aiBredde:q3.capex[2]/sum(q3.capex)*100},
+        tabel:[q3,q2].map(p=>({drift:[...p.operating_income,sum(p.operating_income)].map(billion),investering:[...p.capex,sum(p.capex)].map(billion)})),
+        donut:{total:billion(total),totalSidsteAar:billion(previous),dele:q3.revenue.map((v,i)=>({q3:billion(v),q3sidsteAar:billion(prior.revenue[i])})),tegneorden:drawing},
         kvartaler:[q2,q3].map((p,i)=>({id:i?'q3':'q2',kort:i?'3. kvt.':'2. kvt.',omsaetning:billion(sum(p.revenue)),anlaeg:billion(sum(p.capex)),bredde:{omsaetning:sum(p.revenue)/1000/ceiling,anlaeg:sum(p.capex)/1000/ceiling}})),
         akse:{trin:Array.from({length:5},(_,i)=>ceiling*i/4)}}};
   }
