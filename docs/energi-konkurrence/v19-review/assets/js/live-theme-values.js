@@ -49,13 +49,14 @@
  }
  const strip=document.querySelector('.s12--ny');
  if(strip){
-  const groups={};const names=Object.fromEntries(Object.entries(d.selskaber).map(([k,c])=>[c.navn.toLowerCase(),k]));
+  const groups={};const held=new Map((session?.fund?.positions||[]).filter(p=>p.isin&&Number.isFinite(p.weight)).map(p=>[p.isin,p.weight]));
+  const stripWeight=e=>held.get(e.dataset.isin)||0;
   strip.querySelectorAll(':scope > span[title]').forEach(e=>{
-   const name=e.title.split(',')[0],slug=names[name.toLowerCase()],w=weight(slug);e.style.flex=w+' 1 0';e.hidden=!w;e.title=name+', '+pct(w);put(e,'small',pct(w));
+   const name=e.title.split(',')[0],w=stripWeight(e);e.style.flex=w+' 1 0';e.hidden=!w;e.title=name+', '+pct(w);put(e,'small',pct(w));
    const group=[...e.classList].find(c=>/^g\d$/.test(c));groups[group]=(groups[group]||0)+w;
   });
   document.querySelectorAll('.s12-lg li').forEach(e=>{const group=[...e.querySelector('i').classList].find(c=>/^g\d$/.test(c));put(e,'b',pct(groups[group]||0))});
-  const list=strip.nextElementSibling;if(list?.classList.contains('claude-sr'))list.querySelectorAll('li').forEach(e=>{const name=e.textContent.split(':')[0];e.textContent=name+': '+pct(weight(names[name.toLowerCase()]))});
+  const list=strip.nextElementSibling;if(list?.classList.contains('claude-sr'))list.querySelectorAll('li').forEach(e=>{const name=e.textContent.split(':')[0];e.textContent=name+': '+pct(stripWeight(e))});
   if(current)put(document,'.s12-tx','Temaet fylder '+pct(current.andel)+' af fonden fordelt på '+current.antal+' selskaber. Feltets bredde svarer til selskabets andel.');
   document.querySelectorAll('p').forEach(e=>{if(/^Hims.*største.*%/.test(e.textContent)&&!e.children.length)e.textContent=current?.stoerste?current.stoerste.navn+' er temaets største position med '+pct(current.stoerste.andel)+' af fonden.':''});
  }

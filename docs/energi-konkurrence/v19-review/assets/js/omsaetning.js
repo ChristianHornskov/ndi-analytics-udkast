@@ -34,7 +34,10 @@
       var s = d.querySelector("strong"), p = d.querySelector("p");
       if (!s || !p) return null;
       var lab = p.textContent.replace(s.textContent, "").trim();
-      return { lab: lab, v: tal(s.textContent), vis: s.textContent.trim() };
+      // A-F01: brug den præcise værdi, når den findes. Visningsteksten er afrundet.
+      var praecis = s.getAttribute("data-value");
+      var v = praecis !== null && praecis !== "" && isFinite(Number(praecis)) ? Number(praecis) : tal(s.textContent);
+      return { lab: lab, v: v, vis: s.textContent.trim() };
     }).filter(Boolean);
     if (!h || raekker.length !== 2 || raekker.some(function (r) { return !isFinite(r.v) || r.v <= 0; })) return;
 

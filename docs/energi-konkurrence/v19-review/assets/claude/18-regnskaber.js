@@ -2,9 +2,9 @@
    Listen i HTML'en bevares og bruges som kilde, så tallene altid kommer fra siden. */
 (function () {
   var MULT = { 'mio.': 1, 'mia.': 1e3, 'billion': 1e3, 'bio.': 1e6 };
-  function tal(s, enhed) {
+  function tal(s, enhed, dansk) {
     var t = s.replace(/\s/g, '');
-    if (t.indexOf(',') >= 0) t = t.replace(/\./g, '').replace(',', '.');
+    if (dansk || t.indexOf(',') >= 0) t = t.replace(/\./g, '').replace(',', '.');
     var v = parseFloat(t);
     return isNaN(v) ? null : v * MULT[enhed];
   }
@@ -46,10 +46,10 @@
       var a = li.querySelector('a');
       var tekst = (a ? li.textContent.replace(a.textContent, '') : li.textContent).replace(/\s+/g, ' ').trim();
       var m = RAEKKE.exec(tekst); if (!m) return false;
-      var v = tal(m[3], m[4]); if (v === null) return false;
+      var v = tal(m[3], m[4], d.dataset.numberLocale === 'da-DK'); if (v === null) return false;
       rk.push({ p: periode(m[1]), n: m[2], mio: v, c: m[5], a: a });
       if (m[6]) {
-        var v2 = tal(m[6], m[7]);
+        var v2 = tal(m[6], m[7], d.dataset.numberLocale === 'da-DK');
         if (v2 !== null) rk.push({ p: periode(m[9]), n: m[2], mio: v2, c: m[8], a: a });
       }
       return true;

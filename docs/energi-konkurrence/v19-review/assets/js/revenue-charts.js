@@ -22,7 +22,8 @@
         fragment.append(el('h4','Omsætning · mio. USD'));
         data.forEach(r=>{
           const box=el('div'),p=el('p',r.id.replace(/(\d+)-Q(\d)/,'Q$2 $1')+' ');
-          p.append(el('strong',r.value.toLocaleString('da-DK',{maximumFractionDigits:0})));
+          // A-F01: den præcise værdi gemmes separat fra den afrundede visningstekst.
+          const strong=el('strong',r.value.toLocaleString('da-DK',{maximumFractionDigits:0}));strong.dataset.value=String(r.value);p.append(strong);
           const svg=document.createElementNS('http://www.w3.org/2000/svg','svg'),bar=document.createElementNS(svg.namespaceURI,'rect');
           svg.setAttribute('viewBox','0 0 600 18');svg.setAttribute('preserveAspectRatio','none');svg.setAttribute('aria-hidden','true');
           for(const [k,v] of Object.entries({width:600*r.value/maximum,height:18,rx:3,fill:'var(--accent)'}))bar.setAttribute(k,String(v));

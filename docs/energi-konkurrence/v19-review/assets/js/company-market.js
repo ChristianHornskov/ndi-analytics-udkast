@@ -16,7 +16,7 @@
  const number=(v,d=2)=>Number(v).toLocaleString('da-DK',{minimumFractionDigits:d,maximumFractionDigits:d});
  const date=d=>d?d.slice(0,10).split('-').reverse().join('.'):'—';
  const valid=p&&r&&['ok','short_history'].includes(r.status)&&p.listingStatus==='verified'&&r.completedSessionsOnly===true&&p.listingIdentitySha256&&p.listingIdentitySha256===r.listingIdentitySha256&&p.listingCurrency===r.marketCurrency&&Number.isFinite(r.marketClose)&&r.marketClose>0;
- if(!valid){box.append(el('p','lille',p?'Der er endnu ikke tilstrækkeligt validerede kursdata for dette værdipapir.':'Selskabet findes ikke i den aktuelle beholdning. Der vises ingen gemte kurser som aktuelle data.'));return}
+ if(!valid){box.append(el('p','lille',p?'Der er endnu ikke tilstrækkeligt validerede kursdata for dette værdipapir.':s.holdingStatus?.(slug)==='ukendt'?'Selskabets beholdningsstatus opdateres. Der vises ingen gemte kurser som aktuelle data.':'Selskabet findes ikke i den aktuelle beholdning. Der vises ingen gemte kurser som aktuelle data.'));return}
  const currency=r.marketCurrency,currencyLabel=currency==='GBp'?'pence (GBX)':currency,close=r.marketClose,priceDate=r.returnDate||r.date;
  const grid=el('div','ndi-market-grid');
  function metric(label,value,detail){const c=el('div','ndi-market-metric');c.append(el('span',null,label),el('strong',null,value),el('small',null,detail));grid.append(c)}

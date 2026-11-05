@@ -93,8 +93,17 @@
     const fund=s.files['data.json'].funds.find(f=>f.id==='pmindi');
     if(!fund)throw Error('PMINDI mangler');
     const positions=fund.positions.filter(p=>/^[A-Z]{2}[A-Z0-9]{10}$/.test(p.isin||'')&&Number.isFinite(p.weight)&&p.weight>0);
-    Object.values(s.identities).forEach(m=>{if(!d.selskaber[m.slug])d.selskaber[m.slug]={navn:m.navn,slug:m.slug,tema:m.tema||'ukendt',andel:null,tidligere:true}});
+    // A-F03: "tidligere i fonden" kræver positiv dokumentation, ikke blot et manglende identitetsopslag.
+    // Dokumenteret: redaktionens liste over tidligere positioner, eller et selskab, som redaktionen havde som aktuelt,
+    // og som nu mangler i en beholdning, hvor alle positioner har en kendt identitet.
+    const documentedPrevious=new Set((d.tidligere?.alle||[]).map(c=>c.slug).filter(Boolean));
+    const documentedCurrent=new Set(Object.entries(d.selskaber).filter(([,c])=>c&&c.tidligere===false).map(([slug])=>slug));
+    Object.values(s.identities).forEach(m=>{if(!d.selskaber[m.slug])d.selskaber[m.slug]={navn:m.navn,slug:m.slug,tema:m.tema||'ukendt',andel:null,tidligere:false}});
     const bySlug={};positions.forEach(p=>{const m=s.identities[p.isin];if(m)bySlug[m.slug]=p});s.bySlug=bySlug;s.fund=fund;
+    const heldIsin=new Map(positions.map(p=>[p.isin,p]));
+    const unidentified=positions.filter(p=>!s.identities[p.isin]).length;
+    const statusOf=slug=>bySlug[slug]?'aktuel':documentedPrevious.has(slug)?'tidligere':documentedCurrent.has(slug)&&!unidentified?'tidligere':'ukendt';
+    s.holdingStatus=statusOf;
     const date=s.files['data.json'].positionsAsOf||s.pointer.asOf,day=date.split('-').reverse().join('.');
     if(d.spacex){
       const reports=spacexReports(s.fundamentals?.companies?.US84615Q1031);
@@ -116,19 +125,24 @@
     const list=positions.map(p=>{const m=s.identities[p.isin],old=m&&d.selskaber[m.slug];return {navn:old?.navn||p.name,slug:m?.slug||null,andel:p.weight,logo:old?.logo,tema:old?.tema||'ukendt',temaNavn:old?.temaNavn||'Endnu ikke inddelt'}}).sort((a,b)=>b.andel-a.andel);
     list.forEach((p,i)=>{p.plads=i+1;p.bar=p.andel/list[0].andel});
     const sum=a=>a.reduce((v,p)=>v+p.andel,0);
-    Object.entries(d.selskaber).forEach(([slug,c])=>{const p=bySlug[slug];c.andel=p?p.weight:null;c.tidligere=!p;c.fondsPlads=p?list.findIndex(x=>x.slug===slug)+1:null;c.top10Plads=c.fondsPlads&&c.fondsPlads<=10?c.fondsPlads:null;c.pladsITema=null;c.antalITema=null;c.kurs=null});
+    Object.entries(d.selskaber).forEach(([slug,c])=>{const p=bySlug[slug];c.andel=p?p.weight:null;c.status=statusOf(slug);c.tidligere=c.status==='tidligere';c.statusUkendt=c.status==='ukendt';c.fondsPlads=p?list.findIndex(x=>x.slug===slug)+1:null;c.top10Plads=c.fondsPlads&&c.fondsPlads<=10?c.fondsPlads:null;c.pladsITema=null;c.antalITema=null;c.kurs=null});
     d.temaer.forEach(t=>{const limit=t.vist?.length||6;t.selskaber=list.filter(c=>c.tema===t.id);t.selskaber.forEach(c=>c.bar=t.selskaber[0]?.andel?c.andel/t.selskaber[0].andel:0);t.vist=t.selskaber.slice(0,limit);t.oevrige=t.selskaber.slice(limit);t.oevrigeAntal=t.oevrige.length;t.antal=t.selskaber.length;t.andel=sum(t.selskaber);t.stoerste=t.selskaber[0]||null;t.selskaber.forEach((c,i)=>{const x=d.selskaber[c.slug];x.pladsITema=i+1;x.antalITema=t.antal})});
     d.temaer.sort((a,b)=>b.andel-a.andel).forEach((t,i)=>{t.plads=i+1;t.bar=d.temaer[0].andel?t.andel/d.temaer[0].andel:0});
     Object.values(d.grupper).forEach(g=>{g.selskaber=g.selskaber.filter(c=>bySlug[c.slug]).map(c=>({...c,andel:bySlug[c.slug].weight})).sort((a,b)=>b.andel-a.andel);const limit=g.vis?.length||6;g.vis=g.selskaber.slice(0,limit);g.flere=g.selskaber.slice(limit);g.antalFlere=g.flere.length;g.antal=g.selskaber.length;g.andel=sum(g.selskaber);g.selskaber.forEach(c=>c.bar=g.selskaber[0]?.andel?c.andel/g.selskaber[0].andel:0)});
     d.top10={antal:Math.min(10,list.length),sum:sum(list.slice(0,10)),liste:list.slice(0,10)};d.alleSelskaber={antal:list.length,liste:list};
-    const previous=Object.entries(d.selskaber).filter(([slug,c])=>!bySlug[slug]).map(([slug,c])=>({navn:c.navn,slug,andel:null})).sort((a,b)=>a.navn.localeCompare(b.navn,'da'));
+    const previous=Object.entries(d.selskaber).filter(([slug,c])=>c.status==='tidligere').map(([slug,c])=>({navn:c.navn,slug,andel:null})).sort((a,b)=>a.navn.localeCompare(b.navn,'da'));
     d.tidligere={...d.tidligere,alle:previous,alleAntal:previous.length,antal:previous.length,udenTema:previous.filter(c=>!d.selskaber[c.slug].tema||d.selskaber[c.slug].tema==='ukendt')};
     const currentSlug=location.pathname.split('/').pop().replace('.html',''),company=d.selskaber[currentSlug];
     if(company){
-      document.querySelectorAll('.sidehoved .kicker').forEach(e=>e.textContent=company.tidligere?'Tidligere i fonden':'Et af fondens selskaber');
+      const unknown=company.status==='ukendt';
+      document.querySelectorAll('.sidehoved .kicker').forEach(e=>e.textContent=company.tidligere?'Tidligere i fonden':unknown?'Beholdningsstatus opdateres':'Et af fondens selskaber');
+      if(company.status!=='aktuel')document.querySelectorAll('.v18s-hoved .kicker').forEach(e=>e.textContent=unknown?'Beholdningsstatus opdateres':'Tidligere i fonden');
       document.querySelectorAll('.cr-stub-status').forEach(e=>e.hidden=!company.tidligere);
-      document.querySelectorAll('[data-tal="selskaber.'+currentSlug+'.pladsITema"]').forEach(e=>{if(company.tidligere){const parent=e.closest('p');if(parent)parent.hidden=true}});
-      if(!company.tidligere&&document.querySelector('.cr-stub-status')){
+      document.querySelectorAll('[data-tal="selskaber.'+currentSlug+'.pladsITema"]').forEach(e=>{if(company.status!=='aktuel'){const parent=e.closest('p');if(parent)parent.hidden=true}});
+      if(unknown&&!document.querySelector('.ndi-status-unknown')){
+        const note=document.createElement('p');note.className='lille ndi-status-unknown';note.setAttribute('role','status');note.textContent='Selskabets beholdningsstatus kunne ikke bekræftes i dataudgaven pr. '+day+'. Den opdateres, når identiteten er afstemt.';const head=document.querySelector('.sidehoved');if(head)head.after(note);else(document.querySelector('main')||document.body).prepend(note);
+      }
+      if(company.status==='aktuel'&&document.querySelector('.cr-stub-status')){
         const note=document.createElement('p');note.className='lille';note.textContent='Andel af PMINDI: '+fmt(company.andel)+' % pr. '+day+'.';document.querySelector('.sidehoved')?.after(note);
       }
     }
@@ -147,9 +161,14 @@
     const p=window.NDI_DATA?.portefolje;
     if(p){p.release=d.release;p.andelsdato=date;p.andelsdatoTekst=day;p.eksempeldata=false;p.kursdato=fund.performanceAsOf;p.beholdning.antalPositioner=list.length;p.beholdning.top10=d.top10.liste;p.beholdning.top10Sum=d.top10.sum;p.beholdning.positioner=positions.map(x=>({navn:s.identities[x.isin]?.navn||x.name,isin:x.isin,slug:s.identities[x.isin]?.slug,andel:x.weight,valuta:x.listingCurrency,sektor:x.sector}));p.vaerdikaede?.forEach(g=>{g.selskaber=g.selskaber.filter(c=>bySlug[c.slug]).map(c=>({...c,andel:bySlug[c.slug].weight}));g.antal=g.selskaber.length;g.andel=sum(g.selskaber)})}
     // Interactive chain datasets are editorial classifications; weights are live.
-    const ck=document.getElementById('ck-data');if(ck){const stages=JSON.parse(ck.textContent);stages.forEach(t=>{t.selskaber=t.selskaber.filter(c=>list.some(p=>p.navn.toLowerCase()===c.navn.toLowerCase()));t.selskaber.forEach(c=>{const p=list.find(p=>p.navn.toLowerCase()===c.navn.toLowerCase());c.andel=p.andel});t.selskaber.sort((a,b)=>b.andel-a.andel)});ck.textContent=JSON.stringify(stages)}
-    document.querySelectorAll('[data-n][data-w]').forEach(e=>{const n=e.dataset.n==='Sumitomo Electric'?'Sumitomo Electric Industries':e.dataset.n;const p=list.find(p=>p.navn.toLowerCase()===n.toLowerCase());e.dataset.w=p?fmt(p.andel)+' %':'Ikke i den aktuelle beholdning'});
-    document.querySelectorAll('.cf-company').forEach(e=>{const slug=e.getAttribute('href')?.split('/').pop().replace('.html','');const p=bySlug[slug];const w=e.querySelector('.cf-weight');if(w)w.textContent=p?fmt(p.weight)+' %':'Ikke i den aktuelle beholdning'});
+    // A-F02: match på ISIN, aldrig på navn. Flere ISIN for samme selskab (aktieklasser) lægges sammen.
+    const isinsOf=v=>String(v||'').split(/\s+/).filter(x=>/^[A-Z]{2}[A-Z0-9]{10}$/.test(x));
+    const heldWeight=isins=>{const hit=isins.map(i=>heldIsin.get(i)).filter(Boolean);return hit.length?hit.reduce((n,p)=>n+p.weight,0):null};
+    const statusForIsins=isins=>{const slugs=[...new Set(isins.map(i=>s.identities[i]?.slug).filter(Boolean))];return slugs.length===1?statusOf(slugs[0]):'ukendt'};
+    const absentText=isins=>statusForIsins(isins)==='ukendt'?'Beholdningsstatus opdateres':'Ikke i den aktuelle beholdning';
+    const ck=document.getElementById('ck-data');if(ck){const stages=JSON.parse(ck.textContent);stages.forEach(t=>{t.selskaber=t.selskaber.filter(c=>heldWeight(isinsOf(c.isin))!==null);t.selskaber.forEach(c=>{c.andel=heldWeight(isinsOf(c.isin))});t.selskaber.sort((a,b)=>b.andel-a.andel)});ck.textContent=JSON.stringify(stages)}
+    document.querySelectorAll('[data-n][data-w]').forEach(e=>{const isins=isinsOf(e.dataset.isin);if(!isins.length){e.dataset.w='Beholdningsstatus opdateres';return}const w=heldWeight(isins);e.dataset.w=w!==null?fmt(w)+' %':absentText(isins)});
+    document.querySelectorAll('.cf-company').forEach(e=>{const slug=e.getAttribute('href')?.split('/').pop().replace('.html','');const p=bySlug[slug];const w=e.querySelector('.cf-weight');if(w)w.textContent=p?fmt(p.weight)+' %':statusOf(slug)==='ukendt'?'Beholdningsstatus opdateres':'Ikke i den aktuelle beholdning'});
     // Keep the company finder in live weight order before its pagination starts.
     document.querySelectorAll('.cf-results').forEach(ul=>{
       const rows=[...ul.children],slugOf=row=>row.querySelector('.cf-company')?.getAttribute('href')?.split('/').pop().replace('.html','');
@@ -164,7 +183,8 @@
     document.querySelectorAll('[data-tal="andelsdatoTekst"]').forEach(e=>e.textContent=day);
   }
   window.NDI_ADAPT_LIVE=adapt;
-  function optionalMedia(node){return /\/(?:x-tema|review-media|52-video)\.js(?:\?|$)/.test(node.dataset.ndiSrc||'')}
+  // A-F00: data/x-curated.js er kun X-reserve og er lige så valgfri som X- og videomodulerne.
+  function optionalMedia(node){return /\/(?:x-tema|review-media|52-video)\.js(?:\?|$)|(?:^|\/)data\/x-curated\.js(?:\?|$)/.test(node.dataset.ndiSrc||'')}
   async function loadMedia(queue){
     for(const node of queue){
       try{await script(node)}catch{
@@ -186,6 +206,15 @@
     const main=document.querySelector('main')||document.body;
     if(stale){note.textContent+=' Der afventes nyere fondsdata.';note.setAttribute('role','status');main.prepend(note)}else main.append(note);
   }
+  // A-F05: en renderer, der kaster under kørsel, giver en rolig delvis tilstand i stedet for permanente "…".
+  function partialFailure(session){
+    document.documentElement.classList.add('ndi-live-partial');
+    document.querySelectorAll('[data-tal]').forEach(e=>{const t=e.textContent.trim();if(t===''||t==='…'||t==='...')e.textContent='—'});
+    if(document.querySelector('.ndi-live-partial-note'))return;
+    const note=document.createElement('p');note.className='lille ndi-live-partial-note';note.setAttribute('role','status');
+    note.textContent='En del af siden kunne ikke vises. Tallene, der vises, er fra dataudgaven pr. '+session.pointer.asOf.split('-').reverse().join('.')+'. Genindlæs siden for at prøve igen.';
+    (document.querySelector('main')||document.body).prepend(note);
+  }
   let moduleNumber=0;
   function script(node){return new Promise((resolve,reject)=>{
     const e=document.createElement('script'),src=node.dataset.ndiSrc;
@@ -203,16 +232,21 @@
   async function start(){
     const queue=[...document.querySelectorAll('script[type="application/ndi-script"]')];
     const loading=document.createElement('p');loading.className='ndi-loading-status';loading.setAttribute('role','status');loading.textContent='Henter fondens opdaterede data …';document.body.prepend(loading);
+    const rendererErrors=[];
+    const onRendererError=e=>{if(/\/(?:x-tema|review-media|52-video|x-curated)\.js(?:\?|$)/.test(e.filename||''))return;rendererErrors.push(e.filename||'inline')};
+    window.addEventListener('error',onRendererError);
     try{
       const session=await ready;
       const metadata=node=>/(^|\/)data\//.test(node.dataset.ndiSrc||'')||(node.dataset.ndiSrc||'').includes('/valg.js');
       const skip=node=>/market-supplement\.js|data\/review-funds\.js|data\/regnskab\.js|data\/kurs\/|assets\/js\/kursgraf\.js/.test(node.dataset.ndiSrc||'');
       // Inline diagrams can precede data tags in the document. Load all editorial
       // metadata first and replace its numeric snapshots before any renderer runs.
-      for(const node of queue.filter(metadata))if(!skip(node))await script(node);
+      for(const node of queue.filter(n=>metadata(n)&&!optionalMedia(n)))if(!skip(node))await script(node);
       adapt(session);
       for(const node of queue.filter(n=>!metadata(n)&&!optionalMedia(n)))if(!skip(node))await script(node);
       await script({dataset:{ndiSrc:ROOT+'assets/js/live-theme-values.js'},textContent:''});
+      window.removeEventListener('error',onRendererError);
+      if(rendererErrors.length){window.NDI_RENDERER_FAILURES=rendererErrors;partialFailure(session)}
       dataStatus(session);
       loading.remove();document.documentElement.dataset.liveRelease=session.pointer.release;
       document.documentElement.classList.remove('ndi-live-loading');
@@ -221,6 +255,7 @@
       // after the core page is visible, retaining media-script order.
       void loadMedia(queue.filter(optionalMedia));
     }catch(error){
+      window.removeEventListener('error',onRendererError);
       loading.remove();
       document.documentElement.classList.remove('ndi-live-loading');document.documentElement.classList.add('ndi-live-failed');
       document.querySelectorAll('[data-tal],.cf-weight,[data-w]').forEach(e=>{if(e.hasAttribute('data-w'))e.dataset.w='Data kunne ikke hentes';else e.textContent='—'});
