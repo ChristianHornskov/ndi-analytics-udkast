@@ -395,7 +395,7 @@ function show(btn){var sc=btn.closest('.cq-kv__scope')||R,inf=sc.querySelector('
 inf.appendChild(btn.querySelector('.cq-kv__lg').cloneNode(true));var w=document.createElement('div');
 function el(t,c,x){var e=document.createElement(t);e.className=c;e.textContent=x;w.appendChild(e);return e}
 el('p','cq-kv__ig',btn.dataset.g);var h=el('p','cq-kv__ih','');[].forEach.call(btn.querySelector('.cq-kv__nm').childNodes,function(n){h.appendChild(n.cloneNode(true))});var s=document.createElement('span');s.textContent=btn.querySelector('.cq-kv__cw').textContent+' af afdelingen PMINDI pr. 16.10.2026';h.appendChild(s);
-el('p','cq-kv__id',btn.dataset.d);if(btn.dataset.a)el('p','cq-kv__ia',btn.querySelector('.cq-kv__nm').textContent+' laver også noget, der hører til temaet '+btn.dataset.a+'. I fondens opdeling tælles selskabet kun med her.');inf.appendChild(w)}
+el('p','cq-kv__id',btn.dataset.d);if(btn.dataset.a)el('p','cq-kv__ia',btn.querySelector('.cq-kv__nm').textContent+' er også med i '+btn.dataset.a+'. Et selskab kan være med i flere temaer.');inf.appendChild(w)}
 R.querySelectorAll('.cq-kv__co').forEach(function(b){b.addEventListener('click',function(){var sc=b.closest('.cq-kv__scope')||R;sc.querySelectorAll('.cq-kv__co[aria-pressed=true]').forEach(function(o){if(o!==b)o.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');show(b)});
 b.addEventListener('focus',function(){show(b)});if(fine)b.addEventListener('mouseenter',function(){show(b)})});
 function setAll(a,o){var l=document.getElementById(a.getAttribute('aria-controls'));l.classList.toggle('cq-kv--open',o);a.setAttribute('aria-expanded',o);a.textContent=o?'Vis færre':'Vis alle ('+a.dataset.n+')'}
@@ -417,7 +417,7 @@ R.querySelectorAll('svg [data-tr]').forEach(function(el){el.classList.toggle('cq
 R.addEventListener('cq:dx',function(e){sync();if(!e.detail.open||!e.detail.btn.classList.contains('cq-kv__trb'))return;var p=document.getElementById(e.detail.btn.getAttribute('aria-controls'));var r=p.getBoundingClientRect();if(r.top>window.innerHeight-80)p.scrollIntoView({block:'nearest',behavior:rm?'auto':'smooth'})});
 if(!rm&&'IntersectionObserver' in window){R.classList.add('cq-kv--arm');var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){setTimeout(function(){R.classList.remove('cq-kv--arm')},150);io.disconnect()}},{threshold:.35});io.observe(R.querySelector('.cq-kv__svg'))}})();</script>
 </section>
-<p class="kv-navne"><b>Selskaberne i temaet:</b> Oxford Instruments, Quantinuum, IonQ, Quantum Computing Inc, D-Wave Quantum, Infleqtion og Rigetti Computing. Ingen selskaber i fondens andre temaer hører også delvis til dette tema.</p>
+<p class="kv-navne"><b>Selskaberne i temaet:</b> Oxford Instruments, Quantinuum, IonQ, Quantum Computing Inc, D-Wave Quantum, Infleqtion og Rigetti Computing. Temaet har også forbindelser til fondens øvrige teknologier.</p>
 </div>
 <section aria-labelledby="hvad-h" class="s" id="hvad"><div class="wrap">
 <p class="eyebrow">Forklaret</p>
