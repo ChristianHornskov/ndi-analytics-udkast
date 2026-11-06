@@ -4,7 +4,7 @@
   var MD = ['jan.', 'feb.', 'mar.', 'apr.', 'maj', 'jun.', 'jul.', 'aug.', 'sep.', 'okt.', 'nov.', 'dec.'];
   var ISO = /\b(\d{4})-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])\b/g;
   var INTERVAL = /\b(\d{4}-\d{2}-\d{2})\s*[–—-]\s*(\d{4}-\d{2}-\d{2})\b/g;
-  function dato(_, y, m, d) { return (+d) + '. ' + MD[+m - 1] + ' ' + y; }
+  function dato(_, y, m, d) { return d + '.' + m + '.' + y; }
   var TID = /\b(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})(?::\d{2}(?:\.\d+)?)?(Z|[+-]00:00)?/g;
   function om(t) {
     return t.replace(TID, function (_, y, m, d, hh, mm, z) { return dato(_, y, m, d) + ' kl. ' + hh + '.' + mm + (z ? ' UTC' : ''); }).replace(INTERVAL, function (_, a, b) { return a + ' til ' + b; }).replace(ISO, dato);
