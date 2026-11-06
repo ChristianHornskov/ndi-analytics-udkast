@@ -9,7 +9,7 @@
   }
   function dato(iso) {
     var m = /^(\d{4})-(\d{2})-(\d{2})/.exec(iso || '');
-    return m ? (+m[3]) + '. ' + MD[+m[2] - 1] + ' ' + m[1] : '';
+    return m ? m[3] + '.' + m[2] + '.' + m[1] : '';
   }
   function fond() {
     try {

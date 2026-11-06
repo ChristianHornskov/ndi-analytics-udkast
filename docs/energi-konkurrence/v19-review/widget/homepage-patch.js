@@ -54,6 +54,13 @@ window.NDI_HQ_REVIEW={"checkedAt": "2026-10-01", "definition": "Operationelt hov
   @media(max-width:600px){#tax-note,#graph-context-note,.preview-reinvest-note{font-size:15px!important;color:#dce8ea!important}#preview-calendar .widget-calendar-mobile th,#preview-calendar .widget-calendar-mobile td{font-size:14px!important;padding:11px 6px}}
   @media(max-width:760px){.simple-view .grid:has(>#investment-example){grid-template-columns:1fr!important}}@media(max-width:480px){#class-choice .segmented{grid-template-columns:1fr!important}}
   @media(max-width:700px){main{padding:16px 10px!important}#growth-controls{grid-template-columns:1fr;gap:14px!important}#class-options{padding:14px!important}#class-choice .segmented{gap:8px!important}#class-choice button{padding:12px!important}#class-choice button[aria-pressed=true]{padding:11px!important}#class-choice button strong{font-size:16px}#class-choice button span{font-size:14px;color:#d5e4e7}.detail-action{display:block!important}#detail-toggle{width:100%;margin-top:12px}}
+
+  #class-choice .class-option{display:flex;flex-direction:column;align-items:stretch;border:1px solid #54747d;border-radius:10px;background:#0b151b;min-height:94px}
+  #class-choice .class-option [data-class]{border:0!important;background:transparent!important;border-radius:10px 10px 0 0!important;min-height:0;flex:1}
+  #class-choice .class-option.is-selected{background:#213e47;border:2px solid #a3c9ce}
+  #class-choice .class-option .class-isin{display:block;margin:0;padding:0 18px 14px;border-top:1px solid #3c5960;font-size:14px;line-height:1.45;color:#d5e3e6;font-weight:400}
+  #class-choice .class-isin-copy{display:inline;color:#f5ee9e!important;text-decoration:underline;cursor:pointer;font:inherit;font-weight:600!important;padding:8px 0;min-height:32px;line-height:1.4;background:none;border:0}
+
   `;
   document.head.append(style);
   // A base URL resolves assets; in-page links must stay in this document.
@@ -92,13 +99,24 @@ window.NDI_HQ_REVIEW={"checkedAt": "2026-10-01", "definition": "Operationelt hov
     if(explanation&&explanation.textContent.startsWith('Totalafkast viser')){
       explanation.firstChild.textContent='Totalafkast er investeringens samlede afkast, inklusive ændringen i andelenes værdi og eventuelle udlodninger, som forudsættes geninvesteret. Afkastet er efter fondens løbende omkostninger, men før skat og dine egne handelsomkostninger samt tillæg ved køb og salg. Grafen viser afkast i procent fra den valgte periodes start, når der er tilstrækkelig historik. Alle tal er i DKK. ';
     }
-    document.querySelectorAll('[data-class]').forEach(b=>{
+    document.querySelectorAll('#class-choice [data-class]').forEach(b=>{
       const accumulating=b.dataset.class==='1';
       const fundForClass=data.funds[Number(b.dataset.class)];
       const isin=fundForClass&&fundForClass.isin?fundForClass.isin:'';
       const start=fundForClass&&fundForClass.inception?'<span class="class-inception">Historik fra '+ndiDate(fundForClass.inception)+'</span>':'';
-      const isinBlock=isin?'<span class="class-isin">Kopiér ISIN-koden (fondens nummer), så du kan sætte den ind i din netbank. <span class="class-isin-copy" data-copy="'+isin+'" tabindex="0" role="button">'+isin+' · Kopiér</span></span>':'';
-      b.innerHTML=accumulating?'<strong>PMINDIAKK – akkumulerende</strong><span>Afkastet bliver i fonden.</span>'+start+'<span class="preview-tax">Relevant til pension, VSO og selskaber, hvis du ønsker afkastet geninvesteret i fonden. Kan også bruges til børneopsparing og frie midler. Ikke til aktiesparekonto.</span>'+isinBlock:'<strong>PMINDI – udbyttebetalende</strong><span>Udbytte udbetales til dig.</span>'+start+'<span class="preview-tax">Typisk relevant for private med frie midler eller aktiesparekonto. Kan også bruges til pension, børneopsparing og selskaber. Ikke til VSO.</span>'+isinBlock;
+      if(!b.parentElement.classList.contains('class-option')){
+        const wrap=document.createElement('div');
+        wrap.className='class-option';
+        b.replaceWith(wrap);
+        wrap.append(b);
+      }
+      b.innerHTML=accumulating?'<strong>PMINDIAKK – akkumulerende</strong><span>Afkastet bliver i fonden.</span>'+start+'<span class="preview-tax">Relevant til pension, VSO og selskaber, hvis du ønsker afkastet geninvesteret i fonden. Kan også bruges til børneopsparing og frie midler. Ikke til aktiesparekonto.</span>':'<strong>PMINDI – udbyttebetalende</strong><span>Udbytte udbetales til dig.</span>'+start+'<span class="preview-tax">Typisk relevant for private med frie midler eller aktiesparekonto. Kan også bruges til pension, børneopsparing og selskaber. Ikke til VSO.</span>';
+      let isinEl=b.parentElement.querySelector(':scope > .class-isin');
+      if(isin){
+        if(!isinEl){isinEl=document.createElement('p');isinEl.className='class-isin';b.after(isinEl);}
+        isinEl.innerHTML='Kopiér ISIN-koden (fondens nummer), så du kan sætte den ind i din netbank. <button type="button" class="class-isin-copy" data-copy="'+isin+'">'+isin+' · Kopiér</button>';
+      }else if(isinEl)isinEl.remove();
+      b.parentElement.classList.toggle('is-selected', b.getAttribute('aria-pressed')==='true');
     });
     if(!document.getElementById('tax-note')){
       const note=document.createElement('p');note.id='tax-note';
@@ -111,7 +129,7 @@ window.NDI_HQ_REVIEW={"checkedAt": "2026-10-01", "definition": "Operationelt hov
     const productLink=document.getElementById('fundmarket-product');
     if(productLink)productLink.href=f.id==='pmindi'?'https://fundmarket.dk/newdeal-invest-kl-n/':'https://fundmarket.dk/newdeal-invest-akk-kl-n/';
     document.getElementById('short-period-warning')?.remove();
-    if(f.id!=='pmindi'){const warning=document.createElement('small');warning.id='short-period-warning';warning.textContent='Bemærk: En anden og kortere periode end PMINDI. Afkast siden start kan ikke sammenlignes direkte.';document.querySelector('#headline .metric')?.append(warning)}
+    if(f.id!=='pmindi'){const warning=document.createElement('small');warning.id='short-period-warning';warning.textContent='Bemærk: En anden og kortere periode end PMINDI. Afkast siden klassens start kan ikke sammenlignes direkte.';document.querySelector('#headline .metric')?.append(warning)}
     const foot=document.querySelector('.investment-footnote');
     if(foot)foot.textContent='Illustrativ beregning på '+f.short+'s totalafkast i DKK fra historikkens start ('+date(f.inception)+') til '+date(f.data.at(-1).d)+', med geninvesteret udbytte. Uafhængig af den valgte grafperiode. Før skat, egne handelsomkostninger samt tillæg ved køb og salg. Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast.';
     const warning=explanation?.querySelector('strong');if(warning)warning.textContent='Historisk afkast er ikke en pålidelig indikator for fremtidigt afkast.';
