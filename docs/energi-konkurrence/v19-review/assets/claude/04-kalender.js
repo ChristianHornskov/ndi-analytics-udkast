@@ -56,14 +56,11 @@
     var mob = '<table class="widget-calendar-mobile" data-cr4><thead><tr><th>Måned</th>' + aar.map(function (y) { return '<th>' + y.aar + '</th>'; }).join('') + '</tr></thead><tbody>' +
       MDR.map(function (lab, i) { return '<tr><th>' + lab + '</th>' + aar.map(function (y) { return celle(y, i, u); }).join('') + '</tr>'; }).join('') +
       '<tr class="widget-calendar-year"><th>Året</th>' + aar.map(function (y) { return '<td>' + aarTekst(y, u) + '</td>'; }).join('') + '</tr></tbody></table>';
-    var startAar = String(u.start || '').slice(0, 4), nuAar = String(u.kursdato || '').slice(0, 4);
     var forkl = '<ul class="cr4-forklaring" aria-label="Forklaring">' +
       '<li><i class="cr4-f-pos"></i>Plus</li><li><i class="cr4-f-neg"></i>Minus</li>' +
       (harStart ? '<li><i class="cr4-f-start"></i>Startperiode, fra ' + dato(u.start) + '</li>' : '') +
       (harNu ? '<li><i class="cr4-f-nu"></i>Igangværende måned</li>' : '') + '</ul>';
-    var note = '<p class="small muted">Totalafkast i DKK. Årsafkast medregner renters rente.' +
-      (startAar && startAar !== nuAar ? ' ' + startAar + ' regnes fra start' + (nuAar ? ', og ' + nuAar + ' er år til dato.' : '.') : (nuAar ? ' ' + nuAar + ' er år til dato.' : '')) + '</p>';
-    kal.innerHTML = desk + mob + forkl + note;
+    kal.innerHTML = desk + mob + forkl;
   }
   var venter = false;
   function plan() {

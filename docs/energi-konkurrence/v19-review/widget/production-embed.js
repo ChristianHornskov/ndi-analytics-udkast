@@ -24,7 +24,7 @@ function drawProductionGrowth(){
  document.querySelectorAll('[data-growth-view]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.growthView===growthView)));
  document.querySelectorAll('[data-growth-period]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.growthPeriod===growthPeriod)));
  const article=$('growth').closest('article');
- article.querySelector('.eyebrow').textContent='UDVIKLING OVER TID';
+ article.querySelector('.eyebrow').hidden=true;article.querySelector('.eyebrow').textContent='';
  article.querySelector('h2').textContent=growthView==='total'?'Dit afkast med udbytte':'Kurs pr. bevis';
  article.querySelector('.chip').hidden=true;
  article.querySelector('.chart + p').textContent=growthView==='total'?'Totalafkast viser kursudvikling og udbytte, som om udbyttet blev investeret igen. Grafen starter ved 100: En værdi på 120 svarer til et afkast på 20 % i den valgte periode. Alle tal er i DKK.':'Kurs viser værdien af ét bevis i DKK, uden at medregne udbetalt udbytte. U markerer den dag, hvor retten til udbytte fragår beviset. Kursen falder derfor normalt, uden at faldet i sig selv er et investeringstab. Vælg Totalafkast for også at medregne udbyttet.';

@@ -16,7 +16,9 @@ window.NDI_HQ_REVIEW={"checkedAt": "2026-10-01", "definition": "Operationelt hov
   #class-choice button[aria-pressed=true] strong:before{content:'✓ ';color:#f5ee9e}
   #class-explanation{padding:12px 0 0!important;margin:0!important;line-height:1.6!important;font-size:14px!important}
   #asof{display:block!important;background:none!important;border:0!important;padding:12px 2px!important;margin:0 0 8px!important;font-size:13px!important;color:#b9ced2!important}
-  #growth-controls{display:grid!important;grid-template-columns:minmax(200px,.8fr) minmax(340px,1.2fr);gap:20px!important;margin:20px 0 10px!important}
+  .up-data-date,#asof,#nasdaq-control,#nasdaq-compact-summary{display:none!important}
+  #headline .metric .value{color:#f5ee9e!important;font-weight:700}
+  #growth-controls{display:flex!important;flex-direction:column;gap:12px!important;margin:20px 0 10px!important}
   #growth-controls .segmented{display:flex!important;flex-wrap:wrap!important;align-content:flex-start;gap:6px!important;background:none!important;padding:0!important}
   #growth-controls .segmented:before{display:block;flex-basis:100%;font-size:12px;font-weight:700;letter-spacing:.07em;color:#aabfc4;margin-bottom:4px}
   #growth-controls .segmented:first-child:before{content:'HVAD VIL DU SE?'}
@@ -24,7 +26,7 @@ window.NDI_HQ_REVIEW={"checkedAt": "2026-10-01", "definition": "Operationelt hov
   #growth-controls button{padding:10px 13px!important;border:1px solid #3e5962!important;border-radius:7px!important;background:#13252d!important;color:#eef4f5!important;min-height:42px}
   #growth-controls [data-growth-view][aria-pressed=true]{background:#89aeb4!important;color:#08161c!important;border-color:#89aeb4!important}
   #growth-controls [data-growth-period][aria-pressed=true]{background:#f5ee9e!important;color:#08161c!important;border-color:#f5ee9e!important}
-  #growth-period-result{grid-column:1/-1;margin:0!important;color:#d6e4e6!important;font-size:14px!important}
+  #growth-controls .segmented:first-child{order:1}#growth-period-result{order:2;margin:0!important;color:#d6e4e6!important;font-size:14px!important}#growth-controls .segmented:nth-child(2){order:3}
   button:focus-visible,summary:focus-visible{outline:3px solid #f5ee9e!important;outline-offset:4px}
   .detail-action{background:#183039!important;border:1px solid #537781!important;border-radius:12px;padding:20px!important;margin:24px 0!important}
   .detail-action p{margin:5px 0!important}#detail-toggle{min-height:46px;background:#89aeb4!important;color:#08161c!important;border:0!important;border-radius:8px;padding:13px 18px!important}
@@ -52,6 +54,15 @@ window.NDI_HQ_REVIEW={"checkedAt": "2026-10-01", "definition": "Operationelt hov
   `;
   document.head.append(style);
   // A base URL resolves assets; in-page links must stay in this document.
+  if(!window.__ndiCopyIsin){
+    window.__ndiCopyIsin=true;
+    const copyIsin=async(el)=>{
+      try{await navigator.clipboard.writeText(el.dataset.copy);const status=document.getElementById('copy-status')||Object.assign(document.createElement('span'),{id:'copy-status',role:'status'});el.closest('#class-options')?.append(status);status.textContent='ISIN kopieret: '+el.dataset.copy;}
+      catch(_){const status=document.getElementById('copy-status')||Object.assign(document.createElement('span'),{id:'copy-status',role:'status'});el.closest('#class-options')?.append(status);status.textContent='ISIN: '+el.dataset.copy;}
+    };
+    document.addEventListener('click',event=>{const el=event.target.closest('[data-copy]');if(!el)return;event.preventDefault();event.stopPropagation();copyIsin(el);},true);
+    document.addEventListener('keydown',event=>{if(event.key!=='Enter'&&event.key!==' ')return;const el=event.target.closest('[data-copy]');if(!el)return;event.preventDefault();copyIsin(el);});
+  }
   window.addEventListener('click',event=>{
     const anchor=event.target.closest('a[href^="#"]');
     if(!anchor)return;
@@ -80,7 +91,10 @@ window.NDI_HQ_REVIEW={"checkedAt": "2026-10-01", "definition": "Operationelt hov
     }
     document.querySelectorAll('[data-class]').forEach(b=>{
       const accumulating=b.dataset.class==='1';
-      b.innerHTML=accumulating?'<strong>PMINDIAKK – akkumulerende</strong><span>Afkastet bliver i fonden.</span><span class="preview-tax">Relevant til pension, VSO og selskaber, hvis du ønsker afkastet geninvesteret i fonden. Kan også bruges til børneopsparing og frie midler. Ikke til aktiesparekonto.</span>':'<strong>PMINDI – udbyttebetalende</strong><span>Udbytte udbetales til dig.</span><span class="preview-tax">Typisk relevant for private med frie midler eller aktiesparekonto. Kan også bruges til pension, børneopsparing og selskaber. Ikke til VSO.</span>';
+      const fundForClass=data.funds[Number(b.dataset.class)];
+      const isin=fundForClass&&fundForClass.isin?fundForClass.isin:'';
+      const isinBlock=isin?'<span class="class-isin">Kopiér ISIN-koden, så du kan sætte den ind i din netbank. <span class="class-isin-copy" data-copy="'+isin+'" tabindex="0" role="button">'+isin+' · Kopiér</span></span>':'';
+      b.innerHTML=accumulating?'<strong>PMINDIAKK – akkumulerende</strong><span>Afkastet bliver i fonden.</span><span class="preview-tax">Relevant til pension, VSO og selskaber, hvis du ønsker afkastet geninvesteret i fonden. Kan også bruges til børneopsparing og frie midler. Ikke til aktiesparekonto.</span>'+isinBlock:'<strong>PMINDI – udbyttebetalende</strong><span>Udbytte udbetales til dig.</span><span class="preview-tax">Typisk relevant for private med frie midler eller aktiesparekonto. Kan også bruges til pension, børneopsparing og selskaber. Ikke til VSO.</span>'+isinBlock;
     });
     if(!document.getElementById('tax-note')){
       const note=document.createElement('p');note.id='tax-note';
@@ -187,15 +201,15 @@ window.NDI_HQ_REVIEW={"checkedAt": "2026-10-01", "definition": "Operationelt hov
 // All comparisons are rebased on exactly matching dates; never fill missing FX.
 let nasdaqEnabled=true;
 function ensureNasdaq(){
- if(!document.getElementById('nasdaq-control')&&document.getElementById('growth-controls')){
-  const label=document.createElement('label');label.id='nasdaq-control';
-  label.innerHTML='<input type="checkbox" id="nasdaq-toggle" checked> Sammenlign med Nasdaq-100 (totalafkast i DKK)';
-  document.getElementById('growth-controls').after(label);
-  const note=document.createElement('p');note.id='nasdaq-note';label.after(note);
-  label.querySelector('input').onchange=e=>{nasdaqEnabled=e.target.checked;drawProductionGrowth()};
+ nasdaqEnabled=true;
+ document.getElementById('nasdaq-control')?.remove();
+ if(!document.getElementById('nasdaq-note')&&document.getElementById('growth')){
+  const note=document.createElement('p');note.id='nasdaq-note';
+  const growth=document.getElementById('growth');
+  const after=growth.nextElementSibling;
+  if(after) after.after(note); else growth.after(note);
  }
- const control=document.getElementById('nasdaq-control');if(control){control.hidden=growthView!=='total';control.style.display=growthView==='total'?'flex':'none'}
- const note=document.getElementById('nasdaq-note');if(note)note.hidden=growthView!=='total'||!nasdaqEnabled;
+ const note=document.getElementById('nasdaq-note');if(note)note.hidden=growthView!=='total';
 }
 function comparisonPoints(fund,period,source){
  let points=fund.data.slice();const end=new Date(points.at(-1).d+'T12:00:00Z');let cutoff=null;
@@ -331,13 +345,33 @@ html{overflow-anchor:none}#preview-risk-summary{display:none!important;margin-to
 }
 
 `;document.head.append(readableStyle);
+
+function setGraphContextNote(compare){
+ const fund=data.funds[selected];
+ const dateLabel=d=>new Date(d+'T12:00:00Z').toLocaleDateString('da-DK',{day:'numeric',month:'short',year:'numeric'});
+ const box=document.getElementById('growth');
+ const explanation=box&&box.nextElementSibling&&box.nextElementSibling.tagName==='P'?box.nextElementSibling:document.getElementById('graph-context-note')?.previousElementSibling;
+ if(!explanation)return;
+ let ctx=document.getElementById('graph-context-note');
+ if(!ctx){ctx=document.createElement('p');ctx.id='graph-context-note';ctx.className='muted small';explanation.after(ctx)}
+ else if(ctx.previousElementSibling!==explanation)explanation.after(ctx);
+ const official=typeof navEvidence!=='undefined'&&navEvidence?.asOf===data.asOf?navEvidence.funds?.[fund.id]?.latestOfficial:null;
+ const verified=official&&official.reportDate===data.asOf&&official.date<=data.asOf;
+ const holdDate=data.positionsAsOf||data.asOf;
+ const returnDate=fund.performanceAsOf||data.asOf;
+ const parts=['Afkast til '+dateLabel(returnDate)+'. Beholdning pr. '+dateLabel(holdDate)+'.'];
+ parts.push(verified?'Seneste officielle kursdato: '+dateLabel(official.date)+'.':'Officiel kursdato afventer verificering.');
+ parts.push(fund.performanceAsOf?'Grafen følger Fundmarkets officielle dagskurser.':'Afkastserien bygger på rapporten fra '+dateLabel(data.asOf)+'. Ikke realtidskurser.');
+ if(growthView==='total'&&compare)parts.push('Nasdaq-100 er med til sammenligning, men fonden har ikke et officielt benchmark.');
+ ctx.textContent=parts.join(' ');
+}
 drawNasdaq=function(){
- const previousSummary=document.getElementById('nasdaq-compact-summary');if(previousSummary)previousSummary.hidden=true;
- if(growthView!=='total')return;
+ document.getElementById('nasdaq-compact-summary')?.remove();
+ if(growthView!=='total'){setGraphContextNote(false);return;}
  const fund=data.funds[selected],box=document.getElementById('growth'),note=document.getElementById('nasdaq-note');
  let compare=nasdaqEnabled&&window.NDI_NASDAQ?.validated;
  const source=window.NDI_NASDAQ;
- const points=comparisonPoints(fund,growthPeriod,source);if(points.length<2){if(note){note.hidden=false;note.textContent='Der er ikke tilstrækkelig historik til at sammenligne den valgte periode.'}return;}
+ const points=comparisonPoints(fund,growthPeriod,source);if(points.length<2){if(note){note.hidden=false;note.textContent='Der er ikke tilstrækkelig historik til at sammenligne den valgte periode.'}setGraphContextNote(false);return;}
  const indexPoints=points.filter(p=>Number.isFinite(p.index));compare=compare&&indexPoints.length>=2;
  const end=points.at(-1),firstDate=Date.parse(points[0].d),lastDate=Date.parse(end.d);
  const mobile=box.clientWidth<600,W=mobile?Math.max(220,box.clientWidth):1000,H=mobile?Math.round(Math.max(230,Math.min(300,box.clientWidth*.78))):410,L=mobile?43:68,R=mobile?8:92,T=24,B=44;
@@ -357,7 +391,7 @@ drawNasdaq=function(){
  document.getElementById('growth-period-result').textContent=dateLabel(points[0].d)+' – '+dateLabel(end.d)+' · Totalafkast i DKK · '+(fund.performanceAsOf?'officielle kursdatoer':'rapportdatoer')+' · 0 % ved periodens start';
  const explanation=box.nextElementSibling;if(explanation?.tagName==='P')explanation.firstChild.textContent='Totalafkast er investeringens samlede afkast, inklusive ændringen i andelenes værdi og eventuelle udlodninger, som forudsættes geninvesteret. Afkastet er efter fondens løbende omkostninger, men før skat, egne handelsomkostninger og tillæg ved køb og salg. Grafen viser afkast i procent fra den valgte periodes start. Alle tal er i DKK. ';
  if(note){if(explanation&&note.previousElementSibling!==explanation)explanation.after(note);note.hidden=!nasdaqEnabled;note.innerHTML=compare?'PMINDIs periode og afkast ændres ikke af sammenligningen. Begge serier starter ved 0 % på samme dato og medregner geninvesteret udbytte i DKK. Fondens observationer følger rapportdatoerne, ikke en fuldt afstemt serie af officielle kursdatoer. Fonden er efter løbende omkostninger; indekset har ingen fondsomkostninger. Nasdaq-100 er en sammenligning, ikke fondens benchmark. <a href="https://indexes.nasdaq.com/Index/Overview/XNDX" target="_blank" rel="noopener">Nasdaq (XNDX, totalafkast)</a> · <a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html" target="_blank" rel="noopener">USD/DKK via ECB (daglige referencekurser, ikke valutakurser ved USA-børsluk)</a>. Nasdaq vises til '+dateLabel(indexEnd.d)+'. Manglende observationer udfyldes ikke; der tegnes ikke videre efter sidste tilgængelige indeksdato.':'Nasdaq-data med samme startdato er ikke tilgængelige; fondens afkast og periode vises uændret.'}
- if(note&&compare)note.innerHTML=commonComparison+note.innerHTML.replace('PMINDIs periode',esc(fund.short)+'s periode');
+ if(note&&compare)note.innerHTML=note.innerHTML.replace('PMINDIs periode',esc(fund.short)+'s periode');
  if(note&&fund.performanceAsOf)note.innerHTML=note.innerHTML.replace('Fondens observationer følger rapportdatoerne, ikke en fuldt afstemt serie af officielle kursdatoer.','Fondens observationer følger Fundmarkets officielle kursdatoer.');
  // Keep full methodology and source links in the always-open information box.
  const information=document.getElementById('important-information');
@@ -365,12 +399,9 @@ drawNasdaq=function(){
   let section=document.getElementById('nasdaq-information');
   if(!section){section=document.createElement('section');section.id='nasdaq-information';section.innerHTML='<h3>Sammenligning med Nasdaq-100</h3>';information.append(section)}
   section.append(note);section.hidden=!nasdaqEnabled;note.style.borderTop='0';note.style.paddingTop='0';
-  let compact=previousSummary;
-  if(!compact){compact=document.createElement('p');compact.id='nasdaq-compact-summary';compact.className='small';}
-  if(explanation)explanation.after(compact);
-  compact.hidden=!nasdaqEnabled;
-  compact.innerHTML=compare?commonComparison.replace('<br>',''):'Nasdaq-data for den valgte periode er ikke tilgængelige. Fondens afkast vises uændret.';
  }
+ document.getElementById('nasdaq-compact-summary')?.remove();
+ setGraphContextNote(compare);
  const svg=box.querySelector('svg'),cursor=box.querySelector('.growth-cursor'),tooltip=box.querySelector('.growth-tooltip');let active=points.length-1;
  function show(i){active=Math.max(0,Math.min(points.length-1,i));const p=points[active],xx=x(p.d);cursor.setAttribute('x1',xx);cursor.setAttribute('x2',xx);cursor.setAttribute('visibility','visible');for(const [cls,key] of [['fund-dot','fund'],['index-dot','index']]){const dot=box.querySelector('.'+cls);if(dot){dot.setAttribute('cx',xx);dot.setAttribute('cy',Number.isFinite(p[key])?y(p[key]-100):0);dot.setAttribute('visibility',Number.isFinite(p[key])?'visible':'hidden')}}tooltip.textContent=dateLabel(p.d)+' · '+fund.short+(fund.performanceAsOf?' (kursdato): ':' (rapportdato): ')+signed(p.fund-100)+(compare?' · Nasdaq-100: '+(Number.isFinite(p.index)?signed(p.index-100):'ingen observation'):'')}
  function pointer(e){const r=svg.getBoundingClientRect(),target=firstDate+Math.max(0,Math.min(1,((e.clientX-r.left)/r.width*W-L)/(W-L-R)))*(lastDate-firstDate);let i=0;for(let j=1;j<points.length;j++)if(Math.abs(Date.parse(points[j].d)-target)<Math.abs(Date.parse(points[i].d)-target))i=j;show(i)}

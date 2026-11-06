@@ -25,31 +25,28 @@
       metric('Totalafkast siden start', pct(all.afkast), f.inception + ' til ' + f.performanceAsOf) +
       metric('Gennemsnitligt årligt afkast', u.aarligtSidenStart == null ? '—' : pct(u.aarligtSidenStart), u.aarligtSidenStart == null ? 'Kræver mindst ét års historik' : 'Siden start · efter løbende omkostninger') +
       metric('100.000 kr. ved start', n(all.vaerdi100000, 0) + ' kr.', 'Med geninvesteret udbytte · før skat');
-    let copies = document.getElementById('preview-copy-isins');
-    if (!copies) {
-      copies = document.createElement('div'); copies.id = 'preview-copy-isins';
-      copies.innerHTML = window.REVIEW_FUNDS.map(item => '<button type="button" data-copy="'+item.isin+'">'+item.id+' · '+item.isin+' <span>Kopiér ISIN</span></button>').join('') + '<span id="copy-status" role="status"></span>';
-      document.getElementById('class-choice').after(copies);
-      copies.querySelectorAll('button').forEach(button => button.onclick = async () => {
-        try { await navigator.clipboard.writeText(button.dataset.copy); document.getElementById('copy-status').textContent = 'ISIN kopieret: '+button.dataset.copy; }
-        catch (_) { document.getElementById('copy-status').textContent = 'ISIN: '+button.dataset.copy; }
-      });
-    }
+    document.getElementById('preview-copy-isins')?.remove();
+    const chartArticle = document.getElementById('growth').closest('article');
     let calendar = document.getElementById('preview-calendar');
+    if (calendar) { calendar.remove(); calendar = null; }
     if (!calendar) {
       calendar = document.createElement('section'); calendar.id = 'preview-calendar'; calendar.setAttribute('aria-label','Afkastkalender');
-      document.getElementById('growth').closest('article').after(calendar);
+      const value = (v, partial) => v == null ? '—' : n(v,1)+' %'+(partial?' *':'');
+      calendar.innerHTML = '<div class="tablewrap" tabindex="0" role="region" aria-label="Månedlige afkast; rul vandret på små skærme"><table><thead><tr><th>År</th><th>Årsafkast</th>'+['Jan','Feb','Mar','Apr','Maj','Jun','Jul','Aug','Sep','Okt','Nov','Dec'].map(m=>'<th>'+m+'</th>').join('')+'</tr></thead><tbody>'+u.kalender.slice(0,3).map(year=>'<tr><th>'+year.aar+'</th><td class="annual">'+value(year.afkast,year.delvis)+'</td>'+Array.from({length:12},(_,i)=>{const month=year.maaneder.find(m=>Number(m.maaned.slice(-2))===i+1);return '<td class="heat '+(!month?'':month.afkast>=0?'pos':'neg')+'">'+value(month?.afkast,month?.delvis)+'</td>';}).join('')+'</tr>').join('')+'</tbody></table></div>';
+      const years=u.kalender.slice(0,3);
+      const mobileCalendar='<table class="widget-calendar-mobile"><thead><tr><th>Måned</th>'+years.map(year=>'<th>'+year.aar+'</th>').join('')+'</tr></thead><tbody>'+['Jan','Feb','Mar','Apr','Maj','Jun','Jul','Aug','Sep','Okt','Nov','Dec'].map((label,i)=>'<tr><th>'+label+'</th>'+years.map(year=>{const month=year.maaneder.find(m=>Number(m.maaned.slice(-2))===i+1);return '<td class="heat '+(!month?'':month.afkast>=0?'pos':'neg')+'">'+value(month?.afkast,month?.delvis)+'</td>';}).join('')+'</tr>').join('')+'<tr class="widget-calendar-year"><th>Året</th>'+years.map(year=>'<td>'+value(year.afkast,year.delvis)+'</td>').join('')+'</tr></tbody></table>';
+      calendar.querySelector('.tablewrap').insertAdjacentHTML('afterend',mobileCalendar);
     }
-    const value = (v, partial) => v == null ? '—' : n(v,1)+' %'+(partial?' *':'');
-    calendar.innerHTML = '<div class="tablewrap" tabindex="0" role="region" aria-label="Månedlige afkast; rul vandret på små skærme"><table><thead><tr><th>År</th><th>Årsafkast</th>'+['Jan','Feb','Mar','Apr','Maj','Jun','Jul','Aug','Sep','Okt','Nov','Dec'].map(m=>'<th>'+m+'</th>').join('')+'</tr></thead><tbody>'+u.kalender.slice(0,3).map(year=>'<tr><th>'+year.aar+'</th><td class="annual">'+value(year.afkast,year.delvis)+'</td>'+Array.from({length:12},(_,i)=>{const month=year.maaneder.find(m=>Number(m.maaned.slice(-2))===i+1);return '<td class="heat '+(!month?'':month.afkast>=0?'pos':'neg')+'">'+value(month?.afkast,month?.delvis)+'</td>';}).join('')+'</tr>').join('')+'</tbody></table></div><p class="small muted">Totalafkast i DKK. * Igangværende måned eller år. Årsafkast medregner renters rente.</p>';
-    const years=u.kalender.slice(0,3);
-    const mobileCalendar='<table class="widget-calendar-mobile"><thead><tr><th>Måned</th>'+years.map(year=>'<th>'+year.aar+'</th>').join('')+'</tr></thead><tbody>'+['Jan','Feb','Mar','Apr','Maj','Jun','Jul','Aug','Sep','Okt','Nov','Dec'].map((label,i)=>'<tr><th>'+label+'</th>'+years.map(year=>{const month=year.maaneder.find(m=>Number(m.maaned.slice(-2))===i+1);return '<td class="heat '+(!month?'':month.afkast>=0?'pos':'neg')+'">'+value(month?.afkast,month?.delvis)+'</td>';}).join('')+'</tr>').join('')+'<tr class="widget-calendar-year"><th>Året</th>'+years.map(year=>'<td>'+value(year.afkast,year.delvis)+'</td>').join('')+'</tr></tbody></table>';
-    calendar.querySelector('.tablewrap').insertAdjacentHTML('afterend',mobileCalendar);
+    if (chartArticle && calendar.parentElement !== chartArticle) {
+      const riskExplained = document.getElementById('risk-explained');
+      if (riskExplained && riskExplained.parentElement === chartArticle) chartArticle.insertBefore(calendar, riskExplained);
+      else chartArticle.appendChild(calendar);
+    }
     let entries = document.getElementById('preview-entries');
     if (!entries) {
       entries = document.createElement('nav'); entries.id='preview-entries'; entries.className='review-entry-cards'; entries.setAttribute('aria-label','Gå på opdagelse');
       entries.innerHTML='<a class="entry-portfolio" href="../portfolio/index.html"><div class="entry-art" aria-hidden="true"><div class="entry-holdings"></div><span>AFKAST · RISIKO · SELSKABER</span></div><div class="entry-copy"><span><strong>Gå på opdagelse i porteføljen</strong><small>Få overblikket over afkast, udsving og de selskaber, fonden ejer.</small></span><span class="entry-arrow" aria-hidden="true">↗</span></div></a><a class="entry-tech" href="../tech.html"><div class="entry-art" aria-hidden="true"><img src="../assets/img/v5-fotos/chips-siliciumwafer.webp" alt=""><span>12 TEMAER · ÉN FORBUNDET VERDEN</span></div><div class="entry-copy"><span><strong>Gå på opdagelse i tech</strong><small>Fra chips og strøm til rumfart. Se teknologien og forbindelserne bag.</small></span><span class="entry-arrow" aria-hidden="true">↗</span></div></a>' ;
-      calendar.after(entries);
+      chartArticle.after(entries);
     }
     const source=data.funds[selected];
     const top=source.positions.filter(p=>p.isin&&p.weight>0).sort((a,b)=>b.weight-a.weight).slice(0,3);

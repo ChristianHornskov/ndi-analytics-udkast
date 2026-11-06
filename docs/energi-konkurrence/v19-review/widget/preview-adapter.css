@@ -48,3 +48,10 @@ button[data-copy],#high-all,#high-unknown{min-height:44px;min-width:44px}
 #preview-entries .entry-art>span,#preview-entries .entry-holdings-title span,#preview-entries .entry-rank{font-size:12px}
 
 .ndi-sr-heading{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+
+#class-choice button .class-isin{display:block;margin-top:10px;padding-top:8px;border-top:1px solid #3c5960;font-size:12px;line-height:1.45;color:#c5d7db;font-weight:400}
+#class-choice button .class-isin-copy{display:inline-block;color:#f5ee9e!important;text-decoration:underline;cursor:pointer;font-weight:600!important;padding:8px 0;min-height:32px;line-height:1.4}
+#class-options #copy-status{display:block;margin-top:8px;font-size:13px;color:#d6e4e6}
+#preview-calendar{margin-top:18px;padding-top:8px}
+article.panel #preview-calendar .tablewrap{border-color:#30454d}
+#graph-context-note{margin:10px 0 0;line-height:1.55}
