@@ -93,8 +93,13 @@ window.NDI_HQ_REVIEW={"checkedAt": "2026-10-01", "definition": "Operationelt hov
   function improve(){
     if(typeof data==='undefined'||!data)return;
     document.querySelectorAll('a[href^="https://"],a[href^="http://"]').forEach(a=>{a.target='_blank';a.rel='noopener noreferrer'});
-    const copyChanges={'Dit afkast med udbytte':'Afkast med geninvesteret udbytte','Din investering er fordelt på':'Porteføljen er fordelt på','Få mere indsigt i din investering':'Få mere indsigt i porteføljen'};
-    document.querySelectorAll('h1,h2,h3,.detail-action strong').forEach(el=>{if(copyChanges[el.textContent])el.textContent=copyChanges[el.textContent]});
+    const returnHeading=data.funds[selected]&&data.funds[selected].id==='pmindi'?'Afkast med geninvesteret udbytte':'Afkast';
+    const returnHeadings=new Set(['Dit afkast med udbytte','Afkast med geninvesteret udbytte','Afkast','Afkast i klassen']);
+    const copyChanges={'Din investering er fordelt på':'Porteføljen er fordelt på','Få mere indsigt i din investering':'Få mere indsigt i porteføljen'};
+    document.querySelectorAll('h1,h2,h3,.detail-action strong').forEach(el=>{
+      if(returnHeadings.has(el.textContent))el.textContent=returnHeading;
+      else if(copyChanges[el.textContent])el.textContent=copyChanges[el.textContent];
+    });
     const explanation=document.querySelector('#growth + p');
     if(explanation&&explanation.textContent.startsWith('Totalafkast viser')){
       explanation.firstChild.textContent='Totalafkast er investeringens samlede afkast, inklusive ændringen i andelenes værdi og eventuelle udlodninger, som forudsættes geninvesteret. Afkastet er efter fondens løbende omkostninger, men før skat og dine egne handelsomkostninger samt tillæg ved køb og salg. Grafen viser afkast i procent fra den valgte periodes start, når der er tilstrækkelig historik. Alle tal er i DKK. ';
@@ -114,7 +119,7 @@ window.NDI_HQ_REVIEW={"checkedAt": "2026-10-01", "definition": "Operationelt hov
       let isinEl=b.parentElement.querySelector(':scope > .class-isin');
       if(isin){
         if(!isinEl){isinEl=document.createElement('p');isinEl.className='class-isin';b.after(isinEl);}
-        isinEl.innerHTML='Kopiér ISIN-koden (fondens nummer), så du kan sætte den ind i din netbank. <button type="button" class="class-isin-copy" data-copy="'+isin+'">'+isin+' · Kopiér</button>';
+        isinEl.innerHTML='Kopiér ISIN-koden (klassens nummer), så du kan sætte den ind i din netbank. <button type="button" class="class-isin-copy" data-copy="'+isin+'">'+isin+' · Kopiér</button>';
       }else if(isinEl)isinEl.remove();
       b.parentElement.classList.toggle('is-selected', b.getAttribute('aria-pressed')==='true');
     });

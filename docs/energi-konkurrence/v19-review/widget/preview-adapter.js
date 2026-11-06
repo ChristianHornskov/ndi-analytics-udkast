@@ -25,7 +25,7 @@
     document.getElementById('headline').innerHTML =
       metric('Totalafkast siden klassens start', pct(all.afkast), ndiDate(f.inception) + ' til ' + ndiDate(f.performanceAsOf)) +
       metric('Gennemsnitligt årligt afkast', u.aarligtSidenStart == null ? '—' : pct(u.aarligtSidenStart), u.aarligtSidenStart == null ? 'Kræver mindst ét års historik' : 'Siden klassens start · efter løbende omkostninger') +
-      metric('100.000 kr. ved klassens start', n(all.vaerdi100000, 0) + ' kr.', 'Med geninvesteret udbytte · før skat');
+      metric('100.000 kr. ved klassens start', n(all.vaerdi100000, 0) + ' kr.', f.id==='pmindi' ? 'Med geninvesteret udbytte · før skat' : 'Afkastet bliver i fonden · før skat');
     let reinvestNote=document.getElementById('preview-reinvest-note');
     if(f.id==='pmindi'){
       if(!reinvestNote){reinvestNote=document.createElement('p');reinvestNote.id='preview-reinvest-note';reinvestNote.className='preview-reinvest-note';document.getElementById('headline').after(reinvestNote);}
