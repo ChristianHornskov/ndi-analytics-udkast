@@ -370,6 +370,22 @@ html{overflow-anchor:none}#preview-risk-summary{display:none!important;margin-to
  #growth-controls button{min-height:44px!important;padding:7px 9px!important}
  #growth .growth-tooltip{font-size:12px!important;min-height:40px!important}
 }
+/* Grafkassens top 2026-11-06: overskrift og tal på én linje, valgene på den næste. Mobil er uændret. */
+@media(min-width:701px){
+ #overview .primary-chart .panelhead{flex-wrap:wrap;align-items:center;gap:8px 32px;min-height:57px}
+ #overview .primary-chart .panelhead h2{margin:0}
+ #overview .primary-chart .panelhead .return-legend{flex-wrap:nowrap;margin:0 0 0 auto}
+ #overview .primary-chart .panelhead .return-legend>div{min-width:0}
+ #growth-controls{display:grid!important;grid-template-columns:auto minmax(0,1fr);gap:12px 32px!important;align-items:end;margin:14px 0 12px!important}
+ #growth-controls .segmented{position:relative;padding-top:24px!important}
+ #growth-controls .segmented:before{position:absolute;top:0;left:0;margin:0;white-space:nowrap}
+ #growth-controls .segmented:nth-child(2){order:2}
+ #growth-controls #growth-period-result{order:3;grid-column:1/-1}
+}
+@media(min-width:1100px){
+ #growth-controls{grid-template-columns:auto auto minmax(0,1fr)}
+ #growth-controls #growth-period-result{grid-column:auto;display:flex;align-items:center;min-height:42px;line-height:1.5}
+}
 
 `;document.head.append(readableStyle);
 
@@ -393,6 +409,7 @@ function setGraphContextNote(compare){
  ctx.textContent=parts.join(' ');
 }
 drawNasdaq=function(){
+ document.querySelector('.panelhead>.return-legend')?.remove();
  document.getElementById('nasdaq-compact-summary')?.remove();
  if(growthView!=='total'){setGraphContextNote(false);return;}
  const fund=data.funds[selected],box=document.getElementById('growth'),note=document.getElementById('nasdaq-note');
@@ -415,6 +432,8 @@ drawNasdaq=function(){
  let labelY=y(end.fund-100),indexY=indexEnd?y(indexReturn):0;if(compare&&Math.abs(labelY-indexY)<24)indexY=labelY+26;
  const endpoint=(key,color,yy)=>{if(mobile)return '';const p=key==='index'?indexEnd:end;return `<line x1="${x(p.d)}" x2="${W-R+7}" y1="${y(p[key]-100)}" y2="${yy}" stroke="${color}" stroke-dasharray="${key==='index'?'2 3':'0'}"/><text x="${W-R+10}" y="${yy+5}" fill="${color}" font-size="14" font-weight="700">${signed(p[key]-100)}</text>`};
  box.innerHTML=`<div class="return-legend"><div style="--series-color:${fundColor}"><span>${esc(fund.short)}</span><strong>${signed(end.fund-100)}</strong></div>${compare?`<div style="--series-color:${indexColor}"><span>Nasdaq-100 · til sammenligning · pr. ${dateLabel(indexEnd.d)}</span><strong>${signed(indexReturn)}</strong></div>`:''}</div><svg viewBox="0 0 ${W} ${H}" role="img" tabindex="0" aria-label="Totalafkast i procent fra periodens start, ${esc(fund.short)}${compare?' og Nasdaq-100':''}">${grid}${compare?`<path d="${path('index')}" stroke="${indexColor}" stroke-width="2" stroke-dasharray="7 5" fill="none"/>`:''}<path d="${path('fund')}" stroke="${fundColor}" stroke-width="3.2" fill="none"/>${endpoint('fund',fundColor,labelY)}${compare?endpoint('index',indexColor,indexY):''}<line class="growth-cursor" y1="${T}" y2="${H-B}" stroke="#dae9ec" visibility="hidden"/><circle class="fund-dot" r="5" fill="${fundColor}" visibility="hidden"/>${compare?`<circle class="index-dot" r="4" fill="${indexColor}" visibility="hidden"/>`:''}</svg><p class="small growth-tooltip" aria-live="polite">Peg på grafen for at se dato og afkast. På mobil: træk en finger hen over kurven.</p>`;
+ // Desktop: tallene står ud for overskriften. Mobil: de bliver lige over grafen.
+ if(matchMedia('(min-width:701px)').matches)box.closest('article').querySelector('.panelhead').append(box.querySelector('.return-legend'));
  document.getElementById('growth-period-result').textContent=dateLabel(points[0].d)+' – '+dateLabel(end.d)+' · Totalafkast i DKK · '+(fund.performanceAsOf?'officielle kursdatoer':'rapportdatoer')+' · 0 % ved periodens start';
  const explanation=box.nextElementSibling;if(explanation?.tagName==='P')explanation.firstChild.textContent='Totalafkast er investeringens samlede afkast, inklusive ændringen i andelenes værdi og eventuelle udlodninger, som forudsættes geninvesteret. Afkastet er efter fondens løbende omkostninger, men før skat, egne handelsomkostninger og tillæg ved køb og salg. Grafen viser afkast i procent fra den valgte periodes start. Alle tal er i DKK. ';
  if(note){if(explanation&&note.previousElementSibling!==explanation)explanation.after(note);note.hidden=!nasdaqEnabled;note.innerHTML=compare?'PMINDIs periode og afkast ændres ikke af sammenligningen. Begge serier starter ved 0 % på samme dato og medregner geninvesteret udbytte i DKK. Fondens observationer følger rapportdatoerne, ikke en fuldt afstemt serie af officielle kursdatoer. Fonden er efter løbende omkostninger; indekset har ingen fondsomkostninger. Nasdaq-100 er en sammenligning, ikke fondens benchmark. <a href="https://indexes.nasdaq.com/Index/Overview/XNDX" target="_blank" rel="noopener">Nasdaq (XNDX, totalafkast)</a> · <a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html" target="_blank" rel="noopener">USD/DKK via ECB (daglige referencekurser, ikke valutakurser ved USA-børsluk)</a>. Nasdaq vises til '+dateLabel(indexEnd.d)+'. Manglende observationer udfyldes ikke; der tegnes ikke videre efter sidste tilgængelige indeksdato.':'Nasdaq-data med samme startdato er ikke tilgængelige; fondens afkast og periode vises uændret.'}
