@@ -13,6 +13,7 @@
   }
   const classChoice=document.getElementById("class-choice");
   if(classChoice)new MutationObserver(highlightAccounts).observe(classChoice,{childList:true,subtree:true});
+  const ndiDate=d=>{const x=new Date(String(d).length>=10&&String(d)[4]==='-'?String(d).slice(0,10)+'T12:00:00Z':d);if(Number.isNaN(+x))return d;const p=n=>String(n).padStart(2,'0');return p(x.getUTCDate())+'.'+p(x.getUTCMonth()+1)+'.'+x.getUTCFullYear()};
   function adapt() {
     if (!data || !window.REVIEW_FUNDS) return;
     const f = data.funds[selected];
@@ -22,9 +23,14 @@
     const u = summary.u;
     const all = u.perioder.find(p => p.id === 'all');
     document.getElementById('headline').innerHTML =
-      metric('Totalafkast siden start', pct(all.afkast), f.inception + ' til ' + f.performanceAsOf) +
-      metric('Gennemsnitligt årligt afkast', u.aarligtSidenStart == null ? '—' : pct(u.aarligtSidenStart), u.aarligtSidenStart == null ? 'Kræver mindst ét års historik' : 'Siden start · efter løbende omkostninger') +
-      metric('100.000 kr. ved start', n(all.vaerdi100000, 0) + ' kr.', 'Med geninvesteret udbytte · før skat');
+      metric('Totalafkast siden klassens start', pct(all.afkast), ndiDate(f.inception) + ' til ' + ndiDate(f.performanceAsOf)) +
+      metric('Gennemsnitligt årligt afkast', u.aarligtSidenStart == null ? '—' : pct(u.aarligtSidenStart), u.aarligtSidenStart == null ? 'Kræver mindst ét års historik' : 'Siden klassens start · efter løbende omkostninger') +
+      metric('100.000 kr. ved klassens start', n(all.vaerdi100000, 0) + ' kr.', 'Med geninvesteret udbytte · før skat');
+    let reinvestNote=document.getElementById('preview-reinvest-note');
+    if(f.id==='pmindi'){
+      if(!reinvestNote){reinvestNote=document.createElement('p');reinvestNote.id='preview-reinvest-note';reinvestNote.className='preview-reinvest-note';document.getElementById('headline').after(reinvestNote);}
+      reinvestNote.textContent='Totalafkastet medregner udbyttet, som om det var sat ind igen.';
+    }else if(reinvestNote){reinvestNote.remove();}
     document.getElementById('preview-copy-isins')?.remove();
     const chartArticle = document.getElementById('growth').closest('article');
     let calendar = document.getElementById('preview-calendar');

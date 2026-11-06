@@ -55,3 +55,16 @@ button[data-copy],#high-all,#high-unknown{min-height:44px;min-width:44px}
 #preview-calendar{margin-top:18px;padding-top:8px}
 article.panel #preview-calendar .tablewrap{border-color:#30454d}
 #graph-context-note{margin:10px 0 0;line-height:1.55}
+
+/* Grete extras (not Christian's 14): contrast/size of grey notes and mobile calendar. */
+.preview-reinvest-note{margin:-8px 0 18px;font-size:14px;line-height:1.5;color:#d7e6e9;max-width:52rem}
+#tax-note{font-size:14px;line-height:1.55;color:#d2e0e3}
+#graph-context-note{font-size:14px;line-height:1.6;color:#d2e0e3}
+.simple-view #growth + p.small,.simple-view p.small.muted{color:#cddce0}
+@media(max-width:600px){
+  #tax-note,.preview-tax,#graph-context-note,.preview-reinvest-note,.simple-view #growth + p{font-size:15px;line-height:1.55;color:#dce8ea}
+  #class-choice button .class-isin{font-size:14px;color:#d5e3e6}
+  #preview-calendar .widget-calendar-mobile th,#preview-calendar .widget-calendar-mobile td{padding:11px 6px;font-size:14px}
+}
+
+#class-choice button .class-inception{display:block;font-size:13px;color:#d2e0e3;font-weight:500}
