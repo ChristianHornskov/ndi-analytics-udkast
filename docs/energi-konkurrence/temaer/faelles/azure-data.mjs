@@ -18,6 +18,6 @@ export async function loadAzure(){
  return {pointer,data,fundDocuments:docs.funds,highs,nasdaq,checkedAt:new Date().toISOString()};
 }
 export function marketRow(b,f,p){const r=b.highs.funds.find(x=>x.short===f.short)?.rows.find(x=>x.isin===p.isin);return r&&p.listingIdentitySha256&&r.listingIdentitySha256===p.listingIdentitySha256?r:null;}
-export const companies=f=>f.positions.filter(p=>/^[A-Z]{2}[A-Z0-9]{10}$/.test(p.isin||'')&&p.weight>0&&!/etoro/i.test(p.name||''));
+export const companies=f=>f.positions.filter(p=>/^[A-Z]{2}[A-Z0-9]{10}$/.test(p.isin||'')&&p.weight>0);
 export function freshness(b){const age=(Date.now()-Date.parse(b.data.asOf+'T00:00:00Z'))/864e5;return `Azure · rapport ${b.data.asOf} · kontrolleret ${new Date(b.checkedAt).toLocaleTimeString('da-DK',{hour:'2-digit',minute:'2-digit'})}${age>4?' · Rapporten er mere end fire dage gammel.':''}`;}
 export function watch(refresh){const run=()=>{if(!document.hidden)void refresh();};const timer=setInterval(run,300000);document.addEventListener('visibilitychange',run);window.addEventListener('online',run);return()=>{clearInterval(timer);document.removeEventListener('visibilitychange',run);window.removeEventListener('online',run);};}

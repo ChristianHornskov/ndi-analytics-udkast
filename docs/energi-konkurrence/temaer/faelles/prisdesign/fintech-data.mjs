@@ -26,7 +26,7 @@ export function fintechModel(bundle,labels={}){
  }
  const known=new Set(members.map(m=>m[1]));
  if(positions.some(p=>p.weight>0&&labels[p.isin]?.theme==='Fintech'&&!known.has(p.isin)))throw Error('Unmapped fintech member');
- const rows=members.map(([name,isin,group],index)=>({name,isin,group,index,weight:byIsin.get(isin)?.weight||0}));
+ const rows=members.map(([name,isin,group],index)=>({name,isin,group,index,weight:byIsin.get(isin)?.weight||0})).filter(r=>labels[r.isin]?.theme==='Fintech');
  const total=sum(rows);if(total>100)throw Error('Invalid total');
  const groups=Object.entries(names).map(([id,name])=>({id,name,weight:sum(rows.filter(r=>r.group===id)),count:rows.filter(r=>r.group===id&&r.weight>0).length})).sort((a,b)=>b.weight-a.weight||a.name.localeCompare(b.name,'da'));
  return {asOf,total,groups,rows,active:rows.filter(r=>r.weight>0).sort((a,b)=>b.weight-a.weight||a.name.localeCompare(b.name,'da'))};
@@ -46,6 +46,7 @@ export function renderFintech(root,model){
  root.querySelector('[data-ft-groups-description]').textContent=`Grupperne står efter deres andel af fonden pr. ${dated}. Selskaberne tælles én gang i deres redaktionelle hovedgruppe.`;
  const scale=Math.max(1,...active.map(r=>r.weight));
  root.querySelector('[data-ft-ranked]').innerHTML=`<p>Andel af PMINDI · ${dated}. Højre kant: ${pct(scale)} af fonden.</p>`+active.map(r=>`<div><p>${esc(r.name)} <strong>${pct(r.weight)}</strong></p><svg viewBox="0 0 1000 18" preserveAspectRatio="none" role="img" aria-label="${esc(r.name)}: ${pct(r.weight)}"><rect width="1000" height="18" fill="var(--linje-2)"/><rect width="${r.weight/scale*1000}" height="18" fill="var(--accent)"/><path d="M${1000/scale-1} 0v18" stroke="var(--tekst)" stroke-dasharray="3 3"/></svg></div>`).join('');
+ for(const [index] of members.entries()){const el=root.querySelector(`#pd-fintech-company-${index}`);if(el)el.hidden=!rows.some(r=>r.index===index);}
  for(const r of rows)root.querySelector(`#pd-fintech-company-${r.index} .cq-ft__cw`).textContent=r.weight?pct(r.weight):'Ikke i beholdningen';
  for(const group of groups){
   const button=root.querySelector(`.cq-ft__lb[data-g="${group.id}"]`),item=button.closest('.cq-ft__ln');

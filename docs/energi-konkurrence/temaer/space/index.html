@@ -347,7 +347,7 @@ function show(btn){var sc=btn.closest('.cq-rum__scope')||R,inf=sc.querySelector(
 inf.appendChild(btn.querySelector('.cq-rum__lg').cloneNode(true));var w=document.createElement('div');
 function el(t,c,x){var e=document.createElement(t);e.className=c;e.textContent=x;w.appendChild(e);return e}
 el('p','cq-rum__ig',btn.dataset.g);var h=el('p','cq-rum__ih',btn.querySelector('.cq-rum__nm').textContent);var s=document.createElement('span');s.textContent=btn.querySelector('.cq-rum__cw').textContent+' af fonden';h.appendChild(s);
-el('p','cq-rum__id',btn.dataset.d);if(btn.dataset.a)el('p','cq-rum__ia',btn.querySelector('.cq-rum__nm').textContent+' laver også noget, der hører til temaet '+btn.dataset.a+'. I fondens opdeling tælles selskabet kun med her.');inf.appendChild(w)}
+el('p','cq-rum__id',btn.dataset.d);if(btn.dataset.a)el('p','cq-rum__ia',btn.querySelector('.cq-rum__nm').textContent+' er også med i '+btn.dataset.a+'. Et selskab kan være med i flere temaer.');inf.appendChild(w)}
 R.querySelectorAll('.cq-rum__co').forEach(function(b){b.addEventListener('click',function(){var sc=b.closest('.cq-rum__scope')||R;sc.querySelectorAll('.cq-rum__co[aria-pressed=true]').forEach(function(o){if(o!==b)o.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');show(b)});
 b.addEventListener('focus',function(){show(b)});if(fine)b.addEventListener('mouseenter',function(){show(b)})});
 function setAll(a,o){var l=document.getElementById(a.getAttribute('aria-controls'));l.classList.toggle('cq-rum--open',o);a.setAttribute('aria-expanded',o);a.textContent=o?'Vis færre':'Vis alle ('+a.dataset.n+')'}
@@ -378,7 +378,7 @@ if(!rm&&'IntersectionObserver' in window){R.classList.add('cq-rum--arm');var io=
 <p>Omkring tre femtedele af temaet ligger i det, der skal op: raketter, raketdele, satellitter og udstyr om bord. Temaets største selskab er SpaceX, som alene er under en fjerdedel af temaet.</p>
 <p>SpaceX blev grundlagt i 2002. Selskabet har tre dele: rumfart med raketterne Falcon og Starship og rumkapslen Dragon, forbindelse via Starlink og en AI-del. Det står i selskabets prospekt fra juni 2026. Et prospekt er et dokument med fakta om selskabet til nye investorer.</p>
 <p>SpaceX står under Opsendelse, men omkring 6 af hver 10 dollars i omsætning kom fra forbindelse via Starlink, ikke fra raketter. Omsætningen var 18.674 mio. USD i 2025. Det svarer i størrelse til ca. 4 % af Danmarks BNP. Starlink havde 8,9 mio. abonnenter ved udgangen af 2025, omtrent dobbelt så mange som året før.</p>
-<p>AI-delen kom til, da SpaceX overtog selskabet xAI i februar 2026. Tallene for 2025 er regnet, som om xAI og det sociale medie X havde hørt til SpaceX hele året. Over halvdelen af AI-delens omsætning i 2025 var annoncer på X. SpaceX laver derfor også noget, der hører til temaet <a href="../datacenter/index.html">Datacentre</a>. I fondens opdeling tælles selskabet kun med her.</p>
+<p>AI-delen kom til, da SpaceX overtog selskabet xAI i februar 2026. Tallene for 2025 er regnet, som om xAI og det sociale medie X havde hørt til SpaceX hele året. Over halvdelen af AI-delens omsætning i 2025 var annoncer på X. SpaceX er derfor også med i <a href="../datacenter/index.html">Datacentre</a>. Et selskab kan være med i flere temaer.</p>
 <p>Rocket Lab er kendt for sine raketter, men omkring to tredjedele af selskabets omsætning i 2025 kom fra at bygge rumfartøjer og dele.</p>
 <figure class="foto"><img alt="Runde marker i Kansas set fra en satellit." height="400" loading="lazy" src="fra-billedstil/billeder/space-foto-marker-fra-rummet-bred.webp" width="600"/><figcaption>Det, der kommer ned igen: marker i Kansas, set fra en satellit. Foto: NASA/USGS Landsat, offentligt domæne.</figcaption></figure>
 </div>
@@ -402,9 +402,9 @@ if(!rm&&'IntersectionObserver' in window){R.classList.add('cq-rum--arm');var io=
 <section aria-labelledby="fod-h" class="s" id="fod"><div class="wrap">
 <p class="eyebrow">Naboerne</p>
 <h2 id="fod-h">Også med en fod i rumfart</h2>
-<p class="smal">Disse to selskaber hører først og fremmest til et andet tema, men laver også noget til rumfart. De tælles med under deres eget hovedtema, ikke her.</p>
-<ul class="fod alle" id="fod-liste"><li><b>Rolls-Royce Holdings</b><span>Hovedtema: Energi og elnet</span><i>0,25 %<span class="sr"> af fonden</span></i></li><li><b>AIRO Group Holdings</b><span>Hovedtema: Robotter &amp; fysisk AI</span><i>0,03 %<span class="sr"> af fonden</span></i></li></ul>
-<p class="note">SpaceX laver også noget, der hører til temaet <a href="../datacenter/index.html">Datacentre</a>. I fondens opdeling tælles selskabet kun med her.</p>
+<p class="smal">Disse to selskaber arbejder også med rumfart og forbinder dermed flere temaer.</p>
+<ul class="fod alle" id="fod-liste"><li><b>Rolls-Royce Holdings</b><span>Også med i: Energi og elnet</span><i>0,25 %<span class="sr"> af fonden</span></i></li><li><b>AIRO Group Holdings</b><span>Også med i: Robotter &amp; fysisk AI</span><i>0,03 %<span class="sr"> af fonden</span></i></li></ul>
+<p class="note">SpaceX er også med i <a href="../datacenter/index.html">Datacentre</a>. Et selskab kan være med i flere temaer.</p>
 </div></section>
 <section aria-labelledby="udefra-h" class="s" id="udefra"><div class="wrap">
 <p class="eyebrow">Set udefra</p>
@@ -439,7 +439,7 @@ if(!rm&&'IntersectionObserver' in window){R.classList.add('cq-rum--arm');var io=
 <ul class="cta">
 <li><a href="../datacenter/index.html">Datacentre <span>Net og datacentre på Jorden</span></a></li>
 <li><a href="../raastoffer/index.html">Råstoffer <span>Materialerne i raketterne</span></a></li>
-<li><a href="../fysisk-ai/index.html">Droner og fly hører til fondens tema Robotter &amp; fysisk AI.</a></li>
+<li><a href="../fysisk-ai/index.html">Se også droner og fly i Robotter &amp; fysisk AI.</a></li>
 </ul>
 </div></section>
 <section aria-labelledby="kilder-h" class="s kilder" id="kilder"><div class="wrap">
