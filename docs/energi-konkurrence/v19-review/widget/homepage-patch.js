@@ -256,7 +256,7 @@ function drawNasdaq(){
  if(!source?.validated){note.textContent='Nasdaq-data er ikke tilgængelige. Fondens graf vises uden sammenligning.';return}
  const points=comparisonPoints(data.funds[selected],growthPeriod,source);
  if(points.length<2){note.textContent='Der mangler fælles observationer til sammenligningen i denne periode.';return}
- const W=900,H=290,L=62,R=20,T=24,B=36,first=Date.parse(points[0].d),last=Date.parse(points.at(-1).d);
+ const W=Math.max(600,Math.round(box.clientWidth||900)),H=Math.round(Math.min(330,Math.max(260,W*.32))),L=62,R=20,T=24,B=36,first=Date.parse(points[0].d),last=Date.parse(points.at(-1).d);
  const {low,high,step}=niceScale(points.flatMap(p=>[p.fund,p.index]),false);
  const x=d=>L+(Date.parse(d)-first)/(last-first)*(W-L-R),y=v=>T+(high-v)/(high-low)*(H-T-B);
  let ticks='';for(let v=low;v<=high+step/100;v+=step)ticks+=`<line x1="${L}" x2="${W-R}" y1="${y(v)}" y2="${y(v)}" stroke="#2b3e47"/><text x="${L-9}" y="${y(v)+5}" text-anchor="end" fill="#a4b7bd" font-size="14">${n(v,Number.isInteger(step)?0:1)}</text>`;
@@ -285,7 +285,7 @@ function ndiListing(p){
 }
 function ndiListingLabel(p){const l=ndiListing(p);return [l.ticker,l.exchange].filter(Boolean).join(' · ')}
 
-holdingsMarkup=function(ps){return ps.map(p=>{const r=marketRow(p);return `<tr><td>${esc(p.name)}${ndiListingLabel(p)?`<small class="ndi-ticker">${esc(ndiListingLabel(p))}</small>`:""}<small>${esc(p.isin)}</small></td><td>${esc(sectorNames[p.sector]||p.sector||'Ikke klassificeret')}</td><td>${r?.marketClose!=null?n(r.marketClose,2)+' '+esc(r.marketCurrency):'—'}<small>${esc(r?.returnDate||'Ingen aktuel markedskurs')}</small></td><td>${n(p.weight,2)} %</td>${returnCells(r)}<td>${r?.status==='ok'?pct(r.distance):'—'}</td></tr>`}).join('');}
+holdingsMarkup=function(ps){return ps.map(p=>{const r=marketRow(p);return `<tr><td>${esc(p.name)}${ndiListingLabel(p)?`<small class="ndi-ticker">${esc(ndiListingLabel(p))}</small>`:""}<small>${esc(p.isin)}</small></td><td>${esc(sectorNames[p.sector]||p.sector||'Ikke klassificeret')}</td><td>${r?.marketClose!=null?n(r.marketClose,2)+' '+esc(r.marketCurrency):'—'}<small>${esc(r?.returnDate||'Ingen aktuel markedskurs')}</small></td><td>${p.weight!==0&&Math.abs(p.weight)<0.05?'under 0,1':n(p.weight,1)} %</td>${returnCells(r)}<td>${r?.status==='ok'?pct(r.distance):'—'}</td></tr>`}).join('');}
 holdings=function(){
  const f=data.funds[selected],query=$('search').value.toLowerCase(),geo=geography?.funds[f.id]||[];
  const ps=f.positions.filter(p=>p.isin&&p.weight>0&&(!sectorFilter||(p.sector||'Ikke klassificeret')===sectorFilter)&&(!countryFilter||geo.some(r=>r.isin===p.isin&&r.country===countryFilter&&r.status==='profile_found'))&&`${p.name} ${p.isin} ${ndiListing(p).symbol} ${ndiListingLabel(p)}`.toLowerCase().includes(query));
@@ -418,7 +418,7 @@ drawNasdaq=function(){
  const points=comparisonPoints(fund,growthPeriod,source);if(points.length<2){if(note){note.hidden=false;note.textContent='Der er ikke tilstrækkelig historik til at sammenligne den valgte periode.'}setGraphContextNote(false);return;}
  const indexPoints=points.filter(p=>Number.isFinite(p.index));compare=compare&&indexPoints.length>=2;
  const end=points.at(-1),firstDate=Date.parse(points[0].d),lastDate=Date.parse(end.d);
- const mobile=box.clientWidth<600,W=mobile?Math.max(220,box.clientWidth):1000,H=mobile?Math.round(Math.max(230,Math.min(300,box.clientWidth*.78))):410,L=mobile?43:68,R=mobile?8:92,T=24,B=44;
+ const mobile=box.clientWidth<600,W=mobile?Math.max(220,box.clientWidth):Math.max(600,Math.round(box.clientWidth)),H=mobile?Math.round(Math.max(230,Math.min(300,box.clientWidth*.78))):Math.round(Math.min(410,Math.max(300,W*.41))),L=mobile?43:68,R=mobile?8:92,T=24,B=44;
  // Keep axes, and therefore the fund curve's geometry, identical when toggled.
  const values=points.flatMap(p=>Number.isFinite(p.index)?[p.fund-100,p.index-100]:[p.fund-100]);
  const {low,high,step}=niceScale([...values,0],false),x=d=>L+(Date.parse(d)-firstDate)/(lastDate-firstDate||1)*(W-L-R),y=v=>T+(high-v)/(high-low||1)*(H-T-B);

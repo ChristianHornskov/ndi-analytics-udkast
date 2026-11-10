@@ -3,7 +3,7 @@
    bliver siden som den er. */
 (function () {
   function el(tag, cls, tekst) { var e = document.createElement(tag); if (cls) e.className = cls; if (tekst != null) e.textContent = tekst; return e; }
-  function pct(v) { return v.toLocaleString('da-DK', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' %'; }
+  function pct(v) { if (v !== 0 && Math.abs(v) < 0.05) return 'under 0,1 %'; return v.toLocaleString('da-DK', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' %'; }
   function side(slug) { var s = (window.NDI_DATA || {}).sider; return !s || s[slug] === true; }
   function start() {
     var T = window.DAGENS_TAL;

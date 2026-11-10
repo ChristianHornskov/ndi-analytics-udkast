@@ -28,16 +28,17 @@
     if (m.delvis && key === start) { kl.push('cr4-start'); titel = ' title="Startperiode, fra ' + dato(u.start) + '"'; }
     else if (m.delvis && key === nu) { kl.push('cr4-nu'); titel = ' title="Igangværende måned, til ' + dato(u.kursdato) + '"'; }
     else if (m.delvis) { kl.push('cr4-nu'); }
-    return '<td class="' + kl.join(' ') + '"' + titel + '>' + tal(m.afkast) + ' %</td>';
+    return '<td class="' + kl.join(' ') + '"' + titel + '>' + tal(m.afkast) + '<span class="cr4-pct"> %</span></td>';
   }
   function aarTekst(year, u) {
     var v = year.afkast == null ? '—' : tal(year.afkast) + ' %';
+    var vis = year.afkast == null ? '—' : tal(year.afkast) + '<span class="cr4-pct"> %</span>';
     var sub = '';
     if (year.delvis) {
       if (String(u.start || '').slice(0, 4) === String(year.aar)) sub = 'fra start';
       else if (String(u.kursdato || '').slice(0, 4) === String(year.aar)) sub = 'år til dato';
     }
-    return sub ? '<span title="' + sub + '" aria-label="' + v + ', ' + sub + '">' + v + '</span>' : v;
+    return sub ? '<span title="' + sub + '" aria-label="' + v + ', ' + sub + '">' + vis + '</span>' : vis;
   }
   function byg() {
     var kal = document.getElementById('preview-calendar');
@@ -59,7 +60,7 @@
     var forkl = '<ul class="cr4-forklaring" aria-label="Forklaring">' +
       '<li><i class="cr4-f-pos"></i>Plus</li><li><i class="cr4-f-neg"></i>Minus</li>' +
       (harStart ? '<li><i class="cr4-f-start"></i>Startperiode, fra ' + dato(u.start) + '</li>' : '') +
-      (harNu ? '<li><i class="cr4-f-nu"></i>Igangværende måned</li>' : '') + '</ul>';
+      (harNu ? '<li><i class="cr4-f-nu"></i>Igangværende måned</li>' : '') + '<li class="cr4-pct-note">Tal i procent</li></ul>';
     kal.innerHTML = desk + mob + forkl;
   }
   var venter = false;

@@ -25,7 +25,8 @@
 
    
   var NB = "\u00a0";
-  function dec2(x) { return x.toFixed(2).replace(".", ","); }
+  /* Graf-review 10.11 punkt 5: andele og afkast med én decimal. Små positioner vises som "under 0,1". */
+  function dec2(x) { if (x !== 0 && Math.abs(x) < 0.05) return (x < 0 ? "-" : "") + "under 0,1"; return x.toFixed(1).replace(".", ","); }
   function heltal(n) { return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, "."); }
   var ORD = ["nul", "ét", "to", "tre", "fire", "fem", "seks", "syv", "otte", "ni", "ti", "elleve", "tolv"];
   var RANG = { 1: "det største", 2: "det næststørste", 3: "det tredjestørste" };
@@ -89,6 +90,8 @@
   }
 
    
+  /* Graf-review 10.11 punkt 7: korte temanavne under de små søjler på temasiderne. */
+  var KORT = { chips: "Chips", energi: "Energi", datacenter: "Datacentre", platforme: "Platforme", rumfart: "Rumfart", "fysisk-ai": "Robotter", raastoffer: "Råstoffer", fintech: "Fintech", krypto: "Krypto", software: "Software", sundhed: "Sundhed", kvante: "Kvante" };
   function fyldLister(d) {
     document.querySelectorAll("[data-liste]").forEach(function (ul) {
       var arr = slaaOp(d, ul.dataset.liste) || [];
@@ -97,6 +100,7 @@
       arr.forEach(function (post) {
         var frag = tpl.content.cloneNode(true);
         var wrap = document.createElement("div"); wrap.appendChild(frag);
+        if (ul.dataset.skabelon === "tpl-mini" && post.id && post.kort == null) post = Object.assign({}, post, { kort: KORT[post.id] || post.navn });
         wrap.querySelectorAll("[data-f]").forEach(function (el) {
           var v = post[el.dataset.f];
           if (el.dataset.f === "forbogstav") v = post.navn ? post.navn.charAt(0) : "";

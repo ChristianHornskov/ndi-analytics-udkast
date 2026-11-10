@@ -138,7 +138,7 @@ function simplifyOverview(){
  $('concentration').innerHTML=metric('Antal værdipapirpositioner',n(positions.length,0),'Positioner med en positiv vægt')+metric('De 10 største tilsammen',pct(top.reduce((s,p)=>s+p.weight,0)),'Andel af fondens formue');
  holdingsCard.querySelector('h2').textContent='Spredning og de 10 største positioner';
  const max=top[0]?.weight||1;
- $('topmini').innerHTML=top.map(p=>`<div class="retail-position"><span>${esc(p.name)}</span><strong>${n(p.weight,2)} %</strong><div class="retail-track"><i style="width:${p.weight/max*100}%"></i></div></div>`).join('')+'<p class="small muted">Vægtene er andele af fondens formue. Søjlerne er skaleret efter den største position.</p>';
+ $('topmini').innerHTML=top.map(p=>`<div class="retail-position"><span>${esc(p.name)}</span><strong>${p.weight!==0&&Math.abs(p.weight)<0.05?'under 0,1':n(p.weight,1)} %</strong><div class="retail-track"><i style="width:${p.weight/max*100}%"></i></div></div>`).join('')+'<p class="small muted">Vægtene er andele af fondens formue. Søjlerne er skaleret efter den største position.</p>';
  if(!$('class-choice')){
   const choice=document.createElement('div');choice.id='class-choice';choice.className='class-choice';
   $('fund').closest('label').after(choice);$('fund').closest('label').hidden=true;

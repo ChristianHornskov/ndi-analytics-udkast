@@ -61,7 +61,7 @@
     return ep;
   }
   function nedtureSvg(points, W, H, mob) {
-    var a = mob ? 40 : 52, b = W - (mob ? 12 : 20), top = 18, bot = H - 34;
+    var a = mob ? 40 : 52, b = W - (mob ? 12 : 34), top = 18, bot = H - 34;
     var t0 = Date.parse(points[0].d), t1 = Date.parse(points[points.length - 1].d);
     var min = Math.min.apply(null, points.map(function (p) { return p.v; }));
     var lav = Math.min(-10, Math.floor(min / 10) * 10);
@@ -109,7 +109,9 @@
     var gammel = box.querySelector(':scope > svg, :scope > .g19-nedture');
     var ny = document.createElement('div');
     ny.className = 'g19-nedture';
-    ny.innerHTML = nedtureSvg(m.drawdowns, 1060, 380, false) + nedtureSvg(m.drawdowns, 360, 290, true);
+    /* Graf-review 10.11 punkt 2: desktopgrafen tegnes i boksens egen bredde, så teksten ikke skrumper. */
+    var bw = Math.round(box.clientWidth || 1060), dw = Math.max(600, bw), dh = Math.round(Math.min(380, Math.max(300, dw * .36)));
+    ny.innerHTML = nedtureSvg(m.drawdowns, dw, dh, false) + nedtureSvg(m.drawdowns, 360, 290, true);
     if (gammel) box.replaceChild(ny, gammel); else box.insertBefore(ny, box.firstChild);
     box.classList.add('g19-nedture-box');
   }

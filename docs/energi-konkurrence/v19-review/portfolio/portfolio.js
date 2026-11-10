@@ -55,7 +55,9 @@
     if(f.inception<points[0].d)points.unshift({d:f.inception,v:100});
     const base=points[0].v;points.forEach(p=>p.v=(p.v/base-1)*100);
     const compact=window.matchMedia('(max-width:700px)').matches;
-    const W=compact?360:760,H=compact?260:340,L=compact?45:52,R=compact?12:22,T=distributions?70:24,B=42;
+    const host=document.getElementById(id==='hero-return'?'analysis-hero-chart':'analysis-distributions'),hostW=host&&host.clientWidth?Math.round(host.clientWidth):0;
+    /* Graf-review 10.11 punkt 2: tegn i rammens egen bredde, så aksetekst står i 14 px. */
+    const W=hostW?Math.max(300,hostW):(compact?360:760),H=compact?260:Math.round(Math.min(340,Math.max(240,W*.45))),L=compact?45:52,R=compact?12:22,T=distributions?70:24,B=42;
     const first=Date.parse(points[0].d),last=Date.parse(points.at(-1).d),lo=Math.min(0,...points.map(p=>p.v)),hi=Math.max(1,...points.map(p=>p.v));
     const x=d=>L+(Date.parse(d)-first)/(last-first||1)*(W-L-R),y=v=>T+(hi-v)/(hi-lo)*(H-T-B);
     const line=points.map((p,i)=>(i?'L':'M')+x(p.d).toFixed(2)+','+y(p.v).toFixed(2)).join(' ');

@@ -1258,3 +1258,14 @@ main p.kildelinje a:not([class]), main li > a.tekstlink, main th > a.tekstlink, 
   .topbar .topbar-handling { flex-direction: column; align-items: flex-end; row-gap: 4px; }
   .topbar { height: auto; min-height: 64px; padding-block: 8px; }
 }
+
+/* Graf-review 10.11 punkt 7: navn under og andel over de små temasøjler. */
+.mini-soejler { overflow: visible; margin: 22px 0 26px; }
+.mini-soejler span { position: relative; overflow: visible; }
+.mini-soejler span i { position: absolute; left: -4px; right: -4px; text-align: center; font-style: normal; white-space: nowrap; line-height: 1; font-variant-numeric: tabular-nums; }
+.mini-soejler .mini-v { top: -18px; font-size: 12px; font-weight: 600; color: var(--c-tekst-2, #9fb3b8); }
+.mini-soejler .mini-n { bottom: -20px; font-size: 11.5px; color: var(--c-tekst-3, #8aa0a6); }
+.mini-soejler span.aktiv i { color: var(--c-tekst, #e8f1f2); }
+@media (max-width: 600px) { .mini-soejler .mini-n { font-size: 10px; } .mini-soejler .mini-v { font-size: 10.5px; } }
+@media (max-width: 600px) { .mini-soejler .mini-n { display: none; } .mini-soejler span.aktiv .mini-n { display: block; } }
+@media (min-width: 601px) and (max-width: 1000px) { .mini-soejler .mini-n { font-size: 10.5px; letter-spacing: -.2px; } }

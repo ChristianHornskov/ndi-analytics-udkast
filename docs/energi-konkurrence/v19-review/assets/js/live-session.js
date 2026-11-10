@@ -50,6 +50,8 @@
   };
   window.NDI_LIVE_READY=ready;ready.catch(()=>{});
   const fmt=x=>Number(x).toLocaleString('da-DK',{minimumFractionDigits:2,maximumFractionDigits:2});
+  /* Graf-review 10.11 punkt 5: andele med én decimal. */
+  const fmtA=x=>{x=Number(x);return x!==0&&Math.abs(x)<0.05?'under 0,1':x.toLocaleString('da-DK',{minimumFractionDigits:1,maximumFractionDigits:1})};
   function spacexReports(company){
     if(!company||company.currency!=='USD'||company.unit!=='million'||!Array.isArray(company.periods)||company.segments?.length!==3)return null;
     // The surrounding article explicitly discusses these periods. A new report
@@ -143,7 +145,7 @@
         const note=document.createElement('p');note.className='lille ndi-status-unknown';note.setAttribute('role','status');note.textContent='Selskabets beholdningsstatus kunne ikke bekræftes i dataudgaven pr. '+day+'. Den opdateres, når identiteten er afstemt.';const head=document.querySelector('.sidehoved');if(head)head.after(note);else(document.querySelector('main')||document.body).prepend(note);
       }
       if(company.status==='aktuel'&&document.querySelector('.cr-stub-status')){
-        const note=document.createElement('p');note.className='lille';note.textContent='Andel af PMINDI: '+fmt(company.andel)+' % pr. '+day+'.';document.querySelector('.sidehoved')?.after(note);
+        const note=document.createElement('p');note.className='lille';note.textContent='Andel af PMINDI: '+fmtA(company.andel)+' % pr. '+day+'.';document.querySelector('.sidehoved')?.after(note);
       }
     }
 
@@ -167,8 +169,8 @@
     const statusForIsins=isins=>{const slugs=[...new Set(isins.map(i=>s.identities[i]?.slug).filter(Boolean))];return slugs.length===1?statusOf(slugs[0]):'ukendt'};
     const absentText=isins=>statusForIsins(isins)==='ukendt'?'Beholdningsstatus opdateres':'Ikke i den aktuelle beholdning';
     const ck=document.getElementById('ck-data');if(ck){const stages=JSON.parse(ck.textContent);stages.forEach(t=>{t.selskaber=t.selskaber.filter(c=>heldWeight(isinsOf(c.isin))!==null);t.selskaber.forEach(c=>{c.andel=heldWeight(isinsOf(c.isin))});t.selskaber.sort((a,b)=>b.andel-a.andel)});ck.textContent=JSON.stringify(stages)}
-    document.querySelectorAll('[data-n][data-w]').forEach(e=>{const isins=isinsOf(e.dataset.isin);if(!isins.length){e.dataset.w='Beholdningsstatus opdateres';return}const w=heldWeight(isins);e.dataset.w=w!==null?fmt(w)+' %':absentText(isins)});
-    document.querySelectorAll('.cf-company').forEach(e=>{const slug=e.getAttribute('href')?.split('/').pop().replace('.html','');const p=bySlug[slug];const w=e.querySelector('.cf-weight');if(w)w.textContent=p?fmt(p.weight)+' %':statusOf(slug)==='ukendt'?'Beholdningsstatus opdateres':'Ikke i den aktuelle beholdning'});
+    document.querySelectorAll('[data-n][data-w]').forEach(e=>{const isins=isinsOf(e.dataset.isin);if(!isins.length){e.dataset.w='Beholdningsstatus opdateres';return}const w=heldWeight(isins);e.dataset.w=w!==null?fmtA(w)+' %':absentText(isins)});
+    document.querySelectorAll('.cf-company').forEach(e=>{const slug=e.getAttribute('href')?.split('/').pop().replace('.html','');const p=bySlug[slug];const w=e.querySelector('.cf-weight');if(w)w.textContent=p?fmtA(p.weight)+' %':statusOf(slug)==='ukendt'?'Beholdningsstatus opdateres':'Ikke i den aktuelle beholdning'});
     // Keep the company finder in live weight order before its pagination starts.
     document.querySelectorAll('.cf-results').forEach(ul=>{
       const rows=[...ul.children],slugOf=row=>row.querySelector('.cf-company')?.getAttribute('href')?.split('/').pop().replace('.html','');
