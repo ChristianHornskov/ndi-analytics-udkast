@@ -26,13 +26,15 @@
    
   var NB = "\u00a0";
   /* Graf-review 10.11 punkt 5: andele og afkast med én decimal. Små positioner vises som "under 0,1". */
-  function dec2(x) { if (x !== 0 && Math.abs(x) < 0.05) return (x < 0 ? "-" : "") + "under 0,1"; return x.toFixed(1).replace(".", ","); }
+  function decimal(x, digits) { return x.toFixed(digits).replace(".", ","); }
+  function isWeight(el) { return !!(el && /(?:^|[.@])andel$/.test(el.dataset.tal || el.dataset.f || "")); }
+  function percent(x, el) { return isWeight(el) && x > 0 && x < 0.05 ? "under 0,1" : decimal(x, 1); }
   function heltal(n) { return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, "."); }
   var ORD = ["nul", "ét", "to", "tre", "fire", "fem", "seks", "syv", "otte", "ni", "ti", "elleve", "tolv"];
   var RANG = { 1: "det største", 2: "det næststørste", 3: "det tredjestørste" };
   var FMT = {
-    pct: function (v) { return dec2(v) + NB + "%"; },
-    tal: function (v) { return dec2(v); },
+    pct: function (v, el) { return percent(v, el) + NB + "%"; },
+    tal: function (v, el) { return isWeight(el) ? percent(v, el) : decimal(v, 2); },
     heltal: function (v) { return heltal(v); },
     tekst: function (v) { return String(v); },
     plads: function (v) { return "nr." + NB + v; },
