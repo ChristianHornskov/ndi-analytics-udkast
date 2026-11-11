@@ -283,6 +283,18 @@
       const session=await ready;
       const metadata=node=>/(^|\/)data\//.test(node.dataset.ndiSrc||'')||(node.dataset.ndiSrc||'').includes('/valg.js');
       const skip=node=>/market-supplement\.js|data\/review-funds\.js|data\/regnskab\.js|data\/kurs\/|assets\/js\/kursgraf\.js/.test(node.dataset.ndiSrc||'');
+      // Fetch classic core scripts concurrently, but execute them in the exact
+      // dependency order below. Optional media remains lazy and outside this list.
+      const preloaded=new Set();
+      for(const node of queue){
+        const src=node.dataset.ndiSrc;
+        if(!src||node.dataset.ndiType==='module'||skip(node)||optionalMedia(node))continue;
+        const href=new URL(src,document.baseURI).href;
+        if(preloaded.has(href))continue;
+        preloaded.add(href);
+        const link=document.createElement('link');link.rel='preload';link.as='script';link.href=href;
+        document.head.append(link);
+      }
       // Inline diagrams can precede data tags in the document. Load all editorial
       // metadata first and replace its numeric snapshots before any renderer runs.
       for(const node of queue.filter(n=>metadata(n)&&!optionalMedia(n)))if(!skip(node))await script(node);
