@@ -2,7 +2,8 @@
  'use strict';
  const s=window.NDI_LIVE;if(!s)return;
  const slug=location.pathname.split('/').pop().replace(/\.html$/,'');
- const identity=Object.entries(s.identities).find(([isin,m])=>m.slug===slug&&s.files['data.json'].funds.find(f=>f.id==='pmindi').positions.some(p=>p.isin===isin&&p.weight>0))||Object.entries(s.identities).find(([,m])=>m.slug===slug);if(!identity)return;
+ const owned=s.files['data.json'].funds.find(f=>f.id==='pmindi').positions.filter(p=>s.identities[p.isin]?.slug===slug&&p.weight>0).sort((a,b)=>b.weight-a.weight);
+ const identity=owned.length?[owned[0].isin,s.identities[owned[0].isin]]:Object.entries(s.identities).find(([,m])=>m.slug===slug);if(!identity)return;
  const isin=identity[0],fund=s.files['data.json'].funds.find(f=>f.id==='pmindi');
  const p=fund.positions.find(p=>p.isin===isin);
  const rows=s.files['highs.json'].funds.find(f=>f.short==='PMINDI')?.rows||[];
@@ -34,7 +35,7 @@
  async function showDaily(){
   try{
    const pack=await window.NDI_READ_VERIFIED_JSON(historyURL,s.pointer.files?.['prices/'+isin+'.json'],20000),c=pack.companies?.[isin];
-   if(pack.validated!==true||pack.schemaVersion!==1||pack.sourceRelease!==s.pointer.sourceRelease||pack.asOf!==s.pointer.asOf||c?.status!=='ok'||c.listingIdentitySha256!==p.listingIdentitySha256||c.currency!==currency||c.date!==priceDate||!Array.isArray(c.points)||c.points.length<2)throw Error('invalid');
+   if(pack.validated!==true||pack.schemaVersion!==1||pack.sourceRelease!==s.pointer.sourceRelease||pack.asOf!==s.pointer.asOf||c?.status!=='ok'||c.basis!=='daily_close_split_adjusted_no_dividends'||c.listingIdentitySha256!==p.listingIdentitySha256||c.currency!==currency||c.date!==priceDate||!Array.isArray(c.points)||c.points.length<2)throw Error('invalid');
    c.points.forEach((v,i)=>{if(!Array.isArray(v)||!/^\d{4}-\d{2}-\d{2}$/.test(v[0])||!Number.isFinite(v[1])||v[1]<=0||v[0]>priceDate||(i&&c.points[i-1][0]>=v[0]))throw Error('invalid point')});
    if(c.points.at(-1)[0]!==priceDate||Math.abs(c.points.at(-1)[1]-close)>Math.max(1e-6,close*1e-7))throw Error('close mismatch');
    daily.replaceChildren();daily.append(el('h3',null,'Daglige lukkekurser'));
