@@ -90,12 +90,20 @@
         kvartaler:[q2,q3].map((p,i)=>({id:i?'q3':'q2',kort:i?'3. kvt.':'2. kvt.',omsaetning:billion(sum(p.revenue)),anlaeg:billion(sum(p.capex)),bredde:{omsaetning:sum(p.revenue)/1000/ceiling,anlaeg:sum(p.capex)/1000/ceiling}})),
         akse:{trin:Array.from({length:5},(_,i)=>ceiling*i/4)}}};
   }
+  function comparisonDate(day,period){
+    const date=new Date(day+'T12:00:00Z'),wanted=date.getUTCDate();
+    date.setUTCDate(1);
+    if(period==='m1')date.setUTCMonth(date.getUTCMonth()-1);
+    if(period==='y1')date.setUTCFullYear(date.getUTCFullYear()-1);
+    const last=new Date(Date.UTC(date.getUTCFullYear(),date.getUTCMonth()+1,0)).getUTCDate();
+    date.setUTCDate(Math.min(wanted,last));
+    return date.toISOString().slice(0,10);
+  }
   function fundView(s,f){
     const i=s.files['insights.json'].funds[f.id],series=f.data.filter(p=>Number.isFinite(p.total)&&p.total>0),last=series.at(-1),first=series[0];
     const before=day=>series.filter(p=>p.d<=day).at(-1);
     const periods=[['m1','1 måned'],['ytd','År til dato'],['y1','1 år'],['all','Siden start']].map(([id,navn])=>{
-      const target=new Date(last.d+'T12:00:00Z');if(id==='m1')target.setUTCMonth(target.getUTCMonth()-1);if(id==='y1')target.setUTCFullYear(target.getUTCFullYear()-1);
-      const day=id==='ytd'?(Number(last.d.slice(0,4))-1)+'-12-31':target.toISOString().slice(0,10);
+      const day=id==='ytd'?(Number(last.d.slice(0,4))-1)+'-12-31':comparisonDate(last.d,id);
       const base=id==='all'?first:before(day),rows=base?series.filter(p=>p.d>=base.d):[];
       const p={id,navn,fra:base?.d||null,til:last.d,afkast:base?(last.total/base.total-1)*100:null,vaerdi100000:base?100000*last.total/base.total:null,tilgaengelig:!!base,punkter:rows.map(r=>[r.d,(r.total/base.total-1)*100]),sammenligning:null,sammenligningPunkter:[]};
       if(base&&s.nasdaq){const nq=s.nasdaq.rows.filter(r=>r.d>=base.d&&r.d<=last.d);if(nq[0]?.d===base.d&&nq.at(-1)?.d===last.d){p.sammenligning=(nq.at(-1).v/nq[0].v-1)*100;p.sammenligningPunkter=nq.map(r=>[r.d,(r.v/nq[0].v-1)*100])}}
