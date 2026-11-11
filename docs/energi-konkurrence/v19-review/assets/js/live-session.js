@@ -114,6 +114,21 @@
     const calendar=years.map(y=>{const end=before(y+'-12-31'),base=before((y-1)+'-12-31')||first;return {aar:y,afkast:(end.total/base.total-1)*100,delvis:y===Number(first.d.slice(0,4))||y===Number(last.d.slice(0,4)),maaneder:months.filter(m=>m.maaned.startsWith(String(y)))}});
     return {skema:1,kontrakt:'v18.1',release:{id:s.pointer.release},beregnet:s.pointer.checkedAt,andelsdato:s.files['data.json'].positionsAsOf,andelsdatoTekst:s.files['data.json'].positionsAsOf.split('-').reverse().join('.'),kursdato:last.d,start:first.d,perioder:periods,aarligtSidenStart:(Date.parse(last.d)-Date.parse(first.d))>=365.25*86400000?i.cagr:null,aarTilDato:periods.find(p=>p.id==='ytd').afkast,kursPrBevis:{dato:last.d,kurs:last.price},kursserie:series.map(p=>[p.d,p.price]),udbytte:f.dividends.filter(d=>d.status==='confirmed').map(d=>({exDato:d.exDate,betalingsdato:d.paymentDate,belob:d.amount})),kalender:calendar,kalenderaar:calendar.map(y=>({aar:y.aar,afkast:y.afkast,delvis:y.delvis})),eksempeldata:false};
   }
+  function holdingIndex(positions,identities){
+    const result={};
+    positions.forEach(p=>{
+      const slug=identities[p.isin]?.slug;if(!slug)return;
+      const old=result[slug];
+      const holdings=old?[...old.holdings,p]:[p];
+      // Company exposure is summed; price/ISIN stay attached to the largest listing.
+      const representative=holdings.reduce((a,b)=>a.weight>=b.weight?a:b);
+      result[slug]={...representative,weight:holdings.reduce((n,x)=>n+x.weight,0),holdings};
+    });
+    return result;
+  }
+  function companyThemes(meta,identity){
+    return [...new Set([meta?.tema||identity?.tema,...(Array.isArray(meta?.temaer)?meta.temaer:[]),...(Array.isArray(identity?.temaer)?identity.temaer:[])].filter(t=>typeof t==='string'&&t&&t!=='ukendt'))];
+  }
   function adapt(s){
     window.REVIEW_FUNDS=s.files['data.json'].funds.map(f=>({id:f.short,isin:f.isin,kidUrl:f.kidUrl,u:fundView(s,f)}));
     const d=window.DAGENS_TAL;if(!d)return;
@@ -126,7 +141,7 @@
     const documentedPrevious=new Set((d.tidligere?.alle||[]).map(c=>c.slug).filter(Boolean));
     const documentedCurrent=new Set(Object.entries(d.selskaber).filter(([,c])=>c&&c.tidligere===false).map(([slug])=>slug));
     Object.values(s.identities).forEach(m=>{if(!d.selskaber[m.slug])d.selskaber[m.slug]={navn:m.navn,slug:m.slug,tema:m.tema||'ukendt',andel:null,tidligere:false}});
-    const bySlug={};positions.forEach(p=>{const m=s.identities[p.isin];if(m)bySlug[m.slug]=p});s.bySlug=bySlug;s.fund=fund;
+    const bySlug=holdingIndex(positions,s.identities);s.bySlug=bySlug;s.fund=fund;
     const heldIsin=new Map(positions.map(p=>[p.isin,p]));
     const unidentified=positions.filter(p=>!s.identities[p.isin]).length;
     const statusOf=slug=>bySlug[slug]?'aktuel':documentedPrevious.has(slug)?'tidligere':documentedCurrent.has(slug)&&!unidentified?'tidligere':'ukendt';
@@ -148,12 +163,14 @@
     if(window.NDI_DATA)window.NDI_DATA.fondsudvikling=fundView(s,fund);
     document.querySelectorAll('.up-data-date').forEach(e=>e.textContent='Afkast til '+fund.performanceAsOf.split('-').reverse().join('.')+' · Beholdning pr. '+day);
     d.andelsdato=date;d.andelsdatoTekst=day;d.beregnet=s.pointer.checkedAt;d.beregnetTekst=s.pointer.asOf.split('-').reverse().join('.');
-    d.release={id:s.pointer.release};d.fond.antalSelskaber=positions.length;d.fond.antalPositioner=positions.length;
-    const list=positions.map(p=>{const m=s.identities[p.isin],old=m&&d.selskaber[m.slug];return {navn:old?.navn||p.name,slug:m?.slug||null,andel:p.weight,logo:old?.logo,tema:old?.tema||'ukendt',temaNavn:old?.temaNavn||'Endnu ikke inddelt'}}).sort((a,b)=>b.andel-a.andel);
+    d.release={id:s.pointer.release};d.fond.antalPositioner=positions.length;
+    const companyPositions=[...Object.values(bySlug),...positions.filter(p=>!s.identities[p.isin]?.slug)];
+    const list=companyPositions.map(p=>{const m=s.identities[p.isin],old=m&&d.selskaber[m.slug];return {navn:old?.navn||p.name,slug:m?.slug||null,andel:p.weight,logo:old?.logo,tema:old?.tema||m?.tema||'ukendt',temaer:companyThemes(old,m),temaNavn:old?.temaNavn||'Endnu ikke inddelt'}}).sort((a,b)=>b.andel-a.andel);
+    d.fond.antalSelskaber=list.length;
     list.forEach((p,i)=>{p.plads=i+1;p.bar=p.andel/list[0].andel});
     const sum=a=>a.reduce((v,p)=>v+p.andel,0);
     Object.entries(d.selskaber).forEach(([slug,c])=>{const p=bySlug[slug];c.andel=p?p.weight:null;c.status=statusOf(slug);c.tidligere=c.status==='tidligere';c.statusUkendt=c.status==='ukendt';c.fondsPlads=p?list.findIndex(x=>x.slug===slug)+1:null;c.top10Plads=c.fondsPlads&&c.fondsPlads<=10?c.fondsPlads:null;c.pladsITema=null;c.antalITema=null;c.kurs=null});
-    d.temaer.forEach(t=>{const limit=t.vist?.length||6;t.selskaber=list.filter(c=>c.tema===t.id);t.selskaber.forEach(c=>c.bar=t.selskaber[0]?.andel?c.andel/t.selskaber[0].andel:0);t.vist=t.selskaber.slice(0,limit);t.oevrige=t.selskaber.slice(limit);t.oevrigeAntal=t.oevrige.length;t.antal=t.selskaber.length;t.andel=sum(t.selskaber);t.stoerste=t.selskaber[0]||null;t.selskaber.forEach((c,i)=>{const x=d.selskaber[c.slug];x.pladsITema=i+1;x.antalITema=t.antal})});
+    d.temaer.forEach(t=>{const limit=t.vist?.length||6;t.selskaber=list.filter(c=>c.temaer.includes(t.id)).map(c=>({...c}));t.selskaber.forEach(c=>c.bar=t.selskaber[0]?.andel?c.andel/t.selskaber[0].andel:0);t.vist=t.selskaber.slice(0,limit);t.oevrige=t.selskaber.slice(limit);t.oevrigeAntal=t.oevrige.length;t.antal=t.selskaber.length;t.andel=sum(t.selskaber);t.stoerste=t.selskaber[0]||null;t.selskaber.forEach((c,i)=>{const x=d.selskaber[c.slug];if(x&&c.tema===t.id){x.pladsITema=i+1;x.antalITema=t.antal}})});
     d.temaer.sort((a,b)=>b.andel-a.andel).forEach((t,i)=>{t.plads=i+1;t.bar=d.temaer[0].andel?t.andel/d.temaer[0].andel:0});
     Object.values(d.grupper).forEach(g=>{g.selskaber=g.selskaber.filter(c=>bySlug[c.slug]).map(c=>({...c,andel:bySlug[c.slug].weight})).sort((a,b)=>b.andel-a.andel);const limit=g.vis?.length||6;g.vis=g.selskaber.slice(0,limit);g.flere=g.selskaber.slice(limit);g.antalFlere=g.flere.length;g.antal=g.selskaber.length;g.andel=sum(g.selskaber);g.selskaber.forEach(c=>c.bar=g.selskaber[0]?.andel?c.andel/g.selskaber[0].andel:0)});
     d.top10={antal:Math.min(10,list.length),sum:sum(list.slice(0,10)),liste:list.slice(0,10)};d.alleSelskaber={antal:list.length,liste:list};
@@ -186,7 +203,7 @@
     }
 
     const p=window.NDI_DATA?.portefolje;
-    if(p){p.release=d.release;p.andelsdato=date;p.andelsdatoTekst=day;p.eksempeldata=false;p.kursdato=fund.performanceAsOf;p.beholdning.antalPositioner=list.length;p.beholdning.top10=d.top10.liste;p.beholdning.top10Sum=d.top10.sum;p.beholdning.positioner=positions.map(x=>({navn:s.identities[x.isin]?.navn||x.name,isin:x.isin,slug:s.identities[x.isin]?.slug,andel:x.weight,valuta:x.listingCurrency,sektor:x.sector}));p.vaerdikaede?.forEach(g=>{g.selskaber=g.selskaber.filter(c=>bySlug[c.slug]).map(c=>({...c,andel:bySlug[c.slug].weight}));g.antal=g.selskaber.length;g.andel=sum(g.selskaber)})}
+    if(p){p.release=d.release;p.andelsdato=date;p.andelsdatoTekst=day;p.eksempeldata=false;p.kursdato=fund.performanceAsOf;p.beholdning.antalPositioner=positions.length;p.beholdning.top10=d.top10.liste;p.beholdning.top10Sum=d.top10.sum;p.beholdning.positioner=positions.map(x=>({navn:s.identities[x.isin]?.navn||x.name,isin:x.isin,slug:s.identities[x.isin]?.slug,andel:x.weight,valuta:x.listingCurrency,sektor:x.sector}));p.vaerdikaede?.forEach(g=>{g.selskaber=g.selskaber.filter(c=>bySlug[c.slug]).map(c=>({...c,andel:bySlug[c.slug].weight}));g.antal=g.selskaber.length;g.andel=sum(g.selskaber)})}
     // Interactive chain datasets are editorial classifications; weights are live.
     // A-F02: match på ISIN, aldrig på navn. Flere ISIN for samme selskab (aktieklasser) lægges sammen.
     const isinsOf=v=>String(v||'').split(/\s+/).filter(x=>/^[A-Z]{2}[A-Z0-9]{10}$/.test(x));
