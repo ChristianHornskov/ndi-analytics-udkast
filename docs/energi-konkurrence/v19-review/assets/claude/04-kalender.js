@@ -3,6 +3,7 @@
   'use strict';
   var MDR = ['Jan', 'Feb', 'Mar', 'Apr', 'Maj', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dec'];
   var MD = ['jan.', 'feb.', 'mar.', 'apr.', 'maj', 'jun.', 'jul.', 'aug.', 'sep.', 'okt.', 'nov.', 'dec.'];
+  var mobileOpen = false;
   function tal(v) {
     if (typeof window.n === 'function') return window.n(v, 1);
     return Number(v).toLocaleString('da-DK', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
@@ -61,7 +62,11 @@
       '<li><i class="cr4-f-pos"></i>Plus</li><li><i class="cr4-f-neg"></i>Minus</li>' +
       (harStart ? '<li><i class="cr4-f-start"></i>Startperiode, fra ' + dato(u.start) + '</li>' : '') +
       (harNu ? '<li><i class="cr4-f-nu"></i>Igangværende måned</li>' : '') + '<li class="cr4-pct-note">Tal i procent</li></ul>';
-    kal.innerHTML = desk + mob + forkl;
+    kal.innerHTML = desk + '<div class="cr4-desktop-explanation">' + forkl + '</div>' +
+      '<details class="cr4-mobile-calendar"' + (mobileOpen ? ' open' : '') + '><summary>Afkast måned for måned</summary>' + mob + forkl + '</details>';
+    kal.querySelector('.cr4-mobile-calendar').addEventListener('toggle', function (event) {
+      mobileOpen = event.currentTarget.open;
+    });
   }
   var venter = false;
   function plan() {

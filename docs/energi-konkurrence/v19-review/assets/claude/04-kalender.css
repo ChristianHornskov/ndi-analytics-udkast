@@ -10,6 +10,14 @@
 .cr4-f-start{box-shadow:inset 0 0 0 1.5px #c9d8db;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.18) 0 2px,transparent 2px 6px)}
 .cr4-f-nu{box-shadow:inset 0 0 0 2px #f4f8f8}
 @media (max-width:600px){.cr4-forklaring{flex-direction:column;gap:6px}}
+.cr4-mobile-calendar{display:none}
+@media(max-width:600px){
+  #preview-calendar .cr4-desktop-explanation{display:none}
+  #preview-calendar .cr4-mobile-calendar{display:block;border-top:1px solid #50636b;border-bottom:1px solid #50636b;padding:0}
+  #preview-calendar .cr4-mobile-calendar summary{display:list-item;cursor:pointer;padding:15px 4px;min-height:48px;box-sizing:border-box;font-size:16px;font-weight:600;color:inherit}
+  #preview-calendar .cr4-mobile-calendar summary:focus-visible{outline:2px solid #9bc9cf;outline-offset:3px}
+  #preview-calendar .cr4-mobile-calendar[open] summary{margin-bottom:8px}
+}
 
 /* Graf-review 10.11 punkt 1: kalenderen forbliver vandret, men kompakt, når rammen er 601 til 1000 px (Wix viser 792 px). */
 .cr4-pct-note{display:none!important}
